@@ -18,7 +18,7 @@
 
 - B1（6 仓覆盖）：通过（6 个目标仓库均已存在于账号下）
 - B2（移动端审批与 `@copilot` 迭代）：待人工在 GitHub Mobile 实机核验
-- B3（Issue→Agent→PR→审批→合并）：基本通过（Issue #1 → PR #2 → `@copilot` 迭代 → 合并已完成；需补“非作者账号 Approve”证据以完全满足 runbook）
+- B3（Issue→Agent→PR→审批→合并）：通过（Issue #1 → PR #2 已合并；补证 PR #4 已由 `Jedi-HeJun` 执行 Approve 并完成合并）
 - B4（本地权限弹窗边界无歧义）：通过（文档已固化：移动端不可替代 VS Code 本地权限弹窗）
 
 ## 备注
@@ -38,6 +38,6 @@
 
 - B3（非作者 Approve）：
   - PR 链接：https://github.com/MoRen9527/TriMetaverse/pull/4
-  - Approver 账号：待填写
-  - Approve 时间：待填写
-  - 结果：待填写（出现 `approved these changes`）
+  - Approver 账号：Jedi-HeJun
+  - Approve 时间：2026-02-26T18:16:26Z
+  - 结果：已完成（时间线出现 `approved these changes`，PR #4 于 2026-02-26T18:18:50Z 合并）
