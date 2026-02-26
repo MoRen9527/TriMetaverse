@@ -26,3 +26,4 @@
 - 本轮以低风险文档变更完成流程验证，不涉及代码行为修改。
 - 若 `@copilot` 触发与移动端审批在当前网络环境下不稳定，优先保证 Web 端可完成完整审批闭环，再补移动端证据截图。
 - Issue #1 已在 PR #2 合并后关闭。
+- 5 分钟补齐清单：见 [phase-b-b2-b3-5min-checklist.md](phase-b-b2-b3-5min-checklist.md)。
