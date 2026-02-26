@@ -1,0 +1,172 @@
+{
+	"folders": [
+    {
+			"path": "./"
+		},
+		{
+			"path": "../Tripilot"
+		},
+		{
+			"path": "../Tristaciss"
+		},
+		{
+			"path": "../Avatar-react"
+		},
+		{
+			"name": "Opentride",
+			"path": "../Opentride"
+		},
+		{
+			"path": "../vscodium"
+		}
+	],
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Run opencode VS Code Extension (Tripilot UI)",
+				"type": "extensionHost",
+				"request": "launch",
+				"runtimeExecutable": "${execPath}",
+				"args": [
+					"--extensions-dir=${workspaceFolder:Opentride}/sdks/vscode/.vscode/.extensionHostExtensions",
+					"--disable-extensions",
+					"--disable-extension=Tencent-Cloud.coding-copilot",
+					"--disable-extension=saoudrizwan.claude-dev",
+					"--extensionDevelopmentPath=${workspaceFolder:Opentride}/sdks/vscode"
+				],
+				"preLaunchTask": "opencode: build vscode extension",
+				"outFiles": [
+					"${workspaceFolder:Opentride}/sdks/vscode/dist/**/*.js"
+				]
+			},
+			{
+				"name": "Run opencode VS Code Extension (clean host)",
+				"type": "extensionHost",
+				"request": "launch",
+				"runtimeExecutable": "${execPath}",
+				"args": [
+					"--extensions-dir=${workspaceFolder:Opentride}/sdks/vscode/.vscode/.extensionHostExtensions",
+					"--disable-extensions",
+					"--disable-extension=Tencent-Cloud.coding-copilot",
+					"--disable-extension=saoudrizwan.claude-dev",
+					"--extensionDevelopmentPath=${workspaceFolder:Opentride}/sdks/vscode"
+				],
+				"preLaunchTask": "opencode: build vscode extension",
+				"outFiles": [
+					"${workspaceFolder:Opentride}/sdks/vscode/dist/**/*.js"
+				]
+			}
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "opencode: npm install (vscode)",
+				"type": "shell",
+				"command": "npm",
+				"args": [
+					"install"
+				],
+				"options": {
+					"cwd": "${workspaceFolder:Opentride}/sdks/vscode"
+				},
+				"problemMatcher": []
+			},
+			{
+				"label": "opencode: esbuild (vscode)",
+				"type": "shell",
+				"command": "node",
+				"args": [
+					"esbuild.js"
+				],
+				"options": {
+					"cwd": "${workspaceFolder:Opentride}/sdks/vscode"
+				},
+				"problemMatcher": []
+			},
+			{
+				"label": "opencode: build vscode extension",
+				"dependsOrder": "sequence",
+				"dependsOn": [
+					"opencode: npm install (vscode)",
+					"opencode: esbuild (vscode)"
+				],
+				"problemMatcher": []
+			}
+		]
+	},
+	"settings": {
+		"chat.tools.terminal.autoApprove": {
+			"npx tsc": true,
+			"ForEach-Object": true,
+			"mkdir": true,
+			"npm pack": true,
+			"tar": true,
+			"Set-Location": true,
+			"npm run compile": true,
+			"py": true,
+			"print('tables:',": true,
+			"/^exit\\(\\)$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"Set-Content": true,
+			"npm run build": true,
+			"git rev-parse": true,
+			"Test-Path": true,
+			"git clone": true,
+			"Test-NetConnection": true,
+			"/^Set-Location \"d:\\\\OneDrive\\\\Code\\\\ai\\\\Tripilot\\\\opentride\"; node -e \"const fs=require\\('fs'\\); const path=require\\('path'\\); const root='packages/protocol/schemas/v1'; const files=\\[\\]; \\(function walk\\(p\\)\\{ for\\(const ent of fs\\.readdirSync\\(p,\\{withFileTypes:true\\}\\)\\) \\{ const fp=path\\.join\\(p,ent\\.name\\); if\\(ent\\.isDirectory\\(\\)\\) walk\\(fp\\); else if\\(ent\\.isFile\\(\\) && ent\\.name\\.endsWith\\('\\.json'\\)\\) files\\.push\\(fp\\);\\} \\}\\)\\(root\\); console\\.log\\('schemas',files\\.length\\); for\\(const f of files\\)\\{ try\\{ JSON\\.parse\\(fs\\.readFileSync\\(f,'utf8'\\)\\); \\} catch\\(e\\)\\{ console\\.error\\('invalid json',f,e\\.message\\); process\\.exit\\(1\\);\\} \\} console\\.log\\('all json parse ok'\\);\"$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"npm install": true,
+			"/^node packages/runtime/src/cli\\.js --port 4317$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"/^node \"d:\\\\OneDrive\\\\Code\\\\ai\\\\Tripilot\\\\opentride\\\\packages\\\\runtime\\\\src\\\\cli\\.js\" --port 4317$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"/^node -e \"async function main\\(\\)\\{ const base='http://127\\.0\\.0\\.1:4317'; const hello=\\{v:'1\\.0',kind:'request',type:'hello',id:'req-1',payload:\\{client:\\{name:'smoke',version:'0\\.0'\\},capabilities:\\{sse:true,jsonRpc:false\\}\\}\\}; const r=await fetch\\(base\\+'/rpc',\\{method:'POST',headers:\\{'content-type':'application/json'\\},body:JSON\\.stringify\\(hello\\)\\}\\); console\\.log\\('hello status',r\\.status\\); console\\.log\\(await r\\.text\\(\\)\\); \\} main\\(\\)\\.catch\\(e=>\\{console\\.error\\(e\\); process\\.exit\\(1\\);\\}\\);\"$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"const": true,
+			"app.get('/health',async()=>({ok:true}))": true,
+			">({ok:true})": true,
+			"ok:true": true,
+			"console.log('ADDR',addr)": true,
+			"setInterval(()=>{},1000000)": true,
+			"Move-Item": true,
+			"/^node esbuild\\.js$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"/^Set-Location \"d:\\\\OneDrive\\\\Code\\\\ai\\\\Opentride\\\\sdks\\\\vscode\"; node esbuild\\.js$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"bun": true,
+			"/^bun run check-types; node esbuild\\.js$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"&": true,
+			"/^node -e \"\\(async\\(\\)=>\\{const base='http://127\\.0\\.0\\.1:4165'; const dir='D:/OneDrive/Code/ai/Opentride'; const qp='\\?directory='\\+encodeURIComponent\\(dir\\); const sessionRes=await fetch\\(base\\+'/session'\\+qp,\\{method:'POST',headers:\\{'content-type':'application/json'\\},body:'\\{\\}'\\}\\); const \\{id\\}=await sessionRes\\.json\\(\\); console\\.log\\('session',id\\); const sseRes=await fetch\\(base\\+'/event'\\+qp,\\{headers:\\{Accept:'text/event-stream'\\}\\}\\); const reader=sseRes\\.body\\.getReader\\(\\); const dec=new TextDecoder\\(\\); let buf=''; const promptBody=\\{model:\\{providerID:'opencode',modelID:'big-pickle'\\},parts:\\[\\{type:'text',text:'ping'\\}\\]\\}; const pr=await fetch\\(base\\+'/session/'\\+encodeURIComponent\\(id\\)\\+'/prompt_async'\\+qp,\\{method:'POST',headers:\\{'content-type':'application/json'\\},body:JSON\\.stringify\\(promptBody\\)\\}\\); console\\.log\\('prompt status',pr\\.status\\); const deadline=Date\\.now\\(\\)\\+6000; let printed=0; while\\(Date\\.now\\(\\)<deadline && printed<12\\)\\{ const \\{value,done\\}=await reader\\.read\\(\\); if\\(done\\) break; buf\\+=dec\\.decode\\(value,\\{stream:true\\}\\); let idx; while\\(printed<12 && \\(\\(idx=buf\\.indexOf\\('\\\\\\\\n\\\\\\\\n'\\)\\)>=0 \\|\\| \\(idx=buf\\.indexOf\\('\\\\\\\\r\\\\\\\\n\\\\\\\\r\\\\\\\\n'\\)\\)>=0\\)\\)\\{ const raw=buf\\.slice\\(0,idx\\); buf=buf\\.slice\\(idx\\+\\(raw\\.includes\\('\\\\r'\\)\\?4:2\\)\\); const lines=raw\\.split\\(/\\\\\\\\r\\?\\\\\\\\n/\\); const data=lines\\.filter\\(l=>l\\.startsWith\\('data:'\\)\\)\\.map\\(l=>l\\.slice\\(5\\)\\.trimStart\\(\\)\\)\\.join\\('\\\\\\\\n'\\); if\\(!data\\) continue; let evt; try\\{evt=JSON\\.parse\\(data\\);\\}catch\\{continue;\\} const props=evt\\.properties\\|\\|\\{\\}; const keySample=Object\\.keys\\(props\\)\\.slice\\(0,12\\); console\\.log\\('evt',evt\\.type,'propsKeys',keySample\\); if\\(evt\\.type==='message\\.part\\.updated'\\|\\|evt\\.type==='message\\.updated'\\|\\|evt\\.type==='session\\.diff'\\)\\{ console\\.log\\(JSON\\.stringify\\(evt,null,2\\)\\.slice\\(0,2000\\)\\); \\} printed\\+\\+; \\}\n \\}\n process\\.exit\\(0\\);\n\\}\\)\\(\\)\\.catch\\(e=>\\{console\\.error\\('err',e\\); process\\.exit\\(1\\);\\}\\);\"$/": {
+				"approve": true,
+				"matchCommandLine": true
+			},
+			"/^node -e \"\\(async\\(\\)=>\\{const base='http://127\\.0\\.0\\.1:4165'; const dir='D:/OneDrive/Code/ai/Opentride'; const qp='\\?directory='\\+encodeURIComponent\\(dir\\); const sessionRes=await fetch\\(base\\+'/session'\\+qp,\\{method:'POST',headers:\\{'content-type':'application/json'\\},body:'\\{\\}'\\}\\); const \\{id\\}=await sessionRes\\.json\\(\\); console\\.log\\('session',id\\); const sseRes=await fetch\\(base\\+'/event'\\+qp,\\{headers:\\{Accept:'text/event-stream'\\}\\}\\); const reader=sseRes\\.body\\.getReader\\(\\); const dec=new TextDecoder\\(\\); let buf=''; const promptBody=\\{model:\\{providerID:'opencode',modelID:'big-pickle'\\},parts:\\[\\{type:'text',text:'ping'\\}\\]\\}; const pr=await fetch\\(base\\+'/session/'\\+encodeURIComponent\\(id\\)\\+'/prompt_async'\\+qp,\\{method:'POST',headers:\\{'content-type':'application/json'\\},body:JSON\\.stringify\\(promptBody\\)\\}\\); console\\.log\\('prompt status',pr\\.status\\); const deadline=Date\\.now\\(\\)\\+15000; let printed=0; while\\(Date\\.now\\(\\)<deadline && printed<8\\)\\{ const \\{value,done\\}=await reader\\.read\\(\\); if\\(done\\) break; buf\\+=dec\\.decode\\(value,\\{stream:true\\}\\); let idx; while\\(printed<8 && \\(\\(idx=buf\\.indexOf\\('\\\\\\\\n\\\\\\\\n'\\)\\)>=0 \\|\\| \\(idx=buf\\.indexOf\\('\\\\\\\\r\\\\\\\\n\\\\\\\\r\\\\\\\\n'\\)\\)>=0\\)\\)\\{ const sepLen = buf\\.includes\\('\\\\\\\\r\\\\\\\\n\\\\\\\\r\\\\\\\\n'\\) \\? 4 : 2; const raw=buf\\.slice\\(0,idx\\); buf=buf\\.slice\\(idx\\+sepLen\\); const lines=raw\\.split\\(/\\\\\\\\r\\?\\\\\\\\n/\\); const data=lines\\.filter\\(l=>l\\.startsWith\\('data:'\\)\\)\\.map\\(l=>l\\.slice\\(5\\)\\.trimStart\\(\\)\\)\\.join\\('\\\\\\\\n'\\); if\\(!data\\) continue; let evt; try\\{evt=JSON\\.parse\\(data\\);\\}catch\\{continue;\\} console\\.log\\('evt',evt\\.type\\); if\\(evt\\.type==='message\\.part\\.updated'\\|\\|evt\\.type==='message\\.updated'\\|\\|evt\\.type==='session\\.diff'\\)\\{ console\\.log\\(JSON\\.stringify\\(evt,null,2\\)\\.slice\\(0,2000\\)\\); \\} printed\\+\\+; \\}\n \\}\n console\\.log\\('done, printed',printed\\);\n process\\.exit\\(0\\);\n\\}\\)\\(\\)\\.catch\\(e=>\\{console\\.error\\('err',e\\); process\\.exit\\(1\\);\\}\\);\"$/": {
+				"approve": true,
+				"matchCommandLine": true
+			}
+		},
+		"files.associations": {
+			"reference/vscode-copilot-chat/package.json": "plaintext"
+		}
+	}
+}

@@ -1,0 +1,3 @@
+[submodule "reference/vscode-copilot-chat"]
+	path = reference/vscode-copilot-chat
+	url = https://github.com/microsoft/vscode-copilot-chat.git

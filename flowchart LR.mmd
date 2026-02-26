@@ -1,0 +1,46 @@
+flowchart LR
+  user([User])
+
+  subgraph local["Local domain (PC / Future NAS)\nVSCodium as Host"]
+    webview["Webview UI\n(plan/build + auto-approve toggles)"]
+    exthost["VS Code Extension Host\n(bridge + UI state)"]
+    localbus["Local ToolBus / Policy Enforcer\n(file/terminal/MCP)"]
+    opencode["OpenCode Coding Worker"]
+    videow["Video Factory Worker"]
+    vizw["3D/Interactive Demo Worker\n(browser automation/render)"]
+    nas[("NAS / Local Archive")]
+  end
+
+  subgraph server["Server domain (7×24 online)"]
+    orch["Orchestrator (Claude/Codex)\nTask router + PolicyState + Audit"]
+    serverbus["Server ToolBus / Policy Enforcer\n(network/db/publish)"]
+    crawler["Crawler Agent"]
+    social["Social/Forum Agent"]
+    publisher["Media Publish Agent"]
+    hotstore[("Server HotStore Disk")]
+    eventstore[("Audit/Event Store + Manifests")]
+  end
+
+  user --> webview
+  webview <--> exthost
+  exthost <--> orch
+
+  orch --> serverbus
+  serverbus --> crawler
+  serverbus --> social
+  serverbus --> publisher
+
+  crawler --> hotstore
+  publisher --> hotstore
+
+  orch --> localbus
+  localbus --> opencode
+  localbus --> videow
+  localbus --> vizw
+  localbus --> nas
+
+  hotstore -. "migrate/pull artifacts" .-> localbus
+
+  orch --> eventstore
+  serverbus --> eventstore
+  localbus --> eventstore
