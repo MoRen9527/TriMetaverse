@@ -27,3 +27,17 @@
 - 若 `@copilot` 触发与移动端审批在当前网络环境下不稳定，优先保证 Web 端可完成完整审批闭环，再补移动端证据截图。
 - Issue #1 已在 PR #2 合并后关闭。
 - 5 分钟补齐清单：见 [phase-b-b2-b3-5min-checklist.md](phase-b-b2-b3-5min-checklist.md)。
+
+## B2/B3 补充证据（人工）
+
+- B2（GitHub Mobile）：
+  - 设备：待填写
+  - 时间：待填写
+  - PR 链接：https://github.com/MoRen9527/TriMetaverse/pull/2
+  - 结果：待填写（可查看 / 可评论 / 可见审批入口）
+
+- B3（非作者 Approve）：
+  - PR 链接：https://github.com/MoRen9527/TriMetaverse/pull/4
+  - Approver 账号：待填写
+  - Approve 时间：待填写
+  - 结果：待填写（出现 `approved these changes`）
