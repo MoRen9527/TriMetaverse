@@ -17,7 +17,7 @@
 ## 验收项状态
 
 - B1（6 仓覆盖）：通过（6 个目标仓库均已存在于账号下）
-- B2（移动端审批与 `@copilot` 迭代）：待人工在 GitHub Mobile 实机核验
+- B2（移动端审批与 `@copilot` 迭代）：通过（Android 端已完成可见性与交互核验，时间约 2 小时前）
 - B3（Issue→Agent→PR→审批→合并）：通过（Issue #1 → PR #2 已合并；补证 PR #4 已由 `Jedi-HeJun` 执行 Approve 并完成合并）
 - B4（本地权限弹窗边界无歧义）：通过（文档已固化：移动端不可替代 VS Code 本地权限弹窗）
 
@@ -31,10 +31,10 @@
 ## B2/B3 补充证据（人工）
 
 - B2（GitHub Mobile）：
-  - 设备：待填写
-  - 时间：待填写
+  - 设备：Android
+  - 时间：约 2 小时前（相对 2026-02-27 当前会话）
   - PR 链接：https://github.com/MoRen9527/TriMetaverse/pull/2
-  - 结果：待填写（可查看 / 可评论 / 可见审批入口）
+  - 结果：已完成（可查看 / 可评论 / 可见审批入口）
 
 - B3（非作者 Approve）：
   - PR 链接：https://github.com/MoRen9527/TriMetaverse/pull/4
