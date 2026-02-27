@@ -740,6 +740,7 @@ NFT 徽章（可选实现：自改以太坊公链）：
 - `TriMetaverse` 作为元仓库（工作区编排、架构文档、reference 索引、submodule 指针）。
 - `Tripilot` / `Tristaciss` / `Avatar-react` / `Opentride` / `vscodium` 保持独立仓库演进。
 - reference 统一收敛到 `TriMetaverse/reference/`，按 submodule 管理来源与版本。
+- `Opentride` 目录治理约束（待执行）：将核心代码统一下沉到 `opencode-dev/` 子目录，作为多编程 agent 运行时并行承载位（`opencode` / `codex` / `claude-code` 等），避免后续并行演进时目录冲突与职责混杂。
 
 ### 9.2 协同能力边界（并入后统一口径）
 
