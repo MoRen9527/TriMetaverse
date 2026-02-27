@@ -781,6 +781,7 @@ NFT 徽章（可选实现：自改以太坊公链）：
 ### Phase C：架构迁移与验证
 
 本周最小启动清单：见 [phase-c-minimal-startup-checklist-2026-02-27.md](phase-c-minimal-startup-checklist-2026-02-27.md)。
+执行状态：W1 已于 2026-02-27 达成 DoD（W1-1/W1-2/W1-3/W1-4 全完成），证据见 [phase-c-pilot-record-2026-02-27.md](phase-c-pilot-record-2026-02-27.md)。
 
 1. 以第 8 章硬门禁为前置，推进 Tripilot 架构调整。
 2. 将本架构文档中的 Server/Local 生命周期协议接入实际流水线。
