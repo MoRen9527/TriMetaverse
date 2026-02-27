@@ -85,3 +85,5 @@ PR 描述模板：见 [phase-c-w1-pr-template.md](phase-c-w1-pr-template.md)。
 1. 至少 1 份当日 `daily-smoke` 产物 `overallPass=true`。
 2. 至少 1 次 `opencode-acp` 主路径手工回归通过并留痕。
 3. 至少 1 个架构调整提交附带四重回归证据。
+
+当前状态（2026-02-27）：以上 3 条已满足，W1 DoD 达成。证据汇总见 [phase-c-pilot-record-2026-02-27.md](phase-c-pilot-record-2026-02-27.md)。
