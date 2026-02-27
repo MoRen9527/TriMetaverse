@@ -32,7 +32,11 @@
 
 ## 4. W1-3/W1-4 跟踪位（待持续更新）
 
-- W1-3 每日 smoke 产物累计数：1 / 3（目标）
+- W1-3 每日 smoke 产物累计数：2 / 3（目标）
+  - 新增产物（2026-02-27T14:05:02+08:00）：
+    - `Tripilot/artifacts/acceptance/daily-smoke-20260227-140502.txt`
+    - `Tripilot/artifacts/acceptance/daily-smoke-20260227-140502.json`
+  - 结果：`overallPass=true`，`MISSING=0`，`BAD_ALIAS_TARGETS=0`
 - W1-4 架构调整提交附带四重回归证据：待填写
 
 ## 5. 当前判定
