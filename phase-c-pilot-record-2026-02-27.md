@@ -32,15 +32,19 @@
 
 ## 4. W1-3/W1-4 跟踪位（待持续更新）
 
-- W1-3 每日 smoke 产物累计数：2 / 3（目标）
+- W1-3 每日 smoke 产物累计数：3 / 3（目标，已达成）
   - 新增产物（2026-02-27T14:05:02+08:00）：
     - `Tripilot/artifacts/acceptance/daily-smoke-20260227-140502.txt`
     - `Tripilot/artifacts/acceptance/daily-smoke-20260227-140502.json`
+  - 结果：`overallPass=true`，`MISSING=0`，`BAD_ALIAS_TARGETS=0`
+  - 新增产物（2026-02-27T14:07:48+08:00）：
+    - `Tripilot/artifacts/acceptance/daily-smoke-20260227-140748.txt`
+    - `Tripilot/artifacts/acceptance/daily-smoke-20260227-140748.json`
   - 结果：`overallPass=true`，`MISSING=0`，`BAD_ALIAS_TARGETS=0`
 - W1-4 架构调整提交附带四重回归证据：待填写
 
 ## 5. 当前判定
 
 - 已完成：W1-1、W1-2
-- 进行中：W1-3、W1-4
+- 进行中：W1-4
 - 结论：Phase C 已启动，尚未达到 W1 完成判定（DoD）
