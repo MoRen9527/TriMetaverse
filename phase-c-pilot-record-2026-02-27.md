@@ -42,6 +42,7 @@
     - `Tripilot/artifacts/acceptance/daily-smoke-20260227-140748.json`
   - 结果：`overallPass=true`，`MISSING=0`，`BAD_ALIAS_TARGETS=0`
 - W1-4 架构调整提交附带四重回归证据：待填写
+  - PR 描述模板：见 [phase-c-w1-pr-template.md](phase-c-w1-pr-template.md)
 
 ## 5. 当前判定
 

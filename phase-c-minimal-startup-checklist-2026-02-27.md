@@ -55,6 +55,8 @@ powershell -ExecutionPolicy Bypass -File scripts/acceptance/daily-smoke.ps1
 
 ### W1-4 锁定“硬门禁优先级”
 
+PR 描述模板：见 [phase-c-w1-pr-template.md](phase-c-w1-pr-template.md)。
+
 - 任何架构调整提交前，必须先过：
   1) 编译门禁
   2) alias 门禁
