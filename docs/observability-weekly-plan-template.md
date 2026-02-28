@@ -79,3 +79,17 @@
 - 每次周会只更新三项：`Status / ETA / Blocker`
 - 每个里程碑至少保留一个“风险兜底任务”
 - 若某任务 `BLOCKED > 2 天`，必须在 Epic 中补充绕行方案
+
+---
+
+## 8) 实名填充示例（可直接改名）
+
+> 默认单 Owner 推进示例（当前仓库账号）：`@MoRen9527`
+
+- `Core-Agent Owner`：`@MoRen9527`
+- `API Owner`：`@MoRen9527`
+- `Observability Owner`：`@MoRen9527`
+- `UI Owner`：`@MoRen9527`
+- `SRE/值守 Owner`：`@MoRen9527`
+
+多人协作时，建议保留角色名不变，仅替换右侧实名，便于后续与 issue assignee 做一一映射。
