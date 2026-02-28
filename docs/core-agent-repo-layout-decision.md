@@ -3,6 +3,10 @@
 更新时间：2026-02-28
 状态：已确认执行
 
+相关专项文档：
+
+- `docs/socialfi-repo-layout-decision.md`
+
 ## 决策结论
 
 - `core-agent` 运行在服务域（7x24 在线），作为单独核心主控。
