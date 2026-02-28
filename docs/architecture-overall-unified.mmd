@@ -12,6 +12,11 @@ flowchart LR
     nas[("NAS / Local Archive")]
   end
 
+  subgraph clients["Client surfaces（显示/审批）"]
+    appui["APP / 小程序 UI"]
+    webui["Web Frontend（avatar-react）"]
+  end
+
   subgraph server["Server domain (7×24 online)"]
     subgraph socialfi["SocialFi 服务域独立接入层（目录/仓与 Tripilot 同级）"]
       chad["Channel Adapter\nnormalize message / extract attachments"]
@@ -34,6 +39,7 @@ flowchart LR
     end
 
     serverbus["Server ToolBus / Policy Enforcer\n(network/db/publish)"]
+    uisync["UI Sync & Approval Hub\n(single source for display/approval state)\nWebSocket/Stream + versioned state"]
     vcbridge["Observability Bridge\n(audit/toolbus -> observability events; sim -> training/eval events)"]
     crawler["Crawler Agent"]
     social["Social/Forum Agent"]
@@ -50,6 +56,13 @@ flowchart LR
   webview <--> exthost
   exthost <--> vcui
   exthost <--> gateway
+
+  %% Multi-client display/approval sync
+  gateway --> uisync
+  eventstore --> uisync
+  uisync --> webui
+  uisync --> appui
+  uisync --> webview
 
   %% SocialFi to Core-Agent
   chad --> socialbus --> gateway
