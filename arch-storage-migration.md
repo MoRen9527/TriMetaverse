@@ -114,6 +114,7 @@ flowchart LR
 
 - **通知扇出**：同一条审批同时推送到
   - VS Code Webview（主工作台，细粒度展示 diff/命令/影响面）
+  - Web 前端（`avatar-react`，服务侧展示与审批视图）
   - 外部渠道（小程序/独立 App；也可以把“通知”转发到社交账号，但不建议在社交私信里直接完成批准）
 - （可选但推荐）**Server Admin Console（CLI/简易 TUI）**：当本地 VS Code 不在线、或需要 7×24 值守时，服务器侧也应允许随时接入查看运行状态与审批队列，并完成批准/拒绝。
 - **首个批准生效（first-wins）**：任一通道完成批准后，审批进入 `APPROVED`，其余通道自动变为 `RESOLVED`（幂等）。
@@ -128,13 +129,14 @@ flowchart LR
 
 三端同步的推荐做法（不改变 first-wins，只是让“随时接入”更可靠）：
 
-- **Orchestrator 作为单一真相源（source of truth）**：ApprovalRequest 的状态仅在 Orchestrator 中流转；Webview/App/CLI 都是“观察 + 提交决策”的客户端，不各自维护独立状态。
+- **Orchestrator 作为单一真相源（source of truth）**：ApprovalRequest 的状态仅在 Orchestrator 中流转；Webview/`avatar-react`/App（含小程序）/CLI 都是“观察 + 提交决策”的客户端，不各自维护独立状态。
 - **事件流/状态拉取**：
   - 在线：客户端通过 WebSocket/SSE 订阅“运行状态 + 审批队列”事件流。
   - 断线重连：客户端使用 `since=cursor` 或定期 `ListApprovals/GetStatus` 拉取补齐。
 - **通道一致性**：所有通道走同一个 `Approve/Deny` 接口（或同一个 ToolBus/HTTP 路由），确保幂等与审计一致。
 - **服务器侧 CLI 的最低能力**：`status`（查看任务/worker/心跳）、`approvals list`（列队列）、`approvals show <id>`（显示摘要）、`approvals approve|deny <id>`（提交决定）。
 - **服务器侧 CLI 的额外风控**（建议）：强身份认证（mTLS/SSH 证书/短期 token）、最小权限（只授予审批与只读状态）、命令行回显/历史敏感信息处理（避免把 diff/密钥落到 shell history）。
+- **本地一致性策略**：本地侧遵循“尽量一致 + 最终一致”，允许短暂缓存/离线差异，但重连后必须基于 cursor/version 回放补齐并对齐服务侧状态。
 
 推荐的交互（更安全也更顺畅）：
 
