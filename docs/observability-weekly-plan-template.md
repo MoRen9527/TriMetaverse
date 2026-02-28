@@ -36,25 +36,35 @@
 
 ---
 
-## 4) 任务跟踪模板（可复制）
+## 4) 默认 Owner 分工（初稿）
 
-| Issue | 标题 | Owner | ETA | Status | 依赖 | 风险 | 备注 |
-|---|---|---|---|---|---|---|---|
-| #16 | Bridge 事件适配器 | 待定 | 2~3d | TODO | - | 事件源字段不一致 | |
-| #17 | 契约校验接入 | 待定 | 1~2d | TODO | #16 | 历史事件不满足 schema | |
-| #18 | timeline/replay API | 待定 | 2~3d | TODO | #16,#17 | 查询性能/分页一致性 | |
-| #29 | 3D 状态机与映射 | 待定 | 2~3d | TODO | #16 | 状态语义偏差 | |
-| #30 | approval/tool 高亮联动 | 待定 | 1~2d | TODO | #29 | 高频联动卡顿 | |
-| #31 | 回放控制 | 待定 | 2~3d | TODO | #29,#18 | 回放与实时冲突 | |
-| #20 | 子代理关系树 | 待定 | 1~2d | TODO | #29 | 树规模增长性能 | |
-| #25 | 会话复盘模板 | 待定 | 1~2d | TODO | M2 | 模板抽象不足 | |
-| #26 | 异常聚类与标签 | 待定 | 2~3d | TODO | M2 | 聚类准确率波动 | |
-| #27 | runbook 接入 | 待定 | 1~2d | TODO | M2 | 手册与系统脱节 | |
-| #28 | 可靠性容量基线 | 待定 | 2~3d | TODO | M2 | 基线采样不稳定 | |
+- `Core-Agent Owner`：负责会话编排链路与事件生产侧对齐（`#16/#17` 协作）
+- `API Owner`：负责查询接口、回放接口与性能门禁（`#18`）
+- `Observability Owner`：负责 3D 状态模型、回放一致性与训练复盘链路（`#29/#31/#25/#26/#28`）
+- `UI Owner`：负责高亮联动、子代理关系树与交互体验（`#30/#20`）
+- `SRE/值守 Owner`：负责 runbook 接入与值守手册落地（`#27`）
 
 ---
 
-## 5) Status 建议枚举
+## 5) 任务跟踪模板（可复制）
+
+| Issue | 标题 | Owner | ETA | Status | 依赖 | 风险 | 备注 |
+|---|---|---|---|---|---|---|---|
+| #16 | Bridge 事件适配器 | Core-Agent Owner | 2~3d | TODO | - | 事件源字段不一致 | |
+| #17 | 契约校验接入 | Core-Agent Owner + Observability Owner | 1~2d | TODO | #16 | 历史事件不满足 schema | |
+| #18 | timeline/replay API | API Owner | 2~3d | TODO | #16,#17 | 查询性能/分页一致性 | |
+| #29 | 3D 状态机与映射 | Observability Owner | 2~3d | TODO | #16 | 状态语义偏差 | |
+| #30 | approval/tool 高亮联动 | UI Owner | 1~2d | TODO | #29 | 高频联动卡顿 | |
+| #31 | 回放控制 | Observability Owner + API Owner | 2~3d | TODO | #29,#18 | 回放与实时冲突 | |
+| #20 | 子代理关系树 | UI Owner | 1~2d | TODO | #29 | 树规模增长性能 | |
+| #25 | 会话复盘模板 | Observability Owner | 1~2d | TODO | M2 | 模板抽象不足 | |
+| #26 | 异常聚类与标签 | Observability Owner | 2~3d | TODO | M2 | 聚类准确率波动 | |
+| #27 | runbook 接入 | SRE/值守 Owner | 1~2d | TODO | M2 | 手册与系统脱节 | |
+| #28 | 可靠性容量基线 | Observability Owner | 2~3d | TODO | M2 | 基线采样不稳定 | |
+
+---
+
+## 6) Status 建议枚举
 
 - `TODO`：未开始
 - `IN_PROGRESS`：进行中
@@ -64,7 +74,7 @@
 
 ---
 
-## 6) 周会更新规则（建议）
+## 7) 周会更新规则（建议）
 
 - 每次周会只更新三项：`Status / ETA / Blocker`
 - 每个里程碑至少保留一个“风险兜底任务”
