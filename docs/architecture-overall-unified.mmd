@@ -19,7 +19,7 @@ flowchart LR
       chresp["Channel Response Adapter\nstream chunks + format"]
     end
 
-    subgraph coreagent["Core-Agent 模块（基于 Kode-Agent 重写主控）"]
+    subgraph coreagent["Core-Agent 服务域独立主控（基于 Kode-Agent 重写；目录/仓与 Tripilot 同级）"]
       gateway["Gateway Server (Coordinator)\nSession Entry + Routing"]
       routerq["Session Router + Lane Queue\nConcurrency / Isolation"]
       runner["Agent Runner\nPrompt Builder / History Loader / Context Guard"]
@@ -95,5 +95,6 @@ flowchart LR
   %% References
   ref1["openclaw 参考\nGateway / Agent Runner / Agentic Loop"] -.mapping.-> coreagent
   ref2["Kode-Agent 参考\nClaude Code兼容执行主控"] -.mapping.-> coreagent
+  repolayout["Repo Layout 决策\ncore-agent 独立目录（与 Tripilot 同级）"] -.structure.-> coreagent
   ref3["vibecraft 参考\n3D可视化 / 会话编排 / 状态追踪"] -.mapping.-> vcbridge
   ref4["AgentSims 参考\n任务仿真 / Tick循环 / 训练评测沙盒"] -.mapping.-> vcbridge
