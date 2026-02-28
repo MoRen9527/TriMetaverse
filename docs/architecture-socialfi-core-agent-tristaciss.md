@@ -47,4 +47,4 @@ flowchart LR
 - `SocialFi` 只负责渠道接入与响应适配，不承载模型调度逻辑。
 - `Core-Agent` 负责会话编排、工具执行和代理循环，是 24x7 主控核心。
 - `Tristaciss` 是唯一 LLM 出口，统一模型接入、策略与可观测能力。
-- 引入统一 3D 观测层：`VibeCraft-inspired` 负责运维观测（会话/工具/回放），`AgentSims-inspired` 负责任务仿真监控（Tick/评估/实验）；两者在同一模块内以不同模式呈现，避免双系统分裂。
+- 引入统一 3D 观测层：`VibeCraft-inspired` 负责运维观测（会话/工具/回放），`AgentSims-inspired` 负责任务仿真训练与评测（Tick/评估/实验）；两者在同一模块内以不同模式呈现，避免双系统分裂。

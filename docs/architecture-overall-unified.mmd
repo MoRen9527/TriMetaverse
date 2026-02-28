@@ -4,7 +4,7 @@ flowchart LR
   subgraph local["Local domain (PC / Future NAS)\nVSCodium as Host"]
     webview["Webview UI\n(plan/build + auto-approve toggles)"]
     exthost["VS Code Extension Host\n(bridge + UI state)"]
-    vcui["3D Agent Observatory UI\n(Ops+Sim: VibeCraft timeline + AgentSims monitor)"]
+    vcui["3D Agent Observatory UI\n(Ops+Sim: VibeCraft observability + AgentSims training/eval)"]
     localbus["Local ToolBus / Policy Enforcer\n(file/terminal/MCP)"]
     opencode["OpenCode Coding Worker"]
     videow["Video Factory Worker"]
@@ -34,7 +34,7 @@ flowchart LR
     end
 
     serverbus["Server ToolBus / Policy Enforcer\n(network/db/publish)"]
-    vcbridge["Observability Bridge\n(audit/toolbus/sim -> scene event model)"]
+    vcbridge["Observability Bridge\n(audit/toolbus -> observability events; sim -> training/eval events)"]
     crawler["Crawler Agent"]
     social["Social/Forum Agent"]
     publisher["Media Publish Agent"]
@@ -96,4 +96,4 @@ flowchart LR
   ref1["openclaw 参考\nGateway / Agent Runner / Agentic Loop"] -.mapping.-> coreagent
   ref2["Kode-Agent 参考\nClaude Code兼容执行主控"] -.mapping.-> coreagent
   ref3["vibecraft 参考\n3D可视化 / 会话编排 / 状态追踪"] -.mapping.-> vcbridge
-  ref4["AgentSims 参考\n任务仿真 / Tick循环 / 评估沙盒"] -.mapping.-> vcbridge
+  ref4["AgentSims 参考\n任务仿真 / Tick循环 / 训练评测沙盒"] -.mapping.-> vcbridge

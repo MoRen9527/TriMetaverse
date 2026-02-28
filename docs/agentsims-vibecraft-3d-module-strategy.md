@@ -16,9 +16,9 @@
    - 面向：线上运行维护 / 可解释回放
    - 重点：session 状态、tool timeline、subagent 可视化、异常定位
 
-2. `Simulation Monitor Mode`（AgentSims-inspired）
-   - 面向：任务仿真 / AI 培训 / 评估实验
-   - 重点：Tick 循环、agent plan-act-use-critic 链、评估问答与得分
+2. `Simulation Training/Eval Mode`（AgentSims-inspired）
+  - 面向：任务仿真 / AI 培训 / 评估实验
+  - 重点：Tick 循环、agent plan-act-use-critic 链、评测问答与得分
 
 两种模式共享同一事件底座（eventstore + observability bridge），仅在 UI 与指标层分视图。
 
@@ -42,7 +42,7 @@
 ### 3.2 AgentSims 提供
 
 - 仿真小镇 Tick 驱动、plan/act/use/critic 循环、评估任务机制
-- 映射到：`Simulation Monitor Mode`
+- 映射到：`Simulation Training/Eval Mode`
 
 ---
 
@@ -57,7 +57,7 @@
 
 其中：
 
-- `sim.*` 事件仅在仿真模式强展示；
+- `sim.*` 事件仅在训练/评测模式强展示；
 - `tool/session` 事件在两模式共享展示。
 
 ---
@@ -66,7 +66,7 @@
 
 1. 先落地统一 bridge 与 schema（不做重 UI）
 2. 先上线 Ops 模式（可直接服务维护）
-3. 再接入 Simulation 模式（Tick/评估面板）
+3. 再接入 Simulation Training/Eval 模式（Tick/评估面板）
 4. 最后做培训回放模板（案例库 + 讲解层）
 
 ---

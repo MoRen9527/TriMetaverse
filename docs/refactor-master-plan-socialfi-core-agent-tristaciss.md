@@ -22,7 +22,7 @@
 3. 将模型调用统一收敛至 `Tristaciss`（唯一 LLM API 出口）。
 4. 保持 `Server domain / Local domain` 双域架构，继续执行 ToolBus 强制与全链路审计。
 5. 在不破坏现有门禁与协作流程的前提下完成可回滚迁移。
-6. 新增统一 3D 观测层：`VibeCraft-inspired`（运维观测）+ `AgentSims-inspired`（任务仿真监控），共享同一事件底座，支持 AI 培训与可解释维护。
+6. 新增统一 3D 观测层：`VibeCraft-inspired`（运维观测）+ `AgentSims-inspired`（任务仿真训练与评测），共享同一事件底座，支持 AI 培训与可解释维护。
 
 ### 1.2 非目标（本阶段不做）
 
