@@ -12,6 +12,7 @@ This directory contains third-party / upstream code copied in for reading and co
 - `Kode-Agent/` – Reference source from https://github.com/shareAI-lab/Kode-Agent (pinned at `214c12f`)
 - `vibecraft/` – Reference source from https://github.com/Nearcyan/vibecraft (pinned at `8278a4b`)
 - `AgentSims/` – Reference source from https://github.com/py499372727/AgentSims (pinned at `52b3adb`)
+- `dataclaw/` – Reference source from https://github.com/peteromallet/dataclaw
 
 ## Updating
 
