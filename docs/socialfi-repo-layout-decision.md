@@ -34,4 +34,4 @@
 
 - 不在 `socialFi` 内实现 LLM 路由与 Agent 主控循环。
 - 不绕过 `Core-Agent` 直接调用下游主控工具链。
-- 所有变更回填到 `docs/runs/执行轮次参考模板-Rxx-...md`。
+- 所有变更回填到 `docs/runs/run-Rxx-...md`。
