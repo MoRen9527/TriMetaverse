@@ -167,6 +167,7 @@
 		},
 		"files.associations": {
 			"reference/vscode-copilot-chat/package.json": "plaintext"
-		}
+		},
+		"liveServer.settings.multiRootWorkspaceName": "TriMetaverse"
 	}
 }
