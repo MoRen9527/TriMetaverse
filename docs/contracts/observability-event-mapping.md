@@ -1,6 +1,6 @@
 # Observability Event Mapping Contract（VibeCraft-inspired）
 
-更新时间：2026-02-27
+更新时间：2026-03-01
 
 ## 1. 目标与边界
 
@@ -29,7 +29,7 @@
   "sessionId": "ses_01...",
   "timestamp": "2026-02-27T12:34:56.789Z",
   "source": "gateway|serverbus|localbus|eventstore",
-  "eventType": "session.state.changed|tool.call.started|tool.call.finished|approval.requested|subagent.spawned|subagent.finished|message.chunk|message.final|error",
+  "eventType": "session.state.changed|tool.call.started|tool.call.finished|approval.requested|approval.resolved|subagent.spawned|subagent.finished|message.chunk|message.final|replay.state.changed|error",
   "actor": {
     "type": "user|agent|subagent|system",
     "id": "agent.main"

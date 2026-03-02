@@ -733,6 +733,22 @@ NFT 徽章（可选实现：自改以太坊公链）：
 - Provider 扩展（`codex` / `claude-code` / `tristaciss-agent`）必须遵循统一事件模型与工具执行收口规则。
 - 后续“Server/Local 双域编排”接入时，不得破坏上述四项硬门禁。
 
+### 8.4 core-agent 与 Tristaciss 的模型调用协议（新增定案）
+
+- **协议形态**：`core-agent -> Tristaciss` 统一采用 **OpenAI 兼容请求格式** 作为基础载体（messages/model/temperature 等标准字段）。
+- **路由扩展**：在兼容格式上增加 `tag + fields` 模式：
+  - `tag`：用于标识“供应商 + 具体模型”路由键（例如 `provider:model`）。
+  - `fields`：用于承载该供应商原厂 SDK 的附加入参（非 OpenAI 标准字段）。
+- **Tristaciss 责任**：根据 `tag + fields` 做转换与路由：
+  1. 解析 `tag` 选择供应商与目标模型；
+  2. 将 OpenAI 兼容主体 + `fields` 转换为对应原厂 SDK 参数；
+  3. 调用目标供应商 SDK 并回传统一响应；
+  4. 路由决策与关键参数摘要写入审计（不得记录密钥原文）。
+- **边界约束**：
+  - `core-agent` 不直接绑定某家 SDK；仅发送兼容主体与业务意图（`tag + fields`）。
+  - `Tristaciss` 负责供应商适配层与版本差异收敛，确保上层编排稳定。
+  - 若 `tag` 缺失或非法，必须返回可审计错误并拒绝降级到不确定默认模型。
+
 ## 9. 并入：GitHub App + Copilot 协同落地（仓库治理基线）
 
 并入来源：`TriMetaverse/github-app-copilot-rollout-v1.md`。
