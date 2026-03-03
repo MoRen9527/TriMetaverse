@@ -1,100 +1,124 @@
 # 全栈测试框架与环境方案（R04）
 
 更新时间：2026-03-03
-适用范围：Tripilot（VS Code 扩展）/ Avatar-react（前端）/ Tristaciss（后端）
+适用范围：Tripilot、Tristaciss、Avatar-react、Opentride、VSCodium、未来新增子项目
 
 ---
 
-## 1) 现状评估（按你的 12 条问题）
+## 1) 全项目测试框架总览（主流测试框架）
+
+| 项目 | 技术栈 | 主流测试框架（目标） | 当前状态 |
+|---|---|---|---|
+| Tripilot | VS Code Extension + TypeScript | Vitest（Unit/Integration）+ @vscode/test-electron（Extension-host E2E） | 已接入 |
+| Avatar-react | React + Vite | Vitest + Testing Library + Playwright | 已接入 |
+| Tristaciss(api-server) | FastAPI/Python | pytest + pytest-asyncio + httpx + pytest-cov | 目前脚本测试，待框架化 |
+| Opentride | Bun/TS monorepo | bun turbo test + Playwright（按 package） | 已有 CI 流程 |
+| VSCodium | 发行/构建工程 | 构建发布流水线 + 冒烟验证脚本 | 以构建发布为主 |
+| 未来子项目 | 待定 | JS/TS: Vitest/Jest；Python: pytest；E2E: Playwright/Cypress | 采用统一模板准入 |
+
+---
+
+## 2) 现状评估（按你的 12 条问题）
 
 ### Q1 测试层级是否完整（单元/集成/系统/验收/专项）
 - 现状：
-  - Tripilot：以 compile + check 脚本为主，缺少标准化单元/集成/系统测试。
-  - Avatar-react：已有单元（Vitest）+ 端到端（Playwright）。
-  - Tristaciss：有脚本化 API 测试，但缺少统一框架化报告。
-- 方案：
-  - Tripilot 已补齐 Unit/Integration 自动化骨架（Vitest）。
-  - 系统/E2E、专项（性能/安全/可靠性）与验收（Alpha/Beta）纳入统一清单与门禁。
+  - Tripilot：已具备 Unit/Integration + Extension-host E2E 基础。
+  - Avatar-react：已具备 Unit + E2E。
+  - Tristaciss：有脚本测试，缺少标准化分层。
+  - Opentride：已有较完整 test/typecheck/e2e。
+  - VSCodium：以构建发布为主，业务测试策略需补。
+- 方案：统一五层（Unit/Integration/System/专项/验收）和门禁。
 
 ### Q2 有没有端到端测试
-- 现状：Avatar-react 有 Playwright；Tripilot 暂无扩展宿主级 E2E。
-- 方案：
-  - Phase-A：保留 Avatar-react Playwright 作为前端 E2E。
-  - Phase-B：Tripilot 接入 `@vscode/test-electron` 做扩展级 E2E（下一阶段）。
+- 现状：Avatar-react 有 Playwright；Tripilot 已接 extension-host E2E smoke。
+- 方案：Tripilot 扩展 E2E 从 smoke 扩展到会话/工具调用/回放/审批关键链路。
 
-### Q3 有没有主流测试框架
-- 现状：Avatar-react 已用 Vitest + Playwright；Tripilot 之前无。
-- 方案：Tripilot 已新增 Vitest（含 coverage）。
+### Q3 有没有主流测试框架（测试框架维度）
+- 现状：
+  - JS/TS：Vitest/Playwright 已在多个项目使用。
+  - Python：Tristaciss 尚未统一 pytest。
+- 方案：
+  - JS/TS 单元与集成：Vitest（或兼容包用 Jest）
+  - Python：pytest + pytest-cov
+  - 扩展宿主 E2E：@vscode/test-electron
+  - Web E2E：Playwright（必要时 Cypress）
 
 ### Q4 有没有自动生成测试数据
-- 现状：缺少统一机制。
-- 方案：Tripilot 已新增 `npm run test:data:generate` 生成可复现事件样本。
+- 现状：Tripilot 已有 fixture 生成器。
+- 方案：其他项目补同类数据工厂（前端 mock、后端 factory/seed）。
 
 ### Q5 有没有用 VSCode 辅助配置测试框架与环境
-- 现状：Tripilot 有调试/任务配置，无测试扩展建议。
-- 方案：已补 `.vscode/extensions.json` 与测试相关 settings。
+- 现状：Tripilot 已补测试扩展推荐与 testing settings。
+- 方案：按项目栈在各子仓补 `.vscode/extensions.json`。
 
 ### Q6 有没有 CI/CD 自动化回归（GitHub Actions/Jenkins）
-- 现状：Avatar-react 有基础 workflow；Tripilot 缺。
-- 方案：Tripilot 已新增 GitHub Actions `quality-gate.yml`（compile + fixture + coverage）。
+- 现状：
+  - Tripilot：已有 quality-gate（含 extension-host E2E）。
+  - Avatar-react：已有 E2E workflow。
+  - Opentride：已有 test workflow。
+- 方案：Tristaciss、VSCodium 业务层回归门禁补齐。
 
 ### Q7 有没有优化与维护测试套件
-- 现状：缺少统一规范。
-- 方案：已补 `tests/TESTING_FRAMEWORK.md`，定义 flaky 处理、回归补测、覆盖率治理。
+- 现状：Tripilot 已有治理文档；其余项目不统一。
+- 方案：统一 flaky 管理、覆盖率阈值、缺陷回归补测制度。
 
-### Q8 关键路径是否提请人工审查
-- 现状：流程分散。
-- 方案：定义三类强制人工审查门禁：安全关键路径/业务关键逻辑/性能敏感模块。
+### Q8 业务逻辑/安全关键/性能敏感是否人工审查
+- 现状：缺少统一 Gate。
+- 方案：PR 模板加入强制勾选审查项（Security/Business/Performance）。
 
-### Q9 是否按技术栈选择 Jest/pytest/Mocha/Cypress 并配 VSCode 扩展
-- 现状：前端以 Vitest+Playwright 为主；后端脚本化；扩展侧缺标准化。
+### Q9 是否按栈选择 Jest、pytest、Mocha、Cypress，并配置 VSCode 扩展
+- 现状：Tripilot 现为 Vitest + Mocha(用于 extension-host test runner)；Avatar-react 为 Vitest+Playwright。
 - 方案：
-  - Tripilot：Vitest（已落地）+ 后续 @vscode/test-electron。
-  - Avatar-react：继续 Vitest + Playwright。
-  - Tristaciss：建议 pytest + pytest-cov（下一阶段接入）。
-  - VSCode：推荐 Vitest Explorer / Test Explorer UI / Docker。
+  - Tripilot：Vitest + @vscode/test-electron（Mocha runner）
+  - Tristaciss：pytest
+  - Avatar-react：Vitest + Playwright
+  - Opentride：bun test + Playwright
+  - VSCode 扩展：Vitest Explorer / Test Explorer UI / Docker
 
 ### Q10 是否设计测试集并勾选结果
-- 现状：缺少统一模板。
-- 方案：已补 `tests/test-cases-checklist.md`，覆盖 Unit/Integration/System/专项/验收。
+- 现状：Tripilot 已有模板。
+- 方案：将模板推广到所有子项目（统一字段与签核流程）。
 
 ### Q11 覆盖率能否可视化
-- 现状：Tripilot 之前没有。
-- 方案：Tripilot 已输出 `text/html/lcov`，可直接打开 `coverage/index.html`。
+- 现状：Tripilot 已支持 text/html/lcov；Avatar-react 可扩展统一覆盖率上报。
+- 方案：全仓统一 coverage 产物命名与汇总看板。
 
-### Q12 有没有用容器保证本地与 CI 一致
-- 现状：未形成统一测试容器。
-- 方案：Tripilot 已新增 `docker/test.Dockerfile` 与 `docker-compose.test.yml`。
+### Q12 有没有利用容器保证本地与 CI 一致
+- 现状：Tripilot 已加测试容器；其他项目不统一。
+- 方案：每个项目至少一个 test Dockerfile + compose/CI 使用说明。
 
 ---
 
-## 2) 已落地改造（Tripilot）
+## 3) 已落地改造（Tripilot）
 
 - 测试框架：Vitest + coverage
+- 扩展宿主级 E2E：@vscode/test-electron + Mocha runner
 - 测试样例：
   - `tests/unit/sseParser.test.ts`
   - `tests/integration/sseParser.chunking.test.ts`
+  - `tests/e2e/suite/extension-smoke.test.cjs`
 - 自动数据：`tests/fixtures/generate-chat-events.mjs`
 - CI/CD：`.github/workflows/quality-gate.yml`
 - 容器：`docker/test.Dockerfile`, `docker-compose.test.yml`
-- VSCode：`.vscode/extensions.json` + settings 测试项
+- VSCode：`.vscode/extensions.json` + testing settings
 - 治理文档：`tests/TESTING_FRAMEWORK.md`, `tests/test-cases-checklist.md`
 
 ---
 
-## 3) 统一执行流程（开发即测试）
+## 4) 统一执行流程（开发即测试）
 
-1. 开发前：更新/新增测试用例清单（先写验收项）
-2. 开发中：本地 `compile -> test:data:generate -> test:coverage`
-3. 提交前：覆盖率报告检查 + 人工审查关键路径
-4. PR：GitHub Actions 自动回归必须全绿
-5. 合并后：按周维护覆盖率趋势与 flaky 清单
+1. 开发前：先写测试清单与验收项
+2. 开发中：`compile -> test:data:generate -> test:coverage`
+3. 提交前：关键路径人工审查 + 覆盖率检查
+4. PR：CI 必须全绿（包含 E2E smoke）
+5. 合并后：每周维护 flaky 与覆盖率趋势
 
 ---
 
-## 4) 下一阶段（建议）
+## 5) 下一阶段（全项目）
 
-- Tripilot：补扩展宿主级 E2E（`@vscode/test-electron`）
-- Tristaciss：引入 pytest、pytest-cov、安全扫描（bandit/pip-audit）
-- 全仓库：建立统一质量看板（覆盖率、失败率、平均修复时长）
-- 发布门禁：Alpha/Beta 验收清单正式纳入 release checklist
+- Tristaciss：正式接入 pytest + pytest-cov + 安全扫描
+- Avatar-react：补专项测试（性能/安全）与 Alpha/Beta 验收模板
+- Opentride：将现有 test workflow 指标纳入统一看板
+- VSCodium：补业务级冒烟与发布后健康检查
+- 未来子项目：按“技术栈->框架”映射模板强制准入
