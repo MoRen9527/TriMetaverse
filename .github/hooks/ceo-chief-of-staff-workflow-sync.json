@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "type": "command",
+        "command": "python .github/hooks/ceo-chief-of-staff-workflow-sync.py",
+        "timeout": 30,
+        "cwd": "."
+      }
+    ]
+  }
+}

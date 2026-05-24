@@ -1,0 +1,152 @@
+{
+  "bundleId": "tricompany-hermes-host-v0.1",
+  "status": "local-formal-takeover-central-absorption-complete",
+  "mode": "local-formal-takeover",
+  "sourceRepo": "TriCompany",
+  "targetRepo": "TriMetaverse",
+  "targetRoot": ".",
+  "supportRoot": "TriCompany-copilot-host-assets",
+  "notes": [
+    "当前机器可读清单文件名已整理为 tricompany-copilot-host-backport.json；旧文件名 tricompany-shadow-backport.json 仅保留为 phase-1 历史提法。",
+    "当前已进入本地 Copilot-host 正式接管，不代表正式宿主切换。",
+    "phase-1 默认采用平行文件名完成 shadow-test；2026-04-18 已完成转阶段，并仅对 ceo-chief-of-staff 总助套件完成中央命名吸收。",
+    "当前 source truth 与默认 operational root 已回到 TriCompany；supportRoot 继续保留为当前 Copilot-host 的 published-copy、operator-runbook、phase-evidence 与 archive 资产包，而不是中央协议层默认入口。",
+    "supportRoot 表示当前生效本地正式接管资产统一回看的支撑根目录；当前已迁移为 TriCompany-copilot-host-assets。",
+    "TriCompany-shadow-host 仅保留为 phase-1 已验证证据链对应的历史路径名。",
+    "影子 agent 所需的支撑文档、runtime 与 vendor 参考副本位于 TriCompany-copilot-host-assets。",
+    "TriCompany-copilot-host-assets 当前继续放在 TriMetaverse 根下，作为当前 Copilot-host 的宿主资产包。",
+    "当前已完成一轮完整会议生命周期演练，证明当前宿主资产已可在 shadow-test 闭环后进入本地正式接管。",
+    "当前已在 TriCompany-copilot-host-assets 根目录通过 python -m runtime.cognition.smoke_test 跑通 runtime/cognition 最小 smoke test。",
+    "当前已在 TriCompany-copilot-host-assets 根目录通过 python -m runtime.cognition.contract_validation 跑通 Hermes 核心 recall/consolidate 契约验证。",
+    "当前已在 TriCompany-copilot-host-assets 根目录通过 python -m runtime.cognition.integration_validation 跑通本地 provider-backed 集成验证。",
+    "当前已在 TriCompany-copilot-host-assets 根目录通过 python -m runtime.cognition.backend_validation 跑通 production 风格后端落盘与审计验证。",
+    "当前已在 TriCompany-copilot-host-assets 根目录通过 python -m runtime.cognition.external_validation 跑通模拟外部后端兼容性验证。",
+    "当前已在 TriCompany-copilot-host-assets 根目录通过 python -m runtime.cognition.http_backend_validation 跑通 HTTP 外部后端认证与网络验证。",
+    "当前已在 TriCompany-copilot-host-assets 根目录通过 python -m runtime.cognition.supermemory_validation 跑通 Supermemory 官方 schema 验证。",
+    "当前已在 TriCompany-copilot-host-assets 根目录通过 python -m runtime.cognition.supermemory_sdk_validation 跑通 Supermemory 官方 SDK seam 验证。",
+    "当前已在 TriCompany-copilot-host-assets 根目录补齐 python -m runtime.cognition.supermemory_live_validation 入口；该入口默认跳过，需显式设置环境变量后才执行真实远端调用。",
+    "2026-04-27 已在 TriCompany 根目录补回 source 侧 workflow bridge、workflow validation 与相关 top-level chief-of-staff CLI 入口；当前中央会议 prompt 与 workflow 协议默认按 TriCompany source root 执行，只有 source 不可用且宿主仅挂接 support 发布副本时才退回 supportRoot。",
+    "phase-1 首轮 live smoke 成功执行后已把结构化证据写入 docs/execution/hermes-copilot-host/phase-1/SUPERMEMORY-LIVE-VALIDATION.latest.json。",
+    "2026-04-18 在真实 live 环境下复跑 supermemory_live_validation 时，曾两次在 /v3/documents 调用阶段超时；补上 transport-timeout retry 并将默认 timeout 提升到 45 秒后，live 复跑已恢复通过。",
+    "当前已在同一 supportRoot 下完成开始会议补问、正式开始、会中 APPROVE、事实不足即 FREEZE 与结束会议收口的连续会议链路，可统一写成“本地 Copilot-host 已完成 shadow-test，现进入正式接管；该结论不等于正式宿主切换。”",
+    "当前已完成中央 ceo-chief-of-staff 总助五件套命名吸收，并继续保持公司级共享的开始会议/结束会议 prompt 不变。",
+    "当前已为中央 ceo-chief-of-staff 套件保留 baseline 快照：TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/。",
+    "2026-04-26 已为 tricompany 总助套件补建 archive baseline：TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/。",
+    "2026-04-26 起 live tricompany 总助 agent 与 tricompany 会议 prompt 已删除；当前仅保留 archive baseline 作为 rollback reference。",
+    "2026-04-29 已安排 ChiefProductOfficer 与 ChiefTechnologyOfficer 在当前 Copilot-host live 阶段上岗；两者复用既有 TriMetaverse/.github live entry，并通过 TriCompany source-side 五件套与 host-object-manifest 绑定到统一 role / employee support object path，不新建第二个 live agent 文件，也不代表 TriMC 正式宿主切换。",
+    "2026-04-29 已按 CEO 输入为当前 CPO / CTO live 员工补充工作名：ChiefProductOfficer 为小乔，ChiefTechnologyOfficer 为小狄；岗位名、live entry 文件名与正式宿主边界不变。",
+    "2026-04-29 已按 CEO 输入为 ProjectTrainer support 员工实例补充工作名小吴；该命名不改变 ProjectTrainer 当前 not-published 状态，也不代表其已发布为 live agent。",
+    "2026-04-29 已完成源码通用设计与运行消费数据边界纠偏：源侧 / live memory、colleagues、social 文件只保留层契约和运行资产落点，具体人物档案、阶段记忆、事项记录与 workflow 摘录迁入 TriCompany-copilot-host-assets/knowledge/employees/<employee-id>/wiki/ 或 runtime cognition state。",
+    "2026-05-21 已完成中央 ceo-chief-of-staff live 侧历史兼容清理：TriMetaverse/.github/agents 只保留 ceo-chief-of-staff.agent.md，soul/memory/colleagues/social 四层契约回到 TriCompany 源侧五件套与 support employee workspace 链路。",
+    "本清单的 target 路径当前统一按仓库根相对路径记录；已删除的 tricompany live 文件改为指向 archive baseline 副本。"
+  ],
+  "files": [
+    {
+      "source": ".github/agents/ceo-chief-of-staff.agent.md",
+      "target": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.agent.md",
+      "kind": "agent",
+      "status": "archived-only"
+    },
+    {
+      "source": ".github/agents/ceo-chief-of-staff.soul.md",
+      "target": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.soul.md",
+      "kind": "asset",
+      "status": "retired-live-companion-archived-only"
+    },
+    {
+      "source": ".github/agents/ceo-chief-of-staff.memory.md",
+      "target": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.memory.md",
+      "kind": "asset",
+      "status": "retired-live-companion-archived-only"
+    },
+    {
+      "source": ".github/agents/ceo-chief-of-staff.colleagues.md",
+      "target": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.colleagues.md",
+      "kind": "asset",
+      "status": "retired-live-companion-archived-only"
+    },
+    {
+      "source": ".github/agents/ceo-chief-of-staff.social.md",
+      "target": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.social.md",
+      "kind": "asset",
+      "status": "retired-live-companion-archived-only"
+    },
+    {
+      "source": ".github/agents/TriCompanyProductRegistry.agent.md",
+      "target": ".github/agents/TriCompanyProductRegistry.agent.md",
+      "kind": "agent"
+    },
+    {
+      "source": ".github/agents/TriCompanyCodeRegistry.agent.md",
+      "target": ".github/agents/TriCompanyCodeRegistry.agent.md",
+      "kind": "agent"
+    },
+    {
+      "source": ".github/agents/chief-product-officer.agent.md",
+      "target": ".github/agents/chief-product-officer.agent.md",
+      "kind": "agent",
+      "status": "existing-live-entry-bound"
+    },
+    {
+      "source": ".github/agents/chief-technology-officer.agent.md",
+      "target": ".github/agents/chief-technology-officer.agent.md",
+      "kind": "agent",
+      "status": "existing-live-entry-bound"
+    },
+    {
+      "source": ".github/instructions/ceo-chief-of-staff.instructions.md",
+      "target": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.instructions.md",
+      "kind": "instruction",
+      "status": "archived-only"
+    },
+    {
+      "source": ".github/prompts/开始会议.prompt.md",
+      "target": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-开始会议.prompt.md",
+      "kind": "prompt",
+      "status": "archived-only"
+    },
+    {
+      "source": ".github/prompts/结束会议.prompt.md",
+      "target": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-结束会议.prompt.md",
+      "kind": "prompt",
+      "status": "archived-only"
+    }
+  ],
+  "dependsOn": [
+    "TriCompany-copilot-host-assets/docs/engineering/metacognition-architecture.md",
+    "TriCompany-copilot-host-assets/docs/workflow/hermes-copilot-host-migration.md",
+    "TriCompany-copilot-host-assets/docs/workflow/github-backport-manifest.md"
+  ],
+  "preflightChecks": [
+    "TriCompany 内部 smoke test 通过",
+    "元认知层采用统一内核 + 员工私域 + 组织共享的边界已稳定",
+    "当前回迁起点为 shadow-test，live 状态已转为本地正式接管，且不覆盖 TriMC 正式宿主结论"
+  ],
+  "validation": {
+    "validatedAt": "2026-04-18",
+    "result": "passed",
+    "checks": [
+      "TriCompanyProductRegistry resolved support root to TriCompany-copilot-host-assets",
+      "TriCompanyCodeRegistry resolved support root to TriCompany-copilot-host-assets",
+      "TriCompanyCEOChiefOfStaff resolved fixed pre-check paths to TriCompany-copilot-host-assets",
+      "Central CEOChiefOfStaff absorbed the current shadow chief-of-staff suite while keeping the shared start/end meeting prompts unchanged",
+      "A baseline snapshot for the central ceo-chief-of-staff suite was saved under TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/",
+      "Meeting start prompt smoke test produced the expected structured start-meeting output",
+      "Meeting end prompt smoke test produced the expected structured end-meeting output",
+      "A full meeting lifecycle rehearsal completed with start meeting, product report, code report, and end meeting all staying inside the shadow-test boundary",
+      "The runtime/cognition smoke test passed from the TriCompany-copilot-host-assets root with namespace, prefetch, and provider lifecycle coverage",
+      "The runtime/cognition contract validation passed from the TriCompany-copilot-host-assets root with recall fencing, single external provider, and consolidation namespace checks",
+      "The runtime/cognition integration validation passed from the TriCompany-copilot-host-assets root with private, shared, and audit persistence plus cross-instance recall coverage",
+      "The runtime/cognition backend validation passed from the TriCompany-copilot-host-assets root with TRICOMPANY_COGNITION_HOME storage-root, append-only persistence, and audit metadata coverage",
+      "The runtime/cognition external adapter validation passed from the TriCompany-copilot-host-assets root with simulated remote backend namespace filtering and builtin coexistence coverage",
+      "The runtime/cognition HTTP backend validation passed from the TriCompany-copilot-host-assets root with Bearer auth, 401 rejection, timeout failure, and builtin coexistence coverage",
+      "The runtime/cognition Supermemory schema validation passed from the TriCompany-copilot-host-assets root with official /v3/documents and /v4/search payload mapping, 429 retry, and vendor error-body parsing coverage",
+      "The runtime/cognition Supermemory SDK seam validation passed from the TriCompany-copilot-host-assets root with documents.add and search.documents call mapping plus provider lifecycle coverage",
+      "All smoke-test responses confirmed this is not a TriMC formal host switch",
+      "A historical Supermemory live smoke evidence artifact remains at docs/execution/hermes-copilot-host/phase-1/SUPERMEMORY-LIVE-VALIDATION.latest.json with private, shared, and audit namespace recall coverage",
+      "The 2026-04-18 Supermemory live smoke rerun initially hit real /v3/documents timeout spikes, then passed after adding transport-timeout retries and increasing the default live timeout to 45 seconds",
+      "A continuous chief-of-staff meeting chain completed under the same supportRoot with start-meeting gap prompting, formal meeting start, in-meeting APPROVE, fact-insufficient FREEZE, and end-meeting closure",
+      "The continuous chain evidence closed the last phase-1 blocker and allows writing local chief-of-staff formal takeover after shadow-test completion without implying a formal host switch"
+    ]
+  }
+}
