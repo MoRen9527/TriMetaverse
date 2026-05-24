@@ -71,7 +71,7 @@
 
 参考代码（已纳入）：
 
-- `reference/openclaw/`
+- `reference/openclaw-v2026.3.28/`
 - `reference/Kode-Agent/`
 - `reference/vibecraft/`
 - `reference/AgentSims/`
@@ -196,7 +196,7 @@
 
 ### 任务
 
-1. 实现 Orchestrator Active-Standby（lease + epoch fencing）。
+1. 实现 Task Main Controller Active-Standby（lease + epoch fencing）。
 2. 增加故障演练：主挂接管、网络抖动、队列积压。
 3. 完成三端（Webview/App/CLI）状态一致性校验。
 4. 出具 runbook、值守手册、回滚手册。
@@ -259,7 +259,7 @@
 
 1. **模块边界漂移**：通过契约先行 + 代码 owner 审核避免串层。
 2. **迁移期间双栈复杂度高**：采用“旧链路保留 + 新链路灰度 + 可回滚”。
-3. **多渠道状态一致性难**：统一 source-of-truth 在 Orchestrator。
+3. **多渠道状态一致性难**：统一 source-of-truth 在 Task Main Controller。
 4. **高可用脑裂风险**：lease + leaderEpoch + ToolBus fencing 硬约束。
 5. **执行安全风险**：高影响动作强制审批，默认最小权限。
 
