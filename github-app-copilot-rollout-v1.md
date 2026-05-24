@@ -5,7 +5,7 @@
 ## 1. 目标（本期）
 
 - 以 `TriMetaverse` 作为总入口仓库（元仓库），统一打开工作区与参考源码。
-- 保持 `Tripilot` / `Tristaciss` / `Avatar-react` / `Opentride` / `vscodium` 独立仓库演进。
+- 保持 `Tripilot` / `Tristaciss` / `Avatar-react` / `Tride` / `vscodium` 独立仓库演进。
 - 让“需要远程跟进与审批”的开发任务优先走 GitHub Copilot coding agent + PR 流程。
 - 在 GitHub App（移动端）实现：查看进度、回复消息、PR 审批、@copilot 迭代。
 
@@ -16,9 +16,9 @@
   - PR 评论、Review、@copilot 迭代
   - 仓库通知与审批（PR 维度）
 - 不可直接在 GitHub App 完成：
-  - VS Code 本地 Copilot 的本地工具权限弹窗（文件写入/终端执行）
+  - VS Code 本地 Copilot 的本地工具权限弹窗（文件写入 / 终端执行）
 - 结论：
-  - 需“远程审批与消息同步”的任务，统一走 GitHub 上的 agent+PR。
+  - 需“远程审批与消息同步”的任务，统一走 GitHub 上的 agent + PR。
   - 本地会话继续保留给快速开发与本机调试。
 
 ## 3. 仓库角色与边界
@@ -27,12 +27,12 @@
   - 存放：工作区编排、架构文档、参考源码索引、submodule 指针。
   - 不承载：运行期大工件（视频、渲染产物、归档包）。
 - 业务仓库：
-  - `Tripilot`：VSCodium 上的自有 Copilot UI/能力。
+  - `Tripilot`：VSCodium 上的自有 Copilot UI / 能力。
   - `Tristaciss`：后端平台（模型 API、用户体系等）。
   - `Avatar-react`：前端入口（与 Tristaciss 分离演进）。
 - 上游承载仓库：
   - `vscodium`：编辑器载体，跟随上游兼容。
-  - `Opentride`：多“轮子”适配平台（先 `opencode`，后续可扩展 `codex` / `claude code` 等）。
+  - `Tride`：多“轮子”适配平台（先 `opencode`，后续可扩展 `codex` / `claude code` 等）。
 
 ## 4. 参考源码策略（Reference）
 
@@ -55,31 +55,31 @@
 ### 4.3 改造代码归属
 
 - 参考项目只做对照，不直接承载业务改造提交。
-- 业务改造代码必须进入业务仓库（Tripilot/Tristaciss/Avatar-react/Opentride）。
+- 业务改造代码必须进入业务仓库（Tripilot / Tristaciss / Avatar-react / Tride）。
 
 ## 5. GitHub App 安装策略
 
-## 5.1 安装范围
+### 5.1 安装范围
 
 - 推荐：组织级安装并授权到以下全部仓库：
   - `TriMetaverse`
   - `Tripilot`
   - `Tristaciss`
   - `Avatar-react`
-  - `Opentride`
+  - `Tride`
   - `vscodium`
 
 ### 5.2 权限建议（最小可用）
 
-- Repository contents：Read/Write（按实际需要最小化）
-- Pull requests：Read/Write
-- Issues：Read/Write（如果你用 issue 委派 agent）
+- Repository contents：Read / Write（按实际需要最小化）
+- Pull requests：Read / Write
+- Issues：Read / Write（如果你用 issue 委派 agent）
 - Metadata：Read
-- Actions：Read（如需触发/观察 workflow 再按需提升）
+- Actions：Read（如需触发 / 观察 workflow 再按需提升）
 
 ### 5.3 组织策略
 
-- 仅组织 Owner 可安装/变更 GitHub App。
+- 仅组织 Owner 可安装 / 变更 GitHub App。
 - 仓库管理员通过 request 流程申请新增授权仓库，避免权限漂移。
 
 ## 6. VS Code 本地工作区标准化
@@ -113,10 +113,10 @@ git submodule update --init --recursive
 
 ### 7.1 两类任务分流
 
-- A 类（需要远程审批/移动端同步）：
-  - 从 GitHub 侧发起（Issue/Agent）或在 VS Code 委派到 coding agent。
+- A 类（需要远程审批 / 移动端同步）：
+  - 从 GitHub 侧发起（Issue / Agent）或在 VS Code 委派到 coding agent。
   - 产出 PR，在 GitHub App 审批与 @copilot 追改。
-- B 类（本地快速改动/调试）：
+- B 类（本地快速改动 / 调试）：
   - 直接在 VS Code 本地 Copilot 会话完成。
   - 本地权限弹窗在本机处理，不期待移动端同步批准。
 
@@ -129,7 +129,7 @@ git submodule update --init --recursive
 ## 8. 审批矩阵（v1）
 
 | 场景 | 审批方式 | 推荐端 | 备注 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Copilot coding agent 产出 PR | PR Review | GitHub App / Web / VS Code | 支持 @copilot 继续迭代 |
 | 代码合并 | PR Approve + Merge | GitHub App / Web | 与分支保护一致 |
 | Actions 运行环境审批 | Environment Approval | Web 优先 | 移动端能力存在边界 |
@@ -153,7 +153,7 @@ git submodule update --init --recursive
 ### Day 3：工作区与路径收口
 
 - 校正 `trimetaverse.code-workspace` 指向统一入口路径。
-- 验证 Tripilot/Opentride/vscodium 关键任务与启动配置不回归。
+- 验证 Tripilot / Tride / vscodium 关键任务与启动配置不回归。
 
 ### Day 4：Copilot 协同流程试跑
 
@@ -168,7 +168,7 @@ git submodule update --init --recursive
 ### Day 6：团队使用手册
 
 - 产出 2 页简版 SOP：
-  - 如何在 VS Code 发起/跟踪 coding agent
+  - 如何在 VS Code 发起 / 跟踪 coding agent
   - 如何在 GitHub App 做审批与 @copilot 迭代
 
 ### Day 7：验收
@@ -189,7 +189,7 @@ git submodule update --init --recursive
 ## 11. 风险与缓解
 
 - 风险：把“本地权限弹窗”误认为“GitHub App 可远程批准”。
-  - 缓解：SOP 明确 A/B 任务分流。
+  - 缓解：SOP 明确 A / B 任务分流。
 - 风险：submodule 更新断裂导致本地缺参考源码。
   - 缓解：固定 `--recursive` 拉取与 CI 检查 `.gitmodules`。
 - 风险：超大参考仓库污染 Copilot 上下文。
@@ -198,5 +198,5 @@ git submodule update --init --recursive
 ## 12. 下一版（v2）预留
 
 - 增加“跨仓 issue 路由模板”（将任务自动分派到对应仓库）。
-- 增加“Agent 任务标签规范”（`tri:tripilot`/`tri:backend`/`tri:wheel`）。
+- 增加“Agent 任务标签规范”（`tri:tripilot` / `tri:backend` / `tri:wheel`）。
 - 增加“Reference 自动更新机器人”（定期更新 submodule pointer 并开 PR）。

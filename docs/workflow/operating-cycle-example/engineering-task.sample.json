@@ -1,0 +1,145 @@
+{
+  "objectType": "ENGINEERING_TASK",
+  "objectId": "ET-202604-001",
+  "title": "试单包最小交付研发任务单",
+  "status": "approved",
+  "priority": "high",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "createdAt": "2026-04-05T09:00:00Z",
+  "updatedAt": "2026-04-05T12:00:00Z",
+  "timebox": {
+    "scope": "deadline",
+    "startAt": "2026-04-05T00:00:00Z",
+    "endAt": "2026-04-11T23:59:59Z",
+    "label": "首轮演示交付窗"
+  },
+  "summary": "在预算不扩张的前提下，用最小实现链完成试单包演示、桌面工作台到本地控制器的协同链说明和交付准备。",
+  "relatedModules": ["Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": ["MVP-202604-001", "BC-202604-001"],
+  "evidence": [
+    {
+      "source": "TripilotCodeRegistry",
+      "kind": "registry",
+      "note": "入口层结构可支持演示承接"
+    },
+    {
+      "source": "TrideCodeRegistry",
+      "kind": "registry",
+      "note": "可复用本地自动化与开发 orchestration 底座"
+    },
+    {
+      "source": "VscodiumCodeRegistry",
+      "kind": "registry",
+      "note": "桌面宿主可复用，且上游升级能力不应误记为本地新增实现"
+    },
+    {
+      "source": "TriLCCodeRegistry",
+      "kind": "registry",
+      "note": "可复用本地 runtime、planner 和 tool bus 的结构约束"
+    },
+    {
+      "source": "TristacissCodeRegistry",
+      "kind": "registry",
+      "note": "可复用 API 平台和模型路由"
+    },
+    {
+      "source": "TriTestCodeRegistry",
+      "kind": "registry",
+      "note": "可复用测试审计与基线能力"
+    },
+    {
+      "source": "TrideploymentCodeRegistry",
+      "kind": "registry",
+      "note": "可复用交付完备性和部署清单资产"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefOperatingOfficer",
+      "action": "据交付准备编排上线与对外试单节奏",
+      "dueAt": "2026-04-06T12:00:00Z"
+    },
+    {
+      "owner": "ChiefSalesOfficer",
+      "action": "基于交付范围确认试单话术和报价边界",
+      "dueAt": "2026-04-06T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "ChiefFinancialOfficer",
+      "status": "approved",
+      "note": "按现有预算边界推进"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "input-to",
+      "phase": "CODING",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/CODING.phase-result.json",
+      "note": "该任务单作为编码阶段的经营边界输入"
+    },
+    {
+      "relation": "depends-on",
+      "phase": "DESIGNING",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/DESIGNING.phase-result.json",
+      "note": "编码前应先有设计阶段产物"
+    }
+  ],
+  "payload": {
+    "implementationScope": [
+      "Tripilot 提供试单需求采集和结果查看入口",
+      "Tride 提供本地自动化与开发工作流底座",
+      "vscodium 提供桌面宿主与工作台承载",
+      "TriLC 提供本地化任务控制、planner 和 tool bus 语义",
+      "Tristaciss 提供单一路由内容生成服务",
+      "TriTest 输出最小测试与回归建议",
+      "Trideployment 补交付检查清单"
+    ],
+    "taskBreakdown": [
+      "入口、桌面工作台与交付包演示链打通",
+      "桌面工作台到 TriLC 本地控制器的最小协同说明整理",
+      "内容生成链路校通",
+      "测试与交付清单整理",
+      "回滚和问题处理说明"
+    ],
+    "testRequirements": [
+      "最小单元或接口校验",
+      "关键链路 smoke",
+      "发布前检查清单"
+    ],
+    "releaseRequirements": [
+      "演示入口可运行",
+      "桌面工作台到 TriLC 的最小协同说明可复现",
+      "内容生成链路可复现",
+      "交付清单已准备"
+    ],
+    "rollbackPlan": "若演示链路不稳定，则回退为人工驱动试单包交付，不承诺用户自助化入口或本地控制器联动演示。",
+    "technicalRisks": [
+      "入口层与 API 层联调复杂度超预期",
+      "桌面工作台与 TriLC 的职责边界说明不清会导致演示口径混乱",
+      "测试时间不足导致质量判断偏弱"
+    ],
+    "docsInitializationRequirements": [
+      "相关模块已建立模块五层文档协同系统最小入口",
+      "试单包分支的 docs/execution/prd-ai-content-trial/designing/PLAN.md 已创建",
+      "docs/product/REQUIREMENTS.md、docs/engineering/DESIGN.md 与当前 PRD 范围保持可追溯映射"
+    ],
+    "docsBootstrapRefs": [
+      "docs/workflow/prd-branch-minimal-directory-template.md",
+      "docs/workflow/project-repo-document-baseline.md",
+      "docs/workflow/prd-branch-delivery-checklist.md"
+    ]
+  },
+  "metadata": {
+    "example": true,
+    "notExecutionRecord": true,
+    "exampleId": "ai-content-growth-cycle-v1"
+  }
+}

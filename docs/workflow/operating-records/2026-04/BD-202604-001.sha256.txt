@@ -1,0 +1,6 @@
+file: docs/workflow/operating-records/2026-04/BD-202604-001.json
+issuanceVersion: BD-202604-001-v0.3.0-candidate
+algorithm: SHA256
+hash: 3A1F877F751524834DB7ECFD614AF48DADDBB9B33BE8F1CF3A36E4B12DAA6F51
+generatedAt: 2026-05-20T12:00:00+08:00
+note: CEO 书面签发时应对照本指纹；若候选内容有任何变更，必须先升级版本号并重新生成指纹。

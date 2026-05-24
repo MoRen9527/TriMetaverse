@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/engineering-task.schema.json",
+  "title": "EngineeringTask",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "workflowRefs", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "ENGINEERING_TASK"
+        },
+        "ownerRole": {
+          "const": "ChiefTechnologyOfficer"
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["weekly", "deadline", "launch-window"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "workflowRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+          }
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "implementationScope",
+            "taskBreakdown",
+            "testRequirements",
+            "releaseRequirements",
+            "rollbackPlan",
+            "technicalRisks"
+          ],
+          "properties": {
+            "implementationScope": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "taskBreakdown": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "testRequirements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "releaseRequirements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "rollbackPlan": {
+              "type": "string",
+              "minLength": 1
+            },
+            "technicalRisks": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "docsInitializationRequirements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "docsBootstrapRefs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

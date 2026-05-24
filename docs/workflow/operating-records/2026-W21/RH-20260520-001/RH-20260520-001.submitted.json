@@ -1,0 +1,124 @@
+{
+  "objectType": "RESPONSIBILITY_HANDOFF",
+  "objectId": "RH-20260520-001",
+  "title": "ChiefHumanResourcesOfficer 交接治理 owner 启用交接单",
+  "status": "submitted",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-05-20T18:30:00+08:00",
+  "updatedAt": "2026-05-20T18:30:00+08:00",
+  "timebox": {
+    "scope": "ad-hoc",
+    "startAt": "2026-05-20T18:30:00+08:00",
+    "endAt": "2026-05-30T18:00:00+08:00",
+    "label": "cho-handoff-governance-activation"
+  },
+  "summary": "ChiefHumanResourcesOfficer 的源侧岗位定义、binding profile 和交接治理真源已补齐，但独立 live binding 尚未启动，因此当前仍由 CEOChiefOfStaff 代执行交接治理。本对象是首条真实 RESPONSIBILITY_HANDOFF operating record。",
+  "relatedModules": [
+    "TriCompany",
+    "TriMetaverse"
+  ],
+  "dependsOn": [
+    "CHO-SOURCE-SIDE-ONBOARDING-20260520"
+  ],
+  "evidence": [
+    {
+      "source": "TriCompany/docs/workflow/chief-human-resources-officer-role.md",
+      "kind": "document",
+      "note": "CHO 的源侧岗位定义、发布前置条件和 not-live 边界已落地。"
+    },
+    {
+      "source": "TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md",
+      "kind": "document",
+      "note": "交接治理 checklist、completion tracking 状态机和验收口径已形成真源。"
+    },
+    {
+      "source": "TriCompany/.github/binding-profiles/chief-human-resources-officer.json",
+      "kind": "document",
+      "note": "binding profile 当前明确为 source-side-not-live，liveEntry.status 为 not-published。"
+    },
+    {
+      "source": "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+      "kind": "document",
+      "note": "在 CHO 尚未独立上岗前，交接治理仍由 CEOChiefOfStaff 代管。"
+    },
+    {
+      "source": "docs/workflow/virtual-company-handoff-objects.md",
+      "kind": "document",
+      "note": "RESPONSIBILITY_HANDOFF 已作为中央标准经营对象注册。"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "确认是否启动 ChiefHumanResourcesOfficer 的独立 live binding 判断，并决定是否发布 support payload。",
+      "dueAt": "2026-05-27T12:00:00+08:00"
+    },
+    {
+      "owner": "CEO",
+      "action": "对是否进入 ChiefHumanResourcesOfficer 独立 live binding 评估给出明确同意、冻结或修改意见。",
+      "dueAt": "2026-05-29T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefHumanResourcesOfficer",
+      "action": "在独立启用获批后接手 handoff checklist 与 completion tracking 的执行 owner，并保留从 CEOChiefOfStaff 迁移的记录。",
+      "dueAt": "2026-05-30T18:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "待确认是否进入 ChiefHumanResourcesOfficer 独立 live binding 评估。"
+    },
+    {
+      "role": "BusinessStrategy",
+      "status": "not-required",
+      "note": "仅当交接动作触及中央边界、正式宿主切换或长期岗位重构时再升级。"
+    }
+  ],
+  "payload": {
+    "handoffSubject": "ChiefHumanResourcesOfficer 接手跨岗位 handoff checklist 与 completion tracking",
+    "handoffCategory": "role-onboarding",
+    "previousOwner": "CEOChiefOfStaff",
+    "incomingOwner": "ChiefHumanResourcesOfficer",
+    "actingOwner": "CEOChiefOfStaff",
+    "scope": "source-side-not-live",
+    "sourceOfTruthFiles": [
+      "TriCompany/docs/workflow/chief-human-resources-officer-role.md",
+      "TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md",
+      "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+      "TriMetaverse/docs/workflow/virtual-company-handoff-objects.md"
+    ],
+    "supportAssets": [
+      "TriCompany/.github/binding-profiles/chief-human-resources-officer.json",
+      "TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json"
+    ],
+    "completionTrackingStatus": "blocked",
+    "acceptanceCriteria": [
+      "CEO 已明确确认是否启动 ChiefHumanResourcesOfficer 的独立 live binding 判断。",
+      "交接治理执行 owner 已从 CEOChiefOfStaff 切换到 ChiefHumanResourcesOfficer，或明确继续代管的阶段边界。",
+      "需要的 support payload 或 governance writeback 已确认完成，或已明确当前阶段不适用。"
+    ],
+    "nextAction": "由 CEOChiefOfStaff 发起是否进入 CHO 独立 live binding 评估的确认，并在确认前保持代执行关系透明。",
+    "blocker": "ChiefHumanResourcesOfficer 当前仍处于 source-side-not-live；binding profile 明确为 not-published，尚未具备独立 live 执行前提。",
+    "escalations": [
+      "若独立 live binding 会改变中央 live 入口、正式宿主边界或长期岗位结构，升级到 BusinessStrategy。"
+    ],
+    "notes": [
+      "中央 TriMetaverse/.github 已有 chief-human-resources-officer agent 文件，但当前不等于已完成绑定。",
+      "在独立启用前，CEOChiefOfStaff 只代执行交接治理，不代表长期 owner 归属不再转移。"
+    ]
+  },
+  "metadata": {
+    "executionRecord": true,
+    "recordLayer": "real-operating-record",
+    "lifecycleSnapshot": "submitted",
+    "issuanceVersion": "RH-20260520-001-v0.1.0-submitted",
+    "approvalMethod": "CEO 对是否进入 ChiefHumanResourcesOfficer 独立 live binding 评估给出明确同意、冻结或修改意见。",
+    "approvalFingerprintRef": "docs/workflow/operating-records/2026-W21/RH-20260520-001/RH-20260520-001.submitted.sha256.txt",
+    "firstFormalResponsibilityHandoffRecord": true,
+    "designOwner": "ChiefHumanResourcesOfficer",
+    "actingExecutionOwner": "CEOChiefOfStaff"
+  }
+}

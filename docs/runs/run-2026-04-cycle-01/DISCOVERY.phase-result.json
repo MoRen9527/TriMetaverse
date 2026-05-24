@@ -1,0 +1,58 @@
+{
+  "phase": "DISCOVERY",
+  "status": "completed",
+  "startTime": "2026-04-02T08:00:00Z",
+  "endTime": "2026-04-02T08:45:00Z",
+  "durationMs": 2700000,
+  "qualityScore": 88,
+  "artifacts": [
+    {
+      "name": "whitepaper-baseline",
+      "path": "tmv-whitepaper.md",
+      "required": true,
+      "exists": true
+    },
+    {
+      "name": "board-directive-sample",
+      "path": "docs/workflow/operating-cycle-example/board-directive.sample.json",
+      "required": true,
+      "exists": true
+    },
+    {
+      "name": "operating-plan-sample",
+      "path": "docs/workflow/operating-cycle-example/operating-plan.sample.json",
+      "required": true,
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "summary": "DISCOVERY 以 AI 内容运营与增长微服务为当前默认经营实验，确认本轮聚焦低成本试单包验证。",
+  "review": {
+    "status": "approved",
+    "version": "WP-v1.0.0",
+    "reviewId": "review-discovery-2026-04-02-01",
+    "approvedBy": "BoardOversight",
+    "approvedAt": "2026-04-02T08:50:00Z",
+    "isInitialRelease": true,
+    "versionChanged": true,
+    "notes": "允许进入 INTELLIGENCE，继续收敛试单路径。"
+  },
+  "prdDelta": {
+    "sourcePhase": "DISCOVERY",
+    "whitepaperChanged": true,
+    "intelligenceChanged": false,
+    "added": [],
+    "updated": [
+      "AI-content-growth-microservice-experiment"
+    ],
+    "removed": [],
+    "downstreamTriggered": [
+      "INTELLIGENCE"
+    ]
+  },
+  "metadata": {
+    "runId": "run-2026-04-cycle-01",
+    "host": "copilot-chat",
+    "sampleBacked": true
+  }
+}

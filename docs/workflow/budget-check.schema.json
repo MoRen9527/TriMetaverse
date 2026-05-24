@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/budget-check.schema.json",
+  "title": "BudgetCheck",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "BUDGET_CHECK"
+        },
+        "ownerRole": {
+          "const": "ChiefFinancialOfficer"
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["weekly", "monthly", "deadline"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "budgetWindow",
+            "fixedCostEstimate",
+            "variableCostEstimate",
+            "runwayImpact",
+            "guardrails",
+            "stopConditions",
+            "assumptions"
+          ],
+          "properties": {
+            "budgetWindow": {
+              "type": "string",
+              "minLength": 1
+            },
+            "fixedCostEstimate": {
+              "oneOf": [
+                { "type": "number" },
+                { "type": "string", "minLength": 1 }
+              ]
+            },
+            "variableCostEstimate": {
+              "oneOf": [
+                { "type": "number" },
+                { "type": "string", "minLength": 1 }
+              ]
+            },
+            "runwayImpact": {
+              "type": "string",
+              "minLength": 1
+            },
+            "guardrails": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "stopConditions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "assumptions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "docsInitializationRequirements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "docsBootstrapRefs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

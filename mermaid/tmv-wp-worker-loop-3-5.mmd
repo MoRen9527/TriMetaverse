@@ -1,0 +1,52 @@
+flowchart TD
+    subgraph ACCOUNT["用户级工作空间 / 归属层"]
+        W[虚拟云电脑 / 虚拟云手机<br/>我的任务空间 / 我的项目空间]
+        U[个人上下文平面<br/>个人记忆 / 文件快照 / 贡献证据 / 奖励账本]
+    end
+
+    subgraph SYSTEM["系统级能力 / 资源"]
+        T[用户任务计划<br/>任务目标 / 上下文 / 约束]
+        P[Planner<br/>任务拆解 / 状态判断 / 下一步决策]
+        L[Local ToolBus / 策略门禁<br/>本地编排 / 权限控制 / 分发策略]
+        D[任务自动化 Worker<br/>桌面 / 浏览器 / 手机 / 终端侧执行]
+        X[其他本地 Worker<br/>编码 / 视频 / 演示]
+        F[反馈采集<br/>截图 / 日志 / 页面状态 / 执行结果]
+        J[判定 / 重规划<br/>结果判断 / 异常识别 / 路径修正]
+        M[任务级 Memory<br/>缓存 / 对话状态 / 工件索引]
+        N[执行资源节点<br/>本地 PC / 手机 / 浏览器 / 边缘设备]
+        R[结果回流<br/>本地结果 / 工件]
+    end
+
+    W --> T
+    U --> P
+    T --> P
+    P --> L
+    L --> D
+    L -. 绑定执行资源 .-> N
+    N -. 承载执行 .-> D
+    D --> F
+    D -. 按需选择 .-> L
+    L -. 分发专业子任务 .-> X
+    X -. 返回子结果 / 工件 .-> L
+    L -. 汇总结果 .-> D
+    F --> J
+    J --> M
+    M --> P
+    J -->|完成| R
+    R -. 归档 / 归属 .-> U
+    J -->|继续任务| L
+    J -->|失败重试| P
+
+    classDef plan fill:#fff7e6,stroke:#b7791f,color:#6b4600,stroke-width:1.5px;
+    classDef localNode fill:#eefbf3,stroke:#2f855a,color:#1f5137,stroke-width:1.5px;
+    classDef localWorker fill:#dcfce7,stroke:#2f855a,color:#1f5137,stroke-width:1.5px;
+    classDef storage fill:#f7f7f7,stroke:#4a5568,color:#2d3748,stroke-width:1.5px;
+    classDef accountNode fill:#fff7ed,stroke:#c2410c,color:#7c2d12,stroke-width:1.5px;
+    classDef resourceNode fill:#f8fafc,stroke:#64748b,color:#334155,stroke-width:1.5px,stroke-dasharray:4 2;
+
+    class T,P,J,R plan;
+    class L,F localNode;
+    class D,X localWorker;
+    class M storage;
+    class W,U accountNode;
+    class N resourceNode;

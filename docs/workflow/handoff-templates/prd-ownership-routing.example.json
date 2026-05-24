@@ -1,0 +1,95 @@
+{
+  "objectType": "PRD_OWNERSHIP_ROUTING",
+  "objectId": "POR-YYYYMMDD-001",
+  "title": "PRD 归属路由请求单",
+  "status": "submitted",
+  "priority": "high",
+  "ownerRole": "ChiefProductOfficer",
+  "createdAt": "2026-04-26T10:00:00Z",
+  "updatedAt": "2026-04-26T10:00:00Z",
+  "timebox": {
+    "scope": "ad-hoc",
+    "startAt": "2026-04-26T10:00:00Z",
+    "label": "prd-ownership-routing"
+  },
+  "summary": "当 PRD 归属模块 / 项目与 docs 落位不明确时，先冻结 docs bootstrap，并请求当前阶段产品侧给出可执行路由结论；公司级任务分派与升级由 CEOChiefOfStaff 协同。",
+  "relatedModules": ["TriMetaverse", "TriMC"],
+  "dependsOn": ["PRD-YYYYMMDD-001"],
+  "evidence": [
+    {
+      "source": "docs/prd/PRD-YYYYMMDD-001.md",
+      "kind": "document",
+      "note": "当前 PRD 文案已形成，但模块归属和 docs 落位尚未裁决"
+    },
+    {
+      "source": "相关模块 AGENTS.md / registry",
+      "kind": "registry",
+      "note": "候选模块边界仍需由 ChiefProductOfficer 基于产品真源组织核查；如触及中央边界再升级 BusinessStrategy"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "核查项目真源、模块产品真源和 registry，给出当前阶段产品路由结论",
+      "dueAt": "2026-04-28T12:00:00Z"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "基于产品路由结论安排公司级任务分派、催办和升级",
+      "dueAt": "2026-04-28T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "BusinessStrategy",
+      "status": "pending",
+      "note": "若涉及新的长期主模块、中央边界或正式宿主范围变化，则升级请求范围裁决"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "output-of",
+      "phase": "INTELLIGENCE",
+      "runId": "run-YYYYMM-cycle-01",
+      "prdId": "PRD-YYYYMMDD-001",
+      "phaseResultRef": "docs/runs/run-YYYYMM-cycle-01/INTELLIGENCE.phase-result.json",
+      "note": "该请求用于承接 intelligence 已审核 PRD 的后续落位判断"
+    }
+  ],
+  "payload": {
+    "prdRef": "docs/prd/PRD-YYYYMMDD-001.md",
+    "requestReason": "当前 PRD 已审核，但无法确认应落在现有模块、TriMetaverse 项目根，还是一个新模块根。",
+    "candidateModules": [
+      "TriMC",
+      "TriMetaverse"
+    ],
+    "candidateRoots": [
+      "TriMC",
+      "TriMetaverse"
+    ],
+    "currentEvidence": [
+      "PRD 当前描述的是运行面 / 基础平台能力，但尚未完成模块归属裁决。",
+      "如直接在当前仓根建立 docs，可能误把工作区上下文当作模块归属依据。"
+    ],
+    "blockingImpact": [
+      "在路由结论形成前，不得建立模块五层文档协同系统目录。",
+      "在目标仓与目标 docs 根未确认前，不得启动执行层 workstream 初始化。"
+    ],
+    "requestedDecisionBy": "2026-04-28T12:00:00Z",
+    "routingDecision": "pending",
+    "targetModuleOrProject": "待总助路由",
+    "targetRepoRoot": "待确认",
+    "targetDocsRoot": "待确认",
+    "moduleDesignDecision": "待确认",
+    "docsLandingDecision": "待确认",
+    "requiredEscalations": [
+      "若涉及新的长期主模块、中央边界或正式宿主范围变化，升级到 BusinessStrategy"
+    ]
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1",
+    "handoffTarget": "ChiefProductOfficer",
+    "companyTaskRoutingOwner": "CEOChiefOfStaff"
+  }
+}

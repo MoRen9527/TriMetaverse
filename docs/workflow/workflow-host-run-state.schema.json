@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/workflow-host-run-state.schema.json",
+  "title": "WorkflowHostRunState",
+  "type": "object",
+  "required": [
+    "runId",
+    "host",
+    "phase",
+    "status",
+    "lastHostActionAt"
+  ],
+  "properties": {
+    "runId": {
+      "type": "string",
+      "pattern": "^run-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "host": {
+      "type": "string",
+      "enum": [
+        "copilot-chat",
+        "copilot-cli",
+        "trihost-configured",
+        "custom"
+      ]
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "DISCOVERY",
+        "INTELLIGENCE",
+        "DESIGNING",
+        "CODING",
+        "VERIFY-INTEGRATION",
+        "REDTEAM",
+        "QA",
+        "DEPLOYMENT",
+        "ASSURANCE",
+        "DELIVERY"
+      ]
+    },
+    "branchId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "running",
+        "waiting-confirmation",
+        "blocked",
+        "completed"
+      ]
+    },
+    "pendingGate": {
+      "type": "string",
+      "enum": [
+        "docs_confirm",
+        "preview_confirm"
+      ]
+    },
+    "lastHostAction": {
+      "type": "string",
+      "enum": [
+        "start",
+        "resume",
+        "continue",
+        "next",
+        "write-artifact",
+        "confirm-gate"
+      ]
+    },
+    "lastHostActionAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "knowledgeBootstrap": {
+      "type": "object",
+      "required": [
+        "status",
+        "sources"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "not-started",
+            "running",
+            "completed",
+            "failed"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bundleRefs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

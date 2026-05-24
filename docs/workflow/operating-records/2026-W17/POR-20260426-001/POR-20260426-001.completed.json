@@ -1,0 +1,106 @@
+{
+  "objectType": "PRD_OWNERSHIP_ROUTING",
+  "objectId": "POR-20260426-001",
+  "title": "PRD 归属路由请求单完成态演示",
+  "status": "completed",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-04-26T09:30:00+08:00",
+  "updatedAt": "2026-04-26T16:20:00+08:00",
+  "timebox": {
+    "scope": "ad-hoc",
+    "startAt": "2026-04-26T09:30:00+08:00",
+    "endAt": "2026-04-26T16:20:00+08:00",
+    "label": "prd-ownership-routing-completed-demo"
+  },
+  "summary": "演示在总助完成路由判断后，如何把同一 PRD_OWNERSHIP_ROUTING 以 completed 快照落盘，并把下一步交接给产品侧或技术侧。",
+  "relatedModules": [
+    "TriMetaverse",
+    "TriMC"
+  ],
+  "dependsOn": [
+    "POR-20260426-001.submitted"
+  ],
+  "evidence": [
+    {
+      "source": "docs/workflow/workflow-runbook.md",
+      "kind": "document",
+      "note": "总助完成路由结论后，方可解除 docs bootstrap 冻结"
+    },
+    {
+      "source": "docs/workflow/virtual-company-handoff-objects.md",
+      "kind": "document",
+      "note": "该对象完成后，可继续切到 ChiefProductOfficer 或 ChiefTechnologyOfficer"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "基于已确认落位继续收敛模块设计与产品边界，不再重复做归属判断",
+      "dueAt": "2026-04-27T12:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "在归属结论已稳定后，再拆 docs 初始化任务与工程入口",
+      "dueAt": "2026-04-27T18:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "当前阶段总助已完成路由结论并解除冻结"
+    },
+    {
+      "role": "BusinessStrategy",
+      "status": "not-required",
+      "note": "本演示结论未触及新的长期主模块或中央边界变化"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "input-to",
+      "phase": "DESIGNING",
+      "runId": "run-2026-04-routing-demo",
+      "branchId": "branch-prd-demo-ownership",
+      "prdId": "PRD-DEMO-OWNERSHIP-001",
+      "note": "完成态快照表示后续可以在已确认落位点进入 docs bootstrap 与 designing 初始化"
+    }
+  ],
+  "payload": {
+    "prdRef": "docs/prd/PRD-DEMO-OWNERSHIP-001.md",
+    "requestReason": "当前 PRD 归属与 docs 落位曾不明确，因此先由总助受理并冻结 docs bootstrap。",
+    "candidateModules": [
+      "TriMetaverse",
+      "TriMC"
+    ],
+    "candidateRoots": [
+      "TriMetaverse",
+      "TriMC"
+    ],
+    "currentEvidence": [
+      "总助已完成当前阶段真源核查。",
+      "当前演示结论不需要升级到 BusinessStrategy。"
+    ],
+    "blockingImpact": [
+      "在 completed 快照形成前，docs bootstrap 处于冻结。"
+    ],
+    "requestedDecisionBy": "2026-04-26T14:00:00+08:00",
+    "routingDecision": "routed",
+    "targetModuleOrProject": "DEMO: TriMC",
+    "targetRepoRoot": "TriMC",
+    "targetDocsRoot": "TriMC/docs",
+    "moduleDesignDecision": "演示口径：本次路由把该 PRD 先视为 TriMC 模块候选，后续是否继续作为独立产品 / 模块路线，由产品侧进一步收敛。",
+    "docsLandingDecision": "在当前阶段总助结论形成后，方可在 TriMC/docs 下继续执行最小 docs 初始化；若后续产品侧改判，则重新发起新的 PRD_OWNERSHIP_ROUTING。",
+    "requiredEscalations": []
+  },
+  "metadata": {
+    "executionRecord": true,
+    "recordLayer": "real-operating-record",
+    "lifecycleSnapshot": "completed",
+    "layoutDemo": true,
+    "notProjectFact": true,
+    "previousSnapshotRef": "docs/workflow/operating-records/2026-W17/POR-20260426-001/POR-20260426-001.submitted.json",
+    "issuanceVersion": "POR-20260426-001-v0.1.1-completed-demo"
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Tristaciss OpenAI Compatible API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/v1/chat/completions": {
+      "post": {
+        "summary": "OpenAI compatible chat completions with TriMetaverse routing fields",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatCompletionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Completion or accepted task response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatCompletionResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/responses": {
+      "post": {
+        "summary": "Responses API with TriMetaverse extensions",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResponsesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponsesReply"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/models": {
+      "get": {
+        "summary": "List public models with tmv metadata",
+        "responses": {
+          "200": {
+            "description": "Model list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelsList"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ChatMessage": {
+        "type": "object",
+        "required": ["role", "content"],
+        "properties": {
+          "role": { "type": "string", "enum": ["system", "user", "assistant", "tool"] },
+          "content": { "type": "string" }
+        }
+      },
+      "WorkspaceMeta": {
+        "type": "object",
+        "properties": {
+          "workspaceId": { "type": "string" },
+          "repo": { "type": "string" },
+          "branch": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "PolicyMeta": {
+        "type": "object",
+        "properties": {
+          "requireApproval": { "type": "boolean" },
+          "riskLevel": { "type": "string" },
+          "dataClass": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "TaskHint": {
+        "type": "object",
+        "properties": {
+          "taskType": { "type": "string" },
+          "syncMode": { "type": "string", "enum": ["sync", "async"] },
+          "expectedArtifacts": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": true
+      },
+      "ChatCompletionRequest": {
+        "type": "object",
+        "required": ["messages"],
+        "properties": {
+          "model": { "type": "string" },
+          "messages": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ChatMessage" }
+          },
+          "stream": { "type": "boolean" },
+          "temperature": { "type": "number" },
+          "max_tokens": { "type": "integer" },
+          "tag": { "type": "string" },
+          "modelTag": { "type": "string" },
+          "workspace": { "$ref": "#/components/schemas/WorkspaceMeta" },
+          "policy": { "$ref": "#/components/schemas/PolicyMeta" },
+          "taskHint": { "$ref": "#/components/schemas/TaskHint" },
+          "routeMeta": { "type": "object", "additionalProperties": true },
+          "userMeta": { "type": "object", "additionalProperties": true }
+        },
+        "additionalProperties": false
+      },
+      "ChatCompletionResponse": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "object": { "type": "string" },
+          "created": { "type": "integer" },
+          "model": { "type": "string" },
+          "choices": { "type": "array", "items": { "type": "object" } },
+          "usage": { "type": "object", "additionalProperties": true },
+          "tmv": {
+            "type": "object",
+            "properties": {
+              "requestId": { "type": "string" },
+              "resolvedTag": { "type": "string" },
+              "resolvedModelTag": { "type": "string" },
+              "resolvedProvider": { "type": "string" },
+              "resolvedModel": { "type": "string" },
+              "routePolicy": { "type": "string" },
+              "taskAccepted": { "type": "boolean" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      },
+      "ResponsesRequest": {
+        "allOf": [
+          { "$ref": "#/components/schemas/ChatCompletionRequest" }
+        ]
+      },
+      "ResponsesReply": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ModelsList": {
+        "type": "object",
+        "properties": {
+          "object": { "type": "string" },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "object": { "type": "string" },
+                "owned_by": { "type": "string" },
+                "tmv": { "type": "object", "additionalProperties": true }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "required": ["object", "data"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

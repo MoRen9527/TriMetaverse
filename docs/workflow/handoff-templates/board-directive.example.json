@@ -1,0 +1,53 @@
+{
+  "objectType": "BOARD_DIRECTIVE",
+  "objectId": "BD-YYYYMMDD-001",
+  "title": "本周期经营目标令",
+  "status": "approved",
+  "priority": "critical",
+  "ownerRole": "BoardOversight",
+  "createdAt": "2026-04-02T09:00:00Z",
+  "updatedAt": "2026-04-02T09:00:00Z",
+  "timebox": {
+    "scope": "monthly",
+    "startAt": "2026-04-01T00:00:00Z",
+    "endAt": "2026-04-30T23:59:59Z",
+    "label": "2026-04"
+  },
+  "summary": "定义本月目标、预算边界和禁止越权范围。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Tristaciss"],
+  "dependsOn": [],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "当前经营实验与模块边界"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "将目标令转译为月度经营计划单",
+      "dueAt": "2026-04-03T10:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "目标与预算边界确认"
+    }
+  ],
+  "payload": {
+    "goalVersion": "BG-2026-04-v1",
+    "businessTarget": "本月完成首个可收费 MVP 的上线和首批付费验证。",
+    "budgetGuardrail": "月固定成本不得突破 40 美元，超预算动作必须升级。",
+    "strategicBoundary": "仅围绕当前方向 A 推进，不新增链上与移动端现役交付范围。",
+    "effectiveFrom": "2026-04-01T00:00:00Z",
+    "effectiveTo": "2026-04-30T23:59:59Z",
+    "issuedBy": "BoardOversight"
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

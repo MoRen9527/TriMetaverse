@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/workflow-host-review-state.schema.json",
+  "title": "WorkflowHostReviewState",
+  "type": "object",
+  "required": [
+    "runId",
+    "host",
+    "gate",
+    "status",
+    "requestedAt"
+  ],
+  "properties": {
+    "runId": {
+      "type": "string",
+      "pattern": "^run-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "host": {
+      "type": "string",
+      "enum": [
+        "copilot-chat",
+        "copilot-cli",
+        "trihost-configured",
+        "custom"
+      ]
+    },
+    "gate": {
+      "type": "string",
+      "enum": [
+        "docs_confirm",
+        "preview_confirm"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "cancelled"
+      ]
+    },
+    "requestedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "resolvedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "DISCOVERY",
+        "INTELLIGENCE",
+        "DESIGNING",
+        "CODING",
+        "VERIFY-INTEGRATION",
+        "REDTEAM",
+        "QA",
+        "DEPLOYMENT",
+        "ASSURANCE",
+        "DELIVERY"
+      ]
+    },
+    "branchId": {
+      "type": "string"
+    },
+    "requestedBy": {
+      "type": "string"
+    },
+    "reviewedBy": {
+      "type": "string"
+    },
+    "blockingReason": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "path"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

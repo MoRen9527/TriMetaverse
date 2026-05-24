@@ -1,0 +1,84 @@
+{
+  "objectType": "ENGINEERING_TASK",
+  "objectId": "ET-YYYYMMDD-001",
+  "title": "研发任务单",
+  "status": "submitted",
+  "priority": "high",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "createdAt": "2026-04-02T14:00:00Z",
+  "updatedAt": "2026-04-02T14:00:00Z",
+  "timebox": {
+    "scope": "deadline",
+    "startAt": "2026-04-03T00:00:00Z",
+    "endAt": "2026-04-10T23:59:59Z",
+    "label": "首轮交付窗"
+  },
+  "summary": "将 MVP 定义拆解为实现、测试、发布和回滚要求。",
+  "relatedModules": ["Tripilot", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": ["MVP-YYYYMMDD-001", "BC-YYYYMMDD-001"],
+  "evidence": [
+    {
+      "source": "相关模块 Code Registry",
+      "kind": "registry",
+      "note": "现有代码结构与风险"
+    },
+    {
+      "source": "TriTestCodeRegistry",
+      "kind": "registry",
+      "note": "测试基线与门禁能力"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefOperatingOfficer",
+      "action": "据任务单安排上线窗口与联动节奏",
+      "dueAt": "2026-04-05T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "ChiefFinancialOfficer",
+      "status": "pending",
+      "note": "若技术路径引入额外成本需确认"
+    }
+  ],
+  "payload": {
+    "implementationScope": [
+      "实现项 1",
+      "实现项 2"
+    ],
+    "taskBreakdown": [
+      "开发",
+      "测试",
+      "发布准备"
+    ],
+    "testRequirements": [
+      "单元测试",
+      "集成验证",
+      "回归检查"
+    ],
+    "releaseRequirements": [
+      "构建通过",
+      "门禁通过",
+      "回滚方案存在"
+    ],
+    "rollbackPlan": "若上线失败，回滚到前一稳定版本。",
+    "technicalRisks": [
+      "依赖不稳定",
+      "测试覆盖不足"
+    ],
+    "docsInitializationRequirements": [
+      "PRD 分支进入 DESIGNING 前，已建立模块五层文档协同系统最小入口",
+      "docs/execution/<prd-or-workstream>/designing/PLAN.md 已创建",
+      "docs/product/REQUIREMENTS.md 与 docs/engineering/DESIGN.md 已能回连当前 PRD"
+    ],
+    "docsBootstrapRefs": [
+      "docs/workflow/prd-branch-minimal-directory-template.md",
+      "docs/workflow/project-repo-document-baseline.md"
+    ]
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

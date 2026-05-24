@@ -1,0 +1,80 @@
+{
+  "objectType": "OPERATING_PLAN",
+  "objectId": "OP-YYYYMMDD-001",
+  "title": "本周经营计划单",
+  "status": "submitted",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-04-02T10:00:00Z",
+  "updatedAt": "2026-04-02T10:00:00Z",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-04-07T00:00:00Z",
+    "endAt": "2026-04-13T23:59:59Z",
+    "label": "2026-W15"
+  },
+  "summary": "将目标令拆解为本周经营主线、里程碑和跨部门协同动作。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": ["BD-YYYYMMDD-001"],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "当前经营实验与优先模块"
+    },
+    {
+      "source": "TripilotProductRegistry",
+      "kind": "registry",
+      "note": "入口模块当前能力边界"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "确认本周 MVP 边界",
+      "dueAt": "2026-04-03T18:00:00Z"
+    },
+    {
+      "owner": "ChiefOperatingOfficer",
+      "action": "编排上线窗口和观察节奏",
+      "dueAt": "2026-04-04T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "重大节奏变化待确认"
+    }
+  ],
+  "payload": {
+    "planScope": "weekly",
+    "milestones": [
+      "完成 MVP 定义确认",
+      "完成预算可行性判断",
+      "完成技术实施拆解",
+      "锁定上线窗口"
+    ],
+    "workstreams": [
+      "产品收敛",
+      "预算校验",
+      "技术实现准备",
+      "上线协同"
+    ],
+    "blockedItems": [],
+    "escalationRules": [
+      "预算触顶立即升级 CFO 和 CEO",
+      "交付准备不足时冻结上线窗口"
+    ],
+    "kpis": [
+      "MVP 定义确认完成",
+      "预算未触顶",
+      "技术路径明确",
+      "上线窗口已锁定"
+    ]
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

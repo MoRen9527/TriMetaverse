@@ -1,0 +1,47 @@
+flowchart LR
+    subgraph modules["三元模块"]
+        mc["元认知模块<br/>理解与组织"]
+        mv["元虚拟模块<br/>仿真 / 体验 / 演进"]
+        mr["元现实模块<br/>落地与回流"]
+    end
+
+    subgraph primary["主导能力域"]
+        cg["控制与治理<br/>提案 / 门禁 / 签发"]
+        ai["AI 能力与评测"]
+        ux["体验与交互"]
+        pe["生产力与执行"]
+        sr["调度与资源<br/>服务域集群 + 本地域安装体 / 节点"]
+        on["链上确权与结算<br/>社区投票 / 治理执行"]
+    end
+
+    subgraph shared["跨模块共享能力域"]
+        ae["审计与证据"]
+        vr["验证与仲裁"]
+    end
+
+    mc --> cg
+    mc --> ai
+    mc --> ae
+    mc --> vr
+
+    mv --> ux
+    mv --> pe
+    mv --> sr
+    mv --> ae
+    mv --> vr
+
+    mr --> pe
+    mr --> on
+    mr --> sr
+    mr --> ae
+    mr --> vr
+
+    cg -. 治理提案 / 参数签发 .-> on
+
+    classDef module fill:#fff7e6,stroke:#b7791f,color:#6b4600,stroke-width:1.5px;
+    classDef primary fill:#eef4ff,stroke:#2b6cb0,color:#1a365d,stroke-width:1.5px;
+    classDef shared fill:#eefbf3,stroke:#2f855a,color:#1f5137,stroke-width:1.5px;
+
+    class mc,mv,mr module;
+    class cg,ai,ux,pe,sr,on primary;
+    class ae,vr shared;

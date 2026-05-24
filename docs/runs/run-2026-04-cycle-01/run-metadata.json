@@ -1,0 +1,24 @@
+{
+  "runId": "run-2026-04-cycle-01",
+  "controller": "TriMC R&D Workflow",
+  "host": "copilot-chat",
+  "generationMode": "documentation-backed",
+  "status": "completed",
+  "startedAt": "2026-04-02T08:00:00Z",
+  "updatedAt": "2026-04-02T17:00:00Z",
+  "completedAt": "2026-04-02T17:00:00Z",
+  "mode": "controller-plus-subagents",
+  "project": "TriMetaverse",
+  "branchIds": [
+    "branch-prd-ai-content-trial"
+  ],
+  "prdIds": [
+    "PRD-AI-CONTENT-TRIAL"
+  ],
+  "workspaceRoot": "TriMetaverse",
+  "outputRoot": "docs/runs/run-2026-04-cycle-01",
+  "notes": [
+    "当前仍是 documentation-backed 样例，用于验证 run 输出契约。",
+    "TriMetaverse V1 正式上线切换阶段应由 TriHost 配置下的 TriMC 运行面自动生成同类元信息与阶段结果。"
+  ]
+}

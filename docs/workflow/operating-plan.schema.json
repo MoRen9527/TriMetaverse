@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/operating-plan.schema.json",
+  "title": "OperatingPlan",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "OPERATING_PLAN"
+        },
+        "ownerRole": {
+          "const": "CEOChiefOfStaff"
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["weekly", "monthly"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "planScope",
+            "milestones",
+            "workstreams",
+            "blockedItems",
+            "escalationRules",
+            "kpis"
+          ],
+          "properties": {
+            "planScope": {
+              "type": "string",
+              "enum": ["weekly", "monthly"]
+            },
+            "milestones": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "workstreams": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "blockedItems": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "escalationRules": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "kpis": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

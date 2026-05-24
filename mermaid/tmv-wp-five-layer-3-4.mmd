@@ -1,0 +1,39 @@
+flowchart TD
+    A[任务层<br/>任务入口 / API / 消息队列 / 任务市场]
+    B[调度层<br/>服务调度 / 队列 / Kubernetes / Argo / Celery]
+    C[执行层<br/>服务域 Worker + 本地域 Worker<br/>在线任务 / 桌面 / 手机 / 数据处理 / 世界状态演进]
+    C1[服务域执行 / 分发<br/>服务侧统一安装发行版 + 角色注册 / 租约启用<br/>活跃主控 / 候选主控 / 热备主控 / Worker]
+    C2[本地域执行 / 分发<br/>Planner + Local ToolBus + AI 开发 / 移动 Worker<br/>安装版客户端态 / 钱包开通后节点态 + 数字角色入口]
+    D[验证层<br/>规则校验 / AI 复核 / 挑战 / 冗余执行]
+    E[结算层<br/>区块链登记 / 钱包接入 / 能量积分 / 结算 / 治理]
+
+    A --> B
+    B --> C
+    C --> C1
+    C --> C2
+    C1 --> D
+    C2 --> D
+    D --> E
+
+    subgraph OFFCHAIN[链下执行域]
+        A
+        B
+        C
+        D
+    end
+
+    subgraph ONCHAIN[链上结算域]
+        E
+    end
+
+    classDef offchain fill:#eef4ff,stroke:#2b6cb0,color:#1a365d,stroke-width:1.5px;
+    classDef execution fill:#fff7e6,stroke:#b7791f,color:#6b4600,stroke-width:1.5px;
+    classDef servicePath fill:#dbeafe,stroke:#2b6cb0,color:#1a365d,stroke-width:1.5px;
+    classDef localPath fill:#dcfce7,stroke:#2f855a,color:#1f5137,stroke-width:1.5px;
+    classDef onchain fill:#f3e8ff,stroke:#7c3aed,color:#4c1d95,stroke-width:1.5px;
+
+    class A,B,D offchain;
+    class C execution;
+    class C1 servicePath;
+    class C2 localPath;
+    class E onchain;

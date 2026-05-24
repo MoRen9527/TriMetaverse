@@ -1,0 +1,65 @@
+{
+  "objectType": "RISK_ESCALATION",
+  "objectId": "RE-YYYYMMDD-001",
+  "title": "风险升级单",
+  "status": "submitted",
+  "priority": "critical",
+  "ownerRole": "ChiefOperatingOfficer",
+  "createdAt": "2026-04-02T16:00:00Z",
+  "updatedAt": "2026-04-02T16:00:00Z",
+  "timebox": {
+    "scope": "ad-hoc",
+    "startAt": "2026-04-02T16:00:00Z",
+    "endAt": "2026-04-02T20:00:00Z",
+    "label": "即时升级"
+  },
+  "summary": "记录高风险事项、影响范围、冻结要求和升级路径。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Tristaciss"],
+  "dependsOn": [],
+  "evidence": [
+    {
+      "source": "CEOChiefOfStaff 或相关 Registry",
+      "kind": "registry",
+      "note": "替换为真实风险证据"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "BoardOversight",
+      "action": "给出监督判断与升级建议",
+      "dueAt": "2026-04-02T18:00:00Z"
+    },
+    {
+      "owner": "CEO",
+      "action": "决定是否冻结或调整当前计划",
+      "dueAt": "2026-04-02T19:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "高风险事项待最终裁决"
+    }
+  ],
+  "payload": {
+    "riskCategory": "delivery",
+    "riskSeverity": "critical",
+    "impactScope": "影响 MVP 上线窗口和预算纪律",
+    "triggerCondition": "核心依赖阻断或重大预算超限",
+    "freezeRequired": true,
+    "escalateTo": [
+      "CEO",
+      "BoardOversight"
+    ],
+    "mitigationOptions": [
+      "缩小范围",
+      "延后上线",
+      "冻结新增支出"
+    ]
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

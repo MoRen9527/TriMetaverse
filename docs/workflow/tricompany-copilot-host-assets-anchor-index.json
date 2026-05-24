@@ -1,0 +1,132 @@
+{
+  "appendixId": "tricompany-copilot-host-assets-anchor-index-v0.1-draft",
+  "date": "2026-04-28",
+  "status": "draft",
+  "type": "governance-appendix",
+  "notManifest": true,
+  "governedBy": [
+    "docs/workflow/tricompany-copilot-host-assets-governance.md",
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md"
+  ],
+  "scanSummary": {
+    "supportExecutionRunbookEvidenceSweepAt": "2026-04-28",
+    "result": "no-additional-report-like-subdirectories-found",
+    "note": "support execution runbook/evidence 页内，除固定 JSON evidence 锚点外，未发现新的 report-like 子目录；当前需要单列治理的 report-like 子树已切到 knowledge/employees/ceo-chief-of-staff/workbench/approval-report/；旧总助兼容目录仅保留兼容，不再作为当前治理锚点"
+  },
+  "exactAnchors": [
+    {
+      "id": "host-object-manifest-json",
+      "path": "TriCompany-copilot-host-assets/host-object-manifest.json",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.host_object_generation",
+      "tracking": "tracked",
+      "notes": "当前用于登记 ProjectTrainer、CEOChiefOfStaff、ChiefProductOfficer 与 ChiefTechnologyOfficer role / employee / org shared / audit knowledge workspace 对象集；不属于 docs published-copy manifest；ProjectTrainer 仍非 live 入口启用，CPO/CTO 与总助均为 existing live entry binding"
+    },
+    {
+      "id": "phase-1-supermemory-live-validation-latest-json",
+      "path": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/SUPERMEMORY-LIVE-VALIDATION.latest.json",
+      "tag": "audit-record",
+      "scope": "phase-1",
+      "producer": "runtime.cognition.supermemory_live_validation",
+      "tracking": "tracked",
+      "notes": "TRICOMPANY_SUPERMEMORY_LIVE_REPORT_PATH 指向治理锚点之外时，输出先按 runtime-state 本地化"
+    },
+    {
+      "id": "ceo-chief-of-staff-employee-workbench-html",
+      "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/index.html",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.tasks.wiki_workbench_task",
+      "tracking": "tracked"
+    },
+    {
+      "id": "ceo-chief-of-staff-employee-workbench-snapshot-json",
+      "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/snapshot.json",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.tasks.wiki_workbench_task",
+      "tracking": "tracked"
+    },
+    {
+      "id": "ceo-chief-of-staff-employee-approval-report-snapshot-json",
+      "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/approval-report/snapshot.json",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.tasks.wiki_approval_report_task",
+      "tracking": "tracked"
+    },
+    {
+      "id": "ceo-chief-of-staff-employee-approval-report-summary-md",
+      "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/approval-report/summary.md",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.tasks.wiki_approval_report_task",
+      "tracking": "tracked"
+    }
+  ],
+  "patternAnchors": [
+    {
+      "id": "project-trainer-role-employee-knowledge-workspace-pattern",
+      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{roles,employees}/project-trainer/**",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.employee_host_object_generation",
+      "tracking": "tracked",
+      "notes": "ProjectTrainer 当前只有 support object payload，不是 live .github agent 启用"
+    },
+    {
+      "id": "ceo-chief-of-staff-role-employee-knowledge-workspace-pattern",
+      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{roles,employees}/ceo-chief-of-staff/**",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.employee_host_object_generation",
+      "tracking": "tracked",
+      "notes": "CEOChiefOfStaff 当前 live 入口不变；该对象集用于把老总助平滑纳入统一员工体系"
+    },
+    {
+      "id": "chief-product-officer-role-employee-knowledge-workspace-pattern",
+      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{roles,employees}/chief-product-officer/**",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.employee_host_object_generation",
+      "tracking": "tracked",
+      "notes": "ChiefProductOfficer 当前 live 入口不变；该对象集用于把现有 live entry 绑定到统一员工对象体系"
+    },
+    {
+      "id": "chief-technology-officer-role-employee-knowledge-workspace-pattern",
+      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{roles,employees}/chief-technology-officer/**",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.employee_host_object_generation",
+      "tracking": "tracked",
+      "notes": "ChiefTechnologyOfficer 当前 live 入口不变；该对象集用于把现有 live entry 绑定到统一员工对象体系"
+    },
+    {
+      "id": "employee-shared-org-audit-knowledge-workspace-pattern",
+      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{org/shared,audit}/**",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition.employee_host_object_generation",
+      "tracking": "tracked",
+      "notes": "共享 support payload，不等同于 .tricompany-cognition/org/shared.md 或 org/audit.md 运行态文件"
+    },
+    {
+      "id": "ceo-chief-of-staff-employee-audit-json-pattern",
+      "pathPattern": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/audit/*.json",
+      "tag": "support-object-set",
+      "scope": "current-host",
+      "producer": "runtime.cognition audit writers",
+      "tracking": "tracked",
+      "notes": "当前覆盖 wiki-refresh/promotion/approval/approval-report/recall-checkpoint、schedule-run、reminder-delivery、email-delivery、registry-closeout 等 JSON 审计记录"
+    },
+    {
+      "id": "phase-1-schedule-json-pattern",
+      "pathPattern": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/schedules/*.json",
+      "tag": "support-object-set",
+      "scope": "phase-1",
+      "producer": "phase-1 schedule staging inputs",
+      "tracking": "tracked"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/operating-review.schema.json",
+  "title": "OperatingReview",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "workflowRefs", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "OPERATING_REVIEW"
+        },
+        "ownerRole": {
+          "type": "string",
+          "enum": ["ChiefOperatingOfficer", "CEOChiefOfStaff"]
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["weekly", "monthly", "launch-window"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "workflowRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+          }
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "reviewWindow",
+            "targetVsActual",
+            "wins",
+            "misses",
+            "rootCauses",
+            "corrections",
+            "nextCycleInput"
+          ],
+          "properties": {
+            "reviewWindow": {
+              "type": "string",
+              "minLength": 1
+            },
+            "targetVsActual": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "wins": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "misses": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "rootCauses": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "corrections": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "nextCycleInput": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "docsInitializationRequirements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "docsBootstrapRefs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

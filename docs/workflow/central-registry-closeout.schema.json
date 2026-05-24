@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/central-registry-closeout.schema.json",
+  "title": "CentralRegistryCloseout",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "CENTRAL_REGISTRY_CLOSEOUT"
+        },
+        "ownerRole": {
+          "const": "CEOChiefOfStaff"
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["ad-hoc", "weekly", "deadline"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "closeoutSubject",
+            "triggerReason",
+            "scopeDecision",
+            "registryFindings",
+            "writebackPlan",
+            "auditNotes"
+          ],
+          "properties": {
+            "closeoutSubject": {
+              "type": "string",
+              "minLength": 1
+            },
+            "triggerReason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "candidateModules": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "knownChanges": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "openQuestions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "scopeDecision": {
+              "type": "object",
+              "required": ["businessStrategyRequired", "participatingRegistries"],
+              "properties": {
+                "scopeStatus": {
+                  "type": "string",
+                  "enum": ["module-local", "cross-module", "central-boundary"]
+                },
+                "businessStrategyRequired": {
+                  "type": "boolean"
+                },
+                "businessStrategyDecisionRef": {
+                  "type": "string"
+                },
+                "participatingRegistries": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": ["registryId", "reason"],
+                    "properties": {
+                      "registryId": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "registryType": {
+                        "type": "string",
+                        "enum": [
+                          "strategy",
+                          "business",
+                          "product",
+                          "code",
+                          "company-governance",
+                          "central-product",
+                          "central-code",
+                          "other"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": ["planned", "requested", "completed", "missing"]
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "additionalProperties": false
+            },
+            "registryFindings": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "registryId",
+                  "sourceOfTruth",
+                  "confirmedFacts",
+                  "changedFacts",
+                  "proposedWritebacks",
+                  "gaps",
+                  "escalations"
+                ],
+                "properties": {
+                  "registryId": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sourceOfTruth": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "confirmedFacts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "changedFacts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "proposedWritebacks": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "gaps": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "escalations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "writebackPlan": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": ["target", "owner", "action"],
+                "properties": {
+                  "target": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "owner": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": ["update", "record", "freeze", "defer", "review"]
+                  },
+                  "dueAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "note": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "auditNotes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            },
+            "closeoutDecision": {
+              "type": "string",
+              "enum": [
+                "ready-for-writeback",
+                "partial-closeout",
+                "escalation-required",
+                "fact-gap"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

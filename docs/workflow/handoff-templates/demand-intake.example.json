@@ -1,0 +1,48 @@
+{
+  "objectType": "DEMAND_INTAKE",
+  "objectId": "DI-YYYYMMDD-001",
+  "title": "市场需求输入单",
+  "status": "submitted",
+  "priority": "medium",
+  "ownerRole": "ChiefMarketingOfficer",
+  "createdAt": "2026-04-02T11:00:00Z",
+  "updatedAt": "2026-04-02T11:00:00Z",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-04-02T00:00:00Z",
+    "endAt": "2026-04-08T23:59:59Z",
+    "label": "需求采集周期"
+  },
+  "summary": "记录市场机会、目标用户和转化假设，供产品判断。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Triavatar"],
+  "dependsOn": [],
+  "evidence": [
+    {
+      "source": "ChiefMarketingOfficer 外部调研",
+      "kind": "other",
+      "note": "需替换为真实渠道证据"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "判断是否进入 MVP 机会排序",
+      "dueAt": "2026-04-03T12:00:00Z"
+    }
+  ],
+  "approvals": [],
+  "payload": {
+    "signalSource": "渠道名称或市场事件",
+    "targetAudience": "目标用户画像",
+    "problemStatement": "用户当前最强痛点",
+    "urgency": "medium",
+    "conversionHypothesis": "若解决该痛点，用户将更愿意试用或付费的原因",
+    "channelEvidence": [
+      "链接、截图、访谈摘要、渠道数据等"
+    ]
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

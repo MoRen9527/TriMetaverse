@@ -1,0 +1,25 @@
+{
+  "phase": "ASSURANCE",
+  "status": "completed",
+  "startTime": "2026-04-02T15:20:00Z",
+  "endTime": "2026-04-02T15:50:00Z",
+  "durationMs": 1800000,
+  "qualityScore": 88,
+  "artifacts": [
+    {
+      "name": "delivery-report",
+      "path": "docs/runs/run-2026-04-cycle-01/delivery-report.md",
+      "required": true,
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "summary": "ASSURANCE 认为本轮样例链满足对外说明所需的最小保障条件。",
+  "branchId": "branch-prd-ai-content-trial",
+  "prdId": "PRD-AI-CONTENT-TRIAL",
+  "metadata": {
+    "runId": "run-2026-04-cycle-01",
+    "host": "copilot-chat",
+    "sampleBacked": true
+  }
+}

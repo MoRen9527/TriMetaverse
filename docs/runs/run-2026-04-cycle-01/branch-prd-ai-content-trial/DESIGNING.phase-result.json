@@ -1,0 +1,31 @@
+{
+  "phase": "DESIGNING",
+  "status": "completed",
+  "startTime": "2026-04-02T10:20:00Z",
+  "endTime": "2026-04-02T11:10:00Z",
+  "durationMs": 3000000,
+  "qualityScore": 86,
+  "artifacts": [
+    {
+      "name": "mvp-definition-sample",
+      "path": "docs/workflow/operating-cycle-example/mvp-definition.sample.json",
+      "required": true,
+      "exists": true
+    },
+    {
+      "name": "prd-baseline",
+      "path": "docs/prd/PRD001基础平台.md",
+      "required": true,
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "summary": "DESIGNING 将试单包范围约束成单分支设计路径，为 CODING 提供可执行边界。",
+  "branchId": "branch-prd-ai-content-trial",
+  "prdId": "PRD-AI-CONTENT-TRIAL",
+  "metadata": {
+    "runId": "run-2026-04-cycle-01",
+    "host": "copilot-chat",
+    "sampleBacked": true
+  }
+}

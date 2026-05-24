@@ -1,0 +1,80 @@
+{
+  "objectType": "MVP_DEFINITION",
+  "objectId": "MVP-YYYYMMDD-001",
+  "title": "MVP 定义单",
+  "status": "submitted",
+  "priority": "high",
+  "ownerRole": "ChiefProductOfficer",
+  "createdAt": "2026-04-02T12:00:00Z",
+  "updatedAt": "2026-04-02T12:00:00Z",
+  "timebox": {
+    "scope": "monthly",
+    "startAt": "2026-04-01T00:00:00Z",
+    "endAt": "2026-04-30T23:59:59Z",
+    "label": "MVP 验证窗口"
+  },
+  "summary": "定义当前最小可卖、可做、可验证的产品边界。",
+  "relatedModules": ["Tripilot", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": ["DI-YYYYMMDD-001"],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "当前商业实验"
+    },
+    {
+      "source": "相关模块 Product Registry",
+      "kind": "registry",
+      "note": "模块成熟度与边界"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "给出实现路径与交付拆解",
+      "dueAt": "2026-04-04T12:00:00Z"
+    },
+    {
+      "owner": "ChiefSalesOfficer",
+      "action": "确认可销售表述和报价范围",
+      "dueAt": "2026-04-04T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "若涉及正式立项需审批"
+    }
+  ],
+  "payload": {
+    "mvpVersion": "MVP-v0.1.0",
+    "userProblem": "当前要解决的核心用户问题",
+    "scopeIn": [
+      "必须具备的能力 1",
+      "必须具备的能力 2"
+    ],
+    "scopeOut": [
+      "明确不进入本轮 MVP 的能力 1"
+    ],
+    "pricingHypothesis": "预计的定价区间与收款假设",
+    "validationMetrics": [
+      "首批试用数",
+      "首批付费转化",
+      "交付完成率"
+    ],
+    "deliveryExpectation": "预计交付窗口与最小验收标准",
+    "docsInitializationRequirements": [
+      "若该 MVP 直接触发 PRD 分支启动，则分支进入 DESIGNING 前必须建立模块五层文档协同系统最小入口",
+      "docs/product/REQUIREMENTS.md、docs/engineering/DESIGN.md 与当前 PRD 范围保持可追溯映射"
+    ],
+    "docsBootstrapRefs": [
+      "docs/workflow/prd-branch-minimal-directory-template.md",
+      "docs/workflow/project-repo-document-baseline.md"
+    ]
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

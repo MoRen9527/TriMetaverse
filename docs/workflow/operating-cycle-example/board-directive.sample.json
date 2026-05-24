@@ -1,0 +1,67 @@
+{
+  "objectType": "BOARD_DIRECTIVE",
+  "objectId": "BD-202604-001",
+  "title": "2026-04 首轮试单目标令",
+  "status": "approved",
+  "priority": "critical",
+  "ownerRole": "BoardOversight",
+  "createdAt": "2026-04-02T09:00:00Z",
+  "updatedAt": "2026-04-02T09:30:00Z",
+  "timebox": {
+    "scope": "monthly",
+    "startAt": "2026-04-01T00:00:00Z",
+    "endAt": "2026-04-30T23:59:59Z",
+    "label": "2026-04 首轮试单周期"
+  },
+  "summary": "要求经营层围绕 AI 内容运营与增长微服务推出首轮可收费试单包，保持低成本验证，并同步明确 PC 端软件层与 TriLC 的本地化支撑边界。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": [],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "当前默认经营实验为 AI 内容运营与增长微服务"
+    },
+    {
+      "source": "docs/registry/business-strategy-module-map.md",
+      "kind": "document",
+      "note": "当前 PC 端软件层、TriLC 与 vscodium 上游升级口径的中央模块映射"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "输出 1 周内可执行的经营计划单",
+      "dueAt": "2026-04-03T10:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "以首轮试单验证为本月最高优先级之一"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "context-from",
+      "phase": "DISCOVERY",
+      "runId": "run-2026-04-cycle-01",
+      "note": "目标令沿用当前商业探索发现作为本轮经营起点"
+    }
+  ],
+  "payload": {
+    "goalVersion": "BG-2026-04-v1",
+    "businessTarget": "完成首个 AI 内容运营与增长微服务试单包定义、交付准备和首批试单转化验证，并明确桌面工作台到本地控制器的最小演示协同链。",
+    "budgetGuardrail": "不新增长期固定成本，任何新增外部订阅或部署成本必须先通过预算校验。",
+    "strategicBoundary": "仅使用当前成熟模块，不将 TriMobile、TriMem、TriWeb4、TriChain 纳入现役交付；允许把 PC 端软件层与 TriLC 作为本地演示和自动化支撑面，但不把正式宿主切换或本地域节点成熟度写成已完成。",
+    "effectiveFrom": "2026-04-01T00:00:00Z",
+    "effectiveTo": "2026-04-30T23:59:59Z",
+    "issuedBy": "BoardOversight"
+  },
+  "metadata": {
+    "example": true,
+    "notExecutionRecord": true,
+    "exampleId": "ai-content-growth-cycle-v1"
+  }
+}

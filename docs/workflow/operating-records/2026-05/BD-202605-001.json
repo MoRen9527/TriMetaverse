@@ -1,0 +1,151 @@
+{
+  "objectType": "BOARD_DIRECTIVE",
+  "objectId": "BD-202605-001",
+  "title": "2026-05 TriMetaverse 90天主线重排目标令",
+  "status": "submitted",
+  "priority": "critical",
+  "ownerRole": "BoardOversight",
+  "createdAt": "2026-05-19T00:00:00+08:00",
+  "updatedAt": "2026-05-20T12:00:00+08:00",
+  "timebox": {
+    "scope": "launch-window",
+    "startAt": "2026-05-19T00:00:00+08:00",
+    "endAt": "2026-08-16T23:59:59+08:00",
+    "label": "2026-05 至 2026-08 90天主线重排窗口"
+  },
+  "summary": "当前为待 CEO 书面签发的 90 天目标令候选版本。当前阶段主线从原先较宽的首版 MVP 候选范围，收敛为服务 90 天现金流验证与企业可交付底座验证的最小经营闭环；虚拟公司继续作为经营载体，自动化开发平台与 PC 端安装包后置。执行入口保持为 CEO 直接对 CEOChiefOfStaff 下达需求，再由总助分诊给 CPO / CTO，具体开发继续由 CEO 本人配合当前 Copilot 执行链落地。",
+  "relatedModules": [
+    "TriMetaverse",
+    "TriCompany",
+    "TriMC",
+    "TriLC",
+    "Tripilot",
+    "Tride",
+    "vscodium",
+    "TriHost",
+    "TriSkill",
+    "Tristaciss",
+    "Triavatar",
+    "Trideployment",
+    "TriTest",
+    "TriDev",
+    "TriGateway",
+    "TriMobile",
+    "TriMem",
+    "TriWeb4",
+    "TriChain"
+  ],
+  "dependsOn": [
+    "BD-202604-001"
+  ],
+  "evidence": [
+    {
+      "source": "tmv-whitepaper.md",
+      "kind": "document",
+      "note": "白皮书长期目标保持不变，但当前阶段仍应服务最小闭环、真实经营与渐进演进。"
+    },
+    {
+      "source": "virtual-company.md",
+      "kind": "document",
+      "note": "当前推进路线是先形成最小岗位闭环、产品上线与小闭环盈利，再扩自动化；市场、销售和更多高层岗位按业务压力渐进启用。"
+    },
+    {
+      "source": "docs/三元宇宙架构与模块说明.md",
+      "kind": "document",
+      "note": "中央模块清单已明确；当前 90 天窗口内，CPO 与 CTO 的重新梳理应覆盖全模块，并明确哪些进入现役交付、哪些后置、哪些仍占位。"
+    },
+    {
+      "source": "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+      "kind": "document",
+      "note": "CPO 与 CTO 已在当前 Copilot-host live 阶段上岗；COO、CFO、CMO 等岗位应在更多负责人正式上岗后再扩展分诊。"
+    },
+    {
+      "source": "User input 2026-05-19",
+      "kind": "user-input",
+      "note": "CEO 要求与 TriMetaverse 项目完整融合，对齐边界；停止把自动化开发作为当前主线，保留虚拟公司现状，聚焦 90 天突击计划，并把 COO、CFO、CMO 先作为职责位纳入规划。"
+    },
+    {
+      "source": "User input 2026-05-20",
+      "kind": "user-input",
+      "note": "确认由 CEOChiefOfStaff 统一承接 CEO 需求并分诊给 CPO / CTO；现阶段 CPO / CTO 不脱离当前宿主独立自动工作，具体开发继续由 CEO 本人配合 Copilot 执行链落地。"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "把本次 90 天主线重排同步回当前 operating record，并明确旧的首版 MVP 候选范围已被新的最小经营闭环表述替代，但不删除 MVP 治理语义。",
+      "dueAt": "2026-05-20T12:00:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "输出《90天产品收敛结论》，明确卖什么、卖给谁、哪些能力进入企业小地基、哪些能力不进入当前窗口。",
+      "dueAt": "2026-05-23T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "输出《90天技术后置清单》，明确自动化开发平台、完整虚拟公司自动化、PC 端安装包与更深主控吸收分别后置到什么阶段。",
+      "dueAt": "2026-05-23T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "起草 COO、CFO、CMO 的岗位职责、输入输出、授权边界和启用门槛，不写成已 live。",
+      "dueAt": "2026-05-24T18:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff + ChiefTechnologyOfficer",
+      "action": "把现有文档治理、registry、记忆系统、虚拟公司和 Hermes 吸收收敛成企业可交付小地基的技术底座说明，不承诺其已是成熟标准方案。",
+      "dueAt": "2026-05-28T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "从即日起以总助作为研发任务前台入口：CEO 直接对总助下达需求，由总助负责拆成产品任务和开发任务并分别路由给 CPO / CTO；当前阶段的具体开发继续由 CEO 本人配合 Copilot 执行链落地。",
+      "dueAt": "2026-05-20T23:00:00+08:00"
+    },
+    {
+      "owner": "CEO",
+      "action": "在 CPO / CTO 首轮输出到位后，对本候选目标令给出书面明确同意、修改意见或驳回结论。",
+      "dueAt": "2026-05-29T22:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "正式签发需 CEO 对候选版本给出书面明确同意。"
+    },
+    {
+      "role": "BoardOversight",
+      "status": "pending",
+      "note": "当前由创始人兼代理董事会维护候选目标令，但正式签发仍待 CEO 书面确认。"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "input-to",
+      "phase": "DISCOVERY",
+      "runId": "run-2026-05-90day-mainline-reset",
+      "note": "本目标令为当前 90 天经营与研发主线重排提供经营边界；后续由 CPO / CTO 转译为 MVP_DEFINITION、ENGINEERING_TASK 与相关 docs 真源。"
+    }
+  ],
+  "payload": {
+    "goalVersion": "BG-2026-05-v0.3.0-candidate",
+    "businessTarget": "在 2026-05-19 至 2026-08-16 的 90 天窗口内，以虚拟公司为经营载体，优先完成 90 天突击计划所需的产品收敛、技术收敛、经营节奏、Hermes 吸收和企业可交付小地基验证；自动化开发平台不再作为当前主线，CPO / CTO 立即进入主责，COO / CFO / CMO 先作为职责位进入规划与后续启用顺序管理。CEO 继续直接与 CEOChiefOfStaff 沟通，由总助统一分诊和收口。",
+    "budgetGuardrail": "继续维持低成本推进。任何新增固定成本、外部部署成本、长期订阅、奖励自动化、PC 端安装包开发或更多岗位 live 启用，均需先经过预算校验；在 CFO 未正式上岗前，由 CEOChiefOfStaff 代管预算护栏并升级 CEO 裁决。",
+    "strategicBoundary": "当前不是完整虚拟公司自动化阶段，不是自动化开发平台主线阶段，不是 TriMC 正式宿主切换阶段，也不是 vscodium 安装包交付阶段；原有“最小 MVP”治理语义保留，但具体范围改写为服务 90 天现金流验证与企业底座验证的最小经营闭环；COO、CFO、CMO 当前只允许写职责、边界和启用门槛，不写成已正式 live；社区奖励先采用规则文档加人工记账，不进入链上自动化兑现；CPO / CTO 当前承担产品与技术主责，但具体开发执行仍不写成已可由 TriMC 自动闭环完成。",
+    "effectiveFrom": "2026-05-19T00:00:00+08:00",
+    "effectiveTo": "2026-08-16T23:59:59+08:00",
+    "issuedBy": "BoardOversight（候选状态，待 CEO 书面签发）"
+  },
+  "metadata": {
+    "executionRecord": true,
+    "recordLayer": "real-operating-record",
+    "formalBoardFlowDeferred": true,
+    "supersedesCandidateRef": "docs/workflow/operating-records/2026-04/BD-202604-001.json",
+    "pairedOperatingPlanRef": "docs/workflow/operating-records/2026-W15/OP-202604-W15-001.json",
+    "issuanceVersion": "BD-202605-001-v0.3.0-candidate",
+    "writtenApprovalRequired": true,
+    "approvalMethod": "CEO 书面明确同意并对照 SHA256 指纹侧车文件",
+    "approvalFingerprintRef": "docs/workflow/operating-records/2026-05/BD-202605-001.sha256.txt",
+    "mainlineReset": true
+  }
+}

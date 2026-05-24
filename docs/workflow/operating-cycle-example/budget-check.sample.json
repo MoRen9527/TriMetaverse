@@ -1,0 +1,104 @@
+{
+  "objectType": "BUDGET_CHECK",
+  "objectId": "BC-202604-001",
+  "title": "AI 内容运营试单包预算校验单",
+  "status": "approved",
+  "priority": "high",
+  "ownerRole": "ChiefFinancialOfficer",
+  "createdAt": "2026-04-04T15:00:00Z",
+  "updatedAt": "2026-04-04T17:00:00Z",
+  "timebox": {
+    "scope": "monthly",
+    "startAt": "2026-04-01T00:00:00Z",
+    "endAt": "2026-04-30T23:59:59Z",
+    "label": "2026-04 预算窗口"
+  },
+  "summary": "判断试单包是否可以在当前低成本约束内推进，并确认桌面工作台与本地控制器协同链不会引入额外固定成本。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": ["MVP-202604-001"],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "固定成本约束和当前试点定位"
+    },
+    {
+      "source": "TrideploymentProductRegistry",
+      "kind": "registry",
+      "note": "交付完备性资产可以复用"
+    },
+    {
+      "source": "TriLCProductRegistry",
+      "kind": "registry",
+      "note": "本地化任务能力可通过既有本地域控制器口径承接"
+    },
+    {
+      "source": "TriTestProductRegistry",
+      "kind": "registry",
+      "note": "测试提案和基线可复用"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "在预算约束内输出最小实现路径",
+      "dueAt": "2026-04-05T12:00:00Z"
+    }
+  ],
+  "approvals": [],
+  "workflowRefs": [
+    {
+      "relation": "context-from",
+      "phase": "INTELLIGENCE",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/INTELLIGENCE.phase-result.json",
+      "note": "预算判断继承当前 PRD 决策上下文"
+    },
+    {
+      "relation": "blocks",
+      "phase": "CODING",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "note": "若预算不成立，应阻断编码推进"
+    }
+  ],
+  "payload": {
+    "budgetWindow": "2026-04",
+    "fixedCostEstimate": "不新增长期固定成本，优先复用既有入口、API、测试和交付资产。",
+    "variableCostEstimate": "允许少量模型调用、桌面演示和本地化任务样例成本，但应受试单收入预期约束。",
+    "runwayImpact": "若按试单包范围推进并复用 PC 端软件层与 TriLC 既有能力，预算压力可控；若扩展为复杂平台则会突破当前边界。",
+    "guardrails": [
+      "不得新增长期固定订阅",
+      "不得把低成熟模块拉入现役交付",
+      "如交付范围扩大必须重新校验预算",
+      "不得把 vscodium 的上游周期性升级默认计入本轮新增自研预算"
+    ],
+    "stopConditions": [
+      "若必须新增明显固定成本则先冻结",
+      "若试单报价无法覆盖最小变动成本则停止扩大动作"
+    ],
+    "assumptions": [
+      "复用现有入口与 API 能力",
+      "复用 PC 端软件层与 TriLC 的既有协同链，不新建独立桌面发行面",
+      "测试与交付资产以现有工具仓为主",
+      "本轮以验证收费与交付通路为核心，不追求平台化"
+    ],
+    "docsInitializationRequirements": [
+      "预算判断默认假设相关模块已完成模块五层文档协同系统最小入口初始化",
+      "若 docs 初始化缺失，则不应把该分支视为正式进入 DESIGNING 或 CODING 预算阶段"
+    ],
+    "docsBootstrapRefs": [
+      "docs/workflow/prd-branch-minimal-directory-template.md",
+      "docs/workflow/prd-branch-delivery-checklist.md",
+      "docs/workflow/project-repo-document-baseline.md"
+    ]
+  },
+  "metadata": {
+    "example": true,
+    "notExecutionRecord": true,
+    "exampleId": "ai-content-growth-cycle-v1"
+  }
+}

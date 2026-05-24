@@ -1,0 +1,83 @@
+sequenceDiagram
+    autonumber
+    participant U as 社区成员 / 发布方
+    participant G as 服务网关集群<br/>任务市场接入 / 路由 / 防护
+    participant C as 主控编排池<br/>链下协调 / 会话推进
+    participant I as 一致性与身份平面
+    participant S as 共享上下文平面
+    participant R as 服务侧统一安装节点<br/>候选主控 / 热备主控
+    box rgba(219,234,254,0.65) 服务域执行链路
+    participant P as Planner（仅本地域）
+    participant Q as 服务调度器
+    participant K as Kubernetes
+    participant W as 服务域 AI Worker Pod
+    end
+    box rgba(220,252,231,0.7) 本地域执行链路
+    participant L as Local ToolBus
+    participant D as 任务自动化 Worker
+    participant X as 其他本地 Worker
+    end
+    participant V as 验证层
+    participant B as 区块链合约
+
+    Note over G,C: 网关负责接入、路由与防护；主控池负责上下文装配、会话推进与结果回流
+    Note over I,S: 控制面通过身份/租约校验与共享上下文引用保持可接管与可恢复
+
+    opt 服务侧节点加入候选池或发生主控切换
+        R->>I: 角色注册 / 健康上报 / 候选主控申请
+        I-->>R: 授予候选主控 / 热备角色
+        I-->>G: 发布健康主控集合摘要
+        alt 当前活跃主控需切换
+            I-->>R: 授予活跃主控租约
+            G->>I: 拉取最新主控路由摘要
+            I-->>G: 返回更新后的健康主控集合
+        end
+    end
+
+    U->>G: 发布任务
+    G->>I: 校验可用网关 / 主控租约
+    I-->>G: 返回健康主控集合
+    G->>C: 路由任务请求 / 会话上下文
+    C->>I: 验证主控身份 / 续约
+    I-->>C: 身份有效 / 仲裁状态
+    C->>S: 装配项目配置 / 项目进度 / 历史 / skills / 记忆引用
+    S-->>C: 返回可恢复上下文引用
+    C->>B: 可选：登记任务摘要
+
+    rect rgba(219,234,254,0.25)
+    opt 服务域任务
+        C->>Q: 下发服务域任务 / 执行约束
+        Q->>K: 创建服务域 Worker Pod
+        K->>W: 分配资源并启动执行
+        W->>W: 执行数据处理 / 批量调度 / 并发分担等服务器任务
+        W->>Q: 返回结果摘要 / 日志 / 工件
+        Q->>C: 汇总服务域执行结果
+    end
+    end
+
+    rect rgba(220,252,231,0.25)
+    opt 本地域任务
+        C->>P: 请求任务拆解 / 执行策略
+        P->>L: 下发本地任务计划
+        L->>D: 分发桌面 / 浏览器 / 手机 App / 终端计算任务
+        alt 任务自动化 Worker 直接执行
+            D->>D: 执行本地桌面 / 浏览器 / 手机 App 任务
+        else 任务自动化 Worker 调用其他本地 Worker
+            D->>L: 选择并调用其他本地 Worker
+            L->>X: 分发代码 / 视频 / 演示类子任务
+            X->>L: 返回子任务结果 / 工件
+            L->>D: 汇总可用结果
+        end
+        D->>L: 返回本地结果 / 日志 / 工件
+        L->>C: 回流本地执行结果
+    end
+    end
+
+    C->>V: 提交验证请求
+    V->>V: 规则校验 / AI 复核 / 挑战期
+    V-->>C: 验证通过 / 驳回 / 需重试
+    C->>S: 回写会话结果 / 日志索引 / 记忆引用
+    C->>B: 提交结果哈希 / 证明 / 时间戳
+    B-->>U: 记录任务状态
+    B-->>W: 服务域任务奖励 / 信誉更新
+    B-->>D: 本地域任务奖励 / 信誉更新

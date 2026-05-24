@@ -1,0 +1,138 @@
+version: 1
+project: TriMetaverse
+mode: controller-plus-subagents # controller-plus-subagents | full-auto-11-agents
+
+controller:
+  mode: current-agent-as-controller
+  requireHumanReview: true
+
+host:
+  current: copilot-chat # 当前第一宿主先落在 copilot chat；必要时可扩到 copilot cli
+  target: trihost-configured # TriMetaverse V1 正式上线切换阶段通过 TriHost 配置正式宿主：copilot-chat | copilot-cli | trihost-configured | custom
+  outputContract: docs/workflow/workflow-host-integration.md
+  outputMetadataSchema: docs/workflow/workflow-run-metadata.schema.json
+
+runOutput:
+  root: docs/runs
+  generateRunMetadata: true
+  writeStrategy: atomic-replace
+  phaseResultFilePattern: "<PHASE>.phase-result.json"
+  branchDirectoryPattern: "<branchId>"
+
+phases:
+  - DISCOVERY
+  - INTELLIGENCE
+  - DESIGNING
+  - CODING
+  - VERIFY-INTEGRATION
+  - REDTEAM
+  - QA
+  - DEPLOYMENT
+  - ASSURANCE
+  - DELIVERY
+
+execution:
+  serialPhases: true
+  parallelInPhase: true
+  maxSubagentsPerPhase: 4
+  continueOnError: false
+  retry:
+    maxRetries: 1
+    backoffMs: 3000
+
+reviewChain:
+  enabled: true
+  requireManualVersionSignoff: true
+  blockOnUnapproved: true
+  blockOnMissingVersion: true
+  blockOnNoVersionChangeWhenNotInitial: true
+  requiredApprovalPhases: [DISCOVERY, INTELLIGENCE]
+  versionRules:
+    DISCOVERY:
+      prefix: "WP-v"
+      artifact: "tmv-whitepaper.md"
+    INTELLIGENCE:
+      prefix: "PRD"
+      artifact: "docs/prd/README.md"
+  prdBranchRequirement:
+    requireApprovedPrdVersion: true
+
+prdBranchPipeline:
+  enable: true
+  prdRoot: docs/prd
+  prdRegistry: docs/workflow/prd-registry.json
+  allowProgressivePrd: true
+  triggerSources: [INTELLIGENCE]
+  downstreamRefresh:
+    onDiscoveryWhitepaperChanged: [INTELLIGENCE]
+    onIntelligenceChanged: [REGISTER_BRANCH]
+  impactPolicy:
+    unchangedBranches: keep
+    impactedBranches: rerun-from-CODING
+  branchIdPattern: "{prdId}"
+  branchParallelism: 3
+  branchStages:
+    - DESIGNING
+    - CODING
+    - VERIFY-INTEGRATION
+    - REDTEAM
+    - QA
+    - DEPLOYMENT
+    - ASSURANCE
+
+gates:
+  coding:
+    blockOnAnyFailure: true
+  verifyIntegration:
+    blockOnAnyFailure: true
+  redteam:
+    blockOnCritical: true
+    criticalSeverities: [critical]
+    scope: adversarial
+  qa:
+    defaultThreshold: 80
+    allowOverride: true
+    allowSkip: true
+    scope: non-adversarial
+  assurance:
+    requiredSuites: [vuln, pressure, security, regression]
+    blockOnAnyHighOrCritical: true
+
+artifacts:
+  DISCOVERY:
+    required:
+      - tmv-whitepaper.md
+  INTELLIGENCE:
+    required:
+      - docs/prd/README.md
+  DESIGNING:
+    required:
+      - arch-storage-migration.md
+  CODING:
+    required:
+      - src
+      - docs/testing/unit-test-report.md
+  VERIFY-INTEGRATION:
+    required:
+      - docs/testing/integration-test-report.md
+  REDTEAM:
+    required:
+      - docs/testing/redteam-report.md
+  QA:
+    required:
+      - docs/testing/qa-score-report.json
+  DEPLOYMENT:
+    required:
+      - deploy/k8s
+      - .github/workflows
+  DELIVERY:
+    required:
+      - delivery-manifest.json
+      - delivery-report.md
+      - artifacts/release.zip
+  ASSURANCE:
+    required:
+      - docs/testing/assurance-vuln-report.md
+      - docs/testing/assurance-pressure-report.md
+      - docs/testing/assurance-security-report.md
+      - docs/testing/assurance-regression-report.md

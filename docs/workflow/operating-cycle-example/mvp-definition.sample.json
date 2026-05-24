@@ -1,0 +1,122 @@
+{
+  "objectType": "MVP_DEFINITION",
+  "objectId": "MVP-202604-001",
+  "title": "AI 内容运营试单包 MVP 定义单",
+  "status": "approved",
+  "priority": "high",
+  "ownerRole": "ChiefProductOfficer",
+  "createdAt": "2026-04-04T09:00:00Z",
+  "updatedAt": "2026-04-04T12:00:00Z",
+  "timebox": {
+    "scope": "monthly",
+    "startAt": "2026-04-01T00:00:00Z",
+    "endAt": "2026-04-30T23:59:59Z",
+    "label": "2026-04 MVP 验证"
+  },
+  "summary": "将需求收敛为首轮可收费试单包，不扩展到复杂平台或链上能力，并明确桌面工作台到本地控制器的最小协同演示链。",
+  "relatedModules": ["Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": ["DI-202604-001"],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "当前默认经营实验为 AI 内容运营与增长微服务"
+    },
+    {
+      "source": "TripilotProductRegistry",
+      "kind": "registry",
+      "note": "可承接桌面入口与结果展示"
+    },
+    {
+      "source": "TrideProductRegistry",
+      "kind": "registry",
+      "note": "可承接本地自动化与 vibe coding 的开发工具底座"
+    },
+    {
+      "source": "TriLCProductRegistry",
+      "kind": "registry",
+      "note": "可承接本地化任务和本地执行控制器能力"
+    },
+    {
+      "source": "TristacissProductRegistry",
+      "kind": "registry",
+      "note": "可承接模型路由和 API 平台"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefFinancialOfficer",
+      "action": "判断试单包是否落在预算边界内",
+      "dueAt": "2026-04-04T18:00:00Z"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "拆解实现与测试要求",
+      "dueAt": "2026-04-05T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "允许按试单包范围推进"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "output-of",
+      "phase": "INTELLIGENCE",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/INTELLIGENCE.phase-result.json",
+      "note": "MVP 定义基于 intelligence 阶段的产品边界收敛结果"
+    },
+    {
+      "relation": "input-to",
+      "phase": "DESIGNING",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "note": "MVP 定义将作为 designing 阶段的输入边界"
+    }
+  ],
+  "payload": {
+    "mvpVersion": "MVP-v0.1.0",
+    "userProblem": "目标用户需要低成本、快交付、可校对的内容增长试单服务。",
+    "scopeIn": [
+      "一个标准化需求采集入口",
+      "一轮内容计划与首批文案生成",
+      "人工可校对的交付包输出",
+      "一条由 Tripilot / Tride / vscodium 配合 TriLC 的最小桌面演示与本地化任务协同链"
+    ],
+    "scopeOut": [
+      "移动端独立交付",
+      "链上身份和结算",
+      "公链或钱包集成",
+      "复杂多租户平台功能",
+      "把 vscodium 上游周期性升级能力写成本地新增平台功能"
+    ],
+    "pricingHypothesis": "采用小额试单报价，先验证交付意愿和复购可能性。",
+    "validationMetrics": [
+      "形成可讲清的试单包定义",
+      "至少出现一轮有效试单推进信号",
+      "交付准备与预算判断不冲突"
+    ],
+    "deliveryExpectation": "在一周内形成演示通路、交付清单、桌面工作台到本地控制器的最小协同说明和试单销售话术。",
+    "docsInitializationRequirements": [
+      "若试单包 PRD 分支进入 DESIGNING，则对应模块必须先完成模块五层文档协同系统最小入口初始化",
+      "docs/product/REQUIREMENTS.md、docs/engineering/DESIGN.md 与试单包 PRD 范围保持可追溯映射"
+    ],
+    "docsBootstrapRefs": [
+      "docs/workflow/prd-branch-minimal-directory-template.md",
+      "docs/workflow/project-repo-document-baseline.md",
+      "docs/workflow/prd-branch-delivery-checklist.md"
+    ]
+  },
+  "metadata": {
+    "example": true,
+    "notExecutionRecord": true,
+    "exampleId": "ai-content-growth-cycle-v1"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "TriMC Service Controller Task Protocol",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/internal/v1/tasks": {
+      "post": {
+        "summary": "Submit task ingress from Tristaciss to TriMC",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaskIngressRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Task accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskAcceptedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/internal/v1/tasks/{taskId}": {
+      "get": {
+        "summary": "Get task state from TriMC",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Task state",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskStateResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/internal/v1/tasks/{taskId}/approval": {
+      "post": {
+        "summary": "Send approval result to TriMC",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApprovalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Approval accepted"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TaskIngressRequest": {
+        "type": "object",
+        "required": ["ingressId", "requestId", "taskType", "sourceClient", "creator", "routing", "execution", "payload"],
+        "properties": {
+          "ingressId": { "type": "string" },
+          "requestId": { "type": "string" },
+          "taskType": { "type": "string" },
+          "sourceClient": { "type": "string", "enum": ["tripilot", "triavatar", "trimobile", "system"] },
+          "creator": {
+            "type": "object",
+            "required": ["userId"],
+            "properties": {
+              "userId": { "type": "string" },
+              "teamId": { "type": "string" }
+            },
+            "additionalProperties": false
+          },
+          "routing": {
+            "type": "object",
+            "required": ["tag"],
+            "properties": {
+              "tag": { "type": "string" },
+              "modelTag": { "type": "string" },
+              "resolvedProvider": { "type": "string" },
+              "resolvedModel": { "type": "string" }
+            },
+            "additionalProperties": false
+          },
+          "policy": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "workspace": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "execution": {
+            "type": "object",
+            "required": ["mode", "preferredDomain", "requiresWorkspaceAccess", "requiresNodeConsent"],
+            "properties": {
+              "mode": { "type": "string", "enum": ["sync", "async"] },
+              "preferredDomain": { "type": "string", "enum": ["local", "service", "hybrid"] },
+              "requiresWorkspaceAccess": { "type": "boolean" },
+              "requiresNodeConsent": { "type": "boolean" }
+            },
+            "additionalProperties": false
+          },
+          "payload": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TaskAcceptedResponse": {
+        "type": "object",
+        "required": ["taskId", "controller", "status", "queueStatus", "acceptedAt"],
+        "properties": {
+          "taskId": { "type": "string" },
+          "controller": { "type": "string" },
+          "status": { "type": "string" },
+          "queueStatus": { "type": "string" },
+          "acceptedAt": { "type": "string", "format": "date-time" }
+        },
+        "additionalProperties": false
+      },
+      "TaskStateResponse": {
+        "type": "object",
+        "required": ["taskId", "status", "phase", "updatedAt"],
+        "properties": {
+          "taskId": { "type": "string" },
+          "status": { "type": "string" },
+          "phase": { "type": "string" },
+          "assignedNodeId": { "type": "string" },
+          "approvalStatus": { "type": "string" },
+          "updatedAt": { "type": "string", "format": "date-time" }
+        },
+        "additionalProperties": false
+      },
+      "ApprovalRequest": {
+        "type": "object",
+        "required": ["action", "actorId"],
+        "properties": {
+          "action": { "type": "string", "enum": ["approve", "reject"] },
+          "actorId": { "type": "string" },
+          "comment": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

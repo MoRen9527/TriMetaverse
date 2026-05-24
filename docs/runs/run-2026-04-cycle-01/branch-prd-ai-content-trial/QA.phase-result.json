@@ -1,0 +1,25 @@
+{
+  "phase": "QA",
+  "status": "completed",
+  "startTime": "2026-04-02T14:05:00Z",
+  "endTime": "2026-04-02T14:30:00Z",
+  "durationMs": 1500000,
+  "qualityScore": 86,
+  "artifacts": [
+    {
+      "name": "quality-gates",
+      "path": "docs/workflow/quality-gates.schema.json",
+      "required": true,
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "summary": "QA 达到默认阈值，文档和交付链保持一致。",
+  "branchId": "branch-prd-ai-content-trial",
+  "prdId": "PRD-AI-CONTENT-TRIAL",
+  "metadata": {
+    "runId": "run-2026-04-cycle-01",
+    "host": "copilot-chat",
+    "sampleBacked": true
+  }
+}

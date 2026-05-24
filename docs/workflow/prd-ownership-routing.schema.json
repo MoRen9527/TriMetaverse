@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/prd-ownership-routing.schema.json",
+  "title": "PRDOwnershipRouting",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "PRD_OWNERSHIP_ROUTING"
+        },
+        "ownerRole": {
+          "type": "string",
+          "enum": ["CEOChiefOfStaff", "ChiefProductOfficer"]
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["ad-hoc", "weekly", "deadline"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "workflowRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+          }
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "prdRef",
+            "requestReason",
+            "candidateModules",
+            "candidateRoots",
+            "currentEvidence",
+            "blockingImpact",
+            "requestedDecisionBy"
+          ],
+          "properties": {
+            "prdRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "requestReason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "candidateModules": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "candidateRoots": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "currentEvidence": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "blockingImpact": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "requestedDecisionBy": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "routingDecision": {
+              "type": "string",
+              "enum": ["pending", "routed", "escalated", "frozen"]
+            },
+            "targetModuleOrProject": {
+              "type": "string"
+            },
+            "targetRepoRoot": {
+              "type": "string"
+            },
+            "targetDocsRoot": {
+              "type": "string"
+            },
+            "moduleDesignDecision": {
+              "type": "string"
+            },
+            "docsLandingDecision": {
+              "type": "string"
+            },
+            "requiredEscalations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

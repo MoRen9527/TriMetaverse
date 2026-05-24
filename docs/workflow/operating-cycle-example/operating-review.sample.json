@@ -1,0 +1,132 @@
+{
+  "objectType": "OPERATING_REVIEW",
+  "objectId": "OR-202604-W14-001",
+  "title": "首轮试单经营复盘单",
+  "status": "completed",
+  "priority": "medium",
+  "ownerRole": "ChiefOperatingOfficer",
+  "createdAt": "2026-04-10T18:00:00Z",
+  "updatedAt": "2026-04-10T20:00:00Z",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-04-03T00:00:00Z",
+    "endAt": "2026-04-09T23:59:59Z",
+    "label": "2026-W14 样例复盘"
+  },
+  "summary": "总结首轮试单经营链的目标达成度、偏差和下一轮优化输入，并把 PC 端软件层、TriLC 与 vscodium 上游升级口径纳入后续收口议程。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": ["OP-202604-W14-001", "SP-202604-001"],
+  "evidence": [
+    {
+      "source": "OP-202604-W14-001",
+      "kind": "document",
+      "note": "计划目标"
+    },
+    {
+      "source": "SP-202604-001",
+      "kind": "document",
+      "note": "销售推进与转化信号"
+    },
+    {
+      "source": "BC-202604-001",
+      "kind": "document",
+      "note": "预算边界判断"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "把纠偏动作写入下一轮经营计划单",
+      "dueAt": "2026-04-11T10:00:00Z"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "发起 CRC-20260423-001，正式收口 PC 端软件层、TriLC 和 vscodium 上游升级口径",
+      "dueAt": "2026-04-23T12:00:00Z"
+    },
+    {
+      "owner": "BoardOversight",
+      "action": "决定是否扩大下一轮试单验证范围",
+      "dueAt": "2026-04-11T18:00:00Z"
+    }
+  ],
+  "approvals": [],
+  "workflowRefs": [
+    {
+      "relation": "summarizes",
+      "phase": "INTELLIGENCE",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/INTELLIGENCE.phase-result.json",
+      "note": "复盘吸收需求与 PRD 决策结果"
+    },
+    {
+      "relation": "summarizes",
+      "phase": "CODING",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/CODING.phase-result.json",
+      "note": "复盘吸收实现阶段结果"
+    },
+    {
+      "relation": "summarizes",
+      "phase": "DELIVERY",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/DELIVERY.phase-result.json",
+      "note": "复盘吸收交付阶段结果"
+    }
+  ],
+  "payload": {
+    "reviewWindow": "2026-W14",
+    "targetVsActual": [
+      "已完成目标令、计划、MVP、预算和研发任务链的样例闭环",
+      "已形成一轮试单报价与销售推进样例",
+      "已识别 PC 端软件层与 TriLC 的协同口径需要在复盘后继续收口",
+      "尚未扩展到复杂平台化交付"
+    ],
+    "wins": [
+      "低成熟模块未被错误拉入现役交付",
+      "预算约束和交付准备在样例中保持一致",
+      "经营对象已能串成闭环，并通过 workflowRefs 显式引用关键 PhaseResult",
+      "复盘已把 PC 端软件层、TriLC 和 vscodium 上游升级口径纳入下一步中央收口议程"
+    ],
+    "misses": [
+      "BOARD_DIRECTIVE 这类非高频对象尚未补独立 schema",
+      "当前结构化 run 已落盘，但仍是 documentation-backed 样例，不是宿主自动生成记录",
+      "PC 端软件层、TriLC 与 vscodium 上游升级口径仍需靠单独 closeout 样板做跨模块 fan-in"
+    ],
+    "rootCauses": [
+      "当前仍在打基础设施和文档骨架阶段",
+      "还未进入真实经营数据沉淀阶段",
+      "跨模块边界在经营样例链和中央收口样板之间仍需要显式桥接"
+    ],
+    "corrections": [
+      "视需要补充 BOARD_DIRECTIVE 等非高频对象的独立 schema",
+      "让研发工作流的真实宿主按 docs/runs 稳定目录规范自动落盘",
+      "把 CRC-20260423-001 作为本轮复盘后的跨模块事实收口 companion sample"
+    ],
+    "nextCycleInput": [
+      "继续完善经营对象校验结构",
+      "把 docs/runs 规范接入由 TriHost 配置管理的研发工作流宿主实现与真实运行样例",
+      "继续细化 PC 端软件层默认开放能力与需额外授权的本地自动化能力边界"
+    ],
+    "docsInitializationRequirements": [
+      "复盘时应确认相关 PRD 分支的模块五层文档协同系统最小入口已建立",
+      "应确认 execution 阶段目录、workflow 入口和 registry 回写没有脱节"
+    ],
+    "docsBootstrapRefs": [
+      "docs/workflow/prd-branch-minimal-directory-template.md",
+      "docs/workflow/prd-branch-delivery-checklist.md",
+      "docs/workflow/project-repo-document-baseline.md"
+    ]
+  },
+  "metadata": {
+    "example": true,
+    "notExecutionRecord": true,
+    "exampleId": "ai-content-growth-cycle-v1"
+  }
+}

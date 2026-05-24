@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/virtual-company-handoff-envelope.schema.json",
+  "title": "VirtualCompanyHandoffEnvelope",
+  "type": "object",
+  "required": [
+    "objectType",
+    "objectId",
+    "title",
+    "status",
+    "priority",
+    "ownerRole",
+    "createdAt",
+    "updatedAt",
+    "summary",
+    "relatedModules",
+    "evidence",
+    "nextActions",
+    "payload"
+  ],
+  "properties": {
+    "objectType": {
+      "type": "string",
+      "enum": [
+        "BOARD_DIRECTIVE",
+        "OPERATING_PLAN",
+        "DEMAND_INTAKE",
+        "MVP_DEFINITION",
+        "BUDGET_CHECK",
+        "ENGINEERING_TASK",
+        "SALES_PROGRESS",
+        "RISK_ESCALATION",
+        "OPERATING_REVIEW",
+        "CENTRAL_REGISTRY_CLOSEOUT",
+        "PRD_OWNERSHIP_ROUTING",
+        "RESPONSIBILITY_HANDOFF",
+        "SKILL_SPEC",
+        "SCHEDULE_SPEC"
+      ]
+    },
+    "objectId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "submitted",
+        "approved",
+        "rejected",
+        "in-progress",
+        "blocked",
+        "completed"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "ownerRole": {
+      "type": "string",
+      "minLength": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "timebox": {
+      "type": "object",
+      "properties": {
+        "scope": {
+          "type": "string",
+          "enum": ["ad-hoc", "weekly", "monthly", "launch-window", "deadline"]
+        },
+        "startAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relatedModules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependsOn": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "kind"],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": ["registry", "document", "metric", "user-input", "other"]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "nextActions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["owner", "action"],
+        "properties": {
+          "owner": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "dueAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "status"],
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "approved", "rejected", "not-required"]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "workflowRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+      }
+    },
+    "payload": {
+      "type": "object"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

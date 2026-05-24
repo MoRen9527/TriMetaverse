@@ -1,0 +1,75 @@
+{
+  "objectType": "DEMAND_INTAKE",
+  "objectId": "DI-202604-001",
+  "title": "小团队内容增长试单需求输入单",
+  "status": "submitted",
+  "priority": "medium",
+  "ownerRole": "ChiefMarketingOfficer",
+  "createdAt": "2026-04-03T14:00:00Z",
+  "updatedAt": "2026-04-03T16:00:00Z",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-04-03T00:00:00Z",
+    "endAt": "2026-04-09T23:59:59Z",
+    "label": "W14 市场输入"
+  },
+  "summary": "聚焦预算有限的小团队内容增长需求，验证试单包切入点，并确认用户是否接受桌面工作台配合本地化任务的轻量交付方式。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Triavatar"],
+  "dependsOn": ["OP-202604-W14-001"],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "当前实验方向 A"
+    },
+    {
+      "source": "TripilotProductRegistry",
+      "kind": "registry",
+      "note": "桌面入口可作为试单交互和结果承接面"
+    },
+    {
+      "source": "TriLCProductRegistry",
+      "kind": "registry",
+      "note": "本地化任务可由 TriLC 与 PC 端软件层协同承接"
+    },
+    {
+      "source": "示例渠道访谈与内容观察",
+      "kind": "other",
+      "note": "样例信号，不代表真实市场证据"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "判断是否收敛为可收费试单包",
+      "dueAt": "2026-04-04T12:00:00Z"
+    }
+  ],
+  "approvals": [],
+  "workflowRefs": [
+    {
+      "relation": "input-to",
+      "phase": "INTELLIGENCE",
+      "runId": "run-2026-04-cycle-01",
+      "note": "需求输入单直接作为 intelligence 阶段的市场信号输入"
+    }
+  ],
+  "payload": {
+    "signalSource": "小团队创作者和轻量增长团队对低成本内容外包的需求信号",
+    "targetAudience": "预算有限、需要快速产出内容计划和文案的小团队",
+    "problemStatement": "他们需要一套低成本、快交付、可校对的内容增长试单服务，而不是复杂平台实施；同时可以接受由桌面工作台配合本地化任务完成的轻量交付链。",
+    "urgency": "high",
+    "conversionHypothesis": "若能在一周内交付内容计划和首批文案样本，目标用户更愿意以试单方式付费验证。",
+    "channelEvidence": [
+      "内容外包需求高于复杂平台采购意愿",
+      "小团队更偏好试单而不是长期合约",
+      "交付速度和可校对性优先于全自动化",
+      "对用户而言，可直接使用的桌面自动化和半自动交付入口比完整平台化更容易接受"
+    ]
+  },
+  "metadata": {
+    "example": true,
+    "notExecutionRecord": true,
+    "exampleId": "ai-content-growth-cycle-v1"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/sales-progress.schema.json",
+  "title": "SalesProgress",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "workflowRefs", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "SALES_PROGRESS"
+        },
+        "ownerRole": {
+          "const": "ChiefSalesOfficer"
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["weekly", "monthly", "deadline", "launch-window"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "workflowRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+          }
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "pipelineStage",
+            "customerSegment",
+            "offerVersion",
+            "quoteRange",
+            "expectedRevenue",
+            "paymentRisk",
+            "followUpAt"
+          ],
+          "properties": {
+            "pipelineStage": {
+              "type": "string",
+              "minLength": 1
+            },
+            "customerSegment": {
+              "type": "string",
+              "minLength": 1
+            },
+            "offerVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "quoteRange": {
+              "type": "string",
+              "minLength": 1
+            },
+            "expectedRevenue": {
+              "oneOf": [
+                { "type": "number" },
+                { "type": "string", "minLength": 1 }
+              ]
+            },
+            "paymentRisk": {
+              "type": "string",
+              "enum": ["low", "medium", "high", "critical"]
+            },
+            "followUpAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "docsInitializationRequirements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "docsBootstrapRefs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

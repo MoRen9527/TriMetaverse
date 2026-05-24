@@ -1,0 +1,216 @@
+{
+  "objectType": "OPERATING_PLAN",
+  "objectId": "OP-202604-W15-001",
+  "title": "TriMetaverse 首轮真实周经营计划单",
+  "status": "draft",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-04-10T10:30:00+08:00",
+  "updatedAt": "2026-04-10T18:30:00+08:00",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-04-10T00:00:00+08:00",
+    "endAt": "2026-04-16T23:59:59+08:00",
+    "label": "2026-W15 首轮真实计划"
+  },
+  "summary": "根据 CEO 于 2026-04-10 的最新输入，本周计划先围绕白皮书缺口讨论、CTO 与 CPO 优先上岗摸底、资料治理、自动化开发流程梳理和首版 MVP 内容重排推进；CEO 与 CEOChiefOfStaff 理解对齐会第一轮已完成，本轮先完成总助本体与记忆结构定型；因目标令 BD-202604-001 仍待书面签发，本计划暂作为草案维护。",
+  "relatedModules": [
+    "TriMetaverse",
+    "Tride",
+    "Tripilot",
+    "Tristaciss",
+    "TriTest",
+    "Trideployment"
+  ],
+  "dependsOn": [
+    "BD-202604-001"
+  ],
+  "evidence": [
+    {
+      "source": "tmv-whitepaper.md",
+      "kind": "document",
+      "note": "阶段 0/1 优先跑最小闭环、原型上线与内容社区入口"
+    },
+    {
+      "source": "virtual-company.md",
+      "kind": "document",
+      "note": "当前推进路线是 CEO 与总助先同步，再形成最小岗位闭环、产品上线与小闭环盈利"
+    },
+    {
+      "source": "docs/workflow/virtual-company-operating-workflow.md",
+      "kind": "document",
+      "note": "经营计划由 CEOChiefOfStaff 产出，并按 weekly cadence 推进"
+    },
+    {
+      "source": "docs/workflow/operating-records/2026-04/BD-202604-001.json",
+      "kind": "document",
+      "note": "当前首轮真实经营目标令候选版本，待 CEO 书面签发"
+    },
+    {
+      "source": "docs/workflow/operating-records/2026-W15/meeting-2026-04-10-ceo-chief-of-staff-alignment.md",
+      "kind": "document",
+      "note": "CEO 与 CEOChiefOfStaff 理解对齐会第一轮已完成，本轮先完成总助人格、职责边界与记忆归档方式定型"
+    },
+    {
+      "source": "User input 2026-04-10",
+      "kind": "user-input",
+      "note": "新增白皮书缺口、CTO/CPO 优先上岗、COO 后置上岗、MVP 内容重排与多岗位公司管理会安排"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "根据已完成的 CEO 与 CEOChiefOfStaff 理解对齐会纪要，推进下一轮白皮书、商业模式、价值流转、模块作用和首版 MVP 范围对齐，并把结论同步回 BD / OP / memory",
+      "updatedAt": "2026-05-19T12:00:00+08:00",
+      "summary": "根据 CEO 于 2026-04-10 的输入，本计划最初围绕白皮书缺口讨论、CTO 与 CPO 优先上岗摸底、资料治理、自动化开发流程梳理和首版 MVP 内容重排推进。2026-05-19 已新增 90 天主线重排：当前阶段改为围绕虚拟公司、90 天突击计划和企业可交付小地基推进，自动化开发平台退出当前主线，并由 BD-202605-001 接续旧的首版 MVP 候选表达。",
+      "dependsOn": [
+        "BD-202604-001",
+        "BD-202605-001"
+      ],
+      "dueAt": "2026-04-11T18:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+        },
+        {
+          "source": "docs/workflow/operating-records/2026-05/BD-202605-001.json",
+          "kind": "document",
+          "note": "2026-05-19 已形成 90 天主线重排目标令候选稿，当前主线改为服务 90 天现金流验证与企业可交付小地基。"
+        },
+        {
+          "source": "User input 2026-05-19",
+          "kind": "user-input",
+          "note": "要求与 TriMetaverse 项目完整融合，对齐边界；停止把自动化开发作为当前主线，保留虚拟公司现状，聚焦 90 天突击计划，并把 COO、CFO、CMO 先作为职责位纳入规划。"
+      "action": "利用 Code Registry 对核心模块做代码摸底，形成旧代码复用点、联调风险和自动化开发流程差距清单",
+      "dueAt": "2026-04-13T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "利用 Product Registry 对核心模块做产品摸底，并与 CTO 一起回头和 CEOChiefOfStaff 沟通第一版 MVP 候选范围",
+        },
+        {
+          "owner": "CEOChiefOfStaff",
+          "action": "同步 BD-202605-001 的 90 天主线重排结论，明确旧的首版 MVP 候选范围已由新的最小经营闭环表述接续。",
+          "dueAt": "2026-05-20T12:00:00+08:00"
+        },
+        {
+          "owner": "ChiefProductOfficer",
+          "action": "输出《90天产品收敛结论》，明确当前窗口内卖什么、卖给谁，以及企业小地基的产品边界。",
+          "dueAt": "2026-05-23T20:00:00+08:00"
+        },
+        {
+          "owner": "ChiefTechnologyOfficer",
+          "action": "输出《90天技术后置清单》，明确自动化开发平台、完整虚拟公司自动化和 PC 端安装包的后置边界。",
+          "dueAt": "2026-05-23T20:00:00+08:00"
+        },
+        {
+          "owner": "CEOChiefOfStaff",
+          "action": "起草 COO、CFO、CMO 的岗位职责、输入输出、授权边界和启用门槛，不写成已正式 live。",
+          "dueAt": "2026-05-24T18:00:00+08:00"
+      "dueAt": "2026-04-13T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+          "BD-202604-001 受 MVP 内容重排影响，当前属于未正式签发状态，正式签发需要 CEO 书面明确同意以及版本号与指纹对照。",
+          "2026-05-19 起，当前阶段已不再把自动化开发平台作为经营主线，而是改为围绕虚拟公司、90 天突击计划和企业可交付小地基推进。",
+          "COO、CFO、CMO 当前只允许写职责、边界和启用门槛，不写成已正式 live。",
+          "社区奖励当前只允许规则文档和人工记账，不进入链上自动化兑现。",
+          "BD-202605-001 已作为新的 90 天目标令候选稿接续旧的首版 MVP 候选表达，但仍待 CEO 书面签发。"
+      "dueAt": "2026-04-15T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "组织 4 月 11 日跑派社区周会输入包、会后纪要与后续动作整理",
+      "dueAt": "2026-04-11T22:30:00+08:00"
+    },
+    {
+      "owner": "CEO",
+      "action": "参加 4 月 14 日 OpenClaw 培训，并在 24 小时内提交学习摘要给 CEOChiefOfStaff",
+      "dueAt": "2026-04-15T22:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "启动核心模块资料扫描、旧文档识别与记忆登记基线，先覆盖 TriMetaverse、Tride、Tripilot、Tristaciss，并沉淀模块记忆更新规则",
+      "dueAt": "2026-04-16T20:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "待 BD-202604-001 候选版本经 CEO 书面签发后，再确认本周计划正式版本"
+    },
+    {
+      "role": "BoardOversight",
+      "status": "not-required",
+      "note": "本计划由 CEOChiefOfStaff 维护草案，待目标令正式签发后进入正式执行状态"
+    }
+  ],
+  "payload": {
+    "planScope": "weekly",
+    "milestones": [
+      "完成 CEO 与 CEOChiefOfStaff 对白皮书缺口、岗位启用顺序和本周主线的再确认",
+      "完成 CTO 与 CPO 的首轮 registry 摸底，并形成第一版 MVP 候选范围",
+      "在 CTO/CPO 摸底完成后安排 COO 上岗，共同制定首版 MVP 上线计划",
+      "启动核心模块资料扫描、旧文档识别与记忆登记基线",
+      "产出自动化开发流程现状、旧代码复用点与模块联调优先级清单",
+      "完成 4 月 11 日跑派社区周会输入与会后纪要",
+      "完成 4 月 14 日 OpenClaw 培训并形成后续社区分享动作",
+      "在各岗位到岗和资料梳理后，组织首轮多岗位公司管理会并同步各自记忆"
+    ],
+    "workstreams": [
+      "CEO 与总助白皮书/商业模式/模块理解对齐",
+      "CEO 与总助经营同步及白皮书缺口讨论",
+      "CTO/CPO 优先上岗与模块摸底",
+      "COO 后置上岗与首版 MVP 计划",
+      "资料管理、文档清理与记忆登记",
+      "自动化开发流程梳理与旧代码复用",
+      "社区周会、OpenClaw 培训与多岗位公司管理会知识回流"
+    ],
+    "blockedItems": [
+      "白皮书尚不完善，需要 CEO 与 CEOChiefOfStaff 共同讨论后续进一步完善，尤其要补齐区块链相关内容。",
+      "虚拟公司各岗位尚未全部到岗，当前总助应优先安排 CTO 和 CPO 上岗。",
+      "CTO 和 CPO 尚未完成基于 registry 的模块摸底，因此 COO 还不能正式上岗制定首版 MVP 上线计划。",
+      "资料管理尚未完成模块级全面扫描，旧文档与无效文档识别、记忆登记与后续更新机制尚未建立。",
+      "自动化开发流程尚未落地，旧代码复用、现有模块联调与新功能开发路径仍未收敛。",
+      "第一版 MVP 的上线内容需要重新调整，不再直接沿用当前记录的社区入口及相关模块范围。",
+      "BD-202604-001 受 MVP 内容重排影响，当前属于未正式签发状态，正式签发需要 CEO 书面明确同意以及版本号与指纹对照。"
+    ],
+    "escalationRules": [
+      "若 CTO 或 CPO 到 2026-04-13 仍未形成模块摸底结论，则升级 CEO 直接裁定首版 MVP 收敛范围。",
+      "若白皮书区块链缺口讨论无法排入下一轮同步，则进入下周经营计划的优先议程。",
+      "若资料扫描未启动或无法识别核心无效文档，则冻结相关模块的新功能扩张，先完成资料治理。",
+      "若自动化开发流程无法明确旧代码复用点与模块联调优先级，则不得承诺新的交付窗口。",
+      "若 BD-202604-001 候选内容再次变化，必须先升级总助冻结签发，并更新版本号和指纹后再等待 CEO 书面确认。",
+      "若 OpenClaw 培训知识无法在本轮形成可分享摘要，则必须进入下轮计划继续跟踪。"
+    ],
+    "kpis": [
+      "CEO 与 CEOChiefOfStaff 完成对白皮书缺口、岗位启用顺序和候选目标令的本周确认。",
+      "完成 CEO 与 CEOChiefOfStaff 的白皮书、商业模式、价值流转和模块作用理解对齐会，并形成记忆更新清单。",
+      "CTO 与 CPO 完成核心模块 registry 摸底，并形成首版 MVP 候选范围。",
+      "明确 COO 上岗前提，并准备首版 MVP 上线计划输入。",
+      "至少完成 TriMetaverse、Tride、Tripilot、Tristaciss 四个核心模块的扫描优先级与负责人草案。",
+      "形成旧文档与无效文档识别规则、记忆更新规则初稿。",
+      "形成自动化开发流程现状差距、旧代码复用点与联调优先级清单。",
+      "跑派社区周会、OpenClaw 培训和首轮多岗位公司管理会均形成可回流的纪要、学习摘要或后续动作。",
+      "完成当前 90 天主线重排说明、产品收敛结论、技术后置清单和 COO/CFO/CMO 职责草案。"
+    ]
+  },
+  "metadata": {
+    "executionRecord": true,
+    "recordLayer": "real-operating-record",
+    "unresolvedItemsRef": "docs/workflow/operating-records/2026-W15/OP-202604-W15-001.unresolved-items.md",
+    "boardDirectivePending": true,
+    "boardDirectiveRef": "docs/workflow/operating-records/2026-04/BD-202604-001.json",
+    "followupBoardDirectiveRef": "docs/workflow/operating-records/2026-05/BD-202605-001.json",
+    "issuanceVersion": "OP-202604-W15-001-v0.2.0-draft",
+    "managementMeetingPlanned": true,
+    "nextMissingInputs": [
+      "更多未决事项和后续日程将由 CEO 后续继续补充",
+      "白皮书、商业模式、价值流转、模块作用和首版 MVP 范围的下一轮对齐结论",
+      "CPO 的 90 天产品收敛结论",
+      "CTO 的 90 天技术后置清单",
+      "COO、CFO、CMO 的职责和启用门槛草案"
+    ]
+  }
+}

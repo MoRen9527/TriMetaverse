@@ -1,0 +1,98 @@
+{
+  "objectType": "SKILL_SPEC",
+  "objectId": "SKILL-YYYYMMDD-001",
+  "title": "总助技能规范单",
+  "status": "submitted",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-04-19T10:00:00Z",
+  "updatedAt": "2026-04-19T10:00:00Z",
+  "timebox": {
+    "scope": "ad-hoc",
+    "label": "首轮技能草稿"
+  },
+  "summary": "把已经验证过的复杂任务收敛成可复用技能，并明确适用宿主与审阅门禁。",
+  "relatedModules": ["TriMetaverse", "TriCompany", "TriMC"],
+  "dependsOn": ["ET-YYYYMMDD-001"],
+  "evidence": [
+    {
+      "source": "TriCompanyCodeRegistry",
+      "kind": "registry",
+      "note": "当前技术边界与宿主口径"
+    },
+    {
+      "source": "phase-1 验证文档",
+      "kind": "document",
+      "note": "复杂任务已完成并有证据链"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "TriCompanyCodeRegistry",
+      "action": "审核技能草稿是否达到试运行条件",
+      "dueAt": "2026-04-20T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "TriCompanyCodeRegistry",
+      "status": "pending",
+      "note": "当前阶段由 Code Registry 代替 CTO 做首轮技术门禁"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "output-of",
+      "runId": "run-YYYYMMDD-001",
+      "phase": "CODING",
+      "branchId": "feature/example-skill",
+      "note": "这里的 branchId 表示技能草稿对应的功能/试运行分支，不默认等同于 PRD 分支，因此不自动要求模块五层文档协同系统的 docs bootstrap 字段。"
+    }
+  ],
+  "payload": {
+    "skillName": "ChiefOfStaffSkillDraft",
+    "skillVersion": "v0.1",
+    "triggerPatterns": [
+      "phase-1 总助接管验证",
+      "当前宿主资产路径统一",
+      "会议链路补证"
+    ],
+    "preconditions": [
+      "已有完成任务的执行证据",
+      "边界未涉及正式宿主切换",
+      "涉及的宿主仍为当前本地正式接管 copilot"
+    ],
+    "executionSteps": [
+      "优先读取模块真源中的执行结论与工程主档，必要时再补看当前宿主已发布副本或审计证据",
+      "抽取可复用步骤与失败护栏",
+      "生成 SkillDraft 并提交 Code Registry 审阅",
+      "获批后允许在 copilot 宿主做下一次命中试跑"
+    ],
+    "successEvidence": [
+      "存在通过的验证记录",
+      "存在明确的失败冻结点",
+      "存在可迁移到 TriMC 的边界说明"
+    ],
+    "failureGuards": [
+      "不得把当前宿主写成 TriMC 等价物",
+      "不得绕过 Code Registry 或 CTO 审阅",
+      "不得在无审计条件下直接开放自动执行"
+    ],
+    "allowedHosts": ["copilot-chat", "trimc"],
+    "reviewGate": "code-registry",
+    "scheduleEligible": true,
+    "inputTemplate": "请按当前宿主 phase-1 总助接管验证链路复用已验证步骤，并明确区分模块真源、已发布支撑副本与 live 宿主入口。",
+    "relatedFiles": [
+      "TriCompany/docs/execution/hermes-copilot-host/phase-1/VERIFICATION.md",
+      "TriCompany/docs/engineering/hermes-memory-subsystem-comparison.md",
+      "TriCompany/docs/workflow/published-copy-refresh-sop.md",
+      "TriMetaverse/docs/workflow/tricompany-copilot-host-assets-governance.md"
+    ],
+    "relatedAgents": ["CEOChiefOfStaff", "TriCompanyCodeRegistry"],
+    "migrationNotes": "当前先在 copilot 宿主试运行，未来正式上线切换阶段再迁入 TriMC。若后续某个 SkillSpec 直接治理 PRD 分支实现链，再按 branch-aware docs bootstrap 规则补充对应字段。默认先引用模块真源、manifest 或 source-side SOP；只有在必须引用当前宿主特有 evidence 时，才补 support bundle 路径。"
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

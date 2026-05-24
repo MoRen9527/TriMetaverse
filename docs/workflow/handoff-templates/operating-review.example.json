@@ -1,0 +1,73 @@
+{
+  "objectType": "OPERATING_REVIEW",
+  "objectId": "OR-YYYYMMDD-001",
+  "title": "经营复盘单",
+  "status": "completed",
+  "priority": "medium",
+  "ownerRole": "ChiefOperatingOfficer",
+  "createdAt": "2026-04-02T17:00:00Z",
+  "updatedAt": "2026-04-02T17:00:00Z",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-04-07T00:00:00Z",
+    "endAt": "2026-04-13T23:59:59Z",
+    "label": "本周经营复盘"
+  },
+  "summary": "沉淀目标与结果偏差、根因、纠偏动作和下一轮输入。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": ["OP-YYYYMMDD-001", "SP-YYYYMMDD-001"],
+  "evidence": [
+    {
+      "source": "CEOChiefOfStaff 经营计划单",
+      "kind": "document",
+      "note": "与实际结果对照"
+    },
+    {
+      "source": "ChiefSalesOfficer 销售推进单",
+      "kind": "document",
+      "note": "回款与转化数据来源"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "将纠偏动作写入下一轮经营计划单",
+      "dueAt": "2026-04-14T10:00:00Z"
+    }
+  ],
+  "approvals": [],
+  "payload": {
+    "reviewWindow": "2026-W15",
+    "targetVsActual": [
+      "目标项与实际结果对照 1",
+      "目标项与实际结果对照 2"
+    ],
+    "wins": [
+      "本轮有效动作 1"
+    ],
+    "misses": [
+      "本轮偏差 1"
+    ],
+    "rootCauses": [
+      "导致偏差的根因 1"
+    ],
+    "corrections": [
+      "下一轮纠偏动作 1"
+    ],
+    "nextCycleInput": [
+      "进入下一轮经营计划的输入 1"
+    ],
+    "docsInitializationRequirements": [
+      "若复盘覆盖 PRD 分支执行，应检查模块五层文档协同系统最小入口是否完整",
+      "应检查 execution 各阶段目录与 registry 回写是否同步更新"
+    ],
+    "docsBootstrapRefs": [
+      "docs/workflow/prd-branch-minimal-directory-template.md",
+      "docs/workflow/prd-branch-delivery-checklist.md"
+    ]
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

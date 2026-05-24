@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/risk-escalation.schema.json",
+  "title": "RiskEscalation",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "timebox", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "RISK_ESCALATION"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["high", "critical"]
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["ad-hoc", "deadline", "launch-window"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "riskCategory",
+            "riskSeverity",
+            "impactScope",
+            "triggerCondition",
+            "freezeRequired",
+            "escalateTo",
+            "mitigationOptions"
+          ],
+          "properties": {
+            "riskCategory": {
+              "type": "string",
+              "enum": [
+                "strategy",
+                "budget",
+                "delivery",
+                "quality",
+                "security",
+                "compliance",
+                "brand",
+                "sales",
+                "operations",
+                "other"
+              ]
+            },
+            "riskSeverity": {
+              "type": "string",
+              "enum": ["high", "critical"]
+            },
+            "impactScope": {
+              "type": "string",
+              "minLength": 1
+            },
+            "triggerCondition": {
+              "type": "string",
+              "minLength": 1
+            },
+            "freezeRequired": {
+              "type": "boolean"
+            },
+            "escalateTo": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "mitigationOptions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "objectType": "BOARD_DIRECTIVE",
+  "objectId": "BD-202604-001",
+  "title": "2026-04 TriMetaverse 首轮真实经营目标令",
+  "status": "submitted",
+  "priority": "critical",
+  "ownerRole": "BoardOversight",
+  "createdAt": "2026-04-10T11:20:00+08:00",
+  "updatedAt": "2026-05-20T00:00:00+08:00",
+  "timebox": {
+    "scope": "monthly",
+    "startAt": "2026-04-10T00:00:00+08:00",
+    "endAt": "2026-04-30T23:59:59+08:00",
+    "label": "2026-04 首轮真实经营周期"
+  },
+  "summary": "当前为待 CEO 书面签发的候选目标令，先要求 CTO 与 CPO 基于 registry 对全模块做第一轮摸底，再据此重排首版 MVP 内容与上线范围；在正式书面同意前，本目标令不得视为已签发。",
+  "relatedModules": [
+    "TriMetaverse",
+    "TriCompany",
+    "TriMC",
+    "TriLC",
+    "Tripilot",
+    "Tride",
+    "vscodium",
+    "TriHost",
+    "TriSkill",
+    "Tristaciss",
+    "Triavatar",
+    "Trideployment",
+    "TriTest",
+    "TriDev",
+    "TriGateway",
+    "TriMobile",
+    "TriMem",
+    "TriWeb4",
+    "TriChain"
+  ],
+  "dependsOn": [],
+  "evidence": [
+    {
+      "source": "tmv-whitepaper.md",
+      "kind": "document",
+      "note": "阶段 0/1 当前重点是最小闭环、原型上线、内容社区入口和真实可运行系统"
+    },
+    {
+      "source": "virtual-company.md",
+      "kind": "document",
+      "note": "当前推进路线是 CEO 与总助先同步，再启用最小岗位闭环、产品上线与小闭环盈利"
+    },
+    {
+      "source": "docs/三元宇宙架构与模块说明.md",
+      "kind": "document",
+      "note": "中央模块清单已明确，CTO 与 CPO 的第一轮摸底应覆盖全模块，并区分现役、后置和占位状态。"
+    },
+    {
+      "source": "User input 2026-04-10",
+      "kind": "user-input",
+      "note": "新增白皮书缺口、CTO/CPO 优先上岗、COO 后置上岗、MVP 内容重排、正式签发需 CEO 书面同意和版本/指纹规则"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "优先安排 CTO 和 CPO 上岗，要求二者基于 Product Registry 与 Code Registry 按中央模块清单完成全模块第一轮摸底，并区分现役、后置和占位状态",
+      "dueAt": "2026-04-12T18:00:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer + ChiefTechnologyOfficer",
+      "action": "在模块摸底完成后，与 CEOChiefOfStaff 重新梳理首版 MVP 的上线内容、模块边界与第一版交付范围",
+      "dueAt": "2026-04-14T18:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "待 CTO 与 CPO 摸底完成后，再安排 COO 上岗并组织首轮多岗位公司管理会",
+      "dueAt": "2026-04-16T20:00:00+08:00"
+    },
+    {
+      "owner": "CEO",
+      "action": "在 CTO/CPO 摸底与 MVP 重排完成后，对目标令候选版本给出书面明确同意或驳回",
+      "dueAt": "2026-04-15T22:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "正式签发需 CEO 对候选版本给出书面明确同意"
+    },
+    {
+      "role": "BoardOversight",
+      "status": "pending",
+      "note": "当前由创始人兼代理董事会维护候选目标令，但正式签发仍待 CEO 书面确认"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "input-to",
+      "phase": "DISCOVERY",
+      "runId": "run-2026-04-launch-foundation",
+      "note": "本月经营目标令为后续首版上线准备期的研发发现与收敛提供经营约束；真实研发 run 目录待后续落盘"
+    }
+  ],
+  "payload": {
+    "goalVersion": "BG-2026-04-v0.3.0-candidate",
+    "businessTarget": "本月先完成 CTO 与 CPO 对全模块的 registry 摸底，明确现役范围、后置范围和占位模块状态，随后与 CEOChiefOfStaff 重排首版 MVP 的上线内容和模块边界；在 COO 上岗后再共同制定上线第一版 MVP 的正式执行计划，并围绕资料治理、旧代码复用、模块联调和早期盈利验证推进。",
+    "budgetGuardrail": "维持低成本推进；在 CEO 书面签发前，本候选目标令不得被视为正式放行依据。任何新增长期固定成本、外部订阅、部署成本或人员成本前必须先补预算校验。",
+    "strategicBoundary": "当前记录中的社区入口及相关模块不视为已签发的最终首版 MVP 范围，需由 CTO/CPO 摸底后重排；股东会、董事会和 DAO 治理结合保留为后续治理 backlog；TriMobile、TriMem、TriWeb4、TriChain 仍不纳入现役交付范围。",
+    "effectiveFrom": "2026-04-10T00:00:00+08:00",
+    "effectiveTo": "2026-04-30T23:59:59+08:00",
+    "issuedBy": "BoardOversight（候选状态，待 CEO 书面签发）"
+  },
+  "metadata": {
+    "executionRecord": true,
+    "recordLayer": "real-operating-record",
+    "formalBoardFlowDeferred": true,
+    "pairedOperatingPlanRef": "docs/workflow/operating-records/2026-W15/OP-202604-W15-001.json",
+    "issuanceVersion": "BD-202604-001-v0.3.0-candidate",
+    "writtenApprovalRequired": true,
+    "approvalMethod": "CEO 书面明确同意并对照 SHA256 指纹侧车文件",
+    "approvalFingerprintRef": "docs/workflow/operating-records/2026-04/BD-202604-001.sha256.txt"
+  }
+}

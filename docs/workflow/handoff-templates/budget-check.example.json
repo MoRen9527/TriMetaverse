@@ -1,0 +1,68 @@
+{
+  "objectType": "BUDGET_CHECK",
+  "objectId": "BC-YYYYMMDD-001",
+  "title": "预算校验单",
+  "status": "submitted",
+  "priority": "high",
+  "ownerRole": "ChiefFinancialOfficer",
+  "createdAt": "2026-04-02T13:00:00Z",
+  "updatedAt": "2026-04-02T13:00:00Z",
+  "timebox": {
+    "scope": "monthly",
+    "startAt": "2026-04-01T00:00:00Z",
+    "endAt": "2026-04-30T23:59:59Z",
+    "label": "预算窗口"
+  },
+  "summary": "校验当前 MVP 或经营动作是否落在预算边界内。",
+  "relatedModules": ["TriMetaverse", "Tristaciss", "Tripilot", "TriTest", "Trideployment"],
+  "dependsOn": ["MVP-YYYYMMDD-001"],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "固定成本边界"
+    },
+    {
+      "source": "相关模块 Code Registry",
+      "kind": "registry",
+      "note": "基础设施与实现成本驱动因素"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "据预算判断决定是否继续推进或缩小范围",
+      "dueAt": "2026-04-03T18:00:00Z"
+    }
+  ],
+  "approvals": [],
+  "payload": {
+    "budgetWindow": "2026-04",
+    "fixedCostEstimate": "填写固定成本金额或区间",
+    "variableCostEstimate": "填写变动成本金额或区间",
+    "runwayImpact": "说明对当前现金流或预算可持续性的影响",
+    "guardrails": [
+      "不得突破月固定成本上限",
+      "新增外部订阅前必须升级"
+    ],
+    "stopConditions": [
+      "超预算立即冻结",
+      "收入验证不成立则终止扩张"
+    ],
+    "assumptions": [
+      "填写模型调用量、部署成本、人工投入等假设"
+    ],
+    "docsInitializationRequirements": [
+      "预算判断涉及 PRD 分支推进时，应先确认模块五层文档协同系统最小入口已建立",
+      "若 docs 初始化缺失，则不应把该分支视为正式进入 DESIGNING"
+    ],
+    "docsBootstrapRefs": [
+      "docs/workflow/prd-branch-minimal-directory-template.md",
+      "docs/workflow/prd-branch-delivery-checklist.md"
+    ]
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

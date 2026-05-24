@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/workflow-run-metadata.schema.json",
+  "title": "WorkflowRunMetadata",
+  "type": "object",
+  "required": [
+    "runId",
+    "controller",
+    "host",
+    "generationMode",
+    "status",
+    "startedAt",
+    "updatedAt",
+    "mode"
+  ],
+  "properties": {
+    "runId": {
+      "type": "string",
+      "pattern": "^run-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "controller": {
+      "type": "string",
+      "const": "TriMC R&D Workflow"
+    },
+    "host": {
+      "type": "string",
+      "enum": [
+        "copilot-chat",
+        "copilot-cli",
+        "trihost-configured",
+        "custom"
+      ]
+    },
+    "generationMode": {
+      "type": "string",
+      "enum": ["documentation-backed", "host-generated"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "running", "completed", "blocked", "failed"]
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["controller-plus-subagents", "full-auto-11-agents"]
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "project": {
+      "type": "string"
+    },
+    "branchIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+      }
+    },
+    "prdIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "workspaceRoot": {
+      "type": "string"
+    },
+    "outputRoot": {
+      "type": "string",
+      "pattern": "^docs/runs/[^/]+/?$"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

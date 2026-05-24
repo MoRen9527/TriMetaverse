@@ -1,0 +1,31 @@
+{
+  "phase": "VERIFY-INTEGRATION",
+  "status": "completed",
+  "startTime": "2026-04-02T13:00:00Z",
+  "endTime": "2026-04-02T13:35:00Z",
+  "durationMs": 2100000,
+  "qualityScore": 84,
+  "artifacts": [
+    {
+      "name": "sales-progress-sample",
+      "path": "docs/workflow/operating-cycle-example/sales-progress.sample.json",
+      "required": true,
+      "exists": true
+    },
+    {
+      "name": "workflow-summary",
+      "path": "docs/runs/run-2026-04-cycle-01/workflow-summary.md",
+      "required": true,
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "summary": "VERIFY-INTEGRATION 验证入口层、模型路由和交付说明之间的最小联调路径。",
+  "branchId": "branch-prd-ai-content-trial",
+  "prdId": "PRD-AI-CONTENT-TRIAL",
+  "metadata": {
+    "runId": "run-2026-04-cycle-01",
+    "host": "copilot-chat",
+    "sampleBacked": true
+  }
+}

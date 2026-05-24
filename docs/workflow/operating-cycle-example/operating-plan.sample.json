@@ -1,0 +1,114 @@
+{
+  "objectType": "OPERATING_PLAN",
+  "objectId": "OP-202604-W14-001",
+  "title": "首轮试单周经营计划单",
+  "status": "approved",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-04-03T09:00:00Z",
+  "updatedAt": "2026-04-03T11:00:00Z",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-04-03T00:00:00Z",
+    "endAt": "2026-04-09T23:59:59Z",
+    "label": "2026-W14 样例计划"
+  },
+  "summary": "将试单目标令转译为本周产品收敛、预算判断、交付准备、桌面工作台到本地控制器的演示协同，以及转化协同动作。",
+  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "dependsOn": ["BD-202604-001"],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "当前优先模块与实验方向"
+    },
+    {
+      "source": "TripilotProductRegistry",
+      "kind": "registry",
+      "note": "可作为用户入口与演示承接面"
+    },
+    {
+      "source": "TrideProductRegistry",
+      "kind": "registry",
+      "note": "可作为本地自动化与 vibe coding 的开发工具底座"
+    },
+    {
+      "source": "TriLCProductRegistry",
+      "kind": "registry",
+      "note": "可作为本地化任务和本地域执行控制器"
+    },
+    {
+      "source": "TristacissProductRegistry",
+      "kind": "registry",
+      "note": "可作为 API 平台与模型路由底座"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefMarketingOfficer",
+      "action": "整理首轮市场信号并提交需求输入单",
+      "dueAt": "2026-04-03T18:00:00Z"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "基于需求输入单收敛 MVP",
+      "dueAt": "2026-04-04T18:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "计划节奏可推进"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "context-from",
+      "phase": "DISCOVERY",
+      "runId": "run-2026-04-cycle-01",
+      "note": "本周经营计划承接当前轮发现阶段的经营上下文"
+    },
+    {
+      "relation": "input-to",
+      "phase": "INTELLIGENCE",
+      "runId": "run-2026-04-cycle-01",
+      "note": "计划单为 intelligence 阶段提供本周收敛重点"
+    }
+  ],
+  "payload": {
+    "planScope": "weekly",
+    "milestones": [
+      "确认试单目标用户与问题表述",
+      "产出 MVP 定义单",
+      "完成预算校验",
+      "完成研发任务拆解",
+      "明确 PC 端软件层与 TriLC 的最小演示协同边界",
+      "启动首轮转化验证"
+    ],
+    "workstreams": [
+      "市场信号收集",
+      "产品边界收敛",
+      "本地演示与自动化支撑链梳理",
+      "预算与交付判断",
+      "上线与销售协同"
+    ],
+    "blockedItems": [],
+    "escalationRules": [
+      "预算不成立则先缩范围",
+      "交付 readiness 不足则冻结对外承诺"
+    ],
+    "kpis": [
+      "MVP 定义已批准",
+      "预算校验通过",
+      "技术路径明确",
+      "桌面工作台到本地控制器的演示协同边界已明确",
+      "形成至少一轮对外试单话术"
+    ]
+  },
+  "metadata": {
+    "example": true,
+    "notExecutionRecord": true,
+    "exampleId": "ai-content-growth-cycle-v1"
+  }
+}

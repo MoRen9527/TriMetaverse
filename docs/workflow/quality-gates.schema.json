@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/quality-gates.schema.json",
+  "title": "QualityGates",
+  "type": "object",
+  "required": ["verifyUnit", "verifyIntegration", "redteam", "qa", "assurance"],
+  "properties": {
+    "verifyUnit": {
+      "type": "object",
+      "required": ["blockOnAnyFailure"],
+      "properties": {
+        "blockOnAnyFailure": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "verifyIntegration": {
+      "type": "object",
+      "required": ["blockOnAnyFailure"],
+      "properties": {
+        "blockOnAnyFailure": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "redteam": {
+      "type": "object",
+      "required": ["blockOnCritical"],
+      "properties": {
+        "blockOnCritical": { "type": "boolean" },
+        "scope": { "type": "string", "enum": ["adversarial"] },
+        "criticalSeverities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": ["critical"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "qa": {
+      "type": "object",
+      "required": ["defaultThreshold", "allowOverride", "allowSkip"],
+      "properties": {
+        "defaultThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
+        "allowOverride": { "type": "boolean" },
+        "allowSkip": { "type": "boolean" },
+        "scope": { "type": "string", "enum": ["non-adversarial"] }
+      },
+      "additionalProperties": false
+    },
+    "assurance": {
+      "type": "object",
+      "required": ["requiredSuites", "blockOnAnyHighOrCritical"],
+      "properties": {
+        "requiredSuites": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["vuln", "pressure", "security", "regression"]
+          },
+          "minItems": 3
+        },
+        "blockOnAnyHighOrCritical": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

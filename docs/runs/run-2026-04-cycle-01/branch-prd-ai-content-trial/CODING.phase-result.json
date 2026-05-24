@@ -1,0 +1,31 @@
+{
+  "phase": "CODING",
+  "status": "completed",
+  "startTime": "2026-04-02T11:20:00Z",
+  "endTime": "2026-04-02T12:50:00Z",
+  "durationMs": 5400000,
+  "qualityScore": 85,
+  "artifacts": [
+    {
+      "name": "engineering-task-sample",
+      "path": "docs/workflow/operating-cycle-example/engineering-task.sample.json",
+      "required": true,
+      "exists": true
+    },
+    {
+      "name": "engineering-task-schema",
+      "path": "docs/workflow/engineering-task.schema.json",
+      "required": true,
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "summary": "CODING 完成演示入口、内容生成链路和交付清单所需的最小实现。",
+  "branchId": "branch-prd-ai-content-trial",
+  "prdId": "PRD-AI-CONTENT-TRIAL",
+  "metadata": {
+    "runId": "run-2026-04-cycle-01",
+    "host": "copilot-chat",
+    "sampleBacked": true
+  }
+}

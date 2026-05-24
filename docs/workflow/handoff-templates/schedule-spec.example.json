@@ -1,0 +1,82 @@
+{
+  "objectType": "SCHEDULE_SPEC",
+  "objectId": "SCHED-YYYYMMDD-001",
+  "title": "总助调度规范单",
+  "status": "submitted",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-04-19T10:30:00Z",
+  "updatedAt": "2026-04-19T10:30:00Z",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-04-20T00:00:00Z",
+    "endAt": "2026-04-27T00:00:00Z",
+    "label": "首轮定时验证窗"
+  },
+  "summary": "为经营提醒类定时任务建立统一调度规则，明确当前宿主、投递方式、失败策略和审计要求。",
+  "relatedModules": ["TriMetaverse", "TriCompany", "TriMC"],
+  "dependsOn": ["OPERATING-PLAN-YYYYMMDD-001"],
+  "evidence": [
+    {
+      "source": "operating-plan.example.json",
+      "kind": "document",
+      "note": "需要引用当前阶段经营节奏和提醒窗口"
+    },
+    {
+      "source": "TriCompanyCodeRegistry",
+      "kind": "registry",
+      "note": "当前阶段宿主边界与失败冻结规则"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "确认该调度只在当前 copilot 宿主试运行，不写成长期正式归属",
+      "dueAt": "2026-04-20T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "ChiefOperatingOfficer",
+      "status": "pending",
+      "note": "需要确认提醒窗口、邮件对象和失败升级口径"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "depends-on",
+      "runId": "run-YYYYMMDD-001",
+      "phase": "VERIFY-INTEGRATION",
+      "branchId": "feature/example-schedule",
+      "note": "这里的 branchId 表示调度对象依赖的功能/宿主试运行分支，不默认等同于 PRD 分支，因此不自动要求模块五层文档协同系统的 docs bootstrap 字段。"
+    }
+  ],
+  "payload": {
+    "targetType": "reminder",
+    "targetRef": "weekly-operating-review-reminder",
+    "targetVersion": "v0.1",
+    "scheduleType": "weekly",
+    "scheduleExpression": "每周一 09:00 UTC",
+    "executionHost": "copilot-chat",
+    "approvalGate": "coo-approved",
+    "failurePolicy": "freeze",
+    "auditRequired": true,
+    "enabled": true,
+    "concurrencyPolicy": "forbid-overlap",
+    "deliveryChannel": "email",
+    "deliveryTarget": "secretariat@tri.example",
+    "stopConditions": [
+      "提醒窗口结束或对应经营计划失效",
+      "宿主边界变更但迁移方案未完成",
+      "连续失败达到门限"
+    ],
+    "inputTemplate": "请提醒秘书处准备周会，并附上当前经营计划要求的检查项。",
+    "maxRuntimeMinutes": 30,
+    "retryLimit": 1,
+    "note": "当前只在 copilot 宿主试运行；未来如迁入 TriMC，应重新审核 executionHost、deliveryChannel 与失败策略。若后续某个 ScheduleSpec 直接治理 PRD 分支实现链，再按 branch-aware docs bootstrap 规则补充对应字段。默认先引用模块真源、manifest 或 source-side SOP；只有在必须引用当前宿主特有 evidence 时，才补 support bundle 路径。"
+  },
+  "metadata": {
+    "template": true,
+    "templateVersion": "v1"
+  }
+}

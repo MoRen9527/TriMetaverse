@@ -1,0 +1,171 @@
+flowchart LR
+  user([社区成员])
+  world["Trigame / 元虚拟世界<br/>数字生命体演进 + 数字人/数字生物生成<br/>环境与资源要素持续扩展"]
+
+  subgraph account["用户级工作空间 / 归属层"]
+    personalOrch["个人编排平面<br/>我的任务 / 我的项目 / 我的会话 / 我的审批"]
+    personalCtx["个人上下文平面<br/>个人记忆 / 文件快照 / 贡献证据 / 奖励账本"]
+    workspace["虚拟云电脑 / 虚拟云手机<br/>我的任务空间 / 我的项目空间"]
+  end
+
+  subgraph local["本地域&nbsp;(PC&nbsp;/&nbsp;未来&nbsp;NAS)<br/>VSCodium 作为宿主"]
+    webview["Webview 界面<br/>展示 / 对话 / 审批 / 数字角色入口"]
+    exthost["VS Code 扩展宿主<br/>桥接 + 界面状态"]
+    planner["Planner<br/>本地任务拆解 / 状态判断 / 下一步决策"]
+    localbus["Local ToolBus / 策略门禁<br/>本地编排 / 权限控制 / 分发策略"]
+    aidev["任务自动化 Worker<br/>桌面 / 浏览器 / 手机 / 终端侧执行"]
+    codingw["OpenCode / Claude Code / Codex 编码 Worker<br/>本地编码 + skills / mcp 编排"]
+    videow["视频工厂 Worker"]
+    vizw["3D / 交互演示 Worker<br/>浏览器自动化 / 渲染"]
+    judge["判定 / 重规划<br/>本地结果检查 / 重试 / 校正"]
+    nas[("NAS / 本地归档")]
+    appdist["多端安装版<br/>客户端态 / 节点态（钱包开通后）<br/>Windows / macOS / iPhone / Android"]
+  end
+
+  subgraph server["服务域&nbsp;(7×24&nbsp;在线)"]
+    gateway["服务网关集群<br/>并发接入 / 路由 / 限流 / WAF / 主控池热切换"]
+    orchpool["主控编排池<br/>活跃主控 A / B / C<br/>候选主控 / 热备主控按租约切换<br/>任务路由 + 上下文装配 + 会话推进 + skills / mcp 编排"]
+    coord["一致性与身份平面<br/>租约授予 / 身份验证 / 仲裁 / 配置一致性 / 成员管理"]
+    context["共享上下文平面<br/>项目配置 / 项目进度 / 会话历史 / 日志索引 / skills 注册 / 文件快照索引 / 长期记忆引用"]
+    sched["服务调度器<br/>队列 + k8s 工作负载分发"]
+    serverbus["服务端工具总线 / 策略门禁<br/>服务端 network / db / publish"]
+    k8s["Kubernetes / Argo / Celery<br/>服务任务调度 + 主控弹性扩缩容"]
+    svcpod["服务域 AI Worker Pods<br/>数据 / 队列 / 批处理 / 服务端处理"]
+    serviceagents["抓取 / 社交 / 发布 Worker"]
+    verify["验证 / 回归 / 报告 / 挑战"]
+    hotstore[("服务端热存储磁盘")]
+    eventstore[("审计 / 事件仓 + 清单")]
+    svcimage["k8s 镜像 / 社区服务器节点<br/>统一安装 / 角色注册 / 候选主控 / 热备主控 / Worker"]
+  end
+
+  subgraph onchain["链上结算&nbsp;/&nbsp;承诺"]
+    chain[("区块链 / 任务登记 + 结果承诺")]
+    wallet["钱包接入 / 节点身份 / 能量积分"]
+    rights["身份 NFT / 数据确权 / ZKP"]
+    chainnote["链上仅负责资格 / 治理 / 结算存证<br/>不进入控制面热路径"]
+  end
+
+  subgraph resource["系统级资源层"]
+    respool["执行资源节点池<br/>服务端机器 / 本地 PC / 手机 / 边缘节点"]
+  end
+
+  subgraph legend["线型图例"]
+    direction LR
+    lsolid0["示例"] --> lsolid1["实线：执行"]
+    lsolid1 ~~~ ldash0
+    ldash0["示例"] -.-> ldash1["虚线：反馈 / 回流"]
+  end
+
+  chain ~~~ lsolid0
+
+  user --> webview
+  user --> personalOrch
+  webview <--> personalOrch
+  personalOrch <--> personalCtx
+  personalOrch --> workspace
+  webview -. "进入世界 / 角色投射" .-> world
+  world -. "世界事件 / 角色状态" .-> orchpool
+  webview <--> exthost
+  exthost <--> gateway
+  personalOrch --> gateway
+  gateway --> orchpool
+  orchpool -. "审批请求 / 主控状态 / 反馈" .-> webview
+  webview -. "审批决定 / 权限授予 / 人工输入" .-> gateway
+
+  gateway <--> coord
+  orchpool <--> coord
+  orchpool <--> context
+  personalCtx -. "记忆引用 / 归属摘要" .-> context
+  coord -. "成员变更 / 身份摘要 / 治理摘要" .-> chain
+
+  orchpool --> sched
+  sched --> k8s
+  sched -. "分配服务域资源" .-> respool
+  k8s --> svcpod
+  svcpod --> serverbus
+
+  orchpool --> serverbus
+  serverbus --> serviceagents
+  serviceagents --> hotstore
+
+  orchpool -. "本地任务上下文" .-> planner
+  planner --> localbus
+  localbus --> aidev
+  localbus --> codingw
+  localbus --> videow
+  localbus --> vizw
+  localbus --> nas
+
+  aidev -. "选择 / 调用专业 Worker" .-> localbus
+  localbus -. "分发编码任务" .-> codingw
+  localbus -. "分发媒体任务" .-> videow
+  localbus -. "分发演示任务" .-> vizw
+  localbus -. "安装包分发 / 设备接入" .-> appdist
+  localbus -. "分配本地域资源" .-> respool
+  aidev --> judge
+  localbus --> judge
+  judge -. "重试 / 重规划" .-> planner
+
+  judge -. "返回本地结果" .-> orchpool
+  svcpod -. "返回服务结果" .-> orchpool
+  hotstore -. "迁移 / 拉取工件" .-> localbus
+  svcpod -. "镜像发布 / 节点上线" .-> svcimage
+  svcimage -. "角色注册 / 健康上报 / 候选主控申请" .-> coord
+  coord -. "租约授予 / 活跃主控切换" .-> orchpool
+
+  orchpool --> verify
+  verify --> eventstore
+  orchpool --> eventstore
+  sched --> eventstore
+  k8s --> eventstore
+  svcpod --> eventstore
+  serverbus --> eventstore
+  localbus --> eventstore
+  judge --> eventstore
+  context --> eventstore
+  eventstore -. "结果哈希 / 权属摘要 / 证明 / 时间戳" .-> chain
+  eventstore -. "贡献证据 / 奖励依据" .-> personalCtx
+  verify -. "验证状态 / 可进入结算" .-> chain
+  svcimage -. "钱包绑定 / 授权记账 / 分账结算" .-> wallet
+  appdist -. "钱包开通 / 节点激活 / 授权记账" .-> wallet
+  respool -. "抽象为用户工作载体" .-> workspace
+  wallet -. "奖励归属 / 账户结算" .-> personalCtx
+  wallet -. "权利主体锚定" .-> rights
+  rights -. "授权校验 / 隐私证明" .-> chain
+  chain -. "关键摘要留痕" .-> chainnote
+
+  verify -. "验证报告 / 状态" .-> webview
+
+  classDef user fill:#fff7e6,stroke:#b7791f,color:#6b4600,stroke-width:1.5px;
+  classDef localNode fill:#eefbf3,stroke:#2f855a,color:#1f5137,stroke-width:1.5px;
+  classDef localWorker fill:#dcfce7,stroke:#2f855a,color:#1f5137,stroke-width:1.5px;
+  classDef serverNode fill:#eef4ff,stroke:#2b6cb0,color:#1a365d,stroke-width:1.5px;
+  classDef serverWorker fill:#dbeafe,stroke:#2b6cb0,color:#1a365d,stroke-width:1.5px;
+  classDef storage fill:#f7f7f7,stroke:#4a5568,color:#2d3748,stroke-width:1.5px;
+  classDef verifyNode fill:#fff7e6,stroke:#b7791f,color:#6b4600,stroke-width:1.5px;
+  classDef worldNode fill:#eef7ff,stroke:#2962ff,color:#1e3a8a,stroke-width:1.5px,stroke-dasharray:3 2;
+  classDef controlNode fill:#eff6ff,stroke:#2563eb,color:#1e3a8a,stroke-width:1.5px;
+  classDef contextNode fill:#f5f3ff,stroke:#7c3aed,color:#4c1d95,stroke-width:1.5px;
+  classDef accountNode fill:#fff7ed,stroke:#c2410c,color:#7c2d12,stroke-width:1.5px;
+  classDef resourceNode fill:#f8fafc,stroke:#64748b,color:#334155,stroke-width:1.5px,stroke-dasharray:4 2;
+  classDef legendGhost fill:transparent,stroke:transparent,color:transparent;
+  classDef legendNote fill:#ffffff,stroke:#e2e8f0,color:#94a3b8,stroke-width:0.6px;
+  classDef distNote fill:#ffffff,stroke:#cbd5e1,color:#475569,stroke-width:1px,stroke-dasharray:3 2;
+
+  style legend fill:transparent,stroke:#e2e8f0,stroke-width:0.6px,stroke-dasharray:2 3,color:#94a3b8;
+
+  class user user;
+  class webview,exthost,planner,localbus,judge,nas localNode;
+  class aidev,codingw,videow,vizw localWorker;
+  class gateway,orchpool,coord controlNode;
+  class context contextNode;
+  class personalOrch,personalCtx,workspace accountNode;
+  class respool resourceNode;
+  class sched,serverbus,k8s,eventstore,chain serverNode;
+  class svcpod,serviceagents serverWorker;
+  class nas,hotstore,eventstore,chain storage;
+  class verify verifyNode;
+  class world worldNode;
+  class appdist,svcimage,wallet,rights distNote;
+  class lsolid0,ldash0 legendGhost;
+  class lsolid1,ldash1 legendNote;

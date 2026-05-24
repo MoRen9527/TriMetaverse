@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/responsibility-handoff.schema.json",
+  "title": "ResponsibilityHandoff",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "RESPONSIBILITY_HANDOFF"
+        },
+        "ownerRole": {
+          "type": "string",
+          "enum": ["ChiefHumanResourcesOfficer", "CEOChiefOfStaff"]
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["ad-hoc", "weekly", "monthly", "deadline"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "workflowRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+          }
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "handoffSubject",
+            "handoffCategory",
+            "previousOwner",
+            "incomingOwner",
+            "actingOwner",
+            "scope",
+            "sourceOfTruthFiles",
+            "completionTrackingStatus",
+            "acceptanceCriteria",
+            "nextAction"
+          ],
+          "properties": {
+            "handoffSubject": {
+              "type": "string",
+              "minLength": 1
+            },
+            "handoffCategory": {
+              "type": "string",
+              "enum": [
+                "role-onboarding",
+                "responsibility-transfer",
+                "acting-owner-transfer",
+                "workflow-owner-transfer",
+                "offboarding",
+                "other"
+              ]
+            },
+            "previousOwner": {
+              "type": "string",
+              "minLength": 1
+            },
+            "incomingOwner": {
+              "type": "string",
+              "minLength": 1
+            },
+            "actingOwner": {
+              "type": "string",
+              "minLength": 1
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sourceOfTruthFiles": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            },
+            "supportAssets": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "completionTrackingStatus": {
+              "type": "string",
+              "enum": [
+                "drafted",
+                "ready-for-execution",
+                "in-progress",
+                "blocked",
+                "ready-for-acceptance",
+                "accepted",
+                "frozen"
+              ]
+            },
+            "acceptanceCriteria": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            },
+            "nextAction": {
+              "type": "string",
+              "minLength": 1
+            },
+            "blocker": {
+              "type": "string"
+            },
+            "escalations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

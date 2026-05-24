@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/schedule-spec.schema.json",
+  "title": "ScheduleSpec",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "workflowRefs", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "SCHEDULE_SPEC"
+        },
+        "ownerRole": {
+          "type": "string",
+          "enum": ["CEOChiefOfStaff", "ChiefOperatingOfficer", "ChiefTechnologyOfficer"]
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["ad-hoc", "weekly", "monthly", "launch-window", "deadline"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "workflowRefs": {
+          "description": "ScheduleSpec 的 workflowRefs 可以绑定提醒、技能或宿主试运行相关分支；示例中的 branchId 并不默认等同于 PRD 分支，因此不会自动触发 PRD docs bootstrap 硬要求。",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+          }
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "targetType",
+            "targetRef",
+            "scheduleType",
+            "scheduleExpression",
+            "executionHost",
+            "approvalGate",
+            "failurePolicy",
+            "auditRequired",
+            "enabled",
+            "concurrencyPolicy",
+            "stopConditions"
+          ],
+          "properties": {
+            "targetType": {
+              "type": "string",
+              "enum": [
+                "skill-spec",
+                "task-template",
+                "reminder",
+                "email",
+                "checkpoint",
+                "custom"
+              ]
+            },
+            "targetRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "targetVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "scheduleType": {
+              "type": "string",
+              "enum": ["one-shot", "interval", "daily", "weekly", "monthly", "cron"]
+            },
+            "scheduleExpression": {
+              "type": "string",
+              "minLength": 1
+            },
+            "executionHost": {
+              "type": "string",
+              "enum": ["copilot-chat", "copilot-cli", "trimc"]
+            },
+            "approvalGate": {
+              "type": "string",
+              "enum": [
+                "code-registry-approved",
+                "coo-approved",
+                "cto-approved",
+                "manual-only"
+              ]
+            },
+            "failurePolicy": {
+              "type": "string",
+              "enum": ["freeze", "retry-then-freeze", "escalate"]
+            },
+            "auditRequired": {
+              "type": "boolean"
+            },
+            "enabled": {
+              "type": "boolean"
+            },
+            "concurrencyPolicy": {
+              "type": "string",
+              "enum": ["forbid-overlap", "queue", "allow-overlap"]
+            },
+            "stopConditions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "deliveryChannel": {
+              "type": "string",
+              "enum": [
+                "none",
+                "copilot-chat",
+                "email",
+                "calendar",
+                "file",
+                "webhook"
+              ]
+            },
+            "deliveryTarget": {
+              "type": "string"
+            },
+            "inputTemplate": {
+              "type": "string"
+            },
+            "maxRuntimeMinutes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "retryLimit": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

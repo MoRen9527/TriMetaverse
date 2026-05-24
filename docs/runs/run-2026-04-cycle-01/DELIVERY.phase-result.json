@@ -1,0 +1,35 @@
+{
+  "phase": "DELIVERY",
+  "status": "completed",
+  "startTime": "2026-04-02T16:30:00Z",
+  "endTime": "2026-04-02T17:00:00Z",
+  "durationMs": 1800000,
+  "qualityScore": 87,
+  "artifacts": [
+    {
+      "name": "delivery-manifest",
+      "path": "docs/runs/run-2026-04-cycle-01/delivery-manifest.json",
+      "required": true,
+      "exists": true
+    },
+    {
+      "name": "delivery-report",
+      "path": "docs/runs/run-2026-04-cycle-01/delivery-report.md",
+      "required": true,
+      "exists": true
+    },
+    {
+      "name": "release-archive",
+      "path": "docs/runs/run-2026-04-cycle-01/artifacts/release.zip",
+      "required": true,
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "summary": "DELIVERY 汇总首轮试单包的演示、测试和交付清单，形成可对外说明的最小交付包。",
+  "metadata": {
+    "runId": "run-2026-04-cycle-01",
+    "host": "copilot-chat",
+    "sampleBacked": true
+  }
+}

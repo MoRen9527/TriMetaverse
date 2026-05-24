@@ -1,0 +1,97 @@
+{
+  "objectType": "SALES_PROGRESS",
+  "objectId": "SP-202604-001",
+  "title": "首轮试单销售推进单",
+  "status": "in-progress",
+  "priority": "medium",
+  "ownerRole": "ChiefSalesOfficer",
+  "createdAt": "2026-04-06T14:00:00Z",
+  "updatedAt": "2026-04-08T18:00:00Z",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-04-06T00:00:00Z",
+    "endAt": "2026-04-12T23:59:59Z",
+    "label": "试单转化周"
+  },
+  "summary": "根据 MVP 和交付准备推进首轮试单报价与成交验证，并把桌面工作台与本地控制器协同作为演示卖点之一。",
+  "relatedModules": ["Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriMetaverse"],
+  "dependsOn": ["ET-202604-001"],
+  "evidence": [
+    {
+      "source": "MVP-202604-001",
+      "kind": "document",
+      "note": "产品边界与交付承诺"
+    },
+    {
+      "source": "ET-202604-001",
+      "kind": "document",
+      "note": "交付准备度与风险说明"
+    },
+    {
+      "source": "VscodiumProductRegistry",
+      "kind": "registry",
+      "note": "桌面宿主与上游升级能力可作为演示工作台的一部分"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefOperatingOfficer",
+      "action": "根据销售推进节奏安排上线和观察节点",
+      "dueAt": "2026-04-09T12:00:00Z"
+    },
+    {
+      "owner": "ChiefFinancialOfficer",
+      "action": "观察报价是否支持预算与盈利假设",
+      "dueAt": "2026-04-09T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "not-required",
+      "note": "按既定价格带做试单验证"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "context-from",
+      "phase": "VERIFY-INTEGRATION",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/VERIFY-INTEGRATION.phase-result.json",
+      "note": "销售推进参考联调与演示 readiness 的阶段结果"
+    },
+    {
+      "relation": "depends-on",
+      "phase": "DELIVERY",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "note": "对外成交和交付承诺最终依赖 delivery 阶段可用性"
+    }
+  ],
+  "payload": {
+    "pipelineStage": "trial-demo",
+    "customerSegment": "预算有限的小团队内容增长需求方",
+    "offerVersion": "Offer-v0.2-desktop-local-demo",
+    "quoteRange": "样例报价区间：199-399 USD 试单包",
+    "expectedRevenue": "样例目标：完成至少一轮小额试单验证，并验证用户是否认可桌面工作台 + 本地化任务支撑链的交付方式",
+    "paymentRisk": "medium",
+    "followUpAt": "2026-04-09T09:00:00Z",
+    "docsInitializationRequirements": [
+      "对外试单承诺默认建立在模块五层文档协同系统最小入口已完成的前提上",
+      "销售话术引用的交付范围应能回连 docs/product 与 docs/engineering 真源"
+    ],
+    "docsBootstrapRefs": [
+      "docs/workflow/prd-branch-minimal-directory-template.md",
+      "docs/workflow/project-repo-document-baseline.md",
+      "docs/workflow/prd-branch-delivery-checklist.md"
+    ]
+  },
+  "metadata": {
+    "example": true,
+    "notExecutionRecord": true,
+    "exampleId": "ai-content-growth-cycle-v1"
+  }
+}

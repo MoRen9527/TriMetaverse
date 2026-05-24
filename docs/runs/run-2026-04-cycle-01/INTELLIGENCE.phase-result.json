@@ -1,0 +1,60 @@
+{
+  "phase": "INTELLIGENCE",
+  "status": "completed",
+  "startTime": "2026-04-02T09:00:00Z",
+  "endTime": "2026-04-02T10:10:00Z",
+  "durationMs": 4200000,
+  "qualityScore": 90,
+  "artifacts": [
+    {
+      "name": "demand-intake-sample",
+      "path": "docs/workflow/operating-cycle-example/demand-intake.sample.json",
+      "required": true,
+      "exists": true
+    },
+    {
+      "name": "mvp-definition-sample",
+      "path": "docs/workflow/operating-cycle-example/mvp-definition.sample.json",
+      "required": true,
+      "exists": true
+    },
+    {
+      "name": "prd-baseline",
+      "path": "docs/prd/PRD001基础平台.md",
+      "required": true,
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "summary": "INTELLIGENCE 将市场信号和经营边界收敛为首轮试单包 PRD 分支，并确认进入设计实现链。",
+  "review": {
+    "status": "approved",
+    "version": "PRDAICONTENTTRIAL-v0.1.0",
+    "reviewId": "review-intelligence-2026-04-02-01",
+    "approvedBy": "ChiefProductOfficer",
+    "approvedAt": "2026-04-02T10:15:00Z",
+    "isInitialRelease": true,
+    "versionChanged": true,
+    "notes": "批准创建 branch-prd-ai-content-trial 并进入设计分支。"
+  },
+  "branchId": "branch-prd-ai-content-trial",
+  "prdId": "PRD-AI-CONTENT-TRIAL",
+  "prdDelta": {
+    "sourcePhase": "INTELLIGENCE",
+    "whitepaperChanged": false,
+    "intelligenceChanged": true,
+    "added": [],
+    "updated": [
+      "PRD-AI-CONTENT-TRIAL"
+    ],
+    "removed": [],
+    "downstreamTriggered": [
+      "branch-prd-ai-content-trial"
+    ]
+  },
+  "metadata": {
+    "runId": "run-2026-04-cycle-01",
+    "host": "copilot-chat",
+    "sampleBacked": true
+  }
+}

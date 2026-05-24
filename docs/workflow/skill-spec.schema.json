@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/skill-spec.schema.json",
+  "title": "SkillSpec",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "workflowRefs", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "SKILL_SPEC"
+        },
+        "ownerRole": {
+          "type": "string",
+          "enum": ["CEOChiefOfStaff", "ChiefTechnologyOfficer"]
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["ad-hoc", "weekly", "deadline"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "workflowRefs": {
+          "description": "SkillSpec 的 workflowRefs 可以绑定功能、技能或宿主试运行分支；示例中的 branchId 并不默认等同于 PRD 分支，因此不会自动触发 PRD docs bootstrap 硬要求。",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+          }
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "skillName",
+            "skillVersion",
+            "triggerPatterns",
+            "preconditions",
+            "executionSteps",
+            "successEvidence",
+            "failureGuards",
+            "allowedHosts",
+            "reviewGate"
+          ],
+          "properties": {
+            "skillName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "skillVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "triggerPatterns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "preconditions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "executionSteps": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "successEvidence": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "failureGuards": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "allowedHosts": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "enum": ["copilot-chat", "copilot-cli", "trimc", "tride"]
+              }
+            },
+            "reviewGate": {
+              "type": "string",
+              "enum": ["code-registry", "cto", "manual-approval"]
+            },
+            "scheduleEligible": {
+              "type": "boolean"
+            },
+            "inputTemplate": {
+              "type": "string"
+            },
+            "relatedFiles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "relatedAgents": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "migrationNotes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

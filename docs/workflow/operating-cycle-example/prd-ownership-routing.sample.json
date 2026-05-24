@@ -1,0 +1,123 @@
+{
+  "objectType": "PRD_OWNERSHIP_ROUTING",
+  "objectId": "POR-202604-001",
+  "title": "试单包运行面与 docs 落位 PRD 归属路由请求单",
+  "status": "completed",
+  "priority": "high",
+  "ownerRole": "ChiefProductOfficer",
+  "createdAt": "2026-04-04T08:30:00Z",
+  "updatedAt": "2026-04-04T11:30:00Z",
+  "timebox": {
+    "scope": "ad-hoc",
+    "startAt": "2026-04-04T08:30:00Z",
+    "endAt": "2026-04-04T12:00:00Z",
+    "label": "trial-package-ownership-routing"
+  },
+  "summary": "针对 AI 内容运营试单包在运行面说明和 docs bootstrap 上的落位问题，先由当前阶段产品侧给出可执行路由结论，避免把工作区上下文直接误当成模块归属；公司级任务分派与升级由 CEOChiefOfStaff 协同。",
+  "relatedModules": ["TriMetaverse", "TriMC", "TriLC", "Tripilot", "Tride"],
+  "dependsOn": ["DI-202604-001"],
+  "evidence": [
+    {
+      "source": "BusinessStrategy",
+      "kind": "registry",
+      "note": "当前默认经营实验仍是 AI 内容运营与增长微服务，而不是 TriMC 正式运行面切换"
+    },
+    {
+      "source": "TriMCProductRegistry",
+      "kind": "registry",
+      "note": "TriMC 是服务域运行面模块，但本轮试单包并不自动等于 TriMC 正式模块范围"
+    },
+    {
+      "source": "TriLCProductRegistry",
+      "kind": "registry",
+      "note": "TriLC 在本轮只作为本地控制器依赖与协同说明出现"
+    },
+    {
+      "source": "docs/workflow/workflow-runbook.md",
+      "kind": "document",
+      "note": "PRD 归属未明时，先发起 PRD_OWNERSHIP_ROUTING，并由 ChiefProductOfficer 形成产品侧归属结论"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "基于已确认落位继续收敛试单包 MVP 范围，不再重复做模块归属判断",
+      "dueAt": "2026-04-04T18:00:00Z"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "基于产品侧结论安排公司级任务分派、催办与升级",
+      "dueAt": "2026-04-04T18:00:00Z"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "在归属结论已明确的前提下，再拆解工程任务与 docs 初始化任务",
+      "dueAt": "2026-04-05T12:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "BusinessStrategy",
+      "status": "not-required",
+      "note": "本次未改变中央战略或长期模块边界，由总助在当前阶段直接给出可执行路由结论"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "blocks",
+      "phase": "DESIGNING",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "note": "在归属路由结论形成前，试单包分支不得进入 docs bootstrap 或 designing 初始化"
+    },
+    {
+      "relation": "context-from",
+      "phase": "INTELLIGENCE",
+      "runId": "run-2026-04-cycle-01",
+      "branchId": "branch-prd-ai-content-trial",
+      "prdId": "PRD-AI-CONTENT-TRIAL",
+      "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/INTELLIGENCE.phase-result.json",
+      "note": "当前路由请求引用 intelligence 阶段已形成的试单包 PRD 背景"
+    }
+  ],
+  "payload": {
+    "prdRef": "docs/prd/PRD-AI-CONTENT-TRIAL.md",
+    "requestReason": "试单包 PRD 已形成，但其中包含运行面与本地控制器协同说明，尚不能直接判断应落在 TriMetaverse 项目根、TriMC，还是未来新模块。",
+    "candidateModules": [
+      "TriMetaverse",
+      "TriMC",
+      "TriLC"
+    ],
+    "candidateRoots": [
+      "TriMetaverse",
+      "TriMC"
+    ],
+    "currentEvidence": [
+      "本轮试单包是项目级经营实验，不等于 TriMC 正式运行面切换。",
+      "TriMC / TriLC 相关内容在本轮主要作为依赖与协同说明出现。",
+      "若直接在当前仓根或 TriMC 根建立五层 docs，可能把工作区上下文误当成归属依据。"
+    ],
+    "blockingImpact": [
+      "在路由结论形成前，不得新建模块五层文档协同系统骨架。",
+      "ChiefTechnologyOfficer 不得在归属未明时拆分执行层 workstream 或 docs 初始化任务。"
+    ],
+    "requestedDecisionBy": "2026-04-04T12:00:00Z",
+    "routingDecision": "routed",
+    "targetModuleOrProject": "TriMetaverse",
+    "targetRepoRoot": "TriMetaverse",
+    "targetDocsRoot": "TriMetaverse/docs",
+    "moduleDesignDecision": "本轮试单包继续作为 TriMetaverse 项目级经营实验分支推进；TriMC / TriLC 在本轮作为依赖模块事实引用，不单独触发新的模块 docs bootstrap。",
+    "docsLandingDecision": "当前轮相关产品与流程真源继续落在 TriMetaverse 项目级文档体系；若后续形成独立运行面模块需求，再单独发起新的 PRD_OWNERSHIP_ROUTING。",
+    "requiredEscalations": [
+      "若后续要求把本轮试单包直接视为 TriMC 正式运行面能力，则重新升级到 BusinessStrategy 做范围裁决。"
+    ]
+  },
+  "metadata": {
+    "example": true,
+    "notExecutionRecord": true,
+    "exampleId": "ai-content-growth-cycle-v1",
+    "handoffTarget": "ChiefProductOfficer",
+    "companyTaskRoutingOwner": "CEOChiefOfStaff"
+  }
+}

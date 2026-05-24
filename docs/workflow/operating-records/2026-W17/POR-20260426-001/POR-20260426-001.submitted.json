@@ -1,0 +1,107 @@
+{
+  "objectType": "PRD_OWNERSHIP_ROUTING",
+  "objectId": "POR-20260426-001",
+  "title": "PRD 归属路由请求单提交态演示",
+  "status": "submitted",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-04-26T09:30:00+08:00",
+  "updatedAt": "2026-04-26T09:30:00+08:00",
+  "timebox": {
+    "scope": "ad-hoc",
+    "startAt": "2026-04-26T09:30:00+08:00",
+    "endAt": "2026-04-26T18:00:00+08:00",
+    "label": "prd-ownership-routing-submitted-demo"
+  },
+  "summary": "演示当 PRD 归属模块 / 项目与 docs 落位尚未裁决时，如何先把 PRD_OWNERSHIP_ROUTING 以 submitted 状态落到真实 operating-record 树。",
+  "relatedModules": [
+    "TriMetaverse",
+    "TriMC",
+    "TriLC"
+  ],
+  "dependsOn": [
+    "PRD-DEMO-OWNERSHIP-001"
+  ],
+  "evidence": [
+    {
+      "source": "docs/workflow/workflow-runbook.md",
+      "kind": "document",
+      "note": "PRD 归属未明时应先发起 PRD_OWNERSHIP_ROUTING，而不是直接建立 docs 骨架"
+    },
+    {
+      "source": "docs/workflow/prd-ownership-routing-intake-template.md",
+      "kind": "document",
+      "note": "当前阶段自然语言 intake 已整理为标准字段"
+    },
+    {
+      "source": "meeting-2026-04-20-ceo-chief-of-staff-capability-and-alignment.md",
+      "kind": "document",
+      "note": "示例中总助与 CEO 的能力边界对齐已完成，可受理这类路由请求"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "核查真源并决定当前阶段是否需要升级到 BusinessStrategy 或继续由总助给出路由结论",
+      "dueAt": "2026-04-26T14:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "pending",
+      "note": "等待当前阶段总助完成路由判断"
+    },
+    {
+      "role": "BusinessStrategy",
+      "status": "not-required",
+      "note": "若后续触及新的长期主模块或中央边界变化，再升级"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "blocks",
+      "phase": "DESIGNING",
+      "runId": "run-2026-04-routing-demo",
+      "branchId": "branch-prd-demo-ownership",
+      "prdId": "PRD-DEMO-OWNERSHIP-001",
+      "note": "在 submitted 阶段，docs bootstrap 与 designing 初始化都应冻结"
+    }
+  ],
+  "payload": {
+    "prdRef": "docs/prd/PRD-DEMO-OWNERSHIP-001.md",
+    "requestReason": "当前 PRD 涉及运行面与执行面说明，但尚未确定应落到现有模块、项目根，还是一个新模块根。",
+    "candidateModules": [
+      "TriMetaverse",
+      "TriMC"
+    ],
+    "candidateRoots": [
+      "TriMetaverse",
+      "TriMC"
+    ],
+    "currentEvidence": [
+      "当前语境同时涉及项目级流程说明和运行面候选能力。",
+      "若直接在当前仓根或候选模块根建立 docs，容易把执行上下文误当成归属结论。"
+    ],
+    "blockingImpact": [
+      "在路由结论形成前，不得建立模块五层文档协同系统骨架。",
+      "ChiefTechnologyOfficer 不得在归属未明时拆 execution workstream。"
+    ],
+    "requestedDecisionBy": "2026-04-26T14:00:00+08:00",
+    "routingDecision": "pending",
+    "targetModuleOrProject": "待确认",
+    "targetRepoRoot": "待确认",
+    "targetDocsRoot": "待确认",
+    "moduleDesignDecision": "待确认",
+    "docsLandingDecision": "待确认",
+    "requiredEscalations": []
+  },
+  "metadata": {
+    "executionRecord": true,
+    "recordLayer": "real-operating-record",
+    "lifecycleSnapshot": "submitted",
+    "layoutDemo": true,
+    "notProjectFact": true,
+    "issuanceVersion": "POR-20260426-001-v0.1.0-submitted-demo"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/mvp-definition.schema.json",
+  "title": "MVPDefinition",
+  "allOf": [
+    {
+      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["objectType", "ownerRole", "timebox", "workflowRefs", "payload"],
+      "properties": {
+        "objectType": {
+          "const": "MVP_DEFINITION"
+        },
+        "ownerRole": {
+          "const": "ChiefProductOfficer"
+        },
+        "timebox": {
+          "type": "object",
+          "required": ["scope"],
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["weekly", "monthly", "deadline", "launch-window"]
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "workflowRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+          }
+        },
+        "payload": {
+          "type": "object",
+          "required": [
+            "mvpVersion",
+            "userProblem",
+            "scopeIn",
+            "scopeOut",
+            "pricingHypothesis",
+            "validationMetrics",
+            "deliveryExpectation"
+          ],
+          "properties": {
+            "mvpVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "userProblem": {
+              "type": "string",
+              "minLength": 1
+            },
+            "scopeIn": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "scopeOut": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "pricingHypothesis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "validationMetrics": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "deliveryExpectation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "docsInitializationRequirements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "docsBootstrapRefs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}
