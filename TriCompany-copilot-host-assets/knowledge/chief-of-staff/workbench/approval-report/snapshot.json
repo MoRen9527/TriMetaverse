@@ -1,0 +1,117 @@
+{
+  "generatedAt": "2026-04-23T12:29:58+08:00",
+  "triggerMode": "manual",
+  "summary": {
+    "pageCount": 2,
+    "pendingCount": 0,
+    "warningCount": 0,
+    "overdueCount": 0,
+    "routeCoverageCount": 2,
+    "primaryReviewerCoverageCount": 2,
+    "slaCoverageCount": 2,
+    "dueTrackedCount": 0,
+    "dueTrackedExpectedCount": 0,
+    "closeoutScheduleCount": 1,
+    "closeoutRenderedCount": 1,
+    "closeoutDeliveredCount": 0,
+    "closeoutPendingRunCount": 0
+  },
+  "governance": {
+    "pageCount": 2,
+    "pendingCount": 0,
+    "warningCount": 0,
+    "overdueCount": 0,
+    "routeCoverageCount": 2,
+    "primaryReviewerCoverageCount": 2,
+    "slaCoverageCount": 2,
+    "dueTrackedCount": 0,
+    "dueTrackedExpectedCount": 0,
+    "reviewerOwners": [
+      {
+        "reviewer": "ChiefOperatingOfficer",
+        "pageCount": 1,
+        "stableCount": 0,
+        "reviewingCount": 0,
+        "workingCount": 1,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "routeLabels": [
+          "ChiefOperatingOfficer -> CEOChiefOfStaff"
+        ]
+      },
+      {
+        "reviewer": "ChiefTechnologyOfficer",
+        "pageCount": 1,
+        "stableCount": 1,
+        "reviewingCount": 0,
+        "workingCount": 0,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "routeLabels": [
+          "ChiefTechnologyOfficer -> CEOChiefOfStaff"
+        ]
+      }
+    ],
+    "reviewerRoutes": [
+      {
+        "routeLabel": "ChiefOperatingOfficer -> CEOChiefOfStaff",
+        "pageCount": 1,
+        "stableCount": 0,
+        "reviewingCount": 0,
+        "workingCount": 1,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "primaryReviewers": [
+          "ChiefOperatingOfficer"
+        ],
+        "earliestDueAt": ""
+      },
+      {
+        "routeLabel": "ChiefTechnologyOfficer -> CEOChiefOfStaff",
+        "pageCount": 1,
+        "stableCount": 1,
+        "reviewingCount": 0,
+        "workingCount": 0,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "primaryReviewers": [
+          "ChiefTechnologyOfficer"
+        ],
+        "earliestDueAt": ""
+      }
+    ],
+    "missingPolicyPages": []
+  },
+  "closeoutBridge": {
+    "scheduleCount": 1,
+    "renderedCount": 1,
+    "deliveredCount": 0,
+    "pendingRunCount": 0,
+    "entries": [
+      {
+        "scheduleId": "chief-of-staff-central-registry-closeout",
+        "title": "总助中央 registry 收口桥接",
+        "targetRef": "chief-of-staff-central-registry-closeout",
+        "scheduleExpression": "30 18 * * 5",
+        "enabled": true,
+        "approvalGate": "manual-only",
+        "sourcePath": "../docs/workflow/handoff-templates/central-registry-closeout.example.json",
+        "note": "phase-2 central registry closeout bridge",
+        "latestRunId": "registry-closeout-2026-04-23-033824-953239",
+        "latestGeneratedAt": "2026-04-23T11:38:24+08:00",
+        "latestObjectId": "CRC-20260423-001",
+        "latestCloseoutSubject": "统一 PC 端软件层 / TriLC 协同与 vscodium 上游升级口径",
+        "latestRegistryFindingCount": 5,
+        "latestDeliveryStatus": "rendered",
+        "latestDeliveryChannel": "file",
+        "latestDeliveryTarget": "knowledge/chief-of-staff/audit",
+        "latestAuditPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/registry-closeout-2026-04-23-033824-953239.json"
+      }
+    ]
+  },
+  "pages": []
+}

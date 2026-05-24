@@ -1,0 +1,19 @@
+{
+  "runId": "reminder-delivery-2026-04-22-010710-404094",
+  "triggerMode": "scheduled",
+  "reminderId": "chief-of-staff-approval-queue-reminder",
+  "title": "总助审批队列提醒",
+  "message": "当前审批队列无 reviewing 待审批页；治理覆盖 route 2 / 2、owner 2 / 2、SLA 2 / 2。",
+  "assignee": "CEOChiefOfStaff",
+  "dueAt": "",
+  "severity": "normal",
+  "channel": "audit",
+  "generatedAt": "2026-04-22T09:07:10+08:00",
+  "delivery": {
+    "taskStatus": "completed",
+    "deliveryStatus": "rendered",
+    "deliveryChannel": "file",
+    "deliveryTarget": "knowledge/chief-of-staff/audit",
+    "note": "payload rendered for manual dispatch"
+  }
+}

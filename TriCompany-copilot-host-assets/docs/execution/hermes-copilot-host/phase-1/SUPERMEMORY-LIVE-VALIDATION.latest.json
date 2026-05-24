@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "validatedAtUtc": "2026-04-18T04:11:09.598826+00:00",
+  "actorId": "ceo-chief-of-staff",
+  "queryText": "tricompany-live-971100dda076",
+  "baseUrl": "https://api.supermemory.ai",
+  "authMode": "bearer",
+  "attempts": 6,
+  "delaySeconds": 2.0,
+  "contextMarkers": {
+    "private": true,
+    "orgShared": true
+  },
+  "matchingResultCount": 4,
+  "recalledNamespaces": [
+    "employee/ceo-chief-of-staff",
+    "org/audit",
+    "org/shared"
+  ],
+  "resultsByNamespace": {
+    "employee/ceo-chief-of-staff": 1,
+    "org/shared": 2,
+    "org/audit": 1
+  }
+}

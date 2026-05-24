@@ -1,0 +1,16 @@
+{
+  "runId": "schedule-run-chief-of-staff-wiki-refresh-current-state-2026-04-20-172505-658109",
+  "scheduleId": "chief-of-staff-wiki-refresh-current-state",
+  "targetRef": "chief-of-staff-wiki-refresh-current-state",
+  "host": "copilot-chat",
+  "status": "completed",
+  "deliveryStatus": "not-applicable",
+  "startedAt": "2026-04-21T01:25:05+08:00",
+  "endedAt": "2026-04-21T01:25:05+08:00",
+  "artifactPaths": [
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/wiki/chief-of-staff-llm-wiki-semi-auto-current-state.md",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-20-172505-655112.json"
+  ],
+  "freezeReason": null,
+  "note": "scheduled wiki refresh completed"
+}

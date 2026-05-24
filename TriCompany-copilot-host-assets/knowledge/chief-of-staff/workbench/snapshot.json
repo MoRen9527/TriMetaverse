@@ -1,0 +1,584 @@
+{
+  "generatedAt": "2026-04-23T12:29:59+08:00",
+  "triggerMode": "manual",
+  "overview": {
+    "pageCount": 2,
+    "stableCount": 1,
+    "reviewingCount": 0,
+    "workingCount": 1,
+    "allRecallCount": 2,
+    "approvalPendingCount": 0,
+    "warningApprovalCount": 0,
+    "overdueApprovalCount": 0
+  },
+  "governance": {
+    "pageCount": 2,
+    "pendingCount": 0,
+    "warningCount": 0,
+    "overdueCount": 0,
+    "routeCoverageCount": 2,
+    "primaryReviewerCoverageCount": 2,
+    "slaCoverageCount": 2,
+    "dueTrackedCount": 0,
+    "dueTrackedExpectedCount": 0,
+    "reviewerOwners": [
+      {
+        "reviewer": "ChiefOperatingOfficer",
+        "pageCount": 1,
+        "stableCount": 0,
+        "reviewingCount": 0,
+        "workingCount": 1,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "routeLabels": [
+          "ChiefOperatingOfficer -> CEOChiefOfStaff"
+        ]
+      },
+      {
+        "reviewer": "ChiefTechnologyOfficer",
+        "pageCount": 1,
+        "stableCount": 1,
+        "reviewingCount": 0,
+        "workingCount": 0,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "routeLabels": [
+          "ChiefTechnologyOfficer -> CEOChiefOfStaff"
+        ]
+      }
+    ],
+    "reviewerRoutes": [
+      {
+        "routeLabel": "ChiefOperatingOfficer -> CEOChiefOfStaff",
+        "pageCount": 1,
+        "stableCount": 0,
+        "reviewingCount": 0,
+        "workingCount": 1,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "primaryReviewers": [
+          "ChiefOperatingOfficer"
+        ],
+        "earliestDueAt": ""
+      },
+      {
+        "routeLabel": "ChiefTechnologyOfficer -> CEOChiefOfStaff",
+        "pageCount": 1,
+        "stableCount": 1,
+        "reviewingCount": 0,
+        "workingCount": 0,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "primaryReviewers": [
+          "ChiefTechnologyOfficer"
+        ],
+        "earliestDueAt": ""
+      }
+    ],
+    "missingPolicyPages": []
+  },
+  "pages": [
+    {
+      "pageId": "chief-of-staff-llm-wiki-current-state",
+      "title": "总助 LLM wiki 当前推进情况",
+      "pageStatus": "working",
+      "approvalStatus": "draft",
+      "reviewerRoute": [
+        "ChiefOperatingOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "primaryReviewer": "ChiefOperatingOfficer",
+      "approvalSlaHours": 48,
+      "approvalDueAt": "",
+      "reviewedBy": "",
+      "reviewedAt": "",
+      "approvalNote": "",
+      "updatedAt": "2026-04-21T21:20:52+08:00",
+      "sourceRefCount": 5,
+      "sourceRefs": [
+        "chief-of-staff-note-2026-04-21-005",
+        "chief-of-staff-note-2026-04-21-004",
+        "chief-of-staff-note-2026-04-20-003",
+        "chief-of-staff-note-2026-04-20-001",
+        "2026-04-20-chief-of-staff-scratch-note.md"
+      ],
+      "pagePath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/wiki/chief-of-staff-llm-wiki-current-state.md",
+      "summary": "本页基于 5 份总助 inbox 资料整理而成，当前主题聚焦于 总助 LLM wiki 当前推进情况 的阶段推进情况。",
+      "facts": [
+        "当前已把单页 refresh 扩展为 page spec 驱动的多主题页批处理，可一次刷新多个 wiki 页面。",
+        "当前 reminder / email 不再只停留在 render-only，已补真实 dispatcher 入口，支持 webhook、email gateway 和后续 host dispatcher。",
+        "当前 reviewing 页面已补 reviewer route、primary reviewer、approval SLA 与 approvalDueAt，不再只靠人工记忆追踪审批节奏。"
+      ],
+      "openQuestions": [
+        "下一步是把 stable 页面扩展到更多总助主题，而不是只停留在当前状态页。",
+        "后续需要把 `reviewing -> stable` 的治理规则细化为更正式的审批语义与 stop conditions。"
+      ],
+      "approvalOverdue": false,
+      "approvalWarning": false,
+      "approvalAlertLevel": "none",
+      "approvalRemainingHours": null,
+      "approvalWarningThresholdHours": 12,
+      "approvalTimeToDue": "未生成"
+    },
+    {
+      "pageId": "chief-of-staff-llm-wiki-semi-auto-current-state",
+      "title": "总助 LLM wiki 半自动整理现状页",
+      "pageStatus": "stable",
+      "approvalStatus": "approved",
+      "reviewerRoute": [
+        "ChiefTechnologyOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "primaryReviewer": "ChiefTechnologyOfficer",
+      "approvalSlaHours": 24,
+      "approvalDueAt": "",
+      "reviewedBy": "",
+      "reviewedAt": "",
+      "approvalNote": "",
+      "updatedAt": "2026-04-21T21:20:52+08:00",
+      "sourceRefCount": 4,
+      "sourceRefs": [
+        "chief-of-staff-note-2026-04-21-005",
+        "chief-of-staff-note-2026-04-21-004",
+        "chief-of-staff-note-2026-04-20-003",
+        "chief-of-staff-note-2026-04-20-001"
+      ],
+      "pagePath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/wiki/chief-of-staff-llm-wiki-semi-auto-current-state.md",
+      "summary": "本页基于 4 份总助 inbox 资料整理而成，当前主题聚焦于 总助 LLM wiki 半自动整理现状页 的阶段推进情况。",
+      "facts": [
+        "当前已把单页 refresh 扩展为 page spec 驱动的多主题页批处理，可一次刷新多个 wiki 页面。",
+        "当前 reminder / email 不再只停留在 render-only，已补真实 dispatcher 入口，支持 webhook、email gateway 和后续 host dispatcher。",
+        "当前 reviewing 页面已补 reviewer route、primary reviewer、approval SLA 与 approvalDueAt，不再只靠人工记忆追踪审批节奏。"
+      ],
+      "openQuestions": [
+        "下一步是把 stable 页面扩展到更多总助主题，而不是只停留在当前状态页。",
+        "后续需要把 `reviewing -> stable` 的治理规则细化为更正式的审批语义与 stop conditions。"
+      ],
+      "approvalOverdue": false,
+      "approvalWarning": false,
+      "approvalAlertLevel": "none",
+      "approvalRemainingHours": null,
+      "approvalWarningThresholdHours": 6,
+      "approvalTimeToDue": "未生成"
+    }
+  ],
+  "approvalQueue": [],
+  "approvalReport": {
+    "generatedAt": "2026-04-23T12:29:59+08:00",
+    "pendingCount": 0,
+    "warningCount": 0,
+    "overdueCount": 0,
+    "routeCoverageCount": 2,
+    "primaryReviewerCoverageCount": 2,
+    "slaCoverageCount": 2,
+    "dueTrackedCount": 0,
+    "dueTrackedExpectedCount": 0,
+    "reviewerOwners": [
+      {
+        "reviewer": "ChiefOperatingOfficer",
+        "pageCount": 1,
+        "stableCount": 0,
+        "reviewingCount": 0,
+        "workingCount": 1,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "routeLabels": [
+          "ChiefOperatingOfficer -> CEOChiefOfStaff"
+        ]
+      },
+      {
+        "reviewer": "ChiefTechnologyOfficer",
+        "pageCount": 1,
+        "stableCount": 1,
+        "reviewingCount": 0,
+        "workingCount": 0,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "routeLabels": [
+          "ChiefTechnologyOfficer -> CEOChiefOfStaff"
+        ]
+      }
+    ],
+    "reviewerRoutes": [
+      {
+        "routeLabel": "ChiefOperatingOfficer -> CEOChiefOfStaff",
+        "pageCount": 1,
+        "stableCount": 0,
+        "reviewingCount": 0,
+        "workingCount": 1,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "primaryReviewers": [
+          "ChiefOperatingOfficer"
+        ],
+        "earliestDueAt": ""
+      },
+      {
+        "routeLabel": "ChiefTechnologyOfficer -> CEOChiefOfStaff",
+        "pageCount": 1,
+        "stableCount": 1,
+        "reviewingCount": 0,
+        "workingCount": 0,
+        "pendingCount": 0,
+        "warningCount": 0,
+        "overdueCount": 0,
+        "primaryReviewers": [
+          "ChiefTechnologyOfficer"
+        ],
+        "earliestDueAt": ""
+      }
+    ],
+    "missingPolicyPages": [],
+    "pages": []
+  },
+  "closeoutBridge": {
+    "scheduleCount": 1,
+    "renderedCount": 1,
+    "deliveredCount": 0,
+    "pendingRunCount": 0,
+    "entries": [
+      {
+        "scheduleId": "chief-of-staff-central-registry-closeout",
+        "title": "总助中央 registry 收口桥接",
+        "targetRef": "chief-of-staff-central-registry-closeout",
+        "scheduleExpression": "30 18 * * 5",
+        "enabled": true,
+        "approvalGate": "manual-only",
+        "sourcePath": "../docs/workflow/handoff-templates/central-registry-closeout.example.json",
+        "note": "phase-2 central registry closeout bridge",
+        "latestRunId": "registry-closeout-2026-04-23-033824-953239",
+        "latestGeneratedAt": "2026-04-23T11:38:24+08:00",
+        "latestObjectId": "CRC-20260423-001",
+        "latestCloseoutSubject": "统一 PC 端软件层 / TriLC 协同与 vscodium 上游升级口径",
+        "latestRegistryFindingCount": 5,
+        "latestDeliveryStatus": "rendered",
+        "latestDeliveryChannel": "file",
+        "latestDeliveryTarget": "knowledge/chief-of-staff/audit",
+        "latestAuditPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/registry-closeout-2026-04-23-033824-953239.json"
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "scheduleId": "chief-of-staff-wiki-refresh-current-state",
+      "title": "总助 wiki scheduled refresh",
+      "targetType": "wiki-refresh",
+      "targetRef": "chief-of-staff-wiki-refresh-current-state",
+      "scheduleType": "cron",
+      "scheduleExpression": "* * * * *",
+      "enabled": true,
+      "approvalGate": "manual-only",
+      "failurePolicy": "freeze",
+      "note": "phase-2 chief-of-staff wiki refresh staging"
+    },
+    {
+      "scheduleId": "chief-of-staff-wiki-promote-current-state",
+      "title": "总助 wiki page promotion",
+      "targetType": "wiki-promotion",
+      "targetRef": "chief-of-staff-wiki-promote-current-state",
+      "scheduleType": "cron",
+      "scheduleExpression": "* * * * *",
+      "enabled": true,
+      "approvalGate": "manual-only",
+      "failurePolicy": "freeze",
+      "note": "phase-2 chief-of-staff wiki promotion staging，reviewing -> stable 需要人工审批"
+    },
+    {
+      "scheduleId": "chief-of-staff-wiki-recall-check-current-state",
+      "title": "总助 wiki 全量 recall checkpoint",
+      "targetType": "checkpoint",
+      "targetRef": "chief-of-staff-wiki-recall-check-current-state",
+      "scheduleType": "cron",
+      "scheduleExpression": "* * * * *",
+      "enabled": true,
+      "approvalGate": "manual-only",
+      "failurePolicy": "freeze",
+      "note": "phase-2 chief-of-staff all-pages recall checkpoint staging"
+    },
+    {
+      "scheduleId": "chief-of-staff-workbench-sync",
+      "title": "总助知识工作台同步",
+      "targetType": "wiki-workbench",
+      "targetRef": "chief-of-staff-workbench-sync",
+      "scheduleType": "cron",
+      "scheduleExpression": "*/5 * * * *",
+      "enabled": true,
+      "approvalGate": "manual-only",
+      "failurePolicy": "freeze",
+      "note": "phase-2 chief-of-staff knowledge workbench sync"
+    },
+    {
+      "scheduleId": "chief-of-staff-approval-queue-checkpoint",
+      "title": "总助审批队列检查点",
+      "targetType": "checkpoint",
+      "targetRef": "chief-of-staff-approval-queue-checkpoint",
+      "scheduleType": "cron",
+      "scheduleExpression": "*/10 * * * *",
+      "enabled": true,
+      "approvalGate": "manual-only",
+      "failurePolicy": "freeze",
+      "note": "phase-2 approval queue checkpoint"
+    },
+    {
+      "scheduleId": "chief-of-staff-approval-queue-reminder",
+      "title": "总助审批队列提醒",
+      "targetType": "reminder",
+      "targetRef": "chief-of-staff-approval-queue-reminder",
+      "scheduleType": "cron",
+      "scheduleExpression": "*/15 * * * *",
+      "enabled": true,
+      "approvalGate": "manual-only",
+      "failurePolicy": "freeze",
+      "note": "phase-2 approval queue reminder"
+    },
+    {
+      "scheduleId": "chief-of-staff-approval-queue-email",
+      "title": "总助审批队列邮件草稿",
+      "targetType": "email",
+      "targetRef": "chief-of-staff-approval-queue-email",
+      "scheduleType": "cron",
+      "scheduleExpression": "0 */1 * * *",
+      "enabled": true,
+      "approvalGate": "manual-only",
+      "failurePolicy": "freeze",
+      "note": "phase-2 approval queue email draft"
+    },
+    {
+      "scheduleId": "chief-of-staff-central-registry-closeout",
+      "title": "总助中央 registry 收口桥接",
+      "targetType": "registry-closeout",
+      "targetRef": "chief-of-staff-central-registry-closeout",
+      "scheduleType": "cron",
+      "scheduleExpression": "30 18 * * 5",
+      "enabled": true,
+      "approvalGate": "manual-only",
+      "failurePolicy": "freeze",
+      "note": "phase-2 central registry closeout bridge"
+    }
+  ],
+  "audits": [
+    {
+      "auditId": "wiki-refresh-batch-2026-04-21-132052-067231",
+      "kind": "wiki-refresh",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-21T21:20:52+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-batch-2026-04-21-132052-067231.json"
+    },
+    {
+      "auditId": "wiki-refresh-2026-04-21-132052-065222",
+      "kind": "wiki-refresh",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-21T21:20:52+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-21-132052-065222.json"
+    },
+    {
+      "auditId": "wiki-refresh-2026-04-21-132052-059180",
+      "kind": "wiki-refresh",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-21T21:20:52+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-21-132052-059180.json"
+    },
+    {
+      "auditId": "wiki-refresh-2026-04-21-041945-401674",
+      "kind": "wiki-refresh",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-21T12:19:45+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-21-041945-401674.json"
+    },
+    {
+      "auditId": "wiki-refresh-2026-04-21-041823-573640",
+      "kind": "wiki-refresh",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-21T12:18:23+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-21-041823-573640.json"
+    },
+    {
+      "auditId": "wiki-refresh-2026-04-20-172505-957718",
+      "kind": "wiki-refresh",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-20-172505-957718.json"
+    },
+    {
+      "auditId": "wiki-refresh-2026-04-20-172505-655112",
+      "kind": "wiki-refresh",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-20-172505-655112.json"
+    },
+    {
+      "auditId": "wiki-refresh-2026-04-20-151649",
+      "kind": "wiki-refresh",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-20T23:16:49+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-20-151649.json"
+    },
+    {
+      "auditId": "wiki-refresh-2026-04-20-001",
+      "kind": "wiki-refresh",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-20T11:20:00+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-20-001.json"
+    },
+    {
+      "auditId": "wiki-recall-checkpoint-2026-04-20-172506-005925",
+      "kind": "wiki-recall-checkpoint",
+      "status": "completed",
+      "note": "stable wiki page successfully entered recall",
+      "pageId": "chief-of-staff-llm-wiki-semi-auto-current-state",
+      "recordedAt": "2026-04-21T01:25:06+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-recall-checkpoint-2026-04-20-172506-005925.json"
+    },
+    {
+      "auditId": "wiki-recall-checkpoint-2026-04-20-172505-719622",
+      "kind": "wiki-recall-checkpoint",
+      "status": "blocked",
+      "note": "target wiki page is not yet visible in stable recall",
+      "pageId": "chief-of-staff-llm-wiki-semi-auto-current-state",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-recall-checkpoint-2026-04-20-172505-719622.json"
+    },
+    {
+      "auditId": "wiki-promotion-2026-04-20-172505-988181",
+      "kind": "wiki-promotion",
+      "status": "completed",
+      "note": "page promoted from reviewing to stable",
+      "pageId": "chief-of-staff-llm-wiki-semi-auto-current-state",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-promotion-2026-04-20-172505-988181.json"
+    },
+    {
+      "auditId": "wiki-promotion-2026-04-20-172505-698372",
+      "kind": "wiki-promotion",
+      "status": "completed",
+      "note": "page promoted from working to reviewing",
+      "pageId": "chief-of-staff-llm-wiki-semi-auto-current-state",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-promotion-2026-04-20-172505-698372.json"
+    },
+    {
+      "auditId": "wiki-approval-report-2026-04-23-042958-931457",
+      "kind": "wiki-approval-report",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-23T12:29:58+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-approval-report-2026-04-23-042958-931457.json"
+    },
+    {
+      "auditId": "wiki-approval-report-2026-04-22-010710-371700",
+      "kind": "wiki-approval-report",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-22T09:07:10+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-approval-report-2026-04-22-010710-371700.json"
+    },
+    {
+      "auditId": "wiki-approval-report-2026-04-22-010246-958675",
+      "kind": "wiki-approval-report",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-22T09:02:46+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-approval-report-2026-04-22-010246-958675.json"
+    },
+    {
+      "auditId": "wiki-approval-report-2026-04-21-150538-517953",
+      "kind": "wiki-approval-report",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-21T23:05:38+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-approval-report-2026-04-21-150538-517953.json"
+    },
+    {
+      "auditId": "wiki-approval-report-2026-04-21-135304-121819",
+      "kind": "wiki-approval-report",
+      "status": "completed",
+      "note": "",
+      "pageId": "",
+      "recordedAt": "2026-04-21T21:53:04+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-approval-report-2026-04-21-135304-121819.json"
+    },
+    {
+      "auditId": "schedule-run-chief-of-staff-wiki-refresh-current-state-2026-04-20-172505-960720",
+      "kind": "schedule-run",
+      "status": "completed",
+      "note": "scheduled wiki refresh completed",
+      "pageId": "",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/schedule-run-chief-of-staff-wiki-refresh-current-state-2026-04-20-172505-960720.json"
+    },
+    {
+      "auditId": "schedule-run-chief-of-staff-wiki-refresh-current-state-2026-04-20-172505-658109",
+      "kind": "schedule-run",
+      "status": "completed",
+      "note": "scheduled wiki refresh completed",
+      "pageId": "",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/schedule-run-chief-of-staff-wiki-refresh-current-state-2026-04-20-172505-658109.json"
+    },
+    {
+      "auditId": "schedule-run-chief-of-staff-wiki-recall-check-current-state-2026-04-20-172506-007925",
+      "kind": "schedule-run",
+      "status": "completed",
+      "note": "stable wiki page successfully entered recall",
+      "pageId": "",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/schedule-run-chief-of-staff-wiki-recall-check-current-state-2026-04-20-172506-007925.json"
+    },
+    {
+      "auditId": "schedule-run-chief-of-staff-wiki-recall-check-current-state-2026-04-20-172505-720617",
+      "kind": "schedule-run",
+      "status": "blocked",
+      "note": "target wiki page is not yet visible in stable recall",
+      "pageId": "",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/schedule-run-chief-of-staff-wiki-recall-check-current-state-2026-04-20-172505-720617.json"
+    },
+    {
+      "auditId": "schedule-run-chief-of-staff-wiki-promote-current-state-2026-04-20-172505-989190",
+      "kind": "schedule-run",
+      "status": "completed",
+      "note": "page promoted from reviewing to stable",
+      "pageId": "",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/schedule-run-chief-of-staff-wiki-promote-current-state-2026-04-20-172505-989190.json"
+    },
+    {
+      "auditId": "schedule-run-chief-of-staff-wiki-promote-current-state-2026-04-20-172505-699428",
+      "kind": "schedule-run",
+      "status": "completed",
+      "note": "page promoted from working to reviewing",
+      "pageId": "",
+      "recordedAt": "2026-04-21T01:25:05+08:00",
+      "path": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/schedule-run-chief-of-staff-wiki-promote-current-state-2026-04-20-172505-699428.json"
+    }
+  ]
+}

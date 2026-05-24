@@ -1,0 +1,36 @@
+# chief-technology-officer Role Knowledge Workspace
+
+- objectSetId: chief-technology-officer-knowledge-workspace-v0.1
+- workspaceKind: role
+- workspaceId: chief-technology-officer
+- ownerRole: ChiefTechnologyOfficer
+- generatedAt: 2026-04-29T00:00:00+08:00
+- syncMode: support-object-set
+- liveEntryStatus: live-entry-existing-not-changed
+
+Role-level reusable engineering delivery knowledge for the ChiefTechnologyOfficer role.
+
+This directory is generated as current-host payload under `TriCompany-copilot-host-assets`. It is not source truth; source definitions remain in `TriCompany/`.
+
+Concrete employee consumption records belong in employee wiki pages such as `wiki/employee-consumption-records.md` or runtime cognition state; source cognitive layer files remain contracts only.
+
+## Directory Contract
+
+- inbox/: raw training or role/employee input material
+- wiki/: curated knowledge pages
+- audit/: generation, review, and source-tracking records
+- workbench/: rendered workspace snapshots
+
+## Source Refs
+
+- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.agent.md
+- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.soul.md
+- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.memory.md
+- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.colleagues.md
+- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.social.md
+- TriCompany/docs/engineering/DESIGN.md
+- TriCompany/docs/engineering/ROADMAP.md
+- TriCompany/docs/engineering/STATE.md
+- TriCompany/docs/engineering/metacognition-architecture.md
+- TriCompany/docs/registry/code-state.md
+- TriCompany/docs/engineering/role-employee-knowledge-workspace.md

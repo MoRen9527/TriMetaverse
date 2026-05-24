@@ -1,0 +1,70 @@
+{
+  "objectType": "SCHEDULE_SPEC",
+  "objectId": "chief-of-staff-approval-queue-email",
+  "title": "总助审批队列邮件草稿",
+  "status": "approved",
+  "priority": "medium",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-04-21T10:30:00+08:00",
+  "updatedAt": "2026-04-21T10:30:00+08:00",
+  "timebox": {
+    "scope": "daily",
+    "label": "phase-2 stable governance"
+  },
+  "summary": "把审批队列整理成 email 负载草稿，供后续外部邮件分发或人工转发。",
+  "relatedModules": [
+    "TriCompany",
+    "TriMetaverse"
+  ],
+  "evidence": [
+    {
+      "source": "runtime/cognition/tasks/email_task.py",
+      "kind": "code",
+      "note": "email payload rendering"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "执行 approval queue email draft"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "phase": "DESIGNING",
+      "artifact": "chief-of-staff-stable-governance"
+    }
+  ],
+  "payload": {
+    "targetType": "email",
+    "targetRef": "chief-of-staff-approval-queue-email",
+    "targetVersion": "v0.1",
+    "scheduleType": "cron",
+    "scheduleExpression": "0 */1 * * *",
+    "executionHost": "copilot-chat",
+    "approvalGate": "manual-only",
+    "failurePolicy": "freeze",
+    "auditRequired": true,
+    "enabled": true,
+    "concurrencyPolicy": "forbid-overlap",
+    "stopConditions": [
+      "manual-stop"
+    ],
+    "deliveryChannel": "file",
+    "deliveryTarget": "knowledge/chief-of-staff/audit",
+    "note": "phase-2 approval queue email draft",
+    "taskConfig": {
+      "contentTemplate": "approval-queue-governance",
+      "to": [
+        "ceo@tricompany.local"
+      ],
+      "subject": "总助审批队列状态",
+      "body": "请复核 reviewing 页面审批队列，并确认 stable promotion 的人工审批结果。",
+      "deliveryMode": "render-only"
+    }
+  },
+  "metadata": {
+    "staging": true,
+    "notProduction": true
+  }
+}

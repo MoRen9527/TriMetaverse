@@ -1,0 +1,15 @@
+{
+  "runId": "schedule-run-chief-of-staff-wiki-recall-check-current-state-2026-04-20-172506-007925",
+  "scheduleId": "chief-of-staff-wiki-recall-check-current-state",
+  "targetRef": "chief-of-staff-wiki-recall-check-current-state",
+  "host": "copilot-chat",
+  "status": "completed",
+  "deliveryStatus": "not-applicable",
+  "startedAt": "2026-04-21T01:25:05+08:00",
+  "endedAt": "2026-04-21T01:25:06+08:00",
+  "artifactPaths": [
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-recall-checkpoint-2026-04-20-172506-005925.json"
+  ],
+  "freezeReason": null,
+  "note": "stable wiki page successfully entered recall"
+}

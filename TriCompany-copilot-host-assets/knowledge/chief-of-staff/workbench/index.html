@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>总助知识工作台</title>
+  <style>
+    :root {
+      --bg: #f5efe6;
+      --panel: rgba(255, 251, 245, 0.92);
+      --ink: #1d1a16;
+      --muted: #64594e;
+      --accent: #bc5a2c;
+      --accent-deep: #7d3312;
+      --line: rgba(125, 51, 18, 0.14);
+      --stable: #1f6f50;
+      --reviewing: #8b5a00;
+      --working: #7a3e2a;
+      --shadow: 0 24px 60px rgba(81, 45, 24, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Aptos, "Segoe UI Variable Display", "Microsoft YaHei UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(188, 90, 44, 0.16), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(31, 111, 80, 0.12), transparent 22%),
+        linear-gradient(145deg, #f8f2e8 0%, #efe6da 100%);
+    }
+    .shell { width: min(1440px, calc(100vw - 40px)); margin: 0 auto; padding: 24px 0 40px; }
+    .hero, .panel { border: 1px solid var(--line); border-radius: 24px; background: var(--panel); box-shadow: var(--shadow); }
+    .hero { padding: 28px; }
+    .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 20px; align-items: start; }
+    .eyebrow { letter-spacing: 0.18em; text-transform: uppercase; font-size: 12px; color: var(--accent-deep); margin-bottom: 10px; }
+    h1 { margin: 0; font-size: clamp(32px, 4vw, 56px); line-height: 1.02; font-weight: 760; }
+    .hero p { margin: 14px 0 0; color: var(--muted); line-height: 1.7; }
+    .stamp { padding: 14px 16px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,0.68); text-align: right; }
+    .stamp strong { display: block; font-size: 13px; color: var(--accent-deep); }
+    .stamp span { display: block; margin-top: 8px; color: var(--muted); }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-top: 22px; }
+    .metric { border-radius: 18px; background: rgba(255,255,255,0.72); border: 1px solid var(--line); padding: 16px; }
+    .metric .label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .metric .value { margin-top: 8px; font-size: 30px; font-weight: 760; }
+    .grid-two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 20px; }
+    .section-grid { display: grid; grid-template-columns: 1.35fr 0.95fr; gap: 18px; margin-top: 20px; }
+    .stack { display: grid; gap: 18px; }
+    .panel { padding: 22px; }
+    .panel h2 { margin: 0; font-size: 22px; }
+    .panel-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin-bottom: 14px; }
+    .panel-head p { margin: 0; color: var(--muted); font-size: 14px; }
+    .page-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .signal-grid, .policy-grid, .lane-grid, .route-grid, .queue-grid, .schedule-grid, .closeout-grid, .audit-grid { display: grid; gap: 12px; }
+    .lane-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .page-card, .queue-card, .schedule-card, .closeout-card, .audit-card, .empty-card, .signal-card, .lane-card, .route-card, .policy-card {
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+      padding: 16px;
+    }
+    .signal-card .label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .signal-card .value { margin-top: 8px; font-size: 28px; font-weight: 760; }
+    .signal-card p, .page-card p, .queue-card p, .schedule-card p, .closeout-card p, .audit-card p, .lane-card p, .route-card p, .policy-card p { margin: 10px 0 0; color: var(--muted); line-height: 1.65; }
+    .card-top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+    .status-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .pill { display: inline-flex; align-items: center; padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; background: rgba(125, 51, 18, 0.08); color: var(--accent-deep); }
+    .stable { background: rgba(31, 111, 80, 0.14); color: var(--stable); }
+    .reviewing { background: rgba(139, 90, 0, 0.16); color: var(--reviewing); }
+    .working { background: rgba(122, 62, 42, 0.14); color: var(--working); }
+    .approved { background: rgba(31, 111, 80, 0.12); color: var(--stable); }
+    .pending { background: rgba(139, 90, 0, 0.14); color: var(--reviewing); }
+    .rejected { background: rgba(122, 62, 42, 0.14); color: var(--working); }
+    .warning { background: rgba(188, 90, 44, 0.14); color: var(--accent-deep); }
+    .facts, .questions, .meta-list { margin: 12px 0 0; padding-left: 18px; line-height: 1.7; }
+    .facts li, .questions li, .meta-list li { margin-top: 6px; }
+    .panel-note { margin-bottom: 14px; padding: 12px 14px; border-radius: 16px; border: 1px solid var(--line); background: rgba(188, 90, 44, 0.06); color: var(--muted); line-height: 1.65; }
+    .success-card { background: rgba(31, 111, 80, 0.08); }
+    .warning-card { background: rgba(139, 90, 0, 0.08); }
+    .path-link { color: var(--accent-deep); text-decoration: none; word-break: break-all; }
+    .path-link:hover { text-decoration: underline; }
+    @media (max-width: 1120px) {
+      .hero-grid, .grid-two, .section-grid { grid-template-columns: 1fr; }
+      .page-grid, .lane-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Chief Of Staff Knowledge Workbench</div>
+          <h1>总助知识工作台</h1>
+          <p>前台工作台与后台执行链现在共用同一份页索引、审批状态和 schedule 总线。所有 wiki 页都可进入 recall，但 stable 仍保留更高可信级别和人工审批语义。</p>
+        </div>
+        <div class="stamp">
+          <strong>最近生成时间</strong>
+          <span>2026-04-23T12:29:59+08:00</span>
+        </div>
+      </div>
+      <div class="metrics">
+        <div class="metric"><div class="label">总页数</div><div class="value">2</div></div>
+        <div class="metric"><div class="label">全量 Recall</div><div class="value">2</div></div>
+        <div class="metric"><div class="label">Stable</div><div class="value">1</div></div>
+        <div class="metric"><div class="label">Reviewing</div><div class="value">0</div></div>
+        <div class="metric"><div class="label">Working</div><div class="value">1</div></div>
+        <div class="metric"><div class="label">待审批</div><div class="value">0</div></div>
+        <div class="metric"><div class="label">即将超时</div><div class="value">0</div></div>
+        <div class="metric"><div class="label">SLA 超时</div><div class="value">0</div></div>
+      </div>
+    </section>
+
+    <div class="grid-two">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>治理态势</h2>
+            <p>把 Reviewer route、primary reviewer、SLA 与 due tracking 聚合成统一治理视图。</p>
+          </div>
+        </div>
+        <div class="signal-grid"><article class="signal-card"><div class="label">Route 覆盖</div><div class="value">2 / 2</div><p>已配置 reviewer route 的页面数量。</p></article><article class="signal-card"><div class="label">Owner 覆盖</div><div class="value">2 / 2</div><p>已配置 primary reviewer 的页面数量。</p></article><article class="signal-card"><div class="label">SLA 覆盖</div><div class="value">2 / 2</div><p>已配置 approval SLA 的页面数量。</p></article><article class="signal-card"><div class="label">Due 跟踪</div><div class="value">0 / 0</div><p>reviewing 待审批页中已生成审批截止的数量。</p></article><article class="signal-card"><div class="label">预警页</div><div class="value">0</div><p>reviewing 待审批页里已进入 SLA 预警窗口的数量。</p></article><article class="signal-card"><div class="label">审批压力</div><div class="value">0</div><p>当前预警 0 页，SLA 超时 0 页。</p></article></div>
+        <div class="policy-grid"><article class="policy-card success-card"><h3>治理配置完整</h3><p>当前所有页面都已具备 Reviewer route、Primary reviewer 和 SLA 字段。reviewing 页面如进入审批队列，会继续追加 approvalDueAt。</p></article></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Reviewer Lanes</h2>
+            <p>按 primary reviewer 和 Reviewer route 观察页面负载与审批压力。</p>
+          </div>
+        </div>
+        <div class="lane-grid"><article class="lane-card"><h3>ChiefOperatingOfficer</h3><div class="status-row"><span class="pill">页面 1</span><span class="pill">待审批 0</span></div><ul class="meta-list"><li>Stable / Reviewing / Working：0 / 0 / 1</li><li>当前预警：0</li><li>当前超时：0</li><li>涉及 Reviewer route：ChiefOperatingOfficer -&gt; CEOChiefOfStaff</li></ul></article><article class="lane-card"><h3>ChiefTechnologyOfficer</h3><div class="status-row"><span class="pill">页面 1</span><span class="pill">待审批 0</span></div><ul class="meta-list"><li>Stable / Reviewing / Working：1 / 0 / 0</li><li>当前预警：0</li><li>当前超时：0</li><li>涉及 Reviewer route：ChiefTechnologyOfficer -&gt; CEOChiefOfStaff</li></ul></article></div>
+        <div class="route-grid"><article class="route-card"><h3>ChiefOperatingOfficer -&gt; CEOChiefOfStaff</h3><div class="status-row"><span class="pill">页面 1</span><span class="pill">待审批 0</span></div><ul class="meta-list"><li>Stable / Reviewing / Working：0 / 0 / 1</li><li>当前预警：0</li><li>Primary reviewer：ChiefOperatingOfficer</li><li>最早审批截止：当前无审批截止</li></ul></article><article class="route-card"><h3>ChiefTechnologyOfficer -&gt; CEOChiefOfStaff</h3><div class="status-row"><span class="pill">页面 1</span><span class="pill">待审批 0</span></div><ul class="meta-list"><li>Stable / Reviewing / Working：1 / 0 / 0</li><li>当前预警：0</li><li>Primary reviewer：ChiefTechnologyOfficer</li><li>最早审批截止：当前无审批截止</li></ul></article></div>
+      </section>
+    </div>
+
+    <div class="section-grid">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Wiki 页面总览</h2>
+            <p>工作台直接读取 knowledge/chief-of-staff/wiki 下的实际页面对象。</p>
+          </div>
+        </div>
+        <div class="page-grid"><article class="page-card"><div class="card-top"><h3>总助 LLM wiki 当前推进情况</h3><a class="path-link" href="../wiki/chief-of-staff-llm-wiki-current-state.md">打开页面</a></div><p>本页基于 5 份总助 inbox 资料整理而成，当前主题聚焦于 总助 LLM wiki 当前推进情况 的阶段推进情况。</p><div class="status-row"><span class="pill working">working</span><span class="pill ">draft</span><span class="pill">来源 5</span></div><ul class="meta-list"><li>页面 ID：chief-of-staff-llm-wiki-current-state</li><li>更新时间：2026-04-21T21:20:52+08:00</li><li>Primary reviewer：ChiefOperatingOfficer</li><li>Reviewer route：ChiefOperatingOfficer, CEOChiefOfStaff</li><li>审批 SLA：48</li><li>审批态势：未生成</li></ul><ul class="facts"><li>当前已把单页 refresh 扩展为 page spec 驱动的多主题页批处理，可一次刷新多个 wiki 页面。</li><li>当前 reminder / email 不再只停留在 render-only，已补真实 dispatcher 入口，支持 webhook、email gateway 和后续 host dispatcher。</li><li>当前 reviewing 页面已补 reviewer route、primary reviewer、approval SLA 与 approvalDueAt，不再只靠人工记忆追踪审批节奏。</li></ul><ul class="questions"><li>下一步是把 stable 页面扩展到更多总助主题，而不是只停留在当前状态页。</li><li>后续需要把 `reviewing -&gt; stable` 的治理规则细化为更正式的审批语义与 stop conditions。</li></ul></article><article class="page-card"><div class="card-top"><h3>总助 LLM wiki 半自动整理现状页</h3><a class="path-link" href="../wiki/chief-of-staff-llm-wiki-semi-auto-current-state.md">打开页面</a></div><p>本页基于 4 份总助 inbox 资料整理而成，当前主题聚焦于 总助 LLM wiki 半自动整理现状页 的阶段推进情况。</p><div class="status-row"><span class="pill stable">stable</span><span class="pill approved">approved</span><span class="pill">来源 4</span></div><ul class="meta-list"><li>页面 ID：chief-of-staff-llm-wiki-semi-auto-current-state</li><li>更新时间：2026-04-21T21:20:52+08:00</li><li>Primary reviewer：ChiefTechnologyOfficer</li><li>Reviewer route：ChiefTechnologyOfficer, CEOChiefOfStaff</li><li>审批 SLA：24</li><li>审批态势：未生成</li></ul><ul class="facts"><li>当前已把单页 refresh 扩展为 page spec 驱动的多主题页批处理，可一次刷新多个 wiki 页面。</li><li>当前 reminder / email 不再只停留在 render-only，已补真实 dispatcher 入口，支持 webhook、email gateway 和后续 host dispatcher。</li><li>当前 reviewing 页面已补 reviewer route、primary reviewer、approval SLA 与 approvalDueAt，不再只靠人工记忆追踪审批节奏。</li></ul><ul class="questions"><li>下一步是把 stable 页面扩展到更多总助主题，而不是只停留在当前状态页。</li><li>后续需要把 `reviewing -&gt; stable` 的治理规则细化为更正式的审批语义与 stop conditions。</li></ul></article></div>
+      </section>
+
+      <div class="stack">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>审批队列</h2>
+              <p>reviewing 页面进入 stable 前必须经过人工审批，并按 Reviewer route 与 SLA 跟踪。</p>
+            </div>
+          </div>
+          <div class="panel-note">当前审批报表显示 0 个待审批页、0 个即将超时页、0 个 SLA 超时页；route / owner / SLA 覆盖为 2 / 2、2 / 2、2 / 2。</div>
+          <div class="queue-grid"><div class="empty-card">当前没有待人工审批的 reviewing 页面。</div></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Schedule / Task Bus</h2>
+              <p>同一总线承接 wiki、reminder、email、checkpoint、workbench 和 registry-closeout 任务。</p>
+            </div>
+          </div>
+          <div class="schedule-grid"><article class="schedule-card"><h3>总助 wiki scheduled refresh</h3><div class="status-row"><span class="pill">wiki-refresh</span><span class="pill">cron</span><span class="pill ">enabled</span></div><ul class="meta-list"><li>targetRef：chief-of-staff-wiki-refresh-current-state</li><li>表达式：* * * * *</li><li>审批门：manual-only</li><li>失败策略：freeze</li></ul><p>phase-2 chief-of-staff wiki refresh staging</p></article><article class="schedule-card"><h3>总助 wiki page promotion</h3><div class="status-row"><span class="pill">wiki-promotion</span><span class="pill">cron</span><span class="pill ">enabled</span></div><ul class="meta-list"><li>targetRef：chief-of-staff-wiki-promote-current-state</li><li>表达式：* * * * *</li><li>审批门：manual-only</li><li>失败策略：freeze</li></ul><p>phase-2 chief-of-staff wiki promotion staging，reviewing -&gt; stable 需要人工审批</p></article><article class="schedule-card"><h3>总助 wiki 全量 recall checkpoint</h3><div class="status-row"><span class="pill">checkpoint</span><span class="pill">cron</span><span class="pill ">enabled</span></div><ul class="meta-list"><li>targetRef：chief-of-staff-wiki-recall-check-current-state</li><li>表达式：* * * * *</li><li>审批门：manual-only</li><li>失败策略：freeze</li></ul><p>phase-2 chief-of-staff all-pages recall checkpoint staging</p></article><article class="schedule-card"><h3>总助知识工作台同步</h3><div class="status-row"><span class="pill">wiki-workbench</span><span class="pill">cron</span><span class="pill ">enabled</span></div><ul class="meta-list"><li>targetRef：chief-of-staff-workbench-sync</li><li>表达式：*/5 * * * *</li><li>审批门：manual-only</li><li>失败策略：freeze</li></ul><p>phase-2 chief-of-staff knowledge workbench sync</p></article><article class="schedule-card"><h3>总助审批队列检查点</h3><div class="status-row"><span class="pill">checkpoint</span><span class="pill">cron</span><span class="pill ">enabled</span></div><ul class="meta-list"><li>targetRef：chief-of-staff-approval-queue-checkpoint</li><li>表达式：*/10 * * * *</li><li>审批门：manual-only</li><li>失败策略：freeze</li></ul><p>phase-2 approval queue checkpoint</p></article><article class="schedule-card"><h3>总助审批队列提醒</h3><div class="status-row"><span class="pill">reminder</span><span class="pill">cron</span><span class="pill ">enabled</span></div><ul class="meta-list"><li>targetRef：chief-of-staff-approval-queue-reminder</li><li>表达式：*/15 * * * *</li><li>审批门：manual-only</li><li>失败策略：freeze</li></ul><p>phase-2 approval queue reminder</p></article><article class="schedule-card"><h3>总助审批队列邮件草稿</h3><div class="status-row"><span class="pill">email</span><span class="pill">cron</span><span class="pill ">enabled</span></div><ul class="meta-list"><li>targetRef：chief-of-staff-approval-queue-email</li><li>表达式：0 */1 * * *</li><li>审批门：manual-only</li><li>失败策略：freeze</li></ul><p>phase-2 approval queue email draft</p></article><article class="schedule-card"><h3>总助中央 registry 收口桥接</h3><div class="status-row"><span class="pill">registry-closeout</span><span class="pill">cron</span><span class="pill ">enabled</span></div><ul class="meta-list"><li>targetRef：chief-of-staff-central-registry-closeout</li><li>表达式：30 18 * * 5</li><li>审批门：manual-only</li><li>失败策略：freeze</li></ul><p>phase-2 central registry closeout bridge</p></article></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Central Registry Closeout</h2>
+              <p>把中央收口 bridge 的 schedule 配置和最近一次派发结果直接挂到前台工作台里。</p>
+            </div>
+          </div>
+          <div class="closeout-grid"><article class="closeout-card"><h3>总助中央 registry 收口桥接</h3><p>统一 PC 端软件层 / TriLC 协同与 vscodium 上游升级口径</p><div class="status-row"><span class="pill">registry-closeout</span><span class="pill ">enabled</span><span class="pill ">rendered</span></div><ul class="meta-list"><li>scheduleId：chief-of-staff-central-registry-closeout</li><li>targetRef：chief-of-staff-central-registry-closeout</li><li>表达式：30 18 * * 5</li><li>审批门：manual-only</li><li>sourcePath：../docs/workflow/handoff-templates/central-registry-closeout.example.json</li><li>最近派发：2026-04-23T11:38:24+08:00</li><li>最近 findings：5</li><li>最近 delivery target：knowledge/chief-of-staff/audit</li><li><a class="path-link" href="../audit/registry-closeout-2026-04-23-033824-953239.json">查看最近 closeout 审计</a></li></ul><p>phase-2 central registry closeout bridge</p></article></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>最近审计</h2>
+              <p>这里聚合 refresh、promotion、approval、delivery、checkpoint 和 registry-closeout 结果。</p>
+            </div>
+          </div>
+          <div class="audit-grid"><article class="audit-card"><h3>wiki-refresh</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T21:20:52+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-refresh-batch-2026-04-21-132052-067231.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-refresh</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T21:20:52+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-refresh-2026-04-21-132052-065222.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-refresh</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T21:20:52+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-refresh-2026-04-21-132052-059180.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-refresh</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T12:19:45+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-refresh-2026-04-21-041945-401674.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-refresh</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T12:18:23+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-refresh-2026-04-21-041823-573640.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-refresh</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-refresh-2026-04-20-172505-957718.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-refresh</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-refresh-2026-04-20-172505-655112.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-refresh</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-20T23:16:49+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-refresh-2026-04-20-151649.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-refresh</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-20T11:20:00+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-refresh-2026-04-20-001.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-recall-checkpoint</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:06+08:00</span></div><p>stable wiki page successfully entered recall</p><ul class="meta-list"><li>对象：chief-of-staff-llm-wiki-semi-auto-current-state</li><li><a class="path-link" href="../audit/wiki-recall-checkpoint-2026-04-20-172506-005925.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-recall-checkpoint</h3><div class="status-row"><span class="pill ">blocked</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p>target wiki page is not yet visible in stable recall</p><ul class="meta-list"><li>对象：chief-of-staff-llm-wiki-semi-auto-current-state</li><li><a class="path-link" href="../audit/wiki-recall-checkpoint-2026-04-20-172505-719622.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-promotion</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p>page promoted from reviewing to stable</p><ul class="meta-list"><li>对象：chief-of-staff-llm-wiki-semi-auto-current-state</li><li><a class="path-link" href="../audit/wiki-promotion-2026-04-20-172505-988181.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-promotion</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p>page promoted from working to reviewing</p><ul class="meta-list"><li>对象：chief-of-staff-llm-wiki-semi-auto-current-state</li><li><a class="path-link" href="../audit/wiki-promotion-2026-04-20-172505-698372.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-approval-report</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-23T12:29:58+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-approval-report-2026-04-23-042958-931457.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-approval-report</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-22T09:07:10+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-approval-report-2026-04-22-010710-371700.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-approval-report</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-22T09:02:46+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-approval-report-2026-04-22-010246-958675.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-approval-report</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T23:05:38+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-approval-report-2026-04-21-150538-517953.json">查看记录</a></li></ul></article><article class="audit-card"><h3>wiki-approval-report</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T21:53:04+08:00</span></div><p></p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/wiki-approval-report-2026-04-21-135304-121819.json">查看记录</a></li></ul></article><article class="audit-card"><h3>schedule-run</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p>scheduled wiki refresh completed</p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/schedule-run-chief-of-staff-wiki-refresh-current-state-2026-04-20-172505-960720.json">查看记录</a></li></ul></article><article class="audit-card"><h3>schedule-run</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p>scheduled wiki refresh completed</p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/schedule-run-chief-of-staff-wiki-refresh-current-state-2026-04-20-172505-658109.json">查看记录</a></li></ul></article><article class="audit-card"><h3>schedule-run</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p>stable wiki page successfully entered recall</p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/schedule-run-chief-of-staff-wiki-recall-check-current-state-2026-04-20-172506-007925.json">查看记录</a></li></ul></article><article class="audit-card"><h3>schedule-run</h3><div class="status-row"><span class="pill ">blocked</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p>target wiki page is not yet visible in stable recall</p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/schedule-run-chief-of-staff-wiki-recall-check-current-state-2026-04-20-172505-720617.json">查看记录</a></li></ul></article><article class="audit-card"><h3>schedule-run</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p>page promoted from reviewing to stable</p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/schedule-run-chief-of-staff-wiki-promote-current-state-2026-04-20-172505-989190.json">查看记录</a></li></ul></article><article class="audit-card"><h3>schedule-run</h3><div class="status-row"><span class="pill ">completed</span><span class="pill">2026-04-21T01:25:05+08:00</span></div><p>page promoted from working to reviewing</p><ul class="meta-list"><li>对象：</li><li><a class="path-link" href="../audit/schedule-run-chief-of-staff-wiki-promote-current-state-2026-04-20-172505-699428.json">查看记录</a></li></ul></article></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

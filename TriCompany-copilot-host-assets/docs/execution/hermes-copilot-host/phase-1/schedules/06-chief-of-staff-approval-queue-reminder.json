@@ -1,0 +1,69 @@
+{
+  "objectType": "SCHEDULE_SPEC",
+  "objectId": "chief-of-staff-approval-queue-reminder",
+  "title": "总助审批队列提醒",
+  "status": "approved",
+  "priority": "medium",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-04-21T10:30:00+08:00",
+  "updatedAt": "2026-04-21T10:30:00+08:00",
+  "timebox": {
+    "scope": "daily",
+    "label": "phase-2 stable governance"
+  },
+  "summary": "把 reviewing 页面审批待办转成 reminder 负载，供宿主或人工渠道继续派发。",
+  "relatedModules": [
+    "TriCompany",
+    "TriMetaverse"
+  ],
+  "evidence": [
+    {
+      "source": "runtime/cognition/tasks/reminder_task.py",
+      "kind": "code",
+      "note": "reminder payload generation"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "执行 approval queue reminder"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "phase": "DESIGNING",
+      "artifact": "chief-of-staff-stable-governance"
+    }
+  ],
+  "payload": {
+    "targetType": "reminder",
+    "targetRef": "chief-of-staff-approval-queue-reminder",
+    "targetVersion": "v0.1",
+    "scheduleType": "cron",
+    "scheduleExpression": "*/15 * * * *",
+    "executionHost": "copilot-chat",
+    "approvalGate": "manual-only",
+    "failurePolicy": "freeze",
+    "auditRequired": true,
+    "enabled": true,
+    "concurrencyPolicy": "forbid-overlap",
+    "stopConditions": [
+      "manual-stop"
+    ],
+    "deliveryChannel": "file",
+    "deliveryTarget": "knowledge/chief-of-staff/audit",
+    "note": "phase-2 approval queue reminder",
+    "taskConfig": {
+      "contentTemplate": "approval-queue-governance",
+      "title": "总助审批队列提醒",
+      "message": "请检查 reviewing 页面审批队列，确认哪些页面可以进入 stable。",
+      "assignee": "CEOChiefOfStaff",
+      "severity": "high",
+      "channel": "audit"
+    }
+  },
+  "metadata": {
+    "staging": true,
+    "notProduction": true
+  }
+}

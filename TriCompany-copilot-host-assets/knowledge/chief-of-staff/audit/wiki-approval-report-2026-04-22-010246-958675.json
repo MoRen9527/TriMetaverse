@@ -1,0 +1,17 @@
+{
+  "runId": "wiki-approval-report-2026-04-22-010246-958675",
+  "generatedAt": "2026-04-22T09:02:46+08:00",
+  "status": "completed",
+  "summary": {
+    "pageCount": 2,
+    "pendingCount": 1,
+    "warningCount": 1,
+    "overdueCount": 0,
+    "routeCoverageCount": 2,
+    "primaryReviewerCoverageCount": 2,
+    "slaCoverageCount": 2,
+    "dueTrackedCount": 1,
+    "dueTrackedExpectedCount": 1
+  },
+  "pageCount": 1
+}

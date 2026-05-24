@@ -1,0 +1,25 @@
+{
+  "runId": "wiki-promotion-2026-04-20-172505-988181",
+  "triggerMode": "scheduled",
+  "pageId": "chief-of-staff-llm-wiki-semi-auto-current-state",
+  "pagePath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/wiki/chief-of-staff-llm-wiki-semi-auto-current-state.md",
+  "fromStatus": "reviewing",
+  "toStatus": "stable",
+  "ruleId": "reviewing-to-stable-v1",
+  "status": "completed",
+  "reason": "page promoted from reviewing to stable",
+  "evidence": {
+    "sourceRefCount": 3,
+    "completedRefreshCount": 3,
+    "scheduledRefreshCount": 2,
+    "missingSections": [],
+    "requiredSections": [
+      "## 摘要",
+      "## 当前整理事实",
+      "## 当前判断",
+      "## 待确认问题",
+      "## 来源"
+    ]
+  },
+  "startedAt": "2026-04-21T01:25:05+08:00"
+}
