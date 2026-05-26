@@ -1,0 +1,147 @@
+{
+  "lspServers": {
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": [
+        "--stdio"
+      ],
+      "fileExtensions": {
+        ".ts": "typescript",
+        ".tsx": "typescriptreact",
+        ".js": "javascript",
+        ".jsx": "javascriptreact",
+        ".mjs": "javascript",
+        ".cjs": "javascript",
+        ".mts": "typescript",
+        ".cts": "typescript"
+      }
+    },
+    "python": {
+      "command": "pyright-langserver",
+      "args": [
+        "--stdio"
+      ],
+      "fileExtensions": {
+        ".py": "python",
+        ".pyi": "python"
+      }
+    },
+    "json": {
+      "command": "vscode-json-languageserver",
+      "args": [
+        "--stdio"
+      ],
+      "fileExtensions": {
+        ".json": "json",
+        ".jsonc": "jsonc"
+      }
+    },
+    "yaml": {
+      "command": "yaml-language-server",
+      "args": [
+        "--stdio"
+      ],
+      "fileExtensions": {
+        ".yaml": "yaml",
+        ".yml": "yaml"
+      }
+    },
+    "html": {
+      "command": "vscode-html-languageserver",
+      "args": [
+        "--stdio"
+      ],
+      "fileExtensions": {
+        ".html": "html",
+        ".htm": "html"
+      }
+    },
+    "css": {
+      "command": "vscode-css-languageserver",
+      "args": [
+        "--stdio"
+      ],
+      "fileExtensions": {
+        ".css": "css",
+        ".scss": "scss",
+        ".sass": "sass",
+        ".less": "less"
+      }
+    },
+    "markdown": {
+      "command": "marksman",
+      "args": [
+        "server"
+      ],
+      "fileExtensions": {
+        ".md": "markdown",
+        ".mdx": "mdx"
+      }
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "args": [],
+      "fileExtensions": {
+        ".rs": "rust"
+      }
+    },
+    "go": {
+      "command": "gopls",
+      "args": [],
+      "fileExtensions": {
+        ".go": "go"
+      }
+    },
+    "cpp": {
+      "command": "clangd",
+      "args": [
+        "--background-index"
+      ],
+      "fileExtensions": {
+        ".c": "c",
+        ".cc": "cpp",
+        ".cpp": "cpp",
+        ".cxx": "cpp",
+        ".h": "c",
+        ".hh": "cpp",
+        ".hpp": "cpp",
+        ".hxx": "cpp"
+      }
+    },
+    "powershell": {
+      "command": "powershell",
+      "args": [
+        "-NoLogo",
+        "-NoProfile",
+        "-Command",
+        "Import-Module PowerShellEditorServices; Start-EditorServices -LogPath $env:TEMP\\powershell-editor-services.log -SessionDetailsPath $env:TEMP\\powershell-editor-services.json -HostName copilot-cli -HostProfileId copilot-cli -HostVersion 1.0.0 -Stdio"
+      ],
+      "fileExtensions": {
+        ".ps1": "powershell",
+        ".psm1": "powershell",
+        ".psd1": "powershell"
+      }
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "args": [
+        "--stdio"
+      ],
+      "fileExtensions": {
+        "Dockerfile": "dockerfile",
+        ".dockerfile": "dockerfile"
+      }
+    },
+    "sql": {
+      "command": "sql-language-server",
+      "args": [
+        "up",
+        "--method",
+        "stdio"
+      ],
+      "fileExtensions": {
+        ".sql": "sql"
+      }
+    }
+  }
+}
