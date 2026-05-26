@@ -16,6 +16,7 @@
 - 主链与阶段产物命名统一以 `docs/workflow/terminology.md` 为准（单一词汇源）。
 - 文档执行“严格模式”：正式章节禁止使用非标准别名（仅术语表、变更记录、自检命令可出现历史别名）。
 - 对开发型产品项目，项目级十阶段默认作为 canonical 流程主线，由 `TriDev` 承接 phase engine、门禁推进、版本签发与分支执行承接；`TriCompany` 负责组织 CEO / 总助 / CMO / COO / CFO / CPO / CTO 等员工在各阶段参与、补齐资料、形成可签核的版本化 gate package。
+- 对涉及新增正式模块的事项，`DISCOVERY` 阶段必须先形成 `NewModuleBaselineRelease`（模块标配单项发布）：明确模块归属、六件套骨架、CodeGraph 初始化与 `vendor-extraction-profile`；通过签核后由 `TriDev init` 执行模块初始化。
 - `INTELLIGENCE` 之后每个已审核 PRD 分支，统一通过其归属模块或归属项目的 `模块六层文档协同系统` 落地；在 docs bootstrap 前必须先拿到 PRD 归属路由结论，不得把当前工作区根仓默认当成 docs 落点。当前阶段该路由由 `CEOChiefOfStaff` 组织，未来 `ChiefProductOfficer` 正式上岗后转为由其主责模块设计与归属方案。十阶段负责流程推进和门禁，该系统负责承接分支真源、执行记录、状态回写、流程机制和培训导读。
 - 支持两种执行形态：
   - 形态 A：主控 + 子 Agent 并行协作（推荐）
@@ -91,8 +92,9 @@
 - 项目白皮书（对应商业需求文档）
 - Discovery 真源草稿与 raw evidence pack
 - Discovery 结构化上下文
+- NewModuleBaselineRelease（如涉及新增正式模块）
 
-通过条件：白皮书仅在人工审核通过后由审核人签发版本号（`WP-v*`）。阶段推进必须满足：首次发布存在版本号，或非首次发布时版本号已变更，方可进入 INTELLIGENCE。
+通过条件：白皮书仅在人工审核通过后由审核人签发版本号（`WP-v*`）。阶段推进必须满足：首次发布存在版本号，或非首次发布时版本号已变更；若涉及新增正式模块，还需 `NewModuleBaselineRelease=approved` 且 `TriDev init` 已完成，方可进入 INTELLIGENCE。
 
 ## Phase 2 - INTELLIGENCE（需求阶段）
 
@@ -126,7 +128,7 @@
 
 - `模块六层文档协同系统` 由 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`、`docs/training/` 构成，是 PRD 分支进入 `DESIGNING` 之后的标准落地面。
 - 这套系统不是十阶段主线的替代品，而是十阶段在模块仓内的具体文档与执行实现面；两者关系应理解为“主线定义流程，六层系统承接流程产物”。
-- 在创建任何 PRD 分支的 docs bootstrap 前，必须先拿到该 PRD 的归属路由结论与目标落位仓：当前阶段由 `CEOChiefOfStaff` 组织路由到正确真源并形成结论；未来 `ChiefProductOfficer` 正式上岗后，由其主责模块设计、归属方案与目标落位定义。若描述的是既有模块能力，则落在对应模块根下；若描述的是 TriMetaverse 自身项目级 / 中央层能力，才允许落在 `TriMetaverse/docs/`；若描述的是尚未存在的新模块，则应先建立与现有模块同级的新模块根，再在其下初始化六层结构。
+- 在创建任何 PRD 分支的 docs bootstrap 前，必须先拿到该 PRD 的归属路由结论与目标落位仓：当前阶段由 `CEOChiefOfStaff` 组织路由到正确真源并形成结论；未来 `ChiefProductOfficer` 正式上岗后，由其主责模块设计、归属方案与目标落位定义。若描述的是既有模块能力，则落在对应模块根下；若描述的是 TriMetaverse 自身项目级 / 中央层能力，才允许落在 `TriMetaverse/docs/`；若描述的是尚未存在的新模块，则应在 `DISCOVERY` 先完成 `NewModuleBaselineRelease` 签核并由 `TriDev init` 落下骨架，再进入分支 docs bootstrap。
 - 如涉及新的长期主模块、既有模块边界变化或中央层范围争议，当前阶段总助应先询问 `BusinessStrategy` 做范围裁决，再继续形成落位结论。
 - 若尚未形成总助路由结论，或未来尚未形成 `ChiefProductOfficer` 的模块设计 / 归属结论，则分支初始化必须阻断，不能因为当前打开的是某个工作区根仓就默认把样板建在该仓的 `docs/` 下。
 - 对接关系如下：

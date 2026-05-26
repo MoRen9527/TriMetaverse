@@ -29,6 +29,7 @@
 - 各模块的业务线教学代码文档还必须补清端到端关系：这一条业务的输入生产者是谁、输出消费者是谁；如果不是数据业务流，也要写清对应的请求发起方、处理环节、结果承接方和后续消费方。
 - CodeGraph 定位为各模块 `Code Registry` 的本地辅助索引资产，只用于帮助识别入口、依赖、调用链和变更热区；它不替代 `code-state.md`、教学级代码文档、源码阅读结论或人工收口判断。
 - 架构表中的模块一旦被写成正式模块面，默认应补齐独立 git 仓、`README.md`、`docs/` 六件套、根级 `.gitignore` 与本地 CodeGraph；低成熟 / 占位模块也应先补齐这套骨架，再继续保持待初始化标记。
+- 对新增正式模块，`Discovery` 阶段应先形成 `NewModuleBaselineRelease`（含 `vendor-extraction-profile`），经签核后再由 `TriDev init` 执行模块骨架初始化。
 - `.codegraph/` 应保持为本地生成物和缓存，不提交为仓库真源；可提交的只有由对应模块 `CodeRegistry` 审阅后的摘要、排除规则、扫描时间、commit / 版本锚点、主要发现和待确认缺口。
 - `docs/workflow/handoff-templates/*.example.json` 与 `docs/workflow/operating-cycle-example/*.sample.json` 属于样板 / fixture 层资产；它们可用于 schema 对齐、workflow 演示和 runtime validation，但不能单独作为中央 registry 回写、项目事实摘要或模块已确认状态的直接证据。
 
@@ -52,7 +53,7 @@
   - `TriCompany`：100 files，1,494 nodes，3,042 edges；已排除 `.tricompany-cognition/`、`vendor/`、依赖目录和构建产物。
   - `TriTest`：0 files，0 nodes，0 edges；当前主要为 PowerShell / Markdown 模板，现有 CodeGraph parser 未产出可用图。
   - `vscodium`：14 files，0 nodes，0 edges；当前只得到仓根 YAML / workflow 配置面的弱语义索引，`.patch` 文件仍未产出可用代码语义图；不对 `vscode/` 上游源码镜像建索引。
-  - 2026-05-26 已继续补齐现役开发模块标配：`TriLC`、`TriMC` 已具备独立 git 仓，`vscodium` 已补齐模块根级 CodeGraph 初始化；后续只在模块真实源码骨架、parser 覆盖能力或 CTO 技术线明确要求出现时，再评估低成熟 / 占位模块。
+  - 2026-05-26 已补齐架构表正式模块标配骨架；后续新增正式模块统一走 `NewModuleBaselineRelease` 与 `TriDev init` 标准动作，在 `Discovery` 阶段完成签核后落地。
 
 ## Quality Risks
 
