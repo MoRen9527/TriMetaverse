@@ -6,7 +6,7 @@
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-04-10T10:30:00+08:00",
-  "updatedAt": "2026-04-10T18:30:00+08:00",
+  "updatedAt": "2026-05-26T21:46:00+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-04-10T00:00:00+08:00",
@@ -20,7 +20,9 @@
     "Tripilot",
     "Tristaciss",
     "TriTest",
-    "Trideployment"
+    "Trideployment",
+    "TriCompany",
+    "TriDev"
   ],
   "dependsOn": [
     "BD-202604-001"
@@ -32,12 +34,12 @@
       "note": "阶段 0/1 优先跑最小闭环、原型上线与内容社区入口"
     },
     {
-      "source": "virtual-company.md",
+      "source": "cyber-company.md",
       "kind": "document",
       "note": "当前推进路线是 CEO 与总助先同步，再形成最小岗位闭环、产品上线与小闭环盈利"
     },
     {
-      "source": "docs/workflow/virtual-company-operating-workflow.md",
+      "source": "docs/workflow/cyber-company-operating-workflow.md",
       "kind": "document",
       "note": "经营计划由 CEOChiefOfStaff 产出，并按 weekly cadence 推进"
     },
@@ -55,6 +57,51 @@
       "source": "User input 2026-04-10",
       "kind": "user-input",
       "note": "新增白皮书缺口、CTO/CPO 优先上岗、COO 后置上岗、MVP 内容重排与多岗位公司管理会安排"
+    },
+    {
+      "source": "User input 2026-05-24",
+      "kind": "user-input",
+      "note": "CEO 要求启用 CMO，负责市场调研、竞品资料、热点、用户需求和行业事件抓取，并把报告交给 CPO；同时由 TriCompany 承载公司级流程，TriDev 只承接产品开发执行段。"
+    },
+    {
+      "source": "User input 2026-05-24T21:23:11+08:00",
+      "kind": "user-input",
+      "note": "CEO 要求 CFO 和 COO 同样上岗：COO 负责运营计划、上线窗口、跨部门执行节奏和复盘闭环；CFO 负责预算护栏、成本结构、盈利检查和财务风险。"
+    },
+    {
+      "source": "User input 2026-05-24T21:45:00+08:00",
+      "kind": "user-input",
+      "note": "CEO 要求开始开发 TriDev，并将 super-dev 更新到最新版后按 reference -> vendor -> real implementation 吸收链进入 TriDev。"
+    },
+    {
+      "source": "User input 2026-05-24T22:26:58+08:00",
+      "kind": "user-input",
+      "note": "CEO 要求 CPO 与 CTO 评估现有开发流程如何与 super-dev 结合，并明确当前跑在 Copilot 宿主、未来宿主由 TriHost 负责，因此第一阶段暂不吸收 super-dev 的宿主接入；TriMetaverse/reference 可作为自动化开发链的一环。"
+    },
+    {
+      "source": "User input 2026-05-24T22:35:55+08:00",
+      "kind": "user-input",
+      "note": "CEO 补充 slash、integrate、网站/demo、backend/frontend 产品壳仍对开发产品有用，应按分层分期吸收，而不是永久排除；第一阶段只是不混入 workflow engine 最小切片。"
+    },
+    {
+      "source": "User input 2026-05-24T22:44:44+08:00",
+      "kind": "user-input",
+      "note": "CEO 要求将“如无特殊，所有文档先用中文”记录给 CompanyGovernanceRegistry，升级为公司级文档要求，并把 TriDev 自有资料改成中文。"
+    },
+    {
+      "source": "User input 2026-05-25T13:48:06+08:00",
+      "kind": "user-input",
+      "note": "CEO 将 TriCompany 承载的公司级端到端经营 / 研发流程命名为集成产品开发流程（IPD 流程）；TriDev 仍只承接产品开发执行段。"
+    },
+    {
+      "source": "User input 2026-05-25T14:00:55+08:00",
+      "kind": "user-input",
+      "note": "CEO 要求将 IPD 细化为主动流程与被动流程：被动侧由 CMO 每日调查汇总公司内外部市场需求并提交 CEO / 总助决策；正式需求下发后接入主动流程，依次协同 CMO、COO、CFO、CPO、CTO、TriDev、CPO 验收、COO 运营和 CFO 决算。"
+    },
+    {
+      "source": "User input 2026-05-25T14:41:41+08:00",
+      "kind": "user-input",
+      "note": "CEO 指出 CloakHQ/CloakBrowser 可作为 CMO 市场雷达的爬虫 / 浏览器自动化候选工具；当前只登记为候选采集工具，需完成 CMO 试点清单、CTO 运行隔离、CFO 成本和 CAO 许可证 / 合规检查。"
     }
   ],
   "nextActions": [
@@ -71,52 +118,151 @@
     },
     {
       "owner": "ChiefTechnologyOfficer",
-        },
-        {
-          "source": "docs/workflow/operating-records/2026-05/BD-202605-001.json",
-          "kind": "document",
-          "note": "2026-05-19 已形成 90 天主线重排目标令候选稿，当前主线改为服务 90 天现金流验证与企业可交付小地基。"
-        },
-        {
-          "source": "User input 2026-05-19",
-          "kind": "user-input",
-          "note": "要求与 TriMetaverse 项目完整融合，对齐边界；停止把自动化开发作为当前主线，保留虚拟公司现状，聚焦 90 天突击计划，并把 COO、CFO、CMO 先作为职责位纳入规划。"
       "action": "利用 Code Registry 对核心模块做代码摸底，形成旧代码复用点、联调风险和自动化开发流程差距清单",
       "dueAt": "2026-04-13T20:00:00+08:00"
     },
     {
       "owner": "ChiefProductOfficer",
       "action": "利用 Product Registry 对核心模块做产品摸底，并与 CTO 一起回头和 CEOChiefOfStaff 沟通第一版 MVP 候选范围",
-        },
-        {
-          "owner": "CEOChiefOfStaff",
-          "action": "同步 BD-202605-001 的 90 天主线重排结论，明确旧的首版 MVP 候选范围已由新的最小经营闭环表述接续。",
-          "dueAt": "2026-05-20T12:00:00+08:00"
-        },
-        {
-          "owner": "ChiefProductOfficer",
-          "action": "输出《90天产品收敛结论》，明确当前窗口内卖什么、卖给谁，以及企业小地基的产品边界。",
-          "dueAt": "2026-05-23T20:00:00+08:00"
-        },
-        {
-          "owner": "ChiefTechnologyOfficer",
-          "action": "输出《90天技术后置清单》，明确自动化开发平台、完整虚拟公司自动化和 PC 端安装包的后置边界。",
-          "dueAt": "2026-05-23T20:00:00+08:00"
-        },
-        {
-          "owner": "CEOChiefOfStaff",
-          "action": "起草 COO、CFO、CMO 的岗位职责、输入输出、授权边界和启用门槛，不写成已正式 live。",
-          "dueAt": "2026-05-24T18:00:00+08:00"
       "dueAt": "2026-04-13T20:00:00+08:00"
     },
     {
       "owner": "CEOChiefOfStaff",
-          "BD-202604-001 受 MVP 内容重排影响，当前属于未正式签发状态，正式签发需要 CEO 书面明确同意以及版本号与指纹对照。",
-          "2026-05-19 起，当前阶段已不再把自动化开发平台作为经营主线，而是改为围绕虚拟公司、90 天突击计划和企业可交付小地基推进。",
-          "COO、CFO、CMO 当前只允许写职责、边界和启用门槛，不写成已正式 live。",
-          "社区奖励当前只允许规则文档和人工记账，不进入链上自动化兑现。",
-          "BD-202605-001 已作为新的 90 天目标令候选稿接续旧的首版 MVP 候选表达，但仍待 CEO 书面签发。"
+      "action": "跟踪 BD-202604-001 与 BD-202605-001 的签发状态、90 天主线重排结论和相关未决约束，避免旧 MVP 候选范围与新最小经营闭环表达混写",
       "dueAt": "2026-04-15T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "同步 BD-202605-001 的 90 天主线重排结论，明确旧的首版 MVP 候选范围已由新的最小经营闭环表述接续。",
+      "dueAt": "2026-05-20T12:00:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "输出《90天产品收敛结论》，明确当前窗口内卖什么、卖给谁，以及企业小地基的产品边界。",
+      "dueAt": "2026-05-23T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "输出《90天技术后置清单》，明确自动化开发平台、完整虚拟公司自动化和 PC 端安装包的后置边界。",
+      "dueAt": "2026-05-23T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "完成 CMO、COO、CFO 的当前 Copilot-host live 启用链路，并将三者纳入 TriCompany 集成产品开发流程（IPD 流程）。",
+      "dueAt": "2026-05-24T18:00:00+08:00"
+    },
+    {
+      "owner": "ChiefMarketingOfficer",
+      "action": "围绕 TriCompany IPD 流程中的候选产品开发输入，输出首份市场调研任务框架：覆盖 TriPilot + vscodium PC 端软件、口播自动剪辑发布工具、自媒体短视频工厂和量化交易软件的竞品、用户、热点与行业事件输入。",
+      "dependsOn": [
+        "User input 2026-05-24"
+      ],
+      "dueAt": "2026-05-25T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefMarketingOfficer",
+      "action": "建立 IPD 市场雷达线的每日 / 每周机会汇总节奏，将公司内外部需求、竞品、热点、用户痛点和风险机会整理为机会候选，提交 CEO / CEOChiefOfStaff 决策；未获正式任务前不得直接触发 TriDev 开发。",
+      "dependsOn": [
+        "TriCompany/docs/workflow/integrated-product-development-flow.md"
+      ],
+      "dueAt": "2026-05-26T12:00:00+08:00"
+    },
+    {
+      "owner": "ChiefMarketingOfficer",
+      "action": "围绕 CloakHQ/CloakBrowser 输出 CMO 市场雷达最小试点清单：限定公开网页、竞品公开页面、公开评论区、公开榜单、行业新闻和热点页面，不涉及登录绕过、账户自动化、敏感系统或未授权数据采集。",
+      "dependsOn": [
+        "TriCompany/docs/workflow/integrated-product-development-flow.md",
+        "https://github.com/CloakHQ/CloakBrowser"
+      ],
+      "dueAt": "2026-05-26T18:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "评估 CloakHQ/CloakBrowser 作为 CMO 市场雷达候选采集工具的运行隔离、版本固定、二进制来源校验、日志、速率限制、失败回滚和是否需要进入 reference -> vendor 吸收链。",
+      "dependsOn": [
+        "ChiefMarketingOfficer CloakBrowser pilot scope",
+        "TriMetaverse/docs/三元宇宙架构与模块说明.md"
+      ],
+      "dueAt": "2026-05-26T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefFinancialOfficer",
+      "action": "评估 CloakHQ/CloakBrowser 市场雷达试点涉及的代理、服务器、存储、调用、维护和停止条件成本。",
+      "dependsOn": [
+        "ChiefMarketingOfficer CloakBrowser pilot scope"
+      ],
+      "dueAt": "2026-05-26T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefAdministrativeOfficer",
+      "action": "核对 CloakHQ/CloakBrowser wrapper MIT 许可与 Chromium binary 单独 Binary License 的内部使用、禁止再分发、禁止打包进对外 SaaS / OEM 服务等边界，并将合规结论交给 CEOChiefOfStaff 收口。",
+      "dependsOn": [
+        "CompanyGovernanceRegistry",
+        "https://github.com/CloakHQ/CloakBrowser"
+      ],
+      "dueAt": "2026-05-26T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "接收 CMO 市场调研报告或 IPD 主动交付线任务后，将可复核市场证据转化为候选产品的 PRD 输入、MVP 边界、项目计划和需求证据包。",
+      "dependsOn": [
+        "ChiefMarketingOfficer market intelligence report"
+      ],
+      "dueAt": "2026-05-26T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefOperatingOfficer",
+      "action": "基于 CMO 市场报告、CPO PRD、CFO 预算护栏和 CTO readiness 输入，形成 IPD 流程候选产品的首版运营计划、上线窗口、试点路径、观察指标和复盘闭环。",
+      "dependsOn": [
+        "ChiefProductOfficer PRD input",
+        "ChiefFinancialOfficer budget guardrails"
+      ],
+      "dueAt": "2026-05-27T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefFinancialOfficer",
+      "action": "为 IPD 流程候选产品建立首版预算护栏、成本结构、盈利假设、模型/API/服务器/工具成本检查和财务风险停止条件。",
+      "dependsOn": [
+        "ChiefMarketingOfficer market intelligence report",
+        "ChiefProductOfficer PRD input"
+      ],
+      "dueAt": "2026-05-27T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "完成 TriDev super-dev 最新 reference 快照、vendor 冻结基线和吸收边界登记，并明确 vendor 不等同 TriDev 自研 workflow engine 已完成。",
+      "dependsOn": [
+        "User input 2026-05-24",
+        "TriMetaverse/docs/三元宇宙架构与模块说明.md"
+      ],
+      "dueAt": "2026-05-24T22:30:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "输出 TriDev 与 super-dev 的产品流程结合方案：将 reference evidence、research、docs confirmation、spec、quality 和 delivery evidence 映射到 TriDev 十阶段流程，并把 slash / command grammar、网站/demo、backend/frontend 产品壳列为后续产品壳和开发者 UX 吸收轨道。",
+      "dependsOn": [
+        "TriDev/docs/workflow/tridev-final-development-flow.md",
+        "TriDev/docs/workflow/super-dev-absorption-record.md"
+      ],
+      "dueAt": "2026-05-24T22:40:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "输出 TriDev 与 super-dev 的技术结合方案：先围绕 TriDevRunState、TriDevGateLedger、TriDevReferenceEvidence 和 TriDevArtifactBinding 设计薄 adapter；slash / skill / integrate、backend/frontend shell 和 host readiness 按 CPO/CTO/TriHost owner 分层后续吸收。",
+      "dependsOn": [
+        "TriDev/vendor/super-dev",
+        "TriHost formal host boundary"
+      ],
+      "dueAt": "2026-05-24T22:40:00+08:00"
+    },
+    {
+      "owner": "ChiefAdministrativeOfficer",
+      "action": "将“中文优先”升级为公司级文档治理规则：除专有名词、命令、代码符号、schema/API 字段、许可证、上游引用、宿主格式字段、对外英文材料和 reference/vendor 上游原文外，公司级与模块级自有资料默认中文优先。",
+      "dependsOn": [
+        "CompanyGovernanceRegistry",
+        "TriCompany/docs/registry/company-governance-state.md"
+      ],
+      "dueAt": "2026-05-24T23:00:00+08:00"
     },
     {
       "owner": "CEOChiefOfStaff",
@@ -132,6 +278,24 @@
       "owner": "CEOChiefOfStaff",
       "action": "启动核心模块资料扫描、旧文档识别与记忆登记基线，先覆盖 TriMetaverse、Tride、Tripilot、Tristaciss，并沉淀模块记忆更新规则",
       "dueAt": "2026-04-16T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "继续根据 Registry 的 Git Health 事实，对 TriMetaverse 根仓中的跨周期 dirty worktree 做提交处理：把技术 / support 侧改动拆成可提交批次，并对暂不提交的混合切片给出冻结说明。",
+      "dependsOn": [
+        "docs/registry/code-state.md",
+        "docs/workflow/operating-records/2026-W15/OP-202604-W15-001.unresolved-items.md"
+      ],
+      "dueAt": "2026-05-27T18:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "按 CTO 对 TriMetaverse 根仓给出的提交批次和冻结说明，把剩余治理、会议、经营记录和非技术切片继续分流给 CAO / 对应 owner，并保持 operating record 的 blockedItems / nextActions 同步更新。",
+      "dependsOn": [
+        "ChiefTechnologyOfficer TriMetaverse root commit batches",
+        "CompanyGovernanceRegistry"
+      ],
+      "dueAt": "2026-05-27T20:00:00+08:00"
     }
   ],
   "approvals": [
@@ -156,15 +320,30 @@
       "产出自动化开发流程现状、旧代码复用点与模块联调优先级清单",
       "完成 4 月 11 日跑派社区周会输入与会后纪要",
       "完成 4 月 14 日 OpenClaw 培训并形成后续社区分享动作",
-      "在各岗位到岗和资料梳理后，组织首轮多岗位公司管理会并同步各自记忆"
+      "在各岗位到岗和资料梳理后，组织首轮多岗位公司管理会并同步各自记忆",
+      "完成 CMO / COO / CFO 当前 Copilot-host live 启用，并启动 TriCompany 集成产品开发流程（IPD 流程）的市场、产品、运营、财务、技术协同链路",
+      "完成 TriCompany IPD 双线闭环流程设计：IPD 市场雷达线负责机会发现，IPD 主动交付线负责正式需求到开发、验收、运营和决算",
+      "完成 CloakHQ/CloakBrowser 作为 CMO 市场雷达候选采集工具的初步登记，并启动 CMO / CTO / CFO / CAO 准入检查",
+      "完成 super-dev reference / vendor 吸收基线，作为 TriDev 自动化开发链路的上游能力拆解起点",
+      "完成 CPO / CTO 对 TriDev × super-dev 结合方案的首轮判断：第一阶段吸收流程治理、状态、确认门、证据与质量门；slash、integrate、网站/demo、backend/frontend 产品壳进入分层分期吸收轨道",
+      "完成 CompanyGovernanceRegistry 对公司级中文优先文档规则的登记，并将 TriDev 自有资料改为中文优先"
     ],
     "workstreams": [
       "CEO 与总助白皮书/商业模式/模块理解对齐",
       "CEO 与总助经营同步及白皮书缺口讨论",
       "CTO/CPO 优先上岗与模块摸底",
-      "COO 后置上岗与首版 MVP 计划",
+      "CMO 市场情报、竞品调研与 PRD 前置证据交接",
+      "IPD 市场雷达线：公司内外部机会发现、每日 / 每周汇总和 CEO / 总助决策输入",
+      "CMO 市场雷达候选采集工具：CloakHQ/CloakBrowser 最小试点、运行隔离、成本和许可证 / 合规检查",
+      "IPD 主动交付线：正式需求下发后的市场、运营、财务、产品、技术、开发、验收、运营接管和决算闭环",
+      "COO 运营计划、rollout 窗口与复盘闭环",
+      "CFO 预算护栏、盈利检查与财务风险",
       "资料管理、文档清理与记忆登记",
-      "自动化开发流程梳理与旧代码复用",
+      "集成产品开发流程（IPD 流程）与旧代码复用",
+      "TriDev super-dev reference / vendor 吸收链与后续 adapter 设计",
+      "TriDev reference evidence、gate ledger 与 run state 最小闭环设计",
+      "TriDev slash / command grammar、integrate、产品壳、dashboard / API / 控制面分层吸收设计",
+      "公司级文档治理与中文优先资料规范",
       "社区周会、OpenClaw 培训与多岗位公司管理会知识回流"
     ],
     "blockedItems": [
@@ -174,7 +353,12 @@
       "资料管理尚未完成模块级全面扫描，旧文档与无效文档识别、记忆登记与后续更新机制尚未建立。",
       "自动化开发流程尚未落地，旧代码复用、现有模块联调与新功能开发路径仍未收敛。",
       "第一版 MVP 的上线内容需要重新调整，不再直接沿用当前记录的社区入口及相关模块范围。",
-      "BD-202604-001 受 MVP 内容重排影响，当前属于未正式签发状态，正式签发需要 CEO 书面明确同意以及版本号与指纹对照。"
+      "BD-202604-001 受 MVP 内容重排影响，当前属于未正式签发状态，正式签发需要 CEO 书面明确同意以及版本号与指纹对照。",
+      "CMO / COO / CFO 虽已进入当前 Copilot-host live 启用链路，但自动联网抓取、定时任务、生产级市场数据管道、自动运营看板、自动结算、链上预算和 TriMC 正式宿主能力尚未落地。",
+      "TriDev 已建立 super-dev reference / vendor 基线，并已落地 Copilot-host 本地开发执行 engine 可靠性切片；但完整岗位联动自动开发 adapter、版本签发协议和生产级交付平台尚未落地。",
+      "TriDev 第一阶段不把 super-dev 的 host adapter、multi-host readiness、slash / integrate、网站/demo、backend/frontend 产品壳混入 workflow engine 最小切片；其中 host adapter 与 readiness 归 TriHost 后续处理，产品入口与产品壳能力归 CPO/CTO 分层吸收。",
+      "CloakHQ/CloakBrowser 可作为 CMO 市场雷达候选工具，但尚未完成合规、成本、运行隔离、版本固定、二进制许可和最小试点验证；不得写成生产级市场数据管道或自动化爬虫能力已落地。",
+      "TriMetaverse 根仓当前仍存在约 128 条跨周期 dirty worktree；`TriDev` 与 `TriCompany` 已于 2026-05-26 完成首轮提交收口并恢复 clean worktree，剩余根仓混合切片仍需由 CTO 继续拆批处理。"
     ],
     "escalationRules": [
       "若 CTO 或 CPO 到 2026-04-13 仍未形成模块摸底结论，则升级 CEO 直接裁定首版 MVP 收敛范围。",
@@ -188,12 +372,12 @@
       "CEO 与 CEOChiefOfStaff 完成对白皮书缺口、岗位启用顺序和候选目标令的本周确认。",
       "完成 CEO 与 CEOChiefOfStaff 的白皮书、商业模式、价值流转和模块作用理解对齐会，并形成记忆更新清单。",
       "CTO 与 CPO 完成核心模块 registry 摸底，并形成首版 MVP 候选范围。",
-      "明确 COO 上岗前提，并准备首版 MVP 上线计划输入。",
+      "完成 COO 当前 Copilot-host live 启用，并准备 TriDev 候选产品首版运营计划输入。",
       "至少完成 TriMetaverse、Tride、Tripilot、Tristaciss 四个核心模块的扫描优先级与负责人草案。",
       "形成旧文档与无效文档识别规则、记忆更新规则初稿。",
       "形成自动化开发流程现状差距、旧代码复用点与联调优先级清单。",
       "跑派社区周会、OpenClaw 培训和首轮多岗位公司管理会均形成可回流的纪要、学习摘要或后续动作。",
-      "完成当前 90 天主线重排说明、产品收敛结论、技术后置清单和 COO/CFO/CMO 职责草案。"
+      "完成当前 90 天主线重排说明、产品收敛结论、技术后置清单、CMO 首份市场调研交接、COO 首版运营计划输入和 CFO 首版预算护栏输入。"
     ]
   },
   "metadata": {
@@ -210,7 +394,83 @@
       "白皮书、商业模式、价值流转、模块作用和首版 MVP 范围的下一轮对齐结论",
       "CPO 的 90 天产品收敛结论",
       "CTO 的 90 天技术后置清单",
-      "COO、CFO、CMO 的职责和启用门槛草案"
+      "CMO 的首份市场调研报告与向 CPO 的 PRD 前置证据交接",
+      "COO 的 IPD 流程候选产品首版运营计划",
+      "CFO 的 IPD 流程候选产品首版预算护栏和财务风险清单",
+      "TriDev 基于 super-dev 的首个 wrapper / adapter 设计和最小可执行闭环",
+      "TriHost 对未来正式宿主适配、host adapter 与 multi-host readiness 的接管方案",
+      "CPO/CTO 对 slash / command grammar、integrate、网站/demo、backend/frontend 产品壳的分层吸收排序",
+      "CAO 对公司级中文优先文档规则的后续执行检查",
+      "CTO 基于 Registry Git Health 事实输出 TriMetaverse 根仓剩余跨周期 dirty worktree 的提交批次和冻结说明",
+      "TriMetaverse 根仓 dirty 切片继续收口后的最新 Git Health 摘要"
+    ],
+    "gitHealthEscalationPending": true,
+    "gitHealthCommittedModules": [
+      {
+        "module": "TriDev",
+        "commit": "2e815e225beb46c71c217e39d76003feb38d5613",
+        "status": "committed-clean"
+      },
+      {
+        "module": "TriCompany",
+        "commit": "f1fddb9ee926d1a6f61902ef94236d3535ac87e1",
+        "status": "committed-clean"
+      }
+    ],
+    "crossCycleDirtyModules": [
+      {
+        "module": "TriMetaverse",
+        "dirtyEntries": 128,
+        "status": "pending-commit-batching"
+      },
+      {
+        "module": "TriCompany",
+        "dirtyEntries": 0,
+        "status": "committed-clean"
+      },
+      {
+        "module": "TriDev",
+        "dirtyEntries": 0,
+        "status": "committed-clean"
+      }
+    ],
+    "workspacePathsWithoutGitRepo": [
+      "TriLC",
+      "TriMC"
+    ],
+    "currentCopilotHostLiveRoles": [
+      "CEOChiefOfStaff",
+      "ChiefProductOfficer",
+      "ChiefTechnologyOfficer",
+      "ChiefHumanResourcesOfficer",
+      "ChiefAdministrativeOfficer",
+      "ChiefMarketingOfficer",
+      "ChiefOperatingOfficer",
+      "ChiefFinancialOfficer"
+    ],
+    "companyWorkflowCanonicalName": "集成产品开发流程（IPD 流程）",
+    "companyWorkflowCanonicalId": "IPD",
+    "companyWorkflowBoundary": "由 TriCompany 承载 CEO 需求进入、CMO/COO/CFO/CPO/CTO 协同、开发分派、CPO 验收、COO 运营接管、CFO 决算和总助收口；TriDev 只承接产品开发执行段。",
+    "companyWorkflowOperatingName": "TriCompany IPD 双线闭环",
+    "companyWorkflowLines": [
+      "IPD 市场雷达线",
+      "IPD 主动交付线"
+    ],
+    "companyWorkflowSource": "TriCompany/docs/workflow/integrated-product-development-flow.md",
+    "companyWorkflowSupportCopy": "TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md",
+    "marketRadarCandidateTools": [
+      {
+        "name": "CloakBrowser",
+        "source": "https://github.com/CloakHQ/CloakBrowser",
+        "status": "candidate-pending-gates",
+        "intendedUse": "CMO IPD 市场雷达线公开市场资料采集验证",
+        "requiredGates": [
+          "CMO pilot scope",
+          "CTO runtime isolation and version pinning",
+          "CFO cost guardrail",
+          "CAO license and compliance review"
+        ]
+      }
     ]
   }
 }
