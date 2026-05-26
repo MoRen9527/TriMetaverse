@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "tmv/workflow/virtual-company-phase-link.schema.json",
+  "$id": "tmv/workflow/cyber-company-phase-link.schema.json",
   "title": "VirtualCompanyPhaseLink",
   "description": "经营对象到研发阶段结果的桥接结构。branchId 是通用分支标识，可指向 PRD 分支，也可指向功能、技能或宿主试运行分支；只有当它实际指向 PRD 分支且对象直接治理 DESIGNING 到 ASSURANCE 的实现链时，才应额外采用 docs bootstrap 约定。",
   "type": "object",

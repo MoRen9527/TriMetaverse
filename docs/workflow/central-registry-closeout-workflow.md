@@ -9,7 +9,7 @@
 1. 哪些 registry 可以并行处理，哪些必须升级。
 1. 四层记忆应该如何落到 registry 收口语义上，以及当前哪些部分仍属于规划。
 
-本文件是 [virtual-company-operating-workflow.md](./virtual-company-operating-workflow.md) 的专项补充，不替代中央战略真源、模块 registry 真源或秘书处机制。
+本文件是 [cyber-company-operating-workflow.md](./cyber-company-operating-workflow.md) 的专项补充，不替代中央战略真源、模块 registry 真源或秘书处机制。
 
 registry owner 分工的源侧规则来自 TriCompany 虚拟公司源侧：`../../../TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`、`../../../TriCompany/docs/registry/product-state.md`、`../../../TriCompany/docs/registry/code-state.md` 与 `../../../TriCompany/docs/workflow/chief-administrative-officer-role.md`；本文只记录 TriMetaverse 工程侧收口执行方式。
 

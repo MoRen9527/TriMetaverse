@@ -31,7 +31,7 @@
 - `../../AGENTS.md`
 - `../../tmv-whitepaper.md`
 - `../../project.md`
-- `../../virtual-company.md`
+- `../../cyber-company.md`
 - `./business-strategy-state.md`
 - `./business-strategy-module-map.md`
 - `./business-strategy-boundaries.md`

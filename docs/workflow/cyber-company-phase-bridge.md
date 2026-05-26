@@ -20,7 +20,7 @@
 ### 2.2 统一字段
 
 - 经营对象通过 `workflowRefs` 字段引用研发主流程。
-- `workflowRefs` 中的每个元素都应满足 `virtual-company-phase-link.schema.json`。
+- `workflowRefs` 中的每个元素都应满足 `cyber-company-phase-link.schema.json`。
 
 ### 2.3 最小必要引用
 

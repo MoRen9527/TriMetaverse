@@ -6,7 +6,7 @@
 - 在当前命名体系下，研发 10 阶段主流程主控统一命名为 `Development Main Controller`。
 - 本文如果提到服务域主控，应以 `Task Main Controller` 为准，而不是历史性的 `Main Controller` 泛称。
 - 文中涉及研发宿主迁移时，统一应理解为到 `TriMetaverse V1 正式上线切换阶段` 迁入 `Tride`。
-- 若本文与现行真源冲突，以 `project.md`、`virtual-company.md`、`docs/workflow/terminology.md` 与 `docs/workflow/workflow-host-integration.md` 为准。
+- 若本文与现行真源冲突，以 `project.md`、`cyber-company.md`、`docs/workflow/terminology.md` 与 `docs/workflow/workflow-host-integration.md` 为准。
 
 ## 1. 目的
 

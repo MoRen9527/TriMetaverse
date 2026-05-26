@@ -2,7 +2,7 @@
 
 ## 1. 目标
 
-本文件把 `virtual-company-agent-roles.md` 中的关键协作对象收敛为可复用的标准交接对象，避免虚拟公司后续继续依赖模糊自然语言流转任务。
+本文件把 `cyber-company-agent-roles.md` 中的关键协作对象收敛为可复用的标准交接对象，避免虚拟公司后续继续依赖模糊自然语言流转任务。
 
 本文件解决三类问题：
 
@@ -28,7 +28,7 @@
 
 ### 3.1 统一 Envelope
 
-所有交接对象都应先满足 `virtual-company-handoff-envelope.schema.json` 的基础结构。
+所有交接对象都应先满足 `cyber-company-handoff-envelope.schema.json` 的基础结构。
 
 ### 3.2 先少后多
 
@@ -416,8 +416,8 @@
 
 经营对象到研发阶段的标准桥接规范见：
 
-- `virtual-company-phase-link.schema.json`
-- `virtual-company-phase-bridge.md`
+- `cyber-company-phase-link.schema.json`
+- `cyber-company-phase-bridge.md`
 
 ## 10. 模板目录
 

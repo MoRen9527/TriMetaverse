@@ -14,7 +14,7 @@
 - 若需要对外分享当周在项目推进中观察到的大模型能力问题、使用体验与实践经验，统一使用项目级 AI 共学周记，按周落在对应 `YYYY-Wnn/` 目录
 - 项目级 AI 共学周记的 CEO 签发版本统一归档到 `项目级 AI 共学周记/`，便于后续按周查阅和对外分享
 - 若真实执行中出现已提交或已关闭的 `PRD_OWNERSHIP_ROUTING`，也应落在本目录，而不是留在 `handoff-templates/` 或 `operating-cycle-example/`
-- 公司级会议组织、纪要整理和回填规则，统一见 `../virtual-company-secretariat.md`
+- 公司级会议组织、纪要整理和回填规则，统一见 `../cyber-company-secretariat.md`
 
 编号规则：
 

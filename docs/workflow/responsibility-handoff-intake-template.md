@@ -115,5 +115,5 @@
 
 - `handoff-templates/responsibility-handoff.example.json`
 - `responsibility-handoff.schema.json`
-- `virtual-company-handoff-objects.md`
+- `cyber-company-handoff-objects.md`
 - `TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md`

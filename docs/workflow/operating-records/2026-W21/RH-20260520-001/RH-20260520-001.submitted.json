@@ -43,7 +43,7 @@
       "note": "在 CHO 尚未独立上岗前，交接治理仍由 CEOChiefOfStaff 代管。"
     },
     {
-      "source": "docs/workflow/virtual-company-handoff-objects.md",
+      "source": "docs/workflow/cyber-company-handoff-objects.md",
       "kind": "document",
       "note": "RESPONSIBILITY_HANDOFF 已作为中央标准经营对象注册。"
     }
@@ -88,7 +88,7 @@
       "TriCompany/docs/workflow/chief-human-resources-officer-role.md",
       "TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md",
       "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
-      "TriMetaverse/docs/workflow/virtual-company-handoff-objects.md"
+      "TriMetaverse/docs/workflow/cyber-company-handoff-objects.md"
     ],
     "supportAssets": [
       "TriCompany/.github/binding-profiles/chief-human-resources-officer.json",

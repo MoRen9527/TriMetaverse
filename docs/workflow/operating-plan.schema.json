@@ -4,7 +4,7 @@
   "title": "OperatingPlan",
   "allOf": [
     {
-      "$ref": "tmv/workflow/virtual-company-handoff-envelope.schema.json"
+      "$ref": "tmv/workflow/cyber-company-handoff-envelope.schema.json"
     },
     {
       "type": "object",

@@ -32,12 +32,12 @@
 
 1. `tmv-whitepaper.md`
 2. `project.md`
-3. `virtual-company.md`
+3. `cyber-company.md`
 4. `docs/三元宇宙架构与模块说明.md`
-5. `docs/workflow/virtual-company-agent-roles.md`
+5. `docs/workflow/cyber-company-agent-roles.md`
 6. `docs/registry/*.md`
 
-说明：`docs/三元宇宙架构与模块说明.md` 用于承接项目级架构说明、模块说明与 `reference` 层口径，不替代白皮书、`project.md` 或 `virtual-company.md`；`docs/registry/*.md` 是工作型登记层，也不替代上面的真源文档。出现冲突时以上游真源为准。
+说明：`docs/三元宇宙架构与模块说明.md` 用于承接项目级架构说明、模块说明与 `reference` 层口径，不替代白皮书、`project.md` 或 `cyber-company.md`；`docs/registry/*.md` 是工作型登记层，也不替代上面的真源文档。出现冲突时以上游真源为准。
 
 - 项目级持久偏好、会议回填口径、宿主资产边界和运营事实必须落在仓库文件中；Copilot `memory-tool` 的 user/session/repo scope 只视为宿主侧缓存或临时辅助，不视为项目真源。
 

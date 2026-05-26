@@ -19,9 +19,9 @@
 
 1. `../../tmv-whitepaper.md`
 2. `../../project.md`
-3. `../../virtual-company.md`
+3. `../../cyber-company.md`
 4. `../三元宇宙架构与模块说明.md`
-5. `../workflow/virtual-company-agent-roles.md`
+5. `../workflow/cyber-company-agent-roles.md`
 
 涉及当前 TriCompany 宿主治理、published-copy 或 support bundle 资料时，默认先回到上面的项目级真源与 `../workflow/tricompany-copilot-host-assets-governance.md`，不要把 `TriCompany-copilot-host-assets/**` 当作 registry 层的默认事实入口。
 

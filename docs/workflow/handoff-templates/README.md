@@ -29,7 +29,7 @@
 
 ## 说明
 
-- 所有模板都遵循 `../virtual-company-handoff-envelope.schema.json` 的基础结构。
+- 所有模板都遵循 `../cyber-company-handoff-envelope.schema.json` 的基础结构。
 - 对象专属字段统一放在 `payload`。
 - `schedule-spec.example.json` 表示通用定时任务模板，不只服务技能执行，也可用于提醒、邮件和固定检查点任务。
 - `prd-ownership-routing.example.json` 用于 PRD 归属未明时，先冻结 docs bootstrap 并向当前阶段 `ChiefProductOfficer` 发起产品侧路由请求；`CEOChiefOfStaff` 只负责公司级任务分派、催办、升级与收口。

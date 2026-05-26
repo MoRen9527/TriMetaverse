@@ -10,7 +10,7 @@
 
 ### 当前默认经营实验
 
-- 默认采用 `virtual-company.md` 中离收入最近的方向 A 作为首轮试点
+- 默认采用 `cyber-company.md` 中离收入最近的方向 A 作为首轮试点
 - 首轮重点模块为 `TriMetaverse`、`Tristaciss`、`Tride`、`Tripilot`、`Triavatar`、`Trideployment`、`TriTest`
 
 ### 当前特殊约束
@@ -37,7 +37,7 @@
 ### 来源
 
 - `../../project.md`
-- `../../virtual-company.md`
+- `../../cyber-company.md`
 - `../workflow/terminology.md`
 - `../workflow/workflow-host-integration.md`
 - `../三元宇宙架构与模块说明.md`

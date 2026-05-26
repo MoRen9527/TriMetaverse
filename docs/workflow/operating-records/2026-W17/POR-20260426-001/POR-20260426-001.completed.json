@@ -28,7 +28,7 @@
       "note": "总助完成路由结论后，方可解除 docs bootstrap 冻结"
     },
     {
-      "source": "docs/workflow/virtual-company-handoff-objects.md",
+      "source": "docs/workflow/cyber-company-handoff-objects.md",
       "kind": "document",
       "note": "该对象完成后，可继续切到 ChiefProductOfficer 或 ChiefTechnologyOfficer"
     }

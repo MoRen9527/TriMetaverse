@@ -21,7 +21,7 @@ user-invocable: true
 ## 项目级真源路由
 
 - 涉及项目整体架构、模块说明、`reference` 层、开源吸收链、模块 `vendor/` 布局与“最小版先跑通”时，默认查看 `docs/三元宇宙架构与模块说明.md`。
-- 涉及项目级真源顺序时，按 `tmv-whitepaper.md -> project.md -> virtual-company.md -> docs/三元宇宙架构与模块说明.md -> docs/workflow/*.md -> docs/registry/*.md` 的顺序判断。
+- 涉及项目级真源顺序时，按 `tmv-whitepaper.md -> project.md -> cyber-company.md -> docs/三元宇宙架构与模块说明.md -> docs/workflow/*.md -> docs/registry/*.md` 的顺序判断。
 - 模块级 `BusinessStrategyRegistry`、`Product Registry` 或 `Code Registry` 尚未落地时，默认回到该模块根目录的 `AGENTS.md`、`README.md`、设计文档和源代码树，并显式报告资料缺口。
 - 除非用户明确要求“记录”或“更新”，不要主动改写 `docs/registry/*.md` 这类登记层文档。
 - 如问题触及新的长期主模块、既有模块边界变化或正式宿主边界变化，先咨询 `BusinessStrategy`，再继续给出判断。
@@ -67,11 +67,11 @@ user-invocable: true
 在给出判断、计划或会议结论前，按顺序核查：
 
 1. 当前用户 / CEO 的最新明确输入。
-2. 如问题触及项目级架构、模块边界或开源吸收链，先核查 TriMetaverse 的 `tmv-whitepaper.md`、`project.md`、`virtual-company.md` 与 `docs/三元宇宙架构与模块说明.md`。
+2. 如问题触及项目级架构、模块边界或开源吸收链，先核查 TriMetaverse 的 `tmv-whitepaper.md`、`project.md`、`cyber-company.md` 与 `docs/三元宇宙架构与模块说明.md`。
 3. 默认先核查 `TriCompany/docs/product/PROJECT.md`、`REQUIREMENTS.md`、`STATE.md`；只有当前宿主明确只挂接 support 发布副本、或需要核对 published-copy 差异时，才补看 `TriCompany-copilot-host-assets/docs/product/**`。
 4. 默认先核查 `TriCompany/docs/engineering/DESIGN.md`、`metacognition-architecture.md` 与当前技术状态；只有当前宿主特有发布副本、phase 证据或 support-only 说明相关时，才补看 `TriCompany-copilot-host-assets/docs/engineering/**`。
 5. 默认先核查 `TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`、`hermes-copilot-host-migration.md`、`github-backport-manifest.md`；只有当前宿主 published-copy、runbook 或 support-only evidence 相关时，才补看 `TriCompany-copilot-host-assets/docs/workflow/**`。
-6. 默认先核查 `TriCompany/docs/workflow/virtual-company-secretariat.md`；只有当前宿主已发布副本与 source 真源出现差异、或需要核对 support 侧 operator 用法时，才补看 `TriCompany-copilot-host-assets/docs/workflow/**`。
+6. 默认先核查 `TriCompany/docs/workflow/cyber-company-secretariat.md`；只有当前宿主已发布副本与 source 真源出现差异、或需要核对 support 侧 operator 用法时，才补看 `TriCompany-copilot-host-assets/docs/workflow/**`。
 7. 默认先核查 `TriCompany/docs/registry/product-state.md` 与 `code-state.md`；只有需要核对 active published-copy 状态副本时，才补看 `TriCompany-copilot-host-assets/docs/registry/**`。
 8. 如果问题跨越正式模块边界、宿主边界或总商业模式，再回查 TriMetaverse 的 `BusinessStrategy` 和中央真源。
 

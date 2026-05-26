@@ -24,7 +24,7 @@
 ### 2.1 正式命名当前记忆架构
 
 - 当前虚拟公司的记忆架构正式命名为“虚拟公司四层记忆协同系统”。
-- 该概念的长期说明文档已单独落档：`TriCompany/docs/engineering/virtual-company-four-layer-memory-collaboration-system.md`。
+- 该概念的长期说明文档已单独落档：`TriCompany/docs/engineering/cyber-company-four-layer-memory-collaboration-system.md`。
 - 后续如果需要调出虚拟公司记忆系统架构与工作流程，优先回看该文档。
 
 ### 2.2 耐久记忆写入规则
@@ -95,5 +95,5 @@
 ## 6. 回看入口
 
 - 当前会议纪要：`docs/workflow/operating-records/2026-W17/meeting-2026-04-20-ceo-chief-of-staff-capability-and-alignment.md`
-- 四层记忆概念主档：`TriCompany/docs/engineering/virtual-company-four-layer-memory-collaboration-system.md`
+- 四层记忆概念主档：`TriCompany/docs/engineering/cyber-company-four-layer-memory-collaboration-system.md`
 - 当前总助耐久记忆：`.github/agents/ceo-chief-of-staff.memory.md`

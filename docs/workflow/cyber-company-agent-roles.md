@@ -8,7 +8,7 @@
 
 ## 1. 文档定位
 
-本文是 [virtual-company.md](../../virtual-company.md) 的执行化补充，用于把 TriMetaverse 虚拟公司的高层岗位转写为可被 Agent 实现、可被工作流编排、可被审计和可被替换的角色定义。
+本文是 [cyber-company.md](../../cyber-company.md) 的执行化补充，用于把 TriMetaverse 虚拟公司的高层岗位转写为可被 Agent 实现、可被工作流编排、可被审计和可被替换的角色定义。
 
 本文关注的是“角色 contract”，不是最终 prompt，也不是最终技术实现。后续无论使用本地 Agent、服务端 Agent、人工参与节点，还是链上治理接口，都应优先遵守本文定义的职责边界、输入输出与升级规则。
 
@@ -209,7 +209,7 @@
 | 降级策略 | 由运营 Agent 临时代理节奏编排，CEO 直接接管审批 |
 | 审计字段 | 计划版本、参与角色、任务重排记录、风险等级、超时记录、同步状态、记忆更新记录、会议纪要、责任人与截止时间 |
 
-说明：公司会议组织、纪要整理、会后回填和归档纪律属于秘书处机制，统一见 `docs/workflow/virtual-company-secretariat.md`。该机制归 CAO / 行政管理侧统管，事实层由 `CompanyGovernanceRegistry` 维护；在 CAO 尚未独立上岗前，`CEO 总助 Agent` 仅代管秘书处日常运行责任。岗位启用、职责交接与 completion tracking 属于 CHO / 人力资源侧。
+说明：公司会议组织、纪要整理、会后回填和归档纪律属于秘书处机制，统一见 `docs/workflow/cyber-company-secretariat.md`。该机制归 CAO / 行政管理侧统管，事实层由 `CompanyGovernanceRegistry` 维护；在 CAO 尚未独立上岗前，`CEO 总助 Agent` 仅代管秘书处日常运行责任。岗位启用、职责交接与 completion tracking 属于 CHO / 人力资源侧。
 
 ## 7.4 市场 Agent
 
@@ -371,8 +371,8 @@
 
 标准对象目录与基础 envelope 已下沉到：
 
-- `virtual-company-handoff-objects.md`
-- `virtual-company-handoff-envelope.schema.json`
+- `cyber-company-handoff-objects.md`
+- `cyber-company-handoff-envelope.schema.json`
 
 | 对象名 | 产生者 | 消费者 | 用途 |
 | --- | --- | --- | --- |
@@ -430,10 +430,10 @@
 
 基于本文，当前已落地的衔接资产包括：
 
-1. `virtual-company-handoff-objects.md`
-2. `virtual-company-handoff-envelope.schema.json`
+1. `cyber-company-handoff-objects.md`
+2. `cyber-company-handoff-envelope.schema.json`
 3. `handoff-templates/`
-4. `virtual-company-operating-workflow.md`
+4. `cyber-company-operating-workflow.md`
 
 下一步最自然的文档产物是：
 

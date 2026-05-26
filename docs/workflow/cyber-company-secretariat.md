@@ -113,8 +113,8 @@
 
 ## 8. 关联文档
 
-- `virtual-company.md`
-- `virtual-company-agent-roles.md`
-- `virtual-company-operating-workflow.md`
+- `cyber-company.md`
+- `cyber-company-agent-roles.md`
+- `cyber-company-operating-workflow.md`
 - `operating-records/README.md`
 - `../registry/company-governance-state.md`

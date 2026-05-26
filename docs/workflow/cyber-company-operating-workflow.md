@@ -2,7 +2,7 @@
 
 ## 1. 目标
 
-本文件把 `virtual-company.md` 中的“公司自动运转流程”下沉为可执行的经营主工作流，用来回答三个问题：
+本文件把 `cyber-company.md` 中的“公司自动运转流程”下沉为可执行的经营主工作流，用来回答三个问题：
 
 1. 虚拟公司每一轮经营循环按什么顺序推进。
 1. 每一步由哪个 Role Agent 主责，交接什么对象。
@@ -15,10 +15,10 @@
 本工作流以以下资产为真源和依赖：
 
 1. `BusinessStrategy`
-1. `virtual-company.md`
-1. `virtual-company-agent-roles.md`
-1. `virtual-company-handoff-objects.md`
-1. `virtual-company-handoff-envelope.schema.json`
+1. `cyber-company.md`
+1. `cyber-company-agent-roles.md`
+1. `cyber-company-handoff-objects.md`
+1. `cyber-company-handoff-envelope.schema.json`
 1. 模块级 `BusinessStrategyRegistry`、`Product Registry` 和 `Code Registry`，以及公司级 `CompanyGovernanceRegistry`
 1. TriCompany 源侧 registry owner 分工：`../../../TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`、`../../../TriCompany/docs/registry/product-state.md`、`../../../TriCompany/docs/registry/code-state.md` 与 `../../../TriCompany/docs/workflow/chief-administrative-officer-role.md`
 1. 研发主流程资产：`workflow-engine-spec.md`、`phase-result.schema.json`、`quality-gates.schema.json`
@@ -142,8 +142,8 @@
 
 经营对象若要引用具体研发执行轮次和阶段，应使用：
 
-- `virtual-company-phase-link.schema.json`
-- `virtual-company-phase-bridge.md`
+- `cyber-company-phase-link.schema.json`
+- `cyber-company-phase-bridge.md`
 
 ## 8. 无 CEO 模式
 

@@ -98,6 +98,7 @@
 
 - `TriCompany/runtime/` 与 `TriCompany/vendor/` 是源码真源。
 - `TriCompany-copilot-host-assets/runtime/` 与 `vendor/` 只允许承接已发布到当前宿主的运行副本和当前宿主验证辅助代码。
+- `TriCompany-copilot-host-assets/vendor/` 当前保留的是从 `TriCompany/vendor/reference/` 发布出来的冻结 `reference` 副本，不是 support 侧独立研发留下的第二真源；若后续某份 vendor 内容不再服务当前宿主验证，应优先在源侧裁剪，再在下一轮发布时一并移除 support 副本。
 - 需要拆开判断 LLM wiki 的“机制实现”和“对象载荷”：
   - 机制实现、对象规范、编译 / 升格 / 审批 / report / workbench / recall checkpoint 与 cognition backend 等长期能力，真源在 `TriCompany/docs/workflow/`、`TriCompany/docs/engineering/`、`TriCompany/runtime/cognition/` 与 `TriCompany/vendor/reference/`。其中 `vendor/reference/hermes-agent-memory/` 只是 Hermes 参考冻结副本，实际改造与实现应落回 `runtime/cognition/`。
   - `TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/**` 与 `docs/execution/**/schedules/*.json` 指当前宿主直接消费或生成的对象载荷 / 对象集；旧 `knowledge/chief-of-staff/**` 已降为 deprecated legacy 兼容对象，只保留历史兼容和回滚参考。当前按迁移矩阵中的宿主对象分层治理，不纳入 docs published-copy manifest，也不代表 LLM wiki 机制本身以支撑包为真源。
@@ -250,7 +251,7 @@
 - `TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md`
 - `TriCompany-copilot-host-assets/docs/workflow/github-backport-manifest.md`
 - `TriCompany-copilot-host-assets/docs/workflow/hermes-copilot-host-migration.md`
-- `TriCompany-copilot-host-assets/docs/workflow/virtual-company-secretariat.md`
+- `TriCompany-copilot-host-assets/docs/workflow/cyber-company-secretariat.md`
 
 这些文档一旦 source 发生稳定语义变化，应在同轮或下一轮立即把 support 副本追平，避免当前宿主仍读取旧口径。
 
@@ -269,7 +270,7 @@
 - `TriCompany-copilot-host-assets/docs/engineering/chief-of-staff-llm-wiki-priority-plan.md`
 - `TriCompany-copilot-host-assets/docs/engineering/cognition-runtime-module-plan.md`
 - `TriCompany-copilot-host-assets/docs/engineering/hermes-memory-subsystem-comparison.md`
-- `TriCompany-copilot-host-assets/docs/engineering/virtual-company-four-layer-memory-collaboration-system.md`
+- `TriCompany-copilot-host-assets/docs/engineering/cyber-company-four-layer-memory-collaboration-system.md`
 - `TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-llm-wiki-object-spec.md`
 
 这类文档的默认动作应是：
@@ -385,4 +386,4 @@ support bundle 下的 baseline / archive 目录索引页也属于 `audit-record`
 - `TriCompany-copilot-host-assets/docs/workflow/github-backport-manifest.md`
 - `docs/workflow/tricompany-copilot-host-assets-migration-matrix.md`
 - `docs/三元宇宙架构与模块说明.md`
-- `docs/workflow/virtual-company-operating-workflow.md`
+- `docs/workflow/cyber-company-operating-workflow.md`

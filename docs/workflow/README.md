@@ -20,10 +20,10 @@
 - `phase-result.schema.json`：阶段结果统一结构
 - `quality-gates.schema.json`：门禁规则结构
 - `../runs/README.md`：真实执行记录与稳定 `PhaseResult` 产物目录规范
-- `virtual-company-handoff-objects.md`：虚拟公司经营层标准交接对象目录
-- `virtual-company-handoff-envelope.schema.json`：虚拟公司交接对象基础结构
-- `virtual-company-phase-link.schema.json`：经营对象到研发阶段的桥接引用结构
-- `virtual-company-phase-bridge.md`：经营对象与 `PhaseResult` 的桥接规范，含 branch-aware 对象的 docs bootstrap 约定
+- `cyber-company-handoff-objects.md`：虚拟公司经营层标准交接对象目录
+- `cyber-company-handoff-envelope.schema.json`：虚拟公司交接对象基础结构
+- `cyber-company-phase-link.schema.json`：经营对象到研发阶段的桥接引用结构
+- `cyber-company-phase-bridge.md`：经营对象与 `PhaseResult` 的桥接规范，含 branch-aware 对象的 docs bootstrap 约定
 - `board-directive.schema.json`：目标令结构
 - `operating-plan.schema.json`：经营计划单结构
 - `budget-check.schema.json`：预算校验单结构
@@ -39,11 +39,11 @@
 - `prd-ownership-routing-intake-template.md`：PRD 归属路由的自然语言 intake 模板
 - `responsibility-handoff-intake-template.md`：岗位职责交接的自然语言 intake 模板
 - `handoff-templates/`：虚拟公司经营层交接对象填写样板
-- `virtual-company-operating-workflow.md`：虚拟公司经营主工作流骨架
+- `cyber-company-operating-workflow.md`：虚拟公司经营主工作流骨架
 - `central-registry-closeout-workflow.md`：中央 registry 收口工作流与四层记忆映射
 - `../../.github/prompts/中央收口输出模板.prompt.md`：`CEOChiefOfStaff` 的中央收口最终回复模板，与中央收口 prompt 和 closeout JSON 样板对齐
 - `module-registry-baseline-rollout-plan.md`：中央 registry 先行、模块逐仓摸底、教程化产物与长期续跑计划
-- `virtual-company-secretariat.md`：虚拟公司秘书处机制与会议文档治理规则
+- `cyber-company-secretariat.md`：虚拟公司秘书处机制与会议文档治理规则
 - `operating-cycle-example/`：虚拟公司经营主工作流首轮样例包
 - `operating-records/`：虚拟公司经营层真实执行记录目录（与样例目录分开）
 - `workflow-runbook.md`：运行与故障处理手册

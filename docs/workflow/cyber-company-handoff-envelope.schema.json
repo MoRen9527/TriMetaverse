@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "tmv/workflow/virtual-company-handoff-envelope.schema.json",
+  "$id": "tmv/workflow/cyber-company-handoff-envelope.schema.json",
   "title": "VirtualCompanyHandoffEnvelope",
   "type": "object",
   "required": [
@@ -174,7 +174,7 @@
     "workflowRefs": {
       "type": "array",
       "items": {
-        "$ref": "tmv/workflow/virtual-company-phase-link.schema.json"
+        "$ref": "tmv/workflow/cyber-company-phase-link.schema.json"
       }
     },
     "payload": {

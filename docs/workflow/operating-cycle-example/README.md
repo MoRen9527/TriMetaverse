@@ -39,6 +39,6 @@
 
 ## 4. 说明
 
-- 本目录中的所有对象都遵循 `../virtual-company-handoff-envelope.schema.json`。
+- 本目录中的所有对象都遵循 `../cyber-company-handoff-envelope.schema.json`。
 - 若需要对真实执行做记录，应新建真实对象，而不是直接复用本目录样例。
 - 若过程发生异常，应追加 `RISK_ESCALATION` 对象；本样例展示的是一条无重大阻断的最小闭环。
