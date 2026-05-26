@@ -28,7 +28,7 @@
 - 各模块的 `Code Registry` 不应只做目录摘要；它应按具体业务走线拆分维护代码文档，用教学式、逐段到逐行可读的方式解释入口、调用链、关键对象、配置流、状态流和边界，让小白读完后能迅速理解整个模块设计与各业务代码调用流程。
 - 各模块的业务线教学代码文档还必须补清端到端关系：这一条业务的输入生产者是谁、输出消费者是谁；如果不是数据业务流，也要写清对应的请求发起方、处理环节、结果承接方和后续消费方。
 - CodeGraph 定位为各模块 `Code Registry` 的本地辅助索引资产，只用于帮助识别入口、依赖、调用链和变更热区；它不替代 `code-state.md`、教学级代码文档、源码阅读结论或人工收口判断。
-- 开发代码模块一旦进入现役开发阶段，默认应补齐独立 git 仓、`README.md`、`docs/` 文档基线、根级 `.gitignore` 与本地 CodeGraph；低成熟 / 占位模块在 README、AGENTS、源码骨架或模块 registry 未落地前暂缓初始化。
+- 架构表中的模块一旦被写成正式模块面，默认应补齐独立 git 仓、`README.md`、`docs/` 六件套、根级 `.gitignore` 与本地 CodeGraph；低成熟 / 占位模块也应先补齐这套骨架，再继续保持待初始化标记。
 - `.codegraph/` 应保持为本地生成物和缓存，不提交为仓库真源；可提交的只有由对应模块 `CodeRegistry` 审阅后的摘要、排除规则、扫描时间、commit / 版本锚点、主要发现和待确认缺口。
 - `docs/workflow/handoff-templates/*.example.json` 与 `docs/workflow/operating-cycle-example/*.sample.json` 属于样板 / fixture 层资产；它们可用于 schema 对齐、workflow 演示和 runtime validation，但不能单独作为中央 registry 回写、项目事实摘要或模块已确认状态的直接证据。
 

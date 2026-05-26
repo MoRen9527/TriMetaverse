@@ -15,8 +15,8 @@ TriMetaverse 是三元宇宙的中央战略仓与项目级真源约束层。
 - `TriDev` 负责开发型项目的十阶段执行主线。
 - `TriMC` 是未来正式宿主与统一 runtime 核心；当前不能写成已正式切换完成。
 
-开发代码模块标配：
+模块标配：
 
-- 模块一旦进入真实开发代码阶段，应具备独立 git 仓、`README.md`、`docs/` 文档基线与本地 `CodeGraph`。
+- 架构表中的模块一旦被纳入正式模块面，就应具备独立 git 仓、`README.md`、`docs/` 文档基线与本地 `CodeGraph`；占位模块也应先补齐这套骨架，再继续标注为待初始化。
 - `CodeGraph` 只作为本地辅助索引；`.codegraph/` 与 `.cursor/` 不作为仓库真源提交。
 - 模块级 `CodeRegistry` 负责维护摘要、排除规则、扫描锚点与 `Git Health` 事实。
