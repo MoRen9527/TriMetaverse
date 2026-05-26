@@ -31,3 +31,4 @@ Concrete employee consumption records belong in employee wiki pages such as `wik
 - TriCompany/.github/source-agents/rd-trainer/rd-trainer.social.md
 - TriCompany/docs/engineering/role-employee-knowledge-workspace.md
 - TriCompany/docs/training/README.md
+- TriCompany/docs/training/ipd-usage-guide.md

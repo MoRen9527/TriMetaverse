@@ -89,7 +89,7 @@ user-invocable: true
 2. 如果已有对应负责人在岗，先向相关负责人获取其条线的最新状态、判断和约束。
 3. 检查配套记忆，确认当前阶段重点、当前启用顺序和边界归属。
 4. 检查 `BusinessStrategy`，确认当前商业模式、实验路径、阶段和模块边界。
-5. 检查 `virtual-company.md`、`docs/workflow/virtual-company-operating-workflow.md` 和 `docs/workflow/virtual-company-handoff-objects.md`，确认当前经营流程和对象契约。
+5. 检查 `cyber-company.md`、`docs/workflow/cyber-company-operating-workflow.md` 和 `docs/workflow/cyber-company-handoff-objects.md`，确认当前经营流程和对象契约。
 6. 检查最新适用的结构化经营对象：
 	- `BOARD_DIRECTIVE`：确认目标、预算边界和不可谈判范围
 	- `OPERATING_PLAN`：确认当前周度或月度经营节奏
@@ -107,9 +107,9 @@ user-invocable: true
 2. 各部分负责人的最新状态、判断、风险和约束
 3. 配套记忆
 4. `BusinessStrategy`
-5. `virtual-company.md`
-6. `docs/workflow/virtual-company-operating-workflow.md`
-7. `docs/workflow/virtual-company-handoff-objects.md`
+5. `cyber-company.md`
+6. `docs/workflow/cyber-company-operating-workflow.md`
+7. `docs/workflow/cyber-company-handoff-objects.md`
 8. `docs/workflow/ceo-chief-of-staff-authorization-matrix.md`
 9. 最新适用的结构化经营对象及其 schema 对齐记录
 10. 相关模块的 `Product Registry` 文件
@@ -137,7 +137,7 @@ user-invocable: true
 
 ## 会议主持职责
 
-- 负责 CEO 周经营会、月经营复盘会和重大事项审议会的准备、排期、议程控制与会后追踪；具体会议组织、纪要归档与回填规则遵循 `docs/workflow/virtual-company-secretariat.md`。
+- 负责 CEO 周经营会、月经营复盘会和重大事项审议会的准备、排期、议程控制与会后追踪；具体会议组织、纪要归档与回填规则遵循 `docs/workflow/cyber-company-secretariat.md`。
 - 周会重点：计划状态、阻塞点、上线窗口、未决事项，以及下周负责人分配。
 - 月会重点：商业模式确认、收入与成本姿态、组织匹配度、上线进度，以及当前经营路线是否仍然成立。
 - 重大事项审议重点：不能等到正常节奏再处理的高风险预算、交付、品牌、技术或组织异常。

@@ -1,4 +1,4 @@
-﻿# CEOChiefOfStaff Employee Consumption Records
+# CEOChiefOfStaff Employee Consumption Records
 
 迁移时间：2026-04-29
 状态：current-host-support-runtime-asset
@@ -24,8 +24,8 @@
 - 2026-04-18；状态：计划中；内容：未来若进入 `TriMC` 新宿主阶段，应新建平行宿主资产包，不直接复用当前 Copilot-host 的物理命名与吸收边界。
 - 2026-04-18；状态：观察中；内容：当前阶段的轻量文案修补可以做，但不应掩盖宿主边界、回滚策略和共享会议入口不变这三个硬约束。
 - 2026-04-18；状态：延后处理；内容：在当前宿主资产尚未稳定前，不扩展过多岗位和运行时实现。
-- 2026-04-19；内容：TriMetaverse 项目级真源顺序当前为 `tmv-whitepaper.md -> project.md -> virtual-company.md -> docs/三元宇宙架构与模块说明.md -> docs/workflow/*.md -> docs/registry/*.md`。
-- 2026-04-19；内容：`docs/三元宇宙架构与模块说明.md` 当前承接项目级架构说明、模块说明与 `reference` 层口径，不替代白皮书、`project.md` 或 `virtual-company.md`。
+- 2026-04-19；内容：TriMetaverse 项目级真源顺序当前为 `tmv-whitepaper.md -> project.md -> cyber-company.md -> docs/三元宇宙架构与模块说明.md -> docs/workflow/*.md -> docs/registry/*.md`。
+- 2026-04-19；内容：`docs/三元宇宙架构与模块说明.md` 当前承接项目级架构说明、模块说明与 `reference` 层口径，不替代白皮书、`project.md` 或 `cyber-company.md`。
 - 2026-04-19；内容：`TriMetaverse/reference/` 的作用是阅读、对照、拆解、留档和版本锚定，不是本地运行时真源；开源吸收链按 `reference -> 模块/vendor -> 模块真实实现` 理解。
 - 2026-04-19；内容：模块级 registry 未落地时，默认回到该模块根目录的 `AGENTS.md`、`README.md`、设计文档和源代码树，并显式报告资料缺口。
 - 2026-04-19；内容：`docs/registry/*.md` 属于工作型登记层，除非用户明确要求“记录”或“更新”，否则不主动改写。

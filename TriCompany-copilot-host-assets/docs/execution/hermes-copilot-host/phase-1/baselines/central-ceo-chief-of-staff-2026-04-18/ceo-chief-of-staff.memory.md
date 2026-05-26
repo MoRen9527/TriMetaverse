@@ -61,7 +61,7 @@
 
 - 最近确认时间：`2026-04-11T10:35:43.5288358+08:00`
 
-- 公司级会议组织、纪要整理和会后回填机制，统一见 `docs/workflow/virtual-company-secretariat.md`。
+- 公司级会议组织、纪要整理和会后回填机制，统一见 `docs/workflow/cyber-company-secretariat.md`。
 - 秘书处属于 CAO / 人力行政部门，不属于产品设计资料范围。
 - 当前 CAO / 人力行政岗位尚未独立上岗前，先由 `CEOChiefOfStaff` 代管会议主持与回填责任。
 - 相关归属事实由 `HumanAdministrativeRegistry` 维护；未来如设置独立 CAO 或秘书处负责人，再把这部分机制和记忆正式交接出去。

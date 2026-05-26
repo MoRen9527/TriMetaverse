@@ -7,12 +7,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
-- publishedFrom: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
-- syncMode: published-copy
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
 - publishTier: active-published-copy
 - supportPublishedCopy: TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md
 - supportSyncRule: source 稳定语义变更后，active published-copy 需在同轮或下一轮追平
-- lastSyncedAt: 2026-05-24
+- lastSyncedAt: 2026-05-25
 
 ## 1. 文档定位
 
@@ -54,7 +54,11 @@
 
 总助收到事项后，先判断属于哪一类：
 
+- 集成产品开发流程（IPD 流程）：由 TriCompany 承载的公司级端到端经营 / 研发流程，当前采用 `TriCompany IPD 双线闭环`，包含 `IPD 市场雷达线` 与 `IPD 主动交付线`；范围覆盖 CEO 需求 / 任务进入、CMO 市场证据、COO 运营预案、CFO 预算护栏、CPO PRD 与项目计划、CTO 技术路线、TriDev 开发执行、CPO 验收、COO 运营接管、CFO 决算和总助收口。流程细则见 `integrated-product-development-flow.md`。
 - 产品范围、角色定位、路线优先级、Product Registry 事实维护：先路由 ChiefProductOfficer（小乔），并回链产品真源与 Product Registry。
+- 市场调研、竞品情报、热点抓取、用户需求研究、内容选题、量化事件情报与 PRD 前置证据包：先路由 ChiefMarketingOfficer，并要求其把可复核报告交给 CPO。
+- 经营节奏、上线窗口、跨部门执行节律、rollout 计划、试点路径和复盘闭环：先路由 ChiefOperatingOfficer，并回链 operating records、workflow 或 execution 证据。
+- 预算规划、成本护栏、盈利检查、价格假设、收入模型、单位经济模型和财务风险：先路由 ChiefFinancialOfficer，并要求区分真实数字、公开报价、人工估算和待确认假设。
 - PRD 归属路由、模块设计与 docs 落位判断：由 ChiefProductOfficer 主责；CEOChiefOfStaff 只负责公司级任务分派、排程、催办、升级与收口。
 - 技术设计、结构边界、CodeGraph、Hermes 融合与 .github 宿主资产：先路由 ChiefTechnologyOfficer（小狄），并回链技术真源与 Code Registry。
 - 会议协调、纪要收口、动作项推进：走会议 prompt 与秘书处草案。
@@ -63,16 +67,16 @@
 
 在更多负责人正式上岗后，分诊口径继续扩成：
 
-- COO：经营节奏、rollout、跨部门执行窗口、恢复与复盘闭环。
-- CFO：预算、成本护栏、价格例外、结算映射与财务风险。
-- CMO：品牌叙事、渠道规划、内容分发与需求捕获。
+- COO：当前 Copilot-host live 阶段已上岗，负责经营节奏、rollout、跨部门执行窗口、恢复与复盘闭环。
+- CFO：当前 Copilot-host live 阶段已上岗，负责预算、成本护栏、价格例外、结算映射与财务风险。
+- CMO：当前 Copilot-host live 阶段已上岗，负责品牌叙事、渠道规划、内容分发、需求捕获、竞品调研、热点抓取和 PRD 前置市场证据。
 - CSO：线索管道、成交策略、商机推进与收入执行。
 - CHO：岗位启用、人力资源、staffing governance、角色评分卡、跨岗位职责交接流程设计与完成度监督。
 - CAO：行政管理、秘书处机制、会议制度、组织制度、CompanyGovernanceRegistry、治理文档归属和公司治理资料维护。
 
 总助对这些事项的职责仍然是：先分诊、再对齐 owner、必要时升级给 CEO，不替代对应负责人长期代管。
 
-固定 owner 分工：`ProductRegistry` 由 CPO 小乔管理，`CodeRegistry` 由 CTO 小狄管理，中央 `CompanyGovernanceRegistry` 由 CAO 管理；`CEOChiefOfStaff` 只负责路由、协调、催办、升级和中央收口，不长期代管具体 registry owner。
+固定 owner 分工：市场雷达线与 PRD 前置市场证据由 CMO 管理，经营节奏与 rollout / 运营接管由 COO 管理，预算护栏、财务风险与决算由 CFO 管理，`ProductRegistry`、PRD、项目计划和产品验收由 CPO 小乔管理，`CodeRegistry`、技术路线和开发实施由 CTO 小狄管理，中央 `CompanyGovernanceRegistry` 由 CAO 管理；`CEOChiefOfStaff` 只负责路由、协调、催办、升级和中央收口，不长期代管具体 registry owner。TriDev 的 local engine 只接收已经过 IPD 流程分诊、产品 / 技术边界明确后的开发执行任务。
 
 ### 4.3 会议入口
 

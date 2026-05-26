@@ -18,6 +18,7 @@ TriCompany 模块真源仍在 `TriCompany/`。本目录不是模块真源，也�
 - 当前为 V0.1 宿主支撑包，前序 shadow-test 已完成
 - 同名 docs 与 runtime 副本当前已按 `published-copy`、`audit-record` 或 `support-object-set` 分层治理，不再按第二真源或平行研发面使用
 - 模块级设计、实现、制度与长期演进，默认先在 `TriCompany/` 真源收口，再按发布纪律进入本目录
+- 当前 `vendor/reference/` 保留的是从 `TriCompany/vendor/reference/` 发布出来的冻结 reference 副本，不是 support 侧独立研发残留；若后续不再服务当前宿主验证，应随源侧发布规则一并裁剪
 - 当前 live 宿主入口仍在 `TriMetaverse/.github/`；本目录只提供支撑资产，不承担 live 入口职责
 - 当前阶段的宿主资产属于本地正式接管承载，不等于正式宿主切换
 - 当前直接放在 TriMetaverse 根下是当前本地正式接管布局，不是未来 TriMC 正式宿主的长期路径
@@ -27,13 +28,13 @@ TriCompany 模块真源仍在 `TriCompany/`。本目录不是模块真源，也�
 
 - 当前物理目录名已迁移为 `TriCompany-copilot-host-assets`，作为当前 Copilot-host 的正式支撑包命名。
 - 原目录名 `TriCompany-shadow-host` 仅保留为 phase-1 历史证据中的旧路径，不再作为当前生效目录名。
-- 当前 support root 的真实作用不是“只服务总助”，而是给当前 Copilot-host 下的虚拟公司宿主资产提供统一支撑根目录，承载 docs、workflow、runtime、vendor/reference 与执行证据。
+- 当前 support root 的真实作用不是“只服务总助”，而是给当前 Copilot-host 下的赛博公司宿主资产提供统一支撑根目录，承载 docs、workflow、runtime、vendor/reference 与执行证据。
 - 除 docs / runtime / vendor 之外，当前宿主还直接消费或可消费 support-only machine-readable 对象：`knowledge/chief-of-staff/**`、`knowledge/roles/rd-trainer/**`、`knowledge/employees/rd-trainer/**`、`knowledge/roles/ceo-chief-of-staff/**`、`knowledge/employees/ceo-chief-of-staff/**`、`knowledge/roles/chief-product-officer/**`、`knowledge/employees/chief-product-officer/**`、`knowledge/roles/chief-technology-officer/**`、`knowledge/employees/chief-technology-officer/**`、`knowledge/roles/chief-human-resources-officer/**`、`knowledge/employees/chief-human-resources-officer/**`、`knowledge/org/shared/**`、`knowledge/audit/**` 与 `docs/execution/hermes-copilot-host/phase-1/schedules/*.json`。
 - 这些对象当前按 `support-object-set` 分层治理：它们不属于 docs published-copy manifest，也不等于 live `.github` 入口资产；其中 RAndDTrainer、CEOChiefOfStaff、ChiefProductOfficer、ChiefTechnologyOfficer 与 ChiefHumanResourcesOfficer role / employee workspace 已由 `host-object-manifest.json` 登记，CEOChiefOfStaff 的 `knowledge/chief-of-staff/**` legacy path 继续保留，phase-1 schedules 仍按既有目录 / pattern 锚点治理。
-- 因为这套支撑目录已经服务总助、registry、会议入口、后续 CPO / CTO / COO 等虚拟公司员工资产，而不是只服务 `ceo-chief-of-staff`，所以目标正式名不采用岗位导向命名。
+- 因为这套支撑目录已经服务总助、registry、会议入口、后续 CPO / CTO / COO 等赛博公司员工资产，而不是只服务 `ceo-chief-of-staff`，所以目标正式名不采用岗位导向命名。
 - 当前正式名为 `TriCompany-copilot-host-assets`。
 - 采用这个命名的原因是：
-  - `TriCompany` 表示资产归属仍是虚拟公司研发仓。
+  - `TriCompany` 表示资产归属仍是赛博公司研发仓。
   - `copilot-host` 表示这是当前宿主的专用资产包，而不是未来所有宿主的统一目录。
   - `assets` 表示该目录承载的是可复用的宿主资产集合，而不是单一岗位文件夹。
 - 后续如果进入 `TriMC` 新宿主适配，应新建平行的宿主资产包，例如 `TriCompany-trimc-host-assets`，复用 workflow 与制度层结论，但按新宿主要求维护独立 agent / prompt / support root 布局。
@@ -80,7 +81,7 @@ TriCompany 模块真源仍在 `TriCompany/`。本目录不是模块真源，也�
 ## 与 TriMetaverse 的关系
 
 - TriMetaverse 继续承担中央战略、模块边界和正式宿主地位判断
-- TriCompany 当前负责虚拟公司研发、Hermes 融合和 Copilot 本地正式接管宿主资产
+- TriCompany 当前负责赛博公司研发、Hermes 融合和 Copilot 本地正式接管宿主资产
 - 形成稳定结论后，再同步回 TriMetaverse 的 Product Registry、Code Registry 和相关制度文档
 
 ## 中央吸收原则

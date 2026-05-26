@@ -87,7 +87,7 @@
 ## 签发时建议附带的证据入口
 
 - `docs/workflow/operating-records/2026-W17/meeting-2026-04-20-ceo-chief-of-staff-capability-and-alignment.md`
-- `docs/engineering/virtual-company-four-layer-memory-collaboration-system.md`
+- `docs/engineering/cyber-company-four-layer-memory-collaboration-system.md`
 - `docs/execution/hermes-copilot-host/phase-1/CHIEF-OF-STAFF-LLM-WIKI-MVP-VALIDATION.md`
 - `docs/execution/hermes-copilot-host/phase-1/CHIEF-OF-STAFF-SCHEDULE-STAGING-VALIDATION.md`
 - `docs/execution/hermes-copilot-host/phase-1/CHIEF-OF-STAFF-PHASE-1-TAKEOVER-CHECKLIST.md`

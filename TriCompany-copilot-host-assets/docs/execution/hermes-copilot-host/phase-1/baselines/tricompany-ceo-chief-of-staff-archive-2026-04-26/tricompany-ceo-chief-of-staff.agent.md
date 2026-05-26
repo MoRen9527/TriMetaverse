@@ -53,7 +53,7 @@ user-invocable: true
 2. TriCompany-copilot-host-assets/docs/product/PROJECT.md、REQUIREMENTS.md、STATE.md。
 3. TriCompany-copilot-host-assets/docs/engineering/DESIGN.md、metacognition-architecture.md 与当前技术状态。
 4. TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md、hermes-copilot-host-migration.md、github-backport-manifest.md。
-5. TriCompany-copilot-host-assets/docs/workflow/virtual-company-secretariat.md。
+5. TriCompany-copilot-host-assets/docs/workflow/cyber-company-secretariat.md。
 6. TriCompany-copilot-host-assets/docs/registry/product-state.md 与 code-state.md。
 7. 如果问题跨越正式模块边界、宿主边界或总商业模式，再回查 TriMetaverse 的 BusinessStrategy 和中央真源。
 

@@ -8,7 +8,7 @@
 - publishTier: active-published-copy
 - supportPublishedCopy: TriCompany-copilot-host-assets/docs/registry/code-state.md
 - supportSyncRule: source 稳定语义变更后，active published-copy 需在同轮或下一轮追平
-- lastSyncedAt: 2026-05-24
+- lastSyncedAt: 2026-05-25
 
 ## Repository Map
 
@@ -27,7 +27,9 @@
 - docs/product/: 产品真源
 - docs/engineering/: 技术真源
 - docs/workflow/: 编排与秘书处草案
+- docs/workflow/: 集成产品开发流程（IPD 流程）、秘书处草案与跨岗位 owner 边界
 - docs/execution/: 当前启动阶段执行文档
+- docs/training/: 岗位、模块、代码和流程培训材料
 - vendor/reference/: Hermes 冻结参考副本
 - runtime/cognition/: 元认知 contracts、kernel、providers，以及 chief-of-staff workflow / schedule source 回迁入口
 
@@ -44,6 +46,7 @@
 - 当前已完成中央命名吸收；未来若进入 `TriMC` 新宿主，应另建平行宿主资产包，而不是复用当前 Copilot-host 的物理命名
 - 当前 CPO / CTO 已采用既有 `TriMetaverse/.github` live entry 上岗，并已补齐 `TriCompany/.github/source-agents/chief-product-officer/**`、`TriCompany/.github/source-agents/chief-technology-officer/**`、host object generation、CLI 与 support `knowledge/{roles,employees}/chief-{product,technology}-officer/**` 对象载荷；这不代表 TriMC 正式宿主切换
 - 当前 CodeRegistry 由 CTO 小狄管理，负责代码事实、CodeGraph 摘要、技术风险、实现边界、仓库健康与工程门禁；CEOChiefOfStaff 只负责技术事项的公司级路由、协调、催办、升级与中央收口
+- 当前集成产品开发流程（IPD 流程）由 TriCompany source 侧维护；TriDev 只作为产品开发执行段 local engine 被调用，不承接 COO / CFO 持续运营监控或公司级总编排
 - 当前已具备 source 侧回归入口：`python -m unittest runtime.cognition.chief_of_staff_bridge_validation`、`python -m unittest runtime.cognition.chief_of_staff_workflow_validation`、`python -m unittest runtime.cognition.chief_of_staff_schedule_staging_validation`
 - 当前已具备 closeout 相关 source 侧回归入口：`python -m unittest runtime.cognition.chief_of_staff_registry_closeout_validation`、`python -m unittest runtime.cognition.chief_of_staff_operating_review_closeout_validation`
 - 当前已具备 source 侧 CLI / staging 入口：`python -m runtime.cognition.chief_of_staff_schedule_staging --help`
@@ -83,6 +86,7 @@
 - 若把 Supermemory 官方 schema 验证等同于真实 Supermemory live 接入，会高估 production 接入成熟度
 - 若把 Supermemory SDK seam 验证等同于真实官方 SDK 包接通或真实账号可用，也会高估 production 接入成熟度
 - 若把 live smoke 脚本已存在等同于 live smoke 已执行，也会高估 production 接入成熟度
+- 若把 TriDev local engine 的开发执行能力误写成 TriCompany 公司级 workflow engine 已生产化，会混淆公司级编排和开发执行段边界
 
 ## Sources
 

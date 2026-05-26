@@ -19,6 +19,8 @@
 - chief_of_staff_bridge_validation.py: 验证仓库内 `ceo-chief-of-staff.memory/soul/colleagues/social` 源侧契约已可通过 cognition bridge 进入 `prefetch_context`
 - chief_of_staff_workflow_bridge.py: 开始会议 / 结束会议 / 日常收口三类 workflow 写回桥，同时提供 TriCompany source `ceo-chief-of-staff.memory.md` 与 `TRICOMPANY_COGNITION_HOME` 的 import/export/sync 命令入口
 - chief_of_staff_workflow_validation.py: 验证 workflow 写回可同时落进 private/shared/audit 命名空间，并验证 repo 主档与 cognition 摘录的双向同步策略
+- ipd_case_engine.py: TriCompany IPD 主动交付线的一比一 ten-phase case state machine，负责 intake briefing gate、`DISCOVERY -> ... -> DELIVERY` 阶段 work item、phase package draft、书面签核和自动推进
+- chief_of_staff_ipd_case.py: IPD case CLI；推荐顺序是先用 task-intake 接一句 CEO / 总助任务形成粗草案，再用 init 对同一 case 做 intake briefing refinement，之后再 intake-approve / submit / signoff / status / step
 - smoke_test.py: 最小可执行 smoke test，用于验证命名空间边界和 provider 生命周期
 - contract_validation.py: Hermes 核心 recall/consolidate 契约验证，用于验证 fencing、单外部 provider 与 consolidate 命名空间约束
 - integration_validation.py: provider-backed 集成验证，用于验证私域/共享/审计落盘与跨实例 recall
@@ -78,6 +80,9 @@
 - workflow 写回命令：在 TriCompany-copilot-host-assets 根目录执行 python -m runtime.cognition.chief_of_staff_workflow_bridge daily-close --json <payload.json>
 - workflow 写回命令：也可直接通过 stdin JSON 执行，例如 `@'{...}'@ | python -m runtime.cognition.chief_of_staff_workflow_bridge meeting-start --json-stdin`
 - memory 同步命令：在 TriCompany-copilot-host-assets 根目录执行 python -m runtime.cognition.chief_of_staff_workflow_bridge sync-memory
+- IPD case 命令：在 TriCompany-copilot-host-assets 根目录执行 python -m runtime.cognition.chief_of_staff_ipd_case --help
+- IPD 粗任务入口：在 TriCompany-copilot-host-assets 根目录执行 python -m runtime.cognition.chief_of_staff_ipd_case task-intake "<CEO 或总助任务描述>"
+- IPD refinement 入口：在 TriCompany-copilot-host-assets 根目录执行 python -m runtime.cognition.chief_of_staff_ipd_case init --case-id <已有-case-id> ...
 - live 运行前提：可直接在 TriCompany-copilot-host-assets 根目录创建 .env 并填写 TRICOMPANY_ENABLE_SUPERMEMORY_LIVE_VALIDATION=1 与 SUPERMEMORY_API_KEY；脚本会在运行时自动加载该文件，且不会覆盖已存在的 shell 环境变量
 - live 模板文件：可复制 TriCompany-copilot-host-assets/.env.example 为 TriCompany-copilot-host-assets/.env，再按需填写 SUPERMEMORY_BASE_URL、SUPERMEMORY_USE_BEARER_AUTH、SUPERMEMORY_TIMEOUT_SECONDS、SUPERMEMORY_LIVE_SEARCH_ATTEMPTS、SUPERMEMORY_LIVE_SEARCH_DELAY_SECONDS
 - live timeout 建议：默认按 45 秒执行；若真实远端仍有明显长尾，可继续上调 SUPERMEMORY_TIMEOUT_SECONDS
@@ -91,6 +96,7 @@
 - 当前已补上的 prompt 自动入口：`.github/prompts/开始会议.prompt.md`、`结束会议.prompt.md`、`日常收口.prompt.md` 已要求在正式收口前通过 `#execute/runInTerminal` 调用 workflow bridge
 - 当前已补上的宿主 hook：`.github/hooks/ceo-chief-of-staff-workflow-sync.json` 会在 workflow bridge 的 meeting-start / meeting-end / daily-close 命令完成后自动补一次 `sync-memory`
 - 当前已补上的 memory 双向同步策略：TriCompany source `ceo-chief-of-staff.memory.md` 只保留层契约，运行连续性优先由 `TRICOMPANY_COGNITION_HOME` 与 support employee workspace 承载；如需同步摘录，不能回写到 TriMetaverse live `.github/agents` companion 文件
+- 当前已建立 IPD 主动交付线一比一 ten-phase runtime slice：CEO / 总助输入先进入 intake briefing gate；总助需先把机会信号、对当前商业模式的适配、对当前阶段的适配、公司现状、owner 建议、资源 envelope、前置条件、所需支持和预期成果整理成入口 briefing，再由 CEO / CEOChiefOfStaff 书面签核；通过后系统按 `DISCOVERY -> INTELLIGENCE -> DESIGNING -> CODING -> VERIFY-INTEGRATION -> REDTEAM -> QA -> DEPLOYMENT -> ASSURANCE -> DELIVERY` 的顺序自动生成阶段 work item，并把公司员工参与、资料与核签要求挂到各 phase
 - 当前已通过的 provider-backed 集成：builtin_markdown 与 org_shared 可把私域/共享/审计信息写入本地 markdown 文件，并被新的内核实例跨实例 recall
 - 当前已通过的 production 风格后端验证：TRICOMPANY_COGNITION_HOME 驱动的后端根目录、跨会话追加写入，以及 audit 文件的 provider/timestamp/namespace 元数据
 - 当前已通过的模拟外部后端兼容性验证：ExternalCognitionAdapter 可过滤 query 命名空间外的 recall 结果，并与 builtin_markdown / org_shared 并存完成 recall 与 session 生命周期联动

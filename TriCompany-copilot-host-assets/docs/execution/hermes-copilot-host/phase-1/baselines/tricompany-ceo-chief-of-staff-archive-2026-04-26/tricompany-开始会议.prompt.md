@@ -10,7 +10,7 @@ agent: TriCompanyCEOChiefOfStaff
 
 在输出前，优先遵循以下文件：
 
-- [秘书处机制](../../TriCompany-copilot-host-assets/docs/workflow/virtual-company-secretariat.md)
+- [秘书处机制](../../TriCompany-copilot-host-assets/docs/workflow/cyber-company-secretariat.md)
 - [总助研发编排](../../TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md)
 - [总助主规范](../agents/tricompany-ceo-chief-of-staff.agent.md)
 
