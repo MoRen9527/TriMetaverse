@@ -7,12 +7,10 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
-- publishedFrom: 当前文件（source）
-- syncMode: source-only
+- publishedFrom: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
+- syncMode: published-copy
 - publishTier: active-published-copy
-- supportPublishedCopy: TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md
-- supportSyncRule: source 稳定语义变更后，active published-copy 需在同轮或下一轮追平
-- lastSyncedAt: 2026-05-25
+- lastSyncedAt: 2026-06-03
 
 ## 1. 文档定位
 
@@ -48,7 +46,7 @@
 
 ### 4.1 事项进入
 
-- 任何关于虚拟公司研发、总助设计、Hermes 融合、.github 宿主资产、岗位准备或会议节奏的事项，先进入总助判断。
+- 任何关于赛博公司研发、总助设计、Hermes 融合、.github 宿主资产、岗位准备或会议节奏的事项，先进入总助判断。
 
 ### 4.2 总助分诊
 
@@ -100,7 +98,7 @@
 - 当前 Hermes 融合与迁移清单。
 - 当前 RAndDTrainer 培训目录、模块导读和新人学习路径。
 
-后续新增固定员工、现有员工职责变动、owner 迁移或源侧五件套增量更新时，应先在 TriCompany 源侧完成岗位 / 员工定义、agent 资产、四层记忆资产、岗位职责、协作关系、流程 owner 与 role knowledge workspace 机制，再发布到当前宿主支撑包生成实际消费的 inbox、wiki、audit、workbench、schedule JSON 等对象载荷，并同步核对 binding profile、host object manifest、live discovery 与治理回填。CPO / CTO 本轮采用已有 `TriMetaverse/.github` live entry，不新建第二个 live agent 文件，而是补齐 TriCompany 源侧五件套与 role / employee support object payload。换宿主时迁移的是完整虚拟公司源侧定义和流程，而不是在新宿主重新招聘员工或重建流程。
+后续新增固定员工、现有员工职责变动、owner 迁移或源侧五件套增量更新时，应先在 TriCompany 源侧完成岗位 / 员工定义、agent 资产、四层记忆资产、岗位职责、协作关系、流程 owner 与 role knowledge workspace 机制，再发布到当前宿主支撑包生成实际消费的 inbox、wiki、audit、workbench、schedule JSON 等对象载荷，并同步核对 binding profile、host object manifest、live discovery 与治理回填。CPO / CTO 本轮采用已有 `TriMetaverse/.github` live entry，不新建第二个 live agent 文件，而是补齐 TriCompany 源侧五件套与 role / employee support object payload。换宿主时迁移的是完整赛博公司源侧定义和流程，而不是在新宿主重新招聘员工或重建流程。
 
 `ChiefHumanResourcesOfficer`（CHO）与 `ChiefAdministrativeOfficer`（CAO）已按源侧链路完成当前 Copilot-host live 启用。CHO 主责制定岗位 / 职责交接流程、handoff checklist 与 completion tracking，并监督交接闭环；CAO 主责行政管理、秘书处机制、会议制度、CompanyGovernanceRegistry 和公司治理资料归属。CEOChiefOfStaff 保留公司级协调、催办、升级与收口职责，不再长期代管这些 owner。
 

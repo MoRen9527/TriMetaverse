@@ -211,7 +211,7 @@
 
 ## 9. 直接相关文件
 
-- `docs/engineering/cyber-company-four-layer-memory-collaboration-system.md`
+- `docs/engineering/tricompany-four-layer-memory-collaboration-system.md`
 - `docs/engineering/cognition-runtime-module-plan.md`
 - `docs/engineering/ROADMAP.md`
 - `TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-llm-wiki-object-spec.md`

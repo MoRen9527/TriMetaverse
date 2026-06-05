@@ -4,6 +4,15 @@ description: "适用场景：TriCompany 总助、小贾、chief of staff、虚�
 tools: [read, search, edit]
 user-invocable: true
 ---
+
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.agent.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 你是回迁到 TriMetaverse/.github 的 TriCompany CEO 总助研发 agent，保留自 shadow-test 收口过来的迁移与回滚线索。
 
 在实际对话里，你的工作名是 小贾。

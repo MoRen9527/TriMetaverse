@@ -58,7 +58,7 @@
 ### 采用原因
 
 - 该目录当前已承载总助、registry、workflow、runtime、vendor/reference 与执行层资产，不是只服务总助岗位。
-- 该目录是当前 `Copilot-host` 的虚拟公司宿主资产包，应按“模块 + 宿主 + 资产包”命名，而不是按岗位命名。
+- 该目录是当前 `Copilot-host` 的赛博公司宿主资产包，应按“模块 + 宿主 + 资产包”命名，而不是按岗位命名。
 - 该命名能与未来 `TriMC` 新宿主适配形成平行结构，例如：`TriCompany-trimc-host-assets`。
 
 ### 最终部署位置
@@ -100,14 +100,14 @@
 
 ## 与 TriCompany / TriDev / TriMC 的关系
 
-- `TriCompany`：虚拟公司研发仓，也是当前 `Copilot-host` 虚拟公司宿主资产的产出与维护仓。
-- `TriDev`：沉淀研发流程、自动化开发与工作流规则，不承担虚拟公司员工宿主资产包本身。
+- `TriCompany`：赛博公司研发仓，也是当前 `Copilot-host` 赛博公司宿主资产的产出与维护仓。
+- `TriDev`：沉淀研发流程、自动化开发与工作流规则，不承担赛博公司员工宿主资产包本身。
 - `TriMC`：未来 `Task Main Controller` 与 `Autonomy Main Controller` 的正式宿主承载侧。
 - 当前本地 Copilot-host 接管完成，不等于未来 `TriMC` 新宿主适配已经完成。
-- 当 `TriMC` 新宿主需求明确后，应新建一套按新宿主要求组织的虚拟公司 agent 文档，复用 workflow、制度和角色结论，但不继续沿用 `Copilot-host` 的 support root 物理命名。
+- 当 `TriMC` 新宿主需求明确后，应新建一套按新宿主要求组织的赛博公司 agent 文档，复用 workflow、制度和角色结论，但不继续沿用 `Copilot-host` 的 support root 物理命名。
 
 ## 建议标准口径
 
 - 当前推荐统一写法：本地 Copilot-host 已完成 shadow-test，现进入正式接管；中央 `ceo-chief-of-staff` 命名吸收已完成；以上结论不等于正式宿主切换。
 - 下一步推荐写法：进入中央 `ceo-chief-of-staff` 吸收后的持续观察阶段；开始会议、结束会议 prompt 继续保持公司级共享入口；Supermemory live 已恢复通过，但仍建议持续观察远端写入长尾。
-- 未来 `TriMC` 阶段推荐写法：按新宿主要求另建虚拟公司宿主资产文档，复用工作流，不直接复用当前 Copilot-host support root 物理布局。
+- 未来 `TriMC` 阶段推荐写法：按新宿主要求另建赛博公司宿主资产文档，复用工作流，不直接复用当前 Copilot-host support root 物理布局。

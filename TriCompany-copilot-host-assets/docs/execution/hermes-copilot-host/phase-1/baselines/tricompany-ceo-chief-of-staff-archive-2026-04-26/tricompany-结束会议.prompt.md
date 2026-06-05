@@ -4,6 +4,15 @@ description: "适用场景：结束会议、收口结论、整理纪要、回填
 argument-hint: "输入本次会议的结论、动作项、责任人、截止时间，或让系统基于当前上下文收口"
 agent: TriCompanyCEOChiefOfStaff
 ---
+
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-结束会议.prompt.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 你现在要执行一次正式的结束会议动作。
 
 把这次触发视为会议发起人已经明确要求结束会议；除非用户另有说明，从确认结束起，本场会议进入总结、纪要整理和回填阶段。

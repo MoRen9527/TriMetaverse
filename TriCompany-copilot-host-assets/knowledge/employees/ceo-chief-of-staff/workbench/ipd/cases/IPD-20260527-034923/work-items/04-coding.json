@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-work-item",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "coding",
+  "phaseKey": "CODING",
+  "title": "TriStaciss 最小 OpenAI 兼容模型网关 MVP 首切片 / Coding / 开发实现",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "participantRoles": [
+    "ChiefProductOfficer",
+    "CEOChiefOfStaff"
+  ],
+  "status": "in-progress",
+  "createdAt": "2026-05-27T19:31:37+08:00",
+  "updatedAt": "2026-05-27T19:31:37+08:00",
+  "priority": "high",
+  "summary": "ChiefTechnologyOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“把模型平台任务收敛为 TriStaciss 主导的最小 OpenAI-compatible gateway MVP：补齐 /v1/models，固化 /v1/chat/completions，TriAvatar 仅保留后续最薄 smoke，TriMem 本轮不进入编码。”推进 Coding / 开发实现（CODING）并协同 ChiefProductOfficer、CEOChiefOfStaff，并在提交后等待总助初签与 CEO 终签。",
+  "intake": {
+    "objective": "把模型平台任务收敛为 TriStaciss 主导的最小 OpenAI-compatible gateway MVP：补齐 /v1/models，固化 /v1/chat/completions，TriAvatar 仅保留后续最薄 smoke，TriMem 本轮不进入编码。",
+    "taskDescription": "以 TriStaciss 为主模块推进最小 OpenAI-compatible 模型网关 MVP：本轮先补齐 GET /v1/models，并用测试固化 POST /v1/chat/completions 的 non-stream 与 stream 合同；TriAvatar 只保留后续最薄聊天 smoke，不切默认入口；TriMem 明确 out-of-scope。",
+    "constraints": [
+      "首轮编码只允许改动 TriStaciss api-server 与对应测试。",
+      "TriAvatar 本轮不切默认聊天入口，只保留后续最薄 smoke 位置。",
+      "TriMem 本轮不进入 coding、schema、用户系统与持久化设计。",
+      "不得把 /api/chat/stream 的 legacy active path 写成已被替换。"
+    ],
+    "opportunitySignals": [
+      "模型 API 平台需要尽快形成最小可验证合同，而不是继续停留在 docs-only autopilot 交付。",
+      "TriStaciss 已有 /v1/chat/completions scaffold，可低成本吸收为首个真实 executable slice。",
+      "通过先收敛 /v1/models + /v1/chat/completions，可以为后续 TriAvatar smoke 和 provider 扩展提供稳定后端合同。"
+    ],
+    "businessModelFit": [
+      "符合当前“小成本先跑通可收费闭环、先验证再扩大”的中央商业实验方向。",
+      "先验证模型网关合同与 provider 通路，再决定是否继续扩大到更完整平台能力。"
+    ],
+    "stageFit": [
+      "当前切片适合在 Copilot-host + TriDev 执行面下先完成后端合同补齐与源码证据沉淀。",
+      "本轮不进入 TriMC 正式宿主改造，也不进入多模块大范围正式上线编排。"
+    ],
+    "companyContext": [
+      "TriCompany 当前 IPD runtime 已要求 coding 及后续阶段必须提交真实源码、测试、部署或运行证据。",
+      "TriDev 已具备 knowledge bundle、changed-file/diff evidence、retry loop 与 host parity 基础能力，可作为本轮治理执行面。"
+    ],
+    "ownerProposal": [
+      "Discovery / Intelligence 由 ChiefProductOfficer 收口首轮目标、范围和验收信号。",
+      "Designing / Coding 由 ChiefTechnologyOfficer 收口 TriStaciss 后端首刀与验证命令。",
+      "完成 TriStaciss backend slice 后，再决定是否启动 TriAvatar 最薄 smoke。"
+    ],
+    "resourceEnvelope": [
+      "本轮资源只覆盖 TriStaciss api-server 后端与 pytest/compileall 验证。",
+      "不为 TriMem 用户系统、计费、配额、持久化会话或完整前端改版预留实现资源。"
+    ],
+    "prerequisites": [
+      "保持 BusinessStrategy 已裁定的模块边界：TriStaciss 主战场，TriAvatar 薄联调，TriMem 不入码。",
+      "保留旧 docs-only delivery 历史，但不得继续复用旧 completed TriDev run。"
+    ],
+    "requiredSupport": [
+      "ChiefProductOfficer 负责把目标、范围、out-of-scope、成功信号写清。",
+      "ChiefTechnologyOfficer 负责把具体文件范围、验证命令和最小验收条件写清。"
+    ],
+    "expectedOutcomes": [
+      "形成一个可执行、可验证、可提交真实工程证据的首个模型网关 coding slice。",
+      "让 IPD case 与 TriDev run 从 discovery 重新起步，并在真实代码改动后恢复一致。"
+    ],
+    "expectedDelivery": "交付一个已回退重写的 IPD case、一个新建并对齐的 TriDev run，以及 TriStaciss /v1/models + /v1/chat/completions 首刀源码与测试证据。",
+    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json"
+  },
+  "requiredApprovers": [
+    "CEOChiefOfStaff",
+    "CEO"
+  ],
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar"
+  ],
+  "inputRefs": [
+    "workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+    "workbench/ipd/cases/IPD-20260527-034923/case.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/02-intelligence.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/03-designing.json"
+  ],
+  "inputRequirements": [
+    "技术方案",
+    "开发任务",
+    "工程门禁"
+  ],
+  "outputRequirements": [
+    "提交开发产物、实现证据、失败 / 回滚记录和候选发布 bundle。",
+    "明确可进入验证阶段的代码、artifact 和执行摘要。"
+  ],
+  "superDevReferenceStages": [
+    "frontend",
+    "backend"
+  ],
+  "schemaHint": {
+    "objectType": "TRIDEV_CODING_PACKAGE",
+    "schemaPath": ""
+  },
+  "draftTemplate": {
+    "kind": "ipd-engine-native-draft",
+    "objectType": "TRIDEV_CODING_PACKAGE",
+    "phaseKey": "CODING",
+    "businessOwner": "ChiefTechnologyOfficer",
+    "actingOwner": "ChiefTechnologyOfficer",
+    "moduleExecutor": "TriDev",
+    "gateOwner": "ChiefTechnologyOfficer",
+    "ownerRole": "ChiefTechnologyOfficer",
+    "participantRoles": [
+      "ChiefProductOfficer",
+      "CEOChiefOfStaff"
+    ],
+    "summary": "ChiefTechnologyOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“把模型平台任务收敛为 TriStaciss 主导的最小 OpenAI-compatible gateway MVP：补齐 /v1/models，固化 /v1/chat/completions，TriAvatar 仅保留后续最薄 smoke，TriMem 本轮不进入编码。”推进 Coding / 开发实现（CODING）并协同 ChiefProductOfficer、CEOChiefOfStaff，并在提交后等待总助初签与 CEO 终签。",
+    "inputRequirements": [
+      "技术方案",
+      "开发任务",
+      "工程门禁"
+    ],
+    "requiredOutput": [
+      "提交开发产物、实现证据、失败 / 回滚记录和候选发布 bundle。",
+      "明确可进入验证阶段的代码、artifact 和执行摘要。"
+    ],
+    "superDevReferenceStages": [
+      "frontend",
+      "backend"
+    ],
+    "workflowRefs": [
+      {
+        "relation": "phase-package-for",
+        "phase": "CODING",
+        "runId": "run-IPD-20260527-034923",
+        "branchId": "ipd-ipd-20260527-034923"
+      }
+    ]
+  }
+}

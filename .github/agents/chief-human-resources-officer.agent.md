@@ -71,8 +71,8 @@ user-invocable: true
 
 1. `BusinessStrategy`
 2. `CompanyGovernanceRegistry`
-3. `cyber-company.md`
-4. `docs/workflow/cyber-company-agent-roles.md`
+3. `tricompany.md`
+4. `docs/workflow/tricompany-agent-roles.md`
 5. 相关模块的 `Product Registry` 文件
 6. 相关模块的 `Code Registry` 文件
 7. 用户提供的岗位、工作量或绩效数据

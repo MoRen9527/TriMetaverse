@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-manual-stage-package",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "intelligence",
+  "ownerRole": "ChiefProductOfficer",
+  "generatedAt": "2026-05-27T19:31:33+08:00",
+  "goal": "把 discovery 收口为可执行 PRD 和验收口径。",
+  "requiredEndpoints": [
+    "/v1/models",
+    "/v1/chat/completions"
+  ],
+  "outOfScope": [
+    "TriAvatar 默认入口切换",
+    "TriMem 任意实现",
+    "完整 OpenAI 全量接口兼容"
+  ],
+  "successSignals": [
+    "接口范围、样例和验收口径明确",
+    "可以直接进入 Designing 列出文件范围与测试命令"
+  ],
+  "verificationCommands": [
+    "python -m compileall openai_ingress_models.py chat_completion_service.py openai_compatible_api.py tests\\unit\\test_chat_completion_service.py tests\\integration\\test_openai_compatible_router.py",
+    "python -m pytest tests\\unit tests\\integration"
+  ],
+  "references": {
+    "triStacissProduct": "D:\\OneDrive\\Code\\ai\\Tristaciss\\docs\\registry\\product-state.md",
+    "triStacissCode": "D:\\OneDrive\\Code\\ai\\Tristaciss\\docs\\registry\\code-state.md",
+    "triAvatarProduct": "D:\\OneDrive\\Code\\ai\\Triavatar\\docs\\registry\\product-state.md",
+    "triMemBusiness": "D:\\OneDrive\\Code\\ai\\TriMem\\docs\\registry\\business-state.md",
+    "triStacissRouter": "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\openai_compatible_api.py",
+    "triStacissService": "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\chat_completion_service.py",
+    "triStacissFastapi": "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\fastapi_stream.py"
+  }
+}

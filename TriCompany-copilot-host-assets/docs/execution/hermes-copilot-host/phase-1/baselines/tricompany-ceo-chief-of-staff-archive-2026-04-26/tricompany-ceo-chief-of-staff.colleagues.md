@@ -1,5 +1,13 @@
 # TriCompany CEOChiefOfStaff 工作协作档案
 
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.colleagues.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 本文件用于记录 TriCompany 当前阶段在工作层面的人和事。
 
 ## 使用原则

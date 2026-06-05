@@ -32,4 +32,4 @@ Concrete employee consumption records belong in employee wiki pages such as `wik
 - TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
 - TriCompany/docs/workflow/host-object-publish-flow.md
 - TriCompany/docs/engineering/role-employee-knowledge-workspace.md
-- TriMetaverse/cyber-company.md
+- TriMetaverse/tricompany.md

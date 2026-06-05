@@ -1,5 +1,13 @@
 # CEOChiefOfStaff 社交档案
 
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/ceo-chief-of-staff.social.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 本文件用于承载 `CEOChiefOfStaff` 在闲聊和社交层面对人和事的长期可迁移记忆。
 这里优先记录朋友、同事在非正式场景下的称呼偏好、互动习惯、轻社交记忆、社交事件和待确认信息，帮助总助在日常交流中保持自然、温度和连续性。
 

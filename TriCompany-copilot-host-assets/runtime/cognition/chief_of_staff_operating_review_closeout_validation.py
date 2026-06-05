@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 import sys
@@ -123,7 +123,7 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
                         "label": "2026-W14 样例复盘"
                     },
                     "summary": "复盘已把 PC 端软件层、TriLC 和 vscodium 上游升级口径纳入下一步中央收口议程。",
-                    "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC"],
+                    "relatedModules": ["TriMetaverse", "TriPilot", "Tride", "vscodium", "TriLC"],
                     "dependsOn": ["OP-202604-W14-001"],
                     "evidence": [],
                     "nextActions": [
@@ -184,7 +184,7 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
                         "label": "pc-local-closeout-2026-04-23"
                     },
                     "summary": "针对 PC 端软件层、TriLC 本地化任务协同以及 vscodium 上游升级口径进行一次跨模块 registry 收口。",
-                    "relatedModules": ["TriMetaverse", "Tride", "Tripilot", "vscodium", "TriLC"],
+                    "relatedModules": ["TriMetaverse", "Tride", "TriPilot", "vscodium", "TriLC"],
                     "dependsOn": ["OR-202604-W14-001"],
                     "evidence": [
                         {
@@ -202,7 +202,7 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
                             "businessStrategyRequired": True
                         },
                         "registryFindings": [
-                            {"registryId": "TripilotProductRegistry", "summary": "桌面入口承接用户触达"},
+                            {"registryId": "TriPilotProductRegistry", "summary": "桌面入口承接用户触达"},
                             {"registryId": "TriLCCodeRegistry", "summary": "本地控制器保持 runtime / planner 边界"}
                         ],
                         "closeoutDecision": "writeback-approved"

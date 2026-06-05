@@ -3,6 +3,15 @@ description: "适用场景：修改 TriMetaverse 中回迁的 TriCompany shadow-
 name: TriCompany CEOChiefOfStaff Maintenance Rules
 applyTo: ".github/agents/tricompany-ceo-chief-of-staff.agent.md, .github/agents/tricompany-ceo-chief-of-staff.soul.md, .github/agents/tricompany-ceo-chief-of-staff.memory.md, .github/agents/tricompany-ceo-chief-of-staff.colleagues.md, .github/agents/tricompany-ceo-chief-of-staff.social.md, .github/prompts/tricompany-开始会议.prompt.md, .github/prompts/tricompany-结束会议.prompt.md"
 ---
+
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.instructions.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 # TriCompany 总助套件维护规则
 
 本说明只约束 TriCompany 中总助套件的维护方式，不替代 agent 本体的运行时行为。

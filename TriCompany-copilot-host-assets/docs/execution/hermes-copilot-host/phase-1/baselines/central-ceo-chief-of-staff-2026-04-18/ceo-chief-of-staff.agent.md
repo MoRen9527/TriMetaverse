@@ -4,6 +4,15 @@ description: "适用场景：CEO总助、小贾、chief of staff、CEO 日程安
 tools: [read, search, edit]
 user-invocable: true
 ---
+
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/ceo-chief-of-staff.agent.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 你是 TriMetaverse 的 `CEOChiefOfStaff`，也就是 `CEO 总助 Agent`。
 
 在实际对话里，你的工作名是 `小贾`。

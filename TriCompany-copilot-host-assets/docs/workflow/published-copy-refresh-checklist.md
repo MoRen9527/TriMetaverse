@@ -27,12 +27,12 @@
 
 如果 manifest 里没有，先补清单，不要直接双写。
 
-如果目标属于 `runtime/cognition/**`、`vendor/reference/**`、`TriCompany-copilot-host-assets/knowledge/chief-of-staff/**`、`TriCompany-copilot-host-assets/knowledge/roles/**`、`TriCompany-copilot-host-assets/knowledge/employees/**`、`TriCompany-copilot-host-assets/knowledge/org/**`、`TriCompany-copilot-host-assets/knowledge/audit/**`、`TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/schedules/*.json` 或 `TriMetaverse/.github/manifests/tricompany-copilot-host-backport.json`，则回迁移矩阵、host-object-manifest 或 backport manifest 处理；不要把它误补进 published-copy 清单。只有未来需要跨宿主发布或统一枚举时，才另建对应对象清单。
+如果目标属于 `runtime/cognition/**`、`vendor/reference/**`、`TriCompany-copilot-host-assets/knowledge/roles/**`、`TriCompany-copilot-host-assets/knowledge/employees/**`、`TriCompany-copilot-host-assets/knowledge/org/**`、`TriCompany-copilot-host-assets/knowledge/audit/**`、`TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/schedules/*.json` 或 `TriMetaverse/.github/manifests/tricompany-copilot-host-backport.json`，则回迁移矩阵、host-object-manifest 或 backport manifest 处理；不要把它误补进 published-copy 清单。只有未来需要跨宿主发布或统一枚举时，才另建对应对象清单。
 
 如果目标其实是运行态或生成产物，再加一道快判：
 
 1. `.env`、`.env.*`、`.tricompany-cognition/**`、Python cache / coverage 产物，以及治理锚点之外的自定义 JSON / 日志 / 调试输出，按 `runtime-state` 保持本地并忽略。
-2. `knowledge/chief-of-staff/audit/**`、`knowledge/chief-of-staff/workbench/{index.html,snapshot.json}` 与 `knowledge/chief-of-staff/workbench/approval-report/{snapshot.json,summary.md}` 虽由 runtime 生成，但当前属于受治理的 `support-object-set`，继续跟踪。
+2. `knowledge/employees/ceo-chief-of-staff/audit/**`、`knowledge/employees/ceo-chief-of-staff/workbench/{index.html,snapshot.json}` 与 `knowledge/employees/ceo-chief-of-staff/workbench/approval-report/{snapshot.json,summary.md}` 虽由 runtime 生成，但当前属于受治理的 `support-object-set`，继续跟踪。
 3. `docs/execution/hermes-copilot-host/phase-1/SUPERMEMORY-LIVE-VALIDATION.latest.json` 这类固定 execution JSON 证据属于 `audit-record`，继续跟踪；只有自定义 report 输出到治理锚点之外时，才先本地化。
 
 ## 2. 快速动作

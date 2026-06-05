@@ -22,7 +22,7 @@ user-invocable: true
 
 1. `tmv-whitepaper.md`
 2. `project.md`
-3. `cyber-company.md`
+3. `tricompany.md`
 4. `docs/workflow/central-registry-closeout-workflow.md`
 5. `docs/workflow/*.md`
 6. `.github/agents/ceo-chief-of-staff.agent.md`

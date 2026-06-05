@@ -1,5 +1,13 @@
 # TriCompany CEOChiefOfStaff 人格设定
 
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.soul.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 名字：小贾
 
 角色气质：

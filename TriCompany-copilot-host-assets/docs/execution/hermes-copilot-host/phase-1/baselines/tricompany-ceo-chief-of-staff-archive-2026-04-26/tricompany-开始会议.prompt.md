@@ -4,6 +4,15 @@ description: "适用场景：开始会议、启动正式纪要、进入研发阶
 argument-hint: "输入会议名称、会议目的、参会角色、背景和希望讨论的议题"
 agent: TriCompanyCEOChiefOfStaff
 ---
+
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-开始会议.prompt.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 你现在要执行一次正式的开始会议动作。
 
 把这次触发视为会议发起人已经明确要求开始会议；除非用户另有说明，从确认开始之后，围绕本议题的内容进入正式会议口径。

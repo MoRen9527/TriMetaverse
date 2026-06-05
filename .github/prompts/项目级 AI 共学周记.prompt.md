@@ -17,7 +17,7 @@ CEO 当前手动使用方式为：
 
 在输出或编辑前，优先遵循以下文件：
 
-- [秘书处机制](../../docs/workflow/cyber-company-secretariat.md)
+- [秘书处机制](../../docs/workflow/tricompany-secretariat.md)
 - [真实经营记录目录说明](../../docs/workflow/operating-records/README.md)
 - [项目级 AI 共学周记归档说明](../../docs/workflow/operating-records/项目级%20AI%20共学周记/README.md)
 

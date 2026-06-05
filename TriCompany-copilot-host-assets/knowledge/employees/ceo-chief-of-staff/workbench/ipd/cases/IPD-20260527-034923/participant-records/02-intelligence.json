@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-participant-record",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "intelligence",
+  "phaseKey": "INTELLIGENCE",
+  "ownerRole": "ChiefProductOfficer",
+  "participantRoles": [
+    "CEOChiefOfStaff",
+    "ChiefMarketingOfficer",
+    "ChiefOperatingOfficer",
+    "ChiefFinancialOfficer"
+  ],
+  "generatedAt": "2026-05-27T04:07:37+08:00",
+  "records": [
+    {
+      "role": "ChiefProductOfficer",
+      "status": "completed",
+      "summary": "ChiefProductOfficer 已在 intelligence 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "completed",
+      "summary": "CEOChiefOfStaff 已在 intelligence 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "ChiefMarketingOfficer",
+      "status": "completed",
+      "summary": "ChiefMarketingOfficer 已在 intelligence 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "ChiefOperatingOfficer",
+      "status": "completed",
+      "summary": "ChiefOperatingOfficer 已在 intelligence 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "ChiefFinancialOfficer",
+      "status": "completed",
+      "summary": "ChiefFinancialOfficer 已在 intelligence 阶段完成 autopilot 协同条目。"
+    }
+  ]
+}

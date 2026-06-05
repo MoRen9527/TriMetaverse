@@ -1,7 +1,7 @@
 ﻿---
-description: "适用场景：修改 CEOChiefOfStaff、小贾、ceo-chief-of-staff.agent.md、开始会议.prompt.md、结束会议.prompt.md、日常收口.prompt.md、中央收口.prompt.md、中央收口输出模板.prompt.md、PRD归属路由.prompt.md 时使用。约束当前 live 总助入口、会议/收口 prompt 命令和 registry 同步规则的维护边界；总助 soul/memory/colleagues/social 四层契约回到 TriCompany 源侧五件套维护。"
+description: "适用场景：修改 CEOChiefOfStaff、小贾、ceo-chief-of-staff.agent.md、开始会议.prompt.md、结束会议.prompt.md、日常收口.prompt.md、中央收口.prompt.md、中央收口输出模板.prompt.md、PRD归属路由.prompt.md、开发任务.prompt.md、dev-task.prompt.md 时使用。约束当前 live 总助入口、会议/收口 prompt 命令和 registry 同步规则的维护边界；总助 soul/memory/colleagues/social 四层契约回到 TriCompany 源侧五件套维护。"
 name: "CEOChiefOfStaff Maintenance Rules"
-applyTo: ".github/agents/ceo-chief-of-staff.agent.md, .github/prompts/开始会议.prompt.md, .github/prompts/结束会议.prompt.md, .github/prompts/日常收口.prompt.md, .github/prompts/中央收口.prompt.md, .github/prompts/中央收口输出模板.prompt.md, .github/prompts/PRD归属路由.prompt.md"
+applyTo: ".github/agents/ceo-chief-of-staff.agent.md, .github/prompts/开始会议.prompt.md, .github/prompts/结束会议.prompt.md, .github/prompts/日常收口.prompt.md, .github/prompts/中央收口.prompt.md, .github/prompts/中央收口输出模板.prompt.md, .github/prompts/PRD归属路由.prompt.md, .github/prompts/开发任务.prompt.md, .github/prompts/dev-task.prompt.md"
 ---
 # CEO 总助配套文件维护规则
 
@@ -13,7 +13,7 @@ applyTo: ".github/agents/ceo-chief-of-staff.agent.md, .github/prompts/开始会�
   这里保留岗位职责、决策方式、行为护栏、默认输出结构和调用时真正生效的行为说明。
 - `TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.soul.md`、`.memory.md`、`.colleagues.md`、`.social.md` 是总助源侧四层认知契约。
   这些文件不再在 `TriMetaverse/.github/agents` 下保留 live 兼容副本；如需修改人格、记忆层、协作层或社交层契约，应回到 TriCompany 源侧五件套，再通过 support object / binding profile 发布。
-- `.github/prompts/开始会议.prompt.md`、`.github/prompts/结束会议.prompt.md`、`.github/prompts/日常收口.prompt.md`、`.github/prompts/中央收口.prompt.md`、`.github/prompts/中央收口输出模板.prompt.md` 和 `.github/prompts/PRD归属路由.prompt.md` 用于承载专用式会议 / 收口 / 归属路由命令或标准输出模板。
+- `.github/prompts/开始会议.prompt.md`、`.github/prompts/结束会议.prompt.md`、`.github/prompts/日常收口.prompt.md`、`.github/prompts/中央收口.prompt.md`、`.github/prompts/中央收口输出模板.prompt.md`、`.github/prompts/PRD归属路由.prompt.md`、`.github/prompts/开发任务.prompt.md` 和 `.github/prompts/dev-task.prompt.md` 用于承载专用式会议 / 收口 / 归属路由 / 任务下发命令或标准输出模板。
   这里负责把“开始会议 / 结束会议 / 日常收口”收口成明确动作，不替代总助 agent 本体的长期行为规范。
 
 ## 维护边界

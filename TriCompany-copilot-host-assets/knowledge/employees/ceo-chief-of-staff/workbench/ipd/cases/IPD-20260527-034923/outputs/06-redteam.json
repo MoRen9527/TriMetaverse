@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "redteam",
+  "phaseKey": "REDTEAM",
+  "ownerRole": "TriTest",
+  "participantRoles": [
+    "ChiefTechnologyOfficer",
+    "TriDev"
+  ],
+  "submittedAt": "2026-05-27T04:07:38+08:00",
+  "summary": "Redteam / 对抗审查 已由 autopilot 自动提交并进入签核。",
+  "details": [
+    "TriTest 已完成 Redteam / 对抗审查 自动提交。",
+    "岗位参与记录已写入 workbench/ipd/cases/IPD-20260527-034923/participant-records/06-redteam.json。",
+    "TriDev 阶段 REDTEAM 已完成 phase result 与 gate。"
+  ],
+  "evidence": [
+    "workbench/ipd/cases/IPD-20260527-034923/participant-records/06-redteam.json",
+    "docs/ipd-autopilot/IPD-20260527-034923/06-redteam.md",
+    "docs/runs/ipd-ipd-20260527-034923/phase-results/redteam.json",
+    "docs/runs/ipd-ipd-20260527-034923/gate-ledger.json",
+    "workbench/ipd/cases/IPD-20260527-034923/autopilot-packages/06-redteam.json"
+  ],
+  "objectPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/autopilot-packages/06-redteam.json"
+}

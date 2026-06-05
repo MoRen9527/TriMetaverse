@@ -24,8 +24,8 @@ user-invocable: true
 ## 信息源优先级
 
 1. `BusinessStrategy`
-2. `cyber-company.md`
-3. `docs/workflow/cyber-company-agent-roles.md`
+2. `tricompany.md`
+3. `docs/workflow/tricompany-agent-roles.md`
 4. `CompanyGovernanceRegistry`
 5. 相关模块的 `Code Registry` 文件
 6. 相关模块的 `Product Registry` 文件

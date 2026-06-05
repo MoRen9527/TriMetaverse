@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "intelligence",
+  "phaseKey": "INTELLIGENCE",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "ownerRole": "ChiefProductOfficer",
+  "participantRoles": [
+    "CEOChiefOfStaff",
+    "ChiefMarketingOfficer",
+    "ChiefOperatingOfficer",
+    "ChiefFinancialOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "submittedAt": "2026-05-27T19:31:36+08:00",
+  "summary": "Intelligence 已把任务收口为可执行 MVP PRD：TriStaciss 本轮只交付 GET /v1/models 与 POST /v1/chat/completions 最小稳定合同，TriAvatar 默认入口延后。",
+  "details": [
+    "in-scope 只包含 TriStaciss api-server 的 /v1/models 与 /v1/chat/completions，以及 TriAvatar 后续 smoke 位。",
+    "out-of-scope 明确排除 TriMem、完整用户系统、计费、配额、持久化历史与完整前端改版。",
+    "成功信号要求至少存在一个 /v1/models 成功路径与一个 /v1/chat/completions 成功路径。",
+    "验证命令已收口为 TriStaciss api-server compileall 与 pytest，不再用泛化 docs-only 交付替代。"
+  ],
+  "evidence": [
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\knowledge\\employees\\ceo-chief-of-staff\\workbench\\ipd\\cases\\IPD-20260527-034923\\manual-packages\\intelligence-package.json",
+    "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\openai_compatible_api.py",
+    "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\chat_completion_service.py",
+    "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\fastapi_stream.py",
+    "D:\\OneDrive\\Code\\ai\\Triavatar\\docs\\registry\\product-state.md",
+    "D:\\OneDrive\\Code\\ai\\TriDev\\docs\\runs\\ipd-ipd-20260527-034923\\reference-evidence.json"
+  ],
+  "objectPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\knowledge\\employees\\ceo-chief-of-staff\\workbench\\ipd\\cases\\IPD-20260527-034923\\manual-packages\\intelligence-package.json"
+}

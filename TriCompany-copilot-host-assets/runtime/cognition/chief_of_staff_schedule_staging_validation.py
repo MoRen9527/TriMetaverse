@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 import sys
@@ -170,10 +170,10 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
                         "closeoutSubject": "PC 端软件层与 TriLC closeout",
                         "scopeDecision": {
                             "route": "parallel-registry-closeout",
-                            "modules": ["Tripilot", "Tride", "vscodium", "TriLC"],
+                            "modules": ["TriPilot", "Tride", "vscodium", "TriLC"],
                         },
                         "registryFindings": [
-                            {"registry": "TripilotProductRegistry", "summary": "桌面入口承接用户触达"},
+                            {"registry": "TriPilotProductRegistry", "summary": "桌面入口承接用户触达"},
                             {"registry": "TriLCCodeRegistry", "summary": "本地控制器保持 runtime / planner 边界"},
                         ],
                         "closeoutDecision": "writeback-approved",

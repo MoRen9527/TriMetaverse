@@ -22,7 +22,7 @@
 
 - 当前物理路径：`TriCompany-copilot-host-assets`
 - 历史物理路径：`TriCompany-shadow-host`
-- 当前语义：当前 `Copilot-host` 专用的虚拟公司宿主资产包长期正式名
+- 当前语义：当前 `Copilot-host` 专用的赛博公司宿主资产包长期正式名
 - 历史语义：phase-1 shadow-test 已验证的 support root 临时路径
 
 ## 重命名原则

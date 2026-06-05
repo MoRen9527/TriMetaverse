@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-participant-record",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "verify-integration",
+  "phaseKey": "VERIFY-INTEGRATION",
+  "ownerRole": "TriTest",
+  "participantRoles": [
+    "TriDev",
+    "ChiefTechnologyOfficer"
+  ],
+  "generatedAt": "2026-05-27T04:07:38+08:00",
+  "records": [
+    {
+      "role": "TriTest",
+      "status": "completed",
+      "summary": "TriTest 已在 verify-integration 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "TriDev",
+      "status": "completed",
+      "summary": "TriDev 已在 verify-integration 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "ChiefTechnologyOfficer",
+      "status": "completed",
+      "summary": "ChiefTechnologyOfficer 已在 verify-integration 阶段完成 autopilot 协同条目。"
+    }
+  ]
+}

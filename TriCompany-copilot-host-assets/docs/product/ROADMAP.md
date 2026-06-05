@@ -9,20 +9,20 @@
 - sourceOfTruth: TriCompany/docs/product/ROADMAP.md
 - publishedFrom: TriCompany/docs/product/ROADMAP.md
 - syncMode: published-copy
-- publishTier: on-demand-published-copy
+- publishTier: active-published-copy
 - supportPublishedCopy: TriCompany-copilot-host-assets/docs/product/ROADMAP.md
-- supportSyncRule: source 稳定语义变更后，仅在成批发布或当前宿主重新显式依赖时追平
-- lastSyncedAt: 2026-04-29
+- supportSyncRule: source 稳定语义变更后，active published-copy 需在同轮或下一轮追平
+- lastSyncedAt: 2026-06-04
 
 ## 1. 当前路线判断
 
-TriCompany 当前采用“先在本仓融合 Hermes、再把当前阶段 Copilot 宿主资产收拢到 .github、再按岗位逐步上岗”的渐进路线，而不是一开始就把虚拟公司全量写成已经正式运行。
+TriCompany 当前采用“先在本仓融合 Hermes、再把当前阶段 Copilot 宿主资产收拢到 .github、再按岗位逐步上岗”的渐进路线，而不是一开始就把赛博公司全量写成已经正式运行。
 
 ## 2. 路线阶段
 
-### Phase 0：仓库基线与虚拟公司内容初版
+### Phase 0：仓库基线与赛博公司内容初版
 
-- 建立项目说明、需求、设计、registry 和执行文档基线
+- 建立项目说明、需求、设计、registry、workflow、execution 和 training 六层文档基线
 - 建立首版总助 agent 与会议 prompt
 - 明确研发仓、试运行宿主资产与正式宿主边界
 
@@ -57,3 +57,4 @@ TriCompany 当前采用“先在本仓融合 Hermes、再把当前阶段 Copilot
 - 总助和主编排优先于组织扩张
 - Hermes 融合与当前阶段 .github 宿主资产优先于空谈正式宿主切换
 - CPO / CTO 的正式接管优先于继续由总助长期代管产品和技术边界
+- 培训内容必须回链真源，不能替代 source docs、registry、设计文档或中央策略裁决

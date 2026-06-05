@@ -11,8 +11,8 @@
 - syncMode: published-copy
 - publishTier: on-demand-published-copy
 - supportPublishedCopy: TriCompany-copilot-host-assets/docs/product/PROJECT.md
-- supportSyncRule: source 稳定语义变更后，仅在成批发布或当前宿主重新显式依赖时追平
-- lastSyncedAt: 2026-05-25
+- supportSyncRule: source 稳定语义变更后，on-demand published-copy 在宿主需要读取时追平
+- lastSyncedAt: 2026-06-04
 
 ## 1. 项目定位
 
@@ -24,7 +24,7 @@ TriCompany 是 TriMetaverse 体系中的赛博公司研发仓，也是当前阶�
 
 - CEO / 创始人
 - CEO 总助 Agent
-- RAndDTrainer / 项目培训师
+- RAndDTrainer / 技术研发培训师
 - 当前 Copilot-host live 阶段已上岗的 ChiefProductOfficer
 - 当前 Copilot-host live 阶段已上岗的 ChiefTechnologyOfficer
 - 需要查看赛博公司研发基线的 Product Registry / Code Registry
@@ -37,7 +37,7 @@ TriCompany 是 TriMetaverse 体系中的赛博公司研发仓，也是当前阶�
 4. 把当前阶段 Copilot 宿主资产统一收拢到 TriCompany/.github。
 5. 为 CPO / CTO 当前 Copilot-host live 上岗后的产品与技术真源接管提供入口。
 6. 建立 RAndDTrainer 岗位与培训内容目录，让项目模块、代码和流程可以被渐进式学习。
-7. 承载集成产品开发流程（IPD 流程）：从 CEO 需求 / 任务进入，到 CMO / COO / CFO / CPO / CTO 协同，再到执行追踪和运营复盘的公司级端到端流程；其中 TriDev 只承接产品开发执行段。
+7. 承载集成产品开发流程（IPD 流程）：作为赛博公司的公司侧参与 / 协同 / 核签层，把 CEO / 总助、CMO / COO / CFO / CPO / CTO 等员工参与挂到开发型项目的十阶段主线上；其中 `TriDev` 承接流程层与十阶段 phase engine，`TriCompany` 负责员工参与、资料组织、门禁完善与书面放行。
 
 ## 4. 当前范围
 
@@ -50,7 +50,7 @@ TriCompany 是 TriMetaverse 体系中的赛博公司研发仓，也是当前阶�
 - Hermes 融合设计与迁移清单
 - 会议开始 / 结束 prompt
 - 研发阶段的编排与秘书处草案
-- TriCompany IPD 双线闭环：IPD 市场雷达线、IPD 主动交付线、CEO / 总助决策、市场证据、PRD / 项目计划、运营计划、预算护栏、技术路线、TriDev 开发执行、CPO 验收、COO 运营接管、CFO 决算和总助收口
+- TriCompany IPD 双线闭环：IPD 市场雷达线 + 挂接到 TriDev 项目级十阶段主线的 IPD 主动交付线；其中 TriCompany 负责岗位参与、资料组织、门禁与核签，TriDev 负责开发型项目的 phase engine、版本号与执行证据沉淀
 - RAndDTrainer 源侧岗位定义与 `docs/training/` 培训目录初版
 
 ## 5. 当前不做

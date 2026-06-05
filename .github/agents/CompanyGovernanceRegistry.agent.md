@@ -22,9 +22,9 @@ user-invocable: true
 ## 信息源优先级
 
 1. `BusinessStrategy`
-2. `cyber-company.md`
-3. `docs/workflow/cyber-company-agent-roles.md`
-4. `docs/workflow/cyber-company-secretariat.md`
+2. `tricompany.md`
+3. `docs/workflow/tricompany-agent-roles.md`
+4. `docs/workflow/tricompany-secretariat.md`
 5. `docs/workflow/central-registry-closeout-workflow.md`
 6. `docs/workflow/operating-records/README.md`
 7. `docs/registry/company-governance-state.md`

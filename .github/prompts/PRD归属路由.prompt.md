@@ -13,7 +13,7 @@ tools: [read, search]
 
 - [PRD 归属路由 Intake 模板](../../docs/workflow/prd-ownership-routing-intake-template.md)
 - [Workflow Runbook](../../docs/workflow/workflow-runbook.md)
-- [虚拟公司标准交接对象](../../docs/workflow/cyber-company-handoff-objects.md)
+- [虚拟公司标准交接对象](../../docs/workflow/tricompany-handoff-objects.md)
 - [PRD 归属路由样板 JSON](../../docs/workflow/handoff-templates/prd-ownership-routing.example.json)
 - [PRD 归属路由 Schema](../../docs/workflow/prd-ownership-routing.schema.json)
 - [产品总裁主规范](../agents/chief-product-officer.agent.md)

@@ -1,4 +1,4 @@
-{
+﻿{
   "runId": "registry-closeout-2026-04-23-044140-829930",
   "triggerMode": "manual",
   "closeoutId": "CRC-20260423-001",
@@ -7,7 +7,7 @@
   "objectType": "CENTRAL_REGISTRY_CLOSEOUT",
   "objectId": "CRC-20260423-001",
   "closeoutSubject": "统一 PC 端软件层 / TriLC 协同与 vscodium 上游升级口径",
-  "scopeDecision": "{\"scopeStatus\": \"central-boundary\", \"businessStrategyRequired\": true, \"businessStrategyDecisionRef\": \"BusinessStrategy boundary decision 2026-04-23\", \"participatingRegistries\": [{\"registryId\": \"BusinessStrategy\", \"registryType\": \"strategy\", \"reason\": \"确认 PC 端软件层、TriLC 和 vscodium 上游升级的中央边界\", \"status\": \"completed\"}, {\"registryId\": \"TrideProductRegistry\", \"registryType\": \"product\", \"reason\": \"确认 Tride 作为开发工具与 orchestration 底座的角色，以及与 TriLC 的协同关系\", \"status\": \"completed\"}, {\"registryId\": \"TripilotProductRegistry\", \"registryType\": \"product\", \"reason\": \"确认 Tripilot 作为用户自用自动化与 vibe coding 前台入口的职责\", \"status\": \"completed\"}, {\"registryId\": \"VscodiumProductRegistry\", \"registryType\": \"product\", \"reason\": \"确认 vscodium 作为桌面宿主之一和上游升级口径\", \"status\": \"completed\"}, {\"registryId\": \"VscodiumCodeRegistry\", \"registryType\": \"code\", \"reason\": \"确认 vscodium 代码侧对 upstream 同步层与本地修改层的区分要求\", \"status\": \"completed\"}, {\"registryId\": \"TriLCProductRegistry\", \"registryType\": \"product\", \"reason\": \"确认 TriLC 作为本地域控制器与 PC 端软件层的协同关系\", \"status\": \"completed\"}, {\"registryId\": \"TriLCCodeRegistry\", \"registryType\": \"code\", \"reason\": \"确认 TriLC 的本地 runtime / planner / tool bus 职责与桌面工作台职责边界\", \"status\": \"completed\"}, {\"registryId\": \"TriMetaverseProductRegistry\", \"registryType\": \"central-product\", \"reason\": \"沉淀跨模块产品口径\", \"status\": \"planned\"}, {\"registryId\": \"TriMetaverseCodeRegistry\", \"registryType\": \"central-code\", \"reason\": \"沉淀跨模块 workflow、agent 和模板口径\", \"status\": \"planned\"}]}",
+  "scopeDecision": "{\"scopeStatus\": \"central-boundary\", \"businessStrategyRequired\": true, \"businessStrategyDecisionRef\": \"BusinessStrategy boundary decision 2026-04-23\", \"participatingRegistries\": [{\"registryId\": \"BusinessStrategy\", \"registryType\": \"strategy\", \"reason\": \"确认 PC 端软件层、TriLC 和 vscodium 上游升级的中央边界\", \"status\": \"completed\"}, {\"registryId\": \"TrideProductRegistry\", \"registryType\": \"product\", \"reason\": \"确认 Tride 作为开发工具与 orchestration 底座的角色，以及与 TriLC 的协同关系\", \"status\": \"completed\"}, {\"registryId\": \"TriPilotProductRegistry\", \"registryType\": \"product\", \"reason\": \"确认 TriPilot 作为用户自用自动化与 vibe coding 前台入口的职责\", \"status\": \"completed\"}, {\"registryId\": \"VscodiumProductRegistry\", \"registryType\": \"product\", \"reason\": \"确认 vscodium 作为桌面宿主之一和上游升级口径\", \"status\": \"completed\"}, {\"registryId\": \"VscodiumCodeRegistry\", \"registryType\": \"code\", \"reason\": \"确认 vscodium 代码侧对 upstream 同步层与本地修改层的区分要求\", \"status\": \"completed\"}, {\"registryId\": \"TriLCProductRegistry\", \"registryType\": \"product\", \"reason\": \"确认 TriLC 作为本地域控制器与 PC 端软件层的协同关系\", \"status\": \"completed\"}, {\"registryId\": \"TriLCCodeRegistry\", \"registryType\": \"code\", \"reason\": \"确认 TriLC 的本地 runtime / planner / tool bus 职责与桌面工作台职责边界\", \"status\": \"completed\"}, {\"registryId\": \"TriMetaverseProductRegistry\", \"registryType\": \"central-product\", \"reason\": \"沉淀跨模块产品口径\", \"status\": \"planned\"}, {\"registryId\": \"TriMetaverseCodeRegistry\", \"registryType\": \"central-code\", \"reason\": \"沉淀跨模块 workflow、agent 和模板口径\", \"status\": \"planned\"}]}",
   "registryFindingCount": 5,
   "closeout": {
     "objectType": "CENTRAL_REGISTRY_CLOSEOUT",
@@ -27,7 +27,7 @@
     "relatedModules": [
       "TriMetaverse",
       "Tride",
-      "Tripilot",
+      "TriPilot",
       "vscodium",
       "TriLC"
     ],
@@ -86,7 +86,7 @@
       "candidateModules": [
         "TriMetaverse",
         "Tride",
-        "Tripilot",
+        "TriPilot",
         "vscodium",
         "TriLC"
       ],
@@ -118,9 +118,9 @@
             "status": "completed"
           },
           {
-            "registryId": "TripilotProductRegistry",
+            "registryId": "TriPilotProductRegistry",
             "registryType": "product",
-            "reason": "确认 Tripilot 作为用户自用自动化与 vibe coding 前台入口的职责",
+            "reason": "确认 TriPilot 作为用户自用自动化与 vibe coding 前台入口的职责",
             "status": "completed"
           },
           {
@@ -184,20 +184,20 @@
           "escalations": []
         },
         {
-          "registryId": "TripilotProductRegistry",
+          "registryId": "TriPilotProductRegistry",
           "sourceOfTruth": [
-            "Tripilot/AGENTS.md",
-            "Tripilot/docs/registry/product-state.md"
+            "TriPilot/AGENTS.md",
+            "TriPilot/docs/registry/product-state.md"
           ],
           "confirmedFacts": [
-            "Tripilot 是 PC 端软件层中的用户交互入口之一。",
-            "Tripilot 承接用户自用自动化与 vibe coding 的前台入口语义。"
+            "TriPilot 是 PC 端软件层中的用户交互入口之一。",
+            "TriPilot 承接用户自用自动化与 vibe coding 的前台入口语义。"
           ],
           "changedFacts": [
-            "Tripilot 与 TriLC 的关系已明确为桌面入口侧的触发、确认与反馈，而不是本地执行控制器。"
+            "TriPilot 与 TriLC 的关系已明确为桌面入口侧的触发、确认与反馈，而不是本地执行控制器。"
           ],
           "proposedWritebacks": [
-            "同步 Tripilot 模块 product-state 与 agent 契约中的前台入口表述。"
+            "同步 TriPilot 模块 product-state 与 agent 契约中的前台入口表述。"
           ],
           "gaps": [],
           "escalations": []

@@ -87,7 +87,7 @@
 
 - TriCompany：研发与本地正式接管宿主资产收口仓
 - TriMetaverse/.github：当前 Copilot-host 正式接管的宿主位置，起点为 shadow-test 回迁验证
-- TriMC：未来虚拟公司正式服务域宿主
+- TriMC：未来赛博公司正式服务域宿主
 
 ## 8. 当前已验证的 Hermes 核心契约
 

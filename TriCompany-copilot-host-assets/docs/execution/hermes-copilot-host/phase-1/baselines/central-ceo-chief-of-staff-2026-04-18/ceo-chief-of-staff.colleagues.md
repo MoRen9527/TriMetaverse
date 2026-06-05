@@ -1,5 +1,13 @@
 # CEOChiefOfStaff 工作协作档案
 
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/ceo-chief-of-staff.colleagues.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 本文件用于承载 `CEOChiefOfStaff` 在工作层面对人和事的长期可迁移记忆。
 这里优先记录同事、协作者、工作事项、首选称呼、关系上下文、协作习惯、已共同推进事项和待确认信息，帮助总助在长期共事中保持稳定、自然、可追溯的协作方式。
 

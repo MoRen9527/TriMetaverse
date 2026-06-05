@@ -18,7 +18,7 @@
 
 本文用于定义 TriCompany 当前阶段的 Hermes 融合与 Copilot 宿主迁移口径。
 
-这里说的“宿主迁移”指的是把当前阶段虚拟公司在 Copilot-host 下完成 shadow-test 并进入正式接管所需的自定义资产统一收拢到 TriCompany/.github 下，而不是宣称正式宿主已经切换。
+这里说的“宿主迁移”指的是把当前阶段赛博公司在 Copilot-host 下完成 shadow-test 并进入正式接管所需的自定义资产统一收拢到 TriCompany/.github 下，而不是宣称正式宿主已经切换。
 
 ## 2. 当前成立的结论
 

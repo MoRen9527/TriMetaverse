@@ -263,7 +263,7 @@
         "TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.social.md",
         "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
         "TriCompany/docs/workflow/host-object-publish-flow.md",
-        "TriCompany/docs/workflow/cyber-company-secretariat.md",
+        "TriCompany/docs/workflow/tricompany-secretariat.md",
         "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
       ],
       "bindingProfile": "TriCompany/.github/binding-profiles/chief-human-resources-officer.json",
@@ -337,7 +337,7 @@
         "TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.memory.md",
         "TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.colleagues.md",
         "TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.social.md",
-        "TriCompany/docs/workflow/cyber-company-secretariat.md",
+        "TriCompany/docs/workflow/tricompany-secretariat.md",
         "TriCompany/docs/workflow/host-object-publish-flow.md",
         "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
         "TriMetaverse/docs/registry/company-governance-state.md"
@@ -416,7 +416,7 @@
         "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
         "TriCompany/docs/workflow/host-object-publish-flow.md",
         "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
-        "TriMetaverse/cyber-company.md"
+        "TriMetaverse/tricompany.md"
       ],
       "bindingProfile": "TriCompany/.github/binding-profiles/chief-marketing-officer.json",
       "supportObjects": [
@@ -493,7 +493,7 @@
         "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
         "TriCompany/docs/workflow/host-object-publish-flow.md",
         "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
-        "TriMetaverse/cyber-company.md"
+        "TriMetaverse/tricompany.md"
       ],
       "bindingProfile": "TriCompany/.github/binding-profiles/chief-operating-officer.json",
       "supportObjects": [
@@ -570,7 +570,7 @@
         "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
         "TriCompany/docs/workflow/host-object-publish-flow.md",
         "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
-        "TriMetaverse/cyber-company.md"
+        "TriMetaverse/tricompany.md"
       ],
       "bindingProfile": "TriCompany/.github/binding-profiles/chief-financial-officer.json",
       "supportObjects": [

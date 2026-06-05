@@ -1,5 +1,13 @@
 # TriCompany CEOChiefOfStaff 配套记忆
 
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.memory.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 本文件用于承载 TriCompany 阶段的总助可迁移记忆。
 
 ## 记忆元信息

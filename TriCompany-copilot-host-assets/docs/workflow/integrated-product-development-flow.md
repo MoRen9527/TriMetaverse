@@ -4,6 +4,14 @@
 日期：2026-05-25
 状态：当前 Copilot-host live 阶段流程设计
 
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany/docs/workflow/integrated-product-development-flow.md
+- publishedFrom: TriCompany/docs/workflow/integrated-product-development-flow.md
+- syncMode: published-copy
+- publishTier: active-published-copy
+- lastSyncedAt: 2026-06-04
+
 ## 1. 文档定位
 
 本文定义 TriCompany 当前阶段的集成产品开发流程（IPD 流程）。
@@ -14,7 +22,7 @@
 2. `TriDev` 负责开发型项目的项目级十阶段 phase engine。
 3. `IPD` 不是与项目十阶段并行的第二套开发流程，而是赛博公司围绕这条十阶段主线的参与 / 协同 / 放行机制。
 
-当前设计只代表虚拟公司研发阶段和本地 Copilot-host 正式接管阶段，不代表 TriMC 正式宿主、生产级自动运营看板或完整授权矩阵已经完成。
+当前设计只代表赛博公司研发阶段和本地 Copilot-host 正式接管阶段，不代表 TriMC 正式宿主、生产级自动运营看板或完整授权矩阵已经完成。
 
 ## 2. 流程总名与两条线
 
