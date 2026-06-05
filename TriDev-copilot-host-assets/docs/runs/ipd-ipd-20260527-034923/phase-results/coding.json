@@ -1,0 +1,17 @@
+{
+  "stage": "CODING",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\coding-package.json"
+  ],
+  "artifactDigest": "5af141de13c5e79be9dc0b3e791e2da7cbb7c14b189b116a6abd1bf7b1836f71",
+  "summary": "Coding 首刀已经完成：TriStaciss 新增 /v1/models，补齐 models 聚合逻辑，并用新增 unit/integration tests 固化 /v1/chat/completions contract。",
+  "createdAt": "2026-05-27T11:31:38.142258+00:00",
+  "changedFiles": [
+    "docs/ipd-autopilot/IPD-20260527-034923/coding-package.json"
+  ],
+  "gitDiffDigest": "9e682fca73b38caac277b7be531f4436849add59dc1c389ed2e63e07c0695a8a",
+  "gitDiffStatus": "captured",
+  "schemaVersion": "1.0"
+}

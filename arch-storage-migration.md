@@ -16,7 +16,7 @@
 - 研发 10 阶段主流程当前应写为 `TriMC` 统一运行面中的研发执行切片，不再使用 `Development Main Controller` 作为当前标准名。
 - 虚拟公司当前应写为所有人格 Agent 与非人格 Agent 的经营和交互核心载体，不再使用 `Autonomy Main Controller` 作为当前标准名。
 - shadow 与正式接管当前都直接运行在 `copilot` 宿主上；正式切换通过 `TriHost` 配置实现，`Tride` 仅作为 PC 端软件中的开发工具与 orchestration 底座。
-- 为保留历史迁移上下文，本文正文旧称暂不逐段替换；若与最新真源冲突，以 `project.md`、`cyber-company.md` 与 `docs/workflow/terminology.md` 为准。
+- 为保留历史迁移上下文，本文正文旧称暂不逐段替换；若与最新真源冲突，以 `project.md`、`tricompany.md` 与 `docs/workflow/terminology.md` 为准。
 
 ## 概述
 

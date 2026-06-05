@@ -1,8 +1,16 @@
-# 虚拟公司标准交接对象
+# 赛博公司标准交接对象
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/tricompany-handoff-objects.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
 
 ## 1. 目标
 
-本文件把 `cyber-company-agent-roles.md` 中的关键协作对象收敛为可复用的标准交接对象，避免虚拟公司后续继续依赖模糊自然语言流转任务。
+本文件把 `tricompany-agent-roles.md` 中的关键协作对象收敛为可复用的标准交接对象，避免赛博公司后续继续依赖模糊自然语言流转任务。
 
 本文件解决三类问题：
 
@@ -22,13 +30,13 @@
 - `ChiefTechnologyOfficer`
 - `ChiefOperatingOfficer`
 
-这些对象不是替代 `PhaseResult` 的主流程对象，而是补足虚拟公司经营层的日常协作对象。
+这些对象不是替代 `PhaseResult` 的主流程对象，而是补足赛博公司经营层的日常协作对象。
 
 ## 3. 统一设计原则
 
 ### 3.1 统一 Envelope
 
-所有交接对象都应先满足 `cyber-company-handoff-envelope.schema.json` 的基础结构。
+所有交接对象都应先满足 `tricompany-handoff-envelope.schema.json` 的基础结构。
 
 ### 3.2 先少后多
 
@@ -315,7 +323,7 @@
 当前阶段使用规则：
 
 - 设计 owner 默认是 `ChiefHumanResourcesOfficer`；在其尚未独立上岗前，由 `CEOChiefOfStaff` 代执行。
-- envelope 的 `status` 仍使用虚拟公司统一状态；更细粒度的交接进度统一写入 `payload.completionTrackingStatus`。
+- envelope 的 `status` 仍使用赛博公司统一状态；更细粒度的交接进度统一写入 `payload.completionTrackingStatus`。
 - 若当前只完成 source-side 定义而 live 未绑定，`payload.scope` 必须显式写成 `source-side-not-live` 或等价表述，不得写成已 live 完成。
 - 若交接事项触及中央边界变化、正式宿主切换或模块长期边界调整，必须升级到 `BusinessStrategy` 或 CEO 裁决。
 - 若当前输入还只是自然语言，可先使用 `responsibility-handoff-intake-template.md` 补齐最小字段，再整理成正式 JSON 对象。
@@ -410,14 +418,14 @@
 
 - 这些对象不替代 `PhaseResult`。
 - `PhaseResult` 解决的是产品研发主流程的阶段结果。
-- 本文件解决的是虚拟公司经营层 Agent 之间的日常经营对象流转。
+- 本文件解决的是赛博公司经营层 Agent 之间的日常经营对象流转。
 - 两者当前已可通过 `workflowRefs`、`runId`、`branchId` 与 `phaseResultRef` 建立统一引用。
 - `phaseResultRef` 的稳定目录规范见：`../runs/README.md`
 
 经营对象到研发阶段的标准桥接规范见：
 
-- `cyber-company-phase-link.schema.json`
-- `cyber-company-phase-bridge.md`
+- `tricompany-phase-link.schema.json`
+- `tricompany-phase-bridge.md`
 
 ## 10. 模板目录
 
@@ -452,7 +460,7 @@
 
 ## 12. 当前使用者与成熟度
 
-当前这些虚拟公司 JSON 交接对象，实际上有三类使用者：
+当前这些赛博公司 JSON 交接对象，实际上有三类使用者：
 
 - `Role Agent` / 智能体：这是当前最直接的使用者。对象的首要用途，是让 `CEOChiefOfStaff`、`ChiefProductOfficer`、`ChiefTechnologyOfficer` 等角色之间用标准对象交接，而不是只靠口头描述。
 - 工作流 / 文档机制：这是当前最稳定的承载层。经营主工作流、运行手册、桥接规范和 operating records 用这些对象组织 intake、handoff、审批和对 `PhaseResult` 的引用。
@@ -462,7 +470,7 @@
 
 ## 13. 当前结论
 
-到这一步，TriMetaverse 虚拟公司已经不只是“有角色定义”，而是具备了第一版标准交接对象目录。
+到这一步，TriMetaverse 赛博公司已经不只是“有角色定义”，而是具备了第一版标准交接对象目录。
 
 下一步最自然的是：
 

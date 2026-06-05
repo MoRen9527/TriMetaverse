@@ -1,0 +1,12 @@
+{
+  "runId": "ipd-ipd-20260527-034923",
+  "mode": "ipd-autopilot",
+  "workMode": "new",
+  "currentStage": "VERIFY-INTEGRATION",
+  "branchId": "ipd-ipd-20260527-034923",
+  "status": "running",
+  "task": "以 TriStaciss 为主模块推进最小 OpenAI-compatible 模型网关 MVP：本轮先补齐 GET /v1/models，并用测试固化 POST /v1/chat/completions 的 non-stream 与 stream 合同；TriAvatar 只保留后续最薄聊天 smoke，不切默认入口；TriMem 明确 out-of-scope。",
+  "createdAt": "2026-05-27T11:31:33.934558+00:00",
+  "updatedAt": "2026-05-27T11:31:38.364386+00:00",
+  "schemaVersion": "1.0"
+}

@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "DEMAND_INTAKE",
   "objectId": "DI-YYYYMMDD-001",
   "title": "市场需求输入单",
@@ -14,7 +14,7 @@
     "label": "需求采集周期"
   },
   "summary": "记录市场机会、目标用户和转化假设，供产品判断。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Triavatar"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "TriAvatar"],
   "dependsOn": [],
   "evidence": [
     {

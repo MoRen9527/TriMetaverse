@@ -1,6 +1,14 @@
 # PRD 分支最小目录样板
 
-目的：给目标模块或项目根提供一份可直接照着建的 `模块五层文档协同系统` 最小样板，使 `INTELLIGENCE` 审核通过后的 PRD 分支能在正确落位点上进入标准落地面。
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/prd-branch-minimal-directory-template.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
+目的：给目标模块或项目根提供一份可直接照着建的 `模块六层文档协同系统` 最小样板，使 `INTELLIGENCE` 审核通过后的 PRD 分支能在正确落位点上进入标准落地面。
 
 ---
 
@@ -9,7 +17,7 @@
 - 使用本样板前，必须先拿到 PRD 归属路由结论，确认当前应该在哪个模块根或项目根建立五层结构。
 - 新模块第一次接入中央 workflow
 - 现有模块第一次从 `INTELLIGENCE` 进入 PRD 分支执行
-- 某模块此前只有零散文档，准备收敛到 `模块五层文档协同系统`
+- 某模块此前只有零散文档，准备收敛到 `模块六层文档协同系统`
 
 ### 1.1 强制前置判断
 
@@ -140,7 +148,7 @@ docs/
 ```md
 # DESIGN.md
 
-当前模块已创建 `模块五层文档协同系统` 最小入口。
+当前模块已创建 `模块六层文档协同系统` 最小入口。
 本文件用于承接 PRD001 的设计规格、接口与技术约束；当前待 `DESIGNING` 阶段补齐。
 ```
 

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "hostId": "copilot-cli",
+  "displayName": "GitHub Copilot CLI",
+  "maturityTier": "copilot-first",
+  "status": "passed",
+  "installStatus": "passed",
+  "surfaceStatus": "passed",
+  "runtimeStatus": "passed",
+  "parityScore": 100,
+  "summary": "GitHub Copilot CLI 宿主 surface 与活动 run 连续性证据均已就绪。",
+  "supportRoot": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets",
+  "checks": {
+    "install": {
+      "agentsFilePresent": true,
+      "copilotInstructionsPresent": true,
+      "skillPresent": true,
+      "agentPresent": true
+    },
+    "surface": {
+      "protocolModeDeclared": true,
+      "primaryTriggerDeclared": true,
+      "resumePromptDeclared": true,
+      "officialSurfacesDeclared": true,
+      "runtimeArtifactsDeclared": true
+    },
+    "runtime": {
+      "latestRunPresent": true,
+      "workflowStatePresent": true,
+      "sessionBriefPresent": true,
+      "knowledgeBundlePresent": true,
+      "promptContextPresent": true,
+      "machinePlaybookPresent": true,
+      "roleAdaptersPresent": true,
+      "taskPlanPresent": true
+    }
+  },
+  "blockers": [],
+  "nextActions": [
+    "python -m tridev.cli status --root . --run-id ipd-ipd-20260527-034923",
+    "在 Copilot 会话中输入 `tridev: 继续当前流程`。"
+  ],
+  "primaryTrigger": "tridev: <需求描述>",
+  "resumePrompt": "tridev: 继续当前流程",
+  "latestRun": {
+    "exists": true,
+    "runId": "ipd-ipd-20260527-034923",
+    "currentStage": "VERIFY-INTEGRATION",
+    "nextAction": "record-phase-result",
+    "workflowStatePresent": true,
+    "sessionBriefPresent": true,
+    "knowledgeBundlePresent": true,
+    "promptContextPresent": true,
+    "machinePlaybookPresent": true,
+    "roleAdaptersPresent": true,
+    "taskPlanPresent": true
+  },
+  "generatedAt": "2026-05-27T15:21:45.106989+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "stage": "CODING",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\04-coding.md"
+  ],
+  "artifactDigest": "de60f44ebff8e44bc3b10c4977af224beeb631a8925192d3507256b8c3942f13",
+  "summary": "IPD-20260527-034923 coding 自动推进完成。",
+  "createdAt": "2026-05-26T20:07:38.351403+00:00",
+  "schemaVersion": "1.0"
+}

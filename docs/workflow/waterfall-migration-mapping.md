@@ -3,6 +3,14 @@
 日期：2026-03-05  
 适用范围：TriMetaverse workflow 文档体系
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/waterfall-migration-mapping.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ---
 
 ## 1. 阶段迁移总览

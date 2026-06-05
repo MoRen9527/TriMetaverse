@@ -1,5 +1,13 @@
 # core-agent 到 TriMC 迁移清单
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/core-agent-to-trimc-migration-checklist.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## 1. 迁移结论
 
 core-agent 不应整体视为 TriMC 主控本体。

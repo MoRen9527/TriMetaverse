@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "ENGINEERING_TASK",
   "objectId": "ET-YYYYMMDD-001",
   "title": "研发任务单",
@@ -14,7 +14,7 @@
     "label": "首轮交付窗"
   },
   "summary": "将 MVP 定义拆解为实现、测试、发布和回滚要求。",
-  "relatedModules": ["Tripilot", "Tristaciss", "TriTest", "Trideployment"],
+  "relatedModules": ["TriPilot", "TriStaciss", "TriTest", "TriDeployment"],
   "dependsOn": ["MVP-YYYYMMDD-001", "BC-YYYYMMDD-001"],
   "evidence": [
     {

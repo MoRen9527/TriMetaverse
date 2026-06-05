@@ -1,5 +1,13 @@
 # CEO 与 CEOChiefOfStaff 能力检验和项目对齐会纪要
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/operating-records/2026-W17/meeting-2026-04-20-ceo-chief-of-staff-capability-and-alignment.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 时间：2026-04-20
 
 主持：CEO
@@ -96,4 +104,5 @@
 
 - 当前会议纪要：`docs/workflow/operating-records/2026-W17/meeting-2026-04-20-ceo-chief-of-staff-capability-and-alignment.md`
 - 四层记忆概念主档：`TriCompany/docs/engineering/cyber-company-four-layer-memory-collaboration-system.md`
-- 当前总助耐久记忆：`.github/agents/ceo-chief-of-staff.memory.md`
+- 当前总助耐久记忆 readback：`TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/employee-consumption-records.md`
+- 当前总助源侧记忆契约：`TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.memory.md`

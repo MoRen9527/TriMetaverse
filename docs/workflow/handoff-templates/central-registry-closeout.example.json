@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "CENTRAL_REGISTRY_CLOSEOUT",
   "objectId": "CRC-20260423-001",
   "title": "中央 registry 收口单：统一 PC 端软件层 / TriLC 协同与 vscodium 上游升级口径",
@@ -13,7 +13,7 @@
     "label": "pc-local-closeout-2026-04-23"
   },
   "summary": "针对 PC 端软件层、TriLC 本地化任务协同以及 vscodium 上游升级口径进行一次跨模块 registry 收口，明确哪些事实已经可以正式回写，哪些仍需继续细化。",
-  "relatedModules": ["TriMetaverse", "Tride", "Tripilot", "vscodium", "TriLC"],
+  "relatedModules": ["TriMetaverse", "Tride", "TriPilot", "vscodium", "TriLC"],
   "dependsOn": ["OR-202604-W14-001"],
   "evidence": [
     {
@@ -64,7 +64,7 @@
   "payload": {
     "closeoutSubject": "统一 PC 端软件层 / TriLC 协同与 vscodium 上游升级口径",
     "triggerReason": "多份中央与模块文档已经补入 PC 端软件层、TriLC 和 vscodium 相关边界，需要同步整理为一份结构化中央收口样板，避免继续依赖自由文本回填。",
-    "candidateModules": ["TriMetaverse", "Tride", "Tripilot", "vscodium", "TriLC"],
+    "candidateModules": ["TriMetaverse", "Tride", "TriPilot", "vscodium", "TriLC"],
     "knownChanges": [
       "PC 端软件层不再只被写成开发工具层，还需要配合 TriLC 完成本地化任务和部分服务域下发任务。",
       "PC 端软件层同时面向用户提供可直接使用的桌面自动化、PC 软件自动化与 vibe coding 工具入口。",
@@ -99,15 +99,15 @@
           "status": "completed"
         },
         {
-          "registryId": "TripilotBusinessStrategyRegistry",
+          "registryId": "TriPilotBusinessStrategyRegistry",
           "registryType": "business",
-          "reason": "确认 Tripilot 作为用户自用自动化与 vibe coding 前台入口的模块商业定位",
+          "reason": "确认 TriPilot 作为用户自用自动化与 vibe coding 前台入口的模块商业定位",
           "status": "completed"
         },
         {
-          "registryId": "TripilotProductRegistry",
+          "registryId": "TriPilotProductRegistry",
           "registryType": "product",
-          "reason": "确认 Tripilot 作为用户自用自动化与 vibe coding 前台入口的职责",
+          "reason": "确认 TriPilot 作为用户自用自动化与 vibe coding 前台入口的职责",
           "status": "completed"
         },
         {
@@ -196,33 +196,33 @@
         "escalations": []
       },
       {
-        "registryId": "TripilotBusinessStrategyRegistry",
-        "sourceOfTruth": ["Tripilot/docs/registry/business-state.md", "Tripilot/AGENTS.md"],
+        "registryId": "TriPilotBusinessStrategyRegistry",
+        "sourceOfTruth": ["TriPilot/docs/registry/business-state.md", "TriPilot/AGENTS.md"],
         "confirmedFacts": [
-          "Tripilot 是用户入口界面和 PC 端软件层中的交互入口。",
-          "Tripilot 负责基于 VS Code 扩展与 webview 提供三元宇宙服务的交互入口。"
+          "TriPilot 是用户入口界面和 PC 端软件层中的交互入口。",
+          "TriPilot 负责基于 VS Code 扩展与 webview 提供三元宇宙服务的交互入口。"
         ],
         "changedFacts": [
-          "Tripilot 的中央收口应先确认桌面入口的模块商业职责，再处理产品体验与代码实现问题。"
+          "TriPilot 的中央收口应先确认桌面入口的模块商业职责，再处理产品体验与代码实现问题。"
         ],
         "proposedWritebacks": [
-          "在中央收口样板中保留 Tripilot 的 business/product/code 三层 fan-in 顺序。"
+          "在中央收口样板中保留 TriPilot 的 business/product/code 三层 fan-in 顺序。"
         ],
         "gaps": [],
         "escalations": []
       },
       {
-        "registryId": "TripilotProductRegistry",
-        "sourceOfTruth": ["Tripilot/AGENTS.md", "Tripilot/docs/registry/product-state.md"],
+        "registryId": "TriPilotProductRegistry",
+        "sourceOfTruth": ["TriPilot/AGENTS.md", "TriPilot/docs/registry/product-state.md"],
         "confirmedFacts": [
-          "Tripilot 是 PC 端软件层中的用户交互入口之一。",
-          "Tripilot 承接用户自用自动化与 vibe coding 的前台入口语义。"
+          "TriPilot 是 PC 端软件层中的用户交互入口之一。",
+          "TriPilot 承接用户自用自动化与 vibe coding 的前台入口语义。"
         ],
         "changedFacts": [
-          "Tripilot 与 TriLC 的关系已明确为桌面入口侧的触发、确认与反馈，而不是本地执行控制器。"
+          "TriPilot 与 TriLC 的关系已明确为桌面入口侧的触发、确认与反馈，而不是本地执行控制器。"
         ],
         "proposedWritebacks": [
-          "同步 Tripilot 模块 product-state 与 agent 契约中的前台入口表述。"
+          "同步 TriPilot 模块 product-state 与 agent 契约中的前台入口表述。"
         ],
         "gaps": [],
         "escalations": []
@@ -231,7 +231,7 @@
         "registryId": "VscodiumBusinessStrategyRegistry",
         "sourceOfTruth": ["vscodium/docs/registry/business-state.md", "vscodium/AGENTS.md"],
         "confirmedFacts": [
-          "vscodium 是与 Tripilot 配套的 IDE 宿主基础设施和桌面工作台承载模块。",
+          "vscodium 是与 TriPilot 配套的 IDE 宿主基础设施和桌面工作台承载模块。",
           "vscodium 的商业定位要求清晰区分上游同步能力与本地新增定制能力。"
         ],
         "changedFacts": [

@@ -1,5 +1,13 @@
 # TMV 工作流使用说明：Issue 模板与任务管理指南
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/ISSUE_WORKFLOW_GUIDE.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 本指南帮助你用最少学习成本，直接上手使用 GitHub Issues 模板来管理三元宇宙（TMV）项目，从想法到上线的全过程都有据可依、可度量、可复盘。
 
 ---

@@ -1,0 +1,12 @@
+{
+  "runId": "ipd-ipd-20260527-034923",
+  "mode": "ipd-autopilot",
+  "workMode": "new",
+  "currentStage": "VERIFY-INTEGRATION",
+  "branchId": "ipd-ipd-20260527-034923",
+  "status": "running",
+  "task": "? TriStaciss ???????? OpenAI-compatible ???? MVP?????? GET /v1/models??????? POST /v1/chat/completions ? non-stream ? stream ???TriAvatar ????????? smoke????????TriMem ?? out-of-scope?",
+  "createdAt": "2026-05-27T11:20:12.786656+00:00",
+  "updatedAt": "2026-05-27T11:20:17.195679+00:00",
+  "schemaVersion": "1.0"
+}

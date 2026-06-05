@@ -1,14 +1,22 @@
-# 虚拟公司秘书处机制
+# 赛博公司秘书处机制
 
 版本：V0.1 草案
 日期：2026-04-11
 状态：草案
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/tricompany-secretariat.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ---
 
 ## 1. 文档定位
 
-本文用于定义 TriMetaverse 虚拟公司的秘书处机制，承接公司级会议组织、纪要整理、会后跟进、记录归档和回填要求，并明确秘书处作为行政管理体系的一部分如何运行。
+本文用于定义 TriMetaverse 赛博公司的秘书处机制，承接公司级会议组织、纪要整理、会后跟进、记录归档和回填要求，并明确秘书处作为行政管理体系的一部分如何运行。
 
 本文属于公司 workflow 文档，不属于任何单一岗位的 agent 本体。岗位 agent 只负责引用本机制，不在各自 prompt 中重复维护整套会议组织细节。
 
@@ -96,7 +104,7 @@
 - 真实会议纪要、会前包、未决事项和相关补充说明，统一归入 `docs/workflow/operating-records/` 的对应目录。
 - 与周计划或月度目标令直接配套的会议文档，应与相关对象放在同一目录，便于回看和审计。
 - 项目级 AI 共学周记按周归入 `docs/workflow/operating-records/YYYY-Wnn/`，用于沉淀当周可对外分享的大模型能力观察、体验反馈与实践经验。
-- 项目级 AI 共学周记在每周开始由维护者创建草稿；每次虚拟公司相关对话后，包括 CEO 与 agent、agent 与 agent 的对话，都应判断是否有值得总结的问题与体验，并按固定格式追加到当周文档。
+- 项目级 AI 共学周记在每周开始由维护者创建草稿；每次赛博公司相关对话后，包括 CEO 与 agent、agent 与 agent 的对话，都应判断是否有值得总结的问题与体验，并按固定格式追加到当周文档。
 - 项目级 AI 共学周记每周结束前由维护者升级给 CEO 确认签发，生成正式版本号后归档到 `docs/workflow/operating-records/项目级 AI 共学周记/`；如周六 20:00 有分享会，周六中午必须完成一次分享会前更新。
 - 当前自动创建、自动追加、周六中午自动更新和周末签发提醒尚未实现；在总助具备常驻与 cron 能力后，例如后续借助 `TriMC` 吸收简版 OpenClaw 能力形成 resident / cron 链路，应优先补上该自动化。
 - 本文件定义的是公司级机制；真实执行记录仍以 `operating-records/` 下的文件为准。
@@ -113,8 +121,8 @@
 
 ## 8. 关联文档
 
-- `cyber-company.md`
-- `cyber-company-agent-roles.md`
-- `cyber-company-operating-workflow.md`
+- `tricompany.md`
+- `tricompany-agent-roles.md`
+- `tricompany-operating-workflow.md`
 - `operating-records/README.md`
 - `../registry/company-governance-state.md`

@@ -1,5 +1,13 @@
 # PR 描述模板：瀑布对齐修正（TriMetaverse）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/pr-description-waterfall-alignment.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ## 最终直接使用版（推荐）
 
 ### PR 标题

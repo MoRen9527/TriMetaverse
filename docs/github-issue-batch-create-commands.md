@@ -1,4 +1,12 @@
-# GitHub Issue 批量创建命令清单（PowerShell + gh）
+﻿# GitHub Issue 批量创建命令清单（PowerShell + gh）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/github-issue-batch-create-commands.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 更新时间：2026-02-28
 适用仓库：`TriMetaverse`
@@ -20,7 +28,7 @@ gh label create "area: architecture" --repo $repo --color "1D76DB" --description
 gh label create "area: contracts" --repo $repo --color "1D76DB" --description "Contracts" 2>$null
 gh label create "area: core-agent" --repo $repo --color "FBCA04" --description "Core-Agent" 2>$null
 gh label create "area: socialfi" --repo $repo --color "FBCA04" --description "SocialFi" 2>$null
-gh label create "area: tristaciss" --repo $repo --color "FBCA04" --description "Tristaciss" 2>$null
+gh label create "area: tristaciss" --repo $repo --color "FBCA04" --description "TriStaciss" 2>$null
 gh label create "area: observability" --repo $repo --color "C2E0C6" --description "Observability" 2>$null
 gh label create "area: api" --repo $repo --color "C2E0C6" --description "API" 2>$null
 gh label create "area: ui" --repo $repo --color "C2E0C6" --description "UI" 2>$null
@@ -43,7 +51,7 @@ gh issue create --repo $repo --title "[Epic][Phase0] 契约先行：冻结边界
 gh issue create --repo $repo --title "[Phase0][Contract] 定义 Message/Session/ToolCall/Audit 四类 Envelope" --label "type: task" --label "area: contracts" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-1）。请按文档区块执行并打勾验收项。"
 
 # P0-2
-gh issue create --repo $repo --title "[Phase0][Contract] 定义 Core-Agent -> Tristaciss LLM 调用契约" --label "type: task" --label "area: tristaciss" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-2）。请按文档区块执行并打勾验收项。"
+gh issue create --repo $repo --title "[Phase0][Contract] 定义 Core-Agent -> TriStaciss LLM 调用契约" --label "type: task" --label "area: tristaciss" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-2）。请按文档区块执行并打勾验收项。"
 
 # P0-3
 gh issue create --repo $repo --title "[Phase0][Contract] 定义 SocialFi <-> Core-Agent 输入与回包契约" --label "type: task" --label "area: socialfi" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-3）。请按文档区块执行并打勾验收项。"
@@ -61,7 +69,7 @@ gh issue create --repo $repo --title "[Phase1][Core-Agent] 初始化项目骨架
 gh issue create --repo $repo --title "[Phase1][Core-Agent] 实现 Gateway -> Router/Queue -> Runner 最小链路" --label "type: task" --label "area: core-agent" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P1-2）。"
 
 # P1-3
-gh issue create --repo $repo --title "[Phase1][Tristaciss] 接入统一 LLM 出口（流式 + fallback 语义）" --label "type: task" --label "area: tristaciss" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P1-3）。"
+gh issue create --repo $repo --title "[Phase1][TriStaciss] 接入统一 LLM 出口（流式 + fallback 语义）" --label "type: task" --label "area: tristaciss" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P1-3）。"
 
 # P1-4
 gh issue create --repo $repo --title "[Phase1][Observability] 接入最小 AuditEvent 与单会话 smoke" --label "type: task" --label "area: observability" --label "priority: P0" --label "stage: test" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P1-4）。"

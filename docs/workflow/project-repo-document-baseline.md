@@ -1,10 +1,18 @@
-# 模块五层文档协同系统（模块 / 项目根文档基线）
+# 模块六层文档协同系统（模块 / 项目根文档基线）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/project-repo-document-baseline.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
 
 ## 1. 目标
 
-本基线用于约束三元宇宙各模块根或项目根在产品层、技术层、执行层、registry 层和 workflow 层应维护哪些核心文档，以及这些文档分别由谁负责、写什么、为什么存在。
+本基线用于约束三元宇宙各模块根或项目根在产品层、技术层、执行层、registry 层、workflow 层和 training 层应维护哪些核心文档，以及这些文档分别由谁负责、写什么、为什么存在。
 
-本基线的项目标准专用术语为 `模块五层文档协同系统`。
+本基线的项目标准专用术语为 `模块六层文档协同系统`。
 
 目标只有一个：
 
@@ -18,7 +26,7 @@
 - `STATE.md` 需要产品版和技术版两份，因为产品状态和技术状态的更新节奏、关注点和结论不同。
 - 技术设计不能挤进 `PROJECT.md` 或 `REQUIREMENTS.md`，应单独设 `DESIGN.md`，由技术侧维护。
 - GSD 执行层的 `PLAN.md`、`SUMMARY.md`、`VERIFICATION.md` 属于执行过程资产，不替代上层的产品和技术基线文档。
-- 各模块代码仓库的 `docs/` 不应只分产品、技术和执行三层；还应把 `registry` 和 `workflow` 一起纳入默认文档资产基线。
+- 各模块代码仓库的 `docs/` 不应只分产品、技术和执行三层；还应把 `registry`、`workflow` 和 `training` 一起纳入默认文档资产基线。
 - 对低成熟或待初始化模块，允许先用占位文件标记 `待初始化`、`待定义` 或 `待补齐`，但目录和核心文件入口应先建立，避免后续文档继续散落。
 
 ### 2.1 强制前置判断：PRD 归属解析
@@ -27,8 +35,8 @@
 - 当前阶段，模块设计与归属判断不由执行者自行拍板，而应先询问 `ChiefProductOfficer`；`CEOChiefOfStaff` 只负责公司级任务分派、催办、升级与收口，必要时再协助升级 `BusinessStrategy` 做范围裁决。
 - 操作上，当前阶段应先提交一次标准 `PRD_OWNERSHIP_ROUTING` 请求给 `ChiefProductOfficer`；若当前输入仍是零散自然语言，可由秘书处或 `CEOChiefOfStaff` 协助整理，但不替代产品侧形成模块设计 / 归属结论。
 - 若 PRD 描述的是既有模块能力，则应落在该模块自己的根目录下，例如描述 `TriMC` 能力的 PRD，应落在 `TriMC/docs/`，而不是默认落在 `TriMetaverse/docs/`。
-- 只有当 PRD 明确描述当前项目根自身的能力时，才允许把五层结构落在当前项目根的 `docs/` 下；当前工作区根仓或中央仓身份，本身不构成默认落位依据。
-- 若 PRD 实际定义的是尚未存在的新模块，则应先建立与现有模块同级的新模块根，再在新模块根下初始化五层结构，而不是把它暂挂到某个无关项目的 `docs/` 下。
+- 只有当 PRD 明确描述当前项目根自身的能力时，才允许把六层结构落在当前项目根的 `docs/` 下；当前工作区根仓或中央仓身份，本身不构成默认落位依据。
+- 若 PRD 实际定义的是尚未存在的新模块，则应先建立与现有模块同级的新模块根，再在新模块根下初始化六层结构，而不是把它暂挂到某个无关项目的 `docs/` 下。
 - 若当前阶段尚未形成 `ChiefProductOfficer` 的模块设计 / 归属结论，则必须阻断 docs bootstrap，直到归属解析完成。
 
 ## 3. 建议目录约定
@@ -40,6 +48,7 @@
 - `docs/execution/<workstream>/`：按子项目、Epic、Feature 或业务域拆开的执行层文档
 - `docs/registry/`：模块 business / product / code 状态登记与索引文档
 - `docs/workflow/`：模块内部工作流、迁移、编排、交接与机制文档
+- `docs/training/`：岗位、模块、代码、流程和使用方式的培训与导读文档
 
 其中 `workstream` 可以是用户系统、支付系统、管理后台、推荐系统、数据分析面板，也可以是某个独立 Epic / Feature。
 
@@ -68,6 +77,7 @@
 - `docs/registry/product-state.md`
 - `docs/registry/code-state.md`
 - `docs/workflow/README.md`
+- `docs/training/README.md`
 
 其中：
 
@@ -78,8 +88,8 @@
 
 ### 3.3 与 PRD 分支的衔接方式
 
-- `模块五层文档协同系统` 是 `INTELLIGENCE` 产出并审核通过 PRD 之后，各 PRD 分支进入 `DESIGNING` 到 `ASSURANCE` 的标准落地面。
-- 它不替代十阶段主线；十阶段解决“流程和门禁怎么走”，`模块五层文档协同系统` 解决“分支产物、执行证据和收口应该落在哪里”。
+- `模块六层文档协同系统` 是 `INTELLIGENCE` 产出并审核通过 PRD 之后，各 PRD 分支进入 `DESIGNING` 到 `ASSURANCE` 的标准落地面。
+- 它不替代十阶段主线；十阶段解决“流程和门禁怎么走”，`模块六层文档协同系统` 解决“分支产物、执行证据、培训导读和收口应该落在哪里”。
 - “落在哪里”的第一判断不是当前仓是否方便修改，而是当前阶段 `ChiefProductOfficer` 模块设计给出的归属结论；既有模块落既有模块，新模块先建新模块根，只有项目根自身范围才落当前项目根 `docs/`。
 - 推荐对接关系如下：
   - `docs/product/`：持续承接 PRD 范围、需求、产品路线和产品状态。
@@ -87,7 +97,8 @@
   - `docs/execution/<prd-or-workstream>/<phase>/`：承接 `DESIGNING`、`CODING`、`VERIFY-INTEGRATION`、`REDTEAM`、`QA`、`DEPLOYMENT`、`ASSURANCE` 的阶段计划、总结和验证记录。
   - `docs/registry/`：承接分支形成稳定结论后的模块事实回写。
   - `docs/workflow/`：承接分支内部 handoff、迁移、编排、运行和治理机制。
-- 这意味着五层系统和 PRD 分支不是“平行两套东西”，而是“PRD 分支在完成归属解析后默认使用的文档与收口骨架”。
+  - `docs/training/`：承接 onboarding、使用说明、流程导读和面向执行者的培训材料。
+- 这意味着六层系统和 PRD 分支不是“平行两套东西”，而是“PRD 分支在完成归属解析后默认使用的文档与收口骨架”。
 
 ## 4. 文档归属矩阵
 

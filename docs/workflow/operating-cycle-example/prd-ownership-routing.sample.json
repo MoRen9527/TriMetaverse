@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "PRD_OWNERSHIP_ROUTING",
   "objectId": "POR-202604-001",
   "title": "试单包运行面与 docs 落位 PRD 归属路由请求单",
@@ -14,7 +14,7 @@
     "label": "trial-package-ownership-routing"
   },
   "summary": "针对 AI 内容运营试单包在运行面说明和 docs bootstrap 上的落位问题，先由当前阶段产品侧给出可执行路由结论，避免把工作区上下文直接误当成模块归属；公司级任务分派与升级由 CEOChiefOfStaff 协同。",
-  "relatedModules": ["TriMetaverse", "TriMC", "TriLC", "Tripilot", "Tride"],
+  "relatedModules": ["TriMetaverse", "TriMC", "TriLC", "TriPilot", "Tride"],
   "dependsOn": ["DI-202604-001"],
   "evidence": [
     {

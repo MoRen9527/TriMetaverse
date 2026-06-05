@@ -1,4 +1,12 @@
-# TriMetaverse Agent Taxonomy
+﻿# TriMetaverse Agent Taxonomy
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/agent-taxonomy.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 ## 1. 目标
 
@@ -38,7 +46,7 @@
 
 ### 2.2 Role Agents
 
-`Role Agents` 是虚拟公司的岗位执行体，可以具有角色语气和人格化表达，但必须绑定 registry 真源。
+`Role Agents` 是赛博公司的岗位执行体，可以具有角色语气和人格化表达，但必须绑定 registry 真源。
 
 它们的共同约束：
 
@@ -87,7 +95,7 @@
 
 首版要求所有模块都纳入 registry 覆盖，但成熟度分层：
 
-- 第一批填实：`TriMetaverse`、`Tristaciss`、`Tride`、`Tripilot`、`Triavatar`、`Trideployment`、`TriTest`
+- 第一批填实：`TriMetaverse`、`TriStaciss`、`Tride`、`TriPilot`、`TriAvatar`、`TriDeployment`、`TriTest`
 - 第二批填实：`TriMC`、`TriLC`、`vscodium`
 - 首版占位：`TriMobile`、`TriMem`、`TriWeb4`、`TriChain`
 - 历史参考源：`core-agent`

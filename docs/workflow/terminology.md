@@ -4,6 +4,14 @@
 日期：2026-03-04  
 适用范围：TriMetaverse workflow 文档与执行记录
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/terminology.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ---
 
 ## 1. 术语管理原则
@@ -22,18 +30,23 @@
 
 - 宿主演进标准阶段统一写为：源码 -> shadow test -> 正式接管。当前本地宿主完成正式接管，不等于目标正式宿主已经切换完成；正式宿主切换只在目标宿主完成其自身正式接管后成立。
 - `TriMC`：统一的 agent runtime 和 interaction core。当前 shadow 与当前阶段正式接管先由 `copilot chat` 承载，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，仍以 `TriMC` 为核心运行面。
-- 虚拟公司：所有人格 Agent 与非人格 Agent 的经营和交互核心载体。当前先由 `copilot chat` 承载验证与当前阶段正式接管；正式切换后运行在以 `TriMC` 为核心的服务域运行面。
+- 赛博公司：所有人格 Agent 与非人格 Agent 的经营和交互核心载体。当前先由 `copilot chat` 承载验证与当前阶段正式接管；正式切换后运行在以 `TriMC` 为核心的服务域运行面。
 - 研发工作流：`TriMC` 统一运行面中的研发执行切片，不再使用 `Development Main Controller` 作为当前标准名。当前第一宿主是 `copilot chat`，必要时可扩到 `copilot cli`；正式切换通过 `TriHost` 配置完成。
 - `TriHost`：统一宿主适配与切换配置层。当前仍处于契约定义阶段，不应写成已完成实现。
 - `Tride`：PC 端软件中的开发工具与集成层，不再作为切换后的正式宿主。
 - `TriSkill`：未来统一 skill 提供模块。当前仅为占位模块，不应写成现役能力。
-- `TriMetaverse V1 正式上线切换阶段`：指从当前 `copilot chat` 试运行，迁移到 TriMetaverse 正式承载虚拟公司与自动研发工作流的阶段。首版上线后的平滑过渡期，允许 `copilot chat` 版虚拟公司与 `TriMC` 运行面的正式形态并行运行一段时间。
+- `TriMetaverse V1 正式上线切换阶段`：指从当前 `copilot chat` 试运行，迁移到 TriMetaverse 正式承载赛博公司与自动研发工作流的阶段。首版上线后的平滑过渡期，允许 `copilot chat` 版赛博公司与 `TriMC` 运行面的正式形态并行运行一段时间。
 
 ### 1.3 标准文档系统命名
 
-- `模块五层文档协同系统`：指 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/` 组成的模块默认文档与执行承载体系。
-- 它是 `INTELLIGENCE` 产出并审核通过的每个 PRD 分支的标准落地面，用于承接 `DESIGNING`、`CODING`、`VERIFY-INTEGRATION`、`REDTEAM`、`QA`、`DEPLOYMENT`、`ASSURANCE` 的真源文档、执行证据、状态回写和流程机制。
-- 它不替代十阶段主线；十阶段定义的是流程状态机和门禁，`模块五层文档协同系统` 定义的是 PRD 分支落地后文档、执行和收口应放在哪里。
+- 项目名称统一写为 `TriMetaverse`；仅在文件名、machine-readable id、slug、CLI-safe key 等必须使用小写无空格标识时，统一写为 `trimetaverse`。
+- 禁止继续使用 `tri-metaverse`、`Tri-Metaverse` 等带连字符项目名写法；发现后应按上下文改写为 `TriMetaverse` 或 `trimetaverse`，并同步修正引用链。
+- `赛博公司` / `cyber company` 是经营载体的通用概念名；当它落到本项目的具体产品、文件名、schema id、slug、published-copy 路径或其他 machine-readable 标识时，统一写为 `TriCompany` / `tricompany`。
+- 因此，正文描述可以继续写“赛博公司”或 `cyber company`，但具体产品名统一写 `TriCompany`，文件名与路径统一写 `tricompany`。
+
+- `模块六层文档协同系统`：指 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`、`docs/training/` 组成的模块默认文档与执行承载体系。
+- 它是 `INTELLIGENCE` 产出并审核通过的每个 PRD 分支的标准落地面，用于承接 `DESIGNING`、`CODING`、`VERIFY-INTEGRATION`、`REDTEAM`、`QA`、`DEPLOYMENT`、`ASSURANCE` 的真源文档、执行证据、状态回写、流程机制与培训导读。
+- 它不替代十阶段主线；十阶段定义的是流程状态机和门禁，`模块六层文档协同系统` 定义的是 PRD 分支落地后文档、执行、培训和收口应放在哪里。
 
 ---
 
@@ -71,7 +84,7 @@
 - Task Main Controller
 - TaskController
 - Autonomy Main Controller
-- orchestrator（当其指向虚拟公司自治主控时）
+- orchestrator（当其指向赛博公司自治主控时）
 - 红队报告（当其用于主链标准名时）
 - IMPLEMENT（历史阶段名）
 - VERIFY-UNIT（历史阶段名）
@@ -82,11 +95,13 @@
 
 ## 5. 变更记录（changelog）
 
+- 2026-05-28：经营载体中文标准名统一为 赛博公司，并从当前活跃文档中清退旧中文称呼。
+- 2026-05-28：模块文档基线从“模块五层文档协同系统”升级为“模块六层文档协同系统”，补入 `docs/training/` 作为正式同级子域。
 - 2026-04-26：将 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/` 的默认结构正式命名为“模块五层文档协同系统”，并明确其为 `INTELLIGENCE` 后 PRD 分支的标准落地面。
 - 2026-03-04：CODING 阶段主产物标准名统一为“产品实施总结”（兼容历史阶段名 IMPLEMENT）。
 - 2026-03-04：主链产物命名在 `project.md`、`tmv-whitepaper.md`、`phase-io-matrix.md`、`review-release-chain.md`、`workflow-engine-spec.md`、`workflow-runbook.md` 完成对齐。
 - 2026-04-09：研发主流程主控标准名统一为 `Development Main Controller`，替代 `Workflow Main Controller`。
 - 2026-04-09：服务域任务主控标准名统一为 `Task Main Controller`，替代在该语境下的 `Main Controller` / `TaskController`。
-- 2026-04-09：虚拟公司自治主控标准名统一为 `Autonomy Main Controller`，替代该语境下的 `orchestrator`。
+- 2026-04-09：赛博公司自治主控标准名统一为 `Autonomy Main Controller`，替代该语境下的 `orchestrator`。
 - 2026-04-09：宿主演进时间点统一改写为 `TriMetaverse V1 正式上线切换阶段`。
-- 2026-04-22：当前标准词汇改为 `TriMC` 统一运行面、`TriHost` 宿主适配层、虚拟公司与研发工作流切片；`Development Main Controller`、`Task Main Controller`、`Autonomy Main Controller` 降级为历史术语。
+- 2026-04-22：当前标准词汇改为 `TriMC` 统一运行面、`TriHost` 宿主适配层、赛博公司与研发工作流切片；`Development Main Controller`、`Task Main Controller`、`Autonomy Main Controller` 降级为历史术语。

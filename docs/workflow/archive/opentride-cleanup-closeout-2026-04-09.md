@@ -1,4 +1,12 @@
-# Opentride 目录清理收尾记录
+﻿# Opentride 目录清理收尾记录
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/archive/opentride-cleanup-closeout-2026-04-09.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
 
 ## 1. 当前结论
 
@@ -21,7 +29,7 @@
 
 - `Test-Path d:\OneDrive\Code\ai\Opentride` 返回 `False`。
 - `Test-Path d:\OneDrive\Code\ai\Tride` 返回 `True`。
-- 活跃 workspace 与 Tripilot 本地配置已切到 `Tride` 路径。
+- 活跃 workspace 与 TriPilot 本地配置已切到 `Tride` 路径。
 
 ## 4. 边界说明
 

@@ -1,5 +1,13 @@
 # 分支与发布规范（一页版）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/branching-release-policy.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 更新时间：2026-02-27
 
 ## 1. 目标

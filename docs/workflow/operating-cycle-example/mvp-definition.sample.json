@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "MVP_DEFINITION",
   "objectId": "MVP-202604-001",
   "title": "AI 内容运营试单包 MVP 定义单",
@@ -14,7 +14,7 @@
     "label": "2026-04 MVP 验证"
   },
   "summary": "将需求收敛为首轮可收费试单包，不扩展到复杂平台或链上能力，并明确桌面工作台到本地控制器的最小协同演示链。",
-  "relatedModules": ["Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "relatedModules": ["TriPilot", "Tride", "vscodium", "TriLC", "TriStaciss", "TriTest", "TriDeployment"],
   "dependsOn": ["DI-202604-001"],
   "evidence": [
     {
@@ -23,7 +23,7 @@
       "note": "当前默认经营实验为 AI 内容运营与增长微服务"
     },
     {
-      "source": "TripilotProductRegistry",
+      "source": "TriPilotProductRegistry",
       "kind": "registry",
       "note": "可承接桌面入口与结果展示"
     },
@@ -38,7 +38,7 @@
       "note": "可承接本地化任务和本地执行控制器能力"
     },
     {
-      "source": "TristacissProductRegistry",
+      "source": "TriStacissProductRegistry",
       "kind": "registry",
       "note": "可承接模型路由和 API 平台"
     }
@@ -88,7 +88,7 @@
       "一个标准化需求采集入口",
       "一轮内容计划与首批文案生成",
       "人工可校对的交付包输出",
-      "一条由 Tripilot / Tride / vscodium 配合 TriLC 的最小桌面演示与本地化任务协同链"
+      "一条由 TriPilot / Tride / vscodium 配合 TriLC 的最小桌面演示与本地化任务协同链"
     ],
     "scopeOut": [
       "移动端独立交付",

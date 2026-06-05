@@ -1,5 +1,13 @@
 # POR-20260426-001 生命周期演示目录
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/operating-records/2026-W17/POR-20260426-001/README.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 本目录用于演示 `PRD_OWNERSHIP_ROUTING` 在真实 `operating-records/` 目录中的落盘方式。
 
 说明：

@@ -4,7 +4,7 @@
   "title": "ResponsibilityHandoff",
   "allOf": [
     {
-      "$ref": "tmv/workflow/cyber-company-handoff-envelope.schema.json"
+      "$ref": "tmv/workflow/tricompany-handoff-envelope.schema.json"
     },
     {
       "type": "object",
@@ -42,7 +42,7 @@
         "workflowRefs": {
           "type": "array",
           "items": {
-            "$ref": "tmv/workflow/cyber-company-phase-link.schema.json"
+            "$ref": "tmv/workflow/tricompany-phase-link.schema.json"
           }
         },
         "payload": {

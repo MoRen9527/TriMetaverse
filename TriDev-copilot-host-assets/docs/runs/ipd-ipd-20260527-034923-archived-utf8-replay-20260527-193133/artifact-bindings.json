@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "bindings": [
+    {
+      "stage": "DISCOVERY",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\discovery-package.json"
+      ],
+      "digest": "fedc3ec98f9f4f3dee2561701525a7008f7a1bc5aaa6e7a0ff9c13ed586fbbb0",
+      "artifactType": "reference-evidence",
+      "source": "phase-result",
+      "generatedAt": "2026-05-27T11:20:13.617986+00:00",
+      "changedFiles": [
+        "docs/ipd-autopilot/IPD-20260527-034923/discovery-package.json"
+      ],
+      "gitDiffDigest": "cad6c4dd8013bf5a75e3addbe03e2d1ef8ce44cb23a2bd8a24ace4bfef7f4260",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "INTELLIGENCE",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\intelligence-package.json"
+      ],
+      "digest": "07f4f2da6d75be3f0b66e736fed9e069f2022ac82cbbdc0ce0372f97a5757be5",
+      "artifactType": "prd",
+      "source": "phase-result",
+      "generatedAt": "2026-05-27T11:20:14.705045+00:00",
+      "changedFiles": [
+        "docs/ipd-autopilot/IPD-20260527-034923/intelligence-package.json"
+      ],
+      "gitDiffDigest": "1f6fd2e713a3a2a5c9e32b8470cce76ee256f08cd660eb59945a02152ed21a8a",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DESIGNING",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\designing-package.json"
+      ],
+      "digest": "556e111284d65b5b5121d50081695a02c76d4caac827c0c8dc17cb455677dbb7",
+      "artifactType": "tech-plan",
+      "source": "phase-result",
+      "generatedAt": "2026-05-27T11:20:15.744017+00:00",
+      "changedFiles": [
+        "docs/ipd-autopilot/IPD-20260527-034923/designing-package.json"
+      ],
+      "gitDiffDigest": "373215153b079de28d690b4b556af1eb4d802ed9c8b5aab61e12095c4adb88a9",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "CODING",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\coding-package.json"
+      ],
+      "digest": "1842d284bceaaac587233cfeffaff9ae5e747e9fca4da6c021dc08199a3d3764",
+      "artifactType": "implementation",
+      "source": "phase-result",
+      "generatedAt": "2026-05-27T11:20:16.995461+00:00",
+      "changedFiles": [
+        "docs/ipd-autopilot/IPD-20260527-034923/coding-package.json"
+      ],
+      "gitDiffDigest": "24f927123ab327516571e403ede0eb9bfa3d8badfde7ab2053127b0aa50eecc4",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    }
+  ]
+}

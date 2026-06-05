@@ -1,12 +1,20 @@
 # Workflow 后续事项存档与 super-dev 参考基线
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/archive/workflow-host-followups-and-super-dev-reference.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 ## 0. 历史术语对齐说明（2026-04-09）
 
 - 本文属于 archive 存档文档，最初写作时仍使用 `Workflow Main Controller` 等旧称。
 - 在当前命名体系下，研发 10 阶段主流程主控统一命名为 `Development Main Controller`。
 - 本文如果提到服务域主控，应以 `Task Main Controller` 为准，而不是历史性的 `Main Controller` 泛称。
 - 文中涉及研发宿主迁移时，统一应理解为到 `TriMetaverse V1 正式上线切换阶段` 迁入 `Tride`。
-- 若本文与现行真源冲突，以 `project.md`、`cyber-company.md`、`docs/workflow/terminology.md` 与 `docs/workflow/workflow-host-integration.md` 为准。
+- 若本文与现行真源冲突，以 `project.md`、`tricompany.md`、`docs/workflow/terminology.md` 与 `docs/workflow/workflow-host-integration.md` 为准。
 
 ## 1. 目的
 

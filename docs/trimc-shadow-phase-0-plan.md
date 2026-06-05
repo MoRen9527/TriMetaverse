@@ -1,5 +1,13 @@
 # TriMC Shadow Phase-0 方案
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/trimc-shadow-phase-0-plan.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 版本：V0.1
 日期：2026-04-19
 状态：当前阶段方案

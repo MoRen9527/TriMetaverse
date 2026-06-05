@@ -1,12 +1,20 @@
 # CEO 总助授权矩阵（初稿）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/ceo-chief-of-staff-authorization-matrix.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## 1. 目标
 
-本文件把 `CEOChiefOfStaff` 在当前虚拟公司试运行阶段的授权边界写成固定规则，避免总助在临场判断时反复漂移。
+本文件把 `CEOChiefOfStaff` 在当前赛博公司试运行阶段的授权边界写成固定规则，避免总助在临场判断时反复漂移。
 
 适用范围：
 
-- 当前虚拟公司经营主工作流
+- 当前赛博公司经营主工作流
 - 当前宿主语境：`copilot chat`
 - 角色主体：`CEOChiefOfStaff`
 

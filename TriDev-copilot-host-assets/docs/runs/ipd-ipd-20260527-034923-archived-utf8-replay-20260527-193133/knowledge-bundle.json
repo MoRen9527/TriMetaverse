@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "currentStage": "VERIFY-INTEGRATION",
+  "nextAction": "record-phase-result",
+  "repositoryKnowledge": [
+    "AGENTS.md",
+    "README.md",
+    "docs\\registry\\product-state.md",
+    "docs\\registry\\code-state.md",
+    "docs\\workflow\\super-dev-absorption-record.md"
+  ],
+  "runKnowledge": [
+    "docs\\runs\\ipd-ipd-20260527-034923\\reference-evidence.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\SESSION_BRIEF.md",
+    "docs\\runs\\ipd-ipd-20260527-034923\\workflow-state.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\machine-playbook.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\role-adapters.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\executor-brief.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\coding-task-plan.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\host-prompt-context.json"
+  ],
+  "readOrder": [
+    "AGENTS.md",
+    "README.md",
+    "docs\\runs\\ipd-ipd-20260527-034923\\reference-evidence.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\SESSION_BRIEF.md",
+    "docs\\runs\\ipd-ipd-20260527-034923\\workflow-state.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\machine-playbook.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\role-adapters.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\executor-brief.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\coding-task-plan.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\host-prompt-context.json",
+    "docs\\registry\\product-state.md",
+    "docs\\registry\\code-state.md",
+    "docs\\workflow\\super-dev-absorption-record.md"
+  ],
+  "inheritanceRules": [
+    "Read repository contract first, then the active run bundle, before coding or gate work.",
+    "Prefer the active run bundle over stale conversation memory when they conflict.",
+    "If review blockers or active failure exist, surface them before any new execution step."
+  ],
+  "generatedAt": "2026-05-27T11:20:17.919044+00:00"
+}

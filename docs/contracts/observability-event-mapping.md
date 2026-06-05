@@ -1,5 +1,13 @@
 # Observability Event Mapping Contract（VibeCraft-inspired）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/contracts/observability-event-mapping.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 更新时间：2026-03-01
 
 ## 1. 目标与边界

@@ -1,0 +1,12 @@
+{
+  "stage": "VERIFY-INTEGRATION",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\05-verify-integration.md"
+  ],
+  "artifactDigest": "3ee8a2c33f636368d25d90b4d63ef445e829887b645727a9b4b2d4d87408aac3",
+  "summary": "IPD-20260527-034923 verify-integration 自动推进完成。",
+  "createdAt": "2026-05-26T20:07:38.495875+00:00",
+  "schemaVersion": "1.0"
+}

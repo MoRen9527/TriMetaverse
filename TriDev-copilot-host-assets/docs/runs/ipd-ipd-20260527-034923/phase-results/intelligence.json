@@ -1,0 +1,17 @@
+{
+  "stage": "INTELLIGENCE",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\intelligence-package.json"
+  ],
+  "artifactDigest": "bb48312c5ff4130b2cfc3adef8e65a9bb906e79a84994a4fe62054c01547a4cf",
+  "summary": "Intelligence 已把任务收口为可执行 MVP PRD：TriStaciss 本轮只交付 GET /v1/models 与 POST /v1/chat/completions 最小稳定合同，TriAvatar 默认入口延后。",
+  "createdAt": "2026-05-27T11:31:35.881789+00:00",
+  "changedFiles": [
+    "docs/ipd-autopilot/IPD-20260527-034923/intelligence-package.json"
+  ],
+  "gitDiffDigest": "6f70f01277221b6f3ae2e5131a6124f538152348f5b18f4236ce7ec23c02a21b",
+  "gitDiffStatus": "captured",
+  "schemaVersion": "1.0"
+}

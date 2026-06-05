@@ -1,8 +1,16 @@
-# 模块 Registry 基线与教程化梳理实施计划
+﻿# 模块 Registry 基线与教程化梳理实施计划
 
 版本：V0.1
 日期：2026-04-23
 状态：执行中
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/module-registry-baseline-rollout-plan.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
 
 ## 1. 文档定位
 
@@ -23,7 +31,7 @@
 - 第一批只覆盖现役代码模块，不把空模块 / 占位模块混入首批深度扫描。
 - 中央文档、registry、计划文档统一使用 `TriGateway` 作为规范名；规范目录已修正为 `TriGateway/`，历史路径 `TriGatway/` 作为兼容别名保留，并继续单列 alias 风险直到引用全部收敛。
 - `example`、`sample`、`template`、`fixture` 文件只可作为模板和样板，不可单独当成模块事实证据。
-- 模块教程的详细程度可以参考 `Tristaciss/docs/React + FastAPI 登录流程完整指南.md` 的展开方式，但只能参考叙事深度与拆解方法，不能复用其中事实结论。
+- 模块教程的详细程度可以参考 `TriStaciss/docs/React + FastAPI 登录流程完整指南.md` 的展开方式，但只能参考叙事深度与拆解方法，不能复用其中事实结论。
 
 ## 4. 产出物标准
 
@@ -95,16 +103,16 @@
 
 | 顺序 | 模块 | 本轮目标 |
 | --- | --- | --- |
-| 1 | `Tristaciss` | 先摸清 API 平台、多 provider 路由、前后端联动，并形成首份教程化样板 |
+| 1 | `TriStaciss` | 先摸清 API 平台、多 provider 路由、前后端联动，并形成首份教程化样板 |
 | 2 | `TriMC` | 再回到运行核心，摸清 runtime 切片、planner/context/tools/模型调用链 |
 | 3 | `Tride` | 摸清 CLI/runtime/SDK/orchestration 与 PC 软件开发工具层 |
-| 4 | `Tripilot` | 摸清 VS Code 扩展 / webview 用户入口与交互层 |
+| 4 | `TriPilot` | 摸清 VS Code 扩展 / webview 用户入口与交互层 |
 | 5 | `vscodium` | 摸清 IDE 宿主层与本地定制 vs upstream 边界 |
-| 6 | `Triavatar` | 摸清 Web 入口、前端结构和未来入口规划边界 |
+| 6 | `TriAvatar` | 摸清 Web 入口、前端结构和未来入口规划边界 |
 | 7 | `TriLC` | 摸清本地域控制器、本地 runtime、tool bus |
-| 8 | `Trideployment` | 摸清部署资产、模板、GitOps 与交付完备性 |
+| 8 | `TriDeployment` | 摸清部署资产、模板、GitOps 与交付完备性 |
 | 9 | `TriTest` | 摸清测试资产、模板、报告与门禁能力 |
-| 10 | `TriCompany` | 摸清虚拟公司研发编排资产、Copilot 宿主资产与 Hermes 融合草案 |
+| 10 | `TriCompany` | 摸清赛博公司研发编排资产、Copilot 宿主资产与 Hermes 融合草案 |
 
 CodeGraph 试点随 Wave 2 执行：仅在模块根目录按需初始化，并排除 `reference/`、`vendor/`、依赖目录、构建产物、缓存、生成物和 secrets；`.codegraph/` 只作为本地缓存，不作为模块真源提交。模块 `CodeRegistry` 只接收扫描摘要、commit / 版本锚点、主要入口、调用链发现、排除规则和待确认缺口。
 
@@ -151,12 +159,12 @@ CodeGraph 试点随 Wave 2 执行：仅在模块根目录按需初始化，并�
 | 项目 | 状态 | 说明 |
 | --- | --- | --- |
 | Wave 0 中央主旨真源 | 已启动 | 本次已把模块主旨、`TriGateway` 命名、物理目录修正与 alias 风险写入中央文档 |
-| Wave 1 中央 registry 总收口 | 进行中 | 已完成 `Tristaciss`、`TriMC` 两个模块的入口真源与中央写法一致性核对；全量中央收口继续推进 |
-| Wave 2 首个模块 | 深入摸底中 | `Tristaciss` 首轮基线已完成，但按当前节奏重新打开完成敞口，继续做细化摸底与问题收口 |
-| Wave 2 第二个模块 | 待确认收口 | `TriMC` 首轮基线与教程化文档已完成，但当前不视为最终收口，需在 `Tristaciss` 深入摸底完成后再统一确认 |
+| Wave 1 中央 registry 总收口 | 进行中 | 已完成 `TriStaciss`、`TriMC` 两个模块的入口真源与中央写法一致性核对；全量中央收口继续推进 |
+| Wave 2 首个模块 | 深入摸底中 | `TriStaciss` 首轮基线已完成，但按当前节奏重新打开完成敞口，继续做细化摸底与问题收口 |
+| Wave 2 第二个模块 | 待确认收口 | `TriMC` 首轮基线与教程化文档已完成，但当前不视为最终收口，需在 `TriStaciss` 深入摸底完成后再统一确认 |
 | Wave 2 第三个模块 | 待用户确认 | `Tride` 暂不启动，需先完成 `TriMC` 确认，再等待用户明确确认“开始tride”后再进入 |
 | 并行任务：教学级文档治理规范 | 已启动 | 已要求中央 `Product Registry` 与 `Code Registry` 记住模块级教学文档规则；CodeGraph 定位为模块 `CodeRegistry` 的本地辅助索引，先随现役代码模块按波次试点，低成熟 / 占位模块暂缓 |
-| CodeGraph Wave 2 试点 | 可收口 | 2026-05-24 已在 `Tristaciss`、`TriMC`、`Tride`、`TriLC`、`Trideployment`、`TriCompany`、`Tripilot`、`Triavatar` 建立模块干净 CodeGraph 索引；`Tripilot` 与 `Triavatar` 已在仓库瘦身后从分区索引升级为仓根干净索引；`TriTest` 与 `vscodium/patches` 完成探测但因 PowerShell / Markdown / patch 文件未产出可用语义图，由对应 CodeRegistry 记录“不适用 / parser 不覆盖”限制；各模块 `CodeRegistry` 只接管索引摘要和后续维护纪律，`.codegraph/` 缓存不提交 |
+| CodeGraph Wave 2 试点 | 可收口 | 2026-05-24 已在 `TriStaciss`、`TriMC`、`Tride`、`TriLC`、`TriDeployment`、`TriCompany`、`TriPilot`、`TriAvatar` 建立模块干净 CodeGraph 索引；`TriPilot` 与 `TriAvatar` 已在仓库瘦身后从分区索引升级为仓根干净索引；`TriTest` 与 `vscodium/patches` 完成探测但因 PowerShell / Markdown / patch 文件未产出可用语义图，由对应 CodeRegistry 记录“不适用 / parser 不覆盖”限制；各模块 `CodeRegistry` 只接管索引摘要和后续维护纪律，`.codegraph/` 缓存不提交 |
 | 自动化批处理 | 待开始 | 仍按 `Prompt 先行`、`只生成报告和计划` 执行 |
 
 ## 10. 下一步
@@ -164,8 +172,8 @@ CodeGraph 试点随 Wave 2 执行：仅在模块根目录按需初始化，并�
 按当前节奏，下一动作固定为：
 
 1. 继续推进中央 registry 其余模块的一致性复核与补齐。
-2. 回到 `Tristaciss`，继续做深入摸底、细化问题和证据收口。
+2. 回到 `TriStaciss`，继续做深入摸底、细化问题和证据收口。
 3. 在后续每个模块推进时，并行检查该模块的 `Product Registry` 是否已按业务切面拆文档，以及 `Code Registry` 是否已补教学级代码走线文档；现役代码模块可同步试点本地 CodeGraph 索引摘要。
-4. `Tristaciss` 细化完成后，先回头确认 `TriMC` 的收口状态。
+4. `TriStaciss` 细化完成后，先回头确认 `TriMC` 的收口状态。
 5. CodeGraph Wave 2 现役代码模块试点可收口；下一步只在出现真实源码骨架、parser 可覆盖文件或明确 CTO 技术线要求时，再评估 `TriWeb4`、`TriChain`、`TriMobile`、`TriMem`、`TriDev` 等低成熟 / 占位模块，不强制初始化。
 6. `Tride` 必须在 `TriMC` 已确认且用户明确确认“开始tride”后再启动，当前不自动切换。

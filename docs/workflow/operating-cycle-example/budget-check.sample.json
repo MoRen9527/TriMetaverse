@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "BUDGET_CHECK",
   "objectId": "BC-202604-001",
   "title": "AI 内容运营试单包预算校验单",
@@ -14,7 +14,7 @@
     "label": "2026-04 预算窗口"
   },
   "summary": "判断试单包是否可以在当前低成本约束内推进，并确认桌面工作台与本地控制器协同链不会引入额外固定成本。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "Tride", "vscodium", "TriLC", "TriStaciss", "TriTest", "TriDeployment"],
   "dependsOn": ["MVP-202604-001"],
   "evidence": [
     {
@@ -23,7 +23,7 @@
       "note": "固定成本约束和当前试点定位"
     },
     {
-      "source": "TrideploymentProductRegistry",
+      "source": "TriDeploymentProductRegistry",
       "kind": "registry",
       "note": "交付完备性资产可以复用"
     },

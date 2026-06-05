@@ -1,4 +1,4 @@
-flowchart LR
+﻿flowchart LR
   user([User\nTelegram / Discord / Slack / Web])
 
   subgraph local["Local domain (PC / Future NAS)\nVSCodium as Host"]
@@ -18,13 +18,13 @@ flowchart LR
   end
 
   subgraph server["Server domain (7×24 online)"]
-    subgraph socialfi["SocialFi 服务域独立接入层（目录/仓与 Tripilot 同级）"]
+    subgraph socialfi["SocialFi 服务域独立接入层（目录/仓与 TriPilot 同级）"]
       chad["Channel Adapter\nnormalize message / extract attachments"]
       socialbus["Social Event Bus\nchannel ingress/egress"]
       chresp["Channel Response Adapter\nstream chunks + format"]
     end
 
-    subgraph coreagent["Core-Agent 服务域独立主控（基于 Kode-Agent 重写；目录/仓与 Tripilot 同级）"]
+    subgraph coreagent["Core-Agent 服务域独立主控（基于 Kode-Agent 重写；目录/仓与 TriPilot 同级）"]
       gateway["Gateway Server (Coordinator)\nSession Entry + Routing"]
       routerq["Session Router + Lane Queue\nConcurrency / Isolation"]
       runner["Agent Runner\nPrompt Builder / History Loader / Context Guard"]
@@ -32,7 +32,7 @@ flowchart LR
       toolrt["Tool Runtime\nTool A / Tool B / Tool C / Tool D"]
     end
 
-    subgraph tristaciss["Tristaciss（LLM API 平台）"]
+    subgraph tristaciss["TriStaciss（LLM API 平台）"]
       llmgw["LLM Gateway API\nAuth / Routing / Rate Limit / Observability"]
       prov["Provider Manager\nDeepSeek / GLM / OpenRouter ..."]
       streamfb["Streaming + Fallback"]
@@ -72,7 +72,7 @@ flowchart LR
   gateway --> routerq --> runner --> loop
   loop --> toolrt
 
-  %% LLM path (Core-Agent -> Tristaciss)
+  %% LLM path (Core-Agent -> TriStaciss)
   loop --> llmgw --> prov --> streamfb --> loop
 
   %% Server workers
@@ -108,7 +108,7 @@ flowchart LR
   %% References
   ref1["openclaw 参考\nGateway / Agent Runner / Agentic Loop"] -.mapping.-> coreagent
   ref2["Kode-Agent 参考\nClaude Code兼容执行主控"] -.mapping.-> coreagent
-  repolayoutcore["Repo Layout 决策\ncore-agent 独立目录（与 Tripilot 同级）"] -.structure.-> coreagent
-  repolayoutsocial["Repo Layout 决策\nsocialFi 独立目录（与 Tripilot 同级）"] -.structure.-> socialfi
+  repolayoutcore["Repo Layout 决策\ncore-agent 独立目录（与 TriPilot 同级）"] -.structure.-> coreagent
+  repolayoutsocial["Repo Layout 决策\nsocialFi 独立目录（与 TriPilot 同级）"] -.structure.-> socialfi
   ref3["vibecraft 参考\n3D可视化 / 会话编排 / 状态追踪"] -.mapping.-> vcbridge
   ref4["AgentSims 参考\n任务仿真 / Tick循环 / 训练评测沙盒"] -.mapping.-> vcbridge

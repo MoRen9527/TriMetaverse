@@ -10,10 +10,17 @@ TriMetaverse 是三元宇宙的中央战略仓与项目级真源约束层。
 
 当前阶段说明：
 
-- 当前仍处于虚拟公司研发阶段与本地 Copilot-host 正式接管阶段。
+- 当前仍处于赛博公司研发阶段与本地 Copilot-host 正式接管阶段。
 - `TriCompany` 负责公司侧流程、岗位参与、资料组织与书面核签。
 - `TriDev` 负责开发型项目的十阶段执行主线。
 - `TriMC` 是未来正式宿主与统一 runtime 核心；当前不能写成已正式切换完成。
+
+命令行快捷入口：
+
+- 从 `TriMetaverse` 根目录可直接执行：
+  - `.\tmv.cmd dev-task "任务描述"`
+  - `.\tmv.ps1 dev-task "任务描述"`
+- 该命令默认会串行执行 `task-intake` + `autopilot`；当前 runtime 会自动推进 Discovery / Intelligence / Designing，并在 Coding 及后续执行阶段要求真实工程证据（源码、测试、部署或运行产物）后再继续，不再把纯文档产物直接签成交付。若只想先创建 intake case，可显式加 `--intake-only`。
 
 模块标配：
 

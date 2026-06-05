@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "runCount": 5,
+  "runs": [
+    {
+      "runId": "ipd-ipd-20260527-034923",
+      "task": "以 TriStaciss 为主模块推进最小 OpenAI-compatible 模型网关 MVP：本轮先补齐 GET /v1/models，并用测试固化 POST /v1/chat/completions 的 non-stream 与 stream 合同；TriAvatar 只保留后续最薄聊天 smoke，不切默认入口；TriMem 明确 out-of-scope。",
+      "workMode": "new",
+      "status": "running",
+      "currentStage": "VERIFY-INTEGRATION",
+      "updatedAt": "2026-05-27T11:31:38.364386+00:00",
+      "blocked": false,
+      "releaseReady": false,
+      "hasReleaseBundle": false,
+      "path": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923"
+    },
+    {
+      "runId": "ipd-ipd-20260527-034923",
+      "task": "开发一个类似litellm（https://github.com/BerriAI/litellm）的大模型api转换平台，综合sub2api（https://github.com/Wei-Shaw/sub2api）的拼车共享等特色功能，用TriStaciss的vendor吸收TriMetaverse/reference下载litellm和sub2api构建吸收链，可重构TriStaciss。用TriAvatar前端实现基本聊天和用户注册，用户系统放在TriMem统一规划。",
+      "workMode": "new",
+      "status": "completed",
+      "currentStage": "DELIVERY",
+      "updatedAt": "2026-05-26T20:07:39.408002+00:00",
+      "blocked": false,
+      "releaseReady": true,
+      "hasReleaseBundle": true,
+      "path": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923-archived-discovery-reset-20260527-192012"
+    },
+    {
+      "runId": "ipd-ipd-20260527-034923",
+      "task": "? TriStaciss ???????? OpenAI-compatible ???? MVP?????? GET /v1/models??????? POST /v1/chat/completions ? non-stream ? stream ???TriAvatar ????????? smoke????????TriMem ?? out-of-scope?",
+      "workMode": "new",
+      "status": "running",
+      "currentStage": "VERIFY-INTEGRATION",
+      "updatedAt": "2026-05-27T11:20:17.195679+00:00",
+      "blocked": false,
+      "releaseReady": false,
+      "hasReleaseBundle": false,
+      "path": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923-archived-utf8-replay-20260527-193133"
+    },
+    {
+      "runId": "ipd-ipd-20260527-040738",
+      "task": "tmv wrapper autopilot smoke test",
+      "workMode": "new",
+      "status": "completed",
+      "currentStage": "DELIVERY",
+      "updatedAt": "2026-05-26T20:07:40.075771+00:00",
+      "blocked": false,
+      "releaseReady": true,
+      "hasReleaseBundle": true,
+      "path": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-040738"
+    },
+    {
+      "runId": "ipd-ipd-20260527-041851",
+      "task": "tmv execution gate smoke test",
+      "workMode": "new",
+      "status": "running",
+      "currentStage": "CODING",
+      "updatedAt": "2026-05-26T20:18:52.526338+00:00",
+      "blocked": false,
+      "releaseReady": false,
+      "hasReleaseBundle": false,
+      "path": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-041851"
+    }
+  ],
+  "generatedAt": "2026-05-27T14:32:32.395773+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-041851",
+  "bindings": [
+    {
+      "stage": "DISCOVERY",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-041851\\01-discovery.md"
+      ],
+      "digest": "058da2a2aa59ea0e2adab234d9153260f705c2f3a16283ff0cabf233d102d3b6",
+      "artifactType": "reference-evidence",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:18:52.064441+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "INTELLIGENCE",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-041851\\02-intelligence.md"
+      ],
+      "digest": "b75b5862ebf263725955925e4d743dbefa519326699b68dd7e397ad2e53662e3",
+      "artifactType": "prd",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:18:52.242548+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DESIGNING",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-041851\\03-designing.md"
+      ],
+      "digest": "a06830810bf3092bc96c5a232a0813a881af49e3107e9d9f9c0b5c8eb9dfddd6",
+      "artifactType": "tech-plan",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:18:52.460276+00:00",
+      "schemaVersion": "1.0"
+    }
+  ]
+}

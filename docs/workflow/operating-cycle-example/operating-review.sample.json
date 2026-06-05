@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "OPERATING_REVIEW",
   "objectId": "OR-202604-W14-001",
   "title": "首轮试单经营复盘单",
@@ -14,7 +14,7 @@
     "label": "2026-W14 样例复盘"
   },
   "summary": "总结首轮试单经营链的目标达成度、偏差和下一轮优化输入，并把 PC 端软件层、TriLC 与 vscodium 上游升级口径纳入后续收口议程。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "Tride", "vscodium", "TriLC", "TriStaciss", "TriTest", "TriDeployment"],
   "dependsOn": ["OP-202604-W14-001", "SP-202604-001"],
   "evidence": [
     {

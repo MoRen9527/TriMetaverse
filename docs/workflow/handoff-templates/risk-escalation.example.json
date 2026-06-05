@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "RISK_ESCALATION",
   "objectId": "RE-YYYYMMDD-001",
   "title": "风险升级单",
@@ -14,7 +14,7 @@
     "label": "即时升级"
   },
   "summary": "记录高风险事项、影响范围、冻结要求和升级路径。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Tristaciss"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "TriStaciss"],
   "dependsOn": [],
   "evidence": [
     {

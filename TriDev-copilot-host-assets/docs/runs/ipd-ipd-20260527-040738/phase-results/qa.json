@@ -1,0 +1,12 @@
+{
+  "stage": "QA",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-040738",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-040738\\07-qa.md"
+  ],
+  "artifactDigest": "67c5aaf8b9947f7cb051574a3eb41528f90681107603a774318e880032a79f83",
+  "summary": "IPD-20260527-040738 qa 自动推进完成。",
+  "createdAt": "2026-05-26T20:07:39.625952+00:00",
+  "schemaVersion": "1.0"
+}

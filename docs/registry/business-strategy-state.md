@@ -1,16 +1,24 @@
 # Business Strategy State
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/registry/business-strategy-state.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## 长期商业模式主线
 
 TriMetaverse 的长期商业模式主线保持为：
 
 `内容入口 -> 参与转化 -> 服务变现 -> 生态回流`
 
-这条主线以 `tmv-whitepaper.md` 和 `cyber-company.md` 为真源，不在本文件内重新定义白皮书级概念。
+这条主线以 `tmv-whitepaper.md` 和 `tricompany.md` 为真源，不在本文件内重新定义白皮书级概念。
 
 ## 当前默认经营实验
 
-在没有新的人工确认前，当前默认经营实验采用 `cyber-company.md` 中离收入最近的方向 A：
+在没有新的人工确认前，当前默认经营实验采用 `tricompany.md` 中离收入最近的方向 A：
 
 - `AI 内容运营与增长微服务`
 
@@ -67,6 +75,6 @@ TriMetaverse 的长期商业模式主线保持为：
 ## Sources
 
 - `../../tmv-whitepaper.md`
-- `../../cyber-company.md`
+- `../../tricompany.md`
 - `../../project.md`
-- `../workflow/cyber-company-agent-roles.md`
+- `../workflow/tricompany-agent-roles.md`

@@ -1,4 +1,14 @@
+<!-- markdownlint-disable MD032 -->
+
 # Observability Event Mapping v1 对齐报告（R02）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/contracts/observability-event-mapping-v1-alignment-R02.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
 
 更新时间：2026-03-01
 执行轮次：R02

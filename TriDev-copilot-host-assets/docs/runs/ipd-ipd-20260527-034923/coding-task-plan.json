@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "stage": "VERIFY-INTEGRATION",
+  "planId": "ipd-ipd-20260527-034923-verify_integration-plan",
+  "nextAction": "record-phase-result",
+  "requiredArtifactType": "test-report",
+  "executable": true,
+  "tasks": [
+    {
+      "taskId": "verify_integration-prepare-inputs",
+      "label": "Prepare stage inputs",
+      "description": "Collect the required upstream inputs for VERIFY-INTEGRATION and verify the stage boundary.",
+      "dependsOn": [],
+      "artifactType": "test-report",
+      "verifyGates": [
+        "implementation"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 1,
+      "status": "pending",
+      "artifactRefs": [],
+      "changedFiles": [],
+      "gitDiffDigest": "",
+      "gitDiffStatus": "",
+      "summary": "",
+      "notes": "",
+      "failureCount": 0,
+      "retryBudgetRemaining": 1,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": ""
+    },
+    {
+      "taskId": "verify_integration-execute-stage",
+      "label": "Execute stage work",
+      "description": "Produce the primary test-report output for VERIFY-INTEGRATION.",
+      "dependsOn": [
+        "verify_integration-prepare-inputs"
+      ],
+      "artifactType": "test-report",
+      "verifyGates": [
+        "test-report",
+        "artifact-binding"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 2,
+      "status": "pending",
+      "artifactRefs": [],
+      "changedFiles": [],
+      "gitDiffDigest": "",
+      "gitDiffStatus": "",
+      "summary": "",
+      "notes": "",
+      "failureCount": 0,
+      "retryBudgetRemaining": 2,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": ""
+    },
+    {
+      "taskId": "verify_integration-prepare-gate",
+      "label": "Prepare gate package",
+      "description": "Summarize VERIFY-INTEGRATION output and assemble the gate package for ChiefTechnologyOfficer.",
+      "dependsOn": [
+        "verify_integration-execute-stage"
+      ],
+      "artifactType": "test-report",
+      "verifyGates": [
+        "stage-summary",
+        "gate-package"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 1,
+      "status": "pending",
+      "artifactRefs": [],
+      "changedFiles": [],
+      "gitDiffDigest": "",
+      "gitDiffStatus": "",
+      "summary": "",
+      "notes": "",
+      "failureCount": 0,
+      "retryBudgetRemaining": 1,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": ""
+    }
+  ],
+  "progress": {
+    "total": 3,
+    "completed": 0,
+    "blocked": 0,
+    "failed": 0
+  },
+  "generatedAt": "2026-05-27T14:32:30.519177+00:00"
+}

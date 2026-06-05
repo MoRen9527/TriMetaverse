@@ -1,0 +1,17 @@
+{
+  "stage": "DISCOVERY",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\discovery-package.json"
+  ],
+  "artifactDigest": "fedc3ec98f9f4f3dee2561701525a7008f7a1bc5aaa6e7a0ff9c13ed586fbbb0",
+  "summary": "Discovery ???? TriStaciss ????? OpenAI-compatible gateway MVP???????? TriStaciss backend ? TriAvatar ?? smoke?TriMem ??????",
+  "createdAt": "2026-05-27T11:20:13.685411+00:00",
+  "changedFiles": [
+    "docs/ipd-autopilot/IPD-20260527-034923/discovery-package.json"
+  ],
+  "gitDiffDigest": "cad6c4dd8013bf5a75e3addbe03e2d1ef8ce44cb23a2bd8a24ace4bfef7f4260",
+  "gitDiffStatus": "captured",
+  "schemaVersion": "1.0"
+}

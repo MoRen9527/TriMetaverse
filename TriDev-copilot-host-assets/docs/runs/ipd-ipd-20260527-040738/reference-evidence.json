@@ -1,0 +1,21 @@
+{
+  "upstream": "TriCompany-IPD",
+  "referencePath": "workbench/ipd/cases/IPD-20260527-040738/intake-brief.json",
+  "vendorPath": "TriDev/vendor/super-dev",
+  "license": "internal-governed-use",
+  "commit": "2026-05-27T04:07:38+08:00",
+  "capabilityMapping": [
+    "discovery",
+    "intelligence",
+    "designing",
+    "coding",
+    "verify-integration",
+    "redteam",
+    "qa",
+    "deployment",
+    "assurance",
+    "delivery"
+  ],
+  "exclusions": [],
+  "schemaVersion": "1.0"
+}

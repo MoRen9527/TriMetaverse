@@ -1,14 +1,22 @@
-# TMV 虚拟公司多 Agent 角色定义
+# TMV 赛博公司多 Agent 角色定义
 
 版本：V0.1 待讨论
 日期：2026-03-24
 状态：草案
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/tricompany-agent-roles.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ---
 
 ## 1. 文档定位
 
-本文是 [cyber-company.md](../../cyber-company.md) 的执行化补充，用于把 TriMetaverse 虚拟公司的高层岗位转写为可被 Agent 实现、可被工作流编排、可被审计和可被替换的角色定义。
+本文是 [tricompany.md](../../tricompany.md) 的执行化补充，用于把 TriMetaverse 赛博公司的高层岗位转写为可被 Agent 实现、可被工作流编排、可被审计和可被替换的角色定义。
 
 本文关注的是“角色 contract”，不是最终 prompt，也不是最终技术实现。后续无论使用本地 Agent、服务端 Agent、人工参与节点，还是链上治理接口，都应优先遵守本文定义的职责边界、输入输出与升级规则。
 
@@ -69,7 +77,7 @@
 
 ## 4. Agent 分层
 
-建议将虚拟公司 Agent 分成四层：
+建议将赛博公司 Agent 分成四层：
 
 1. 治理层 Agent
 2. 经营决策层 Agent
@@ -142,9 +150,9 @@
 
 ### 6.1 主控语义边界
 
-- 虚拟公司是所有人格 Agent 与非人格 Agent 的经营和交互核心载体，不再使用 `Autonomy Main Controller` 作为当前标准名。
+- 赛博公司是所有人格 Agent 与非人格 Agent 的经营和交互核心载体，不再使用 `Autonomy Main Controller` 作为当前标准名。
 - `TriMC` 是统一的 agent runtime 和 interaction core；服务域任务、经营协同、研发工作流都作为它的执行切片存在，而不再拆成三主控命名。
-- 当前阶段，虚拟公司与服务域任务都先由 `copilot chat` 完成 shadow test 并进入本地正式接管；到 `TriMetaverse V1 正式上线切换阶段`，再通过 `TriHost` 迁入 `TriMC` 运行面。
+- 当前阶段，赛博公司与服务域任务都先由 `copilot chat` 完成 shadow test 并进入本地正式接管；到 `TriMetaverse V1 正式上线切换阶段`，再通过 `TriHost` 迁入 `TriMC` 运行面。
 - CEO 总助 Agent 是当前阶段的日常总调度中心和默认代理执行枢纽，但不应被直接等同为宿主或基础设施主控。
 - `Tride` 不再作为切换后的正式宿主，而是 PC 端软件中的开发工具与集成层，不在本文角色 contract 主体范围内。
 
@@ -209,7 +217,7 @@
 | 降级策略 | 由运营 Agent 临时代理节奏编排，CEO 直接接管审批 |
 | 审计字段 | 计划版本、参与角色、任务重排记录、风险等级、超时记录、同步状态、记忆更新记录、会议纪要、责任人与截止时间 |
 
-说明：公司会议组织、纪要整理、会后回填和归档纪律属于秘书处机制，统一见 `docs/workflow/cyber-company-secretariat.md`。该机制归 CAO / 行政管理侧统管，事实层由 `CompanyGovernanceRegistry` 维护；在 CAO 尚未独立上岗前，`CEO 总助 Agent` 仅代管秘书处日常运行责任。岗位启用、职责交接与 completion tracking 属于 CHO / 人力资源侧。
+说明：公司会议组织、纪要整理、会后回填和归档纪律属于秘书处机制，统一见 `docs/workflow/tricompany-secretariat.md`。该机制归 CAO / 行政管理侧统管，事实层由 `CompanyGovernanceRegistry` 维护；在 CAO 尚未独立上岗前，`CEO 总助 Agent` 仅代管秘书处日常运行责任。岗位启用、职责交接与 completion tracking 属于 CHO / 人力资源侧。
 
 ## 7.4 市场 Agent
 
@@ -371,8 +379,8 @@
 
 标准对象目录与基础 envelope 已下沉到：
 
-- `cyber-company-handoff-objects.md`
-- `cyber-company-handoff-envelope.schema.json`
+- `tricompany-handoff-objects.md`
+- `tricompany-handoff-envelope.schema.json`
 
 | 对象名 | 产生者 | 消费者 | 用途 |
 | --- | --- | --- | --- |
@@ -419,7 +427,7 @@
 一期不必一次性把所有 Agent 做成复杂智能体。更合理的落地方式是：
 
 1. 先把每个 Agent 的输入输出对象模板做出来。
-2. 先让 CEO 总助 Agent 在当前 `copilot chat` 试运行阶段承担虚拟公司的日常调度执行语义。
+2. 先让 CEO 总助 Agent 在当前 `copilot chat` 试运行阶段承担赛博公司的日常调度执行语义。
 3. 让各职能 Agent 先以定时任务加结构化输出方式运行。
 4. 先建立统一日志、对象流转记录和预算账本。
 5. 等一轮经营闭环跑通后，再把高频动作自动化。
@@ -430,10 +438,10 @@
 
 基于本文，当前已落地的衔接资产包括：
 
-1. `cyber-company-handoff-objects.md`
-2. `cyber-company-handoff-envelope.schema.json`
+1. `tricompany-handoff-objects.md`
+2. `tricompany-handoff-envelope.schema.json`
 3. `handoff-templates/`
-4. `cyber-company-operating-workflow.md`
+4. `tricompany-operating-workflow.md`
 
 下一步最自然的文档产物是：
 
@@ -446,6 +454,6 @@
 
 ## 13. 当前结论
 
-TMV 虚拟公司的多 Agent 体系，一期不应该追求“很多 Agent 很聪明”，而应该追求“少数关键 Agent 角色清晰、输入输出清晰、权限清晰、升级路径清晰”。
+TMV 赛博公司的多 Agent 体系，一期不应该追求“很多 Agent 很聪明”，而应该追求“少数关键 Agent 角色清晰、输入输出清晰、权限清晰、升级路径清晰”。
 
 只有先把角色 contract 定稳，后续 workflow、账本、自动化和链上治理才不会变成一团混乱的对话系统。

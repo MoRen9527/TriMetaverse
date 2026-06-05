@@ -1,4 +1,12 @@
-# Vibecraft 融合方案（面向 3D Agent 可观测、培训、可解释维护）
+﻿# Vibecraft 融合方案（面向 3D Agent 可观测、培训、可解释维护）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/vibecraft-integration-3d-agent.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 更新时间：2026-02-27
 参考项目：`reference/vibecraft`（Nearcyan/vibecraft，pinned: `8278a4b`）
@@ -27,7 +35,7 @@ Vibecraft 的可复用价值不在“Claude 专用壳”，而在三类基础能
 
 - `SocialFi`：渠道接入与回包。  
 - `Core-Agent`：会话编排与执行主控。  
-- `Tristaciss`：唯一 LLM 出口。  
+- `TriStaciss`：唯一 LLM 出口。  
 
 ### 2.2 新增观测层（新增）
 
@@ -117,4 +125,4 @@ Vibecraft 常见事件（如 pre/post tool、stop、prompt、permission）可映
 ## 8. 结论
 
 `vibecraft` 适合作为我们“**可观测 + 可解释 + 可培训**”能力的参考基座。  
-建议采用“**Bridge（服务端）+ Observatory UI（本地）**”双组件接入方式，嵌入现有双域架构，不改变 `SocialFi / Core-Agent / Tristaciss` 主职责边界。
+建议采用“**Bridge（服务端）+ Observatory UI（本地）**”双组件接入方式，嵌入现有双域架构，不改变 `SocialFi / Core-Agent / TriStaciss` 主职责边界。

@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "BOARD_DIRECTIVE",
   "objectId": "BD-202604-001",
   "title": "2026-04 首轮试单目标令",
@@ -14,7 +14,7 @@
     "label": "2026-04 首轮试单周期"
   },
   "summary": "要求经营层围绕 AI 内容运营与增长微服务推出首轮可收费试单包，保持低成本验证，并同步明确 PC 端软件层与 TriLC 的本地化支撑边界。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "Tride", "vscodium", "TriLC", "TriStaciss", "TriTest", "TriDeployment"],
   "dependsOn": [],
   "evidence": [
     {

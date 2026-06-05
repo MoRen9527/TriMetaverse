@@ -1,8 +1,8 @@
-param(
+﻿param(
     [string[]]$RepoPaths = @(
         'D:\OneDrive\Code\ai\TriMetaverse',
-        'D:\OneDrive\Code\ai\Tripilot',
-        'D:\OneDrive\Code\ai\Tristaciss',
+        'D:\OneDrive\Code\ai\TriPilot',
+        'D:\OneDrive\Code\ai\TriStaciss',
         'D:\OneDrive\Code\ai\Avatar-react',
         'D:\OneDrive\Code\ai\Opentride',
         'D:\OneDrive\Code\ai\vscodium'

@@ -1,4 +1,4 @@
-%% Derived view only.
+﻿%% Derived view only.
 %% Source of truth: docs/architecture-overall-unified.mmd
 flowchart LR
     U[用户\nTelegram / Discord / Slack 等]
@@ -17,7 +17,7 @@ flowchart LR
       T[Tool Runtime\nTool A / B / C / D]
     end
 
-    subgraph T3[Tristaciss（LLM API 平台）]
+    subgraph T3[TriStaciss（LLM API 平台）]
       API[LLM Gateway API\n统一鉴权 / 路由 / 限流 / 观测]
       PM[Provider Manager\nDeepSeek / GLM / OpenRouter 等]
       ST[Streaming + Fallback\n流式输出 / 失败回退]

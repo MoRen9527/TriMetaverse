@@ -1,7 +1,7 @@
-# Phase C W1 周报摘要（1 页版）
+﻿# Phase C W1 周报摘要（1 页版）
 
 日期：2026-02-27
-范围：Tripilot / Opentride / TriMetaverse
+范围：TriPilot / Opentride / TriMetaverse
 
 ## 一句话结论
 
@@ -20,8 +20,8 @@
 - 本周最小清单与 DoD：见 [phase-c-minimal-startup-checklist-2026-02-27.md](phase-c-minimal-startup-checklist-2026-02-27.md)
 - 总体架构文档状态：见 [arch-storage-migration.md](arch-storage-migration.md)
 - 关键 smoke 产物（最新一组）：
-  - `Tripilot/artifacts/acceptance/daily-smoke-20260227-155936.txt`
-  - `Tripilot/artifacts/acceptance/daily-smoke-20260227-155936.json`
+  - `TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.txt`
+  - `TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json`
 
 ## 当前风险与处理口径
 

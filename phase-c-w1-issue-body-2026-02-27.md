@@ -1,4 +1,4 @@
-# [Phase C] W1 完成回报（可直接贴 Issue）
+﻿# [Phase C] W1 完成回报（可直接贴 Issue）
 
 ## 结论
 
@@ -17,8 +17,8 @@ Phase C 的 W1 已完成并达到 DoD，进入持续执行阶段。
 - 启动清单（含 DoD）： [phase-c-minimal-startup-checklist-2026-02-27.md](phase-c-minimal-startup-checklist-2026-02-27.md)
 - 总览状态： [arch-storage-migration.md](arch-storage-migration.md)
 - 最新 smoke 产物：
-  - `Tripilot/artifacts/acceptance/daily-smoke-20260227-155936.txt`
-  - `Tripilot/artifacts/acceptance/daily-smoke-20260227-155936.json`
+  - `TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.txt`
+  - `TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json`
   - `overallPass=true`，`MISSING=0`，`BAD_ALIAS_TARGETS=0`
 
 ## 风险与口径

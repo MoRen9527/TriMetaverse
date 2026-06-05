@@ -1,0 +1,11 @@
+{
+  "runId": "ipd-ipd-20260527-034923",
+  "mode": "ipd-autopilot",
+  "currentStage": "DELIVERY",
+  "branchId": "ipd-ipd-20260527-034923",
+  "status": "completed",
+  "task": "开发一个类似litellm（https://github.com/BerriAI/litellm）的大模型api转换平台，综合sub2api（https://github.com/Wei-Shaw/sub2api）的拼车共享等特色功能，用TriStaciss的vendor吸收TriMetaverse/reference下载litellm和sub2api构建吸收链，可重构TriStaciss。用TriAvatar前端实现基本聊天和用户注册，用户系统放在TriMem统一规划。",
+  "createdAt": "2026-05-26T20:07:37.737639+00:00",
+  "updatedAt": "2026-05-26T20:07:39.408002+00:00",
+  "schemaVersion": "1.0"
+}

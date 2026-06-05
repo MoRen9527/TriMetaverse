@@ -1,5 +1,13 @@
 # PRD-XXX：<产品名称>
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/prd/PRD-template.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 状态：Draft  
 负责人：TBD  
 上游来源：`tmv-whitepaper.md#<章节>`

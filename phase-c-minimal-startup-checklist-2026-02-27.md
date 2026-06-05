@@ -1,4 +1,4 @@
-# Phase C 最小启动清单（本周）
+﻿# Phase C 最小启动清单（本周）
 
 更新时间：2026-02-27
 
@@ -6,13 +6,13 @@
 
 ## 1. 目标（仅保留最小可执行范围）
 
-- 在不破坏 Tripilot 四项硬门禁的前提下，启动架构迁移与验证。
+- 在不破坏 TriPilot 四项硬门禁的前提下，启动架构迁移与验证。
 - 本周只做“可留痕、可回滚、可复盘”的最小动作，不扩展新功能面。
 
 ## 2. 启动前置（已满足）
 
 - Phase B 已完成（B1/B2/B3/B4 全通过）。
-- Tripilot 门禁基线可运行：
+- TriPilot 门禁基线可运行：
   - `npx tsc --noEmit` 通过。
   - `scripts/acceptance/daily-smoke.ps1` 可产出 txt/json 证据。
 
@@ -20,7 +20,7 @@
 
 ### W1-1 建立“当周基线证据”
 
-在 `Tripilot` 根目录执行：
+在 `TriPilot` 根目录执行：
 
 ```powershell
 npx tsc --noEmit
@@ -37,7 +37,7 @@ powershell -ExecutionPolicy Bypass -File scripts/acceptance/daily-smoke.ps1
 回归动作：
 
 1. 设置 `tripilot.chatProvider=opencode-acp`。
-2. 在 Tripilot Chat 发送一条最小指令（例如读取工作区根目录并返回文件数）。
+2. 在 TriPilot Chat 发送一条最小指令（例如读取工作区根目录并返回文件数）。
 3. 确认工具调用开始/结束卡片成对出现并有最终文本输出。
 
 通过标准：

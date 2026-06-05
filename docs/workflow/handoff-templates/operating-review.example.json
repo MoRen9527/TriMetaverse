@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "OPERATING_REVIEW",
   "objectId": "OR-YYYYMMDD-001",
   "title": "经营复盘单",
@@ -14,7 +14,7 @@
     "label": "本周经营复盘"
   },
   "summary": "沉淀目标与结果偏差、根因、纠偏动作和下一轮输入。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Tristaciss", "TriTest", "Trideployment"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "TriStaciss", "TriTest", "TriDeployment"],
   "dependsOn": ["OP-YYYYMMDD-001", "SP-YYYYMMDD-001"],
   "evidence": [
     {

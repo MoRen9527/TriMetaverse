@@ -1,36 +1,36 @@
-# Phase A 仓库调整执行手册（Windows / PowerShell）
+﻿# Phase A 仓库调整执行手册（Windows / PowerShell）
 
 更新时间：2026-02-26
 
 适用范围：
 - `TriMetaverse`（元仓库，当前非 git）
-- `Tripilot`（已有 git）
-- `Tripilot/reference`（将迁入 TriMetaverse）
-- `Tripilot/reference/vscode-copilot-chat`（当前为嵌套 git，目标 submodule）
+- `TriPilot`（已有 git）
+- `TriPilot/reference`（将迁入 TriMetaverse）
+- `TriPilot/reference/vscode-copilot-chat`（当前为嵌套 git，目标 submodule）
 
 ---
 
 ## 0. 当前状态快照（已核对）
 
 - `TriMetaverse`：非 git 仓库
-- `Tripilot`：git 仓库（未检测到 remote）
-- `Tristaciss`：git 仓库（`origin` 已配置）
+- `TriPilot`：git 仓库（未检测到 remote）
+- `TriStaciss`：git 仓库（`origin` 已配置）
 - `Avatar-react`：非 git 仓库
 - `Opentride`：非 git 仓库
 - `vscodium`：git 仓库（`origin` 已配置）
-- `Tripilot/reference/vscode-copilot-chat`：git 仓库（`origin` 指向微软上游）
+- `TriPilot/reference/vscode-copilot-chat`：git 仓库（`origin` 指向微软上游）
 
 ---
 
 ## 1. 执行前准备（必须）
 
-1) 关闭 VS Code 中正在占用 `Tripilot/reference` 的窗口。
+1) 关闭 VS Code 中正在占用 `TriPilot/reference` 的窗口。
 
 2) 对关键目录做本地备份（建议）：
 
 ```powershell
 $ts = Get-Date -Format 'yyyyMMdd-HHmmss'
-Copy-Item "d:/OneDrive/Code/ai/Tripilot/reference" "d:/OneDrive/Code/ai/Tripilot/reference.backup-$ts" -Recurse
+Copy-Item "d:/OneDrive/Code/ai/TriPilot/reference" "d:/OneDrive/Code/ai/TriPilot/reference.backup-$ts" -Recurse
 ```
 
 3) 记录当前状态（留痕）：
@@ -38,7 +38,7 @@ Copy-Item "d:/OneDrive/Code/ai/Tripilot/reference" "d:/OneDrive/Code/ai/Tripilot
 ```powershell
 Get-Location
 Test-Path "d:/OneDrive/Code/ai/TriMetaverse"
-Test-Path "d:/OneDrive/Code/ai/Tripilot/reference"
+Test-Path "d:/OneDrive/Code/ai/TriPilot/reference"
 ```
 
 ---
@@ -64,21 +64,21 @@ git remote add origin <TriMetaverse-remote-url>
 1) 移动目录：
 
 ```powershell
-Move-Item "d:/OneDrive/Code/ai/Tripilot/reference" "d:/OneDrive/Code/ai/TriMetaverse/reference"
+Move-Item "d:/OneDrive/Code/ai/TriPilot/reference" "d:/OneDrive/Code/ai/TriMetaverse/reference"
 ```
 
 2) 验证迁移结果：
 
 ```powershell
 Test-Path "d:/OneDrive/Code/ai/TriMetaverse/reference"
-Test-Path "d:/OneDrive/Code/ai/Tripilot/reference"
+Test-Path "d:/OneDrive/Code/ai/TriPilot/reference"
 Get-ChildItem "d:/OneDrive/Code/ai/TriMetaverse/reference"
 ```
 
-3) （可选，过渡兼容）为 Tripilot 建立目录联接：
+3) （可选，过渡兼容）为 TriPilot 建立目录联接：
 
 ```powershell
-cmd /c mklink /J "d:\OneDrive\Code\ai\Tripilot\reference" "d:\OneDrive\Code\ai\TriMetaverse\reference"
+cmd /c mklink /J "d:\OneDrive\Code\ai\TriPilot\reference" "d:\OneDrive\Code\ai\TriMetaverse\reference"
 ```
 
 ---
@@ -158,8 +158,8 @@ git submodule status
 Test-Path "d:/OneDrive/Code/ai/TriMetaverse/reference"
 Test-Path "d:/OneDrive/Code/ai/TriMetaverse/reference/vscode-copilot-chat"
 
-# D. Tripilot 兼容路径（若使用联接）
-Test-Path "d:/OneDrive/Code/ai/Tripilot/reference"
+# D. TriPilot 兼容路径（若使用联接）
+Test-Path "d:/OneDrive/Code/ai/TriPilot/reference"
 ```
 
 ---
@@ -169,8 +169,8 @@ Test-Path "d:/OneDrive/Code/ai/Tripilot/reference"
 ### 8.1 reference 迁移回滚
 
 ```powershell
-Remove-Item "d:/OneDrive/Code/ai/Tripilot/reference" -Recurse -Force
-Move-Item "d:/OneDrive/Code/ai/TriMetaverse/reference" "d:/OneDrive/Code/ai/Tripilot/reference"
+Remove-Item "d:/OneDrive/Code/ai/TriPilot/reference" -Recurse -Force
+Move-Item "d:/OneDrive/Code/ai/TriMetaverse/reference" "d:/OneDrive/Code/ai/TriPilot/reference"
 ```
 
 ### 8.2 submodule 回滚

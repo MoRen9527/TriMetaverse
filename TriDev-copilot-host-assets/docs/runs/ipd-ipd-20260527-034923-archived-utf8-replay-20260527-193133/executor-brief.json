@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "currentStage": "VERIFY-INTEGRATION",
+  "nextAction": "record-phase-result",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "requiredInputs": [
+    "upstreamArtifact:implementation",
+    "artifact:test-report",
+    "summary"
+  ],
+  "reviewBlockers": [],
+  "recommendedCommand": "python -m tridev.cli engine-step --root . --run-id <run-id> --artifact <path> --summary \"VERIFY-INTEGRATION completed\" --step-id <step-id>",
+  "knowledgeBundlePath": "docs\\runs\\ipd-ipd-20260527-034923\\knowledge-bundle.json",
+  "promptContextPath": "docs\\runs\\ipd-ipd-20260527-034923\\host-prompt-context.json",
+  "taskPlanPath": "docs\\runs\\ipd-ipd-20260527-034923\\coding-task-plan.json",
+  "taskLedgerPath": "docs\\runs\\ipd-ipd-20260527-034923\\coding-task-ledger.json",
+  "openTaskIds": [
+    "verify_integration-prepare-inputs",
+    "verify_integration-execute-stage",
+    "verify_integration-prepare-gate"
+  ],
+  "taskRetrySummary": [],
+  "instructions": [
+    "Follow the VERIFY-INTEGRATION stage contract and keep evidence machine-readable.",
+    "Do not bypass review blockers; clear revision_requested state before continuing.",
+    "Prefer updating real source/test/deploy artifacts over narrative-only docs when execution evidence is required.",
+    "Bind current-stage artifacts and produce a concise stage summary."
+  ],
+  "generatedAt": "2026-05-27T11:20:17.913024+00:00"
+}

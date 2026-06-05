@@ -1,5 +1,13 @@
 # Business Strategy Evolution Log
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/registry/business-strategy-evolution-log.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## 2026-04-01
 
 ### 初始登记
@@ -10,7 +18,7 @@
 
 ### 当前默认经营实验
 
-- 默认采用 `cyber-company.md` 中离收入最近的方向 A 作为首轮试点
+- 默认采用 `tricompany.md` 中离收入最近的方向 A 作为首轮试点
 - 首轮重点模块为 `TriMetaverse`、`Tristaciss`、`Tride`、`Tripilot`、`Triavatar`、`Trideployment`、`TriTest`
 
 ### 当前特殊约束
@@ -37,7 +45,7 @@
 ### 来源
 
 - `../../project.md`
-- `../../cyber-company.md`
+- `../../tricompany.md`
 - `../workflow/terminology.md`
 - `../workflow/workflow-host-integration.md`
 - `../三元宇宙架构与模块说明.md`

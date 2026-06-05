@@ -1,5 +1,13 @@
 # CEO 与 CEOChiefOfStaff 理解对齐会纪要
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/operating-records/2026-W15/meeting-2026-04-10-ceo-chief-of-staff-alignment.md
+- publishedFrom: 当前文件（audit record）
+- syncMode: audit-record
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-04
+
 时间：2026-04-10
 
 主持：CEOChiefOfStaff
@@ -82,10 +90,11 @@
 ## 6. 会后记忆更新清单
 
 - 总助的人格、职责、对话方式和边界归属已经正式沉淀到仓库内配套文件。
-- 总助的主记忆文件位于 `.github/agents/ceo-chief-of-staff.memory.md`，后续应作为总助可回看的主入口之一。
+- 总助当前可回看的主记忆入口已切到 `TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/employee-consumption-records.md`；源侧记忆契约回到 `TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.memory.md`。
 - 未来其他岗位按 `agent / soul / memory` 三件套构建，由总助先行推动初版。
 
 ## 7. 回看入口
 
 - 当前会议纪要：`docs/workflow/operating-records/2026-W15/meeting-2026-04-10-ceo-chief-of-staff-alignment.md`
-- 当前总助配套记忆：`.github/agents/ceo-chief-of-staff.memory.md`
+- 当前总助配套记忆 readback：`TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/employee-consumption-records.md`
+- 当前总助源侧记忆契约：`TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.memory.md`

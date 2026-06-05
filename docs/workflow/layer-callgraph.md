@@ -1,5 +1,13 @@
 # TMV Workflow 分层与调用关系
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/layer-callgraph.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## 1. 分层图（按职责）
 
 ```mermaid

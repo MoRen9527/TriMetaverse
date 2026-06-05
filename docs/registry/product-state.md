@@ -1,5 +1,13 @@
 # TriMetaverse Product State
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/registry/product-state.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## Module Overview
 
 - `TriMetaverse` 是整个三元宇宙的中央战略仓、总 workflow、总白皮书、项目级真源约束和赛博公司实施落地侧的中央发布面。
@@ -52,8 +60,8 @@
 
 - `../../tmv-whitepaper.md`
 - `../../project.md`
-- `../../cyber-company.md`
-- `../workflow/cyber-company-agent-roles.md`
-- `../workflow/cyber-company-secretariat.md`
+- `../../tricompany.md`
+- `../workflow/tricompany-agent-roles.md`
+- `../workflow/tricompany-secretariat.md`
 - `../workflow/agent-taxonomy.md`
 - `../workflow/project-repo-document-baseline.md`

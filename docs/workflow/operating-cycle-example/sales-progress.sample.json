@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "SALES_PROGRESS",
   "objectId": "SP-202604-001",
   "title": "首轮试单销售推进单",
@@ -14,7 +14,7 @@
     "label": "试单转化周"
   },
   "summary": "根据 MVP 和交付准备推进首轮试单报价与成交验证，并把桌面工作台与本地控制器协同作为演示卖点之一。",
-  "relatedModules": ["Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriMetaverse"],
+  "relatedModules": ["TriPilot", "Tride", "vscodium", "TriLC", "TriStaciss", "TriMetaverse"],
   "dependsOn": ["ET-202604-001"],
   "evidence": [
     {

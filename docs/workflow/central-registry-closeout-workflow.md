@@ -1,5 +1,13 @@
 # 中央 Registry 收口工作流（TriMetaverse）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/central-registry-closeout-workflow.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ## 1. 目标
 
 本文件把跨模块事实收口整理成一条现役可执行工作流，用来减少总助逐份文档手工回填的成本，并明确以下问题：
@@ -9,7 +17,7 @@
 1. 哪些 registry 可以并行处理，哪些必须升级。
 1. 四层记忆应该如何落到 registry 收口语义上，以及当前哪些部分仍属于规划。
 
-本文件是 [cyber-company-operating-workflow.md](./cyber-company-operating-workflow.md) 的专项补充，不替代中央战略真源、模块 registry 真源或秘书处机制。
+本文件是 [tricompany-operating-workflow.md](./tricompany-operating-workflow.md) 的专项补充，不替代中央战略真源、模块 registry 真源或秘书处机制。
 
 registry owner 分工的源侧规则来自 TriCompany 虚拟公司源侧：`../../../TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`、`../../../TriCompany/docs/registry/product-state.md`、`../../../TriCompany/docs/registry/code-state.md` 与 `../../../TriCompany/docs/workflow/chief-administrative-officer-role.md`；本文只记录 TriMetaverse 工程侧收口执行方式。
 

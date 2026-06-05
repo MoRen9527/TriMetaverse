@@ -1,12 +1,20 @@
-# Git 健康巡检与自动修复（六仓）
+﻿# Git 健康巡检与自动修复（六仓）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/README-git-health.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 ## 目标
 
 用于快速检查并修复以下六个仓库的 Git 基础配置一致性：
 
 - `TriMetaverse`
-- `Tripilot`
-- `Tristaciss`
+- `TriPilot`
+- `TriStaciss`
 - `Avatar-react`
 - `Opentride`
 - `vscodium`

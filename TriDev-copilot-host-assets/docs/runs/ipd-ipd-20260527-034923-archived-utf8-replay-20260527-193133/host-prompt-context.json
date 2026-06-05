@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "currentStage": "VERIFY-INTEGRATION",
+  "nextAction": "record-phase-result",
+  "workMode": "new",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "requiredInputs": [
+    "upstreamArtifact:implementation",
+    "artifact:test-report",
+    "summary"
+  ],
+  "reviewBlockers": [],
+  "activeFailure": {},
+  "referenceEvidence": {
+    "upstream": "TriCompany-IPD",
+    "referencePath": "knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+    "vendorPath": "vendor/super-dev",
+    "license": "internal-governed-use",
+    "commit": "2026-05-27T19:20:12+08:00",
+    "capabilityMapping": [
+      "discovery",
+      "intelligence",
+      "designing",
+      "coding"
+    ],
+    "exclusions": [
+      "TriMem coding",
+      "TriAvatar default chat entry switch"
+    ],
+    "schemaVersion": "1.0"
+  },
+  "knowledgeBundlePath": "docs\\runs\\ipd-ipd-20260527-034923\\knowledge-bundle.json",
+  "machinePlaybookPath": "docs\\runs\\ipd-ipd-20260527-034923\\machine-playbook.json",
+  "roleAdaptersPath": "docs\\runs\\ipd-ipd-20260527-034923\\role-adapters.json",
+  "executorBriefPath": "docs\\runs\\ipd-ipd-20260527-034923\\executor-brief.json",
+  "taskPlanPath": "docs\\runs\\ipd-ipd-20260527-034923\\coding-task-plan.json",
+  "openTaskIds": [
+    "verify_integration-prepare-inputs",
+    "verify_integration-execute-stage",
+    "verify_integration-prepare-gate"
+  ],
+  "taskRetrySummary": [],
+  "knowledgeReadOrder": [
+    "AGENTS.md",
+    "README.md",
+    "docs\\runs\\ipd-ipd-20260527-034923\\reference-evidence.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\SESSION_BRIEF.md",
+    "docs\\runs\\ipd-ipd-20260527-034923\\workflow-state.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\machine-playbook.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\role-adapters.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\executor-brief.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\coding-task-plan.json",
+    "docs\\runs\\ipd-ipd-20260527-034923\\host-prompt-context.json",
+    "docs\\registry\\product-state.md",
+    "docs\\registry\\code-state.md",
+    "docs\\workflow\\super-dev-absorption-record.md"
+  ],
+  "recommendedCommand": "python -m tridev.cli engine-step --root . --run-id <run-id> --artifact <path> --summary \"VERIFY-INTEGRATION completed\" --step-id <step-id>",
+  "hostPrompts": [
+    "tridev: 继续当前流程",
+    "tridev: 现在下一步是什么",
+    "tridev: 按当前 run 继续执行"
+  ],
+  "generatedAt": "2026-05-27T11:20:17.927060+00:00"
+}

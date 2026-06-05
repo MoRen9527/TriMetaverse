@@ -4,6 +4,14 @@
 日期：2026-04-28
 状态：当前阶段治理基线（执行中；首轮 runtime / ignore 收敛已完成）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/tricompany-copilot-host-assets-governance.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ## 1. 文档定位
 
 本文用于收敛当前阶段 `TriCompany` 源仓、`TriCompany-copilot-host-assets` 支撑包、`TriMetaverse/.github` live 宿主入口与 `TriMetaverse/docs` 中央文档层之间的资产关系、owner 边界与同步纪律。
@@ -103,9 +111,9 @@
   - 机制实现、对象规范、编译 / 升格 / 审批 / report / workbench / recall checkpoint 与 cognition backend 等长期能力，真源在 `TriCompany/docs/workflow/`、`TriCompany/docs/engineering/`、`TriCompany/runtime/cognition/` 与 `TriCompany/vendor/reference/`。其中 `vendor/reference/hermes-agent-memory/` 只是 Hermes 参考冻结副本，实际改造与实现应落回 `runtime/cognition/`。
   - `TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/**` 与 `docs/execution/**/schedules/*.json` 指当前宿主直接消费或生成的对象载荷 / 对象集；旧 `knowledge/chief-of-staff/**` 已降为 deprecated legacy 兼容对象，只保留历史兼容和回滚参考。当前按迁移矩阵中的宿主对象分层治理，不纳入 docs published-copy manifest，也不代表 LLM wiki 机制本身以支撑包为真源。
 - 后续创建其他固定员工，或像本轮 CPO / CTO 这样把既有 live entry 纳入统一员工体系时，必须先在 `TriCompany/` 源侧确认岗位 / 员工定义、agent 资产、四层记忆资产、岗位职责、协作关系、流程 owner 与 role knowledge workspace 机制；新增员工的源侧五件套应先通过 `TriCompany/runtime/cognition/employee_source_kit.py` scaffold / validator 门禁，确保 `.memory.md`、`.colleagues.md`、`.social.md` 只保留认知层契约，运行消费记录进入 support employee workspace 或 `TRICOMPANY_COGNITION_HOME` 驱动的 runtime state。发布到 `TriCompany-copilot-host-assets/` 后，才生成当前宿主实际消费的 inbox、wiki、audit、workbench、schedule JSON 等对象载荷。换宿主时应迁移完整虚拟公司源侧定义和流程，不应在新宿主重新招聘员工或重建流程。
-- 当前 ProjectTrainer / 项目培训师已按源侧岗位定义处理，相关真源位于 `TriCompany/docs/workflow/project-trainer-role.md`、`TriCompany/.github/agents/project-trainer.*` 与 `TriCompany/docs/training/`；role / employee knowledge workspace 规则真源位于 `TriCompany/docs/engineering/role-employee-knowledge-workspace.md`，最小路径抽象位于 `TriCompany/runtime/cognition/knowledge_workspace.py`。ProjectTrainer 的 role / employee / org shared / audit support object payload 由 `TriCompany/runtime/cognition/employee_host_object_generation.py` 生成，源侧规则登记在 `TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json`，support 侧对象登记在 `TriCompany-copilot-host-assets/host-object-manifest.json`；这不等于 ProjectTrainer 已在当前 live 宿主发布。
+- 当前 ProjectTrainer / 项目培训师已按源侧岗位定义处理，但当前 canonical 源侧命名已切到 `rd-trainer`，`project-trainer` 仅保留为历史兼容 alias。相关真源位于 `TriCompany/docs/workflow/rd-trainer-role.md`、`TriCompany/.github/source-agents/rd-trainer/rd-trainer.*` 与 `TriCompany/docs/training/`；role / employee knowledge workspace 规则真源位于 `TriCompany/docs/engineering/role-employee-knowledge-workspace.md`，最小路径抽象位于 `TriCompany/runtime/cognition/knowledge_workspace.py`。ProjectTrainer / RAndDTrainer 的 role / employee / org shared / audit support object payload 由 `TriCompany/runtime/cognition/employee_host_object_generation.py` 生成，源侧规则登记在 `TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json`，support 侧对象登记在 `TriCompany-copilot-host-assets/host-object-manifest.json`；这不等于该岗位已在当前 live 宿主发布。
 - CEOChiefOfStaff / 总助属于老员工兼容迁移：当前 live 入口仍在 `TriMetaverse/.github/agents/ceo-chief-of-staff.*`，且它就是当前阶段的活 live agent；本轮不另发第二个 live agent 文件，而是让同一个 live 入口绑定到新的 `knowledge/employees/ceo-chief-of-staff/**` support object 活路径。`knowledge/roles/ceo-chief-of-staff/**` 与 `knowledge/employees/ceo-chief-of-staff/**` 已用于把总助纳入统一员工对象体系。`TriCompany-copilot-host-assets/knowledge/chief-of-staff/**` 仍保留，但状态已降为 `deprecated-legacy-path`，不再作为当前活路径，也不代表 TriMC 正式宿主切换。
-- ChiefProductOfficer / ChiefTechnologyOfficer 已按当前 Copilot-host live 上岗处理：现有 live 入口仍分别位于 `TriMetaverse/.github/agents/chief-product-officer.agent.md` 与 `TriMetaverse/.github/agents/chief-technology-officer.agent.md`；本轮不另发第二个 live agent 文件，而是补齐 `TriCompany/.github/agents/chief-product-officer.*`、`TriCompany/.github/agents/chief-technology-officer.*` 源侧五件套，并生成 `knowledge/roles/chief-product-officer/**`、`knowledge/employees/chief-product-officer/**`、`knowledge/roles/chief-technology-officer/**` 与 `knowledge/employees/chief-technology-officer/**` support object payload。该上岗只成立于当前 Copilot-host live 阶段，不代表 TriMC 正式宿主切换或完整授权矩阵已经完成。
+- ChiefProductOfficer / ChiefTechnologyOfficer 已按当前 Copilot-host live 上岗处理：现有 live 入口仍分别位于 `TriMetaverse/.github/agents/chief-product-officer.agent.md` 与 `TriMetaverse/.github/agents/chief-technology-officer.agent.md`；本轮不另发第二个 live agent 文件，而是补齐 `TriCompany/.github/source-agents/chief-product-officer/chief-product-officer.*`、`TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.*` 源侧五件套，并生成 `knowledge/roles/chief-product-officer/**`、`knowledge/employees/chief-product-officer/**`、`knowledge/roles/chief-technology-officer/**` 与 `knowledge/employees/chief-technology-officer/**` support object payload。该上岗只成立于当前 Copilot-host live 阶段，不代表 TriMC 正式宿主切换或完整授权矩阵已经完成。
 - `.tricompany-cognition/**` 是 runtime-state，由 `TRICOMPANY_COGNITION_HOME` 或默认 repo-local backend 在真实写入时创建。ProjectTrainer 没有 `.tricompany-cognition/employee/project-trainer.md` 是预期状态；`org/shared` 与 `org/audit` 是全公司共享运行态命名空间，不按员工拆分。
 - 禁止只在支撑包里新增长期运行代码而不回写模块真源。
 
@@ -251,7 +259,7 @@
 - `TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md`
 - `TriCompany-copilot-host-assets/docs/workflow/github-backport-manifest.md`
 - `TriCompany-copilot-host-assets/docs/workflow/hermes-copilot-host-migration.md`
-- `TriCompany-copilot-host-assets/docs/workflow/cyber-company-secretariat.md`
+- `TriCompany-copilot-host-assets/docs/workflow/tricompany-secretariat.md`
 
 这些文档一旦 source 发生稳定语义变化，应在同轮或下一轮立即把 support 副本追平，避免当前宿主仍读取旧口径。
 
@@ -270,7 +278,7 @@
 - `TriCompany-copilot-host-assets/docs/engineering/chief-of-staff-llm-wiki-priority-plan.md`
 - `TriCompany-copilot-host-assets/docs/engineering/cognition-runtime-module-plan.md`
 - `TriCompany-copilot-host-assets/docs/engineering/hermes-memory-subsystem-comparison.md`
-- `TriCompany-copilot-host-assets/docs/engineering/cyber-company-four-layer-memory-collaboration-system.md`
+- `TriCompany-copilot-host-assets/docs/engineering/tricompany-four-layer-memory-collaboration-system.md`
 - `TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-llm-wiki-object-spec.md`
 
 这类文档的默认动作应是：
@@ -329,6 +337,61 @@ support bundle 下的 baseline / archive 目录索引页也属于 `audit-record`
 - `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/README.md`
 - `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/README.md`
 
+### 9.5.1 历史路径例外清单
+
+当前已确认的历史路径例外，按 baseline 目录整体登记；下列目录内的冻结 `archive payload` 允许保留正文中的旧路径、旧入口名或当时的宿主引用，不作为“正文链接待修”处理对象：
+
+- `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/`
+- `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/`
+
+当前已核对到保留历史路径或旧入口字面量的正文示例包括：
+
+- `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/ceo-chief-of-staff.agent.md`
+- `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/ceo-chief-of-staff.memory.md`
+- `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.agent.md`
+- `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.instructions.md`
+- `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-开始会议.prompt.md`
+- `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-结束会议.prompt.md`
+
+这类例外的处理规则是：
+
+- 保留当时 baseline / archive 形成时的路径字面量，作为历史核对证据。
+- 不为了路径归一化而改写快照正文，避免污染审计语境。
+- 当前活路径、现行真源和命名漂移修正继续登记在治理页、迁移矩阵和 active docs 中，而不是回写冻结快照。
+- 若后续又出现新的 baseline / archive 正文残留旧路径，只有在它仍被当前 live / support 链路直接消费时才升级为待修项；否则先补进本清单或对应 archive README。
+
+### 9.5.2 已退休 live entry 清退记录
+
+`TriCompany-copilot-host-assets/docs/execution/live-agent-discovery-cleanup/2026-05-22-retired-live-agents/` 这一族虽不在 baseline 目录下，但也属于 `audit-record`，且应按“冻结历史映射记录”处理：
+
+- `retired-live-agents.json` 保存 `originalLivePath`、`archivePath`、`currentLivePath`、`status` 等清退与恢复映射字段，这些字段本身就是历史证据，不参与路径归一化。
+- 同目录下的 `*.agent.md` 是被移出 live discovery 的历史快照，用于说明当时哪些入口被 retire、哪些后续被 reinstated。
+- 这类记录只在清退状态、恢复状态或边界规则变化时更新；不因为 `.github` 当前命名、source path 调整或 support 路径清理而回写旧记录。
+
+当前已确认纳入该类治理的对象包括：
+
+- `TriCompany-copilot-host-assets/docs/execution/live-agent-discovery-cleanup/2026-05-22-retired-live-agents/retired-live-agents.json`
+- `TriCompany-copilot-host-assets/docs/execution/live-agent-discovery-cleanup/2026-05-22-retired-live-agents/*.agent.md`
+
+### 9.5.3 中央历史叙事 audit-record
+
+`TriMetaverse/docs/runs/`、`TriMetaverse/docs/workflow/archive/` 与 `TriMetaverse/docs/workflow/operating-records/` 中的 `audit-record` 默认按“中央历史叙事记录”处理，而不是按冻结映射载荷处理。
+
+适用对象包括：
+
+- `TriMetaverse/docs/runs/run-R*.md` 这类人工回填执行日志
+- `TriMetaverse/docs/runs/run-*/workflow-summary.md`、`delivery-report.md` 这类结构化 run 汇总说明
+- `TriMetaverse/docs/workflow/archive/*.md` 这类归档 closeout、对比稿与冻结后续事项说明
+- `TriMetaverse/docs/workflow/operating-records/**/*.md` 这类会议纪要、未决事项、周记、自动化待办与经营回填记录
+
+这类记录的处理规则是：
+
+- 允许保留当时真实使用的术语、宿主名、目录名或路径引用，只要正文明确是在描述历史事实、历史结论或 archive 背景。
+- 不把历史叙事中的旧称、旧路径或旧阶段边界机械视为“待统一修复”的正文错误。
+- 但如果某段话是在陈述当前仍有效的规范、当前主入口、当前真源或当前操作步骤，就必须追平到现行口径，或显式补一段“历史术语对齐说明”。
+- `TriMetaverse/docs/runs/README.md` 继续作为 run 目录规范真源；`workflow/archive/*.md` 若保留旧术语，应像现有 archive 文档一样在文首交代“若与现行真源冲突，以当前真源为准”。
+- `operating-records` 允许保留会议当时成立的 live path、source path、support copy 或岗位边界表述；但诸如“当前手动替代方案”“下一步”“未决事项”“当前维护入口”这类仍可能被直接执行的段落，必须保持现行有效，不能借历史纪要名义长期悬挂失效入口。
+
 ### 9.6 support workflow quick checklist
 
 如果当前 host operator 只需要快速判断“先改哪里、要不要追平 support、最后怎么验”，可直接使用 support root 下的 quick checklist：
@@ -386,4 +449,4 @@ support bundle 下的 baseline / archive 目录索引页也属于 `audit-record`
 - `TriCompany-copilot-host-assets/docs/workflow/github-backport-manifest.md`
 - `docs/workflow/tricompany-copilot-host-assets-migration-matrix.md`
 - `docs/三元宇宙架构与模块说明.md`
-- `docs/workflow/cyber-company-operating-workflow.md`
+- `docs/workflow/tricompany-operating-workflow.md`

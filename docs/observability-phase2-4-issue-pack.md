@@ -1,5 +1,13 @@
 # Observability（VibeCraft-inspired）Phase 2/3/4 Issue 包
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/observability-phase2-4-issue-pack.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 更新时间：2026-02-27
 依赖文档：
 - `docs/refactor-master-plan-socialfi-core-agent-tristaciss.md`

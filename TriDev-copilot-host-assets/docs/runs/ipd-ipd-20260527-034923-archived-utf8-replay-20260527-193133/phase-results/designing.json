@@ -1,0 +1,17 @@
+{
+  "stage": "DESIGNING",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\designing-package.json"
+  ],
+  "artifactDigest": "556e111284d65b5b5121d50081695a02c76d4caac827c0c8dc17cb455677dbb7",
+  "summary": "Designing ???? TriStaciss-only backend ???? openai_ingress_models.py?chat_completion_service.py?openai_compatible_api.py???? unit/integration tests?",
+  "createdAt": "2026-05-27T11:20:15.750021+00:00",
+  "changedFiles": [
+    "docs/ipd-autopilot/IPD-20260527-034923/designing-package.json"
+  ],
+  "gitDiffDigest": "373215153b079de28d690b4b556af1eb4d802ed9c8b5aab61e12095c4adb88a9",
+  "gitDiffStatus": "captured",
+  "schemaVersion": "1.0"
+}

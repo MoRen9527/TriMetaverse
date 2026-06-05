@@ -1,10 +1,18 @@
-# 虚拟公司经营主工作流（TriMetaverse）
+# 赛博公司经营主工作流（TriCompany）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/tricompany-operating-workflow.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
 
 ## 1. 目标
 
-本文件把 `cyber-company.md` 中的“公司自动运转流程”下沉为可执行的经营主工作流，用来回答三个问题：
+本文件把 `tricompany.md` 中的“公司自动运转流程”下沉为可执行的经营主工作流，用来回答三个问题：
 
-1. 虚拟公司每一轮经营循环按什么顺序推进。
+1. 赛博公司每一轮经营循环按什么顺序推进。
 1. 每一步由哪个 Role Agent 主责，交接什么对象。
 1. 哪些地方允许自动推进，哪些地方必须升级或冻结。
 
@@ -15,28 +23,28 @@
 本工作流以以下资产为真源和依赖：
 
 1. `BusinessStrategy`
-1. `cyber-company.md`
-1. `cyber-company-agent-roles.md`
-1. `cyber-company-handoff-objects.md`
-1. `cyber-company-handoff-envelope.schema.json`
+1. `tricompany.md`
+1. `tricompany-agent-roles.md`
+1. `tricompany-handoff-objects.md`
+1. `tricompany-handoff-envelope.schema.json`
 1. 模块级 `BusinessStrategyRegistry`、`Product Registry` 和 `Code Registry`，以及公司级 `CompanyGovernanceRegistry`
 1. TriCompany 源侧 registry owner 分工：`../../../TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`、`../../../TriCompany/docs/registry/product-state.md`、`../../../TriCompany/docs/registry/code-state.md` 与 `../../../TriCompany/docs/workflow/chief-administrative-officer-role.md`
 1. 研发主流程资产：`workflow-engine-spec.md`、`phase-result.schema.json`、`quality-gates.schema.json`
 
 ## 2.1 宿主边界说明
 
-- 当前虚拟公司经营主工作流先由 `copilot chat` 完成验证并承载当前阶段正式接管，必要时可扩到 `copilot cli`。
+- 当前赛博公司经营主工作流先由 `copilot chat` 完成验证并承载当前阶段正式接管，必要时可扩到 `copilot cli`。
 - 到 `TriMetaverse V1 正式上线切换阶段`，本经营主工作流通过 `TriHost` 切到以 `TriMC` 为核心的服务域运行面；`TriMC` 仍需独立经历“源码 -> shadow test -> 正式接管”。
-- 首版上线后的平滑过渡期，允许 `copilot chat` 版虚拟公司与 `TriMC` 运行面的正式形态并行运行一段时间。
+- 首版上线后的平滑过渡期，允许 `copilot chat` 版赛博公司与 `TriMC` 运行面的正式形态并行运行一段时间。
 - 本经营主工作流会消费研发主流程结果，但不再把研发流程写成独立主控；研发工作流同样属于 `TriMC` 统一运行面中的一个执行切片。
 - 当前本地正式接管不等于 `TriMC` 正式宿主切换。
 - 在 `TriMC` 尚未进入正式宿主切换前，如需落 skill、定时任务或复杂任务自动化能力，当前应先在 `copilot chat` 宿主完成试运行验证与最后一跳可用闭环；该结论只代表当前承载，不代表 `copilot chat` 等同于 `TriMC`。
 
 ## 2.2 统一运行语义说明
 
-- 虚拟公司是所有人格 Agent 与非人格 Agent 的经营和交互核心载体。
+- 赛博公司是所有人格 Agent 与非人格 Agent 的经营和交互核心载体。
 - `TriMC` 是统一的 agent runtime 和 interaction core，负责 runtime、planner、context 整理、tools 编排与模型调用协同。
-- 当前阶段虚拟公司的 shadow 与当前阶段正式接管都先由 `copilot chat` 承载，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，再通过 `TriHost` 完成宿主切换。
+- 当前阶段赛博公司的 shadow 与当前阶段正式接管都先由 `copilot chat` 承载，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，再通过 `TriHost` 完成宿主切换。
 - `Tripilot`、`Tride`、`vscodium` 与 CLI 共同构成 PC 端软件层；该层既配合 `TriLC` 完成本地化任务与部分服务域下发任务，也面向用户提供可直接使用的桌面自动化、PC 软件自动化与 `vibe coding` 工具入口。
 - CEO 总助仍是当前阶段的日常总调度中心，但它属于经营执行角色，不等于宿主或基础设施主控。
 - `TriSkill` 是未来统一 skill 提供模块；在模块真正落地前，本工作流仍以当前宿主上的最小可用闭环为准。
@@ -65,7 +73,7 @@
 
 ### 3.5 当前现实推进原则
 
-- 当前重点不是一次性健全全自动虚拟公司，而是先把 CEO 与 `CEOChiefOfStaff` 的经营同步中枢跑顺。
+- 当前重点不是一次性健全全自动赛博公司，而是先把 CEO 与 `CEOChiefOfStaff` 的经营同步中枢跑顺。
 - 当前经营节奏应先由 `CEOChiefOfStaff` 与 `ChiefOperatingOfficer` 拉起来，再推动产品、预算、技术闭环围绕上线目标协同。
 - `ChiefOperatingOfficer` 负责排节奏、催协同、控窗口，但不能覆盖 `ChiefProductOfficer`、`ChiefFinancialOfficer`、`ChiefTechnologyOfficer` 的硬门禁。
 - 当前阶段的默认目标是尽快形成可收费版本、尽快上线一版、尽快进入小闭环盈利，而不是先把岗位和自动化做满。
@@ -142,8 +150,8 @@
 
 经营对象若要引用具体研发执行轮次和阶段，应使用：
 
-- `cyber-company-phase-link.schema.json`
-- `cyber-company-phase-bridge.md`
+- `tricompany-phase-link.schema.json`
+- `tricompany-phase-bridge.md`
 
 ## 8. 无 CEO 模式
 
@@ -230,7 +238,7 @@
 
 ## 13. 当前结论
 
-到这一步，TriMetaverse 虚拟公司已经具备：
+到这一步，TriMetaverse 赛博公司已经具备：
 
 - 角色网络
 - 标准交接对象

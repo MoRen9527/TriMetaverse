@@ -1,0 +1,17 @@
+{
+  "stage": "DESIGNING",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\designing-package.json"
+  ],
+  "artifactDigest": "2cdd41729822b61fc04fb98b504d8eb36e64268ef2072d9f03ecad296a07ad29",
+  "summary": "Designing 已收口到 TriStaciss-only backend 首刀：改 openai_ingress_models.py、chat_completion_service.py、openai_compatible_api.py，并新增 unit/integration tests。",
+  "createdAt": "2026-05-27T11:31:37.028223+00:00",
+  "changedFiles": [
+    "docs/ipd-autopilot/IPD-20260527-034923/designing-package.json"
+  ],
+  "gitDiffDigest": "186265e709364c2e92fec251e49713384faf6dfd036a750e2697a4014bcb0280",
+  "gitDiffStatus": "captured",
+  "schemaVersion": "1.0"
+}

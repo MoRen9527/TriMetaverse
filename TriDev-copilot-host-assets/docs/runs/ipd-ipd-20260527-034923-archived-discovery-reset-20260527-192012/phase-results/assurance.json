@@ -1,0 +1,12 @@
+{
+  "stage": "ASSURANCE",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\09-assurance.md"
+  ],
+  "artifactDigest": "e3d8d0b609d546137fa398b346a92541fe1dd6a6bc8433e2de385e4b22571351",
+  "summary": "IPD-20260527-034923 assurance 自动推进完成。",
+  "createdAt": "2026-05-26T20:07:39.223144+00:00",
+  "schemaVersion": "1.0"
+}

@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "OPERATING_PLAN",
   "objectId": "OP-YYYYMMDD-001",
   "title": "本周经营计划单",
@@ -14,7 +14,7 @@
     "label": "2026-W15"
   },
   "summary": "将目标令拆解为本周经营主线、里程碑和跨部门协同动作。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Tristaciss", "TriTest", "Trideployment"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "TriStaciss", "TriTest", "TriDeployment"],
   "dependsOn": ["BD-YYYYMMDD-001"],
   "evidence": [
     {
@@ -23,7 +23,7 @@
       "note": "当前经营实验与优先模块"
     },
     {
-      "source": "TripilotProductRegistry",
+      "source": "TriPilotProductRegistry",
       "kind": "registry",
       "note": "入口模块当前能力边界"
     }

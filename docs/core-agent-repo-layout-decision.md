@@ -1,4 +1,12 @@
-# Core-Agent / SocialFi 目录与部署决策（服务域）
+﻿# Core-Agent / SocialFi 目录与部署决策（服务域）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/core-agent-repo-layout-decision.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 更新时间：2026-02-28
 状态：已确认执行
@@ -11,14 +19,14 @@
 
 - `core-agent` 运行在服务域（7x24 在线），作为单独核心主控。
 - `core-agent` 按 Kode 方向重写。
-- `core-agent` 采用独立目录/仓推进，目标层级与 `Tripilot` 同级。
+- `core-agent` 采用独立目录/仓推进，目标层级与 `TriPilot` 同级。
 - `socialFi` 运行在服务域，作为单独渠道接入与回包适配层。
-- `socialFi` 同样采用独立目录/仓推进，目标层级与 `Tripilot` 同级。
+- `socialFi` 同样采用独立目录/仓推进，目标层级与 `TriPilot` 同级。
 
 ## 推荐目录位（示例）
 
-- `d:/OneDrive/Code/ai/core-agent`（与 `Tripilot` 同级）
-- `d:/OneDrive/Code/ai/socialFi`（与 `Tripilot` 同级）
+- `d:/OneDrive/Code/ai/core-agent`（与 `TriPilot` 同级）
+- `d:/OneDrive/Code/ai/socialFi`（与 `TriPilot` 同级）
 
 ## 为什么不采用“先 packages 调通再迁移”
 

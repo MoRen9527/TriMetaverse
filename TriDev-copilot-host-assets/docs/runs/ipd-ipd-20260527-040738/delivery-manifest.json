@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-040738",
+  "task": "tmv wrapper autopilot smoke test",
+  "mode": "ipd-autopilot",
+  "branchId": "ipd-ipd-20260527-040738",
+  "readinessStatus": "ready",
+  "strict": true,
+  "missingStages": [],
+  "validation": {
+    "schemaVersion": "1.0",
+    "runId": "ipd-ipd-20260527-040738",
+    "valid": true,
+    "issueCount": 0,
+    "issues": [],
+    "generatedAt": "2026-05-26T20:07:40.185709+00:00"
+  },
+  "gateCount": 10,
+  "artifactBindingCount": 10,
+  "phaseResults": [
+    {
+      "stage": "ASSURANCE",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\09-assurance.md"
+      ],
+      "artifactDigest": "8161e24c8d7cf72935c7f71c2ee81b0ecb3a8d3e6ed50417fad04de4352cf0e0",
+      "summary": "IPD-20260527-040738 assurance 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:39.907893+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "CODING",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\04-coding.md"
+      ],
+      "artifactDigest": "8140b1a1e49ce12ef5ff263b872091591ea70bae64c3bc020eec319b8ffe1399",
+      "summary": "IPD-20260527-040738 coding 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:39.212132+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DELIVERY",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\10-delivery.md"
+      ],
+      "artifactDigest": "1d29b2c3f4e4402bee4339b34ee9d04136a4246ddaddb8a10fcbe1a9bfe536e0",
+      "summary": "IPD-20260527-040738 delivery 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:40.046774+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DEPLOYMENT",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\08-deployment.md"
+      ],
+      "artifactDigest": "9040208a91733bd3b18aae418468cf1d441d613b59c6337ddb89c4295452605b",
+      "summary": "IPD-20260527-040738 deployment 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:39.751975+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DESIGNING",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\03-designing.md"
+      ],
+      "artifactDigest": "4fe83e0c7af6d5013c3b06c3befdc9e39a5ebee1e58fce56dbe1a795fbf90966",
+      "summary": "IPD-20260527-040738 designing 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:39.020773+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DISCOVERY",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\01-discovery.md"
+      ],
+      "artifactDigest": "9830967196dff2283a5f5f079b862ceb01256d8223d13f5a97604f2092ca6eaa",
+      "summary": "IPD-20260527-040738 discovery 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:38.756709+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "INTELLIGENCE",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\02-intelligence.md"
+      ],
+      "artifactDigest": "291decf74e98f21b9ae757d118d9dc8d4e94e971a35a2e04ba093f87549ff714",
+      "summary": "IPD-20260527-040738 intelligence 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:38.891997+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "QA",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\07-qa.md"
+      ],
+      "artifactDigest": "67c5aaf8b9947f7cb051574a3eb41528f90681107603a774318e880032a79f83",
+      "summary": "IPD-20260527-040738 qa 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:39.625952+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "REDTEAM",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\06-redteam.md"
+      ],
+      "artifactDigest": "4f39d1949e3ccede31250f6134b810a64b15a8e1e46faeab6232e517f5d6ced9",
+      "summary": "IPD-20260527-040738 redteam 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:39.496577+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "VERIFY-INTEGRATION",
+      "status": "completed",
+      "branchId": "ipd-ipd-20260527-040738",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-040738\\05-verify-integration.md"
+      ],
+      "artifactDigest": "edd9fb796b71fe2b3b7d846ef2b1ef2325b0394929a5894aa83fe7437434643b",
+      "summary": "IPD-20260527-040738 verify-integration 自动推进完成。",
+      "createdAt": "2026-05-26T20:07:39.345682+00:00",
+      "schemaVersion": "1.0"
+    }
+  ],
+  "generatedAt": "2026-05-26T20:07:40.187838+00:00"
+}

@@ -1,5 +1,13 @@
 # TMV PRD 清单（由白皮书衍生）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/prd/README.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 来源：`tmv-whitepaper.md`  
 状态：v0.2（渐进式 PRD 试验）
 

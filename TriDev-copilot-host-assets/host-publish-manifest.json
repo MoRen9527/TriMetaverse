@@ -1,0 +1,29 @@
+{
+  "manifestId": "tridev-support-host-manifest-v0.1",
+  "date": "2026-05-27",
+  "status": "active",
+  "sourceManifest": "TriDev/.github/manifests/tridev-host-publish-manifest.json",
+  "sourceRepo": "TriDev",
+  "supportRoot": "TriDev-copilot-host-assets",
+  "supportArtifacts": [
+    {
+      "kind": "run-artifacts",
+      "path": "TriDev-copilot-host-assets/docs/runs"
+    },
+    {
+      "kind": "host-onboard-artifacts",
+      "path": "TriDev-copilot-host-assets/docs/host-onboard"
+    }
+  ],
+  "liveSurfaces": [
+    "TriDev/AGENTS.md",
+    "TriDev/.github/copilot-instructions.md",
+    "TriDev/.github/skills/tridev-core/SKILL.md",
+    "TriDev/.github/agents/tridev.agent.md"
+  ],
+  "notes": [
+    "This support root receives dynamic TriDev run and host-onboard artifacts published from the TriDev source repo.",
+    "It is not a second source repo and should not be used to maintain TriDev code or workflow truth directly.",
+    "TriDev module-local .github/agents remains reserved for registry or code/document maintenance agents; tridev.agent.md stays there as a maintenance-oriented module agent."
+  ]
+}

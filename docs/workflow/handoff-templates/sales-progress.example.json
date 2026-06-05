@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "SALES_PROGRESS",
   "objectId": "SP-YYYYMMDD-001",
   "title": "销售推进单",
@@ -14,7 +14,7 @@
     "label": "本周成交推进"
   },
   "summary": "同步线索、报价、成交概率和回款风险。",
-  "relatedModules": ["Tripilot", "Tristaciss"],
+  "relatedModules": ["TriPilot", "TriStaciss"],
   "dependsOn": ["MVP-YYYYMMDD-001"],
   "evidence": [
     {

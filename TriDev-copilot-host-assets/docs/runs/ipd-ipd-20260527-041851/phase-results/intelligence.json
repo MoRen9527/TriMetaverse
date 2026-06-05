@@ -1,0 +1,12 @@
+{
+  "stage": "INTELLIGENCE",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-041851",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-041851\\02-intelligence.md"
+  ],
+  "artifactDigest": "b75b5862ebf263725955925e4d743dbefa519326699b68dd7e397ad2e53662e3",
+  "summary": "IPD-20260527-041851 intelligence 自动推进完成。",
+  "createdAt": "2026-05-26T20:18:52.275579+00:00",
+  "schemaVersion": "1.0"
+}

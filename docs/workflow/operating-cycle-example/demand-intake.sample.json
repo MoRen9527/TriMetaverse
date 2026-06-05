@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "DEMAND_INTAKE",
   "objectId": "DI-202604-001",
   "title": "小团队内容增长试单需求输入单",
@@ -14,7 +14,7 @@
     "label": "W14 市场输入"
   },
   "summary": "聚焦预算有限的小团队内容增长需求，验证试单包切入点，并确认用户是否接受桌面工作台配合本地化任务的轻量交付方式。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Triavatar"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "Tride", "vscodium", "TriLC", "TriAvatar"],
   "dependsOn": ["OP-202604-W14-001"],
   "evidence": [
     {
@@ -23,7 +23,7 @@
       "note": "当前实验方向 A"
     },
     {
-      "source": "TripilotProductRegistry",
+      "source": "TriPilotProductRegistry",
       "kind": "registry",
       "note": "桌面入口可作为试单交互和结果承接面"
     },

@@ -1,17 +1,25 @@
 # WorkflowEngine Runbook
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/workflow-runbook.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ## 0. 统一词汇规范
 
 - 统一词汇源：`docs/workflow/terminology.md`（本节为执行摘要，详细定义以该文件为准）。
 - CODING 阶段标准产物名称固定为“产品实施总结”。
 - “产品实施文档”“实施产物”“产品实现文档”均视为非标准别名，执行与门禁记录一律使用“产品实施总结”。
-- `INTELLIGENCE` 之后各 PRD 分支的标准落地系统固定称为 `模块五层文档协同系统`，即 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`。
+- `INTELLIGENCE` 之后各 PRD 分支的标准落地系统固定称为 `模块六层文档协同系统`，即 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`、`docs/training/`。
 - PRD 分支的 docs bootstrap 前必须先拿到归属路由结论；当前阶段由 `ChiefProductOfficer` 主责模块设计与归属方案，`CEOChiefOfStaff` 只负责公司级任务分派、升级与收口。当前工作区根仓不自动等于 docs 落点。
 - 文档执行“严格模式”：正式章节禁止使用非标准别名（详见 `docs/workflow/terminology.md` 的 Strict Mode）。
 
 ### 0.1 术语变更记录（changelog）
 
-- 2026-04-26：将 PRD 分支的标准文档落地系统正式命名为“模块五层文档协同系统”，并要求运行前校验最小 docs 初始化。
+- 2026-04-26：将 PRD 分支的标准文档落地系统正式命名为“模块六层文档协同系统”，并要求运行前校验最小 docs 初始化。
 - 2026-04-26：补充 PRD 归属路由 gate，要求在建立最小 docs 入口前当前先询问 `CEOChiefOfStaff`，未来由 `ChiefProductOfficer` 主责模块设计与归属方案。
 - 2026-05-20：根据当前 live 上岗状态，把 `PRD_OWNERSHIP_ROUTING` 的产品归属判断切换为 `ChiefProductOfficer` 主责；`CEOChiefOfStaff` 退回公司级任务分派、催办、升级与收口。
 - 影响范围：`project.md`、`docs/workflow/project-repo-document-baseline.md`、`docs/workflow/phase-io-matrix.md`、`docs/workflow/review-release-chain.md`、`docs/workflow/workflow-engine-spec.md`、本运行手册。
@@ -27,7 +35,7 @@
 - `project.md` 与 `workflow-engine-config.yaml` 一致
 - 门禁规则文件可解析
 - 每个待执行 PRD 已拿到当前阶段 `ChiefProductOfficer` 的模块设计 / 归属结论，并已确认目标落位仓与目标 `docs/` 根
-- 若存在待执行 PRD 分支，则对应模块的 `模块五层文档协同系统` 最小入口已建立
+- 若存在待执行 PRD 分支，则对应模块的 `模块六层文档协同系统` 最小入口已建立
 
 ### 1.1 提交前术语一致性检查清单
 
@@ -50,7 +58,7 @@
 4. 执行 `INTELLIGENCE`，提交人工审核；仅审核通过后由审核人签发 PRD 版本（如 `PRD001-v1.0.0`，首次需有版本号，非首次需版本变更）
 5. 基于审核通过的 PRD 创建/更新分支
    - 因果链要求：`DISCOVERY` 产出白皮书（商业需求上游），`INTELLIGENCE` 产出 PRD/原型/用户故事，分支从 `DESIGNING` 启动。
-   - 分支初始化要求：先拿到当前阶段 `ChiefProductOfficer` 的模块设计 / 归属结论，并在该落位点校验和建立 `模块五层文档协同系统` 的最小入口，之后才允许该分支正式进入 `DESIGNING`。
+   - 分支初始化要求：先拿到当前阶段 `ChiefProductOfficer` 的模块设计 / 归属结论，并在该落位点校验和建立 `模块六层文档协同系统` 的最小入口，之后才允许该分支正式进入 `DESIGNING`。
    - 目录样板：可直接参考 `prd-branch-minimal-directory-template.md`。
 6. 检查增量触发：
    - `DISCOVERY` 白皮书更新 -> 刷新 `INTELLIGENCE`
@@ -120,7 +128,7 @@
 ## 5.1 PRD 分支最小 docs 初始化
 
 - 对新模块或首次进入分支执行的模块，PRD 审核通过后的第一动作应是询问当前阶段 `ChiefProductOfficer`；`CEOChiefOfStaff` 只负责公司级任务分派、催办、升级与收口，而不是直接替产品侧判断模块设计、归属方案与目标落位点。
-- 归属解析完成后，应在目标落位点补齐 `模块五层文档协同系统` 的最小入口。
+- 归属解析完成后，应在目标落位点补齐 `模块六层文档协同系统` 的最小入口。
 - 若 PRD 描述的是既有模块能力，则最小入口应补在该模块根；若描述的是新模块，则应先建立新模块根；只有项目根自身范围，才应补在当前项目根 `docs/`。
 - 推荐直接参考 `prd-branch-minimal-directory-template.md` 创建目录和占位文件。
 - 最低要求不是“把内容一次写满”，而是先保证后续 `DESIGNING -> ASSURANCE` 的产物在正确落位点上有稳定落位与引用入口。

@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "BOARD_DIRECTIVE",
   "objectId": "BD-YYYYMMDD-001",
   "title": "本周期经营目标令",
@@ -14,7 +14,7 @@
     "label": "2026-04"
   },
   "summary": "定义本月目标、预算边界和禁止越权范围。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Tristaciss"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "TriStaciss"],
   "dependsOn": [],
   "evidence": [
     {

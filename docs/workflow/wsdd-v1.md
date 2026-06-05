@@ -1,5 +1,13 @@
 # TMV Workflow-Driven SDD v1.0
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/wsdd-v1.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 目标：提供一套可执行的“规格驱动 + 工作流门禁”方法，用于 `TriMC` 统一运行面协调“主线 + PRD 分叉”交付。
 
 ## 1) 最小术语定义

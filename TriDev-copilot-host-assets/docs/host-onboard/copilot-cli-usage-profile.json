@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "hostId": "copilot-cli",
+  "displayName": "GitHub Copilot CLI",
+  "protocolMode": "rules-first",
+  "protocolSummary": "AGENTS.md + .github/copilot-instructions.md + skill text trigger",
+  "maturityTier": "copilot-first",
+  "supportsSlash": false,
+  "primaryTrigger": "tridev: <需求描述>",
+  "fallbackTriggers": [
+    "tridev：<需求描述>",
+    "tridev: 继续当前流程"
+  ],
+  "resumePrompt": "tridev: 继续当前流程",
+  "officialSurfaces": [
+    "Project root `AGENTS.md`",
+    "Project-level `.github/copilot-instructions.md`",
+    "Project-level `.github/skills/tridev-core/SKILL.md`",
+    "Project-level `.github/agents/tridev.agent.md`"
+  ],
+  "runtimeArtifacts": [
+    "`TriDev-copilot-host-assets/docs/runs/*/workflow-state.json`",
+    "`TriDev-copilot-host-assets/docs/runs/*/SESSION_BRIEF.md`",
+    "`TriDev-copilot-host-assets/docs/runs/*/knowledge-bundle.json`",
+    "`TriDev-copilot-host-assets/docs/runs/*/host-prompt-context.json`",
+    "`TriDev-copilot-host-assets/docs/runs/*/coding-task-plan.json`"
+  ],
+  "supportRoot": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets",
+  "firstResponseContract": [
+    "明确说明 TriDev pipeline mode 已激活，而不是普通聊天模式。",
+    "先读取 AGENTS.md、README.md，以及相关 run 的 knowledge-bundle.json / SESSION_BRIEF.md / workflow-state.json。",
+    "如果没有活动 run，明确当前从 DISCOVERY 开始，并说明十阶段顺序。",
+    "如果存在活动 run，先复述当前阶段、nextAction 和 gate / review 约束，再继续执行。"
+  ],
+  "workingAgreement": [
+    "研究、编码、调试、改文件继续使用宿主原生能力。",
+    "run 状态、playbook、role adapter、task-plan、gate、review 和 bundle 通过 `python -m tridev.cli` 落盘。",
+    "进入 tracked execution 前，先读取 knowledge bundle 和 prompt context，而不是只依赖会话记忆。",
+    "进入 CODING 及之后阶段时，优先留下真实源码、测试、部署或运行证据，而不是只写叙述文档。"
+  ],
+  "recommendedCommands": [
+    "python -m tridev.cli status --root . --run-id <run-id>",
+    "python -m tridev.cli knowledge-bundle --root . --run-id <run-id>",
+    "python -m tridev.cli playbook --root . --run-id <run-id>",
+    "python -m tridev.cli role-plan --root . --run-id <run-id>",
+    "python -m tridev.cli role-adapters --root . --run-id <run-id>",
+    "python -m tridev.cli task-plan --root . --run-id <run-id>",
+    "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary <summary>"
+  ],
+  "smokePrompts": [
+    "tridev: 为当前仓库进入 TriDev 开发流程",
+    "tridev: 继续当前流程",
+    "tridev: 现在下一步是什么"
+  ],
+  "latestRun": {
+    "exists": true,
+    "runId": "ipd-ipd-20260527-034923",
+    "currentStage": "VERIFY-INTEGRATION",
+    "nextAction": "record-phase-result",
+    "workflowStatePresent": true,
+    "sessionBriefPresent": true,
+    "knowledgeBundlePresent": true,
+    "promptContextPresent": true,
+    "machinePlaybookPresent": true,
+    "roleAdaptersPresent": true,
+    "taskPlanPresent": true
+  },
+  "generatedAt": "2026-05-27T15:21:43.490550+00:00"
+}

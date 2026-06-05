@@ -1,5 +1,13 @@
 # TriMetaverse Business State
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/registry/business-state.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## Registry Role
 
 - 本文件是 `TriMetaverse` 模块自身的 business registry 工作层。
@@ -31,7 +39,7 @@
 - `../../AGENTS.md`
 - `../../tmv-whitepaper.md`
 - `../../project.md`
-- `../../cyber-company.md`
+- `../../tricompany.md`
 - `./business-strategy-state.md`
 - `./business-strategy-module-map.md`
 - `./business-strategy-boundaries.md`

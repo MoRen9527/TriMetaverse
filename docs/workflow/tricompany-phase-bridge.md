@@ -1,8 +1,16 @@
 # 经营对象与 PhaseResult 桥接规范
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/tricompany-phase-bridge.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ## 1. 目标
 
-本文件定义虚拟公司经营对象如何与研发主流程的 `PhaseResult`、`runId`、`branchId` 和 `prdId` 建立可追溯引用。
+本文件定义赛博公司经营对象如何与研发主流程的 `PhaseResult`、`runId`、`branchId` 和 `prdId` 建立可追溯引用。
 
 它解决的问题是：
 
@@ -20,7 +28,7 @@
 ### 2.2 统一字段
 
 - 经营对象通过 `workflowRefs` 字段引用研发主流程。
-- `workflowRefs` 中的每个元素都应满足 `cyber-company-phase-link.schema.json`。
+- `workflowRefs` 中的每个元素都应满足 `tricompany-phase-link.schema.json`。
 
 ### 2.3 最小必要引用
 

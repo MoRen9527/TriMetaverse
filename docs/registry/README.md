@@ -1,5 +1,13 @@
 # Registry Layer
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/registry/README.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## 1. 作用
 
 本目录是 TriMetaverse 的工作型登记层，用来承接：
@@ -19,9 +27,9 @@
 
 1. `../../tmv-whitepaper.md`
 2. `../../project.md`
-3. `../../cyber-company.md`
+3. `../../tricompany.md`
 4. `../三元宇宙架构与模块说明.md`
-5. `../workflow/cyber-company-agent-roles.md`
+5. `../workflow/tricompany-agent-roles.md`
 
 涉及当前 TriCompany 宿主治理、published-copy 或 support bundle 资料时，默认先回到上面的项目级真源与 `../workflow/tricompany-copilot-host-assets-governance.md`，不要把 `TriCompany-copilot-host-assets/**` 当作 registry 层的默认事实入口。
 

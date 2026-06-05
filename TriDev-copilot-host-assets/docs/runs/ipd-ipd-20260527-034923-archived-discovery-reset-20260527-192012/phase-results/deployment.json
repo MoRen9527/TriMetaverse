@@ -1,0 +1,12 @@
+{
+  "stage": "DEPLOYMENT",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\08-deployment.md"
+  ],
+  "artifactDigest": "6216cf88bdfe87f3bc767748d9bde14398680f778daa83abfd6bae06045d2118",
+  "summary": "IPD-20260527-034923 deployment 自动推进完成。",
+  "createdAt": "2026-05-26T20:07:38.997470+00:00",
+  "schemaVersion": "1.0"
+}

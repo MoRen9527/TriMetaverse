@@ -1,5 +1,13 @@
 # PRD 归属路由 Intake 模板
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/prd-ownership-routing-intake-template.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 本模板用于在 PRD 归属模块 / 项目、目标仓或目标 `docs/` 根不明确时，发起一次标准 `PRD_OWNERSHIP_ROUTING` 请求。
 
 它不是正式记录本身，也不替代 `handoff-templates/prd-ownership-routing.example.json`。

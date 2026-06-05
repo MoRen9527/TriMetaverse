@@ -1,4 +1,12 @@
-# R&D Workflow Host Integration
+﻿# R&D Workflow Host Integration
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/workflow-host-integration.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
 
 ## 1. 目标
 
@@ -7,7 +15,7 @@
 作用域说明：
 
 - 本文件只讨论研发工作流的宿主输出契约与切换边界，不再把研发工作流单列为 `Development Main Controller` 标准名。
-- 它不定义虚拟公司经营主工作流的角色结构，但会说明研发工作流如何与 `TriMC`、`TriHost` 和 PC 端软件协同。
+- 它不定义赛博公司经营主工作流的角色结构，但会说明研发工作流如何与 `TriMC`、`TriHost` 和 PC 端软件协同。
 - 当前 shadow 与当前阶段正式接管都先直接跑在 `copilot chat`，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，正式切换通过 `TriHost` 配置完成，而 `TriMC` 保持 agent 运行和交互核心。
 
 本文件解决三类问题：
@@ -31,10 +39,10 @@ TriMetaverse V1 正式上线切换阶段边界：
 
 - agent 运行与交互核心：`TriMC`
 - 宿主适配与切换配置层：`TriHost`
-- PC 端软件：`Tripilot + Tride + vscodium + CLI`（`copilot cli`、`opencode`、`claude code`、`codex`）
+- PC 端软件：`TriPilot + Tride + vscodium + CLI`（`copilot cli`、`opencode`、`claude code`、`codex`）
 - 切换原则：保留当前已验证的输出契约与 machine-readable 资产，通过 `TriHost` 配置宿主与模型调用，而不是把研发工作流正式迁入 `Tride`
 
-2026.04.22 14:31 修改备注：`Tride` 不再作为切换后的正式宿主，仅与 `Tripilot` 和 `vscodium` 集成为 PC 端软件层的一部分，并配合 `TriLC` 完成本地化任务和部分由服务域下发的任务。该层同时保留用户直接使用桌面自动化、PC 软件自动化与 `vibe coding` 的工具入口语义。执行工具统一视为 PC 端软件的一部分：`copilot cli`、`opencode`、`claude code`、`codex`。
+2026.04.22 14:31 修改备注：`Tride` 不再作为切换后的正式宿主，仅与 `TriPilot` 和 `vscodium` 集成为 PC 端软件层的一部分，并配合 `TriLC` 完成本地化任务和部分由服务域下发的任务。该层同时保留用户直接使用桌面自动化、PC 软件自动化与 `vibe coding` 的工具入口语义。执行工具统一视为 PC 端软件的一部分：`copilot cli`、`opencode`、`claude code`、`codex`。
 
 说明：
 

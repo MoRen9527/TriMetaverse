@@ -1,5 +1,13 @@
 # 岗位职责交接 Intake 模板
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/responsibility-handoff-intake-template.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 本模板用于在岗位启用、职责移交、acting owner 切换或 completion tracking 需要结构化跟踪时，发起一次标准 `RESPONSIBILITY_HANDOFF` 请求。
 
 它不是正式记录本身，也不替代 `handoff-templates/responsibility-handoff.example.json`。
@@ -115,5 +123,5 @@
 
 - `handoff-templates/responsibility-handoff.example.json`
 - `responsibility-handoff.schema.json`
-- `cyber-company-handoff-objects.md`
+- `tricompany-handoff-objects.md`
 - `TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md`

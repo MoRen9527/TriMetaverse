@@ -1,11 +1,11 @@
-# TriMetaverse GitHub App + Copilot 协同落地清单（v1）
+﻿# TriMetaverse GitHub App + Copilot 协同落地清单（v1）
 
 更新时间：2026-02-26
 
 ## 1. 目标（本期）
 
 - 以 `TriMetaverse` 作为总入口仓库（元仓库），统一打开工作区与参考源码。
-- 保持 `Tripilot` / `Tristaciss` / `Avatar-react` / `Tride` / `vscodium` 独立仓库演进。
+- 保持 `TriPilot` / `TriStaciss` / `Avatar-react` / `Tride` / `vscodium` 独立仓库演进。
 - 让“需要远程跟进与审批”的开发任务优先走 GitHub Copilot coding agent + PR 流程。
 - 在 GitHub App（移动端）实现：查看进度、回复消息、PR 审批、@copilot 迭代。
 
@@ -27,9 +27,9 @@
   - 存放：工作区编排、架构文档、参考源码索引、submodule 指针。
   - 不承载：运行期大工件（视频、渲染产物、归档包）。
 - 业务仓库：
-  - `Tripilot`：VSCodium 上的自有 Copilot UI / 能力。
-  - `Tristaciss`：后端平台（模型 API、用户体系等）。
-  - `Avatar-react`：前端入口（与 Tristaciss 分离演进）。
+  - `TriPilot`：VSCodium 上的自有 Copilot UI / 能力。
+  - `TriStaciss`：后端平台（模型 API、用户体系等）。
+  - `Avatar-react`：前端入口（与 TriStaciss 分离演进）。
 - 上游承载仓库：
   - `vscodium`：编辑器载体，跟随上游兼容。
   - `Tride`：多“轮子”适配平台（先 `opencode`，后续可扩展 `codex` / `claude code` 等）。
@@ -39,7 +39,7 @@
 ### 4.1 统一落点
 
 - 参考源码统一放在 `TriMetaverse/reference/`。
-- `Tripilot/reference/` 迁移为过渡态，最终清空并只保留必要兼容层。
+- `TriPilot/reference/` 迁移为过渡态，最终清空并只保留必要兼容层。
 
 ### 4.2 管理方式
 
@@ -55,7 +55,7 @@
 ### 4.3 改造代码归属
 
 - 参考项目只做对照，不直接承载业务改造提交。
-- 业务改造代码必须进入业务仓库（Tripilot / Tristaciss / Avatar-react / Tride）。
+- 业务改造代码必须进入业务仓库（TriPilot / TriStaciss / Avatar-react / Tride）。
 
 ## 5. GitHub App 安装策略
 
@@ -63,8 +63,8 @@
 
 - 推荐：组织级安装并授权到以下全部仓库：
   - `TriMetaverse`
-  - `Tripilot`
-  - `Tristaciss`
+  - `TriPilot`
+  - `TriStaciss`
   - `Avatar-react`
   - `Tride`
   - `vscodium`
@@ -146,14 +146,14 @@ git submodule update --init --recursive
 ### Day 2：Reference 中心化
 
 - 创建 `TriMetaverse/reference/`。
-- 迁移 `Tripilot/reference` 到 TriMetaverse。
+- 迁移 `TriPilot/reference` 到 TriMetaverse。
 - 将 `vscode-copilot-chat` 规范成 submodule。
 - 建立 `reference/REGISTRY.md`。
 
 ### Day 3：工作区与路径收口
 
 - 校正 `trimetaverse.code-workspace` 指向统一入口路径。
-- 验证 Tripilot / Tride / vscodium 关键任务与启动配置不回归。
+- 验证 TriPilot / Tride / vscodium 关键任务与启动配置不回归。
 
 ### Day 4：Copilot 协同流程试跑
 

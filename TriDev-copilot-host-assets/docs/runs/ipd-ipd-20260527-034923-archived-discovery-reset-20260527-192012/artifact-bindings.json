@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "bindings": [
+    {
+      "stage": "DISCOVERY",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\01-discovery.md"
+      ],
+      "digest": "f5522c9a8fc14b94078e61050da1cda4a8a1cc15c17e3c289e1a0cb0f57b1465",
+      "artifactType": "reference-evidence",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:37.804662+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "INTELLIGENCE",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\02-intelligence.md"
+      ],
+      "digest": "a199a92cccb6585b118be0f78941cb33e4b695cb554e9beda2cf36adb38b8b36",
+      "artifactType": "prd",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:37.938919+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DESIGNING",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\03-designing.md"
+      ],
+      "digest": "d6d0fd99a4e7ea90051952afcb7510667bb33bf3519a3aaa1d2e9283cae4a89b",
+      "artifactType": "tech-plan",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:38.181118+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "CODING",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\04-coding.md"
+      ],
+      "digest": "de60f44ebff8e44bc3b10c4977af224beeb631a8925192d3507256b8c3942f13",
+      "artifactType": "implementation",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:38.332385+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "VERIFY-INTEGRATION",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\05-verify-integration.md"
+      ],
+      "digest": "3ee8a2c33f636368d25d90b4d63ef445e829887b645727a9b4b2d4d87408aac3",
+      "artifactType": "test-report",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:38.473548+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "REDTEAM",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\06-redteam.md"
+      ],
+      "digest": "28456b95ed72a3c8fc903523c5a26cd84504761e6cd3276ce606c444a42170c7",
+      "artifactType": "security-report",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:38.646350+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "QA",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\07-qa.md"
+      ],
+      "digest": "60bb28107ee552bdb90f8091d958f90bf3f6035fc94ea460e6a4c9c028efa90f",
+      "artifactType": "test-report",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:38.819099+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DEPLOYMENT",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\08-deployment.md"
+      ],
+      "digest": "6216cf88bdfe87f3bc767748d9bde14398680f778daa83abfd6bae06045d2118",
+      "artifactType": "deployment-evidence",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:38.975085+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "ASSURANCE",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\09-assurance.md"
+      ],
+      "digest": "e3d8d0b609d546137fa398b346a92541fe1dd6a6bc8433e2de385e4b22571351",
+      "artifactType": "assurance-report",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:39.197140+00:00",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DELIVERY",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\10-delivery.md"
+      ],
+      "digest": "cb56e9897ff00aabea602fac35e454d510904ff303a493bc334b23dbba206e07",
+      "artifactType": "delivery-evidence",
+      "source": "phase-result",
+      "generatedAt": "2026-05-26T20:07:39.355908+00:00",
+      "schemaVersion": "1.0"
+    }
+  ]
+}

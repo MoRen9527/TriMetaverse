@@ -1,0 +1,12 @@
+{
+  "stage": "DESIGNING",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-040738",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-040738\\03-designing.md"
+  ],
+  "artifactDigest": "4fe83e0c7af6d5013c3b06c3befdc9e39a5ebee1e58fce56dbe1a795fbf90966",
+  "summary": "IPD-20260527-040738 designing 自动推进完成。",
+  "createdAt": "2026-05-26T20:07:39.020773+00:00",
+  "schemaVersion": "1.0"
+}

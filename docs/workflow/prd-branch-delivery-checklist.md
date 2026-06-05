@@ -1,5 +1,13 @@
 # PRD 分叉执行落地清单（INTELLIGENCE 后）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/prd-branch-delivery-checklist.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 目标：从 PRD 产出后，将每个 PRD 独立分叉执行为一条可交付流水线，实现并行推进与分布式交付。
 
 ---
@@ -36,7 +44,7 @@
 - [ ] INTELLIGENCE 阶段产物（PRD/原型/用户故事）已人工审核通过，并签发 PRD 版本号（如 `PRD001-v1.0.0`，首次需有版本号，非首次需版本变更）。
 - [ ] INTELLIGENCE 手工新增 PRD 后，已写入 PRD 注册表并创建分支。
 - [ ] 新分支创建前，已拿到当前阶段 `ChiefProductOfficer` 的模块设计 / 归属结论，并已确认目标落位仓与目标 `docs/` 根。
-- [ ] 新分支创建时，已在解析出的目标落位点建立 `模块五层文档协同系统` 最小入口：`docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`。
+- [ ] 新分支创建时，已在解析出的目标落位点建立 `模块六层文档协同系统` 最小入口：`docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`、`docs/training/`。
 - [ ] 已参考 `prd-branch-minimal-directory-template.md` 建立最小目录或确认现有目录已等价覆盖。
 - [ ] 每次触发均在对应 `phase-result` 写入 `prdDelta`。
 
@@ -50,7 +58,7 @@
 
 - [ ] 对应 PRD 已人工审核通过并具备 PRD 版本号（非首次需版本已变更）。
 - [ ] 当前执行目录与 `ChiefProductOfficer` 当前阶段模块设计 / 归属结论一致。
-- [ ] `模块五层文档协同系统` 的最小入口已完成，分支初始化不再处于 `待补齐`。
+- [ ] `模块六层文档协同系统` 的最小入口已完成，分支初始化不再处于 `待补齐`。
 - [ ] `docs/product/REQUIREMENTS.md` / `STATE.md` 已能回连当前 PRD 范围与验收口径。
 - [ ] `docs/engineering/DESIGN.md` 已建立当前分支的 Spec 入口。
 - [ ] `docs/execution/<branch-id>/designing/PLAN.md` 已创建。

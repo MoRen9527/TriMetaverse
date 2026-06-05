@@ -1,4 +1,4 @@
-{
+﻿{
   "openapi": "3.1.0",
   "info": {
     "title": "TriMC Service Controller Task Protocol",
@@ -7,7 +7,7 @@
   "paths": {
     "/internal/v1/tasks": {
       "post": {
-        "summary": "Submit task ingress from Tristaciss to TriMC",
+        "summary": "Submit task ingress from TriStaciss to TriMC",
         "requestBody": {
           "required": true,
           "content": {

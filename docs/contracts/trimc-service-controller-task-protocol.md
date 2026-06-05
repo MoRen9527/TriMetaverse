@@ -1,12 +1,20 @@
-# Tristaciss 到 TriMC Service Controller 任务协议草案
+﻿# TriStaciss 到 TriMC Service Controller 任务协议草案
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/contracts/trimc-service-controller-task-protocol.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 ## 1. 目标
 
-该协议定义 Tristaciss 作为任务入口网关，如何把任务投递给 TriMC Service Controller。
+该协议定义 TriStaciss 作为任务入口网关，如何把任务投递给 TriMC Service Controller。
 
 设计原则：
 
-- Tristaciss 负责接单、校验、审计、路由初判。
+- TriStaciss 负责接单、校验、审计、路由初判。
 - TriMC 负责任务编排、节点调度、执行桥接、回执汇总。
 - 协议优先采用内部 HTTP API 加回调事件，必要时再辅以 WebSocket 订阅。
 
@@ -14,7 +22,7 @@
 
 | 角色 | 职责 |
 | --- | --- |
-| Tristaciss | 任务入口、模型路由、审批前置、请求审计 |
+| TriStaciss | 任务入口、模型路由、审批前置、请求审计 |
 | TriMC | Service Controller、任务状态机、节点调度、执行回执聚合 |
 | TriLC | 本地域执行体、节点、Planner、ToolBus |
 
@@ -33,7 +41,7 @@ X-TMV-Signature: <hmac>
 
 ### 4.1 POST /internal/v1/tasks
 
-Tristaciss 把任务正式投递给 TriMC。
+TriStaciss 把任务正式投递给 TriMC。
 
 请求体：
 
@@ -60,7 +68,7 @@ Tristaciss 把任务正式投递给 TriMC。
   },
   "workspace": {
     "workspaceId": "ws_001",
-    "repo": "Tripilot",
+    "repo": "TriPilot",
     "branch": "dev"
   },
   "execution": {
@@ -91,7 +99,7 @@ Tristaciss 把任务正式投递给 TriMC。
 
 ### 4.2 GET /internal/v1/tasks/{taskId}
 
-Tristaciss 查询 TriMC 的任务状态。
+TriStaciss 查询 TriMC 的任务状态。
 
 响应示例：
 
@@ -108,11 +116,11 @@ Tristaciss 查询 TriMC 的任务状态。
 
 ### 4.3 POST /internal/v1/tasks/{taskId}/cancel
 
-Tristaciss 发起取消请求。
+TriStaciss 发起取消请求。
 
 ### 4.4 POST /internal/v1/tasks/{taskId}/approval
 
-Tristaciss 把用户审批结果回传给 TriMC。
+TriStaciss 把用户审批结果回传给 TriMC。
 
 请求示例：
 
@@ -126,7 +134,7 @@ Tristaciss 把用户审批结果回传给 TriMC。
 
 ## 5. 回调接口
 
-TriMC 应回调 Tristaciss，避免 Tristaciss 仅靠轮询追状态。
+TriMC 应回调 TriStaciss，避免 TriStaciss 仅靠轮询追状态。
 
 ### 5.1 POST /internal/v1/controller-callbacks/task-status
 
@@ -205,7 +213,7 @@ TriMC 回传关键审计事件。
 
 ## 7. TriMC 到 TriLC 的核心事件
 
-虽然本文件聚焦 Tristaciss 到 TriMC，但建议顺手固定 TriMC 内部事件名，并把确认、高危拦截、隐私保护纳入状态机：
+虽然本文件聚焦 TriStaciss 到 TriMC，但建议顺手固定 TriMC 内部事件名，并把确认、高危拦截、隐私保护纳入状态机：
 
 - tmv.task.offer
 - tmv.task.accept
@@ -221,7 +229,7 @@ TriMC 回传关键审计事件。
 
 建议：
 
-1. Tristaciss 投递 TriMC 失败时，记录 ingress 失败事件并允许幂等重投。
+1. TriStaciss 投递 TriMC 失败时，记录 ingress 失败事件并允许幂等重投。
 2. TriMC 接单后生成 taskId，后续所有重复投递以 ingressId 去重。
 3. TriLC 离线时，TriMC 应保留待派发队列，而不是立即失败。
 4. 审批超时由 TriMC 驱动状态转为 timeout or cancelled。
@@ -237,7 +245,7 @@ TriMC 回传关键审计事件。
 
 ## 10. 落库映射
 
-Tristaciss：
+TriStaciss：
 
 - tmv_task_ingress
 - tmv_task_ingress_event

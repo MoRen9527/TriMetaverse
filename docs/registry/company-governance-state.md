@@ -1,5 +1,13 @@
 # TriMetaverse Company Governance State
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/registry/company-governance-state.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## Registry Overview
 
 - `CompanyGovernanceRegistry` 是 TriMetaverse 的公司治理资料 registry。
@@ -53,9 +61,9 @@
 
 ## Sources
 
-- `../../cyber-company.md`
-- `../workflow/cyber-company-agent-roles.md`
-- `../workflow/cyber-company-secretariat.md`
+- `../../tricompany.md`
+- `../workflow/tricompany-agent-roles.md`
+- `../workflow/tricompany-secretariat.md`
 - `../workflow/operating-records/README.md`
 - `../../../TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`
 - `../../../TriCompany/docs/workflow/chief-administrative-officer-role.md`

@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "OPERATING_PLAN",
   "objectId": "OP-202604-W14-001",
   "title": "首轮试单周经营计划单",
@@ -14,7 +14,7 @@
     "label": "2026-W14 样例计划"
   },
   "summary": "将试单目标令转译为本周产品收敛、预算判断、交付准备、桌面工作台到本地控制器的演示协同，以及转化协同动作。",
-  "relatedModules": ["TriMetaverse", "Tripilot", "Tride", "vscodium", "TriLC", "Tristaciss", "TriTest", "Trideployment"],
+  "relatedModules": ["TriMetaverse", "TriPilot", "Tride", "vscodium", "TriLC", "TriStaciss", "TriTest", "TriDeployment"],
   "dependsOn": ["BD-202604-001"],
   "evidence": [
     {
@@ -23,7 +23,7 @@
       "note": "当前优先模块与实验方向"
     },
     {
-      "source": "TripilotProductRegistry",
+      "source": "TriPilotProductRegistry",
       "kind": "registry",
       "note": "可作为用户入口与演示承接面"
     },
@@ -38,7 +38,7 @@
       "note": "可作为本地化任务和本地域执行控制器"
     },
     {
-      "source": "TristacissProductRegistry",
+      "source": "TriStacissProductRegistry",
       "kind": "registry",
       "note": "可作为 API 平台与模型路由底座"
     }

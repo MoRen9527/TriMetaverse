@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-041851",
+  "entries": [
+    {
+      "gateId": "discovery-gate",
+      "stage": "DISCOVERY",
+      "status": "approved",
+      "approvedBy": "CEOChiefOfStaff",
+      "approvedAt": "2026-05-26T20:18:52.098037+00:00",
+      "artifactDigest": "058da2a2aa59ea0e2adab234d9153260f705c2f3a16283ff0cabf233d102d3b6",
+      "comments": "由 IPD autopilot 自动推进。",
+      "schemaVersion": "1.0"
+    },
+    {
+      "gateId": "intelligence-gate",
+      "stage": "INTELLIGENCE",
+      "status": "approved",
+      "approvedBy": "ChiefProductOfficer",
+      "approvedAt": "2026-05-26T20:18:52.302521+00:00",
+      "artifactDigest": "b75b5862ebf263725955925e4d743dbefa519326699b68dd7e397ad2e53662e3",
+      "comments": "由 IPD autopilot 自动推进。",
+      "schemaVersion": "1.0"
+    },
+    {
+      "gateId": "designing-gate",
+      "stage": "DESIGNING",
+      "status": "approved",
+      "approvedBy": "ChiefTechnologyOfficer",
+      "approvedAt": "2026-05-26T20:18:52.509313+00:00",
+      "artifactDigest": "a06830810bf3092bc96c5a232a0813a881af49e3107e9d9f9c0b5c8eb9dfddd6",
+      "comments": "由 IPD autopilot 自动推进。",
+      "schemaVersion": "1.0"
+    }
+  ]
+}

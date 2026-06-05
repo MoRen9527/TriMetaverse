@@ -1,26 +1,26 @@
-{
+﻿{
   "objectType": "OPERATING_PLAN",
   "objectId": "OP-202604-W15-001",
   "title": "TriMetaverse 首轮真实周经营计划单",
-  "status": "draft",
+  "status": "closed-carried-forward",
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-04-10T10:30:00+08:00",
-  "updatedAt": "2026-05-26T22:28:00+08:00",
+  "updatedAt": "2026-06-03T11:46:33+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-04-10T00:00:00+08:00",
     "endAt": "2026-04-16T23:59:59+08:00",
     "label": "2026-W15 首轮真实计划"
   },
-  "summary": "根据 CEO 于 2026-04-10 的最新输入，本周计划先围绕白皮书缺口讨论、CTO 与 CPO 优先上岗摸底、资料治理、自动化开发流程梳理和首版 MVP 内容重排推进；CEO 与 CEOChiefOfStaff 理解对齐会第一轮已完成，本轮先完成总助本体与记忆结构定型；因目标令 BD-202604-001 仍待书面签发，本计划暂作为草案维护。",
+  "summary": "根据 CEO 于 2026-04-10 的最新输入，本周计划先围绕白皮书缺口讨论、CTO 与 CPO 优先上岗摸底、资料治理、自动化开发流程梳理和首版 MVP 内容重排推进；CEO 与 CEOChiefOfStaff 理解对齐会第一轮已完成，本轮先完成总助本体与记忆结构定型；因目标令 BD-202604-001 仍待书面签发，本计划最初作为草案维护。2026-06-03 起，该周记录改作历史周基线，active follow-up 已统一平移到 `2026-W23/OP-202606-W23-001`。",
   "relatedModules": [
     "TriMetaverse",
     "Tride",
-    "Tripilot",
-    "Tristaciss",
+    "TriPilot",
+    "TriStaciss",
     "TriTest",
-    "Trideployment",
+    "TriDeployment",
     "TriCompany",
     "TriDev"
   ],
@@ -34,12 +34,12 @@
       "note": "阶段 0/1 优先跑最小闭环、原型上线与内容社区入口"
     },
     {
-      "source": "cyber-company.md",
+      "source": "tricompany.md",
       "kind": "document",
       "note": "当前推进路线是 CEO 与总助先同步，再形成最小岗位闭环、产品上线与小闭环盈利"
     },
     {
-      "source": "docs/workflow/cyber-company-operating-workflow.md",
+      "source": "docs/workflow/tricompany-operating-workflow.md",
       "kind": "document",
       "note": "经营计划由 CEOChiefOfStaff 产出，并按 weekly cadence 推进"
     },
@@ -276,7 +276,7 @@
     },
     {
       "owner": "CEOChiefOfStaff",
-      "action": "启动核心模块资料扫描、旧文档识别与记忆登记基线，先覆盖 TriMetaverse、Tride、Tripilot、Tristaciss，并沉淀模块记忆更新规则",
+      "action": "启动核心模块资料扫描、旧文档识别与记忆登记基线，先覆盖 TriMetaverse、Tride、TriPilot、TriStaciss，并沉淀模块记忆更新规则",
       "dueAt": "2026-04-16T20:00:00+08:00"
     },
     {
@@ -358,7 +358,9 @@
       "TriDev 已建立 super-dev reference / vendor 基线，并已落地 Copilot-host 本地开发执行 engine 可靠性切片；但完整岗位联动自动开发 adapter、版本签发协议和生产级交付平台尚未落地。",
       "TriDev 第一阶段不把 super-dev 的 host adapter、multi-host readiness、slash / integrate、网站/demo、backend/frontend 产品壳混入 workflow engine 最小切片；其中 host adapter 与 readiness 归 TriHost 后续处理，产品入口与产品壳能力归 CPO/CTO 分层吸收。",
       "CloakHQ/CloakBrowser 可作为 CMO 市场雷达候选工具，但尚未完成合规、成本、运行隔离、版本固定、二进制许可和最小试点验证；不得写成生产级市场数据管道或自动化爬虫能力已落地。",
-      "当前三仓已完成本轮 `Git Health` 收口，但 `TriLC`、`TriMC` 当前工作区路径仍不是独立 git 仓，后续如恢复独立仓面，仍需补一次基线扫描。"
+      "当前三仓已完成本轮 `Git Health` 收口，但 `TriLC`、`TriMC` 当前工作区路径仍不是独立 git 仓，后续如恢复独立仓面，仍需补一次基线扫描。",
+      "TriTraining 已形成中央平台概念与架构草案，但当前按 CEO 指令先转入暂停队列，等待恢复优先级；恢复前不得写成已成立正式模块。",
+      "第一条 IPD `IPD-20260527-034923` 当前现行证据面停在 Coding 后：active 目录仅保留 discovery/intelligence/designing/coding 四个 stage package；后续阶段现只见 archive 回放痕迹，是否继续当前 case 或重开新 case 待 CEO 指令。"
     ],
     "escalationRules": [
       "若 CTO 或 CPO 到 2026-04-13 仍未形成模块摸底结论，则升级 CEO 直接裁定首版 MVP 收敛范围。",
@@ -373,7 +375,7 @@
       "完成 CEO 与 CEOChiefOfStaff 的白皮书、商业模式、价值流转和模块作用理解对齐会，并形成记忆更新清单。",
       "CTO 与 CPO 完成核心模块 registry 摸底，并形成首版 MVP 候选范围。",
       "完成 COO 当前 Copilot-host live 启用，并准备 TriDev 候选产品首版运营计划输入。",
-      "至少完成 TriMetaverse、Tride、Tripilot、Tristaciss 四个核心模块的扫描优先级与负责人草案。",
+      "至少完成 TriMetaverse、Tride、TriPilot、TriStaciss 四个核心模块的扫描优先级与负责人草案。",
       "形成旧文档与无效文档识别规则、记忆更新规则初稿。",
       "形成自动化开发流程现状差距、旧代码复用点与联调优先级清单。",
       "跑派社区周会、OpenClaw 培训和首轮多岗位公司管理会均形成可回流的纪要、学习摘要或后续动作。",
@@ -389,6 +391,11 @@
     "followupBoardDirectiveRef": "docs/workflow/operating-records/2026-05/BD-202605-001.json",
     "issuanceVersion": "OP-202604-W15-001-v0.2.0-draft",
     "managementMeetingPlanned": true,
+    "historicalWeekClosed": true,
+    "historicalWeekClosedAt": "2026-06-03T11:46:33+08:00",
+    "successorOperatingPlanRef": "docs/workflow/operating-records/2026-W23/OP-202606-W23-001.json",
+    "successorUnresolvedItemsRef": "docs/workflow/operating-records/2026-W23/OP-202606-W23-001.unresolved-items.md",
+    "activeFollowupMovedToLatestWeek": true,
     "nextMissingInputs": [
       "更多未决事项和后续日程将由 CEO 后续继续补充",
       "白皮书、商业模式、价值流转、模块作用和首版 MVP 范围的下一轮对齐结论",
@@ -402,7 +409,9 @@
       "CPO/CTO 对 slash / command grammar、integrate、网站/demo、backend/frontend 产品壳的分层吸收排序",
       "CAO 对公司级中文优先文档规则的后续执行检查",
       "下一轮会议前的活跃 git 仓 `Git Health` 复扫结果",
-      "若再次出现跨周期 dirty worktree 时的新提交批次或冻结说明"
+      "若再次出现跨周期 dirty worktree 时的新提交批次或冻结说明",
+      "CEO 对 TriTraining 恢复时点与 MVP 优先级的明确指令",
+      "CEO 对第一条 IPD `IPD-20260527-034923` 的恢复方式：续跑当前 case，还是按新门禁重开 / 复制新 case"
     ],
     "gitHealthEscalationPending": false,
     "gitHealthCommittedModules": [

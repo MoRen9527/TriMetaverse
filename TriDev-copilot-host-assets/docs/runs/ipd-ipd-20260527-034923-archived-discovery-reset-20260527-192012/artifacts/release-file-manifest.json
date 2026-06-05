@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "bundle": "release.zip",
+  "entries": [
+    {
+      "path": "run/artifact-bindings.json",
+      "size": 4036,
+      "sha256": "c134c4a15ceb835dff65d37971e9bc1e5e66916f41744057f95e27393351a929"
+    },
+    {
+      "path": "run/delivery-manifest.json",
+      "size": 5720,
+      "sha256": "d18c6d6235886d6eb6bee82d505ae9c3f8911fa153d10ae27f3effd9d8453faf"
+    },
+    {
+      "path": "run/events.jsonl",
+      "size": 15461,
+      "sha256": "febadc00c5b643e5a86e995966b1c1891869959eab6490ff0b36c551ae2549ee"
+    },
+    {
+      "path": "run/gate-ledger.json",
+      "size": 3914,
+      "sha256": "1018b129e6fbccbf4c006e3ee3fad28f80704da2b40e865eab8cdb1356d0f3f9"
+    },
+    {
+      "path": "run/phase-results/assurance.json",
+      "size": 427,
+      "sha256": "881a03d6f3f389892e1c35c7c8460ebfca0199607bf2787abcd026fb1b3c916f"
+    },
+    {
+      "path": "run/phase-results/coding.json",
+      "size": 418,
+      "sha256": "0098adcbc942d92c7ea2ba66da9252251f11b5c5157c6fa93bb621519d1b82be"
+    },
+    {
+      "path": "run/phase-results/delivery.json",
+      "size": 424,
+      "sha256": "a2f67c39d47ef8f24e3774e9e3212e342e12960904ce96bff8f5de2772c7d236"
+    },
+    {
+      "path": "run/phase-results/deployment.json",
+      "size": 430,
+      "sha256": "6c611812210279ebdf0f7b3aee9544009dac643cd191674dfd3552a576e1401f"
+    },
+    {
+      "path": "run/phase-results/designing.json",
+      "size": 427,
+      "sha256": "8d493f9c2cf9605f3c1f9184e2ad8907fee8d6e09ab808bc70ce30a142e3e12f"
+    },
+    {
+      "path": "run/phase-results/discovery.json",
+      "size": 427,
+      "sha256": "9b60c02268a6037a9d73c7eaa63f9c080a36e5c25b1c8b02525aefe0bd98eb6e"
+    },
+    {
+      "path": "run/phase-results/intelligence.json",
+      "size": 436,
+      "sha256": "52813a0571fdc080cc3c52fcce507864308212272908bb6e94edfb6458500450"
+    },
+    {
+      "path": "run/phase-results/qa.json",
+      "size": 406,
+      "sha256": "2829b5b32564e790c42956c2a516a54d261bf3f741fe8afce7d620311f9e5a4b"
+    },
+    {
+      "path": "run/phase-results/redteam.json",
+      "size": 421,
+      "sha256": "a061ad69f5f900837a222754cdfbc529d6dfed0c8be7dd881704d23f67692c6d"
+    },
+    {
+      "path": "run/phase-results/verify_integration.json",
+      "size": 454,
+      "sha256": "896c10cdb1b56aa6a944c50227e7e3ffff5d708ad83c3a30d1fed548db5676cc"
+    },
+    {
+      "path": "run/reference-evidence.json",
+      "size": 503,
+      "sha256": "57adfe783bd4f665c412eb5c6efc2c4b70e13ca98a6347cca93928b1f8425b58"
+    },
+    {
+      "path": "run/run-metadata.json",
+      "size": 705,
+      "sha256": "3fe6e83d5a25128ac5bd4c5faea3ac146801f96e8731def10e3f8a752098ceed"
+    },
+    {
+      "path": "run/validation-report.json",
+      "size": 180,
+      "sha256": "5910d5572af6411fdc71f3c8a09f3fc5bd11ad5136123c8c132ebffa2685756d"
+    },
+    {
+      "path": "run/workflow-summary.md",
+      "size": 3097,
+      "sha256": "71d118ea6e48e08e7950219d346549805f25244c375ca0e2d5783b9b1d27e055"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/01-discovery.md",
+      "size": 807,
+      "sha256": "96be22cff530cba95cc937ab8fcc295e0dbd24e09986427601d9faede5d06597"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/02-intelligence.md",
+      "size": 884,
+      "sha256": "855a8377b131301e96fa4c67abce88240e68064e0e5e91b99e1d39b6205267ea"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/03-designing.md",
+      "size": 815,
+      "sha256": "45f4ee90ed40039de2855b0e9c1894ddd704b82f994cc547a11b99a2277f76f3"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/04-coding.md",
+      "size": 794,
+      "sha256": "db9261856e61ddece1832e35ecc63665f82f5b007554ed75da0c684e8dd0c815"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/05-verify-integration.md",
+      "size": 830,
+      "sha256": "9736652c151d0ab2dcd2e09655bdeadc324c650d62ce7732cd96ca166310cf59"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/06-redteam.md",
+      "size": 797,
+      "sha256": "f4a8753f5bb6b50b0e94c71731e9a37c33c6bfe52268c225e3cd2b6cf181aa23"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/07-qa.md",
+      "size": 803,
+      "sha256": "b680468a9c74af186a39af22d63956f9c33659c97f9217b77161bca4a977e432"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/08-deployment.md",
+      "size": 834,
+      "sha256": "9014a302d977dbdc486859573407b4394cc9f9fb40bc7c795bf6e3f62aa60e1b"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/09-assurance.md",
+      "size": 832,
+      "sha256": "e88291d518f4ebbc01bf179bd6006c7bac1b3bc395ce96f274c8b85a09d8161c"
+    },
+    {
+      "path": "source-artifacts/docs/ipd-autopilot/IPD-20260527-034923/10-delivery.md",
+      "size": 872,
+      "sha256": "a2210319e8767b01c618a7d29b577e0d1a9560544131235f29340edc2aeec199"
+    }
+  ],
+  "generatedAt": "2026-05-26T20:07:39.552233+00:00"
+}

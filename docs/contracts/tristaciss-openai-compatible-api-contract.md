@@ -1,8 +1,16 @@
-# Tristaciss OpenAI 兼容 API 契约草案
+﻿# TriStaciss OpenAI 兼容 API 契约草案
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/contracts/tristaciss-openai-compatible-api-contract.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 ## 1. 目标
 
-Tristaciss 作为三元宇宙统一模型 API 转接平台，对客户端暴露 OpenAI 兼容接口，同时支持额外的路由字段和任务辅助字段。
+TriStaciss 作为三元宇宙统一模型 API 转接平台，对客户端暴露 OpenAI 兼容接口，同时支持额外的路由字段和任务辅助字段。
 
 设计目标：
 
@@ -24,8 +32,8 @@ X-TMV-Trace-Id: <uuid>
 
 说明：
 
-- tmv_api_key 是 Tristaciss 发放的平台代理 key。
-- Tristaciss 内部再映射到 provider_account 和上游 provider credential。
+- tmv_api_key 是 TriStaciss 发放的平台代理 key。
+- TriStaciss 内部再映射到 provider_account 和上游 provider credential。
 
 ## 3. 兼容端点
 
@@ -62,7 +70,7 @@ X-TMV-Trace-Id: <uuid>
   "modelTag": "longctx",
   "workspace": {
     "workspaceId": "ws_001",
-    "repo": "Tripilot",
+    "repo": "TriPilot",
     "branch": "dev"
   },
   "policy": {
@@ -148,7 +156,7 @@ X-TMV-Trace-Id: <uuid>
 
 ## 4. 任务型请求约定
 
-当 taskHint.taskType 属于以下类型时，Tristaciss 不应直接把请求当普通模型调用结束，而应进入任务入口逻辑：
+当 taskHint.taskType 属于以下类型时，TriStaciss 不应直接把请求当普通模型调用结束，而应进入任务入口逻辑：
 
 - async_agent_task
 - workflow_task
@@ -182,7 +190,7 @@ X-TMV-Trace-Id: <uuid>
 
 ## 5. 路由决策顺序
 
-Tristaciss 的 provider 路由建议遵守以下优先级：
+TriStaciss 的 provider 路由建议遵守以下优先级：
 
 1. 显式 routeMeta.provider 固定路由
 2. tag plus modelTag 的策略路由

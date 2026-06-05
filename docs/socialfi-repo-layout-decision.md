@@ -1,4 +1,12 @@
-# SocialFi 目录与部署决策（服务域）
+﻿# SocialFi 目录与部署决策（服务域）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/socialfi-repo-layout-decision.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 更新时间：2026-02-28
 状态：已确认执行
@@ -6,12 +14,12 @@
 ## 决策结论
 
 - `socialFi` 运行在服务域（7x24 在线），作为独立渠道接入与回包适配层。
-- `socialFi` 采用独立目录/仓推进，目标层级与 `Tripilot` 同级。
+- `socialFi` 采用独立目录/仓推进，目标层级与 `TriPilot` 同级。
 - `socialFi` 只负责协议适配与消息标准化，不承载模型路由与主控编排。
 
 ## 推荐目录位（示例）
 
-- `d:/OneDrive/Code/ai/socialFi`（与 `Tripilot` 同级）
+- `d:/OneDrive/Code/ai/socialFi`（与 `TriPilot` 同级）
 
 ## 与 Core-Agent 的边界
 

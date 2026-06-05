@@ -1,4 +1,4 @@
-# Phase C W1-4 最小 PR 描述模板
+﻿# Phase C W1-4 最小 PR 描述模板
 
 > 用途：满足 W1-4“架构调整提交附带四重回归证据”。
 
@@ -26,8 +26,8 @@
 - 结果：通过 / 失败
 
 3) smoke 产物留存
-- txt：`Tripilot/artifacts/acceptance/daily-smoke-YYYYMMDD-HHMMSS.txt`
-- json：`Tripilot/artifacts/acceptance/daily-smoke-YYYYMMDD-HHMMSS.json`
+- txt：`TriPilot/artifacts/acceptance/daily-smoke-YYYYMMDD-HHMMSS.txt`
+- json：`TriPilot/artifacts/acceptance/daily-smoke-YYYYMMDD-HHMMSS.json`
 - `overallPass`：true / false
 
 4) 主路径手工回归（opencode-acp）

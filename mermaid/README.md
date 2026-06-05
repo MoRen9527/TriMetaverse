@@ -1,4 +1,4 @@
-# TriMetaverse Mermaid 资产台账
+﻿# TriMetaverse Mermaid 资产台账
 
 本目录用于管理 TriMetaverse 仓内的 Mermaid 图资产，方便单独预览、导出图片、复用到 PPT/网页/汇报材料，并作为白皮书与架构文档的图表索引入口。
 
@@ -53,13 +53,13 @@
 
 - `../docs/architecture-overall-unified.mmd`
   - 类型：总体统一架构图
-  - 内容特征：覆盖 Local / Client / Server / SocialFi / Core-Agent / Tristaciss / Observability 等统一架构视图。
+  - 内容特征：覆盖 Local / Client / Server / SocialFi / Core-Agent / TriStaciss / Observability 等统一架构视图。
   - 状态：**设计源文件**
   - 备注：适合用于系统总览，不建议直接替代白皮书中的精简图。
 
 - `../docs/architecture-socialfi-core-agent-tristaciss.mmd`
   - 类型：服务域拆分架构图
-  - 内容特征：聚焦 SocialFi、Core-Agent、Tristaciss 三块服务域及其参考映射关系。
+  - 内容特征：聚焦 SocialFi、Core-Agent、TriStaciss 三块服务域及其参考映射关系。
   - 状态：**设计源文件**
   - 备注：适合用于产品/服务域分层讨论。
 
@@ -71,7 +71,7 @@
   - 状态：**外部参考**
   - 备注：仅随参考代码存在，不属于 TriMetaverse 自有 Mermaid 资产。
 
-> 说明：本次扫描还发现工作区其他仓中的 `.mmd` 文件，例如 `Tripilot/reference/.../setupTestDetector.mmd`。这类文件属于其他仓或外部镜像，不纳入本 README 的管理范围。
+> 说明：本次扫描还发现工作区其他仓中的 `.mmd` 文件，例如 `TriPilot/reference/.../setupTestDetector.mmd`。这类文件属于其他仓或外部镜像，不纳入本 README 的管理范围。
 
 ## 5. 管理规则
 

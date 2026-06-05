@@ -1,0 +1,12 @@
+{
+  "stage": "DELIVERY",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-040738",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-040738\\10-delivery.md"
+  ],
+  "artifactDigest": "1d29b2c3f4e4402bee4339b34ee9d04136a4246ddaddb8a10fcbe1a9bfe536e0",
+  "summary": "IPD-20260527-040738 delivery 自动推进完成。",
+  "createdAt": "2026-05-26T20:07:40.046774+00:00",
+  "schemaVersion": "1.0"
+}

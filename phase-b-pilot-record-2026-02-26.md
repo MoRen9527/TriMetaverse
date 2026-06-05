@@ -1,4 +1,4 @@
-# Phase B Pilot Record
+﻿# Phase B Pilot Record
 
 - 日期：2026-02-26
 - 任务链接（Issue）：https://github.com/MoRen9527/TriMetaverse/issues/1
@@ -8,8 +8,8 @@
   - Copilot 响应： https://github.com/MoRen9527/TriMetaverse/pull/2#issuecomment-3966864524
 - 涉及仓库：
   - `MoRen9527/TriMetaverse`
-  - `MoRen9527/Tripilot`
-  - `MoRen9527/Tristaciss`
+  - `MoRen9527/TriPilot`
+  - `MoRen9527/TriStaciss`
   - `MoRen9527/Avatar-react`
   - `MoRen9527/Opentride`
   - `MoRen9527/vscodium`

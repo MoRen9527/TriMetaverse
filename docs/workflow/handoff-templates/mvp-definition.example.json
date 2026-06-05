@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "MVP_DEFINITION",
   "objectId": "MVP-YYYYMMDD-001",
   "title": "MVP 定义单",
@@ -14,7 +14,7 @@
     "label": "MVP 验证窗口"
   },
   "summary": "定义当前最小可卖、可做、可验证的产品边界。",
-  "relatedModules": ["Tripilot", "Tristaciss", "TriTest", "Trideployment"],
+  "relatedModules": ["TriPilot", "TriStaciss", "TriTest", "TriDeployment"],
   "dependsOn": ["DI-YYYYMMDD-001"],
   "evidence": [
     {

@@ -1,4 +1,12 @@
-# 总重构计划（SocialFi + Core-Agent + Tristaciss）
+﻿# 总重构计划（SocialFi + Core-Agent + TriStaciss）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/refactor-master-plan-socialfi-core-agent-tristaciss.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 更新时间：2026-02-27
 
@@ -19,7 +27,7 @@
 
 1. 将渠道接入能力收敛为独立 `SocialFi` 模块（Telegram/Discord/Slack 等）。
 2. 以 `Kode-Agent` 为参考重写 24x7 主控，形成 `Core-Agent` 模块（Gateway/Runner/Loop）。
-3. 将模型调用统一收敛至 `Tristaciss`（唯一 LLM API 出口）。
+3. 将模型调用统一收敛至 `TriStaciss`（唯一 LLM API 出口）。
 4. 保持 `Server domain / Local domain` 双域架构，继续执行 ToolBus 强制与全链路审计。
 5. 在不破坏现有门禁与协作流程的前提下完成可回滚迁移。
 6. 新增统一 3D 观测层：`VibeCraft-inspired`（运维观测）+ `AgentSims-inspired`（任务仿真训练与评测），共享同一事件底座，支持 AI 培训与可解释维护。
@@ -38,7 +46,7 @@
 
 - `You + channel adapter` → `SocialFi`
 - `Gateway Server + Session Router + Lane Queue + Agent Runner + Agentic Loop` → `Core-Agent`
-- `LLM API / Provider Routing / Streaming/Fallback` → `Tristaciss`
+- `LLM API / Provider Routing / Streaming/Fallback` → `TriStaciss`
 - `Audit/ToolBus/Simulation events -> 3D scene/timeline/replay/monitor` → `Observability（VibeCraft + AgentSims inspired）`
 
 ## 2.2 模块职责
@@ -51,9 +59,9 @@
 ### Core-Agent（新增，同级目录）
 
 - 负责：会话入口与路由、并发队列、Prompt 构建、History/Context Guard、Agentic Loop、Tool 调度。
-- 依赖：`Tristaciss` 提供统一 LLM 能力；Server/Local ToolBus 执行副作用工具。
+- 依赖：`TriStaciss` 提供统一 LLM 能力；Server/Local ToolBus 执行副作用工具。
 
-### Tristaciss（现有）
+### TriStaciss（现有）
 
 - 负责：统一鉴权、模型路由、限流、流式输出、fallback、provider 管理。
 - 不感知：渠道私有协议与前端 UI 状态。
@@ -62,12 +70,12 @@
 
 ## 3. 仓库与目录落位
 
-按“与 `Tripilot` 同级”执行：
+按“与 `TriPilot` 同级”执行：
 
 - `TriMetaverse/socialFi/`（新）
 - `TriMetaverse/core-agent/`（新）
-- `Tristaciss/`（复用现有仓）
-- `Tripilot/`（复用现有作为本地执行/桥接与工具链入口）
+- `TriStaciss/`（复用现有仓）
+- `TriPilot/`（复用现有作为本地执行/桥接与工具链入口）
 
 参考代码（已纳入）：
 
@@ -89,7 +97,7 @@
 ### 任务
 
 1. 定义统一事件契约（`MessageEnvelope` / `SessionEnvelope` / `ToolCallEnvelope` / `AuditEnvelope`）。
-2. 定义 `Core-Agent -> Tristaciss` 的 LLM 调用契约（请求/流式响应/错误码/fallback 语义）。
+2. 定义 `Core-Agent -> TriStaciss` 的 LLM 调用契约（请求/流式响应/错误码/fallback 语义）。
 3. 定义 `SocialFi -> Core-Agent` 的输入契约与 `Core-Agent -> SocialFi` 的回包契约。
 4. 对齐审批与 lease 语义：`Safe Stop` / `Force Stop` / `leaderEpoch` fencing。
 
@@ -118,7 +126,7 @@
    - `runner/`
    - `runtime/`
 2. 接入最小 Agentic Loop（仅文本、无复杂工具链）。
-3. 接入 `Tristaciss` 作为唯一 LLM 出口（禁直连 provider）。
+3. 接入 `TriStaciss` 作为唯一 LLM 出口（禁直连 provider）。
 4. 接入 `AuditEvent` 基础写入（请求/响应/错误）。
 
 ### 交付物
@@ -227,11 +235,11 @@
 
 - Gateway/Runner/Loop/Queue/Tool Runtime 主控实现。
 
-### Tristaciss（现有）
+### TriStaciss（现有）
 
 - LLM API 能力统一、provider 管理、可观测与 fallback。
 
-### Tripilot（现有）
+### TriPilot（现有）
 
 - 本地执行载体、工具链桥接、开发态验证入口。
 
@@ -248,7 +256,7 @@
 
 ## 6.2 新增门禁（本次重构）
 
-- LLM 访问仅经 Tristaciss。
+- LLM 访问仅经 TriStaciss。
 - 副作用调用仅经 ToolBus。
 - 审批事件幂等且可审计。
 - 渠道断线可恢复（重连后状态一致）。
@@ -293,7 +301,7 @@
 
 1. 建立 `socialFi/` 与 `core-agent/` 仓位与初始化 README。
 2. 输出 4 份核心契约草案（message/session/toolcall/audit）。
-3. 打通 `core-agent -> Tristaciss` 最小调用闭环。
+3. 打通 `core-agent -> TriStaciss` 最小调用闭环。
 4. 选择 Telegram 作为 SocialFi 首接渠道。
 5. 开第一个里程碑 Issue：`Phase 0 契约冻结 + Phase 1 MVP`。
 
@@ -303,7 +311,7 @@
 
 满足以下条件即视为重构阶段完成：
 
-- A1：`SocialFi` 与 `Core-Agent`、`Tristaciss` 三层职责清晰且代码边界稳定。
+- A1：`SocialFi` 与 `Core-Agent`、`TriStaciss` 三层职责清晰且代码边界稳定。
 - A2：主链路（渠道消息 -> 主控 -> LLM -> 回包）稳定运行并有审计证据。
 - A3：副作用调用全部经 ToolBus 且审批/lease 有效生效。
 - A4：Server/Local 双域协同 + 存储迁移链路可用。

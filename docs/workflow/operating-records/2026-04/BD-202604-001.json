@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "BOARD_DIRECTIVE",
   "objectId": "BD-202604-001",
   "title": "2026-04 TriMetaverse 首轮真实经营目标令",
@@ -19,14 +19,14 @@
     "TriCompany",
     "TriMC",
     "TriLC",
-    "Tripilot",
+    "TriPilot",
     "Tride",
     "vscodium",
     "TriHost",
     "TriSkill",
-    "Tristaciss",
-    "Triavatar",
-    "Trideployment",
+    "TriStaciss",
+    "TriAvatar",
+    "TriDeployment",
     "TriTest",
     "TriDev",
     "TriGateway",
@@ -43,7 +43,7 @@
       "note": "阶段 0/1 当前重点是最小闭环、原型上线、内容社区入口和真实可运行系统"
     },
     {
-      "source": "cyber-company.md",
+      "source": "tricompany.md",
       "kind": "document",
       "note": "当前推进路线是 CEO 与总助先同步，再启用最小岗位闭环、产品上线与小闭环盈利"
     },

@@ -1,4 +1,12 @@
-# TriHost 宿主适配与 PC 端软件接入清单（历史文件名保留）
+﻿# TriHost 宿主适配与 PC 端软件接入清单（历史文件名保留）
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/tride-host-adoption-checklist.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
 
 ## 1. 目的
 
@@ -14,7 +22,7 @@
 
 应由 `TriHost` 承接的是“宿主适配与切换配置层”。
 
-应由 PC 端软件承接的是“本地开发工具、用户入口与命令入口”。PC 端软件当前由 `Tripilot + Tride + vscodium + CLI` 组成。
+应由 PC 端软件承接的是“本地开发工具、用户入口与命令入口”。PC 端软件当前由 `TriPilot + Tride + vscodium + CLI` 组成。
 
 必须继续留在 `TriMetaverse` 的是“流程真源、结构化审计契约与运行产物规范”。
 

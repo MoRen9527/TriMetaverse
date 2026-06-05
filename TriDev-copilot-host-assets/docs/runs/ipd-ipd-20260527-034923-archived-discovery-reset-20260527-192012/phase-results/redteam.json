@@ -1,0 +1,12 @@
+{
+  "stage": "REDTEAM",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\06-redteam.md"
+  ],
+  "artifactDigest": "28456b95ed72a3c8fc903523c5a26cd84504761e6cd3276ce606c444a42170c7",
+  "summary": "IPD-20260527-034923 redteam 自动推进完成。",
+  "createdAt": "2026-05-26T20:07:38.667351+00:00",
+  "schemaVersion": "1.0"
+}

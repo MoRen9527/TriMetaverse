@@ -1,5 +1,13 @@
 # TriMetaverse Code State
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/registry/code-state.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## Repository Map
 
 - `.github/agents/`：角色 agent、registry agent 及其配套 memory / soul / colleagues / social 资产

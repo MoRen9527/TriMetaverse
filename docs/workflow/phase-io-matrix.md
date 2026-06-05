@@ -1,6 +1,14 @@
 # TMV Workflow 阶段输入/输出矩阵（v1）
 
-> 目的：用一页表格说明主线阶段与 PRD 分支阶段“读什么、判断什么、写什么、失败回哪”，并明确这些 PRD 分支如何通过 `模块五层文档协同系统` 落地。
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/phase-io-matrix.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
+> 目的：用一页表格说明主线阶段与 PRD 分支阶段“读什么、判断什么、写什么、失败回哪”，并明确这些 PRD 分支如何通过 `模块六层文档协同系统` 落地。
 
 | 阶段 | 作用域 | 上游输入 | 系统关键判断 | 主要输出 | 门禁/通过条件 | 失败回流 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -17,9 +25,9 @@
 
 ---
 
-## PRD 分支落位规则（模块五层文档协同系统）
+## PRD 分支落位规则（模块六层文档协同系统）
 
-- `INTELLIGENCE` 审核通过并签发版本号后的每个 PRD 分支，默认通过 `模块五层文档协同系统` 落地，而不是把设计、实施、测试和收口产物散落在临时文档或聊天记录中。
+- `INTELLIGENCE` 审核通过并签发版本号后的每个 PRD 分支，默认通过 `模块六层文档协同系统` 落地，而不是把设计、实施、测试和收口产物散落在临时文档或聊天记录中。
 - 这里的“PRD 分支”特指由 `INTELLIGENCE` 审核后正式产出的产品分支；`workflowRefs` 中出现的 `feature/example-skill`、`feature/example-schedule` 一类 `branchId` 仍然只是通用分支标识，不默认适用本节的 docs bootstrap 硬要求。
 - 在落地前，必须先拿到 PRD 的归属路由结论与目标落位仓；当前阶段由 `ChiefProductOfficer` 主责模块设计与归属方案，`CEOChiefOfStaff` 只负责公司级任务协调。既有模块能力落对应模块，新模块先建新模块根，只有项目根自身范围才落当前项目根 `docs/`。
 - 推荐映射如下：
@@ -28,6 +36,7 @@
   - `docs/execution/<prd-or-workstream>/<phase>/`：承接各 PRD 分支在 `designing`、`coding`、`verify-integration`、`redteam`、`qa`、`deployment`、`assurance` 的 `PLAN.md`、`SUMMARY.md`、`VERIFICATION.md`。
   - `docs/registry/`：承接分支形成稳定结论后的 business / product / code 状态回写。
   - `docs/workflow/`：承接分支 handoff、迁移、编排、发布或治理机制。
+  - `docs/training/`：承接分支交付后的 onboarding、使用手册、流程导读与培训材料。
 - 这意味着矩阵里的 `主要输出` 不只是“产物名称”，还隐含“这些产物必须进入对应 docs 层并接受后续阶段引用”。
 - 若某 PRD 分支尚未形成当前阶段 `ChiefProductOfficer` 的模块设计 / 归属结论，或尚未在目标落位点建好最小 docs 入口，则它不应被视为真正完成了分支初始化。
 

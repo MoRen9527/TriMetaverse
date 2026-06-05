@@ -1,4 +1,4 @@
-{
+﻿{
   "objectType": "BUDGET_CHECK",
   "objectId": "BC-YYYYMMDD-001",
   "title": "预算校验单",
@@ -14,7 +14,7 @@
     "label": "预算窗口"
   },
   "summary": "校验当前 MVP 或经营动作是否落在预算边界内。",
-  "relatedModules": ["TriMetaverse", "Tristaciss", "Tripilot", "TriTest", "Trideployment"],
+  "relatedModules": ["TriMetaverse", "TriStaciss", "TriPilot", "TriTest", "TriDeployment"],
   "dependsOn": ["MVP-YYYYMMDD-001"],
   "evidence": [
     {

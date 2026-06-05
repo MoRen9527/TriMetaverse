@@ -1,4 +1,12 @@
-# SQL Migration And Index Strategy
+﻿# SQL Migration And Index Strategy
+
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/contracts/sql-migration-index-strategy.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
 
 ## 1. Migration Order
 
@@ -9,11 +17,11 @@
 
 原因：
 
-- Tristaciss 先提供模型转接和任务入口能力。
+- TriStaciss 先提供模型转接和任务入口能力。
 - TriMC 再接管节点、执行、审计、收益真相源。
 - 入口先落库，有利于后续回放和补偿。
 
-## 2. Tristaciss 索引策略
+## 2. TriStaciss 索引策略
 
 核心目标：
 

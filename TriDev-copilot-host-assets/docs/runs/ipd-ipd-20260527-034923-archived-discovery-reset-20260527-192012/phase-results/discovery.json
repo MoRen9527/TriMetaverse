@@ -1,0 +1,12 @@
+{
+  "stage": "DISCOVERY",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\01-discovery.md"
+  ],
+  "artifactDigest": "f5522c9a8fc14b94078e61050da1cda4a8a1cc15c17e3c289e1a0cb0f57b1465",
+  "summary": "IPD-20260527-034923 discovery 自动推进完成。",
+  "createdAt": "2026-05-26T20:07:37.823330+00:00",
+  "schemaVersion": "1.0"
+}

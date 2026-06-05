@@ -1,5 +1,13 @@
 # docs/runs 目录规范
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/runs/README.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 ## 1. 目标
 
 本文件定义 `docs/runs/` 下真实执行记录与结构化 `PhaseResult` 产物的稳定目录约定。

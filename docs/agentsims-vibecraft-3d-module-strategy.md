@@ -1,5 +1,13 @@
 # 3D 模块策略：VibeCraft + AgentSims（统一模块，双子模式）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/agentsims-vibecraft-3d-module-strategy.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 更新时间：2026-02-28
 相关参考：
 - `reference/vibecraft/`（pinned `8278a4b`）

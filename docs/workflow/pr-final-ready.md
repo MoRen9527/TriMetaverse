@@ -1,5 +1,13 @@
 # PR Final Ready（直接粘贴版）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/workflow/pr-final-ready.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-03
+
 ## PR 标题
 
 docs(governance): 流程瀑布化与门禁一致性收敛

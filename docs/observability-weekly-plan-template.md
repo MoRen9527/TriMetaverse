@@ -1,5 +1,13 @@
 # Observability 周计划模板（文本甘特 + Owner）
 
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/observability-weekly-plan-template.md
+- publishedFrom: 当前文件（central summary）
+- syncMode: central-summary
+- publishTier: central-summary
+- lastSyncedAt: 2026-06-04
+
 更新时间：2026-02-28
 适用范围：Phase2 / Phase3 / Phase4（Epic #15 / #19 / #21）
 

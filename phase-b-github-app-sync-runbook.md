@@ -1,4 +1,4 @@
-# Phase B 执行手册：GitHub App 协同与跨仓 Agent 试跑
+﻿# Phase B 执行手册：GitHub App 协同与跨仓 Agent 试跑
 
 更新时间：2026-02-26
 
@@ -21,8 +21,8 @@
 1) 安装范围
 - 确认 GitHub App 已安装到（或授权到）以下仓库：
   - `TriMetaverse`
-  - `Tripilot`
-  - `Tristaciss`
+  - `TriPilot`
+  - `TriStaciss`
   - `Avatar-react`
   - `Opentride`
   - `vscodium`
@@ -53,7 +53,7 @@
 ## 5. 首条跨仓 Agent 试跑（标准流程）
 
 建议测试任务：
-- 目标：在 `Tripilot` 做一个小型文档或非破坏性代码改动，并同步更新 `TriMetaverse` 的迁移说明引用。
+- 目标：在 `TriPilot` 做一个小型文档或非破坏性代码改动，并同步更新 `TriMetaverse` 的迁移说明引用。
 
 执行步骤：
 

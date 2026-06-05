@@ -1,0 +1,11 @@
+{
+  "runId": "ipd-ipd-20260527-040738",
+  "mode": "ipd-autopilot",
+  "currentStage": "DELIVERY",
+  "branchId": "ipd-ipd-20260527-040738",
+  "status": "completed",
+  "task": "tmv wrapper autopilot smoke test",
+  "createdAt": "2026-05-26T20:07:38.677838+00:00",
+  "updatedAt": "2026-05-26T20:07:40.075771+00:00",
+  "schemaVersion": "1.0"
+}

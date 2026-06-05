@@ -1,0 +1,517 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "flowVariant": "tridev-super-dev-standard",
+  "currentStage": "VERIFY-INTEGRATION",
+  "currentWorkMode": "new",
+  "stageMappings": [
+    {
+      "stage": "DISCOVERY",
+      "title": "Discovery / 任务澄清",
+      "superDevReferenceStages": [
+        "research",
+        "baseline"
+      ]
+    },
+    {
+      "stage": "INTELLIGENCE",
+      "title": "Intelligence / 结构化输入",
+      "superDevReferenceStages": [
+        "docs",
+        "docs_confirm",
+        "prd"
+      ]
+    },
+    {
+      "stage": "DESIGNING",
+      "title": "Designing / 技术设计",
+      "superDevReferenceStages": [
+        "architecture",
+        "uiux",
+        "spec"
+      ]
+    },
+    {
+      "stage": "CODING",
+      "title": "Coding / 开发实现",
+      "superDevReferenceStages": [
+        "frontend",
+        "backend"
+      ]
+    },
+    {
+      "stage": "VERIFY-INTEGRATION",
+      "title": "Verify-Integration / 集成验证",
+      "superDevReferenceStages": [
+        "quality"
+      ]
+    },
+    {
+      "stage": "REDTEAM",
+      "title": "Redteam / 对抗审查",
+      "superDevReferenceStages": [
+        "quality"
+      ]
+    },
+    {
+      "stage": "QA",
+      "title": "QA / 质量门禁",
+      "superDevReferenceStages": [
+        "quality",
+        "preview_confirm"
+      ]
+    },
+    {
+      "stage": "DEPLOYMENT",
+      "title": "Deployment / 部署交付",
+      "superDevReferenceStages": [
+        "delivery"
+      ]
+    },
+    {
+      "stage": "ASSURANCE",
+      "title": "Assurance / 运行保障",
+      "superDevReferenceStages": [
+        "delivery",
+        "rehearsal"
+      ]
+    },
+    {
+      "stage": "DELIVERY",
+      "title": "Delivery / 最终交付",
+      "superDevReferenceStages": [
+        "delivery"
+      ]
+    }
+  ],
+  "phaseChain": [
+    {
+      "key": "DISCOVERY",
+      "title": "Discovery / 任务澄清",
+      "description": "沉淀任务意图、上游真源草稿和初始参考证据。"
+    },
+    {
+      "key": "INTELLIGENCE",
+      "title": "Intelligence / 结构化输入",
+      "description": "把市场、运营、财务与产品输入整理成可消费的结构化项目输入包。"
+    },
+    {
+      "key": "DESIGNING",
+      "title": "Designing / 技术设计",
+      "description": "把项目输入收口为技术方案、工程边界与实施计划。"
+    },
+    {
+      "key": "CODING",
+      "title": "Coding / 开发实现",
+      "description": "执行实现与源码产物沉淀。"
+    },
+    {
+      "key": "VERIFY-INTEGRATION",
+      "title": "Verify-Integration / 集成验证",
+      "description": "完成集成验证并输出测试证据。"
+    },
+    {
+      "key": "REDTEAM",
+      "title": "Redteam / 对抗审查",
+      "description": "完成红队 / 安全对抗审查并输出整改结论。"
+    },
+    {
+      "key": "QA",
+      "title": "QA / 质量门禁",
+      "description": "完成质量门禁汇总与放行判断。"
+    },
+    {
+      "key": "DEPLOYMENT",
+      "title": "Deployment / 部署交付",
+      "description": "完成发布演练、部署证据和交付前环境准备。"
+    },
+    {
+      "key": "ASSURANCE",
+      "title": "Assurance / 运行保障",
+      "description": "完成发布后保障观察、恢复验证和运行证明。"
+    },
+    {
+      "key": "DELIVERY",
+      "title": "Delivery / 最终交付",
+      "description": "完成最终交付包、版本快照与对外交付收口。"
+    }
+  ],
+  "gates": [
+    {
+      "key": "discovery",
+      "title": "DISCOVERY gate",
+      "required": true,
+      "gateOwner": "ChiefProductOfficer",
+      "description": "Approve DISCOVERY before advancing to the next stage."
+    },
+    {
+      "key": "intelligence",
+      "title": "INTELLIGENCE gate",
+      "required": true,
+      "gateOwner": "ChiefProductOfficer",
+      "description": "Approve INTELLIGENCE before advancing to the next stage."
+    },
+    {
+      "key": "designing",
+      "title": "DESIGNING gate",
+      "required": true,
+      "gateOwner": "ChiefTechnologyOfficer",
+      "description": "Approve DESIGNING before advancing to the next stage."
+    },
+    {
+      "key": "coding",
+      "title": "CODING gate",
+      "required": true,
+      "gateOwner": "ChiefTechnologyOfficer",
+      "description": "Approve CODING before advancing to the next stage."
+    },
+    {
+      "key": "verify_integration",
+      "title": "VERIFY-INTEGRATION gate",
+      "required": true,
+      "gateOwner": "ChiefTechnologyOfficer",
+      "description": "Approve VERIFY-INTEGRATION before advancing to the next stage."
+    },
+    {
+      "key": "redteam",
+      "title": "REDTEAM gate",
+      "required": true,
+      "gateOwner": "ChiefTechnologyOfficer",
+      "description": "Approve REDTEAM before advancing to the next stage."
+    },
+    {
+      "key": "qa",
+      "title": "QA gate",
+      "required": true,
+      "gateOwner": "ChiefTechnologyOfficer",
+      "description": "Approve QA before advancing to the next stage."
+    },
+    {
+      "key": "deployment",
+      "title": "DEPLOYMENT gate",
+      "required": true,
+      "gateOwner": "ChiefTechnologyOfficer",
+      "description": "Approve DEPLOYMENT before advancing to the next stage."
+    },
+    {
+      "key": "assurance",
+      "title": "ASSURANCE gate",
+      "required": true,
+      "gateOwner": "ChiefTechnologyOfficer",
+      "description": "Approve ASSURANCE before advancing to the next stage."
+    },
+    {
+      "key": "delivery",
+      "title": "DELIVERY gate",
+      "required": true,
+      "gateOwner": "ChiefProductOfficer",
+      "description": "Approve DELIVERY before advancing to the next stage."
+    }
+  ],
+  "agentTeam": [
+    {
+      "key": "chiefproductofficer",
+      "title": "ChiefProductOfficer",
+      "responsibility": "Own DISCOVERY business intent and success criteria."
+    },
+    {
+      "key": "tridev",
+      "title": "TriDev",
+      "responsibility": "Execute DISCOVERY work inside TriDev."
+    },
+    {
+      "key": "ceochiefofstaff",
+      "title": "CEOChiefOfStaff",
+      "responsibility": "Provide supporting input to DISCOVERY."
+    },
+    {
+      "key": "ceo",
+      "title": "CEO",
+      "responsibility": "Provide supporting input to DISCOVERY."
+    },
+    {
+      "key": "cmo",
+      "title": "CMO",
+      "responsibility": "Provide supporting input to DISCOVERY."
+    },
+    {
+      "key": "cto",
+      "title": "CTO",
+      "responsibility": "Provide supporting input to DISCOVERY."
+    },
+    {
+      "key": "chiefmarketingofficer",
+      "title": "ChiefMarketingOfficer",
+      "responsibility": "Provide supporting input to INTELLIGENCE."
+    },
+    {
+      "key": "chiefoperatingofficer",
+      "title": "ChiefOperatingOfficer",
+      "responsibility": "Provide supporting input to INTELLIGENCE."
+    },
+    {
+      "key": "chieffinancialofficer",
+      "title": "ChiefFinancialOfficer",
+      "responsibility": "Provide supporting input to INTELLIGENCE."
+    },
+    {
+      "key": "chieftechnologyofficer",
+      "title": "ChiefTechnologyOfficer",
+      "responsibility": "Provide supporting input to INTELLIGENCE."
+    }
+  ],
+  "frameworkPlaybook": {
+    "currentStage": "VERIFY-INTEGRATION",
+    "nextAction": "record-phase-result",
+    "activeModuleExecutor": "TriDev",
+    "stageObjectives": [
+      {
+        "stage": "DISCOVERY",
+        "objective": "沉淀任务意图、上游真源草稿和初始参考证据。",
+        "requiredArtifactType": "reference-evidence",
+        "participants": [
+          "CEOChiefOfStaff",
+          "CEO",
+          "CMO",
+          "CTO"
+        ]
+      },
+      {
+        "stage": "INTELLIGENCE",
+        "objective": "把市场、运营、财务与产品输入整理成可消费的结构化项目输入包。",
+        "requiredArtifactType": "prd",
+        "participants": [
+          "CEOChiefOfStaff",
+          "ChiefMarketingOfficer",
+          "ChiefOperatingOfficer",
+          "ChiefFinancialOfficer",
+          "ChiefTechnologyOfficer"
+        ]
+      },
+      {
+        "stage": "DESIGNING",
+        "objective": "把项目输入收口为技术方案、工程边界与实施计划。",
+        "requiredArtifactType": "tech-plan",
+        "participants": [
+          "ChiefProductOfficer",
+          "CEOChiefOfStaff"
+        ]
+      },
+      {
+        "stage": "CODING",
+        "objective": "执行实现与源码产物沉淀。",
+        "requiredArtifactType": "implementation",
+        "participants": [
+          "ChiefProductOfficer",
+          "CEOChiefOfStaff"
+        ]
+      },
+      {
+        "stage": "VERIFY-INTEGRATION",
+        "objective": "完成集成验证并输出测试证据。",
+        "requiredArtifactType": "test-report",
+        "participants": [
+          "ChiefProductOfficer",
+          "CEOChiefOfStaff"
+        ]
+      },
+      {
+        "stage": "REDTEAM",
+        "objective": "完成红队 / 安全对抗审查并输出整改结论。",
+        "requiredArtifactType": "security-report",
+        "participants": [
+          "CEOChiefOfStaff"
+        ]
+      },
+      {
+        "stage": "QA",
+        "objective": "完成质量门禁汇总与放行判断。",
+        "requiredArtifactType": "test-report",
+        "participants": [
+          "ChiefProductOfficer",
+          "CEOChiefOfStaff"
+        ]
+      },
+      {
+        "stage": "DEPLOYMENT",
+        "objective": "完成发布演练、部署证据和交付前环境准备。",
+        "requiredArtifactType": "deployment-evidence",
+        "participants": [
+          "ChiefOperatingOfficer",
+          "ChiefFinancialOfficer",
+          "CEOChiefOfStaff"
+        ]
+      },
+      {
+        "stage": "ASSURANCE",
+        "objective": "完成发布后保障观察、恢复验证和运行证明。",
+        "requiredArtifactType": "assurance-report",
+        "participants": [
+          "ChiefOperatingOfficer",
+          "ChiefFinancialOfficer",
+          "CEOChiefOfStaff"
+        ]
+      },
+      {
+        "stage": "DELIVERY",
+        "objective": "完成最终交付包、版本快照与对外交付收口。",
+        "requiredArtifactType": "delivery-evidence",
+        "participants": [
+          "CEOChiefOfStaff",
+          "CEO",
+          "ChiefOperatingOfficer",
+          "ChiefFinancialOfficer",
+          "CTO"
+        ]
+      }
+    ]
+  },
+  "artifactContracts": [
+    {
+      "stage": "DISCOVERY",
+      "requiredInputs": [
+        "reference-evidence"
+      ],
+      "producedArtifactType": "reference-evidence"
+    },
+    {
+      "stage": "INTELLIGENCE",
+      "requiredInputs": [
+        "reference-evidence",
+        "market-report",
+        "ops-plan",
+        "budget-guard"
+      ],
+      "producedArtifactType": "prd"
+    },
+    {
+      "stage": "DESIGNING",
+      "requiredInputs": [
+        "prd",
+        "market-report",
+        "ops-plan",
+        "budget-guard"
+      ],
+      "producedArtifactType": "tech-plan"
+    },
+    {
+      "stage": "CODING",
+      "requiredInputs": [
+        "tech-plan"
+      ],
+      "producedArtifactType": "implementation"
+    },
+    {
+      "stage": "VERIFY-INTEGRATION",
+      "requiredInputs": [
+        "implementation"
+      ],
+      "producedArtifactType": "test-report"
+    },
+    {
+      "stage": "REDTEAM",
+      "requiredInputs": [
+        "implementation",
+        "test-report"
+      ],
+      "producedArtifactType": "security-report"
+    },
+    {
+      "stage": "QA",
+      "requiredInputs": [
+        "implementation",
+        "test-report",
+        "security-report"
+      ],
+      "producedArtifactType": "test-report"
+    },
+    {
+      "stage": "DEPLOYMENT",
+      "requiredInputs": [
+        "implementation",
+        "test-report",
+        "security-report"
+      ],
+      "producedArtifactType": "deployment-evidence"
+    },
+    {
+      "stage": "ASSURANCE",
+      "requiredInputs": [
+        "deployment-evidence",
+        "test-report"
+      ],
+      "producedArtifactType": "assurance-report"
+    },
+    {
+      "stage": "DELIVERY",
+      "requiredInputs": [
+        "deployment-evidence",
+        "assurance-report"
+      ],
+      "producedArtifactType": "delivery-evidence"
+    }
+  ],
+  "reviewContracts": [
+    {
+      "reviewType": "baseline",
+      "stage": "DISCOVERY",
+      "statusChoices": [
+        "pending_review",
+        "confirmed",
+        "revision_requested",
+        "clear"
+      ]
+    },
+    {
+      "reviewType": "docs",
+      "stage": "INTELLIGENCE",
+      "statusChoices": [
+        "pending_review",
+        "confirmed",
+        "revision_requested",
+        "clear"
+      ]
+    },
+    {
+      "reviewType": "architecture",
+      "stage": "DESIGNING",
+      "statusChoices": [
+        "pending_review",
+        "confirmed",
+        "revision_requested",
+        "clear"
+      ]
+    },
+    {
+      "reviewType": "preview",
+      "stage": "CODING",
+      "statusChoices": [
+        "pending_review",
+        "confirmed",
+        "revision_requested",
+        "clear"
+      ]
+    },
+    {
+      "reviewType": "quality",
+      "stage": "QA",
+      "statusChoices": [
+        "pending_review",
+        "confirmed",
+        "revision_requested",
+        "clear"
+      ]
+    },
+    {
+      "reviewType": "resume",
+      "stage": "DISCOVERY",
+      "statusChoices": [
+        "pending_review",
+        "confirmed",
+        "revision_requested",
+        "clear"
+      ]
+    }
+  ],
+  "generatedAt": "2026-05-27T11:20:17.877666+00:00"
+}
