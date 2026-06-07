@@ -48,6 +48,15 @@
 - 它是 `INTELLIGENCE` 产出并审核通过的每个 PRD 分支的标准落地面，用于承接 `DESIGNING`、`CODING`、`VERIFY-INTEGRATION`、`REDTEAM`、`QA`、`DEPLOYMENT`、`ASSURANCE` 的真源文档、执行证据、状态回写、流程机制与培训导读。
 - 它不替代十阶段主线；十阶段定义的是流程状态机和门禁，`模块六层文档协同系统` 定义的是 PRD 分支落地后文档、执行、培训和收口应放在哪里。
 
+### 1.4 文档元信息标准命名
+
+- **`文档元信息`**：默认专指文档在“真源 -> published-copy -> support/live -> archive”链路中的同步与发布层级元信息，不再泛指普通头部说明。
+- **`文档同步元信息`**：是 `文档元信息` 的规范写法，字段默认指 `sourceOfTruth`、`publishedFrom`、`syncMode`、`publishTier`、`supportPublishedCopy`、`supportSyncRule`、`lastSyncedAt` 这一组真源 / 发布链字段。
+- **`文档头信息`**：用于指 `版本`、`日期`、`状态`、适用范围、适用边界等普通文档头部说明；默认不与 `文档元信息` 混用。
+- 若需求只涉及更新时间、状态、适用边界、owner 提示，不应表述为“补文档元信息”，应明确写为“补文档头信息”或“补状态说明”。
+- 若需求写“补文档元信息”且未额外限定，默认执行为补齐或核对 `文档同步元信息`，而不是普通头部说明。
+- 在审稿、会议收口、Registry 回填、总助 / CPO / CTO 评审与 published-copy 对账中，均沿用上述默认解释，不再重复临时约定。
+
 ---
 
 ## 2. 主因果链标准产物名
@@ -95,6 +104,7 @@
 
 ## 5. 变更记录（changelog）
 
+- 2026-06-06：冻结“文档元信息”默认含义为真源 / published-copy / support/live / archive 链路元信息，并将 `版本 / 日期 / 状态` 等普通顶部说明拆分命名为“文档头信息”。
 - 2026-05-28：经营载体中文标准名统一为 赛博公司，并从当前活跃文档中清退旧中文称呼。
 - 2026-05-28：模块文档基线从“模块五层文档协同系统”升级为“模块六层文档协同系统”，补入 `docs/training/` 作为正式同级子域。
 - 2026-04-26：将 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/` 的默认结构正式命名为“模块五层文档协同系统”，并明确其为 `INTELLIGENCE` 后 PRD 分支的标准落地面。

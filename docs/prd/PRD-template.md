@@ -6,11 +6,18 @@
 - publishedFrom: 当前文件（central summary）
 - syncMode: central-summary
 - publishTier: central-summary
-- lastSyncedAt: 2026-06-04
+- lastSyncedAt: 2026-06-06
 
-状态：Draft  
-负责人：TBD  
-上游来源：`tmv-whitepaper.md#<章节>`
+说明：
+
+- 本模板中的“文档同步元信息”专指真源 / published-copy / support/live / archive 链路字段。
+- `状态`、`负责人`、`上游来源` 等普通顶部说明属于“文档头信息”，不与“文档同步元信息”混用。
+
+## 文档头信息
+
+- 状态：Draft
+- 负责人：TBD
+- 上游来源：`tmv-whitepaper.md#<章节>`
 
 ## 1. 目标与边界
 
