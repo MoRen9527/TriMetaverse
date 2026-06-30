@@ -1,0 +1,807 @@
+{
+  "objectType": "OPERATING_PLAN",
+  "objectId": "OP-202606-W27-001",
+  "title": "TriMetaverse W27 当前周经营维护计划单",
+  "status": "draft",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-06-29T19:25:57+08:00",
+  "updatedAt": "2026-06-29T21:43:07+08:00",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-06-29T00:00:00+08:00",
+    "endAt": "2026-07-05T23:59:59+08:00",
+    "label": "2026-W27 当前周维护面"
+  },
+  "summary": "根据 CEO 于 2026-06-29 的最新输入，W27 当前周维护面继续作为唯一 active 经营维护入口；CEOChiefOfStaff 正式接管后续阶段已按“当前 Copilot-host 人工触发机制满足当前阶段”完成关闭，TriMC / TriHost / scheduler / daemon 支持的长期自动运行能力已统一转入新事项 `TriMC第一版MVP`；`CARRY-20260629-006` 本周新增 RAndDTrainer IPD CLI 与代码流程教程真源任务，作为未来培训学院可复用的渐进式教程基线。",
+  "relatedModules": [
+    "TriMetaverse",
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar",
+    "TriMC",
+    "TriLC",
+    "TriPilot",
+    "Tride",
+    "TriDeployment",
+    "TriTest",
+    "TriMem",
+    "TriMobile",
+    "TriWeb4",
+    "TriGateway",
+    "TriHost",
+    "TriSkill",
+    "TriChain"
+  ],
+  "dependsOn": [
+    "OP-202606-W26-001",
+    "OP-202606-W25-001",
+    "OP-202606-W23-001",
+    "OP-202604-W15-001",
+    "BD-202605-001",
+    "IPD-20260610-PLATFORM-001",
+    "IPD-20260611-PLATFORM-001",
+    "IPD-20260612-WORKFLOW-002",
+    "OP-202606-W24-001"
+  ],
+  "evidence": [
+    {
+      "source": "User input 2026-06-29T21:43:07+08:00",
+      "kind": "user-input",
+      "note": "CEO 明确要求本周处理 `CARRY-20260629-006`：由 RAndDTrainer 先带 CEO 梳理 IPD CLI 启动、代码工作流程、是否有搜索工具调用、每个流程节点输入输出，并把讲解作为 IPD 教程真源单独存放，供未来培训学院使用；后续随 IPD 流程优化渐进更新。"
+    },
+    {
+      "source": "TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md",
+      "kind": "document",
+      "note": "已新增独立教程真源，覆盖 `tmv.cmd dev-task` 启动链、TriCompany runtime、Discovery / Intelligence 搜索与 CodeGraph 边界、autopilot 暂停条件、TriDev bridge 和各节点输入输出。"
+    },
+    {
+      "source": "User input 2026-06-29T21:17:46+08:00",
+      "kind": "user-input",
+      "note": "CEO 明确裁定：CARRY-20260629-001 按当前 copilot-host 人工触发机制已满足关闭；TriMC、TriHost、scheduler、daemon 支持的长期运行能力统一归入新事项“TriMC第一版MVP”。"
+    },
+    {
+      "source": "User input 2026-06-29",
+      "kind": "user-input",
+      "note": "CEO / 总助要求把 W26 工作内容判断并平移过渡到 W27，同时检查是否已有周度平移 prompt；若无则补齐。"
+    },
+    {
+      "source": "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.json",
+      "kind": "document",
+      "note": "W26 为上一轮最新 active backlog，本轮按治理规则闭合并平移到 W27。"
+    },
+    {
+      "source": "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.unresolved-items.md",
+      "kind": "document",
+      "note": "W26 未决事项清单提供当前需要继续平移到 W27 的事实基线。"
+    },
+    {
+      "source": ".github/prompts/周度平移.prompt.md",
+      "kind": "document",
+      "note": "本轮新增周度平移 prompt，后续可直接触发经营记录周闭合、平移和 JSON / Markdown 双面回填。"
+    },
+    {
+      "source": "User input 2026-06-23",
+      "kind": "user-input",
+      "note": "CEO / 总助要求按周把未完成的工作迁移到本周，并直接完成 W25 -> W26 的经营记录闭合和平移。"
+    },
+    {
+      "source": "docs/workflow/operating-records/2026-W24/OP-202606-W24-001.unresolved-items.md",
+      "kind": "document",
+      "note": "W24 为再上一轮历史闭合基线，供 carry history 回查。"
+    },
+    {
+      "source": "TriCompany/docs/workflow/ipd-first-real-approval-backfill-runbook.md",
+      "kind": "document",
+      "note": "第一次真实审批回填的标准执行顺序已固化为 `预启动 -> 审批稿 -> through-pass -> merge matrix -> validation -> operating record`。"
+    },
+    {
+      "source": "TriCompany/docs/workflow/ipd-first-real-approval-through-pass-checklist.md",
+      "kind": "document",
+      "note": "through-pass 路径已明确每项结果应回写到批次实例的具体段落。"
+    },
+    {
+      "source": "TriCompany/docs/workflow/ipd-first-real-approval-merge-candidate-matrix.md",
+      "kind": "document",
+      "note": "非 through-pass 路径也已明确每项结果应回写到批次实例的具体段落。"
+    },
+    {
+      "source": "TriCompany/docs/workflow/ipd-first-real-approval-backfill-001.md",
+      "kind": "document",
+      "note": "第一次真实审批回填的批次实例已经升级为预启动实例，并作为唯一真实记录面。"
+    },
+    {
+      "source": "TriCompany/docs/workflow/ipd-first-real-approval-role-script.md",
+      "kind": "document",
+      "note": "CPO / CTO / CEOChiefOfStaff 的最短执行动作链已经固定。"
+    },
+    {
+      "source": "TriCompany/docs/workflow/platform-product-mainline-cutover.md",
+      "kind": "document",
+      "note": "已明确审批回填只保留最小 contract 收口，完整模型 API 平台主线切到 full-scope 产品推进。"
+    },
+    {
+      "source": "TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/SESSION_BRIEF.md",
+      "kind": "document",
+      "note": "完整模型 API 平台的 full-scope run 已存在，当前停在 DISCOVERY，nextOwner 为 ChiefProductOfficer。"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "牵头定义 `TriMC第一版MVP`，把 TriMC / TriHost / scheduler / daemon 支持的长期运行能力拆成第一版最小运行切片、边界和验证标准。",
+      "dependsOn": [
+        "docs/三元宇宙架构与模块说明.md",
+        "docs/registry/business-strategy-module-map.md",
+        "TriMC/README.md",
+        "TriHost/README.md",
+        "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.unresolved-items.md"
+      ],
+      "dueAt": "2026-07-03T18:00:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "对“最小 MVP / 最小经营闭环重排”输出当前状态切分，明确 active、暂停、后置和待 CEO 决策范围。",
+      "dependsOn": [
+        "docs/workflow/operating-records/2026-05/BD-202605-001.json",
+        "TriCompany/docs/product/PROJECT.md",
+        "TriCompany/docs/product/STATE.md"
+      ],
+      "dueAt": "2026-07-01T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "与 CTO 一起把 TriTraining 当前草案转成 Phase A Web MVP 的模块顺序表、冻结边界和第一批开工切片。",
+      "dependsOn": [
+        "TriMetaverse/docs/product/tritraining-platform-concept.md",
+        "TriMetaverse/docs/engineering/tritraining-platform-architecture.md",
+        "docs/三元宇宙架构与模块说明.md"
+      ],
+      "dueAt": "2026-07-02T18:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "与 CPO 一起对第一条 IPD `IPD-20260527-034923` 给出恢复建议：续跑当前 case，还是按新门禁重开 / 复制新 case。",
+      "dependsOn": [
+        "TriDev/docs/ipd-autopilot/IPD-20260527-034923",
+        "TriCompany/docs/workflow/integrated-product-development-flow.md"
+      ],
+      "dueAt": "2026-07-02T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "对 2026-05-26 后长期未续推的模块队列给出分类：继续冻结、进入 TriTraining Phase A 依赖链、保持占位，或补 Git Health 说明。",
+      "dependsOn": [
+        "docs/三元宇宙架构与模块说明.md",
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md"
+      ],
+      "dueAt": "2026-07-03T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "把第一次真实审批回填压缩到最小 contract 收口，并按 platform-product-mainline-cutover 把当前主线切到完整模型 API 平台 MVP 的 full-scope 产品推进。",
+      "dependsOn": [
+        "TriCompany/docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/06-validation-handoff-plan.md",
+        "TriCompany/docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/07-approval-backfill-rehearsal.md",
+        "TriCompany/docs/workflow/ipd-product-acceptance-contract-cpo-review.md",
+        "TriCompany/docs/workflow/ipd-runtime-evidence-contract-cto-review.md",
+        "TriCompany/docs/workflow/ipd-first-real-approval-backfill-runbook.md",
+        "TriCompany/docs/workflow/ipd-first-real-approval-merge-candidate-matrix.md",
+        "TriCompany/docs/workflow/ipd-first-real-approval-through-pass-checklist.md",
+        "TriCompany/docs/workflow/ipd-first-real-approval-backfill-001.md",
+        "TriCompany/docs/workflow/ipd-first-real-approval-role-script.md",
+        "TriCompany/docs/workflow/platform-product-mainline-cutover.md"
+      ],
+      "dueAt": "2026-06-30T18:00:00+08:00"
+    },
+    {
+      "owner": "RAndDTrainer",
+      "action": "面向技术研发新人讲清 IPD CLI 启动和代码执行流程：覆盖 `tmv.cmd dev-task`、TriCompany runtime、是否调用搜索 / CodeGraph、autopilot 暂停点、TriDev bridge，以及每个流程节点输入输出；把讲解沉淀到 `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md`，并标记为随 IPD 优化渐进更新的教程真源。",
+      "dependsOn": [
+        "TriCompany/docs/training/ipd-usage-guide.md",
+        "TriCompany/docs/training/training-source-and-directory-allocation.md",
+        "TriCompany/docs/workflow/integrated-product-development-flow.md",
+        "TriCompany/runtime/cognition/chief_of_staff_ipd_case.py",
+        "TriCompany/runtime/cognition/ipd_case_engine.py",
+        "TriDev/src/tridev/workflow.py",
+        "TriMetaverse/tmv.cmd",
+        "TriMetaverse/tmv.ps1",
+        "TriMetaverse/scripts/dev-task.ps1"
+      ],
+      "dueAt": "2026-06-30T18:00:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "输出 IPD 全阶段 Gate B / Gate C capability map 与产品验收口径，明确 `designing -> verify-integration` 与 `redteam -> delivery` 的逐段放行标准。",
+      "dependsOn": [
+        "TriCompany/docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/02-sprint-plan.md",
+        "TriCompany/docs/training/ipd-usage-guide.md"
+      ],
+      "dueAt": "2026-07-03T18:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "对当前要优化的 IPD 能力继续执行 `source-side 自测 -> 切片验证 -> IPD-20260610-PLATFORM-001 live replay / 产品主线消费`，若 Gate A 未通过则按缺陷来源回退到 `ceo-demand`、`task-dispatch` 或 `discovery`；`IPD-20260611-PLATFORM-001` 只作为已完成全链路 proving-ground 的证据基线。",
+      "dependsOn": [
+        "TriCompany/runtime/cognition/ipd_case_engine.py",
+        "TriCompany/runtime/cognition/chief_of_staff_ipd_case_validation.py",
+        "TriCompany/docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/02-sprint-plan-package.json"
+      ],
+      "dueAt": "2026-07-03T20:00:00+08:00"
+    },
+    {
+      "owner": "ChiefProductOfficer",
+      "action": "先为审批回填写入第一笔最小真实产品结论，再围绕 `IPD-20260610-PLATFORM-001` 输出完整模型 API 平台 MVP 的 PRD 输入、验收矩阵，以及前端 / 后端 / 模拟身份签名边界。",
+      "dependsOn": [
+        "TriCompany/docs/workflow/platform-product-mainline-cutover.md",
+        "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/archived-cases/IPD-20260610-PLATFORM-001/case.json",
+        "TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/SESSION_BRIEF.md",
+        "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/case.json",
+        "TriCompany/runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/final-delivery-report.json",
+        "TriCompany/docs/workflow/ipd-product-acceptance-contract-cpo-review.md",
+        "TriCompany/docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/07-approval-backfill-rehearsal.md",
+        "TriCompany/docs/workflow/ipd-first-real-approval-backfill-001.md",
+        "TriCompany/docs/workflow/ipd-first-real-approval-role-script.md"
+      ],
+      "dueAt": "2026-07-04T18:00:00+08:00"
+    },
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "在保留最小审批回填的同时，基于完整平台 PRD 输入把 `IPD-20260610-PLATFORM-001` 收敛成第一条可编码产品切片，明确统一模型 API 入口、provider 配置 / 路由 / 日志 / 失败回退、前端最小 smoke 与模拟签名边界。",
+      "dependsOn": [
+        "TriCompany/docs/workflow/platform-product-mainline-cutover.md",
+        "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/archived-cases/IPD-20260610-PLATFORM-001/case.json",
+        "TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/SESSION_BRIEF.md",
+        "TriCompany/runtime/cognition/ipd_case_engine.py",
+        "TriCompany/runtime/cognition/chief_of_staff_ipd_case_validation.py",
+        "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/case.json",
+        "TriCompany/docs/workflow/ipd-runtime-evidence-contract-cto-review.md",
+        "TriCompany/docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/07-approval-backfill-rehearsal.md",
+        "TriCompany/docs/workflow/ipd-first-real-approval-backfill-001.md",
+        "TriCompany/docs/workflow/ipd-first-real-approval-role-script.md"
+      ],
+      "dueAt": "2026-07-04T20:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "当前周记录为最新周维护面草案；如需形成正式签发版，仍需 CEO 书面确认。"
+    },
+    {
+      "role": "BoardOversight",
+      "status": "not-required",
+      "note": "当前记录用于最新周 pending item 统一维护，不要求董事会层签发。"
+    }
+  ],
+  "payload": {
+    "planScope": "weekly",
+    "milestones": [
+      "形成 W27 最新周唯一经营维护面",
+      "完成 W26 历史周闭合并指向 successor operating plan",
+      "对跨周事项继续保留 owner、状态与恢复条件",
+      "对第一次真实审批回填保持可直接执行的入口链",
+      "对 TriTraining 与第一条 IPD 维持可直接续会的恢复上下文"
+    ],
+    "statusTerminology": {
+      "maintenanceSurface": "latest-active-week",
+      "itemStatuses": [
+        "active",
+        "frozen",
+        "stale-review",
+        "closed"
+      ],
+      "moduleMaturityStatuses": [
+        "现役模块",
+        "占位模块",
+        "待初始化模块",
+        "待迁移模块",
+        "待归档兼容仓"
+      ],
+      "note": "当前周维护面不等于单条事项状态；单条事项若需更细解释，写入 statusDetail 或正文说明。"
+    },
+    "itemHeaderStandard": {
+      "requiredFields": [
+        "事项 ID",
+        "事项名称",
+        "事项简介",
+        "事项状态",
+        "当前进度"
+      ],
+      "recommendedFields": [
+        "来源",
+        "跨周情况 / 预警级别",
+        "当前动作",
+        "下一步",
+        "恢复条件或截止时间",
+        "Owner"
+      ],
+      "jsonFieldMapping": [
+        "id",
+        "title",
+        "summary",
+        "status",
+        "statusDetail",
+        "currentProgress",
+        "nextAction",
+        "resumeCondition",
+        "owner"
+      ],
+      "note": "Markdown 未决事项清单与结构化 carriedItems 都应至少具备 requiredFields。"
+    },
+    "workstreams": [
+      "跨周经营记录闭合与平移",
+      "TriMC 第一版 MVP 长期运行能力定义",
+      "最小 MVP / 最小经营闭环重排状态切分",
+      "TriTraining 平台候选 Phase A Web MVP 收口",
+      "第一条 IPD 恢复路径判断",
+      "项目模块停滞队列分类",
+      "IPD 真实审批回填执行链落地",
+      "IPD CLI 与代码流程小白教程真源"
+    ],
+    "blockedItems": [
+      "TriMC / TriHost / scheduler / daemon 支持的长期自动运行能力尚未实现，已从 CEOChiefOfStaff 正式接管收口项拆出，统一归入 `TriMC第一版MVP`。",
+      "最小 MVP / 最小经营闭环重排虽已由 BD-202605-001 接续，但当前缺少最新周视角的 active / paused / deferred 切分，已跨 12 周，需高预警处理。",
+      "TriTraining 已恢复推进，但当前仍停在概念与架构草案收口，尚未转成可执行的 Phase A Web MVP 模块动作清单。",
+      "第一条 IPD `IPD-20260527-034923` 当前现行证据面停在 Coding 后，后续阶段尚未在 active 目录继续补证。",
+      "TriAvatar、TriMC、TriLC、TriPilot、Tride、TriDeployment、TriTest、TriMem、TriMobile、TriWeb4、TriGateway、TriHost、TriSkill、TriChain 最近一次提交停留在 2026-05-26，尚未形成新的当前周推进切片。",
+      "第一次真实审批回填的 execution asset chain 已经 ready，但在 CPO / CTO 给出真实审批结论前，仍不得写成长期 contract 已正式签发。"
+    ],
+    "carriedItems": [
+      {
+        "id": "ITEM-20260629-001",
+        "title": "TriMC第一版MVP",
+        "sourceWeek": "2026-W27",
+        "carryWeeks": 0,
+        "warningLevel": "none",
+        "owner": "ChiefTechnologyOfficer",
+        "status": "active",
+        "statusDetail": "first-mvp-scope-definition",
+        "summary": "承接 TriMC、TriHost、scheduler、daemon 支持的长期自动运行能力，定义第一版最小 runtime / host MVP。",
+        "currentProgress": "已从 CEOChiefOfStaff 正式接管后续阶段收口项中拆出；当前 Copilot-host 人工触发机制已满足总助接管阶段收口，自动化长期运行能力尚未实现。",
+        "nextAction": "由 CTO 牵头，CEOChiefOfStaff 协调，CPO 参与产品边界判断，输出 TriMC 第一版 MVP 的最小能力切片、边界、依赖与验证标准。"
+      },
+      {
+        "id": "CARRY-20260629-002",
+        "title": "最小 MVP / 最小经营闭环重排",
+        "sourceWeek": "2026-W15",
+        "carryWeeks": 12,
+        "warningLevel": "high",
+        "owner": "ChiefProductOfficer",
+        "status": "frozen",
+        "statusDetail": "pending-scope-refresh",
+        "summary": "90 天最小经营闭环口径已接续旧 MVP 表达，但当前仍缺最新周视角的范围切分书面稿。",
+        "currentProgress": "当前卡在 active / 暂停 / 后置 / 待 CEO 决策范围的重新切分。",
+        "nextAction": "形成“当前 active 范围 / 暂停范围 / 后置范围 / 待 CEO 决策范围”的书面建议。"
+      },
+      {
+        "id": "CARRY-20260629-003",
+        "title": "TriTraining 培训学院平台候选",
+        "sourceWeek": "2026-W23",
+        "carryWeeks": 4,
+        "warningLevel": "warning",
+        "owner": "CEOChiefOfStaff",
+        "status": "active",
+        "statusDetail": "phase-a-web-mvp-closeout",
+        "summary": "TriTraining 的概念与架构草案已恢复推进，当前需要收口成 Phase A Web MVP 的模块顺序和第一批切片。",
+        "currentProgress": "中央产品与架构草案已补齐核心方向，当前进入 Web 优先的最小 MVP 收口。",
+        "nextAction": "由 CPO / CTO 输出可执行的模块顺序表、冻结边界和第一批开工切片。"
+      },
+      {
+        "id": "CARRY-20260629-004",
+        "title": "第一条 IPD `IPD-20260527-034923`",
+        "sourceWeek": "2026-W22",
+        "carryWeeks": 5,
+        "warningLevel": "warning",
+        "owner": "ChiefTechnologyOfficer",
+        "status": "frozen",
+        "statusDetail": "awaiting-restart-decision",
+        "summary": "第一条 IPD 的现行证据面停在 `Coding` 后，是否恢复需先裁定继续补证还是按新门禁重开。",
+        "currentProgress": "`discovery / intelligence / designing / coding` 四个 stage package 已保留，`verify-integration` 及之后阶段尚未继续补证。",
+        "nextAction": "先判断是沿当前 case 继续补 `Verify-Integration -> Delivery` 的真实工程证据，还是按新门禁重开 / 复制新 case 再推进。",
+        "resumeCondition": "CEO 明确要求继续推进第一条 IPD。"
+      },
+      {
+        "id": "CARRY-20260629-005",
+        "title": "项目模块停滞队列（Git Health > 3 天）",
+        "sourceWeek": "2026-W22",
+        "carryWeeks": 5,
+        "warningLevel": "warning",
+        "owner": "ChiefTechnologyOfficer",
+        "status": "stale-review",
+        "statusDetail": "git-health-over-3d",
+        "summary": "一组超过 3 天未续推的模块被拉入当前周维护面，等待 CTO / CPO 进一步分类。",
+        "currentProgress": "模块队列已纳入最新周维护面，但尚未拆成继续冻结 / 保持占位 / 进入依赖链 / 补 Git Health 说明。",
+        "nextAction": "由 CTO 与 CPO 按当前项目主线完成首轮分类。"
+      },
+      {
+        "id": "CARRY-20260629-006",
+        "title": "IPD 全阶段优化与 PLATFORM 固定验证桩闭环",
+        "sourceWeek": "2026-W24",
+        "carryWeeks": 3,
+        "warningLevel": "none",
+        "owner": "CEOChiefOfStaff",
+        "status": "active",
+        "statusDetail": "product-mainline-cutover-in-progress",
+        "summary": "IPD 自身优化继续采用 `WORKFLOW-002` + `PLATFORM-001` 双线闭环，但审批回填开始最小收口，主线切向完整模型 API 平台 full-scope 产品推进。",
+        "currentProgress": "`IPD-20260611-PLATFORM-001` 已完成 `ceo-demand -> delivery` 全链路 proving-ground replay，其中 `Discovery / Intelligence` 自动化 package 已完成提交、签发与 release version 发放；Gate A / Gate B / Gate C 的后续验证目标已对齐到完整平台 full-scope case `IPD-20260610-PLATFORM-001`；对应流程优化线为 `IPD-20260612-WORKFLOW-002`，已补齐到 approval-backfill rehearsal、Discovery replay 验证链与 `14-module-routing-mode-post-facto-backfill`，并登记了 `task-intake` 的 `deterministic / cpo / auto` 三模式模块路由增量；当前 `20260610` 主线停在 DISCOVERY，等待 CPO 接手完整 PRD 输入；本周已新增 `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md` 作为 RAndDTrainer 面向小白讲解 IPD CLI 与代码执行流程的独立教程真源。",
+        "nextAction": "形成两条并行闭环：一是随 IPD 全流程优化同步更新教程，供未来培训学院使用；二是由 CPO 先按 `TriCompany/docs/workflow/platform-product-mainline-cutover.md` 直接复用 `20260611` 已验证的 `Discovery / Intelligence` package 结构，输出完整平台 PRD 输入、验收矩阵与前后端 / 模拟签名边界；再由 CTO 收敛第一条可编码产品切片。审批回填只保留最小真实 contract 记录；后续如继续增强 module routing，应优先作为 `WORKFLOW-002` 下一轮 backlog seeds，而不是只改代码不回填。"
+      }
+    ],
+    "recentCloseouts": [
+      {
+        "date": "2026-06-29",
+        "topic": "CEOChiefOfStaff 正式接管后续阶段收口项关闭",
+        "conclusions": [
+          "`CARRY-20260629-001` 按 CEO 裁定关闭：当前 Copilot-host 人工触发机制已满足当前阶段总助正式接管运行需要。",
+          "该事项不再继续作为高预警经营待办滚动平移。",
+          "TriMC / TriHost / scheduler / daemon 支持的长期自动运行能力不再混在总助接管收口项内，统一转入新事项 `TriMC第一版MVP`。"
+        ],
+        "artifacts": [
+          "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.json",
+          "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.unresolved-items.md",
+          "docs/三元宇宙架构与模块说明.md"
+        ]
+      },
+      {
+        "date": "2026-06-29",
+        "topic": "W26 闭合并平移到 W27",
+        "conclusions": [
+          "`2026-W26` 已按公司文档治理规则转为历史周基线，不再继续充当 active 待办面。",
+          "W27 已成为唯一最新 active 经营维护入口。",
+          "W26 的未决事项已继续平移到 W27，并保留来源周、状态、下一步、owner 与恢复条件。",
+          "本轮新增 `/周度平移` prompt，后续周迁移不再只依赖临时人工操作。"
+        ],
+        "artifacts": [
+          "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.json",
+          "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.unresolved-items.md",
+          "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.json",
+          "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.unresolved-items.md",
+          ".github/prompts/周度平移.prompt.md"
+        ]
+      },
+      {
+        "date": "2026-06-29",
+        "topic": "WORKFLOW-002 module routing mode 事后回填",
+        "conclusions": [
+          "`task-intake` 相关模块推断已从单一路由增强为 `deterministic / cpo / auto` 三模式。",
+          "CPO module router 只作为产品语义判断入口，返回结果必须经过 module catalog / alias 校验。",
+          "若 CPO 判断触发 `needsBusinessStrategyEscalation=true`，不得静默回退，必须升级 BusinessStrategy。",
+          "本次属于 post-facto backfill：代码已先落地，现已补登记为 `WORKFLOW-002` 的后续流程增量。"
+        ],
+        "artifacts": [
+          "TriCompany/docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/14-module-routing-mode-post-facto-backfill.md",
+          "TriCompany/docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/14-module-routing-mode-post-facto-backfill-package.json",
+          "TriCompany/runtime/cognition/chief_of_staff_ipd_case.py",
+          "TriCompany/runtime/cognition/chief_of_staff_ipd_case_validation.py"
+        ]
+      },
+      {
+        "date": "2026-06-23",
+        "topic": "W25 闭合并平移到 W26",
+        "conclusions": [
+          "`2026-W25` 已按公司文档治理规则转为历史周基线，不再继续充当 active 待办面。",
+          "W26 已成为唯一最新 active 经营维护入口。",
+          "W25 的未决事项已继续平移到 W26，并保留来源周、状态、下一步、owner 与恢复条件。"
+        ],
+        "artifacts": [
+          "docs/workflow/operating-records/2026-W25/OP-202606-W25-001.json",
+          "docs/workflow/operating-records/2026-W25/OP-202606-W25-001.unresolved-items.md",
+          "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.json",
+          "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.unresolved-items.md"
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "topic": "W24 闭合并平移到 W25",
+        "conclusions": [
+          "`2026-W24` 已按公司文档治理规则转为历史周基线，不再继续充当 active 待办面。",
+          "W25 已成为唯一最新 active 经营维护入口。",
+          "W24 的未决事项已继续平移到 W25，并保留来源周、状态、下一步、owner 与恢复条件。"
+        ],
+        "artifacts": [
+          "docs/workflow/operating-records/2026-W24/OP-202606-W24-001.json",
+          "docs/workflow/operating-records/2026-W24/OP-202606-W24-001.unresolved-items.md",
+          "docs/workflow/operating-records/2026-W25/OP-202606-W25-001.json",
+          "docs/workflow/operating-records/2026-W25/OP-202606-W25-001.unresolved-items.md"
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "topic": "第一次真实审批回填执行链已接通",
+        "conclusions": [
+          "through-pass 与 merge 矩阵两条路径都已明确写回到批次实例的具体段落。",
+          "runbook 已显式改成 `预启动 -> 审批稿 -> through-pass -> merge matrix -> validation -> operating record`。",
+          "当前缺口已经从流程定义收敛为等待真实岗位审批结论。",
+          "批次实例已完成预启动，并已正式交接给 ChiefProductOfficer 进入第一次真实审批稿填写。",
+          "审批链开始最小收口，完整模型 API 平台主线切向 `IPD-20260610-PLATFORM-001` 的 full-scope 产品推进。",
+          "`IPD-20260611-PLATFORM-001` 上的 `Discovery / Intelligence` 自动化 package 已验证通过，并确定直接并入 `20260610` 主线复用。"
+        ],
+        "artifacts": [
+          "TriCompany/docs/workflow/ipd-first-real-approval-backfill-runbook.md",
+          "TriCompany/docs/workflow/ipd-first-real-approval-through-pass-checklist.md",
+          "TriCompany/docs/workflow/ipd-first-real-approval-merge-candidate-matrix.md",
+          "TriCompany/docs/workflow/ipd-first-real-approval-backfill-001.md",
+          "TriCompany/docs/workflow/ipd-first-real-approval-role-script.md"
+        ]
+      }
+    ],
+    "escalationRules": [
+      "单事项跨周平移达到 4 周时，标记预警，并要求对应 owner 给出处理动作。",
+      "单事项跨周平移达到 8 周时，标记高预警，并进入 CEOChiefOfStaff 催办面；若下一周仍无处理意见，应升级 CEO 裁定。",
+      "单事项距上次回填或实际推进超过 3 天时，允许先纳入最新周待办，再由 owner 判断继续推进、冻结或升级。",
+      "历史周一旦完成闭合并平移，不再继续作为 active 未决维护面。"
+    ],
+    "kpis": [
+      "W26 未决事项收口到 W27 单一维护入口。",
+      "全部高预警事项继续保留在 CEOChiefOfStaff 催办面。",
+      "第一次真实审批回填保持为可直接执行的入口链。",
+      "TriTraining 与第一条 IPD 继续保留可直接续会的恢复上下文。"
+    ]
+  },
+  "metadata": {
+    "executionRecord": true,
+    "recordLayer": "real-operating-record",
+    "unresolvedItemsRef": "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.unresolved-items.md",
+    "issuanceVersion": "OP-202606-W27-001-v0.1.1-draft",
+    "latestActiveWeek": true,
+    "statusTerminologyRefs": [
+      "TriCompany/docs/registry/company-governance-state.md",
+      "docs/workflow/operating-records/README.md"
+    ],
+    "carryForwardSourceRefs": [
+      "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.json",
+      "docs/workflow/operating-records/2026-W15/OP-202604-W15-001.json"
+    ],
+    "historicalWeeksClosed": [
+      {
+        "ref": "docs/workflow/operating-records/2026-W15/OP-202604-W15-001.json",
+        "closure": "closed-carried-forward",
+        "closedAt": "2026-06-03T11:46:33+08:00"
+      },
+      {
+        "ref": "docs/workflow/operating-records/2026-W23/OP-202606-W23-001.json",
+        "closure": "closed-carried-forward",
+        "closedAt": "2026-06-08T11:29:18+08:00"
+      },
+      {
+        "ref": "docs/workflow/operating-records/2026-W24/OP-202606-W24-001.json",
+        "closure": "closed-carried-forward",
+        "closedAt": "2026-06-15T12:30:00+08:00"
+      },
+      {
+        "ref": "docs/workflow/operating-records/2026-W25/OP-202606-W25-001.json",
+        "closure": "closed-carried-forward",
+        "closedAt": "2026-06-23T09:02:04+08:00"
+      },
+      {
+        "ref": "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.json",
+        "closure": "closed-carried-forward",
+        "closedAt": "2026-06-29T19:25:57+08:00"
+      }
+    ],
+    "carryWarningThresholdWeeks": 4,
+    "carryHighWarningThresholdWeeks": 8,
+    "carryAgingReviewedAt": "2026-06-29T21:17:46+08:00",
+    "staleDayThreshold": 3,
+    "staleReviewedAt": "2026-06-29T21:17:46+08:00",
+    "backlogReviewedAt": "2026-06-29T21:17:46+08:00",
+    "carryAgingWarnings": [
+      {
+        "title": "最小 MVP / 最小经营闭环重排",
+        "originWeek": "2026-W15",
+        "carryWeeks": 12,
+        "warningLevel": "high",
+        "owner": "ChiefProductOfficer"
+      }
+    ],
+    "staleItems": [
+      {
+        "title": "最小 MVP / 最小经营闭环重排",
+        "daysStale": 14,
+        "owner": "ChiefProductOfficer"
+      },
+      {
+        "title": "TriTraining 培训学院平台候选",
+        "daysStale": 14,
+        "owner": "CEOChiefOfStaff"
+      },
+      {
+        "title": "第一条 IPD `IPD-20260527-034923`",
+        "daysStale": 14,
+        "owner": "ChiefTechnologyOfficer"
+      },
+      {
+        "title": "项目模块停滞队列（Git Health > 3 天）",
+        "daysStale": 34,
+        "owner": "ChiefTechnologyOfficer"
+      }
+    ],
+    "backlogReviewResults": [
+      {
+        "id": "CARRY-20260629-001",
+        "status": "closed",
+        "reviewedAt": "2026-06-29T21:17:46+08:00",
+        "note": "CEO 裁定当前 Copilot-host 人工触发机制已满足总助正式接管阶段收口；长期自动运行能力拆入 `TriMC第一版MVP`，本事项关闭。"
+      },
+      {
+        "id": "ITEM-20260629-001",
+        "status": "active",
+        "reviewedAt": "2026-06-29T21:17:46+08:00",
+        "note": "新建事项承接 TriMC / TriHost / scheduler / daemon 支持的长期自动运行能力，进入 W27 当前维护面。"
+      },
+      {
+        "id": "CARRY-20260629-002",
+        "status": "frozen",
+        "reviewedAt": "2026-06-29T19:25:57+08:00",
+        "note": "W26 已闭合并平移到 W27；最新周范围切分书面稿仍未形成，当前继续维持 frozen。"
+      },
+      {
+        "id": "CARRY-20260629-003",
+        "status": "active",
+        "reviewedAt": "2026-06-29T19:25:57+08:00",
+        "note": "W26 已闭合并平移到 W27；TriTraining 仍有明确 owner 与下一步动作，但跨周已达预警阈值，继续维持 active 并标记 warning。"
+      },
+      {
+        "id": "CARRY-20260629-004",
+        "status": "frozen",
+        "reviewedAt": "2026-06-29T19:25:57+08:00",
+        "note": "W26 已闭合并平移到 W27；第一条 IPD 恢复路径仍待裁定，继续维持 frozen。"
+      },
+      {
+        "id": "CARRY-20260629-005",
+        "status": "stale-review",
+        "reviewedAt": "2026-06-29T19:25:57+08:00",
+        "note": "W26 已闭合并平移到 W27；模块队列尚未形成首轮分类说明，继续维持 stale-review。"
+      },
+      {
+        "id": "CARRY-20260629-006",
+        "status": "active",
+        "reviewedAt": "2026-06-29T19:25:57+08:00",
+        "note": "W26 已闭合并平移到 W27；WORKFLOW-002 已补登记 module routing mode 事后回填，完整模型 API 平台主线仍在 `IPD-20260610-PLATFORM-001` 的产品推进；本周新增 RAndDTrainer IPD CLI 与代码流程教程真源任务。"
+      }
+    ],
+    "pendingCompanyItems": [
+      {
+        "id": "TODO-20260629-TRIMC-FIRST-MVP",
+        "title": "TriMC第一版MVP",
+        "sourceWeek": "2026-W27",
+        "carryWeeks": 0,
+        "warningLevel": "none",
+        "statusCategory": "started-in-progress",
+        "status": "mvp-scope-definition",
+        "currentProgress": "已从 CEOChiefOfStaff 正式接管后续阶段收口项拆出；长期自动运行能力尚未实现，当前需要收敛第一版 MVP 范围。",
+        "nextStep": "定义 TriMC / TriHost / scheduler / daemon 最小可运行切片，明确哪些能力进入第一版、哪些后置。",
+        "resumeCondition": "当前已进入 active 维护；若中央边界或商业优先级变化，应先升级 BusinessStrategy。",
+        "owners": [
+          "ChiefTechnologyOfficer",
+          "CEOChiefOfStaff",
+          "ChiefProductOfficer"
+        ],
+        "refs": [
+          "docs/三元宇宙架构与模块说明.md",
+          "docs/registry/business-strategy-module-map.md",
+          "TriMC/README.md",
+          "TriHost/README.md"
+        ],
+        "updatedAt": "2026-06-29T21:17:46+08:00"
+      },
+      {
+        "id": "TODO-20260629-MVP-RESET",
+        "title": "最小 MVP / 最小经营闭环重排",
+        "sourceWeek": "2026-W15",
+        "carryWeeks": 12,
+        "warningLevel": "high",
+        "statusCategory": "started-paused",
+        "status": "needs-refresh",
+        "currentProgress": "旧首版 MVP 表达已由 BD-202605-001 接续，但当前缺少最新周视角的 active / paused / deferred 切分。",
+        "nextStep": "由 CPO 输出当前窗口内的范围切分和待 CEO 决策点。",
+        "resumeCondition": "CEO 明确当前窗口范围，或 CPO 输出最新状态切分后恢复推进。",
+        "owners": [
+          "ChiefProductOfficer",
+          "CEOChiefOfStaff"
+        ],
+        "refs": [
+          "docs/workflow/operating-records/2026-05/BD-202605-001.json",
+          "TriCompany/docs/product/STATE.md"
+        ],
+        "updatedAt": "2026-06-29T19:25:57+08:00"
+      },
+      {
+        "id": "TODO-20260629-TRITRAINING",
+        "title": "TriTraining 培训学院平台候选",
+        "sourceWeek": "2026-W23",
+        "carryWeeks": 4,
+        "warningLevel": "warning",
+        "statusCategory": "started-in-progress",
+        "status": "design-refresh-in-progress",
+        "currentProgress": "中央产品概念与平台架构草案已继续收口，但当前仍需转成 Phase A Web MVP 的模块顺序表、冻结边界和第一批开工切片。",
+        "nextStep": "继续围绕 Phase A 的 Web MVP 收口最小上线切片，并明确 TriCompany / TriAvatar / TriStaciss / TriMC / TriMem / TriLC / TriPilot + vscodium / TriDev / TriTest 的协作顺序。",
+        "resumeCondition": "已由 CEO 明确要求继续推进 TriTraining，当前不再按暂停项维护。",
+        "owners": [
+          "CEOChiefOfStaff",
+          "ChiefProductOfficer",
+          "ChiefTechnologyOfficer"
+        ],
+        "refs": [
+          "TriMetaverse/docs/product/tritraining-platform-concept.md",
+          "TriMetaverse/docs/engineering/tritraining-platform-architecture.md"
+        ],
+        "updatedAt": "2026-06-29T19:25:57+08:00"
+      },
+      {
+        "id": "TODO-20260629-FIRST-IPD",
+        "title": "第一条 IPD `IPD-20260527-034923`",
+        "sourceWeek": "2026-W22",
+        "carryWeeks": 5,
+        "warningLevel": "warning",
+        "statusCategory": "started-paused",
+        "status": "paused-after-coding",
+        "currentProgress": "现行目录保留 discovery / intelligence / designing / coding 四个 stage package；coding-package 已记录 Tristaciss 首个源码切片与 compileall、pytest 通过。",
+        "nextStep": "恢复后先判断沿当前 case 补 Verify-Integration -> Delivery，还是按新门禁重开 / 复制新 case。",
+        "resumeCondition": "CEO 明确要求继续推进第一条 IPD。",
+        "owners": [
+          "CEOChiefOfStaff",
+          "ChiefTechnologyOfficer",
+          "ChiefProductOfficer"
+        ],
+        "refs": [
+          "TriDev/docs/ipd-autopilot/IPD-20260527-034923",
+          "TriDev/docs/ipd-autopilot/IPD-20260527-034923/coding-package.json"
+        ],
+        "updatedAt": "2026-06-29T19:25:57+08:00"
+      },
+      {
+        "id": "TODO-20260629-DORMANT-MODULE-QUEUE",
+        "title": "项目模块停滞队列（Git Health > 3 天）",
+        "sourceWeek": "2026-W22",
+        "carryWeeks": 5,
+        "warningLevel": "warning",
+        "statusCategory": "stale-over-3d",
+        "status": "needs-classification",
+        "currentProgress": "TriAvatar、TriMC、TriLC、TriPilot、Tride、TriDeployment、TriTest、TriMem、TriMobile、TriWeb4、TriGateway、TriHost、TriSkill、TriChain 最近一次提交均停留在 2026-05-26。",
+        "nextStep": "由 CTO 与 CPO 把这批模块拆成继续冻结、进入 TriTraining Phase A 依赖链、保持占位，或补 Git Health 说明四类。",
+        "resumeCondition": "CTO / CPO 给出当前窗口内的模块排序和冻结判断。",
+        "owners": [
+          "CEOChiefOfStaff",
+          "ChiefTechnologyOfficer",
+          "ChiefProductOfficer"
+        ],
+        "refs": [
+          "docs/三元宇宙架构与模块说明.md",
+          "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md"
+        ],
+        "updatedAt": "2026-06-29T19:25:57+08:00"
+      },
+      {
+        "id": "TODO-20260629-IPD-FULL-STAGE-LOOP",
+        "title": "IPD 全阶段优化与 PLATFORM 固定验证桩闭环",
+        "sourceWeek": "2026-W24",
+        "carryWeeks": 3,
+        "warningLevel": "none",
+        "statusCategory": "started-in-progress",
+        "status": "workflow-optimization-active",
+        "currentProgress": "`IPD-20260611-PLATFORM-001` 已完成从 `ceo-demand` 到 `delivery` 的 proving-ground replay，其中 `Discovery / Intelligence` 自动化 package 已完成提交、签发与 release version 发放；Gate A / Gate B / Gate C 的后续验证目标已对齐到完整平台 full-scope case `IPD-20260610-PLATFORM-001`，对应流程优化线为 `IPD-20260612-WORKFLOW-002`；`20260610` 对应 run 已存在，但仍待 CPO 接手 DISCOVERY / PRD；本周已新增 `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md` 作为 IPD CLI 与代码流程小白教程真源。",
+        "nextStep": "同步完成两件事：一是由 RAndDTrainer 持续把 IPD CLI 启动、runtime 代码流、搜索 / CodeGraph 边界和节点输入输出讲成可复用教程；二是先把审批回填保留为最小真实 contract 记录，再由 CPO 直接复用 `20260611` 已验证的 `Discovery / Intelligence` package 结构输出完整平台 PRD 输入与验收矩阵，并由 CTO 收敛第一条可编码产品切片。",
+        "resumeCondition": "完整平台 PRD 输入启动后继续推进；若产品主链仍被审批回填占用，则按 cutover 文档强制回到 `IPD-20260610-PLATFORM-001` 的 DISCOVERY / PRD 主线。",
+        "owners": [
+          "CEOChiefOfStaff",
+          "ChiefProductOfficer",
+          "ChiefTechnologyOfficer"
+        ],
+        "refs": [
+          "TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md",
+          "TriCompany/docs/workflow/integrated-product-development-flow.md",
+          "TriCompany/docs/workflow/platform-product-mainline-cutover.md",
+          "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/archived-cases/IPD-20260610-PLATFORM-001/case.json",
+          "TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/SESSION_BRIEF.md",
+          "TriCompany/docs/workflow/ipd-first-real-approval-backfill-runbook.md",
+          "TriCompany/docs/workflow/ipd-first-real-approval-backfill-001.md"
+        ],
+        "updatedAt": "2026-06-29T21:43:07+08:00"
+      }
+    ]
+  }
+}
