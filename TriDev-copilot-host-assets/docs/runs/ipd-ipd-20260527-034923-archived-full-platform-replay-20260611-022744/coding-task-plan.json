@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "stage": "DEPLOYMENT",
+  "planId": "ipd-ipd-20260527-034923-deployment-plan",
+  "nextAction": "record-phase-result",
+  "requiredArtifactType": "deployment-evidence",
+  "executable": true,
+  "tasks": [
+    {
+      "taskId": "deployment-prepare-inputs",
+      "label": "Prepare stage inputs",
+      "description": "Collect the required upstream inputs for DEPLOYMENT and verify the stage boundary.",
+      "dependsOn": [],
+      "artifactType": "deployment-evidence",
+      "verifyGates": [
+        "implementation",
+        "test-report",
+        "security-report"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 1,
+      "status": "pending",
+      "artifactRefs": [],
+      "changedFiles": [],
+      "gitDiffDigest": "",
+      "gitDiffStatus": "",
+      "summary": "",
+      "notes": "",
+      "failureCount": 0,
+      "retryBudgetRemaining": 1,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": ""
+    },
+    {
+      "taskId": "deployment-execute-stage",
+      "label": "Execute stage work",
+      "description": "Produce the primary deployment-evidence output for DEPLOYMENT.",
+      "dependsOn": [
+        "deployment-prepare-inputs"
+      ],
+      "artifactType": "deployment-evidence",
+      "verifyGates": [
+        "deployment-evidence",
+        "artifact-binding"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 2,
+      "status": "pending",
+      "artifactRefs": [],
+      "changedFiles": [],
+      "gitDiffDigest": "",
+      "gitDiffStatus": "",
+      "summary": "",
+      "notes": "",
+      "failureCount": 0,
+      "retryBudgetRemaining": 2,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": ""
+    },
+    {
+      "taskId": "deployment-prepare-gate",
+      "label": "Prepare gate package",
+      "description": "Summarize DEPLOYMENT output and assemble the gate package for ChiefTechnologyOfficer.",
+      "dependsOn": [
+        "deployment-execute-stage"
+      ],
+      "artifactType": "deployment-evidence",
+      "verifyGates": [
+        "stage-summary",
+        "gate-package"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 1,
+      "status": "pending",
+      "artifactRefs": [],
+      "changedFiles": [],
+      "gitDiffDigest": "",
+      "gitDiffStatus": "",
+      "summary": "",
+      "notes": "",
+      "failureCount": 0,
+      "retryBudgetRemaining": 1,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": ""
+    }
+  ],
+  "progress": {
+    "total": 3,
+    "completed": 0,
+    "blocked": 0,
+    "failed": 0
+  },
+  "generatedAt": "2026-06-10T15:29:13.167844+00:00"
+}

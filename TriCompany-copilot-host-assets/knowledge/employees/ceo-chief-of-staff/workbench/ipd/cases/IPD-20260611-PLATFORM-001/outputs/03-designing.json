@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-PLATFORM-001",
+  "stageKey": "designing",
+  "phaseKey": "DESIGNING",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "participantRoles": [
+    "ChiefProductOfficer",
+    "CEOChiefOfStaff"
+  ],
+  "submittedAt": "2026-06-14T22:51:05+08:00",
+  "summary": "Designing proving-ground contract completed",
+  "details": [
+    "已补系统上下文、接口契约、测试基线、安全设计与 phase handoff"
+  ],
+  "evidence": [
+    "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-architecture-decision-record.md",
+    "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-test-baseline.md",
+    "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-security-and-redteam-memo.md",
+    "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-phase-handoff-plan.md",
+    "runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/design-review-scorecard.json"
+  ],
+  "objectPath": "runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/design-review-scorecard.json",
+  "packageHash": "0xba07ed59ee2b3e58fd752f2253757d26693b0f23adc7dbfd708e803ca35d435e",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "ChiefTechnologyOfficer",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "ChiefTechnologyOfficer",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-14T22:51:05+08:00",
+      "packageHash": "0xba07ed59ee2b3e58fd752f2253757d26693b0f23adc7dbfd708e803ca35d435e",
+      "signature": "0x1bdd64ac444f5ac32cc655ce43cb2f0072a01c5d6f79a3a512f9db93bb31da310447fdde90ee8940a291392c49afd56a5272eb5efdc5b7d1f2e79c75f4ee55e0",
+      "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+      "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "almost address ... adapt album",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-14T22:51:05+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:05+08:00",
+      "packageHash": "0xba07ed59ee2b3e58fd752f2253757d26693b0f23adc7dbfd708e803ca35d435e",
+      "signature": "0x6dda481c77e02fed2816908d55acfee12110880a458e8a6dcb3dec86e247adf37dd6286ce5e0a610a94297d7f6752bd4209be96a436690ba0eae1c5baf275f75",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer"
+      ],
+      "verifiedAt": "2026-06-14T22:51:05+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:06+08:00",
+      "packageHash": "0xba07ed59ee2b3e58fd752f2253757d26693b0f23adc7dbfd708e803ca35d435e",
+      "signature": "0x858339f2e04b05af523023ad6bace07835d323486ccfba96015e78a404795bda5614180906dee97089b536e24fb94e161ea6f8abe280323060e79c61bebbf139",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-14T22:51:06+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-PLATFORM-001-DESIGNING-V001",
+    "issuedAt": "2026-06-14T22:51:06+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

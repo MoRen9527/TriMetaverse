@@ -3,10 +3,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/contracts/tristaciss-openai-compatible-api-contract.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse OpenAI 兼容 API 契约的本地协议真源，用于定义 TriStaciss 对客户端暴露的兼容接口与扩展字段；它不是 TriCompany 公司级 workflow 或产品真源。
 
 ## 1. 目标
 

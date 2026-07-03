@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-work-item",
+  "caseId": "IPD-20260610-PLATFORM-001",
+  "stageKey": "discovery",
+  "phaseKey": "DISCOVERY",
+  "title": "完整模型API平台MVP全流程回放 / Discovery / 任务澄清",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "ownerRole": "ChiefProductOfficer",
+  "participantRoles": [
+    "CEOChiefOfStaff",
+    "CEO",
+    "ChiefMarketingOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "status": "in-progress",
+  "createdAt": "2026-06-10T23:49:03+08:00",
+  "updatedAt": "2026-06-10T23:49:03+08:00",
+  "priority": "high",
+  "summary": "ChiefProductOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“让 CPO 先产出完整 PRD，再围绕完整模型 API 平台 MVP 从 Discovery 重新走完整个 IPD / TriDev 十阶段流程。”推进 Discovery / 任务澄清（DISCOVERY）并协同 CEOChiefOfStaff、CEO、ChiefMarketingOfficer、ChiefTechnologyOfficer，并在提交后等待总助初签与 CEO 终签。",
+  "intake": {
+    "objective": "让 CPO 先产出完整 PRD，再围绕完整模型 API 平台 MVP 从 Discovery 重新走完整个 IPD / TriDev 十阶段流程。",
+    "taskDescription": "当前最小 gateway slice 只完成了 TriStaciss 后端 Python 回归，没有覆盖前端 smoke。现需以完整模型 API 平台 MVP 为目标重开一条 IPD case：先由 CPO 写完整 PRD，再由 CTO / TriDev 围绕完整平台而不是最小后端切片推进，并从第一步重新走完整个流程以验证 IPD 与 TriDev step / stage 协同。另需把公司员工身份与签名机制纳入模拟方案：当前先做非链上 NFT / 钱包签名模拟，不把它写成真实链上能力；待 TriChain 与 TriWeb4 上线后再迁移为真实 NFT 与密钥体系。",
+    "constraints": [
+      "当前 case 只验证了 TriStaciss 后端 Python 测试，不能当作完整平台 MVP 的 QA 结论。",
+      "必须先形成完整 PRD，再进入 Designing / Coding。",
+      "新一轮验证必须包含前端最小 smoke 或明确前端不验收的书面边界，不能默认省略。",
+      "员工 NFT 与钱包密钥在当前阶段只能写成模拟身份 / 签名机制，不得写成 TriChain / TriWeb4 已上线的真实链上能力。"
+    ],
+    "opportunitySignals": [
+      "当前最小 gateway slice 已证明 TriDev / IPD 的最小后端执行面可跑，但还没有覆盖完整平台 PRD 和前端协同。",
+      "如果要测试完整 IPD 流程与 super-dev step/stage 协同，应该从新的更完整目标重新起跑，而不是把现有最小 case 误当完整产品。"
+    ],
+    "businessModelFit": [
+      "符合当前先验证最小闭环、再扩大到完整平台 MVP 的演进路径。",
+      "完整平台 PRD 有助于区分当前可收费 MVP、后续平台能力和模拟身份签名层的真实边界。"
+    ],
+    "stageFit": [
+      "该事项仍落在当前 Copilot-host 正式接管阶段，可用于验证更完整的 IPD/TriDev 流程回放。"
+    ],
+    "companyContext": [
+      "TriCompany 当前已有 ten-phase case runtime 与 owner-action gate，可承接从 Discovery 重新起跑的全流程验证。",
+      "TriDev 当前已支持 engine-step、step ledger、failure/rollback/resolve 和 super-dev 概念映射，但还未把完整平台 PRD 回放跑完。"
+    ],
+    "ownerProposal": [
+      "ChiefProductOfficer 先产出完整模型 API 平台 MVP PRD 与验收边界。",
+      "ChiefTechnologyOfficer 再把平台技术路线、前后端验证门禁和模拟身份签名技术边界写清。",
+      "TriDev 负责把新的 full-scope case 从 Discovery 重新跑到 Delivery，以验证 step/stage 协同。"
+    ],
+    "resourceEnvelope": [
+      "本轮应预留 TriStaciss 后端、TriAvatar 前端 smoke、TriDev 流程验证和身份签名模拟设计时间。"
+    ],
+    "prerequisites": [
+      "明确当前 active deployment case 只是最小 gateway slice 证据，不再把它当完整平台 PRD 替身。",
+      "TriChain 与 TriWeb4 当前仍为待初始化模块，真实链上 NFT / 钱包能力不能提前宣称。"
+    ],
+    "requiredSupport": [
+      "CPO 补齐完整 PRD、范围、验收矩阵与前端/后端边界。",
+      "CTO 补齐完整平台技术路线、验证命令、阶段门禁与模拟签名设计边界。",
+      "CEOChiefOfStaff 负责把旧 minimal case 与新 full-scope case 的边界隔离清楚。"
+    ],
+    "expectedOutcomes": [
+      "形成一份完整模型 API 平台 MVP PRD，而不是最小 gateway slice briefing。",
+      "从 Discovery 重新走完整个 IPD/TriDev 流程，验证 stage 与 step 连续性。",
+      "明确前端验证是否纳入，以及模拟 NFT / 钱包签名机制的当前阶段边界。"
+    ],
+    "expectedDelivery": "交付一条新建 full-scope IPD case、完整 PRD、更新后的技术方案、前后端验证证据与模拟身份签名设计边界。",
+    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json"
+  },
+  "requiredApprovers": [
+    "CEOChiefOfStaff",
+    "CEO"
+  ],
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar",
+    "TriChain",
+    "TriWeb4"
+  ],
+  "inputRefs": [
+    "workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+    "workbench/ipd/cases/IPD-20260610-PLATFORM-001/case.json"
+  ],
+  "inputRequirements": [
+    "CEO / 总助正式任务",
+    "intake briefing",
+    "上游业务背景与当前阶段边界"
+  ],
+  "outputRequirements": [
+    "沉淀任务意图、目标边界、成功信号和 Discovery 真源草稿。",
+    "补齐最小 raw evidence pack、参考链接和后续需要验证的问题。"
+  ],
+  "superDevReferenceStages": [
+    "research",
+    "baseline"
+  ],
+  "schemaHint": {
+    "objectType": "IPD_DISCOVERY_PACKAGE",
+    "schemaPath": ""
+  },
+  "draftTemplate": {
+    "kind": "ipd-engine-native-draft",
+    "objectType": "IPD_DISCOVERY_PACKAGE",
+    "phaseKey": "DISCOVERY",
+    "businessOwner": "ChiefProductOfficer",
+    "actingOwner": "ChiefProductOfficer",
+    "moduleExecutor": "TriDev",
+    "gateOwner": "ChiefProductOfficer",
+    "ownerRole": "ChiefProductOfficer",
+    "participantRoles": [
+      "CEOChiefOfStaff",
+      "CEO",
+      "ChiefMarketingOfficer",
+      "ChiefTechnologyOfficer"
+    ],
+    "summary": "ChiefProductOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“让 CPO 先产出完整 PRD，再围绕完整模型 API 平台 MVP 从 Discovery 重新走完整个 IPD / TriDev 十阶段流程。”推进 Discovery / 任务澄清（DISCOVERY）并协同 CEOChiefOfStaff、CEO、ChiefMarketingOfficer、ChiefTechnologyOfficer，并在提交后等待总助初签与 CEO 终签。",
+    "inputRequirements": [
+      "CEO / 总助正式任务",
+      "intake briefing",
+      "上游业务背景与当前阶段边界"
+    ],
+    "requiredOutput": [
+      "沉淀任务意图、目标边界、成功信号和 Discovery 真源草稿。",
+      "补齐最小 raw evidence pack、参考链接和后续需要验证的问题。"
+    ],
+    "superDevReferenceStages": [
+      "research",
+      "baseline"
+    ],
+    "workflowRefs": [
+      {
+        "relation": "phase-package-for",
+        "phase": "DISCOVERY",
+        "runId": "run-IPD-20260610-PLATFORM-001",
+        "branchId": "ipd-ipd-20260610-platform-001"
+      }
+    ]
+  }
+}

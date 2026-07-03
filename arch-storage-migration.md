@@ -32,7 +32,7 @@
 - 文中的 `Orchestrator` 应优先理解为 `TriMC` 统一运行面中的服务域执行与控制语义，而不是继续作为独立 `Task Main Controller` 标准名使用。
 - 研发 10 阶段主流程在当前口径里由 `TriDev` 承接 phase engine，并运行在 `TriMC` 统一运行面约束之上；不再使用 `Development Main Controller` 作为标准名。
 - 公司经营与交互载体当前统一写为 `TriCompany` / 赛博公司，不再沿用 `virtual-company` 或其他历史别名。
-- shadow 与当前阶段正式接管仍运行在 `copilot` 宿主上；正式切换通过 `TriHost` 配置承接，`Tride` 只保留 PC 端开发工具与编排底座语义。
+- shadow 与当前阶段正式接管仍运行在 `copilot` 宿主上；正式切换通过 `TriModel` 的 Provider/Model 配置承接，`Tride` 只保留 PC 端开发工具与编排底座语义。
 
 ## 概述
 

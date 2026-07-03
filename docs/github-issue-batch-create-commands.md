@@ -3,10 +3,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/github-issue-batch-create-commands.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse GitHub Issue 批量创建命令清单的本地真源，用于维护当前仓的 `gh` 批量建卡脚本口径；它不是 TriCompany 公司级 workflow 或产品真源。
 
 更新时间：2026-02-28
 适用仓库：`TriMetaverse`
@@ -26,7 +28,7 @@ gh label create "type: epic" --repo $repo --color "5319E7" --description "Epic i
 gh label create "type: task" --repo $repo --color "0E8A16" --description "Task issue" 2>$null
 gh label create "area: architecture" --repo $repo --color "1D76DB" --description "Architecture" 2>$null
 gh label create "area: contracts" --repo $repo --color "1D76DB" --description "Contracts" 2>$null
-gh label create "area: core-agent" --repo $repo --color "FBCA04" --description "Core-Agent" 2>$null
+gh label create "area: TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)" --repo $repo --color "FBCA04" --description "TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)" 2>$null
 gh label create "area: socialfi" --repo $repo --color "FBCA04" --description "SocialFi" 2>$null
 gh label create "area: tristaciss" --repo $repo --color "FBCA04" --description "TriStaciss" 2>$null
 gh label create "area: observability" --repo $repo --color "C2E0C6" --description "Observability" 2>$null
@@ -51,22 +53,22 @@ gh issue create --repo $repo --title "[Epic][Phase0] 契约先行：冻结边界
 gh issue create --repo $repo --title "[Phase0][Contract] 定义 Message/Session/ToolCall/Audit 四类 Envelope" --label "type: task" --label "area: contracts" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-1）。请按文档区块执行并打勾验收项。"
 
 # P0-2
-gh issue create --repo $repo --title "[Phase0][Contract] 定义 Core-Agent -> TriStaciss LLM 调用契约" --label "type: task" --label "area: tristaciss" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-2）。请按文档区块执行并打勾验收项。"
+gh issue create --repo $repo --title "[Phase0][Contract] 定义 TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) -> TriStaciss LLM 调用契约" --label "type: task" --label "area: tristaciss" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-2）。请按文档区块执行并打勾验收项。"
 
 # P0-3
-gh issue create --repo $repo --title "[Phase0][Contract] 定义 SocialFi <-> Core-Agent 输入与回包契约" --label "type: task" --label "area: socialfi" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-3）。请按文档区块执行并打勾验收项。"
+gh issue create --repo $repo --title "[Phase0][Contract] 定义 SocialFi <-> TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) 输入与回包契约" --label "type: task" --label "area: socialfi" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-3）。请按文档区块执行并打勾验收项。"
 
 # P0-4
 gh issue create --repo $repo --title "[Phase0][Policy] 定义 Safe Stop / Force Stop 与 lease-fencing 语义" --label "type: task" --label "area: architecture" --label "priority: P0" --label "stage: design" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P0-4）。请按文档区块执行并打勾验收项。"
 
 # Epic B (Phase 1)
-gh issue create --repo $repo --title "[Epic][Phase1] Core-Agent MVP：单会话最小闭环" --label "type: epic" --label "area: core-agent" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Epic B）。"
+gh issue create --repo $repo --title "[Epic][Phase1] TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) MVP：单会话最小闭环" --label "type: epic" --label "area: TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Epic B）。"
 
 # P1-1
-gh issue create --repo $repo --title "[Phase1][Core-Agent] 初始化项目骨架（gateway/router-queue/runner/runtime）" --label "type: task" --label "area: core-agent" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P1-1）。"
+gh issue create --repo $repo --title "[Phase1][TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)] 初始化项目骨架（gateway/router-queue/runner/runtime）" --label "type: task" --label "area: TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P1-1）。"
 
 # P1-2
-gh issue create --repo $repo --title "[Phase1][Core-Agent] 实现 Gateway -> Router/Queue -> Runner 最小链路" --label "type: task" --label "area: core-agent" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P1-2）。"
+gh issue create --repo $repo --title "[Phase1][TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)] 实现 Gateway -> Router/Queue -> Runner 最小链路" --label "type: task" --label "area: TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P1-2）。"
 
 # P1-3
 gh issue create --repo $repo --title "[Phase1][TriStaciss] 接入统一 LLM 出口（流式 + fallback 语义）" --label "type: task" --label "area: tristaciss" --label "priority: P0" --label "stage: dev" --body "来源：docs/refactor-phase0-1-issue-pack.md（Issue P1-3）。"

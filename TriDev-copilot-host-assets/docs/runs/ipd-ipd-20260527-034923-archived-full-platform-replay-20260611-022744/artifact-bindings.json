@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "bindings": [
+    {
+      "stage": "DISCOVERY",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\discovery-package.json"
+      ],
+      "digest": "9e8a088794fbc4431f5ba363ed6462933bf4e2bdbb4faf0216c491a7a6f76928",
+      "artifactType": "reference-evidence",
+      "source": "phase-result",
+      "generatedAt": "2026-05-27T11:31:34.726424+00:00",
+      "changedFiles": [
+        "docs/ipd-autopilot/IPD-20260527-034923/discovery-package.json"
+      ],
+      "gitDiffDigest": "6d91dcb2c1b69661ca67d9629c62ca65bd13841903e4f486591a0c1b338bf106",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "INTELLIGENCE",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\intelligence-package.json"
+      ],
+      "digest": "bb48312c5ff4130b2cfc3adef8e65a9bb906e79a84994a4fe62054c01547a4cf",
+      "artifactType": "prd",
+      "source": "phase-result",
+      "generatedAt": "2026-05-27T11:31:35.876616+00:00",
+      "changedFiles": [
+        "docs/ipd-autopilot/IPD-20260527-034923/intelligence-package.json"
+      ],
+      "gitDiffDigest": "6f70f01277221b6f3ae2e5131a6124f538152348f5b18f4236ce7ec23c02a21b",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "DESIGNING",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\designing-package.json"
+      ],
+      "digest": "2cdd41729822b61fc04fb98b504d8eb36e64268ef2072d9f03ecad296a07ad29",
+      "artifactType": "tech-plan",
+      "source": "phase-result",
+      "generatedAt": "2026-05-27T11:31:37.021982+00:00",
+      "changedFiles": [
+        "docs/ipd-autopilot/IPD-20260527-034923/designing-package.json"
+      ],
+      "gitDiffDigest": "186265e709364c2e92fec251e49713384faf6dfd036a750e2697a4014bcb0280",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "CODING",
+      "artifactRefs": [
+        "docs\\ipd-autopilot\\IPD-20260527-034923\\coding-package.json"
+      ],
+      "digest": "5af141de13c5e79be9dc0b3e791e2da7cbb7c14b189b116a6abd1bf7b1836f71",
+      "artifactType": "implementation",
+      "source": "phase-result",
+      "generatedAt": "2026-05-27T11:31:38.135196+00:00",
+      "changedFiles": [
+        "docs/ipd-autopilot/IPD-20260527-034923/coding-package.json"
+      ],
+      "gitDiffDigest": "9e682fca73b38caac277b7be531f4436849add59dc1c389ed2e63e07c0695a8a",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "VERIFY-INTEGRATION",
+      "artifactRefs": [
+        "artifacts\\ipd-verify\\ipd-ipd-20260527-034923-verify-integration.junit.xml"
+      ],
+      "digest": "21bd111de9d63ef43f64a1ff1c6f1c9dbc9e92cc7c5460598f2f0e101ad8ffa6",
+      "artifactType": "test-report",
+      "source": "phase-result",
+      "generatedAt": "2026-06-10T15:13:58.242746+00:00",
+      "changedFiles": [
+        "artifacts/ipd-verify/ipd-ipd-20260527-034923-verify-integration.junit.xml"
+      ],
+      "gitDiffDigest": "fedff762882aacf2f59b8fac870ec752c1b3b2fa23da05d7acedc49c1380a117",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "REDTEAM",
+      "artifactRefs": [
+        "artifacts\\ipd-redteam\\ipd-ipd-20260527-034923-redteam.md",
+        "artifacts\\ipd-redteam\\ipd-ipd-20260527-034923-redteam.junit.xml"
+      ],
+      "digest": "3101329a80d5ddca68a75e4414c6c642501c699afbba0299802a45eae79816c7",
+      "artifactType": "security-report",
+      "source": "phase-result",
+      "generatedAt": "2026-06-10T15:20:41.240475+00:00",
+      "changedFiles": [
+        "artifacts/ipd-redteam/ipd-ipd-20260527-034923-redteam.junit.xml",
+        "artifacts/ipd-redteam/ipd-ipd-20260527-034923-redteam.md"
+      ],
+      "gitDiffDigest": "3582107dc7629622c2a4ff433b1dcf215926797b1a98b0beb4213624224132f6",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    },
+    {
+      "stage": "QA",
+      "artifactRefs": [
+        "artifacts\\ipd-qa\\ipd-ipd-20260527-034923-qa-package.json",
+        "artifacts\\ipd-qa\\ipd-ipd-20260527-034923-qa-report.md",
+        "artifacts\\ipd-qa\\ipd-ipd-20260527-034923-qa.junit.xml"
+      ],
+      "digest": "b7c55a15b9163949780516a1440f315dab6c793d2e1ab08e1ba523aeb38f11f9",
+      "artifactType": "test-report",
+      "source": "phase-result",
+      "generatedAt": "2026-06-10T15:29:10.500821+00:00",
+      "changedFiles": [
+        "artifacts/ipd-qa/ipd-ipd-20260527-034923-qa-package.json",
+        "artifacts/ipd-qa/ipd-ipd-20260527-034923-qa-report.md",
+        "artifacts/ipd-qa/ipd-ipd-20260527-034923-qa.junit.xml"
+      ],
+      "gitDiffDigest": "84c45fda620d8577ef93afd595d28371d5ec4b398ca4a96692a7246238e37dc8",
+      "gitDiffStatus": "captured",
+      "schemaVersion": "1.0"
+    }
+  ]
+}

@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/business-state.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## Registry Role
+
+- 当前文件是 `TriMetaverse` 模块自身 `BusinessStrategyRegistry` 工作层的本地真源，只维护 TriMetaverse 模块级商业定位与业务上游约束；它不是 TriCompany 公司级 workflow 书面真源。
 
 - 本文件是 `TriMetaverse` 模块自身的 business registry 工作层。
 - `TriMetaverse` 的 `product-state.md` 与 `code-state.md` 默认应以本文件作为模块级业务上游约束。

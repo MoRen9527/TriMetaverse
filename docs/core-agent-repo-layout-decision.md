@@ -1,12 +1,14 @@
-﻿# Core-Agent / SocialFi 目录与部署决策（服务域）
+# Core-Agent / SocialFi 目录与部署决策（服务域）— 已归档
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/core-agent-repo-layout-decision.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
-- lastSyncedAt: 2026-06-04
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
+- lastSyncedAt: 2026-07-03
+
+当前文件是 TriMetaverse `core-agent` 目录与部署决策的历史真源。**当前状态：Core-Agent 已废弃，observability 子系统已迁入 `TriMC/src/observability/`，物理目录 `core-agent/` 标记为 D 类冻结。** 本文保留作为架构决策记录（ADR）。
 
 更新时间：2026-02-28
 状态：已确认执行

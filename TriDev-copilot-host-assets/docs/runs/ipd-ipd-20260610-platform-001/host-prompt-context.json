@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260610-platform-001",
+  "currentStage": "DISCOVERY",
+  "nextAction": "cpo-discovery-gate",
+  "workMode": "new",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "requiredInputs": [
+    "upstreamArtifact:reference-evidence",
+    "artifact:reference-evidence",
+    "summary"
+  ],
+  "reviewBlockers": [],
+  "activeFailure": {},
+  "referenceEvidence": {
+    "upstream": "TriCompany-IPD",
+    "referencePath": "knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+    "vendorPath": "TriDev/vendor/super-dev",
+    "license": "internal-governed-use",
+    "commit": "2026-06-10T23:49:03+08:00",
+    "capabilityMapping": [
+      "discovery",
+      "intelligence",
+      "designing",
+      "coding",
+      "verify-integration",
+      "redteam",
+      "qa",
+      "deployment",
+      "assurance",
+      "delivery"
+    ],
+    "exclusions": [],
+    "schemaVersion": "1.0"
+  },
+  "knowledgeBundlePath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\knowledge-bundle.json",
+  "machinePlaybookPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\machine-playbook.json",
+  "roleAdaptersPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\role-adapters.json",
+  "executorBriefPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\executor-brief.json",
+  "taskPlanPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\coding-task-plan.json",
+  "openTaskIds": [
+    "discovery-prepare-inputs",
+    "discovery-execute-stage",
+    "discovery-prepare-gate"
+  ],
+  "taskRetrySummary": [],
+  "knowledgeReadOrder": [
+    "AGENTS.md",
+    "README.md",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\reference-evidence.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\SESSION_BRIEF.md",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\workflow-state.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\machine-playbook.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\role-adapters.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\executor-brief.json",
+    "docs\\registry\\product-state.md",
+    "docs\\registry\\code-state.md",
+    "docs\\workflow\\super-dev-absorption-record.md"
+  ],
+  "recommendedCommand": "python -m tridev.cli engine-step --root . --run-id <run-id> --artifact <path> --summary \"DISCOVERY package seeded and awaiting CPO gate\" --step-id <step-id>",
+  "hostPrompts": [
+    "tridev: 继续当前流程",
+    "tridev: 现在下一步是什么",
+    "tridev: 按当前 run 继续执行"
+  ],
+  "generatedAt": "2026-06-10T15:49:56.956550+00:00"
+}

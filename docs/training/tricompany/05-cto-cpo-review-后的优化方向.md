@@ -1,11 +1,11 @@
-# CTO / CPO Review 后的优化方向
+﻿# CTO / CPO Review 后的优化方向
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/training/tricompany/05-cto-cpo-review-后的优化方向.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 这份升级清单解决什么问题
@@ -46,7 +46,7 @@ CTO 对 training 的关注点更偏工程纪律，尤其强调四件事：
 - 让更多岗位具备完整 source kit scaffold、validator 与 binding profile 链。
 - 让更多岗位具备类似总助的 wiki spec / page spec / audit / workbench 体系。
 - 让 support bundle 更接近单向发布物，减少 source 与 support 双写感。
-- 让 `TriHost` 与未来 `TriMC` 的正式宿主切换条件更明确、更可验证。
+- 让 `TriModel` 与未来 `TriMC` 的正式宿主切换条件更明确、更可验证。
 - 让 handoff checklist、completion tracking、owner signoff、host readiness 等门禁更标准化。
 
 ## 4. 当前最值得推进的几项升级
@@ -59,7 +59,7 @@ CTO 对 training 的关注点更偏工程纪律，尤其强调四件事：
 | P0 | 扩展员工统一发布链到更多岗位 | 降低总助单点压力，形成可复制 onboarding 模板 |
 | P1 | 强化 handoff / completion tracking | 让岗位变动与交接更可工程化 |
 | P1 | 扩展 wiki schema/spec 体系 | 让更多岗位具备可编译、可审计、可审批的知识页面 |
-| P1 | 增强 host validation 与 readiness | 为未来 TriMC / TriHost 正式切换准备更硬的门禁 |
+| P1 | 增强 host validation 与 readiness | 为未来 TriMC / TriModel 正式切换准备更硬的门禁 |
 | P2 | 把经营指标与岗位运行证据进一步联动 | 让岗位价值、成本与业务结果可被持续评估 |
 
 ## 5. 当前态与目标态再强调一次
@@ -73,7 +73,7 @@ CTO 对 training 的关注点更偏工程纪律，尤其强调四件事：
 
 ### 目标态
 
-- `TriMC` 完成自身正式接管，`TriHost` 接管宿主切换。
+- `TriMC` 完成自身正式接管，`TriModel` 接管宿主切换。
 - 更多岗位拥有标准 source kit、binding、workspace、wiki spec 与 audit 体系。
 - 更多交接、审批、运营与交付动作具备结构化证据和自动门禁。
 - TriCompany 从“最小经营闭环”继续长成“接近全自动运行的 AI 治理公司”。

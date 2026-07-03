@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-PLATFORM-001",
+  "stageKey": "deployment",
+  "phaseKey": "DEPLOYMENT",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "participantRoles": [
+    "ChiefOperatingOfficer",
+    "ChiefFinancialOfficer",
+    "CEOChiefOfStaff"
+  ],
+  "submittedAt": "2026-06-14T22:51:10+08:00",
+  "summary": "Deployment proving-ground evidence completed",
+  "details": [
+    "已记录本地 proving-ground 部署策略、发布窗口与 rollout plan"
+  ],
+  "evidence": [
+    "runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/deployment-evidence.json",
+    "runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/rollout-plan.json"
+  ],
+  "objectPath": "runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/deployment-evidence.json",
+  "packageHash": "0x49bbe335a1790dc647da9969930c3b7a4bbb2cdb26c21d5bceb2111af5731d04",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "ChiefTechnologyOfficer",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "ChiefTechnologyOfficer",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-14T22:51:10+08:00",
+      "packageHash": "0x49bbe335a1790dc647da9969930c3b7a4bbb2cdb26c21d5bceb2111af5731d04",
+      "signature": "0x450eee93f31d1174c8ce89148a474391a6601fcab202f1fdb20dc946df586c511c4dd31c8db4e6d82e09b4e6ca445595758d0526fdafec30e4657bcbb3290939",
+      "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+      "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "almost address ... adapt album",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-14T22:51:10+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:10+08:00",
+      "packageHash": "0x49bbe335a1790dc647da9969930c3b7a4bbb2cdb26c21d5bceb2111af5731d04",
+      "signature": "0x2ecd9e069745b8b320724423c35c5e40092ca546029811443f7146ecaea26b280f286d48ca3f6a2a2e3482b8c33ed9167194b5c806080bbedda2993614e55219",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer"
+      ],
+      "verifiedAt": "2026-06-14T22:51:10+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:11+08:00",
+      "packageHash": "0x49bbe335a1790dc647da9969930c3b7a4bbb2cdb26c21d5bceb2111af5731d04",
+      "signature": "0xf1da6bd87db9bfad080dc4b86f595be879a7443561a218f2b59589a2e49c343a38a19f56459b3e10579166c9b536d3c94461551532af10a35841a38488628abe",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-14T22:51:11+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-PLATFORM-001-DEPLOYMENT-V001",
+    "issuedAt": "2026-06-14T22:51:11+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

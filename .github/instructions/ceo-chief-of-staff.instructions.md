@@ -1,7 +1,7 @@
 ﻿---
-description: "适用场景：修改 CEOChiefOfStaff、小贾、ceo-chief-of-staff.agent.md、开始会议.prompt.md、结束会议.prompt.md、日常收口.prompt.md、中央收口.prompt.md、中央收口输出模板.prompt.md、PRD归属路由.prompt.md、开发任务.prompt.md、dev-task.prompt.md 时使用。约束当前 live 总助入口、会议/收口 prompt 命令和 registry 同步规则的维护边界；总助 soul/memory/colleagues/social 四层契约回到 TriCompany 源侧五件套维护。"
+description: "适用场景：修改 CEOChiefOfStaff、小贾、ceo-chief-of-staff.agent.md、开始会议.prompt.md、结束会议.prompt.md、日常收口.prompt.md、待办复查.prompt.md、review-backlog.prompt.md、周度平移.prompt.md、中央收口.prompt.md、中央收口输出模板.prompt.md、PRD归属路由.prompt.md、开发任务.prompt.md、dev-task.prompt.md 时使用。约束当前 live 总助入口、会议/收口 prompt 命令和 registry 同步规则的维护边界；总助 soul/memory/colleagues/social 四层契约回到 TriCompany 源侧五件套维护。"
 name: "CEOChiefOfStaff Maintenance Rules"
-applyTo: ".github/agents/ceo-chief-of-staff.agent.md, .github/prompts/开始会议.prompt.md, .github/prompts/结束会议.prompt.md, .github/prompts/日常收口.prompt.md, .github/prompts/中央收口.prompt.md, .github/prompts/中央收口输出模板.prompt.md, .github/prompts/PRD归属路由.prompt.md, .github/prompts/开发任务.prompt.md, .github/prompts/dev-task.prompt.md"
+applyTo: ".github/agents/ceo-chief-of-staff.agent.md, .github/prompts/开始会议.prompt.md, .github/prompts/结束会议.prompt.md, .github/prompts/日常收口.prompt.md, .github/prompts/待办复查.prompt.md, .github/prompts/review-backlog.prompt.md, .github/prompts/周度平移.prompt.md, .github/prompts/中央收口.prompt.md, .github/prompts/中央收口输出模板.prompt.md, .github/prompts/PRD归属路由.prompt.md, .github/prompts/开发任务.prompt.md, .github/prompts/dev-task.prompt.md"
 ---
 # CEO 总助配套文件维护规则
 
@@ -13,7 +13,7 @@ applyTo: ".github/agents/ceo-chief-of-staff.agent.md, .github/prompts/开始会�
   这里保留岗位职责、决策方式、行为护栏、默认输出结构和调用时真正生效的行为说明。
 - `TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.soul.md`、`.memory.md`、`.colleagues.md`、`.social.md` 是总助源侧四层认知契约。
   这些文件不再在 `TriMetaverse/.github/agents` 下保留 live 兼容副本；如需修改人格、记忆层、协作层或社交层契约，应回到 TriCompany 源侧五件套，再通过 support object / binding profile 发布。
-- `.github/prompts/开始会议.prompt.md`、`.github/prompts/结束会议.prompt.md`、`.github/prompts/日常收口.prompt.md`、`.github/prompts/中央收口.prompt.md`、`.github/prompts/中央收口输出模板.prompt.md`、`.github/prompts/PRD归属路由.prompt.md`、`.github/prompts/开发任务.prompt.md` 和 `.github/prompts/dev-task.prompt.md` 用于承载专用式会议 / 收口 / 归属路由 / 任务下发命令或标准输出模板。
+- `.github/prompts/开始会议.prompt.md`、`.github/prompts/结束会议.prompt.md`、`.github/prompts/日常收口.prompt.md`、`.github/prompts/待办复查.prompt.md`、`.github/prompts/review-backlog.prompt.md`、`.github/prompts/周度平移.prompt.md`、`.github/prompts/中央收口.prompt.md`、`.github/prompts/中央收口输出模板.prompt.md`、`.github/prompts/PRD归属路由.prompt.md`、`.github/prompts/开发任务.prompt.md` 和 `.github/prompts/dev-task.prompt.md` 用于承载专用式会议 / 收口 / 归属路由 / 任务下发命令或标准输出模板。
   这里负责把“开始会议 / 结束会议 / 日常收口”收口成明确动作，不替代总助 agent 本体的长期行为规范。
 
 ## 维护边界
@@ -28,7 +28,7 @@ applyTo: ".github/agents/ceo-chief-of-staff.agent.md, .github/prompts/开始会�
 - 如果是项目级持续偏好、会议回填口径、宿主记忆边界或其他需要跨会话保留的总助资产，必须优先落在 TriCompany 源侧五件套、`.github/prompts/`、`docs/workflow/operating-records/`、`CompanyGovernanceRegistry` 或 support root 文档中，不把 VS Code 用户级 `globalStorage/github.copilot-chat/memory-tool` 当成项目真源。
 - 如果运行消费数据经复核后升级为稳定组织事实，再同步到 CompanyGovernanceRegistry、workflow、operating records 或其他正式真源，而不是直接回灌到 `.colleagues.md` / `.social.md`。
 - 如果修改影响到岗位职责、授权边界、决策三分法、会议主持职责、输出结构或行为护栏，必须更新 `.agent.md`。
-- 如果修改的是会议开始 / 结束 / 日常收口 / 中央收口这类专用入口命令，或中央收口标准输出模板，优先更新 `.github/prompts/` 下对应 prompt 文件，而不是把命令细节塞回 `.agent.md`。
+- 如果修改的是会议开始 / 结束 / 日常收口 / 待办复查 / 周度平移 / 中央收口这类专用入口命令，或中央收口标准输出模板，优先更新 `.github/prompts/` 下对应 prompt 文件，而不是把命令细节塞回 `.agent.md`。
 - 这三类 prompt 如需触发 cognition writeback，应优先通过 `runtime/cognition/chief_of_staff_workflow_bridge.py` 的统一入口执行，不要把桥接细节分别散落到多个 prompt 或 agent 正文里。
 
 ## 对齐要求

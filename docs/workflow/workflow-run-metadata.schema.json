@@ -27,7 +27,7 @@
       "enum": [
         "copilot-chat",
         "copilot-cli",
-        "trihost-configured",
+        "trimodel-configured",
         "custom"
       ]
     },

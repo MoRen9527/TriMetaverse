@@ -43,6 +43,12 @@
 
 这既避免资源重复部署，也避免 TriCompany 过重。
 
+补充当前执行口径：
+
+- `TriCompany` 当前只负责本模块 training 内容，并由 `RAndDTrainer` 负责当前 Trainer 产出。
+- 与 `TriCompany` 同级的 `TriTraining/docs/training/` 负责 `TriTraining` 模块 training 内容；是否作为当前阶段的 training 真源产生面，由 `CPO` / `CTO` 联审评估。
+- `TriMetaverse/docs/training/tritraining/` 与同级 `tricompany/` 作用相同，只负责中央聚合面下的模块 training 包入口；宿主侧若需要 published copy，应按真源发布链进入 `TriTraining-copilot-host-assets`。
+
 ### 2.3 TriLC 必须和 TriPilot + vscodium 一起考虑安装软件打包
 
 从产品和技术层面，必须记住：
@@ -145,6 +151,8 @@
 
 当前 PC 端入口最适合承载：`TriPilot + vscodium`
 
+当前第一批课程发布切片应先以 `TriAvatar` 承接 `course / lab / progress / review` 四类页面。
+
 ### 3.3 API 与沙箱层
 
 负责：
@@ -163,6 +171,8 @@
 - 不应把全部教学规则、等级规则和课程真源都写进 `TriStaciss`
 - Web 端 code-run / project-run 的沙箱能力可继续评估 `VM + WebAssembly` 路线
 - 若未来 Web 端承接更多练习与运行流量，`TriStaciss` 也应预留 `k8s` 方向的扩展与服务保障能力
+
+当前第一批课程发布切片应先以 `TriStaciss` 承接 `course content API / lab submission API / code-run result API` 三类接口。
 
 ### 3.4 智能编排层
 

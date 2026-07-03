@@ -1,0 +1,17 @@
+{
+  "stage": "VERIFY-INTEGRATION",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "artifacts\\ipd-verify\\ipd-ipd-20260527-034923-verify-integration.junit.xml"
+  ],
+  "artifactDigest": "21bd111de9d63ef43f64a1ff1c6f1c9dbc9e92cc7c5460598f2f0e101ad8ffa6",
+  "summary": "VERIFY-INTEGRATION focused gateway tests captured",
+  "createdAt": "2026-06-10T15:13:58.250744+00:00",
+  "changedFiles": [
+    "artifacts/ipd-verify/ipd-ipd-20260527-034923-verify-integration.junit.xml"
+  ],
+  "gitDiffDigest": "fedff762882aacf2f59b8fac870ec752c1b3b2fa23da05d7acedc49c1380a117",
+  "gitDiffStatus": "captured",
+  "schemaVersion": "1.0"
+}

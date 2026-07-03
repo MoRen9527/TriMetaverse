@@ -2,15 +2,17 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/workflow/project-repo-document-baseline.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
-- lastSyncedAt: 2026-06-03
+- sourceOfTruth: TriCompany/docs/workflow/integrated-product-development-flow.md
+- publishedFrom: TriCompany/docs/workflow/integrated-product-development-flow.md
+- syncMode: published-summary
+- publishTier: release-side-summary
+- lastSyncedAt: 2026-06-15
 
 ## 1. 目标
 
 本基线用于约束三元宇宙各模块根或项目根在产品层、技术层、执行层、registry 层、workflow 层和 training 层应维护哪些核心文档，以及这些文档分别由谁负责、写什么、为什么存在。
+
+当前文件在该主题下只承担 TriMetaverse 发布侧摘要职责。当前阶段与赛博公司 IPD 直接相关的 docs bootstrap、PRD 归属解析与 `模块六层文档协同系统` 落位规则，以 TriCompany 的 [integrated-product-development-flow.md](../../../TriCompany/docs/workflow/integrated-product-development-flow.md) 为书面真源；本页用于发布侧摘要、模块对齐和跨仓引用，不作为公司级 IPD 主真源。
 
 本基线的项目标准专用术语为 `模块六层文档协同系统`。
 

@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-owner-action-package",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "deployment",
+  "phaseKey": "DEPLOYMENT",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "generatedAt": "2026-06-10T23:29:14+08:00",
+  "summary": "ChiefTechnologyOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“把模型平台任务收敛为 TriStaciss 主导的最小 OpenAI-compatible gateway MVP：补齐 /v1/models，固化 /v1/chat/completions，TriAvatar 仅保留后续最薄 smoke，TriMem 本轮不进入编码。”推进 Deployment / 部署交付（DEPLOYMENT）并协同 ChiefOperatingOfficer、ChiefFinancialOfficer、CEOChiefOfStaff，并在提交后等待总助初签与 CEO 终签。",
+  "reason": "Autopilot 不再代表 ChiefProductOfficer 或 ChiefTechnologyOfficer 直接提交阶段输出；当前只生成 owner action package，并等待 acting owner 手动提交真实阶段产物。",
+  "caseRef": "workbench/ipd/cases/IPD-20260527-034923/case.json",
+  "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/08-deployment.json",
+  "workItemRef": "workbench/ipd/cases/IPD-20260527-034923/work-items/08-deployment.json",
+  "intakeBriefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+  "intakeBriefRef": "workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+  "inputRefs": [
+    "workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+    "workbench/ipd/cases/IPD-20260527-034923/case.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/02-intelligence.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/03-designing.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/04-coding.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/05-verify-integration.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/06-redteam.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/07-qa.json"
+  ],
+  "inputRequirements": [
+    "qa package",
+    "release bundle",
+    "deployment checklist"
+  ],
+  "outputRequirements": [],
+  "requiredApprovers": [
+    "CEOChiefOfStaff",
+    "CEO"
+  ],
+  "schemaHint": {
+    "objectType": "TRIDEV_DEPLOYMENT_PACKAGE",
+    "schemaPath": ""
+  },
+  "draftTemplate": {
+    "kind": "ipd-engine-native-draft",
+    "objectType": "TRIDEV_DEPLOYMENT_PACKAGE",
+    "phaseKey": "DEPLOYMENT",
+    "businessOwner": "ChiefTechnologyOfficer",
+    "actingOwner": "ChiefTechnologyOfficer",
+    "moduleExecutor": "TriDev",
+    "gateOwner": "ChiefTechnologyOfficer",
+    "ownerRole": "ChiefTechnologyOfficer",
+    "participantRoles": [
+      "ChiefOperatingOfficer",
+      "ChiefFinancialOfficer",
+      "CEOChiefOfStaff"
+    ],
+    "summary": "ChiefTechnologyOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“把模型平台任务收敛为 TriStaciss 主导的最小 OpenAI-compatible gateway MVP：补齐 /v1/models，固化 /v1/chat/completions，TriAvatar 仅保留后续最薄 smoke，TriMem 本轮不进入编码。”推进 Deployment / 部署交付（DEPLOYMENT）并协同 ChiefOperatingOfficer、ChiefFinancialOfficer、CEOChiefOfStaff，并在提交后等待总助初签与 CEO 终签。",
+    "inputRequirements": [
+      "qa package",
+      "release bundle",
+      "deployment checklist"
+    ],
+    "requiredOutput": [
+      "提交部署证据、发布说明、上线窗口和 rollout 计划。",
+      "明确是否进入上线后 assurance 观察。"
+    ],
+    "superDevReferenceStages": [
+      "delivery",
+      "rehearsal"
+    ],
+    "workflowRefs": [
+      {
+        "relation": "phase-package-for",
+        "phase": "DEPLOYMENT",
+        "runId": "run-IPD-20260527-034923",
+        "branchId": "ipd-ipd-20260527-034923"
+      }
+    ]
+  },
+  "submissionTemplate": {
+    "submittedBy": "ChiefTechnologyOfficer",
+    "summary": "Deployment / 部署交付 已提交",
+    "details": [
+      "<detail>"
+    ],
+    "evidence": [
+      "<evidence-path>"
+    ],
+    "objectPath": "<primary-output-object-path>"
+  },
+  "evidencePolicy": "当前阶段需要真实工程执行证据（源码、测试、部署或运行产物），不能只依赖 workbench/docs/autopilot 生成物自动放行。",
+  "recommendedCommands": [
+    "python -m runtime.cognition.chief_of_staff_ipd_case submit --case-id IPD-20260527-034923 --stage-key deployment --submitted-by ChiefTechnologyOfficer --summary \"Deployment / 部署交付 已提交\" --detail \"<detail>\" --evidence <evidence-path> --object-path <primary-output-object-path>",
+    "python -m runtime.cognition.chief_of_staff_ipd_case signoff --case-id IPD-20260527-034923 --stage-key deployment --role CEOChiefOfStaff",
+    "python -m runtime.cognition.chief_of_staff_ipd_case signoff --case-id IPD-20260527-034923 --stage-key deployment --role CEO"
+  ],
+  "tridevOwnerAdapterBundle": {
+    "status": "ready",
+    "runId": "ipd-ipd-20260527-034923",
+    "targetStage": "DEPLOYMENT",
+    "ownerRole": "ChiefTechnologyOfficer",
+    "roleAdaptersPath": "docs/runs/ipd-ipd-20260527-034923/role-adapters.json",
+    "workflowStatePath": "docs/runs/ipd-ipd-20260527-034923/workflow-state.json",
+    "runCurrentStage": "DEPLOYMENT",
+    "runCurrentStageMatchesTargetStage": true,
+    "nextAction": "record-phase-result",
+    "executionMode": "auto",
+    "knowledgeBundlePath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
+    "promptContextPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
+    "taskPlanPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json",
+    "ownerAdapters": [
+      {
+        "role": "ChiefTechnologyOfficer",
+        "responsibility": "business-owner",
+        "adapterType": "business-owner",
+        "requiredInputs": [
+          "implementation",
+          "test-report",
+          "security-report"
+        ],
+        "producesArtifactTypes": [
+          "deployment-evidence"
+        ],
+        "blockedByReviewTypes": [],
+        "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DEPLOYMENT --status completed --artifact <path> --artifact-type deployment-evidence --summary \"DEPLOYMENT deployment-evidence captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-phase-result",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "phase",
+          "cwd": ".",
+          "role": "ChiefTechnologyOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "DEPLOYMENT",
+            "--status",
+            "completed",
+            "--artifact-type",
+            "deployment-evidence"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "DEPLOYMENT deployment-evidence captured"
+            }
+          ],
+          "artifactType": "deployment-evidence",
+          "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DEPLOYMENT --status completed --artifact <path> --artifact-type deployment-evidence --summary \"DEPLOYMENT deployment-evidence captured\""
+        }
+      },
+      {
+        "role": "ChiefTechnologyOfficer",
+        "responsibility": "acting-owner",
+        "adapterType": "acting-owner",
+        "requiredInputs": [
+          "implementation",
+          "test-report",
+          "security-report"
+        ],
+        "producesArtifactTypes": [
+          "deployment-evidence"
+        ],
+        "blockedByReviewTypes": [],
+        "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DEPLOYMENT --status completed --artifact <path> --artifact-type deployment-evidence --summary \"DEPLOYMENT deployment-evidence captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-phase-result",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "phase",
+          "cwd": ".",
+          "role": "ChiefTechnologyOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "DEPLOYMENT",
+            "--status",
+            "completed",
+            "--artifact-type",
+            "deployment-evidence"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "DEPLOYMENT deployment-evidence captured"
+            }
+          ],
+          "artifactType": "deployment-evidence",
+          "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DEPLOYMENT --status completed --artifact <path> --artifact-type deployment-evidence --summary \"DEPLOYMENT deployment-evidence captured\""
+        }
+      },
+      {
+        "role": "ChiefTechnologyOfficer",
+        "responsibility": "gate-owner",
+        "adapterType": "gate-owner",
+        "requiredInputs": [
+          "implementation",
+          "test-report",
+          "security-report"
+        ],
+        "producesArtifactTypes": [
+          "deployment-evidence"
+        ],
+        "blockedByReviewTypes": [],
+        "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DEPLOYMENT --status approved --approved-by <role> --artifact-type deployment-evidence",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "approve-gate",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "gate",
+          "cwd": ".",
+          "role": "ChiefTechnologyOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "DEPLOYMENT",
+            "--status",
+            "approved",
+            "--approved-by",
+            "ChiefTechnologyOfficer",
+            "--artifact-type",
+            "deployment-evidence"
+          ],
+          "inputTemplates": [],
+          "artifactType": "deployment-evidence",
+          "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DEPLOYMENT --status approved --approved-by <role> --artifact-type deployment-evidence"
+        }
+      }
+    ],
+    "supportingAdapters": [
+      {
+        "role": "TriDev",
+        "responsibility": "module-executor",
+        "adapterType": "module-executor",
+        "requiredInputs": [
+          "implementation",
+          "test-report",
+          "security-report"
+        ],
+        "producesArtifactTypes": [
+          "deployment-evidence"
+        ],
+        "blockedByReviewTypes": [],
+        "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DEPLOYMENT deployment-evidence captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-task-step",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "task-step",
+          "cwd": ".",
+          "role": "TriDev",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--task-id",
+            "<task-id>",
+            "--status",
+            "completed"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "DEPLOYMENT deployment-evidence captured"
+            }
+          ],
+          "artifactType": "deployment-evidence",
+          "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DEPLOYMENT deployment-evidence captured\""
+        }
+      }
+    ],
+    "evidenceRefs": [
+      "docs/runs/ipd-ipd-20260527-034923/workflow-state.json",
+      "docs/runs/ipd-ipd-20260527-034923/role-adapters.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json"
+    ]
+  }
+}

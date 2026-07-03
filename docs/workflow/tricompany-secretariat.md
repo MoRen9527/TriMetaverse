@@ -6,10 +6,10 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/workflow/tricompany-secretariat.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- sourceOfTruth: TriCompany/docs/workflow/cyber-company-secretariat.md
+- publishedFrom: TriCompany/docs/workflow/cyber-company-secretariat.md
+- syncMode: published-summary
+- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 ---
@@ -17,6 +17,8 @@
 ## 1. 文档定位
 
 本文用于定义 TriMetaverse 赛博公司的秘书处机制，承接公司级会议组织、纪要整理、会后跟进、记录归档和回填要求，并明确秘书处作为行政管理体系的一部分如何运行。
+
+当前文件只承担 TriMetaverse 发布侧摘要职责。赛博公司当前阶段的秘书处机制、会议开始 / 结束口径、动作项回填与治理边界真源已回到 TriCompany 的 `cyber-company-secretariat.md`；本页用于发布侧镜像、跨模块引用和工程实施对齐，不作为公司级秘书处机制主真源。
 
 本文属于公司 workflow 文档，不属于任何单一岗位的 agent 本体。岗位 agent 只负责引用本机制，不在各自 prompt 中重复维护整套会议组织细节。
 

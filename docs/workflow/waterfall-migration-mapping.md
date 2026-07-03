@@ -6,14 +6,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/waterfall-migration-mapping.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ---
 
 ## 1. 阶段迁移总览
+
+当前文件是 TriMetaverse workflow 历史阶段迁移对照表的本地真源，只负责旧阶段名到新阶段名的迁移说明和审计兼容口径，不承担 TriCompany 公司级 workflow 书面真源职责。
 
 | 旧模型阶段 | 新模型阶段 | 对齐说明 |
 | --- | --- | --- |

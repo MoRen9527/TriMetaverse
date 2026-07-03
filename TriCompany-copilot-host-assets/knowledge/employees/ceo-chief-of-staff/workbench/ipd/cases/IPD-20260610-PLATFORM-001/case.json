@@ -1,0 +1,582 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "IPD-20260610-PLATFORM-001",
+  "title": "模型 API 转接平台生产级平台首版交付",
+  "status": "awaiting-stage-approvals",
+  "priority": "high",
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar",
+    "TriChain",
+    "TriWeb4"
+  ],
+  "createdAt": "2026-06-15T00:00:00+08:00",
+  "updatedAt": "2026-06-16T21:37:17+08:00",
+  "currentStageKey": "discovery",
+  "currentWorkItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
+  "intake": {
+    "objective": "以 TriAvatar 作为现役 Web 前端入口、TriStaciss 作为后端模型 API 转接平台真源，完成第一版生产级平台交付。",
+    "taskDescription": "当前最小 gateway slice 只完成了 TriStaciss 后端 Python 回归，没有覆盖现役前端入口的最小联调。现按 CEO 最新纠偏，继续使用 20260610 platform case，但把范围改为：TriAvatar 作为唯一现役前端入口承接 Web 端功能并保持原有功能可用；TriStaciss 只负责后端 API 平台与 provider 路由，不再使用其内部遗留前端模块。当前需由 CPO 写完整 PRD，再由 CTO / TriDev 围绕模型 API 转接平台首版推进，并从 Discovery 重新走完整个流程。员工身份与签名机制当前仍限定为非链上模拟，不写成 TriChain / TriWeb4 已上线能力。",
+    "constraints": [
+      "TriAvatar 是当前新 case 的现役前端入口，必须保持原有功能可用。",
+      "TriStaciss 内部 avatar-react 属于遗留迁移模块，不纳入新 case 交付面。",
+      "必须先形成完整 PRD，再进入 Designing / Coding。",
+      "当前目标是第一版生产级平台，不写成生产机平台。"
+    ],
+    "slotAnswers": {
+      "competitorReference": "LiteLLM、sub2api、OpenRouter、OpenAI API Platform",
+      "targetUserScenario": "先服务内部产品负责人和技术负责人，在统一模型 API 转接平台规划、联调与首版发布验证场景下使用",
+      "deliveryWindow": "当前先完成 Discovery 与 Intelligence 产物收口，再进入 Designing / Coding；十阶段保持可在 CEO/总助签发点暂停",
+      "budgetGuardrail": "首轮仅使用现有人力与少量工具成本，不新增正式部署预算",
+      "successMetric": "形成可签发的首版生产级平台 PRD、技术方案、验证方案，并证明 TriAvatar 现役前端入口与 TriStaciss 后端平台的最小联调链路成立",
+      "mustHaveScope": "TriAvatar 前端入口保持原有功能可用；TriStaciss 后端完成模型 API 转接平台首版主线；支持 Discovery 到 Delivery 的十阶段推进与签发暂停点",
+      "explicitOutOfScope": "本轮不使用 TriStaciss 内部遗留前端模块；不涉及正式宿主切换；不涉及真实链上钱包 / NFT；不把单次阶段推进写成全平台已发布"
+    },
+    "clarificationRequired": true,
+    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+    "status": "approved",
+    "opportunitySignals": [],
+    "businessModelFit": [],
+    "stageFit": [],
+    "companyContext": [],
+    "ownerProposal": [],
+    "resourceEnvelope": [],
+    "prerequisites": [],
+    "requiredSupport": [],
+    "expectedOutcomes": [],
+    "caseCategory": "project-delivery",
+    "referenceTheme": "PLATFORM",
+    "packageHash": "",
+    "releaseCounter": 0,
+    "releaseVersion": "",
+    "releaseStatus": "draft",
+    "releaseIssuedAt": "",
+    "releaseIssuedByRole": "",
+    "expectedDelivery": "",
+    "createdBy": "",
+    "createdAt": "",
+    "clarificationSheet": {
+      "required": true,
+      "status": "ready-for-dispatch",
+      "missingSlotKeys": [],
+      "followUpQuestions": [],
+      "slots": [
+        {
+          "slotKey": "competitorReference",
+          "label": "竞品 / 对标对象",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有竞品或对标对象，CPO 在 Discovery 阶段就缺少明确的产品/官方手册研究起点。",
+          "question": "这次需求至少想对标哪 1-3 个产品、平台、仓库或流程？如果没有直接竞品，也请明确‘按哪类现有方案对标’。",
+          "suggestedOptions": [
+            "已有 1-3 个明确竞品，请直接写名称或链接。",
+            "没有直接竞品，但有同类流程/平台可对标。",
+            "按内部流程问题处理，不对标外部竞品，但请说明原因。",
+            "自定义。"
+          ],
+          "currentValue": "LiteLLM、sub2api、OpenRouter、OpenAI API Platform",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "targetUserScenario",
+          "label": "首轮目标用户与使用场景",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "不明确谁在什么场景下使用，CMO 很难验证这是不是值得做的真实需求。",
+          "question": "这次先服务哪类用户，在什么高频场景下用，当前最想解决什么问题？",
+          "suggestedOptions": [
+            "先服务内部岗位，提高研发/经营执行效率。",
+            "先服务现有潜在客户，验证是否愿意试点或付费。",
+            "先做 CEO / 总助 / 管理层内部控制面。",
+            "自定义。"
+          ],
+          "currentValue": "先服务内部产品负责人和技术负责人，在统一模型 API 转接平台规划、联调与首版发布验证场景下使用",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "deliveryWindow",
+          "label": "期望工期 / 节奏",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有节奏约束，总助无法把任务拆成合理阶段，也无法约束 CPO / CTO 的交付窗口。",
+          "question": "这次希望以什么节奏推进？是先 48 小时内出 briefing，还是一周内出 PRD，还是两周内跑最小验证？",
+          "suggestedOptions": [
+            "48 小时内完成 intake / Discovery 入口澄清。",
+            "1 周内完成 Discovery + Intelligence + PRD。",
+            "2 周内完成最小 MVP 验证。",
+            "自定义。"
+          ],
+          "currentValue": "当前先完成 Discovery 与 Intelligence 产物收口，再进入 Designing / Coding；十阶段保持可在 CEO/总助签发点暂停",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "budgetGuardrail",
+          "label": "预算护栏 / 成本窗口",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "intelligence"
+          ],
+          "whyItMatters": "不明确预算窗口，CFO 就无法形成后续预算护栏，CPO/CTO 也无法判断首轮范围。",
+          "question": "这次允许投入到什么程度？只用现有人力，还是允许少量工具成本，还是允许明确试验预算？",
+          "suggestedOptions": [
+            "只用现有岗位和现有工具先验证。",
+            "允许少量模型/API/工具试验成本。",
+            "允许 1-3 人天级别的试验投入。",
+            "自定义。"
+          ],
+          "currentValue": "首轮仅使用现有人力与少量工具成本，不新增正式部署预算",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "successMetric",
+          "label": "首轮成功信号",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "delivery"
+          ],
+          "whyItMatters": "没有成功信号，后续很容易把‘做完一些功能’误当成‘需求成立’。",
+          "question": "这次第一轮做成，最希望看到什么结果？流程跑通、试点用户正反馈、可收费、还是节省了人力？",
+          "suggestedOptions": [
+            "先证明 IPD / 产品流程能跑通。",
+            "先拿到一个可展示或可试点的 MVP。",
+            "先验证有人愿意继续用或付费。",
+            "自定义。"
+          ],
+          "currentValue": "形成可签发的首版生产级平台 PRD、技术方案、验证方案，并证明 TriAvatar 现役前端入口与 TriStaciss 后端平台的最小联调链路成立",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "mustHaveScope",
+          "label": "必须交付的最小范围",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有最小范围，Discovery/Intelligence 很容易继续膨胀，最后 PRD 无法收口。",
+          "question": "这次必须交付的最小结果是什么？是一份 PRD、一个最小工作流、一个 MVP 页面，还是完整平台闭环？",
+          "suggestedOptions": [
+            "先交付可签核 PRD 与项目计划。",
+            "先交付单条最小工作流验证。",
+            "先交付可演示 MVP。",
+            "自定义。"
+          ],
+          "currentValue": "TriAvatar 前端入口保持原有功能可用；TriStaciss 后端完成模型 API 转接平台首版主线；支持 Discovery 到 Delivery 的十阶段推进与签发暂停点",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "explicitOutOfScope",
+          "label": "明确不做项",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有不做项，团队容易把远期能力和当前验证目标混写。",
+          "question": "这次明确不做什么？比如不上正式宿主、不做链上实现、不做大规模运营、不做完整商业化。",
+          "suggestedOptions": [
+            "不涉及正式宿主切换。",
+            "不涉及链上/钱包/合约真实实现。",
+            "不涉及大规模上线与运营。",
+            "自定义。"
+          ],
+          "currentValue": "本轮不使用 TriStaciss 内部遗留前端模块；不涉及正式宿主切换；不涉及真实链上钱包 / NFT；不把单次阶段推进写成全平台已发布",
+          "allowCustom": true
+        }
+      ]
+    },
+    "roleAssignmentMatrix": [
+      {
+        "role": "CEOChiefOfStaff",
+        "stageKeys": [
+          "intake",
+          "backlog",
+          "sprint-planning",
+          "retrospective",
+          "validation-handoff"
+        ],
+        "taskType": "intake-orchestration",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "把 CEO 需求转成 intake briefing，补齐关键填槽信息，并在流程优化类 case 中维护 backlog、迭代计划、复盘和验证移交。",
+        "deliverables": [
+          "intake briefing",
+          "clarification sheet",
+          "dispatch plan",
+          "backlog memo",
+          "retrospective memo"
+        ]
+      },
+      {
+        "role": "CEO",
+        "stageKeys": [
+          "intake"
+        ],
+        "taskType": "clarification-and-signoff",
+        "status": "active",
+        "canFreezeCase": false,
+        "responsibility": "补齐关键槽位并决定是否让事项进入公司级 IPD 主动交付线。",
+        "deliverables": [
+          "clarification answers",
+          "intake signoff"
+        ]
+      },
+      {
+        "role": "ChiefMarketingOfficer",
+        "stageKeys": [
+          "discovery"
+        ],
+        "taskType": "demand-validation",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "验证这是不是合理的真实需求，避免公司做出没有市场需求的产品。",
+        "deliverables": [
+          "需求真实性验证",
+          "目标用户/场景复核"
+        ]
+      },
+      {
+        "role": "ChiefProductOfficer",
+        "stageKeys": [
+          "discovery",
+          "intelligence",
+          "delivery",
+          "backlog",
+          "sprint-planning",
+          "sprint-review",
+          "validation-handoff"
+        ],
+        "taskType": "product-research-and-prd",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "项目交付 case 中负责 Discovery/Intelligence/Delivery；流程优化 case 中负责 backlog 边界、review 收口和真实验证 handoff 口径。",
+        "deliverables": [
+          "DiscoveryReferenceFunctionalBrief",
+          "DiscoveryCompetitorLandscape",
+          "DiscoveryCommonCapabilityMatrix",
+          "DiscoveryHighlightOpportunityMemo",
+          "竞品/功能/官方手册研究",
+          "正式 PRD",
+          "项目计划",
+          "review memo"
+        ]
+      },
+      {
+        "role": "ChiefTechnologyOfficer",
+        "stageKeys": [
+          "intelligence",
+          "designing",
+          "coding",
+          "verify-integration",
+          "redteam",
+          "qa",
+          "deployment",
+          "assurance",
+          "sprint-execution",
+          "sprint-review",
+          "validation-handoff"
+        ],
+        "taskType": "code-research-and-technical-design",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "项目交付 case 中负责代码研究、设计与开发；流程优化 case 中负责 sprint-execution 的实现、验证和技术缺口收口。",
+        "deliverables": [
+          "IntelligenceCapabilityExtractionMatrix",
+          "IntelligenceOpenSourceLandscape",
+          "IntelligenceCodegraphAnalysis",
+          "IntelligenceArchitectureOptionMemo",
+          "开源代码分析结论",
+          "技术方案",
+          "execution validation"
+        ]
+      },
+      {
+        "role": "ChiefOperatingOfficer",
+        "stageKeys": [
+          "intelligence",
+          "deployment",
+          "assurance",
+          "delivery"
+        ],
+        "taskType": "operations-constraints",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "补试点路径、上线节奏和运营约束。",
+        "deliverables": [
+          "运营约束",
+          "试点路径",
+          "rollout 计划"
+        ]
+      },
+      {
+        "role": "ChiefFinancialOfficer",
+        "stageKeys": [
+          "intelligence",
+          "deployment",
+          "assurance",
+          "delivery"
+        ],
+        "taskType": "budget-guardrail",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "补预算护栏、成本窗口、止损条件和后续财务复核。",
+        "deliverables": [
+          "预算护栏",
+          "成本约束",
+          "止损条件"
+        ]
+      }
+    ],
+    "approvals": [
+      {
+        "role": "CEO",
+        "status": "pending",
+        "note": "",
+        "updatedAt": "",
+        "packageHash": "",
+        "signature": "",
+        "signerAddress": "",
+        "publicKey": "",
+        "credentialType": "",
+        "credentialHint": "",
+        "verificationStatus": "not-signed",
+        "verifiedRoles": [],
+        "verifiedAt": ""
+      },
+      {
+        "role": "CEOChiefOfStaff",
+        "status": "pending",
+        "note": "",
+        "updatedAt": "",
+        "packageHash": "",
+        "signature": "",
+        "signerAddress": "",
+        "publicKey": "",
+        "credentialType": "",
+        "credentialHint": "",
+        "verificationStatus": "not-signed",
+        "verifiedRoles": [],
+        "verifiedAt": ""
+      }
+    ]
+  },
+  "stages": [
+    {
+      "stageKey": "discovery",
+      "title": "Discovery / 任务澄清",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "DISCOVERY",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "ChiefMarketingOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "submitted",
+      "requiredApprovers": [
+        "ChiefProductOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefProductOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-16T21:37:17+08:00",
+          "packageHash": "0x134f72a4d65ad092cd7fa03f243e536bd73b67f1396b6eb24b3798b0158937b3",
+          "signature": "0x0610a500e721a9f97845319cbae6a3a61b8427ad7bc97309cb4c10fcd7d51c6d68a527d9d7ad08dd860c1777a5e92607aa08d2ec4eda4e71805b9db626682868",
+          "signerAddress": "0xd61e3768c6096800f58448a2a22e832b66b05d86",
+          "publicKey": "0x043b3f02041aa9a655bb0a67700309a1444f60a20c579e69257f89e4837762c2506463fd57589bfb10034024a29e3d226a688205b2a89251e316f27a54507334c2",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "aisle addict ... achieve above",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-16T21:37:17+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_DISCOVERY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "CEO / 总助正式任务",
+        "intake briefing",
+        "上游业务背景与当前阶段边界"
+      ],
+      "superDevReferenceStages": [
+        "research",
+        "baseline"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/outputs/01-discovery.json",
+      "activatedAt": "2026-06-15T00:00:00+08:00",
+      "submittedAt": "2026-06-16T21:37:17+08:00",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "Discovery automation package 已提交",
+      "lastUpdatedAt": "2026-06-16T21:37:17+08:00",
+      "packageHash": "0x134f72a4d65ad092cd7fa03f243e536bd73b67f1396b6eb24b3798b0158937b3",
+      "releaseCounter": 0,
+      "releaseVersion": "",
+      "releaseStatus": "draft",
+      "releaseIssuedAt": "",
+      "releaseIssuedByRole": ""
+    },
+    {
+      "stageKey": "intelligence",
+      "title": "Intelligence / 结构化输入",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "INTELLIGENCE",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "ChiefMarketingOfficer",
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "ChiefProductOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefProductOfficer",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_INTELLIGENCE_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "Discovery package",
+        "市场证据与机会线索",
+        "运营约束",
+        "预算护栏"
+      ],
+      "superDevReferenceStages": [
+        "docs",
+        "docs_confirm",
+        "prd"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-15T00:00:00+08:00",
+      "packageHash": "",
+      "releaseCounter": 0,
+      "releaseVersion": "",
+      "releaseStatus": "draft",
+      "releaseIssuedAt": "",
+      "releaseIssuedByRole": ""
+    }
+  ],
+  "freezeControl": {},
+  "entryCheckpoint": "discovery"
+}

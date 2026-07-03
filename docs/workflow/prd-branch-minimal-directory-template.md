@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/prd-branch-minimal-directory-template.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 目的：给目标模块或项目根提供一份可直接照着建的 `模块六层文档协同系统` 最小样板，使 `INTELLIGENCE` 审核通过后的 PRD 分支能在正确落位点上进入标准落地面。
+
+当前文件是 TriMetaverse 模板资产的本地真源，只负责 PRD 分支最小目录样板和 docs bootstrap 入口；模块归属判断与 source-side owner 规则仍以 TriCompany 对应岗位 / workflow 真源为准。
 
 ---
 

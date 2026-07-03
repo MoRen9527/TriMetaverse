@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260612-WORKFLOW-002",
+  "stageKey": "sprint-planning",
+  "phaseKey": "SPRINT-PLANNING",
+  "businessOwner": "CEOChiefOfStaff",
+  "actingOwner": "CEOChiefOfStaff",
+  "moduleExecutor": "TriCompany",
+  "gateOwner": "CEOChiefOfStaff",
+  "ownerRole": "CEOChiefOfStaff",
+  "participantRoles": [
+    "ChiefProductOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "submittedAt": "2026-06-12T12:27:45+08:00",
+  "summary": "提交全阶段 IPD 优化首轮 sprint plan，固定 Gate A replay、自测矩阵、Discovery competitor carry-forward guard、rollback matrix 与 Gate B/Gate C 入口。",
+  "details": [
+    "本轮 sprint-planning 明确 proving-ground 仍固定为 PLATFORM-001，并把 execution 前必须完成的自测、回退和 capability gate map 固定下来。",
+    "新增一条 CTO 负责的流程严谨性补丁：Discovery 可以扩展更多竞品，但 CEO 填槽的 seeded competitors 必须被后续 catalog / brief / landscape 覆盖。"
+  ],
+  "evidence": [
+    "docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/02-sprint-plan.md",
+    "docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/02-sprint-plan-package.json"
+  ],
+  "objectPath": "",
+  "packageHash": "0x1bc56aca19342eee7fff4959e24f15586cd6fce3e11cb9c8627f79311cd11a19",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "CEOChiefOfStaff",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-12T12:27:45+08:00",
+      "packageHash": "0x1bc56aca19342eee7fff4959e24f15586cd6fce3e11cb9c8627f79311cd11a19",
+      "signature": "0xa2df3e180eb159bceb7bac06ff4617b1c194ccf30113f801c434041ca090173e42e03d1faf37976483f9d3dd29eb73f0cdec34600c25c95341a048ab0d2391d4",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-12T12:27:45+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "",
+      "updatedAt": "",
+      "packageHash": "",
+      "signature": "",
+      "signerAddress": "",
+      "publicKey": "",
+      "credentialType": "",
+      "credentialHint": "",
+      "verificationStatus": "not-signed",
+      "verifiedRoles": [],
+      "verifiedAt": ""
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "pending",
+      "note": "",
+      "updatedAt": "",
+      "packageHash": "",
+      "signature": "",
+      "signerAddress": "",
+      "publicKey": "",
+      "credentialType": "",
+      "credentialHint": "",
+      "verificationStatus": "not-signed",
+      "verifiedRoles": [],
+      "verifiedAt": ""
+    }
+  ],
+  "release": {
+    "status": "draft",
+    "version": "",
+    "issuedAt": "",
+    "issuedByRole": ""
+  }
+}

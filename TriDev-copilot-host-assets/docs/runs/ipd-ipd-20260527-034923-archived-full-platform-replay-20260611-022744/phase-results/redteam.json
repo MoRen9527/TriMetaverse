@@ -1,0 +1,19 @@
+{
+  "stage": "REDTEAM",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "artifacts\\ipd-redteam\\ipd-ipd-20260527-034923-redteam.md",
+    "artifacts\\ipd-redteam\\ipd-ipd-20260527-034923-redteam.junit.xml"
+  ],
+  "artifactDigest": "3101329a80d5ddca68a75e4414c6c642501c699afbba0299802a45eae79816c7",
+  "summary": "REDTEAM focused gateway security review captured",
+  "createdAt": "2026-06-10T15:20:41.246722+00:00",
+  "changedFiles": [
+    "artifacts/ipd-redteam/ipd-ipd-20260527-034923-redteam.junit.xml",
+    "artifacts/ipd-redteam/ipd-ipd-20260527-034923-redteam.md"
+  ],
+  "gitDiffDigest": "3582107dc7629622c2a4ff433b1dcf215926797b1a98b0beb4213624224132f6",
+  "gitDiffStatus": "captured",
+  "schemaVersion": "1.0"
+}

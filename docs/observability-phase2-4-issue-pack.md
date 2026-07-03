@@ -1,16 +1,20 @@
+﻿<!-- markdownlint-disable MD022 MD024 MD031 MD032 -->
+
 # Observability（VibeCraft-inspired）Phase 2/3/4 Issue 包
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/observability-phase2-4-issue-pack.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse observability Phase 2/3/4 issue 包的本地真源，用于维护当前阶段的 issue 文本包与执行拆解；它不是 TriCompany 公司级 workflow 或产品真源。
 
 更新时间：2026-02-27
 依赖文档：
-- `docs/refactor-master-plan-socialfi-core-agent-tristaciss.md`
+- `docs/refactor-master-plan-socialfi-TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)-tristaciss.md`
 - `docs/vibecraft-integration-3d-agent.md`
 - `docs/contracts/observability-event-mapping.md`
 

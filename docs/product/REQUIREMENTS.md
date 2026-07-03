@@ -2,11 +2,11 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/product/REQUIREMENTS.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- sourceOfTruth: TriCompany/docs/product/REQUIREMENTS.md
+- publishedFrom: TriCompany/docs/product/REQUIREMENTS.md
+- syncMode: published-summary
+- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
-- 当前状态：当前为中央真源与治理摘要仓。
-- 本文件用于后续补齐需求范围、用户场景和验收口径。
+- 当前状态：当前为中央发布侧需求摘要页。
+- 本文件用于同步 TriCompany 公司级需求范围、用户场景和验收口径的发布侧摘要，不替代 TriCompany 产品真源。

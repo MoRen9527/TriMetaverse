@@ -1,0 +1,3237 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260610-platform-001",
+  "stage": "DISCOVERY",
+  "nextAction": "record-phase-result",
+  "executionMode": "auto",
+  "adapters": [
+    {
+      "role": "ChiefProductOfficer",
+      "responsibility": "business-owner",
+      "adapterType": "business-owner",
+      "requiredInputs": [
+        "reference-evidence"
+      ],
+      "producesArtifactTypes": [
+        "reference-evidence"
+      ],
+      "blockedByReviewTypes": [
+        "baseline",
+        "resume"
+      ],
+      "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\"",
+      "executionAdapter": {
+        "kind": "tridev-cli",
+        "action": "record-phase-result",
+        "command": "python",
+        "module": "tridev.cli",
+        "subcommand": "phase",
+        "cwd": ".",
+        "role": "ChiefProductOfficer",
+        "args": [
+          "--root",
+          ".",
+          "--run-id",
+          "<run-id>",
+          "--stage",
+          "DISCOVERY",
+          "--status",
+          "completed",
+          "--artifact-type",
+          "reference-evidence"
+        ],
+        "inputTemplates": [
+          {
+            "flag": "--artifact",
+            "placeholder": "<path>",
+            "repeatable": true
+          },
+          {
+            "flag": "--summary",
+            "placeholder": "DISCOVERY reference-evidence captured"
+          }
+        ],
+        "artifactType": "reference-evidence",
+        "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\""
+      }
+    },
+    {
+      "role": "ChiefProductOfficer",
+      "responsibility": "acting-owner",
+      "adapterType": "acting-owner",
+      "requiredInputs": [
+        "reference-evidence"
+      ],
+      "producesArtifactTypes": [
+        "reference-evidence"
+      ],
+      "blockedByReviewTypes": [
+        "baseline",
+        "resume"
+      ],
+      "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\"",
+      "executionAdapter": {
+        "kind": "tridev-cli",
+        "action": "record-phase-result",
+        "command": "python",
+        "module": "tridev.cli",
+        "subcommand": "phase",
+        "cwd": ".",
+        "role": "ChiefProductOfficer",
+        "args": [
+          "--root",
+          ".",
+          "--run-id",
+          "<run-id>",
+          "--stage",
+          "DISCOVERY",
+          "--status",
+          "completed",
+          "--artifact-type",
+          "reference-evidence"
+        ],
+        "inputTemplates": [
+          {
+            "flag": "--artifact",
+            "placeholder": "<path>",
+            "repeatable": true
+          },
+          {
+            "flag": "--summary",
+            "placeholder": "DISCOVERY reference-evidence captured"
+          }
+        ],
+        "artifactType": "reference-evidence",
+        "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\""
+      }
+    },
+    {
+      "role": "TriDev",
+      "responsibility": "module-executor",
+      "adapterType": "module-executor",
+      "requiredInputs": [
+        "reference-evidence"
+      ],
+      "producesArtifactTypes": [
+        "reference-evidence"
+      ],
+      "blockedByReviewTypes": [
+        "baseline",
+        "resume"
+      ],
+      "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DISCOVERY reference-evidence captured\"",
+      "executionAdapter": {
+        "kind": "tridev-cli",
+        "action": "record-task-step",
+        "command": "python",
+        "module": "tridev.cli",
+        "subcommand": "task-step",
+        "cwd": ".",
+        "role": "TriDev",
+        "args": [
+          "--root",
+          ".",
+          "--run-id",
+          "<run-id>",
+          "--task-id",
+          "<task-id>",
+          "--status",
+          "completed"
+        ],
+        "inputTemplates": [
+          {
+            "flag": "--artifact",
+            "placeholder": "<path>",
+            "repeatable": true
+          },
+          {
+            "flag": "--summary",
+            "placeholder": "DISCOVERY reference-evidence captured"
+          }
+        ],
+        "artifactType": "reference-evidence",
+        "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DISCOVERY reference-evidence captured\""
+      }
+    },
+    {
+      "role": "ChiefProductOfficer",
+      "responsibility": "gate-owner",
+      "adapterType": "gate-owner",
+      "requiredInputs": [
+        "reference-evidence"
+      ],
+      "producesArtifactTypes": [
+        "reference-evidence"
+      ],
+      "blockedByReviewTypes": [
+        "baseline",
+        "resume"
+      ],
+      "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DISCOVERY --status approved --approved-by <role> --artifact-type reference-evidence",
+      "executionAdapter": {
+        "kind": "tridev-cli",
+        "action": "approve-gate",
+        "command": "python",
+        "module": "tridev.cli",
+        "subcommand": "gate",
+        "cwd": ".",
+        "role": "ChiefProductOfficer",
+        "args": [
+          "--root",
+          ".",
+          "--run-id",
+          "<run-id>",
+          "--stage",
+          "DISCOVERY",
+          "--status",
+          "approved",
+          "--approved-by",
+          "ChiefProductOfficer",
+          "--artifact-type",
+          "reference-evidence"
+        ],
+        "inputTemplates": [],
+        "artifactType": "reference-evidence",
+        "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DISCOVERY --status approved --approved-by <role> --artifact-type reference-evidence"
+      }
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "responsibility": "participant",
+      "adapterType": "participant",
+      "requiredInputs": [
+        "reference-evidence"
+      ],
+      "producesArtifactTypes": [
+        "reference-evidence"
+      ],
+      "blockedByReviewTypes": [
+        "baseline",
+        "resume"
+      ],
+      "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+      "executionAdapter": {
+        "kind": "tridev-cli",
+        "action": "refresh-role-plan",
+        "command": "python",
+        "module": "tridev.cli",
+        "subcommand": "role-plan",
+        "cwd": ".",
+        "role": "CEOChiefOfStaff",
+        "args": [
+          "--root",
+          ".",
+          "--run-id",
+          "<run-id>"
+        ],
+        "inputTemplates": [],
+        "artifactType": "reference-evidence",
+        "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+      }
+    },
+    {
+      "role": "CEO",
+      "responsibility": "participant",
+      "adapterType": "participant",
+      "requiredInputs": [
+        "reference-evidence"
+      ],
+      "producesArtifactTypes": [
+        "reference-evidence"
+      ],
+      "blockedByReviewTypes": [
+        "baseline",
+        "resume"
+      ],
+      "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+      "executionAdapter": {
+        "kind": "tridev-cli",
+        "action": "refresh-role-plan",
+        "command": "python",
+        "module": "tridev.cli",
+        "subcommand": "role-plan",
+        "cwd": ".",
+        "role": "CEO",
+        "args": [
+          "--root",
+          ".",
+          "--run-id",
+          "<run-id>"
+        ],
+        "inputTemplates": [],
+        "artifactType": "reference-evidence",
+        "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+      }
+    },
+    {
+      "role": "CMO",
+      "responsibility": "participant",
+      "adapterType": "participant",
+      "requiredInputs": [
+        "reference-evidence"
+      ],
+      "producesArtifactTypes": [
+        "reference-evidence"
+      ],
+      "blockedByReviewTypes": [
+        "baseline",
+        "resume"
+      ],
+      "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+      "executionAdapter": {
+        "kind": "tridev-cli",
+        "action": "refresh-role-plan",
+        "command": "python",
+        "module": "tridev.cli",
+        "subcommand": "role-plan",
+        "cwd": ".",
+        "role": "CMO",
+        "args": [
+          "--root",
+          ".",
+          "--run-id",
+          "<run-id>"
+        ],
+        "inputTemplates": [],
+        "artifactType": "reference-evidence",
+        "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+      }
+    },
+    {
+      "role": "CTO",
+      "responsibility": "participant",
+      "adapterType": "participant",
+      "requiredInputs": [
+        "reference-evidence"
+      ],
+      "producesArtifactTypes": [
+        "reference-evidence"
+      ],
+      "blockedByReviewTypes": [
+        "baseline",
+        "resume"
+      ],
+      "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+      "executionAdapter": {
+        "kind": "tridev-cli",
+        "action": "refresh-role-plan",
+        "command": "python",
+        "module": "tridev.cli",
+        "subcommand": "role-plan",
+        "cwd": ".",
+        "role": "CTO",
+        "args": [
+          "--root",
+          ".",
+          "--run-id",
+          "<run-id>"
+        ],
+        "inputTemplates": [],
+        "artifactType": "reference-evidence",
+        "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+      }
+    }
+  ],
+  "stageAdapters": [
+    {
+      "stage": "DISCOVERY",
+      "adapters": [
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "reference-evidence"
+          ],
+          "producesArtifactTypes": [
+            "reference-evidence"
+          ],
+          "blockedByReviewTypes": [
+            "baseline",
+            "resume"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DISCOVERY",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "reference-evidence"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DISCOVERY reference-evidence captured"
+              }
+            ],
+            "artifactType": "reference-evidence",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\""
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "reference-evidence"
+          ],
+          "producesArtifactTypes": [
+            "reference-evidence"
+          ],
+          "blockedByReviewTypes": [
+            "baseline",
+            "resume"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DISCOVERY",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "reference-evidence"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DISCOVERY reference-evidence captured"
+              }
+            ],
+            "artifactType": "reference-evidence",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "reference-evidence"
+          ],
+          "producesArtifactTypes": [
+            "reference-evidence"
+          ],
+          "blockedByReviewTypes": [
+            "baseline",
+            "resume"
+          ],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DISCOVERY reference-evidence captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DISCOVERY reference-evidence captured"
+              }
+            ],
+            "artifactType": "reference-evidence",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DISCOVERY reference-evidence captured\""
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "reference-evidence"
+          ],
+          "producesArtifactTypes": [
+            "reference-evidence"
+          ],
+          "blockedByReviewTypes": [
+            "baseline",
+            "resume"
+          ],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DISCOVERY --status approved --approved-by <role> --artifact-type reference-evidence",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DISCOVERY",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefProductOfficer",
+              "--artifact-type",
+              "reference-evidence"
+            ],
+            "inputTemplates": [],
+            "artifactType": "reference-evidence",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DISCOVERY --status approved --approved-by <role> --artifact-type reference-evidence"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "reference-evidence"
+          ],
+          "producesArtifactTypes": [
+            "reference-evidence"
+          ],
+          "blockedByReviewTypes": [
+            "baseline",
+            "resume"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "reference-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CEO",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "reference-evidence"
+          ],
+          "producesArtifactTypes": [
+            "reference-evidence"
+          ],
+          "blockedByReviewTypes": [
+            "baseline",
+            "resume"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEO",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "reference-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CMO",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "reference-evidence"
+          ],
+          "producesArtifactTypes": [
+            "reference-evidence"
+          ],
+          "blockedByReviewTypes": [
+            "baseline",
+            "resume"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CMO",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "reference-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CTO",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "reference-evidence"
+          ],
+          "producesArtifactTypes": [
+            "reference-evidence"
+          ],
+          "blockedByReviewTypes": [
+            "baseline",
+            "resume"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CTO",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "reference-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "INTELLIGENCE",
+      "adapters": [
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "prd"
+          ],
+          "blockedByReviewTypes": [
+            "docs"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage INTELLIGENCE --status completed --artifact <path> --artifact-type prd --summary \"INTELLIGENCE prd captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "INTELLIGENCE",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "prd"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "INTELLIGENCE prd captured"
+              }
+            ],
+            "artifactType": "prd",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage INTELLIGENCE --status completed --artifact <path> --artifact-type prd --summary \"INTELLIGENCE prd captured\""
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "prd"
+          ],
+          "blockedByReviewTypes": [
+            "docs"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage INTELLIGENCE --status completed --artifact <path> --artifact-type prd --summary \"INTELLIGENCE prd captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "INTELLIGENCE",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "prd"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "INTELLIGENCE prd captured"
+              }
+            ],
+            "artifactType": "prd",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage INTELLIGENCE --status completed --artifact <path> --artifact-type prd --summary \"INTELLIGENCE prd captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "prd"
+          ],
+          "blockedByReviewTypes": [
+            "docs"
+          ],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"INTELLIGENCE prd captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "INTELLIGENCE prd captured"
+              }
+            ],
+            "artifactType": "prd",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"INTELLIGENCE prd captured\""
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "prd"
+          ],
+          "blockedByReviewTypes": [
+            "docs"
+          ],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage INTELLIGENCE --status approved --approved-by <role> --artifact-type prd",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "INTELLIGENCE",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefProductOfficer",
+              "--artifact-type",
+              "prd"
+            ],
+            "inputTemplates": [],
+            "artifactType": "prd",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage INTELLIGENCE --status approved --approved-by <role> --artifact-type prd"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "prd"
+          ],
+          "blockedByReviewTypes": [
+            "docs"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "prd",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "ChiefMarketingOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "prd"
+          ],
+          "blockedByReviewTypes": [
+            "docs"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefMarketingOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "prd",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "ChiefOperatingOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "prd"
+          ],
+          "blockedByReviewTypes": [
+            "docs"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefOperatingOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "prd",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "ChiefFinancialOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "prd"
+          ],
+          "blockedByReviewTypes": [
+            "docs"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefFinancialOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "prd",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "prd"
+          ],
+          "blockedByReviewTypes": [
+            "docs"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "prd",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "DESIGNING",
+      "adapters": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "tech-plan"
+          ],
+          "blockedByReviewTypes": [
+            "architecture"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DESIGNING --status completed --artifact <path> --artifact-type tech-plan --summary \"DESIGNING tech-plan captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DESIGNING",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "tech-plan"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DESIGNING tech-plan captured"
+              }
+            ],
+            "artifactType": "tech-plan",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DESIGNING --status completed --artifact <path> --artifact-type tech-plan --summary \"DESIGNING tech-plan captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "tech-plan"
+          ],
+          "blockedByReviewTypes": [
+            "architecture"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DESIGNING --status completed --artifact <path> --artifact-type tech-plan --summary \"DESIGNING tech-plan captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DESIGNING",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "tech-plan"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DESIGNING tech-plan captured"
+              }
+            ],
+            "artifactType": "tech-plan",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DESIGNING --status completed --artifact <path> --artifact-type tech-plan --summary \"DESIGNING tech-plan captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "tech-plan"
+          ],
+          "blockedByReviewTypes": [
+            "architecture"
+          ],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DESIGNING tech-plan captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DESIGNING tech-plan captured"
+              }
+            ],
+            "artifactType": "tech-plan",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DESIGNING tech-plan captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "tech-plan"
+          ],
+          "blockedByReviewTypes": [
+            "architecture"
+          ],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DESIGNING --status approved --approved-by <role> --artifact-type tech-plan",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DESIGNING",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefTechnologyOfficer",
+              "--artifact-type",
+              "tech-plan"
+            ],
+            "inputTemplates": [],
+            "artifactType": "tech-plan",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DESIGNING --status approved --approved-by <role> --artifact-type tech-plan"
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "tech-plan"
+          ],
+          "blockedByReviewTypes": [
+            "architecture"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "tech-plan",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ],
+          "producesArtifactTypes": [
+            "tech-plan"
+          ],
+          "blockedByReviewTypes": [
+            "architecture"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "tech-plan",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "CODING",
+      "adapters": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "tech-plan"
+          ],
+          "producesArtifactTypes": [
+            "implementation"
+          ],
+          "blockedByReviewTypes": [
+            "preview"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage CODING --status completed --artifact <path> --artifact-type implementation --summary \"CODING implementation captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "CODING",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "implementation"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "CODING implementation captured"
+              }
+            ],
+            "artifactType": "implementation",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage CODING --status completed --artifact <path> --artifact-type implementation --summary \"CODING implementation captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "tech-plan"
+          ],
+          "producesArtifactTypes": [
+            "implementation"
+          ],
+          "blockedByReviewTypes": [
+            "preview"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage CODING --status completed --artifact <path> --artifact-type implementation --summary \"CODING implementation captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "CODING",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "implementation"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "CODING implementation captured"
+              }
+            ],
+            "artifactType": "implementation",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage CODING --status completed --artifact <path> --artifact-type implementation --summary \"CODING implementation captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "tech-plan"
+          ],
+          "producesArtifactTypes": [
+            "implementation"
+          ],
+          "blockedByReviewTypes": [
+            "preview"
+          ],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"CODING implementation captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "CODING implementation captured"
+              }
+            ],
+            "artifactType": "implementation",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"CODING implementation captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "tech-plan"
+          ],
+          "producesArtifactTypes": [
+            "implementation"
+          ],
+          "blockedByReviewTypes": [
+            "preview"
+          ],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage CODING --status approved --approved-by <role> --artifact-type implementation",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "CODING",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefTechnologyOfficer",
+              "--artifact-type",
+              "implementation"
+            ],
+            "inputTemplates": [],
+            "artifactType": "implementation",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage CODING --status approved --approved-by <role> --artifact-type implementation"
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "tech-plan"
+          ],
+          "producesArtifactTypes": [
+            "implementation"
+          ],
+          "blockedByReviewTypes": [
+            "preview"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "implementation",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "tech-plan"
+          ],
+          "producesArtifactTypes": [
+            "implementation"
+          ],
+          "blockedByReviewTypes": [
+            "preview"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "implementation",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "VERIFY-INTEGRATION",
+      "adapters": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "implementation"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage VERIFY-INTEGRATION --status completed --artifact <path> --artifact-type test-report --summary \"VERIFY-INTEGRATION test-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "VERIFY-INTEGRATION",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "test-report"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "VERIFY-INTEGRATION test-report captured"
+              }
+            ],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage VERIFY-INTEGRATION --status completed --artifact <path> --artifact-type test-report --summary \"VERIFY-INTEGRATION test-report captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "implementation"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage VERIFY-INTEGRATION --status completed --artifact <path> --artifact-type test-report --summary \"VERIFY-INTEGRATION test-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "VERIFY-INTEGRATION",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "test-report"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "VERIFY-INTEGRATION test-report captured"
+              }
+            ],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage VERIFY-INTEGRATION --status completed --artifact <path> --artifact-type test-report --summary \"VERIFY-INTEGRATION test-report captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "implementation"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"VERIFY-INTEGRATION test-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "VERIFY-INTEGRATION test-report captured"
+              }
+            ],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"VERIFY-INTEGRATION test-report captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "implementation"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage VERIFY-INTEGRATION --status approved --approved-by <role> --artifact-type test-report",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "VERIFY-INTEGRATION",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefTechnologyOfficer",
+              "--artifact-type",
+              "test-report"
+            ],
+            "inputTemplates": [],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage VERIFY-INTEGRATION --status approved --approved-by <role> --artifact-type test-report"
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "implementation"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "implementation"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "REDTEAM",
+      "adapters": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "security-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage REDTEAM --status completed --artifact <path> --artifact-type security-report --summary \"REDTEAM security-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "REDTEAM",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "security-report"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "REDTEAM security-report captured"
+              }
+            ],
+            "artifactType": "security-report",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage REDTEAM --status completed --artifact <path> --artifact-type security-report --summary \"REDTEAM security-report captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "security-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage REDTEAM --status completed --artifact <path> --artifact-type security-report --summary \"REDTEAM security-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "REDTEAM",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "security-report"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "REDTEAM security-report captured"
+              }
+            ],
+            "artifactType": "security-report",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage REDTEAM --status completed --artifact <path> --artifact-type security-report --summary \"REDTEAM security-report captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "security-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"REDTEAM security-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "REDTEAM security-report captured"
+              }
+            ],
+            "artifactType": "security-report",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"REDTEAM security-report captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "security-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage REDTEAM --status approved --approved-by <role> --artifact-type security-report",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "REDTEAM",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefTechnologyOfficer",
+              "--artifact-type",
+              "security-report"
+            ],
+            "inputTemplates": [],
+            "artifactType": "security-report",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage REDTEAM --status approved --approved-by <role> --artifact-type security-report"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "security-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "security-report",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "QA",
+      "adapters": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [
+            "quality"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage QA --status completed --artifact <path> --artifact-type test-report --summary \"QA test-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "QA",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "test-report"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "QA test-report captured"
+              }
+            ],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage QA --status completed --artifact <path> --artifact-type test-report --summary \"QA test-report captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [
+            "quality"
+          ],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage QA --status completed --artifact <path> --artifact-type test-report --summary \"QA test-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "QA",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "test-report"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "QA test-report captured"
+              }
+            ],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage QA --status completed --artifact <path> --artifact-type test-report --summary \"QA test-report captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [
+            "quality"
+          ],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"QA test-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "QA test-report captured"
+              }
+            ],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"QA test-report captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [
+            "quality"
+          ],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage QA --status approved --approved-by <role> --artifact-type test-report",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "QA",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefTechnologyOfficer",
+              "--artifact-type",
+              "test-report"
+            ],
+            "inputTemplates": [],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage QA --status approved --approved-by <role> --artifact-type test-report"
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [
+            "quality"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "test-report"
+          ],
+          "blockedByReviewTypes": [
+            "quality"
+          ],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "test-report",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "DEPLOYMENT",
+      "adapters": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "deployment-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DEPLOYMENT --status completed --artifact <path> --artifact-type deployment-evidence --summary \"DEPLOYMENT deployment-evidence captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DEPLOYMENT",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "deployment-evidence"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DEPLOYMENT deployment-evidence captured"
+              }
+            ],
+            "artifactType": "deployment-evidence",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DEPLOYMENT --status completed --artifact <path> --artifact-type deployment-evidence --summary \"DEPLOYMENT deployment-evidence captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "deployment-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DEPLOYMENT --status completed --artifact <path> --artifact-type deployment-evidence --summary \"DEPLOYMENT deployment-evidence captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DEPLOYMENT",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "deployment-evidence"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DEPLOYMENT deployment-evidence captured"
+              }
+            ],
+            "artifactType": "deployment-evidence",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DEPLOYMENT --status completed --artifact <path> --artifact-type deployment-evidence --summary \"DEPLOYMENT deployment-evidence captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "deployment-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DEPLOYMENT deployment-evidence captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DEPLOYMENT deployment-evidence captured"
+              }
+            ],
+            "artifactType": "deployment-evidence",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DEPLOYMENT deployment-evidence captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "deployment-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DEPLOYMENT --status approved --approved-by <role> --artifact-type deployment-evidence",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DEPLOYMENT",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefTechnologyOfficer",
+              "--artifact-type",
+              "deployment-evidence"
+            ],
+            "inputTemplates": [],
+            "artifactType": "deployment-evidence",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DEPLOYMENT --status approved --approved-by <role> --artifact-type deployment-evidence"
+          }
+        },
+        {
+          "role": "ChiefOperatingOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "deployment-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefOperatingOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "deployment-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "ChiefFinancialOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "deployment-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefFinancialOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "deployment-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ],
+          "producesArtifactTypes": [
+            "deployment-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "deployment-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "ASSURANCE",
+      "adapters": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "assurance-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage ASSURANCE --status completed --artifact <path> --artifact-type assurance-report --summary \"ASSURANCE assurance-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "ASSURANCE",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "assurance-report"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "ASSURANCE assurance-report captured"
+              }
+            ],
+            "artifactType": "assurance-report",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage ASSURANCE --status completed --artifact <path> --artifact-type assurance-report --summary \"ASSURANCE assurance-report captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "assurance-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage ASSURANCE --status completed --artifact <path> --artifact-type assurance-report --summary \"ASSURANCE assurance-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "ASSURANCE",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "assurance-report"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "ASSURANCE assurance-report captured"
+              }
+            ],
+            "artifactType": "assurance-report",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage ASSURANCE --status completed --artifact <path> --artifact-type assurance-report --summary \"ASSURANCE assurance-report captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "assurance-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"ASSURANCE assurance-report captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "ASSURANCE assurance-report captured"
+              }
+            ],
+            "artifactType": "assurance-report",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"ASSURANCE assurance-report captured\""
+          }
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "assurance-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage ASSURANCE --status approved --approved-by <role> --artifact-type assurance-report",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefTechnologyOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "ASSURANCE",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefTechnologyOfficer",
+              "--artifact-type",
+              "assurance-report"
+            ],
+            "inputTemplates": [],
+            "artifactType": "assurance-report",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage ASSURANCE --status approved --approved-by <role> --artifact-type assurance-report"
+          }
+        },
+        {
+          "role": "ChiefOperatingOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "assurance-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefOperatingOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "assurance-report",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "ChiefFinancialOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "assurance-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefFinancialOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "assurance-report",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ],
+          "producesArtifactTypes": [
+            "assurance-report"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "assurance-report",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "DELIVERY",
+      "adapters": [
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "business-owner",
+          "adapterType": "business-owner",
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ],
+          "producesArtifactTypes": [
+            "delivery-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DELIVERY --status completed --artifact <path> --artifact-type delivery-evidence --summary \"DELIVERY delivery-evidence captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DELIVERY",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "delivery-evidence"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DELIVERY delivery-evidence captured"
+              }
+            ],
+            "artifactType": "delivery-evidence",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DELIVERY --status completed --artifact <path> --artifact-type delivery-evidence --summary \"DELIVERY delivery-evidence captured\""
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "acting-owner",
+          "adapterType": "acting-owner",
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ],
+          "producesArtifactTypes": [
+            "delivery-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DELIVERY --status completed --artifact <path> --artifact-type delivery-evidence --summary \"DELIVERY delivery-evidence captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-phase-result",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "phase",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DELIVERY",
+              "--status",
+              "completed",
+              "--artifact-type",
+              "delivery-evidence"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DELIVERY delivery-evidence captured"
+              }
+            ],
+            "artifactType": "delivery-evidence",
+            "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DELIVERY --status completed --artifact <path> --artifact-type delivery-evidence --summary \"DELIVERY delivery-evidence captured\""
+          }
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "adapterType": "module-executor",
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ],
+          "producesArtifactTypes": [
+            "delivery-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DELIVERY delivery-evidence captured\"",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "record-task-step",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "task-step",
+            "cwd": ".",
+            "role": "TriDev",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--task-id",
+              "<task-id>",
+              "--status",
+              "completed"
+            ],
+            "inputTemplates": [
+              {
+                "flag": "--artifact",
+                "placeholder": "<path>",
+                "repeatable": true
+              },
+              {
+                "flag": "--summary",
+                "placeholder": "DELIVERY delivery-evidence captured"
+              }
+            ],
+            "artifactType": "delivery-evidence",
+            "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DELIVERY delivery-evidence captured\""
+          }
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "gate-owner",
+          "adapterType": "gate-owner",
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ],
+          "producesArtifactTypes": [
+            "delivery-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DELIVERY --status approved --approved-by <role> --artifact-type delivery-evidence",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "approve-gate",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "gate",
+            "cwd": ".",
+            "role": "ChiefProductOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>",
+              "--stage",
+              "DELIVERY",
+              "--status",
+              "approved",
+              "--approved-by",
+              "ChiefProductOfficer",
+              "--artifact-type",
+              "delivery-evidence"
+            ],
+            "inputTemplates": [],
+            "artifactType": "delivery-evidence",
+            "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DELIVERY --status approved --approved-by <role> --artifact-type delivery-evidence"
+          }
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ],
+          "producesArtifactTypes": [
+            "delivery-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEOChiefOfStaff",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "delivery-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CEO",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ],
+          "producesArtifactTypes": [
+            "delivery-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CEO",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "delivery-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "ChiefOperatingOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ],
+          "producesArtifactTypes": [
+            "delivery-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefOperatingOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "delivery-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "ChiefFinancialOfficer",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ],
+          "producesArtifactTypes": [
+            "delivery-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "ChiefFinancialOfficer",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "delivery-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        },
+        {
+          "role": "CTO",
+          "responsibility": "participant",
+          "adapterType": "participant",
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ],
+          "producesArtifactTypes": [
+            "delivery-evidence"
+          ],
+          "blockedByReviewTypes": [],
+          "recommendedCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>",
+          "executionAdapter": {
+            "kind": "tridev-cli",
+            "action": "refresh-role-plan",
+            "command": "python",
+            "module": "tridev.cli",
+            "subcommand": "role-plan",
+            "cwd": ".",
+            "role": "CTO",
+            "args": [
+              "--root",
+              ".",
+              "--run-id",
+              "<run-id>"
+            ],
+            "inputTemplates": [],
+            "artifactType": "delivery-evidence",
+            "shellCommand": "python -m tridev.cli role-plan --root . --run-id <run-id>"
+          }
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-06-10T15:49:56.846300+00:00"
+}

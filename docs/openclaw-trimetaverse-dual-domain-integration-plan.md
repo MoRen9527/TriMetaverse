@@ -3,10 +3,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/openclaw-trimetaverse-dual-domain-integration-plan.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse `OpenClaw` 双域融合改造方案的本地真源，用于维护当前架构吸收判断和模块边界；它不是 TriCompany 公司级 workflow 或产品真源。
 
 补充说明：当前阶段更窄的最小落地拆解见 `docs/trimc-shadow-phase-0-plan.md`。
 
@@ -496,13 +498,13 @@ TriChain 和 TriWeb4 也应视为与 TriPilot 等同级的独立仓库：
 | TriMC/src/node-bridge/ | 对接 OpenClaw Gateway、Node Registry、节点控制事件 | 服务域设备控制层 |
 | TriMC/src/policy-gate/ | 风险控制、用户确认、高危拦截、隐私脱敏 | 任务安全层 |
 | TriMC/src/contracts/ | TriStaciss to TriMC and TriLC 协议模型 | 便于独立发布 |
-| TriMC/src/observability/ | 吸收 core-agent 的 audit mapping、timeline query、replay 和 SQL runtime | 服务域观测与回放子系统 |
+| TriMC/src/observability/ | 吸收 TriMC (原 TriMC (原 Core-Agent)) 的 audit mapping、timeline query、replay 和 SQL runtime | 服务域观测与回放子系统 |
 
 补充说明：
 
-- core-agent 不应整体替代 TriMC。
-- core-agent 更适合作为 TriMC 中 observability and replay 子系统的来源仓库。
-- 任务编排、节点调度、审批门禁仍属于 TriMC 主控核心，不属于 core-agent 当前范围。
+- TriMC (原 TriMC (原 Core-Agent)) 不应整体替代 TriMC。
+- TriMC (原 TriMC (原 Core-Agent)) 更适合作为 TriMC 中 observability and replay 子系统的来源仓库。
+- 任务编排、节点调度、审批门禁仍属于 TriMC 主控核心，不属于 TriMC (原 TriMC (原 Core-Agent)) 当前范围。
 
 ### 10.3 TriLC：本地域主要代码实现
 
@@ -556,7 +558,7 @@ TriPilot、TriAvatar、TriMobile 只读服务域与用户域真相源，不持�
 - 如果 TriPilot 或其他桌面壳提供代码工作区上下文，它只是 context adapter 的一个 provider，而不是架构中心。
 - 所有高危动作必须先经过确认、风险评估和隐私检查，再进入 OpenClaw node.invoke 或本地工具适配器。
 
-同时，服务域的 observability and replay 运行时建议也并入 TriMC，而不是继续作为独立主控候选保留在 core-agent 中。
+同时，服务域的 observability and replay 运行时建议也并入 TriMC，而不是继续作为独立主控候选保留在 TriMC (原 TriMC (原 Core-Agent)) 中。
 
 ### 10.6 TriMetaverse 文档层
 

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "discovery",
+  "phaseKey": "DISCOVERY",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "ownerRole": "ChiefProductOfficer",
+  "participantRoles": [
+    "CEOChiefOfStaff",
+    "CEO",
+    "ChiefMarketingOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "submittedAt": "2026-06-11T02:46:18+08:00",
+  "summary": "Discovery 已收口为完整模型 API 平台 MVP 的正式前门，当前范围覆盖 TriStaciss 后端、TriAvatar 最小前端 smoke、TriCompany 员工身份 NFT / 钱包签名模拟层，并明确 TriChain / TriWeb4 仅为未来真实链上承接层。",
+  "details": [
+    "当前现役平台事实已重新对齐：TriStaciss 仍以 /api/chat/stream 为现役入口，/v1/chat/completions 仍在整改骨架期，/v1/responses 尚未落地，因此完整平台 Discovery 不能再被简化成单一 /v1 缺口。",
+    "TriAvatar 当前已具备独立 React/Vite/TypeScript 前端工程与最小测试入口，本轮需要把前端 smoke 是否纳入后续验证矩阵写清，而不是默认只做后端 Python slice。",
+    "TriCompany 当前承接员工身份对象、support-object-set、组织共享与审计空间，因此员工身份 NFT / 钱包签名在本轮只写成公司层模拟机制，不提前写成 TriChain / TriWeb4 已上线的真实链上能力。",
+    "旧 case 的目标已经从最小 gateway slice 升级为完整平台 MVP，后续 Intelligence 必须输出完整 PRD、范围边界、验收矩阵和前后端/模拟签名层的 handoff。"
+  ],
+  "evidence": [
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\knowledge\\employees\\ceo-chief-of-staff\\workbench\\ipd\\cases\\IPD-20260527-034923\\manual-packages\\discovery-package.json",
+    "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\PROJECT.md",
+    "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\REQUIREMENTS.md",
+    "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\workflow\\chief-of-staff-rd-orchestration.md",
+    "D:\\OneDrive\\Code\\ai\\TriStaciss\\CLAUDE.md",
+    "D:\\OneDrive\\Code\\ai\\TriAvatar\\README.md",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\host-object-manifest.json",
+    "D:\\OneDrive\\Code\\ai\\TriChain\\AGENTS.md",
+    "D:\\OneDrive\\Code\\ai\\TriWeb4\\AGENTS.md"
+  ],
+  "objectPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\knowledge\\employees\\ceo-chief-of-staff\\workbench\\ipd\\cases\\IPD-20260527-034923\\manual-packages\\discovery-package.json"
+}

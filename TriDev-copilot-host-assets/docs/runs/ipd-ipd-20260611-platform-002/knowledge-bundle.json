@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260611-platform-002",
+  "currentStage": "DISCOVERY",
+  "nextAction": "record-phase-result",
+  "repositoryKnowledge": [
+    "AGENTS.md",
+    "README.md",
+    "docs\\registry\\product-state.md",
+    "docs\\registry\\code-state.md",
+    "docs\\workflow\\super-dev-absorption-record.md"
+  ],
+  "runKnowledge": [
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\reference-evidence.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\SESSION_BRIEF.md",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\workflow-state.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\machine-playbook.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\role-adapters.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\executor-brief.json"
+  ],
+  "readOrder": [
+    "AGENTS.md",
+    "README.md",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\reference-evidence.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\SESSION_BRIEF.md",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\workflow-state.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\machine-playbook.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\role-adapters.json",
+    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260611-platform-002\\executor-brief.json",
+    "docs\\registry\\product-state.md",
+    "docs\\registry\\code-state.md",
+    "docs\\workflow\\super-dev-absorption-record.md"
+  ],
+  "inheritanceRules": [
+    "Read repository contract first, then the active run bundle, before coding or gate work.",
+    "Prefer the active run bundle over stale conversation memory when they conflict.",
+    "If review blockers or active failure exist, surface them before any new execution step."
+  ],
+  "generatedAt": "2026-06-11T09:50:09.168783+00:00"
+}

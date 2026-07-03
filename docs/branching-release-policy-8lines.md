@@ -3,10 +3,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/branching-release-policy-8lines.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-06
+
+当前文件是 TriMetaverse 分支与发布规范的本地摘要口令真源，用于快速引用当前 Git 治理规则；它不是 TriCompany 公司级 workflow 或产品真源。
 
 详细正文见 `branching-release-policy.md`。
 

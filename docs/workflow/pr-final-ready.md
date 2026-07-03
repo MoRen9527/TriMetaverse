@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/pr-final-ready.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## PR 标题
+
+当前文件是 TriMetaverse PR 文案资产的本地真源，只提供可直接复用的发布文案，不承担 TriCompany 公司级 workflow 书面真源职责。
 
 docs(governance): 流程瀑布化与门禁一致性收敛
 

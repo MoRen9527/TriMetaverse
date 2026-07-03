@@ -1,20 +1,23 @@
 {
   "schemaVersion": "1.0",
   "runId": "ipd-ipd-20260527-034923",
-  "stage": "VERIFY-INTEGRATION",
-  "planId": "ipd-ipd-20260527-034923-verify_integration-plan",
+  "stage": "INTELLIGENCE",
+  "planId": "ipd-ipd-20260527-034923-intelligence-plan",
   "nextAction": "record-phase-result",
-  "requiredArtifactType": "test-report",
+  "requiredArtifactType": "prd",
   "executable": true,
   "tasks": [
     {
-      "taskId": "verify_integration-prepare-inputs",
+      "taskId": "intelligence-prepare-inputs",
       "label": "Prepare stage inputs",
-      "description": "Collect the required upstream inputs for VERIFY-INTEGRATION and verify the stage boundary.",
+      "description": "Collect the required upstream inputs for INTELLIGENCE and verify the stage boundary.",
       "dependsOn": [],
-      "artifactType": "test-report",
+      "artifactType": "prd",
       "verifyGates": [
-        "implementation"
+        "reference-evidence",
+        "market-report",
+        "ops-plan",
+        "budget-guard"
       ],
       "allowedPaths": [
         "docs/**",
@@ -40,15 +43,15 @@
       "updatedAt": ""
     },
     {
-      "taskId": "verify_integration-execute-stage",
+      "taskId": "intelligence-execute-stage",
       "label": "Execute stage work",
-      "description": "Produce the primary test-report output for VERIFY-INTEGRATION.",
+      "description": "Produce the primary prd output for INTELLIGENCE.",
       "dependsOn": [
-        "verify_integration-prepare-inputs"
+        "intelligence-prepare-inputs"
       ],
-      "artifactType": "test-report",
+      "artifactType": "prd",
       "verifyGates": [
-        "test-report",
+        "prd",
         "artifact-binding"
       ],
       "allowedPaths": [
@@ -75,13 +78,13 @@
       "updatedAt": ""
     },
     {
-      "taskId": "verify_integration-prepare-gate",
+      "taskId": "intelligence-prepare-gate",
       "label": "Prepare gate package",
-      "description": "Summarize VERIFY-INTEGRATION output and assemble the gate package for ChiefTechnologyOfficer.",
+      "description": "Summarize INTELLIGENCE output and assemble the gate package for ChiefProductOfficer.",
       "dependsOn": [
-        "verify_integration-execute-stage"
+        "intelligence-execute-stage"
       ],
-      "artifactType": "test-report",
+      "artifactType": "prd",
       "verifyGates": [
         "stage-summary",
         "gate-package"
@@ -116,5 +119,5 @@
     "blocked": 0,
     "failed": 0
   },
-  "generatedAt": "2026-05-27T14:32:30.519177+00:00"
+  "generatedAt": "2026-06-10T19:15:06.071221+00:00"
 }

@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/operating-records/README.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
-- lastSyncedAt: 2026-06-04
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: audit-record
+- lastSyncedAt: 2026-06-29
 
 本目录用于存放赛博公司经营层的真实执行记录，与以下目录严格分开：
+
+当前文件是 TriMetaverse 的 operating-record / audit-record 目录规则真源，用于维护发布侧经营记录、审计留痕和跨模块执行证据的归档边界。它不是 TriCompany 公司级 workflow 书面主真源，也不替代 TriCompany 对 IPD、岗位职责或公司制度的源侧定义。
 
 - `handoff-templates/`：仅放填写样板
 - `operating-cycle-example/`：仅放样例包，不代表真实执行
@@ -26,12 +28,66 @@
 
 周记录闭合与平移规则：
 
-- 同一时点的 active 未决事项，默认只维护在**最新周**的 `OPERATING_PLAN` 与配套未决事项清单里。
+- 同一时点需要继续跟踪的未决事项，默认只维护在**当前周维护面**（即最新周的 `OPERATING_PLAN` 与配套未决事项清单）里。
 - 历史周一旦完成“闭合并平移”，该周记录只保留历史事实、闭合说明、证据和 successor ref，不再继续作为 active 待办面追加新事项。
 - 若历史周仍有未闭环事项，需要在最新周记录中显式写明：来源周、当前状态、下一步、owner、恢复条件和引用真源。
 - 单事项跨周平移达到 **4 周** 时，标记“预警”，并要求对应 owner 给出处理动作。
 - 单事项跨周平移达到 **8 周** 时，标记“高预警”，并进入 CEOChiefOfStaff 催办面；若下一周仍无处理意见，应升级 CEO 裁定或明确冻结。
 - 平移后的最新周记录应在 `metadata` 或 `payload` 中保留 carry history；历史周记录应回填 successor `OPERATING_PLAN` 引用。
+- 周度平移可使用 `.github/prompts/周度平移.prompt.md` 触发；该 prompt 负责把最新 active 周闭合为历史周，并同步生成新周 JSON / Markdown 维护面。
+
+## 公司级状态术语对齐
+
+- **当前周维护面**：指当前最新 active 周的 `OPERATING_PLAN` 与配套未决事项清单。它是最新周唯一维护入口，不等于其中每条事项都处于 `active`。
+- **单条事项状态**：当前默认沿用 `CompanyGovernanceRegistry` 的四类：
+  1. `active`：当前正在推进，本周有明确 owner 动作。
+  2. `frozen`：当前暂停推进，但未结项；保留 owner、恢复条件或升级路径。
+  3. `stale-review`：因超过约定时间未续推而进入审查池，尚未完成 `active` / `frozen` / `closed` 定性。
+  4. `closed`：事项已结项、取消或已从当前周维护面移出，只保留历史事实和 successor ref。
+- 若需要描述 `frozen` 的更细原因，写在正文说明或 `statusDetail` 中，不额外扩成新的公司级主状态名。
+- 若经营记录中引用模块边界，模块成熟度默认使用“现役模块 / 占位模块 / 待初始化模块 / 待迁移模块 / 待归档兼容仓”，不要与单条事项状态混写。
+- 当前公司级术语 owner 为 `CompanyGovernanceRegistry`，经营记录侧只负责对齐使用，不另起一套平行状态名。
+
+## 单条经营事项标准头
+
+- 写入未决事项清单时，每条事项至少显式写出：
+  1. **事项 ID**
+  2. **事项名称**
+  3. **事项简介**
+  4. **事项状态**
+  5. **当前进度**
+- 推荐继续补齐：
+  1. 来源
+  2. 跨周情况 / 预警级别
+  3. 当前动作
+  4. 下一步
+  5. 恢复条件或截止时间
+  6. Owner
+- 若使用 JSON，推荐字段映射为：`id`、`title`、`summary`、`status`、`statusDetail`、`currentProgress`、`nextAction`、`resumeCondition`、`owner`。
+- 若使用 Markdown，默认按上述字段顺序书写，避免出现“只有标题和一段说明、却缺失事项 ID / 状态 / 当前进度”的不完整条目。
+
+## 单条经营事项 ID 前缀标准
+
+- 单条经营事项默认使用以下前缀：
+  1. `ITEM-YYYYMMDD-序号`：当前周期新建的一般事项。
+  2. `CARRY-YYYYMMDD-序号`：跨周 / 跨月平移进当前周维护面的续记项。
+  3. `BLOCK-YYYYMMDD-序号`：明确阻塞主线推进、需要 owner 解阻的阻塞事项。
+  4. `RISK-YYYYMMDD-序号`：需持续观察、可能升级的风险事项。
+  5. `ESC-YYYYMMDD-序号`：已进入升级链、等待上级裁定的升级事项。
+- **ID 前缀不等于事项状态。** 例如 `CARRY-*` 仍可处于 `active` / `frozen` / `stale-review` / `closed` 中任一状态。
+
+## 复查触发规则
+
+- 当 CEO 或秘书处要求“检查待办”“三天后复查”“复查当前经营事项”时，默认走待办复查入口，而不是直接把超过 3 天的事项全部改成 `frozen`。
+- 默认斜杠命令：
+  - `/待办复查`
+  - `/review-backlog`
+- 复查顺序默认是：
+  1. 读取最新 active 周记录，确定当前周维护面。
+  2. 对每条事项核对最新证据、owner 动作和恢复条件。
+  3. 先判断是否进入 `stale-review`，再决定是否需要转成 `frozen`。
+  4. 只有在确认“当前暂停推进 / 等待裁定 / 等待恢复条件”后，才把事项改成 `frozen`。
+- 若复查结论改变了事项状态、当前进度、下一步或 owner，默认同步更新当前周维护面的 Markdown 与 JSON。
 
 编号规则：
 
@@ -60,8 +116,8 @@
 
 当前最新 active 周经营记录位于：
 
-- `2026-W23/OP-202606-W23-001.json`
-- `2026-W23/OP-202606-W23-001.unresolved-items.md`
+- `2026-W27/OP-202606-W27-001.json`
+- `2026-W27/OP-202606-W27-001.unresolved-items.md`
 
 当前用于演示 `PRD_OWNERSHIP_ROUTING` 生命周期落盘方式的目录位于：
 

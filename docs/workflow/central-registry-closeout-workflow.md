@@ -3,14 +3,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/central-registry-closeout-workflow.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## 1. 目标
 
 本文件把跨模块事实收口整理成一条现役可执行工作流，用来减少总助逐份文档手工回填的成本，并明确以下问题：
+
+当前文件是真正属于 TriMetaverse 的中央工程侧收口协议真源：它定义的是发布侧 / 中央侧如何组织 registry closeout，而不是赛博公司岗位、制度或模块事实本身的源侧定义。owner 分工、岗位边界和模块事实仍以 TriCompany 源侧文档与各模块 registry 为准。
 
 1. 谁负责发起一次正式的 registry 收口。
 1. 什么时候需要 `BusinessStrategy` 先判范围。
@@ -88,7 +90,7 @@ registry owner 分工的源侧规则来自 TriCompany 虚拟公司源侧：`../.
 - 当前商业实验范围不清。
 - 是否应纳入某个模块仍有争议。
 - 模块边界、正式宿主、优先级或中央口径可能变化。
-- 某个结论会影响 `TriMC`、`TriHost`、虚拟公司、PC 端软件层等中央边界。
+- 某个结论会影响 `TriMC`、`TriModel`、虚拟公司、PC 端软件层等中央边界。
 
 如果只是已知模块内的事实回填，可直接进入并行 registry 路由，不必每轮都先问 `BusinessStrategy`。
 

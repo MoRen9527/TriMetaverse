@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/company-governance-state.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## Registry Overview
+
+- 当前文件是 TriMetaverse 中央 `CompanyGovernanceRegistry` 工作层的本地真源，只维护中央治理摘要、owner 分工状态和公司治理登记；它不是 TriCompany 公司级 workflow 书面真源。
 
 - `CompanyGovernanceRegistry` 是 TriMetaverse 的公司治理资料 registry。
 - 它负责维护组织结构、岗位边界、CHO/CAO 边界、行政制度、秘书处机制、会议文档治理、agent 发布纪律和相关归属状态。

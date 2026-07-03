@@ -44,7 +44,7 @@ user-invocable: true
 - 不要把 `core-agent` 当成现役服务域主控；它只是向 `TriMC` 迁移 observability 的历史来源。
 - 不要承诺当前 registry 和仓库事实不支持的日期或发布把握度。
 - 如果模块成熟度薄弱，就建议缩范围或分阶段交付。
-- 保持运行与宿主映射符合当前真源：`TriMC` 是统一运行面，研发工作流与服务域任务执行都属于它的运行切片；正式宿主切换通过 `TriHost` 配置实现，`Tride` 仅作为 PC 端软件中的开发工具与 orchestration 底座。
+- 保持运行与宿主映射符合当前真源：`TriMC` 是统一运行面，研发工作流与服务域任务执行都属于它的运行切片；正式宿主切换通过 `TriModel` 的 Provider/Model 配置实现，`Tride` 仅作为 PC 端软件中的开发工具与 orchestration 底座。
 - 旧的 `Development Main Controller`、`Task Main Controller`、`Autonomy Main Controller` 只作为历史术语保留；若引用旧名，必须主动映射回当前标准口径。
 - 当发布或迁移架构依赖时序时，统一使用 `TriMetaverse V1 正式上线切换阶段` 作为命名里程碑。
 

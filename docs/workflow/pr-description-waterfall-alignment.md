@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/pr-description-waterfall-alignment.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## 最终直接使用版（推荐）
+
+当前文件是 TriMetaverse PR 描述模板资产的本地真源，只提供瀑布对齐场景下的文案模板，不承担 TriCompany 公司级 workflow 书面真源职责。
 
 ### PR 标题
 

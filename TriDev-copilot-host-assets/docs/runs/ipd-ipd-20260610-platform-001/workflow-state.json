@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260610-platform-001",
+  "workflowMode": "new",
+  "workflowStatus": "waiting-stage-output",
+  "currentStage": "DISCOVERY",
+  "currentStepLabel": "Discovery / 任务澄清",
+  "nextAction": "cpo-discovery-gate",
+  "businessOwner": "ChiefProductOfficer",
+  "nextOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "executionMode": "auto",
+  "reviewBlockers": [],
+  "reviewStates": {},
+  "recommendedCommand": "python -m tridev.cli engine-step --root . --run-id <run-id> --artifact <path> --summary \"DISCOVERY package seeded and awaiting CPO gate\" --step-id <step-id>",
+  "updatedAt": "2026-06-15T00:00:00+08:00",
+  "workflowStatePath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\workflow-state.json",
+  "sessionBriefPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\SESSION_BRIEF.md",
+  "machinePlaybookPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\machine-playbook.json",
+  "roleWorkPlanPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\role-work-plan.json",
+  "roleAdaptersPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\role-adapters.json",
+  "executorBriefPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\executor-brief.json",
+  "knowledgeBundlePath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\knowledge-bundle.json",
+  "promptContextPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\host-prompt-context.json",
+  "taskPlanPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\coding-task-plan.json",
+  "taskLedgerPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\coding-task-ledger.json",
+  "openTaskIds": [
+    "discovery-prepare-gate"
+  ],
+  "taskRetrySummary": []
+}

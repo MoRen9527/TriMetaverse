@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "runId": "ipd-ipd-20260527-034923",
   "flowVariant": "tridev-super-dev-standard",
-  "currentStage": "VERIFY-INTEGRATION",
+  "currentStage": "INTELLIGENCE",
   "currentWorkMode": "new",
   "stageMappings": [
     {
@@ -261,7 +261,7 @@
     }
   ],
   "frameworkPlaybook": {
-    "currentStage": "VERIFY-INTEGRATION",
+    "currentStage": "INTELLIGENCE",
     "nextAction": "record-phase-result",
     "activeModuleExecutor": "TriDev",
     "stageObjectives": [
@@ -513,5 +513,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-27T14:32:30.539244+00:00"
+  "generatedAt": "2026-06-10T19:15:06.117689+00:00"
 }

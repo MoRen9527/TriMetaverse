@@ -8,7 +8,7 @@ controller:
 
 host:
   current: copilot-chat # 当前第一宿主先落在 copilot chat；必要时可扩到 copilot cli
-  target: trihost-configured # TriMetaverse V1 正式上线切换阶段通过 TriHost 配置正式宿主：copilot-chat | copilot-cli | trihost-configured | custom
+  target: trimodel-configured # TriMetaverse V1 正式上线切换阶段通过 TriModel 配置正式宿主：copilot-chat | copilot-cli | trimodel-configured | custom
   outputContract: docs/workflow/workflow-host-integration.md
   outputMetadataSchema: docs/workflow/workflow-run-metadata.schema.json
 

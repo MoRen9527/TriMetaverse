@@ -1,0 +1,17 @@
+{
+  "stage": "DISCOVERY",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "docs\\ipd-autopilot\\IPD-20260527-034923\\discovery-package.json"
+  ],
+  "artifactDigest": "9e8a088794fbc4431f5ba363ed6462933bf4e2bdbb4faf0216c491a7a6f76928",
+  "summary": "Discovery 已重写为 TriStaciss 主导的最小 OpenAI-compatible gateway MVP，首轮边界只保留 TriStaciss backend 与 TriAvatar 后续 smoke，TriMem 明确不入码。",
+  "createdAt": "2026-05-27T11:31:34.735475+00:00",
+  "changedFiles": [
+    "docs/ipd-autopilot/IPD-20260527-034923/discovery-package.json"
+  ],
+  "gitDiffDigest": "6d91dcb2c1b69661ca67d9629c62ca65bd13841903e4f486591a0c1b338bf106",
+  "gitDiffStatus": "captured",
+  "schemaVersion": "1.0"
+}

@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/handoff-templates/README.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 本目录提供赛博公司经营层标准交接对象的可直接填写样板�?
+
+当前文件是 TriMetaverse 模板目录的本地真源，只负责样板结构、演示入口和发布侧引用边界；它不是赛博公司真实经营记录，也不替代 TriCompany 的公司级 workflow 书面真源。
 
 ## 使用方式
 

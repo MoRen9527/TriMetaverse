@@ -3,14 +3,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/operating-cycle-example/README.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 用途
 
 本目录提供一条可顺序阅读的经营主工作流样例链，用来演示赛博公司如何围绕当前默认经营实验跑一轮最小闭环。
+
+当前文件是 TriMetaverse 样例包目录的本地真源，只承接演示链路、教学说明和发布侧样例消费边界；它不代表 TriCompany 公司级 workflow 真源，也不代表任何真实经营执行结果。
 
 该样例：
 

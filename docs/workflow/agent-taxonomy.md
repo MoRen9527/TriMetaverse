@@ -3,14 +3,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/agent-taxonomy.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 目标
 
 本文件定义三元宇宙 agent 体系的顶层分类，用来区分：
+
+当前文件是 TriMetaverse agent 分类框架的本地真源，只负责 agent taxonomy、委派边界与 registry/role 区分语义；它不是 TriCompany 公司级 workflow 书面真源。
 
 - 哪些 agent 负责事实与资料
 - 哪些 agent 负责经营判断与执行推进
@@ -98,7 +100,7 @@
 - 第一批填实：`TriMetaverse`、`TriStaciss`、`Tride`、`TriPilot`、`TriAvatar`、`TriDeployment`、`TriTest`
 - 第二批填实：`TriMC`、`TriLC`、`vscodium`
 - 首版占位：`TriMobile`、`TriMem`、`TriWeb4`、`TriChain`
-- 历史参考源：`core-agent`
+- 历史参考源：`TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)`
 
 ## 5. 当前建议上线顺序
 

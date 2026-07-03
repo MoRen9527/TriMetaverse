@@ -1,12 +1,14 @@
-﻿# 目标重构架构图（SocialFi / Core-Agent / TriStaciss）
+# 目标重构架构图（SocialFi / TriMC / TriStaciss）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/architecture-socialfi-core-agent-tristaciss.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
-- lastSyncedAt: 2026-06-04
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
+- lastSyncedAt: 2026-07-03
+
+当前文件是 TriMetaverse 局部目标架构图的本地真源，用于维护 `SocialFi / TriMC / TriStaciss` 三层职责讲解；其中原 `Core-Agent` 已废弃，其 observability 子系统已迁入 `TriMC/src/observability/`（迁移清单见 `docs/core-agent-to-trimc-migration-checklist.md`）。本文不是 TriCompany 公司级 workflow 或产品真源。
 
 > 本图是“模块视图（局部视图）”。整体框架以 [docs/architecture-overall-unified.mmd](docs/architecture-overall-unified.mmd) 为唯一真源（Single Source of Truth）。
 
@@ -20,12 +22,13 @@ flowchart LR
       SR[Response Adapter\n分渠道回包 / 流式分片]
     end
 
-    subgraph C[Core-Agent 模块（24x7 主控，基于 Kode-Agent 重写）]
+    subgraph C[TriMC 服务域主控（原 Core-Agent 已废弃迁入）]
       G[Gateway Server / Coordinator\n会话入口与路由]
       Q[Session Router + Lane Queue\n并发控制 / 会话隔离]
       R[Agent Runner\nModel Resolver / Prompt Builder\nHistory Loader / Context Guard]
       L[Agentic Loop\nLLM响应 -> 工具调用 -> 执行 -> 汇总]
       T[Tool Runtime\nTool A / B / C / D]
+      O[Observability Subsystem\n（原 core-agent 迁入）\nevent mapping / timeline / replay / SQL store]
     end
 
     subgraph T3[TriStaciss（LLM API 平台）]

@@ -14,7 +14,7 @@
 
   subgraph clients["Client surfaces（显示/审批）"]
     appui["APP / 小程序 UI"]
-    webui["Web Frontend（avatar-react）"]
+    webui["Web Frontend（TriAvatar）"]
   end
 
   subgraph server["Server domain (7×24 online)"]
@@ -24,12 +24,13 @@
       chresp["Channel Response Adapter\nstream chunks + format"]
     end
 
-    subgraph coreagent["Core-Agent 服务域独立主控（基于 Kode-Agent 重写；目录/仓与 TriPilot 同级）"]
+    subgraph trimc["TriMC 服务域主控（原 Core-Agent 已废弃，observability 子系统已迁入 TriMC/src/observability/）"]
       gateway["Gateway Server (Coordinator)\nSession Entry + Routing"]
       routerq["Session Router + Lane Queue\nConcurrency / Isolation"]
       runner["Agent Runner\nPrompt Builder / History Loader / Context Guard"]
       loop["Agentic Loop\nLLM response -> tool call? -> execute"]
       toolrt["Tool Runtime\nTool A / Tool B / Tool C / Tool D"]
+      obs["Observability Subsystem\n（原 core-agent 迁入）\nevent mapping / timeline / replay / SQL"]
     end
 
     subgraph tristaciss["TriStaciss（LLM API 平台）"]
@@ -64,15 +65,15 @@
   uisync --> appui
   uisync --> webview
 
-  %% SocialFi to Core-Agent
+  %% SocialFi to TriMC
   chad --> socialbus --> gateway
   loop --> chresp --> user
 
-  %% Core-Agent internals
+  %% TriMC internals
   gateway --> routerq --> runner --> loop
   loop --> toolrt
 
-  %% LLM path (Core-Agent -> TriStaciss)
+  %% LLM path (TriMC -> TriStaciss)
   loop --> llmgw --> prov --> streamfb --> loop
 
   %% Server workers

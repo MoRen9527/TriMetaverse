@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260610-platform-001",
+  "currentStage": "DISCOVERY",
+  "nextAction": "cpo-discovery-gate",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "requiredInputs": [
+    "upstreamArtifact:reference-evidence",
+    "artifact:reference-evidence",
+    "summary"
+  ],
+  "reviewBlockers": [],
+  "recommendedCommand": "python -m tridev.cli engine-step --root . --run-id <run-id> --artifact <path> --summary \"DISCOVERY package seeded and awaiting CPO gate\" --step-id <step-id>",
+  "knowledgeBundlePath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\knowledge-bundle.json",
+  "promptContextPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\host-prompt-context.json",
+  "taskPlanPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\coding-task-plan.json",
+  "taskLedgerPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260610-platform-001\\coding-task-ledger.json",
+  "openTaskIds": [
+    "discovery-prepare-inputs",
+    "discovery-execute-stage",
+    "discovery-prepare-gate"
+  ],
+  "taskRetrySummary": [],
+  "instructions": [
+    "Follow the DISCOVERY stage contract and keep evidence machine-readable.",
+    "Do not bypass review blockers; clear revision_requested state before continuing.",
+    "Prefer updating real source/test/deploy artifacts over narrative-only docs when execution evidence is required.",
+    "Bind current-stage artifacts and produce a concise stage summary.",
+    "Keep TriAvatar as the active frontend entry and exclude TriStaciss legacy frontend modules from the delivery surface."
+  ],
+  "generatedAt": "2026-06-10T15:49:56.876898+00:00"
+}

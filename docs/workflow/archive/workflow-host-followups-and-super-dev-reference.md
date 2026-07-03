@@ -24,7 +24,7 @@
 
 首轮对比输出见：`docs/workflow/archive/workflow-vs-super-dev-first-comparison.md`
 
-宿主侧改造清单见：`docs/workflow/tride-host-adoption-checklist.md`
+宿主侧改造清单见：`docs/workflow/tride-model-adoption-checklist.md`
 
 ## 2. 当前冻结的两项后续工作
 

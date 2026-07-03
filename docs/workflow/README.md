@@ -1,16 +1,44 @@
-# WorkflowEngine Assets
+﻿# WorkflowEngine Assets
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/README.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 本目录提�?`project.md` 的可执行化资产，用于 `TriMC` 统一运行面串行推�?10 阶段研发流程，并支持阶段内子 Agent 并行�?
 
-当前阶段，研发工作流先由 `copilot chat` 试运行；�?`TriMetaverse V1 正式上线切换阶段`，通过 `TriHost` 接入�?`TriMC` 为核心的正式运行面。`Tride` 保留�?PC 端软件的开发工具层，不再作为切换后的正式宿主�?
+当前文件是 TriMetaverse workflow 目录的本地索引真源，只负责说明当前目录下的协议、模板、样例、审计与发布侧摘要资产如何分工。它不是 TriCompany 公司级 workflow 书面主真源，也不替代具体子页面各自声明的 source / summary / audit 边界。
+
+## 目录治理规则
+
+当前 `TriMetaverse/docs/workflow/` 下的页面，默认只允许落入以下三类：
+
+1. `source-only` 本地协议 / 模板 / 索引 / 运行手册真源：用于维护 `TriMetaverse` 自己的 workflow 协议、schema 配套说明、模板、样例、runbook、术语、图示和执行清单。
+2. `release-side-summary` 发布侧摘要：用于镜像 `TriCompany` 的公司级 workflow、岗位规则、秘书处机制、host-assets 治理摘要或其他已在 `TriCompany` 有明确源侧真源的页面。
+3. `audit-record` 审计 / 经营记录：用于维护 operating records、phase evidence、baseline、archive 索引和其他真实执行留痕。
+
+不再使用 `central-summary` 作为默认文档定位。若某页本质属于公司级制度、岗位规则或 source-side workflow 真源，应优先回到 `TriCompany`；若某页本质属于 `TriMetaverse` 自己的协议、模板、样例或运行说明，则应直接标记为本地真源，而不是伪装成“中央真源摘要页”。
+
+## 真源判断顺序
+
+新增或改写 `workflow` 文档时，默认按以下顺序判断：
+
+1. 先判断该内容是否已经在 `TriCompany/docs/workflow/`、`TriCompany/docs/engineering/`、`TriCompany/docs/registry/` 或对应 runtime / manifest 中有明确 source-side 真源。
+2. 若已存在明确 TriCompany 真源，则当前页只保留发布侧摘要、跨模块引用、镜像说明或中央执行视角，不再自称公司级主真源。
+3. 若不存在 TriCompany 单一真源，但页面本身属于 `TriMetaverse` 的 workflow 协议、运行手册、模板、样例、图示、迁移表、清单或索引，则当前页直接作为本地真源维护。
+4. 若页面记录的是 operating record、phase evidence、baseline、archive 或当前宿主执行证据，则归入审计层，而不是公司级书面真源。
+
+## 维护禁则
+
+- 不要把 `TriMetaverse/docs/workflow/` 重新写成 `TriCompany` 公司级 workflow 书面主真源。
+- 不要为了“统一口径”硬把本地协议页伪造出一个并不存在的 `TriCompany` 单一真源。
+- 不要把模板、样例、runbook、PR 文案、迁移对照表或目录索引继续标成 `central-summary`。
+- 不要把 support root 物理路径写成公司级 workflow 的默认真源入口；涉及 published-copy、host object、support payload 时，优先回指 `TriCompany` 源侧规则与 manifest。
+
+当前阶段，研发工作流先由 `copilot chat` 试运行；�?`TriMetaverse V1 正式上线切换阶段`，通过 `TriModel` 接入�?`TriMC` 为核心的正式运行面。`Tride` 保留�?PC 端软件的开发工具层，不再作为切换后的正式宿主�?
 
 当前执行模型：`DISCOVERY -> INTELLIGENCE` 主线完成后，按每�?PRD 分叉执行子流水线（`DESIGNING -> CODING -> VERIFY-INTEGRATION -> REDTEAM -> QA -> DEPLOYMENT -> ASSURANCE`），最后汇总到统一 `DELIVERY`�?
 
@@ -23,7 +51,7 @@
 - `workflow-host-integration.md`：研发工作流宿主自动落盘规范
 - `workflow-host-run-state.schema.json`：宿�?run-state 结构
 - `workflow-host-review-state.schema.json`：宿�?review-state 结构
-- `tride-host-adoption-checklist.md`：PC 端开发工具接入改造清单（历史文件名保留）
+- `tride-model-adoption-checklist.md`：PC 端开发工具接入改造清单
 - `workflow-run-metadata.schema.json`：run 元信息结�?
 - `phase-result.schema.json`：阶段结果统一结构
 - `quality-gates.schema.json`：门禁规则结�?

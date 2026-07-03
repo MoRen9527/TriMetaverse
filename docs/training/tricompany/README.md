@@ -2,15 +2,17 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/training/tricompany/README.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- sourceOfTruth: TriCompany/docs/training/README.md
+- publishedFrom: TriCompany/docs/training/README.md
+- syncMode: published-summary
+- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-04
 
 ## 1. 培训包定位
 
 这套讲义由 `RAndDTrainer` 视角整理，目标不是再写一份抽象宣传稿，而是把 `TriCompany` 讲成一个能被新人、岗位 owner、研发执行者和治理协作者直接接手的项目级训练包。
+
+当前文件只承担 TriMetaverse 中央 training 聚合面下的 `TriCompany` 培训包入口与摘要职责。`TriCompany` 模块自己的 training 真源已位于 `TriCompany/docs/training/README.md`；本页用于中央聚合、入口导航和跨模块培训引用，不作为模块 training 主真源。
 
 它回答五个问题：
 

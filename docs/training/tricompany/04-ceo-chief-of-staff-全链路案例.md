@@ -3,9 +3,9 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/training/tricompany/04-ceo-chief-of-staff-全链路案例.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 为什么用 CEOChiefOfStaff 做样板

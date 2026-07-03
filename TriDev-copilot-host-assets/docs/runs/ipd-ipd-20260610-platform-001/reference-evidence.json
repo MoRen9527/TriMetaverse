@@ -1,0 +1,21 @@
+{
+  "upstream": "TriCompany-IPD",
+  "referencePath": "knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+  "vendorPath": "TriDev/vendor/super-dev",
+  "license": "internal-governed-use",
+  "commit": "2026-06-10T23:49:03+08:00",
+  "capabilityMapping": [
+    "discovery",
+    "intelligence",
+    "designing",
+    "coding",
+    "verify-integration",
+    "redteam",
+    "qa",
+    "deployment",
+    "assurance",
+    "delivery"
+  ],
+  "exclusions": [],
+  "schemaVersion": "1.0"
+}

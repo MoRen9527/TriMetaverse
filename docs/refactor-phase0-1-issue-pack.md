@@ -5,13 +5,15 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/refactor-phase0-1-issue-pack.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
+当前文件是 TriMetaverse Phase 0/1 重构 issue 文本包的本地真源，用于维护当前阶段的 Epic 和任务拆解文本；它不是 TriCompany 公司级 workflow 或产品真源。
+
 更新时间：2026-02-27  
-对应主计划：`docs/refactor-master-plan-socialfi-core-agent-tristaciss.md`
+对应主计划：`docs/refactor-master-plan-socialfi-TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)-tristaciss.md`
 
 ---
 
@@ -39,14 +41,14 @@
 
 ## 范围
 - Message / Session / ToolCall / Audit 四类事件契约
-- Core-Agent -> TriStaciss 调用契约
-- SocialFi <-> Core-Agent 输入/回包契约
+- TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) -> TriStaciss 调用契约
+- SocialFi <-> TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) 输入/回包契约
 - Safe Stop / Force Stop + lease/fencing 语义对齐
 
 ## 子任务
 - [ ] P0-1 定义四类基础 Envelope
-- [ ] P0-2 定义 Core-Agent -> TriStaciss LLM API 契约
-- [ ] P0-3 定义 SocialFi <-> Core-Agent 通信契约
+- [ ] P0-2 定义 TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) -> TriStaciss LLM API 契约
+- [ ] P0-3 定义 SocialFi <-> TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) 通信契约
 - [ ] P0-4 定义停止语义与 lease/fencing 约束
 
 ## DoD
@@ -98,7 +100,7 @@
 ## Issue P0-2
 
 ### Title
-`[Phase0][Contract] 定义 Core-Agent -> TriStaciss LLM 调用契约`
+`[Phase0][Contract] 定义 TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) -> TriStaciss LLM 调用契约`
 
 ### Labels
 `type: task`, `area: tristaciss`, `priority: P0`, `stage: design`
@@ -109,7 +111,7 @@
 收敛 LLM 调用到 TriStaciss，禁止核心链路直连 provider。
 
 ## 交付物
-- `docs/contracts/core-agent-to-tristaciss.md`
+- `docs/contracts/TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)-to-tristaciss.md`
 
 ## 任务清单
 - [ ] 定义请求体（模型、消息、上下文、工具声明）
@@ -130,7 +132,7 @@
 ## Issue P0-3
 
 ### Title
-`[Phase0][Contract] 定义 SocialFi <-> Core-Agent 输入与回包契约`
+`[Phase0][Contract] 定义 SocialFi <-> TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) 输入与回包契约`
 
 ### Labels
 `type: task`, `area: socialfi`, `priority: P0`, `stage: design`
@@ -141,7 +143,7 @@
 统一渠道消息标准化输入与回包输出，支撑多平台一致行为。
 
 ## 交付物
-- `docs/contracts/socialfi-core-agent-io.md`
+- `docs/contracts/socialfi-TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)-io.md`
 
 ## 任务清单
 - [ ] 定义标准化输入（文本、附件、用户身份、渠道上下文）
@@ -194,10 +196,10 @@
 ## Epic B（Phase 1）
 
 ### Title
-`[Epic][Phase1] Core-Agent MVP：单会话最小闭环`
+`[Epic][Phase1] TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) MVP：单会话最小闭环`
 
 ### Labels
-`type: epic`, `area: core-agent`, `priority: P0`, `stage: dev`
+`type: epic`, `area: TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)`, `priority: P0`, `stage: dev`
 
 ### Body
 ```md
@@ -205,13 +207,13 @@
 Phase 1 聚焦“收消息 -> 路由 -> 调 LLM -> 回文本”的最小闭环，不引入复杂工具链。
 
 ## 范围
-- Core-Agent 项目骨架
+- TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) 项目骨架
 - 最小 Agentic Loop（文本）
 - TriStaciss 唯一调用出口
 - 基础 AuditEvent 写入
 
 ## 子任务
-- [ ] P1-1 创建 core-agent 项目骨架
+- [ ] P1-1 创建 TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) 项目骨架
 - [ ] P1-2 实现 Gateway/Router/Queue 最小链路
 - [ ] P1-3 接入 TriStaciss 流式调用
 - [ ] P1-4 接入最小审计与 smoke 脚本
@@ -230,10 +232,10 @@ Phase 1 聚焦“收消息 -> 路由 -> 调 LLM -> 回文本”的最小闭环�
 ## Issue P1-1
 
 ### Title
-`[Phase1][Core-Agent] 初始化项目骨架（gateway/router-queue/runner/runtime）`
+`[Phase1][TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)] 初始化项目骨架（gateway/router-queue/runner/runtime）`
 
 ### Labels
-`type: task`, `area: core-agent`, `priority: P0`, `stage: dev`
+`type: task`, `area: TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)`, `priority: P0`, `stage: dev`
 
 ### Body
 ```md
@@ -241,7 +243,7 @@ Phase 1 聚焦“收消息 -> 路由 -> 调 LLM -> 回文本”的最小闭环�
 创建最小可运行工程结构，确保后续模块能并行开发。
 
 ## 任务清单
-- [ ] 初始化 `core-agent/` 项目与基础脚本
+- [ ] 初始化 `TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)/` 项目与基础脚本
 - [ ] 建立目录：`gateway/`、`router-queue/`、`runner/`、`runtime/`
 - [ ] 提供统一配置加载（env + config）
 - [ ] 提供最小启动命令（dev/run）
@@ -260,10 +262,10 @@ Phase 1 聚焦“收消息 -> 路由 -> 调 LLM -> 回文本”的最小闭环�
 ## Issue P1-2
 
 ### Title
-`[Phase1][Core-Agent] 实现 Gateway -> Router/Queue -> Runner 最小链路`
+`[Phase1][TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)] 实现 Gateway -> Router/Queue -> Runner 最小链路`
 
 ### Labels
-`type: task`, `area: core-agent`, `priority: P0`, `stage: dev`
+`type: task`, `area: TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)`, `priority: P0`, `stage: dev`
 
 ### Body
 ```md
@@ -298,7 +300,7 @@ Phase 1 聚焦“收消息 -> 路由 -> 调 LLM -> 回文本”的最小闭环�
 ### Body
 ```md
 ## 目标
-Core-Agent 仅通过 TriStaciss 完成模型调用与流式响应。
+TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) 仅通过 TriStaciss 完成模型调用与流式响应。
 
 ## 任务清单
 - [ ] 实现 TriStaciss 客户端适配层
@@ -357,7 +359,7 @@ Core-Agent 仅通过 TriStaciss 完成模型调用与流式响应。
 ## 建议分配（可调整）
 
 - 架构/契约 owner：`TriMetaverse` 维护者
-- `P1-1/P1-2`：Core-Agent 工程 owner
+- `P1-1/P1-2`：TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) 工程 owner
 - `P1-3`：TriStaciss owner
 - `P1-4`：测试/可观测 owner
 

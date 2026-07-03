@@ -146,12 +146,12 @@
         "docs_confirm",
         "prd"
       ],
-      "phaseStatus": "completed",
-      "gateStatus": "approved",
-      "phaseRecorded": true,
-      "gateRecorded": true,
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
       "readyForGate": false,
-      "completed": true,
+      "completed": false,
       "roleAssignments": [
         {
           "role": "ChiefProductOfficer",
@@ -301,12 +301,12 @@
         "uiux",
         "spec"
       ],
-      "phaseStatus": "completed",
-      "gateStatus": "approved",
-      "phaseRecorded": true,
-      "gateRecorded": true,
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
       "readyForGate": false,
-      "completed": true,
+      "completed": false,
       "roleAssignments": [
         {
           "role": "ChiefTechnologyOfficer",
@@ -413,12 +413,12 @@
         "frontend",
         "backend"
       ],
-      "phaseStatus": "completed",
-      "gateStatus": "approved",
-      "phaseRecorded": true,
-      "gateRecorded": true,
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
       "readyForGate": false,
-      "completed": true,
+      "completed": false,
       "roleAssignments": [
         {
           "role": "ChiefTechnologyOfficer",
@@ -1145,5 +1145,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-27T14:32:30.553936+00:00"
+  "generatedAt": "2026-06-10T19:15:06.134865+00:00"
 }

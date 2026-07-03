@@ -479,7 +479,9 @@ def record_stage_signoff(
 
 
 def read_ipd_case(case_id: str, *, workspace_root: str | None = None) -> dict[str, Any]:
-    return _load_case(case_id, workspace_root)
+    case_payload = _load_case(case_id, workspace_root)
+    case_payload["entryCheckpoint"] = _entry_checkpoint_for_case(case_payload)
+    return case_payload
 
 
 def _reconcile_case_payload(
@@ -695,6 +697,7 @@ def _summary_for_case(
         "caseId": case_payload["caseId"],
         "title": case_payload["title"],
         "status": case_payload["status"],
+        "entryCheckpoint": _entry_checkpoint_for_case(case_payload),
         "currentStageKey": case_payload.get("currentStageKey") or "",
         "currentOwnerRole": current_stage["ownerRole"] if current_stage else "",
         "currentWorkItemPath": case_payload.get("currentWorkItemPath") or "",
@@ -704,6 +707,33 @@ def _summary_for_case(
         "casePath": _case_file_path(case_payload["caseId"], workspace_root).as_posix(),
         "intakeBriefPath": str(case_payload["intake"].get("briefPath") or ""),
     }
+
+
+def _entry_checkpoint_for_case(case_payload: dict[str, Any]) -> str:
+    status = str(case_payload.get("status") or "").strip()
+    current_stage = _current_stage(case_payload)
+
+    if current_stage is not None:
+        stage_key = str(current_stage.get("stageKey") or "").strip()
+        if (
+            stage_key == "discovery"
+            and str(current_stage.get("status") or "").strip() == "in-progress"
+            and not str(current_stage.get("submittedAt") or "").strip()
+            and not str(current_stage.get("outputPath") or "").strip()
+        ):
+            return "task-dispatch"
+        return stage_key
+
+    if status == "awaiting-intake-approvals":
+        return "ceo-demand"
+    if status == "completed":
+        return "completed"
+
+    next_stage = _next_pending_stage(case_payload)
+    if next_stage is not None:
+        next_stage_key = str(next_stage.get("stageKey") or "").strip()
+        return "task-dispatch" if next_stage_key == "discovery" else next_stage_key
+    return "ceo-demand"
 
 
 def _case_file_path(case_id: str, workspace_root: str | None) -> Path:
@@ -731,6 +761,7 @@ def _load_case(case_id: str, workspace_root: str | None) -> dict[str, Any]:
 
 
 def _save_case(case_payload: dict[str, Any], workspace_root: str | None) -> None:
+    _ensure_case_defaults(case_payload)
     case_path = _case_file_path(case_payload["caseId"], workspace_root)
     case_path.parent.mkdir(parents=True, exist_ok=True)
     case_path.write_text(json.dumps(case_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -755,6 +786,10 @@ def _append_event(
 
 
 def _ensure_case_defaults(case_payload: dict[str, Any]) -> None:
+    case_payload["caseId"] = str(case_payload.get("caseId", "") or "").strip()
+    case_payload["title"] = str(case_payload.get("title", "") or "").strip()
+    case_payload["status"] = str(case_payload.get("status", "awaiting-intake-approvals") or "").strip() or "awaiting-intake-approvals"
+    case_payload["currentStageKey"] = str(case_payload.get("currentStageKey", "") or "").strip()
     intake = case_payload.setdefault("intake", {})
     intake["constraints"] = _string_list(intake.get("constraints", ()))
     intake["opportunitySignals"] = _merge_string_lists(intake.get("opportunitySignals", ()), intake.get("marketContext", ()))
@@ -795,6 +830,7 @@ def _ensure_case_defaults(case_payload: dict[str, Any]) -> None:
             stage.get("superDevReferenceStages", template["superDevReferenceStages"])
         )
     case_payload["currentWorkItemPath"] = str(case_payload.get("currentWorkItemPath", "") or "").strip()
+    case_payload["entryCheckpoint"] = _entry_checkpoint_for_case(case_payload)
 
 
 def _write_intake_brief(

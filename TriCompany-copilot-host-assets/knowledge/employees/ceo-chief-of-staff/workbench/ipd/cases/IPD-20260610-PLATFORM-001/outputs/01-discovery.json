@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260610-PLATFORM-001",
+  "stageKey": "discovery",
+  "phaseKey": "DISCOVERY",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "ownerRole": "ChiefProductOfficer",
+  "participantRoles": [
+    "CEOChiefOfStaff",
+    "CEO",
+    "ChiefMarketingOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "submittedAt": "2026-06-16T21:37:17+08:00",
+  "summary": "Discovery automation package 已提交",
+  "details": [
+    "已自动登记 6 个 Discovery 对标来源。",
+    "已自动刷新 Discovery 的竞品 landscape、共性功能矩阵、亮点功能 memo 与 functional brief。"
+  ],
+  "evidence": [
+    "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/reference-source-catalog.json",
+    "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-reference-functional-brief.md",
+    "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-competitor-landscape.md",
+    "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-common-capability-matrix.md",
+    "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-highlight-opportunity-memo.md"
+  ],
+  "objectPath": "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-reference-functional-brief.md",
+  "packageHash": "0x134f72a4d65ad092cd7fa03f243e536bd73b67f1396b6eb24b3798b0158937b3",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "ChiefProductOfficer",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "ChiefProductOfficer",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-16T21:37:17+08:00",
+      "packageHash": "0x134f72a4d65ad092cd7fa03f243e536bd73b67f1396b6eb24b3798b0158937b3",
+      "signature": "0x0610a500e721a9f97845319cbae6a3a61b8427ad7bc97309cb4c10fcd7d51c6d68a527d9d7ad08dd860c1777a5e92607aa08d2ec4eda4e71805b9db626682868",
+      "signerAddress": "0xd61e3768c6096800f58448a2a22e832b66b05d86",
+      "publicKey": "0x043b3f02041aa9a655bb0a67700309a1444f60a20c579e69257f89e4837762c2506463fd57589bfb10034024a29e3d226a688205b2a89251e316f27a54507334c2",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "aisle addict ... achieve above",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-16T21:37:17+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "pending",
+      "note": "",
+      "updatedAt": "",
+      "packageHash": "",
+      "signature": "",
+      "signerAddress": "",
+      "publicKey": "",
+      "credentialType": "",
+      "credentialHint": "",
+      "verificationStatus": "not-signed",
+      "verifiedRoles": [],
+      "verifiedAt": ""
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "pending",
+      "note": "",
+      "updatedAt": "",
+      "packageHash": "",
+      "signature": "",
+      "signerAddress": "",
+      "publicKey": "",
+      "credentialType": "",
+      "credentialHint": "",
+      "verificationStatus": "not-signed",
+      "verifiedRoles": [],
+      "verifiedAt": ""
+    }
+  ],
+  "release": {
+    "status": "draft",
+    "version": "",
+    "issuedAt": "",
+    "issuedByRole": ""
+  }
+}

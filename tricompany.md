@@ -1,4 +1,4 @@
-# TriCompany 赛博公司设计稿（原：赛博公司设计稿）
+﻿# TriCompany 赛博公司设计稿（原：赛博公司设计稿）
 
 版本：V0.1 待讨论
 日期：2026-03-24
@@ -21,7 +21,7 @@
 ### 1.1 宿主边界说明
 
 - 当前赛博公司宿主先落在 `copilot chat`；就宿主生命周期而言，当前本地宿主已完成“源码 -> shadow test”，现进入当前阶段正式接管；如有必要，可扩到 `copilot cli`。
-- 到 `TriMetaverse V1 正式上线切换阶段`，赛博公司与服务域任务统一收口到以 `TriMC` 为核心的正式运行面，正式切换通过 `TriHost` 配置完成；`TriMC` 仍需独立经历“源码 -> shadow test -> 正式接管”，完成后才可写成正式宿主切换。
+- 到 `TriMetaverse V1 正式上线切换阶段`，赛博公司与服务域任务统一收口到以 `TriMC` 为核心的正式运行面，正式切换通过 `TriModel` 的 Provider/Model 配置完成；`TriMC` 仍需独立经历"源码 -> shadow test -> 正式接管"，完成后才可写成正式宿主切换。
 - 服务域 shadow 当前以 OpenClaw 核心作为 `TriMC` 的最小基线，后续再融入 Hermes 的优势能力。
 - `Tride` 不再对应独立正式宿主，而是 PC 端软件中的开发工具与集成层；`TriPilot + Tride + vscodium + CLI` 共同构成 PC 端软件。该层既配合 `TriLC` 完成本地化任务，也保留用户直接使用本地自动化与 `vibe coding` 的产品入口语义。
 
@@ -29,7 +29,7 @@
 
 - 赛博公司是所有人格 Agent 与非人格 Agent 的经营和交互核心载体，而不是三主控中的一条抽象名字。
 - `TriMC` 是统一的 agent runtime 和 interaction core，负责 runtime、planner、context 整理、tools 编排与模型调用协同。
-- 当前阶段的 shadow 与当前阶段正式接管都先由 `copilot chat` 承载，必要时可扩到 `copilot cli`；正式切换时通过 `TriHost` 复用同一套宿主 contract。
+- 当前阶段的 shadow 与当前阶段正式接管都先由 `copilot chat` 承载，必要时可扩到 `copilot cli`；正式切换时通过 `TriModel` 复用同一套宿主 contract。
 - `TriSkill` 是未来统一 skill 提供模块，当前仍处于占位阶段，不能写成现役能力。
 - 当前本地正式接管不等于正式宿主切换；只有在 `TriMC` 完成自身正式接管后，才可写成正式宿主切换完成。
 

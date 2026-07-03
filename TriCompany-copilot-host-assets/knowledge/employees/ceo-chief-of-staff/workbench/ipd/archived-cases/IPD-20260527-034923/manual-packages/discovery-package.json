@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-manual-stage-package",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "discovery",
+  "ownerRole": "ChiefProductOfficer",
+  "generatedAt": "2026-06-11T03:15:00+08:00",
+  "goal": "确认完整模型 API 平台 MVP 的 Discovery 边界、首轮 owner 分工、前后端最小验证面，以及 TriCompany 员工身份 NFT / 钱包签名模拟层的当前阶段定位。",
+  "inScope": [
+    "TriStaciss 作为当前模型 API 平台后端真源，承接 provider 路由、多模型接口与 /v1 合同整改主战场",
+    "TriAvatar 作为 Web 入口前端，承接最小聊天 smoke、配置合同与后续前端验证边界定义",
+    "TriCompany 作为公司层，承接员工身份 NFT / 钱包签名模拟机制、签核与审计边界",
+    "TriDev ten-phase / super-dev step-stage replay 的 Discovery 前门与后续阶段 handoff 要求"
+  ],
+  "outOfScope": [
+    "TriChain / TriWeb4 的真实链上 NFT、真实钱包、合约部署与链上签名能力",
+    "TriMC 正式宿主切换、生产级 Hermes 接入或正式组织授权矩阵完成",
+    "TriAvatar 3D / 4D / 游戏化完整入口与默认聊天入口切换",
+    "TriMem 的真实用户系统、持久化账户体系、计费、配额和完整前端重构"
+  ],
+  "successSignals": [
+    "CPO 把完整模型 API 平台 MVP 的范围、前后端边界、验收矩阵和 out-of-scope 写清，而不是再把最小 gateway slice 当成完整产品",
+    "明确当前真实缺口不仅是 TriStaciss /v1 合同，还包括前端 smoke 是否纳入、公司级身份签名模拟层如何挂接，以及后续阶段如何验证",
+    "清楚区分当前已实现能力、待验证能力和未来 TriChain / TriWeb4 的真实链上承接边界",
+    "旧 case 的新一轮 Discovery 不再复用历史最小 gateway 叙事，并为后续 Intelligence 的完整 PRD 提供稳定前门"
+  ],
+  "openQuestions": [
+    "TriAvatar 首轮 smoke 只验证聊天主链路，还是同时纳入登录、配置和 API 环境合同检查？",
+    "TriCompany 员工身份 NFT / 钱包签名模拟层需要先沉淀到何种对象粒度：员工对象、签名策略、审计记录还是完整 mock wallet flow？",
+    "本轮完整平台 MVP 的 Intelligence 是否需要把前端 smoke 与后端 Python 测试统一进同一 release readiness 矩阵？",
+    "TriMem 本轮保持 out-of-scope 的同时，是否需要在 PRD 中保留未来真实用户系统的接口占位与迁移边界？"
+  ],
+  "references": {
+    "triCompanyProject": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\PROJECT.md",
+    "triCompanyRequirements": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\REQUIREMENTS.md",
+    "triCompanyState": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\STATE.md",
+    "triCompanyProductRegistry": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\registry\\product-state.md",
+    "triCompanyCodeRegistry": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\registry\\code-state.md",
+    "triCompanyOrchestration": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\workflow\\chief-of-staff-rd-orchestration.md",
+    "triCompanySupportReadme": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\README.md",
+    "triCompanyHostObjectManifest": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\host-object-manifest.json",
+    "triStacissOverview": "D:\\OneDrive\\Code\\ai\\TriStaciss\\CLAUDE.md",
+    "triStacissModuleBoundary": "D:\\OneDrive\\Code\\ai\\TriStaciss\\AGENTS.md",
+    "triStacissRouter": "D:\\OneDrive\\Code\\ai\\TriStaciss\\api-server\\openai_compatible_api.py",
+    "triAvatarReadme": "D:\\OneDrive\\Code\\ai\\TriAvatar\\README.md",
+    "triAvatarModuleBoundary": "D:\\OneDrive\\Code\\ai\\TriAvatar\\AGENTS.md",
+    "triChainBoundary": "D:\\OneDrive\\Code\\ai\\TriChain\\AGENTS.md",
+    "triWeb4Boundary": "D:\\OneDrive\\Code\\ai\\TriWeb4\\AGENTS.md",
+    "triDevWorkflowState": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\workflow-state.json"
+  }
+}

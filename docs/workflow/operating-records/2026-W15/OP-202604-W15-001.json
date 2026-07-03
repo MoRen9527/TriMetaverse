@@ -6,7 +6,7 @@
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-04-10T10:30:00+08:00",
-  "updatedAt": "2026-06-03T11:46:33+08:00",
+  "updatedAt": "2026-06-12T11:20:00+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-04-10T00:00:00+08:00",
@@ -296,6 +296,15 @@
         "CompanyGovernanceRegistry"
       ],
       "dueAt": "2026-05-27T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "新建下一条 `process-improvement + WORKFLOW` sprint case，专门承接 IPD 全阶段优化；任何 `IPD-20260611-PLATFORM-001` live replay 暴露的问题都先回流该 case，再经自测后重放 fixed proving-ground。",
+      "dependsOn": [
+        "IPD-20260611-WORKFLOW-001",
+        "IPD-20260611-PLATFORM-001"
+      ],
+      "dueAt": "2026-06-12T23:45:00+08:00"
     }
   ],
   "approvals": [

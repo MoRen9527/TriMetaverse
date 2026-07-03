@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260611-platform-002",
+  "stage": "DISCOVERY",
+  "planId": "ipd-ipd-20260611-platform-002-discovery-plan",
+  "nextAction": "record-phase-result",
+  "requiredArtifactType": "reference-evidence",
+  "executable": true,
+  "tasks": [
+    {
+      "taskId": "discovery-prepare-inputs",
+      "label": "Prepare stage inputs",
+      "description": "Collect the required upstream inputs for DISCOVERY and verify the stage boundary.",
+      "dependsOn": [],
+      "artifactType": "reference-evidence",
+      "verifyGates": [
+        "reference-evidence"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 1,
+      "status": "pending",
+      "artifactRefs": [],
+      "changedFiles": [],
+      "gitDiffDigest": "",
+      "gitDiffStatus": "",
+      "summary": "",
+      "notes": "",
+      "failureCount": 0,
+      "retryBudgetRemaining": 1,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": ""
+    },
+    {
+      "taskId": "discovery-execute-stage",
+      "label": "Execute stage work",
+      "description": "Produce the primary reference-evidence output for DISCOVERY.",
+      "dependsOn": [
+        "discovery-prepare-inputs"
+      ],
+      "artifactType": "reference-evidence",
+      "verifyGates": [
+        "reference-evidence",
+        "artifact-binding"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 2,
+      "status": "pending",
+      "artifactRefs": [],
+      "changedFiles": [],
+      "gitDiffDigest": "",
+      "gitDiffStatus": "",
+      "summary": "",
+      "notes": "",
+      "failureCount": 0,
+      "retryBudgetRemaining": 2,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": ""
+    },
+    {
+      "taskId": "discovery-prepare-gate",
+      "label": "Prepare gate package",
+      "description": "Summarize DISCOVERY output and assemble the gate package for ChiefProductOfficer.",
+      "dependsOn": [
+        "discovery-execute-stage"
+      ],
+      "artifactType": "reference-evidence",
+      "verifyGates": [
+        "stage-summary",
+        "gate-package"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 1,
+      "status": "pending",
+      "artifactRefs": [],
+      "changedFiles": [],
+      "gitDiffDigest": "",
+      "gitDiffStatus": "",
+      "summary": "",
+      "notes": "",
+      "failureCount": 0,
+      "retryBudgetRemaining": 1,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": ""
+    }
+  ],
+  "progress": {
+    "total": 3,
+    "completed": 0,
+    "blocked": 0,
+    "failed": 0
+  },
+  "generatedAt": "2026-06-11T09:50:09.058938+00:00"
+}

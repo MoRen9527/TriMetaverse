@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-WORKFLOW-001",
+  "stageKey": "sprint-review",
+  "phaseKey": "SPRINT-REVIEW",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriCompany",
+  "gateOwner": "ChiefProductOfficer",
+  "ownerRole": "ChiefProductOfficer",
+  "participantRoles": [
+    "ChiefTechnologyOfficer",
+    "CEOChiefOfStaff"
+  ],
+  "submittedAt": "2026-06-12T00:17:00+08:00",
+  "summary": "sprint-review 已确认当前流程优化增量可以进入 retrospective，但继续冻结任何对真实 project-delivery readiness 的外推。",
+  "details": [
+    "已验证 CEO demand 到 sprint-review 的 agile-improvement 前门可连续推进。",
+    "已确认重复角色审批链、artifact 编号与 CLI intake 顺序修复在 execution 与 live 落盘上保持一致。",
+    "未完成项转入 retrospective 与 validation-handoff 继续收口，本 case 不替代真实 project-delivery 验证。"
+  ],
+  "evidence": [
+    "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/04-sprint-review-memo.md",
+    "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/03-sprint-execution-package.json",
+    "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/03-sprint-execution-log.md"
+  ],
+  "objectPath": "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/04-sprint-review-package.json",
+  "packageHash": "0x37c30bee29cf51690e0b8838750917df3ea31d2fa5f595304dc46d5331a95b7f",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "ChiefProductOfficer",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "ChiefProductOfficer",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-12T00:17:00+08:00",
+      "packageHash": "0x37c30bee29cf51690e0b8838750917df3ea31d2fa5f595304dc46d5331a95b7f",
+      "signature": "0x098f1724ce0507202042896149795ca771280a95a4238e5e36b43844c8744f592d7b5606bae2017992ac5798364c355ac751cf9304c398fb0b308012d79887d4",
+      "signerAddress": "0xd61e3768c6096800f58448a2a22e832b66b05d86",
+      "publicKey": "0x043b3f02041aa9a655bb0a67700309a1444f60a20c579e69257f89e4837762c2506463fd57589bfb10034024a29e3d226a688205b2a89251e316f27a54507334c2",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "aisle addict ... achieve above",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-12T00:17:00+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "CEO 已确认 sprint-review 结论成立，并同意流程优化线进入 retrospective。",
+      "updatedAt": "2026-06-12T00:18:37+08:00",
+      "packageHash": "0x37c30bee29cf51690e0b8838750917df3ea31d2fa5f595304dc46d5331a95b7f",
+      "signature": "0x1efa7a36e2575011c0573f02222161cc77c41f26f0a2b5000384eee389fed319525487b442705be801b4c965f0c407a0482b33cce0d7e3e801e85fdf3b2d16a3",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefProductOfficer"
+      ],
+      "verifiedAt": "2026-06-12T00:18:37+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "总助已完成 CEO sprint-review 签名验证并正式签发 review release。",
+      "updatedAt": "2026-06-12T00:18:38+08:00",
+      "packageHash": "0x37c30bee29cf51690e0b8838750917df3ea31d2fa5f595304dc46d5331a95b7f",
+      "signature": "0x55442e223012605321f72cfede0722ae5de416a1540b82ddeacf6fe9b8dade8c0b88a858f3c636ebd4b7a4ff846e1620be893f489e6689a0b0ae5b386076fbe8",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefProductOfficer",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-12T00:18:38+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-WORKFLOW-001-SPRINT-REVIEW-V001",
+    "issuedAt": "2026-06-12T00:18:38+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

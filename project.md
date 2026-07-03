@@ -1,4 +1,4 @@
-# TriMetaverse Project Workflow（TriMC 运行面版）
+﻿# TriMetaverse Project Workflow（TriMC 运行面版）
 
 版本：v0.1
 
@@ -34,7 +34,7 @@
 
 - 研发工作流属于 `TriMC` 统一运行面中的研发执行切片，不再单列 `Development Main Controller` 标准名。
 - 当前阶段由 `copilot chat` 承载 shadow 与当前阶段正式接管，必要时可扩到 `copilot cli`。
-- 到 `TriMetaverse V1 正式上线切换阶段`，正式切换通过 `TriHost` 的宿主适配与配置完成，而 `TriMC` 继续作为 agent 运行和交互核心。
+- 到 `TriMetaverse V1 正式上线切换阶段`，正式切换通过 `TriModel` 的 Provider/Model 配置完成，而 `TriMC` 继续作为 agent 运行和交互核心。
 - `Tride` 不再作为切换后的正式宿主；它与 `TriPilot`、`vscodium` 和 CLI 工具一起构成 PC 端软件层。该层一方面配合 `TriLC` 承接本地化任务与部分服务域下发任务，另一方面也作为用户可直接使用的本地自动化与 `vibe coding` 工具面存在。
 
 ---
@@ -50,7 +50,7 @@
 - 管理中断、回滚、重试、恢复
 - 汇总阶段结果并产出全局报告
 
-当前运行模式：在当前阶段由 `copilot chat` 承载研发工作流语义，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，通过 `TriHost` 把同一套输出契约接入以 `TriMC` 为核心的正式运行面。当前无需新增独立主控进程。
+当前运行模式：在当前阶段由 `copilot chat` 承载研发工作流语义，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，通过 `TriModel` 把同一套输出契约接入以 `TriMC` 为核心的正式运行面。当前无需新增独立主控进程。
 
 ### 2.2 Phase Agents（阶段执行体）
 

@@ -1,0 +1,418 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-work-item",
+  "caseId": "IPD-20260611-PLATFORM-001",
+  "stageKey": "designing",
+  "phaseKey": "DESIGNING",
+  "title": "完整模型 API 平台固定 IPD 验证桩 / Designing / 技术设计",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "participantRoles": [
+    "ChiefProductOfficer",
+    "CEOChiefOfStaff"
+  ],
+  "status": "in-progress",
+  "createdAt": "2026-06-14T22:51:05+08:00",
+  "updatedAt": "2026-06-14T22:51:05+08:00",
+  "priority": "high",
+  "summary": "ChiefTechnologyOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“将 PLATFORM-001 固定为 IPD proving-ground，从 ceo-demand 反复验证已优化能力，并逐步扩展到全部 IPD 阶段。”推进 Designing / 技术设计（DESIGNING）并协同 ChiefProductOfficer、CEOChiefOfStaff，并在提交后等待 CEO 签名与 CEOChiefOfStaff 最终验证签发。",
+  "intake": {
+    "objective": "将 PLATFORM-001 固定为 IPD proving-ground，从 ceo-demand 反复验证已优化能力，并逐步扩展到全部 IPD 阶段。",
+    "taskDescription": "以完整模型 API 平台作为固定项目壳。当前先验证 ceo-demand、dispatch、discovery、intelligence 与 package/signoff 的稳定性，后续再按 gate 逐步扩展到 designing、coding、verify-integration、redteam、qa、deployment、assurance、delivery；若不合格，按缺陷来源回退到 ceo-demand、task-dispatch 或 discovery或后续阶段，并把问题回灌到 workflow sprint case。",
+    "caseCategory": "project-delivery",
+    "referenceTheme": "PLATFORM",
+    "constraints": [],
+    "opportunitySignals": [],
+    "businessModelFit": [],
+    "stageFit": [],
+    "companyContext": [],
+    "ownerProposal": [],
+    "resourceEnvelope": [],
+    "prerequisites": [],
+    "requiredSupport": [],
+    "expectedOutcomes": [],
+    "expectedDelivery": "",
+    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/intake-brief.json",
+    "clarificationSheet": {
+      "required": true,
+      "status": "ready-for-dispatch",
+      "missingSlotKeys": [],
+      "followUpQuestions": [],
+      "slots": [
+        {
+          "slotKey": "competitorReference",
+          "label": "竞品 / 对标对象",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有竞品或对标对象，CPO 在 Discovery 阶段就缺少明确的产品/官方手册研究起点。",
+          "question": "这次需求至少想对标哪 1-3 个产品、平台、仓库或流程？如果没有直接竞品，也请明确‘按哪类现有方案对标’。",
+          "suggestedOptions": [
+            "已有 1-3 个明确竞品，请直接写名称或链接。",
+            "没有直接竞品，但有同类流程/平台可对标。",
+            "按内部流程问题处理，不对标外部竞品，但请说明原因。",
+            "自定义。"
+          ],
+          "currentValue": "OpenAI API Platform、OpenRouter、One API",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "targetUserScenario",
+          "label": "首轮目标用户与使用场景",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "不明确谁在什么场景下使用，CMO 很难验证这是不是值得做的真实需求。",
+          "question": "这次先服务哪类用户，在什么高频场景下用，当前最想解决什么问题？",
+          "suggestedOptions": [
+            "先服务内部岗位，提高研发/经营执行效率。",
+            "先服务现有潜在客户，验证是否愿意试点或付费。",
+            "先做 CEO / 总助 / 管理层内部控制面。",
+            "自定义。"
+          ],
+          "currentValue": "先服务内部产品负责人和技术负责人，在统一模型 API 平台规划与验证场景下使用",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "deliveryWindow",
+          "label": "期望工期 / 节奏",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有节奏约束，总助无法把任务拆成合理阶段，也无法约束 CPO / CTO 的交付窗口。",
+          "question": "这次希望以什么节奏推进？是先 48 小时内出 briefing，还是一周内出 PRD，还是两周内跑最小验证？",
+          "suggestedOptions": [
+            "48 小时内完成 intake / Discovery 入口澄清。",
+            "1 周内完成 Discovery + Intelligence + PRD。",
+            "2 周内完成最小 MVP 验证。",
+            "自定义。"
+          ],
+          "currentValue": "以 capability gate 为节奏推进；当前 Gate A 先验证 ceo-demand 到 intelligence，之后逐步扩展到后续全部 IPD 阶段",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "budgetGuardrail",
+          "label": "预算护栏 / 成本窗口",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "intelligence"
+          ],
+          "whyItMatters": "不明确预算窗口，CFO 就无法形成后续预算护栏，CPO/CTO 也无法判断首轮范围。",
+          "question": "这次允许投入到什么程度？只用现有人力，还是允许少量工具成本，还是允许明确试验预算？",
+          "suggestedOptions": [
+            "只用现有岗位和现有工具先验证。",
+            "允许少量模型/API/工具试验成本。",
+            "允许 1-3 人天级别的试验投入。",
+            "自定义。"
+          ],
+          "currentValue": "首轮仅使用现有人力与少量工具成本，不新增正式部署预算",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "successMetric",
+          "label": "首轮成功信号",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "delivery"
+          ],
+          "whyItMatters": "没有成功信号，后续很容易把‘做完一些功能’误当成‘需求成立’。",
+          "question": "这次第一轮做成，最希望看到什么结果？流程跑通、试点用户正反馈、可收费、还是节省了人力？",
+          "suggestedOptions": [
+            "先证明 IPD / 产品流程能跑通。",
+            "先拿到一个可展示或可试点的 MVP。",
+            "先验证有人愿意继续用或付费。",
+            "自定义。"
+          ],
+          "currentValue": "PLATFORM-001 能作为固定 proving-ground，按 gate 逐步跑通 ceo-demand 到 delivery 全阶段；当前首个 gate 需从 ceo-demand 跑到 intelligence 结束并形成可签核 package",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "mustHaveScope",
+          "label": "必须交付的最小范围",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有最小范围，Discovery/Intelligence 很容易继续膨胀，最后 PRD 无法收口。",
+          "question": "这次必须交付的最小结果是什么？是一份 PRD、一个最小工作流、一个 MVP 页面，还是完整平台闭环？",
+          "suggestedOptions": [
+            "先交付可签核 PRD 与项目计划。",
+            "先交付单条最小工作流验证。",
+            "先交付可演示 MVP。",
+            "自定义。"
+          ],
+          "currentValue": "必须固定 PLATFORM-001 作为验证桩，支持 ceo-demand/task-dispatch/discovery rollback，并逐步覆盖 discovery、intelligence、designing、coding、verify-integration、redteam、qa、deployment、assurance、delivery",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "explicitOutOfScope",
+          "label": "明确不做项",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有不做项，团队容易把远期能力和当前验证目标混写。",
+          "question": "这次明确不做什么？比如不上正式宿主、不做链上实现、不做大规模运营、不做完整商业化。",
+          "suggestedOptions": [
+            "不涉及正式宿主切换。",
+            "不涉及链上/钱包/合约真实实现。",
+            "不涉及大规模上线与运营。",
+            "自定义。"
+          ],
+          "currentValue": "当前轮次不直接追求生产级上线、不涉及正式宿主切换、不把单次 Gate A 通过写成全阶段已完成",
+          "allowCustom": true
+        }
+      ]
+    }
+  },
+  "roleAssignmentMatrix": [
+    {
+      "role": "ChiefTechnologyOfficer",
+      "stageKeys": [
+        "intelligence",
+        "designing",
+        "coding",
+        "verify-integration",
+        "redteam",
+        "qa",
+        "deployment",
+        "assurance",
+        "sprint-execution",
+        "sprint-review",
+        "validation-handoff"
+      ],
+      "taskType": "code-research-and-technical-design",
+      "status": "active",
+      "canFreezeCase": true,
+      "responsibility": "项目交付 case 中负责代码研究、设计与开发；流程优化 case 中负责 sprint-execution 的实现、验证和技术缺口收口。",
+      "deliverables": [
+        "IntelligenceCapabilityExtractionMatrix",
+        "IntelligenceOpenSourceLandscape",
+        "IntelligenceCodegraphAnalysis",
+        "IntelligenceArchitectureOptionMemo",
+        "开源代码分析结论",
+        "技术方案",
+        "execution validation"
+      ]
+    }
+  ],
+  "requiredApprovers": [
+    "ChiefTechnologyOfficer",
+    "CEO",
+    "CEOChiefOfStaff"
+  ],
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar"
+  ],
+  "inputRefs": [
+    "workbench/ipd/cases/IPD-20260611-PLATFORM-001/intake-brief.json",
+    "workbench/ipd/cases/IPD-20260611-PLATFORM-001/case.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/01-discovery.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/02-intelligence.json"
+  ],
+  "inputRequirements": [
+    "PRD",
+    "项目计划",
+    "验收标准"
+  ],
+  "outputRequirements": [
+    "产出技术路线、工程门禁、任务拆解和 branch / phase handoff。",
+    "明确 TriDev phase engine 接入要求与版本包约束。"
+  ],
+  "superDevReferenceStages": [
+    "architecture",
+    "uiux",
+    "spec"
+  ],
+  "schemaHint": {
+    "objectType": "IPD_DESIGN_PACKAGE",
+    "schemaPath": ""
+  },
+  "draftTemplate": {
+    "kind": "ipd-engine-native-draft",
+    "objectType": "IPD_DESIGN_PACKAGE",
+    "phaseKey": "DESIGNING",
+    "businessOwner": "ChiefTechnologyOfficer",
+    "actingOwner": "ChiefTechnologyOfficer",
+    "moduleExecutor": "TriDev",
+    "gateOwner": "ChiefTechnologyOfficer",
+    "ownerRole": "ChiefTechnologyOfficer",
+    "participantRoles": [
+      "ChiefProductOfficer",
+      "CEOChiefOfStaff"
+    ],
+    "summary": "ChiefTechnologyOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“将 PLATFORM-001 固定为 IPD proving-ground，从 ceo-demand 反复验证已优化能力，并逐步扩展到全部 IPD 阶段。”推进 Designing / 技术设计（DESIGNING）并协同 ChiefProductOfficer、CEOChiefOfStaff，并在提交后等待 CEO 签名与 CEOChiefOfStaff 最终验证签发。",
+    "inputRequirements": [
+      "PRD",
+      "项目计划",
+      "验收标准"
+    ],
+    "requiredOutput": [
+      "产出技术路线、工程门禁、任务拆解和 branch / phase handoff。",
+      "明确 TriDev phase engine 接入要求与版本包约束。"
+    ],
+    "superDevReferenceStages": [
+      "architecture",
+      "uiux",
+      "spec"
+    ],
+    "workflowRefs": [
+      {
+        "relation": "phase-package-for",
+        "phase": "DESIGNING",
+        "runId": "run-IPD-20260611-PLATFORM-001",
+        "branchId": "ipd-ipd-20260611-platform-001"
+      }
+    ],
+    "standardFlow": {
+      "packageRoot": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing",
+      "packageDocuments": [
+        {
+          "name": "DesignArchitectureDecisionRecord",
+          "path": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-architecture-decision-record.md",
+          "purpose": "沉淀系统上下文、模块边界、接口契约和关键架构取舍，形成可签核的设计主文档。"
+        },
+        {
+          "name": "DesignTestBaseline",
+          "path": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-test-baseline.md",
+          "purpose": "固化 verify-integration、QA 和回归所依赖的测试策略、测试金字塔和最小用例基线。"
+        },
+        {
+          "name": "DesignSecurityAndRedteamMemo",
+          "path": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-security-and-redteam-memo.md",
+          "purpose": "提前写清 security-by-design、threat model、redteam 入口和高风险边界，不把安全留到后置补丁。"
+        },
+        {
+          "name": "DesignPhaseHandoffPlan",
+          "path": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-phase-handoff-plan.md",
+          "purpose": "定义 coding / verify-integration / QA 的 branch、任务拆解、handoff 条件和放行顺序。"
+        }
+      ],
+      "requiredActions": [
+        "先把正式 PRD、项目计划、验收标准和 capability extraction matrix 收口成可执行设计输入。",
+        "补齐系统上下文、模块边界、接口契约、数据契约、配置 / 迁移策略和最小 phased delivery 计划。",
+        "在 Designing 阶段同时生成测试基线、安全设计和 handoff plan，避免 Verify-Integration / QA / Redteam 无前置 contract。",
+        "给 Coding 阶段留下明确的 branch / phase handoff、任务拆解、工程门禁和回滚边界。"
+      ],
+      "handoffToCoding": [
+        "Coding 必须消费 Designing 的 architecture decision、test baseline、security memo 和 phase handoff plan。",
+        "如果 Designing 只形成泛泛技术方案，没有测试基线、安全前置和 handoff 条件，不允许直接进入 Coding。"
+      ]
+    },
+    "templateFields": {
+      "designArtifacts": [
+        "systemContext",
+        "moduleBoundaries",
+        "interfaceContracts",
+        "dataContracts",
+        "configAndMigrationPlan",
+        "engineeringGuardrails",
+        "branchAndPhaseHandoff",
+        "mvpVsPhasedDeliveryPlan"
+      ],
+      "qualityAndSecurity": [
+        "testStrategy",
+        "regressionScope",
+        "nonFunctionalConstraints",
+        "securityByDesignAssumptions",
+        "threatModelFocus",
+        "redteamEntryConditions"
+      ]
+    },
+    "scorecardSchema": {
+      "schemaName": "DesignReviewScorecard",
+      "version": "1.0",
+      "scoreRange": "0-5",
+      "dimensions": [
+        {
+          "key": "architecture-clarity",
+          "label": "架构清晰度",
+          "weight": 0.2,
+          "question": "系统上下文、模块边界、接口关系和关键取舍是否足够清晰。"
+        },
+        {
+          "key": "contract-completeness",
+          "label": "契约完整度",
+          "weight": 0.2,
+          "question": "接口、数据、配置、迁移和 handoff 契约是否可直接支持 Coding。"
+        },
+        {
+          "key": "testability",
+          "label": "可测试性",
+          "weight": 0.2,
+          "question": "Verify-Integration / QA 所需测试基线、回归范围和执行顺序是否已明确。"
+        },
+        {
+          "key": "security-by-design",
+          "label": "安全前置设计",
+          "weight": 0.2,
+          "question": "threat model、redteam 入口和高风险假设是否在 Designing 阶段前置。"
+        },
+        {
+          "key": "delivery-phasing",
+          "label": "分阶段交付可执行性",
+          "weight": 0.2,
+          "question": "MVP、phased delivery、回滚和版本包边界是否可执行。"
+        }
+      ]
+    }
+  },
+  "standardFlow": {
+    "packageRoot": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing",
+    "packageDocuments": [
+      {
+        "name": "DesignArchitectureDecisionRecord",
+        "path": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-architecture-decision-record.md",
+        "purpose": "沉淀系统上下文、模块边界、接口契约和关键架构取舍，形成可签核的设计主文档。"
+      },
+      {
+        "name": "DesignTestBaseline",
+        "path": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-test-baseline.md",
+        "purpose": "固化 verify-integration、QA 和回归所依赖的测试策略、测试金字塔和最小用例基线。"
+      },
+      {
+        "name": "DesignSecurityAndRedteamMemo",
+        "path": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-security-and-redteam-memo.md",
+        "purpose": "提前写清 security-by-design、threat model、redteam 入口和高风险边界，不把安全留到后置补丁。"
+      },
+      {
+        "name": "DesignPhaseHandoffPlan",
+        "path": "TriCompany/docs/workflow/ipd-stage-packages/IPD-20260611-PLATFORM-001/designing-phase-handoff-plan.md",
+        "purpose": "定义 coding / verify-integration / QA 的 branch、任务拆解、handoff 条件和放行顺序。"
+      }
+    ],
+    "requiredActions": [
+      "先把正式 PRD、项目计划、验收标准和 capability extraction matrix 收口成可执行设计输入。",
+      "补齐系统上下文、模块边界、接口契约、数据契约、配置 / 迁移策略和最小 phased delivery 计划。",
+      "在 Designing 阶段同时生成测试基线、安全设计和 handoff plan，避免 Verify-Integration / QA / Redteam 无前置 contract。",
+      "给 Coding 阶段留下明确的 branch / phase handoff、任务拆解、工程门禁和回滚边界。"
+    ],
+    "handoffToCoding": [
+      "Coding 必须消费 Designing 的 architecture decision、test baseline、security memo 和 phase handoff plan。",
+      "如果 Designing 只形成泛泛技术方案，没有测试基线、安全前置和 handoff 条件，不允许直接进入 Coding。"
+    ]
+  }
+}

@@ -2,10 +2,10 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/workflow/workflow-engine-spec.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- sourceOfTruth: TriCompany/docs/workflow/integrated-product-development-flow.md
+- publishedFrom: TriCompany/docs/workflow/integrated-product-development-flow.md
+- syncMode: published-summary
+- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 ## 0. 统一词汇规范
@@ -43,6 +43,16 @@
 - 支持 DISCOVERY -> INTELLIGENCE -> DESIGNING 顺序审核发布链（必须人工审核通过，且满足“首次有版本号/非首次版本号变更”）
 - 支持 PRD 分支通过 `模块六层文档协同系统` 统一落地，并让各阶段产物默认进入对应 docs 层
 - 明确因果链：白皮书（项目级） -> PRD（产品级） -> 设计规格（Spec，设计级） -> 产品实施总结（实施级） -> 单元测试报告（单元测试级） -> 集成测试报告（测试级） -> 红队扫描报告（安全测试级） -> QA报告（质量评估级） -> 部署手册（发布级） -> Assurance报告（保障级） -> 交付验收报告（交付级）
+- 支持“流程优化 -> 验证桩验证 -> 公司级 IPD 基线更新 -> 新实例自动复用”的闭环；优化结果默认回写公司基线，而不是只沉淀在某个单独实例中
+
+## 1.1 基线与实例的治理关系
+
+- `TriCompany/docs/workflow/integrated-product-development-flow.md` 负责赛博公司 IPD 流程真源；它定义公司级 IPD 流程、阶段 contract、门禁和发布链。
+- `TriCompany/runtime/cognition/ipd_case_engine.py` 与相关 validation 负责公司侧可执行基线；它承接 TriCompany 的书面流程真源，形成可运行的 automation contract。
+- `TriMetaverse/docs/workflow/*.md` 在该主题下只承担发布侧摘要、跨模块对齐、制度镜像或 registry 协调，不是赛博公司 IPD 的主真源。
+- 各 `IPD-*` case / run / proving-ground instance 只是基线的消费面和验证面，不是流程真源。
+- 因此，流程优化一旦在验证桩验证通过，默认动作应是先更新 TriCompany 的书面流程真源与公司侧可执行基线，再让后续新创建的 IPD 实例自动继承；TriMetaverse 只在需要发布侧同步时再追平摘要或制度镜像。
+- 只有特殊旧实例、已冻结实例或历史回放实例，才允许按差异做手动合入或人工补丁；该类回写不得替代基线更新。
 
 ## 2. 核心对象
 
@@ -135,6 +145,17 @@
 - `PRDBranch init`：PRD 已审核后，必须先拿到当前阶段 `ChiefProductOfficer` 的模块设计 / 归属结论，并在已确认落位点完成 `模块六层文档协同系统` 的最小落位；若该结论未形成，则不得视为正式进入 `DESIGNING`。
 - `DESIGNING`：必须基于已审核 PRD 与原型推进，并产出完整设计资产，才允许进入 `CODING`。
 - 任一阶段审核未通过、缺少版本号、或非首次但版本未变更，研发工作流抛出 `QualityGateError` 并阻断后续阶段。
+
+## 3.3 流程优化与基线回写规则
+
+- `WORKFLOW-*` 类 case 可用于流程优化实验，不直接等同于产品交付主线。
+- `PLATFORM-*` proving-ground case 可用于实例级验证，证明某项流程优化已经能跑出真实 stage output、signoff、release version 与 evidence。
+- 一旦验证通过，必须先更新公司级 IPD 基线：
+  - 书面真源层：`TriCompany/docs/workflow/integrated-product-development-flow.md` 及相关 TriCompany workflow 文档
+  - 公司执行层：`TriCompany/runtime/cognition/ipd_case_engine.py` 及相关 validation contract
+  - 发布侧同步层：仅在需要对外发布或跨模块对齐时，再同步 `TriMetaverse/docs/workflow/*.md`
+- 新创建的 IPD 实例默认直接继承更新后的基线，不再单独手工吸收相同优化。
+- 对已存在且仍需继续推进的旧实例，可按需要人工判断是否补齐基线差异；这属于历史实例迁移问题，不改变“基线先更新”的默认顺序。
 
 ## 4. 门禁规则
 

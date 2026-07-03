@@ -3,20 +3,22 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/workflow-host-integration.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## 1. 目标
 
 本文件定义研发工作流的宿主如何把执行结果自动落盘到 `docs/runs/`。
 
+当前文件是 TriMetaverse 研发工作流宿主输出契约的本地真源，只负责 run-state、落盘顺序、宿主切换边界与 machine-readable 输出契约；它不是 TriCompany 公司级 workflow 书面真源。
+
 作用域说明：
 
 - 本文件只讨论研发工作流的宿主输出契约与切换边界，不再把研发工作流单列为 `Development Main Controller` 标准名。
-- 它不定义赛博公司经营主工作流的角色结构，但会说明研发工作流如何与 `TriMC`、`TriHost` 和 PC 端软件协同。
-- 当前 shadow 与当前阶段正式接管都先直接跑在 `copilot chat`，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，正式切换通过 `TriHost` 配置完成，而 `TriMC` 保持 agent 运行和交互核心。
+- 它不定义赛博公司经营主工作流的角色结构，但会说明研发工作流如何与 `TriMC`、`TriModel` 和 PC 端软件协同。
+- 当前 shadow 与当前阶段正式接管都先直接跑在 `copilot chat`，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，正式切换通过 `TriModel` 的 Provider/Model 配置完成，而 `TriMC` 保持 agent 运行和交互核心。
 
 本文件解决三类问题：
 
@@ -38,9 +40,9 @@
 TriMetaverse V1 正式上线切换阶段边界：
 
 - agent 运行与交互核心：`TriMC`
-- 宿主适配与切换配置层：`TriHost`
+- 宿主适配与切换配置层：`TriModel`
 - PC 端软件：`TriPilot + Tride + vscodium + CLI`（`copilot cli`、`opencode`、`claude code`、`codex`）
-- 切换原则：保留当前已验证的输出契约与 machine-readable 资产，通过 `TriHost` 配置宿主与模型调用，而不是把研发工作流正式迁入 `Tride`
+- 切换原则：保留当前已验证的输出契约与 machine-readable 资产，通过 `TriModel` 配置宿主与模型调用，而不是把研发工作流正式迁入 `Tride`
 
 2026.04.22 14:31 修改备注：`Tride` 不再作为切换后的正式宿主，仅与 `TriPilot` 和 `vscodium` 集成为 PC 端软件层的一部分，并配合 `TriLC` 完成本地化任务和部分由服务域下发的任务。该层同时保留用户直接使用桌面自动化、PC 软件自动化与 `vibe coding` 的工具入口语义。执行工具统一视为 PC 端软件的一部分：`copilot cli`、`opencode`、`claude code`、`codex`。
 
@@ -48,9 +50,9 @@ TriMetaverse V1 正式上线切换阶段边界：
 
 - 研发工作流不再单列为三主控中的一条；它属于 `TriMC` 统一运行面里的研发执行切片。
 - `TriMC` 是 agent 运行和交互核心，负责 runtime、planner、context 整理、tools 编排与模型调用协同。
-- `TriHost` 负责统一宿主适配 contract，让同一套工作流输出契约可以在 `copilot chat`、`copilot cli` 以及后续宿主间平滑切换。
+- `TriModel` 负责统一宿主适配 contract，让同一套工作流输出契约可以在 `copilot chat`、`copilot cli` 以及后续宿主间平滑切换。
 - `Tride` 不再承担正式宿主角色，而是 PC 端软件中的开发工具与集成层；该层既配合 `TriLC` 承接本地化任务，也可直接作为用户自用自动化和 `vibe coding` 的工作台。
-- 不要把“当前在 `copilot chat` 跑通 shadow 与正式接管”误写成“`TriMC` 已完成正式切换”或“`TriHost` 已经落地实现”。
+- 不要把“当前在 `copilot chat` 跑通 shadow 与正式接管”误写成“`TriMC` 已完成正式切换”或“`TriModel` 已经落地实现”。
 
 ## 2.1 宿主优先顺序
 
@@ -58,11 +60,11 @@ TriMetaverse V1 正式上线切换阶段边界：
 
 1. 先在 `copilot chat` 中把研发工作流跑通，验证当前宿主的真实可执行性
 2. 如有必要，把同一条当前宿主路径扩到 `copilot cli`
-3. 到 `TriMetaverse V1 正式上线切换阶段`，再把已经稳定的宿主协议与 machine-readable 资产交给 `TriHost` 管理配置，并接入以 `TriMC` 为核心的正式运行面
+3. 到 `TriMetaverse V1 正式上线切换阶段`，再把已经稳定的宿主协议与 machine-readable 资产交给 `TriModel` 管理配置，并接入以 `TriMC` 为核心的正式运行面
 
 这意味着当前阶段不应该为了切换后正式宿主而跳过现有宿主落地。
 
-`TriHost` 的目标是把宿主切换与调用配置从工作流语义中抽离出来；`Tride` 的目标则是继续作为 PC 端开发工具层，而不是替代当前这一步对 Copilot 宿主的现实验证。
+`TriModel` 的目标是把宿主切换与调用配置从工作流语义中抽离出来；`Tride` 的目标则是继续作为 PC 端开发工具层，而不是替代当前这一步对 Copilot 宿主的现实验证。
 
 ## 3. 宿主输出责任
 
@@ -78,7 +80,7 @@ TriMetaverse V1 正式上线切换阶段边界：
 
 宿主不应只生成自然语言总结，而应优先保证结构化 JSON 先落盘。
 
-在当前阶段，若当前 Copilot 宿主无法完整自动生成全部产物，也应先把最小 machine-readable 入口跑通，再逐步补齐切换阶段交给 `TriHost` 和 `TriMC` 协同承接所需的正式宿主能力。
+在当前阶段，若当前 Copilot 宿主无法完整自动生成全部产物，也应先把最小 machine-readable 入口跑通，再逐步补齐切换阶段交给 `TriModel` 和 `TriMC` 协同承接所需的正式宿主能力。
 
 ## 4. 自动落盘顺序
 
@@ -141,7 +143,7 @@ TriMetaverse V1 正式上线切换阶段边界：
 3. 能识别当前是否处于 `docs_confirm` 或 `preview_confirm`
 4. 能把当前 run 的结构化输出稳定写入 `docs/runs/`
 
-即使这些能力会在 `TriMetaverse V1 正式上线切换阶段` 迁入 `TriHost` 配置下的正式运行面，当前第一宿主也必须先跑通这条最小闭环；若后续扩到 `copilot cli`，也应复用同一套最小状态语义。
+即使这些能力会在 `TriMetaverse V1 正式上线切换阶段` 迁入 `TriModel` 配置下的正式运行面，当前第一宿主也必须先跑通这条最小闭环；若后续扩到 `copilot cli`，也应复用同一套最小状态语义。
 
 ## 6.3 恢复协议
 
@@ -175,9 +177,9 @@ TriMetaverse V1 正式上线切换阶段边界：
 - 它当前对应的第一宿主语境是 `copilot chat`，样例中的 host id 统一使用 `copilot-chat`。
 - 后续宿主自动生成时，应复用同一目录规范，而不是另起一套输出布局。
 
-## 8. 与 TriMC 和 TriHost 的衔接
+## 8. 与 TriMC 和 TriModel 的衔接
 
-到 `TriMetaverse V1 正式上线切换阶段` 接入 `TriMC + TriHost` 时，建议把以下能力视为最小闭环：
+到 `TriMetaverse V1 正式上线切换阶段` 接入 `TriMC + TriModel` 时，建议把以下能力视为最小闭环：
 
 1. 宿主接收一次 workflow 执行请求并生成 `runId`
 2. 宿主按阶段写入 `run-metadata.json` 和 `PhaseResult`
@@ -189,7 +191,7 @@ TriMetaverse V1 正式上线切换阶段边界：
 
 当前缺口：
 
-- `TriHost` 仓库里尚未看到专门的宿主适配 contract 或配置协议文件
+- `TriModel` 仓库里尚未看到专门的宿主适配 contract 或配置协议文件
 - `TriSkill` 当前还是未来统一 skill 模块的占位，尚未承接 workflow skill contract
 - 当前仍以 TriMetaverse 文档层先定义契约，并通过 `copilot chat` 维持 shadow 与当前阶段正式接管
 
@@ -205,6 +207,6 @@ TriMetaverse V1 正式上线切换阶段边界：
 下一步最自然的是：
 
 1. 先让 `copilot chat` 跑通当前第一宿主的最小闭环，必要时补到 `copilot cli`
-2. 让 `TriHost` 定义宿主切换 contract，并明确 `copilot` 如何作为正式切换前的模拟主控调用模型
+2. 让 `TriModel` 定义宿主切换 contract，并明确 `copilot` 如何作为正式切换前的模拟主控调用模型
 3. 让 `TriMC` 作为统一 agent runtime 承接正式运行面，同时保留 PC 端软件的开发工具协同能力
 4. 继续把宿主写入策略、执行事件与 skill contract 结构化成 machine-readable 资产

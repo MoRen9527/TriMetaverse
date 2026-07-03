@@ -3,9 +3,9 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/training/tricompany/03-source-publish-live-链路.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 为什么这条链必须被讲清楚
@@ -112,7 +112,7 @@ TriCompany 的当前纪律是：
 ### 目标态
 
 - `TriMC` 自身完成 `source -> shadow test -> 正式接管`。
-- `TriHost` 承接正式宿主适配与切换。
+- `TriModel` 承接 Provider/Model 统一配置与切换。
 - support bundle 更接近单向发布产物，而不是 source + evidence 的混合体。
 - 更多岗位进入统一发布链，更多 handoff / validation / runtime audit 自动化。
 

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260610-platform-001",
+  "stage": "DISCOVERY",
+  "planId": "ipd-ipd-20260610-platform-001-discovery-plan",
+  "nextAction": "cpo-discovery-gate",
+  "requiredArtifactType": "reference-evidence",
+  "executable": true,
+  "tasks": [
+    {
+      "taskId": "discovery-prepare-inputs",
+      "label": "Prepare stage inputs",
+      "description": "Collect the required upstream inputs for DISCOVERY and verify the stage boundary.",
+      "dependsOn": [],
+      "artifactType": "reference-evidence",
+      "verifyGates": [
+        "reference-evidence"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 1,
+      "status": "completed",
+      "artifactRefs": [
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/case.json"
+      ],
+      "changedFiles": [
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/case.json"
+      ],
+      "gitDiffDigest": "seeded-active-case-intake",
+      "gitDiffStatus": "modified",
+      "summary": "Active intake and case bundle rebuilt for corrected platform scope.",
+      "notes": "Discovery inputs now point to TriAvatar as active frontend entry and TriStaciss backend-only boundary.",
+      "failureCount": 0,
+      "retryBudgetRemaining": 1,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": "2026-06-15T00:00:00+08:00"
+    },
+    {
+      "taskId": "discovery-execute-stage",
+      "label": "Execute stage work",
+      "description": "Produce the primary reference-evidence output for DISCOVERY.",
+      "dependsOn": [
+        "discovery-prepare-inputs"
+      ],
+      "artifactType": "reference-evidence",
+      "verifyGates": [
+        "reference-evidence",
+        "artifact-binding"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 2,
+      "status": "completed",
+      "artifactRefs": [
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/reference-source-catalog.json",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-reference-functional-brief.md",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-competitor-landscape.md",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-common-capability-matrix.md",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-highlight-opportunity-memo.md",
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/outputs/01-discovery.json"
+      ],
+      "changedFiles": [
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/reference-source-catalog.json",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-reference-functional-brief.md",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-competitor-landscape.md",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-common-capability-matrix.md",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-highlight-opportunity-memo.md",
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/outputs/01-discovery.json"
+      ],
+      "gitDiffDigest": "seeded-discovery-package",
+      "gitDiffStatus": "modified",
+      "summary": "Discovery reference package seeded for corrected platform scope.",
+      "notes": "Package establishes TriAvatar as active frontend entry, TriStaciss backend-only platform boundary, and production-grade platform terminology.",
+      "failureCount": 0,
+      "retryBudgetRemaining": 2,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": "2026-06-15T00:00:00+08:00"
+    },
+    {
+      "taskId": "discovery-prepare-gate",
+      "label": "Prepare gate package",
+      "description": "Summarize DISCOVERY output and assemble the gate package for ChiefProductOfficer.",
+      "dependsOn": [
+        "discovery-execute-stage"
+      ],
+      "artifactType": "reference-evidence",
+      "verifyGates": [
+        "stage-summary",
+        "gate-package"
+      ],
+      "allowedPaths": [
+        "docs/**",
+        "artifacts/**",
+        "src/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "failureBudget": 1,
+      "status": "in_progress",
+      "artifactRefs": [
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/outputs/01-discovery.json"
+      ],
+      "changedFiles": [],
+      "gitDiffDigest": "awaiting-cpo-gate",
+      "gitDiffStatus": "pending-review",
+      "summary": "Discovery gate package is assembled and awaiting CPO review/signoff.",
+      "notes": "No stage signoff has been recorded yet in this round.",
+      "failureCount": 0,
+      "retryBudgetRemaining": 1,
+      "retryState": "",
+      "lastAttemptStatus": "",
+      "blockedReason": "",
+      "verifyResults": [],
+      "updatedAt": "2026-06-15T00:00:00+08:00"
+    }
+  ],
+  "progress": {
+    "total": 3,
+    "completed": 2,
+    "blocked": 0,
+    "failed": 0
+  },
+  "generatedAt": "2026-06-10T15:49:56.594314+00:00"
+}

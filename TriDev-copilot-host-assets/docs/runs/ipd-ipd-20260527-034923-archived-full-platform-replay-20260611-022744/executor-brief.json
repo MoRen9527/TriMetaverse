@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260527-034923",
+  "currentStage": "DEPLOYMENT",
+  "nextAction": "record-phase-result",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "requiredInputs": [
+    "upstreamArtifact:implementation",
+    "upstreamArtifact:test-report",
+    "upstreamArtifact:security-report",
+    "artifact:deployment-evidence",
+    "summary"
+  ],
+  "reviewBlockers": [],
+  "recommendedCommand": "python -m tridev.cli engine-step --root . --run-id <run-id> --artifact <path> --summary \"DEPLOYMENT completed\" --step-id <step-id>",
+  "knowledgeBundlePath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\knowledge-bundle.json",
+  "promptContextPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\host-prompt-context.json",
+  "taskPlanPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\coding-task-plan.json",
+  "taskLedgerPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\coding-task-ledger.json",
+  "openTaskIds": [
+    "deployment-prepare-inputs",
+    "deployment-execute-stage",
+    "deployment-prepare-gate"
+  ],
+  "taskRetrySummary": [],
+  "instructions": [
+    "Follow the DEPLOYMENT stage contract and keep evidence machine-readable.",
+    "Do not bypass review blockers; clear revision_requested state before continuing.",
+    "Prefer updating real source/test/deploy artifacts over narrative-only docs when execution evidence is required.",
+    "Bind current-stage artifacts and produce a concise stage summary."
+  ],
+  "generatedAt": "2026-06-10T15:29:13.150006+00:00"
+}

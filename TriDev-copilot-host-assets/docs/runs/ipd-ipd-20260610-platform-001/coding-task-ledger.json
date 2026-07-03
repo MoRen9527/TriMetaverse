@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260610-platform-001",
+  "entries": [
+    {
+      "taskId": "discovery-prepare-inputs",
+      "status": "completed",
+      "summary": "Rebuilt active intake and case bundle for corrected platform scope.",
+      "updatedAt": "2026-06-15T00:00:00+08:00"
+    },
+    {
+      "taskId": "discovery-execute-stage",
+      "status": "completed",
+      "summary": "Seeded Discovery reference package and stage output for corrected platform scope.",
+      "updatedAt": "2026-06-15T00:00:00+08:00"
+    },
+    {
+      "taskId": "discovery-prepare-gate",
+      "status": "in_progress",
+      "summary": "Gate package assembled and awaiting CPO review/signoff.",
+      "updatedAt": "2026-06-15T00:00:00+08:00"
+    }
+  ]
+}

@@ -3,14 +3,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/tricompany-handoff-objects.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## 1. 目标
 
 本文件把 `tricompany-agent-roles.md` 中的关键协作对象收敛为可复用的标准交接对象，避免赛博公司后续继续依赖模糊自然语言流转任务。
+
+当前文件是 TriMetaverse 经营层交接对象协议的本地真源，只负责对象类型、最小字段和桥接语义；它不是 TriCompany 公司级 workflow 书面真源。
 
 本文件解决三类问题：
 

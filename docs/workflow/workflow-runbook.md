@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/workflow-runbook.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## 0. 统一词汇规范
+
+当前文件是 TriMetaverse 研发工作流运行手册的本地真源，只负责运行前检查、阶段门禁、回流处理和执行自检步骤；它不是 TriCompany 公司级 workflow 书面真源。
 
 - 统一词汇源：`docs/workflow/terminology.md`（本节为执行摘要，详细定义以该文件为准）。
 - CODING 阶段标准产物名称固定为“产品实施总结”。

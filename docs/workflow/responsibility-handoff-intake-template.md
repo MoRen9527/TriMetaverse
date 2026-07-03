@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/responsibility-handoff-intake-template.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 本模板用于在岗位启用、职责移交、acting owner 切换或 completion tracking 需要结构化跟踪时，发起一次标准 `RESPONSIBILITY_HANDOFF` 请求。
+
+当前文件是 TriMetaverse intake 模板资产的本地真源，只负责自然语言交接请求的整理格式和发起入口；交接治理 owner、source-side 发布链与岗位启用边界仍以 TriCompany 对应岗位 / workflow 真源为准。
 
 它不是正式记录本身，也不替代 `handoff-templates/responsibility-handoff.example.json`。
 它的用途是先把自然语言交接需求整理成统一字段，再由当前交接治理 owner、公司级协调侧或相关专业负责人接手。

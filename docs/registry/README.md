@@ -3,14 +3,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/README.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 作用
 
 本目录是 TriMetaverse 的工作型登记层，用来承接：
+
+当前文件是 TriMetaverse 中央 registry 目录的本地索引真源，只负责说明本目录下的中央策略登记、模块状态登记和公司治理登记如何分工。它不是 TriCompany 公司级 workflow 书面真源，也不替代白皮书、项目级真源或各模块 source-side registry。
 
 - 当前商业模式状态
 - 模块 business registry 约束
@@ -20,6 +22,23 @@
 - 需要被显式记录的策略变化
 
 它不是白皮书和 workflow 文档的替代品，而是便于 agent 读取和更新的压缩工作层。
+
+## 1.1 目录治理规则
+
+当前 `TriMetaverse/docs/registry/` 下的页面，默认只允许落入以下两类：
+
+1. `source-only` 的 TriMetaverse 本地中央 registry 真源：用于维护中央 `BusinessStrategy` 工作层、TriMetaverse 模块自身的 `business/product/code` 状态、中央 `CompanyGovernanceRegistry` 工作层，以及模块映射、边界和策略演化日志。
+2. `audit-record` 的登记留痕：用于显式记录策略变化、边界变动或其他需要保留时间序列的中央登记证据。
+
+这里默认不把 registry 页面写成 `TriCompany` 公司级 workflow 真源，也不把 TriCompany support root 或 published-copy 路径当作 registry 层的默认事实入口。若某项规则本质属于 TriCompany source-side owner、岗位制度、published-copy 流程或 host object 发布链，则当前目录只保留引用和中央摘要，不复制 source-side 规则正文。
+
+## 1.2 真源判断顺序
+
+新增或改写 registry 页面时，默认按以下顺序判断：
+
+1. 若内容属于 TriMetaverse 中央策略、跨模块边界、模块映射、TriMetaverse 模块自身状态或中央公司治理登记，则直接作为本目录本地真源维护。
+2. 若内容属于 TriCompany 的岗位制度、workflow 机制、published-copy 纪律、host object 发布链或其他 source-side 实施规则，则本目录只引用 TriCompany 真源，不重写为 registry 层公司制度正文。
+3. 若内容属于模块内部事实，应优先回对应模块自己的 `BusinessStrategyRegistry`、`ProductRegistry`、`CodeRegistry` 或模块真源；只有跨模块裁决、中央映射或中央摘要需要时，才在这里记录稳定结论。
 
 ## 2. 真源优先级
 

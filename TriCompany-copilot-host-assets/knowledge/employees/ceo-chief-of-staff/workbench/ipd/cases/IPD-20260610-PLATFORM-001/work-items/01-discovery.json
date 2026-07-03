@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-work-item",
+  "caseId": "IPD-20260610-PLATFORM-001",
+  "stageKey": "discovery",
+  "phaseKey": "DISCOVERY",
+  "title": "模型 API 转接平台生产级平台首版交付 / Discovery / CPO 产品与入口边界研究",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "ownerRole": "ChiefProductOfficer",
+  "participantRoles": [
+    "CEOChiefOfStaff",
+    "CEO",
+    "ChiefMarketingOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "status": "in-progress",
+  "createdAt": "2026-06-15T00:00:00+08:00",
+  "updatedAt": "2026-06-15T00:00:00+08:00",
+  "priority": "high",
+  "summary": "ChiefProductOfficer 需要基于 CEO / 总助已纠偏并获签核的 intake briefing，围绕 TriAvatar 现役前端入口 + TriStaciss 后端模型 API 转接平台边界推进 Discovery，形成可进入 Intelligence 的产品研究与范围收口包。",
+  "inputRefs": [
+    "workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+    "workbench/ipd/cases/IPD-20260610-PLATFORM-001/case.json"
+  ],
+  "inputRequirements": [
+    "总助拆解后的研发任务说明",
+    "intake briefing",
+    "上游业务背景与当前阶段边界"
+  ],
+  "outputRequirements": [
+    "沉淀任务意图、目标边界、成功信号和 Discovery 真源草稿。",
+    "把符合任务的产品、官方手册和官方说明整理到 TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/，形成 reference source catalog。",
+    "明确 TriAvatar 是现役前端入口、TriStaciss 内部前端不纳入交付面。",
+    "明确首版生产级平台的最小范围、现役前后端协同边界和待 Intelligence 深挖问题。"
+  ],
+  "superDevReferenceStages": ["research", "baseline"],
+  "schemaHint": {
+    "objectType": "IPD_DISCOVERY_PACKAGE",
+    "schemaPath": ""
+  },
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar"
+  ]
+}

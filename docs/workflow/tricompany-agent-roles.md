@@ -7,9 +7,9 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/tricompany-agent-roles.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（summary source）
+- syncMode: source-only
+- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 ---
@@ -19,6 +19,8 @@
 本文是 [tricompany.md](../../tricompany.md) 的执行化补充，用于把 TriMetaverse 赛博公司的高层岗位转写为可被 Agent 实现、可被工作流编排、可被审计和可被替换的角色定义。
 
 本文关注的是“角色 contract”，不是最终 prompt，也不是最终技术实现。后续无论使用本地 Agent、服务端 Agent、人工参与节点，还是链上治理接口，都应优先遵守本文定义的职责边界、输入输出与升级规则。
+
+当前文件只承担 TriMetaverse 发布侧角色汇总和工程实施摘要职责。赛博公司当前阶段的岗位真源并不集中在单一 TriMetaverse 页面，而是分散锚定在 TriCompany 的源侧岗位 / 编排文档，例如 `chief-of-staff-rd-orchestration.md`、`chief-administrative-officer-role.md` 以及各岗位 `*-role.md`。因此本页只保留跨角色汇总、发布侧对齐和工程实施语义，不作为公司级岗位制度单一主真源。
 
 当前 Copilot-host live 阶段的 registry owner 分工以 TriCompany 源侧规则为准；TriMetaverse 侧只承接发布后的工程实施摘要。源侧锚点包括 `../../../TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`、`../../../TriCompany/docs/registry/product-state.md`、`../../../TriCompany/docs/registry/code-state.md` 与 `../../../TriCompany/docs/workflow/chief-administrative-officer-role.md`。
 
@@ -152,7 +154,7 @@
 
 - 赛博公司是所有人格 Agent 与非人格 Agent 的经营和交互核心载体，不再使用 `Autonomy Main Controller` 作为当前标准名。
 - `TriMC` 是统一的 agent runtime 和 interaction core；服务域任务、经营协同、研发工作流都作为它的执行切片存在，而不再拆成三主控命名。
-- 当前阶段，赛博公司与服务域任务都先由 `copilot chat` 完成 shadow test 并进入本地正式接管；到 `TriMetaverse V1 正式上线切换阶段`，再通过 `TriHost` 迁入 `TriMC` 运行面。
+- 当前阶段，赛博公司与服务域任务都先由 `copilot chat` 完成 shadow test 并进入本地正式接管；到 `TriMetaverse V1 正式上线切换阶段`，再通过 `TriModel` 的 Provider/Model 配置迁入 `TriMC` 运行面。
 - CEO 总助 Agent 是当前阶段的日常总调度中心和默认代理执行枢纽，但不应被直接等同为宿主或基础设施主控。
 - `Tride` 不再作为切换后的正式宿主，而是 PC 端软件中的开发工具与集成层，不在本文角色 contract 主体范围内。
 

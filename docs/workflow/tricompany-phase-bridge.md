@@ -3,14 +3,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/tricompany-phase-bridge.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## 1. 目标
 
 本文件定义赛博公司经营对象如何与研发主流程的 `PhaseResult`、`runId`、`branchId` 和 `prdId` 建立可追溯引用。
+
+当前文件是 TriMetaverse 经营对象与研发阶段桥接协议的本地真源，只负责 `workflowRefs`、`phaseResultRef` 与 docs bootstrap 桥接语义；它不是 TriCompany 公司级 workflow 书面真源。
 
 它解决的问题是：
 

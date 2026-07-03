@@ -3,10 +3,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/branching-release-policy.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-06
+
+当前文件是 TriMetaverse 多仓 Git 分支与发布治理规范的本地真源，用于维护当前工作区的分支职责、发布闭环和保护规则；它不是 TriCompany 公司级 workflow 或产品真源。
 
 更新时间：2026-06-06
 
@@ -40,7 +42,7 @@
 | --- | --- | --- | --- | --- | --- |
 | A. 成熟仓 | `TriMetaverse`、`TriCompany`、`TriDev`、`TriPilot`、`TriStaciss`、`TriAvatar`、`TriMC`、`TriLC` | `main + dev` 双轨 | `dev` | `main` | 现在应补齐或启用 `main` 作为稳定基线；短期内默认分支仍可保留 `dev` |
 | B. 过渡仓 | `Tride`、`TriDeployment`、`TriTest`、`vscodium` | `dev-first` 过渡 | `dev` | 暂不强制 | 继续走 `dev + release/*`；待稳定消费面形成后再引入 `main` |
-| C. 占位仓 | `TriMobile`、`TriMem`、`TriWeb4`、`TriChain`、`TriGateway`、`TriHost`、`TriSkill` | `dev-only` | `dev` | 暂无 | 维持 `dev-only`；不要为待初始化仓提前维护双轨 |
+| C. 占位仓 | `TriMobile`、`TriMem`、`TriWeb4`、`TriChain`、`TriGateway`、`TriModel`、`TriSkill` | `dev-only` | `dev` | 暂无 | 维持 `dev-only`；不要为待初始化仓提前维护双轨 |
 | D. 历史迁移源 | `core-agent` | 冻结 | 不新增 | 不新增 | 不再投入新的分支治理精力；后续以 `TriMC` 为现役整合目标 |
 
 ## 5. 现行治理规则

@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/prd/PRD-template.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-06
 
 说明：
+
+- 当前文件是 TriMetaverse PRD 模板资产的本地真源，只提供 PRD 编写骨架和元信息用法说明，不承担 TriCompany 公司级 workflow 书面真源职责。
 
 - 本模板中的“文档同步元信息”专指真源 / published-copy / support/live / archive 链路字段。
 - `状态`、`负责人`、`上游来源` 等普通顶部说明属于“文档头信息”，不与“文档同步元信息”混用。

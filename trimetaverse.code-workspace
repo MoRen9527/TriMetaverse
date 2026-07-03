@@ -1,4 +1,4 @@
-﻿{
+{
 	"folders": [
 		{
 			"path": "./"
@@ -56,10 +56,13 @@
 			"path": "../TriGateway"
 		},
 		{
-			"path": "../TriHost"
+			"path": "../TriModel"
 		},
 		{
 			"path": "../TriSkill"
+		},
+		{
+			"path": "../TriTraining"
 		}
 	],
 	"launch": {

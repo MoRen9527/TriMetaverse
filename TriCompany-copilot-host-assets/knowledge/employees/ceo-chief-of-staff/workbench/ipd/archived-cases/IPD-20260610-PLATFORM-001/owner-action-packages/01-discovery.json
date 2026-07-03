@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-owner-action-package",
+  "caseId": "IPD-20260610-PLATFORM-001",
+  "stageKey": "discovery",
+  "phaseKey": "DISCOVERY",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "gateOwner": "ChiefProductOfficer",
+  "generatedAt": "2026-06-10T23:49:57+08:00",
+  "summary": "ChiefProductOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“让 CPO 先产出完整 PRD，再围绕完整模型 API 平台 MVP 从 Discovery 重新走完整个 IPD / TriDev 十阶段流程。”推进 Discovery / 任务澄清（DISCOVERY）并协同 CEOChiefOfStaff、CEO、ChiefMarketingOfficer、ChiefTechnologyOfficer，并在提交后等待总助初签与 CEO 终签。",
+  "reason": "Autopilot 不再代表 ChiefProductOfficer 或 ChiefTechnologyOfficer 直接提交阶段输出；当前只生成 owner action package，并等待 acting owner 手动提交真实阶段产物。",
+  "caseRef": "workbench/ipd/cases/IPD-20260610-PLATFORM-001/case.json",
+  "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
+  "workItemRef": "workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
+  "intakeBriefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+  "intakeBriefRef": "workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+  "inputRefs": [
+    "workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+    "workbench/ipd/cases/IPD-20260610-PLATFORM-001/case.json"
+  ],
+  "inputRequirements": [
+    "CEO / 总助正式任务",
+    "intake briefing",
+    "上游业务背景与当前阶段边界"
+  ],
+  "outputRequirements": [],
+  "requiredApprovers": [
+    "CEOChiefOfStaff",
+    "CEO"
+  ],
+  "schemaHint": {
+    "objectType": "IPD_DISCOVERY_PACKAGE",
+    "schemaPath": ""
+  },
+  "draftTemplate": {
+    "kind": "ipd-engine-native-draft",
+    "objectType": "IPD_DISCOVERY_PACKAGE",
+    "phaseKey": "DISCOVERY",
+    "businessOwner": "ChiefProductOfficer",
+    "actingOwner": "ChiefProductOfficer",
+    "moduleExecutor": "TriDev",
+    "gateOwner": "ChiefProductOfficer",
+    "ownerRole": "ChiefProductOfficer",
+    "participantRoles": [
+      "CEOChiefOfStaff",
+      "CEO",
+      "ChiefMarketingOfficer",
+      "ChiefTechnologyOfficer"
+    ],
+    "summary": "ChiefProductOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“让 CPO 先产出完整 PRD，再围绕完整模型 API 平台 MVP 从 Discovery 重新走完整个 IPD / TriDev 十阶段流程。”推进 Discovery / 任务澄清（DISCOVERY）并协同 CEOChiefOfStaff、CEO、ChiefMarketingOfficer、ChiefTechnologyOfficer，并在提交后等待总助初签与 CEO 终签。",
+    "inputRequirements": [
+      "CEO / 总助正式任务",
+      "intake briefing",
+      "上游业务背景与当前阶段边界"
+    ],
+    "requiredOutput": [
+      "沉淀任务意图、目标边界、成功信号和 Discovery 真源草稿。",
+      "补齐最小 raw evidence pack、参考链接和后续需要验证的问题。"
+    ],
+    "superDevReferenceStages": [
+      "research",
+      "baseline"
+    ],
+    "workflowRefs": [
+      {
+        "relation": "phase-package-for",
+        "phase": "DISCOVERY",
+        "runId": "run-IPD-20260610-PLATFORM-001",
+        "branchId": "ipd-ipd-20260610-platform-001"
+      }
+    ]
+  },
+  "submissionTemplate": {
+    "submittedBy": "ChiefProductOfficer",
+    "summary": "Discovery / 任务澄清 已提交",
+    "details": [
+      "<detail>"
+    ],
+    "evidence": [
+      "<evidence-path>"
+    ],
+    "objectPath": "<primary-output-object-path>"
+  },
+  "evidencePolicy": "",
+  "recommendedCommands": [
+    "python -m runtime.cognition.chief_of_staff_ipd_case submit --case-id IPD-20260610-PLATFORM-001 --stage-key discovery --submitted-by ChiefProductOfficer --summary \"Discovery / 任务澄清 已提交\" --detail \"<detail>\" --evidence <evidence-path> --object-path <primary-output-object-path>",
+    "python -m runtime.cognition.chief_of_staff_ipd_case signoff --case-id IPD-20260610-PLATFORM-001 --stage-key discovery --role CEOChiefOfStaff",
+    "python -m runtime.cognition.chief_of_staff_ipd_case signoff --case-id IPD-20260610-PLATFORM-001 --stage-key discovery --role CEO"
+  ],
+  "tridevOwnerAdapterBundle": {
+    "status": "ready",
+    "runId": "ipd-ipd-20260610-platform-001",
+    "targetStage": "DISCOVERY",
+    "ownerRole": "ChiefProductOfficer",
+    "roleAdaptersPath": "docs/runs/ipd-ipd-20260610-platform-001/role-adapters.json",
+    "workflowStatePath": "docs/runs/ipd-ipd-20260610-platform-001/workflow-state.json",
+    "runCurrentStage": "DISCOVERY",
+    "runCurrentStageMatchesTargetStage": true,
+    "nextAction": "record-phase-result",
+    "executionMode": "auto",
+    "knowledgeBundlePath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/knowledge-bundle.json",
+    "promptContextPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/host-prompt-context.json",
+    "taskPlanPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/coding-task-plan.json",
+    "ownerAdapters": [
+      {
+        "role": "ChiefProductOfficer",
+        "responsibility": "business-owner",
+        "adapterType": "business-owner",
+        "requiredInputs": [
+          "reference-evidence"
+        ],
+        "producesArtifactTypes": [
+          "reference-evidence"
+        ],
+        "blockedByReviewTypes": [
+          "baseline",
+          "resume"
+        ],
+        "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-phase-result",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "phase",
+          "cwd": ".",
+          "role": "ChiefProductOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "DISCOVERY",
+            "--status",
+            "completed",
+            "--artifact-type",
+            "reference-evidence"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "DISCOVERY reference-evidence captured"
+            }
+          ],
+          "artifactType": "reference-evidence",
+          "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\""
+        }
+      },
+      {
+        "role": "ChiefProductOfficer",
+        "responsibility": "acting-owner",
+        "adapterType": "acting-owner",
+        "requiredInputs": [
+          "reference-evidence"
+        ],
+        "producesArtifactTypes": [
+          "reference-evidence"
+        ],
+        "blockedByReviewTypes": [
+          "baseline",
+          "resume"
+        ],
+        "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-phase-result",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "phase",
+          "cwd": ".",
+          "role": "ChiefProductOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "DISCOVERY",
+            "--status",
+            "completed",
+            "--artifact-type",
+            "reference-evidence"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "DISCOVERY reference-evidence captured"
+            }
+          ],
+          "artifactType": "reference-evidence",
+          "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage DISCOVERY --status completed --artifact <path> --artifact-type reference-evidence --summary \"DISCOVERY reference-evidence captured\""
+        }
+      },
+      {
+        "role": "ChiefProductOfficer",
+        "responsibility": "gate-owner",
+        "adapterType": "gate-owner",
+        "requiredInputs": [
+          "reference-evidence"
+        ],
+        "producesArtifactTypes": [
+          "reference-evidence"
+        ],
+        "blockedByReviewTypes": [
+          "baseline",
+          "resume"
+        ],
+        "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DISCOVERY --status approved --approved-by <role> --artifact-type reference-evidence",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "approve-gate",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "gate",
+          "cwd": ".",
+          "role": "ChiefProductOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "DISCOVERY",
+            "--status",
+            "approved",
+            "--approved-by",
+            "ChiefProductOfficer",
+            "--artifact-type",
+            "reference-evidence"
+          ],
+          "inputTemplates": [],
+          "artifactType": "reference-evidence",
+          "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage DISCOVERY --status approved --approved-by <role> --artifact-type reference-evidence"
+        }
+      }
+    ],
+    "supportingAdapters": [
+      {
+        "role": "TriDev",
+        "responsibility": "module-executor",
+        "adapterType": "module-executor",
+        "requiredInputs": [
+          "reference-evidence"
+        ],
+        "producesArtifactTypes": [
+          "reference-evidence"
+        ],
+        "blockedByReviewTypes": [
+          "baseline",
+          "resume"
+        ],
+        "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DISCOVERY reference-evidence captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-task-step",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "task-step",
+          "cwd": ".",
+          "role": "TriDev",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--task-id",
+            "<task-id>",
+            "--status",
+            "completed"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "DISCOVERY reference-evidence captured"
+            }
+          ],
+          "artifactType": "reference-evidence",
+          "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"DISCOVERY reference-evidence captured\""
+        }
+      }
+    ],
+    "evidenceRefs": [
+      "docs/runs/ipd-ipd-20260610-platform-001/workflow-state.json",
+      "docs/runs/ipd-ipd-20260610-platform-001/role-adapters.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/knowledge-bundle.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/host-prompt-context.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260610-platform-001/coding-task-plan.json"
+    ]
+  }
+}

@@ -3,9 +3,9 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/training/tricompany/01-为什么需要-tricompany.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 先区分两个概念：赛博公司与 TriCompany
@@ -101,7 +101,7 @@ TriCompany 更接近于项目级经营载体。它要协调的不是单一技术
 
 | 维度 | 当前态 | 目标态 |
 | --- | --- | --- |
-| 宿主 | 当前 live 主要由 `copilot chat` 承载 | `TriMC` 自身完成 source -> shadow test -> 正式接管后，通过 `TriHost` 进行正式宿主切换 |
+| 宿主 | 当前 live 主要由 `copilot chat` 承载 | `TriMC` 自身完成 source -> shadow test -> 正式接管后，通过 `TriModel` 的 Provider/Model 配置进行正式宿主切换 |
 | 岗位 | 以最小岗位闭环渐进启用 | 岗位体系更完整，授权矩阵与签字链更清晰 |
 | 经营目标 | 小闭环盈利、低成本验证、先卖再扩 | 更稳定的产品矩阵、更多自动治理、更多跨模块协同 |
 | 治理 | 以 workflow、registry、audit 和 operating record 为主 | 更强的自动审批、追踪、链上透明结算与长期治理 |

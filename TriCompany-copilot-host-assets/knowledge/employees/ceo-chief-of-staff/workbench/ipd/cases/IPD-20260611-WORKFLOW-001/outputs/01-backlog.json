@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-WORKFLOW-001",
+  "stageKey": "backlog",
+  "phaseKey": "BACKLOG",
+  "businessOwner": "CEOChiefOfStaff",
+  "actingOwner": "CEOChiefOfStaff",
+  "moduleExecutor": "TriCompany",
+  "gateOwner": "CEOChiefOfStaff",
+  "ownerRole": "CEOChiefOfStaff",
+  "participantRoles": [
+    "CEO",
+    "ChiefProductOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "submittedAt": "2026-06-11T23:49:09+08:00",
+  "summary": "backlog 已整理出流程优化优先级、边界与下一阶段入口，并明确真实项目验证需另开 project-delivery case。",
+  "details": [
+    "已冻结本轮 backlog 的 P0/P1/P2 优先级，先稳住 agile-improvement 阶段合同与签核链。",
+    "已明确本 case 只做流程优化，不承担真实项目的 Discovery/Intelligence/PRD/交付验证。",
+    "下一阶段 sprint-planning 需把 backlog 转成带负责人、顺序和验证节点的任务计划。"
+  ],
+  "evidence": [
+    "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/01-backlog-memo.md"
+  ],
+  "objectPath": "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/01-backlog-package.json",
+  "packageHash": "0xba5a2f13d6b24b9dddf20922ae35a66e6336b3249bf0f85f002fc5266ecf3683",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "CEOChiefOfStaff",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-11T23:49:09+08:00",
+      "packageHash": "0xba5a2f13d6b24b9dddf20922ae35a66e6336b3249bf0f85f002fc5266ecf3683",
+      "signature": "0xd51a5590c534296dada887757c27e2251ca589208ba440a3fd184d3a78eae79e04cabb6c8000c0607b5ecfd5c329e2dbadb1cd3414e8570b86d30255e9e16ecb",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-11T23:49:09+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "CEO 已确认本轮 backlog 范围、边界与下一阶段入口。",
+      "updatedAt": "2026-06-11T23:52:42+08:00",
+      "packageHash": "0xba5a2f13d6b24b9dddf20922ae35a66e6336b3249bf0f85f002fc5266ecf3683",
+      "signature": "0x87727ef0b18b63754e3a2a22ad448549f7487bd13f59564a3fc3425a51c16e7b02cdd626fbeaa03d405d3681fe0f5d71cb92af80d521c8e1760ab19aff5561b0",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "CEOChiefOfStaff"
+      ],
+      "verifiedAt": "2026-06-11T23:52:42+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "总助已完成 CEO backlog 签名验证并正式签发 backlog release。",
+      "updatedAt": "2026-06-11T23:52:42+08:00",
+      "packageHash": "0xba5a2f13d6b24b9dddf20922ae35a66e6336b3249bf0f85f002fc5266ecf3683",
+      "signature": "0xd51a5590c534296dada887757c27e2251ca589208ba440a3fd184d3a78eae79e04cabb6c8000c0607b5ecfd5c329e2dbadb1cd3414e8570b86d30255e9e16ecb",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-11T23:52:42+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-WORKFLOW-001-BACKLOG-V001",
+    "issuedAt": "2026-06-11T23:52:42+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

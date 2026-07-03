@@ -3,17 +3,19 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/business-strategy-boundaries.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 模块边界基线
 
+当前文件是 TriMetaverse 中央边界 registry 的本地真源，只维护跨模块边界、模块职责和边界变动规则；它不是 TriCompany 公司级 workflow 书面真源。
+
 - `TriMetaverse` 负责中央战略、阶段门禁、项目级真源约束、workflow 和赛博公司实施落地侧的中央发布口径，不直接承担模块代码实现。
 - `TriCompany` 负责赛博公司研发仓、经营编排孵化、岗位对象、Hermes 记忆系统吸收和当前阶段 Copilot 宿主资产；赛博公司规则、岗位规则、registry 规则等实施侧真源先在 TriCompany source 侧决定，再按发布规则同步到 TriMetaverse 中央摘要层。
-- `TriMC` 负责统一 agent runtime 与 interaction core；服务域任务执行与研发工作流都属于它的运行切片。当前继续吸收 OpenClaw 的心跳、cron / 定时任务与 agent harness 设计，并配合 `TriHost` 走向正式宿主落地配置。
-- `TriHost` 负责宿主适配、多 host 配置与正式切换承载；在真实实现落地前应明确标注为待初始化。
+- `TriMC` 负责统一 agent runtime 与 interaction core；服务域任务执行与研发工作流都属于它的运行切片。当前继续吸收 OpenClaw 的心跳、cron / 定时任务与 agent harness 设计，模型接入通过 `TriModel` 统一配置。
+- `TriModel` 负责 Provider/Model 统一配置，为 `TriMC` 与 `Tride` 两个 orchestration 提供多 provider 适配、模型路由与 fallback 链；在真实实现落地前应明确标注为待初始化。
 - `TriSkill` 负责未来统一 skill 提供；在真实实现落地前应明确标注为待初始化。
 - `Tride` 负责 PC 端软件中的 vibe coding 工具适配、agentic orchestration、runtime/CLI 与工具调用能力，不单独定义总体商业模式，也不再作为切换后的正式宿主。
 - `TriPilot` 与 `vscodium` 负责 PC 端软件中的用户交互入口与 IDE 宿主基础设施，但不单独决定总体商业路线；当前物理仓库路径仍为 `TriPilot/`，后续 repo rename 需另行确认。
@@ -39,7 +41,7 @@
 ## 当前重点边界
 
 - 首轮经营试点默认不把 `TriMobile`、`TriMem`、`TriWeb4`、`TriChain` 当成阻塞前提。
-- 当前 shadow 与正式接管都直接运行在 `copilot` 宿主上；正式切换通过 `TriHost` 配置实现，不能把 `Tride` 写成当前正式宿主。
+- 当前 shadow 与正式接管都直接运行在 `copilot` 宿主上；正式切换通过 `TriModel` 配置实现，不能把 `Tride` 写成当前正式宿主。
 - `TriPilot`、`Tride` 与 `vscodium` 共同组成 PC 端软件层，但仍然分开维护本地事实。
 - PC 端软件层既配合 `TriLC` 完成本地化任务、本地工具链执行和部分服务域下发任务，也面向用户提供可直接使用的 PC 自动化与 `vibe coding` 工具入口。
 - `TriSkill` 当前属于未来统一 skill 模块预留，不作为首轮试点阻塞前提。

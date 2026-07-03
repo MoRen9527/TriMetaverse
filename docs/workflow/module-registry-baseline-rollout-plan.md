@@ -7,14 +7,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/module-registry-baseline-rollout-plan.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## 1. 文档定位
 
 本文档是本轮“中央 registry 先行 -> 模块逐仓摸底 -> 教程化沉淀 -> 长期分批续跑”的主执行锚点。
+
+当前文件是 TriMetaverse 中央 registry 摸底与教程化推进计划的本地真源，承担的是执行计划、波次管理和中央收口锚点职责；模块事实、岗位规则和 source-side owner 边界仍以 TriCompany 与各模块 registry 真源为准。
 
 目标不是一次性把所有模块写完，而是建立一个可以长期、分批、不间断续跑的总计划文档。后续每完成一个模块，都在本文件更新状态和下一步入口，再进入下一个模块，避免上下文断档、批次混乱和口径漂移。
 
@@ -71,6 +73,7 @@
 3. 所有代码设计、实现、修改和维护，都必须同步回写代码文档；不能让源码变化脱离教学级文档沉淀。
 4. 各业务线教学文档都必须写清模块内端到端链路：输入的生产者是谁，输出的消费者是谁；如果不是数据业务流，也要写清等同或类似的端到端输入方、处理方和消费方关系。
 5. CodeGraph 仅作为各模块 `Code Registry` 的本地辅助索引；先随现役代码模块按波次试点，不对低成熟 / 占位模块做强制初始化。
+6. 对现役代码模块做入口、调用链、关键对象和依赖摸底时，默认先用 CodeGraph，再进入定点源码阅读和人工收口；只有 literal text 检索或索引缺口场景才退回全文搜索优先。
 
 执行层含义是：后续每次做模块摸底、设计、整改或重构时，不只产出“结论文档”，还要同步评估该模块是否已经具备让小白快速读懂业务结构和代码调用流程的文档面。
 
@@ -118,7 +121,7 @@ CodeGraph 试点随 Wave 2 执行：仅在模块根目录按需初始化，并�
 
 ### Wave 3：低成熟 / 占位模块梳理
 
-第二批处理 `TriDev`、`TriHost`、`TriSkill`、`TriGateway`、`TriMobile`、`TriMem`、`TriWeb4`、`TriChain`。
+第二批处理 `TriDev`、`TriModel`、`TriSkill`、`TriGateway`、`TriMobile`、`TriMem`、`TriWeb4`、`TriChain`。
 
 这一批的目标不是伪造实现，而是明确：
 

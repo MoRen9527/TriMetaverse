@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-PLATFORM-001",
+  "stageKey": "coding",
+  "phaseKey": "CODING",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "participantRoles": [
+    "ChiefProductOfficer",
+    "CEOChiefOfStaff"
+  ],
+  "submittedAt": "2026-06-14T22:51:06+08:00",
+  "summary": "Coding proving-ground artifacts recorded",
+  "details": [
+    "已把 runtime 代码切片与模板回归纳入 proving-ground coding evidence"
+  ],
+  "evidence": [
+    "runtime/cognition/ipd_case_engine.py",
+    "runtime/cognition/chief_of_staff_ipd_case.py",
+    "runtime/cognition/chief_of_staff_ipd_case_validation.py",
+    "runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/coding-evidence.json"
+  ],
+  "objectPath": "runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/coding-evidence.json",
+  "packageHash": "0x1cd436bfbab23e587b4e26e0def476b3829be6e9a164796cbc52b5567e5bbfac",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "ChiefTechnologyOfficer",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "ChiefTechnologyOfficer",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-14T22:51:06+08:00",
+      "packageHash": "0x1cd436bfbab23e587b4e26e0def476b3829be6e9a164796cbc52b5567e5bbfac",
+      "signature": "0x002e756e5e1aeb52ab8d1ea4b24f38bba8f4fb841b1e31e279506f36fbbe975468965f409645e7e986ff2719966326a6857890ee73cd0757aee466ac2b2bfce6",
+      "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+      "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "almost address ... adapt album",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-14T22:51:06+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:06+08:00",
+      "packageHash": "0x1cd436bfbab23e587b4e26e0def476b3829be6e9a164796cbc52b5567e5bbfac",
+      "signature": "0xdb307efc4534dffdcdb9627285be9fc1553c55dc92c81b523a128e59b335efac3fab0777db84b2511fc4eeb9f4c73d6e24c2790807ade1937e07484889c4dd79",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer"
+      ],
+      "verifiedAt": "2026-06-14T22:51:06+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:07+08:00",
+      "packageHash": "0x1cd436bfbab23e587b4e26e0def476b3829be6e9a164796cbc52b5567e5bbfac",
+      "signature": "0x9fddc396fdfb2c8e5439b5077d9a4f524a7d8a757c7cee364ba209f5c66de83c278fadc7affa958b4025b41f6325e8b85ba9d64a4985ee9d70886a477457e3d4",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-14T22:51:07+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-PLATFORM-001-CODING-V001",
+    "issuedAt": "2026-06-14T22:51:07+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

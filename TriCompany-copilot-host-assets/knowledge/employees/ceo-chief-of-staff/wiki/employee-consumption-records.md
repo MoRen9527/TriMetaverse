@@ -35,6 +35,7 @@
 - 2026-04-29；状态：进行中；内容：CPO 与 CTO 已在当前 Copilot-host live 阶段上岗，下一步让她们分别输出首轮产品 / 技术接管判断，并共同优化 TriCompany 与 TriMetaverse。
 - 2026-04-29；状态：已完成；内容：CPO 与 CTO 已补齐源侧 agent / soul / memory / colleagues / social、host object generation 和 support object manifest；后续继续跟踪首轮接管输出。
 - 2026-05-21；状态：已完成；内容：小贾 live `.github/agents` 侧四层历史兼容文件已安全清理，当前只保留 `ceo-chief-of-staff.agent.md` 作为 live 入口；四层契约由 TriCompany 源侧五件套维护，运行连续性由 support employee workspace 与 runtime cognition state 承载。
+- 2026-06-15；状态：已收敛；内容：TriMetaverse 文档边界清理中的 TriTraining 训练镜像线已完成当前批次；若后续恢复，转去其他模块镜像做同类差集或正文漂移检查，不再在 TriTraining 这条线上继续展开。
 
 ## 工作关系人物档案
 

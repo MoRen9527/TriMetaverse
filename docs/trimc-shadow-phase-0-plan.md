@@ -3,10 +3,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/trimc-shadow-phase-0-plan.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse 关于 `TriMC shadow Phase-0` 的本地方案真源，用于记录当前阶段的宿主切换前方案、边界和最小闭环判断；它不是 TriCompany 公司级 workflow 或产品真源。
 
 版本：V0.1
 日期：2026-04-19

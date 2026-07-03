@@ -9,7 +9,7 @@ flowchart LR
       SR[Response Adapter\n分渠道回包 / 流式分片]
     end
 
-    subgraph C[Core-Agent 模块（24x7 主控，基于 Kode-Agent 重写）]
+    subgraph C[TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) 模块（24x7 主控，基于 Kode-Agent 重写）]
       G[Gateway Server / Coordinator\n会话入口与路由]
       Q[Session Router + Lane Queue\n并发控制 / 会话隔离]
       R[Agent Runner\nModel Resolver / Prompt Builder\nHistory Loader / Context Guard]

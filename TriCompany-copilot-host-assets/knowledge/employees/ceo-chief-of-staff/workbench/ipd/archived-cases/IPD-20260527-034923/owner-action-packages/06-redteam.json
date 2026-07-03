@@ -1,0 +1,298 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-owner-action-package",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "redteam",
+  "phaseKey": "REDTEAM",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "generatedAt": "2026-06-10T23:14:30+08:00",
+  "summary": "ChiefTechnologyOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“把模型平台任务收敛为 TriStaciss 主导的最小 OpenAI-compatible gateway MVP：补齐 /v1/models，固化 /v1/chat/completions，TriAvatar 仅保留后续最薄 smoke，TriMem 本轮不进入编码。”推进 Redteam / 对抗审查（REDTEAM）并协同 CEOChiefOfStaff，并在提交后等待总助初签与 CEO 终签。",
+  "reason": "Autopilot 不再代表 ChiefProductOfficer 或 ChiefTechnologyOfficer 直接提交阶段输出；当前只生成 owner action package，并等待 acting owner 手动提交真实阶段产物。",
+  "caseRef": "workbench/ipd/cases/IPD-20260527-034923/case.json",
+  "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/06-redteam.json",
+  "workItemRef": "workbench/ipd/cases/IPD-20260527-034923/work-items/06-redteam.json",
+  "intakeBriefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+  "intakeBriefRef": "workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+  "inputRefs": [
+    "workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+    "workbench/ipd/cases/IPD-20260527-034923/case.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/02-intelligence.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/03-designing.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/04-coding.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/05-verify-integration.json"
+  ],
+  "inputRequirements": [
+    "verify package",
+    "攻击面与安全关注点"
+  ],
+  "outputRequirements": [],
+  "requiredApprovers": [
+    "CEOChiefOfStaff",
+    "CEO"
+  ],
+  "schemaHint": {
+    "objectType": "TRIDEV_REDTEAM_PACKAGE",
+    "schemaPath": ""
+  },
+  "draftTemplate": {
+    "kind": "ipd-engine-native-draft",
+    "objectType": "TRIDEV_REDTEAM_PACKAGE",
+    "phaseKey": "REDTEAM",
+    "businessOwner": "ChiefTechnologyOfficer",
+    "actingOwner": "ChiefTechnologyOfficer",
+    "moduleExecutor": "TriDev",
+    "gateOwner": "ChiefTechnologyOfficer",
+    "ownerRole": "ChiefTechnologyOfficer",
+    "participantRoles": [
+      "CEOChiefOfStaff"
+    ],
+    "summary": "ChiefTechnologyOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“把模型平台任务收敛为 TriStaciss 主导的最小 OpenAI-compatible gateway MVP：补齐 /v1/models，固化 /v1/chat/completions，TriAvatar 仅保留后续最薄 smoke，TriMem 本轮不进入编码。”推进 Redteam / 对抗审查（REDTEAM）并协同 CEOChiefOfStaff，并在提交后等待总助初签与 CEO 终签。",
+    "inputRequirements": [
+      "verify package",
+      "攻击面与安全关注点"
+    ],
+    "requiredOutput": [
+      "提交红队 / 安全对抗审查结果和高风险问题清单。",
+      "明确是否允许进入 QA。"
+    ],
+    "superDevReferenceStages": [
+      "quality"
+    ],
+    "workflowRefs": [
+      {
+        "relation": "phase-package-for",
+        "phase": "REDTEAM",
+        "runId": "run-IPD-20260527-034923",
+        "branchId": "ipd-ipd-20260527-034923"
+      }
+    ]
+  },
+  "submissionTemplate": {
+    "submittedBy": "ChiefTechnologyOfficer",
+    "summary": "Redteam / 对抗审查 已提交",
+    "details": [
+      "<detail>"
+    ],
+    "evidence": [
+      "<evidence-path>"
+    ],
+    "objectPath": "<primary-output-object-path>"
+  },
+  "evidencePolicy": "当前阶段需要真实工程执行证据（源码、测试、部署或运行产物），不能只依赖 workbench/docs/autopilot 生成物自动放行。",
+  "recommendedCommands": [
+    "python -m runtime.cognition.chief_of_staff_ipd_case submit --case-id IPD-20260527-034923 --stage-key redteam --submitted-by ChiefTechnologyOfficer --summary \"Redteam / 对抗审查 已提交\" --detail \"<detail>\" --evidence <evidence-path> --object-path <primary-output-object-path>",
+    "python -m runtime.cognition.chief_of_staff_ipd_case signoff --case-id IPD-20260527-034923 --stage-key redteam --role CEOChiefOfStaff",
+    "python -m runtime.cognition.chief_of_staff_ipd_case signoff --case-id IPD-20260527-034923 --stage-key redteam --role CEO"
+  ],
+  "tridevOwnerAdapterBundle": {
+    "status": "ready",
+    "runId": "ipd-ipd-20260527-034923",
+    "targetStage": "REDTEAM",
+    "ownerRole": "ChiefTechnologyOfficer",
+    "roleAdaptersPath": "docs/runs/ipd-ipd-20260527-034923/role-adapters.json",
+    "workflowStatePath": "docs/runs/ipd-ipd-20260527-034923/workflow-state.json",
+    "runCurrentStage": "REDTEAM",
+    "runCurrentStageMatchesTargetStage": true,
+    "nextAction": "record-phase-result",
+    "executionMode": "auto",
+    "knowledgeBundlePath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
+    "promptContextPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
+    "taskPlanPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json",
+    "ownerAdapters": [
+      {
+        "role": "ChiefTechnologyOfficer",
+        "responsibility": "business-owner",
+        "adapterType": "business-owner",
+        "requiredInputs": [
+          "implementation",
+          "test-report"
+        ],
+        "producesArtifactTypes": [
+          "security-report"
+        ],
+        "blockedByReviewTypes": [],
+        "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage REDTEAM --status completed --artifact <path> --artifact-type security-report --summary \"REDTEAM security-report captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-phase-result",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "phase",
+          "cwd": ".",
+          "role": "ChiefTechnologyOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "REDTEAM",
+            "--status",
+            "completed",
+            "--artifact-type",
+            "security-report"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "REDTEAM security-report captured"
+            }
+          ],
+          "artifactType": "security-report",
+          "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage REDTEAM --status completed --artifact <path> --artifact-type security-report --summary \"REDTEAM security-report captured\""
+        }
+      },
+      {
+        "role": "ChiefTechnologyOfficer",
+        "responsibility": "acting-owner",
+        "adapterType": "acting-owner",
+        "requiredInputs": [
+          "implementation",
+          "test-report"
+        ],
+        "producesArtifactTypes": [
+          "security-report"
+        ],
+        "blockedByReviewTypes": [],
+        "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage REDTEAM --status completed --artifact <path> --artifact-type security-report --summary \"REDTEAM security-report captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-phase-result",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "phase",
+          "cwd": ".",
+          "role": "ChiefTechnologyOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "REDTEAM",
+            "--status",
+            "completed",
+            "--artifact-type",
+            "security-report"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "REDTEAM security-report captured"
+            }
+          ],
+          "artifactType": "security-report",
+          "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage REDTEAM --status completed --artifact <path> --artifact-type security-report --summary \"REDTEAM security-report captured\""
+        }
+      },
+      {
+        "role": "ChiefTechnologyOfficer",
+        "responsibility": "gate-owner",
+        "adapterType": "gate-owner",
+        "requiredInputs": [
+          "implementation",
+          "test-report"
+        ],
+        "producesArtifactTypes": [
+          "security-report"
+        ],
+        "blockedByReviewTypes": [],
+        "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage REDTEAM --status approved --approved-by <role> --artifact-type security-report",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "approve-gate",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "gate",
+          "cwd": ".",
+          "role": "ChiefTechnologyOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "REDTEAM",
+            "--status",
+            "approved",
+            "--approved-by",
+            "ChiefTechnologyOfficer",
+            "--artifact-type",
+            "security-report"
+          ],
+          "inputTemplates": [],
+          "artifactType": "security-report",
+          "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage REDTEAM --status approved --approved-by <role> --artifact-type security-report"
+        }
+      }
+    ],
+    "supportingAdapters": [
+      {
+        "role": "TriDev",
+        "responsibility": "module-executor",
+        "adapterType": "module-executor",
+        "requiredInputs": [
+          "implementation",
+          "test-report"
+        ],
+        "producesArtifactTypes": [
+          "security-report"
+        ],
+        "blockedByReviewTypes": [],
+        "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"REDTEAM security-report captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-task-step",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "task-step",
+          "cwd": ".",
+          "role": "TriDev",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--task-id",
+            "<task-id>",
+            "--status",
+            "completed"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "REDTEAM security-report captured"
+            }
+          ],
+          "artifactType": "security-report",
+          "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"REDTEAM security-report captured\""
+        }
+      }
+    ],
+    "evidenceRefs": [
+      "docs/runs/ipd-ipd-20260527-034923/workflow-state.json",
+      "docs/runs/ipd-ipd-20260527-034923/role-adapters.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json"
+    ]
+  }
+}

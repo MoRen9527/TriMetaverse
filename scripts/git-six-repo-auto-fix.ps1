@@ -3,9 +3,23 @@
         'D:\OneDrive\Code\ai\TriMetaverse',
         'D:\OneDrive\Code\ai\TriPilot',
         'D:\OneDrive\Code\ai\TriStaciss',
-        'D:\OneDrive\Code\ai\Avatar-react',
-        'D:\OneDrive\Code\ai\Opentride',
-        'D:\OneDrive\Code\ai\vscodium'
+        'D:\OneDrive\Code\ai\TriAvatar',
+        'D:\OneDrive\Code\ai\Tride',
+        'D:\OneDrive\Code\ai\vscodium',
+        'D:\OneDrive\Code\ai\TriDeployment',
+        'D:\OneDrive\Code\ai\TriTest',
+        'D:\OneDrive\Code\ai\TriMC',
+        'D:\OneDrive\Code\ai\TriLC',
+        'D:\OneDrive\Code\ai\TriMobile',
+        'D:\OneDrive\Code\ai\TriMem',
+        'D:\OneDrive\Code\ai\TriWeb4',
+        'D:\OneDrive\Code\ai\TriChain',
+        'D:\OneDrive\Code\ai\TriCompany',
+        'D:\OneDrive\Code\ai\TriDev',
+        'D:\OneDrive\Code\ai\TriGateway',
+        'D:\OneDrive\Code\ai\TriModel',
+        'D:\OneDrive\Code\ai\TriSkill',
+        'D:\OneDrive\Code\ai\TriTraining'
     ),
     [switch]$Apply
 )

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-PLATFORM-001",
+  "stageKey": "redteam",
+  "phaseKey": "REDTEAM",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "participantRoles": [
+    "CEOChiefOfStaff"
+  ],
+  "submittedAt": "2026-06-14T22:51:08+08:00",
+  "summary": "Redteam proving-ground review completed",
+  "details": [
+    "已复核宿主边界、假完成门禁与回退锚点未被破坏"
+  ],
+  "evidence": [
+    "runtime/cognition/ipd_case_engine.py",
+    "runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/redteam-report.json"
+  ],
+  "objectPath": "runtime/cognition/proving-ground/IPD-20260611-PLATFORM-001/redteam-report.json",
+  "packageHash": "0x8deb7a38cb4e055dab1bc6165a439e61880393595378c730c4edc88b10e18099",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "ChiefTechnologyOfficer",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "ChiefTechnologyOfficer",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-14T22:51:08+08:00",
+      "packageHash": "0x8deb7a38cb4e055dab1bc6165a439e61880393595378c730c4edc88b10e18099",
+      "signature": "0xbca7cd9ce5e3ea03811a90cd8b574764bc8e4b1ef42ac0621642cfaf8d1c272b0cfdddb900cab5cfa0dece832f9ec8913eb840a6c9d88a3dfcc7ccd0f53a7366",
+      "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+      "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "almost address ... adapt album",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-14T22:51:08+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:08+08:00",
+      "packageHash": "0x8deb7a38cb4e055dab1bc6165a439e61880393595378c730c4edc88b10e18099",
+      "signature": "0x99fa71772934c61cc82490b16fdf5acd3d938693d18c3a4e0a08b06b89029a132c86779d9766e08f721fe7fdda71352a7d55f0c9eb4999fe31dfe37422fac19e",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer"
+      ],
+      "verifiedAt": "2026-06-14T22:51:08+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:09+08:00",
+      "packageHash": "0x8deb7a38cb4e055dab1bc6165a439e61880393595378c730c4edc88b10e18099",
+      "signature": "0xec82f02b4bf9f2e473f7bbe7f9f22f8b498231736d19410b832bee79435aa12a0e7bf5fc02eb3785194123168c9cd08fac8f080f743d3575d3f8fffbee467546",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-14T22:51:09+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-PLATFORM-001-REDTEAM-V001",
+    "issuedAt": "2026-06-14T22:51:09+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

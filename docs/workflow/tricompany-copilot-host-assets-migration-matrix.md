@@ -7,14 +7,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/tricompany-copilot-host-assets-migration-matrix.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（summary source）
+- syncMode: source-only
+- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 ## 1. 文档定位
 
 本文是 `docs/workflow/tricompany-copilot-host-assets-governance.md` 的配套执行清单。
+
+当前文件只承担 TriMetaverse 发布侧迁移摘要与执行矩阵职责。它用于从中央 / 宿主视角盘点“哪些资产是 source、published-copy、live-entry、support-object-set、audit-record 或 runtime-state”；具体 source-side 发布规则、published-copy 刷新纪律和 host object 发布流程仍以 TriCompany 的 workflow 真源与 manifest 为准。
 
 治理文档负责钉住 owner、边界与同步方向；本文负责把当前可见的关键资产逐项归类，明确：
 

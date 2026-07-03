@@ -1,0 +1,21 @@
+{
+  "stage": "QA",
+  "status": "completed",
+  "branchId": "ipd-ipd-20260527-034923",
+  "artifactRefs": [
+    "artifacts\\ipd-qa\\ipd-ipd-20260527-034923-qa-package.json",
+    "artifacts\\ipd-qa\\ipd-ipd-20260527-034923-qa-report.md",
+    "artifacts\\ipd-qa\\ipd-ipd-20260527-034923-qa.junit.xml"
+  ],
+  "artifactDigest": "b7c55a15b9163949780516a1440f315dab6c793d2e1ab08e1ba523aeb38f11f9",
+  "summary": "QA package and regression evidence captured",
+  "createdAt": "2026-06-10T15:29:10.506245+00:00",
+  "changedFiles": [
+    "artifacts/ipd-qa/ipd-ipd-20260527-034923-qa-package.json",
+    "artifacts/ipd-qa/ipd-ipd-20260527-034923-qa-report.md",
+    "artifacts/ipd-qa/ipd-ipd-20260527-034923-qa.junit.xml"
+  ],
+  "gitDiffDigest": "84c45fda620d8577ef93afd595d28371d5ec4b398ca4a96692a7246238e37dc8",
+  "gitDiffStatus": "captured",
+  "schemaVersion": "1.0"
+}

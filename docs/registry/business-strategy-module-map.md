@@ -1,12 +1,14 @@
-# Business Strategy Module Map
+﻿# Business Strategy Module Map
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/business-strategy-module-map.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse 中央模块映射 registry 的本地真源，只维护模块商业职责、成熟度、registry 路由和中央选型映射；它不是 TriCompany 公司级 workflow 书面真源。
 
 | 模块 | 当前商业职责 | 何时必须纳入商业判断 | 当前成熟度 | Business Strategy Registry | Product Registry | Code Registry | 当前主要真源 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -16,7 +18,7 @@
 | `Tripilot` | 用户入口界面与 PC 端软件中的交互入口，也是用户直接使用本地自动化与 `vibe coding` 的前台入口之一 | 设计用户入口、桌面工具链、本地交互体验或用户自用自动化入口时 | 中 | `TripilotBusinessStrategyRegistry` | `TripilotProductRegistry` | `TripilotCodeRegistry` | `../../../Tripilot/README.md`, `../../../Tripilot/AGENTS.md` |
 | `vscodium` | 与 Tripilot 配套的 IDE 宿主基础设施，也是用户承载 PC 自动化与本地化开发工作的桌面宿主之一；直接采用开源上游项目并定期跟随升级以获得新功能 | 设计 IDE 入口、宿主侧基础设施、桌面工具承载、用户自用本地开发工作台或上游升级策略时 | 高 | `VscodiumBusinessStrategyRegistry` | `VscodiumProductRegistry` | `VscodiumCodeRegistry` | `../../../vscodium/README.md`, `../../../vscodium/product.json` |
 | `TriMC` | 统一 agent runtime 与 interaction core，承接服务域执行、研发工作流切片、planner/context/tools/模型调用协同 | 涉及运行面、服务域执行、研发工作流、工具编排或模型调用时 | 中 | `TriMCBusinessStrategyRegistry` | `TriMCProductRegistry` | `TriMCCodeRegistry` | `../../../TriMC/README.md`, `../../../TriMC/AGENTS.md` |
-| `TriHost` | 宿主适配、多 host 配置与正式切换承载 | 涉及宿主切换、多 host 配置或正式宿主承载时 | 低 | 待建立 | 待建立 | 待建立 | 占位，待初始化 |
+| `TriModel` | Provider/Model 统一配置，多 provider 适配、模型路由与 fallback 链 | 涉及模型 provider 配置、模型路由或 fallback 策略时 | 低 | 待建立 | 待建立 | 待建立 | 占位，待初始化 |
 | `TriSkill` | 统一 skill 提供模块 | 涉及统一 skill 封装、分发或跨宿主 skill 供给时 | 低 | 待建立 | 待建立 | 待建立 | 占位，待初始化 |
 | `TriLC` | 本地域控制器、本地 runtime、planner、tool bus 与本地执行生命周期，负责承接 PC 端软件层配合完成的本地化任务 | 涉及本地域执行、本地节点升级、本地工具能力或 PC 端软件与本地域协同时 | 中 | `TriLCBusinessStrategyRegistry` | `TriLCProductRegistry` | `TriLCCodeRegistry` | `../../../TriLC/README.md`, `../../../TriLC/AGENTS.md` |
 | `TriDev` | 自动化开发流程模块，负责“源码开发 -> shadow test -> 本地正式接管 -> 持续迭代”的流程沉淀、版本号签发、产物归档与阶段 gate | 涉及版本号签发、产物归档、阶段 gate、开发流程自动化或 shadow test / 本地正式接管流程设计时 | 低 | `TriDevBusinessStrategyRegistry` | `TriDevProductRegistry` | `TriDevCodeRegistry` | `../../../TriDev/README.md`, `../../../TriDev/AGENTS.md` |
@@ -45,4 +47,4 @@
 4. 模块级收口默认按三层顺序路由：先查对应 `BusinessStrategyRegistry` 或 `business-state.md`，再查 `Product Registry` 或 `product-state.md`，最后查 `Code Registry` 或 `code-state.md`。
 5. 如果问题属于组织、人力、秘书处或制度归属，再优先查询 `CompanyGovernanceRegistry`。
 6. 若相关 registry 尚未落地，则使用本表中的真源，并显式标记“registry 缺口 / 待补齐”。
-7. 涉及宿主切换时，优先同时纳入 `TriHost` 与相关运行模块；涉及 PC 端软件整体时，优先同时纳入 `Tripilot`、`Tride`、`vscodium`，若事项落到本地化任务执行或本地节点能力，再同步纳入 `TriLC`。
+7. 涉及宿主切换时，优先同时纳入 `TriModel` 与相关运行模块；涉及 PC 端软件整体时，优先同时纳入 `Tripilot`、`Tride`、`vscodium`，若事项落到本地化任务执行或本地节点能力，再同步纳入 `TriLC`。

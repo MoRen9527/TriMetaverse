@@ -1,4 +1,4 @@
-# TMV Workflow 术语表（Terminology）
+﻿# TMV Workflow 术语表（Terminology）
 
 版本：v1  
 日期：2026-03-04  
@@ -7,14 +7,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/terminology.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ---
 
 ## 1. 术语管理原则
+
+- 当前文件是 TriMetaverse workflow 术语系统的本地真源，只负责 workflow 协议、门禁、交付与宿主切换相关标准命名；它不是 TriCompany 公司级 workflow 书面真源。
 
 - 本文件为 workflow 术语“单一事实源（Single Source of Truth）”。
 - 涉及阶段产物、门禁产物、交付产物的命名，统一以本文件为准。
@@ -31,8 +33,8 @@
 - 宿主演进标准阶段统一写为：源码 -> shadow test -> 正式接管。当前本地宿主完成正式接管，不等于目标正式宿主已经切换完成；正式宿主切换只在目标宿主完成其自身正式接管后成立。
 - `TriMC`：统一的 agent runtime 和 interaction core。当前 shadow 与当前阶段正式接管先由 `copilot chat` 承载，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，仍以 `TriMC` 为核心运行面。
 - 赛博公司：所有人格 Agent 与非人格 Agent 的经营和交互核心载体。当前先由 `copilot chat` 承载验证与当前阶段正式接管；正式切换后运行在以 `TriMC` 为核心的服务域运行面。
-- 研发工作流：`TriMC` 统一运行面中的研发执行切片，不再使用 `Development Main Controller` 作为当前标准名。当前第一宿主是 `copilot chat`，必要时可扩到 `copilot cli`；正式切换通过 `TriHost` 配置完成。
-- `TriHost`：统一宿主适配与切换配置层。当前仍处于契约定义阶段，不应写成已完成实现。
+- 研发工作流：`TriMC` 统一运行面中的研发执行切片，不再使用 `Development Main Controller` 作为当前标准名。当前第一宿主是 `copilot chat`，必要时可扩到 `copilot cli`；正式切换通过 `TriModel` 的 Provider/Model 配置完成。
+- `TriModel`：Provider/Model 统一配置层，为 `TriMC` 与 `Tride` 两个 orchestration 提供多 provider 适配、模型路由与 fallback 链。当前仍处于契约定义阶段，不应写成已完成实现。
 - `Tride`：PC 端软件中的开发工具与集成层，不再作为切换后的正式宿主。
 - `TriSkill`：未来统一 skill 提供模块。当前仅为占位模块，不应写成现役能力。
 - `TriMetaverse V1 正式上线切换阶段`：指从当前 `copilot chat` 试运行，迁移到 TriMetaverse 正式承载赛博公司与自动研发工作流的阶段。首版上线后的平滑过渡期，允许 `copilot chat` 版赛博公司与 `TriMC` 运行面的正式形态并行运行一段时间。
@@ -114,4 +116,4 @@
 - 2026-04-09：服务域任务主控标准名统一为 `Task Main Controller`，替代在该语境下的 `Main Controller` / `TaskController`。
 - 2026-04-09：赛博公司自治主控标准名统一为 `Autonomy Main Controller`，替代该语境下的 `orchestrator`。
 - 2026-04-09：宿主演进时间点统一改写为 `TriMetaverse V1 正式上线切换阶段`。
-- 2026-04-22：当前标准词汇改为 `TriMC` 统一运行面、`TriHost` 宿主适配层、赛博公司与研发工作流切片；`Development Main Controller`、`Task Main Controller`、`Autonomy Main Controller` 降级为历史术语。
+- 2026-04-22：当前标准词汇改为 `TriMC` 统一运行面、`TriModel` 宿主适配层、赛博公司与研发工作流切片；`Development Main Controller`、`Task Main Controller`、`Autonomy Main Controller` 降级为历史术语。

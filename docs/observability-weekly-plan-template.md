@@ -1,12 +1,14 @@
-# Observability 周计划模板（文本甘特 + Owner）
+﻿# Observability 周计划模板（文本甘特 + Owner）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/observability-weekly-plan-template.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse observability 周计划模板的本地真源，用于维护计划节奏、Owner 分工和任务跟踪样板；它不是 TriCompany 公司级 workflow 或产品真源。
 
 更新时间：2026-02-28
 适用范围：Phase2 / Phase3 / Phase4（Epic #15 / #19 / #21）
@@ -22,6 +24,7 @@
 5. `#31` 回放控制（2~3 人天，依赖 `#29/#18`）
 
 并行支线：
+
 - `#30` 高亮联动（1~2 人天，依赖 `#29`）
 - `#20` 子代理关系树（建议依赖 `#29`，可与 `#30` 并行）
 
@@ -46,7 +49,7 @@
 
 ## 4) 默认 Owner 分工（初稿）
 
-- `Core-Agent Owner`：负责会话编排链路与事件生产侧对齐（`#16/#17` 协作）
+- `TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) Owner`：负责会话编排链路与事件生产侧对齐（`#16/#17` 协作）
 - `API Owner`：负责查询接口、回放接口与性能门禁（`#18`）
 - `Observability Owner`：负责 3D 状态模型、回放一致性与训练复盘链路（`#29/#31/#25/#26/#28`）
 - `UI Owner`：负责高亮联动、子代理关系树与交互体验（`#30/#20`）
@@ -57,9 +60,9 @@
 ## 5) 任务跟踪模板（可复制）
 
 | Issue | 标题 | Owner | ETA | Status | 依赖 | 风险 | 备注 |
-|---|---|---|---|---|---|---|---|
-| #16 | Bridge 事件适配器 | Core-Agent Owner | 2~3d | TODO | - | 事件源字段不一致 | |
-| #17 | 契约校验接入 | Core-Agent Owner + Observability Owner | 1~2d | TODO | #16 | 历史事件不满足 schema | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| #16 | Bridge 事件适配器 | TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) Owner | 2~3d | TODO | - | 事件源字段不一致 | |
+| #17 | 契约校验接入 | TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) Owner + Observability Owner | 1~2d | TODO | #16 | 历史事件不满足 schema | |
 | #18 | timeline/replay API | API Owner | 2~3d | TODO | #16,#17 | 查询性能/分页一致性 | |
 | #29 | 3D 状态机与映射 | Observability Owner | 2~3d | TODO | #16 | 状态语义偏差 | |
 | #30 | approval/tool 高亮联动 | UI Owner | 1~2d | TODO | #29 | 高频联动卡顿 | |
@@ -94,7 +97,7 @@
 
 > 默认单 Owner 推进示例（当前仓库账号）：`@MoRen9527`
 
-- `Core-Agent Owner`：`@MoRen9527`
+- `TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃) Owner`：`@MoRen9527`
 - `API Owner`：`@MoRen9527`
 - `Observability Owner`：`@MoRen9527`
 - `UI Owner`：`@MoRen9527`

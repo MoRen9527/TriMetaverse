@@ -1,14 +1,16 @@
-# TriMetaverse Code State
+﻿# TriMetaverse Code State
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/code-state.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## Repository Map
+
+- 当前文件是 `TriMetaverse` 模块自身 `Code Registry` 工作层的本地真源，只维护 TriMetaverse 仓库结构、代码/文档资产健康与中央代码治理摘要；它不是 TriCompany 公司级 workflow 书面真源。
 
 - `.github/agents/`：角色 agent、registry agent 及其配套 memory / soul / colleagues / social 资产
 - `.github/prompts/`：可在聊天中直接调用的专用 prompt 命令，例如会议开始 / 结束入口
@@ -27,7 +29,7 @@
 - 关键变化应优先体现在白皮书、workflow 和 registry 文档中。
 - 所有代码设计、实现、修改和维护，都应同步回写代码文档，不能把代码变更只留在源码与聊天记录里。
 - 重大边界变化应同步记录到 `business-strategy-boundaries.md` 或 `business-strategy-evolution-log.md`。
-- 涉及 `TriMC`、`TriHost`、`TriSkill` 或 PC 端软件层（`TriPilot` / `Tride` / `vscodium`）的中央边界变化，应优先同步回写中央 registry，再扩散到模块级登记层。
+- 涉及 `TriMC`、`TriModel`、`TriSkill` 或 PC 端软件层（`TriPilot` / `Tride` / `vscodium`）的中央边界变化，应优先同步回写中央 registry，再扩散到模块级登记层。
 - 对 `CEOChiefOfStaff` 及其他 role-agent 的本体 / soul / memory / 配套制度的耐久优化，若构成可复用结构变化，应同步评估是否回写 `product-state.md` 与 `code-state.md`。
 - 对总助会议流程新增的专用 prompt 命令，也应视作可复用的仓库结构与协作入口变化。
 - 对总助新增的工作协作档案和社交档案，也应视作可复用的配套资产结构变化，用于分别承接工作关系连续性与闲聊社交连续性。
@@ -36,6 +38,7 @@
 - 各模块的 `Code Registry` 不应只做目录摘要；它应按具体业务走线拆分维护代码文档，用教学式、逐段到逐行可读的方式解释入口、调用链、关键对象、配置流、状态流和边界，让小白读完后能迅速理解整个模块设计与各业务代码调用流程。
 - 各模块的业务线教学代码文档还必须补清端到端关系：这一条业务的输入生产者是谁、输出消费者是谁；如果不是数据业务流，也要写清对应的请求发起方、处理环节、结果承接方和后续消费方。
 - CodeGraph 定位为各模块 `Code Registry` 的本地辅助索引资产，只用于帮助识别入口、依赖、调用链和变更热区；它不替代 `code-state.md`、教学级代码文档、源码阅读结论或人工收口判断。
+- 对现役代码模块做入口、依赖、调用链和变更热区摸底时，默认先使用 CodeGraph，再进入定点源码阅读；除非模块当前没有可用索引、parser 不覆盖，或任务本身只需要 literal text 检索。
 - 架构表中的模块一旦被写成正式模块面，默认应补齐独立 git 仓、`README.md`、`docs/` 六件套、根级 `.gitignore` 与本地 CodeGraph；低成熟 / 占位模块也应先补齐这套骨架，再继续保持待初始化标记。
 - 对既有正式模块，`Discovery` 阶段应先形成 `ModuleTargetingReport`，并由 `TriDev` 完成 `ModuleReadinessInit`（标配审计与缺口 init）后再进入后续开发。
 - 对新增正式模块，`Discovery` 阶段应先形成 `NewModuleBaselineRelease`（含 `vendor-extraction-profile`），经签核后再由 `TriDev init` 执行模块骨架初始化。
@@ -68,7 +71,7 @@
 
 - 文档先于实现的风险较高。
 - 多仓演进可能导致模块边界文档过时。
-- 若不持续区分 `TriMC` 运行面、`TriHost` 宿主适配层与 PC 端软件层，中央登记会再次回退到旧三主控语义。
+- 若不持续区分 `TriMC` 运行面、`TriModel` 宿主适配层与 PC 端软件层，中央登记会再次回退到旧三主控语义。
 - 若把 `TriSkill` 的预留状态误写成现役能力，会高估统一 skill 供给能力并误导实现顺序。
 - 若不持续回写 registry，中央策略容易与模块现实脱节。
 - 总助记忆管理目前仍以文档驱动的手工简化版为主，后续若不继续工程化，容易再次漂移。

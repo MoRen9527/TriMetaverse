@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-manual-stage-package",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "intelligence",
+  "ownerRole": "ChiefProductOfficer",
+  "generatedAt": "2026-06-11T03:25:00+08:00",
+  "goal": "把已签核的完整模型 API 平台 MVP Discovery 收口为结构化 Intelligence 输入包、完整 PRD、项目计划和进入 Designing 的前门，并以 TriMetaverse/reference/sub2api 作为 TriStaciss 全平台能力研究的上游参考锚点。",
+  "inScope": [
+    "TriStaciss 当前现役接口事实、目标 API 合同、provider 路由与后端 MVP 范围",
+    "sub2api 参考能力面的 capability mapping、首轮纳入/后置/排除项选择，以及 TriStaciss 后续 vendor 吸收链定义",
+    "TriAvatar 最小前端 smoke 验证面、页面/合同边界与是否纳入首轮验收矩阵",
+    "TriCompany 员工身份 NFT / 钱包签名模拟层的产品边界、对象粒度、签核与审计前门",
+    "TriDev 后续 Designing / Coding 所需的 PRD 结构、阶段门禁、验收矩阵和 handoff 前提"
+  ],
+  "outOfScope": [
+    "TriChain / TriWeb4 的真实链上 NFT、真实钱包、合约部署与链上签名实现",
+    "TriMC 正式宿主切换、生产级 Hermes 接入或正式组织授权矩阵完成",
+    "TriAvatar 默认入口切换、3D / 4D / 游戏化完整体验",
+    "TriMem 的真实用户系统、计费、配额、持久化账户体系和完整前端重构"
+  ],
+  "requiredOutputs": [
+    "完整模型 API 平台 MVP PRD，明确目标用户、价值、范围、模块分工与 out-of-scope",
+    "sub2api 参考能力对照表，明确首轮纳入/后置/排除项以及合规 / TOS 风险边界",
+    "项目计划与阶段地图，明确 Intelligence -> Designing 的进入条件和 owner handoff",
+    "验收矩阵，至少覆盖 TriStaciss 后端、TriAvatar 最小 smoke 和 TriCompany 模拟签名层",
+    "风险与依赖清单，明确 legacy active path、未来链上承接边界和当前阶段不做事项"
+  ],
+  "successSignals": [
+    "不再把最小 gateway slice 写成完整平台 PRD，而是把整个平台 MVP 的范围和边界收口清楚",
+    "PRD 明确以 sub2api 为上游参考锚点，但不把 upstream README 已提示的 TOS / 合规风险和商业假设直接写成已批准方案",
+    "前后端与模拟签名层的首轮优先级、交付范围和验收方式被结构化写清",
+    "明确当前已实现事实、MVP 目标态与后续 Designing 所需输入之间的差距",
+    "PRD 可以直接成为 CTO / TriDev 进入 Designing 的正式前门，而不是继续依赖口头边界"
+  ],
+  "openQuestions": [
+    "TriAvatar 首轮 smoke 只验证聊天主链路，还是同时纳入登录、配置和 API 环境合同检查？",
+    "sub2api 的账号管理、API key 分发、计费、支付、调度、并发 / 限流等能力中，首轮 MVP 到底纳入哪些，哪些后置，哪些因合规边界排除？",
+    "TriCompany 员工身份 NFT / 钱包签名模拟层首轮对象粒度落到员工对象、签名策略、审计记录还是完整 mock wallet flow？",
+    "本轮 MVP 是否在保持 /api/chat/stream 为现役兼容路径的同时，把 /v1/chat/completions 作为整改目标前门？",
+    "TriMem 保持 out-of-scope 时，PRD 是否需要预留未来真实用户系统的接口占位和迁移边界？"
+  ],
+  "designingHandoffRequirements": [
+    "PRD 必须给出 TriStaciss、TriAvatar、TriCompany 三块的 in-scope / out-of-scope 和 owner 分工",
+    "PRD 必须写清 TriMetaverse/reference/sub2api -> TriStaciss/vendor/sub2api (future) -> TriStaciss real implementation 的吸收链，而不是把 reference 树写成现役交付",
+    "PRD 必须给出验收矩阵与阶段 gate 证据预期，避免后续再次只落到后端 Python slice",
+    "PRD 必须明确 TriChain / TriWeb4 只承接未来真实链上能力，当前轮不写成已实现",
+    "PRD 必须把项目计划、主要风险和进入 Designing 的前置条件写成可执行 handoff"
+  ],
+  "references": {
+    "triCompanyProject": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\PROJECT.md",
+    "triCompanyRequirements": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\REQUIREMENTS.md",
+    "triCompanyState": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\STATE.md",
+    "triCompanyProductRegistry": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\registry\\product-state.md",
+    "triCompanyCodeRegistry": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\registry\\code-state.md",
+    "triStacissOverview": "D:\\OneDrive\\Code\\ai\\TriStaciss\\CLAUDE.md",
+    "triStacissRouter": "D:\\OneDrive\\Code\\ai\\TriStaciss\\api-server\\openai_compatible_api.py",
+    "triStacissService": "D:\\OneDrive\\Code\\ai\\TriStaciss\\api-server\\chat_completion_service.py",
+    "sub2apiReferenceRoot": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\reference\\sub2api",
+    "sub2apiReferenceNote": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\reference\\sub2api\\TMV-REFERENCE.md",
+    "sub2apiReadme": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\reference\\sub2api\\README.md",
+    "triAvatarReadme": "D:\\OneDrive\\Code\\ai\\TriAvatar\\README.md",
+    "triAvatarBoundary": "D:\\OneDrive\\Code\\ai\\TriAvatar\\AGENTS.md",
+    "triChainBoundary": "D:\\OneDrive\\Code\\ai\\TriChain\\AGENTS.md",
+    "triWeb4Boundary": "D:\\OneDrive\\Code\\ai\\TriWeb4\\AGENTS.md",
+    "triDevWorkflowState": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\workflow-state.json",
+    "discoveryOutput": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\knowledge\\employees\\ceo-chief-of-staff\\workbench\\ipd\\cases\\IPD-20260527-034923\\outputs\\01-discovery.json"
+  }
+}

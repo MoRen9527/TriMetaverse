@@ -120,6 +120,21 @@
 
 ## 6. 内容主线
 
+### 6.0 当前首批课程承接面
+
+当前第一批可发布到培训学院候选平台的课程，先承接在：
+
+- 与 `TriCompany` 同级的 `TriTraining/docs/training/`
+
+这批课程当前可先由 `TriCompany / RAndDTrainer` 产出，再由 `CPO` / `CTO` 评估是否进入与 `TriCompany` 同级的 `TriTraining/docs/training/` 作为 `TriTraining` 模块 training 真源。进入中央聚合后，`TriMetaverse/docs/training/tritraining/` 与同级 `tricompany/` 作用相同，只承担模块 training 包入口；宿主侧若需要 published copy，则按真源发布链进入 `TriTraining-copilot-host-assets`。
+
+当前首批课程至少包括：
+
+1. `employee_source_kit` CLI 正式课程
+2. `employee_source_kit` CLI 实验手册
+
+这一步的目标是先证明：培训学院不只是抽象平台概念，而是已经具备首批“可发布课程 -> 可映射前后端承接 -> 可继续扩 lesson/lab”的最小课程切片。
+
 ### 6.1 零基础通识线
 
 这条线由我们自己整理输出，优先解决拉新和低门槛入门问题。

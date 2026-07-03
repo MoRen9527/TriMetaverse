@@ -1,0 +1,12 @@
+{
+  "runId": "ipd-ipd-20260610-platform-001",
+  "mode": "ipd-autopilot",
+  "workMode": "new",
+  "currentStage": "DISCOVERY",
+  "branchId": "ipd-ipd-20260610-platform-001",
+  "status": "waiting-stage-output",
+  "task": "按 CEO 最新纠偏继续执行 20260610 platform case：TriAvatar 作为现役 Web 前端入口并保持原有功能可用，TriStaciss 仅承接后端模型 API 转接平台与 provider 路由，TriStaciss 内部遗留前端模块不纳入新 case。当前目标统一为第一版生产级平台交付，需先由 CPO 完整收口 PRD，再由 CTO / TriDev 推进十阶段执行；员工身份与签名机制仍限定为非链上模拟。",
+  "createdAt": "2026-06-10T15:49:56.328315+00:00",
+  "updatedAt": "2026-06-15T00:00:00+08:00",
+  "schemaVersion": "1.0"
+}

@@ -1,0 +1,1149 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260611-platform-002",
+  "stages": [
+    {
+      "stage": "DISCOVERY",
+      "title": "Discovery / 任务澄清",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "owner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "CMO",
+        "CTO"
+      ],
+      "objective": "沉淀任务意图、上游真源草稿和初始参考证据。",
+      "requiredArtifactType": "reference-evidence",
+      "requiredInputArtifacts": [
+        "reference-evidence"
+      ],
+      "superDevReferenceStages": [
+        "research",
+        "baseline"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "DISCOVERY scope confirmation",
+            "DISCOVERY success criteria"
+          ],
+          "requiredInputs": [
+            "reference-evidence"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "DISCOVERY stage package",
+            "DISCOVERY execution summary"
+          ],
+          "requiredInputs": [
+            "reference-evidence"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "DISCOVERY artifact bindings",
+            "DISCOVERY evidence refs"
+          ],
+          "requiredInputs": [
+            "reference-evidence"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "DISCOVERY gate decision",
+            "DISCOVERY review comments"
+          ],
+          "requiredInputs": [
+            "reference-evidence"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "DISCOVERY input feedback"
+          ],
+          "requiredInputs": [
+            "reference-evidence"
+          ]
+        },
+        {
+          "role": "CEO",
+          "responsibility": "participant",
+          "deliverables": [
+            "DISCOVERY input feedback"
+          ],
+          "requiredInputs": [
+            "reference-evidence"
+          ]
+        },
+        {
+          "role": "CMO",
+          "responsibility": "participant",
+          "deliverables": [
+            "DISCOVERY input feedback"
+          ],
+          "requiredInputs": [
+            "reference-evidence"
+          ]
+        },
+        {
+          "role": "CTO",
+          "responsibility": "participant",
+          "deliverables": [
+            "DISCOVERY input feedback"
+          ],
+          "requiredInputs": [
+            "reference-evidence"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "INTELLIGENCE",
+      "title": "Intelligence / 结构化输入",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "owner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "ChiefMarketingOfficer",
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "objective": "把市场、运营、财务与产品输入整理成可消费的结构化项目输入包。",
+      "requiredArtifactType": "prd",
+      "requiredInputArtifacts": [
+        "reference-evidence",
+        "market-report",
+        "ops-plan",
+        "budget-guard"
+      ],
+      "superDevReferenceStages": [
+        "docs",
+        "docs_confirm",
+        "prd"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "INTELLIGENCE scope confirmation",
+            "INTELLIGENCE success criteria"
+          ],
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "INTELLIGENCE stage package",
+            "INTELLIGENCE execution summary"
+          ],
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "INTELLIGENCE artifact bindings",
+            "INTELLIGENCE evidence refs"
+          ],
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "INTELLIGENCE gate decision",
+            "INTELLIGENCE review comments"
+          ],
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "INTELLIGENCE input feedback"
+          ],
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "ChiefMarketingOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "INTELLIGENCE input feedback"
+          ],
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "ChiefOperatingOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "INTELLIGENCE input feedback"
+          ],
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "ChiefFinancialOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "INTELLIGENCE input feedback"
+          ],
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "INTELLIGENCE input feedback"
+          ],
+          "requiredInputs": [
+            "reference-evidence",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "DESIGNING",
+      "title": "Designing / 技术设计",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "owner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "objective": "把项目输入收口为技术方案、工程边界与实施计划。",
+      "requiredArtifactType": "tech-plan",
+      "requiredInputArtifacts": [
+        "prd",
+        "market-report",
+        "ops-plan",
+        "budget-guard"
+      ],
+      "superDevReferenceStages": [
+        "architecture",
+        "uiux",
+        "spec"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "DESIGNING scope confirmation",
+            "DESIGNING success criteria"
+          ],
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "DESIGNING stage package",
+            "DESIGNING execution summary"
+          ],
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "DESIGNING artifact bindings",
+            "DESIGNING evidence refs"
+          ],
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "DESIGNING gate decision",
+            "DESIGNING review comments"
+          ],
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "DESIGNING input feedback"
+          ],
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "DESIGNING input feedback"
+          ],
+          "requiredInputs": [
+            "prd",
+            "market-report",
+            "ops-plan",
+            "budget-guard"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "CODING",
+      "title": "Coding / 开发实现",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "owner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "objective": "执行实现与源码产物沉淀。",
+      "requiredArtifactType": "implementation",
+      "requiredInputArtifacts": [
+        "tech-plan"
+      ],
+      "superDevReferenceStages": [
+        "frontend",
+        "backend"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "CODING scope confirmation",
+            "CODING success criteria"
+          ],
+          "requiredInputs": [
+            "tech-plan"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "CODING stage package",
+            "CODING execution summary"
+          ],
+          "requiredInputs": [
+            "tech-plan"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "CODING artifact bindings",
+            "CODING evidence refs"
+          ],
+          "requiredInputs": [
+            "tech-plan"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "CODING gate decision",
+            "CODING review comments"
+          ],
+          "requiredInputs": [
+            "tech-plan"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "CODING input feedback"
+          ],
+          "requiredInputs": [
+            "tech-plan"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "CODING input feedback"
+          ],
+          "requiredInputs": [
+            "tech-plan"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "VERIFY-INTEGRATION",
+      "title": "Verify-Integration / 集成验证",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "owner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "objective": "完成集成验证并输出测试证据。",
+      "requiredArtifactType": "test-report",
+      "requiredInputArtifacts": [
+        "implementation"
+      ],
+      "superDevReferenceStages": [
+        "quality"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "VERIFY-INTEGRATION scope confirmation",
+            "VERIFY-INTEGRATION success criteria"
+          ],
+          "requiredInputs": [
+            "implementation"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "VERIFY-INTEGRATION stage package",
+            "VERIFY-INTEGRATION execution summary"
+          ],
+          "requiredInputs": [
+            "implementation"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "VERIFY-INTEGRATION artifact bindings",
+            "VERIFY-INTEGRATION evidence refs"
+          ],
+          "requiredInputs": [
+            "implementation"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "VERIFY-INTEGRATION gate decision",
+            "VERIFY-INTEGRATION review comments"
+          ],
+          "requiredInputs": [
+            "implementation"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "VERIFY-INTEGRATION input feedback"
+          ],
+          "requiredInputs": [
+            "implementation"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "VERIFY-INTEGRATION input feedback"
+          ],
+          "requiredInputs": [
+            "implementation"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "REDTEAM",
+      "title": "Redteam / 对抗审查",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "owner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "participantRoles": [
+        "CEOChiefOfStaff"
+      ],
+      "objective": "完成红队 / 安全对抗审查并输出整改结论。",
+      "requiredArtifactType": "security-report",
+      "requiredInputArtifacts": [
+        "implementation",
+        "test-report"
+      ],
+      "superDevReferenceStages": [
+        "quality"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "REDTEAM scope confirmation",
+            "REDTEAM success criteria"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "REDTEAM stage package",
+            "REDTEAM execution summary"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "REDTEAM artifact bindings",
+            "REDTEAM evidence refs"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "REDTEAM gate decision",
+            "REDTEAM review comments"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "REDTEAM input feedback"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "QA",
+      "title": "QA / 质量门禁",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "owner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "objective": "完成质量门禁汇总与放行判断。",
+      "requiredArtifactType": "test-report",
+      "requiredInputArtifacts": [
+        "implementation",
+        "test-report",
+        "security-report"
+      ],
+      "superDevReferenceStages": [
+        "quality",
+        "preview_confirm"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "QA scope confirmation",
+            "QA success criteria"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "QA stage package",
+            "QA execution summary"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "QA artifact bindings",
+            "QA evidence refs"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "QA gate decision",
+            "QA review comments"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "QA input feedback"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "QA input feedback"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "DEPLOYMENT",
+      "title": "Deployment / 部署交付",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "owner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "participantRoles": [
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "objective": "完成发布演练、部署证据和交付前环境准备。",
+      "requiredArtifactType": "deployment-evidence",
+      "requiredInputArtifacts": [
+        "implementation",
+        "test-report",
+        "security-report"
+      ],
+      "superDevReferenceStages": [
+        "delivery"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "DEPLOYMENT scope confirmation",
+            "DEPLOYMENT success criteria"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "DEPLOYMENT stage package",
+            "DEPLOYMENT execution summary"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "DEPLOYMENT artifact bindings",
+            "DEPLOYMENT evidence refs"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "DEPLOYMENT gate decision",
+            "DEPLOYMENT review comments"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "ChiefOperatingOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "DEPLOYMENT input feedback"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "ChiefFinancialOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "DEPLOYMENT input feedback"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "DEPLOYMENT input feedback"
+          ],
+          "requiredInputs": [
+            "implementation",
+            "test-report",
+            "security-report"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "ASSURANCE",
+      "title": "Assurance / 运行保障",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "owner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "participantRoles": [
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "objective": "完成发布后保障观察、恢复验证和运行证明。",
+      "requiredArtifactType": "assurance-report",
+      "requiredInputArtifacts": [
+        "deployment-evidence",
+        "test-report"
+      ],
+      "superDevReferenceStages": [
+        "delivery",
+        "rehearsal"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "ASSURANCE scope confirmation",
+            "ASSURANCE success criteria"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "ASSURANCE stage package",
+            "ASSURANCE execution summary"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "ASSURANCE artifact bindings",
+            "ASSURANCE evidence refs"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ]
+        },
+        {
+          "role": "ChiefTechnologyOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "ASSURANCE gate decision",
+            "ASSURANCE review comments"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ]
+        },
+        {
+          "role": "ChiefOperatingOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "ASSURANCE input feedback"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ]
+        },
+        {
+          "role": "ChiefFinancialOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "ASSURANCE input feedback"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "ASSURANCE input feedback"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "test-report"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "DELIVERY",
+      "title": "Delivery / 最终交付",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "owner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "CTO"
+      ],
+      "objective": "完成最终交付包、版本快照与对外交付收口。",
+      "requiredArtifactType": "delivery-evidence",
+      "requiredInputArtifacts": [
+        "deployment-evidence",
+        "assurance-report"
+      ],
+      "superDevReferenceStages": [
+        "delivery"
+      ],
+      "phaseStatus": "pending",
+      "gateStatus": "pending",
+      "phaseRecorded": false,
+      "gateRecorded": false,
+      "readyForGate": false,
+      "completed": false,
+      "roleAssignments": [
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "business-owner",
+          "deliverables": [
+            "DELIVERY scope confirmation",
+            "DELIVERY success criteria"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "acting-owner",
+          "deliverables": [
+            "DELIVERY stage package",
+            "DELIVERY execution summary"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ]
+        },
+        {
+          "role": "TriDev",
+          "responsibility": "module-executor",
+          "deliverables": [
+            "DELIVERY artifact bindings",
+            "DELIVERY evidence refs"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ]
+        },
+        {
+          "role": "ChiefProductOfficer",
+          "responsibility": "gate-owner",
+          "deliverables": [
+            "DELIVERY gate decision",
+            "DELIVERY review comments"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ]
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "responsibility": "participant",
+          "deliverables": [
+            "DELIVERY input feedback"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ]
+        },
+        {
+          "role": "CEO",
+          "responsibility": "participant",
+          "deliverables": [
+            "DELIVERY input feedback"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ]
+        },
+        {
+          "role": "ChiefOperatingOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "DELIVERY input feedback"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ]
+        },
+        {
+          "role": "ChiefFinancialOfficer",
+          "responsibility": "participant",
+          "deliverables": [
+            "DELIVERY input feedback"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ]
+        },
+        {
+          "role": "CTO",
+          "responsibility": "participant",
+          "deliverables": [
+            "DELIVERY input feedback"
+          ],
+          "requiredInputs": [
+            "deployment-evidence",
+            "assurance-report"
+          ]
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-06-11T09:50:09.149688+00:00"
+}

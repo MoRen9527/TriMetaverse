@@ -3,14 +3,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/runs/README.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: audit-record
 - lastSyncedAt: 2026-06-04
 
 ## 1. 目标
 
 本文件定义 `docs/runs/` 下真实执行记录与结构化 `PhaseResult` 产物的稳定目录约定。
+
+当前文件是 TriMetaverse run 记录目录的本地真源，归入执行审计层，用于定义 `docs/runs/` 的稳定目录规范和结构化执行产物约束；它不是 TriCompany 公司级 workflow 书面真源。
 
 本文件解决三类问题：
 

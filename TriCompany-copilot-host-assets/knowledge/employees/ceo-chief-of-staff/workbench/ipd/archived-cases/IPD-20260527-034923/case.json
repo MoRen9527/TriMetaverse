@@ -1,0 +1,639 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "IPD-20260527-034923",
+  "title": "完整模型 API 平台 MVP 全流程回放",
+  "status": "waiting-stage-output",
+  "priority": "high",
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar",
+    "TriChain",
+    "TriWeb4"
+  ],
+  "createdAt": "2026-05-27T03:49:23+08:00",
+  "updatedAt": "2026-06-11T02:54:31+08:00",
+  "currentStageKey": "intelligence",
+  "currentWorkItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/02-intelligence.json",
+  "intake": {
+    "objective": "围绕完整模型 API 平台 MVP 重新走旧 case：由 CPO 先产出完整平台 PRD，再由 CTO / TriDev 推进后端、前端最小 smoke，以及 TriCompany 员工身份 NFT / 钱包签名模拟层的当前阶段方案。",
+    "taskDescription": "继续使用旧 case，但从 Discovery 重新起跑，目标不再是最小 gateway slice，而是完整模型 API 平台 MVP。CPO 需要先把平台范围、前后端边界、验收矩阵、模拟员工身份 NFT 与钱包签名机制写成完整 PRD；CTO / TriDev 后续再据此推进 TriStaciss 后端、TriAvatar 最小前端 smoke，以及 TriCompany 层面的员工身份 / 签名模拟方案。TriChain 与 TriWeb4 当前只作为未来真实链上落点，不在本轮被写成已上线能力。",
+    "constraints": [
+      "必须先形成完整平台 PRD，再重新决定各阶段 coding / testing / deployment slice。",
+      "新一轮验证不能只停留在 TriStaciss 后端 Python 测试，至少要把前端 smoke 是否纳入写成明确边界。",
+      "员工身份 NFT 与钱包密钥签名在当前阶段只能写成 TriCompany 层面的模拟机制，不得写成 TriChain / TriWeb4 已提供真实链上 NFT 或真实钱包。",
+      "不得把 /api/chat/stream 的 legacy active path、TriChain / TriWeb4 的真实上线状态，或员工身份模拟层写成既成生产事实。"
+    ],
+    "opportunitySignals": [
+      "旧 case 已证明 TriStaciss 后端最小执行面可跑，但它还不是完整平台 MVP。",
+      "如果要测试完整 IPD / TriDev 流程和 super-dev step/stage 协同，应该在旧 case 上把目标提升为完整平台 PRD，而不是继续把最小 gateway slice 当成完整产品。",
+      "员工身份 NFT / 钱包签名模拟层可以先在 TriCompany 的公司级员工治理与签核层落地，再在 TriChain / TriWeb4 上线后迁移为真实链上资产。"
+    ],
+    "businessModelFit": [
+      "符合当前先验证最小闭环、再扩大到完整平台 MVP 的中央实验方向。",
+      "完整 PRD 有助于把当前可收费平台能力、前端入口、员工签名模拟层和未来链上化路径清晰拆开。"
+    ],
+    "stageFit": [
+      "当前事项仍落在 Copilot-host 正式接管阶段，适合用旧 case 从 Discovery 重新回放完整 IPD / TriDev 流程。",
+      "本轮仍不进入 TriMC 正式宿主切换，但需要把完整平台 PRD、前端 smoke 和员工签名模拟层的边界先写清。"
+    ],
+    "companyContext": [
+      "TriCompany 当前 IPD runtime 已要求 coding 及后续阶段必须提交真实源码、测试、部署或运行证据。",
+      "TriDev 已具备 engine-step、step ledger、failure / rollback / resolve、knowledge bundle 与 owner adapter bundle，可用于这轮完整流程回放。",
+      "当前员工身份、员工签名和公司级签核治理属于 TriCompany 公司层，不属于 TriChain / TriWeb4 已落地能力。"
+    ],
+    "ownerProposal": [
+      "Discovery / Intelligence 由 ChiefProductOfficer 收口完整模型 API 平台 MVP PRD、范围边界、验收矩阵和前端/后端分工。",
+      "Designing / Coding 由 ChiefTechnologyOfficer 收口平台技术路线、TriStaciss / TriAvatar 验证门禁，以及 TriCompany 员工身份 / 签名模拟层的技术边界。",
+      "TriDev 继续作为 ten-phase phase engine，但这次要围绕完整平台 PRD 而不是最小后端切片推进。"
+    ],
+    "resourceEnvelope": [
+      "本轮资源至少覆盖 TriStaciss 后端、TriAvatar 最小前端 smoke、TriDev 流程回放，以及 TriCompany 员工身份 / 签名模拟设计。",
+      "TriChain / TriWeb4 当前仍只提供未来真实链上落点，不单独承诺本轮链上实现资源。"
+    ],
+    "prerequisites": [
+      "必须明确旧 case 之前的 QA / deployment 只代表最小 gateway slice，不再把它当完整平台 PRD 的替身。",
+      "回退后不得继续复用当前 deployment run，而要从 Discovery 重新起跑旧 case 对应的 TriDev run。",
+      "TriChain / TriWeb4 当前仍为未来真实链上承接层，员工身份 / 签名模拟先在 TriCompany 层落地。"
+    ],
+    "requiredSupport": [
+      "ChiefProductOfficer 负责补齐完整平台 PRD、范围、out-of-scope、验收矩阵和前端/后端边界。",
+      "ChiefTechnologyOfficer 负责补齐技术路线、验证命令、阶段门禁，以及员工身份 / 签名模拟层的工程边界。",
+      "CEOChiefOfStaff 负责维持旧 case 回退后的公司级边界、签核顺序和 run/case 对齐。"
+    ],
+    "expectedOutcomes": [
+      "形成完整模型 API 平台 MVP 的正式 PRD，而不是最小 gateway slice briefing。",
+      "让旧 case 与旧 run 从 Discovery 重新起步，再完整测试一遍 IPD / TriDev 流程。",
+      "明确员工身份 NFT / 钱包签名模拟层在 TriCompany 的当前阶段方案，以及未来如何迁移到 TriChain / TriWeb4。"
+    ],
+    "expectedDelivery": "交付一个回退到 Discovery 的旧 case、一条重建并重新对齐的旧 case TriDev run、完整平台 PRD、后续前后端验证证据，以及 TriCompany 员工身份 / 签名模拟层的阶段结论。",
+    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+    "createdBy": "CEOChiefOfStaff",
+    "createdAt": "2026-05-27T03:49:23+08:00",
+    "approvals": [
+      {
+        "role": "CEOChiefOfStaff",
+        "status": "approved",
+        "note": "创建动作已视为当前角色签核",
+        "updatedAt": "2026-05-27T19:31:33+08:00"
+      },
+      {
+        "role": "CEO",
+        "status": "approved",
+        "note": "Rollback-to-discovery replay approved.",
+        "updatedAt": "2026-05-27T19:31:33+08:00"
+      }
+    ],
+    "status": "approved"
+  },
+  "stages": [
+    {
+      "stageKey": "discovery",
+      "title": "Discovery / 任务澄清",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "DISCOVERY",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "ChiefMarketingOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "Discovery 已按完整模型 API 平台 MVP 边界重写；前后端 smoke、TriCompany 身份签名模拟层与未来链上承接边界已区分。",
+          "updatedAt": "2026-06-11T02:46:30+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "同意以完整模型 API 平台 MVP 作为旧 case 的新 Discovery 边界，继续进入 Intelligence，产出完整 PRD。",
+          "updatedAt": "2026-06-11T02:47:56+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_DISCOVERY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "CEO / 总助正式任务",
+        "intake briefing",
+        "上游业务背景与当前阶段边界"
+      ],
+      "superDevReferenceStages": [
+        "research",
+        "baseline"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/01-discovery.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
+      "activatedAt": "2026-06-11T02:27:42+08:00",
+      "submittedAt": "2026-06-11T02:46:18+08:00",
+      "completedAt": "2026-06-11T02:47:56+08:00",
+      "blockedReason": "",
+      "outputSummary": "Discovery 已收口为完整模型 API 平台 MVP 的正式前门，当前范围覆盖 TriStaciss 后端、TriAvatar 最小前端 smoke、TriCompany 员工身份 NFT / 钱包签名模拟层，并明确 TriChain / TriWeb4 仅为未来真实链上承接层。",
+      "lastUpdatedAt": "2026-06-11T02:47:56+08:00"
+    },
+    {
+      "stageKey": "intelligence",
+      "title": "Intelligence / 结构化输入",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "INTELLIGENCE",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "ChiefMarketingOfficer",
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "in-progress",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_INTELLIGENCE_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "Discovery package",
+        "市场证据与机会线索",
+        "运营约束",
+        "预算护栏"
+      ],
+      "superDevReferenceStages": [
+        "docs",
+        "docs_confirm",
+        "prd"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/02-intelligence.json",
+      "outputPath": "",
+      "activatedAt": "2026-06-11T02:47:56+08:00",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T02:47:56+08:00"
+    },
+    {
+      "stageKey": "designing",
+      "title": "Designing / 技术设计",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "DESIGNING",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_DESIGN_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "PRD",
+        "项目计划",
+        "验收标准"
+      ],
+      "superDevReferenceStages": [
+        "architecture",
+        "uiux",
+        "spec"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T02:27:42+08:00"
+    },
+    {
+      "stageKey": "coding",
+      "title": "Coding / 开发实现",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "CODING",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_CODING_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "技术方案",
+        "开发任务",
+        "工程门禁"
+      ],
+      "superDevReferenceStages": [
+        "frontend",
+        "backend"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T02:27:42+08:00"
+    },
+    {
+      "stageKey": "verify-integration",
+      "title": "Verify-Integration / 集成验证",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "VERIFY-INTEGRATION",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_VERIFY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "coding package",
+        "测试计划"
+      ],
+      "superDevReferenceStages": [
+        "quality"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T02:27:42+08:00"
+    },
+    {
+      "stageKey": "redteam",
+      "title": "Redteam / 对抗审查",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "REDTEAM",
+      "participantRoles": [
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_REDTEAM_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "verify package",
+        "攻击面与安全关注点"
+      ],
+      "superDevReferenceStages": [
+        "quality"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T02:27:42+08:00"
+    },
+    {
+      "stageKey": "qa",
+      "title": "QA / 质量门禁",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "QA",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_QA_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "verify package",
+        "redteam package"
+      ],
+      "superDevReferenceStages": [
+        "quality",
+        "preview_confirm"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T02:27:42+08:00"
+    },
+    {
+      "stageKey": "deployment",
+      "title": "Deployment / 部署交付",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "DEPLOYMENT",
+      "participantRoles": [
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_DEPLOYMENT_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "qa package",
+        "release bundle",
+        "deployment checklist"
+      ],
+      "superDevReferenceStages": [
+        "delivery",
+        "rehearsal"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T02:27:42+08:00"
+    },
+    {
+      "stageKey": "assurance",
+      "title": "Assurance / 运行保障",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "ASSURANCE",
+      "participantRoles": [
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_ASSURANCE_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "deployment package",
+        "运行观察指标",
+        "恢复动作"
+      ],
+      "superDevReferenceStages": [
+        "delivery",
+        "rehearsal"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T02:27:42+08:00"
+    },
+    {
+      "stageKey": "delivery",
+      "title": "Delivery / 最终交付",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "DELIVERY",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "ChiefProductOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_DELIVERY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "assurance package",
+        "最终交付清单",
+        "版本签发材料"
+      ],
+      "superDevReferenceStages": [
+        "delivery"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T02:27:42+08:00"
+    }
+  ]
+}

@@ -1,0 +1,908 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "IPD-20260611-WORKFLOW-001",
+  "title": "商业交付级 AI 自动化开发流程固化",
+  "status": "awaiting-intake-approvals",
+  "priority": "high",
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriTest",
+    "Tride"
+  ],
+  "createdAt": "2026-06-11T21:34:23+08:00",
+  "updatedAt": "2026-06-11T21:55:06+08:00",
+  "currentStageKey": "",
+  "currentWorkItemPath": "",
+  "intake": {
+    "objective": "为实现一个按标准流程逐步自动完成、由 CEO 与总助签字确认、质量可控且有人监督负责的商业交付级 AI 自动化开发项目，先固化公司级 IPD 流程与自动化入口。",
+    "taskDescription": "围绕 AI 自动化开发软件的目标，先完善公司级 IPD 流程，使 CEO 提需求、总助补槽分派、Discovery 与 Intelligence 能由 owner 自动完成并形成可监督、可签核的交付前门。",
+    "constraints": [],
+    "opportunitySignals": [
+      "CEO / 总助正式下发任务：完善公司级 IPD 流程，使 CEO 提需求、总助补槽分派、Discovery 和 Intelligence 自动化能够稳定复用，并为后续模型 API 中转平台项目提供固化入口。",
+      "该事项需要先经过总助 intake briefing，再决定是否进入公司级 IPD 主动交付线。"
+    ],
+    "businessModelFit": [
+      "待总助结合当前“小成本先跑通可收费闭环、先验证再扩大”的路线判断是否成立。"
+    ],
+    "stageFit": [
+      "待总助确认该事项是否落在当前 Copilot-host 正式接管阶段，而不是越界到 TriMC 正式宿主事项。"
+    ],
+    "companyContext": [
+      "TriCompany 当前已具备最小 IPD runtime slice，可先承接 intake briefing、顺序放行和书面签核。"
+    ],
+    "ownerProposal": [
+      "总助先把任务转成 intake briefing；CMO / COO / CFO / CPO / CTO 再按节点继续细化。"
+    ],
+    "resourceEnvelope": [
+      "待总助结合任务复杂度补齐人力、时间、工具、预算窗口和是否需要 TriDev 接入。"
+    ],
+    "prerequisites": [
+      "CEO 确认该事项需要进入公司级 IPD 评估，而不是继续停留在口头任务或临时待办层。"
+    ],
+    "requiredSupport": [
+      "CMO / COO / CFO / CPO / CTO 需按节点补齐市场、经营、预算、产品和技术判断。"
+    ],
+    "expectedOutcomes": [
+      "形成一份可签核的 intake briefing，并在 CEO / 总助签核后决定是否正式进入 IPD 主动交付线。"
+    ],
+    "slotAnswers": {
+      "competitorReference": "Super-dev、Superpowers、spec-kit、openspec",
+      "targetUserScenario": "先服务 CEOChiefOfStaff、CPO、CTO，在公司级研发任务进入 IPD 时使用",
+      "deliveryWindow": "先在 1 周内完成入口补槽、总助分派、Discovery 和 Intelligence 自动化验证",
+      "budgetGuardrail": "首轮仅使用现有人力和少量工具试验成本",
+      "successMetric": "证明 CEO demand 能稳定进入 intake，补槽后能稳定分派并产出 Discovery / Intelligence package，而且这两个阶段是由 owner 自动完成。",
+      "mustHaveScope": "必须交付 ceo-demand、task-dispatch、entryCheckpoint、Discovery/Intelligence 自动化及流程教程",
+      "explicitOutOfScope": "不在本 case 内直接开发模型 API 中转平台，不涉及正式宿主切换，不涉及生产级上线"
+    },
+    "clarificationRequired": true,
+    "clarificationSheet": {
+      "required": true,
+      "status": "ready-for-dispatch",
+      "missingSlotKeys": [],
+      "followUpQuestions": [],
+      "slots": [
+        {
+          "slotKey": "competitorReference",
+          "label": "竞品 / 对标对象",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有竞品或对标对象，CPO 在 Discovery 阶段就缺少明确的产品/官方手册研究起点。",
+          "question": "这次需求至少想对标哪 1-3 个产品、平台、仓库或流程？如果没有直接竞品，也请明确‘按哪类现有方案对标’。",
+          "suggestedOptions": [
+            "已有 1-3 个明确竞品，请直接写名称或链接。",
+            "没有直接竞品，但有同类流程/平台可对标。",
+            "按内部流程问题处理，不对标外部竞品，但请说明原因。",
+            "自定义。"
+          ],
+          "currentValue": "Super-dev、Superpowers、spec-kit、openspec",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "targetUserScenario",
+          "label": "首轮目标用户与使用场景",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "不明确谁在什么场景下使用，CMO 很难验证这是不是值得做的真实需求。",
+          "question": "这次先服务哪类用户，在什么高频场景下用，当前最想解决什么问题？",
+          "suggestedOptions": [
+            "先服务内部岗位，提高研发/经营执行效率。",
+            "先服务现有潜在客户，验证是否愿意试点或付费。",
+            "先做 CEO / 总助 / 管理层内部控制面。",
+            "自定义。"
+          ],
+          "currentValue": "先服务 CEOChiefOfStaff、CPO、CTO，在公司级研发任务进入 IPD 时使用",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "deliveryWindow",
+          "label": "期望工期 / 节奏",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有节奏约束，总助无法把任务拆成合理阶段，也无法约束 CPO / CTO 的交付窗口。",
+          "question": "这次希望以什么节奏推进？是先 48 小时内出 briefing，还是一周内出 PRD，还是两周内跑最小验证？",
+          "suggestedOptions": [
+            "48 小时内完成 intake / Discovery 入口澄清。",
+            "1 周内完成 Discovery + Intelligence + PRD。",
+            "2 周内完成最小 MVP 验证。",
+            "自定义。"
+          ],
+          "currentValue": "先在 1 周内完成入口补槽、总助分派、Discovery 和 Intelligence 自动化验证",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "budgetGuardrail",
+          "label": "预算护栏 / 成本窗口",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "intelligence"
+          ],
+          "whyItMatters": "不明确预算窗口，CFO 就无法形成后续预算护栏，CPO/CTO 也无法判断首轮范围。",
+          "question": "这次允许投入到什么程度？只用现有人力，还是允许少量工具成本，还是允许明确试验预算？",
+          "suggestedOptions": [
+            "只用现有岗位和现有工具先验证。",
+            "允许少量模型/API/工具试验成本。",
+            "允许 1-3 人天级别的试验投入。",
+            "自定义。"
+          ],
+          "currentValue": "首轮仅使用现有人力和少量工具试验成本",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "successMetric",
+          "label": "首轮成功信号",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "delivery"
+          ],
+          "whyItMatters": "没有成功信号，后续很容易把‘做完一些功能’误当成‘需求成立’。",
+          "question": "这次第一轮做成，最希望看到什么结果？流程跑通、试点用户正反馈、可收费、还是节省了人力？",
+          "suggestedOptions": [
+            "先证明 IPD / 产品流程能跑通。",
+            "先拿到一个可展示或可试点的 MVP。",
+            "先验证有人愿意继续用或付费。",
+            "自定义。"
+          ],
+          "currentValue": "证明 CEO demand 能稳定进入 intake，补槽后能稳定分派并产出 Discovery / Intelligence package，而且这两个阶段是由 owner 自动完成。",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "mustHaveScope",
+          "label": "必须交付的最小范围",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有最小范围，Discovery/Intelligence 很容易继续膨胀，最后 PRD 无法收口。",
+          "question": "这次必须交付的最小结果是什么？是一份 PRD、一个最小工作流、一个 MVP 页面，还是完整平台闭环？",
+          "suggestedOptions": [
+            "先交付可签核 PRD 与项目计划。",
+            "先交付单条最小工作流验证。",
+            "先交付可演示 MVP。",
+            "自定义。"
+          ],
+          "currentValue": "必须交付 ceo-demand、task-dispatch、entryCheckpoint、Discovery/Intelligence 自动化及流程教程",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "explicitOutOfScope",
+          "label": "明确不做项",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有不做项，团队容易把远期能力和当前验证目标混写。",
+          "question": "这次明确不做什么？比如不上正式宿主、不做链上实现、不做大规模运营、不做完整商业化。",
+          "suggestedOptions": [
+            "不涉及正式宿主切换。",
+            "不涉及链上/钱包/合约真实实现。",
+            "不涉及大规模上线与运营。",
+            "自定义。"
+          ],
+          "currentValue": "不在本 case 内直接开发模型 API 中转平台，不涉及正式宿主切换，不涉及生产级上线",
+          "allowCustom": true
+        }
+      ]
+    },
+    "caseCategory": "process-improvement",
+    "referenceTheme": "WORKFLOW",
+    "roleAssignmentMatrix": [
+      {
+        "role": "CEOChiefOfStaff",
+        "stageKeys": [
+          "intake"
+        ],
+        "taskType": "intake-orchestration",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "把 CEO 需求转成 intake briefing，补齐关键填槽信息，并把任务路由到对应 owner。",
+        "deliverables": [
+          "intake briefing",
+          "clarification sheet",
+          "dispatch plan"
+        ]
+      },
+      {
+        "role": "CEO",
+        "stageKeys": [
+          "intake"
+        ],
+        "taskType": "clarification-and-signoff",
+        "status": "active",
+        "canFreezeCase": false,
+        "responsibility": "补齐关键槽位并决定是否让事项进入公司级 IPD 主动交付线。",
+        "deliverables": [
+          "clarification answers",
+          "intake signoff"
+        ]
+      },
+      {
+        "role": "ChiefMarketingOfficer",
+        "stageKeys": [
+          "discovery"
+        ],
+        "taskType": "demand-validation",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "验证这是不是合理的真实需求，避免公司做出没有市场需求的产品。",
+        "deliverables": [
+          "需求真实性验证",
+          "目标用户/场景复核"
+        ]
+      },
+      {
+        "role": "ChiefProductOfficer",
+        "stageKeys": [
+          "discovery",
+          "intelligence",
+          "delivery"
+        ],
+        "taskType": "product-research-and-prd",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "Discovery 按总助指示搜索竞品、功能、官方手册并完成共性功能抽取与亮点功能发掘；Intelligence 汇总结构化输入并收正式 PRD。",
+        "deliverables": [
+          "DiscoveryReferenceFunctionalBrief",
+          "DiscoveryCompetitorLandscape",
+          "DiscoveryCommonCapabilityMatrix",
+          "DiscoveryHighlightOpportunityMemo",
+          "竞品/功能/官方手册研究",
+          "正式 PRD",
+          "项目计划"
+        ]
+      },
+      {
+        "role": "ChiefTechnologyOfficer",
+        "stageKeys": [
+          "intelligence",
+          "designing",
+          "coding",
+          "verify-integration",
+          "redteam",
+          "qa",
+          "deployment",
+          "assurance"
+        ],
+        "taskType": "code-research-and-technical-design",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "根据上一阶段资料搜索相关开源代码和公开技术资料、建立 CodeGraph、做深度分析总结，并形成架构选型与实现思路；后续承接设计与开发。",
+        "deliverables": [
+          "IntelligenceCapabilityExtractionMatrix",
+          "IntelligenceOpenSourceLandscape",
+          "IntelligenceCodegraphAnalysis",
+          "IntelligenceArchitectureOptionMemo",
+          "开源代码分析结论",
+          "技术方案"
+        ]
+      },
+      {
+        "role": "ChiefOperatingOfficer",
+        "stageKeys": [
+          "intelligence",
+          "deployment",
+          "assurance",
+          "delivery"
+        ],
+        "taskType": "operations-constraints",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "补试点路径、上线节奏和运营约束。",
+        "deliverables": [
+          "运营约束",
+          "试点路径",
+          "rollout 计划"
+        ]
+      },
+      {
+        "role": "ChiefFinancialOfficer",
+        "stageKeys": [
+          "intelligence",
+          "deployment",
+          "assurance",
+          "delivery"
+        ],
+        "taskType": "budget-guardrail",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "补预算护栏、成本窗口、止损条件和后续财务复核。",
+        "deliverables": [
+          "预算护栏",
+          "成本约束",
+          "止损条件"
+        ]
+      }
+    ],
+    "expectedDelivery": "形成公司级 IPD intake briefing 与后续节点放行判断。",
+    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/intake-brief.json",
+    "createdBy": "CEOChiefOfStaff",
+    "createdAt": "2026-06-11T21:34:23+08:00",
+    "approvals": [
+      {
+        "role": "CEOChiefOfStaff",
+        "status": "approved",
+        "note": "创建动作已视为当前角色签核",
+        "updatedAt": "2026-06-11T21:55:06+08:00"
+      },
+      {
+        "role": "CEO",
+        "status": "pending",
+        "note": "",
+        "updatedAt": ""
+      }
+    ],
+    "status": "pending"
+  },
+  "stages": [
+    {
+      "stageKey": "discovery",
+      "title": "Discovery / 总助分派后的产品研究",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "DISCOVERY",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "ChiefMarketingOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_DISCOVERY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "总助拆解后的研发任务说明",
+        "intake briefing",
+        "上游业务背景与当前阶段边界"
+      ],
+      "superDevReferenceStages": [
+        "research",
+        "baseline"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    },
+    {
+      "stageKey": "intelligence",
+      "title": "Intelligence / 结构化输入",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "INTELLIGENCE",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "ChiefMarketingOfficer",
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_INTELLIGENCE_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "Discovery package",
+        "DiscoveryReferenceFunctionalBrief",
+        "市场证据与机会线索",
+        "运营约束",
+        "预算护栏"
+      ],
+      "superDevReferenceStages": [
+        "docs",
+        "docs_confirm",
+        "prd"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    },
+    {
+      "stageKey": "designing",
+      "title": "Designing / 技术设计",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "DESIGNING",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_DESIGN_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "PRD",
+        "项目计划",
+        "验收标准"
+      ],
+      "superDevReferenceStages": [
+        "architecture",
+        "uiux",
+        "spec"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    },
+    {
+      "stageKey": "coding",
+      "title": "Coding / 开发实现",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "CODING",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_CODING_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "技术方案",
+        "开发任务",
+        "工程门禁"
+      ],
+      "superDevReferenceStages": [
+        "frontend",
+        "backend"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    },
+    {
+      "stageKey": "verify-integration",
+      "title": "Verify-Integration / 集成验证",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "VERIFY-INTEGRATION",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_VERIFY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "coding package",
+        "测试计划"
+      ],
+      "superDevReferenceStages": [
+        "quality"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    },
+    {
+      "stageKey": "redteam",
+      "title": "Redteam / 对抗审查",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "REDTEAM",
+      "participantRoles": [
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_REDTEAM_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "verify package",
+        "攻击面与安全关注点"
+      ],
+      "superDevReferenceStages": [
+        "quality"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    },
+    {
+      "stageKey": "qa",
+      "title": "QA / 质量门禁",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "QA",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_QA_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "verify package",
+        "redteam package"
+      ],
+      "superDevReferenceStages": [
+        "quality",
+        "preview_confirm"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    },
+    {
+      "stageKey": "deployment",
+      "title": "Deployment / 部署交付",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "DEPLOYMENT",
+      "participantRoles": [
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_DEPLOYMENT_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "qa package",
+        "release bundle",
+        "deployment checklist"
+      ],
+      "superDevReferenceStages": [
+        "delivery",
+        "rehearsal"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    },
+    {
+      "stageKey": "assurance",
+      "title": "Assurance / 运行保障",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "ASSURANCE",
+      "participantRoles": [
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_ASSURANCE_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "deployment package",
+        "运行观察指标",
+        "恢复动作"
+      ],
+      "superDevReferenceStages": [
+        "delivery",
+        "rehearsal"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    },
+    {
+      "stageKey": "delivery",
+      "title": "Delivery / 最终交付",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "DELIVERY",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "ChiefProductOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_DELIVERY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "assurance package",
+        "最终交付清单",
+        "版本签发材料"
+      ],
+      "superDevReferenceStages": [
+        "delivery"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-11T21:55:06+08:00"
+    }
+  ],
+  "freezeControl": {},
+  "entryCheckpoint": "ceo-demand"
+}

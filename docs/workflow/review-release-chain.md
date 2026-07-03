@@ -2,13 +2,15 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/workflow/review-release-chain.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
-- lastSyncedAt: 2026-06-03
+- sourceOfTruth: TriCompany/docs/workflow/integrated-product-development-flow.md
+- publishedFrom: TriCompany/docs/workflow/integrated-product-development-flow.md
+- syncMode: published-summary
+- publishTier: release-side-summary
+- lastSyncedAt: 2026-06-15
 
 目的：将白皮书、情报产物、PRD 计划串成严格审核发布链，杜绝未审核伪产物进入后续实施。
+
+当前文件只承担 TriMetaverse 发布侧摘要职责。赛博公司当前阶段的顺序审核发布链、PRD 分支初始化与 docs bootstrap 真源，以 TriCompany 的 [integrated-product-development-flow.md](../../../TriCompany/docs/workflow/integrated-product-development-flow.md) 为准；本页用于发布侧摘要、跨模块引用和口径镜像，不作为公司级 IPD 主真源。
 
 ---
 

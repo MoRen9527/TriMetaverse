@@ -1,34 +1,37 @@
 {
   "schemaVersion": "1.0",
   "runId": "ipd-ipd-20260527-034923",
-  "currentStage": "VERIFY-INTEGRATION",
+  "currentStage": "INTELLIGENCE",
   "nextAction": "record-phase-result",
-  "businessOwner": "ChiefTechnologyOfficer",
-  "actingOwner": "ChiefTechnologyOfficer",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
   "moduleExecutor": "TriDev",
-  "gateOwner": "ChiefTechnologyOfficer",
+  "gateOwner": "ChiefProductOfficer",
   "requiredInputs": [
-    "upstreamArtifact:implementation",
-    "artifact:test-report",
+    "upstreamArtifact:reference-evidence",
+    "upstreamArtifact:market-report",
+    "upstreamArtifact:ops-plan",
+    "upstreamArtifact:budget-guard",
+    "artifact:prd",
     "summary"
   ],
   "reviewBlockers": [],
-  "recommendedCommand": "python -m tridev.cli engine-step --root . --run-id <run-id> --artifact <path> --summary \"VERIFY-INTEGRATION completed\" --step-id <step-id>",
+  "recommendedCommand": "python -m tridev.cli engine-step --root . --run-id <run-id> --artifact <path> --summary \"INTELLIGENCE completed\" --step-id <step-id>",
   "knowledgeBundlePath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\knowledge-bundle.json",
   "promptContextPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\host-prompt-context.json",
   "taskPlanPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\coding-task-plan.json",
   "taskLedgerPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\coding-task-ledger.json",
   "openTaskIds": [
-    "verify_integration-prepare-inputs",
-    "verify_integration-execute-stage",
-    "verify_integration-prepare-gate"
+    "intelligence-prepare-inputs",
+    "intelligence-execute-stage",
+    "intelligence-prepare-gate"
   ],
   "taskRetrySummary": [],
   "instructions": [
-    "Follow the VERIFY-INTEGRATION stage contract and keep evidence machine-readable.",
+    "Follow the INTELLIGENCE stage contract and keep evidence machine-readable.",
     "Do not bypass review blockers; clear revision_requested state before continuing.",
     "Prefer updating real source/test/deploy artifacts over narrative-only docs when execution evidence is required.",
     "Bind current-stage artifacts and produce a concise stage summary."
   ],
-  "generatedAt": "2026-05-27T14:32:30.577636+00:00"
+  "generatedAt": "2026-06-10T19:15:06.167032+00:00"
 }

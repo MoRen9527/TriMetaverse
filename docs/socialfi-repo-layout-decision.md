@@ -3,10 +3,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/socialfi-repo-layout-decision.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse `SocialFi` 目录与部署决策的本地真源，用于维护服务域落位、边界和执行约束；它不是 TriCompany 公司级 workflow 或产品真源。
 
 更新时间：2026-02-28
 状态：已确认执行
@@ -21,10 +23,10 @@
 
 - `d:/OneDrive/Code/ai/socialFi`（与 `TriPilot` 同级）
 
-## 与 Core-Agent 的边界
+## 与 TriMC（原 Core-Agent）的边界
 
-- `SocialFi -> Core-Agent`：标准化输入（消息、附件摘要、身份映射、渠道元数据）。
-- `Core-Agent -> SocialFi`：标准化回包（流式片段、终态消息、错误口径）。
+- `SocialFi -> TriMC`：标准化输入（消息、附件摘要、身份映射、渠道元数据）。
+- `TriMC -> SocialFi`：标准化回包（流式片段、终态消息、错误口径）。
 - 契约以 `docs/contracts/socialfi-core-agent-io.md` 为准（若变更需先更新契约再改实现）。
 
 ## 为什么不放在 TriMetaverse 内部子目录
@@ -41,5 +43,5 @@
 ## 执行约束
 
 - 不在 `socialFi` 内实现 LLM 路由与 Agent 主控循环。
-- 不绕过 `Core-Agent` 直接调用下游主控工具链。
+- 不绕过 `TriMC` 直接调用下游主控工具链。
 - 所有变更回填到 `docs/runs/run-Rxx-...md`。

@@ -2,11 +2,11 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/product/ROADMAP.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- sourceOfTruth: TriCompany/docs/product/ROADMAP.md
+- publishedFrom: TriCompany/docs/product/ROADMAP.md
+- syncMode: published-summary
+- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
-- 当前状态：当前为中央真源与治理摘要仓。
-- 本文件用于后续补齐产品阶段目标、优先级和版本节奏。
+- 当前状态：当前为中央发布侧路线摘要页。
+- 本文件用于同步 TriCompany 公司级产品阶段目标、优先级和版本节奏的发布侧摘要，不替代 TriCompany 产品真源。

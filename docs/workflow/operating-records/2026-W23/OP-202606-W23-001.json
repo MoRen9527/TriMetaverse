@@ -2,18 +2,18 @@
   "objectType": "OPERATING_PLAN",
   "objectId": "OP-202606-W23-001",
   "title": "TriMetaverse 跨周事项收口与平移周经营计划单",
-  "status": "draft",
+  "status": "closed-carried-forward",
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-06-03T11:46:33+08:00",
-  "updatedAt": "2026-06-03T21:03:30+08:00",
+  "updatedAt": "2026-06-08T11:29:18+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-06-01T00:00:00+08:00",
     "endAt": "2026-06-07T23:59:59+08:00",
     "label": "2026-W23 跨周收口周"
   },
-  "summary": "根据 CEO 于 2026-06-03 的最新输入，本周先把历史周遗留的 active 经营事项从 2026-W15 等历史记录中闭合并平移到最新周统一维护，同时对长期未推进事项加入跨周预警、owner 和恢复条件。当前重点包括 CEOChiefOfStaff 正式接管后续阶段、最小 MVP / 最小经营闭环重排、TriTraining 恢复推进与第一条 IPD 暂停项。",
+  "summary": "根据 CEO 于 2026-06-03 的输入形成的 W23 active backlog 已于 2026-06-08 闭合并平移到 W24；本对象保留的是 W23 当时的 pending facts、carry history 与历史留痕。",
   "relatedModules": [
     "TriMetaverse",
     "TriCompany",
@@ -207,7 +207,7 @@
     "recordLayer": "real-operating-record",
     "unresolvedItemsRef": "docs/workflow/operating-records/2026-W23/OP-202606-W23-001.unresolved-items.md",
     "issuanceVersion": "OP-202606-W23-001-v0.1.0-draft",
-    "latestActiveWeek": true,
+    "latestActiveWeek": false,
     "carryForwardSourceRefs": [
       "docs/workflow/operating-records/2026-W15/OP-202604-W15-001.json"
     ],
@@ -220,7 +220,7 @@
     ],
     "carryWarningThresholdWeeks": 4,
     "carryHighWarningThresholdWeeks": 8,
-    "carryAgingReviewedAt": "2026-06-03T11:46:33+08:00",
+    "carryAgingReviewedAt": "2026-06-08T11:29:18+08:00",
     "carryAgingWarnings": [
       {
         "title": "CEOChiefOfStaff 正式接管后续阶段收口",
@@ -325,6 +325,11 @@
         ],
         "updatedAt": "2026-06-03T11:46:33+08:00"
       }
-    ]
+    ],
+    "historicalWeekClosed": true,
+    "historicalWeekClosedAt": "2026-06-08T11:29:18+08:00",
+    "successorOperatingPlanRef": "docs/workflow/operating-records/2026-W24/OP-202606-W24-001.json",
+    "successorUnresolvedItemsRef": "docs/workflow/operating-records/2026-W24/OP-202606-W24-001.unresolved-items.md",
+    "activeFollowupMovedToLatestWeek": true
   }
 }

@@ -7,58 +7,13 @@
       "stage": "DISCOVERY",
       "status": "approved",
       "approvedBy": "ChiefProductOfficer",
-      "approvedAt": "2026-05-27T11:31:34.941266+00:00",
-      "artifactDigest": "9e8a088794fbc4431f5ba363ed6462933bf4e2bdbb4faf0216c491a7a6f76928",
+      "approvedAt": "2026-06-10T18:51:04.444583+00:00",
+      "artifactDigest": "2508fc3fc7bf4ebb0bfc1e477b2291ecc1813a2643d1def426e2004b2e43deda",
       "comments": "",
       "changedFiles": [
         "docs/ipd-autopilot/IPD-20260527-034923/discovery-package.json"
       ],
-      "gitDiffDigest": "6d91dcb2c1b69661ca67d9629c62ca65bd13841903e4f486591a0c1b338bf106",
-      "gitDiffStatus": "captured",
-      "schemaVersion": "1.0"
-    },
-    {
-      "gateId": "intelligence-gate",
-      "stage": "INTELLIGENCE",
-      "status": "approved",
-      "approvedBy": "ChiefProductOfficer",
-      "approvedAt": "2026-05-27T11:31:36.045473+00:00",
-      "artifactDigest": "bb48312c5ff4130b2cfc3adef8e65a9bb906e79a84994a4fe62054c01547a4cf",
-      "comments": "",
-      "changedFiles": [
-        "docs/ipd-autopilot/IPD-20260527-034923/intelligence-package.json"
-      ],
-      "gitDiffDigest": "6f70f01277221b6f3ae2e5131a6124f538152348f5b18f4236ce7ec23c02a21b",
-      "gitDiffStatus": "captured",
-      "schemaVersion": "1.0"
-    },
-    {
-      "gateId": "designing-gate",
-      "stage": "DESIGNING",
-      "status": "approved",
-      "approvedBy": "ChiefTechnologyOfficer",
-      "approvedAt": "2026-05-27T11:31:37.181646+00:00",
-      "artifactDigest": "2cdd41729822b61fc04fb98b504d8eb36e64268ef2072d9f03ecad296a07ad29",
-      "comments": "",
-      "changedFiles": [
-        "docs/ipd-autopilot/IPD-20260527-034923/designing-package.json"
-      ],
-      "gitDiffDigest": "186265e709364c2e92fec251e49713384faf6dfd036a750e2697a4014bcb0280",
-      "gitDiffStatus": "captured",
-      "schemaVersion": "1.0"
-    },
-    {
-      "gateId": "coding-gate",
-      "stage": "CODING",
-      "status": "approved",
-      "approvedBy": "ChiefTechnologyOfficer",
-      "approvedAt": "2026-05-27T11:31:38.359371+00:00",
-      "artifactDigest": "5af141de13c5e79be9dc0b3e791e2da7cbb7c14b189b116a6abd1bf7b1836f71",
-      "comments": "",
-      "changedFiles": [
-        "docs/ipd-autopilot/IPD-20260527-034923/coding-package.json"
-      ],
-      "gitDiffDigest": "9e682fca73b38caac277b7be531f4436849add59dc1c389ed2e63e07c0695a8a",
+      "gitDiffDigest": "e10574c201c898a76cacbab8c8253c5f34480605cfb958fa20ce303f0e262143",
       "gitDiffStatus": "captured",
       "schemaVersion": "1.0"
     }

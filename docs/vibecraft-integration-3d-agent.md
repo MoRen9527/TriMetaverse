@@ -3,10 +3,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/vibecraft-integration-3d-agent.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse Vibecraft 融合专题的本地真源，用于维护 observability 融合方案和事件模型映射判断；它不是 TriCompany 公司级 workflow 或产品真源。
 
 更新时间：2026-02-27
 参考项目：`reference/vibecraft`（Nearcyan/vibecraft，pinned: `8278a4b`）
@@ -34,7 +36,7 @@ Vibecraft 的可复用价值不在“Claude 专用壳”，而在三类基础能
 ### 2.1 现有三层（不变）
 
 - `SocialFi`：渠道接入与回包。  
-- `Core-Agent`：会话编排与执行主控。  
+- `TriMC (原 TriMC (原 Core-Agent))`：会话编排与执行主控。  
 - `TriStaciss`：唯一 LLM 出口。  
 
 ### 2.2 新增观测层（新增）
@@ -53,7 +55,7 @@ Vibecraft 的可复用价值不在“Claude 专用壳”，而在三类基础能
 
    3. **Display/Approval Sync Hub（Server）**  
       - 目标：统一承载显示态与审批态，保证服务侧三端一致。  
-      - 三端范围：`Webview UI`、`APP/小程序`、`Web 前端（avatar-react）`。  
+      - 三端范围：`Webview UI`、`APP/小程序`、`Web 前端（TriAvatar）`。  
       - 同步方式：版本化状态 + 流式推送（WebSocket/Stream），以服务侧为单一真源。  
       - 本地策略：本地侧遵循“尽量一致”，允许短暂延迟，最终与服务侧对齐。
 
@@ -125,4 +127,4 @@ Vibecraft 常见事件（如 pre/post tool、stop、prompt、permission）可映
 ## 8. 结论
 
 `vibecraft` 适合作为我们“**可观测 + 可解释 + 可培训**”能力的参考基座。  
-建议采用“**Bridge（服务端）+ Observatory UI（本地）**”双组件接入方式，嵌入现有双域架构，不改变 `SocialFi / Core-Agent / TriStaciss` 主职责边界。
+建议采用“**Bridge（服务端）+ Observatory UI（本地）**”双组件接入方式，嵌入现有双域架构，不改变 `SocialFi / TriMC (原 TriMC (原 Core-Agent)) / TriStaciss` 主职责边界。

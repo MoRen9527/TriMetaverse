@@ -1,0 +1,170 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-engine-native-draft",
+  "objectType": "IPD_INTELLIGENCE_PACKAGE",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "intelligence",
+  "phaseKey": "INTELLIGENCE",
+  "status": "draft-preloaded-with-discovery-facts",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "ownerRole": "ChiefProductOfficer",
+  "participantRoles": [
+    "CEOChiefOfStaff",
+    "ChiefMarketingOfficer",
+    "ChiefOperatingOfficer",
+    "ChiefFinancialOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "summary": "待 CPO 基于已签核的 Discovery 事实，并先完成 TriMetaverse/reference/sub2api 参考研究，收口完整模型 API 平台 MVP 的 Intelligence 结论、完整 PRD、项目计划、验收矩阵与进入 Designing 的前门。",
+  "requiredOutput": [
+    "完整模型 API 平台 MVP PRD",
+    "项目计划",
+    "验收矩阵",
+    "进入 Designing 的前置条件"
+  ],
+  "referenceAnchors": {
+    "sub2api": {
+      "referenceRoot": "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api",
+      "referenceNote": "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api/TMV-REFERENCE.md",
+      "pinnedCommit": "e34ad2b19424844cbd1bcffb599e5b0002ad3c50",
+      "absorptionChain": [
+        "TriMetaverse/reference/sub2api",
+        "TriStaciss/vendor/sub2api (future frozen baseline)",
+        "TriStaciss real implementation"
+      ],
+      "currentUsage": [
+        "当前只作为 CPO Intelligence / PRD 研究锚点。",
+        "当前不作为 runtime truth，不直接从 reference 树交付现役功能。",
+        "PRD 需要独立写清合规 / TOS 风险与当前阶段取舍。"
+      ]
+    }
+  },
+  "productScope": {
+    "objective": "围绕完整模型 API 平台 MVP 重新走旧 case：由 CPO 先基于 TriMetaverse/reference/sub2api 产出完整平台 PRD，再由 CTO / TriDev 推进后端、前端最小 smoke，以及 TriCompany 员工身份 NFT / 钱包签名模拟层的当前阶段方案。",
+    "targetUsers": [
+      "待 CPO 明确当前 MVP 的核心目标用户画像"
+    ],
+    "valueProposition": [
+      "待 CPO 明确当前 MVP 的收费价值、平台价值与阶段性商业闭环"
+    ],
+    "inScope": [
+      "TriStaciss 作为当前模型 API 平台后端真源，承接 provider 路由、多模型接口与 /v1 合同整改主战场",
+      "TriAvatar 作为 Web 入口前端，承接最小聊天 smoke、配置合同与后续前端验证边界定义",
+      "TriCompany 作为公司层，承接员工身份 NFT / 钱包签名模拟机制、签核与审计边界",
+      "TriDev ten-phase / super-dev step-stage replay 的 Discovery 前门与后续阶段 handoff 要求"
+    ],
+    "outOfScope": [
+      "TriChain / TriWeb4 的真实链上 NFT、真实钱包、合约部署与链上签名能力",
+      "TriMC 正式宿主切换、生产级 Hermes 接入或正式组织授权矩阵完成",
+      "TriAvatar 3D / 4D / 游戏化完整入口与默认聊天入口切换",
+      "TriMem 的真实用户系统、持久化账户体系、计费、配额和完整前端重构"
+    ]
+  },
+  "moduleDecisions": {
+    "TriStaciss": {
+      "currentFacts": [
+        "TriStaciss 当前仍以 /api/chat/stream 作为现役入口。",
+        "/v1/chat/completions 仍处于整改骨架期，当前不能被写成已完成的完整合同。",
+        "/v1/responses 尚未落地，完整平台 Discovery 不能再被简化成单一 /v1 缺口。",
+        "TriStaciss 继续作为当前模型 API 平台后端真源。",
+        "sub2api 已被放入 TriMetaverse/reference/sub2api 作为上游平台参考锚点，供本轮 PRD 做 capability mapping。"
+      ],
+      "mvpScope": [
+        "待 CPO 明确首轮后端 MVP 交付范围，但不得退化回最小 gateway slice 叙事。",
+        "至少需要把现役接口事实、目标 API 合同、provider 路由与后续验证门禁写进 PRD。"
+      ],
+      "referenceStudy": [
+        "需要对 sub2api 的账号管理、API key 分发、计费、调度、限流、管理后台和支付系统做 capability mapping。",
+        "需要明确哪些能力进入首轮 MVP，哪些后置，哪些因合规边界不进入当前轮。"
+      ]
+    },
+    "TriAvatar": {
+      "smokeIncluded": "tbd-by-cpo",
+      "smokeScope": [
+        "TriAvatar 当前已具备独立 React/Vite/TypeScript 前端工程与最小测试入口。",
+        "至少需要在 Intelligence 阶段明确最小聊天 smoke 是否纳入首轮验收矩阵。",
+        "是否扩大到登录、配置和 API 环境合同检查，待 CPO 明确。"
+      ],
+      "rationale": [
+        "新一轮验证不能继续默认只做后端 Python slice。",
+        "前端 smoke 是否进入首轮矩阵，是当前完整平台 MVP Intelligence 的显式决策项。"
+      ]
+    },
+    "TriCompanyIdentitySigning": {
+      "currentStageDecision": "当前阶段只允许写成 TriCompany 公司层的员工身份 NFT / 钱包签名模拟机制，不写成 TriChain / TriWeb4 已上线的真实链上能力。",
+      "objectGranularity": [
+        "员工对象粒度待 CPO 明确",
+        "签名策略粒度待 CPO 明确",
+        "审计记录粒度待 CPO 明确",
+        "是否需要完整 mock wallet flow 待 CPO 明确"
+      ],
+      "constraints": [
+        "当前员工身份、员工签名和公司级签核治理属于 TriCompany 公司层。",
+        "不得把当前模拟层写成 TriChain / TriWeb4 已提供真实链上 NFT 或真实钱包。",
+        "需要在 PRD 中明确当前模拟层与未来真实链上迁移边界。"
+      ]
+    },
+    "FutureChainLanding": {
+      "TriChain": "仅作为未来真实链上 NFT / 钱包 / 签名能力的承接层，不属于本轮已实现能力。",
+      "TriWeb4": "仅作为未来真实链上交互与 Web3/Web4 承接层，不属于本轮已实现能力。"
+    }
+  },
+  "deliveryPlan": {
+    "artifacts": {
+      "prdPath": "待 CPO 提供真实 PRD 路径",
+      "projectPlanPath": "待 CPO 提供真实项目计划路径",
+      "acceptanceMatrixPath": "待 CPO 提供真实验收矩阵路径"
+    },
+    "designingEntryCriteria": [
+      "PRD 必须给出 TriStaciss、TriAvatar、TriCompany 三块的 in-scope / out-of-scope 和 owner 分工。",
+      "PRD 必须把 TriMetaverse/reference/sub2api -> TriStaciss/vendor/sub2api (future) -> TriStaciss real implementation 的吸收链写清。",
+      "PRD 必须给出验收矩阵与阶段 gate 证据预期，避免后续再次只落到后端 Python slice。",
+      "PRD 必须单独写清上游 README 已提示的 TOS / 合规风险，而不是默认继承 upstream 假设。",
+      "PRD 必须明确 TriChain / TriWeb4 只承接未来真实链上能力，当前轮不写成已实现。",
+      "PRD 必须把项目计划、主要风险和进入 Designing 的前置条件写成可执行 handoff。"
+    ],
+    "validationMatrix": [
+      "TriStaciss 后端验证不能再被简化成单一 /v1 缺口或单一后端 Python slice。",
+      "TriAvatar 是否纳入首轮 smoke，以及纳入到什么范围，必须在矩阵中显式写清。",
+      "TriCompany 模拟身份 / 签名层必须有清晰的产品边界、对象粒度和审计前门。"
+    ]
+  },
+  "risks": [
+    "如果 Intelligence 再次退回最小 gateway slice 叙事，后续 Designing / Coding 将继续验证错对象。",
+    "如果直接把 sub2api 的账号共享 / 订阅额度分发假设平移进 PRD，可能把上游 README 已提示的 TOS / 合规风险带进当前方案。",
+    "如果 TriAvatar 首轮 smoke 是否纳入不写清，完整平台 MVP 的验收矩阵仍会失真。",
+    "如果 TriCompany 模拟身份 / 签名层和 TriChain / TriWeb4 真实链上承接边界混写，会造成事实性误导。",
+    "如果 /api/chat/stream 现役事实、/v1/chat/completions 整改状态与 /v1/responses 未落地状态不区分，PRD 会失去当前事实锚点。"
+  ],
+  "dependencies": [
+    "需要 CPO 完成 sub2api capability mapping，并决定首轮纳入 / 后置 / 排除项。",
+    "需要 CPO 明确目标用户、价值主张、完整 PRD 范围和 out-of-scope。",
+    "需要 CPO 明确 TriAvatar 首轮 smoke 的纳入结论和范围。",
+    "需要 CPO 明确 TriCompany 模拟身份 / 签名层首轮对象粒度。",
+    "需要给出 PRD、项目计划和验收矩阵的真实路径，供 submit 与后续 Designing handoff 使用。"
+  ],
+  "evidence": [
+    "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api/TMV-REFERENCE.md",
+    "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api/README.md",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/manual-packages/discovery-package.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
+    "D:/OneDrive/Code/ai/TriCompany/docs/product/PROJECT.md",
+    "D:/OneDrive/Code/ai/TriCompany/docs/product/REQUIREMENTS.md",
+    "D:/OneDrive/Code/ai/TriCompany/docs/product/STATE.md",
+    "D:/OneDrive/Code/ai/TriStaciss/CLAUDE.md",
+    "D:/OneDrive/Code/ai/TriAvatar/README.md",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/workflow-state.json"
+  ],
+  "workflowRefs": [
+    {
+      "relation": "phase-package-for",
+      "phase": "INTELLIGENCE",
+      "runId": "run-IPD-20260527-034923",
+      "branchId": "ipd-ipd-20260527-034923"
+    }
+  ],
+  "generatedAt": "2026-06-11T04:05:00+08:00"
+}

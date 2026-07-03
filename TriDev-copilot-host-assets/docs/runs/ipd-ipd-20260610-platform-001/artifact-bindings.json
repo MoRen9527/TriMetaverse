@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "ipd-ipd-20260610-platform-001",
+  "bindings": [
+    {
+      "artifactType": "reference-evidence",
+      "objectPath": "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-reference-functional-brief.md",
+      "relatedPaths": [
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/reference-source-catalog.json",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-competitor-landscape.md",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-common-capability-matrix.md",
+        "TriMetaverse/reference/discovery/IPD-20260610-PLATFORM-001/discovery-highlight-opportunity-memo.md"
+      ],
+      "stage": "DISCOVERY",
+      "status": "seeded-awaiting-gate"
+    },
+    {
+      "artifactType": "workbench-case",
+      "objectPath": "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/case.json",
+      "relatedPaths": [
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
+        "TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/outputs/01-discovery.json"
+      ],
+      "stage": "DISCOVERY",
+      "status": "active"
+    }
+  ]
+}

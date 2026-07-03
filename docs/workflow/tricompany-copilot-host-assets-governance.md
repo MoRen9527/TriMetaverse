@@ -7,14 +7,16 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/tricompany-copilot-host-assets-governance.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（summary source）
+- syncMode: source-only
+- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 ## 1. 文档定位
 
 本文用于收敛当前阶段 `TriCompany` 源仓、`TriCompany-copilot-host-assets` 支撑包、`TriMetaverse/.github` live 宿主入口与 `TriMetaverse/docs` 中央文档层之间的资产关系、owner 边界与同步纪律。
+
+当前文件只承担 TriMetaverse 发布侧治理摘要职责。它总结的是当前宿主、support root、live entry 与中央文档层之间的治理关系；涉及 published-copy 发布流程、host object 发布流程、源侧岗位 / 员工定义与 support payload 生成时，仍以 TriCompany 的 `published-copy-refresh-sop.md`、`host-object-publish-flow.md`、相关 workflow/engineering/runtime 真源为准。
 
 本文解决四类问题：
 

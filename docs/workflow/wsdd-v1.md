@@ -3,17 +3,19 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/wsdd-v1.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 目标：提供一套可执行的“规格驱动 + 工作流门禁”方法，用于 `TriMC` 统一运行面协调“主线 + PRD 分叉”交付。
 
+当前文件是 TriMetaverse 研发工作流方法论资产的本地真源，只定义 workflow-driven SDD 方法、阶段门禁和 PRD 分叉交付语义；它不是 TriCompany 公司级 workflow 书面真源。
+
 ## 1) 最小术语定义
 
 - WSDD：Workflow-Driven Specification Development，指“先规格、后执行、以门禁控制阶段流转”。
-- 研发工作流：`TriMC` 统一运行面中的研发执行切片，负责阶段状态机、门禁判定、回流控制；当前由 `copilot chat` 试运行，正式切换通过 `TriHost` 配置完成。
+- 研发工作流：`TriMC` 统一运行面中的研发执行切片，负责阶段状态机、门禁判定、回流控制；当前由 `copilot chat` 试运行，正式切换通过 `TriModel` 的 Provider/Model 配置完成。
 - Phase Agent：阶段执行 Agent，负责当前阶段主任务。
 - Subagent：阶段内并行子执行体，不得跨阶段推进。
 - PhaseResult：阶段标准结果对象（产物、分数、错误、摘要）。

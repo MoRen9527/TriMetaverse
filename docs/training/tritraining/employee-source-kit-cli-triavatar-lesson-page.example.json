@@ -1,0 +1,90 @@
+{
+  "contractType": "lesson-page-example",
+  "courseId": "tritraining-cli-001",
+  "lessonId": "employee-source-kit-cli-intro",
+  "pageId": "lesson-employee-source-kit-cli-intro",
+  "title": "Employee Source Kit CLI 从入口到工作流",
+  "summary": "从 __main__、argparse、业务函数一路讲到 source -> binding -> support -> live 工作流。",
+  "audience": [
+    "研发新人",
+    "trainer",
+    "CTO",
+    "CodeRegistry"
+  ],
+  "difficulty": "foundation-to-intermediate",
+  "estimatedMinutes": 50,
+  "learningObjectives": [
+    "解释 __main__ 与 SystemExit(main()) 的作用",
+    "解释 argparse 与业务函数的分工",
+    "解释 source truth / support payload / runtime state 的分层",
+    "解释 CLI 与 agent/workflow 的协作关系"
+  ],
+  "contentBlocks": [
+    {
+      "blockId": "overview",
+      "blockType": "hero",
+      "title": "先讲大的结果",
+      "renderHint": "hero-summary-card"
+    },
+    {
+      "blockId": "theory",
+      "blockType": "concept-cards",
+      "title": "理论方法与协议",
+      "renderHint": "stacked-concept-cards"
+    },
+    {
+      "blockId": "mvp",
+      "blockType": "command-card",
+      "title": "最小 MVP 路径",
+      "renderHint": "command-with-output"
+    },
+    {
+      "blockId": "call-chain",
+      "blockType": "timeline",
+      "title": "最小调用链",
+      "renderHint": "call-chain-timeline"
+    },
+    {
+      "blockId": "workflow",
+      "blockType": "diagram",
+      "title": "完整工作流位置",
+      "renderHint": "workflow-diagram-card"
+    },
+    {
+      "blockId": "production-consideration",
+      "blockType": "checklist",
+      "title": "生产级考虑",
+      "renderHint": "quality-risk-checklist"
+    },
+    {
+      "blockId": "reflection",
+      "blockType": "reflection-prompts",
+      "title": "复盘问题",
+      "renderHint": "reflection-card-list"
+    }
+  ],
+  "labRefs": [
+    "employee-source-kit-cli-guided-lab"
+  ],
+  "completionSignals": [
+    "能写出最小调用链",
+    "能写出完整工作流链",
+    "能列出三个生产级设计点"
+  ],
+  "sourceRefs": [
+    "TriTraining/docs/training/employee-source-kit-cli-course.md",
+    "TriTraining/docs/training/employee-source-kit-cli-lesson-contract.md"
+  ],
+  "codegraphHints": [
+    "employee_source_kit.py 入口定位",
+    "main() 到 generate/validate 的调用链",
+    "knowledge_workspace.py 中 normalize_workspace_id(...) 的位置",
+    "employee_host_publish.py 与 host_object_generation.py 的发布链位置"
+  ],
+  "frontendViewNeeds": {
+    "showProgress": true,
+    "showCheckpoint": true,
+    "showLabCTA": true,
+    "showReflection": true
+  }
+}

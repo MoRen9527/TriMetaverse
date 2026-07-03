@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/layer-callgraph.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 分层图（按职责）
+
+当前文件是 TriMetaverse workflow 分层图与调用关系图的本地真源，只负责结构沟通、图示和执行前对齐，不承担 TriCompany 公司级 workflow 书面真源职责。
 
 ```mermaid
 flowchart TB

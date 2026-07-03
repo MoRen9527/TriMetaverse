@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-PLATFORM-001",
+  "stageKey": "intelligence",
+  "phaseKey": "INTELLIGENCE",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "moduleExecutor": "TriDev",
+  "gateOwner": "ChiefProductOfficer",
+  "ownerRole": "ChiefProductOfficer",
+  "participantRoles": [
+    "CEOChiefOfStaff",
+    "ChiefMarketingOfficer",
+    "ChiefOperatingOfficer",
+    "ChiefFinancialOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "submittedAt": "2026-06-14T22:51:04+08:00",
+  "summary": "Intelligence automation package 已提交",
+  "details": [
+    "已自动登记 3 个 Intelligence 开源 / 公开资料来源。",
+    "已自动刷新开源地图、CodeGraph 深读记录、能力提取矩阵和架构选型 memo。"
+  ],
+  "evidence": [
+    "TriMetaverse/reference/intelligence/IPD-20260611-PLATFORM-001/reference-source-catalog.json",
+    "TriMetaverse/reference/intelligence/IPD-20260611-PLATFORM-001/intelligence-capability-extraction-matrix.md",
+    "TriMetaverse/reference/intelligence/IPD-20260611-PLATFORM-001/intelligence-opensource-landscape.md",
+    "TriMetaverse/reference/intelligence/IPD-20260611-PLATFORM-001/intelligence-codegraph-analysis.md",
+    "TriMetaverse/reference/intelligence/IPD-20260611-PLATFORM-001/intelligence-architecture-option-memo.md"
+  ],
+  "objectPath": "TriMetaverse/reference/intelligence/IPD-20260611-PLATFORM-001/intelligence-capability-extraction-matrix.md",
+  "packageHash": "0xb98230352d13007717a4cd1e534e962dc128af9bb5d3505842fef245560ccd15",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "ChiefProductOfficer",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "ChiefProductOfficer",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-14T22:51:04+08:00",
+      "packageHash": "0xb98230352d13007717a4cd1e534e962dc128af9bb5d3505842fef245560ccd15",
+      "signature": "0xa23c5f6b95e9fa6006f5a9479364b7d6ed9912a0b38a18ba472e1b7b664413967ce5a6be1194d6faf7c751a11b553d82dc4e773835bbf7d5592c558010875e51",
+      "signerAddress": "0xd61e3768c6096800f58448a2a22e832b66b05d86",
+      "publicKey": "0x043b3f02041aa9a655bb0a67700309a1444f60a20c579e69257f89e4837762c2506463fd57589bfb10034024a29e3d226a688205b2a89251e316f27a54507334c2",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "aisle addict ... achieve above",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-14T22:51:04+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:04+08:00",
+      "packageHash": "0xb98230352d13007717a4cd1e534e962dc128af9bb5d3505842fef245560ccd15",
+      "signature": "0x698885cdd2feb6ace59848ecb8a09e0d1e896ab855029ab43778845bef4d072059d96ea581f277be088654fb28191d20eb70376d2dba3923d45d62b70a5de1a8",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefProductOfficer"
+      ],
+      "verifiedAt": "2026-06-14T22:51:04+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "",
+      "updatedAt": "2026-06-14T22:51:05+08:00",
+      "packageHash": "0xb98230352d13007717a4cd1e534e962dc128af9bb5d3505842fef245560ccd15",
+      "signature": "0x16980a360fb098029a75161a62f49fd5e64ed474ccebec4e7ba06144e5649308576d7e5186cbefba4a48aa44ef391f6ac1326b3ef352531326862348598534de",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefProductOfficer",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-14T22:51:05+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-PLATFORM-001-INTELLIGENCE-V001",
+    "issuedAt": "2026-06-14T22:51:05+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

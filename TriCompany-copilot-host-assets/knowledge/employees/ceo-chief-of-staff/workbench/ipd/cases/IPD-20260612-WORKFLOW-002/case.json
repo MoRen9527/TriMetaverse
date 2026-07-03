@@ -1,0 +1,946 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "IPD-20260612-WORKFLOW-002",
+  "title": "IPD 全阶段优化下一轮敏捷闭环",
+  "status": "awaiting-stage-approvals",
+  "priority": "high",
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriTest",
+    "Tride"
+  ],
+  "createdAt": "2026-06-12T12:12:42+08:00",
+  "updatedAt": "2026-06-12T12:27:45+08:00",
+  "currentStageKey": "sprint-planning",
+  "currentWorkItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/work-items/02-sprint-planning.json",
+  "intake": {
+    "objective": "以敏捷流程持续优化 IPD 自身，并把结果回灌到 PLATFORM-001 做固定 proving-ground 验证，最终覆盖全部 IPD 阶段。",
+    "taskDescription": "本轮不把流程优化和项目验证混在一条 case；WORKFLOW-002 负责收敛 ceo-demand、dispatch、rollback、自测、阶段提交/签核与 proving-ground 回放机制。当前先承接 Gate A，再逐步扩展到 designing、coding、verify-integration、redteam、qa、deployment、assurance、delivery 的全部阶段优化。",
+    "constraints": [],
+    "opportunitySignals": [],
+    "businessModelFit": [],
+    "stageFit": [],
+    "companyContext": [],
+    "ownerProposal": [],
+    "resourceEnvelope": [],
+    "prerequisites": [],
+    "requiredSupport": [],
+    "expectedOutcomes": [],
+    "slotAnswers": {
+      "competitorReference": "Super-dev、Superpowers、spec-kit、openspec",
+      "targetUserScenario": "先服务 CEOChiefOfStaff、CPO、CTO，在公司级研发任务进入 IPD 时使用",
+      "deliveryWindow": "按 sprint 迭代推进，每轮先修一组 capability gate；当前首轮先承接 Gate A",
+      "budgetGuardrail": "首轮仅使用现有人力和少量工具试验成本",
+      "successMetric": "建立一套可重复的双线闭环：process-improvement -> source-side 自测 -> PLATFORM-001 live replay -> 继续/冻结/回退，并逐步覆盖全部 IPD 阶段",
+      "mustHaveScope": "必须交付 ceo-demand、task-dispatch、rollback、自测、固定 proving-ground replay、阶段 gate map 与全阶段优化 backlog",
+      "explicitOutOfScope": "不在本 case 内直接承担 PLATFORM 项目实现，不把单个 gate 通过写成全阶段优化已完成"
+    },
+    "clarificationRequired": true,
+    "clarificationSheet": {
+      "required": true,
+      "status": "ready-for-dispatch",
+      "missingSlotKeys": [],
+      "followUpQuestions": [],
+      "slots": [
+        {
+          "slotKey": "competitorReference",
+          "label": "竞品 / 对标对象",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有竞品或对标对象，CPO 在 Discovery 阶段就缺少明确的产品/官方手册研究起点。",
+          "question": "这次需求至少想对标哪 1-3 个产品、平台、仓库或流程？如果没有直接竞品，也请明确‘按哪类现有方案对标’。",
+          "suggestedOptions": [
+            "已有 1-3 个明确竞品，请直接写名称或链接。",
+            "没有直接竞品，但有同类流程/平台可对标。",
+            "按内部流程问题处理，不对标外部竞品，但请说明原因。",
+            "自定义。"
+          ],
+          "currentValue": "Super-dev、Superpowers、spec-kit、openspec",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "targetUserScenario",
+          "label": "首轮目标用户与使用场景",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "不明确谁在什么场景下使用，CMO 很难验证这是不是值得做的真实需求。",
+          "question": "这次先服务哪类用户，在什么高频场景下用，当前最想解决什么问题？",
+          "suggestedOptions": [
+            "先服务内部岗位，提高研发/经营执行效率。",
+            "先服务现有潜在客户，验证是否愿意试点或付费。",
+            "先做 CEO / 总助 / 管理层内部控制面。",
+            "自定义。"
+          ],
+          "currentValue": "先服务 CEOChiefOfStaff、CPO、CTO，在公司级研发任务进入 IPD 时使用",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "deliveryWindow",
+          "label": "期望工期 / 节奏",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有节奏约束，总助无法把任务拆成合理阶段，也无法约束 CPO / CTO 的交付窗口。",
+          "question": "这次希望以什么节奏推进？是先 48 小时内出 briefing，还是一周内出 PRD，还是两周内跑最小验证？",
+          "suggestedOptions": [
+            "48 小时内完成 intake / Discovery 入口澄清。",
+            "1 周内完成 Discovery + Intelligence + PRD。",
+            "2 周内完成最小 MVP 验证。",
+            "自定义。"
+          ],
+          "currentValue": "按 sprint 迭代推进，每轮先修一组 capability gate；当前首轮先承接 Gate A",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "budgetGuardrail",
+          "label": "预算护栏 / 成本窗口",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "intelligence"
+          ],
+          "whyItMatters": "不明确预算窗口，CFO 就无法形成后续预算护栏，CPO/CTO 也无法判断首轮范围。",
+          "question": "这次允许投入到什么程度？只用现有人力，还是允许少量工具成本，还是允许明确试验预算？",
+          "suggestedOptions": [
+            "只用现有岗位和现有工具先验证。",
+            "允许少量模型/API/工具试验成本。",
+            "允许 1-3 人天级别的试验投入。",
+            "自定义。"
+          ],
+          "currentValue": "首轮仅使用现有人力和少量工具试验成本",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "successMetric",
+          "label": "首轮成功信号",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "delivery"
+          ],
+          "whyItMatters": "没有成功信号，后续很容易把‘做完一些功能’误当成‘需求成立’。",
+          "question": "这次第一轮做成，最希望看到什么结果？流程跑通、试点用户正反馈、可收费、还是节省了人力？",
+          "suggestedOptions": [
+            "先证明 IPD / 产品流程能跑通。",
+            "先拿到一个可展示或可试点的 MVP。",
+            "先验证有人愿意继续用或付费。",
+            "自定义。"
+          ],
+          "currentValue": "建立一套可重复的双线闭环：process-improvement -> source-side 自测 -> PLATFORM-001 live replay -> 继续/冻结/回退，并逐步覆盖全部 IPD 阶段",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "mustHaveScope",
+          "label": "必须交付的最小范围",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有最小范围，Discovery/Intelligence 很容易继续膨胀，最后 PRD 无法收口。",
+          "question": "这次必须交付的最小结果是什么？是一份 PRD、一个最小工作流、一个 MVP 页面，还是完整平台闭环？",
+          "suggestedOptions": [
+            "先交付可签核 PRD 与项目计划。",
+            "先交付单条最小工作流验证。",
+            "先交付可演示 MVP。",
+            "自定义。"
+          ],
+          "currentValue": "必须交付 ceo-demand、task-dispatch、rollback、自测、固定 proving-ground replay、阶段 gate map 与全阶段优化 backlog",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "explicitOutOfScope",
+          "label": "明确不做项",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有不做项，团队容易把远期能力和当前验证目标混写。",
+          "question": "这次明确不做什么？比如不上正式宿主、不做链上实现、不做大规模运营、不做完整商业化。",
+          "suggestedOptions": [
+            "不涉及正式宿主切换。",
+            "不涉及链上/钱包/合约真实实现。",
+            "不涉及大规模上线与运营。",
+            "自定义。"
+          ],
+          "currentValue": "不在本 case 内直接承担 PLATFORM 项目实现，不把单个 gate 通过写成全阶段优化已完成",
+          "allowCustom": true
+        }
+      ]
+    },
+    "caseCategory": "process-improvement",
+    "referenceTheme": "WORKFLOW",
+    "roleAssignmentMatrix": [
+      {
+        "role": "CEOChiefOfStaff",
+        "stageKeys": [
+          "intake",
+          "backlog",
+          "sprint-planning",
+          "retrospective",
+          "validation-handoff"
+        ],
+        "taskType": "intake-orchestration",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "把 CEO 需求转成 intake briefing，补齐关键填槽信息，并在流程优化类 case 中维护 backlog、迭代计划、复盘和验证移交。",
+        "deliverables": [
+          "intake briefing",
+          "clarification sheet",
+          "dispatch plan",
+          "backlog memo",
+          "retrospective memo"
+        ]
+      },
+      {
+        "role": "CEO",
+        "stageKeys": [
+          "intake"
+        ],
+        "taskType": "clarification-and-signoff",
+        "status": "active",
+        "canFreezeCase": false,
+        "responsibility": "补齐关键槽位并决定是否让事项进入公司级 IPD 主动交付线。",
+        "deliverables": [
+          "clarification answers",
+          "intake signoff"
+        ]
+      },
+      {
+        "role": "ChiefMarketingOfficer",
+        "stageKeys": [
+          "discovery"
+        ],
+        "taskType": "demand-validation",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "验证这是不是合理的真实需求，避免公司做出没有市场需求的产品。",
+        "deliverables": [
+          "需求真实性验证",
+          "目标用户/场景复核"
+        ]
+      },
+      {
+        "role": "ChiefProductOfficer",
+        "stageKeys": [
+          "discovery",
+          "intelligence",
+          "delivery",
+          "backlog",
+          "sprint-planning",
+          "sprint-review",
+          "validation-handoff"
+        ],
+        "taskType": "product-research-and-prd",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "项目交付 case 中负责 Discovery/Intelligence/Delivery；流程优化 case 中负责 backlog 边界、review 收口和真实验证 handoff 口径。",
+        "deliverables": [
+          "DiscoveryReferenceFunctionalBrief",
+          "DiscoveryCompetitorLandscape",
+          "DiscoveryCommonCapabilityMatrix",
+          "DiscoveryHighlightOpportunityMemo",
+          "竞品/功能/官方手册研究",
+          "正式 PRD",
+          "项目计划",
+          "review memo"
+        ]
+      },
+      {
+        "role": "ChiefTechnologyOfficer",
+        "stageKeys": [
+          "intelligence",
+          "designing",
+          "coding",
+          "verify-integration",
+          "redteam",
+          "qa",
+          "deployment",
+          "assurance",
+          "sprint-execution",
+          "sprint-review",
+          "validation-handoff"
+        ],
+        "taskType": "code-research-and-technical-design",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "项目交付 case 中负责代码研究、设计与开发；流程优化 case 中负责 sprint-execution 的实现、验证和技术缺口收口。",
+        "deliverables": [
+          "IntelligenceCapabilityExtractionMatrix",
+          "IntelligenceOpenSourceLandscape",
+          "IntelligenceCodegraphAnalysis",
+          "IntelligenceArchitectureOptionMemo",
+          "开源代码分析结论",
+          "技术方案",
+          "execution validation"
+        ]
+      },
+      {
+        "role": "ChiefOperatingOfficer",
+        "stageKeys": [
+          "intelligence",
+          "deployment",
+          "assurance",
+          "delivery"
+        ],
+        "taskType": "operations-constraints",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "补试点路径、上线节奏和运营约束。",
+        "deliverables": [
+          "运营约束",
+          "试点路径",
+          "rollout 计划"
+        ]
+      },
+      {
+        "role": "ChiefFinancialOfficer",
+        "stageKeys": [
+          "intelligence",
+          "deployment",
+          "assurance",
+          "delivery"
+        ],
+        "taskType": "budget-guardrail",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "补预算护栏、成本窗口、止损条件和后续财务复核。",
+        "deliverables": [
+          "预算护栏",
+          "成本约束",
+          "止损条件"
+        ]
+      }
+    ],
+    "expectedDelivery": "",
+    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/intake-brief.json",
+    "packageHash": "0xf1af5788390cfbe8a2f1bbd6675e892dba00af44930d73739138c4deb2d38946",
+    "releaseCounter": 1,
+    "releaseVersion": "IPD-20260612-WORKFLOW-002-INTAKE-V001",
+    "releaseStatus": "issued",
+    "releaseIssuedAt": "2026-06-12T12:13:12+08:00",
+    "releaseIssuedByRole": "CEOChiefOfStaff",
+    "createdBy": "CEOChiefOfStaff",
+    "createdAt": "2026-06-12T12:12:42+08:00",
+    "approvals": [
+      {
+        "role": "CEO",
+        "status": "approved",
+        "note": "同意按双线闭环推进全阶段 IPD 优化，并以 PLATFORM-001 作为固定 proving-ground。",
+        "updatedAt": "2026-06-12T12:13:12+08:00",
+        "packageHash": "0xf1af5788390cfbe8a2f1bbd6675e892dba00af44930d73739138c4deb2d38946",
+        "signature": "0x921ba99c1052f2d8af823897a70588c7224b093c624f19bdbe084eef75d2cf3832ee2ae6f7b71f16e7fb06cbc22c0cc91280532a731c4c8a65cf9081b4608d97",
+        "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+        "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+        "credentialType": "simulated-mnemonic",
+        "credentialHint": "absorb adjust ... alcohol age",
+        "verificationStatus": "not-required",
+        "verifiedRoles": [],
+        "verifiedAt": "2026-06-12T12:13:12+08:00"
+      },
+      {
+        "role": "CEOChiefOfStaff",
+        "status": "approved",
+        "note": "总助确认按敏捷 sprint 承接全阶段优化，并将结果回灌到 PLATFORM-001 live replay。",
+        "updatedAt": "2026-06-12T12:13:12+08:00",
+        "packageHash": "0xf1af5788390cfbe8a2f1bbd6675e892dba00af44930d73739138c4deb2d38946",
+        "signature": "0x4436254324ab13a768f8c819a4d0068ca016c542c3e52a87fb21a32f88e717e75a4896dd228b64200abee3bef8823238f73f837b3a962c1bc88d39a48b569d57",
+        "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+        "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+        "credentialType": "simulated-mnemonic",
+        "credentialHint": "act already ... alley amateur",
+        "verificationStatus": "verified",
+        "verifiedRoles": [
+          "CEO"
+        ],
+        "verifiedAt": "2026-06-12T12:13:12+08:00"
+      }
+    ],
+    "status": "approved"
+  },
+  "stages": [
+    {
+      "stageKey": "backlog",
+      "title": "Backlog / 流程增量整理",
+      "businessOwner": "CEOChiefOfStaff",
+      "actingOwner": "CEOChiefOfStaff",
+      "moduleExecutor": "TriCompany",
+      "gateOwner": "CEOChiefOfStaff",
+      "ownerRole": "CEOChiefOfStaff",
+      "phaseKey": "BACKLOG",
+      "participantRoles": [
+        "CEO",
+        "ChiefProductOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-12T12:18:52+08:00",
+          "packageHash": "0xf0facf9644e324a4783f472a25042461351e5db5130c36ff4ccdd22b68bb0148",
+          "signature": "0x456924577ba2fc88d567d3dc41a6e5b6af670b55d69f47bc1949663e97dfcaee681e95dc95c9a4350f1fac9b9bd9dadf9547c321be3050fb37bbe47f85cdf94a",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-12T12:18:52+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "同意按 Gate A 起步，并要求后续显式覆盖 Gate B/Gate C 的全阶段优化。",
+          "updatedAt": "2026-06-12T12:26:24+08:00",
+          "packageHash": "0xf0facf9644e324a4783f472a25042461351e5db5130c36ff4ccdd22b68bb0148",
+          "signature": "0xeb3cb03a292d783e0e32e616269e9239e49563c46cdfe746c8003563ab03000116cdef6d9bf65d1f28a96b7d3310ca6df2dc88c2f66d99a40e225b3efdfe5869",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "CEOChiefOfStaff"
+          ],
+          "verifiedAt": "2026-06-12T12:26:24+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "总助签发 backlog，推进到 sprint-planning，保持 PLATFORM-001 作为固定 proving-ground。",
+          "updatedAt": "2026-06-12T12:26:25+08:00",
+          "packageHash": "0xf0facf9644e324a4783f472a25042461351e5db5130c36ff4ccdd22b68bb0148",
+          "signature": "0x456924577ba2fc88d567d3dc41a6e5b6af670b55d69f47bc1949663e97dfcaee681e95dc95c9a4350f1fac9b9bd9dadf9547c321be3050fb37bbe47f85cdf94a",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "CEOChiefOfStaff",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-12T12:26:25+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "AGILE_BACKLOG_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "CEO 需求与当前流程痛点",
+        "上一轮未关闭事项",
+        "现有 IPD runtime / doc / test 现状"
+      ],
+      "superDevReferenceStages": [
+        "backlog"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/work-items/01-backlog.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/outputs/01-backlog.json",
+      "packageHash": "0xf0facf9644e324a4783f472a25042461351e5db5130c36ff4ccdd22b68bb0148",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260612-WORKFLOW-002-BACKLOG-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-12T12:26:25+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-12T12:13:13+08:00",
+      "submittedAt": "2026-06-12T12:18:52+08:00",
+      "completedAt": "2026-06-12T12:26:25+08:00",
+      "blockedReason": "",
+      "outputSummary": "提交全阶段 IPD 优化首轮 backlog，固定 proving-ground 回放与 Gate A/Gate B/Gate C 能力门。",
+      "lastUpdatedAt": "2026-06-12T12:26:25+08:00"
+    },
+    {
+      "stageKey": "sprint-planning",
+      "title": "Sprint-Planning / 迭代计划",
+      "businessOwner": "CEOChiefOfStaff",
+      "actingOwner": "CEOChiefOfStaff",
+      "moduleExecutor": "TriCompany",
+      "gateOwner": "CEOChiefOfStaff",
+      "ownerRole": "CEOChiefOfStaff",
+      "phaseKey": "SPRINT-PLANNING",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "submitted",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-12T12:27:45+08:00",
+          "packageHash": "0x1bc56aca19342eee7fff4959e24f15586cd6fce3e11cb9c8627f79311cd11a19",
+          "signature": "0xa2df3e180eb159bceb7bac06ff4617b1c194ccf30113f801c434041ca090173e42e03d1faf37976483f9d3dd29eb73f0cdec34600c25c95341a048ab0d2391d4",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-12T12:27:45+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "AGILE_SPRINT_PLAN_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "backlog memo",
+        "本轮资源与时间窗口",
+        "签发顺序与验证要求"
+      ],
+      "superDevReferenceStages": [
+        "plan"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/work-items/02-sprint-planning.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/outputs/02-sprint-planning.json",
+      "packageHash": "0x1bc56aca19342eee7fff4959e24f15586cd6fce3e11cb9c8627f79311cd11a19",
+      "releaseCounter": 0,
+      "releaseVersion": "",
+      "releaseStatus": "draft",
+      "releaseIssuedAt": "",
+      "releaseIssuedByRole": "",
+      "activatedAt": "2026-06-12T12:26:25+08:00",
+      "submittedAt": "2026-06-12T12:27:45+08:00",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "提交全阶段 IPD 优化首轮 sprint plan，固定 Gate A replay、自测矩阵、rollback matrix 与 Gate B/Gate C 入口。",
+      "lastUpdatedAt": "2026-06-12T12:27:45+08:00"
+    },
+    {
+      "stageKey": "sprint-execution",
+      "title": "Sprint-Execution / 实施与验证",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriCompany",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "SPRINT-EXECUTION",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "ChiefTechnologyOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "AGILE_EXECUTION_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "sprint plan",
+        "待改代码与测试基线",
+        "签发与验证规则"
+      ],
+      "superDevReferenceStages": [
+        "implementation"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "packageHash": "",
+      "releaseCounter": 0,
+      "releaseVersion": "",
+      "releaseStatus": "draft",
+      "releaseIssuedAt": "",
+      "releaseIssuedByRole": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-12T12:12:42+08:00"
+    },
+    {
+      "stageKey": "sprint-review",
+      "title": "Sprint-Review / 阶段评审",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriCompany",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "SPRINT-REVIEW",
+      "participantRoles": [
+        "ChiefTechnologyOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "ChiefProductOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefProductOfficer",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "AGILE_REVIEW_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "execution package",
+        "阶段验证结果",
+        "未关闭风险"
+      ],
+      "superDevReferenceStages": [
+        "review"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "packageHash": "",
+      "releaseCounter": 0,
+      "releaseVersion": "",
+      "releaseStatus": "draft",
+      "releaseIssuedAt": "",
+      "releaseIssuedByRole": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-12T12:12:42+08:00"
+    },
+    {
+      "stageKey": "retrospective",
+      "title": "Retrospective / 复盘固化",
+      "businessOwner": "CEOChiefOfStaff",
+      "actingOwner": "CEOChiefOfStaff",
+      "moduleExecutor": "TriCompany",
+      "gateOwner": "CEOChiefOfStaff",
+      "ownerRole": "CEOChiefOfStaff",
+      "phaseKey": "RETROSPECTIVE",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "AGILE_RETROSPECTIVE_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "sprint review memo",
+        "执行中的问题与例外"
+      ],
+      "superDevReferenceStages": [
+        "retrospective"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "packageHash": "",
+      "releaseCounter": 0,
+      "releaseVersion": "",
+      "releaseStatus": "draft",
+      "releaseIssuedAt": "",
+      "releaseIssuedByRole": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-12T12:12:42+08:00"
+    },
+    {
+      "stageKey": "validation-handoff",
+      "title": "Validation-Handoff / 另开真实 IPD case 验证",
+      "businessOwner": "CEOChiefOfStaff",
+      "actingOwner": "CEOChiefOfStaff",
+      "moduleExecutor": "TriCompany",
+      "gateOwner": "CEOChiefOfStaff",
+      "ownerRole": "CEOChiefOfStaff",
+      "phaseKey": "VALIDATION-HANDOFF",
+      "participantRoles": [
+        "CEO",
+        "ChiefProductOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "pending",
+      "requiredApprovers": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEO",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "pending",
+          "note": "",
+          "updatedAt": "",
+          "packageHash": "",
+          "signature": "",
+          "signerAddress": "",
+          "publicKey": "",
+          "credentialType": "",
+          "credentialHint": "",
+          "verificationStatus": "not-signed",
+          "verifiedRoles": [],
+          "verifiedAt": ""
+        }
+      ],
+      "schemaHint": {
+        "objectType": "AGILE_VALIDATION_HANDOFF_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "retrospective memo",
+        "已确认有效的流程规则",
+        "候选真实项目方向"
+      ],
+      "superDevReferenceStages": [
+        "validation"
+      ],
+      "workItemPath": "",
+      "outputPath": "",
+      "packageHash": "",
+      "releaseCounter": 0,
+      "releaseVersion": "",
+      "releaseStatus": "draft",
+      "releaseIssuedAt": "",
+      "releaseIssuedByRole": "",
+      "activatedAt": "",
+      "submittedAt": "",
+      "completedAt": "",
+      "blockedReason": "",
+      "outputSummary": "",
+      "lastUpdatedAt": "2026-06-12T12:12:42+08:00"
+    }
+  ],
+  "freezeControl": {},
+  "entryCheckpoint": "sprint-planning"
+}

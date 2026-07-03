@@ -3,10 +3,12 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/contracts/sql-migration-index-strategy.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
+
+当前文件是 TriMetaverse SQL 迁移与索引策略的本地协议真源，用于定义迁移顺序、索引策略和数据生命周期约束；它不是 TriCompany 公司级 workflow 或产品真源。
 
 ## 1. Migration Order
 

@@ -1,0 +1,1380 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "IPD-20260611-PLATFORM-001",
+  "title": "完整模型 API 平台固定 IPD 验证桩",
+  "status": "completed",
+  "priority": "high",
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar"
+  ],
+  "createdAt": "2026-06-11T12:43:52+08:00",
+  "updatedAt": "2026-06-14T22:51:13+08:00",
+  "currentStageKey": "",
+  "currentWorkItemPath": "",
+  "intake": {
+    "objective": "将 PLATFORM-001 固定为 IPD proving-ground，从 ceo-demand 反复验证已优化能力，并逐步扩展到全部 IPD 阶段。",
+    "taskDescription": "以完整模型 API 平台作为固定项目壳。当前先验证 ceo-demand、dispatch、discovery、intelligence 与 package/signoff 的稳定性，后续再按 gate 逐步扩展到 designing、coding、verify-integration、redteam、qa、deployment、assurance、delivery；若不合格，按缺陷来源回退到 ceo-demand、task-dispatch 或 discovery或后续阶段，并把问题回灌到 workflow sprint case。",
+    "constraints": [],
+    "opportunitySignals": [],
+    "businessModelFit": [],
+    "stageFit": [],
+    "companyContext": [],
+    "ownerProposal": [],
+    "resourceEnvelope": [],
+    "prerequisites": [],
+    "requiredSupport": [],
+    "expectedOutcomes": [],
+    "slotAnswers": {
+      "competitorReference": "OpenAI API Platform、OpenRouter、One API",
+      "targetUserScenario": "先服务内部产品负责人和技术负责人，在统一模型 API 平台规划与验证场景下使用",
+      "deliveryWindow": "以 capability gate 为节奏推进；当前 Gate A 先验证 ceo-demand 到 intelligence，之后逐步扩展到后续全部 IPD 阶段",
+      "budgetGuardrail": "首轮仅使用现有人力与少量工具成本，不新增正式部署预算",
+      "successMetric": "PLATFORM-001 能作为固定 proving-ground，按 gate 逐步跑通 ceo-demand 到 delivery 全阶段；当前首个 gate 需从 ceo-demand 跑到 intelligence 结束并形成可签核 package",
+      "mustHaveScope": "必须固定 PLATFORM-001 作为验证桩，支持 ceo-demand/task-dispatch/discovery rollback，并逐步覆盖 discovery、intelligence、designing、coding、verify-integration、redteam、qa、deployment、assurance、delivery",
+      "explicitOutOfScope": "当前轮次不直接追求生产级上线、不涉及正式宿主切换、不把单次 Gate A 通过写成全阶段已完成"
+    },
+    "clarificationRequired": true,
+    "clarificationSheet": {
+      "required": true,
+      "status": "ready-for-dispatch",
+      "missingSlotKeys": [],
+      "followUpQuestions": [],
+      "slots": [
+        {
+          "slotKey": "competitorReference",
+          "label": "竞品 / 对标对象",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有竞品或对标对象，CPO 在 Discovery 阶段就缺少明确的产品/官方手册研究起点。",
+          "question": "这次需求至少想对标哪 1-3 个产品、平台、仓库或流程？如果没有直接竞品，也请明确‘按哪类现有方案对标’。",
+          "suggestedOptions": [
+            "已有 1-3 个明确竞品，请直接写名称或链接。",
+            "没有直接竞品，但有同类流程/平台可对标。",
+            "按内部流程问题处理，不对标外部竞品，但请说明原因。",
+            "自定义。"
+          ],
+          "currentValue": "OpenAI API Platform、OpenRouter、One API",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "targetUserScenario",
+          "label": "首轮目标用户与使用场景",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "不明确谁在什么场景下使用，CMO 很难验证这是不是值得做的真实需求。",
+          "question": "这次先服务哪类用户，在什么高频场景下用，当前最想解决什么问题？",
+          "suggestedOptions": [
+            "先服务内部岗位，提高研发/经营执行效率。",
+            "先服务现有潜在客户，验证是否愿意试点或付费。",
+            "先做 CEO / 总助 / 管理层内部控制面。",
+            "自定义。"
+          ],
+          "currentValue": "先服务内部产品负责人和技术负责人，在统一模型 API 平台规划与验证场景下使用",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "deliveryWindow",
+          "label": "期望工期 / 节奏",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有节奏约束，总助无法把任务拆成合理阶段，也无法约束 CPO / CTO 的交付窗口。",
+          "question": "这次希望以什么节奏推进？是先 48 小时内出 briefing，还是一周内出 PRD，还是两周内跑最小验证？",
+          "suggestedOptions": [
+            "48 小时内完成 intake / Discovery 入口澄清。",
+            "1 周内完成 Discovery + Intelligence + PRD。",
+            "2 周内完成最小 MVP 验证。",
+            "自定义。"
+          ],
+          "currentValue": "以 capability gate 为节奏推进；当前 Gate A 先验证 ceo-demand 到 intelligence，之后逐步扩展到后续全部 IPD 阶段",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "budgetGuardrail",
+          "label": "预算护栏 / 成本窗口",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "intelligence"
+          ],
+          "whyItMatters": "不明确预算窗口，CFO 就无法形成后续预算护栏，CPO/CTO 也无法判断首轮范围。",
+          "question": "这次允许投入到什么程度？只用现有人力，还是允许少量工具成本，还是允许明确试验预算？",
+          "suggestedOptions": [
+            "只用现有岗位和现有工具先验证。",
+            "允许少量模型/API/工具试验成本。",
+            "允许 1-3 人天级别的试验投入。",
+            "自定义。"
+          ],
+          "currentValue": "首轮仅使用现有人力与少量工具成本，不新增正式部署预算",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "successMetric",
+          "label": "首轮成功信号",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "delivery"
+          ],
+          "whyItMatters": "没有成功信号，后续很容易把‘做完一些功能’误当成‘需求成立’。",
+          "question": "这次第一轮做成，最希望看到什么结果？流程跑通、试点用户正反馈、可收费、还是节省了人力？",
+          "suggestedOptions": [
+            "先证明 IPD / 产品流程能跑通。",
+            "先拿到一个可展示或可试点的 MVP。",
+            "先验证有人愿意继续用或付费。",
+            "自定义。"
+          ],
+          "currentValue": "PLATFORM-001 能作为固定 proving-ground，按 gate 逐步跑通 ceo-demand 到 delivery 全阶段；当前首个 gate 需从 ceo-demand 跑到 intelligence 结束并形成可签核 package",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "mustHaveScope",
+          "label": "必须交付的最小范围",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "designing"
+          ],
+          "whyItMatters": "没有最小范围，Discovery/Intelligence 很容易继续膨胀，最后 PRD 无法收口。",
+          "question": "这次必须交付的最小结果是什么？是一份 PRD、一个最小工作流、一个 MVP 页面，还是完整平台闭环？",
+          "suggestedOptions": [
+            "先交付可签核 PRD 与项目计划。",
+            "先交付单条最小工作流验证。",
+            "先交付可演示 MVP。",
+            "自定义。"
+          ],
+          "currentValue": "必须固定 PLATFORM-001 作为验证桩，支持 ceo-demand/task-dispatch/discovery rollback，并逐步覆盖 discovery、intelligence、designing、coding、verify-integration、redteam、qa、deployment、assurance、delivery",
+          "allowCustom": true
+        },
+        {
+          "slotKey": "explicitOutOfScope",
+          "label": "明确不做项",
+          "ownerRole": "CEO",
+          "status": "provided",
+          "requiredFor": [
+            "intake",
+            "discovery"
+          ],
+          "whyItMatters": "没有不做项，团队容易把远期能力和当前验证目标混写。",
+          "question": "这次明确不做什么？比如不上正式宿主、不做链上实现、不做大规模运营、不做完整商业化。",
+          "suggestedOptions": [
+            "不涉及正式宿主切换。",
+            "不涉及链上/钱包/合约真实实现。",
+            "不涉及大规模上线与运营。",
+            "自定义。"
+          ],
+          "currentValue": "当前轮次不直接追求生产级上线、不涉及正式宿主切换、不把单次 Gate A 通过写成全阶段已完成",
+          "allowCustom": true
+        }
+      ]
+    },
+    "caseCategory": "project-delivery",
+    "referenceTheme": "PLATFORM",
+    "roleAssignmentMatrix": [
+      {
+        "role": "CEOChiefOfStaff",
+        "stageKeys": [
+          "intake",
+          "backlog",
+          "sprint-planning",
+          "retrospective",
+          "validation-handoff"
+        ],
+        "taskType": "intake-orchestration",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "把 CEO 需求转成 intake briefing，补齐关键填槽信息，并在流程优化类 case 中维护 backlog、迭代计划、复盘和验证移交。",
+        "deliverables": [
+          "intake briefing",
+          "clarification sheet",
+          "dispatch plan",
+          "backlog memo",
+          "retrospective memo"
+        ]
+      },
+      {
+        "role": "CEO",
+        "stageKeys": [
+          "intake"
+        ],
+        "taskType": "clarification-and-signoff",
+        "status": "active",
+        "canFreezeCase": false,
+        "responsibility": "补齐关键槽位并决定是否让事项进入公司级 IPD 主动交付线。",
+        "deliverables": [
+          "clarification answers",
+          "intake signoff"
+        ]
+      },
+      {
+        "role": "ChiefMarketingOfficer",
+        "stageKeys": [
+          "discovery"
+        ],
+        "taskType": "demand-validation",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "验证这是不是合理的真实需求，避免公司做出没有市场需求的产品。",
+        "deliverables": [
+          "需求真实性验证",
+          "目标用户/场景复核"
+        ]
+      },
+      {
+        "role": "ChiefProductOfficer",
+        "stageKeys": [
+          "discovery",
+          "intelligence",
+          "delivery",
+          "backlog",
+          "sprint-planning",
+          "sprint-review",
+          "validation-handoff"
+        ],
+        "taskType": "product-research-and-prd",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "项目交付 case 中负责 Discovery/Intelligence/Delivery；流程优化 case 中负责 backlog 边界、review 收口和真实验证 handoff 口径。",
+        "deliverables": [
+          "DiscoveryReferenceFunctionalBrief",
+          "DiscoveryCompetitorLandscape",
+          "DiscoveryCommonCapabilityMatrix",
+          "DiscoveryHighlightOpportunityMemo",
+          "竞品/功能/官方手册研究",
+          "正式 PRD",
+          "项目计划",
+          "review memo"
+        ]
+      },
+      {
+        "role": "ChiefTechnologyOfficer",
+        "stageKeys": [
+          "intelligence",
+          "designing",
+          "coding",
+          "verify-integration",
+          "redteam",
+          "qa",
+          "deployment",
+          "assurance",
+          "sprint-execution",
+          "sprint-review",
+          "validation-handoff"
+        ],
+        "taskType": "code-research-and-technical-design",
+        "status": "active",
+        "canFreezeCase": true,
+        "responsibility": "项目交付 case 中负责代码研究、设计与开发；流程优化 case 中负责 sprint-execution 的实现、验证和技术缺口收口。",
+        "deliverables": [
+          "IntelligenceCapabilityExtractionMatrix",
+          "IntelligenceOpenSourceLandscape",
+          "IntelligenceCodegraphAnalysis",
+          "IntelligenceArchitectureOptionMemo",
+          "开源代码分析结论",
+          "技术方案",
+          "execution validation"
+        ]
+      },
+      {
+        "role": "ChiefOperatingOfficer",
+        "stageKeys": [
+          "intelligence",
+          "deployment",
+          "assurance",
+          "delivery"
+        ],
+        "taskType": "operations-constraints",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "补试点路径、上线节奏和运营约束。",
+        "deliverables": [
+          "运营约束",
+          "试点路径",
+          "rollout 计划"
+        ]
+      },
+      {
+        "role": "ChiefFinancialOfficer",
+        "stageKeys": [
+          "intelligence",
+          "deployment",
+          "assurance",
+          "delivery"
+        ],
+        "taskType": "budget-guardrail",
+        "status": "placeholder",
+        "canFreezeCase": true,
+        "responsibility": "补预算护栏、成本窗口、止损条件和后续财务复核。",
+        "deliverables": [
+          "预算护栏",
+          "成本约束",
+          "止损条件"
+        ]
+      }
+    ],
+    "expectedDelivery": "",
+    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/intake-brief.json",
+    "packageHash": "0x486c3ab8683dbd85f42c02f4402694a24fe02ae5542bb22168d2110e74b0c4a6",
+    "releaseCounter": 1,
+    "releaseVersion": "IPD-20260611-PLATFORM-001-INTAKE-V001",
+    "releaseStatus": "issued",
+    "releaseIssuedAt": "2026-06-14T22:50:44+08:00",
+    "releaseIssuedByRole": "CEOChiefOfStaff",
+    "createdBy": "CEOChiefOfStaff",
+    "createdAt": "2026-06-11T12:43:52+08:00",
+    "approvals": [
+      {
+        "role": "CEO",
+        "status": "approved",
+        "note": "",
+        "updatedAt": "2026-06-14T22:50:43+08:00",
+        "packageHash": "0x486c3ab8683dbd85f42c02f4402694a24fe02ae5542bb22168d2110e74b0c4a6",
+        "signature": "0xd0fff1989e2705197c2b0433500c5097f35cf51557805cd73a4f0405e19d164578784ad67a77f1191be914c3fa3a2d6b54f3b34150f18b31d4fa062650074b52",
+        "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+        "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+        "credentialType": "simulated-mnemonic",
+        "credentialHint": "absorb adjust ... alcohol age",
+        "verificationStatus": "not-required",
+        "verifiedRoles": [],
+        "verifiedAt": "2026-06-14T22:50:43+08:00"
+      },
+      {
+        "role": "CEOChiefOfStaff",
+        "status": "approved",
+        "note": "",
+        "updatedAt": "2026-06-14T22:50:44+08:00",
+        "packageHash": "0x486c3ab8683dbd85f42c02f4402694a24fe02ae5542bb22168d2110e74b0c4a6",
+        "signature": "0xc5e216e46731e57191325010616decfc799f162e5d7519513b454c33df297f3715c998334d1024d5a9f6964bcefdf37918d85026f2e6624d17cb9edee696df2b",
+        "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+        "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+        "credentialType": "simulated-mnemonic",
+        "credentialHint": "act already ... alley amateur",
+        "verificationStatus": "verified",
+        "verifiedRoles": [
+          "CEO"
+        ],
+        "verifiedAt": "2026-06-14T22:50:44+08:00"
+      }
+    ],
+    "status": "approved"
+  },
+  "stages": [
+    {
+      "stageKey": "discovery",
+      "title": "Discovery / 总助分派后的产品研究",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "DISCOVERY",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "ChiefMarketingOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefProductOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefProductOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:50:44+08:00",
+          "packageHash": "0x1ab9a8d41f89ee4597331730be3a0512fa59a7d08552af9f7434ed97085f1542",
+          "signature": "0x8a0cfae6866da6a9bd634f316214ccdeacd204ada47d9011eb6f9f98bc8c61f97c99f79d9b5dc415cbbc131dd97dd72e63b2dcf1bc00a726d62faf3c7ff72b94",
+          "signerAddress": "0xd61e3768c6096800f58448a2a22e832b66b05d86",
+          "publicKey": "0x043b3f02041aa9a655bb0a67700309a1444f60a20c579e69257f89e4837762c2506463fd57589bfb10034024a29e3d226a688205b2a89251e316f27a54507334c2",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "aisle addict ... achieve above",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:50:44+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:50:44+08:00",
+          "packageHash": "0x1ab9a8d41f89ee4597331730be3a0512fa59a7d08552af9f7434ed97085f1542",
+          "signature": "0x15d0bff9d42f8fb637059a27dd2152af993ecd2179de7e958daf508bc0a2490b1e6ad5f5e9bb59b7746894dfbf2d8c247f241c8512b87bd49aeaf6a2e7d0534c",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefProductOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:50:44+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:50:45+08:00",
+          "packageHash": "0x1ab9a8d41f89ee4597331730be3a0512fa59a7d08552af9f7434ed97085f1542",
+          "signature": "0xbace59ddae52398958bb7f4ae18d062a70860203a39d0a293e9ef85dbf6a126e24caef11fa010939d4bd7769f0b0a2f9e3e2b0df3f0f3ac4a29f78d6a0f0905f",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefProductOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:50:45+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_DISCOVERY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "总助拆解后的研发任务说明",
+        "intake briefing",
+        "上游业务背景与当前阶段边界"
+      ],
+      "superDevReferenceStages": [
+        "research",
+        "baseline"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/01-discovery.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/01-discovery.json",
+      "packageHash": "0x1ab9a8d41f89ee4597331730be3a0512fa59a7d08552af9f7434ed97085f1542",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-DISCOVERY-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:50:45+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:50:44+08:00",
+      "submittedAt": "2026-06-14T22:50:44+08:00",
+      "completedAt": "2026-06-14T22:50:45+08:00",
+      "blockedReason": "",
+      "outputSummary": "Discovery automation package 已提交",
+      "lastUpdatedAt": "2026-06-14T22:50:45+08:00"
+    },
+    {
+      "stageKey": "intelligence",
+      "title": "Intelligence / 结构化输入",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "INTELLIGENCE",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "ChiefMarketingOfficer",
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefProductOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefProductOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:51:04+08:00",
+          "packageHash": "0xb98230352d13007717a4cd1e534e962dc128af9bb5d3505842fef245560ccd15",
+          "signature": "0xa23c5f6b95e9fa6006f5a9479364b7d6ed9912a0b38a18ba472e1b7b664413967ce5a6be1194d6faf7c751a11b553d82dc4e773835bbf7d5592c558010875e51",
+          "signerAddress": "0xd61e3768c6096800f58448a2a22e832b66b05d86",
+          "publicKey": "0x043b3f02041aa9a655bb0a67700309a1444f60a20c579e69257f89e4837762c2506463fd57589bfb10034024a29e3d226a688205b2a89251e316f27a54507334c2",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "aisle addict ... achieve above",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:51:04+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:04+08:00",
+          "packageHash": "0xb98230352d13007717a4cd1e534e962dc128af9bb5d3505842fef245560ccd15",
+          "signature": "0x698885cdd2feb6ace59848ecb8a09e0d1e896ab855029ab43778845bef4d072059d96ea581f277be088654fb28191d20eb70376d2dba3923d45d62b70a5de1a8",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefProductOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:51:04+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:05+08:00",
+          "packageHash": "0xb98230352d13007717a4cd1e534e962dc128af9bb5d3505842fef245560ccd15",
+          "signature": "0x16980a360fb098029a75161a62f49fd5e64ed474ccebec4e7ba06144e5649308576d7e5186cbefba4a48aa44ef391f6ac1326b3ef352531326862348598534de",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefProductOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:51:05+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_INTELLIGENCE_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "Discovery package",
+        "DiscoveryReferenceFunctionalBrief",
+        "市场证据与机会线索",
+        "运营约束",
+        "预算护栏"
+      ],
+      "superDevReferenceStages": [
+        "docs",
+        "docs_confirm",
+        "prd"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/02-intelligence.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/02-intelligence.json",
+      "packageHash": "0xb98230352d13007717a4cd1e534e962dc128af9bb5d3505842fef245560ccd15",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-INTELLIGENCE-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:51:05+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:50:45+08:00",
+      "submittedAt": "2026-06-14T22:51:04+08:00",
+      "completedAt": "2026-06-14T22:51:05+08:00",
+      "blockedReason": "",
+      "outputSummary": "Intelligence automation package 已提交",
+      "lastUpdatedAt": "2026-06-14T22:51:05+08:00"
+    },
+    {
+      "stageKey": "designing",
+      "title": "Designing / 技术设计",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "DESIGNING",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefTechnologyOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:51:05+08:00",
+          "packageHash": "0xba07ed59ee2b3e58fd752f2253757d26693b0f23adc7dbfd708e803ca35d435e",
+          "signature": "0x1bdd64ac444f5ac32cc655ce43cb2f0072a01c5d6f79a3a512f9db93bb31da310447fdde90ee8940a291392c49afd56a5272eb5efdc5b7d1f2e79c75f4ee55e0",
+          "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+          "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "almost address ... adapt album",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:51:05+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:05+08:00",
+          "packageHash": "0xba07ed59ee2b3e58fd752f2253757d26693b0f23adc7dbfd708e803ca35d435e",
+          "signature": "0x6dda481c77e02fed2816908d55acfee12110880a458e8a6dcb3dec86e247adf37dd6286ce5e0a610a94297d7f6752bd4209be96a436690ba0eae1c5baf275f75",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:51:05+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:06+08:00",
+          "packageHash": "0xba07ed59ee2b3e58fd752f2253757d26693b0f23adc7dbfd708e803ca35d435e",
+          "signature": "0x858339f2e04b05af523023ad6bace07835d323486ccfba96015e78a404795bda5614180906dee97089b536e24fb94e161ea6f8abe280323060e79c61bebbf139",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:51:06+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "IPD_DESIGN_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "PRD",
+        "项目计划",
+        "验收标准"
+      ],
+      "superDevReferenceStages": [
+        "architecture",
+        "uiux",
+        "spec"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/03-designing.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/03-designing.json",
+      "packageHash": "0xba07ed59ee2b3e58fd752f2253757d26693b0f23adc7dbfd708e803ca35d435e",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-DESIGNING-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:51:06+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:51:05+08:00",
+      "submittedAt": "2026-06-14T22:51:05+08:00",
+      "completedAt": "2026-06-14T22:51:06+08:00",
+      "blockedReason": "",
+      "outputSummary": "Designing proving-ground contract completed",
+      "lastUpdatedAt": "2026-06-14T22:51:06+08:00"
+    },
+    {
+      "stageKey": "coding",
+      "title": "Coding / 开发实现",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "CODING",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefTechnologyOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:51:06+08:00",
+          "packageHash": "0x1cd436bfbab23e587b4e26e0def476b3829be6e9a164796cbc52b5567e5bbfac",
+          "signature": "0x002e756e5e1aeb52ab8d1ea4b24f38bba8f4fb841b1e31e279506f36fbbe975468965f409645e7e986ff2719966326a6857890ee73cd0757aee466ac2b2bfce6",
+          "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+          "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "almost address ... adapt album",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:51:06+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:06+08:00",
+          "packageHash": "0x1cd436bfbab23e587b4e26e0def476b3829be6e9a164796cbc52b5567e5bbfac",
+          "signature": "0xdb307efc4534dffdcdb9627285be9fc1553c55dc92c81b523a128e59b335efac3fab0777db84b2511fc4eeb9f4c73d6e24c2790807ade1937e07484889c4dd79",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:51:06+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:07+08:00",
+          "packageHash": "0x1cd436bfbab23e587b4e26e0def476b3829be6e9a164796cbc52b5567e5bbfac",
+          "signature": "0x9fddc396fdfb2c8e5439b5077d9a4f524a7d8a757c7cee364ba209f5c66de83c278fadc7affa958b4025b41f6325e8b85ba9d64a4985ee9d70886a477457e3d4",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:51:07+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_CODING_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "技术方案",
+        "开发任务",
+        "工程门禁"
+      ],
+      "superDevReferenceStages": [
+        "frontend",
+        "backend"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/04-coding.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/04-coding.json",
+      "packageHash": "0x1cd436bfbab23e587b4e26e0def476b3829be6e9a164796cbc52b5567e5bbfac",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-CODING-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:51:07+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:51:06+08:00",
+      "submittedAt": "2026-06-14T22:51:06+08:00",
+      "completedAt": "2026-06-14T22:51:07+08:00",
+      "blockedReason": "",
+      "outputSummary": "Coding proving-ground artifacts recorded",
+      "lastUpdatedAt": "2026-06-14T22:51:07+08:00"
+    },
+    {
+      "stageKey": "verify-integration",
+      "title": "Verify-Integration / 集成验证",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "VERIFY-INTEGRATION",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefTechnologyOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:51:07+08:00",
+          "packageHash": "0xae14a8694ee634aa76df2693952800638d12019c2c8b245cda35a956eedc9323",
+          "signature": "0x06a333fc212acc6f3b05843cb5269ef006fb8bc652e58de47c81bd454fb70d1b18b3857ab4a1287413cfeb75a20e7020b67d87685fedc8f23016d2a867175f45",
+          "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+          "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "almost address ... adapt album",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:51:07+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:07+08:00",
+          "packageHash": "0xae14a8694ee634aa76df2693952800638d12019c2c8b245cda35a956eedc9323",
+          "signature": "0x434413a0f6fda8077ff073f1f51a970e110da30a96b83d50b35241d9fe3bbdff1334b8824e3fbec5825c4f1dadb0a6f44a16e1a3dce3fbba9121f76a8968f81d",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:51:07+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:08+08:00",
+          "packageHash": "0xae14a8694ee634aa76df2693952800638d12019c2c8b245cda35a956eedc9323",
+          "signature": "0xf88a5da035466f83af1346f1e2c3eb095f03de8f5a09be1c5619f183fd7f2a2b33b93a0abbb15a2b17c7e01c733bef8ae216dc48f78179bc3f47b00fa3386deb",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:51:08+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_VERIFY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "coding package",
+        "测试计划"
+      ],
+      "superDevReferenceStages": [
+        "quality"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/05-verify-integration.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/05-verify-integration.json",
+      "packageHash": "0xae14a8694ee634aa76df2693952800638d12019c2c8b245cda35a956eedc9323",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-VERIFY-INTEGRATION-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:51:08+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:51:07+08:00",
+      "submittedAt": "2026-06-14T22:51:07+08:00",
+      "completedAt": "2026-06-14T22:51:08+08:00",
+      "blockedReason": "",
+      "outputSummary": "Verify-integration proving-ground checks passed",
+      "lastUpdatedAt": "2026-06-14T22:51:08+08:00"
+    },
+    {
+      "stageKey": "redteam",
+      "title": "Redteam / 对抗审查",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "REDTEAM",
+      "participantRoles": [
+        "CEOChiefOfStaff"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefTechnologyOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:51:08+08:00",
+          "packageHash": "0x8deb7a38cb4e055dab1bc6165a439e61880393595378c730c4edc88b10e18099",
+          "signature": "0xbca7cd9ce5e3ea03811a90cd8b574764bc8e4b1ef42ac0621642cfaf8d1c272b0cfdddb900cab5cfa0dece832f9ec8913eb840a6c9d88a3dfcc7ccd0f53a7366",
+          "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+          "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "almost address ... adapt album",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:51:08+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:08+08:00",
+          "packageHash": "0x8deb7a38cb4e055dab1bc6165a439e61880393595378c730c4edc88b10e18099",
+          "signature": "0x99fa71772934c61cc82490b16fdf5acd3d938693d18c3a4e0a08b06b89029a132c86779d9766e08f721fe7fdda71352a7d55f0c9eb4999fe31dfe37422fac19e",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:51:08+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:09+08:00",
+          "packageHash": "0x8deb7a38cb4e055dab1bc6165a439e61880393595378c730c4edc88b10e18099",
+          "signature": "0xec82f02b4bf9f2e473f7bbe7f9f22f8b498231736d19410b832bee79435aa12a0e7bf5fc02eb3785194123168c9cd08fac8f080f743d3575d3f8fffbee467546",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:51:09+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_REDTEAM_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "verify package",
+        "攻击面与安全关注点"
+      ],
+      "superDevReferenceStages": [
+        "quality"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/06-redteam.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/06-redteam.json",
+      "packageHash": "0x8deb7a38cb4e055dab1bc6165a439e61880393595378c730c4edc88b10e18099",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-REDTEAM-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:51:09+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:51:08+08:00",
+      "submittedAt": "2026-06-14T22:51:08+08:00",
+      "completedAt": "2026-06-14T22:51:09+08:00",
+      "blockedReason": "",
+      "outputSummary": "Redteam proving-ground review completed",
+      "lastUpdatedAt": "2026-06-14T22:51:09+08:00"
+    },
+    {
+      "stageKey": "qa",
+      "title": "QA / 质量门禁",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "QA",
+      "participantRoles": [
+        "ChiefProductOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefTechnologyOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:51:09+08:00",
+          "packageHash": "0xf746b52e83a8ee03b892d332f13a3af616558fa8dfbba8160eabefe93bedf66a",
+          "signature": "0xb7c1ba1423e54752d6d39fb579e8c0994314fbe101f52f299aade6e30807c7951401d85c9ff4beb93e1f575f8908d7d2fe493284687dadcf1e266c3902d505ba",
+          "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+          "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "almost address ... adapt album",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:51:09+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:09+08:00",
+          "packageHash": "0xf746b52e83a8ee03b892d332f13a3af616558fa8dfbba8160eabefe93bedf66a",
+          "signature": "0x9c71723165ef2f27a288e3e77046ad387057432f2322cf58cce6d082ba1fb4653870e1e36f27080de838909de0125772cf36e973df9ca86ec68486808a106095",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:51:09+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:10+08:00",
+          "packageHash": "0xf746b52e83a8ee03b892d332f13a3af616558fa8dfbba8160eabefe93bedf66a",
+          "signature": "0x432efa3574d55eaeb861220a4833c3ffc6f7907ab716442faadc5293d7ec97342487ee702131967e463abab051ecfda432385cff81c8bbac677eed4fdcd97805",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:51:10+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_QA_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "verify package",
+        "redteam package"
+      ],
+      "superDevReferenceStages": [
+        "quality",
+        "preview_confirm"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/07-qa.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/07-qa.json",
+      "packageHash": "0xf746b52e83a8ee03b892d332f13a3af616558fa8dfbba8160eabefe93bedf66a",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-QA-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:51:10+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:51:09+08:00",
+      "submittedAt": "2026-06-14T22:51:09+08:00",
+      "completedAt": "2026-06-14T22:51:10+08:00",
+      "blockedReason": "",
+      "outputSummary": "QA proving-ground scorecard and candidate delivery completed",
+      "lastUpdatedAt": "2026-06-14T22:51:10+08:00"
+    },
+    {
+      "stageKey": "deployment",
+      "title": "Deployment / 部署交付",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "DEPLOYMENT",
+      "participantRoles": [
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefTechnologyOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:51:10+08:00",
+          "packageHash": "0x49bbe335a1790dc647da9969930c3b7a4bbb2cdb26c21d5bceb2111af5731d04",
+          "signature": "0x450eee93f31d1174c8ce89148a474391a6601fcab202f1fdb20dc946df586c511c4dd31c8db4e6d82e09b4e6ca445595758d0526fdafec30e4657bcbb3290939",
+          "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+          "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "almost address ... adapt album",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:51:10+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:10+08:00",
+          "packageHash": "0x49bbe335a1790dc647da9969930c3b7a4bbb2cdb26c21d5bceb2111af5731d04",
+          "signature": "0x2ecd9e069745b8b320724423c35c5e40092ca546029811443f7146ecaea26b280f286d48ca3f6a2a2e3482b8c33ed9167194b5c806080bbedda2993614e55219",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:51:10+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:11+08:00",
+          "packageHash": "0x49bbe335a1790dc647da9969930c3b7a4bbb2cdb26c21d5bceb2111af5731d04",
+          "signature": "0xf1da6bd87db9bfad080dc4b86f595be879a7443561a218f2b59589a2e49c343a38a19f56459b3e10579166c9b536d3c94461551532af10a35841a38488628abe",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:51:11+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_DEPLOYMENT_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "qa package",
+        "release bundle",
+        "deployment checklist"
+      ],
+      "superDevReferenceStages": [
+        "delivery",
+        "rehearsal"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/08-deployment.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/08-deployment.json",
+      "packageHash": "0x49bbe335a1790dc647da9969930c3b7a4bbb2cdb26c21d5bceb2111af5731d04",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-DEPLOYMENT-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:51:11+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:51:10+08:00",
+      "submittedAt": "2026-06-14T22:51:10+08:00",
+      "completedAt": "2026-06-14T22:51:11+08:00",
+      "blockedReason": "",
+      "outputSummary": "Deployment proving-ground evidence completed",
+      "lastUpdatedAt": "2026-06-14T22:51:11+08:00"
+    },
+    {
+      "stageKey": "assurance",
+      "title": "Assurance / 运行保障",
+      "businessOwner": "ChiefTechnologyOfficer",
+      "actingOwner": "ChiefTechnologyOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefTechnologyOfficer",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "phaseKey": "ASSURANCE",
+      "participantRoles": [
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "CEOChiefOfStaff"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefTechnologyOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefTechnologyOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:51:11+08:00",
+          "packageHash": "0xb17ea88b275df26901cdb3d064f1ac5d86ce91327bdb02e4acd267764f8366d7",
+          "signature": "0x8d3667d359bc62d8e58525a5f80c1a99e9cb0001038a9786b0d440f1c84785b71605855ab66332ae0546b598a555ccaa9185bcaad576037517cd99349dd1d838",
+          "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+          "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "almost address ... adapt album",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:51:11+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:11+08:00",
+          "packageHash": "0xb17ea88b275df26901cdb3d064f1ac5d86ce91327bdb02e4acd267764f8366d7",
+          "signature": "0x11964594c43d0e2400be6e3f96cf056523697ecb05ab5dcdbf83e826a1116a4c4148f6ce8625ab7e241fdfa967957fd269ad1dbc9f2b80f1d67c4bb4fb3da4a5",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:51:11+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:12+08:00",
+          "packageHash": "0xb17ea88b275df26901cdb3d064f1ac5d86ce91327bdb02e4acd267764f8366d7",
+          "signature": "0x212af42c6a3af391f2494de8136d9880efbe33594833e50da4c69fc7313611d827674a66e040c0ee4d8136a5caa37d24adf4c8711fc571aa6b6f3efc3f8145e3",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefTechnologyOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:51:12+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_ASSURANCE_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "deployment package",
+        "运行观察指标",
+        "恢复动作"
+      ],
+      "superDevReferenceStages": [
+        "delivery",
+        "rehearsal"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/09-assurance.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/09-assurance.json",
+      "packageHash": "0xb17ea88b275df26901cdb3d064f1ac5d86ce91327bdb02e4acd267764f8366d7",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-ASSURANCE-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:51:12+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:51:11+08:00",
+      "submittedAt": "2026-06-14T22:51:11+08:00",
+      "completedAt": "2026-06-14T22:51:12+08:00",
+      "blockedReason": "",
+      "outputSummary": "Assurance proving-ground observation completed",
+      "lastUpdatedAt": "2026-06-14T22:51:12+08:00"
+    },
+    {
+      "stageKey": "delivery",
+      "title": "Delivery / 最终交付",
+      "businessOwner": "ChiefProductOfficer",
+      "actingOwner": "ChiefProductOfficer",
+      "moduleExecutor": "TriDev",
+      "gateOwner": "ChiefProductOfficer",
+      "ownerRole": "ChiefProductOfficer",
+      "phaseKey": "DELIVERY",
+      "participantRoles": [
+        "CEOChiefOfStaff",
+        "CEO",
+        "ChiefOperatingOfficer",
+        "ChiefFinancialOfficer",
+        "ChiefProductOfficer",
+        "ChiefTechnologyOfficer"
+      ],
+      "status": "completed",
+      "requiredApprovers": [
+        "ChiefProductOfficer",
+        "CEO",
+        "CEOChiefOfStaff"
+      ],
+      "approvals": [
+        {
+          "role": "ChiefProductOfficer",
+          "status": "approved",
+          "note": "owner package signature recorded at submit",
+          "updatedAt": "2026-06-14T22:51:12+08:00",
+          "packageHash": "0x63895f44f7ea66d6cb06fdd1b6510ab4d139cfe1630e20ec8471edbac21da22b",
+          "signature": "0x93a441bbe6a6c8af08f77d6b3371238feeccc8d32dc0c0cbda4df4c80432995342b0916f4e4f2cff6e9968bd96013659e0019762515c239c048c10b337ca5da1",
+          "signerAddress": "0xd61e3768c6096800f58448a2a22e832b66b05d86",
+          "publicKey": "0x043b3f02041aa9a655bb0a67700309a1444f60a20c579e69257f89e4837762c2506463fd57589bfb10034024a29e3d226a688205b2a89251e316f27a54507334c2",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "aisle addict ... achieve above",
+          "verificationStatus": "not-required",
+          "verifiedRoles": [],
+          "verifiedAt": "2026-06-14T22:51:12+08:00"
+        },
+        {
+          "role": "CEO",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:12+08:00",
+          "packageHash": "0x63895f44f7ea66d6cb06fdd1b6510ab4d139cfe1630e20ec8471edbac21da22b",
+          "signature": "0x289290e642c5c11c0a900bc4fa836ae45d6daca351f01ea8c90165e7566a3a4e741281b36e8388e158255799d0666224d05a0975d840baaee01119dcd963449c",
+          "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+          "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "absorb adjust ... alcohol age",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefProductOfficer"
+          ],
+          "verifiedAt": "2026-06-14T22:51:12+08:00"
+        },
+        {
+          "role": "CEOChiefOfStaff",
+          "status": "approved",
+          "note": "",
+          "updatedAt": "2026-06-14T22:51:13+08:00",
+          "packageHash": "0x63895f44f7ea66d6cb06fdd1b6510ab4d139cfe1630e20ec8471edbac21da22b",
+          "signature": "0xe36178e61ec9a444c3ac2e9cce9d2309a628c44b158dfc29875a32701a8604544d454cc7e20a8c7e589a00094d9d88612e6d4a2152a423eac95c17681d537038",
+          "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+          "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+          "credentialType": "simulated-mnemonic",
+          "credentialHint": "act already ... alley amateur",
+          "verificationStatus": "verified",
+          "verifiedRoles": [
+            "ChiefProductOfficer",
+            "CEO"
+          ],
+          "verifiedAt": "2026-06-14T22:51:13+08:00"
+        }
+      ],
+      "schemaHint": {
+        "objectType": "TRIDEV_DELIVERY_PACKAGE",
+        "schemaPath": ""
+      },
+      "inputRequirements": [
+        "assurance package",
+        "最终交付清单",
+        "版本签发材料"
+      ],
+      "superDevReferenceStages": [
+        "delivery"
+      ],
+      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/10-delivery.json",
+      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/10-delivery.json",
+      "packageHash": "0x63895f44f7ea66d6cb06fdd1b6510ab4d139cfe1630e20ec8471edbac21da22b",
+      "releaseCounter": 1,
+      "releaseVersion": "IPD-20260611-PLATFORM-001-DELIVERY-V001",
+      "releaseStatus": "issued",
+      "releaseIssuedAt": "2026-06-14T22:51:13+08:00",
+      "releaseIssuedByRole": "CEOChiefOfStaff",
+      "activatedAt": "2026-06-14T22:51:12+08:00",
+      "submittedAt": "2026-06-14T22:51:12+08:00",
+      "completedAt": "2026-06-14T22:51:13+08:00",
+      "blockedReason": "",
+      "outputSummary": "Delivery proving-ground closeout completed",
+      "lastUpdatedAt": "2026-06-14T22:51:13+08:00"
+    }
+  ],
+  "freezeControl": {},
+  "entryCheckpoint": "completed"
+}

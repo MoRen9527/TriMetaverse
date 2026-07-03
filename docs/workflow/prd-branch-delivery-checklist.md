@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/prd-branch-delivery-checklist.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-06
 
 目标：从 PRD 产出后，将每个 PRD 独立分叉执行为一条可交付流水线，实现并行推进与分布式交付。
+
+当前文件是 TriMetaverse PRD 分叉执行清单的本地真源，只负责研发执行 checklist、分支门禁与 docs bootstrap 步骤；它不是 TriCompany 公司级 workflow 书面真源。
 
 ---
 

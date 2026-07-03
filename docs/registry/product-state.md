@@ -1,14 +1,16 @@
-# TriMetaverse Product State
+﻿# TriMetaverse Product State
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/product-state.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## Module Overview
+
+- 当前文件是 `TriMetaverse` 模块自身 `Product Registry` 工作层的本地真源，只维护 TriMetaverse 的产品职责、产品边界和中央发布面状态；它不是 TriCompany 公司级 workflow 书面真源。
 
 - `TriMetaverse` 是整个三元宇宙的中央战略仓、总 workflow、总白皮书、项目级真源约束和赛博公司实施落地侧的中央发布面。
 - 它不是首轮产品交付 runtime，也不直接替代 `TriCompany` 决定赛博公司实施规则；赛博公司规则、岗位规则和 registry 规则先在 TriCompany source 侧形成，再按发布规则同步到中央摘要层。
@@ -16,7 +18,7 @@
 ## Current Product Scope
 
 - 维护总商业模式、阶段门禁、项目级真源约束、模块映射和工作流规范。
-- 维护 `TriMC` 统一运行面、赛博公司经营载体、`TriHost` 宿主适配层与 PC 端软件层的中央产品边界。
+- 维护 `TriMC` 统一运行面、赛博公司经营载体、`TriModel` Provider/Model 配置层与 PC 端软件层的中央产品边界。
 - 接收并发布由 `TriCompany` source 侧稳定输出的赛博公司岗位设计、总助体验、记忆治理、registry 治理和会议治理摘要。
 - 维护各项目代码仓库的产品侧文档基线，包括 `PROJECT.md`、`REQUIREMENTS.md`、产品版 `ROADMAP.md` 与产品版 `STATE.md` 的归属和边界。
 - 维护各项目代码仓库的 `模块六层文档协同系统` 基线，要求新模块默认建立 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`、`docs/training/` 六层目录，并允许低成熟模块先用占位文件标记待初始化。
@@ -28,7 +30,7 @@
 
 - 已具备较完整的白皮书、workflow、cyber-company 和阶段相关文档。
 - 已建立中央 `BusinessStrategy` agent 与首批 registry 工作层。
-- 已将中央运行与宿主边界统一收口为 `TriMC` 统一运行面、赛博公司经营载体、`TriHost` 宿主适配层，以及 `TriPilot + Tride + vscodium + CLI` 的 PC 端软件层。
+- 已将中央运行与宿主边界统一收口为 `TriMC` 统一运行面、赛博公司经营载体、`TriModel` 宿主适配层，以及 `TriPilot + Tride + vscodium + CLI` 的 PC 端软件层。
 - 已将 `TriSkill` 纳入中央边界预留，但当前仍明确标注为待初始化模块。
 - 已把 `CEOChiefOfStaff` 的人格、JD、秘书处边界和首版简化记忆管理纳入持续设计收口范围。
 - 已为公司级会议流程补充“开始会议 / 结束会议”专用 prompt 命令，作为总助与秘书处配套的会议入口。
@@ -49,12 +51,12 @@
 
 - 依赖所有模块提供本地事实，以支撑中央商业模式映射。
 - 重点依赖 `TriMC`、`TriPilot`、`Tride`、`vscodium`、`TriStaciss`、`TriLC`、`TriAvatar`、`TriDeployment`、`TriTest` 的模块资料。
-- 对 `TriHost` 与 `TriSkill` 当前仍以占位边界跟踪为主，待真实模块资料出现后再升级为常规依赖。
+- 对 `TriModel` 与 `TriSkill` 当前仍以占位边界跟踪为主，待真实模块资料出现后再升级为常规依赖。
 
 ## Architecture State
 
 - 当前以文档、流程和策略规范为主，不承担主要业务代码执行。
-- 当前中央登记层要求所有运行边界统一映射为：`TriMC` 负责运行面，赛博公司负责经营载体，`TriHost` 负责宿主适配，`Tride/TriPilot/vscodium` 归于 PC 端软件层。
+- 当前中央登记层要求所有运行边界统一映射为：`TriMC` 负责运行面，赛博公司负责经营载体，`TriModel` 负责宿主适配，`Tride/TriPilot/vscodium` 归于 PC 端软件层。
 
 ## Sources
 

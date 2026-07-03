@@ -2,15 +2,17 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/workflow/ceo-chief-of-staff-authorization-matrix.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
-- lastSyncedAt: 2026-06-04
+- sourceOfTruth: TriCompany/docs/workflow/ceo-chief-of-staff-authorization-matrix.md
+- publishedFrom: TriCompany/docs/workflow/ceo-chief-of-staff-authorization-matrix.md
+- syncMode: published-summary
+- publishTier: release-side-summary
+- lastSyncedAt: 2026-06-15
 
 ## 1. 目标
 
 本文件把 `CEOChiefOfStaff` 在当前赛博公司试运行阶段的授权边界写成固定规则，避免总助在临场判断时反复漂移。
+
+当前文件只承担 TriMetaverse 发布侧摘要职责。赛博公司当前阶段的 `CEOChiefOfStaff` 授权边界真源已回到 TriCompany 的 [ceo-chief-of-staff-authorization-matrix.md](../../../TriCompany/docs/workflow/ceo-chief-of-staff-authorization-matrix.md)；本页用于发布侧摘要、跨模块引用和镜像口径，不作为公司级经营授权主真源。
 
 适用范围：
 

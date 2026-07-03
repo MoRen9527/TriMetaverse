@@ -1,14 +1,16 @@
-# Business Strategy State
+﻿# Business Strategy State
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/business-strategy-state.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 长期商业模式主线
+
+当前文件是 TriMetaverse 中央 `BusinessStrategy` 工作层的本地真源，只维护当前总商业模式状态、默认经营实验和中央优先模块摘要；它不是 TriCompany 公司级 workflow 书面真源。
 
 TriMetaverse 的长期商业模式主线保持为：
 
@@ -44,7 +46,7 @@ TriMetaverse 的长期商业模式主线保持为：
 
 结构预留：
 
-- `TriHost`
+- `TriModel`
 - `TriSkill`
 
 首版占位：
@@ -67,7 +69,7 @@ TriMetaverse 的长期商业模式主线保持为：
 - `TriMC` 是统一运行面；服务域执行与研发工作流都作为其运行切片表述。
 - `Tripilot`、`Tride` 与 `vscodium` 在产品能力域上共同属于 PC 端软件层，但 registry 实体保持独立。
 - PC 端软件层既配合 `TriLC` 完成本地化任务与本地工具执行，也面向用户提供可直接使用的 PC 自动化、桌面工具和 `vibe coding` 入口。
-- 当前 shadow 与正式接管都直接运行在 `copilot` 宿主上；正式切换通过 `TriHost` 配置实现。
+- 当前 shadow 与正式接管都直接运行在 `copilot` 宿主上；正式切换通过 `TriModel` 配置实现。
 - `TriSkill` 作为未来统一 skill 提供模块进入边界预留，但当前不视为首轮试点阻塞项。
 - `core-agent` 只作为 `TriMC` 的历史 observability 迁移源，不进入首轮经营链。
 - `Tristaciss` 的模块级委派入口先以 `CLAUDE.md` 派生 `AGENTS.md`，后续再由 `TristacissProductRegistry` 建立 README 基线。

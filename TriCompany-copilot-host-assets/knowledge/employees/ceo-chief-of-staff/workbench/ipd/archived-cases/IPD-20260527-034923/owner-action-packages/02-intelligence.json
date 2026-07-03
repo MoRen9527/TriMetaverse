@@ -1,0 +1,346 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-owner-action-package",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "intelligence",
+  "phaseKey": "INTELLIGENCE",
+  "businessOwner": "ChiefProductOfficer",
+  "actingOwner": "ChiefProductOfficer",
+  "gateOwner": "ChiefProductOfficer",
+  "generatedAt": "2026-06-11T02:54:31+08:00",
+  "summary": "ChiefProductOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，先阅读 TriMetaverse/reference/sub2api 参考线，再围绕目标“围绕完整模型 API 平台 MVP 重新走旧 case：由 CPO 先产出完整平台 PRD，再由 CTO / TriDev 推进后端、前端最小 smoke，以及 TriCompany 员工身份 NFT / 钱包签名模拟层的当前阶段方案。”推进 Intelligence / 结构化输入（INTELLIGENCE）并协同 CEOChiefOfStaff、ChiefMarketingOfficer、ChiefOperatingOfficer、ChiefFinancialOfficer、ChiefTechnologyOfficer，并在提交后等待总助初签与 CEO 终签。",
+  "reason": "Autopilot 不再代表 ChiefProductOfficer 或 ChiefTechnologyOfficer 直接提交阶段输出；当前只生成 owner action package，并等待 acting owner 手动提交真实阶段产物。",
+  "caseRef": "workbench/ipd/cases/IPD-20260527-034923/case.json",
+  "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/02-intelligence.json",
+  "workItemRef": "workbench/ipd/cases/IPD-20260527-034923/work-items/02-intelligence.json",
+  "intakeBriefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+  "intakeBriefRef": "workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+  "inputRefs": [
+    "workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+    "workbench/ipd/cases/IPD-20260527-034923/case.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
+    "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api/TMV-REFERENCE.md",
+    "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api/README.md"
+  ],
+  "inputRequirements": [
+    "Discovery package",
+    "sub2api 上游参考研究",
+    "市场证据与机会线索",
+    "运营约束",
+    "预算护栏"
+  ],
+  "outputRequirements": [
+    "把 Discovery 原始材料整理为结构化 Intelligence 输入包。",
+    "收口 PRD、项目计划、验收标准和进入设计阶段的前门。",
+    "基于 sub2api 参考研究，明确首轮纳入 / 后置 / 排除能力和合规边界。"
+  ],
+  "requiredApprovers": [
+    "CEOChiefOfStaff",
+    "CEO"
+  ],
+  "schemaHint": {
+    "objectType": "IPD_INTELLIGENCE_PACKAGE",
+    "schemaPath": ""
+  },
+  "draftTemplate": {
+    "kind": "ipd-engine-native-draft",
+    "objectType": "IPD_INTELLIGENCE_PACKAGE",
+    "phaseKey": "INTELLIGENCE",
+    "businessOwner": "ChiefProductOfficer",
+    "actingOwner": "ChiefProductOfficer",
+    "moduleExecutor": "TriDev",
+    "gateOwner": "ChiefProductOfficer",
+    "ownerRole": "ChiefProductOfficer",
+    "participantRoles": [
+      "CEOChiefOfStaff",
+      "ChiefMarketingOfficer",
+      "ChiefOperatingOfficer",
+      "ChiefFinancialOfficer",
+      "ChiefTechnologyOfficer"
+    ],
+    "summary": "ChiefProductOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“围绕完整模型 API 平台 MVP 重新走旧 case：由 CPO 先产出完整平台 PRD，再由 CTO / TriDev 推进后端、前端最小 smoke，以及 TriCompany 员工身份 NFT / 钱包签名模拟层的当前阶段方案。”推进 Intelligence / 结构化输入（INTELLIGENCE）并协同 CEOChiefOfStaff、ChiefMarketingOfficer、ChiefOperatingOfficer、ChiefFinancialOfficer、ChiefTechnologyOfficer，并在提交后等待总助初签与 CEO 终签。",
+    "inputRequirements": [
+      "Discovery package",
+      "市场证据与机会线索",
+      "运营约束",
+      "预算护栏"
+    ],
+    "requiredOutput": [
+      "把 Discovery 原始材料整理为结构化 Intelligence 输入包。",
+      "收口 PRD、项目计划、验收标准和进入设计阶段的前门。"
+    ],
+    "superDevReferenceStages": [
+      "docs",
+      "docs_confirm",
+      "prd"
+    ],
+    "workflowRefs": [
+      {
+        "relation": "phase-package-for",
+        "phase": "INTELLIGENCE",
+        "runId": "run-IPD-20260527-034923",
+        "branchId": "ipd-ipd-20260527-034923"
+      }
+    ]
+  },
+  "submissionTemplate": {
+    "submittedBy": "ChiefProductOfficer",
+    "summary": "Intelligence / 结构化输入 已提交",
+    "details": [
+      "<platform-scope-and-boundaries>",
+      "<sub2api-capability-selection-and-compliance-boundary>",
+      "<acceptance-matrix-and-designing-entry-criteria>",
+      "<frontend-smoke-decision-and-rationale>",
+      "<identity-signing-simulation-scope>"
+    ],
+    "evidence": [
+      "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api/TMV-REFERENCE.md",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/manual-packages/intelligence-draft.json",
+      "<prd-path>",
+      "<project-plan-path>",
+      "<acceptance-matrix-path>"
+    ],
+    "objectPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/manual-packages/intelligence-draft.json"
+  },
+  "workingDraftPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/manual-packages/intelligence-draft.json",
+  "workingDraftRef": "workbench/ipd/cases/IPD-20260527-034923/manual-packages/intelligence-draft.json",
+  "handoffChecklist": [
+    "先阅读 TriMetaverse/reference/sub2api/TMV-REFERENCE.md 与 upstream README，把 sub2api capability mapping 写入 intelligence-draft.json，再执行 submit。",
+    "先在 intelligence-draft.json 里补齐完整平台范围、模块分工、验收矩阵和 Designing 前置条件，再执行 submit。",
+    "sub2api 只能作为 reference -> vendor -> implementation 的上游锚点，不能把 reference 树直接写成现役交付。",
+    "PRD、项目计划和验收矩阵必须分别给出真实 evidence 路径，不能只留占位符。",
+    "PRD 必须单独写清上游 README 已提示的 TOS / 合规风险，不能默认继承 upstream 假设。",
+    "TriChain / TriWeb4 只能写成未来真实链上承接层，不能写成当前已实现能力。",
+    "TriAvatar 是否纳入首轮 smoke、TriCompany 模拟身份/签名层做到什么粒度，必须在提交里显式写清。"
+  ],
+  "evidencePolicy": "",
+  "recommendedCommands": [
+    "python -m runtime.cognition.chief_of_staff_ipd_case submit --case-id IPD-20260527-034923 --stage-key intelligence --submitted-by ChiefProductOfficer --summary \"Intelligence / 结构化输入 已提交\" --detail \"<detail>\" --evidence <evidence-path> --object-path \"D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/manual-packages/intelligence-draft.json\"",
+    "python -m runtime.cognition.chief_of_staff_ipd_case signoff --case-id IPD-20260527-034923 --stage-key intelligence --role CEOChiefOfStaff",
+    "python -m runtime.cognition.chief_of_staff_ipd_case signoff --case-id IPD-20260527-034923 --stage-key intelligence --role CEO"
+  ],
+  "tridevOwnerAdapterBundle": {
+    "status": "ready",
+    "runId": "ipd-ipd-20260527-034923",
+    "targetStage": "INTELLIGENCE",
+    "ownerRole": "ChiefProductOfficer",
+    "roleAdaptersPath": "docs/runs/ipd-ipd-20260527-034923/role-adapters.json",
+    "workflowStatePath": "docs/runs/ipd-ipd-20260527-034923/workflow-state.json",
+    "runCurrentStage": "INTELLIGENCE",
+    "runCurrentStageMatchesTargetStage": true,
+    "nextAction": "record-phase-result",
+    "executionMode": "auto",
+    "knowledgeBundlePath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
+    "promptContextPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
+    "taskPlanPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json",
+    "ownerAdapters": [
+      {
+        "role": "ChiefProductOfficer",
+        "responsibility": "business-owner",
+        "adapterType": "business-owner",
+        "requiredInputs": [
+          "reference-evidence",
+          "market-report",
+          "ops-plan",
+          "budget-guard"
+        ],
+        "producesArtifactTypes": [
+          "prd"
+        ],
+        "blockedByReviewTypes": [
+          "docs"
+        ],
+        "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage INTELLIGENCE --status completed --artifact <path> --artifact-type prd --summary \"INTELLIGENCE prd captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-phase-result",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "phase",
+          "cwd": ".",
+          "role": "ChiefProductOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "INTELLIGENCE",
+            "--status",
+            "completed",
+            "--artifact-type",
+            "prd"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "INTELLIGENCE prd captured"
+            }
+          ],
+          "artifactType": "prd",
+          "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage INTELLIGENCE --status completed --artifact <path> --artifact-type prd --summary \"INTELLIGENCE prd captured\""
+        }
+      },
+      {
+        "role": "ChiefProductOfficer",
+        "responsibility": "acting-owner",
+        "adapterType": "acting-owner",
+        "requiredInputs": [
+          "reference-evidence",
+          "market-report",
+          "ops-plan",
+          "budget-guard"
+        ],
+        "producesArtifactTypes": [
+          "prd"
+        ],
+        "blockedByReviewTypes": [
+          "docs"
+        ],
+        "recommendedCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage INTELLIGENCE --status completed --artifact <path> --artifact-type prd --summary \"INTELLIGENCE prd captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-phase-result",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "phase",
+          "cwd": ".",
+          "role": "ChiefProductOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "INTELLIGENCE",
+            "--status",
+            "completed",
+            "--artifact-type",
+            "prd"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "INTELLIGENCE prd captured"
+            }
+          ],
+          "artifactType": "prd",
+          "shellCommand": "python -m tridev.cli phase --root . --run-id <run-id> --stage INTELLIGENCE --status completed --artifact <path> --artifact-type prd --summary \"INTELLIGENCE prd captured\""
+        }
+      },
+      {
+        "role": "ChiefProductOfficer",
+        "responsibility": "gate-owner",
+        "adapterType": "gate-owner",
+        "requiredInputs": [
+          "reference-evidence",
+          "market-report",
+          "ops-plan",
+          "budget-guard"
+        ],
+        "producesArtifactTypes": [
+          "prd"
+        ],
+        "blockedByReviewTypes": [
+          "docs"
+        ],
+        "recommendedCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage INTELLIGENCE --status approved --approved-by <role> --artifact-type prd",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "approve-gate",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "gate",
+          "cwd": ".",
+          "role": "ChiefProductOfficer",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--stage",
+            "INTELLIGENCE",
+            "--status",
+            "approved",
+            "--approved-by",
+            "ChiefProductOfficer",
+            "--artifact-type",
+            "prd"
+          ],
+          "inputTemplates": [],
+          "artifactType": "prd",
+          "shellCommand": "python -m tridev.cli gate --root . --run-id <run-id> --stage INTELLIGENCE --status approved --approved-by <role> --artifact-type prd"
+        }
+      }
+    ],
+    "supportingAdapters": [
+      {
+        "role": "TriDev",
+        "responsibility": "module-executor",
+        "adapterType": "module-executor",
+        "requiredInputs": [
+          "reference-evidence",
+          "market-report",
+          "ops-plan",
+          "budget-guard"
+        ],
+        "producesArtifactTypes": [
+          "prd"
+        ],
+        "blockedByReviewTypes": [
+          "docs"
+        ],
+        "recommendedCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"INTELLIGENCE prd captured\"",
+        "executionAdapter": {
+          "kind": "tridev-cli",
+          "action": "record-task-step",
+          "command": "python",
+          "module": "tridev.cli",
+          "subcommand": "task-step",
+          "cwd": ".",
+          "role": "TriDev",
+          "args": [
+            "--root",
+            ".",
+            "--run-id",
+            "<run-id>",
+            "--task-id",
+            "<task-id>",
+            "--status",
+            "completed"
+          ],
+          "inputTemplates": [
+            {
+              "flag": "--artifact",
+              "placeholder": "<path>",
+              "repeatable": true
+            },
+            {
+              "flag": "--summary",
+              "placeholder": "INTELLIGENCE prd captured"
+            }
+          ],
+          "artifactType": "prd",
+          "shellCommand": "python -m tridev.cli task-step --root . --run-id <run-id> --task-id <task-id> --status completed --artifact <path> --summary \"INTELLIGENCE prd captured\""
+        }
+      }
+    ],
+    "evidenceRefs": [
+      "docs/runs/ipd-ipd-20260527-034923/workflow-state.json",
+      "docs/runs/ipd-ipd-20260527-034923/role-adapters.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
+      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json"
+    ]
+  }
+}

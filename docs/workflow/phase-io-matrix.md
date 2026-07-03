@@ -3,12 +3,14 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/phase-io-matrix.md
-- publishedFrom: 当前文件（central summary）
-- syncMode: central-summary
-- publishTier: central-summary
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 > 目的：用一页表格说明主线阶段与 PRD 分支阶段“读什么、判断什么、写什么、失败回哪”，并明确这些 PRD 分支如何通过 `模块六层文档协同系统` 落地。
+
+当前文件是 TriMetaverse 研发工作流阶段矩阵的本地真源，只负责十阶段输入/输出/回流协议，不承担 TriCompany 公司级制度真源职责。
 
 | 阶段 | 作用域 | 上游输入 | 系统关键判断 | 主要输出 | 门禁/通过条件 | 失败回流 |
 | --- | --- | --- | --- | --- | --- | --- |
