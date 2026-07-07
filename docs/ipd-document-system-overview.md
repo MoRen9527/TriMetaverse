@@ -204,45 +204,9 @@ ment       (十阶段)
 
 ### 3.4 TriMC 心跳监控（Heartbeat）
 
-TriMC 的心跳扫描器（`TriMC/src/heartbeat/`）对所有 IPD case 做定期卡点检测，生成 findings 并在总助会话中主动推送。
+TriMC 的心跳扫描器对所有 IPD case 做定期卡点检测，发现卡点后推送总助会话待办。当前阶段由总助手动触发编排，尚未接入 daemon 自动定时。
 
-#### 三种卡点检测
-
-| 卡点 | 阈值 | 严重度 | 检测条件 |
-|------|------|--------|----------|
-| Intake 待审批 | 24 小时 | ALERT | 七槽位不全、或 CEO/总助未签核 |
-| Stage 审批待签 | 48 小时 | ALERT | 阶段已 submit 但无人签核 |
-| Stage 无产出 | 72 小时 | ALERT | 阶段 in-progress 但不提交产物 |
-| Stage 被 reject | — | ERROR | 任意阶段被驳回 |
-
-#### 使用方式
-
-```bash
-# 扫描所有 case
-python TriMC/src/heartbeat/cli.py
-
-# 扫描指定 case
-python TriMC/src/heartbeat/cli.py --case-id IPD-20260610-PLATFORM-001
-
-# JSON 输出（用于脚本）
-python TriMC/src/heartbeat/cli.py --json
-```
-
-#### 与总助的联动
-
-- 总助（小贾）在每次会话开始时可选执行心跳扫描
-- 有 ALERT/ERROR findings 时自动纳入当前会话待办
-- 编排仍由总助手动控制，方便调试阶段观察每条 case 的卡点状态
-- 正式宿主阶段可接入 daemon/cron 实现自动定时扫描
-
-#### 数据模型
-
-核心输出对象：
-- `CaseSnapshot`：单条 case 的即时快照（caseId、status、currentStage、七槽位状态、最新 event 时间）
-- `Finding`：单条卡点发现（severity、reason、stuckDetail）
-- `HeartbeatReport`：一次扫描的汇总报告（scanTime、totalCases、findings[]）
-
-详见 `TriMC/src/heartbeat/models.py`。
+心跳覆盖四种卡点：Intake 待审批超时、Stage 审批待签超时、Stage 无产出超时、Stage 被驳回。详细阈值、CLI 用法与数据模型见源侧 `TriMC/src/heartbeat/` 及培训教程 `TriCompany/docs/training/IPD CASE术语.md`。
 
 ---
 

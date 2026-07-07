@@ -1,27 +1,29 @@
 # 集成产品开发流程（IPD 流程）
 
-版本：V0.6
-日期：2026-06-29
-状态：当前 Copilot-host live 阶段流程设计（补充 training / signing / stage contract 细化，挂接长期 contract 固化清单与联审 merge hook，并对齐 20260611 / 20260610 / WORKFLOW-002 的验证边界）
+版本：V0.7
+日期：2026-07-03
+状态：当前 Copilot-host live 阶段流程设计（CPO/CTO 第一次真实审批 through-pass 已完成，15 项 APPROVE 并入长期 contract，5 项 FREEZE 回流待后续 sprint 定版）
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md
-- publishedFrom: TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md
-- syncMode: published-copy
-- publishTier: active-published-copy
-- supportSyncRule: follows source stable semantic changes in same or next round
-- lastSyncedAt: 2026-06-29
+- sourceOfTruth: TriCompany/docs/workflow/integrated-product-development-flow.md
+- publishedFrom: 当前文件（source）
+- syncMode: source-only
+- publishTier: source-only
+- supportPublishedCopy: TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md
+- supportSyncRule: source 稳定语义变更后，active published-copy 需在同轮或下一轮追平
+- lastSyncedAt: 2026-07-03
 
 ## 1. 文档定位
 
 本文定义 TriCompany 当前阶段的集成产品开发流程（IPD 流程）。
 
-当前项目真源改按更清晰的两层关系理解：
+当前项目真源改按以下三层关系理解：
 
-1. `TriCompany` 负责公司侧流程、员工参与、资料组织、门禁完善与书面核签。
-2. `TriDev` 负责开发型项目的项目级十阶段 phase engine。
-3. `IPD` 不是与项目十阶段并行的第二套开发流程，而是赛博公司围绕这条十阶段主线的参与 / 协同 / 放行机制。
+1. `TriCompany` 负责公司侧流程、员工参与、资料组织、门禁完善与书面核签——即 IPD 的**公司协同层**。
+2. `TriDev` 负责开发型项目的项目级十阶段 phase engine——即 IPD 的**流程执行层**。
+3. `Tride` 负责本地编码智能体、CLI runtime 与 agentic orchestration 底座——即 IPD 的**本地编码层**（当 Tride 可用时接入；当前仍待初始化，不可写成已生产就绪）。
+4. `IPD` 是同时包含公司协同层、流程执行层与本地编码层的统一交付体系，不是与项目十阶段并行的第二套开发流程。`process-improvement`（IPD 自身流程优化线）可能针对这三层中任一位置进行优化；`project-delivery`（项目交付线）由三层共同协作完成交付。
 
 当前设计只代表赛博公司研发阶段和本地 Copilot-host 正式接管阶段，不代表 TriMC 正式宿主、生产级自动运营看板或完整授权矩阵已经完成。
 
@@ -80,6 +82,42 @@
 2. 被标记为 `FREEZE` 或 `REVISE` 的项目，不回写主流程真源，而是继续回写到 [ipd-long-term-contract-solidification-list.md](ipd-long-term-contract-solidification-list.md) 和 `WORKFLOW-002` backlog。
 3. 任何需要同时改文档与 runtime 的 `APPROVE` 项，必须同轮或下一轮完成双写，避免 source truth 与 execution truth 再次分叉。
 4. 当前 merge hook 只服务于赛博公司研发阶段与本地 Copilot-host 正式接管边界，不自动外推为 `TriMC` 正式宿主或生产级发布 contract。
+
+### 2.3 第一次真实审批 merge 执行记录
+
+- batchId: `IPD-FIRST-REAL-APPROVAL-BACKFILL-001`
+- executedAt: `2026-07-03`
+- sourceReplayCase: `IPD-20260611-PLATFORM-001`
+- approvalSurface: [ipd-first-real-approval-backfill-001.md](ipd-first-real-approval-backfill-001.md)
+
+**CPO APPROVE（7 项 through-pass）：**
+
+| 审批项 | merge hook | 落点 |
+| --- | --- | --- |
+| Discovery 五件套为最小通过条件 | `CPO-Discovery-Contract` | §4.3 |
+| 没有 DiscoveryReferenceFunctionalBrief 不得进 Intelligence | `CPO-Discovery-Contract` | §4.3 |
+| Intelligence 四件套为最小通过条件 | `CPO-Intelligence-Contract` | §4.4 |
+| PRD 范围只能来自 IntelligenceCapabilityExtractionMatrix | `CPO-Intelligence-Contract` | §4.4 |
+| QA = 统一评分 + candidate delivery + readiness | `CPO-QA-Delivery-Contract` | §4 + §6 |
+| Delivery 必须产出 final manifest / report | `CPO-QA-Delivery-Contract` | Delivery 阶段 |
+| Delivery 不等于生产级上线完成 | `CPO-QA-Delivery-Contract` | Delivery 边界 + §7 |
+
+**CTO APPROVE（8 项 through-pass，6 项需 runtime 双写）：**
+
+| 审批项 | merge hook | 落点 | 双写 |
+| --- | --- | --- | --- |
+| Scorecard 命名保留 | `CTO-Stage-Template-Contract` | §4 | 否 |
+| templateFields / standardFlow / handoffChecklist 进入稳定 contract | `CTO-Stage-Template-Contract` | §4 | ipd_case_engine.py + validation |
+| 真实 evidence 底线 | `CTO-Evidence-Policy-Contract` | §6 + §7 | ipd_case_engine.py + validation |
+| Coding 后不得 docs 假完成 | `CTO-Evidence-Policy-Contract` | §6 + §7 | ipd_case_engine.py + validation |
+| packageHash / signatureChain / release 四组对象 | `CTO-Signing-Release-Contract` | §4.0.2 + §6 | ipd_case_engine.py + validation |
+| manual-ceo-signoff 保留 | `CTO-Signing-Release-Contract` | §4.0.2 | ipd_case_engine.py + validation |
+| simulated wallet 签名原则 | `CTO-Signing-Release-Contract` | §4.0.2 | ipd_case_engine.py + validation |
+| Deployment / Assurance 分层 | `CTO-Evidence-Policy-Contract` | §4 | 否 |
+
+**FREEZE（5 项回流长期清单）：**
+
+QA 分值阈值、一票否决维度列表、candidate→final delivery 门槛、default seed/mnemonic 细节、local-only deployment strategy 细节 → 继续回写 [ipd-long-term-contract-solidification-list.md](ipd-long-term-contract-solidification-list.md)，作为下一轮 WORKFLOW sprint backlog seeds。
 
 ## 3. IPD 市场雷达线
 
@@ -147,7 +185,7 @@
 | 6. Redteam | CTO | CTO | TriDev | CTO | CEOChiefOfStaff | 执行对抗审查、安全验证、残余风险分级和整改要求；优先验证 Designing 阶段预置的安全假设、边界防护和 threat model 是否成立 | Redteam package、安全整改清单、残余风险说明 |
 | 7. QA | CTO | CTO | TriDev | CTO | CPO、CEOChiefOfStaff | 给出统一质量评分、release readiness 结论，并形成 candidate delivery manifest / report；评分至少覆盖设计缺陷、代码质量、架构合理性、测试覆盖率、回归情况、残余 bug 与修复成本、安全评估、并发性、稳定性和健壮性 | QA package、QA scorecard、candidate delivery manifest、candidate delivery report |
 | 8. Deployment | CTO | CTO（未来可切 deployee-xxx） | TriDev | CTO | COO、CFO、CEOChiefOfStaff | 先选择并执行最合适的 AI 自动化部署方案（如本地、单机、容器、k8s、渐进发布等），再沉淀部署证据、发布说明、上线窗口和 rollout plan | Deployment package、deployment strategy record、deployment evidence、rollout plan |
-| 9. Assurance | CTO | CTO（未来可切 tester-xxx / deployer-xxx） | TriDev | CTO | COO、CFO、CEOChiefOfStaff | 沉淀运行观察、回滚演练、恢复验证、告警 / 性能 / 成本复核、残余风险追踪和 assurance evidence，形成保驾窗口内的稳定性结论；**TriMC heartbeat 在此阶段持续扫描 stage 审批超时（48h）和产出超时（72h）** | Assurance package、runtime observation report、recovery validation report、assurance evidence |
+| 9. Assurance | CTO | CTO（未来可切 tester-xxx / deployer-xxx） | TriDev | CTO | COO、CFO、CEOChiefOfStaff | 沉淀运行观察、回滚演练、恢复验证、告警 / 性能 / 成本复核、残余风险追踪和 assurance evidence，形成保驾窗口内的稳定性结论；TriMC heartbeat 在此阶段持续扫描 stage 审批超时（48h）和产出超时（72h），ALERT/ERROR 推送总助 | Assurance package、runtime observation report、recovery validation report、assurance evidence |
 | 10. Delivery | CPO | CPO | TriDev | CPO | CEOChiefOfStaff、CEO、COO、CFO、CTO | 形成最终交付结论、final delivery manifest / report、版本化 gate package、运营接管输入和后续动作 | Delivery package、final delivery manifest、final delivery report |
 
 ### 4.1 Discovery 标准动作：新模块单项发布
