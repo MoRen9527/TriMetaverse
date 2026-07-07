@@ -1,0 +1,446 @@
+{
+  "objectType": "OPERATING_PLAN",
+  "objectId": "OP-202607-W28-001",
+  "title": "TriMetaverse W28 当前周经营维护计划单",
+  "status": "active",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-07-07T10:49:52+08:00",
+  "updatedAt": "2026-07-07T10:49:52+08:00",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-07-06T00:00:00+08:00",
+    "endAt": "2026-07-12T23:59:59+08:00",
+    "label": "2026-W28 当前周维护面"
+  },
+  "summary": "W27 已于 2026-07-07 闭合并平移到 W28。W27 期间完成第一次真实审批回填 through-pass merge（CPO 7+3、CTO 8+2），15 项 APPROVE 已写入主流程 V0.8，6 项 runtime 双写落地，5 项 FREEZE 回流长期清单；审批链最小收口完成，产品主线已切回 IPD-20260610-PLATFORM-001；RAndDTrainer IPD CLI 教程真源已落地。CARRY-20260629-006（IPD 全阶段优化）跨周已达 4 周预警阈值。本周需重点关注 CPO / CTO 对多条 carry 事项 overdue 的续推动作。",
+  "relatedModules": [
+    "TriMetaverse",
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar",
+    "TriMC",
+    "TriLC",
+    "TriPilot",
+    "Tride",
+    "TriDeployment",
+    "TriTest",
+    "TriMem",
+    "TriMobile",
+    "TriWeb4",
+    "TriGateway",
+    "TriHost",
+    "TriSkill",
+    "TriChain"
+  ],
+  "dependsOn": [
+    "OP-202606-W27-001",
+    "OP-202606-W26-001",
+    "OP-202604-W15-001",
+    "BD-202605-001",
+    "IPD-20260610-PLATFORM-001",
+    "IPD-20260611-PLATFORM-001",
+    "IPD-20260612-WORKFLOW-002"
+  ],
+  "payload": {
+    "blockedItems": [],
+    "nextActions": [
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "对“最小 MVP / 最小经营闭环重排”输出当前状态切分，明确 active、暂停、后置和待 CEO 决策范围。本事项已跨 13 周（高预警），需在本周给出明确书面状态。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-05/BD-202605-001.json",
+          "TriCompany/docs/product/PROJECT.md",
+          "TriCompany/docs/product/STATE.md"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00",
+        "overdueFrom": "2026-06-29T18:00:00+08:00",
+        "overdueNote": "W27 设置的 due date 已过，本周需重新确认推进计划或更新截止时间。"
+      },
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "对所有产品侧 running FREEZE 给出本周状态检查结果，逐项标注：仍未解锁 / 已具备推进条件 / 建议转为正式长期清单，并将结论反馈到 operating record。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00",
+        "overdueFrom": "2026-07-04T18:00:00+08:00",
+        "overdueNote": "W27 设置的 due date 已过，本周需重新确认推进计划或更新截止时间。"
+      },
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "对 IPD-20260610-PLATFORM-001 做一次本周穿透检查：当前活跃任务、阻塞点、本周预计输出物，形成一个不超过 3 段的摘要。",
+        "dependsOn": [
+          "TriCompany/docs/product/STATE.md",
+          "TriCompany/docs/product/PROJECT.md"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00",
+        "overdueFrom": "2026-07-04T18:00:00+08:00",
+        "overdueNote": "上周设置的 due date 已过，本周需输出最新穿透结果。"
+      },
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "对 CEO 提出的大重构目标：用最简模型描述当前用户故事、收益逻辑和最小功能集，不涉及具体 UI/实现。",
+        "dependsOn": [
+          "TriCompany/docs/product/REQUIREMENTS.md",
+          "TriCompany/docs/product/PROJECT.md"
+        ],
+        "dueAt": "2026-07-12T18:00:00+08:00"
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "对所有技术侧 running FREEZE 做本周状态检查，逐项标注状态并反馈到 operating record。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00",
+        "overdueFrom": "2026-07-04T18:00:00+08:00",
+        "overdueNote": "W27 设置的 due date 已过，本周需重新确认推进计划或更新截止时间。"
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "对有代码侧支撑的任务条目给出本周 CTO 技术执行状态：当前完成状态、本周预计交付物、blocker 清单（如有）。",
+        "dependsOn": [
+          "TriCompany/docs/engineering/DESIGN.md",
+          "TriCompany/docs/engineering/metacognition-architecture.md"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00",
+        "overdueFrom": "2026-07-04T18:00:00+08:00",
+        "overdueNote": "W27 设置的 due date 已过，本周需重新确认推进计划或更新截止时间。"
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "如 Hermes / TriMC 管线有关键交付或阻塞，请在本周内给出不超过 3 段的技术层面进度说明。",
+        "dependsOn": [
+          "TriCompany/docs/engineering/DESIGN.md",
+          "TriCompany-copilot-host-assets/docs/engineering/"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00",
+        "overdueFrom": "2026-07-04T18:00:00+08:00",
+        "overdueNote": "W27 设置的 due date 已过，本周需重新确认推进计划或更新截止时间。"
+      },
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "如有人设、角色、叙事、最终幻想 / IPD 接口侧的交付或阻塞，本周内给出不超过 3 段的产品层面状态说明。",
+        "dependsOn": [
+          "TriCompany/docs/product/REQUIREMENTS.md",
+          "TriCompany/docs/registry/product-state.md"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00"
+      },
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "以本周经营计划为范围，逐项确认新 carry 的优先级（high / medium / low），并标注 “本周推进 / 本周只观察 / 本周不提上推进列表”。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00",
+        "overdueFrom": "2026-07-04T18:00:00+08:00",
+        "overdueNote": "W27 设置的 due date 已过，本周需重新确认推进计划或更新截止时间。"
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "以本周经营计划为范围，逐项确认新 carry 的优先级（high / medium / low），并标注 “本周推进 / 本周只观察 / 本周不提上推进列表”。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00",
+        "overdueFrom": "2026-07-04T18:00:00+08:00",
+        "overdueNote": "W27 设置的 due date 已过，本周需重新确认推进计划或更新截止时间。"
+      },
+      {
+        "owner": "CEOChiefOfStaff",
+        "action": "周中（周三/周四）执行一次 carry 事项 overdue 复查，未获更新的 overdue 事项升级为 ESCALATE 记录在当周 nextActions 中。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-10T18:00:00+08:00"
+      },
+      {
+        "owner": "CEOChiefOfStaff",
+        "action": "本周五 / 下周一前完成 W28 → W29 周度平移准备（carryWeeks 阈值复查、预警升级、staleItems 更新），并在 README.md 中指向最新 active week。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json",
+          "docs/workflow/operating-records/README.md"
+        ],
+        "dueAt": "2026-07-12T18:00:00+08:00"
+      }
+    ],
+    "carriedItems": [
+      {
+        "id": "CARRY-20260707-001",
+        "sourceObjectId": "OP-202606-W27-001",
+        "originalId": "ITEM-20260629-001",
+        "title": "CPO ∕ CTO 审批 through-pass 回填收口状态检查",
+        "description": "W27 已完成 CPO 7+3、CTO 8+2 的 through-pass merge，15 项 APPROVE 写入主流程 V0.8，6 项 runtime 双写落地，5 项 FREEZE 回流长期清单。本周检查落地质量：through-pass merge 是否完整可追溯、runtime 双写是否仍然有效、长期清单回流是否被遗漏的主流程引用。",
+        "owner": "CEOChiefOfStaff",
+        "category": "governance",
+        "priority": "high",
+        "status": "carried",
+        "carryWeeks": 1,
+        "warningLevel": "none",
+        "carrySource": "W27",
+        "prevIds": [
+          "ITEM-20260629-001"
+        ]
+      },
+      {
+        "id": "CARRY-20260707-002",
+        "sourceObjectId": "OP-202606-W27-001",
+        "originalId": "CARRY-20260629-002",
+        "title": "“最小 MVP / 最小经营闭环”重排与方案确认",
+        "description": "CPO 需输出当前状态切分，明确 active / 暂停 / 后置 / 待 CEO 决策。CEO 要求以大重构目标反推，不绑定既有模块结构。本事项已跨 13 周，属高预警级别。建议本周至少完成状态切分第一稿，避免继续空转。",
+        "owner": "ChiefProductOfficer",
+        "category": "product",
+        "priority": "high",
+        "status": "carried",
+        "carryWeeks": 13,
+        "warningLevel": "high",
+        "carrySource": "W15",
+        "prevIds": [
+          "CARRY-20260629-002",
+          "CARRY-20260622-002",
+          "CARRY-20260615-002",
+          "CARRY-20260608-002",
+          "CARRY-20260601-002",
+          "CARRY-20260525-002",
+          "CARRY-20260518-002",
+          "CARRY-20260511-002",
+          "CARRY-20260504-002",
+          "CARRY-20260427-002",
+          "CARRY-20260420-002",
+          "CARRY-20260413-002"
+        ]
+      },
+      {
+        "id": "CARRY-20260707-003",
+        "sourceObjectId": "OP-202606-W27-001",
+        "originalId": "CARRY-20260629-003",
+        "title": "产品 ∕ 技术 running FREEZE 清单本周状态检查",
+        "description": "要求 CPO / CTO 各自对其 running FREEZE 做本周状态检查：逐项标注仍未解锁 / 已具备推进条件 / 建议转为正式长期清单，结论反馈到 operating record。",
+        "owner": "ChiefProductOfficer",
+        "category": "governance",
+        "priority": "high",
+        "status": "carried",
+        "carryWeeks": 5,
+        "warningLevel": "warning",
+        "carrySource": "W22",
+        "prevIds": [
+          "CARRY-20260629-003",
+          "CARRY-20260622-003",
+          "CARRY-20260615-003",
+          "CARRY-20260608-003"
+        ]
+      },
+      {
+        "id": "CARRY-20260707-004",
+        "sourceObjectId": "OP-202606-W27-001",
+        "originalId": "CARRY-20260629-004",
+        "title": "TriMetaverse 模块 Registry（BusinessStrategy ∕ Product ∕ Code）建立与书面化",
+        "description": "分三线推进：BusinessStrategy 顶层边界裁决与更新；模块级 ProductRegistry / CodeRegistry 建立；registry 与 AGENTS.md / README.md 的上下游对齐。当前多数模块仍处在占位 / 待初始化状态。",
+        "owner": "CEOChiefOfStaff",
+        "category": "governance",
+        "priority": "medium",
+        "status": "carried",
+        "carryWeeks": 6,
+        "warningLevel": "warning",
+        "carrySource": "W23",
+        "prevIds": [
+          "CARRY-20260629-004",
+          "CARRY-20260622-004",
+          "CARRY-20260615-004",
+          "CARRY-20260608-004",
+          "CARRY-20260601-004"
+        ]
+      },
+      {
+        "id": "CARRY-20260707-005",
+        "sourceObjectId": "OP-202606-W27-001",
+        "originalId": "CARRY-20260629-005",
+        "title": "“CEO 关键经营决策清单”建立与维护",
+        "description": "从跨模块、跨角色的长期决策分歧中提取待 CEO 裁决清单（含 running FREEZE 和 carry 事项中需要 CEO 拍板的问题），由 CPO / CTO 提交，总助维护为独立文档。",
+        "owner": "CEOChiefOfStaff",
+        "category": "governance",
+        "priority": "medium",
+        "status": "carried",
+        "carryWeeks": 6,
+        "warningLevel": "warning",
+        "carrySource": "W24",
+        "prevIds": [
+          "CARRY-20260629-005",
+          "CARRY-20260622-005",
+          "CARRY-20260615-005",
+          "CARRY-20260608-005",
+          "CARRY-20260601-005"
+        ]
+      },
+      {
+        "id": "CARRY-20260707-006",
+        "sourceObjectId": "OP-202606-W27-001",
+        "originalId": "CARRY-20260629-006",
+        "title": "IPD 全阶段优化计划推进",
+        "description": "IPD-20260610-PLATFORM-001 / IPD-20260611-PLATFORM-001 / IPD-20260612-WORKFLOW-002 的跨阶段推进与衔接，确认审批链已闭合后的下一步指令链部署状态。本事项首次跨周达 4 周，已触发预警阈值。",
+        "owner": "ChiefProductOfficer",
+        "category": "product",
+        "priority": "high",
+        "status": "carried",
+        "carryWeeks": 4,
+        "warningLevel": "warning",
+        "carrySource": "W24",
+        "prevIds": [
+          "CARRY-20260629-006",
+          "CARRY-20260622-006",
+          "CARRY-20260615-006"
+        ]
+      }
+    ],
+    "pendingCompanyItems": [
+      {
+        "id": "TODO-20260707-001",
+        "title": "CEO 待复查：大重构目标用户故事、收益逻辑和最小功能集",
+        "owner": "CEO",
+        "status": "pending_review",
+        "dependsOn": [
+          "ChiefProductOfficer nextAction due 2026-07-12"
+        ]
+      },
+      {
+        "id": "TODO-20260707-002",
+        "title": "CEO 待复查：最小 MVP / 最小经营闭环重排方案",
+        "owner": "CEO",
+        "status": "pending_review",
+        "dependsOn": [
+          "CARRY-20260707-002"
+        ]
+      },
+      {
+        "id": "TODO-20260707-003",
+        "title": "CEO 待裁决：产品 running FREEZE 长期转化决策",
+        "owner": "CEO",
+        "status": "pending_decision",
+        "dependsOn": [
+          "CARRY-20260707-003"
+        ]
+      },
+      {
+        "id": "TODO-20260707-004",
+        "title": "CEO 待裁决：技术 running FREEZE 长期转化决策",
+        "owner": "CEO",
+        "status": "pending_decision",
+        "dependsOn": [
+          "CARRY-20260707-003"
+        ]
+      },
+      {
+        "id": "TODO-20260707-005",
+        "title": "CEO 待裁决：CEO 关键经营决策清单初稿",
+        "owner": "CEO",
+        "status": "pending_decision",
+        "dependsOn": [
+          "CARRY-20260707-005"
+        ]
+      },
+      {
+        "id": "TODO-20260707-006",
+        "title": "CEO 待复查：IPD 全阶段优化本周进展",
+        "owner": "CEO",
+        "status": "pending_review",
+        "dependsOn": [
+          "CARRY-20260707-006"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "latestActiveWeek": true,
+    "previousWeekRef": "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.json",
+    "migrationDate": "2026-07-07T10:49:52+08:00",
+    "phase": "ceo-copilot-host-coordination",
+    "workflowTags": [
+      "每周维护",
+      "CEO 总助维护面",
+      "经营维护计划单"
+    ],
+    "relatedBoardId": "tricompany-ceo-operating-board",
+    "sourceOperatingPlans": [
+      "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.json",
+      "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.json"
+    ],
+    "carryAgingWarnings": {
+      "description": "W28 平移后 carry 事项老化情况。阈值：≥4 周为 warning，≥8 周为 high warning。",
+      "items": [
+        {
+          "id": "CARRY-20260707-002",
+          "carryWeeks": 13,
+          "level": "high",
+          "source": "W15",
+          "note": "已跨 13 周，原始需求可能已漂移，建议本周优先完成至少一份状态切分文档，避免继续空转。"
+        },
+        {
+          "id": "CARRY-20260707-004",
+          "carryWeeks": 6,
+          "level": "warning",
+          "source": "W23"
+        },
+        {
+          "id": "CARRY-20260707-005",
+          "carryWeeks": 6,
+          "level": "warning",
+          "source": "W24"
+        },
+        {
+          "id": "CARRY-20260707-003",
+          "carryWeeks": 5,
+          "level": "warning",
+          "source": "W22"
+        },
+        {
+          "id": "CARRY-20260707-006",
+          "carryWeeks": 4,
+          "level": "warning",
+          "source": "W24",
+          "note": "首次跨周达 4 周警告阈值。"
+        }
+      ]
+    },
+    "staleItems": [
+      {
+        "id": "CARRY-20260707-004",
+        "daysStale": 22,
+        "lastMaterialUpdate": "2026-06-15"
+      },
+      {
+        "id": "CARRY-20260707-005",
+        "daysStale": 42,
+        "lastMaterialUpdate": "2026-05-26"
+      }
+    ],
+    "backlogReviewResults": {
+      "reviewedAt": "2026-07-07T10:49:52+08:00",
+      "itemsReviewed": 6,
+      "newItems": 0,
+      "closedItems": 0,
+      "carriedItems": 6,
+      "escalatedItems": 0
+    },
+    "recentCloseouts": [
+      {
+        "id": "W27-CLOSURE",
+        "title": "W27 周度闭合",
+        "closedAt": "2026-07-07T10:49:52+08:00",
+        "type": "weekly-migration"
+      },
+      {
+        "id": "THROUGHPASS-20260701",
+        "title": "CPO/CTO through-pass merge 落地",
+        "completedAt": "2026-07-01",
+        "type": "milestone",
+        "detail": "15 项 APPROVE 写入主流程 V0.8，6 项 runtime 双写落地，5 项 FREEZE 回流长期清单"
+      }
+    ],
+    "version": "0.3.0",
+    "lastUpdated": "2026-07-07T10:49:52+08:00",
+    "updatedBy": "CEOChiefOfStaff"
+  }
+}

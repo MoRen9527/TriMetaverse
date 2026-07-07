@@ -2,11 +2,11 @@
   "objectType": "OPERATING_PLAN",
   "objectId": "OP-202606-W27-001",
   "title": "TriMetaverse W27 当前周经营维护计划单",
-  "status": "active",
+  "status": "closed-carried-forward",
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-06-29T19:25:57+08:00",
-  "updatedAt": "2026-07-03T17:58:00+08:00",
+  "updatedAt": "2026-07-07T10:49:52+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-06-29T00:00:00+08:00",
@@ -546,7 +546,7 @@
     "recordLayer": "real-operating-record",
     "unresolvedItemsRef": "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.unresolved-items.md",
     "issuanceVersion": "OP-202606-W27-001-v0.1.1-draft",
-    "latestActiveWeek": true,
+    "latestActiveWeek": false,
     "statusTerminologyRefs": [
       "TriCompany/docs/registry/company-governance-state.md",
       "docs/workflow/operating-records/README.md"
@@ -580,6 +580,12 @@
         "ref": "docs/workflow/operating-records/2026-W26/OP-202606-W26-001.json",
         "closure": "closed-carried-forward",
         "closedAt": "2026-06-29T19:25:57+08:00"
+      },
+      {
+        "ref": "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.json",
+        "closure": "closed-carried-forward",
+        "closedAt": "2026-07-07T10:49:52+08:00",
+        "successor": "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
       }
     ],
     "carryWarningThresholdWeeks": 4,
@@ -802,6 +808,9 @@
         ],
         "updatedAt": "2026-06-29T21:43:07+08:00"
       }
-    ]
+    ],
+    "successorOperatingPlanRef": "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json",
+    "successorUnresolvedItemsRef": "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.unresolved-items.md",
+    "closureNote": "W27 已于 2026-07-07 完成周度平移，6 项 carriedItems 全部平移到 W28，W27 转为历史周基线。"
   }
 }

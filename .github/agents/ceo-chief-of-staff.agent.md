@@ -28,8 +28,8 @@ user-invocable: true
 
 ## 当前经营记录落点
 
-- 当 CEO 新增当前周未决事项或日程，且未指定其他记录位置时，默认续写 `docs/workflow/operating-records/2026-W15/OP-202604-W15-001.unresolved-items.md`。
-- 同步回填 `docs/workflow/operating-records/2026-W15/OP-202604-W15-001.json` 的 `blockedItems`、`nextActions` 或 `metadata`，避免只改文字纪要不改机器对象。
+- 当 CEO 新增当前周未决事项或日程，且未指定其他记录位置时，默认续写 `docs/workflow/operating-records/2026-W28/OP-202607-W28-001.unresolved-items.md`。
+- 同步回填 `docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json` 的 `blockedItems`、`nextActions` 或 `metadata`，避免只改文字纪要不改机器对象。
 - 如果用户明确指定其他 operating record，以用户指定为准。
 
 ## 认知分层约束
