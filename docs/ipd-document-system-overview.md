@@ -1,8 +1,8 @@
 # IPD 开发文档体系与自动化流程说明
 
-版本：V0.2
-日期：2026-07-07
-状态：当前 Copilot-host live 阶段基线总结（追平 TriMC/heartbeat 接入、教程补全与路径修正）
+版本：V0.3
+日期：2026-07-09
+状态：当前 Copilot-host live 阶段基线总结（追平 intake 回退路径、reopen-intake CLI、流程回退图）
 
 ## 文档同步元信息
 
@@ -10,7 +10,7 @@
 - publishedFrom: 当前文件（source）
 - syncMode: source-only
 - publishTier: source-only
-- lastSyncedAt: 2026-07-07
+- lastSyncedAt: 2026-07-09
 - upstreamSources:
   - TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md（IPD 主流程真源）
   - TriCompany-copilot-host-assets/docs/workflow/ipd-company-baseline-checklist.md（基线分层与回写顺序）
@@ -125,30 +125,53 @@ CEO freeform 需求
 ┌──────────────┐   总助 CLI: task-intake
 │  task-intake │   生成 case.json + intake-brief.json + clarificationSheet
 └──────┬───────┘   处理方: CEOChiefOfStaff（补槽位）
-       │               ▲
-       ▼               │  TriMC heartbeat 扫描:
-┌──────────────┐   总助 CLI: init          · 七槽位不全 → ALERT
+       │               ┊
+       ▼               ┊  ◀── reopen-intake / rollback --stage-key intake
+┌──────────────┐   总助 CLI: init          ┊   （签核后想修改七槽位→回这里）
 │     init     │   把 intake briefing 精调成可签版，补齐 7 个槽位
 └──────┬───────┘   处理方: CEOChiefOfStaff
-       │               ▲
-       ▼               │  TriMC heartbeat 扫描:
-┌──────────────────┐   CLI: intake-approve     · intake 待审批 > 24h → ALERT
+       │               ┊
+       ▼               ┊  ◀── reopen-intake / rollback --stage-key intake
+┌──────────────────┐   CLI: intake-approve     ┊
 │  intake-approve  │   顺序: CEO 先签 → CEOChiefOfStaff 验证并签发
 └──────┬───────────┘   处理方: CEO + CEOChiefOfStaff（web3 签名）
-       │               未通过 → paused-intake-clarification（回 ceo-demand）
+       │               未通过 → paused-intake-clarification
+       │               ▲
+       │               └── 已通过但七槽位不行 → reopen-intake（无 completed 护栏）
+       │                   已有 completed stage → rollback --stage-key intake
        ▼
 ┌──────────────────┐
 │  caseCategory 分支 │
 └──────┬───────────┘
        │
-  ┌────┴────┐              ▲
-  │         │              │  TriMC heartbeat 扫描:
-  ▼         ▼              │  · stage 审批待签 > 48h → ALERT
-process-   project-        │  · stage 无产出 > 72h → ALERT
-improve-   delivery        │  · stage 被 reject → ERROR
-ment       (十阶段)
-(敏捷六段)
+  ┌────┴────┐              ┊
+  │         │              ┊  TriMC heartbeat 扫描:
+  ▼         ▼              ┊  · stage 审批待签 > 48h → ALERT
+process-   project-        ┊  · stage 无产出 > 72h → ALERT
+improve-   delivery        ┊  · stage 被 reject → ERROR
+ment       (十阶段)         ┊
+(敏捷六段)                  ┊
+   │         │             ┊
+   │    reject→resubmit    ┊  ◀── stage 驳回后 owner 重新 submit
+   │         │             ┊
+   │    rollback→          ┊  ◀── rollback --stage-key <任意阶段>
+   │    任意前置阶段        ┊      回到 ceo-demand/intake/discovery/...
+   │         │             ┊
+   ▼         ▼             ┊
+ 交付      交付
 ```
+
+**回退路径总结：**
+
+| 场景 | CLI 命令 | 条件 |
+|------|---------|------|
+| 七槽位填错了，想回 intake 重填 | `reopen-intake --case-id <id> --note "原因"` | 无 completed stage |
+| 同上，但已有 completed stage | `rollback --case-id <id> --stage-key intake --reason "原因"` | 无限制 |
+| stage 被驳回，owner 重新提交 | `submit --case-id <id> --stage-key <key> ...` | stage 处于 rejected |
+| 回退到任意前置阶段 | `rollback --case-id <id> --stage-key <key> --reason "原因"` | 无限制 |
+| 回到 CEO demand 原点 | `rollback --case-id <id> --stage-key ceo-demand --reason "原因"` | 无限制 |
+
+`reopen-intake` 是 `rollback --stage-key intake` 的安全封装：多了"无 completed stage"护栏，防止误删已完成工作。
 
 ### 3.2 流程优化线（process-improvement）六阶段
 
