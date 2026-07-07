@@ -22,7 +22,7 @@
 | REDTEAM | PRD分支 | 对应 PRD 的 VERIFY-INTEGRATION 通过产物 | 是否存在可利用 `critical` 风险 | 红队扫描报告、风险分级清单 | 无 critical 才通过 | 回流该 PRD 的 CODING 或 VERIFY-INTEGRATION |
 | QA | PRD分支 | 对应 PRD 的 REDTEAM 修复后产物 | 非对抗质量分是否 >= 阈值（默认80） | QA报告、质量结论 | `score >= threshold` 或显式 skip | 回流该 PRD 的 CODING / VERIFY-INTEGRATION / REDTEAM |
 | DEPLOYMENT（发布） | PRD分支 | 测试报告、PRD、部署清单、运维手册 | 发布与部署是否成功且可追溯 | 已上线可运行系统、发布说明、用户手册、生产环境部署文档（含部署手册）、分支 CI/CD、Docker、K8s 资产 | 发布资产完整且可校验 | 回流该 PRD 的 CODING 或 QA |
-| ASSURANCE | PRD分支 | 对应 PRD 的 DEPLOYMENT 产物与环境 | 漏洞/压力/安全/回归测试是否通过 | Assurance报告、分支专项测试报告、放行结论 | 无高危/严重阻断项 | 回流该 PRD 的 QA / DEPLOYMENT |
+| ASSURANCE | PRD分支 | 对应 PRD 的 DEPLOYMENT 产物与环境 | 漏洞/压力/安全/回归测试是否通过；**TriMC heartbeat 持续监控卡点（stage 审批超时 48h、产出超时 72h），ALERT/ERROR 推送总助** | Assurance报告、分支专项测试报告、放行结论 | 无高危/严重阻断项 | 回流该 PRD 的 QA / DEPLOYMENT |
 | DELIVERY | 主线聚合 | 全部 PRD 分支的 ASSURANCE 通过产物 | 聚合交付是否齐全、版本是否可追溯 | 交付验收报告、`delivery-manifest.json`、`delivery-report.md`、`release.zip` | 所有分支通过且交付件齐全 | 回流对应失败分支 |
 
 ---

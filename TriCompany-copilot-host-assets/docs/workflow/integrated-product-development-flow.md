@@ -6,8 +6,8 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriCompany/docs/workflow/integrated-product-development-flow.md
-- publishedFrom: TriCompany/docs/workflow/integrated-product-development-flow.md
+- sourceOfTruth: TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md
+- publishedFrom: TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md
 - syncMode: published-copy
 - publishTier: active-published-copy
 - supportSyncRule: follows source stable semantic changes in same or next round
@@ -147,7 +147,7 @@
 | 6. Redteam | CTO | CTO | TriDev | CTO | CEOChiefOfStaff | 执行对抗审查、安全验证、残余风险分级和整改要求；优先验证 Designing 阶段预置的安全假设、边界防护和 threat model 是否成立 | Redteam package、安全整改清单、残余风险说明 |
 | 7. QA | CTO | CTO | TriDev | CTO | CPO、CEOChiefOfStaff | 给出统一质量评分、release readiness 结论，并形成 candidate delivery manifest / report；评分至少覆盖设计缺陷、代码质量、架构合理性、测试覆盖率、回归情况、残余 bug 与修复成本、安全评估、并发性、稳定性和健壮性 | QA package、QA scorecard、candidate delivery manifest、candidate delivery report |
 | 8. Deployment | CTO | CTO（未来可切 deployee-xxx） | TriDev | CTO | COO、CFO、CEOChiefOfStaff | 先选择并执行最合适的 AI 自动化部署方案（如本地、单机、容器、k8s、渐进发布等），再沉淀部署证据、发布说明、上线窗口和 rollout plan | Deployment package、deployment strategy record、deployment evidence、rollout plan |
-| 9. Assurance | CTO | CTO（未来可切 tester-xxx / deployer-xxx） | TriDev | CTO | COO、CFO、CEOChiefOfStaff | 沉淀运行观察、回滚演练、恢复验证、告警 / 性能 / 成本复核、残余风险追踪和 assurance evidence，形成保驾窗口内的稳定性结论 | Assurance package、runtime observation report、recovery validation report、assurance evidence |
+| 9. Assurance | CTO | CTO（未来可切 tester-xxx / deployer-xxx） | TriDev | CTO | COO、CFO、CEOChiefOfStaff | 沉淀运行观察、回滚演练、恢复验证、告警 / 性能 / 成本复核、残余风险追踪和 assurance evidence，形成保驾窗口内的稳定性结论；**TriMC heartbeat 在此阶段持续扫描 stage 审批超时（48h）和产出超时（72h）** | Assurance package、runtime observation report、recovery validation report、assurance evidence |
 | 10. Delivery | CPO | CPO | TriDev | CPO | CEOChiefOfStaff、CEO、COO、CFO、CTO | 形成最终交付结论、final delivery manifest / report、版本化 gate package、运营接管输入和后续动作 | Delivery package、final delivery manifest、final delivery report |
 
 ### 4.1 Discovery 标准动作：新模块单项发布

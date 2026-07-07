@@ -1,8 +1,8 @@
 # IPD 开发文档体系与自动化流程说明
 
-版本：V0.1
-日期：2026-07-03
-状态：当前 Copilot-host live 阶段基线总结
+版本：V0.2
+日期：2026-07-07
+状态：当前 Copilot-host live 阶段基线总结（追平 TriMC/heartbeat 接入、教程补全与路径修正）
 
 ## 文档同步元信息
 
@@ -10,16 +10,18 @@
 - publishedFrom: 当前文件（source）
 - syncMode: source-only
 - publishTier: source-only
-- lastSyncedAt: 2026-07-03
+- lastSyncedAt: 2026-07-07
 - upstreamSources:
-  - TriCompany/docs/workflow/integrated-product-development-flow.md（IPD 主流程真源）
-  - TriCompany/docs/workflow/ipd-company-baseline-checklist.md（基线分层与回写顺序）
-  - TriCompany/runtime/cognition/ipd_case_engine.py（stage contract 与自动化执行真源）
-  - TriCompany/runtime/cognition/chief_of_staff_ipd_case.py（CLI 调度入口）
-  - TriCompany/docs/training/ipd-usage-guide.md（IPD 使用教程）
-  - TriCompany/docs/training/IPD CASE术语.md（case 字段术语）
+  - TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md（IPD 主流程真源）
+  - TriCompany-copilot-host-assets/docs/workflow/ipd-company-baseline-checklist.md（基线分层与回写顺序）
+  - TriCompany-copilot-host-assets/runtime/cognition/ipd_case_engine.py（stage contract 与自动化执行真源）
+  - TriCompany-copilot-host-assets/runtime/cognition/chief_of_staff_ipd_case.py（CLI 调度入口）
+  - TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md（IPD 使用教程）
+  - TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md（case 字段术语）
+  - TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md（CLI 小白教程）
   - TriMetaverse/docs/workflow/phase-io-matrix.md（十阶段 IO 矩阵）
   - TriMetaverse/docs/workflow/tricompany-phase-bridge.md（经营-研发桥接）
+  - TriMC/src/heartbeat/（TriMC IPD 心跳监控实现）
 - supportSyncRule: 任一 upstreamSources 发生稳定语义变更（阶段增删、岗位调整、contract 升级、产物清单变化、case 命名规则变化）后，当前摘要应在同轮或下一轮追平；若上游只是修正错字、补示例或改日期，不强制触发重写，但应检查示例与当前摘要是否仍对齐
 
 当前文件是 TriMetaverse 对 TriCompany IPD 文档体系与自动化流程的中央索引摘要。它汇总了 `TriCompany` 源侧 IPD 主流程、基线清单、runtime engine、培训教程和术语文档的体系关系。它不是 TriCompany 公司级 IPD 书面真源的新增独立文件，冲突时以上游真源为准。
@@ -73,42 +75,42 @@ D 层：操作与实例面 ── 真实回填、through-pass 执行、批次记
 
 | 文件 | 角色 |
 |------|------|
-| `TriCompany/docs/workflow/integrated-product-development-flow.md` | 公司级 IPD 主流程真源：阶段定义、岗位参与、gate、merge hook、回写原则 |
-| `TriCompany/docs/workflow/ipd-long-term-contract-solidification-list.md` | 长期 contract 联审收口清单：承接验证通过的能力，等待 CPO/CTO 审批升级 |
+| `TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md` | 公司级 IPD 主流程真源：阶段定义、岗位参与、gate、merge hook、回写原则 |
+| `TriCompany-copilot-host-assets/docs/workflow/ipd-long-term-contract-solidification-list.md` | 长期 contract 联审收口清单：承接验证通过的能力，等待 CPO/CTO 审批升级 |
 
 ### 2.2 B 层：公司执行真源
 
 | 文件 | 角色 |
 |------|------|
-| `TriCompany/runtime/cognition/ipd_case_engine.py` | IPD stage contract 与 automation contract 的执行真源：阶段模板、标准动作、签核对象、evidence policy、自动推进语义 |
-| `TriCompany/runtime/cognition/chief_of_staff_ipd_case.py` | CLI 调度入口：task-intake、init、submit、signoff、status、step、rollback 等命令 |
-| `TriCompany/runtime/cognition/chief_of_staff_ipd_case_validation.py` | IPD 基线验证真源：回归、案例初始化、阶段自动化、主线验证 contract |
+| `TriCompany-copilot-host-assets/runtime/cognition/ipd_case_engine.py` | IPD stage contract 与 automation contract 的执行真源：阶段模板、标准动作、签核对象、evidence policy、自动推进语义 |
+| `TriCompany-copilot-host-assets/runtime/cognition/chief_of_staff_ipd_case.py` | CLI 调度入口：task-intake、init、submit、signoff、status、step、rollback 等命令 |
+| `TriCompany-copilot-host-assets/runtime/cognition/chief_of_staff_ipd_case_validation.py` | IPD 基线验证真源：回归、案例初始化、阶段自动化、主线验证 contract |
 
 ### 2.3 C 层：联审输入面
 
 | 文件 | 角色 |
 |------|------|
-| `TriCompany/docs/workflow/ipd-product-acceptance-contract-cpo-review.md` | CPO 产品验收 contract 审批稿 |
-| `TriCompany/docs/workflow/ipd-runtime-evidence-contract-cto-review.md` | CTO runtime/evidence contract 审批稿 |
+| `TriCompany-copilot-host-assets/docs/workflow/ipd-product-acceptance-contract-cpo-review.md` | CPO 产品验收 contract 审批稿 |
+| `TriCompany-copilot-host-assets/docs/workflow/ipd-runtime-evidence-contract-cto-review.md` | CTO runtime/evidence contract 审批稿 |
 
 ### 2.4 D 层：操作与实例面
 
 | 文件 | 角色 |
 |------|------|
-| `TriCompany/docs/workflow/ipd-first-real-approval-backfill-runbook.md` | 真实审批回填操作手册 |
-| `TriCompany/docs/workflow/ipd-first-real-approval-through-pass-checklist.md` | through-pass 执行清单 |
-| `TriCompany/docs/workflow/ipd-first-real-approval-merge-candidate-matrix.md` | merge candidate 映射矩阵 |
-| `TriCompany/docs/workflow/ipd-first-real-approval-backfill-record-template.md` | 回填记录模板 |
-| `TriCompany/docs/workflow/ipd-first-real-approval-backfill-001.md` | 首轮回填实例 |
-| `TriCompany/docs/workflow/ipd-company-baseline-checklist.md` | 基线治理清单（本身是 D 层，但定义 A/B/C/D 分层规则） |
+| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-backfill-runbook.md` | 真实审批回填操作手册 |
+| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-through-pass-checklist.md` | through-pass 执行清单 |
+| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-merge-candidate-matrix.md` | merge candidate 映射矩阵 |
+| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-backfill-record-template.md` | 回填记录模板 |
+| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-backfill-001.md` | 首轮回填实例 |
+| `TriCompany-copilot-host-assets/docs/workflow/ipd-company-baseline-checklist.md` | 基线治理清单（本身是 D 层，但定义 A/B/C/D 分层规则） |
 
 ### 2.5 培训层补充
 
-| 文件 | 角色 |
-|------|------|
-| `TriCompany/docs/training/ipd-usage-guide.md` | IPD 使用教程（面向 RAndDTrainer 与新人） |
-| `TriCompany/docs/training/IPD CASE术语.md` | IPD Case 字段详解（case 结构、entryCheckpoint、stageFit 等） |
-| `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | CLI 与代码工作流程小白教程 |
+| 文件（源侧） | 文件（发布侧） | 角色 |
+|------|------|------|
+| `TriCompany/docs/training/ipd-usage-guide.md` | `TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md` | IPD 使用教程（面向 RAndDTrainer 与新人） |
+| `TriCompany/docs/training/IPD CASE术语.md` | `TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md` | IPD Case 字段详解（case 结构、七槽位、Web3 签名、心跳卡点） |
+| `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | `TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | CLI 与代码工作流程小白教程（含心跳 CLI 命令） |
 
 ---
 
@@ -123,14 +125,14 @@ CEO freeform 需求
 ┌──────────────┐   总助 CLI: task-intake
 │  task-intake │   生成 case.json + intake-brief.json + clarificationSheet
 └──────┬───────┘   处理方: CEOChiefOfStaff（补槽位）
-       │
-       ▼
-┌──────────────┐   总助 CLI: init
+       │               ▲
+       ▼               │  TriMC heartbeat 扫描:
+┌──────────────┐   总助 CLI: init          · 七槽位不全 → ALERT
 │     init     │   把 intake briefing 精调成可签版，补齐 7 个槽位
 └──────┬───────┘   处理方: CEOChiefOfStaff
-       │
-       ▼
-┌──────────────────┐   CLI: intake-approve
+       │               ▲
+       ▼               │  TriMC heartbeat 扫描:
+┌──────────────────┐   CLI: intake-approve     · intake 待审批 > 24h → ALERT
 │  intake-approve  │   顺序: CEO 先签 → CEOChiefOfStaff 验证并签发
 └──────┬───────────┘   处理方: CEO + CEOChiefOfStaff（web3 签名）
        │               未通过 → paused-intake-clarification（回 ceo-demand）
@@ -139,11 +141,11 @@ CEO freeform 需求
 │  caseCategory 分支 │
 └──────┬───────────┘
        │
-  ┌────┴────┐
-  │         │
-  ▼         ▼
-process-   project-
-improve-   delivery
+  ┌────┴────┐              ▲
+  │         │              │  TriMC heartbeat 扫描:
+  ▼         ▼              │  · stage 审批待签 > 48h → ALERT
+process-   project-        │  · stage 无产出 > 72h → ALERT
+improve-   delivery        │  · stage 被 reject → ERROR
 ment       (十阶段)
 (敏捷六段)
 ```
@@ -197,6 +199,50 @@ ment       (十阶段)
 | **Deployment** | DEPLOYMENT | QA 通过产物 + 部署清单 | **businessOwner**: CTO<br>**moduleExecutor**: TriDev<br>**参与**: COO、CFO | 部署证据、发布说明、rollout plan、CI/CD/Docker/K8s 资产 |
 | **Assurance** | ASSURANCE | Deployment 产物与环境 | **businessOwner**: CTO<br>**moduleExecutor**: TriDev<br>**参与**: COO、CFO | Assurance 报告、runtime observation、recovery validation、残余风险追踪 |
 | **Delivery** | DELIVERY | 所有 Assurance 通过产物 | **businessOwner**: CPO<br>**moduleExecutor**: TriDev<br>**参与**: CEO、COO、CFO、CTO | final delivery manifest、final delivery report、版本化 gate package |
+
+---
+
+### 3.4 TriMC 心跳监控（Heartbeat）
+
+TriMC 的心跳扫描器（`TriMC/src/heartbeat/`）对所有 IPD case 做定期卡点检测，生成 findings 并在总助会话中主动推送。
+
+#### 三种卡点检测
+
+| 卡点 | 阈值 | 严重度 | 检测条件 |
+|------|------|--------|----------|
+| Intake 待审批 | 24 小时 | ALERT | 七槽位不全、或 CEO/总助未签核 |
+| Stage 审批待签 | 48 小时 | ALERT | 阶段已 submit 但无人签核 |
+| Stage 无产出 | 72 小时 | ALERT | 阶段 in-progress 但不提交产物 |
+| Stage 被 reject | — | ERROR | 任意阶段被驳回 |
+
+#### 使用方式
+
+```bash
+# 扫描所有 case
+python TriMC/src/heartbeat/cli.py
+
+# 扫描指定 case
+python TriMC/src/heartbeat/cli.py --case-id IPD-20260610-PLATFORM-001
+
+# JSON 输出（用于脚本）
+python TriMC/src/heartbeat/cli.py --json
+```
+
+#### 与总助的联动
+
+- 总助（小贾）在每次会话开始时可选执行心跳扫描
+- 有 ALERT/ERROR findings 时自动纳入当前会话待办
+- 编排仍由总助手动控制，方便调试阶段观察每条 case 的卡点状态
+- 正式宿主阶段可接入 daemon/cron 实现自动定时扫描
+
+#### 数据模型
+
+核心输出对象：
+- `CaseSnapshot`：单条 case 的即时快照（caseId、status、currentStage、七槽位状态、最新 event 时间）
+- `Finding`：单条卡点发现（severity、reason、stuckDetail）
+- `HeartbeatReport`：一次扫描的汇总报告（scanTime、totalCases、findings[]）
+
+详见 `TriMC/src/heartbeat/models.py`。
 
 ---
 
@@ -312,6 +358,7 @@ knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/<case-id>/
 - CMO/CPO/COO/CFO/CTO 已上岗，但不代表完整授权矩阵、自动数据管道或自动财务系统已完成。
 - TriDev 已具备 Copilot-host 本地开发执行可靠性切片，但不代表 ten-stage phase engine 在 source-side 全量拆开。
 - autopilot 可自动执行十阶段链路并对接 TriDev 产物，但 PRD 分叉并行、多分支 delivery 聚合、完整岗位 adapter 仍未完成。
+- **TriMC heartbeat 已接入**：心跳扫描器可手动/会话触发检测所有 IPD case 的卡点；编排和通知层由总助（小贾）手动协调，尚未接入 daemon 自动定时触发。
 - 涉及正式宿主边界、长期模块边界或商业模式裁决时，应升级 `BusinessStrategy`。
 
 ---
@@ -320,11 +367,12 @@ knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/<case-id>/
 
 | 文档 | 路径 |
 |------|------|
-| IPD 主流程真源 | `TriCompany/docs/workflow/integrated-product-development-flow.md` |
-| IPD 基线清单 | `TriCompany/docs/workflow/ipd-company-baseline-checklist.md` |
-| IPD 使用教程 | `TriCompany/docs/training/ipd-usage-guide.md` |
-| IPD Case 字段术语 | `TriCompany/docs/training/IPD CASE术语.md` |
-| CLI 小白教程 | `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md` |
+| IPD 主流程真源 | `TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md` |
+| IPD 基线清单 | `TriCompany-copilot-host-assets/docs/workflow/ipd-company-baseline-checklist.md` |
+| IPD 使用教程 | `TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md` |
+| IPD Case 字段术语 | `TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md` |
+| CLI 小白教程 | `TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md` |
+| TriMC 心跳监控 | `TriMC/src/heartbeat/`（`models.py`、`checker.py`、`cli.py`） |
 | Phase IO 矩阵 | `TriMetaverse/docs/workflow/phase-io-matrix.md` |
 | 经营-研发桥接 | `TriMetaverse/docs/workflow/tricompany-phase-bridge.md` |
 | 项目十阶段流程 | `TriMetaverse/project.md` |
