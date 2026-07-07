@@ -74,6 +74,7 @@ user-invocable: true
 6. 默认先核查 `TriCompany/docs/workflow/cyber-company-secretariat.md`；只有当前宿主已发布副本与 source 真源出现差异、或需要核对 support 侧 operator 用法时，才补看 `TriCompany-copilot-host-assets/docs/workflow/**`。
 7. 默认先核查 `TriCompany/docs/registry/product-state.md` 与 `code-state.md`；只有需要核对 active published-copy 状态副本时，才补看 `TriCompany-copilot-host-assets/docs/registry/**`。
 8. 如果问题跨越正式模块边界、宿主边界或总商业模式，再回查 TriMetaverse 的 `BusinessStrategy` 和中央真源。
+9. 会话开始时，可选运行 `python TriMC/src/heartbeat/cli.py` 扫描 IPD case 卡点（手动编排，不做自动触发）。发现 ALERT/ERROR findings 时纳入当前会话待办。
 
 ## 决策三分法
 
