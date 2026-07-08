@@ -8,10 +8,11 @@
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md
+- sourceOfTruth: TriCompany/docs/training/ipd-usage-guide.md
+- publishedFrom: TriCompany/docs/training/ipd-usage-guide.md
 - syncMode: source-only
-- publishTier: source-only
-- syncRule: IPD runtime engine（ipd_case_engine.py）或 CLI（chief_of_staff_ipd_case.py）发生稳定语义变更后，本教程应在同轮或下一轮追平；纯措辞修正不强制触发
+- publishTier: published-copy
+- syncRule: source 稳定语义变更后，本 published-copy 需在同轮或下一轮追平；纯措辞修正不强制触发
 - lastSyncedAt: 2026-07-09
 - lastSyncedCommit: 9793ee8e
 

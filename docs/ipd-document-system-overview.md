@@ -17,9 +17,9 @@
   - TriCompany-copilot-host-assets/docs/workflow/ipd-company-baseline-checklist.md（基线分层与回写顺序）
   - TriCompany-copilot-host-assets/runtime/cognition/ipd_case_engine.py（stage contract 与自动化执行真源）
   - TriCompany-copilot-host-assets/runtime/cognition/chief_of_staff_ipd_case.py（CLI 调度入口）
-  - TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md（IPD 使用教程）
-  - TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md（case 字段术语）
-  - TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md（CLI 小白教程）
+  - TriCompany/docs/training/ipd-usage-guide.md（IPD 使用教程，源；发布副本见 TriCompany-copilot-host-assets/）
+  - TriCompany/docs/training/IPD CASE术语.md（case 字段术语，源；发布副本见 TriCompany-copilot-host-assets/）
+  - TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md（CLI 小白教程，源；发布副本见 TriCompany-copilot-host-assets/）
   - TriMetaverse/docs/workflow/phase-io-matrix.md（十阶段 IO 矩阵）
   - TriMetaverse/docs/workflow/tricompany-phase-bridge.md（经营-研发桥接）
   - TriMC/src/heartbeat/（TriMC IPD 心跳监控实现）
@@ -107,11 +107,13 @@ D 层：操作与实例面 ── 真实回填、through-pass 执行、批次记
 
 ### 2.5 培训层补充
 
-| 文件（源侧） | 角色 |
-|------|------|
-| `TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md` | IPD 使用教程（面向 RAndDTrainer 与新人；source-only，无独立 source/published 双线） |
-| `TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md` | IPD Case 字段详解（case 结构、七槽位、Web3 签名、心跳卡点；source-only） |
-| `TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | CLI 与代码工作流程小白教程（含心跳 CLI 命令；source-only） |
+培训文档为 source → published-copy 双仓库结构：
+
+| 文件（源侧 sourceOfTruth） | 发布侧 published-copy | 角色 |
+|------|------|------|
+| `TriCompany/docs/training/ipd-usage-guide.md` | `TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md` | IPD 使用教程（面向 RAndDTrainer 与新人） |
+| `TriCompany/docs/training/IPD CASE术语.md` | `TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md` | IPD Case 字段详解（case 结构、七槽位、Web3 签名、心跳卡点） |
+| `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | `TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | CLI 与代码工作流程小白教程 |
 
 ---
 
@@ -364,9 +366,9 @@ knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/<case-id>/
 |------|------|
 | IPD 主流程真源 | `TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md` |
 | IPD 基线清单 | `TriCompany-copilot-host-assets/docs/workflow/ipd-company-baseline-checklist.md` |
-| IPD 使用教程 | `TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md` |
-| IPD Case 字段术语 | `TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md` |
-| CLI 小白教程 | `TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md` |
+| IPD 使用教程 | `TriCompany/docs/training/ipd-usage-guide.md`（源）；`TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md`（发布） |
+| IPD Case 字段术语 | `TriCompany/docs/training/IPD CASE术语.md`（源）；`TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md`（发布） |
+| CLI 小白教程 | `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md`（源）；`TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md`（发布） |
 | TriMC 心跳监控 | `TriMC/src/heartbeat/`（`models.py`、`checker.py`、`cli.py`） |
 | Phase IO 矩阵 | `TriMetaverse/docs/workflow/phase-io-matrix.md` |
 | 经营-研发桥接 | `TriMetaverse/docs/workflow/tricompany-phase-bridge.md` |
