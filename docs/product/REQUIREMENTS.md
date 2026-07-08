@@ -1,11 +1,9 @@
-﻿# TriMetaverse 需求基线
+# TriMetaverse 需求基线
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/product/REQUIREMENTS.md
-- publishedFrom: TriCompany/docs/product/REQUIREMENTS.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 - 当前状态：当前为中央发布侧需求摘要页。

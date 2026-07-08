@@ -1,11 +1,9 @@
-﻿# TriMetaverse 执行层说明
+# TriMetaverse 执行层说明
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/execution/README.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 - 当前状态：当前为中央真源与治理摘要仓。

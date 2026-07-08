@@ -9,11 +9,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/arch-storage-migration.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
-- supportPublishedCopy: 暂无（当前未建立 active published-copy）
-- supportSyncRule: 若后续建立 support/live published-copy，必须由当前 source 稳定语义单向发布，不得在发布副本侧直接改写
 - lastSyncedAt: 2026-06-06
 
 ## 文档定位与上游依赖

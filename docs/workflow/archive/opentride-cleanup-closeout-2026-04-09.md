@@ -1,18 +1,16 @@
-﻿# Opentride 目录清理收尾记录
+# Opentride 目录清理收尾记录
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/archive/opentride-cleanup-closeout-2026-04-09.md
-- publishedFrom: 当前文件（audit record）
 - syncMode: audit-record
-- publishTier: audit-record
 - lastSyncedAt: 2026-06-04
 
 ## 1. 当前结论
 
-- 新的 `Tride` 工作树已在 `d:\OneDrive\Code\ai\Tride` 建立并继续作为当前活跃主仓使用。
+- 新的 `Tride` 工作树已在 `<父目录>\Tride` 建立并继续作为当前活跃主仓使用。
 - `Tride` 工作树的 `origin` 已切换到 `https://github.com/MoRen9527/Tride.git`。
-- 旧目录 `d:\OneDrive\Code\ai\Opentride` 已从工作区根路径删除。
+- 旧目录 `<父目录>\Opentride` 已从工作区根路径删除。
 
 ## 2. 处理过程摘要
 
@@ -27,8 +25,8 @@
 
 ## 3. 最终状态
 
-- `Test-Path d:\OneDrive\Code\ai\Opentride` 返回 `False`。
-- `Test-Path d:\OneDrive\Code\ai\Tride` 返回 `True`。
+- `Test-Path <父目录>\Opentride` 返回 `False`。
+- `Test-Path <父目录>\Tride` 返回 `True`。
 - 活跃 workspace 与 TriPilot 本地配置已切到 `Tride` 路径。
 
 ## 4. 边界说明

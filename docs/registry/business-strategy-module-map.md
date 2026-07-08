@@ -1,11 +1,9 @@
-﻿# Business Strategy Module Map
+# Business Strategy Module Map
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/business-strategy-module-map.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse 中央模块映射 registry 的本地真源，只维护模块商业职责、成熟度、registry 路由和中央选型映射；它不是 TriCompany 公司级 workflow 书面真源。

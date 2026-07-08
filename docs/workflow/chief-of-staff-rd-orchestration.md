@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
-- publishedFrom: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-07-08
 
 ## 1. 文档定位

@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/ISSUE_WORKFLOW_GUIDE.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse Issue 工作流使用说明的本地真源，用于说明当前项目的 issue 模板与任务管理方式；它不是 TriCompany 公司级 workflow 或产品真源。

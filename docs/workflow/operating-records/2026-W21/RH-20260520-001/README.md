@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/operating-records/2026-W21/RH-20260520-001/README.md
-- publishedFrom: 当前文件（audit record）
 - syncMode: audit-record
-- publishTier: audit-record
 - lastSyncedAt: 2026-06-04
 
 本目录用于存放 `RESPONSIBILITY_HANDOFF` 的首条真实 operating record。

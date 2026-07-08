@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/training/tricompany/04-ceo-chief-of-staff-全链路案例.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 为什么用 CEOChiefOfStaff 做样板
@@ -83,7 +81,7 @@ live_entry_ref = "TriMetaverse/.github/agents/ceo-chief-of-staff.agent.md"
 
 1. 总助对象集已经被显式命名和版本化。
 2. 当前 live 入口是“沿用已有入口，不改身份”。
-3. 当前宿主阶段是 `current-copilot-host-live`，不是 TriMC 正式宿主。
+3. 当前宿主阶段是 `current-copilot-host-live`（Copilot-host 本地手动版），不是 TriMC 服务器正式版。
 4. 现役 live 入口就在 `TriMetaverse/.github/agents/ceo-chief-of-staff.agent.md`。
 
 同一个定义里还有一条很关键的说明：旧 `knowledge/chief-of-staff` 兼容路径已经退役，当前 support payload 只落在新的 role / employee workspace 结构下。这意味着总助已经从历史兼容路径转入统一员工对象体系。

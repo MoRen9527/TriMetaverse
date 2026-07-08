@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/training/tricompany/appendix-a-工件清单与引用规则.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 为什么要有这个附录
@@ -49,7 +47,7 @@ TriCompany 培训最怕的不是内容不够多，而是“讲得很顺，但不
 
 只要你看到以下词，就要提高警惕：
 
-- `TriMC` 正式宿主
+- `TriMC` 服务器正式版
 - 正式授权矩阵
 - 链上透明结算
 - 全自动治理

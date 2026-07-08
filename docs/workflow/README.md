@@ -1,11 +1,9 @@
-﻿# WorkflowEngine Assets
+# WorkflowEngine Assets
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/README.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 本目录提�?`project.md` 的可执行化资产，用于 `TriMC` 统一运行面串行推�?10 阶段研发流程，并支持阶段内子 Agent 并行�?

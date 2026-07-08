@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/responsibility-handoff-intake-template.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 本模板用于在岗位启用、职责移交、acting owner 切换或 completion tracking 需要结构化跟踪时，发起一次标准 `RESPONSIBILITY_HANDOFF` 请求。

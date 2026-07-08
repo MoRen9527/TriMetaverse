@@ -1,11 +1,9 @@
-﻿# TriMetaverse 技术状态
+# TriMetaverse 技术状态
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/engineering/STATE.md
-- publishedFrom: TriCompany/docs/engineering/STATE.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 - 当前状态：当前为中央发布侧技术状态摘要页。

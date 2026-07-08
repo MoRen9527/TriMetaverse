@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/core-agent-to-trimc-migration-checklist.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse `core-agent -> TriMC` 迁移清单的本地真源，用于维护迁移顺序、落位建议和约束判断；它不是 TriCompany 公司级 workflow 或产品真源。

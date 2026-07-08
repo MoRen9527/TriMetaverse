@@ -62,4 +62,4 @@ Set-Location .
 ## 常用变体
 - 只创建 intake：`.\tmv.cmd dev-task --intake-only "任务描述"`
 - CEO 人工签核暂停：`.\tmv.cmd dev-task --manual-ceo-signoff "任务描述"`
-- 显式指定 TriDev：`.\tmv.cmd dev-task --tridev-root D:\OneDrive\Code\ai\TriDev "任务描述"`
+- 显式指定 TriDev：`.\tmv.cmd dev-task --tridev-root ../TriDev "任务描述"`

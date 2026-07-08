@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/archive/workflow-vs-super-dev-first-comparison.md
-- publishedFrom: 当前文件（audit record）
 - syncMode: audit-record
-- publishTier: audit-record
 - lastSyncedAt: 2026-06-04
 
 ## 0. 历史术语对齐说明（2026-04-09）

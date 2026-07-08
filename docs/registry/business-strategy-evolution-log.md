@@ -1,11 +1,9 @@
-﻿# Business Strategy Evolution Log
+# Business Strategy Evolution Log
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/business-strategy-evolution-log.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: audit-record
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse 中央商业策略演化日志的本地真源，用于记录显式策略变动和其影响模块，归入 registry 层审计留痕；它不是 TriCompany 公司级 workflow 书面真源。

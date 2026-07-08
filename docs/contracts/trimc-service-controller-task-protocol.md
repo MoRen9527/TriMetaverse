@@ -1,11 +1,9 @@
-﻿# TriStaciss 到 TriMC Service Controller 任务协议草案
+# TriStaciss 到 TriMC Service Controller 任务协议草案
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/contracts/trimc-service-controller-task-protocol.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse 跨模块任务投递协议的本地真源，用于定义 TriStaciss 到 TriMC Service Controller 的任务契约；它不是 TriCompany 公司级 workflow 或产品真源。

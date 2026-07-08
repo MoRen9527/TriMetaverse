@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriTraining/docs/training/employee-host-publish-pipeline-lab-manual.md
-- publishedFrom: TriTraining/docs/training/employee-host-publish-pipeline-lab-manual.md
 - syncMode: published-copy
-- publishTier: central-training-lab
 - lastSyncedAt: 2026-06-14
 
 版本：V0.2

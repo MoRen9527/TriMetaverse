@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/operating-records/项目级 AI 共学周记/automation-backlog.md
-- publishedFrom: 当前文件（audit record）
 - syncMode: audit-record
-- publishTier: audit-record
 - lastSyncedAt: 2026-06-04
 
 状态：待实现

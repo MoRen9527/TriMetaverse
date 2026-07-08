@@ -1,11 +1,9 @@
-﻿# CTO / CPO Review 后的优化方向
+# CTO / CPO Review 后的优化方向
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/training/tricompany/05-cto-cpo-review-后的优化方向.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## 1. 这份升级清单解决什么问题
@@ -37,7 +35,7 @@ CPO 给 training 的核心要求可以总结为三句：
 CTO 对 training 的关注点更偏工程纪律，尤其强调四件事：
 
 1. **source -> publish -> live 链必须显式**，不能让 support bundle 或 live 入口被误当真源。
-2. **当前 Copilot-host 阶段与未来 TriMC 正式宿主切换必须严格区分**。
+2. **当前 Copilot-host 本地手动版阶段与未来 TriMC 服务器正式版上线必须严格区分**。
 3. **validation、manifest、binding、runtime namespace、audit** 这些机器层对象必须持续增强。
 4. 现有总助样板很重要，但不能让整个系统长期压在总助单点上。
 
@@ -46,7 +44,7 @@ CTO 对 training 的关注点更偏工程纪律，尤其强调四件事：
 - 让更多岗位具备完整 source kit scaffold、validator 与 binding profile 链。
 - 让更多岗位具备类似总助的 wiki spec / page spec / audit / workbench 体系。
 - 让 support bundle 更接近单向发布物，减少 source 与 support 双写感。
-- 让 `TriModel` 与未来 `TriMC` 的正式宿主切换条件更明确、更可验证。
+- 让 `TriModel` 与未来 `TriMC` 服务器正式版的上线条件更明确、更可验证。
 - 让 handoff checklist、completion tracking、owner signoff、host readiness 等门禁更标准化。
 
 ## 4. 当前最值得推进的几项升级
@@ -80,5 +78,5 @@ CTO 对 training 的关注点更偏工程纪律，尤其强调四件事：
 
 ## 6. 本章小结
 
-如果把本章压缩成一句话，就是：**CPO 要求 TriCompany 先证明自己是一个能赚钱、能交付、能复盘的经营载体；CTO 要求这套经营载体的岗位、发布、宿主与审计链都足够硬，能为未来正式宿主和更强自动化留出清晰升级路径。**  
+如果把本章压缩成一句话，就是：**CPO 要求 TriCompany 先证明自己是一个能赚钱、能交付、能复盘的经营载体；CTO 要求这套经营载体的岗位、发布、宿主与审计链都足够硬，能为未来 TriMC 服务器正式版和更强自动化留出清晰升级路径。**  
 这两条要求叠加起来，正好定义了 TriCompany 下一阶段该怎么继续长。

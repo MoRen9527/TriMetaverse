@@ -1,11 +1,9 @@
-﻿# TriMetaverse 项目定位
+# TriMetaverse 项目定位
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/product/PROJECT.md
-- publishedFrom: TriCompany/docs/product/PROJECT.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 - 模块定位：中央战略仓与项目级真源约束层

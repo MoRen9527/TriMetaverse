@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/operating-records/项目级 AI 共学周记/README.md
-- publishedFrom: 当前文件（audit record）
 - syncMode: audit-record
-- publishTier: audit-record
 - lastSyncedAt: 2026-06-04
 
 本目录用于归档已经由 CEO 确认签发的项目级 AI 共学周记，便于后续按周查阅、复盘和对外分享。

@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/architecture-socialfi-core-agent-tristaciss.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-07-03
 
 当前文件是 TriMetaverse 局部目标架构图的本地真源，用于维护 `SocialFi / TriMC / TriStaciss` 三层职责讲解；其中原 `Core-Agent` 已废弃，其 observability 子系统已迁入 `TriMC/src/observability/`（迁移清单见 `docs/core-agent-to-trimc-migration-checklist.md`）。本文不是 TriCompany 公司级 workflow 或产品真源。

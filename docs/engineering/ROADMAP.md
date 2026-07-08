@@ -1,11 +1,9 @@
-﻿# TriMetaverse 技术路线图
+# TriMetaverse 技术路线图
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/engineering/ROADMAP.md
-- publishedFrom: TriCompany/docs/engineering/ROADMAP.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 - 当前状态：当前为中央发布侧技术路线摘要页。

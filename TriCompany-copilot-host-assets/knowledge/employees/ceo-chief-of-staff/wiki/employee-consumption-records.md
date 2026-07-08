@@ -58,12 +58,12 @@
 ### ChiefProductOfficer（小乔）
 
 - 当前状态：当前 Copilot-host live 阶段已上岗。
-- 当前接管入口：默认接管 `TriCompany/docs/product` 与 `TriCompanyProductRegistry`；如当前宿主仍依赖 active published-copy，再补看 `TriCompany-copilot-host-assets/docs/product`。
+- 当前接管入口：接管 `TriCompany/docs/product` 与 `TriCompanyProductRegistry`。文档真源统一在 TriCompany 源侧维护。
 
 ### ChiefTechnologyOfficer（小狄）
 
 - 当前状态：当前 Copilot-host live 阶段已上岗。
-- 当前接管入口：默认接管 `TriCompany/docs/engineering`、`TriCompanyCodeRegistry` 和当前 Copilot-host / TriMetaverse 宿主侧的 Hermes 版总助优化；如当前宿主仍依赖 published-copy、runbook 或 phase evidence，再补看 `TriCompany-copilot-host-assets/docs/engineering`。
+- 当前接管入口：接管 `TriCompany/docs/engineering`、`TriCompanyCodeRegistry` 和当前 Copilot-host / TriMetaverse 宿主侧的 Hermes 版总助优化。文档真源统一在 TriCompany 源侧维护。
 
 ### RAndDTrainer（小吴）
 

@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/contracts/observability-event-mapping.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse observability 事件映射协议的本地真源，用于定义统一事件模型与映射规则；它不是 TriCompany 公司级 workflow 或产品真源。

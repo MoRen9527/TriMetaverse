@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriTraining/docs/training/README.md
-- publishedFrom: TriTraining/docs/training/README.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-14
 
 ## 1. 课程包定位
@@ -31,7 +29,7 @@
 - 当前 trainer 角色启用：`TriCompany / RAndDTrainer`
 - 平台产品与架构真源：`TriMetaverse/docs/product/tritraining-platform-concept.md` 与 `TriMetaverse/docs/engineering/tritraining-platform-architecture.md`
 
-当前讲义包先服务 Web 优先的 Phase A 培训学院切片；这描述的是当前落地节奏，不改变 `TriTraining` 作为培训学院主承载模块的命名与实现归属。现有课程正文若仍带有从 `TriCompany` 抽出的历史 `publishedFrom` 痕迹，属于迁移中的内容来源说明；后续应逐步回链到 `TriTraining/docs/training/`。
+当前讲义包先服务 Web 优先的 Phase A 培训学院切片；这描述的是当前落地节奏，不改变 `TriTraining` 作为培训学院主承载模块的命名与实现归属。现有课程正文若仍带有从 `TriCompany` 抽出的历史 `publishedFrom` 痕迹，属于迁移中的内容来源说明（该字段已于 2026-07-08 随 published-copy 层移除而退役）；后续应逐步回链到 `TriTraining/docs/training/`。
 
 ## 3. 首批课程
 

@@ -7,9 +7,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/workflow/cyber-company-secretariat.md
-- publishedFrom: TriCompany/docs/workflow/cyber-company-secretariat.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 ---

@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/runs/README.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: audit-record
 - lastSyncedAt: 2026-06-04
 
 ## 1. 目标

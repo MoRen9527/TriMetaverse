@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/github-repo-governance.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-07-08
 
 当前文件是 TriMetaverse 公司级 GitHub 仓库治理规则的中央摘要，汇总模块仓库清单、多仓 workspace 布局、分支策略、提交规范、PR 规则、仓库初始化、仓库健康巡检与多仓协同纪律。各子规范的详细原文以引用的上游真源为准；本页为中央收口层，不做替代。

@@ -1,11 +1,9 @@
-﻿# 赛博公司经营主工作流（TriCompany）
+# 赛博公司经营主工作流（TriCompany）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/tricompany-operating-workflow.md
-- publishedFrom: 当前文件（summary source）
 - syncMode: source-only
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 ## 1. 目标

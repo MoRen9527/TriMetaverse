@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/prd-ownership-routing-intake-template.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 本模板用于在 PRD 归属模块 / 项目、目标仓或目标 `docs/` 根不明确时，发起一次标准 `PRD_OWNERSHIP_ROUTING` 请求。

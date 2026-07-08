@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriTraining/docs/training/tritraining-ai-course-graph.md
-- publishedFrom: TriTraining/docs/training/tritraining-ai-course-graph.md
 - syncMode: published-copy
-- publishTier: central-training-course-graph
 - lastSyncedAt: 2026-06-14
 
 版本：V0.2

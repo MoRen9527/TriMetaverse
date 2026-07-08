@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/prd-branch-minimal-directory-template.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 目的：给目标模块或项目根提供一份可直接照着建的 `模块六层文档协同系统` 最小样板，使 `INTELLIGENCE` 审核通过后的 PRD 分支能在正确落位点上进入标准落地面。

@@ -1,13 +1,11 @@
-﻿<!-- markdownlint-disable MD022 MD024 MD031 MD032 -->
+<!-- markdownlint-disable MD022 MD024 MD031 MD032 -->
 
 # Observability（VibeCraft-inspired）Phase 2/3/4 Issue 包
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/observability-phase2-4-issue-pack.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse observability Phase 2/3/4 issue 包的本地真源，用于维护当前阶段的 issue 文本包与执行拆解；它不是 TriCompany 公司级 workflow 或产品真源。

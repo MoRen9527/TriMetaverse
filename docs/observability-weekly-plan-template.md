@@ -1,11 +1,9 @@
-﻿# Observability 周计划模板（文本甘特 + Owner）
+# Observability 周计划模板（文本甘特 + Owner）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/observability-weekly-plan-template.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse observability 周计划模板的本地真源，用于维护计划节奏、Owner 分工和任务跟踪样板；它不是 TriCompany 公司级 workflow 或产品真源。

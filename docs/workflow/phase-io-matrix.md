@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/phase-io-matrix.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 > 目的：用一页表格说明主线阶段与 PRD 分支阶段“读什么、判断什么、写什么、失败回哪”，并明确这些 PRD 分支如何通过 `模块六层文档协同系统` 落地。

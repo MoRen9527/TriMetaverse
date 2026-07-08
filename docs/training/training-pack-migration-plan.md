@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriTraining/docs/training/training-pack-migration-plan.md
-- publishedFrom: TriTraining/docs/training/training-pack-migration-plan.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-15
 
 ## 1. 文档定位

@@ -1,11 +1,9 @@
-﻿# 全栈测试框架与环境方案（R04）
+# 全栈测试框架与环境方案（R04）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/testing/fullstack-testing-framework-R04.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse 测试框架与环境方案的本地真源，用于维护跨模块测试分层、框架选型和治理建议；它不是 TriCompany 公司级 workflow 或产品真源。

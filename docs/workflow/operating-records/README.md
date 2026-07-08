@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/operating-records/README.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: audit-record
 - lastSyncedAt: 2026-06-29
 
 本目录用于存放赛博公司经营层的真实执行记录，与以下目录严格分开：

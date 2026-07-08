@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriTraining/docs/training/employee-source-kit-cli-lesson-contract.md
-- publishedFrom: TriTraining/docs/training/employee-source-kit-cli-lesson-contract.md
 - syncMode: published-copy
-- publishTier: central-training-lesson-contract
 - lastSyncedAt: 2026-06-14
 
 版本：V0.2

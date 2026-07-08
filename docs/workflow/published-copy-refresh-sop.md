@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/workflow/published-copy-refresh-sop.md
-- publishedFrom: TriCompany/docs/workflow/published-copy-refresh-sop.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-15
 
 ## 1. 文档定位

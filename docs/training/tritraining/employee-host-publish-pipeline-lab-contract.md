@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriTraining/docs/training/employee-host-publish-pipeline-lab-contract.md
-- publishedFrom: TriTraining/docs/training/employee-host-publish-pipeline-lab-contract.md
 - syncMode: published-copy
-- publishTier: central-training-lab-contract
 - lastSyncedAt: 2026-06-14
 
 版本：V0.2
@@ -114,7 +112,7 @@
 ## 8. 当前不写成已完成的事项
 
 1. 不写成 live discovery 已自动更新。
-2. 不写成 support payload 生成等于正式宿主切换。
+2. 不写成 support payload 生成等于 TriMC 服务器正式版上线。
 3. 不写成 runtime state 已被自动填充。
 
 ## 9. 来源线索

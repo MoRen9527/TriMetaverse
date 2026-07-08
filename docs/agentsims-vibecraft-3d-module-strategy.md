@@ -1,11 +1,9 @@
-﻿# 3D 模块策略：VibeCraft + AgentSims（统一模块，双子模式）
+# 3D 模块策略：VibeCraft + AgentSims（统一模块，双子模式）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/agentsims-vibecraft-3d-module-strategy.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse 3D 模块策略的本地真源，用于维护 `VibeCraft + AgentSims` 的统一模块判断和实施顺序；它不是 TriCompany 公司级 workflow 或产品真源。

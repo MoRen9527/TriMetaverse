@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/workflow/integrated-product-development-flow.md
-- publishedFrom: TriCompany/docs/workflow/integrated-product-development-flow.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-15
 
 ## 1. 目标

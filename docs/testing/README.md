@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/testing/README.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-15
 
 当前文件是 TriMetaverse `docs/testing/` 目录的本地索引真源，只负责说明当前中央测试治理页的定位与维护规则。它不是 TriCompany 公司级 workflow、product 或 engineering 书面主真源，也不替代具体测试报告、模块仓测试文档或 TriDev / TriTest 的实现真源。

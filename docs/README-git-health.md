@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/README-git-health.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-07-03
 
 当前文件是 TriMetaverse Git 巡检与自动修复说明的本地真源，用于维护当前多仓巡检脚本和修复脚本的使用口径；它不是 TriCompany 公司级 workflow 或产品真源。

@@ -1,11 +1,9 @@
-﻿# Vibecraft 融合方案（面向 3D Agent 可观测、培训、可解释维护）
+# Vibecraft 融合方案（面向 3D Agent 可观测、培训、可解释维护）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/vibecraft-integration-3d-agent.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse Vibecraft 融合专题的本地真源，用于维护 observability 融合方案和事件模型映射判断；它不是 TriCompany 公司级 workflow 或产品真源。

@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriTraining/docs/training/tritraining-trimetaverse-curriculum-architecture.md
-- publishedFrom: TriTraining/docs/training/tritraining-trimetaverse-curriculum-architecture.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-15
 
 ## 1. 文档定位

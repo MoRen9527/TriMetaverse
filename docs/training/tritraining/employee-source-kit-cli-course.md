@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriTraining/docs/training/employee-source-kit-cli-course.md
-- publishedFrom: TriTraining/docs/training/employee-source-kit-cli-course.md
 - syncMode: published-copy
-- publishTier: central-training-course
 - lastSyncedAt: 2026-06-14
 
 版本：V0.2

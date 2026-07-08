@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriTraining/docs/training/employee-host-publish-pipeline-course.md
-- publishedFrom: TriTraining/docs/training/employee-host-publish-pipeline-course.md
 - syncMode: published-copy
-- publishTier: central-training-course
 - lastSyncedAt: 2026-06-14
 
 版本：V0.2
@@ -45,7 +43,7 @@
 2. 定义驱动：真正决定输出的不是 CLI 文案，而是 `DECLARED_HOST_OBJECT_SETS` 与 `HostObjectSetDefinition`。
 3. 支撑载荷分层：support payload 是宿主消费面，不是 source truth，也不是 runtime memory。
 4. 绑定事实分层：binding profile 负责记录 host stage、live entry 和 support object 映射，不替代 live discovery 本身。
-5. 验证先行：发布链必须同时有 focused unittest 和 workflow 文档约束，避免把当前阶段写成正式宿主切换。
+5. 验证先行：发布链必须同时有 focused unittest 和 workflow 文档约束，避免把当前阶段写成 TriMC 服务器正式版上线。
 
 ## 4. 最小 MVP 路径
 
@@ -105,7 +103,7 @@ python -m runtime.cognition.employee_host_binding_profile_generation --help
 ## 8. 当前不写成已完成的事项
 
 1. 不写成 wrapper 会自动完成 live discovery 启用。
-2. 不写成所有员工对象发布已经等同正式宿主切换。
+2. 不写成所有员工对象发布已经等同 TriMC 服务器正式版上线。
 3. 不写成 runtime namespace 会在 support payload 生成时自动写入运行态内容。
 
 ## 9. 下一节课建议

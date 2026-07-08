@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md
-- publishedFrom: TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-15
 
 ## 1. 文档定位

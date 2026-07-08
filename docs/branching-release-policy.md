@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/branching-release-policy.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-06
 
 当前文件是 TriMetaverse 多仓 Git 分支与发布治理规范的本地真源，用于维护当前工作区的分支职责、发布闭环和保护规则；它不是 TriCompany 公司级 workflow 或产品真源。
@@ -98,7 +96,7 @@
 - 已需要区分“当前开发线”和“当前稳定真源”。
 
 ```powershell
-Set-Location 'D:\OneDrive\Code\ai\TriMetaverse'
+Set-Location .
 git checkout dev
 git pull --ff-only origin dev
 # 例：从已验证 commit 固定发布候选线
@@ -123,7 +121,7 @@ git push -u origin release/<yyyy-mm-dd-shortsha>
 建议命令：
 
 ```powershell
-Set-Location 'D:\OneDrive\Code\ai\Tride'
+Set-Location ../Tride
 git checkout dev
 git pull --ff-only origin dev
 git checkout -B release/<yyyy-mm-dd-shortsha> <validated-commit>
@@ -139,7 +137,7 @@ git push -u origin release/<yyyy-mm-dd-shortsha>
 建议命令：
 
 ```powershell
-Set-Location 'D:\OneDrive\Code\ai\vscodium'
+Set-Location ../vscodium
 git fetch --tags upstream --prune
 # 例：从 tag 固定发布线
 git checkout -B release/1.109.51242 refs/tags/1.109.51242

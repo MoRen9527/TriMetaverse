@@ -7,9 +7,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/tricompany-agent-roles.md
-- publishedFrom: 当前文件（summary source）
 - syncMode: source-only
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 ---

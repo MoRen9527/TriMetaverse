@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/refactor-master-plan-socialfi-core-agent-tristaciss.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-07-03
 
 当前文件是 TriMetaverse 总重构计划的本地真源，原用于维护 `SocialFi + Core-Agent + TriStaciss` 重构目标。**当前状态：Core-Agent 已废弃，其 observability 子系统已迁入 `TriMC/src/observability/`，TriMC 为现役服务域主控。** 本文保留作为历史参考；迁移清单见 `docs/core-agent-to-trimc-migration-checklist.md`。

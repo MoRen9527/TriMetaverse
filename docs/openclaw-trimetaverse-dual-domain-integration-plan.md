@@ -1,11 +1,9 @@
-﻿# OpenClaw 与 TriMetaverse 双域融合改造方案
+# OpenClaw 与 TriMetaverse 双域融合改造方案
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/openclaw-trimetaverse-dual-domain-integration-plan.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse `OpenClaw` 双域融合改造方案的本地真源，用于维护当前架构吸收判断和模块边界；它不是 TriCompany 公司级 workflow 或产品真源。

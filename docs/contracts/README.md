@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/contracts/README.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-15
 
 当前文件是 TriMetaverse contracts 目录的本地索引真源，只负责说明本目录下的协议、契约、DDL 草案、迁移顺序和 schema 资产如何分工。它不是 TriCompany 公司级 workflow 书面主真源，也不替代具体子页面各自声明的 source / summary / audit 边界。

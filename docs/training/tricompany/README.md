@@ -3,9 +3,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/training/README.md
-- publishedFrom: TriCompany/docs/training/README.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-04
 
 ## 1. 培训包定位
@@ -27,7 +25,7 @@
 本培训包是导读层，不是项目真源替代品。阅读时请始终记住下面四条：
 
 1. `赛博公司 / cyber company` 是通用概念名；`TriCompany` 是它在本项目中的具体产品名。
-2. 当前 live 仍是 `Copilot-host` 阶段，不等于 `TriMC` 正式宿主切换完成。
+2. 当前 live 仍是 `Copilot-host` 本地手动版阶段，不等于 `TriMC` 服务器正式版上线完成。
 3. `TriCompany-copilot-host-assets` 是当前宿主支撑包与发布副本集合，不是第二真源。
 4. 运行态记忆、wiki、audit 与 workbench 不等于源码真源；training 里看到的运行对象，必须回链到其 source 规则。
 
@@ -39,7 +37,7 @@
 - **过渡态**：链路已设计、局部已落地，但仍需更多验证、签字或宿主升级。
 - **目标态**：CTO / CPO 联审后确认值得推进的方向，但目前还不能写成已完成。
 
-如果正文里出现 `TriMC 正式宿主`、`完整授权矩阵`、`全自动治理`、`链上透明结算` 等词，请优先检查它落在“目标态”还是“当前态”栏目。
+如果正文里出现 `TriMC 服务器正式版`、`完整授权矩阵`、`全自动治理`、`链上透明结算` 等词，请优先检查它落在"目标态"还是"当前态"栏目。
 
 ## 4. 推荐阅读顺序
 

@@ -1,11 +1,9 @@
-﻿# SocialFi 目录与部署决策（服务域）
+# SocialFi 目录与部署决策（服务域）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/socialfi-repo-layout-decision.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse `SocialFi` 目录与部署决策的本地真源，用于维护服务域落位、边界和执行约束；它不是 TriCompany 公司级 workflow 或产品真源。

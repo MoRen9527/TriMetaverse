@@ -1,11 +1,9 @@
-﻿# TriModel Provider/Model 配置与 PC 端软件接入清单
+# TriModel Provider/Model 配置与 PC 端软件接入清单
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/tride-model-adoption-checklist.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## 1. 目的

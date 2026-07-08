@@ -1,22 +1,20 @@
 # TriCompany Copilot Host 资产治理方案
 
-版本：V0.1
-日期：2026-04-28
-状态：当前阶段治理基线（执行中；首轮 runtime / ignore 收敛已完成）
+版本：V0.2
+日期：2026-07-08
+状态：简化后治理基线（published-copy 层已于 2026-07-08 按 CPO/CTO 批准正式移除；文档真源统一在 TriCompany 源侧维护，支撑包只承载 runtime/knowledge/manifest）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/tricompany-copilot-host-assets-governance.md
-- publishedFrom: 当前文件（summary source）
 - syncMode: source-only
-- publishTier: release-side-summary
-- lastSyncedAt: 2026-06-03
+- lastSyncedAt: 2026-07-08
 
 ## 1. 文档定位
 
 本文用于收敛当前阶段 `TriCompany` 源仓、`TriCompany-copilot-host-assets` 支撑包、`TriMetaverse/.github` live 宿主入口与 `TriMetaverse/docs` 中央文档层之间的资产关系、owner 边界与同步纪律。
 
-当前文件只承担 TriMetaverse 发布侧治理摘要职责。它总结的是当前宿主、support root、live entry 与中央文档层之间的治理关系；涉及 published-copy 发布流程、host object 发布流程、源侧岗位 / 员工定义与 support payload 生成时，仍以 TriCompany 的 `published-copy-refresh-sop.md`、`host-object-publish-flow.md`、相关 workflow/engineering/runtime 真源为准。
+当前文件只承担 TriMetaverse 发布侧治理摘要职责。它总结的是当前宿主、support root、live entry 与中央文档层之间的治理关系；涉及 host object 发布流程、源侧岗位 / 员工定义与 support payload 生成时，仍以 TriCompany 的 `host-object-publish-flow.md`、相关 workflow/engineering/runtime 真源为准。published-copy 文档层已于 2026-07-08 正式移除，文档真源统一在 `../TriCompany/docs/` 维护，不再通过支撑包副本同步。
 
 本文解决四类问题：
 
@@ -53,15 +51,17 @@
 
 ## 3. 当前混乱的根因
 
-### 3.1 真源和发布包没有被制度性区分
+### 3.1 真源和支撑包的职责已收敛
 
-- `TriCompany/` 与 `TriCompany-copilot-host-assets/` 当前都承载了 `docs/`、`runtime/`、`vendor/` 的同职责内容。
-- 一部分内容已经在支撑包内继续演化，但没有明确回写到模块真源，导致支撑包开始承担“影子真源”职责。
+- `TriCompany/` 是文档真源；`TriCompany-copilot-host-assets/` 已不再承载 `docs/product/`、`docs/engineering/`、`docs/registry/`、`docs/workflow/` 文档副本。
+- 支撑包当前只承载 `runtime/`、`knowledge/`、`vendor/` 与 `host-object-manifest.json`，不再承担"影子真源"风险。
+- 文档类修改统一在 TriCompany 源侧进行，支撑包 runtime/knowledge 对象按 host-object 发布流程单向生成。
 
-### 3.2 当前 live 宿主与模块研发仓之间缺少单向发布纪律
+### 3.2 当前 live 宿主与模块研发仓之间的单向纪律已简化
 
 - `TriMetaverse/.github/` 已经是 live 入口。
-- 但模块源仓、支撑包、live 入口之间缺少统一的“谁发布、谁吸收、谁只读”的纪律，导致回迁、吸收、回滚和继续迭代混在一起。
+- 文档层面已取消 published-copy 发布环节；agent 前置核查直接读 TriCompany 源侧文档。
+- host object（knowledge、manifest）仍按单向发布纪律从 TriCompany 源侧生成到支撑包。
 
 ### 3.3 中央层文档和模块层文档的职责被打穿
 
@@ -89,7 +89,7 @@
 | 层 | 位置 | 角色 | 主 owner | 允许写入方式 | 同步方向 |
 | --- | --- | --- | --- | --- | --- |
 | 模块真源层 | `TriCompany/` | `TriCompany/` 仓内的模块研发真源；顶层以 `.github`、`docs`、`runtime`、`vendor` 等资产面组织，`docs/` 内部再按 `product`、`engineering`、`registry`、`workflow`、`execution` 等同级子域分层 | `TriCompany` 模块 owner；当前阶段由 `CEOChiefOfStaff` 协调，后续交给 `ChiefProductOfficer` / `ChiefTechnologyOfficer` | 允许正常研发、改文档、改代码、改模块内 `.github` | 向支撑包和 live 宿主单向发布 |
-| 宿主支撑包层 | `TriMetaverse/TriCompany-copilot-host-assets/` | 当前 `copilot chat` 正式接管所需 support root、发布副本、验证入口、执行证据、baseline 与回滚材料 | 当前阶段由 `CEOChiefOfStaff` 协调，技术内容由 `TriCompanyCodeRegistry` 护栏 | 原则上只接受从 `TriCompany/` 发布或从 live 宿主沉淀回来的审计 / baseline 证据；不允许日常研发双写 | 从模块真源接收发布；向 live 宿主和审计层提供支撑 |
+| 宿主支撑包层 | `TriMetaverse/TriCompany-copilot-host-assets/` | 当前 `copilot chat` 正式接管所需 support root、runtime 副本、knowledge workbench、host-object manifest、vendor reference | 当前阶段由 `CEOChiefOfStaff` 协调，技术内容由 `TriCompanyCodeRegistry` 护栏 | 从 TriCompany 源侧通过 host-object 发布流程生成；不承载文档真源 | 从模块真源接收 host object 发布；向 live 宿主提供支撑 |
 | live 宿主入口层 | `TriMetaverse/.github/` | 当前生效的 agent、prompt、instruction、manifest 等宿主入口资产 | 当前阶段由 `CEOChiefOfStaff` 协调 | 只允许围绕当前宿主入口的吸收、替换、回滚和验证；不承担模块实现细节研发 | 从 `TriCompany/` 发布并在需要时引用支撑包 |
 | 中央摘要与协议层 | `TriMetaverse/docs/` | 项目级架构、模块边界、workflow、handoff 协议、registry 索引、operating record | `BusinessStrategy` 与中央 workflow owner；当前阶段由 `CEOChiefOfStaff` 协调 | 允许维护中央层边界、协议、索引和审计，不维护模块实现正文 | 向模块与宿主提供规则，不反向承接模块实现真源 |
 
@@ -97,12 +97,9 @@
 
 ### 6.1 模块级 docs
 
-- `TriCompany/docs/product/`、`docs/engineering/`、`docs/workflow/`、`docs/execution/`、`docs/registry/` 是模块真源。
-- `TriCompany-copilot-host-assets/docs/` 只保留三类内容：
-  1. 当前宿主运行必需的支撑说明。
-  2. 宿主验证、phase 证据、baseline、回滚材料。
-  3. 已发布到当前宿主且确需与 support root 共存的副本说明。
-- 如果某份文档主要回答“TriCompany 自己怎么设计、怎么实现、怎么演进”，它应回归 `TriCompany/docs/`。
+- `TriCompany/docs/product/`、`docs/engineering/`、`docs/workflow/`、`docs/execution/`、`docs/registry/` 是模块真源，agent 前置核查直接读取 TriCompany 源侧文件。
+- `TriCompany-copilot-host-assets/` 不再承载 `docs/product/`、`docs/engineering/`、`docs/registry/`、`docs/workflow/` 文档副本（已于 2026-07-08 删除）。
+- 支撑包 `docs/execution/` 仍保留 operator-runbook、phase 证据、baseline 与 archive-index。
 
 ### 6.2 runtime 与 vendor
 
@@ -165,32 +162,28 @@
 
 ## 7. 单向发布与回写规则
 
-### 7.1 标准方向
+### 7.1 文档真源读取规则
 
-标准方向固定为：
+- 文档真源统一在 `TriCompany/docs/` 维护。
+- agent / prompt 前置核查直接读取 TriCompany 源侧文件，不再通过支撑包 published-copy 中转。
+- 支撑包不再承载任何文档 published-copy（已于 2026-07-08 删除）。
 
-1. `TriCompany/` 研发与收口。
-2. 需要宿主支撑时，发布到 `TriCompany-copilot-host-assets/`。
-3. 需要 live 入口时，吸收或发布到 `TriMetaverse/.github/`。
-4. 需要中央级边界或经营留痕时，只把结论回写到 `TriMetaverse/docs/`。
+### 7.2 host object 发布方向
 
-### 7.2 禁止方向
+host object（knowledge、manifest）的标准发布方向固定为：
+
+1. `TriCompany/` 源侧定义岗位/员工、生成规则与 manifest。
+2. 通过 `runtime/cognition/employee_host_object_generation.py` 生成 support object payload 到 `TriCompany-copilot-host-assets/knowledge/` 与 `host-object-manifest.json`。
+3. Live 入口消费支撑包 knowledge 对象与 manifest。
+
+### 7.3 禁止方向
 
 以下方向默认禁止：
 
 - 从 `TriCompany-copilot-host-assets/` 反向长期维护 `TriCompany/` 的实现真源。
 - 在 `TriMetaverse/docs/` 中直接生成本应属于 `TriCompany/docs/` 的模块实现正文。
 - 在 `TriMetaverse/.github/` 中直接发展模块级 docs / runtime 细节。
-
-### 7.3 允许的例外
-
-仅以下情况允许先写支撑包或 live 宿主，再补回真源：
-
-1. 当前 live 宿主出现必须即时修复的入口级故障。
-2. 宿主验证中产生了只在当前 host 才成立的短期补丁。
-3. 会中产出的 baseline、归档、审计证据需要即时固化。
-
-出现例外时，必须在同轮或下一轮把差异回写到 `TriCompany/`，不能把例外补丁长期留成事实真源。
+- 在支撑包中新增长期文档内容而不回写 TriCompany 源侧。
 
 ## 8. git 与忽略规则
 
@@ -236,28 +229,10 @@
 所有后续新增或重写的相关文档，建议显式补齐以下元信息：
 
 - `sourceOfTruth`：当前真源位置。
-- `publishedFrom`：若是发布副本，标明来源位置。
-- `syncMode`：`source-only`、`published-copy`、`central-summary`、`audit-record` 四选一。
+- `syncMode`：`source-only` | `central-summary` | `audit-record` 三选一。
 - `lastSyncedAt`：最近同步时间。
 
-最低要求是：任何一份文档都必须让后来者一眼看出“应改哪里，不应改哪里”。
-
-当前首批 support published-copy 已完成头部语义归一化：
-
-- `sourceOfTruth` 固定指向 `TriCompany/` 内的真源路径。
-- support 副本的 `publishedFrom` 固定回填对应 source 路径，不再沿用“当前文件（source）”这类 source-like 口径。
-- support 副本的 `syncMode` 固定使用 `published-copy`；只有 source 真源才继续使用 `source-only`。
-
-### 9.1 当前 active published-copy
-
-当前 support bundle 下并非所有同名文档都需要同轮追平；只有“当前 live 宿主固定前置核查、当前宿主 operator runbook 或当前发布验证链会直接读取”的 published-copy，才属于 active published-copy。
-
-当前 engineering / workflow 范围内的 active published-copy 最少包括：
-
-- `TriCompany-copilot-host-assets/docs/engineering/DESIGN.md`
-- `TriCompany-copilot-host-assets/docs/engineering/metacognition-architecture.md`
-- `TriCompany-copilot-host-assets/docs/registry/product-state.md`
-- `TriCompany-copilot-host-assets/docs/registry/code-state.md`
+最低要求是：任何一份文档都必须让后来者一眼看出"应改哪里，不应改哪里"。
 - `TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md`
 - `TriCompany-copilot-host-assets/docs/workflow/github-backport-manifest.md`
 - `TriCompany-copilot-host-assets/docs/workflow/hermes-copilot-host-migration.md`

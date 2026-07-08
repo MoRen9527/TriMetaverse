@@ -1,13 +1,11 @@
-﻿<!-- markdownlint-disable MD022 MD024 MD031 -->
+<!-- markdownlint-disable MD022 MD024 MD031 -->
 
 # Phase 0/1 Issue 文本包（可直接粘贴）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/refactor-phase0-1-issue-pack.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse Phase 0/1 重构 issue 文本包的本地真源，用于维护当前阶段的 Epic 和任务拆解文本；它不是 TriCompany 公司级 workflow 或产品真源。

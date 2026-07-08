@@ -1,4 +1,4 @@
-﻿# 模块 Registry 基线与教程化梳理实施计划
+# 模块 Registry 基线与教程化梳理实施计划
 
 版本：V0.1
 日期：2026-04-23
@@ -7,9 +7,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/module-registry-baseline-rollout-plan.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ## 1. 文档定位

@@ -1,4 +1,4 @@
-﻿# TMV Workflow 术语表（Terminology）
+# TMV Workflow 术语表（Terminology）
 
 版本：v1  
 日期：2026-03-04  
@@ -7,9 +7,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/workflow/terminology.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-03
 
 ---
@@ -53,7 +51,7 @@
 ### 1.4 文档元信息标准命名
 
 - **`文档元信息`**：默认专指文档在“真源 -> published-copy -> support/live -> archive”链路中的同步与发布层级元信息，不再泛指普通头部说明。
-- **`文档同步元信息`**：是 `文档元信息` 的规范写法，字段默认指 `sourceOfTruth`、`publishedFrom`、`syncMode`、`publishTier`、`supportPublishedCopy`、`supportSyncRule`、`lastSyncedAt` 这一组真源 / 发布链字段。
+- **`文档同步元信息`**：是 `文档元信息` 的规范写法，字段默认指 `sourceOfTruth`、`syncMode`、`lastSyncedAt` 这一组真源字段。`publishedFrom`、`publishTier`、`supportPublishedCopy`、`supportSyncRule` 已于 2026-07-08 随 published-copy 层移除而退役。
 - **`文档头信息`**：用于指 `版本`、`日期`、`状态`、适用范围、适用边界等普通文档头部说明；默认不与 `文档元信息` 混用。
 - 若需求只涉及更新时间、状态、适用边界、owner 提示，不应表述为“补文档元信息”，应明确写为“补文档头信息”或“补状态说明”。
 - 若需求写“补文档元信息”且未额外限定，默认执行为补齐或核对 `文档同步元信息`，而不是普通头部说明。

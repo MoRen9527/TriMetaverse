@@ -1,11 +1,9 @@
-﻿# GitHub Issue 批量创建命令清单（PowerShell + gh）
+# GitHub Issue 批量创建命令清单（PowerShell + gh）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/github-issue-batch-create-commands.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 当前文件是 TriMetaverse GitHub Issue 批量创建命令清单的本地真源，用于维护当前仓的 `gh` 批量建卡脚本口径；它不是 TriCompany 公司级 workflow 或产品真源。
@@ -16,7 +14,7 @@
 ## 1) 前置准备
 
 ```powershell
-Set-Location 'D:\OneDrive\Code\ai\TriMetaverse'
+Set-Location .
 gh auth status
 $repo = 'MoRen9527/TriMetaverse'
 ```

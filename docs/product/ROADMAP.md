@@ -1,11 +1,9 @@
-﻿# TriMetaverse 产品路线图
+# TriMetaverse 产品路线图
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/product/ROADMAP.md
-- publishedFrom: TriCompany/docs/product/ROADMAP.md
 - syncMode: published-summary
-- publishTier: release-side-summary
 - lastSyncedAt: 2026-06-03
 
 - 当前状态：当前为中央发布侧路线摘要页。

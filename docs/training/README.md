@@ -1,11 +1,9 @@
-﻿# TriMetaverse Training 索引
+# TriMetaverse Training 索引
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/training/README.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-14
 
 - 当前状态：当前为中央 training 索引、聚合与治理摘要仓。

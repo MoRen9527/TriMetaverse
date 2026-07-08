@@ -1,11 +1,9 @@
-﻿# TriMetaverse Code State
+# TriMetaverse Code State
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/code-state.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## Repository Map

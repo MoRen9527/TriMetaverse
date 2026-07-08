@@ -7,9 +7,7 @@
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/ipd-document-system-overview.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-07-09
 - lastSyncedCommit: 9793ee8e
 - upstreamSources:
@@ -23,7 +21,6 @@
   - TriMetaverse/docs/workflow/phase-io-matrix.md（十阶段 IO 矩阵）
   - TriMetaverse/docs/workflow/tricompany-phase-bridge.md（经营-研发桥接）
   - TriMC/src/heartbeat/（TriMC IPD 心跳监控实现）
-- supportSyncRule: 任一 upstreamSources 发生稳定语义变更（阶段增删、岗位调整、contract 升级、产物清单变化、case 命名规则变化）后，当前摘要应在同轮或下一轮追平；若上游只是修正错字、补示例或改日期，不强制触发重写，但应检查示例与当前摘要是否仍对齐
 
 当前文件是 TriMetaverse 对 TriCompany IPD 文档体系与自动化流程的中央索引摘要。它汇总了 `TriCompany` 源侧 IPD 主流程、基线清单、runtime engine、培训教程和术语文档的体系关系。它不是 TriCompany 公司级 IPD 书面真源的新增独立文件，冲突时以上游真源为准。
 

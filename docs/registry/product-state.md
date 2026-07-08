@@ -1,11 +1,9 @@
-﻿# TriMetaverse Product State
+# TriMetaverse Product State
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/registry/product-state.md
-- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- publishTier: source-only
 - lastSyncedAt: 2026-06-04
 
 ## Module Overview
