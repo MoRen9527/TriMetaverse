@@ -1,8 +1,8 @@
 ﻿# TriCompany 总助研发编排
 
-版本：V0.2
-日期：2026-04-27
-状态：补充多负责人分诊、耐久记忆升级与源仓/宿主边界口径
+版本：V0.5
+日期：2026-07-08
+状态：新增 §4.7 IPD 双线人工编排操作；补充编排目标第 7 条（CodeGraph+Registry）；§3 补 TriMetaverse 中央 registry 说明；§4.2 分诊扩 CCO；诚实化案例 2；澄清 runtime 执行位置与下一阶段含义
 
 ## 文档同步元信息
 
@@ -10,11 +10,11 @@
 - publishedFrom: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
 - syncMode: published-copy
 - publishTier: active-published-copy
-- lastSyncedAt: 2026-06-03
+- lastSyncedAt: 2026-07-08
 
 ## 1. 文档定位
 
-本文用于定义 TriCompany 当前阶段的总助研发编排方式。它描述的是“在模块源仓里，总助如何协同文档、registry、宿主资产发布与后续岗位”，不是正式宿主 runtime 说明。
+本文用于定义 TriCompany 当前阶段的总助研发编排方式。它描述的是"在模块源仓里，总助如何协同文档、registry、宿主资产发布与后续岗位"，不是正式宿主 runtime 说明。
 
 本文默认以 `TriCompany/` 为模块真源，以 `TriCompany-copilot-host-assets/` 为当前 Copilot 宿主支撑包，以 `TriMetaverse/.github/` 为当前 live 宿主入口；因此它讨论的是源仓侧编排，不等于 live 入口本身，也不等于 TriMC 正式宿主切换。
 
@@ -26,6 +26,7 @@
 4. 把 Hermes 融合结论沉淀到可直接调用的总助套件里。
 5. 协调当前已上岗的 CPO / CTO 接手产品 / 技术真源，并保留未来宿主迁移接口。
 6. 以正式签发形式让 CEO 与总助的阶段性对齐结论可以稳定升级到项目真源，而不是停留在会话里。
+7. 将各模块 CodeGraph 成果与模块 CodeRegistry 结合使用，汇总收拢到中央 registry，降低总助每次会话的 token 消耗，快速完成模块级代码逻辑和业务逻辑的清洗构建。
 
 ## 3. 当前参与角色
 
@@ -42,6 +43,8 @@
 - ChiefHumanResourcesOfficer：当前 Copilot-host live 阶段已上岗，接手岗位启用、staffing governance、职责交接流程与 completion tracking。
 - ChiefAdministrativeOfficer：当前 Copilot-host live 阶段已上岗，接手行政管理、秘书处机制、会议制度、CompanyGovernanceRegistry 和治理文档归属。
 
+> **TriMetaverse 中央 Registry 说明**：`TriMetaverse/.github/agents/` 下的 `TriMetaverseBusinessStrategyRegistry`、`TriMetaverseProductRegistry`、`TriMetaverseCodeRegistry`、`CompanyGovernanceRegistry` 是 TriMetaverse 项目级的独立中央真源，负责跨模块商业策略裁决、产品/代码状态登记与公司治理；它们不在 TriCompany 源侧管辖范围内，但总助在跨仓协调时需将中央边界裁决纳入分诊判断。冲突时以中央 `BusinessStrategy` 边界裁决为准。
+
 ## 4. 当前编排流
 
 ### 4.1 事项进入
@@ -52,15 +55,15 @@
 
 总助收到事项后，先判断属于哪一类：
 
-- 集成产品开发流程（IPD 流程）：由 TriCompany 承载的公司级端到端经营 / 研发流程，当前采用 `TriCompany IPD 双线闭环`，包含 `IPD 市场雷达线` 与 `IPD 主动交付线`；范围覆盖 CEO 需求 / 任务进入、CMO 市场证据、COO 运营预案、CFO 预算护栏、CPO PRD 与项目计划、CTO 技术路线、TriDev 开发执行、CPO 验收、COO 运营接管、CFO 决算和总助收口。流程细则见 `integrated-product-development-flow.md`。
+- 集成产品开发流程（IPD 流程）：由 TriCompany 承载的公司级端到端经营 / 研发流程，当前采用 `TriCompany IPD 双线闭环`，包含 `IPD 市场雷达线` 与 `IPD 主动交付线`；source-side runtime 已开始按 `DISCOVERY -> INTELLIGENCE -> DESIGNING -> CODING -> VERIFY-INTEGRATION -> REDTEAM -> QA -> DEPLOYMENT -> ASSURANCE -> DELIVERY` 提供一比一 ten-phase stage line，并在各 phase 显式挂接 `businessOwner / actingOwner / moduleExecutor / gateOwner`。当前 `TriDev` 是 Discovery 到 Delivery 的统一执行引擎，CPO / CTO 负责对应业务 owner 与 gate owner，`QA` 承担 `release readiness`，未来测试 / 部署执行会转成 `tester-xxx` / `deployer-xxx` 员工 adapter；在新员工未入职前由 CTO 代行。`Discovery` 需先完成 `ModuleTargeting`：既有正式模块走 `ModuleReadinessInit`，新正式模块走 `NewModuleBaselineRelease`。流程细则见 `integrated-product-development-flow.md`。
 - 产品范围、角色定位、路线优先级、Product Registry 事实维护：先路由 ChiefProductOfficer（小乔），并回链产品真源与 Product Registry。
 - 市场调研、竞品情报、热点抓取、用户需求研究、内容选题、量化事件情报与 PRD 前置证据包：先路由 ChiefMarketingOfficer，并要求其把可复核报告交给 CPO。
 - 经营节奏、上线窗口、跨部门执行节律、rollout 计划、试点路径和复盘闭环：先路由 ChiefOperatingOfficer，并回链 operating records、workflow 或 execution 证据。
 - 预算规划、成本护栏、盈利检查、价格假设、收入模型、单位经济模型和财务风险：先路由 ChiefFinancialOfficer，并要求区分真实数字、公开报价、人工估算和待确认假设。
 - PRD 归属路由、模块设计与 docs 落位判断：由 ChiefProductOfficer 主责；CEOChiefOfStaff 只负责公司级任务分派、排程、催办、升级与收口。
-- 技术设计、结构边界、CodeGraph、Hermes 融合与 .github 宿主资产：先路由 ChiefTechnologyOfficer（小狄），并回链技术真源与 Code Registry。
+- 技术设计、结构边界、CodeGraph、Hermes 融合与 .github 宿主资产：先路由 ChiefTechnologyOfficer（小狄），并回链技术真源与 Code Registry；架构表中的模块一旦进入正式模块面，默认由 CTO 补齐独立 git 仓、`README.md`、`docs/` 六件套、`.gitignore` 与本地 CodeGraph 初始化，并由对应 Code Registry 维护摘要与刷新节律。对存在治理中 `vendor/` 冻结基线的模块，主 CodeGraph 默认排除 `vendor/`，只在开源吸收 / 差异拆解专项任务下临时纳入 vendor 视图。若为新增正式模块，`Discovery` 阶段必须先形成 `NewModuleBaselineRelease`（含 `vendor-extraction-profile`），经签核后由 `TriDev init` 执行模块骨架初始化；若为既有正式模块，需先形成 `ModuleTargetingReport` 并完成 `ModuleReadinessInit` 后再进入后续开发阶段。
 - 会议协调、纪要收口、动作项推进：走会议 prompt 与秘书处草案。
-- 项目培训、模块讲解、代码导读、小白 onboarding：同步给 RAndDTrainer，并要求回链真源。
+- 项目培训、模块讲解、代码导读、小白 onboarding：同步给 RAndDTrainer，并要求其维护 `docs/training/**` 培训材料、回链真源；CEOChiefOfStaff 只负责同步事实、催办和收口，不长期代写培训文档。
 - 跨域问题：由总助组织产品与技术两侧共同收口。
 
 在更多负责人正式上岗后，分诊口径继续扩成：
@@ -71,15 +74,16 @@
 - CSO：线索管道、成交策略、商机推进与收入执行。
 - CHO：岗位启用、人力资源、staffing governance、角色评分卡、跨岗位职责交接流程设计与完成度监督。
 - CAO：行政管理、秘书处机制、会议制度、组织制度、CompanyGovernanceRegistry、治理文档归属和公司治理资料维护。
+- CCO：当前未上岗，管理 CSM、客服、客户体验与客户成功线。
 
 总助对这些事项的职责仍然是：先分诊、再对齐 owner、必要时升级给 CEO，不替代对应负责人长期代管。
 
-固定 owner 分工：市场雷达线与 PRD 前置市场证据由 CMO 管理，经营节奏与 rollout / 运营接管由 COO 管理，预算护栏、财务风险与决算由 CFO 管理，`ProductRegistry`、PRD、项目计划和产品验收由 CPO 小乔管理，`CodeRegistry`、技术路线和开发实施由 CTO 小狄管理，中央 `CompanyGovernanceRegistry` 由 CAO 管理；`CEOChiefOfStaff` 只负责路由、协调、催办、升级和中央收口，不长期代管具体 registry owner。TriDev 的 local engine 只接收已经过 IPD 流程分诊、产品 / 技术边界明确后的开发执行任务。
+固定 owner 分工：市场雷达线与 PRD 前置市场证据由 CMO 管理，经营节奏与 rollout / 运营接管由 COO 管理，预算护栏、财务风险与决算由 CFO 管理，`ProductRegistry`、PRD、项目计划和产品验收由 CPO 小乔管理，`CodeRegistry`、技术路线、开发实施、所有正式模块的 git / `README.md` / `docs/` 六件套 / CodeGraph 基线、`ModuleTargetingReport` / `ModuleReadinessInit`、`NewModuleBaselineRelease` 执行、`vendor-extraction-profile` 技术口径与 `Git Health` 由 CTO 小狄管理，`docs/training/**` 培训材料由 RAndDTrainer 管理，中央 `CompanyGovernanceRegistry` 由 CAO 管理；Registry 负责事实登记、dirty worktree 基线和升级提示，不直接代替 owner 做本地提交。`CEOChiefOfStaff` 只负责路由、协调、催办、升级和中央收口，不长期代管具体 registry owner。TriDev 的 local engine 当前已开始与 TriCompany IPD runtime 的 ten-phase case line 一比一挂接，并统一承接 Discovery 到 Delivery 的执行层；`QA` 形成 candidate delivery manifest / report 与 `release readiness`，`Delivery` 形成 final manifest / report；`TriTest` / `TriDeployment` 不再作为长期独立执行 owner，后续会收敛为 `tester-xxx` / `deployer-xxx` 员工 adapter，在正式入职前由 CTO 代行。PRD 分叉并行、多分支 delivery 聚合和完整岗位 adapter 仍待继续补齐。
 
 ### 4.3 会议入口
 
-- 开始正式讨论时，使用“开始会议”进入正式会议口径。
-- 收口结论与动作项时，使用“结束会议”进入纪要与回填口径。
+- 开始正式讨论时，使用"开始会议"进入正式会议口径。
+- 收口结论与动作项时，使用"结束会议"进入纪要与回填口径。
 
 ### 4.4 当前阶段宿主资产层
 
@@ -120,6 +124,90 @@ RAndDTrainer 当前已作为技术研发培训岗位进入 Copilot-host live 阶
 - 哪些需要先发布到 `TriCompany-copilot-host-assets/` 再进入 live 宿主。
 - 哪些需要升级为跨仓长期规则或中央层摘要。
 
+### 4.7 IPD 双线人工编排操作（当前阶段：总助手动）
+
+> **定位**：本节记录 CEOChiefOfStaff 在 IPD `process-improvement` 与 `project-delivery` 两条 case 线之间的手动协调操作。当前所有跨 case 联动均由总助在对话中完成，IPD 引擎不提供程序化跨 case 编排。本节同时标注未来 TriMC 或自建编排模块的自动化接手点。
+
+#### 4.7.1 操作清单
+
+| 操作 | 触发条件 | 当前执行方式 | 涉及方 | 未来自动化接手点 |
+|------|----------|-------------|--------|-----------------|
+| **through-pass 审批协调** | process-improvement case 产出流程优化项 | 总助组织 CPO/CTO 填写审批结论，汇总到 backfill 文档 | CPO、CTO | TriMC 可在 workflow sprint review 通过后自动生成审批包并推送 CPO/CTO |
+| **through-pass merge 执行** | CPO/CTO 均签 mergeReady=yes | 总助逐项写入 A 层（流程文档）+ B 层（engine/CLI/validation） | 总助 | TriMC 可基于审批结论自动执行文件级 merge，冲突时升级人工 |
+| **live replay 验证启动** | merge 完成后 | 总助手动推进 project-delivery case 的 stage 流转，观察验证结果 | CPO、CTO | TriMC 可在 merge 完成后自动触发 project-delivery case 的下一 stage |
+| **FREEZE 项回流** | 审批中出现 FREEZE 或 live replay 发现缺陷 | 总助把 FREEZE 项写入下轮 workflow sprint backlog | 总助 | TriMC 可将 FREEZE 项自动追加到对应 WORKFLOW case 的 backlog |
+| **缺陷回灌** | project-delivery case 验证失败 | 总助判断回退目标阶段，在 WORKFLOW case 新建 backlog item | CPO、CTO | TriMC 可基于失败 stage 自动生成回灌 backlog item |
+| **跨 case 状态同步** | 任一条线有受阻/完成 | 总助在对话中口头同步，必要时更新 operating record | 总助 | TriMC 心跳扫描可自动检测并推送跨 case 卡点 |
+| **回写顺序执行** | 流程优化验证通过 | 总助按 B→A→C→D 顺序逐层回写（B=公司执行真源 engine/CLI/validation → A=书面主真源流程文档 → C=联审输入面审批包 → D=操作与实例面执行记录） | CPO、CTO | TriMC 可按回写顺序自动执行并验证每层写入 |
+
+#### 4.7.2 已完成的真实编排案例
+
+**案例 1：首次 through-pass 审批基线合并（2026-07-03，backfill-001）**
+
+```
+WORKFLOW-001 产出优化项
+  → 总助组织 CPO 审批（7 APPROVE + 3 FREEZE）
+  → 总助组织 CTO 审批（8 APPROVE + 2 FREEZE）
+  → 总助执行 through-pass merge：
+      ├── integrated-product-development-flow.md（A 层，15 项）
+      ├── ipd_case_engine.py（B 层，6 项双写）
+      ├── chief_of_staff_ipd_case_validation.py（B 层，6 项双写）
+      └── 5 项 FREEZE 回流到长期固化清单
+  → 主流程升级至 V0.8
+```
+
+**案例 2：intake 回退路径补全（2026-07-08）⚠️ 应急修复，未走完整双线验证**
+
+```
+CEO 发现 intake 签核后无法回退
+  → 总助分析 engine 状态机，发现 rollback --stage-key intake 已存在但不被发现
+  → 总助直接在 engine 新增 reopen_intake() + reopen-intake CLI 命令（跳过 process-improvement case 的标准 through-pass 流程）
+  → 更新流程图与文档
+  → 提交 TriCompany（engine）+ TriMetaverse（docs）
+
+⚠️ 诚实标注：此案例未走 process-improvement → through-pass 审批 → project-delivery 验证的完整双线闭环。
+  属 CEO 直接指令下的应急修复，事后应在下一轮 WORKFLOW case 中补回标准验证。
+```
+
+#### 4.7.3 自动化接手决策框架
+
+当 TriMC 编排能力上线或考虑自建编排模块时，按以下维度判断每个操作的归属：
+
+| 维度 | 适合 TriMC 自动化 | 适合保留人工 |
+|------|------------------|-------------|
+| **触发条件** | 明确、可程序化判断（如"CPO mergeReady=yes"） | 需要跨域判断或 CEO 意图解读 |
+| **执行动作** | 文件级写入、状态变更、通知推送 | 需要设计决策、冲突调解、创造性工作 |
+| **回退路径** | 可逆、有明确回退条件 | 后果不可逆或需要人工承担风险 |
+| **频率** | 高频重复操作 | 低频、每次上下文不同 |
+
+**当前建议**：
+- 心跳扫描与卡点推送 → 适合 TriMC 优先接手（已在 TriMC/src/heartbeat/ 落地）
+- through-pass 审批包生成 → 适合 TriMC 下一批接手
+- merge 执行与回写顺序 → 建议先做半自动（TriMC 生成 merge diff，人工确认后执行）
+- 缺陷回灌判断 → 当前阶段保留人工，需 CEO/CPO/CTO 判断
+
+#### 4.7.4 与 IPD 引擎的职责边界
+
+```
+引擎（ipd_case_engine.py）：
+  ✅ 单 case 内阶段状态机、签核链、事件日志
+  ✅ intake/stage 级别的 rollback 与 reopen
+  ❌ 跨 case 联动（不读另一个 case 的数据）
+  ❌ 跨 case 通知（不触发另一个 case 的状态变更）
+
+总助（当前阶段）：
+  ✅ 跨 case 协调（WORKFLOW ↔ PLATFORM）
+  ✅ through-pass merge 执行
+  ✅ FREEZE 回流与 backlog 灌入
+  ✅ 回写顺序编排
+
+TriMC / 未来编排模块（规划中）：
+  🔲 心跳扫描与卡点检测（已落地 heartbeat）
+  🔲 跨 case 状态监控与推送
+  🔲 审批包自动生成
+  🔲 merge diff 半自动生成
+```
+
 ### 4.6 耐久记忆升级规则
 
 - 如果某项会议结论、边界判断或阶段性工作法需要进入项目耐久真源或岗位耐久记忆，先由总助提出写入建议。
@@ -129,7 +217,7 @@ RAndDTrainer 当前已作为技术研发培训岗位进入 Copilot-host live 阶
 
 ## 5. 当前约束
 
-- TriCompany 当前既做研发，也承载模块侧宿主源码与发布准备资产，但不等于当前 live 宿主，更不宣称 TriMC 正式宿主运行。
+- TriCompany 当前既做研发，也承载模块侧宿主源码与发布准备资产，但不等于当前 live 宿主，更不宣称 TriMC 正式宿主运行。当前 IPD engine（`ipd_case_engine.py`）等 runtime 模块的实际执行入口位于 `TriMetaverse/TriCompany-copilot-host-assets/runtime/`；TriCompany 源侧维护源码真源，发布副本由总助同步到 copilot-host-assets 后生效。
 - 总助可以组织与收口，但不长期代管产品、技术和公司治理 registry owner；CPO / CTO / CAO 已在当前 Copilot-host live 阶段分别接手 ProductRegistry、CodeRegistry 与 CompanyGovernanceRegistry 的管理入口。
 - CPO / CTO 当前上岗不等于 TriMC 正式宿主切换，也不等于产品 / 技术授权矩阵已经全部生产化。
 - RAndDTrainer 当前已进入 Copilot-host live 阶段；培训内容不替代项目真源，也不代表 TriMC 正式宿主切换。
@@ -137,7 +225,7 @@ RAndDTrainer 当前已作为技术研发培训岗位进入 Copilot-host live 阶
 
 ## 6. 下一阶段切换条件
 
-当以下条件满足时，可进入下一阶段：
+当以下条件满足时，可进入下一阶段（从当前 Copilot-host live 阶段进入 TriMC 正式宿主运行阶段）：
 
 1. 总助首版 contract 在 TriCompany 内已稳定。
 2. 模块侧 `.github` 宿主资产已收拢，且发布方向清晰。
