@@ -1,8 +1,8 @@
 # IPD 开发文档体系与自动化流程说明
 
-版本：V0.4
-日期：2026-07-08
-状态：当前 Copilot-host live 阶段基线总结（诚实化 §4 双线闭环为"人工协调"，标注引擎职责边界）
+版本：V0.5
+日期：2026-07-09
+状态：当前 Copilot-host live 阶段基线总结（§4 诚实化双线闭环为"人工协调"；§3.1 诚实化回退路径为 [planned]；标注引擎职责边界）
 
 ## 文档同步元信息
 
@@ -11,6 +11,7 @@
 - syncMode: source-only
 - publishTier: source-only
 - lastSyncedAt: 2026-07-09
+- lastSyncedCommit: 9793ee8e
 - upstreamSources:
   - TriCompany-copilot-host-assets/docs/workflow/integrated-product-development-flow.md（IPD 主流程真源）
   - TriCompany-copilot-host-assets/docs/workflow/ipd-company-baseline-checklist.md（基线分层与回写顺序）
@@ -83,7 +84,7 @@ D 层：操作与实例面 ── 真实回填、through-pass 执行、批次记
 | 文件 | 角色 |
 |------|------|
 | `TriCompany-copilot-host-assets/runtime/cognition/ipd_case_engine.py` | IPD stage contract 与 automation contract 的执行真源：阶段模板、标准动作、签核对象、evidence policy、自动推进语义 |
-| `TriCompany-copilot-host-assets/runtime/cognition/chief_of_staff_ipd_case.py` | CLI 调度入口：task-intake、init、submit、signoff、status、step、rollback 等命令 |
+| `TriCompany-copilot-host-assets/runtime/cognition/chief_of_staff_ipd_case.py` | CLI 调度入口：task-intake、init、intake-approve、submit、signoff、status、step（rollback/reopen-intake/autopilot/discovery/intelligence/freeze 为 [planned]，当前引擎未实现） |
 | `TriCompany-copilot-host-assets/runtime/cognition/chief_of_staff_ipd_case_validation.py` | IPD 基线验证真源：回归、案例初始化、阶段自动化、主线验证 contract |
 
 ### 2.3 C 层：联审输入面
@@ -106,17 +107,17 @@ D 层：操作与实例面 ── 真实回填、through-pass 执行、批次记
 
 ### 2.5 培训层补充
 
-| 文件（源侧） | 文件（发布侧） | 角色 |
-|------|------|------|
-| `TriCompany/docs/training/ipd-usage-guide.md` | `TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md` | IPD 使用教程（面向 RAndDTrainer 与新人） |
-| `TriCompany/docs/training/IPD CASE术语.md` | `TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md` | IPD Case 字段详解（case 结构、七槽位、Web3 签名、心跳卡点） |
-| `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | `TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | CLI 与代码工作流程小白教程（含心跳 CLI 命令） |
+| 文件（源侧） | 角色 |
+|------|------|
+| `TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md` | IPD 使用教程（面向 RAndDTrainer 与新人；source-only，无独立 source/published 双线） |
+| `TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md` | IPD Case 字段详解（case 结构、七槽位、Web3 签名、心跳卡点；source-only） |
+| `TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | CLI 与代码工作流程小白教程（含心跳 CLI 命令；source-only） |
 
 ---
 
 ## 3. 自动化流程全景：节点、输入输出、谁在处理
 
-### 3.1 总流程概览
+### 3.1 总流程概览（当前引擎实际能力）
 
 ```
 CEO freeform 需求
@@ -125,53 +126,48 @@ CEO freeform 需求
 ┌──────────────┐   总助 CLI: task-intake
 │  task-intake │   生成 case.json + intake-brief.json + clarificationSheet
 └──────┬───────┘   处理方: CEOChiefOfStaff（补槽位）
-       │               ┊
-       ▼               ┊  ◀── reopen-intake / rollback --stage-key intake
-┌──────────────┐   总助 CLI: init          ┊   （签核后想修改七槽位→回这里）
+       │
+       ▼
+┌──────────────┐   总助 CLI: init
 │     init     │   把 intake briefing 精调成可签版，补齐 7 个槽位
 └──────┬───────┘   处理方: CEOChiefOfStaff
-       │               ┊
-       ▼               ┊  ◀── reopen-intake / rollback --stage-key intake
-┌──────────────────┐   CLI: intake-approve     ┊
+       │
+       ▼
+┌──────────────────┐   CLI: intake-approve
 │  intake-approve  │   顺序: CEO 先签 → CEOChiefOfStaff 验证并签发
-└──────┬───────────┘   处理方: CEO + CEOChiefOfStaff（web3 签名）
-       │               未通过 → paused-intake-clarification
-       │               ▲
-       │               └── 已通过但七槽位不行 → reopen-intake（无 completed 护栏）
-       │                   已有 completed stage → rollback --stage-key intake
+└──────┬───────────┘   处理方: CEO + CEOChiefOfStaff
+       │               未通过 → paused-intake-clarification（重新 submit）
        ▼
 ┌──────────────────┐
 │  caseCategory 分支 │
 └──────┬───────────┘
        │
-  ┌────┴────┐              ┊
-  │         │              ┊  TriMC heartbeat 扫描:
-  ▼         ▼              ┊  · stage 审批待签 > 48h → ALERT
-process-   project-        ┊  · stage 无产出 > 72h → ALERT
-improve-   delivery        ┊  · stage 被 reject → ERROR
-ment       (十阶段)         ┊
-(敏捷六段)                  ┊
-   │         │             ┊
-   │    reject→resubmit    ┊  ◀── stage 驳回后 owner 重新 submit
-   │         │             ┊
-   │    rollback→          ┊  ◀── rollback --stage-key <任意阶段>
-   │    任意前置阶段        ┊      回到 ceo-demand/intake/discovery/...
-   │         │             ┊
-   ▼         ▼             ┊
+  ┌────┴────┐
+  │         │
+  ▼         ▼
+process-   project-
+improve-   delivery
+ment       (十阶段)
+(敏捷六段)
+  │         │
+  │    reject→resubmit（owner 重新 submit）
+  │         │
+  ▼         ▼
  交付      交付
 ```
 
-**回退路径总结：**
+**当前引擎/CLI 实际支持的命令**：`task-intake` `init` `intake-approve` `submit` `signoff` `status` `step`
 
-| 场景 | CLI 命令 | 条件 |
-|------|---------|------|
-| 七槽位填错了，想回 intake 重填 | `reopen-intake --case-id <id> --note "原因"` | 无 completed stage |
-| 同上，但已有 completed stage | `rollback --case-id <id> --stage-key intake --reason "原因"` | 无限制 |
-| stage 被驳回，owner 重新提交 | `submit --case-id <id> --stage-key <key> ...` | stage 处于 rejected |
-| 回退到任意前置阶段 | `rollback --case-id <id> --stage-key <key> --reason "原因"` | 无限制 |
-| 回到 CEO demand 原点 | `rollback --case-id <id> --stage-key ceo-demand --reason "原因"` | 无限制 |
+**以下为 [planned] 功能（代码尚未实现）**：
 
-`reopen-intake` 是 `rollback --stage-key intake` 的安全封装：多了"无 completed stage"护栏，防止误删已完成工作。
+| 功能 | 用途 | 当前状态 |
+|------|------|----------|
+| `reopen-intake` / `rollback --stage-key intake` | 签核后回退七槽位 | 引擎无 `reopen_intake`/`rollback_ipd_case` 函数 |
+| `rollback --stage-key <任意>` | 回退到任意前置阶段 | CLI 无 `rollback` 子命令 |
+| `autopilot` | 自动推进全链路 | 引擎无 `run_case_autopilot` 函数 |
+| `discovery` / `intelligence` 自动阶段 | 自动生成 reference package | CLI 无对应子命令，引擎无对应自动化函数 |
+| `freeze` / `unfreeze` | 条件性冻结/恢复 | 无引擎函数，无CLI子命令 |
+| TriMC heartbeat daemon | 后台定时扫描 | 当前仅手动 `python TriMC/src/heartbeat/cli.py` |
 
 ### 3.2 流程优化线（process-improvement）六阶段
 
@@ -356,7 +352,7 @@ knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/<case-id>/
 - 当前 IPD 流程是 docs-first 的公司级流程设计，服务当前 Copilot-host live 阶段。
 - CMO/CPO/COO/CFO/CTO 已上岗，但不代表完整授权矩阵、自动数据管道或自动财务系统已完成。
 - TriDev 已具备 Copilot-host 本地开发执行可靠性切片，但不代表 ten-stage phase engine 在 source-side 全量拆开。
-- autopilot 可自动执行十阶段链路并对接 TriDev 产物，但 PRD 分叉并行、多分支 delivery 聚合、完整岗位 adapter 仍未完成。
+- autopilot 可自动执行十阶段链路并对接 TriDev 产物（[planned]，当前引擎和 CLI 无 autopilot 功能），PRD 分叉并行、多分支 delivery 聚合、完整岗位 adapter 仍未完成。
 - **TriMC heartbeat 已接入**：心跳扫描器可手动/会话触发检测所有 IPD case 的卡点；编排和通知层由总助（小贾）手动协调，尚未接入 daemon 自动定时触发。
 - 涉及正式宿主边界、长期模块边界或商业模式裁决时，应升级 `BusinessStrategy`。
 
