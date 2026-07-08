@@ -1,8 +1,16 @@
 # IPD Training Doc Sync Validator
 # 用途：验证 IPD 培训文档中描述的功能是否与实际代码一致
-# 运行：python TriMetaverse/scripts/sync_validator.py
-# 用于检测培训文档与代码之间的 "计划中" vs "已实现" 缺口
+# 运行：python TriMetaverse/scripts/sync_validator.py [--tricompany-repo ../TriCompany]
+#
+# 工作区布局说明：
+#   - TriMetaverse/ 是 root workspace（当前工作目录所在）
+#   - TriCompany/ 是独立模块仓（同级兄弟目录 ../TriCompany/），存放培训文档源端
+#   - TriMetaverse/TriCompany-copilot-host-assets/ 是宿主支撑包，存放 runtime engine/CLI 和 published-copy
+#
+# 本脚本默认从 sibling repo 读取源端文档，从 TriCompany-copilot-host-assets 读取 engine/CLI。
+# 详见 docs/文档治理与真源文件系统.md §2.1 和 docs/github-repo-governance.md §2。
 
+import argparse
 import json
 import os
 import re
@@ -51,12 +59,44 @@ def scan_doc_planned(patterns, doc_path):
     return count
 
 def main():
-    tri_company = Path(os.environ.get(
+    parser = argparse.ArgumentParser(
+        description="IPD Training Doc Sync Validator — 验证培训文档与代码的一致性"
+    )
+    parser.add_argument(
+        "--tricompany-repo",
+        default=None,
+        help="TriCompany 源仓物理路径（默认 ../TriCompany，即 TriMetaverse 的兄弟目录）"
+    )
+    args = parser.parse_args()
+
+    # TriCompany 源仓：存放培训文档真源（sourceOfTruth）
+    if args.tricompany_repo:
+        tri_company_source = Path(args.tricompany_repo)
+    elif os.environ.get("TRICOMPANY_REPO"):
+        tri_company_source = Path(os.environ["TRICOMPANY_REPO"])
+    else:
+        tri_company_source = Path(os.path.join(os.path.dirname(__file__), "..", "..", "TriCompany"))
+
+    # TriCompany-copilot-host-assets：存放 runtime engine/CLI + 培训文档 published-copy
+    tri_host = Path(os.environ.get(
         "TRICOMPANY_HOST_ASSETS",
         os.path.join(os.path.dirname(__file__), "..", "TriCompany-copilot-host-assets")
     ))
-    engine_path = tri_company / "runtime" / "cognition" / "ipd_case_engine.py"
-    cli_path = tri_company / "runtime" / "cognition" / "chief_of_staff_ipd_case.py"
+
+    # Engine & CLI 在 published host assets 中
+    engine_path = tri_host / "runtime" / "cognition" / "ipd_case_engine.py"
+    cli_path = tri_host / "runtime" / "cognition" / "chief_of_staff_ipd_case.py"
+
+    # 培训文档源端在 TriCompany 源仓中
+    doc_source_dir = tri_company_source / "docs" / "training"
+    doc_published_dir = tri_host / "docs" / "training"
+    overview_path = Path(os.path.join(os.path.dirname(__file__), "..", "docs", "ipd-document-system-overview.md"))
+
+    # 验证源仓路径存在
+    if not tri_company_source.exists():
+        print(f"[WARN] TriCompany source repo not found at: {tri_company_source}")
+        print(f"  → Training doc source scan SKIPPED. Use --tricompany-repo to specify path.")
+        print(f"  → See docs/文档治理与真源文件系统.md §2.1 for workspace layout.\n")
 
     print("=== IPD Training Doc Sync Validator ===\n")
 
@@ -100,17 +140,17 @@ def main():
         if cmd not in cli_cmds:
             missing_cmds.append(cmd)
 
-    # Step 3: Scan docs for [planned]
-    print("\n[3] Scanning docs for [planned] markers...")
-    doc_dir = tri_company / "docs" / "training"
-    overview_path = Path(os.path.join(os.path.dirname(__file__), "..", "docs", "ipd-document-system-overview.md"))
-
+    # Step 3: Scan SOURCE docs (TriCompany/docs/training/) for [planned] markers
+    print("\n[3] Scanning source docs for [planned] markers...")
     planned_pattern = [r'\[planned\]']
 
     for doc_name in ["ipd-usage-guide.md", "ipd-cli-and-code-workflow-beginner-course.md", "IPD CASE术语.md"]:
-        doc_path = doc_dir / doc_name
+        doc_path = doc_source_dir / doc_name
+        pub_path = doc_published_dir / doc_name
         count = scan_doc_planned(planned_pattern, doc_path)
-        print(f"  {doc_name}: {count} [planned] markers")
+        pub_count = scan_doc_planned(planned_pattern, pub_path)
+        parity = "OK" if count == pub_count else "MISMATCH (source!=published)"
+        print(f"  {doc_name}: {count} [planned] markers | published: {pub_count} | {parity}")
 
     if overview_path.exists():
         count = scan_doc_planned(planned_pattern, overview_path)
