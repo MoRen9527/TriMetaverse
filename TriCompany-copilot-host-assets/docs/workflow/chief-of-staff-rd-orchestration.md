@@ -1,20 +1,22 @@
 ﻿# TriCompany 总助研发编排
 
-版本：V0.5
+版本：V0.6
 日期：2026-07-08
-状态：新增 §4.7 IPD 双线人工编排操作；补充编排目标第 7 条（CodeGraph+Registry）；§3 补 TriMetaverse 中央 registry 说明；§4.2 分诊扩 CCO；诚实化案例 2；澄清 runtime 执行位置与下一阶段含义
+状态：新增 §4.8 IPD 系统构建与维护编排 + §4.9 总助编排全景；修复 §4.6 标题丢失
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
-- publishedFrom: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
+- publishedFrom: 当前文件（source）
 - syncMode: published-copy
 - publishTier: active-published-copy
+- supportPublishedCopy: TriCompany-copilot-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md
+- supportSyncRule: source 稳定语义变更后，active published-copy 需在同轮或下一轮追平
 - lastSyncedAt: 2026-07-08
 
 ## 1. 文档定位
 
-本文用于定义 TriCompany 当前阶段的总助研发编排方式。它描述的是"在模块源仓里，总助如何协同文档、registry、宿主资产发布与后续岗位"，不是正式宿主 runtime 说明。
+本文用于定义 TriCompany 当前阶段的总助研发编排方式。它描述的是“在模块源仓里，总助如何协同文档、registry、宿主资产发布与后续岗位”，不是正式宿主 runtime 说明。
 
 本文默认以 `TriCompany/` 为模块真源，以 `TriCompany-copilot-host-assets/` 为当前 Copilot 宿主支撑包，以 `TriMetaverse/.github/` 为当前 live 宿主入口；因此它讨论的是源仓侧编排，不等于 live 入口本身，也不等于 TriMC 正式宿主切换。
 
@@ -82,8 +84,8 @@
 
 ### 4.3 会议入口
 
-- 开始正式讨论时，使用"开始会议"进入正式会议口径。
-- 收口结论与动作项时，使用"结束会议"进入纪要与回填口径。
+- 开始正式讨论时，使用“开始会议”进入正式会议口径。
+- 收口结论与动作项时，使用“结束会议”进入纪要与回填口径。
 
 ### 4.4 当前阶段宿主资产层
 
@@ -215,6 +217,99 @@ TriMC / 未来编排模块（规划中）：
 - 由 CEO 明确确认后，再执行仓库回填。
 - 未确认的内容可以保留在会话记录、草稿或运行时层，但不自动升级成长期真源。
 
+### 4.8 IPD 系统构建与维护编排（当前阶段：总助手动）
+
+> **定位**：本节记录 CEOChiefOfStaff 对 IPD 系统本身的构建与维护工作——即引擎、CLI、验证脚本、审批体系、培训材料的从零设计、逐版迭代和 bug 修复。IPD 引擎只管单 case 内的状态机，不管理自身的构建与演进；整个 IPD 系统的"制造者"当前就是总助。
+
+#### 4.8.1 IPD 系统资产清单
+
+**Core Runtime（源侧构建，发布到 copilot-host-assets/runtime/ 执行）：**
+
+| 资产 | 职责 | 首次交付 | 迭代次数 |
+|------|------|---------|---------|
+| `ipd_case_engine.py` | 十阶段状态机、签核链、双线架构（WORKFLOW/PLATFORM）、case 生命周期 | 2026-06 | 持续迭代 |
+| `chief_of_staff_ipd_case.py` | CLI 入口：case create、stage advance、sign-off、rollback、reopen | 2026-06 | 持续迭代 |
+| `chief_of_staff_ipd_case_validation.py` | 验证脚本：stage 前置条件、签核有效性、case 完整性 | 2026-06 | 持续迭代 |
+
+**Process Artifacts（through-pass 审批与长期固化体系）：**
+
+| 资产 | 职责 |
+|------|------|
+| `ipd-first-real-approval-through-pass-checklist.md` | through-pass 审批 checklist |
+| `ipd-first-real-approval-role-script.md` | CPO/CTO 审批角色脚本 |
+| `ipd-first-real-approval-merge-candidate-matrix.md` | merge 候选矩阵 |
+| `ipd-first-real-approval-backfill-record-template.md` | backfill 记录模板 |
+| `ipd-first-real-approval-backfill-runbook.md` | backfill 操作 runbook |
+| `ipd-first-real-approval-backfill-001.md` | 首个真实审批案例记录 |
+| `ipd-long-term-contract-solidification-list.md` | 长期契约固化清单 |
+| `ipd-product-acceptance-contract-cpo-review.md` | CPO 产品验收契约 |
+| `ipd-runtime-evidence-contract-cto-review.md` | CTO runtime 证据契约 |
+| `ipd-company-baseline-checklist.md` | 公司基线 checklist |
+
+**Training Materials：**
+
+| 资产 | 职责 |
+|------|------|
+| `IPD CASE术语.md` | IPD 术语表 |
+| `ipd-usage-guide.md` | IPD 使用指南 |
+| `ipd-cli-and-code-workflow-beginner-course.md` | CLI 与代码工作流入门 |
+| `ipd-dual-track-optimization-and-merge-flow.md` | 双轨优化与合并流程 |
+
+#### 4.8.2 构建与维护操作
+
+| 操作 | 触发条件 | 当前执行方式 | 未来自动化接手点 |
+|------|----------|-------------|-----------------|
+| **引擎功能新增** | CPO/CTO/CEO 提出新能力需求（如 intake 回退、through-pass merge 支持） | 总助分析需求→设计状态机变更→编码→本地验证→发布到 copilot-host-assets/runtime/ | TriMC 可在需求审批通过后生成 engine patch，人工 review 后合入 |
+| **引擎 bug 修复** | 测试或实际使用中发现行为不符合预期 | 总助定位 bug→修复→验证→发布 | TriMC 可基于 failed validation 日志自动生成修复建议 |
+| **CLI 命令扩展** | 新 stage/操作需要 CLI 入口 | 总助新增 argparse 子命令→对接 engine 方法→验证 | TriMC 可通过 engine 方法签名自动生成 CLI 骨架 |
+| **验证脚本同步** | engine 变更后需同步验证规则 | 总助逐条核对验证逻辑是否与 engine 行为一致 | TriMC 可从 engine 代码自动提取验证规则并提示差异 |
+| **审批体系文档创建** | through-pass 流程首次建立 | 总助设计角色脚本、checklist、merge 矩阵、backfill 模板全套 | 适合保留人工——需理解组织决策逻辑 |
+| **培训材料编写** | 新功能上线或新人 onboarding 需要 | 总助编写教程→同步给 RAndDTrainer 维护 | 适合保留人工→未来可由 RAndDTrainer 主导，总助只提供输入 |
+| **跨仓同步发布** | engine/文档源侧变更后 | 总助手动将 runtime 副本同步到 copilot-host-assets/runtime/ + 更新发布侧摘要 | TriMC 可在源侧 commit 后自动触发 published-copy sync |
+| **双线架构设计调整** | 发现 process-improvement 与 project-delivery 的耦合或 gap | 总助设计架构变更→与 CPO/CTO 对齐→编码+文档同步 | 适合保留人工——涉及组织流程设计决策 |
+
+#### 4.8.3 诚实边界
+
+```
+IPD 引擎（ipd_case_engine.py）：
+  ✅ 管理 case 内的阶段流转、签核、事件日志
+  ❌ 不知道自己的代码是谁写的、怎么迭代的
+  ❌ 不知道审批体系文档的存在
+  ❌ 不知道培训材料的存在
+
+总助（当前阶段）：
+  ✅ 设计并编码了 IPD 引擎的全部功能
+  ✅ 创建了 through-pass 审批体系的全部文档
+  ✅ 编写了 IPD 培训材料
+  ✅ 执行了所有 runtime 跨仓同步发布
+  ✅ 修复了所有 IPD 引擎 bug（包括 intake 回退补全）
+
+TriMC / 未来编排模块（规划中）：
+  🔲 接管 engine 日常维护的机械化部分（sync、patch 生成、验证同步）
+  🔲 心跳扫描与卡点检测（已落地）
+  🔲 跨仓 published-copy 自动同步
+```
+
+### 4.9 总助编排全景
+
+两条编排线的关系：
+
+```
+IPD 系统构建与维护编排（§4.8）
+  总助建造轨道：引擎、CLI、审批体系、培训材料
+  ─────────────────────────────────────────────
+          ↓ 建造完成后，轨道上跑的是 ↓
+  ─────────────────────────────────────────────
+IPD 双线人工编排操作（§4.7）
+  总助在轨道上调度列车：through-pass merge、
+  FREEZE 回流、缺陷回灌、跨 case 协调
+```
+
+当前阶段，总助既造轨道又调度列车。未来 TriMC 上线后：
+- §4.8 的机械化部分（sync、patch、验证同步）→ 交 TriMC
+- §4.8 的设计决策部分（架构调整、审批体系设计）→ 保留人工或升级为自建编排模块
+- §4.7 的跨 case 协调 → 按 4.7.3 决策框架逐项判断
+
 ## 5. 当前约束
 
 - TriCompany 当前既做研发，也承载模块侧宿主源码与发布准备资产，但不等于当前 live 宿主，更不宣称 TriMC 正式宿主运行。当前 IPD engine（`ipd_case_engine.py`）等 runtime 模块的实际执行入口位于 `TriMetaverse/TriCompany-copilot-host-assets/runtime/`；TriCompany 源侧维护源码真源，发布副本由总助同步到 copilot-host-assets 后生效。
@@ -234,3 +329,4 @@ TriMC / 未来编排模块（规划中）：
 5. 最小 schedule / cron / automation staging 路线已明确，并至少完成一条闭环验证。
 
 稳定后，由 CPO / CTO 输出首轮产品 / 技术接管判断，并决定哪些结论继续发布到支撑包、哪些进入 live 宿主、哪些只同步回 TriMetaverse 中央层。
+

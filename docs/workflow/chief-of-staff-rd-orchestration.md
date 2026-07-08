@@ -55,3 +55,9 @@ TriCompany 源侧已新增 §4.7「IPD 双线人工编排操作」，记录 CEOC
 - **§4.2 分诊扩 CCO**：Chief Customer Officer，管理 CSM/客服/体验线，当前未上岗
 - **§5 澄清**：runtime 执行入口位于 TriMetaverse/TriCompany-copilot-host-assets/runtime/，TriCompany 源侧维护源码真源
 - **§6 明确**：下一阶段 = 从 Copilot-host live 进入 TriMC 正式宿主运行阶段
+
+### 5.3 V0.6 新增（2026-07-08）
+
+- **§4.8 IPD 系统构建与维护编排**：诚实记录总助从零构建 IPD 引擎、CLI、验证脚本、through-pass 审批体系文档、培训材料的全部手动工作；含完整资产清单（3 core runtime + 10 process artifacts + 4 training docs）、7 项构建操作表、诚实边界声明
+- **§4.9 总助编排全景**：两条编排线关系图——系统构建（造轨道 §4.8）vs 双线协调（调度列车 §4.7），当前总助两线全包，未来按维度拆分给 TriMC / 自建模块 / 保留人工
+- **§4.6 标题修复**：耐久记忆升级规则标题在此前编辑中丢失，已恢复
