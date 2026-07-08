@@ -6,7 +6,7 @@
 - publishedFrom: 当前文件（source）
 - syncMode: source-only
 - publishTier: source-only
-- lastSyncedAt: 2026-07-03
+- lastSyncedAt: 2026-07-08
 
 当前文件是 TriMetaverse 公司级 GitHub 仓库治理规则的中央摘要，汇总模块仓库清单、多仓 workspace 布局、分支策略、提交规范、PR 规则、仓库初始化、仓库健康巡检与多仓协同纪律。各子规范的详细原文以引用的上游真源为准；本页为中央收口层，不做替代。
 
@@ -87,6 +87,38 @@ TriMetaverse 是公司级的 **root workspace**，通过 `trimetaverse.code-work
 | 18 | TriModel | `../TriModel` | ✓ | `TriHost/`（物理目录名待同步） |
 | 19 | TriSkill | `../TriSkill` | ✓ | `TriSkill/` |
 | 20 | TriTraining | `../TriTraining` | ✓ | `TriTraining/` |
+
+#### 2.2.1 `trimetaverse.code-workspace` 原始 `folders`（权威路径源）
+
+以下为 `trimetaverse.code-workspace` 中 `folders` 字段的原始内容，是模块路径的唯一权威定义。**查找任何模块的物理位置时，优先查本段 JSON，不依赖推断。**
+
+```json
+"folders": [
+    { "path": "./" },
+    { "path": "../TriPilot" },
+    { "path": "../TriStaciss" },
+    { "path": "../TriAvatar" },
+    { "name": "Tride", "path": "../Tride" },
+    { "path": "../vscodium" },
+    { "path": "../TriDeployment" },
+    { "path": "../TriTest" },
+    { "path": "../core-agent" },
+    { "path": "../TriMC" },
+    { "path": "../TriLC" },
+    { "path": "../TriMobile" },
+    { "path": "../TriMem" },
+    { "path": "../TriWeb4" },
+    { "path": "../TriChain" },
+    { "path": "../TriCompany" },
+    { "path": "../TriDev" },
+    { "path": "../TriGateway" },
+    { "path": "../TriModel" },
+    { "path": "../TriSkill" },
+    { "path": "../TriTraining" }
+]
+```
+
+> **解释：** 除第 1 项 `"./"` 为 TriMetaverse 自身外，其余 20 项的 `path` 均以 `"../"` 开头——表示这些模块是 **兄弟目录**，不是 TriMetaverse 的子目录。`TriMetaverse/<模块名>/` 是错误路径；正确路径始终是 `../<模块名>/`。
 
 ### 2.3 新增/移除模块仓库
 
