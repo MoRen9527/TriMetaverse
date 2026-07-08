@@ -1,8 +1,8 @@
 # IPD 开发文档体系与自动化流程说明
 
-版本：V0.3
-日期：2026-07-09
-状态：当前 Copilot-host live 阶段基线总结（追平 intake 回退路径、reopen-intake CLI、流程回退图）
+版本：V0.4
+日期：2026-07-08
+状态：当前 Copilot-host live 阶段基线总结（诚实化 §4 双线闭环为"人工协调"，标注引擎职责边界）
 
 ## 文档同步元信息
 
@@ -233,37 +233,49 @@ TriMC 的心跳扫描器对所有 IPD case 做定期卡点检测，发现卡点�
 
 ---
 
-## 4. 双线配合闭环（核心运转机制）
+## 4. 双线配合闭环（当前阶段：人工闭环）
+
+> **诚实标注**：下图描述的是当前实际运转方式——由 CEO + CEOChiefOfStaff + CPO + CTO 四人手动协调完成。IPD 引擎负责两条线的**独立追踪与签核**，但不负责跨 case 的程序化联动。"能力输出"和"缺陷回灌"当前没有代码自动执行，全部靠人在对话中完成。引擎的角色是记录器/追踪器，不是闭环编排器。
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                  IPD 自身优化与验证闭环                        │
-│                                                             │
-│  process-improvement case            project-delivery case  │
-│  (IPD-20260612-WORKFLOW-002)    ←→   (IPD-20260610-PLATFORM)│
-│         │                                    │               │
-│         │  1. 修改 B 层执行真源               │               │
-│         │  2. source-side 自测               │               │
-│         │  3. 切片验证                       │               │
-│         │                                    │               │
-│         │ ──── 能力输出 ────→                │               │
-│         │                    4. live replay / 产品主线消费   │
-│         │                    5. Gate A / B / C 分段验证      │
-│         │ ←── 缺陷回灌 ──────                │               │
-│         │  6. 失败回退到对应阶段              │               │
-│         │  7. 问题进入下轮 workflow sprint    │               │
-│                                                             │
-│  Agile 六段                        Ten-phase 十段            │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│              IPD 自身优化与验证闭环（当前：人工协调）               │
+│                                                                  │
+│  process-improvement case              project-delivery case     │
+│  (IPD-20260612-WORKFLOW-002)           (IPD-20260610-PLATFORM)   │
+│         │                                      │                 │
+│         │  1. 在 backlog 里填流程优化项        │                 │
+│         │  2. CTO 改 B 层执行真源              │                 │
+│         │     (ipd_case_engine.py / CLI)       │                 │
+│         │  3. source-side 自测                 │                 │
+│         │                                      │                 │
+│         │  ──── 小贾手动协调 ────→             │                 │
+│         │     CPO/CTO 审批 through-pass        │                 │
+│         │     小贾执行 merge 到 A/B 层真源      │                 │
+│         │                      4. PLATFORM case│                 │
+│         │                         跑 live      │                 │
+│         │                         replay 验证   │                 │
+│         │  ←── 小贾手动回灌 ────               │                 │
+│         │     不合格项回流到 FREEZE 清单        │                 │
+│         │     写进下轮 workflow sprint backlog  │                 │
+│                                                                  │
+│  引擎职责：追踪阶段状态、签核链、事件日志                         │
+│  人的职责：跨 case 协调、merge 执行、回灌决策                     │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
-固定规则：
-1. 先在独立 `process-improvement + WORKFLOW` case 里修流程
-2. 做 source-side 自测与切片验证
-3. 回到固定 `project-delivery` case（当前 `IPD-20260610-PLATFORM-001`）做 live replay
-4. 合格 → 继续向后放行
-5. 不合格 → 按缺陷来源回退到 `ceo-demand`、`task-dispatch`、`discovery` 或后续阶段
-6. 失败点重新回灌到 workflow sprint case
+**已完成的真实闭环案例**（2026-07-03，backfill-001）：
+- WORKFLOW-001 产出流程优化 → PLATFORM-001 验证 → CPO 7+3 / CTO 8+2 审批 → 小贾执行 through-pass merge
+- 15 项 APPROVE 写入主流程 V0.8（`integrated-product-development-flow.md` + engine.py + validation.py）
+- 5 项 FREEZE 回流到下轮 WORKFLOW backlog
+
+**当前运转规则**：
+1. 先在 `process-improvement + WORKFLOW` case 里填 backlog、改流程
+2. 改完后 CEOChiefOfStaff 协调 CPO/CTO 做 through-pass 审批
+3. CEOChiefOfStaff 执行 merge 到 A 层（流程文档）+ B 层（engine/CLI）
+4. 回到 `project-delivery` case 做 live replay 验证改动是否有效
+5. 合格 → 固化；不合格 → 转入 FREEZE 清单，回灌到下轮 workflow sprint backlog
+6. **注意**：两条 case 各自独立跑在同一个 engine 上，没有程序化跨 case 联动——当前所有步骤均为人工协调
 
 ---
 
