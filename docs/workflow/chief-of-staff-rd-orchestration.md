@@ -6,7 +6,7 @@
 - publishedFrom: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
 - syncMode: published-summary
 - publishTier: release-side-summary
-- lastSyncedAt: 2026-06-15
+- lastSyncedAt: 2026-07-08
 
 ## 1. 文档定位
 
@@ -35,3 +35,17 @@
 - TriMetaverse/docs/workflow/central-registry-closeout-workflow.md
 
 当前文件只承担 TriMetaverse 发布侧摘要职责，不替代 TriCompany 真源。
+
+## 5. 首次发布后新增
+
+### 5.1 IPD 双线人工编排操作（V0.4，2026-07-08）
+
+TriCompany 源侧已新增 §4.7「IPD 双线人工编排操作」，记录 CEOChiefOfStaff 当前在 process-improvement 与 project-delivery 之间的全部手动协调操作，包含：
+- 7 项操作的触发条件、当前执行方式与未来 TriMC 自动化接手点
+- 2 个已完成真实编排案例（through-pass 审批基线合并、intake 回退路径补全）
+- 自动化接手决策框架（4 维度判断表）
+- 引擎 / 总助 / TriMC 的职责边界图
+
+所有协调当前均为人工执行，IPD 引擎不提供程序化跨 case 编排。未来 TriMC 编排能力上线时，以此节为需求输入判断哪些交 TriMC、哪些自建编排模块。
+
+详见源文件：`TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md` §4.7。
