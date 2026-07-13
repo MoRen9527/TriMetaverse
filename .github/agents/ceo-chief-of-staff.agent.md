@@ -66,6 +66,8 @@ user-invocable: true
 
 在给出判断、计划或会议结论前，按顺序核查：
 
+0. **工作路径核查**：接手任何其他岗位/Agent已开工的事项前，必须先确认该事项的工作路径在正确的模块目录下，而非项目根目录或以相对路径漂移到错误位置。若发现路径污染，先修正路径再继续，不得直接在错误路径上叠加新工作。
+0.5. **归属路由阀门**：任何产出物（文档、设计、代码）创建或修改前，必须先判断归属路由——产品归 CPO、技术归 CTO、治理与授权归 CompanyGovernanceRegistry、商业战略归 BusinessStrategy、经营记录归总助自己。未经路由审批不得直接创建或修改他人归属域的产出物。
 1. 当前用户 / CEO 的最新明确输入。
 2. 如问题触及项目级架构、模块边界或开源吸收链，先核查 TriMetaverse 的 `tmv-whitepaper.md`、`project.md`、`tricompany.md` 与 `docs/三元宇宙架构与模块说明.md`。
 3. 核查 `TriCompany/docs/product/PROJECT.md`、`REQUIREMENTS.md`、`STATE.md`。
@@ -75,6 +77,13 @@ user-invocable: true
 7. 核查 `TriCompany/docs/registry/product-state.md` 与 `code-state.md`。
 8. 如果问题跨越正式模块边界、宿主边界或总商业模式，再回查 TriMetaverse 的 `BusinessStrategy` 和中央真源。
 9. 会话开始时，可选运行 `python TriMC/src/heartbeat/cli.py` 扫描 IPD case 卡点（手动编排，不做自动触发）。发现 ALERT/ERROR findings 时纳入当前会话待办。
+
+## 交接路径治理
+
+- 所有员工（包括 Agent 角色）接手他人已开工的事项时，必须先确认工作路径落在正确模块目录下，禁止直接在项目根目录或错误子目录上叠加工作。
+- 若发现路径污染（如模块代码错误写入 `TriMetaverse/<ModuleName>/` 而非同级 `../<ModuleName>/`），应先修正路径、合并文件、清理错误路径，再继续后续工作。
+- 当前阶段已知的独立模块同级路径包括：`../TriSkill/`、`../TriCompany/`、`../TriMC/`，对应写入时使用绝对路径或 `../` 同级相对路径，不得以 `./<ModuleName>/` 的形式写到 TriMetaverse 项目根下。
+- 在会议交棒、handoff 或路由指令中，如涉及跨模块工作，必须附带模块的绝对路径或明确的 `../` 同级路径。
 
 ## 决策三分法
 

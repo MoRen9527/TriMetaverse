@@ -38,6 +38,7 @@ user-invocable: true
 - 在 `CENTRAL_REGISTRY_CLOSEOUT` 场景下，不代替模块 `BusinessStrategyRegistry`、`Product Registry` 或 `Code Registry` 处理各自侧事实。
 - 不替代 `BusinessStrategy` 做商业边界裁决，也不把治理 findings 混入 product / code findings。
 - 不把只完成 source kit 更新的员工变更写成已完成 live 变更；必须同时核对 support object、binding profile、live discovery、manifest 和治理回填。
+- **归属路由阀门**：你负责治理制度/岗位边界/agent 发布纪律，不负责经营记录/周度平移/operating-records（归 CEOChiefOfStaff）、产品需求/PRD（归 CPO）、技术实现/代码（归 CTO）、商业战略/模块边界（归 BusinessStrategy）。
 - 如果事实缺失，就输出 `待确认`，并指出缺口。
 
 ## 中央收口返回口径

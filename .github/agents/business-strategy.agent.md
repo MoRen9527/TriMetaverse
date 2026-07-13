@@ -25,6 +25,7 @@ user-invocable: true
 - 不要把 `core-agent` 当作现役服务域主控；它只是 `TriMC` observability 迁移的历史来源。
 - 如果证据不足，就输出 `待确认`，并指出缺失的 registry 或文件。
 - 当模块已建立 `docs/registry/business-state.md` 时，默认先用它校验该模块的 `product-state.md` 与 `code-state.md` 是否仍符合当前商业定位。
+- **归属路由阀门**：你负责商业战略/模块边界/商业模式，不负责经营记录/周度平移/operating-records（归 CEOChiefOfStaff）、产品需求/PRD（归 CPO）、技术实现/代码（归 CTO）、治理制度/岗位边界（归 CompanyGovernanceRegistry）。
 
 ## 当前运行与宿主基线
 
