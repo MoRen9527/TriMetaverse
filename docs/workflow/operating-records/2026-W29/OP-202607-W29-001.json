@@ -229,15 +229,25 @@
       "dueAt": "2026-07-14T20:00:00+08:00"
     },
     {
-      "id": "NA-20260713-CHO-001",
-      "owner": "ChiefHumanResourcesOfficer",
-      "action": "小全上岗审批：全栈开发工程师「小全」走完整上岗流水线（JD定义→源侧五件套→contract→binding profile→CHO审批签字→CTO激活→governance回填）。上岗审批门新规（2026-07-14）：必须经 CHO 审批才算正式上岗。",
+      "id": "NA-20260713-CTO-006",
+      "owner": "ChiefTechnologyOfficer",
+      "action": "小全上岗流水线步骤1-4：为全栈开发工程师「小全」创建JD/角色定义、源侧五件套（soul/memory/colleagues/social/agent.md）、contract.yaml、binding profile。完成后移交 CHO 审批。",
       "dependsOn": [
         "TriCompany/.github/source-agents/",
-        "TriCompany/.github/binding-profiles/",
+        "TriCompany/.github/binding-profiles/"
+      ],
+      "dueAt": "2026-07-18T20:00:00+08:00",
+      "warningLevel": "none"
+    },
+    {
+      "id": "NA-20260713-CHO-001",
+      "owner": "ChiefHumanResourcesOfficer",
+      "action": "小全上岗审批（步骤5）：审查 CTO 提交的小全 artifacts（JD/五件套/contract/binding），按 CHO 上岗审批门新规（2026-07-14）签字批准。审批通过后交 CTO 激活。",
+      "dependsOn": [
+        "NA-20260713-CTO-006",
         "TriMetaverse/docs/registry/company-governance-state.md"
       ],
-      "dueAt": "2026-07-16T20:00:00+08:00",
+      "dueAt": "2026-07-21T20:00:00+08:00",
       "warningLevel": "none"
     }
   ],
