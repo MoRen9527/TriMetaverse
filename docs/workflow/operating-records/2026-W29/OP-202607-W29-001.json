@@ -369,7 +369,8 @@
       "id": "TODO-20260713-003",
       "title": "CEO 待确认：5 个 C-level Agent 合同 display_name 决策（CAO/CFO/CHRO/CMO/COO）",
       "owner": "CEO",
-      "status": "pending",
+      "status": "deferred_by_ceo",
+      "ceoDecision": "2026-07-14 暂不命名：当前阶段维持「待命名」，等待合适时机再统一命名。",
       "dependsOn": []
     },
     {
@@ -390,7 +391,9 @@
       "id": "TODO-20260713-006",
       "title": "CEO 待确认：TestEngineer（小柯）Agent 合同上线（已创建，17/17 合约解析通过）",
       "owner": "CEO",
-      "status": "pending_review",
+      "status": "ceo_approved",
+      "approvedAt": "2026-07-14T02:28:00+08:00",
+      "ceoDecision": "2026-07-14 确认合同上线。TestEngineer（小柯）正式上岗，负责验证器。",
       "dependsOn": []
     }
   ],
