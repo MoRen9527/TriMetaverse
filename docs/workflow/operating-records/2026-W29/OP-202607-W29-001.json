@@ -227,6 +227,18 @@
         "TriCompany/docs/registry/code-state.md"
       ],
       "dueAt": "2026-07-14T20:00:00+08:00"
+    },
+    {
+      "id": "NA-20260713-CHO-001",
+      "owner": "ChiefHumanResourcesOfficer",
+      "action": "小全上岗审批：全栈开发工程师「小全」走完整上岗流水线（JD定义→源侧五件套→contract→binding profile→CHO审批签字→CTO激活→governance回填）。上岗审批门新规（2026-07-14）：必须经 CHO 审批才算正式上岗。",
+      "dependsOn": [
+        "TriCompany/.github/source-agents/",
+        "TriCompany/.github/binding-profiles/",
+        "TriMetaverse/docs/registry/company-governance-state.md"
+      ],
+      "dueAt": "2026-07-16T20:00:00+08:00",
+      "warningLevel": "none"
     }
   ],
   "carriedItems": [
@@ -234,13 +246,14 @@
       "id": "CARRY-20260713-001",
       "title": "最小 MVP/最小经营闭环重排（CPO 输出状态切分）",
       "owner": "ChiefProductOfficer",
-      "status": "frozen",
+      "status": "frozen_by_ceo",
       "carryWeeks": 14,
-      "warningLevel": "high",
+      "warningLevel": "none",
       "firstRecorded": "W15 (2026-04-06)",
-      "note": "已跨 14 周，原始需求可能已漂移。建议本周由 CEO 决策：继续推进还是冻结/降级。",
-      "linkedNextAction": "NA-20260713-CPO-001",
-      "dependsOn": ["CEO 决策"]
+      "ceoDecision": "2026-07-14 冻结：等 IPD 成熟后再考虑 MVP。从 active carry 移除，转 frozen archive。",
+      "note": "CEO 裁决冻结。待 IPD 成熟后由 CPO 重新提案。",
+      "linkedNextAction": null,
+      "dependsOn": ["IPD 成熟（CARRY-003）"]
     },
     {
       "id": "CARRY-20260713-002",
@@ -270,12 +283,14 @@
       "id": "CARRY-20260713-004",
       "title": "TriMC 最小部署拓扑（待 CEO 裁决）",
       "owner": "ChiefTechnologyOfficer",
-      "status": "pending_ceo_decision",
+      "status": "ceo_approved",
       "carryWeeks": 2,
       "warningLevel": "none",
       "firstRecorded": "W28 (2026-07-08)",
-      "note": "CTO 已标记完成（2026-07-08），等待 CEO 确认部署拓扑选择。Phase 1+2 已完成，部署拓扑决策的紧迫性上升。",
-      "dependsOn": ["CEO 确认"]
+      "ceoDecision": "2026-07-14 APPROVE：确认同意 CTO 部署拓扑方案。CTO 可进入执行阶段。",
+      "note": "CEO 已 APPROVE。CTO 进入部署拓扑执行阶段。Phase 1+2 基础设施就绪。",
+      "linkedNextAction": "NA-20260713-CTO-001",
+      "dependsOn": []
     },
     {
       "id": "CARRY-20260713-005",

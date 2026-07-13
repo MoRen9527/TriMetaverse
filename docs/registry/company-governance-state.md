@@ -47,6 +47,7 @@
 - 已确认 `PRD_OWNERSHIP_ROUTING` 的产品归属判断在当前阶段由已上岗的 `ChiefProductOfficer` 主责；`CEOChiefOfStaff` 保留公司级任务分派、催办、升级与收口职责，不再代替产品侧做 PRD 归属判断。
 - 已确认跨岗位 / 跨负责人交接流程的设计与完成度监督由当前已上岗的 `ChiefHumanResourcesOfficer` 主责；`CEOChiefOfStaff` 保留公司级协调、催办、升级与收口职责。
 - 已确认 `ChiefHumanResourcesOfficer` 或其他新增固定员工的启用，应先从 `TriCompany` 源侧岗位 / 员工定义、源侧五件套、support object、shadow gate / validation、live binding、governance 回填这条链路启动，不得绕过源侧流程直接宣称 live 到岗。
+- ⚠️ **上岗审批门（2026-07-14 CEO 确认）**：新员工上岗必须以 CHO（Chief Human Resources Officer）审批为正式上岗前提。完成源侧五件套 + contract + binding profile 后，必须经 CHO 审核通过并签字（在 governance records 中落档），方可激活 live agent.md 入口。任何岗位（含 CEOChiefOfStaff、CPO、CTO）不得绕过 CHO 直接启用新员工。此规则修正此前 TestEngineer 上岗流程（已完成但缺少 CHO 审批节点），后续所有新员工一律补齐。
 - 已按源侧发布链路启用 `ChiefHumanResourcesOfficer`、`ChiefAdministrativeOfficer` 与 `RAndDTrainer` 当前 Copilot-host live 入口；该状态不代表 TriMC 正式宿主切换或完整授权矩阵生产化。
 - 已确认模块级 `BusinessStrategyRegistry`、`ProductRegistry`、`CodeRegistry` 的目标归属是对应模块 `.github/agents/`；迁移时必须先合并中央口径，再移除 `TriMetaverse/.github/agents/` 下同名 discoverable 文件，确保多 root workspace 中单一 discovery。
 - 已从 TriCompany 源侧发布并确认 registry 经营 owner 分工：`ProductRegistry` 由 CPO 小乔管理，`CodeRegistry` 由 CTO 小狄管理，中央 `CompanyGovernanceRegistry` 由 CAO 管理；`CEOChiefOfStaff` 只负责路由、协调、催办、升级与中央收口。
