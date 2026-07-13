@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/registry/code-state.md
 - syncMode: source-only
-- lastSyncedAt: 2026-06-04
+- lastSyncedAt: 2026-07-14T00:33:00+08:00
 
 ## Repository Map
 
@@ -16,6 +16,27 @@
 - `mermaid/`：图示资产和导出文件
 - `scripts/`：辅助脚本
 - 根目录 `.md`：白皮书、价值流动、阶段计划和方案文档
+
+## Registry Assets
+
+- `docs/registry/business-state.md`：中央策略边界、模块优先级与跨模块裁决登记
+- `docs/registry/product-state.md`：中央产品范围、模块边界与六层文档系统治理
+- `docs/registry/code-state.md`：本文件，仓库结构、代码健康与变更追踪基线
+- `docs/registry/company-governance-state.md`：岗位边界、秘书处、会议治理与 agent 发布纪律
+- `docs/registry/ipd-freeze-items-registry.md`（2026-07-10 新增）：5 项 through-pass FREEZE 的唯一独立文件实体，含逐项详情、解冻条件与来源追溯。CPO 3 项（F1 QA分值阈值 / F2 一票否决维度 / F3 candidate→final门槛）+ CTO 2 项（F4 seed/mnemonic / F5 local-only deployment）
+
+## Key Milestones
+
+- 2026-07-11：TriSkill Wave 2 全部完成（CTO 小狄）。4 个 skill — tri-code-review / tri-diagnosing-bugs / tri-implement / tri-teach — 覆盖 VERIFY-INTEGRATION / REDTEAM / CODING / CROSS-CUTTING。TriSkill Wave Status 全绿，114/114 todo done。
+- 2026-07-11：TriSkill Wave 2 tri-code-review 产出（CTO 小狄）。两轴审查法（Standards × Spec），12 项 Fowler smell baseline，copilot-host/TriMC 双轨适配，IPD VERIFY-INTEGRATION gate 定位。
+- 2026-07-11：TriSkill Wave 1 产品+技术产出完成。CPO 3 个（tri-grill-docs / tri-to-spec / tri-to-tickets）+ CTO 1 个（tri-tdd）+ tri-spec 消除。6 个 registry 文件同步，角色×阶段×skill 映射完整。
+- 2026-07-10：CARRY-005 首轮闭环，5 FREEZE 登记文件创建并纳入 governance assets
+- 2026-07-14：规格桥接模型 MVP 闭环（ITEM-20260709-001），D1-D4 全部完成，5/5 agent 合约通过语义验证，contract resolver 17/17 tests pass
+- 2026-07-13：CPO+CTO联审+CEO中央裁决闭环。三项议题全票 APPROVE：①积木验证器方法论融入 IPD ②TriTest 独立为第四层验证器框架模块 ③TriDeployment 独立为部署执行引擎（CEO 采纳 CTO 裁决，否决 CPO"回归 TriDev"方案）。TriDev ↔ TriTest ↔ TriDeployment 解耦架构确立：TriDev 为流程编排器（管 WHEN+WHO），TriTest/TriDeployment 为执行引擎（管 HOW），通过 CLI contract 解耦。
+- 2026-07-13：CLI interface spec 交付（CTO 小狄）。`docs/engineering/tri-dev-test-deploy-cli-interface-spec.md` V1.0 落档。基于三模块源码审计（TriTest cli.ts/types.ts/index.ts/runners/ + TriDeployment cli.ts/types.ts/deployer.ts + TriDev tridev.config.json）产出精确 CLI contract：`--format json` 标志（P0）、`tritest validate` 命令+`ValidatorResult` schema（P1）、`DeployResult` schema 标准化、5-wave 分波实施计划。关联：`tri-dev-test-deploy-decoupling.md` V1.0。
+- 2026-07-13：Phase 2 TriMC Agent Loop 全量完成（CTO 小狄）。`test-e2e/agent-loop.test.ts` 70/70 测试全绿，覆盖 SSE streaming + task tool policy + session.ts 重构 + agent.json 协议栈 + 4 层错误分类 + TriStaciss Anthropic Messages API fallback（P2-4）。关联：`TriMC/docs/engineering/phase-2-execution-note.md`。
+- 2026-07-13：CEOChiefOfStaff（小贾）execute 工具权限开通。`ceo-chief-of-staff.agent.md` tools 从 `[read, search, edit]` 扩展为 `[read, search, edit, execute]`，支持 powershell 文件系统操作与进程管理。
+- 2026-07-14：全 agent 归属路由阀门治理更新。15 个 `.agent.md` 全部增加 `归属路由阀门` 规则，明确五大禁止域映射——经营记录→CEOChiefOfStaff、产品→CPO、技术→CTO、商业战略→BusinessStrategy、治理→CompanyGovernanceRegistry。修复 CTO 误判越界执行周度平移的根本原因（此前仅声明"不替代某些岗位"但未列出完整禁止域清单）。关联：`company-governance-state.md` 同步记录。
 
 ## Current Code Health
 
@@ -59,9 +80,9 @@
   - `TriPilot`：23 files，545 nodes，2,000 edges；仓库瘦身后已重建仓根干净索引。
   - `TriAvatar`：102 files，888 nodes，1,342 edges；仓库瘦身后已重建仓根干净索引。
   - `TriLC`：10 files，39 nodes，48 edges；已排除 `vendor/openclaw/`，只覆盖本地域控制器自研 TypeScript 面。
-  - `TriDeployment`：9 files，2 nodes，0 edges；当前以模板、profile 和 PowerShell 工具为主，CodeGraph 只提供弱语义摘要。
+  - `TriDeployment`：~7 source files（TypeScript），2 nodes，0 edges；已具备完整 CLI + deployer + registry + targets；CodeGraph 统计需刷新（当前数据为早期快照）。
   - `TriCompany`：100 files，1,494 nodes，3,042 edges；已排除 `.tricompany-cognition/`、`vendor/`、依赖目录和构建产物。
-  - `TriTest`：0 files，0 nodes，0 edges；当前主要为 PowerShell / Markdown 模板，现有 CodeGraph parser 未产出可用图。
+  - `TriTest`：~7 source files（TypeScript），0 nodes，0 edges；已具备完整 CLI + unit-runner + integration-runner + reporters；CodeGraph 统计需刷新（当前数据为早期快照，parser 未产出可用图）。
   - `vscodium`：14 files，0 nodes，0 edges；当前只得到仓根 YAML / workflow 配置面的弱语义索引，`.patch` 文件仍未产出可用代码语义图；不对 `vscode/` 上游源码镜像建索引。
   - 2026-05-26 已补齐架构表正式模块标配骨架；后续既有正式模块统一走 `ModuleTargetingReport + ModuleReadinessInit`，新增正式模块统一走 `NewModuleBaselineRelease + TriDev init`，均在 `Discovery` 阶段完成门禁后落地。
 
