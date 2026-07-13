@@ -231,7 +231,7 @@
     {
       "id": "NA-20260713-CTO-006",
       "owner": "ChiefTechnologyOfficer",
-      "action": "小全上岗流水线步骤1-4：为全栈开发工程师「小全」创建JD/角色定义、源侧五件套（soul/memory/colleagues/social/agent.md）、contract.yaml、binding profile。完成后移交 CHO 审批。",
+      "action": "小全上岗流水线步骤1-4：为全栈开发工程师「小全」创建JD/角色定义、源侧五件套（soul/memory/colleagues/social/agent.md）、contract.yaml、binding profile。完成后移交 CHO 审批。CEO角色边界指令（2026-07-14）：小全归CTO领导，负责具体编码积木；小柯（TestEngineer）负责验证器；CTO负责审查两人工作质量和效率。",
       "dependsOn": [
         "TriCompany/.github/source-agents/",
         "TriCompany/.github/binding-profiles/"
