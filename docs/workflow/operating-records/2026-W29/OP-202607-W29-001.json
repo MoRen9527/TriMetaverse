@@ -1,0 +1,447 @@
+{
+  "objectType": "OPERATING_PLAN",
+  "objectId": "OP-202607-W29-001",
+  "title": "TriMetaverse W29 当前周经营维护计划单",
+  "status": "active",
+  "priority": "high",
+  "ownerRole": "CEOChiefOfStaff",
+  "createdAt": "2026-07-13T19:00:00+08:00",
+  "updatedAt": "2026-07-13T19:00:00+08:00",
+  "timebox": {
+    "scope": "weekly",
+    "startAt": "2026-07-13T00:00:00+08:00",
+    "endAt": "2026-07-19T23:59:59+08:00",
+    "label": "2026-W29 当前周维护面"
+  },
+  "summary": "W28→W29 周度平移完成。Phase 1+2 TriMC Agent Loop 全量完成（70/70 测试通过），TestEngineer（小柯）合同已上线，5 C-level 合同 display_name 待 CEO 确认。W29 持续推动 Claude Code 吸收、员工编排层技术方案、IPD 穿透检查与 carry 老化收敛。",
+  "relatedModules": [
+    "TriMetaverse",
+    "TriCompany",
+    "TriMC",
+    "TriModel",
+    "TriStaciss",
+    "TriSkill",
+    "TriDev",
+    "TriAvatar",
+    "TriLC",
+    "TriPilot",
+    "Tride",
+    "TriDeployment",
+    "TriTest",
+    "TriMem",
+    "TriMobile",
+    "TriWeb4",
+    "TriGateway",
+    "TriChain"
+  ],
+  "dependsOn": [
+    "OP-202607-W28-001",
+    "TriCompany/docs/product/PROJECT.md",
+    "TriCompany/docs/engineering/DESIGN.md"
+  ],
+  "relatedDocuments": [
+    {
+      "source": "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json",
+      "kind": "document",
+      "note": "W28 已闭合，所有未完成事项迁移至 W29。"
+    },
+    {
+      "source": "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.unresolved-items.md",
+      "kind": "document",
+      "note": "W28 unresolved items 已闭合并标注 W29 继承引用。"
+    },
+    {
+      "source": "TriCompany/docs/product/PROJECT.md",
+      "kind": "document",
+      "note": "产品主文档，最小 MVP 重排的引用基线。"
+    },
+    {
+      "source": "TriCompany/docs/engineering/DESIGN.md",
+      "kind": "document",
+      "note": "工程设计主文档，TriMC/Claude Code 吸收的引用基线。"
+    },
+    {
+      "source": "TriMC/docs/engineering/phase-1-execution-note.md",
+      "kind": "document",
+      "note": "CTO Phase 1 执行笔记，阶段完成记录。"
+    },
+    {
+      "source": "TriMC/docs/engineering/phase-2-execution-note.md",
+      "kind": "document",
+      "note": "CTO Phase 2 执行笔记，SSE + task + policy + fallback 完成记录。"
+    }
+  ],
+  "nextActions": [
+    {
+      "id": "NA-20260713-CPO-001",
+      "owner": "ChiefProductOfficer",
+      "action": "最小 MVP/最小经营闭环重排：输出当前状态切分，明确 active、暂停、后置和待 CEO 决策范围。",
+      "dependsOn": [
+        "TriCompany/docs/product/PROJECT.md",
+        "TriCompany/docs/product/STATE.md"
+      ],
+      "dueAt": "2026-07-16T20:00:00+08:00",
+      "warningLevel": "high",
+      "carryWeeks": 14
+    },
+    {
+      "id": "NA-20260713-CPO-002",
+      "owner": "ChiefProductOfficer",
+      "action": "running FREEZE 清单检查：确认各 FREEZE 项当前状态、是否可解除、是否需升级为 BLOCKED 或直接关闭。",
+      "dependsOn": [
+        "TriCompany/docs/registry/product-state.md"
+      ],
+      "dueAt": "2026-07-16T20:00:00+08:00",
+      "warningLevel": "warning",
+      "carryWeeks": 6
+    },
+    {
+      "id": "NA-20260713-CPO-003",
+      "owner": "ChiefProductOfficer",
+      "action": "IPD-001 穿透检查：按当前冲刺周期给出各模块总优先安排，标注阻塞项与依赖链。",
+      "dependsOn": [
+        "TriCompany/docs/product/PROJECT.md",
+        "TriCompany/docs/registry/product-state.md"
+      ],
+      "dueAt": "2026-07-15T20:00:00+08:00",
+      "warningLevel": "warning",
+      "carryWeeks": 1
+    },
+    {
+      "id": "NA-20260713-CPO-004",
+      "owner": "ChiefProductOfficer",
+      "action": "大重构目标最简模型与前置条件：输出最简可验证模型定义与入口边界。",
+      "dependsOn": [
+        "TriCompany/docs/product/PROJECT.md"
+      ],
+      "dueAt": "2026-07-16T20:00:00+08:00",
+      "warningLevel": "warning",
+      "carryWeeks": 1
+    },
+    {
+      "id": "NA-20260713-CPO-005",
+      "owner": "ChiefProductOfficer",
+      "action": "人设/角色/叙事侧状态说明：产出当前阶段角色清单、叙事定位与边界说明。",
+      "dependsOn": [
+        "TriCompany/docs/product/STATE.md"
+      ],
+      "dueAt": "2026-07-16T20:00:00+08:00",
+      "warningLevel": "warning",
+      "carryWeeks": 1
+    },
+    {
+      "id": "NA-20260713-CPO-006",
+      "owner": "ChiefProductOfficer",
+      "action": "产品需求侧 carry 优先级标注：对当前所有 carry 事项标注 P0/P1/P2 优先级。",
+      "dependsOn": [
+        "docs/workflow/operating-records/2026-W29/OP-202607-W29-001.unresolved-items.md"
+      ],
+      "dueAt": "2026-07-15T20:00:00+08:00",
+      "warningLevel": "warning",
+      "carryWeeks": 1
+    },
+    {
+      "id": "NA-20260713-CPO-007",
+      "owner": "ChiefProductOfficer",
+      "action": "产品基调检查清单：产出产品基调、角色语气、用户感知一致性检查清单。",
+      "dependsOn": [
+        "TriCompany/docs/product/STATE.md"
+      ],
+      "dueAt": "2026-07-17T20:00:00+08:00"
+    },
+    {
+      "id": "NA-20260713-CTO-001",
+      "owner": "ChiefTechnologyOfficer",
+      "action": "代码侧支撑任务技术执行状态：对当前所有代码侧支撑任务条目输出状态快照。",
+      "dependsOn": [
+        "TriCompany/docs/engineering/DESIGN.md",
+        "TriCompany/docs/registry/code-state.md"
+      ],
+      "dueAt": "2026-07-15T20:00:00+08:00",
+      "warningLevel": "warning",
+      "carryWeeks": 1
+    },
+    {
+      "id": "NA-20260713-CTO-002",
+      "owner": "ChiefTechnologyOfficer",
+      "action": "员工编排层技术方案：完成 Agent 编排层架构设计文档，包含角色调度、能力路由、成本控制策略。",
+      "dependsOn": [
+        "TriCompany/docs/engineering/DESIGN.md",
+        "TriMC/docs/engineering/phase-2-execution-note.md"
+      ],
+      "dueAt": "2026-07-17T20:00:00+08:00"
+    },
+    {
+      "id": "NA-20260713-CTO-003",
+      "owner": "ChiefTechnologyOfficer",
+      "action": "Claude Code 吸收 Phase 1-4：完成 Claude Code 2.1.88 TS 吸收四阶段（核心 loop → prompt 缓存 → sub-agent 树 → tool 权限模型）。",
+      "dependsOn": [
+        "TriCompany/docs/engineering/DESIGN.md",
+        "TriMC/README.md"
+      ],
+      "dueAt": "2026-07-24T20:00:00+08:00"
+    },
+    {
+      "id": "NA-20260713-CTO-004",
+      "owner": "ChiefTechnologyOfficer",
+      "action": "TriStaciss Anthropic Messages API 端点完整度检查与验收。",
+      "dependsOn": [
+        "TriStaciss/README.md",
+        "TriStaciss/docs/"
+      ],
+      "dueAt": "2026-07-14T20:00:00+08:00"
+    },
+    {
+      "id": "NA-20260713-CTO-005",
+      "owner": "ChiefTechnologyOfficer",
+      "action": "CTO carry 优先级标注：对当前所有技术侧 carry 事项标注 P0/P1/P2 优先级。",
+      "dependsOn": [
+        "docs/workflow/operating-records/2026-W29/OP-202607-W29-001.unresolved-items.md"
+      ],
+      "dueAt": "2026-07-15T20:00:00+08:00",
+      "warningLevel": "warning",
+      "carryWeeks": 1
+    },
+    {
+      "id": "NA-20260713-COS-001",
+      "owner": "CEOChiefOfStaff",
+      "action": "carry overdue 复查：对 W29 所有 carry 事项完成逾期复查并输出处理建议。",
+      "dependsOn": [
+        "docs/workflow/operating-records/2026-W29/OP-202607-W29-001.json"
+      ],
+      "dueAt": "2026-07-15T20:00:00+08:00",
+      "warningLevel": "warning",
+      "carryWeeks": 1
+    },
+    {
+      "id": "NA-20260713-COS-002",
+      "owner": "CEOChiefOfStaff",
+      "action": "W29 周度经营记录初始化收口：完成 W28 平移后各 registry 同步回填（company-governance-state.md、code-state.md 补充 Phase 2 + TestEngineer）。",
+      "status": "done",
+      "completedAt": "2026-07-14T00:40:00+08:00",
+      "dependsOn": [
+        "TriCompany/docs/registry/company-governance-state.md",
+        "TriCompany/docs/registry/code-state.md"
+      ],
+      "dueAt": "2026-07-14T20:00:00+08:00"
+    }
+  ],
+  "carriedItems": [
+    {
+      "id": "CARRY-20260713-001",
+      "title": "最小 MVP/最小经营闭环重排（CPO 输出状态切分）",
+      "owner": "ChiefProductOfficer",
+      "status": "frozen",
+      "carryWeeks": 14,
+      "warningLevel": "high",
+      "firstRecorded": "W15 (2026-04-06)",
+      "note": "已跨 14 周，原始需求可能已漂移。建议本周由 CEO 决策：继续推进还是冻结/降级。",
+      "linkedNextAction": "NA-20260713-CPO-001",
+      "dependsOn": ["CEO 决策"]
+    },
+    {
+      "id": "CARRY-20260713-002",
+      "title": "running FREEZE 清单状态检查（CPO/CTO 联合）",
+      "owner": "ChiefProductOfficer",
+      "status": "frozen",
+      "carryWeeks": 6,
+      "warningLevel": "warning",
+      "firstRecorded": "W22/W23 (2026-05-25~06-01)",
+      "note": "CPO 和 CTO 各有一个 FREEZE 检查 overdue，建议本周合并为一次联合检查。",
+      "linkedNextAction": "NA-20260713-CPO-002",
+      "dependsOn": []
+    },
+    {
+      "id": "CARRY-20260713-003",
+      "title": "IPD 全阶段推进（模块 Registry 建立后续 + IPD 穿透检查）",
+      "owner": "ChiefProductOfficer",
+      "status": "active",
+      "carryWeeks": 5,
+      "warningLevel": "warning",
+      "firstRecorded": "W24 (2026-06-08)",
+      "note": "模块 Registry 第一轮建立已关闭。IPD-001 穿透检查 overdue，需本周完成。",
+      "linkedNextAction": "NA-20260713-CPO-003",
+      "dependsOn": ["TriCompany/docs/registry/product-state.md"]
+    },
+    {
+      "id": "CARRY-20260713-004",
+      "title": "TriMC 最小部署拓扑（待 CEO 裁决）",
+      "owner": "ChiefTechnologyOfficer",
+      "status": "pending_ceo_decision",
+      "carryWeeks": 2,
+      "warningLevel": "none",
+      "firstRecorded": "W28 (2026-07-08)",
+      "note": "CTO 已标记完成（2026-07-08），等待 CEO 确认部署拓扑选择。Phase 1+2 已完成，部署拓扑决策的紧迫性上升。",
+      "dependsOn": ["CEO 确认"]
+    },
+    {
+      "id": "CARRY-20260713-005",
+      "title": "Copilot-host vs TriMC 迭代策略选择",
+      "owner": "ChiefProductOfficer",
+      "status": "closed-first-round",
+      "carryWeeks": 0,
+      "warningLevel": "none",
+      "firstRecorded": "W28 (2026-07-09)",
+      "note": "D-track 全部完成（spec bridge + 5 agent YAML + copilot-host regression + TriMC resolver v0.3）。策略选择待 CPO 汇总后提请 CEO 决策。",
+      "dependsOn": ["CPO 汇总输出"]
+    },
+    {
+      "id": "CARRY-20260713-006",
+      "title": "TriMC Phase 2 三项周度仪表盘检查（测试覆盖 + 管线成熟度 + 员工编排）",
+      "owner": "ChiefTechnologyOfficer",
+      "status": "approved",
+      "carryWeeks": 1,
+      "warningLevel": "none",
+      "firstRecorded": "W28 (2026-07-10)",
+      "note": "CEO 已 APPROVE 三项仪表盘建立。Phase 2 完成后应回填首版结果。",
+      "linkedNextAction": "NA-20260713-CTO-002",
+      "dependsOn": ["TriMC Phase 2 完成"]
+    },
+    {
+      "id": "CARRY-20260713-007",
+      "title": "Claude Code 吸收路径三方共识写入与执行",
+      "owner": "ChiefTechnologyOfficer",
+      "status": "approved",
+      "carryWeeks": 1,
+      "warningLevel": "none",
+      "firstRecorded": "W28 (2026-07-10)",
+      "note": "CEO/CPO/CTO 三方共识：Claude Code 2.1.88 TS 吸收路径 APPROVE + 商用 Go 重写硬约束。已写入 business-state.md、TriMC code-state.md、TriMC product-state.md。Phase 1-4 执行中，due 7/24。",
+      "linkedNextAction": "NA-20260713-CTO-003",
+      "dependsOn": ["TriMC Phase 1+2 基础"]
+    },
+    {
+      "id": "CARRY-20260713-008",
+      "title": "产品需求侧 + 技术侧 carry 优先级标注",
+      "owner": "ChiefProductOfficer",
+      "status": "active",
+      "carryWeeks": 1,
+      "warningLevel": "warning",
+      "firstRecorded": "W28 (2026-07-10)",
+      "note": "CPO 和 CTO carry 标注 overdue。本周必须完成以避免 W30 累积恶化。",
+      "linkedNextAction": "NA-20260713-CPO-006",
+      "dependsOn": []
+    }
+  ],
+  "pendingCompanyItems": [
+    {
+      "id": "TODO-20260713-001",
+      "title": "CEO 待裁决：最小 MVP 重排方向（14 周 carry，high warning）",
+      "owner": "CEO",
+      "status": "pending",
+      "dependsOn": ["NA-20260713-CPO-001"]
+    },
+    {
+      "id": "TODO-20260713-002",
+      "title": "CEO 待确认：TriMC 最小部署拓扑选择",
+      "owner": "CEO",
+      "status": "pending",
+      "dependsOn": ["CARRY-20260713-004"]
+    },
+    {
+      "id": "TODO-20260713-003",
+      "title": "CEO 待确认：5 个 C-level Agent 合同 display_name 决策（CAO/CFO/CHRO/CMO/COO）",
+      "owner": "CEO",
+      "status": "pending",
+      "dependsOn": []
+    },
+    {
+      "id": "TODO-20260713-004",
+      "title": "CEO 待裁决：Copilot-host vs TriMC 迭代策略（待 CPO 汇总后）",
+      "owner": "CEO",
+      "status": "pending_cpo_input",
+      "dependsOn": ["CARRY-20260713-005"]
+    },
+    {
+      "id": "TODO-20260713-005",
+      "title": "CEO 待复查：Claude Code 吸收方案三方共识 registry 写入",
+      "owner": "CEO",
+      "status": "pending_review",
+      "dependsOn": ["CARRY-20260713-007"]
+    },
+    {
+      "id": "TODO-20260713-006",
+      "title": "CEO 待确认：TestEngineer（小柯）Agent 合同上线（已创建，17/17 合约解析通过）",
+      "owner": "CEO",
+      "status": "pending_review",
+      "dependsOn": []
+    }
+  ],
+  "metadata": {
+    "latestActiveWeek": true,
+    "previousWeekRef": "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json",
+    "migrationDate": "2026-07-13T19:00:00+08:00",
+    "phase": "ceo-copilot-host-coordination",
+    "workflowTags": [
+      "每周维护",
+      "CEO 总助维护面",
+      "经营维护计划单"
+    ],
+    "relatedBoardId": "tricompany-ceo-operating-board",
+    "sourceOperatingPlans": [
+      "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json",
+      "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.json"
+    ],
+    "carryAgingWarnings": {
+      "description": "W29 平移后 carry 事项老化情况。阈值：≥4 周为 warning，≥8 周为 high warning。",
+      "items": [
+        {
+          "id": "CARRY-20260713-001",
+          "carryWeeks": 14,
+          "level": "high",
+          "source": "W15",
+          "note": "已跨 14 周，原始需求可能已漂移。建议本周由 CEO 决策继续推进或降级。"
+        },
+        {
+          "id": "CARRY-20260713-002",
+          "carryWeeks": 6,
+          "level": "warning",
+          "source": "W22/W23"
+        },
+        {
+          "id": "CARRY-20260713-003",
+          "carryWeeks": 5,
+          "level": "warning",
+          "source": "W24"
+        }
+      ]
+    },
+    "recentCloseouts": [
+      {
+        "id": "W28-CLOSURE",
+        "title": "W28 周度闭合 → W29 平移",
+        "closedAt": "2026-07-13T19:00:00+08:00",
+        "type": "weekly-migration"
+      },
+      {
+        "id": "PHASE2-COMPLETION",
+        "title": "TriMC Phase 2 完成（SSE + task + policy + fallback + TestEngineer）",
+        "completedAt": "2026-07-14",
+        "type": "milestone",
+        "detail": "Phase 2 P2-1~P2-5 全部完成：SSE streaming、task sub-agent dispatch、shell exec policy gate、TriStaciss fallback、TestEngineer（小柯）contract。TriMC 55/55 + TriModel 15/15 全量测试通过。Contract resolver 17/17 pass。"
+      },
+      {
+        "id": "P3-NAMING-FREEZE",
+        "title": "5 C-level contract display_name 设置为「待命名」（CAO/CFO/CHRO/CMO/COO）",
+        "completedAt": "2026-07-14",
+        "type": "fix",
+        "detail": "P3 命名批量修复完成，5 个 C-level role display_name 从空字符串改为「待命名」。待 CEO 正式命名后更新。"
+      },
+      {
+        "id": "CENTRAL_CLOSEOUT-20260710",
+        "title": "Claude Code 吸收路径与演练场统一三方共识写入",
+        "closedAt": "2026-07-10T22:00:00+08:00",
+        "type": "central-closeout"
+      },
+      {
+        "id": "CLEANUP-20260711-TRISTACISS-SCOPE",
+        "title": "TriStaciss Scope 漂移收敛（CTO 清理批次）",
+        "closedAt": "2026-07-11T11:08:00+08:00",
+        "type": "cleanup"
+      }
+    ],
+    "version": "0.4.0",
+    "lastUpdated": "2026-07-13T19:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff"
+  },
+  "lastSyncedAt": "2026-07-13"
+}
