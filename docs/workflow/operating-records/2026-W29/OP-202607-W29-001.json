@@ -206,6 +206,9 @@
       "id": "NA-20260713-COS-001",
       "owner": "CEOChiefOfStaff",
       "action": "carry overdue 复查：对 W29 所有 carry 事项完成逾期复查并输出处理建议。",
+      "status": "done",
+      "completedAt": "2026-07-14T00:48:00+08:00",
+      "reviewResult": "8 carriedItems 逐项复查完成。2 项 ESCALATE 需 CEO 裁决（CARRY-001 14周/最小MVP重排、CARRY-004 部署拓扑确认），4 项本周推进（CARRY-002/003/008/待关闭），2 项按节奏继续。复查详情见 unresolved-items.md W29 Carry 复查节。",
       "dependsOn": [
         "docs/workflow/operating-records/2026-W29/OP-202607-W29-001.json"
       ],
