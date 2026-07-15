@@ -371,15 +371,15 @@
     {
       "id": "NA-20260715-CEO-003",
       "owner": "ChiefTechnologyOfficer",
-      "action": "CTO-008 上移为大框架任务：统括多入口路由 + TriLC 离线退化 + 状态恢复协议 + PC 端打包工程方案。重新定义 CTO-008 范围与交付件。",
+      "action": "CTO-008 大框架：TriMC+TriLC 双模协同。四子任务 — CTO-008-C：TriMC/TriLC 共享核心抽象（识别共用 agent-loop/contracts/types，确定 npm/git-submodule/monorepo 方案）；CTO-008-M：TriMC↔TriLC 通信协议（在线 ACN 代理 + 离线 localbus 升主 + 事件队列 + 恢复 merge/冲突仲裁）；CTO-008-S：TriMC 服务器端 K8s HA（replicas≥3 + HPA + PDB + /healthz 级联 + Session Router 一致性）；CTO-008-P：PC 端打包（vscodium Electron + TriPilot 插件 + TriCode glue + TriLC CLI 内置自启动 + 各仓独立统一分发）。",
       "status": "not_started",
       "dependsOn": [
-        "CTO 理解 CEO 7/15 架构全会决策",
-        "TriMC/docs/architecture-overall-unified.mmd 更新"
+        "CEO APPROVE CTO-008 四子任务拆分（2026-07-15 已 APPROVE）",
+        "CTO-008-C 优先：先定共享核心方案再开工 M/S/P"
       ],
       "dueAt": "2026-07-18T20:00:00+08:00",
       "warningLevel": "high",
-      "note": "2026-07-15 CEO 指令：CTO-008 上移，覆盖多入口路由、TriLC 离线退化为 localbus 主控、恢复时状态 merge 协议、PC 端 vscodium 打包方案。"
+      "note": "2026-07-15 CEO 确认：TriLC ≈ TriMC 本地版（共享 agent-loop + contracts + types，差异在本地 toolbus/wallet-upgrade/context-adapter）。Copilot-host 仅开发环境，上线后不存在。CTO-008 子任务 M（通信协议）为新增关键设计面。"
     },
     {
       "id": "NA-20260715-CEO-004",

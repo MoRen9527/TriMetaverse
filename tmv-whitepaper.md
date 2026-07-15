@@ -1063,7 +1063,7 @@ OPC（One Person Company）是 TriMetaverse 商业层的核心载体，为每个
 
 **IPD 策略**：全系统最小 V1 优先（L0 → L1 → L2 → L3），跑通闭环后再用 IPD 流程规范商业化交付——不阻塞上线，边跑边验证架构补足，缩短市场验证周期。
 
-**关键路径**：CTO-008（大框架任务，多入口路由 + TriLC 离线退化 + 状态恢复协议）贯通 L1 全部模块。
+**关键路径**：CTO-008（大框架：TriMC+TriLC 双模协同，四子任务 C/S/M/P）。TriLC ≈ TriMC 本地版（共享 agent-loop + contracts + types，差异在本地 toolbus/context-adapter），新增 TriMC↔TriLC 通信协议（在线 ACN 代理 + 离线 localbus 升主 + 恢复 merge）。Copilot-host 仅开发环境临时使用，上线后不存在。
 
 为保证路线图可执行，每个阶段同时给出“技术交付物 + 运营交付物 + 验收门禁”。
 
