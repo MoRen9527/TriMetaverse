@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "specId": "cpo-consumption-records",
+      "pageId": "cpo-consumption-records",
+      "title": "CPO employee consumption records",
+      "pageStatus": "working",
+      "topicTags": ["cpo", "product", "prd", "mvp", "roadmap"],
+      "sourceIds": ["cpo-agent-definition", "cpo-contract-v1"],
+      "reviewerRoles": ["CEOChiefOfStaff"],
+      "approvalSlaHours": 168,
+      "maxSources": 20
+    }
+  ]
+}

@@ -2,11 +2,11 @@
   "objectType": "OPERATING_PLAN",
   "objectId": "OP-202607-W28-001",
   "title": "TriMetaverse W28 当前周经营维护计划单",
-  "status": "active",
+  "status": "closed-carried-forward",
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-07-07T10:49:52+08:00",
-  "updatedAt": "2026-07-07T10:49:52+08:00",
+  "updatedAt": "2026-07-11T15:46:00+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-07-06T00:00:00+08:00",
@@ -30,7 +30,7 @@
     "TriMobile",
     "TriWeb4",
     "TriGateway",
-    "TriHost",
+    "TriModel",
     "TriSkill",
     "TriChain"
   ],
@@ -165,6 +165,159 @@
           "docs/workflow/operating-records/README.md"
         ],
         "dueAt": "2026-07-12T18:00:00+08:00"
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "[已完成 2026-07-08] 评估 TriMC 最小部署拓扑：已输出技术判断 — 最小部署 = TriMC + TriMetaverse + TriCompany。TriModel 嵌入 TriMC 为薄配置层，TriDev 不在最小部署圈。四阶段交付计划已出。待 CEO 确认结论后进入 Phase 1。",
+        "dependsOn": [
+          "TriMC/README.md",
+          "TriMC/AGENTS.md",
+          "docs/三元宇宙架构与模块说明.md"
+        ],
+        "dueAt": "2026-07-12T18:00:00+08:00"
+      },
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "[已完成 2026-07-09] 已出具产品判断一页纸：规格桥接模型。核心结论 — 不选边，建桥。定义 agent 结构化规格层，copilot-host 和 TriMC 各自消费同一份规格。文档落点：docs/workflow/operating-records/2026-W28/CPO-20260709-001-spec-bridge-model.md。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json",
+          "ITEM-20260709-001"
+        ],
+        "dueAt": "2026-07-12T18:00:00+08:00"
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "[已完成 2026-07-09] 已出具技术判断一页纸：APPROVE CPO 规格桥接模型 + Agent 契约六要素 Schema v1 初稿 + tools risk_level 分层规则 + 双轨消费方案。文档落点：docs/workflow/operating-records/2026-W28/CTO-20260709-001-agent-contract-schema.md。联合结论：当前不切 TriMC，保留 copilot-host 迭代但以结构化规格替代理散文翻译。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json",
+          "ITEM-20260709-001"
+        ],
+        "dueAt": "2026-07-12T18:00:00+08:00"
+      },
+      {
+        "owner": "CEO",
+        "action": "[已完成 2026-07-09] 已 APPROVE 规格桥接模型方案。批准 CPO/CTO 联合一页纸方案，进入执行：CPO 审阅 Schema→5 agent YAML 转写（due 7/12）→CTO copilot-host 回归验证（due 7/14）。",
+        "dependsOn": [
+          "ITEM-20260709-001"
+        ],
+        "dueAt": "2026-07-09T18:00:00+08:00",
+        "completed": true
+      },
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "[已完成 2026-07-09] 5 核心 agent 契约 YAML 转写全部完成：CEOChiefOfStaff、ChiefProductOfficer、ChiefTechnologyOfficer、BusinessStrategy、RAndDTrainer。其间修复 2 BLOCKER：BusinessStrategy 补 runtime_baseline 7 项运行基线映射，CEOChiefOfStaff 补 FREEZE 决策类型恢复三分法。5 份合同全部通过 TriMC v0.2.0 contract resolver 解析。即日起交棒 CTO 启动 D3 copilot-host 回归验证。",
+        "dependsOn": [
+          "ITEM-20260709-001",
+          "CTO-20260709-001-agent-contract-schema.md"
+        ],
+        "dueAt": "2026-07-12T18:00:00+08:00",
+        "completed": true
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "[??? 2026-07-14] D3 copilot-host ?????????D3-5 ??????????5/5 agent ?? YAML ? agent.md ??????????? responsibilities / decision_rights / io_contract / instructions ??????????????? docs/workflow/operating-records/2026-W28/delivery-record/CTO-20260714-001-d3-regression-verification.md?D-track?D1-D4??????????? MVP ??????????",
+        "dependsOn": [
+          "ITEM-20260709-001",
+          "CPO 5 agent YAML 转写完成"
+        ],
+        "dueAt": "2026-07-14T18:00:00+08:00",
+        "completed": true
+      },
+      {
+        "owner": "CEOChiefOfStaff",
+        "action": "[已完成 2026-07-09] D3 结构对比完成：5 合约 vs agent.md frontmatter 逐项核对。4/5 一致，发现 RAndDTrainer agent.md 缺少 execute 已修复（对齐全员 execute 政策）。交棒 CTO 进行 D3-5 行为验证。",
+        "dependsOn": [
+          "ITEM-20260709-001",
+          "CPO 5 agent YAML 转写完成"
+        ],
+        "dueAt": "2026-07-09T18:00:00+08:00",
+        "completed": true
+      },
+      {
+        "owner": "CEOChiefOfStaff",
+        "action": "[??? 2026-07-14] D-track ?????D1 ???????? ? ? D2 5 agent YAML ?? ? ? D4 TriMC v0.2.0 resolver ? ? D3 copilot-host ???? ??ITEM-20260709-001 ????????? MVP ???????????? update discipline ???",
+        "dependsOn": [
+          "ITEM-20260709-001"
+        ],
+        "dueAt": "2026-07-14T18:00:00+08:00",
+        "completed": true
+      },
+      {
+        "owner": "CEO",
+        "action": "[??? 2026-07-09] APPROVE CTO ??????????Phase 1 TriMC ???? ? Phase 2 Agent ???? + TriDev IPD ? Phase 3 TriModel ???? ? Phase 4 TriCompany ??????? CTO ?? Phase 1?",
+        "dependsOn": [
+          "ITEM-20260708-001"
+        ],
+        "dueAt": "2026-07-09T18:00:00+08:00",
+        "completed": true
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "?? Phase 1?TriMC ???????npm check + test + smoke test??????? TriMC ?? v0.1.0 ???????? Phase 1 ?????",
+        "dependsOn": [
+          "ITEM-20260708-001",
+          "CEO APPROVE"
+        ],
+        "dueAt": "2026-07-14T18:00:00+08:00"
+      },
+      {
+        "owner": "CEOChiefOfStaff",
+        "action": "[已完成 2026-07-10] 中央收口完成：综合 CPO/CTO 联审意见，输出版本策略、经营记录分层、TriMC 架构（Claude Code + 员工编排层 + OpenClaw 薄层 + TriStaciss Anthropic 端点）、Dev-Prod Parity 最终矩阵、产品基调分界。已写入五份文档：（1）版本策略与经营记录分层.md（2）定期检查任务规格.md（3）三元宇宙架构与模块说明.md §3 TriMC 更新（4）business-state.md 边界注释（5）IPD-001 Anthropic scope 增补待 CPO 落实。",
+        "dependsOn": [
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-10T20:00:00+08:00",
+        "completed": true
+      },
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "[已完成 2026-07-11] TriStaciss Anthropic Messages API 产品判断 + IPD 回写标记完成。产品判断 APPROVE，IPD case 回写纳入 W28 operating records。",
+        "dependsOn": [
+          "IPD-20260610-PLATFORM-001",
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-14T18:00:00+08:00",
+        "completed": true
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "输出 TriMC 员工编排层技术方案初稿：Soul Loader + Memory Injector + Tool Gater + Context Builder 四组件设计及其与 Claude Code agent loop 的集成点。同时评估 Claude Code daemon placeholder 补齐工作量，给出时间线建议。",
+        "dependsOn": [
+          "TriMC/README.md",
+          "TriMC/AGENTS.md",
+          "docs/三元宇宙架构与模块说明.md",
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-17T18:00:00+08:00"
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "[中央收口决议 2026-07-10] 执行 Claude Code 吸收 Phase 1-4 编排方案：（1）本地安装 Claude Code CLI + 配置 TriStaciss Anthropic-compatible 端点（Phase 1，1-2 天）；（2）复制 restored-src 到 TriMetaverse/reference/claude-code/（Phase 2）；（3）.agent.md → Claude Code agent 定义 + CLAUDE.md 注入 + PolicyGate hooks（Phase 3）；（4）TriMC 嵌入 query.ts + 剥离 TUI + 构建 Soul Loader / Memory Injector / Tool Gater / Context Builder 四组件（Phase 4，~2 周）。同步修订 TriMC docs/engineering/DESIGN.md 与 ROADMAP.md（含商用 Go 重写里程碑约束）。",
+        "dependsOn": [
+          "CENTRAL_REGISTRY_CLOSEOUT 2026-07-10",
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-24T18:00:00+08:00"
+      },
+      {
+        "owner": "ChiefTechnologyOfficer",
+        "action": "[CEO 2026-07-10 裁决] 实现 TriStaciss Anthropic Messages API 端点（POST /v1/messages）：新增 Anthropic 请求/响应 Pydantic 模型 + Anthropic ↔ ChatCompletionService 翻译层 + FastAPI 路由注册。复用现有 RouteResolver（tag 路由）、ChatCompletionService（流式/非流式）和 provider 基础设施。底层不新增 provider，通过 tag 路由到已有 DeepSeek/GLM 等后端。工作量为 1 独立翻译文件 + 1 模型文件 + FastAPI 注册，不修改现有代码路径。",
+        "dependsOn": [
+          "TriStaciss/api-server/openai_compatible_api.py",
+          "TriStaciss/api-server/route_resolver.py",
+          "TriStaciss/api-server/chat_completion_service.py",
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-14T18:00:00+08:00"
+      },
+      {
+        "owner": "ChiefProductOfficer",
+        "action": "[中央收口决议 2026-07-10] 产出产品基调检查清单：验证 TriMC 员工交互（角色 + 四层记忆 + Hermes）保持了公司员工味而非 coding agent 味。同时吸收 OpenClaw 助手型产品优势，明确产品边界与架构取舍。涉及社交通道（TriGateway 吸收）与消息队列管理（TriMC 吸收）的分界。",
+        "dependsOn": [
+          "CENTRAL_REGISTRY_CLOSEOUT 2026-07-10",
+          "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+        ],
+        "dueAt": "2026-07-17T18:00:00+08:00"
       }
     ],
     "carriedItems": [
@@ -177,7 +330,7 @@
         "owner": "CEOChiefOfStaff",
         "category": "governance",
         "priority": "high",
-        "status": "carried",
+        "status": "closed",
         "carryWeeks": 1,
         "warningLevel": "none",
         "carrySource": "W27",
@@ -242,10 +395,13 @@
         "owner": "CEOChiefOfStaff",
         "category": "governance",
         "priority": "medium",
-        "status": "carried",
+        "status": "closed",
         "carryWeeks": 6,
-        "warningLevel": "warning",
+        "warningLevel": "none",
         "carrySource": "W23",
+        "closedAt": "2026-07-10T15:52:00+08:00",
+        "closedBy": "CEOChiefOfStaff",
+        "closureSummary": "完成 8 模块 registry 普查；TriDeployment/TriTest/TriModel 三模块×四文件（business-state.md/product-state.md/code-state.md/AGENTS.md）全部对齐当前 TypeScript 源码架构并独立 git commit。TriGateway 占位低优先级不阻塞 TriMC。判定：实质性完成。",
         "prevIds": [
           "CARRY-20260629-004",
           "CARRY-20260622-004",
@@ -263,10 +419,84 @@
         "owner": "CEOChiefOfStaff",
         "category": "governance",
         "priority": "medium",
-        "status": "carried",
+        "status": "closed-first-round",
         "carryWeeks": 6,
-        "warningLevel": "warning",
+        "warningLevel": "resolved",
         "carrySource": "W24",
+        "activatedAt": "2026-07-10T16:25:00+08:00",
+        "activatedBy": "CEOChiefOfStaff",
+        "ceoDecision": "APPROVE",
+        "ceoApprovedAt": "2026-07-10T17:08:00+08:00",
+        "decisionDate": "2026-07-10",
+        "firstRoundClosedAt": "2026-07-10T17:08:00+08:00",
+        "decisionCandidates": [
+          {
+            "id": "D1",
+            "question": "CARRY-002 的'等 TriMC 上线后由 CPO 基于实际拓扑重切 MVP'——是否作为正式 CEO 裁定写入清单？",
+            "urgency": "low",
+            "status": "confirmed",
+            "confirmedAt": "2026-07-10",
+            "source": "CARRY-002",
+            "submitter": "ChiefProductOfficer"
+          },
+          {
+            "id": "D2",
+            "question": "5 项 FREEZE（3 CPO + 2 CTO）的去向：转正式长期清单 / 继续保持 / 直接关闭？",
+            "urgency": "medium",
+            "status": "confirmed",
+            "confirmedAt": "2026-07-10",
+            "ceoApprovedAt": "2026-07-10T17:08:00+08:00",
+            "ctoDeliverable": "docs/registry/ipd-freeze-items-registry.md",
+            "freezeItems": {
+              "cpo": [
+                {"id": "F1", "item": "QA 具体分值阈值", "mergeHook": "CPO-QA-Delivery-Contract"},
+                {"id": "F2", "item": "一票否决维度列表", "mergeHook": "CPO-QA-Delivery-Contract"},
+                {"id": "F3", "item": "candidate→final delivery 门槛", "mergeHook": "CPO-QA-Delivery-Contract"}
+              ],
+              "cto": [
+                {"id": "F4", "item": "default seed / mnemonic 细节", "mergeHook": "CTO-Signing-Release-Contract"},
+                {"id": "F5", "item": "local-only deployment strategy 细节", "mergeHook": "CTO-Evidence-Policy-Contract"}
+              ]
+            },
+            "sourceDocuments": [
+              "TriCompany/docs/workflow/ipd-product-acceptance-contract-cpo-review.md §12.2",
+              "TriCompany/docs/workflow/ipd-runtime-evidence-contract-cto-review.md §13.2"
+            ],
+            "nextAction": "总助汇总 D1~D4 完整首轮清单 → CEO 终批",
+            "source": "through-pass §6.3",
+            "submitter": "ChiefProductOfficer"
+          },
+          {
+            "id": "D3",
+            "question": "基础设施模块（TriDeployment / TriTest / TriModel）当前先于产品面模块推进——CEO 是否确认此执行顺序？",
+            "urgency": "low",
+            "status": "confirmed",
+            "confirmedAt": "2026-07-10",
+            "source": "BusinessStrategy 模块优先级表 vs 实际执行",
+            "submitter": "ChiefProductOfficer"
+          },
+          {
+            "id": "D4",
+            "question": "TriModel 目前仅有单 provider（DeepSeek），是否需要建立多 provider 时间表？",
+            "urgency": "low",
+            "status": "confirmed",
+            "confirmedAt": "2026-07-10",
+            "ceoDirection": "B: 预留架构接口，不排具体时间表。当前阶段 DeepSeek 单 provider 足够，等产品面上线后有真实负载再评估。",
+            "source": "TriModel code-state.md",
+            "submitter": "ChiefProductOfficer"
+          }
+        ],
+        "centralCloseout": {
+          "closeoutRef": "CENTRAL_REGISTRY_CLOSEOUT CARRY-001~005 W28",
+          "closeoutDate": "2026-07-10T17:41:00+08:00",
+          "decision": "ready-for-writeback",
+          "writebacksCompleted": [
+            "business-state.md: D3 infra priority + D4 TriModel option B",
+            "product-state.md: D4 TriModel position + ipd-freeze-items-registry asset",
+            "code-state.md: ipd-freeze-items-registry asset + spec bridge MVP milestone",
+            "company-governance-state.md: lastSyncedAt refresh only"
+          ]
+        },
         "prevIds": [
           "CARRY-20260629-005",
           "CARRY-20260622-005",
@@ -292,6 +522,117 @@
           "CARRY-20260629-006",
           "CARRY-20260622-006",
           "CARRY-20260615-006"
+        ]
+      },
+      {
+        "id": "CARRY-20260708-001",
+        "sourceObjectId": "OP-202607-W28-001",
+        "originalId": "ITEM-20260708-001",
+        "title": "TriMC 最小部署拓扑讨论",
+        "description": "CTO 已完成技术判断，CEO 递进调整：最小赛博公司（Phase 1）= TriMC + TriMetaverse + TriCompany；最小开发型赛博公司（Phase 2 紧随）= + TriDev（IPD 流水线）。此后通过 Copilot-host → 最小部署渐进式更新，完善为完整赛博公司与完整 IPD。TriModel 嵌入 TriMC 为薄配置层（Phase 3），TriCompany 文档接入（Phase 4）。Phase 1+2 完成后具备自演进能力。待 CEO 最终确认。",
+        "owner": "ChiefTechnologyOfficer",
+        "category": "engineering",
+        "priority": "high",
+        "status": "pending_ceo_decision",
+        "carryWeeks": 0,
+        "warningLevel": "none",
+        "carrySource": "W28",
+        "prevIds": []
+      },
+      {
+        "id": "CARRY-20260709-001",
+        "sourceObjectId": "OP-202607-W28-001",
+        "originalId": "ITEM-20260709-001",
+        "title": "Copilot-host 渐进式验证 vs 直奔 TriMC 自动化的迭代策略选择",
+        "description": "CEO 已 APPROVE 规格桥接模型（2026-07-09）。D1 CTO Schema v1 ✅ → D2 CPO 5 agent YAML 转写 ✅（7/9 提前完成）→ D4 TriMC v0.2.0 resolver ✅（7/9 超前完成，17/17 tests pass）→ D3 CTO copilot-host 回归验证待启动（due 7/14）。D2/D3 期间修复 2 BLOCKER：BusinessStrategy 补 runtime_baseline + CEOChiefOfStaff 补 FREEZE。",
+        "owner": "ChiefProductOfficer, ChiefTechnologyOfficer",
+        "category": "engineering_product",
+        "priority": "high",
+        "status": "active",
+        "carryWeeks": 0,
+        "warningLevel": "none",
+        "carrySource": "W28",
+        "prevIds": [],
+        "ceoDecision": {
+          "decision": "APPROVE",
+          "date": "2026-07-09",
+          "summary": "CEO 批准 CPO/CTO 联合规格桥接模型方案"
+        }
+      },
+      {
+        "id": "CARRY-20260710-001",
+        "sourceObjectId": "OP-202607-W28-001",
+        "originalId": "ITEM-20260710-001",
+        "title": "TriMC Phase 2 三项周度检查任务定义",
+        "description": "CEO 将 CARRY-003 + CARRY-005 抽象为三张周度经营仪表盘：(1) CEO/总助待办周度扫描——周一执行，扫描 operating record + decision candidates + carry aging；(2) 产研进展与卡点周度扫描——周三执行，扫描 product/code-state + through-pass pipeline + blocked items；(3) 全项目文档同步周度扫描——周五执行，扫描所有 registry lastSyncedAt + cross-reference 一致性。Phase 2 由 TaskController + NodeBridge 自动化调度；Phase 2 前总助手工维护并验证数据源与输出格式。",
+        "owner": "ChiefTechnologyOfficer, CEOChiefOfStaff",
+        "category": "governance_engineering",
+        "priority": "high",
+        "status": "approved",
+        "carryWeeks": 0,
+        "warningLevel": "none",
+        "carrySource": "W28",
+        "prevIds": [],
+        "ceoDecision": {
+          "decision": "APPROVE",
+          "date": "2026-07-10",
+          "summary": "CEO 批准三张周度仪表盘定义：(1) 待办扫描 (2) 产研卡点 (3) 文档同步。Phase 2 首批接入周期化检查任务。"
+        },
+        "weeklyDashboardSpec": {
+          "dashboard1": {
+            "name": "CEO/总助 待办周度扫描",
+            "frequency": "weekly",
+            "executionDay": "Monday",
+            "scanSources": ["operating-record", "decisionCandidates", "carryAgingWarnings", "meeting-nextActions", "ipd-freeze-items-registry"],
+            "outputFormat": "本周CEO/总助待办清单（按优先级+逾期天数排序）"
+          },
+          "dashboard2": {
+            "name": "产研进展与卡点周度扫描",
+            "frequency": "weekly",
+            "executionDay": "Wednesday",
+            "scanSources": ["product-state.md", "code-state.md", "through-pass-pipeline", "operating-record-blocked", "carry-overdue"],
+            "outputFormat": "本周产品&研发卡点简报（按模块+阻塞天数分组）"
+          },
+          "dashboard3": {
+            "name": "全项目文档同步周度扫描",
+            "frequency": "weekly",
+            "executionDay": "Friday",
+            "scanSources": ["registry-lastSyncedAt", "registry-cross-reference", "registry-placeholder-age", "operating-record-writeback-closure"],
+            "outputFormat": "本周文档同步扫描报告（过期registry+断裂引用+未闭合writeback）"
+          }
+        }
+      },
+      {
+        "id": "CARRY-20260710-002",
+        "sourceObjectId": "OP-202607-W28-001",
+        "originalId": "ITEM-20260710-002",
+        "title": "Claude Code 吸收路径、演练场统一与编排层三方共识写入",
+        "description": "CEO 2026-07-10 最终裁决：TS 路径降低风险加速验证（APPROVE）；商用阶段必须转 Go/其他语言规避 Anthropic 版权风险（硬约束写入 ROADMAP）。三方共识：(1) 吸收路径 = Claude Code 2.1.88 restored-src → TriMetaverse/reference/claude-code/，OpenClaw 裁为薄参考；(2) 演练场统一 = 本地 Claude Code CLI Windows 运行，与 TriMC 共享同一份源码保证 dev-prod parity；(3) 编排层 = Soul Loader + Memory Injector + Tool Gater + Context Builder 嵌入 query.ts；(4) 产品基调 = 员工 = 角色 + 四层记忆 + Hermes，不是 coding agent；(5) TriStaciss 提供 Anthropic-compatible Messages API 端点（POST /v1/messages）支持 tag 路由。已写入：business-state.md §Claude Code 吸收 + §演练场统一；TriMC code-state.md Repository Map + Current Code Health；TriMC product-state.md Current Product Scope。",
+        "owner": "CEOChiefOfStaff, ChiefTechnologyOfficer, ChiefProductOfficer",
+        "category": "governance_engineering_product",
+        "priority": "high",
+        "status": "approved",
+        "carryWeeks": 0,
+        "warningLevel": "none",
+        "carrySource": "W28",
+        "prevIds": [],
+        "ceoDecision": {
+          "decision": "APPROVE",
+          "date": "2026-07-10",
+          "summary": "CEO 批准 TS 路径 Claude Code 吸收 + 演练场统一 + 编排层四组件方案。硬约束：商用阶段必须转 Go/其他语言规避版权风险。"
+        },
+        "writebackCompleted": [
+          "business-state.md: Claude Code 吸收路径与技术栈决策 + 演练场统一裁决",
+          "TriMC code-state.md: Repository Map + Current Code Health + 商用里程碑版权约束",
+          "TriMC product-state.md: Current Product Scope 重写（吸收/编排/产品基调/演练场）",
+          "CEO 2026-07-10 补充裁决：TriStaciss Anthropic Messages API 跳过 IPD 流程直接开发"
+        ],
+        "pendingWritebacks": [
+          "TriMC docs/engineering/DESIGN.md: 删除 Go rewrite 提案，替换为 Claude Code 嵌入架构",
+          "TriMC docs/engineering/ROADMAP.md: 新增商用 Go 重写里程碑",
+          "TriStaciss docs/registry/product-state.md: Anthropic Messages API 端点开发完成后状态更新",
+          "IPD-20260610-PLATFORM-001: Anthropic Messages API 开发完成后回写 work-items 标记",
+          "W28 OP-202607-W28-001.unresolved-items.md: 本周收口决议条目"
         ]
       }
     ],
@@ -349,11 +690,41 @@
         "dependsOn": [
           "CARRY-20260707-006"
         ]
+      },
+      {
+        "id": "TODO-20260708-001",
+        "title": "CEO 待决策：TriMC 最小部署拓扑（CTO 判断已出）",
+        "owner": "CEO",
+        "status": "pending_decision",
+        "dependsOn": [
+          "CARRY-20260708-001"
+        ]
+      },
+      {
+        "id": "TODO-20260709-001",
+        "title": "CEO 待裁决：Copilot-host vs TriMC 迭代策略（待 CPO/CTO 联合输出后）",
+        "owner": "CEO",
+        "status": "pending_cpo_cto_input",
+        "dependsOn": [
+          "CARRY-20260709-001"
+        ]
+      },
+      {
+        "id": "TODO-20260710-001",
+        "title": "CEO 待复查：Claude Code 吸收方案三方共识收口写入（总助已完成 registry + W28 写入）",
+        "owner": "CEO",
+        "status": "pending_review",
+        "dependsOn": [
+          "CARRY-20260710-002"
+        ]
       }
     ]
   },
   "metadata": {
-    "latestActiveWeek": true,
+    "latestActiveWeek": false,
+    "historicalWeekClosed": true,
+    "closedAt": "2026-07-13T19:00:00+08:00",
+    "successorRef": "docs/workflow/operating-records/2026-W29/OP-202607-W29-001.json",
     "previousWeekRef": "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.json",
     "migrationDate": "2026-07-07T10:49:52+08:00",
     "phase": "ceo-copilot-host-coordination",
@@ -418,10 +789,10 @@
     ],
     "backlogReviewResults": {
       "reviewedAt": "2026-07-07T10:49:52+08:00",
-      "itemsReviewed": 6,
-      "newItems": 0,
+      "itemsReviewed": 8,
+      "newItems": 2,
       "closedItems": 0,
-      "carriedItems": 6,
+      "carriedItems": 8,
       "escalatedItems": 0
     },
     "recentCloseouts": [
@@ -437,10 +808,40 @@
         "completedAt": "2026-07-01",
         "type": "milestone",
         "detail": "15 项 APPROVE 写入主流程 V0.8，6 项 runtime 双写落地，5 项 FREEZE 回流长期清单"
+      },
+      {
+        "id": "CENTRAL_CLOSEOUT-20260710",
+        "title": "Claude Code 吸收路径与演练场统一三方共识写入",
+        "closedAt": "2026-07-10T22:00:00+08:00",
+        "type": "central-closeout",
+        "detail": "CEOChiefOfStaff 综合 CPO/CTO 意见执行中央收口：Claude Code 2.1.88 TS 吸收路径 APPROVE + 商用 Go 重写硬约束 + 演练场统一 + 编排层四组件 + 产品基调分界。写入 business-state.md、TriMC code-state.md、TriMC product-state.md、W28 operating records。"
+      },
+      {
+        "id": "CLEANUP-20260711-TRISTACISS-SCOPE",
+        "title": "TriStaciss Scope 漂移收敛（CTO 清理批次）",
+        "closedAt": "2026-07-11T11:08:00+08:00",
+        "type": "cleanup",
+        "detail": "CTO 完成三项清理：cline 全链移除（~1,571行）、端点去重（28→22）、配置层收敛（4→3层）。8 文件变更，净删除 2,469 行。TypeScript + Python 编译均通过。code-state.md Quality Risks 四项已解决。"
+      },
+      {
+        "id": "IPD-BACKFILL-20260711-ANTHROPIC",
+        "title": "IPD-20260610-PLATFORM-001 Anthropic Messages API 回写标记",
+        "closedAt": "2026-07-11T11:08:00+08:00",
+        "type": "ipd-backfill",
+        "detail": "Anthropic Messages API 已完成开发。IPD 流程未成熟（docs/ipd/ 目录不存在），不在当前阶段创建 case 目录，改为在 operating records 标记开发完成状态。待 IPD 流程成熟后从 operating records 回溯同步。"
+      },
+      {
+        "id": "CPO-20260711-TRIMODEL-MOCK",
+        "title": "TriModel mock 配置框架设计确认",
+        "closedAt": "2026-07-11T11:08:00+08:00",
+        "type": "design-review",
+        "detail": "CPO 确认两层 key 模型设计：路径 A（deepseek 直连）立即可用；路径 B（trimetaverse mock auth）框架验证就绪；路径 C（生产 live auth）待 TriMem 用户系统。api_key_auth.py 已预留 TRIMODEL_DEFERRAL-001 接口。"
       }
     ],
     "version": "0.3.0",
-    "lastUpdated": "2026-07-07T10:49:52+08:00",
-    "updatedBy": "CEOChiefOfStaff"
-  }
+    "lastUpdated": "2026-07-13T19:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff",
+    "closureSummary": "W28 已于 2026-07-13 周度平移闭合。未完成事项（8 项 carry + 14 项 nextAction）全部迁移至 W29。"
+  },
+  "lastSyncedAt": "2026-07-11"
 }

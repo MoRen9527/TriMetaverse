@@ -51,9 +51,16 @@
 - 已按源侧发布链路启用 `ChiefHumanResourcesOfficer`、`ChiefAdministrativeOfficer` 与 `RAndDTrainer` 当前 Copilot-host live 入口；该状态不代表 TriMC 正式宿主切换或完整授权矩阵生产化。
 - 已确认模块级 `BusinessStrategyRegistry`、`ProductRegistry`、`CodeRegistry` 的目标归属是对应模块 `.github/agents/`；迁移时必须先合并中央口径，再移除 `TriMetaverse/.github/agents/` 下同名 discoverable 文件，确保多 root workspace 中单一 discovery。
 - 已从 TriCompany 源侧发布并确认 registry 经营 owner 分工：`ProductRegistry` 由 CPO 小乔管理，`CodeRegistry` 由 CTO 小狄管理，中央 `CompanyGovernanceRegistry` 由 CAO 管理；`CEOChiefOfStaff` 只负责路由、协调、催办、升级与中央收口。
+- 已记录 CEO 正式名称为「磨人」（2026-07-14，CEO 本人确认）。该名称作为公司治理基础事实写入本 registry，5 个 C-level 合同（CAO/CFO/CHRO/CMO/COO）维持「待命名」。源侧 soul.md 名称字段已同步。
+- 已完成 RAndDTrainer（小吴）contract 补齐与 CHO 上岗审批（2026-07-14）：CEO 确认岗位边界为「专属研发的培训人员」。路径治理规则（固定前置核查 item 0 + 工作接手规则）已写入 contract instructions；contract 覆盖专家岗 10 项通用能力条目（9/9 + 路径治理），binding profile（status: generated-staging）与 live entry（TriMetaverse/.github/agents/rd-trainer.agent.md）链路完整。岗位名称：小吴，源侧 employeeId：rd-trainer。
 - 已启动模块 registry agent 迁移 pilot：`TriAvatar`、`TriStaciss`、`TriMC`、`Tride`、`TriPilot`、`TriDeployment`、`TriTest`、`TriLC`、`TriWeb4`、`TriChain`、`TriMobile`、`TriMem`、`TriDev`、`vscodium`、`TriCompany` 的 `BusinessStrategyRegistry`、`ProductRegistry`、`CodeRegistry` 已以各自模块 `.github/agents/` 为 canonical live entry。
 - 已按源侧发布链路启用 `TestEngineer`（小柯）当前 Copilot-host live 入口：源侧五件套（soul/memory/colleagues/social/agent.md）齐备、`TestEngineer.contract.yaml` 落档、live `.agent.md` 生效、TriCompany binding profile 与 host-object-manifest 登记完成。岗位主责：跨模块测试设计、自动化测试执行、测试框架选型与测试门禁维护。该状态不代表 TriMC 正式宿主切换。
 - 已完成全 agent 归属路由阀门治理（2026-07-14）：15 个 `.agent.md` 全部增加 `归属路由阀门` 规则（前置核查 0.5 或等价约束节），明确五大禁止域映射。根因修复：此前 CTO 仅声明"不替代某些岗位"但未列出完整禁止域清单，导致 W28→W29 周度平移时越界执行经营记录。治理防重复机制：`docs/workflow/operating-records/README.md` 周度平移节已标注"本步骤仅限 CEOChiefOfStaff 执行"，形成文档层约束。
+- 已完成宿主对象生成编排层设计与代码注册（2026-07-14，CTO-002 完整交付）：
+  - 设计文档：`TriCompany/docs/engineering/host-object-generation-design.md`（COPY/SYMLINK/GENERATE 三条路径、5-Gate Pipeline、版本策略）和 `TriMC/docs/engineering/employee-orchestration-design.md`（运行时 Agent 派发编排层）
+  - Phase A 代码注册：TestEngineer + FullStackDeveloper `HostObjectSetDefinition` 写入 `runtime/cognition/host_object_generation.py`，`DECLARED_HOST_OBJECT_SETS` 9→11，`EMPLOYEE_GENERATORS` 补全 CMO/COO/CFO 缺口 7→13
+  - CLI 验证：`--employee test-engineer`、`--employee full-stack-developer`、`--employee all` 全部通过；publish 流水线验证通过
+  - BLOCK-003（员工编排层未设计）已解除
 
 ## Employee Capability Standard Contract
 
@@ -116,6 +123,7 @@
 | COO | 100% (11/11) | — |
 | RAndDTrainer | 100% (9/9 专家岗) | — |
 | TestEngineer | 100% (9/9 专家岗) | — |
+| FullStackDeveloper | 100% (9/9 专家岗) | — |
 
 ### 宿主迁移保障
 
@@ -146,8 +154,9 @@
 | `TriCompany/docs/registry/CEOChiefOfStaff.contract.yaml` | 小贾 (CEO总助) | ✅ 固定前置核查 item 0 + 交接路径治理 |
 | `TriCompany/docs/registry/ChiefProductOfficer.contract.yaml` | 小乔 (CPO) | ✅ 固定前置核查 item 0 + 行为护栏 |
 | `TriCompany/docs/registry/ChiefTechnologyOfficer.contract.yaml` | 小狄 (CTO) | ✅ 固定前置核查 item 0 + 行为护栏 |
-| `TriCompany/docs/registry/RAndDTrainer.contract.yaml` | 研发培训师 | 待补齐 |
+| `TriCompany/docs/registry/RAndDTrainer.contract.yaml` | 小吴（专属研发培训师） | ✅ 固定前置核查 item 0 + 工作接手规则 |
 | `TriCompany/docs/registry/TestEngineer.contract.yaml` | 小柯 (TestEngineer) | ✅ 固定前置核查 item 0 + 行为护栏 |
+| `TriCompany/docs/registry/FullStackDeveloper.contract.yaml` | 小全 (FullStackDeveloper) | ✅ 固定前置核查 item 0 + 行为护栏 |
 
 ### Secretariat Cross-Reference
 

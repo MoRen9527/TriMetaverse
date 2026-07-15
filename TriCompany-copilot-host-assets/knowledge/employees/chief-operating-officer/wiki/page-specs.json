@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "specId": "coo-consumption-records",
+      "pageId": "coo-consumption-records",
+      "title": "COO employee consumption records",
+      "pageStatus": "working",
+      "topicTags": ["coo", "operations", "orchestration", "rollout", "delivery"],
+      "sourceIds": ["coo-agent-definition", "coo-contract-v1"],
+      "reviewerRoles": ["CEOChiefOfStaff"],
+      "approvalSlaHours": 168,
+      "maxSources": 20
+    }
+  ]
+}

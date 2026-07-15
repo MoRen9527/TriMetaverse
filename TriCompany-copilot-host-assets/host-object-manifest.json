@@ -707,6 +707,155 @@
         "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
       ],
       "employeeDisplayName": "小吴"
+    },
+    {
+      "objectSetId": "test-engineer-knowledge-workspace-v0.1",
+      "status": "generated-staging",
+      "ownerRole": "TestEngineer",
+      "generatedAt": "2026-07-14T05:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee test-engineer",
+      "sourceRefs": [
+        "TriCompany/.github/source-agents/test-engineer/test-engineer.agent.md",
+        "TriCompany/.github/source-agents/test-engineer/test-engineer.soul.md",
+        "TriCompany/.github/source-agents/test-engineer/test-engineer.memory.md",
+        "TriCompany/.github/source-agents/test-engineer/test-engineer.colleagues.md",
+        "TriCompany/.github/source-agents/test-engineer/test-engineer.social.md",
+        "TriCompany/docs/registry/TestEngineer.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/test-engineer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "test-engineer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/test-engineer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "test-engineer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/test-engineer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/test-engineer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "TestEngineer is enabled as a TriCompany module live agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/test-engineer.agent.md; the source kit remains under TriCompany/.github/source-agents/test-engineer.",
+        "TestEngineer reports to CPO (product quality) and CTO (technical quality); peers with FullStackDeveloper.",
+        "TestEngineer runtime cognition state is created only after a live/runtime write, not during support payload generation."
+      ],
+      "employeeDisplayName": "小柯"
+    },
+    {
+      "objectSetId": "full-stack-developer-knowledge-workspace-v0.1",
+      "status": "generated-staging",
+      "ownerRole": "FullStackDeveloper",
+      "generatedAt": "2026-07-14T05:15:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee full-stack-developer",
+      "sourceRefs": [
+        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.agent.md",
+        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.soul.md",
+        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.memory.md",
+        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.colleagues.md",
+        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.social.md",
+        "TriCompany/docs/registry/FullStackDeveloper.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/full-stack-developer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "full-stack-developer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/full-stack-developer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "full-stack-developer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/full-stack-developer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/full-stack-developer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "FullStackDeveloper is enabled as a TriCompany module live agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/full-stack-developer.agent.md; the source kit remains under TriCompany/.github/source-agents/full-stack-developer.",
+        "FullStackDeveloper reports to CTO; peers with TestEngineer. Forbidden from bypassing tests before merging code.",
+        "FullStackDeveloper runtime cognition state is created only after a live/runtime write, not during support payload generation.",
+        "Binding profile status is 'generated-staging' pending CTO activation after manifest registration."
+      ],
+      "employeeDisplayName": "小全"
     }
   ]
 }

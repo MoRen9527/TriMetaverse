@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/registry/business-strategy-boundaries.md
 - syncMode: source-only
-- lastSyncedAt: 2026-06-04
+- lastSyncedAt: 2026-07-13
 
 ## 模块边界基线
 
@@ -24,7 +24,8 @@
 - `TriGateway` 是网关模块的规范化中央名称；规范目录已修正为 `TriGateway/`，历史路径 `TriGatway/` 暂作为平滑迁移兼容别名；在 README / AGENTS / 真实实现落地前不得写成已具备网关能力。
 - `TriStaciss` 负责模型路由中转站、API 调用平台、多提供商路由和官方 SDK 能力边界适配；当前物理仓库路径仍为 `TriStaciss/`。
 - `TriAvatar` 负责 Web 入口、未来数字宠物、赛博分身、赛博任务、浏览器插件形态和未来游戏入口；当前物理仓库路径仍为 `TriAvatar/`。
-- `TriDeployment` 与 `TriTest` 分别负责开发后的自动部署、部署后的系统级端到端测试与安全测试；当前 `TriDeployment` 物理仓库路径仍为 `TriDeployment/`。
+- `TriTest` 负责 IPD 流程 VERIFY-INTEGRATION / REDTEAM / QA / ASSURANCE 阶段的测试与验证执行，同时承载第四层验证器横切框架（积木验证器方法论）；通过 CLI contract 被 `TriDev` phase engine 调用，独立治理、独立版本号。
+- `TriDeployment` 负责 IPD 流程 DEPLOYMENT 阶段的部署执行（CLI + deployer + registry + targets）；通过 CLI contract 被 `TriDev` phase engine 调用，独立治理、独立版本号。当前物理仓库路径仍为 `TriDeployment/`。
 - `core-agent` 只作为 `TriMC` observability 的历史迁移源。
 
 ## 边界变动记录规则

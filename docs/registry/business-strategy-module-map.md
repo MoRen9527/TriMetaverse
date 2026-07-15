@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/registry/business-strategy-module-map.md
 - syncMode: source-only
-- lastSyncedAt: 2026-06-04
+- lastSyncedAt: 2026-07-13
 
 当前文件是 TriMetaverse 中央模块映射 registry 的本地真源，只维护模块商业职责、成熟度、registry 路由和中央选型映射；它不是 TriCompany 公司级 workflow 书面真源。
 
@@ -27,8 +27,8 @@
 | `TriGateway` | 规范化模块名已保留；当前先记录网关模块命名与兼容别名，具体职责待中央真源补定 | 涉及网关层命名统一、别名兼容、未来接入层规划或自动扫描去重时 | 低 | 待建立 | 待建立 | 待建立 | 规范目录为 `TriGateway/`；历史路径 `TriGatway/` 作为平滑迁移兼容别名暂保留 |
 | `Tristaciss` | 模型 SDK 接口转换、API 平台、云端/本地模型路由 | 涉及 API 调用、模型调用、接口转换时 | 高 | `TristacissBusinessStrategyRegistry` | `TristacissProductRegistry` | `TristacissCodeRegistry` | `../../../Tristaciss/CLAUDE.md`, `../../../Tristaciss/AGENTS.md` |
 | `Triavatar` | Web 入口、未来虚拟形象和游戏入口 | 涉及 Web 入口、虚拟形象、游戏入口时 | 中 | `TriavatarBusinessStrategyRegistry` | `TriavatarProductRegistry` | `TriavatarCodeRegistry` | `../../../Triavatar/README.md`, `../../../Triavatar/AGENTS.md` |
-| `Trideployment` | 自动部署、镜像族、K8s 发布面、GitOps | 涉及上线、部署、环境发布时 | 中 | `TrideploymentBusinessStrategyRegistry` | `TrideploymentProductRegistry` | `TrideploymentCodeRegistry` | `../../../Trideployment/README.md`, `../../../Trideployment/AGENTS.md` |
-| `TriTest` | 自动测试、测试完备性、回归和 CI 门禁 | 涉及测试、回归、质量门禁时 | 中 | `TriTestBusinessStrategyRegistry` | `TriTestProductRegistry` | `TriTestCodeRegistry` | `../../../TriTest/README.md`, `../../../TriTest/AGENTS.md` |
+| `Trideployment` | IPD DEPLOYMENT 阶段部署执行引擎（CLI + deployer + registry + targets），通过 CLI contract 被 TriDev phase engine 调用 | 涉及上线、部署、环境发布、部署目标管理时 | 中 | `TrideploymentBusinessStrategyRegistry` | `TrideploymentProductRegistry` | `TrideploymentCodeRegistry` | `../../../Trideployment/README.md`, `../../../Trideployment/AGENTS.md` |
+| `TriTest` | IPD 测试与验证执行引擎（VERIFY-INTEGRATION / REDTEAM / QA / ASSURANCE）+ 第四层验证器横切框架，通过 CLI contract 被 TriDev phase engine 调用 | 涉及测试、回归、质量门禁、验证器框架、spec-driven validation 时 | 中 | `TriTestBusinessStrategyRegistry` | `TriTestProductRegistry` | `TriTestCodeRegistry` | `../../../TriTest/README.md`, `../../../TriTest/AGENTS.md` |
 | `core-agent` | TriMC observability 的历史迁移源 | 只在追溯 observability 迁移历史时 | 历史源 | 不单独建立 | 不单独建立 | 不单独建立 | `../../../core-agent/README.md` |
 
 ## 命名与别名基线

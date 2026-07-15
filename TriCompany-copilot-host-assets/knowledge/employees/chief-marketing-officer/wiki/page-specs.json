@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "specId": "cmo-consumption-records",
+      "pageId": "cmo-consumption-records",
+      "title": "CMO employee consumption records",
+      "pageStatus": "working",
+      "topicTags": ["cmo", "marketing", "market-intelligence", "competitive-analysis"],
+      "sourceIds": ["cmo-agent-definition", "cmo-contract-v1"],
+      "reviewerRoles": ["CEOChiefOfStaff"],
+      "approvalSlaHours": 168,
+      "maxSources": 20
+    }
+  ]
+}

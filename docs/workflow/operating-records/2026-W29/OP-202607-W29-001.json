@@ -6,14 +6,14 @@
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-07-13T19:00:00+08:00",
-  "updatedAt": "2026-07-13T19:00:00+08:00",
+  "updatedAt": "2026-07-14T21:20:00+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-07-13T00:00:00+08:00",
     "endAt": "2026-07-19T23:59:59+08:00",
     "label": "2026-W29 当前周维护面"
   },
-  "summary": "W28→W29 周度平移完成。Phase 1+2 TriMC Agent Loop 全量完成（70/70 测试通过），TestEngineer（小柯）合同已上线，5 C-level 合同 display_name 待 CEO 确认。W29 持续推动 Claude Code 吸收、员工编排层技术方案、IPD 穿透检查与 carry 老化收敛。",
+  "summary": "W28→W29 周度平移完成。Phase 1+2 TriMC Agent Loop 全量完成（55/55 测试通过）。小全（FullStackDeveloper）和小柯（TestEngineer）双角色 manifest 补完 + CHO 审批 + 流水线联调窗口确认，编码→测试→审查 pipeline 即时开启。W29 持续推动 Claude Code 吸收、员工编排层技术方案、IPD 穿透检查与 carry 老化收敛。",
   "relatedModules": [
     "TriMetaverse",
     "TriCompany",
@@ -76,6 +76,12 @@
       "id": "NA-20260713-CPO-001",
       "owner": "ChiefProductOfficer",
       "action": "最小 MVP/最小经营闭环重排：输出当前状态切分，明确 active、暂停、后置和待 CEO 决策范围。",
+      "status": "done",
+      "unfrozenAt": "2026-07-14T16:19:00+08:00",
+      "unfreezeReason": "冻结条件已满足：CPO-003（IPD-001 穿透检查）已完成（2026-07-14），CPO-004 最简模型已升入 product-state.md。CEO 确认解冻开工。",
+      "originalFreezeReason": "关联 CARRY-001 已被 CEO 冻结（等 IPD 成熟再做 MVP）。CPO-001 无独立推进意义，等 CPO-003（IPD-001 穿透检查）输出 IPD 成熟度后再评估解冻。CEO 已确认。",
+      "completedAt": "2026-07-14T16:45:00+08:00",
+      "result": "CPO 基于 CPO-003 穿透检查 + CPO-004 最简模型完成经营闭环重排。四象限输出（CEO 2026-07-14 裁决）：Active 8项（TriAvatar 激活）、Paused 5项（TriSkill/IPD 暂停）、Deferred 5项（7占位模块，TriAvatar 已提出）、Needs CEO Decision 4项（D-1 ✅ 已裁决，CARRY-004 ✅ 已APPROVE）。BLOCK-001~005 状态全量更新，最小经营闭环（人力+技术+经营）已定义。详见 unresolved-items.md §CPO-001。",
       "dependsOn": [
         "TriCompany/docs/product/PROJECT.md",
         "TriCompany/docs/product/STATE.md"
@@ -88,6 +94,9 @@
       "id": "NA-20260713-CPO-002",
       "owner": "ChiefProductOfficer",
       "action": "running FREEZE 清单检查：确认各 FREEZE 项当前状态、是否可解除、是否需升级为 BLOCKED 或直接关闭。",
+      "status": "done",
+      "completedAt": "2026-07-14T07:00:00+08:00",
+      "result": "CPO 完成 FREEZE 清单联合检查，全部 FREEZE 项已审计并标注状态。详见 W29 unresolved-items.md §CPO-002。",
       "dependsOn": [
         "TriCompany/docs/registry/product-state.md"
       ],
@@ -99,6 +108,9 @@
       "id": "NA-20260713-CPO-003",
       "owner": "ChiefProductOfficer",
       "action": "IPD-001 穿透检查：按当前冲刺周期给出各模块总优先安排，标注阻塞项与依赖链。",
+      "status": "done",
+      "completedAt": "2026-07-14T03:30:00+08:00",
+      "output": "W29 unresolved-items.md §CPO-003 — 17模块成熟度矩阵、Tier 0-3优先级、5条依赖链、5项阻塞（BLOCK-001 为致命：TriStaciss验收今天到期）、Gate A/B/C对标、W30预判",
       "dependsOn": [
         "TriCompany/docs/product/PROJECT.md",
         "TriCompany/docs/registry/product-state.md"
@@ -111,6 +123,9 @@
       "id": "NA-20260713-CPO-004",
       "owner": "ChiefProductOfficer",
       "action": "大重构目标最简模型与前置条件：输出最简可验证模型定义与入口边界。",
+      "status": "done",
+      "completedAt": "2026-07-14T07:00:00+08:00",
+      "result": "CPO 输出 TriMC→TriModel→TriStaciss→Provider 简化模型链路。CEO 确认（2026-07-14）并写入 product-state.md。详见 W29 unresolved-items.md §CPO-004。",
       "dependsOn": [
         "TriCompany/docs/product/PROJECT.md"
       ],
@@ -122,6 +137,9 @@
       "id": "NA-20260713-CPO-005",
       "owner": "ChiefProductOfficer",
       "action": "人设/角色/叙事侧状态说明：产出当前阶段角色清单、叙事定位与边界说明。",
+      "status": "done",
+      "completedAt": "2026-07-14T07:00:00+08:00",
+      "result": "CPO 完成角色/叙事侧状态说明，CEO 确认（2026-07-14）并写入 product-state.md。详见 W29 unresolved-items.md §CPO-005。",
       "dependsOn": [
         "TriCompany/docs/product/STATE.md"
       ],
@@ -133,6 +151,9 @@
       "id": "NA-20260713-CPO-006",
       "owner": "ChiefProductOfficer",
       "action": "产品需求侧 carry 优先级标注：对当前所有 carry 事项标注 P0/P1/P2 优先级。",
+      "status": "done",
+      "completedAt": "2026-07-14T07:00:00+08:00",
+      "result": "CPO 完成产品侧 carry P0/P1/P2 优先级标注。详见 W29 unresolved-items.md §CPO-006。",
       "dependsOn": [
         "docs/workflow/operating-records/2026-W29/OP-202607-W29-001.unresolved-items.md"
       ],
@@ -144,6 +165,9 @@
       "id": "NA-20260713-CPO-007",
       "owner": "ChiefProductOfficer",
       "action": "产品基调检查清单：产出产品基调、角色语气、用户感知一致性检查清单。",
+      "status": "done",
+      "completedAt": "2026-07-14T07:00:00+08:00",
+      "result": "CPO 完成产品基调检查清单。详见 W29 unresolved-items.md §CPO-007。",
       "dependsOn": [
         "TriCompany/docs/product/STATE.md"
       ],
@@ -153,6 +177,9 @@
       "id": "NA-20260713-CTO-001",
       "owner": "ChiefTechnologyOfficer",
       "action": "代码侧支撑任务技术执行状态：对当前所有代码侧支撑任务条目输出状态快照。",
+      "status": "done",
+      "completedAt": "2026-07-14T03:45:00+08:00",
+      "result": "8模块全量快照完成。🟢就绪: TriMC(55 tests), TriModel(15 tests), TriSkill(Wave 0-2 done), TriTest, TriDeployment, TriDev. 🟡需补: TriStaciss(缺测试). 🔴未启动: TriPilot. 2个blocking: TriStaciss无API key, TriPilot零进度. 详载unresolved-items.md。",
       "dependsOn": [
         "TriCompany/docs/engineering/DESIGN.md",
         "TriCompany/docs/registry/code-state.md"
@@ -165,6 +192,9 @@
       "id": "NA-20260713-CTO-002",
       "owner": "ChiefTechnologyOfficer",
       "action": "员工编排层技术方案：完成 Agent 编排层架构设计文档，包含角色调度、能力路由、成本控制策略。",
+      "status": "done",
+      "completedAt": "2026-07-14T04:30:00+08:00",
+      "result": "V2.0 完成。设计阶段（7/14）：TriMC employee-orchestration-design.md（运行时Agent派发）+ TriCompany host-object-generation-design.md（宿主对象生成管道）。Phase A 代码注册（7/14）：TestEngineer + FullStackDeveloper HostObjectSetDefinition 写入 host_object_generation.py，DECLARED_HOST_OBJECT_SETS 9→11，EMPLOYEE_GENERATORS 7→13（补全CMO/COO/CFO）。CLI --employee test-engineer / --employee full-stack-developer / --employee all 验证通过。Publish 流水线验证通过。BLOCK-003 解除。",
       "dependsOn": [
         "TriCompany/docs/engineering/DESIGN.md",
         "TriMC/docs/engineering/phase-2-execution-note.md"
@@ -185,6 +215,9 @@
       "id": "NA-20260713-CTO-004",
       "owner": "ChiefTechnologyOfficer",
       "action": "TriStaciss Anthropic Messages API 端点完整度检查与验收。",
+      "status": "done",
+      "completedAt": "2026-07-14T03:10:00+08:00",
+      "result": "APPROVE（带条件）。代码完整对齐 Anthropic Messages API spec，SSE streaming 通过 live smoke。4 个 gap 非阻塞（缺测试/400空body/无E2E）。BLOCK-001 解除。详细见 unresolved-items.md §CTO-004。",
       "dependsOn": [
         "TriStaciss/README.md",
         "TriStaciss/docs/"
@@ -195,6 +228,9 @@
       "id": "NA-20260713-CTO-005",
       "owner": "ChiefTechnologyOfficer",
       "action": "CTO carry 优先级标注：对当前所有技术侧 carry 事项标注 P0/P1/P2 优先级。",
+      "status": "done",
+      "completedAt": "2026-07-14T03:15:00+08:00",
+      "result": "P0: CTO-002(员工编排层, BLOCK-003), CTO-006(小全上岗, BLOCK-005). P1: CARRY-004(TriMC部署), CTO-003(Claude Code吸收), CTO-001(技术状态快照), CARRY-006(仪表盘). P2: TriModel路由上线, TriSkill, TriDeployment, GAP items. 详载unresolved-items.md。",
       "dependsOn": [
         "docs/workflow/operating-records/2026-W29/OP-202607-W29-001.unresolved-items.md"
       ],
@@ -231,23 +267,70 @@
     {
       "id": "NA-20260713-CTO-006",
       "owner": "ChiefTechnologyOfficer",
-      "action": "小全上岗流水线步骤1-4：为全栈开发工程师「小全」创建JD/角色定义、源侧五件套（soul/memory/colleagues/social/agent.md）、contract.yaml、binding profile。完成后移交 CHO 审批。CEO角色边界指令（2026-07-14）：小全归CTO领导，负责具体编码积木；小柯（TestEngineer）负责验证器；CTO负责审查两人工作质量和效率。",
+      "action": "小全上岗流水线步骤1-4 + manifest补完：为全栈开发工程师「小全」创建JD/角色定义、源侧五件套（soul/memory/colleagues/social/agent.md）、contract.yaml、binding profile。完成后移交 CHO 审批。CHO 审批通过后补更新 source/support manifests。CEO角色边界指令（2026-07-14）：小全归CTO领导，负责具体编码积木；小柯（TestEngineer）负责验证器；CTO负责审查两人工作质量和效率。",
+      "status": "done",
+      "completedAt": "2026-07-14T05:30:00+08:00",
+      "result": "✅ 步骤1-4 全部完成 + CHO后置条件1 manifest补完。步骤2 源侧五件套全部就位，步骤3 contract.yaml 落位，步骤4 binding profile 落位，步骤1 live entry 落位。manifest补完：source manifest +2 entries（TestEngineer + FullStackDeveloper → 9→11）、support manifest +2 entries（同）、company-governance-state.md Contract Files表新增FullStackDeveloper。CHO 审批（CHO-001）已 APPROVE。后置条件2（流水线联调窗口）待推进。",
       "dependsOn": [
         "TriCompany/.github/source-agents/",
         "TriCompany/.github/binding-profiles/"
       ],
-      "dueAt": "2026-07-18T20:00:00+08:00",
+      "dueAt": "2026-07-17T20:00:00+08:00",
       "warningLevel": "none"
     },
     {
       "id": "NA-20260713-CHO-001",
       "owner": "ChiefHumanResourcesOfficer",
       "action": "小全上岗审批（步骤5）：审查 CTO 提交的小全 artifacts（JD/五件套/contract/binding），按 CHO 上岗审批门新规（2026-07-14）签字批准。审批通过后交 CTO 激活。",
+      "status": "done",
+      "completedAt": "2026-07-14T06:10:00+08:00",
+      "result": "APPROVE。小全（FullStackDeveloper）源侧五件套、contract.yaml、binding profile 和 live entry 全部就位，满足 Expert 岗能力合约 9/9 项全覆盖，决策边界与 TestEngineer 对齐。后置条件全部完成：(1) ✅ CTO 补更新 source/support manifests（2026-07-14 05:30），(2) ✅ CTO 确认小全×小柯编码→测试流水线首次联调窗口：W29 即时开启，目标模块 TriMC，首次 smoke test 为 TriMC 55 测试全量回归 + 小全新增 feature → 小柯集成验证 → CTO 审查（2026-07-14 06:10）。详载 unresolved-items.md §CHO-001。",
       "dependsOn": [
         "NA-20260713-CTO-006",
         "TriMetaverse/docs/registry/company-governance-state.md"
       ],
       "dueAt": "2026-07-21T20:00:00+08:00",
+      "warningLevel": "none"
+    },
+    {
+      "id": "NA-20260714-CTO-007",
+      "owner": "ChiefTechnologyOfficer",
+      "action": "小全×小柯流水线首次 smoke test：分派 TriMC 小型 feature 给小全实现 → 小柯编写集成测试验证 → CTO 审查质量。目标：端到端验证编码→测试→审查流水线可达。",
+      "status": "done",
+      "completedAt": "2026-07-14T06:30:00+08:00",
+      "result": "CTO 审查 APPROVE。小全（TaskController）质量 PASS/效率 MEDIUM/成本 LOW。小柯（validate.mjs）质量 PASS/效率 MEDIUM/成本 LOW。Token 端到端 ~55K。流水线三步门禁全部通过。详见 plan.md CTO-007 Phase 3。",
+      "dependsOn": [
+        "NA-20260713-CHO-001",
+        "TriMC/"
+      ],
+      "dueAt": "2026-07-17T20:00:00+08:00",
+      "warningLevel": "none"
+    },
+    {
+      "id": "NA-20260714-COS-003",
+      "owner": "ChiefTechnologyOfficer",
+      "action": "三项周度仪表盘首版回填（CARRY-006）：测试覆盖仪表盘 + 管线成熟度仪表盘 + 员工编排仪表盘。Phase 2 已完成，待 CTO 回填首版基线数据。",
+      "status": "done",
+      "completedAt": "2026-07-14T21:45:00+08:00",
+      "result": "三项仪表盘首版回填完成。测试覆盖：70 tests（TriMC 55 + TriModel 15），5 缺口已识别。管线成熟度：7 条管线（4 可用 L2-L3，3 缺失），Docker compose 健康检查通过。员工编排：11 HostObjectSets / 13 Generators，3 已上岗 + 1 smoke test 通过（小柯）。修正 Docker 状态不一致 + 小柯 CTO-007 后状态更新。",
+      "dependsOn": [
+        "NA-20260713-CTO-002",
+        "TriMC Phase 2"
+      ],
+      "dueAt": "2026-07-17T20:00:00+08:00",
+      "warningLevel": "none",
+      "carryWeeks": 1,
+      "linkedCarriedItem": "CARRY-20260713-006"
+    },
+    {
+      "id": "NA-20260714-COS-004",
+      "owner": "CEOChiefOfStaff",
+      "action": "W29→W30 周度平移：按周度平移 protocol 将未完成事项迁移至 W30 经营维护计划单，生成 OP-202607-W30-001.json + unresolved-items.md，闭合 W29。",
+      "status": "pending",
+      "dependsOn": [
+        "OP-202607-W29-001"
+      ],
+      "dueAt": "2026-07-20T20:00:00+08:00",
       "warningLevel": "none"
     }
   ],
@@ -269,11 +352,13 @@
       "id": "CARRY-20260713-002",
       "title": "running FREEZE 清单状态检查（CPO/CTO 联合）",
       "owner": "ChiefProductOfficer",
-      "status": "frozen",
+      "status": "closed",
+      "closedAt": "2026-07-14T07:00:00+08:00",
+      "closeReason": "CPO-002 FREEZE清单检查完成（2026-07-14），纳入 W29 unresolved-items.md。",
       "carryWeeks": 6,
-      "warningLevel": "warning",
+      "warningLevel": "none",
       "firstRecorded": "W22/W23 (2026-05-25~06-01)",
-      "note": "CPO 和 CTO 各有一个 FREEZE 检查 overdue，建议本周合并为一次联合检查。",
+      "note": "CPO FREEZE 检查已通过 CPO-002 闭环。CTO 侧 FREEZE 已归入 CTO-001 维持。",
       "linkedNextAction": "NA-20260713-CPO-002",
       "dependsOn": []
     },
@@ -281,11 +366,13 @@
       "id": "CARRY-20260713-003",
       "title": "IPD 全阶段推进（模块 Registry 建立后续 + IPD 穿透检查）",
       "owner": "ChiefProductOfficer",
-      "status": "active",
+      "status": "closed",
+      "closedAt": "2026-07-14T03:30:00+08:00",
+      "closeReason": "CPO-003 IPD-001穿透检查完成：17模块成熟度矩阵、Tier 0-3优先级、5条依赖链、5项阻塞标注、Gate A/B/C对标。输出在 W29 unresolved-items.md §CPO-003。",
       "carryWeeks": 5,
-      "warningLevel": "warning",
+      "warningLevel": "none",
       "firstRecorded": "W24 (2026-06-08)",
-      "note": "模块 Registry 第一轮建立已关闭。IPD-001 穿透检查 overdue，需本周完成。",
+      "note": "模块 Registry 第一轮建立已关闭。IPD-001 穿透检查已完成（CPO-003 done 2026-07-14）。",
       "linkedNextAction": "NA-20260713-CPO-003",
       "dependsOn": ["TriCompany/docs/registry/product-state.md"]
     },
@@ -341,11 +428,13 @@
       "id": "CARRY-20260713-008",
       "title": "产品需求侧 + 技术侧 carry 优先级标注",
       "owner": "ChiefProductOfficer",
-      "status": "active",
+      "status": "closed",
+      "closedAt": "2026-07-14T07:00:00+08:00",
+      "closeReason": "CPO-006（产品侧）+ CTO-005（技术侧）carry 优先级标注均已完成。详见 W29 unresolved-items.md。",
       "carryWeeks": 1,
-      "warningLevel": "warning",
+      "warningLevel": "none",
       "firstRecorded": "W28 (2026-07-10)",
-      "note": "CPO 和 CTO carry 标注 overdue。本周必须完成以避免 W30 累积恶化。",
+      "note": "CPO + CTO 双侧 carry 优先级标注已闭环。",
       "linkedNextAction": "NA-20260713-CPO-006",
       "dependsOn": []
     }
@@ -355,14 +444,16 @@
       "id": "TODO-20260713-001",
       "title": "CEO 待裁决：最小 MVP 重排方向（14 周 carry，high warning）",
       "owner": "CEO",
-      "status": "pending",
+      "status": "ceo_decided",
+      "ceoDecision": "2026-07-14 冻结：等 IPD 成熟后再考虑 MVP。从 active carry 移除，转 frozen archive。",
       "dependsOn": ["NA-20260713-CPO-001"]
     },
     {
       "id": "TODO-20260713-002",
       "title": "CEO 待确认：TriMC 最小部署拓扑选择",
       "owner": "CEO",
-      "status": "pending",
+      "status": "ceo_decided",
+      "ceoDecision": "2026-07-14 APPROVE：确认同意 CTO 部署拓扑方案。CTO 可进入执行阶段。",
       "dependsOn": ["CARRY-20260713-004"]
     },
     {
@@ -395,6 +486,35 @@
       "approvedAt": "2026-07-14T02:28:00+08:00",
       "ceoDecision": "2026-07-14 确认合同上线。TestEngineer（小柯）正式上岗，负责验证器。",
       "dependsOn": []
+    },
+    {
+      "id": "TODO-20260714-007",
+      "title": "CHO 已完成：RAndDTrainer 岗位边界正式化与 contract 注册",
+      "owner": "ChiefHumanResourcesOfficer",
+      "status": "cho_completed",
+      "completedAt": "2026-07-14T08:05:00+08:00",
+      "routedAt": "2026-07-14T07:30:00+08:00",
+      "detail": "CEO（磨人）确认 RAndDTrainer 边界为「专属研发的培训人员」。CHO 已完成：岗位名称「小吴」确认、contract 路径治理补齐（item 0 + 工作接手规则）、源侧五件套（agent/soul/memory/colleagues/social）齐备验证通过、binding profile + live entry 链路完整。company-governance-state.md contract 表已更新。",
+      "dependsOn": []
+    },
+    {
+      "id": "TODO-20260714-008",
+      "title": "CEO 命名记录：CEO 名称为「磨人」（已同步至 company-governance-state.md）",
+      "owner": "ChiefHumanResourcesOfficer",
+      "status": "recorded_and_synced",
+      "recordedAt": "2026-07-14T07:30:00+08:00",
+      "syncedAt": "2026-07-14T08:05:00+08:00",
+      "detail": "CEO 确认名称为「磨人」。已记录至 W29 operating plan。已由 CHO 同步至 company-governance-state.md（CEO 命名 + RAndDTrainer contract 补齐一起写回）。5 个 C-level 合同（CAO/CFO/CHRO/CMO/COO）维持「待命名」。",
+      "dependsOn": []
+    },
+    {
+      "id": "TODO-20260714-009",
+      "title": "CHO 已完成：CEO soul.md 补充 + CHO/CAO 命名占位",
+      "owner": "ChiefHumanResourcesOfficer",
+      "status": "cho_completed",
+      "completedAt": "2026-07-14T07:30:00+08:00",
+      "detail": "CHO 补充 CEO soul.md 名称字段为「磨人」，CHO/CAO source-agent soul.md 名称字段补「待命名」占位。",
+      "dependsOn": []
     }
   ],
   "metadata": {
@@ -413,26 +533,14 @@
       "docs/workflow/operating-records/2026-W27/OP-202606-W27-001.json"
     ],
     "carryAgingWarnings": {
-      "description": "W29 平移后 carry 事项老化情况。阈值：≥4 周为 warning，≥8 周为 high warning。",
+      "description": "W29 平移后 carry 事项老化情况。阈值：≥4 周为 warning，≥8 周为 high warning。已关闭项自动从老化追踪中移除。",
       "items": [
         {
           "id": "CARRY-20260713-001",
           "carryWeeks": 14,
           "level": "high",
           "source": "W15",
-          "note": "已跨 14 周，原始需求可能已漂移。建议本周由 CEO 决策继续推进或降级。"
-        },
-        {
-          "id": "CARRY-20260713-002",
-          "carryWeeks": 6,
-          "level": "warning",
-          "source": "W22/W23"
-        },
-        {
-          "id": "CARRY-20260713-003",
-          "carryWeeks": 5,
-          "level": "warning",
-          "source": "W24"
+          "note": "CEO 2026-07-14 已冻结：等 IPD 成熟后再考虑 MVP。转 frozen archive。"
         }
       ]
     },
@@ -470,9 +578,9 @@
         "type": "cleanup"
       }
     ],
-    "version": "0.4.0",
-    "lastUpdated": "2026-07-13T19:00:00+08:00",
+    "version": "0.5.0",
+    "lastUpdated": "2026-07-14T07:30:00+08:00",
     "updatedBy": "CEOChiefOfStaff"
   },
-  "lastSyncedAt": "2026-07-13"
+  "lastSyncedAt": "2026-07-14"
 }

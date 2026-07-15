@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/registry/product-state.md
 - syncMode: source-only
-- lastSyncedAt: 2026-06-04
+- lastSyncedAt: 2026-07-10T17:41:00+08:00
 
 ## Module Overview
 
@@ -37,6 +37,12 @@
 - 已把 TriCompany 现行的 `docs/engineering/`、`docs/execution/`、`docs/product/`、`docs/registry/`、`docs/workflow/`、`docs/training/` 六层结构评估为可推广的 `模块六层文档协同系统` 默认结构，并要求后续新模块至少先建占位入口。
 - 已把模块级 `Product Registry` 的后续治理口径明确为“按业务切面拆文档、保持教学级可读性”，以便产品、运营和新加入成员能快速理解模块业务结构与能力边界。
 - 已把模块级教学文档的端到端要求纳入中央产品侧治理：后续各模块业务文档都应补清输入生产者、输出消费者以及模块内关键环节的接力关系。
+
+## Key Decisions
+
+- 2026-07-10 CARRY-005 D4：TriModel 多 provider 策略——CEO 裁定 **Option B**（预留架构接口，不排时间表）。当前 TriModel 为单 provider（DeepSeek）占位，产品边界不承载多 provider 路线图。
+- 2026-07-10 CARRY-005 D2：5 项 through-pass FREEZE 已建立独立登记文件 `docs/registry/ipd-freeze-items-registry.md`，作为产品侧治理资产纳入中央 registry。
+- 2026-07-15 CPO：**API Key 三层架构标准化**（APPROVE）。TriModel 自管 Key（`.env` 为 Key 池真源），消费端零配置 import，实例级覆盖不污染全局。L1=直连 Provider Key（`DEEPSEEK_API_KEY` 等），L2=TriMetaverse 平台 Key（`TRIMODEL_TRIMETAVERSE_API_KEY`），L3=TriStaciss 内部真模型 Key（对外不可见）。TriStaciss `.env` 标准化为 `<PROVIDER>_API_KEY` 命名。详见 TriModel 与 TriStaciss 各自 `product-state.md`。
 
 ## Bug And Gap State
 
