@@ -6,14 +6,14 @@
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-07-13T19:00:00+08:00",
-  "updatedAt": "2026-07-14T21:20:00+08:00",
+  "updatedAt": "2026-07-15T01:00:00+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-07-13T00:00:00+08:00",
     "endAt": "2026-07-19T23:59:59+08:00",
     "label": "2026-W29 当前周维护面"
   },
-  "summary": "W28→W29 周度平移完成。Phase 1+2 TriMC Agent Loop 全量完成（55/55 测试通过）。小全（FullStackDeveloper）和小柯（TestEngineer）双角色 manifest 补完 + CHO 审批 + 流水线联调窗口确认，编码→测试→审查 pipeline 即时开启。W29 持续推动 Claude Code 吸收、员工编排层技术方案、IPD 穿透检查与 carry 老化收敛。",
+  "summary": "W28→W29 周度平移完成。Phase 1+2 TriMC Agent Loop 全量完成（55/55 测试通过）。小全（FullStackDeveloper）和小柯（TestEngineer）双角色 manifest 补完 + CHO 审批 + 流水线联调窗口确认。CTO-003 Claude Code 吸收全量交付（370/370 PASS）。2026-07-15 CEO 架构全会：确认 20 模块全景图 v3、三阶段商业升级路径、四层推进计划（L0-L3）、IPD 策略、模块重命名（Tride→TriCode, TriDeployment→TriAuto）、TriMem 激活、TriOPC 建仓、CTO-008 上移为大框架任务。商业模式整合写入 三元宇宙价值流动.md 与 tmv-whitepaper.md。",
   "relatedModules": [
     "TriMetaverse",
     "TriCompany",
@@ -25,14 +25,16 @@
     "TriAvatar",
     "TriLC",
     "TriPilot",
-    "Tride",
-    "TriDeployment",
+    "TriCode",
+    "TriAuto",
     "TriTest",
     "TriMem",
     "TriMobile",
     "TriWeb4",
     "TriGateway",
-    "TriChain"
+    "TriChain",
+    "TriTraining",
+    "TriOPC"
   ],
   "dependsOn": [
     "OP-202607-W28-001",
@@ -205,12 +207,14 @@
       "id": "NA-20260713-CTO-003",
       "owner": "ChiefTechnologyOfficer",
       "action": "Claude Code 吸收 Phase 1-4：完成 Claude Code 2.1.88 TS 吸收四阶段（核心 loop → prompt 缓存 → sub-agent 树 → tool 权限模型）。",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "TriCompany/docs/engineering/DESIGN.md",
         "TriMC/README.md"
       ],
       "dueAt": "2026-07-24T20:00:00+08:00",
+      "completedAt": "2026-07-17T14:00:00+08:00",
+      "deliverySummary": "Phase 1/2/3/4 Tier 1 全部完成（commit 8c0d743）。P0=Phase 2 缓存（prompt-cache/，SHA256+change detection），P1=Phase 1 Loop（loop.ts ~480行，streaming+三级错误恢复级联），P1=Phase 4 权限（permission-engine/，规则系统+决策管道+PermissionMode，53 tests），P2=Phase 3 Sub-Agent（sub-agent/，built-in agents+tools-resolve+spawnAgent，29 tests）。全量 370/370 tests PASS。共识文档已更新至 100% Tier 1。",
       "ceoReview": {
         "date": "2026-07-15T12:03:00+08:00",
         "decision": "APPROVE",
@@ -317,15 +321,13 @@
       "id": "NA-20260714-COS-003",
       "owner": "ChiefTechnologyOfficer",
       "action": "三项周度仪表盘首版回填（CARRY-006）：测试覆盖仪表盘 + 管线成熟度仪表盘 + 员工编排仪表盘。Phase 2 已完成，待 CTO 回填首版基线数据。",
-      "status": "done",
-      "completedAt": "2026-07-14T21:45:00+08:00",
-      "result": "三项仪表盘首版回填完成。测试覆盖：70 tests（TriMC 55 + TriModel 15），5 缺口已识别。管线成熟度：7 条管线（4 可用 L2-L3，3 缺失），Docker compose 健康检查通过。员工编排：11 HostObjectSets / 13 Generators，3 已上岗 + 1 smoke test 通过（小柯）。修正 Docker 状态不一致 + 小柯 CTO-007 后状态更新。",
+      "status": "not_started",
       "dependsOn": [
         "NA-20260713-CTO-002",
         "TriMC Phase 2"
       ],
       "dueAt": "2026-07-17T20:00:00+08:00",
-      "warningLevel": "none",
+      "warningLevel": "warning",
       "carryWeeks": 1,
       "linkedCarriedItem": "CARRY-20260713-006"
     },
@@ -339,6 +341,100 @@
       ],
       "dueAt": "2026-07-20T20:00:00+08:00",
       "warningLevel": "none"
+    },
+    {
+      "id": "NA-20260715-CEO-001",
+      "owner": "CEOChiefOfStaff",
+      "action": "TriMem 模块激活：路由 CPO（产品设计用户系统+DB规划）→ CTO（工程落地）。",
+      "status": "not_started",
+      "dependsOn": [
+        "CPO 确认 TriMem 产品需求",
+        "CTO-008 大框架包含 TriMem 数据层"
+      ],
+      "dueAt": "2026-07-18T20:00:00+08:00",
+      "warningLevel": "high",
+      "note": "2026-07-15 CEO 指令：TriMem 现在就做，承担统一用户层级和 DB 规划。"
+    },
+    {
+      "id": "NA-20260715-CEO-002",
+      "owner": "CEOChiefOfStaff",
+      "action": "TriOPC 建仓与 reference 吸收：协调 TriOPC 仓库创建（走 NewModuleBaselineRelease 流程），吸收 PHP 商户系统作为 reference。",
+      "status": "not_started",
+      "dependsOn": [
+        "COS 发起建仓流程",
+        "CTO 执行 NewModuleBaselineRelease"
+      ],
+      "dueAt": "2026-07-21T20:00:00+08:00",
+      "warningLevel": "warning",
+      "note": "2026-07-15 CEO 指令：TriOPC 走流程建仓，不做子域。PHP 商户系统（微信/支付宝点餐）作为 reference 吸收链。"
+    },
+    {
+      "id": "NA-20260715-CEO-003",
+      "owner": "ChiefTechnologyOfficer",
+      "action": "CTO-008 上移为大框架任务：统括多入口路由 + TriLC 离线退化 + 状态恢复协议 + PC 端打包工程方案。重新定义 CTO-008 范围与交付件。",
+      "status": "not_started",
+      "dependsOn": [
+        "CTO 理解 CEO 7/15 架构全会决策",
+        "TriMC/docs/architecture-overall-unified.mmd 更新"
+      ],
+      "dueAt": "2026-07-18T20:00:00+08:00",
+      "warningLevel": "high",
+      "note": "2026-07-15 CEO 指令：CTO-008 上移，覆盖多入口路由、TriLC 离线退化为 localbus 主控、恢复时状态 merge 协议、PC 端 vscodium 打包方案。"
+    },
+    {
+      "id": "NA-20260715-CEO-004",
+      "owner": "CEOChiefOfStaff",
+      "action": "模块重命名迁移计划：Tride→TriCode + TriDeployment→TriAuto，协调仓库重命名、代码迁移、文档更新。",
+      "status": "not_started",
+      "dependsOn": [
+        "CTO 确认重命名技术影响范围",
+        "CPO 确认产品侧无遗留引用"
+      ],
+      "dueAt": "2026-07-25T20:00:00+08:00",
+      "warningLevel": "warning",
+      "note": "2026-07-15 CEO 确认重命名。Tride→TriCode（代码胶水层），TriDeployment→TriAuto（自动部署+自动化办公）。需做迁移计划。白皮书引用已修正。"
+    },
+    {
+      "id": "NA-20260715-CEO-005",
+      "owner": "CEOChiefOfStaff",
+      "action": "TriTraining 新模块建仓：培训模块独立建仓，与 TriDev/TriTest 并列研发质量层。",
+      "status": "not_started",
+      "dependsOn": [
+        "CPO 确认 TriTraining 产品定位",
+        "CTO 执行建仓"
+      ],
+      "dueAt": "2026-07-25T20:00:00+08:00",
+      "warningLevel": "low",
+      "note": "2026-07-15 CEO 新增模块：TriTraining 提供免费零基础 AI 培训获客，归入研发质量层 L3。"
+    },
+    {
+      "id": "NA-20260715-CEO-006",
+      "owner": "ChiefProductOfficer",
+      "action": "PC 端打包方案产品决策：TriPilot+TriLC+TriCode+vscodium 打包为本地 PC 端软件的产品方案评审。",
+      "status": "not_started",
+      "dependsOn": [
+        "CPO 产品评估",
+        "CTO-008 完成大框架定义后进入"
+      ],
+      "dueAt": "2026-07-25T20:00:00+08:00",
+      "warningLevel": "warning",
+      "note": "2026-07-15 CEO 指令：先过 CPO 产品决策，再走 CTO 工程决策。各模块保持独立仓库。"
+    },
+    {
+      "id": "NA-20260715-CEO-007",
+      "owner": "CEOChiefOfStaff",
+      "action": "IPD 策略落地：记录 CEO 决策（全系统最小 V1 优先，IPD 后续规范商业化交付），更新相关文档。",
+      "status": "done",
+      "completedAt": "2026-07-15T01:30:00+08:00",
+      "result": "IPD 策略已写入 tmv-whitepaper.md §8.1 四层推进计划和 三元宇宙价值流动.md。原则：L0→L1→L2→L3，最小 V1 全系统优先，跑通闭环后再用 IPD 规范——不阻塞上线，边跑边验证。"
+    },
+    {
+      "id": "NA-20260715-CEO-008",
+      "owner": "CEOChiefOfStaff",
+      "action": "商业模式双文档同步：将 CEO 7/15 阐述的三阶段商业升级路径写入 三元宇宙价值流动.md 与 tmv-whitepaper.md。",
+      "status": "done",
+      "completedAt": "2026-07-15T01:45:00+08:00",
+      "result": "两个文档已完整更新。三元宇宙价值流动.md 新增 v2.0 商业层（概述、三阶段详解、用户三重身份、20模块映射）。tmv-whitepaper.md 更新 §3.3.1（20模块商业映射）、§5.3（三阶段商业升级策略）、§7.3（OPC服务场景）、§8.1（四层推进计划）、Tride→TriCode 引用修正。"
     }
   ],
   "carriedItems": [
