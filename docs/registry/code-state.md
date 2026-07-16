@@ -14,7 +14,7 @@
 - `.github/prompts/`：可在聊天中直接调用的专用 prompt 命令，例如会议开始 / 结束入口
 - `docs/`：workflow、架构、治理和运行文档
 - `mermaid/`：图示资产和导出文件
-- `scripts/`：辅助脚本
+- `scripts/`：辅助脚本（含 Phase P0 PC 端打包脚本 `scripts/pack-pc/`）
 - 根目录 `.md`：白皮书、价值流动、阶段计划和方案文档
 
 ## Registry Assets
@@ -36,7 +36,8 @@
 - 2026-07-13：CLI interface spec 交付（CTO 小狄）。`docs/engineering/tri-dev-test-deploy-cli-interface-spec.md` V1.0 落档。基于三模块源码审计（TriTest cli.ts/types.ts/index.ts/runners/ + TriDeployment cli.ts/types.ts/deployer.ts + TriDev tridev.config.json）产出精确 CLI contract：`--format json` 标志（P0）、`tritest validate` 命令+`ValidatorResult` schema（P1）、`DeployResult` schema 标准化、5-wave 分波实施计划。关联：`tri-dev-test-deploy-decoupling.md` V1.0。
 - 2026-07-13：Phase 2 TriMC Agent Loop 全量完成（CTO 小狄）。`test-e2e/agent-loop.test.ts` 70/70 测试全绿，覆盖 SSE streaming + task tool policy + session.ts 重构 + agent.json 协议栈 + 4 层错误分类 + TriStaciss Anthropic Messages API fallback（P2-4）。关联：`TriMC/docs/engineering/phase-2-execution-note.md`。
 - 2026-07-13：CEOChiefOfStaff（小贾）execute 工具权限开通。`ceo-chief-of-staff.agent.md` tools 从 `[read, search, edit]` 扩展为 `[read, search, edit, execute]`，支持 powershell 文件系统操作与进程管理。
-- 2026-07-14：全 agent 归属路由阀门治理更新。15 个 `.agent.md` 全部增加 `归属路由阀门` 规则，明确五大禁止域映射——经营记录→CEOChiefOfStaff、产品→CPO、技术→CTO、商业战略→BusinessStrategy、治理→CompanyGovernanceRegistry。修复 CTO 误判越界执行周度平移的根本原因（此前仅声明"不替代某些岗位"但未列出完整禁止域清单）。关联：`company-governance-state.md` 同步记录。
+- 2026-07-16：CTO-008-M TriMC↔TriLC 通信协议设计完成 + TriLC HTTP 服务器实现（CTO 小狄）。产出：协议设计文档 `docs/engineering/cto-008-M-tri-mc-lc-protocol.md`（消息格式 SSE/JSON、连接策略优先TriMC→TriLC fallback、服务发现、健康检查、API兼容性契约、会话同步策略）+ TriLC `src/server/app.ts`（HTTP API `/healthz` + `/internal/v1/agent` SSE+JSON 双模式，使用 `@trimetaverse/agent-core` 的 `agentLoop()`）。修复 agent-core dist 与源码版本不一致问题（重建 dist）。冒烟测试通过（healthz 200 + 400 + 404）。TriMC 编译无回归。关联：CPO 产品路由包裁决 #9-11、`docs/architecture-overall-unified.mmd`。
+- 2026-07-16：CTO-008-P PC 端打包技术方案 + ConnectionManager 实现 + Phase P0 打包脚本（CTO 小狄）。产出：①设计文档 `docs/engineering/cto-008-P-pc-electron-packaging.md`（三阶段渐进 P0→P1→P2，8 项 CPO 验收门禁映射，更新策略：壳统一+模块独立）；②TriLC `ConnectionManager`（3 次失败降级→2 次成功恢复状态机，30s 周期健康检查，TriMC 代理→本地回退，`/healthz` 返回 `trimc: connected|degraded`）；③Phase P0 打包脚本 `scripts/pack-pc/{bundle.ps1, install-extensions.ps1, start.bat}`；④TriLC 编译通过 + 冒烟测试通过（healthz→agent 代理失败→本地 fallback→clean shutdown）。关联：CPO 产品路由包裁决 #9-11、`docs/architecture-overall-unified.mmd`。
 
 ## Current Code Health
 
