@@ -61,6 +61,9 @@
   - Phase A 代码注册：TestEngineer + FullStackDeveloper `HostObjectSetDefinition` 写入 `runtime/cognition/host_object_generation.py`，`DECLARED_HOST_OBJECT_SETS` 9→11，`EMPLOYEE_GENERATORS` 补全 CMO/COO/CFO 缺口 7→13
   - CLI 验证：`--employee test-engineer`、`--employee full-stack-developer`、`--employee all` 全部通过；publish 流水线验证通过
   - BLOCK-003（员工编排层未设计）已解除
+- 已记录经营记录周目录定位硬规则（2026-07-17 CEO 指令）：定位当前 active 周时，必须先列 `operating-records/` 子目录 → 逐目录检查各周 JSON 的 `metadata.latestActiveWeek` 字段 → 仅进入标记为 `true` 的周目录。禁止按日期推算或以惯性跳入任意周目录。此规则同步写入 `CEOChiefOfStaff` 编排文档 §4.10，作为收口审核的硬前置步骤。
+- 已记录发布侧同步后置硬规则（2026-07-17 CEO 指令）：修改 TriCompany 源侧文档后，必须反向搜索 `TriMetaverse/docs/` 下 `sourceOfTruth` 指针指向该文件的所有 `published-summary` / `published-copy` 副本，同轮追平并更新 `lastSyncedAt`。禁止以「文档真源统一在 TriCompany/docs/」为由跳过——该口径仅覆盖 `copilot-host-assets` 路径。此规则同步写入 `CEOChiefOfStaff` 编排文档 §4.11。
+- 已记录跨 Agent 路由包发送标准操作（2026-07-17 CEO 指令"收口成固定操作"）：CEOChiefOfStaff 向其他 Agent 发送正式 `ENGINEERING_TASK` 时，必须走三件套——路由包（`ET-*.json`）+ 收件箱（`inbox_entries`）+ 发送摘要（`📨` 块格式）。写入 `CEOChiefOfStaff` 编排文档 §4.12。
 
 ## Employee Capability Standard Contract
 

@@ -66,6 +66,9 @@
 		},
 		{
 			"path": "../claude-code-2.1.88"
+		},
+		{
+			"path": "../TriCode"
 		}
 	],
 	"launch": {

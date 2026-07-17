@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
 - syncMode: published-summary
-- lastSyncedAt: 2026-07-08
+- lastSyncedAt: 2026-07-17T00:54:00+08:00
 
 ## 1. 文档定位
 
@@ -59,3 +59,12 @@ TriCompany 源侧已新增 §4.7「IPD 双线人工编排操作」，记录 CEOC
 - **§4.8 IPD 系统构建与维护编排**：诚实记录总助从零构建 IPD 引擎、CLI、验证脚本、through-pass 审批体系文档、培训材料的全部手动工作；含完整资产清单（3 core runtime + 10 process artifacts + 4 training docs）、7 项构建操作表、诚实边界声明
 - **§4.9 总助编排全景**：两条编排线关系图——系统构建（造轨道 §4.8）vs 双线协调（调度列车 §4.7），当前总助两线全包，未来按维度拆分给 TriMC / 自建模块 / 保留人工
 - **§4.6 标题修复**：耐久记忆升级规则标题在此前编辑中丢失，已恢复
+
+### 5.4 V0.7 新增（2026-07-17）
+
+- **§4.10 收口审核硬前置步骤**（CEO 指令写入的公司治理硬规则）：定位 active 经营记录周时，必须先列 `operating-records/` 子目录 → 逐目录检查 JSON 的 `metadata.latestActiveWeek` 字段 → 仅进入标记为 `true` 的周目录。禁止按日期推算或惯性跳入。同步记录于 `CompanyGovernanceRegistry`（`docs/registry/company-governance-state.md`）。
+- **§4.11 发布侧同步后置步骤**（CEO 指令写入，§4.10 的补充规则）：修改 TriCompany 源侧文档后，必须反向搜索 `TriMetaverse/docs/` 下 `sourceOfTruth` 指针指向该文件的所有 `published-summary` / `published-copy` 副本，同轮追平 `lastSyncedAt`。禁止以「文档真源统一在 TriCompany/docs/」为由跳过——该口径仅覆盖 `copilot-host-assets` 路径，不覆盖 `TriMetaverse/docs/workflow/` 下的发布侧模式。
+
+### 5.5 V0.8 新增（2026-07-17）
+
+- **§4.12 跨 Agent 路由包发送标准操作**（CEO 指令"收口成固定操作"写入）：CEOChiefOfStaff 向其他 Agent 发送正式工程任务单时，必须走三件套流程：① **路由包**（`ENGINEERING_TASK` JSON，按 `tricompany-handoff-objects.md` 标准 handoff 对象，存入当前 active 周目录）；② **收件箱**（`inbox_entries` 表插入，标记 recipient/sender/interaction/summary）；③ **发送摘要**（对话中 `📨` 块格式即时输出，供 CEO 一眼确认）。执行顺序为 创建路由包→插收件箱→输出发送摘要→更新 W29 JSON 的 `handoffRefs`。向专家岗二级分派可省略发送摘要；会话内口头分诊不走三件套。

@@ -1,0 +1,14 @@
+﻿node_modules/
+out/
+coverage/
+tests/fixtures/generated/
+*.vsix
+node_modules
+.vscode-test/
+.codegraph/
+.cursor/
+vendor/
+dist/
+build/
+.env
+.env.*

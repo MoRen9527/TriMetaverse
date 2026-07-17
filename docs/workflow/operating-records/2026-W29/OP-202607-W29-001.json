@@ -502,7 +502,7 @@
       ],
       "dueAt": "2026-07-27T20:00:00+08:00",
       "warningLevel": "critical",
-      "note": "2026-07-17 CEO 指令：TriMC 不能犯 Copilot 同样的错误。成因分析已写入 project-ai-community-weekly-2026-W29.md §2.2。三条成因：推理链连续性要求、中间件剥离 reasoning_content、<think> 标签冲突。"
+      "note": "2026-07-17 CEO 指令：TriMC 不能犯 Copilot 同样的错误。成因分析已写入 project-ai-community-weekly-2026-W29.md §2.2（共学版，可迁移经验）。DA-005 承载具体工程要求，不写入共学周报。"
     },
     {
       "id": "NA-20260715-CEO-004",

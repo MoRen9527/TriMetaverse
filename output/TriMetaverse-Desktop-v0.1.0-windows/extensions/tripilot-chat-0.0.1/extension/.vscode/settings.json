@@ -1,0 +1,50 @@
+{
+    "chat.tools.terminal.autoApprove": {
+		"npx tsc": true,
+		"ForEach-Object": true,
+		"mkdir": true,
+		"npm pack": true,
+		"tar": true,
+		"Set-Location": true,
+		"npm run compile": true,
+		"py": true,
+		"print('tables:',": true,
+		"/^exit\\(\\)$/": {
+			"approve": true,
+			"matchCommandLine": true
+		},
+		"Set-Content": true,
+		"npm run build": true,
+		"git rev-parse": true,
+		"Test-Path": true,
+		"git clone": true,
+		"Test-NetConnection": true,
+		"/^Set-Location \"d:\\\\OneDrive\\\\Code\\\\ai\\\\Tride\"; node -e \"const fs=require\\('fs'\\); const path=require\\('path'\\); const root='packages/protocol/schemas/v1'; const files=\\[\\]; \\(function walk\\(p\\)\\{ for\\(const ent of fs\\.readdirSync\\(p,\\{withFileTypes:true\\}\\)\\) \\{ const fp=path\\.join\\(p,ent\\.name\\); if\\(ent\\.isDirectory\\(\\)\\) walk\\(fp\\); else if\\(ent\\.isFile\\(\\) && ent\\.name\\.endsWith\\('\\.json'\\)\\) files\\.push\\(fp\\);\\} \\}\\)\\(root\\); console\\.log\\('schemas',files\\.length\\); for\\(const f of files\\)\\{ try\\{ JSON\\.parse\\(fs\\.readFileSync\\(f,'utf8'\\)\\); \\} catch\\(e\\)\\{ console\\.error\\('invalid json',f,e\\.message\\); process\\.exit\\(1\\);\\} \\} console\\.log\\('all json parse ok'\\);\"$/": {
+			"approve": true,
+			"matchCommandLine": true
+		},
+		"npm install": true,
+		"/^node packages/runtime/src/cli\\.js --port 4317$/": {
+			"approve": true,
+			"matchCommandLine": true
+		},
+		"/^node \"d:\\\\OneDrive\\\\Code\\\\ai\\\\Tride\\\\packages\\\\runtime\\\\src\\\\cli\\.js\" --port 4317$/": {
+			"approve": true,
+			"matchCommandLine": true
+		},
+		"/^node -e \"async function main\\(\\)\\{ const base='http://127\\.0\\.0\\.1:4317'; const hello=\\{v:'1\\.0',kind:'request',type:'hello',id:'req-1',payload:\\{client:\\{name:'smoke',version:'0\\.0'\\},capabilities:\\{sse:true,jsonRpc:false\\}\\}\\}; const r=await fetch\\(base\\+'/rpc',\\{method:'POST',headers:\\{'content-type':'application/json'\\},body:JSON\\.stringify\\(hello\\)\\}\\); console\\.log\\('hello status',r\\.status\\); console\\.log\\(await r\\.text\\(\\)\\); \\} main\\(\\)\\.catch\\(e=>\\{console\\.error\\(e\\); process\\.exit\\(1\\);\\}\\);\"$/": {
+			"approve": true,
+			"matchCommandLine": true
+		},
+		"const": true,
+		"app.get('/health',async()=>({ok:true}))": true,
+		">({ok:true})": true,
+		"ok:true": true,
+		"console.log('ADDR',addr)": true,
+		"setInterval(()=>{},1000000)": true
+	},
+	"vitest.enable": true,
+	"vitest.commandLine": "npm run test:watch",
+	"testing.automaticallyOpenPeekView": "failureInVisibleDocument",
+	"testing.defaultGutterClickAction": "run"
+}
