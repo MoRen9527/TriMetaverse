@@ -6,14 +6,14 @@
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-07-13T19:00:00+08:00",
-  "updatedAt": "2026-07-17T10:16:00+08:00",
+  "updatedAt": "2026-07-17T12:30:00+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-07-13T00:00:00+08:00",
     "endAt": "2026-07-19T23:59:59+08:00",
     "label": "2026-W29 当前周维护面"
   },
-  "summary": "W28→W29 周度平移完成。Phase 1+2 TriMC Agent Loop 全量完成（55/55 测试通过）。小全（FullStackDeveloper）和小柯（TestEngineer）双角色 manifest 补完 + CHO 审批 + 流水线联调窗口确认。CTO-003 Claude Code 吸收全量交付（370/370 PASS）。2026-07-15 CEO 架构全会：确认 20 模块全景图 v3、三阶段商业升级路径、四层推进计划（L0-L3）、IPD 策略、模块重命名（Tride→TriCode, TriDeployment→TriAuto）、TriMem 激活、TriOPC 建仓、CTO-008 上移为大框架任务。商业模式整合写入 三元宇宙价值流动.md 与 tmv-whitepaper.md。2026-07-16 CPO 产品路由包裁决完成：15 项裁决（14 APPROVE + 1 FREEZE）全部写入 cpo-product-routing-package.md，产品 registry 已同步。已流转 CTO-008-M/P/S + trimem-activate。2026-07-17 CEO-001 关闭：CTO 提前交付 TriMem Phase 1 L0（12 源码 + 16/16 测试 + 2 migrations + 4 工程文档）。CEO 裁决：(1) TriMem L1 排入 W30，L0 落稳一周；(2) COS-004 周度平移维持周日 7/20 执行；(3) CEO-006 启动，CTO-008-P 小贾审阅通过，vscodium vs 纯 Electron 产品决策已路由 CPO（cpo-routing-cto008p-followup.md）。2026-07-17 CPO 收口：CEO-006 APPROVE 方案 A（vscodium），裁决写入 cpo-ruling-ceo006-vscodium.md；CEO-005 TriTraining 产品定位完成（获客轨 MVP 3 课路径 + 内训轨归属 RAndDTrainer/CTO），CEO 确认 Phase 2+ → Phase 1 L3，product-state.md 已初始化到 TriTraining/docs/registry/。CEO-005 下一步路由 CTO 确认工程边界 + 执行建仓。2026-07-17 CTO 小狄收口：CEO-004 技术评估回传（cto-response-ceo004-rename-assessment.md）——Tride→TriCode 无需代码迁移（仅文档收口），TriDeployment→TriAuto APPROVE 机械重命名（check list 已出，2-3h）；CEO-005 工程边界确认（获客轨/内训轨双轨分离 + .gitignore + engineering/README.md + AGENTS.md 更新），CTO 侧闭环。2026-07-17 小贾深度审核全量收口：发现 6 项缺口（G1 openclaw Phase 3/4 未完成、G2 TriOPC code-state.md 虚标 Phase 1 L2、G3 TriOPC 零版本控制、G4 CTO-008 代码实现无独立 OP 追踪、G10 COS-006 OP JSON vs SQL 状态矛盾、G11 TriMC 测试 17 失败 WIndows 环境差异）。G2 根因确认为 DeepSeek reasoning_content 空投 bug 导致 agent 会话崩溃。新增紧急待办 RECOVERY-001 项目级故障恢复机制。G3 已修复（git init + 初始提交），G2 code-state.md 已修正，G10 OP JSON 已同步，COS-005/COS-005A 已更新实际进度。新增 4 条深度审核追踪项（NA-20260717-DA-001~004）+ 1 条 COS-005 代码实现追踪项（NA-20260717-COS-005A）。",
+  "summary": "W28→W29 周度平移完成。Phase 1+2 TriMC Agent Loop 全量完成（55/55 测试通过）。小全（FullStackDeveloper）和小柯（TestEngineer）双角色 manifest 补完 + CHO 审批 + 流水线联调窗口确认。CTO-003 Claude Code 吸收全量交付（370/370 PASS）。2026-07-15 CEO 架构全会：确认 20 模块全景图 v3、三阶段商业升级路径、四层推进计划（L0-L3）、IPD 策略、模块重命名（Tride→TriCode, TriDeployment→TriAuto）、TriMem 激活、TriOPC 建仓、CTO-008 上移为大框架任务。商业模式整合写入 三元宇宙价值流动.md 与 tmv-whitepaper.md。2026-07-16 CPO 产品路由包裁决完成：15 项裁决（14 APPROVE + 1 FREEZE）全部写入 cpo-product-routing-package.md，产品 registry 已同步。已流转 CTO-008-M/P/S + trimem-activate。2026-07-17 CEO-001 关闭：CTO 提前交付 TriMem Phase 1 L0（12 源码 + 16/16 测试 + 2 migrations + 4 工程文档）。CEO 裁决：(1) TriMem L1 排入 W30，L0 落稳一周；(2) COS-004 周度平移维持周日 7/20 执行；(3) CEO-006 启动，CTO-008-P 小贾审阅通过，vscodium vs 纯 Electron 产品决策已路由 CPO（cpo-routing-cto008p-followup.md）。2026-07-17 CPO 收口：CEO-006 APPROVE 方案 A（vscodium），裁决写入 cpo-ruling-ceo006-vscodium.md；CEO-005 TriTraining 产品定位完成（获客轨 MVP 3 课路径 + 内训轨归属 RAndDTrainer/CTO），CEO 确认 Phase 2+ → Phase 1 L3，product-state.md 已初始化到 TriTraining/docs/registry/。CEO-005 下一步路由 CTO 确认工程边界 + 执行建仓。2026-07-17 CTO 小狄收口：CEO-004 技术评估回传（cto-response-ceo004-rename-assessment.md）——Tride→TriCode 无需代码迁移（仅文档收口），TriDeployment→TriAuto APPROVE 机械重命名（check list 已出，2-3h）；CEO-005 工程边界确认（获客轨/内训轨双轨分离 + .gitignore + engineering/README.md + AGENTS.md 更新），CTO 侧闭环。2026-07-17 小贾深度审核全量收口：发现 6 项缺口（G1 openclaw Phase 3/4 未完成、G2 TriOPC code-state.md 虚标 Phase 1 L2、G3 TriOPC 零版本控制、G4 CTO-008 代码实现无独立 OP 追踪、G10 COS-006 OP JSON vs SQL 状态矛盾、G11 TriMC 测试 17 失败 WIndows 环境差异）。G2 根因确认为 DeepSeek reasoning_content 空投 bug 导致 agent 会话崩溃。新增紧急待办 TWF-001 任务动态树工作流与故障恢复机制（原 RECOVERY-001）。G3 已修复（git init + 初始提交），G2 code-state.md 已修正，G10 OP JSON 已同步，COS-005/COS-005A 已更新实际进度。新增 4 条深度审核追踪项（NA-20260717-DA-001~004）+ 1 条 COS-005 代码实现追踪项（NA-20260717-COS-005A）。",
   "relatedModules": [
     "TriMetaverse",
     "TriCompany",
@@ -479,17 +479,14 @@
       "note": "2026-07-17 小贾深度审核发现。17 个 FAIL 非逻辑错误（shell_exec/sub-agent spawn 等 Windows 差异）。scheduler/proc-sup 测试路径未覆盖。"
     },
     {
-      "id": "NA-20260717-DA-004",
+      "id": "TWF-001",
       "owner": "CEOChiefOfStaff",
-      "action": "项目级会话崩溃检测与恢复机制设计（RECOVERY-001 紧急）：DeepSeek reasoning_content 空投 bug 已造成实质性损害（TriOPC code-state.md 虚标、openclaw Phase 3 代码未提交）。需建立：(1) 关键状态文件声明vs实际一致性校验脚本；(2) 会话启动 registry 自动比对；(3) session 崩溃恢复 SOP——从最近 git commit + OP JSON 重建工作上下文。与 CTO 联合设计。",
-      "status": "not_started",
-      "dependsOn": [
-        "CTO 确认技术方案",
-        "CompanyGovernanceRegistry"
-      ],
+      "action": "任务动态树工作流与故障恢复机制（原 RECOVERY-001 / NA-20260717-DA-004 升级）：CPO 已交付 specs v0.2（方案 A Copilot CLI 事后检测+人工恢复 + 方案 B TriMC 前置拦截+自动恢复 + 共享五维校验规则），CTO 已交付三件实现物（scripts/validate-declarations.ps1 五维校验脚本 + scripts/detect-crash.ps1 崩溃检测脚本 + docs/workflow/trimc-recovery-interface.md TriMC 接口契约）。剩余：tree-nodes-export.json 导出机制（SQLite→文件，A-S2/A-S4/A-S5 依赖），OP JSON 收口同步。",
+      "status": "in_progress",
+      "dependsOn": [],
       "dueAt": "2026-07-25T20:00:00+08:00",
       "warningLevel": "critical",
-      "note": "2026-07-17 CEO 紧急指令。当前项目无故障恢复机制——跑崩了没有健康状态可回退。定为紧急解决。"
+      "note": "2026-07-17 CPO→CTO→小贾 三岗接力。CTO delivery smoke-test 通过（validate-declarations exit 1 预期噪音，detect-crash 五信号全部执行、A-S3 正确级联）。待收口：tree-nodes-export.json 导出 + OP JSON ID 同步。"
     },
     {
       "id": "NA-20260717-DA-005",
@@ -497,7 +494,7 @@
       "action": "TriMC 消息持久化防 reasoning_content 空投设计（关联 RECOVERY-001）：DeepSeek 推理模式下 content 为空但 reasoning_content 有完整答复时，Copilot CLI 将其当作合法消息持久化导致后续 HTTP 400。TriMC 从设计层面杜绝：(1) 持久化前校验 content/tool_calls 至少其一非空；(2) 压缩/重放保留 reasoning_content 字段完整性；(3) 流式消费到 finish_reason=stop；(4) CPO 在产品侧验收此防护逻辑。CPO 牵头产品需求，CTO 实现。",
       "status": "not_started",
       "dependsOn": [
-        "RECOVERY-001 DA-004",
+        "TWF-001",
         "CTO TriMC Agent Loop 消息管线"
       ],
       "dueAt": "2026-07-27T20:00:00+08:00",

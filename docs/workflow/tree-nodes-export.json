@@ -1,0 +1,63 @@
+{
+  "format_version": "1.0",
+  "exported_at": "2026-07-17T13:58:00+08:00",
+  "exported_by": "CEOChiefOfStaff",
+  "environment": "copilot-cli",
+  "trees": [
+    {
+      "id": "TWF-001",
+      "op_action_id": "TWF-001",
+      "title": "任务动态树工作流与故障恢复机制",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "done",
+      "created_at": "2026-07-17T11:09:07+08:00",
+      "updated_at": "2026-07-17T12:31:48+08:00",
+      "nodes": [
+        {
+          "id": "TWF-001-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "title": "小贾",
+          "action": "总控：发起任务动态树工作流与故障恢复机制设计，路由CPO定义协议+SOP+校验规格",
+          "status": "done",
+          "delivery": null,
+          "next_agent": "CPO",
+          "seq": 0
+        },
+        {
+          "id": "TWF-001-1",
+          "parent_node_id": "TWF-001-0",
+          "agent": "CPO",
+          "title": "小乔",
+          "action": "定义会话崩溃恢复SOP + 声明vs实际校验逻辑规格 + 触发条件",
+          "status": "done",
+          "delivery": "docs/workflow/session-crash-recovery-spec.md v0.2 — 方案A(Copilot CLI 事后检测+人工恢复) + 方案B(TriMC 前置拦截+自动恢复) + 共享校验规则",
+          "next_agent": null,
+          "seq": 1
+        },
+        {
+          "id": "TWF-001-2",
+          "parent_node_id": "TWF-001-1",
+          "agent": "CTO",
+          "title": "小狄",
+          "action": "实现任务树工作流引擎 + 故障恢复检测脚本 + 校验逻辑",
+          "status": "done",
+          "delivery": "scripts/validate-declarations.ps1 + scripts/detect-crash.ps1 + docs/workflow/trimc-recovery-interface.md",
+          "next_agent": "小贾",
+          "seq": 2
+        },
+        {
+          "id": "TWF-001-3",
+          "parent_node_id": "TWF-001-2",
+          "agent": "CEOChiefOfStaff",
+          "title": "小贾",
+          "action": "收口：OP JSON ID 同步 TWF-001，更新 deep-audit task track，规划 tree-nodes-export.json 导出机制",
+          "status": "done",
+          "delivery": "OP JSON ID NA-20260717-DA-004→TWF-001 同步完成 + deep-audit task track 更新 + DA-005 dependsOn 修正",
+          "next_agent": null,
+          "seq": 3
+        }
+      ]
+    }
+  ]
+}
