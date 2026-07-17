@@ -6,7 +6,7 @@
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-07-13T19:00:00+08:00",
-  "updatedAt": "2026-07-18T04:30:00+08:00",
+  "updatedAt": "2026-07-18T08:10:00+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-07-13T00:00:00+08:00",
@@ -608,7 +608,16 @@
           "action": "Phase 3: TriLC+TriPilot+TriCode+vscodium集成上线——P3.1-3 model pipeline+tool e2e+TriCode adapter (TriMC), P3.4 ProcessSupervisor+shell_exec wiring+reasoning-guard 16/16 tests (TriMC 0add8c3+17bf362+02df9ac), P3.5 SIGTERM/SIGINT handler for Linux daemon (TriLC e4f4bd2), TriCode opencode adapter verified cross-platform",
           "status": "done",
           "completedAt": "2026-07-17T23:00:00+08:00",
-          "commits": {"TriMC": ["0add8c3","17bf362","02df9ac"], "TriLC": ["e4f4bd2"]},
+          "commits": {
+            "TriMC": [
+              "0add8c3",
+              "17bf362",
+              "02df9ac"
+            ],
+            "TriLC": [
+              "e4f4bd2"
+            ]
+          },
           "pushStatus": "pushed to origin/dev"
         },
         {
@@ -617,18 +626,45 @@
           "action": "Phase 4: agent-core 共享核心扩展——P4.1 message-guard 双层空头防护 (TriLC cbd58ec), P4.2 shell_exec 工具 ProcessSupervisor 托管+级联关闭 (TriLC c7de0e9), P4.3-4.4 scheduler/heartbeat-policy 验证完成。W29 第1、2问已覆盖。",
           "status": "done",
           "completedAt": "2026-07-18T03:26:00+08:00",
-          "commits": {"TriLC": ["cbd58ec","c7de0e9"]},
+          "commits": {
+            "TriLC": [
+              "cbd58ec",
+              "c7de0e9"
+            ]
+          },
           "pushStatus": "pushed to origin/dev",
           "typeCheck": "零错误"
         },
         {
           "id": "TWF-002-7",
           "owner": "ChiefTechnologyOfficer",
-          "action": "Phase 5: TriLC+TriPilot+TriCode+VSCodium 上线路径端到端验证——P5.1 TriPilot→TriLC 端到端工具调用循环 (done, TriPilot 9b303ba); P5.2 opencode→TriLC 完整链路验证通过 (@ai-sdk/openai-compatible→TriLC /chat/completions→agent-loop→tool_use→bash闭环); P5.3 VSCodium 扩展打包+本地安装验证 (done, rebuilt vsix 832KB with 9b303ba, installed to VSCodium, TriLC daemon healthy); P5.4 W29 第3问长会话中断自动恢复; P5.5 TriLC detached runtime Linux 适配收尾",
-          "status": "in_progress",
-          "dependsOn": ["TWF-002-6"],
+          "action": "Phase 5: TriLC+TriPilot+TriCode+VSCodium 上线路径端到端验证——P5.1 TriPilot→TriLC 端到端工具调用循环 (done, TriPilot 9b303ba); P5.2 opencode→TriLC 完整链路验证通过 (@ai-sdk/openai-compatible→TriLC /chat/completions→agent-loop→tool_use→bash闭环); P5.3 VSCodium 扩展打包+本地安装验证 (done, rebuilt vsix 832KB with 9b303ba, installed to VSCodium, TriLC daemon healthy); P5.4 W29 第3问长会话中断自动恢复——技术方案:(1)TriLC已有validateMessage空头过滤(JSON模式422拒绝+SSE模式warning),TriMC缺少→需共享核心补齐;(2)新建TriLC session-store SQLite持久化会话消息,agent-loop完成后自动保存;(3)POST /internal/v1/sessions/recover恢复中断会话+自动git diff/type-check安全报告;(4)共享核心@trimetaverse/agent-core的validateMessage需确保TriMC/TriLC统一过滤空assistant消息; P5.5 TriLC detached runtime Linux 适配收尾",
+          "status": "done",
+          "dependsOn": [
+            "TWF-002-6"
+          ],
           "dueAt": "2026-07-22T20:00:00+08:00",
-          "warningLevel": "high"
+          "warningLevel": "high",
+          "completedAt": "2026-07-18T08:10:00+08:00",
+          "commits": {
+            "TriLC": [
+              "9070222"
+            ],
+            "TriPilot": [
+              "9b303ba"
+            ],
+            "TriMetaverse": [
+              "pending_op_json_update"
+            ]
+          },
+          "pushStatus": "TriLC pushed to origin/dev",
+          "p5_4_details": {
+            "session_store": "src/session-store/ (types, store, safety-check, index)",
+            "auto_save_hooks": "Anthropic + OpenAI JSON mode",
+            "recovery_endpoint": "POST /internal/v1/sessions/recover",
+            "list_endpoint": "GET /internal/v1/sessions",
+            "typeCheck": "zero errors"
+          }
         }
       ]
     }
@@ -645,7 +681,9 @@
       "ceoDecision": "2026-07-14 冻结：等 IPD 成熟后再考虑 MVP。从 active carry 移除，转 frozen archive。",
       "note": "CEO 裁决冻结。待 IPD 成熟后由 CPO 重新提案。",
       "linkedNextAction": null,
-      "dependsOn": ["IPD 成熟（CARRY-003）"]
+      "dependsOn": [
+        "IPD 成熟（CARRY-003）"
+      ]
     },
     {
       "id": "CARRY-20260713-002",
@@ -673,7 +711,9 @@
       "firstRecorded": "W24 (2026-06-08)",
       "note": "模块 Registry 第一轮建立已关闭。IPD-001 穿透检查已完成（CPO-003 done 2026-07-14）。",
       "linkedNextAction": "NA-20260713-CPO-003",
-      "dependsOn": ["TriCompany/docs/registry/product-state.md"]
+      "dependsOn": [
+        "TriCompany/docs/registry/product-state.md"
+      ]
     },
     {
       "id": "CARRY-20260713-004",
@@ -697,7 +737,9 @@
       "warningLevel": "none",
       "firstRecorded": "W28 (2026-07-09)",
       "note": "D-track 全部完成（spec bridge + 5 agent YAML + copilot-host regression + TriMC resolver v0.3）。策略选择待 CPO 汇总后提请 CEO 决策。",
-      "dependsOn": ["CPO 汇总输出"]
+      "dependsOn": [
+        "CPO 汇总输出"
+      ]
     },
     {
       "id": "CARRY-20260713-006",
@@ -709,7 +751,9 @@
       "firstRecorded": "W28 (2026-07-10)",
       "note": "CEO 已 APPROVE 三项仪表盘建立。Phase 2 完成后应回填首版结果。",
       "linkedNextAction": "NA-20260713-CTO-002",
-      "dependsOn": ["TriMC Phase 2 完成"]
+      "dependsOn": [
+        "TriMC Phase 2 完成"
+      ]
     },
     {
       "id": "CARRY-20260713-007",
@@ -721,7 +765,9 @@
       "firstRecorded": "W28 (2026-07-10)",
       "note": "CEO/CPO/CTO 三方共识：Claude Code 2.1.88 TS 吸收路径 APPROVE + 商用 Go 重写硬约束。已写入 business-state.md、TriMC code-state.md、TriMC product-state.md。Phase 1-4 执行中，due 7/24。",
       "linkedNextAction": "NA-20260713-CTO-003",
-      "dependsOn": ["TriMC Phase 1+2 基础"]
+      "dependsOn": [
+        "TriMC Phase 1+2 基础"
+      ]
     },
     {
       "id": "CARRY-20260713-008",
@@ -745,7 +791,9 @@
       "owner": "CEO",
       "status": "ceo_decided",
       "ceoDecision": "2026-07-14 冻结：等 IPD 成熟后再考虑 MVP。从 active carry 移除，转 frozen archive。",
-      "dependsOn": ["NA-20260713-CPO-001"]
+      "dependsOn": [
+        "NA-20260713-CPO-001"
+      ]
     },
     {
       "id": "TODO-20260713-002",
@@ -753,7 +801,9 @@
       "owner": "CEO",
       "status": "ceo_decided",
       "ceoDecision": "2026-07-14 APPROVE：确认同意 CTO 部署拓扑方案。CTO 可进入执行阶段。",
-      "dependsOn": ["CARRY-20260713-004"]
+      "dependsOn": [
+        "CARRY-20260713-004"
+      ]
     },
     {
       "id": "TODO-20260713-003",
@@ -768,14 +818,18 @@
       "title": "CEO 待裁决：Copilot-host vs TriMC 迭代策略（待 CPO 汇总后）",
       "owner": "CEO",
       "status": "pending_cpo_input",
-      "dependsOn": ["CARRY-20260713-005"]
+      "dependsOn": [
+        "CARRY-20260713-005"
+      ]
     },
     {
       "id": "TODO-20260713-005",
       "title": "CEO 待复查：Claude Code 吸收方案三方共识 registry 写入",
       "owner": "CEO",
       "status": "pending_review",
-      "dependsOn": ["CARRY-20260713-007"]
+      "dependsOn": [
+        "CARRY-20260713-007"
+      ]
     },
     {
       "id": "TODO-20260713-006",
