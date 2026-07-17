@@ -624,7 +624,7 @@
         {
           "id": "TWF-002-7",
           "owner": "ChiefTechnologyOfficer",
-          "action": "Phase 5: TriLC+TriPilot+TriCode+VSCodium 上线路径端到端验证——P5.1 TriPilot→TriLC 端到端工具调用循环 (done, TriPilot 9b303ba, 运行时验证通过); P5.2 opencode→TriLC 完整链路验证通过 (opencode 通过 @ai-sdk/openai-compatible 调 TriLC /chat/completions→agent-loop→tool_use→bash 执行→tool_result 回传闭环); P5.3 VSCodium 扩展打包+本地安装验证; P5.4 W29 第3问长会话中断自动恢复; P5.5 TriLC detached runtime Linux 适配收尾",
+          "action": "Phase 5: TriLC+TriPilot+TriCode+VSCodium 上线路径端到端验证——P5.1 TriPilot→TriLC 端到端工具调用循环 (done, TriPilot 9b303ba); P5.2 opencode→TriLC 完整链路验证通过 (@ai-sdk/openai-compatible→TriLC /chat/completions→agent-loop→tool_use→bash闭环); P5.3 VSCodium 扩展打包+本地安装验证 (done, rebuilt vsix 832KB with 9b303ba, installed to VSCodium, TriLC daemon healthy); P5.4 W29 第3问长会话中断自动恢复; P5.5 TriLC detached runtime Linux 适配收尾",
           "status": "in_progress",
           "dependsOn": ["TWF-002-6"],
           "dueAt": "2026-07-22T20:00:00+08:00",
