@@ -6,7 +6,7 @@
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-07-13T19:00:00+08:00",
-  "updatedAt": "2026-07-17T12:30:00+08:00",
+  "updatedAt": "2026-07-18T04:30:00+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-07-13T00:00:00+08:00",
@@ -572,6 +572,65 @@
       "dueAt": "2026-07-18T20:00:00+08:00",
       "warningLevel": "warning",
       "note": "CEO 2026-07-16 补充了 TriCompany 员工 NFT 身份、平台奖励归属、TriCode 多工具支持、TriAvatar 数字宠物分拆等细节后，小贾整合为正式路由包。CPO 裁决后流转 CTO 技术落地。"
+    },
+    {
+      "id": "TWF-002",
+      "owner": "CEOChiefOfStaff",
+      "action": "TriLC+PC端本地优先架构升级：反转 TriLC/TriMC 主次关系——TriLC 升级为本地人机协作主入口（编码/办公/视频制作），TriMC 降为云端托管无人值守工作流 + TriLC 本地故障 fallback；TriPilot 默认直连 TriLC，仅 TriLC 崩溃时切换 TriMC；配合 TWF-001 任务树恢复机制实现无缝接续。路由 CPO 产品规格 + CTO 技术实现。",
+      "status": "in_progress",
+      "unfrozenAt": "2026-07-17T13:00:00+08:00",
+      "dependsOn": [
+        "TWF-001",
+        "docs/三元宇宙架构与模块说明.md",
+        "BusinessStrategy"
+      ],
+      "dueAt": "2026-07-22T20:00:00+08:00",
+      "warningLevel": "high",
+      "note": "CEO 2026-07-17 决策：反转 TriLC/TriMC 主次关系。本地优先（vscodium+TriCode+TriPilot+TriLC）对标 Copilot CLI/Claude Code 本地开发体验，云端托管无人值守工作流对标 Copilot Cloud Agent。需先咨询 BusinessStrategy 中央口径，然后路由 CPO（产品规格）+ CTO（TriPilot→TriLC 反向连接实现）。",
+      "subTasks": [
+        {
+          "id": "TWF-002-1",
+          "owner": "CEOChiefOfStaff",
+          "action": "中央战略注册：咨询 BusinessStrategy——TriLC 提升为本地人机协作主入口、TriMC 降为托管任务主控+本地故障fallback；更新 project.md / tmv-whitepaper.md 架构段落",
+          "status": "done",
+          "completedAt": "2026-07-17T14:15:00+08:00"
+        },
+        {
+          "id": "TWF-002-2",
+          "owner": "ChiefProductOfficer",
+          "action": "CPO 产品规格：TriLC 本地优先方案——产品定位 TriLC 为本地人机协作主入口（AI编程/办公自动化/视频制作），TriPilot→TriLC 直连，TriMC 托管无人值守工作流+TriLC崩溃fallback；vscodium+TriCode+TriLC集成方案",
+          "status": "done",
+          "completedAt": "2026-07-17T14:30:00+08:00"
+        },
+        {
+          "id": "TWF-002-5",
+          "owner": "ChiefTechnologyOfficer",
+          "action": "Phase 3: TriLC+TriPilot+TriCode+vscodium集成上线——P3.1-3 model pipeline+tool e2e+TriCode adapter (TriMC), P3.4 ProcessSupervisor+shell_exec wiring+reasoning-guard 16/16 tests (TriMC 0add8c3+17bf362+02df9ac), P3.5 SIGTERM/SIGINT handler for Linux daemon (TriLC e4f4bd2), TriCode opencode adapter verified cross-platform",
+          "status": "done",
+          "completedAt": "2026-07-17T23:00:00+08:00",
+          "commits": {"TriMC": ["0add8c3","17bf362","02df9ac"], "TriLC": ["e4f4bd2"]},
+          "pushStatus": "pushed to origin/dev"
+        },
+        {
+          "id": "TWF-002-6",
+          "owner": "ChiefTechnologyOfficer",
+          "action": "Phase 4: agent-core 共享核心扩展——P4.1 message-guard 双层空头防护 (TriLC cbd58ec), P4.2 shell_exec 工具 ProcessSupervisor 托管+级联关闭 (TriLC c7de0e9), P4.3-4.4 scheduler/heartbeat-policy 验证完成。W29 第1、2问已覆盖。",
+          "status": "done",
+          "completedAt": "2026-07-18T03:26:00+08:00",
+          "commits": {"TriLC": ["cbd58ec","c7de0e9"]},
+          "pushStatus": "pushed to origin/dev",
+          "typeCheck": "零错误"
+        },
+        {
+          "id": "TWF-002-7",
+          "owner": "ChiefTechnologyOfficer",
+          "action": "Phase 5: TriLC+TriPilot+TriCode+VSCodium 上线路径端到端验证——P5.1 TriPilot→TriLC 端到端工具调用循环 (done, TriPilot 9b303ba, 运行时验证通过); P5.2 opencode→TriLC 完整链路验证通过 (opencode 通过 @ai-sdk/openai-compatible 调 TriLC /chat/completions→agent-loop→tool_use→bash 执行→tool_result 回传闭环); P5.3 VSCodium 扩展打包+本地安装验证; P5.4 W29 第3问长会话中断自动恢复; P5.5 TriLC detached runtime Linux 适配收尾",
+          "status": "in_progress",
+          "dependsOn": ["TWF-002-6"],
+          "dueAt": "2026-07-22T20:00:00+08:00",
+          "warningLevel": "high"
+        }
+      ]
     }
   ],
   "carriedItems": [
