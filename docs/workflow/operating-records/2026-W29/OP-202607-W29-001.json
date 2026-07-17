@@ -492,6 +492,19 @@
       "note": "2026-07-17 CEO 紧急指令。当前项目无故障恢复机制——跑崩了没有健康状态可回退。定为紧急解决。"
     },
     {
+      "id": "NA-20260717-DA-005",
+      "owner": "CPOChiefProductOfficer",
+      "action": "TriMC 消息持久化防 reasoning_content 空投设计（关联 RECOVERY-001）：DeepSeek 推理模式下 content 为空但 reasoning_content 有完整答复时，Copilot CLI 将其当作合法消息持久化导致后续 HTTP 400。TriMC 从设计层面杜绝：(1) 持久化前校验 content/tool_calls 至少其一非空；(2) 压缩/重放保留 reasoning_content 字段完整性；(3) 流式消费到 finish_reason=stop；(4) CPO 在产品侧验收此防护逻辑。CPO 牵头产品需求，CTO 实现。",
+      "status": "not_started",
+      "dependsOn": [
+        "RECOVERY-001 DA-004",
+        "CTO TriMC Agent Loop 消息管线"
+      ],
+      "dueAt": "2026-07-27T20:00:00+08:00",
+      "warningLevel": "critical",
+      "note": "2026-07-17 CEO 指令：TriMC 不能犯 Copilot 同样的错误。成因分析已写入 project-ai-community-weekly-2026-W29.md §2.2。三条成因：推理链连续性要求、中间件剥离 reasoning_content、<think> 标签冲突。"
+    },
+    {
       "id": "NA-20260715-CEO-004",
       "owner": "ChiefTechnologyOfficer",
       "action": "模块重命名迁移计划：Tride→TriCode + TriDeployment→TriAuto，协调仓库重命名、代码迁移、文档更新。",

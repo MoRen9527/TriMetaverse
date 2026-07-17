@@ -1,0 +1,131 @@
+{
+  "objectType": "ENGINEERING_TASK",
+  "objectId": "ET-20260717-001",
+  "title": "TriMem 模块激活 — Phase 1 L0 工程落地",
+  "status": "completed",
+  "completedAt": "2026-07-17T03:00:00+08:00",
+  "deliverySummary": "CTO 小狄提前一天（原定 7/18）交付 Phase 1 L0。源码 12 文件（auth 3 + wallet 3 + middleware 2 + db 2 + types/config/index），测试 16/16 PASS（auth 9 + wallet 7 + integration 1），2 个 migration 执行成功，工程文档 4 份全部补齐。技术栈：Node.js 20 + TypeScript + Express + Knex.js + SQLite + JWT + bcrypt + Zod。code-state.md / STATE.md / AGENTS.md 已同步。已知缺口：wallet GET 路由未暴露、链上验证未实现（Phase 1 预期内）。",
+  "priority": "high",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "createdAt": "2026-07-17T00:45:00+08:00",
+  "updatedAt": "2026-07-17T00:45:00+08:00",
+  "timebox": {
+    "scope": "deadline",
+    "startAt": "2026-07-17T00:00:00+08:00",
+    "endAt": "2026-07-18T20:00:00+08:00",
+    "label": "W29 周四前交付 L0"
+  },
+  "summary": "TriMem 模块已建仓但零代码。CPO 已完成全部产品裁决（四层身份模型 + DB schema 首版 + MVP 用户故事优先级），现路由 CTO 接手 Phase 1 L0 工程落地：补齐工程骨架（DESIGN.md/STATE.md/ROADMAP.md）、建表（users + wallet_bindings）、注册/登录 API、钱包绑定 API。TriMem 是身份数据 SSOT。",
+  "relatedModules": ["TriMem", "TriOPC", "TriGateway", "TriPilot", "TriChain", "TriCompany", "TriStaciss"],
+  "dependsOn": [
+    "CPO 产品路由包裁决 #1-#6, #8（2026-07-16 已裁决，APPROVE）",
+    "TriMem/docs/registry/product-state.md（CPO 已回填）",
+    "NA-20260715-CEO-001（TriMem 模块激活，W29 HIGH priority）"
+  ],
+  "evidence": [
+    {
+      "source": "TriMem/docs/registry/product-state.md",
+      "kind": "registry",
+      "note": "CPO 产品设计完整：四层晋级模型、DB schema 首版（6 表 L0-L2）、MVP 用户故事 P0-P3、跨模块对接接口（TriOPC/TriGateway/TriCompany/TriChain）"
+    },
+    {
+      "source": "TriMetaverse/docs/workflow/operating-records/2026-W29/cpo-product-routing-package.md",
+      "kind": "document",
+      "note": "CPO 15 项裁决源头，TriMem 占 #1-#6, #8"
+    },
+    {
+      "source": "TriMem/docs/registry/code-state.md",
+      "kind": "registry",
+      "note": "当前零代码，待初始化。AGENTS.md 标注「禁止虚构数据库结构」。"
+    },
+    {
+      "source": "TriMem/docs/engineering/DESIGN.md",
+      "kind": "document",
+      "note": "当前为占位模板，需 CTO 补齐技术选型、API 设计、DB 连接方案"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "ChiefTechnologyOfficer",
+      "action": "补齐 TriMem 工程骨架：DESIGN.md（技术选型/API 设计/DB 方案）、STATE.md（标记 L0 开工）、ROADMAP.md；建表 users + wallet_bindings（含 migration）；实现注册/登录/密码找回 API + 钱包绑定 API；同步更新 code-state.md",
+      "dueAt": "2026-07-18T20:00:00+08:00"
+    },
+    {
+      "owner": "CEOChiefOfStaff",
+      "action": "跟踪 NA-20260715-CEO-001 进度，W29 收口前确认 L0 交付状态",
+      "dueAt": "2026-07-20T20:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "ChiefProductOfficer",
+      "status": "approved",
+      "note": "CPO 产品裁决已完成（2026-07-16），14 APPROVE + 1 FREEZE。TriMem 相关 #1-#6, #8 全部 APPROVE。"
+    }
+  ],
+  "workflowRefs": [
+    {
+      "relation": "implements",
+      "phase": "DESIGNING",
+      "note": "NA-20260715-CEO-001: TriMem 模块激活，CEO 2026-07-15 指令「TriMem 现在就做，承担统一用户层级和 DB 规划」"
+    }
+  ],
+  "payload": {
+    "implementationScope": [
+      "工程骨架补齐：DESIGN.md（技术选型/API 设计/DB 连接方案）、STATE.md、ROADMAP.md",
+      "数据库建表 Phase 1 L0：users（id, username, email, password_hash, display_name, avatar_url, identity_level enum, created_at, updated_at）",
+      "数据库建表 Phase 1 L0：wallet_bindings（id, user_id FK→users, chain_type, wallet_address, verified, verified_at）",
+      "注册 API：POST /api/auth/register",
+      "登录 API：POST /api/auth/login",
+      "密码找回 API：POST /api/auth/forgot-password",
+      "钱包绑定 API：POST /api/wallet/bind"
+    ],
+    "taskBreakdown": [
+      "CTO 审查 CPO product-state.md，确认产品边界无歧义",
+      "CTO 补齐 DESIGN.md：技术栈选型（Node.js/Python/Go？）、DB 选型（PostgreSQL 候选，可 SQLite 起步）、API 设计（RESTful，JWT auth）、migration 框架",
+      "小全执笔：建表 migration 脚本 + users/wallet_bindings DDL",
+      "小全执笔：auth 模块（register/login/forgot-password，含 password hashing + JWT token）",
+      "小全执笔：wallet 模块（bind endpoint）",
+      "小柯验证：集成测试（注册→登录→绑定钱包 全链路）",
+      "CTO 审查代码质量 + 安全（password hashing、SQL injection、JWT 配置）",
+      "同步更新 code-state.md 标记 L0 完成"
+    ],
+    "testRequirements": [
+      "auth 模块单元测试：register/login/forgot-password 正常路径 + 异常路径（重复注册/错误密码/无效邮箱）",
+      "wallet 模块单元测试：bind 正常路径 + 异常路径（无效地址/重复绑定）",
+      "集成测试：注册→登录获取 token→绑定钱包 全链路 smoke test",
+      "安全测试：password_hash 不可逆、JWT 过期策略、SQL injection 防护"
+    ],
+    "releaseRequirements": [
+      "migration up/down 均可正常执行",
+      "全量测试通过（含单元 + 集成 + smoke）",
+      "CTO 审查 APPROVE",
+      "code-state.md 已更新"
+    ],
+    "rollbackPlan": "migration down 回滚表结构；代码回退到初始化前 commit。数据量极小（空库起步），无数据迁移风险。",
+    "technicalRisks": [
+      "PostgreSQL 未部署：可用 SQLite 起步，migration 框架保持可切换（如 Knex.js / Prisma）",
+      "TriMem 作为 SSOT 的 API 鉴权方案待定：Phase 1 L0 先用 JWT + 内部 service token，Phase 2 引入 TriGateway OAuth",
+      "钱包地址验证：Phase 1 L0 仅做格式校验（regex），不做链上验证（TriChain 未上线）"
+    ],
+    "docsInitializationRequirements": [
+      "TriMem/docs/engineering/DESIGN.md 从占位模板更新为实际技术设计",
+      "TriMem/docs/engineering/STATE.md 标记 L0 in_progress",
+      "TriMem/docs/engineering/ROADMAP.md 补 Phase 1 L0-L2 路线",
+      "TriMem/docs/registry/code-state.md 同步更新 Repository Map"
+    ],
+    "docsBootstrapRefs": [
+      "TriMem/docs/registry/product-state.md（CPO 产品真源）",
+      "TriMetaverse/docs/workflow/operating-records/2026-W29/cpo-product-routing-package.md",
+      "TriMetaverse/docs/三元宇宙架构与模块说明.md §3（模块基线要求）"
+    ]
+  },
+  "metadata": {
+    "template": false,
+    "templateVersion": "v1",
+    "handoffSource": "CEOChiefOfStaff",
+    "handoffTarget": "ChiefTechnologyOfficer",
+    "linkedNextAction": "NA-20260715-CEO-001",
+    "routingNote": "CPO 产品裁决已完成，本单为 CPO→CTO 工程落地路由。TriMem 是身份数据 SSOT 原则已由 CPO 确认。"
+  }
+}
