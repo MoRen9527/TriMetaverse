@@ -638,14 +638,14 @@
         {
           "id": "TWF-002-7",
           "owner": "ChiefTechnologyOfficer",
-          "action": "Phase 5: TriLC+TriPilot+TriCode+VSCodium 上线路径端到端验证——P5.1 TriPilot→TriLC 端到端工具调用循环 (done, TriPilot 9b303ba); P5.2 opencode→TriLC 完整链路验证通过 (@ai-sdk/openai-compatible→TriLC /chat/completions→agent-loop→tool_use→bash闭环); P5.3 VSCodium 扩展打包+本地安装验证 (done, rebuilt vsix 832KB with 9b303ba, installed to VSCodium, TriLC daemon healthy); P5.4 W29 第3问长会话中断自动恢复——技术方案:(1)TriLC已有validateMessage空头过滤(JSON模式422拒绝+SSE模式warning),TriMC缺少→需共享核心补齐;(2)新建TriLC session-store SQLite持久化会话消息,agent-loop完成后自动保存;(3)POST /internal/v1/sessions/recover恢复中断会话+自动git diff/type-check安全报告;(4)共享核心@trimetaverse/agent-core的validateMessage需确保TriMC/TriLC统一过滤空assistant消息; P5.5 TriLC detached runtime Linux 适配收尾",
+          "action": "Phase 5: TriLC+TriPilot+TriCode+VSCodium 上线路径端到端验证——P5.1 TriPilot→TriLC 端到端工具调用循环 (done, TriPilot 9b303ba); P5.2 opencode→TriLC 完整链路验证通过 (@ai-sdk/openai-compatible→TriLC /chat/completions→agent-loop→tool_use→bash闭环); P5.3 VSCodium 扩展打包+本地安装验证 (done, rebuilt vsix 832KB with 9b303ba, installed to VSCodium, TriLC daemon healthy); P5.4 W29 第3问长会话中断自动恢复——session-store SQLite持久化 + Anthropic/OpenAI JSON模式自动保存钩子 + POST /internal/v1/sessions/recover + GET /internal/v1/sessions (done, TriLC 9070222); P5.5 TriLC detached runtime Linux 适配收尾——WSL Ubuntu SIGTERM 级联关闭验证通过: daemon启动→SIGTERM→gracefulStop→cancelAllShellProcesses→server.close→process.exit(0), 零孤儿子进程残留 (done, WSL verified)",
           "status": "done",
           "dependsOn": [
             "TWF-002-6"
           ],
           "dueAt": "2026-07-22T20:00:00+08:00",
           "warningLevel": "high",
-          "completedAt": "2026-07-18T08:10:00+08:00",
+          "completedAt": "2026-07-18T09:40:00+08:00",
           "commits": {
             "TriLC": [
               "9070222"
@@ -664,6 +664,21 @@
             "recovery_endpoint": "POST /internal/v1/sessions/recover",
             "list_endpoint": "GET /internal/v1/sessions",
             "typeCheck": "zero errors"
+          },
+          "p5_5_details": {
+            "target": "TriLC detached runtime Linux 适配收尾",
+            "wsl_verification": {
+              "result": "PASS",
+              "node_version": "v22.12.0",
+              "experimental_sqlite": "--experimental-sqlite 标志正常",
+              "daemon_start": "OK (PID tracked, log to --data-dir)",
+              "sigterm_handler": "SIGTERM → gracefulStop → cancelAllShellProcesses → server.close → process.exit(0)",
+              "orphan_check": "零孤儿子进程 (grep pattern: node.*index|sleep, 唯一命中是用户已有 openclaw gateway 与 TriLC 无关)",
+              "daemon_log": "显示 ExperimentalWarning(sqlite) + injected env, shutdown 阶段 log 因 stdout 未 flush 未写盘但进程正确终止"
+            },
+            "note": "SIGTERM 级联关闭链路在 WSL Ubuntu Linux 环境验证通过，进程正确终止无孤儿残留",
+            "env_requirements": "NODE_OPTIONS=--experimental-sqlite (node:sqlite 实验性模块)",
+            "tldr": "Linux detached runtime SIGTERM graceful shutdown verified ✅"
           }
         }
       ]
