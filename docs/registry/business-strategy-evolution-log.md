@@ -50,6 +50,31 @@
 - `../workflow/workflow-host-integration.md`
 - `../三元宇宙架构与模块说明.md`
 
+## 2026-07-17
+
+### 变动
+
+- **TriLC/TriMC 架构分层**：TriLC 升级为"本地人机协作主入口"（分布式员工工位）；TriMC 明确为"公司云端实体"（承载公司运行面：知识体系、业务运营、奖励发放、审计），不再作为本地人机协作默认入口，但仍保留整个公司运行面的核心地位。
+- TriPilot 默认直连 TriLC（本地域），仅在 TriLC 崩溃时通过 TWF-001 任务树恢复机制切换至 TriMC（服务域）。
+- TriLC 升至第一轮核心模块（原为第二轮补强）；TriMC 云端多热备不变，但不再作为本地人机协作默认入口。
+- 本地人机协作场景（编码/办公/视频制作等）由 TriLC + TriPilot + TriCode + vscodium 承担，类比当前 Copilot CLI + VS Code 的本地工作模式。
+
+### 影响模块
+
+- `TriLC`：从本地适配层升级为本地域主控；需配套 TWF-001 任务树工作流与故障恢复机制。
+- `TriMC`：从统一运行面降为云端托管 + 本地 fallback；保持服务域热备能力。
+- `TriPilot`：默认连接路径从 TriMC 改为 TriLC。
+- `TriCode`：PC 端本地编码工具，配合 TriLC 完成本地开发闭环。
+- `TriMetaverse`：项目级架构文档、BusinessStrategy 注册、模块说明全部回写新边界。
+
+### 来源
+
+- CEO 直接决策（2026-07-17 会话）；TWF-002 任务树承载执行。
+- `docs/三元宇宙架构与模块说明.md`（已更新）
+- `project.md` §1.2（已更新）
+- `docs/registry/business-strategy-boundaries.md`（本日更新）
+- `docs/registry/business-strategy-state.md`（本日更新）
+
 ## Log Template
 
 后续追加请使用以下结构：

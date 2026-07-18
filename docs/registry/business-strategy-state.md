@@ -31,16 +31,13 @@ TriMetaverse 的长期商业模式主线保持为：
 - `TriMetaverse`
 - `TriMC`
 - `Tristaciss`
-- `Tride`
-- `Tripilot`
+- `TriLC`
+- `TriPilot`
+- `TriCode`
 - `vscodium`
 - `Triavatar`
-- `Trideployment`
+- `TriAuto`
 - `TriTest`
-
-第二轮补强：
-
-- `TriLC`
 
 结构预留：
 
@@ -64,7 +61,7 @@ TriMetaverse 的长期商业模式主线保持为：
 ## 特别边界
 
 - 虚拟公司是所有人格 Agent 与非人格 Agent 的经营和交互核心载体，不再单列第三主控基础设施语义。
-- `TriMC` 是统一运行面；服务域执行与研发工作流都作为其运行切片表述。
+- `TriMC` 是公司级云端实体，承载整个公司运行面：共享公司知识体系、运营公司业务、发放公司奖励、审计相关活动；托管无人值守工作流作为其运行切片。`TriLC` 作为分布式员工工位负责本地人机协作。
 - `Tripilot`、`Tride` 与 `vscodium` 在产品能力域上共同属于 PC 端软件层，但 registry 实体保持独立。
 - PC 端软件层既配合 `TriLC` 完成本地化任务与本地工具执行，也面向用户提供可直接使用的 PC 自动化、桌面工具和 `vibe coding` 入口。
 - 当前 shadow 与正式接管都直接运行在 `copilot` 宿主上；正式切换通过 `TriModel` 配置实现。

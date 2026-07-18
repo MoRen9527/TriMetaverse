@@ -6,7 +6,7 @@
   "priority": "high",
   "ownerRole": "CEOChiefOfStaff",
   "createdAt": "2026-07-13T19:00:00+08:00",
-  "updatedAt": "2026-07-18T08:10:00+08:00",
+  "updatedAt": "2026-07-18T22:38:00+08:00",
   "timebox": {
     "scope": "weekly",
     "startAt": "2026-07-13T00:00:00+08:00",
@@ -1034,12 +1034,12 @@
         "title": "TriCade MSI 9语言构建完成（VSCodium 1.126.04524 + TriPilot + TriCode + TriLC 内置打包）",
         "completedAt": "2026-07-18T05:30:00+08:00",
         "type": "milestone",
-        "detail": "VSCodium 1.126.04524 下载并 branding 为 TriCade。TriPilot (内置扩展 39.1MB)、TriCode (@trimetaverse/tricode 依赖)、TriLC (内置工具 + trilc.cmd 启动器) 全部捆绑。MSI build 通过（9语言），输出 TriCade-x64-1.126.04524.msi 191.7MB。解决 3 个构建阻断器：WiX heat.exe OneDrive 不兼容、vscodium.wxs 122处文件名引用、vscodium.xsl XSLT 映射。待 MSI 安装测试和 VSCodium repo git push。"
+        "detail": "VSCodium 1.126.04524 下载并 branding 为 TriCade。TriPilot (内置扩展 39.1MB)、TriCode (@trimetaverse/tricode 依赖)、TriLC (内置工具 + trilc.cmd 启动器) 全部捆绑。基础 en-us MSI build 通过（48,374 源文件，420MB），9 语言转换因 -reusecab bug 暂时跳过。解决 3 个构建阻断器：WiX heat.exe OneDrive 不兼容、vscodium.wxs 122处文件名引用、vscodium.xsl XSLT 映射。2026-07-18：发现 TriPilot webview UI 完全不可用（布局错乱），根因 .vscodeignore media/** 排除规则；修复后重建 MSI + 安装验证通过（41,664 文件部署），media/ 4 文件 + tricode 内置全部就位；TriPilot 界面正常确认；.vsix 重新打包并安装。"
       }
     ],
-    "version": "0.6.2",
-    "lastUpdated": "2026-07-18T05:35:00+08:00",
+    "version": "0.6.3",
+    "lastUpdated": "2026-07-18T22:38:00+08:00",
     "updatedBy": "CEOChiefOfStaff"
   },
-  "lastSyncedAt": "2026-07-17"
+  "lastSyncedAt": "2026-07-18"
 }

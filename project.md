@@ -34,8 +34,8 @@
 
 - 研发工作流属于 `TriMC` 统一运行面中的研发执行切片，不再单列 `Development Main Controller` 标准名。
 - 当前阶段由 `copilot chat` 承载 shadow 与当前阶段正式接管，必要时可扩到 `copilot cli`。
-- 到 `TriMetaverse V1 正式上线切换阶段`，正式切换通过 `TriModel` 的 Provider/Model 配置完成，而 `TriMC` 继续作为 agent 运行和交互核心。
-- `Tride` 不再作为切换后的正式宿主；它与 `TriPilot`、`vscodium` 和 CLI 工具一起构成 PC 端软件层。该层一方面配合 `TriLC` 承接本地化任务与部分服务域下发任务，另一方面也作为用户可直接使用的本地自动化与 `vibe coding` 工具面存在。
+- 到 `TriMetaverse V1 正式上线切换阶段`：本地人机协作（编码/办公/视频）通过 `TriPilot → TriLC` 直连承载；托管无人值守工作流通过 `TriMC` 云端承载；`TriLC` 崩溃时由 TWF-001 任务树恢复机制自动切换至 `TriMC` fallback。
+- `Tride` 不再作为切换后的正式宿主；它与 `TriPilot`、`vscodium` 和 CLI 工具一起构成 PC 端软件层。该层以 `TriLC` 为本地主入口，配合 `TriLC` 承接人机协作类任务；`TriMC` 仅在 `TriLC` 不可用时作为云端 fallback 接续。
 
 ---
 

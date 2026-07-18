@@ -12,12 +12,12 @@
 
 - `TriMetaverse` 负责中央战略、阶段门禁、项目级真源约束、workflow 和赛博公司实施落地侧的中央发布口径，不直接承担模块代码实现。
 - `TriCompany` 负责赛博公司研发仓、经营编排孵化、岗位对象、Hermes 记忆系统吸收和当前阶段 Copilot 宿主资产；赛博公司规则、岗位规则、registry 规则等实施侧真源先在 TriCompany source 侧决定，再按发布规则同步到 TriMetaverse 中央摘要层。
-- `TriMC` 负责统一 agent runtime 与 interaction core；服务域任务执行与研发工作流都属于它的运行切片。当前继续吸收 OpenClaw 的心跳、cron / 定时任务与 agent harness 设计，模型接入通过 `TriModel` 统一配置。
+- `TriMC` 负责公司级云端 agent runtime，承载整个公司运行面——作为公司云端实体，共享公司知识体系、运营公司业务、发放公司奖励、审计相关活动，并执行托管无人值守工作流（周度平移、IPD CMO 商机发现等成熟自动化编排）。人机协作类任务（编码/办公/视频制作等）由 `TriLC` 作为分布式员工工位承担主入口；`TriMC` 作为 `TriLC` 本地崩溃时的故障 fallback。模型接入通过 `TriModel` 统一配置。
 - `TriModel` 负责 Provider/Model 统一配置，为 `TriMC` 与 `Tride` 两个 orchestration 提供多 provider 适配、模型路由与 fallback 链；在真实实现落地前应明确标注为待初始化。
 - `TriSkill` 负责未来统一 skill 提供；在真实实现落地前应明确标注为待初始化。
 - `Tride` 负责 PC 端软件中的 vibe coding 工具适配、agentic orchestration、runtime/CLI 与工具调用能力，不单独定义总体商业模式，也不再作为切换后的正式宿主。
 - `TriPilot` 与 `vscodium` 负责 PC 端软件中的用户交互入口与 IDE 宿主基础设施，但不单独决定总体商业路线；当前物理仓库路径仍为 `TriPilot/`，后续 repo rename 需另行确认。
-- `TriLC` 与 `TriMobile` 负责本地域能力；其中 `TriLC` 是配合 `TriMC` 调度龙虾 / Hermes / 其他 agents 的本地适配与执行层。
+- `TriLC` 与 `TriMobile` 负责本地域能力；其中 `TriLC` 是本地人机协作主入口（编码/办公/视频制作等），负责 detached local runtime、本地节点升级、planner、tool bus、本地执行生命周期；`TriPilot` 默认直连 `TriLC`；`TriLC` 崩溃时配合 TWF-001 任务树恢复机制自动切换至 `TriMC` 云端 fallback。`TriMC` 云端多热备不变，保障托管任务与公司运营稳定性。
 - `TriDev` 负责自动化开发流程、本地正式接管前后的阶段 gate、版本签发、归档与 shadow test 流程沉淀；当前仍处待开发状态。
 - `TriMem` 负责用户体系、身份关联和数据库设计。
 - `TriWeb4` 与 `TriChain` 负责钱包、合约、公链相关能力。

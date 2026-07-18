@@ -1,9 +1,64 @@
 {
   "format_version": "1.0",
-  "exported_at": "2026-07-17T13:58:00+08:00",
+  "exported_at": "2026-07-17T14:15:00+08:00",
   "exported_by": "CEOChiefOfStaff",
   "environment": "copilot-cli",
   "trees": [
+    {
+      "id": "TWF-002",
+      "op_action_id": "TWF-002",
+      "title": "TriLC+PC端本地优先架构升级",
+      "root_agent": "小贾",
+      "status": "active",
+      "created_at": "2026-07-17T14:00:00+08:00",
+      "updated_at": "2026-07-17T14:15:00+08:00",
+      "nodes": [
+        {
+          "id": "TWF-002-0",
+          "parent_node_id": null,
+          "agent": "小贾",
+          "title": "小贾",
+          "action": "TWF-002 根节点：架构决策注册与路由——注册 TriLC/TriMC 主次颠倒的架构决策；核查 BusinessStrategy 中央口径；更新 docs/三元宇宙架构与模块说明.md 模块边界；路由 CPO 产品规格 + CTO 技术实现",
+          "status": "active",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 0
+        },
+        {
+          "id": "TWF-002-1",
+          "parent_node_id": "TWF-002-0",
+          "agent": "小贾",
+          "title": "小贾",
+          "action": "中央战略注册：咨询 BusinessStrategy——TriLC 提升为本地人机协作主入口、TriMC 降为托管任务主控 + 本地故障 fallback；更新 project.md / tmv-whitepaper.md 架构段落",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 1
+        },
+        {
+          "id": "TWF-002-2",
+          "parent_node_id": "TWF-002-0",
+          "agent": "小乔",
+          "title": "小乔",
+          "action": "CPO 产品规格：TriLC 本地优先方案——产品定位 TriLC 为本地人机协作主入口（AI编程/办公自动化/视频制作），TriPilot→TriLC 直连，TriMC 托管无人值守工作流 + TriLC 崩溃 fallback；vscodium+TriCode+TriLC 集成方案；TriMC→TriLC→TriMobile/TriAvatar 通知通道",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 2
+        },
+        {
+          "id": "TWF-002-3",
+          "parent_node_id": "TWF-002-0",
+          "agent": "小狄",
+          "title": "小狄",
+          "action": "CTO 技术实现：TriPilot→TriLC→TriMC 反向连接——1) TriPilot 默认连接 TriLC 而非 TriMC；2) TriLC 崩溃时 TriPilot 自动切换 TriMC（复用 TWF-001 恢复机制）；3) TriMC→TriLC 通知通道（扩展至 TriMobile/TriAvatar）；4) TriLC+TriCode+vscodium 集成验证",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 3
+        }
+      ]
+    },
     {
       "id": "TWF-001",
       "op_action_id": "TWF-001",
