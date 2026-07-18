@@ -34,7 +34,8 @@
     "TriGateway",
     "TriChain",
     "TriTraining",
-    "TriOPC"
+  "TriOPC",
+  "VSCodium"
   ],
   "dependsOn": [
     "OP-202607-W28-001",
@@ -680,6 +681,44 @@
             "env_requirements": "NODE_OPTIONS=--experimental-sqlite (node:sqlite 实验性模块)",
             "tldr": "Linux detached runtime SIGTERM graceful shutdown verified ✅"
           }
+        },
+        {
+          "id": "TWF-002-8",
+          "owner": "CEOChiefOfStaff",
+          "action": "TriCade PC 端打包 (Phase 6): VSCodium 1.126.04524 下载+解压, tricade.exe 重命名, product.json TriCade branding (17字段), TriPilot 内置扩展 (tripilot-chat + @trimetaverse/tricode 39.1MB), TriLC 内置工具 (resources/app/tools/trilc/ + trilc.cmd 启动器), MSI build.sh 定制 (PRODUCT_NAME/CODE/UPGRADE_CODE/manufacturer/OUTPUT_BASE_FILENAME), vscodium.wxs 122处 VSCODIUM.EXE→TRICADE.EXE, vscodium.xsl XSLT 映射修复, WiX heat.exe OneDrive 不兼容→C:\\Temp\\tricade-src 绕行, 9语言 MSI build 完成: TriCade-x64-1.126.04524.msi (191.7MB, Authors: TriMetaverse)",
+          "status": "done",
+          "dependsOn": [
+            "TWF-002-7"
+          ],
+          "dueAt": "2026-07-18T12:00:00+08:00",
+          "completedAt": "2026-07-18T05:30:00+08:00",
+          "commits": {
+            "VSCodium": [
+              "待提交"
+            ]
+          },
+          "pushStatus": "待推送至 VSCodium origin",
+          "p6_details": {
+            "vscodium_version": "1.126.04524",
+            "msi_output": "build/windows/msi/releasedir/TriCade-x64-1.126.04524.msi",
+            "msi_size": "191.7 MB",
+            "languages": ["en-us", "de-de", "es-es", "fr-fr", "it-it", "ko-kr", "ru-ru", "zh-cn", "zh-tw"],
+            "bundled_components": {
+              "tripilot": "resources/app/extensions/tripilot-chat/ (29源文件 + 99npm包, 39.1MB)",
+              "tricode": "tripilot-chat/node_modules/@trimetaverse/tricode/ (作为 TriPilot 依赖)",
+              "trilc": "resources/app/tools/trilc/ (dist/ + trilc.cmd + trilc.js, 需要系统 Node.js)"
+            },
+            "build_blockers_resolved": [
+              "WiX heat.exe OneDrive 不兼容 → robocopy 到 C:\\Temp\\tricade-src",
+              "vscodium.wxs 122处 hardcoded VSCODIUM.EXE → TRICADE.EXE",
+              "vscodium.xsl XSLT 文件 ID 映射 VSCodium.exe→tricade.exe"
+            ],
+            "pending": [
+              "MSI 安装测试验证",
+              "VSCodium repo git commit + push"
+            ]
+          },
+          "note": "TriCade MSI 9语言构建成功。待安装测试和 git 推送。"
         }
       ]
     }
@@ -989,10 +1028,17 @@
         "completedAt": "2026-07-17T03:00:00+08:00",
         "type": "milestone",
         "detail": "CTO 小狄提前一天交付。12 源码文件 + 3 测试套件（16/16 PASS）+ 2 migrations + 4 工程文档全部到位。Node.js/TypeScript/Express/Knex/SQLite/JWT/bcrypt/Zod 技术栈。CEO-001 closed。"
+      },
+      {
+        "id": "TRICADE-MSI-BUILD",
+        "title": "TriCade MSI 9语言构建完成（VSCodium 1.126.04524 + TriPilot + TriCode + TriLC 内置打包）",
+        "completedAt": "2026-07-18T05:30:00+08:00",
+        "type": "milestone",
+        "detail": "VSCodium 1.126.04524 下载并 branding 为 TriCade。TriPilot (内置扩展 39.1MB)、TriCode (@trimetaverse/tricode 依赖)、TriLC (内置工具 + trilc.cmd 启动器) 全部捆绑。MSI build 通过（9语言），输出 TriCade-x64-1.126.04524.msi 191.7MB。解决 3 个构建阻断器：WiX heat.exe OneDrive 不兼容、vscodium.wxs 122处文件名引用、vscodium.xsl XSLT 映射。待 MSI 安装测试和 VSCodium repo git push。"
       }
     ],
-    "version": "0.6.1",
-    "lastUpdated": "2026-07-17T03:07:00+08:00",
+    "version": "0.6.2",
+    "lastUpdated": "2026-07-18T05:35:00+08:00",
     "updatedBy": "CEOChiefOfStaff"
   },
   "lastSyncedAt": "2026-07-17"
