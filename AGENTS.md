@@ -46,3 +46,43 @@
 - 只有在用户明确要求“记录”或“更新”时，registry 文档才允许被修改。
 - 默认先解释事实、指出来源，再给出下一步应查询的 registry 或文档。
 - 对低成熟模块必须如实标记为“占位 / 待初始化 / 当前无代码”，禁止虚构进度。
+
+## Task Tree Orchestration
+
+Copilot CLI 默认 agent 需要与 Trees 协议协同工作，实现跨岗位自动编排。
+
+### 核心规则
+
+1. **每次收到用户消息时**，先检查 SQL 中的活跃任务树（`task_trees.status='active'`）
+2. **找到 `status='in_progress'` 的节点**——这些是当前待执行的工作
+3. **根据节点的 `agent` 字段**，自动调用对应的 employee agent：
+   - `agent='ChiefProductOfficer'` → `task(agent_type='ChiefProductOfficer', ...)`
+   - `agent='ChiefTechnologyOfficer'` → `task(agent_type='ChiefTechnologyOfficer', ...)`
+   - `agent='FullStackDeveloper'` → `task(agent_type='FullStackDeveloper', ...)`
+   - `agent='TestEngineer'` → `task(agent_type='TestEngineer', ...)`
+   - `agent='CEOChiefOfStaff'` → 默认 agent 自行处理（不启动子 agent）
+4. **传递上下文**：task prompt 中包含节点的 `action`、`delivery`、上游节点的交付物路径
+5. **节点完成后**：
+   - 如果 `next_agent` 已指定 → 创建下一个节点（`status='in_progress'`, `agent=<next_agent>`），自动调用该 agent
+   - 如果 `next_agent = NULL` → 创建节点 `status='in_progress'`, `agent='CEOChiefOfStaff'`，报告"需路由评估"
+   - 如果无后续节点 → 树标记为 `done`
+6. **子节点优先**：同一棵树有多个 `in_progress` 节点时，优先执行 `seq` 最小的
+
+### 节点状态流转
+
+```
+pending → in_progress → done
+              ↓
+          escalated (异常分支)
+```
+
+### 必须参考的协议文档
+
+- `docs/workflow/dynamic-task-tree-protocol.md` — 完整协议
+- `scripts/validate-tree-status-enums.ps1` — 状态枚举校验
+
+### 收口检查
+
+每次树节点流转后，抽查：
+- 物理目录 `trees/<tree-id>/tree-op.json` 是否存在
+- 周 OP JSON 中该树的引用是否同步
