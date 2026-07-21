@@ -1,7 +1,9 @@
 # Dynamic Task Tree Protocol
 
-> 版本：v0.2 | 建立：2026-07-17 | 试验阶段：Copilot-host 手动编排
-> 关联树：TWF-001 — 任务动态树工作流与故障恢复机制（本协议 + session-crash-recovery-spec.md 合并交付）
+> 版本：v0.3 | 建立：2026-07-17 | 修订：2026-07-21（CPO+CTO 联合评估，CEO 批准）
+> 关联树：TWF-001 / gov-tree-protocol-v2
+> 
+> **v0.3 变更摘要**：① 状态枚举统一（移除 closed，active→in_progress）② 新增总助路由兜底规则 ③ 新增执行节点尽力判断义务
 
 ## 角色
 
@@ -28,8 +30,9 @@ CEO: "<当前节点> done → <下一节点>"
 小贾: "📝 ✓ #<树ID>: <当前节点>→<下一节点>"
 ```
 
-- 关当前节点（status=done），创建下一节点（status=active），更新树 updated_at
-- 如不指定下一节点，视为"等编排决定"
+- 关当前节点（status=done），创建下一节点（status=in_progress），更新树 updated_at
+- **路由兜底**：如 `next_agent = NULL` 或当前执行节点无法确定下一节点，默认路由到 `CEOChiefOfStaff`（小贾），由总助根据当前状态分派下一个岗位
+- **执行节点义务**：执行节点在完成工作时，**应先尽力判断 next_agent**。只有在确实无法确定时（如跨模块边界不清晰、涉及多个候选岗位、需 CEO 裁决优先级），才允许留空。不应将 `next_agent = NULL` 作为懒惰默认
 
 ### 升级信号
 
@@ -67,10 +70,21 @@ CEO: "trees"           → 返回所有活跃树列表
 | parent_node_id | 父节点 ID，根节点为 NULL |
 | agent | 执行 agent 角色名 |
 | action | 该节点要做什么 |
-| status | pending / active / done / escalated |
+| status | pending / in_progress / done / escalated |
 | delivery | 交付物描述（完成时填写） |
 | next_agent | 建议的下一节点 agent |
 | seq | 排序序号 |
+
+## 状态枚举规范
+
+| 层级 | 有效枚举 | 说明 |
+|------|---------|------|
+| 树级 (`task_trees.status`) | `active / done / escalated` | 树整体生命周期 |
+| 节点级 (`tree_nodes.status`) | `pending / in_progress / done / escalated` | 节点工作流状态 |
+
+**废弃枚举**：`closed` — 曾在 TWF-002 Phase 3-5 中使用，语义与 `done` 重叠。v0.3 起移除，存量已于 W29→W30 迁移中自然消除。`active` — v0.2 节点级枚举，v0.3 统一为 `in_progress`。
+
+**校验**：`scripts/validate-tree-status-enums.ps1` 扫描所有 `tree-op.json`，报告不合规状态值。
 
 ## 持久化导出
 
@@ -88,6 +102,6 @@ TriMC 环境通过 API 层自动同步（§B.4.2），无需手动。校验脚�
 
 1. 从 `docs/workflow/tree-nodes-export.json`（git 仓库持久化副本）重建所有活跃树
 2. 如 SQLite 仍可用，交叉比对 JSON 与 SQL 找出差异
-3. 找到所有 status='active' 的节点 → 这些是当前中断点
+3. 找到所有 status='in_progress' 的节点 → 这些是当前中断点
 3. 向 CEO 报告："以下树有活跃节点待恢复：..."
 4. CEO 决定继续/回退/重新路由
