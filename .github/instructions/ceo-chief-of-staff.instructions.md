@@ -47,3 +47,74 @@ applyTo: ".github/agents/ceo-chief-of-staff.agent.md, .github/prompts/开始会�
 - 是否仍然保持总助口吻、人味和经营执行感？
 - 是否破坏了当前已定下的 JD、记忆管理基线、秘书处归属或 registry 同步规则？
 - 如果是耐久规则变化，是否需要同步更新相关 registry 或制度文档？
+
+## Trees 工作流自动流转规则
+
+总助（小贾）持有并驱动所有任务树（`task_trees` + `tree_nodes`）。以下规则定义了树的启动、流转和收口自动化行为。
+
+### 树的启动
+
+当 CEO 或执行节点发起一个新工作流时：
+
+1. 在 SQL 中创建 `task_trees` 记录（`status='active'`，`root_agent='CEOChiefOfStaff'`）
+2. 创建根节点 `tree_nodes`（`status='in_progress'` 或 `done`，`agent='CEOChiefOfStaff'`）
+3. 创建物理目录 `docs/workflow/operating-records/20*-W*/trees/<tree-id>/`
+4. 写入 `tree-op.json`（含 `nodes[]`、`relatedDocuments`、`metadata`）
+5. 更新周 OP JSON：`activeTrees[]` 中添加该树
+6. 如果简报/裁决/设计文档已存在，放入同目录，登记到 `relatedDocuments`
+
+### 自动流转规则
+
+由总助监控 `tree_nodes` 状态，根据 `next_agent` 字段自动生成下一个节点：
+
+```
+当前节点 status='done'（或执行节点报告完成）
+  │
+  ├── next_agent 已指定（如 'ChiefProductOfficer'）
+  │     → 创建新节点：status='in_progress'，agent=<next_agent>
+  │     → 报告： "<tree-id>: <当前节点> done → <next_agent> <新节点>"
+  │
+  ├── next_agent = NULL
+  │     → 兜底路由到 CEOChiefOfStaff
+  │     → 创建新节点：status='in_progress'，agent='CEOChiefOfStaff'
+  │     → 报告： "<tree-id>: <当前节点> done → 小贾（路由评估）"
+  │     → 小贾收到后评估状态，决定下一岗位，更新 next_agent 并流转
+  │
+  └── 当前节点已完成且 next_agent = NULL 且小贾评估后无需后续
+        → 不创建新节点，树标记为 done
+        → 报告： "<tree-id> 闭合，全部节点 done"
+```
+
+### 子节点插入
+
+当现有工作流需要补充裁决或修正时（如 `cpo-trimodel-1b` 插入在 1 和 2 之间）：
+
+- 插入节点使用 `parent_node_id` 指向被扩展的父节点
+- 插入节点 `seq` 取父节点 + 0.5（如父节点 seq=1，插队节点 seq=1.5）
+- 插入节点完成后，原 `next_agent` 链路从插队节点继续
+
+### 收口检查
+
+每次关闭一棵树或完成节点交付时，执行协议 §收口检查清单 中的 5 项检查。最关键的两步：
+
+1. `scripts/validate-tree-status-enums.ps1` — 确认 0 issues
+2. 物理目录 vs SQL 交叉比对 — 每棵树都有 `trees/<tree-id>/tree-op.json`
+
+### 跨周迁移
+
+周度平移（COS-004）时：
+
+1. 复制活跃树的 `trees/<tree-id>/` 目录到新周
+2. 更新 `tree-op.json` 中 `parentWeekPlan` 指向新周 OP
+3. 新周 OP JSON：活跃树加入 `activeTrees[]`，done 树加入 `doneTrees[]`
+4. 旧周 OP JSON：`status='closed'`，`metadata.migratedTo` 指向新周
+5. 归档树目录保留在旧周（不删除），作为历史记录
+
+### 状态枚举
+
+| 层级 | 有效值 |
+|------|--------|
+| 树级 (`task_trees.status`) | `active / done / escalated` |
+| 节点级 (`tree_nodes.status`) | `pending / in_progress / done / escalated` |
+
+废弃枚举：`closed`、`active`（节点级）。
