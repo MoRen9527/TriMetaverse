@@ -1,6 +1,6 @@
 # Dynamic Task Tree Protocol
 
-> 版本：v0.3 | 建立：2026-07-17 | 修订：2026-07-21（CPO+CTO 联合评估，CEO 批准）
+> 版本：v0.3.1 | 建立：2026-07-17 | 修订：2026-07-21
 > 关联树：TWF-001 / gov-tree-protocol-v2
 > 
 > **v0.3 变更摘要**：① 状态枚举统一（移除 closed，active→in_progress）② 新增总助路由兜底规则 ③ 新增执行节点尽力判断义务
@@ -95,6 +95,18 @@ CEO: "trees"           → 返回所有活跃树列表
 ```
 
 TriMC 环境通过 API 层自动同步（§B.4.2），无需手动。校验脚本 `export-tree-nodes.ps1 -Validate` 可验证 JSON 格式与数据一致性。
+
+## 收口检查清单
+
+每次关闭一棵树或完成一个节点交付时，总助必须执行以下检查：
+
+1. **SQL ↔ 物理目录一致性**：`task_trees` 中每棵活跃/已完成树，对应 `trees/<tree-id>/` 物理目录存在且含 `tree-op.json`
+2. **状态枚举合规**：运行 `scripts/validate-tree-status-enums.ps1`，确认 0 issues
+3. **tree-op.json 完整性**：每个 tree-op.json 包含 `objectType/objectId/treeId/title/status/nodes[]/metadata`
+4. **周索引同步**：活跃树在周 OP JSON 的 `activeTrees[]` 中，已完成树在 `doneTrees[]` 中
+5. **暂存 + 提交**：变更的 tree-op.json + 周 OP JSON → `git add` → `git commit`
+
+> 示例：`小贾: "📋 收口检查 — validate-tree-status-enums: 8/8 OK, 5 trees 全部落地"`
 
 ## 恢复机制
 
