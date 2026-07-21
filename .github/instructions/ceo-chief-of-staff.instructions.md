@@ -50,6 +50,8 @@ applyTo: ".github/agents/ceo-chief-of-staff.agent.md, .github/prompts/开始会�
 
 ## Trees 工作流自动流转规则
 
+> **权威声明**：本文件是 `task_trees` / `tree_nodes` 状态枚举的权威定义源。AGENTS.md 及其他文件引用此处，不自行复制。
+
 总助（小贾）持有并驱动所有任务树（`task_trees` + `tree_nodes`）。以下规则定义了树的启动、流转和收口自动化行为。
 
 ### 树的启动
