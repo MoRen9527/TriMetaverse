@@ -1,0 +1,113 @@
+﻿{
+    "nodes":  [
+                  {
+                      "nodeId":  "cpo-trimodel-0",
+                      "agent":  "CEOChiefOfStaff",
+                      "delivery":  "trees/cpo-trimodel-deployment/escalation-brief.md",
+                      "status":  "done",
+                      "action":  "向 CPO 发起 TriModel 部署模型升级简报"
+                  },
+                  {
+                      "nodeId":  "cpo-trimodel-1",
+                      "agent":  "ChiefProductOfficer",
+                      "delivery":  "trees/cpo-trimodel-deployment/ruling.md",
+                      "status":  "done",
+                      "action":  "对 Q1-Q4 做出书面裁决",
+                      "decisions":  {
+                                        "Q1":  "APPROVE 方案A（独立API服务），分两阶段：Phase1=library主+API并行建设，Phase2=API主+library dev保留",
+                                        "Q2":  "APPROVE TriLC作为TriModel消费者，TriPilot→TriLC /v1/models→TriModel为模型发现统一路径",
+                                        "Q3":  "APPROVE 模型UI规格：Settings→Models列表+开关+默认模型；Chat下拉选择（仅启用模型）",
+                                        "Q4":  "APPROVE 分两阶段Key管理演进：Phase1服务端环境变量，Phase2 Secret Manager"
+                                    },
+                      "nextAgent":  "ChiefTechnologyOfficer"
+                  },
+                  {
+                      "nodeId":  "cpo-trimodel-1b",
+                      "agent":  "ChiefProductOfficer",
+                      "delivery":  "trees/cpo-trimodel-deployment/ruling.md §附录A",
+                      "status":  "done",
+                      "action":  "CEO 架构修正：配置平面 vs 业务平面裁决",
+                      "decisions":  {
+                                        "A.1_Q1修正":  "APPROVE 修正：TriModel API服务=配置分发服务，不代理业务流量。删除 /v1/chat/completions + SSE streaming。",
+                                        "A.2_Key分发":  "APPROVE 启动时全量拉取+15分钟定时刷新。否决按需拉取。",
+                                        "A.3_缓存容错":  "APPROVE 持久化缓存+24h TTL+15min刷新。离线时使用缓存Key，无缓存时阻止chat但非模型功能正常。",
+                                        "A.4_并发冲突":  "APPROVE 确认为真实风险，Phase1单Key可承受，Phase2 Key池缓解。预埋多Key schema。",
+                                        "A.5_API契约":  "APPROVE 新增 GET /v1/config/keys + POST /v1/config/keys/refresh。认证：本地回环+简单Bearer token。"
+                                    },
+                      "nextAgent":  "ChiefTechnologyOfficer"
+                  },
+                  {
+                      "summary":  "4 个实施步骤：① TriModel HTTP API server（新增 src/server.ts + src/api/，4 端点，复用 ModelClient）；② TriLC getAvailableModels() HTTP 优先 + library fallback（改 async）；③ TriPilot Settings→Models 默认模型下拉（新增 UI + globalState 持久化）；④ Chat 模型选择验证（现有机制已覆盖）。Phase 1 全部改动在现有模块内，无新依赖，无架构级变更。",
+                      "note":  "原代理网关模型设计，已被 cpo-trimodel-1b (CEO 架构修正) 废弃。保留作为历史记录。",
+                      "nodeId":  "cpo-trimodel-2",
+                      "agent":  "ChiefTechnologyOfficer",
+                      "delivery":  "trees/cpo-trimodel-deployment/technical-design.md",
+                      "nextAgent":  null,
+                      "status":  "done",
+                      "action":  "制定 TriModel 部署技术方案 + 多端接入 API 契约 + TriPilot 模型 UI 接线方案"
+                  },
+                  {
+                      "nodeId":  "cpo-trimodel-2b",
+                      "agent":  "ChiefTechnologyOfficer",
+                      "delivery":  "trees/cpo-trimodel-deployment/technical-design.md",
+                      "status":  "done",
+                      "version":  "修正版",
+                      "action":  "按 CPO 附录A 修正技术方案：TriModel 纯配置平面，删除 chat 代理端点，新增 Key 分发端点 + TriLC Key 缓存 + Key 安全规范",
+                      "summary":  "修正版保留 §1–§2 核心设计，§6–§8 为新真源（配置平面架构修正 + Key 分发方案 + 并发冲突评估）。4 个 Step + Step 2b，含完整验收门禁。",
+                      "nextAgent":  "TestEngineer"
+                  },
+                  {
+                      "nodeId":  "cpo-trimodel-3",
+                      "agent":  "TestEngineer",
+                      "delivery":  "trees/cpo-trimodel-deployment/test-strategy.md",
+                      "status":  "done",
+                      "action":  "制定 TriModel 配置平面改造测试策略（Phase A），覆盖 5 层 × 88 测试用例",
+                      "summary":  "5 个测试层级：L1 TriModel API 服务端单元（health/models/keys/refresh/废弃端点/回归）、L2 TriLC HTTP 化集成、L2b TriLC Key 缓存+持久化、L3 TriPilot 模型UI端到端、L4 Key安全+L5 离线容错。Phase B 偏差报告模板已预置。",
+                      "nextAgent":  "ChiefTechnologyOfficer"
+                  },
+                  {
+                      "nodeId":  "cpo-trimodel-3b",
+                      "agent":  "TestEngineer",
+                      "delivery":  "trees/cpo-trimodel-deployment/deviation-closeout.md",
+                      "status":  "done",
+                      "action":  "Phase B 验证执行：88 条测试用例逐条验证 + 回归测试 → 产出偏差关闭报告",
+                      "summary":  "88/88 验证完毕：80 PASS + 8 CONDITIONAL_PASS（均为 Phase 2 deferred 或预存问题）。零 BLOCKER，零 CRITICAL，零 MAJOR。TriLC 27/27 回归全绿，TriModel 13/14（1 预存）。建议放行 Phase 1。",
+                      "nextAgent":  "ChiefTechnologyOfficer"
+                  }
+              ],
+    "relatedDocuments":  [
+                             {
+                                 "note":  "TriModel 定义 + 消费者列表",
+                                 "source":  "docs/三元宇宙架构与模块说明.md §4 L71",
+                                 "kind":  "upstream-truth"
+                             },
+                             {
+                                 "note":  "三层密钥模型 + 当前产品范围",
+                                 "source":  "TriModel/docs/registry/product-state.md",
+                                 "kind":  "product-state"
+                             }
+                         ],
+    "objectType":  "TREE_OPERATING_PLAN",
+    "parentWeekPlan":  "OP-202607-W30-001",
+    "objectId":  "TREE-OP-cpo-trimodel-deployment",
+    "title":  "CPO 裁决：TriModel 部署模型与多端接入方案",
+    "ownerRole":  "CEOChiefOfStaff",
+    "treeId":  "cpo-trimodel-deployment",
+    "status":  "active",
+    "summary":  "TriCade 安装后发现模型显示异常，根因追踪到 TriModel 未集成到 PC 端打包。CEO 提出独立 API 服务部署方案：TriModel 单独部署，各端通过 API 读取模型配置，TriPilot→TriLC→TriModel 链路。需 CPO 裁决：部署模型（独立服务 vs npm library vs 混合）、TriLC 消费者定位、模型UI接线规格、Key管理演进。",
+    "metadata":  {
+                     "updatedBy":  "TestEngineer",
+                     "lastUpdated":  "2026-07-21T11:20:00+08:00",
+                     "version":  "0.5.0",
+                     "note":  "v0.5.0: 新增 cpo-trimodel-3b（Phase B 偏差关闭报告）。88/88 验证：80 PASS + 8 CONDITIONAL_PASS。建议放行 Phase 1。"
+                 },
+    "createdAt":  "2026-07-20T21:49:00+08:00",
+    "relatedModules":  [
+                           "TriModel",
+                           "TriLC",
+                           "TriPilot",
+                           "TriMC",
+                           "TriCade"
+                       ],
+    "updatedAt":  "2026-07-21T11:20:00+08:00"
+}

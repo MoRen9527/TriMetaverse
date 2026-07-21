@@ -1,0 +1,119 @@
+﻿{
+    "dependsOn":  [
+                      "OP-202607-W29-001"
+                  ],
+    "keyDocuments":  [
+                         {
+                             "note":  "W30 未决事项追踪（从 W29 迁移）",
+                             "source":  "docs/workflow/operating-records/2026-W30/OP-202607-W30-001.unresolved-items.md",
+                             "kind":  "unresolved-items"
+                         },
+                         {
+                             "note":  "TriCade 已知偏差 D1-D7（D1-D6 已关闭，D7 W30 P0）",
+                             "source":  "docs/workflow/operating-records/2026-W30/trees/TWF-002/known-deviations.md",
+                             "kind":  "deviation-register"
+                         },
+                         {
+                             "note":  "CPO Q1-Q6 裁决档案",
+                             "source":  "docs/workflow/operating-records/2026-W30/trees/cpo-pc-layer-escalation/ruling.md",
+                             "kind":  "ruling"
+                         },
+                         {
+                             "note":  "CTO W30 架构修正技术设计",
+                             "source":  "docs/workflow/operating-records/2026-W30/trees/cpo-pc-layer-escalation/w30-architecture-fix-design.md",
+                             "kind":  "design"
+                         },
+                         {
+                             "note":  "CPO 升级：TriModel 部署模型（独立API服务 vs npm library）与多端接入",
+                             "source":  "docs/workflow/operating-records/2026-W30/trees/cpo-trimodel-deployment/escalation-brief.md",
+                             "kind":  "escalation-brief"
+                         }
+                     ],
+    "objectType":  "WEEKLY_INDEX",
+    "objectId":  "OP-202607-W30-001",
+    "doneTreesFromW29":  [
+                             {
+                                 "title":  "CPO 裁决：PC 端四模块边界与协作关系重定义",
+                                 "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/cpo-pc-layer-escalation/tree-op.json",
+                                 "status":  "done",
+                                 "treeId":  "cpo-pc-layer-escalation"
+                             },
+                             {
+                                 "title":  "任务动态树工作流与故障恢复机制",
+                                 "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/TWF-001/tree-op.json",
+                                 "status":  "done",
+                                 "treeId":  "TWF-001"
+                             },
+                             {
+                                 "title":  "CPO+CTO 联合评估：TriCade 拆分打包方案",
+                                 "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/cpo-tricade-packaging-split/tree-op.json",
+                                 "status":  "done",
+                                 "treeId":  "cpo-tricade-packaging-split"
+                             }
+                         ],
+    "title":  "TriMetaverse W30 当前周经营维护索引",
+    "ownerRole":  "CEOChiefOfStaff",
+    "status":  "active",
+    "summary":  "W29→W30 周度平移完成。W29 核心成果：(1) cpo-pc-layer-escalation 全量完成 — CPO Q1-Q6 裁决 + CTO 技术设计 + FullStackDeveloper S1-S6 代码实施 14/14 测试通过 (2) TriCade MSI 重打包 (TriCade-x64-1.126.04524.msi) 含全部架构修正 (3) 偏差 D1-D6 全部关闭 (4) OP 系统重构为周索引+Tree级架构。W30 P0: D7/S7 TriMC mirror 端点 + S8 E2E 回归 + TriMem L1。W30 P1: resource-biz-group-design (COS-006) + trimc-reasoning-guard + phase5-linux-detached。 CPO+CTO 联合评估 TriCade 拆分打包：双层 MSI（底座月级+Bundel 日级\u003c1min），构建速度提升 20x。CPO 4/4 APPROVE，CTO 技术可行。",
+    "metadata":  {
+                     "updatedBy":  "CEOChiefOfStaff",
+                     "version":  "1.0.0",
+                     "lastUpdated":  "2026-07-21T09:59:00+08:00",
+                     "workflowTags":  [
+                                          "每周维护",
+                                          "CEO 总助维护面",
+                                          "经营维护计划单"
+                                      ],
+                     "latestActiveWeek":  true,
+                     "migrationDate":  "2026-07-20T20:33:00+08:00",
+                     "phase":  "ceo-copilot-host-coordination",
+                     "previousWeekRef":  "docs/workflow/operating-records/2026-W29/OP-202607-W29-001.json"
+                 },
+    "priority":  "high",
+    "timebox":  {
+                    "scope":  "weekly",
+                    "label":  "2026-W30 当前周维护面",
+                    "startAt":  "2026-07-20T00:00:00+08:00",
+                    "endAt":  "2026-07-26T23:59:59+08:00"
+                },
+    "createdAt":  "2026-07-20T20:33:00+08:00",
+    "relatedModules":  [
+                           "TriMetaverse",
+                           "TriCompany",
+                           "TriMC",
+                           "TriLC",
+                           "TriPilot",
+                           "TriCode",
+                           "VSCodium",
+                           "TriMem",
+                           "TriMobile",
+                           "TriAvatar",
+                           "TriDev",
+                           "TriTest"
+                       ],
+    "updatedAt":  "2026-07-21T09:59:00+08:00",
+    "activeTrees":  [
+                        {
+                            "owner":  "CTO (小狄)",
+                            "currentPhase":  5,
+                            "treeId":  "TWF-002",
+                            "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/TWF-002/tree-op.json",
+                            "title":  "TriLC+PC端本地优先架构升级",
+                            "status":  "active"
+                        },
+                        {
+                            "title":  "W30 P0: D7 跨节点任务镜像 + S7 TriMC mirror 端点",
+                            "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/w30-s7-d7-mirror/tree-op.json",
+                            "status":  "pending",
+                            "treeId":  "w30-s7-d7-mirror",
+                            "owner":  "CTO (小狄)"
+                        },
+                        {
+                            "title":  "CPO 裁决：TriModel 部署模型与多端接入方案",
+                            "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/cpo-trimodel-deployment/tree-op.json",
+                            "status":  "active",
+                            "treeId":  "cpo-trimodel-deployment",
+                            "owner":  "CPO (小乔)"
+                        }
+                    ]
+}

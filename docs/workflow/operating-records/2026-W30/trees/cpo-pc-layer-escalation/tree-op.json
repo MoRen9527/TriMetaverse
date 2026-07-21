@@ -1,0 +1,116 @@
+﻿{
+    "nodes":  [
+                  {
+                      "action":  "向 CPO 发送 PC 端四模块边界升级简报，请求对五个决策问题做出裁决",
+                      "agent":  "CEOChiefOfStaff",
+                      "delivery":  "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/escalation-brief.md",
+                      "nodeId":  "cpo-pc-0",
+                      "status":  "done",
+                      "completedAt":  "2026-07-19T15:06:00+08:00"
+                  },
+                  {
+                      "action":  "审查升级简报，对五个决策问题做出正式书面裁决",
+                      "agent":  "ChiefProductOfficer",
+                      "delivery":  "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/ruling.md",
+                      "rulingSummary":  {
+                                            "Q4":  {
+                                                       "output":  "自动重连 + 四色状态区分。关闭 IDE 不弹确认框",
+                                                       "ruling":  "APPROVE"
+                                                   },
+                                            "Q1":  {
+                                                       "output":  "TriPilot 严格零执行能力，纯显示+交互窗口。移除 5 项：executeToolCall/工具执行状态机/本地tool registry/直接Anthropic API/ACP适配",
+                                                       "ruling":  "APPROVE"
+                                                   },
+                                            "Q3":  {
+                                                       "output":  "TriCode 修正为 TriLC 研发子工具适配器。Adapter registry 内部化。需修正 4 份架构/registry 文档",
+                                                       "ruling":  "APPROVE"
+                                                   },
+                                            "Q2":  {
+                                                       "output":  "SSE + HTTP 分层协议。新增 5 端点（任务提交/会话列表/取消/恢复/状态流），WebSocket post-MVP",
+                                                       "ruling":  "APPROVE"
+                                                   },
+                                            "Q5":  {
+                                                       "output":  "W29 TriCade 交付收口+偏差清单，W30 架构修正 P0",
+                                                       "ruling":  "FREEZE"
+                                                   },
+                                            "Q6":  {
+                                                       "output":  "6a: 双层归属（PC本地→TriLC，移动/Web→TriMC）；6b: 方案A（TriLC上报TriMC统一状态中心）；6c: 事件驱动镜像+30s心跳兜底，离线标记unknown。不受W29 FREEZE约束，W30排入CTO技术设计P1。",
+                                                       "ruling":  "APPROVE"
+                                                   }
+                                        },
+                      "nodeId":  "cpo-pc-1",
+                      "status":  "done",
+                      "completedAt":  "2026-07-19T16:00:00+08:00"
+                  },
+                  {
+                      "action":  "补充裁决 Q6：多入口路由归属与跨节点任务状态同步",
+                      "agent":  "ChiefProductOfficer",
+                      "delivery":  "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/ruling.md#Q6",
+                      "escalationBrief":  "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/escalation-brief-q6.md",
+                      "nodeId":  "cpo-pc-1a",
+                      "status":  "done",
+                      "completedAt":  "2026-07-19T16:54:00+08:00"
+                  },
+                  {
+                      "action":  "产出 (1) W29 TriCade 已知偏差清单 (2) W30 架构修正技术设计文档",
+                      "agent":  "ChiefTechnologyOfficer",
+                      "delivery":  "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/w30-architecture-fix-design.md",
+                      "devianceDoc":  "docs/workflow/operating-records/2026-W29/trees/TWF-002/known-deviations.md",
+                      "nodeId":  "cpo-pc-2",
+                      "status":  "done",
+                      "completedAt":  "2026-07-19T17:00:00+08:00"
+                  },
+                  {
+                      "nodeId":  "cpo-pc-3",
+                      "agent":  "FullStackDeveloper",
+                      "dependsOn":  [
+                                        "cpo-pc-2"
+                                    ],
+                      "status":  "pending",
+                      "action":  "按 CTO 方案实施代码重构，完成后提交 TestEngineer 验证"
+                  }
+              ],
+    "relatedDocuments":  [
+                             {
+                                 "note":  "小贾发起的 CPO 升级简报：偏差审计 + CEO 架构意图 + 五个待裁决问题",
+                                 "source":  "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/escalation-brief.md",
+                                 "kind":  "escalation-brief"
+                             },
+                             {
+                                 "note":  "CPO 小乔正式裁决（2026-07-19）",
+                                 "source":  "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/ruling.md",
+                                 "kind":  "ruling"
+                             },
+                             {
+                                 "note":  "CPO 标记 P0 修正：TriCode 行 + TriLC 行",
+                                 "source":  "docs/三元宇宙架构与模块说明.md",
+                                 "kind":  "upstream-truth"
+                             },
+                             {
+                                 "note":  "CPO 补充升级简报 Q6：多入口路由归属与跨节点任务状态同步",
+                                 "source":  "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/escalation-brief-q6.md",
+                                 "kind":  "escalation-brief"
+                             }
+                         ],
+    "objectType":  "TREE_OPERATING_PLAN",
+    "parentWeekPlan":  "OP-202607-W29-001",
+    "objectId":  "TREE-OP-cpo-pc-layer-escalation",
+    "title":  "CPO 裁决：PC 端四模块边界与协作关系重定义",
+    "ownerRole":  "CEOChiefOfStaff",
+    "treeId":  "cpo-pc-layer-escalation",
+    "status":  "active",
+    "summary":  "CEO 审计 TriPilot 运行时路径发现偏差：TriPilot extension.ts L5995 在 VS Code 扩展进程内本地执行工具调用，关闭 IDE = 任务终止。CEO 明确架构意图：TriLC 统一中枢编排，TriPilot 零执行能力，TriCode 为 TriLC 研发子工具，两条执行路径均由 TriLC daemon 保证生命周期。升级 CPO 裁决（小乔 2026-07-19）：Q1-Q4 APPROVE，Q5 FREEZE。已路由 CTO（小狄）产出：(1) W29 TriCade 已知偏差清单 (2) W30 架构修正技术设计。",
+    "metadata":  {
+                     "updatedBy":  "CEOChiefOfStaff",
+                     "lastUpdated":  "2026-07-19T17:00:00+08:00",
+                     "version":  "0.1.0"
+                 },
+    "createdAt":  "2026-07-19T15:06:00+08:00",
+    "relatedModules":  [
+                           "TriPilot",
+                           "TriLC",
+                           "TriCode",
+                           "VSCodium"
+                       ],
+    "updatedAt":  "2026-07-19T17:00:00+08:00"
+}

@@ -1,0 +1,58 @@
+﻿{
+    "nodes":  [
+                  {
+                      "nodeId":  "gov-tree-0",
+                      "agent":  "CEOChiefOfStaff",
+                      "status":  "done",
+                      "action":  "发起评估：两项 trees 协议改进提案"
+                  },
+                  {
+                      "nodeId":  "gov-tree-1",
+                      "agent":  "ChiefProductOfficer",
+                      "delivery":  "APPROVE 两项，附尽力判断义务条款",
+                      "status":  "done",
+                      "action":  "评估：状态统一 + 路由兜底 —— 产品/工作流视角"
+                  },
+                  {
+                      "nodeId":  "gov-tree-2",
+                      "agent":  "ChiefTechnologyOfficer",
+                      "delivery":  "APPROVE，存量 0 closed，superseded 已清洗，validate-tree-status-enums.ps1 就绪",
+                      "status":  "done",
+                      "action":  "评估：技术落地可行性 + 存量审计"
+                  },
+                  {
+                      "nodeId":  "gov-tree-3",
+                      "agent":  "CEOChiefOfStaff",
+                      "delivery":  "docs/workflow/dynamic-task-tree-protocol.md v0.3; scripts/validate-tree-status-enums.ps1",
+                      "status":  "done",
+                      "action":  "收口：汇总评估，修订协议 v0.3，commit push"
+                  }
+              ],
+    "relatedDocuments":  [
+                             {
+                                 "note":  "Trees 协议 v0.3",
+                                 "source":  "docs/workflow/dynamic-task-tree-protocol.md",
+                                 "kind":  "protocol"
+                             },
+                             {
+                                 "note":  "状态枚举校验脚本",
+                                 "source":  "scripts/validate-tree-status-enums.ps1",
+                                 "kind":  "validation-script"
+                             }
+                         ],
+    "objectType":  "TREE_OPERATING_PLAN",
+    "parentWeekPlan":  "OP-202607-W30-001",
+    "objectId":  "TREE-OP-gov-tree-protocol-v2",
+    "title":  "治理评估：Trees 协议 v2 规范（状态统一 + 路由兜底）",
+    "ownerRole":  "CEOChiefOfStaff",
+    "treeId":  "gov-tree-protocol-v2",
+    "status":  "done",
+    "summary":  "CEO 提出两项协议改进：① 状态枚举统一（移除 closed，active→in_progress）② next_agent=NULL 路由兜底到 CEOChiefOfStaff。CPO APPROVE 两项（附尽力判断义务），CTO APPROVE 技术可行，小贾收口修订协议 v0.3 + commit push。",
+    "metadata":  {
+                     "updatedBy":  "CEOChiefOfStaff",
+                     "lastUpdated":  "2026-07-21T11:37:00+08:00",
+                     "version":  "0.1.0"
+                 },
+    "createdAt":  "2026-07-21T11:12:00+08:00",
+    "updatedAt":  "2026-07-21T11:37:00+08:00"
+}
