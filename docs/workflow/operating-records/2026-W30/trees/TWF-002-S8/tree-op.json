@@ -1,0 +1,70 @@
+{
+    "nodes": [
+        {
+            "nodeId": "TWF-002-S8-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "发起子树：从 TWF-002 Phase 5 CTO 报告接收 — S8 TriCade 重新打包 + 偏差 D1-D7 逐项关闭回归子树。路由 CTO 设计打包方案。"
+        },
+        {
+            "nodeId": "TWF-002-S8-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "in_progress",
+            "action": "打包方案设计：TriCade MSI 重新打包方案 — 基于 arch-trilc-daemon 全部成果（daemon + tray + sync）构造最终 MSI；确认 WiX 源码变更范围（TriLCCheckbox 对话框 + CustomAction 安装后注册）；产出 repackage-plan.md（含打包步骤清单、版本号策略、产物校验方法）。",
+            "next_agent": "FullStackDeveloper"
+        },
+        {
+            "nodeId": "TWF-002-S8-2",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "打包执行：TriCade MSI 重新打包 — 构造 MSI（含 TriPilot + TriLC daemon + Tray.exe + VSCodium + TriCode adapter）；WiX 源码更新（TriLCDaemonDlg + InstallTriLCService CustomAction）；构建→签名（如有）→产物校验（MSI hash/大小/版本号）。产出 TriCade MSI 文件 + build-log.md。",
+            "dependsOn": ["TWF-002-S8-1"],
+            "crossTreeDependsOn": [
+                {"treeId": "arch-trilc-msi-e2e", "minStatus": "done"}
+            ],
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "TWF-002-S8-3",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "验证：全链路冒烟 + D1-D7 偏差逐项关闭回归 — ① 安装 MSI→VSCodium 扩展加载→聊天 UI→工具调用循环（全链路冒烟）；② D1-D7 逐项对照 known-deviations.md 验证修复；③ D1（executeToolCall 移除）D2（daemon 生命周期解耦）D3（5 端点协议）D4（TriCode adapter 清洁）D5（会话自动恢复）D6（零 API Key）D7（TriMC mirror 端点）；④ I-001/I-002/I-003 顺手修复验证。产出 s8-closeout-report.md（含 D1-D7 逐项门禁 PASS/FAIL + 截图）。",
+            "dependsOn": ["TWF-002-S8-2"]
+        }
+    ],
+    "relatedDocuments": [
+        {
+            "note": "TWF-002 Phase 5 验证报告",
+            "source": "docs/workflow/operating-records/2026-W30/trees/TWF-002/phase5-report.md",
+            "kind": "report"
+        },
+        {
+            "note": "TriCade 已知偏差 D1-D7",
+            "source": "docs/workflow/operating-records/2026-W30/trees/TWF-002/known-deviations.md",
+            "kind": "deviation-register"
+        },
+        {
+            "note": "CTO 技术设计 §8 MSI 安装 UX",
+            "source": "docs/workflow/operating-records/2026-W30/trees/arch-trilc-daemon/technical-design.md",
+            "kind": "design"
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "objectId": "TREE-OP-TWF-002-S8",
+    "title": "S8: TriCade 重新打包 + D1-D7 偏差逐项关闭回归",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "TWF-002-S8",
+    "status": "active",
+    "priority": "P0",
+    "summary": "来自 TWF-002 Phase 5 CTO 报告。TriCade MSI 重新打包（集成 daemon + tray + sync 全部成果）+ 全链路冒烟 + D1-D7 偏差逐项关闭回归验证。依赖 arch-trilc-msi-e2e 完成。阻塞正式发布。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-07-22T18:09:00+08:00",
+        "version": "0.1.0",
+        "note": "v0.1.0: 树创建 — 根节点 done，CTO 打包方案 in_progress。跨树依赖 arch-trilc-msi-e2e done"
+    },
+    "createdAt": "2026-07-22T18:09:00+08:00",
+    "relatedModules": ["TriLC", "TriCade", "TriPilot", "TriCode", "VSCodium"],
+    "updatedAt": "2026-07-22T18:09:00+08:00"
+}

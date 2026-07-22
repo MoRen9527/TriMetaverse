@@ -1,9 +1,269 @@
 {
   "format_version": "1.0",
-  "exported_at": "2026-07-17T14:15:00+08:00",
+  "exported_at": "2026-07-22T18:09:00+08:00",
   "exported_by": "CEOChiefOfStaff",
   "environment": "copilot-cli",
   "trees": [
+    {
+      "id": "arch-trilc-tray",
+      "op_action_id": "TREE-OP-arch-trilc-tray",
+      "title": "Windows 系统托盘：TriLC 状态指示 + 快捷入口",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "active",
+      "priority": "P1",
+      "created_at": "2026-07-22T18:09:00+08:00",
+      "updated_at": "2026-07-22T18:09:00+08:00",
+      "nodes": [
+        {
+          "id": "arch-trilc-tray-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "action": "发起子树：从 arch-trilc-daemon td-5 CTO 裁决接收 — Windows 系统托盘子树。路由 CTO 按 §4 设计细化。",
+          "status": "done",
+          "delivery": null,
+          "next_agent": "ChiefTechnologyOfficer",
+          "seq": 0
+        },
+        {
+          "id": "arch-trilc-tray-1",
+          "parent_node_id": "arch-trilc-tray-0",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "技术设计细化：WinForms 托盘 — 按 §4 细化 C# .NET 8 WinForms NotifyIcon 实现规格、三色图标、右键菜单、/healthz 轮询、异常通知策略。",
+          "status": "in_progress",
+          "delivery": null,
+          "next_agent": "FullStackDeveloper",
+          "seq": 1
+        },
+        {
+          "id": "arch-trilc-tray-2",
+          "parent_node_id": "arch-trilc-tray-1",
+          "agent": "FullStackDeveloper",
+          "action": "实施：C# .NET 8 WinForms 托盘 Program.cs/TrayIcon.cs/DaemonChecker.cs → TriLC.Tray.exe",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 2
+        },
+        {
+          "id": "arch-trilc-tray-3",
+          "parent_node_id": "arch-trilc-tray-2",
+          "agent": "TestEngineer",
+          "action": "验证：三色图标/右键菜单/healthz 轮询/异常通知/退出不影响 daemon",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 3
+        }
+      ]
+    },
+    {
+      "id": "arch-trilc-sync",
+      "op_action_id": "TREE-OP-arch-trilc-sync",
+      "title": "会话云同步：TriLC↔TriMC 双向同步引擎",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "active",
+      "priority": "P1",
+      "created_at": "2026-07-22T18:09:00+08:00",
+      "updated_at": "2026-07-22T18:09:00+08:00",
+      "nodes": [
+        {
+          "id": "arch-trilc-sync-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "action": "发起子树：从 arch-trilc-daemon td-5 CTO 裁决接收 — 会话云同步子树。路由 CTO 按 §6-§7 设计细化。",
+          "status": "done",
+          "delivery": null,
+          "next_agent": "ChiefTechnologyOfficer",
+          "seq": 0
+        },
+        {
+          "id": "arch-trilc-sync-1",
+          "parent_node_id": "arch-trilc-sync-0",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "设计细化：sync-engine.ts 规格、幂等去重 409、离线重试退避、TriMC 端点契约对齐、sync_status 状态机。",
+          "status": "in_progress",
+          "delivery": null,
+          "next_agent": "FullStackDeveloper",
+          "seq": 1
+        },
+        {
+          "id": "arch-trilc-sync-2",
+          "parent_node_id": "arch-trilc-sync-1",
+          "agent": "FullStackDeveloper",
+          "action": "实施：sync-engine.ts + store.ts 扩展 + schema migration + 单元测试",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 2
+        },
+        {
+          "id": "arch-trilc-sync-3",
+          "parent_node_id": "arch-trilc-sync-2",
+          "agent": "TestEngineer",
+          "action": "验证：sync-engine 单元测试/409去重/503重试退避/schema migration 幂等/离线行为",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 3
+        }
+      ]
+    },
+    {
+      "id": "arch-trilc-msi-e2e",
+      "op_action_id": "TREE-OP-arch-trilc-msi-e2e",
+      "title": "TriCade MSI 全流程 E2E：全新 VM→daemon→Tray→重连→卸载",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "active",
+      "priority": "P0",
+      "created_at": "2026-07-22T18:09:00+08:00",
+      "updated_at": "2026-07-22T18:09:00+08:00",
+      "nodes": [
+        {
+          "id": "arch-trilc-msi-e2e-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "action": "发起子树：从 arch-trilc-daemon td-5 CTO 裁决接收 — TriCade MSI 全流程 E2E 子树。路由 CTO 设计 E2E 测试方案。",
+          "status": "done",
+          "delivery": null,
+          "next_agent": "ChiefTechnologyOfficer",
+          "seq": 0
+        },
+        {
+          "id": "arch-trilc-msi-e2e-1",
+          "parent_node_id": "arch-trilc-msi-e2e-0",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "E2E 测试方案：VM 安装→sc query→Tray→TriPilot 重连→卸载清理，6 步门禁。",
+          "status": "in_progress",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 1
+        },
+        {
+          "id": "arch-trilc-msi-e2e-2",
+          "parent_node_id": "arch-trilc-msi-e2e-1",
+          "agent": "TestEngineer",
+          "action": "E2E 执行：全新 VM 安装→验证 daemon/Tray/重连/卸载→截图+日志+门禁 PASS/FAIL",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 2
+        }
+      ]
+    },
+    {
+      "id": "TWF-002-S8",
+      "op_action_id": "TREE-OP-TWF-002-S8",
+      "title": "S8: TriCade 重新打包 + D1-D7 偏差逐项关闭回归",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "active",
+      "priority": "P0",
+      "created_at": "2026-07-22T18:09:00+08:00",
+      "updated_at": "2026-07-22T18:09:00+08:00",
+      "nodes": [
+        {
+          "id": "TWF-002-S8-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "action": "发起子树：从 TWF-002 Phase 5 CTO 报告接收 — S8 重新打包+偏差回归子树。路由 CTO 设计打包方案。",
+          "status": "done",
+          "delivery": null,
+          "next_agent": "ChiefTechnologyOfficer",
+          "seq": 0
+        },
+        {
+          "id": "TWF-002-S8-1",
+          "parent_node_id": "TWF-002-S8-0",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "打包方案：基于 daemon+tray+sync 成果构造最终 MSI，确认 WiX 变更范围。",
+          "status": "in_progress",
+          "delivery": null,
+          "next_agent": "FullStackDeveloper",
+          "seq": 1
+        },
+        {
+          "id": "TWF-002-S8-2",
+          "parent_node_id": "TWF-002-S8-1",
+          "agent": "FullStackDeveloper",
+          "action": "打包执行：构造 MSI（含全部模块）+ WiX 更新 + 产物校验",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 2
+        },
+        {
+          "id": "TWF-002-S8-3",
+          "parent_node_id": "TWF-002-S8-2",
+          "agent": "TestEngineer",
+          "action": "验证：全链路冒烟 + D1-D7 逐项关闭回归 + I-001/002/003 修复验证",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 3
+        }
+      ]
+    },
+    {
+      "id": "cpo-trimodel-phase2",
+      "op_action_id": "TREE-OP-cpo-trimodel-phase2",
+      "title": "CPO+CTO: TriModel Phase 2 — 8 项 CONDITIONAL_PASS 实施",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "active",
+      "priority": "P1",
+      "created_at": "2026-07-22T18:09:00+08:00",
+      "updated_at": "2026-07-22T18:09:00+08:00",
+      "nodes": [
+        {
+          "id": "cpo-trimodel-phase2-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "action": "发起子树：从 cpo-trimodel-deployment CTO 终裁接收 — 8 项 CONDITIONAL_PASS → Phase 2。路由 CPO 确认优先级。",
+          "status": "done",
+          "delivery": null,
+          "next_agent": "ChiefProductOfficer",
+          "seq": 0
+        },
+        {
+          "id": "cpo-trimodel-phase2-1",
+          "parent_node_id": "cpo-trimodel-phase2-0",
+          "agent": "ChiefProductOfficer",
+          "action": "产品优先级：8 项排序 + Phase 2 范围确认 + kickoff 窗口（建议 W31-W32）",
+          "status": "in_progress",
+          "delivery": null,
+          "next_agent": "ChiefTechnologyOfficer",
+          "seq": 1
+        },
+        {
+          "id": "cpo-trimodel-phase2-2",
+          "parent_node_id": "cpo-trimodel-phase2-1",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "技术方案：Provider 多路/SSE streaming/CI/CD/Key S2 加密/fallback 链/ESLint",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "FullStackDeveloper",
+          "seq": 2
+        },
+        {
+          "id": "cpo-trimodel-phase2-3",
+          "parent_node_id": "cpo-trimodel-phase2-2",
+          "agent": "FullStackDeveloper",
+          "action": "实施：8 项 CONDITIONAL_PASS 代码实现 + 单元测试",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 3
+        },
+        {
+          "id": "cpo-trimodel-phase2-4",
+          "parent_node_id": "cpo-trimodel-phase2-3",
+          "agent": "TestEngineer",
+          "action": "验证：8 项逐项关闭 + L1-L5 全量回归 + Provider 多路 E2E + fallback 故障注入",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 4
+        }
+      ]
+    },
     {
       "id": "TWF-002",
       "op_action_id": "TWF-002",

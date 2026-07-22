@@ -1,0 +1,84 @@
+{
+    "nodes": [
+        {
+            "nodeId": "cpo-trimodel-phase2-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "发起子树：从 cpo-trimodel-deployment CTO 终裁接收 — 8 项 CONDITIONAL_PASS → Phase 2 实施子树。路由 CPO 确认产品优先级排序。"
+        },
+        {
+            "nodeId": "cpo-trimodel-phase2-1",
+            "agent": "ChiefProductOfficer",
+            "status": "done",
+            "action": "产品优先级确认：8 项 CONDITIONAL_PASS（TM-REG-001/TM-R-003/TK-011/TK-017/TK-022/TK-023/TP-S-005+006/SK-008）按产品价值排序；确认 Phase 2 范围—— Provider 多路支持、流式传输、CI/CD、Key S2 AES-256-GCM 加密、fallback 链修复、ESLint；确认 Phase 2 kickoff 窗口（建议 W31-W32）。产出 product-priority.md（含排序 + 范围确认 + 窗口建议）。",
+            "next_agent": "ChiefTechnologyOfficer",
+            "output": "product-priority.md",
+            "ruling": "APPROVE — P0: CI→LINT, P1: STREAM→FALLBACK→PROVIDER, P2: S2→REG-001, P3: AGENTS. Kickoff W31-W32."
+        },
+        {
+            "nodeId": "cpo-trimodel-phase2-2",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "技术方案：Phase 2 实施设计 — 基于 CPO 优先级排序，逐项产出技术方案：Provider 多路支持（Anthropic+OpenAI+本地模型路由）、流式 SSE 传输、CI/CD pipeline（GitHub Actions）、Key S2 AES-256-GCM 加密 + 机器指纹派生密钥、fallback 链修复（getAvailableModels HTTP→library→缓存）、ESLint 配置。产出 phase2-technical-design.md。S2 加密含完整迁移策略+回滚路径（CPO 强制要求已满足）。",
+            "dependsOn": ["cpo-trimodel-phase2-1"],
+            "next_agent": "FullStackDeveloper",
+            "output": "phase2-technical-design.md",
+            "ruling": "APPROVE — 6 项技术方案完整，S2 含迁移策略+回滚路径。流转 FullStackDeveloper 实施。"
+        },
+        {
+            "nodeId": "cpo-trimodel-phase2-3",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "实施：Phase 2 8 项 CONDITIONAL_PASS 代码实现 — 按 CTO 技术方案逐项实施：Provider 路由器、SSE streaming handler、CI/CD workflow、Key S2 加密模块（AES-256-GCM + 机器指纹）、fallback 链（getAvailableModels HTTP→library→缓存）、ESLint 配置 + autofix。产出各模块 PR + 单元测试。",
+            "dependsOn": ["cpo-trimodel-phase2-2"],
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "cpo-trimodel-phase2-4",
+            "agent": "TestEngineer",
+            "status": "done",
+            "action": "验证完成：Phase 2 全量回归 — 8 项 CONDITIONAL_PASS 逐项关闭（6 CLOSED + 1 DEFERRED + 1 合并关闭）；TriModel API 回归 22/22 PASS；TriLC Key 缓存回归 82/82 PASS；S2 加密迁移+回滚验证通过；Provider 多路切换验证通过；Fallback 链故障注入验证通过；CI/ESLint/Build 全部通过。产出 phase2-closeout-report.md（整体 PASS，建议放行）。",
+            "dependsOn": ["cpo-trimodel-phase2-3"]
+        }
+    ],
+    "relatedDocuments": [
+        {
+            "note": "CTO 终裁：8 项 CONDITIONAL_PASS → Phase 2",
+            "source": "docs/workflow/operating-records/2026-W30/trees/cpo-trimodel-deployment/cto-final-ruling.md",
+            "kind": "ruling"
+        },
+        {
+            "note": "Phase B 偏差关闭报告（88/88 验证）",
+            "source": "docs/workflow/operating-records/2026-W30/trees/cpo-trimodel-deployment/deviation-closeout.md",
+            "kind": "report"
+        },
+        {
+            "note": "CPO 裁决：部署模型 + 附录A 架构修正",
+            "source": "docs/workflow/operating-records/2026-W30/trees/cpo-trimodel-deployment/ruling.md",
+            "kind": "ruling"
+        },
+        {
+            "note": "CTO 技术方案（修正版）",
+            "source": "docs/workflow/operating-records/2026-W30/trees/cpo-trimodel-deployment/technical-design.md",
+            "kind": "design"
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "objectId": "TREE-OP-cpo-trimodel-phase2",
+    "title": "CPO+CTO: TriModel Phase 2 — 8 项 CONDITIONAL_PASS 实施",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "cpo-trimodel-phase2",
+    "status": "active",
+    "priority": "P1",
+    "summary": "来自 cpo-trimodel-deployment CTO 终裁。8 项 CONDITIONAL_PASS → Phase 2 实施：Provider 多路支持、流式 SSE 传输、CI/CD pipeline、Key S2 AES-256-GCM 加密、fallback 链修复、ESLint。Phase 1 已闭合（88/88 验证 80 PASS + 8 CONDITIONAL_PASS，零 BLOCKER）。建议 kickoff W31-W32。",
+    "metadata": {
+        "updatedBy": "TestEngineer",
+        "lastUpdated": "2026-07-22T19:43:44+08:00",
+        "version": "0.4.0",
+        "note": "v0.4.0: TestEngineer 全量回归验证完成 — 104/104 测试 PASS，8 项 CONDITIONAL_PASS 闭合（6 CLOSED + 1 DEFERRED + 1 合并），Lint 0 err / Build PASS，整体建议放行。产出 phase2-closeout-report.md。流转 CTO 终裁（cpo-trimodel-phase2-5）。"
+    },
+    "createdAt": "2026-07-22T18:09:00+08:00",
+    "relatedModules": ["TriModel", "TriLC", "TriPilot", "TriMC"],
+    "updatedAt": "2026-07-22T18:09:00+08:00"
+}

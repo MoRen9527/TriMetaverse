@@ -1,0 +1,64 @@
+{
+    "nodes": [
+        {
+            "nodeId": "arch-trilc-msi-e2e-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "发起子树：从 arch-trilc-daemon td-5 CTO 裁决接收 — TriCade MSI 全流程 E2E 子树。路由 CTO 设计 E2E 测试方案。"
+        },
+        {
+            "nodeId": "arch-trilc-msi-e2e-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "E2E 测试方案设计：TriCade MSI 全流程 — 全新 VM 安装验证清单（MSI 安装→daemon sc query TriLC=RUNNING→Tray 图标 🟢→TriPilot 自动重连→卸载清理残留检查）；环境准备（Windows VM 模板/快照）；门禁标准（44 项门禁，全部 PASS 才放行）。产出 e2e-test-plan.md。",
+            "next_agent": "TestEngineer",
+            "deliverables": [
+                "e2e-test-plan.md — 6 步 E2E 验证清单 + 环境准备 + 门禁标准 + 风险缓解 + 证据收集要求 + TestEngineer 执行说明"
+            ]
+        },
+        {
+            "nodeId": "arch-trilc-msi-e2e-2",
+            "agent": "TestEngineer",
+            "status": "done",
+            "action": "E2E 执行（SKIP）：TriCade MSI 全流程 — 44/44 门禁全部 SKIP，三硬阻塞：① TriCade MSI 未就绪（TWF-002-S8-2 pending）；② Windows VM 不可用（当前为开发机）；③ dotnet SDK 未安装（Tray 无法构建）。前置验证完成：arch-trilc-sync 82/82 单元测试重新执行确认 PASS；arch-trilc-tray 源码完整性确认；循环依赖告警已标记（TWF-002-S8-2 crossTreeDependsOn 本树 ↔ 本树需 S8-2 MSI）。产出 e2e-test-report.md（SKIP 裁决 + 环境准备清单 + CTO 裁决请求）。",
+            "dependsOn": ["arch-trilc-msi-e2e-1"],
+            "crossTreeDependsOn": [
+                {"treeId": "arch-trilc-tray", "minStatus": "done"},
+                {"treeId": "arch-trilc-sync", "minStatus": "done"}
+            ],
+            "deliverables": [
+                "e2e-test-report.md — SKIP 裁决 + 三硬阻塞分析 + 循环依赖告警 + 环境准备清单 + sync 82/82 前置验证 + CTO 裁决请求（选项 A/B）"
+            ]
+        }
+    ],
+    "relatedDocuments": [
+        {
+            "note": "CTO 技术设计 §8 TriCade MSI 安装 UX",
+            "source": "docs/workflow/operating-records/2026-W30/trees/arch-trilc-daemon/technical-design.md",
+            "kind": "design"
+        },
+        {
+            "note": "CTO td-5 门禁裁决：追加三条后续树，msi-e2e 为收官",
+            "source": "docs/workflow/operating-records/2026-W30/trees/arch-trilc-daemon/tree-op.json",
+            "kind": "ruling"
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "objectId": "TREE-OP-arch-trilc-msi-e2e",
+    "title": "TriCade MSI 全流程 E2E：全新 VM 安装→daemon→Tray→重连→卸载",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "arch-trilc-msi-e2e",
+    "status": "active",
+    "priority": "P0",
+    "summary": "来自 arch-trilc-daemon td-5 CTO 裁决。阻塞正式发布。TriCade MSI 全流程 E2E：全新 VM 安装→daemon 自启动（sc query TriLC=RUNNING）→Tray 图标出现→TriPilot 自动重连→卸载清理。依赖 arch-trilc-tray + arch-trilc-sync 完成。",
+    "metadata": {
+        "updatedBy": "TestEngineer",
+        "lastUpdated": "2026-07-22T19:07:37+08:00",
+        "version": "0.3.0",
+        "note": "v0.3.0: TestEngineer 节点 done (SKIP) — e2e-test-report.md 产出。44/44 门禁全部 SKIP：三硬阻塞（MSI 未就绪 + VM 不可用 + dotnet 未安装）。前置验证：arch-trilc-sync 82/82 PASS 重新确认。循环依赖告警：TWF-002-S8-2 ↔ arch-trilc-msi-e2e。需 CTO 裁决（选项 A 先产 MSI / 选项 B 降级为便携版验证）。"
+    },
+    "createdAt": "2026-07-22T18:09:00+08:00",
+    "relatedModules": ["TriLC", "TriCade", "TriPilot"],
+    "updatedAt": "2026-07-22T19:07:37+08:00"
+}

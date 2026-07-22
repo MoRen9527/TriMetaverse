@@ -1,0 +1,63 @@
+{
+    "nodes": [
+        {
+            "nodeId": "arch-trilc-sync-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "发起子树：从 arch-trilc-daemon td-5 CTO 裁决接收 — 会话云同步子树。路由 CTO 按 §6-§7 设计细化。"
+        },
+        {
+            "nodeId": "arch-trilc-sync-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "设计细化：会话云同步引擎 — 按 arch-trilc-daemon/technical-design.md §6-§7 细化 sync-engine.ts 实施规格、幂等去重策略（409 Conflict 处理）、离线重试退避算法（1s/2s/4s, max 3 retries）、TriMC 端点契约对齐（POST /internal/v1/sessions/sync）、sync_status 状态机边界条件。产出实施级设计文档 sync-engine-design.md。",
+            "next_agent": "FullStackDeveloper",
+            "output": "sync-engine-design.md (v1.0, APPROVE)：5 文件结构（types/retry/payload-builder/sync-engine/index）+ 17 测试用例规格 + 状态机边界详表 + 重试判断矩阵 + 端点契约实施约束。session-store v2 API 已完备，无需 schema 变更。"
+        },
+        {
+            "nodeId": "arch-trilc-sync-2",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "实施：会话云同步引擎 — TriLC src/sync/sync-engine.ts（syncSessionToTriMC buildSyncPayload 重试退避 幂等去重 超时 30s 消息上限 5000）；session-store/store.ts 扩展（updateSyncStatus getPendingSyncSessions）；schema migration（title sync_status last_synced_at cloud_session_id 四字段 + idx_sessions_sync 索引）；TriMC 端点 POST /internal/v1/sessions/sync 对接。产出代码 + 单元测试。",
+            "dependsOn": ["arch-trilc-sync-1"],
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "arch-trilc-sync-3",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "验证：云同步引擎测试 — sync-engine 单元测试（正常同步/409去重/503重试退避/超时/messages>5000截断）；sync_status 状态机迁移测试（local→pending→syncing→synced/error）；schema migration 幂等性；TriMC unavailable 离线行为。产出 test-report.md。",
+            "dependsOn": ["arch-trilc-sync-2"]
+        }
+    ],
+    "relatedDocuments": [
+        {
+            "note": "CTO 技术设计 §6 会话持久化 + §7 云同步 API",
+            "source": "docs/workflow/operating-records/2026-W30/trees/arch-trilc-daemon/technical-design.md",
+            "kind": "design"
+        },
+        {
+            "note": "CTO td-5 门禁裁决：追加三条后续树",
+            "source": "docs/workflow/operating-records/2026-W30/trees/arch-trilc-daemon/tree-op.json",
+            "kind": "ruling"
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "objectId": "TREE-OP-arch-trilc-sync",
+    "title": "会话云同步：TriLC↔TriMC 双向同步引擎",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "arch-trilc-sync",
+    "status": "active",
+    "priority": "P1",
+    "summary": "来自 arch-trilc-daemon td-5 CTO 裁决。TriLC↔TriMC 双向 sync engine：幂等去重（409 Conflict）、离线重试退避（1s/2s/4s, max 3 retries）、sync_status 状态机（local→pending→syncing→synced/error）、schema migration 四字段 + 索引、sync-engine 单元测试。Phase 1 TriLC→TriMC 单向。",
+    "metadata": {
+        "updatedBy": "ChiefTechnologyOfficer",
+        "lastUpdated": "2026-07-22T18:31:00+08:00",
+        "version": "0.2.0",
+        "note": "v0.2.0: CTO 设计细化完成 — sync-engine-design.md APPROVE，路由 FullStackDeveloper (arch-trilc-sync-2)"
+    },
+    "createdAt": "2026-07-22T18:09:00+08:00",
+    "relatedModules": ["TriLC", "TriMC"],
+    "updatedAt": "2026-07-22T18:09:00+08:00"
+}

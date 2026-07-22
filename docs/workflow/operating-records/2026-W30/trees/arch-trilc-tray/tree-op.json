@@ -1,0 +1,62 @@
+{
+    "nodes": [
+        {
+            "nodeId": "arch-trilc-tray-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "发起子树：从 arch-trilc-daemon td-5 CTO 裁决接收 — Windows 系统托盘子树。路由 CTO 按 §4 设计细化。"
+        },
+        {
+            "nodeId": "arch-trilc-tray-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "技术设计细化：WinForms 托盘 — 按 arch-trilc-daemon/technical-design.md §4 细化 C# .NET 8 WinForms NotifyIcon 实现规格、🟢🔴⚪ 三色图标资源嵌入、右键菜单项、HTTP /healthz 轮询逻辑、daemon 异常退出通知策略。产出实施级设计文档 technical-design.md（v1.0, 12 节, APPROVE）。",
+            "next_agent": "FullStackDeveloper"
+        },
+        {
+            "nodeId": "arch-trilc-tray-2",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "实施：Windows 系统托盘程序 — C# .NET 8 WinForms: Program.cs 入口、TrayIcon.cs 托盘管理、DaemonChecker.cs HTTP /healthz 轮询（每 5s）、三色图标（🟢🔴⚪）切换、右键菜单（状态/启动停止/会话面板/退出）、daemon 异常退出 Windows 通知。产出：TriLC/src/tray/*.cs + TriLC.Tray.exe 编译产物。",
+            "dependsOn": ["arch-trilc-tray-1"],
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "arch-trilc-tray-3",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "验证：托盘功能测试 — daemon 在线时🟢图标、离线时🔴图标、未安装时⚪图标；右键菜单交互；/healthz 轮询连续性；daemon 异常退出 Windows 通知弹出；托盘退出不影响 daemon 运行。产出 test-report.md。",
+            "dependsOn": ["arch-trilc-tray-2"]
+        }
+    ],
+    "relatedDocuments": [
+        {
+            "note": "CTO 技术设计 §4 系统托盘规格",
+            "source": "docs/workflow/operating-records/2026-W30/trees/arch-trilc-daemon/technical-design.md",
+            "kind": "design"
+        },
+        {
+            "note": "CTO td-5 门禁裁决：追加三条后续树",
+            "source": "docs/workflow/operating-records/2026-W30/trees/arch-trilc-daemon/tree-op.json",
+            "kind": "ruling"
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "objectId": "TREE-OP-arch-trilc-tray",
+    "title": "Windows 系统托盘：TriLC 状态指示 + 快捷入口",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "arch-trilc-tray",
+    "status": "active",
+    "priority": "P1",
+    "summary": "来自 arch-trilc-daemon td-5 CTO 裁决。C# .NET 8 WinForms NotifyIcon 托盘程序：🟢🔴⚪ 三色图标指示 daemon 状态，右键菜单（状态/启动停止/会话面板/退出），HTTP /healthz 轮询（每 5s），daemon 异常退出 Windows 通知。Phase 1 Windows MVP。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-07-22T18:31:00+08:00",
+        "version": "0.2.0",
+        "note": "v0.2.0: CTO 设计细化 done — technical-design.md v1.0 产出，12 节完整实施规格，门禁清单 8 项"
+    },
+    "createdAt": "2026-07-22T18:09:00+08:00",
+    "relatedModules": ["TriLC", "TriCade"],
+    "updatedAt": "2026-07-22T18:09:00+08:00"
+}
