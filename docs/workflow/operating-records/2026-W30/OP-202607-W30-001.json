@@ -91,7 +91,7 @@
                            "TriDev",
                            "TriTest"
                        ],
-    "updatedAt":  "2026-07-21T09:59:00+08:00",
+    "updatedAt":  "2026-07-22T17:10:00+08:00",
     "activeTrees":  [
                         {
                             "owner":  "CTO (小狄)",
@@ -102,18 +102,41 @@
                             "status":  "active"
                         },
                         {
-                            "title":  "W30 P0: D7 跨节点任务镜像 + S7 TriMC mirror 端点",
-                            "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/w30-s7-d7-mirror/tree-op.json",
-                            "status":  "pending",
-                            "treeId":  "w30-s7-d7-mirror",
-                            "owner":  "CTO (小狄)"
-                        },
-                        {
                             "title":  "CPO 裁决：TriModel 部署模型与多端接入方案",
                             "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/cpo-trimodel-deployment/tree-op.json",
                             "status":  "active",
                             "treeId":  "cpo-trimodel-deployment",
-                            "owner":  "CPO (小乔)"
+                            "owner":  "CTO (小狄)"
+                        },
+                        {
+                            "title":  "CPO 裁决：PC 端四模块边界与协作关系重定义",
+                            "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/cpo-pc-layer-escalation/tree-op.json",
+                            "status":  "active",
+                            "treeId":  "cpo-pc-layer-escalation",
+                            "owner":  "FullStackDeveloper (小全)"
+                        }
+                    ],
+                    "doneTreesThisWeek": [
+                        {
+                            "treeId":  "arch-trilc-daemon",
+                            "title":  "架构升级：TriLC 独立 daemon + 安装提示 + 多入口会话管理",
+                            "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/arch-trilc-daemon/tree-op.json",
+                            "status":  "done",
+                            "owner":  "CTO (小狄)"
+                        },
+                        {
+                            "treeId":  "w30-s7-d7-mirror",
+                            "title":  "S7/D7: TriMC 镜像端点 + 跨节点任务状态同步 + 偏差 D7 关闭",
+                            "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/w30-s7-d7-mirror/tree-op.json",
+                            "status":  "done",
+                            "owner":  "TestEngineer"
+                        },
+                        {
+                            "treeId":  "cpo-tricade-packaging-split",
+                            "title":  "CPO+CTO 联合评估：TriCade 拆分打包方案",
+                            "treeOpPath":  "docs/workflow/operating-records/2026-W30/trees/cpo-tricade-packaging-split/tree-op.json",
+                            "status":  "done",
+                            "owner":  "CEOChiefOfStaff"
                         }
                     ]
 }

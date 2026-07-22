@@ -1,0 +1,68 @@
+{
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "objectId": "TREE-OP-w30-s7-d7-mirror",
+    "title": "S7/D7: TriMC 镜像端点 + 跨节点任务状态同步 + 偏差 D7 关闭",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "w30-s7-d7-mirror",
+    "status":  "done",
+    "summary":  "实现 CPO Q6 裁决 + CTO W30 架构修正设计 §7.2 S7：① TriMC 新增 POST /internal/v1/tasks/mirror（TriLC 状态上报）+ GET /internal/v1/tasks（统一查询）；② TriLC daemon TaskRuntime 增加状态变更事件→推送 TriMC；③ 事件驱动推送 + 30s 心跳兜底，离线标记 unknown；④ 偏差 D7 关闭报告汇总。上游裁决：CPO Q6 APPROVE（ruling.md §6c），CTO 技术设计已就位（w30-architecture-fix-design.md §7.2 S7）。测试: 27/27 PASS (L1 16 + L2 8 + L3 3)。",
+    "nodes": [
+        {
+            "nodeId": "s7d7-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "发起 S7/D7 实施：TriMC 镜像端点 + 跨节点任务状态同步。上游 CPO Q6 已 APPROVE，CTO 技术设计已就位（w30-architecture-fix-design.md §7.2），路由 CTO 产出实施分步计划。"
+        },
+        {
+            "nodeId": "s7d7-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "delivery": "implementation-plan.md (4章: TriMC API契约 + TriLC TaskMirrorPusher设计 + 任务状态模型 + D7偏差关闭清单)",
+            "action": "基于已裁决设计产出 S7 实施分步计划：① TriMC mirror 端点（POST /tasks/mirror + GET /tasks）API 契约细化；② TriLC daemon 状态变更事件→推送逻辑设计；③ 任务状态模型（task_id/来源节点/状态快照/心跳）；④ D7 偏差关闭追踪清单。交付物：实施计划文档 + API 契约。",
+            "nextAgent": "FullStackDeveloper"
+        },
+        {
+            "nodeId": "s7d7-2",
+            "agent": "FullStackDeveloper",
+            "status": "in_progress",
+            "action": "实施：① TriMC src/server/ 新增 mirror + query 端点；② TriLC daemon TaskRuntime 增加状态变更事件→POST /tasks/mirror 推送；③ TriMC 任务状态模型实现；④ 30s 心跳兜底；⑤ 离线标记 unknown + 恢复全量推送。",
+            "nextAgent": "TestEngineer"
+        },
+        {
+            "nodeId": "s7d7-3",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "验证：① TriMC mirror 端点 curl 验证（状态上报+查询）；② TriLC→TriMC 端到端状态同步（含离线→恢复全量推送）；③ 30s 心跳兜底；④ 偏差 D7 关闭报告（汇总 D1-D7 关闭状态）。"
+        }
+    ],
+    "relatedDocuments": [
+        {
+            "note": "CPO Q6 裁决（跨节点任务状态同步 + 镜像机制）",
+            "source": "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/ruling.md",
+            "kind": "ruling"
+        },
+        {
+            "note": "CTO W30 架构修正技术设计 §7.2 S7",
+            "source": "docs/workflow/operating-records/2026-W29/trees/cpo-pc-layer-escalation/w30-architecture-fix-design.md",
+            "kind": "design"
+        },
+        {
+            "note": "W30 偏差注册表（D1-D7）",
+            "source": "docs/workflow/operating-records/2026-W30/trees/TWF-002/known-deviations.md",
+            "kind": "deviation-register"
+        }
+    ],
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-07-22T16:22:00+08:00",
+        "version": "0.2.0",
+         "note": "v0.2.0: s7d7-1 CTO done — implementation-plan.md 已产出 → s7d7-2 FullStackDeveloper in_progress"
+                  },
+    "createdAt": "2026-07-22T16:22:00+08:00",
+    "relatedModules": [
+        "TriMC",
+        "TriLC"
+    ],
+    "updatedAt": "2026-07-22T16:22:00+08:00"
+}

@@ -1,0 +1,75 @@
+﻿{
+    "relatedDocuments":  [
+                             {
+                                 "note":  "TriCade W29 已知偏差清单 D1-D7",
+                                 "source":  "docs/workflow/operating-records/2026-W29/trees/TWF-002/known-deviations.md",
+                                 "kind":  "deviation-register"
+                             }
+                         ],
+    "objectType":  "TREE_OPERATING_PLAN",
+    "parentWeekPlan":  "OP-202607-W29-001",
+    "objectId":  "TREE-OP-TWF-002",
+    "title":  "TriLC+PC端本地优先架构升级",
+    "ownerRole":  "CEOChiefOfStaff",
+    "treeId":  "TWF-002",
+    "status":  "active",
+    "summary":  "TriPilot+TriLC+TriCode+VSCodium 集成上线全流程。Phase 1（TriPilot 切断 Copilot 依赖）→ Phase 2（CLI + detached runtime）→ Phase 3（集成上线 + reasoning-guard + ProcessSupervisor）→ Phase 4（共享核心 agent-core 提取）→ Phase 5（端到端验证 + TriCade 打包）。当前 Phase 5 进行中。",
+    "metadata":  {
+                     "updatedBy":  "CEOChiefOfStaff",
+                     "lastUpdated":  "2026-07-19T17:00:00+08:00",
+                     "version":  "0.1.0"
+                 },
+    "phases":  [
+                   {
+                       "phase":  1,
+                       "title":  "TriPilot 切断 Copilot 依赖",
+                       "summary":  "删除 copilotDirect/ (5文件) + modelsDirect/，新建 trilcDirect/，extension.ts 重构。净代码 +254/-2388 lines。commit ae250fc。",
+                       "status":  "done"
+                   },
+                   {
+                       "phase":  2,
+                       "title":  "CLI 打包 + detached runtime",
+                       "summary":  "CLI esbuild 自包含打包 + bin 启动器 + Anthropic 直连流式解析器 + COS-005 垃圾代码清理。TriPilot f3dc488, TriLC 0146cab。可脱离 VSCodium 独立运行。",
+                       "status":  "done"
+                   },
+                   {
+                       "phase":  3,
+                       "title":  "集成上线 + 基础设施",
+                       "summary":  "model pipeline + tool e2e + TriCode adapter (TriMC), ProcessSupervisor + shell_exec + reasoning-guard 16/16 tests (TriMC 0add8c3+17bf362+02df9ac), SIGTERM/SIGINT handler (TriLC e4f4bd2)。",
+                       "status":  "done"
+                   },
+                   {
+                       "phase":  4,
+                       "title":  "共享核心 agent-core 提取",
+                       "summary":  "message-guard TriLC 双层空头防护 (cbd58ec), shell_exec ProcessSupervisor (c7de0e9), scheduler + heartbeat-policy 验证完成。",
+                       "status":  "done"
+                   },
+                   {
+                       "phase":  5,
+                       "title":  "端到端验证 + TriCade 打包上线",
+                       "summary":  "TriPilot webview→TriLC 工具调用循环验证、TriCode→opencode→TriLC 完整链路、VSCodium 扩展打包+本地安装、会话恢复+工作树恢复安全检查、TriLC Linux 适配收尾。",
+                       "status":  "in_progress"
+                   }
+               ],
+    "activeNode":  {
+                       "nodeId":  "TWF-002-7",
+                       "agent":  "CTO (小狄)",
+                       "subtasks":  [
+                                        "TriPilot webview→TriLC 端到端工具调用循环验证",
+                                        "TriCode adapter→opencode→TriLC 完整链路",
+                                        "VSCodium 扩展打包+本地安装验证",
+                                        "W29 第3问：长会话中断后自动恢复",
+                                        "TriLC detached runtime Linux 适配收尾"
+                                    ],
+                       "action":  "Phase 5: TriLC+TriPilot+TriCode+VSCodium 端到端验证 + TriCade 打包上线"
+                   },
+    "createdAt":  "2026-07-17T06:36:00+08:00",
+    "relatedModules":  [
+                           "TriPilot",
+                           "TriLC",
+                           "TriCode",
+                           "VSCodium",
+                           "TriMC"
+                       ],
+    "updatedAt":  "2026-07-19T17:00:00+08:00"
+}

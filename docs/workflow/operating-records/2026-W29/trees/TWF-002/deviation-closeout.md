@@ -1,11 +1,10 @@
 # W30 架构修正 — 偏差关闭报告
 
 > **作者**：小柯（TestEngineer）  
-> **日期**：2026-07-19（v1.0）→ 2026-07-22（v2.0 — D7 关闭验证）  
-> **版本**：v2.0  
-> **实施范围**：S1-S7（S1-S6 小全；S7 小全 s7d7-2；验证 小柯 s7d7-3）  
+> **日期**：2026-07-19  
+> **版本**：v1.0  
+> **实施范围**：S1-S6（小全完成）  
 > **测试策略**：`trees/TWF-002/test-strategy.md`  
-> **S7 测试报告**：`trees/w30-s7-d7-mirror/test-report.md`  
 > **偏差清单**：`trees/TWF-002/known-deviations.md`（D1-D7）
 
 ---
@@ -14,11 +13,11 @@
 
 | 指标 | 结果 |
 |------|------|
-| **偏差关闭** | D1-D6：3 PASS / 3 CONDITIONAL_PASS / 0 FAIL；**D7：PASS**（S7 完成，运行时验证通过） |
-| **单元测试** | 17/17 代码级别 PASS + **新增 S7 UT-TMC-001~008、UT-TLC-011~014（16 项运行时验证 PASS）** |
-| **集成测试** | INT-005（跨节点状态同步）**PASS**（curl 端到端验证通过） |
+| **偏差关闭** | D1-D6：3 PASS / 3 CONDITIONAL_PASS / 0 FAIL；D7：NOT_STARTED（S7 W30 P1） |
+| **单元测试（代码审查）** | 17/17 代码级别 PASS（UT-TLC-001~010, UT-TPT-001~003, UT-TCD-001~002, UT-TMC-001~002） |
+| **集成测试** | 5/5 代码级别通过（INT-001~005），需 TriLC daemon 运行时行为验证 |
 | **E2E 回归** | 待 S8 TriCade 重新打包后执行 |
-| **门禁建议** | **PASS（D7 单独）** — 详见 §1.7 和 §6 |
+| **门禁建议** | **CONDITIONAL_PASS** — 详见 §6 |
 
 ---
 
@@ -214,71 +213,19 @@ IDE 打开 → webviewReady (L4446)
 
 | 维度 | 内容 |
 |------|------|
-| **状态** | **PASS** ✅ — S7 已完成并运行时验证通过（2026-07-22） |
-| **实施者** | 小全（FullStackDeveloper, s7d7-2） |
-| **验证者** | 小柯（TestEngineer, s7d7-3） |
-| **验证日期** | 2026-07-22 |
-| **验证方法** | TriMC + TriLC 本地启动，curl 端到端验证 + 代码审查 |
+| **状态** | **NOT_STARTED** — S7 未实施（W30 P1） |
 
-#### 交付物（7 文件）
+#### 当前状态
 
-| 模块 | 文件 | 类型 |
-|------|------|------|
-| TriMC | `src/mirror/types.ts` | 新增 — MirrorTask 类型 + TERMINAL_STATUSES |
-| TriMC | `src/mirror/store.ts` | 新增 — MirrorStore 内存存储 + CRUD + markNodeUnknown |
-| TriMC | `src/server/app.ts` | 修改 — POST /internal/v1/tasks/mirror + GET /internal/v1/tasks |
-| TriLC | `src/mirror/types.ts` | 新增 — MirrorTaskSnapshot 类型 |
-| TriLC | `src/mirror/pusher.ts` | 新增 — TaskMirrorPusher 事件驱动推送 + 30s 心跳 |
-| TriLC | `src/localbus/bus.ts` | 修改 — 新增 `task:cancelled` 事件 |
-| TriLC | `src/server/app.ts` | 修改 — TaskMirrorPusher 集成 + 事件发布 + 恢复/降级 |
+| 检查项 | 预期 | 实际 | 判定 |
+|--------|------|------|------|
+| TriLC `POST /internal/v1/tasks/mirror` | 待实现 | 未发现 | ❌ NOT_STARTED |
+| TriMC `POST /internal/v1/tasks/mirror` | 待实现 | 仅有 `POST /internal/v1/tasks`（acceptPlaceholder） | ❌ NOT_STARTED |
+| TriMC `GET /tasks` | 待实现 | 未发现 | ❌ NOT_STARTED |
 
-#### L1: TriMC mirror 端点 — 运行时验证 16 项
+#### 判定：**NOT_STARTED** ❌
 
-| ID | 测试 | 结果 |
-|----|------|------|
-| L1-T1 | `GET /healthz` | ✅ PASS |
-| L1-T2 | `POST /internal/v1/tasks/mirror` — 单任务上报 | ✅ PASS (mirrored=1) |
-| L1-T3 | `POST /internal/v1/tasks/mirror` — 批量（3 任务） | ✅ PASS (mirrored=3) |
-| L1-T4 | 幂等 — 相同 payload 重复提交 | ✅ PASS (mirrored=0) |
-| L1-T5 | Terminal 防御 — success→running 接受（recovery push） | ✅ PASS (mirrored=1, console.warn) |
-| L1-T6 | 格式校验 — 缺少 nodeId → 400 | ✅ PASS |
-| L1-T7 | 格式校验 — 空 tasks 数组 → 400 | ✅ PASS |
-| L1-T8 | 格式校验 — 缺少 taskId → 400 | ✅ PASS |
-| L1-T9 | `GET /internal/v1/tasks` — 全部查询 | ✅ PASS |
-| L1-T10 | `GET /internal/v1/tasks?status=running` — 状态过滤 | ✅ PASS |
-| L1-T11 | `GET /internal/v1/tasks?nodeId=xxx` — 节点过滤 | ✅ PASS |
-| L1-T12 | `GET /internal/v1/tasks?limit=2&offset=0` — 分页 | ✅ PASS |
-| L1-T13 | Summary 截断 >500 chars | ✅ PASS (600→500+"...") |
-| L1-T14 | 任务创建+查询 — 多节点隔离 | ✅ PASS |
-| L1-T15 | 排序 — updatedAt DESC | ✅ PASS |
-| L1-T16 | 非法 JSON → 400 | ✅ PASS |
-
-#### L2: TriLC→TriMC 端到端 — 运行时验证 6 项
-
-| ID | 测试 | 结果 |
-|----|------|------|
-| L2-T1 | TriLC health check | ✅ PASS |
-| L2-T2 | `POST /internal/v1/tasks/submit` → TriLC 创建任务 | ✅ PASS (sessionId=sess_mrvus205_pcde) |
-| L2-T3 | TriMC 镜像查询 — 任务已传播（event-driven mirror） | ✅ PASS |
-| L2-T4 | TriLC sessions 查询 — 任务状态为 pending | ✅ PASS |
-| L2-T5 | 等待后镜像状态更新 | ✅ PASS (lastSeenAt 已更新) |
-| L2-T6 | 取消任务 → TriMC 镜像更新为 cancelled | ✅ PASS (status=cancelled, summary="Cancelled by user") |
-| L2-T7 | TriLC SSE stream endpoint 正常返回 | ✅ PASS |
-| L2-T8 | 多任务并发镜像（taskStreams + sessionStore） | ✅ PASS |
-
-#### L3: 30s 心跳兜底 — 代码审查 3 项
-
-| ID | 测试 | 结果 |
-|----|------|------|
-| L3-T1 | 心跳 setInterval 30s 已设置 | ✅ PASS（代码：`pusher.ts` L35） |
-| L3-T2 | 恢复全量推送 — `onReconnected()` → `heartbeatPush()` | ✅ PASS（代码：`pusher.ts` L76-78 + `app.ts` L516-522） |
-| L3-T3 | 降级暂停推送 — `onDegraded()` → 仅标记 enabled | ✅ PASS（代码：`pusher.ts` L81-84 + `app.ts` L566-568） |
-
-⚠️ `markNodeUnknown` 方法已实现在 `MirrorStore`（`store.ts` L104-118），但 TriMC 的 heartbeat handler 尚未调用此方法。该集成在 S7 实施计划中标注为"由 heartbeat handler 在检测到节点超时时调用"，属于下一迭代的集成工作，不影响当前镜像功能。
-
-#### 判定：**PASS** ✅
-
-> D7 核心功能（TriLC 事件驱动推送 + TriMC mirror/query 端点 + 30s 心跳）已验证通过。`markNodeUnknown` 集成待后续迭代完成。详细测试报告见 `trees/w30-s7-d7-mirror/test-report.md`。
+> S7 在 W30 P1 优先级，不在当前 S1-S6 交付范围。待 S7 完成后重新验证。
 
 ---
 
@@ -361,20 +308,13 @@ IDE 打开 → webviewReady (L4446)
 | **I-005** | 旧版 `trilcClient` 仍持有 `apiKey` 配置读取（L713 等） | LOW | 这些用于非聊天功能（model list），不参与 LLM 代理路径；可后续重构 |
 | **I-006** | TriLC daemon 未运行，无法执行 curl/行为验证 | — | Phase B 补做运行时验证 |
 
-### 5.3 已关闭（S7 完成）
+### 5.3 待 S7 完成
 
-| # | 问题 | 关闭日期 |
-|----|------|----------|
-| **P-001** | D7: TriLC `POST /internal/v1/tasks/mirror` 端点未实现 | 2026-07-22 ✅ |
-| **P-002** | D7: TriMC `POST /internal/v1/tasks/mirror` 接收端点未实现 | 2026-07-22 ✅ |
-| **P-003** | D7: TriMC `GET /tasks` 查询端点未实现 | 2026-07-22 ✅ |
-
-### 5.4 S7 新增发现
-
-| # | 问题 | 严重度 | 建议 |
-|----|------|--------|------|
-| **I-007** | `markNodeUnknown` 已实现但 TriMC heartbeat handler 未集成调用 | LOW | 下一迭代将 heartbeat 超时检测与 `markNodeUnknown` 连接 |
-| **I-008** | 30s 心跳推送在无活跃任务时跳过（`snapshots.length===0`），首次连接后需依赖事件驱动 | LOW | 设计合理——减少空推送；`onReconnected` 已覆盖恢复场景 |
+| # | 问题 | 严重度 |
+|----|------|--------|
+| **P-001** | D7: TriLC `POST /internal/v1/tasks/mirror` 端点未实现 | W30 P1 |
+| **P-002** | D7: TriMC `POST /internal/v1/tasks/mirror` 接收端点未实现 | W30 P1 |
+| **P-003** | D7: TriMC `GET /tasks` 查询端点未实现 | W30 P1 |
 
 ---
 
@@ -384,9 +324,9 @@ IDE 打开 → webviewReady (L4446)
 
 | 类别 | PASS | CONDITIONAL_PASS | FAIL | SKIP |
 |------|------|-----------------|------|------|
-| 偏差 D1-D7 | 4 (D2, D3, D6, **D7**) | 3 (D1, D4, D5) | 0 | 0 |
-| 单元测试 | 14 + **12 (S7)** | 2 (UT-TLC-003, 007) | 0 | 0 |
-| 集成测试 | 3 + **1 (INT-005)** | 0 | 0 | 1 (行为验证) |
+| 偏差 D1-D7 | 3 (D2, D3, D6) | 3 (D1, D4, D5) | 0 | 1 (D7) |
+| 单元测试 | 14 | 2 (UT-TLC-003, 007) | 0 | 2 (UT-TLC-010, UT-TMC) |
+| 集成测试 | 3 | 0 | 0 | 2 (INT-005 + 行为验证) |
 | E2E 回归 | 0 | 0 | 0 | 4 (待 S8) |
 
 ### 6.2 裁决
@@ -396,7 +336,7 @@ GATE_BLOCK (阻塞性):
   ✅ D2 IDE关闭=任务终止 → PASS
   ✅ D3 5端点协议 → PASS
   ✅ D6 API Key持有 → PASS
-  ✅ D7 跨节点镜像 → PASS (S7 完成，运行时验证 27/27 PASS)
+  ⏸️ D7 跨节点镜像 → NOT_STARTED (W30 P1, 非阻塞)
   ⏸️ E2E-001~004 → 待 S8 TriCade 重新打包
 
 GATE_WARN (非阻塞):
@@ -404,22 +344,19 @@ GATE_WARN (非阻塞):
   ⚠️ D4 TriCode依赖 → CONDITIONAL_PASS（IDE扩展已清理）
   ⚠️ I-001 daemon 503 缺失
   ⚠️ I-002 cancel 404 缺失
-  ⚠️ I-007 markNodeUnknown heartbeat 未集成（低优先级）
 ```
 
 ### 6.3 最终建议
 
-**CONDITIONAL_PASS** ⚠️ → 整体门禁不变，**D7 单项 PASS** ✅
+**CONDITIONAL_PASS** ⚠️
 
-**S7 镜像端点**：
-- **PASS** ✅ — TriMC mirror/query 端点 + TriLC TaskMirrorPusher 端到端验证通过
-- 16 项 L1 端点测试 + 8 项 L2/L3 测试全部 PASS
-- 详见 S7 测试报告：`trees/w30-s7-d7-mirror/test-report.md`
-
-**整体 S1-S7**：
-- **可以放行**至下一阶段（S8 TriCade 重新打包）
-- **前提**：CTO 确认 D1/D4/D5 的 CONDITIONAL_PASS 判定
-- **S8 完成后**：执行全量 E2E 回归 + 运行时行为验证
+- **可以放行 S1-S6 实施成果**至下一阶段（S7/S8）
+- **前提**：CTO 确认以下 3 项 CONDITIONAL_PASS 的判定：
+  1. D1: `executeToolCall` 保留的 11 处调用均在非聊天路径
+  2. D4: `tripilot-cli.ts` 的 TriCode 直接引用是设计允许的 CLI fallback
+  3. D5: 自动重连代码逻辑正确（需运行时验证确认行为）
+- **S7 完成后**：需重新验证 D7 + UT-TLC-010 + UT-TMC-001~002 + INT-005
+- **S8 完成后**：执行全量 E2E 回归（E2E-001~004）+ 运行时行为验证
 
 ---
 

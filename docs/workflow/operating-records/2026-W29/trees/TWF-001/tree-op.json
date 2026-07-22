@@ -1,0 +1,56 @@
+﻿{
+    "nodes":  [
+                  {
+                      "nodeId":  "TWF-001-0",
+                      "agent":  "CEOChiefOfStaff",
+                      "status":  "done",
+                      "action":  "总控：发起任务动态树工作流与故障恢复机制设计，路由CPO定义协议+SOP+校验规格"
+                  },
+                  {
+                      "nodeId":  "TWF-001-1",
+                      "agent":  "CPO",
+                      "delivery":  "docs/workflow/session-crash-recovery-spec.md v0.2",
+                      "status":  "done",
+                      "action":  "定义会话崩溃恢复SOP + 声明vs实际校验逻辑规格 + 触发条件"
+                  },
+                  {
+                      "nodeId":  "TWF-001-2",
+                      "agent":  "CTO",
+                      "delivery":  "scripts/validate-declarations.ps1 + scripts/detect-crash.ps1 + docs/workflow/trimc-recovery-interface.md",
+                      "status":  "done",
+                      "action":  "实现任务树工作流引擎 + 故障恢复检测脚本 + 校验逻辑"
+                  },
+                  {
+                      "nodeId":  "TWF-001-3",
+                      "agent":  "CEOChiefOfStaff",
+                      "status":  "done",
+                      "action":  "收口：OP JSON ID 同步，更新 deep-audit task track"
+                  }
+              ],
+    "relatedDocuments":  [
+                             {
+                                 "note":  "CPO 恢复 SOP v0.2",
+                                 "source":  "docs/workflow/session-crash-recovery-spec.md",
+                                 "kind":  "specification"
+                             }
+                         ],
+    "objectType":  "TREE_OPERATING_PLAN",
+    "parentWeekPlan":  "OP-202607-W29-001",
+    "objectId":  "TREE-OP-TWF-001",
+    "title":  "任务动态树工作流与故障恢复机制",
+    "ownerRole":  "CEOChiefOfStaff",
+    "treeId":  "TWF-001",
+    "status":  "done",
+    "summary":  "应深度审核缺口 G2/G11 发起的任务动态树工作流与故障恢复机制。CPO 定义协议+SOP+校验规格，CTO 实现引擎+检测脚本，小贾收口同步 OP JSON + deep-audit track。方案 A（Copilot CLI 事后检测+人工恢复）+ 方案 B（TriMC 前置拦截+自动恢复）共享校验规则。",
+    "metadata":  {
+                     "updatedBy":  "CEOChiefOfStaff",
+                     "lastUpdated":  "2026-07-17T12:32:00+08:00",
+                     "version":  "0.1.0"
+                 },
+    "createdAt":  "2026-07-17T11:09:00+08:00",
+    "relatedModules":  [
+                           "TriMC",
+                           "TriLC"
+                       ],
+    "updatedAt":  "2026-07-17T12:32:00+08:00"
+}

@@ -1,0 +1,85 @@
+﻿{
+    "nodes":  [
+                  {
+                      "nodeId":  "td-0",
+                      "agent":  "CEOChiefOfStaff",
+                      "status":  "done",
+                      "action":  "发起升级：CEO 明确 daemon 架构"
+                  },
+                  {
+                      "nodeId":  "td-1",
+                      "agent":  "ChiefProductOfficer",
+                      "delivery":  "ruling.md",
+                      "status":  "done",
+                      "action":  "Q7-Q11 产品设计裁决"
+                  },
+                  {
+                      "nodeId":  "td-2",
+                      "agent":  "ChiefTechnologyOfficer",
+                      "delivery":  "technical-design.md",
+                      "status":  "done",
+                      "action":  "技术方案 29KB"
+                  },
+                  {
+                      "nodeId":  "td-3",
+                      "agent":  "FullStackDeveloper",
+                      "delivery":  "TriLC cli.ts + store.ts + types.ts (install-service/install-regrun/uninstall-service/run + title/sync fields; 2026-07-22 fix: switch 缺少 4 case 已补)",
+                      "status":  "done",
+                      "action":  "实施 CLI 命令+schema+tray+重连"
+                  },
+                  {
+                      "nodeId":  "td-4",
+                      "agent":  "TestEngineer",
+                      "delivery":  "test-report.md (65/65 PASS: 28已有+37新增 session-store单元测试; CONDITIONAL_PASS, 17 SKIP因模块未就绪/环境限制)",
+                      "status":  "done",
+                      "action":  "验证 daemon 注册+会话管理",
+                      "dependsOn":  [
+                                        "td-3"
+                                    ]
+                  },
+                  {
+                      "nodeId":  "td-5",
+                      "agent":  "ChiefTechnologyOfficer",
+                      "status":  "done",
+                      "delivery":  "门禁裁决：① CONDITIONAL_PASS APPROVE 放行；② SyncStatus 'never'→'local' 统一，设计文档已同步；③ 树闭合，追加三条后续工作树 (arch-trilc-tray / arch-trilc-sync / arch-trilc-msi-e2e)",
+                      "action":  "门禁裁决：① 审核 test-report.md CONDITIONAL_PASS 放行；② SyncStatus 命名统一；③ 决定树闭合或追加后续节点",
+                      "dependsOn":  [
+                                        "td-4"
+                                    ]
+                  }
+              ],
+    "relatedDocuments":  [
+                             {
+                                 "note":  "CPO Q7-Q11 APPROVE",
+                                 "source":  "ruling.md",
+                                 "kind":  "ruling"
+                             },
+                             {
+                                 "note":  "CTO 技术方案 29KB",
+                                 "source":  "technical-design.md",
+                                 "kind":  "design"
+                             }
+                         ],
+    "objectType":  "TREE_OPERATING_PLAN",
+    "parentWeekPlan":  "OP-202607-W30-001",
+    "objectId":  "TREE-OP-arch-trilc-daemon",
+    "title":  "架构升级：TriLC 独立 daemon + 安装提示 + 多入口会话管理",
+    "ownerRole":  "CEOChiefOfStaff",
+    "treeId":  "arch-trilc-daemon",
+    "status":  "done",
+    "summary":  "CEO 明确：TriLC 必须作为独立 daemon 运行（Windows Service/RegRun），TriCade 安装时勾选注册。TriPilot+CLI 自动连接，会话本地管理+云同步按钮。CPO Q7-Q11 APPROVE，CTO 技术方案 29KB，小全已实施 CLI 命令+schema 迁移。",
+    "metadata":  {
+                     "updatedBy":  "CEOChiefOfStaff",
+                     "lastUpdated":  "2026-07-22T16:54:00+08:00",
+                     "version":  "0.4.0",
+                     "note":  "v0.4.0: td-5 CTO 门禁裁决 done — CONDITIONAL_PASS APPROVE, SyncStatus 'never'→'local' 统一, 树闭合, 追加三条后续树"
+                 },
+    "createdAt":  "2026-07-22T15:07:00+08:00",
+    "relatedModules":  [
+                           "TriLC",
+                           "TriPilot",
+                           "TriMC",
+                           "TriCade"
+                       ],
+    "updatedAt":  "2026-07-22T16:16:00+08:00"
+}

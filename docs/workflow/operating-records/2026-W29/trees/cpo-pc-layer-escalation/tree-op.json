@@ -66,9 +66,8 @@
                       "dependsOn":  [
                                         "cpo-pc-2"
                                     ],
-                      "status":  "in_progress",
-                      "action":  "按 CTO 方案实施代码重构，完成后提交 TestEngineer 验证",
-                      "note":  "2026-07-22 Tree 恢复：cpo-pc-2 done → cpo-pc-3 pending→in_progress，路由小全执行"
+                      "status":  "pending",
+                      "action":  "按 CTO 方案实施代码重构，完成后提交 TestEngineer 验证"
                   }
               ],
     "relatedDocuments":  [
@@ -103,9 +102,8 @@
     "summary":  "CEO 审计 TriPilot 运行时路径发现偏差：TriPilot extension.ts L5995 在 VS Code 扩展进程内本地执行工具调用，关闭 IDE = 任务终止。CEO 明确架构意图：TriLC 统一中枢编排，TriPilot 零执行能力，TriCode 为 TriLC 研发子工具，两条执行路径均由 TriLC daemon 保证生命周期。升级 CPO 裁决（小乔 2026-07-19）：Q1-Q4 APPROVE，Q5 FREEZE。已路由 CTO（小狄）产出：(1) W29 TriCade 已知偏差清单 (2) W30 架构修正技术设计。",
     "metadata":  {
                      "updatedBy":  "CEOChiefOfStaff",
-                     "lastUpdated":  "2026-07-22T16:16:00+08:00",
-                     "version":  "0.2.0",
-                     "note":  "v0.2.0: Tree 恢复 — cpo-pc-3 pending→in_progress，路由 FullStackDeveloper。同时修正 W30 OP JSON 中本树归属（从 doneTrees 移至 activeTrees）。"
+                     "lastUpdated":  "2026-07-19T17:00:00+08:00",
+                     "version":  "0.1.0"
                  },
     "createdAt":  "2026-07-19T15:06:00+08:00",
     "relatedModules":  [
@@ -114,5 +112,5 @@
                            "TriCode",
                            "VSCodium"
                        ],
-    "updatedAt":  "2026-07-22T16:16:00+08:00"
+    "updatedAt":  "2026-07-19T17:00:00+08:00"
 }

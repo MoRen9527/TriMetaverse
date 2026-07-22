@@ -73,6 +73,26 @@
                       "action":  "Phase B 验证执行：88 条测试用例逐条验证 + 回归测试 → 产出偏差关闭报告",
                       "summary":  "88/88 验证完毕：80 PASS + 8 CONDITIONAL_PASS（均为 Phase 2 deferred 或预存问题）。零 BLOCKER，零 CRITICAL，零 MAJOR。TriLC 27/27 回归全绿，TriModel 13/14（1 预存）。建议放行 Phase 1。",
                       "nextAgent":  "ChiefTechnologyOfficer"
+                  },
+                  {
+                      "nodeId":  "cpo-trimodel-4",
+                      "agent":  "ChiefTechnologyOfficer",
+                      "delivery":  "trees/cpo-trimodel-deployment/cto-final-ruling.md",
+                      "status":  "done",
+                      "action":  "CTO 接手：合并 Phase A（test-strategy）+ Phase B（deviation-closeout）双轨验证结果，产出 TriModel 配置平面 Phase 1 最终实施决策（放行/条件放行/回退）并拆解实施 Step",
+                      "summary":  "裁决 APPROVE 条件放行 Phase 1。88/88: 80 PASS + 8 CONDITIONAL_PASS，零 BLOCKER。8 项 CONDITIONAL_PASS 登记为 Phase 2 待办。拆解为 R1 合并冻结→R2 Registry 回写→R3 Phase 2 backlog→R4 CPO 验收。nextAgent: ImplementationEngineer (R1) + CTO (R2) + CPO (R4)。",
+                      "decisions":  {
+                                        "放行裁决":  "APPROVE 条件放行 Phase 1，8 项 CONDITIONAL_PASS 登记为 Phase 2 待办",
+                                        "Phase 1 门禁":  "L1-L5 全部 PASS，零 BLOCKER/CRITICAL/MAJOR，TriLC 27/27 回归全绿，TriModel 13/14（1 预存）",
+                                        "发布顺序":  "TriModel（服务端）→ TriLC（消费端）→ TriPilot（UI 端）",
+                                        "回滚路径":  "TriModel API 关闭→TriLC 自动 fallback library+本地缓存 Key→chat 不受影响（24h TTL 窗口内）",
+                                        "API 契约冻结":  "GET /v1/models + GET /v1/config/keys Phase 1 发布后冻结"
+                                    },
+                      "dependsOn":  [
+                                        "cpo-trimodel-3",
+                                        "cpo-trimodel-3b"
+                                    ],
+                      "nextAgent":  "ImplementationEngineer"
                   }
               ],
     "relatedDocuments":  [
@@ -96,10 +116,10 @@
     "status":  "active",
     "summary":  "TriCade 安装后发现模型显示异常，根因追踪到 TriModel 未集成到 PC 端打包。CEO 提出独立 API 服务部署方案：TriModel 单独部署，各端通过 API 读取模型配置，TriPilot→TriLC→TriModel 链路。需 CPO 裁决：部署模型（独立服务 vs npm library vs 混合）、TriLC 消费者定位、模型UI接线规格、Key管理演进。",
     "metadata":  {
-                     "updatedBy":  "TestEngineer",
-                     "lastUpdated":  "2026-07-21T11:20:00+08:00",
-                     "version":  "0.5.0",
-                     "note":  "v0.5.0: 新增 cpo-trimodel-3b（Phase B 偏差关闭报告）。88/88 验证：80 PASS + 8 CONDITIONAL_PASS。建议放行 Phase 1。"
+                     "updatedBy":  "ChiefTechnologyOfficer",
+                     "lastUpdated":  "2026-07-22T17:08:00+08:00",
+                     "version":  "0.7.0",
+                     "note":  "v0.7.0: CTO 终裁完成 — cpo-trimodel-4 done，APPROVE 条件放行 Phase 1。产出 cto-final-ruling.md，拆解 R1-R4 实施步骤。nextAgent=ImplementationEngineer (R1 合并冻结)。"
                  },
     "createdAt":  "2026-07-20T21:49:00+08:00",
     "relatedModules":  [
@@ -109,5 +129,5 @@
                            "TriMC",
                            "TriCade"
                        ],
-    "updatedAt":  "2026-07-21T11:20:00+08:00"
+    "updatedAt":  "2026-07-22T16:16:00+08:00"
 }
