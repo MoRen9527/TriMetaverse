@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/registry/company-governance-state.md
 - syncMode: source-only
-- lastSyncedAt: 2026-07-14T00:33:00+08:00
+- lastSyncedAt: 2026-07-23T21:55:00+08:00
 
 ## Registry Overview
 

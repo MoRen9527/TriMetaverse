@@ -346,19 +346,25 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\git-six-repo-auto-
 
 ## 10. 当前已知差异
 
-以下差异由最近一次（2026-07-03）全仓巡检识别，待后续处理：
+以下差异由最近一次（2026-07-23）全仓巡检识别，待后续处理：
 
 | # | 差异项 | 状态 | 说明 |
 | --- | --- | --- | --- |
-| 1 | TriModel GitHub remote 已同步 | ✓ 已修复 | GitHub 端已 rename `TriHost` → `TriModel`，本地 remote 已更新为 `MoRen9527/TriModel.git` |
-| 2 | `trimetaverse.code-workspace` 已修正 | ✓ 已修复 | `"path": "../TriModel"` |
-| 3 | `TriModel` 物理目录已就位 | ✓ 已修复 | `TriHost/` → `TriModel/` 重命名完成 |
-| 4 | `core-agent` 废弃处理 | ✓ 已修复 | 代码已迁入 `TriMC/src/observability/`（10 文件），架构文档 25 份引用已更新为 `TriMC (原 core-agent 已废弃)`，`docs/core-agent-to-trimc-migration-checklist.md` 保留作为迁移记录 |
-| 5 | `TriTraining` 正式登记 | ✓ 已修复 | 已添加到架构 §4、governance §1.1；Git 仓库已初始化 |
-| 6 | `TriStaciss/avatar-react/` 已删除 | ✓ 已修复 | 物理目录已删除，`TriStaciss/AGENTS.md` 已标记废弃，架构文档引用已更新为 `TriAvatar` |
-| 7 | 脚本名修正 | ✓ 已修复 | `Avatar-react` → `TriAvatar`、`Opentride` → `Tride` |
-| 8 | 健康巡检扩展至 20 仓 | ✓ 已修复 | 两个脚本 `RepoPaths` 已扩展至全 20 仓库 |
-| 9 | `README-git-health.md` 同步 | ✓ 已修复 | 仓库名 + 数量全部更新 |
+| 1 | TriLC/TriPilot/TriModel 分支统一为 dev | ⚠️ 待修复 | 三仓当前默认分支为 `main`（C 类升级遗留），需改为 `dev` 作为日常开发默认分支，`main` 仅保留稳定基线语义。已在 W30 向 `main` 推送了累积修复，下一步将 `main` 合并回 `dev` 后切换默认分支 |
+| 2 | TriModel GitHub remote 已同步 | ✓ 已修复 | GitHub 端已 rename `TriHost` → `TriModel`，本地 remote 已更新为 `MoRen9527/TriModel.git` |
+| 3 | `trimetaverse.code-workspace` 已修正 | ✓ 已修复 | `"path": "../TriModel"` |
+| 4 | `TriModel` 物理目录已就位 | ✓ 已修复 | `TriHost/` → `TriModel/` 重命名完成 |
+| 5 | `core-agent` 废弃处理 | ✓ 已修复 | 代码已迁入 `TriMC/src/observability/`（10 文件） |
+| 6 | `TriTraining` 正式登记 | ✓ 已修复 | 已添加到架构 §4、governance §1.1 |
+
+### 10.1 分支统一规则（2026-07-23 新增）
+
+所有仓库的日常开发提交统一走 `dev` 分支：
+
+- **所有成熟仓（A/B/C 类）**：`dev` 是唯一日常开发线。`main` 仅作为 A 类仓的稳定基线存在，只接受 `release/*` 或 `hotfix/*` 合并。
+- **C 类仓升级**：当 C 类仓满足 §6.3 升级条件（有真实代码、有发布需求），必须将默认分支从 `dev-only` 改为 `dev`，并建立 `main` 稳定基线。
+- **禁止直接向 `main` 提交**：所有仓库的 `main` 分支禁止直接 `git push`，必须通过 `dev → PR → main` 或 `release/* → main` 路径合入。
+- **当前遗留**：TriLC、TriPilot、TriModel 三仓因从 C 类快速升级到 A 类，W30 累积修复直接推送到了 `main`。需要在下一维护窗口执行 `main → dev` 同步，并设置 GitHub 默认分支为 `dev`。
 
 ## 11. 相关文档索引
 
