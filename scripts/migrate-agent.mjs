@@ -34,7 +34,8 @@ function splitBody(body, agentType) {
 
 function generateContract(agentId, agentType) {
   const k = toKebab(agentId);
-  return `# Agent Contract v2\ncontract:\n  version: "2.0"\n  type: agent-contract\n  agent_id: "${agentId}"\n  family: "${agentType}"\n\npaths:\n  soul: "${k}/soul.agent.md"\n  agent_body: "${k}/agent-body.agent.md"\n  agent_frontmatter: "${k}/agent-frontmatter.agent.md"\n  memory: "${k}/memory.agent.md"\n  colleagues_social: "${k}/colleagues-social.agent.md"\n\ndecision_rights:\n  approve: []\n  freeze: []\n  escalate: []\n\nruntime_baseline:\n  host: copilot-host\n  tri_mc_status: planned\n  tri_mc_migration_ready: false\n`;
+  return `# Agent Contract v2\ncontract:\n  version: "2.0"\n  type: agent-contract\n  agent_id: "${agentId}"\n  family: "${agentType}"\n\npaths:\n  soul: "${k}/soul.agent.md"\n  agent_body: "${k}/agent-body.agent.md"\n  agent_frontmatter: "${k}/agent-frontmatter.agent.md"\n  memory: "${k}/memory.agent.md"\n    colleagues: "${k}/colleagues.agent.md"
+  social: "${k}/social.agent.md"\n\ndecision_rights:\n  approve: []\n  freeze: []\n  escalate: []\n\nruntime_baseline:\n  host: copilot-host\n  tri_mc_status: planned\n  tri_mc_migration_ready: false\n`;
 }
 
 const MEMORY_TPL = '# Memory Layer Contract\n\n当前阶段：空模板。实际阶段记忆由 employee knowledge workspace 承载。\n';
@@ -66,7 +67,8 @@ async function main() {
     'agent-body.agent.md': agentBody + '\n',
     'agent-frontmatter.agent.md': '---\n' + frontmatter + '\n---\n',
     'memory.agent.md': MEMORY_TPL,
-    'colleagues-social.agent.md': COLLEAGUES_TPL,
+    'colleagues.agent.md': COLLEAGUES_TPL,
+    'social.agent.md': SOCIAL_TPL,
   };
 
   for (const [fn, fc] of Object.entries(files)) {
