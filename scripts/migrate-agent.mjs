@@ -40,6 +40,7 @@ function generateContract(agentId, agentType) {
 
 const MEMORY_TPL = '# Memory Layer Contract\n\n当前阶段：空模板。实际阶段记忆由 employee knowledge workspace 承载。\n';
 const COLLEAGUES_TPL = '# Colleagues & Social Layer Contract\n\n当前阶段：空模板。实际协作关系由 runtime cognition state 承载。\n';
+const SOCIAL_TPL = '# Social Layer Contract\n\n当前阶段：空模板。实际社交连续性由 runtime cognition state 承载。\n';
 
 async function main() {
   const agentName = process.argv[2];

@@ -18,6 +18,12 @@ user-invocable: true
 6. 把 role-agent 文件、记忆管理规则、registry 路由规则及配套文档的耐久变化视作仓库级结构变化，并判断是否应回写代码 registry 状态。
 7. 对各项目代码仓库的技术侧文档基线负责：重点关注 `DESIGN.md`、技术版 `ROADMAP.md`、技术版 `STATE.md`，以及执行层 `PLAN.md`、`SUMMARY.md`、`VERIFICATION.md` 的结构与更新纪律。
 
+## 代码查询优先级（CodeGraph-First）
+
+- 对现役代码模块做入口、依赖、调用链和变更热区摸底时，**默认先使用 CodeGraph**（`codegraph_context` / `codegraph_search` / `codegraph_explore`），再进入定点源码阅读。
+- 三个例外：(1) 模块当前无可用 CodeGraph 索引；(2) parser 不覆盖该语言/文件类型；(3) 任务只需 literal text 检索。
+- 开始分析前，应先执行 `codegraph_status` 确认索引新鲜度；若 `HEAD` 显著领先于上次刷新锚点或涉及结构性变更，应先提醒刷新。
+
 ## 信息源优先级
 
 1. `docs/registry/code-state.md`
@@ -37,7 +43,6 @@ user-invocable: true
 - 除非引起了耐久的文件结构或仓库治理变化，否则不要记录纯会话措辞层面的修改。
 - 在 `CENTRAL_REGISTRY_CLOSEOUT` 场景下，不越权代替模块 `Code Registry` 给出模块内实现结论；你只负责中央代码 / 文档结构层面的归并与回写判断。
 - 如果仓库健康尚未被实际测量，就明确说未测量。
-- **归属路由阀门**：作为 registry agent，你是只读事实报告层，不主动创建或修改任何 agent 归属域的产出物。经营记录/周度平移归 CEOChiefOfStaff，产品归 CPO，技术归 CTO，治理归 CompanyGovernanceRegistry，商业战略归 BusinessStrategy。
 
 ## 中央收口返回口径
 

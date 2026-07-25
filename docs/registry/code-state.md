@@ -1,112 +1,162 @@
-# TriMetaverse Code State
+﻿# TriCompany Code State
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/registry/code-state.md
+- sourceOfTruth: TriCompany/docs/registry/code-state.md
+- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- lastSyncedAt: 2026-07-14T00:33:00+08:00
+- publishTier: source-only
+- supportPublishedCopy: TriCompany-copilot-host-assets/docs/registry/code-state.md
+- supportSyncRule: source 稳定语义变更后，active published-copy 需在同轮或下一轮追平
+- lastSyncedAt: 2026-06-04
 
 ## Repository Map
 
-- 当前文件是 `TriMetaverse` 模块自身 `Code Registry` 工作层的本地真源，只维护 TriMetaverse 仓库结构、代码/文档资产健康与中央代码治理摘要；它不是 TriCompany 公司级 workflow 书面真源。
-
-- `.github/agents/`：角色 agent、registry agent 及其配套 memory / soul / colleagues / social 资产
-- `.github/prompts/`：可在聊天中直接调用的专用 prompt 命令，例如会议开始 / 结束入口
-- `docs/`：workflow、架构、治理和运行文档
-- `mermaid/`：图示资产和导出文件
-- `scripts/`：辅助脚本（含 Phase P0 PC 端打包脚本 `scripts/pack-pc/`）
-- 根目录 `.md`：白皮书、价值流动、阶段计划和方案文档
-
-## Registry Assets
-
-- `docs/registry/business-state.md`：中央策略边界、模块优先级与跨模块裁决登记
-- `docs/registry/product-state.md`：中央产品范围、模块边界与六层文档系统治理
-- `docs/registry/code-state.md`：本文件，仓库结构、代码健康与变更追踪基线
-- `docs/registry/company-governance-state.md`：岗位边界、秘书处、会议治理与 agent 发布纪律
-- `docs/registry/ipd-freeze-items-registry.md`（2026-07-10 新增）：5 项 through-pass FREEZE 的唯一独立文件实体，含逐项详情、解冻条件与来源追溯。CPO 3 项（F1 QA分值阈值 / F2 一票否决维度 / F3 candidate→final门槛）+ CTO 2 项（F4 seed/mnemonic / F5 local-only deployment）
-
-## Key Milestones
-
-- 2026-07-11：TriSkill Wave 2 全部完成（CTO 小狄）。4 个 skill — tri-code-review / tri-diagnosing-bugs / tri-implement / tri-teach — 覆盖 VERIFY-INTEGRATION / REDTEAM / CODING / CROSS-CUTTING。TriSkill Wave Status 全绿，114/114 todo done。
-- 2026-07-11：TriSkill Wave 2 tri-code-review 产出（CTO 小狄）。两轴审查法（Standards × Spec），12 项 Fowler smell baseline，copilot-host/TriMC 双轨适配，IPD VERIFY-INTEGRATION gate 定位。
-- 2026-07-11：TriSkill Wave 1 产品+技术产出完成。CPO 3 个（tri-grill-docs / tri-to-spec / tri-to-tickets）+ CTO 1 个（tri-tdd）+ tri-spec 消除。6 个 registry 文件同步，角色×阶段×skill 映射完整。
-- 2026-07-10：CARRY-005 首轮闭环，5 FREEZE 登记文件创建并纳入 governance assets
-- 2026-07-14：规格桥接模型 MVP 闭环（ITEM-20260709-001），D1-D4 全部完成，5/5 agent 合约通过语义验证，contract resolver 17/17 tests pass
-- 2026-07-13：CPO+CTO联审+CEO中央裁决闭环。三项议题全票 APPROVE：①积木验证器方法论融入 IPD ②TriTest 独立为第四层验证器框架模块 ③TriDeployment 独立为部署执行引擎（CEO 采纳 CTO 裁决，否决 CPO"回归 TriDev"方案）。TriDev ↔ TriTest ↔ TriDeployment 解耦架构确立：TriDev 为流程编排器（管 WHEN+WHO），TriTest/TriDeployment 为执行引擎（管 HOW），通过 CLI contract 解耦。
-- 2026-07-13：CLI interface spec 交付（CTO 小狄）。`docs/engineering/tri-dev-test-deploy-cli-interface-spec.md` V1.0 落档。基于三模块源码审计（TriTest cli.ts/types.ts/index.ts/runners/ + TriDeployment cli.ts/types.ts/deployer.ts + TriDev tridev.config.json）产出精确 CLI contract：`--format json` 标志（P0）、`tritest validate` 命令+`ValidatorResult` schema（P1）、`DeployResult` schema 标准化、5-wave 分波实施计划。关联：`tri-dev-test-deploy-decoupling.md` V1.0。
-- 2026-07-13：Phase 2 TriMC Agent Loop 全量完成（CTO 小狄）。`test-e2e/agent-loop.test.ts` 70/70 测试全绿，覆盖 SSE streaming + task tool policy + session.ts 重构 + agent.json 协议栈 + 4 层错误分类 + TriStaciss Anthropic Messages API fallback（P2-4）。关联：`TriMC/docs/engineering/phase-2-execution-note.md`。
-- 2026-07-13：CEOChiefOfStaff（小贾）execute 工具权限开通。`ceo-chief-of-staff.agent.md` tools 从 `[read, search, edit]` 扩展为 `[read, search, edit, execute]`，支持 powershell 文件系统操作与进程管理。
-- 2026-07-16：CTO-008-M TriMC↔TriLC 通信协议设计完成 + TriLC HTTP 服务器实现（CTO 小狄）。产出：协议设计文档 `docs/engineering/cto-008-M-tri-mc-lc-protocol.md`（消息格式 SSE/JSON、连接策略优先TriMC→TriLC fallback、服务发现、健康检查、API兼容性契约、会话同步策略）+ TriLC `src/server/app.ts`（HTTP API `/healthz` + `/internal/v1/agent` SSE+JSON 双模式，使用 `@trimetaverse/agent-core` 的 `agentLoop()`）。修复 agent-core dist 与源码版本不一致问题（重建 dist）。冒烟测试通过（healthz 200 + 400 + 404）。TriMC 编译无回归。关联：CPO 产品路由包裁决 #9-11、`docs/architecture-overall-unified.mmd`。
-- 2026-07-16：CTO-008-P PC 端打包技术方案 + ConnectionManager 实现 + Phase P0 打包脚本（CTO 小狄）。产出：①设计文档 `docs/engineering/cto-008-P-pc-electron-packaging.md`（三阶段渐进 P0→P1→P2，8 项 CPO 验收门禁映射，更新策略：壳统一+模块独立）；②TriLC `ConnectionManager`（3 次失败降级→2 次成功恢复状态机，30s 周期健康检查，TriMC 代理→本地回退，`/healthz` 返回 `trimc: connected|degraded`）；③Phase P0 打包脚本 `scripts/pack-pc/{bundle.ps1, install-extensions.ps1, start.bat}`；④TriLC 编译通过 + 冒烟测试通过（healthz→agent 代理失败→本地 fallback→clean shutdown）。关联：CPO 产品路由包裁决 #9-11、`docs/architecture-overall-unified.mmd`。
-- 2026-07-16：CTO-008-S TriMC K8s 高可用运维方案交付（CTO 小狄）。产出：①设计文档 `TriMC/docs/engineering/cto-008-S-k8s-ha-operations.md`（3 replicas + podAntiAffinity + PDB minAvailable=2 + Service sessionAffinity + multi-AZ/multi-cluster 可行性分析 + PostgreSQL HA 路径 + TriLC 客户端故障切换配合）；②K8s manifests 更新（deployment 2→3 replicas + podAntiAffinity，pdb minAvailable 1→2，service sessionAffinity: ClientIP）；③deployment-topology.md 同步更新（HPA/PDB/多副本从"未覆盖项"移到"已覆盖项"）。关联：`docs/architecture-overall-unified.mmd`（三热备要求）、CTO-008-P（TriLC ConnectionManager）。
-- 2026-07-22：arch-trilc-daemon 工作树闭合（CTO 小狄门禁裁决 APPROVE）。TriLC 独立 daemon 注册（CLI `install-service`/`install-regrun`）+ session-store schema v2（云同步字段 + 状态机）+ 65/65 单元测试全通过。SyncStatus 默认值统一为 `'local'`（设计文档已同步）。后续拆分三条独立工作树：arch-trilc-tray、arch-trilc-sync、arch-trilc-msi-e2e。关联：`docs/workflow/operating-records/2026-W30/trees/arch-trilc-daemon/`。
-- 2026-07-22：**arch-trilc-tray CTO 设计细化**（CTO 小狄裁决 APPROVE）。产出 `arch-trilc-tray/technical-design.md` v1.0（12 节）：C# .NET 8 WinForms NotifyIcon 托盘实施规格——项目骨架（Program.cs / TrayApplicationContext.cs / DaemonChecker.cs / MenuBuilder.cs / DaemonProcessManager.cs / NotificationManager.cs）、三色 .ico 嵌入资源（🟢#4CAF50 🔴#F44336 ⚪#9E9E9E）、/healthz HTTP 5s 轮询 + 状态机（Unknown→Running/Stopped）、5 项右键菜单（状态/启动停止/面板/关于/退出）、Running→Stopped 防抖通知（ShowBalloonTip）、CLI 路径三级 fallback 定位、8 项门禁清单。代码位：`TriLC/src/tray/`（待 FullStackDeveloper 实施）。关联：`docs/workflow/operating-records/2026-W30/trees/arch-trilc-tray/`。
-- 2026-07-22：**TriModel 配置平面 Phase 1 放行**（CTO 小狄裁决 APPROVE 条件放行）。三模块协同改造：TriModel 独立 HTTP API 服务（配置平面，4 端点，`127.0.0.1:3333`）+ TriLC HTTP 优先模型发现 + Key 缓存（S3 安全，15min 刷新，24h TTL）+ TriPilot 模型 UI（`defaultModelSelect` / `visibleModelIds` / `setDefaultModel`）。88/88 测试：80 PASS + 8 CONDITIONAL_PASS（零 BLOCKER）。TriLC 27/27 回归全绿，TriModel 14/14（1 预存）。5 层门禁（L1 API → L2 HTTP → L2b Key 缓存 → L3 UI → L4 安全 → L5 离线容错）全部 PASS。关联：`docs/workflow/operating-records/2026-W30/trees/cpo-trimodel-deployment/`。⚠️ R1 合入待完成：代码存在于三仓库工作树，ImplementationEngineer 需执行 `git add + commit + push`。
-- 2026-07-22：**arch-trilc-sync 设计细化完成**（CTO 小狄裁决 APPROVE）。TriLC 会话云同步引擎实施规格：5 文件结构（`src/sync/types.ts` / `retry.ts` / `payload-builder.ts` / `sync-engine.ts` / `index.ts`）+ 17 测试用例规格 + sync_status 状态机 7 态迁移表 + 重试判断矩阵（9 种错误分类）+ TriMC 端点 POST /internal/v1/sessions/sync 实施约束。session-store v2 API 已完备无需变更。路由 FullStackDeveloper（arch-trilc-sync-2）。关联：`docs/workflow/operating-records/2026-W30/trees/arch-trilc-sync/sync-engine-design.md`。
+- TriMetaverse/.github/agents/: 当前生效的本地正式接管 registry agent 与总助研发套件
+- TriMetaverse/.github/instructions/: 当前生效的总助维护规则
+- TriMetaverse/.github/manifests/: 记录从 shadow-test 收口到本地正式接管的宿主资产清单
+- TriMetaverse/.github/prompts/: 当前生效的会议开始 / 结束入口
+- TriMetaverse/.github/: 当前生效的 Copilot 本地正式接管宿主资产层
+- support root: 当前生效本地正式接管资产统一回看的支撑根目录，负责提供 docs、runtime 与 vendor 参考副本；当前固定为 TriCompany-copilot-host-assets
+- historical support root name: `TriCompany-shadow-host` 仅保留为 phase-1 已验证证据链对应的历史路径名
+- source-agents/: registry agent 草案与员工源侧五件套；不作为 VS Code agent discovery 入口
+- .github/instructions/: 总助维护规则
+- .github/manifests/: 回迁 TriMetaverse/.github 的 shadow-test 清单
+- .github/prompts/: 会议开始 / 结束入口
+- .github/: 当前阶段 Copilot 试运行宿主资产层
+- docs/product/: 产品真源
+- docs/engineering/: 技术真源
+- docs/workflow/: 编排与秘书处草案
+- docs/workflow/: 集成产品开发流程（IPD 流程）、秘书处草案与跨岗位 owner 边界
+- docs/execution/: 当前启动阶段执行文档
+- docs/training/: 岗位、模块、代码和流程培训材料
+- vendor/reference/: Hermes 冻结参考副本
+- runtime/cognition/: 元认知 contracts、kernel、providers，以及 chief-of-staff workflow / schedule source 回迁入口
 
 ## Current Code Health
 
-- 本仓库的“代码健康”主要体现为文档结构、脚本资产和图示资产的一致性，而不是业务服务代码覆盖率。
-- 当前未建立系统化的仓库健康评分基线。
+- 当前属于 docs-first + .github 宿主资产并行状态
+- 当前已完成 runtime/cognition 的 smoke、contract、integration、backend、模拟 external-adapter、HTTP external-backend、Supermemory schema、Supermemory SDK seam 与 Supermemory live smoke 九层验证基线
+- 当前已把 chief-of-staff approval report、task_resolver、cron_runner / resident_runner、knowledge workbench、schedule staging CLI、workflow bridge 与对应 source validation 回写到 `TriCompany/runtime/cognition/`
+- 当前已把 chief-of-staff resident runner CLI、operating review closeout CLI，以及 registry / operating review closeout source validation 回写到 `TriCompany/runtime/cognition/`
+- 当前已把 chief-of-staff wiki batch refresh CLI 回写到 `TriCompany/runtime/cognition/`，当前可见 top-level `chief_of_staff_*.py` 入口已与 support bundle 对齐
+- 当前已把 workflow hook 的 command 识别、stdin 解析与 `sync-memory` 调度纯逻辑提炼到 `TriCompany/runtime/cognition/chief_of_staff_workflow_sync_hook.py`；TriMetaverse live hook 脚本仅保留 thin wrapper
+- 当前生效的本地正式接管 agent / prompt / manifest 位于 TriMetaverse/.github，TriCompany-copilot-host-assets 负责支撑文档、runtime 与 vendor 参考副本
+- 当前已完成同一 support root 下的连续会议链路补证，可统一写成“本地 Copilot-host 已完成 shadow-test，现进入正式接管；该结论不等于正式宿主切换。”
+- 当前已完成中央命名吸收；未来若进入 `TriMC` 新宿主，应另建平行宿主资产包，而不是复用当前 Copilot-host 的物理命名
+- 当前 CPO / CTO 已采用既有 `TriMetaverse/.github` live entry 上岗，并已补齐 `TriCompany/source-agents/chief-product-officer/**`、`TriCompany/source-agents/chief-technology-officer/**`、host object generation、CLI 与 support `knowledge/{roles,employees}/chief-{product,technology}-officer/**` 对象载荷；这不代表 TriMC 正式宿主切换
+- 当前 CodeRegistry 由 CTO 小狄管理，负责代码事实、CodeGraph 摘要、技术风险、实现边界、仓库健康与工程门禁；CEOChiefOfStaff 只负责技术事项的公司级路由、协调、催办、升级与中央收口
+- 当前集成产品开发流程（IPD 流程）由 TriCompany source 侧维护；TriDev 只作为产品开发执行段 phase engine / local engine 被调用，不承接 COO / CFO 持续运营监控或公司级总编排
+- 当前已把 `runtime/cognition/ipd_case_engine.py` 改写为一比一 ten-phase case line：阶段模板、work item、phase package draft、participant roles 与总助 / CEO 顺序签核已按 `DISCOVERY -> DELIVERY` 对齐
+- 当前已新增 `run_case_autopilot` 与 `chief_of_staff_ipd_case autopilot`：可自动推进 intake 签核、十阶段提交/签核、岗位参与记录，并在 TriDev 可用时同步写入 phase result / gate / delivery bundle 校验证据；支持 `manual-ceo-signoff` 在 CEO 签核点切人工暂停
+- 当前已具备 source 侧回归入口：`python -m unittest runtime.cognition.chief_of_staff_bridge_validation`、`python -m unittest runtime.cognition.chief_of_staff_workflow_validation`、`python -m unittest runtime.cognition.chief_of_staff_schedule_staging_validation`
+- 当前已具备 closeout 相关 source 侧回归入口：`python -m unittest runtime.cognition.chief_of_staff_registry_closeout_validation`、`python -m unittest runtime.cognition.chief_of_staff_operating_review_closeout_validation`
+- 当前已具备 source 侧 CLI / staging 入口：`python -m runtime.cognition.chief_of_staff_schedule_staging --help`
+- 当前已具备 source 侧 resident / closeout CLI 入口：`python -m runtime.cognition.chief_of_staff_resident_runner --help`、`python -m runtime.cognition.chief_of_staff_operating_review_closeout --help`
+- 当前已具备 source 侧 wiki batch refresh CLI 入口：`python -m runtime.cognition.chief_of_staff_wiki_batch_refresh --help`
+- 当前“代码健康”主要体现为结构边界、文档一致性和当前阶段宿主资产口径的清晰度
+- 当前已具备一个未执行的 Supermemory live smoke 入口，用于承接真实账号验证前的最后一层门禁
+- 当前已明确公司级技术纪律：架构表中的模块一旦被写成正式模块面，默认由 CTO 与对应 CodeRegistry 补齐独立 git 仓、`README.md`、`docs/` 六件套、`.gitignore` 与本地 CodeGraph 初始化、忽略规则和索引摘要维护；占位模块也先补齐骨架，再保持“待初始化”标记；`TriDev` 已作为当前首个执行对象落地该基线
+- 当前已明确既有正式模块流程：`Discovery` 阶段先产出 `ModuleTargetingReport`，并由 `TriDev` 执行 `ModuleReadinessInit`（标配审计与缺口 init），通过后再进入后续业务开发
+- 当前已明确新正式模块流程：`Discovery` 阶段先产出 `NewModuleBaselineRelease`（含 `vendor-extraction-profile`），签核到 `approved` 后由 `TriDev init` 消费发布包执行 `init`；模块 owner 继续对提交质量与长期演进负责
+- 当前已完成宿主对象生成编排层设计：`docs/engineering/host-object-generation-design.md`（COPY/SYMLINK/GENERATE 三条路径、5-Gate Pipeline、版本策略）
+- 当前已完成 Phase A 代码注册：TestEngineer + FullStackDeveloper HostObjectSetDefinition 写入 `runtime/cognition/host_object_generation.py`，DECLARED_HOST_OBJECT_SETS 9→11，EMPLOYEE_GENERATORS 补齐 CMO/COO/CFO 缺口 7→13
+- **TriStaciss Credit Ledger 已落地（2026-07-14，CTO 小狄）**：`credit_ledger.py`（SQLite 账本）+ `credit_api.py`（balance/usage 查询端点）已集成到 `/v1/messages` 与 `/v1/chat/completions` 非流式路径。G3 门禁"Credit 消耗可追踪 → 可查证"非流式侧已达成；流式路径标记为 deferred
+- **CTO-008 大框架 4/4 全部完成（2026-07-16，CTO 小狄）**；CTO-008-M 代码实现也已落地（2026-07-17）：CTO-008-C（TriMC/TriLC 共享核心抽象，含经营工作流状态机）+ CTO-008-M（TriMC↔TriLC 通信协议，M.1-M.6 28 tests 全部通过）+ CTO-008-P（PC 端打包方案）+ CTO-008-S（TriMC K8s HA 运维方案）全部设计+代码交付。K8s manifests 已同步更新（3 replicas + podAntiAffinity + HPA + PDB minAvailable=2 + Service sessionAffinity）。关联：TriMC/docs/engineering/cto-008-*.md 四份设计文档、TriMC/k8s/trimc/ manifests、CTO-007 smoke test pipeline
+- **COS-005 Openclaw 吸收链规划已完成（2026-07-17，CTO 小狄）**：守护进程与定时任务吸收规划 APPROVED。输出 TriMC/docs/engineering/cos-005-openclaw-absorption-plan.md，四阶段 12h 分步吸收（P0 调度核心 4h → P1 执行可靠性+P1 进程监督 6h → P2 单机服务 2h）。吸收目标：CronService 定时任务调度 + ProcessSupervisor 受管子进程 + Backoff 退避重试。待 小全/小柯 接手实现阶段
+- **cpo-trimodel-deployment Phase 1 完成（2026-07-22，小全/小狄）**：三仓库配置平面改造交付 — TriModel（API server 4 端点 + DeepSeek-Anthropic provider + v0.2.0）、TriLC（key-cache + mirror pusher + session store v2 + contract resolver）、TriPilot（TriLCClient HTTP+SSE）。Phase 2 backlog 8 项 CONDITIONAL_PASS 已登记（TriModel/docs/execution/cpo-trimodel-deployment/phase-2-backlog.md）。树闭合裁决：APPROVE（CTO 小狄，版本 bump commit 本地已落，push 待网络恢复）
+- **Q3 Phase 2 统一发布管线完成（2026-07-24，CTO 小狄）**：`source_publish_check.py` 新增 `--publish-agents` 模式（dry-run by default, `--agent-execute` 显式写入）。核心函数：`run_agent_publish()`、`_filter_agent_publish_entries()`、`_publish_single_agent()`。manifest 动态派生 `AGENT_PUBLISH_ALLOWED_TARGETS` 白名单。`employee_host_publish.py` 末尾追加 subprocess 委托。验证：`source_publish_check_validation.py` 33/33 全部通过（13 回归 + 20 agent publish 新增）。独立于 `--sync` 模式，可与 `--check` 组合使用。关联：`TriCompany/runtime/cognition/source_publish_check.py`、`TriCompany/runtime/cognition/employee_host_publish.py`、`TriCompany/source-agents/registries/trimetaverse-live-agent-publish-manifest.json`
 
 ## Change Tracking Baseline
 
-- 关键变化应优先体现在白皮书、workflow 和 registry 文档中。
-- 所有代码设计、实现、修改和维护，都应同步回写代码文档，不能把代码变更只留在源码与聊天记录里。
-- 重大边界变化应同步记录到 `business-strategy-boundaries.md` 或 `business-strategy-evolution-log.md`。
-- 涉及 `TriMC`、`TriModel`、`TriSkill` 或 PC 端软件层（`TriPilot` / `Tride` / `vscodium`）的中央边界变化，应优先同步回写中央 registry，再扩散到模块级登记层。
-- 对 `CEOChiefOfStaff` 及其他 role-agent 的本体 / soul / memory / 配套制度的耐久优化，若构成可复用结构变化，应同步评估是否回写 `product-state.md` 与 `code-state.md`。
-- 对总助会议流程新增的专用 prompt 命令，也应视作可复用的仓库结构与协作入口变化。
-- 对总助新增的工作协作档案和社交档案，也应视作可复用的配套资产结构变化，用于分别承接工作关系连续性与闲聊社交连续性。
-- 各项目代码仓库后续应按 `模块六层文档协同系统` 建立文档基线；即默认建立 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`、`docs/training/`，其中技术侧负责 `DESIGN.md`、技术版 `ROADMAP.md`、技术版 `STATE.md`，执行层负责各阶段 `PLAN.md`、`SUMMARY.md`、`VERIFICATION.md`，`registry` 负责模块事实登记，`workflow` 负责模块流程入口与机制文档，`training` 负责岗位、模块、代码和流程导读。
-- 技术目录统一使用 `engineering`，因为这里承接的是设计、实现顺序、质量与交付工程，而不只是零散“技术说明”或源码笔记。
-- 各模块的 `Code Registry` 不应只做目录摘要；它应按具体业务走线拆分维护代码文档，用教学式、逐段到逐行可读的方式解释入口、调用链、关键对象、配置流、状态流和边界，让小白读完后能迅速理解整个模块设计与各业务代码调用流程。
-- 各模块的业务线教学代码文档还必须补清端到端关系：这一条业务的输入生产者是谁、输出消费者是谁；如果不是数据业务流，也要写清对应的请求发起方、处理环节、结果承接方和后续消费方。
-- CodeGraph 定位为各模块 `Code Registry` 的本地辅助索引资产，只用于帮助识别入口、依赖、调用链和变更热区；它不替代 `code-state.md`、教学级代码文档、源码阅读结论或人工收口判断。
-- 对现役代码模块做入口、依赖、调用链和变更热区摸底时，默认先使用 CodeGraph，再进入定点源码阅读；除非模块当前没有可用索引、parser 不覆盖，或任务本身只需要 literal text 检索。
-- 架构表中的模块一旦被写成正式模块面，默认应补齐独立 git 仓、`README.md`、`docs/` 六件套、根级 `.gitignore` 与本地 CodeGraph；低成熟 / 占位模块也应先补齐这套骨架，再继续保持待初始化标记。
-- 对既有正式模块，`Discovery` 阶段应先形成 `ModuleTargetingReport`，并由 `TriDev` 完成 `ModuleReadinessInit`（标配审计与缺口 init）后再进入后续开发。
-- 对新增正式模块，`Discovery` 阶段应先形成 `NewModuleBaselineRelease`（含 `vendor-extraction-profile`），经签核后再由 `TriDev init` 执行模块骨架初始化。
-- `.codegraph/` 应保持为本地生成物和缓存，不提交为仓库真源；可提交的只有由对应模块 `CodeRegistry` 审阅后的摘要、排除规则、扫描时间、commit / 版本锚点、主要发现和待确认缺口。
-- `docs/workflow/handoff-templates/*.example.json` 与 `docs/workflow/operating-cycle-example/*.sample.json` 属于样板 / fixture 层资产；它们可用于 schema 对齐、workflow 演示和 runtime validation，但不能单独作为中央 registry 回写、项目事实摘要或模块已确认状态的直接证据。
+- 重大边界变化应先更新 docs/product 与 docs/engineering
+- registry 仅在明确要求记录时同步更新
+- 总助套件、Hermes 融合规则和 .github 宿主资产的耐久变化应视作仓库结构变化，必要时回写 code-state
+- 模块进入正式模块面后，应由对应 CTO / CodeRegistry 在同轮或下一轮补齐 git / `README.md` / `docs/` 六件套 / `.gitignore` / CodeGraph 标配，并登记摘要与刷新节律说明
+- 若涉及既有正式模块，`Discovery` 阶段必须先完成 `ModuleTargetingReport` 与 `ModuleReadinessInit`，再进入后续阶段
+- 若涉及新增正式模块，`Discovery` 阶段必须先完成 `NewModuleBaselineRelease` 的 `candidate -> approved`，再允许 `TriDev init` 落下骨架并进入后续阶段
+
+## Local CodeGraph Index
+
+- 2026-05-24 已由 CTO 小狄技术线完成本地 CodeGraph 试点初始化，并由 TriCompanyCodeRegistry 接管索引摘要。
+- 索引范围为仓根干净索引；`.gitignore` 已排除 `.codegraph/`、`.tricompany-cognition/`、`node_modules/`、`vendor/`、构建产物、缓存和环境文件。
+- 当前摘要：100 files，1,494 nodes，3,042 edges，language `python`。
+- 当前 pending changes 为 `0/0/0`；`.codegraph/` 只作为本地缓存，不作为仓库真源提交。
 
 ## Git Health
 
-- 尚未建立 registry 级 git 健康摘要。
-- 需要后续 `TriMetaverseCodeRegistry` 在明确要求下补充分支、变更热区和健康规则。
-
-## Cross-Module CodeGraph Pilot
-
-- 2026-05-24 已完成现役代码模块本地 CodeGraph 试点初始化与收口：`TriStaciss`、`TriMC`、`Tride`、`TriPilot`、`TriAvatar`、`TriLC`、`TriDeployment`、`TriCompany` 均形成可用本地摘要；`TriTest` 与 `vscodium/patches` 完成 CodeGraph 探测但未产出可用语义图，由对应 CodeRegistry 接管“不适用 / parser 不覆盖”限制说明。
-- 中央层只记录试点状态和跨模块续跑规则；各模块 CodeGraph 摘要由对应模块 `CodeRegistry` 接管，`.codegraph/` 缓存不进入仓库真源。
-- 首批索引摘要：
-  - `TriStaciss`：149 files，1,686 nodes，2,827 edges。
-  - `TriMC`：17 files，82 nodes，144 edges；已排除 `node_modules/` 与 `vendor/openclaw/`，只覆盖 `src/` 与 `test/` 自研现役代码面。
-  - `Tride`：869 files，11,120 nodes，23,596 edges。
-  - `TriPilot`：23 files，545 nodes，2,000 edges；仓库瘦身后已重建仓根干净索引。
-  - `TriAvatar`：102 files，888 nodes，1,342 edges；仓库瘦身后已重建仓根干净索引。
-  - `TriLC`：10 files，39 nodes，48 edges；已排除 `vendor/openclaw/`，只覆盖本地域控制器自研 TypeScript 面。
-  - `TriDeployment`：~7 source files（TypeScript），2 nodes，0 edges；已具备完整 CLI + deployer + registry + targets；CodeGraph 统计需刷新（当前数据为早期快照）。
-  - `TriCompany`：100 files，1,494 nodes，3,042 edges；已排除 `.tricompany-cognition/`、`vendor/`、依赖目录和构建产物。
-  - `TriTest`：~7 source files（TypeScript），0 nodes，0 edges；已具备完整 CLI + unit-runner + integration-runner + reporters；CodeGraph 统计需刷新（当前数据为早期快照，parser 未产出可用图）。
-  - `vscodium`：14 files，0 nodes，0 edges；当前只得到仓根 YAML / workflow 配置面的弱语义索引，`.patch` 文件仍未产出可用代码语义图；不对 `vscode/` 上游源码镜像建索引。
-  - 2026-05-26 已补齐架构表正式模块标配骨架；后续既有正式模块统一走 `ModuleTargetingReport + ModuleReadinessInit`，新增正式模块统一走 `NewModuleBaselineRelease + TriDev init`，均在 `Discovery` 阶段完成门禁后落地。
+- `CodeRegistry` 负责维护活跃模块的 `Git Health` 事实：dirty worktree 基线、已知未提交切片、风险说明和升级提示。
+- `CodeRegistry` 不直接代替 owner 做本地提交；本地提交责任仍归对应模块 owner 或当前实际开发 owner。
+- 活跃模块若跨过一个会议周期仍保持 dirty，应把原因、风险、是否已有可提交切片与预计收口时间补回 `Git Health` 或 operating record。
+- 对存在治理中 `vendor/` 冻结基线的模块，`vendor/` 默认进入模块 `.gitignore`，主 `CodeGraph` 默认排除 `vendor/`；专项吸收任务再临时切到 vendor 视图。
 
 ## Quality Risks
 
-- 文档先于实现的风险较高。
-- 多仓演进可能导致模块边界文档过时。
-- 若不持续区分 `TriMC` 运行面、`TriModel` 宿主适配层与 PC 端软件层，中央登记会再次回退到旧三主控语义。
-- 若把 `TriSkill` 的预留状态误写成现役能力，会高估统一 skill 供给能力并误导实现顺序。
-- 若不持续回写 registry，中央策略容易与模块现实脱节。
-- 总助记忆管理目前仍以文档驱动的手工简化版为主，后续若不继续工程化，容易再次漂移。
-- 若把 `handoff-templates` 或 `operating-cycle-example` 下的 example/sample 文件直接当作事实引用，会把样板层误写成真源层，并高估中央收口、经营记录或模块现实进度。
+- 若把 TriCompany 误当作正式宿主，会造成后续宿主集成返工
+- 若混淆 TriMetaverse/.github 生效宿主资产与 TriCompany-copilot-host-assets support root，会导致当前正式接管路径失真
+- 若把“当前由 copilot 宿主承载 skill / cron 可用验证”误写成“copilot 等同于 TriMC”，会直接破坏宿主边界治理
+- 若不持续区分身份层和记忆层，总助仍会退化为显式操作底层文件的设计
+- 若不明确 .github 当前是本地正式接管宿主资产层而非 TriMC 正式宿主层，后续容易把阶段边界写乱
+- 若把元认知层做成全员共享单一记忆池，会破坏员工人格边界和审计边界
+- 若把元认知层做成每个员工一整套独立 runtime，会破坏公司级共享结论与回迁一致性
+- 若 CPO / CTO 上岗后不及时输出首轮接管判断并接管 ProductRegistry / CodeRegistry，总助会继续代管过多边界
+- 若后续验证不继续沿用 TriCompany-copilot-host-assets 作为唯一 support root，会导致当前生效路径与宿主资产说明失真
+- 若把 Supermemory 官方 schema 验证等同于真实 Supermemory live 接入，会高估 production 接入成熟度
+- 若把 Supermemory SDK seam 验证等同于真实官方 SDK 包接通或真实账号可用，也会高估 production 接入成熟度
+- 若把 live smoke 脚本已存在等同于 live smoke 已执行，也会高估 production 接入成熟度
+- 若把 ten-phase case line 已落地误写成 PRD 分叉并行、多分支 delivery 聚合、完整岗位 adapter 或正式宿主都已完成，会再次高估当前成熟度
 
 ## Sources
 
-- `../../docs/`
-- `../../scripts/`
-- `../../mermaid/`
-- `business-strategy-boundaries.md`
-- `business-strategy-evolution-log.md`
-- `../workflow/project-repo-document-baseline.md`
+- ../engineering/DESIGN.md
+- ../engineering/ROADMAP.md
+- ../engineering/STATE.md
+- ../engineering/metacognition-architecture.md
+- ../workflow/chief-of-staff-rd-orchestration.md
+- ../workflow/github-backport-manifest.md
+- ../workflow/hermes-copilot-host-migration.md
+- ../../TriMetaverse/docs/workflow/tricompany-copilot-host-assets-migration-matrix.md
+- ../../source-agents/
+- ../../README.md
+
+## Pending Backlog
+
+> 2026-07-25 会话归档：4 个 trilc chat 同源 bug 修复 + TriMC 18 项测试债清理收口时，
+> 标注以下跨模块待办项。优先级 P1=建议下轮迭代、P2=Phase-2 规划。
+
+### BACKLOG-001 trimetaverse / models 的退役模型名遗留
+- **模块**：TriModel + Tristaciss
+- **内容**：`TriModel/src/providers/trimetaverse.ts`（L25-26/L42/L202/L213）及 `src/api/models.ts`（L36-39）仍引用退役模型名 `deepseek-chat` / `deepseek-reasoner`，走 tmv-\* 链经 TriStaciss 路由。
+- **现状**：Turn-3 修复已把非 tmv 路径的 fallback 终点改为 `deepseek-v4-flash`；tmv 链内部命名未动。退役名经自愈别名机制可兜底（400→fallback→200），不致故障，但每次多一跳延迟。
+- **依赖**：需 Tristaciss 仓库（`D:\OneDrive\Code\ai\Tristaciss`）运行态 + 模型名映射审计。
+- **优先级**：P1
+
+### BACKLOG-002 DeepSeekAnthropicProvider 消息格式转换
+- **模块**：TriModel
+- **内容**：`DeepSeekAnthropicProvider`（`deepseek-anthropic.ts:40-46`）对消息做原始透传，不做 OpenAI→Anthropic 格式转换。Turn-2 的 tool 历史（`role:'tool'`）透传到 Anthropic 端点必 400。
+- **当前缓解**：Turn-3 修复中 v4 已改走 OpenAI 端点规避，但丢失 `thinking` 内容回传。
+- **修复目标**：参照 `trimetaverse.ts:55-80` 已有实现，为 DeepSeekAnthropicProvider 实现完整的消息转换（tool→tool_use 等），恢复 Anthropic 路由以取回 thinking/8192 语义。
+- **优先级**：P2（Phase-2 规划项，不阻塞当前主干）
+
+### BACKLOG-003 Tristaciss 模型名映射审计
+- **模块**：Tristaciss
+- **内容**：tmv-\* 链（`tmv-deepseek-chat` 等）经 TriStaciss 路由；需审计 TriStaciss 内部是否映射退役模型名、是否有硬编码依赖。待 BACKLOG-001 做完后实网验证 tmv 链完整链路。
+- **依赖**：需 Tristaciss 仓库运行态 + 完整实网测试。
+- **优先级**：P2
+
+### BACKLOG-004 checkShellPolicy 带空格路径缺陷
+- **模块**：agent-core（TriMC）
+- **内容**：`checkShellPolicy`（`permissions.ts` L183-210）用 `baseCmd = cmd.split(/\s+/)[0]` 取首空白 token 匹配 allowlist，不处理带空格路径（如 `C:\Program Files\nodejs\node.exe` 被截断成 `c:\program`，不匹配 allowlist）。Turn-5 测试债清理中 CTO `process.execPath -e` 模板因此三重障碍不可行，改用 `where`/`which` 方案绕过。
+- **修复建议**：支持带引号路径识别（`"C:\Program Files\nodejs\node.exe"`）或改用 `path.basename` 取文件名。
+- **影响**：Windows 平台特定，限制 shell_exec 可用命令范围（含空格的绝对路径全被误判）。
+- **优先级**：P1（平台可用性缺陷）
+
+### BACKLOG-005 TriMC 工作区遗留改动分案提交
+- **内容**：TriMC dev 分支存在先前阶段遗留的未提交改动——S7 mirror 端点（`src/server/app.ts` +82）、MirrorStore（未跟踪 `src/mirror/`）、P4.x scheduler 重构（`packages/agent-core/src/loop.ts` fallback+tool_call 累积快照）、`docker-compose.yml`、`deployment-topology.md`。与本次 4 bug + 测试债清理同处一个工作区但归属不同事项。
+- **建议**：合入时按事项分案提交——测试债清理只提 `test/` 8 文件；遗留 product 改动另案提交。
+- **优先级**：P2（不阻塞，但合入 main 时必须分离）
+
+### BACKLOG-006 TriMC 18 项存量测试失败（已清零，本条仅溯源）
+- **内容**：P4.x 共享化重构（permissions/process-supervisor/scheduler/sub-agent 迁入 agent-core）后测试侧未跟进，产生 18 项存量失败。Turn-5 测试债清理已全部清零（455/455 PASS）。
+- **根因**：tier 工具集 / reason 文案 / import 路径 / 字段结构的契约变更后测试未对齐。
+- **状态**：✅ 已清零（2026-07-25），本条供溯源。

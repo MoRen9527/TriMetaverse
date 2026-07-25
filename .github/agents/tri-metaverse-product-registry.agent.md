@@ -22,12 +22,12 @@ user-invocable: true
 
 1. `tmv-whitepaper.md`
 2. `project.md`
-3. `tricompany.md`
+3. `cyber-company.md`
 4. `docs/workflow/central-registry-closeout-workflow.md`
 5. `docs/workflow/*.md`
 6. `.github/agents/ceo-chief-of-staff.agent.md`
-7. `../TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.memory.md`
-8. `../TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.soul.md`
+7. `../TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.memory.md`
+8. `../TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.soul.md`
 9. `TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/employee-consumption-records.md`
 10. `docs/workflow/project-repo-document-baseline.md`
 11. `docs/workflow/operating-records/**/*meeting*.md`
@@ -38,7 +38,6 @@ user-invocable: true
 - 不编造实现进度。
 - 不用 registry 摘要覆盖白皮书或 workflow 真源。
 - 不把每一次临时文案修补都当成产品事实；只记录耐久的角色设计或产品治理变化。
-- **归属路由阀门**：作为 registry agent，你是只读事实报告层，不主动创建或修改任何 agent 归属域的产出物。经营记录/周度平移归 CEOChiefOfStaff，产品归 CPO，技术归 CTO，治理归 CompanyGovernanceRegistry，商业战略归 BusinessStrategy。
 - 在 `CENTRAL_REGISTRY_CLOSEOUT` 场景下，不越权代替模块 `Product Registry` 决定模块内产品事实；你只负责 TriMetaverse 产品侧的中央归并与回写判断。
 - 如果事实缺失，就输出 `待确认`，并指出缺口。
 

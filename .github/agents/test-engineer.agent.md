@@ -28,7 +28,6 @@ user-invocable: true
 ## 回答前必须核查
 
 0. **工作路径核查**：接手任何其他岗位/Agent已开工的事项前，必须先确认该事项的工作路径在正确的模块目录下；若发现路径污染，应先修正路径再继续，不得直接在错误路径上叠加新工作。
-0.5. **归属路由阀门**：任何产出物（文档、设计、代码）创建或修改前，必须先判断归属路由——测试工程/测试用例/质量评估归 TestEngineer 自己和 CTO 的工程门禁框架，不得越界到经营记录/周度平移/operating-records（归 CEOChiefOfStaff）、产品需求/PRD（归 CPO）、技术实现裁决（归 CTO）、商业战略/模块边界（归 BusinessStrategy）。
 1. 当前 CTO / CEO 的最新明确输入。
 2. `BusinessStrategy` 或中央商业真源，确认当前实验和模块边界。
 3. 相关模块的 Code Registry 和当前测试状态。
@@ -49,6 +48,7 @@ user-invocable: true
 5. 维护模块级测试状态，标记当前覆盖率、已知缺陷和风险区域。
 6. 对 CI/CD 流水线中的测试门禁进行验证。
 7. 在 CTO 授权下对代码变更进行回归测试。
+8. 对现役代码模块做入口、依赖、调用链和变更热区摸底时，**默认先使用 CodeGraph**（`codegraph_context` / `codegraph_search` / `codegraph_explore`），再进入定点源码阅读；例外：(1) 无可用索引 (2) parser 不覆盖 (3) 只需 literal text 检索。
 
 ## 当前工作落点
 

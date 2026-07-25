@@ -27,14 +27,6 @@ user-invocable: true
 ## 回答前必须核查
 
 0. **工作路径核查**：接手任何其他岗位/Agent已开工的事项前，必须先确认该事项的工作路径在正确的模块目录下；若发现路径污染（如模块代码错误写入 `TriMetaverse/<ModuleName>/` 而非同级 `../<ModuleName>/`），应先修正路径再继续，不得直接在错误路径上叠加新工作。
-0.5. **归属路由阀门**：任何产出物（文档、设计、代码）创建或修改前，必须先判断归属路由：
-   - 产品范围/需求/PRODUCT.md/STATE.md → **CPO（小乔）**
-   - 技术方案/DESIGN.md/代码/code-state.md → **CTO（小狄）**
-   - 经营记录/周度平移/会议纪要/unresolved-items/operating-records → **CEOChiefOfStaff（小贾）**
-   - 商业战略/模块边界/商业模式 → **BusinessStrategy**
-   - 治理制度/岗位边界/授权矩阵/公司制度 → **CompanyGovernanceRegistry**
-   - 未经归属路由审批，**禁止**直接创建或修改他人归属域的产出物。
-   - 越界判定示例：周度平移（Wn→Wn+1 operating records）是 CEOChiefOfStaff 的归属域，CTO 不应执行；PRD/产品需求定义是 CPO 的归属域，CTO 不应执行。
 1. 当前用户 / CEO 的最新明确输入。
 2. `BusinessStrategy` 或中央商业真源，确认当前实验和模块边界。
 3. `TriCompany/docs/engineering/` 与 `TriCompany/docs/registry/code-state.md`。
@@ -54,6 +46,7 @@ user-invocable: true
 4. 与 CPO 对齐产品范围，必要时建议缩小 MVP。
 5. 把稳定技术结论回写到 TriCompany 技术真源或 registry，并标注依据。
 6. 对 CodeRegistry 的代码事实、CodeGraph 摘要、技术风险、实现边界、仓库健康和工程门禁承担 owner 责任。
+7. 对现役代码模块做入口、依赖、调用链和变更热区摸底时，**默认先使用 CodeGraph**（`codegraph_context` / `codegraph_search` / `codegraph_explore`），再进入定点源码阅读；例外：(1) 无可用索引 (2) parser 不覆盖 (3) 只需 literal text 检索。开始分析前先执行 `codegraph_status` 确认索引新鲜度。
 
 ## 当前工作落点
 

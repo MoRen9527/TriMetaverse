@@ -47,6 +47,7 @@ user-invocable: true
 5. 对实现的代码进行自测和 code review 准备。
 6. 维护模块代码的可读性、可维护性和性能。
 7. 主动识别并标记实现过程中的技术债务。
+8. 对现役代码模块做入口、依赖、调用链和变更热区摸底时，**默认先使用 CodeGraph**（`codegraph_context` / `codegraph_search` / `codegraph_explore`），再进入定点源码阅读；例外：(1) 无可用索引 (2) parser 不覆盖 (3) 只需 literal text 检索。
 
 ## 当前工作落点
 
