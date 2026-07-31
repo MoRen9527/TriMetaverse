@@ -1,6 +1,6 @@
 {
   "format_version": "1.0",
-  "exported_at": "2026-07-22T18:09:00+08:00",
+  "exported_at": "2026-07-24T17:36:00+08:00",
   "exported_by": "CEOChiefOfStaff",
   "environment": "copilot-cli",
   "trees": [
@@ -320,6 +320,58 @@
       ]
     },
     {
+      "id": "trilc-tui-absorb",
+      "op_action_id": "TREE-OP-trilc-tui-absorb",
+      "title": "TriLC CLI TUI 吸收方案 — CPO+CTO 联审（Claude Code 2.1.88 TUI 参考）",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "active",
+      "priority": "P1",
+      "created_at": "2026-07-24T17:12:00+08:00",
+      "updated_at": "2026-07-24T17:12:00+08:00",
+      "nodes": [
+        {
+          "id": "trilc-tui-absorb-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "action": "发起子树：CEO 要求为 TriLC 包装 Claude Code 风格 TUI。总助完成前置核查（吸收链/模块边界/现有 API），创建并行评审节点。CPO+CTO 并行执行产品与技术评审。",
+          "status": "done",
+          "delivery": "前置核查报告：TriLC A级成熟仓 daemon HTTP API 完备（/healthz、/v1/messages、/chat/completions、/internal/v1/sessions/*、/internal/v1/tasks/submit）；Claude Code 2.1.88 源码已在 workspace（../claude-code-2.1.88/source-repo/），待入 reference；吸收链路径 TriMetaverse/reference → TriLC/vendor/claude-code-tui → TriLC/src/tui/；模块归属 TriLC 自有 CLI 扩展，不涉及新模块或 BusinessStrategy 咨询。",
+          "next_agent": null,
+          "seq": 0
+        },
+        {
+          "id": "trilc-tui-absorb-1",
+          "parent_node_id": "trilc-tui-absorb-0",
+          "agent": "ChiefProductOfficer",
+          "action": "CPO 产品视角评审：① TUI 产品定位（TriLC 附属 CLI 工具 vs 独立模块）；② MVP 范围（必须吸收的 Claude Code TUI 功能 vs 砍掉的功能）；③ 用户体验目标（最少交互元素：输入框/消息列表/工具调用展示/thinking 动画）；④ 与 TriPilot（VS Code webview 聊天）的定位区分。",
+          "status": "done",
+          "delivery": "CPO APPROVE — TUI 定位为 TriLC 附属 CLI 工具（非独立模块）；MVP 五组件裁剪（PromptInput + Messages + MessageResponse SSE 流式 + Markdown + Spinner）；砍掉 Agent swarm / IDE integration / multi-model switching / buddy animation 等 CC 特有功能。",
+          "next_agent": "CEOChiefOfStaff",
+          "seq": 1
+        },
+        {
+          "id": "trilc-tui-absorb-2",
+          "parent_node_id": "trilc-tui-absorb-0",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "CTO 技术视角评审：① 吸收路径合理性（TriMetaverse/reference/claude-code-2.1.88/ → TriLC/vendor/claude-code-tui/ → TriLC/src/tui/）；② 技术栈选择（Ink React vs blessed/neo-blessed/纯 Node.js readline）；③ 与现有 TriLC daemon 集成方式（HTTP API vs IPC vs 进程内嵌入）；④ 打包进 MSI（Ink 依赖体积、Node.js 版本兼容性）；⑤ TriCade 内置终端兼容性（PowerShell vs cmd vs Git Bash）。",
+          "status": "done",
+          "delivery": "CTO APPROVE — vendor/ink/ 自研引擎（非 npm ink）+ react-reconciler；SSE 连接 localhost:8711/chat/completions；npm 依赖 react/react-reconciler/marked/yoga-layout-prebuilt（纯 JS）；trilc chat → healthz check → auto-spawn daemon；MSI 打包 deferred 到 impl 完成后评估。",
+          "next_agent": "CEOChiefOfStaff",
+          "seq": 2
+        },
+        {
+          "id": "trilc-tui-absorb-3",
+          "parent_node_id": "trilc-tui-absorb-0",
+          "agent": "CEOChiefOfStaff",
+          "action": "联合收口：汇总 CPO + CTO 评审结论，输出 TUI 吸收方案文档（模块归属裁决 / MVP 功能范围 / vendor 冻结清单 / 技术架构选型 / 实施路线图），提交 CEO 终裁。",
+          "status": "done",
+          "delivery": "CPO+CTO 一致 APPROVE；吸收方案已确认 → 创建实施子树 trilc-tui-impl 进入 T1-T3 MVP 实施；未触及 CEO 裁决边界（无双向冲突、无跨模块升级、无 BusinessStrategy 咨询需求）。",
+          "next_agent": null,
+          "seq": 3
+        }
+      ]
+    },
+    {
       "id": "TWF-001",
       "op_action_id": "TWF-001",
       "title": "任务动态树工作流与故障恢复机制",
@@ -369,6 +421,110 @@
           "action": "收口：OP JSON ID 同步 TWF-001，更新 deep-audit task track，规划 tree-nodes-export.json 导出机制",
           "status": "done",
           "delivery": "OP JSON ID NA-20260717-DA-004→TWF-001 同步完成 + deep-audit task track 更新 + DA-005 dependsOn 修正",
+          "next_agent": null,
+          "seq": 3
+        }
+      ]
+    },
+    {
+      "id": "trilc-tui-impl",
+      "op_action_id": "TREE-OP-trilc-tui-impl",
+      "title": "TriLC CLI TUI — T1 MVP 实施（Claude Code 2.1.88 TUI 吸收）",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "active",
+      "priority": "P1",
+      "created_at": "2026-07-24T17:36:00+08:00",
+      "updated_at": "2026-07-24T17:36:00+08:00",
+      "nodes": [
+        {
+          "id": "trilc-tui-impl-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "action": "T0 确认：吸收方案联审 APPROVE → 创建实施树 → 路由 CTO 技术设计（impl-1）",
+          "status": "done",
+          "delivery": "吸收树 trilc-tui-absorb 收口完成（CPO+CTO done + 联合收口 done）；实施树 trilc-tui-impl 创建；impl-1 路由 CTO 小狄。",
+          "next_agent": "ChiefTechnologyOfficer",
+          "seq": 0
+        },
+        {
+          "id": "trilc-tui-impl-1",
+          "parent_node_id": "trilc-tui-impl-0",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "CTO 技术设计：① SSE 客户端（连接 localhost:8711/chat/completions，复用 vendor/ink/ 事件系统）；② Ink root 设计（vendor/ink/ 自研引擎 createRoot + render）；③ MVP 五组件裁剪（PromptInput + Messages + MessageResponse SSE 流式 + Markdown + Spinner）；④ npm 依赖（react, react-reconciler, marked, yoga-layout-prebuilt 纯 JS）；⑤ 启动联动（trilc chat → healthz → auto-spawn trilc start）；⑥ 产出 TriLC/src/tui/ 目录结构设计 + 技术文档。",
+          "status": "in_progress",
+          "delivery": null,
+          "next_agent": "FullStackDeveloper",
+          "seq": 1
+        },
+        {
+          "id": "trilc-tui-impl-2",
+          "parent_node_id": "trilc-tui-impl-1",
+          "agent": "FullStackDeveloper",
+          "action": "FullStack MVP 实现：① TriLC/src/tui/ 目录下实现；② 入口 trilc chat 命令（cli.ts 新增子命令）；③ App 根组件 + Messages 列表 + PromptInput 输入框；④ SSE 流式 → Markdown 增量渲染；⑤ Ctrl+C 退出干净。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 2
+        },
+        {
+          "id": "trilc-tui-impl-3",
+          "parent_node_id": "trilc-tui-impl-2",
+          "agent": "TestEngineer",
+          "action": "验证：① npm install + npx tsx 启动；② 发送消息 → 流式输出在终端正确渲染；③ Ctrl+C 退出干净；④ 中文 CJK 宽度正确；⑤ 终端 resize 重绘。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 3
+        }
+      ]
+    },
+    {
+      "id": "trilc-daemon-heartbeat-absorb",
+      "op_action_id": "TREE-OP-trilc-daemon-heartbeat-absorb",
+      "title": "TriLC daemon/heartbeat/timer 三层从 openclaw 吸收 — CPO+CTO 并行评审 + CEO Chief of Staff 合流收口",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "done",
+      "priority": "P0",
+      "created_at": "2026-07-31T22:15:00+08:00",
+      "updated_at": "2026-07-31T23:30:00+08:00",
+      "nodes": [
+        {
+          "id": "daemon-hb-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "action": "前置核查：确认 TriLC 当前 daemon/heartbeat/cron 三层现状基线；确认 openclaw vendor 参考源；优先级评估 Heartbeat P0 → Daemon P1 → Timer/Cron P2。产出 CPO/CTO 交办件。",
+          "status": "done",
+          "delivery": "ET-20260731-001 + ET-20260731-002 + OP-202607-W31-001",
+          "next_agent": "ChiefProductOfficer",
+          "seq": 0
+        },
+        {
+          "id": "daemon-hb-1",
+          "parent_node_id": "daemon-hb-0",
+          "agent": "ChiefProductOfficer",
+          "action": "CPO 产品需求定义：六模块（Persona/Heartbeat/Daemon/Cron/优先级/模块关系）→ MVP PRD V0.1-DRAFT。P0/P1/P2 分层 + 7 AC。",
+          "status": "done",
+          "delivery": "docs/product/todo/triLC-daemon-heartbeat-timer-mvp.md — APPROVE，无返修",
+          "next_agent": "CEOChiefOfStaff",
+          "seq": 1
+        },
+        {
+          "id": "daemon-hb-2",
+          "parent_node_id": "daemon-hb-0",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "CTO 技术方案设计：七模块（吸收策略/Daemon/Heartbeat/Cron/架构融入/路线图/注意事项）→ 技术设计。Port/Adapt/Rewrite/Skip 精确分类。",
+          "status": "done",
+          "delivery": "docs/engineering/todo/triLC-daemon-heartbeat-timer-absorb-design.md — APPROVE",
+          "next_agent": "CEOChiefOfStaff",
+          "seq": 2
+        },
+        {
+          "id": "daemon-hb-3",
+          "parent_node_id": "daemon-hb-0",
+          "agent": "CEOChiefOfStaff",
+          "action": "联合收口：两份交付物真实评估 → 5 分歧裁决 (R1-R5) + 6 一致确认 (C1-C6) + 3 对齐微调 (A1-A3) → 合并执行计划 Phase 1/2/3 + 跨模块依赖 + 7 风险 + 10 next actions。树收口检查全部通过。",
+          "status": "done",
+          "delivery": "merged-execution-plan.md — Phase 1 (W32 8/3-8/7) / Phase 2 (W32-W33 8/14) / Phase 3 (W33-W34 8/21)",
           "next_agent": null,
           "seq": 3
         }

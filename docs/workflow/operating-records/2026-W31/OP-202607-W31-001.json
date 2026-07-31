@@ -1,0 +1,141 @@
+{
+    "dependsOn": [
+        "OP-202607-W30-001"
+    ],
+    "keyDocuments": [
+        {
+            "note": "TriLC daemon/heartbeat/timer CPO 产品需求 — 已交付 APPROVE",
+            "source": "docs/product/todo/triLC-daemon-heartbeat-timer-mvp.md",
+            "kind": "product-requirements"
+        },
+        {
+            "note": "TriLC daemon/heartbeat/timer CTO 技术方案 — 已交付 APPROVE",
+            "source": "docs/engineering/todo/triLC-daemon-heartbeat-timer-absorb-design.md",
+            "kind": "technical-design"
+        },
+        {
+            "note": "TriLC daemon/heartbeat/timer 合并执行计划 — CEO Chief of Staff 合流收口",
+            "source": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/merged-execution-plan.md",
+            "kind": "execution-plan"
+        }
+    ],
+    "objectType": "WEEKLY_INDEX",
+    "objectId": "OP-202607-W31-001",
+    "title": "TriMetaverse W31 当前周经营维护索引",
+    "ownerRole": "CEOChiefOfStaff",
+    "status": "active",
+    "summary": "W30→W31 周度平移。W31 核心成果：(1) TriLC daemon/heartbeat/timer 三层吸收方案设计全量完成 — CPO+CTO 并行交付 APPROVE，CEO Chief of Staff 合流评审完成（5 分歧裁决 + 合并执行计划 Phase 1/2/3），树 trilc-daemon-heartbeat-absorb → done。(2) Phase 1 Heartbeat+Session Reaper 下周启动（W32 Mon 8/3）。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "version": "1.1.0",
+        "lastUpdated": "2026-07-31T23:30:00+08:00",
+        "workflowTags": [
+            "每周维护",
+            "CEO 总助维护面",
+            "经营维护计划单"
+        ],
+        "latestActiveWeek": true,
+        "migrationDate": "2026-07-31T22:00:00+08:00",
+        "phase": "ceo-copilot-host-coordination",
+        "previousWeekRef": "docs/workflow/operating-records/2026-W30/OP-202607-W30-001.json"
+    },
+    "priority": "high",
+    "timebox": {
+        "scope": "weekly",
+        "label": "2026-W31 当前周维护面",
+        "startAt": "2026-07-27T00:00:00+08:00",
+        "endAt": "2026-08-02T23:59:59+08:00"
+    },
+    "createdAt": "2026-07-31T22:00:00+08:00",
+    "relatedModules": [
+        "TriMetaverse",
+        "TriCompany",
+        "TriLC",
+        "TriMC",
+        "TriPilot"
+    ],
+    "updatedAt": "2026-07-31T23:30:00+08:00",
+    "activeTrees": [],
+    "doneTreesFromW30": [],
+    "doneTreesThisWeek": [
+        {
+            "treeId": "trilc-daemon-heartbeat-absorb",
+            "title": "TriLC daemon/heartbeat/timer 从 openclaw 吸收 — CPO+CTO 并行评审 + CEO Chief of Staff 合流收口",
+            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/tree-op.json",
+            "status": "done",
+            "priority": "P0",
+            "owner": "CEOChiefOfStaff",
+            "note": "CPO (小乔) daemon-hb-1 + CTO (小狄) daemon-hb-2 并行交付 APPROVE。CEO Chief of Staff (小贾) daemon-hb-3 合流：5 分歧裁决 + 6 一致确认 + 3 对齐微调。产出 merged-execution-plan.md — Phase 1 (W32 8/3-8/7), Phase 2 (W32-W33 8/14), Phase 3 (W33-W34 8/21)。"
+        }
+    ],
+    "nextActions": [
+        {
+            "actionId": "NA-20260731-CPO-001",
+            "owner": "ChiefProductOfficer",
+            "action": "TriLC daemon/heartbeat/timer MVP 产品需求定义：场景覆盖、优先级排序、验收标准",
+            "dueAt": "2026-08-02T23:59:00+08:00",
+            "status": "completed",
+            "completedAt": "2026-07-31T23:00:00+08:00",
+            "resolution": "APPROVE — 无返修。PRD 覆盖 6 模块，P0/P1/P2 分层清晰，7 验收标准可测。",
+            "handoffRefs": ["ET-20260731-001"],
+            "output": "docs/product/todo/triLC-daemon-heartbeat-timer-mvp.md"
+        },
+        {
+            "actionId": "NA-20260731-CTO-001",
+            "owner": "ChiefTechnologyOfficer",
+            "action": "TriLC daemon/heartbeat/timer 从 openclaw vendor 吸收技术方案设计：移植范围、适配策略、架构融入",
+            "dueAt": "2026-08-02T23:59:00+08:00",
+            "status": "completed",
+            "completedAt": "2026-07-31T23:00:00+08:00",
+            "resolution": "APPROVE — 需在实施时吸纳合并执行计划 R3 (Session Reaper P0)、R4 (CLI 双轨)、R5 (Cron Phase 2) 裁决。",
+            "handoffRefs": ["ET-20260731-002"],
+            "output": "docs/engineering/todo/triLC-daemon-heartbeat-timer-absorb-design.md"
+        },
+        {
+            "actionId": "NA-20260731-COS-001",
+            "owner": "CEOChiefOfStaff",
+            "action": "W31 周四前完成 CPO+CTO 产出合流评审，产出 merged execution plan",
+            "dueAt": "2026-08-03T23:59:00+08:00",
+            "status": "completed",
+            "completedAt": "2026-07-31T23:30:00+08:00",
+            "resolution": "DONE — 合流评审完成。5 分歧裁决 + 合并执行计划 Phase 1/2/3 + 10 项 next actions。",
+            "dependsOn": ["NA-20260731-CPO-001", "NA-20260731-CTO-001"],
+            "output": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/merged-execution-plan.md"
+        },
+        {
+            "actionId": "NA-20260731-CTO-002",
+            "owner": "ChiefTechnologyOfficer",
+            "action": "Phase 1 开工：TriLCHeartbeatWake 独立模块 + 单测（heartbeat-wake.ts + heartbeat-wake.test.ts）",
+            "dueAt": "2026-08-04T23:59:00+08:00",
+            "status": "assigned",
+            "handoffRefs": ["ET-20260731-002"],
+            "treeRef": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/tree-op.json"
+        },
+        {
+            "actionId": "NA-20260731-FSD-001",
+            "owner": "FullStackDeveloper",
+            "action": "Phase 1 开工：Session Reaper + /healthz 扩展 + trilc restart CLI + localbus 事件类型扩展 + session-store deleteSession()",
+            "dueAt": "2026-08-05T23:59:00+08:00",
+            "status": "assigned",
+            "treeRef": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/tree-op.json"
+        }
+    ],
+    "handoffRefs": [
+        {
+            "objectId": "ET-20260731-001",
+            "title": "TriLC daemon/heartbeat/timer MVP 产品需求 — CPO 小乔",
+            "path": "docs/workflow/operating-records/2026-W31/ET-20260731-001-trilc-daemon-heartbeat-cpo.json",
+            "target": "ChiefProductOfficer",
+            "status": "closed",
+            "resolution": "APPROVE — CPO 交付 docs/product/todo/triLC-daemon-heartbeat-timer-mvp.md V0.1-DRAFT。6 模块全覆盖，无返修。"
+        },
+        {
+            "objectId": "ET-20260731-002",
+            "title": "TriLC daemon/heartbeat/timer 吸收技术方案 — CTO 小狄",
+            "path": "docs/workflow/operating-records/2026-W31/ET-20260731-002-trilc-daemon-heartbeat-cto.json",
+            "target": "ChiefTechnologyOfficer",
+            "status": "closed",
+            "resolution": "APPROVE — CTO 交付 docs/engineering/todo/triLC-daemon-heartbeat-timer-absorb-design.md。实施时需吸纳合并执行计划 R3/R4/R5 裁决。"
+        }
+    ]
+}

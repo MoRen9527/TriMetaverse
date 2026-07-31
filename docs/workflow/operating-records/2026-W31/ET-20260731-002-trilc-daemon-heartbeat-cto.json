@@ -1,0 +1,27 @@
+{
+    "objectId": "ET-20260731-002",
+    "objectType": "HANDOFF",
+    "title": "TriLC daemon/heartbeat/timer 吸收技术方案 — CTO 小狄",
+    "source": "CEOChiefOfStaff",
+    "target": "ChiefTechnologyOfficer",
+    "status": "closed",
+    "resolution": "APPROVE — CTO 小狄交付 docs/engineering/todo/triLC-daemon-heartbeat-timer-absorb-design.md。七模块全覆盖：吸收策略分类 (Port/Adapt/Rewrite/Skip)、Daemon 层 TriLCDaemonService 三平台接口设计、Heartbeat 层 Option 1 (独立 TriLCHeartbeatWake)、Cron 层 croner+JSON 持久化、架构融入 (目录结构+生命周期+graceful shutdown)、实施路线图 Phase 1-3、吸收注意事项。需在 Phase 1 实施时吸纳 merged-execution-plan.md 的 R3 (Session Reaper P0 Phase 1)、R4 (CLI 双轨)、R5 (Cron Phase 2 交付) 裁决。",
+    "priority": "P0",
+    "createdAt": "2026-07-31T22:00:00+08:00",
+    "dueAt": "2026-08-02T23:59:00+08:00",
+    "closedAt": "2026-07-31T23:30:00+08:00",
+    "topic": "TriLC daemon/heartbeat/timer 三层从 openclaw vendor 吸收技术方案设计",
+    "background": "TriLC vendor/openclaw 包含完整的 daemon/heartbeat/cron 三层实现，但不能直接复制——需要提取精华并适配到 TriLC 自有的 TypeScript/ESM/agent-core 架构中。",
+    "brief": {
+        "evaluation": "CEOChiefOfStaff 前置评估",
+        "referenceModules": {
+            "daemon": { "path": "vendor/openclaw/src/daemon/" },
+            "heartbeatRunner": { "path": "vendor/openclaw/src/infra/heartbeat-runner.ts" },
+            "cronService": { "path": "vendor/openclaw/src/cron/service/" }
+        }
+    },
+    "ctoTask": {
+        "title": "从技术视角出 TriLC daemon/heartbeat/timer 吸收设计方案",
+        "output": "docs/engineering/todo/triLC-daemon-heartbeat-timer-absorb-design.md"
+    }
+}

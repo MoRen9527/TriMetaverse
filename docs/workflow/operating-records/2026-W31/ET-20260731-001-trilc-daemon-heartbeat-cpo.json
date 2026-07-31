@@ -1,0 +1,23 @@
+{
+    "objectId": "ET-20260731-001",
+    "objectType": "HANDOFF",
+    "title": "TriLC daemon/heartbeat/timer MVP 产品需求 — CPO 小乔",
+    "source": "CEOChiefOfStaff",
+    "target": "ChiefProductOfficer",
+    "status": "closed",
+    "resolution": "APPROVE — CPO 小乔交付 docs/product/todo/triLC-daemon-heartbeat-timer-mvp.md V0.1-DRAFT。六模块全覆盖：用户场景 Persona A/B/C/D、Heartbeat 层单节点统一心跳、Daemon 层 Windows-only MVP、Timer/Cron 层 cron+interval P0、P0/P1/P2 分层 + 7 验收标准。每个判断给出明确结论。CEO Chief of Staff 合流评审中仅微调 Session Reaper 清理范围与 Cron 持久化格式（合并至 merged-execution-plan.md），PRD 本身无需返修。",
+    "priority": "P0",
+    "createdAt": "2026-07-31T22:00:00+08:00",
+    "dueAt": "2026-08-02T23:59:00+08:00",
+    "closedAt": "2026-07-31T23:30:00+08:00",
+    "topic": "TriLC daemon/heartbeat/timer 三层 MVP 产品需求",
+    "background": "TriLC 当前 daemon、heartbeat、timer/cron 三层几乎全是空壳或零实现。为支撑 TriCade 本地离线任务调度、定时 agent 触发、会话过期清理等核心场景，需从 openclaw vendor 吸收设计精华并定义 TriLC 自有 MVP 需求。",
+    "brief": {
+        "evaluation": "CEOChiefOfStaff 前置评估与建议",
+        "priorityOrder": "Heartbeat -> Daemon -> Timer/Cron"
+    },
+    "cpoTask": {
+        "title": "从产品视角定义 TriLC daemon/heartbeat/timer 的 MVP 需求",
+        "output": "docs/product/todo/triLC-daemon-heartbeat-timer-mvp.md"
+    }
+}
