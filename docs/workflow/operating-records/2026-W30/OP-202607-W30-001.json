@@ -57,14 +57,15 @@
     "summary":  "W29→W30 周度平移完成。W29 核心成果：(1) cpo-pc-layer-escalation 全量完成 — CPO Q1-Q6 裁决 + CTO 技术设计 + FullStackDeveloper S1-S6 代码实施 14/14 测试通过 (2) TriCade MSI 重打包 (TriCade-x64-1.126.04524.msi) 含全部架构修正 (3) 偏差 D1-D6 全部关闭 (4) OP 系统重构为周索引+Tree级架构。W30 P0: D7/S7 TriMC mirror 端点 + S8 E2E 回归 + TriMem L1。W30 P1: resource-biz-group-design (COS-006) + trimc-reasoning-guard + phase5-linux-detached。 CPO+CTO 联合评估 TriCade 拆分打包：双层 MSI（底座月级+Bundel 日级\u003c1min），构建速度提升 20x。CPO 4/4 APPROVE，CTO 技术可行。",
     "metadata":  {
                      "updatedBy":  "CEOChiefOfStaff",
-                     "version":  "1.0.0",
-                     "lastUpdated":  "2026-07-22T18:09:00+08:00",
+                     "version":  "1.0.1",
+                     "lastUpdated":  "2026-07-31T22:00:00+08:00",
+                     "nextWeekRef":  "docs/workflow/operating-records/2026-W31/OP-202607-W31-001.json",
                      "workflowTags":  [
                                           "每周维护",
                                           "CEO 总助维护面",
                                           "经营维护计划单"
                                       ],
-                     "latestActiveWeek":  true,
+                     "latestActiveWeek":  false,
                      "migrationDate":  "2026-07-20T20:33:00+08:00",
                      "phase":  "ceo-copilot-host-coordination",
                      "previousWeekRef":  "docs/workflow/operating-records/2026-W29/OP-202607-W29-001.json"
@@ -91,7 +92,7 @@
                            "TriDev",
                            "TriTest"
                        ],
-    "updatedAt":  "2026-07-22T18:09:00+08:00",
+    "updatedAt":  "2026-07-31T22:00:00+08:00",
     "activeTrees":  [
                         {
                             "owner":  "CTO (小狄)",
@@ -154,6 +155,16 @@
                             "treeId":  "cpo-trimodel-phase2",
                             "owner":  "CPO (小乔)",
                             "priority":  "P1"
+                        },
+                        {
+                            "title": "CLI source_publish_check Phase 1 实现（TriCompany 模块 agent 同步链路）",
+                            "treeOpPath": "docs/workflow/operating-records/2026-W30/trees/source-publish-check-phase1/tree-op.json",
+                            "status": "planned",
+                            "treeId": "source-publish-check-phase1",
+                            "owner": "CTO (小狄)",
+                            "priority": "high",
+                            "carryToWeek": "2026-W31",
+                            "note": "W31 周一 7/27 启动 → 周三 7/28 EOD，2.5 人天，小狄+小全+小柯"
                         }
                     ],
                     "doneTreesThisWeek": [
@@ -178,5 +189,92 @@
                             "status":  "done",
                             "owner":  "CEOChiefOfStaff"
                         }
-                    ]
+                    ],
+    "nextActions": [
+        {
+            "actionId": "NA-20260723-CPO-001",
+            "owner": "ChiefProductOfficer",
+            "action": "审批 TriCompany 模块 Agent 产品范围：确认 TriCompany.agent.md 产品边界、与 registry 三件套分工、同步范围",
+            "dueAt": "2026-07-24T23:59:00+08:00",
+            "status": "completed",
+            "completedAt": "2026-07-24T02:54:00+08:00",
+            "resolution": "APPROVE — 4 项产品边界条件",
+            "handoffRefs": ["ET-20260723-001"]
+        },
+        {
+            "actionId": "NA-20260723-CTO-001",
+            "owner": "ChiefTechnologyOfficer",
+            "action": "技术评估 CLI source_publish_check：复用 employee_host_publish 可行性、工作量估算、CodeGraph 辅助 diff 方案",
+            "dueAt": "2026-07-24T23:59:00+08:00",
+            "status": "completed",
+            "completedAt": "2026-07-24T02:54:00+08:00",
+            "resolution": "带条件 APPROVE — Phase 1 半自动 2.5 人天",
+            "handoffRefs": ["ET-20260723-002"]
+        },
+        {
+            "actionId": "NA-20260723-CAO-001",
+            "owner": "ChiefAdministrativeOfficer",
+            "action": "治理审批 TriCompany.agent.md 新 module-local agent 上线：发布纪律归属、discovery 唯一性、迁移门禁兼容性",
+            "dueAt": "2026-07-24T23:59:00+08:00",
+            "status": "completed",
+            "completedAt": "2026-07-24T02:54:00+08:00",
+            "resolution": "APPROVE — 4 条上线纪律，不触发 CHO 审批门",
+            "handoffRefs": ["ET-20260723-003"]
+        },
+        {
+            "actionId": "NA-20260724-COS-001",
+            "owner": "CEOChiefOfStaff",
+            "action": "Phase A: 创建 TriCompany.agent.md 源侧定义 + live entry + manifest 登记 + product STATE 条目 + governance writeback",
+            "dueAt": "2026-07-27T23:59:00+08:00",
+            "status": "pending",
+            "handoffRefs": ["ET-20260723-001", "ET-20260723-003"]
+        },
+        {
+            "actionId": "NA-20260724-CTO-002",
+            "owner": "ChiefTechnologyOfficer",
+            "action": "Phase B: 实现 CLI source_publish_check Phase 1（半自动：diff 引擎 + manifest 工具 + 自检报告），2.5 人天，CTO 小狄 + 小全 + 小柯",
+            "dueAt": "2026-07-28T23:59:00+08:00",
+            "status": "confirmed",
+            "confirmedAt": "2026-07-24T03:21:00+08:00",
+            "handoffRefs": ["ET-20260723-002"],
+            "schedule": "W31 周一 7/27 启动 → 周三 7/28 EOD",
+            "treeRef": "docs/workflow/operating-records/2026-W30/trees/source-publish-check-phase1/tree-op.json",
+            "team": [
+                {"role": "CTO", "name": "小狄", "tasks": "B1+B2+B4"},
+                {"role": "FullStackDeveloper", "name": "小全", "tasks": "B2+B3"},
+                {"role": "TestEngineer", "name": "小柯", "tasks": "B5"}
+            ]
+        }
+    ],
+    "handoffRefs": [
+        {
+            "objectId": "ET-20260723-001",
+            "title": "TriCompany 模块 Agent 产品范围确认 — CPO 审批",
+            "path": "docs/workflow/operating-records/2026-W30/ET-20260723-001-tri-company-module-agent-cpo.json",
+            "target": "ChiefProductOfficer",
+            "status": "closed",
+            "resolution": "APPROVE — 4 项产品边界条件"
+        },
+        {
+            "objectId": "ET-20260723-002",
+            "title": "CLI source_publish_check 技术方案 — CTO 评估",
+            "path": "docs/workflow/operating-records/2026-W30/ET-20260723-002-source-publish-check-cto.json",
+            "target": "ChiefTechnologyOfficer",
+            "status": "closed",
+            "resolution": "带条件 APPROVE — Phase 1 半自动 2.5 人天"
+        },
+        {
+            "objectId": "ET-20260723-003",
+            "title": "TriCompany.agent.md 新 module-local agent 上线治理审批 — CAO",
+            "path": "docs/workflow/operating-records/2026-W30/ET-20260723-003-tri-company-agent-governance.json",
+            "target": "ChiefAdministrativeOfficer",
+            "status": "closed",
+            "resolution": "APPROVE — 4 条上线纪律"
+        }
+    ],
+    "syncLogRef": {
+        "path": "docs/workflow/operating-records/sync-log.md",
+        "latestEntry": "2026-07-24 10:24 CST — Q3 Phase 3: 统一发布管线首次正式 agent publish 执行",
+        "note": "每次 source_publish_check --sync 执行后由小赛自动追加条目。本条目同时覆盖 Q3 Phase 2 统一发布管线（--publish-agents）与 Q3 Phase 3 首次 --agent-execute（16 agent 全量 hash 一致）。"
+    }
 }
