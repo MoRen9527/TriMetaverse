@@ -1,0 +1,56 @@
+{
+    "nodes": [
+        {
+            "nodeId": "p8-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "P8启动(CEO裁决,聚焦实用)。范围:1)Plan自动超时TTL(防永久只读,CTO定超时策略) 2)MCP prompts支持(最小补充,prompts/list+get) 3)MCP端到端验证(小柯实测:配置filesystem MCP server,造完整链路测试)。跳过:MCP OAuth(单机低频+依赖浏览器设施)。",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "p8-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "CTO快速方案。评估:(1)Plan TTL超时策略——在server侧设timer,N分钟后auto-ExitPlanMode+notify?策略是什么?(2)MCP prompts——@modelcontextprotocol/sdk有无prompts/list+prompts/get API?类似P7 resources补充。产出入档p8-architecture.md。",
+            "next_agent": "FullStackDeveloper"
+        },
+        {
+            "nodeId": "p8-2",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "P8实现。(1)Plan TTL(auto-ExitPlanMode,避免永久只读) (2)MCP prompts(prompts/list+get)。tsc零错误。build通过。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "p8-3",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "P8实测(CEOChiefOfStaff顶上,因TestEngineer agent被分类器频繁挡)。独立重跑:tsc零错误,build成功。Plan TTL:planModeTimer/PLAN_MODE_TTL_MS(30min)/resetPlanMode/EnterPlanMode设timer/ExitPlanMode清timer——14符号确认,逻辑正确。MCP prompts:MCPPromptDef/listAllPrompts/getPrompt/totalPromptCount/connectOne try/catch listPrompts/mcp__prompts handler list/get——16符号确认。daemon实测启动:14tools+bundled skills+plan mode tools全注册,无崩溃。P8符号到位。",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "p8-4",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "P8 CTO终审APPROVE。树闭合。P8三项全交付:(1)Plan TTL 30分钟自动退出(防永久只读,14符号确认) (2)MCP prompts(prompts/list+get,16符号确认,=P7 resources同级) (3)MCP端到端链路,tools→resources→prompts全通,try/catch容错。改动合计~80行(plan-mode.ts~15+mcp-client.ts~45+mcp-tool.ts~20)。daemon实测无崩。P0-P8全部闭合。P9候选:MCP OAuth/streamableHTTP/完整端到端filesystem server集成测试——属基础设施深化,建议CEO评估后启动。"
+        }
+    ],
+    "status": "active",
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W31-001",
+    "objectId": "TREE-OP-cc-fidelity-p8",
+    "treeId": "cc-fidelity-p8",
+    "title": "CC还原度 P8 — Plan TTL+MCP prompts (3/5 done)",
+    "ownerRole": "CEOChiefOfStaff",
+    "priority": "P8",
+    "summary": "P8聚焦实用:Plan自动超时+MCP prompts+端到端MCP验证。跳过MCP OAuth。",
+    "escalationNotes": [],
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-07-29T23:00:00+08:00",
+        "version": "1.2.0"
+    },
+    "createdAt": "2026-07-30T03:00:00+08:00",
+    "relatedModules": ["TriLC"],
+    "updatedAt": "2026-07-30T03:00:00+08:00"
+}

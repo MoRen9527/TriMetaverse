@@ -61,7 +61,7 @@
         }
     ],
     "objectType": "TREE_OPERATING_PLAN",
-    "parentWeekPlan": "OP-202608-W32-001",
+    "parentWeekPlan": "OP-202607-W31-001",
     "objectId": "TREE-OP-w32-integration-verification",
     "treeId": "w32-integration-verification",
     "title": "W32 集成验证：TriCade MSI + 端到端 + 分支过渡 + macOS/Linux",

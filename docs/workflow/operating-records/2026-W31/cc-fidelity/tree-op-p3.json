@@ -1,0 +1,50 @@
+{
+    "nodes": [
+        {
+            "nodeId": "fidelity-p3-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "P3批次启动(CEO裁决,聚焦CC标志性权限模型)。关键发现:agent-core已有完整权限引擎(permissions-engine/+PermissionMode+canUseTool+permissionMode暴露,loop.ts默认bypassPermissions),不需从零做权限,只差TUI交互层弹ask提示。范围:1)AskUserQuestion完整TUI键盘选择(升级PARTIAL→真交互,数字键/方向键选择,权限弹窗的交互基础) 2)useCanUseTool权限模型基础版(基于agent-core permissions-engine,危险工具Bash/Edit调用前TUI弹allow/deny,复用AskUserQuestion交互) 3)bundled-skills资产(复制CC内置skill) 4)TaskCreate blocks/blockedBy依赖补全(小修)。目标~90%→~93%。验证必须实测运行时(P2确立标准)。",
+            "next_agent": "FullStackDeveloper"
+        },
+        {
+            "nodeId": "fidelity-p3-1",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "P3实现完成,四项全落地,tsc零错误+build成功。(1)AskUserQuestion真交互:新增daemon侧交互桥src/server/interactions.ts(单pending槽+FIFO队列+超时fallback+interactive会话计数),GET/POST /internal/v1/interactions端点;工具handler在interactive会话内经桥等真实答案(5min超时→取消fallback),非交互客户端保持默认选项不挂死;TUI新增usePendingInteraction轮询hook(400ms)+InteractionPrompt组件(数字键1-4直选/↑↓+Enter/Esc取消,多问题逐题作答),useCursorInput加isActive让出键盘,useChat请求带interactive:true。(2)权限模型真拦截:agent-core loop.ts新增可选onPermissionAsk回调(纯增量,behavior==='ask'时调用,deny阻断/allow放行/always由回调记session),已重建dist;TriLC app.ts在interactive请求注入ask规则(shell_exec/Bash=高风险,Edit/Write=中风险,mode保持bypassPermissions使其余工具直接放行)+askPermissionViaTui桥(2min超时fail-closed deny,always-allow记daemon级session内存Set)。非interactive请求(如TriPilot)完全不受影响。(3)bundled-skills:从CC 2.1.88 src/skills/bundled移植simplify(原文直取)/debug(去除CC runtime依赖改通用诊断流)/remember(去auto-memory改CLAUDE.md分层审查)三个skill,initBundledSkills()接入SkillTool注册表,目录skills优先。(4)TaskCreate+TodoWrite create均接受blocks/blockedBy数组并存入task,TaskList/list输出含依赖,formatTask显示blocked by标记。自测:交互桥模块级smoke全过(超时fallback/应答/过期拒绝/FIFO/always记忆/会话计数);tsc --noEmit零错误;npm run build成功;既有测试48/50过(2败为预先存在的ink-testing-library未安装环境问题,与本次无关)。未做端到端运行时实测(需daemon+模型),留p3-2 TestEngineer验证。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "fidelity-p3-2",
+            "agent": "TestEngineer",
+            "status": "done",
+            "action": "P3运行时实测全部通过(真daemon+真模型,非静态审查)。隔离端口8791实测,未动8711现役daemon。T1 PASS: node dist/index.js干净启动,无require崩溃,14工具注册,日志确认bundled skills: simplify, debug, remember。T2 PASS(真端到端): interactive:true请求驱动模型真实调用ask_user_question→GET pending返回真问题(3选项)→POST answer提交非默认选项(蓝色,第2项)→tool_result携带该答案回流→模型回复'你选择了蓝色';过期id重复应答正确409。T3 PASS(真拦截,四路径全测): interactive请求调Write→pending出现kind=permission(toolName=Write+argsSummary+reason);(a)deny→文件未创建+'User denied permission'回流模型;(b)allow→文件真实写入;(c)always→第二次Write不再弹提示直接执行(session记忆生效);(d)2min超时fail-closed(应答延迟后id过期stale);对照组:非interactive请求Write直接放行无提示(TriPilot路径不受影响)。T4 PASS(harness镜像index.ts接线): executeTool('skill')对simplify(3865字)/debug(1335字,allowedTools=[Read,Grep,Glob])/remember(2534字)均返回真实prompt,args注入正常,未知skill优雅报错。T5 PASS: TaskCreate带blockedBy创建成功,TaskList JSON含blocks/blockedBy,formatted输出显示'(blocked by: ...)'标记。T6: 独立重跑tsc --noEmit零错误+build成功;既有测试142/144过,2败为ink-testing-library环境缺装(ReactCurrentOwner),预先存在与P3无关。非阻塞观察3项:(1)TUI usePendingInteraction端点硬编码localhost:8711,无端口env覆盖;(2)executeSkillHandler对allowedTools无防御(skillImpl.allowedTools.length,undefined即崩),daemon路径因index.ts ?? []兜底安全,仅直接调用registry的第三方路径有风险;(3)TaskCreate依赖无反向回填(blockedBy:[t1]不会把t2加入t1.blocks)。键盘交互本身无TUI环境未实测,但交互桥+端点+组件接线均验证,键盘层为ink useInput标准用法,风险低。"
+        },
+        {
+            "nodeId": "fidelity-p3-3",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "P3 CTO终审APPROVE。树闭合。流程:小全实现→小柯运行时实测(隔离端口8791,真端到端含模型)PASS 4/4。核心价值:CC标志性权限模型真实现——deny时Write文件未创建/allow真实写入/always第二次不再弹(session记忆)/fail-closed超时2min自动deny,四路径+对照组(非interactive直接放行,TriPilot不受影响)全测,真拦截非bypass。AskUserQuestion真端到端:模型真实调用→非默认选项(第2项蓝色)回流→模型回复'你选择了蓝色',交互真实非默认值。bundled-skills 3资产(simplify/debug/remember)返回真实prompt。TaskCreate依赖blockedBy工作。编译门禁tsc+build零错误。残留非阻塞观察(小柯标注,路由后续):1)usePendingInteraction端点硬编码localhost:8711(换端口失联,需TRILC_PORT env) 2)executeSkillHandler allowedTools无防御(仅第三方直接调registry风险) 3)TaskCreate依赖无反向回填。实测边界:键盘交互本身未实按(无TUI环境),但交互桥+端点+组件接线全验证,残余风险低。还原度评估:权限模型90%(真拦截基础版),AskUserQuestion 95%(真交互缺multiSelect),bundled-skills 30%(机制+3资产,CC~15),TaskCreate 85%。整体CC还原度~90%→~93%(权限模型是标志性机制,补上后trilc具备CC核心安全交互)。后续路由:完整compact边缘逻辑(图像剥离PTL)/init交互式Phase流程/SkillTool fork执行语义/bundled-skills补全~15资产/权限模型memory持久化。",
+            "next_agent": null
+        }
+    ],
+    "status": "closed",
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W31-001",
+    "objectId": "TREE-OP-cc-fidelity-p3",
+    "treeId": "cc-fidelity-p3",
+    "title": "CC还原度 P3 — 权限模型+交互+skills资产 闭合 (4/4 done)",
+    "ownerRole": "CEOChiefOfStaff",
+    "priority": "P3",
+    "summary": "P3闭合。权限模型真拦截(四路径+fail-closed+对照组实测)——CC标志性机制达成。AskUserQuestion真端到端交互(非默认选项回流)。bundled-skills 3资产。TaskCreate依赖。还原度~90%→~93%。trilc具备CC核心安全交互(ask/allow/deny)。",
+    "escalationNotes": ["2026-07-29 CTO终审: 权限模型真拦截实测(deny文件未创建/always不再弹/fail-closed超时deny),CC标志性机制达成。非阻塞观察3项(usePendingInteraction硬编码8711/skillHandler防御/依赖无反向回填)路由后续。"],
+    "metadata": {
+        "updatedBy": "ChiefTechnologyOfficer",
+        "lastUpdated": "2026-07-29T16:30:00+08:00",
+        "version": "1.1.0",
+        "note": "v1.1.0: CTO终审APPROVE,树闭合。权限模型真拦截(四路径+fail-closed实测)。AskUserQuestion真端到端。还原度~93%。CC标志性安全交互达成。"
+    },
+    "createdAt": "2026-07-29T23:00:00+08:00",
+    "relatedModules": ["TriLC"],
+    "updatedAt": "2026-07-29T15:55:00+08:00"
+}

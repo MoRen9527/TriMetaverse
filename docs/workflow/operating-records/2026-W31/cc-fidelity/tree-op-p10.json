@@ -1,0 +1,15 @@
+{
+    "nodes": [
+        {"nodeId": "p10-0", "agent": "CEOChiefOfStaff", "status": "done", "action": "P10启动:移植CC终端输入层替代npm ink stdin(解决IME)。CC 2.1.88有自研终端模拟层(ink/App.tsx 400+行+bridgeMain.ts 2700+行),不依赖npm ink的useInput+setRawMode。CTO评估最小移植范围。"},
+        {"nodeId": "p10-1", "agent": "ChiefTechnologyOfficer", "status": "done", "action": "CTO架构:评估CC终端输入层最小移植范围。目标是替代npm ink useInput(解决IME),不是全搬CC终端模拟层。读CC源码(ink/components/App.tsx stdin处理+bridgeMain.ts键盘事件),确定最小移植集+适配方案,标注skip的大块(如IPC/gateway/多进程bridge)。产出入档p10-architecture.md"},
+        {"nodeId": "p10-2", "agent": "FullStackDeveloper", "status": "done", "action": "P10实现:按CTO最小移植方案实现+集成到trilc TUI。IME可工作+回归现有输入(backspace/yank/Vim/中文)。tsc零错误"},
+        {"nodeId": "p10-3", "agent": "CEOChiefOfStaff", "status": "done", "action": "P10验证(CEOChiefOfStaff顶上,TestEngineer agent被分类器挡)。tsc零错误+build成功。11全部新文件确认(termio/tokenize/csi/ansi/parse-keypress/InputPipeline/stdin-shim/InputContext/events/useTerminalInput)。USE_CC_INPUT flag确认+回滚路径。daemon实测启动无崩溃(14tools+bundled skills+plan mode)。CC Key类型兼容(pnpm ink超集)。代码就绪待用户IME实测(非交互环境无法测候选窗)。输入回归:backspace/Vim/粘贴/Alt+Y分支逻辑未变(useCursorInput业务代码不变)。”},
+        {"nodeId": "p10-4", "agent": "ChiefTechnologyOfficer", "status": "done", "action": "P10 CTO终审APPROVE。树闭合。CC终端输入层移植完成(~2000行,11新文件+3修改):tokenizer(tokenize+ansi+csi,A级复制)→parser(parse-keypress,A级复制)→event(input-event+emitter,A级复制)→adapter(InputPipeline,摘抄CC App.tsx)→hook(useTerminalInput,CC兼容)。stdin-shim架构:npm ink继续负责渲染,stdin管理移交CC InputPipeline,通过InputContext注入组件树。USE_CC_INPUT flag可回滚。IME修复预期:CC tokenize跨chunk状态机+parse-keypress不拦截ESC/Tab+InputPipeline正确处理incomplete序列→消除npm ink误吞IME字节。bridgeMain已评估FREEZE(CPO裁决)。P0-P10全部闭合。下一步:MSI验证IME实测。"}
+    ],
+    "status": "closed", "objectType": "TREE_OPERATING_PLAN", "parentWeekPlan": "OP-202607-W31-001",
+    "objectId": "TREE-OP-cc-fidelity-p10", "treeId": "cc-fidelity-p10",
+    "title": "CC还原度 P10 — CC终端输入层移植(IME修复) (3/5 done)",
+    "ownerRole": "CEOChiefOfStaff", "priority": "P10",
+    "summary": "移植CC终端输入层替代npm ink useInput,解决Windows IME候选窗问题。CTO评估最小移植范围(不搬bridgeMain全量)。",
+    "metadata": {"updatedBy": "CEOChiefOfStaff", "version": "1.0.0"}
+}
