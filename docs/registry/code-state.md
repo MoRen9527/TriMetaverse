@@ -160,3 +160,64 @@
 - **内容**：P4.x 共享化重构（permissions/process-supervisor/scheduler/sub-agent 迁入 agent-core）后测试侧未跟进，产生 18 项存量失败。Turn-5 测试债清理已全部清零（455/455 PASS）。
 - **根因**：tier 工具集 / reason 文案 / import 路径 / 字段结构的契约变更后测试未对齐。
 - **状态**：✅ 已清零（2026-07-25），本条供溯源。
+
+### BACKLOG-007 trilc 对标 Claude Code v2.1.88 功能补齐
+
+> 2026-07-27 audit：CEO 要求审核 trilc 实现了多少 Claude Code 源码功能，
+> 结论是整体覆盖率约 35%，核心差距在工具系统和交互体验。
+
+**架构链路确认**：
+- ✅ `入口 → trilc → agentLoop (agent-core) → createModelClient (trimodel, 库调用) → Model API`
+- ✅ TriModel HTTP 仅做配置下发（key-cache / model-list），不在请求路径
+
+**实现度矩阵**：
+
+| Claude Code 能力 | trilc | 覆盖率 | gap |
+|---|---|---|---|
+| **工具系统** | | | |
+| Bash (`!` prefix) | `shell_exec` ✅ | ✅ 1/1 | 命名差异 |
+| Read file | ❌ | 0/1 | **完全缺失** |
+| Write file | ❌ | 0/1 | **完全缺失** |
+| Edit (精确替换) | ❌ | 0/1 | **完全缺失**（CC 核心编辑能力）|
+| Glob (文件搜索) | ❌ | 0/1 | **完全缺失** |
+| Grep (内容搜索) | ❌ | 0/1 | **完全缺失** |
+| NotebookEdit | ❌ | 0/1 | **完全缺失** |
+| Task (子代理) | ✅ agent-core sub-agent | ✅ 1/1 | |
+| **工具合计** | **2/8** | **25%** | **6 个 core tool 缺失** |
+| **Agent 循环** | agentLoop streamChat | 100% | |
+| **权限系统** | | | |
+| ask/allow/deny 模式 | ❌ | 0% | **完全没有**（CC 核心 UX）|
+| 交互式审批 | ❌ | 0% | CC 弹确认框，trilc 直接拒绝 |
+| tier 权限 | ✅ permissions.ts | 30% | 有骨架无交互 |
+| **MCP** | ❌ | 0% | **完全没有** |
+| **TUI** | | | |
+| 斜杠命令 (`/model`, `/exit` 等) | ⚠️ `/exit` 而非 `exit` | 20% | CC 是裸 `exit` |
+| 消息流式 | ✅ Ink render | 70% | |
+| Ctrl+C | ✅ 双段 SIGINT | 100% | |
+| **整体** | | **~35%** | |
+
+**根因诊断**（CEO 指出）：
+> "像 exit 这类命令本来就是 claude 的，明显我们没有复制 claude 源码"
+
+偏差不是工程失误——是产品决策上我们没走"复制 Claude Code"路线，而是在自己造。工具名（`shell_exec` vs `Bash`）、退出口令（`/exit` vs `exit`）、权限模型（tier-only vs ask/allow/deny）、缺失的 6 个 core tools——每一处都是"自己发明"的痕迹。
+
+**补齐优先级**（建议顺序）：
+1. **P0 — 6 个 core tools**（Read/Write/Edit/Glob/Grep）：没有这些 trilc 无法操作文件，和 CC 不在同一个产品类别
+2. **P0 — TUI 退出口令**（裸 `exit` 而非 `/exit`）：对齐 CC 肌肉记忆
+3. **P1 — ask/allow/deny 交互权限**：CC 的核心安全 UX
+4. **P1 — 斜杠命令**（`/model` 等）
+5. **P2 — MCP 支持**
+6. **P3 — 工具名对齐**（`shell_exec` → `Bash` 等，breaking change 需谨慎）
+
+**开工前提**：需 CPO 小乔确认产品对齐目标（"复制 CC" vs "参考 CC" vs "做自己的 AI 终端"）。若确定走"复制 CC"，后续 Dev 应优先补齐 6 core tools + 权限 UX + 退出对齐。
+
+**依赖**：TriLC 仓库 + agent-core + trimodel（均在本地 dev 分支，无跨团队阻塞）
+
+- **W32 集成验证闭合（2026-08-01，CTO 小狄）**：树 w32-integration-verification 全量闭合，CTO 终审 APPROVE。TestEngineer ALL_PASS (7/7 gates)。四仓库交付物逐一代码核查通过：
+  - TriLC：launchd.ts + systemd.ts 补齐、/agents tricompanyEnabled、heartbeat-runner isRunning、session-reaper isRunning()、/healthz 三段状态（trimc/heartbeat/cron/sessionReaper）
+  - TriPilot：welcome-setup key-cache 桥接、TRICOMPANY_SOURCE_PATH 修正（TriCompany/source-agents 优先 → bundled fallback）
+  - TriCompany：deployment-engineer binding profile + live entry + publish manifest + employee roster（小布 / reportsTo CTO / onboarded 2026-08-01）
+  - TriMetaverse：build-tricade.yml MSI 条件构建、installer/tricade.wxs WiX 源码、deployment-engineer.agent.md live entry、main 分支已创建并推送 origin
+  - 门禁：tsc TriLC+TriPilot 双仓零错误 / 497 tests 零回归（TriMC 455/455 + TriCompany 42/42）
+  - 非阻塞发现 2 项：service.ts 过时注释、deployment-engineer live entry untracked（git status 标记，不影响功能）
+  - W33 路由：生产运营 — 项目创建实战 + TriMC 连接 + 自动更新 + 经营记录独立运营
