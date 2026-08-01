@@ -57,9 +57,9 @@
     "updatedAt": "2026-07-31T23:30:00+08:00",
     "activeTrees": [
         {
-            "treeId": "trilc-daemon-heartbeat-phase1",
-            "title": "Phase 1: Heartbeat 基础设施 + Session Reaper + 健康扩展",
-            "path": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-phase1/tree-op.json",
+            "treeId": "trilc-daemon-heartbeat-phase2",
+            "title": "Phase 2: Minimal Cron Engine + Daemon OS 集成",
+            "path": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-phase2/tree-op.json",
             "status": "active",
             "priority": "P0"
         }
@@ -73,7 +73,16 @@
             "status": "done",
             "priority": "P0",
             "owner": "CEOChiefOfStaff",
-            "note": "CPO (小乔) daemon-hb-1 + CTO (小狄) daemon-hb-2 并行交付 APPROVE。CEO Chief of Staff (小贾) daemon-hb-3 合流：5 分歧裁决 + 6 一致确认 + 3 对齐微调。产出 merged-execution-plan.md — Phase 1 (W32 8/3-8/7), Phase 2 (W32-W33 8/14), Phase 3 (W33-W34 8/21)。"
+            "note": "CPO (小乔) daemon-hb-1 + CTO (小狄) daemon-hb-2 并行交付 APPROVE。CEO Chief of Staff (小贾) daemon-hb-3 合流：5 分歧裁决 + 6 一致确认 + 3 对齐微调。产出 merged-execution-plan.md。"
+        },
+        {
+            "treeId": "trilc-daemon-heartbeat-phase1",
+            "title": "Phase 1: Heartbeat 基础设施 + Session Reaper + 健康扩展",
+            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-phase1/tree-op.json",
+            "status": "done",
+            "priority": "P0",
+            "owner": "CEOChiefOfStaff",
+            "note": "CTO + FullStack 并行开发，TestEngineer QUALIFIED_PASS，CTO CONDITIONAL_APPROVE。5/5 nodes done。交付 9 文件 + 91/91 tests pass + tsc 零错误。"
         }
     ],
     "nextActions": [
