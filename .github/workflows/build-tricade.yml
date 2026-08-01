@@ -1,0 +1,217 @@
+# ── TriCade Production Build Pipeline ──
+# Triggered by version tags (v*), this workflow:
+#   1. Checks out TriLC + TriPilot + TriCode (sibling repos)
+#   2. npm ci + tsc for each
+#   3. Packages TriPilot .vsix extension
+#   4. Assembles staging directory
+#   5. Optionally builds WiX MSI installer
+#   6. Creates GitHub Release with artifacts
+#
+# CTO-008-P compatible. Output mirrors build-desktop.ps1 structure.
+
+name: Build TriCade
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Override version string (e.g. v1.0.0)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build TriCade (${{ github.ref_name }})
+    runs-on: windows-latest
+
+    env:
+      VERSION: ${{ inputs.version || github.ref_name }}
+
+    steps:
+      # ── Checkout sibling repositories ──
+      - name: Checkout TriMetaverse (build scripts)
+        uses: actions/checkout@v4
+        with:
+          path: TriMetaverse
+          ref: ${{ github.ref }}
+
+      - name: Checkout TriLC
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriLC
+          path: TriLC
+          ref: ${{ github.ref_name }}
+
+      - name: Checkout TriPilot
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriPilot
+          path: TriPilot
+          ref: ${{ github.ref_name }}
+
+      - name: Checkout TriCode
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriCode
+          path: TriCode
+          ref: ${{ github.ref_name }}
+
+      # ── Node.js setup ──
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: |
+            TriLC/package-lock.json
+            TriPilot/package-lock.json
+            TriCode/package-lock.json
+
+      # ── Build TriCode ──
+      - name: Build TriCode
+        working-directory: TriCode
+        run: |
+          npm ci
+          npx tsc -p tsconfig.json --outDir dist
+
+      # ── Build TriLC ──
+      - name: Build TriLC
+        working-directory: TriLC
+        run: |
+          npm ci
+          npx tsc -p tsconfig.json --outDir dist
+          npx tsc -p tsconfig.json --noEmit
+
+      # ── Build TriPilot ──
+      - name: Build TriPilot
+        working-directory: TriPilot
+        run: |
+          npm ci
+          npx tsc -p tsconfig.json --outDir out
+
+      # ── Package TriPilot extension ──
+      - name: Package TriPilot .vsix
+        working-directory: TriPilot
+        run: |
+          npx vsce package --no-dependencies --allow-missing-repository
+          $vsixFile = Get-ChildItem *.vsix | Select-Object -First 1
+          echo "VSIX_PATH=$($vsixFile.FullName)" >> $env:GITHUB_ENV
+          echo "VSIX_NAME=$($vsixFile.Name)" >> $env:GITHUB_ENV
+
+      # ── Assemble staging directory ──
+      - name: Assemble staging
+        run: |
+          $staging = "staging\TriCade-$env:VERSION-windows"
+          New-Item -ItemType Directory -Force -Path "$staging\extensions" | Out-Null
+          New-Item -ItemType Directory -Force -Path "$staging\trilc"      | Out-Null
+          New-Item -ItemType Directory -Force -Path "$staging\tri-code"   | Out-Null
+          New-Item -ItemType Directory -Force -Path "$staging\config"     | Out-Null
+          New-Item -ItemType Directory -Force -Path "$staging\scripts"    | Out-Null
+
+          # TriLC
+          Copy-Item -Recurse -Force TriLC\dist         "$staging\trilc\"
+          Copy-Item -Recurse -Force TriLC\node_modules  "$staging\trilc\" -ErrorAction SilentlyContinue
+          Copy-Item -Force       TriLC\package.json     "$staging\trilc\"
+          Copy-Item -Force       TriLC\version.json     "$staging\trilc\"
+
+          # TriCode
+          Copy-Item -Recurse -Force TriCode\dist         "$staging\tri-code\"
+          Copy-Item -Recurse -Force TriCode\node_modules  "$staging\tri-code\" -ErrorAction SilentlyContinue
+          Copy-Item -Force       TriCode\package.json     "$staging\tri-code\"
+
+          # TriPilot .vsix extraction
+          $extDir = "$staging\extensions\tripilot-chat-0.0.1"
+          New-Item -ItemType Directory -Force -Path $extDir | Out-Null
+          Add-Type -AssemblyName System.IO.Compression.FileSystem
+          [System.IO.Compression.ZipFile]::ExtractToDirectory($env:VSIX_PATH, $extDir)
+
+          # Config
+          Copy-Item -Force TriMetaverse\config\settings.json "$staging\config\" -ErrorAction SilentlyContinue
+
+          # Install script
+          $installBat = @"
+          @echo off
+          setlocal
+          echo ========================================
+          echo  TriCade Desktop Installer $env:VERSION
+          echo ========================================
+          echo.
+          echo TriLC Local Controller + TriPilot Extension
+          echo.
+          echo [1/2] Installing TriPilot extension...
+          code --install-extension ".\extensions\tripilot-chat-0.0.1" --force
+          echo [2/2] Installation complete!
+          echo.
+          echo Start with: trilc daemon start
+          endlocal
+          "@
+          Set-Content -Path "$staging\scripts\install.bat" -Value $installBat -Encoding ASCII
+          echo "STAGING_DIR=$staging" >> $env:GITHUB_ENV
+
+      # ── Create distribution ZIP ──
+      - name: Create ZIP artifact
+        run: |
+          $zipFile = "TriCade-$env:VERSION-windows.zip"
+          Compress-Archive -Force -Path "$env:STAGING_DIR\*" -DestinationPath $zipFile
+          echo "ZIP_FILE=$zipFile" >> $env:GITHUB_ENV
+
+      # ── WiX MSI Installer (optional: requires WiX Toolset) ──
+      - name: Setup WiX Toolset
+        if: false  # Disabled by default; enable when WiX .wxs sources are ready
+        run: |
+          choco install wixtoolset -y
+          echo "WIX_DIR=${env:ProgramFiles(x86)}\WiX Toolset v3.14\bin" >> $env:GITHUB_ENV
+
+      - name: Build WiX MSI
+        if: false  # Disabled by default
+        run: |
+          & "$env:WIX_DIR\heat.exe" dir "$env:STAGING_DIR" -dr INSTALLFOLDER -cg TriCadeComponents -gg -sfrag -srd -out TriCade-files.wxs
+          & "$env:WIX_DIR\candle.exe" TriMetaverse\installer\tricade.wxs TriCade-files.wxs -dVersion="$env:VERSION"
+          & "$env:WIX_DIR\light.exe" tricade.wixobj TriCade-files.wixobj -out "TriCade-$env:VERSION-windows.msi"
+
+      # ── Upload artifacts ──
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriCade-${{ env.VERSION }}-windows.zip
+          path: ${{ env.ZIP_FILE }}
+
+      # ── GitHub Release ──
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: TriCade ${{ env.VERSION }}
+          body: |
+            ## TriCade ${{ env.VERSION }}
+
+            TriMetaverse Desktop distribution bundle.
+
+            ### Contents
+            - **TriLC** — Local Controller daemon (HTTP + SSE agent loop)
+            - **TriPilot** — Chat extension for VSCodium/VS Code
+            - **TriCode** — Shared code runtime
+
+            ### Installation
+            1. Download `TriCade-${{ env.VERSION }}-windows.zip`
+            2. Extract to your workspace
+            3. Run `scripts\install.bat` or manually install the extension
+            4. Start daemon: `trilc daemon start`
+
+            ### Build Information
+            - Build SHA: ${{ github.sha }}
+            - Runner: windows-latest
+            - Node.js: 20.x
+
+            ---
+            Generated with TriCade CI/CD Pipeline
+          files: |
+            ${{ env.ZIP_FILE }}
+          draft: false
+          prerelease: ${{ contains(github.ref_name, '-rc') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-alpha') }}

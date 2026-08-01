@@ -1,0 +1,61 @@
+{
+    "nodes": [
+        {
+            "nodeId": "tricade-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "Phase 1 启动路由。范围：TriCade 1.0 生产部署 + TriCompany 可插拔模块。路由 CTO (配置层+CI/CD) + FullStack (启动向导) + CPO (TriCompany 模块形态)。",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "tricade-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "CTO 4项交付：CI/CD build-tricade.yml (tag push+workflow_dispatch) + trilc-profile.ts (PRODUCTION/DEVELOPMENT 双profile) + version.json 1.0.0 + /agents?scope=company|builtin|all 端点扩展。tsc 零错误。",
+            "delivery": "build-tricade.yml + trilc-profile.ts + version.json + app.ts (/agents scope)",
+            "next_agent": "CEOChiefOfStaff"
+        },
+        {
+            "nodeId": "tricade-2",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "TriPilot welcome-setup.ts 四步向导：欢迎+API配置(BYOK)+TriMC可选+TriCompany启用。触发条件：tripilot.setupCompleted 标记。结果写入 VSCodium settings + trilc-config.json。tsc 编译通过。",
+            "delivery": "welcome-setup.ts + extension.ts (integration)",
+            "next_agent": "CEOChiefOfStaff"
+        },
+        {
+            "nodeId": "tricade-3",
+            "agent": "ChiefProductOfficer",
+            "status": "done",
+            "action": "CPO 产品决策文档：APPROVE 双层组合(UI层+能力层)、Phase1 二进制开关、AgentTool 自动路由、/agents 全量展示、员工侧边栏 Phase2。产出 tricompany-pluggable-module-ux.md。",
+            "delivery": "docs/product/todo/tricompany-pluggable-module-ux.md",
+            "dependsOn": ["tricade-1"],
+            "next_agent": "CEOChiefOfStaff"
+        },
+        {
+            "nodeId": "tricade-4",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "Phase 1 收口：CTO (CI/CD+配置+/agents) + FullStack (启动向导) + CPO (产品决策) 三方交付 APPROVE。5/5 nodes done。Phase 2 路由：ADE 标准化员工上岗 + ADE 项目创建。",
+            "dependsOn": ["tricade-1", "tricade-2", "tricade-3"],
+            "next_agent": null
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W31-001",
+    "objectId": "TREE-OP-tricade-production-deploy",
+    "treeId": "tricade-production-deploy",
+    "title": "TriCade 1.0 生产部署 + TriCompany 可插拔模块 + 实验/生产双轨",
+    "ownerRole": "CEOChiefOfStaff",
+    "status": "done",
+    "priority": "P0",
+    "summary": "Phase 1 全量闭合。TriCade 1.0 生产部署架构就绪：CI/CD 流水线 + 配置层(双profile) + 版本统一(1.0.0) + BYOK 启动向导 + TriCompany 可插拔(双层组合/二进制开关) + /agents scope 端点。5/5 nodes done。路由 Phase 2。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-08-01T02:30:00+08:00",
+        "version": "1.0.0"
+    },
+    "createdAt": "2026-08-01T02:30:00+08:00",
+    "relatedModules": ["TriCade", "TriLC", "TriPilot", "TriCompany"],
+    "updatedAt": "2026-08-01T02:30:00+08:00"
+}
