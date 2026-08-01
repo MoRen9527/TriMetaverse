@@ -24,7 +24,7 @@
     "title": "TriMetaverse W31 当前周经营维护索引",
     "ownerRole": "CEOChiefOfStaff",
     "status": "active",
-    "summary": "W31 全量闭合。(A) TriLC daemon/heartbeat/timer 三层吸收方案：4 棵树 done，22/22 门禁通过。(B) TriCompany V1.0 正式发布：13 员工全量 L1 上岗，5 棵树 done。W31 总计 9 棵树闭合。",
+    "summary": "W31 全量闭合 — 8 棵树。(A) TriLC 三层吸收：4棵树 22/22门禁。(B) TriCompany V1.0：13员工L1上岗+CEO签署+git tag。(C) TriCade 1.0：3棵树 CI/CD+ADE双CLI+管线+多项目隔离。总计新建/修改 150+ 文件。",
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "version": "1.1.0",
@@ -54,7 +54,7 @@
         "TriMC",
         "TriPilot"
     ],
-    "updatedAt": "2026-08-01T02:15:00+08:00",
+    "updatedAt": "2026-08-01T03:30:00+08:00",
     "activeTrees": [],
     "doneTreesFromW30": [],
     "doneTreesThisWeek": [
@@ -92,9 +92,27 @@
             "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-phase3/tree-op.json",
             "status": "done",
             "priority": "P1"
-        }
-    ],
-            "note": "5/5 nodes, CONDITIONAL_APPROVE. 22/22 gates across all 3 phases."
+        },
+        {
+            "treeId": "tricade-production-deploy",
+            "title": "TriCade 1.0 Phase 1: CI/CD + 配置层 + BYOK向导 + TriCompany 可插拔 (5/5 nodes)",
+            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/tricade-production-deploy/tree-op.json",
+            "status": "done",
+            "priority": "P0"
+        },
+        {
+            "treeId": "tricade-ade-phase2",
+            "title": "TriCade 1.0 Phase 2: ADE 员工上岗 CLI + 项目脚手架 CLI (4/4 nodes, 53/53 tests)",
+            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/tricade-ade-phase2/tree-op.json",
+            "status": "done",
+            "priority": "P0"
+        },
+        {
+            "treeId": "tricade-phase3-pipeline",
+            "title": "TriCade 1.0 Phase 3: 实验→生产管线 + 自动更新 + 多项目隔离 (4/4 nodes)",
+            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/tricade-phase3-pipeline/tree-op.json",
+            "status": "done",
+            "priority": "P0"
         }
     ],
     "nextActions": [
