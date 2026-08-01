@@ -32,7 +32,8 @@
             "nodeId": "w32-4",
             "agent": "CEOChiefOfStaff",
             "status": "in_progress",
-            "action": "小贾 主责：dev→main 分支初始同步——代码+模板+合约+文档基线 同步到 main 分支，不含实验经营记录(W15-W31)。main 分支初始 commit。",
+            "action": "小贾 主责：dev→main 分支创建+推送。main 分支已从 dev 创建并 push 到 origin。作为生产环境正式运营真源基线。",
+            "delivery": "main branch created + pushed to origin",
             "next_agent": "CEOChiefOfStaff"
         },
         {
@@ -61,7 +62,7 @@
     "status": "active",
     "priority": "P0",
     "summary": "W32 7 大任务并行：CTO(MSI+集成+daemon)、FullStack(向导+加载)、CHO(上岗实战)、小贾(分支过渡)。7 nodes，目标 8/9 前闭合。",
-    "metadata": { "updatedBy": "CEOChiefOfStaff", "lastUpdated": "2026-08-01T04:00:00+08:00", "version": "1.0.0" },
+    "metadata": { "updatedBy": "CEOChiefOfStaff", "lastUpdated": "2026-08-01T04:00:00+08:00", "version": "1.0.0", "note": "W32 提前启动 (实际开工: 2026-08-01周六, 正式周范围: 8/3-8/9)", "startedEarly": true },
     "createdAt": "2026-08-01T04:00:00+08:00",
     "relatedModules": ["TriCade", "TriLC", "TriPilot", "TriCompany", "TriMC"],
     "updatedAt": "2026-08-01T04:00:00+08:00"
