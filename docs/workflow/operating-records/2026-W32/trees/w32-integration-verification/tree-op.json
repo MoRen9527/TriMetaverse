@@ -1,0 +1,68 @@
+{
+    "nodes": [
+        {
+            "nodeId": "w32-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "W32 启动路由。7 大任务：TriCade MSI构建/三层集成测试/启动向导端到端/13员工加载/ADE上岗实战/dev→main分支过渡/macOS-Linux补齐。路由 CTO(MSI+集成+daemon) + FullStack(向导+加载) + CHO(上岗实战) + 小贾(分支过渡) 并行。",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w32-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "in_progress",
+            "action": "CTO 主责：TriCade 1.0 MSI 构建(WiX Base+Bundle)验证 CI/CD 流水线 + TriLC 三层吸收集成测试(Heartbeat+Cron+Daemon 在 MSI 中端到端) + macOS/Linux daemon @platform-deferred 补齐与验收。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "w32-2",
+            "agent": "FullStackDeveloper",
+            "status": "in_progress",
+            "action": "FullStack 主责：首次启动向导端到端(BYOK→TriMC可选→TriCompany启用 完整走通) + TriCompany 13员工 contract-resolver 加载验证(agents端点正确返回+AgentTool路由)。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "w32-3",
+            "agent": "ChiefHumanResourcesOfficer",
+            "status": "in_progress",
+            "action": "CHO 主责：ADE 员工上岗实战——小布(deployment-engineer)走完整 11 步 employee_onboard 链 + 补齐 contract.yaml/binding profile 数据层面差异。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "w32-4",
+            "agent": "CEOChiefOfStaff",
+            "status": "in_progress",
+            "action": "小贾 主责：dev→main 分支初始同步——代码+模板+合约+文档基线 同步到 main 分支，不含实验经营记录(W15-W31)。main 分支初始 commit。",
+            "next_agent": "CEOChiefOfStaff"
+        },
+        {
+            "nodeId": "w32-5",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "W32 全量集成验收：MSI安装→启动向导→agent加载→ADE上岗→分支同步→macOS/Linux。tsc+pytest零回归。",
+            "dependsOn": ["w32-1", "w32-2", "w32-3"],
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w32-6",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "W32 终审 APPROVE → git commit → 路由 W33(生产运营：项目创建实战+TriMC连接+自动更新+经营记录独立运营)。",
+            "dependsOn": ["w32-4", "w32-5"],
+            "next_agent": null
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202608-W32-001",
+    "objectId": "TREE-OP-w32-integration-verification",
+    "treeId": "w32-integration-verification",
+    "title": "W32 集成验证：TriCade MSI + 端到端 + 分支过渡 + macOS/Linux",
+    "ownerRole": "CEOChiefOfStaff",
+    "status": "active",
+    "priority": "P0",
+    "summary": "W32 7 大任务并行：CTO(MSI+集成+daemon)、FullStack(向导+加载)、CHO(上岗实战)、小贾(分支过渡)。7 nodes，目标 8/9 前闭合。",
+    "metadata": { "updatedBy": "CEOChiefOfStaff", "lastUpdated": "2026-08-01T04:00:00+08:00", "version": "1.0.0" },
+    "createdAt": "2026-08-01T04:00:00+08:00",
+    "relatedModules": ["TriCade", "TriLC", "TriPilot", "TriCompany", "TriMC"],
+    "updatedAt": "2026-08-01T04:00:00+08:00"
+}
