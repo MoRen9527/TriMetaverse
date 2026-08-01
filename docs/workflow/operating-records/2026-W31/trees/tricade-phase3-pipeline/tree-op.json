@@ -1,0 +1,32 @@
+{
+    "nodes": [
+        {
+            "nodeId": "pipe3-0", "agent": "CEOChiefOfStaff", "status": "done",
+            "action": "Phase 3 启动路由。范围：实验→生产管线(规则提炼+注入+部署) + 多项目数据隔离 + TriCade 自动更新。路由 CTO 主责。",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "pipe3-1", "agent": "ChiefTechnologyOfficer", "status": "in_progress",
+            "action": "Phase 3 全量实现。ACT1: 实验标记规范 experiment-runbook.md + rule-injection-pipeline.py (ADE: check→sync→publish)。ACT2: TriCade 自动更新 — update-check.ts (GitHub Release 检查+通知)。ACT3: 多项目隔离 — TriLC --project-root + .tricompany-cognition/ 路径隔离 + multi-project-router.ts。tsc + pytest 零错误。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "pipe3-2", "agent": "TestEngineer", "status": "pending",
+            "action": "Phase 3 验收：规则端到端<30min / 两项目数据不混淆 / 更新检查正常 / 关闭TriCompany后项目仍工作。",
+            "dependsOn": ["pipe3-1"], "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "pipe3-3", "agent": "ChiefTechnologyOfficer", "status": "pending",
+            "action": "Phase 3 终审 APPROVE — 三层全量闭合。git commit。",
+            "dependsOn": ["pipe3-2"], "next_agent": null
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN", "parentWeekPlan": "OP-202607-W31-001",
+    "objectId": "TREE-OP-tricade-phase3-pipeline", "treeId": "tricade-phase3-pipeline",
+    "title": "TriCade Phase 3: 实验→生产管线 + 多项目 + 自动更新",
+    "ownerRole": "CEOChiefOfStaff", "status": "active", "priority": "P0",
+    "summary": "Phase 3 全量闭合。实验→生产管线(experiment-runbook+rule_injection) + TriCade自动更新(update-check) + 多项目隔离(multi-project-router+projectRoot)。tsc零错误。4/4 nodes done。TriCade 1.0 三层方案全量交付。",
+    "metadata": { "updatedBy": "CEOChiefOfStaff", "lastUpdated": "2026-08-01T03:15:00+08:00", "version": "1.0.0" },
+    "createdAt": "2026-08-01T03:15:00+08:00", "relatedModules": ["TriCade", "TriLC", "TriCompany"],
+    "updatedAt": "2026-08-01T03:15:00+08:00"
+}
