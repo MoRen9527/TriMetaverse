@@ -120,7 +120,79 @@ python -m runtime.cognition.rule_injection sync --scope {module}
 4. **回滚路径**：注入前自动备份目标文件到 `.rule-injection-backups/`，可通过 `rule_injection rollback --scope {module}` 恢复。
 5. **跨模块冲突检测**：若同一规则涉及多个模块，check 阶段会检测跨模块一致性，不一致时阻止注入。
 
-## 6. 变更日志
+## 6. 实验环境与生产环境
+
+### 6.1 双环境定义
+
+| 维度 | 实验环境 | 生产环境 |
+|------|---------|---------|
+| **物理位置** | `D:\OneDrive\Code\ai\TriMetaverse\` | `C:\Users\{user}\TriCade\projects\TriMetaverse\` |
+| **Git 分支** | `dev` | `main` |
+| **用途** | 研发、实验、规则提炼 | 正式运营、产生运营数据 |
+| **操作方式** | Claude Code + 人工直接操作 | TriLC → TriCode → OpenCode（自开发回路） |
+| **经营记录路径** | `docs/workflow/operating-records/` | `docs/execution/operating-records/` |
+| **Agent 记忆** | 实验性质的 session 数据 | `.tricompany-cognition/`（项目级持久化） |
+
+### 6.2 代码流向
+
+```
+实验环境 (dev)
+  │  实验验证通过的规则
+  │  PR: dev → main
+  ▼
+生产环境 (main)
+  │  线上 trilc→tricode→opencode 产生的代码变更
+  │  PR: prod/Wxx → main
+  ▼
+main 分支 = 正式运营真源
+```
+
+**核心约束**：
+- **代码单向流动**：dev → main（规则验证后），prod/* → main（自开发回路）
+- **经营记录永不交叉合并**：dev 的 Wxx 和 main 的 Wxx 是两个独立序列
+- **dev 不直接 push main**：必须通过 PR，经 CPO/CTO review
+- **main 不直接 push dev**：生产规则变更如需回实验验证，手动 cherry-pick
+
+### 6.3 经营记录平移机制
+
+实验环境和生产环境各自维护独立的经营记录序列：
+
+```
+实验环境 (dev):
+  docs/workflow/operating-records/
+    W15/ ... W31/  ← 实验期间的研发经营日志
+
+生产环境 (main):
+  docs/execution/operating-records/
+    W01/ ...        ← 正式运营的经营记录（从 TriCade 1.0 上线日开始）
+```
+
+**平移规则**：
+1. **不迁移历史**：dev 的 W15-W31 实验日志留在 dev，不进入 main。main 的经营记录从 TriCade 1.0 上线日开始独立编号。
+2. **规则提炼后可注入**：实验中验证通过的治理规则、ADE 协议、文档模板——通过 `rule_injection sync` 注入到 main 分支的模板目录，但不包含实验期间的周报内容。
+3. **运营数据独立产生**：TriCade 线上环境的经营记录由 TriLC agent 在项目运行时自动产生，写入 `docs/execution/operating-records/`，通过 `prod/Wxx` 分支 PR 回 main。
+4. **周工作平面**：生产环境的周计划（Weekly Operating Plan）由 COO 小营通过 TriCade agent 编排，独立于实验环境的研发周报。
+
+### 6.4 过渡时间线
+
+```
+Phase 1-2（当前 → TriCade 1.0 上线）:
+  - 实验环境 dev 继续运行
+  - main 分支初始同步（仅代码+模板，不含实验经营记录）
+  - 规则验证 → PR → main
+
+Phase 3（自开发回路验证）:
+  - TriCade 线上 trilc→tricode→opencode 产生代码变更
+  - prod/* 分支 → PR → main
+  - 验证通过后，实验环境降级为纯规则提炼场
+
+Phase 4（实验环境退休）:
+  - 不再在实验环境直接操作 TriMetaverse 代码
+  - dev 分支保留为历史参考
+  - 新实验在 TriCade 的独立实验项目中创建
+```
+
+## 7. 变更日志
 
 | 日期 | 版本 | 变更说明 |
 |------|------|---------|
