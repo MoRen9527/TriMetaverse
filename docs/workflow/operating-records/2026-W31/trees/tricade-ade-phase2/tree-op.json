@@ -1,0 +1,49 @@
+{
+    "nodes": [
+        {
+            "nodeId": "ade2-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "Phase 2 启动路由。范围：ADE 标准化员工上岗 (employee_onboard.py) + ADE 标准化项目创建 (project_scaffold.py) + TriLC contract-resolver 扩展。路由 CTO 主责 (ACT1-3)。",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "ade2-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "Phase 2 CTO 全量交付。ACT1: employee_onboard.py (11步ADE链) + employee_onboard_validation.py (33/33 tests) + employee_onboard_stages.json + 路径修复(双命名约定兼容+PascalCase fallback)。ACT2: project_scaffold.py (20/20 tests) + templates/ + pyproject.toml entry。ACT3: contract-resolver employee-roster.json 加载 + /agents 返回 displayName/role/supervisor。tsc零错误，53/53 tests pass。",
+            "delivery": "employee_onboard.py (33/33) + project_scaffold.py (20/20) + contract-resolver.ts + app.ts (/agents)",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "ade2-2",
+            "agent": "TestEngineer",
+            "status": "done",
+            "action": "Phase 2 验收 QUALIFIED_PASS。G2.1: 路径/命名修复后 source kit 正确加载 (5/5)，剩余 Contract/Binding/CEO stage 的 partial 为数据层面差异非代码bug。G2.2 PASS (14号走11步)。G2.3 PASS (18文件+git init)。G2.4 PASS (ADE JSON 100%合规)。G2.5 PASS (tsc零错误+13/13 roster)。G2.6 PASS (53/53 tests)。",
+            "dependsOn": ["ade2-1"],
+            "dependsOn": ["ade2-1"],
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "ade2-3",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "Phase 2 终审 APPROVE — 53/53 tests pass, tsc 零错误, ADE 双CLI 就绪。路由 Phase 3 (实验→生产管线+多项目)。",
+            "dependsOn": ["ade2-2"],
+            "next_agent": null
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W31-001",
+    "objectId": "TREE-OP-tricade-ade-phase2",
+    "treeId": "tricade-ade-phase2",
+    "title": "TriCade Phase 2: ADE 标准化员工上岗 + ADE 项目创建",
+    "ownerRole": "CEOChiefOfStaff",
+    "status": "done",
+    "priority": "P0",
+    "summary": "Phase 2 全量闭合。ADE 双 CLI 就绪：employee_onboard.py (33/33 tests) + project_scaffold.py (20/20 tests) + contract-resolver 13人加载。53/53 PASS。4/4 nodes done。路由 Phase 3。",
+    "metadata": { "updatedBy": "CEOChiefOfStaff", "lastUpdated": "2026-08-01T03:00:00+08:00", "version": "1.0.0" },
+    "createdAt": "2026-08-01T03:00:00+08:00",
+    "relatedModules": ["TriCompany", "TriLC", "TriDev"],
+    "updatedAt": "2026-08-01T03:00:00+08:00"
+}
