@@ -1,0 +1,78 @@
+{
+    "nodes": [
+        {
+            "nodeId": "w33-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "W33 启动路由。范围：ADE 项目创建实战(TriAvatar) + TriMC连接测试(connect/degrade/fallback) + 自动更新验证(Release→通知→升级) + 经营记录独立运营(首份W01)。路由 CTO+FullStack+CHO 并行。",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w33-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "in_progress",
+            "action": "CTO 主责：TriMC 连接端到端测试(connect→pipeline enhance→disconnect→degraded→local fallback→replay recovery) + 自动更新验证(GitHub Release→check端点返回→通知→MSI升级→配置保留)。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "w33-2",
+            "agent": "FullStackDeveloper",
+            "status": "in_progress",
+            "action": "FullStack 主责：ADE 项目创建实战 — project_scaffold init --project-name TriAvatar --type module --sync(18文件+git init+CodeGraph) + TriCompany 13员工在项目中实际加载验证。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "w33-3",
+            "agent": "ChiefHumanResourcesOfficer",
+            "status": "in_progress",
+            "action": "CHO 主责：小成(customer-success-officer) ADE 上岗补齐(manifest+hostobject+liveentry) + employee_onboard 全员工 --validate-all 跑通。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "w33-4",
+            "agent": "CEOChiefOfStaff",
+            "status": "in_progress",
+            "action": "小贾 主责：生产环境首份 W01 经营记录创建(weekly_plane create --week W01 --start-date {TriCade上线日}) + W33→W01 迁移(migrate --from W31 --to W01)。",
+            "next_agent": "CEOChiefOfStaff"
+        },
+        {
+            "nodeId": "w33-5",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "W33 全量集成验收：project_scaffold 18文件完整 + TriMC degrade→replay + 自动更新check→通知 + W01经营记录创建 + 小成上岗补齐 + tsc+pytest零回归。",
+            "dependsOn": ["w33-1", "w33-2", "w33-3"],
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w33-6",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "W33 终审 APPROVE → git commit → 路由 W34(闭环：自开发回路+实验环境降级+多项目并行+P1补齐)。",
+            "dependsOn": ["w33-4", "w33-5"],
+            "next_agent": null
+        }
+    ],
+    "relatedDocuments": [
+        { "note": "合并执行计划", "source": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/merged-execution-plan.md", "kind": "execution-plan" },
+        { "note": "ADE 协议 v1.2", "source": "TriCompany/docs/engineering/ade-pattern-spec.md", "kind": "protocol" },
+        { "note": "实验→生产管线", "source": "docs/engineering/experiment-runbook.md", "kind": "runbook" }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W31-001",
+    "objectId": "TREE-OP-w33-production-ops",
+    "title": "W33 生产运营：项目创建实战 + TriMC连接 + 自动更新 + 经营记录",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "w33-production-ops",
+    "status": "active",
+    "priority": "P0",
+    "summary": "W33 提前规划：ADE 项目创建实战(TriAvatar) + TriMC连接端到端 + 自动更新验证 + 经营记录独立运营(W01) + 小成上岗补齐。7 nodes，4路并行。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-08-01T10:15:00+08:00",
+        "version": "1.0.0",
+        "note": "v1.0.0: W33 提前规划(仍在W31)。7 nodes，4路并行(CTO+FullStack+CHO+小贾)。W32已提前完成，W33待W32正式周开始后启动。"
+    },
+    "createdAt": "2026-08-01T10:15:00+08:00",
+    "relatedModules": ["TriCade", "TriLC", "TriMC", "TriCompany", "TriDev"],
+    "updatedAt": "2026-08-01T10:15:00+08:00"
+}

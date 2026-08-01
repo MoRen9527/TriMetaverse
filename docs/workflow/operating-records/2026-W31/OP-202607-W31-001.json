@@ -55,7 +55,16 @@
         "TriPilot"
     ],
     "updatedAt": "2026-08-01T03:30:00+08:00",
-    "activeTrees": [],
+    "activeTrees": [
+        {
+            "treeId": "w33-production-ops",
+            "title": "[W33提前规划] 生产运营：项目创建+TriMC+自动更新+经营记录 (7 nodes)",
+            "path": "docs/workflow/operating-records/2026-W31/trees/w33-production-ops/tree-op.json",
+            "status": "active",
+            "priority": "P0",
+            "note": "W33 任务提前在 W31 规划。W32已提前完成，W33待正式周启动。"
+        }
+    ],
     "doneTreesFromW30": [],
     "doneTreesThisWeek": [
         {
