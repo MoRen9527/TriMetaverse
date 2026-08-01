@@ -1,0 +1,67 @@
+{
+    "nodes": [
+        {
+            "nodeId": "onboard-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "启动路由。方案 CEO APPROVE。13 员工（含小布 deployment-engineer）P0 8 项全量执行。"
+        },
+        {
+            "nodeId": "onboard-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "P0-1: contract-resolver.ts `colleagues_social` 兼容修复 — 两种格式均支持，向后兼容，tsc 零错误。",
+            "delivery": "contract-resolver.ts fix + code-state.md update"
+        },
+        {
+            "nodeId": "onboard-2",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "P0-3: CEO 命名 5 C-suite — 小源(CHO)/小行(CAO)/小敏(CMO)/小营(COO)/小财(CFO)。",
+            "delivery": "12→13 人名名单确认（含小布）"
+        },
+        {
+            "nodeId": "onboard-3",
+            "agent": "ChiefProductOfficer",
+            "status": "done",
+            "action": "P0-4: 13 份 contract YAML decision_rights 填充 — 每份 ≥1 approve + ≥1 freeze + ≥2 escalate + forbidden。含小布新增合约。",
+            "delivery": "13 contract.yaml files updated"
+        },
+        {
+            "nodeId": "onboard-4",
+            "agent": "ChiefHumanResourcesOfficer",
+            "status": "done",
+            "action": "P0-2 + P0-5: 小成五件套从零创建 + 小布五件套从零创建 + 5 C-suite soul/memory/colleagues/social 升级 placeholder→draft。",
+            "delivery": "customer-success-officer/ 6 files + deployment-engineer/ 6 files + 20 C-suite files upgraded"
+        },
+        {
+            "nodeId": "onboard-5",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "P0-6 + P0-7 + P0-8 收口：小全 manifest → current-copilot-host-live + employee-roster.json (13人) + tricompany.md V1.0 + CEO 签署上线令。",
+            "delivery": "manifest update + employee-roster.json + tricompany.md + ceo-launch-approval-2026-08-01.md"
+        }
+    ],
+    "relatedDocuments": [
+        { "note": "员工名册", "source": "TriCompany/docs/registry/employee-roster.json", "kind": "registry" },
+        { "note": "公司宪章 V1.0", "source": "TriCompany/tricompany.md", "kind": "charter" },
+        { "note": "CEO 签署上线令", "source": "TriCompany/docs/execution/company-launch/ceo-launch-approval-2026-08-01.md", "kind": "approval" }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "objectId": "TREE-OP-tricompany-13-onboarding",
+    "title": "TriCompany 13 员工正式上岗 + 公司正式发布",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "tricompany-13-onboarding",
+    "status": "done",
+    "priority": "P0",
+    "summary": "TriCompany 从研发孵化仓→正式赛博公司经营载体。13 员工全量 L1 上岗：8 C-suite + 5 执行层（含小布 deployment-engineer）。6 节点全闭合。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-08-01T02:00:00+08:00",
+        "version": "2.0.0",
+        "note": "v2.0.0: 13 员工（含小布）全量闭合。树 done。"
+    },
+    "createdAt": "2026-08-01T01:15:00+08:00",
+    "relatedModules": ["TriCompany", "TriLC", "TriMetaverse"],
+    "updatedAt": "2026-08-01T02:00:00+08:00"
+}
