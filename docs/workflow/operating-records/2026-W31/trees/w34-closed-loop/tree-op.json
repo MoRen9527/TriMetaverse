@@ -1,0 +1,73 @@
+{
+    "nodes": [
+        {
+            "nodeId": "w34-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "W34 启动路由。范围：自开发回路(trilc→tricode→opencode)验证 + 实验环境降级 + 多项目并行验证 + P1补齐(watchdog/ActiveHours/Cron告警/TUI权限) + 五件套全员live。路由 CTO+FullStack+CHO 并行。三层方案最后一棵树。",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w34-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "CTO W34交付: watchdog.ts(指数退避+滑动窗口限流+TUI通知) + cron/status端点 + heartbeat-active-hours.ts(时区感知+可配置) + self-dev-loop-design.md(5层架构+11步+安全门) + dev-degradation-plan.md(5阶段)。tsc零错误。",
+            "delivery": "watchdog.ts + heartbeat-active-hours.ts + cron/status + self-dev-loop-design.md + dev-degradation-plan.md",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "w34-2",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "FullStack W34交付: StatusLine cron:degraded(@cron:degraded N failures) + TUI权限弹窗 InteractionPrompt(风险等级+工具类型+截断) + multi-project-router 24/24 tests + isolation verification doc。tsc零错误。",
+            "delivery": "StatusLine.tsx + InteractionPrompt.tsx + app.tsx(cron poll) + /healthz cron fields + multi-project-router 24 tests + VERIFICATION.md",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "w34-3",
+            "agent": "ChiefHumanResourcesOfficer",
+            "status": "done",
+            "action": "CHO W34交付: 18文件补齐(小贾/小乔/小狄/小全/小柯/小吴 memory+colleagues+social) + 13/13全员live级 + 空模板清零 + w34-five-piece-audit.md完整报告。",
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "w34-4",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "W34 全量终验：自开发回路端到端 / 实验降级边界清晰 / 两项目数据隔离 / watchdog+alert+activehours就绪 / 五件套13/13全pass / tsc+pytest零回归。三层方案最终验收。",
+            "dependsOn": ["w34-1", "w34-2", "w34-3"],
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w34-5",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "W34 终审 APPROVE → 三层吸收方案+TriCade 1.0全量闭合 → git commit + tricompany-v1.0 final tag。W31-W34 全周期收口。",
+            "dependsOn": ["w34-4"],
+            "next_agent": null
+        }
+    ],
+    "relatedDocuments": [
+        { "note": "实验→生产管线", "source": "docs/engineering/experiment-runbook.md", "kind": "runbook" },
+        { "note": "ADE 协议 v1.2", "source": "TriCompany/docs/engineering/ade-pattern-spec.md", "kind": "protocol" },
+        { "note": "13员工 roster", "source": "TriCompany/docs/registry/employee-roster.json", "kind": "registry" }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W31-001",
+    "objectId": "TREE-OP-w34-closed-loop",
+    "title": "W34 闭环：自开发回路+实验降级+多项目+P1补齐 — 三层方案最终交付",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "w34-closed-loop",
+    "status": "active",
+    "priority": "P0",
+    "summary": "W34 最后一棵树：自开发回路(trilc→tricode→opencode) + 实验降级 + 多项目隔离 + P1补齐(watchdog/ActiveHours/Cron告警/TUI权限) + 五件套全员live。6 nodes，3路并行。三层吸收方案全量交付的最终闭环。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-08-02T01:00:00+08:00",
+        "version": "1.0.0",
+        "note": "v1.0.0: W34 最终闭环树。W31周内提前规划。三层方案最后一棵树。"
+    },
+    "createdAt": "2026-08-02T01:00:00+08:00",
+    "relatedModules": ["TriCade", "TriLC", "TriMC", "TriCompany", "TriDev"],
+    "updatedAt": "2026-08-02T01:00:00+08:00"
+}

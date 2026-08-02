@@ -58,11 +58,19 @@
     "activeTrees": [
         {
             "treeId": "w33-production-ops",
-            "title": "[W33提前规划] 生产运营：项目创建+TriMC+自动更新+经营记录 (7 nodes)",
+            "title": "[W33提前规划] 生产运营：项目创建+TriMC+自动更新+经营记录 (6/7 done)",
             "path": "docs/workflow/operating-records/2026-W31/trees/w33-production-ops/tree-op.json",
             "status": "active",
             "priority": "P0",
-            "note": "W33 任务提前在 W31 规划。W32已提前完成，W33待正式周启动。"
+            "note": "W33 6/7 done (w33-4 W01经营记录待生产环境)。代码验收 ALL_PASS。"
+        },
+        {
+            "treeId": "w34-closed-loop",
+            "title": "[W34提前规划] 闭环：自开发回路+实验降级+多项目+P1补齐 (6 nodes)",
+            "path": "docs/workflow/operating-records/2026-W31/trees/w34-closed-loop/tree-op.json",
+            "status": "active",
+            "priority": "P0",
+            "note": "W34 最终闭环。三层方案最后一棵树。W31周内提前规划。"
         }
     ],
     "doneTreesFromW30": [],
