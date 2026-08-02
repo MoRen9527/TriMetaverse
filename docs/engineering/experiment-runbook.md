@@ -164,7 +164,7 @@ main 分支 = 正式运营真源
 
 生产环境 (main):
   docs/execution/operating-records/
-    W01/ ...        ← 正式运营的经营记录（从 TriCade 1.0 上线日开始）
+    W{当前周}/ ...    ← 正式运营的经营记录（周号与日历一致，从 TriCade 1.0 上线日开始）
 ```
 
 **平移规则**：

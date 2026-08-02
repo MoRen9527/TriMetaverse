@@ -32,7 +32,8 @@
             "nodeId": "w33-4",
             "agent": "CEOChiefOfStaff",
             "status": "in_progress",
-            "action": "小贾 主责：生产环境首份 W01 经营记录创建(weekly_plane create --week W01 --start-date {TriCade上线日}) + W33→W01 迁移(migrate --from W31 --to W01)。",
+            "action": "小贾 主责：生产环境首份经营记录（周号与日历一致，非W01。TriCade上线后用 weekly_plane create --week {当前周} --start-date {上线日} 在 main 分支创建，写入 docs/execution/operating-records/）。工具链已就绪，待生产环境。",
+            "delivery": "待生产环境。weekly_plane CLI就绪，流程定义完成。",
             "next_agent": "CEOChiefOfStaff"
         },
         {
