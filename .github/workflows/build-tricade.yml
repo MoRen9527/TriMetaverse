@@ -189,7 +189,12 @@ jobs:
           [System.IO.Compression.ZipFile]::ExtractToDirectory($env:VSIX_PATH, $extDir)
 
           # Config (optional — TriLC falls back to built-in defaults if missing)
-          Copy-Item -Force TriMetaverse\config\settings.json "$staging\config\" -ErrorAction SilentlyContinue
+          # Config (optional — create default if missing)
+          if (Test-Path TriMetaverse\config\settings.json) {
+            Copy-Item -Force TriMetaverse\config\settings.json "$staging\config\"
+          } else {
+            @{ triLC = @{ port = 8711 }; version = "$env:VERSION" } | ConvertTo-Json | Set-Content "$staging\config\settings.json"
+          }
 
           # Install script
           $installBat = @"
