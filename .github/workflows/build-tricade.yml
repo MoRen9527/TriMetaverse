@@ -1,6 +1,6 @@
 # ── TriCade Production Build Pipeline ──
 # Triggered by version tags (v*), this workflow:
-#   1. Checks out TriLC + TriPilot + TriCode (sibling repos)
+#   1. Checks out TriLC + TriPilot + TriCode + TriMC + TriModel (sibling repos)
 #   2. npm ci + tsc for each
 #   3. Packages TriPilot .vsix extension
 #   4. Assembles staging directory
@@ -67,6 +67,20 @@ jobs:
           path: TriCode
           ref: ${{ github.ref }}
 
+      - name: Checkout TriMC
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriMC
+          path: TriMC
+          ref: ${{ github.ref }}
+
+      - name: Checkout TriModel
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriModel
+          path: TriModel
+          ref: ${{ github.ref }}
+
       # ── Node.js setup ──
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -77,6 +91,8 @@ jobs:
             TriLC/package-lock.json
             TriPilot/package-lock.json
             TriCode/package-lock.json
+            TriMC/package-lock.json
+            TriModel/package-lock.json
 
       # ── Build TriCode ──
       - name: Build TriCode
