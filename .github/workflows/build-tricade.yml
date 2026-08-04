@@ -47,7 +47,8 @@ jobs:
             $v = "$env:VERSION_PREFIX"
           } else {
             $d = Get-Date
-            $v = "$($d.Year).$($d.Month).$($d.Day).0"
+            $yy = $d.Year - 2000
+            $v = "$yy.$($d.Month).$($d.Day).0"
           }
           echo "VERSION=$v" >> $env:GITHUB_ENV
           Write-Host "VERSION=$v"
