@@ -60,7 +60,7 @@
 Copilot CLI 默认 agent 与 Trees 协议协同，实现跨岗位自动编排。
 
 **CLI agent 只做机器级动作：检测、调用、流转、报告。不创建节点，不做收口检查。**
-节点创建和运维是 `CEOChiefOfStaff`（小贾）的职责——见 `.github/instructions/ceo-chief-of-staff.instructions.md`。
+节点创建和运维是 `CEOChiefOfStaff`（小贾）的职责——见 `TriCompany/docs/workflow/ceo-chief-of-staff-maintenance-rules.md`。
 
 ### 机器级规则
 
