@@ -1,0 +1,95 @@
+{
+    "treeId": "w33-cron-selfdev",
+    "title": "W33 Cron 投产 + 自研循环 v1",
+    "source": "docs/execution/v0.9.x-dual-track-tricompany-plan.md v3",
+    "week": "2026-W33",
+    "status": "in_progress",
+    "dependsOn": ["w32-dual-track-kickoff"],
+    "nodes": [
+        {
+            "nodeId": "w33-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "W33 路由拆分。上游 W32 闭合发现：安装版 v0.1.0 缺少 cron CLI（W31 新增功能未部署）。W33 目标：1) 构建含 cron 的新 MSI，2) 在生产环境验证 cron 引擎，3) 自研循环 v1（方案 B — TriLC 自身编码能力）。拆为 3 条并行 Track：Track A（小布/小狄）新 MSI 构建+验证，Track B（小贾/小全）自研循环 v1，Track C（小贾）周平面半自动收口。",
+            "next_agent": "DeploymentEngineer"
+        },
+        {
+            "nodeId": "w33-1",
+            "agent": "DeploymentEngineer",
+            "status": "in_progress",
+            "action": "Track A-1: 构建含 W31 cron 功能的新 MSI。1) 确认 TriLC dev 分支已包含 cron CLI（Phase 3 交付物：src/cron/*, cli.ts cron 子命令）。2) 触发 build-tricade.yml CI 构建（手动 workflow_dispatch 或打 tag）。3) 产出 MSI + ZIP 到 output/。4) 版本号按 calver 自动生成。",
+            "delivery": "新 MSI + ZIP（含 cron CLI），版本号 vYYYY.MMDD.N",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w33-2",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "Track A-2: 新 MSI 安装 + Cron 功能验证。1) 用 install-tricade.ps1 安装 w33-1 产出的 MSI。2) 验证 trilc cron 子命令可用（add/list/run/log/remove/status）。3) 添加测试 cron job（每分钟写时间戳），运行 10 轮验证。4) 验证 cron store 持久化（SQLite + JSON backup）。5) 验证 cron timer 补执行（runMissedJobs）。6) 验证 Session Reaper 正常。7) /healthz 返回 cron.enabled=true, cron.jobCount>0。产出：Cron 功能验证报告。",
+            "delivery": "Cron 功能验证报告（CLI 命令矩阵 + 10轮执行记录 + 持久化验证 + /healthz 采样）",
+            "dependsOn": ["w33-1"],
+            "next_agent": "FullStackDeveloper"
+        },
+        {
+            "nodeId": "w33-3",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "Track A-3: Cron 验证问题修复（如有）。根据 w33-2 的问题清单修复。若通过则跳过。",
+            "delivery": "修复 PR 或 skip",
+            "dependsOn": ["w33-2"],
+            "next_agent": "DeploymentEngineer"
+        },
+        {
+            "nodeId": "w33-4",
+            "agent": "CEOChiefOfStaff",
+            "status": "in_progress",
+            "action": "Track B-1: 自研循环 v1 — 方案 B（TriLC 自身编码能力验证）。目标：验证 TriLC agent loop 能否独立完成「理解需求→生成代码→写入文件」闭环。1) 通过 TriPilot 对话发送简单的代码修改需求（如：修改 /healthz 返回增加一个字段 serverTime）。2) TriLC agent 分析需求 → 定位文件 → 生成 diff → 写入 → 验证 tsc --noEmit。3) 记录全流程耗时和准确性。4) 标注：方案 B 不依赖 OpenCode/Claude Code 外部引擎，纯 TriLC agent 编码。产出：自研循环 v1 验证报告（方案 B 结果，标注清楚能力边界）。",
+            "delivery": "自研循环 v1 验证报告（方案 B — TriLC 自身编码，含需求→代码→验证全流程记录 + 能力边界标注）",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w33-5",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "Track B-2: 自研循环 v1 CTO 评估。审查 w33-4 的验证报告，判断 TriLC 自身编码能力是否达到基础自研要求。如果方案 B 不通过，评估是否需要引入方案 A（TriCode + Claude Code/OpenCode 外部引擎）。如果方案 B 通过，给出生产级自研循环的设计建议（安全护栏、人工审核 gate、回滚机制）。",
+            "delivery": "CTO 评估报告（方案 B PASS/FAIL + 后续建议）",
+            "dependsOn": ["w33-4"]
+        },
+        {
+            "nodeId": "w33-6",
+            "agent": "CEOChiefOfStaff",
+            "status": "in_progress",
+            "action": "Track C: 周平面半自动收口 + W33 OP 维护。1) 基于 W32 手动周度平移流程，整理为可复用的 SOP 模板。2) 为 v0.5.x cron 自动化准备 weekly-plane shift 的 CLI 参数规格（参考 ADE 执行模式：Agent plans → Deterministic CLI executes → Agent closes）。3) 更新 W33 OP JSON 和 carry-over。4) 4w+ carry-over 预警评估（CARRY-20260728-001/003/004/005/006 均 >=5w）。",
+            "delivery": "周平面 SOP 模板 + weekly-plane CLI 规格草案 + W33 OP 维护 + carry-over 预警升级"
+        }
+    ],
+    "tracks": [
+        {
+            "id": "A",
+            "title": "新 MSI + Cron 验证",
+            "nodes": ["w33-1", "w33-2", "w33-3"],
+            "owner": "DeploymentEngineer",
+            "sequence": "w33-1 → w33-2 → w33-3"
+        },
+        {
+            "id": "B",
+            "title": "自研循环 v1 (方案 B)",
+            "nodes": ["w33-4", "w33-5"],
+            "owner": "CEOChiefOfStaff",
+            "sequence": "w33-4 → w33-5"
+        },
+        {
+            "id": "C",
+            "title": "周平面半自动收口",
+            "nodes": ["w33-6"],
+            "owner": "CEOChiefOfStaff"
+        }
+    ],
+    "carry_over_warning": [
+        "CARRY-20260728-001: trilc TUI CC P0 — 5w+ ⚠️⚠️ (W30→W33, 超4w预警, 接近8w升级线)",
+        "CARRY-20260728-003: TriCade MSI CI — 5w+ ⚠️⚠️ (W30→W33, w33-1 推进中)",
+        "CARRY-20260728-004: trilc TUI P1 — 5w+ ⚠️⚠️ frozen",
+        "CARRY-20260728-005: Openclaw daemon — 5w+ ⚠️⚠️ frozen",
+        "CARRY-20260728-006: trilc TUI P2 — 5w+ ⚠️⚠️ frozen"
+    ]
+}
