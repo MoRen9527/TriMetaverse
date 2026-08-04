@@ -36,7 +36,8 @@ jobs:
     runs-on: windows-latest
 
     env:
-      VERSION: ${{ inputs.version || github.ref_name }}
+      # WiX requires x.x.x.x format. Tag push strips 'v' prefix; workflow_dispatch uses inputs.version (required for MSI).
+      VERSION: ${{ inputs.version || (startsWith(github.ref_name, 'v') && format('{0}.0', replace(github.ref_name, 'v', ''))) || '0.0.0.0' }}
 
     steps:
       # ── Checkout sibling repositories ──
