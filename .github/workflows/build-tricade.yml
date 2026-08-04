@@ -216,9 +216,10 @@ jobs:
 
       - name: Build WiX MSI
         if: inputs.build_msi == true || vars.BUILD_MSI == 'true'
+        working-directory: ${{ github.workspace }}
         run: |
           & "$env:WIX_DIR\heat.exe" dir "$env:STAGING_DIR" -dr INSTALLFOLDER -cg TriCadeComponents -gg -sfrag -srd -out TriCade-files.wxs
-          & "$env:WIX_DIR\candle.exe" TriMetaverse\installer\tricade.wxs TriCade-files.wxs -dVersion="$env:VERSION"
+          & "$env:WIX_DIR\candle.exe" "${{ github.workspace }}\TriMetaverse\installer\tricade.wxs" TriCade-files.wxs -dVersion="$env:VERSION"
           & "$env:WIX_DIR\light.exe" tricade.wixobj TriCade-files.wixobj -out "TriCade-$env:VERSION-windows.msi"
 
       # ── Upload artifacts ──
