@@ -36,10 +36,22 @@ jobs:
     runs-on: windows-latest
 
     env:
-      # WiX requires x.x.x.x format. Tag push strips 'v' prefix; workflow_dispatch uses inputs.version (required for MSI).
-      VERSION: ${{ inputs.version || (startsWith(github.ref_name, 'v') && format('{0}.0', replace(github.ref_name, 'v', ''))) || '0.0.0.0' }}
+      VERSION_PREFIX: ${{ inputs.version || 'calver' }}
 
     steps:
+      # ── Compute version (calver: YYYY.M.D.N or inputs.version) ──
+      - name: Compute version
+        id: version
+        run: |
+          if ("$env:VERSION_PREFIX" -ne "calver") {
+            $v = "$env:VERSION_PREFIX"
+          } else {
+            $d = Get-Date
+            $v = "$($d.Year).$($d.Month).$($d.Day).0"
+          }
+          echo "VERSION=$v" >> $env:GITHUB_ENV
+          Write-Host "VERSION=$v"
+
       # ── Checkout sibling repositories ──
       - name: Checkout TriMetaverse (build scripts)
         uses: actions/checkout@v4
