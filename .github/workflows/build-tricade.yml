@@ -51,21 +51,21 @@ jobs:
         with:
           repository: ${{ github.repository_owner }}/TriLC
           path: TriLC
-          ref: refs/tags/${{ github.ref_name }}
+          ref: ${{ github.ref }}
 
       - name: Checkout TriPilot
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository_owner }}/TriPilot
           path: TriPilot
-          ref: refs/tags/${{ github.ref_name }}
+          ref: ${{ github.ref }}
 
       - name: Checkout TriCode
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository_owner }}/TriCode
           path: TriCode
-          ref: refs/tags/${{ github.ref_name }}
+          ref: ${{ github.ref }}
 
       # ── Node.js setup ──
       - name: Setup Node.js
