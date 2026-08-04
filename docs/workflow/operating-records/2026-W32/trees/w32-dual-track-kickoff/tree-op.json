@@ -1,0 +1,145 @@
+{
+    "treeId": "w32-dual-track-kickoff",
+    "title": "W32 双轨互促即刻启动",
+    "source": "docs/execution/v0.9.x-dual-track-tricompany-plan.md v3 §九 即刻行动",
+    "week": "2026-W32",
+    "status": "in_progress",
+    "nodes": [
+        {
+            "nodeId": "w32-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "W32 即刻行动路由。v0.9.x 双轨互促方案 v3 已由磨人审批通过（14 项决策全部收口）。即刻拆为 4 条并行 Track 共 9 个节点。Track A: 安装版发布+验证（小布/小狄/小全）。Track B: 运行面补齐（小源/小狄/小贾）。Track C: 工程治理（小贾/小行/小柯+磨人）。Track D: W32 周度平移（小贾）。详细规格见各节点 action。",
+            "next_agent": "DeploymentEngineer"
+        },
+        {
+            "nodeId": "w32-1",
+            "agent": "DeploymentEngineer",
+            "status": "in_progress",
+            "action": "Track A-1: 发布安装版（服务固化 + MSI）。1) 整合现有 14 个版本的 install-tricade-*.ps1 脚本，标准化为单一 install-tricade.ps1。2) 实现 trilc daemon install 一键注册 Windows 服务（NSSM），开机自启。3) daemon status 实时状态查询。4) /healthz 健康检查端点（uptime/activeTasks/queueSize/version）。5) 日志轮转（≤100MB）。6) 通过 build-tricade.yml CI 打出 MSI。产出：MSI + ZIP 可下载。",
+            "delivery": "MSI + ZIP 安装包，trilc daemon install/status 可用，/healthz 返回 200",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w32-2",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "Track A-2: 生产环境 daemon 三层 24h 稳定性验证。范围：Heartbeat + Cron + Session Reaper 在生产安装版环境下的运行时验证。1) 安装 w32-1 产出的 MSI。2) trilc daemon start → 持续运行 24h。3) 监控 /healthz 端点每小时采样。4) 验证 cron 任务执行（添加测试 job，每小时写时间戳到文件）。5) 验证 Session Reaper 定时清理。6) Crash dump 收集。产出：24h 稳定性报告 + 问题清单（如有）。",
+            "delivery": "24h 稳定性报告（/healthz 采样记录 + cron 执行日志 + crash dump 分析），问题清单路由给 FullStackDeveloper 或回写 w32-1",
+            "dependsOn": ["w32-1"],
+            "next_agent": "FullStackDeveloper"
+        },
+        {
+            "nodeId": "w32-3",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "Track A-3: daemon 验证问题修复（如有）。根据 w32-2 的问题清单修复代码缺陷。若 w32-2 全部通过则跳过本节点。修复完成后通知 DeploymentEngineer 重新打包。",
+            "delivery": "修复 PR（如有），通知 w32-1 重新构建",
+            "dependsOn": ["w32-2"],
+            "next_agent": "DeploymentEngineer"
+        },
+        {
+            "nodeId": "w32-4",
+            "agent": "ChiefHumanResourcesOfficer",
+            "status": "in_progress",
+            "action": "Track B-1: 补齐 .claude/agents/ 缺失的 2 个 agent（小成 customer-success-officer + 小布 deployment-engineer）。从 .github/agents/ 的源定义生成 Claude Code 运行面版本——修改 frontmatter tools 字段为 Claude Code 语义（Read/Glob/Grep/Write/Edit/Bash），去掉 user-invocable，正文保持一致。验证：diff 确认正文与 .github/agents/ 一致。",
+            "delivery": ".claude/agents/customer-success-officer.md + .claude/agents/deployment-engineer.md，正文与 .github/ 一致，frontmatter 适配 Claude Code",
+            "next_agent": "ChiefTechnologyOfficer"
+        },
+        {
+            "nodeId": "w32-5",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "Track B-2: 新建 TriMetaverse/CLAUDE.md。项目级全局指令，内容：1) CodeGraph 使用约定（何时用 codegraph vs grep）。2) Registry 路由规则（business/product/code 三层，遇到什么问题查哪个 registry）。3) 多模块 workspace 路径纪律。4) 常用命令速查。格式参考 Tricistaspas/CLAUDE.md。",
+            "delivery": "TriMetaverse/CLAUDE.md",
+            "next_agent": "CEOChiefOfStaff"
+        },
+        {
+            "nodeId": "w32-6",
+            "agent": "CEOChiefOfStaff",
+            "status": "pending",
+            "action": "Track B-3: .github/instructions/ 内容归入 TriCompany/docs/workflow/ + 更新 AGENTS.md 引用。1) 读取 .github/instructions/ceo-chief-of-staff.instructions.md，去掉 applyTo frontmatter（Claude Code 不支持），保留正文为纯开发者维护规范。2) 归入 TriCompany/docs/workflow/ 适当位置。3) 更新 TriMetaverse/AGENTS.md 第 63 行引用路径（.github/instructions/ → TriCompany/docs/workflow/）。4) 评估 .github/instructions/ 目录是否退役或留重定向 README。",
+            "delivery": "TriCompany/docs/workflow/ 新增维护规范文件，AGENTS.md 引用路径更新，.github/instructions/ 处置方案",
+            "dependsOn": ["w32-5"]
+        },
+        {
+            "nodeId": "w32-7",
+            "agent": "CEOChiefOfStaff",
+            "status": "in_progress",
+            "action": "Track C-1: docs/ 根级别文件归档（十件套清理 P0）。目标：将 docs/ 根目录下约 20 个散落 .md 文件归入正确子目录。1) 逐文件分类：架构文档→engineering/，迁移/决策记录→workflow/，issue pack→workflow/，治理规则→registry/ 或 workflow/。2) 归档完成后验证子目录 README 索引更新。3) 在 docs/runs/ 放置退休声明，链接到 operating-records/。协同：小行（CAO）负责归档命名规范校验。",
+            "delivery": "docs/ 根目录散落文件清零，各子目录 README 索引更新，docs/runs/ 退休声明",
+            "next_agent": "ChiefAdministrativeOfficer"
+        },
+        {
+            "nodeId": "w32-8",
+            "agent": "TestEngineer",
+            "status": "in_progress",
+            "action": "Track C-2: 安装版 Smoke Test 套件搭建。1) 确定测试框架（Windows 环境）。2) 编写 MSI 安装测试用例：安装→服务自动启动→/healthz 200→卸载→残留检查。3) 编写 daemon 功能测试：cron add/list/run/log、daemon status、日志轮转。4) 搭建本地测试环境（需磨人配合安装测试软件）。5) 产出测试套件 README。",
+            "delivery": "Smoke Test 套件（测试用例 + 框架 + README），本地测试环境就绪",
+            "next_agent": "CEOChiefOfStaff"
+        },
+        {
+            "nodeId": "w32-9",
+            "agent": "CEOChiefOfStaff",
+            "status": "in_progress",
+            "action": "Track D: W32 周度平移（手动→半自动）。1) 读取 W31 OP-202607-W31-001.json，计算未闭合项→carry-over 清单（含 4 周/8 周预警标记）。2) 创建 W32 OP JSON：OP-202608-W32-001.json。3) 创建 W32 树目录骨架（已有 w32-dual-track-kickoff/）。4) 本次仍手动执行，为后续 v0.5.x cron 自动化提供流程模板。5) 将本 tree-op 注册到 W32 OP JSON。",
+            "delivery": "W32 OP JSON + carry-over 清单（含预警标记）+ 树目录骨架",
+            "dependsOn": [
+                "w32-1",
+                "w32-4",
+                "w32-7",
+                "w32-8"
+            ]
+        }
+    ],
+    "tracks": [
+        {
+            "id": "A",
+            "title": "安装版发布+验证",
+            "nodes": ["w32-1", "w32-2", "w32-3"],
+            "owner": "DeploymentEngineer",
+            "sequence": "w32-1 → w32-2 → w32-3"
+        },
+        {
+            "id": "B",
+            "title": "运行面补齐 (.claude/)",
+            "nodes": ["w32-4", "w32-5", "w32-6"],
+            "owner": "ChiefTechnologyOfficer",
+            "sequence": "w32-4 + w32-5 并行 → w32-6"
+        },
+        {
+            "id": "C",
+            "title": "工程治理",
+            "nodes": ["w32-7", "w32-8"],
+            "owner": "CEOChiefOfStaff",
+            "sequence": "w32-7 + w32-8 并行"
+        },
+        {
+            "id": "D",
+            "title": "W32 周度平移",
+            "nodes": ["w32-9"],
+            "owner": "CEOChiefOfStaff",
+            "dependsOn": ["A", "B", "C"]
+        }
+    ],
+    "decisions": {
+        "source": "docs/execution/v0.9.x-dual-track-tricompany-plan.md §十",
+        "total": 14,
+        "confirmed": [
+            "版本编号: vYYYY.MMDD.N 日期制",
+            "ADE: 不变 + ADP (Agent Delegation Protocol)",
+            "区块链: TimeSource 接口占位, Phase 3+ 前不实现",
+            "TriCompany: 开源",
+            "当前交付: 服务固化 + MSI",
+            "E2E 测试: 搭建套件, 磨人配合",
+            "自研循环 v1: 方案 B (TriLC 自身编码能力优先)",
+            "双维度: 公司维度 + 项目维度",
+            "流程: 先公司→后项目→分配人力→项目级核算→公司级聚合",
+            "运行面: .claude/ 为主, 未来 TriLC 接管, 工作面不变",
+            "十件套: TriCompany 安装标配",
+            ".claude/instructions/: 不创建, CLAUDE.md + TriCompany/docs/workflow/ 替代",
+            "发布管线: 双宿主 (.github/ + .claude/), 未来 .trilc/ 第三宿主",
+            "CEO 代号: 磨人"
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "week": "2026-W32",
+    "date": "2026-08-04",
+    "status": "in_progress",
+    "summary": "W32 双轨互促即刻启动。v0.9.x 方案 v3 经磨人审批通过（14 项决策收口）。即刻行动拆为 4 条并行 Track 共 9 个节点：Track A 安装版发布+验证（小布/小狄/小全）、Track B 运行面补齐 .claude/（小源/小狄/小贾）、Track C 工程治理 docs/ 归档 + Smoke Test（小贾/小行/小柯+磨人）、Track D W32 周度平移（小贾）。上游：W31 9棵树闭合。",
+    "active_trees": [
+        {
+            "treeId": "w32-dual-track-kickoff",
+            "title": "W32 双轨互促即刻启动",
+            "nodes_total": 10,
+            "nodes_done": 1,
+            "status": "in_progress",
+            "path": "trees/w32-dual-track-kickoff/tree-op.json"
+        }
+    ],
+    "carry_over_from_w31": [],
+    "risks": [
+        "TriCade 生产环境未就绪 — 小布 W32 优先搭建",
+        "TriCompany .claude/ 与 .github/ Agent 不同步 — W32 补齐",
+        "docs/ 根级别散落约 20 个文件 — W32 归档",
+        "macOS/Linux 未验证 — 不阻塞 Windows, 排 W34+"
+    ],
+    "next_week_preview": "W33: Cron 引擎投产验证 + 自研循环 v1 (方案 B) + 周平面半自动化 + 十件套差距补齐"
+}
