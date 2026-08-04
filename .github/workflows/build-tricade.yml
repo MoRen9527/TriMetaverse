@@ -21,6 +21,11 @@ on:
         description: 'Override version string (e.g. v1.0.0)'
         required: false
         type: string
+      build_msi:
+        description: 'Build WiX MSI installer (requires WiX Toolset v3 on runner)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -46,21 +51,21 @@ jobs:
         with:
           repository: ${{ github.repository_owner }}/TriLC
           path: TriLC
-          ref: ${{ github.ref_name }}
+          ref: refs/tags/${{ github.ref_name }}
 
       - name: Checkout TriPilot
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository_owner }}/TriPilot
           path: TriPilot
-          ref: ${{ github.ref_name }}
+          ref: refs/tags/${{ github.ref_name }}
 
       - name: Checkout TriCode
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository_owner }}/TriCode
           path: TriCode
-          ref: ${{ github.ref_name }}
+          ref: refs/tags/${{ github.ref_name }}
 
       # ── Node.js setup ──
       - name: Setup Node.js
@@ -100,7 +105,7 @@ jobs:
         working-directory: TriPilot
         run: |
           npx vsce package --no-dependencies --allow-missing-repository
-          $vsixFile = Get-ChildItem *.vsix | Select-Object -First 1
+          $vsixFile = Get-ChildItem *.vsix | Sort-Object LastWriteTime -Descending | Select-Object -First 1
           echo "VSIX_PATH=$($vsixFile.FullName)" >> $env:GITHUB_ENV
           echo "VSIX_NAME=$($vsixFile.Name)" >> $env:GITHUB_ENV
 
@@ -116,13 +121,21 @@ jobs:
 
           # TriLC
           Copy-Item -Recurse -Force TriLC\dist         "$staging\trilc\"
-          Copy-Item -Recurse -Force TriLC\node_modules  "$staging\trilc\" -ErrorAction SilentlyContinue
+          Copy-Item -Recurse -Force TriLC\node_modules  "$staging\trilc\"
+          if (-not (Test-Path "$staging\trilc\node_modules")) {
+            Write-Error "FATAL: TriLC node_modules copy failed — path does not exist"
+            exit 1
+          }
           Copy-Item -Force       TriLC\package.json     "$staging\trilc\"
           Copy-Item -Force       TriLC\version.json     "$staging\trilc\"
 
           # TriCode
           Copy-Item -Recurse -Force TriCode\dist         "$staging\tri-code\"
-          Copy-Item -Recurse -Force TriCode\node_modules  "$staging\tri-code\" -ErrorAction SilentlyContinue
+          Copy-Item -Recurse -Force TriCode\node_modules  "$staging\tri-code\"
+          if (-not (Test-Path "$staging\tri-code\node_modules")) {
+            Write-Error "FATAL: TriCode node_modules copy failed — path does not exist"
+            exit 1
+          }
           Copy-Item -Force       TriCode\package.json     "$staging\tri-code\"
 
           # TriPilot .vsix extraction
@@ -131,7 +144,7 @@ jobs:
           Add-Type -AssemblyName System.IO.Compression.FileSystem
           [System.IO.Compression.ZipFile]::ExtractToDirectory($env:VSIX_PATH, $extDir)
 
-          # Config
+          # Config (optional — TriLC falls back to built-in defaults if missing)
           Copy-Item -Force TriMetaverse\config\settings.json "$staging\config\" -ErrorAction SilentlyContinue
 
           # Install script
@@ -156,20 +169,23 @@ jobs:
 
       # ── Create distribution ZIP ──
       - name: Create ZIP artifact
+        id: zip
         run: |
           $zipFile = "TriCade-$env:VERSION-windows.zip"
           Compress-Archive -Force -Path "$env:STAGING_DIR\*" -DestinationPath $zipFile
-          echo "ZIP_FILE=$zipFile" >> $env:GITHUB_ENV
+          echo "zip_file=$zipFile" >> $env:GITHUB_OUTPUT
 
-      # ── WiX MSI Installer (optional: requires WiX Toolset) ──
+      # ── WiX MSI Installer (requires WiX Toolset v3) ──
+      # Enable via workflow_dispatch input `build_msi: true`, or set
+      # `env.BUILD_MSI = 'true'` for tag-triggered builds in repo variables.
       - name: Setup WiX Toolset
-        if: false  # Disabled by default; enable when WiX .wxs sources are ready
+        if: inputs.build_msi == true || vars.BUILD_MSI == 'true'
         run: |
           choco install wixtoolset -y
           echo "WIX_DIR=${env:ProgramFiles(x86)}\WiX Toolset v3.14\bin" >> $env:GITHUB_ENV
 
       - name: Build WiX MSI
-        if: false  # Disabled by default
+        if: inputs.build_msi == true || vars.BUILD_MSI == 'true'
         run: |
           & "$env:WIX_DIR\heat.exe" dir "$env:STAGING_DIR" -dr INSTALLFOLDER -cg TriCadeComponents -gg -sfrag -srd -out TriCade-files.wxs
           & "$env:WIX_DIR\candle.exe" TriMetaverse\installer\tricade.wxs TriCade-files.wxs -dVersion="$env:VERSION"
@@ -180,7 +196,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: TriCade-${{ env.VERSION }}-windows.zip
-          path: ${{ env.ZIP_FILE }}
+          path: ${{ steps.zip.outputs.zip_file }}
 
       # ── GitHub Release ──
       - name: Create GitHub Release
@@ -212,6 +228,6 @@ jobs:
             ---
             Generated with TriCade CI/CD Pipeline
           files: |
-            ${{ env.ZIP_FILE }}
+            ${{ steps.zip.outputs.zip_file }}
           draft: false
           prerelease: ${{ contains(github.ref_name, '-rc') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-alpha') }}
