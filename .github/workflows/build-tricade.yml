@@ -94,16 +94,16 @@ jobs:
             TriMC/package-lock.json
             TriModel/package-lock.json
 
-      # ── Build TriMC agent-core (TriLC dependency) ──
-      - name: Build TriMC agent-core
-        working-directory: TriMC/packages/agent-core
+      # ── Build TriModel (no deps; needed by TriMC + TriLC) ──
+      - name: Build TriModel
+        working-directory: TriModel
         run: |
           npm ci
           npx tsc -p tsconfig.json --outDir dist
 
-      # ── Build TriModel (TriLC dependency) ──
-      - name: Build TriModel
-        working-directory: TriModel
+      # ── Build TriMC agent-core (depends on TriModel) ──
+      - name: Build TriMC agent-core
+        working-directory: TriMC/packages/agent-core
         run: |
           npm ci
           npx tsc -p tsconfig.json --outDir dist
