@@ -238,7 +238,7 @@ jobs:
         run: |
           & "$env:WIX_DIR\heat.exe" dir "$env:STAGING_DIR" -dr INSTALLFOLDER -cg TriCadeComponents -gg -sfrag -srd -out TriCade-files.wxs
           & "$env:WIX_DIR\candle.exe" TriMetaverse\installer\tricade.wxs TriCade-files.wxs -dVersion="$env:VERSION"
-          & "$env:WIX_DIR\light.exe" tricade.wixobj TriCade-files.wixobj -ext WixUIExtension -out "TriCade-$env:VERSION-windows.msi"
+          & "$env:WIX_DIR\light.exe" tricade.wixobj TriCade-files.wixobj -ext WixUIExtension -b "$env:STAGING_DIR" -out "TriCade-$env:VERSION-windows.msi"
 
       # ── Upload artifacts ──
       - name: Upload ZIP artifact
