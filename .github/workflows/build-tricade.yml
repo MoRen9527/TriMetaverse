@@ -189,6 +189,26 @@ jobs:
           Copy-Item -Force       TriLC\package.json     "$staging\trilc\"
           Copy-Item -Force       TriLC\version.json     "$staging\trilc\"
 
+          # trilc.cmd — deterministic CLI entry (node detection + path-relative)
+          # NOTE: in PowerShell here-string "%" is literal; batch needs "%%" for for-vars
+          $trilcCmd = @"
+@echo off
+setlocal
+set "NODE_EXE="
+for /f "delims=" %%i in ('where node 2^>nul') do if not defined NODE_EXE set "NODE_EXE=%%i"
+if not defined NODE_EXE (
+  echo [trilc] ERROR: Node.js not found on PATH. Install Node.js 20+ first.
+  exit /b 1
+)
+"%%NODE_EXE%%" "%%~dp0dist\cli.js" %%*
+endlocal
+"@
+          Set-Content -Path "$staging\trilc\trilc.cmd" -Value $trilcCmd -Encoding ASCII
+          if (-not (Test-Path "$staging\trilc\trilc.cmd")) {
+            Write-Error "FATAL: trilc.cmd generation failed"
+            exit 1
+          }
+
           # TriCode
           Copy-Item -Recurse -Force TriCode\dist         "$staging\tri-code\"
           Copy-Item -Recurse -Force TriCode\node_modules  "$staging\tri-code\"
@@ -223,7 +243,7 @@ jobs:
           echo TriLC Local Controller + TriPilot Extension
           echo.
           echo [1/2] Installing TriPilot extension...
-          code --install-extension ".\extensions\tripilot-chat-0.0.1" --force
+          code --install-extension "%%~dp0..\extensions\tripilot-chat-0.0.1" --force
           echo [2/2] Installation complete!
           echo.
           echo Start with: trilc daemon start

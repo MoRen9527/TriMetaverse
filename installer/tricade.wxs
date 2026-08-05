@@ -54,20 +54,19 @@
 
     <!-- ── Directory structure ── -->
     <!--
-      INSTALLFOLDER defaults to %ProgramFiles%\TriMetaverse\TriCade.
+      INSTALLFOLDER = %ProgramFiles%\TriCade (tool identity, stable across projects).
+      Project identity belongs to user data layer (%APPDATA%\TriCade), NOT Program Files.
       StandardDirectory id="ProgramFiles64Folder" maps to 64-bit Program Files.
     -->
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="ProgramFiles64Folder">
-        <Directory Id="ManufacturerFolder" Name="TriMetaverse">
-          <Directory Id="INSTALLFOLDER" Name="TriCade">
-            <!-- Subdirectories mirror the staging layout -->
-            <Directory Id="ExtensionsDir" Name="extensions" />
-            <Directory Id="TriLCDir" Name="trilc" />
-            <Directory Id="TriCodeDir" Name="tri-code" />
-            <Directory Id="ConfigDir" Name="config" />
-            <Directory Id="ScriptsDir" Name="scripts" />
-          </Directory>
+        <Directory Id="INSTALLFOLDER" Name="TriCade">
+          <!-- Subdirectories mirror the staging layout -->
+          <Directory Id="ExtensionsDir" Name="extensions" />
+          <Directory Id="TriLCDir" Name="trilc" />
+          <Directory Id="TriCodeDir" Name="tri-code" />
+          <Directory Id="ConfigDir" Name="config" />
+          <Directory Id="ScriptsDir" Name="scripts" />
         </Directory>
       </Directory>
 
@@ -89,6 +88,7 @@
       <ComponentGroupRef Id="TriCadeComponents" />
       <ComponentRef Id="StartMenuShortcut" />
       <ComponentRef Id="RegistryEntries" />
+      <ComponentRef Id="TrilcPathEnv" />
     </Feature>
 
     <!-- ── UI sequence ── -->
@@ -129,6 +129,26 @@
           Name="Version"
           Type="string"
           Value="$(var.Version)"
+          KeyPath="yes" />
+      </Component>
+
+      <!-- ── PATH registration: [INSTALLFOLDER]trilc on system PATH ── -->
+      <!-- WiX Environment removes the entry on uninstall/upgrade automatically. -->
+      <Component Id="TrilcPathEnv" Guid="D4E5F6A7-B8C9-0123-DEF4-567890ABCDEF">
+        <Environment
+          Id="TrilcPathEnvVar"
+          Name="PATH"
+          Value="[INSTALLFOLDER]trilc"
+          Separator=";"
+          Action="set"
+          Part="last"
+          System="yes" />
+        <RegistryValue
+          Root="HKLM"
+          Key="Software\TriMetaverse\TriCade"
+          Name="TrilcPathEnv"
+          Type="integer"
+          Value="1"
           KeyPath="yes" />
       </Component>
     </DirectoryRef>

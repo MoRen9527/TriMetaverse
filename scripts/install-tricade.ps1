@@ -9,6 +9,7 @@
 #   .\install-tricade.ps1 -MsiPath <path> -SkipVerify         # 跳过验证（加速）
 #   .\install-tricade.ps1 -MsiPath <path> -SkipStop           # 跳过停止进程（全新安装）
 #   .\install-tricade.ps1 -MsiPath <path> -WhatIf             # 干跑
+#   .\install-tricade.ps1 -MigrateLegacy -MsiPath <path>      # 迁移旧目录（TriMetaverse\TriCade → TriCade）
 #
 # 注意：必须以管理员身份运行
 
@@ -21,6 +22,7 @@ param(
     [switch]$SkipStop,                         # 跳过停止现有进程
     [switch]$SkipVerify,                       # 跳过安装后验证
     [switch]$SkipHealthz,                      # 跳过 /healthz 检查
+    [switch]$MigrateLegacy,                    # 迁移旧安装（清孤儿目录 + PATH）
     [switch]$WhatIf                            # 干跑模式
 )
 
@@ -28,8 +30,9 @@ $ErrorActionPreference = "Stop"
 $ScriptVersion = "1.0.0"
 
 # ── 常量 ──
+# Tool identity install dir (stable across projects — see tricade.wxs INSTALLFOLDER)
 $InstallDir = "C:\Program Files\TriCade"
-$TriLCDir   = "$InstallDir\resources\app\tools\trilc"
+$TriLCDir   = "$InstallDir\trilc"
 $Version    = ""  # 自动从 MSI/ZIP 文件名提取
 
 # ── 工具函数 ──
@@ -60,6 +63,67 @@ function Test-Admin {
         exit 1
     }
     Write-Ok "管理员权限已确认"
+}
+
+function Invoke-LegacyMigration {
+    Write-Step "迁移旧安装（TriMetaverse\TriCade → TriCade）"
+
+    $legacyDir = "C:\Program Files\TriMetaverse\TriCade"
+    $legacyRoot = "C:\Program Files\TriMetaverse"
+    $orphanDir = "C:\Program Files\TriCade"
+    $serviceName = "TriLC"
+    $runKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run"
+
+    # 1. 停旧 daemon（RegRun + schtasks + 进程）
+    Write-Info "停止旧 daemon 注册..."
+    if ($WhatIf) { Write-Info "(WhatIf) 将删除 HKCU Run 的 TriLC 条目 + 停止 TriLC 进程"; return }
+
+    reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v TriLC /f 2>$null | Out-Null
+    Get-CimInstance Win32_Process -Filter "Name='node.exe'" -ErrorAction SilentlyContinue |
+        Where-Object { $_.CommandLine -like '*trilc*' } |
+        ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
+    Start-Sleep -Seconds 2
+
+    # 2. 删除 schtasks 任务（如存在）
+    $taskExists = schtasks /query /tn "TriLC Daemon" 2>$null
+    if ($LASTEXITCODE -eq 0) {
+        Write-Info "删除 schtasks: TriLC Daemon"
+        schtasks /delete /tn "TriLC Daemon" /f | Out-Null
+    }
+
+    # 3. 清理旧 MSI 目录（TriMetaverse\TriCade — MSI 卸载会处理，此处兜底）
+    if (Test-Path $legacyDir) {
+        Write-Info "旧 MSI 目录存在: $legacyDir（新 MSI 安装时 MajorUpgrade 会卸载）"
+    }
+
+    # 4. 清孤儿目录（C:\Program Files\TriCade — 脚本时代残留，无 MSI 所有者）
+    if (Test-Path $orphanDir) {
+        Write-Warn "发现孤儿目录: $orphanDir（脚本部署残留，非 MSI 所有）"
+        $confirm = Read-Host "  删除孤儿目录? (y/n)"
+        if ($confirm -eq 'y') {
+            Remove-Item -Recurse -Force $orphanDir
+            Write-Ok "孤儿目录已删除"
+        } else {
+            Write-Warn "跳过孤儿目录删除 — 新 MSI 文件将与旧文件交错，风险自负"
+        }
+    }
+
+    # 5. 清理机器 PATH 里的旧条目
+    $machinePath = [Environment]::GetEnvironmentVariable("PATH", "Machine")
+    $pathEntries = $machinePath -split ";" | Where-Object { $_ -ne "" }
+    $filtered = $pathEntries | Where-Object {
+        $_ -notlike "*TriCade*bin*" -and $_ -notlike "*TriMetaverse*" -and $_ -notlike "*resources\app\tools*"
+    }
+    $newPath = $filtered -join ";"
+    if ($machinePath -ne $newPath) {
+        Write-Info "清理机器 PATH 旧条目..."
+        [Environment]::SetEnvironmentVariable("PATH", $newPath, "Machine")
+        Write-Ok "PATH 已清理（新 shell 生效）"
+    } else {
+        Write-Info "PATH 无旧条目"
+    }
+
+    Write-Ok "迁移预清理完成。继续安装新版本..."
 }
 
 function Stop-TriCadeProcesses {
@@ -368,6 +432,11 @@ else {
 Write-Info "目标版本: $Version"
 Write-Info "安装模式: $(if($MsiPath){'MSI'}else{'ZIP'})"
 if ($WhatIf) { Write-Warn "干跑模式 — 不执行实际操作" }
+
+# Phase 0.5: 迁移旧安装（可选）
+if ($MigrateLegacy) {
+    Invoke-LegacyMigration
+}
 
 # Phase 1: 停止
 Stop-TriCadeProcesses
