@@ -60,8 +60,10 @@ jobs:
             $d = Get-Date
             $rev = "$env:REVISION"
             if ([string]::IsNullOrEmpty($rev)) { $rev = "1" }
-            $v = "$($d.Year).$($d.Month).$($d.Day).$rev"
-            $msiV = "$($d.Year - 2000).$($d.Month).$($d.Day).$rev"
+            $mm = $d.Month.ToString("00")
+            $dd = $d.Day.ToString("00")
+            $v = "$($d.Year).$mm.$dd.$rev"
+            $msiV = "$($d.Year - 2000).$mm.$dd.$rev"
           }
           echo "VERSION=$v" >> $env:GITHUB_ENV
           echo "MSI_VERSION=$msiV" >> $env:GITHUB_ENV
