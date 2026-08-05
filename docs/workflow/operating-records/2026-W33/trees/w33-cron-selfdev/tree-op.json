@@ -3,8 +3,9 @@
     "title": "W33 Cron 投产 + 自研循环 v1",
     "source": "docs/execution/v0.9.x-dual-track-tricompany-plan.md v3",
     "week": "2026-W33",
-    "status": "in_progress",
-    "verdict": "w33-1 done (CI MSI PASS), w33-2 done (cron PASS), w33-3 skipped, w33-4 done (selfdev plan B PASS), w33-5 done (CTO approve), w33-6 in_progress",
+    "status": "done",
+    "verdict": "ALL CLOSED — w33-1 CI MSI PASS, w33-2 cron PASS, w33-3 skipped, w33-4 selfdev plan B PASS, w33-5 CTO approve, w33-6 weekly-plane SOP + carry-over escalation",
+    "completedAt": "2026-08-05T14:30:00+08:00",
     "dependsOn": ["w32-dual-track-kickoff"],
     "nodes": [
         {
@@ -59,9 +60,9 @@
         {
             "nodeId": "w33-6",
             "agent": "CEOChiefOfStaff",
-            "status": "in_progress",
-            "action": "Track C: 周平面半自动收口 + W33 OP 维护。1) 基于 W32 手动周度平移流程，整理为可复用的 SOP 模板。2) 为 v0.5.x cron 自动化准备 weekly-plane shift 的 CLI 参数规格（参考 ADE 执行模式：Agent plans → Deterministic CLI executes → Agent closes）。3) 更新 W33 OP JSON 和 carry-over。4) 4w+ carry-over 预警评估（CARRY-20260728-001/003/004/005/006 均 >=5w）。",
-            "delivery": "周平面 SOP 模板 + weekly-plane CLI 规格草案 + W33 OP 维护 + carry-over 预警升级"
+            "status": "done",
+            "action": "Track C: 周平面半自动收口完成。1) 周平面 SOP 产出（docs/workflow/weekly-plane-shift-sop.md，6 步流程 + 命名规范 + 预警等级）。2) weekly-plane CLI 规格草案（--from/--dry-run + ADE 执行模式）。3) W33 OP JSON 更新为 closed + carry-over 平移。4) carry-over 预警升级：5 项均 6w+，CARRY-001 建议推进、CARRY-003/005 建议关闭、004/006 冻结维持 — W34 首周 CEO 裁决。新增 3 个 BUG 项（Read 工具空串 / healthz version 旧值 / yoga-layout 缺失）。",
+            "delivery": "weekly-plane-shift-sop.md + W33 OP closed + carry-over 预警升级评估 + 3 BUG 项登记"
         }
     ],
     "tracks": [

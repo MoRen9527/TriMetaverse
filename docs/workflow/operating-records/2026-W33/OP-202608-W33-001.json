@@ -1,33 +1,33 @@
 {
     "week": "2026-W33",
-    "date": "2026-08-04",
-    "status": "in_progress",
+    "date": "2026-08-05",
+    "status": "closed",
     "dependsOn": ["OP-202608-W32-001"],
-    "summary": "W33 Cron 投产 + 自研循环 v1。上游 W32 闭合发现安装版 v0.1.0 缺少 cron CLI（W31 功能未部署）。W33 目标：Track A 新 MSI 构建+Cron 验证（小布/小狄/小全），Track B 自研循环 v1 方案 B（小贾/小狄），Track C 周平面半自动收口（小贾）。3 Track 7 节点。5w+ carry-over 预警升级评估。",
+    "summary": "W33 全量闭合。Track A: CI MSI 构建 PASS（15 次调试修 12 bug，含安装目录治理 TriCade 直挂 Program Files + trilc.cmd + PATH 注册）+ Cron 引擎生产验证 PASS（ADD/LIST/RUN/REMOVE 全 ok）。Track B: 自研循环 v1 方案 B PASS — TriLC agent 独立完成编码闭环（healthz serverTime 字段），CTO APPROVE。Track C: 周平面 SOP + weekly-plane CLI 规格 + carry-over 预警。5 项 carry-over 超 6w，升级 CEO 评估。",
     "active_trees": [
         {
             "treeId": "w33-cron-selfdev",
             "title": "W33 Cron 投产 + 自研循环 v1",
             "nodes_total": 7,
-            "nodes_done": 1,
-            "nodes_in_progress": 3,
-            "status": "in_progress",
+            "nodes_done": 6,
+            "nodes_skipped": 1,
+            "status": "closed",
             "path": "trees/w33-cron-selfdev/tree-op.json"
         }
     ],
-    "carry_over_from_w32": [
-        "CARRY-20260728-001: trilc TUI CC P0 — 5w+ ⚠️⚠️ approaching 8w CEO escalation",
-        "CARRY-20260728-003: TriCade MSI CI — 5w+ ⚠️⚠️ (w33-1 active)",
-        "CARRY-20260728-004: trilc TUI P1 — 5w+ ⚠️⚠️ frozen",
-        "CARRY-20260728-005: Openclaw daemon — 5w+ ⚠️⚠️ frozen",
-        "CARRY-20260728-006: trilc TUI P2 — 5w+ ⚠️⚠️ frozen",
+    "carry_over_to_w34": [
+        "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ (需 CEO 升级评估: 推进/冻结/关闭)",
+        "CARRY-20260728-003: TriCade MSI CI — 6w+ ✅ W33 w33-1 已实质推进 (目录治理+MSI 自动化)",
+        "CARRY-20260728-004: trilc TUI P1 — 6w+ ⚠️⚠️ frozen (等 P0)",
+        "CARRY-20260728-005: Openclaw daemon — 6w+ ⚠️⚠️ frozen",
+        "CARRY-20260728-006: trilc TUI P2 — 6w+ ⚠️⚠️ frozen (等 P1)",
         "RISK-20260728-001: DeepSeek classifier — active",
         "REGR-001/004/005/007: P1 TUI回归 — 待修"
     ],
     "risks": [
-        "5项 carry-over >=5w (⚠️⚠️), 其中 CARRY-001/003 接近 8w CEO 升级线",
-        "安装版与源码版功能差距: v0.1.0 vs W31 cron/heartbeat/sessionReaper (w33-1 解决)",
-        "TriCode 十件套仅 1/10 — 待补齐 (排 W34)"
+        "5 项 carry-over 超 6w，其中 4 项冻结 — 接近 8w CEO 升级线",
+        "TriLC Read 工具 tool_result 空串 — 工具链路 bug，排 dev 侧修",
+        "安装版 healthz version 报 0.1.0 — version.json 未随构建更新（build-tricade.yml 直接拷源码 version.json）"
     ],
-    "next_week_preview": "W34: 自研循环闭环 + macOS/Linux + TriCode十件套补齐 + TriCompany独立化启动"
+    "next_week_preview": "W34: 自研循环闭环 (TriCode 集成) + macOS/Linux + TriCompany 独立化启动 + carry-over CEO 裁决"
 }
