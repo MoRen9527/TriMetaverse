@@ -234,11 +234,14 @@ jobs:
           echo "WIX_DIR=${env:ProgramFiles(x86)}\WiX Toolset v3.14\bin" >> $env:GITHUB_ENV
 
       - name: Build WiX MSI
+        id: msi
         if: inputs.build_msi == true || vars.BUILD_MSI == 'true'
         run: |
           & "$env:WIX_DIR\heat.exe" dir "$env:STAGING_DIR" -dr INSTALLFOLDER -cg TriCadeComponents -gg -sfrag -srd -out TriCade-files.wxs
           & "$env:WIX_DIR\candle.exe" TriMetaverse\installer\tricade.wxs TriCade-files.wxs -dVersion="$env:VERSION"
-          & "$env:WIX_DIR\light.exe" tricade.wixobj TriCade-files.wixobj -ext WixUIExtension -b "$env:STAGING_DIR" -sice:ICE80 -out "TriCade-$env:VERSION-windows.msi"
+          $msiFile = "TriCade-$env:VERSION-windows.msi"
+          & "$env:WIX_DIR\light.exe" tricade.wixobj TriCade-files.wixobj -ext WixUIExtension -b "$env:STAGING_DIR" -sice:ICE80 -out $msiFile
+          echo "msi_file=$msiFile" >> $env:GITHUB_OUTPUT
 
       # ── Upload artifacts ──
       - name: Upload ZIP artifact
@@ -246,6 +249,13 @@ jobs:
         with:
           name: TriCade-${{ env.VERSION }}-windows.zip
           path: ${{ steps.zip.outputs.zip_file }}
+
+      - name: Upload MSI artifact
+        if: inputs.build_msi == true || vars.BUILD_MSI == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: TriCade-${{ env.VERSION }}-windows.msi
+          path: ${{ steps.msi.outputs.msi_file }}
 
       # ── GitHub Release ──
       - name: Create GitHub Release
