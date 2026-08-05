@@ -190,7 +190,8 @@ jobs:
           Copy-Item -Force       TriLC\version.json     "$staging\trilc\"
 
           # trilc.cmd — deterministic CLI entry (node detection + path-relative)
-          # NOTE: in PowerShell here-string "%" is literal; batch needs "%%" for for-vars
+          # NOTE: in PowerShell here-string "%" is literal (no escaping needed).
+          #       batch file rules: for-var needs "%%i", var ref needs "%VAR%" (single %).
           #       YAML block scalar strips common indent; here-string content must be indented to stay in block
           $trilcCmd = @"
           @echo off
@@ -201,7 +202,7 @@ jobs:
             echo [trilc] ERROR: Node.js not found on PATH. Install Node.js 20+ first.
             exit /b 1
           )
-          "%%NODE_EXE%%" "%%~dp0dist\cli.js" %%*
+          "%NODE_EXE%" "%~dp0dist\cli.js" %*
           endlocal
           "@
           Set-Content -Path "$staging\trilc\trilc.cmd" -Value $trilcCmd -Encoding ASCII
