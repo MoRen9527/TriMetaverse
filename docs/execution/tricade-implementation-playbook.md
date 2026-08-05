@@ -349,6 +349,11 @@ weekly-plane shift [--from <week>] [--dry-run]
 | `REQ-20260805-005` | onboarding 引导消息主动推送/通知通道（TriPilot 通知或待办列表，CEO 可见） | open — 研发侧 |
 | `REQ-20260805-006` | heartbeat agent tier 启用真实工具权限（Read/Write/Edit/Bash），使多步引导可执行 | open — 研发侧 |
 | `REQ-20260805-007` | **MSI 需包含 VSCodium 壳**——TriCade 完整形态 = VSCodium + TriPilot + trilc daemon 一体化。目录治理时漏打包 VSCodium 壳，导致安装版无桌面入口。修复：build 流水线把 VSCodium 模块（dist zip）纳入 staging + WiX 打包 | open — 研发侧 |
+| `REQ-20260805-008` | **vsce 打包去 --no-dependencies**——TriPilot vsix 缺 node_modules（diff 等）导致激活失败。正式修复：build-tricade.yml 打包含依赖 | open — 研发侧 |
+| `REQ-20260805-009` | **壳品牌化**——VSCodium 重命名 tricade.exe + product.json 九字段定制（applicationName/win32DirName→%APPDATA%\TriCade）+ 剔除 sst-dev.opencode。dev 版已具 TriCade 身份，标准化产出品牌化 zip | open — 研发侧 |
+| `REQ-20260805-010` | **MSI 预装扩展**——快捷方式 `tricade.exe --extensions-dir [INSTALLFOLDER]extensions`，扩展留 MSI 层与壳解耦 | open — 研发侧 |
+| `REQ-20260805-011` | **TriPilot onboarding 触达（part 2）**——TriLC 新增 `GET /internal/v1/company/state` + TriPilot 30s 轮询显示开张通知 → resume onboarding 会话（part 1 CLI auto-resume 已实现）| open — 研发侧 |
+| `REQ-20260805-012` | **TriPilot 向导修正**——移除 Step2 API key 输入（现走 trilc-direct 零 key），改为本地连接确认；Step3 TriMC 连接降为可跳过 | open — 研发侧 |
 
 ---
 
