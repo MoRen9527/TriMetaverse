@@ -18,9 +18,14 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Override version string (e.g. v1.0.0)'
+        description: 'Override version string (e.g. 2026.08.05.1)'
         required: false
         type: string
+      revision:
+        description: 'Same-day revision number (default 1)'
+        required: false
+        type: number
+        default: 1
       build_msi:
         description: 'Build WiX MSI installer (requires WiX Toolset v3 on runner)'
         required: false
@@ -37,21 +42,30 @@ jobs:
 
     env:
       VERSION_PREFIX: ${{ inputs.version || 'calver' }}
+      REVISION: ${{ inputs.revision || '1' }}
 
     steps:
       # ── Compute version (calver: YYYY.M.D.N or inputs.version) ──
+      # VERSION = display/file name version (full year, e.g. 2026.08.05.1)
+      # MSI_VERSION = WiX-compatible (major<256, year-2000, e.g. 26.08.05.1)
       - name: Compute version
         id: version
         run: |
           if ("$env:VERSION_PREFIX" -ne "calver") {
             $v = "$env:VERSION_PREFIX"
+            $mv = ($v -split '\.')
+            $mv[0] = [string]([int]$mv[0] - 2000)
+            $msiV = ($mv -join '.')
           } else {
             $d = Get-Date
-            $yy = $d.Year - 2000
-            $v = "$yy.$($d.Month).$($d.Day).0"
+            $rev = "$env:REVISION"
+            if ([string]::IsNullOrEmpty($rev)) { $rev = "1" }
+            $v = "$($d.Year).$($d.Month).$($d.Day).$rev"
+            $msiV = "$($d.Year - 2000).$($d.Month).$($d.Day).$rev"
           }
           echo "VERSION=$v" >> $env:GITHUB_ENV
-          Write-Host "VERSION=$v"
+          echo "MSI_VERSION=$msiV" >> $env:GITHUB_ENV
+          Write-Host "VERSION=$v (MSI: $msiV)"
 
       # ── Checkout sibling repositories ──
       - name: Checkout TriMetaverse (build scripts)
@@ -238,7 +252,7 @@ jobs:
         if: inputs.build_msi == true || vars.BUILD_MSI == 'true'
         run: |
           & "$env:WIX_DIR\heat.exe" dir "$env:STAGING_DIR" -dr INSTALLFOLDER -cg TriCadeComponents -gg -sfrag -srd -out TriCade-files.wxs
-          & "$env:WIX_DIR\candle.exe" TriMetaverse\installer\tricade.wxs TriCade-files.wxs -dVersion="$env:VERSION"
+          & "$env:WIX_DIR\candle.exe" TriMetaverse\installer\tricade.wxs TriCade-files.wxs -dVersion="$env:MSI_VERSION"
           $msiFile = "TriCade-$env:VERSION-windows.msi"
           & "$env:WIX_DIR\light.exe" tricade.wixobj TriCade-files.wixobj -ext WixUIExtension -b "$env:STAGING_DIR" -sice:ICE80 -out $msiFile
           echo "msi_file=$msiFile" >> $env:GITHUB_OUTPUT
