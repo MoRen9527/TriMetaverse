@@ -331,6 +331,24 @@ weekly-plane shift [--from <week>] [--dry-run]
 
 **TriMetaverse 虽是首个实验且有研发仓参考，仍走新项目全流程**——参考数据可用，但标准步骤必须完整执行。
 
+### 7.1 实验日志（2026-08-05，第一轮）
+
+| # | 验证项 | 结果 | 发现 |
+| --- | --- | --- | --- |
+| 1 | 运营仓创建（空 git 仓） | ✅ | TriMetaverse-20260805 独立仓库 |
+| 2 | REQ-001 onboarding agent 自动注册 | ✅ | daemon 检测 UNINITIALIZED → 注册 company-onboarding agent（60s 轮询） |
+| 3 | agent 自主启动 + 行动 | ✅ | agent 自动运行 bash 检查工作区（目录/company-state.json/AGENTS.md） |
+| 4 | 多步引导流程 | ❌ | **BUG-001 阻断**：agent-runner 只收集 content_delta/assistant_message，tool_use/tool_result 事件被丢弃 → agent 无工具反馈 → 引导停半路 |
+| 5 | CEO 触达通道 | ❌ | onboarding 消息在后台 session，CEO 无界面可见——需主动推送/通知通道 |
+
+**反推需求**：
+
+| ID | 需求 | 状态 |
+| --- | --- | --- |
+| `REQ-20260805-004` | agent-runner 处理 tool_use/tool_result 事件（持久化 tool 消息，agent 可见工具反馈）——修 BUG-001 根因 | open — 研发侧 |
+| `REQ-20260805-005` | onboarding 引导消息主动推送/通知通道（TriPilot 通知或待办列表，CEO 可见） | open — 研发侧 |
+| `REQ-20260805-006` | heartbeat agent tier 启用真实工具权限（Read/Write/Edit/Bash），使多步引导可执行 | open — 研发侧 |
+
 ---
 
 ## 八、扩展与维护
