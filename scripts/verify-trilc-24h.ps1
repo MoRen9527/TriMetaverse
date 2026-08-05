@@ -1,4 +1,4 @@
-# verify-trilc-24h.ps1
+﻿# verify-trilc-24h.ps1
 # TriLC Daemon 24h stability verification (w32-2)
 #
 # Usage (Admin PowerShell):

@@ -1,4 +1,4 @@
-# install-tricade.ps1
+﻿# install-tricade.ps1
 # TriCade 统一安装脚本
 # 整合所有版本脚本的共同模式，参数化版本和路径
 #

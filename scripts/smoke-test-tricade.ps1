@@ -1,4 +1,4 @@
-# smoke-test-tricade.ps1
+﻿# smoke-test-tricade.ps1
 # TriCade Smoke Test Suite (w32-8)
 # Quick ~5min validation after install or update.
 #
