@@ -348,6 +348,7 @@ weekly-plane shift [--from <week>] [--dry-run]
 | `REQ-20260805-004` | agent-runner 处理 tool_use/tool_result 事件（持久化 tool 消息，agent 可见工具反馈）——修 BUG-001 根因 | open — 研发侧 |
 | `REQ-20260805-005` | onboarding 引导消息主动推送/通知通道（TriPilot 通知或待办列表，CEO 可见） | open — 研发侧 |
 | `REQ-20260805-006` | heartbeat agent tier 启用真实工具权限（Read/Write/Edit/Bash），使多步引导可执行 | open — 研发侧 |
+| `REQ-20260805-007` | **MSI 需包含 VSCodium 壳**——TriCade 完整形态 = VSCodium + TriPilot + trilc daemon 一体化。目录治理时漏打包 VSCodium 壳，导致安装版无桌面入口。修复：build 流水线把 VSCodium 模块（dist zip）纳入 staging + WiX 打包 | open — 研发侧 |
 
 ---
 
