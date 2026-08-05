@@ -78,17 +78,23 @@ function Invoke-LegacyMigration {
     Write-Info "停止旧 daemon 注册..."
     if ($WhatIf) { Write-Info "(WhatIf) 将删除 HKCU Run 的 TriLC 条目 + 停止 TriLC 进程"; return }
 
-    reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v TriLC /f 2>$null | Out-Null
+    try { reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v TriLC /f 2>$null | Out-Null } catch { }
     Get-CimInstance Win32_Process -Filter "Name='node.exe'" -ErrorAction SilentlyContinue |
         Where-Object { $_.CommandLine -like '*trilc*' } |
         ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
     Start-Sleep -Seconds 2
 
     # 2. 删除 schtasks 任务（如存在）
-    $taskExists = schtasks /query /tn "TriLC Daemon" 2>$null
-    if ($LASTEXITCODE -eq 0) {
-        Write-Info "删除 schtasks: TriLC Daemon"
-        schtasks /delete /tn "TriLC Daemon" /f | Out-Null
+    try {
+        schtasks /query /tn "TriLC Daemon" 2>$null | Out-Null
+        if ($LASTEXITCODE -eq 0) {
+            Write-Info "删除 schtasks: TriLC Daemon"
+            schtasks /delete /tn "TriLC Daemon" /f | Out-Null
+        } else {
+            Write-Info "schtasks: TriLC Daemon 不存在，跳过"
+        }
+    } catch {
+        Write-Info "schtasks: TriLC Daemon 不存在，跳过"
     }
 
     # 3. 清理旧 MSI 目录（TriMetaverse\TriCade — MSI 卸载会处理，此处兜底）
