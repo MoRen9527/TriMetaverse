@@ -2,7 +2,7 @@
     "treeId": "w33-cron-selfdev",
     "title": "W33 Cron 投产 + 自研循环 v1",
     "source": "docs/execution/v0.9.x-dual-track-tricompany-plan.md v3",
-    "week": "2026-W33",
+    "week": "2026-W32",
     "status": "done",
     "verdict": "ALL CLOSED — w33-1 CI MSI PASS, w33-2 cron PASS, w33-3 skipped, w33-4 selfdev plan B PASS, w33-5 CTO approve, w33-6 weekly-plane SOP + carry-over escalation",
     "completedAt": "2026-08-05T14:30:00+08:00",

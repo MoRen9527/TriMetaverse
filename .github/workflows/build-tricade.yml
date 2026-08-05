@@ -59,7 +59,17 @@ jobs:
           } else {
             $d = Get-Date
             $rev = "$env:REVISION"
-            if ([string]::IsNullOrEmpty($rev)) { $rev = "1" }
+            if ([string]::IsNullOrEmpty($rev) -or $rev -eq "1") {
+              # Auto-count: today's build number = today's successful runs + 1
+              $today = $d.ToString("yyyy-MM-dd")
+              try {
+                $headers = @{ Authorization = "Bearer $env:GITHUB_TOKEN"; "X-GitHub-Api-Version" = "2022-11-28" }
+                $runs = Invoke-RestMethod -Uri "https://api.github.com/repos/$env:GITHUB_REPOSITORY/actions/runs?created=$today&status=success" -Headers $headers
+                $rev = [string]($runs.total_count + 1)
+              } catch {
+                $rev = "1"
+              }
+            }
             $mm = $d.Month.ToString("00")
             $dd = $d.Day.ToString("00")
             $v = "$($d.Year).$mm.$dd.$rev"

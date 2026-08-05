@@ -1,33 +1,42 @@
 {
     "week": "2026-W32",
     "date": "2026-08-04",
-    "status": "in_progress",
-    "summary": "W32 双轨互促即刻启动。v0.9.x 方案 v3 经磨人审批通过（14 项决策收口）。7/10 节点已完成。Track A: install脚本✅ + 24h验证进行中（daemon 48h稳定, v0.1.0缺cron CLI需新MSI）。Track B: .claude/补齐✅ + CLAUDE.md✅ + instructions迁移✅。Track C: docs归档✅ + Smoke Test✅。Track D: 周度平移✅。上游：W31 9棵树闭合。",
+    "status": "closed",
+    "summary": "W32 全量闭合（8/3-8/9 真实周）。双轨互促即刻启动 + 生产管线打通。Track A: install-tricade.ps1 统一✅ + daemon 24h验证 PASS(48.5h稳定) + CI MSI 自动化(15次调试修12bug, 版本2026.08.05.1) + Cron 引擎生产验证 PASS(ADD/LIST/RUN/REMOVE全ok) + 安装目录治理(TriCade直挂Program Files + trilc.cmd + PATH + 迁移脚本)。Track B: .claude/补齐✅ + CLAUDE.md✅ + instructions迁移✅ + 自研循环v1方案B PASS(TriLC agent独立编码serverTime上线) + CTO APPROVE。Track C: docs归档26→3✅ + Smoke Test✅ + 周平面SOP + weekly-plane CLI规格。Track D: 周度平移✅。",
     "active_trees": [
         {
             "treeId": "w32-dual-track-kickoff",
             "title": "W32 双轨互促即刻启动",
             "nodes_total": 10,
-            "nodes_done": 8,
-            "nodes_in_progress": 1,
-            "nodes_pending": 1,
-            "status": "in_progress",
+            "nodes_done": 10,
+            "status": "closed",
             "path": "trees/w32-dual-track-kickoff/tree-op.json"
+        },
+        {
+            "treeId": "w33-cron-selfdev",
+            "title": "W32 生产管线 + 自研循环（原计划W33，并入当前周）",
+            "nodes_total": 7,
+            "nodes_done": 6,
+            "nodes_skipped": 1,
+            "status": "closed",
+            "path": "trees/w33-cron-selfdev/tree-op.json"
         }
     ],
     "carry_over_from_w31": [
-        "CARRY-20260728-001: trilc TUI CC P0 — 4w+ ⚠️ active",
-        "CARRY-20260728-003: TriCade MSI CI — 4w+ ⚠️ active (W32 w32-1推进中)",
-        "CARRY-20260728-004: trilc TUI P1 — 4w+ ⚠️ frozen",
-        "CARRY-20260728-005: Openclaw daemon验证 — 4w+ ⚠️ frozen",
-        "CARRY-20260728-006: trilc TUI P2 — 4w+ ⚠️ frozen",
+        "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
+        "CARRY-20260728-003: TriCade MSI CI — 6w+ ✅ W32 已实质完成（目录治理+MSI 自动化），建议关闭",
+        "CARRY-20260728-004: trilc TUI P1 — 6w+ ⚠️⚠️ frozen（等 P0）",
+        "CARRY-20260728-005: Openclaw daemon验证 — 6w+ ⚠️⚠️ frozen（建议关闭/转归，已被TriLC吸收替代）",
+        "CARRY-20260728-006: trilc TUI P2 — 6w+ ⚠️⚠️ frozen（等 P1）",
         "RISK-20260728-001: DeepSeek classifier — active",
         "REGR-001/004/005/007: P1 TUI回归 — 待修"
     ],
     "risks": [
-        "安装版 v0.1.0 缺少 W31 cron CLI — 需新 MSI 构建 (w32-1)",
-        "DeepSeek classifier 间歇不可用 — 持续监控",
-        "macOS/Linux 未验证 — 不阻塞 Windows, 排 W34+"
+        "5项 carry-over 6w+，CARRY-001/004/005/006 逼近 8w CEO 升级线 — W33(8/10) 首周裁决",
+        "BUG-20260805-001: TriLC Read 工具 tool_result 空串 — 排 TriLC 侧修",
+        "BUG-20260805-002: 安装版 healthz version 报 0.1.0（version.json 未随构建更新）",
+        "BUG-20260805-003: MSI 打包缺 yoga-layout 别名（TUI stub import 与依赖声明不一致）",
+        "版本 revision 未自动递增（当前手动默认1）— 需改自动计数"
     ],
-    "next_week_preview": "W33: Cron 引擎投产验证 + 自研循环 v1 (方案 B) + 周平面半自动化 + 十件套差距补齐 (TriCode等)"
+    "next_week_preview": "W33(8/10起): 周末00:00 cron 自动迁移周工作平面 + carry-over CEO裁决 + revision自动计数 + 自研循环补强验证(修bug/多文件/编译自愈)"
 }
