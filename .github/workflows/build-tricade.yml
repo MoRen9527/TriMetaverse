@@ -191,18 +191,19 @@ jobs:
 
           # trilc.cmd — deterministic CLI entry (node detection + path-relative)
           # NOTE: in PowerShell here-string "%" is literal; batch needs "%%" for for-vars
+          #       YAML block scalar strips common indent; here-string content must be indented to stay in block
           $trilcCmd = @"
-@echo off
-setlocal
-set "NODE_EXE="
-for /f "delims=" %%i in ('where node 2^>nul') do if not defined NODE_EXE set "NODE_EXE=%%i"
-if not defined NODE_EXE (
-  echo [trilc] ERROR: Node.js not found on PATH. Install Node.js 20+ first.
-  exit /b 1
-)
-"%%NODE_EXE%%" "%%~dp0dist\cli.js" %%*
-endlocal
-"@
+          @echo off
+          setlocal
+          set "NODE_EXE="
+          for /f "delims=" %%i in ('where node 2^>nul') do if not defined NODE_EXE set "NODE_EXE=%%i"
+          if not defined NODE_EXE (
+            echo [trilc] ERROR: Node.js not found on PATH. Install Node.js 20+ first.
+            exit /b 1
+          )
+          "%%NODE_EXE%%" "%%~dp0dist\cli.js" %%*
+          endlocal
+          "@
           Set-Content -Path "$staging\trilc\trilc.cmd" -Value $trilcCmd -Encoding ASCII
           if (-not (Test-Path "$staging\trilc\trilc.cmd")) {
             Write-Error "FATAL: trilc.cmd generation failed"
