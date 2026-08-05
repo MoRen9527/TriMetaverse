@@ -70,28 +70,50 @@
 | 3 | 选择快捷方式 | 桌面 ☐ / 任务栏 ☐（可选，默认桌面） |
 | 4 | 完成 | `trilc daemon` 自动注册，`/healthz` 健康检查 |
 
-### 1.2 首次启动：公司开张向导（ADE 引导）
+### 1.2 首次启动：公司开张（自动触发 Onboarding）
 
-**入口**：TriPilot 聊天 或 `trilc chat` 任一入口 → 默认 agent（安装初始化 agent）引导
+**触发机制**：TriCade 安装 → daemon 启动 → **heartbeat 检测 TriCompany 初始化状态**：
 
 ```text
-Agent（默认 agent）: "欢迎开张赛博公司。按 ADE 流程执行公司初始化："
-  Step 1: 公司名称 [__________]
-  Step 2: 最小员工数量（推荐配置见下）
-  Step 3: 生成公司骨架（治理结构 + registry + 周工作平面）
-CLI: tricompany init --name <公司名> --employees <N>
-Agent: 验证骨架完整性 → 报告结果
+状态机: UNINITIALIZED → ONBOARDING → INITIALIZED
+检测: 公司骨架缺失（registry/ 无公司状态 / .claude/agents/ 无员工 / 无公司注册表）
+  → UNINITIALIZED → agent 自动推送 onboarding（无需用户发起命令）
 ```
+
+**Onboarding 流程（agent 自动推送，逐步骤）**：
+
+```text
+Agent（默认 agent）自动开始:
+  Step 1: 跟 CEO 打招呼
+         "欢迎使用 TriCade。检测到公司尚未开张，我来引导您开张赛博公司。"
+  Step 2: 问 CEO 名字
+         "请问您的名字？（您将是公司的 CEO）"
+  Step 3: 提供岗位列表（标准岗位目录）
+         请选择要启用的岗位（最小配置建议 5 个）：
+         [1] CEOChiefOfStaff 总助     [2] FullStackDeveloper 开发
+         [3] ChiefAdministrativeOfficer 行政官  [4] ChiefHumanResourcesOfficer 人力官
+         [5] ChiefTechnologyOfficer 技术官    [6] ChiefProductOfficer 产品官
+         ...（完整岗位目录）
+  Step 4: CEO 选择岗位 + 为每个员工起名
+  Step 5: 装配公司骨架（治理结构 + registry + 周工作平面 + 员工上岗）
+CLI: tricompany init --ceo <名字> --employees <岗位:名字,...>
+Agent: 验证骨架完整性 → 报告 → 状态 INITIALIZED
+```
+
+**关键原则**：
+
+- **岗位是标准资产**（来自 TriCompany source-agents 岗位目录），**名字是用户资产**（由 CEO 起名，不预设研发仓名字）
+- 开张由系统自动触发，用户零命令——TriCade 检测到未初始化即主动引导
 
 **最小员工推荐配置（5 人起步，含治理角色）**：
 
-| 角色 | 代号 | 职责 |
-| --- | --- | --- |
-| CEO | 磨人（人类） | 决策、审批 |
-| CEOChiefOfStaff | 小贾 | 幕僚长、周工作平面、协调 |
-| FullStackDeveloper | 小全 | 执行开发 |
-| ChiefAdministrativeOfficer | 小行 | **行政管理、秘书处、制度流程** |
-| ChiefHumanResourcesOfficer | 小源 | **员工上岗、治理流程、岗位职责** |
+| 角色 | 职责 |
+| --- | --- |
+| CEO（人类） | 决策、审批（名字由用户定） |
+| CEOChiefOfStaff | 幕僚长、周工作平面、协调 |
+| FullStackDeveloper | 执行开发 |
+| ChiefAdministrativeOfficer | **行政管理、秘书处、制度流程** |
+| ChiefHumanResourcesOfficer | **员工上岗、治理流程、岗位职责** |
 
 > 无 CAO/CHO 则上岗和治理流程走不全——最小配置必须包含。
 
@@ -328,6 +350,14 @@ weekly-plane shift [--from <week>] [--dry-run]
   - 周平面 SOP：`docs/workflow/weekly-plane-shift-sop.md`
 
 - **发布载体**：随 `@tricompany/core` 发布，作为 TriCade 安装标配
+
+### 开发需求登记（TriCade 运营中发现的补足 → 提需求给研发侧）
+
+| ID | 需求 | 来源 | 状态 |
+| --- | --- | --- | --- |
+| `REQ-20260805-001` | TriLC heartbeat 检测 TriCompany 初始化状态（UNINITIALIZED/ONBOARDING/INITIALIZED），未初始化时 agent 自动推送 onboarding（打招呼→问 CEO 名字→岗位列表→启用员工→装配骨架） | 运营实验 §1.2 | open — 排研发侧 |
+| `REQ-20260805-002` | 员工上岗时名字由用户定义，岗位为标准目录（不预设研发仓命名） | 运营实验 §1.2 | open — 排研发侧 |
+| `REQ-20260805-003` | tricompany CLI（init / employee hire / project create / module create / project assign） | 运营实验 §二 | open — 排研发侧 |
 
 ---
 
