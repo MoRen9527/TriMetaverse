@@ -1,5 +1,7 @@
 # TriCade 实施手册（Implementation Playbook）V0.2
 
+<!-- markdownlint-disable MD040 -->
+
 > **定位**：赛博公司实施步骤标准操作文档。
 > **范式**：**运营侧（TriCade 安装版）为第一真源**——周工作源头、数据源头、标准化源头都在运营侧；研发仓从运营侧拉取工作，验证后反推本手册，再进入正式运营。
 > **当前实验**：TriMetaverse 项目是第一个实施对象，**从空目录从零开始**，以新项目流程检验标准。
@@ -24,7 +26,7 @@
             └──────────── 反推 ────────────────→│
             │                                   │
             │  运营数据/需求 ←──────────────────┘
-```text
+```
 
 - **运营仓**：TriCade 建立 `TriMetaverse-20260805` 项目文件夹 + 工作区 + 独立 git 仓库——独立于源码仓的运营仓
 
@@ -32,16 +34,14 @@
 
 - **过滤**：运营仓是研发仓冗余历史文件的过滤器——只有被验证、被标准化的内容才进入运营仓
 
-- **孵化期**：TriCade 工具和 TriCompany 尚不成熟，Claude Code 作为研发仓孵化运营仓
+- **孵化期**：TriCade 工具和 TriCompany 尚不成熟，Claude Code 作为研发仓工具孵化运营仓
 
 ### 0.2 成熟路径（孵化 → 自给自足）
 
-```text
 阶段1（当前）: Claude Code 研发仓 ──孵化──→ TriCade 运营仓
 阶段2:         运营仓代码成熟 → TriLC/TriMC/TriCode 自给自足
 阶段3:         不再需要孵化研发仓 → TriCompany 拥有完整功能（运营+开发）
 阶段4:         运营驱动开发范式成熟 → TriMC/TriLC 7×24 无人值守公司运营
-```
 
 **目标终态**：TriCompany 自己就是一个完整的公司——运营 + 开发全部内部搞定。新范式（运营驱动开发）在 TriCompany 研发功能完善后自然成立。
 
@@ -81,7 +81,7 @@ Agent（默认 agent）: "欢迎开张赛博公司。按 ADE 流程执行公司�
   Step 3: 生成公司骨架（治理结构 + registry + 周工作平面）
 CLI: tricompany init --name <公司名> --employees <N>
 Agent: 验证骨架完整性 → 报告结果
-```text
+```
 
 **最小员工推荐配置（5 人起步，含治理角色）**：
 
@@ -102,7 +102,7 @@ trilc employee hire --role chief-technology-officer --name 小狄
 trilc employee list
 ```
 
-- 装配目标：**仅 `.claude/agents/`**（TriLC 类 Claude Code，`.github/agents/` 是 Copilot 宿主，不参与）
+- 装配目标：**仅 `.claude/agents/`**（TriLC 属于类 Claude Code工具）
 
 - 五件套：agent / soul / memory / colleagues / social
 
@@ -112,7 +112,7 @@ trilc employee list
 
 ### 1.4 安装初始化默认 agent 的审核机制
 
-- 负责安装/初始化的默认 agent（trilc/tripilot 默认 agent）与 CEO 一起**审核和优化**安装、初始化、标准装配的内容和质量
+- 负责安装/初始化的默认 agent（trilc/tripilot 默认 agent）与 CEO 一起**审核和优化**安装、初始化、标准装配的内容和质量。运营过程产生的问题，通过流程反馈给研发侧，研发侧验证成熟后反推本手册，形成闭环。
 
 - **新项目同样遵从新项目流程和审核**——TriMetaverse 虽有研发仓做参考数据，也必须走新项目流程（这正是过滤、标准化、产品化的检验）
 
@@ -129,7 +129,7 @@ Agent: "创建项目。"
   Step 3: 创建独立 git 仓库（运营仓）
 CLI: tricompany project create --name TriMetaverse --dir TriMetaverse-20260805 --git init
 Agent: 验证 → 装配项目标配（§三）
-```text
+```
 
 **项目 = 运营租户**：独立标配结构、周工作平面、经营记录、git 仓库。多项目互不干扰，成本收益按项目核算。
 
@@ -153,7 +153,7 @@ Agent: "为项目分配员工。"
   Step 2: 确认项目人力配置
 CLI: tricompany project assign --project TriMetaverse --employees 小贾,小全,小行,小源
 Agent: 验证 → 更新项目 registry + 员工项目绑定
-```text
+```
 
 - **步骤位置**：公司开张 → 雇佣员工 → 创建项目 → 创建模块 → **为项目分配员工** → 运营
 
@@ -167,12 +167,12 @@ Agent: 验证 → 更新项目 registry + 员工项目绑定
 
 | # | 资产 | 说明 |
 | --- | --- | --- |
-| 1 | `AGENTS.md` | **固定入口**——作用等同其他宿主的 CLAUDE.md/agent.md |
+| 1 | `AGENTS.md` | **固定入口**——作用等同其他宿主的 CLAUDE.md/AGENT.md |
 | 2 | 十件套 | README + AGENTS + docs/product + docs/engineering + docs/registry + docs/workflow + docs/execution + docs/training + .gitignore + CodeGraph |
 | 3 | 治理规则 | 项目治理规则（含项目级术语表）+ 中央 registry 三层（business/product/code） |
 | 4 | 仓库治理规则 | 分支策略、PR 模板、commit 规范、发布纪律 |
-| 5 | 白皮书 | 产品愿景/商业模式（Grill Me skill 逐步完善） |
-| 6 | 黄皮书 | **白皮书的技术描述版**——白皮书的愿景落到技术实现的标准规则 |
+| 5 | 白皮书 | 项目愿景蓝图，用可读性强的散文解释"做什么、为什么做"，面向广大受众（如中本聪的比特币白皮书、Vitalik 的以太坊白皮书），产品愿景/商业模式（Grill Me skill 逐步完善） |
+| 6 | 黄皮书 | 正式的技术规范，包含大量数学符号和形式化定义，面向开发者和研究人员——典型是以太坊黄皮书，由 Gavin Wood 博士撰写，精确定义了 EVM。 |
 | 7 | 模块说明 | 模块边界、吸收链规则 |
 | 8 | 数据真源资产 | 源侧 → 宿主侧的产物流水线（原"发布资产/消费资产"改名） |
 | 9 | 周工作平面 | 当前周目录 + OP JSON（ADE 方式创建） |
@@ -196,9 +196,9 @@ Agent: 验证 → 更新项目 registry + 员工项目绑定
 
 | 内容 | 归属 |
 | --- | --- |
-| **项目级术语表** | 项目治理规则 |
-| **公司级术语表** | 公司治理规则 |
-| 代码规范 / 设计规范 / 专有名词 | 中央治理体系（按层级归属：项目级进项目治理，公司级进公司治理） |
+| **项目级术语表** | 项目治理规则（应当设计占位文档模板，随项目发展由用户根据实际情况填写） |
+| **公司级术语表** | 公司治理规则（应当设计占位文档模板，随公司发展由用户根据实际情况填写） |
+| 代码规范 / 设计规范 / 专有名词 | 中央治理体系（按层级归属：项目级进项目治理，公司级进公司治理，应当有通用的规范和行业规则包含在特定目录下的文件中。） |
 
 ### 3.4 装配检测（幂等）
 
@@ -229,7 +229,7 @@ TriCade 运营侧
    │
    ▼
   ⑤ TriCade 正式运营（按新标准执行, 进入下一轮循环）
-```text
+```
 
 | 环节 | 责任方 | 动作 |
 | --- | --- | --- |
@@ -264,7 +264,7 @@ TriCade 运营侧
 
 ```text
 weekly-plane shift [--from <week>] [--dry-run]
-```text
+```
 
 ---
 
@@ -321,7 +321,7 @@ weekly-plane shift [--from <week>] [--dry-run]
 
   - 白皮书：`tmv-whitepaper.md`
 
-  - 黄皮书：`docs/workflow/review-release-chain.md`（白皮书的技术描述版）
+  - 黄皮书：`docs/workflow/review-release-chain.md`
 
   - 双轨方案：`docs/execution/v0.9.x-dual-track-tricompany-plan.md`
 
@@ -338,7 +338,7 @@ weekly-plane shift [--from <week>] [--dry-run]
 | 术语 | 定义 |
 | --- | --- |
 | 运营侧 | TriCade 安装版（生产环境），数据真源 |
-| 研发侧 | 孵化仓（Claude Code/源码），工程验证方 |
+| 研发侧 | 孵化仓（Claude Code工具/源码），工程验证方 |
 | 运营仓 | 独立 git 仓库的运营项目（如 TriMetaverse-20260805） |
 | 雇佣批注 | 员工增量上岗机制（五件套装配到 .claude/agents/） |
 | ADE | Agent → Deterministic CLI → Agent（模板化执行模式） |
@@ -350,7 +350,7 @@ weekly-plane shift [--from <week>] [--dry-run]
 | --- | --- |
 | 十件套 | 模块标配文档集（README/AGENTS/docs×6/.gitignore/CodeGraph） |
 | 白皮书 | 项目产品愿景/商业模式 |
-| 黄皮书 | 白皮书的技术描述版（YP-v* 审核版本） |
+| 黄皮书 | 技术描述（YP-v* 审核版本） |
 | 周工作平面 | 项目周任务树（ISO 周历对齐，ADE 创建） |
 
 ---
