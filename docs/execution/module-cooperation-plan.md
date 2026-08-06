@@ -1,126 +1,138 @@
-# TriMetaverse 模块配合方案
+# TriMetaverse 模块配合方案（V2 · 扩展层级）
 
-> **制定**：小贾（CEO Chief of Staff）综合小狄（CTO）+ 小乔（CPO）评估
+> **制定**：小贾（CEO Chief of Staff）综合小狄（CTO）+ 小乔（CPO）重审
 > **日期**：2026-08-06
 > **状态**：待磨人审批
 
 ---
 
-## 一、模块分层（产品视角：用户只接触 L0）
+## 一、模块分层（六层架构）
 
 ```text
-L0 入口层   TriCade（桌面壳，承载多入口）
-              ├─ TriPilot（IDE 入口：VS Code/VSCodium 扩展）
-              ├─ trilc chat（CLI 入口：终端对话）
-              ├─ TriAvatar（网页入口 + 未来元宇宙入口）
+L0 入口层   TriCade（桌面壳）+ TriGateway（社交获客入口）
+              ├─ TriPilot（IDE 入口）   ├─ trilc chat（CLI 入口）
+              ├─ TriAvatar（网页 + 未来元宇宙入口）
               └─ TriMobile（移动端入口）
-L1 运行层   TriLC（本地 daemon：heartbeat / cron / session / onboarding 检测）
-L2 公司层   TriCompany（赛博公司：岗位 / 治理 / 周平面 / 记录）
-L3 服务层   TriMC（云端主控）+ TriModel（模型路由）+ TriStaciss（计费）
-L4 能力层   TriCode（代码工具 glue）
+              [vscodium — IDE 宿主，归 L0]
+L1 运行层   TriLC（本地 daemon）+ TriMC（云端主控，互为 fallback）
+L2 公司层   TriCompany（赛博公司：岗位/治理/周平面/记录）
+L3 服务层   TriModel（模型路由）+ TriStaciss（计费）+ [TriOPC — 商户载体，建议归此层]
+L4 能力层   TriCode（产品 glue）+ TriDev/TriTest/TriAuto（公司执行工具）
+              + TriSkill（技能库）+ TriTraining（培训双轨）
+L5 数据链层  TriMem（身份中枢 SSOT）+ TriChain（链上账本/资产）+ TriWeb4（钱包/资产入口）
 ```
 
-**原则**：用户只接触 L0 的任一入口；L1-L2 是"公司开张后自动在场"的运行层；L3-L4 用户无感。所有产品价值在 L0 兑现，所有公司价值在 L2 兑现。**多入口共享同一 daemon 与公司状态**——IDE/CLI/网页/移动只是同一公司的不同交互面。
+**分层语义**：
 
----
-
-## 二、分发形态决策矩阵
-
-| 模块 | 成熟度 | 分发形态 | 版本节奏 |
-| --- | --- | --- | --- |
-| TriCade | v0.3.0+ | **安装包本体** | 周级（双轨 ≤2 周） |
-| TriPilot | DISCOVERY→CODING | **进安装包**（VS Code 扩展） | 随安装包 |
-| trilc chat | 已可用 | **进安装包**（CLI，daemon 自带） | 随安装包 |
-| TriAvatar | DISCOVERY | 研发仓 → 网页入口独立部署（Phase 2+） | 独立 |
-| TriMobile | DISCOVERY | 研发仓（Phase 2+） | 独立 |
-| TriLC | daemon 三层合入 dev | **进安装包**（核心 daemon） | 随安装包；dev 可更快 |
-| TriCompany | V1.0（13 员工） | **双形态**：@tricompany/core npm + 安装包内嵌模板快照 | npm 周级；快照随包 |
-| TriModel | 可工作 library | **双形态**：npm library + 配置平面随 daemon 进包 | npm 独立 |
-| TriMC | 骨架 | **独立服务**（云端），不进安装包 | 独立发布 |
-| TriCode | DISCOVERY（无代码） | **留研发仓**，工程化后独立版本化 | 不承诺 |
-| TriMem 等 | DISCOVERY | 研发仓 | Phase 2+ |
-
-**进包三原则**（裁决未来新模块）：
-
-1. 用户旅程必经步骤（无它则开张/建项目/运营断链）
-2. 成熟度达到"随包即承诺"（安装版滞后 ≤2 周）
-3. 不因进包失去独立演进通道（必要时双形态）
-
----
-
-## 三、TriCompany 模板分发（双形态）
-
-```text
-模板真源 = @tricompany/core npm 包（可更新）
-安装包内嵌 = 发布时点的出厂快照（开箱即用）
-```
-
-**三个机制**：
-
-1. **真源分离**：模板真源 = @tricompany/core；安装包内嵌 = 出厂快照
-2. **版本对齐**：内嵌快照标注 npm 版本；TriLC 启动静默检测新版 → 提示更新（不自动覆盖）
-3. **用户数据隔离**：用户定制（CEO 名/岗位/记录）只在项目工作区；模板升级"只新增不覆盖 + diff 报告"
-
-**明确不做**：模板自动热升级、模板与用户数据混存。
-
----
-
-## 四、依赖与构建架构（CTO）
-
-### 三层依赖
-
-```text
-编译期（file: 依赖，保留）          运行期（MSI node_modules）      发布期（分发产物）
-TriModel ──→ agent-core ──→ TriLC    trilc/node_modules:             npm pack tarball（演练）
-TriCode ──→ TriPilot                  ├ agent-core（真实目录）       模板资产包（MSI assets）
-                                      └ trimodel + transitive         VERSION.json 组件矩阵
-```
-
-### 构建顺序
-
-```text
-TriModel → TriMC/agent-core → TriCode → TriLC → TriPilot → TriCompany 模板 → TriCade 聚合
-```
-
-### 关键治理（CTO 发现的问题）
-
-| 问题 | 修复 |
-| --- | --- |
-| TriLC contracts 路径已设计（staging\trilc\contracts\）但 CI 从未创建 → 生产 0 agents | **Phase 0**：CI 加 TriCompany checkout + staging 创建 contracts（git archive 冻结快照）+ 门禁断言 agent 数 > 0 |
-| TriPilot vsix `--no-dependencies` 缺 tricode → 生产 MODULE_NOT_FOUND | Phase 1：`npm ci --install-links` + vsce 带依赖 |
-| 6 仓同名 tag 才可发布（任一缺失构建失败） | Phase 1：组件 release manifest（按 tag/SHA 分别锁定） |
-| TriLC 版本双源（package 0.9.0 vs version.json 1.0.0） | Phase 1：发布管线从 package.json 派生 |
-| file: 依赖 symlink 进 node_modules 产物损坏 | Phase 1：统一 `npm ci --install-links` |
-| VSCodium 壳未标准化 | Phase 2：接入 staging + VERSION.json |
-
----
-
-## 五、资产归属（产品证据链 vs 出厂资产）
-
-| 资产 | 归属 | 分发 |
+| 层 | 定位 | 用户可见性 |
 | --- | --- | --- |
-| 白皮书 WP-v* / 黄皮书 YP-v* / PRD | **项目资产**（IPD 证据链） | 不进安装包（只提供模板骨架） |
-| 十件套 / 岗位五件套 / 治理资产 | **出厂资产**（随公司骨架） | 进安装包（模板快照） |
-| 周工作平面 / OP 记录 | **运行时产物** | 产生于运营仓，不进包 |
+| L0 | 用户接触面（获客入口 TriGateway + 体验入口其余） | 可见 |
+| L1 | 运行时本体（本地 + 云端，互为 fallback） | 半可见 |
+| L2 | 公司价值兑现层 | 可见（内容层） |
+| L3 | 模型与计费供给（用户无感） | 不可见 |
+| L4 | 公司执行能力（员工工具为主，TriCode 为产品底座） | 不可见 |
+| L5 | 身份 / 账本 / 资产（TriMem 现役，TriChain/TriWeb4 占位） | 不可见 |
 
-**边界**：安装包是"能力载体"，不是内容仓库。
+---
+
+## 二、模块核查（CTO 实测）
+
+| 模块 | 状态 | 代码 | 层级 |
+| --- | --- | --- | --- |
+| TriCade | v0.3.0+ 安装包 | MSI 构建中 | L0 |
+| TriPilot | DISCOVERY→CODING | VS Code 扩展 | L0 |
+| trilc chat | 已可用 | TriLC CLI | L0 |
+| TriAvatar | DISCOVERY | **React 前端已有**（build 产出） | L0 |
+| TriMobile | 占位 | 无 | L0 |
+| TriGateway | 占位 | 无（OAuth 捕获通道语义） | L0 |
+| TriLC | daemon 三层合入 dev | 现役 v0.9.0 | L1 |
+| TriMC | 骨架 + Phase 1/2 | monorepo | L1 |
+| TriCompany | V1.0（13 员工） | 纯资产仓 | L2 |
+| TriModel | 配置平面已上线 | library + API | L3 |
+| TriStaciss | CTO-004 APPROVED | Python + Docker | L3 |
+| TriOPC | reference 吸收待启动 | PHP 骨架 | L3（建议） |
+| TriCode | DISCOVERY（无代码） | glue 层 | L4 |
+| TriDev | super-dev 吸收中 | **Python 引擎开发中** | L4 |
+| TriTest | 完整 | **tritest CLI 可用** | L4 |
+| TriAuto（TriDeployment） | 完整（改名未迁移） | **trideploy CLI 可用** | L4 |
+| TriSkill | Wave 0-3 完成 | 18 个 skill（内容） | L4 |
+| TriTraining | 产品定位完成 | 占位 | L4 |
+| TriMem | DISCOVERY→DESIGNING | **身份 SSOT（auth/wallet 有代码）** | L5 |
+| TriChain | 占位 | 无（禁止虚构进度） | L5 |
+| TriWeb4 | 占位 | 无 | L5 |
+
+---
+
+## 三、分发形态决策矩阵
+
+| 模块 | 分发形态 | 裁决依据 |
+| --- | --- | --- |
+| TriCade / TriPilot / trilc chat / TriLC | **进安装包** | 用户旅程必经 |
+| TriCompany | **双形态**：@tricompany/core npm + 内嵌快照 | 开箱即用 + 独立演进 |
+| TriSkill | **随 @tricompany/core 进包**（岗位资产）+ 研发仓 | 技能是岗位标配，开箱即有 |
+| TriModel | **双形态**：npm library + 配置平面随 daemon | 已如此 |
+| TriStaciss | **独立服务**（云端计费端点） | 不变 |
+| TriMC | **独立云服务**，不进包 | 云端实体 |
+| TriMem | **研发仓**，Phase 1 L2 用户注册上线时评估随包（本地形态） | 当前旅程不经过用户注册 |
+| TriGateway | **研发仓**，随 TriMem 就位后独立/随云部署 | 获客是 Phase 1 后段 |
+| TriAvatar | **网页独立部署**（Phase 2+） | 与桌面壳无关 |
+| TriMobile | 研发仓（Phase 2+） | 占位 |
+| TriCode | 留研发仓 | 无代码不承诺 |
+| TriDev / TriTest / TriAuto | **留研发仓 + npm 独立发布** | 公司能力，运营侧旅程不经过 |
+| TriTraining | 研发仓；获客轨随 TriAvatar 网页部署 | 双轨拆分 |
+| TriChain / TriWeb4 | 研发仓（Phase 2+） | 占位，禁止进发布管线 |
+
+**进包三原则**：1) 用户旅程必经；2) 成熟度达"随包即承诺"（滞后 ≤2 周）；3) 不因进包失去独立演进通道。
+
+---
+
+## 四、用户旅程（扩展层级）
+
+```text
+获客环（Phase 1 L2+）: 社交平台 → TriGateway 捕获 → TriMem 注册（L5 身份）
+  → TriTraining 免费课程 → 首次对话 → 奖励 → 晋级社区成员
+
+现役核心（Phase 1）: 安装（L0 TriCade）→ 开张（L1 检测 → L2 公司 onboarding）
+  → 建项目/模块/分配员工（L2，ADE）→ 运营循环（L0 入口 → L1 daemon → L3 模型+计费）
+
+资产环（Phase 2+）: TriChain 链上迁移 → TriWeb4 钱包 → TriMem 股东晋级
+  → TriOPC 商户生态 → TriAvatar 元宇宙形态
+```
+
+**关键变化**：社交获客提升为 L0 第一环（外部用户第一站 = 社交平台，非网页）。
+
+---
+
+## 五、关键治理项（CTO）
+
+| 项 | 状态 | 处置 |
+| --- | --- | --- |
+| **TriAuto 命名** | 架构文档已改 TriAuto，物理 TriDeployment/TriDeployment 双路径未迁移 | **待 CEO 裁决**：沿用 TriDeployment 或执行改名迁移 |
+| TriLC contracts 路径已设计但 CI 未创建 | 生产 0 agents | Phase 0：模板进包 + 门禁断言 |
+| TriPilot vsix 缺 tricode | 生产 MODULE_NOT_FOUND | Phase 1：install-links + vsce 带依赖 |
+| 6 仓同名 tag 发布脆弱 | 任一缺失构建失败 | Phase 1：release manifest |
+| TriLC 版本双源 | package 0.9.0 vs version.json 1.0.0 | Phase 1：发布管线派生 |
+| TriStaciss 双物理目录 | Tricistaspas/Tristaciss | 治理：Tristaciss 为现行 |
+| file: 依赖无版本锁定 | 构建随源变化 | build-desktop.ps1 加依赖快照 |
 
 ---
 
 ## 六、分阶段落地
 
-| 阶段 | 内容 | 优先级 |
-| --- | --- | --- |
-| **Phase 0** | TriCompany 模板进包（CI + staging contracts + wxs + 门禁）+ TriPilot vsix 依赖修复 | **立即** |
-| Phase 1 | 版本治理（version.json 派生 + release manifest + install-links） | 随 Phase 0 |
-| Phase 2 | VSCodium 壳标准化（REQ-007/009）+ TriAvatar 网页入口评估 | 随 P1 |
-| Phase 3 | 各仓独立 CI + 聚合发布 CI | 后续 |
-| Phase 4 | @tricompany/core 工程化（npm 包 + CLI） | 双形态前提 |
+| 阶段 | 内容 |
+| --- | --- |
+| **Phase 0** | TriCompany 模板进包（CI + contracts + 门禁）+ TriPilot vsix 修复 |
+| Phase 1 | 版本治理（release manifest + install-links + version 派生）+ **TriAuto 命名裁决执行** + TriDev→TriTest/TriAuto CLI 打通 |
+| Phase 2 | TriMem Phase 1 收口（auth/wallet + 门禁）+ TriGateway 社交接入 + TriAvatar 容器化 |
+| Phase 3 | 各仓独立 CI + 聚合发布 CI + TriMC 云端主控上线 |
+| Phase 4 | @tricompany/core 工程化 + TriChain/TriWeb4 就绪后评估 |
 
 ---
 
 ## 七、待 CEO 裁决
 
-1. **分发矩阵**：TriCompany 双形态（npm + 内嵌快照）、TriMC 独立服务不进包、TriCode 留研发仓、TriAvatar/TriMobile 研发仓 Phase 2+——同意？
-2. **Phase 0 开工**：TriCompany 模板进包 + TriPilot vsix 修复？
-3. **@tricompany/core 治理**：谁 publish、版本纪律、开源许可（开源已裁决，npm 治理需明确）
+1. **L5 命名**：数据审计层 → **数据与链层（身份/账本/资产）**（TriMem 不是审计层，是身份中枢）
+2. **TriAuto vs TriDeployment**：命名二选一 + 物理迁移
+3. **TriOPC 归 L3、vscodium 归 L0**：确认
+4. **TriSkill 进包**（随公司模板）：确认
+5. **TriMem 进包时点**（Phase 1 L2 评估）：确认
