@@ -352,10 +352,10 @@ weekly-plane shift [--from <week>] [--dry-run]
 | `REQ-20260805-008` | **vsce 打包去 --no-dependencies**——TriPilot vsix 缺 node_modules（diff 等）导致激活失败。正式修复：build-tricade.yml 打包含依赖 | open — 研发侧 |
 | `REQ-20260805-009` | **壳品牌化**——VSCodium 重命名 tricade.exe + product.json 九字段定制（applicationName/win32DirName→%APPDATA%\TriCade）+ 剔除 sst-dev.opencode。dev 版已具 TriCade 身份，标准化产出品牌化 zip | open — 研发侧 |
 | `REQ-20260805-010` | **MSI 预装扩展**——快捷方式 `tricade.exe --extensions-dir [INSTALLFOLDER]extensions`，扩展留 MSI 层与壳解耦 | open — 研发侧 |
-| `REQ-20260805-011` | **TriPilot onboarding 触达（part 2）**——TriLC 新增 `GET /internal/v1/company/state` + TriPilot 30s 轮询显示开张通知 → resume onboarding 会话（part 1 CLI auto-resume 已实现）| open — 研发侧 |
+| `REQ-20260805-011` | **TriPilot onboarding 触达（part 2）**——TriLC 新增 `GET /internal/v1/company/state` + TriPilot 30s 轮询显示开张通知 → resume onboarding 会话（part 1 CLI auto-resume 已实现） | open — 研发侧 |
 | `REQ-20260805-012` | **TriPilot 向导修正**——移除 Step2 API key 输入（现走 trilc-direct 零 key），改为本地连接确认；Step3 TriMC 连接降为可跳过 | open — 研发侧 |
 | `REQ-20260805-013` | **onboarding 会话 systemPrompt 继承**——chat resume onboarding session 时，send 需携带该 session 的 systemPrompt（onboarding 引导），否则通用助手把 CEO 回复当闲聊。实测：回复"磨人"（CEO 名字）被解释为成语。修复：resume 时 fetch session 的 systemPrompt → /v1/messages 带 system 字段 | ✅ 验证通过（2026-08-06）agent 已意识到初始化流程。遗留：工具 cwd 错误 → REQ-014b |
-| `REQ-20260806-014b` | **agent 工具执行 cwd 错误**——onboarding agent 的 bash/工具用 daemon cwd（System32）而非 onboarding 工作区（运营仓）。实测 agent 检查 `C:\Windows\System32\.claude\agents\`（错），应检查 `D:\OneDrive\Code\ai\TriMetaverse-20260805`。修复：agent 工具执行传入 workspaceRoot（onboarding systemPrompt 已声明工作区）| open — 研发侧 |
+| `REQ-20260806-014b` | **agent 工具执行 cwd 错误**——onboarding agent 的 bash/工具用 daemon cwd（System32）而非 onboarding 工作区（运营仓）。实测 agent 检查 `C:\Windows\System32\.claude\agents\`（错），应检查 `D:\OneDrive\Code\ai\TriMetaverse-20260805`。修复：agent 工具执行传入 workspaceRoot（onboarding systemPrompt 已声明工作区） | open — 研发侧 |
 | `REQ-20260806-015` | **TUI /exit 退出花屏**——退出后屏幕残留对话内容（历史遗留）。修复：退出时清屏/恢复终端状态 | open — 研发侧 |
 
 ---
