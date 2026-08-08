@@ -13,13 +13,16 @@ L0 入口层   TriCade（桌面壳）+ TriGateway（社交获客入口）
               ├─ TriPilot（IDE 入口）   ├─ trilc chat（CLI 入口）
               ├─ TriAvatar（网页 + 未来元宇宙入口）
               └─ TriMobile（移动端入口）
-              [vscodium — IDE 宿主，归 L0]
+              [vscodium — 桌面宿主壳（tricade.exe），L0 正式成员]
 L1 运行层   TriLC（本地 daemon）+ TriMC（云端主控，互为 fallback）
 L2 公司层   TriCompany（赛博公司：岗位/治理/周平面/记录）
-L3 服务层   TriModel（模型路由）+ TriStaciss（计费）+ [TriOPC — 商户载体，建议归此层]
+【平台/产品形态（横向跨层条，非编号层，Phase 2+ 评估升格）】
+    TriOPC（生态落地变现层）：SaaS 平台服务 OPC 群体，利用 TriCompany 能力
+L3 服务层   TriModel（模型路由）+ TriStaciss（计费）
 L4 能力层   TriCode（产品 glue）+ TriDev/TriTest/TriAuto（公司执行工具）
               + TriSkill（技能库）+ TriTraining（培训双轨）
-L5 数据链层  TriMem（身份中枢 SSOT）+ TriChain（链上账本/资产）+ TriWeb4（钱包/资产入口）
+L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本/资产）+ TriWeb4（钱包/资产入口）
+              （数据汇聚审计：TriMem/TriChain/TriWeb4/CAO域/TriDev ASSURANCE 数据入此层审计）
 ```
 
 **分层语义**：
@@ -31,7 +34,7 @@ L5 数据链层  TriMem（身份中枢 SSOT）+ TriChain（链上账本/资产�
 | L2 | 公司价值兑现层 | 可见（内容层） |
 | L3 | 模型与计费供给（用户无感） | 不可见 |
 | L4 | 公司执行能力（员工工具为主，TriCode 为产品底座） | 不可见 |
-| L5 | 身份 / 账本 / 资产（TriMem 现役，TriChain/TriWeb4 占位） | 不可见 |
+| L5 | 数据汇聚审计层：身份 / 账本 / 资产数据入层审计（TriMem 现役，TriChain/TriWeb4 占位） | 不可见 |
 
 ---
 
@@ -50,11 +53,12 @@ L5 数据链层  TriMem（身份中枢 SSOT）+ TriChain（链上账本/资产�
 | TriCompany | V1.0（13 员工） | 纯资产仓 | L2 |
 | TriModel | 配置平面已上线 | library + API | L3 |
 | TriStaciss | CTO-004 APPROVED | Python + Docker | L3 |
-| TriOPC | reference 吸收待启动 | PHP 骨架 | L3（建议） |
+| TriOPC | reference 吸收待启动 | PHP 骨架 | 平台/产品形态（跨层条） |
 | TriCode | DISCOVERY（无代码） | glue 层 | L4 |
 | TriDev | super-dev 吸收中 | **Python 引擎开发中** | L4 |
 | TriTest | 完整 | **tritest CLI 可用** | L4 |
-| TriAuto（TriDeployment） | 完整（改名未迁移） | **trideploy CLI 可用** | L4 |
+| TriDeployment | 完整 | **trideploy CLI 可用** | L4 |
+| TriAuto | 占位模块 | 利用 TriDev/TriTest/TriDeployment 能力形成自动化（编排层） | L4 |
 | TriSkill | Wave 0-3 完成 | 18 个 skill（内容） | L4 |
 | TriTraining | 产品定位完成 | 占位 | L4 |
 | TriMem | DISCOVERY→DESIGNING | **身份 SSOT（auth/wallet 有代码）** | L5 |
@@ -81,6 +85,7 @@ L5 数据链层  TriMem（身份中枢 SSOT）+ TriChain（链上账本/资产�
 | TriDev / TriTest / TriAuto | **留研发仓 + npm 独立发布** | 公司能力，运营侧旅程不经过 |
 | TriTraining | 研发仓；获客轨随 TriAvatar 网页部署 | 双轨拆分 |
 | TriChain / TriWeb4 | 研发仓（Phase 2+） | 占位，禁止进发布管线 |
+| TriOPC | **独立 SaaS 平台部署**（Phase 2+ 评估） | 服务外部 OPC 群体，利用 TriCompany 能力 |
 
 **进包三原则**：1) 用户旅程必经；2) 成熟度达"随包即承诺"（滞后 ≤2 周）；3) 不因进包失去独立演进通道。
 
@@ -107,7 +112,7 @@ L5 数据链层  TriMem（身份中枢 SSOT）+ TriChain（链上账本/资产�
 
 | 项 | 状态 | 处置 |
 | --- | --- | --- |
-| **TriAuto 命名** | 架构文档已改 TriAuto，物理 TriDeployment/TriDeployment 双路径未迁移 | **待 CEO 裁决**：沿用 TriDeployment 或执行改名迁移 |
+| **TriAuto 模块** | CEO 裁决：TriDeployment 不改名；TriAuto 为占位模块（编排层） | TriAuto 利用 TriDev/TriTest/TriDeployment 能力，独立占位登记 |
 | TriLC contracts 路径已设计但 CI 未创建 | 生产 0 agents | Phase 0：模板进包 + 门禁断言 |
 | TriPilot vsix 缺 tricode | 生产 MODULE_NOT_FOUND | Phase 1：install-links + vsce 带依赖 |
 | 6 仓同名 tag 发布脆弱 | 任一缺失构建失败 | Phase 1：release manifest |
@@ -131,8 +136,8 @@ L5 数据链层  TriMem（身份中枢 SSOT）+ TriChain（链上账本/资产�
 
 ## 七、待 CEO 裁决
 
-1. **L5 命名**：数据审计层 → **数据与链层（身份/账本/资产）**（TriMem 不是审计层，是身份中枢）
-2. **TriAuto vs TriDeployment**：命名二选一 + 物理迁移
-3. **TriOPC 归 L3、vscodium 归 L0**：确认
+1. **L5 命名**：保留**数据审计层**（TriMem/TriChain/TriWeb4/CAO域/TriDev ASSURANCE 数据汇聚入层审计，非 TriMem 本身审计）
+2. **TriAuto 占位模块**：TriDeployment 不改名；TriAuto 作为自动化编排层占位（利用 TriDev/TriTest/TriDeployment）
+3. **TriOPC 平台形态位（跨层条，不归 L3）、vscodium 归 L0 宿主壳**：确认（小乔裁决）
 4. **TriSkill 进包**（随公司模板）：确认
 5. **TriMem 进包时点**（Phase 1 L2 评估）：确认
