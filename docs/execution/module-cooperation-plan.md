@@ -13,7 +13,8 @@ L0 入口层（并列多入口，无从属）
    桌面端入口: TriCade = VSCodium 宿主壳 + TriPilot（IDE 入口）+ trilc chat（CLI 入口，可独立使用）
    web端入口: TriAvatar chat
    移动端入口: TriMobile chat
-   社交入口:   TriGateway（社交入口）
+   通信通道:   TriGateway（双向通信通道：管理者↔agent 对话 + agent 推送，
+                 对齐 OpenClaw channel 模型）
 L1 运行层（核心引擎/调度层）
    TriLC（本地核心引擎：自主决策/编排调度/heartbeat/cron/session/onboarding 检测）
    TriMC（云端核心引擎：与 TriLC 既互为fallback又有服务域与本地域的协同）
@@ -34,7 +35,7 @@ L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审
 
 | 层 | 定位 | 用户可见性 |
 | --- | --- | --- |
-| L0 | 用户接触面（获客入口 TriGateway + 体验入口其余） | 可见 |
+| L0 | 用户接触面（通信通道 TriGateway + 体验入口其余） | 可见 |
 | L1 | **核心引擎/调度层**（自主决策、编排调度、运行时本体） | 半可见 |
 | L2 | 公司价值兑现层：TriCompany（赛博公司）+ TriOPC（SaaS 平台，OPC 服务落地） | 可见（内容层） |
 | L3 | 模型与计费供给：TriModel（模型路由）+ TriStaciss（Token 计费） | 不可见 |
@@ -52,7 +53,7 @@ L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审
 | trilc chat | 已可用 | TriLC CLI | L0 |
 | TriAvatar | DISCOVERY | **React 前端已有**；chat 为占位界面 | L0（web 端入口） |
 | TriMobile | 占位 | chat 为占位界面 | L0（移动端入口） |
-| TriGateway | 占位 | 无（OAuth 捕获通道语义） | L0 |
+| TriGateway | 占位 | 双向通信通道层（管理者↔agent 对话 + agent 推送，对齐 OpenClaw channel 模型：telegram/whatsapp/discord 等） | L0 |
 | TriLC | daemon 三层合入 dev | 现役（内部 0.9.0，发布走 calver） | L1 |
 | TriMC | 骨架 + Phase 1/2 | monorepo | L1 |
 | TriCompany | V1.0（13 员工） | 纯资产仓 | L2 |
@@ -83,7 +84,7 @@ L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审
 | TriStaciss | **独立服务**（云端计费端点） | 不变 |
 | TriMC | **独立云服务**，不进包 | 云端实体 |
 | TriMem | **研发仓**，Phase 1 L2 用户注册上线时评估随包（本地形态） | 当前旅程不经过用户注册 |
-| TriGateway | **研发仓**，随 TriMem 就位后独立/随云部署 | 获客是 Phase 1 后段 |
+| TriGateway | **研发仓**，通道层落地时独立/随云部署 | 双向通信通道（管理者↔agent），Phase 2 评估 |
 | TriAvatar | **网页独立部署**（Phase 2+） | 与桌面壳无关 |
 | TriMobile | 研发仓（Phase 2+） | 占位 |
 | TriCode | 留研发仓 | 无代码不承诺 |
