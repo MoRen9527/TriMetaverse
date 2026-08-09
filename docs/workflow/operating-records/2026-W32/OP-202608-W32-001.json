@@ -1,7 +1,7 @@
 {
     "week": "2026-W32",
     "date": "2026-08-04",
-    "status": "closed",
+    "status": "active",
     "summary": "W32 全量闭合（8/3-8/9 真实周）。双轨互促即刻启动 + 生产管线打通。Track A: install-tricade.ps1 统一✅ + daemon 24h验证 PASS(48.5h稳定) + CI MSI 自动化(15次调试修12bug, 版本2026.08.05.1) + Cron 引擎生产验证 PASS(ADD/LIST/RUN/REMOVE全ok) + 安装目录治理(TriCade直挂Program Files + trilc.cmd + PATH + 迁移脚本)。Track B: .claude/补齐✅ + CLAUDE.md✅ + instructions迁移✅ + 自研循环v1方案B PASS(TriLC agent独立编码serverTime上线) + CTO APPROVE。Track C: docs归档26→3✅ + Smoke Test✅ + 周平面SOP + weekly-plane CLI规格。Track D: 周度平移✅。",
     "active_trees": [
         {
@@ -40,5 +40,23 @@
         "BUG-20260805-003: MSI 打包缺 yoga-layout 别名（TUI stub import 与依赖声明不一致）",
         "版本 revision 未自动递增（当前手动默认1）— 需改自动计数"
     ],
-    "next_week_preview": "W33(8/10起): 周末00:00 cron 自动迁移周工作平面 + carry-over CEO裁决 + revision自动计数 + 自研循环补强验证(修bug/多文件/编译自愈)"
+    "next_week_preview": "W33(8/10起): 周末00:00 cron 自动迁移周工作平面 + carry-over CEO裁决 + revision自动计数 + 自研循环补强验证(修bug/多文件/编译自愈)",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "version": "1.1.0",
+        "lastUpdated": "2026-08-06T21:00:00+08:00",
+        "latestActiveWeek": true
+    },
+    "activeTrees": [
+        {
+            "treeId": "w32-dual-track-kickoff",
+            "status": "closed",
+            "path": "trees/w32-dual-track-kickoff/tree-op.json"
+        },
+        {
+            "treeId": "w33-cron-selfdev",
+            "status": "closed",
+            "path": "trees/w33-cron-selfdev/tree-op.json"
+        }
+    ]
 }
