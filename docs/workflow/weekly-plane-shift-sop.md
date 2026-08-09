@@ -89,22 +89,30 @@ Options:
   --from <week>      源周 (默认: 自动检测 latestActiveWeek)
   --dry-run          干跑模式, 只输出将要执行的动作, 不写入
 
-流程 (ADE 模式):
-  1. Agent (CEOChiefOfStaff) plans:
-     - 读取 --from 周 OP 索引
-     - 计算 carry-over
-     - 生成新周骨架
+流程 (完整 ADE 五段闭环):
+  0. Event 触发:
+     - cron 定时 (周末 23:00, TriLC cron command 模式)
+     - 或手动 (trilc cron run weekly-plane-shift --force)
+
+  1. Agent plans (用规划 skill 标准化):
+     - skill: tri-plan (周平面规划 skill)
+     - 读取 --from 周 OP 索引 + unresolved-items
+     - 计算 carry-over (active/frozen/done + 周数+1 + 4w/8w 预警)
+     - 产出: 迁移计划 (JSON, 给 CLI 的确定性输入)
 
   2. Deterministic CLI executes:
-     - mkdir + 创建文件
-     - 写入 OP JSON
-     - 写入 unresolved-items.md
-     - 标记上一周 status=done
+     - weekly_plane_shift.py: create → migrate → carry_over → validate
+     - 输出: .shift-ade.json (status/summary/changes/errors)
 
-  3. Agent closes:
-     - 验证新周目录完整性
-     - 输出 carry-over 摘要
-     - 标记超期预警
+  3. Agent closes (验证收口):
+     - 读取 .shift-ade.json, 验证 status=pass
+     - 检查新周目录完整性 (OP JSON + unresolved-items)
+     - 超期事项升级裁决 (8w → CEO)
+
+  4. CLI 最终落地:
+     - 更新 unresolved-items 周数标注 (幂等)
+     - 写入操作记录 (shift log)
+     - localbus 通知 (小贾/W33 首周事项清单)
 
 Example:
   $ weekly-plane shift --from 2026-W32
