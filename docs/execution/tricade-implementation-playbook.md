@@ -357,6 +357,7 @@ weekly-plane shift [--from <week>] [--dry-run]
 | `REQ-20260805-013` | **onboarding 会话 systemPrompt 继承**——chat resume onboarding session 时，send 需携带该 session 的 systemPrompt（onboarding 引导），否则通用助手把 CEO 回复当闲聊。实测：回复"磨人"（CEO 名字）被解释为成语。修复：resume 时 fetch session 的 systemPrompt → /v1/messages 带 system 字段 | ✅ 验证通过（2026-08-06）agent 已意识到初始化流程。遗留：工具 cwd 错误 → REQ-014b |
 | `REQ-20260806-014b` | **agent 工具执行 cwd 错误**——onboarding agent 的 bash/工具用 daemon cwd（System32）而非 onboarding 工作区（运营仓）。实测 agent 检查 `C:\Windows\System32\.claude\agents\`（错），应检查 `D:\OneDrive\Code\ai\TriMetaverse-20260805`。修复：agent 工具执行传入 workspaceRoot（onboarding systemPrompt 已声明工作区） | open — 研发侧 |
 | `REQ-20260806-015` | **TUI /exit 退出花屏**——退出后屏幕残留对话内容（历史遗留）。修复：退出时清屏/恢复终端状态 | open — 研发侧 |
+| `REQ-20260806-020` | **完整 ADE 五段闭环**（CEO 裁决）——周平面迁移补齐：① event 触发（已实现 cron）② agent plan skill（tri-plan 规划 skill，标准化产出迁移计划 JSON）③ cli 执行（已实现 weekly_plane_shift）④ agent close（agent 读 shift-ade.json 验证 + 8w 升级裁决）⑤ cli 最终落地（unresolved 周数幂等更新 + 操作记录 + localbus 通知）| open — 研发侧 |
 | `REQ-20260806-018` | **PID 生命周期修复**——daemon 自登记 PID（run/start/schtasks 全入口一致）+ 退出自清理 + stop 端口兜底 + start 占用者验证。✅ 已验证：前台 run 自登记清理 + PID 缺失端口兜底（"stopped via port lookup"） | ✅ 验证通过（TriLC f1f50b0） |
 
 ---
