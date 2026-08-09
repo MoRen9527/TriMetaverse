@@ -40,5 +40,11 @@
         "BUG-20260805-003: MSI 打包缺 yoga-layout 别名（TUI stub import 与依赖声明不一致）",
         "版本 revision 未自动递增（当前手动默认1）— 需改自动计数"
     ],
-    "next_week_preview": "W33(8/10起): 周末00:00 cron 自动迁移周工作平面 + carry-over CEO裁决 + revision自动计数 + 自研循环补强验证(修bug/多文件/编译自愈)"
+    "next_week_preview": "W33(8/10起): 周末00:00 cron 自动迁移周工作平面 + carry-over CEO裁决 + revision自动计数 + 自研循环补强验证(修bug/多文件/编译自愈)",
+    "metadata": {
+        "latestActiveWeek": false,
+        "nextWeekRef": "docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json",
+        "lastUpdated": "2026-08-09T12:58:31.747035+00:00"
+    },
+    "activeTrees": []
 }
