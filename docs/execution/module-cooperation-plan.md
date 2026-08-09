@@ -47,13 +47,13 @@ L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审
 
 | 模块 | 状态 | 代码 | 层级 |
 | --- | --- | --- | --- |
-| TriCade | v0.3.0+ 安装包 | MSI 构建中 | L0 |
+| TriCade | calver 安装包（2026.08.06.N） | MSI 构建中 | L0 |
 | TriPilot | DISCOVERY→CODING | VS Code 扩展 | L0 |
 | trilc chat | 已可用 | TriLC CLI | L0 |
 | TriAvatar | DISCOVERY | **React 前端已有**；chat 为占位界面 | L0（web 端入口） |
 | TriMobile | 占位 | chat 为占位界面 | L0（移动端入口） |
 | TriGateway | 占位 | 无（OAuth 捕获通道语义） | L0 |
-| TriLC | daemon 三层合入 dev | 现役 v0.9.0 | L1 |
+| TriLC | daemon 三层合入 dev | 现役（内部 0.9.0，发布走 calver） | L1 |
 | TriMC | 骨架 + Phase 1/2 | monorepo | L1 |
 | TriCompany | V1.0（13 员工） | 纯资产仓 | L2 |
 | TriModel | 配置平面已上线 | library + API | L3 |
@@ -93,6 +93,16 @@ L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审
 | TriOPC | **独立 SaaS 平台部署**（Phase 2+ 评估） | 服务外部 OPC 群体，利用 TriCompany 能力 |
 
 **进包三原则**：1) 用户旅程必经；2) 成熟度达"随包即承诺"（滞后 ≤2 周）；3) 不因进包失去独立演进通道。
+
+**版本策略（双轨制，CEO 裁决：日期+修改次数）**：
+
+| 轨道 | 版本格式 | 应用范围 |
+| --- | --- | --- |
+| **聚合发布** | `2026.08.06.N`（calver，日期+同日修改次数） | TriCade 安装包/MSI/ZIP/Release 版本 |
+| **模块内部** | semver（0.9.0 等） | 各模块 package.json（file: 依赖引用，模块自身演进） |
+| **映射表** | VERSION.json | 每次聚合发布记录：calver ↔ 各模块 semver/SHA（回滚依据） |
+
+**版本过渡**：聚合发布已切 calver（build-tricade.yml 自动 `2026.08.06.N`，同日修改次数自动递增）；模块内部 semver 保留（构建产物依赖），经 VERSION.json 与聚合 calver 对齐；TriLC 版本双源（0.9.0 vs version.json）由发布管线派生修正。
 
 ---
 
