@@ -1,7 +1,7 @@
 {
     "week": "2026-W32",
     "date": "2026-08-04",
-    "status": "active",
+    "status": "closed",
     "summary": "W32 全量闭合（8/3-8/9 真实周）。双轨互促即刻启动 + 生产管线打通。Track A: install-tricade.ps1 统一✅ + daemon 24h验证 PASS(48.5h稳定) + CI MSI 自动化(15次调试修12bug, 版本2026.08.05.1) + Cron 引擎生产验证 PASS(ADD/LIST/RUN/REMOVE全ok) + 安装目录治理(TriCade直挂Program Files + trilc.cmd + PATH + 迁移脚本)。Track B: .claude/补齐✅ + CLAUDE.md✅ + instructions迁移✅ + 自研循环v1方案B PASS(TriLC agent独立编码serverTime上线) + CTO APPROVE。Track C: docs归档26→3✅ + Smoke Test✅ + 周平面SOP + weekly-plane CLI规格。Track D: 周度平移✅。",
     "active_trees": [
         {
@@ -44,19 +44,9 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "version": "1.1.0",
-        "lastUpdated": "2026-08-06T21:00:00+08:00",
-        "latestActiveWeek": true
+        "lastUpdated": "2026-08-09T15:59:00.305065+00:00",
+        "latestActiveWeek": false,
+        "nextWeekRef": "docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json"
     },
-    "activeTrees": [
-        {
-            "treeId": "w32-dual-track-kickoff",
-            "status": "closed",
-            "path": "trees/w32-dual-track-kickoff/tree-op.json"
-        },
-        {
-            "treeId": "w33-cron-selfdev",
-            "status": "closed",
-            "path": "trees/w33-cron-selfdev/tree-op.json"
-        }
-    ]
+    "activeTrees": []
 }
