@@ -48,13 +48,13 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "version": "1.2.0",
-        "lastUpdated": "2026-08-06T12:00:00+08:00",
+        "lastUpdated": "2026-08-09T09:52:45.354091+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
             "经营维护计划单"
         ],
-        "latestActiveWeek": true,
+        "latestActiveWeek": false,
         "migrationDate": "2026-07-31T22:00:00+08:00",
         "phase": "ceo-copilot-host-coordination",
         "previousWeekRef": "docs/workflow/operating-records/2026-W30/OP-202607-W30-001.json"
@@ -75,98 +75,24 @@
         "TriPilot",
         "TriDev"
     ],
-    "updatedAt": "2026-08-07T23:15:17+08:00",
-    "activeTrees": [
-        {
-            "treeId": "w33-production-ops",
-            "title": "[W33提前规划] 生产运营：项目创建+TriMC+自动更新+经营记录 (6/7 done)",
-            "path": "docs/workflow/operating-records/2026-W31/trees/w33-production-ops/tree-op.json",
-            "status": "active",
-            "priority": "P0",
-            "note": "W33 6/7 done (w33-4 W01经营记录待生产环境)。代码验收 ALL_PASS。"
-        },
-        {
-            "treeId": "w34-closed-loop",
-            "title": "[W34提前规划] 闭环：自开发回路+实验降级+多项目+P1补齐 (6 nodes)",
-            "path": "docs/workflow/operating-records/2026-W31/trees/w34-closed-loop/tree-op.json",
-            "status": "active",
-            "priority": "P0",
-            "note": "W34 最终闭环。三层方案最后一棵树。W31周内提前规划。"
-        },
-        {
-            "treeId": "ade-full-lifecycle",
-            "title": "ADE 全生命周期：P0基线 -> Local Durable MVP -> TriMC Parity -> 双域同步 -> Trees -> 生产加固",
-            "path": "docs/workflow/operating-records/2026-W31/trees/ade-full-lifecycle/tree-op.json",
-            "status": "active",
-            "priority": "P0",
-            "note": "完整方案 FREEZE；ade-life-1 范围确认 in_progress；实现 not-started。"
-        }
-    ],
+    "updatedAt": "2026-08-09T09:52:45.354091+00:00",
+    "activeTrees": [],
     "doneTreesFromW30": [],
     "doneTreesThisWeek": [
         {
-            "treeId": "tricompany-13-onboarding",
-            "title": "TriCompany V1.0 — 13 员工正式上岗 + 公司正式发布 (6/6 nodes)",
-            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/tricompany-12-onboarding/tree-op.json",
-            "status": "done",
-            "priority": "P0"
+            "treeId": "w33-production-ops",
+            "status": "closed",
+            "note": "未完成节点 (w33-4 等) carry-over 至 W32"
         },
         {
-            "treeId": "trilc-daemon-heartbeat-absorb",
-            "title": "吸收方案设计 — CPO+CTO 并行评审 + 合流收口",
-            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/tree-op.json",
-            "status": "done",
-            "priority": "P0"
+            "treeId": "w34-closed-loop",
+            "status": "closed",
+            "note": ""
         },
         {
-            "treeId": "trilc-daemon-heartbeat-phase1",
-            "title": "Phase 1: Heartbeat + Session Reaper + 健康扩展 (8/8 PASS)",
-            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-phase1/tree-op.json",
-            "status": "done",
-            "priority": "P0"
-        },
-        {
-            "treeId": "trilc-daemon-heartbeat-phase2",
-            "title": "Phase 2: Cron Engine + Daemon OS 集成 (7/7 PASS)",
-            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-phase2/tree-op.json",
-            "status": "done",
-            "priority": "P0"
-        },
-        {
-            "treeId": "trilc-daemon-heartbeat-phase3",
-            "title": "Phase 3: Full CronService + 剩余平台 + P1 项 (7/7 PASS)",
-            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-phase3/tree-op.json",
-            "status": "done",
-            "priority": "P1"
-        },
-        {
-            "treeId": "tricade-production-deploy",
-            "title": "TriCade 1.0 Phase 1: CI/CD + 配置层 + BYOK向导 + TriCompany 可插拔 (5/5 nodes)",
-            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/tricade-production-deploy/tree-op.json",
-            "status": "done",
-            "priority": "P0"
-        },
-        {
-            "treeId": "tricade-ade-phase2",
-            "title": "TriCade 1.0 Phase 2: ADE 员工上岗 CLI + 项目脚手架 CLI (4/4 nodes, 53/53 tests)",
-            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/tricade-ade-phase2/tree-op.json",
-            "status": "done",
-            "priority": "P0"
-        },
-        {
-            "treeId": "tricade-phase3-pipeline",
-            "title": "TriCade 1.0 Phase 3: 实验→生产管线 + 自动更新 + 多项目隔离 (4/4 nodes)",
-            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/tricade-phase3-pipeline/tree-op.json",
-            "status": "done",
-            "priority": "P0"
-        },
-        {
-            "treeId": "w32-integration-verification",
-            "title": "[提前] TriCade 集成验证：MSI+端到端+macOS/Linux+小布上岗 (7/7 nodes, ALL_PASS)",
-            "treeOpPath": "docs/workflow/operating-records/2026-W31/trees/w32-integration-verification/tree-op.json",
-            "status": "done",
-            "priority": "P0",
-            "note": "W32 任务提前在 W31 完成。7/7 nodes done, 497 tests, CTO APPROVE。"
+            "treeId": "ade-full-lifecycle",
+            "status": "closed",
+            "note": "维护面主树，节点平移 W32 追踪"
         }
     ],
     "nextActions": [

@@ -29,7 +29,9 @@
         "CARRY-20260728-005: Openclaw daemon验证 — 6w+ ⚠️⚠️ frozen（建议关闭/转归，已被TriLC吸收替代）",
         "CARRY-20260728-006: trilc TUI P2 — 6w+ ⚠️⚠️ frozen（等 P1）",
         "RISK-20260728-001: DeepSeek classifier — active",
-        "REGR-001/004/005/007: P1 TUI回归 — 待修"
+        "REGR-001/004/005/007: P1 TUI回归 — 待修",
+        "w33-production-ops: 未完成节点 (w33-4 生产记录等) — W32 追踪",
+        "ade-full-lifecycle: W31 维护面主树, 节点平移 W32 继续"
     ],
     "risks": [
         "5项 carry-over 6w+，CARRY-001/004/005/006 逼近 8w CEO 升级线 — W33(8/10) 首周裁决",
