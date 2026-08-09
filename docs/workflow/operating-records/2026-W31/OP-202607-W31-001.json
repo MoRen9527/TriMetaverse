@@ -17,18 +17,38 @@
             "note": "TriLC daemon/heartbeat/timer 合并执行计划 — CEO Chief of Staff 合流收口",
             "source": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/merged-execution-plan.md",
             "kind": "execution-plan"
+        },
+        {
+            "note": "ADE 全生命周期实现蓝图 — Phase -1 至 Phase 6",
+            "source": "TriCompany/docs/engineering/ade-full-lifecycle-implementation-plan.md",
+            "kind": "technical-plan"
+        },
+        {
+            "note": "CPO/CTO TriLC 实码差距评估 — 完整方案 FREEZE、裁剪 MVP APPROVE",
+            "source": "TriCompany/docs/engineering/ade-trilc-current-gap-assessment.md",
+            "kind": "gap-assessment"
+        },
+        {
+            "note": "TriLC/TriMC 共享 Runtime Parity 与单写 authority 决策",
+            "source": "TriCompany/docs/engineering/trilc-trimc-runtime-parity.md",
+            "kind": "architecture-decision"
+        },
+        {
+            "note": "动态任务树公司级真源 v0.4",
+            "source": "TriCompany/docs/workflow/dynamic-task-tree-protocol.md",
+            "kind": "company-protocol"
         }
     ],
     "objectType": "WEEKLY_INDEX",
     "objectId": "OP-202607-W31-001",
     "title": "TriMetaverse W31 当前周经营维护索引",
     "ownerRole": "CEOChiefOfStaff",
-    "status": "active",
-    "summary": "W31 全量闭合 — 9 棵树。(A) TriLC 三层吸收：4棵树 22/22门禁。(B) TriCompany V1.0：13员工L1上岗+CEO签署+git tag。(C) TriCade 1.0：3棵树 CI/CD+ADE+管线。(D) W32提前集成验证：1棵树 7/7 ALL_PASS (MSI+端到端+macOS/Linux+小布上岗)。总计 150+ 文件，497 tests。",
+    "status": "closed",
+    "summary": "W31 原 9 棵交付树已闭合；当前维护面新增 ADE 全生命周期主树。完整方案维持 FREEZE，当前仅进行 CEO 对 Phase -1、Phase 0-2 local-first 范围确认，实施尚未启动。",
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
-        "version": "1.1.0",
-        "lastUpdated": "2026-07-31T23:30:00+08:00",
+        "version": "1.2.0",
+        "lastUpdated": "2026-08-06T12:00:00+08:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -52,9 +72,10 @@
         "TriCompany",
         "TriLC",
         "TriMC",
-        "TriPilot"
+        "TriPilot",
+        "TriDev"
     ],
-    "updatedAt": "2026-08-01T03:30:00+08:00",
+    "updatedAt": "2026-08-07T23:15:17+08:00",
     "activeTrees": [
         {
             "treeId": "w33-production-ops",
@@ -71,6 +92,14 @@
             "status": "active",
             "priority": "P0",
             "note": "W34 最终闭环。三层方案最后一棵树。W31周内提前规划。"
+        },
+        {
+            "treeId": "ade-full-lifecycle",
+            "title": "ADE 全生命周期：P0基线 -> Local Durable MVP -> TriMC Parity -> 双域同步 -> Trees -> 生产加固",
+            "path": "docs/workflow/operating-records/2026-W31/trees/ade-full-lifecycle/tree-op.json",
+            "status": "active",
+            "priority": "P0",
+            "note": "完整方案 FREEZE；ade-life-1 范围确认 in_progress；实现 not-started。"
         }
     ],
     "doneTreesFromW30": [],
@@ -149,7 +178,9 @@
             "status": "completed",
             "completedAt": "2026-07-31T23:00:00+08:00",
             "resolution": "APPROVE — 无返修。PRD 覆盖 6 模块，P0/P1/P2 分层清晰，7 验收标准可测。",
-            "handoffRefs": ["ET-20260731-001"],
+            "handoffRefs": [
+                "ET-20260731-001"
+            ],
             "output": "docs/product/todo/triLC-daemon-heartbeat-timer-mvp.md"
         },
         {
@@ -160,7 +191,9 @@
             "status": "completed",
             "completedAt": "2026-07-31T23:00:00+08:00",
             "resolution": "APPROVE — 需在实施时吸纳合并执行计划 R3 (Session Reaper P0)、R4 (CLI 双轨)、R5 (Cron Phase 2) 裁决。",
-            "handoffRefs": ["ET-20260731-002"],
+            "handoffRefs": [
+                "ET-20260731-002"
+            ],
             "output": "docs/engineering/todo/triLC-daemon-heartbeat-timer-absorb-design.md"
         },
         {
@@ -171,7 +204,10 @@
             "status": "completed",
             "completedAt": "2026-07-31T23:30:00+08:00",
             "resolution": "DONE — 合流评审完成。5 分歧裁决 + 合并执行计划 Phase 1/2/3 + 10 项 next actions。",
-            "dependsOn": ["NA-20260731-CPO-001", "NA-20260731-CTO-001"],
+            "dependsOn": [
+                "NA-20260731-CPO-001",
+                "NA-20260731-CTO-001"
+            ],
             "output": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/merged-execution-plan.md"
         },
         {
@@ -180,7 +216,9 @@
             "action": "Phase 1 开工：TriLCHeartbeatWake 独立模块 + 单测（heartbeat-wake.ts + heartbeat-wake.test.ts）",
             "dueAt": "2026-08-04T23:59:00+08:00",
             "status": "assigned",
-            "handoffRefs": ["ET-20260731-002"],
+            "handoffRefs": [
+                "ET-20260731-002"
+            ],
             "treeRef": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/tree-op.json"
         },
         {
@@ -190,6 +228,17 @@
             "dueAt": "2026-08-05T23:59:00+08:00",
             "status": "assigned",
             "treeRef": "docs/workflow/operating-records/2026-W31/trees/trilc-daemon-heartbeat-absorb/tree-op.json"
+        },
+        {
+            "actionId": "NA-20260807-ADE-001",
+            "owner": "CEOChiefOfStaff",
+            "action": "提交 CEO 确认完整 ADE 的首期开发范围：只允许 Phase -1、Phase 0-2 local-first；完整方案、TriMC parity、双域同步和 Trees projector 继续 FREEZE。",
+            "status": "in_progress",
+            "currentProgress": "行业研究、CPO/CTO TriLC 实码审计、完整蓝图、runtime parity、Trees v0.4 真源和周任务树均已落地；代码实施未启动。",
+            "nextAction": "等待 CEO 明确批准或调整首期范围；批准后由总助创建 TriDev run 和 Phase -1 实施子树。",
+            "resumeCondition": "CEO 确认 Phase -1、Phase 0-2 范围；TriLC P0 门禁按差距评估执行。",
+            "treeRef": "docs/workflow/operating-records/2026-W31/trees/ade-full-lifecycle/tree-op.json",
+            "output": "docs/workflow/operating-records/2026-W31/trees/ade-full-lifecycle/execution-plan.md"
         }
     ],
     "handoffRefs": [
@@ -209,5 +258,8 @@
             "status": "closed",
             "resolution": "APPROVE — CTO 交付 docs/engineering/todo/triLC-daemon-heartbeat-timer-absorb-design.md。实施时需吸纳合并执行计划 R3/R4/R5 裁决。"
         }
-    ]
+    ],
+    "closedAt": "2026-08-06T12:00:00+08:00",
+    "shiftedTo": "OP-202608-W32-001",
+    "shiftNote": "W31 全量闭合（8/2 止）。活跃事项已平移到 W32（见 OP-202608-W32-001.unresolved-items.md §1）。ADE 全生命周期主树 W31 维护面继续，随 W32 周平面推进。"
 }
