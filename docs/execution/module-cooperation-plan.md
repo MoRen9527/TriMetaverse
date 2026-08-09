@@ -10,24 +10,24 @@
 
 ```text
 L0 入口层（并列多入口，无从属）
-   桌面形态: TriCade = VSCodium 宿主壳 + TriPilot（IDE 入口）+ trilc chat（CLI 入口，可独立使用）
-   独立入口: TriAvatar chat（占位界面，非 TriAvatar 全部）
-             TriMobile chat（占位界面）
-             TriGateway（社交入口，获客策略将来再定）
+   桌面端入口: TriCade = VSCodium 宿主壳 + TriPilot（IDE 入口）+ trilc chat（CLI 入口，可独立使用）
+   web端入口: TriAvatar chat
+   移动端入口: TriMobile chat
+   社交入口:   TriGateway（社交入口）
 L1 运行层（核心引擎/调度层）
    TriLC（本地核心引擎：自主决策/编排调度/heartbeat/cron/session/onboarding 检测）
-   TriMC（云端核心引擎：云端主控/调度/聚合，与 TriLC 协同）
-L2 公司层   TriCompany（赛博公司：岗位/治理/周平面/记录）
-L3 服务层   TriModel（模型路由）+ TriStaciss（计费）
-             + TriAvatar/TriMobile/TriTraining（服务层功能成员）
-L4 能力层   TriCode（产品 glue）+ TriDev/TriTest/TriDeployment + TriAuto（自动化编排占位）
+   TriMC（云端核心引擎：与 TriLC 既互为fallback又有服务域与本地域的协同）
+L2 公司层   
+   TriCompany（赛博公司：岗位/治理/周平面/记录）
+   TriOPC （SaaS 平台：OPC相关服务落地）
+L3 服务层   TriModel（模型路由）+ TriStaciss（Token计费）
+L4 能力层   TriCode（Coding Agent glue）+ TriDev/TriTest/TriDeployment + TriAuto（自动化编排占位）
               + TriSkill（技能库）+ TriTraining（培训双轨）
 L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审计数据上链）
               + TriWeb4（web3/web4 钱包，系统经济运转数据贡献方）
               （审计语义：TriChain 承载审计数据上链；CAO域/TriDev ASSURANCE 数据入层审计；
                 TriWeb4 是数据贡献方而非审计承载方）
-【平台/产品形态（横向跨层，覆盖公司层/服务层/入口层）】
-    TriOPC：SaaS 平台服务 OPC 群体，利用 TriCompany 能力（公司层模板 + 服务层供给 + 入口层触达）
+
 ```
 
 **分层语义**：
@@ -36,8 +36,8 @@ L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审
 | --- | --- | --- |
 | L0 | 用户接触面（获客入口 TriGateway + 体验入口其余） | 可见 |
 | L1 | **核心引擎/调度层**（自主决策、编排调度、运行时本体） | 半可见 |
-| L2 | 公司价值兑现层 | 可见（内容层） |
-| L3 | 模型与计费供给（用户无感） | 不可见 |
+| L2 | 公司价值兑现层：TriCompany（赛博公司）+ TriOPC（SaaS 平台，OPC 服务落地） | 可见（内容层） |
+| L3 | 模型与计费供给：TriModel（模型路由）+ TriStaciss（Token 计费） | 不可见 |
 | L4 | 公司执行能力（员工工具为主，TriCode 为产品底座） | 不可见 |
 | L5 | 数据审计层：TriMem 身份中枢 + TriChain 审计上链 + TriWeb4 经济数据贡献（钱包） | 不可见 |
 
@@ -50,22 +50,22 @@ L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审
 | TriCade | v0.3.0+ 安装包 | MSI 构建中 | L0 |
 | TriPilot | DISCOVERY→CODING | VS Code 扩展 | L0 |
 | trilc chat | 已可用 | TriLC CLI | L0 |
-| TriAvatar | DISCOVERY | **React 前端已有**；chat 为占位界面 | L0 入口 + L3 服务 |
-| TriMobile | 占位 | chat 为占位界面 | L0 入口 + L3 服务 |
+| TriAvatar | DISCOVERY | **React 前端已有**；chat 为占位界面 | L0（web 端入口） |
+| TriMobile | 占位 | chat 为占位界面 | L0（移动端入口） |
 | TriGateway | 占位 | 无（OAuth 捕获通道语义） | L0 |
 | TriLC | daemon 三层合入 dev | 现役 v0.9.0 | L1 |
 | TriMC | 骨架 + Phase 1/2 | monorepo | L1 |
 | TriCompany | V1.0（13 员工） | 纯资产仓 | L2 |
 | TriModel | 配置平面已上线 | library + API | L3 |
-| TriStaciss | CTO-004 APPROVED | Python + Docker | L3 |
-| TriOPC | reference 吸收待启动 | PHP 骨架 | 跨层：公司层+服务层+入口层 |
+| TriStaciss | CTO-004 APPROVED | Python + Docker | L3（Token 计费） |
+| TriOPC | reference 吸收待启动 | PHP 骨架 | L2（SaaS 平台，OPC 服务落地） |
 | TriCode | DISCOVERY（无代码） | glue 层 | L4 |
 | TriDev | super-dev 吸收中 | **Python 引擎开发中** | L4 |
 | TriTest | 完整 | **tritest CLI 可用** | L4 |
 | TriDeployment | 完整 | **trideploy CLI 可用** | L4 |
 | TriAuto | 占位模块 | 利用 TriDev/TriTest/TriDeployment 能力形成自动化（编排层） | L4 |
 | TriSkill | Wave 0-3 完成 | 18 个 skill（内容） | L4 |
-| TriTraining | 产品定位完成 | 占位；获客轨 + 内训轨 | L4 + L3 服务 |
+| TriTraining | 产品定位完成 | 占位；获客轨 + 内训轨 | L4 |
 | TriMem | DISCOVERY→DESIGNING | **身份 SSOT（auth/wallet 有代码）** | L5 |
 | TriChain | 占位 | 审计数据上链载体 | L5 |
 | TriWeb4 | 占位 | web3/web4 钱包，经济运转数据贡献方 | L5 |
@@ -146,7 +146,7 @@ L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审
 3. **桌面 TriCade** = VSCodium 宿主壳 + TriPilot（IDE 入口）+ trilc chat（CLI 入口，可独立使用）；TriMobile/TriAvatar 与 TriCade **并列无从属**
 4. **入口层**：TriPilot / trilc chat / TriAvatar chat（占位界面）/ TriMobile chat（占位界面）/ TriGateway（社交入口，获客将来再定）
 5. **L1 核心引擎层**：TriLC/TriMC 体现自主决策、编排调度、核心引擎地位
-6. **TriOPC 跨层**：公司层 + 服务层 + 入口层都有归属
-7. **TriAvatar/TriMobile/TriTraining 有服务层功能**
+6. **TriOPC 归 L2 公司层**：SaaS 平台（OPC 相关服务落地），利用 TriCompany 能力
+7. **TriAvatar/TriMobile 为纯入口**（web/移动端 chat），TriTraining 归 L4（培训双轨）
 8. **TriSkill 进包**（随公司模板开箱即有）
 9. **TriMem 进包时点**（Phase 1 L2 用户注册上线时评估）
