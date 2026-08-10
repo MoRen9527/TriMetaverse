@@ -34,7 +34,7 @@
 
 ### Step 1: 备份当前状态
 ```powershell
-cp D:\OneDrive\Code\ai\TriLC\src\server\app.ts D:\OneDrive\Code\ai\TriLC\src\server\app.ts.w33-backup
+cp D:\Code\ai\TriLC\src\server\app.ts D:\Code\ai\TriLC\src\server\app.ts.w33-backup
 ```
 
 ### Step 2: 通过 TriPilot 发送需求
@@ -59,7 +59,7 @@ cp D:\OneDrive\Code\ai\TriLC\src\server\app.ts D:\OneDrive\Code\ai\TriLC\src\ser
 ### Step 4: 验证
 ```powershell
 # 类型检查
-cd D:\OneDrive\Code\ai\TriLC
+cd D:\Code\ai\TriLC
 npx tsc -p tsconfig.json --noEmit
 
 # 功能验证（需要重启 daemon）
@@ -69,7 +69,7 @@ curl http://127.0.0.1:8711/healthz | findstr serverTime
 
 ### Step 5: 恢复
 ```powershell
-cp D:\OneDrive\Code\ai\TriLC\src\server\app.ts.w33-backup D:\OneDrive\Code\ai\TriLC\src\server\app.ts
+cp D:\Code\ai\TriLC\src\server\app.ts.w33-backup D:\Code\ai\TriLC\src\server\app.ts
 ```
 
 ## 能力边界标注

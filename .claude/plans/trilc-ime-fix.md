@@ -13,7 +13,7 @@ trilc chat（CLI）中文输入"只有拼音没有候选"，根因在 `TriLC/src
 ## 修复方案（分两阶段，先低风险）
 
 ### Phase 1（主推，低风险、构建干净、命中概率高）—— 修对 hack
-源码改 `D:\OneDrive\Code\ai\TriLC\src\tui\`：
+源码改 `D:\Code\ai\TriLC\src\tui\`：
 
 1. **`render.tsx`** `setImeCursorCallback` 回调：
    - 先写 `\x1b[?25h`（显示光标）再写 `\x1b[row;colH`（定位）。

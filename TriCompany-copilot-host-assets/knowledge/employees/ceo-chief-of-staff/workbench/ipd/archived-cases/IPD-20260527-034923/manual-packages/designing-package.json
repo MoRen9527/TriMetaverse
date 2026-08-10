@@ -20,19 +20,19 @@
     "python -m pytest tests\\unit tests\\integration"
   ],
   "fileScope": [
-    "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\openai_ingress_models.py",
-    "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\chat_completion_service.py",
-    "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\openai_compatible_api.py",
-    "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\tests\\unit\\test_chat_completion_service.py",
-    "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\tests\\integration\\test_openai_compatible_router.py"
+    "D:\\Code\\ai\\Tristaciss\\api-server\\openai_ingress_models.py",
+    "D:\\Code\\ai\\Tristaciss\\api-server\\chat_completion_service.py",
+    "D:\\Code\\ai\\Tristaciss\\api-server\\openai_compatible_api.py",
+    "D:\\Code\\ai\\Tristaciss\\api-server\\tests\\unit\\test_chat_completion_service.py",
+    "D:\\Code\\ai\\Tristaciss\\api-server\\tests\\integration\\test_openai_compatible_router.py"
   ],
   "references": {
-    "triStacissProduct": "D:\\OneDrive\\Code\\ai\\Tristaciss\\docs\\registry\\product-state.md",
-    "triStacissCode": "D:\\OneDrive\\Code\\ai\\Tristaciss\\docs\\registry\\code-state.md",
-    "triAvatarProduct": "D:\\OneDrive\\Code\\ai\\Triavatar\\docs\\registry\\product-state.md",
-    "triMemBusiness": "D:\\OneDrive\\Code\\ai\\TriMem\\docs\\registry\\business-state.md",
-    "triStacissRouter": "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\openai_compatible_api.py",
-    "triStacissService": "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\chat_completion_service.py",
-    "triStacissFastapi": "D:\\OneDrive\\Code\\ai\\Tristaciss\\api-server\\fastapi_stream.py"
+    "triStacissProduct": "D:\\Code\\ai\\Tristaciss\\docs\\registry\\product-state.md",
+    "triStacissCode": "D:\\Code\\ai\\Tristaciss\\docs\\registry\\code-state.md",
+    "triAvatarProduct": "D:\\Code\\ai\\Triavatar\\docs\\registry\\product-state.md",
+    "triMemBusiness": "D:\\Code\\ai\\TriMem\\docs\\registry\\business-state.md",
+    "triStacissRouter": "D:\\Code\\ai\\Tristaciss\\api-server\\openai_compatible_api.py",
+    "triStacissService": "D:\\Code\\ai\\Tristaciss\\api-server\\chat_completion_service.py",
+    "triStacissFastapi": "D:\\Code\\ai\\Tristaciss\\api-server\\fastapi_stream.py"
   }
 }

@@ -31,21 +31,21 @@
     "TriMem 本轮保持 out-of-scope 的同时，是否需要在 PRD 中保留未来真实用户系统的接口占位与迁移边界？"
   ],
   "references": {
-    "triCompanyProject": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\PROJECT.md",
-    "triCompanyRequirements": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\REQUIREMENTS.md",
-    "triCompanyState": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\STATE.md",
-    "triCompanyProductRegistry": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\registry\\product-state.md",
-    "triCompanyCodeRegistry": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\registry\\code-state.md",
-    "triCompanyOrchestration": "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\workflow\\chief-of-staff-rd-orchestration.md",
-    "triCompanySupportReadme": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\README.md",
-    "triCompanyHostObjectManifest": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\host-object-manifest.json",
-    "triStacissOverview": "D:\\OneDrive\\Code\\ai\\TriStaciss\\CLAUDE.md",
-    "triStacissModuleBoundary": "D:\\OneDrive\\Code\\ai\\TriStaciss\\AGENTS.md",
-    "triStacissRouter": "D:\\OneDrive\\Code\\ai\\TriStaciss\\api-server\\openai_compatible_api.py",
-    "triAvatarReadme": "D:\\OneDrive\\Code\\ai\\TriAvatar\\README.md",
-    "triAvatarModuleBoundary": "D:\\OneDrive\\Code\\ai\\TriAvatar\\AGENTS.md",
-    "triChainBoundary": "D:\\OneDrive\\Code\\ai\\TriChain\\AGENTS.md",
-    "triWeb4Boundary": "D:\\OneDrive\\Code\\ai\\TriWeb4\\AGENTS.md",
-    "triDevWorkflowState": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\workflow-state.json"
+    "triCompanyProject": "D:\\Code\\ai\\TriCompany\\docs\\product\\PROJECT.md",
+    "triCompanyRequirements": "D:\\Code\\ai\\TriCompany\\docs\\product\\REQUIREMENTS.md",
+    "triCompanyState": "D:\\Code\\ai\\TriCompany\\docs\\product\\STATE.md",
+    "triCompanyProductRegistry": "D:\\Code\\ai\\TriCompany\\docs\\registry\\product-state.md",
+    "triCompanyCodeRegistry": "D:\\Code\\ai\\TriCompany\\docs\\registry\\code-state.md",
+    "triCompanyOrchestration": "D:\\Code\\ai\\TriCompany\\docs\\workflow\\chief-of-staff-rd-orchestration.md",
+    "triCompanySupportReadme": "D:\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\README.md",
+    "triCompanyHostObjectManifest": "D:\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\host-object-manifest.json",
+    "triStacissOverview": "D:\\Code\\ai\\TriStaciss\\CLAUDE.md",
+    "triStacissModuleBoundary": "D:\\Code\\ai\\TriStaciss\\AGENTS.md",
+    "triStacissRouter": "D:\\Code\\ai\\TriStaciss\\api-server\\openai_compatible_api.py",
+    "triAvatarReadme": "D:\\Code\\ai\\TriAvatar\\README.md",
+    "triAvatarModuleBoundary": "D:\\Code\\ai\\TriAvatar\\AGENTS.md",
+    "triChainBoundary": "D:\\Code\\ai\\TriChain\\AGENTS.md",
+    "triWeb4Boundary": "D:\\Code\\ai\\TriWeb4\\AGENTS.md",
+    "triDevWorkflowState": "D:\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets\\docs\\runs\\ipd-ipd-20260527-034923\\workflow-state.json"
   }
 }

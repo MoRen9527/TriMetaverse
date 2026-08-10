@@ -7,8 +7,8 @@
 - nextAction: cpo-discovery-gate
 - nextOwner: ChiefProductOfficer
 - gateOwner: ChiefProductOfficer
-- knowledgeBundlePath: D:\OneDrive\Code\ai\TriMetaverse\TriDev-copilot-host-assets\docs\runs\ipd-ipd-20260610-platform-001\knowledge-bundle.json
-- promptContextPath: D:\OneDrive\Code\ai\TriMetaverse\TriDev-copilot-host-assets\docs\runs\ipd-ipd-20260610-platform-001\host-prompt-context.json
+- knowledgeBundlePath: D:\Code\ai\TriMetaverse\TriDev-copilot-host-assets\docs\runs\ipd-ipd-20260610-platform-001\knowledge-bundle.json
+- promptContextPath: D:\Code\ai\TriMetaverse\TriDev-copilot-host-assets\docs\runs\ipd-ipd-20260610-platform-001\host-prompt-context.json
 
 ## Recommended Command
 

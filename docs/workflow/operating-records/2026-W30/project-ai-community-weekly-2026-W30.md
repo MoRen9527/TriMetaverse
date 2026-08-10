@@ -107,7 +107,7 @@ DeepSeek 从未切换视角到"一个刚装完 MSI 的用户打开 TriCade 看�
 
 | 概念 | 开发态（Dev） | 安装态（Prod） |
 |------|-------------|---------------|
-| 文件位置 | `D:\OneDrive\Code\ai\TriLC\` | `C:\Program Files\TriCade\resources\app\tools\trilc\` |
+| 文件位置 | `D:\Code\ai\TriLC\` | `C:\Program Files\TriCade\resources\app\tools\trilc\` |
 | 文件权限 | 用户完全可写 | SYSTEM/TrustedInstaller 所有，普通用户只读 |
 | 依赖来源 | `node_modules` 含符号链接（symlink） | 必须是实体文件，无符号链接 |
 | 环境变量 | 开发机全局可用（node、npm 等） | 仅 TriCade 内置 node.exe 可用 |

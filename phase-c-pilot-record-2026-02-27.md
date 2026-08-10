@@ -10,7 +10,7 @@
 ## 2. W1-1 门禁证据（已完成）
 
 - 执行时间：2026-02-27T02:33:31+08:00
-- 执行目录：`D:\OneDrive\Code\ai\TriPilot`
+- 执行目录：`D:\Code\ai\TriPilot`
 - 命令：
   - `npx tsc --noEmit`
   - `powershell -ExecutionPolicy Bypass -File scripts/acceptance/daily-smoke.ps1`

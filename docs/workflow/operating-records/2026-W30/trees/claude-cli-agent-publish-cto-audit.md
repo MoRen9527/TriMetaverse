@@ -6,7 +6,7 @@
 
 ### 1.1 精确 Schema（源码验证）
 
-基于 `D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\` 源码审计，Claude CLI 的 agent 文件格式如下：
+基于 `D:\Code\ai\claude-code-2.1.88\source-repo\` 源码审计，Claude CLI 的 agent 文件格式如下：
 
 **文件位置**：`.claude/agents/<agentType>.md`
 
@@ -304,10 +304,10 @@ TriCompany-claude-host-assets/
 
 ## 6. 使用依据
 
-- Claude CLI agent 解析：`D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\tools\AgentTool\loadAgentsDir.ts`
-- Claude CLI agent 格式化：`D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\components\agents\agentFileUtils.ts`（`formatAgentAsMarkdown`）
-- Claude CLI agent 验证：`D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\components\agents\validateAgent.ts`
-- Claude CLI agent 类型：`D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\components\agents\types.ts`
-- Claude CLI 工具注册表：`D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\tools/`（完整工具列表）
+- Claude CLI agent 解析：`D:\Code\ai\claude-code-2.1.88\source-repo\src\tools\AgentTool\loadAgentsDir.ts`
+- Claude CLI agent 格式化：`D:\Code\ai\claude-code-2.1.88\source-repo\src\components\agents\agentFileUtils.ts`（`formatAgentAsMarkdown`）
+- Claude CLI agent 验证：`D:\Code\ai\claude-code-2.1.88\source-repo\src\components\agents\validateAgent.ts`
+- Claude CLI agent 类型：`D:\Code\ai\claude-code-2.1.88\source-repo\src\components\agents\types.ts`
+- Claude CLI 工具注册表：`D:\Code\ai\claude-code-2.1.88\source-repo\src\tools/`（完整工具列表）
 - TriCompany 发布流程：`TriCompany/docs/workflow/host-object-publish-flow.md`
 - employee_host_publish 架构：`TriCompany/runtime/cognition/employee_host_publish.py`

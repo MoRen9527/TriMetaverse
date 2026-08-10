@@ -3,7 +3,7 @@
   "triggerMode": "manual",
   "closeoutId": "CRC-20260423-001",
   "generatedAt": "2026-04-29T11:18:27+08:00",
-  "sourcePath": "D:/OneDrive/Code/ai/TriMetaverse/docs/workflow/handoff-templates/central-registry-closeout.example.json",
+  "sourcePath": "D:/Code/ai/TriMetaverse/docs/workflow/handoff-templates/central-registry-closeout.example.json",
   "objectType": "CENTRAL_REGISTRY_CLOSEOUT",
   "objectId": "CRC-20260423-001",
   "closeoutSubject": "统一 PC 端软件层 / TriLC 协同与 vscodium 上游升级口径",
@@ -414,7 +414,7 @@
   "triggerSource": {
     "objectType": "OPERATING_REVIEW",
     "objectId": "OR-202604-W14-001",
-    "sourcePath": "D:/OneDrive/Code/ai/TriMetaverse/docs/workflow/operating-cycle-example/operating-review.sample.json"
+    "sourcePath": "D:/Code/ai/TriMetaverse/docs/workflow/operating-cycle-example/operating-review.sample.json"
   },
   "delivery": {
     "taskStatus": "completed",

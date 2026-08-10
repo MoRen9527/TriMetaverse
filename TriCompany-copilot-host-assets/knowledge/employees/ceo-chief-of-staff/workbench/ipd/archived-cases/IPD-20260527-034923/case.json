@@ -15,7 +15,7 @@
   "createdAt": "2026-05-27T03:49:23+08:00",
   "updatedAt": "2026-06-11T02:54:31+08:00",
   "currentStageKey": "intelligence",
-  "currentWorkItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/02-intelligence.json",
+  "currentWorkItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/02-intelligence.json",
   "intake": {
     "objective": "围绕完整模型 API 平台 MVP 重新走旧 case：由 CPO 先产出完整平台 PRD，再由 CTO / TriDev 推进后端、前端最小 smoke，以及 TriCompany 员工身份 NFT / 钱包签名模拟层的当前阶段方案。",
     "taskDescription": "继续使用旧 case，但从 Discovery 重新起跑，目标不再是最小 gateway slice，而是完整模型 API 平台 MVP。CPO 需要先把平台范围、前后端边界、验收矩阵、模拟员工身份 NFT 与钱包签名机制写成完整 PRD；CTO / TriDev 后续再据此推进 TriStaciss 后端、TriAvatar 最小前端 smoke，以及 TriCompany 层面的员工身份 / 签名模拟方案。TriChain 与 TriWeb4 当前只作为未来真实链上落点，不在本轮被写成已上线能力。",
@@ -68,7 +68,7 @@
       "明确员工身份 NFT / 钱包签名模拟层在 TriCompany 的当前阶段方案，以及未来如何迁移到 TriChain / TriWeb4。"
     ],
     "expectedDelivery": "交付一个回退到 Discovery 的旧 case、一条重建并重新对齐的旧 case TriDev run、完整平台 PRD、后续前后端验证证据，以及 TriCompany 员工身份 / 签名模拟层的阶段结论。",
-    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+    "briefPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
     "createdBy": "CEOChiefOfStaff",
     "createdAt": "2026-05-27T03:49:23+08:00",
     "approvals": [
@@ -135,8 +135,8 @@
         "research",
         "baseline"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/01-discovery.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/01-discovery.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
       "activatedAt": "2026-06-11T02:27:42+08:00",
       "submittedAt": "2026-06-11T02:46:18+08:00",
       "completedAt": "2026-06-11T02:47:56+08:00",
@@ -194,7 +194,7 @@
         "docs_confirm",
         "prd"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/02-intelligence.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/02-intelligence.json",
       "outputPath": "",
       "activatedAt": "2026-06-11T02:47:56+08:00",
       "submittedAt": "",

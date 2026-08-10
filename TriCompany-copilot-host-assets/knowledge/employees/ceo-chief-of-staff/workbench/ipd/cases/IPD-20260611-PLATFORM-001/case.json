@@ -330,7 +330,7 @@
       }
     ],
     "expectedDelivery": "",
-    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/intake-brief.json",
+    "briefPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/intake-brief.json",
     "packageHash": "0x486c3ab8683dbd85f42c02f4402694a24fe02ae5542bb22168d2110e74b0c4a6",
     "releaseCounter": 1,
     "releaseVersion": "IPD-20260611-PLATFORM-001-INTAKE-V001",
@@ -462,8 +462,8 @@
         "research",
         "baseline"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/01-discovery.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/01-discovery.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/01-discovery.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/01-discovery.json",
       "packageHash": "0x1ab9a8d41f89ee4597331730be3a0512fa59a7d08552af9f7434ed97085f1542",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-DISCOVERY-V001",
@@ -567,8 +567,8 @@
         "docs_confirm",
         "prd"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/02-intelligence.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/02-intelligence.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/02-intelligence.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/02-intelligence.json",
       "packageHash": "0xb98230352d13007717a4cd1e534e962dc128af9bb5d3505842fef245560ccd15",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-INTELLIGENCE-V001",
@@ -667,8 +667,8 @@
         "uiux",
         "spec"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/03-designing.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/03-designing.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/03-designing.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/03-designing.json",
       "packageHash": "0xba07ed59ee2b3e58fd752f2253757d26693b0f23adc7dbfd708e803ca35d435e",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-DESIGNING-V001",
@@ -766,8 +766,8 @@
         "frontend",
         "backend"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/04-coding.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/04-coding.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/04-coding.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/04-coding.json",
       "packageHash": "0x1cd436bfbab23e587b4e26e0def476b3829be6e9a164796cbc52b5567e5bbfac",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-CODING-V001",
@@ -863,8 +863,8 @@
       "superDevReferenceStages": [
         "quality"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/05-verify-integration.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/05-verify-integration.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/05-verify-integration.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/05-verify-integration.json",
       "packageHash": "0xae14a8694ee634aa76df2693952800638d12019c2c8b245cda35a956eedc9323",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-VERIFY-INTEGRATION-V001",
@@ -959,8 +959,8 @@
       "superDevReferenceStages": [
         "quality"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/06-redteam.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/06-redteam.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/06-redteam.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/06-redteam.json",
       "packageHash": "0x8deb7a38cb4e055dab1bc6165a439e61880393595378c730c4edc88b10e18099",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-REDTEAM-V001",
@@ -1057,8 +1057,8 @@
         "quality",
         "preview_confirm"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/07-qa.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/07-qa.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/07-qa.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/07-qa.json",
       "packageHash": "0xf746b52e83a8ee03b892d332f13a3af616558fa8dfbba8160eabefe93bedf66a",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-QA-V001",
@@ -1157,8 +1157,8 @@
         "delivery",
         "rehearsal"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/08-deployment.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/08-deployment.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/08-deployment.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/08-deployment.json",
       "packageHash": "0x49bbe335a1790dc647da9969930c3b7a4bbb2cdb26c21d5bceb2111af5731d04",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-DEPLOYMENT-V001",
@@ -1257,8 +1257,8 @@
         "delivery",
         "rehearsal"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/09-assurance.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/09-assurance.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/09-assurance.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/09-assurance.json",
       "packageHash": "0xb17ea88b275df26901cdb3d064f1ac5d86ce91327bdb02e4acd267764f8366d7",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-ASSURANCE-V001",
@@ -1359,8 +1359,8 @@
       "superDevReferenceStages": [
         "delivery"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/10-delivery.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/10-delivery.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/work-items/10-delivery.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-PLATFORM-001/outputs/10-delivery.json",
       "packageHash": "0x63895f44f7ea66d6cb06fdd1b6510ab4d139cfe1630e20ec8471edbac21da22b",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260611-PLATFORM-001-DELIVERY-V001",

@@ -8,7 +8,7 @@
   "startedAt": "2026-04-21T01:25:05+08:00",
   "endedAt": "2026-04-21T01:25:05+08:00",
   "artifactPaths": [
-    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-recall-checkpoint-2026-04-20-172505-719622.json"
+    "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-recall-checkpoint-2026-04-20-172505-719622.json"
   ],
   "freezeReason": null,
   "note": "target wiki page is not yet visible in stable recall"

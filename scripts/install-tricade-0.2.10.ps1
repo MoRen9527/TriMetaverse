@@ -3,7 +3,7 @@
 # 用法：右键 -> 以管理员身份运行 PowerShell，执行本脚本
 $ErrorActionPreference = "Stop"
 
-$MSI   = "D:\OneDrive\Code\ai\vscodium\build\windows\msi\releasedir\TriCade-Bundle-x64-0.2.10.msi"
+$MSI   = "D:\Code\ai\vscodium\build\windows\msi\releasedir\TriCade-Bundle-x64-0.2.10.msi"
 $TRILC = "C:\Program Files\TriCade\resources\app\tools\trilc"
 
 # ── 0. 管理员检查 ──

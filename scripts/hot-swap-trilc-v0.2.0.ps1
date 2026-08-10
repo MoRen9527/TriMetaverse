@@ -3,7 +3,7 @@
 # 用法：右键 -> 以管理员身份运行 PowerShell，执行本脚本
 $ErrorActionPreference = "Stop"
 
-$SRC = "D:\OneDrive\Code\ai\TriMetaverse\output\TriMetaverse-Desktop-v0.2.0-windows\trilc"
+$SRC = "D:\Code\ai\TriMetaverse\output\TriMetaverse-Desktop-v0.2.0-windows\trilc"
 $DST = "C:\Program Files\TriCade\resources\app\tools\trilc"
 $BAK = "C:\Program Files\TriCade\resources\app\tools\trilc.bak-v0.1.0"
 

@@ -1,7 +1,7 @@
 # CTO 真实源码覆盖率审计报告 v2
 
 **审计对象**: Claude Code 2.1.88 vs TriLC 当前实现
-**审计基准**: `D:\OneDrive\Code\ai\TriLC\vendor\claude-code-full\src\` (2057 文件)
+**审计基准**: `D:\Code\ai\TriLC\vendor\claude-code-full\src\` (2057 文件)
 **审计人**: CTO 小狄
 **审计时间**: 2026-07-29
 **版本**: v2.0 (修正版 - 基于完整源码)

@@ -1,7 +1,7 @@
 ﻿# fix-nssm-paused.ps1
 # 修复 nssm PAUSED 状态：trilc daemon 初始化需 ~3s，nssm 默认 AppThrottle 1.5s 太短
 # 用法：管理员 PowerShell 运行
-$NSSM = "D:\OneDrive\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
+$NSSM = "D:\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
 $NAME = "TriLC"
 
 Write-Host "=== 修复 nssm PAUSED（trilc daemon 初始化慢）===" -ForegroundColor Cyan

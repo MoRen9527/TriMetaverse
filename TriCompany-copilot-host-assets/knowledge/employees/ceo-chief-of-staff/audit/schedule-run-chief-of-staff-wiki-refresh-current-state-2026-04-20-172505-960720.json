@@ -8,8 +8,8 @@
   "startedAt": "2026-04-21T01:25:05+08:00",
   "endedAt": "2026-04-21T01:25:05+08:00",
   "artifactPaths": [
-    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/wiki/chief-of-staff-llm-wiki-semi-auto-current-state.md",
-    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-20-172505-957718.json"
+    "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/wiki/chief-of-staff-llm-wiki-semi-auto-current-state.md",
+    "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/chief-of-staff/audit/wiki-refresh-2026-04-20-172505-957718.json"
   ],
   "freezeReason": null,
   "note": "scheduled wiki refresh completed"

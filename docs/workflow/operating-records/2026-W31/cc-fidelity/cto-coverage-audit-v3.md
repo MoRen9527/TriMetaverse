@@ -1,7 +1,7 @@
 # CTO 最终技术覆盖率审计报告 v3
 
 **审计对象**: Claude Code 2.1.88 vs TriLC 最终实现 (P0-P8 全部闭合)
-**审计基准**: `D:\OneDrive\Code\ai\TriLC\vendor\claude-code-full\src\` (2057 文件)
+**审计基准**: `D:\Code\ai\TriLC\vendor\claude-code-full\src\` (2057 文件)
 **审计人**: CTO 小狄
 **审计时间**: 2026-07-29
 **版本**: v3.0 (最终版 — 基于 P0-P8 十一棵树全部闭合后的最终实现)

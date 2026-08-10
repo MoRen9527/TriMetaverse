@@ -9,7 +9,7 @@
   "runtimeStatus": "passed",
   "parityScore": 100,
   "summary": "GitHub Copilot Chat 宿主 surface 与活动 run 连续性证据均已就绪。",
-  "supportRoot": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets",
+  "supportRoot": "D:\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets",
   "checks": {
     "install": {
       "agentsFilePresent": true,

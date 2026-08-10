@@ -3,7 +3,7 @@
 # 用法：右键 -> 以管理员身份运行 PowerShell，执行本脚本
 $ErrorActionPreference = "Stop"
 
-$NSSM  = "D:\OneDrive\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
+$NSSM  = "D:\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
 # 8.3 短路径（无空格 = nssm 不截断）——实测可执行
 $NODE  = "C:\PROGRA~1\nodejs\node.exe"
 $CLI   = "C:\PROGRA~1\TriCade\RESOUR~1\app\tools\trilc\dist\cli.js"

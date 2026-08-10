@@ -6,7 +6,7 @@ $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIden
 if (-not $isAdmin) { Write-Host "[X] 需要管理员" -ForegroundColor Red; pause; exit 1 }
 
 $regPath = "HKLM:\SYSTEM\CurrentControlSet\Services\TriLC\Parameters"
-$NSSM = "D:\OneDrive\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
+$NSSM = "D:\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
 
 Write-Host "=== 直接写注册表修复 nssm 参数 ===" -ForegroundColor Cyan
 

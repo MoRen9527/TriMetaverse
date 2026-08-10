@@ -25,8 +25,8 @@
 
 ## 推荐目录位（示例）
 
-- `d:/OneDrive/Code/ai/core-agent`（与 `TriPilot` 同级）
-- `d:/OneDrive/Code/ai/socialFi`（与 `TriPilot` 同级）
+- `d:/Code/ai/core-agent`（与 `TriPilot` 同级）
+- `d:/Code/ai/socialFi`（与 `TriPilot` 同级）
 
 ## 为什么不采用“先 packages 调通再迁移”
 

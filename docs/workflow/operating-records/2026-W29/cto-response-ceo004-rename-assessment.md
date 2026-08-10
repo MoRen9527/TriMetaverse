@@ -15,8 +15,8 @@
 
 | 事实 | 说明 |
 |---|---|
-| **TriCode 已独立存在** | `D:\OneDrive\Code\ai\TriCode`，npm `@trimetaverse/tricode` v0.1.0，含 `src/adapters/`、`src/index.ts`、`src/router.ts`、`src/types.ts`，已有代码实现 |
-| **Tride 是 opencode 运行时** | `D:\OneDrive\Code\ai\Tride`，npm `opencode`（anomalyco/opencode fork），含 opencode-dev/、packages/、sdks/、turborepo、Nix flakes |
+| **TriCode 已独立存在** | `D:\Code\ai\TriCode`，npm `@trimetaverse/tricode` v0.1.0，含 `src/adapters/`、`src/index.ts`、`src/router.ts`、`src/types.ts`，已有代码实现 |
+| **Tride 是 opencode 运行时** | `D:\Code\ai\Tride`，npm `opencode`（anomalyco/opencode fork），含 opencode-dev/、packages/、sdks/、turborepo、Nix flakes |
 | **两者职责不同** | TriCode = 多代码工具 glue 层（opencode/Claude Code/Codex/zcode/Copilot 统一适配）；Tride = opencode 运行时本体 |
 | **架构文档 v3 已反映** | line 69：TriCode = "TriPilot 插件与 opencode 的 glue 适配层"，Tride 不再出现在模块表中 |
 

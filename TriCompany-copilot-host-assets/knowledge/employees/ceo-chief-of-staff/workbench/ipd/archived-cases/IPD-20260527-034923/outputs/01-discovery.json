@@ -24,15 +24,15 @@
     "旧 case 的目标已经从最小 gateway slice 升级为完整平台 MVP，后续 Intelligence 必须输出完整 PRD、范围边界、验收矩阵和前后端/模拟签名层的 handoff。"
   ],
   "evidence": [
-    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\knowledge\\employees\\ceo-chief-of-staff\\workbench\\ipd\\cases\\IPD-20260527-034923\\manual-packages\\discovery-package.json",
-    "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\PROJECT.md",
-    "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\product\\REQUIREMENTS.md",
-    "D:\\OneDrive\\Code\\ai\\TriCompany\\docs\\workflow\\chief-of-staff-rd-orchestration.md",
-    "D:\\OneDrive\\Code\\ai\\TriStaciss\\CLAUDE.md",
-    "D:\\OneDrive\\Code\\ai\\TriAvatar\\README.md",
-    "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\host-object-manifest.json",
-    "D:\\OneDrive\\Code\\ai\\TriChain\\AGENTS.md",
-    "D:\\OneDrive\\Code\\ai\\TriWeb4\\AGENTS.md"
+    "D:\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\knowledge\\employees\\ceo-chief-of-staff\\workbench\\ipd\\cases\\IPD-20260527-034923\\manual-packages\\discovery-package.json",
+    "D:\\Code\\ai\\TriCompany\\docs\\product\\PROJECT.md",
+    "D:\\Code\\ai\\TriCompany\\docs\\product\\REQUIREMENTS.md",
+    "D:\\Code\\ai\\TriCompany\\docs\\workflow\\chief-of-staff-rd-orchestration.md",
+    "D:\\Code\\ai\\TriStaciss\\CLAUDE.md",
+    "D:\\Code\\ai\\TriAvatar\\README.md",
+    "D:\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\host-object-manifest.json",
+    "D:\\Code\\ai\\TriChain\\AGENTS.md",
+    "D:\\Code\\ai\\TriWeb4\\AGENTS.md"
   ],
-  "objectPath": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\knowledge\\employees\\ceo-chief-of-staff\\workbench\\ipd\\cases\\IPD-20260527-034923\\manual-packages\\discovery-package.json"
+  "objectPath": "D:\\Code\\ai\\TriMetaverse\\TriCompany-copilot-host-assets\\knowledge\\employees\\ceo-chief-of-staff\\workbench\\ipd\\cases\\IPD-20260527-034923\\manual-packages\\discovery-package.json"
 }

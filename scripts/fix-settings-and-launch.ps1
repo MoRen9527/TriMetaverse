@@ -9,7 +9,7 @@ $TriCadeDir = "C:\Program Files\TriCade"
 $userDir = Join-Path $env:APPDATA "VSCodium"
 $userSettingsDir = Join-Path $userDir "User"
 New-Item -ItemType Directory -Force -Path $userSettingsDir | Out-Null
-Copy-Item -Force "D:\OneDrive\Code\ai\TriMetaverse\config\settings.json" (Join-Path $userSettingsDir "settings.json")
+Copy-Item -Force "D:\Code\ai\TriMetaverse\config\settings.json" (Join-Path $userSettingsDir "settings.json")
 Write-Host "[OK] settings.json -> $userSettingsDir"
 
 # 2. 确认 daemon 在跑

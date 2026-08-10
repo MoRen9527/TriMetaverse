@@ -2,9 +2,9 @@
 # Copies: dist/tui/* + dist/cli.js + fork engine (src/tui/ink → dist/tui/ink).
 # Status -> .trilc-ime-deploy-status.txt
 $ErrorActionPreference = 'Stop'
-$baseSrc = 'D:\OneDrive\Code\ai\TriLC'
+$baseSrc = 'D:\Code\ai\TriLC'
 $baseDst = 'C:\Program Files\TriCade\resources\app\tools\trilc'
-$status = 'D:\OneDrive\Code\ai\TriMetaverse\.trilc-ime-deploy-status.txt'
+$status = 'D:\Code\ai\TriMetaverse\.trilc-ime-deploy-status.txt'
 $utf8 = New-Object System.Text.UTF8Encoding $false
 function Set-Status($m) { [System.IO.File]::WriteAllText($status, $m, $utf8) }
 

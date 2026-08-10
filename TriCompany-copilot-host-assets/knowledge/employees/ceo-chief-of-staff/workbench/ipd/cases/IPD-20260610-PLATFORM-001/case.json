@@ -15,7 +15,7 @@
   "createdAt": "2026-06-15T00:00:00+08:00",
   "updatedAt": "2026-06-16T21:37:17+08:00",
   "currentStageKey": "discovery",
-  "currentWorkItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
+  "currentWorkItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
   "intake": {
     "objective": "以 TriAvatar 作为现役 Web 前端入口、TriStaciss 作为后端模型 API 转接平台真源，完成第一版生产级平台交付。",
     "taskDescription": "当前最小 gateway slice 只完成了 TriStaciss 后端 Python 回归，没有覆盖现役前端入口的最小联调。现按 CEO 最新纠偏，继续使用 20260610 platform case，但把范围改为：TriAvatar 作为唯一现役前端入口承接 Web 端功能并保持原有功能可用；TriStaciss 只负责后端 API 平台与 provider 路由，不再使用其内部遗留前端模块。当前需由 CPO 写完整 PRD，再由 CTO / TriDev 围绕模型 API 转接平台首版推进，并从 Discovery 重新走完整个流程。员工身份与签名机制当前仍限定为非链上模拟，不写成 TriChain / TriWeb4 已上线能力。",
@@ -35,7 +35,7 @@
       "explicitOutOfScope": "本轮不使用 TriStaciss 内部遗留前端模块；不涉及正式宿主切换；不涉及真实链上钱包 / NFT；不把单次阶段推进写成全平台已发布"
     },
     "clarificationRequired": true,
-    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
+    "briefPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/intake-brief.json",
     "status": "approved",
     "opportunitySignals": [],
     "businessModelFit": [],
@@ -462,8 +462,8 @@
         "research",
         "baseline"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/outputs/01-discovery.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/work-items/01-discovery.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260610-PLATFORM-001/outputs/01-discovery.json",
       "activatedAt": "2026-06-15T00:00:00+08:00",
       "submittedAt": "2026-06-16T21:37:17+08:00",
       "completedAt": "",

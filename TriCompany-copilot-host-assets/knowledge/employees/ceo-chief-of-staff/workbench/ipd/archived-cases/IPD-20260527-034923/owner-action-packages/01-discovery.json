@@ -11,9 +11,9 @@
   "summary": "ChiefProductOfficer 需要基于 CEO / 总助已整理并获签核的 intake briefing，围绕目标“围绕完整模型 API 平台 MVP 重新走旧 case：由 CPO 先产出完整平台 PRD，再由 CTO / TriDev 推进后端、前端最小 smoke，以及 TriCompany 员工身份 NFT / 钱包签名模拟层的当前阶段方案。”推进 Discovery / 任务澄清（DISCOVERY）并协同 CEOChiefOfStaff、CEO、ChiefMarketingOfficer、ChiefTechnologyOfficer，并在提交后等待总助初签与 CEO 终签。",
   "reason": "Autopilot 不再代表 ChiefProductOfficer 或 ChiefTechnologyOfficer 直接提交阶段输出；当前只生成 owner action package，并等待 acting owner 手动提交真实阶段产物。",
   "caseRef": "workbench/ipd/cases/IPD-20260527-034923/case.json",
-  "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/01-discovery.json",
+  "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/work-items/01-discovery.json",
   "workItemRef": "workbench/ipd/cases/IPD-20260527-034923/work-items/01-discovery.json",
-  "intakeBriefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
+  "intakeBriefPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
   "intakeBriefRef": "workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
   "inputRefs": [
     "workbench/ipd/cases/IPD-20260527-034923/intake-brief.json",
@@ -99,9 +99,9 @@
     "runCurrentStageMatchesTargetStage": true,
     "nextAction": "record-phase-result",
     "executionMode": "auto",
-    "knowledgeBundlePath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
-    "promptContextPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
-    "taskPlanPath": "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json",
+    "knowledgeBundlePath": "D:/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
+    "promptContextPath": "D:/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
+    "taskPlanPath": "D:/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json",
     "ownerAdapters": [
       {
         "role": "ChiefProductOfficer",
@@ -299,9 +299,9 @@
     "evidenceRefs": [
       "docs/runs/ipd-ipd-20260527-034923/workflow-state.json",
       "docs/runs/ipd-ipd-20260527-034923/role-adapters.json",
-      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
-      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
-      "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json"
+      "D:/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/knowledge-bundle.json",
+      "D:/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/host-prompt-context.json",
+      "D:/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/coding-task-plan.json"
     ]
   }
 }

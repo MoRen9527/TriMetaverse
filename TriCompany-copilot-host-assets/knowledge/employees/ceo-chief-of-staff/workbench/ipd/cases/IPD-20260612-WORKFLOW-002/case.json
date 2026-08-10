@@ -13,7 +13,7 @@
   "createdAt": "2026-06-12T12:12:42+08:00",
   "updatedAt": "2026-06-12T12:27:45+08:00",
   "currentStageKey": "sprint-planning",
-  "currentWorkItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/work-items/02-sprint-planning.json",
+  "currentWorkItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/work-items/02-sprint-planning.json",
   "intake": {
     "objective": "以敏捷流程持续优化 IPD 自身，并把结果回灌到 PLATFORM-001 做固定 proving-ground 验证，最终覆盖全部 IPD 阶段。",
     "taskDescription": "本轮不把流程优化和项目验证混在一条 case；WORKFLOW-002 负责收敛 ceo-demand、dispatch、rollback、自测、阶段提交/签核与 proving-ground 回放机制。当前先承接 Gate A，再逐步扩展到 designing、coding、verify-integration、redteam、qa、deployment、assurance、delivery 的全部阶段优化。",
@@ -330,7 +330,7 @@
       }
     ],
     "expectedDelivery": "",
-    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/intake-brief.json",
+    "briefPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/intake-brief.json",
     "packageHash": "0xf1af5788390cfbe8a2f1bbd6675e892dba00af44930d73739138c4deb2d38946",
     "releaseCounter": 1,
     "releaseVersion": "IPD-20260612-WORKFLOW-002-INTAKE-V001",
@@ -460,8 +460,8 @@
       "superDevReferenceStages": [
         "backlog"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/work-items/01-backlog.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/outputs/01-backlog.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/work-items/01-backlog.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/outputs/01-backlog.json",
       "packageHash": "0xf0facf9644e324a4783f472a25042461351e5db5130c36ff4ccdd22b68bb0148",
       "releaseCounter": 1,
       "releaseVersion": "IPD-20260612-WORKFLOW-002-BACKLOG-V001",
@@ -553,8 +553,8 @@
       "superDevReferenceStages": [
         "plan"
       ],
-      "workItemPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/work-items/02-sprint-planning.json",
-      "outputPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/outputs/02-sprint-planning.json",
+      "workItemPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/work-items/02-sprint-planning.json",
+      "outputPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260612-WORKFLOW-002/outputs/02-sprint-planning.json",
       "packageHash": "0x1bc56aca19342eee7fff4959e24f15586cd6fce3e11cb9c8627f79311cd11a19",
       "releaseCounter": 0,
       "releaseVersion": "",

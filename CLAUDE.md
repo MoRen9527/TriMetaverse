@@ -17,7 +17,7 @@ Current phase: v0.9.x dual-track (dev code version → prod installed version mu
 ## Module Workspace Layout
 
 ```
-D:/OneDrive/Code/ai/
+D:/Code/ai/
 ├── TriMetaverse/    ← this repo (build scripts, docs, .github/, .claude/)
 ├── TriLC/           ← Local Controller daemon
 ├── TriPilot/        ← VS Code extension

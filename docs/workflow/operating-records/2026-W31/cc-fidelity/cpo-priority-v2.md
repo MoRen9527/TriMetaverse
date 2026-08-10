@@ -221,7 +221,7 @@
 
 ## 六、决策依据
 
-1. **CTO 真实源码覆盖率审计报告 v2**：`D:\OneDrive\Code\ai\TriMetaverse\docs\workflow\operating-records\2026-W31\cc-fidelity\cto-coverage-audit-v2.md`
+1. **CTO 真实源码覆盖率审计报告 v2**：`D:\Code\ai\TriMetaverse\docs\workflow\operating-records\2026-W31\cc-fidelity\cto-coverage-audit-v2.md`
 2. **CEO 倾向意见**：
    - 普适价值排序：/compact ≈ /init > TodoWrite > TaskCreate/SendMessage
    - 批次质量控制：3-4 项高质量完成 > 5 项半成品

@@ -3,9 +3,9 @@
 # Target = C:\Program Files\TriCade\...\tripilot-chat\media\main.js  (needs admin)
 # Run elevated. Idempotent + self-verifying. Status written to .ime-deploy-status.txt
 $ErrorActionPreference = 'Stop'
-$src = 'D:\OneDrive\Code\ai\TriMetaverse\output\TriMetaverse-Desktop-v0.2.0-windows\extensions\tripilot-chat-0.0.1\extension\media\main.js'
+$src = 'D:\Code\ai\TriMetaverse\output\TriMetaverse-Desktop-v0.2.0-windows\extensions\tripilot-chat-0.0.1\extension\media\main.js'
 $dst = 'C:\Program Files\TriCade\resources\app\extensions\tripilot-chat\media\main.js'
-$status = 'D:\OneDrive\Code\ai\TriMetaverse\.ime-deploy-status.txt'
+$status = 'D:\Code\ai\TriMetaverse\.ime-deploy-status.txt'
 $utf8 = New-Object System.Text.UTF8Encoding $false
 function Set-Status($m) { [System.IO.File]::WriteAllText($status, $m, $utf8) }
 try {

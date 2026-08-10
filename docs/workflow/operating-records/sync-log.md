@@ -11,8 +11,8 @@
 - **触发方**：TriCompany 模块 agent（小赛）
 - **CLI**：`python -m runtime.cognition.source_publish_check --check --sync --scope --format json`
 - **检测范围**：
-  - 源侧：`D:/OneDrive/Code/ai/TriCompany`
-  - 发布侧：`D:/OneDrive/Code/ai/TriMetaverse`
+  - 源侧：`D:/Code/ai/TriCompany`
+  - 发布侧：`D:/Code/ai/TriMetaverse`
   - 纳入目录：`.github/source-agents/registries/`（源侧独有，发布侧不存在时不触发缺失告警）、`docs/`、`.github/`（非员工内容）
   - 排除：员工五件套（soul/memory/colleagues/social）、binding-profiles、live entry
   - 策略：文档类 hash diff / 源码类 git diff + hash / manifest JSON semantic diff / 结构性 CodeGraph
@@ -44,8 +44,8 @@
 - **CLI**：`python -m runtime.cognition.source_publish_check --check --sync --publish-agents --agent-execute --scope --format json`
 - **模式**：EXECUTING（非 dry-run），首次启用 `--agent-execute`
 - **检测范围**：
-  - 源侧：`D:/OneDrive/Code/ai/TriCompany`
-  - 发布侧：`D:/OneDrive/Code/ai/TriMetaverse`
+  - 源侧：`D:/Code/ai/TriCompany`
+  - 发布侧：`D:/Code/ai/TriMetaverse`
   - Agent publish 范围：manifest `liveEntries` 中 `status ∈ {source-published-live-entry, current-copilot-host-live}` 的全部 14 个 entry
   - 纳入：9 个 role-agent（ceo-chief-of-staff, chief-product-officer, chief-technology-officer, chief-marketing-officer, chief-operating-officer, chief-financial-officer, chief-human-resources-officer, chief-administrative-officer, rd-trainer）+ 5 个 registry/governance agent（business-strategy, CompanyGovernanceRegistry, TriMetaverseBusinessStrategyRegistry, TriMetaverseCodeRegistry, TriMetaverseProductRegistry）
   - 排除：员工五件套（soul/memory/colleagues/social）、binding-profiles、live entry 保护路径

@@ -30,15 +30,15 @@
 
 ```powershell
 $ts = Get-Date -Format 'yyyyMMdd-HHmmss'
-Copy-Item "d:/OneDrive/Code/ai/TriPilot/reference" "d:/OneDrive/Code/ai/TriPilot/reference.backup-$ts" -Recurse
+Copy-Item "d:/Code/ai/TriPilot/reference" "d:/Code/ai/TriPilot/reference.backup-$ts" -Recurse
 ```
 
 3) 记录当前状态（留痕）：
 
 ```powershell
 Get-Location
-Test-Path "d:/OneDrive/Code/ai/TriMetaverse"
-Test-Path "d:/OneDrive/Code/ai/TriPilot/reference"
+Test-Path "d:/Code/ai/TriMetaverse"
+Test-Path "d:/Code/ai/TriPilot/reference"
 ```
 
 ---
@@ -46,7 +46,7 @@ Test-Path "d:/OneDrive/Code/ai/TriPilot/reference"
 ## 2. 初始化 TriMetaverse 元仓库
 
 ```powershell
-Set-Location "d:/OneDrive/Code/ai/TriMetaverse"
+Set-Location "d:/Code/ai/TriMetaverse"
 git init
 git branch -M dev
 ```
@@ -64,21 +64,21 @@ git remote add origin <TriMetaverse-remote-url>
 1) 移动目录：
 
 ```powershell
-Move-Item "d:/OneDrive/Code/ai/TriPilot/reference" "d:/OneDrive/Code/ai/TriMetaverse/reference"
+Move-Item "d:/Code/ai/TriPilot/reference" "d:/Code/ai/TriMetaverse/reference"
 ```
 
 2) 验证迁移结果：
 
 ```powershell
-Test-Path "d:/OneDrive/Code/ai/TriMetaverse/reference"
-Test-Path "d:/OneDrive/Code/ai/TriPilot/reference"
-Get-ChildItem "d:/OneDrive/Code/ai/TriMetaverse/reference"
+Test-Path "d:/Code/ai/TriMetaverse/reference"
+Test-Path "d:/Code/ai/TriPilot/reference"
+Get-ChildItem "d:/Code/ai/TriMetaverse/reference"
 ```
 
 3) （可选，过渡兼容）为 TriPilot 建立目录联接：
 
 ```powershell
-cmd /c mklink /J "d:\OneDrive\Code\ai\TriPilot\reference" "d:\OneDrive\Code\ai\TriMetaverse\reference"
+cmd /c mklink /J "d:\Code\ai\TriPilot\reference" "d:\Code\ai\TriMetaverse\reference"
 ```
 
 ---
@@ -90,13 +90,13 @@ cmd /c mklink /J "d:\OneDrive\Code\ai\TriPilot\reference" "d:\OneDrive\Code\ai\T
 1) 先把现有目录临时挪走（避免与 `git submodule add` 冲突）：
 
 ```powershell
-Move-Item "d:/OneDrive/Code/ai/TriMetaverse/reference/vscode-copilot-chat" "d:/OneDrive/Code/ai/TriMetaverse/reference/vscode-copilot-chat.local"
+Move-Item "d:/Code/ai/TriMetaverse/reference/vscode-copilot-chat" "d:/Code/ai/TriMetaverse/reference/vscode-copilot-chat.local"
 ```
 
 2) 添加 submodule：
 
 ```powershell
-Set-Location "d:/OneDrive/Code/ai/TriMetaverse"
+Set-Location "d:/Code/ai/TriMetaverse"
 git submodule add https://github.com/microsoft/vscode-copilot-chat.git reference/vscode-copilot-chat
 ```
 
@@ -105,7 +105,7 @@ git submodule add https://github.com/microsoft/vscode-copilot-chat.git reference
 4) 清理临时目录（确认不需要后）：
 
 ```powershell
-Remove-Item "d:/OneDrive/Code/ai/TriMetaverse/reference/vscode-copilot-chat.local" -Recurse -Force
+Remove-Item "d:/Code/ai/TriMetaverse/reference/vscode-copilot-chat.local" -Recurse -Force
 ```
 
 ---
@@ -125,7 +125,7 @@ Remove-Item "d:/OneDrive/Code/ai/TriMetaverse/reference/vscode-copilot-chat.loca
 ## 6. 首次提交（TriMetaverse）
 
 ```powershell
-Set-Location "d:/OneDrive/Code/ai/TriMetaverse"
+Set-Location "d:/Code/ai/TriMetaverse"
 git add .
 git status
 ```
@@ -148,18 +148,18 @@ git push -u origin dev
 
 ```powershell
 # A. TriMetaverse 已是 git 仓库
-Set-Location "d:/OneDrive/Code/ai/TriMetaverse"
+Set-Location "d:/Code/ai/TriMetaverse"
 git rev-parse --is-inside-work-tree
 
 # B. submodule 状态
 git submodule status
 
 # C. 目录可见性
-Test-Path "d:/OneDrive/Code/ai/TriMetaverse/reference"
-Test-Path "d:/OneDrive/Code/ai/TriMetaverse/reference/vscode-copilot-chat"
+Test-Path "d:/Code/ai/TriMetaverse/reference"
+Test-Path "d:/Code/ai/TriMetaverse/reference/vscode-copilot-chat"
 
 # D. TriPilot 兼容路径（若使用联接）
-Test-Path "d:/OneDrive/Code/ai/TriPilot/reference"
+Test-Path "d:/Code/ai/TriPilot/reference"
 ```
 
 ---
@@ -169,14 +169,14 @@ Test-Path "d:/OneDrive/Code/ai/TriPilot/reference"
 ### 8.1 reference 迁移回滚
 
 ```powershell
-Remove-Item "d:/OneDrive/Code/ai/TriPilot/reference" -Recurse -Force
-Move-Item "d:/OneDrive/Code/ai/TriMetaverse/reference" "d:/OneDrive/Code/ai/TriPilot/reference"
+Remove-Item "d:/Code/ai/TriPilot/reference" -Recurse -Force
+Move-Item "d:/Code/ai/TriMetaverse/reference" "d:/Code/ai/TriPilot/reference"
 ```
 
 ### 8.2 submodule 回滚
 
 ```powershell
-Set-Location "d:/OneDrive/Code/ai/TriMetaverse"
+Set-Location "d:/Code/ai/TriMetaverse"
 git submodule deinit -f reference/vscode-copilot-chat
 git rm -f reference/vscode-copilot-chat
 Remove-Item ".git/modules/reference/vscode-copilot-chat" -Recurse -Force

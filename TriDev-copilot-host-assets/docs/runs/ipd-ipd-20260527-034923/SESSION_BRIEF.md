@@ -7,8 +7,8 @@
 - nextAction: record-phase-result
 - nextOwner: ChiefProductOfficer
 - gateOwner: ChiefProductOfficer
-- knowledgeBundlePath: D:\OneDrive\Code\ai\TriMetaverse\TriDev-copilot-host-assets\docs\runs\ipd-ipd-20260527-034923\knowledge-bundle.json
-- promptContextPath: D:\OneDrive\Code\ai\TriMetaverse\TriDev-copilot-host-assets\docs\runs\ipd-ipd-20260527-034923\host-prompt-context.json
+- knowledgeBundlePath: D:\Code\ai\TriMetaverse\TriDev-copilot-host-assets\docs\runs\ipd-ipd-20260527-034923\knowledge-bundle.json
+- promptContextPath: D:\Code\ai\TriMetaverse\TriDev-copilot-host-assets\docs\runs\ipd-ipd-20260527-034923\host-prompt-context.json
 
 ## Recommended Command
 python -m tridev.cli engine-step --root . --run-id <run-id> --artifact <path> --summary "INTELLIGENCE completed" --step-id <step-id>

@@ -126,7 +126,7 @@ python -m runtime.cognition.rule_injection sync --scope {module}
 
 | 维度 | 实验环境 | 生产环境 |
 |------|---------|---------|
-| **物理位置** | `D:\OneDrive\Code\ai\TriMetaverse\` | `C:\Users\{user}\TriCade\projects\TriMetaverse\` |
+| **物理位置** | `D:\Code\ai\TriMetaverse\` | `C:\Users\{user}\TriCade\projects\TriMetaverse\` |
 | **Git 分支** | `dev` | `main` |
 | **用途** | 研发、实验、规则提炼 | 正式运营、产生运营数据 |
 | **操作方式** | Claude Code + 人工直接操作 | TriLC → TriCode → OpenCode（自开发回路） |

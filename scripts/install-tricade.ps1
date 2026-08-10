@@ -343,7 +343,7 @@ function Install-TriLCService {
     Write-Ok "已配置登录自动启动 (RegRun)"
 
     # 如果 NSSM 可用，注册为 Windows 服务
-    $nssm = "D:\OneDrive\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
+    $nssm = "D:\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
     if (Test-Path $nssm) {
         Write-Info "NSSM 已检测，注册 Windows 服务..."
 

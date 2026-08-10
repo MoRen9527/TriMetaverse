@@ -3,7 +3,7 @@
   "triggerMode": "scheduled",
   "closeoutId": "chief-of-staff-central-registry-closeout",
   "generatedAt": "2026-04-23T11:38:24+08:00",
-  "sourcePath": "D:/OneDrive/Code/ai/TriMetaverse/docs/workflow/handoff-templates/central-registry-closeout.example.json",
+  "sourcePath": "D:/Code/ai/TriMetaverse/docs/workflow/handoff-templates/central-registry-closeout.example.json",
   "objectType": "CENTRAL_REGISTRY_CLOSEOUT",
   "objectId": "CRC-20260423-001",
   "closeoutSubject": "统一 PC 端软件层 / TriLC 协同与 vscodium 上游升级口径",

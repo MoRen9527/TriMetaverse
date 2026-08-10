@@ -8,7 +8,7 @@
 # 维护模式（同版本覆盖）下 Installed=1，CA 不触发。
 #
 # 用法（管理员 PowerShell）：
-#   cd D:\OneDrive\Code\ai\TriMetaverse\scripts
+#   cd D:\Code\ai\TriMetaverse\scripts
 #   .\verify-trilc-service-s0.ps1
 # 可选跳过崩溃恢复测试（省 90s）：
 #   .\verify-trilc-service-s0.ps1 -SkipCrashTest
@@ -23,7 +23,7 @@ $ErrorActionPreference = "Continue"
 # ── 常量 ──
 $ServiceName  = "TriLC"
 $ExpectedPort = 8711
-$MSI          = "D:\OneDrive\Code\ai\vscodium\build\windows\msi\releasedir\TriCade-Bundle-x64-0.2.8.msi"
+$MSI          = "D:\Code\ai\vscodium\build\windows\msi\releasedir\TriCade-Bundle-x64-0.2.8.msi"
 $Stamp        = Get-Date -Format "yyyyMMdd-HHmmss"
 $LogFile      = "$env:TEMP\verify-trilc-s0-$Stamp.log"
 $SysDataDir   = "$env:windir\System32\config\systemprofile\AppData\Local\trilc"

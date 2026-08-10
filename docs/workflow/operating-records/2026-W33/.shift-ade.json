@@ -18,7 +18,7 @@
         "changes": [
           {
             "action": "created",
-            "target": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W33\\OP-202608-W33-001.json",
+            "target": "D:\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W33\\OP-202608-W33-001.json",
             "object_id": "OP-202608-W33-001"
           }
         ],
@@ -39,12 +39,12 @@
         "changes": [
           {
             "action": "retired",
-            "target": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W32\\OP-202608-W32-001.json",
+            "target": "D:\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W32\\OP-202608-W32-001.json",
             "week": "W32"
           },
           {
             "action": "migrated",
-            "target": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W33\\OP-202608-W33-001.json",
+            "target": "D:\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W33\\OP-202608-W33-001.json",
             "trees": 0
           }
         ],
@@ -56,7 +56,7 @@
       "step": "carry_over",
       "result": {
         "status": "written",
-        "target": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W33\\OP-202608-W33-001.unresolved-items.md"
+        "target": "D:\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W33\\OP-202608-W33-001.unresolved-items.md"
       }
     },
     {

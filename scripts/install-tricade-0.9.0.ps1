@@ -4,7 +4,7 @@
 #  Admin PowerShell required
 $ErrorActionPreference = "Stop"
 
-$MSI   = "D:\OneDrive\Code\ai\vscodium\build\windows\msi\releasedir\TriCade-Bundle-x64-0.9.0.msi"
+$MSI   = "D:\Code\ai\vscodium\build\windows\msi\releasedir\TriCade-Bundle-x64-0.9.0.msi"
 $TRILC = "C:\Program Files\TriCade\resources\app\tools\trilc"
 
 $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)

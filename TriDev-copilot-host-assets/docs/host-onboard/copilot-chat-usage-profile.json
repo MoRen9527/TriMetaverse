@@ -25,7 +25,7 @@
     "`TriDev-copilot-host-assets/docs/runs/*/host-prompt-context.json`",
     "`TriDev-copilot-host-assets/docs/runs/*/coding-task-plan.json`"
   ],
-  "supportRoot": "D:\\OneDrive\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets",
+  "supportRoot": "D:\\Code\\ai\\TriMetaverse\\TriDev-copilot-host-assets",
   "firstResponseContract": [
     "明确说明 TriDev pipeline mode 已激活，而不是普通聊天模式。",
     "先读取 AGENTS.md、README.md，以及相关 run 的 knowledge-bundle.json / SESSION_BRIEF.md / workflow-state.json。",

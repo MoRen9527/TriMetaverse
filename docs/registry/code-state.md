@@ -128,7 +128,7 @@
 - **模块**：TriModel + Tristaciss
 - **内容**：`TriModel/src/providers/trimetaverse.ts`（L25-26/L42/L202/L213）及 `src/api/models.ts`（L36-39）仍引用退役模型名 `deepseek-chat` / `deepseek-reasoner`，走 tmv-\* 链经 TriStaciss 路由。
 - **现状**：Turn-3 修复已把非 tmv 路径的 fallback 终点改为 `deepseek-v4-flash`；tmv 链内部命名未动。退役名经自愈别名机制可兜底（400→fallback→200），不致故障，但每次多一跳延迟。
-- **依赖**：需 Tristaciss 仓库（`D:\OneDrive\Code\ai\Tristaciss`）运行态 + 模型名映射审计。
+- **依赖**：需 Tristaciss 仓库（`D:\Code\ai\Tristaciss`）运行态 + 模型名映射审计。
 - **优先级**：P1
 
 ### BACKLOG-002 DeepSeekAnthropicProvider 消息格式转换

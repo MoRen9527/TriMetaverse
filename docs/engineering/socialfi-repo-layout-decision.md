@@ -19,7 +19,7 @@
 
 ## 推荐目录位（示例）
 
-- `d:/OneDrive/Code/ai/socialFi`（与 `TriPilot` 同级）
+- `d:/Code/ai/socialFi`（与 `TriPilot` 同级）
 
 ## 与 TriMC（原 Core-Agent）的边界
 

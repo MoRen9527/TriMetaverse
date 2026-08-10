@@ -3,7 +3,7 @@
 # Right-click -> Run as administrator PowerShell
 $ErrorActionPreference = "Stop"
 
-$MSI   = "D:\OneDrive\Code\ai\vscodium\build\windows\msi\releasedir\TriCade-Bundle-x64-0.3.1.msi"
+$MSI   = "D:\Code\ai\vscodium\build\windows\msi\releasedir\TriCade-Bundle-x64-0.3.1.msi"
 $TRILC = "C:\Program Files\TriCade\resources\app\tools\trilc"
 
 # 0. 

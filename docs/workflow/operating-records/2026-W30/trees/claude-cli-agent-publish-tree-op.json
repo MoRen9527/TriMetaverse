@@ -17,7 +17,7 @@
     ],
     "createdAt": "2026-07-25T09:16:00+08:00",
     "relatedModules": ["TriCompany", "TriMetaverse"],
-    "dependsOn": ["Copilot host 发布体系（16 agent + binding + host-object-manifest）", "Claude CLI 源码参考 D:\\OneDrive\\Code\\ai\\claude-code-2.1.88\\source-repo\\"],
+    "dependsOn": ["Copilot host 发布体系（16 agent + binding + host-object-manifest）", "Claude CLI 源码参考 D:\\Code\\ai\\claude-code-2.1.88\\source-repo\\"],
     "updatedAt": "2026-07-25T09:16:00+08:00",
     "nextActions": [
         { "owner": "ChiefProductOfficer", "action": "产品审计", "status": "done" },

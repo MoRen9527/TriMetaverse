@@ -199,5 +199,5 @@ model: sonnet
 - Copilot agent 定义：`TriMetaverse/.github/agents/*.agent.md`（16 个）
 - 宿主发布流程：`TriCompany/docs/workflow/host-object-publish-flow.md`
 - Hermes 融合设计：`TriCompany/docs/workflow/hermes-copilot-host-migration.md`
-- Claude CLI agent 格式：`D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\components\agents\agentFileUtils.ts`（`formatAgentAsMarkdown` 函数）
-- Claude CLI agent schema：`D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\tools\AgentTool\loadAgentsDir.ts`（`AgentJsonSchema`）
+- Claude CLI agent 格式：`D:\Code\ai\claude-code-2.1.88\source-repo\src\components\agents\agentFileUtils.ts`（`formatAgentAsMarkdown` 函数）
+- Claude CLI agent schema：`D:\Code\ai\claude-code-2.1.88\source-repo\src\tools\AgentTool\loadAgentsDir.ts`（`AgentJsonSchema`）

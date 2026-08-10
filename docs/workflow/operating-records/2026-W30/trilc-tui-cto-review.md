@@ -71,16 +71,16 @@ src/ink/
 
 ### Step 0：先补 reference 入仓（前置条件）
 
-当前 `TriMetaverse/reference/` 下**没有** `claude-code-2.1.88/`。第一步必须将 `D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo/` 的 TUI 相关源码复制到 `TriMetaverse/reference/claude-code-2.1.88/`。
+当前 `TriMetaverse/reference/` 下**没有** `claude-code-2.1.88/`。第一步必须将 `D:\Code\ai\claude-code-2.1.88\source-repo/` 的 TUI 相关源码复制到 `TriMetaverse/reference/claude-code-2.1.88/`。
 
 ```powershell
 # 建议命令
-Copy-Item -Recurse D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\ink `
-    D:\OneDrive\Code\ai\TriMetaverse\reference\claude-code-2.1.88\src\ink
-Copy-Item -Recurse D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\components `
-    D:\OneDrive\Code\ai\TriMetaverse\reference\claude-code-2.1.88\src\components
-Copy-Item D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\src\ink.ts `
-    D:\OneDrive\Code\ai\TriMetaverse\reference\claude-code-2.1.88\src\
+Copy-Item -Recurse D:\Code\ai\claude-code-2.1.88\source-repo\src\ink `
+    D:\Code\ai\TriMetaverse\reference\claude-code-2.1.88\src\ink
+Copy-Item -Recurse D:\Code\ai\claude-code-2.1.88\source-repo\src\components `
+    D:\Code\ai\TriMetaverse\reference\claude-code-2.1.88\src\components
+Copy-Item D:\Code\ai\claude-code-2.1.88\source-repo\src\ink.ts `
+    D:\Code\ai\TriMetaverse\reference\claude-code-2.1.88\src\
 # ... 补充其他文件（见下方 vendor 清单）
 ```
 
@@ -499,6 +499,6 @@ Step 3.4: 更新 TriLC README 和用户文档
 | TriLC↔TriMC 协议 | `docs/engineering/cto-008-M-tri-mc-lc-protocol.md` |
 | PC 端打包方案 | `docs/engineering/cto-008-P-pc-electron-packaging.md` |
 | TriLC package.json | `TriLC/package.json`（Node.js ≥20.0.0） |
-| Claude Code 2.1.88 源码 | `D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\` |
+| Claude Code 2.1.88 源码 | `D:\Code\ai\claude-code-2.1.88\source-repo\` |
 | 模块架构说明 | `docs/三元宇宙架构与模块说明.md` §4（TriLC 角色定义） |
 | CPO+CTO 联审简报 | `docs/workflow/operating-records/2026-W30/trilc-tui-absorb-review-brief.md` |

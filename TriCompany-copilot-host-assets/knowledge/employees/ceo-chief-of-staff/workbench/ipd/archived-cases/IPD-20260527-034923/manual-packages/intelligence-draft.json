@@ -27,8 +27,8 @@
   ],
   "referenceAnchors": {
     "sub2api": {
-      "referenceRoot": "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api",
-      "referenceNote": "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api/TMV-REFERENCE.md",
+      "referenceRoot": "D:/Code/ai/TriMetaverse/reference/sub2api",
+      "referenceNote": "D:/Code/ai/TriMetaverse/reference/sub2api/TMV-REFERENCE.md",
       "pinnedCommit": "e34ad2b19424844cbd1bcffb599e5b0002ad3c50",
       "absorptionChain": [
         "TriMetaverse/reference/sub2api",
@@ -147,16 +147,16 @@
     "需要给出 PRD、项目计划和验收矩阵的真实路径，供 submit 与后续 Designing handoff 使用。"
   ],
   "evidence": [
-    "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api/TMV-REFERENCE.md",
-    "D:/OneDrive/Code/ai/TriMetaverse/reference/sub2api/README.md",
-    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/manual-packages/discovery-package.json",
-    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
-    "D:/OneDrive/Code/ai/TriCompany/docs/product/PROJECT.md",
-    "D:/OneDrive/Code/ai/TriCompany/docs/product/REQUIREMENTS.md",
-    "D:/OneDrive/Code/ai/TriCompany/docs/product/STATE.md",
-    "D:/OneDrive/Code/ai/TriStaciss/CLAUDE.md",
-    "D:/OneDrive/Code/ai/TriAvatar/README.md",
-    "D:/OneDrive/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/workflow-state.json"
+    "D:/Code/ai/TriMetaverse/reference/sub2api/TMV-REFERENCE.md",
+    "D:/Code/ai/TriMetaverse/reference/sub2api/README.md",
+    "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/manual-packages/discovery-package.json",
+    "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260527-034923/outputs/01-discovery.json",
+    "D:/Code/ai/TriCompany/docs/product/PROJECT.md",
+    "D:/Code/ai/TriCompany/docs/product/REQUIREMENTS.md",
+    "D:/Code/ai/TriCompany/docs/product/STATE.md",
+    "D:/Code/ai/TriStaciss/CLAUDE.md",
+    "D:/Code/ai/TriAvatar/README.md",
+    "D:/Code/ai/TriMetaverse/TriDev-copilot-host-assets/docs/runs/ipd-ipd-20260527-034923/workflow-state.json"
   ],
   "workflowRefs": [
     {

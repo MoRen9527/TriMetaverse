@@ -334,7 +334,7 @@
       }
     ],
     "expectedDelivery": "形成公司级 IPD intake briefing 与后续节点放行判断。",
-    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/intake-brief.json",
+    "briefPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/intake-brief.json",
     "createdBy": "CEOChiefOfStaff",
     "createdAt": "2026-06-11T21:34:23+08:00",
     "approvals": [

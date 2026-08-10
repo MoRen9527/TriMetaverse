@@ -7,7 +7,7 @@
 
 ## 1. 概述
 
-当 TriCade 自开发回路验证通过后，当前实验环境（`dev` 分支，物理位于 `D:\OneDrive\Code\ai\TriMetaverse\`）将降级为**纯规则提炼场**。生产环境的代码变更将全部通过自开发回路完成，不再在实验环境直接操作 TriMetaverse 代码。
+当 TriCade 自开发回路验证通过后，当前实验环境（`dev` 分支，物理位于 `D:\Code\ai\TriMetaverse\`）将降级为**纯规则提炼场**。生产环境的代码变更将全部通过自开发回路完成，不再在实验环境直接操作 TriMetaverse 代码。
 
 **核心目标**：
 - 消除双环境并行维护的认知负担
@@ -23,7 +23,7 @@
 | **运营记录** | docs/workflow/operating-records/ W15-Wxx | dev 不再产生运营记录（main 独立序列） |
 | **Agent 上岗** | CPO/CTO 在 dev 上岗试运行 | 仅规则设计验证，不操作生产仓库 |
 | **Git 流向** | dev → main (PR) | dev 不直接 push main；规则通过 rule_injection 注入 |
-| **物理位置** | `D:\OneDrive\Code\ai\TriMetaverse\` | 保留，但代码操作冻结 |
+| **物理位置** | `D:\Code\ai\TriMetaverse\` | 保留，但代码操作冻结 |
 
 ## 3. 降级步骤
 

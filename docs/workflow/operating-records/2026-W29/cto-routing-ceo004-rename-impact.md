@@ -13,8 +13,8 @@
 
 | 仓库 | 路径 | 状态 |
 |---|---|---|
-| **Tride**（旧名） | `D:\OneDrive\Code\ai\Tride` | 大仓，含 opencode-dev/、packages/、sdks/、Nix flakes、turborepo。AGENTS.md 描述为"本地子进程 runtime/CLI + agentic orchestration 底座" |
-| **TriCode**（新名） | `D:\OneDrive\Code\ai\TriCode` | **已独立建仓**，npm 包 `@trimetaverse/tricode`，含 src/test/dist/docs。描述为"Code Tool Glue — unified code execution interface" |
+| **Tride**（旧名） | `D:\Code\ai\Tride` | 大仓，含 opencode-dev/、packages/、sdks/、Nix flakes、turborepo。AGENTS.md 描述为"本地子进程 runtime/CLI + agentic orchestration 底座" |
+| **TriCode**（新名） | `D:\Code\ai\TriCode` | **已独立建仓**，npm 包 `@trimetaverse/tricode`，含 src/test/dist/docs。描述为"Code Tool Glue — unified code execution interface" |
 
 **关键发现**：TriCode 不是空仓，是已经运行的独立模块。重命名不是简单的 `mv Tride TriCode`，而是需要决策：Tride 中的哪些代码属于"代码胶水层"应迁入 TriCode，哪些留在 Tride（或废弃）。
 
@@ -22,8 +22,8 @@
 
 | 仓库 | 路径 | 状态 |
 |---|---|---|
-| **TriDeployment**（旧名） | `D:\OneDrive\Code\ai\TriDeployment` | 完整 TypeScript 项目，npm 包 `trideployment`，含 src/test/docs/tools/profiles。AGENTS.md 描述为"自动部署、镜像族、K8s 发布面、GitOps" |
-| **TriAuto**（新名） | `D:\OneDrive\Code\ai\TriAuto` | **不存在**，需新建 |
+| **TriDeployment**（旧名） | `D:\Code\ai\TriDeployment` | 完整 TypeScript 项目，npm 包 `trideployment`，含 src/test/docs/tools/profiles。AGENTS.md 描述为"自动部署、镜像族、K8s 发布面、GitOps" |
+| **TriAuto**（新名） | `D:\Code\ai\TriAuto` | **不存在**，需新建 |
 
 ---
 

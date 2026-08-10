@@ -27,7 +27,7 @@
 
 ### td-3 残余 Bug：`cli.ts` L445 解构缺失
 
-- **位置**：`D:\OneDrive\Code\ai\TriLC\src\cli.ts` L445
+- **位置**：`D:\Code\ai\TriLC\src\cli.ts` L445
 - **问题**：`parseArgs()` 返回 `{ command, port, serviceName, displayName }`，但只解构了 `{ command, port }`，导致 switch case 中 `install-service` 和 `uninstall-service` 分支引用 `serviceName`/`displayName` 时报 TS2304
 - **影响**：阻塞编译（3 个 TS2304 错误），td-3 修复了 switch case 但遗漏了解构
 - **修复**：`const { command, port, serviceName, displayName } = parseArgs(...)` 

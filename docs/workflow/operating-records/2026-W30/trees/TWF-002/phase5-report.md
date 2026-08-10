@@ -142,7 +142,7 @@ TriLC daemon (agentLoop)
 
 | 属性 | 值 |
 |------|------|
-| 文件路径 | `D:\OneDrive\Code\ai\TriPilot\tripilot-chat-0.0.1.vsix` |
+| 文件路径 | `D:\Code\ai\TriPilot\tripilot-chat-0.0.1.vsix` |
 | 文件大小 | 1.47 MB |
 | 最后修改 | 2026-07-18 22:27 |
 

@@ -54,7 +54,7 @@
       "形成一份可签核的流程优化 intake briefing，并在 CEO / 总助签核后进入 backlog。"
     ],
     "expectedDelivery": "形成公司级 IPD 流程优化 intake briefing 与 backlog 放行判断。",
-    "briefPath": "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/intake-brief.json",
+    "briefPath": "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/intake-brief.json",
     "clarificationSheet": {
       "required": true,
       "status": "ready-for-dispatch",
@@ -275,9 +275,9 @@
   "inputRefs": [
     "workbench/ipd/cases/IPD-20260611-WORKFLOW-001/intake-brief.json",
     "workbench/ipd/cases/IPD-20260611-WORKFLOW-001/case.json",
-    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/outputs/01-backlog.json",
-    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/outputs/02-sprint-planning.json",
-    "D:/OneDrive/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/outputs/03-sprint-execution.json"
+    "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/outputs/01-backlog.json",
+    "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/outputs/02-sprint-planning.json",
+    "D:/Code/ai/TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/ipd/cases/IPD-20260611-WORKFLOW-001/outputs/03-sprint-execution.json"
   ],
   "inputRequirements": [
     "execution package",

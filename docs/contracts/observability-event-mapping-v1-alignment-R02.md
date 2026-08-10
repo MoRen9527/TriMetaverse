@@ -12,8 +12,8 @@
 执行轮次：R02
 对齐对象：
 - 契约文档：`docs/contracts/observability-event-mapping.md`
-- 样例包：`d:/OneDrive/Code/ai/TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)/samples/observability-event-samples.v1.json`
-- 映射实现：`d:/OneDrive/Code/ai/TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)/src/observabilityMapper.js`
+- 样例包：`d:/Code/ai/TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)/samples/observability-event-samples.v1.json`
+- 映射实现：`d:/Code/ai/TriMC (原 TriMC (原 Core-Agent 已废弃) 已废弃)/src/observabilityMapper.js`
 
 ---
 

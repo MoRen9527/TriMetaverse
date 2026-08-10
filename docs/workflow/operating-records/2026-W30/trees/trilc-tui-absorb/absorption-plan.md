@@ -465,5 +465,5 @@ CPO 与 CTO 评审结论完全一致，无分歧。吸收路径可行，技术�
 | BusinessStrategy | `docs/registry/business-strategy-state.md` — TriLC Phase 1 L1 |
 | TriLC 产品状态 | `TriLC/docs/registry/product-state.md` |
 | TriLC daemon API | `TriLC/src/server/app.ts`（CTO-008-M 已实现） |
-| Claude Code 2.1.88 源码 | `D:\OneDrive\Code\ai\claude-code-2.1.88\source-repo\` |
+| Claude Code 2.1.88 源码 | `D:\Code\ai\claude-code-2.1.88\source-repo\` |
 | 树操作计划 | `docs/workflow/operating-records/2026-W30/trees/trilc-tui-absorb/tree-op.json` |
