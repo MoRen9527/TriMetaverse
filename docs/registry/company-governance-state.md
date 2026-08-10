@@ -1,178 +1,159 @@
-# TriMetaverse Company Governance State
+﻿# 公司治理状态
 
 ## 文档同步元信息
 
-- sourceOfTruth: TriMetaverse/docs/registry/company-governance-state.md
+- sourceOfTruth: TriCompany/docs/registry/company-governance-state.md
+- publishedFrom: 当前文件（source）
 - syncMode: source-only
-- lastSyncedAt: 2026-07-23T21:55:00+08:00
+- publishTier: source-only
+- lastSyncedAt: 2026-06-08
 
-## Registry Overview
+## Registry 职责
 
-- 当前文件是 TriMetaverse 中央 `CompanyGovernanceRegistry` 工作层的本地真源，只维护中央治理摘要、owner 分工状态和公司治理登记；它不是 TriCompany 公司级 workflow 书面真源。
+- 本文件是 `CompanyGovernanceRegistry` 的公司治理事实工作层。
+- 本文件记录组织制度、秘书处机制、会议治理、岗位边界、agent 发布纪律和治理文档归属。
+- 经营 owner 为 ChiefAdministrativeOfficer（CAO）；CEOChiefOfStaff 只负责路由、协调、催办、升级和中央收口。
 
-- `CompanyGovernanceRegistry` 是 TriMetaverse 的公司治理资料 registry。
-- 它负责维护组织结构、岗位边界、CHO/CAO 边界、行政制度、秘书处机制、会议文档治理、agent 发布纪律和相关归属状态。
-- 它不是产品事实 registry，也不替代白皮书、公司组织真源或 workflow 文档。
+## 公司级文档规则
 
-## Current Scope
+- 默认文档语言：中文优先。
+- 除非有明确特殊原因，所有公司级、模块级、registry、workflow、产品、技术、执行、培训和经营记录文档应优先使用中文书写。
+- 允许保留英文的情况：
+  1. 专有名词、产品名、模块名、文件名、命令、代码符号、schema 字段、API 字段、错误类型、许可证和上游原文引用。
+  2. 上游开源项目 `vendor/` 或 `reference/` 中保留原貌的文件。
+  3. 对外发布、国际化、双语教程、英文 prompt / agent frontmatter 等确有目标读者或宿主格式要求的内容。
+  4. 需要与第三方工具、协议、SDK、模型平台或文档规范保持英文一致的技术材料。
+- 若同一文档同时面向内部治理和外部英文读者，应至少保证中文主说明完整，英文内容作为对照、引用或附录存在。
 
-- 维护 CAO / 公司治理职责范围与资料归属，并区分 CHO 的人力资源、岗位启用和职责交接治理范围。
-- 维护秘书处机制、会议制度、纪要归档和会后回填规则的当前状态。
-- 维护岗位地图、招聘 / 试岗规则、角色评分卡、组织制度和文档治理规则。
-- 维护各岗位入职前的 JD 基线要求，以及当前哪些岗位已经具备明确岗位职责。
-- 维护 agent discovery 发布纪律：中央级 agent 与模块级 registry agent 必须有明确 canonical source、唯一 discoverable target 和退役记录。
-- 维护跨模块 `模块六层文档协同系统` 的治理基线，明确新模块默认采用 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`、`docs/training/` 六层结构，并允许低成熟模块先以占位文件接入。
-- 维护 `Employee Capability Standard Contract`，定义所有员工的 10 项通用能力条目和管理岗附加项，通过 contract clause 固化宿主迁移保障。
+## 公司级状态术语
 
-## Current Ownership
+- **当前周维护面**：指同一时点唯一允许继续维护 active 未决事项的最新周 `OPERATING_PLAN` 与配套未决事项清单。它是维护入口，不是单条事项状态名。
+- **单条事项状态**：指单个经营事项在当前周维护面中的推进状态。公司级规范默认只使用以下四类：
+  1. `active`：当前正在推进，本周存在明确 owner 动作与预期产物。
+  2. `frozen`：当前暂停推进，但未结项；必须保留 owner、恢复条件或升级路径。
+  3. `stale-review`：因超过约定时间未续推而进入审查池，尚未完成 `active` / `frozen` / `closed` 定性。
+  4. `closed`：事项已结项、取消或已从当前周维护面移出；若仍需追溯，只保留历史事实与 successor ref。
+- 若需要描述 `frozen` 的更细原因，应写成正文补充说明或 `statusDetail`，例如“收口待定”“范围刷新待定”“等待重启裁定”，不额外新增新的公司级主状态名。
+- **模块成熟度状态**：用于描述模块当前生命周期，不与单条事项状态混写。公司级规范默认使用以下标签：
+  1. **现役模块**：已进入当前正式模块面，允许承接当前主线任务与持续治理。
+  2. **占位模块**：已进入架构面，但当前不承诺现役能力，不得虚构实现进度。
+  3. **待初始化模块**：占位模块的具体状态，表示 git / `README.md` / `docs/` 六件套 / CodeGraph 骨架或首个可验证切片尚待补齐。
+  4. **待迁移模块**：历史能力仍在旧模块、旧路径或旧 owner 下，当前目标是向新的 canonical 归属收敛。
+  5. **待归档兼容仓**：仅保留历史兼容、回放或迁移缓冲，不再作为长期独立主模块扩张。
+- 当同一模块既是“占位”又能确定更具体边界时，正文优先使用更具体状态（如“待初始化模块”“待迁移模块”“待归档兼容仓”），必要时再补一句“当前仍属占位面”。
+- 经营记录、会议纪要、秘书处回填和 registry 审稿时，必须先区分“当前周维护面”与“单条事项状态”，不得因为某周是 latest active week 就把其中每条事项都写成 `active`。
 
-- 本节是 TriMetaverse 工程侧实施摘要；registry owner 分工的源侧规则落在 `../../../TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`、`../../../TriCompany/docs/registry/product-state.md`、`../../../TriCompany/docs/registry/code-state.md` 与 `../../../TriCompany/docs/workflow/chief-administrative-officer-role.md`。
-- 秘书处职能归 CAO（Chief Administrative Officer，行政管理总裁）管理。
-- 人力资源、岗位启用、职责交接、handoff checklist 和 completion tracking 归 CHO（Chief Human Resources Officer）侧管理。
-- 模块级 `ProductRegistry` 归 CPO（Chief Product Officer，小乔）管理，负责产品事实、用户价值、PRD 归属、能力边界、成熟度与产品状态维护。
-- 模块级 `CodeRegistry` 归 CTO（Chief Technology Officer，小狄）管理，负责代码事实、CodeGraph 摘要、技术风险、实现边界、仓库健康与工程门禁维护。
-- 中央 `CompanyGovernanceRegistry` 归 CAO 管理，负责公司治理事实、组织制度、岗位边界、秘书处机制和会议治理资料维护。
-- 当前 CAO 已在 Copilot-host live 阶段上岗并接管秘书处日常机制、会议制度、纪要归档和行政治理资料归属；当前 CHO 已在 Copilot-host live 阶段上岗并接管职责交接治理执行责任。
-- `CEOChiefOfStaff` 保留公司级任务分派、协调、催办、升级与收口职责，不再长期代管 CPO / CTO / CAO / CHO 的 owner 职责；涉及产品、技术或治理 registry 的事项应先路由给对应负责人。
-- 真实会议记录仍归入 `docs/workflow/operating-records/`，由秘书处机制负责组织与归档。
+### 单条经营事项标准头
 
-## Current Progress
+- 写入 operating record、会议纪要回填面或治理性 backlog 时，单条经营事项至少应显式标注以下字段，且字段名保持稳定：
+  1. **事项 ID**
+  2. **事项名称**
+  3. **事项简介**
+  4. **事项状态**
+  5. **当前进度**
+- 公司级推荐字段顺序为：
+  1. 事项 ID
+  2. 事项名称
+  3. 事项简介
+  4. 事项状态
+  5. 状态说明（如有）
+  6. 当前进度
+  7. 来源
+  8. 跨周情况 / 预警级别（如有）
+  9. 当前动作
+  10. 下一步
+  11. 恢复条件或截止时间（按需）
+  12. Owner
+- 其中：
+  - **事项简介** 用一句话说明“这件事是什么、为什么还留在当前周维护面”。
+  - **当前进度** 用一句话说明已完成到哪里、当前卡在什么位置。
+  - **事项状态** 只使用 `active` / `frozen` / `stale-review` / `closed` 四个公司级主状态。
+  - **状态说明** 只用于补充 `frozen` 或 `stale-review` 的具体原因，例如“收口待定”“范围刷新待定”“等待重启裁定”。
+- 若使用结构化 JSON，推荐字段映射为：`id`、`title`、`summary`、`status`、`statusDetail`、`currentProgress`、`nextAction`、`resumeCondition`、`owner`。
+- 若使用 Markdown 未决事项清单，默认按上述字段顺序书写，避免每次重新发明标题或遗漏最基本的上下文。
 
-- 已将秘书处机制从 `CEOChiefOfStaff` 的 agent 本体中抽离，落入公司级 workflow 文档。
-- 已确认这类组织与制度资料不应由 `TriMetaverseProductRegistry` 维护。
-- 已建立首版公司治理资料 registry，用于承接秘书处和组织制度相关资料。
-- 已确认后续所有岗位正式入职前必须先具备明确 JD；当前先为 `CEOChiefOfStaff` 补入 JD 风格岗位职责。
-- 已确认 TriCompany 的 docs 六层结构适合作为跨模块 `模块六层文档协同系统` 的默认结构；对新模块和低成熟模块，可先建占位文件，再逐步补齐内容。
-- 已安排 `ChiefProductOfficer` 与 `ChiefTechnologyOfficer` 在当前 Copilot-host live 阶段上岗：两者沿用既有 `TriMetaverse/.github` live entry，并补齐 TriCompany 源侧五件套、role / employee support object payload 与 manifest 登记；该状态不代表 TriMC 正式宿主切换或完整授权矩阵完成。
-- 已确认 `PRD_OWNERSHIP_ROUTING` 的产品归属判断在当前阶段由已上岗的 `ChiefProductOfficer` 主责；`CEOChiefOfStaff` 保留公司级任务分派、催办、升级与收口职责，不再代替产品侧做 PRD 归属判断。
-- 已确认跨岗位 / 跨负责人交接流程的设计与完成度监督由当前已上岗的 `ChiefHumanResourcesOfficer` 主责；`CEOChiefOfStaff` 保留公司级协调、催办、升级与收口职责。
-- 已确认 `ChiefHumanResourcesOfficer` 或其他新增固定员工的启用，应先从 `TriCompany` 源侧岗位 / 员工定义、源侧五件套、support object、shadow gate / validation、live binding、governance 回填这条链路启动，不得绕过源侧流程直接宣称 live 到岗。
-- ⚠️ **上岗审批门（2026-07-14 CEO 确认）**：新员工上岗必须以 CHO（Chief Human Resources Officer）审批为正式上岗前提。完成源侧五件套 + contract + binding profile 后，必须经 CHO 审核通过并签字（在 governance records 中落档），方可激活 live agent.md 入口。任何岗位（含 CEOChiefOfStaff、CPO、CTO）不得绕过 CHO 直接启用新员工。此规则修正此前 TestEngineer 上岗流程（已完成但缺少 CHO 审批节点），后续所有新员工一律补齐。
-- 已按源侧发布链路启用 `ChiefHumanResourcesOfficer`、`ChiefAdministrativeOfficer` 与 `RAndDTrainer` 当前 Copilot-host live 入口；该状态不代表 TriMC 正式宿主切换或完整授权矩阵生产化。
-- 已确认模块级 `BusinessStrategyRegistry`、`ProductRegistry`、`CodeRegistry` 的目标归属是对应模块 `.github/agents/`；迁移时必须先合并中央口径，再移除 `TriMetaverse/.github/agents/` 下同名 discoverable 文件，确保多 root workspace 中单一 discovery。
-- 已从 TriCompany 源侧发布并确认 registry 经营 owner 分工：`ProductRegistry` 由 CPO 小乔管理，`CodeRegistry` 由 CTO 小狄管理，中央 `CompanyGovernanceRegistry` 由 CAO 管理；`CEOChiefOfStaff` 只负责路由、协调、催办、升级与中央收口。
-- 已记录 CEO 正式名称为「磨人」（2026-07-14，CEO 本人确认）。该名称作为公司治理基础事实写入本 registry，5 个 C-level 合同（CAO/CFO/CHRO/CMO/COO）维持「待命名」。源侧 soul.md 名称字段已同步。
-- 已完成 RAndDTrainer（小吴）contract 补齐与 CHO 上岗审批（2026-07-14）：CEO 确认岗位边界为「专属研发的培训人员」。路径治理规则（固定前置核查 item 0 + 工作接手规则）已写入 contract instructions；contract 覆盖专家岗 10 项通用能力条目（9/9 + 路径治理），binding profile（status: generated-staging）与 live entry（TriMetaverse/.github/agents/rd-trainer.agent.md）链路完整。岗位名称：小吴，源侧 employeeId：rd-trainer。
-- 已启动模块 registry agent 迁移 pilot：`TriAvatar`、`TriStaciss`、`TriMC`、`Tride`、`TriPilot`、`TriDeployment`、`TriTest`、`TriLC`、`TriWeb4`、`TriChain`、`TriMobile`、`TriMem`、`TriDev`、`vscodium`、`TriCompany` 的 `BusinessStrategyRegistry`、`ProductRegistry`、`CodeRegistry` 已以各自模块 `.github/agents/` 为 canonical live entry。
-- 已按源侧发布链路启用 `TestEngineer`（小柯）当前 Copilot-host live 入口：源侧五件套（soul/memory/colleagues/social/agent.md）齐备、`TestEngineer.contract.yaml` 落档、live `.agent.md` 生效、TriCompany binding profile 与 host-object-manifest 登记完成。岗位主责：跨模块测试设计、自动化测试执行、测试框架选型与测试门禁维护。该状态不代表 TriMC 正式宿主切换。
-- 已完成全 agent 归属路由阀门治理（2026-07-14）：15 个 `.agent.md` 全部增加 `归属路由阀门` 规则（前置核查 0.5 或等价约束节），明确五大禁止域映射。根因修复：此前 CTO 仅声明"不替代某些岗位"但未列出完整禁止域清单，导致 W28→W29 周度平移时越界执行经营记录。治理防重复机制：`docs/workflow/operating-records/README.md` 周度平移节已标注"本步骤仅限 CEOChiefOfStaff 执行"，形成文档层约束。
-- 已完成宿主对象生成编排层设计与代码注册（2026-07-14，CTO-002 完整交付）：
-  - 设计文档：`TriCompany/docs/engineering/host-object-generation-design.md`（COPY/SYMLINK/GENERATE 三条路径、5-Gate Pipeline、版本策略）和 `TriMC/docs/engineering/employee-orchestration-design.md`（运行时 Agent 派发编排层）
-  - Phase A 代码注册：TestEngineer + FullStackDeveloper `HostObjectSetDefinition` 写入 `runtime/cognition/host_object_generation.py`，`DECLARED_HOST_OBJECT_SETS` 9→11，`EMPLOYEE_GENERATORS` 补全 CMO/COO/CFO 缺口 7→13
-  - CLI 验证：`--employee test-engineer`、`--employee full-stack-developer`、`--employee all` 全部通过；publish 流水线验证通过
-  - BLOCK-003（员工编排层未设计）已解除
-- 已记录经营记录周目录定位硬规则（2026-07-17 CEO 指令）：定位当前 active 周时，必须先列 `operating-records/` 子目录 → 逐目录检查各周 JSON 的 `metadata.latestActiveWeek` 字段 → 仅进入标记为 `true` 的周目录。禁止按日期推算或以惯性跳入任意周目录。此规则同步写入 `CEOChiefOfStaff` 编排文档 §4.10，作为收口审核的硬前置步骤。
-- 已记录发布侧同步后置硬规则（2026-07-17 CEO 指令）：修改 TriCompany 源侧文档后，必须反向搜索 `TriMetaverse/docs/` 下 `sourceOfTruth` 指针指向该文件的所有 `published-summary` / `published-copy` 副本，同轮追平并更新 `lastSyncedAt`。禁止以「文档真源统一在 TriCompany/docs/」为由跳过——该口径仅覆盖 `copilot-host-assets` 路径。此规则同步写入 `CEOChiefOfStaff` 编排文档 §4.11。
-- 已记录跨 Agent 路由包发送标准操作（2026-07-17 CEO 指令"收口成固定操作"）：CEOChiefOfStaff 向其他 Agent 发送正式 `ENGINEERING_TASK` 时，必须走三件套——路由包（`ET-*.json`）+ 收件箱（`inbox_entries`）+ 发送摘要（`📨` 块格式）。写入 `CEOChiefOfStaff` 编排文档 §4.12。
+### 单条经营事项 ID 前缀标准
 
-## Employee Capability Standard Contract
+- 下列前缀只用于**单条经营事项 ID**，不替代 `OPERATING_PLAN`、`BOARD_DIRECTIVE`、`PRD_OWNERSHIP_ROUTING` 等对象级编号。
+- 公司级默认前缀如下：
+  1. `ITEM-YYYYMMDD-序号`：当前周期新建的一般事项，默认前缀。
+  2. `CARRY-YYYYMMDD-序号`：从前一周、前一月或更早周期平移过来的跨周续记项。
+  3. `BLOCK-YYYYMMDD-序号`：明确阻塞主线推进、需要 owner 解阻的阻塞事项。
+  4. `RISK-YYYYMMDD-序号`：需持续观察、可能升级但尚未进入正式升级链的风险事项。
+  5. `ESC-YYYYMMDD-序号`：已经进入升级链、等待 CEO 或对应 owner 裁定的升级事项。
+- **前缀表达的是事项来源或治理类型，不等于事项状态。**
+  例如：`CARRY-*` 可以是 `active`，也可以是 `frozen` 或 `stale-review`；不能因为它是 `CARRY` 就默认等于 `frozen`。
+- 若同一事项同时满足多个语义，优先顺序为：`ESC` > `BLOCK` > `RISK` > `CARRY` > `ITEM`；同一事项 ID 不叠加多个前缀。
+- 当前经营记录若只是一般跨周事项，默认继续使用 `CARRY-*`；不要为了细分原因把前缀无限扩张。
 
-### Purpose
+### IPD case ID 治理标准
 
-本节定义 TriCompany 所有员工的通用能力条目合约（Engineer Capability Contract），作为 source-agents 五件套的基准约束。每个员工岗位的 source-agent 必须覆盖以下 10 项能力条目，管理岗另加 `中央收口路由` 和 `决策三分法`。
+- `IPD case` 不沿用一般事项前缀，而是使用独立前缀：`IPD-*`。
+- 自 2026-06-11 起，公司级治理要求 `IPD case` 统一采用 **`IPD-YYYYMMDD-文字简称-序号`**；不再新建 `IPD-001`、`IPD-002` 这类纯序号对象。
+- `文字简称` 用于表达当前事项的最小可读主题，优先使用全大写 ASCII 短词；`序号` 固定三位，在同日同简称下从 `001` 开始递增。
+- canonical 示例：`IPD-20260611-PLATFORM-001`。
+- 一条 case 只允许存在一个 live canonical id；`case.json`、`intake-brief.json`、阶段 work item、reference 目录和会议纪要必须共用同一 id。
+- 已存在的 legacy case 不强制重写历史档案，但新建 case、重放 case 或重新进入 live 流程时，应优先迁到日期前置命名。
 
-### 通用能力条目（10+2）
+## 治理说明
 
-| # | 能力项 | 适用 | 演化说明 |
-|---|---|---|---|
-| 1 | **认知分层约束** | 全员 | soul/memory/colleagues/social 四层契约；统一格式，各岗不混写 |
-| 2 | **使命** | 全员 | 工程岗写项目交付使命；产品岗写产品交付使命；技术岗写技术交付使命 |
-| 3 | **核心职责** | 全员 | 5-8 条可执行职责；禁止抽象空话 |
-| 4 | **当前工作落点** | 全员 | 文档落点路径清单；不同 agent 各自落点不同但格式统一 |
-| 5 | **真源系统** | 全员 | 项目真源→产品真源→技术真源；说明真源顺序和交叉引用规则 |
-| 6 | **固定前置核查** | 全员 | 含工作路径核查 item 0；核查顺序 5-6 条 |
-| 7 | **工作接手规则** | 全员 | 路径核查、修正流程、已知同级模块路径列表、版本差标注 |
-| 8 | **行为护栏** | 全员 | 禁止退化成客服；禁止编造未验证事实；禁止在错误路径叠加工作 |
-| 9 | **默认输出结构** | 全员 | 3-5 个输出节；管理岗含分诊/路由/收口输出骨架 |
-| 10 | **决策三分法** | 管理岗 | APPROVE / FREEZE / ESCALATE + 各条件定义 |
-| 11 | **中央收口路由** | 管理岗 | 收口 owner 分工、路由规则、升级链路 |
+- 新增文档、重构文档或吸收上游资料时，先判断该文件是否属于 TriMetaverse / TriCompany 自有资料；自有资料默认中文化。
+- 开源吸收链中的 `reference/` 与 `vendor/` 文件默认保持上游原貌；真正进入模块自研文档、registry 或 workflow 后，应转换成中文优先口径。
+- Registry 摘要不得只保留英文标题而缺少中文解释，避免新人 agent 和岗位对象误读边界。
 
-### 管理岗 vs 专家岗
+## vendor 与 .gitignore 治理规则
 
-| 差异点 | 管理岗（CEOChiefOfStaff/CPO/CTO/CAO/CHO/CFO/CMO/COO） | 专家岗（RAndDTrainer） |
-|---|---|---|
-| 决策权限 | 有决策三分法 | 无独立决策权限，交管理岗裁量 |
-| 中央收口 | 有中央收口路由分工 | 无收口 owner 职责 |
-| 输出结构 | 含分诊/路由/收口骨架 | 教学协议/技能技艺 |
-| 行为护栏 | 含决策边界和升级条件 | 含培训质量护栏 |
+- 对存在治理中 `vendor/` 冻结基线的源侧模块，`vendor/` 默认进入模块自己的 `.gitignore`，用于隔离日常本地噪音和主 `CodeGraph` 查询视图。
+- 这条规则**不改变** `vendor/` 作为冻结基线、需要被版本控制和审计的事实；已有受治理的 vendor 文件继续受 git 跟踪，后续有意升级 vendor 快照时，由对应 owner 显式纳入提交。
+- `vendor/` 默认不进入模块主 `CodeGraph`；只有在开源吸收、差异拆解、adapter 映射或 schema 对照等专项任务下，才临时纳入 vendor 视图。
+- `TriCompany-copilot-host-assets/vendor/` 不属于模块真源 `vendor/`；它只允许保留从源侧发布过来的冻结 `reference` 副本或当前宿主验证辅助代码，不得演化成 support 侧独立研发面。
+- 新增正式模块时，`Discovery` 阶段的 `NewModuleBaselineRelease` 必须带上 `vendor-extraction-profile`，最少包含 source、version anchor、subpath 映射、patch 策略、回滚点与 license / 审计说明。
 
-### 能力验证 Check
+## Git Health 与本地提交治理规则
 
-使用以下 checklist 核验任一员工 source-agent 是否覆盖完整：
+- `Registry` 负责维护各模块的 `Git Health` 事实：包括 dirty worktree 基线、已知未提交切片、风险说明和升级提示。
+- `Registry` **不直接代替 owner 做本地提交**；本地提交责任仍归对应模块 owner 或当前实际开发 owner。
+- 活跃模块应在以下任一时点做一次 `Git Health` 收口：形成稳定切片后、切换阶段前、交接 handoff 前，或跨过一个会议周期仍持续 dirty 时。
+- 若本地脏改动需要继续保留，必须至少说明：原因、风险、是否已有可提交切片、预计收口时间。
+- 跨过一个会议周期仍未收口的本地脏改动，应进入 operating record 的 `blockedItems` 或 `nextActions`，由秘书处和总助催办、由 CTO / owner 收口。
 
-- [ ] 认知分层约束：四层文件存在（soul/memory/colleagues/social）
-- [ ] 使命：可执行、可验证、不超过 4 条
-- [ ] 核心职责：5-8 条具体职责
-- [ ] 当前工作落点：路径清单，含待初始化标记
-- [ ] 真源系统：真源顺序 + 交叉引用
-- [ ] 固定前置核查：含 item 0 工作路径核查
-- [ ] 工作接手规则：含路径修正流程 + 已知同级模块路径
-- [ ] 行为护栏：含禁止退化条款 + 路径核查条款
-- [ ] 默认输出结构：3-5 个输出节
-- [ ] 决策三分法（管理岗）：APPROVE/FREEZE/ESCALATE 条件定义
-- [ ] 中央收口路由（管理岗）：收口 owner + 路由 + 升级链路
+## 模块标配
 
-### Current Coverage
+- 架构表中的模块一旦被写成正式模块面，默认必须具备以下标配：
+  1. 独立 git 仓。
+  2. `README.md`。
+  3. `docs/` 六件套文档基线：`product`、`engineering`、`execution`、`registry`、`workflow`、`training`。
+  4. 根级 `.gitignore`，至少排除 `.codegraph/`、`.cursor/`、依赖目录、构建产物、环境文件和受治理 `vendor/` 噪音。
+  5. 本地 `CodeGraph` 初始化与由对应 `CodeRegistry` 维护的摘要。
+- 这条规则同样适用于占位 / 待初始化模块：即使模块暂时还没有现役源码，也应先补齐 git、README、docs 六件套和 CodeGraph 骨架，避免继续把模块资料散落在聊天、临时目录或中央仓。
+- `CodeGraph` 是本地辅助索引，不替代源码、代码文档、`code-state.md` 或人工收口；允许只把摘要、排除规则、扫描时间和版本锚点写回 registry，不提交 `.codegraph/` 与 `.cursor/` 缓存。
+- 若某模块缺失上述标配，应由 CTO 在发现当轮或下一轮优先补齐，再继续把它写成正式模块。
+- 既有正式模块参与新任务时，`Discovery` 阶段也必须先形成 `ModuleTargetingReport`，并由 `TriDev` 完成 `ModuleReadinessInit`（标配审计与缺口 init）后，再进入后续开发阶段。
+- 正式新模块必须走 `NewModuleBaselineRelease` 单项发布：在 `Discovery` 阶段先形成 `candidate`，完成 CPO/CTO/CAO 与总助/CEO 签核后升级 `approved`，再由 `TriDev init` 执行 `init` 落地模块骨架。
+- `Registry` 在该流程里只负责事实登记与风险提示，不代替 owner 做模块初始化提交。
 
-| 员工 | 能力覆盖率 | 缺口 |
-|---|---|---|
-| CEOChiefOfStaff | 100% (11/11) | — |
-| CPO | 100% (11/11) | — |
-| CTO | 100% (11/11) | — |
-| CAO | 100% (11/11) | — |
-| CHO | 100% (11/11) | — |
-| CFO | 100% (11/11) | — |
-| CMO | 100% (11/11) | — |
-| COO | 100% (11/11) | — |
-| RAndDTrainer | 100% (9/9 专家岗) | — |
-| TestEngineer | 100% (9/9 专家岗) | — |
-| FullStackDeveloper | 100% (9/9 专家岗) | — |
+## 员工工具权限默认策略
 
-### 宿主迁移保障
+- 赛博公司全员上岗默认持有 `execute`（bash/shell 执行）权限。
+- `execute` 在 Agent 契约中统一标记为 `risk_level: high`、`requires_approval: true`。
+- 后续由公司按岗位、模块和运行面需要，逐岗制定细则：决定是否禁用、缩窄 scope 或追加审批链条；细则未出前不收回默认权限。
+- 当前已落地的四份人格 agent 合同（CEOChiefOfStaff、ChiefProductOfficer、ChiefTechnologyOfficer、RAndDTrainer）均已完成 `execute` 工具登记；未来新增固定员工上岗时同步补齐。
+- 本策略的细则制定与维护由 CAO 主责，CHO 配合岗位启用侧执行。
 
-- 能力条目合约独立于宿主特定格式（`.agent.md`、`.prompt.md`），在宿主切换时由 contract resolver 解析重建。
-- 路径治理规则（固定前置核查 item 0 + 工作接手规则）通过 contract clause 固化，确保跨宿主迁移后不丢失。
-- 四层记忆文件（soul/memory/colleagues/social）通过 source-agents 五件套携带，不依赖宿主运行时。
+## CTO 技术交付委托规则
 
-- CAO / 行政管理侧已进入当前 Copilot-host live 阶段，后续还需要继续补齐秘书处、会议治理、行政流程和治理文档归属模板。
-- CHO / 人力资源侧已进入当前 Copilot-host live 阶段并接管职责交接和 staffing governance 执行责任，后续还需要补齐更多交接样例、验收记录和授权矩阵细化。
-- 迁移后中央 discovery 仅保留 `CompanyGovernanceRegistry` 与 `TriMetaverse` registry 三件套；`TriCompany/.github/source-agents/` 仍是源侧发布与员工五件套区域，`TriCompany/.github/agents/` 可作为 TriCompany 模块 live discovery 存在，但不得混放 source-agent 草稿或未发布五件套。
-- 当前秘书处日常机制与行政治理资料归属已移交 CAO；当前交接治理责任已移交 CHO。
-- CPO / CTO 已完成当前 live 上岗绑定，但首轮产品 / 技术接管判断、授权矩阵细化和岗位运行节律仍需继续补证。
+- 生效日期：2026-07-16，CEO 口头指令，记录于 TriOPC Phase C 启动前。
+- 标准技术交付流水线：**小全（FullStackDeveloper）编码 → 小柯（TestEngineer）测试 → 小狄（CTO）审核收口**。
+- CTO 职责：审定技术方案（DESIGN.md）、审查代码变更（PR review）、定义质量门禁、最终签核交付。
+- FullStackDeveloper 职责：在 CTO 审定的技术方案内执行编码实现，决策权限限于编码方案；架构决策、产品范围或测试判定必须升级至 CTO。
+- TestEngineer 职责：在 CTO 定义的工程门禁内执行测试验证，决策权限限于测试用例设计和测试报告格式；质量门禁判定、阻塞性缺陷或发布 readiness 判定必须升级至 CTO。
+- 该流水线适用于吸收管道（Phase 0–C 及后续阶段）的代码交付；IPD 管道的交付规则由 IPD case 独立定义。
+- 规则维护：CTO（技术交付 owner），变更需 CEO 或 CAO 确认。
 
-## Agent Contract-Based Migration Approach
+## 来源
 
-### Permanent Governance Record
-
-- 为应对宿主切换（如 Copilot Chat → Claude Code → TriMC 正式宿主）时 agent 能力可能丢失的风险，采用 **agent contract-based migration approach**：
-  - 所有 Role Agent 的核心能力、核查规则、行为护栏、决策权限均以 `<AgentID>.contract.yaml` 形式固化在 `TriCompany/docs/registry/`。
-  - Contract 文件采用双轨消费：copilot-host 侧加载验证语义一致性；TriMC v0.2.0 contract resolver 解析注册。
-  - 宿主迁移时，新宿主解析 contract 的 `instructions`、`decision_rights`、`tools`、`io_contract` 即可重建 agent 能力骨架，不再依赖 `.agent.md` 或 `.prompt.md` 这类宿主特定格式。
-- 路径治理规则（固定前置核查 item 0 与交接路径治理）已写入所有核心岗位的 contract，确保跨宿主迁移后路径核查能力不丢失。
-
-### Contract Files
-
-| Contract | Agent | 路径治理 |
-|---|---|---|
-| `TriCompany/docs/registry/CEOChiefOfStaff.contract.yaml` | 小贾 (CEO总助) | ✅ 固定前置核查 item 0 + 交接路径治理 |
-| `TriCompany/docs/registry/ChiefProductOfficer.contract.yaml` | 小乔 (CPO) | ✅ 固定前置核查 item 0 + 行为护栏 |
-| `TriCompany/docs/registry/ChiefTechnologyOfficer.contract.yaml` | 小狄 (CTO) | ✅ 固定前置核查 item 0 + 行为护栏 |
-| `TriCompany/docs/registry/RAndDTrainer.contract.yaml` | 小吴（专属研发培训师） | ✅ 固定前置核查 item 0 + 工作接手规则 |
-| `TriCompany/docs/registry/TestEngineer.contract.yaml` | 小柯 (TestEngineer) | ✅ 固定前置核查 item 0 + 行为护栏 |
-| `TriCompany/docs/registry/FullStackDeveloper.contract.yaml` | 小全 (FullStackDeveloper) | ✅ 固定前置核查 item 0 + 行为护栏 |
-
-### Secretariat Cross-Reference
-
-- 秘书处文档 `TriCompany/docs/workflow/cyber-company-secretariat.md` 已记录 agent contract 机制在 `CompanyGovernanceRegistry` 中的永久落点。
-- 涉及岗位交接、宿主迁移或 agent 能力审计时，先查 `CompanyGovernanceRegistry` 的 `Agent Contract-Based Migration Approach` 节。
-
-## Sources
-
-- `../../tricompany.md`
-- `../workflow/tricompany-agent-roles.md`
-- `../workflow/tricompany-secretariat.md`
-- `../workflow/operating-records/README.md`
-- `../../../TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`
-- `../../../TriCompany/docs/workflow/chief-administrative-officer-role.md`
-- `../../../TriCompany/docs/registry/product-state.md`
-- `../../../TriCompany/docs/registry/code-state.md`
+- `../workflow/cyber-company-secretariat.md`
+- `README.md`
+- `../../../TriMetaverse/docs/workflow/operating-records/README.md`
+- `../../../TriMetaverse/docs/三元宇宙架构与模块说明.md`
+- `../../source-agents/registries/CompanyGovernanceRegistry.agent.md`

@@ -1,0 +1,66 @@
+{
+    "nodes": [
+        {
+            "nodeId": "trilc-tui-polish-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "T1 收口确认：MVP 五组件实现完成（14 新文件 + 85 vendor ink 吸收），8 项验证 CONDITIONAL_PASS。路由 CTO 设计 T2 体验打磨方案 → FullStack 实现 → TestEngineer 验证。"
+        },
+        {
+            "nodeId": "trilc-tui-polish-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "T2 技术设计：① thinking 两阶段状态模型（idle→waitingForFirstToken→streaming）② 工具调用一行展示（daemon 已发送完整 tool_calls 帧，直接消费 + 启发式完成推断）③ Ctrl+C 双段 SIGINT 状态机（自建 handler，1s 重置窗口）。产出 trilc-tui-polish-design.md（428 行）。",
+            "handoffAt": "2026-07-24T18:37:00+08:00",
+            "next_agent": "FullStackDeveloper"
+        },
+        {
+            "nodeId": "trilc-tui-polish-2",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "T2 体验实现：① Spinner 组件增强（thinking 动画 + SSE pending 状态）② 工具调用一行文本渲染 ③ Ctrl+C 双段行为 ④ 欢迎消息优化。代码写入 TriLC/src/tui/，不碰 vendor/。",
+            "dependsOn": ["trilc-tui-polish-1"],
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "trilc-tui-polish-3",
+            "agent": "TestEngineer",
+            "status": "done",
+            "action": "T2 验证：6 项全部 PASS，零缺陷。① tsc 零错 ② thinking 四态完整 ③ tool_calls 直接消费+三态渲染 ④ Ctrl+C 双段正确 ⑤ 7 文件变更齐全 ⑥ 6 项不变确认。综合评估 PASS。产出 test-report-t2.md。",
+            "dependsOn": ["trilc-tui-polish-2"],
+            "delivery": "TriLC/src/tui/test-report-t2.md"
+        }
+    ],
+    "status": "done",
+    "relatedDocuments": [
+        {
+            "note": "吸收方案（T2 体验打磨范围）",
+            "source": "docs/workflow/operating-records/2026-W30/trees/trilc-tui-absorb/absorption-plan.md",
+            "kind": "design"
+        },
+        {
+            "note": "T1 测试报告",
+            "source": "TriLC/src/tui/test-report.md",
+            "kind": "test-report"
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "parentTree": "trilc-tui-impl",
+    "objectId": "TREE-OP-trilc-tui-polish",
+    "title": "TriLC CLI TUI T2 体验打磨：thinking动画+工具调用+Ctrl+C",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "trilc-tui-polish",
+    "status": "active",
+    "priority": "P1",
+    "summary": "T1 MVP 完成后，按吸收方案 T2 阶段打磨终端体验：thinking 动画、工具调用一行展示、Ctrl+C 双段退出。预期 2-3h。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-07-24T18:40:00+08:00",
+        "version": "0.2.0",
+        "note": "v0.2.0: polish-0 完成收口确认；polish-1 CTO 设计已路由，状态 in_progress"
+    },
+    "createdAt": "2026-07-24T18:35:00+08:00",
+    "relatedModules": ["TriLC", "TriCade"],
+    "updatedAt": "2026-07-24T18:40:00+08:00"
+}

@@ -1,0 +1,27 @@
+{
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "objectId": "TREE-OP-CCAP-001",
+    "title": "Claude CLI Agent 发布管道 — CPO+CTO 联合方案审计",
+    "treeId": "claude-cli-agent-publish",
+    "ownerRole": "CEOChiefOfStaff",
+    "status": "done",
+    "priority": "high",
+    "summary": "参照 Copilot agent 发布体系（.github/agents/ → TriCompany-copilot-host-assets/），构建 Claude CLI 平行发布管道。CPO 产品审计 + CTO 技术审计 → 联合输出架构/格式转换/工具映射/实施路线图。",
+    "metadata": { "updatedBy": "CEOChiefOfStaff", "lastUpdated": "2026-07-25T09:16:00+08:00", "version": "0.1.0" },
+    "nodes": [
+        { "id": "CCAP-0", "parent_node_id": null, "agent": "CEOChiefOfStaff", "action": "根节点：发起联审，核查 Copilot 体系 + Claude CLI 源码 agent 格式，分发 CPO+CTO 议题", "status": "done", "delivery": "前置核查完成，见本文", "next_agent": "ChiefProductOfficer", "seq": 0 },
+        { "id": "CCAP-1", "parent_node_id": "CCAP-0", "agent": "ChiefProductOfficer", "action": "产品审计：能力对标 / 发布频率 / 五件套策略", "status": "done", "delivery": "见 claude-cli-agent-publish-cpo-audit.md", "next_agent": "ChiefTechnologyOfficer", "seq": 1 },
+        { "id": "CCAP-2", "parent_node_id": "CCAP-0", "agent": "ChiefTechnologyOfficer", "action": "技术审计：格式确认 / 工具映射 / 自动化方案 / 资产格式", "status": "done", "delivery": "见 claude-cli-agent-publish-cto-audit.md", "next_agent": "CEOChiefOfStaff", "seq": 2 },
+        { "id": "CCAP-3", "parent_node_id": "CCAP-0", "agent": "CEOChiefOfStaff", "action": "联合收口：架构 / 目录 / 转换规范 / 映射表 / 路线图", "status": "done", "delivery": "见 claude-cli-agent-publish-joint-output.md（v0.1，从 .agent.md 转换）。v0.2 修正版：CEO 发现共享 Contract 层存在，改从 contract.yaml → Claude 格式，见 claude-cli-agent-publish-joint-output-v2.md。", "next_agent": null, "seq": 3 }
+    ],
+    "createdAt": "2026-07-25T09:16:00+08:00",
+    "relatedModules": ["TriCompany", "TriMetaverse"],
+    "dependsOn": ["Copilot host 发布体系（16 agent + binding + host-object-manifest）", "Claude CLI 源码参考 D:\\OneDrive\\Code\\ai\\claude-code-2.1.88\\source-repo\\"],
+    "updatedAt": "2026-07-25T09:16:00+08:00",
+    "nextActions": [
+        { "owner": "ChiefProductOfficer", "action": "产品审计", "status": "done" },
+        { "owner": "ChiefTechnologyOfficer", "action": "技术审计", "status": "done" },
+        { "owner": "CEOChiefOfStaff", "action": "联合收口整合", "status": "in_progress" }
+    ]
+}

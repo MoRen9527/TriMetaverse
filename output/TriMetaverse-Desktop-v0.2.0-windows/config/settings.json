@@ -1,0 +1,12 @@
+{
+	"tripilot.chatProvider": "models-direct",
+	"tripilot.modelsDirect.baseUrl": "http://127.0.0.1:8711",
+	"tripilot.modelsDirect.defaultModel": "deepseek-v4-pro",
+	"tripilot.triLC.autoStart": true,
+	"tripilot.triLC.port": 8711,
+	"tripilot.modelSettings.windows.mode": "compact",
+	"window.title": "TriMetaverse Desktop",
+	"workbench.startupEditor": "none",
+	"extensions.autoUpdate": false,
+	"update.mode": "none"
+}

@@ -69,14 +69,14 @@
     "title": "CPO+CTO: TriModel Phase 2 — 8 项 CONDITIONAL_PASS 实施",
     "ownerRole": "CEOChiefOfStaff",
     "treeId": "cpo-trimodel-phase2",
-    "status": "active",
+    "status": "closed",
     "priority": "P1",
     "summary": "来自 cpo-trimodel-deployment CTO 终裁。8 项 CONDITIONAL_PASS → Phase 2 实施：Provider 多路支持、流式 SSE 传输、CI/CD pipeline、Key S2 AES-256-GCM 加密、fallback 链修复、ESLint。Phase 1 已闭合（88/88 验证 80 PASS + 8 CONDITIONAL_PASS，零 BLOCKER）。建议 kickoff W31-W32。",
     "metadata": {
-        "updatedBy": "TestEngineer",
-        "lastUpdated": "2026-07-22T19:43:44+08:00",
-        "version": "0.4.0",
-        "note": "v0.4.0: TestEngineer 全量回归验证完成 — 104/104 测试 PASS，8 项 CONDITIONAL_PASS 闭合（6 CLOSED + 1 DEFERRED + 1 合并），Lint 0 err / Build PASS，整体建议放行。产出 phase2-closeout-report.md。流转 CTO 终裁（cpo-trimodel-phase2-5）。"
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-07-24T03:55:00+08:00",
+        "version": "0.5.0",
+        "note": "v0.5.0: Phase B closeout — 13/13 source_publish_check tests PASS, Phase C 启动。Tree closed. 全节点 done (0→4)，TestEngineer 104/104 PASS。"
     },
     "createdAt": "2026-07-22T18:09:00+08:00",
     "relatedModules": ["TriModel", "TriLC", "TriPilot", "TriMC"],

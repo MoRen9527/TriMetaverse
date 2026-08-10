@@ -83,4 +83,4 @@ Copilot CLI 默认 agent 与 Trees 协议协同，实现跨岗位自动编排。
    - 如果 `next_agent` 已指定 → 调用该 agent（不创建新节点——节点由总助预建）
    - 如果 `next_agent` 指定但对应节点不存在 → 报告"待总助创建节点: `<tree-id> → <next_agent>`"，不静默
    - 如果 `next_agent = NULL` → 报告"需路由评估"
-6. **引用协议**：状态枚举定义见 `ceo-chief-of-staff.instructions.md`；完整协议见 `docs/workflow/dynamic-task-tree-protocol.md`
+6. **引用协议**：状态枚举定义见 `ceo-chief-of-staff.instructions.md`；TriMetaverse 项目摘要见 `docs/workflow/dynamic-task-tree-protocol.md`，公司级完整协议见 `../TriCompany/docs/workflow/dynamic-task-tree-protocol.md`

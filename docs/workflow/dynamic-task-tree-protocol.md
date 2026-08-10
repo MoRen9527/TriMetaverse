@@ -1,122 +1,97 @@
-# Dynamic Task Tree Protocol
+# 动态任务树协议：TriMetaverse 项目摘要
 
-> 版本：v0.3.1 | 建立：2026-07-17 | 修订：2026-07-21
-> 关联树：TWF-001 / gov-tree-protocol-v2
-> 
-> **v0.3 变更摘要**：① 状态枚举统一（移除 closed，active→in_progress）② 新增总助路由兜底规则 ③ 新增执行节点尽力判断义务
+版本：V0.4-summary
+日期：2026-08-07
+状态：TriCompany 公司协议的 TriMetaverse 项目实例摘要
 
-## 角色
+## 文档同步元信息
 
-| 角色 | 谁 | 职责 |
-|------|-----|------|
-| 编排层 | CEO（磨人） | 对接总助（小贾） agent，执行需要CEO审核和决策的事项，提醒小贾需要涉及的岗位及事项。 |
-| 机器编排层 | AGENTS.md（Copilot CLI 默认 agent） | 读树、检测 `in_progress` 节点、自动调用 employee agent、流转节点状态。不创建节点，不做收口检查 |
-| 主 agent | 总助（小贾） | 持树、创建节点、记录状态、NULL 路由评估、收口检查、跨周迁移、ESCALATE 时延伸分支 |
-| 执行节点 | CPO/CTO/CHO/... | 接收路由包，完成工作，建议下一节点 |
+- sourceOfTruth: TriCompany/docs/workflow/dynamic-task-tree-protocol.md
+- syncMode: published-summary
+- sourceRevision: sha256:9a9b8ffe5b80f51cc32ca2e7c99397cb7bf943b3c771bf92aff3a2656af922cd
+- lastSyncedAt: 2026-08-07
 
-## 树结构
+## 1. 项目定位
 
-每棵任务树对应一个 OP nextAction，根节点为总助，叶节点为具体执行人。
+动态任务树属于 TriCompany 公司维度，用于跨项目复用员工路由、节点流转、升级与收口协议。完整协议由 [TriCompany 真源](../../../TriCompany/docs/workflow/dynamic-task-tree-protocol.md) 维护。
 
-可以分成协调层（控制面）和业务层，业务层是节点任务树，协调层管理任务的动态，如流转、升级、查询、讨论等。例如：当前节点是小全在工作，下一节点他不确定流转给谁，升级给CTO决策，CTO发现这事需要总助、CPO参与讨论决策，总助发现讨论结果需要CEO裁决，CEO裁决后总助创建新的节点流转给相关节点执行。这个决策过程可以在协调层来动态决定下一个节点是谁，业务层还是总助总控配合执行。
-在动态任务树的根节点开始时，协调层的相关人讨论或会议，可以将一个任务拆解成一个大树和多个子树，子树的根节点可以是总助或其他岗位，子树的叶节点是具体执行人。总助在控制层中可以根据讨论结果创建新的节点流转给相关节点执行。这种大树和子树层级最多三层，可以根据实际情况来设计。子树拆解触发条件：当任务预计节点数 ≥ 8 且包含 ≥ 2 条独立并行轨时，协调层讨论是否拆子树。（阈值经 CPO+CTO 联合确认：8 节点源于 TWF-002 实际验证上限，2 并行轨源于 Copilot CLI SQLite 不跨会话 + 崩溃恢复非线性 + 共享仓库冲突风险。TriMC 正式宿主后可重新评估。）
+本文只记录 TriMetaverse 当前项目实例的落位、宿主适配和恢复入口，不在中央仓独立修改公司核心状态语义。
 
-数据模型：`task_trees` + `tree_nodes`（SQLite session 表），字段见下方。
+## 2. 当前项目角色
 
-## 信号协议
+| 层级 | 当前角色 |
+| --- | --- |
+| 最终裁决 | CEO（磨人） |
+| 组织编排与持树 | CEOChiefOfStaff（小贾） |
+| 机器路由 | 当前 Copilot-host 默认 Agent；未来由 TriLC / TriMC 共享 runtime adapter 承接 |
+| 专业 owner | CPO / CTO / CHO / CAO / CMO / COO / CFO |
+| 执行节点 | 小全、小柯、小布、小吴、小成等执行岗位 |
 
-CEO 发出短信号，小贾接收后更新树状态。不回展开讨论，除非遇到 ESCALATE。
+机器路由层只检测并调用已有节点，不替代小贾创建组织节点或执行收口检查。
 
-### 流转信号
+## 3. 当前状态合同
 
-```
-小贾: "📝 ✓ #<树ID>: <当前节点>→<下一节点>"
-```
+| 层级 | 有效枚举 |
+| --- | --- |
+| 树级 | `active / done / escalated` |
+| 节点级 | `pending / in_progress / done / escalated` |
 
-- 关当前节点（status=done），创建下一节点（status=in_progress），更新树 updated_at
-- **路由兜底**：如 `next_agent = NULL` 或当前执行节点无法确定下一节点，默认路由到 `CEOChiefOfStaff`（小贾），由总助根据当前状态分派下一个岗位
-- **执行节点义务**：执行节点在完成工作时，**应先尽力判断 next_agent**。只有在确实无法确定时（如跨模块边界不清晰、涉及多个候选岗位、需 CEO 裁决优先级），才允许留空。不应将 `next_agent = NULL` 作为懒惰默认
+历史 `closed` 已废弃；节点历史状态 `active` 统一映射为 `in_progress`。
 
-### 升级信号
+`next_agent = null` 时默认回到 `CEOChiefOfStaff` 做路由评估。执行节点应先尽力判断下一角色，不能把空路由作为默认结束方式。
 
-```
-CTO: "ESCALATE <树ID> <节点>: <原因>"
-小贾: 展开讨论，延伸分支，可能回退/分叉/新增并行节点
-```
+## 4. TriMetaverse 项目落位
 
-### 查询信号
+当前项目实例使用：
 
-```
-CPO: "<树ID> status"   → 返回树全貌
-CTO: "trees"           → 返回所有活跃树列表
-```
+- 周索引：`docs/workflow/operating-records/<week>/OP-*.json`
+- 树目录：`docs/workflow/operating-records/<week>/trees/<tree-id>/`
+- 树定义：`tree-op.json`
+- Git 恢复副本：`docs/workflow/tree-nodes-export.json`
+- 导出校验：`scripts/export-tree-nodes.ps1 -Validate`
+- 状态校验：`scripts/validate-tree-status-enums.ps1`
 
-## 表结构
+这些路径只属于 TriMetaverse adapter，不是未来所有项目必须复制的公司协议路径。
 
-### task_trees
+## 5. ADE 投影
 
-| 字段 | 说明 |
-|------|------|
-| id | 主键，对应 OP action ID 短名，如 'DA-004' |
-| op_action_id | OP JSON 完整 ID，如 'NA-20260717-DA-004' |
-| title | 任务树标题 |
-| root_agent | 根节点 agent，默认 'CEOChiefOfStaff' |
-| status | active / done / escalated |
-| created_at / updated_at | 时间戳 |
+公司协议 v0.4 允许 `tree_nodes` 投影以下可选字段：
 
-### tree_nodes
-
-| 字段 | 说明 |
-|------|------|
-| id | 主键，如 'DA-004-1' |
-| tree_id | 外键 → task_trees.id |
-| parent_node_id | 父节点 ID，根节点为 NULL |
-| agent | 执行 agent 角色名 |
-| action | 该节点要做什么 |
-| status | pending / in_progress / done / escalated |
-| delivery | 交付物描述（完成时填写） |
-| next_agent | 建议的下一节点 agent |
-| seq | 排序序号 |
-
-## 状态枚举规范
-
-| 层级 | 有效枚举 | 说明 |
-|------|---------|------|
-| 树级 (`task_trees.status`) | `active / done / escalated` | 树整体生命周期 |
-| 节点级 (`tree_nodes.status`) | `pending / in_progress / done / escalated` | 节点工作流状态 |
-
-**废弃枚举**：`closed` — 曾在 TWF-002 Phase 3-5 中使用，语义与 `done` 重叠。v0.3 起移除，存量已于 W29→W30 迁移中自然消除。`active` — v0.2 节点级枚举，v0.3 统一为 `in_progress`。
-
-**校验**：`scripts/validate-tree-status-enums.ps1` 扫描所有 `tree-op.json`，报告不合规状态值。
-
-## 持久化导出
-
-由于 Copilot CLI SQLite session DB 不跨会话（§A.4 约束 4），每次修改 tree_nodes 后**必须立即**导出到 git 仓库：
-
-```
-小贾: SQL → docs/workflow/tree-nodes-export.json → git add + commit
+```json
+{
+  "execution_protocol": "ade",
+  "ade_run_id": "ade_...",
+  "ade_profile": "runtime-owned-durable",
+  "ade_terminal_status": "APPROVED",
+  "ade_evidence_ref": "ade://runs/ade_.../close"
+}
 ```
 
-TriMC 环境通过 API 层自动同步（§B.4.2），无需手动。校验脚本 `export-tree-nodes.ps1 -Validate` 可验证 JSON 格式与数据一致性。
+Trees 只记录谁负责、交付什么和 ADE 终态证据；ADE 内部 checkpoint、attempt、lease、signal 和阶段状态不进入 `tree_nodes`。
 
-## 收口检查清单
+## 6. TriLC / TriMC 运行原则
 
-每次关闭一棵树或完成一个节点交付时，总助必须执行以下检查：
+TriLC 与 TriMC 应使用同一共享 Trees / ADE runtime 合同和状态机，只在本地域与服务域 adapter 上分化：
 
-1. **SQL ↔ 物理目录一致性**：`task_trees` 中每棵活跃/已完成树，对应 `trees/<tree-id>/` 物理目录存在且含 `tree-op.json`
-2. **状态枚举合规**：运行 `scripts/validate-tree-status-enums.ps1`，确认 0 issues
-3. **tree-op.json 完整性**：每个 tree-op.json 包含 `objectType/objectId/treeId/title/status/nodes[]/metadata`
-4. **周索引同步**：活跃树在周 OP JSON 的 `activeTrees[]` 中，已完成树在 `doneTrees[]` 中
-5. **暂存 + 提交**：变更的 tree-op.json + 周 OP JSON → `git add` → `git commit`
+- TriLC：本地文件/Git/cron 触发、SQLite、本地 TUI、离线队列。
+- TriMC：服务端 webhook/CI、PostgreSQL、服务端 Signal、集群 worker。
+- 两域同步通过 `homeDomain / writeAuthority / version` 保持唯一写主，禁止双活写入。
 
-> 示例：`小贾: "📋 收口检查 — validate-tree-status-enums: 8/8 OK, 5 trees 全部落地"`
+## 7. 当前收口与恢复
 
-## 恢复机制
+每次完成节点或关闭树时，小贾至少检查：
 
-上下文丢失后，小贾应：
+1. `tree-op.json` 与周索引一致。
+2. 状态枚举合法。
+3. `done` 节点具有 `delivery`。
+4. ADE 节点只有在 `ade_terminal_status=APPROVED` 时才能转 `done`。
+5. Git 恢复副本已更新且可校验。
 
-1. 从 `docs/workflow/tree-nodes-export.json`（git 仓库持久化副本）重建所有活跃树
-2. 如 SQLite 仍可用，交叉比对 JSON 与 SQL 找出差异
-3. 找到所有 status='in_progress' 的节点 → 这些是当前中断点
-3. 向 CEO 报告："以下树有活跃节点待恢复：..."
-4. CEO 决定继续/回退/重新路由
+上下文丢失后，先从 runtime store 恢复；当前 Copilot-host runtime 不可用时，从 `tree-nodes-export.json` 重建并定位全部 `in_progress` 节点。涉及 ADE 的节点再查询其 canonical / authority run 状态，由 CEOChiefOfStaff 决定继续、回退、重新路由或升级。
+
+## 8. 相关入口
+
+- 公司协议：[TriCompany 动态任务树协议](../../../TriCompany/docs/workflow/dynamic-task-tree-protocol.md)
+- ADE 规范：[TriCompany ADE 模式规范](../../../TriCompany/docs/engineering/ade-pattern-spec.md)
+- ADE 完整蓝图：[TriCompany ADE 全生命周期实现蓝图](../../../TriCompany/docs/engineering/ade-full-lifecycle-implementation-plan.md)
+- 当前恢复接口：[TriMC 恢复接口契约](trimc-recovery-interface.md)

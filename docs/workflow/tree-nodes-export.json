@@ -1,6 +1,6 @@
 {
   "format_version": "1.0",
-  "exported_at": "2026-07-24T17:36:00+08:00",
+  "exported_at": "2026-08-07T23:15:17+08:00",
   "exported_by": "CEOChiefOfStaff",
   "environment": "copilot-cli",
   "trees": [
@@ -527,6 +527,158 @@
           "delivery": "merged-execution-plan.md — Phase 1 (W32 8/3-8/7) / Phase 2 (W32-W33 8/14) / Phase 3 (W33-W34 8/21)",
           "next_agent": null,
           "seq": 3
+        }
+      ]
+    },
+    {
+      "id": "ade-full-lifecycle",
+      "op_action_id": "TREE-OP-ade-full-lifecycle",
+      "title": "ADE 全生命周期：TriLC 基线修复 -> Local Durable MVP -> TriMC Parity -> 双域同步 -> Trees -> 生产加固",
+      "root_agent": "CEOChiefOfStaff",
+      "status": "active",
+      "priority": "P0",
+      "created_at": "2026-08-07T23:15:17+08:00",
+      "updated_at": "2026-08-07T23:15:17+08:00",
+      "nodes": [
+        {
+          "id": "ade-life-0",
+          "parent_node_id": null,
+          "agent": "CEOChiefOfStaff",
+          "action": "完成 ADE 行业模式研究、TriLC/TriMC/Trees 摸底、CPO/CTO TriLC 实码审计和公司级真源收口；形成完整蓝图、差距评估、runtime parity 决策与 Trees v0.4 公司协议。",
+          "status": "done",
+          "delivery": "TriCompany/docs/engineering/ade-lifecycle-industry-review.md + ade-full-lifecycle-implementation-plan.md + ade-trilc-current-gap-assessment.md + trilc-trimc-runtime-parity.md + TriCompany/docs/workflow/dynamic-task-tree-protocol.md",
+          "next_agent": "CEOChiefOfStaff",
+          "seq": 0
+        },
+        {
+          "id": "ade-life-1",
+          "parent_node_id": "ade-life-0",
+          "agent": "CEOChiefOfStaff",
+          "action": "提交 CEO 范围确认：是否批准 Phase -1、Phase 0-2 作为首个 local-first 开发范围。完整 ADE、双域同步、Trees projector 继续 FREEZE；确认后再创建 TriDev run 与实施子树。",
+          "status": "in_progress",
+          "delivery": null,
+          "next_agent": "ChiefTechnologyOfficer",
+          "seq": 1
+        },
+        {
+          "id": "ade-life-2",
+          "parent_node_id": "ade-life-1",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "Phase -1：关闭 TriLC P0 事实基线。统一工具名与 permission/safety；修复 ask 后安全复核、Contract Agent API、cron 恢复/取消、event producer/DLQ、2 个 TUI 测试和 Trees validator。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 2
+        },
+        {
+          "id": "ade-life-3",
+          "parent_node_id": "ade-life-2",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "Phase 0：在 @trimetaverse/agent-core 定义 ADE 状态机、Plan/Close/DCE/Signal/checkpoint/authority schema、幂等规则和共享 conformance vectors。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "FullStackDeveloper",
+          "seq": 3
+        },
+        {
+          "id": "ade-life-4",
+          "parent_node_id": "ade-life-3",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "Phase 1：实现共享 ADE runtime，包括 orchestrator、phase runner、DCE registry、Verify、Close finalizer、checkpoint/retry/lease/recovery policy 和 in-memory reference adapter。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "FullStackDeveloper",
+          "seq": 4
+        },
+        {
+          "id": "ade-life-5",
+          "parent_node_id": "ade-life-4",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "Phase 2：完成 TriLC 单项目、单定义、单写主 durable MVP。使用 SQLite store、持久 Signal、固定 project-source-doc-sync DCE、Close CLI 和 daemon kill/restart 恢复验证。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 5
+        },
+        {
+          "id": "ade-life-6",
+          "parent_node_id": "ade-life-5",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "Phase 3：TriMC 接入同一共享 runtime，补 PostgreSQL、service Skill/DCE/Signal adapter、HTTP API、cluster lease 和 observability projector，通过 SQLite/PostgreSQL parity suite。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 6
+        },
+        {
+          "id": "ade-life-7",
+          "parent_node_id": "ade-life-6",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "Phase 4：实现 TriLC/TriMC event/checkpoint/terminal replication 与 homeDomain/writeAuthority/authorityEpoch/version 仲裁，验证断网、重连和显式 authority transfer 无双写。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 7
+        },
+        {
+          "id": "ade-life-8",
+          "parent_node_id": "ade-life-7",
+          "agent": "CEOChiefOfStaff",
+          "action": "Phase 5 协议门：按 TriCompany Trees v0.4 公司真源确认项目 adapter、ADE 投影字段、节点终态映射与 CAO 治理签核；不允许 ADE runtime 自动创建组织节点。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "ChiefTechnologyOfficer",
+          "seq": 8
+        },
+        {
+          "id": "ade-life-9",
+          "parent_node_id": "ade-life-8",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "Phase 5 实现门：TriLC/TriMC 共用 tree projector 接口，升级 TriMetaverse tree export/validator，验证 ADE APPROVED 可投影 done 且投影可从 authority run 重建。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "DeploymentEngineer",
+          "seq": 9
+        },
+        {
+          "id": "ade-life-10",
+          "parent_node_id": "ade-life-9",
+          "agent": "DeploymentEngineer",
+          "action": "Phase 6：生产加固。补 metrics、dashboard、DLQ、SQLite/PostgreSQL backup/restore、migration rollback、K8s/local daemon graceful shutdown 与部署回滚。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "TestEngineer",
+          "seq": 10
+        },
+        {
+          "id": "ade-life-11",
+          "parent_node_id": "ade-life-10",
+          "agent": "TestEngineer",
+          "action": "全生命周期验证：状态机、幂等、checkpoint、Skill schema、DCE probe、HITL、双域 authority、Trees 投影、observability、安全和 chaos 矩阵全绿。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "ChiefTechnologyOfficer",
+          "seq": 11
+        },
+        {
+          "id": "ade-life-12",
+          "parent_node_id": "ade-life-11",
+          "agent": "ChiefTechnologyOfficer",
+          "action": "CTO 终审：确认共享 runtime 无双实现、两域 parity、单写 authority、Close Skill -> Close CLI 终态门与所有发布 readiness。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": "CEOChiefOfStaff",
+          "seq": 12
+        },
+        {
+          "id": "ade-life-13",
+          "parent_node_id": "ade-life-12",
+          "agent": "CEOChiefOfStaff",
+          "action": "公司级收口：核对 Trees、周工作平面、TriDev evidence、CPO 产品验收、CTO 技术签核和 CEO 保留事项，形成 ADE 正式交付结论。",
+          "status": "pending",
+          "delivery": null,
+          "next_agent": null,
+          "seq": 13
         }
       ]
     }

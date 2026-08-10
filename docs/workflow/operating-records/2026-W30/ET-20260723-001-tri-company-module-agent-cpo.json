@@ -1,0 +1,103 @@
+{
+  "objectType": "ENGINEERING_TASK",
+  "objectId": "ET-20260723-001",
+  "title": "TriCompany 模块 Agent 产品范围确认 — CPO 审批",
+  "status": "closed",
+  "closedAt": "2026-07-24T02:54:00+08:00",
+  "resolution": "APPROVE — 4 项产品边界条件：(1) 同步范围显式排除员工五件套/live-entry/binding-profiles (2) registry 对 agent 只读不写 (3) 多宿主仅架构占位，当前只实现 Copilot-host (4) 补 TriCompany/docs/product/STATE.md 条目",
+  "priority": "high",
+  "ownerRole": "ChiefProductOfficer",
+  "createdAt": "2026-07-23T23:20:00+08:00",
+  "updatedAt": "2026-07-24T02:47:00+08:00",
+  "timebox": {
+    "scope": "deadline",
+    "startAt": "2026-07-24T02:47:00+08:00",
+    "endAt": "2026-07-24T23:59:00+08:00",
+    "label": "W30 周五前审批（硬上限 W31 周一 7/27）"
+  },
+  "summary": "CEO 已批准新建 TriCompany 模块级 orchestrator agent（TriCompany.agent.md），负责源侧→发布侧同步链路总控、发布清单维护、发布纪律执行与多宿主适配。现需 CPO 对产品范围和边界做确认审批。",
+  "relatedModules": ["TriCompany", "TriMetaverse"],
+  "dependsOn": [
+    "CEO 2026-07-23 指令：创建 TriCompany 模块级 agent 管理源侧→发布侧同步",
+    "总助（小贾）前置核查与设计方案已完成（2026-07-23）"
+  ],
+  "evidence": [
+    {
+      "source": "TriMetaverse/docs/workflow/operating-records/2026-W30/ET-20260723-001-tri-company-module-agent-cpo.json",
+      "kind": "routing-package",
+      "note": "本路由包"
+    },
+    {
+      "source": "TriCompany/.github/source-agents/registries/",
+      "kind": "source-agents",
+      "note": "现有 51 个模块 registry agent 源侧定义 + trimetaverse-live-agent-publish-manifest.json"
+    },
+    {
+      "source": "TriCompany/.github/agents/",
+      "kind": "live-agents",
+      "note": "现有 TriCompanyBusinessStrategyRegistry / ProductRegistry / CodeRegistry 三个 live entry"
+    },
+    {
+      "source": "TriCompany/AGENTS.md",
+      "kind": "module-rules",
+      "note": "TriCompany 模块定位：赛博公司研发仓与经营编排孵化仓，非中央战略仓"
+    },
+    {
+      "source": "TriMetaverse/docs/registry/company-governance-state.md",
+      "kind": "governance",
+      "note": "第 65 行发布侧同步后置硬规则、第 52 行模块 registry agent 迁移规则、第 139 行源侧/发布侧区域划分"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "2026-07-23 CEO 已批准方案，指令立即发路由包"
+    },
+    {
+      "role": "ChiefProductOfficer",
+      "status": "pending",
+      "note": "待 CPO 确认产品范围"
+    }
+  ],
+  "payload": {
+    "implementationScope": [
+      "审批 TriCompany.agent.md 作为新 module-local agent 的产品边界",
+      "确认其与现有 TriCompanyBusinessStrategyRegistry / ProductRegistry / CodeRegistry 的分工无冲突",
+      "确认源侧→发布侧同步链路属于 TriCompany 模块产品范围内的功能"
+    ],
+    "taskBreakdown": [
+      "CPO 审阅总助完整分析报告（2026-07-23 对话中）",
+      "CPO 确认以下产品边界问题：",
+      "  Q1: TriCompany.agent.md 管理的同步范围是否包括 source-agents/ + docs/ + .github/ 下所有源侧内容？",
+      "  Q2: 是否与现有 registry 三件套的产品边界冲突？（registry 是只读 fact reporter，agent 是主动 orchestrator）",
+      "  Q3: 多宿主适配（Copilot Chat → Claude Code → TriMC 正式宿主）是否应在 Phase A 就预留产品边界？",
+      "  Q4: 是否需要在 TriCompany/docs/product/ 下补一份模块 agent 产品说明？",
+      "CPO 输出 APPROVE / FREEZE / 修改建议"
+    ],
+    "testRequirements": [],
+    "releaseRequirements": [
+      "CPO 审批结论明确（APPROVE / FREEZE / 带条件 APPROVE）",
+      "如 APPROVE：确认产品边界描述，进入 Phase B 实现"
+    ],
+    "rollbackPlan": "如 CPO FREEZE：暂停 Phase B 实现，等待产品边界澄清后重新提交。",
+    "technicalRisks": [
+      "如产品边界不清，可能导致 TriCompany agent 越权管理不属于 TriCompany 模块的内容",
+      "如 registry 三件套与 agent 边界模糊，可能造成多 agent 对同一事实的冲突判断"
+    ],
+    "docsInitializationRequirements": [],
+    "docsBootstrapRefs": [
+      "TriCompany/docs/product/STATE.md",
+      "TriCompany/docs/product/PROJECT.md",
+      "TriMetaverse/docs/registry/company-governance-state.md §Current Ownership"
+    ]
+  },
+  "metadata": {
+    "template": false,
+    "templateVersion": "v1",
+    "handoffSource": "CEOChiefOfStaff",
+    "handoffTarget": "ChiefProductOfficer",
+    "linkedNextAction": "NA-20260723-CPO-001",
+    "routingNote": "纯产品范围审批，不涉及技术实现。CPO 只需确认产品边界是否合理。"
+  }
+}

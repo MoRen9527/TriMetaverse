@@ -1,0 +1,65 @@
+{
+    "nodes": [
+        {
+            "nodeId": "trilc-tui-impl-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "T0 完成确认：reference 入仓（13,753 文件）+ vendor 基线（156 文件，Tier 1 ink 98 + Tier 2 components 57）。路由 CTO 技术设计 → FullStackDeveloper 实现 → TestEngineer 验证。"
+        },
+        {
+            "nodeId": "trilc-tui-impl-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "T1 技术设计：基于 vendor/claude-code-tui/ 基线，设计 TriLC/src/tui/ 实现方案。确认：① SSE 客户端封装 ② Ink root 初始化 ③ MVP 五组件裁剪方案 ④ npm 依赖清单（react/react-reconciler/marked/yoga-layout-prebuilt）⑤ 与 TriLC daemon 的启动联动（trilc chat → auto-start daemon if not running）。产出 trilc-tui-impl-design.md。",
+            "next_agent": "FullStackDeveloper"
+        },
+        {
+            "nodeId": "trilc-tui-impl-2",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "T1 MVP 实现：在 TriLC/src/tui/ 下实现五组件 MVP — ① SSE 客户端（连接 localhost:8711/chat/completions）② App 根组件（Ink render + 状态管理）③ Messages 消息列表 ④ PromptInput 输入框 ⑤ Markdown 流式渲染。MVP 不包含 thinking 动画、工具调用展示、虚拟滚动。产出可用终端命令：npx tsx src/tui/main.tsx 或 trilc chat。",
+            "dependsOn": ["trilc-tui-impl-1"],
+            "next_agent": "TestEngineer"
+        },
+        {
+            "nodeId": "trilc-tui-impl-3",
+            "agent": "TestEngineer",
+            "status": "done",
+            "action": "T1 验证：8 项验证 6 PASS + 2 CONDITIONAL_PASS。发现并修复 7 项阻塞缺陷（npm 依赖缺失、ink 文件吸收遗漏、yoga API 不兼容等）。综合评估 CONDITIONAL_PASS。产出 trilc-tui-impl-test-report.md。",
+            "dependsOn": ["trilc-tui-impl-2"],
+            "delivery": "TriLC/src/tui/test-report.md"
+        }
+    ],
+    "status": "done",
+    "relatedDocuments": [
+        {
+            "note": "吸收方案（含 vendor 冻结清单 + 架构决策）",
+            "source": "docs/workflow/operating-records/2026-W30/trees/trilc-tui-absorb/absorption-plan.md",
+            "kind": "design"
+        },
+        {
+            "note": "vendor 基线",
+            "source": "TriLC/vendor/claude-code-tui/",
+            "kind": "vendor"
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "parentTree": "trilc-tui-absorb",
+    "objectId": "TREE-OP-trilc-tui-impl",
+    "title": "TriLC CLI TUI MVP 实现：T1 核心五组件",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "trilc-tui-impl",
+    "status": "active",
+    "priority": "P1",
+    "summary": "基于 trilc-tui-absorb 联审方案，执行 T1 MVP 实现：CTO 技术设计 → FullStackDeveloper 实现五组件 → TestEngineer 验证。预期 3-4h。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-07-24T17:36:00+08:00",
+        "version": "0.1.0",
+        "note": "v0.1.0: 树创建 — T0 前置已完成（reference+vendor 就位），CTO 设计 pending"
+    },
+    "createdAt": "2026-07-24T17:36:00+08:00",
+    "relatedModules": ["TriLC", "TriCade"],
+    "updatedAt": "2026-07-24T17:36:00+08:00"
+}

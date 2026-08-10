@@ -1,4 +1,230 @@
-﻿# TriCompany 赛博公司设计稿（原：赛博公司设计稿）
+﻿# TriCompany 赛博公司中央摘要
+
+版本：V1.0 中央追平版
+日期：2026-08-07
+状态：当前中央摘要
+
+## 文档同步元信息
+
+- sourceOfTruth: TriCompany/tricompany.md
+- syncMode: published-summary
+- sourceRevision: sha256:8d8967448a49c825c2079755ff3ede0b00f9822d87f6df487d33c1516b1fa1f8
+- lastSyncedAt: 2026-08-07
+
+---
+
+## 1. 文档定位
+
+本文是 `TriCompany` 在 `TriMetaverse` 中的中央摘要，用于说明公司定位、当前开发进度、能力成熟度、组织状态和宿主边界。它不再承担早期商业方向穷举、岗位设想或完整实施细则。
+
+当前真源分工如下：
+
+1. 总商业模式、模块边界和正式宿主裁决：[tmv-whitepaper.md](tmv-whitepaper.md)、[project.md](project.md)、[docs/三元宇宙架构与模块说明.md](docs/三元宇宙架构与模块说明.md) 与中央 `BusinessStrategy`。
+2. TriCompany 公司宪章：[../TriCompany/tricompany.md](../TriCompany/tricompany.md)。
+3. 产品事实：[../TriCompany/docs/product/](../TriCompany/docs/product/) 与 [../TriCompany/docs/registry/product-state.md](../TriCompany/docs/registry/product-state.md)，经营 owner 为 CPO 小乔。
+4. 技术事实：[../TriCompany/docs/engineering/](../TriCompany/docs/engineering/) 与 [../TriCompany/docs/registry/code-state.md](../TriCompany/docs/registry/code-state.md)，经营 owner 为 CTO 小狄。
+5. 员工、合同与治理事实：[../TriCompany/docs/registry/employee-roster.json](../TriCompany/docs/registry/employee-roster.json)、岗位 contract、binding profile 和 workflow 文档。
+
+出现冲突时，中央战略边界以上游中央真源为准；TriCompany 的实现状态以同级 `../TriCompany/` 源仓为准。本文件只做中央追平，不替代源侧持续维护。
+
+## 2. 当前定位
+
+TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公司概念的产品化承载。它负责定义“谁来做、按什么标准做、如何参与和核签”，各项目模块负责定义“做什么、如何实现和交付”。
+
+| 维度 | 物理承载 | 当前职责 |
+| --- | --- | --- |
+| 公司维度 | `../TriCompany/` | 员工源侧资产、岗位合同、经营记录、组织制度、治理文档、Hermes 融合与公司级编排 |
+| 项目维度 | TriMetaverse 及各模块仓 | 产品与工程真源、代码、模块 registry、阶段产物 |
+| 桥接层 | TriCompany IPD + TriDev | TriCompany 组织员工参与、资料和书面核签；TriDev 承接十阶段 phase engine、gate、版本和执行证据 |
+
+必须保持以下边界：
+
+- TriCompany 不是中央战略仓，不替代 `BusinessStrategy` 做总体商业裁决。
+- TriCompany 当前不是 TriMC 正式运行宿主，也不是服务域主控。
+- 当前 Copilot-host live 和本地正式接管不等于 TriMC 正式宿主切换。
+- Hermes 已形成分层设计、原型和多层验证，但不能写成生产级 Hermes 已完成接入。
+- TriCompany 公司宪章已生效，不等于 TriCompany 的正式中央模块地位已经由中央战略完成裁决。
+
+## 3. 当前阶段
+
+- 公司宪章：V1.0，2026-08-01 生效。
+- 当前经营阶段：`ceo-copilot-host-coordination`。
+- 当前宿主：Copilot-host live；Copilot-host 仍是当前 write master。
+- 当前项目：源侧宪章登记为 TriMetaverse 主项目与 TriCade 桌面产品。
+- 当前 MVP 运行主链：`TriMC -> TriModel -> TriStaciss -> Provider`。
+- TriCompany 在该 MVP 中属于公司治理、员工参与和交付核签层，不是模型调用业务流量的核心转发节点。
+
+宿主资产按三层管理：
+
+1. `../TriCompany/`：公司定义、源侧员工资产、合同、runtime 和发布真源。
+2. `TriCompany-copilot-host-assets/`：当前 Copilot-host 支撑包、知识对象、runtime 副本与验证材料。
+3. `.github/`：当前实际生效的 Copilot-host live 入口。
+
+到 `TriMetaverse V1 正式上线切换阶段`，是否切换到以 `TriMC` 为核心的正式运行面，仍需通过独立 host gates、shadow、canary、回退和单一写入主控验证，并由 CEO 与中央战略边界裁决。
+
+## 4. 组织与岗位现状
+
+截至 2026-08-01，员工名册登记 13 名 live 员工，不含 CEO 磨人本人。
+
+### 4.1 C-suite（8 人）
+
+| 员工 | 岗位 | 当前主责 |
+| --- | --- | --- |
+| 小贾 | CEOChiefOfStaff | 公司级路由、协调、催办、升级与中央收口 |
+| 小乔 | ChiefProductOfficer | 产品定义、PRD、MVP 边界、Product Registry |
+| 小狄 | ChiefTechnologyOfficer | 技术路线、交付架构、Code Registry、工程门禁 |
+| 小源 | ChiefHumanResourcesOfficer | 岗位生命周期、交接治理、完成度监督 |
+| 小行 | ChiefAdministrativeOfficer | 秘书处、会议制度、行政与公司治理资料归属 |
+| 小敏 | ChiefMarketingOfficer | 市场信号、竞品、需求研究与 PRD 前置证据 |
+| 小营 | ChiefOperatingOfficer | 经营节奏、rollout、跨部门执行和复盘 |
+| 小财 | ChiefFinancialOfficer | 预算、成本护栏、单位经济与财务风险 |
+
+### 4.2 执行层（5 人）
+
+| 员工 | 岗位 | 汇报关系 |
+| --- | --- | --- |
+| 小全 | FullStackDeveloper | CTO |
+| 小柯 | TestEngineer | CTO |
+| 小吴 | RAndDTrainer | CTO |
+| 小成 | CustomerSuccessOfficer | COO |
+| 小布 | DeploymentEngineer | CTO |
+
+13 名员工均已有源侧定义与 binding profile，并登记为当前 Copilot-host live。合同当前存在两种位置：早期合同集中在 `../TriCompany/docs/registry/`，V2 新员工合同可位于各自 `../TriCompany/source-agents/<employee-id>/` 目录。物理位置差异不应误判为员工未上岗。
+
+上述 live 状态只说明当前 Copilot-host 阶段已完成岗位入口与绑定，不代表完整授权矩阵、真实业务数据管道、自动化经营或 TriMC 正式宿主已经生产化。
+
+## 5. 小乔产品线摸底
+
+### 5.1 已落地
+
+- 已建立 product、engineering、execution、registry、workflow、training 六层文档基线。
+- 已形成 V1.0 公司宪章、13 人员工名册和公司/项目双维度模型。
+- Product Registry 已由 CPO 小乔接管，总助不再长期代管产品 owner。
+- 已明确 TriCompany IPD 双线：市场雷达线负责发现与整理机会，主动交付线挂接 TriDev 十阶段主线。
+- source-side IPD runtime 已按 `DISCOVERY -> INTELLIGENCE -> DESIGNING -> CODING -> VERIFY-INTEGRATION -> REDTEAM -> QA -> DEPLOYMENT -> ASSURANCE -> DELIVERY` 建立一比一 stage line，并挂接业务 owner、执行 owner、gate owner、参与岗位、资料包和书面核签。
+- 已建立模块归属治理：既有模块先走 `ModuleTargetingReport` 与 `ModuleReadinessInit`；新增正式模块先形成 `NewModuleBaselineRelease`，签核后才允许 `TriDev init`。
+- 已形成 Copilot-host 与 TriMC 双轨规格桥接思路：contract YAML 是统一规格，两个宿主是规格消费者。
+
+### 5.2 当前产品判断
+
+- TriCompany 当前首先服务公司内部经营与研发交付，不应被包装成已经面向外部客户完成商业化的 SaaS 产品。
+- 在当前最简可验证模型中，TriCompany 是支撑与治理层；核心用户运行链仍是 `TriMC -> TriModel -> TriStaciss -> Provider`。
+- 当前产品价值主要体现在岗位合同、公司级路由、IPD 参与核签、知识对象、会议与经营记录，以及跨宿主可迁移规格。
+- 源侧 `PROJECT.md`、`REQUIREMENTS.md`、`STATE.md` 和 README 仍保留 V0.1 元数据或早期“下一步”表述，内容虽已持续增补，但版本头和部分阶段说明需要后续统一追平。
+
+### 5.3 产品侧未完成
+
+- TriCompany 的正式模块地位仍待中央 `BusinessStrategy` 裁决。
+- PRD 分叉并行、多分支 delivery 聚合和独立 phase package schema 族尚未完整落地。
+- 13 个岗位的长期运行节律、真实业务输入输出和完整授权矩阵仍需持续补证。
+- 对外客户价值、定价、收入证据和规模化经营模型尚不能从当前内部运行基线直接推出。
+
+## 6. 小狄技术线摸底
+
+### 6.1 已落地
+
+- `source-agents/` 已形成员工源侧定义，`.github/binding-profiles/` 已覆盖 13 名员工。
+- 已建立 role / employee knowledge workspace、组织共享空间与审计空间的对象生成和发布链。
+- 已上线 TriCompany 模块级 orchestrator，用于源侧到 Copilot-host 发布侧的同步、manifest 维护和发布纪律；当前只覆盖 Phase 1 Copilot-host，多宿主适配仍是占位。
+- `runtime/cognition/` 已形成 contracts、kernel、providers 和 chief-of-staff workflow / schedule / closeout / wiki refresh 等源侧入口。
+- 元认知采用“统一公司内核 + 员工私域 + 组织共享 + 审计”的混合结构，统一协议但不混同人格与私域记忆。
+- 已形成 smoke、contract、integration、backend、external adapter、HTTP backend、Supermemory schema、SDK seam 与 live smoke 等验证基线。
+- 已完成 Supermemory 真实账号首轮 live smoke，但账号级限流、配额语义、持续稳定性和真实官方 SDK 包接入仍未完成生产级证明。
+- IPD engine 已具备单 case 十阶段状态机、签核、事件日志、rollback/reopen 和 autopilot 入口，并可在 TriDev 可用时同步 phase result、gate 和 delivery evidence。
+- 已建立 source publish pipeline；registry 记录的 2026-07-24 基线为相关验证 33/33 通过。
+- 已建立本地 CodeGraph 基线并由 Code Registry 维护；主索引默认排除 vendor、缓存、构建产物和运行时状态。
+
+### 6.2 当前技术判断
+
+- 当前代码与文档足以支撑“Copilot-host 本地手动版 + 部分自动化”的公司运行和继续研发。
+- 当前 readiness 属于研发基线、host binding、shadow/live 验证与可回归原型，不属于 TriMC 正式宿主或 production-grade 自治公司。
+- 当前实际生效入口、support root、源侧资产三者已经分层，后续修改必须沿 manifest 和 published-copy 规则发布，不能直接把支撑包当源仓维护。
+- Code Registry 已由 CTO 小狄接管；总助只负责技术事项的公司级路由与收口。
+
+### 6.3 技术侧未完成
+
+- TriMC 正式宿主的 shadow 一致率、回退演练、并发写入安全和生产部署 gates 尚未完成。
+- production 级 recall / consolidate、长期稳定性、账号级配额和外部 cognition provider 差异仍待验证。
+- 完整跨岗位 adapter、PRD 多分支并行、delivery 聚合和全自动跨 case 编排尚未完成。
+- 当前仍存在源侧状态文档与 8 月实际组织状态不同步的问题，需要按 owner 分批追平，不能把 registry 中的旧段落继续当最新结论。
+
+## 7. TriCompany 内部能力模块盘点
+
+| 能力面 | 当前状态 | 已有证据 | 主要缺口 |
+| --- | --- | --- | --- |
+| 公司宪章与六层文档 | 已落地 | V1.0 宪章、六层目录、registry | 多份文档版本头仍停留 V0.1 |
+| 员工源侧资产 | 已落地 | 13 人 source agent、名册、岗位认知资产 | 长期业务节律与授权补证 |
+| Contract / Binding / Live | 当前 Copilot-host 已启用 | contract、13 份 binding、live entry | TriMC 等价迁移和完整授权矩阵 |
+| Host object 发布链 | 已落地 Phase 1 | manifest、generator、source publish pipeline | 多宿主发布适配 |
+| 元认知 runtime | 可回归原型 | kernel、providers、多层 validation、live smoke | production 稳定性与正式 provider 契约 |
+| IPD 公司参与层 | 部分自动化 | 十阶段 case line、sign-off、autopilot | PRD 分叉、多分支聚合、完整岗位 adapter |
+| 秘书处与经营记录 | 当前可运行 | 会议 prompt、workflow、operating records | 制度成熟度和自动化追踪 |
+| TriMC 正式宿主适配 | 待验证 | contract resolver 与迁移 gate 设计 | shadow、canary、回退、write-master gates |
+
+## 8. 当前公司级执行链
+
+开发型项目统一按以下职责链推进：
+
+1. CEO / 总助明确方向、边界和是否需要中央升级。
+2. CMO 提供市场、竞品、用户和机会证据。
+3. CPO 收敛产品范围、PRD、MVP 与验收口径。
+4. CFO 校验预算、成本、定价假设和财务风险。
+5. CTO 形成技术路径、质量门禁、发布与回滚姿态。
+6. COO 编排 rollout、跨部门窗口、观察指标和复盘。
+7. TriCompany 组织岗位参与、资料包和书面核签。
+8. TriDev 推进十阶段 phase engine、gate、版本和执行证据。
+9. 小全、小柯、小布分别承接开发、测试和部署执行；小吴维护研发培训与导读；小成承接客户成功反馈闭环。
+
+总助负责路由、协调、催办、升级和收口，不长期替代 CPO、CTO、CHO、CAO、CMO、COO、CFO 或执行岗位做专业 owner 判断。
+
+## 9. 本次退役的旧口径
+
+以下内容曾属于 2026-03-24 的 V0.1 设计讨论，不再作为当前执行基线：
+
+- “V0.1 待讨论 / 草案”已被 2026-08-01 生效的 V1.0 公司宪章取代。
+- “10 个高层岗位逐步启用”已被 8 C-suite + 5 执行层的 13 人 live 名册取代。
+- “销售总裁”不在当前 canonical 员工名册中，不应继续与现役岗位并列描述。
+- “尚未把全部高层落成可运行 agent”不再准确；当前应表述为 13 人 Copilot-host live，但长期运行与完整授权仍待补证。
+- 固定 40 美元月成本、三条首发业务方向和 30 天盈利周期属于早期探索假设，不再作为 TriCompany 当前事实；经营目标应回到中央商业真源、当前经营计划和真实财务证据。
+- DAO、股东会和董事会自动化仍是长期治理接口，不是当前已实现能力，也不是本轮开发进度判断依据。
+- 不再使用 `Development Main Controller`、`Task Main Controller`、`Autonomy Main Controller` 作为当前标准模块名；运行面统一使用 TriMC，模型与宿主配置层使用 TriModel。
+
+## 10. 下一步
+
+### CPO 小乔
+
+- 追平 [../TriCompany/docs/product/PROJECT.md](../TriCompany/docs/product/PROJECT.md)、[REQUIREMENTS.md](../TriCompany/docs/product/REQUIREMENTS.md)、[STATE.md](../TriCompany/docs/product/STATE.md) 与 [README.md](../TriCompany/README.md) 的版本元数据和阶段描述。
+- 把 13 人组织、当前 MVP 支撑定位和对外产品化缺口纳入产品真源的下一次正式版本。
+- 继续收口 PRD 分叉、phase package 和产品验收契约。
+
+### CTO 小狄
+
+- 追平 [../TriCompany/docs/engineering/STATE.md](../TriCompany/docs/engineering/STATE.md) 与 Code Registry 中已经过时的岗位、发布和验证表述。
+- 继续补齐多宿主发布、完整岗位 adapter、长期稳定性和 TriMC host gates 证据。
+- 保持 source、support、live 三层发布纪律和 CodeGraph / Git Health 基线。
+
+### CEO 总助小贾
+
+- 以后只把源侧已确认的稳定结论同步到本中央摘要。
+- 发现产品与技术真源互相冲突时，先组织 CPO / CTO 联审，再决定 APPROVE、FREEZE 或升级 CEO。
+- 正式模块地位、正式宿主切换和总体商业模式变化继续升级中央 `BusinessStrategy` 与 CEO，不在本文件自行宣布。
+
+## 11. 版本记录
+
+| 版本 | 日期 | 说明 |
+| --- | --- | --- |
+| V0.1-DRAFT | 2026-03-24 | 早期赛博公司组织与商业假设设计稿 |
+| V1.0 | 2026-08-01 | TriCompany 源侧公司宪章生效，13 人员工体系发布 |
+| V1.0 中央追平版 | 2026-08-07 | 按源侧宪章、CPO 产品真源、CTO 技术真源和员工名册重写中央摘要 |
+
+---
+
+## 附录：历史归档
+
+以下内容是 2026-03-24 V0.1 设计讨论稿，仅保留演进证据，不再参与当前标题和执行口径。
+
+```text
+# TriCompany 赛博公司设计稿（原：赛博公司设计稿）
 
 版本：V0.1 待讨论
 日期：2026-03-24
@@ -773,3 +999,5 @@ CEO 是经营总负责人，不是所有任务的直接执行者，而是公司�
 在 TriMetaverse 框架下，这家赛博公司最合理的初始形态不是一个传统的层层汇报组织，也不是一个空谈 DAO 的治理壳，而是一个由董事会目标驱动、由 CEO 总助统筹、由 AI 高层分工协作、以低成本快速推出可售产品、并逐步把经营过程结构化和链上透明化的自动经营系统。
 
 它的第一原则不是“把组织做大”，而是“先让组织自己养活自己，并留下可复制的自动化骨架”。
+
+```

@@ -1,0 +1,66 @@
+{
+    "nodes": [
+        {
+            "nodeId": "trilc-tui-absorb-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "前置核查：确认吸收链规则、Claude Code 2.1.88 源码位置、TriLC 现有 API、模块边界。产出评审简报 trilc-tui-absorb-review-brief.md。路由 CPO + CTO 并行评审。"
+        },
+        {
+            "nodeId": "trilc-tui-absorb-1",
+            "agent": "ChiefProductOfficer",
+            "status": "done",
+            "action": "产品评审四问：① TUI 是 TriLC 附属 CLI 工具还是独立模块？② Claude Code ~200 组件中 MVP 必须吸收哪些？③ 最少 UX 交互元素？④ 与 TriPilot webview 聊天的定位区分。产出 trilc-tui-cpo-review.md。",
+            "next_agent": "CEOChiefOfStaff"
+        },
+        {
+            "nodeId": "trilc-tui-absorb-2",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "done",
+            "action": "技术评审五问：① reference→vendor→src/tui 吸收路径确认 + vendor 冻结清单；② Ink vs blessed vs 纯 readline 技术栈选型——发现 Claude Code 是自研 Ink 引擎非 npm ink；③ HTTP API SSE 集成方式；④ Ink+React 依赖体积与 MSI 打包影响（+3MB）；⑤ TriCade 内置终端（PS/Git Bash ✅，cmd.exe 需 chcp 65001）。产出 trilc-tui-cto-review.md。",
+            "next_agent": "CEOChiefOfStaff"
+        },
+        {
+            "nodeId": "trilc-tui-absorb-3",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "联合收口：汇总 CPO + CTO 评审结论，输出最终 TUI 吸收方案文档（模块归属裁决 + MVP 范围 + vendor 冻结清单 + 技术架构选型 + 实施路线图）。产出 absorption-plan.md（CPO+CTO 一致 APPROVE，附 4 条 CTO 门禁 + CPO 红线清单）。",
+            "dependsOn": ["trilc-tui-absorb-1", "trilc-tui-absorb-2"]
+        }
+    ],
+    "relatedDocuments": [
+        {
+            "note": "吸收链规则",
+            "source": "docs/三元宇宙架构与模块说明.md",
+            "kind": "architecture"
+        },
+        {
+            "note": "评审简报",
+            "source": "docs/workflow/operating-records/2026-W30/trilc-tui-absorb-review-brief.md",
+            "kind": "brief"
+        },
+        {
+            "note": "Claude Code 2.1.88 源码",
+            "source": "../claude-code-2.1.88/source-repo/src/",
+            "kind": "reference"
+        }
+    ],
+    "objectType": "TREE_OPERATING_PLAN",
+    "parentWeekPlan": "OP-202607-W30-001",
+    "objectId": "TREE-OP-trilc-tui-absorb",
+    "title": "TriLC CLI TUI 吸收：Claude Code 2.1.88 TUI 组件吸收方案联审",
+    "ownerRole": "CEOChiefOfStaff",
+    "treeId": "trilc-tui-absorb",
+    "status": "done",
+    "priority": "P1",
+    "summary": "CEO 要求为 TriLC 包装类似 Claude Code 的 TUI 终端交互界面。按吸收链规则（reference→vendor→实现），CPO + CTO 联合评审产品定位、MVP 范围、技术栈选型与实施路线图。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-07-24T17:26:00+08:00",
+        "version": "0.2.0",
+        "note": "v0.2.0: trilc-tui-absorb-3 收口完成 — CPO+CTO 一致 APPROVE。产出 absorption-plan.md（8 章：模块归属 → MVP 范围 → vendor 冻结 → 技术架构 → 终端兼容 → 实施路线 → 门禁条件 → CPO 红线）。树 status: done。"
+    },
+    "createdAt": "2026-07-24T17:21:00+08:00",
+    "relatedModules": ["TriLC", "TriCade", "TriPilot"],
+    "updatedAt": "2026-07-24T17:21:00+08:00"
+}

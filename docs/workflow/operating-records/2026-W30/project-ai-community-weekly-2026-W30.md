@@ -324,3 +324,57 @@ Windows MSI 安装的核心规则：
 - `candle.exe`：编译 `.wxs` → `.wixobj`
 - `light.exe`：链接 `.wixobj` → `.msi`，同时执行 ICE 校验
 - WiX 变量通过 `-dVarName=value` 传入，在 `.wxs` 中用 `$(var.VarName)` 引用
+
+
+### 2.6 Copilot CLI `Set-Content` UTF-8 损坏事故：`.github/agents` → `.claude/agents` 同步乱码
+
+#### 事故现象
+
+2026-07-25，将 `TriMetaverse/.github/agents/` 下 16 个含中文的 agent 文件复制到 `TriMetaverse/.claude/agents/`，并做 Copilot→Claude 工具名映射（`read→Read` 等）。文件在本地打开看起来正常，但 Claude Code 的 `/agents` 命令完全发现不了这 16 个 agent——YAML frontmatter 中的中文 description 被静默跳过，schema 验证失败。
+
+#### 根因
+
+罪魁祸首是这条 PowerShell 命令：
+
+```powershell
+Set-Content $outPath -Value $content -NoNewline
+```
+
+**`Set-Content` 在 Windows PowerShell 5.1 下的默认编码是 ASCII/ANSI（当前系统代码页），不是 UTF-8。** 对纯 ASCII 字符（YAML 的 `---`、`name:`、`tools:` 等）输出正确，但中文字符的第三字节（如 `贾` → UTF-8 `\xe8\xb4\xbe`，第三字节 `\xbe`）被 ANSI 代码页无法映射，替换为 `0x3f`（即 `?`）。
+
+文件损毁路径：
+```
+内存中的字符串（UTF-16）→ Set-Content（默认 ANSI 编码）→ 磁盘上的文件（损坏的 ANSI）
+→ Claude Code YAML parser 读文件 → description 字段乱码 → schema 验证失败 → agent 静默跳过
+```
+
+#### 正确做法
+
+```powershell
+# 方案 A：指定 UTF-8
+Set-Content $outPath -Value $content -Encoding UTF8 -NoNewline
+
+# 方案 B：用 Out-File（显式编码）
+$content | Out-File -FilePath $outPath -Encoding utf8 -NoNewline
+
+# 方案 C（推荐）：跨平台安全的 Node.js
+node -e "require('fs').writeFileSync(process.argv[1], process.argv[2], 'utf8')" "$outPath" "$content"
+```
+
+#### 与 W30 其他编码问题的关联
+
+| 事故 | 命令 | 问题 |
+|------|------|------|
+| `trilc.cmd` LF 行尾（§2.4 第四阶段） | `cat` 在 Git Bash 写文件 | LF 行尾在 Windows cmd.exe 无法执行 |
+| `Set-Content` UTF-8 损坏（本事故） | `Set-Content` 无 `-Encoding` | ANSI 代码页吞中文第三字节 |
+| **共性** | Windows 默认文本处理路径 | Windows 不默认 UTF-8，每一步都需要显式指定编码 |
+
+#### AI 自查条目（追加到 §2.4 的 AI 自查清单）
+
+```
+9. 在 Windows 上用 PowerShell 写文本文件时，Set-Content 默认不是 UTF-8。
+  必须显式加 -Encoding UTF8，或改用 Out-File -Encoding utf8，或走 Node.js fs.writeFileSync。
+10. 验证文件编码：用 xxd/hexdump 检查前几个非 ASCII 字符的字节，或 node -e
+   "require('fs').readFileSync(p).includes('贾')" — 肉眼看到 "乱码"
+   不等于编码正确，0x3f 在多数编辑器里显示为同一个 "？" 而看不出异常。
+```

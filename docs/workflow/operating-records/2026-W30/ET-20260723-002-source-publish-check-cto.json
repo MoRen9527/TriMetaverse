@@ -1,0 +1,111 @@
+{
+  "objectType": "ENGINEERING_TASK",
+  "objectId": "ET-20260723-002",
+  "title": "CLI source_publish_check 技术方案 — CTO 评估",
+  "status": "closed",
+  "closedAt": "2026-07-24T02:54:00+08:00",
+  "resolution": "带条件 APPROVE — Phase 1 半自动 2.5 人天（本周可交付）：CLI + diff 引擎（file-hash + git-diff + CodeGraph + JSON-diff）+ manifest 工具 + 自检报告。Phase 2 全自动 +5.5 人天。推荐 Phase 1 先启动，周五→周一交付。",
+  "priority": "high",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "createdAt": "2026-07-23T23:20:00+08:00",
+  "updatedAt": "2026-07-24T02:47:00+08:00",
+  "timebox": {
+    "scope": "deadline",
+    "startAt": "2026-07-24T02:47:00+08:00",
+    "endAt": "2026-07-24T23:59:00+08:00",
+    "label": "W30 周五前技术评估（硬上限 W31 周一 7/27）"
+  },
+  "summary": "CEO 已批准 TriCompany 模块 agent 方案，其中源侧→发布侧同步链路需要新增 CLI 命令 source_publish_check。现需 CTO 评估技术方案：能否复用 employee_host_publish 架构、工作量估算、是否用 CodeGraph 辅助 diff 检测。",
+  "relatedModules": ["TriCompany", "TriMetaverse"],
+  "dependsOn": [
+    "CEO 2026-07-23 指令：源侧→发布侧同步链路应由 CLI 执行、agent 收口",
+    "总助（小贾）设计方案已出：触发层(TriCompany agent) → 执行层(CLI) → 收口层(TriCompany agent)",
+    "CPO 产品范围审批（ET-20260723-001）并行进行中"
+  ],
+  "evidence": [
+    {
+      "source": "TriCompany/runtime/cognition/employee_host_publish.py",
+      "kind": "source-code",
+      "note": "现有员工对象发布 CLI，可复用架构参考"
+    },
+    {
+      "source": "TriCompany/runtime/cognition/host_object_generation.py",
+      "kind": "source-code",
+      "note": "HostObjectSetDefinition 与 DECLARED_HOST_OBJECT_SETS，已覆盖 13 个员工 generator"
+    },
+    {
+      "source": "TriCompany/.github/source-agents/registries/trimetaverse-live-agent-publish-manifest.json",
+      "kind": "manifest",
+      "note": "现有发布清单，定义哪些源侧 agent 发布到哪些 live entry"
+    },
+    {
+      "source": "TriCompany/docs/workflow/host-object-publish-flow.md",
+      "kind": "workflow",
+      "note": "现有 11 步员工生命周期发布流程，§3.1 模块 registry agent 迁移门禁"
+    },
+    {
+      "source": "TriMetaverse/docs/registry/company-governance-state.md",
+      "kind": "governance",
+      "note": "第 65 行发布侧同步后置硬规则（当前仅手工规则，需升级为 CLI 驱动）"
+    },
+    {
+      "source": "TriMetaverse/docs/registry/code-state.md",
+      "kind": "governance",
+      "note": "第 72-80 行 CodeGraph 刷新纪律"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "2026-07-23 CEO 已批准方案"
+    }
+  ],
+  "payload": {
+    "implementationScope": [
+      "评估在 runtime/cognition/ 下新增 source_publish_check.py 的技术可行性",
+      "评估能否复用 employee_host_publish 的架构（HostObjectSetDefinition、manifest 更新逻辑、diff 检测）",
+      "估算工作量（人天）",
+      "评估是否使用 CodeGraph 辅助 diff 检测源侧变更"
+    ],
+    "taskBreakdown": [
+      "CTO 审阅总助完整分析报告（2026-07-23 对话中）",
+      "CTO 确认以下技术问题：",
+      "  Q1: employee_host_publish 的 generator 架构能否扩展为通用源侧→发布侧同步引擎？需要改动多少？",
+      "  Q2: 新增 source_publish_check CLI 的工作量估算（轻量版：手工检查 + agent 辅助 vs 完整版：自动 diff + 自动同步）？",
+      "  Q3: 是否走 CodeGraph 辅助 diff 检测源侧变更？（代码结构变更用 CodeGraph，文档变更用 git diff / file hash）？",
+      "  Q4: 短期（Phase 1）是否可以先做半自动模式：agent 触发 → CLI 生成 diff 报告 → agent 收口 → 手工执行同步？",
+      "  Q5: publish-manifest.json 是否需要扩展字段以支持非员工对象的同步（如 registry agent、文档 published-copy）？",
+      "CTO 输出技术评估结论 + 工作量估算"
+    ],
+    "testRequirements": [
+      "如进入实现阶段：source_publish_check 需附带单元测试（覆盖 diff 检测、manifest 更新、自检报告生成）"
+    ],
+    "releaseRequirements": [
+      "CTO 技术评估结论明确（可行/不可行/有条件可行）",
+      "工作量估算（含分阶段建议）",
+      "如可行：给出推荐实现路径"
+    ],
+    "rollbackPlan": "技术评估阶段无需回滚。如评估不可行，由总助协调升级 CEO 寻找替代方案。",
+    "technicalRisks": [
+      "employee_host_publish 当前只覆盖员工对象（role/employee workspace），扩展为通用同步引擎需要架构评审",
+      "CodeGraph 只覆盖现役代码模块的结构性变更，文档类变更不适用 CodeGraph，需要另做 file hash / git diff 方案",
+      "半自动模式可能导致 agent 判断与 CLI 执行之间的状态不一致"
+    ],
+    "docsInitializationRequirements": [],
+    "docsBootstrapRefs": [
+      "TriCompany/runtime/cognition/employee_host_publish.py",
+      "TriCompany/runtime/cognition/host_object_generation.py",
+      "TriCompany/docs/workflow/host-object-publish-flow.md",
+      "TriMetaverse/docs/registry/code-state.md §CodeGraph 刷新纪律"
+    ]
+  },
+  "metadata": {
+    "template": false,
+    "templateVersion": "v1",
+    "handoffSource": "CEOChiefOfStaff",
+    "handoffTarget": "ChiefTechnologyOfficer",
+    "linkedNextAction": "NA-20260723-CTO-001",
+    "routingNote": "纯技术评估，不涉及产品范围裁决。CTO 只需评估技术可行性和工作量。如需 FullStackDeveloper 小全辅助估算，可自行分派二级任务。"
+  }
+}

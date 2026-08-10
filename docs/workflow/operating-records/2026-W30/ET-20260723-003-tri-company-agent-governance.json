@@ -1,0 +1,104 @@
+{
+  "objectType": "ENGINEERING_TASK",
+  "objectId": "ET-20260723-003",
+  "title": "TriCompany.agent.md 新 module-local agent 上线治理审批 — CAO / CompanyGovernanceRegistry",
+  "status": "closed",
+  "closedAt": "2026-07-24T02:54:00+08:00",
+  "resolution": "APPROVE — 4 条上线纪律：(1) 禁止双活：TriMetaverse/.github/agents/ 下不得存在同名文件 (2) manifest 必登记：trimetaverse-live-agent-publish-manifest.json 新增条目 (3) 退役必记录：任何下线必须在 governance-state.md 留痕 (4) 六步回填：上线后走 host-object-publish-flow.md §3.1 完整门禁。不触发 CHO 审批门（非人格模块 agent）。",
+  "priority": "high",
+  "ownerRole": "ChiefAdministrativeOfficer",
+  "createdAt": "2026-07-23T23:20:00+08:00",
+  "updatedAt": "2026-07-24T02:47:00+08:00",
+  "timebox": {
+    "scope": "deadline",
+    "startAt": "2026-07-24T02:47:00+08:00",
+    "endAt": "2026-07-24T23:59:00+08:00",
+    "label": "W30 周五前治理审批（硬上限 W31 周一 7/27）"
+  },
+  "summary": "CEO 已批准新建 TriCompany 模块级 orchestrator agent（TriCompany.agent.md），位于 TriCompany/.github/agents/（模块侧 canonical live entry）。现需 CAO / CompanyGovernanceRegistry 对其上线做治理审批：确认发布纪律归属、discovery 唯一性、与现有 15 模块 registry agent 迁移门禁的兼容性。",
+  "relatedModules": ["TriCompany", "TriMetaverse"],
+  "dependsOn": [
+    "CEO 2026-07-23 指令：创建 TriCompany 模块级 agent",
+    "总助（小贾）设计方案已出：agent 位于 TriCompany/.github/agents/TriCompany.agent.md（模块侧 live entry）",
+    "CPO 产品范围审批（ET-20260723-001）并行进行中",
+    "CTO 技术评估（ET-20260723-002）并行进行中"
+  ],
+  "evidence": [
+    {
+      "source": "TriMetaverse/docs/registry/company-governance-state.md",
+      "kind": "governance",
+      "note": "第 33 行：CAO 管理 CompanyGovernanceRegistry 与 agent 发布纪律；第 46 行：live entry 与源侧五件套关系；第 50 行：上岗审批门；第 52 行：模块 registry agent 迁移规则；第 65 行：发布侧同步后置硬规则；第 139 行：源侧/发布侧区域划分"
+    },
+    {
+      "source": "TriCompany/docs/workflow/host-object-publish-flow.md",
+      "kind": "workflow",
+      "note": "§3.1 模块 registry agent 迁移门禁：6 步迁移顺序，确保单一 discovery target"
+    },
+    {
+      "source": "TriCompany/.github/source-agents/registries/",
+      "kind": "source-agents",
+      "note": "现有 registries/ 下 51 个模块 registry agent 源侧定义 + trimetaverse-live-agent-publish-manifest.json"
+    },
+    {
+      "source": "TriCompany/.github/agents/",
+      "kind": "live-agents",
+      "note": "现有 TriCompanyBusinessStrategyRegistry / ProductRegistry / CodeRegistry 三个 live entry"
+    },
+    {
+      "source": "TriMetaverse/.github/agents/",
+      "kind": "live-agents",
+      "note": "中央 16 个 live agent entry，确认无同名 TriCompany.agent.md 冲突"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "2026-07-23 CEO 已批准方案，指令立即发路由包"
+    }
+  ],
+  "payload": {
+    "implementationScope": [
+      "审批 TriCompany.agent.md 作为新 module-local agent 的治理合规性",
+      "确认其发布纪律归属 CAO 侧监督",
+      "确认 discovery 唯一性：不与 TriMetaverse/.github/agents/ 或其他模块 .github/agents/ 冲突",
+      "确认与现有模块 registry agent 迁移门禁（host-object-publish-flow.md §3.1）兼容"
+    ],
+    "taskBreakdown": [
+      "CAO / CompanyGovernanceRegistry 审阅总助完整分析报告（2026-07-23 对话中）",
+      "确认以下治理问题：",
+      "  Q1: TriCompany.agent.md 作为 module-local agent（非人格、非员工），上线是否需要走 CHO 上岗审批门（company-governance-state.md 第 50 行）？",
+      "  Q2: 还是仅需 CAO 侧发布纪律审批（因为它是模块 agent 而非员工角色）？",
+      "  Q3: 发布纪律归属：TriCompany agent 执行的源侧→发布侧同步是否纳入 CAO 侧监管？是否需要在 company-governance-state.md 中新增一条发布纪律规则？",
+      "  Q4: discovery 唯一性检查：TriMetaverse/.github/agents/ 下是否存在同名文件？其他模块是否已有 TriCompany.agent.md？",
+      "  Q5: publish manifest 更新：是否需要在 trimetaverse-live-agent-publish-manifest.json 中为 TriCompany.agent.md 新增条目？",
+      "CAO 输出 APPROVE / FREEZE / 治理条件"
+    ],
+    "testRequirements": [],
+    "releaseRequirements": [
+      "CAO 审批结论明确",
+      "如 APPROVE：在 company-governance-state.md 中记录新 agent 上线与发布纪律归属",
+      "确认 publish manifest 登记完整"
+    ],
+    "rollbackPlan": "如 CAO FREEZE：暂停 agent 上线，等待治理条件满足。已创建的源侧定义文件保留但标记为 draft。",
+    "technicalRisks": [
+      "如 CHO 审批门（第 50 行）被解读为覆盖所有 agent（含非人格 module agent），可能与 CAO 发布纪律审批产生双重门禁",
+      "如 discovery 文件未清理干净，可能出现同名双活"
+    ],
+    "docsInitializationRequirements": [],
+    "docsBootstrapRefs": [
+      "TriMetaverse/docs/registry/company-governance-state.md",
+      "TriCompany/docs/workflow/host-object-publish-flow.md §3.1",
+      "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md §4.12",
+      "TriCompany/.github/source-agents/registries/trimetaverse-live-agent-publish-manifest.json"
+    ]
+  },
+  "metadata": {
+    "template": false,
+    "templateVersion": "v1",
+    "handoffSource": "CEOChiefOfStaff",
+    "handoffTarget": "ChiefAdministrativeOfficer",
+    "linkedNextAction": "NA-20260723-CAO-001",
+    "routingNote": "治理审批 + 发布纪律确认。本 agent 是非人格 module-local agent，不走员工上岗五件套流程，仅需 CAO 侧发布纪律审批。如涉及模糊地带（是否需要 CHO 审批门），请 CAO 与 CHO 协商后裁定。"
+  }
+}

@@ -92,6 +92,9 @@ Step "Assembling TriLC → staging/trilc/"
 Copy-Item -Recurse -Force $TriLCPath\dist         $StagingDir\trilc\
 Copy-Item -Recurse -Force $TriLCPath\node_modules $StagingDir\trilc\ -ErrorAction SilentlyContinue
 Copy-Item -Force       $TriLCPath\package.json    $StagingDir\trilc\
+# F1-fix: generate version.json so TRILC_VERSION reads correctly at runtime
+$VersionJson = @{ version = "1.0.0" } | ConvertTo-Json -Compress
+Set-Content -Path (Join-Path $StagingDir "trilc\version.json") -Value $VersionJson -Encoding UTF8
 Ok
 
 # ── 7. Assemble TriCode ──

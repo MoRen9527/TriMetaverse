@@ -7379,6 +7379,9 @@ class TripilotChatViewProvider implements vscode.WebviewViewProvider {
 				<div class="topbarTitle">聊天</div>
 			</div>
 			<div class="topbarRight">
+				<button class="icon ghost" id="btnHistory" aria-label="历史记录" title="历史记录">
+					<span class="codicon codicon-history"></span>
+				</button>
 				<button class="icon ghost" id="btnTopNew" aria-label="New" title="New">
 					<span class="codicon codicon-add"></span>
 					<span class="codicon codicon-chevron-down"></span>
@@ -7404,26 +7407,6 @@ class TripilotChatViewProvider implements vscode.WebviewViewProvider {
 				<button class="menuItem" data-action="showChatDebug" role="menuitem">显示聊天调试视图</button>
 				<button class="menuItem" data-action="defaultView" role="menuitem">默认显示视图</button>
 			</div>
-		</div>
-
-		<div class="sessions" id="sessions" role="region" aria-label="Sessions">
-			<div class="sessionNav hidden" id="sessionNav" role="toolbar" aria-label="Session navigation">
-				<button class="icon ghost" id="btnSessionBack" aria-label="Back" title="Back">
-					<span class="codicon codicon-arrow-left"></span>
-				</button>
-				<div class="sessionNavTitle" id="sessionNavTitle"></div>
-			</div>
-			<div class="sessionsHeader">
-				<div class="sessionsHeaderLeft" id="sessionsHeaderText">RECENT SESSIONS</div>
-				<div class="sessionsHeaderRight" id="sessionsHeaderActions">
-					<button class="icon ghost hidden" id="btnSessionsRefresh" aria-label="Refresh" title="Refresh"><span class="codicon codicon-refresh"></span></button>
-					<button class="icon ghost hidden" id="btnSessionsSearch" aria-label="Search" title="Search"><span class="codicon codicon-search"></span></button>
-					<button class="icon ghost hidden" id="btnSessionsFilter" aria-label="Filter" title="Filter"><span class="codicon codicon-filter"></span></button>
-					<button class="icon ghost" id="btnSessionsView" aria-label="View" title="View"><span class="codicon codicon-layout"></span></button>
-				</div>
-			</div>
-			<div class="sessionsList" id="sessionsList"></div>
-			<button class="sessionsToggle ghost" id="btnSessionsToggle">Show All Sessions</button>
 		</div>
 
 		<div class="approval hidden" id="approval" role="region" aria-label="Edit approval">
@@ -7493,6 +7476,34 @@ class TripilotChatViewProvider implements vscode.WebviewViewProvider {
 			</div>
 		</div>
 		<div class="status" id="status"></div>
+	</div>
+	<!-- Sessions overlay: Copilot-like slide-in panel, 默认 hidden -->
+	<div class="sessionsOverlay hidden" id="sessionsOverlay" role="region" aria-label="会话历史">
+		<div class="sessionsOverlayHeader">
+			<span class="sessionsOverlayTitle">会话历史</span>
+			<button class="icon ghost" id="btnSessionsOverlayClose" aria-label="关闭" title="关闭">
+				<span class="codicon codicon-close"></span>
+			</button>
+		</div>
+		<div class="sessions" id="sessions" role="region" aria-label="Sessions">
+			<div class="sessionNav hidden" id="sessionNav" role="toolbar" aria-label="Session navigation">
+				<button class="icon ghost" id="btnSessionBack" aria-label="Back" title="Back">
+					<span class="codicon codicon-arrow-left"></span>
+				</button>
+				<div class="sessionNavTitle" id="sessionNavTitle"></div>
+			</div>
+			<div class="sessionsHeader">
+				<div class="sessionsHeaderLeft" id="sessionsHeaderText">RECENT SESSIONS</div>
+				<div class="sessionsHeaderRight" id="sessionsHeaderActions">
+					<button class="icon ghost hidden" id="btnSessionsRefresh" aria-label="Refresh" title="Refresh"><span class="codicon codicon-refresh"></span></button>
+					<button class="icon ghost hidden" id="btnSessionsSearch" aria-label="Search" title="Search"><span class="codicon codicon-search"></span></button>
+					<button class="icon ghost hidden" id="btnSessionsFilter" aria-label="Filter" title="Filter"><span class="codicon codicon-filter"></span></button>
+					<button class="icon ghost" id="btnSessionsView" aria-label="View" title="View"><span class="codicon codicon-layout"></span></button>
+				</div>
+			</div>
+			<div class="sessionsList" id="sessionsList"></div>
+			<button class="sessionsToggle ghost" id="btnSessionsToggle">Show All Sessions</button>
+		</div>
 	</div>
 	<script nonce="${nonce}" src="${scriptUri}"></script>
 </body>

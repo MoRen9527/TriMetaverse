@@ -132,8 +132,13 @@
   const btnTopNewEl = document.getElementById('btnTopNew');
   const btnTopSettingsEl = document.getElementById('btnTopSettings');
   const btnTopMoreEl = document.getElementById('btnTopMore');
+  const btnHistoryEl = document.getElementById('btnHistory');
   const topNewMenuEl = document.getElementById('topNewMenu');
   const topMoreMenuEl = document.getElementById('topMoreMenu');
+
+  // Sessions overlay
+  const sessionsOverlayEl = document.getElementById('sessionsOverlay');
+  const btnSessionsOverlayCloseEl = document.getElementById('btnSessionsOverlayClose');
 
   // Sessions
   const sessionsEl = document.getElementById('sessions');
@@ -274,7 +279,6 @@
   let sessionsUiMode = 'auto'; // 'auto' | 'list' | 'detail'
   let detailSessionId = null;
 
-  let cachedSessionRowHeight = null;
   let renderSessionsRaf = 0;
 
   let subagentTreeWrapEl = null;
@@ -1120,48 +1124,11 @@
     renderReplayConsole();
   }
 
-  function measureSessionRowHeight() {
-    if (cachedSessionRowHeight) return cachedSessionRowHeight;
-    if (!sessionsEl) return 44;
-    const row = document.createElement('div');
-    row.className = 'sessionRow';
-    row.style.position = 'absolute';
-    row.style.visibility = 'hidden';
-    row.style.left = '-9999px';
-    row.innerHTML = `
-      <div class="sessionMain">
-        <div class="sessionTitle">(无标题)</div>
-        <div class="sessionMeta">本地 · 刚刚 · 预览</div>
-      </div>
-      <div class="sessionActions"></div>
-    `;
-    sessionsEl.appendChild(row);
-    const h = Math.max(36, Math.round(row.getBoundingClientRect().height || 44));
-    row.remove();
-    cachedSessionRowHeight = h;
-    return h;
-  }
-
   function getRecentSessionsLimit() {
-    // Compute how many session rows we can show while keeping a minimum chat area visible.
-    // This is intentionally heuristic but stable across window sizes.
-    const topbarH = document.querySelector('.topbar')?.getBoundingClientRect().height ?? 0;
-    const composerH = document.querySelector('.composer')?.getBoundingClientRect().height ?? 0;
-    const approvalH = approvalEl && !approvalEl.classList.contains('hidden') ? (approvalEl.getBoundingClientRect().height ?? 0) : 0;
-    const minMessagesH = 180;
-    const availableForSessionsTotal = Math.max(0, window.innerHeight - topbarH - approvalH - composerH - minMessagesH);
-
-    const navOrHeaderH = (sessionNavEl && !sessionNavEl.classList.contains('hidden'))
-      ? (sessionNavEl.getBoundingClientRect().height ?? 0)
-      : (sessionsHeaderEl?.getBoundingClientRect().height ?? 0);
-    const toggleH = (btnSessionsToggleEl && !btnSessionsToggleEl.classList.contains('hidden'))
-      ? (btnSessionsToggleEl.getBoundingClientRect().height ?? 0)
-      : 0;
-    const paddingAndGaps = 20;
-    const availableListH = Math.max(0, availableForSessionsTotal - navOrHeaderH - toggleH - paddingAndGaps);
-    const rowH = measureSessionRowHeight();
-    const limit = Math.floor(availableListH / rowH);
-    return Math.max(1, Math.min(12, limit || 1));
+    // Overlay mode: sessions panel has independent scroll, no need to limit rows.
+    // Always return the full session count.
+    const all = Array.isArray(sessionState.sessions) ? sessionState.sessions : [];
+    return Math.max(1, all.length || 1);
   }
 
   // Continue is only available when the last rendered message is assistant and we're not busy.
@@ -1926,8 +1893,6 @@
     const max = 160;
     const next = Math.min(inputEl.scrollHeight, max);
     inputEl.style.height = `${next}px`;
-	// Composer height can change, which affects the space available for sessions.
-	if (sessionsMode === 'recent') scheduleRenderSessions();
   }
 
   sendEl.addEventListener('click', () => {
@@ -2268,6 +2233,39 @@
 
   btnTopSettingsEl?.addEventListener('click', () => uiAction('openSettings'));
 
+  // --- Sessions overlay toggle (Copilot-like) ---
+  function openSessionsOverlay() {
+    if (!sessionsOverlayEl) return;
+    sessionsOverlayEl.classList.remove('hidden');
+    // Focus trap: focus the close button so keyboard users can dismiss.
+    setTimeout(() => {
+      try { btnSessionsOverlayCloseEl?.focus(); } catch { /* ignore */ }
+    }, 0);
+  }
+
+  function closeSessionsOverlay() {
+    if (!sessionsOverlayEl) return;
+    sessionsOverlayEl.classList.add('hidden');
+  }
+
+  function toggleSessionsOverlay() {
+    if (!sessionsOverlayEl) return;
+    if (sessionsOverlayEl.classList.contains('hidden')) {
+      openSessionsOverlay();
+    } else {
+      closeSessionsOverlay();
+    }
+  }
+
+  btnHistoryEl?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleSessionsOverlay();
+  });
+
+  btnSessionsOverlayCloseEl?.addEventListener('click', () => {
+    closeSessionsOverlay();
+  });
+
   agentMenuEl?.addEventListener('click', (e) => {
     const target = e.target;
     if (!target || !target.dataset) return;
@@ -2373,7 +2371,7 @@
     }
 
     const all = Array.isArray(sessionState.sessions) ? sessionState.sessions : [];
-		const recentLimit = sessionsMode === 'recent' ? getRecentSessionsLimit() : all.length;
+		const recentLimit = sessionsMode === 'recent' ? all.length : all.length;
     const visible = sessionsMode === 'recent' ? all.slice(0, recentLimit) : all;
 
     const activeSession = all.find((s) => !!s.isActive);
@@ -2504,8 +2502,7 @@
   });
 
   window.addEventListener('resize', () => {
-    // Recompute recent sessions limit on resize.
-    if (sessionsMode === 'recent') scheduleRenderSessions();
+    // Overlay mode: no need to recompute session limits on resize.
   });
 
   btnSessionsRefreshEl?.addEventListener('click', () => uiAction('requestSessions'));
@@ -2534,6 +2531,13 @@
     if (hashSuggest.open && hashSuggestEl && target && hashSuggestEl.contains(target)) return;
     if (hashSuggest.open && inputEl && target === inputEl) return;
 
+    // Keep sessions overlay interactive — close only when clicking outside.
+    if (sessionsOverlayEl && !sessionsOverlayEl.classList.contains('hidden')) {
+      if (target && sessionsOverlayEl.contains(target)) return;
+      if (target === btnHistoryEl) return;
+      closeSessionsOverlay();
+    }
+
     // Keep menus interactive.
     if (
       target && (
@@ -2552,12 +2556,20 @@
   }, true);
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
+      // Close sessions overlay first if open.
+      if (sessionsOverlayEl && !sessionsOverlayEl.classList.contains('hidden')) {
+        closeSessionsOverlay();
+        return;
+      }
       hideMenus();
       hideHashSuggest();
     }
   });
 
   inputEl.addEventListener('keydown', (e) => {
+    // IME 合成中（如中文拼音选词）时把按键交给输入法，不拦截 Enter/方向键，
+    // 否则会打断候选确认并把半成品拼音直接当作消息发出。
+    if (e.isComposing || e.keyCode === 229) return;
     if (hashSuggest.open) {
       if (e.key === 'ArrowDown') {
         e.preventDefault();
