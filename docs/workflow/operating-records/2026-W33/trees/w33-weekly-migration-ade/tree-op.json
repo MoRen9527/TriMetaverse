@@ -1,0 +1,75 @@
+{
+    "treeId": "w33-weekly-migration-ade",
+    "title": "周平面迁移自动化 — 完整 ADE 五段闭环投产",
+    "source": "W32 w33-cron-selfdev Track C (w33-6 weekly-plane CLI 规格) → W33 落地实现",
+    "week": "2026-W33",
+    "status": "done",
+    "verdict": "ALL PASS — 2026-08-09 23:59 cron 自动触发完整链路验证通过 (W33 创建 + W32 retire + 邮件收到 + 通知推送 + cron ok)",
+    "completedAt": "2026-08-10T00:05:00+08:00",
+    "nodes": [
+        {
+            "nodeId": "w33-ade-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "紧急任务路由 (CEO 2026-08-06 裁决): TriCade 定时周平面迁移, 遵循完整 ADE 定义 (Agent plans → Deterministic CLI executes → Agent closes). 结合 W32 w33-cron-selfdev Track C 的 weekly-plane CLI 规格落地. 今晚 23:59 前完成."
+        },
+        {
+            "nodeId": "w33-ade-1",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "TriLC cron command 执行模式 (REQ-019): CronJob.command 字段 + store schema/ALTER + timer executeCommand (cmd spawn) + cli --command flag + update --command + nextRunAt 重算 + every 大间隔换算. 195 tests pass."
+        },
+        {
+            "nodeId": "w33-ade-2",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "weekly_plane CLI 修复 (A1-A4): _parse_week 解包 / _index_object_id 缺参 / migrate 旧 schema 兼容 / 跨年搜索. 新增 weekly_plane_shift.py: create→migrate→carry_over→validate→agent_close 五段链 + .shift-ade.json 操作记录."
+        },
+        {
+            "nodeId": "w33-ade-3",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "agent close review (REQ-020 ④): review_shift 验证新周 active + unresolved 存在 + 8w 升级清单提取."
+        },
+        {
+            "nodeId": "w33-ade-4",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "tri-weekly-shift skill (REQ-020 ②): TriSkill 新增规划 skill (小贾专用), 标准化读 OP→算 carry-over→产出迁移计划 JSON→交接 CLI. tri-ask 路由注册."
+        },
+        {
+            "nodeId": "w33-ade-5",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "notify 通用模块 (CPO/CTO 裁决): TriCompany runtime/cognition/notify.py (SMTP best-effort + audit + CLI), 配置文件 ~/.trimetaverse/notify.json (NOTIFY_CONFIG env), default_to fallback. weekly_plane_shift 调 notify (业务内容组装保留调用方)."
+        },
+        {
+            "nodeId": "w33-ade-6",
+            "agent": "FullStackDeveloper",
+            "status": "done",
+            "action": "TriLC 通知端点 (REQ-021): POST/GET /internal/v1/notifications + chat TUI 显示 (注入初始消息, 修复 Ink 首帧). 迁移完成后推送 + 邮件."
+        },
+        {
+            "nodeId": "w33-ade-7",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "TriGateway 定位更正 (REQ-022): 双向通信通道层 (管理者↔agent 对话 + agent 推送, 对齐 OpenClaw channel 模型), 非获客/拉新. 邮件为单向通知归 TriCompany notify (OpenClaw 通道列表无 email)."
+        },
+        {
+            "nodeId": "w33-ade-8",
+            "agent": "TestEngineer",
+            "status": "done",
+            "action": "全链路验证 (2026-08-09 23:59 cron 自动触发): W33 创建 (OP+unresolved+shift-ade status pass) + W32 retire + 邮件收到 (notify sent) + TriLC 通知推送 (chat 显示) + cron status ok. 修复链: os import 缺失 / 绝对 python 路径 / NOTIFY_CONFIG / nextRunAt 重算."
+        }
+    ],
+    "related_trees": [
+        "w33-cron-selfdev (W32) — weekly-plane CLI 规格源",
+        "w32-dual-track-kickoff (W32) — 双轨方案载体"
+    ],
+    "reqs_completed": [
+        "REQ-20260806-019: cron command 执行模式",
+        "REQ-20260806-020: 完整 ADE 五段闭环 (①②③④⑤)",
+        "REQ-20260806-021: TriPilot/trilc chat 迁移完成推送 (chat 侧完成, TriPilot 侧待后续)",
+        "REQ-20260806-022: TriGateway 定位更正"
+    ]
+}
