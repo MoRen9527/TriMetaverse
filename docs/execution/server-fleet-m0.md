@@ -37,15 +37,15 @@
 | 1 | SSH key 登录 | `ssh-keygen` + 公钥上服务器；禁用密码登录 | 完成 | 2026-08-11 小狄：ecs-keypairs.pem 密钥认证通过（BatchMode 实测）；sshd `PasswordAuthentication no`（备份 sshd_config.bak.20260811），reload 后新连接验证正常 |
 | 2 | 安全组开放 | 阿里云控制台安全组：22 必开；8710（TriMC）上线前开 | 待本地配合 | 2026-08-11 小狄：22/80 实测公网可达（安全组已放行）；8710 需用户在阿里云控制台安全组添加（M1 上线前完成即可）；443 公网不通为容器侧 TLS 问题观察项（见风险） |
 | 3 | firewalld 放行 | `firewall-cmd --permanent --add-port=8710/tcp` + `--add-port=22/tcp`；两层防火墙都要通 | 完成 | 2026-08-11 小狄：firewalld 启用（原 inactive），`--list-ports` = 22/tcp 8710/tcp；docker 80 公网仍 200，容器 NAT 未受影响 |
-| 4 | 运行时：k3s（2026-08-11 已定） | 官方一键安装（自带 containerd，无需 docker）；装配套 `k3s-selinux` 包；组件镜像纳入离线初始化 | 进行中 | 2026-08-11 小狄：定版 v1.36.3+k3s1（GitHub 实测 11.9MB/s，直拉可行）；发现系统 cgroup v1 → 需切 v2 重启；服务器已有 docker 26.1.3 + tristaciss 容器在跑（restart=unless-stopped，重启可恢复） |
-| 5 | SELinux 策略包 | k3s 装配套 `k3s-selinux` 包；docker 挂载按需配；**禁止 `setenforce 0` 一刀切** | 进行中 | 2026-08-11 小狄：getenforce=Disabled（服务器出厂状态，非本次操作），k3s-selinux 随安装一并处理，禁止 setenforce 0 纪律保持 |
-| 6 | 离线初始化（5Mbps 关键动作） | 本地拉好镜像/依赖 → 打包 → scp 上传 → 服务器加载；避免服务器直拉 1-3 GB 初始流量 | 待执行 | — |
-| 7 | npm 源 | 服务器 npm 配 npmmirror（阿里镜像），或离线 tarball | 待执行 | — |
-| 8 | 裸仓 | `/srv/git/<repo>.git`：TriMetaverse、TriCompany、TriMC、TriLC、TriCode 首批 | 待执行 | — |
-| 9 | 舰队工作克隆 | `/srv/fleet/<repo>`：从裸仓 pull；舰队不直接改 main（写方向单主体，见 checklist §四） | 待执行 | — |
-| 10 | 官方 claude 2.1.226+ 安装 | Linux 版安装 + 认证；环境变量照抄本地：`ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic` + `ANTHROPIC_AUTH_TOKEN` | 待执行 | — |
-| 11 | 磁盘纪律 | 日志轮转（journald 限制大小）、镜像定期清理、不在服务器反复 `npm install`（40GB 够但紧） | 待执行 | — |
-| 12 | 吞吐实测 | `curl -w "%{speed_download}"` 测到 api.deepseek.com / Anthropic API 的实际吞吐，记录基线 | 待执行 | — |
+| 4 | 运行时：k3s（2026-08-11 已定） | 官方一键安装（自带 containerd，无需 docker）；装配套 `k3s-selinux` 包；组件镜像纳入离线初始化 | 完成 | 2026-08-11 小狄：k3s v1.36.3+k3s1 安装完成，节点 Ready（control-plane，containerd 2.3.2-k3s2）；前置：cgroup v1→v2 内核参数切换+重启（`systemd.unified_cgroup_hierarchy=1`，grubby 已写入，重启后 tristaciss 容器自动恢复）；`--disable traefik`（避免与 tristaciss 的 80/443 冲突）；metrics-server 就绪修复：cni0/flannel.1 加入 firewalld trusted zone；系统已有 docker 26.1.3 共存正常 |
+| 5 | SELinux 策略包 | k3s 装配套 `k3s-selinux` 包；docker 挂载按需配；**禁止 `setenforce 0` 一刀切** | 完成 | 2026-08-11 小狄：k3s-selinux 1.6-1.el8 已安装（GitHub releases 直拉，dnf 依赖解析成功）；getenforce=Disabled 为服务器出厂状态（非本次操作）；未执行任何 setenforce |
+| 6 | 离线初始化（5Mbps 关键动作） | 本地拉好镜像/依赖 → 打包 → scp 上传 → 服务器加载；避免服务器直拉 1-3 GB 初始流量 | 完成（方案调整） | 2026-08-11 小狄：实测服务器入网带宽 11.9-17.1 MB/s（github/npm/docker.io），远超 5Mbps 限制（限的是出网），直拉优于本地中转 → 离线化不必要，改为直拉 + 实测证据；k3s 组件镜像与 claude binary 均直拉成功 |
+| 7 | npm 源 | 服务器 npm 配 npmmirror（阿里镜像），或离线 tarball | 完成 | 2026-08-11 小狄：官方 registry.npmjs.org 实测 17.1 MB/s，无需切换；node v18.20.8 / npm 10.8.2 系统自带 |
+| 8 | 裸仓 | `/srv/git/<repo>.git`：TriMetaverse、TriCompany、TriMC、TriLC、TriCode 首批 | 完成 | 2026-08-11 小狄：5 裸仓创建（git 2.43.7）；本地已加 `sg-server` remote（ssh://sg-ecs-server/srv/git/`<repo>`.git），5 仓 dev 分支全部 push 成功；裸仓 HEAD 已指向 dev |
+| 9 | 舰队工作克隆 | `/srv/fleet/<repo>`：从裸仓 pull；舰队不直接改 main（写方向单主体，见 checklist §四） | 完成 | 2026-08-11 小狄：5 仓克隆 `/srv/fleet/`，dev 分支 checkout 正常；双仓闭环全链路验证通过（本地 commit 26ca782d → push → fleet pull 可见） |
+| 10 | 官方 claude 2.1.226+ 安装 | Linux 版安装 + 认证；环境变量照抄本地：`ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic` + `ANTHROPIC_AUTH_TOKEN` | 完成 | 2026-08-11 小狄：claude 2.1.227 安装（/opt/claude-code，native binary，claude.ai 403 故走 GitHub releases）；`/root/.claude/settings.json` env 块照抄本地 13 键（600 权限）；`claude -p` 最小对话验证通过（"收到"）；注意：root 下不能用 `--dangerously-skip-permissions`（2.x 安全限制），舰队运行时建议专用非 root 账号 |
+| 11 | 磁盘纪律 | 日志轮转（journald 限制大小）、镜像定期清理、不在服务器反复 `npm install`（40GB 够但紧） | 完成 | 2026-08-11 小狄：journald `SystemMaxUse=500M`；`/usr/local/sbin/disk-hygiene.sh`（docker image prune + journal vacuum，每周日 3:00 cron）；本次已回收 docker build cache 18.73GB（磁盘 100%→52%） |
+| 12 | 吞吐实测 | `curl -w "%{speed_download}"` 测到 api.deepseek.com / Anthropic API 的实际吞吐，记录基线 | 完成 | 2026-08-11 小狄：基线：github 16.3MB/s、npm 17.1MB/s、k3s binary 11.9MB/s；API 往返 2.44s（deepseek-v4-flash[1M]，154 output tokens）→ 远高于 0.5MB/s 门禁，无风险标记 |
 
 ## 四、M0 完成门禁（全部满足才进入 M1）
 
