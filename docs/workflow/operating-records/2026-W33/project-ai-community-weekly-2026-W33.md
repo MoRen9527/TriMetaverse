@@ -342,7 +342,7 @@ Windows 特有坑仍在：
 **里程碑门禁**：
 
 - **M0（环境）**：服务器裸仓 + 舰队工作克隆 + git 同步链路打通（`/srv/git/*.git` 接收 push + `/srv/fleet/*` 工作克隆），同步纪律见 `docs/execution/trilc-capability-checklist.md` §四
-- **M1（试点，2 周）**：服务器舰队跑通 task tree/周会自由对话；TriMC 编排层 MVP 连通官方会话（ListAgents 寻址 + SendMessage 桥接）——**状态：进行中（2026-08-11 启动）**。阶段一已完成：TriMC 部署 `/healthz` 200（tsx+systemd，k8s 化后置）；舰队自由对话实测通过（fleet-alpha/fleet-beta 双会话 ListAgents 可见 + SendMessage 双向往返 5.1s/9.0s）；编排 MVP 方案已出（session-bridge + agents 注册表 + 2 端点，估 2.5-3.5 人日），见 server-fleet-m0.md §三.7
+- **M1（试点，2 周）**：服务器舰队跑通 task tree/周会自由对话；TriMC 编排层 MVP 连通官方会话（ListAgents 寻址 + SendMessage 桥接）——**状态：阶段一+二完成（2026-08-11）**。阶段一：TriMC 部署 `/healthz` 200（tsx+systemd，k8s 化后置）；舰队自由对话实测通过（ListAgents + SendMessage 双向往返 5.1s/9.0s）。阶段二（编排 MVP）：session-bridge（spawn `claude --bg` / `claude agents --json` 采集 / `--fork-session` 消息桥 120s 超时，runuser 降权 fleet）+ 3 端点（GET/POST `/internal/v1/agents`、POST `/internal/v1/agents/{id}/message`）+ dispatchAsync 执行器接入 + task-controller 状态机回写（queued→running→completed/failed + result）；类型债清零（2 处源码修复 + noImplicitAny 放宽标注 + 依赖产物构建）；MVP 门禁 5/5 通过（注册表、消息桥回写、e2e dispatch trace 全绿 + 真实回复、重启后注册表重建、healthz 200）；已知项：bg 会话继承 trimc.service cgroup，TriMC 重启会连带杀会话（需重派，秒级）
 - **M2（能力验证期）**：TriLC 在 TriMC 监督下按 `docs/execution/trilc-capability-checklist.md` 逐项覆盖（真实研发任务驱动，不设固定时长）；并轨 TriLC 底座版本登记（当前 2.1.88）+ 每 1-2 月 rebase 审计
 - **M3（独立资格 + 生产双跑）**：能力清单全勾 + 舰队审核通过 → 生产仓 = TriLC + TriMC 互为 fallback，正式运营日
 - **M4（远期）**：自研跨会话层 + 功能覆盖验收通过 → 源码替换官方 claude → 完全自研（无产权风险）
