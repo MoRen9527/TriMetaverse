@@ -35,7 +35,7 @@
 | # | 动作 | 要点/命令 | 状态 | 完成记录 |
 | --- | --- | --- | --- | --- |
 | 1 | SSH key 登录 | `ssh-keygen` + 公钥上服务器；禁用密码登录 | 完成 | 2026-08-11 小狄：ecs-keypairs.pem 密钥认证通过（BatchMode 实测）；sshd `PasswordAuthentication no`（备份 sshd_config.bak.20260811），reload 后新连接验证正常 |
-| 2 | 安全组开放 | 阿里云控制台安全组：22 必开；8710（TriMC）上线前开 | 待本地配合 | 2026-08-11 小狄：22/80 实测公网可达（安全组已放行）；8710 需用户在阿里云控制台安全组添加（M1 上线前完成即可）；~~443 公网不通为容器侧 TLS 问题观察项~~ → 已消除：TriStaciss 已于 2026-08-11 清理下线（见文末清理记录），80/443 端口释放 |
+| 2 | 安全组开放 | 阿里云控制台安全组：22 必开；8710（TriMC）上线前开 | 完成 | 2026-08-11 小狄：8710 已由 CEO 在安全组放行；实测公网可达（服务器临时监听 8710 → 本地 curl 200 / TCP OPEN，0.16s），firewalld 侧 22/8710 此前已放行；443 观察项已消除（TriStaciss 已清理下线，见 §三.5） |
 | 3 | firewalld 放行 | `firewall-cmd --permanent --add-port=8710/tcp` + `--add-port=22/tcp`；两层防火墙都要通 | 完成 | 2026-08-11 小狄：firewalld 启用（原 inactive），`--list-ports` = 22/tcp 8710/tcp；docker 80 公网仍 200，容器 NAT 未受影响 |
 | 4 | 运行时：k3s（2026-08-11 已定） | 官方一键安装（自带 containerd，无需 docker）；装配套 `k3s-selinux` 包；组件镜像纳入离线初始化 | 完成 | 2026-08-11 小狄：k3s v1.36.3+k3s1 安装完成，节点 Ready（control-plane，containerd 2.3.2-k3s2）；前置：cgroup v1→v2 内核参数切换+重启（`systemd.unified_cgroup_hierarchy=1`，grubby 已写入，重启后 tristaciss 容器自动恢复）；`--disable traefik`（避免与 tristaciss 的 80/443 冲突）；metrics-server 就绪修复：cni0/flannel.1 加入 firewalld trusted zone；系统已有 docker 26.1.3 共存正常 |
 | 5 | SELinux 策略包 | k3s 装配套 `k3s-selinux` 包；docker 挂载按需配；**禁止 `setenforce 0` 一刀切** | 完成 | 2026-08-11 小狄：k3s-selinux 1.6-1.el8 已安装（GitHub releases 直拉，dnf 依赖解析成功）；getenforce=Disabled 为服务器出厂状态（非本次操作）；未执行任何 setenforce |
@@ -57,6 +57,13 @@
 - 释放：/var/lib/docker 7.6G → 36M；磁盘 53% → 31%（剩 26G）；80/443 端口释放。
 - 验证：k3s 节点 Ready、三系统组件 1/1、k3s/docker/firewalld 均 active，未受影响。
 - 将来进 k3s 注意点：当前 k3s 为 `--disable traefik` 安装，届时需启用 ingress 方案（k3s 默认 traefik 或部署 nginx-ingress）承载 80/443，并把 backend 的 cache/logs 卷改为 k8s PVC，.env 改 ConfigMap/Secret。
+
+## 三.6、环境配套操作（2026-08-11，CEO 指令）
+
+1. **8710 公网可达验证**：CEO 已放行安全组；服务器临时监听 8710 → 本地 curl 200（0.16s），两层防火墙全通。
+2. **WireGuard 管理隧道**：复用既有部署（2026-02-03，10.66.66.0/24，UDP 51820，勿破坏 client1），新增 client-windows peer（10.66.66.3/32）；firewalld 放行 51820/udp + wg0 入 trusted；配置备份 `/srv/backup/wireguard/`（client-windows.conf + README，含安全组 51820/udp 待办与 TriLC 控制面预留节）。
+3. **TriStaciss 备份删除**：`/srv/backup/tristaciss/`（109M）已删，磁盘 31%→30%（剩 27G）。
+4. **fleet 非 root 账号**：uid=1001，无密码、无 sudo；claude 2.1.227 可用（PATH=/opt/claude-code），settings.json 照抄 root 版（600）；`/srv/fleet` 已 chown fleet:fleet；最小对话验证通过（"舰队就绪"）。
 
 ## 四、M0 完成门禁（全部满足才进入 M1）
 
