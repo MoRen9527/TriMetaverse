@@ -61,9 +61,15 @@
 ## 三.6、环境配套操作（2026-08-11，CEO 指令）
 
 1. **8710 公网可达验证**：CEO 已放行安全组；服务器临时监听 8710 → 本地 curl 200（0.16s），两层防火墙全通。
-2. **WireGuard 管理隧道**：复用既有部署（2026-02-03，10.66.66.0/24，UDP 51820，勿破坏 client1），新增 client-windows peer（10.66.66.3/32）；firewalld 放行 51820/udp + wg0 入 trusted；配置备份 `/srv/backup/wireguard/`（client-windows.conf + README，含安全组 51820/udp 待办与 TriLC 控制面预留节）。
+2. **WireGuard 管理隧道**：~~部署~~ → **已清理（2026-08-11，CEO 确认不再使用）**：wg-quick@wg0 已 disable，`/etc/wireguard/` 已删，firewalld 移除 51820/udp + wg0 出 trusted，`/srv/backup/wireguard/` 已删，wireguard-tools 已卸载（内核模块保留）；验证 wg0 接口与 51820 监听均不存在。
 3. **TriStaciss 备份删除**：`/srv/backup/tristaciss/`（109M）已删，磁盘 31%→30%（剩 27G）。
 4. **fleet 非 root 账号**：uid=1001，无密码、无 sudo；claude 2.1.227 可用（PATH=/opt/claude-code），settings.json 照抄 root 版（600）；`/srv/fleet` 已 chown fleet:fleet；最小对话验证通过（"舰队就绪"）。
+
+## 三.7、M1 启动记录（2026-08-11，阶段一）
+
+- **TriMC 部署**（M0 门禁 3）：k8s manifests 为多副本生产形态（replicas 3 + anti-affinity + PDB，单节点 k3s 不适用）且镜像构建被 TS 类型错误阻塞（`strict` 下 dev 分支无法 `tsc` 构建）→ 按 CEO 指令走最短路径：tsx 直跑（`/usr/local/sbin/trimc-start.sh`）+ systemd 常驻（trimc.service，自启）；postgres:16-alpine 容器（127.0.0.1:5432）；依赖修复记录：TriModel 需先构建 dist、agent-core workspace 包需先构建 dist。**`/healthz` = 200（公网 0.16s，`{"ok":true,"service":"trimc"}`）**。k8s 化后置（阶段二：修类型错误 + 单节点 manifests + docker save/ctr import 镜像通道）。
+- **舰队自由对话实测**（M1 核心验证）：fleet 账号起两个后台会话 fleet-alpha（`ad45d07b-7e44-493b-8389-c5009b8a9d78`）、fleet-beta（`1542f850-4092-49d0-9058-f5dea8b09321`）；**ListAgents 通过**（`claude agents --json` 可见双 agent）；**SendMessage 双向往返通过**：beta→alpha 5.1s（alpha 回复"alpha收到beta的消息"）、alpha→beta 9.0s（beta 回复"beta收到alpha的回复"）。实现通道：bg 会话受保护不能直接 `--resume`，用 `claude -p --resume <sessionId> --fork-session <msg>`（副本语义，TriMC 编排层以此桥接）。
+- **编排 MVP 方案**（阶段二，见 CTO 回报）：session-bridge（spawn claude 子进程）+ agents 注册表 + 2 个 HTTP 端点 + dispatch-proxy 执行器接入，估计 2.5-3.5 人日。
 
 ## 四、M0 完成门禁（全部满足才进入 M1）
 
