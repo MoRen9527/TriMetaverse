@@ -4,9 +4,9 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/trilc-capability-checklist.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-13T02:00:00+08:00
+- lastSyncedAt: 2026-08-13T04:00:00+08:00
 
-> 版本：v2026.W33.10
+> 版本：v2026.W33.11
 > 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过 + 树执行协议定案（git 触发 + checkpoint 存档 + 崩溃恢复）；v2026.W33.10 M2 第七轮——3.1/3.2 工程门禁通过（r7-eng-gate 树收口，V0.6 brief 机制首战验证））
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
@@ -33,11 +33,11 @@
 
 | # | 能力项 | 通过标准 | 验证位置 | 状态 | 完成证据 |
 | --- | --- | --- | --- | --- | --- |
-| 1.1 | git 多仓操作 | 六仓 status/diff/commit/branch/merge 全程正确，无误提交、无误丢 | 服务器可验 | 未开始 | — |
-| 1.2 | 文件读写规范 | UTF-8 写入、完整绝对路径、大文件分块（周共学 2.1.6 纪律） | 服务器可验 | 未开始 | — |
-| 1.3 | 命令 spawn 与错误处理 | node/npm/ps1 调用正确，子进程失败被捕获并上报，无假阳性日志（W30 教训：不能只看 spawn 返回） | 服务器可验 | 未开始 | — |
-| 1.4 | 编码纪律 | 无 Set-Content 默认编码事故、无 LF/CRLF 混写事故（W30 2.6 教训） | 服务器可验 | 未开始 | — |
-| 1.5 | 回滚执行 | 按审核指令**精确回滚指定 commit**（`git revert <sha>` 或等价，不整仓回退）：回滚后验证工作区干净（`git status`）、相关文件恢复指定状态、回传结果与证据。"谁破坏谁回滚，批准权在审核者"——未经 TriMC 舰队批准不得自行回滚他人变更 | 服务器可验 | 未开始 | — |
+| 1.1 | git 多仓操作 | 六仓 status/diff/commit/branch/merge 全程正确，无误提交、无误丢 | 服务器可验 | **通过** | M2 第八轮（r8-base-exec）：M2 七轮 42 commits 全部规范（feat/fix/chore + Co-Authored-By）；git-six-repo-health-check.ps1 修复（5009156b：EAP NativeCommandError 中断 bug）+ 9 仓 ORIGIN_HEAD 修复；小柯独立抽查 20 commit + 重跑脚本确认 |
+| 1.2 | 文件读写规范 | UTF-8 写入、完整绝对路径、大文件分块（周共学 2.1.6 纪律） | 服务器可验 | **通过** | M2 第八轮（r8-base-exec）：树文件（tree-op.json/brief）全部 UTF-8 写入 + 绝对路径引用；小柯 Python 读取验证无编码异常、无路径违规 |
+| 1.3 | 命令 spawn 与错误处理 | node/npm/ps1 调用正确，子进程失败被捕获并上报，无假阳性日志（W30 教训：不能只看 spawn 返回） | 服务器可验 | **通过** | M2 第八轮（r8-base-exec）：shell-exec.ts 实读验证——显式 exitCode + stdout/stderr（各 10K 截断）+ timedOut + durationMs 五字段 + try/catch JSON 上报；符合 W30 教训（不只看 spawn 返回） |
+| 1.4 | 编码纪律 | 无 Set-Content 默认编码事故、无 LF/CRLF 混写事故（W30 2.6 教训） | 服务器可验 | **通过** | M2 第八轮（r8-base-exec）：8 月以来 git log 独立 grep 零 Set-Content/CRLF/编码事故关键词 |
+| 1.5 | 回滚执行 | 按审核指令**精确回滚指定 commit**（`git revert <sha>` 或等价，不整仓回退）：回滚后验证工作区干净（`git status`）、相关文件恢复指定状态、回传结果与证据。"谁破坏谁回滚，批准权在审核者"——未经 TriMC 舰队批准不得自行回滚他人变更 | 服务器可验 | **通过** | M2 第八轮（r8-base-exec）：真实演练——造 commit 87fa17c → 演练批准（授权边界明确：真实回滚他人变更仍需 TriMC 舰队批准）→ git revert 961efe1 精确单行回退 → 小柯独立复核（status 干净 / diff 空 / 无提交丢失）；小柯正确拒绝行使批准权（验证者≠审核者，角色纪律） |
 
 ### 2. 任务闭环域
 

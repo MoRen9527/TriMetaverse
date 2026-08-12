@@ -3,9 +3,9 @@
   "title": "基础执行域：git/文件/命令/编码/回滚",
   "source": "M2-R8",
   "week": "2026-W33",
-  "status": "active",
-  "verdict": "",
-  "completedAt": "",
+  "status": "done",
+  "verdict": "APPROVE — 1.1-1.5 基础执行域五项全部通过（git 多仓/文件读写/spawn 错误处理/编码纪律/回滚演练）。回滚演练授权边界执行正确。",
+  "completedAt": "2026-08-13T04:00:00+08:00",
   "nodes": [
     {
       "nodeId": "r8-0",
@@ -49,12 +49,12 @@
     {
       "nodeId": "r8-3",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口判定：1.1-1.5 通过/未过 → 清单登记 v2026.W33.11",
       "routedInput": "r8-2:checkpoint",
-      "brief": "",
+      "brief": "briefs/r8-3-20260813040000.md",
       "checkpoint": {
-        "progress": "",
+        "progress": "判定 APPROVE：1.1-1.5 全通过。清单登记 v2026.W33.11。回滚演练授权边界正确执行。",
         "artifactCommit": "",
         "resumePoint": ""
       }
