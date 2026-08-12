@@ -1,0 +1,63 @@
+{
+  "treeId": "r8-base-exec",
+  "title": "基础执行域：git/文件/命令/编码/回滚",
+  "source": "M2-R8",
+  "week": "2026-W33",
+  "status": "active",
+  "verdict": "",
+  "completedAt": "",
+  "nodes": [
+    {
+      "nodeId": "r8-0",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "建树：基线扫描 + 规划节点链",
+      "routedInput": "",
+      "brief": "briefs/r8-0-20260813023000.md",
+      "checkpoint": {
+        "progress": "基线：TriLC package-lock.json 未提交残留 (r7-1 npm install 遗留)；TriMC clean；TriCompany 有他人未提交变更 (ADE spec +305 等，不动)。agent-core 迁移已落 TriCompany (3288e13)。节点链：r8-1 小全执行 1.1-1.5 → r8-2 小柯独立验证 → r8-3 小贾收口。1.5 回滚为真实演练：造一个小变更 commit → 申请批准 → git revert → 验证干净。",
+        "artifactCommit": "",
+        "resumePoint": "树已建，r8-1 开工"
+      }
+    },
+    {
+      "nodeId": "r8-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "执行 1.1-1.5：1.1 git 多仓操作证据 + 1.2 文件读写规范证据 + 1.3 spawn 错误处理证据 + 1.4 编码纪律证据 + 1.5 回滚真实演练（造变更→申请批准→revert→验证）",
+      "routedInput": "r8-0:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r8-2",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "独立验证 1.1-1.5：证据链复核 + 回滚演练结果独立确认",
+      "routedInput": "r8-1:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r8-3",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口判定：1.1-1.5 通过/未过 → 清单登记 v2026.W33.11",
+      "routedInput": "r8-2:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    }
+  ]
+}
