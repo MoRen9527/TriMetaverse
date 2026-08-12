@@ -4,10 +4,10 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/trilc-capability-checklist.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-12T18:30:00+08:00
+- lastSyncedAt: 2026-08-12T20:00:00+08:00
 
-> 版本：v2026.W33.7
-> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 部分通过（手动 compact 落地，自动触发+agent loop 集成转下一轮，观察项））
+> 版本：v2026.W33.8
+> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过）
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
@@ -46,8 +46,8 @@
 | 2.1 | 接任务 | 通过 HTTP 契约（`/internal/v1/tasks/submit`）接收 TriMC 派发的任务 | 服务器可验 | 未开始 | — |
 | 2.2 | 执行与回传 | task_done/task_error 语义正确；**终止错误绝不发送伪 task_done**（W30 教训） | 服务器可验 | 未开始 | — |
 | 2.3 | 模型路由 fallback 链完整性 | 所有 fallback 末端模型必须在注册表内；provider 全挂时产生真实 task_error，**绝不发伪 task_done**（W30：模拟断 TriStaciss 实测"Unknown model"事故） | 服务器可验 | **通过** | M2 第一轮验收：TriLC 94ceae8+0de39ad（validateModelAgainstRegistry 预验证 + 四层 task_error 防线 + validateModelRegistry 启动检查）+ TriMC 1df2311（FALLBACK_MAP tmv-* 扩展）+ TriModel 43/43 测试通过（含 21 C12/C13 专项）。详见 docs/execution/trilc-capability-checklist.md §C12/C13 |
-| 2.4 | 超时与失败上报 | 超时/失败主动上报，不静默、不无限重试 | 服务器可验 | 未开始 | — |
-| 2.5 | degraded 模式 | TriMC 不可达时本地续跑，恢复后状态对齐（互为 fallback 契约） | 服务器可验 | 未开始 | — |
+| 2.4 | 超时与失败上报 | 超时/失败主动上报，不静默、不无限重试 | 服务器可验 | **通过** | M2 第五轮验收：session status 'error' 语义（task_error → error，interrupted 保留恢复路径，TriLC `bb4ee8a`）；小柯 254/254 内覆盖 |
+| 2.5 | degraded 模式 | TriMC 不可达时本地续跑，恢复后状态对齐（互为 fallback 契约） | 服务器可验 | **通过** | M2 第五轮验收：degraded 完善——local 状态 + 持久化 + 退避 + 通知（TriLC `0cbd25b`）；与 C13（模型 provider 降级）边界分明；小柯 254/254 内覆盖 |
 
 ### 3. 工程门禁域
 
@@ -106,7 +106,7 @@
 | C12 | 模型路由多 provider/fallback | **通过**：M2 第一轮验收——R1 FALLBACK_MAP 扩展 (TriMC 1df2311: 新增 4 条 tmv-* 条目, 双层 fallback 架构注释)；R2 启动注册表检查 (TriLC 0de39ad: validateModelRegistry() 启动时检查 defaultModel+criticalFallbacks, 缺失 WARNING 不阻断)；TriLC validateModelAgainstRegistry() 请求时预验证 (94ceae8)；TriModel buildRegistry() fallback 链已修正 (W30 根因 tmv-deepseek-chat→deepseek-chat 改为 →deepseek-v4-flash) | 差距已闭环 | M2 受验必需 |
 | C13 | 模型降级（degraded） | **通过**：M2 第一轮验收——四层 task_error 防线（L1 预验证→L2 terminalError break→L3 post-loop return→L4 空输出 guard→L5 outer catch），task_error 后绝无伪 task_done；degraded 三态日志 `[trilc:conn]` / `[trilc:model] degraded` / `[trilc:model] CRITICAL` 可辨；recovery 事件监听 tier=2 降级日志 (TriLC 0de39ad) | 差距已闭环 | M2 受验必需 |
 | C14 | CLAUDE.md / 记忆注入 | **部分**：`src/context-adapter/adapter.ts`（neutral-local-context 薄层） | CLAUDE.md 自动发现/加载、记忆注入深度（对标 TriMC memory-injector/context-builder） | M3 生产必需 |
-| C15 | compaction | **部分通过**：M2 第四轮——手动 compact 落地（daemon 端点 + CLI 命令，TriLC `801f72b`/`f5f54c2`）；**未完成项（观察项）**：自动触发窗口 + agent loop 集成（`c9b85d2` 注入被 revert，转下一轮处理）；摘要质量对齐待验 | 部分差距未闭环（自动触发+集成，下一轮） | M2 受验必需 |
+| C15 | compaction | **通过**：M2 第四+五轮——手动 compact（`801f72b`/`f5f54c2`）+ 自动触发 v2 事件驱动零循环依赖（`0a5fc49`，解决 c9b85d2 循环依赖卡点）；小柯 254/254 全过；摘要质量对齐待验（观察项） | 差距已闭环 | M2 受验必需 |
 | C16 | 远程控制与渠道 | **无** | Remote Control（REST/WS 附加会话）、--channels 渠道 | M3 生产必需 |
 | C17 | 构建与打包 | **有**：`src/daemon/`（schtasks/launchd/systemd/watchdog）+ TriCade 侧 MSI | 无（TriCade 已产 MSI/ZIP；本地域项） | M3 生产必需 |
 
