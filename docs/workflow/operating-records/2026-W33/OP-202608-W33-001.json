@@ -1,64 +1,181 @@
 {
-    "dependsOn": [
-        "OP-202608-W32-001"
-    ],
-    "objectType": "WEEKLY_INDEX",
-    "objectId": "OP-202608-W33-001",
-    "title": "TriMetaverse W33 周经营维护索引",
-    "ownerRole": "CEOChiefOfStaff",
-    "status": "active",
-    "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
-    "metadata": {
-        "updatedBy": "CEOChiefOfStaff",
-        "version": "1.0.0",
-        "lastUpdated": "2026-08-10T00:10:00+08:00",
-        "latestActiveWeek": true
+  "dependsOn": [
+    "OP-202608-W32-001"
+  ],
+  "objectType": "WEEKLY_INDEX",
+  "objectId": "OP-202608-W33-001",
+  "title": "TriMetaverse W33 周经营维护索引",
+  "ownerRole": "CEOChiefOfStaff",
+  "status": "active",
+  "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
+  "metadata": {
+    "updatedBy": "CEOChiefOfStaff",
+    "version": "1.0.0",
+    "lastUpdated": "2026-08-10T23:05:00+08:00",
+    "latestActiveWeek": true
+  },
+  "priority": "high",
+  "timebox": {
+    "scope": "weekly",
+    "label": "2026-W33 当前周维护面",
+    "startAt": "2026-08-10T00:00:00+08:00",
+    "endAt": "2026-08-16T23:59:59+08:00"
+  },
+  "createdAt": "2026-08-09T15:59:00.297693+00:00",
+  "relatedModules": [
+    "TriMetaverse",
+    "TriCompany",
+    "TriLC",
+    "TriMC"
+  ],
+  "updatedAt": "2026-08-09T15:59:00.297693+00:00",
+  "activeTrees": [
+    {
+      "treeId": "w33-weekly-migration-ade",
+      "title": "周平面迁移自动化 — 完整 ADE 五段闭环投产",
+      "nodes_total": 9,
+      "nodes_done": 9,
+      "status": "done",
+      "path": "trees/w33-weekly-migration-ade/tree-op.json",
+      "related": "W32 w33-cron-selfdev Track C 规格落地"
+    }
+  ],
+  "doneTreesFromPreviousWeek": [],
+  "doneTreesThisWeek": [
+    {
+      "treeId": "r7-eng-gate",
+      "title": "工程门禁域：构建通过 + 测试通过",
+      "nodes_total": 4,
+      "nodes_done": 4,
+      "status": "done",
+      "path": "trees/r7-eng-gate/tree-op.json",
+      "related": "M2-R7 3.1/3.2"
     },
-    "priority": "high",
-    "timebox": {
-        "scope": "weekly",
-        "label": "2026-W33 当前周维护面",
-        "startAt": "2026-08-10T00:00:00+08:00",
-        "endAt": "2026-08-16T23:59:59+08:00"
-    },
-    "createdAt": "2026-08-09T15:59:00.297693+00:00",
-    "relatedModules": [
-        "TriMetaverse",
-        "TriCompany",
-        "TriLC",
-        "TriMC"
-    ],
-    "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-    "activeTrees": [
+    {
+      "treeId": "r8-base-exec",
+      "title": "基础执行域：git/文件/命令/编码/回滚",
+      "nodes_total": 4,
+      "nodes_done": 4,
+      "status": "done",
+      "path": "trees/r8-base-exec/tree-op.json",
+      "related": "M2-R8 1.1-1.5"
+    }
+  ],
+  "nextActions": [
+    {
+      "id": "AGENDA-20260810-001",
+      "action": "W33 周会议题：供应链卫生基线（ChainDrop 复盘）— 8/10 审计未受影响；议题产出：ignore-scripts 决议 / lockfile review 纪律 / 复检触发条件",
+      "ownerRole": "CEOChiefOfStaff",
+      "status": "open"
+    }
+  ],
+  "carry_over_from_w31": [
+    "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
+    "CARRY-20260728-003: TriCade MSI CI — 6w+ ✅ W32 已实质完成（目录治理+MSI 自动化），建议关闭",
+    "CARRY-20260728-004: trilc TUI P1 — 6w+ ⚠️⚠️ frozen（等 P0）",
+    "CARRY-20260728-005: Openclaw daemon验证 — 6w+ ⚠️⚠️ frozen（建议关闭/转归，已被TriLC吸收替代）",
+    "CARRY-20260728-006: trilc TUI P2 — 6w+ ⚠️⚠️ frozen（等 P1）",
+    "RISK-20260728-001: DeepSeek classifier — active",
+    "REGR-001/004/005/007: P1 TUI回归 — 待修",
+    "w33-production-ops: 未完成节点 (w33-4 生产记录等) — W32 追踪",
+    "ade-full-lifecycle: W31 维护面主树, 节点平移 W32 继续"
+  ],
+  "risks": [
+    "5项 carry-over 6w+，CARRY-001/004/005/006 逼近 8w CEO 升级线 — W33(8/10) 首周裁决",
+    "BUG-20260805-001: TriLC Read 工具 tool_result 空串 — 排 TriLC 侧修",
+    "BUG-20260805-002: 安装版 healthz version 报 0.1.0（version.json 未随构建更新）",
+    "BUG-20260805-003: MSI 打包缺 yoga-layout 别名（TUI stub import 与依赖声明不一致）",
+    "版本 revision 未自动递增（当前手动默认1）— 需改自动计数"
+  ],
+  "plans": [
+    {
+      "planId": "server-fleet-trilc-parity",
+      "title": "TriMC 部署服务器 + TriLC 追平能力",
+      "source": "W33 决策登记 2026-08-11（CEO 定案）+ TriCompany trilc-trimc-runtime-parity V1.1（架构决策 2026-08-07）",
+      "planDoc": "docs/execution/server-fleet-trilc-parity-plan.md",
+      "status": "in_progress",
+      "milestones": [
         {
-            "treeId": "w33-weekly-migration-ade",
-            "title": "周平面迁移自动化 — 完整 ADE 五段闭环投产",
-            "nodes_total": 9,
-            "nodes_done": 9,
-            "status": "done",
-            "path": "trees/w33-weekly-migration-ade/tree-op.json",
-            "related": "W32 w33-cron-selfdev Track C 规格落地"
+          "id": "M0",
+          "name": "环境",
+          "status": "done",
+          "evidence": "server-fleet-m0.md 12/12（2026-08-11）"
+        },
+        {
+          "id": "M1",
+          "name": "试点",
+          "status": "done",
+          "evidence": "周记 M1 段：阶段一+二完成（2026-08-11）"
+        },
+        {
+          "id": "M2",
+          "name": "能力验证期",
+          "status": "in_progress",
+          "evidence": "trilc-capability-checklist.md v2026.W33.11（12/33 项）",
+          "subStages": [
+            {
+              "id": "M2-R1",
+              "name": "C12/C13 模型路由",
+              "status": "done",
+              "checklist": "v2026.W33.3"
+            },
+            {
+              "id": "M2-R2",
+              "name": "C8/C9 权限",
+              "status": "done",
+              "checklist": "v2026.W33.4"
+            },
+            {
+              "id": "M2-R3",
+              "name": "C10 MCP",
+              "status": "done",
+              "checklist": "v2026.W33.6"
+            },
+            {
+              "id": "M2-R4",
+              "name": "C1/C15",
+              "status": "done",
+              "checklist": "v2026.W33.7"
+            },
+            {
+              "id": "M2-R5",
+              "name": "C15v2+2.4+2.5",
+              "status": "done",
+              "checklist": "v2026.W33.8"
+            },
+            {
+              "id": "M2-R6",
+              "name": "2.1/2.2",
+              "status": "done",
+              "checklist": "v2026.W33.9"
+            },
+            {
+              "id": "M2-R7",
+              "name": "3.1/3.2",
+              "status": "done",
+              "tree": "r7-eng-gate",
+              "checklist": "v2026.W33.10"
+            },
+            {
+              "id": "M2-R8",
+              "name": "1.1-1.5",
+              "status": "done",
+              "tree": "r8-base-exec",
+              "checklist": "v2026.W33.11"
+            }
+          ]
+        },
+        {
+          "id": "M3",
+          "name": "独立资格+生产双跑",
+          "status": "pending"
+        },
+        {
+          "id": "M4",
+          "name": "源码替换",
+          "status": "pending"
         }
-    ],
-    "doneTreesFromPreviousWeek": [],
-    "doneTreesThisWeek": [],
-    "nextActions": [],
-    "carry_over_from_w31": [
-        "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
-        "CARRY-20260728-003: TriCade MSI CI — 6w+ ✅ W32 已实质完成（目录治理+MSI 自动化），建议关闭",
-        "CARRY-20260728-004: trilc TUI P1 — 6w+ ⚠️⚠️ frozen（等 P0）",
-        "CARRY-20260728-005: Openclaw daemon验证 — 6w+ ⚠️⚠️ frozen（建议关闭/转归，已被TriLC吸收替代）",
-        "CARRY-20260728-006: trilc TUI P2 — 6w+ ⚠️⚠️ frozen（等 P1）",
-        "RISK-20260728-001: DeepSeek classifier — active",
-        "REGR-001/004/005/007: P1 TUI回归 — 待修",
-        "w33-production-ops: 未完成节点 (w33-4 生产记录等) — W32 追踪",
-        "ade-full-lifecycle: W31 维护面主树, 节点平移 W32 继续"
-    ],
-    "risks": [
-        "5项 carry-over 6w+，CARRY-001/004/005/006 逼近 8w CEO 升级线 — W33(8/10) 首周裁决",
-        "BUG-20260805-001: TriLC Read 工具 tool_result 空串 — 排 TriLC 侧修",
-        "BUG-20260805-002: 安装版 healthz version 报 0.1.0（version.json 未随构建更新）",
-        "BUG-20260805-003: MSI 打包缺 yoga-layout 别名（TUI stub import 与依赖声明不一致）",
-        "版本 revision 未自动递增（当前手动默认1）— 需改自动计数"
-    ]
+      ]
+    }
+  ]
 }

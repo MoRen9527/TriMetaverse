@@ -11,7 +11,7 @@
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
-> 关联：`docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md` 决策登记块（M2 里程碑）
+> 关联：`docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md` 决策登记块（M2 里程碑）；`docs/execution/server-fleet-trilc-parity-plan.md`（计划级登记——本清单为 M2 子阶段验证载体）；`TriCompany/docs/engineering/trilc-trimc-runtime-parity.md` V1.1（parity 架构源头）
 > 前置：M0（服务器仓 + git 同步链路）与 M1（舰队自由对话 + TriMC 编排 MVP）通过后启动
 > 版本说明：v2026.W33.2 新增两层之一——§二.5「CC 特性对标层」（TriLC 作为 claude code 等价物必须学会的能力，M4 源码替换前提）；治理条目 1.5（回滚执行）与 6.4（会话初始化器）并入对应域，编号顺延；v2026.W33.3 M2 第一轮验收收口（C12/C13 模型路由与降级通过）
 
