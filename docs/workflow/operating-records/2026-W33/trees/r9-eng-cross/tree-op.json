@@ -23,14 +23,14 @@
     {
       "nodeId": "r9-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "执行 3.3 + 3.4 + 4.1",
       "routedInput": "r9-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r9-1-20260813120000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "3.3: 四仓 76 commits 前缀全规范, 垃圾文件零, 违规项=TriLC 7 个 commit 缺 Co-Authored-By (历史不重写, 登记改进)。3.4: 开发/安装态六维差异清单 (cwd/ROOT/DATA_DIR/contracts/file依赖/dist), 验证方法回传。4.1: 5 sibling + 2 file: 引用全部实测可达, R7 迁移新路径无回归。",
+        "artifactCommit": "无代码变更 (审查+实测节点)",
+        "resumePoint": "r9-2 小柯独立验证"
       }
     },
     {
