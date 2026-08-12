@@ -36,14 +36,14 @@
     {
       "nodeId": "r9-2",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证 3.3 + 3.4 + 4.1",
       "routedInput": "r9-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r9-2-20260813150000.md",
       "checkpoint": {
-        "progress": "",
+        "progress": "全部独立复核属实零差异。3.3: 7 个缺 Co-Authored-By commit 逐个 git log 验证（含本验证者 d0140c9/eb43c30 如实确认）；TriLC+TriMC 垃圾文件 grep 零命中。3.4: env.ts:85 TRILC_PROJECT_ROOT ?? process.cwd() / env.ts:84 DATA_DIR %LOCALAPPDATA%/trilc / env.ts:34 TRICOMPANY_SOURCE_PATH / package.json:23+44 两处 file: 依赖——与 brief 六维表全部一致。4.1: ls -d 实测 5 sibling 目录 + 2 file: package.json 全部存在。判定：3.3/3.4/4.1 全部 PASS。",
         "artifactCommit": "",
-        "resumePoint": ""
+        "resumePoint": "r9-2 验证完成，交接 r9-3 小贾收口。改进项：Co-Authored-By 纪律（本验证者自 r8-2 起已补正）；安装态实测属 5.x 另树"
       }
     },
     {
