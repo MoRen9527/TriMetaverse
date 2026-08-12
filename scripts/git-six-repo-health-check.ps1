@@ -31,8 +31,12 @@ function Invoke-Git {
         [string[]]$GitArgs
     )
 
+    $prevEAP = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
     $raw = & git -C $RepoPath @GitArgs 2>$null
-    if ($LASTEXITCODE -ne 0) {
+    $exitCode = $LASTEXITCODE
+    $ErrorActionPreference = $prevEAP
+    if ($exitCode -ne 0) {
         return $null
     }
 
