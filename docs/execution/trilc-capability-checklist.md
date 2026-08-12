@@ -4,9 +4,10 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/trilc-capability-checklist.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-12T20:00:00+08:00
+- lastSyncedAt: 2026-08-12T22:00:00+08:00
 
-> 版本：v2026.W33.8
+> 版本：v2026.W33.9
+> 日期：2026-08-11（2026-08-12 更新：...v2026.W33.8 M2 第五轮——C15 v2 + 2.4 + 2.5 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过）
 > 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过）
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
@@ -43,8 +44,8 @@
 
 | # | 能力项 | 通过标准 | 验证位置 | 状态 | 完成证据 |
 | --- | --- | --- | --- | --- | --- |
-| 2.1 | 接任务 | 通过 HTTP 契约（`/internal/v1/tasks/submit`）接收 TriMC 派发的任务 | 服务器可验 | 未开始 | — |
-| 2.2 | 执行与回传 | task_done/task_error 语义正确；**终止错误绝不发送伪 task_done**（W30 教训） | 服务器可验 | 未开始 | — |
+| 2.1 | 接任务 | 通过 HTTP 契约（`/internal/v1/tasks/submit`）接收 TriMC 派发的任务 | 服务器可验 | **通过** | M2 第六轮验收：TriMC TriLCDispatchExecutor 三步执行 (submit→SSE consume→callback, TriMC 0277313) + TriLC /tasks/submit 端点 (session 持久化 + SSE stream + connectionState)；小柯全链路代码追踪验证通过，TaskController 5 态状态机正确 |
+| 2.2 | 执行与回传 | task_done/task_error 语义正确；**终止错误绝不发送伪 task_done**（W30 教训） | 服务器可验 | **通过** | M2 第六轮验收：C13 四层 task_error 防线 (已通过) + TriMC taskResultCallback → completeTask/failTask 回写 + TriLC SSE stream task_done/error 映射 + 2.4 error 状态语义；小柯 254 回归零退化，全链路 11 场景分析通过 |
 | 2.3 | 模型路由 fallback 链完整性 | 所有 fallback 末端模型必须在注册表内；provider 全挂时产生真实 task_error，**绝不发伪 task_done**（W30：模拟断 TriStaciss 实测"Unknown model"事故） | 服务器可验 | **通过** | M2 第一轮验收：TriLC 94ceae8+0de39ad（validateModelAgainstRegistry 预验证 + 四层 task_error 防线 + validateModelRegistry 启动检查）+ TriMC 1df2311（FALLBACK_MAP tmv-* 扩展）+ TriModel 43/43 测试通过（含 21 C12/C13 专项）。详见 docs/execution/trilc-capability-checklist.md §C12/C13 |
 | 2.4 | 超时与失败上报 | 超时/失败主动上报，不静默、不无限重试 | 服务器可验 | **通过** | M2 第五轮验收：session status 'error' 语义（task_error → error，interrupted 保留恢复路径，TriLC `bb4ee8a`）；小柯 254/254 内覆盖 |
 | 2.5 | degraded 模式 | TriMC 不可达时本地续跑，恢复后状态对齐（互为 fallback 契约） | 服务器可验 | **通过** | M2 第五轮验收：degraded 完善——local 状态 + 持久化 + 退避 + 通知（TriLC `0cbd25b`）；与 C13（模型 provider 降级）边界分明；小柯 254/254 内覆盖 |
