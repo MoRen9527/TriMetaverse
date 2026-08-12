@@ -4,10 +4,10 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/trilc-capability-checklist.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-12T16:00:00+08:00
+- lastSyncedAt: 2026-08-12T18:30:00+08:00
 
-> 版本：v2026.W33.4
-> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过）
+> 版本：v2026.W33.6
+> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过）
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
@@ -101,7 +101,7 @@
 | C7 | hook 系统 | **无**：grep hook 仅命中 TUI React hooks（useBlink 等），非 CC hook 生命周期 | PreToolUse / PostToolUse / Stop / SubagentStop / PermissionRequest 注册与事件 | M3 生产必需 |
 | C8 | 权限模式矩阵 | **通过**：M2 第二轮验收——agent-core PermissionMode 6 种 (default/acceptEdits/auto/dontAsk/bypassPermissions/plan) + 决策管线 10 步 (TriMC 7faa18b)；TriLC CLI --permission-mode + plan-mode 双层防护架构 (TriLC a50e039)；小柯 86 用例全通过，6 种模式语义正确；3 条非阻塞观察项 (Bash/shell_exec 名称、Glob 边界、acceptEdits 归类) 已登记 | 差距已闭环 | M2 受验必需 |
 | C9 | 权限规则与 -p 非交互 | **通过**：M2 第二轮验收——agent-core PermissionEngine.additionalDirectories + isPathInBoundary 路径标准化 (TriMC 08ced77/da17d97)；TriLC PermissionStore v2 双向 allow/deny + v1 自动迁移 + CLI --allow/--deny/--add-dir/-p + buildSessionPermissionRules (TriLC 5112017)；小柯 12 用例全通过，ask→deny 确定性拒绝、规则优先级、content filter 全部正确 | 差距已闭环 | M2 受验必需 |
-| C10 | MCP server 接入/发现 | **有**：`src/mcp/mcp-client.ts` + `mcp-config.ts` + `tools/mcp-tool.ts` | 动态 server 接入与工具发现规范化（对标 CC mcp 命令生态） | M2 受验必需 |
+| C10 | MCP server 接入/发现 | **通过**：M2 第三轮验收——TriLC CLI `trilc mcp add/remove/list/status` + mcp-config 持久化 (TriLC 6b45b08)；McpClientManager per-tool 注册 `mcp__<server>__<tool>` + connectServer/disconnectServer 动态接入 + daemon 5 端点 (TriLC 8ddcb94)；agent-core unregister (TriMC 0620290) + isMcpWriteTool/isMcpFileTool MCP 管线检测 + BUG-C10-01 前缀剥离修复 (92a373a)；小柯 39 专项 + 86 回归全通过，3 条非阻塞观察项 (parseToolName 正则、disconnectAll 清理、dontAsk pathless MCP 工具) 已登记 | 差距已闭环 | M2 受验必需 |
 | C11 | TUI / 交互 | **有**：`src/tui/`（ink + termio + useCursorInput/useSSE） | 光标/IME 细节、历史、渲染兼容性 | M3 生产必需 |
 | C12 | 模型路由多 provider/fallback | **通过**：M2 第一轮验收——R1 FALLBACK_MAP 扩展 (TriMC 1df2311: 新增 4 条 tmv-* 条目, 双层 fallback 架构注释)；R2 启动注册表检查 (TriLC 0de39ad: validateModelRegistry() 启动时检查 defaultModel+criticalFallbacks, 缺失 WARNING 不阻断)；TriLC validateModelAgainstRegistry() 请求时预验证 (94ceae8)；TriModel buildRegistry() fallback 链已修正 (W30 根因 tmv-deepseek-chat→deepseek-chat 改为 →deepseek-v4-flash) | 差距已闭环 | M2 受验必需 |
 | C13 | 模型降级（degraded） | **通过**：M2 第一轮验收——四层 task_error 防线（L1 预验证→L2 terminalError break→L3 post-loop return→L4 空输出 guard→L5 outer catch），task_error 后绝无伪 task_done；degraded 三态日志 `[trilc:conn]` / `[trilc:model] degraded` / `[trilc:model] CRITICAL` 可辨；recovery 事件监听 tier=2 降级日志 (TriLC 0de39ad) | 差距已闭环 | M2 受验必需 |
