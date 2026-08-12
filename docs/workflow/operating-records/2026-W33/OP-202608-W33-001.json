@@ -168,12 +168,14 @@
         {
           "id": "M3",
           "name": "独立资格+生产双跑",
-          "status": "pending"
+          "status": "pending",
+          "note": "M2 全勾后自动推进，不需提请确认（CEO 2026-08-13 定）"
         },
         {
           "id": "M4",
           "name": "源码替换",
-          "status": "pending"
+          "status": "deferred",
+          "note": "延后（CEO 2026-08-13 定）：M3 完成即收官，M4 待 CEO 另行启动"
         }
       ]
     }

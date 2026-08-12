@@ -33,8 +33,8 @@
 | M0 环境 | 服务器裸仓 + 舰队工作克隆 + git 同步链路打通 | **done** | server-fleet-m0.md 12/12（2026-08-11） |
 | M1 试点 | 服务器舰队跑通 task tree/周会自由对话；TriMC 编排 MVP 连通官方会话 | **done** | 周记 M1 段：阶段一（部署 + 对话实测）+ 阶段二（session-bridge + 3 端点 + dispatchAsync + task-controller 回写，MVP 门禁 5/5） |
 | M2 能力验证期 | TriLC 在 TriMC 监督下按 checklist 逐项覆盖（真实研发任务驱动，不设固定时长） | **in_progress** | trilc-capability-checklist.md v2026.W33.11（12/33 项通过，详见 §三） |
-| M3 独立资格 + 生产双跑 | 能力清单全勾 + 舰队审核通过 → 生产仓 TriLC + TriMC 互为 fallback | pending | — |
-| M4 源码替换 | 自研跨会话层 + 功能覆盖验收 → 源码替换官方 claude | pending | — |
+| M3 独立资格 + 生产双跑 | 能力清单全勾 + 舰队审核通过 → 生产仓 TriLC + TriMC 互为 fallback | pending | M2 全勾后自动推进，不需提请确认（CEO 2026-08-13 定） |
+| M4 源码替换 | 自研跨会话层 + 功能覆盖验收 → 源码替换官方 claude | **deferred** | 延后（CEO 2026-08-13 定）：M3 完成即收官报告，M4 待 CEO 另行启动 |
 
 ## 三、M2 子阶段（R1-R8 轮次登记）
 
@@ -56,7 +56,8 @@
 - M0：12/12 完成（服务器环境就绪）
 - M1：阶段一+二完成（舰队对话 + 编排 MVP）
 - M2：8 轮 done，12/33 能力项通过；剩余 21 项（3.3/3.4 + 4.x 跨模块域 + 5.x 生产链域 + 6.x 运营纪律域 + C2-C7/C11/C14/C16/C17 对标层）
-- M3/M4：待 M2 全勾后启动
+- M3：M2 全勾后自动推进（生产双跑上线，不需中途提请 CEO 确认）
+- M4：**deferred**——延后（CEO 2026-08-13 定），不做任何 M4 动作，收官报告明确"M4 未执行，待 CEO 另行启动"
 
 ## 五、维护规则
 
