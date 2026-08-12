@@ -23,14 +23,14 @@
     {
       "nodeId": "r7-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "修 3.1 构建 + 3.2 测试：TriLC tsc 模块解析 → 全绿；TriLC 5 fail → 0 fail；TriMC 2 fail → 0 fail 或标记为已知非阻塞",
       "routedInput": "r7-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r7-1-20260812140000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "tsc 零错误（dist 重建 + 类型断言修复）；测试 251/253（TUI 2 fail 为预存 ink-testing-library 缺包）；before/after import 补齐；'error' 状态补 closedAt。TriMC 未变（453/455 基线）。",
+        "artifactCommit": "d9466c4 (TriLC)",
+        "resumePoint": "r7-1 已完成，交接 r7-2 独立验证"
       }
     },
     {
