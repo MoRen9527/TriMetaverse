@@ -4,16 +4,16 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/trilc-capability-checklist.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-12
+- lastSyncedAt: 2026-08-12T12:00:00+08:00
 
-> 版本：v2026.W33.2
-> 日期：2026-08-11（2026-08-12 更新：新增「CC 特性对标层」+ 治理条目）
+> 版本：v2026.W33.3
+> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过）
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
 > 关联：`docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md` 决策登记块（M2 里程碑）
 > 前置：M0（服务器仓 + git 同步链路）与 M1（舰队自由对话 + TriMC 编排 MVP）通过后启动
-> 版本说明：v2026.W33.2 新增两层之一——§二.5「CC 特性对标层」（TriLC 作为 claude code 等价物必须学会的能力，M4 源码替换前提）；治理条目 1.5（回滚执行）与 6.4（会话初始化器）并入对应域，编号顺延
+> 版本说明：v2026.W33.2 新增两层之一——§二.5「CC 特性对标层」（TriLC 作为 claude code 等价物必须学会的能力，M4 源码替换前提）；治理条目 1.5（回滚执行）与 6.4（会话初始化器）并入对应域，编号顺延；v2026.W33.3 M2 第一轮验收收口（C12/C13 模型路由与降级通过）
 
 ## 一、目标与机制
 
@@ -45,7 +45,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2.1 | 接任务 | 通过 HTTP 契约（`/internal/v1/tasks/submit`）接收 TriMC 派发的任务 | 服务器可验 | 未开始 | — |
 | 2.2 | 执行与回传 | task_done/task_error 语义正确；**终止错误绝不发送伪 task_done**（W30 教训） | 服务器可验 | 未开始 | — |
-| 2.3 | 模型路由 fallback 链完整性 | 所有 fallback 末端模型必须在注册表内；provider 全挂时产生真实 task_error，**绝不发伪 task_done**（W30：模拟断 TriStaciss 实测"Unknown model"事故） | 服务器可验 | 未开始 | — |
+| 2.3 | 模型路由 fallback 链完整性 | 所有 fallback 末端模型必须在注册表内；provider 全挂时产生真实 task_error，**绝不发伪 task_done**（W30：模拟断 TriStaciss 实测"Unknown model"事故） | 服务器可验 | **通过** | M2 第一轮验收：TriLC 94ceae8+0de39ad（validateModelAgainstRegistry 预验证 + 四层 task_error 防线 + validateModelRegistry 启动检查）+ TriMC 1df2311（FALLBACK_MAP tmv-* 扩展）+ TriModel 43/43 测试通过（含 21 C12/C13 专项）。详见 docs/execution/trilc-capability-checklist.md §C12/C13 |
 | 2.4 | 超时与失败上报 | 超时/失败主动上报，不静默、不无限重试 | 服务器可验 | 未开始 | — |
 | 2.5 | degraded 模式 | TriMC 不可达时本地续跑，恢复后状态对齐（互为 fallback 契约） | 服务器可验 | 未开始 | — |
 
@@ -103,8 +103,8 @@
 | C9 | 权限规则与 -p 非交互 | **部分**：同上 + config/ | allow/deny 规则、additionalDirectories、`-p` 非交互语义（无提示、确定性拒绝） | M2 受验必需 |
 | C10 | MCP server 接入/发现 | **有**：`src/mcp/mcp-client.ts` + `mcp-config.ts` + `tools/mcp-tool.ts` | 动态 server 接入与工具发现规范化（对标 CC mcp 命令生态） | M2 受验必需 |
 | C11 | TUI / 交互 | **有**：`src/tui/`（ink + termio + useCursorInput/useSSE） | 光标/IME 细节、历史、渲染兼容性 | M3 生产必需 |
-| C12 | 模型路由多 provider/fallback | **部分**：`src/config/contract-resolver.ts` + TriMC trimodel（多 provider 已支持） | TriLC 侧 fallback 链完整性与**末端模型注册表约束**（W30 教训：provider 全挂时产生真实错误，末端模型必须在注册表内） | M2 受验必需 |
-| C13 | 模型降级（degraded） | **部分**：2.5 已有 TriMC 不可达降级 | provider 全挂降级 + 恢复后状态对齐（模型层） | M2 受验必需 |
+| C12 | 模型路由多 provider/fallback | **通过**：M2 第一轮验收——R1 FALLBACK_MAP 扩展 (TriMC 1df2311: 新增 4 条 tmv-* 条目, 双层 fallback 架构注释)；R2 启动注册表检查 (TriLC 0de39ad: validateModelRegistry() 启动时检查 defaultModel+criticalFallbacks, 缺失 WARNING 不阻断)；TriLC validateModelAgainstRegistry() 请求时预验证 (94ceae8)；TriModel buildRegistry() fallback 链已修正 (W30 根因 tmv-deepseek-chat→deepseek-chat 改为 →deepseek-v4-flash) | 差距已闭环 | M2 受验必需 |
+| C13 | 模型降级（degraded） | **通过**：M2 第一轮验收——四层 task_error 防线（L1 预验证→L2 terminalError break→L3 post-loop return→L4 空输出 guard→L5 outer catch），task_error 后绝无伪 task_done；degraded 三态日志 `[trilc:conn]` / `[trilc:model] degraded` / `[trilc:model] CRITICAL` 可辨；recovery 事件监听 tier=2 降级日志 (TriLC 0de39ad) | 差距已闭环 | M2 受验必需 |
 | C14 | CLAUDE.md / 记忆注入 | **部分**：`src/context-adapter/adapter.ts`（neutral-local-context 薄层） | CLAUDE.md 自动发现/加载、记忆注入深度（对标 TriMC memory-injector/context-builder） | M3 生产必需 |
 | C15 | compaction | **有**：`src/services/compact/compact.ts` | 对齐 CC 行为（自动触发窗口/摘要质量） | M2 受验必需 |
 | C16 | 远程控制与渠道 | **无** | Remote Control（REST/WS 附加会话）、--channels 渠道 | M3 生产必需 |
