@@ -1,0 +1,63 @@
+{
+  "treeId": "r9-eng-cross",
+  "title": "工程门禁收尾 + 跨模块起步：3.3 diff审查 + 3.4 安装态 + 4.1 sibling引用",
+  "source": "M2-R9",
+  "week": "2026-W33",
+  "status": "active",
+  "verdict": "",
+  "completedAt": "",
+  "nodes": [
+    {
+      "nodeId": "r9-0",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "建树：规划 r9 范围与节点链",
+      "routedInput": "",
+      "brief": "briefs/r9-0-20260813050000.md",
+      "checkpoint": {
+        "progress": "范围定案：3.3 diff 审查（M2 前八轮 commit 规范审查）+ 3.4 安装态意识（开发态 vs 安装态差异）+ 4.1 sibling 引用（../TriLC 等跨仓路径解析实测）。节点链：r9-1 小全执行 → r9-2 小柯验证 → r9-3 小贾收口 v2026.W33.12。",
+        "artifactCommit": "",
+        "resumePoint": "树已建，r9-1 开工"
+      }
+    },
+    {
+      "nodeId": "r9-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "执行 3.3 + 3.4 + 4.1",
+      "routedInput": "r9-0:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r9-2",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "独立验证 3.3 + 3.4 + 4.1",
+      "routedInput": "r9-1:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r9-3",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口判定 → 清单 v2026.W33.12",
+      "routedInput": "r9-2:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    }
+  ]
+}
