@@ -23,14 +23,14 @@
     {
       "nodeId": "r10-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "执行 4.2 + 4.3 + 6.1 + 6.2",
       "routedInput": "r10-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r10-1-20260813123000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "4.2: 13 合同文件全在 + 实载 14/14 system prompt 非空 (源码路径; 安装态属 5.2)。4.3: 20 仓检查 9 issues 全部为 ahead 待 push (权限受限, 已知)。6.1: OP 补登记 M2-R10 + activeTrees r10-cross-ops, version 1.1.0。6.2: 周会输入完成 — M2 9 轮 done + R10 在途, 无功能阻塞。",
+        "artifactCommit": "OP-202608-W33-001.json 补登记 + brief/tree-op commit",
+        "resumePoint": "r10-2 小柯独立验证"
       }
     },
     {

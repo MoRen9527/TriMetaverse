@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff",
-    "version": "1.0.0",
-    "lastUpdated": "2026-08-10T23:05:00+08:00",
+    "updatedBy": "FullStackDeveloper (r10-1 补登记 M2-R10)",
+    "version": "1.1.0",
+    "lastUpdated": "2026-08-13T12:30:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -38,6 +38,15 @@
       "status": "done",
       "path": "trees/w33-weekly-migration-ade/tree-op.json",
       "related": "W32 w33-cron-selfdev Track C 规格落地"
+    },
+    {
+      "treeId": "r10-cross-ops",
+      "title": "跨模块运营域：4.2 contracts + 4.3 健康检查 + 6.1/6.2 运营",
+      "nodes_total": 4,
+      "nodes_done": 1,
+      "status": "active",
+      "path": "trees/r10-cross-ops/tree-op.json",
+      "related": "M2-R10 4.2/4.3/6.1/6.2"
     }
   ],
   "doneTreesFromPreviousWeek": [],
@@ -169,6 +178,13 @@
               "status": "done",
               "tree": "r9-eng-cross",
               "checklist": "v2026.W33.12"
+            },
+            {
+              "id": "M2-R10",
+              "name": "4.2/4.3/6.1/6.2",
+              "status": "in_progress",
+              "tree": "r10-cross-ops",
+              "checklist": "v2026.W33.13 (待 r10-3 收口)"
             }
           ]
         },

@@ -1,0 +1,27 @@
+
+Repo          Branch Upstream   OriginHead        Status                         Issue
+----          ------ --------   ----------        ------                         -----
+TriAvatar     dev    origin/dev origin/dev        ## dev...origin/dev            NO   
+TriChain      dev    origin/dev ORIGIN_HEAD_UNSET ## dev...origin/dev            YES  
+TriCompany    dev    origin/dev origin/dev        ## dev...origin/dev [ahead 7]  YES  
+Tride         dev    origin/dev origin/dev        ## dev...origin/dev            NO   
+TriDeployment dev    origin/dev ORIGIN_HEAD_UNSET ## dev...origin/dev [ahead 4]  YES  
+TriDev        dev    origin/dev origin/dev        ## dev...origin/dev            NO   
+TriGateway    dev    origin/dev ORIGIN_HEAD_UNSET ## dev...origin/dev            YES  
+TriLC         dev    origin/dev origin/dev        ## dev...origin/dev [ahead 21] YES  
+TriMC         dev    origin/dev origin/dev        ## dev...origin/dev [ahead 18] YES  
+TriMem        dev    origin/dev ORIGIN_HEAD_UNSET ## dev...origin/dev            YES  
+TriMetaverse  dev    origin/dev origin/dev        ## dev...origin/dev [ahead 26] YES  
+TriMobile     dev    origin/dev ORIGIN_HEAD_UNSET ## dev...origin/dev            YES  
+TriModel      dev    origin/dev origin/dev        ## dev...origin/dev [ahead 1]  YES  
+TriPilot      dev    origin/dev origin/dev        ## dev...origin/dev            NO   
+TriSkill      dev    origin/dev ORIGIN_HEAD_UNSET ## dev...origin/dev [ahead 2]  YES  
+TriStaciss    dev    origin/dev origin/dev        ## dev...origin/dev            NO   
+TriTest       dev    origin/dev ORIGIN_HEAD_UNSET ## dev...origin/dev [ahead 3]  YES  
+TriTraining   dev    origin/dev ORIGIN_HEAD_UNSET ## dev...origin/dev            YES  
+TriWeb4       dev    origin/dev ORIGIN_HEAD_UNSET ## dev...origin/dev            YES  
+vscodium      dev    origin/dev origin/dev        ## dev...origin/dev [ahead 2]  YES  
+
+
+
+Summary: 20 repos checked, 15 issues found.
