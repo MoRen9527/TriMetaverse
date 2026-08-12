@@ -6,8 +6,8 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-12T18:30:00+08:00
 
-> 版本：v2026.W33.6
-> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过）
+> 版本：v2026.W33.7
+> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 部分通过（手动 compact 落地，自动触发+agent loop 集成转下一轮，观察项））
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
@@ -92,7 +92,7 @@
 
 | # | 对标项 | TriLC 现状（证据） | 差距 | 优先级 |
 | --- | --- | --- | --- | --- |
-| C1 | 会话 start/resume | **有**：`src/session-store/`（store/types/safety-check）持久化与恢复 | 验证 resume 正确性（跨重启、跨目录） | M2 受验必需 |
+| C1 | 会话 start/resume | **通过**：M2 第四轮验收——小柯独立验证 69/69 全过（覆盖验证包 9 场景：跨重启恢复、跨目录恢复、session-store 持久化/类型/safety-check 全链路；测试文件 `test/c1-session-resume.test.ts`） | 差距已闭环（resume 正确性验证完成） | M2 受验必需 |
 | C2 | 会话 fork | **部分**：`src/tui/fork.tsx`（UI 层存在） | fork 数据层未闭环（复制会话上下文为新会话） | M3 生产必需 |
 | C3 | 后台会话生命周期（--bg 等价） | **无**：daemon 仅守护服务，无会话粒度后台化 | 后台会话 spawn/枚举/停止（对标 `claude --bg` + `claude agents`） | M3 生产必需 |
 | C4 | SendMessage 跨会话 | **部分**：`src/tools/send-message.ts`（A 级复制 CC，localbus 进程内；注释明示 cross-daemon 不可用） | 跨 daemon / 跨机消息（对接 TriMC session-bridge 通道） | M3 生产必需 |
@@ -106,7 +106,7 @@
 | C12 | 模型路由多 provider/fallback | **通过**：M2 第一轮验收——R1 FALLBACK_MAP 扩展 (TriMC 1df2311: 新增 4 条 tmv-* 条目, 双层 fallback 架构注释)；R2 启动注册表检查 (TriLC 0de39ad: validateModelRegistry() 启动时检查 defaultModel+criticalFallbacks, 缺失 WARNING 不阻断)；TriLC validateModelAgainstRegistry() 请求时预验证 (94ceae8)；TriModel buildRegistry() fallback 链已修正 (W30 根因 tmv-deepseek-chat→deepseek-chat 改为 →deepseek-v4-flash) | 差距已闭环 | M2 受验必需 |
 | C13 | 模型降级（degraded） | **通过**：M2 第一轮验收——四层 task_error 防线（L1 预验证→L2 terminalError break→L3 post-loop return→L4 空输出 guard→L5 outer catch），task_error 后绝无伪 task_done；degraded 三态日志 `[trilc:conn]` / `[trilc:model] degraded` / `[trilc:model] CRITICAL` 可辨；recovery 事件监听 tier=2 降级日志 (TriLC 0de39ad) | 差距已闭环 | M2 受验必需 |
 | C14 | CLAUDE.md / 记忆注入 | **部分**：`src/context-adapter/adapter.ts`（neutral-local-context 薄层） | CLAUDE.md 自动发现/加载、记忆注入深度（对标 TriMC memory-injector/context-builder） | M3 生产必需 |
-| C15 | compaction | **有**：`src/services/compact/compact.ts` | 对齐 CC 行为（自动触发窗口/摘要质量） | M2 受验必需 |
+| C15 | compaction | **部分通过**：M2 第四轮——手动 compact 落地（daemon 端点 + CLI 命令，TriLC `801f72b`/`f5f54c2`）；**未完成项（观察项）**：自动触发窗口 + agent loop 集成（`c9b85d2` 注入被 revert，转下一轮处理）；摘要质量对齐待验 | 部分差距未闭环（自动触发+集成，下一轮） | M2 受验必需 |
 | C16 | 远程控制与渠道 | **无** | Remote Control（REST/WS 附加会话）、--channels 渠道 | M3 生产必需 |
 | C17 | 构建与打包 | **有**：`src/daemon/`（schtasks/launchd/systemd/watchdog）+ TriCade 侧 MSI | 无（TriCade 已产 MSI/ZIP；本地域项） | M3 生产必需 |
 
