@@ -4,10 +4,10 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/trilc-capability-checklist.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-13T04:00:00+08:00
+- lastSyncedAt: 2026-08-13T06:00:00+08:00
 
-> 版本：v2026.W33.11
-> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过 + 树执行协议定案（git 触发 + checkpoint 存档 + 崩溃恢复）；v2026.W33.10 M2 第七轮——3.1/3.2 工程门禁通过（r7-eng-gate 树收口，V0.6 brief 机制首战验证））
+> 版本：v2026.W33.12
+> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过 + 树执行协议定案（git 触发 + checkpoint 存档 + 崩溃恢复）；v2026.W33.10 M2 第七轮——3.1/3.2 工程门禁通过（r7-eng-gate 树收口，V0.6 brief 机制首战验证）；v2026.W33.11 M2 第八轮——1.1-1.5 基础执行域通过（r8-base-exec 树，回滚演练）；v2026.W33.12 M2 第九轮——3.3/3.4/4.1 通过（r9-eng-cross 树））
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
@@ -55,14 +55,14 @@
 | --- | --- | --- | --- | --- | --- |
 | 3.1 | 构建通过 | `npm run build` / `npx tsc --noEmit` 无错误 | 服务器可验 | **通过** | M2 第七轮（r7-eng-gate）：TriLC tsc exit 0 零错误（dist 重建 + compaction 类型断言修复，TriLC d9466c4）+ TriMC tsc exit 0；小柯独立复核一致。r7-1 brief: trees/r7-eng-gate/briefs/r7-1-20260812140000.md |
 | 3.2 | 测试通过 | `npm test` 全绿，新增代码有测试覆盖 | 服务器可验 | **通过** | M2 第七轮（r7-eng-gate）：TriLC 251/253（原 5 fail 中 4 修复：heartbeat-runner 9/9、r5-2.4-2.5 13/13、qa-stub 2/2、smoke 10/10）+ TriMC 448/450。2 组预存失败已独立归因：① TUI components 缺 yoga-layout（07-31 创建，预存环境）② TriMC pipeline 测试断言与 REQ-006 heartbeat tier 行为漂移（测试 07-26 早于 08-05 需求变更）。小柯独立验证 CONDITIONAL_PASS。r7-2 brief: trees/r7-eng-gate/briefs/r7-2-20260813010000.md |
-| 3.3 | diff 审查质量 | 提交信息规范、变更最小化、无垃圾文件混入 | 服务器可验 | 未开始 | — |
-| 3.4 | 安装态意识 | 开发态与安装态差异被正确识别（W30：源码能跑 ≠ 安装态能跑） | 本地验后回传 | 未开始 | — |
+| 3.3 | diff 审查质量 | 提交信息规范、变更最小化、无垃圾文件混入 | 服务器可验 | **通过** | M2 第九轮（r9-eng-cross）：四仓 M2 全量 commit 审查——前缀规范（feat/fix/chore/tree/docs）、单主题变更、零垃圾文件；违规项 7 个历史 commit 缺 Co-Authored-By（小全 5 + 小柯 2），不重写历史，登记改进项；小柯独立复核零差异 |
+| 3.4 | 安装态意识 | 开发态与安装态差异被正确识别（W30：源码能跑 ≠ 安装态能跑） | 本地验后回传 | **通过** | M2 第九轮（r9-eng-cross）：六维差异清单（cwd/PROJECT_ROOT/DATA_DIR/contracts 路径/file: 依赖/dist 完整性），小柯代码实读逐行核实一致；安装态实测留生产链域 5.x 另树处理 |
 
 ### 4. 跨模块域
 
 | # | 能力项 | 通过标准 | 验证位置 | 状态 | 完成证据 |
 | --- | --- | --- | --- | --- | --- |
-| 4.1 | sibling 仓库引用 | `../TriLC`、`../TriCode`、`../TriCompany` 等跨仓路径解析正确 | 服务器可验 | 未开始 | — |
+| 4.1 | sibling 仓库引用 | `../TriLC`、`../TriCode`、`../TriCompany` 等跨仓路径解析正确 | 服务器可验 | **通过** | M2 第九轮（r9-eng-cross）：5 sibling 目录 + 2 处 file: 依赖（../TriCompany/packages/agent-core R7 迁移新路径 + ../TriModel）实测全部可达；小柯独立 ls -d 复核零差异 |
 | 4.2 | contracts 加载 | 12 份合同完整加载，system prompt 非空（TriCade 内置路径 + 源码工作区双路径） | 本地验后回传 | 未开始 | — |
 | 4.3 | 六仓健康检查 | `git-six-repo-health-check.ps1` 运行与问题修复闭环 | 本地验后回传 | 未开始 | — |
 
