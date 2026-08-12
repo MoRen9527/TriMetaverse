@@ -111,7 +111,7 @@
           "id": "M2",
           "name": "能力验证期",
           "status": "in_progress",
-          "evidence": "trilc-capability-checklist.md v2026.W33.11（12/33 项）",
+          "evidence": "trilc-capability-checklist.md v2026.W33.12（15/33 项）",
           "subStages": [
             {
               "id": "M2-R1",
@@ -162,6 +162,13 @@
               "status": "done",
               "tree": "r8-base-exec",
               "checklist": "v2026.W33.11"
+            },
+            {
+              "id": "M2-R9",
+              "name": "3.3/3.4/4.1",
+              "status": "done",
+              "tree": "r9-eng-cross",
+              "checklist": "v2026.W33.12"
             }
           ]
         },
