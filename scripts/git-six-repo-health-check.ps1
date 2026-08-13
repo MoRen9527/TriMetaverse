@@ -58,6 +58,7 @@ foreach ($repo in $RepoPaths) {
             Branch     = 'N/A'
             Upstream   = 'N/A'
             OriginHead = 'N/A'
+            Dirty      = 'N/A'
             Status     = 'PATH_NOT_FOUND'
             Issue      = 'YES'
         }
@@ -71,6 +72,7 @@ foreach ($repo in $RepoPaths) {
             Branch     = 'N/A'
             Upstream   = 'N/A'
             OriginHead = 'N/A'
+            Dirty      = 'N/A'
             Status     = 'NOT_A_GIT_REPO'
             Issue      = 'YES'
         }
@@ -80,11 +82,14 @@ foreach ($repo in $RepoPaths) {
     $branch = Invoke-Git -RepoPath $repo -GitArgs @('branch', '--show-current')
     if ([string]::IsNullOrWhiteSpace($branch)) { $branch = 'DETACHED' }
 
-    $status = Invoke-Git -RepoPath $repo -GitArgs @('status', '-sb')
-    if (-not [string]::IsNullOrWhiteSpace($status)) {
-        $status = ($status -split "`r?`n")[0]
+    $porcelain = Invoke-Git -RepoPath $repo -GitArgs @('status', '--porcelain', '-b')
+    if (-not [string]::IsNullOrWhiteSpace($porcelain)) {
+        $lines = $porcelain -split "`r?`n"
+        $status = $lines[0]
+        $dirtyCount = $lines.Count - 1
     } else {
         $status = 'STATUS_UNKNOWN'
+        $dirtyCount = 0
     }
 
     $upstream = Invoke-Git -RepoPath $repo -GitArgs @('rev-parse', '--abbrev-ref', '--symbolic-full-name', '@{u}')
@@ -97,12 +102,14 @@ foreach ($repo in $RepoPaths) {
     if ($upstream -eq 'UPSTREAM_UNSET') { $hasIssue = $true }
     if ($originHead -eq 'ORIGIN_HEAD_UNSET') { $hasIssue = $true }
     if ($status -match '\[ahead|behind') { $hasIssue = $true }
+    if ($dirtyCount -gt 0) { $hasIssue = $true }
 
     $rows += [pscustomobject]@{
         Repo       = $name
         Branch     = $branch
         Upstream   = $upstream
         OriginHead = $originHead
+        Dirty      = $dirtyCount
         Status     = $status
         Issue      = if ($hasIssue) { 'YES' } else { 'NO' }
     }

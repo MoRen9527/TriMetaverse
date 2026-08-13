@@ -23,14 +23,14 @@
     {
       "nodeId": "r11-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "执行 6.3 + 6.4 + O1 修复",
       "routedInput": "r11-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r11-1-20260813082749.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "O1: --porcelain -b 全量 + Dirty 列 + Issue 维度修复，20 仓全量跑 15 issues，CTO 预期值命中（TriCompany 15 项 dirty / TriModel 1 项 dirty）。6.3: W33 六棵树盘点全一致（节点计数/brief 引用/artifactCommit SHA/清单 v2026.W33.13），唯一滞后项 r11-1 节点状态随本节点修正。6.4: 双端会话初始化器落地 — TriLC src/company/session-initializer.ts（含 resolver forbidden 补缺）+ TriMC src/onboarding/session-initializer.ts（v2 合同同源装配，O2 口径，14/14 冒烟 pass）；TriLC 254/256、TriMC 451/453（各 2 fail 均为 r7 归因预存，非本次引入）。",
+        "artifactCommit": "TriLC: feat(6.4) 会话初始化器本地端（4 文件 +212）；TriMC: feat(6.4) 会话初始化器服务器端（2 文件 +303）；TriMetaverse: O1 脚本修复 + brief + tree-op",
+        "resumePoint": "r11-2 小柯独立验证（6.3 盘点结论复核 + 6.4 双端 tsc/test/冒烟复核 + O1 脚本修复复核，带 O2 裁决口径）"
       }
     },
     {
