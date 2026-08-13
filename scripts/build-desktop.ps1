@@ -105,6 +105,19 @@ Copy-Item -Recurse -Force $TriCodePath\node_modules $StagingDir\tri-code\ -Error
 Copy-Item -Force       $TriCodePath\package.json    $StagingDir\tri-code\
 Ok
 
+# ── 7b. Hygiene: strip VCS metadata from staged node_modules ──
+# W30 教训：残留文件混包事故。npm file: 依赖（trimodel 等）整目录复制
+# 会带入 .git 元数据，staging 前必须清除。
+
+Step "Hygiene: stripping .git dirs from staged node_modules"
+$stagedGit = Get-ChildItem -Path $StagingDir -Recurse -Directory -Force -Filter ".git" -ErrorAction SilentlyContinue
+foreach ($g in $stagedGit) {
+    Write-Host "  removing $($g.FullName.Substring($StagingDir.Length))"
+    Remove-Item -Recurse -Force $g.FullName
+}
+Write-Host "  stripped $($stagedGit.Count) .git dir(s)"
+Ok
+
 # ── 8. Extract TriPilot .vsix → staging/extensions/ ──
 
 Step "Extracting TriPilot .vsix → staging/extensions/"
