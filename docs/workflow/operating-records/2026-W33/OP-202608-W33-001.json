@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r1-1 CTO 技术方案 done — 复用 agent-core 共享 scheduler + TriMC 薄适配器；r1-2 已派小全)",
-    "version": "2.5.0",
-    "lastUpdated": "2026-08-14T02:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r1-2 P1-P3 完成登记 + INCIDENT-20260814-001 台账登记 + P4 环境风险 2 项)",
+    "version": "2.6.0",
+    "lastUpdated": "2026-08-14T03:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -207,7 +207,9 @@
     "BUG-20260805-001: TriLC Read 工具 tool_result 空串 — 排 TriLC 侧修",
     "BUG-20260805-002: 安装版 healthz version 报 0.1.0 — done（2026-08-13 小全修复三处：build-desktop.ps1 注入 -Version 提取 + WriteAllText 无 BOM；build-tricade.yml 注入 CI calver；TriLC env.ts c6b635d BOM strip 防御。根因链：PS 5.1 Set-Content UTF8 写 BOM → JSON.parse 抛错 → fallback '1.0.0'，写死值与 fallback 相同掩盖了解析失败。小柯独立验证 PASS：v0.4.3 隔离实例 healthz version 实测 0.4.3。O7 观察：CI workflow 写端仍用 Set-Content -Encoding UTF8，被读端 strip 中和无害，建议 CI 侧改 WriteAllText 无 BOM 彻底闭环）",
     "BUG-20260805-003: MSI 打包缺 yoga-layout 别名 — done（2026-08-13 小全修复：TriLC package.json 加 npm 别名 89ad689 → components-smoke 30/30 转绿。小柯独立验证 PASS：smoke 独立重跑 30/30；残留 components.test.ts 以 ERR_MODULE_NOT_FOUND ink-testing-library 失败（1 fail 无挂起，D10 表述修正——r7 基线已改善，挂点从 yoga 变为 ink 缺依赖），归 CARRY-001 TUI 链）",
-    "版本 revision 未自动递增（当前手动默认1）— 需改自动计数"
+    "版本 revision 未自动递增（当前手动默认1）— 需改自动计数",
+    "INCIDENT-20260814-001: r1-2 小全 worktree 事故（已恢复，独立复核 PASS）——git worktree remove --force 穿透 npm file: 依赖 junction，误删 TriCompany/packages/agent-core 工作区 + TriModel 全目录；agent-core 已 git restore 恢复、TriModel 已从 sg-server 克隆恢复（HEAD a445b0e 与 /srv/git 及舰队克隆一致）；小贾独立复核：TriCompany status 无 agent-core 删除项且文件齐全、TriModel HEAD/status 干净；残留风险=TriModel 被删前未 push 本地提交不可验证（服务器 HEAD 一致表明大概率没有）；预防=baseline 验证改只读方式、禁 worktree+npm install 组合，junction 与 git worktree 交互危险列入 Windows 纪律（关联 W33 周记 Windows 痛点篇）",
+    "r1-2 P4 环境风险 2 项（小全观察，待部署实测定案）：① 服务器 Node v18.20.8 < TriMC engines \">=20.0.0\"（需定案 engines 放宽或服务器升级）② 服务器 Python 3.6.8 与五段链 from __future__ import annotations（3.7+ 特性）静态判断不兼容——checklist #2 dry-run 为决定性验证；已路由 CTO 小狄预备备选（服务器 Python 升级 vs 脚本回移）"
   ],
   "plans": [
     {
