@@ -1,0 +1,76 @@
+{
+  "treeId": "r13-contract-convergence",
+  "title": "M3 首树 · O2-A 合同真源统一：v3.0 单一权威 schema + 双域 resolver 迁移 + v1 退役 + O3/O4",
+  "source": "M3-R1 (O2-A)",
+  "week": "2026-W33",
+  "status": "active",
+  "verdict": "",
+  "completedAt": "",
+  "nodes": [
+    {
+      "nodeId": "r13-0",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "建树：规划 r13 范围与节点链（CTO 已对齐）",
+      "routedInput": "",
+      "brief": "briefs/r13-0-20260813203000.md",
+      "checkpoint": {
+        "progress": "范围定案（CTO 小狄对齐确认）：单一权威 schema v3.0 = v2 基础（contract+paths+decision_rights+runtime_baseline）+ TriMC 编排字段（identity+responsibilities+collaborators+tools+io_contract）。source-agents 14 份为唯一合同真源；docs/registry 11 份 v1 同树退役（内容并入对应 3.0 合同），补 3 份缺口（business-strategy、customer-success-officer、deployment-engineer）。A/B 两段：A 段 schema 规格 + agent-core 收敛 + TriLC adapter（小狄主）；B 段 TriMC 迁移 + v1 退役 + 3 缺口 + O3（小全）。拆树触发条件：r13-2 中 TriMC 编排层测试改造面超预估 1.5 倍 → B 段挂起拆尾树，A 段照常收口。验收口径 7 项（小柯可测）见 r13-0 简报。治理登记：合同真源落点变化（registry v1 退役）已记 OP nextActions 路由 governance 口径同步。",
+        "artifactCommit": "",
+        "resumePoint": "树已建，r13-1 小狄开工（schema 规格 + agent-core 收敛实现）"
+      }
+    },
+    {
+      "nodeId": "r13-1",
+      "agent": "CTO",
+      "status": "pending",
+      "action": "A 段：schema v3.0 规格文档 + agent-core 收敛实现（zod schema + resolver 重建 + 单元测试）",
+      "routedInput": "r13-0:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r13-2",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "B 段：双域迁移（TriLC adapter + TriMC resolver/编排层）+ 14 份合同补字段 + v1 退役 + 3 份缺口合同 + O3",
+      "routedInput": "r13-1:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r13-3",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "独立验证 7 项验收口径",
+      "routedInput": "r13-2:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r13-4",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口判定 → M3-R1 登记",
+      "routedInput": "r13-3:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    }
+  ]
+}

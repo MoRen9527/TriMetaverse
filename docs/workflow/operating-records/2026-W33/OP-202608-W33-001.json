@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r12-3 收口: M2 全勾 done + M3 自动推进触发)",
-    "version": "1.6.0",
-    "lastUpdated": "2026-08-13T20:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (M3 首树建树: r13-contract-convergence + M3-R1 登记 + governance 变更路由)",
+    "version": "1.7.0",
+    "lastUpdated": "2026-08-13T20:30:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,7 +29,17 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [],
+  "activeTrees": [
+    {
+      "treeId": "r13-contract-convergence",
+      "title": "M3 首树 · O2-A 合同真源统一：v3.0 schema + 双域迁移 + v1 退役 + O3/O4",
+      "nodes_total": 5,
+      "nodes_done": 1,
+      "status": "active",
+      "path": "trees/r13-contract-convergence/tree-op.json",
+      "related": "M3-R1 (O2-A) 合同真源统一"
+    }
+  ],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -117,8 +127,14 @@
     },
     {
       "id": "O3-20260813-001",
-      "action": "O3（r11-2 发现，转 CTO 小狄）：TriMC initializeSession 缺 W_OK 校验（TriLC 端有）——挂 O2-A 合同收敛时对齐。对齐基准已确认：TriLC src/company/session-initializer.ts:44（await access(dir, constants.W_OK)，initializeSession 入口处）",
+      "action": "O3（r11-2 发现，转 CTO 小狄）：TriMC initializeSession 缺 W_OK 校验（TriLC 端有）——并入 r13-contract-convergence 树 B 段（r13-2）。对齐基准已确认：TriLC src/company/session-initializer.ts:44（await access(dir, constants.W_OK)，initializeSession 入口处）",
       "ownerRole": "CTO",
+      "status": "in_progress"
+    },
+    {
+      "id": "GOV-20260813-001",
+      "action": "Governance 口径同步（r13 建树登记，路由 CompanyGovernanceRegistry）：合同真源落点变化——docs/registry 11 份 v1 同树退役、source-agents 14 份为唯一合同真源 + 补 3 份缺口合同（business-strategy/customer-success-officer/deployment-engineer）。制度化归 CAO/registry owner，小贾负责路由与催办",
+      "ownerRole": "CompanyGovernanceRegistry",
       "status": "open"
     }
     {
@@ -258,7 +274,16 @@
           "id": "M3",
           "name": "独立资格+生产双跑",
           "status": "in_progress",
-          "note": "M2 全勾（2026-08-13）自动推进已触发，不需提请确认（CEO 2026-08-13 定）。第一步 = O2-A 合同真源统一 + schema 对齐（CTO 2026-08-13 评估的硬前置）：agent-core zod schema 为死代码（零生产消费方），两代合同互不互通（TriLC 侧 v2 14 份 / TriMC 侧 v1 11 份），必须收敛单一权威 schema（以 v2 为基础补 io_contract/identity，双域 resolver 迁 thin adapter）；同树对齐 O3（TriMC W_OK 校验）+ O4（死 schema 产物随 node_modules 进发布 ZIP 15 文件）"
+          "note": "M2 全勾（2026-08-13）自动推进已触发，不需提请确认（CEO 2026-08-13 定）。里程碑动作（生产双跑部署）在轮次记录写明执行动作，CEO 授权不等批复（2026-08-13）。",
+          "subStages": [
+            {
+              "id": "M3-R1",
+              "name": "O2-A 合同真源统一（含 O3/O4）",
+              "status": "in_progress",
+              "tree": "r13-contract-convergence",
+              "checklist": "待 r13-4 收口"
+            }
+          ]
         },
         {
           "id": "M4",
