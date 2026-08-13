@@ -204,7 +204,8 @@ jobs:
             exit 1
           }
           Copy-Item -Force       TriLC\package.json     "$staging\trilc\"
-          Copy-Item -Force       TriLC\version.json     "$staging\trilc\"
+          # version.json 随构建版本更新（BUG-20260805-002 修复）：注入 CI calver
+          @{ version = "$env:VERSION" } | ConvertTo-Json -Compress | Set-Content "$staging\trilc\version.json" -Encoding UTF8
 
           # Contracts for installed-state (4.2 安装态): <trilc-root>\contracts
           # = TriCompany/source-agents (v2 contracts + five-piece) + employee-roster

@@ -92,9 +92,18 @@ Step "Assembling TriLC → staging/trilc/"
 Copy-Item -Recurse -Force $TriLCPath\dist         $StagingDir\trilc\
 Copy-Item -Recurse -Force $TriLCPath\node_modules $StagingDir\trilc\ -ErrorAction SilentlyContinue
 Copy-Item -Force       $TriLCPath\package.json    $StagingDir\trilc\
-# F1-fix: generate version.json so TRILC_VERSION reads correctly at runtime
-$VersionJson = @{ version = "1.0.0" } | ConvertTo-Json -Compress
-Set-Content -Path (Join-Path $StagingDir "trilc\version.json") -Value $VersionJson -Encoding UTF8
+# version.json 随构建版本更新（BUG-20260805-002 修复）：从 -Version 参数提取数字版本
+# 用 WriteAllText + UTF8 无 BOM（PowerShell 5.1 Set-Content -Encoding UTF8 带 BOM，
+# JSON.parse 会失败 → resolveVersion fallback 掩盖真实版本）
+$BuildVersion = $Version
+if ($Version -match '(\d+\.\d+\.\d+(\.\d+)?)') { $BuildVersion = $Matches[1] }
+$VersionJson = @{ version = $BuildVersion } | ConvertTo-Json -Compress
+[System.IO.File]::WriteAllText(
+    (Join-Path $StagingDir "trilc\version.json"),
+    $VersionJson,
+    (New-Object System.Text.UTF8Encoding($false))
+)
+Write-Host "  version.json: $BuildVersion"
 Ok
 
 # ── 6b. Contracts for installed-state (4.2 安装态) ──

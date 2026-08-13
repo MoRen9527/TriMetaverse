@@ -1,0 +1,78 @@
+========================================
+ TriMetaverse Desktop Build Pipeline    
+ Platform: windows   Version: v0.4.3-r12
+========================================
+
+>>> Building TriCode
+  OK
+
+>>> Building TriLC
+  OK
+
+>>> Building TriPilot
+  OK
+
+>>> Packaging TriPilot .vsix
+  vsce: 3.9.2
+ WARNING  LICENSE, LICENSE.md, or LICENSE.txt not found
+ INFO  Files included in the VSIX:
+tripilot-chat-0.0.1.vsix
+├─ [Content_Types].xml 
+├─ extension.vsixmanifest 
+└─ extension/
+   ├─ AGENTS.md [1.13 KB]
+   ├─ package.json [17.18 KB]
+   ├─ readme.md [1.47 KB]
+   ├─ tsconfig.json [0.23 KB]
+   ├─ .codegraph/ (4 files) [7.88 MB]
+   ├─ bin/ (1 file) [1.65 KB]
+   ├─ dist/ (1 file) [24.1 KB]
+   ├─ media/ (4 files) [177.97 KB]
+   ├─ out/ (18 files) [816.46 KB]
+   ├─ resources/ (1 file) [0.31 KB]
+   ├─ script/ (1 file) [2.06 KB]
+   └─ src/ (9 files) [2.78 MB]
+
+=> Run vsce ls --tree to see all included files.
+
+ DONE  Packaged: D:\Code\ai\Tripilot\tripilot-chat-0.0.1.vsix (45 files, 2.7 MB)
+  .vsix: tripilot-chat-0.0.1.vsix
+  OK
+
+>>> Preparing staging: D:\Code\ai\TriMetaverse\output\TriMetaverse-Desktop-v0.4.3-r12-windows
+  OK
+
+>>> Assembling TriLC �?staging/trilc/
+  version.json: 0.4.3
+  OK
+
+>>> Copying TriCompany contracts �?staging/trilc/contracts/
+  copied 16 agent dirs + roster
+  OK
+
+>>> Assembling TriCode �?staging/tri-code/
+  OK
+
+>>> Hygiene: stripping .git dirs from staged node_modules
+  removing \trilc\node_modules\trimodel\.git
+  stripped 1 .git dir(s)
+  OK
+
+>>> Extracting TriPilot .vsix �?staging/extensions/
+  OK
+
+>>> Copying preconfigured settings
+  OK
+
+>>> Creating install scripts
+  OK
+
+>>> Creating distributable ZIP
+  D:\Code\ai\TriMetaverse\output\TriMetaverse-Desktop-v0.4.3-r12-windows.zip
+  OK
+
+========================================
+ Build complete!
+ Output: D:\Code\ai\TriMetaverse\output\TriMetaverse-Desktop-v0.4.3-r12-windows.zip
+ Staging: D:\Code\ai\TriMetaverse\output\TriMetaverse-Desktop-v0.4.3-r12-windows
+========================================

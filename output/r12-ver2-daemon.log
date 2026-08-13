@@ -1,0 +1,32 @@
+◇ injected env (0) from node_modules\@tricompany\agent-core\node_modules\trimodel\dist\.env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from node_modules\@tricompany\agent-core\node_modules\trimodel\.env // tip: ◈ secrets for agents [www.dotenvx.com]
+◇ injected env (0) from node_modules\@tricompany\agent-core\node_modules\.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+◇ injected env (0) from node_modules\trimodel\dist\.env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (9) from node_modules\trimodel\.env // tip: ◈ secrets for agents [www.dotenvx.com]
+◇ injected env (0) from node_modules\.env // tip: ⌘ override existing { override: true }
+[skills] loaded 0 skills from D:\Code\ai\TriMetaverse\output\TriMetaverse-Desktop-v0.4.3-r12-windows\trilc\.claude\skills
+[trilc] skills: 0 loaded into SkillTool registry
+[trilc] bundled skills: simplify, debug, remember, claude-api, keybindings, lorem-ipsum
+[trilc] registered 14 CC-equivalent tools: Read, Write, Edit, Glob, Grep, LS, TodoWrite, TaskCreate, TaskList, TaskUpdate, SendMessage, AgentTool, SkillTool, AskUserQuestionTool
+[trilc] P6: plan mode tools registered (EnterPlanMode, ExitPlanMode)
+[trilc/local-node] heartbeat TABLET-0BGCRCP5-19312
+[trilc] daemon started for TABLET-0BGCRCP5-19312
+[interactions] loaded 1 persisted permission rules
+[session-store] migrated schema v0 → v2
+[trilc:cron] store: loaded 0 jobs from D:/Code/ai/TriMetaverse/output/r12-tmp-data4/cron.db (mtime=1786585567470.9302)
+[trilc] loaded 1 persisted permission rules from disk
+(node:19312) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[trilc:keys] no cached keys and fetch failed — chat disabled: fetch failed
+[trilc:model] registry check: 8 models (deepseek-chat, deepseek-reasoner, deepseek-v4-pro, deepseek-v4-flash, tmv-deepseek-chat, tmv-deepseek-reasoner, tmv-deepseek-v4-pro, tmv-deepseek-v4-flash), fallback chain ok
+[contract-resolver] loaded 14 agent contracts
+[trilc] contract resolver: 14 agents loaded
+[contract-resolver] loaded 13 employee roster entries
+[trilc] employee roster: 13 employees loaded
+[trilc] listening on :8715
+[trilc] TriCompany uninitialized — onboarding agent registered
+[trilc] heartbeat runner started (2 agents)
+[trilc:reaper] started (interval=3600000ms)
+[trilc] update check loop started
+[trilc:cron] engine started with 0 jobs
+[trilc] ready — node=TABLET-0BGCRCP5-19312 port=8715 pid=19312
