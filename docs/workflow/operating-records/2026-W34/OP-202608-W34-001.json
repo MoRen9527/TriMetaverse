@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (r2-4 收口 APPROVE：第二树迁 doneTreesThisWeek，FAIL→修复→重验全链)",
-        "version": "1.6.0",
-        "lastUpdated": "2026-08-13T19:30:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (r2 收口后补强 bb72746 登记：硬编码事实锚 + 强制命中断言)",
+        "version": "1.7.0",
+        "lastUpdated": "2026-08-13T19:40:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -200,6 +200,7 @@
         "REHEARSAL-20260813-001（CEO 指令真实根全链演练，编排层执行，结论：全链可用、周日自然触发信心充足）：①全链触发成功——HTTP 手动 run 完整 job（ID 全量 b00b0070-2f82-4e7d-a98c-de73e886834b）→ 五段链全 pass → fleet commit + push 裸仓成功（B1 修复实证）②幂等确认——当日 token 算 W32→W33（today+1 仍 W33），created=false + carry_over=skip，周日 08-16 跑即 W33→W34，数学符合 r1-1 设计 ③无痕回退——裸仓 update-ref + 克隆 reset --hard + clean，job 运行态复位（runCount=0/state null）④证据——演练 commit（裸仓对象库/reflog）+ run log。教训：消息里引用 job 必须全 ID（截断形式是口径坑），记入 runbook；历史 brief 中截断形式按「在树的不改」保留，活文件（OP/tree-op）已改全 ID",
         "REHEARSAL-20260813-002（演练二期，编排层执行）：O1 已修复——CEO 要求全真实演练含邮件，QQ SMTP 配置已部署 /home/fleet/.trimetaverse/notify.json（0600），五段链 notify 真实投递成功（run log 实锤 [weekly_shift] notify: sent），CEO 查收中。暴露两个真问题（已修复）：①回退目标选错——一期回退用了 be4f80a1（应为演练前精确 HEAD a857ccaa）→ 裸仓与克隆分叉 → 二期 push 被拒 non-fast-forward（脚本行为暴露正确：run error exit 1 + 日志可查）→ 三端统一回 a857ccaa ②工作树属主污染——克隆混有 root 属主文件（历史 root git 操作残留）→ fleet reset 被拒 → 全量 chown fleet。教训入 runbook：演练回退目标必须记录并核对演练前精确 HEAD 不凭记忆；服务器侧 git 操作统一 fleet 身份（root 只做 chown/chgrp 修复）；O1 关闭。当前三端=a857ccaa、job 态复位、W34 零残留——无痕达成",
         "O-D1-4（W34 迁移面观察，小贾核查发现）：周平面迁移 carry-over 面两处缺口——① W34 unresolved-items 头部标题仍为「W32 未决事项」、平移说明仍写「从 W31 迁移至 W32」（头部改写不完整）② W33 OP nextActions 未随迁移平移进 W34（W33 risks 18 条全平移、nextActions 丢失，已人工重登记 D1-B/O-D1-3/TRICADE-ENV 三条）——转 TriCompany runtime 变更通道（weekly_plane 迁移脚本 carry_over 面），非阻塞",
-        "r2-3 独立验证 FAIL（阻塞 1 项，小柯实测）：源码态 sibling 发现深度缺陷——weekly-plane-root.ts:39 探测深度少一层（模块在 src/project/，'..','..' 只到 TriLC 根，落点 TriLC/TriMetaverse 不存在，实测 no-env 返回 undefined）；单测掩盖——expectedSiblingPath 用同一错误深度，本机 existsSync=false 走 else 分支，命中分支从未真实执行。修复：实现与测试期望同步改三层级（一行），修后命中分支成真实回归守卫。②③④ 验证面全 PASS（安装态三态/公司轨只读/隔离零回归）。打回小全修复 + 小柯 1 分钟重验后走 r2-4 收口"
+        "r2-3 独立验证 FAIL（阻塞 1 项，小柯实测）：源码态 sibling 发现深度缺陷——weekly-plane-root.ts:39 探测深度少一层（模块在 src/project/，'..','..' 只到 TriLC 根，落点 TriLC/TriMetaverse 不存在，实测 no-env 返回 undefined）；单测掩盖——expectedSiblingPath 用同一错误深度，本机 existsSync=false 走 else 分支，命中分支从未真实执行。修复：实现与测试期望同步改三层级（一行），修后命中分支成真实回归守卫。②③④ 验证面全 PASS（安装态三态/公司轨只读/隔离零回归）。打回小全修复 + 小柯 1 分钟重验后走 r2-4 收口",
+        "r2 树收口后补强（bb72746，测试-only）：测试期望改硬编码绝对路径事实锚（D:/Code/ai/TriMetaverse/docs/workflow/operating-records，注释声明独立事实不得从实现推导）+ 强制命中断言（workspace 存在时 no-env 必须精确命中，else 仅保留非 workspace 环境如 CI/服务器）；实现侧单一推导点不变；本机 31 全绿 + tsc clean。观察：事实锚为机器特定路径——workspace 迁移时断言条件自动落入 else 不报错但守卫静默失效，属接受的设计取舍，已转小柯快核"
     ]
 }
