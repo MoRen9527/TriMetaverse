@@ -36,14 +36,14 @@
     {
       "nodeId": "r12-2",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证 5.1 + 5.2 + 5.3 + 5.4（本地实测 + 回传证据）",
       "routedInput": "r12-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r12-2-20260813092453.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "独立验证完成，总 PASS。5.2：自起隔离实例（8715 + 独立数据目录，staging dist）— healthz 200 + company scope count:14/tricompanyEnabled:true + prompt 14/14 非空 + 4.2 安装态 vs 源码路径同口径零差异（chars 2349~5837、test-engineer 3444 chars/6798 bytes 两路径相同）；5.1：ZIP 58,549,782 字节存在 + staging 零 .git + hygiene 7b 实读 + CI checkout/FATAL 实读；5.4：门禁五函数实读 + WhatIf 三场独立重跑全过（同版本拦截/27.08.13.1 升级/0.4.2 降级备份）；5.3：sc 1060/schtasks 不存在/RegRun 确认 + 两缺陷实读。现役 8711 全程 200 未扰动（uptime 5925→6234s+），隔离实例验证后已清理。差异：D5（ZIP 大小与 contracts 计数不精确：实为 58,549,782/204 staging/221 条目）、D6（prompt 字节数 4671~10409 vs 声称 4827~10694）、D7（注册表值实为 cli.js start 非 index.js）；BUG-003 未修也未声明（r12-1 简报零提及）；BUG-002 未修已声明（技术债务 #3）；O4（死 schema 随 node_modules 入 ZIP 15 文件）。",
+        "artifactCommit": "brief + tree-op commit",
+        "resumePoint": "r12-3 小贾收口：清单 v2026.W33.15（证据数字用本简报实测值）+ BUG-003 处置明确登记 + O4 转 O2-A 关注；MSI CI 重建与提权安装清单由小贾判定"
       }
     },
     {
