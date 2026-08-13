@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (R11 建树: M2-R11 in_progress + O1-FIX 并入)",
-    "version": "1.3.0",
-    "lastUpdated": "2026-08-13T17:30:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r11-3 收口: M2-R11 done + O1-FIX done + D4/O3 转 CTO)",
+    "version": "1.4.0",
+    "lastUpdated": "2026-08-13T18:30:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,17 +29,7 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [
-    {
-      "treeId": "r11-ops-init",
-      "title": "运营纪律收官 + 会话初始化：6.3 树状态同步 + 6.4 会话初始化器 + O1 健康脚本修复",
-      "nodes_total": 4,
-      "nodes_done": 1,
-      "status": "active",
-      "path": "trees/r11-ops-init/tree-op.json",
-      "related": "M2-R11 6.3/6.4 + O1-FIX"
-    }
-  ],
+  "activeTrees": [],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -86,6 +76,15 @@
       "status": "done",
       "path": "trees/r10-cross-ops/tree-op.json",
       "related": "M2-R10 4.2/4.3/6.1/6.2"
+    },
+    {
+      "treeId": "r11-ops-init",
+      "title": "运营纪律收官 + 会话初始化：6.3 树状态同步 + 6.4 会话初始化器 + O1 健康脚本修复",
+      "nodes_total": 4,
+      "nodes_done": 4,
+      "status": "done",
+      "path": "trees/r11-ops-init/tree-op.json",
+      "related": "M2-R11 6.3/6.4 + O1-FIX"
     }
   ],
   "nextActions": [
@@ -97,10 +96,22 @@
     },
     {
       "id": "O1-FIX-20260813-001",
-      "action": "O1 健康脚本 dirty 检测修复（CTO 小狄方案 APPROVE：--porcelain -b 全量输出，Issue 模型新增 Dirty 维度，untracked 计入，约 10 行）+ 修复后 4.3 补跑复核 — 并入 r11-ops-init 树",
+      "action": "O1 健康脚本 dirty 检测修复（CTO 小狄方案 APPROVE：--porcelain -b 全量输出，Issue 模型新增 Dirty 维度，untracked 计入，约 10 行）+ 修复后 4.3 补跑复核 — done（r11-ops-init：修复后 20 仓 / 15 issues，dirty 命中 CTO 基线 TriCompany 15 + TriModel 1，8 仓交叉验证零差异，小柯独立验证 PASS）",
       "ownerRole": "CEOChiefOfStaff",
-      "status": "in_progress"
+      "status": "done"
     },
+    {
+      "id": "D4-20260813-001",
+      "action": "D4（r11-2 发现，转 CTO 小狄）：TriCompany 8836e88 声称 4 契约类型标 @deprecated，实测仅类标注 + 头警告，4 类型未标注——补标或改记录",
+      "ownerRole": "CTO",
+      "status": "open"
+    },
+    {
+      "id": "O3-20260813-001",
+      "action": "O3（r11-2 发现，转 CTO 小狄）：TriMC initializeSession 缺 W_OK 校验（TriLC 端有）——挂 O2-A 合同收敛时对齐",
+      "ownerRole": "CTO",
+      "status": "open"
+    }
     {
       "id": "O2-B-20260813-001",
       "action": "O2 B 方案（CTO 小狄自领）：agent-core 移除/@deprecated 死 schema 导出 + resolver 头注释修正 + TriCompany code-state.md 补 agent-core 模块登记与风险标注 — done（TriCompany commit 8836e88，5 文件 +33/-2；保留导出作 O2-A 重建锚点，弃用标注 + 死形状警示 + 首次模块登记）",
@@ -120,6 +131,7 @@
     "ade-full-lifecycle: W31 维护面主树, 节点平移 W32 继续"
   ],
   "risks": [
+    "O1 修复后新暴露 11 仓存量 dirty（TriMem 16 / TriStaciss 14 / TriTest 8 / TriDeployment 6 / TriDev 6 / TriTraining 4 / TriAvatar 2 / TriGateway 2 / vscodium 1 / TriCompany 15 / TriModel 1 项）——重启前遗留，待各仓 owner 清理处置（r11-2 小柯发现）",
     "5项 carry-over 6w+，CARRY-001/004/005/006 逼近 8w CEO 升级线 — W33(8/10) 首周裁决",
     "BUG-20260805-001: TriLC Read 工具 tool_result 空串 — 排 TriLC 侧修",
     "BUG-20260805-002: 安装版 healthz version 报 0.1.0（version.json 未随构建更新）",
@@ -219,9 +231,9 @@
             {
               "id": "M2-R11",
               "name": "6.3/6.4 + O1 修复",
-              "status": "in_progress",
+              "status": "done",
               "tree": "r11-ops-init",
-              "checklist": "v2026.W33.14 (待 r11-3 收口)"
+              "checklist": "v2026.W33.14"
             }
           ]
         },

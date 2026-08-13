@@ -6,8 +6,8 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-13T06:00:00+08:00
 
-> 版本：v2026.W33.13
-> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过 + 树执行协议定案（git 触发 + checkpoint 存档 + 崩溃恢复）；v2026.W33.10 M2 第七轮——3.1/3.2 工程门禁通过（r7-eng-gate 树收口，V0.6 brief 机制首战验证）；v2026.W33.11 M2 第八轮——1.1-1.5 基础执行域通过（r8-base-exec 树，回滚演练）；v2026.W33.12 M2 第九轮——3.3/3.4/4.1 通过（r9-eng-cross 树）；v2026.W33.13 M2 第十轮——4.2/4.3/6.1/6.2 通过（r10-cross-ops 树，CONDITIONAL_PASS 收口））
+> 版本：v2026.W33.14
+> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过 + 树执行协议定案（git 触发 + checkpoint 存档 + 崩溃恢复）；v2026.W33.10 M2 第七轮——3.1/3.2 工程门禁通过（r7-eng-gate 树收口，V0.6 brief 机制首战验证）；v2026.W33.11 M2 第八轮——1.1-1.5 基础执行域通过（r8-base-exec 树，回滚演练）；v2026.W33.12 M2 第九轮——3.3/3.4/4.1 通过（r9-eng-cross 树）；v2026.W33.13 M2 第十轮——4.2/4.3/6.1/6.2 通过（r10-cross-ops 树，CONDITIONAL_PASS 收口）；v2026.W33.14 M2 第十一轮——6.3/6.4 通过 + O1 修复补跑（r11-ops-init 树，PASS 收口））
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
@@ -64,7 +64,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 4.1 | sibling 仓库引用 | `../TriLC`、`../TriCode`、`../TriCompany` 等跨仓路径解析正确 | 服务器可验 | **通过** | M2 第九轮（r9-eng-cross）：5 sibling 目录 + 2 处 file: 依赖（../TriCompany/packages/agent-core R7 迁移新路径 + ../TriModel）实测全部可达；小柯独立 ls -d 复核零差异 |
 | 4.2 | contracts 加载 | 14 份合同完整加载，system prompt 非空（源码工作区路径；TriCade 内置路径验证归 5.2 安装态） | 本地验后回传 | **通过** | M2 第十轮（r10-cross-ops）：源码工作区 `../TriCompany/source-agents/` 磁盘 14 份 .contract.yaml 全在；TriLC 真实 resolver（getContractResolver+loadAll）实载 14/14；system prompt 非空 14/14（2349~5837 字符）；磁盘与实载一致（小柯独立复核，PASS）。清单"12 份"描述过时已更正（公司现 14 agent） |
-| 4.3 | 六仓健康检查 | `git-six-repo-health-check.ps1` 运行与问题修复闭环 | 本地验后回传 | **通过** | M2 第十轮（r10-cross-ops）：脚本独立运行 20 repos / 9 issues，全部为 "ahead N"（push 权限受限积压，用户手动 push 解决），无 detached/behind/upstream-unset；`git rev-list` 交叉验证 5 仓 ahead 计数零差异（40/8/23/18/1）。**注：原"无 dirty"表述撤回**——CTO 2026-08-13 实测脚本存在 dirty 双重检测盲区（只读 `git status -sb` 首行 + Issue 判定模型无 dirty 维度），实测 TriCompany 15 项、TriModel 1 项 dirty 未报；O1 修复 APPROVE 后补跑复核 |
+| 4.3 | 六仓健康检查 | `git-six-repo-health-check.ps1` 运行与问题修复闭环 | 本地验后回传 | **通过** | M2 第十轮（r10-cross-ops）：脚本独立运行 20 repos / 9 issues，全部为 "ahead N"（push 权限受限积压，用户手动 push 解决），无 detached/behind/upstream-unset；`git rev-list` 交叉验证 5 仓 ahead 计数零差异（40/8/23/18/1）。**O1 修复补跑（r11-ops-init，小柯独立验证 PASS）**：修复后 20 仓 / 15 issues；ahead 计数与 r10-2 基线一致（增长全部为新增提交所致，behind 全 0）；dirty 维度命中 CTO 基线（TriCompany 15 项 + TriModel 1 项）；8 仓 git 原生命令交叉验证 ahead/dirty 零差异；修复新暴露 11 仓存量 dirty 已登记 OP risks |
 
 ### 5. 生产链域（全部本地验后回传）
 
@@ -81,8 +81,8 @@
 | --- | --- | --- | --- | --- | --- |
 | 6.1 | OP 记录更新 | 周记、tree 节点按周更节奏更新，无断更 | 服务器可验 | **通过** | M2 第十轮（r10-cross-ops）：OP-202608-W33-001.json 周平面维护——M2-R10 补登记 + activeTrees 更新（version 1.1.0）；收口时补登 r9-eng-cross 遗漏（r10-2 小柯发现 r9-3 收口漏登 doneTrees，r10-3 修复，version 1.2.0） |
 | 6.2 | 周会输入输出 | 按议程提供进度/阻塞输入，会议纪要收口 | 服务器可验 | **通过** | M2 第十轮（r10-cross-ops）：周会输入产出（R1~R10 进度表，无功能阻塞，唯一持续项 sg-server push 权限）；纪要 M2 段收口更新至 10 轮 / 19/33 / v2026.W33.13 |
-| 6.3 | 任务树状态同步 | tree-op 节点状态与真实工作一致（不夸大、不滞后） | 服务器可验 | 未开始 | — |
-| 6.4 | 会话初始化器 | onboarding 改造：合同加载（员工合同 YAML → 运行时配置）/ 五件套装配（soul/记忆/技能/工具/合同）/ 工作目录就绪；**本地与服务器双端各一份**（互为 fallback 都要能拉员工上岗——本地 TriLC 与服务器官方 claude 舰队同源合同、同源五件套） | 服务器可验 + 本地验后回传 | 未开始 | — |
+| 6.3 | 任务树状态同步 | tree-op 节点状态与真实工作一致（不夸大、不滞后） | 服务器可验 | **通过** | M2 第十一轮（r11-ops-init）：W33 六树全盘点——doneTreesThisWeek 5 树节点计数全对、brief 引用 0 missing、4 个 artifactCommit SHA cat-file 全部可追溯、清单 v2026.W33.13 一致、unresolved ↔ OP carry_over 主体一致、W32→W33 carry_over 9/9 逐条一致；小柯独立抽查复核 PASS（两条差异记录确认为非漂移：r10-3 resumePoint 说明性文字、w33 树无 brief 属 V0.6 机制启用时序） |
+| 6.4 | 会话初始化器 | onboarding 改造：合同加载（员工合同 YAML → 运行时配置）/ 五件套装配（soul/记忆/技能/工具/合同）/ 工作目录就绪；**本地与服务器双端各一份**（互为 fallback 都要能拉员工上岗——本地 TriLC 与服务器官方 claude 舰队同源合同、同源五件套） | 服务器可验 + 本地验后回传 | **通过** | M2 第十一轮（r11-ops-init）：双端落地——TriLC `src/company/session-initializer.ts`（合同加载复用 resolver → 五件套校验 → 工作目录 mkdir+W_OK）；TriMC `src/onboarding/session-initializer.ts`（loadV2Contracts + initializeSession，v2 合同为基础，同构装配）；同源冒烟双端各 14/14 实载 + prompt 全非空；forbidden 字段链路修复并逐条验证（14/14 全含，抽查 3 份 YAML↔运行时一致）；tsc 双端 0 错误（TriLC 254/256、TriMC 451/453，4 fail 均 r7 归因预存）；死 schema 零触碰（O2 口径遵守，小柯代码实读确认） |
 
 ## 二.5、CC 特性对标层（v2026.W33.2 新增）
 
