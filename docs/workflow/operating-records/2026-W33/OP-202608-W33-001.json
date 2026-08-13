@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (兜底复核三确认闭环 + D1 裁决确认修先行 + O1 无异议 + b86037a 收尾核收)",
-    "version": "2.16.0",
-    "lastUpdated": "2026-08-14T13:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (第三视角闭合 + 周日触发前置条件登记：fleet 克隆与裸仓同步三连)",
+    "version": "2.17.0",
+    "lastUpdated": "2026-08-14T14:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -238,7 +238,8 @@
     "OBS-20260814-002（CTO 小狄观察项，已闭环）：① runbook §2 已补 pull 执行身份（root pull 或 runuser -u fleet）；执行中发现真问题——root pull 在 /srv/fleet/TriMetaverse/.git 残留 838 个 root 属主文件致 fleet git 段 index 不可写，已 chown -R fleet:fleet .git + 实测 ADD-OK/NOOP-OK，修正步骤入 runbook（ebe378a）② /home/fleet 实测存在（fleet:fleet 700），HOME 覆盖有效",
     "r1-3 验证 CONDITIONAL_PASS → 修复后 PASS（编排层执行 + 小全复验 + 小柯兜底复核第三视角三确认，r1-4 收口 APPROVE）：B1 fleet safe.directory 全局 config 已加（dry-run push Everything up-to-date exit 0，修复前 128；发现重复登记两条功能无碍，去重转编排层顺手清理）B2 裸仓 5 个 loose 目录 g+w（find 复查 0 剩余 + 03 目录 fleet 写探针 PROBE_WRITE_OK）R1 克隆 .git chown（root 属主文件计数 0）；R1 复发性质实证——root pull 复发三次（838/26/10 文件）均 chown 归零，runbook §2.3 已定「每次 pull 后必跑」；B2/R1 机制性复发：周日触发前若有编排层 root push/pull，需触发前一并复核（小柯 1 分钟结论通道）；自然触发链完整——主路径周日 08-16 23:00 cron 自动首跑，兜底 trimc cron run b00b0070-2f82-4e7d-a98",
     "r1-3 发现缺陷/误判（CTO 评估完毕，修先行定案）：D1 carry_over bump 正则列序假设缺陷——§4 短行周数列第 2 列命中、§1 长行第 5 列静默落空（真实数据实锤：同一 CARRY-001 §1 表 6w+ vs §4 表 7w+）；修先行（周六 08-15 中午截止）：a) 代码修复逐行处理（仅 | 开头含 CARRY-\\d+ 表行 bump 首个 Nw+ 令牌 + 重算 4w/8w 标记）b) W33 §1 计数一次性对齐 §4 实效值（编排层写权，纳入周日触发前 checklist）；未完成则接受一期（迁移照跑无数据丢失，W34→W35 生效）；通道 TriCompany runtime 研发环（本地发起 + 单票审核）。O3 stagger 启发式（TOP_OF_MINUTE_CRON_RE 误读 0 23 * * 0 为 sub-hourly）——对本树影响零/正面（stagger=0 固化进 jobs.json，精确 23:00 触发），登记 agent-core backlog 低优先，激活条件=未来多 job 整点同发场景",
-    "r1-3 观察项处置（r1-4 收口）：O1 notify render_only 不投递邮件——决策接受（审计由 .shift-ade.json + git commit 承担），SMTP 配置（notify.json + NOTIFY_CONFIG）登记跟进项非阻塞；O2 控制台审计进 /tmp/trimc-run.log 无轮转——runbook 增补项；O4 r1-2 观察项已关闭（b7eeb50 修复）；O5 宕至 W35 才恢复则 migrate exit 1 响亮失败（不静默腐化）——已知边界，人工处置"
+    "r1-3 观察项处置（r1-4 收口）：O1 notify render_only 不投递邮件——决策接受（审计由 .shift-ade.json + git commit 承担），SMTP 配置（notify.json + NOTIFY_CONFIG）登记跟进项非阻塞；O2 控制台审计进 /tmp/trimc-run.log 无轮转——runbook 增补项；O4 r1-2 观察项已关闭（b7eeb50 修复）；O5 宕至 W35 才恢复则 migrate exit 1 响亮失败（不静默腐化）——已知边界，人工处置",
+    "周日触发前前置条件（小柯第三视角实证）：fleet 克隆必须与裸仓 dev 同步——复核中途实测一次 [rejected] fetch first（克隆 ccf1384c 落后裸仓 178bd9d9），不同步则迁移 commit 基于旧基、push 被拒、链在末步失败；现克隆=裸仓=178bd9d9 已同步。触发前若再有 root push/pull，执行后跑「克隆同步 + 裸仓 g+w sweep + 克隆 chown」三连（小柯复检脚本 1 分钟）——已纳入周日触发前 checklist"
   ],
   "plans": [
     {
