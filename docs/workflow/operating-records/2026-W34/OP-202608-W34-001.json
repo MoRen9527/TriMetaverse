@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (密钥巡检补报登记：泄露面单点收敛确认)",
-        "version": "1.22.0",
-        "lastUpdated": "2026-08-13T21:30:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (巡检汇总终版登记：泄露单点 2 key 精确清单交编排层)",
+        "version": "1.23.0",
+        "lastUpdated": "2026-08-13T21:35:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -221,7 +221,7 @@
         "r3-2 分面结论（小柯）：面 1 PASS——模型名全链一致（diff 逐点 20 处 + 两仓旧名残留 grep 零命中 + 注册表四条目双确认 + 活体铁证：daemon 日志 model=tmv-deepseek-v4-pro 无 not-in-registry，事故原始症状在默认值位置已消除）；面 2 chat 冒烟环境阻塞（非树回归）——本机模型服务链全断（TriModel 3333/TriStaciss 8000/TriMC 8710 均无监听，netstat 仅 8711），密钥 fetch 失败 → chat disabled，名字修复链已验证通到提供方边界；服务链恢复后小柯 2 分钟重跑即出结论。O-R3-1（路由小狄）：TriModel keys.ts DEFAULT_MODEL 仍 'deepseek-v4-pro'——legacy 可解析无立即故障但一致性应同步 tmv-*，与 FALLBACK_MAP 同批处理——O-R3-1 已修（CTO a5638e9，TriModel 仓）：config.ts + keys.ts 两处改 tmv-deepseek-v4-pro + 测试期望同步；keys API default_model 经 TriLC key-cache 回传路径闭合；env 覆盖仍优先；tsc clean + 15/15。r3 教训族硬编码至此：TriLC 16 + TriPilot 4 + agent-core FALLBACK_MAP + TriModel 2 全闭环",
         "服务链拉起状态 + 架构级新缺口（编排层通报）：已拉起 TriStaciss 8000 + TriModel 3333（keys API 认证过、default_model=tmv-deepseek-v4-pro）+ .env 新 key + 安装态缓存清空待重拉。新缺口：TriStaciss /v1/models 返回空列表——provider_configs.json 为 2025-09 openrouter free models 历史配置（api_key 空）无 deepseek 后端——tmv-* 注册表模型的 provider 链实际无可用 DeepSeek 模型。裁决待小狄：A=TriStaciss 配 deepseek provider（config 级，恢复完整链）vs B=TriLC 模型层直连映射（TriStaciss 退役路径，架构级）",
         "TriStaciss 缺口裁决定案 A（CTO 小狄）：config 级修复——provider_configs.json 补 deepseek provider（api_key 纪律不进 git 走 env/0600 文件，base_url api.deepseek.com/v1，openai_compatible，enabled_models deepseek-v4-pro/flash）+ tmv-* 模型名映射实测核对（api-server 路由逻辑，openrouter 旧配置无 tmv-* 名必实测）；验证=小柯 r3-2 升级口径（/v1/models 含 tmv-* + 真实调用返回真实回复 + 重建后 TriCade 可用）；密钥 git 跟踪检查。否决 B 依据：刚闭环的 20+ 处 tmv-* 统一语义会被绕过方案立刻否定 + 改动面在验收窗口不可控 + 空 provider 属配置缺失非架构失败；B「TriStaciss 去留」记档另开架构树（CEO 级裁决）",
-        "SEC-20260813-001（小柯预检查发现，密钥入 git 历史）：TriStaciss 仓 api-server/provider_configs.json.backup.20250907_210355 自 initial commit 8991d79 起被跟踪，含真实密钥（DeepSeek sk-fe34… + GLM 完整 key 各一；.gitignore 只防新增，历史仍在）；活跃 provider_configs.json 本身 gitignored 未跟踪 ✓。处置优先级：① 立即核两密钥吊销/轮换状态（未吊销立即吊销换新）② 确认吊销后 git 历史清除排期（filter-repo）+ 远端同步（sg-server）③ 小柯全仓巡检同类 tracked 密钥/备份（脱敏报告）。关联：编排层已清 51 个 s3-backup 明文历史文件（同类卫生线）——巡检补报（小柯，七仓 git grep 交叉）：泄露面收敛单点确认（仅 Tristaciss backup 一处真实密钥），其余命中全为占位符/示例形态，TriModel/TriPilot 代码类零命中；处置清单不变（吊销核实最优先 → 历史清除排期 → 远端同步检查）",
+        "SEC-20260813-001（小柯预检查发现，密钥入 git 历史）：TriStaciss 仓 api-server/provider_configs.json.backup.20250907_210355 自 initial commit 8991d79 起被跟踪，含真实密钥（DeepSeek sk-fe34… + GLM 完整 key 各一；.gitignore 只防新增，历史仍在）；活跃 provider_configs.json 本身 gitignored 未跟踪 ✓。处置优先级：① 立即核两密钥吊销/轮换状态（未吊销立即吊销换新）② 确认吊销后 git 历史清除排期（filter-repo）+ 远端同步（sg-server）③ 小柯全仓巡检同类 tracked 密钥/备份（脱敏报告）。关联：编排层已清 51 个 s3-backup 明文历史文件（同类卫生线）——巡检补报（小柯，七仓 git grep 交叉）：泄露面收敛单点确认（仅 Tristaciss backup 一处真实密钥），其余命中全为占位符/示例形态，TriModel/TriPilot 代码类零命中；处置清单不变（吊销核实最优先 → 历史清除排期 → 远端同步检查）——巡检汇总终版（小柯）：七仓三法扫描（sk- 模式 + api_key 非空长值 + env/secret 类跟踪检查，全程读侧）——真实泄露单点终判：仅 Tristaciss backup 一处 2 key（DeepSeek sk-fe3…35 字符 + GLM 15a232…49 字符，2025-09-07 入历史；backup 内 14 providers 其余全空/占位）；六仓其余命中全为占位符（sk-notifi/sk-contro/sk-descri/sk-escala/sk-or-v1 形态）；TriModel/TriPilot 干净。吊销核查清单精确两项已交编排层",
         "O-TS-1（TriStaciss 半成品历史遗留，编排层核证）：2026-07-14 anthropic 兼容入口改造（3 新增 + 5 修改 + 4 删除，与 commit abe5ba2 同期），非今日动作——处置=git stash 保留（--include-untracked 清晰消息），定案 A config 级实施完成后另议（该半成品可能正是后续 tmv-* 链相关改造，勿丢弃）"
     ]
 }
