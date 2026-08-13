@@ -138,15 +138,15 @@
     },
     {
       "id": "FAMILY-FIX-20260813-001",
-      "action": "family 裁决落笔（CTO 小狄，r13-4 收口）：business-strategy family Role → Registry（一行 YAML + commit + code-state.md 登记）。依据：语义自证中央 registry 职能 / roster 13 员工名册不含 / Registry Routing 惯例 / v2 原值历史笔误。roster 不动",
+      "action": "family 裁决落笔（CTO 小狄，r13-4 收口）：business-strategy family Role → Registry（一行 YAML + commit + code-state.md 登记）。依据：语义自证中央 registry 职能 / roster 13 员工名册不含 / Registry Routing 惯例 / v2 原值历史笔误。roster 不动 — done（TriCompany 60bc197：family=Registry，loadContractV3 解析验证通过；code-state.md 更正依据 312952b）",
       "ownerRole": "CTO",
-      "status": "open"
+      "status": "done"
     },
     {
       "id": "FORBIDDEN-LOSS-20260813-001",
-      "action": "forbidden 真丢评估（CTO 小狄）：test-engineer forbidden 的\"替代 BusinessStrategy 做中央战略裁决\"条目在 v2 golden 已缺席（迁移前既成事实，非 B 段丢失，v1 原文 git 历史可取回）——评估是否回补",
+      "action": "forbidden 真丢评估（CTO 小狄）：test-engineer forbidden 的\"替代 BusinessStrategy 做中央战略裁决\"条目在 v2 golden 已缺席（迁移前既成事实，非 B 段丢失，v1 原文 git 历史可取回）——评估是否回补 — done（TriCompany 9273782：从 2c2ccf5~1 取回 v1 原文核实，对称护栏缺一即约束弱化，已回补至 v3 合同 6 条齐，解析验证通过）",
       "ownerRole": "CTO",
-      "status": "open"
+      "status": "done"
     }
     {
       "id": "O2-B-20260813-001",
