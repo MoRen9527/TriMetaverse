@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r1-3 验证 CONDITIONAL_PASS 登记：代码层 PASS + B1/B2/R1 三 ops 修复待执行 + D1/O3 转变更通道)",
-    "version": "2.13.0",
-    "lastUpdated": "2026-08-14T10:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r1-4 收口 APPROVE：首树收官迁 doneTreesThisWeek，触发链完整待周日 23:00 自然触发)",
+    "version": "2.14.0",
+    "lastUpdated": "2026-08-14T11:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,17 +29,7 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [
-    {
-      "treeId": "prod-grade-1-trimc-weekly-cron",
-      "title": "TriMC scheduler 模块 — 定时触发周平面迁移五段链（生产级开发期首树）",
-      "nodes_total": 5,
-      "nodes_done": 4,
-      "status": "active",
-      "path": "trees/prod-grade-1-trimc-weekly-cron/tree-op.json",
-      "related": "生产级开发期阶段一 · TriMC 仓中等改造（研发环主力实现，TriLC 参与测试/CLI 段）"
-    }
-  ],
+  "activeTrees": [],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -131,6 +121,15 @@
       "status": "done",
       "path": "trees/r15-ops-day-ready/tree-op.json",
       "related": "M3-R3 (CEO 授权 ③b+④)"
+    },
+    {
+      "treeId": "prod-grade-1-trimc-weekly-cron",
+      "title": "TriMC scheduler 模块 — 定时触发周平面迁移五段链（生产级开发期首树）",
+      "nodes_total": 5,
+      "nodes_done": 5,
+      "status": "done",
+      "path": "trees/prod-grade-1-trimc-weekly-cron/tree-op.json",
+      "related": "生产级开发期阶段一 · TriMC 仓中等改造（研发环主力实现，TriLC 参与测试/CLI 段）"
     }
   ],
   "nextActions": [
@@ -193,6 +192,18 @@
       "action": "pipeline-integration 2 条 tier 断言漂移（期望 requires tier \"main\"，agent-core canUseTool 现产 \"heartbeat\"）——非 r1-2 回归，归因 r13 合同收敛流（agent-core 9cd325b）。小票：测试串对齐 + write_file 语义（main-only → heartbeat+）确认；修复通道 TriMC 仓小改单票；语义确认 owner = CTO 小狄。非阻塞，r1 树收口后处理 — done（小狄语义确认：刻意变更非缺陷，TIER_LEVEL main=2=heartbeat，写工具最低 tier main→heartbeat 对应 REQ-20260805-006，shell 仍 main-only；修复 b7eeb50 纯测试 1 文件 5 行，全量 490/491 零失败；单票审核折入 r1-3 小柯顺手确认）",
       "ownerRole": "CTO",
       "status": "done"
+    },
+    {
+      "id": "MON-REFLOW-20260817-001",
+      "action": "周日 08-16 23:00 自然触发后，周一 08-17 回流检查：本地 git pull sg-server dev → 核对 W33 index closed/latestActiveWeek=false、W34 目录 OP index + unresolved-items.md + .shift-ade.json（status=pass）、diff 审查、D1 影响 §1 行 8w+ 人工补标（D1 裁决前按留意+补标口径）。cron 未触发则先 trimc cron run b00b0070-2f82-4e7d-a98 兜底再回流",
+      "ownerRole": "CEOChiefOfStaff",
+      "status": "open"
+    },
+    {
+      "id": "O1-SMTP-20260814-001",
+      "action": "O1 SMTP 配置跟进（非阻塞）：服务器 notify render_only 不投递邮件——接受现状（审计由 .shift-ade.json + git 承担），后续为 fleet 配 notify.json + NOTIFY_CONFIG（SMTP best-effort），随生产级开发期后续树处理",
+      "ownerRole": "CEOChiefOfStaff",
+      "status": "open"
     }
   ],
   "carry_over_from_w31": [
@@ -219,8 +230,9 @@
     "r1-2 附加风险（小狄标注）：agent-core scheduler 从未在服务器进程实例化——P4 部署 smoke 为首次实战，暴露问题按共享 core 缺口通道升级，不就地改共享包",
     "TIER-ASSERT-20260814-001（CTO 小狄审核发现，非阻塞）：全量测试 488/491 的 2 条 pipeline-integration tier 断言失败（期望 requires tier \"main\"，agent-core canUseTool 现产 \"heartbeat\"）——非 r1-2 回归，漂移归因 r13 合同收敛流（agent-core 9cd325b）；修复通道：TriMC 仓小改单票，语义确认小狄 owner，登记 nextActions",
     "OBS-20260814-002（CTO 小狄观察项，已闭环）：① runbook §2 已补 pull 执行身份（root pull 或 runuser -u fleet）；执行中发现真问题——root pull 在 /srv/fleet/TriMetaverse/.git 残留 838 个 root 属主文件致 fleet git 段 index 不可写，已 chown -R fleet:fleet .git + 实测 ADD-OK/NOOP-OK，修正步骤入 runbook（ebe378a）② /home/fleet 实测存在（fleet:fleet 700），HOME 覆盖有效",
-    "r1-3 验证 CONDITIONAL_PASS（代码层 PASS，ops 阻塞 3 项待修复，修复命令 scratch 实证有效）：B1 fleet push 真裸仓被 git 2.43.7 safe.directory 拦死 exit 128（周日必败；修复=runuser -u fleet -- git config --global --add safe.directory /srv/git/TriMetaverse.git；模板 -c 内联无效已实证）B2 真裸仓 5 个锁定 loose 目录（03/79/7c/3a/90）无组写概率败 ~10-25%（修复=find .../objects -maxdepth 1 -not -perm -g=w -exec chmod g+w）R1 fleet 克隆 26 个 root 属主文件+1 锁定 dir（root pull 复发，重跑 runbook §2.3 chown）——修复执行路由小全，验证方法 r1-3 brief §3.3/§5",
-    "r1-3 发现缺陷/误判（转变更通道，非阻塞）：D1 carry_over 周数 bump 正则对 §1 长格式行静默不生效（§4 短行正常；真实 W33 数据同证）——TriCompany weekly_plane 脚本既有缺陷，转 TriCompany runtime 通道；O3 stagger 启发式对 0 23 * * 0 返回 0 的误判面——转 agent-core 变更通道；两通道 owner 均 CTO 小狄"
+    "r1-3 验证 CONDITIONAL_PASS → 修复后 PASS（编排层执行验证，r1-4 收口 APPROVE）：B1 fleet safe.directory 全局 config 已加（dry-run push Everything up-to-date 无 dubious 拦截）B2 裸仓 objects 目录 chgrp fleet + g+w（root push 复发项转 runbook 常态步骤）R1 克隆 .git chown 完成；自然触发链完整——主路径周日 08-16 23:00 cron 自动首跑，兜底 trimc cron run b00b0070-2f82-4e7d-a98",
+    "r1-3 发现缺陷/误判（转变更通道，非阻塞）：D1 carry_over 周数 bump 正则对 §1 长格式行静默不生效（§4 短行正常；真实 W33 数据同证）——TriCompany weekly_plane 脚本既有缺陷，转 TriCompany runtime 通道；O3 stagger 启发式对 0 23 * * 0 返回 0 的误判面——转 agent-core 变更通道；两通道 owner 均 CTO 小狄",
+    "r1-3 观察项处置（r1-4 收口）：O1 notify render_only 不投递邮件——决策接受（审计由 .shift-ade.json + git commit 承担），SMTP 配置（notify.json + NOTIFY_CONFIG）登记跟进项非阻塞；O2 控制台审计进 /tmp/trimc-run.log 无轮转——runbook 增补项；O4 r1-2 观察项已关闭（b7eeb50 修复）；O5 宕至 W35 才恢复则 migrate exit 1 响亮失败（不静默腐化）——已知边界，人工处置"
   ],
   "plans": [
     {

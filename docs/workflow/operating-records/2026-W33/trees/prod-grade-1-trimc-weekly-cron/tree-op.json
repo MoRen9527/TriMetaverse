@@ -3,7 +3,9 @@
   "title": "TriMC scheduler 模块 — 定时触发周平面迁移五段链（生产级开发期首树）",
   "source": "W33 决策登记 2026-08-13（CEO 批准生产级开发期 + 首树启动）",
   "week": "2026-W33",
-  "status": "active",
+  "status": "done",
+  "verdict": "APPROVE — 代码层 PASS（四验证面 + S1/S2 补充点全过）；B1/B2/R1 三 ops 修复经编排层执行验证（B1 fleet safe.directory 全局 config，dry-run push Everything up-to-date 无 dubious 拦截 / B2 裸仓 objects 目录 chgrp fleet + g+w / R1 克隆 .git chown）；自然触发链完整——主路径周日 08-16 23:00 cron 自动首跑，兜底 trimc cron run b00b0070-2f82-4e7d-a98；非阻塞项 D1/O1/O3/O5 转通道/登记，次日（08-17）回流检查点入 OP nextActions",
+  "completedAt": "2026-08-14T11:00:00+08:00",
   "nodes": [
     {
       "nodeId": "r1-0",
@@ -34,40 +36,40 @@
     {
       "nodeId": "r1-2",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "实现：本地研发仓开发 TriMC 仓 scheduler 模块（按 r1-1 方案），push sg-server；TriLC 参与测试/CLI 段（对照 trilc cron CLI 行为对齐）",
       "routedInput": "r1-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r1-2-20260813164710.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "全链完成。P1-P4：src/cron/ 五文件（week-math/command-handler/service/routes/index，复用 agent-core 共享 scheduler，零改动共享 core）+ app.ts 装配（cron 路由 + start/stop + healthz cron 块）+ env.ts 扩展 + src/cli.ts（trimc cron 七子命令 + --plane-shift 预设）+ bin 装配。测试 36 用例全绿，tsc clean，validate.mjs typeCheck 过（全量 2 个 pipeline 既有失败，HEAD 基线同败）。P4 服务器部署 checklist 6 项全完成：裸仓 fleet 写权、Python 3.6.8 实测不兼容→按 CTO 预案 A' 装 python3.8（--help + 测试根/真实根 dry 链门禁过）、agent-core 链可解析、fleet uid 1001、/var/lib/trimc + service drop-in、engines 下调 >=18.20.0。服务器 dist build + restart 后 healthz cron 块可见；真 job weekly-plane-shift 已装（nextRunAtMs=2026-08-16 周日 23:00 SGT 精确）；测试 job 经 trimc cron run 全链路实测通过（runuser 降权/spawn/token 替换/per-run 日志/log 端点审计）后删除；真 job 状态 idle/enabled。push sg-server 由编排层补齐（本地 push 被权限拒，三次）。设计文档同仓落地 + 新增 runbook（回流边界声明：本地 pull 为编排层运维步骤，调度器不负责）。事故记录（已恢复）：worktree junction 误删 TriCompany/agent-core 工作区文件（git restore 恢复）与本地 TriModel 全目录（从 sg-server 克隆恢复 HEAD a445b0e），详见 brief。",
+        "artifactCommit": "d3fe63e",
+        "resumePoint": "r1-3 小柯独立验证：scheduler 触发链路 + 五段链迁移正确性 + 周平面文件写路径 + deadline 前可触发性（触发时机编排层已定案：不做人工提前点火，r1-3 PASS 后走自然触发——cron 周日 08-16 23:00 自动首跑，trimc cron run 仅兜底；r1-3 用测试根 dry 链 + 真 job 状态检查，不误跑真迁移。补记：小狄审核一票 PASS；两项观察已落实——runbook pull 身份注释 + TriMetaverse .git 属主修正（root pull 残留 838 root 文件已 chown fleet，fleet git add/commit no-op 实测通过）、/home/fleet 存在 HOME 覆盖有效；runbook 修正 commit ebe378a 待编排层 push）"
       }
     },
     {
       "nodeId": "r1-3",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证：scheduler 触发链路 + 五段链迁移正确性 + 周平面文件写路径 + deadline 前可触发性",
       "routedInput": "r1-2:checkpoint",
-      "brief": "",
+      "brief": "briefs/r1-3-20260813170913.md",
       "checkpoint": {
-        "progress": "",
+        "progress": "判定 CONDITIONAL_PASS。四验证面全部实测：①触发链路 PASS——nextRunAtMs=1786892400000=08-16 23:00 SGT（croner 直调+手算双方法一致）、token 规则全周正确、stale-run/degraded 代码+单测+活体确认、测试 job 经真 HTTP API 全链实测通过（token 替换/runuser fleet/python3.8/per-run 日志/log 端点/持久化，已删无残留）②五段链 PASS（测试根 --sync exit 0，W34 建/W33 retire/carry-over/validate/agent_close 全落位，幂等重跑无重复；缺陷 D1：carry_over bump 正则对 §1 长格式行静默不生效——TriCompany 脚本既有，转单独变更通道）③写路径机制 PASS、真裸仓 BLOCKED——阻塞 B1：fleet push 被 git 2.43.7 safe.directory 拦死（exit 128，r1-2 从未实测过 push 段）；阻塞 B2：真裸仓 5 个锁定 loose 目录（03/79/7c/3a/90）概率败（~10-25%）；风险 R1：fleet 克隆 26 个 root 属主文件+1 锁定 dir（root pull 复发）。修复命令三行已 scratch 实证有效（brief §3.3）④deadline 可触发性就绪（真 job enabled/idle/nextRunAt 精确、service active+enabled、python3.8/uid1001/+0800、三端 dev=4a0cb7bd 同步），受 B1/B2 约束：未修则自然触发在 push 段败、迁移本体完成可 root 补 push 兜底。门禁：TriMC 全量 490/491（b7eeb50 修复既有 2 败，CTO 确认零行为变更）、check clean、validate.mjs PASS、agent-core 零改动。真迁移零触发、真 job 零跑（runCount=0）。",
         "artifactCommit": "",
-        "resumePoint": ""
+        "resumePoint": "r1-4 小贾收口：执行三修复（B1 safe.directory 全局 config / B2 裸仓 g+w sweep / R1 chown 克隆 .git）→ 周日 23:00 自然触发 → 周一 pull 回流；runbook 增补 3 项；D1/O3 转 TriCompany/agent-core 变更通道；回写 TriMC code-state.md（brief §5 清单）"
       }
     },
     {
       "nodeId": "r1-4",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口：判定 + 清单登记 + push 三仓同步 + 最终报告（收口门禁 v2）；登记生产级开发期阶段一进展",
       "routedInput": "r1-3:checkpoint",
-      "brief": "",
+      "brief": "briefs/r1-4-20260814110000.md",
       "checkpoint": {
-        "progress": "",
+        "progress": "收口判定 APPROVE（CONDITIONAL_PASS 修复后转 PASS）。B1/B2/R1 三修复由编排层在服务器执行并验证：B1 fleet safe.directory 已加（dry-run push Everything up-to-date 无 dubious 拦截）、B2 裸仓 objects 目录 chgrp fleet + g+w（root push 复发项转 runbook 常态步骤）、R1 fleet 克隆 .git chown 完成。自然触发链完整：主路径周日 08-16 23:00 cron 自动首跑（nextRunAtMs=1786892400000 精确），兜底 trimc cron run b00b0070-2f82-4e7d-a98。非阻塞登记：D1（carry_over 正则 §1 长格式行不 bump）转 TriCompany runtime 通道、O3（stagger 启发式误判）转 agent-core 通道（owner 均 CTO 小狄）；O1（notify render_only 不投递邮件）决策接受——审计由 .shift-ade.json + git 承担，SMTP 配置登记跟进项；O5（宕至 W35 恢复则 migrate 响亮失败）登记为已知边界人工处置。runbook 增补 3 项 + TriMC code-state.md 回写（src/cron/ + src/cli.ts 登记）路由小全。次日（08-17）回流检查点入 OP nextActions：本地 git pull sg-server + 核对 W33 closed/W34 index+unresolved+.shift-ade.json status=pass/D1 影响 §1 行 8w 人工补标 + diff 审查。生产级开发期阶段一进展登记：首树收官，阶段一挂靠项 C4/C5/C7 仍待消化。收口门禁 v2：判定+清单登记+最终报告完成，push 三仓同步由编排层统一执行（agent 侧 push 权限受限，OP 落盘未提交待补）。",
         "artifactCommit": "",
-        "resumePoint": ""
+        "resumePoint": "树收官。周日 23:00 自然触发（编排层盯），周一 08-17 回流检查（小贾）。挂起：D1 裁决（小狄）、O1 SMTP 跟进、runbook 增补 + code-state 回写（小全）"
       }
     }
   ]
