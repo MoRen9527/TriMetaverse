@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (D1-FIX 闭环 done：小柯重验 PASS 全证据 + O-D1-1 补丁/O-D1-2 无处置登记)",
-    "version": "2.19.0",
-    "lastUpdated": "2026-08-14T16:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (D1 全量重验四检查项 + B 段对齐值仿真验证登记：周日实跑两表 8w+ 10 行 escalation 10/10)",
+    "version": "2.20.0",
+    "lastUpdated": "2026-08-14T17:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -213,7 +213,19 @@
     },
     {
       "id": "O-D1-1-PATCH-20260814-001",
-      "action": "O-D1-1 末尾换行 1 行补丁（非阻塞，外观级）：D1 新实现 splitlines/join 使产物丢失末尾换行（130 行守恒但 wc -l=129、git 标 No newline）；补丁=join 后按源文件补回结尾换行。owner CTO 小狄，小改单票（小柯快验），周日触发前完成即可。O-D1-2（Windows GBK stdout UnicodeEncodeError，发生在全部写操作完成后，产物不受影响；服务器 UTF-8 无此问题）无需处置，本地手工跑前置 PYTHONIOENCODING=utf-8 记入 runbook 即可",
+      "action": "O-D1-1 末尾换行 1 行补丁（非阻塞，外观级）：D1 新实现 splitlines/join 使产物丢失末尾换行（130 行守恒但 wc -l=129、git 标 No newline）；补丁=join 后按源文件补回结尾换行。owner CTO 小狄，小改单票（小柯快验），周日触发前完成即可。O-D1-2（Windows GBK stdout UnicodeEncodeError，发生在全部写操作完成后，产物不受影响；服务器 UTF-8 无此问题）无需处置，本地手工跑前置 PYTHONIOENCODING=utf-8 记入 runbook 即可 — 补丁已落地 e20fa8b（+5 行 had_trailing_newline 捕获），小柯快验待回报",
+      "ownerRole": "CTO",
+      "status": "open"
+    },
+    {
+      "id": "D1-B-CORRECT-20260816-001",
+      "action": "B 段数据校正（周日触发前 checklist，编排层写权）：§1 五行 6w+ ⚠️⚠️ → 7w+ ⚠️（CARRY-001/004/005/006）、6w+ ✅ → 7w+ ⚠️（CARRY-003，✅ 同步清除、闭合信息留状态列）、RISK「2w」不动；依据=08-10 迁移 §1 漏 bump 恰一档、§4 实效 7w+、§4 头注 W33 结束即 8 周。小柯已仿真验证校正后周日实跑：exit 0、两表同至 8w+ ⚠️⚠️（10 行）、escalation_8w=10/10、ADE pass；周日提取清单 10 条含 §1/§4 ID 重叠，CEO 裁决按 ID 去重阅读",
+      "ownerRole": "CEOChiefOfStaff",
+      "status": "open"
+    },
+    {
+      "id": "O-D1-3-AUTOTEST-20260814-001",
+      "action": "O-D1-3 自动化单测缺失（非阻塞，低优先）：TriCompany HEAD 无 weekly_plane 自动化单测文件——建议把两型 fixture（§1 长行/§4 短行）落为自动化测试；裁量权 CTO 小狄，随 TriCompany runtime 后续变更通道处理",
       "ownerRole": "CTO",
       "status": "open"
     }
