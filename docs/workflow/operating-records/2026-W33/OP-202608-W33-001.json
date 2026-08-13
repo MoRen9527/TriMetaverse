@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r11-3 收口: M2-R11 done + O1-FIX done + D4/O3 转 CTO)",
-    "version": "1.4.0",
-    "lastUpdated": "2026-08-13T18:30:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (R12 建树: M2-R12 in_progress，M2 收官树)",
+    "version": "1.5.0",
+    "lastUpdated": "2026-08-13T19:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,7 +29,17 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [],
+  "activeTrees": [
+    {
+      "treeId": "r12-production-chain",
+      "title": "生产链域收官：5.1 MSI 构建 + 5.2 安装态（含 4.2 安装态实测）+ 5.3 服务管理 + 5.4 升级回滚",
+      "nodes_total": 4,
+      "nodes_done": 1,
+      "status": "active",
+      "path": "trees/r12-production-chain/tree-op.json",
+      "related": "M2-R12 5.1-5.4 + 4.2 安装态"
+    }
+  ],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -234,6 +244,13 @@
               "status": "done",
               "tree": "r11-ops-init",
               "checklist": "v2026.W33.14"
+            },
+            {
+              "id": "M2-R12",
+              "name": "5.1-5.4 生产链 + 4.2 安装态",
+              "status": "in_progress",
+              "tree": "r12-production-chain",
+              "checklist": "v2026.W33.15 (待 r12-3 收口)"
             }
           ]
         },

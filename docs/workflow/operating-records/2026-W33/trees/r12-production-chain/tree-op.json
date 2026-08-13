@@ -1,0 +1,63 @@
+{
+  "treeId": "r12-production-chain",
+  "title": "生产链域收官：5.1 MSI 构建 + 5.2 安装态（含 4.2 安装态实测）+ 5.3 服务管理 + 5.4 升级回滚",
+  "source": "M2-R12",
+  "week": "2026-W33",
+  "status": "active",
+  "verdict": "",
+  "completedAt": "",
+  "nodes": [
+    {
+      "nodeId": "r12-0",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "建树：规划 r12 范围与节点链",
+      "routedInput": "",
+      "brief": "briefs/r12-0-20260813190000.md",
+      "checkpoint": {
+        "progress": "范围定案：5.1 MSI 构建全链路（build-desktop.ps1 源码→MSI/ZIP 一次成功，staging 干净——W30 残留文件混包事故教训）+ 5.2 安装态验证（安装后 daemon 启动 + /healthz 200 + agent prompt 可用；**并入 4.2 安装态实测**——TriCade 内置路径 contracts 加载；注意 5.2 标准'12/12 agent'描述过时，按 14/14 口径实测，收口时更新清单）+ 5.3 服务管理（nssm/计划任务注册、卸载、状态查询）+ 5.4 升级回滚（同版本不覆盖、新版本可升级、回滚预案可执行）。**全部本地验后回传**——服务器不可验，验证以本地实测 + 回传证据为准。节点链：r12-1 小全执行（本地 Windows 工具链）→ r12-2 小柯验证 → r12-3 小贾收口 v2026.W33.15。",
+        "artifactCommit": "",
+        "resumePoint": "树已建，r12-1 开工。M2 收官树——全勾后 M3 自动推进"
+      }
+    },
+    {
+      "nodeId": "r12-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "执行 5.1 + 5.2（含 4.2 安装态）+ 5.3 + 5.4",
+      "routedInput": "r12-0:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r12-2",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "独立验证 5.1 + 5.2 + 5.3 + 5.4（本地实测 + 回传证据）",
+      "routedInput": "r12-1:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r12-3",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口判定 → 清单 v2026.W33.15",
+      "routedInput": "r12-2:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    }
+  ]
+}
