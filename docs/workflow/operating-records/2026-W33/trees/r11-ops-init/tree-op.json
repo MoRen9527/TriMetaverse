@@ -36,14 +36,14 @@
     {
       "nodeId": "r11-2",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证 6.3 + 6.4 + O1",
       "routedInput": "r11-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r11-2-20260813083811.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "独立验证完成，总 PASS。O1：脚本独立跑 20 仓/15 issues，TriCompany 15 dirty + TriModel 1 dirty 命中 CTO 基线，ahead 9 仓计数增长均为新增提交所致（无回归），8 仓 git 原生命令交叉验证零差异。6.4：双端死 schema 零触碰（代码实读）+ forbidden 三处齐备（3 份合同 YAML↔运行时逐条一致，14/14 全含 forbidden）+ 独立冒烟 TriLC/TriMC 各 14/14 全非空 + 全量测试 TriLC 254/256、TriMC 451/453 与声称精确一致（4 fail 均 r7 预存）+ tsc 双端 0 错误。6.3：5 树节点计数全对、brief 0 missing、4 SHA cat-file 可追溯、清单 v2026.W33.13、W33/W32 carry_over 逐条一致（9/9）。差异：D4（TriCompany 8836e88 声称 4 类型标 @deprecated 实际未标，仅头警告）非功能；O3（TriMC initializeSession 缺 W_OK 校验）非阻塞。补充：dirty 全景 11 仓（r11-1 只点名基线 2 仓），其余 9 仓为修复后新暴露存量，建议收口方登记处置。",
+        "artifactCommit": "brief + tree-op commit",
+        "resumePoint": "r11-3 小贾收口：清单 v2026.W33.14 + D4（补标或改记录）+ O3（随 O2-A 对齐）+ dirty 9 仓存量登记 OP risks"
       }
     },
     {
