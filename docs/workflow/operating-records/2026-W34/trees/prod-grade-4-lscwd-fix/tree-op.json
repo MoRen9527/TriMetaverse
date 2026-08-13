@@ -1,0 +1,76 @@
+{
+    "treeId": "prod-grade-4-lscwd-fix",
+    "title": "ls/cwd 工具上下文缺陷修复 — 五读工具 ctx.cwd 统一 + 周平面提示注入（生产级开发期第四树）",
+    "source": "CEO 重测发现 ls 工具跑到 C:\\Users\\jedih\\Documents（BUG-20260814-001）→ 小全诊断三层根因（LS-CWD-DIAG-20260814-001）→ 小狄审批定案 A+C（LS-CWD-FIX-20260814-001）",
+    "week": "2026-W34",
+    "status": "active",
+    "nodes": [
+        {
+            "nodeId": "r4-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "建树：按小狄定案登记范围、护栏与节点链（修复树，排期可缓，周日 08-16 23:00 迁移验收前不合并）",
+            "routedInput": "",
+            "brief": "briefs/r4-0-20260814031349.md",
+            "checkpoint": {
+                "progress": "范围定案（小狄 A+C 双 APPROVE，B 否决确认）：① A(TriLC)——5 读工具 handler 加 ctx?: ToolContext，基准统一 ctx?.cwd ?? process.cwd()；shell-exec 特例 (args.cwd) || ctx?.cwd || process.cwd()（模型显式参数优先语义保留，中间补 ctx 层）② A(TriMC) 同批——3 处本地 handler（tools.ts:231 shell_exec / :286 glob_search / :391 subagent spawn cwd）同款修 + executeTool 包装（tools.ts:42）补第三参透传（标注无现役调用方）；agent-core 共享包零改 ③ C 限定形态——只改 TriLC app.ts:1973 为 body.systemPrompt ? body.systemPrompt + buildWeeklyPlaneHint() : defaultSystemPrompt()；defaultSystemPrompt 内部 hint 不动（其余 5 个调用点零变化）；不扩 OpenAI 兼容端点（1165/1560/1685）——服务端强制追加属策略决策，跟进项 C-EXT-ENDPOINTS 转编排层定；buildWeeklyPlaneHint 注释补外部 append 点标记防双注入。护栏：开发态（ctx.cwd===process.cwd()）行为零变化、既有工具测试不改预期；顺序 A(TriLC) → A(TriMC) → C；迁移验收前不合并。节点链：r4-1 小全实现 → r4-2 小柯独立验证 → r4-3 小狄验收口径终审 → r4-4 小贾收口。",
+                "artifactCommit": "",
+                "resumePoint": "树已建，r4-1 待编排层排期开工（小全实现）"
+            }
+        },
+        {
+            "nodeId": "r4-1",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "实现（按小狄定案，顺序 A(TriLC) → A(TriMC) → C）：① A(TriLC)——LS/Read/Glob/Grep/ShellExec 五读工具 handler 加 ctx?: ToolContext，相对路径解析基准统一 ctx?.cwd ?? process.cwd()（file-ls.ts:90 / file-read.ts:65 / file-glob.ts:159,165 / file-grep.ts:552,569）；shell-exec 特例 (args.cwd as string) || ctx?.cwd || process.cwd()（shell-exec.ts:108）② A(TriMC) 同批——tools.ts:231/286/391 三处 handler 同款修 + executeTool 包装（tools.ts:42）补第三参透传（commit 标注无现役调用方）；agent-core 零改 ③ C——TriLC app.ts:1973 改 body.systemPrompt ? body.systemPrompt + buildWeeklyPlaneHint() : defaultSystemPrompt()；buildWeeklyPlaneHint 注释补外部 append 点标记。门禁：既有工具测试预期不改 + 新增 ctx 传递断言（ctx.cwd 相对路径解析基准 + ctx 缺失回退 process.cwd 两型）+ C 侧 1973 组装断言（传 prompt 场景含 hint）；开发态行为零变化",
+            "routedInput": "r4-0:checkpoint",
+            "brief": "",
+            "checkpoint": {
+                "progress": "",
+                "artifactCommit": "",
+                "resumePoint": ""
+            }
+        },
+        {
+            "nodeId": "r4-2",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "独立验证（小狄门禁口径）：① 既有工具测试预期零改动（diff 核查测试文件仅新增不改旧）② 新增 ctx 传递断言两型实测（ctx.cwd 相对路径解析基准命中 + ctx 缺失回退 process.cwd）③ C 侧 1973 组装断言实测（带 systemPrompt 请求含 hint、不带走 defaultSystemPrompt 原路径）④ 开发态行为零变化回归（ctx.cwd===process.cwd() 场景全绿）⑤ TriMC 同款三处验证 + executeTool 透传防误用标记核实 ⑥ 观察项记录：修复后模型若仍显式传 Documents 路径属模型行为面非代码缺陷，验证轮单独记录不判回归",
+            "routedInput": "r4-1:checkpoint",
+            "brief": "",
+            "checkpoint": {
+                "progress": "",
+                "artifactCommit": "",
+                "resumePoint": ""
+            }
+        },
+        {
+            "nodeId": "r4-3",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "验收口径终审：定案人复核实现与定案一致性（A 两仓范围/C 限定形态/agent-core 零改/shell-exec 语义保留/B 未动）→ 终审结论（PASS/打回）",
+            "routedInput": "r4-2:checkpoint",
+            "brief": "",
+            "checkpoint": {
+                "progress": "",
+                "artifactCommit": "",
+                "resumePoint": ""
+            }
+        },
+        {
+            "nodeId": "r4-4",
+            "agent": "CEOChiefOfStaff",
+            "status": "pending",
+            "action": "收口：终审 PASS 后判定 + OP 登记（BUG-20260814-001 闭环 + 教训入能力清单：工具层路径解析必须以 ctx.cwd 为基准，新增工具同步补 ctx 传递断言）+ 版本定案（修复进下个 release，排期不抢迁移验收）",
+            "routedInput": "r4-3:checkpoint",
+            "brief": "",
+            "checkpoint": {
+                "progress": "",
+                "artifactCommit": "",
+                "resumePoint": ""
+            }
+        }
+    ],
+    "verdict": "",
+    "completedAt": ""
+}

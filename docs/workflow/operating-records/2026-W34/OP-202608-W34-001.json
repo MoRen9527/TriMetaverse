@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (ls/cwd 诊断收口：小全三层根因实证，修复方案 A+C 路由小狄审批)",
-        "version": "1.42.0",
-        "lastUpdated": "2026-08-13T19:08:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (小狄 A+C 定案登记 + 修复树 prod-grade-4-lscwd-fix 建树)",
+        "version": "1.43.0",
+        "lastUpdated": "2026-08-13T19:13:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -36,7 +36,17 @@
         "TriMC"
     ],
     "updatedAt": "2026-08-13T10:26:24.742649+00:00",
-    "activeTrees": [],
+    "activeTrees": [
+        {
+            "treeId": "prod-grade-4-lscwd-fix",
+            "title": "ls/cwd 工具上下文缺陷修复 — 五读工具 ctx.cwd 统一 + 周平面提示注入（生产级开发期第四树）",
+            "nodes_total": 5,
+            "nodes_done": 1,
+            "status": "active",
+            "path": "trees/prod-grade-4-lscwd-fix/tree-op.json",
+            "related": "BUG-20260814-001 → LS-CWD-DIAG-20260814-001 → LS-CWD-FIX-20260814-001 小狄定案 A+C；周日迁移验收前不合并"
+        }
+    ],
     "doneTreesFromPreviousWeek": [
         {
             "treeId": "w33-weekly-migration-ade",
@@ -195,6 +205,14 @@
             "id": "LS-CWD-FIX-20260814-001",
             "action": "ls/cwd 修复方案审批与定案（派小狄）：小全诊断建议 A（工具层统一 ctx?.cwd ?? process.cwd()，TriLC 5 读工具 + TriMC 2 处同款）为主 + C（tasks/submit 无条件追加周平面根提示，独立于 systemPrompt 覆盖）为辅；B（daemon 启动目录固定）单独用否决已记。审批输出=定案修复范围与顺序，定案后另建修复树（实现小全 + 验证小柯 + 收口小贾），不在本单",
             "ownerRole": "CTO",
+            "status": "done",
+            "doneAt": "2026-08-13T19:10:00+00:00",
+            "deliverable": "A+C 双 APPROVE，B 否决确认（小狄逐点复核与小全诊断一致：agent-core loop.ts:589 executeTool 传 cwd 契约 + ToolHandler (args, ctx?) 签名在案）。定案：① A(TriLC) 5 读工具 handler 加 ctx?: ToolContext，基准 ctx?.cwd ?? process.cwd()；shell-exec 特例 (args.cwd) || ctx?.cwd || process.cwd()（模型显式参数优先语义保留，中间补 ctx 层）② A(TriMC) 同批 3 处 handler（tools.ts:231/286/391）+ executeTool 包装（tools.ts:42）补第三参透传（标注无现役调用方）；agent-core 零改 ③ C 限定形态：只改 app.ts:1973 为 body.systemPrompt ? body.systemPrompt + buildWeeklyPlaneHint() : defaultSystemPrompt()；defaultSystemPrompt 内部 hint 不动；不扩 OpenAI 兼容端点（1165/1560/1685 跟进项 C-EXT-ENDPOINTS 转编排层定）；buildWeeklyPlaneHint 注释补外部 append 点标记 ④ 顺序 A(TriLC) → A(TriMC) → C；排期可缓，周日迁移验收前不合并 ⑤ 门禁：既有工具测试不改预期 + 新增 ctx 传递断言两型 + C 侧 1973 组装断言 + 开发态行为零变化。观察项：修复后模型仍显式传 Documents 路径属模型行为面，验证轮记录。已建修复树 prod-grade-4-lscwd-fix（r4-1 实现小全 → r4-2 验证小柯 → r4-3 终审小狄 → r4-4 收口小贾）"
+        },
+        {
+            "id": "C-EXT-ENDPOINTS-20260814-001",
+            "action": "OpenAI 兼容端点 systemPrompt 强制追加策略决策（编排层定）：TriLC app.ts:1165/1560/1685 三处同款 parsed.system ?? default 覆盖——外部客户端「全权提供 system」语义下服务端是否强制追加周平面 hint 属策略决策，C 定案不扩；由编排层定案后另排实现（若通过，同树或后续树承接）",
+            "ownerRole": "CEOChiefOfStaff",
             "status": "open"
         },
         {
@@ -266,7 +284,7 @@
         "r18 装后状态 + r19 两修登记：三服务全在线（8711 version 0.4.8 + 3333 + 8008），CEO 迁移验收用手动拉起态进行。新 bug（r18 日志修复回归）：① daemon.log 双重定向 EBUSY——launcher >> 与 daemon stdio append fd 同文件两 open 冲突（Windows 文件锁，schtasks 实例自锁起不来），修法=两层留一层（建议 launcher 去重定向、daemon 层负责）② daemon install 再生 cmd 丢 TRIMODEL_API_TOKEN set 行（模板未带）→ key fetch 401，修法=daemon 层环境继承兜底（推荐）。两修进 r19",
         "r19 复验 PASS（小柯三口径全过）：EBUSY 单层化双形态实测（schtasks + 手动均无 EBUSY + 日志落盘 fd 层）+ token 兜底（清环境加载成功 + 预设值 PRESERVED 不覆盖）+ 全量 285/286 基线一致。测试操作披露（已登记）：任务形态实测短暂共享真实数据目录——现役 8711 全程零影响，副作用=真实 daemon.log 追加几行测试日志（无害）+ pidfile 被覆盖为死 pid（瞬态，端口健康判定自愈 + 重启周期复位）；后续测试一律显式 TRILC_DATA_DIR 隔离。r19 全绿放行成立",
         "r18 运行态诊断处置（CEO 重测暴露，编排层诊断完成，处置=r19 装后解决）：CEO 迁移验收重测中发现 TriLC 「崩」——TriPilot 绿灯红、连接中断表现；诊断=daemon 实际存活（非崩溃），根因链=r18 的 daemon install 再生 cmd 丢 TRIMODEL_API_TOKEN set 行（模板未带）→ key fetch 401 → 模型主路径失败 → 上游表现为连接中断。r19 已修（daemon 层环境继承兜底），CEO 装 v0.4.9-r19 即解决；装后复验待 CEO 迁移验收链确认。教训追加：daemon 再生 cmd 模板必须与安装态 env 注入面同步回归（挂 ENV-INJECT 同族检查项）",
-        "BUG-20260814-001: agent ls 工具 cwd 上下文解析错误——诊断完成（小全，2026-08-14，三层根因实证）：①主根因=TriLC 5 读工具（LS/Read/Glob/Grep/ShellExec）用 process.cwd() 忽略 ctx.cwd，与 Write/Edit（ctx?.cwd）读写路径分裂，违反 agent-core REQ-014b 设计；安装态 daemon 启动链致 process.cwd()=C:\\Users\\jedih ② Documents 来自模型显式传参（ls '.' 后钻子目录打转），非 fallback ③ TriPilot 传 systemPrompt 覆盖默认提示，周平面根提示被跳过放大盲探。影响面：TriLC 5 读工具 + TriMC tools.ts 2 处同款；开发态路径一致故从未暴露。修复方向 A 为主 + C 为辅（B 单独用否决），审批路由小狄（LS-CWD-FIX-20260814-001），定案后建修复树",
+        "BUG-20260814-001: agent ls 工具 cwd 上下文解析错误——诊断完成（小全，2026-08-14，三层根因实证）：①主根因=TriLC 5 读工具（LS/Read/Glob/Grep/ShellExec）用 process.cwd() 忽略 ctx.cwd，与 Write/Edit（ctx?.cwd）读写路径分裂，违反 agent-core REQ-014b 设计；安装态 daemon 启动链致 process.cwd()=C:\\Users\\jedih ② Documents 来自模型显式传参（ls '.' 后钻子目录打转），非 fallback ③ TriPilot 传 systemPrompt 覆盖默认提示，周平面根提示被跳过放大盲探。影响面：TriLC 5 读工具 + TriMC tools.ts 3 处同款；开发态路径一致故从未暴露。修复定案（小狄 A+C 双 APPROVE）→ 修复树 prod-grade-4-lscwd-fix 已建（activeTrees），周日迁移验收前不合并",
         "ARCH-20260814-001（CEO 架构指令，设计定案 2026-08-14）：研发仓与 TriCade 工作区改为同一仓库的不同 git worktree（与 TriMC 仓版本协同，双方改动互不影响，标准流程合入同一 dev）。小狄设计交付 docs/execution/worktree-architecture-design.md（5edcbecd）：一仓三面（研发主 checkout / 本地生产 worktree C:\\ProgramData\\TriCade\\workspace\\TriMetaverse / 服务器舰队克隆）+ prod/windows-local ff-only 分支 + 例外写走 PR（生产面禁写 operating-records，周平面写权单主体不变）+ TRILC_WEEKLY_PLANE_ROOT 安装脚本候选补档（生产面候选置顶 sibling 之前，worktree 未建立时 Test-Path 不命中自动落回旧行为，迁移前逐字节不变）+ fleet 对称性纪律映射（写方向单主体、git 身份单一）。护栏：禁 worktree+npm install（INCIDENT-20260814-001）、08-16 23:00 迁移验收不阻塞、本单零代码零脚本变更。实施树另建待编排层排期：树 A 迁移实施（worktree 建立+ACL→脚本候选补档→重注入+双形态验收→runbook）、树 B 可选（TriMC 本地 worktree 同构）"
     ]
 }
