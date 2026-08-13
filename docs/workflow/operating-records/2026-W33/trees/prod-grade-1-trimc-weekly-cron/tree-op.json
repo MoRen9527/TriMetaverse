@@ -4,7 +4,7 @@
   "source": "W33 决策登记 2026-08-13（CEO 批准生产级开发期 + 首树启动）",
   "week": "2026-W33",
   "status": "done",
-  "verdict": "APPROVE — 代码层 PASS（四验证面 + S1/S2 补充点全过）；B1/B2/R1 三 ops 修复经编排层执行验证（B1 fleet safe.directory 全局 config，dry-run push Everything up-to-date 无 dubious 拦截 / B2 裸仓 objects 目录 chgrp fleet + g+w / R1 克隆 .git chown）；自然触发链完整——主路径周日 08-16 23:00 cron 自动首跑，兜底 trimc cron run b00b0070-2f82-4e7d-a98；非阻塞项 D1/O1/O3/O5 转通道/登记，次日（08-17）回流检查点入 OP nextActions",
+  "verdict": "APPROVE — 代码层 PASS（四验证面 + S1/S2 补充点全过）；B1/B2/R1 三 ops 修复经编排层执行验证（B1 fleet safe.directory 全局 config，dry-run push Everything up-to-date 无 dubious 拦截 / B2 裸仓 objects 目录 chgrp fleet + g+w / R1 克隆 .git chown）；自然触发链完整——主路径周日 08-16 23:00 cron 自动首跑，兜底 trimc cron run b00b0070-2f82-4e7d-a98c-de73e886834b；非阻塞项 D1/O1/O3/O5 转通道/登记，次日（08-17）回流检查点入 OP nextActions",
   "completedAt": "2026-08-14T11:00:00+08:00",
   "nodes": [
     {
@@ -67,7 +67,7 @@
       "routedInput": "r1-3:checkpoint",
       "brief": "briefs/r1-4-20260814110000.md",
       "checkpoint": {
-        "progress": "收口判定 APPROVE（CONDITIONAL_PASS 修复后转 PASS）。B1/B2/R1 三修复由编排层在服务器执行并验证：B1 fleet safe.directory 已加（dry-run push Everything up-to-date 无 dubious 拦截）、B2 裸仓 objects 目录 chgrp fleet + g+w（root push 复发项转 runbook 常态步骤）、R1 fleet 克隆 .git chown 完成。自然触发链完整：主路径周日 08-16 23:00 cron 自动首跑（nextRunAtMs=1786892400000 精确），兜底 trimc cron run b00b0070-2f82-4e7d-a98。非阻塞登记：D1（carry_over 正则 §1 长格式行不 bump）转 TriCompany runtime 通道、O3（stagger 启发式误判）转 agent-core 通道（owner 均 CTO 小狄）；O1（notify render_only 不投递邮件）决策接受——审计由 .shift-ade.json + git 承担，SMTP 配置登记跟进项；O5（宕至 W35 恢复则 migrate 响亮失败）登记为已知边界人工处置。runbook 增补 3 项 + TriMC code-state.md 回写（src/cron/ + src/cli.ts 登记）路由小全。次日（08-17）回流检查点入 OP nextActions：本地 git pull sg-server + 核对 W33 closed/W34 index+unresolved+.shift-ade.json status=pass/D1 影响 §1 行 8w 人工补标 + diff 审查。生产级开发期阶段一进展登记：首树收官，阶段一挂靠项 C4/C5/C7 仍待消化。收口门禁 v2：判定+清单登记+最终报告完成，push 三仓同步由编排层统一执行（agent 侧 push 权限受限，OP 落盘未提交待补）。",
+        "progress": "收口判定 APPROVE（CONDITIONAL_PASS 修复后转 PASS）。B1/B2/R1 三修复由编排层在服务器执行并验证：B1 fleet safe.directory 已加（dry-run push Everything up-to-date 无 dubious 拦截）、B2 裸仓 objects 目录 chgrp fleet + g+w（root push 复发项转 runbook 常态步骤）、R1 fleet 克隆 .git chown 完成。自然触发链完整：主路径周日 08-16 23:00 cron 自动首跑（nextRunAtMs=1786892400000 精确），兜底 trimc cron run b00b0070-2f82-4e7d-a98c-de73e886834b。非阻塞登记：D1（carry_over 正则 §1 长格式行不 bump）转 TriCompany runtime 通道、O3（stagger 启发式误判）转 agent-core 通道（owner 均 CTO 小狄）；O1（notify render_only 不投递邮件）决策接受——审计由 .shift-ade.json + git 承担，SMTP 配置登记跟进项；O5（宕至 W35 恢复则 migrate 响亮失败）登记为已知边界人工处置。runbook 增补 3 项 + TriMC code-state.md 回写（src/cron/ + src/cli.ts 登记）路由小全。次日（08-17）回流检查点入 OP nextActions：本地 git pull sg-server + 核对 W33 closed/W34 index+unresolved+.shift-ade.json status=pass/D1 影响 §1 行 8w 人工补标 + diff 审查。生产级开发期阶段一进展登记：首树收官，阶段一挂靠项 C4/C5/C7 仍待消化。收口门禁 v2：判定+清单登记+最终报告完成，push 三仓同步由编排层统一执行（agent 侧 push 权限受限，OP 落盘未提交待补）。",
         "artifactCommit": "",
         "resumePoint": "树收官。周日 23:00 自然触发（编排层盯），周一 08-17 回流检查（小贾）。挂起：D1 裁决（小狄）、O1 SMTP 跟进、runbook 增补 + code-state 回写（小全）"
       }
