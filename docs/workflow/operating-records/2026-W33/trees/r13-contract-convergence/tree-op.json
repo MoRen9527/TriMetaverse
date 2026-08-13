@@ -36,14 +36,14 @@
     {
       "nodeId": "r13-2",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "B 段：双域迁移（TriLC adapter + TriMC resolver/编排层）+ 14 份合同补字段 + v1 退役 + 3 份缺口合同 + O3",
       "routedInput": "r13-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r13-2-20260813100508.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "Step 2: 14 份 v3.0（11 合并 + 3 缺口新写：business-strategy/小成/小布），colleagues_social 拆分，loadContractV3 14/14。Step 3: TriLC thin adapter（ContractYaml 删除、负路径测试、golden v2 等价性零 diff 14/14、全量 285/286）。Step 4: TriMC thin wrapper（validate/normalize 全删、本域投影消费方零改动、registryDir 指 source-agents、employee-registry 14 员工实载、O3 W_OK 负路径、全量 451/454 2 fail 预存、cancelled 14→0）。Step 5: v1 11 份 git rm。拆树阈值未触发（新增 fail 集中 3 个测试文件改写即绿）。等价性口径：v1 搬运字段零 diff；decision_rights 以 v2 为真值（v1 表述演进 30 处已归因，非迁移丢失）。",
+        "artifactCommit": "TriCompany 57a6241(Step2) + 2c2ccf5(Step5)；TriLC 25439ca(Step3)；TriMC a95b9df(Step4) + 27b7cd3(负路径适配)；TriMetaverse（迁移工具+简报+tree-op 收尾 commit）",
+        "resumePoint": "r13-3 小柯独立验证——验证提示已写简报末节：B 层 grep 为零（TriLC ContractYaml / TriMC validate+normalize）、14/14 实载、golden 等价性（v2 口径）、O3 负路径 win32 skip 说明、employees 14 实载、2 fail 预存归因"
       }
     },
     {
