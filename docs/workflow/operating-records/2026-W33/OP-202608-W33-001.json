@@ -84,6 +84,18 @@
       "action": "W33 周会议题：供应链卫生基线（ChainDrop 复盘）— 8/10 审计未受影响；议题产出：ignore-scripts 决议 / lockfile review 纪律 / 复检触发条件",
       "ownerRole": "CEOChiefOfStaff",
       "status": "open"
+    },
+    {
+      "id": "O1-FIX-20260813-001",
+      "action": "O1 健康脚本 dirty 检测修复（CTO 小狄方案 APPROVE：--porcelain -b 全量输出，Issue 模型新增 Dirty 维度，untracked 计入，约 10 行）+ 修复后 4.3 补跑复核",
+      "ownerRole": "CEOChiefOfStaff",
+      "status": "open"
+    },
+    {
+      "id": "O2-B-20260813-001",
+      "action": "O2 B 方案（CTO 小狄自领）：agent-core 移除/@deprecated 死 schema 导出 + resolver 头注释修正 + TriCompany code-state.md 补 agent-core 模块登记与风险标注",
+      "ownerRole": "CTO",
+      "status": "open"
     }
   ],
   "carry_over_from_w31": [
@@ -200,7 +212,7 @@
           "id": "M3",
           "name": "独立资格+生产双跑",
           "status": "pending",
-          "note": "M2 全勾后自动推进，不需提请确认（CEO 2026-08-13 定）"
+          "note": "M2 全勾后自动推进，不需提请确认（CEO 2026-08-13 定）。前置项（CTO 2026-08-13 评估）：O2 合同真源统一 + schema 对齐——agent-core zod schema 为死代码（零生产消费方），两代合同互不互通（TriLC 侧 v2 14 份 / TriMC 侧 v1 11 份），M3 生产双跑前必须收敛单一权威 schema（以 v2 为基础补 io_contract/identity，双域 resolver 迁 thin adapter）"
         },
         {
           "id": "M4",

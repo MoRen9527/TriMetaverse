@@ -64,7 +64,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 4.1 | sibling 仓库引用 | `../TriLC`、`../TriCode`、`../TriCompany` 等跨仓路径解析正确 | 服务器可验 | **通过** | M2 第九轮（r9-eng-cross）：5 sibling 目录 + 2 处 file: 依赖（../TriCompany/packages/agent-core R7 迁移新路径 + ../TriModel）实测全部可达；小柯独立 ls -d 复核零差异 |
 | 4.2 | contracts 加载 | 14 份合同完整加载，system prompt 非空（源码工作区路径；TriCade 内置路径验证归 5.2 安装态） | 本地验后回传 | **通过** | M2 第十轮（r10-cross-ops）：源码工作区 `../TriCompany/source-agents/` 磁盘 14 份 .contract.yaml 全在；TriLC 真实 resolver（getContractResolver+loadAll）实载 14/14；system prompt 非空 14/14（2349~5837 字符）；磁盘与实载一致（小柯独立复核，PASS）。清单"12 份"描述过时已更正（公司现 14 agent） |
-| 4.3 | 六仓健康检查 | `git-six-repo-health-check.ps1` 运行与问题修复闭环 | 本地验后回传 | **通过** | M2 第十轮（r10-cross-ops）：脚本独立运行 20 repos / 9 issues，全部为 "ahead N"（push 权限受限积压，用户手动 push 解决），无 dirty/detached/behind/upstream-unset；`git rev-list` 交叉验证 5 仓 ahead 计数零差异（40/8/23/18/1）。观察项：脚本 dirty 检测盲区（只读 status -sb 首行）已转 CTO 评估 |
+| 4.3 | 六仓健康检查 | `git-six-repo-health-check.ps1` 运行与问题修复闭环 | 本地验后回传 | **通过** | M2 第十轮（r10-cross-ops）：脚本独立运行 20 repos / 9 issues，全部为 "ahead N"（push 权限受限积压，用户手动 push 解决），无 detached/behind/upstream-unset；`git rev-list` 交叉验证 5 仓 ahead 计数零差异（40/8/23/18/1）。**注：原"无 dirty"表述撤回**——CTO 2026-08-13 实测脚本存在 dirty 双重检测盲区（只读 `git status -sb` 首行 + Issue 判定模型无 dirty 维度），实测 TriCompany 15 项、TriModel 1 项 dirty 未报；O1 修复 APPROVE 后补跑复核 |
 
 ### 5. 生产链域（全部本地验后回传）
 
