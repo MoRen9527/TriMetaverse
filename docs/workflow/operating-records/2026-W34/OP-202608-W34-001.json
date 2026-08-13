@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (①r18 运行态诊断处置 + ls/cwd 缺陷登记派小全诊断 ②CEO 架构指令登记派小狄出设计)",
-        "version": "1.39.0",
-        "lastUpdated": "2026-08-13T18:50:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (worktree 架构设计定案收口：小狄交付 5edcbecd，实施树另建待编排层排期)",
+        "version": "1.40.0",
+        "lastUpdated": "2026-08-13T18:58:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -193,7 +193,9 @@
             "id": "WORKTREE-ARCH-DESIGN-20260814-001",
             "action": "CEO 架构指令设计（派小狄出设计，设计层，不阻塞周日 08-16 迁移验收）：研发仓与 TriCade 工作区改为同一仓库的不同 git worktree，与 TriMC 仓版本协同——任何一方改动互不影响，标准流程合入同一 dev。设计要求：① worktree 布局（TriCade 生产面 worktree 落点）② 分支策略（生产面写分支→合入 dev）③ TRILC_WEEKLY_PLANE_ROOT 从指向研发仓迁移为指向 worktree ④ 与服务器 /srv/fleet 对称性。输出=设计文档（落点建议 docs/engineering/ 或 TriMetaverse 设计真源，按现有设计文档规范带元信息头）；实施树在设计定案后另建，不在本单。注意：涉及 Windows 侧 junction 与 git worktree 交互风险（INCIDENT-20260814-001 纪律：禁 worktree+npm install 组合）",
             "ownerRole": "CTO",
-            "status": "open"
+            "status": "done",
+            "doneAt": "2026-08-13T18:57:00+00:00",
+            "deliverable": "docs/execution/worktree-architecture-design.md（commit 5edcbecd，source-only）— 定案：一仓三面模型（研发主 checkout / 本地生产 worktree C:\\ProgramData\\TriCade\\workspace\\TriMetaverse / 服务器舰队克隆）+ prod/windows-local 分支 ff-only + 例外写走 PR + TRILC_WEEKLY_PLANE_ROOT 安装脚本候选补档（TriLC 侧零改、迁移前行为逐字节不变）+ fleet 纪律统一（写方向单主体、git 身份单一）；实施树另建（树 A：worktree 建立+注入切换+双形态验收；树 B 可选：TriMC 同构），排期归编排层"
         }
     ],
     "carry_over_from_w31": [
@@ -257,6 +259,6 @@
         "r19 复验 PASS（小柯三口径全过）：EBUSY 单层化双形态实测（schtasks + 手动均无 EBUSY + 日志落盘 fd 层）+ token 兜底（清环境加载成功 + 预设值 PRESERVED 不覆盖）+ 全量 285/286 基线一致。测试操作披露（已登记）：任务形态实测短暂共享真实数据目录——现役 8711 全程零影响，副作用=真实 daemon.log 追加几行测试日志（无害）+ pidfile 被覆盖为死 pid（瞬态，端口健康判定自愈 + 重启周期复位）；后续测试一律显式 TRILC_DATA_DIR 隔离。r19 全绿放行成立",
         "r18 运行态诊断处置（CEO 重测暴露，编排层诊断完成，处置=r19 装后解决）：CEO 迁移验收重测中发现 TriLC 「崩」——TriPilot 绿灯红、连接中断表现；诊断=daemon 实际存活（非崩溃），根因链=r18 的 daemon install 再生 cmd 丢 TRIMODEL_API_TOKEN set 行（模板未带）→ key fetch 401 → 模型主路径失败 → 上游表现为连接中断。r19 已修（daemon 层环境继承兜底），CEO 装 v0.4.9-r19 即解决；装后复验待 CEO 迁移验收链确认。教训追加：daemon 再生 cmd 模板必须与安装态 env 注入面同步回归（挂 ENV-INJECT 同族检查项）",
         "BUG-20260814-001: agent ls 工具 cwd 上下文解析错误——工具调用默认路径跑到 C:\\Users\\jedih\\Documents（应指向工作区/周平面）。CEO 重测中发现；已登记派小全诊断（LS-CWD-DIAG-20260814-001），根因/修复方案/影响面待诊断输出",
-        "ARCH-20260814-001（CEO 架构指令登记，设计层）：研发仓与 TriCade 工作区改为同一仓库的不同 git worktree（与 TriMC 仓版本协同，双方改动互不影响，标准流程合入同一 dev）。已派小狄出设计（WORKTREE-ARCH-DESIGN-20260814-001）：worktree 布局/分支策略/TRILC_WEEKLY_PLANE_ROOT 迁移指向 worktree/与服务器 /srv/fleet 对称性。边界：设计层不阻塞周日 08-16 23:00 迁移验收；实施树设计定案后另建"
+        "ARCH-20260814-001（CEO 架构指令，设计定案 2026-08-14）：研发仓与 TriCade 工作区改为同一仓库的不同 git worktree（与 TriMC 仓版本协同，双方改动互不影响，标准流程合入同一 dev）。小狄设计交付 docs/execution/worktree-architecture-design.md（5edcbecd）：一仓三面（研发主 checkout / 本地生产 worktree C:\\ProgramData\\TriCade\\workspace\\TriMetaverse / 服务器舰队克隆）+ prod/windows-local ff-only 分支 + 例外写走 PR（生产面禁写 operating-records，周平面写权单主体不变）+ TRILC_WEEKLY_PLANE_ROOT 安装脚本候选补档（生产面候选置顶 sibling 之前，worktree 未建立时 Test-Path 不命中自动落回旧行为，迁移前逐字节不变）+ fleet 对称性纪律映射（写方向单主体、git 身份单一）。护栏：禁 worktree+npm install（INCIDENT-20260814-001）、08-16 23:00 迁移验收不阻塞、本单零代码零脚本变更。实施树另建待编排层排期：树 A 迁移实施（worktree 建立+ACL→脚本候选补档→重注入+双形态验收→runbook）、树 B 可选（TriMC 本地 worktree 同构）"
     ]
 }
