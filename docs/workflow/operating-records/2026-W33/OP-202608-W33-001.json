@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (REHEARSAL-20260813-001 登记：真实根全链演练 PASS + job 全 ID 口径修正)",
-    "version": "2.22.0",
-    "lastUpdated": "2026-08-14T19:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (O1 已修复 + REHEARSAL-20260813-002 登记：演练二期两问题三教训，三端 a857ccaa 无痕)",
+    "version": "2.23.0",
+    "lastUpdated": "2026-08-14T20:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -201,9 +201,9 @@
     },
     {
       "id": "O1-SMTP-20260814-001",
-      "action": "O1 SMTP 配置跟进（非阻塞）：服务器 notify render_only 不投递邮件——接受现状（审计由 .shift-ade.json + git 承担），后续为 fleet 配 notify.json + NOTIFY_CONFIG（SMTP best-effort），随生产级开发期后续树处理",
+      "action": "O1 SMTP 配置跟进（非阻塞）：服务器 notify render_only 不投递邮件——接受现状（审计由 .shift-ade.json + git 承担），后续为 fleet 配 notify.json + NOTIFY_CONFIG（SMTP best-effort），随生产级开发期后续树处理 — done（CEO 要求全真实演练含邮件：编排层已部署 QQ SMTP 配置至 /home/fleet/.trimetaverse/notify.json（0600），演练二期五段链 notify 真实投递成功 run log 实锤 [weekly_shift] notify: sent；O1 关闭，周日自然触发邮件环节完整）",
       "ownerRole": "CEOChiefOfStaff",
-      "status": "open"
+      "status": "done"
     },
     {
       "id": "D1-FIX-20260814-001",
@@ -258,7 +258,8 @@
     "r1-3 发现缺陷/误判（CTO 评估完毕，修先行定案）：D1 carry_over bump 正则列序假设缺陷——§4 短行周数列第 2 列命中、§1 长行第 5 列静默落空（真实数据实锤：同一 CARRY-001 §1 表 6w+ vs §4 表 7w+）；修先行（周六 08-15 中午截止）：a) 代码修复逐行处理（仅 | 开头含 CARRY-\\d+ 表行 bump 首个 Nw+ 令牌 + 重算 4w/8w 标记）b) W33 §1 计数一次性对齐 §4 实效值（编排层写权，纳入周日触发前 checklist）；未完成则接受一期（迁移照跑无数据丢失，W34→W35 生效）；通道 TriCompany runtime 研发环（本地发起 + 单票审核）。O3 stagger 启发式（TOP_OF_MINUTE_CRON_RE 误读 0 23 * * 0 为 sub-hourly）——对本树影响零/正面（stagger=0 固化进 jobs.json，精确 23:00 触发），登记 agent-core backlog 低优先，激活条件=未来多 job 整点同发场景",
     "r1-3 观察项处置（r1-4 收口）：O1 notify render_only 不投递邮件——决策接受（审计由 .shift-ade.json + git commit 承担），SMTP 配置（notify.json + NOTIFY_CONFIG）登记跟进项非阻塞；O2 控制台审计进 /tmp/trimc-run.log 无轮转——runbook 增补项；O4 r1-2 观察项已关闭（b7eeb50 修复）；O5 宕至 W35 才恢复则 migrate exit 1 响亮失败（不静默腐化）——已知边界，人工处置",
     "周日触发前前置条件（小柯第三视角实证）：fleet 克隆必须与裸仓 dev 同步——复核中途实测一次 [rejected] fetch first（克隆 ccf1384c 落后裸仓 178bd9d9），不同步则迁移 commit 基于旧基、push 被拒、链在末步失败；现克隆=裸仓=178bd9d9 已同步。触发前若再有 root push/pull，执行后跑「克隆同步 + 裸仓 g+w sweep + 克隆 chown」三连（小柯复检脚本 1 分钟）——已纳入周日触发前 checklist",
-    "REHEARSAL-20260813-001（CEO 指令真实根全链演练，编排层执行，结论：全链可用、周日自然触发信心充足）：①全链触发成功——HTTP 手动 run 完整 job（ID 全量 b00b0070-2f82-4e7d-a98c-de73e886834b）→ 五段链全 pass → fleet commit + push 裸仓成功（B1 修复实证：裸仓 HEAD be4f80a1 → 0f811d39）②幂等确认——当日 token 算 W32→W33（today+1 仍 W33），created=false + carry_over=skip，周日 08-16 跑即 W33→W34，数学符合 r1-1 设计 ③无痕回退——裸仓 update-ref + 克隆 reset --hard + clean，三端回 be4f80a1、W34 残留 0、job 运行态复位（runCount=0/state null）④证据——演练 commit 0f811d39（裸仓对象库/reflog）+ run log /var/lib/trimc/cron/logs/b00b0070...2026-08-13T09-39-29-469Z.log。教训：消息里引用 job 必须全 ID（此前消息用截断形式 b00b0070-2f82-4e7d-a98 是口径坑），记入 runbook；历史 brief 中截断形式按「在树的不改」保留，活文件（OP/tree-op）已改全 ID"
+    "REHEARSAL-20260813-001（CEO 指令真实根全链演练，编排层执行，结论：全链可用、周日自然触发信心充足）：①全链触发成功——HTTP 手动 run 完整 job（ID 全量 b00b0070-2f82-4e7d-a98c-de73e886834b）→ 五段链全 pass → fleet commit + push 裸仓成功（B1 修复实证）②幂等确认——当日 token 算 W32→W33（today+1 仍 W33），created=false + carry_over=skip，周日 08-16 跑即 W33→W34，数学符合 r1-1 设计 ③无痕回退——裸仓 update-ref + 克隆 reset --hard + clean，job 运行态复位（runCount=0/state null）④证据——演练 commit（裸仓对象库/reflog）+ run log。教训：消息里引用 job 必须全 ID（截断形式是口径坑），记入 runbook；历史 brief 中截断形式按「在树的不改」保留，活文件（OP/tree-op）已改全 ID",
+    "REHEARSAL-20260813-002（演练二期，编排层执行）：O1 已修复——CEO 要求全真实演练含邮件，QQ SMTP 配置已部署 /home/fleet/.trimetaverse/notify.json（0600），五段链 notify 真实投递成功（run log 实锤 [weekly_shift] notify: sent），CEO 查收中。暴露两个真问题（已修复）：①回退目标选错——一期回退用了 be4f80a1（应为演练前精确 HEAD a857ccaa）→ 裸仓与克隆分叉 → 二期 push 被拒 non-fast-forward（脚本行为暴露正确：run error exit 1 + 日志可查）→ 三端统一回 a857ccaa ②工作树属主污染——克隆混有 root 属主文件（历史 root git 操作残留）→ fleet reset 被拒 → 全量 chown fleet。教训入 runbook：演练回退目标必须记录并核对演练前精确 HEAD 不凭记忆；服务器侧 git 操作统一 fleet 身份（root 只做 chown/chgrp 修复）；O1 关闭。当前三端=a857ccaa、job 态复位、W34 零残留——无痕达成"
   ],
   "plans": [
     {
