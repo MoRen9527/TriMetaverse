@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (CEO 验收口径终案登记 + r16 构建范围定案：tools 修复归后续树)",
-        "version": "1.30.0",
-        "lastUpdated": "2026-08-13T23:10:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (trimetaverse 条目补齐登记：主路径接线条件满足)",
+        "version": "1.31.0",
+        "lastUpdated": "2026-08-13T23:20:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -234,6 +234,7 @@
         "depth-0 根因定案（CTO 小狄逐层源码审读）：契约缺口非鉴权非稳定性——TriModel TriMetaverseProvider 按 CPO 2026-07-10 契约讲 Anthropic Messages（POST /v1/messages，头注释明载 dev-prod parity）；TriStaciss 仅实现 OpenAI 面（/v1/models + /v1/chat/completions，无 /v1/messages）→ 确定性 404 → 直连 fallback。鉴权排除（OpenAI 面 Bearer 透传无校验）、稳定性排除（迁移噪音）。裁决定案 A-prime：TriStaciss 补 Anthropic 兼容 ingress POST /v1/messages（转换层复用 chat_completion_service/route_resolver，stash 半成品仅作参考不恢复），半日级；B-prime（provider 改讲 OpenAI）否决（废弃 parity + M4 绕路）；tmv-* 统一不动。顺带落地：TriModel fallback 日志补失败原因 aaba31b（chat/stream 两处 reason 尾 300 字符）。CEO 验收路径：A-prime 落地 + 终验后再重建（直连 fallback 为过渡可用态）",
         "r3 树收口登记：CEO 验收口径=直连 fallback 先行（CTO 定案，3/3 实证真实回复），验收记录必须标注「tmv 主路径未接线，当前回复经直连 fallback」；主路径接线挂 A-PRIME-WIRING-20260817-001 后续树。stash@{0} 勿 pop（三 untracked 文件不在盘，pop 断 import 必崩）",
         "A' 主路径接线已落地（小全，快于预期）：TriStaciss 99f69eb（anthropic_ingress.py：Anthropic 请求/响应模型 + 转换层复用 chat_completion_service/route_resolver + 非流式 handler + 流式 SSE 全事件序列，与 OpenAI ingress 同服务栈）+ TriModel 6476812（baseUrl 默认 8000→8008 三处，env 覆盖逃生舱保留）。自测 8008 实跑深度 0 全过：非流式 PONG（Anthropic 格式 + tmv 元数据）+ 流式 SSE 完整事件序列 + /v1/models 兼容面无回归。**端口标准终案=8008（fastapi_stream.py 原生默认，小狄裁决）**——此前「统一 8000」记录作废；编排层：TriStaciss 以 8008 重启（撤 8000 实例或不再覆盖）。终验待小柯（depth=0 零失败 + 映射兼容面 + 真实内容非桩）",
-        "CEO 验收口径终案（编排层定，与 CTO 建议一致）：直连 fallback 3/3 实证 = 验收通过；tools 支持（/v1/messages 422 缺口）挂 A-PRIME-WIRING 后续树。r16 构建已后台运行（含 TriLC/TriPilot 模型名修复全家桶 + A' ingress；不含 tools 修复——tools 修复 commit 归后续树版本）。验收标注：「tmv 主路径 tools 未接线，当前回复经直连 fallback」"
+        "CEO 验收口径终案（编排层定，与 CTO 建议一致）：直连 fallback 3/3 实证 = 验收通过；tools 支持（/v1/messages 422 缺口）挂 A-PRIME-WIRING 后续树。r16 构建已后台运行（含 TriLC/TriPilot 模型名修复全家桶 + A' ingress；不含 tools 修复——tools 修复 commit 归后续树版本）。验收标注：「tmv 主路径 tools 未接线，当前回复经直连 fallback」",
+        "trimetaverse 条目已补齐（编排层执行：.env 注入 TRIMODEL_TRIMETAVERSE_API_KEY + TriModel 重启）——keys 面现为 deepseek/openai/trimetaverse 三条目，trimetaverse.base_url=http://127.0.0.1:8008/v1；主路径 base_url 接线条件满足，安装态 key-cache 拿到完整三条目；ENV-INJECT 补注入方案（CTO 判读）实证有效。A-PRIME-WIRING 后续树剩余项收窄为：A' verify_api_key 终口径 + TriStaciss 去留评估 + O-TS-1 stash 处置"
     ]
 }
