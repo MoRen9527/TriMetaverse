@@ -112,13 +112,13 @@
     },
     {
       "id": "D4-20260813-001",
-      "action": "D4（r11-2 发现，转 CTO 小狄）：TriCompany 8836e88 声称 4 契约类型标 @deprecated，实测仅类标注 + 头警告，4 类型未标注——补标或改记录",
+      "action": "D4（r11-2 发现，转 CTO 小狄）：TriCompany 8836e88 声称 4 契约类型标 @deprecated，实测仅类标注 + 头警告，4 类型未标注——补标或改记录 — done（补标方案，TriCompany a3b13c7：4 类型定义处补 @deprecated + dist 重建验证 + TriMC tsc 零影响；定义处 + re-export 双标注，8836e88 记录无需改动）",
       "ownerRole": "CTO",
-      "status": "open"
+      "status": "done"
     },
     {
       "id": "O3-20260813-001",
-      "action": "O3（r11-2 发现，转 CTO 小狄）：TriMC initializeSession 缺 W_OK 校验（TriLC 端有）——挂 O2-A 合同收敛时对齐",
+      "action": "O3（r11-2 发现，转 CTO 小狄）：TriMC initializeSession 缺 W_OK 校验（TriLC 端有）——挂 O2-A 合同收敛时对齐。对齐基准已确认：TriLC src/company/session-initializer.ts:44（await access(dir, constants.W_OK)，initializeSession 入口处）",
       "ownerRole": "CTO",
       "status": "open"
     }
