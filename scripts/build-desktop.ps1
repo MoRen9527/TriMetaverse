@@ -177,16 +177,28 @@ if not exist "%VSCODIUM_PORTABLE%\VSCodium.exe" (
 )
 
 :: Install extension
-echo [1/3] Installing TriPilot extension...
+echo [1/4] Installing TriPilot extension...
 "%VSCODIUM_PORTABLE%\VSCodium.exe" --install-extension ".\extensions\tripilot-chat-0.0.1" --force
 
 :: Inject settings
-echo [2/3] Configuring TriPilot defaults...
+echo [2/4] Configuring TriPilot defaults...
 if not exist "%APPDATA%\VSCodium\User" mkdir "%APPDATA%\VSCodium\User"
 copy /Y ".\config\settings.json" "%APPDATA%\VSCodium\User\settings.json"
 
+:: Inject weekly plane root (TRICADE-ENV-INJECT: installed-state company weekly plane view)
+echo [3/4] Injecting TRILC_WEEKLY_PLANE_ROOT...
+if exist "D:\Code\ai\TriMetaverse\docs\workflow\operating-records" (
+    setx TRILC_WEEKLY_PLANE_ROOT "D:\Code\ai\TriMetaverse\docs\workflow\operating-records" >nul
+    echo   [OK] injected: D:\Code\ai\TriMetaverse\docs\workflow\operating-records
+) else if exist "C:\Code\ai\TriMetaverse\docs\workflow\operating-records" (
+    setx TRILC_WEEKLY_PLANE_ROOT "C:\Code\ai\TriMetaverse\docs\workflow\operating-records" >nul
+    echo   [OK] injected: C:\Code\ai\TriMetaverse\docs\workflow\operating-records
+) else (
+    echo   [SKIP] company weekly plane checkout not detected - TriLC falls back to project-track view
+)
+
 :: Done
-echo [3/3] Installation complete!
+echo [4/4] Installation complete!
 echo.
 echo Starting TriMetaverse Desktop...
 start "" "%VSCODIUM_PORTABLE%\VSCodium.exe"

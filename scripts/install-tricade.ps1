@@ -24,6 +24,7 @@ param(
     [switch]$SkipHealthz,                      # 跳过 /healthz 检查
     [switch]$MigrateLegacy,                    # 迁移旧安装（清孤儿目录 + PATH）
     [switch]$Force,                            # 同版本强制重装（覆盖 5.4 版本门禁）
+    [string]$WeeklyPlaneRoot,                  # 公司周平面根显式覆盖（TRILC_WEEKLY_PLANE_ROOT）；不传则检测本机 sibling
     [switch]$WhatIf                            # 干跑模式
 )
 
@@ -405,6 +406,56 @@ function Invoke-Healthz {
     }
 }
 
+# ── 周平面根注入（r2-2 跟进项 TRICADE-ENV-INJECT，r2-1 三态设计）──
+# 安装态无 workspace sibling 可探测，安装时注入用户级 env 供 TriLC 读取
+# （RegRun 登录启动形态）；显式参数 > sibling 检测 > 不注入（旧行为回退）。
+
+function Resolve-WeeklyPlaneRoot {
+    param([string]$Explicit)
+
+    # 1. 显式参数（最高优先）——目录必须存在，幽灵路径不注入
+    if ($Explicit) {
+        if (-not (Test-Path $Explicit)) {
+            Write-Warn "-WeeklyPlaneRoot 指定路径不存在: $Explicit（跳过注入）"
+            return $null
+        }
+        return (Resolve-Path $Explicit).Path
+    }
+
+    # 2. 本机 sibling 检测：常见工作区根下的 TriMetaverse 检出
+    $workspaceCandidates = @(
+        "D:\Code\ai",
+        "C:\Code\ai",
+        (Join-Path $env:USERPROFILE "Code\ai")
+    )
+    foreach ($ws in $workspaceCandidates) {
+        $candidate = Join-Path $ws "TriMetaverse\docs\workflow\operating-records"
+        if (Test-Path $candidate) { return $candidate }
+    }
+
+    # 3. 未检测到 → 不注入（TriLC 安装态回退项目轨旧行为，逐字节不变）
+    return $null
+}
+
+function Set-TriLCWeeklyPlaneRoot {
+    Write-Step "公司周平面根注入 (TRILC_WEEKLY_PLANE_ROOT)"
+
+    $planeRoot = Resolve-WeeklyPlaneRoot -Explicit $WeeklyPlaneRoot
+    if (-not $planeRoot) {
+        Write-Warn "未检测到公司周平面检出——不注入 env，TriLC 回退项目轨视图（旧行为）"
+        Write-Info "  显式指定: .\install-tricade.ps1 ... -WeeklyPlaneRoot <path>"
+        return
+    }
+
+    if ($WhatIf) {
+        Write-Info "(WhatIf) [Environment]::SetEnvironmentVariable('TRILC_WEEKLY_PLANE_ROOT', '$planeRoot', 'User')"
+        return
+    }
+
+    [Environment]::SetEnvironmentVariable("TRILC_WEEKLY_PLANE_ROOT", $planeRoot, "User")
+    Write-Ok "用户级 env 已注入: $planeRoot"
+}
+
 function Install-TriLCService {
     if (-not $InstallService) {
         Write-Info "(未指定 -InstallService) 跳过服务注册"
@@ -450,6 +501,13 @@ function Install-TriLCService {
         & $nssm set $ServiceName AppExit Default Restart
         & $nssm set $ServiceName Description "TriLC Local Controller Daemon"
         & $nssm set $ServiceName Start SERVICE_AUTO_START
+
+        # 服务形态（LocalSystem）不读用户级 env——周平面根经 AppEnvironmentExtra 注入
+        $planeRoot = Resolve-WeeklyPlaneRoot -Explicit $WeeklyPlaneRoot
+        if ($planeRoot) {
+            & $nssm set $ServiceName AppEnvironmentExtra "TRILC_WEEKLY_PLANE_ROOT=$planeRoot"
+            Write-Ok "NSSM AppEnvironmentExtra 注入: $planeRoot"
+        }
 
         & $nssm start $ServiceName
         Write-Info "等待 daemon 初始化 (8s)..."
@@ -546,6 +604,9 @@ if ($MsiPath) {
 
 # Phase 3: 验证
 Invoke-Verify
+
+# Phase 3.5: 公司周平面根注入（TRICADE-ENV-INJECT）
+Set-TriLCWeeklyPlaneRoot
 
 # Phase 4: 服务注册
 Install-TriLCService
