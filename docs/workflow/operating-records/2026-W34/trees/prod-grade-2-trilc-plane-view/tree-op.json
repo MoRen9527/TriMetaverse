@@ -21,14 +21,14 @@
     {
       "nodeId": "r2-1",
       "agent": "CTO",
-      "status": "pending",
+      "status": "done",
       "action": "技术方案：周平面路径契约统一设计——① TriLC 读公司周平面（TriMetaverse docs/workflow/operating-records）的配置机制（TRILC_PROJECT_ROOT 指向 or 新增 TRILC_WEEKLY_PLANE_ROOT，给依据）② multi-project-router 隔离语义兼容（公司周平面 vs 各项目隔离记录两轨并存，不破坏既有 REQ）③ 安装态与源码态行为 ④ 向后兼容",
       "routedInput": "r2-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r2-1-20260813184459.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "方案定案。四要素：①新增 TRILC_WEEKLY_PLANE_ROOT + workspace 自动发现（否决扩 TRILC_PROJECT_ROOT——其双重职责：隔离存储根 + REQ-014b cwd，指向公司仓会污染 .tricompany-cognition 且 cwd 漂移；先例=TRICOMPANY_SOURCE_PATH 模式）；②两轨并存：ProjectPaths 加 companyWeeklyPlaneDir?（可选），公司轨只读绝不创建，ensureProjectDirs/enforceProjectIsolation 不变，pipe3-1 禁令面仅 .tricompany-cognition 存储不涉及周平面；③源码态 sibling 自动发现（TriLC/../TriMetaverse），安装态 env 显式，未配置 fallback undefined；④无 env+发现失败=逐字节旧行为，旧安装版天然不变。摸底事实：TriLC 无独立周平面读取代码路径（读取经 agent 工具在 cwd 按约定访问），修复面=路径契约层 env+router；TriPilot 无 operating-records 引用。实现清单 P1-P4（weekly-plane-root.ts 纯函数 → router 扩展 → env 透传 → 装配注入 → 测试 → 文档 → 打包侧 env 注入跟进项路由 TriCade 通道）。",
+        "artifactCommit": "aa2b3ea8",
+        "resumePoint": "r2-2 小全接单实现（§三清单：只动 TriLC 仓、既有 17 个 router 测试零改动门禁、公司轨只读断言、tsc clean + npm test 全绿）"
       }
     },
     {
