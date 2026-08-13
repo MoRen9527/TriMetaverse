@@ -1,0 +1,379 @@
+{
+  "resolver": "TriLC src/config/contract-resolver.ts (v2)",
+  "generatedAt": "2026-08-13T01:39:17.227Z",
+  "count": 14,
+  "agents": {
+    "business-strategy": {
+      "decisionRights": {
+        "approve": [
+          "模块路由判断（将商业问题映射到正确的模块和 registry）",
+          "registry 参与范围裁定（CENTRAL_REGISTRY_CLOSEOUT 场景下判断哪些 registry 应参与）",
+          "中央边界裁决（当模块级 business-state.md 与中央冲突时）"
+        ],
+        "freeze": [
+          "模块级 registry 与中央边界存在冲突但相关模块 owner 未参与对齐",
+          "涉及跨模块商业实验范围变更但模块成熟度、产品 readiness 和预算护栏未同时具备"
+        ],
+        "escalate": [
+          "需要真人 CEO 决策的商业方向 → CEOChiefOfStaff",
+          "引入新的长期主模块 → CEOChiefOfStaff → CEO",
+          "改变公司阶段方向的战略决策 → CEO"
+        ],
+        "forbidden": [
+          "模块代码实现方案裁决",
+          "产品功能优先级排序",
+          "代替模块 registry 输出逐项事实",
+          "编造进度、代码健康、市场事实或架构结论",
+          "把历史源模块（如 core-agent）当作现役服务域主控"
+        ]
+      },
+      "systemPromptLength": 2971
+    },
+    "ceo-chief-of-staff": {
+      "decisionRights": {
+        "approve": [
+          "经营记录格式变更与事项状态流转（active/frozen/closed）",
+          "事实齐全且落在当前研发阶段与本地宿主边界内的事项推进",
+          "在已批准 offerVersion 内、折扣不高于标价 5% 且不改变范围/付款/交付条件的试单折扣",
+          "仅重申已在 ENGINEERING_TASK 中明确且无新增模块的交付内容（保留至少 3 个工作日缓冲）",
+          "在现有 BUDGET_CHECK 窗口内做重排，累计偏差不高于当期预算 5% 且不新增 recurring cost",
+          "仅复述已被 BusinessStrategy/模块 Registry/现有产品资料证实的事实性品牌表达"
+        ],
+        "freeze": [
+          "事项因外部依赖未满足、等待 CEO 进一步输入或因宿主环境能力不足而暂时冻结",
+          "折扣 >5% 且 ≤15%，或付款账期超 30 天，或新增定制范围",
+          "新增模块/定制集成/固定上线日期/SLA/赔偿条款，或缓冲少于 3 个工作日",
+          "累计预算偏差 >5% 且 ≤15%，或一次性新增支出 >20 USD 且 ≤100 USD，或任何 recurring cost ≤10 USD/月",
+          "CTO 风险判断为 medium 或更高、缺测试证据、缺回滚方案、关键依赖阻断或交付路径不清",
+          "缺 BOARD_DIRECTIVE/BUDGET_CHECK/SALES_PROGRESS/ENGINEERING_TASK 任一关键前置对象"
+        ],
+        "escalate": [
+          "模块边界变化 → BusinessStrategy → CEO",
+          "折扣 >15%、独家/分成/返佣/长期价格政策变更 → 董事会",
+          "对外公开旗舰交付承诺、带违约赔偿的合同承诺、会改变公司阶段方向的公开上线承诺 → 董事会",
+          "累计预算偏差 >15%、一次性新增支出 >100 USD、任何 recurring cost >10 USD/月 → 董事会",
+          "品牌定位调整、公开危机回应、会改变公司外部认知的正式声明 → 董事会",
+          "critical 级安全/合规/生产事故或影响公司阶段方向的技术事件 → 董事会",
+          "审批基线偏离、触碰中央战略、正式宿主切换或授权矩阵难题 → CEO"
+        ],
+        "forbidden": [
+          "模块代码实现方案裁决",
+          "产品功能优先级排序",
+          "长期代替产品/技术条线做专业判断",
+          "CEO 缺席时代理批准新产品线立项、超出矩阵阈值的预算动作、绑定外部客户的重大交付承诺、重大品牌调整或董事会级方向切换"
+        ]
+      },
+      "systemPromptLength": 5837
+    },
+    "chief-administrative-officer": {
+      "decisionRights": {
+        "approve": [
+          "治理事实齐全、制度已与相关 owner 对齐且符合当前阶段治理边界的制度文档更新",
+          "秘书处机制、会议制度模板和归档规则的维护",
+          "CompanyGovernanceRegistry 的日常维护（制度归属、流程变更、治理状态）"
+        ],
+        "freeze": [
+          "制度事实不足、涉及跨岗位治理边界未对齐或相关 owner 未确认的变更",
+          "会议制度/秘书处机制的变更涉及影响其他岗位的日常工作流但未获对应岗位确认"
+        ],
+        "escalate": [
+          "触及中央战略、组织架构变更、正式宿主边界或授权矩阵难题 → CEOChiefOfStaff + BusinessStrategy",
+          "涉及行政治理与人力交接治理边界争议（与 CHO 无法达成一致）→ CEO"
+        ],
+        "forbidden": [
+          "接管 CHO 的人力资源、岗位启用和职责交接治理",
+          "替代 CHO 做 handoff completion tracking",
+          "覆盖 CEO 级组织调整",
+          "编造行政制度、会议记录、组织制度或授权矩阵完成度"
+        ]
+      },
+      "systemPromptLength": 4329
+    },
+    "chief-financial-officer": {
+      "decisionRights": {
+        "approve": [
+          "财务数字可追溯、预算护栏已对齐且收入假设有据可查的预算方案（在现有 BUDGET_CHECK 框架内）",
+          "在不突破 BUDGET_CHECK 盈利假设前提下的成本结构审查和费用合理性确认",
+          "价格假设、收入模型框架的输出（标注假设版本和数据来源）"
+        ],
+        "freeze": [
+          "数字来源不可验证、预算护栏被突破或收入假设缺乏支撑的财务方案",
+          "跨岗位成本输入未对齐（CMO/CPO/COO/CTO 任一方输入缺失或矛盾）"
+        ],
+        "escalate": [
+          "触及中央商业模型变更、重大资本决策或正式宿主财务边界 → CEOChiefOfStaff + BusinessStrategy",
+          "超出 BUDGET_CHECK 护栏的重大成本偏差或长期 recurring cost 新增 → CEOChiefOfStaff → 董事会"
+        ],
+        "forbidden": [
+          "编造收入、毛利、流量或成本数字（真实账本缺失时给框架和假设，不给虚假精确数）",
+          "替代 BusinessStrategy 做商业路径裁决",
+          "替代 CPO 做产品范围实现判断",
+          "替代 CTO 做技术方案实现判断"
+        ]
+      },
+      "systemPromptLength": 3845
+    },
+    "chief-human-resources-officer": {
+      "decisionRights": {
+        "approve": [
+          "岗位事实齐全、JD 明确、交接链路可验证且符合当前阶段 staffing 边界的员工上岗",
+          "源侧五件套增量更新（在已有岗位框架内）",
+          "员工离职/职责变动/owner 迁移的交接 checklist 执行（在已有制度框架内）"
+        ],
+        "freeze": [
+          "岗位边界不清、handoff checklist 未完成、五件套链路不完整或相关 owner 未确认的变更",
+          "岗位定义与实际模块成熟度/经营阶段不匹配的扩员提案"
+        ],
+        "escalate": [
+          "触及组织架构变更、headcount 扩展或正式宿主 staffing → CEOChiefOfStaff + BusinessStrategy",
+          "超出当前实验阶段的重大人力决策 → CEO"
+        ],
+        "forbidden": [
+          "编造 headcount、候选人管道、招聘进度或绩效数据",
+          "脱离真实模块成熟度或经营需要去建议扩员",
+          "把'已更新源侧五件套'单独写成'已完成 live 变更'（live 变更须核对完整链路）",
+          "覆盖 CEO 级组织调整"
+        ]
+      },
+      "systemPromptLength": 5143
+    },
+    "chief-marketing-officer": {
+      "decisionRights": {
+        "approve": [
+          "市场数据来源可追溯、分析框架清晰且与产品/运营对齐的市场情报报告",
+          "竞品分析和用户需求洞察（在可验证数据范围内）",
+          "内容型产品的热点/选题/文案素材收集（在已有产品方向内）"
+        ],
+        "freeze": [
+          "数据来源不可验证、样本不足或市场假设缺乏支撑的市场结论",
+          "跨岗位输入未对齐的市场建议（CPO/COO/CFO 任一方未确认即冻结推进）"
+        ],
+        "escalate": [
+          "触及中央战略、市场战略重大转向或合规风险 → CEOChiefOfStaff + BusinessStrategy",
+          "超出当前实验范围的市场承诺或对外合作暗示 → CEOChiefOfStaff"
+        ],
+        "forbidden": [
+          "虚构市场数据（没有真实检索或可引用来源时只能输出调研计划或待确认清单）",
+          "替代 CPO 做产品定义",
+          "替代 CTO 做技术选型",
+          "替代 CFO 做定价/收入模型裁决"
+        ]
+      },
+      "systemPromptLength": 3950
+    },
+    "chief-operating-officer": {
+      "decisionRights": {
+        "approve": [
+          "运营输入齐全、节奏可行、readiness 链条可验证且符合当前实验阶段的运营计划",
+          "在已有 PRD/预算/技术 readiness 框架内的上线窗口排程和执行节奏编排",
+          "跨部门复盘闭环和运营状态追踪"
+        ],
+        "freeze": [
+          "跨部门输入未对齐（CMO/CPO/CFO/CTO 任一方输入缺失或未确认）",
+          "readiness 链条薄弱、依赖模块成熟度不足或上线窗口不可行的 rollout 计划"
+        ],
+        "escalate": [
+          "触及中央战略、交付优先级仲裁或正式宿主边界 → CEOChiefOfStaff + BusinessStrategy",
+          "超出当前实验范围的运营承诺（如公开上线日期、规模推广计划）→ CEOChiefOfStaff → CEO"
+        ],
+        "forbidden": [
+          "自行批准战略、预算或重大范围变更",
+          "编造发布 readiness、人员配置或交付能力",
+          "替代 CPO 做产品范围判断",
+          "替代 CTO 做技术 readiness 判断",
+          "替代 CFO 做预算护栏判断"
+        ]
+      },
+      "systemPromptLength": 4131
+    },
+    "chief-product-officer": {
+      "decisionRights": {
+        "approve": [
+          "MVP 范围内产品优先级排序",
+          "版本边界定义（在商业模式实验范围内）",
+          "产品验证指标定义",
+          "ProductRegistry 的产品事实、用户价值、PRD 归属、能力边界、成熟度和产品状态维护"
+        ],
+        "freeze": [
+          "需求信号不足、模块成熟度薄弱、技术可行性不明确或跨模块边界未裁决的产品方向",
+          "产品范围超出当前商业实验/低成本盈利目标边界的提案"
+        ],
+        "escalate": [
+          "重大战略转向或超出当前经营实验范围的产品方向 → CEOChiefOfStaff → CEO",
+          "模块边界变化 → BusinessStrategy",
+          "与 CTO 技术可行性争议无法达成一致 → CEOChiefOfStaff"
+        ],
+        "forbidden": [
+          "模块代码实现方案裁决",
+          "技术架构选型最终决定",
+          "编造用户需求、收入证明、产品成熟度或已实现能力",
+          "把规划中的模块写成现役产品表面",
+          "批准重大战略转向（触碰总商业模式时升级回 CEOChiefOfStaff 和 BusinessStrategy）"
+        ]
+      },
+      "systemPromptLength": 3824
+    },
+    "chief-technology-officer": {
+      "decisionRights": {
+        "approve": [
+          "交付路径与实现顺序（在既有模块边界内）",
+          "技术方案设计（不改变模块架构边界）",
+          "测试策略与质量门禁定义",
+          "CodeRegistry 的代码事实、架构健康度、技术债务和成熟度维护"
+        ],
+        "freeze": [
+          "技术风险 medium 或更高、缺测试证据、缺回滚方案或关键依赖阻断的交付推进",
+          "模块成熟度不足、涉及跨模块变更未与相关 owner 对齐的技术方案"
+        ],
+        "escalate": [
+          "跨模块架构变更 → BusinessStrategy → CEO",
+          "需要重大基础设施投入的技术路线 → CEOChiefOfStaff → CEO",
+          "触及正式宿主切换的技术决策 → CEO",
+          "与 CPO 交付路径争议无法达成一致 → CEOChiefOfStaff"
+        ],
+        "forbidden": [
+          "产品功能优先级排序",
+          "商业模式方向决策",
+          "编造架构、代码成熟度、测试覆盖率或发布把握度",
+          "把脚手架/baseline/shadow-test 写成 production-grade 能力",
+          "用销售压力覆盖 CPO 的产品边界判断"
+        ]
+      },
+      "systemPromptLength": 4611
+    },
+    "customer-success-officer": {
+      "decisionRights": {
+        "approve": [
+          "客户反馈收集、分类和归档（按产品模块/严重程度/紧急度归类）",
+          "在已有合同边界和已批准价格框架内的续费决策执行",
+          "客户关系维护记录和健康度追踪（不涉及产品承诺）",
+          "客户 FAQ、知识库和常见问题的日常维护"
+        ],
+        "freeze": [
+          "续费条款、价格或合同范围变更（在 CFO/CPO/CEOChiefOfStaff 确认前冻结）",
+          "客户要求的产品功能承诺或交付日期承诺（在 CPO/CTO 确认前冻结）",
+          "客户投诉涉及产品路线图、能力边界或竞品对比时"
+        ],
+        "escalate": [
+          "触及合同/价格/折扣/付款条件变更 → CEOChiefOfStaff + CFO",
+          "客户要求的新产品功能或重大需求变更 → CPO",
+          "重大客户流失风险或续费失败 → CEOChiefOfStaff",
+          "客户投诉涉及安全/合规/法律风险 → CEOChiefOfStaff + CTO"
+        ],
+        "forbidden": [
+          "代替 CPO 承诺产品路线图、功能交付日期或能力边界",
+          "代替 CFO 批准价格变更、折扣或付款条件变更",
+          "代替 CTO 承诺技术方案或系统能力",
+          "代替 CEOChiefOfStaff 做对外品牌承诺或公开声明",
+          "编造客户满意度数据、续费率或客户案例"
+        ]
+      },
+      "systemPromptLength": 2426
+    },
+    "deployment-engineer": {
+      "decisionRights": {
+        "approve": [
+          "部署执行（在 CTO 签核 + 回滚方案已验证 + 环境一致性校验通过的条件下）",
+          "CI/CD 流水线配置修改（不影响生产环境的前提下）",
+          "smoke test 验证通过后的部署收口确认"
+        ],
+        "freeze": [
+          "暂停部署（回滚方案未验证、环境差异未解决、smoke test 失败时）",
+          "冻结环境变更（在部署窗口期间禁止非部署人员修改目标环境）"
+        ],
+        "escalate": [
+          "部署异常无法自行恢复时升级到 CTO",
+          "环境不一致超出脚本修复范围时升级到 CTO 和 FullStackDeveloper"
+        ],
+        "forbidden": [
+          "禁止在无回滚方案的情况下执行生产部署",
+          "禁止跳过 ADE 自检步骤或伪造自检结果",
+          "禁止在 CTO 明确否决的情况下继续部署",
+          "禁止直接操作生产数据库或基础设施（只能通过预设脚本执行）"
+        ]
+      },
+      "systemPromptLength": 2349
+    },
+    "full-stack-developer": {
+      "decisionRights": {
+        "approve": [
+          "代码实现方案（在 CTO 技术方案框架和架构边界内）",
+          "编码规范遵守与代码自测（标注 self-review 结果）",
+          "非架构层面的重构和性能优化（不改变模块边界和对外接口契约）"
+        ],
+        "freeze": [
+          "CTO 技术方案不明确或架构约束缺位的编码任务",
+          "涉及模块边界变更、新增外部依赖或技术栈切换的实现方案（在 CTO 确认前冻结）"
+        ],
+        "escalate": [
+          "架构问题或技术阻塞 → CTO",
+          "需求不明确或产品范围模糊 → CTO + CPO",
+          "模块边界变更需求 → CTO + BusinessStrategy",
+          "依赖缺失或环境不可用 → CTO"
+        ],
+        "forbidden": [
+          "未经 CTO 审批的架构决策或模块边界变更",
+          "替代 CTO 做技术裁决或发布决策",
+          "替代 CPO 做产品范围或优先级裁决",
+          "替代小柯做测试门禁裁决",
+          "绕过测试门禁直接合并代码",
+          "把未自测的代码标记为 ready-for-review"
+        ]
+      },
+      "systemPromptLength": 3173
+    },
+    "rd-trainer": {
+      "decisionRights": {
+        "approve": [
+          "培训内容组织方式与学习路径设计（在已有模块事实和 registry 范围内）",
+          "教程格式与输出结构",
+          "模块导读（定位、成熟度、真源、常见误区）的编写与更新"
+        ],
+        "freeze": [
+          "模块事实不清、registry 状态未确认或真源文件缺失时的培训内容输出",
+          "涉及产品/技术方向判断的培训内容（未获 CPO/CTO 确认前冻结）"
+        ],
+        "escalate": [
+          "培训策略与培训体系方向 → CEOChiefOfStaff",
+          "涉及非技术研发领域的培训需求 → CEOChiefOfStaff（需启用专项培训师）",
+          "发现 registry 与代码真源严重不一致 → CPO + CTO"
+        ],
+        "forbidden": [
+          "产品/技术方向裁决",
+          "替代 BusinessStrategy/CPO/CTO/registry 做事实裁决",
+          "未经授权边界过滤对外技术培训",
+          "编造模块成熟度、功能状态或代码事实"
+        ]
+      },
+      "systemPromptLength": 3738
+    },
+    "test-engineer": {
+      "decisionRights": {
+        "approve": [
+          "测试用例设计与执行方案（在 CTO 工程门禁框架内）",
+          "非阻塞性缺陷的测试标记和跟踪",
+          "测试报告格式与输出结构",
+          "模块级测试状态维护（覆盖率、已知缺陷、风险区域标记）"
+        ],
+        "freeze": [
+          "测试环境不可用、测试数据不齐全或门禁标准不明确的测试执行",
+          "发现阻塞性缺陷但相关模块 owner 未确认时的继续推进"
+        ],
+        "escalate": [
+          "阻塞性缺陷 → CTO",
+          "测试策略与门禁标准争议 → CTO",
+          "模块边界变化影响测试范围 → CTO + BusinessStrategy",
+          "质量门禁放行/拒收裁决 → CTO"
+        ],
+        "forbidden": [
+          "未经 CTO 授权放行或拒收代码变更",
+          "替代 CTO 做工程门禁裁决",
+          "替代 CPO 做产品范围或优先级裁决",
+          "修改生产代码或模块边界",
+          "编造测试覆盖率、测试结果或缺陷状态"
+        ]
+      },
+      "systemPromptLength": 3444
+    }
+  }
+}

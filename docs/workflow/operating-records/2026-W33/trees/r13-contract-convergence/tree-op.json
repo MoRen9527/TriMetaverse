@@ -23,14 +23,14 @@
     {
       "nodeId": "r13-1",
       "agent": "CTO",
-      "status": "pending",
+      "status": "done",
       "action": "A 段：schema v3.0 规格文档 + agent-core 收敛实现（zod schema + resolver 重建 + 单元测试）",
       "routedInput": "r13-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r13-1-20260813210000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "A 段完整收口。规格：TriCompany/docs/engineering/agent-contract-v3-spec.md（v3.0 = v2 基础 + TriMC 编排字段，无兼容分支，5 步迁移序列，thin adapter 边界，可检验性 10 项，§三映射表/§四迁移序列为 B 段执行依据）。实现：agent-core src/contracts 原位重建——AgentContractV3Schema（zod .strict() + version/type literal + family 枚举 + io_contract 非空必填 + runtime_baseline 对象形状裁决）、loadContractV3/resolveContractsV3/ContractV3Error（负路径含迁移指引），旧死形状符号与 @deprecated 双清零。测试：node:test 8/8 全绿（正例默认值/1.0/2.0 拒绝/strict/缺字段/坏枚举/批量/缺失）。验证：TriMC+TriLC tsc --noEmit 零影响。Step 0 golden 基线冻结：golden/v1-trimc.json（11 份）+ golden/v2-trilc.json（14 份）。登记：code-state.md 收敛决策。artifactCommit: TriCompany 9cd325b（14 files，push 主会话补）。",
+        "artifactCommit": "TriCompany 9cd325b（agent-core 收敛实现 + 规格 + 测试 + 登记）",
+        "resumePoint": "B 段（r13-2 小全）执行指引：① 规格文档 TriCompany/docs/engineering/agent-contract-v3-spec.md 为准——Step 2 按 §3.2 迁 14 份 source-agents 合同转 3.0（version 改 3.0 + 补 identity/responsibilities/collaborators/tools/io_contract/instructions），11 份有 v1 对应者按 §3.1 内容搬运（agent_id 转 kebab-case 对齐目录名），3 份缺口（business-strategy/customer-success-officer/deployment-engineer）以 employee-roster.json + 五件套为源新写；v1 11 份保留至 Step 4。② 重要：v2 paths 存在 colleagues_social 合并字段变体，迁 3.0 须拆成 colleagues+social。③ Step 3 TriLC adapter 切换（ContractYaml 接口删除，loadOne 换 agent-core loadContractV3，域逻辑保留）+ 14/14 回归（4.2 基准）+ 与 golden/v2-trilc.json 关键字段零 diff。④ Step 4 TriMC resolver 重写 thin wrapper（validate/normalize 删除，employee-registry registryDir 改指 source-agents）+ 编排 suites 回归 + 与 golden/v1-trimc.json 等价性比对 + v1 11 份 git rm 退役 + O3（initializeSession W_OK 校验，基准 TriLC src/company/session-initializer.ts:44 + 负路径测试）。⑤ 每步一个独立 commit + 测试门禁。⑥ 拆树触发：TriMC 编排层测试改造面超预估 1.5 倍 → 挂起拆尾树。"
       }
     },
     {
