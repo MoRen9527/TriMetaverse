@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (worktree 架构设计定案收口：小狄交付 5edcbecd，实施树另建待编排层排期)",
-        "version": "1.40.0",
-        "lastUpdated": "2026-08-13T18:58:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (设计文档落点理由留痕：docs/execution/ 为 TriMetaverse 仓设计真源惯例；树 A 技术输入由小狄承诺待建树派单)",
+        "version": "1.41.0",
+        "lastUpdated": "2026-08-13T19:00:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -195,7 +195,7 @@
             "ownerRole": "CTO",
             "status": "done",
             "doneAt": "2026-08-13T18:57:00+00:00",
-            "deliverable": "docs/execution/worktree-architecture-design.md（commit 5edcbecd，source-only）— 定案：一仓三面模型（研发主 checkout / 本地生产 worktree C:\\ProgramData\\TriCade\\workspace\\TriMetaverse / 服务器舰队克隆）+ prod/windows-local 分支 ff-only + 例外写走 PR + TRILC_WEEKLY_PLANE_ROOT 安装脚本候选补档（TriLC 侧零改、迁移前行为逐字节不变）+ fleet 纪律统一（写方向单主体、git 身份单一）；实施树另建（树 A：worktree 建立+注入切换+双形态验收；树 B 可选：TriMC 同构），排期归编排层"
+            "deliverable": "docs/execution/worktree-architecture-design.md（commit 5edcbecd，source-only）— 定案：一仓三面模型（研发主 checkout / 本地生产 worktree C:\\ProgramData\\TriCade\\workspace\\TriMetaverse / 服务器舰队克隆）+ prod/windows-local 分支 ff-only + 例外写走 PR + TRILC_WEEKLY_PLANE_ROOT 安装脚本候选补档（TriLC 侧零改、迁移前行为逐字节不变）+ fleet 纪律统一（写方向单主体、git 身份单一）；实施树另建（树 A：worktree 建立+注入切换+双形态验收；树 B 可选：TriMC 同构），排期归编排层。落点理由（小狄留痕）：TriMetaverse 仓 docs/ 下无 engineering/ 目录——engineering/ 层级是 TriCompany 技术真源专属结构；TriMetaverse 仓设计/执行文档真源惯例落 docs/execution/（server-fleet-m0.md、production-dualrun-runbook.md 等先例同处）。树 A 建树技术输入（小狄承诺）：护栏清单复核 + 实施步骤顺序（worktree 建立→ACL→脚本候选补档→重注入→双形态验收→runbook）+ 验收口径（服务/登录双形态周平面读取实测、MSI 升级 worktree 完好检查、回滚单命令演练）"
         }
     ],
     "carry_over_from_w31": [
