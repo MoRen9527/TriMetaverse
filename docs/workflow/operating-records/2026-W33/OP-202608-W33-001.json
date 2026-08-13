@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (D1 全量重验四检查项 + B 段对齐值仿真验证登记：周日实跑两表 8w+ 10 行 escalation 10/10)",
-    "version": "2.20.0",
-    "lastUpdated": "2026-08-14T17:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (D1 修复链完整闭环：afdae93 + e20fa8b + 小柯快验三点全过)",
+    "version": "2.21.0",
+    "lastUpdated": "2026-08-14T18:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -213,9 +213,9 @@
     },
     {
       "id": "O-D1-1-PATCH-20260814-001",
-      "action": "O-D1-1 末尾换行 1 行补丁（非阻塞，外观级）：D1 新实现 splitlines/join 使产物丢失末尾换行（130 行守恒但 wc -l=129、git 标 No newline）；补丁=join 后按源文件补回结尾换行。owner CTO 小狄，小改单票（小柯快验），周日触发前完成即可。O-D1-2（Windows GBK stdout UnicodeEncodeError，发生在全部写操作完成后，产物不受影响；服务器 UTF-8 无此问题）无需处置，本地手工跑前置 PYTHONIOENCODING=utf-8 记入 runbook 即可 — 补丁已落地 e20fa8b（+5 行 had_trailing_newline 捕获），小柯快验待回报",
+      "action": "O-D1-1 末尾换行 1 行补丁（非阻塞，外观级）：D1 新实现 splitlines/join 使产物丢失末尾换行（130 行守恒但 wc -l=129、git 标 No newline）；补丁=join 后按源文件补回结尾换行。owner CTO 小狄，小改单票（小柯快验），周日触发前完成即可。O-D1-2（Windows GBK stdout UnicodeEncodeError，发生在全部写操作完成后，产物不受影响；服务器 UTF-8 无此问题）无需处置，本地手工跑前置 PYTHONIOENCODING=utf-8 记入 runbook 即可 — done（补丁 e20fa8b + 小柯快验三点全过：产物 ends-with-newline=True 行数 130/130、diff 恰 12 对变更行无伪变更、8w 提取 5/5 无回归；D1 修复链 afdae93+e20fa8b 完整闭环）",
       "ownerRole": "CTO",
-      "status": "open"
+      "status": "done"
     },
     {
       "id": "D1-B-CORRECT-20260816-001",
