@@ -1,0 +1,74 @@
+{
+  "treeId": "prod-grade-1-trimc-weekly-cron",
+  "title": "TriMC scheduler 模块 — 定时触发周平面迁移五段链（生产级开发期首树）",
+  "source": "W33 决策登记 2026-08-13（CEO 批准生产级开发期 + 首树启动）",
+  "week": "2026-W33",
+  "status": "active",
+  "nodes": [
+    {
+      "nodeId": "r1-0",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "建树：规划范围与节点链",
+      "routedInput": "",
+      "brief": "briefs/r1-0-20260814010000.md",
+      "checkpoint": {
+        "progress": "范围定案（CEO 批准）：TriMC 侧 scheduler 模块——对标 TriLC cron 能力（croner 底座 + CronJob store + CLI `trilc cron add/list/run`），定时触发 weekly_plane_shift 五段链（复用 TriCompany/runtime/cognition/weekly_plane_shift.py 现成 CLI：create→migrate→carry_over→validate→agent_close），在服务器舰队克隆执行周平面迁移。归仓路由判定：TriMC 自身仓中等改造 → 生产级开发期 §5.4 中改通道（研发环执行 + 兜底复核两票），TriLC 参与测试/CLI 段。硬 deadline：2026-08-16 23:59 前可触发 W33→W34 迁移（08-17 周一新平面激活），scheduler 未就绪则迁移走既有路径兜底、树按实际状态收口。节点链：r1-1 CTO 技术方案 → r1-2 小全实现（本地研发仓开发 TriMC 仓，push sg-server）→ r1-3 小柯独立验证 → r1-4 小贾收口。",
+        "artifactCommit": "",
+        "resumePoint": "树已建，r1-1 开工（CTO 小狄技术方案）"
+      }
+    },
+    {
+      "nodeId": "r1-1",
+      "agent": "CTO",
+      "status": "pending",
+      "action": "技术方案：scheduler 设计（触发源/调度存储/执行器/失败重试/审计，对标 TriLC src/cron：croner + CronJob store + timer）+ 周平面文件服务器端写路径（生产级开发期 §三方向例外：OP/tree-op 维护权 TriMC 侧，经 git 同步回流本地；代码修改仍本地发起）",
+      "routedInput": "r1-0:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r1-2",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "实现：本地研发仓开发 TriMC 仓 scheduler 模块（按 r1-1 方案），push sg-server；TriLC 参与测试/CLI 段（对照 trilc cron CLI 行为对齐）",
+      "routedInput": "r1-1:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r1-3",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "独立验证：scheduler 触发链路 + 五段链迁移正确性 + 周平面文件写路径 + deadline 前可触发性",
+      "routedInput": "r1-2:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r1-4",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口：判定 + 清单登记 + push 三仓同步 + 最终报告（收口门禁 v2）；登记生产级开发期阶段一进展",
+      "routedInput": "r1-3:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    }
+  ]
+}

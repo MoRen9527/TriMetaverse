@@ -6,12 +6,12 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-13T06:00:00+08:00
 
-> 版本：v2026.W33.15
+> 版本：v2026.W33.16
 > 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过 + 树执行协议定案（git 触发 + checkpoint 存档 + 崩溃恢复）；v2026.W33.10 M2 第七轮——3.1/3.2 工程门禁通过（r7-eng-gate 树收口，V0.6 brief 机制首战验证）；v2026.W33.11 M2 第八轮——1.1-1.5 基础执行域通过（r8-base-exec 树，回滚演练）；v2026.W33.12 M2 第九轮——3.3/3.4/4.1 通过（r9-eng-cross 树）；v2026.W33.13 M2 第十轮——4.2/4.3/6.1/6.2 通过（r10-cross-ops 树，CONDITIONAL_PASS 收口）；v2026.W33.14 M2 第十一轮——6.3/6.4 通过 + O1 修复补跑（r11-ops-init 树，PASS 收口）；v2026.W33.15 M2 第十二轮——5.1-5.4 生产链通过（r12-production-chain 树，PASS 收口）——**M2 全勾：§二 1-6 域 25/25 + C 层 M2 受验必需项全过，M3 自动推进触发（2026-08-13）**）
 > 状态：正式版（CEO 确认签发）
-> 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
+> 适用范围：TriLC 能力验证期（M2，已收官）+ 生产级开发期（5.x 每版常设门禁 + C 层消化清单）
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
-> 关联：`docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md` 决策登记块（M2 里程碑）；`docs/execution/server-fleet-trilc-parity-plan.md`（计划级登记——本清单为 M2 子阶段验证载体）；`TriCompany/docs/engineering/trilc-trimc-runtime-parity.md` V1.1（parity 架构源头）
+> 关联：`docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md` 决策登记块（M2 里程碑 + 生产级开发期定案）；`docs/execution/server-fleet-trilc-parity-plan.md`（计划级登记——本清单为 M2 子阶段验证载体）；`docs/execution/production-grade-development-plan.md`（生产级开发期：5.x 常设门禁 + C 层消化清单口径）；`TriCompany/docs/engineering/trilc-trimc-runtime-parity.md` V1.1（parity 架构源头）
 > 前置：M0（服务器仓 + git 同步链路）与 M1（舰队自由对话 + TriMC 编排 MVP）通过后启动
 > 版本说明：v2026.W33.2 新增两层之一——§二.5「CC 特性对标层」（TriLC 作为 claude code 等价物必须学会的能力，M4 源码替换前提）；治理条目 1.5（回滚执行）与 6.4（会话初始化器）并入对应域，编号顺延；v2026.W33.3 M2 第一轮验收收口（C12/C13 模型路由与降级通过）
 
@@ -68,6 +68,8 @@
 
 ### 5. 生产链域（全部本地验后回传）
 
+> **2026-08-13 起转为每版常设门禁**：5.1-5.4 不再是一次性验收项，生产级开发期内每个发布版本必过（门禁不过不发布），见 `production-grade-development-plan.md` §六。独立复核（小柯式第三视角）同步为每版必做。
+
 | # | 能力项 | 通过标准 | 验证位置 | 状态 | 完成证据 |
 | --- | --- | --- | --- | --- | --- |
 | 5.1 | MSI 构建全链路 | build-desktop.ps1 从源码到 MSI/ZIP 一次成功，staging 干净（W30：残留文件混包事故）；MSI 本机无 WiX 仅 CI 构建（CI run 31657624910 已触发，产物待发布补证） | 本地验后回传 | **通过** | M2 第十二轮（r12-production-chain）：v0.4.2-r12 ZIP 一次成功 58,549,782 字节；W30 同型混包修复（staging 混入 trimodel/.git → hygiene 步骤剥离）；staging 递归扫描 0 个 .git；CI workflow checkout TriCompany + contracts 复制 + FATAL 检查实读齐备（小柯独立复核 PASS）。**增量（2026-08-13 晚）**：v0.4.3-r12 ZIP 58.66MB——BUG-002 修复（版本注入 + 无 BOM，安装态 healthz 实测 0.4.3）+ BUG-003 修复（yoga-layout npm 别名，smoke 30/30 转绿）+ contracts 14 份入包 |
@@ -87,34 +89,37 @@
 ## 二.5、CC 特性对标层（v2026.W33.2 新增）
 
 > 定位：执行器能力层（§二 1-6 域）之上，TriLC 作为 **claude code 等价物**必须学会的能力层——这是 M4 源码替换的前提。每项三列：TriLC 现状（有/无/部分 + 证据）、差距（缺什么）、优先级（M2 受验必需 / M3 生产必需 / M4 替换必需）。
+> **C 层口径修正（2026-08-13，生产级开发期方案批准）**：C2-C16 原「M3 生产必需 / M4 替换必需」标签停用，全部归**生产级开发期消化清单**，按四阶段挂靠（阶段一 C4/C5/C7 → 阶段二 C2/C3/C11/C14 → 阶段三 C16 → 阶段四 C6）；M2 受验必需项（C1/C8/C9/C10/C12/C13/C15，已全过）保留原标签作历史记录。消化与验收按 `production-grade-development-plan.md` §五（组件自身优化流）+ §七（四阶段）执行。
 > 对标基座：官方 claude code 2.1.227（服务器已部署，M1 实测通道：spawn `claude --bg` / `claude agents --json` / `claude -p --resume --fork-session`）。
 > 验证位置标注同 §二：服务器可验（TriMC 舰队在服务器仓直接核验）或本地验后回传。
 
-| # | 对标项 | TriLC 现状（证据） | 差距 | 优先级 |
+| # | 对标项 | TriLC 现状（证据） | 差距 | 优先级 / 挂靠 |
 | --- | --- | --- | --- | --- |
 | C1 | 会话 start/resume | **通过**：M2 第四轮验收——小柯独立验证 69/69 全过（覆盖验证包 9 场景：跨重启恢复、跨目录恢复、session-store 持久化/类型/safety-check 全链路；测试文件 `test/c1-session-resume.test.ts`） | 差距已闭环（resume 正确性验证完成） | M2 受验必需 |
-| C2 | 会话 fork | **部分**：`src/tui/fork.tsx`（UI 层存在） | fork 数据层未闭环（复制会话上下文为新会话） | M3 生产必需 |
-| C3 | 后台会话生命周期（--bg 等价） | **无**：daemon 仅守护服务，无会话粒度后台化 | 后台会话 spawn/枚举/停止（对标 `claude --bg` + `claude agents`） | M3 生产必需 |
-| C4 | SendMessage 跨会话 | **部分**：`src/tools/send-message.ts`（A 级复制 CC，localbus 进程内；注释明示 cross-daemon 不可用） | 跨 daemon / 跨机消息（对接 TriMC session-bridge 通道） | M3 生产必需 |
-| C5 | ListAgents / 会话寻址 | **部分**：TriMC 侧 `session-bridge.listAgents()`（agents --json）已 MVP | TriLC 侧无会话枚举 API（自报能力/状态） | M3 生产必需 |
-| C6 | agent teams / mailbox | **无**：send-message 注释明确无 mailbox/teammate 系统 | teammate 生命周期、邮箱、组队协议 | M4 替换必需 |
-| C7 | hook 系统 | **无**：grep hook 仅命中 TUI React hooks（useBlink 等），非 CC hook 生命周期 | PreToolUse / PostToolUse / Stop / SubagentStop / PermissionRequest 注册与事件 | M3 生产必需 |
+| C2 | 会话 fork | **部分**：`src/tui/fork.tsx`（UI 层存在） | fork 数据层未闭环（复制会话上下文为新会话） | 生产级开发期·阶段二 |
+| C3 | 后台会话生命周期（--bg 等价） | **无**：daemon 仅守护服务，无会话粒度后台化 | 后台会话 spawn/枚举/停止（对标 `claude --bg` + `claude agents`） | 生产级开发期·阶段二 |
+| C4 | SendMessage 跨会话 | **部分**：`src/tools/send-message.ts`（A 级复制 CC，localbus 进程内；注释明示 cross-daemon 不可用） | 跨 daemon / 跨机消息（对接 TriMC session-bridge 通道） | 生产级开发期·阶段一 |
+| C5 | ListAgents / 会话寻址 | **部分**：TriMC 侧 `session-bridge.listAgents()`（agents --json）已 MVP | TriLC 侧无会话枚举 API（自报能力/状态） | 生产级开发期·阶段一 |
+| C6 | agent teams / mailbox | **无**：send-message 注释明确无 mailbox/teammate 系统 | teammate 生命周期、邮箱、组队协议 | 生产级开发期·阶段四（M4 前提之一） |
+| C7 | hook 系统 | **无**：grep hook 仅命中 TUI React hooks（useBlink 等），非 CC hook 生命周期 | PreToolUse / PostToolUse / Stop / SubagentStop / PermissionRequest 注册与事件 | 生产级开发期·阶段一 |
 | C8 | 权限模式矩阵 | **通过**：M2 第二轮验收——agent-core PermissionMode 6 种 (default/acceptEdits/auto/dontAsk/bypassPermissions/plan) + 决策管线 10 步 (TriMC 7faa18b)；TriLC CLI --permission-mode + plan-mode 双层防护架构 (TriLC a50e039)；小柯 86 用例全通过，6 种模式语义正确；3 条非阻塞观察项 (Bash/shell_exec 名称、Glob 边界、acceptEdits 归类) 已登记 | 差距已闭环 | M2 受验必需 |
 | C9 | 权限规则与 -p 非交互 | **通过**：M2 第二轮验收——agent-core PermissionEngine.additionalDirectories + isPathInBoundary 路径标准化 (TriMC 08ced77/da17d97)；TriLC PermissionStore v2 双向 allow/deny + v1 自动迁移 + CLI --allow/--deny/--add-dir/-p + buildSessionPermissionRules (TriLC 5112017)；小柯 12 用例全通过，ask→deny 确定性拒绝、规则优先级、content filter 全部正确 | 差距已闭环 | M2 受验必需 |
 | C10 | MCP server 接入/发现 | **通过**：M2 第三轮验收——TriLC CLI `trilc mcp add/remove/list/status` + mcp-config 持久化 (TriLC 6b45b08)；McpClientManager per-tool 注册 `mcp__<server>__<tool>` + connectServer/disconnectServer 动态接入 + daemon 5 端点 (TriLC 8ddcb94)；agent-core unregister (TriMC 0620290) + isMcpWriteTool/isMcpFileTool MCP 管线检测 + BUG-C10-01 前缀剥离修复 (92a373a)；小柯 39 专项 + 86 回归全通过，3 条非阻塞观察项 (parseToolName 正则、disconnectAll 清理、dontAsk pathless MCP 工具) 已登记 | 差距已闭环 | M2 受验必需 |
-| C11 | TUI / 交互 | **有**：`src/tui/`（ink + termio + useCursorInput/useSSE） | 光标/IME 细节、历史、渲染兼容性 | M3 生产必需 |
+| C11 | TUI / 交互 | **有**：`src/tui/`（ink + termio + useCursorInput/useSSE） | 光标/IME 细节、历史、渲染兼容性 | 生产级开发期·阶段二 |
 | C12 | 模型路由多 provider/fallback | **通过**：M2 第一轮验收——R1 FALLBACK_MAP 扩展 (TriMC 1df2311: 新增 4 条 tmv-* 条目, 双层 fallback 架构注释)；R2 启动注册表检查 (TriLC 0de39ad: validateModelRegistry() 启动时检查 defaultModel+criticalFallbacks, 缺失 WARNING 不阻断)；TriLC validateModelAgainstRegistry() 请求时预验证 (94ceae8)；TriModel buildRegistry() fallback 链已修正 (W30 根因 tmv-deepseek-chat→deepseek-chat 改为 →deepseek-v4-flash) | 差距已闭环 | M2 受验必需 |
 | C13 | 模型降级（degraded） | **通过**：M2 第一轮验收——四层 task_error 防线（L1 预验证→L2 terminalError break→L3 post-loop return→L4 空输出 guard→L5 outer catch），task_error 后绝无伪 task_done；degraded 三态日志 `[trilc:conn]` / `[trilc:model] degraded` / `[trilc:model] CRITICAL` 可辨；recovery 事件监听 tier=2 降级日志 (TriLC 0de39ad) | 差距已闭环 | M2 受验必需 |
-| C14 | CLAUDE.md / 记忆注入 | **部分**：`src/context-adapter/adapter.ts`（neutral-local-context 薄层） | CLAUDE.md 自动发现/加载、记忆注入深度（对标 TriMC memory-injector/context-builder） | M3 生产必需 |
+| C14 | CLAUDE.md / 记忆注入 | **部分**：`src/context-adapter/adapter.ts`（neutral-local-context 薄层） | CLAUDE.md 自动发现/加载、记忆注入深度（对标 TriMC memory-injector/context-builder） | 生产级开发期·阶段二 |
 | C15 | compaction | **通过**：M2 第四+五轮——手动 compact（`801f72b`/`f5f54c2`）+ 自动触发 v2 事件驱动零循环依赖（`0a5fc49`，解决 c9b85d2 循环依赖卡点）；小柯 254/254 全过；摘要质量对齐待验（观察项） | 差距已闭环 | M2 受验必需 |
-| C16 | 远程控制与渠道 | **无** | Remote Control（REST/WS 附加会话）、--channels 渠道 | M3 生产必需 |
-| C17 | 构建与打包 | **有**：`src/daemon/`（schtasks/launchd/systemd/watchdog）+ TriCade 侧 MSI | 无（TriCade 已产 MSI/ZIP；本地域项） | M3 生产必需 |
+| C16 | 远程控制与渠道 | **无** | Remote Control（REST/WS 附加会话）、--channels 渠道 | 生产级开发期·阶段三 |
+| C17 | 构建与打包 | **有**：`src/daemon/`（schtasks/launchd/systemd/watchdog）+ TriCade 侧 MSI | 无（TriCade 已产 MSI/ZIP；本地域项） | 每版常设门禁（并入 5.x） |
 
 ## 三、通过门槛
 
 - 全部能力项状态 = 通过，且每项有完成证据；
 - TriMC 舰队出具独立审核结论（覆盖质量、错误处理、纪律遵守）；
 - 达到门槛后：TriLC 获得独立承担工作资格 → 进入 M3 生产双跑（生产仓 = TriLC + TriMC 互为 fallback）。
+
+> 注（2026-08-13）：M2 门槛已达成、M3 已收官（2026-08-14 正式运营日）。此后 5.x 转每版常设门禁，C2-C16 归生产级开发期消化清单——见 `production-grade-development-plan.md` §六/§八。
 
 ## 四、M0 双仓同步机制（前置环境）
 

@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (运营日确认: M3 done — 2026-08-14 正式运营日)",
-    "version": "2.3.0",
-    "lastUpdated": "2026-08-14T00:30:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (生产级开发期定案登记: 新计划 + 首树 prod-grade-1-trimc-weekly-cron)",
+    "version": "2.4.0",
+    "lastUpdated": "2026-08-14T01:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,7 +29,17 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [],
+  "activeTrees": [
+    {
+      "treeId": "prod-grade-1-trimc-weekly-cron",
+      "title": "TriMC scheduler 模块 — 定时触发周平面迁移五段链（生产级开发期首树）",
+      "nodes_total": 5,
+      "nodes_done": 1,
+      "status": "active",
+      "path": "trees/prod-grade-1-trimc-weekly-cron/tree-op.json",
+      "related": "生产级开发期阶段一 · TriMC 仓中等改造（研发环主力实现，TriLC 参与测试/CLI 段）"
+    }
+  ],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -171,7 +181,7 @@
       "action": "打包卫生优化（r14-3 小柯 + 小狄共同发现）：发布包内 node_modules/@tricompany/agent-core/test/（9 文件 fixtures）被打进 ZIP——无害但应 exclude，建议 hygiene/assemble 加排除规则，随下次打包触发",
       "ownerRole": "CEOChiefOfStaff",
       "status": "open"
-    }
+    },
     {
       "id": "O2-B-20260813-001",
       "action": "O2 B 方案（CTO 小狄自领）：agent-core 移除/@deprecated 死 schema 导出 + resolver 头注释修正 + TriCompany code-state.md 补 agent-core 模块登记与风险标注 — done（TriCompany commit 8836e88，5 文件 +33/-2；保留导出作 O2-A 重建锚点，弃用标注 + 死形状警示 + 首次模块登记）",
@@ -339,9 +349,43 @@
           "id": "M4",
           "name": "源码替换",
           "status": "deferred",
-          "note": "延后（CEO 2026-08-13 定）：M3 完成即收官，M4 待 CEO 另行启动"
+          "note": "延后（CEO 2026-08-13 定）：启动条件六条见 production-grade-development-plan.md §十，待 CEO 另行启动"
         }
       ]
+    },
+    {
+      "planId": "production-grade-development",
+      "title": "生产级开发期运行方案（TriCade + TriLC + TriMC）",
+      "source": "W33 决策登记 2026-08-13（CEO 批准）：M4 时机未到，生产级开发启动——TriLC 主力执行、TriMC 把关审核、问题回研发仓修改、循环改善至 CEO 认定首个正式生产级可用版本（建议 v1.0.0）",
+      "planDoc": "docs/execution/production-grade-development-plan.md",
+      "status": "in_progress",
+      "milestones": [
+        {
+          "id": "P1",
+          "name": "阶段一 全量把关期",
+          "status": "in_progress",
+          "evidence": "首树 prod-grade-1-trimc-weekly-cron（2026-08-13 建）——TriMC scheduler 模块（对标 TriLC cron：croner + CronJob store + CLI），定时触发 W33→W34 周平面迁移五段链；退出判据：生产环稳定连续 2 周无 P0/P1 + C4/C5/C7 闭环"
+        },
+        {
+          "id": "P2",
+          "name": "阶段二 抽检过渡期",
+          "status": "pending",
+          "evidence": "退出判据：抽检连续 4 轮零严重问题 + C2/C3/C11/C14 闭环"
+        },
+        {
+          "id": "P3",
+          "name": "阶段三 例外管理期",
+          "status": "pending",
+          "evidence": "退出判据：C16 闭环 + 三小贾收敛到位"
+        },
+        {
+          "id": "P4",
+          "name": "阶段四 资格认定期",
+          "status": "pending",
+          "evidence": "退出判据：C6 闭环 + v1.0.0 候选全链回归 + 舰队独立审核 + CEO 认定首个正式生产级可用版本"
+        }
+      ],
+      "notes": "C 层 C2-C16 归本计划消化清单（原 M3/M4 标签停用，口径修正）；M4 仍 deferred"
     }
   ]
 }

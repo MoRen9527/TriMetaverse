@@ -6,12 +6,12 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-13
 
-> 版本：v2026.W33.1
+> 版本：v2026.W33.2
 > 日期：2026-08-13
 > 状态：正式版（CEO 审批签发）
-> 适用范围：TriMC 服务器舰队 + TriLC 渐进追赶全链路（M0-M4）
+> 适用范围：TriMC 服务器舰队 + TriLC 渐进追赶全链路（M0-M4 + 生产级开发期）
 > owner：小贾（CEOChiefOfStaff）
-> 关联：TriCompany/docs/engineering/trilc-trimc-runtime-parity.md V1.1（架构决策源头）；docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md 决策登记段（部署形态 + 里程碑定案）
+> 关联：TriCompany/docs/engineering/trilc-trimc-runtime-parity.md V1.1（架构决策源头）；docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md 决策登记段（部署形态 + 里程碑定案 + 生产级开发期定案）；docs/execution/production-grade-development-plan.md（生产级开发期执行方案）
 
 ## 一、计划缘起与谱系
 
@@ -22,21 +22,23 @@
 | 2026-08-07 | CPO/CTO 完成 TriLC/TriMC 共享 runtime parity 架构决策：共享 agent-core + 双域 adapter + 写权威合同 + parity gate | TriCompany/docs/engineering/trilc-trimc-runtime-parity.md V1.1 |
 | 2026-08-11 | CEO 定案部署形态：WSL 路线归档，采用服务器舰队方案（服务器官方 claude + TriMC 编排）；TriLC 本地域渐进追赶 | W33 周记决策登记段 |
 | 2026-08-11 | 里程碑门禁 M0-M4 成型：环境 → 试点 → 能力验证 → 独立资格 → 源码替换 | W33 周记决策登记段 |
-| 2026-08-11 → | M0 执行（12/12 完成）→ M1 试点（阶段一+二完成）→ M2 能力验证（R1-R8 进行中） | server-fleet-m0.md + trilc-capability-checklist.md |
+| 2026-08-11 → | M0 执行（12/12 完成）→ M1 试点（阶段一+二完成）→ M2 能力验证（R1-R12 完成，25/25 全勾）→ M3 收官（2026-08-14 正式运营日） | server-fleet-m0.md + trilc-capability-checklist.md |
+| 2026-08-13 | CEO 批准生产级开发期方案（M3 后自动进入，M4 deferred 保持） | production-grade-development-plan.md + W33 周记决策登记段 |
 
 与 v0.9.x 双轨计划的并行关系：`docs/execution/v0.9.x-dual-track-tricompany-plan.md` 是安装版双轨互促 + TriCompany 独立化方案（v3，2026-08-04），无 M0-M4/服务器舰队引用——本计划是其延伸线之一，两计划并行不重复。
 
-## 二、M0-M4 里程碑结构
+## 二、M0-M4 里程碑结构 + 生产级开发期
 
 | 里程碑 | 定义 | 状态 | 证据指针 |
 | --- | --- | --- | --- |
 | M0 环境 | 服务器裸仓 + 舰队工作克隆 + git 同步链路打通 | **done** | server-fleet-m0.md 12/12（2026-08-11） |
 | M1 试点 | 服务器舰队跑通 task tree/周会自由对话；TriMC 编排 MVP 连通官方会话 | **done** | 周记 M1 段：阶段一（部署 + 对话实测）+ 阶段二（session-bridge + 3 端点 + dispatchAsync + task-controller 回写，MVP 门禁 5/5） |
-| M2 能力验证期 | TriLC 在 TriMC 监督下按 checklist 逐项覆盖（真实研发任务驱动，不设固定时长） | **in_progress** | trilc-capability-checklist.md v2026.W33.12（15/33 项通过，详见 §三） |
-| M3 独立资格 + 生产双跑 | 能力清单全勾 + 舰队审核通过 → 生产仓 TriLC + TriMC 互为 fallback | pending | M2 全勾后自动推进，不需提请确认（CEO 2026-08-13 定） |
-| M4 源码替换 | 自研跨会话层 + 功能覆盖验收 → 源码替换官方 claude | **deferred** | 延后（CEO 2026-08-13 定）：M3 完成即收官报告，M4 待 CEO 另行启动 |
+| M2 能力验证期 | TriLC 在 TriMC 监督下按 checklist 逐项覆盖（真实研发任务驱动，不设固定时长） | **done** | trilc-capability-checklist.md v2026.W33.15：§二 1-6 域 25/25 全勾 + C 层 M2 受验必需项全过（2026-08-13，12 轮 R1-R12，详见 §三） |
+| M3 独立资格 + 生产双跑 | 能力清单全勾 + 舰队审核通过 → 生产仓 TriLC + TriMC 互为 fallback | **done** | 运营日确认 2026-08-14：CEO 重启命令块全通过——version 0.4.4 + count 14 + tricompanyEnabled true（14 员工全实载）+ trimc connected 恢复（degraded→connected 心跳闭环）。R1 合同统一 / R2 部署就绪 / R3 运营日就绪全收官 |
+| 生产级开发期 | M3 后自动进入（不需提请确认）：TriCade + TriLC + TriMC 生产级开发——TriLC 主力执行、TriMC 把关审核、问题回研发仓修复、每版过 5.x 生产链门禁，直到 CEO 认定首个正式生产级可用版本（建议 v1.0.0） | **in_progress** | production-grade-development-plan.md v2026.W33.1（CEO 2026-08-13 批准） |
+| M4 源码替换 | 自研跨会话层 + 功能覆盖验收 → 源码替换官方 claude | **deferred** | 延后（CEO 2026-08-13 定）：启动条件六条见 production-grade-development-plan.md §十，待 CEO 另行启动 |
 
-## 三、M2 子阶段（R1-R8 轮次登记）
+## 三、M2 子阶段（R1-R12 轮次登记）
 
 | 轮次 | 内容 | 树 | 清单版本 | 状态 |
 | --- | --- | --- | --- | --- |
@@ -49,6 +51,9 @@
 | M2-R7 | 3.1/3.2 工程门禁 | r7-eng-gate | v2026.W33.10 | done |
 | M2-R8 | 1.1-1.5 基础执行域 | r8-base-exec | v2026.W33.11 | done |
 | M2-R9 | 3.3/3.4/4.1 工程门禁收尾+跨模块 | r9-eng-cross | v2026.W33.12 | done |
+| M2-R10 | 4.2/4.3/6.1/6.2 跨模块收尾+运营纪律开门 | r10-cross-ops | v2026.W33.13 | done |
+| M2-R11 | 6.3/6.4 运营纪律收官 + O1 健康脚本修复 | r11-ops-init | v2026.W33.14 | done |
+| M2-R12 | 5.1-5.4 生产链域 + 4.2 安装态实测 | r12-production-chain | v2026.W33.15 | done |
 
 注：R1-R6 无树承载（树协议 V0.6 自 R7 起生效）；R7/R8 起每轮以树承载并出 brief。
 
@@ -56,12 +61,13 @@
 
 - M0：12/12 完成（服务器环境就绪）
 - M1：阶段一+二完成（舰队对话 + 编排 MVP）
-- M2：9 轮 done，15/33 能力项通过；剩余 21 项（3.3/3.4 + 4.x 跨模块域 + 5.x 生产链域 + 6.x 运营纪律域 + C2-C7/C11/C14/C16/C17 对标层）
-- M3：M2 全勾后自动推进（生产双跑上线，不需中途提请 CEO 确认）
-- M4：**deferred**——延后（CEO 2026-08-13 定），不做任何 M4 动作，收官报告明确"M4 未执行，待 CEO 另行启动"
+- M2：**done**——12 轮 R1-R12 全 done，§二 1-6 域 25/25 全勾 + C 层 M2 受验必需项全过（清单 v2026.W33.15，2026-08-13）
+- M3：**done**——正式运营日 2026-08-14（version 0.4.4 + count 14 + connected 恢复）；R1 合同统一 / R2 部署就绪 / R3 运营日就绪全收官
+- 生产级开发期：**in_progress**——M3 完成后自动进入（CEO 2026-08-13 批准），执行方案见 production-grade-development-plan.md；阶段推进与退出以该文档为准
+- M4：**deferred**——延后（CEO 2026-08-13 定），不做任何 M4 动作；启动条件六条见 production-grade-development-plan.md §十，待 CEO 另行启动
 
 ## 五、维护规则
 
-- 更新人：CEOChiefOfStaff（M2 每轮收口后更新 §三/§四）
-- 里程碑状态变更需 CEO 确认
+- 更新人：CEOChiefOfStaff（轮次收口 / 阶段推进 / 消化项闭环时更新 §三/§四）
+- 里程碑状态变更需 CEO 确认；生产级开发期状态投影以 production-grade-development-plan.md 为准
 - 本计划为计划级登记；各里程碑的执行清单/验证清单保持独立文档（server-fleet-m0.md / trilc-capability-checklist.md），本文件只做状态投影
