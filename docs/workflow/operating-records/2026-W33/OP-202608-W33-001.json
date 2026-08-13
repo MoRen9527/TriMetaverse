@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r14 建树: M3-R2 生产双跑部署 in_progress)",
-    "version": "1.9.0",
-    "lastUpdated": "2026-08-13T22:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r14-4 收口: M3-R2 部署就绪 + blocked 五项待 CEO)",
+    "version": "2.0.0",
+    "lastUpdated": "2026-08-13T23:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,17 +29,7 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [
-    {
-      "treeId": "r14-production-dualrun",
-      "title": "M3 生产双跑部署：双向心跳契约 + 生产仓就位 + 双跑 runbook + 部署动作记录",
-      "nodes_total": 5,
-      "nodes_done": 1,
-      "status": "active",
-      "path": "trees/r14-production-dualrun/tree-op.json",
-      "related": "M3 生产双跑部署里程碑"
-    }
-  ],
+  "activeTrees": [],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -113,6 +103,15 @@
       "status": "done",
       "path": "trees/r13-contract-convergence/tree-op.json",
       "related": "M3-R1 (O2-A) 合同真源统一"
+    },
+    {
+      "treeId": "r14-production-dualrun",
+      "title": "M3 生产双跑部署：双向心跳契约 + 生产仓就位 + 双跑 runbook + 部署动作记录",
+      "nodes_total": 5,
+      "nodes_done": 5,
+      "status": "done",
+      "path": "trees/r14-production-dualrun/tree-op.json",
+      "related": "M3-R2 生产双跑部署（部署就绪）"
     }
   ],
   "nextActions": [
@@ -157,6 +156,12 @@
       "action": "forbidden 真丢评估（CTO 小狄）：test-engineer forbidden 的\"替代 BusinessStrategy 做中央战略裁决\"条目在 v2 golden 已缺席（迁移前既成事实，非 B 段丢失，v1 原文 git 历史可取回）——评估是否回补 — done（TriCompany 9273782：从 2c2ccf5~1 取回 v1 原文核实，对称护栏缺一即约束弱化，已回补至 v3 合同 6 条齐，解析验证通过）",
       "ownerRole": "CTO",
       "status": "done"
+    },
+    {
+      "id": "PACK-EXCLUDE-20260813-001",
+      "action": "打包卫生优化（r14-3 小柯 + 小狄共同发现）：发布包内 node_modules/@tricompany/agent-core/test/（9 文件 fixtures）被打进 ZIP——无害但应 exclude，建议 hygiene/assemble 加排除规则，随下次打包触发",
+      "ownerRole": "CEOChiefOfStaff",
+      "status": "open"
     }
     {
       "id": "O2-B-20260813-001",
@@ -295,7 +300,7 @@
           "id": "M3",
           "name": "独立资格+生产双跑",
           "status": "in_progress",
-          "note": "M2 全勾（2026-08-13）自动推进已触发，不需提请确认（CEO 2026-08-13 定）。里程碑动作（生产双跑部署）在轮次记录写明执行动作，CEO 授权不等批复（2026-08-13）。",
+          "note": "M2 全勾（2026-08-13）自动推进已触发，不需提请确认（CEO 2026-08-13 定）。里程碑动作（生产双跑部署）在轮次记录写明执行动作，CEO 授权不等批复（2026-08-13）。R1/R2 已收官：合同统一 + 部署就绪（契约/产物/runbook 全落地）。正式运营日待 CEO 一次执行 blocked 五项（push sg-server → 服务器 pull+重启 → 联通面 → M3 生产形态改造 → UAC 提权）",
           "subStages": [
             {
               "id": "M3-R1",
@@ -307,9 +312,9 @@
             {
               "id": "M3-R2",
               "name": "生产双跑部署",
-              "status": "in_progress",
+              "status": "done",
               "tree": "r14-production-dualrun",
-              "checklist": "待 r14-4 收口"
+              "checklist": "r14-4 收口 APPROVE（2026-08-13）：部署就绪——心跳契约 v1.0 对称补全接线（markNodeUnknown 有调用方）+ 产物 v0.4.4-r14（v3 合同 14/14）+ runbook + blocked 五项清单待 CEO 一次执行"
             }
           ]
         },

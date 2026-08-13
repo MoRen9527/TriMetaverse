@@ -54,7 +54,7 @@ powershell -ExecutionPolicy Bypass -File D:\Code\ai\TriMetaverse\scripts\install
 
 | 场景 | 动作 |
 | --- | --- |
-| 本地新版本异常 | 停 daemon → `C:\Program Files\TriCade\trilc` 改名 → `trilc.bak-*` 还原为 trilc → 重启 daemon（RegRun 自动拉起或手动 node dist/index.js） |
+| 本地新版本异常 | 停 daemon → `C:\Program Files\TriCade\trilc` 改名 → `trilc.bak-*` 还原为 trilc → 重启 daemon（RegRun 自动拉起或手动 node dist/cli.js start） |
 | 需要降级到旧包 | install-tricade.ps1 指定旧版本产物：版本门禁降级路径警告放行 + 自动备份（5.4 已验） |
 | TriMC 心跳接线异常 | TriMC 回滚：`git revert` r14-2 接线 commit + 服务器 tsx 重启（需服务器权限，blocked） |
 | 心跳误判风暴 | TriMC 端停扫描：临时改 scanStaleNodes 调用注释或重启前 TRIMC 环境变量（未实现开关——登记为观察项，若生产出现误判再补开关） |

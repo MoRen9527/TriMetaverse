@@ -3,9 +3,9 @@
   "title": "M3 生产双跑部署：双向心跳契约 + 生产仓就位 + 双跑 runbook + 部署动作记录",
   "source": "M3 (生产双跑部署里程碑)",
   "week": "2026-W33",
-  "status": "active",
-  "verdict": "",
-  "completedAt": "",
+  "status": "done",
+  "verdict": "APPROVE — M3-R2 部署就绪：心跳契约对称补全接线 + 产物 v0.4.4-r14（v3 合同）+ 双跑 runbook 全部通过（小柯独立验证 PASS 零阻塞，D11 修订 + E exclude 登记）；blocked 五项待 CEO 一次执行后正式运营日",
+  "completedAt": "2026-08-13T23:00:00+08:00",
   "nodes": [
     {
       "nodeId": "r14-0",
@@ -62,14 +62,14 @@
     {
       "nodeId": "r14-4",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口判定 → M3 双跑登记",
       "routedInput": "r14-3:checkpoint",
-      "brief": "",
+      "brief": "briefs/r14-4-20260813230000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "收口判定 APPROVE（8 项验收全过零阻塞）。OP 2.0.0：M3-R2 done（部署就绪）+ r14 入 doneTrees（本周第 9 树）+ PACK-EXCLUDE 登记 + M3 note 更新（blocked 五项待 CEO）。D11 修订：runbook 回滚场景 dist/index.js → dist/cli.js start。",
+        "artifactCommit": "OP + runbook + tree-op + 简报（收口 commit）",
+        "resumePoint": "M3-R2 收官（部署就绪）。正式运营日待 CEO 一次执行 blocked 五项；M3 收官报告待运营日确认"
       }
     }
   ]
