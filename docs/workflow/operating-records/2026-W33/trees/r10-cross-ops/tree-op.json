@@ -36,14 +36,14 @@
     {
       "nodeId": "r10-2",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证 4.2 + 4.3 + 6.1 + 6.2",
       "routedInput": "r10-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r10-2-20260813160309.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "独立验证完成：4.2 PASS（磁盘 14 份 + TriLC 真实 resolver 实载 14/14 + prompt 非空 14/14）；4.3 PASS（20 仓/9 issues 全 ahead + git rev-list 交叉验证零差异）；6.1 CONDITIONAL_PASS（要求字段全对，但 D2：doneTreesThisWeek 缺 r9，r10-1 认证的\"无缺漏\"不实）；6.2 CONDITIONAL_PASS（进度版本三源一致，但 D3：周会纪要 M2 段落一轮于 8 轮/12/33/v2026.W33.11）。总 CONDITIONAL_PASS，无阻塞缺陷；差异 D1/D2/D3 + 观察 O1/O2 明细见 brief。",
+        "artifactCommit": "brief + tree-op commit",
+        "resumePoint": "r10-3 小贾收口：清单 v2026.W33.13 + 修复 D2（OP 补 r9 + activeTrees 移出 done 树）+ D3（周会纪要 M2 段刷新）+ D1（清单 4.2 描述 12→14 份）+ O1/O2 转 CTO 评估"
       }
     },
     {
