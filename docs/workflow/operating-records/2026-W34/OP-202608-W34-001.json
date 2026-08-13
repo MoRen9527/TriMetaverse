@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (r2-3 验证 FAIL 登记：sibling 深度缺陷 + 单测掩盖，打回小全修复)",
-        "version": "1.5.0",
-        "lastUpdated": "2026-08-13T19:10:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (r2-4 收口 APPROVE：第二树迁 doneTreesThisWeek，FAIL→修复→重验全链)",
+        "version": "1.6.0",
+        "lastUpdated": "2026-08-13T19:30:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -36,17 +36,7 @@
         "TriMC"
     ],
     "updatedAt": "2026-08-13T10:26:24.742649+00:00",
-    "activeTrees": [
-        {
-            "treeId": "prod-grade-2-trilc-plane-view",
-            "title": "TriLC 周平面读取路径契约统一 — TriCade 可见公司周平面（生产级开发期第二树）",
-            "nodes_total": 5,
-            "nodes_done": 3,
-            "status": "active",
-            "path": "trees/prod-grade-2-trilc-plane-view/tree-op.json",
-            "related": "CEO 指令：全真迁移后 TriCade 看不到 W34 的契约缺口 · 本树只动 TriLC 仓"
-        }
-    ],
+    "activeTrees": [],
     "doneTreesFromPreviousWeek": [
         {
             "treeId": "w33-weekly-migration-ade",
@@ -148,7 +138,17 @@
             "related": "生产级开发期阶段一 · TriMC 仓中等改造（研发环主力实现，TriLC 参与测试/CLI 段）"
         }
     ],
-    "doneTreesThisWeek": [],
+    "doneTreesThisWeek": [
+        {
+            "treeId": "prod-grade-2-trilc-plane-view",
+            "title": "TriLC 周平面读取路径契约统一 — TriCade 可见公司周平面（生产级开发期第二树）",
+            "nodes_total": 5,
+            "nodes_done": 5,
+            "status": "done",
+            "path": "trees/prod-grade-2-trilc-plane-view/tree-op.json",
+            "related": "CEO 指令：全真迁移后 TriCade 看不到 W34 的契约缺口 · 本树只动 TriLC 仓 | r2-4 收口 APPROVE"
+        }
+    ],
     "nextActions": [
         {
             "id": "D1-B-CORRECT-20260817-001",

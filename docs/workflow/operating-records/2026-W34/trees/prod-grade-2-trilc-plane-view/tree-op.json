@@ -3,7 +3,9 @@
   "title": "TriLC 周平面读取路径契约统一 — TriCade 可见公司周平面（生产级开发期第二树）",
   "source": "CEO 指令 2026-08-13：全真迁移 W33→W34 已在服务器执行 + 本地同步，CEO 邮件/本地效果已确认；发现 TriCade 看不到 W34——TriLC 周平面读取路径契约缺口",
   "week": "2026-W34",
-  "status": "active",
+  "status": "done",
+  "verdict": "APPROVE — r2-3 独立验证 FAIL（sibling 探测深度少一层 + 单测 else 掩盖）→ 打回修复 c8aaae0（三层上跳 + 测试期望独立推导）→ 小柯重验 PASS：本机 no-env 命中正确路径、变异测试实证回归守卫生效（旧实现 + 新期望 3 用例必红，else 掩盖已堵死）、env 三态 + 公司轨只读零回归、31/31 全绿 + tsc clean + 工作树干净",
+  "completedAt": "2026-08-13T19:30:00+00:00",
   "nodes": [
     {
       "nodeId": "r2-0",
@@ -52,22 +54,22 @@
       "routedInput": "r2-2:checkpoint",
       "brief": "briefs/r2-3-20260813190403.md",
       "checkpoint": {
-        "progress": "判定 FAIL（阻塞 1 项）。四验证面：①源码态 sibling 发现 FAIL——本机无 env 实测返回 undefined，根因=探测深度少一层（src/project 两层级上跳只到 TriLC 根，落点 TriLC/TriMetaverse 不存在；设计意图 TriLC-root/../TriMetaverse 需三层级）；单测 expectedSiblingPath 同深度错误致条件断言走 else 分支掩盖缺陷（命中分支从未真实执行）。修复=实现与测试期望同步改三层级上跳，一行改动。②模拟安装态三态 PASS（env 显式/幽灵路径/未配置 fallback 均活体实测正确）。③公司轨只读 PASS（ensureProjectDirs 仅建项目轨两目录，单测无条件断言 + 活体复跑幽灵公司根零创建）。④隔离语义不回归 PASS（enforceProjectIsolation 零代码改动仅头注释提及；既有 24 router 测试 0 行 diff 全过）。门禁：新增 7 用例 7/7（含掩盖说明）、tsc clean、全量 285/286（1 败为 TUI 既有环境失败 ERR_MODULE_NOT_FOUND ink-testing-library，与本改动无关）。纪律：只读、W34 零触碰、真迁移零触发。",
+        "progress": "判定 FAIL（阻塞 1 项）。四验证面：①源码态 sibling 发现 FAIL——本机无 env 实测返回 undefined，根因=探测深度少一层（src/project 两层级上跳只到 TriLC 根，落点 TriLC/TriMetaverse 不存在；设计意图 TriLC-root/../TriMetaverse 需三层级）；单测 expectedSiblingPath 同深度错误致条件断言走 else 分支掩盖缺陷（命中分支从未真实执行）。修复=实现与测试期望同步改三层级上跳，一行改动。②模拟安装态三态 PASS（env 显式/幽灵路径/未配置 fallback 均活体实测正确）。③公司轨只读 PASS（ensureProjectDirs 仅建项目轨两目录，单测无条件断言 + 活体复跑幽灵公司根零创建）。④隔离语义不回归 PASS（enforceProjectIsolation 零代码改动仅头注释提及；既有 24 router 测试 0 行 diff 全过）。门禁：新增 7 用例 7/7（含掩盖说明）、tsc clean、全量 285/286（1 败为 TUI 既有环境失败 ERR_MODULE_NOT_FOUND ink-testing-library，与本改动无关）。纪律：只读、W34 零触碰、真迁移零触发。 重验（c8aaae0）PASS：本机 no-env 命中 D:/Code/ai/TriMetaverse/docs/workflow/operating-records；变异测试实证回归守卫（旧实现+新期望 3 用例报红）；三态+ensureProjectDirs 无回归；31/31 全绿 + tsc clean。",
         "artifactCommit": "",
-        "resumePoint": "打回 r2-2 owner：weekly-plane-root.ts 深度改三层级上跳 + weekly-plane-root.test.ts expectedSiblingPath 同步修正（可选加固：深度推导收敛单一 helper）→ 小柯 1 分钟重验（本机 no-env 应返回 D:/Code/ai/TriMetaverse/docs/workflow/operating-records，命中分支真实执行）→ r2-4 收口"
+        "resumePoint": "r2-4 收口（可走）；附带登记：r2-1 brief §三.1 代码草样两层级笔误（设计文档同源），收口时顺手改或登记不阻塞"
       }
     },
     {
       "nodeId": "r2-4",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口：判定 + 清单登记 + push 三仓同步 + 最终报告（收口门禁 v2）；登记生产级开发期阶段一进展",
       "routedInput": "r2-3:checkpoint",
-      "brief": "",
+      "brief": "briefs/r2-4-20260813192000.md",
       "checkpoint": {
-        "progress": "",
+        "progress": "收口判定 APPROVE（FAIL → 修复 → 重验 PASS 全链）。r2-3 FAIL 阻塞项处置：sibling 探测三层上跳（c8aaae0）+ 测试期望独立推导（同源复制教训入注释）+ 强制命中断言（workspace 存在时必走命中分支）；小柯变异测试实证守卫真实——旧实现 + 新期望 3 发现类用例必红，else 掩盖已堵死。门禁：31/31 全绿（7 新 + 24 既有零改动）、tsc clean、TriLC 工作树干净。非阻塞登记：r2-1 brief §三.1 代码草样仍两层级（设计文档同源笔误，小狄裁量改或留）；TriCade 打包侧 TRILC_WEEKLY_PLANE_ROOT 注入跟进项已在 OP nextActions（TRICADE-ENV-20260817-001）。生产级开发期阶段一进展：第二树收官——TriCade 周平面视图契约代码级打通（公司轨只读两轨并存 + 三态 + 零回归）；阶段一挂靠项 C4/C5/C7 仍待消化。收口门禁 v2：判定 + 清单登记 + 最终报告完成，push 三仓由编排层统一执行（OP/tree 落盘未提交）。",
         "artifactCommit": "",
-        "resumePoint": ""
+        "resumePoint": "第二树收官。挂起：TriCade 打包侧 env 注入（编排层路由）、设计文档草样笔误（小狄）、C4/C5/C7 后续树"
       }
     }
   ]
