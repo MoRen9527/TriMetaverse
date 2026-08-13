@@ -386,8 +386,23 @@ function Invoke-Healthz {
 
     $portLines = netstat -ano | Select-String ":$ServicePort\s+.*LISTENING"
     if (-not $portLines) {
-        Write-Warn "端口 $ServicePort 未监听（服务可能未启动）"
-        return
+        # 装后自检（①诊断修复第 3 条）：schtasks/RegRun 形态 daemon 安装后
+        # 不自动启动（ONLOGON 登录触发）——此处主动拉起再查，自检覆盖
+        # 非服务形态。
+        Write-Warn "端口 $ServicePort 未监听——尝试拉起 daemon（schtasks/RegRun 形态）..."
+        $trilcCmdForHealth = "$TriLCDir\trilc.cmd"
+        if (Test-Path $trilcCmdForHealth) {
+            if ($WhatIf) { Write-Info "(WhatIf) & $trilcCmdForHealth start --port $ServicePort" }
+            else {
+                & $trilcCmdForHealth start --port $ServicePort 2>&1 | ForEach-Object { Write-Info $_ }
+                Start-Sleep -Seconds 5
+            }
+        }
+        $portLines = netstat -ano | Select-String ":$ServicePort\s+.*LISTENING"
+        if (-not $portLines) {
+            Write-Warn "端口 $ServicePort 仍未监听（拉起失败，检查 daemon.log）"
+            return
+        }
     }
 
     $listenAddr = ($portLines[0].Line -split "\s+")[1]
