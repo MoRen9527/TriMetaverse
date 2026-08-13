@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (ENV-INJECT 段 1 PASS 登记 + O-E1/O-E2 观察路由)",
-        "version": "1.11.0",
-        "lastUpdated": "2026-08-13T20:15:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (INCIDENT-20260813-001 登记 + 第三树 prod-grade-3 建树，r3-1 派发)",
+        "version": "1.12.0",
+        "lastUpdated": "2026-08-13T20:20:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -36,7 +36,17 @@
         "TriMC"
     ],
     "updatedAt": "2026-08-13T10:26:24.742649+00:00",
-    "activeTrees": [],
+    "activeTrees": [
+        {
+            "treeId": "prod-grade-3-model-default-fix",
+            "title": "默认模型名硬编码错配紧急修复 — tmv-deepseek-v4-pro（第三树·轻量）",
+            "nodes_total": 4,
+            "nodes_done": 1,
+            "status": "active",
+            "path": "trees/prod-grade-3-model-default-fix/tree-op.json",
+            "related": "CEO 实测缺陷：deepseek-v4-pro 硬编码 10 处与 tmv-* 注册表错配 · 最高优先"
+        }
+    ],
     "doneTreesFromPreviousWeek": [
         {
             "treeId": "w33-weekly-migration-ade",
@@ -203,6 +213,7 @@
         "r2-3 独立验证 FAIL（阻塞 1 项，小柯实测）：源码态 sibling 发现深度缺陷——weekly-plane-root.ts:39 探测深度少一层（模块在 src/project/，'..','..' 只到 TriLC 根，落点 TriLC/TriMetaverse 不存在，实测 no-env 返回 undefined）；单测掩盖——expectedSiblingPath 用同一错误深度，本机 existsSync=false 走 else 分支，命中分支从未真实执行。修复：实现与测试期望同步改三层级（一行），修后命中分支成真实回归守卫。②③④ 验证面全 PASS（安装态三态/公司轨只读/隔离零回归）。打回小全修复 + 小柯 1 分钟重验后走 r2-4 收口",
         "r2 树收口后补强（bb72746，测试-only）：测试期望改硬编码绝对路径事实锚（D:/Code/ai/TriMetaverse/docs/workflow/operating-records，注释声明独立事实不得从实现推导）+ 强制命中断言（workspace 存在时 no-env 必须精确命中，else 仅保留非 workspace 环境如 CI/服务器）；实现侧单一推导点不变；本机 31 全绿 + tsc clean。观察：事实锚为机器特定路径——workspace 迁移时断言条件自动落入 else 不报错但守卫静默失效，属接受的设计取舍，已转小柯快核",
         "bb72746 快核通过（小柯）：①事实锚与实现零共享表达式（硬编码 vs hop-count 推导）不同源确认②原位瞬态变异实证强制命中断言真实（真仓换旧实现→MUST hit/env 空串 fallthrough 报红→还原 7/7 绿）③实现侧 0 行改动确认（git diff c8aaae0 bb72746）31/31 + tsc clean。小柯方法论勘误（自报）：上轮 scratch 变异测试位置恰使旧实现两跳落在真工作区根而意外命中，结论成立但证据机制需更正——已改为原位瞬态变异并记入其验证方法（位置依赖函数的变异必须原位做）。可移植性建议（非阻塞）：else 分支放宽为「undefined 或已存在的发现目录」防非标准根布局 workspace 误红，strict 命中仅保留事实锚存在主机——转小全后续测试触时顺手改——else 放宽已落地 702254a（assertRelaxedFallback：undefined 或已存在发现目录均合法，strict 命中仅事实锚主机），31/31 + tsc clean，本观察项闭环",
-        "O-E1/O-E2（ENV-INJECT 段 1 验证观察，非阻塞）：O-E1 install.bat 模板工作区候选仅 2 个（D:/C:），MSI 脚本 3 个（含 USERPROFILE\\Code\u0007i）——ZIP 便携形态用户目录布局会 SKIP，建议对齐；O-E2 幽灵路径双警告语义冗余（纯文案）。均转小全后续顺手对齐"
+        "O-E1/O-E2（ENV-INJECT 段 1 验证观察，非阻塞）：O-E1 install.bat 模板工作区候选仅 2 个（D:/C:），MSI 脚本 3 个（含 USERPROFILE\\Code\u0007i）——ZIP 便携形态用户目录布局会 SKIP，建议对齐；O-E2 幽灵路径双警告语义冗余（纯文案）。均转小全后续顺手对齐",
+        "INCIDENT-20260813-001（CEO 实测暴露真生产缺陷，修复树 prod-grade-3 承载）：TriCade UI 聊天报 Model \\\"deepseek-v4-pro\\\" not in registry. Available: tmv-*，trilc chat 无回复——根因=默认模型名硬编码 'deepseek-v4-pro'（TriLC 6 + TriPilot 4 共 10 处）与 tmv-* 注册表错配（C12/C13 改造遗留）。教训：注册表变更必须同步默认值硬编码——收口时列入能力清单回归检查项"
     ]
 }

@@ -1,0 +1,61 @@
+{
+  "treeId": "prod-grade-3-model-default-fix",
+  "title": "默认模型名硬编码错配紧急修复 — deepseek-v4-pro → tmv-deepseek-v4-pro（生产级开发期第三树·轻量）",
+  "source": "编排层紧急派单：CEO 实测 TriCade UI 聊天报 Model \"deepseek-v4-pro\" not in registry（tmv-* 注册表错配，C12/C13 改造遗留，10 处硬编码：TriLC 6 + TriPilot 4）",
+  "week": "2026-W34",
+  "status": "active",
+  "nodes": [
+    {
+      "nodeId": "r3-0",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "建树：规划范围与节点链（轻量树，时间敏感——CEO 等装修正版）",
+      "routedInput": "",
+      "brief": "briefs/r3-0-20260813202000.md",
+      "checkpoint": {
+        "progress": "范围定案（编排层根因定位 + CEO 实测缺陷）：默认模型名硬编码 'deepseek-v4-pro'（10 处：TriLC 6 + TriPilot 4）与 tmv-* 注册表错配。护栏：只改默认值常量，不动路由逻辑。节点链：r3-1 小全修复（统一 tmv-deepseek-v4-pro + 测试期望同步 + trilc chat 静默失败第二问题排查——chat 错误显示路径）→ r3-2 小柯独立验证（模型名全链一致 + chat 冒烟）→ r3-3 小贾收口（INCIDENT 登记 + 教训入能力清单 + 版本定案）。版本预判：v0.4.6-r16（patch bump，同版本门禁 exit 2 故不能沿用 0.4.5）。",
+        "artifactCommit": "",
+        "resumePoint": "树已建，r3-1 开工（小全修复）"
+      }
+    },
+    {
+      "nodeId": "r3-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "修复：默认模型名统一 tmv-deepseek-v4-pro（TriLC 6 处 + TriPilot 4 处 + 相关测试期望同步）；顺带排查 trilc chat 静默失败是否有第二问题（chat 错误显示路径）",
+      "routedInput": "r3-0:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r3-2",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "独立验证（验收要求升级）：模型名全链一致（10 处 + 测试期望）+ chat 冒烟 + **真实模型调用成功**（非 healthz 级——实测一次完整对话回复）+ 装后 TriCade 聊天可用性（CEO 最终验收口径：问小贾能正常回复 + 能答出 W34 周平面）",
+      "routedInput": "r3-1:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r3-3",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口：INCIDENT 登记 + 教训入能力清单回归检查项 + 版本定案 v0.4.6-r16 重建",
+      "routedInput": "r3-2:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    }
+  ]
+}
