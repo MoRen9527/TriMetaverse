@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (r4-1 实现完成核验：三仓 commit 实证 + 代码抽查一致，转 r4-2 小柯验证)",
-        "version": "1.44.0",
-        "lastUpdated": "2026-08-13T19:28:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (r4-2 小柯验证 PASS 六口径全过，转 r4-3 小狄终审)",
+        "version": "1.45.0",
+        "lastUpdated": "2026-08-13T19:40:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -41,10 +41,10 @@
             "treeId": "prod-grade-4-lscwd-fix",
             "title": "ls/cwd 工具上下文缺陷修复 — 五读工具 ctx.cwd 统一 + 周平面提示注入（生产级开发期第四树）",
             "nodes_total": 5,
-            "nodes_done": 2,
+            "nodes_done": 3,
             "status": "active",
             "path": "trees/prod-grade-4-lscwd-fix/tree-op.json",
-            "related": "BUG-20260814-001 → LS-CWD-DIAG-20260814-001 → LS-CWD-FIX-20260814-001 小狄定案 A+C；周日迁移验收前不合并；r4-1 完成（TriLC a6df674 + TriMC 7e15ecf，dev 未合并），r4-2 小柯验证中"
+            "related": "BUG-20260814-001 → LS-CWD-DIAG-20260814-001 → LS-CWD-FIX-20260814-001 小狄定案 A+C；周日迁移验收前不合并；r4-1 完成（TriLC a6df674 + TriMC 7e15ecf，dev 未合并）；r4-2 小柯 PASS 六口径全过（含独立交叉验证：修复前父 commit 同传 ctx 全部忽略——与根因吻合反证有效）；r4-3 小狄终审中。观察项：TriLC components.test.ts 既有失败建议另开低优先树；executeTool 第三参为将来预留"
         }
     ],
     "doneTreesFromPreviousWeek": [
