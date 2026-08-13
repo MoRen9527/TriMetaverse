@@ -1,0 +1,63 @@
+{
+  "treeId": "r15-ops-day-ready",
+  "title": "M3-R3 运营日就绪最后工程动作：③b 联通面配置（TRIMC_BASE_URL）+ ④ TriMC 生产形态改造（dist 替代 dev 直跑）",
+  "source": "M3-R3 (CEO 授权 ③b+④，2026-08-13)",
+  "week": "2026-W33",
+  "status": "active",
+  "verdict": "",
+  "completedAt": "",
+  "nodes": [
+    {
+      "nodeId": "r15-0",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "建树：规划 r15 范围与节点链",
+      "routedInput": "",
+      "brief": "briefs/r15-0-20260813233000.md",
+      "checkpoint": {
+        "progress": "范围定案（CEO 授权）：③b TriLC TRIMC_BASE_URL=http://47.245.122.61:8710 团队配置（用户级环境变量 + daemon 重启 + 验证，写轮次记录；预期 degraded——防火墙未放行前连不上 TriMC，属 2.5 已验预期行为，③a 放行后自动恢复 connected，即双向心跳真实演练）+ ④ TriMC 生产形态改造（dist 构建替代 dev tsx 直跑：本地 dist 构建 + 部署物 + systemd unit 稿 + 尽力部署；可逆——unit 改回即回滚；sudo 受限则部署/重启记 blocked）。节点链：r15-1 小全执行 → r15-2 小柯验证 → r15-3 小贾收口。",
+        "artifactCommit": "",
+        "resumePoint": "树已建，r15-1 开工"
+      }
+    },
+    {
+      "nodeId": "r15-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "执行 ③b + ④",
+      "routedInput": "r15-0:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r15-2",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "独立验证 ③b + ④",
+      "routedInput": "r15-1:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r15-3",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口判定 → M3-R3 登记",
+      "routedInput": "r15-2:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    }
+  ]
+}
