@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r1-2 收口：P4 checklist 6/6 + 真 job nextRunAt 周日 23:00 精确 + 触发链路实测；r1-3 待派)",
-    "version": "2.10.0",
-    "lastUpdated": "2026-08-14T07:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (CTO Python 兼容性正式认定 APPROVE + 3.11 备用裁决登记)",
+    "version": "2.11.0",
+    "lastUpdated": "2026-08-14T08:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -215,7 +215,7 @@
     "BUG-20260805-003: MSI 打包缺 yoga-layout 别名 — done（2026-08-13 小全修复：TriLC package.json 加 npm 别名 89ad689 → components-smoke 30/30 转绿。小柯独立验证 PASS：smoke 独立重跑 30/30；残留 components.test.ts 以 ERR_MODULE_NOT_FOUND ink-testing-library 失败（1 fail 无挂起，D10 表述修正——r7 基线已改善，挂点从 yoga 变为 ink 缺依赖），归 CARRY-001 TUI 链）",
     "版本 revision 未自动递增（当前手动默认1）— 需改自动计数",
     "INCIDENT-20260814-001: r1-2 小全 worktree 事故（已恢复，独立复核 PASS）——git worktree remove --force 穿透 npm file: 依赖 junction，误删 TriCompany/packages/agent-core 工作区 + TriModel 全目录；agent-core 已 git restore 恢复、TriModel 已从 sg-server 克隆恢复（HEAD a445b0e 与 /srv/git 及舰队克隆一致）；小贾独立复核：TriCompany status 无 agent-core 删除项且文件齐全、TriModel HEAD/status 干净；残留风险=TriModel 被删前未 push 本地提交不可验证（服务器 HEAD 一致表明大概率没有）；预防=baseline 验证改只读方式、禁 worktree+npm install 组合，junction 与 git worktree 交互危险列入 Windows 纪律（关联 W33 周记 Windows 痛点篇）",
-    "r1-2 P4 环境风险 2 项（A' 已落地，579162f）：① Node v18.20.8 < engines \">=20.0.0\"——engines 下调 \">=18.20.0\" 已 commit；新代码 Node 18 API 面无禁项确认（禁 import.meta.dirname/fs.glob/node:sqlite/toSorted/process.loadEnvFile）② Python 3.6.8 实测不兼容 → A' 落地：dnf module install python38（3.8.17）已装，--help + 测试根/真实根 dry 链门禁全部通过，模板解释器固定 python3.8；B 回移否决、C docker 备选未启用；python3.11 去留待小狄后续定",
+    "r1-2 P4 环境风险 2 项（CTO 正式认定 APPROVE，A' 落地态）：① Node v18.20.8 < engines \">=20.0.0\"——engines 下调 \">=18.20.0\" 已 commit；新代码 Node 18 API 面无禁项确认（禁 import.meta.dirname/fs.glob/node:sqlite/toSorted/process.loadEnvFile）；restart 三查：journalctl 无错 + healthz cron 块（已验）+ GET /internal/v1/cron/status 200（折入 r1-3）② Python 3.6.8 实测不兼容 → A' 落地 + 正式认定：python38（3.8.17）主用（模板显式 python3.8、dry-run 门禁全过），三项影响面核查带证据（3.6 默认未动仅 squid-allowlist-sync 消费、fleet 降权两解释器可执行、五段链纯 stdlib）；python3.11 保留为备用解释器不卸载；回滚一级=模板秒切 3.11、二级=dnf remove 回 3.6+回移（B 兜底）；C docker 备选未启用",
     "r1-2 附加风险（小狄标注）：agent-core scheduler 从未在服务器进程实例化——P4 部署 smoke 为首次实战，暴露问题按共享 core 缺口通道升级，不就地改共享包",
     "TIER-ASSERT-20260814-001（CTO 小狄审核发现，非阻塞）：全量测试 488/491 的 2 条 pipeline-integration tier 断言失败（期望 requires tier \"main\"，agent-core canUseTool 现产 \"heartbeat\"）——非 r1-2 回归，漂移归因 r13 合同收敛流（agent-core 9cd325b）；修复通道：TriMC 仓小改单票，语义确认小狄 owner，登记 nextActions",
     "OBS-20260814-002（CTO 小狄观察项，P4 时确认）：① runbook 服务器 git pull 执行身份未注明（root pull 后需 chown fleet 或 runuser -u fleet）② command-handler HOME=/home/fleet 覆盖需确认家目录存在——已路由小全 P4 执行时落实"
