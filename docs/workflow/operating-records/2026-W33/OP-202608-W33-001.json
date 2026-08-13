@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (第三视角闭合 + 周日触发前置条件登记：fleet 克隆与裸仓同步三连)",
-    "version": "2.17.0",
-    "lastUpdated": "2026-08-14T14:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (D1 精确 diff 过目批准：行级 bump 单契约，✅ 清除成立，待小狄 commit + 小柯重验)",
+    "version": "2.18.0",
+    "lastUpdated": "2026-08-14T15:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -207,7 +207,7 @@
     },
     {
       "id": "D1-FIX-20260814-001",
-      "action": "D1 修先行（周六 08-15 中午截止）：a) 代码修复——CTO 小狄执行 TriCompany weekly_plane bump 逐行处理（修复前给小贾一版精确 diff），小柯重验（测试根 dry 链 + 真实数据本地测）b) 数据校正——W33 §1 行计数对齐 §4 实效值（编排层写权，纳入周日触发前 checklist）。未完成则接受一期（W34→W35 生效），周一回流人工补标口径不变",
+      "action": "D1 修先行（周六 08-15 中午截止）：a) 代码修复——CTO 小狄执行 TriCompany weekly_plane bump 逐行处理（修复前给小贾一版精确 diff）；diff 已过目批准（2026-08-14）：行级 bump 仅 | 开头 CARRY-\\d+ 表行、计数格单契约（✅ 清除成立——闭合信息在末列状态文本，真实文件已核）、RISK 不 bump、Python 3.8 兼容、真实数据 12 行零误伤 + 8w 提取 5/5；小柯重验（测试根 dry 链 + 真实数据本地测）b) 数据校正——W33 §1 行计数对齐 §4 实效值（编排层写权，纳入周日触发前 checklist）。未完成则接受一期（W34→W35 生效），周一回流人工补标口径不变",
       "ownerRole": "CTO",
       "status": "open"
     }
