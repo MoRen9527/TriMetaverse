@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (设计文档落点理由留痕：docs/execution/ 为 TriMetaverse 仓设计真源惯例；树 A 技术输入由小狄承诺待建树派单)",
-        "version": "1.41.0",
-        "lastUpdated": "2026-08-13T19:00:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (ls/cwd 诊断收口：小全三层根因实证，修复方案 A+C 路由小狄审批)",
+        "version": "1.42.0",
+        "lastUpdated": "2026-08-13T19:08:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -187,6 +187,14 @@
             "id": "LS-CWD-DIAG-20260814-001",
             "action": "ls/cwd 上下文解析缺陷诊断（派小全）：CEO 重测中发现 agent 的 ls 工具调用跑到了 C:\\Users\\jedih\\Documents（agent cwd 上下文解析错误，应指向工作区/周平面）——诊断为什么 agent 工具调用默认路径落到 Documents；输出=根因 + 修复方案 + 影响面（涉及哪些工具/哪些调用形态）；修复范围定案后另建树，本单只做诊断。关联：TriLC agent loop 工具执行 cwd 传递链",
             "ownerRole": "FullStackDeveloper",
+            "status": "done",
+            "doneAt": "2026-08-13T19:05:00+00:00",
+            "deliverable": "诊断报告（只诊断未改码，小贾抽查实证：TriLC 5 读工具 process.cwd() 与 Write/Edit ctx?.cwd 分裂、TriMC tools.ts:231/286 同款、agent-core loop.ts:584 REQ-014b 设计注释在案）。三层根因：①主根因=工具 cwd 缺陷——LS/Read/Glob/Grep/ShellExec 用 resolve(process.cwd()) 忽略 ctx.cwd，与 Write/Edit 读写路径分裂；安装态 daemon 启动链（schtasks WorkingDirectory 空→daemon.cmd cd C:\\Users\\jedih→cli.ts spawn 不带 cwd）致 process.cwd()=C:\\Users\\jedih（sessions.db 实证）② Documents 来源=模型显式传参非 fallback——ls '.' 落在 C:\\Users\\jedih 后模型钻进 Documents 子目录打转③上下文缺失放大——TriPilot 传 systemPrompt 覆盖默认提示，周平面根提示被跳过，模型盲探。影响面：TriLC 5 读工具 + TriMC 同款 2 处；开发态路径一致故从未暴露。修复方向：A（推荐）工具层统一 ctx?.cwd ?? process.cwd() 对齐 Write/Edit；B 仅治单机不建议；C tasks/submit 无条件追加周平面根提示。建议 A 为主 + C 为辅，代码改动需 CTO 审批后动工——已路由 LS-CWD-FIX-20260814-001"
+        },
+        {
+            "id": "LS-CWD-FIX-20260814-001",
+            "action": "ls/cwd 修复方案审批与定案（派小狄）：小全诊断建议 A（工具层统一 ctx?.cwd ?? process.cwd()，TriLC 5 读工具 + TriMC 2 处同款）为主 + C（tasks/submit 无条件追加周平面根提示，独立于 systemPrompt 覆盖）为辅；B（daemon 启动目录固定）单独用否决已记。审批输出=定案修复范围与顺序，定案后另建修复树（实现小全 + 验证小柯 + 收口小贾），不在本单",
+            "ownerRole": "CTO",
             "status": "open"
         },
         {
@@ -258,7 +266,7 @@
         "r18 装后状态 + r19 两修登记：三服务全在线（8711 version 0.4.8 + 3333 + 8008），CEO 迁移验收用手动拉起态进行。新 bug（r18 日志修复回归）：① daemon.log 双重定向 EBUSY——launcher >> 与 daemon stdio append fd 同文件两 open 冲突（Windows 文件锁，schtasks 实例自锁起不来），修法=两层留一层（建议 launcher 去重定向、daemon 层负责）② daemon install 再生 cmd 丢 TRIMODEL_API_TOKEN set 行（模板未带）→ key fetch 401，修法=daemon 层环境继承兜底（推荐）。两修进 r19",
         "r19 复验 PASS（小柯三口径全过）：EBUSY 单层化双形态实测（schtasks + 手动均无 EBUSY + 日志落盘 fd 层）+ token 兜底（清环境加载成功 + 预设值 PRESERVED 不覆盖）+ 全量 285/286 基线一致。测试操作披露（已登记）：任务形态实测短暂共享真实数据目录——现役 8711 全程零影响，副作用=真实 daemon.log 追加几行测试日志（无害）+ pidfile 被覆盖为死 pid（瞬态，端口健康判定自愈 + 重启周期复位）；后续测试一律显式 TRILC_DATA_DIR 隔离。r19 全绿放行成立",
         "r18 运行态诊断处置（CEO 重测暴露，编排层诊断完成，处置=r19 装后解决）：CEO 迁移验收重测中发现 TriLC 「崩」——TriPilot 绿灯红、连接中断表现；诊断=daemon 实际存活（非崩溃），根因链=r18 的 daemon install 再生 cmd 丢 TRIMODEL_API_TOKEN set 行（模板未带）→ key fetch 401 → 模型主路径失败 → 上游表现为连接中断。r19 已修（daemon 层环境继承兜底），CEO 装 v0.4.9-r19 即解决；装后复验待 CEO 迁移验收链确认。教训追加：daemon 再生 cmd 模板必须与安装态 env 注入面同步回归（挂 ENV-INJECT 同族检查项）",
-        "BUG-20260814-001: agent ls 工具 cwd 上下文解析错误——工具调用默认路径跑到 C:\\Users\\jedih\\Documents（应指向工作区/周平面）。CEO 重测中发现；已登记派小全诊断（LS-CWD-DIAG-20260814-001），根因/修复方案/影响面待诊断输出",
+        "BUG-20260814-001: agent ls 工具 cwd 上下文解析错误——诊断完成（小全，2026-08-14，三层根因实证）：①主根因=TriLC 5 读工具（LS/Read/Glob/Grep/ShellExec）用 process.cwd() 忽略 ctx.cwd，与 Write/Edit（ctx?.cwd）读写路径分裂，违反 agent-core REQ-014b 设计；安装态 daemon 启动链致 process.cwd()=C:\\Users\\jedih ② Documents 来自模型显式传参（ls '.' 后钻子目录打转），非 fallback ③ TriPilot 传 systemPrompt 覆盖默认提示，周平面根提示被跳过放大盲探。影响面：TriLC 5 读工具 + TriMC tools.ts 2 处同款；开发态路径一致故从未暴露。修复方向 A 为主 + C 为辅（B 单独用否决），审批路由小狄（LS-CWD-FIX-20260814-001），定案后建修复树",
         "ARCH-20260814-001（CEO 架构指令，设计定案 2026-08-14）：研发仓与 TriCade 工作区改为同一仓库的不同 git worktree（与 TriMC 仓版本协同，双方改动互不影响，标准流程合入同一 dev）。小狄设计交付 docs/execution/worktree-architecture-design.md（5edcbecd）：一仓三面（研发主 checkout / 本地生产 worktree C:\\ProgramData\\TriCade\\workspace\\TriMetaverse / 服务器舰队克隆）+ prod/windows-local ff-only 分支 + 例外写走 PR（生产面禁写 operating-records，周平面写权单主体不变）+ TRILC_WEEKLY_PLANE_ROOT 安装脚本候选补档（生产面候选置顶 sibling 之前，worktree 未建立时 Test-Path 不命中自动落回旧行为，迁移前逐字节不变）+ fleet 对称性纪律映射（写方向单主体、git 身份单一）。护栏：禁 worktree+npm install（INCIDENT-20260814-001）、08-16 23:00 迁移验收不阻塞、本单零代码零脚本变更。实施树另建待编排层排期：树 A 迁移实施（worktree 建立+ACL→脚本候选补档→重注入+双形态验收→runbook）、树 B 可选（TriMC 本地 worktree 同构）"
     ]
 }
