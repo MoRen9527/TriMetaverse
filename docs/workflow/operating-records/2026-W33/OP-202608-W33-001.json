@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (CTO Python 兼容性正式认定 APPROVE + 3.11 备用裁决登记)",
-    "version": "2.11.0",
-    "lastUpdated": "2026-08-14T08:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (TIER-ASSERT 闭环 done + OBS-20260814-002 闭环 + 触发口径同步确认)",
+    "version": "2.12.0",
+    "lastUpdated": "2026-08-14T09:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -190,9 +190,9 @@
     },
     {
       "id": "TIER-ASSERT-20260814-001",
-      "action": "pipeline-integration 2 条 tier 断言漂移（期望 requires tier \"main\"，agent-core canUseTool 现产 \"heartbeat\"）——非 r1-2 回归，归因 r13 合同收敛流（agent-core 9cd325b）。小票：测试串对齐 + write_file 语义（main-only → heartbeat+）确认；修复通道 TriMC 仓小改单票；语义确认 owner = CTO 小狄。非阻塞，r1 树收口后处理",
+      "action": "pipeline-integration 2 条 tier 断言漂移（期望 requires tier \"main\"，agent-core canUseTool 现产 \"heartbeat\"）——非 r1-2 回归，归因 r13 合同收敛流（agent-core 9cd325b）。小票：测试串对齐 + write_file 语义（main-only → heartbeat+）确认；修复通道 TriMC 仓小改单票；语义确认 owner = CTO 小狄。非阻塞，r1 树收口后处理 — done（小狄语义确认：刻意变更非缺陷，TIER_LEVEL main=2=heartbeat，写工具最低 tier main→heartbeat 对应 REQ-20260805-006，shell 仍 main-only；修复 b7eeb50 纯测试 1 文件 5 行，全量 490/491 零失败；单票审核折入 r1-3 小柯顺手确认）",
       "ownerRole": "CTO",
-      "status": "open"
+      "status": "done"
     }
   ],
   "carry_over_from_w31": [
@@ -218,7 +218,7 @@
     "r1-2 P4 环境风险 2 项（CTO 正式认定 APPROVE，A' 落地态）：① Node v18.20.8 < engines \">=20.0.0\"——engines 下调 \">=18.20.0\" 已 commit；新代码 Node 18 API 面无禁项确认（禁 import.meta.dirname/fs.glob/node:sqlite/toSorted/process.loadEnvFile）；restart 三查：journalctl 无错 + healthz cron 块（已验）+ GET /internal/v1/cron/status 200（折入 r1-3）② Python 3.6.8 实测不兼容 → A' 落地 + 正式认定：python38（3.8.17）主用（模板显式 python3.8、dry-run 门禁全过），三项影响面核查带证据（3.6 默认未动仅 squid-allowlist-sync 消费、fleet 降权两解释器可执行、五段链纯 stdlib）；python3.11 保留为备用解释器不卸载；回滚一级=模板秒切 3.11、二级=dnf remove 回 3.6+回移（B 兜底）；C docker 备选未启用",
     "r1-2 附加风险（小狄标注）：agent-core scheduler 从未在服务器进程实例化——P4 部署 smoke 为首次实战，暴露问题按共享 core 缺口通道升级，不就地改共享包",
     "TIER-ASSERT-20260814-001（CTO 小狄审核发现，非阻塞）：全量测试 488/491 的 2 条 pipeline-integration tier 断言失败（期望 requires tier \"main\"，agent-core canUseTool 现产 \"heartbeat\"）——非 r1-2 回归，漂移归因 r13 合同收敛流（agent-core 9cd325b）；修复通道：TriMC 仓小改单票，语义确认小狄 owner，登记 nextActions",
-    "OBS-20260814-002（CTO 小狄观察项，P4 时确认）：① runbook 服务器 git pull 执行身份未注明（root pull 后需 chown fleet 或 runuser -u fleet）② command-handler HOME=/home/fleet 覆盖需确认家目录存在——已路由小全 P4 执行时落实"
+    "OBS-20260814-002（CTO 小狄观察项，已闭环）：① runbook §2 已补 pull 执行身份（root pull 或 runuser -u fleet）；执行中发现真问题——root pull 在 /srv/fleet/TriMetaverse/.git 残留 838 个 root 属主文件致 fleet git 段 index 不可写，已 chown -R fleet:fleet .git + 实测 ADD-OK/NOOP-OK，修正步骤入 runbook（ebe378a）② /home/fleet 实测存在（fleet:fleet 700），HOME 覆盖有效"
   ],
   "plans": [
     {
