@@ -47,14 +47,14 @@
     {
       "nodeId": "r2-3",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证：源码态 + 模拟安装态两态（公司周平面可见 + 隔离语义不回归 + 向后兼容）",
       "routedInput": "r2-2:checkpoint",
-      "brief": "",
+      "brief": "briefs/r2-3-20260813190403.md",
       "checkpoint": {
-        "progress": "",
+        "progress": "判定 FAIL（阻塞 1 项）。四验证面：①源码态 sibling 发现 FAIL——本机无 env 实测返回 undefined，根因=探测深度少一层（src/project 两层级上跳只到 TriLC 根，落点 TriLC/TriMetaverse 不存在；设计意图 TriLC-root/../TriMetaverse 需三层级）；单测 expectedSiblingPath 同深度错误致条件断言走 else 分支掩盖缺陷（命中分支从未真实执行）。修复=实现与测试期望同步改三层级上跳，一行改动。②模拟安装态三态 PASS（env 显式/幽灵路径/未配置 fallback 均活体实测正确）。③公司轨只读 PASS（ensureProjectDirs 仅建项目轨两目录，单测无条件断言 + 活体复跑幽灵公司根零创建）。④隔离语义不回归 PASS（enforceProjectIsolation 零代码改动仅头注释提及；既有 24 router 测试 0 行 diff 全过）。门禁：新增 7 用例 7/7（含掩盖说明）、tsc clean、全量 285/286（1 败为 TUI 既有环境失败 ERR_MODULE_NOT_FOUND ink-testing-library，与本改动无关）。纪律：只读、W34 零触碰、真迁移零触发。",
         "artifactCommit": "",
-        "resumePoint": ""
+        "resumePoint": "打回 r2-2 owner：weekly-plane-root.ts 深度改三层级上跳 + weekly-plane-root.test.ts expectedSiblingPath 同步修正（可选加固：深度推导收敛单一 helper）→ 小柯 1 分钟重验（本机 no-env 应返回 D:/Code/ai/TriMetaverse/docs/workflow/operating-records，命中分支真实执行）→ r2-4 收口"
       }
     },
     {
