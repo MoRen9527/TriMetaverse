@@ -23,14 +23,14 @@
     {
       "nodeId": "r14-1",
       "agent": "CTO",
-      "status": "pending",
+      "status": "done",
       "action": "双向心跳契约规格 + 服务器面就绪清单",
       "routedInput": "r14-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r14-1-20260813224000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "契约规格：TriCompany/docs/engineering/heartbeat-dualrun-contract.md（commit bf36e4c）。实测发现核心盲区：TriMC 侧 heartbeat 端点为回显式（不登记状态），markNodeUnknown 零调用方——双向契约当前单向（只有 TriLC 知道自己降级）。契约参数：TriLC 现有保留（10s/3败/2成/5min退避/60s慢心跳）；TriMC 新增对称（stale 30s=3×interval、degraded 节点宽松 180s 防慢心跳误判、2 次回归 known）。服务器面实测：ssh 可达、trimc.service active（M1 dev tsx 直跑 /srv/fleet/TriMC）、8710 监听、服务器落后本地 3 commits、/srv/fleet 六仓镜像齐。硬卡五项：push sg-server、服务器 pull+重启、TRIMC_BASE_URL+防火墙 8710、M3 生产形态改造（记里程碑动作）、UAC 提权。",
+        "artifactCommit": "TriCompany bf36e4c（心跳契约规格，push 主会话补）",
+        "resumePoint": "r14-2 小全落地指引（规格 §四）：① TriMC 侧接线——mirror/store.ts 新增节点心跳表（nodeHeartbeats + recordNodeHeartbeat + markNodeRecovered 可选）；server/app.ts heartbeat 端点调 recordNodeHeartbeat（响应结构不变向后兼容）；新增超时扫描（10s 定时扫心跳表，超 30s 标 unknown、state=degraded 节点 180s 宽松，接线 markNodeUnknown）。② 单测：心跳登记、30s 标 unknown、180s 不误判、2 次回归 known、commands 回显。③ 全量回归（455 基线，预存失败沿用 r7-2 归因）。④ TriLC 侧只核对零改动：payload 带 state ✅、replay 幂等 ✅。⑤ 本地生产仓 + runbook + 提权清单按 r14-0 范围做。⑥ 硬卡五项记 OP blocked 批量清单等 CEO 一次执行。验收口径 8 项见规格 §六。"
       }
     },
     {
