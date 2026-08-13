@@ -21,14 +21,14 @@
     {
       "nodeId": "r1-1",
       "agent": "CTO",
-      "status": "pending",
+      "status": "done",
       "action": "技术方案：scheduler 设计（触发源/调度存储/执行器/失败重试/审计，对标 TriLC src/cron：croner + CronJob store + timer）+ 周平面文件服务器端写路径（生产级开发期 §三方向例外：OP/tree-op 维护权 TriMC 侧，经 git 同步回流本地；代码修改仍本地发起）",
       "routedInput": "r1-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r1-1-20260813160943.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "方案定案。核心结论：复用 @tricompany/agent-core 共享 scheduler（croner + JSON job-store + JobExecutor，已存在 1066 行 + 5 测试），TriMC 仓只写服务域适配器 src/cron/（command-handler + routes + service + week-math + CLI），不移植 TriLC cron（parity V1.1 §1 禁止复制）。三定案点：①命名 src/cron/（避让 orchestration/employee-scheduler.ts 语义，与 CLI 动词一致）②语言 TS（共享 core 为 TS 且已全量导出、TriMC server 为 TS、croner 已在依赖、服务器 Node 18 无 node:sqlite 故 JSON store）③复用共享 core + 薄适配器（TriLC cron 仅作行为对标基准）。调度：cron 0 23 * * 0 Asia/Singapore（周日 23:00，ISO 周翻转前），token 规则 toWeek=ISO week of (today+1)。写路径：fleet 用户执行 python 五段链 --sync → git add/commit（内联身份）→ push 本地路径裸仓 → 本地 pull 回流（运维步骤）。MVP 裁减：无自动重试、store 迁 pg 登记跟进项。服务器实测事实：Node v18.20.8、Python 3.6.8（兼容性为高风险项，r1-2 checklist #2）、/srv/git root 属主（checklist #1 权限调整）、trimc.service root 直跑。",
+        "artifactCommit": "194432b6",
+        "resumePoint": "r1-2 小全接单实现（P1 适配器核心 → P2 CLI → P3 测试 → P4 服务器部署，§七清单 + §5.3 checklist；只动 TriMC 仓，禁改 agent-core；TriLC 参与 CLI 行为对齐；push sg-server 后编排层复核）"
       }
     },
     {
