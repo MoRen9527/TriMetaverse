@@ -48,7 +48,7 @@
             "nodeId": "r4-3",
             "agent": "ChiefTechnologyOfficer",
             "status": "pending",
-            "action": "验收口径终审：定案人复核实现与定案一致性（A 两仓范围/C 限定形态/agent-core 零改/shell-exec 语义保留/B 未动）→ 终审结论（PASS/打回）",
+            "action": "验收口径终审（小狄复核五口径）：① ctx 传递两型断言落地 ② 既有测试零改动 ③ agent-core 零改 ④ shell-exec 模型显式参数优先语义保留 ⑤ 1973 行限定形态 + buildWeeklyPlaneHint 防双注入标记 → 终审结论（PASS/打回）",
             "routedInput": "r4-2:checkpoint",
             "brief": "",
             "checkpoint": {
