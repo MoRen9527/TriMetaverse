@@ -47,30 +47,30 @@
         {
             "nodeId": "r4-3",
             "agent": "ChiefTechnologyOfficer",
-            "status": "pending",
+            "status": "done",
             "action": "验收口径终审（小狄复核五口径）：① ctx 传递两型断言落地 ② 既有测试零改动 ③ agent-core 零改 ④ shell-exec 模型显式参数优先语义保留 ⑤ 1973 行限定形态 + buildWeeklyPlaneHint 防双注入标记 → 终审结论（PASS/打回）",
             "routedInput": "r4-2:checkpoint",
             "brief": "",
             "checkpoint": {
-                "progress": "",
-                "artifactCommit": "",
-                "resumePoint": ""
+                "progress": "终审 APPROVE（五口径全部独立复核通过，无打回项）。复核方式=diff 级代码事实逐条核查（git show 两 commit 完整 diff）+ 关键调用链交叉确认，不转述 r4-2 结论。① 两型断言落地：TriLC test/tools-ctx-cwd.test.ts 11 用例（ctx.cwd 基准 6 型含 shell_exec 双型 + ctx 缺失回退 5 型）+ test/server/tasks-submit-weekly-hint.test.ts 2 用例；TriMC test/agent-loop/tools-ctx-cwd.test.ts 7 用例同款两型；补核查两处断言字段真实性——TriLC file-grep rgGrep 消费 absolutePath（file-grep.ts:576-578，绝对路径消解 cwd 语义）、TriMC glob_search 返回 base 字段真实存在（tools.ts:341）。② 既有测试零改动：两 commit stat 仅 src 修改 + 3 新增测试文件，无既有测试文件进 diff。③ agent-core 零改：TriCompany packages/ 工作区干净（git status 空），两仓仅 import ToolContext 类型，共享包不动。④ shell-exec 语义保留：两仓实现三级优先级 (args.cwd) || ctx?.cwd || process.cwd() 一致，且测试显式断言 args.cwd wins over ctx.cwd。⑤ 1973 限定形态：app.ts diff 仅此一处逻辑改动（body.systemPrompt ? +buildWeeklyPlaneHint() : defaultSystemPrompt()），buildWeeklyPlaneHint 注释补两注入点互斥标记，C 测试双路径 exactly-1 断言防双注入。观察项照单确认：TriLC components.test.ts 既有失败（父 commit 3002424 复验同败）归 CARRY-001 TUI 链与本树无关；模型显式传 Documents 属模型行为面归验证轮观察。护栏维持：迁移验收前不合并不发布。",
+                "artifactCommit": "复核对象 TriLC a6df674 + TriMC 7e15ecf（均本地 dev 未 push，维持迁移验收前不合并护栏）",
+                "resumePoint": "r4-3 终审 APPROVE，转 r4-4 小贾收口（登记 OP + 合并排期归编排层）"
             }
         },
         {
             "nodeId": "r4-4",
             "agent": "CEOChiefOfStaff",
-            "status": "pending",
+            "status": "done",
             "action": "收口：终审 PASS 后判定 + OP 登记（BUG-20260814-001 闭环 + 教训入能力清单：工具层路径解析必须以 ctx.cwd 为基准，新增工具同步补 ctx 传递断言）+ 版本定案（修复进下个 release，排期不抢迁移验收）",
             "routedInput": "r4-3:checkpoint",
             "brief": "",
             "checkpoint": {
-                "progress": "",
-                "artifactCommit": "",
-                "resumePoint": ""
+                "progress": "收口判定 APPROVE（r4-3 五口径终审全过，小狄 diff 级独立复核）。登记完成：① OP 1.46.0——BUG-20260814-001 闭环（诊断→定案→实现→验证→终审全链）；树移 doneTreesThisWeek；R4-RELEASE-MERGE nextAction 立单（迁移验收后首个 release 合并 a6df674 + 7e15ecf 进包）② 教训入能力清单（trilc-capability-checklist.md v2026.W34.1）：工具层路径解析必须以 ctx.cwd 为基准（REQ-014b），新增工具同步补 ctx 传递断言 ③ 观察项处置：components.test.ts 既有失败归 CARRY-001 TUI 链不另开树（小狄定）；executeTool 第三参为将来预留无需动作；模型显式传 Documents 属模型行为面归验证轮记录。版本定案：修复随迁移验收后首个 release 进包（版本号重建时刻定，预估 v0.4.10-r20 patch bump）；合并护栏维持——两 commit 本地 dev 未 push，迁移验收前不合并不发布。",
+                "artifactCommit": "收口登记 commit（TriMetaverse，含小狄 r4-3 checkpoint 落盘）",
+                "resumePoint": "树收官。合并/发布排期归编排层（迁移验收后）"
             }
         }
     ],
-    "verdict": "",
-    "completedAt": ""
+    "verdict": "APPROVE — 五口径终审全过（小狄 diff 级独立复核，补核查 rgGrep absolutePath 消解 + glob_search base 字段真实性）；A+C 修复全链闭环（TriLC a6df674 + TriMC 7e15ecf，测试新增 13+7 用例全过）；BUG-20260814-001 闭环；合并与发布维持迁移验收后护栏（本地 dev 未 push）",
+    "completedAt": "2026-08-13T19:45:00+00:00"
 }

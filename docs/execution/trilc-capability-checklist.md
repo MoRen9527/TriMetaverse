@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/trilc-capability-checklist.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-13T06:00:00+08:00
+- lastSyncedAt: 2026-08-14T03:45:00+08:00
 
 > 版本：v2026.W33.16
 > 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过 + 树执行协议定案（git 触发 + checkpoint 存档 + 崩溃恢复）；v2026.W33.10 M2 第七轮——3.1/3.2 工程门禁通过（r7-eng-gate 树收口，V0.6 brief 机制首战验证）；v2026.W33.11 M2 第八轮——1.1-1.5 基础执行域通过（r8-base-exec 树，回滚演练）；v2026.W33.12 M2 第九轮——3.3/3.4/4.1 通过（r9-eng-cross 树）；v2026.W33.13 M2 第十轮——4.2/4.3/6.1/6.2 通过（r10-cross-ops 树，CONDITIONAL_PASS 收口）；v2026.W33.14 M2 第十一轮——6.3/6.4 通过 + O1 修复补跑（r11-ops-init 树，PASS 收口）；v2026.W33.15 M2 第十二轮——5.1-5.4 生产链通过（r12-production-chain 树，PASS 收口）——**M2 全勾：§二 1-6 域 25/25 + C 层 M2 受验必需项全过，M3 自动推进触发（2026-08-13）**）
@@ -13,7 +13,7 @@
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
 > 关联：`docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md` 决策登记块（M2 里程碑 + 生产级开发期定案）；`docs/execution/server-fleet-trilc-parity-plan.md`（计划级登记——本清单为 M2 子阶段验证载体）；`docs/execution/production-grade-development-plan.md`（生产级开发期：5.x 常设门禁 + C 层消化清单口径）；`TriCompany/docs/engineering/trilc-trimc-runtime-parity.md` V1.1（parity 架构源头）
 > 前置：M0（服务器仓 + git 同步链路）与 M1（舰队自由对话 + TriMC 编排 MVP）通过后启动
-> 版本说明：v2026.W33.2 新增两层之一——§二.5「CC 特性对标层」（TriLC 作为 claude code 等价物必须学会的能力，M4 源码替换前提）；治理条目 1.5（回滚执行）与 6.4（会话初始化器）并入对应域，编号顺延；v2026.W33.3 M2 第一轮验收收口（C12/C13 模型路由与降级通过）
+> 版本说明：v2026.W33.2 新增两层之一——§二.5「CC 特性对标层」（TriLC 作为 claude code 等价物必须学会的能力，M4 源码替换前提）；治理条目 1.5（回滚执行）与 6.4（会话初始化器）并入对应域，编号顺延；v2026.W33.3 M2 第一轮验收收口（C12/C13 模型路由与降级通过）；v2026.W34.1（2026-08-14）r4 修复树收口——教训登记：**工具层路径解析必须以 ctx.cwd 为基准（agent-core REQ-014b），新增工具同步补 ctx 传递断言（ctx.cwd 基准 + ctx 缺失回退 process.cwd 两型）**（BUG-20260814-001：TriLC 五读工具与 Write/Edit 读写路径分裂，安装态 daemon 启动目录≠会话工作区时暴露）
 
 ## 一、目标与机制
 
