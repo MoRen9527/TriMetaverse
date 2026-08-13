@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (② FAIL 根因锁定登记 + O-TS-1 关键关联：缺失入口即 stash 半成品主题)",
-        "version": "1.26.0",
-        "lastUpdated": "2026-08-13T22:15:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (裁决定案 A-prime 登记 + 小全执行派发 + aaba31b 日志修复)",
+        "version": "1.27.0",
+        "lastUpdated": "2026-08-13T22:30:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -225,6 +225,7 @@
         "O-TS-1（TriStaciss 半成品历史遗留，编排层核证）：2026-07-14 anthropic 兼容入口改造（3 新增 + 5 修改 + 4 删除，与 commit abe5ba2 同期），非今日动作——处置=git stash 保留（--include-untracked 清晰消息），定案 A config 级实施完成后另议（该半成品可能正是后续 tmv-* 链相关改造，勿丢弃）",
         "定案 A 终验全过（小全，8008 实跑）：/v1/models 四卡片（tmv-* 别名与真实名并存）+ 真实调用 PONG（resolvedProvider=deepseek/resolvedModel=deepseek-v4-pro/routePolicy=intent_cost_router_v1/usage 真实计数）。两个新事实：① TriStaciss 服务端口实为 8008（fastapi_stream.py 默认，非 8000）；Anthropic 兼容 /v1/messages 不在本服务——全链验证时 TriLC/TriModel 路由面端口引用需核对 ② config_manager env 覆盖逻辑坑：env 无值时 fallback 不读文件值、api_key 被置空——文件注入与 env 注入预期不一致，登记观察项（config_manager 行为坑，路由小狄评估）。provider_configs.json api_key 现含真实 key（未跟踪安全）",
         "定案 A 三件套分面（小柯）：①/四卡片 PASS（TriModel 3333 + TriLC 8712 双视图，registry 11 模型别名+真实名并存）③密钥零入 git PASS（1d61daa 无密钥字面量、跟踪面仅已知 backup）②严格口径待重验——真实回复达成（SMOKE_OK + STREAM_OK）但 3/3 tmv-deepseek-v4-pro depth=0 失败走 fallback（最终回复疑经 DeepSeek 直连非 TriStaciss）+ TriStaciss 验证中途崩停；根因候选=鉴权（tmv-sk-dev-default vs 平台 key）或服务不稳定——小狄诊断 + TriModel 补 depth-0 失败原因日志。端口口径：小柯发现 TriModel 3 处 8000 默认引用（config.ts:54/keys.ts:76/trimetaverse.ts:32）——编排层已定统一 8000，默认值方向正确无需改（小柯 8008 建议反向作废），env 丢失静默断链观察保留。config_manager env 注入通过（缓存+新鲜拉取+真实调用）",
-        "定案 A ②严格口径 FAIL 根因锁定（小柯重验）：① TriStaciss 未实现 Anthropic 兼容入口——TriModel TriMetaverseProvider 调 {base}/v1/messages 必 404（路由表仅 /v1/chat/completions + /v1/models）→ tmv 调用 depth-0/1 必败 → 落旧名直连 fallback ② OpenAI 兼容入口为 Phase C scaffold 桩（别名映射生效但回复为桩文本非真实输出）→ 此前 SMOKE_OK/STREAM_OK 全部来自 TriModel DeepSeek 直连旧名 fallback，TriStaciss 真实模型接线未完成。关键关联：stash 的 O-TS-1（07-14 anthropic 兼容入口改造半成品：anthropic_compatible_api.py + anthropic_ingress_models.py + api_key_auth.py）正是缺失入口的未完成实现——裁决必须考虑恢复该 WIP。修复方向待小狄定案：a) TriStaciss 补 /v1/messages or TriModel 改走 /v1/chat/completions 二选一 b) Phase C 桩→真实接线（含轮换 key）c) 流式实现与 stash 关系核对。①③维持 PASS。r3-3 收口/重建在 ② 缺口下不进行"
+        "定案 A ②严格口径 FAIL 根因锁定（小柯重验）：① TriStaciss 未实现 Anthropic 兼容入口——TriModel TriMetaverseProvider 调 {base}/v1/messages 必 404（路由表仅 /v1/chat/completions + /v1/models）→ tmv 调用 depth-0/1 必败 → 落旧名直连 fallback ② OpenAI 兼容入口为 Phase C scaffold 桩（别名映射生效但回复为桩文本非真实输出）→ 此前 SMOKE_OK/STREAM_OK 全部来自 TriModel DeepSeek 直连旧名 fallback，TriStaciss 真实模型接线未完成。关键关联：stash 的 O-TS-1（07-14 anthropic 兼容入口改造半成品：anthropic_compatible_api.py + anthropic_ingress_models.py + api_key_auth.py）正是缺失入口的未完成实现——裁决必须考虑恢复该 WIP。修复方向待小狄定案：a) TriStaciss 补 /v1/messages or TriModel 改走 /v1/chat/completions 二选一 b) Phase C 桩→真实接线（含轮换 key）c) 流式实现与 stash 关系核对。①③维持 PASS。r3-3 收口/重建在 ② 缺口下不进行",
+        "depth-0 根因定案（CTO 小狄逐层源码审读）：契约缺口非鉴权非稳定性——TriModel TriMetaverseProvider 按 CPO 2026-07-10 契约讲 Anthropic Messages（POST /v1/messages，头注释明载 dev-prod parity）；TriStaciss 仅实现 OpenAI 面（/v1/models + /v1/chat/completions，无 /v1/messages）→ 确定性 404 → 直连 fallback。鉴权排除（OpenAI 面 Bearer 透传无校验）、稳定性排除（迁移噪音）。裁决定案 A-prime：TriStaciss 补 Anthropic 兼容 ingress POST /v1/messages（转换层复用 chat_completion_service/route_resolver，stash 半成品仅作参考不恢复），半日级；B-prime（provider 改讲 OpenAI）否决（废弃 parity + M4 绕路）；tmv-* 统一不动。顺带落地：TriModel fallback 日志补失败原因 aaba31b（chat/stream 两处 reason 尾 300 字符）。CEO 验收路径：A-prime 落地 + 终验后再重建（直连 fallback 为过渡可用态）"
     ]
 }
