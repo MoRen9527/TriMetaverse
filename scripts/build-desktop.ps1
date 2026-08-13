@@ -97,6 +97,20 @@ $VersionJson = @{ version = "1.0.0" } | ConvertTo-Json -Compress
 Set-Content -Path (Join-Path $StagingDir "trilc\version.json") -Value $VersionJson -Encoding UTF8
 Ok
 
+# ── 6b. Contracts for installed-state (4.2 安装态) ──
+# Installed-state fallback: dist/config/env.js → ../../contracts = <trilc-root>\contracts
+# Copy TriCompany source-agents (v2 contracts + five-piece files) + employee-roster.
+
+Step "Copying TriCompany contracts → staging/trilc/contracts/"
+$TriCompanyPath = Join-Path $RootDir "..\TriCompany"
+$ContractsDest = Join-Path $StagingDir "trilc\contracts"
+Copy-Item -Recurse -Force (Join-Path $TriCompanyPath "source-agents") $ContractsDest
+New-Item -ItemType Directory -Force -Path (Join-Path $ContractsDest "docs\registry") | Out-Null
+Copy-Item -Force (Join-Path $TriCompanyPath "docs\registry\employee-roster.json") (Join-Path $ContractsDest "docs\registry\employee-roster.json")
+$contractDirs = (Get-ChildItem $ContractsDest -Directory | Measure-Object).Count
+Write-Host "  copied $contractDirs agent dirs + roster"
+Ok
+
 # ── 7. Assemble TriCode ──
 
 Step "Assembling TriCode → staging/tri-code/"

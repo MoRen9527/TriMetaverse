@@ -121,6 +121,13 @@ jobs:
           path: TriModel
           ref: ${{ github.ref }}
 
+      - name: Checkout TriCompany
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriCompany
+          path: TriCompany
+          ref: ${{ github.ref }}
+
       # ── Node.js setup ──
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -198,6 +205,16 @@ jobs:
           }
           Copy-Item -Force       TriLC\package.json     "$staging\trilc\"
           Copy-Item -Force       TriLC\version.json     "$staging\trilc\"
+
+          # Contracts for installed-state (4.2 安装态): <trilc-root>\contracts
+          # = TriCompany/source-agents (v2 contracts + five-piece) + employee-roster
+          Copy-Item -Recurse -Force TriCompany\source-agents "$staging\trilc\contracts\"
+          New-Item -ItemType Directory -Force -Path "$staging\trilc\contracts\docs\registry" | Out-Null
+          Copy-Item -Force TriCompany\docs\registry\employee-roster.json "$staging\trilc\contracts\docs\registry\employee-roster.json"
+          if (-not (Test-Path "$staging\trilc\contracts\docs\registry\employee-roster.json")) {
+            Write-Error "FATAL: contracts/roster copy failed"
+            exit 1
+          }
 
           # trilc.cmd — deterministic CLI entry (node detection + path-relative)
           # NOTE: in PowerShell here-string "%" is literal (no escaping needed).

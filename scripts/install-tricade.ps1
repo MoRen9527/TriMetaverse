@@ -23,6 +23,7 @@ param(
     [switch]$SkipVerify,                       # 跳过安装后验证
     [switch]$SkipHealthz,                      # 跳过 /healthz 检查
     [switch]$MigrateLegacy,                    # 迁移旧安装（清孤儿目录 + PATH）
+    [switch]$Force,                            # 同版本强制重装（覆盖 5.4 版本门禁）
     [switch]$WhatIf                            # 干跑模式
 )
 
@@ -49,13 +50,99 @@ function Write-Info { Write-Host "       $args" -ForegroundColor DarkGray }
 
 function Extract-Version {
     param([string]$Path)
-    if ($Path -match '(\d+\.\d+\.\d+)') {
+    # 支持三段 semver（0.4.2）与四段 calver（26.08.05.1）
+    if ($Path -match '(\d+\.\d+\.\d+(\.\d+)?)') {
         return $Matches[1]
     }
     return "unknown"
 }
 
+function Compare-Version {
+    param([string]$A, [string]$B)
+    # Semver-ish numeric compare. Returns -1 (A<B), 0 (equal), 1 (A>B).
+    # Non-numeric segments compare lexically; missing segments count as 0.
+    $aParts = @($A -split '\.')
+    $bParts = @($B -split '\.')
+    $max = [Math]::Max($aParts.Count, $bParts.Count)
+    for ($i = 0; $i -lt $max; $i++) {
+        $av = if ($i -lt $aParts.Count) { $aParts[$i] } else { '0' }
+        $bv = if ($i -lt $bParts.Count) { $bParts[$i] } else { '0' }
+        if ($av -match '^\d+$' -and $bv -match '^\d+$') {
+            $ai = [int]$av; $bi = [int]$bv
+            if ($ai -ne $bi) {
+                if ($ai -lt $bi) { return -1 } else { return 1 }
+            }
+        } else {
+            $cmp = [string]::CompareOrdinal($av, $bv)
+            if ($cmp -ne 0) {
+                if ($cmp -lt 0) { return -1 } else { return 1 }
+            }
+        }
+    }
+    return 0
+}
+
+function Get-InstalledVersion {
+    # 1. ARP 注册（MSI 部署的权威包版本，如 26.08.05.1）
+    $arp = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*",
+        "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" `
+        -ErrorAction SilentlyContinue |
+        Where-Object { $_.DisplayName -like '*TriCade*' } |
+        Select-Object -First 1
+    if ($arp -and $arp.DisplayVersion) { return $arp.DisplayVersion }
+
+    # 2. version.json（脚本部署的 TriLC manifest）
+    $verJson = "$TriLCDir\version.json"
+    if (Test-Path $verJson) {
+        try {
+            $v = (Get-Content $verJson -Raw | ConvertFrom-Json).version
+            if ($v) { return $v }
+        } catch { }
+    }
+
+    # 3. package.json fallback
+    $pkgJson = "$TriLCDir\package.json"
+    if (Test-Path $pkgJson) {
+        try {
+            $v = (Get-Content $pkgJson -Raw | ConvertFrom-Json).version
+            if ($v) { return $v }
+        } catch { }
+    }
+    return $null
+}
+
+function Invoke-VersionGate {
+    # 5.4 版本门禁：同版本不覆盖、新版本可升级、降级（回滚）警告放行
+    $installed = Get-InstalledVersion
+    if (-not $installed) {
+        Write-Info "无现役版本（全新安装），跳过版本门禁"
+        return
+    }
+
+    $cmp = Compare-Version -A $Version -B $installed
+    if ($cmp -eq 0) {
+        if ($WhatIf) {
+            Write-Warn "(WhatIf) 同版本拦截：目标 $Version == 现役 $installed。实际执行将退出（除非 -Force）"
+            return
+        }
+        if ($Force) {
+            Write-Warn "同版本强制重装（-Force）：目标 $Version == 现役 $installed"
+            return
+        }
+        Write-Fail "同版本不覆盖：目标 $Version == 现役 $installed。加 -Force 可强制重装。"
+        exit 2
+    } elseif ($cmp -lt 0) {
+        Write-Warn "降级安装（回滚场景）：目标 $Version < 现役 $installed。现役将备份为 trilc.bak-* 后继续。"
+    } else {
+        Write-Info "升级：现役 $installed → $Version"
+    }
+}
+
 function Test-Admin {
+    if ($WhatIf) {
+        Write-Info "(WhatIf) 跳过管理员检查（干跑模式不执行写操作）"
+        return
+    }
     $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
     if (-not $isAdmin) {
         Write-Fail "需要管理员权限。右键 -> 以管理员身份运行 PowerShell"
@@ -444,7 +531,10 @@ if ($MigrateLegacy) {
     Invoke-LegacyMigration
 }
 
-# Phase 1: 停止
+# Phase 1: 版本门禁（5.4：同版本不覆盖、新版本可升级、降级警告放行）
+Invoke-VersionGate
+
+# Phase 1.5: 停止
 Stop-TriCadeProcesses
 
 # Phase 2: 安装
