@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r15-3 收口: M3-R3 done + blocked 更新 + CEO 重启待执行)",
-    "version": "2.2.0",
-    "lastUpdated": "2026-08-14T00:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (运营日确认: M3 done — 2026-08-14 正式运营日)",
+    "version": "2.3.0",
+    "lastUpdated": "2026-08-14T00:30:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -308,8 +308,9 @@
         {
           "id": "M3",
           "name": "独立资格+生产双跑",
-          "status": "in_progress",
-          "note": "M2 全勾（2026-08-13）自动推进已触发，不需提请确认（CEO 2026-08-13 定）。里程碑动作（生产双跑部署）在轮次记录写明执行动作，CEO 授权不等批复（2026-08-13）。R1/R2 已收官：合同统一 + 部署就绪（契约/产物/runbook 全落地）。正式运营日待 CEO 一次执行 blocked 五项（push sg-server → 服务器 pull+重启 → 联通面 → M3 生产形态改造 → UAC 提权）",
+          "status": "done",
+          "evidence": "运营日确认 2026-08-14：CEO 重启命令块全通过（shutdown + RegRun 清理 + schtasks /run）——version 0.4.4 + count 14 + tricompanyEnabled true（14 员工全实载、hasSystemPrompt 全 true、decisionRights 完整）+ trimc connected 恢复（uptime 87s 复测，degraded→connected 心跳闭环）。R1 合同统一 / R2 部署就绪 / R3 运营日就绪全收官",
+          "note": "正式运营日 2026-08-14。M2 全勾自动推进（CEO 定不需提请）+ CEO 常驻授权（非关键决策自决）全程生效。遗留：#1 push sg-server（git 写权限，唯一 blocked）；git 版本化/CI 记 M3 后续；M4 deferred（CEO 另行启动）",
           "subStages": [
             {
               "id": "M3-R1",
