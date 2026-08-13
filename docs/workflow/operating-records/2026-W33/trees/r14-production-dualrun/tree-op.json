@@ -36,14 +36,14 @@
     {
       "nodeId": "r14-2",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "本地生产仓就位 + 双跑 runbook + 按规格落地核对",
       "routedInput": "r14-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r14-2-20260813103836.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "A: TriMC 心跳对称接线三处（store 心跳表+recordNodeHeartbeat+scanStaleNodes 双阈值 / app 端点登记+10s 定时器 / markNodeUnknown 有调用方），单测 5 项全绿，全量 457/460（2 fail 预存 + 1 skip O3 win32，无新增）。B: v0.4.4-r14 产物重建（contracts 14/14 v3.0 + version 0.4.4 无 BOM），安装态实测 healthz 0.4.4 + loaded 14 + roster 13。C: 双跑 runbook（docs/execution/production-dualrun-runbook.md）含部署/双向切换/回滚/blocked 五项。D: TriLC 参数实读核对 6 项全对，零改动成立（未动 TriLC 仓）。",
+        "artifactCommit": "TriMC: feat(r14-2) 心跳对称接线（store+app+5 单测）；TriMetaverse: build(r14-2) v0.4.4-r14 产物+证据日志 + 收尾 commit（runbook+简报+tree-op）",
+        "resumePoint": "r14-3 小柯独立验证——提示 8 项已写简报末节：参数实读一致/单测 5 绿/markNodeUnknown 调用方/响应向后兼容/全量 457-460 口径/TriLC 零改动 git 状态/服务器面清单/blocked 五项登记"
       }
     },
     {
