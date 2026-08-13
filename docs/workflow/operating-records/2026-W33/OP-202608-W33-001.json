@@ -181,8 +181,8 @@
     "O1 修复后新暴露 11 仓存量 dirty（TriMem 16 / TriStaciss 14 / TriTest 8 / TriDeployment 6 / TriDev 6 / TriTraining 4 / TriAvatar 2 / TriGateway 2 / vscodium 1 / TriCompany 15 / TriModel 1 项）——重启前遗留，待各仓 owner 清理处置（r11-2 小柯发现）",
     "5项 carry-over 6w+，CARRY-001/004/005/006 逼近 8w CEO 升级线 — W33(8/10) 首周裁决",
     "BUG-20260805-001: TriLC Read 工具 tool_result 空串 — 排 TriLC 侧修",
-    "BUG-20260805-002: 安装版 healthz version 报 0.1.0 — done（2026-08-13 小全修复三处：build-desktop.ps1 注入 -Version 提取 + WriteAllText 无 BOM；build-tricade.yml 注入 CI calver；TriLC env.ts c6b635d BOM strip 防御。根因链：PS 5.1 Set-Content UTF8 写 BOM → JSON.parse 抛错 → fallback '1.0.0'，写死值与 fallback 相同掩盖了解析失败。实测 v0.4.3-r12 安装态 healthz 报 0.4.3）",
-    "BUG-20260805-003: MSI 打包缺 yoga-layout 别名 — 部分 done（2026-08-13 小全修复：TriLC package.json 加 npm 别名 89ad689 → components-smoke 30/30 转绿，r7 两个预存失败消一个，产物 staging 含别名包。残留：components.test.ts 的 ink-testing-library 债——3 个 ToolCallLine 渲染 fail + 套件挂起不退出，已回滚保持 r7 基线，建议归 CARRY-001 TUI 链）",
+    "BUG-20260805-002: 安装版 healthz version 报 0.1.0 — done（2026-08-13 小全修复三处：build-desktop.ps1 注入 -Version 提取 + WriteAllText 无 BOM；build-tricade.yml 注入 CI calver；TriLC env.ts c6b635d BOM strip 防御。根因链：PS 5.1 Set-Content UTF8 写 BOM → JSON.parse 抛错 → fallback '1.0.0'，写死值与 fallback 相同掩盖了解析失败。小柯独立验证 PASS：v0.4.3 隔离实例 healthz version 实测 0.4.3。O7 观察：CI workflow 写端仍用 Set-Content -Encoding UTF8，被读端 strip 中和无害，建议 CI 侧改 WriteAllText 无 BOM 彻底闭环）",
+    "BUG-20260805-003: MSI 打包缺 yoga-layout 别名 — done（2026-08-13 小全修复：TriLC package.json 加 npm 别名 89ad689 → components-smoke 30/30 转绿。小柯独立验证 PASS：smoke 独立重跑 30/30；残留 components.test.ts 以 ERR_MODULE_NOT_FOUND ink-testing-library 失败（1 fail 无挂起，D10 表述修正——r7 基线已改善，挂点从 yoga 变为 ink 缺依赖），归 CARRY-001 TUI 链）",
     "版本 revision 未自动递增（当前手动默认1）— 需改自动计数"
   ],
   "plans": [
