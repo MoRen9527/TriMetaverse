@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r13-4 收口: M3-R1 done + family/forbidden 转 CTO)",
-    "version": "1.8.0",
-    "lastUpdated": "2026-08-13T21:30:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r14 建树: M3-R2 生产双跑部署 in_progress)",
+    "version": "1.9.0",
+    "lastUpdated": "2026-08-13T22:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,7 +29,17 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [],
+  "activeTrees": [
+    {
+      "treeId": "r14-production-dualrun",
+      "title": "M3 生产双跑部署：双向心跳契约 + 生产仓就位 + 双跑 runbook + 部署动作记录",
+      "nodes_total": 5,
+      "nodes_done": 1,
+      "status": "active",
+      "path": "trees/r14-production-dualrun/tree-op.json",
+      "related": "M3 生产双跑部署里程碑"
+    }
+  ],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -292,7 +302,14 @@
               "name": "O2-A 合同真源统一（含 O3/O4）",
               "status": "done",
               "tree": "r13-contract-convergence",
-              "checklist": "r13-4 收口 APPROVE（2026-08-13）：10 项口径全 PASS 零迁移丢失；family 收口更正 + forbidden 真丢转 CTO 评估"
+              "checklist": "r13-4 收口 APPROVE（2026-08-13）：10 项口径全 PASS 零迁移丢失；family 更正 + forbidden 回补已闭环"
+            },
+            {
+              "id": "M3-R2",
+              "name": "生产双跑部署",
+              "status": "in_progress",
+              "tree": "r14-production-dualrun",
+              "checklist": "待 r14-4 收口"
             }
           ]
         },

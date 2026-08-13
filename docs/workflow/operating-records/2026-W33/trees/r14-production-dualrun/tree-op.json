@@ -1,0 +1,76 @@
+{
+  "treeId": "r14-production-dualrun",
+  "title": "M3 生产双跑部署：双向心跳契约 + 生产仓就位 + 双跑 runbook + 部署动作记录",
+  "source": "M3 (生产双跑部署里程碑)",
+  "week": "2026-W33",
+  "status": "active",
+  "verdict": "",
+  "completedAt": "",
+  "nodes": [
+    {
+      "nodeId": "r14-0",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "建树：规划 r14 范围与节点链",
+      "routedInput": "",
+      "brief": "briefs/r14-0-20260813220000.md",
+      "checkpoint": {
+        "progress": "范围定案（team-lead 授权直接拆，按计划文档 M3 定义 + 周平面纪律）：1) 双向心跳契约规格（interval/timeout/degraded 判定/恢复对齐——CTO 出，已知基础：TriLC 2.5 degraded 已通过 0cbd25b、TriMC REQ-006 heartbeat tier、2.4 超时上报已通过）；2) 本地生产仓就位（安装态 v0.4.3-r12 ZIP + 部署 runbook + 提权清单更新）；3) 服务器面部署步骤记录（能做的做，硬卡记 blocked 批量清单）；4) 双跑窗口定义（观察期 + 双向切换演练 WhatIf）；5) 验收口径。节点链：r14-1 小狄（契约规格 + 服务器面就绪清单）→ r14-2 小全（本地生产仓 + runbook + 落地核对）→ r14-3 小柯（验证）→ r14-4 小贾收口。",
+        "artifactCommit": "",
+        "resumePoint": "树已建，r14-1 小狄开工（心跳契约规格）"
+      }
+    },
+    {
+      "nodeId": "r14-1",
+      "agent": "CTO",
+      "status": "pending",
+      "action": "双向心跳契约规格 + 服务器面就绪清单",
+      "routedInput": "r14-0:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r14-2",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "本地生产仓就位 + 双跑 runbook + 按规格落地核对",
+      "routedInput": "r14-1:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r14-3",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "独立验证：runbook 可执行性 + fallback WhatIf + 部署清单完整性",
+      "routedInput": "r14-2:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r14-4",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口判定 → M3 双跑登记",
+      "routedInput": "r14-3:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    }
+  ]
+}
