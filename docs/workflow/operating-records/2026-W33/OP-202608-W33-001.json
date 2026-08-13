@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (TriMC 审核一票 PASS 登记 + TIER-ASSERT/OBS 台账 2 项)",
-    "version": "2.9.0",
-    "lastUpdated": "2026-08-14T06:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r1-2 收口：P4 checklist 6/6 + 真 job nextRunAt 周日 23:00 精确 + 触发链路实测；r1-3 待派)",
+    "version": "2.10.0",
+    "lastUpdated": "2026-08-14T07:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -34,7 +34,7 @@
       "treeId": "prod-grade-1-trimc-weekly-cron",
       "title": "TriMC scheduler 模块 — 定时触发周平面迁移五段链（生产级开发期首树）",
       "nodes_total": 5,
-      "nodes_done": 2,
+      "nodes_done": 3,
       "status": "active",
       "path": "trees/prod-grade-1-trimc-weekly-cron/tree-op.json",
       "related": "生产级开发期阶段一 · TriMC 仓中等改造（研发环主力实现，TriLC 参与测试/CLI 段）"
