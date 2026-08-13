@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (r19 复验 PASS 登记 + 测试操作披露入册：r19 重建放行)",
-        "version": "1.38.0",
-        "lastUpdated": "2026-08-14T00:35:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (①r18 运行态诊断处置 + ls/cwd 缺陷登记派小全诊断 ②CEO 架构指令登记派小狄出设计)",
+        "version": "1.39.0",
+        "lastUpdated": "2026-08-13T18:50:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -182,6 +182,18 @@
             "action": "A' 主路径接线（后续树，CTO 评估半日~一日 + 验证）：TriStaciss 补 Anthropic /v1/messages ingress（三文件按 stash 设计参照重写：路由 /v1/messages + verify_api_key + deduct/record_usage 集成点；git stash show -p stash@{0} 提取参照，勿 pop）+ 非流式 create_completion 桩替换为真实调用（流式 stream_completion 已有真接线可复用）；验收口径=depth=0 零失败 + 直测 8000 入口真实内容 + SMOKE_OK 不绕 fallback。关联：TriStaciss 去留架构评估（B 记档）+ O-TS-1 stash 处置",
             "ownerRole": "CTO",
             "status": "open"
+        },
+        {
+            "id": "LS-CWD-DIAG-20260814-001",
+            "action": "ls/cwd 上下文解析缺陷诊断（派小全）：CEO 重测中发现 agent 的 ls 工具调用跑到了 C:\\Users\\jedih\\Documents（agent cwd 上下文解析错误，应指向工作区/周平面）——诊断为什么 agent 工具调用默认路径落到 Documents；输出=根因 + 修复方案 + 影响面（涉及哪些工具/哪些调用形态）；修复范围定案后另建树，本单只做诊断。关联：TriLC agent loop 工具执行 cwd 传递链",
+            "ownerRole": "FullStackDeveloper",
+            "status": "open"
+        },
+        {
+            "id": "WORKTREE-ARCH-DESIGN-20260814-001",
+            "action": "CEO 架构指令设计（派小狄出设计，设计层，不阻塞周日 08-16 迁移验收）：研发仓与 TriCade 工作区改为同一仓库的不同 git worktree，与 TriMC 仓版本协同——任何一方改动互不影响，标准流程合入同一 dev。设计要求：① worktree 布局（TriCade 生产面 worktree 落点）② 分支策略（生产面写分支→合入 dev）③ TRILC_WEEKLY_PLANE_ROOT 从指向研发仓迁移为指向 worktree ④ 与服务器 /srv/fleet 对称性。输出=设计文档（落点建议 docs/engineering/ 或 TriMetaverse 设计真源，按现有设计文档规范带元信息头）；实施树在设计定案后另建，不在本单。注意：涉及 Windows 侧 junction 与 git worktree 交互风险（INCIDENT-20260814-001 纪律：禁 worktree+npm install 组合）",
+            "ownerRole": "CTO",
+            "status": "open"
         }
     ],
     "carry_over_from_w31": [
@@ -242,6 +254,9 @@
         "r17② current-week 判定修复闭环（f145075 + 小柯复验 PASS 三口径）：hint 双态注入实测（env 显式/sibling 发现/undefined 不注入）+ 活体周判定 W34（模型全程走公司周平面根，读 W34 index status:active，不再误判 W33）+ 写语义零变化（diff 仅 app.ts 21 行纯提示，r2 护栏不破）。低优先建议：hint 注入双态落自动化用例（挂后续）",
         "①四修复复验 PASS（小柯四口径全过）：日志落盘活体铁证（崩溃全栈 752 字节入 daemon.log + 健康输出同落盘——下次崩溃可诊断）+ auto-start 30s 双轮询失败明确原因（daemon process exited + 日志路径）+ 自检主动拉起非服务形态（WhatIf 兼容）+ 复现窗口阴性维持（确定性缺陷仍排除，生命周期保护就位）。r18 全绿放行成立。低优先观察：源模式（tsx src/cli.ts）start 的 entryPoint 按 dist 布局解析失败（仅开发场景，安装/构建版不受影响），小全后续顺手兼容。watchdog 守护化维持挂后续树",
         "r18 装后状态 + r19 两修登记：三服务全在线（8711 version 0.4.8 + 3333 + 8008），CEO 迁移验收用手动拉起态进行。新 bug（r18 日志修复回归）：① daemon.log 双重定向 EBUSY——launcher >> 与 daemon stdio append fd 同文件两 open 冲突（Windows 文件锁，schtasks 实例自锁起不来），修法=两层留一层（建议 launcher 去重定向、daemon 层负责）② daemon install 再生 cmd 丢 TRIMODEL_API_TOKEN set 行（模板未带）→ key fetch 401，修法=daemon 层环境继承兜底（推荐）。两修进 r19",
-        "r19 复验 PASS（小柯三口径全过）：EBUSY 单层化双形态实测（schtasks + 手动均无 EBUSY + 日志落盘 fd 层）+ token 兜底（清环境加载成功 + 预设值 PRESERVED 不覆盖）+ 全量 285/286 基线一致。测试操作披露（已登记）：任务形态实测短暂共享真实数据目录——现役 8711 全程零影响，副作用=真实 daemon.log 追加几行测试日志（无害）+ pidfile 被覆盖为死 pid（瞬态，端口健康判定自愈 + 重启周期复位）；后续测试一律显式 TRILC_DATA_DIR 隔离。r19 全绿放行成立"
+        "r19 复验 PASS（小柯三口径全过）：EBUSY 单层化双形态实测（schtasks + 手动均无 EBUSY + 日志落盘 fd 层）+ token 兜底（清环境加载成功 + 预设值 PRESERVED 不覆盖）+ 全量 285/286 基线一致。测试操作披露（已登记）：任务形态实测短暂共享真实数据目录——现役 8711 全程零影响，副作用=真实 daemon.log 追加几行测试日志（无害）+ pidfile 被覆盖为死 pid（瞬态，端口健康判定自愈 + 重启周期复位）；后续测试一律显式 TRILC_DATA_DIR 隔离。r19 全绿放行成立",
+        "r18 运行态诊断处置（CEO 重测暴露，编排层诊断完成，处置=r19 装后解决）：CEO 迁移验收重测中发现 TriLC 「崩」——TriPilot 绿灯红、连接中断表现；诊断=daemon 实际存活（非崩溃），根因链=r18 的 daemon install 再生 cmd 丢 TRIMODEL_API_TOKEN set 行（模板未带）→ key fetch 401 → 模型主路径失败 → 上游表现为连接中断。r19 已修（daemon 层环境继承兜底），CEO 装 v0.4.9-r19 即解决；装后复验待 CEO 迁移验收链确认。教训追加：daemon 再生 cmd 模板必须与安装态 env 注入面同步回归（挂 ENV-INJECT 同族检查项）",
+        "BUG-20260814-001: agent ls 工具 cwd 上下文解析错误——工具调用默认路径跑到 C:\\Users\\jedih\\Documents（应指向工作区/周平面）。CEO 重测中发现；已登记派小全诊断（LS-CWD-DIAG-20260814-001），根因/修复方案/影响面待诊断输出",
+        "ARCH-20260814-001（CEO 架构指令登记，设计层）：研发仓与 TriCade 工作区改为同一仓库的不同 git worktree（与 TriMC 仓版本协同，双方改动互不影响，标准流程合入同一 dev）。已派小狄出设计（WORKTREE-ARCH-DESIGN-20260814-001）：worktree 布局/分支策略/TRILC_WEEKLY_PLANE_ROOT 迁移指向 worktree/与服务器 /srv/fleet 对称性。边界：设计层不阻塞周日 08-16 23:00 迁移验收；实施树设计定案后另建"
     ]
 }
