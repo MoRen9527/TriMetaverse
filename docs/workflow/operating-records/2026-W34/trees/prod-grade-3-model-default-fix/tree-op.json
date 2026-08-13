@@ -1,61 +1,63 @@
 {
-  "treeId": "prod-grade-3-model-default-fix",
-  "title": "默认模型名硬编码错配紧急修复 — deepseek-v4-pro → tmv-deepseek-v4-pro（生产级开发期第三树·轻量）",
-  "source": "编排层紧急派单：CEO 实测 TriCade UI 聊天报 Model \"deepseek-v4-pro\" not in registry（tmv-* 注册表错配，C12/C13 改造遗留，10 处硬编码：TriLC 6 + TriPilot 4）",
-  "week": "2026-W34",
-  "status": "active",
-  "nodes": [
-    {
-      "nodeId": "r3-0",
-      "agent": "CEOChiefOfStaff",
-      "status": "done",
-      "action": "建树：规划范围与节点链（轻量树，时间敏感——CEO 等装修正版）",
-      "routedInput": "",
-      "brief": "briefs/r3-0-20260813202000.md",
-      "checkpoint": {
-        "progress": "范围定案（编排层根因定位 + CEO 实测缺陷）：默认模型名硬编码 'deepseek-v4-pro'（10 处：TriLC 6 + TriPilot 4）与 tmv-* 注册表错配。护栏：只改默认值常量，不动路由逻辑。节点链：r3-1 小全修复（统一 tmv-deepseek-v4-pro + 测试期望同步 + trilc chat 静默失败第二问题排查——chat 错误显示路径）→ r3-2 小柯独立验证（模型名全链一致 + chat 冒烟）→ r3-3 小贾收口（INCIDENT 登记 + 教训入能力清单 + 版本定案）。版本预判：v0.4.6-r16（patch bump，同版本门禁 exit 2 故不能沿用 0.4.5）。",
-        "artifactCommit": "",
-        "resumePoint": "树已建，r3-1 开工（小全修复）"
-      }
-    },
-    {
-      "nodeId": "r3-1",
-      "agent": "FullStackDeveloper",
-      "status": "pending",
-      "action": "修复：默认模型名统一 tmv-deepseek-v4-pro（TriLC 6 处 + TriPilot 4 处 + 相关测试期望同步）；顺带排查 trilc chat 静默失败是否有第二问题（chat 错误显示路径）",
-      "routedInput": "r3-0:checkpoint",
-      "brief": "",
-      "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
-      }
-    },
-    {
-      "nodeId": "r3-2",
-      "agent": "TestEngineer",
-      "status": "done",
-      "action": "独立验证（验收要求升级）：模型名全链一致（10 处 + 测试期望）+ chat 冒烟 + **真实模型调用成功**（非 healthz 级——实测一次完整对话回复）+ 装后 TriCade 聊天可用性（CEO 最终验收口径：问小贾能正常回复 + 能答出 W34 周平面）",
-      "routedInput": "r3-1:checkpoint",
-      "brief": "briefs/r3-2-20260813202022.md",
-      "checkpoint": {
-        "progress": "验证面 1 模型名全链一致 PASS：ff725ef（TriLC 16 处 pro8+flash8，8 文件）+ ea3936f（TriPilot 4 处）diff 逐点核对纯名字面量；两仓任意形式旧名残留扫描零命中；注册表 tmv 四条目活体确认；源码态冒烟 daemon 活体日志 model=tmv-deepseek-v4-pro 无 not-in-registry 错（原始症状消除）。验证面 2 chat 冒烟环境阻塞（非树回归）：本机 TriModel(3333)/TriStaciss(8000)/TriMC(8710) 均无监听，密钥 fetch 失败 → chat disabled → 空回复；名字链已验证通到提供方边界，服务拉起后 2 分钟可重跑完成真实调用冒烟。验证面 3 随 v0.4.6-r16 装后验收。观察项 O-R3-1：TriModel keys.ts DEFAULT_MODEL 仍旧名（legacy 条目可解析、非立即故障），转小狄通道与 FALLBACK_MAP 同批。",
-        "artifactCommit": "",
-        "resumePoint": "编排层决策：模型服务链拉起（TriModel/TriStaciss/TriMC）→ 小柯 2 分钟重跑冒烟完成验证面 2；装后验收随重建版本执行；随后 r3-3 收口（INCIDENT 登记 + 教训入能力清单 + v0.4.6-r16 重建）"
-      }
-    },
-    {
-      "nodeId": "r3-3",
-      "agent": "CEOChiefOfStaff",
-      "status": "pending",
-      "action": "收口：INCIDENT 登记 + 教训入能力清单回归检查项 + 版本定案 v0.4.6-r16 重建",
-      "routedInput": "r3-2:checkpoint",
-      "brief": "",
-      "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
-      }
-    }
-  ]
+    "treeId": "prod-grade-3-model-default-fix",
+    "title": "默认模型名硬编码错配紧急修复 — deepseek-v4-pro → tmv-deepseek-v4-pro（生产级开发期第三树·轻量）",
+    "source": "编排层紧急派单：CEO 实测 TriCade UI 聊天报 Model \"deepseek-v4-pro\" not in registry（tmv-* 注册表错配，C12/C13 改造遗留，10 处硬编码：TriLC 6 + TriPilot 4）",
+    "week": "2026-W34",
+    "status": "done",
+    "nodes": [
+        {
+            "nodeId": "r3-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "建树：规划范围与节点链（轻量树，时间敏感——CEO 等装修正版）",
+            "routedInput": "",
+            "brief": "briefs/r3-0-20260813202000.md",
+            "checkpoint": {
+                "progress": "范围定案（编排层根因定位 + CEO 实测缺陷）：默认模型名硬编码 'deepseek-v4-pro'（10 处：TriLC 6 + TriPilot 4）与 tmv-* 注册表错配。护栏：只改默认值常量，不动路由逻辑。节点链：r3-1 小全修复（统一 tmv-deepseek-v4-pro + 测试期望同步 + trilc chat 静默失败第二问题排查——chat 错误显示路径）→ r3-2 小柯独立验证（模型名全链一致 + chat 冒烟）→ r3-3 小贾收口（INCIDENT 登记 + 教训入能力清单 + 版本定案）。版本预判：v0.4.6-r16（patch bump，同版本门禁 exit 2 故不能沿用 0.4.5）。",
+                "artifactCommit": "",
+                "resumePoint": "树已建，r3-1 开工（小全修复）"
+            }
+        },
+        {
+            "nodeId": "r3-1",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "修复：默认模型名统一 tmv-deepseek-v4-pro（TriLC 6 处 + TriPilot 4 处 + 相关测试期望同步）；顺带排查 trilc chat 静默失败是否有第二问题（chat 错误显示路径）",
+            "routedInput": "r3-0:checkpoint",
+            "brief": "",
+            "checkpoint": {
+                "progress": "",
+                "artifactCommit": "",
+                "resumePoint": ""
+            }
+        },
+        {
+            "nodeId": "r3-2",
+            "agent": "TestEngineer",
+            "status": "done",
+            "action": "独立验证（验收要求升级）：模型名全链一致（10 处 + 测试期望）+ chat 冒烟 + **真实模型调用成功**（非 healthz 级——实测一次完整对话回复）+ 装后 TriCade 聊天可用性（CEO 最终验收口径：问小贾能正常回复 + 能答出 W34 周平面）",
+            "routedInput": "r3-1:checkpoint",
+            "brief": "briefs/r3-2-20260813202022.md",
+            "checkpoint": {
+                "progress": "验证面 1 模型名全链一致 PASS：ff725ef（TriLC 16 处 pro8+flash8，8 文件）+ ea3936f（TriPilot 4 处）diff 逐点核对纯名字面量；两仓任意形式旧名残留扫描零命中；注册表 tmv 四条目活体确认；源码态冒烟 daemon 活体日志 model=tmv-deepseek-v4-pro 无 not-in-registry 错（原始症状消除）。验证面 2 chat 冒烟环境阻塞（非树回归）：本机 TriModel(3333)/TriStaciss(8000)/TriMC(8710) 均无监听，密钥 fetch 失败 → chat disabled → 空回复；名字链已验证通到提供方边界，服务拉起后 2 分钟可重跑完成真实调用冒烟。验证面 3 随 v0.4.6-r16 装后验收。观察项 O-R3-1：TriModel keys.ts DEFAULT_MODEL 仍旧名（legacy 条目可解析、非立即故障），转小狄通道与 FALLBACK_MAP 同批。",
+                "artifactCommit": "",
+                "resumePoint": "编排层决策：模型服务链拉起（TriModel/TriStaciss/TriMC）→ 小柯 2 分钟重跑冒烟完成验证面 2；装后验收随重建版本执行；随后 r3-3 收口（INCIDENT 登记 + 教训入能力清单 + v0.4.6-r16 重建）"
+            }
+        },
+        {
+            "nodeId": "r3-3",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "收口：INCIDENT 登记 + 教训入能力清单回归检查项 + 版本定案 v0.4.6-r16 重建",
+            "routedInput": "r3-2:checkpoint",
+            "brief": "briefs/r3-3-20260813224500.md",
+            "checkpoint": {
+                "progress": "收口判定 APPROVE（带标注）。INCIDENT-20260813-001 全链闭环：模型名硬编码错配 10+ 处修复（TriLC ff725ef + TriPilot ea3936f）+ 同族扩展（agent-core FALLBACK_MAP d64ad93 + TriModel a5638e9 + fallback 失败原因日志 aaba31b）。定案 A 落地：provider config 升级（deepseek 条目升级 + model_aliases）+ 代码层四文件 1d61daa（别名映射 + /v1/models 双卡片）+ 终验 PONG 实证（直连 fallback 面）。② 严格口径经 TriStaciss 全链未达成（契约缺口：无 /v1/messages + Phase C 桩，非鉴权非稳定性）——CTO 三裁项定案：A' 补 ingress（stash 三文件不在盘仅设计参照，勿 pop）+ 非流式桩替换 + 流式已有真接线；CEO 验收先行走直连 fallback（3/3 实证），主路径接线挂后续树。教训入能力清单：注册表变更必须同步默认值硬编码（C12/C13 域回归检查项）+ key 缓存刷新纳入安装/升级 checklist。收口门禁 v2：判定 + 清单登记 + 最终报告完成，push 三仓由编排层统一执行。",
+                "artifactCommit": "",
+                "resumePoint": "重建 v0.4.6-r16（编排层）→ 小柯装后验收（CEO 口径：问小贾正常回复 + 答出 W34，标注直连 fallback）→ CEO 重装。挂后续树：A' 主路径接线（半日~一日）、TriStaciss 去留架构评估（B 记档）、O-TS-1 stash 处置"
+            }
+        }
+    ],
+    "verdict": "APPROVE（带标注）— 模型名硬编码错配修复全链闭环（TriLC 16 + TriPilot 4 + agent-core FALLBACK_MAP + TriModel 2）；定案 A 落地（config 升级 + 代码层四文件 1d61daa + tmv 别名映射生效 + /v1/models 四卡片）；② 严格口径（经 TriStaciss 全链真实回复）未达成——根因定案为契约缺口（TriStaciss 无 Anthropic /v1/messages，非流式 chat/completions 为 Phase C 桩）；CEO 验收口径采纳 CTO 建议：先行走直连 fallback（真 key 直连 3/3 实证真实回复非桩），验收记录标注「tmv 主路径未接线，当前回复经直连 fallback」；主路径接线（A'：/v1/messages ingress 三文件重写 + 非流式桩替换，半日~一日 + 验证）挂后续树，stash 仅设计参照（git stash show -p 提取，勿 pop）",
+    "completedAt": "2026-08-13T22:45:00+00:00"
 }

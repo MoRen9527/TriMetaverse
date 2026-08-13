@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (裁决定案 A-prime 登记 + 小全执行派发 + aaba31b 日志修复)",
-        "version": "1.27.0",
-        "lastUpdated": "2026-08-13T22:30:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (r3-3 收口 APPROVE 带标注：直连 fallback 先行 + A-prime 挂后续树)",
+        "version": "1.28.0",
+        "lastUpdated": "2026-08-13T22:45:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -36,17 +36,7 @@
         "TriMC"
     ],
     "updatedAt": "2026-08-13T10:26:24.742649+00:00",
-    "activeTrees": [
-        {
-            "treeId": "prod-grade-3-model-default-fix",
-            "title": "默认模型名硬编码错配紧急修复 — tmv-deepseek-v4-pro（第三树·轻量）",
-            "nodes_total": 4,
-            "nodes_done": 2,
-            "status": "active",
-            "path": "trees/prod-grade-3-model-default-fix/tree-op.json",
-            "related": "CEO 实测缺陷：deepseek-v4-pro 硬编码 10 处与 tmv-* 注册表错配 · 最高优先"
-        }
-    ],
+    "activeTrees": [],
     "doneTreesFromPreviousWeek": [
         {
             "treeId": "w33-weekly-migration-ade",
@@ -157,6 +147,15 @@
             "status": "done",
             "path": "trees/prod-grade-2-trilc-plane-view/tree-op.json",
             "related": "CEO 指令：全真迁移后 TriCade 看不到 W34 的契约缺口 · 本树只动 TriLC 仓 | r2-4 收口 APPROVE"
+        },
+        {
+            "treeId": "prod-grade-3-model-default-fix",
+            "title": "默认模型名硬编码错配紧急修复 — tmv-deepseek-v4-pro（第三树·轻量）",
+            "nodes_total": 4,
+            "nodes_done": 4,
+            "status": "done",
+            "path": "trees/prod-grade-3-model-default-fix/tree-op.json",
+            "related": "CEO 实测缺陷：deepseek-v4-pro 硬编码 10 处与 tmv-* 注册表错配 · 最高优先 | r3-3 收口 APPROVE（带标注：主路径挂后续树）"
         }
     ],
     "nextActions": [
@@ -176,6 +175,12 @@
             "id": "TRICADE-ENV-INJECT-20260817-001",
             "action": "TriCade 打包侧 TRILC_WEEKLY_PLANE_ROOT 注入（r2-2 跟进项，本树不做）：安装态 env 显式路径需由 TriCade 打包/安装脚本注入；归仓 TriCade 打包通道（TriMetaverse scripts + .github CI），路由编排层 — 实现 done（8574d51a：install-tricade.ps1 三态解析 + Phase 3.5 用户级注入 + NSSM AppEnvironmentExtra 适配；build-desktop.ps1 install.bat [3/4] setx 段；PS 语法解析 + WhatIf 实测命中），小柯验证中（WhatIf 三态 + 装后 User env 复核），随 v0.4.5-r15 构建进包 — 段 1 PASS（小柯独立验证：WhatIf 三态实测 + install.bat 模板 diff + 双文件 PS 语法独立解析；幽灵路径注入计数 0）；段 2 装后复核折入 5.2",
             "ownerRole": "CEOChiefOfStaff",
+            "status": "open"
+        },
+        {
+            "id": "A-PRIME-WIRING-20260817-001",
+            "action": "A' 主路径接线（后续树，CTO 评估半日~一日 + 验证）：TriStaciss 补 Anthropic /v1/messages ingress（三文件按 stash 设计参照重写：路由 /v1/messages + verify_api_key + deduct/record_usage 集成点；git stash show -p stash@{0} 提取参照，勿 pop）+ 非流式 create_completion 桩替换为真实调用（流式 stream_completion 已有真接线可复用）；验收口径=depth=0 零失败 + 直测 8000 入口真实内容 + SMOKE_OK 不绕 fallback。关联：TriStaciss 去留架构评估（B 记档）+ O-TS-1 stash 处置",
+            "ownerRole": "CTO",
             "status": "open"
         }
     ],
@@ -226,6 +231,7 @@
         "定案 A 终验全过（小全，8008 实跑）：/v1/models 四卡片（tmv-* 别名与真实名并存）+ 真实调用 PONG（resolvedProvider=deepseek/resolvedModel=deepseek-v4-pro/routePolicy=intent_cost_router_v1/usage 真实计数）。两个新事实：① TriStaciss 服务端口实为 8008（fastapi_stream.py 默认，非 8000）；Anthropic 兼容 /v1/messages 不在本服务——全链验证时 TriLC/TriModel 路由面端口引用需核对 ② config_manager env 覆盖逻辑坑：env 无值时 fallback 不读文件值、api_key 被置空——文件注入与 env 注入预期不一致，登记观察项（config_manager 行为坑，路由小狄评估）。provider_configs.json api_key 现含真实 key（未跟踪安全）",
         "定案 A 三件套分面（小柯）：①/四卡片 PASS（TriModel 3333 + TriLC 8712 双视图，registry 11 模型别名+真实名并存）③密钥零入 git PASS（1d61daa 无密钥字面量、跟踪面仅已知 backup）②严格口径待重验——真实回复达成（SMOKE_OK + STREAM_OK）但 3/3 tmv-deepseek-v4-pro depth=0 失败走 fallback（最终回复疑经 DeepSeek 直连非 TriStaciss）+ TriStaciss 验证中途崩停；根因候选=鉴权（tmv-sk-dev-default vs 平台 key）或服务不稳定——小狄诊断 + TriModel 补 depth-0 失败原因日志。端口口径：小柯发现 TriModel 3 处 8000 默认引用（config.ts:54/keys.ts:76/trimetaverse.ts:32）——编排层已定统一 8000，默认值方向正确无需改（小柯 8008 建议反向作废），env 丢失静默断链观察保留。config_manager env 注入通过（缓存+新鲜拉取+真实调用）",
         "定案 A ②严格口径 FAIL 根因锁定（小柯重验）：① TriStaciss 未实现 Anthropic 兼容入口——TriModel TriMetaverseProvider 调 {base}/v1/messages 必 404（路由表仅 /v1/chat/completions + /v1/models）→ tmv 调用 depth-0/1 必败 → 落旧名直连 fallback ② OpenAI 兼容入口为 Phase C scaffold 桩（别名映射生效但回复为桩文本非真实输出）→ 此前 SMOKE_OK/STREAM_OK 全部来自 TriModel DeepSeek 直连旧名 fallback，TriStaciss 真实模型接线未完成。关键关联：stash 的 O-TS-1（07-14 anthropic 兼容入口改造半成品：anthropic_compatible_api.py + anthropic_ingress_models.py + api_key_auth.py）正是缺失入口的未完成实现——裁决必须考虑恢复该 WIP。修复方向待小狄定案：a) TriStaciss 补 /v1/messages or TriModel 改走 /v1/chat/completions 二选一 b) Phase C 桩→真实接线（含轮换 key）c) 流式实现与 stash 关系核对。①③维持 PASS。r3-3 收口/重建在 ② 缺口下不进行",
-        "depth-0 根因定案（CTO 小狄逐层源码审读）：契约缺口非鉴权非稳定性——TriModel TriMetaverseProvider 按 CPO 2026-07-10 契约讲 Anthropic Messages（POST /v1/messages，头注释明载 dev-prod parity）；TriStaciss 仅实现 OpenAI 面（/v1/models + /v1/chat/completions，无 /v1/messages）→ 确定性 404 → 直连 fallback。鉴权排除（OpenAI 面 Bearer 透传无校验）、稳定性排除（迁移噪音）。裁决定案 A-prime：TriStaciss 补 Anthropic 兼容 ingress POST /v1/messages（转换层复用 chat_completion_service/route_resolver，stash 半成品仅作参考不恢复），半日级；B-prime（provider 改讲 OpenAI）否决（废弃 parity + M4 绕路）；tmv-* 统一不动。顺带落地：TriModel fallback 日志补失败原因 aaba31b（chat/stream 两处 reason 尾 300 字符）。CEO 验收路径：A-prime 落地 + 终验后再重建（直连 fallback 为过渡可用态）"
+        "depth-0 根因定案（CTO 小狄逐层源码审读）：契约缺口非鉴权非稳定性——TriModel TriMetaverseProvider 按 CPO 2026-07-10 契约讲 Anthropic Messages（POST /v1/messages，头注释明载 dev-prod parity）；TriStaciss 仅实现 OpenAI 面（/v1/models + /v1/chat/completions，无 /v1/messages）→ 确定性 404 → 直连 fallback。鉴权排除（OpenAI 面 Bearer 透传无校验）、稳定性排除（迁移噪音）。裁决定案 A-prime：TriStaciss 补 Anthropic 兼容 ingress POST /v1/messages（转换层复用 chat_completion_service/route_resolver，stash 半成品仅作参考不恢复），半日级；B-prime（provider 改讲 OpenAI）否决（废弃 parity + M4 绕路）；tmv-* 统一不动。顺带落地：TriModel fallback 日志补失败原因 aaba31b（chat/stream 两处 reason 尾 300 字符）。CEO 验收路径：A-prime 落地 + 终验后再重建（直连 fallback 为过渡可用态）",
+        "r3 树收口登记：CEO 验收口径=直连 fallback 先行（CTO 定案，3/3 实证真实回复），验收记录必须标注「tmv 主路径未接线，当前回复经直连 fallback」；主路径接线挂 A-PRIME-WIRING-20260817-001 后续树。stash@{0} 勿 pop（三 untracked 文件不在盘，pop 断 import 必崩）"
     ]
 }
