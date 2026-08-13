@@ -23,14 +23,14 @@
     {
       "nodeId": "r12-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "执行 5.1 + 5.2（含 4.2 安装态）+ 5.3 + 5.4",
       "routedInput": "r12-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r12-1-20260813091604.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "5.1: build-desktop.ps1 一次成功（v0.4.2-r12 ZIP 58.5MB）+ 混包修复（staging hygiene 剥离 trimodel/.git 487K，W30 同型）+ staging 干净；MSI 本机无 WiX 仅 CI 可验（最近 success 31003867333）。5.2: 根因实测——现役安装态 company 合同 0/0（打包链路不复制 contracts），修复双端 assemble（build-desktop.ps1 6b + build-tricade.yml checkout TriCompany + contracts 步骤）；安装态实测 14/14 合同 + 14/14 prompt 非空（4827~10694 字节）+ healthz 200 + roster 13。5.3: 状态查询/卸载幂等全实测（sc 1060 不存在 / schtasks 不存在 / RegRun 现役启动方式 / daemon status JSON 正确）；注册受权限边界；缺陷登记 2 项（healthz mode 硬编码、nssm 未入库+路径写死）。5.4: install-tricade.ps1 新增版本门禁（ARP 优先/同版本 exit 2/升级放行/降级回滚警告放行/-Force/WhatIf 豁免），WhatIf 三场演练全过（同版本拦截/27.08.13.1 升级/0.4.2 降级）。正式 Program Files 覆盖安装待管理员提权（清单已列简报）。",
+        "artifactCommit": "5.1: build(r12-1) hygiene 修复 + v0.4.1 产物；5.2/5.3/5.4: feat(r12-1) contracts 打包修复 + 版本门禁 + v0.4.2 产物 + 证据日志",
+        "resumePoint": "r12-2 小柯独立验证（5.1 构建日志/staging 干净复核 + 5.2 安装态 14/14 复核 + 5.3 状态查询证据 + 5.4 WhatIf 演练复核；MSI CI 部分与提权安装清单由小贾判定）"
       }
     },
     {
