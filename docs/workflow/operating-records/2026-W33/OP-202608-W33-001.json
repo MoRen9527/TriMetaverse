@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r10-3 收口: M2-R10 done + doneTrees 补 r9/r10)",
-    "version": "1.2.0",
-    "lastUpdated": "2026-08-13T17:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (R11 建树: M2-R11 in_progress + O1-FIX 并入)",
+    "version": "1.3.0",
+    "lastUpdated": "2026-08-13T17:30:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,7 +29,17 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [],
+  "activeTrees": [
+    {
+      "treeId": "r11-ops-init",
+      "title": "运营纪律收官 + 会话初始化：6.3 树状态同步 + 6.4 会话初始化器 + O1 健康脚本修复",
+      "nodes_total": 4,
+      "nodes_done": 1,
+      "status": "active",
+      "path": "trees/r11-ops-init/tree-op.json",
+      "related": "M2-R11 6.3/6.4 + O1-FIX"
+    }
+  ],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -87,9 +97,9 @@
     },
     {
       "id": "O1-FIX-20260813-001",
-      "action": "O1 健康脚本 dirty 检测修复（CTO 小狄方案 APPROVE：--porcelain -b 全量输出，Issue 模型新增 Dirty 维度，untracked 计入，约 10 行）+ 修复后 4.3 补跑复核",
+      "action": "O1 健康脚本 dirty 检测修复（CTO 小狄方案 APPROVE：--porcelain -b 全量输出，Issue 模型新增 Dirty 维度，untracked 计入，约 10 行）+ 修复后 4.3 补跑复核 — 并入 r11-ops-init 树",
       "ownerRole": "CEOChiefOfStaff",
-      "status": "open"
+      "status": "in_progress"
     },
     {
       "id": "O2-B-20260813-001",
@@ -205,6 +215,13 @@
               "status": "done",
               "tree": "r10-cross-ops",
               "checklist": "v2026.W33.13"
+            },
+            {
+              "id": "M2-R11",
+              "name": "6.3/6.4 + O1 修复",
+              "status": "in_progress",
+              "tree": "r11-ops-init",
+              "checklist": "v2026.W33.14 (待 r11-3 收口)"
             }
           ]
         },

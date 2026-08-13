@@ -1,0 +1,63 @@
+{
+  "treeId": "r11-ops-init",
+  "title": "运营纪律收官 + 会话初始化：6.3 树状态同步 + 6.4 会话初始化器 + O1 健康脚本修复",
+  "source": "M2-R11",
+  "week": "2026-W33",
+  "status": "active",
+  "verdict": "",
+  "completedAt": "",
+  "nodes": [
+    {
+      "nodeId": "r11-0",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "建树：规划 r11 范围与节点链",
+      "routedInput": "",
+      "brief": "briefs/r11-0-20260813173000.md",
+      "checkpoint": {
+        "progress": "范围定案：6.3 树状态同步（W33 全树 tree-op 与实际工作一致性盘点 + OP 登记一致性）+ 6.4 会话初始化器（合同加载/五件套装配/工作目录就绪盘点与最小实现，本地 TriLC 与服务器双端）+ O1 健康脚本 dirty 修复（CTO 方案 APPROVE：--porcelain -b 全量 + Dirty 维度，~10 行，修复后补跑复核）。节点链：r11-1 小全执行 → r11-2 小柯验证（带 O2 裁决口径）→ r11-3 小贾收口 v2026.W33.14。",
+        "artifactCommit": "",
+        "resumePoint": "树已建，r11-1 开工"
+      }
+    },
+    {
+      "nodeId": "r11-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "执行 6.3 + 6.4 + O1 修复",
+      "routedInput": "r11-0:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r11-2",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "独立验证 6.3 + 6.4 + O1",
+      "routedInput": "r11-1:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    },
+    {
+      "nodeId": "r11-3",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口判定 → 清单 v2026.W33.14",
+      "routedInput": "r11-2:checkpoint",
+      "brief": "",
+      "checkpoint": {
+        "progress": "",
+        "artifactCommit": "",
+        "resumePoint": ""
+      }
+    }
+  ]
+}
