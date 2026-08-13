@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (INCIDENT 补充登记：key 侧清理 + 验收要求升级入树)",
-        "version": "1.13.0",
-        "lastUpdated": "2026-08-13T20:30:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (r3-1 完成：ff725ef 16 处 + ea3936f 4 处；flash 超范围 APPROVE；FALLBACK_MAP 缺口路由小狄)",
+        "version": "1.14.0",
+        "lastUpdated": "2026-08-13T20:40:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -41,7 +41,7 @@
             "treeId": "prod-grade-3-model-default-fix",
             "title": "默认模型名硬编码错配紧急修复 — tmv-deepseek-v4-pro（第三树·轻量）",
             "nodes_total": 4,
-            "nodes_done": 1,
+            "nodes_done": 2,
             "status": "active",
             "path": "trees/prod-grade-3-model-default-fix/tree-op.json",
             "related": "CEO 实测缺陷：deepseek-v4-pro 硬编码 10 处与 tmv-* 注册表错配 · 最高优先"
@@ -215,6 +215,7 @@
         "bb72746 快核通过（小柯）：①事实锚与实现零共享表达式（硬编码 vs hop-count 推导）不同源确认②原位瞬态变异实证强制命中断言真实（真仓换旧实现→MUST hit/env 空串 fallthrough 报红→还原 7/7 绿）③实现侧 0 行改动确认（git diff c8aaae0 bb72746）31/31 + tsc clean。小柯方法论勘误（自报）：上轮 scratch 变异测试位置恰使旧实现两跳落在真工作区根而意外命中，结论成立但证据机制需更正——已改为原位瞬态变异并记入其验证方法（位置依赖函数的变异必须原位做）。可移植性建议（非阻塞）：else 分支放宽为「undefined 或已存在的发现目录」防非标准根布局 workspace 误红，strict 命中仅保留事实锚存在主机——转小全后续测试触时顺手改——else 放宽已落地 702254a（assertRelaxedFallback：undefined 或已存在发现目录均合法，strict 命中仅事实锚主机），31/31 + tsc clean，本观察项闭环",
         "O-E1/O-E2（ENV-INJECT 段 1 验证观察，非阻塞）：O-E1 install.bat 模板工作区候选仅 2 个（D:/C:），MSI 脚本 3 个（含 USERPROFILE\\Code\u0007i）——ZIP 便携形态用户目录布局会 SKIP，建议对齐；O-E2 幽灵路径双警告语义冗余（纯文案）。均转小全后续顺手对齐",
         "INCIDENT-20260813-001（CEO 实测暴露真生产缺陷，修复树 prod-grade-3 承载）：TriCade UI 聊天报 Model \\\"deepseek-v4-pro\\\" not in registry. Available: tmv-*，trilc chat 无回复——根因=默认模型名硬编码 'deepseek-v4-pro'（TriLC 6 + TriPilot 4 共 10 处）与 tmv-* 注册表错配（C12/C13 改造遗留）。教训：注册表变更必须同步默认值硬编码——收口时列入能力清单回归检查项",
-        "INCIDENT-20260813-001 补充（编排层 key 侧动作已执行）：① 本地安装态 key 缓存已清（加密 keys.json 删除，daemon 重启后从 TriMC 配置平面重拉）② 51 个 s3-backup 明文历史文件已清（S3→S2 迁移的明文 key 备份残留，安全卫生项）。教训追加：key 缓存刷新纳入安装/升级 checklist。r3 验收升级=真实模型调用成功（非 healthz 级）+ CEO TriCade 聊天最终验收（问小贾正常回复 + 答出 W34 周平面）"
+        "INCIDENT-20260813-001 补充（编排层 key 侧动作已执行）：① 本地安装态 key 缓存已清（加密 keys.json 删除，daemon 重启后从 TriMC 配置平面重拉）② 51 个 s3-backup 明文历史文件已清（S3→S2 迁移的明文 key 备份残留，安全卫生项）。教训追加：key 缓存刷新纳入安装/升级 checklist。r3 验收升级=真实模型调用成功（非 healthz 级）+ CEO TriCade 聊天最终验收（问小贾正常回复 + 答出 W34 周平面）",
+        "r3-1 完成登记：① 超范围裁决 APPROVE——flash 8 处与 pro 同一注册表错配面（heartbeat/cron/compact 默认值全部失效同类），顺手修正确，commit 已注明 ② 真第二问题定位：agent-core FALLBACK_MAP tmv 条目 fallback 目标仍是旧名（tmv-deepseek-v4-pro → 'deepseek-v4-flash'，注册表已无此名）→ Tier 2 恢复永远无效——共享 core 缺口，按纪律未动 agent-core，路由小狄独立变更通道 ③ 错误链不吞确认：TriModel 抛错 → agentLoop 三级级联 → SSE error → TUI onError → ErrorMessage 渲染，chat 显示路径无第二问题"
     ]
 }
