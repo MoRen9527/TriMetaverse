@@ -36,14 +36,14 @@
     {
       "nodeId": "r15-2",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证 ③b + ④",
       "routedInput": "r15-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r15-2-20260813111522.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "独立验证完成，总 PASS。③b 现役事实：env.ts:91 TRIMC_BASE_URL 读取路径实读 + 用户环境变量实测服务器地址 + 现役 8711 trimc=connected（degraded→connected 即联通面生效证据）+ 服务健康无回归。④ 服务器面 ssh 独立实测：trimc.service active + 8710 healthz ok + 进程形态 node dist/src/index.js（非 tsx）+ agent-core 真实目录（symlink 修复确认）+ tsx-bak 回滚稿存在可执行 + unit 文件 ExecStart/Restart 正确。双向契约前半段现役完成（本地 POST 服务器心跳端点契约响应）。blocked #3 解锁独立确认（8710 本地直达）。坑记录（HUP/symlink/tar -h）复核准确。观察：O8 现役 version 仍 1.0.0（UAC 安装 #5 未执行，运营日后复验）；服务器 healthz 字段精简属既有实现差异。",
+        "artifactCommit": "brief + tree-op commit",
+        "resumePoint": "r15-3 小贾收口：M3-R3 登记 + blocked 清单更新（#3 解锁/#2 部分/#4 部分）+ O8 随 #5 执行后复验"
       }
     },
     {
