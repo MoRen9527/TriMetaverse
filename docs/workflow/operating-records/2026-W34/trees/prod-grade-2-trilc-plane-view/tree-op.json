@@ -34,14 +34,14 @@
     {
       "nodeId": "r2-2",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "实现（TriLC 仓，按 r2-1 方案）：中改护栏——研发环主力实现 + TriMC 审核 + 独立验证两票；只动 TriLC 仓",
       "routedInput": "r2-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r2-2-20260813185343.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "完成。P1：weekly-plane-root.ts 纯函数（env 显式须存在 → workspace sibling 探测 existsSync 确认 → undefined，绝不创建目录，先例 resolveFromWorkspace）+ multi-project-router.ts 加 companyWeeklyPlaneDir?/resolveProjectPaths 第二参/ensureProjectDirs 透传不创建公司轨/头注释两轨边界 + env.ts weeklyPlaneRoot? 透传；装配点摸底确认 src 无直接调用点，默认发现即装配零改动。P2：新增 7 用例全绿（weekly-plane-root 4 + router 两轨 3 含 ensureProjectDirs 不创建公司轨断言），既有 24 router 测试零改动全过，tsc clean；全量 285/286 中 1 失败为 test/tui/components.test.ts 既有环境失败（ink-testing-library 未声明依赖，import 加载期即抛，与本次改动无关，git 证据链）。P3：VERIFICATION.md 增补 §2.2a 两轨语义。P4：TriCade 打包侧 env 注入跟进项登记（归仓 TriCade 通道，编排层路由）。commit 4b575b3（push sg-server 本地被权限拒，编排层补齐）。",
+        "artifactCommit": "4b575b3",
+        "resumePoint": "r2-3 小柯独立验证：源码态 + 模拟安装态两态（公司周平面可见 + 隔离语义不回归 + 向后兼容）；验证点建议：env 显式/未配置/幽灵路径三态、ensureProjectDirs 不创建公司轨断言、既有 24 router 测试零改动复核、TUI 既有失败归仓登记"
       }
     },
     {

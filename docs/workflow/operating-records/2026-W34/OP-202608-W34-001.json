@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (r2-1 方案定案：TRILC_WEEKLY_PLANE_ROOT + 两轨只读并存 + 两态 + 零回归；r2-2 派发)",
-        "version": "1.2.0",
-        "lastUpdated": "2026-08-13T18:50:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (r2-2 收口 + 迁移 carry-over 面核查：nextActions 重登记 3 条 + O-D1-4 缺口登记)",
+        "version": "1.4.0",
+        "lastUpdated": "2026-08-13T19:10:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -41,7 +41,7 @@
             "treeId": "prod-grade-2-trilc-plane-view",
             "title": "TriLC 周平面读取路径契约统一 — TriCade 可见公司周平面（生产级开发期第二树）",
             "nodes_total": 5,
-            "nodes_done": 2,
+            "nodes_done": 3,
             "status": "active",
             "path": "trees/prod-grade-2-trilc-plane-view/tree-op.json",
             "related": "CEO 指令：全真迁移后 TriCade 看不到 W34 的契约缺口 · 本树只动 TriLC 仓"
@@ -149,7 +149,26 @@
         }
     ],
     "doneTreesThisWeek": [],
-    "nextActions": [],
+    "nextActions": [
+        {
+            "id": "D1-B-CORRECT-20260817-001",
+            "action": "D1 B 段数据校正（重登记，编排层写权）：真实迁移已用修复后脚本跑完——W34 文件 §1 五行现为 7w+ ⚠️、§4 五行现为 8w+ ⚠️⚠️，两表仍差一档（B 段校正未随迁移执行）；校正=§1 五行 7w+ ⚠️ → 8w+ ⚠️⚠️ 对齐 §4 实效值（CARRY-001/003/004/005/006，CARRY-003 闭合信息在状态列）；CEO 裁决按 ID 去重阅读",
+            "ownerRole": "CEOChiefOfStaff",
+            "status": "open"
+        },
+        {
+            "id": "O-D1-3-AUTOTEST-20260814-001",
+            "action": "O-D1-3 自动化单测缺失（carry-over）：TriCompany HEAD 无 weekly_plane 自动化单测文件——两型 fixture（§1 长行/§4 短行）落为自动化测试；裁量权 CTO 小狄，随 TriCompany runtime 后续变更通道处理",
+            "ownerRole": "CTO",
+            "status": "open"
+        },
+        {
+            "id": "TRICADE-ENV-INJECT-20260817-001",
+            "action": "TriCade 打包侧 TRILC_WEEKLY_PLANE_ROOT 注入（r2-2 跟进项，本树不做）：安装态 env 显式路径需由 TriCade 打包/安装脚本注入；归仓 TriCade 打包通道（TriMetaverse scripts + .github CI），路由编排层",
+            "ownerRole": "CEOChiefOfStaff",
+            "status": "open"
+        }
+    ],
     "carry_over_from_w31": [
         "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
         "CARRY-20260728-003: TriCade MSI CI — 6w+ ✅ W32 已实质完成（目录治理+MSI 自动化），建议关闭",
@@ -179,6 +198,7 @@
         "r1-3 观察项处置（r1-4 收口）：O1 notify render_only 不投递邮件——决策接受（审计由 .shift-ade.json + git commit 承担），SMTP 配置（notify.json + NOTIFY_CONFIG）登记跟进项非阻塞；O2 控制台审计进 /tmp/trimc-run.log 无轮转——runbook 增补项；O4 r1-2 观察项已关闭（b7eeb50 修复）；O5 宕至 W35 才恢复则 migrate exit 1 响亮失败（不静默腐化）——已知边界，人工处置",
         "周日触发前前置条件（小柯第三视角实证）：fleet 克隆必须与裸仓 dev 同步——复核中途实测一次 [rejected] fetch first（克隆 ccf1384c 落后裸仓 178bd9d9），不同步则迁移 commit 基于旧基、push 被拒、链在末步失败；现克隆=裸仓=178bd9d9 已同步。触发前若再有 root push/pull，执行后跑「克隆同步 + 裸仓 g+w sweep + 克隆 chown」三连（小柯复检脚本 1 分钟）——已纳入周日触发前 checklist",
         "REHEARSAL-20260813-001（CEO 指令真实根全链演练，编排层执行，结论：全链可用、周日自然触发信心充足）：①全链触发成功——HTTP 手动 run 完整 job（ID 全量 b00b0070-2f82-4e7d-a98c-de73e886834b）→ 五段链全 pass → fleet commit + push 裸仓成功（B1 修复实证）②幂等确认——当日 token 算 W32→W33（today+1 仍 W33），created=false + carry_over=skip，周日 08-16 跑即 W33→W34，数学符合 r1-1 设计 ③无痕回退——裸仓 update-ref + 克隆 reset --hard + clean，job 运行态复位（runCount=0/state null）④证据——演练 commit（裸仓对象库/reflog）+ run log。教训：消息里引用 job 必须全 ID（截断形式是口径坑），记入 runbook；历史 brief 中截断形式按「在树的不改」保留，活文件（OP/tree-op）已改全 ID",
-        "REHEARSAL-20260813-002（演练二期，编排层执行）：O1 已修复——CEO 要求全真实演练含邮件，QQ SMTP 配置已部署 /home/fleet/.trimetaverse/notify.json（0600），五段链 notify 真实投递成功（run log 实锤 [weekly_shift] notify: sent），CEO 查收中。暴露两个真问题（已修复）：①回退目标选错——一期回退用了 be4f80a1（应为演练前精确 HEAD a857ccaa）→ 裸仓与克隆分叉 → 二期 push 被拒 non-fast-forward（脚本行为暴露正确：run error exit 1 + 日志可查）→ 三端统一回 a857ccaa ②工作树属主污染——克隆混有 root 属主文件（历史 root git 操作残留）→ fleet reset 被拒 → 全量 chown fleet。教训入 runbook：演练回退目标必须记录并核对演练前精确 HEAD 不凭记忆；服务器侧 git 操作统一 fleet 身份（root 只做 chown/chgrp 修复）；O1 关闭。当前三端=a857ccaa、job 态复位、W34 零残留——无痕达成"
+        "REHEARSAL-20260813-002（演练二期，编排层执行）：O1 已修复——CEO 要求全真实演练含邮件，QQ SMTP 配置已部署 /home/fleet/.trimetaverse/notify.json（0600），五段链 notify 真实投递成功（run log 实锤 [weekly_shift] notify: sent），CEO 查收中。暴露两个真问题（已修复）：①回退目标选错——一期回退用了 be4f80a1（应为演练前精确 HEAD a857ccaa）→ 裸仓与克隆分叉 → 二期 push 被拒 non-fast-forward（脚本行为暴露正确：run error exit 1 + 日志可查）→ 三端统一回 a857ccaa ②工作树属主污染——克隆混有 root 属主文件（历史 root git 操作残留）→ fleet reset 被拒 → 全量 chown fleet。教训入 runbook：演练回退目标必须记录并核对演练前精确 HEAD 不凭记忆；服务器侧 git 操作统一 fleet 身份（root 只做 chown/chgrp 修复）；O1 关闭。当前三端=a857ccaa、job 态复位、W34 零残留——无痕达成",
+        "O-D1-4（W34 迁移面观察，小贾核查发现）：周平面迁移 carry-over 面两处缺口——① W34 unresolved-items 头部标题仍为「W32 未决事项」、平移说明仍写「从 W31 迁移至 W32」（头部改写不完整）② W33 OP nextActions 未随迁移平移进 W34（W33 risks 18 条全平移、nextActions 丢失，已人工重登记 D1-B/O-D1-3/TRICADE-ENV 三条）——转 TriCompany runtime 变更通道（weekly_plane 迁移脚本 carry_over 面），非阻塞"
     ]
 }
