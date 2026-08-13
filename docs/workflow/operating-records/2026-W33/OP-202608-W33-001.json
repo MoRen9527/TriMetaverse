@@ -103,9 +103,9 @@
     },
     {
       "id": "O2-B-20260813-001",
-      "action": "O2 B 方案（CTO 小狄自领）：agent-core 移除/@deprecated 死 schema 导出 + resolver 头注释修正 + TriCompany code-state.md 补 agent-core 模块登记与风险标注",
+      "action": "O2 B 方案（CTO 小狄自领）：agent-core 移除/@deprecated 死 schema 导出 + resolver 头注释修正 + TriCompany code-state.md 补 agent-core 模块登记与风险标注 — done（TriCompany commit 8836e88，5 文件 +33/-2；保留导出作 O2-A 重建锚点，弃用标注 + 死形状警示 + 首次模块登记）",
       "ownerRole": "CTO",
-      "status": "open"
+      "status": "done"
     }
   ],
   "carry_over_from_w31": [
