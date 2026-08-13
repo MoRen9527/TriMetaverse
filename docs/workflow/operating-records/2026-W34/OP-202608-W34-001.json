@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (r2 收口后补强 bb72746 登记：硬编码事实锚 + 强制命中断言)",
-        "version": "1.7.0",
-        "lastUpdated": "2026-08-13T19:40:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (ENV-INJECT 段 1 PASS 登记 + O-E1/O-E2 观察路由)",
+        "version": "1.11.0",
+        "lastUpdated": "2026-08-13T20:15:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -164,7 +164,7 @@
         },
         {
             "id": "TRICADE-ENV-INJECT-20260817-001",
-            "action": "TriCade 打包侧 TRILC_WEEKLY_PLANE_ROOT 注入（r2-2 跟进项，本树不做）：安装态 env 显式路径需由 TriCade 打包/安装脚本注入；归仓 TriCade 打包通道（TriMetaverse scripts + .github CI），路由编排层",
+            "action": "TriCade 打包侧 TRILC_WEEKLY_PLANE_ROOT 注入（r2-2 跟进项，本树不做）：安装态 env 显式路径需由 TriCade 打包/安装脚本注入；归仓 TriCade 打包通道（TriMetaverse scripts + .github CI），路由编排层 — 实现 done（8574d51a：install-tricade.ps1 三态解析 + Phase 3.5 用户级注入 + NSSM AppEnvironmentExtra 适配；build-desktop.ps1 install.bat [3/4] setx 段；PS 语法解析 + WhatIf 实测命中），小柯验证中（WhatIf 三态 + 装后 User env 复核），随 v0.4.5-r15 构建进包 — 段 1 PASS（小柯独立验证：WhatIf 三态实测 + install.bat 模板 diff + 双文件 PS 语法独立解析；幽灵路径注入计数 0）；段 2 装后复核折入 5.2",
             "ownerRole": "CEOChiefOfStaff",
             "status": "open"
         }
@@ -201,6 +201,8 @@
         "REHEARSAL-20260813-002（演练二期，编排层执行）：O1 已修复——CEO 要求全真实演练含邮件，QQ SMTP 配置已部署 /home/fleet/.trimetaverse/notify.json（0600），五段链 notify 真实投递成功（run log 实锤 [weekly_shift] notify: sent），CEO 查收中。暴露两个真问题（已修复）：①回退目标选错——一期回退用了 be4f80a1（应为演练前精确 HEAD a857ccaa）→ 裸仓与克隆分叉 → 二期 push 被拒 non-fast-forward（脚本行为暴露正确：run error exit 1 + 日志可查）→ 三端统一回 a857ccaa ②工作树属主污染——克隆混有 root 属主文件（历史 root git 操作残留）→ fleet reset 被拒 → 全量 chown fleet。教训入 runbook：演练回退目标必须记录并核对演练前精确 HEAD 不凭记忆；服务器侧 git 操作统一 fleet 身份（root 只做 chown/chgrp 修复）；O1 关闭。当前三端=a857ccaa、job 态复位、W34 零残留——无痕达成",
         "O-D1-4（W34 迁移面观察，小贾核查发现）：周平面迁移 carry-over 面两处缺口——① W34 unresolved-items 头部标题仍为「W32 未决事项」、平移说明仍写「从 W31 迁移至 W32」（头部改写不完整）② W33 OP nextActions 未随迁移平移进 W34（W33 risks 18 条全平移、nextActions 丢失，已人工重登记 D1-B/O-D1-3/TRICADE-ENV 三条）——转 TriCompany runtime 变更通道（weekly_plane 迁移脚本 carry_over 面），非阻塞",
         "r2-3 独立验证 FAIL（阻塞 1 项，小柯实测）：源码态 sibling 发现深度缺陷——weekly-plane-root.ts:39 探测深度少一层（模块在 src/project/，'..','..' 只到 TriLC 根，落点 TriLC/TriMetaverse 不存在，实测 no-env 返回 undefined）；单测掩盖——expectedSiblingPath 用同一错误深度，本机 existsSync=false 走 else 分支，命中分支从未真实执行。修复：实现与测试期望同步改三层级（一行），修后命中分支成真实回归守卫。②③④ 验证面全 PASS（安装态三态/公司轨只读/隔离零回归）。打回小全修复 + 小柯 1 分钟重验后走 r2-4 收口",
-        "r2 树收口后补强（bb72746，测试-only）：测试期望改硬编码绝对路径事实锚（D:/Code/ai/TriMetaverse/docs/workflow/operating-records，注释声明独立事实不得从实现推导）+ 强制命中断言（workspace 存在时 no-env 必须精确命中，else 仅保留非 workspace 环境如 CI/服务器）；实现侧单一推导点不变；本机 31 全绿 + tsc clean。观察：事实锚为机器特定路径——workspace 迁移时断言条件自动落入 else 不报错但守卫静默失效，属接受的设计取舍，已转小柯快核"
+        "r2 树收口后补强（bb72746，测试-only）：测试期望改硬编码绝对路径事实锚（D:/Code/ai/TriMetaverse/docs/workflow/operating-records，注释声明独立事实不得从实现推导）+ 强制命中断言（workspace 存在时 no-env 必须精确命中，else 仅保留非 workspace 环境如 CI/服务器）；实现侧单一推导点不变；本机 31 全绿 + tsc clean。观察：事实锚为机器特定路径——workspace 迁移时断言条件自动落入 else 不报错但守卫静默失效，属接受的设计取舍，已转小柯快核",
+        "bb72746 快核通过（小柯）：①事实锚与实现零共享表达式（硬编码 vs hop-count 推导）不同源确认②原位瞬态变异实证强制命中断言真实（真仓换旧实现→MUST hit/env 空串 fallthrough 报红→还原 7/7 绿）③实现侧 0 行改动确认（git diff c8aaae0 bb72746）31/31 + tsc clean。小柯方法论勘误（自报）：上轮 scratch 变异测试位置恰使旧实现两跳落在真工作区根而意外命中，结论成立但证据机制需更正——已改为原位瞬态变异并记入其验证方法（位置依赖函数的变异必须原位做）。可移植性建议（非阻塞）：else 分支放宽为「undefined 或已存在的发现目录」防非标准根布局 workspace 误红，strict 命中仅保留事实锚存在主机——转小全后续测试触时顺手改——else 放宽已落地 702254a（assertRelaxedFallback：undefined 或已存在发现目录均合法，strict 命中仅事实锚主机），31/31 + tsc clean，本观察项闭环",
+        "O-E1/O-E2（ENV-INJECT 段 1 验证观察，非阻塞）：O-E1 install.bat 模板工作区候选仅 2 个（D:/C:），MSI 脚本 3 个（含 USERPROFILE\\Code\u0007i）——ZIP 便携形态用户目录布局会 SKIP，建议对齐；O-E2 幽灵路径双警告语义冗余（纯文案）。均转小全后续顺手对齐"
     ]
 }
