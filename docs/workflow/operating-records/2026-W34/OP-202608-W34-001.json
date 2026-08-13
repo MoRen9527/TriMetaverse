@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (生产级开发期第二树 prod-grade-2-trilc-plane-view 建树登记)",
-        "version": "1.1.0",
-        "lastUpdated": "2026-08-13T11:10:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (r2-1 方案定案：TRILC_WEEKLY_PLANE_ROOT + 两轨只读并存 + 两态 + 零回归；r2-2 派发)",
+        "version": "1.2.0",
+        "lastUpdated": "2026-08-13T18:50:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -41,7 +41,7 @@
             "treeId": "prod-grade-2-trilc-plane-view",
             "title": "TriLC 周平面读取路径契约统一 — TriCade 可见公司周平面（生产级开发期第二树）",
             "nodes_total": 5,
-            "nodes_done": 1,
+            "nodes_done": 2,
             "status": "active",
             "path": "trees/prod-grade-2-trilc-plane-view/tree-op.json",
             "related": "CEO 指令：全真迁移后 TriCade 看不到 W34 的契约缺口 · 本树只动 TriLC 仓"
