@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (巡检汇总终版登记：泄露单点 2 key 精确清单交编排层)",
-        "version": "1.23.0",
-        "lastUpdated": "2026-08-13T21:35:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (三件套分面登记：①③PASS ②待诊断重验；端口口径统一 8000 定案)",
+        "version": "1.25.0",
+        "lastUpdated": "2026-08-13T22:00:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -222,6 +222,8 @@
         "服务链拉起状态 + 架构级新缺口（编排层通报）：已拉起 TriStaciss 8000 + TriModel 3333（keys API 认证过、default_model=tmv-deepseek-v4-pro）+ .env 新 key + 安装态缓存清空待重拉。新缺口：TriStaciss /v1/models 返回空列表——provider_configs.json 为 2025-09 openrouter free models 历史配置（api_key 空）无 deepseek 后端——tmv-* 注册表模型的 provider 链实际无可用 DeepSeek 模型。裁决待小狄：A=TriStaciss 配 deepseek provider（config 级，恢复完整链）vs B=TriLC 模型层直连映射（TriStaciss 退役路径，架构级）",
         "TriStaciss 缺口裁决定案 A（CTO 小狄）：config 级修复——provider_configs.json 补 deepseek provider（api_key 纪律不进 git 走 env/0600 文件，base_url api.deepseek.com/v1，openai_compatible，enabled_models deepseek-v4-pro/flash）+ tmv-* 模型名映射实测核对（api-server 路由逻辑，openrouter 旧配置无 tmv-* 名必实测）；验证=小柯 r3-2 升级口径（/v1/models 含 tmv-* + 真实调用返回真实回复 + 重建后 TriCade 可用）；密钥 git 跟踪检查。否决 B 依据：刚闭环的 20+ 处 tmv-* 统一语义会被绕过方案立刻否定 + 改动面在验收窗口不可控 + 空 provider 属配置缺失非架构失败；B「TriStaciss 去留」记档另开架构树（CEO 级裁决）",
         "SEC-20260813-001（小柯预检查发现，密钥入 git 历史）：TriStaciss 仓 api-server/provider_configs.json.backup.20250907_210355 自 initial commit 8991d79 起被跟踪，含真实密钥（DeepSeek sk-fe34… + GLM 完整 key 各一；.gitignore 只防新增，历史仍在）；活跃 provider_configs.json 本身 gitignored 未跟踪 ✓。处置优先级：① 立即核两密钥吊销/轮换状态（未吊销立即吊销换新）② 确认吊销后 git 历史清除排期（filter-repo）+ 远端同步（sg-server）③ 小柯全仓巡检同类 tracked 密钥/备份（脱敏报告）。关联：编排层已清 51 个 s3-backup 明文历史文件（同类卫生线）——巡检补报（小柯，七仓 git grep 交叉）：泄露面收敛单点确认（仅 Tristaciss backup 一处真实密钥），其余命中全为占位符/示例形态，TriModel/TriPilot 代码类零命中；处置清单不变（吊销核实最优先 → 历史清除排期 → 远端同步检查）——巡检汇总终版（小柯）：七仓三法扫描（sk- 模式 + api_key 非空长值 + env/secret 类跟踪检查，全程读侧）——真实泄露单点终判：仅 Tristaciss backup 一处 2 key（DeepSeek sk-fe3…35 字符 + GLM 15a232…49 字符，2025-09-07 入历史；backup 内 14 providers 其余全空/占位）；六仓其余命中全为占位符（sk-notifi/sk-contro/sk-descri/sk-escala/sk-or-v1 形态）；TriModel/TriPilot 干净。吊销核查清单精确两项已交编排层",
-        "O-TS-1（TriStaciss 半成品历史遗留，编排层核证）：2026-07-14 anthropic 兼容入口改造（3 新增 + 5 修改 + 4 删除，与 commit abe5ba2 同期），非今日动作——处置=git stash 保留（--include-untracked 清晰消息），定案 A config 级实施完成后另议（该半成品可能正是后续 tmv-* 链相关改造，勿丢弃）"
+        "O-TS-1（TriStaciss 半成品历史遗留，编排层核证）：2026-07-14 anthropic 兼容入口改造（3 新增 + 5 修改 + 4 删除，与 commit abe5ba2 同期），非今日动作——处置=git stash 保留（--include-untracked 清晰消息），定案 A config 级实施完成后另议（该半成品可能正是后续 tmv-* 链相关改造，勿丢弃）",
+        "定案 A 终验全过（小全，8008 实跑）：/v1/models 四卡片（tmv-* 别名与真实名并存）+ 真实调用 PONG（resolvedProvider=deepseek/resolvedModel=deepseek-v4-pro/routePolicy=intent_cost_router_v1/usage 真实计数）。两个新事实：① TriStaciss 服务端口实为 8008（fastapi_stream.py 默认，非 8000）；Anthropic 兼容 /v1/messages 不在本服务——全链验证时 TriLC/TriModel 路由面端口引用需核对 ② config_manager env 覆盖逻辑坑：env 无值时 fallback 不读文件值、api_key 被置空——文件注入与 env 注入预期不一致，登记观察项（config_manager 行为坑，路由小狄评估）。provider_configs.json api_key 现含真实 key（未跟踪安全）",
+        "定案 A 三件套分面（小柯）：①/四卡片 PASS（TriModel 3333 + TriLC 8712 双视图，registry 11 模型别名+真实名并存）③密钥零入 git PASS（1d61daa 无密钥字面量、跟踪面仅已知 backup）②严格口径待重验——真实回复达成（SMOKE_OK + STREAM_OK）但 3/3 tmv-deepseek-v4-pro depth=0 失败走 fallback（最终回复疑经 DeepSeek 直连非 TriStaciss）+ TriStaciss 验证中途崩停；根因候选=鉴权（tmv-sk-dev-default vs 平台 key）或服务不稳定——小狄诊断 + TriModel 补 depth-0 失败原因日志。端口口径：小柯发现 TriModel 3 处 8000 默认引用（config.ts:54/keys.ts:76/trimetaverse.ts:32）——编排层已定统一 8000，默认值方向正确无需改（小柯 8008 建议反向作废），env 丢失静默断链观察保留。config_manager env 注入通过（缓存+新鲜拉取+真实调用）"
     ]
 }
