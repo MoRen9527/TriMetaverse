@@ -49,14 +49,14 @@
     {
       "nodeId": "r13-3",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证 7 项验收口径",
       "routedInput": "r13-2:checkpoint",
-      "brief": "",
+      "brief": "briefs/r13-3-20260813102110.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "10 项口径独立验证全部 PASS，零阻塞、零迁移丢失。① golden 防污：v1 11/11 + v2 decisionRights 14/14 用 git 历史旧代码重生成零 diff；等价性（现 adapter vs golden）零 diff。② 负路径 1.0/2.0 均 rejected 含迁移指引。③ strict 14/14。④ A 层旧 5 符号+@deprecated 零、B 层 TriLC ContractYaml + TriMC 6 符号零、三仓 tsc 零错误。⑤ TriLC 286/285/1 与声称一致。⑥ employee-registry 真实 source-agents 14 断言 6/6 绿 + 全量 455/452/2/1skip/0cancelled（D9：声称 454/451，+1 test 待溯源）。⑦ 双域 11 组抽查 3 份全等。⑧ O3 accessSync W_OK 实读 + win32 skip 设计确认。⑨ v0.4.3-r12 ZIP agent-core contracts 6 文件零旧符号（r12 基线 15 文件清零）。⑩ Step 1-5 commit 链 message 对应、golden 生成 09:39:10 早于 Step 1 commit 09:39:46。30 差异审计：全部 v1→v2 演进（合并/拆分/改写语义全覆盖），唯一真丢 test-engineer 禁 BusinessStrategy 裁决条款（v2 golden 已缺席=演进非迁移丢失，建议 CTO 评估回补）；D8：小全\"30 处\"计数不可复现（我方枚举 38 条/41 槽）。business-strategy family=Role 现状记录待 CTO 裁决。",
+        "artifactCommit": "brief + tree-op commit",
+        "resumePoint": "r13-4 小贾收口：M3-R1 登记 + D8/D9 以本简报计数为准 + test-engineer 条款回补转 CTO + business-strategy family 裁决入登记"
       }
     },
     {
