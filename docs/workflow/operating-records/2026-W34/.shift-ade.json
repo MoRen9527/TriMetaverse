@@ -1,0 +1,105 @@
+{
+  "objectType": "ADE_SHIFT",
+  "status": "pass",
+  "from_week": "W33",
+  "to_week": "W34",
+  "start_date": "2026-08-17",
+  "dry_run": false,
+  "steps": [
+    {
+      "step": "create",
+      "result": {
+        "status": "pass",
+        "summary": {
+          "created": true,
+          "dry_run": false,
+          "object_id": "OP-202608-W34-001"
+        },
+        "changes": [
+          {
+            "action": "created",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json",
+            "object_id": "OP-202608-W34-001"
+          }
+        ],
+        "errors": [],
+        "check_time": "2026-08-13T10:26:24.742649+00:00"
+      }
+    },
+    {
+      "step": "migrate",
+      "result": {
+        "status": "pass",
+        "summary": {
+          "migrated": true,
+          "from_week": "W33",
+          "to_week": "W34",
+          "trees_migrated": 11
+        },
+        "changes": [
+          {
+            "action": "retired",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json",
+            "week": "W33"
+          },
+          {
+            "action": "migrated",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json",
+            "trees": 11
+          }
+        ],
+        "errors": [],
+        "check_time": "2026-08-13T10:26:24.744228+00:00"
+      }
+    },
+    {
+      "step": "carry_over",
+      "result": {
+        "status": "written",
+        "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W34/OP-202608-W34-001.unresolved-items.md"
+      }
+    },
+    {
+      "step": "validate",
+      "result": {
+        "status": "pass",
+        "summary": {
+          "valid": true,
+          "total_checks": 16,
+          "errors": 0
+        },
+        "changes": [],
+        "errors": [],
+        "check_time": "2026-08-13T10:26:24.749516+00:00"
+      }
+    },
+    {
+      "step": "agent_close",
+      "result": {
+        "status": "pass",
+        "from_week": "W33",
+        "to_week": "W34",
+        "checks": {
+          "new_index_active": true,
+          "unresolved_items_present": true
+        },
+        "escalation_8w": [
+          "CARRY-001 | 8w+ ⚠️⚠️ | **推进**（P0 地基，三树链条上游）| 自研循环已 PASS，TUI 对齐是产品体验关键",
+          "CARRY-003 | 8w+ ⚠️⚠️ | **关闭** | W32 目录治理 + MSI 自动化已实质完成",
+          "CARRY-004 | 8w+ ⚠️⚠️ | 冻结维持 | 依赖 CARRY-001",
+          "CARRY-005 | 8w+ ⚠️⚠️ | **关闭或转归** | Openclaw 已被 TriLC 吸收替代，验证意义下降",
+          "CARRY-006 | 8w+ ⚠️⚠️ | 冻结维持 | 依赖 CARRY-001→004 链条"
+        ],
+        "errors": []
+      }
+    }
+  ],
+  "escalation_8w": [
+    "CARRY-001 | 8w+ ⚠️⚠️ | **推进**（P0 地基，三树链条上游）| 自研循环已 PASS，TUI 对齐是产品体验关键",
+    "CARRY-003 | 8w+ ⚠️⚠️ | **关闭** | W32 目录治理 + MSI 自动化已实质完成",
+    "CARRY-004 | 8w+ ⚠️⚠️ | 冻结维持 | 依赖 CARRY-001",
+    "CARRY-005 | 8w+ ⚠️⚠️ | **关闭或转归** | Openclaw 已被 TriLC 吸收替代，验证意义下降",
+    "CARRY-006 | 8w+ ⚠️⚠️ | 冻结维持 | 依赖 CARRY-001→004 链条"
+  ],
+  "check_time": "2026-08-13T10:26:24.750078+00:00"
+}

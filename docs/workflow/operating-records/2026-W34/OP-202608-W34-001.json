@@ -1,0 +1,174 @@
+{
+    "dependsOn": [
+        "OP-202608-W33-001"
+    ],
+    "objectType": "WEEKLY_INDEX",
+    "objectId": "OP-202608-W34-001",
+    "title": "TriMetaverse W34 周经营维护索引",
+    "ownerRole": "CEOChiefOfStaff",
+    "status": "active",
+    "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "version": "1.0.0",
+        "lastUpdated": "2026-08-13T10:26:24.742649+00:00",
+        "workflowTags": [
+            "每周维护",
+            "CEO 总助维护面",
+            "经营维护计划单"
+        ],
+        "latestActiveWeek": true,
+        "phase": "ceo-copilot-host-coordination",
+        "previousWeekRef": "docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json"
+    },
+    "priority": "high",
+    "timebox": {
+        "scope": "weekly",
+        "label": "2026-W34 当前周维护面",
+        "startAt": "2026-08-17T00:00:00+08:00",
+        "endAt": "2026-08-23T23:59:59+08:00"
+    },
+    "createdAt": "2026-08-13T10:26:24.742649+00:00",
+    "relatedModules": [
+        "TriMetaverse",
+        "TriCompany",
+        "TriLC",
+        "TriMC"
+    ],
+    "updatedAt": "2026-08-13T10:26:24.742649+00:00",
+    "activeTrees": [],
+    "doneTreesFromPreviousWeek": [
+        {
+            "treeId": "w33-weekly-migration-ade",
+            "title": "周平面迁移自动化 — 完整 ADE 五段闭环投产",
+            "nodes_total": 9,
+            "nodes_done": 9,
+            "status": "done",
+            "path": "trees/w33-weekly-migration-ade/tree-op.json",
+            "related": "W32 w33-cron-selfdev Track C 规格落地"
+        },
+        {
+            "treeId": "r7-eng-gate",
+            "title": "工程门禁域：构建通过 + 测试通过",
+            "nodes_total": 4,
+            "nodes_done": 4,
+            "status": "done",
+            "path": "trees/r7-eng-gate/tree-op.json",
+            "related": "M2-R7 3.1/3.2"
+        },
+        {
+            "treeId": "r8-base-exec",
+            "title": "基础执行域：git/文件/命令/编码/回滚",
+            "nodes_total": 4,
+            "nodes_done": 4,
+            "status": "done",
+            "path": "trees/r8-base-exec/tree-op.json",
+            "related": "M2-R8 1.1-1.5"
+        },
+        {
+            "treeId": "r9-eng-cross",
+            "title": "工程门禁收尾 + 跨模块起步：3.3 diff审查 + 3.4 安装态 + 4.1 sibling引用",
+            "nodes_total": 4,
+            "nodes_done": 4,
+            "status": "done",
+            "path": "trees/r9-eng-cross/tree-op.json",
+            "related": "M2-R9 3.3/3.4/4.1"
+        },
+        {
+            "treeId": "r10-cross-ops",
+            "title": "跨模块收尾 + 运营纪律开门：4.2 contracts + 4.3 六仓健康 + 6.1 OP 记录 + 6.2 周会",
+            "nodes_total": 4,
+            "nodes_done": 4,
+            "status": "done",
+            "path": "trees/r10-cross-ops/tree-op.json",
+            "related": "M2-R10 4.2/4.3/6.1/6.2"
+        },
+        {
+            "treeId": "r11-ops-init",
+            "title": "运营纪律收官 + 会话初始化：6.3 树状态同步 + 6.4 会话初始化器 + O1 健康脚本修复",
+            "nodes_total": 4,
+            "nodes_done": 4,
+            "status": "done",
+            "path": "trees/r11-ops-init/tree-op.json",
+            "related": "M2-R11 6.3/6.4 + O1-FIX"
+        },
+        {
+            "treeId": "r12-production-chain",
+            "title": "生产链域收官：5.1 MSI 构建 + 5.2 安装态（含 4.2 安装态实测）+ 5.3 服务管理 + 5.4 升级回滚",
+            "nodes_total": 4,
+            "nodes_done": 4,
+            "status": "done",
+            "path": "trees/r12-production-chain/tree-op.json",
+            "related": "M2-R12 5.1-5.4 + 4.2 安装态"
+        },
+        {
+            "treeId": "r13-contract-convergence",
+            "title": "M3 首树 · O2-A 合同真源统一：v3.0 schema + 双域迁移 + v1 退役 + O3/O4",
+            "nodes_total": 5,
+            "nodes_done": 5,
+            "status": "done",
+            "path": "trees/r13-contract-convergence/tree-op.json",
+            "related": "M3-R1 (O2-A) 合同真源统一"
+        },
+        {
+            "treeId": "r14-production-dualrun",
+            "title": "M3 生产双跑部署：双向心跳契约 + 生产仓就位 + 双跑 runbook + 部署动作记录",
+            "nodes_total": 5,
+            "nodes_done": 5,
+            "status": "done",
+            "path": "trees/r14-production-dualrun/tree-op.json",
+            "related": "M3-R2 生产双跑部署（部署就绪）"
+        },
+        {
+            "treeId": "r15-ops-day-ready",
+            "title": "M3-R3 运营日就绪：③b 联通面配置 + ④ TriMC 生产形态改造",
+            "nodes_total": 4,
+            "nodes_done": 4,
+            "status": "done",
+            "path": "trees/r15-ops-day-ready/tree-op.json",
+            "related": "M3-R3 (CEO 授权 ③b+④)"
+        },
+        {
+            "treeId": "prod-grade-1-trimc-weekly-cron",
+            "title": "TriMC scheduler 模块 — 定时触发周平面迁移五段链（生产级开发期首树）",
+            "nodes_total": 5,
+            "nodes_done": 5,
+            "status": "done",
+            "path": "trees/prod-grade-1-trimc-weekly-cron/tree-op.json",
+            "related": "生产级开发期阶段一 · TriMC 仓中等改造（研发环主力实现，TriLC 参与测试/CLI 段）"
+        }
+    ],
+    "doneTreesThisWeek": [],
+    "nextActions": [],
+    "carry_over_from_w31": [
+        "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
+        "CARRY-20260728-003: TriCade MSI CI — 6w+ ✅ W32 已实质完成（目录治理+MSI 自动化），建议关闭",
+        "CARRY-20260728-004: trilc TUI P1 — 6w+ ⚠️⚠️ frozen（等 P0）",
+        "CARRY-20260728-005: Openclaw daemon验证 — 6w+ ⚠️⚠️ frozen（建议关闭/转归，已被TriLC吸收替代）",
+        "CARRY-20260728-006: trilc TUI P2 — 6w+ ⚠️⚠️ frozen（等 P1）",
+        "RISK-20260728-001: DeepSeek classifier — active",
+        "REGR-001/004/005/007: P1 TUI回归 — 待修",
+        "w33-production-ops: 未完成节点 (w33-4 生产记录等) — W32 追踪",
+        "ade-full-lifecycle: W31 维护面主树, 节点平移 W32 继续"
+    ],
+    "risks": [
+        "BUG-20260805-003 处置状态更新（2026-08-13 晚）：r12-2 验证时的\"未修未声明\"已补齐——小全修复 yoga 别名（89ad689）+ smoke 30/30，ink-testing-library 残留声明归 CARRY-001；独立验证待小柯安排",
+        "O1 修复后新暴露 11 仓存量 dirty（TriMem 16 / TriStaciss 14 / TriTest 8 / TriDeployment 6 / TriDev 6 / TriTraining 4 / TriAvatar 2 / TriGateway 2 / vscodium 1 / TriCompany 15 / TriModel 1 项）——重启前遗留，待各仓 owner 清理处置（r11-2 小柯发现）",
+        "5项 carry-over 6w+，CARRY-001/004/005/006 逼近 8w CEO 升级线 — W33(8/10) 首周裁决",
+        "BUG-20260805-001: TriLC Read 工具 tool_result 空串 — 排 TriLC 侧修",
+        "BUG-20260805-002: 安装版 healthz version 报 0.1.0 — done（2026-08-13 小全修复三处：build-desktop.ps1 注入 -Version 提取 + WriteAllText 无 BOM；build-tricade.yml 注入 CI calver；TriLC env.ts c6b635d BOM strip 防御。根因链：PS 5.1 Set-Content UTF8 写 BOM → JSON.parse 抛错 → fallback '1.0.0'，写死值与 fallback 相同掩盖了解析失败。小柯独立验证 PASS：v0.4.3 隔离实例 healthz version 实测 0.4.3。O7 观察：CI workflow 写端仍用 Set-Content -Encoding UTF8，被读端 strip 中和无害，建议 CI 侧改 WriteAllText 无 BOM 彻底闭环）",
+        "BUG-20260805-003: MSI 打包缺 yoga-layout 别名 — done（2026-08-13 小全修复：TriLC package.json 加 npm 别名 89ad689 → components-smoke 30/30 转绿。小柯独立验证 PASS：smoke 独立重跑 30/30；残留 components.test.ts 以 ERR_MODULE_NOT_FOUND ink-testing-library 失败（1 fail 无挂起，D10 表述修正——r7 基线已改善，挂点从 yoga 变为 ink 缺依赖），归 CARRY-001 TUI 链）",
+        "版本 revision 未自动递增（当前手动默认1）— 需改自动计数",
+        "INCIDENT-20260814-001: r1-2 小全 worktree 事故（已恢复，独立复核 PASS）——git worktree remove --force 穿透 npm file: 依赖 junction，误删 TriCompany/packages/agent-core 工作区 + TriModel 全目录；agent-core 已 git restore 恢复、TriModel 已从 sg-server 克隆恢复（HEAD a445b0e 与 /srv/git 及舰队克隆一致）；小贾独立复核：TriCompany status 无 agent-core 删除项且文件齐全、TriModel HEAD/status 干净；残留风险=TriModel 被删前未 push 本地提交不可验证（服务器 HEAD 一致表明大概率没有）；预防=baseline 验证改只读方式、禁 worktree+npm install 组合，junction 与 git worktree 交互危险列入 Windows 纪律（关联 W33 周记 Windows 痛点篇）",
+        "r1-2 P4 环境风险 2 项（CTO 正式认定 APPROVE，A' 落地态）：① Node v18.20.8 < engines \">=20.0.0\"——engines 下调 \">=18.20.0\" 已 commit；新代码 Node 18 API 面无禁项确认（禁 import.meta.dirname/fs.glob/node:sqlite/toSorted/process.loadEnvFile）；restart 三查：journalctl 无错 + healthz cron 块（已验）+ GET /internal/v1/cron/status 200（折入 r1-3）② Python 3.6.8 实测不兼容 → A' 落地 + 正式认定：python38（3.8.17）主用（模板显式 python3.8、dry-run 门禁全过），三项影响面核查带证据（3.6 默认未动仅 squid-allowlist-sync 消费、fleet 降权两解释器可执行、五段链纯 stdlib）；python3.11 保留为备用解释器不卸载；回滚一级=模板秒切 3.11、二级=dnf remove 回 3.6+回移（B 兜底）；C docker 备选未启用",
+        "r1-2 附加风险（小狄标注）：agent-core scheduler 从未在服务器进程实例化——P4 部署 smoke 为首次实战，暴露问题按共享 core 缺口通道升级，不就地改共享包",
+        "TIER-ASSERT-20260814-001（CTO 小狄审核发现，非阻塞）：全量测试 488/491 的 2 条 pipeline-integration tier 断言失败（期望 requires tier \"main\"，agent-core canUseTool 现产 \"heartbeat\"）——非 r1-2 回归，漂移归因 r13 合同收敛流（agent-core 9cd325b）；修复通道：TriMC 仓小改单票，语义确认小狄 owner，登记 nextActions",
+        "OBS-20260814-002（CTO 小狄观察项，已闭环）：① runbook §2 已补 pull 执行身份（root pull 或 runuser -u fleet）；执行中发现真问题——root pull 在 /srv/fleet/TriMetaverse/.git 残留 838 个 root 属主文件致 fleet git 段 index 不可写，已 chown -R fleet:fleet .git + 实测 ADD-OK/NOOP-OK，修正步骤入 runbook（ebe378a）② /home/fleet 实测存在（fleet:fleet 700），HOME 覆盖有效",
+        "r1-3 验证 CONDITIONAL_PASS → 修复后 PASS（编排层执行 + 小全复验 + 小柯兜底复核第三视角三确认，r1-4 收口 APPROVE）：B1 fleet safe.directory 全局 config 已加（dry-run push Everything up-to-date exit 0，修复前 128；发现重复登记两条功能无碍，去重转编排层顺手清理）B2 裸仓 5 个 loose 目录 g+w（find 复查 0 剩余 + 03 目录 fleet 写探针 PROBE_WRITE_OK）R1 克隆 .git chown（root 属主文件计数 0）；R1 复发性质实证——root pull 复发三次（838/26/10 文件）均 chown 归零，runbook §2.3 已定「每次 pull 后必跑」；B2/R1 机制性复发：周日触发前若有编排层 root push/pull，需触发前一并复核（小柯 1 分钟结论通道）；自然触发链完整——主路径周日 08-16 23:00 cron 自动首跑，兜底 trimc cron run b00b0070-2f82-4e7d-a98c-de73e886834b（全 ID）",
+        "r1-3 发现缺陷/误判（CTO 评估完毕，修先行定案）：D1 carry_over bump 正则列序假设缺陷——§4 短行周数列第 2 列命中、§1 长行第 5 列静默落空（真实数据实锤：同一 CARRY-001 §1 表 6w+ vs §4 表 7w+）；修先行（周六 08-15 中午截止）：a) 代码修复逐行处理（仅 | 开头含 CARRY-\\d+ 表行 bump 首个 Nw+ 令牌 + 重算 4w/8w 标记）b) W33 §1 计数一次性对齐 §4 实效值（编排层写权，纳入周日触发前 checklist）；未完成则接受一期（迁移照跑无数据丢失，W34→W35 生效）；通道 TriCompany runtime 研发环（本地发起 + 单票审核）。O3 stagger 启发式（TOP_OF_MINUTE_CRON_RE 误读 0 23 * * 0 为 sub-hourly）——对本树影响零/正面（stagger=0 固化进 jobs.json，精确 23:00 触发），登记 agent-core backlog 低优先，激活条件=未来多 job 整点同发场景",
+        "r1-3 观察项处置（r1-4 收口）：O1 notify render_only 不投递邮件——决策接受（审计由 .shift-ade.json + git commit 承担），SMTP 配置（notify.json + NOTIFY_CONFIG）登记跟进项非阻塞；O2 控制台审计进 /tmp/trimc-run.log 无轮转——runbook 增补项；O4 r1-2 观察项已关闭（b7eeb50 修复）；O5 宕至 W35 才恢复则 migrate exit 1 响亮失败（不静默腐化）——已知边界，人工处置",
+        "周日触发前前置条件（小柯第三视角实证）：fleet 克隆必须与裸仓 dev 同步——复核中途实测一次 [rejected] fetch first（克隆 ccf1384c 落后裸仓 178bd9d9），不同步则迁移 commit 基于旧基、push 被拒、链在末步失败；现克隆=裸仓=178bd9d9 已同步。触发前若再有 root push/pull，执行后跑「克隆同步 + 裸仓 g+w sweep + 克隆 chown」三连（小柯复检脚本 1 分钟）——已纳入周日触发前 checklist",
+        "REHEARSAL-20260813-001（CEO 指令真实根全链演练，编排层执行，结论：全链可用、周日自然触发信心充足）：①全链触发成功——HTTP 手动 run 完整 job（ID 全量 b00b0070-2f82-4e7d-a98c-de73e886834b）→ 五段链全 pass → fleet commit + push 裸仓成功（B1 修复实证）②幂等确认——当日 token 算 W32→W33（today+1 仍 W33），created=false + carry_over=skip，周日 08-16 跑即 W33→W34，数学符合 r1-1 设计 ③无痕回退——裸仓 update-ref + 克隆 reset --hard + clean，job 运行态复位（runCount=0/state null）④证据——演练 commit（裸仓对象库/reflog）+ run log。教训：消息里引用 job 必须全 ID（截断形式是口径坑），记入 runbook；历史 brief 中截断形式按「在树的不改」保留，活文件（OP/tree-op）已改全 ID",
+        "REHEARSAL-20260813-002（演练二期，编排层执行）：O1 已修复——CEO 要求全真实演练含邮件，QQ SMTP 配置已部署 /home/fleet/.trimetaverse/notify.json（0600），五段链 notify 真实投递成功（run log 实锤 [weekly_shift] notify: sent），CEO 查收中。暴露两个真问题（已修复）：①回退目标选错——一期回退用了 be4f80a1（应为演练前精确 HEAD a857ccaa）→ 裸仓与克隆分叉 → 二期 push 被拒 non-fast-forward（脚本行为暴露正确：run error exit 1 + 日志可查）→ 三端统一回 a857ccaa ②工作树属主污染——克隆混有 root 属主文件（历史 root git 操作残留）→ fleet reset 被拒 → 全量 chown fleet。教训入 runbook：演练回退目标必须记录并核对演练前精确 HEAD 不凭记忆；服务器侧 git 操作统一 fleet 身份（root 只做 chown/chgrp 修复）；O1 关闭。当前三端=a857ccaa、job 态复位、W34 零残留——无痕达成"
+    ]
+}
