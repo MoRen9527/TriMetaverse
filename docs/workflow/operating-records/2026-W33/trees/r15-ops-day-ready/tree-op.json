@@ -23,14 +23,14 @@
     {
       "nodeId": "r15-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "执行 ③b + ④",
       "routedInput": "r15-0:checkpoint",
-      "brief": "",
+      "brief": "briefs/r15-1-20260813111500.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "③b: setx TRIMC_BASE_URL → POST /shutdown 优雅停（重启前 healthz uptime 12205s 已记录）→ Start-Process 重启（bash & 方式进程死亡一次，登记规范）→ 实际 trimc=connected（防火墙实际放行，与预期 degraded 不符如实记录）→ 恢复对齐演练完成（recovered→connected+replay 空）。④: 本地 tsc dist（rootDir=→dist/src/index.js）→ 服务器发现 file: 依赖失效 symlink（指向 /d/Code/... Windows 路径）→ tar -h 跟随打包 agent-core 真实内容替换 → trimc-start.sh 切 node dist/src/index.js（tsx-bak 回滚稿就位）→ systemctl restart → active + 服务器 healthz ok + 心跳端点向后兼容实测。blocked 更新: #3 已解锁（实测连通）、#2 部分解锁（dist 部署替代 pull）、#1/#5 仍 blocked、#4 部分完成记 M3 后续。",
+        "artifactCommit": "TriMC: chore(r15-1) package-lock 同步；TriMetaverse: unit 稿（trimc-service-dist/tsx-rollback）+ 简报 + tree-op（收尾 commit）",
+        "resumePoint": "r15-2 小柯验证——提示 4 项已写简报末节：③b connected 日志证据 / ④ ssh systemctl active + 服务器 healthz / 心跳双向间接验证（30s+ 无 stale 告警）/ 回滚稿就位（tsx-bak + reg delete）"
       }
     },
     {

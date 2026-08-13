@@ -1,0 +1,21 @@
+# TriMC systemd unit — 修改稿（④ dist 生产形态）
+# 目标路径: /etc/systemd/system/trimc.service
+# 回滚稿: 将 ExecStart 改回 npx tsx src/index.ts（见 r15-1 简报回滚节）
+# 注意: TriMC tsconfig rootDir="." → 产物在 dist/src/index.js（非 dist/index.js）
+
+[Unit]
+Description=TriMC Meta Controller (dist production form)
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/fleet/TriMC
+ExecStart=/usr/bin/env node dist/src/index.js
+Restart=on-failure
+RestartSec=5
+Environment=NODE_ENV=production
+# 沿用 M1 部署的环境（若 unit 现有 EnvironmentFile 请保留）
+# EnvironmentFile=/srv/fleet/TriMC/.env
+
+[Install]
+WantedBy=multi-user.target

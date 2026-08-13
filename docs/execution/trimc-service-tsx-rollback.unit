@@ -1,0 +1,18 @@
+# TriMC systemd unit — 回滚稿（M1 dev tsx 直跑形态）
+# 目标路径: /etc/systemd/system/trimc.service
+# 用于 ④ dist 部署异常时的即时回滚：sudo cp 本文件回 /etc/systemd/system/trimc.service && sudo systemctl daemon-reload && sudo systemctl restart trimc
+
+[Unit]
+Description=TriMC Meta Controller (M1 dev tsx form)
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/fleet/TriMC
+ExecStart=/usr/bin/env npx tsx src/index.ts
+Restart=on-failure
+RestartSec=5
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
