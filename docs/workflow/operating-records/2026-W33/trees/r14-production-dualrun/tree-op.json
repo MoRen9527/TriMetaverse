@@ -49,14 +49,14 @@
     {
       "nodeId": "r14-3",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证：runbook 可执行性 + fallback WhatIf + 部署清单完整性",
       "routedInput": "r14-2:checkpoint",
-      "brief": "",
+      "brief": "briefs/r14-3-20260813104603.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "独立验证完成，总 PASS。A 心跳接线：三处代码实读（双阈值 30s/180s + 2 次回归 known + 时钟注入 + 端点响应向后兼容 + 10s 定时器 unref/stop）+ markNodeUnknown 有调用方 + 心跳单测 5/5 + 全量 460/457/2/1skip 与声称精确一致。B 产物 v0.4.4：隔离实例实测 healthz 0.4.4 + 14/14 v3 实载 + family=Registry + forbidden 6 条（含回补）。C runbook 可执行（D11：回滚场景 1 路径写 index.js 应改 cli.js start）。D TriLC 零改动（CLEAN，HEAD 25439ca）。E 观察项确认：agent-core test/ 9 文件进包，建议 exclude。服务器面独立实测：ssh 可达 + trimc.service active/enabled + 本地领先 4 commits（runbook \"3+\" 准确）。现役 8711 全程未扰动。",
+        "artifactCommit": "brief + tree-op commit",
+        "resumePoint": "r14-4 小贾收口：M3 双跑登记 + D11 runbook 修订 + E exclude 登记 + 服务器面盘点 SHA 滚动更新"
       }
     },
     {
