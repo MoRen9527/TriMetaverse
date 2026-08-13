@@ -34,14 +34,14 @@
         {
             "nodeId": "r4-2",
             "agent": "TestEngineer",
-            "status": "pending",
+            "status": "done",
             "action": "独立验证（小狄门禁口径）：① 既有工具测试预期零改动（diff 核查测试文件仅新增不改旧）② 新增 ctx 传递断言两型实测（ctx.cwd 相对路径解析基准命中 + ctx 缺失回退 process.cwd）③ C 侧 1973 组装断言实测（带 systemPrompt 请求含 hint、不带走 defaultSystemPrompt 原路径）④ 开发态行为零变化回归（ctx.cwd===process.cwd() 场景全绿）⑤ TriMC 同款三处验证 + executeTool 透传防误用标记核实 ⑥ 观察项记录：修复后模型若仍显式传 Documents 路径属模型行为面非代码缺陷，验证轮单独记录不判回归",
             "routedInput": "r4-1:checkpoint",
-            "brief": "",
+            "brief": "briefs/r4-2-20260814033515.md",
             "checkpoint": {
-                "progress": "",
-                "artifactCommit": "",
-                "resumePoint": ""
+                "progress": "六口径全过，判定 PASS（建议放行 r4-3 终审）。① 既有测试零改动：两仓 diff 仅新增 3 测试文件，无既有测试文件变更。② 两型断言实测：新增测试 TriLC 13/13 + TriMC 7/7 定向复跑全过；另做第二方法交叉验证（独立临时脚本在 dev 与父 commit 对比）——修复后 LS/Read/Glob/Grep/shell_exec（TriMC glob_search/shell_exec）传不同 ctx.cwd 全部跟随（dirA/dirB 切换、无泄漏），修复前父 commit 同传 ctx 全部忽略落 process.cwd()（与 BUG-20260814-001 根因吻合）。③ C 侧 2/2 过：传 prompt 含 hint 恰好一次、不带走 defaultSystemPrompt 原路径且不双注入。④ 回归基线：TriLC 299 用例 298 过 1 既有失败（components.test.ts，父 commit 3002424 复验确认既有、与本改动无关）；TriMC 503 用例 502 过 1 既有 skip；两仓 tsc --noEmit 全过。⑤ TriMC 三处 handler + executeTool 第三参透传核实；grep 确认无现役调用方（标注属实）；现役路径 agent-core loop.ts:589 一直传 {cwd: options.cwd}，修复闭合消费端链路。agent-core 零改确认（TriCompany 工作区干净，ToolContext/loop 传递为 3288e13 既有）。⑥ 观察项：模型行为面路径问题不判回归（单独记录）；TriLC components.test.ts 既有失败建议另开低优先级树（不在本树范围）。无阻塞性缺陷。",
+                "artifactCommit": "验证对象 TriLC a6df674 + TriMC 7e15ecf（未合并，维持迁移验收前护栏）",
+                "resumePoint": "r4-2 完成，转 r4-3 小狄验收口径终审"
             }
         },
         {
