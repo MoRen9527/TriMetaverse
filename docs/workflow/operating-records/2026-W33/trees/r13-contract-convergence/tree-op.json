@@ -3,9 +3,9 @@
   "title": "M3 首树 · O2-A 合同真源统一：v3.0 单一权威 schema + 双域 resolver 迁移 + v1 退役 + O3/O4",
   "source": "M3-R1 (O2-A)",
   "week": "2026-W33",
-  "status": "active",
-  "verdict": "",
-  "completedAt": "",
+  "status": "done",
+  "verdict": "APPROVE — O2-A 合同真源统一完成：10 项口径全 PASS、零迁移丢失（小柯独立验证）；family 收口更正 + forbidden 真丢转 CTO 评估（非阻塞）——M3-R1 收官",
+  "completedAt": "2026-08-13T21:30:00+08:00",
   "nodes": [
     {
       "nodeId": "r13-0",
@@ -62,14 +62,14 @@
     {
       "nodeId": "r13-4",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口判定 → M3-R1 登记",
       "routedInput": "r13-3:checkpoint",
-      "brief": "",
+      "brief": "briefs/r13-4-20260813213000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "收口判定 APPROVE（10 项口径全 PASS 零迁移丢失）。OP 1.8.0：M3-R1 done + r13 入 doneTrees（本周第 8 树）+ nextActions 登记 FAMILY-FIX / FORBIDDEN-LOSS 转 CTO。family 落笔待小狄 commit 后补登记。",
+        "artifactCommit": "OP + tree-op + 简报（收口 commit）",
+        "resumePoint": "M3-R1 收官。M3 剩余：生产双跑部署里程碑动作（CEO 授权轮次记录写明即可）"
       }
     }
   ]

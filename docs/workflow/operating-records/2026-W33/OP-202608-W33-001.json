@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (M3 首树建树: r13-contract-convergence + M3-R1 登记 + governance 变更路由)",
-    "version": "1.7.0",
-    "lastUpdated": "2026-08-13T20:30:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r13-4 收口: M3-R1 done + family/forbidden 转 CTO)",
+    "version": "1.8.0",
+    "lastUpdated": "2026-08-13T21:30:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,17 +29,7 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [
-    {
-      "treeId": "r13-contract-convergence",
-      "title": "M3 首树 · O2-A 合同真源统一：v3.0 schema + 双域迁移 + v1 退役 + O3/O4",
-      "nodes_total": 5,
-      "nodes_done": 1,
-      "status": "active",
-      "path": "trees/r13-contract-convergence/tree-op.json",
-      "related": "M3-R1 (O2-A) 合同真源统一"
-    }
-  ],
+  "activeTrees": [],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -104,6 +94,15 @@
       "status": "done",
       "path": "trees/r12-production-chain/tree-op.json",
       "related": "M2-R12 5.1-5.4 + 4.2 安装态"
+    },
+    {
+      "treeId": "r13-contract-convergence",
+      "title": "M3 首树 · O2-A 合同真源统一：v3.0 schema + 双域迁移 + v1 退役 + O3/O4",
+      "nodes_total": 5,
+      "nodes_done": 5,
+      "status": "done",
+      "path": "trees/r13-contract-convergence/tree-op.json",
+      "related": "M3-R1 (O2-A) 合同真源统一"
     }
   ],
   "nextActions": [
@@ -135,6 +134,18 @@
       "id": "GOV-20260813-001",
       "action": "Governance 口径同步（r13 建树登记，路由 CompanyGovernanceRegistry）：合同真源落点变化——docs/registry 11 份 v1 同树退役、source-agents 14 份为唯一合同真源 + 补 3 份缺口合同（business-strategy/customer-success-officer/deployment-engineer）。制度化归 CAO/registry owner，小贾负责路由与催办",
       "ownerRole": "CompanyGovernanceRegistry",
+      "status": "open"
+    },
+    {
+      "id": "FAMILY-FIX-20260813-001",
+      "action": "family 裁决落笔（CTO 小狄，r13-4 收口）：business-strategy family Role → Registry（一行 YAML + commit + code-state.md 登记）。依据：语义自证中央 registry 职能 / roster 13 员工名册不含 / Registry Routing 惯例 / v2 原值历史笔误。roster 不动",
+      "ownerRole": "CTO",
+      "status": "open"
+    },
+    {
+      "id": "FORBIDDEN-LOSS-20260813-001",
+      "action": "forbidden 真丢评估（CTO 小狄）：test-engineer forbidden 的\"替代 BusinessStrategy 做中央战略裁决\"条目在 v2 golden 已缺席（迁移前既成事实，非 B 段丢失，v1 原文 git 历史可取回）——评估是否回补",
+      "ownerRole": "CTO",
       "status": "open"
     }
     {
@@ -279,9 +290,9 @@
             {
               "id": "M3-R1",
               "name": "O2-A 合同真源统一（含 O3/O4）",
-              "status": "in_progress",
+              "status": "done",
               "tree": "r13-contract-convergence",
-              "checklist": "待 r13-4 收口"
+              "checklist": "r13-4 收口 APPROVE（2026-08-13）：10 项口径全 PASS 零迁移丢失；family 收口更正 + forbidden 真丢转 CTO 评估"
             }
           ]
         },
