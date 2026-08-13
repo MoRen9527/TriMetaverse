@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (TIER-ASSERT 闭环 done + OBS-20260814-002 闭环 + 触发口径同步确认)",
-    "version": "2.12.0",
-    "lastUpdated": "2026-08-14T09:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r1-3 验证 CONDITIONAL_PASS 登记：代码层 PASS + B1/B2/R1 三 ops 修复待执行 + D1/O3 转变更通道)",
+    "version": "2.13.0",
+    "lastUpdated": "2026-08-14T10:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -34,7 +34,7 @@
       "treeId": "prod-grade-1-trimc-weekly-cron",
       "title": "TriMC scheduler 模块 — 定时触发周平面迁移五段链（生产级开发期首树）",
       "nodes_total": 5,
-      "nodes_done": 3,
+      "nodes_done": 4,
       "status": "active",
       "path": "trees/prod-grade-1-trimc-weekly-cron/tree-op.json",
       "related": "生产级开发期阶段一 · TriMC 仓中等改造（研发环主力实现，TriLC 参与测试/CLI 段）"
@@ -218,7 +218,9 @@
     "r1-2 P4 环境风险 2 项（CTO 正式认定 APPROVE，A' 落地态）：① Node v18.20.8 < engines \">=20.0.0\"——engines 下调 \">=18.20.0\" 已 commit；新代码 Node 18 API 面无禁项确认（禁 import.meta.dirname/fs.glob/node:sqlite/toSorted/process.loadEnvFile）；restart 三查：journalctl 无错 + healthz cron 块（已验）+ GET /internal/v1/cron/status 200（折入 r1-3）② Python 3.6.8 实测不兼容 → A' 落地 + 正式认定：python38（3.8.17）主用（模板显式 python3.8、dry-run 门禁全过），三项影响面核查带证据（3.6 默认未动仅 squid-allowlist-sync 消费、fleet 降权两解释器可执行、五段链纯 stdlib）；python3.11 保留为备用解释器不卸载；回滚一级=模板秒切 3.11、二级=dnf remove 回 3.6+回移（B 兜底）；C docker 备选未启用",
     "r1-2 附加风险（小狄标注）：agent-core scheduler 从未在服务器进程实例化——P4 部署 smoke 为首次实战，暴露问题按共享 core 缺口通道升级，不就地改共享包",
     "TIER-ASSERT-20260814-001（CTO 小狄审核发现，非阻塞）：全量测试 488/491 的 2 条 pipeline-integration tier 断言失败（期望 requires tier \"main\"，agent-core canUseTool 现产 \"heartbeat\"）——非 r1-2 回归，漂移归因 r13 合同收敛流（agent-core 9cd325b）；修复通道：TriMC 仓小改单票，语义确认小狄 owner，登记 nextActions",
-    "OBS-20260814-002（CTO 小狄观察项，已闭环）：① runbook §2 已补 pull 执行身份（root pull 或 runuser -u fleet）；执行中发现真问题——root pull 在 /srv/fleet/TriMetaverse/.git 残留 838 个 root 属主文件致 fleet git 段 index 不可写，已 chown -R fleet:fleet .git + 实测 ADD-OK/NOOP-OK，修正步骤入 runbook（ebe378a）② /home/fleet 实测存在（fleet:fleet 700），HOME 覆盖有效"
+    "OBS-20260814-002（CTO 小狄观察项，已闭环）：① runbook §2 已补 pull 执行身份（root pull 或 runuser -u fleet）；执行中发现真问题——root pull 在 /srv/fleet/TriMetaverse/.git 残留 838 个 root 属主文件致 fleet git 段 index 不可写，已 chown -R fleet:fleet .git + 实测 ADD-OK/NOOP-OK，修正步骤入 runbook（ebe378a）② /home/fleet 实测存在（fleet:fleet 700），HOME 覆盖有效",
+    "r1-3 验证 CONDITIONAL_PASS（代码层 PASS，ops 阻塞 3 项待修复，修复命令 scratch 实证有效）：B1 fleet push 真裸仓被 git 2.43.7 safe.directory 拦死 exit 128（周日必败；修复=runuser -u fleet -- git config --global --add safe.directory /srv/git/TriMetaverse.git；模板 -c 内联无效已实证）B2 真裸仓 5 个锁定 loose 目录（03/79/7c/3a/90）无组写概率败 ~10-25%（修复=find .../objects -maxdepth 1 -not -perm -g=w -exec chmod g+w）R1 fleet 克隆 26 个 root 属主文件+1 锁定 dir（root pull 复发，重跑 runbook §2.3 chown）——修复执行路由小全，验证方法 r1-3 brief §3.3/§5",
+    "r1-3 发现缺陷/误判（转变更通道，非阻塞）：D1 carry_over 周数 bump 正则对 §1 长格式行静默不生效（§4 短行正常；真实 W33 数据同证）——TriCompany weekly_plane 脚本既有缺陷，转 TriCompany runtime 通道；O3 stagger 启发式对 0 23 * * 0 返回 0 的误判面——转 agent-core 变更通道；两通道 owner 均 CTO 小狄"
   ],
   "plans": [
     {
