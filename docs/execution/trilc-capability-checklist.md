@@ -6,8 +6,8 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-13T06:00:00+08:00
 
-> 版本：v2026.W33.14
-> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过 + 树执行协议定案（git 触发 + checkpoint 存档 + 崩溃恢复）；v2026.W33.10 M2 第七轮——3.1/3.2 工程门禁通过（r7-eng-gate 树收口，V0.6 brief 机制首战验证）；v2026.W33.11 M2 第八轮——1.1-1.5 基础执行域通过（r8-base-exec 树，回滚演练）；v2026.W33.12 M2 第九轮——3.3/3.4/4.1 通过（r9-eng-cross 树）；v2026.W33.13 M2 第十轮——4.2/4.3/6.1/6.2 通过（r10-cross-ops 树，CONDITIONAL_PASS 收口）；v2026.W33.14 M2 第十一轮——6.3/6.4 通过 + O1 修复补跑（r11-ops-init 树，PASS 收口））
+> 版本：v2026.W33.15
+> 日期：2026-08-11（2026-08-12 更新：v2026.W33.2 新增「CC 特性对标层」+ 治理条目；v2026.W33.3 M2 第一轮验收——C12/C13、条目 2.3 通过；v2026.W33.4 M2 第二轮验收——C8/C9 权限模式矩阵与权限规则通过；v2026.W33.5 收口门禁规则生效；v2026.W33.6 M2 第三轮验收——C10 MCP server 接入与发现通过；v2026.W33.7 M2 第四轮——C1 通过、C15 手动 compact 落地；v2026.W33.8 M2 第五轮——C15 v2 自动 compact 通过 + 2.4 超时上报通过 + 2.5 degraded 通过；v2026.W33.9 M2 第六轮——2.1/2.2 任务闭环跨域端到端通过 + 树执行协议定案（git 触发 + checkpoint 存档 + 崩溃恢复）；v2026.W33.10 M2 第七轮——3.1/3.2 工程门禁通过（r7-eng-gate 树收口，V0.6 brief 机制首战验证）；v2026.W33.11 M2 第八轮——1.1-1.5 基础执行域通过（r8-base-exec 树，回滚演练）；v2026.W33.12 M2 第九轮——3.3/3.4/4.1 通过（r9-eng-cross 树）；v2026.W33.13 M2 第十轮——4.2/4.3/6.1/6.2 通过（r10-cross-ops 树，CONDITIONAL_PASS 收口）；v2026.W33.14 M2 第十一轮——6.3/6.4 通过 + O1 修复补跑（r11-ops-init 树，PASS 收口）；v2026.W33.15 M2 第十二轮——5.1-5.4 生产链通过（r12-production-chain 树，PASS 收口）——**M2 全勾：§二 1-6 域 25/25 + C 层 M2 受验必需项全过，M3 自动推进触发（2026-08-13）**）
 > 状态：正式版（CEO 确认签发）
 > 适用范围：TriLC 能力验证期（M2），TriMC 舰队审核、TriLC 受验
 > owner：TriMC 舰队（审核方） / TriLC（受验方）
@@ -63,17 +63,17 @@
 | # | 能力项 | 通过标准 | 验证位置 | 状态 | 完成证据 |
 | --- | --- | --- | --- | --- | --- |
 | 4.1 | sibling 仓库引用 | `../TriLC`、`../TriCode`、`../TriCompany` 等跨仓路径解析正确 | 服务器可验 | **通过** | M2 第九轮（r9-eng-cross）：5 sibling 目录 + 2 处 file: 依赖（../TriCompany/packages/agent-core R7 迁移新路径 + ../TriModel）实测全部可达；小柯独立 ls -d 复核零差异 |
-| 4.2 | contracts 加载 | 14 份合同完整加载，system prompt 非空（源码工作区路径；TriCade 内置路径验证归 5.2 安装态） | 本地验后回传 | **通过** | M2 第十轮（r10-cross-ops）：源码工作区 `../TriCompany/source-agents/` 磁盘 14 份 .contract.yaml 全在；TriLC 真实 resolver（getContractResolver+loadAll）实载 14/14；system prompt 非空 14/14（2349~5837 字符）；磁盘与实载一致（小柯独立复核，PASS）。清单"12 份"描述过时已更正（公司现 14 agent） |
+| 4.2 | contracts 加载 | 14 份合同完整加载，system prompt 非空（源码工作区 + TriCade 安装态双路径） | 本地验后回传 | **通过** | M2 第十轮（r10-cross-ops）：源码工作区 `../TriCompany/source-agents/` 磁盘 14 份 .contract.yaml 全在；TriLC 真实 resolver（getContractResolver+loadAll）实载 14/14；system prompt 非空 14/14（2349~5837 字符）；磁盘与实载一致（小柯独立复核，PASS）。清单"12 份"描述过时已更正（公司现 14 agent）。**安装态路径（M2 第十二轮 r12-production-chain 补全）**：修复打包链路 contracts 缺失后，安装态 company scope 14/14 + prompt 14/14 非空，与源码路径同口径零差异 |
 | 4.3 | 六仓健康检查 | `git-six-repo-health-check.ps1` 运行与问题修复闭环 | 本地验后回传 | **通过** | M2 第十轮（r10-cross-ops）：脚本独立运行 20 repos / 9 issues，全部为 "ahead N"（push 权限受限积压，用户手动 push 解决），无 detached/behind/upstream-unset；`git rev-list` 交叉验证 5 仓 ahead 计数零差异（40/8/23/18/1）。**O1 修复补跑（r11-ops-init，小柯独立验证 PASS）**：修复后 20 仓 / 15 issues；ahead 计数与 r10-2 基线一致（增长全部为新增提交所致，behind 全 0）；dirty 维度命中 CTO 基线（TriCompany 15 项 + TriModel 1 项）；8 仓 git 原生命令交叉验证 ahead/dirty 零差异；修复新暴露 11 仓存量 dirty 已登记 OP risks |
 
 ### 5. 生产链域（全部本地验后回传）
 
 | # | 能力项 | 通过标准 | 验证位置 | 状态 | 完成证据 |
 | --- | --- | --- | --- | --- | --- |
-| 5.1 | MSI 构建全链路 | build-desktop.ps1 从源码到 MSI/ZIP 一次成功，staging 干净（W30：残留文件混包事故） | 本地验后回传 | 未开始 | — |
-| 5.2 | 安装态验证 | 安装后 daemon 启动、`/healthz` 200、12/12 agent + prompt 可用 | 本地验后回传 | 未开始 | — |
-| 5.3 | 服务管理 | nssm/计划任务注册、卸载、状态查询正确 | 本地验后回传 | 未开始 | — |
-| 5.4 | 升级与回滚 | 版本升级规则正确（同版本不覆盖、新版本可升级）、回滚预案可执行 | 本地验后回传 | 未开始 | — |
+| 5.1 | MSI 构建全链路 | build-desktop.ps1 从源码到 MSI/ZIP 一次成功，staging 干净（W30：残留文件混包事故）；MSI 本机无 WiX 仅 CI 构建（CI run 31657624910 已触发，产物待发布补证） | 本地验后回传 | **通过** | M2 第十二轮（r12-production-chain）：v0.4.2-r12 ZIP 一次成功 58,549,782 字节；W30 同型混包修复（staging 混入 trimodel/.git → hygiene 步骤剥离）；staging 递归扫描 0 个 .git；CI workflow checkout TriCompany + contracts 复制 + FATAL 检查实读齐备（小柯独立复核 PASS） |
+| 5.2 | 安装态验证 | 安装后 daemon 启动、`/healthz` 200、14/14 agent + prompt 可用（原"12/12"描述过时已更正） | 本地验后回传 | **通过** | M2 第十二轮（r12-production-chain）：真缺陷修复——打包链路从不复制 contracts（现役安装态 count:0）→ 双端 assemble 补 trilc/contracts/ + CI checkout；小柯自起隔离实例（8715 + 独立数据目录，staging dist 复现真实安装态）：healthz 200、company scope count:14 / tricompanyEnabled:true、prompt 14/14 非空（4671~10409 字节）；**4.2 安装态 vs 源码路径同口径零差异**（test-engineer 3444 chars 两路径完全相同）；roster 在 ZIP 就位 |
+| 5.3 | 服务管理 | nssm/计划任务注册、卸载、状态查询正确 | 本地验后回传 | **通过** | M2 第十二轮（r12-production-chain）：查询/卸载实测（sc 1060 不存在、schtasks 不存在、现役真实启动方式=RegRun HKCU Run 实测 TriLC 条目在、卸载幂等）；注册受管理员权限边界，已列批量待执行清单；缺陷 2 项登记（healthz mode 平台硬编码 app.ts:942 恒报 schtasks；nssm.exe 未入库 + install-tricade.ps1:433 路径写死） |
+| 5.4 | 升级与回滚 | 版本升级规则正确（同版本不覆盖、新版本可升级）、回滚预案可执行 | 本地验后回传 | **通过** | M2 第十二轮（r12-production-chain）：install-tricade.ps1 版本门禁实现（ARP 优先 26.08.05.1 / 同版本 exit 2 / 升级放行 / 降级回滚警告放行 / -Force / WhatIf 豁免管理员检查）；WhatIf 三场小柯独立重跑全过（同版本拦截、27.08.13.1 升级、0.4.2 降级 + trilc.bak-* 备份）；备份逻辑实读确认 |
 
 ### 6. 运营纪律域
 

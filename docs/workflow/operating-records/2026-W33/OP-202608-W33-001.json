@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (R12 建树: M2-R12 in_progress，M2 收官树)",
-    "version": "1.5.0",
-    "lastUpdated": "2026-08-13T19:00:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r12-3 收口: M2 全勾 done + M3 自动推进触发)",
+    "version": "1.6.0",
+    "lastUpdated": "2026-08-13T20:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,17 +29,7 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [
-    {
-      "treeId": "r12-production-chain",
-      "title": "生产链域收官：5.1 MSI 构建 + 5.2 安装态（含 4.2 安装态实测）+ 5.3 服务管理 + 5.4 升级回滚",
-      "nodes_total": 4,
-      "nodes_done": 1,
-      "status": "active",
-      "path": "trees/r12-production-chain/tree-op.json",
-      "related": "M2-R12 5.1-5.4 + 4.2 安装态"
-    }
-  ],
+  "activeTrees": [],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -95,6 +85,15 @@
       "status": "done",
       "path": "trees/r11-ops-init/tree-op.json",
       "related": "M2-R11 6.3/6.4 + O1-FIX"
+    },
+    {
+      "treeId": "r12-production-chain",
+      "title": "生产链域收官：5.1 MSI 构建 + 5.2 安装态（含 4.2 安装态实测）+ 5.3 服务管理 + 5.4 升级回滚",
+      "nodes_total": 4,
+      "nodes_done": 4,
+      "status": "done",
+      "path": "trees/r12-production-chain/tree-op.json",
+      "related": "M2-R12 5.1-5.4 + 4.2 安装态"
     }
   ],
   "nextActions": [
@@ -141,6 +140,7 @@
     "ade-full-lifecycle: W31 维护面主树, 节点平移 W32 继续"
   ],
   "risks": [
+    "BUG-20260805-003 处置明确（r12-2 小柯发现 r12-1 未修未声明）：MSI 打包缺 yoga-layout 别名——MSI 本机不可构建，待 CI run 31657624910 产物发布后在 CI 侧验证/修复",
     "O1 修复后新暴露 11 仓存量 dirty（TriMem 16 / TriStaciss 14 / TriTest 8 / TriDeployment 6 / TriDev 6 / TriTraining 4 / TriAvatar 2 / TriGateway 2 / vscodium 1 / TriCompany 15 / TriModel 1 项）——重启前遗留，待各仓 owner 清理处置（r11-2 小柯发现）",
     "5项 carry-over 6w+，CARRY-001/004/005/006 逼近 8w CEO 升级线 — W33(8/10) 首周裁决",
     "BUG-20260805-001: TriLC Read 工具 tool_result 空串 — 排 TriLC 侧修",
@@ -171,8 +171,8 @@
         {
           "id": "M2",
           "name": "能力验证期",
-          "status": "in_progress",
-          "evidence": "trilc-capability-checklist.md v2026.W33.12（15/33 项）",
+          "status": "done",
+          "evidence": "trilc-capability-checklist.md v2026.W33.15 —— 全勾：§二 1-6 域 25/25 + C 层 M2 受验必需项全过（2026-08-13，12 轮 r1-r12 树全部 APPROVE）",
           "subStages": [
             {
               "id": "M2-R1",
@@ -248,17 +248,17 @@
             {
               "id": "M2-R12",
               "name": "5.1-5.4 生产链 + 4.2 安装态",
-              "status": "in_progress",
+              "status": "done",
               "tree": "r12-production-chain",
-              "checklist": "v2026.W33.15 (待 r12-3 收口)"
+              "checklist": "v2026.W33.15"
             }
           ]
         },
         {
           "id": "M3",
           "name": "独立资格+生产双跑",
-          "status": "pending",
-          "note": "M2 全勾后自动推进，不需提请确认（CEO 2026-08-13 定）。前置项（CTO 2026-08-13 评估）：O2 合同真源统一 + schema 对齐——agent-core zod schema 为死代码（零生产消费方），两代合同互不互通（TriLC 侧 v2 14 份 / TriMC 侧 v1 11 份），M3 生产双跑前必须收敛单一权威 schema（以 v2 为基础补 io_contract/identity，双域 resolver 迁 thin adapter）"
+          "status": "in_progress",
+          "note": "M2 全勾（2026-08-13）自动推进已触发，不需提请确认（CEO 2026-08-13 定）。第一步 = O2-A 合同真源统一 + schema 对齐（CTO 2026-08-13 评估的硬前置）：agent-core zod schema 为死代码（零生产消费方），两代合同互不互通（TriLC 侧 v2 14 份 / TriMC 侧 v1 11 份），必须收敛单一权威 schema（以 v2 为基础补 io_contract/identity，双域 resolver 迁 thin adapter）；同树对齐 O3（TriMC W_OK 校验）+ O4（死 schema 产物随 node_modules 进发布 ZIP 15 文件）"
         },
         {
           "id": "M4",

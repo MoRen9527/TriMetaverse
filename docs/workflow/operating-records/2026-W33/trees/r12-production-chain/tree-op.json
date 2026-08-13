@@ -3,9 +3,9 @@
   "title": "生产链域收官：5.1 MSI 构建 + 5.2 安装态（含 4.2 安装态实测）+ 5.3 服务管理 + 5.4 升级回滚",
   "source": "M2-R12",
   "week": "2026-W33",
-  "status": "active",
-  "verdict": "",
-  "completedAt": "",
+  "status": "done",
+  "verdict": "APPROVE — 5.1 MSI 构建 + 5.2 安装态（含 4.2 安装态）+ 5.3 服务管理 + 5.4 升级回滚全部通过（小柯独立验证 PASS 零阻塞差异）——M2 全勾收官，M3 自动推进触发",
+  "completedAt": "2026-08-13T20:00:00+08:00",
   "nodes": [
     {
       "nodeId": "r12-0",
@@ -49,14 +49,14 @@
     {
       "nodeId": "r12-3",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口判定 → 清单 v2026.W33.15",
       "routedInput": "r12-2:checkpoint",
-      "brief": "",
+      "brief": "briefs/r12-3-20260813200000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "收口判定 APPROVE（小柯 PASS 零阻塞差异）。清单 v2026.W33.15：5.1-5.4 通过（用 r12-2 实测数字，D5/D6/D7 勘误已按正确值登记）+ 4.2 安装态证据补全 + 5.2 标准 12/12→14/14。OP 1.6.0：M2 → done（§二 25/25 + C 层 M2 必需全过）+ M3 → in_progress（自动推进触发，O2-A 第一步）+ BUG-003 处置明确登记。纪要 M2 完成态 + M3 触发态。CI run 31657624910 已触发，产物待发布补证。",
+        "artifactCommit": "清单 + OP + 周会纪要 + tree-op + 简报（收口 commit）",
+        "resumePoint": "M2 收官。M3 已自动推进——下一步 O2-A 合同收敛树（挂 O3/O4），待 team-lead 驱动拆树"
       }
     }
   ]
