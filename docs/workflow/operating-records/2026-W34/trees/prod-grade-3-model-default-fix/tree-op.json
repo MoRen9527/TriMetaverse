@@ -58,6 +58,6 @@
             }
         }
     ],
-    "verdict": "APPROVE（带标注）— 模型名硬编码错配修复全链闭环（TriLC 16 + TriPilot 4 + agent-core FALLBACK_MAP + TriModel 2）；定案 A 落地（config 升级 + 代码层四文件 1d61daa + tmv 别名映射生效 + /v1/models 四卡片）；② 严格口径（经 TriStaciss 全链真实回复）未达成——根因定案为契约缺口（TriStaciss 无 Anthropic /v1/messages，非流式 chat/completions 为 Phase C 桩）；CEO 验收口径采纳 CTO 建议：先行走直连 fallback（真 key 直连 3/3 实证真实回复非桩），验收记录标注「tmv 主路径未接线，当前回复经直连 fallback」；主路径接线（A'：/v1/messages ingress 三文件重写 + 非流式桩替换，半日~一日 + 验证）挂后续树，stash 仅设计参照（git stash show -p 提取，勿 pop）",
+    "verdict": "APPROVE（带标注）— 模型名硬编码错配修复全链闭环（TriLC 16 + TriPilot 4 + agent-core FALLBACK_MAP + TriModel 2）；定案 A 落地（config 升级 + 代码层四文件 1d61daa + tmv 别名映射生效 + /v1/models 四卡片）；A' 主路径 ingress 已落地（99f69eb：/v1/messages 真实接线 + SSE + 8008 正典端口实测 Pong，映射兼容面 PASS）；剩余缺口：/v1/messages tools 字段 422 未支持（agent loop 带 tools 请求仍走直连 fallback）——挂 A-PRIME-WIRING 后续树；CEO 验收口径定案：直连 fallback 3/3 实证 = 验收通过，验收记录标注「tmv 主路径 tools 未接线，当前回复经直连 fallback」",
     "completedAt": "2026-08-13T22:45:00+00:00"
 }
