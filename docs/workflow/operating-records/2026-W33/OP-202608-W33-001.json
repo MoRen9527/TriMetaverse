@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "FullStackDeveloper (r10-1 补登记 M2-R10)",
-    "version": "1.1.0",
-    "lastUpdated": "2026-08-13T12:30:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r10-3 收口: M2-R10 done + doneTrees 补 r9/r10)",
+    "version": "1.2.0",
+    "lastUpdated": "2026-08-13T17:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,7 +29,9 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [
+  "activeTrees": [],
+  "doneTreesFromPreviousWeek": [],
+  "doneTreesThisWeek": [
     {
       "treeId": "w33-weekly-migration-ade",
       "title": "周平面迁移自动化 — 完整 ADE 五段闭环投产",
@@ -39,18 +41,6 @@
       "path": "trees/w33-weekly-migration-ade/tree-op.json",
       "related": "W32 w33-cron-selfdev Track C 规格落地"
     },
-    {
-      "treeId": "r10-cross-ops",
-      "title": "跨模块运营域：4.2 contracts + 4.3 健康检查 + 6.1/6.2 运营",
-      "nodes_total": 4,
-      "nodes_done": 1,
-      "status": "active",
-      "path": "trees/r10-cross-ops/tree-op.json",
-      "related": "M2-R10 4.2/4.3/6.1/6.2"
-    }
-  ],
-  "doneTreesFromPreviousWeek": [],
-  "doneTreesThisWeek": [
     {
       "treeId": "r7-eng-gate",
       "title": "工程门禁域：构建通过 + 测试通过",
@@ -68,6 +58,24 @@
       "status": "done",
       "path": "trees/r8-base-exec/tree-op.json",
       "related": "M2-R8 1.1-1.5"
+    },
+    {
+      "treeId": "r9-eng-cross",
+      "title": "工程门禁收尾 + 跨模块起步：3.3 diff审查 + 3.4 安装态 + 4.1 sibling引用",
+      "nodes_total": 4,
+      "nodes_done": 4,
+      "status": "done",
+      "path": "trees/r9-eng-cross/tree-op.json",
+      "related": "M2-R9 3.3/3.4/4.1"
+    },
+    {
+      "treeId": "r10-cross-ops",
+      "title": "跨模块收尾 + 运营纪律开门：4.2 contracts + 4.3 六仓健康 + 6.1 OP 记录 + 6.2 周会",
+      "nodes_total": 4,
+      "nodes_done": 4,
+      "status": "done",
+      "path": "trees/r10-cross-ops/tree-op.json",
+      "related": "M2-R10 4.2/4.3/6.1/6.2"
     }
   ],
   "nextActions": [
@@ -182,9 +190,9 @@
             {
               "id": "M2-R10",
               "name": "4.2/4.3/6.1/6.2",
-              "status": "in_progress",
+              "status": "done",
               "tree": "r10-cross-ops",
-              "checklist": "v2026.W33.13 (待 r10-3 收口)"
+              "checklist": "v2026.W33.13"
             }
           ]
         },

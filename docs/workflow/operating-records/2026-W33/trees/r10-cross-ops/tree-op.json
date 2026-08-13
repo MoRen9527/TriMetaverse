@@ -3,9 +3,9 @@
   "title": "跨模块收尾 + 运营纪律开门：4.2 contracts + 4.3 六仓健康 + 6.1 OP 记录 + 6.2 周会",
   "source": "M2-R10",
   "week": "2026-W33",
-  "status": "active",
-  "verdict": "",
-  "completedAt": "",
+  "status": "done",
+  "verdict": "APPROVE — 4.2 contracts 14/14 实载 + 4.3 六仓健康 + 6.1 OP 记录 + 6.2 周会通过（小柯 CONDITIONAL_PASS，D1/D2/D3 三项登记差异已收口修复，O1/O2 转 CTO 评估）",
+  "completedAt": "2026-08-13T17:00:00+08:00",
   "nodes": [
     {
       "nodeId": "r10-0",
@@ -49,14 +49,14 @@
     {
       "nodeId": "r10-3",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口判定 → 清单 v2026.W33.13",
       "routedInput": "r10-2:checkpoint",
-      "brief": "",
+      "brief": "briefs/r10-3-20260813170000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "收口判定 APPROVE（CONDITIONAL_PASS 三项差异全部修复）。清单 v2026.W33.13：4.2/4.3/6.1/6.2 通过（19/33）。D2 修复：OP doneTreesThisWeek 补 r9-eng-cross + activeTrees 清空 + M2-R10 done + metadata 1.2.0。D3 修复：周会纪要 M2 段 10 轮/19/33/v2026.W33.13。D1 修复：清单 4.2 描述 12→14 份。O1/O2 转 CTO 评估（经 team-lead 路由）。",
+        "artifactCommit": "清单 + OP + 周会纪要 + tree-op + 简报（收口 commit）",
+        "resumePoint": "树收口完成。R11（6.3 树状态同步 + 6.4 会话初始化器）待拆；5.x 生产链域留最后"
       }
     }
   ]
