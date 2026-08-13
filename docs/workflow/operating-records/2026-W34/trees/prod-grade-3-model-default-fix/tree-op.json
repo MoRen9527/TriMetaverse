@@ -34,14 +34,14 @@
     {
       "nodeId": "r3-2",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "独立验证（验收要求升级）：模型名全链一致（10 处 + 测试期望）+ chat 冒烟 + **真实模型调用成功**（非 healthz 级——实测一次完整对话回复）+ 装后 TriCade 聊天可用性（CEO 最终验收口径：问小贾能正常回复 + 能答出 W34 周平面）",
       "routedInput": "r3-1:checkpoint",
-      "brief": "",
+      "brief": "briefs/r3-2-20260813202022.md",
       "checkpoint": {
-        "progress": "",
+        "progress": "验证面 1 模型名全链一致 PASS：ff725ef（TriLC 16 处 pro8+flash8，8 文件）+ ea3936f（TriPilot 4 处）diff 逐点核对纯名字面量；两仓任意形式旧名残留扫描零命中；注册表 tmv 四条目活体确认；源码态冒烟 daemon 活体日志 model=tmv-deepseek-v4-pro 无 not-in-registry 错（原始症状消除）。验证面 2 chat 冒烟环境阻塞（非树回归）：本机 TriModel(3333)/TriStaciss(8000)/TriMC(8710) 均无监听，密钥 fetch 失败 → chat disabled → 空回复；名字链已验证通到提供方边界，服务拉起后 2 分钟可重跑完成真实调用冒烟。验证面 3 随 v0.4.6-r16 装后验收。观察项 O-R3-1：TriModel keys.ts DEFAULT_MODEL 仍旧名（legacy 条目可解析、非立即故障），转小狄通道与 FALLBACK_MAP 同批。",
         "artifactCommit": "",
-        "resumePoint": ""
+        "resumePoint": "编排层决策：模型服务链拉起（TriModel/TriStaciss/TriMC）→ 小柯 2 分钟重跑冒烟完成验证面 2；装后验收随重建版本执行；随后 r3-3 收口（INCIDENT 登记 + 教训入能力清单 + v0.4.6-r16 重建）"
       }
     },
     {

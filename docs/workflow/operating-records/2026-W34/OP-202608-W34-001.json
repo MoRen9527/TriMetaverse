@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (FALLBACK_MAP 缺口修复 d64ad93 登记 + 邻接硬编码观察登记)",
-        "version": "1.15.0",
-        "lastUpdated": "2026-08-13T20:45:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (服务链状态登记 + TriStaciss 空 provider 缺口登记，裁决路由小狄)",
+        "version": "1.18.0",
+        "lastUpdated": "2026-08-13T21:00:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -217,6 +217,8 @@
         "INCIDENT-20260813-001（CEO 实测暴露真生产缺陷，修复树 prod-grade-3 承载）：TriCade UI 聊天报 Model \\\"deepseek-v4-pro\\\" not in registry. Available: tmv-*，trilc chat 无回复——根因=默认模型名硬编码 'deepseek-v4-pro'（TriLC 6 + TriPilot 4 共 10 处）与 tmv-* 注册表错配（C12/C13 改造遗留）。教训：注册表变更必须同步默认值硬编码——收口时列入能力清单回归检查项",
         "INCIDENT-20260813-001 补充（编排层 key 侧动作已执行）：① 本地安装态 key 缓存已清（加密 keys.json 删除，daemon 重启后从 TriMC 配置平面重拉）② 51 个 s3-backup 明文历史文件已清（S3→S2 迁移的明文 key 备份残留，安全卫生项）。教训追加：key 缓存刷新纳入安装/升级 checklist。r3 验收升级=真实模型调用成功（非 healthz 级）+ CEO TriCade 聊天最终验收（问小贾正常回复 + 答出 W34 周平面）",
         "r3-1 完成登记：① 超范围裁决 APPROVE——flash 8 处与 pro 同一注册表错配面（heartbeat/cron/compact 默认值全部失效同类），顺手修正确，commit 已注明 ② 真第二问题定位：agent-core FALLBACK_MAP tmv 条目 fallback 目标仍是旧名（tmv-deepseek-v4-pro → 'deepseek-v4-flash'，注册表已无此名）→ Tier 2 恢复永远无效——共享 core 缺口，按纪律未动 agent-core，路由小狄独立变更通道 ③ 错误链不吞确认：TriModel 抛错 → agentLoop 三级级联 → SSE error → TUI onError → ErrorMessage 渲染，chat 显示路径无第二问题",
-        "FALLBACK_MAP 缺口已修（CTO d64ad93，agent-core 通道）：四条 tmv 条目 fallback 目标改指 tmv 注册表内模型（pro/chat/reasoner → tmv-deepseek-v4-flash；tmv-flash → tmv-deepseek-v4-pro），tmv-only 与双 provider 形态目标恒有效；直接 provider 条目不动；tsc clean + 8/8 测试。邻接观察（未改，待单独裁定）：同族硬编码两处——agentLoop options.model ?? 'deepseek-v4-pro'（r3-1 后休眠）+ getFallbackModel 安全网 ?? 'deepseek-v4-flash'（仅双 provider 有效）——共享 core 默认值需兼顾两形态，改法单独裁定，owner CTO 小狄"
+        "FALLBACK_MAP 缺口已修（CTO d64ad93，agent-core 通道）：四条 tmv 条目 fallback 目标改指 tmv 注册表内模型（pro/chat/reasoner → tmv-deepseek-v4-flash；tmv-flash → tmv-deepseek-v4-pro），tmv-only 与双 provider 形态目标恒有效；直接 provider 条目不动；tsc clean + 8/8 测试。邻接观察（未改，待单独裁定）：同族硬编码两处——agentLoop options.model ?? 'deepseek-v4-pro'（r3-1 后休眠）+ getFallbackModel 安全网 ?? 'deepseek-v4-flash'（仅双 provider 有效）——共享 core 默认值需兼顾两形态，改法单独裁定，owner CTO 小狄",
+        "r3-2 分面结论（小柯）：面 1 PASS——模型名全链一致（diff 逐点 20 处 + 两仓旧名残留 grep 零命中 + 注册表四条目双确认 + 活体铁证：daemon 日志 model=tmv-deepseek-v4-pro 无 not-in-registry，事故原始症状在默认值位置已消除）；面 2 chat 冒烟环境阻塞（非树回归）——本机模型服务链全断（TriModel 3333/TriStaciss 8000/TriMC 8710 均无监听，netstat 仅 8711），密钥 fetch 失败 → chat disabled，名字修复链已验证通到提供方边界；服务链恢复后小柯 2 分钟重跑即出结论。O-R3-1（路由小狄）：TriModel keys.ts DEFAULT_MODEL 仍 'deepseek-v4-pro'——legacy 可解析无立即故障但一致性应同步 tmv-*，与 FALLBACK_MAP 同批处理——O-R3-1 已修（CTO a5638e9，TriModel 仓）：config.ts + keys.ts 两处改 tmv-deepseek-v4-pro + 测试期望同步；keys API default_model 经 TriLC key-cache 回传路径闭合；env 覆盖仍优先；tsc clean + 15/15。r3 教训族硬编码至此：TriLC 16 + TriPilot 4 + agent-core FALLBACK_MAP + TriModel 2 全闭环",
+        "服务链拉起状态 + 架构级新缺口（编排层通报）：已拉起 TriStaciss 8000 + TriModel 3333（keys API 认证过、default_model=tmv-deepseek-v4-pro）+ .env 新 key + 安装态缓存清空待重拉。新缺口：TriStaciss /v1/models 返回空列表——provider_configs.json 为 2025-09 openrouter free models 历史配置（api_key 空）无 deepseek 后端——tmv-* 注册表模型的 provider 链实际无可用 DeepSeek 模型。裁决待小狄：A=TriStaciss 配 deepseek provider（config 级，恢复完整链）vs B=TriLC 模型层直连映射（TriStaciss 退役路径，架构级）"
     ]
 }
