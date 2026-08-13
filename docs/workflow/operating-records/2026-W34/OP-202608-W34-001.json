@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (r3-1 完成：ff725ef 16 处 + ea3936f 4 处；flash 超范围 APPROVE；FALLBACK_MAP 缺口路由小狄)",
-        "version": "1.14.0",
-        "lastUpdated": "2026-08-13T20:40:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (FALLBACK_MAP 缺口修复 d64ad93 登记 + 邻接硬编码观察登记)",
+        "version": "1.15.0",
+        "lastUpdated": "2026-08-13T20:45:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -216,6 +216,7 @@
         "O-E1/O-E2（ENV-INJECT 段 1 验证观察，非阻塞）：O-E1 install.bat 模板工作区候选仅 2 个（D:/C:），MSI 脚本 3 个（含 USERPROFILE\\Code\u0007i）——ZIP 便携形态用户目录布局会 SKIP，建议对齐；O-E2 幽灵路径双警告语义冗余（纯文案）。均转小全后续顺手对齐",
         "INCIDENT-20260813-001（CEO 实测暴露真生产缺陷，修复树 prod-grade-3 承载）：TriCade UI 聊天报 Model \\\"deepseek-v4-pro\\\" not in registry. Available: tmv-*，trilc chat 无回复——根因=默认模型名硬编码 'deepseek-v4-pro'（TriLC 6 + TriPilot 4 共 10 处）与 tmv-* 注册表错配（C12/C13 改造遗留）。教训：注册表变更必须同步默认值硬编码——收口时列入能力清单回归检查项",
         "INCIDENT-20260813-001 补充（编排层 key 侧动作已执行）：① 本地安装态 key 缓存已清（加密 keys.json 删除，daemon 重启后从 TriMC 配置平面重拉）② 51 个 s3-backup 明文历史文件已清（S3→S2 迁移的明文 key 备份残留，安全卫生项）。教训追加：key 缓存刷新纳入安装/升级 checklist。r3 验收升级=真实模型调用成功（非 healthz 级）+ CEO TriCade 聊天最终验收（问小贾正常回复 + 答出 W34 周平面）",
-        "r3-1 完成登记：① 超范围裁决 APPROVE——flash 8 处与 pro 同一注册表错配面（heartbeat/cron/compact 默认值全部失效同类），顺手修正确，commit 已注明 ② 真第二问题定位：agent-core FALLBACK_MAP tmv 条目 fallback 目标仍是旧名（tmv-deepseek-v4-pro → 'deepseek-v4-flash'，注册表已无此名）→ Tier 2 恢复永远无效——共享 core 缺口，按纪律未动 agent-core，路由小狄独立变更通道 ③ 错误链不吞确认：TriModel 抛错 → agentLoop 三级级联 → SSE error → TUI onError → ErrorMessage 渲染，chat 显示路径无第二问题"
+        "r3-1 完成登记：① 超范围裁决 APPROVE——flash 8 处与 pro 同一注册表错配面（heartbeat/cron/compact 默认值全部失效同类），顺手修正确，commit 已注明 ② 真第二问题定位：agent-core FALLBACK_MAP tmv 条目 fallback 目标仍是旧名（tmv-deepseek-v4-pro → 'deepseek-v4-flash'，注册表已无此名）→ Tier 2 恢复永远无效——共享 core 缺口，按纪律未动 agent-core，路由小狄独立变更通道 ③ 错误链不吞确认：TriModel 抛错 → agentLoop 三级级联 → SSE error → TUI onError → ErrorMessage 渲染，chat 显示路径无第二问题",
+        "FALLBACK_MAP 缺口已修（CTO d64ad93，agent-core 通道）：四条 tmv 条目 fallback 目标改指 tmv 注册表内模型（pro/chat/reasoner → tmv-deepseek-v4-flash；tmv-flash → tmv-deepseek-v4-pro），tmv-only 与双 provider 形态目标恒有效；直接 provider 条目不动；tsc clean + 8/8 测试。邻接观察（未改，待单独裁定）：同族硬编码两处——agentLoop options.model ?? 'deepseek-v4-pro'（r3-1 后休眠）+ getFallbackModel 安全网 ?? 'deepseek-v4-flash'（仅双 provider 有效）——共享 core 默认值需兼顾两形态，改法单独裁定，owner CTO 小狄"
     ]
 }
