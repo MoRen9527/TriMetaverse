@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff (r15 建树: M3-R3 ③b+④ in_progress + 提权命令块已出)",
-    "version": "2.1.0",
-    "lastUpdated": "2026-08-13T23:30:00+08:00",
+    "updatedBy": "CEOChiefOfStaff (r15-3 收口: M3-R3 done + blocked 更新 + CEO 重启待执行)",
+    "version": "2.2.0",
+    "lastUpdated": "2026-08-14T00:00:00+08:00",
     "latestActiveWeek": true
   },
   "priority": "high",
@@ -29,17 +29,7 @@
     "TriMC"
   ],
   "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-  "activeTrees": [
-    {
-      "treeId": "r15-ops-day-ready",
-      "title": "M3-R3 运营日就绪：③b 联通面配置 + ④ TriMC 生产形态改造",
-      "nodes_total": 4,
-      "nodes_done": 1,
-      "status": "active",
-      "path": "trees/r15-ops-day-ready/tree-op.json",
-      "related": "M3-R3 (CEO 授权 ③b+④)"
-    }
-  ],
+  "activeTrees": [],
   "doneTreesFromPreviousWeek": [],
   "doneTreesThisWeek": [
     {
@@ -122,6 +112,15 @@
       "status": "done",
       "path": "trees/r14-production-dualrun/tree-op.json",
       "related": "M3-R2 生产双跑部署（部署就绪）"
+    },
+    {
+      "treeId": "r15-ops-day-ready",
+      "title": "M3-R3 运营日就绪：③b 联通面配置 + ④ TriMC 生产形态改造",
+      "nodes_total": 4,
+      "nodes_done": 4,
+      "status": "done",
+      "path": "trees/r15-ops-day-ready/tree-op.json",
+      "related": "M3-R3 (CEO 授权 ③b+④)"
     }
   ],
   "nextActions": [
@@ -329,9 +328,9 @@
             {
               "id": "M3-R3",
               "name": "运营日就绪（③b+④，CEO 授权）",
-              "status": "in_progress",
+              "status": "done",
               "tree": "r15-ops-day-ready",
-              "checklist": "待 r15-3 收口"
+              "checklist": "r15-3 收口 APPROVE（2026-08-14）：③b connected 实测 + ④ dist 部署 active + blocked #3/#5 解锁；count 0 根因确认（旧进程未重启），CEO 重启后运营日确认"
             }
           ]
         },

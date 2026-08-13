@@ -3,9 +3,9 @@
   "title": "M3-R3 运营日就绪最后工程动作：③b 联通面配置（TRIMC_BASE_URL）+ ④ TriMC 生产形态改造（dist 替代 dev 直跑）",
   "source": "M3-R3 (CEO 授权 ③b+④，2026-08-13)",
   "week": "2026-W33",
-  "status": "active",
-  "verdict": "",
-  "completedAt": "",
+  "status": "done",
+  "verdict": "APPROVE — ③b 联通面 connected + ④ TriMC dist 生产形态部署全部通过（小柯独立验证 PASS 零阻塞）；count 0 根因确认（安装前旧进程未重启，新安装 14/14 已验），CEO 重启后运营日确认闭环",
+  "completedAt": "2026-08-14T00:00:00+08:00",
   "nodes": [
     {
       "nodeId": "r15-0",
@@ -49,14 +49,14 @@
     {
       "nodeId": "r15-3",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口判定 → M3-R3 登记",
       "routedInput": "r15-2:checkpoint",
-      "brief": "",
+      "brief": "briefs/r15-3-20260814000000.md",
       "checkpoint": {
-        "progress": "",
-        "artifactCommit": "",
-        "resumePoint": ""
+        "progress": "收口判定 APPROVE（③b/④ 全过零阻塞）。blocked 清单更新：#5 提权安装 done（CEO 11:08 执行）、#3 联通面解锁（connected 实测）、#2 部分解锁（dist 直部署）、#4 部分完成；#1 push 仍 blocked。count 0 根因确认：安装前旧进程（PID 14620）未重启，新安装 14/14 已验；CEO 重启命令已转 team-lead，执行后运营日确认闭环。",
+        "artifactCommit": "OP + runbook + tree-op + 简报（收口 commit）",
+        "resumePoint": "M3-R3 收官。剩余：CEO 重启（schtasks /run）+ count 14 补验 + #1 push——运营日确认后出 M3 收官报告"
       }
     }
   ]

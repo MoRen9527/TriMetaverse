@@ -63,11 +63,11 @@ powershell -ExecutionPolicy Bypass -File D:\Code\ai\TriMetaverse\scripts\install
 
 | # | 项 | 卡点 | 执行动作 |
 | --- | --- | --- | --- |
-| 1 | push sg-server | git 写权限 | `git push sg-server dev`（本地领先 3+ commits，含 r14-2 接线） |
-| 2 | 服务器 git pull + 重启 | 服务器操作权限 | ssh sg-ecs-server：`cd /srv/fleet/TriMC && git pull && sudo systemctl restart trimc`（验证 /tmp/trimc-run.log） |
-| 3 | 联通面启用 | 环境变量 + 防火墙 | 本地 TriLC 设 `TRIMC_BASE_URL=http://<服务器>:8710`；服务器防火墙放行 8710（契约 §2.3） |
-| 4 | M3 生产形态改造 | 记 M3 后续里程碑 | TriMC dist 构建 + 版本化部署替代 dev tsx 直跑（不入本树） |
-| 5 | UAC 提权安装 | 管理员权限 | §2.1 的 install-tricade.ps1 命令 |
+| 1 | push sg-server | git 写权限 | `git push sg-server dev`（本地领先 4+ commits，含 r14-2 接线）——仍 blocked |
+| 2 | 服务器 git pull + 重启 | 服务器操作权限 | **部分解锁**（r15-1）：dist 直部署（scp + tar -h 修 symlink）替代 pull 生效；git 仓库本身仍落后待 push |
+| 3 | 联通面启用 | 环境变量 + 防火墙 | **done**（r15-1/15-2）：TRIMC_BASE_URL 设置 + connected 实测（47.245.122.61:8710 直连 `{"ok":true}`），防火墙本就放行 |
+| 4 | M3 生产形态改造 | 记 M3 后续里程碑 | **部分完成**（r15-1）：dist 构建 + 部署 + trimc.service active（node dist/src/index.js，tsx-bak 回滚稿就位）；git 版本化/CI 记 M3 后续 |
+| 5 | UAC 提权安装 | 管理员权限 | **done**（CEO 2026-08-13 11:08 执行：v0.4.4 覆盖安装 + schtasks "TriLC Daemon" 注册）；**遗留动作：CEO 重启**——curl POST /shutdown → `schtasks /run /tn "TriLC Daemon"` → 验证 count 14（旧进程 PID 14620 未重启导致 count 0，根因已确认非安装缺陷） |
 
 ## 六、验收核对点（r14-3）
 
