@@ -21,14 +21,14 @@
         {
             "nodeId": "r4-1",
             "agent": "FullStackDeveloper",
-            "status": "pending",
+            "status": "done",
             "action": "实现（按小狄定案，顺序 A(TriLC) → A(TriMC) → C）：① A(TriLC)——LS/Read/Glob/Grep/ShellExec 五读工具 handler 加 ctx?: ToolContext，相对路径解析基准统一 ctx?.cwd ?? process.cwd()（file-ls.ts:90 / file-read.ts:65 / file-glob.ts:159,165 / file-grep.ts:552,569）；shell-exec 特例 (args.cwd as string) || ctx?.cwd || process.cwd()（shell-exec.ts:108）② A(TriMC) 同批——tools.ts:231/286/391 三处 handler 同款修 + executeTool 包装（tools.ts:42）补第三参透传（commit 标注无现役调用方）；agent-core 零改 ③ C——TriLC app.ts:1973 改 body.systemPrompt ? body.systemPrompt + buildWeeklyPlaneHint() : defaultSystemPrompt()；buildWeeklyPlaneHint 注释补外部 append 点标记。门禁：既有工具测试预期不改 + 新增 ctx 传递断言（ctx.cwd 相对路径解析基准 + ctx 缺失回退 process.cwd 两型）+ C 侧 1973 组装断言（传 prompt 场景含 hint）；开发态行为零变化",
             "routedInput": "r4-0:checkpoint",
             "brief": "",
             "checkpoint": {
-                "progress": "",
-                "artifactCommit": "",
-                "resumePoint": ""
+                "progress": "实现完成，顺序与定案一致（A(TriLC) → A(TriMC) → C）。A(TriLC)：五读工具全部加 ctx?: ToolContext，基准 ctx?.cwd ?? process.cwd()；shell-exec 特例 (args.cwd) || ctx?.cwd || process.cwd()。A(TriMC)：tools.ts 三处 handler（shell_exec/glob_search/task spawn cwd）+ executeTool 包装第三参透传，agent-core 零改（diff 确认）。C：app.ts:1973 三元追加 buildWeeklyPlaneHint()，buildWeeklyPlaneHint 注释补两注入点互斥标记。新增测试三文件：TriLC test/tools-ctx-cwd.test.ts（11 用例：ctx.cwd 基准 6 型 + ctx 缺失回退 5 型）、TriLC test/server/tasks-submit-weekly-hint.test.ts（2 用例：传 prompt 含 hint 且恰好一次、无 prompt 走 defaultSystemPrompt 含 hint 且不双注入）、TriMC test/agent-loop/tools-ctx-cwd.test.ts（7 用例同款两型）。自测：TriLC 全量 299 用例 298 过 1 既有失败（test/tui/components.test.ts 缺 ink-testing-library devDependency，ERR_MODULE_NOT_FOUND，与本次改动无依赖关系，基线失败）；TriMC 全量 503 用例 502 过 0 失败 1 既有 skip。两仓 tsc --noEmit 通过。既有测试预期零改动（TriMC agent-tools.test.ts 13/13 原样通过）。",
+                "artifactCommit": "TriLC a6df674 + TriMC 7e15ecf（均 dev 分支，未合并，等迁移验收后按排期合并）",
+                "resumePoint": "r4-1 完成，转 r4-2 小柯独立验证"
             }
         },
         {
