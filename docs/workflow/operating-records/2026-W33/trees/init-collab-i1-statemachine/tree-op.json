@@ -21,11 +21,15 @@
         {
             "nodeId": "i1-1",
             "agent": "ChiefTechnologyOfficer",
-            "status": "pending",
+            "status": "done",
             "action": "技术拆解与端点契约（小狄）：状态文件 schema（与公司 init-state 同落点）、步骤事件流 SSE 事件类型、SELFCHECK 端点契约（检查面四要素）、onboarding.ts 叙事态升级落点、r19 问周面修复前置项归属定案（独立修复 vs 并入 I1）——输出=实现任务包 + 门禁口径",
             "routedInput": "i1-0:checkpoint",
-            "brief": "",
-            "checkpoint": {}
+            "brief": "briefs/i1-1-20260814.md",
+            "checkpoint": {
+                "progress": "拆解交付：①r19 问周面修复归属定案=独立诊断、树内前置修复（i1-2 第一步 gate：复现→三级日志→根因分类 A模型链族/B提示注入族/C渲染族；A/B 随 i1-2 修，C 拆 TriPilot 独立树，不阻塞主线）②链路状态文件 init-chain.json（与 state.json 同落点，真 tmp→rename 原子写 + eventSeq 单调 + 无 git 操作；phaseDetail=显示快照+引用，写真源归各域）③SSE 事件族 init:chain-changed/selfcheck-started/selfcheck-progress/selfcheck-finished/step-event ④SELFCHECK 端点：GET /internal/v1/init/chain/status + POST /internal/v1/init/selfcheck/run（防重入 409）；检查面四要素+第五探测 plane-hint-probe（r19 缺陷显式红行不静默吞）；summary=pass/degraded/blocked，401 唯一 blocked ⑤onboarding 升级落点=新文件 init-chain.ts/init-selfcheck.ts + app.ts 三处增量 + 叙事 prompt 真源措辞一处，叙事态行为零回归 ⑥门禁：6.4/init-state diff 零行、真原子写、叙事零回归、五探测齐全、r19 回归 ⑦事实发现登记：init-state.ts save() 非真 rename + REQ-019 git add -A 隐患——按零改动护栏不动，登记观察项路由后续树 ⑧倒排信号：I1 建议 08-15 内闭环，I2-I5 需编排层压排期，超预期则显式降级 §8.2 条款 b 路径",
+                "artifactCommit": "",
+                "resumePoint": "i1-2 小全实现（按 briefs/i1-1-20260814.md 任务包；第一步=r19 前置 gate）"
+            }
         },
         {
             "nodeId": "i1-2",
