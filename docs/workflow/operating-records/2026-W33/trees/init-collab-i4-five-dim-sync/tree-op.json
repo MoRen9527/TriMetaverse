@@ -1,0 +1,69 @@
+{
+    "treeId": "init-collab-i4-five-dim-sync",
+    "title": "初始化到协同实施树 I4 — 五维同步 + 协同确认（bundle schema + TriLC 生成链 + TriMC sync-apply 接收侧 + L1-L4 确认卡）",
+    "source": "init-to-collab-design.md v2026.W33.4（§5.2/§6/§9/§十 I4 + §3.2/§3.5/§3.6 确认卡）→ I2 收官（OP 2.32.0）→ 小贾 OP 2.33.0 并行立项 GO（TriMC 接收侧与 I3 无实现耦合，可 08-16 上午优先并行；L1-L4 数据源之一 = project-registry I3 产出，内序 TriMC 侧先行、确认卡后接）",
+    "week": "2026-W33",
+    "status": "active",
+    "nodes": [
+        {
+            "nodeId": "i4-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "建树（编排层派单）：范围按设计 §十 I4——① bundle schema（生成端拒绝 api_key 字段 + 测试门禁，SEC-20260813-001 纪律：key 只同步配置面+指纹不传材料）② TriLC 生成/commit/push 链（bundleId+generatedAt 单调幂等）③ TriMC sync-apply cron job + status 端点（接收侧最小集）④ 模型层 default 收敛（含旧名残留清理 deepseek-v4-pro/flash）⑤ 服务器自有密钥前提复核（§6.7：部署 env 面实际条目）⑥ L1-L4 协同确认（数据源之一 = project-registry I3 产出；内序 = TriMC 侧先行、确认卡后接）。依赖：I2/I3（bundle 内容源）；实现与 I2 并行设计。节点链：i4-1 小狄技术拆解 → i4-2 小全实现 → i4-3 小柯独立验证 → i4-4 小狄终审 → i4-5 小贾收口",
+            "routedInput": "",
+            "brief": "",
+            "checkpoint": {
+                "progress": "树已建（立项周 W33）。I4 并行立项 GO（小贾 OP 2.33.0）：TriMC 接收侧（sync-apply cron + status 端点 + bundle 链 schema）与 I3 无实现耦合，08-16 上午优先并行；L1-L4 确认卡数据源之一 = project-registry（I3 产出），拆解按内序排（TriMC 侧先行、确认卡后接）。拆解重点复核：① 五维 payload schema——key 只同步配置面+指纹不传材料（SEC-20260813-001），schema 校验拒绝 api_key 明文字段 ② bundleId+generatedAt 单调幂等。",
+                "artifactCommit": "",
+                "resumePoint": "i4-1 待小狄技术拆解（bundle schema + 生成链 + TriMC 接收侧 + default 收敛 + 密钥复核 + L1-L4 内序）"
+            }
+        },
+        {
+            "nodeId": "i4-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "技术拆解（小狄）：bundle schema（拒绝 api_key 明文 + 测试门禁）、TriLC 生成/commit/push 链（bundleId+generatedAt 单调幂等）、TriMC sync-apply cron job + status 端点、模型层 default 收敛（旧名清理）、服务器密钥前提复核（§6.7）、L1-L4 确认卡内序——输出=实现任务包 + 门禁口径",
+            "routedInput": "i4-0:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i4-2",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "实现（小全，按 i4-1 拆解）：bundle 生成链 + TriMC 接收侧 + default 收敛 + L1-L4 确认卡；护栏逐项守",
+            "routedInput": "i4-1:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i4-3",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "独立验证（小柯，按 i4-4 门禁口径）：五维同步全链 + 单维失败重试 + L1-L4 确认 + 护栏回归",
+            "routedInput": "i4-2:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i4-4",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "验收口径终审（小狄）：diff 级复核 + 护栏逐项核查 → 终审结论",
+            "routedInput": "i4-3:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i4-5",
+            "agent": "CEOChiefOfStaff",
+            "status": "pending",
+            "action": "收口：终审结论登记 OP（W33）+ 树移 doneTreesThisWeek + I5 开跑信号归编排层",
+            "routedInput": "i4-4:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        }
+    ],
+    "verdict": "",
+    "completedAt": ""
+}
