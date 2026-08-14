@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (项目级工作区设计 v2 定稿登记：小乔×小狄联合设计，树 A 取消排期被 v2 取代)",
-        "version": "1.47.0",
-        "lastUpdated": "2026-08-14T02:52:00+00:00",
+        "updatedBy": "CEOChiefOfStaff (402 中断恢复收口：v2 最终稿状态登记 + 项目平面术语修正落盘)",
+        "version": "1.48.0",
+        "lastUpdated": "2026-08-14T03:09:52+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -291,6 +291,6 @@
         "r18 运行态诊断处置（CEO 重测暴露，编排层诊断完成，处置=r19 装后解决）：CEO 迁移验收重测中发现 TriLC 「崩」——TriPilot 绿灯红、连接中断表现；诊断=daemon 实际存活（非崩溃），根因链=r18 的 daemon install 再生 cmd 丢 TRIMODEL_API_TOKEN set 行（模板未带）→ key fetch 401 → 模型主路径失败 → 上游表现为连接中断。r19 已修（daemon 层环境继承兜底），CEO 装 v0.4.9-r19 即解决；装后复验待 CEO 迁移验收链确认。教训追加：daemon 再生 cmd 模板必须与安装态 env 注入面同步回归（挂 ENV-INJECT 同族检查项）",
         "BUG-20260814-001: agent ls 工具 cwd 上下文解析错误——closed（2026-08-14，修复树 prod-grade-4-lscwd-fix 收官 APPROVE）。全链：三层根因诊断（小全）→ 定案 A+C（小狄）→ 实现（小全，TriLC a6df674 + TriMC 7e15ecf）→ 独立验证六口径 PASS（小柯，含父 commit 交叉反证）→ 五口径终审（小狄 diff 级复核）→ 收口登记（小贾）。教训入能力清单：工具层路径解析必须以 ctx.cwd 为基准（REQ-014b），新增工具同步补 ctx 传递断言。合并/发布挂 R4-RELEASE-MERGE（迁移验收后首个 release，预估 v0.4.10-r20）",
         "ARCH-20260814-001（CEO 架构指令，设计定案 2026-08-14）：研发仓与 TriCade 工作区改为同一仓库的不同 git worktree（与 TriMC 仓版本协同，双方改动互不影响，标准流程合入同一 dev）。小狄设计交付 docs/execution/worktree-architecture-design.md（5edcbecd）：一仓三面（研发主 checkout / 本地生产 worktree C:\\ProgramData\\TriCade\\workspace\\TriMetaverse / 服务器舰队克隆）+ prod/windows-local ff-only 分支 + 例外写走 PR（生产面禁写 operating-records，周平面写权单主体不变）+ TRILC_WEEKLY_PLANE_ROOT 安装脚本候选补档（生产面候选置顶 sibling 之前，worktree 未建立时 Test-Path 不命中自动落回旧行为，迁移前逐字节不变）+ fleet 对称性纪律映射（写方向单主体、git 身份单一）。护栏：禁 worktree+npm install（INCIDENT-20260814-001）、08-16 23:00 迁移验收不阻塞、本单零代码零脚本变更。**2026-08-14 状态更新（v2 取代）**：v1 冻结为事实基线不再单独实施；树 A（ProgramData 固定路径 worktree）取消排期，被 v2 实施树 P2/P3 取代；树 B（TriMC 本地 worktree 同构）保留可选与 v2 无冲突；v1 分支纪律/junction 事故纪律/fleet 对称性教训全部由 v2 继承",
-        "ARCH-20260814-002（项目级工作区设计 v2 定稿登记，2026-08-14）：CEO 决策方向升级——用户任意路径项目 worktree + TriCade 建立/认领 + 多项目演进 + 全项目改动走 PR 治理。联合设计交付 docs/execution/project-workspace-design-v2.md（v2026.W34.2，小乔产品面 × 小狄技术面，source-only）。产品面：用户旅程（打开 TriCade→打开/新建工作区→关联项目仓向导五步零命令→PR 治理流七步）；与 onboarding 独立不并入（ONBOARDING-FROZEN-20260813 零触碰，衔接点预埋）；多项目=注册点 + provider 演进三档；验证指标 V1-V6。技术面：TRILC_WEEKLY_PLANE_ROOT → TRILC_PROJECT_WORKTREE_ROOT（WEEKLY_PLANE_ROOT 兼容回退）；双入口（TriCade/trilc chat）读同一 project worktree root；项目仓注册表 hasNpmFileDeps 门禁（junction 事故纪律继承）；TriMC 审核 gate + fleet 单身份纪律。实施树另建待编排层排期：树 P1 识别与认领（只读）→ 树 P2 建立与注入 → 树 P3 消费端升级（TRILC_PROJECT_WORKTREE_ROOT 解析链）→ 树 P4 项目级治理（PR + TriMC 审核 gate + 三端同步 runbook + 仓库管理规则落盘）；r4 对齐优化项随 P3/P4。护栏：纯设计零代码零脚本，08-16 23:00 迁移验收零影响。升级条件（非现时动作）：CEO 要求向导并入 onboarding 需解冻裁决；TriMC 审核产品形态路由 TriMC ProductRegistry；普通克隆治理旁路强制拦截待 CEO 口径。**待确认：小狄复核两处对接点中（关联向导映射、MVP 边界剪裁），无异议本登记即最终稿**"
+        "ARCH-20260814-002（项目级工作区设计 v2 定稿登记，2026-08-14）：CEO 决策方向升级——用户任意路径项目 worktree + TriCade 建立/认领 + 多项目演进 + 全项目改动走 PR 治理。联合设计交付 docs/execution/project-workspace-design-v2.md（v2026.W34.3，小乔产品面 × 小狄技术面，source-only，最终稿）。产品面：用户旅程（打开 TriCade→打开/新建工作区→关联项目仓向导五步零命令→PR 治理流七步）；与 onboarding 独立不并入（ONBOARDING-FROZEN-20260813 零触碰，衔接点预埋）；多项目=注册点 + provider 演进三档；验证指标 V1-V6。技术面：TRILC_WEEKLY_PLANE_ROOT → TRILC_PROJECT_WORKTREE_ROOT（WEEKLY_PLANE_ROOT 彻底切断：不兼容回退、不旧值推导、不留后门，升级 install 清旧写新一次性切换）；项目平面同步——三入口（TriCade 工作区 / trilc chat 新会话 / 项目视图）同步跟随项目平面＝项目级焦点（当前 active 项目），周平面为项目内子维度随项目切换自然切换；项目仓注册表 hasNpmFileDeps 门禁（junction 事故纪律继承）；TriMC 审核 gate + fleet 单身份纪律。实施树另建待编排层排期：树 P1 识别与认领（只读）→ 树 P2 建立与注入 → 树 P3 消费端升级（TRILC_PROJECT_WORKTREE_ROOT 解析链）→ 树 P4 项目级治理（PR + TriMC 审核 gate + 三端同步 runbook + 仓库管理规则落盘）；r4 对齐优化项随 P3/P4。护栏：纯设计零代码零脚本，08-16 23:00 迁移验收零影响。升级条件（非现时动作）：CEO 要求向导并入 onboarding 需解冻裁决；TriMC 审核产品形态路由 TriMC ProductRegistry；普通克隆治理旁路强制拦截待 CEO 口径。**收口（OP 1.48.0，402 中断恢复）**：小狄复核两处对接点（关联向导映射、MVP 边界剪裁）无异议并落尾改 commit eba94448（v2026.W34.3），联合设计即最终稿；402 余额中断发生于 1.47.0 登记之后，设计稿已保护性入库并经编排层补提交推送（04b9d665），无内容丢失。CEO 术语修正：「三入口同步跟随」统一表述为「项目平面」——三入口同步的是项目级焦点（当前 active 项目）；周平面是项目内子维度，跟随项目切换自然切换；design-v2 已同步更新（§2.8 术语口径、§2.7 焦点层/切换旅程、§五.③ 同步机制、V4 指标）"
     ]
 }
