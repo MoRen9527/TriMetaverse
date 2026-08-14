@@ -49,11 +49,15 @@
         {
             "nodeId": "i1-3",
             "agent": "TestEngineer",
-            "status": "pending",
+            "status": "done",
             "action": "独立验证（小柯，按 i1-4 门禁口径）：七态流转 + 断点续跑 + 两入口投影一致 + 6.4 会话初始化器零改动回归 + 公司态分离 + SELFCHECK 诊断卡（含 r19 前置缺陷显式暴露）",
             "routedInput": "i1-2:checkpoint",
-            "brief": "",
-            "checkpoint": {}
+            "brief": "briefs/i1-3-20260814.md",
+            "checkpoint": {
+                "progress": "【门禁七项独立重测（不沿用实现方自测，全部独立复跑）】①6.4 session-initializer.ts diff 零行=PASS（git diff a6df674 186296a 空输出）②公司态分离 init-state.ts diff 零行=PASS（同上；改动清单 10 文件无 init-state.ts）③链路态持久化=PASS（init-chain.ts:214-219 真 tmp→rename+校验读回 220-224、eventSeq 单调检查 211-213、无 child_process/execSync import；活体 company/ 无 tmp 残留、eventSeq 1→2）④叙事态零回归=PASS（heartbeat 判定 app.ts:2926-2931 为 isOnboardingPending()||chainState==='onboarding' 等价扩展；onboarding.ts diff 仅进度真源措辞一处 Step1-5 叙事零改动；隔离实例日志 onboarding agent 注册行为保持；同 release 下线挂 I2 本树不触发）⑤SELFCHECK 显式诊断=PASS（五探测 SELFCHECK_PROBE_IDS 齐全、活体两次 run 均 5 checks；401 活体验证：坏 token 实例 trimodel fail+hint「认证失败 — blocked 级」+summary=blocked；第五探测红行三条路径单测独立复跑 PASS；plane-hint-probe 活体绿行 301/708 字符）⑥r19 回归=PASS（19 用例 19/19；npm test 全量 318 用例 317 pass/1 fail=test/tui/components.test.ts，根因 ERR_MODULE_NOT_FOUND ink-testing-library——package.json 未声明该依赖、该测试最后改动 89ad689 早于 I1、I1 diff 不含该文件=环境缺口 r19 基线既有与 I1 无关；env.ts 保留不覆盖进程 env 口径；I1 diff 不含 daemon 启动/日志文件=EBUSY 面未触碰）⑦两入口零本地执行=PASS（新端点 internal 面同构、listen 127.0.0.1；I1 diff 无 cli/tui 文件；TriPilot 仓工作树干净 HEAD ea3936f 与 I1 无关）。【独立复跑数据】单测 19/19 全绿（init-chain 7 + init-selfcheck 8 + env-fallback 4）；全量 317/318 与实现方报数一致；活体（我的隔离实例 TriLC-verify-i1-3 8723 + 坏 token 实例 8724，与实现方 smoke 残留隔离）：启动 uninitialized→selfcheck（eventSeq=1 sourceEntry=daemon）→ GET status 载荷=schema 契约一致 → POST run 202 {runId} + 立即重发 409 同 runId → finishedAt 10s 内（第五探测真实模型会话 301 字符答复）→ checks=healthz ok/tripilot degraded（观察项⑤契约口径非缺陷）/trimodel ok 3 providers/tristaciss ok 4 models/plane-hint ok、summary=degraded → 断点续跑：杀进程同 dataDir 重建=「chain resumed: selfcheck」同帧（eventSeq=2 runId/summary/finishedAt/retryCount 全一致）→ 401 红行：坏 token 实例 key fetch 401→trimodel fail+hint 认证失败 blocked 级→summary=blocked。live 8711（CEO 机）全程未扰动（healthz ok uptime 连续）。验证实例已清理、隔离目录已删。【与实现方结论差异】无实质差异，自测结论全部独立复现一致。新增观察项 4 条（见 resumePoint）。",
+                "artifactCommit": "186296a（TriLC dev，feat(I1)）——独立验证依赖此 commit；dist 构建产物 gitignored 未随 commit，验证前需 npm run build（已验证 dist/server/app.js 含两端点）",
+                "resumePoint": "i1-4 小狄终审入口：未过项=无（七项全 PASS）。存疑观察项（不阻塞，供终审判定）：①坏 token 下 plane-hint-probe 仍绿（tasks 模型链走 TriModel 转发不依赖 key-cache）——诊断卡 blocked 与绿行并存语义正确但组合可能令用户困惑，终审留意提示语是否需要补充 ②实现把 403/unauthorized 也归入认证 blocked 级（契约字面「401 唯一 blocked」）——口径微差，真实部署无 403 面 ③init-chain load() 对损坏 JSON 静默重置 uninitialized 帧（catch 吞解析错）——与「不静默吞」精神有张力，I1 契约未覆盖损坏处理，路由后续树 ④dist 未随 commit 重建——验证工作流需先 npm run build（已知 gitignored 常态，非缺陷）"
+            }
         },
         {
             "nodeId": "i1-4",
