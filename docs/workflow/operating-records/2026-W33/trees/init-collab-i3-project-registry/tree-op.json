@@ -21,11 +21,15 @@
         {
             "nodeId": "i3-1",
             "agent": "ChiefTechnologyOfficer",
-            "status": "pending",
+            "status": "done",
             "action": "技术拆解（小狄，P1+P2 大 scope）：worktree 两源链路、link/claim 端点契约、project-registry.json schema、分支规约、幽灵路径清理、向导接入分流——输出=实现任务包 + 门禁口径",
             "routedInput": "i3-0:checkpoint",
-            "brief": "",
-            "checkpoint": {}
+            "brief": "briefs/i3-1-20260814.md",
+            "checkpoint": {
+                "progress": "拆解交付（P1+P2 全量）：①project-registry.json 注册点 schema 先行冻结（%LOCALAPPDATA%\\trilc\\ 固定路径；projects=project-key→{repoUrl,mainCheckoutPath,hasNpmFileDeps,defaultBranch,worktrees[]}；原子写 tmp→rename + 惰性清理 + 绝对路径+gitdir 主键去重；项目仓注册表合并同文件，MVP=daemon 内置预置表；schema 冻结供 I4 并行开发）②端点契约三枚：POST /internal/v1/projects/link（六步原子序：检测→关联判定白名单→hasNpmFileDeps 门禁→认领绝不重复 add/建立 worktree add→登记去重→链态快照+内存态热更新同请求；GitHub 源=白名单规范化比对→克隆建主 checkout→转本地链路；失败分类+回滚）+ POST claim + GET inspect（识别分流三分类）③SSE 事件族：init:project-link-started/progress/finished（step 枚举八步）④链态门：仅 chainState=project-link 生效，其他态 409；不转出（sync 归 I4）⑤幽灵路径=登记项惰性移除不删磁盘；worktree remove --force 全仓禁用⑥零 TriPilot 仓改动；CLI 文本流程 init-cli-flow.ts 增量⑦门禁八条：TriPilot diff 零行、git 单执行体、junction 纪律、原子+回滚、链态 409、init-state/session-initializer/init-chain 零触碰（快照写入除外）、I1/I2 回归、TRILC_DATA_DIR 隔离⑧降级判断点=i3-2 中段（08-16 上午）：GitHub 源克隆未收敛→按 §2.10 MVP 降级为白名单+门禁+本地克隆等价路径，报编排层走 §8.2 b",
+                "artifactCommit": "",
+                "resumePoint": "i3-2 小全实现（按 briefs/i3-1-20260814.md 任务包；判断点=GitHub 源克隆收敛）"
+            }
         },
         {
             "nodeId": "i3-2",
