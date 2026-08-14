@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bundleId": "bd5bb69c-b52b-43e5-b04c-8a33bb352caf",
-  "generatedAt": "2026-08-14T14:25:06.366Z",
+  "bundleId": "48315b19-f226-4b5f-a4e0-9c023cf76458",
+  "generatedAt": "2026-08-14T14:25:51.417Z",
   "generatedBy": "trilc-init-1.0.0@4bc19502",
   "company": {
     "state": "initialized",
@@ -129,7 +129,7 @@
       }
     ],
     "refreshIntervalS": 900,
-    "fetchedAt": "2026-08-14T14:24:58.765Z"
+    "fetchedAt": "2026-08-14T14:25:45.518Z"
   },
   "employees": {
     "roster": [],
@@ -140,6 +140,6 @@
     "repoUrl": "https://github.com/MoRen9527/TriMetaverse.git",
     "defaultBranch": "dev",
     "worktrees": [],
-    "devHead": "8c530ecffa2b01cc5cd128290f89ba9da26f1a75"
+    "devHead": "d17711a897018b74ca7e3f0c4c3e44b7f1ddaaae"
   }
 }
