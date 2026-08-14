@@ -60,11 +60,15 @@
         {
             "nodeId": "i4-4",
             "agent": "ChiefTechnologyOfficer",
-            "status": "pending",
+            "status": "done",
             "action": "验收口径终审（小狄）：diff 级复核 + 护栏逐项核查 → 终审结论",
             "routedInput": "i4-3:checkpoint",
-            "brief": "",
-            "checkpoint": {}
+            "brief": "briefs/i4-4-20260814.md",
+            "checkpoint": {
+                "progress": "终审完成（2026-08-14）——【终审结论】打回返修（定向修复包 R，非全树返工）：Phase A/B/C 五维同步面 APPROVE；Phase D 确认卡正路径 OBS-6 双阻塞（契约级缺陷）→ 返修包 R；复验 PASS 后 i4-5 收口。返修是 I5 全链（D 演练 + E 双验收）与 R4-RELEASE-MERGE 窗口的前置，列入关键路径报编排层。【核查表】① diff 级复核：bundle schema 两端字段级一致（sync-bundle.ts:33-137 vs types.ts:31-135）；生成链/接收侧/default 收敛 6 处替换逐项对应 i4-1 契约（旧名源码常量零残留）；init-state/session-initializer 两端 diff 零行；TriPilot 350bcb4..f84232d 增量零 IO 调用（grep 实证）；两入口零本地执行。② 门禁十条独立抽验：1-4、6-9 PASS；门禁 5 幂等单调单测面 PASS / 活体面 FAIL（OBS-1）；门禁 10 产品断言 I5 PASS / I6 活体不可达（OBS-6）→ 返修后复测。③ keys 维生产实证复核：推导口径（i4-1 §五：服务器 env 仅 DEEPSEEK_API_KEY → keys 维收敛 DeepSeek 单 provider；未覆盖 → warning 非 unavailable）与实现（PROVIDER_ENV_KEYS + warning 落地）与生产实证逐字一致（'keys providers not covered by server env: openai, anthropic, trimetaverse' + dims.keys=warning + deepseek applied）——口径精确，零密钥材料纪律保持。④ 全量基线独立复跑：TriLC 416/415（1 fail = components.test.ts 既有）+ TriMC 546/545（1 skip = O3 既有）——与 i4-3 声明一致不退化；TriLC 核心面 39/39 + TriMC config-sync 43/43 定向复跑 PASS。【OBS 1-7 裁决（详 briefs/i4-4-20260814.md）】OBS-1 修复（返修 R1）：contentHash 两端同口径排除 project.devHead（自引用根因——活体实证 bundle 76a905be 的 devHead=ad836bcb=其自身 commit 的 parent，幂等重推活体不可达实锤；候选 a 采用：幂等路径返回 existing 原样跳过写 → 无 commit → 纯重推）。OBS-2 登记后续树（P2）：push-rejected-ahead 分类 + ff-only 自愈重试；MVP 接受人工 pull + runbook 注记。OBS-3 环境修复项（立即）：chown -R fleet:fleet 复核 /srv/fleet/TriCompany + cron API 复跑 + employees warning 收敛确认（机制面已按设计工作）。OBS-4 runbook 注记（立即：手动触发走 cron API 不手工 CLI）+ fail-fast hardening 并入 OBS-2 后续树。OBS-5 历史冻结不回改（3 bundle + 2 merge commits 留 dev 历史；R1 落地后噪音不再复发）+ tags/dev 歧义登记 repo hygiene 后续项。OBS-6 契约级修复（返修 R2+R3）：OBS-6a L1 worktreePath 空集误判 → 三方等值（含空集）判 ok + 空集提示注记（L1 职责=一致性判定非完备性判定）；OBS-6b L2 严格三值自锁（bundle.devHead=生成时值 vs fleetHead=实时值 → 数学不可达，i4-3 活体实测三值全异互证）→ L2 改「同 dev 线 ff 收敛」语义：bundleHead 祖先/相等 localHead 且 local/fleet 等值或互为祖先（分叉=红；fleetHead 本地不可解析=红+先 pull 诊断；一方为祖先=绿+落后/领先提示），降级口径废止原「local==bundle」双值比较改祖先判定，ConfirmCheckL2 增 bundleAncestor（additive）——依据 design §7.2 括号原文「ff 同步收敛」，契约级修正 CTO 单批。OBS-7 登记报编排层：TriModel 目录清空事故（21:50，小柯已从 restore 完整恢复）；追因 + 备份策略复核，与本树代码面无关联不阻塞。生产 applied=76a905be 处置：保留现状（fleet 工作树同 bundle → apply no-op 稳态；复位会被 job 自动 re-apply；返修部署后 CEO 机真实 sync 自然覆盖；零材料已实证）。【返修包 R（i4-2 执行，R1-R6 一批）】R1 devHead 自引用修复（TriLC sync-bundle.ts hash 排除 devHead + assembleBundle 幂等路径返回 existing 原样跳过写 + TriMC types.ts 同口径）｜R2 L2 收敛语义重写 + 单测矩阵重写（fleet 落后红/同线绿/分叉红/不可解析红/降级祖先绿）｜R3 L1 空集一致 + 单测空集矩阵｜R4 测试门禁（幂等重跑矩阵 + L1/L2 新矩阵 + 两端全量基线不退化；顺带 TriMC assemble.ts:31 JSDoc 旧名注释 cleanup）｜R5 部署（TriMC 生产 rebuild + restart，hash 口径两端同部署；重启前双绿）｜R6 文档（i4-1 brief 修正记录 ② + design doc §7.2 L2 行修正注记 + code-state 返修条目）。【i4-5 放行条件】R1-R6 落地 + i4-3 复验 PASS（正路径活体：sync/run → applied → confirm/check readyForConfirm=true → POST confirm 200 ready，I6 验收口径达成实证 + 幂等重跑矩阵活体 + 全量基线）+ 复审批注通过。",
+                "artifactCommit": "待提交（随本 checkpoint 同批）",
+                "resumePoint": "返修包 R 派 i4-2 小全执行（R1-R6，briefs/i4-4-20260814.md §四规格）→ i4-3 小柯复验（§四 复验清单）→ i4-4 复审通过后 i4-5 小贾收口。关键路径提示：返修是 I5 全链与 R4-RELEASE-MERGE 窗口前置；OBS-3 环境修复（chown + 复跑）建议与返修并行由编排层派 ops。"
+            }
         },
         {
             "nodeId": "i4-5",
@@ -76,6 +80,6 @@
             "checkpoint": {}
         }
     ],
-    "verdict": "",
+    "verdict": "打回返修（i4-4 终审 2026-08-14：Phase A/B/C 五维同步面 APPROVE；Phase D 确认卡正路径 OBS-6 双阻塞——L2 严格三值契约自锁 + L1 worktreePath 空集误判——契约级缺陷 → 返修包 R（R1-R6，briefs/i4-4-20260814.md）；i4-3 复验 PASS 后 i4-5 收口）",
     "completedAt": ""
 }
