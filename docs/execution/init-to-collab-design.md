@@ -6,10 +6,10 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-14
 
-> 版本：v2026.W34.3
+> 版本：v2026.W34.4
 > 日期：2026-08-14
-> 状态：联合设计最终稿（产品面小乔 §二 × 技术面小狄 §三~§十，CTO 复核确认 v2026.W34.3），报小贾收口后呈 CEO 审批。本设计不动代码，实施树另建
-> 修正记录：v2026.W34.2（小乔产品面合成）——§二 填充完成，与技术面逐段回注：状态机命名沿用 §四（SELFCHECK→ONBOARDING→PROJECT-LINK→SYNC→CONFIRM→READY）、key 失败分类对齐 §5.2 四分类、五维三态对齐 §6.2/§6.3、协同确认三元素对齐 §7.1、平移测试衔接对齐 §8.1/§8.2、实施树对齐 §十；v2026.W34.3（CTO 小狄复核尾改）——对接点复核：§4.1 载体拆分映射回注 §2.2、§4.4 向导六步编号对齐 §2.5、两入口端点级验收口径补入、§九 补 SELFCHECK 前置缺陷行（r19 问周面）、§6.2 接收端点缺口显式入实施树 I4 范围
+> 状态：联合设计最终稿（产品面小乔 §二 × 技术面小狄 §三~§十，CTO 联合评审吸收并行初稿四点差异后定稿 v2026.W34.4），报小贾收口后呈 CEO 审批。本设计不动代码，实施树另建
+> 修正记录：v2026.W34.2（小乔产品面合成）——§二 填充完成，与技术面逐段回注：状态机命名沿用 §四（SELFCHECK→ONBOARDING→PROJECT-LINK→SYNC→CONFIRM→READY）、key 失败分类对齐 §5.2 四分类、五维三态对齐 §6.2/§6.3、协同确认三元素对齐 §7.1、平移测试衔接对齐 §8.1/§8.2、实施树对齐 §十；v2026.W34.3（CTO 小狄复核尾改）——对接点复核：§4.1 载体拆分映射回注 §2.2、§4.4 向导六步编号对齐 §2.5、两入口端点级验收口径补入、§九 补 SELFCHECK 前置缺陷行（r19 问周面）、§6.2 接收端点缺口显式入实施树 I4 范围；v2026.W34.4（CTO 联合评审，吸收 xiaodi-m2-4 并行初稿四点技术差异）——①key 维同步改为密钥配置面 + 指纹，不传密钥材料（SEC-20260813-001 纪律）②五维同步载体改为 git bundle 链（复用已实证 fleet 双仓闭环，不新建 HTTP 接收端点；TriMC 侧新增 sync-apply cron + status 端点最小集）③补周日自然触发显式条款（08-16 前完成 init+确认则自然触发=首个协同工作，否则确认后显式触发一次）④三端回退升级 + init-sync 域与 operating-records 域隔离；§三 基线修正（keys 面四条目、迁移链 r1-2、REQ-016/017/019、TriMC 旧名残留）；§七 升级 L1-L4 分层验证；§十 树 I4/I5 范围改写
 > owner：小乔（CPO，产品面）× 小狄（CTO，技术面）
 > 派单：`docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`（1.49.0，INIT-TO-COLLAB-DESIGN-20260814-001；CEO-20260814-003）
 > 前置设计：`docs/execution/project-workspace-design-v2.md`（v2026.W34.3 最终稿，保持冻结，作为本设计的事实基线）；`docs/execution/worktree-architecture-design.md`（v1 定案基线）
@@ -62,7 +62,7 @@ v1 / design-v2 的纪律全部继承：写权单主体（编排层）、ff-only 
 | ONBOARDING | 公司开张与员工开业 | 问候 → CEO 名字 → 员工开业选择（§2.4） | 「公司已开张」卡：CEO 名 + 已开业员工名单 | 中途退出 → 下次启动从断点续跑；不支持 0 人开张 |
 | PROJECT-LINK | 项目面初始化（worktree 向导） | 选择项目源（本地仓 / GitHub 链接）→ 落点 → 创建 worktree（§2.5） | 「项目工作区已建立」卡：项目名 + 路径 + 分支 | 跳过 → 面板标记「项目未关联」待补；可稍后重进向导 |
 | SYNC | 五维同步 TriMC | 模型/key/员工/公司/项目逐维同步（§2.7） | 「TriMC 已同步」卡：五维全绿 | 本地初始化完成不因同步失败回滚（本地可用先营业）；单维失败标红 + 重试入口 |
-| CONFIRM | 协同确认 | 确认研发仓 + TriCade(TriLC) + TriMC 操作同一项目（§2.8） | 「协同已开启」卡：三端同项目证据 | 确认失败 → 诊断卡列出不一致点 + 重新登记/重新同步；以 TriMC 同步成功为前提（§6.3） |
+| CONFIRM | 协同确认 | 确认研发仓 + TriCade(TriLC) + TriMC 操作同一项目（§2.8） | 「协同已开启」卡：三端同项目证据 | 确认失败 → 诊断卡列出不一致点 + 重新登记/重新同步；以 TriMC 同步成功为前提（§6.8） |
 | READY | 周平面平移测试 | 三端共同执行第一个协同工作（§2.9） | 「平移测试通过」卡：周平面迁移三面可见 | 失败 → 结果报告 + 挂后续树；不阻塞日常使用 |
 
 **断点续跑**：每阶段完成即落盘（daemon 状态文件 + 注册点），重启 TriCade / 重开 trilc chat 从最近未完成阶段继续；已完成阶段显示 ✓ 可回看。**跳过**：PROJECT-LINK / SYNC 允许「稍后再说」，面板常驻「待补」入口；SELFCHECK / ONBOARDING / CONFIRM / READY 为关键路径不提供跳过（分别为环境前提、公司存在前提、CEO 流程 ④⑤ 的验收本体）。
@@ -151,11 +151,11 @@ CEO 要求「两个入口初始化都做成功（两入口体验）」。产品�
 | 公司 | CEO 名 + 开张状态 | 公司开张信息一致 |
 | 项目 | project key、repoUrl、worktree 路径 | 与项目工作区一致 |
 
-**失败姿态（用户可见）**：本地初始化完成不因同步失败回滚——「本地可用先营业」；同步未达时协同确认卡呈「未就绪」态 + 提示重试（§6.3）。单维失败呈现该维红标 + 上次尝试时间 + 重试入口，其余维正常显示已同步。
+**失败姿态（用户可见）**：本地初始化完成不因同步失败回滚——「本地可用先营业」；同步未达时协同确认卡呈「未就绪」态 + 提示重试（§6.8）。单维失败呈现该维红标 + 上次尝试时间 + 重试入口，其余维正常显示已同步。
 
 ### 2.8 协同确认卡（CONFIRM）
 
-**产品口径**：「协同 = 研发仓 + TriCade(TriLC) + TriMC 操作同一个项目」。验证口径 = 三方同源比对，不信声明（§7.1）；**确认以 TriMC 同步成功为前提**（§6.3）——同步未达时确认卡呈「未就绪」，提示先完成同步。
+**产品口径**：「协同 = 研发仓 + TriCade(TriLC) + TriMC 操作同一个项目」。验证口径 = 三方同源比对，不信声明（§7.1）；**确认以 TriMC 同步成功为前提**（§6.8）——同步未达时确认卡呈「未就绪」，提示先完成同步。
 
 | 端 | 展示证据 | 比对元素 |
 | --- | --- | --- |
@@ -175,7 +175,7 @@ CEO 要求「两个入口初始化都做成功（两入口体验）」。产品�
 2. **三端参与呈现**：TriCade 面板显示测试进度；trilc chat 可对话跟进；TriMC 侧状态同步可见（五维同步链路自然承载）。
 3. **结果呈现**：通过 → 「平移测试通过」卡（三面可见周平面迁移生效）；失败 → 结果报告（哪一步、什么错误）+ 挂后续树，不阻塞日常使用。
 
-**与 08-16 迁移验收的衔接**：原「部署旧版本 + 行为不变」独立验收事件被初始化验收吸收（初始化自检段 = 原验收第一段，§8.1）；升级 install 切换断点维持不变。**排期取舍报 CEO 裁决**（§8.2）：本设计产品面倾向——08-16 维持旧口径验收（已部署旧版本行为不变，验证回滚安全），初始化实施后增量验收平移测试（验证协同）；两次验收互不替代。
+**与 08-16 迁移验收的衔接**：原「部署旧版本 + 行为不变」独立验收事件被初始化验收吸收（初始化自检段 = 原验收第一段，§8.1）；升级 install 切换断点维持不变。**排期取舍报 CEO 裁决**（§8.4）：本设计产品面倾向——08-16 维持旧口径验收（已部署旧版本行为不变，验证回滚安全），初始化实施后增量验收平移测试（验证协同）；两次验收互不替代。触发语义按 §8.2 条款（自然触发/显式触发）。
 
 ### 2.10 MVP 定义与验证指标（产品面剪裁）
 
@@ -197,9 +197,9 @@ CEO 要求「两个入口初始化都做成功（两入口体验）」。产品�
 | 风险 | 处置 | 升级条件 |
 | --- | --- | --- |
 | 解冻后 onboarding 变更范围膨胀（从"重开交互面"滑向"重写开张机制"） | §2.4.5 边界声明：交互升级 + 状态机结构化载荷，落点机制沿用；实施树逐项过门禁 | 出现机制层改动需求时升级 CEOChiefOfStaff |
-| TriMC 五维同步接收侧为新开发（现无接收端点，§三） | 技术面已定协议草案（§6.2）+ 树 I4；MVP 不因 TriMC 骨架化而裁掉五维同步（CEO 流程 ③ 明确要求） | 接收侧工作量超 MVP 可承载时升级 |
+| TriMC 五维同步接收侧为新开发（现无配置平面，§三） | 技术面已定同步协议（§六，git 载体最小集）+ 树 I4；MVP 不因 TriMC 骨架化而裁掉五维同步（CEO 流程 ③ 明确要求） | 接收侧工作量超 MVP 可承载时升级 |
 | r19 未解决的 TriPilot 问周面崩构成 SELFCHECK 前置风险 | SELFCHECK 把该问题显式暴露为诊断卡；修复挂实施树前置项 | 修复影响排期裁决时升级 |
-| 08-16 迁移验收与新设计实施排期冲突 | §2.9/§8.2：产品面倾向旧口径验收 + 增量验收，报 CEO 裁决 | 无法衔接时升级 CEOChiefOfStaff |
+| 08-16 迁移验收与新设计实施排期冲突 | §2.9/§8.4：产品面倾向旧口径验收 + 增量验收，报 CEO 裁决 | 无法衔接时升级 CEOChiefOfStaff |
 | GitHub 链接源的远程认证/网络失败路径 | 失败分类 + 重试 + 可改走本地仓源；首版远程凭据异常挂后续 | 用户实际依赖远程源而不可用时升级 |
 | 两入口并发操作同一阶段 | daemon 状态机单执行体 + 指令串行化（§九护栏）+ 「另一入口操作中」提示 | 并发写冲突实际发生时升级 |
 | 协同确认的"同一项目"口径与 TriMC 侧理解不一致 | 技术面已定三元素比对（§7.1），产品面证据卡按协议字段呈现 | 口径无法收敛时联合裁决，仍不行升级 CEOChiefOfStaff |
@@ -213,12 +213,16 @@ CEO 要求「两个入口初始化都做成功（两入口体验）」。产品�
 | IDE 侧 workspaceRoot 传递 | TriPilot 已把 `workspaceFolders[0]` 作为 workspaceRoot 传入请求（现役字段，零新字段需求） | `TriPilot/src/extension.ts:6166-6172` |
 | onboarding 状态机现状 | TriLC `company/onboarding.ts`：Step1-5 prompt 叙事态（heartbeat 注册 agent 自动推送），进度靠对话历史追踪，**无持久状态机、无端点** | `TriLC/src/company/onboarding.ts` |
 | 员工会话初始化器 | TriLC `company/session-initializer.ts`：合同加载 → 五件套装配校验 → 工作目录就绪；TriMC 侧同源实现（互为 fallback）——**本设计不改此契约** | `TriLC/src/company/session-initializer.ts` + `TriMC/src/onboarding/session-initializer.ts` |
-| TriModel Phase 1 配置平面 | HTTP 3333：`GET /v1/models`（公开）、`GET /v1/config/keys`（Authorization token）、`POST /v1/config/keys/refresh`（admin-only）；keys 面三条目 deepseek/openai/trimetaverse；default_model = tmv-deepseek-v4-pro | `TriModel/src/api/routes.ts` + `keys.ts` |
-| TriLC key-cache | 拉取 /v1/config/keys → 落盘（S1 明文 600 / S2 AES-256-GCM）→ 15 分钟刷新带 stagger；安装态已实证拿到完整三条目 | `TriLC/src/config/key-cache.ts` + OP 1.49.0 |
-| TriMC 形态 | 服务器 Meta Controller：`src/server/app.ts` HTTP 面 + agent-loop + onboarding/session-initializer（同源）；**无现成五维配置接收端点**；CEO 口径：非开箱即用，初始化后同步 | `TriMC/src/` + CEO-20260814-003 |
+| TriModel Phase 1 配置平面 | HTTP 3333：`GET /v1/models`（公开，tmv-* 别名 + capabilities）、`GET /v1/config/keys`（Authorization token）、`POST /v1/config/keys/refresh`（admin-only）；keys 面四条目 deepseek/anthropic/openai/trimetaverse；default_model = tmv-deepseek-v4-pro | `TriModel/src/api/routes.ts` + `keys.ts` |
+| TriLC key-cache | 拉取 /v1/config/keys → 落盘（S1 明文 600 / S2 AES-256-GCM）→ 15 分钟刷新带 stagger；离线容忍（过期缓存 7d 内继续用，无缓存且拉取失败 = chat disabled）；安装态已实证拿到完整条目 | `TriLC/src/config/key-cache.ts` + OP 1.49.0 |
+| 公司状态文件 | `{dataDir}/company/state.json`：state（uninitialized/onboarding/initialized）+ ceoName + employees + progress；原子写（tmp→rename）；REQ-016 断点续接 / REQ-017 debug reset → uninitialized / REQ-019 开张 baseline commit | `TriLC/src/company/init-state.ts` + `onboarding.ts` |
+| 员工合同源 | TriCompany `source-agents/` 13 岗合同（ROLE_CATALOG 同源），contract-resolver 装配；TriLC `GET /internal/v1/agents?scope=company` 已能列出员工（decisionRights/rosterInfo） | `TriLC/src/config/contract-resolver.ts` + `app.ts:978-1037` |
+| TriMC 形态 | 服务器 Meta Controller：HTTP agent 面 + cron 域（七端点）；**无模型/key/公司/项目配置平面**；`/hello` 等端点仍用旧模型名 deepseek-v4-pro/flash（与 tmv-* 正典不一致，已知观察）；CEO 口径：非开箱即用，初始化后同步 | `TriMC/src/` + `TriMC/docs/registry/code-state.md` + CEO-20260814-003 |
 | 项目注册点 | design-v2 §③ 设计态（`%LOCALAPPDATA%\trilc\project-registry.json`），**未实施**（P1/P2 未建树）——本设计初始化链路包含其建立 | design-v2 §③/§七 |
 | 周平面解析 | `weekly-plane-root.ts`：env 显式（existsSync 校验）> 源码态 sibling 发现 > undefined；公司轨只读绝不写入；平移 = 周目录切换（W34 → W35） | `TriLC/src/project/weekly-plane-root.ts` + design-v2 §三 |
-| 排期事实 | R4-RELEASE-MERGE-20260817-001（r4 本地未 push，合并挂迁移验收后）；08-16 23:00 迁移验收原口径（部署旧版本行为不变 + 升级 install 切换） | OP 1.46.0 + design-v2 §五.② |
+| 周平面迁移链（r1-2） | TriMC cron job weekly-plane-shift：周日 23:00 Asia/Singapore 自然触发（run 兜底），五段 ADE 链 fleet 身份执行；两期全真实演练通过（REHEARSAL-20260813-001/002），无痕回退已实证（裸仓 update-ref + 克隆 reset --hard + job 态复位） | OP risks 段 + `TriMC/docs/ops/trimc-cron-plane-shift-runbook.md` |
+| 舰队拓扑 | sg-server 5 裸仓 + `/srv/fleet/<repo>` ×5 ff-only 克隆（fleet 单身份）；「本地 push → 裸仓 → fleet pull」双仓闭环已实证 | `docs/execution/server-fleet-m0.md` |
+| 排期事实 | R4-RELEASE-MERGE-20260817-001（r4 本地未 push，合并挂迁移验收后）；08-16 23:00 迁移验收原口径（部署旧版本行为不变 + 升级 install 切换）；08-16 为周日（自然触发日） | OP 1.46.0 + design-v2 §五.② |
 | 公司面落点现状 | onboarding Step5 装配落点 = workspaceRoot（现 TriMetaverse 研发仓双轨合一）：`.claude/agents/<role>.md` + `docs/registry/company-state.json` + `business-state.md` + `AGENTS.md` | `TriLC/src/company/onboarding.ts` + design-v2 §2.8 |
 
 关键既有契约（本设计延续）：周平面写权单主体（编排层）、TriPilot 零本地执行（W30）、git 身份单一纪律、工作区状态机与 onboarding 状态机分离（design-v2 §2.2）。
@@ -310,59 +314,102 @@ TriLC daemon (key-cache)
 
 ## 六、五维配置同步协议（技术面）
 
-### 6.1 方向决策：推模式（TriLC → TriMC）
+### 6.1 方向决策：推模式 + git 载体（TriLC 写面 → TriMC 读面）
 
-- 初始化执行体 = 本地 TriLC daemon（CEO 在场、写权单主体）；TriMC = 服务器被动接收 + 校验。
-- 拉模式否决：TriMC 会变成初始化编排方，违背 CEO 口径「TriMC 非开箱即用而是初始化后同步」。
+- 初始化执行体 = 本地 TriLC daemon（CEO 在场、写权单主体）；TriMC = 服务器被动接收 + 校验。拉模式否决：TriMC 会变成初始化编排方，违背 CEO 口径「TriMC 非开箱即用而是初始化后同步」。
+- **载体 = git bundle 链**（复用已实证 fleet 双仓闭环：本地 push → sg-server 裸仓 → fleet ff pull），**不新建 HTTP 接收端点**。理由：零新网络面、零新安全面、零新失败面；commit 历史即审计链；TriMC 侧只需 cron job + 只读 status 端点（最小集）。密钥材料不入 git 由 §6.7 裁决保证（SEC-20260813-001 纪律）。
+- TriMC 接收端点缺口（§三 基线：无配置平面）由实施树 I4 以「sync-apply cron job + status 端点」最小集闭合，不再新建配置写入端点。
 
-### 6.2 协议草案（端点新增，挂实施树定契约）
+### 6.2 五维 × 载体
 
-- 端点（**TriMC 接收端点缺口，实施树范围**）：现状无五维配置接收面（§三 基线），由实施树 I4 新建配置同步端点（如 `POST /internal/v1/sync/config`），载荷 = 五维快照 + 版本号；端点契约细节挂实施树，本设计只定方向与载荷面。
-- 幂等：快照全量覆盖 + 版本单调递增，重复同步无害。
-- 重试：失败重试队列（daemon 侧），确认卡显示「未同步/同步中/已同步」三态。
-
-| 维度 | 载荷 | TriMC 侧落点（草案） |
+| 维度 | 内容 | 来源（本地真源） |
 | --- | --- | --- |
-| 模型 | 模型注册表（/v1/models 快照 + default_model） | TriMC config（模型清单） |
-| key | provider key 密文（S2 加密面；仅同步已就绪条目，缺失条目标待补） | TriMC config（同构缓存 + S2） |
-| 员工 | 员工名单（role + 名字）+ 合同指针 | TriMC contracts/roster（同源 v2 合同面） |
-| 公司 | CEO 名 + 开张状态 + 公司状态文件指纹 | TriMC company-state |
-| 项目 | project key + repoUrl + mainCheckoutPath + worktrees[] | TriMC 项目注册表面 |
+| 模型 | 模型目录 + default_model + provider 链（base_url/端口） | TriModel `/v1/models` + keys 响应 |
+| key | **配置面**：provider 列表、base_url、启用模型、key 指纹（SHA-256 前 8 位，不含材料） | TriModel `/v1/config/keys`（§6.7 裁决） |
+| 员工 | 开业员工名单（role/name/agentId）+ 合同源 commit（TriCompany HEAD）+ 决策权摘要 | company/state.json + contract-resolver + TriCompany git |
+| 公司 | state / companyName / ceoName / onboardedAt | company/state.json |
+| 项目 | activeProjectKey + repoUrl + 分支 + worktree 清单 + devHead | project-registry.json + 本地 git |
 
-### 6.3 失败姿态
+### 6.3 bundle 落点与 schema
 
-本地初始化完成不因同步失败回滚（本地可用先营业）；「协同确认」（§七）以 TriMC 同步成功为前提——同步未达时协同确认卡呈「未就绪」，提示重试，不进入协同态。
+- 落点：项目仓 `docs/registry/init-sync/sync-config.json`（MVP 单项目：TriMetaverse 双轨合一，公司维暂同仓；多项目出现后公司维迁 TriCompany 仓——对应 design-v2 §2.10 拆仓升级项，schema 按维度分段预留迁移）。
+- schema：`schemaVersion` + `bundleId`（uuid）+ `generatedAt` + `generatedBy`（trilc-init-<version>@<host-hash>）+ 五维分段载荷（company / model / keys / employees / project）。bundle 生成端 schema 校验**拒绝 api_key 字段**（实现树加测试门禁）。
+
+### 6.4 传输链与 TriMC 应用端
+
+- 传输链：daemon 生成/更新 bundle → 写入项目仓工作树 → commit（git 身份单一纪律，本地 commit 用编排层单身份，OBS-20260814-002 映射）→ push origin + sg-server → 舰队 ff pull。
+- **TriMC 应用端（新增最小集，树 I4）**：
+  1. cron job `config-sync-apply`（fleet 身份，复用 cron 域服务，周期建议 15min 或迁移 job 前置钩子）：读 `/srv/fleet/TriMetaverse/docs/registry/init-sync/sync-config.json` → 版本比对 → 应用到 `TRIMC_CONFIG_DIR/init-sync/`（applied.json 标记 + 各维度落地文件）→ 内存态热更新（模型 default、员工名单）；
+  2. `GET /internal/v1/config/sync/status`（只读：applied bundleId/generatedAt、fleet HEAD、各维度摘要、lastAppliedAt——协同确认 §七 的服务器侧事实源）；
+  3. TriMC 模型层 default 读取改为「applied bundle.model.defaultModel 优先，env 兜底」——顺带收敛已知观察「`/hello` 等端点旧模型名 deepseek-v4-pro/flash 与 tmv-* 正典不一致」。
+
+### 6.5 幂等与冲突
+
+- 幂等：bundleId + generatedAt 单调版本。TriMC 应用规则：同 bundleId = no-op；generatedAt 更旧 = 忽略 + 日志；更旧但内容 hash 不同 = 告警（时钟回拨/多机写，MVP 记日志不动作）。重放任意次数结果收敛。
+- 冲突：单写主体（初始化流是 bundle 唯一写方，服务器 apply 只读）。TriMC 侧人工改过的服务器配置与 bundle 重叠时 **bundle 赢**（初始化记录为正典），例外：服务器 env 密钥材料（自有材料优先，bundle 只带指纹）。多机初始化（两台用户机开同一公司）为已知升级项（design-v2 §2.10 多用户条款）：applied.json 记录 sourceInstanceId，不匹配则告警 + 挂起。
+
+### 6.6 触发时机
+
+P1 完成（公司维）、P2 完成（项目维）、P3 完成（模型/key 维）各生成一次中间 bundle；P4 统一生成最终 bundle 一次性 commit/push；此后变更触发（员工名单变更、key 轮换、项目切换）→ 重新生成 + push（幂等）。daemon 重启时 re-sync 检查（fleet 侧已 applied 则 no-op）。
+
+### 6.7 key 维同步裁决（不传密钥材料）
+
+同步到 TriMC 的是**密钥配置面 + 指纹**，**不是密钥材料本身**。依据：
+
+1. SEC-20260813-001 纪律（密钥入 git 历史 = 事故）：bundle 走 git 载体，密钥材料入 bundle = 重犯事故形态。
+2. 服务器侧密钥现状：TriMC 部署面 env 已配置自有密钥（e2e 实证模型调用可用）；TriMC 用配置面 + 自有材料即可对同一 provider 链工作。**实施树需在服务器侧复核该前提**（部署 env 面实际条目）。
+3. 升级项（非 MVP）：若 CEO 要求公司密钥统一托管到服务器（单源计费/轮换），另设 HTTPS 直推端点 + 服务器 S2 加密落盘 + 轮换协议——列入 §九 升级项，不在本设计实施。
+
+### 6.8 失败姿态
+
+本地初始化完成不因同步失败回滚（本地可用先营业）；同步未达 = sync-pending 挂起 + 重试；「协同确认」（§七）以 TriMC 侧 applied 为前提——未 applied 时协同确认卡呈「未就绪」，提示重试，不进入协同态。TriMC HTTP 面不可达时主链不受影响（git 载体不依赖 TriMC HTTP），status 端点不可达按 §七 降级口径。
 
 ## 七、协同确认机制（技术面）
 
 ### 7.1 验证口径：三方同源比对（不信声明）
 
-**三元素一致即确认协同就绪**：project key + repoUrl（git remote origin）+ worktree 路径。
+**三端定义**：研发仓（本地 dev 主 checkout `D:/Code/ai/TriMetaverse`）、TriCade 端（用户 worktree + TriLC daemon 会话面）、TriMC 端（`/srv/fleet/TriMetaverse` @ dev + agent/cron 面）。
 
-| 侧 | 数据源 | 比对元素 |
-| --- | --- | --- |
-| 研发仓 | git remote origin（主 checkout）+ 注册表 repoUrl | repoUrl |
-| TriCade(TriLC) | project-registry.json（activeProjectKey + worktrees[].path）+ 会话 workspaceRoot | project key + worktree 路径 |
-| TriMC | 五维同步落盘的 project 维（§六） | project key + repoUrl + worktree 路径 |
+**分层验证**（廉价 → 全量；前两层零新网络面）：
 
-### 7.2 确认动作
+| 层 | 验证内容 | 方法 | 通过标准 |
+| --- | --- | --- | --- |
+| L1 注册同一性 | 项目身份一致（project key + repoUrl + worktree 路径三元素） | bundle.project.repoUrl ↔ TriMC fleet 仓映射（`/srv/fleet/<repo>` ↔ repoUrl）比对 + 本地注册点 activeProjectKey/worktrees[] | 完全匹配；不匹配 = ERROR（错误仓/错误分支） |
+| L2 版本一致 | 三端同 dev 线 | 本地 dev HEAD（daemon 读 git）== bundle.devHead == fleet HEAD（status 端点回报） | 三值相等；不等 = 落后/领先诊断（ff 同步收敛） |
+| L3 写读闭环（正向） | 本地写 → 服务器读 | 五维 sync commit 本身即探针：本地 commit → push → fleet pull → TriMC applied bundleId 回读 == 本地 bundleId | applied 回读成功 = 正向链路实证（无需额外探针文件） |
+| L4 写读闭环（反向） | 服务器写 → 本地读 | 周平面迁移 commit：TriMC 写 → 裸仓 → 本地 dev/worktree pull 可见 W34→W35 产物 | 首个协同工作验收（§八） |
 
-1. 五维同步响应携带 TriMC 侧一致性校验结果（同步即校验）；
-2. 确认卡三方显示同一三元素（路径用哈希/短指纹防截断）；任一元素不一致 → 确认卡红色差异提示 + 诊断入口（重新登记/重新同步）；
-3. 全部一致 → CONFIRM 通过 → READY，周平面平移测试可触发。
+### 7.2 确认动作与失败分类
+
+1. 确认卡三方显示同一三元素（路径用哈希/短指纹防截断）+ dev HEAD 一致性徽标（L2，实施树产品细节）；任一不一致 → 红色差异提示 + 诊断入口（重新登记/重新同步）。
+2. 失败分类：网络不可达（push 失败 → sync-pending 挂起重试）、身份冲突（git 身份纪律违规 → 阻断）、版本滞后（ff 未拉取 → 提示同步）、注册表漂移（幽灵路径 → design-v2 §六 惰性清理）。
+3. **降级路径**：TriMC HTTP 面不可达时，L2 的服务器侧事实退化为「本地 push 成功 + 迁移 cron 日志/裸仓 reflog 可见」（人工确认口径），MVP 接受。
+4. 全部通过（L1-L3 达、L4 由首个协同工作承载）→ CONFIRM 通过 → READY，周平面平移测试可触发。
 
 ## 八、周平面平移测试衔接（技术面）
 
 ### 8.1 新口径（CEO 期望流程第 5 步）
 
-初始化全链验收 PASS（SELFCHECK → ONBOARDING → PROJECT-LINK → SYNC → CONFIRM）后，**周平面平移测试 = 第一个协同工作**：平移（W34 → W35 周目录切换）作为真实业务动作执行，验证三面（研发面 / 项目 worktree 面 / TriMC）读同一周平面。
+初始化全链验收 PASS（SELFCHECK → ONBOARDING → PROJECT-LINK → SYNC → CONFIRM）后，**周平面平移测试 = 第一个协同工作**：平移（W34 → W35 周目录切换）作为真实业务动作执行，验证三面（研发面 / 项目 worktree 面 / TriMC）读同一周平面。迁移（TriMC 写面 → 本地读面）与五维同步（本地写面 → TriMC 读面）互为反向闭环，两者都通过后「三端操作同一项目」完整成立。
 
 原 08-16 23:00「部署旧版本 + 行为不变」独立验收事件被初始化验收吸收——初始化验收的自检段（trilc/tripilot 可用）即原验收的第一段；升级 install 切换断点（design-v2 §五.② 清旧写新一次性切换）维持不变。
 
-### 8.2 排期取舍（报 CEO 裁决点）
+### 8.2 与周日自然触发的关系（显式条款，本设计新增）
+
+- r1-2 的自然触发（周日 23:00 cron，08-16 即周日）**保留为稳态节奏**，不拆除不重排——它是生产链，两期演练已实证。
+- 「首个协同工作」语义按初始化完成时点认定：**若 init + 五维同步 + L1-L3 确认在 08-16 23:00 前完成 → 周日自然触发即首个协同工作**（真实 W34→W35 平移，非演练）；**若未完成 → 自然触发照常运行**（迁移不依赖初始化，r1-2 现状），首个协同工作 = 协同确认后**显式触发一次** run（复用演练期已验证的手动触发路径），此后回归稳态。
+- 与 §8.4 报 CEO 裁决点的关系：本条款是裁决点 ① 的技术实现路径，无论 CEO 裁「旧口径验收」还是「顺延全链验收」，触发语义均按本条款执行——自然触发不阻塞、确认后补一次显式触发。
+
+### 8.3 三端回退与域隔离（本设计新增）
+
+- **三端回退**：演练验证的两端回退（裸仓 update-ref + 克隆 reset --hard + job 态复位）升级为三端——本地 dev/worktree 若已 pull 迁移 commit，回退时同步 ff 复位到回退目标 HEAD（runbook 扩展一项）；「无痕」定义扩展为三端 HEAD + job 态 + 本地读面一致复位。
+- **域隔离**：迁移回退**不回退初始化域**——迁移 commit 只触及 operating-records 域；init-sync bundle 在 `docs/registry/init-sync/`（写权归初始化流），两者路径域不重叠（迁移脚本写权边界已限 operating-records，r1-2 现状）。
+- 写权纪律延续：迁移全程 TriMC 侧 fleet 单身份（OBS-20260814-002）；本地侧（研发仓/worktree/TriLC）对 operating-records 只读——协同的「分工」= 单主体写 + 多端读。
+
+### 8.4 排期取舍（报 CEO 裁决点）
 
 - R4-RELEASE-MERGE-20260817-001：r4 commit 不回改；merge 排期挂初始化实施树后的发布窗口（初始化验收与 r4 合并同批发布，或初始化先行——实施树定，本设计给两个选项及风险）。
-- 原 08-16 23:00 迁移验收：若初始化实施树排期晚于 08-16，原验收按旧口径继续执行（不阻塞）还是顺延至初始化验收（全链一次验收）——**报 CEO 裁决**，本设计倾向：08-16 维持旧口径验收（已部署旧版本行为不变），初始化实施后增量验收平移测试（两次验收互不替代，旧口径验证回滚安全，新口径验证协同）。
+- 原 08-16 23:00 迁移验收：若初始化实施树排期晚于 08-16，原验收按旧口径继续执行（不阻塞）还是顺延至初始化验收（全链一次验收）——**报 CEO 裁决**，本设计倾向：08-16 维持旧口径验收（已部署旧版本行为不变），初始化实施后增量验收平移测试（两次验收互不替代，旧口径验证回滚安全，新口径验证协同）。触发语义按 §8.2 条款执行。
 
 ## 九、风险与护栏（技术面）
 
@@ -371,27 +418,35 @@ TriLC daemon (key-cache)
 | GitHub 链接源克隆非项目仓（供应链/治理旁路） | repoUrl 与项目仓注册表白名单比对 + hasNpmFileDeps 门禁；不在白名单拒绝自动流程 |
 | 克隆凭据失败/网络 | 系统凭据管理器 + 失败分类提示 + 可改走本地仓源 |
 | 初始化状态机与 onboarding 叙事态并存冲突 | 状态机为唯一真源；旧叙事态在实施时下线（同 release 切换，无并存期——design-v2 一次性切换纪律同构） |
-| 五维同步泄密（key 明文入 TriMC） | key 维仅同步 S2 密文面（或仅就绪布尔 + 密钥由 TriModel 面统一分发，实施树定）；TriMC 侧落盘同构 S2 |
+| 五维同步泄密（key 材料入 git，SEC-20260813-001 重演） | key 维只同步配置面 + 指纹（§6.7 裁决）；bundle 生成端 schema 校验拒绝 api_key 字段（实现树加测试门禁） |
 | 装配动作写权越界（员工面写公司文件） | 装配端点限定落点白名单（.claude/agents + docs/registry），周平面写权单主体不变 |
 | 双入口指令竞态（面板与 CLI 同时操作状态机） | daemon 状态机单执行体 + 指令串行化（同一状态机互斥，挂实施树） |
-| 原 08-16 验收与新验收口径漂移 | §八.2 报 CEO 裁决，两口径各自留痕不互相替代 |
+| 原 08-16 验收与新验收口径漂移 | §8.4 报 CEO 裁决 + §8.2 触发条款，两口径各自留痕不互相替代 |
 | SELFCHECK 前置缺陷（TriPilot 问周面崩，r19 未完全解决） | SELFCHECK 显式暴露为诊断卡（§4.2）；修复挂实施树 I1 前置项，不静默吞 |
+| TriCompany 仓在服务器 fleet 滞后（员工合同源过期） | bundle 员工维携带 sourceCommit；TriMC apply 时校验 fleet TriCompany HEAD，不等则触发 TriCompany fleet pull（与 TriMetaverse 同一 sync-apply 周期） |
+| 多机初始化写 bundle（design-v2 §2.10 多用户） | applied.json 记录 sourceInstanceId，不匹配告警挂起；多用户完整方案 = 升级项 |
+| TriMC 模型层旧名残留（deepseek-v4-pro/flash） | 同步面收敛：apply 后 default 读 applied bundle（§6.4），旧名残留一并清理列入 I4 树 |
+| init-sync 文件与周平面迁移文件域重叠 | 路径域隔离（docs/registry/init-sync/ vs docs/workflow/operating-records/）+ 迁移脚本写权边界已限 operating-records（r1-2 现状） |
+| 服务器自有密钥前提不成立（§6.7 依据 2） | 实施树 I4 先在服务器部署面复核 env 密钥现状；不成立则回退为「TriMC 用本地拉取面」或提前启动密钥托管升级项 |
+
+升级项登记（非 MVP，触发时另开树）：① 密钥材料服务器托管（HTTPS 直推 + S2 加密落盘 + 轮换协议）；② 多机初始化仲裁；③ 多项目后公司维 bundle 迁 TriCompany 仓；④ TriMC HTTP 全量同步通道（替代 git 载体候选）。
 
 ## 十、实施拆分建议（另建树，本设计不做）
 
-- **树 I1（自检 + 状态机底座）**：SELFCHECK 端点 + 初始化持久状态机（onboarding.ts 叙事态升级）+ 步骤事件流。
-- **树 I2（公司面装配升级）**：装配端点（原子完成 + 落点白名单）+ 结构化员工选择载荷 + 两入口渲染升级（TriPilot 卡片 / trilc chat 文本化）。
-- **树 I3（项目面 + 注册点）**：worktree 两源链路（本地仓 + GitHub 链接源）+ project-registry.json 落地（吸收 design-v2 P1+P2）。
-- **树 I4（五维同步 + 协同确认）**：TriMC 同步接收端点**新建**（现状无接收面，缺口由本树闭合）+ 推同步（重试队列）+ 三态确认卡 + 三方比对。
-- **树 I5（平移测试 runbook）**：初始化全链验收清单 + 平移测试 runbook（W34→W35 平移 + 三面一致性验证）。
-- 与 design-v2 树关系：I3 吸收 P1（识别与认领）+ P2（建立与注入）；P3（消费端升级，env 切换）与 P4（项目级治理）维持独立排期，发布窗口与 R4-RELEASE-MERGE 的合并按 §八.2 裁决执行。
+- **树 I1（自检 + 状态机底座）**：SELFCHECK 端点（含 r19 基线确认：daemon 环境继承 + key fetch + chat 冒烟）+ 初始化持久状态机（onboarding.ts 叙事态升级）+ 步骤事件流。依赖：无。前置：CEO 机器 r19 装后状态复验。
+- **树 I2（公司面装配升级）**：装配端点（原子完成 + 落点白名单）+ 结构化员工选择载荷 + 会话初始化器 init 模式路由 + 两入口渲染升级（TriPilot 卡片 / trilc chat 文本化）+ 解冻面缺陷修复验证（解冻 ≠ 豁免验证）。依赖：I1。
+- **树 I3（项目面 + 注册点）**：worktree 两源链路（本地仓 + GitHub 链接源）+ 向导接入 init 状态机 + project-registry.json 落地（吸收 design-v2 P1+P2）。依赖：design-v2 树 P1 + P2。
+- **树 I4（五维同步 + 协同确认）**：bundle schema（生成端拒绝 api_key 字段 + 测试门禁）+ TriLC 生成/commit/push 链 + TriMC sync-apply cron job + status 端点 + 模型层 default 收敛（含旧名残留清理）+ 服务器自有密钥前提复核（§九 对应行）。依赖：I2/I3（bundle 内容源）；实现可与 I2 并行设计。
+- **树 I5（协同确认验收 + 首个协同工作）**：L1-L4 校验实现 + 迁移三端回退 runbook 扩展 + 首个协同工作验收执行（§8.2 触发条款）。依赖：I4 + r1-2 迁移链。
+- 排期原则：I1 → I2 → I3 → I4 → I5 主线；design-v2 树 P1/P2 是 I3 前置（编排层排期合并考虑）；P3（消费端升级，env 切换）与 P4（项目级治理）维持独立排期；发布窗口与 R4-RELEASE-MERGE 的合并按 §8.4 裁决执行。
 
 ## 使用依据
 
 - `TriMetaverse/docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`（1.49.0：派单 INIT-TO-COLLAB-DESIGN-20260814-001；CEO-20260814-003 五步期望流程；ONBOARDING-FROZEN 解冻登记；TriModel/TriStaciss 定案 A' 接线与端口终案 8008）
 - `TriMetaverse/docs/execution/project-workspace-design-v2.md`（v2026.W34.3 最终稿：§2.4 向导五步、§2.9 onboarding 关系、§五.1 链路五步、§③ 注册点、§七 P1-P4）
-- `TriLC/src/company/onboarding.ts`（Step1-5 叙事态现状）+ `TriLC/src/company/session-initializer.ts`（员工会话契约）
-- `TriLC/src/config/key-cache.ts`（S1/S2 落盘、15 分钟刷新）+ `TriLC/src/server/app.ts:1983`（会话 cwd 契约）
-- `TriModel/src/api/routes.ts` + `keys.ts`（Phase 1 配置平面：/v1/models、/v1/config/keys、refresh）
-- `TriMC/src/server/app.ts` + `TriMC/src/onboarding/session-initializer.ts`（接收面现状）
+- `TriLC/src/company/onboarding.ts`（Step1-5 叙事态现状）+ `TriLC/src/company/init-state.ts`（REQ-016 断点续接 / REQ-017 reset / REQ-019 baseline commit）+ `TriLC/src/company/session-initializer.ts`（员工会话契约）
+- `TriLC/src/config/key-cache.ts`（S1/S2 落盘、15 分钟刷新、7d 离线容忍）+ `TriLC/src/server/app.ts:1983`（会话 cwd 契约）+ `app.ts:978-1037`（/internal/v1/agents 公司视图）
+- `TriModel/src/api/routes.ts` + `keys.ts` + `models.ts`（Phase 1 配置平面：/v1/models、/v1/config/keys 四条目、refresh）
+- `TriMC/src/server/app.ts` + `TriMC/src/onboarding/session-initializer.ts` + `TriMC/docs/registry/code-state.md`（接收面现状：无配置平面、cron 域、旧模型名观察）+ `TriMC/docs/ops/trimc-cron-plane-shift-runbook.md`（r1-2 迁移链）
 - `TriPilot/src/extension.ts:6166-6172`（workspaceRoot 传递现状）
+- `TriMetaverse/docs/execution/server-fleet-m0.md`（5 裸仓 + fleet ×5 克隆、fleet 单身份纪律、双仓闭环）
