@@ -9,7 +9,7 @@
 > 版本：v2026.W34.3
 > 日期：2026-08-14
 > 状态：联合设计最终稿（产品面小乔 × 技术面小狄；CTO 复核确认 v2026.W34.3）。本设计不动代码、不建 worktree、不改安装脚本，实施树另建
-> 修正记录：v2026.W34.2（CEO 设计修正）——彻底切断 TRILC_WEEKLY_PLANE_ROOT 兼容牵扯：不兼容回退、不旧值推导、不留旧值后门；旧 env 从安装脚本移除注入，升级 install 清旧写新一次性切换（§五.②）；v2026.W34.3（CTO 小狄复核尾改）——CEO 术语修正并入：三入口同步跟随 = 项目平面（项目级焦点），周平面为项目内子维度；对接点微调：关联向导治理提示分阶段呈现、落点校验与失败分类补入技术链路、交叉引用与编号修正（MVP 节 2.10 重复编号拆为 2.11）；小贾收口补记：项目平面口径补齐至职责分工、§五.③ 同步机制、V4 指标与 §八 OP 引用
+> 修正记录：v2026.W34.2（CEO 设计修正）——彻底切断 TRILC_WEEKLY_PLANE_ROOT 兼容牵扯：不兼容回退、不旧值推导、不留旧值后门；旧 env 从安装脚本移除注入，升级 install 清旧写新一次性切换（§五.②）；v2026.W34.3（CTO 小狄复核尾改）——CEO 术语修正并入：三入口同步跟随 = 项目平面（项目级焦点），周平面为项目内子维度；对接点微调：关联向导治理提示分阶段呈现、落点校验与失败分类补入技术链路、交叉引用与编号修正（MVP 节 2.10 重复编号拆为 2.11）；小贾收口补记：项目平面口径补齐至职责分工、§五.③ 同步机制、V4 指标与 §八 OP 引用；V4 跟随切换子句验收口径补注（小狄：单项目阶段不可实测，多项目出现后补验）
 > owner：小乔（CPO，产品面）× 小狄（CTO，技术面）
 > 前置设计：`docs/execution/worktree-architecture-design.md`（v1，定案 WORKTREE-ARCH-DESIGN-20260814-001，保持冻结，作为本设计的事实基线）
 > 关联：`docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`（v1 派单 + r4 收官 + R4-RELEASE-MERGE 登记）；`docs/execution/server-fleet-m0.md`（服务器舰队）；`docs/execution/v0.9.x-dual-track-tricompany-plan.md`（dual-track）；`TriLC/src/project/weekly-plane-root.ts`（周平面解析现状）；`TriLC/src/server/app.ts:1983`（会话 cwd 契约）；`TriPilot/src/extension.ts:6166`（workspaceRoot 传递现状）
@@ -172,7 +172,7 @@ MVP 边界（对齐技术面 §七 树 P1-P4）：P1（识别与认领）+ P2（
 | V1 | 新用户首次关联成功率（含失败重试后） | ≥ 95% |
 | V2 | 首次关联完成时长（含克隆） | 中位数 ≤ 5 分钟 |
 | V3 | 三端同步一致性：dev merge 后项目 worktree ff 同步可见 | 实测通过（一次真实改动；P4 验收——merge 动作属 P4） |
-| V4 | 项目平面一致性：TriCade 与 trilc chat 读同一 project worktree root，周平面视图随焦点项目自然切换（项目内子维度） | 实测通过（同文件可见） |
+| V4 | 项目平面一致性：TriCade 与 trilc chat 读同一 project worktree root，周平面视图随焦点项目自然切换（项目内子维度） | 实测通过（同文件可见；周平面跟随切换待多项目出现后补验） |
 | V5 | PR 治理闭环：建分支→改→PR→TriMC 审核→merge dev→三端同步 | 至少一次真实改动全程走通（P4 验收） |
 | V6 | 零命令体验：新用户全程 GUI 完成关联，无 git CLI 操作 | 定性验收 |
 
