@@ -35,11 +35,16 @@
         {
             "nodeId": "i1-2",
             "agent": "FullStackDeveloper",
-            "status": "active",
+            "status": "done",
             "action": "实现（小全，按 i1-1 拆解）：SELFCHECK 端点 + 初始化持久状态机（七态 + 状态文件 + 步骤事件流）+ onboarding.ts 叙事态升级；护栏逐项守（6.4 零改动、公司态分离、旧叙事态同 release 下线）",
             "routedInput": "i1-1:checkpoint",
             "brief": "briefs/i1-2-20260814.md",
-            "checkpoint": {}
+            "checkpoint": {
+                "progress": "【r19 前置 gate 结论】装后态复现（C:\\Program Files\\TriCade 0.4.9 实机 8711 + daemon.log + keys.json 三级采集）：问周面任务实测 3 工具调用（LS/Grep）→ tool_result SSE 载荷恒 unknown+空输出 → 0 delta 终态 → 伪 task_done（用户面空白=「崩」）；daemon.log 55 次 keys refresh 401（15min 周期）；单纯问答任务模型链正常（缓存 keys.json 兜底）。根因分类：A1（key/token 面）r19 env 兜底三候选安装态全落空→token 缺失→401——已修（TRILC_ENV_FILE 显式注入 + dataDir 相邻候选，env.ts）；A2（任务执行面）tool_result SSE 映射错位（agent-core 发 {tool_call_id,content,is_error}，旧读 name/result）——已修（app.ts）；A3（任务执行面）空答复伪成功（C13 门卫 toolCount 分支放过）——已修（收紧为必须有文本产出）；B1（提示注入面）installed r19 dist 无 r4-1 tasks/submit 周平面提示注入（源码 a6df674 已含、未随 r19 发布）——随本 release 生效登记；C 族（TriPilot 渲染）TriLCClient.ts 消费面防御性解析无独立缺陷——不拆树。修复断言：第五探测问周面冒烟 PASS（252 字符答复 + queued→running→succeeded 无 failed）；r19 回归不退化（EBUSY 单层化 cmd 无重定向保持、token 兜底不覆盖口径保持、全量 317/318 仅 TUI ink-testing-library 环境缺口=r19 基线既有）。【改动清单】TriLC：init-chain.ts/init-selfcheck.ts 新文件（七态状态机+真 tmp→rename 原子写+校验读回+eventSeq 单调+无 git 操作+断点续跑；五探测+summary 规则 401 唯一认证阻塞类+防重入 409）+ app.ts 增量（GET /internal/v1/init/chain/status、POST /internal/v1/init/selfcheck/run、启动 load+uninitialized 自动转 selfcheck 不自动探测、heartbeat 注册判定 isOnboardingPending()||chainState==='onboarding'、A2/A3 修复、tasks/submit 提交计数钩子）+ env.ts（A1 候选）+ key-cache.ts（fetch 状态跟踪供 trimodel 探测）+ localbus/bus.ts（init:* 事件族）+ onboarding.ts（进度真源措辞一处：对话历史→state.json progress+init:step-event，叙事文本零改动）；测试：init-chain.test.ts/init-selfcheck.test.ts/env-fallback.test.ts 共 19 用例全绿。【护栏逐项】6.4 session-initializer.ts diff 零行 ✓；公司态分离 init-state.ts diff 零行 ✓（已知 tmp/rename 假原子写 + REQ-019 git add -A 隐患登记观察项不修）；密钥纪律：密钥零进 git（冒烟走 TRILC_ENV_FILE 指路 D:/Code/ai/.env）✓；事件流=状态文件帧投影（eventSeq 同帧，status 端点=最后帧一致性测试覆盖）✓；两入口零本地执行（TriPilot/trilc chat 零改动）✓。【冒烟】TRILC_DATA_DIR 显式隔离实例 8722：key fetch 200（401 面修复生效）、healthz ok/tripilot degraded（新实例无面板流量=契约口径）/trimodel ok（3 providers）/tristaciss ok（4 models）/plane-hint-probe ok、防重入 409 同 runId、init-chain.json 无 tmp 残留、live 8711 未扰动。",
+                "artifactCommit": "186296a（TriLC dev，feat(I1)）——已 commit；push sg-server 被权限拒绝未执行，由编排层补推",
+                "resumePoint": "i1-3 小柯独立验证入口：① 单测基线 node --import tsx --test test/init-chain.test.ts test/init-selfcheck.test.ts test/env-fallback.test.ts（19 用例）+ npm test 全量（预期 317/318，1 失败=TUI ink-testing-library 环境缺口既有）② 活体验证配方：TRILC_DATA_DIR=<隔离> TRILC_PORT=8722 TRILC_ENV_FILE=D:/Code/ai/.env TRILC_WEEKLY_PLANE_ROOT=D:/Code/ai/TriMetaverse/docs/workflow/operating-records node dist/index.js → GET /internal/v1/init/chain/status（chainState=selfcheck, eventSeq=1）→ POST /internal/v1/init/selfcheck/run（202）+ 立即重发（409 同 runId）→ 轮询 status 至 finishedAt（第五探测真实模型会话 30-90s）③ 验证面：七态流转矩阵/断点续跑（删进程重建实例 load 同帧）/两入口投影一致（status 载荷 vs init:chain-changed 事件最后帧）/6.4 与 init-state diff 零行复核/SELFCHECK 诊断卡红行（401 与第五探测）④ 门禁口径按 i1-1 brief §七",
+                "backlog": "观察项登记（不随本树修）：① init-state.ts save() 非真 rename（tmp 直写+目标直写+删 tmp）+ REQ-019 initialized 时 git add -A 隐患——路由后续树，链路态 init-chain.ts 已按真原子写实现不复刻 ② CEO 机装后态 401 修复的部署动作（schtasks 任务注入 TRILC_ENV_FILE 或重建任务）归编排层/小贾，代码侧已备 ③ 冒烟残留 $LOCALAPPDATA/TriLC-smoke-i1/ 与 smoke-i1.log 清理被权限拒绝未删 ④ B1 修复（r4-1 a6df674）待随下个 release 装后态生效 ⑤ tripilot 探测为被动观察面：新装实例首轮恒 degraded（无面板流量），语义符合契约（面板连通待交互确认），i1-3 验证时勿误判为缺陷"
+            }
         },
         {
             "nodeId": "i1-3",
