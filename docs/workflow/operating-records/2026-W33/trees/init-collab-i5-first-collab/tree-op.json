@@ -40,7 +40,7 @@
             "brief": "",
             "checkpoint": {
                 "progress": "任务包 A/B/C 全部完成，D/E 排期待执行。A：TriMC runbook §5 演练回退段就地扩展——第四件套（本地端 fetch+reset --hard）+「无痕」定义三端扩展（HEAD+job 态+本地读面）+ 回退纪律五项 + 三路径回退恢复表（a 迁移成功但验收失败不回退迁移；c 初始化域永不回退）+ 域隔离声明（init-sync bundle 不在任何回退命令路径内），现役结构零重构（TriMC commit 76213d4，落在 Phase D 收口 commit 9e4de51 之上无冲突）。B：verify/ 两执行本落盘（checklist 形态非可执行程序）——verify-l1-l4.md（L1-L4 协议层判定矩阵 14 行 + 呈现层五项含红差异注入/未就绪态 + 迁移后 L2 收敛四步）+ verify-trigger-20260816.md（旧口径四判定 + 新口径三判定条款 a/b 择一 + firstCollab 快照推进 + 失败路径幂等重跑不跨日/条款 b 不阻塞；判定时点 23:05 后）（本仓 commit 672adaa3）。C：firstCollab 写入面交付——init-chain.ts updateReady（与 updateSync/updateConfirm 同形态零 schema 新增）+ init-first-collab.ts（POST /internal/v1/init/ready/first-collab：链态门 ready 409 / 合法转移恰好 +1 步 pending→triggered→passed / 跳级回退 409 / 重放幂等 no-op 200 不写状态 / note 不持久）+ app.ts 路由 + 单测 6 例全绿（TriLC commit c8fc21b；Phase D 收口后同文件协调无冲突，transitionTo 转移表零改动，两入口零执行增量）。自测：init 族 44/44 全绿；全量 415/416（1 fail = test/tui/components.test.ts 环境缺口，clean HEAD 复跑证实既有，基线 409/410 口径不退化）。D 回退演练排期 08-16 白天（编排层 ssh 窗口，演练证据留 verify/evidence/20260816/rollback-drill/）；E 双验收周日 08-16 23:00 按 verify-trigger-20260816.md 执行。",
-                "artifactCommit": "76213d4（TriMC runbook 扩展）+ c8fc21b（TriLC firstCollab）+ 672adaa3（本仓 verify/）+ 本 commit（tree-op i5-2 checkpoint）",
+                "artifactCommit": "76213d4（TriMC runbook 扩展）+ c8fc21b（TriLC firstCollab）+ 672adaa3（本仓 verify/）+ af9125c3（tree-op i5-2 checkpoint）",
                 "resumePoint": "i5-3 小柯独立验证：A 复核（runbook 扩展 vs i5-1 §二）+ B 执行本口径复核（vs i4-1 §六冻结契约）+ C 单测复跑（init 族 + 全量基线）。D（08-16 白天回退演练，需编排层 ssh）与 E（周日 23:00 双验收）执行后证据落 verify/evidence/，i5-3 接全链判定。"
             }
         },
