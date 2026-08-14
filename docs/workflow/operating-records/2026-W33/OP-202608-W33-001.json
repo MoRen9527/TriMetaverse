@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (I2 收官 CONDITIONAL_PASS + I3 开跑信号)",
-        "version": "2.32.0",
-        "lastUpdated": "2026-08-14T11:45:52+00:00",
+        "updatedBy": "CEOChiefOfStaff (I3 activeTrees 登记 + r20 构建发起 + I4 并行立项决定)",
+        "version": "2.33.0",
+        "lastUpdated": "2026-08-14T11:48:03+00:00",
         "latestActiveWeek": true
     },
     "priority": "high",
@@ -29,7 +29,17 @@
         "TriMC"
     ],
     "updatedAt": "2026-08-09T15:59:00.297693+00:00",
-    "activeTrees": [],
+    "activeTrees": [
+        {
+            "treeId": "init-collab-i3-project-registry",
+            "title": "初始化到协同实施树 I3 — 项目面 + 注册点（大 scope：P1 识别认领 + P2 建立注入 + worktree 两源链路 + project-registry.json + link/claim 端点 + 向导接入）",
+            "nodes_total": 6,
+            "nodes_done": 1,
+            "status": "active",
+            "path": "trees/init-collab-i3-project-registry/tree-op.json",
+            "related": "吸收 design-v2 P1+P2 大 scope（worktree 两源链路 + 注册点 + link/claim 端点 + 分支规约 + 幽灵路径清理 + 向导分流）；i3-1 小狄拆解已派（019c035f）"
+        }
+    ],
     "doneTreesFromPreviousWeek": [],
     "doneTreesThisWeek": [
         {
@@ -408,7 +418,8 @@
         "I1 收官（2026-08-14，OP 2.28.0）：init-collab-i1-statemachine 全链 PASS 收官 APPROVE。r19 问周面 gate 结论：A1（token 面：TRILC_ENV_FILE 显式注入 + dataDir 相邻候选，env.ts）、A2（tool_result SSE 映射错位修复，app.ts）、A3（空答复伪成功收紧为必须有文本产出）三修复 + B1（周平面提示注入源码已含未随 r19 发布，随本 release 生效登记）+ C（TriPilot 渲染面防御性解析无独立缺陷，不拆树）；修复断言=问周面冒烟 252/301 字符答复 + queued→running→succeeded 无 failed。验证=七门禁独立复测全 PASS（6.4/init-state diff 零行、真原子写、叙事零回归、五探测齐全、r19 回归、两入口零本地执行）+ 全量 317/318 基线一致（1 fail=components.test.ts ink-testing-library 环境缺口，r19 基线既有）。观察项四裁决：①坏 token 下 plane-hint-probe 仍绿=接受（双面真相语义正确；呈现层组合困惑挂 I2 消费诊断卡时处理）②403/unauthorized 归 blocked=接受+契约修正（blocked 类=认证失败族，非字面 401；detail 硬编码「fetch 401」文案微瑕 I2 顺手改实际错误串）③load() 损坏 JSON 静默重置=本树不修，**I2 前置强制项（CTO 指定非可选）**：区分 ENOENT（静默默认帧=正确）vs 解析错（console.error+.corrupt 备份+单测），I2 扩展 init-chain 时同步落地 ④dist 未随 commit=非缺陷（gitignored 常态，验证配方已含 build）。微差登记：V1 healthz 探测未呈现 heartbeat 时间戳=I2 可选增强；V2 tripilot 钩子挂 tasks/submit（契约字面 /v1/tasks/stream，TriPilot 形态唯一入口）=语义保持接受。部署排期：编排层已执行 schtasks .cmd 注入 TRILC_ENV_FILE + TRIMC_BASE_URL；CEO 机 401 待 r20 装后态生效。**I2 开跑信号**：I2（公司面装配升级）待编排层立项——前置项清单=③ + 呈现层组合困惑 + 叙事态同 release 下线门禁；产品面输入（小乔）=§2.2 阶段卡、§2.4 员工开业结构化选择、指标 I4。",
         "I2 产品面输入登记（2026-08-14，小乔交付，挂 I2 立项 brief）：① ONBOARDING 阶段卡验收断言 A1-A4（阶段卡可见 / 完成判据=CEO 名+员工名单 / 断点续跑不重复提问可回看 / 0 人拦截+默认勾选 5 岗）② 员工开业结构化选择契约（岗位卡片字段 roleId/roleName/oneLinePositioning/isGovernance 只读展示；默认勾选最小 5 岗以 playbook 1.2 原文为准；名字必填写入装配产物；两入口同状态机载荷+单执行体串行化）③ 指标 I4 实测判定（计时=选择界面呈现→开张卡显示；中位数 ≤3 分钟；零命令=仅面板/对话操作；3 次真实走查含 1 次两入口交替；装配失败重试一次仍达标算 PASS）。**岗数口径已裁决（2026-08-14，CEO）**：维持设计原文——selectedRoles ≥1 可开张，默认勾选 5 岗（可取消至 1 岗），<5 岗提示「推荐至少 5 岗，当前可选」不强制；I4 指标按 5 岗推荐路径走查口径不变。I2 树已建（init-collab-i2-company-assembly，编排层 27342c37；i2-1 小狄拆解已派，倒排 08-15 拆解+实现 / 08-16 上午验证+终审）。",
         "D1 决策（2026-08-14，CPO 小乔裁决，i2-1 checkpoint 已录）：默认第 5 岗采纳 chief-technology-officer——DEFAULT_SELECTED_ROLES = ceo-chief-of-staff / full-stack-developer / chief-administrative-officer / chief-human-resources-officer / chief-technology-officer（4 岗核对 playbook 1.2 原文无出入）。I4 走查口径不变（5 岗推荐路径）。i2-2 已派小全开跑（12 项任务包：D1 常量 → getRoleCatalog → 前置项③ → 契约修正 → init-assemble.ts → app.ts 六处 → cli/tui → 删 onboarding.ts → TriPilot webview 阶段卡 → 单测 → 冒烟 → Registry 回写；跨两仓，倒排 08-14/15 实现 → 08-16 上午 i2-3/i2-4）。",
-        "I2 收官（2026-08-14，OP 2.32.0）：init-collab-i2-company-assembly 全链 CONDITIONAL_PASS 收官。门禁 1-8 全 PASS（6.4 零改动、公司态分离、两入口零本地执行、叙事态同 release 下线=onboarding.ts 全删、I1 前置项③落地、契约修正⑧实际错误串、装配端点白名单+校验矩阵+回滚幂等+409/422、I1 回归全量 340/341）+ 门禁 9 部分 PASS（A1 阶段卡 code 级/A2 三源一致/A3 断点续跑/A4 0 人拦截+5 岗默认=D1 常量 live；I4 实测=唯一阻塞项，r20 未装）。唯一条件 = I4 实测挂 r20 装后态补测：08-16 上午 r20 构建（push v* tag，收口后编排层发起）→ CEO 机安装 + schtasks 401 注入面确认生效 → 下午 i2-3 补走查（3 次含 1 次两入口交替，CLI 侧真实 TTY 禁管道直灌）→ 23:00 前闭环；上午构建受阻 → I4 挂 I5 验收前顺延（收口不阻塞）。修正登记：②用例数口径=41（42/45 无依据）③TriPilot I2 增量=3 files（小柯 5 files 含 r3-1 parent 并集）。观察项：④init-cli-flow ask() readline 每问新建（TTY 不受影响，后续树惰性单例）⑤SSE 无重放缓冲=契约设计确认 + 可选增强建连快照帧。TriModel 无 git 治理缺口（版本管理/备份纪律）登记路由后续树。三仓 commit：TriLC a5cdacf + TriPilot 350bcb4 + 本仓 5ad35f51（编排层已推）。**I3 开跑信号**：I3（项目面+注册点，吸收 design-v2 P1+P2 大 scope）待编排层立项派单——拆解归小狄（含两源链路、注册点 schema、link/claim 端点、热更新、幽灵路径清理）。"
+        "I2 收官（2026-08-14，OP 2.32.0）：init-collab-i2-company-assembly 全链 CONDITIONAL_PASS 收官。门禁 1-8 全 PASS（6.4 零改动、公司态分离、两入口零本地执行、叙事态同 release 下线=onboarding.ts 全删、I1 前置项③落地、契约修正⑧实际错误串、装配端点白名单+校验矩阵+回滚幂等+409/422、I1 回归全量 340/341）+ 门禁 9 部分 PASS（A1 阶段卡 code 级/A2 三源一致/A3 断点续跑/A4 0 人拦截+5 岗默认=D1 常量 live；I4 实测=唯一阻塞项，r20 未装）。唯一条件 = I4 实测挂 r20 装后态补测：08-16 上午 r20 构建（push v* tag，收口后编排层发起）→ CEO 机安装 + schtasks 401 注入面确认生效 → 下午 i2-3 补走查（3 次含 1 次两入口交替，CLI 侧真实 TTY 禁管道直灌）→ 23:00 前闭环；上午构建受阻 → I4 挂 I5 验收前顺延（收口不阻塞）。修正登记：②用例数口径=41（42/45 无依据）③TriPilot I2 增量=3 files（小柯 5 files 含 r3-1 parent 并集）。观察项：④init-cli-flow ask() readline 每问新建（TTY 不受影响，后续树惰性单例）⑤SSE 无重放缓冲=契约设计确认 + 可选增强建连快照帧。TriModel 无 git 治理缺口（版本管理/备份纪律）登记路由后续树。三仓 commit：TriLC a5cdacf + TriPilot 350bcb4 + 本仓 5ad35f51（编排层已推）。**I3 开跑信号**：I3（项目面+注册点，吸收 design-v2 P1+P2 大 scope）待编排层立项派单——拆解归小狄（含两源链路、注册点 schema、link/claim 端点、热更新、幽灵路径清理）。",
+        "实施推进登记（2026-08-14，OP 2.33.0）：① r20 构建已发起（本地 build-desktop.ps1，v0.4.10-r20，含 I1+I2 全部代码 TriLC a5cdacf + TriPilot 350bcb4；日志 output/r20-build.log，完成通知到后装后态安装排 08-16 上午或构建完成即装）② I3 已立项（init-collab-i3-project-registry，019c035f，i3-1 拆解已派小狄）③ **I4 并行立项决定（小贾裁决）**：同意编排层先建 I4 树派小狄拆解——I4 依赖 I2/I3，但 TriMC 接收侧（sync-apply cron + status 端点 + git bundle 链 schema）与 I3 无实现耦合可先行；L1-L4 协同确认的数据源之一=project-registry（I3 产出），拆解时按内序排（TriMC 侧先行、确认卡后接）；I4 拆解重点复核五维 payload schema（key 只同步配置面+指纹不传材料，SEC-20260813-001）+ bundleId+generatedAt 单调幂等。"
     ],
     "plans": [
         {
