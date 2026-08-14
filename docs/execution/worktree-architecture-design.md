@@ -1,5 +1,7 @@
 # 研发仓 × TriCade 生产面 Git Worktree 架构设计
 
+> **superseded**：本设计的固定路径方案已被 `docs/execution/project-workspace-design-v2.md`（ARCH-20260814-002）取代，树 A 取消排期；本文保持冻结作为 v2 的事实基线（分支纪律、junction 事故纪律、fleet 对称性教训继承），不再单独实施。
+
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/execution/worktree-architecture-design.md
