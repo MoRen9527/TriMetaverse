@@ -26,7 +26,7 @@
             "routedInput": "i4-0:checkpoint",
             "brief": "briefs/i4-1-20260814.md",
             "checkpoint": {
-                "progress": "拆解完成（briefs/i4-1-20260814.md）。六项全拆：① bundle schema 字段契约冻结（五维分段 + keys 维白名单 provider/ready/fingerprint/baseUrl；生成端递归拒绝 api_key/apiKey/secret/token 字段 + 序列化无 sk- 明文断言；bundleId uuid + generatedAt 严格递增）② TriLC 生成链 = sync/run 端点（链态门 project-link/sync + 防重入 + 五维收集单维降级 + 幂等重跑不重新生成 + 固定身份 commit + 双远端 push origin/sg-server）+ sync/status 端点 + daemon 重启 re-sync 只读检查 ③ TriMC 接收侧 = src/config-sync/ 新模块（apply CLI + --sync-apply 预设 every 15min + ff pull 第一步 D6 + GET /internal/v1/config/sync/status 磁盘真源 + 轻缓存无跨进程 IPC）④ default 收敛 = 三级解析（env TRIMC_DEFAULT_MODEL > applied bundle > 常量兜底）+ 6 处旧名替换 ⑤ 服务器密钥核查清单 5 项 + 判定口径（前提成立/回退 A TriMC 经服务器侧 TriModel 拉取/ESCALATE 托管升级项）⑥ L1-L4 确认卡契约冻结（confirm/check + confirm 端点 + 三元素/HEAD 徽标/红差异/诊断入口），Phase D 后置待 I3 收官解锁。六个决策点 D1-D6 随文注记。任务包 Phase A 契约 → B TriMC 侧先行 → C TriLC 链 → D 确认卡后置；门禁十条（6.4 零改动/公司态分离/零本地执行/密钥纪律/幂等/单维降级/git 单身份/域隔离/340-341 回归/产品断言 I5-I6）。",
+                "progress": "拆解完成（briefs/i4-1-20260814.md）。六项全拆：① bundle schema 字段契约冻结（五维分段 + keys 维白名单 provider/ready/fingerprint/baseUrl；生成端递归拒绝 api_key/apiKey/secret/token 字段 + 序列化无 sk- 明文断言；bundleId uuid + generatedAt 严格递增）② TriLC 生成链 = sync/run 端点（链态门 project-link/sync + 防重入 + 五维收集单维降级 + 幂等重跑不重新生成 + 固定身份 commit + 双远端 push origin/sg-server）+ sync/status 端点 + daemon 重启 re-sync 只读检查 ③ TriMC 接收侧 = src/config-sync/ 新模块（apply CLI + --sync-apply 预设 every 15min + ff pull 第一步 D6 + GET /internal/v1/config/sync/status 磁盘真源 + 轻缓存无跨进程 IPC）④ default 收敛 = 三级解析（env TRIMC_DEFAULT_MODEL > applied bundle > 常量兜底）+ 6 处旧名替换 ⑤ 服务器密钥核查清单 5 项 + 判定口径（前提成立/回退 A TriMC 经服务器侧 TriModel 拉取/ESCALATE 托管升级项）⑥ L1-L4 确认卡契约冻结（confirm/check + confirm 端点 + 三元素/HEAD 徽标/红差异/诊断入口），Phase D 后置待 I3 收官解锁。六个决策点 D1-D6 随文注记。任务包 Phase A 契约 → B TriMC 侧先行 → C TriLC 链 → D 确认卡后置；门禁十条（6.4 零改动/公司态分离/零本地执行/密钥纪律/幂等/单维降级/git 单身份/域隔离/340-341 回归/产品断言 I5-I6）。；【服务器密钥核查结果（编排层 2026-08-14 执行）】#1 成立（docker/.env source 注入：DEEPSEEK_API_KEY + DEEPSEEK_BASE_URL + POSTGRES_PASSWORD + TRIMC_PORT，systemd env 面无但启动脚本 set -a source 等价）/#2 成立（GET /hello-pro 真实模型响应 deepseek-v4-pro 长文）/ #3 成立（TriMC 主模型路径读 DEEPSEEK_API_KEY）/ #4 不成立（服务器 3333 无监听——TriModel 仅本机 daemon 侧，服务器侧 TriMC 自有密钥链直接可用）/ #5 部分成立（仅 DeepSeek 主链，无 anthropic/openai/trimetaverse 条目）→ 判定：**主案走（前提成立），keys 维范围收敛为 DeepSeek 单一 provider**；bundle keys 维白名单与服务器实际覆盖对齐；其他 provider 需求按回退 A 或密钥托管升级项",
                 "artifactCommit": "待提交（随本 checkpoint 同批）",
                 "resumePoint": "i4-2 按 brief Phase A/B/C/D 内序开跑（Phase B TriMC 接收侧先行；§五 服务器密钥核查 = i4-2 第一步或编排层协助并行；Phase D 待 I3 收官解锁信号）。串行风险三件：服务器 ssh 核查、跨三面工时、I3 收官解锁"
             }
@@ -34,7 +34,7 @@
         {
             "nodeId": "i4-2",
             "agent": "FullStackDeveloper",
-            "status": "pending",
+            "status": "active",
             "action": "实现（小全，按 i4-1 拆解）：bundle 生成链 + TriMC 接收侧 + default 收敛 + L1-L4 确认卡；护栏逐项守",
             "routedInput": "i4-1:checkpoint",
             "brief": "",
