@@ -27,7 +27,7 @@
             "brief": "briefs/i5-1-20260814.md",
             "checkpoint": {
                 "progress": "拆解完成（briefs/i5-1-20260814.md）。五块全拆：①L1-L4 验收执行口径——协议层判定矩阵（L1 三元素短指纹/L2 三 HEAD/L3 applied bundleId/L4 首个协同工作承载）+ 呈现层验收（三元素同显/短指纹防截断/HEAD 徽标/红差异注入/未就绪态）+ 迁移后 L2 收敛步骤（pull 回流 → 建议 re-sync → 三值再收敛，协同稳态证明）+ Phase D 缺口闭合清单八项（活体判定/firstCollab 写入面/呈现终验/L4 执行/显式触发/runbook 第四件套/触发验收/产品断言 I6 终验）+ 验收脚本形态=checklist 执行本（verify/ 两文件，非可执行程序——三端混合面 + I5 非开发树定位）②迁移三端回退 runbook 扩展——TriMC runbook §5 就地扩展（第四件套本地端 fetch+reset --hard 回退目标 + 「无痕」定义扩展三端+job 态+本地读面 + 回退纪律继承 HEAD 当场记录/fleet 单身份/job ID 全量/clean 限定路径域）+ 三路径回退恢复表（a 迁移成功但验收失败不回退迁移；c 初始化域永不回退）+ 域隔离声明 ③§8.2 触发条款验收——旧口径四判定（触发/五段链/部署旧版行为不变/本地回流 diff）+ 新口径三判定（触发形态 a/b 择一/首个协同工作三面可见/re-sync 协同稳态）+ 双验收互不替代各自留痕 + 失败路径（幂等重跑不跨日/条款 b 不阻塞）④观察项 a 评估=不纳入 I5（执行验收树非开发树 + I3 域回归面 + 硬时点纪律 + 非正确性问题），挂 I5 后独立小树或搭车 worktree 架构树 A ⑤firstCollab 写入面最小增量（本树唯一代码增量：updateReady + POST /internal/v1/init/ready/first-collab 端点，链态门 ready/合法转移/重放幂等/单测 4 例；init-chain.ts 时序纪律=待 Phase D 收口 commit）。门禁十条（证据链完整性/回退演练完整性/触发语义 ①A/I1-I4 回归基线/周平面写权单主体/零本地执行/firstCollab 推进纪律/域隔离/runbook 最小面/产品断言终验）。任务包 A-F 内序：A runbook 扩展 + B 验收执行本（先行不依赖 Phase D）→ C firstCollab 写入面（待 Phase D 收口）→ D 回退演练 08-16 白天 → E 周日 23:00 双验收 → F 收口。",
-                "artifactCommit": "待提交（随本 checkpoint 同批）",
+                "artifactCommit": "b9268094（TriMetaverse：i5-1 brief + tree-op i5-1 checkpoint）",
                 "resumePoint": "i5-2 小全按任务包 A-F 内序开跑：A（TriMC runbook §5 扩展）+ B（verify/ 两执行本）先行；C（firstCollab 端点）待 I4 Phase D 收口 commit（init-chain.ts 同文件协调，开跑前先 git status 确认）；D（回退演练）08-16 白天需编排层 ssh 窗口；E（双验收）周日 23:00 后；F 收口。三个串行风险：Phase D 收口时点（i4-4 终审后立即解锁 C）/ CEO 机装后态活体（失败直落条款 b 路径）/ 服务器 ssh 协作窗口"
             }
         },
