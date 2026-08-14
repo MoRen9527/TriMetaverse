@@ -68,11 +68,15 @@
         {
             "nodeId": "i2-4",
             "agent": "ChiefTechnologyOfficer",
-            "status": "pending",
+            "status": "done",
             "action": "验收口径终审（小狄）：diff 级复核 + 护栏逐项核查（6.4 零改动、公司态分离、叙事态下线同 release、I1 前置项落地）→ 终审结论",
             "routedInput": "i2-3:checkpoint",
             "brief": "",
-            "checkpoint": {}
+            "checkpoint": {
+                "progress": "【终审结论 2026-08-14，小狄 CTO】放行 i2-5 收口，verdict = CONDITIONAL_PASS（唯一条件 = I4 实测挂 r20 装后态补测，08-16 23:00 双验收前闭环）。终审对象 = TriLC a5cdacf（A' 返工后 HEAD，diff 186296a..a5cdacf = 14 files +2088/-172；A' 返工 02e17e8..a5cdacf = 6 files +178/-45）+ TriPilot 350bcb4（3 files +476/-2，parent = ea3936f r3-1 既有）。【门禁 9 条逐项核查（独立抽验，非仅采信 i2-3）】1 PASS 6.4 零改动：session-initializer.ts diff 零行（git diff --stat 独立复核）+ 工作树零触达。2 PASS 公司态分离：init-state.ts diff 零行（save() 机制沿用调用，init-assemble.ts 仅 import type）。3 PASS 两入口零本地执行：init-cli-flow.ts 全文件只 GET/POST + readline；extension.ts init 增量只 fetch/postMessage（submitInitAssemble/triggerInitSelfcheck/SSE 订阅均无 fs 写）。4 PASS 叙事态同 release 下线：onboarding.ts -106 行删除、app.ts buildOnboardingAgent import+heartbeat 注册块移除、cli.ts auto-resume 分支移除；grep 残留仅 cli.ts:520 删除说明注释（buildOnboardingAgent/hb_company-onboarding 全仓零引用）。5 PASS I1 前置项③：load() ENOENT 静默默认帧 vs 解析错 .corrupt 备份+console.error+默认帧+已有 .corrupt 保留不覆盖+备份失败也有错误日志（四分支齐）。6 PASS 契约修正⑧：detail = ks.lastFetchError 实际错误串截 120（含 lastFetchAt）。7 PASS 装配端点+A' 落地与裁决一致：init-assemble.ts 校验矩阵（ceoName 1..64/selections ≥1/roleId 形状+目录双校验逃逸拒绝/去重/name 必填）→ 白名单 5 类落点逐文件 tmp→rename+.bak 目录 → 回滚注入（failOnTarget）/幂等重试（failOnTransition：save 成功 transition 失败不回滚文件，重入跳过文件段+员工一致校验 409 employees_mismatch 后补 transition）→ 409 防重入互斥+422 阶段门禁 → 事件 assembling/assembled/assemble-failed 与状态帧一致；A' 推进点 = init-selfcheck.ts executeSelfcheck 完成路径（summary ∈ {pass,degraded} 且 getState()==='selfcheck' → transitionTo('onboarding','daemon')，发布序 selfcheck-finished 先 chain-changed 后，blocked 不推进，getState 条件即幂等守卫）——与 A' 裁决字面一致；A' 返工 diff 确认候选 A 全移除（fromSelfcheck 受理路径/advancedFromSelfcheck 字段/重试补转移段全部删除，门禁回字面 state!=='onboarding' 422），init-cli-flow.ts A' 联动正确（自检完结后检查链态 onboarding+2s 重查兜底，跟随链态不抢先）。8 PASS I1 回归：全量独立复跑 341 用例 340 pass/1 fail = test/tui/components.test.ts（ink-testing-library 环境缺口 r19 基线既有，与 I2 无关）。9 部分 PASS：A1 code 级 PASS（main.js INIT_PHASE_LABEL 五态渲染+initCard 元素+开张卡常驻 project-link/sync/confirm）；A2 PASS（assemble 200 employees+CLI 开张汇总+state.json 三源一致）；A3 PASS（progress upsert 持久+投影回看+CLI/面板 savedSel/names 断点回填跳过已答）；A4 PASS（0 人 400 live+defaultSelected 恰 5 岗=D1 常量+<5 岗 warning）；I4 实测 = 唯一阻塞（r20 未构建未安装，现网 daemon 0.4.9=r19）→ CONDITIONAL_PASS。【差异点复核】① 验证对象中途更新（02e17e8→a5cdacf）已复跑——确认；独立复核 A' 返工 diff 与活体证据链一致（SSE 捕获 sse-capture.txt：selfcheck→onboarding eventSeq=3 sourceEntry=daemon、onboarding→project-link eventSeq=4 sourceEntry=trilc-chat；两 dataDir init-chain.json 最终帧 eventSeq=4 与 SSE 同帧投影一致）。② 用例数口径：实跑 41 为真（终审独立复跑焦点套 41/41 全绿：init-assemble 14+init-chain 10+init-selfcheck 12+contract-resolver 5）；实现方 resumePoint 报 42/45 无依据，修正登记口径 = 41（02e17e8 候选 A 对照 38/38，A' 返工净 +3）。③ TriPilot 文件数：实现方自报 3 files 在 350bcb4 commit 维度准确；小柯「5 files」= ea3936f（r3-1 模型名修正 tmv-* 化：tripilot-cli.ts+welcome-setup.ts，350bcb4 的 parent 链既有 commit）与 350bcb4 的并集——修正登记口径：I2 增量 = 3 files，模型名修正 = r3-1 既有 commit 非 I2 范围、非本树新增，无护栏违反，无需回退。【观察项 ④⑤ 意见】④ 确认存在（init-cli-flow.ts:83-92 ask() 每问新建 readline interface）：TTY 交互不受影响；piped stdin 快速输入丢后续行。I4 走查 CLI 侧必须真实 TTY 交互（或延迟注入），不得用管道直灌脚本——建议后续树改惰性单例 readline 复用。⑤ 确认契约设计：SSE 无重放缓冲=断连重拉 status（TriPilot broadcastInitEvent 对 chain-changed/selfcheck-finished/step-event assembled|assemble-failed 重拉快照已落实）；eventSeq 1→3 跳变 = 订阅前转移（启动转移 seq1+验证轮次叠加 seq2 均发生在 SSE 订阅前），eventSeq 契约仅承诺单调+帧一致（init-chain.ts:243 单调校验在）不承诺连续——非缺陷不阻塞；建议后续树可选增强：SSE 建连时补一条 init:chain-status 快照帧，免跳变困惑。【环境事故登记确认】TriModel 目录已恢复（2026-08-14 17:53 时间戳；3333 服务正常 /v1/models providers 齐全：deepseek/openai/trimetaverse 族模型列表完整）——终审登记确认恢复；TriModel 无 .git 治理缺口确认（目录无 .git，恢复依赖装后态快照，11:25 后改动不可找回风险真实存在）——登记观察项路由后续树（TriModel 纳入版本管理或备份纪律），由编排层定树。TriCompany agent-core 恢复（git restore+npm install+build）与 TriLC node_modules（npm ci）由 i2-3 自报+全量测试复跑绿佐证，终审采信。【CONDITIONAL_PASS 裁决与 I4 补测时机】放行 i2-5 收口（I3 开跑信号挂收口后不变）；I4 补测时机建议（给编排层可执行排期）：08-16 上午排 r20 构建（push v* tag 触发 build-tricade.yml）→ CEO 机安装 + schtasks 401 token 注入面确认生效 → 08-16 下午 i2-3 补走查（3 次含 1 次两入口交替、中位数 ≤3 分钟、零命令、装配失败重试一次仍达标算 PASS）→ 23:00 双验收前 I4 证据闭环；若 08-16 上午构建受阻，降级路径 = I4 补测挂 I5 验收前，i2-5 收口登记条件项顺延（不因 I4 阻塞 i2-5 落盘，但双验收口径需 I4 闭环）。",
+                "artifactCommit": "",
+                "resumePoint": "i2-5 小贾收口入口：终审 verdict = CONDITIONAL_PASS（条件 = I4 实测挂 r20 装后态补测，08-16 23:00 双验收前闭环；补测时机见上）。收口动作：① 终审结论登记 OP（W33）② 树移 doneTreesThisWeek ③ I3 开跑信号归编排层 ④ I4 补测排期（r20 构建安装 08-16 上午）+ I4 证据归 i2-3 补走查 ⑤ 差异点修正口径（用例数 41 / TriPilot 3 files）+ 观察项④⑤（readline 单例、SSE 快照帧）+ TriModel 无 git 治理缺口登记后续树"
+            }
         },
         {
             "nodeId": "i2-5",
@@ -84,6 +88,6 @@
             "checkpoint": {}
         }
     ],
-    "verdict": "",
+    "verdict": "CONDITIONAL_PASS（i2-4 小狄终审 2026-08-14：门禁 1-8 全 PASS + 9 部分 PASS，唯一缺口 = I4 实测（r20 未装）；条件 = r20 装后态补测 3 次走查含 1 次两入口交替，08-16 23:00 双验收前闭环）",
     "completedAt": ""
 }
