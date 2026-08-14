@@ -47,11 +47,15 @@
         {
             "nodeId": "i3-3",
             "agent": "TestEngineer",
-            "status": "pending",
+            "status": "done",
             "action": "独立验证（小柯，按 i3-4 门禁口径）：两源链路 + 注册点 + 向导全流程 + 护栏回归",
             "routedInput": "i3-2:checkpoint",
             "brief": "",
-            "checkpoint": {}
+            "checkpoint": {
+                "progress": "独立验证完成 — 门禁 7 条逐项 PASS（判定 PASS，观察项单列）。验证对象：TriLC 工作区整树 HEAD=44c82a1（I3 共享文件收口）+ 71cccc9（I3 独占）。①工作区整树：71cccc9=I3 独占 4 文件（project-link.ts/project-registry.ts + 两测试）；44c82a1 共享四条（init-chain/init-cli-flow/bus/app）随 I4 收口合并提交，与实现方注记一致。②单测基线：专项 30/30 全绿（project-registry 12 + project-link 18）；npm test 全量 398/399，1 fail=test/tui/components.test.ts ERR_MODULE_NOT_FOUND（ink 环境缺口，r19 基线既有，与实现方口径一致，无退化）。③活体（独立隔离：TRILC_PORT=8798 主测 + 8797 链态门测；TRILC_DATA_DIR + TRILC_PROJECT_REGISTRY 双隔离 temp 目录；未复用实现方 8799；prod 8711 全程健康、prod 注册点全程不存在零写入）：inspect 三分类全过（unlinked 普通目录 / project-clone 主仓 dev / managed-worktree wt-main）；local 建立 200（真实 worktree add → project/trimetaverse，SSE started+progress×6+finished+step-event 八帧，注册点登记 mainCheckoutPath+worktrees[1]，finished 帧 phaseDetail 与 chain/status 投影逐字段一致）；同目标重链认领幂等 200（缺陷①复测 PASS：未误拒、worktrees 不增长、git worktree list 无重复、走认领绝不重复 add）；claim 200 {projectKey,branch,claimed:true} 无重复登记；github 白名单拒绝（evil 仓 422 not-whitelisted + 零 clone + SSE 失败帧 step=match status=failed 分类与 HTTP 一致）；github 真实克隆收敛（clone 362M 慢传输 curl 5min 断开但 daemon 侧继续完成：gh-clone 完整 .git 317M + dev checkout + gh-clone-worktree 检出 project/trimetaverse + 注册点登记一致——链路实体完整）；门禁 422（停 daemon 写 hasNpmFileDeps=true 冷启动 → gate-blocked 422 + 零 add）；branch-conflict 422 分类正确 + 零 add；链态门 409（8797 新实例 selfcheck 态 link/claim 均 409 {chainState:selfcheck}）；防重入 409 busy（clone 期间实测触发）；缺陷②复测 PASS（注入他主检出登记项 TriLC gitdir → lazyCleanup 存活 + claim 路径 crossValidateWithGit 后存活，不再误判幽灵）。④护栏回归：I1 SELFCHECK 五探测（healthz ok / tripilot degraded 隔离预期 / trimodel ok / tristaciss ok / plane-hint-probe 问周面冒烟 PASS）+ 自动推进 onboarding；I2 assemble 200 → companyState=initialized → chainState=project-link 全流程。⑤静态门禁：TriPilot 仓工作区干净 I3 期间零 commit（门禁 1）；git 单执行体 execFile 参数数组无 shell 选项（门禁 2）；worktree remove --force 全仓零实际使用（grep 命中均注释/测试禁用断言，门禁 3）；init-state.ts/session-initializer.ts a5cdacf..HEAD diff 零行，init-chain.ts 仅 +64 行三快照方法（I3 相关仅 updateProjectLink，护栏例外允许；无 transitionTo 转移表改动，门禁 6）；localhost-only 绑定 127.0.0.1（门禁 1 后半）。观察项（非阻塞，单列）：a) github clone 极慢（362M 停滞数分钟，总耗时远超交互预期），且 clone 期间无 SSE 进度帧（clone 前后帧之外无中间进度）——网络波动下该链稳定性的真实风险面，建议 I4 后续树观察；b) 注册点文件外部改 hasNpmFileDeps 不即时生效（daemon 内存态缓存优先，冷启动才读文件）——与「现场纠偏安全阀」语义一致，建议文档注明生效时机；c) 隔离残留目录 C:\\Users\\jedih\\AppData\\Local\\Temp\\trilc-i3-3-verify（gh-clone 362M）rm 权限拒绝未删，系统 temp 自动清理；d) TRILC_PROJECT_REGISTRY 指向不存在文件时 daemon 新建默认注册点（defaultRegistryFile 行为，符合设计）。验证清理：wt-main/gh-clone-worktree 两 worktree 已非 --force remove，主仓 worktree list 仅主仓，project/trimetaverse 分支保留（I3 规约常驻分支）。",
+                "artifactCommit": "无（验证未产生代码改动；验证对象 TriLC HEAD=44c82a1）",
+                "resumePoint": "i3-4 小狄终审：diff 级复核 + 护栏逐项核查（观察项 a/b 供终审参考：clone 无中间进度帧、注册点文件覆盖冷启动生效）"
+            }
         },
         {
             "nodeId": "i3-4",
