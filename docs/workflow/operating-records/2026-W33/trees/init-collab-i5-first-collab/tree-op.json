@@ -1,0 +1,69 @@
+{
+    "treeId": "init-collab-i5-first-collab",
+    "title": "初始化到协同实施树 I5 — 协同确认验收 + 首个协同工作（L1-L4 校验 + 迁移三端回退 runbook 扩展 + §8.2 触发条款验收）",
+    "source": "init-to-collab-design.md v2026.W33.4（§3.2/§3.5/§3.6 确认卡 + §6.8 触发条款 + §8.2/§十 I5）→ I3 收官（i3-4 终审 PASS，I4 Phase D 解锁）→ I5 立项信号（编排层，I3 收官后）",
+    "week": "2026-W33",
+    "status": "active",
+    "nodes": [
+        {
+            "nodeId": "i5-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "建树（编排层派单）：范围按设计 §十 I5——① L1-L4 校验实现与验收执行（确认卡三方同显三元素/HEAD 一致性徽标/红差异/诊断入口——L1-L4 实现主体归 I4 Phase D 契约，本树承接验收执行与缺口闭合）② 迁移三端回退 runbook 扩展（§8.2 触发条款：自然触发/显式触发/初始化未完成降级路径的回退与恢复）③ 首个协同工作验收执行（周日 08-16 23:00 自然触发即首个协同工作；未完成则确认后显式触发）。依赖：I4（Phase D 确认卡）+ r1-2 迁移链（w33-weekly-migration-ade）。节点链：i5-1 小狄技术拆解 → i5-2 小全实现/执行 → i5-3 小柯独立验证 → i5-4 小狄终审 → i5-5 小贾收口",
+            "routedInput": "",
+            "brief": "",
+            "checkpoint": {
+                "progress": "树已建（立项周 W33）。I5 = 收官验收树（依赖 I4 Phase D + r1-2 迁移链）。触发语义（CEO 裁决①A）：周日 08-16 23:00 自然触发照常（旧口径验收）+ 初始化后增量验收——初始化完成于自然触发前 = 自然触发即首个协同工作；未完成则自然触发照常 + 确认后显式触发（§8.2 条款 b）。观察项 a（clone 流式 stderr + 心跳帧 + 可取消）为 I5 立项候选任务项（i3-4 裁决）。",
+                "artifactCommit": "",
+                "resumePoint": "i5-1 待小狄技术拆解（L1-L4 验收执行口径 + runbook 扩展 + 触发条款验收脚本）"
+            }
+        },
+        {
+            "nodeId": "i5-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "技术拆解（小狄）：L1-L4 验收执行口径（含 I4 Phase D 缺口闭合）、迁移三端回退 runbook 扩展、§8.2 触发条款验收脚本/判定——输出=执行任务包 + 门禁口径",
+            "routedInput": "i5-0:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i5-2",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "执行（小全）：L1-L4 缺口闭合 + runbook 扩展落盘 + 首个协同工作验收执行准备",
+            "routedInput": "i5-1:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i5-3",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "独立验证（小柯）：L1-L4 全链 + 回退 runbook 演练 + 触发条款判定",
+            "routedInput": "i5-2:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i5-4",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "验收口径终审（小狄）：diff 级复核 + 触发语义核查 → 终审结论",
+            "routedInput": "i5-3:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i5-5",
+            "agent": "CEOChiefOfStaff",
+            "status": "pending",
+            "action": "收口：终审结论登记 OP（W33）+ 树移 doneTreesThisWeek + 初始化全链收官登记（R4-RELEASE-MERGE 发布窗口衔接）",
+            "routedInput": "i5-4:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        }
+    ],
+    "verdict": "",
+    "completedAt": ""
+}
