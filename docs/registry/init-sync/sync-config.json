@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bundleId": "76a905be-538a-42b0-ba9d-dfd4bfc4dd2e",
-  "generatedAt": "2026-08-14T13:35:36.084Z",
+  "bundleId": "bd5bb69c-b52b-43e5-b04c-8a33bb352caf",
+  "generatedAt": "2026-08-14T14:25:06.366Z",
   "generatedBy": "trilc-init-1.0.0@4bc19502",
   "company": {
     "state": "initialized",
@@ -92,19 +92,17 @@
     "providers": [
       {
         "provider": "deepseek",
-        "baseUrl": "http://127.0.0.1:3333/v1",
+        "baseUrl": "https://api.deepseek.com/v1",
         "port": 3333
       },
       {
         "provider": "openai",
-        "port": 3333
-      },
-      {
-        "provider": "anthropic",
+        "baseUrl": "https://open.bigmodel.cn/api/paas/v4/",
         "port": 3333
       },
       {
         "provider": "trimetaverse",
+        "baseUrl": "http://127.0.0.1:8008/v1",
         "port": 3333
       }
     ]
@@ -114,35 +112,34 @@
       {
         "provider": "deepseek",
         "ready": true,
-        "fingerprint": "daaedf55",
-        "baseUrl": "http://127.0.0.1:3333/v1"
+        "fingerprint": "84001b49",
+        "baseUrl": "https://api.deepseek.com/v1"
       },
       {
         "provider": "openai",
-        "ready": false
-      },
-      {
-        "provider": "anthropic",
-        "ready": false
+        "ready": true,
+        "fingerprint": "da3587ca",
+        "baseUrl": "https://open.bigmodel.cn/api/paas/v4/"
       },
       {
         "provider": "trimetaverse",
         "ready": true,
-        "fingerprint": "893aab84"
+        "fingerprint": "d2909ae0",
+        "baseUrl": "http://127.0.0.1:8008/v1"
       }
     ],
     "refreshIntervalS": 900,
-    "fetchedAt": "2026-07-15T00:00:00.000Z"
+    "fetchedAt": "2026-08-14T14:24:58.765Z"
   },
   "employees": {
-    "status": "unavailable",
-    "reason": "TriCompany HEAD 读取失败（Command failed: git -C D:\\Code\\ai\\.i4-3-live\\NoSuchTriCompanyDir rev-parse HEAD\nfatal: cannot change to 'D:\\Code\\ai\\.i4-3-live\\NoSuchTriCompanyDir': No such file or directory\n fatal: cannot change to 'D:\\Code\\ai\\.i4-3-live\\NoSuchTriCompanyDir': No such file or directory）— 该维降级，§九 服务器侧校验兜底"
+    "roster": [],
+    "sourceCommit": "d64ad9344a73bc2bf15f1135d494cc644e1946f4"
   },
   "project": {
     "projectKey": "trimetaverse",
     "repoUrl": "https://github.com/MoRen9527/TriMetaverse.git",
     "defaultBranch": "dev",
     "worktrees": [],
-    "devHead": "ad836bcb14f222b5268f2a83f07e123f112da9b5"
+    "devHead": "8c530ecffa2b01cc5cd128290f89ba9da26f1a75"
   }
 }
