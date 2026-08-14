@@ -75,13 +75,17 @@
         {
             "nodeId": "i1-5",
             "agent": "CEOChiefOfStaff",
-            "status": "pending",
+            "status": "done",
             "action": "收口：终审结论登记 OP（W33）+ 树移 doneTreesThisWeek + 后续树（I2 公司面装配升级）排期建议归编排层",
             "routedInput": "i1-4:checkpoint",
             "brief": "",
-            "checkpoint": {}
+            "checkpoint": {
+                "progress": "收口判定 APPROVE（i1-4 终审 PASS 返修 0；i1-3 七门禁独立复测全 PASS；i1-2 r19 gate A1/A2/A3 修复 + B1 随 release 生效 + C 不拆树）。登记完成（OP 2.28.0）：①I1 全链 PASS 入 risks ②观察项四裁决：①接受（坏 token 下 plane-hint-probe 仍绿=双面真相语义正确；呈现层组合困惑挂 I2 消费诊断卡处理）②接受+契约修正（blocked=认证失败族 401/403/unauthorized；detail 硬编码「fetch 401」文案微瑕 I2 顺手改实际错误串）③I2 前置强制项（load() 区分 ENOENT 静默默认帧 vs 解析错 console.error+.corrupt 备份+单测；I2 扩展 init-chain 时同步落地）④非缺陷（dist 未随 commit=gitignored 常态，验证配方已含 npm run build）③微差登记：V1 healthz 心跳时间戳未呈现=I2 可选增强；V2 tripilot 钩子挂 tasks/submit（契约字面 /v1/tasks/stream）=语义保持接受；V3 基线口径修正 285/286→317/318（i1-1 brief 陈旧口径）④部署排期确认：编排层已执行 schtasks .cmd 注入 TRILC_ENV_FILE + TRIMC_BASE_URL；CEO 机 401 待 r20 装后态生效。树移 doneTreesThisWeek；I2 开跑信号已发编排层",
+                "artifactCommit": "OP 2.28.0 登记 + 树收官（TriMetaverse）",
+                "resumePoint": "I1 收官。I2（公司面装配升级）开跑信号已给编排层；I2 前置强制项清单见 OP 2.28.0 risks"
+            }
         }
     ],
-    "verdict": "PASS — i1-4 终审放行（小狄，2026-08-14）：返修项 0；登记项 4（I2 前置 2 + 微差 V1/V2）；i1-5 收口可开跑",
-    "completedAt": ""
+    "verdict": "APPROVE — I1 全链 PASS（r19 gate A1/A2/A3 修复 + 七门禁独立复测全 PASS + 终审 0 返修）；观察项四裁决（①接受②契约修正③I2 前置强制项④非缺陷）；微差 V1/V2 接受 + V3 基线口径修正 317/318；部署排期=编排层已注入 TRILC_ENV_FILE，CEO 机 401 待 r20 装后态生效",
+    "completedAt": "2026-08-14T08:36:11+00:00"
 }
