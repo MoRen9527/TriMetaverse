@@ -15,8 +15,7 @@
             "checkpoint": {
                 "progress": "树已建（立项周 W33）。CEO 岗数口径裁决已登记：维持设计原文（≥1 岗可开张，5 岗默认推荐非硬下限，<5 岗提示）。倒排：08-15 I1 闭环已提前完成（08-14 收官 APPROVE），I2 立即开跑 → 08-16 上午 I2 完成 → I4 并行 → I3 → I5 → 23:00 双验收。依赖：I1（init-chain.ts 状态机 + SELFCHECK 端点 + init:step-event 事件族已就绪 186296a）。",
                 "artifactCommit": "",
-                "resumePoint": "i2-1 待小狄技术拆解（装配端点契约、载荷 schema、会话初始化器 init 路由、两入口升级落点 TriPilot 仓/trilc chat、解冻面验证口径、叙事态下线门禁、I1 前置强制项③落地）
-"
+                "resumePoint": "i2-1 待小狄技术拆解（装配端点契约、载荷 schema、会话初始化器 init 路由、两入口升级落点 TriPilot 仓/trilc chat、解冻面验证口径、叙事态下线门禁、I1 前置强制项③落地）"
             }
         },
         {
