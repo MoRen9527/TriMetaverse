@@ -73,13 +73,17 @@
         {
             "nodeId": "i4-5",
             "agent": "CEOChiefOfStaff",
-            "status": "pending",
+            "status": "done",
             "action": "收口：终审结论登记 OP（W33）+ 树移 doneTreesThisWeek + I5 开跑信号归编排层",
             "routedInput": "i4-4:checkpoint",
             "brief": "",
-            "checkpoint": {}
+            "checkpoint": {
+                "progress": "收口登记完成（OP 2.38.0）：I4 全链 PASS（Phase A/B/C 五维同步面 APPROVE + Phase D 确认卡正路径返修包 R 落地 + i4-3 复验正路径活体全绿 confirm 200→ready + 幂等矩阵实证）——verdict=复验 PASS 放行。OBS-8（keys.fetchedAt 残留）非阻塞：裁决采纳 R1b 并入后续树 P2（频率补充=key-cache 900s 周期刷新非仅重启）。全量基线：TriLC 427/426（1 fail=components.test.ts 既有）+ TriMC config-sync 43/43 互证。树移 doneTreesThisWeek（6/6）。I5 D/E 排期确认在案：D 回退演练 08-16 白天（ssh 窗口编排层已排）；E 双验收 23:00（旧口径四判定 + 新口径三判定，verify-trigger-20260816.md 执行本已就绪）。后续树：OBS-2/OBS-4/R1b 并入 P2（幂等/对齐面完善域，编排层排期）",
+                "artifactCommit": "OP 2.38.0 登记 + 树收官（TriMetaverse）",
+                "resumePoint": "I4 收官。I5 全链唯一剩余（D 演练 → E 双验收 → i5-3/i5-4/i5-5）"
+            }
         }
     ],
     "verdict": "复验 PASS 放行（i4-4 复审注记 2026-08-14 晚：返修包 R 落地 + i4-3 复验正路径活体全绿——I6 验收口径达成实证 → i4-5 收口放行；OBS-8 非阻塞，登记 R1b 并入后续树 P2）",
-    "completedAt": ""
+    "completedAt": "2026-08-14T14:34:56+00:00"
 }
