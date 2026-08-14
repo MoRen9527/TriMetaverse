@@ -60,11 +60,15 @@
         {
             "nodeId": "i3-4",
             "agent": "ChiefTechnologyOfficer",
-            "status": "pending",
+            "status": "done",
             "action": "验收口径终审（小狄）：diff 级复核 + 护栏逐项核查 → 终审结论",
             "routedInput": "i3-3:checkpoint",
             "brief": "",
-            "checkpoint": {}
+            "checkpoint": {
+                "progress": "终审放行（PASS）。终审对象：TriLC a5cdacf..44c82a1（71cccc9 I3 独占四文件 + 44c82a1 共享四条随 I4 收口合并，与 i3-3 验证对象一致；期间并行线 f690650 未触碰 code-state）。①diff 级复核契约一一对应：注册点（固定路径 %LOCALAPPDATA%\\trilc\\project-registry.json + TRILC_PROJECT_REGISTRY 仅测试隔离 + 真 tmp→rename 原子写读回 + 主键去重绝对路径+gitdir 同键幂等刷新键冲突拒绝 + 惰性清理不删磁盘 + 内存态缓存 + 预置表 repoUrl 恒预置 hasNpmFileDeps/defaultBranch 文件可覆盖）✓；六步原子序（detect 五形态判别→match URL 规范化白名单 https/ssh 同仓等价去尾 .git scp 形态→gate 门禁拒绝自动 add→4a 认领绝不重复 add/4b 建立 worktree add -b project/<key> + GitHub 克隆链→register 登记去重+git worktree list 交叉验证→chain-update 快照+内存态热更新同请求）✓；失败分类十类 + 回滚非 --force ✓；claim §4a 同构零 git 写 ✓；inspect 三分类只读不受门禁 ✓；SSE 事件族 started/progress/finished 载荷与契约一致（step 枚举八步、失败帧带 classification、finished=chain/status 投影同帧）✓；bus.ts I3 三型与 I4 sync 四型边界清晰 ✓；init-chain.ts 仅 updateProjectLink 增量（护栏例外允许、零 transitionTo 改动）✓；init-cli-flow.ts project-link 文本流程零本地执行 ✓。②门禁 7 条独立抽验全 PASS：TriPilot 仓 I3 期间零 commit 工作区干净（1）；execFile 参数数组无 shell（createGitRunner；全 src execFile 仅 pidfile 既有+project-link I3；cron/timer shell 为既有 cron job 执行器与 git 无关）（2）；worktree remove --force 全仓零实际使用（grep 命中均注释/测试禁用断言）（3）；rollbackWorktree 非 --force + 链态失败→注册点回滚+remove + 认领零 git 写（4）；runLink/runClaim 仅 project-link 其他 409 {chainState}、inspect 只读例外契约一致（5）；init-state.ts/session-initializer.ts diff 零行（6）；专项 30/30 + 全量 398/399 独立复跑（1 fail=components.test.ts 既有 r19 基线，无退化）+ 小柯 I1 SELFCHECK/I2 assemble/prod 注册点零写入采信（7）；三重隔离活体采信（8）。③两缺陷修复复核：缺陷①同目标重链误拒→落点校验同 path continue 走认领（project-link.ts:531）+ registerWorktree 同键幂等刷新，测试 relink same target 断言 add 恰一次+登记去重，小柯复测 PASS 采信；缺陷②crossValidateWithGit 幽灵误判→isInside(wt.gitdir, main/.git/worktrees) 属主过滤（project-link.ts:372），测试 cross-validate multi-main 断言他主项保留，小柯复测 PASS 采信。④观察项裁决：a) clone 无中间进度帧+362M 慢传输→登记观察项挂后续小树修（execFile 退出回调模型需改流式 stderr+心跳帧+可取消，非正确性问题、倒排紧张不本树修）；b) 注册点文件覆盖冷启动生效→采纳文档注明（已写入 TriLC code-state.md I3 段落「生效时机：冷启动生效」）；c) 隔离残留 temp 权限拒绝→不动作（系统 temp 自动清理非代码缺陷，不登记）；d) 不存在文件建默认注册点→确认符合设计（ENOENT→默认帧惰性落盘，测试隔离语义一部分），零动作。⑤契约落地差异四点终审标注认可（不阻塞不返修）：HTTP 202 字面落地为同步 200（SSE 帧实时发布体验等价）；GitHub 源 match 先行于 detect（克隆落点依赖 key，语义不变注释在案）；lazyCleanup gitdir 校验落地 existsSync（MVP 口径）；persist 读回校验 schemaVersion+activeProjectKey 两字段（最小校验口径）。⑥收口补齐：TriLC code-state.md 缺 I3 段落（44c82a1 仅登记 I4）→ 终审补登 commit aefcf01（注册点 schema/三端点/事件族/链态门/测试基线/冷启动生效时机/契约差异标注/观察项登记）。",
+                "artifactCommit": "aefcf01（TriLC docs/registry/code-state.md I3 段落补登；终审本身零代码改动）",
+                "resumePoint": "i3-5 小贾收口：终审结论登记 OP（W33）+ 树移 doneTreesThisWeek + I4 Phase D 解锁信号 + I5 立项（clone 进度帧观察项挂 I5 立项候选）由编排层发"
+            }
         },
         {
             "nodeId": "i3-5",
@@ -76,6 +80,6 @@
             "checkpoint": {}
         }
     ],
-    "verdict": "",
+    "verdict": "PASS（i3-4 小狄终审放行：diff 级复核契约一一对应 + 门禁 8 条全 PASS + 两缺陷修复确认 + 观察项 a-d 裁决在案；I3 收官 = I4 Phase D 解锁信号 + I5 立项由编排层发）",
     "completedAt": ""
 }
