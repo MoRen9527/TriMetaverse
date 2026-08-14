@@ -21,11 +21,15 @@
         {
             "nodeId": "i2-1",
             "agent": "ChiefTechnologyOfficer",
-            "status": "pending",
+            "status": "done",
             "action": "技术拆解（小狄）：装配端点契约（原子完成 + 落点白名单）、结构化员工选择载荷 schema（含岗数校验口径：≥1 可开张 + <5 提示）、会话初始化器 init 模式路由、两入口渲染升级落点（TriPilot 卡片 / trilc chat 文本化）、解冻面缺陷修复验证口径、叙事态同 release 下线门禁、I1 前置强制项③落地（load() ENOENT vs 解析错）——输出=实现任务包 + 门禁口径",
             "routedInput": "i2-0:checkpoint",
-            "brief": "",
-            "checkpoint": {}
+            "brief": "briefs/i2-1-20260814.md",
+            "checkpoint": {
+                "progress": "拆解交付（2026-08-14，briefs/i2-1-20260814.md）。9 项拆解 + 12 项任务包 + 9 门禁口径。前置事实：init:step-event 类型已入 localbus 但无发布方（I2 起发布）；两入口（TriPilot/TriLC cli+tui）均无任何 init:* 消费（绿地）；无 daemon 级 init SSE 通道（需新增 GET /internal/v1/init/events，无重放缓冲=断连重拉 status）；6.4 session-initializer.ts 当前无 app.ts 调用方（init 模式=新增路由分支，TriLC+TriMC 同源文件零改动延续）；I1 186296a 未回写 TriLC code-state.md（本树补齐）。装配端点契约：POST /internal/v1/init/assemble（校验先行：≥1 岗/去重/名字必填/阶段门禁 422/防重入 409；预写 tmp→rename + .bak 回滚 + 幂等重试；公司态先、transitionTo('project-link') 后；<5 岗 warning 不拦截）。断点续跑：新增 onboarding/state（只读投影）+ onboarding/progress（upsert 经 CompanyInitState.save 机制沿用，init-state.ts 零改动）。叙事态下线三处：app.ts 2931 注册块 + cli.ts hb_company-onboarding auto-resume + onboarding.ts 文件，同 release 无并存。",
+                "artifactCommit": "",
+                "resumePoint": "i2-2 小全实现入口：第一步 = D1 决策点（CPO 一行确认默认勾选第 5 岗——playbook 1.2 表仅 4 员工岗，CEO 裁决字面 5 岗有缺口，CTO 推荐 chief-technology-officer 为第 5 岗）→ 固化 DEFAULT_SELECTED_ROLES 常量后按 brief §八 12 项任务包执行；D2 注记（business-state.md 按现状真源 docs/registry/ 落点）。编排层请即派 CPO 确认 D1，否则 A4「默认勾选 5 岗」断言悬空"
+            }
         },
         {
             "nodeId": "i2-2",
