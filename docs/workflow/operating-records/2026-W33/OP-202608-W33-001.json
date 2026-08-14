@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (CEO 岗数裁决登记 + I2 树 activeTrees 登记)",
-        "version": "2.30.0",
-        "lastUpdated": "2026-08-14T08:42:45+00:00",
+        "updatedBy": "CEOChiefOfStaff (D1 产品面裁决登记：默认 5 岗清单定案)",
+        "version": "2.31.0",
+        "lastUpdated": "2026-08-14T08:59:35+00:00",
         "latestActiveWeek": true
     },
     "priority": "high",
@@ -407,7 +407,8 @@
         "I1 观察项（2026-08-14，小狄 i1-1 事实发现，路由后续树处置）：① init-state.ts save() 的 tmp→rename 注释与实现不符（实为真写 + 删 tmp）——公司态文件按零改动护栏不动，随后续树修正注释或实现；② REQ-019 在 save() 内 execSync git add -A 属纪律隐患（写权单主体风险）——同护栏不动，后续树单独处置。**I1 倒排口径（小狄建议，编排层执行）**：I1 建议 08-15 内闭环（i1-2 实现 + i1-3 验证 + i1-4 终审）；I2-I5 压入 W33 按周日 08-16 23:00 倒排；任一树超预期即显式降级 §8.2 条款 b 路径（自然触发照常 + 确认后显式触发），不冒险。",
         "P1/P2 立项澄清（2026-08-14，编排层核查触发）：design-v2 实施树 P1（识别认领）/P2（建立注入）不单独立项——已被 I3 吸收（init-to-collab v2026.W33.4 §十：I3=worktree 两源链路 + project-registry.json 落地，即 P1+P2 内容）；I3 拆解与排期按吸收后大 scope 处理（小狄拆解时显式纳入 design-v2 §五.1 链路五步 + §③ 注册点 + §2.4/2.5 向导与识别分流）；P3（消费端升级）维持独立排期随初始化实施树发布窗口（裁决 ②A 同批），P4（项目级治理）目标态。I2-I5 倒排：08-15 I1 闭环 → 08-16 上午 I2+I4 并行 → I3 → I5 → 23:00 双验收（旧口径 + 增量）。",
         "I1 收官（2026-08-14，OP 2.28.0）：init-collab-i1-statemachine 全链 PASS 收官 APPROVE。r19 问周面 gate 结论：A1（token 面：TRILC_ENV_FILE 显式注入 + dataDir 相邻候选，env.ts）、A2（tool_result SSE 映射错位修复，app.ts）、A3（空答复伪成功收紧为必须有文本产出）三修复 + B1（周平面提示注入源码已含未随 r19 发布，随本 release 生效登记）+ C（TriPilot 渲染面防御性解析无独立缺陷，不拆树）；修复断言=问周面冒烟 252/301 字符答复 + queued→running→succeeded 无 failed。验证=七门禁独立复测全 PASS（6.4/init-state diff 零行、真原子写、叙事零回归、五探测齐全、r19 回归、两入口零本地执行）+ 全量 317/318 基线一致（1 fail=components.test.ts ink-testing-library 环境缺口，r19 基线既有）。观察项四裁决：①坏 token 下 plane-hint-probe 仍绿=接受（双面真相语义正确；呈现层组合困惑挂 I2 消费诊断卡时处理）②403/unauthorized 归 blocked=接受+契约修正（blocked 类=认证失败族，非字面 401；detail 硬编码「fetch 401」文案微瑕 I2 顺手改实际错误串）③load() 损坏 JSON 静默重置=本树不修，**I2 前置强制项（CTO 指定非可选）**：区分 ENOENT（静默默认帧=正确）vs 解析错（console.error+.corrupt 备份+单测），I2 扩展 init-chain 时同步落地 ④dist 未随 commit=非缺陷（gitignored 常态，验证配方已含 build）。微差登记：V1 healthz 探测未呈现 heartbeat 时间戳=I2 可选增强；V2 tripilot 钩子挂 tasks/submit（契约字面 /v1/tasks/stream，TriPilot 形态唯一入口）=语义保持接受。部署排期：编排层已执行 schtasks .cmd 注入 TRILC_ENV_FILE + TRIMC_BASE_URL；CEO 机 401 待 r20 装后态生效。**I2 开跑信号**：I2（公司面装配升级）待编排层立项——前置项清单=③ + 呈现层组合困惑 + 叙事态同 release 下线门禁；产品面输入（小乔）=§2.2 阶段卡、§2.4 员工开业结构化选择、指标 I4。",
-        "I2 产品面输入登记（2026-08-14，小乔交付，挂 I2 立项 brief）：① ONBOARDING 阶段卡验收断言 A1-A4（阶段卡可见 / 完成判据=CEO 名+员工名单 / 断点续跑不重复提问可回看 / 0 人拦截+默认勾选 5 岗）② 员工开业结构化选择契约（岗位卡片字段 roleId/roleName/oneLinePositioning/isGovernance 只读展示；默认勾选最小 5 岗以 playbook 1.2 原文为准；名字必填写入装配产物；两入口同状态机载荷+单执行体串行化）③ 指标 I4 实测判定（计时=选择界面呈现→开张卡显示；中位数 ≤3 分钟；零命令=仅面板/对话操作；3 次真实走查含 1 次两入口交替；装配失败重试一次仍达标算 PASS）。**岗数口径已裁决（2026-08-14，CEO）**：维持设计原文——selectedRoles ≥1 可开张，默认勾选 5 岗（可取消至 1 岗），<5 岗提示「推荐至少 5 岗，当前可选」不强制；I4 指标按 5 岗推荐路径走查口径不变。I2 树已建（init-collab-i2-company-assembly，编排层 27342c37；i2-1 小狄拆解已派，倒排 08-15 拆解+实现 / 08-16 上午验证+终审）。"
+        "I2 产品面输入登记（2026-08-14，小乔交付，挂 I2 立项 brief）：① ONBOARDING 阶段卡验收断言 A1-A4（阶段卡可见 / 完成判据=CEO 名+员工名单 / 断点续跑不重复提问可回看 / 0 人拦截+默认勾选 5 岗）② 员工开业结构化选择契约（岗位卡片字段 roleId/roleName/oneLinePositioning/isGovernance 只读展示；默认勾选最小 5 岗以 playbook 1.2 原文为准；名字必填写入装配产物；两入口同状态机载荷+单执行体串行化）③ 指标 I4 实测判定（计时=选择界面呈现→开张卡显示；中位数 ≤3 分钟；零命令=仅面板/对话操作；3 次真实走查含 1 次两入口交替；装配失败重试一次仍达标算 PASS）。**岗数口径已裁决（2026-08-14，CEO）**：维持设计原文——selectedRoles ≥1 可开张，默认勾选 5 岗（可取消至 1 岗），<5 岗提示「推荐至少 5 岗，当前可选」不强制；I4 指标按 5 岗推荐路径走查口径不变。I2 树已建（init-collab-i2-company-assembly，编排层 27342c37；i2-1 小狄拆解已派，倒排 08-15 拆解+实现 / 08-16 上午验证+终审）。",
+        "D1 决策（2026-08-14，CPO 小乔裁决，i2-1 checkpoint 已录）：默认第 5 岗采纳 chief-technology-officer——DEFAULT_SELECTED_ROLES = ceo-chief-of-staff / full-stack-developer / chief-administrative-officer / chief-human-resources-officer / chief-technology-officer（4 岗核对 playbook 1.2 原文无出入）。I4 走查口径不变（5 岗推荐路径）。i2-2 已派小全开跑（12 项任务包：D1 常量 → getRoleCatalog → 前置项③ → 契约修正 → init-assemble.ts → app.ts 六处 → cli/tui → 删 onboarding.ts → TriPilot webview 阶段卡 → 单测 → 冒烟 → Registry 回写；跨两仓，倒排 08-14/15 实现 → 08-16 上午 i2-3/i2-4）。"
     ],
     "plans": [
         {
