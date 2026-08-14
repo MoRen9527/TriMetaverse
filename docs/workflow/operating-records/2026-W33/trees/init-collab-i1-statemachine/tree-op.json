@@ -15,7 +15,8 @@
             "checkpoint": {
                 "progress": "树已建（立项周 W33）。CEO 裁决在案：①A 周日 08-16 23:00 维持旧口径验收 + 初始化后增量验收（两次互不替代，触发语义按设计 §8.2 条款）②A R4-RELEASE-MERGE 挂初始化实施树后发布窗口（同批）。周日自然触发前完成初始化 = 自然触发即首个协同工作；未完成则自然触发照常 + 确认后显式触发",
                 "artifactCommit": "",
-                "resumePoint": "i1-1 待小狄技术拆解（状态文件 schema、SSE 事件类型、SELFCHECK 端点契约、onboarding.ts 升级落点、r19 问周面修复前置项归属）"
+                "resumePoint": "i1-1 待小狄技术拆解（状态文件 schema、SSE 事件类型、SELFCHECK 端点契约、onboarding.ts 升级落点、r19 问周面修复前置项归属）",
+                "backlog": "I2-I5 倒排时间表（编排层 2026-08-14 登记，CEO 目标 08-16 23:00 验收）：08-14 i1-2 实现开跑（第一步 r19 gate）→ 08-15 I1 闭环（i1-2 实现 + i1-3 小柯验证 + i1-4 小狄终审 + i1-5 小贾收口）→ 08-16 I2 公司面装配（依赖 I1）→ I3 项目面+注册点（依赖 design-v2 P1/P2，前置核查排期合并考虑）→ I4 五维同步（依赖 I2/I3，实现可与 I2 并行设计；TriMC sync-apply 接收侧新开发量最大，08-16 上午优先并行）→ I5 协同确认验收（依赖 I4 + r1-2 迁移链）→ 08-16 23:00 旧口径迁移验收照常 + 初始化后增量验收。单树耗时超预期 → 显式降级 §8.2 条款 b 路径（自然触发照常 + 确认后显式触发），不阻塞不冒险"
             }
         },
         {
@@ -34,10 +35,10 @@
         {
             "nodeId": "i1-2",
             "agent": "FullStackDeveloper",
-            "status": "pending",
+            "status": "active",
             "action": "实现（小全，按 i1-1 拆解）：SELFCHECK 端点 + 初始化持久状态机（七态 + 状态文件 + 步骤事件流）+ onboarding.ts 叙事态升级；护栏逐项守（6.4 零改动、公司态分离、旧叙事态同 release 下线）",
             "routedInput": "i1-1:checkpoint",
-            "brief": "",
+            "brief": "briefs/i1-2-20260814.md",
             "checkpoint": {}
         },
         {
