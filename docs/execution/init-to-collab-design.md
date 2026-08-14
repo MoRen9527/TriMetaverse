@@ -381,6 +381,8 @@ P1 完成（公司维）、P2 完成（项目维）、P3 完成（模型/key 维
 | --- | --- | --- | --- |
 | L1 注册同一性 | 项目身份一致（project key + repoUrl + worktree 路径三元素） | bundle.project.repoUrl ↔ TriMC fleet 仓映射（`/srv/fleet/<repo>` ↔ repoUrl）比对 + 本地注册点 activeProjectKey/worktrees[] | 完全匹配；不匹配 = ERROR（错误仓/错误分支） |
 | L2 版本一致 | 三端同 dev 线 | 本地 dev HEAD（daemon 读 git）== bundle.devHead == fleet HEAD（status 端点回报） | 三值相等；不等 = 落后/领先诊断（ff 同步收敛） |
+
+> 修正注记（2026-08-14，i4-4 终审裁决 R2，技术真源可修留痕）：上表 L2 行「三值相等」字面数学不可达——bundle.devHead 是生成时值（必为其自身 commit 的 parent，自引用），fleet HEAD 实时前进（15min 拉取）。实施口径改为**同 dev 线（ff 收敛可达）语义**：bundleHead 为 localHead 祖先或相等（git merge-base --is-ancestor）且 local/fleet 等值或互为祖先；分叉 → 红勿确认；fleetHead 本地不可解析（未拉取）→ 红 + 先 pull；落后/领先 → 绿 + 提示不阻断。降级（远程不可达）口径 = bundleHead 祖先/相等。参见 `docs/workflow/operating-records/2026-W33/trees/init-collab-i4-five-dim-sync/briefs/i4-4-20260814.md` §三 OBS-6b。
 | L3 写读闭环（正向） | 本地写 → 服务器读 | 五维 sync commit 本身即探针：本地 commit → push → fleet pull → TriMC applied bundleId 回读 == 本地 bundleId | applied 回读成功 = 正向链路实证（无需额外探针文件） |
 | L4 写读闭环（反向） | 服务器写 → 本地读 | 周平面迁移 commit：TriMC 写 → 裸仓 → 本地 dev/worktree pull 可见 W33→W34 产物 | 首个协同工作验收（§八） |
 
