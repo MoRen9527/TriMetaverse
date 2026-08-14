@@ -6,13 +6,13 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-14
 
-> 版本：v2026.W34.3
+> 版本：v2026.W33.3
 > 日期：2026-08-14
-> 状态：联合设计最终稿（产品面小乔 × 技术面小狄；CTO 复核确认 v2026.W34.3）。本设计不动代码、不建 worktree、不改安装脚本，实施树另建
-> 修正记录：v2026.W34.2（CEO 设计修正）——彻底切断 TRILC_WEEKLY_PLANE_ROOT 兼容牵扯：不兼容回退、不旧值推导、不留旧值后门；旧 env 从安装脚本移除注入，升级 install 清旧写新一次性切换（§五.②）；v2026.W34.3（CTO 小狄复核尾改）——CEO 术语修正并入：三入口同步跟随 = 项目平面（项目级焦点），周平面为项目内子维度；对接点微调：关联向导治理提示分阶段呈现、落点校验与失败分类补入技术链路、交叉引用与编号修正（MVP 节 2.10 重复编号拆为 2.11）；小贾收口补记：项目平面口径补齐至职责分工、§五.③ 同步机制、V4 指标与 §八 OP 引用；V4 跟随切换子句验收口径补注（小狄：单项目阶段不可实测，多项目出现后补验）
+> 状态：联合设计最终稿（产品面小乔 × 技术面小狄；CTO 复核确认 v2026.W33.3）。本设计不动代码、不建 worktree、不改安装脚本，实施树另建
+> 修正记录：v2026.W33.2（CEO 设计修正）——彻底切断 TRILC_WEEKLY_PLANE_ROOT 兼容牵扯：不兼容回退、不旧值推导、不留旧值后门；旧 env 从安装脚本移除注入，升级 install 清旧写新一次性切换（§五.②）；v2026.W33.3（CTO 小狄复核尾改）——CEO 术语修正并入：三入口同步跟随 = 项目平面（项目级焦点），周平面为项目内子维度；对接点微调：关联向导治理提示分阶段呈现、落点校验与失败分类补入技术链路、交叉引用与编号修正（MVP 节 2.10 重复编号拆为 2.11）；小贾收口补记：项目平面口径补齐至职责分工、§五.③ 同步机制、V4 指标与 §八 OP 引用；V4 跟随切换子句验收口径补注（小狄：单项目阶段不可实测，多项目出现后补验）
 > owner：小乔（CPO，产品面）× 小狄（CTO，技术面）
 > 前置设计：`docs/execution/worktree-architecture-design.md`（v1，定案 WORKTREE-ARCH-DESIGN-20260814-001，保持冻结，作为本设计的事实基线）
-> 关联：`docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`（v1 派单 + r4 收官 + R4-RELEASE-MERGE 登记）；`docs/execution/server-fleet-m0.md`（服务器舰队）；`docs/execution/v0.9.x-dual-track-tricompany-plan.md`（dual-track）；`TriLC/src/project/weekly-plane-root.ts`（周平面解析现状）；`TriLC/src/server/app.ts:1983`（会话 cwd 契约）；`TriPilot/src/extension.ts:6166`（workspaceRoot 传递现状）
+> 关联：`docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json`（v1 派单 + r4 收官 + R4-RELEASE-MERGE 登记）；`docs/execution/server-fleet-m0.md`（服务器舰队）；`docs/execution/v0.9.x-dual-track-tricompany-plan.md`（dual-track）；`TriLC/src/project/weekly-plane-root.ts`（周平面解析现状）；`TriLC/src/server/app.ts:1983`（会话 cwd 契约）；`TriPilot/src/extension.ts:6166`（workspaceRoot 传递现状）
 
 ## 〇、与 v1 的关系（升级声明）
 
@@ -35,7 +35,7 @@ v1 保留为事实基线（分支纪律、junction 事故纪律、fleet 对称�
 
 1. TriCade（IDE 层）自己打开工作区：用户开文件夹 → 关联项目仓（现 TriMetaverse，将来多项目）→ 自动 `git worktree add` → 与研发仓 + 服务器 TriMC 联动。
 2. worktree 项目级资产：TriCade + trilc chat 双入口读同一 project worktree root。
-3. 环境变量升级：TRILC_WEEKLY_PLANE_ROOT → TRILC_PROJECT_WORKTREE_ROOT（项目级，周平面自然包含）。**CEO 修正（v2026.W34.2）：彻底切断旧 env 兼容——不兼容回退、不旧值推导、不留旧值后门；升级 install 清旧写新一次性切换（见 §五.②）。**
+3. 环境变量升级：TRILC_WEEKLY_PLANE_ROOT → TRILC_PROJECT_WORKTREE_ROOT（项目级，周平面自然包含）。**CEO 修正（v2026.W33.2）：彻底切断旧 env 兼容——不兼容回退、不旧值推导、不留旧值后门；升级 install 清旧写新一次性切换（见 §五.②）。**
 4. 项目维度治理：全项目改动走 PR（建分支→改→PR→TriMC 审核→merge dev→三端同步）；TriMC 审核记入项目级仓库管理规则。
 5. worktree 用户任意路径。
 
@@ -180,10 +180,10 @@ MVP 边界（对齐技术面 §七 树 P1-P4）：P1（识别与认领）+ P2（
 
 | 事实 | 现状 | 来源 |
 | --- | --- | --- |
-| v1 定案 | 一仓三面模型定案（WORKTREE-ARCH-DESIGN-20260814-001），树 A/B 未建树实施 | `docs/execution/worktree-architecture-design.md` + OP 1.46.0 |
+| v1 定案 | 一仓三面模型定案（WORKTREE-ARCH-DESIGN-20260814-001），树 A/B 未建树实施 | `docs/execution/worktree-architecture-design.md` + W33 OP 2.24.0 |
 | 会话 cwd 契约 | TriLC `/v1/tasks/stream` 请求 `body.context.workspaceRoot ?? env.cwd` → session cwd → agent loop `ctx.cwd`（r4 已修下游五读工具跟随 ctx.cwd） | `TriLC/src/server/app.ts:1983` + `app.ts:1999` |
 | IDE 侧 workspaceRoot 传递 | TriPilot 已把 `workspaceFolders[0]` 作为 workspaceRoot 传入请求（现役字段，零新字段需求） | `TriPilot/src/extension.ts:6166-6172` |
-| r4 状态 | 五读工具 ctx.cwd 修复 + 周平面提示注入收官 APPROVE（TriLC a6df674 + TriMC 7e15ecf），本地 dev 未 push，合并挂迁移验收后（R4-RELEASE-MERGE-20260817-001，预估 v0.4.10-r20） | OP 1.46.0 + `trees/prod-grade-4-lscwd-fix/tree-op.json` |
+| r4 状态 | 五读工具 ctx.cwd 修复 + 周平面提示注入收官 APPROVE（TriLC a6df674 + TriMC 7e15ecf），本地 dev 未 push，合并挂迁移验收后（R4-RELEASE-MERGE-20260817-001，预估 v0.4.10-r20） | W33 OP 2.24.0 + `trees/prod-grade-4-lscwd-fix/tree-op.json` |
 | 周平面解析 | `weekly-plane-root.ts`：env 显式（existsSync 校验）> 源码态 sibling 发现 > undefined；公司轨只读绝不写入 | `TriLC/src/project/weekly-plane-root.ts` |
 | 安装态 env 注入 | 已实现（8574d51a）：install-tricade.ps1 三态解析 + 用户级 setx + NSSM AppEnvironmentExtra；install.bat [3/4] 段同构 | `scripts/install-tricade.ps1:428-472` + `scripts/build-desktop.ps1:188-198` |
 | 远端拓扑 | origin（github，PR 面）+ sg-server（裸仓，同步中转）；服务器舰队克隆 ×5 ff-only | v1 §二 |
@@ -247,7 +247,7 @@ TriMetaverse 仓（dev = 唯一真源线；origin = PR 面；sg-server = 裸仓�
 3. 源码态 sibling 发现（现状第 2 条，开发态语义保留）；
 4. 缺席 → 默认项目根（undefined）：会话默认 cwd = env.cwd、周平面按现状解析——与现状回退行为一致，无项目级语义。
 
-**切断声明（CEO 设计修正 v2026.W34.2）**：`TRILC_WEEKLY_PLANE_ROOT` **彻底切断**——TriLC 消费端不再读取该变量、不做旧值推导、不留回退分支；安装脚本不再写入该变量。旧值只存在于已部署实例的用户级 env 中，由升级 install 一次性清除（见迁移动作）。周平面读取在新架构下仅两条来源：project root 派生（第 1/2 条）与源码态 sibling 发现（第 3 条）。
+**切断声明（CEO 设计修正 v2026.W33.2）**：`TRILC_WEEKLY_PLANE_ROOT` **彻底切断**——TriLC 消费端不再读取该变量、不做旧值推导、不留回退分支；安装脚本不再写入该变量。旧值只存在于已部署实例的用户级 env 中，由升级 install 一次性清除（见迁移动作）。周平面读取在新架构下仅两条来源：project root 派生（第 1/2 条）与源码态 sibling 发现（第 3 条）。
 
 **注入点改动清单**（实施树执行，本设计只登记）：
 
@@ -354,8 +354,8 @@ CEO 要求：新架构定了再做新增优化。对齐关系：
 ## 八、使用依据
 
 - `TriMetaverse/docs/execution/worktree-architecture-design.md`（v1 事实基线，WORKTREE-ARCH-DESIGN-20260814-001）
-- `TriMetaverse/docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`（v1.48.0：派单、r4 收官、R4-RELEASE-MERGE、TRICADE-ENV-INJECT 实现状态 8574d51a、v2 定稿登记 ARCH-20260814-002 与 402 中断恢复收口）
-- `TriMetaverse/docs/workflow/operating-records/2026-W34/trees/prod-grade-4-lscwd-fix/tree-op.json` + `briefs/r4-2-20260814033515.md`（r4 定案 A+C、ctx.cwd 链、executeTool 透传）
+- `TriMetaverse/docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json`（v2.24.0：派单、r4 收官、R4-RELEASE-MERGE、TRICADE-ENV-INJECT 实现状态 8574d51a、v2 定稿登记 ARCH-20260814-002 与 402 中断恢复收口）
+- `TriMetaverse/docs/workflow/operating-records/2026-W33/trees/prod-grade-4-lscwd-fix/tree-op.json` + `briefs/r4-2-20260814033515.md`（r4 定案 A+C、ctx.cwd 链、executeTool 透传）
 - `TriMetaverse/docs/execution/server-fleet-m0.md`（裸仓/克隆布局、身份纪律 OBS-20260814-002）
 - `TriMetaverse/docs/execution/v0.9.x-dual-track-tricompany-plan.md`（dual-track、PR/CI 流程现状）
 - `TriLC/src/project/weekly-plane-root.ts`（解析顺序现状、只读契约）

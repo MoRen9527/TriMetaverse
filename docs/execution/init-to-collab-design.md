@@ -6,13 +6,13 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-14
 
-> 版本：v2026.W34.4
+> 版本：v2026.W33.4
 > 日期：2026-08-14
-> 状态：联合设计最终稿（产品面小乔 §二 × 技术面小狄 §三~§十，CTO 联合评审吸收并行初稿四点差异后定稿 v2026.W34.4），报小贾收口后呈 CEO 审批。本设计不动代码，实施树另建
-> 修正记录：v2026.W34.2（小乔产品面合成）——§二 填充完成，与技术面逐段回注：状态机命名沿用 §四（SELFCHECK→ONBOARDING→PROJECT-LINK→SYNC→CONFIRM→READY）、key 失败分类对齐 §5.2 四分类、五维三态对齐 §6.2/§6.3、协同确认三元素对齐 §7.1、平移测试衔接对齐 §8.1/§8.2、实施树对齐 §十；v2026.W34.3（CTO 小狄复核尾改）——对接点复核：§4.1 载体拆分映射回注 §2.2、§4.4 向导六步编号对齐 §2.5、两入口端点级验收口径补入、§九 补 SELFCHECK 前置缺陷行（r19 问周面）、§6.2 接收端点缺口显式入实施树 I4 范围；v2026.W34.4（CTO 联合评审，吸收 xiaodi-m2-4 并行初稿四点技术差异）——①key 维同步改为密钥配置面 + 指纹，不传密钥材料（SEC-20260813-001 纪律）②五维同步载体改为 git bundle 链（复用已实证 fleet 双仓闭环，不新建 HTTP 接收端点；TriMC 侧新增 sync-apply cron + status 端点最小集）③补周日自然触发显式条款（08-16 前完成 init+确认则自然触发=首个协同工作，否则确认后显式触发一次）④三端回退升级 + init-sync 域与 operating-records 域隔离；§三 基线修正（keys 面四条目、迁移链 r1-2、REQ-016/017/019、TriMC 旧名残留）；§七 升级 L1-L4 分层验证；§十 树 I4/I5 范围改写
+> 状态：联合设计最终稿（产品面小乔 §二 × 技术面小狄 §三~§十，CTO 联合评审吸收并行初稿四点差异后定稿 v2026.W33.4），报小贾收口后呈 CEO 审批。本设计不动代码，实施树另建
+> 修正记录：v2026.W33.2（小乔产品面合成）——§二 填充完成，与技术面逐段回注：状态机命名沿用 §四（SELFCHECK→ONBOARDING→PROJECT-LINK→SYNC→CONFIRM→READY）、key 失败分类对齐 §5.2 四分类、五维三态对齐 §6.2/§6.3、协同确认三元素对齐 §7.1、平移测试衔接对齐 §8.1/§8.2、实施树对齐 §十；v2026.W33.3（CTO 小狄复核尾改）——对接点复核：§4.1 载体拆分映射回注 §2.2、§4.4 向导六步编号对齐 §2.5、两入口端点级验收口径补入、§九 补 SELFCHECK 前置缺陷行（r19 问周面）、§6.2 接收端点缺口显式入实施树 I4 范围；v2026.W33.4（CTO 联合评审，吸收 xiaodi-m2-4 并行初稿四点技术差异）——①key 维同步改为密钥配置面 + 指纹，不传密钥材料（SEC-20260813-001 纪律）②五维同步载体改为 git bundle 链（复用已实证 fleet 双仓闭环，不新建 HTTP 接收端点；TriMC 侧新增 sync-apply cron + status 端点最小集）③补周日自然触发显式条款（08-16 前完成 init+确认则自然触发=首个协同工作，否则确认后显式触发一次）④三端回退升级 + init-sync 域与 operating-records 域隔离；§三 基线修正（keys 面四条目、迁移链 r1-2、REQ-016/017/019、TriMC 旧名残留）；§七 升级 L1-L4 分层验证；§十 树 I4/I5 范围改写
 > owner：小乔（CPO，产品面）× 小狄（CTO，技术面）
-> 派单：`docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`（1.49.0，INIT-TO-COLLAB-DESIGN-20260814-001；CEO-20260814-003）
-> 前置设计：`docs/execution/project-workspace-design-v2.md`（v2026.W34.3 最终稿，保持冻结，作为本设计的事实基线）；`docs/execution/worktree-architecture-design.md`（v1 定案基线）
+> 派单：`docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json`（2.24.0，INIT-TO-COLLAB-DESIGN-20260814-001；CEO-20260814-003）
+> 前置设计：`docs/execution/project-workspace-design-v2.md`（v2026.W33.3 最终稿，保持冻结，作为本设计的事实基线）；`docs/execution/worktree-architecture-design.md`（v1 定案基线）
 
 ## 〇、与既有设计/冻结的关系（升级声明）
 
@@ -95,7 +95,7 @@ CEO 要求「两个入口初始化都做成功（两入口体验）」。产品�
 
 ### 2.5 项目面初始化：worktree 向导（本地仓 / GitHub 链接两源）
 
-**衔接声明**：design-v2 §2.9 判断「工作区向导并入开张 onboarding 主流程」是解冻触发的升级项（§2.10）；CEO-20260814-003 期望流程 ③ 已将 worktree 选择放在初始化主流程内——**该升级项已裁决落地，本设计承接**（§〇 升级声明）。design-v2 正文（v2026.W34.3）保持冻结，其 §2.4 五步向导、§2.5 识别分流、状态机（UNLINKED/CREATING/LINKED-*）与树 P1-P4 排期全部作为本步骤的机制层事实基线直接引用；技术链路 = §4.4。
+**衔接声明**：design-v2 §2.9 判断「工作区向导并入开张 onboarding 主流程」是解冻触发的升级项（§2.10）；CEO-20260814-003 期望流程 ③ 已将 worktree 选择放在初始化主流程内——**该升级项已裁决落地，本设计承接**（§〇 升级声明）。design-v2 正文（v2026.W33.3）保持冻结，其 §2.4 五步向导、§2.5 识别分流、状态机（UNLINKED/CREATING/LINKED-*）与树 P1-P4 排期全部作为本步骤的机制层事实基线直接引用；技术链路 = §4.4。
 
 **向导步骤（用户视角，在 design-v2 §2.4 基础上扩展源选择）**：
 
@@ -171,13 +171,13 @@ CEO 要求「两个入口初始化都做成功（两入口体验）」。产品�
 
 **产品口径**：平移测试不再是孤立的技术验收动作，而是**协同开启后的第一个协同工作**——三端共同执行、结果三端可见（§8.1 新口径）。产品面呈现为「协同后的第一项任务」：
 
-1. **任务卡**：「周工作平面平移测试」——把周平面（公司轨 operating-records）平移作为真实业务动作执行（W34 → W35 周目录切换），验证研发面 / 项目 worktree 面 / TriMC 三面读同一周平面；发起端 = TriCade 或 trilc chat 任一入口。
+1. **任务卡**：「周工作平面平移测试」——把周平面（公司轨 operating-records）平移作为真实业务动作执行（W33 → W34 周目录切换），验证研发面 / 项目 worktree 面 / TriMC 三面读同一周平面；发起端 = TriCade 或 trilc chat 任一入口。
 2. **三端参与呈现**：TriCade 面板显示测试进度；trilc chat 可对话跟进；TriMC 侧状态同步可见（五维同步链路自然承载）。
 3. **结果呈现**：通过 → 「平移测试通过」卡（三面可见周平面迁移生效）；失败 → 结果报告（哪一步、什么错误）+ 挂后续树，不阻塞日常使用。
 
 **触发时机呈现（§8.2 条款的用户视角）**：任务卡显示触发模式与原因，两种模式验证内容相同、仅发起方不同：
 
-- **自然触发**：init + 五维同步 + 协同确认在 08-16（周日）23:00 前完成 → 周日自然触发即首个协同工作（真实 W34→W35 平移，非演练）；
+- **自然触发**：init + 五维同步 + 协同确认在 08-16（周日）23:00 前完成 → 周日自然触发即首个协同工作（真实 W33→W34 平移，非演练）；
 - **显式触发**：未在上述时点前完成 → 自然触发照常运行（迁移不依赖初始化，r1-2 现状），协同确认后任务卡提供「立即触发一次」动作（复用演练期已验证的手动触发路径），此后回归稳态。
 
 **与 08-16 迁移验收的衔接**：原「部署旧版本 + 行为不变」独立验收事件被初始化验收吸收（初始化自检段 = 原验收第一段，§8.1）；升级 install 切换断点维持不变。**排期取舍报 CEO 裁决**（§8.4）：本设计产品面倾向——08-16 维持旧口径验收（已部署旧版本行为不变，验证回滚安全），初始化实施后增量验收平移测试（验证协同）；两次验收互不替代。
@@ -219,12 +219,12 @@ CEO 要求「两个入口初始化都做成功（两入口体验）」。产品�
 | onboarding 状态机现状 | TriLC `company/onboarding.ts`：Step1-5 prompt 叙事态（heartbeat 注册 agent 自动推送），进度靠对话历史追踪，**无持久状态机、无端点** | `TriLC/src/company/onboarding.ts` |
 | 员工会话初始化器 | TriLC `company/session-initializer.ts`：合同加载 → 五件套装配校验 → 工作目录就绪；TriMC 侧同源实现（互为 fallback）——**本设计不改此契约** | `TriLC/src/company/session-initializer.ts` + `TriMC/src/onboarding/session-initializer.ts` |
 | TriModel Phase 1 配置平面 | HTTP 3333：`GET /v1/models`（公开，tmv-* 别名 + capabilities）、`GET /v1/config/keys`（Authorization token）、`POST /v1/config/keys/refresh`（admin-only）；keys 面四条目 deepseek/anthropic/openai/trimetaverse；default_model = tmv-deepseek-v4-pro | `TriModel/src/api/routes.ts` + `keys.ts` |
-| TriLC key-cache | 拉取 /v1/config/keys → 落盘（S1 明文 600 / S2 AES-256-GCM）→ 15 分钟刷新带 stagger；离线容忍（过期缓存 7d 内继续用，无缓存且拉取失败 = chat disabled）；安装态已实证拿到完整条目 | `TriLC/src/config/key-cache.ts` + OP 1.49.0 |
+| TriLC key-cache | 拉取 /v1/config/keys → 落盘（S1 明文 600 / S2 AES-256-GCM）→ 15 分钟刷新带 stagger；离线容忍（过期缓存 7d 内继续用，无缓存且拉取失败 = chat disabled）；安装态已实证拿到完整条目 | `TriLC/src/config/key-cache.ts` + OP 2.24.0 |
 | 公司状态文件 | `{dataDir}/company/state.json`：state（uninitialized/onboarding/initialized）+ ceoName + employees + progress；原子写（tmp→rename）；REQ-016 断点续接 / REQ-017 debug reset → uninitialized / REQ-019 开张 baseline commit | `TriLC/src/company/init-state.ts` + `onboarding.ts` |
 | 员工合同源 | TriCompany `source-agents/` 13 岗合同（ROLE_CATALOG 同源），contract-resolver 装配；TriLC `GET /internal/v1/agents?scope=company` 已能列出员工（decisionRights/rosterInfo） | `TriLC/src/config/contract-resolver.ts` + `app.ts:978-1037` |
 | TriMC 形态 | 服务器 Meta Controller：HTTP agent 面 + cron 域（七端点）；**无模型/key/公司/项目配置平面**；`/hello` 等端点仍用旧模型名 deepseek-v4-pro/flash（与 tmv-* 正典不一致，已知观察）；CEO 口径：非开箱即用，初始化后同步 | `TriMC/src/` + `TriMC/docs/registry/code-state.md` + CEO-20260814-003 |
 | 项目注册点 | design-v2 §③ 设计态（`%LOCALAPPDATA%\trilc\project-registry.json`），**未实施**（P1/P2 未建树）——本设计初始化链路包含其建立 | design-v2 §③/§七 |
-| 周平面解析 | `weekly-plane-root.ts`：env 显式（existsSync 校验）> 源码态 sibling 发现 > undefined；公司轨只读绝不写入；平移 = 周目录切换（W34 → W35） | `TriLC/src/project/weekly-plane-root.ts` + design-v2 §三 |
+| 周平面解析 | `weekly-plane-root.ts`：env 显式（existsSync 校验）> 源码态 sibling 发现 > undefined；公司轨只读绝不写入；平移 = 周目录切换（W33 → W34） | `TriLC/src/project/weekly-plane-root.ts` + design-v2 §三 |
 | 周平面迁移链（r1-2） | TriMC cron job weekly-plane-shift：周日 23:00 Asia/Singapore 自然触发（run 兜底），五段 ADE 链 fleet 身份执行；两期全真实演练通过（REHEARSAL-20260813-001/002），无痕回退已实证（裸仓 update-ref + 克隆 reset --hard + job 态复位） | OP risks 段 + `TriMC/docs/ops/trimc-cron-plane-shift-runbook.md` |
 | 舰队拓扑 | sg-server 5 裸仓 + `/srv/fleet/<repo>` ×5 ff-only 克隆（fleet 单身份）；「本地 push → 裸仓 → fleet pull」双仓闭环已实证 | `docs/execution/server-fleet-m0.md` |
 | 排期事实 | R4-RELEASE-MERGE-20260817-001（r4 本地未 push，合并挂迁移验收后）；08-16 23:00 迁移验收原口径（部署旧版本行为不变 + 升级 install 切换）；08-16 为周日（自然触发日） | OP 1.46.0 + design-v2 §五.② |
@@ -382,7 +382,7 @@ P1 完成（公司维）、P2 完成（项目维）、P3 完成（模型/key 维
 | L1 注册同一性 | 项目身份一致（project key + repoUrl + worktree 路径三元素） | bundle.project.repoUrl ↔ TriMC fleet 仓映射（`/srv/fleet/<repo>` ↔ repoUrl）比对 + 本地注册点 activeProjectKey/worktrees[] | 完全匹配；不匹配 = ERROR（错误仓/错误分支） |
 | L2 版本一致 | 三端同 dev 线 | 本地 dev HEAD（daemon 读 git）== bundle.devHead == fleet HEAD（status 端点回报） | 三值相等；不等 = 落后/领先诊断（ff 同步收敛） |
 | L3 写读闭环（正向） | 本地写 → 服务器读 | 五维 sync commit 本身即探针：本地 commit → push → fleet pull → TriMC applied bundleId 回读 == 本地 bundleId | applied 回读成功 = 正向链路实证（无需额外探针文件） |
-| L4 写读闭环（反向） | 服务器写 → 本地读 | 周平面迁移 commit：TriMC 写 → 裸仓 → 本地 dev/worktree pull 可见 W34→W35 产物 | 首个协同工作验收（§八） |
+| L4 写读闭环（反向） | 服务器写 → 本地读 | 周平面迁移 commit：TriMC 写 → 裸仓 → 本地 dev/worktree pull 可见 W33→W34 产物 | 首个协同工作验收（§八） |
 
 ### 7.2 确认动作与失败分类
 
@@ -395,14 +395,14 @@ P1 完成（公司维）、P2 完成（项目维）、P3 完成（模型/key 维
 
 ### 8.1 新口径（CEO 期望流程第 5 步）
 
-初始化全链验收 PASS（SELFCHECK → ONBOARDING → PROJECT-LINK → SYNC → CONFIRM）后，**周平面平移测试 = 第一个协同工作**：平移（W34 → W35 周目录切换）作为真实业务动作执行，验证三面（研发面 / 项目 worktree 面 / TriMC）读同一周平面。迁移（TriMC 写面 → 本地读面）与五维同步（本地写面 → TriMC 读面）互为反向闭环，两者都通过后「三端操作同一项目」完整成立。
+初始化全链验收 PASS（SELFCHECK → ONBOARDING → PROJECT-LINK → SYNC → CONFIRM）后，**周平面平移测试 = 第一个协同工作**：平移（W33 → W34 周目录切换）作为真实业务动作执行，验证三面（研发面 / 项目 worktree 面 / TriMC）读同一周平面。迁移（TriMC 写面 → 本地读面）与五维同步（本地写面 → TriMC 读面）互为反向闭环，两者都通过后「三端操作同一项目」完整成立。
 
 原 08-16 23:00「部署旧版本 + 行为不变」独立验收事件被初始化验收吸收——初始化验收的自检段（trilc/tripilot 可用）即原验收的第一段；升级 install 切换断点（design-v2 §五.② 清旧写新一次性切换）维持不变。
 
 ### 8.2 与周日自然触发的关系（显式条款，本设计新增）
 
 - r1-2 的自然触发（周日 23:00 cron，08-16 即周日）**保留为稳态节奏**，不拆除不重排——它是生产链，两期演练已实证。
-- 「首个协同工作」语义按初始化完成时点认定：**若 init + 五维同步 + L1-L3 确认在 08-16 23:00 前完成 → 周日自然触发即首个协同工作**（真实 W34→W35 平移，非演练）；**若未完成 → 自然触发照常运行**（迁移不依赖初始化，r1-2 现状），首个协同工作 = 协同确认后**显式触发一次** run（复用演练期已验证的手动触发路径），此后回归稳态。
+- 「首个协同工作」语义按初始化完成时点认定：**若 init + 五维同步 + L1-L3 确认在 08-16 23:00 前完成 → 周日自然触发即首个协同工作**（真实 W33→W34 平移，非演练）；**若未完成 → 自然触发照常运行**（迁移不依赖初始化，r1-2 现状），首个协同工作 = 协同确认后**显式触发一次** run（复用演练期已验证的手动触发路径），此后回归稳态。
 - 与 §8.4 报 CEO 裁决点的关系：本条款是裁决点 ① 的技术实现路径，无论 CEO 裁「旧口径验收」还是「顺延全链验收」，触发语义均按本条款执行——自然触发不阻塞、确认后补一次显式触发。
 
 ### 8.3 三端回退与域隔离（本设计新增）
@@ -447,8 +447,8 @@ P1 完成（公司维）、P2 完成（项目维）、P3 完成（模型/key 维
 
 ## 使用依据
 
-- `TriMetaverse/docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`（1.49.0：派单 INIT-TO-COLLAB-DESIGN-20260814-001；CEO-20260814-003 五步期望流程；ONBOARDING-FROZEN 解冻登记；TriModel/TriStaciss 定案 A' 接线与端口终案 8008）
-- `TriMetaverse/docs/execution/project-workspace-design-v2.md`（v2026.W34.3 最终稿：§2.4 向导五步、§2.9 onboarding 关系、§五.1 链路五步、§③ 注册点、§七 P1-P4）
+- `TriMetaverse/docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json`（2.24.0：派单 INIT-TO-COLLAB-DESIGN-20260814-001；CEO-20260814-003 五步期望流程；ONBOARDING-FROZEN 解冻登记；TriModel/TriStaciss 定案 A' 接线与端口终案 8008）
+- `TriMetaverse/docs/execution/project-workspace-design-v2.md`（v2026.W33.3 最终稿：§2.4 向导五步、§2.9 onboarding 关系、§五.1 链路五步、§③ 注册点、§七 P1-P4）
 - `TriLC/src/company/onboarding.ts`（Step1-5 叙事态现状）+ `TriLC/src/company/init-state.ts`（REQ-016 断点续接 / REQ-017 reset / REQ-019 baseline commit）+ `TriLC/src/company/session-initializer.ts`（员工会话契约）
 - `TriLC/src/config/key-cache.ts`（S1/S2 落盘、15 分钟刷新、7d 离线容忍）+ `TriLC/src/server/app.ts:1983`（会话 cwd 契约）+ `app.ts:978-1037`（/internal/v1/agents 公司视图）
 - `TriModel/src/api/routes.ts` + `keys.ts` + `models.ts`（Phase 1 配置平面：/v1/models、/v1/config/keys 四条目、refresh）

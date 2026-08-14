@@ -8,11 +8,11 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-14
 
-> 版本：v2026.W34.1
+> 版本：v2026.W33.1
 > 日期：2026-08-14
 > 状态：设计定案（WORKTREE-ARCH-DESIGN-20260814-001）；实施树另建，本设计不动代码、不建 worktree、不改安装脚本
 > owner：小狄（CTO）
-> 关联：`docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`（派单登记）；`docs/execution/server-fleet-m0.md`（服务器舰队模式）；`TriLC/src/project/weekly-plane-root.ts` + `scripts/install-tricade.ps1`（周平面注入现状）；INCIDENT-20260814-001（worktree 事故纪律）
+> 关联：`docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json`（派单登记）；`docs/execution/server-fleet-m0.md`（服务器舰队模式）；`TriLC/src/project/weekly-plane-root.ts` + `scripts/install-tricade.ps1`（周平面注入现状）；INCIDENT-20260814-001（worktree 事故纪律）
 
 ## 一、背景与目标
 
@@ -162,14 +162,14 @@ TriMetaverse 仓（dev = 唯一真源线）
 
 ## 七、使用依据
 
-- `TriMetaverse/docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`（派单 + INCIDENT-20260814-001 事故记录）
+- `TriMetaverse/docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json`（派单 + INCIDENT-20260814-001 事故记录）
 - `TriMetaverse/docs/execution/server-fleet-m0.md`（服务器舰队模式、裸仓/克隆布局、OBS-20260814-002 教训）
 - `TriMetaverse/docs/execution/v0.9.x-dual-track-tricompany-plan.md`（dual-track 版本协同）
 - `TriMetaverse/scripts/install-tricade.ps1`（InstallDir、Resolve-WeeklyPlaneRoot 三态、NSSM 注入）
 - `TriMetaverse/scripts/build-desktop.ps1`（install.bat [3/4] 段）
 - `TriLC/src/config/env.ts`（dataDir、weeklyPlaneRoot 直通）
 - `TriLC/src/project/weekly-plane-root.ts`（解析顺序、只读契约）
-- `TriMetaverse/docs/workflow/operating-records/2026-W34/trees/prod-grade-2-trilc-plane-view/briefs/r2-1-20260813184459.md`（周平面路径契约定案）
+- `TriMetaverse/docs/workflow/operating-records/2026-W33/trees/prod-grade-2-trilc-plane-view/briefs/r2-1-20260813184459.md`（周平面路径契约定案）
 - `TriCompany/docs/registry/business-state.md` + `TriCompany/source-agents/registries/business-strategy.agent.md`（中央口径：operating-records 归 CEOChiefOfStaff、技术归 CTO）
 - `TriCompany/docs/engineering/DESIGN.md`（技术真源结构）
 - 本地 `git worktree list` / `git remote -v` 实测（2026-08-14）
