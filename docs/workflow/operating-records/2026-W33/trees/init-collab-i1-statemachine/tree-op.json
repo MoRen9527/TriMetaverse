@@ -1,0 +1,69 @@
+{
+    "treeId": "init-collab-i1-statemachine",
+    "title": "初始化到协同实施树 I1 — 自检 + 状态机底座（SELFCHECK 端点 + 初始化持久状态机 + 步骤事件流）",
+    "source": "CEO-20260814-003 战略转向 → init-to-collab-design.md v2026.W33.4（§4.1/§4.2/§十）→ CEO 裁决 ①A②A（2026-08-14）→ 编排层派单开跑",
+    "week": "2026-W33",
+    "status": "active",
+    "nodes": [
+        {
+            "nodeId": "i1-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "建树（编排层派单）：范围按设计 §4.1/§4.2/§十——① SELFCHECK 端点（daemon healthz+heartbeat 复用、TriPilot 可用、TriModel 3333 可达、服务链 TriStaciss 8008）② 初始化持久状态机：UNINITIALIZED→SELFCHECK→ONBOARDING→PROJECT-LINK→SYNC→CONFIRM→READY 七态，onboarding.ts 叙事态升级为 daemon 侧状态文件 + 步骤事件流（SSE 事件类型挂 i1-1 定契约）③ 护栏：6.4 会话初始化器零改动；链路进度状态机与公司态 CompanyInitState（uninitialized→onboarding→initialized）分离独立持久；两入口（TriPilot 面板 / trilc chat）瘦客户端只发指令+收 SSE，不本地执行（W30 零本地执行契约）；旧叙事态同 release 下线无并存期；SELFCHECK 前置缺陷（TriPilot 问周面崩，r19 未完全解决）显式暴露诊断卡，修复挂 I1 前置项不静默吞。节点链：i1-1 小狄技术拆解 → i1-2 小全实现 → i1-3 小柯独立验证 → i1-4 小狄终审 → i1-5 小贾收口",
+            "routedInput": "",
+            "brief": "",
+            "checkpoint": {
+                "progress": "树已建（立项周 W33）。CEO 裁决在案：①A 周日 08-16 23:00 维持旧口径验收 + 初始化后增量验收（两次互不替代，触发语义按设计 §8.2 条款）②A R4-RELEASE-MERGE 挂初始化实施树后发布窗口（同批）。周日自然触发前完成初始化 = 自然触发即首个协同工作；未完成则自然触发照常 + 确认后显式触发",
+                "artifactCommit": "",
+                "resumePoint": "i1-1 待小狄技术拆解（状态文件 schema、SSE 事件类型、SELFCHECK 端点契约、onboarding.ts 升级落点、r19 问周面修复前置项归属）"
+            }
+        },
+        {
+            "nodeId": "i1-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "技术拆解与端点契约（小狄）：状态文件 schema（与公司 init-state 同落点）、步骤事件流 SSE 事件类型、SELFCHECK 端点契约（检查面四要素）、onboarding.ts 叙事态升级落点、r19 问周面修复前置项归属定案（独立修复 vs 并入 I1）——输出=实现任务包 + 门禁口径",
+            "routedInput": "i1-0:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i1-2",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "实现（小全，按 i1-1 拆解）：SELFCHECK 端点 + 初始化持久状态机（七态 + 状态文件 + 步骤事件流）+ onboarding.ts 叙事态升级；护栏逐项守（6.4 零改动、公司态分离、旧叙事态同 release 下线）",
+            "routedInput": "i1-1:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i1-3",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "独立验证（小柯，按 i1-4 门禁口径）：七态流转 + 断点续跑 + 两入口投影一致 + 6.4 会话初始化器零改动回归 + 公司态分离 + SELFCHECK 诊断卡（含 r19 前置缺陷显式暴露）",
+            "routedInput": "i1-2:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i1-4",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "验收口径终审（小狄）：diff 级复核 + 护栏逐项核查（6.4 零改动、公司态分离、旧叙事态下线同 release、SELFCHECK 前置缺陷不静默）→ 终审结论",
+            "routedInput": "i1-3:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i1-5",
+            "agent": "CEOChiefOfStaff",
+            "status": "pending",
+            "action": "收口：终审结论登记 OP（W33）+ 树移 doneTreesThisWeek + 后续树（I2 公司面装配升级）排期建议归编排层",
+            "routedInput": "i1-4:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        }
+    ],
+    "verdict": "",
+    "completedAt": ""
+}

@@ -2,7 +2,7 @@
   "treeId": "prod-grade-2-trilc-plane-view",
   "title": "TriLC 周平面读取路径契约统一 — TriCade 可见公司周平面（生产级开发期第二树）",
   "source": "CEO 指令 2026-08-13：全真迁移 W33→W34 已在服务器执行 + 本地同步，CEO 邮件/本地效果已确认；发现 TriCade 看不到 W34——TriLC 周平面读取路径契约缺口",
-  "week": "2026-W34",
+  "week": "2026-W33",
   "status": "done",
   "verdict": "APPROVE — r2-3 独立验证 FAIL（sibling 探测深度少一层 + 单测 else 掩盖）→ 打回修复 c8aaae0（三层上跳 + 测试期望独立推导）→ 小柯重验 PASS：本机 no-env 命中正确路径、变异测试实证回归守卫生效（旧实现 + 新期望 3 用例必红，else 掩盖已堵死）、env 三态 + 公司轨只读零回归、31/31 全绿 + tsc clean + 工作树干净",
   "completedAt": "2026-08-13T19:30:00+00:00",

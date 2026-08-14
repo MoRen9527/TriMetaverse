@@ -2,7 +2,7 @@
     "treeId": "prod-grade-4-lscwd-fix",
     "title": "ls/cwd 工具上下文缺陷修复 — 五读工具 ctx.cwd 统一 + 周平面提示注入（生产级开发期第四树）",
     "source": "CEO 重测发现 ls 工具跑到 C:\\Users\\jedih\\Documents（BUG-20260814-001）→ 小全诊断三层根因（LS-CWD-DIAG-20260814-001）→ 小狄审批定案 A+C（LS-CWD-FIX-20260814-001）",
-    "week": "2026-W34",
+    "week": "2026-W33",
     "status": "active",
     "nodes": [
         {

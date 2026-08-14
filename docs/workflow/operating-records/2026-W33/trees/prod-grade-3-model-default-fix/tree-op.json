@@ -2,7 +2,7 @@
     "treeId": "prod-grade-3-model-default-fix",
     "title": "默认模型名硬编码错配紧急修复 — deepseek-v4-pro → tmv-deepseek-v4-pro（生产级开发期第三树·轻量）",
     "source": "编排层紧急派单：CEO 实测 TriCade UI 聊天报 Model \"deepseek-v4-pro\" not in registry（tmv-* 注册表错配，C12/C13 改造遗留，10 处硬编码：TriLC 6 + TriPilot 4）",
-    "week": "2026-W34",
+    "week": "2026-W33",
     "status": "done",
     "nodes": [
         {
