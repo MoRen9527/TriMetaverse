@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (I3 收官 PASS + I4 Phase D 解锁 + I5 立项信号)",
-        "version": "2.36.0",
-        "lastUpdated": "2026-08-14T13:12:33+00:00",
+        "updatedBy": "CEOChiefOfStaff (I5 树 activeTrees 登记：首个协同工作收官树)",
+        "version": "2.37.0",
+        "lastUpdated": "2026-08-14T13:13:19+00:00",
         "latestActiveWeek": true
     },
     "priority": "high",
@@ -38,6 +38,15 @@
             "status": "active",
             "path": "trees/init-collab-i4-five-dim-sync/tree-op.json",
             "related": "五维同步 git bundle 链 + TriMC sync-apply 接收侧 + L1-L4 分层确认；i4-1 小狄拆解已派（新实例，7ea979d1）；内序=TriMC 侧先行、确认卡后接"
+        },
+        {
+            "treeId": "init-collab-i5-first-collab",
+            "title": "初始化到协同实施树 I5 — 协同确认验收 + 首个协同工作（L1-L4 校验 + 迁移三端回退 runbook 扩展 + §8.2 触发条款验收）",
+            "nodes_total": 6,
+            "nodes_done": 1,
+            "status": "active",
+            "path": "trees/init-collab-i5-first-collab/tree-op.json",
+            "related": "L1-L4 验收执行 + 三端回退 runbook 扩展 + 首个协同工作验收（§8.2 触发条款）；观察项 a（clone 流式 stderr+心跳帧+可取消）挂 i5-0 范围；i5-1 小狄拆解已派（与 Phase D 并行，05562b33）"
         }
     ],
     "doneTreesFromPreviousWeek": [],
