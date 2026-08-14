@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bundleId": "48315b19-f226-4b5f-a4e0-9c023cf76458",
-  "generatedAt": "2026-08-14T14:25:51.417Z",
+  "bundleId": "aa1e28ee-9a01-40d6-906e-ea6c0c10a917",
+  "generatedAt": "2026-08-14T14:27:58.971Z",
   "generatedBy": "trilc-init-1.0.0@4bc19502",
   "company": {
     "state": "initialized",
@@ -68,6 +68,27 @@
         ]
       },
       {
+        "id": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "capabilities": [
+          "chat"
+        ]
+      },
+      {
+        "id": "claude-haiku-3-5-20250514",
+        "provider": "anthropic",
+        "capabilities": [
+          "chat"
+        ]
+      },
+      {
+        "id": "claude-opus-4-20250514",
+        "provider": "anthropic",
+        "capabilities": [
+          "chat"
+        ]
+      },
+      {
         "id": "gpt-5",
         "provider": "openai",
         "capabilities": [
@@ -129,7 +150,7 @@
       }
     ],
     "refreshIntervalS": 900,
-    "fetchedAt": "2026-08-14T14:25:45.518Z"
+    "fetchedAt": "2026-08-14T14:26:20.244Z"
   },
   "employees": {
     "roster": [],
@@ -140,6 +161,6 @@
     "repoUrl": "https://github.com/MoRen9527/TriMetaverse.git",
     "defaultBranch": "dev",
     "worktrees": [],
-    "devHead": "d17711a897018b74ca7e3f0c4c3e44b7f1ddaaae"
+    "devHead": "95fd7cf8fff99037c58c5fd7cb018160317d85f0"
   }
 }
