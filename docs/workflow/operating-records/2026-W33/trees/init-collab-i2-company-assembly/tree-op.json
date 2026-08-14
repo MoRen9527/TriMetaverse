@@ -1,0 +1,70 @@
+{
+    "treeId": "init-collab-i2-company-assembly",
+    "title": "初始化到协同实施树 I2 — 公司面装配升级（装配端点 + 结构化员工选择 + 会话初始化器路由 + 两入口渲染升级 + I1 前置项落地）",
+    "source": "init-to-collab-design.md v2026.W33.4（§4.2/§十 I2）→ I1 收官移交（OP 2.28.0：前置强制项③ + 呈现层组合困惑 + 叙事态同 release 下线门禁 + 契约修正 blocked=认证失败族 + V1 可选增强）→ I2 产品面输入（OP 2.29.0 小乔：A1-A4 断言 + 结构化选择契约 + I4 指标）→ CEO 裁决（2026-08-14：岗数口径维持设计原文——≥1 岗可开张，5 岗默认推荐非硬下限，<5 岗提示）",
+    "week": "2026-W33",
+    "status": "active",
+    "nodes": [
+        {
+            "nodeId": "i2-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "建树（编排层派单）：范围按设计 §4.2/§十 I2 + I1 收官移交清单（OP 2.28.0）——① 装配端点（原子完成 + 落点白名单）② 结构化员工选择载荷（岗位卡片 roleId/roleName/oneLinePositioning/isGovernance；默认勾选 5 岗；名字必填；两入口同载荷+单执行体串行化）③ 会话初始化器 init 模式路由 ④ 两入口渲染升级（TriPilot 卡片 / trilc chat 文本化）⑤ 解冻面缺陷修复验证（解冻 ≠ 豁免验证）⑥ I1 前置强制项：init-chain load() 区分 ENOENT（静默默认帧）vs 解析错（console.error + .corrupt 备份 + 单测）⑦ 呈现层组合困惑（坏 token 下 plane-hint 绿 + trimodel 红）处理 ⑧ 契约修正落地（blocked 类=认证失败族 401/403/unauthorized；detail 用实际错误串）⑨ 叙事态同 release 下线门禁。CEO 裁决（2026-08-14）：岗数口径维持设计原文——selectedRoles ≥1 可开张，默认勾选 5 岗（可取消至 1 岗），<5 岗提示「推荐至少 5 岗，当前可选」，不强制。产品验收断言（OP 2.29.0 小乔）：A1 阶段卡可见 / A2 完成判据=CEO 名+员工名单 / A3 断点续跑不重复提问可回看 / A4 0 人拦截+默认勾选 5 岗；指标 I4：计时=选择界面呈现→开张卡显示，中位数 ≤3 分钟，零命令，3 次真实走查含 1 次两入口交替，装配失败重试一次仍达标算 PASS。节点链：i2-1 小狄技术拆解 → i2-2 小全实现 → i2-3 小柯独立验证 → i2-4 小狄终审 → i2-5 小贾收口",
+            "routedInput": "",
+            "brief": "",
+            "checkpoint": {
+                "progress": "树已建（立项周 W33）。CEO 岗数口径裁决已登记：维持设计原文（≥1 岗可开张，5 岗默认推荐非硬下限，<5 岗提示）。倒排：08-15 I1 闭环已提前完成（08-14 收官 APPROVE），I2 立即开跑 → 08-16 上午 I2 完成 → I4 并行 → I3 → I5 → 23:00 双验收。依赖：I1（init-chain.ts 状态机 + SELFCHECK 端点 + init:step-event 事件族已就绪 186296a）。",
+                "artifactCommit": "",
+                "resumePoint": "i2-1 待小狄技术拆解（装配端点契约、载荷 schema、会话初始化器 init 路由、两入口升级落点 TriPilot 仓/trilc chat、解冻面验证口径、叙事态下线门禁、I1 前置强制项③落地）
+"
+            }
+        },
+        {
+            "nodeId": "i2-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "技术拆解（小狄）：装配端点契约（原子完成 + 落点白名单）、结构化员工选择载荷 schema（含岗数校验口径：≥1 可开张 + <5 提示）、会话初始化器 init 模式路由、两入口渲染升级落点（TriPilot 卡片 / trilc chat 文本化）、解冻面缺陷修复验证口径、叙事态同 release 下线门禁、I1 前置强制项③落地（load() ENOENT vs 解析错）——输出=实现任务包 + 门禁口径",
+            "routedInput": "i2-0:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i2-2",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "实现（小全，按 i2-1 拆解）：装配端点 + 结构化员工选择载荷 + 会话初始化器 init 模式路由 + 两入口渲染升级 + 解冻面验证 + I1 前置强制项③ + 叙事态同 release 下线；护栏逐项守",
+            "routedInput": "i2-1:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i2-3",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "独立验证（小柯，按 i2-4 门禁口径）：装配全链 + 产品断言 A1-A4 + 指标 I4 走查（3 次含 1 次两入口交替）+ 断点续跑 + 6.4 零改动回归 + 公司态分离 + 叙事态下线回归",
+            "routedInput": "i2-2:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i2-4",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "验收口径终审（小狄）：diff 级复核 + 护栏逐项核查（6.4 零改动、公司态分离、叙事态下线同 release、I1 前置项落地）→ 终审结论",
+            "routedInput": "i2-3:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i2-5",
+            "agent": "CEOChiefOfStaff",
+            "status": "pending",
+            "action": "收口：终审结论登记 OP（W33）+ 树移 doneTreesThisWeek + I3 开跑信号归编排层",
+            "routedInput": "i2-4:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        }
+    ],
+    "verdict": "",
+    "completedAt": ""
+}
