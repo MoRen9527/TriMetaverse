@@ -34,10 +34,10 @@
         {
             "nodeId": "i3-2",
             "agent": "FullStackDeveloper",
-            "status": "pending",
+            "status": "active",
             "action": "实现（小全，按 i3-1 拆解）：link/claim 端点 + 注册点 + 两源链路 + 向导接入；护栏逐项守",
             "routedInput": "i3-1:checkpoint",
-            "brief": "",
+            "brief": "briefs/i3-2-20260814.md",
             "checkpoint": {}
         },
         {
