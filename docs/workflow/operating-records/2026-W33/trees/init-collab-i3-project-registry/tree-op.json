@@ -1,0 +1,69 @@
+{
+    "treeId": "init-collab-i3-project-registry",
+    "title": "初始化到协同实施树 I3 — 项目面 + 注册点（大 scope：P1 识别认领 + P2 建立注入 + worktree 两源链路 + project-registry.json + link/claim 端点 + 向导接入）",
+    "source": "init-to-collab-design.md v2026.W33.4（§4.3/§5.1/§5.2/§十 I3）→ design-v2 P1/P2 吸收（OP 2.27.0 澄清：P1 识别认领 + P2 建立注入并入 I3 大 scope）→ I2 收官 CONDITIONAL_PASS（OP 2.32.0，I3 开跑信号）→ 小狄 I3 拆解线并行准备中",
+    "week": "2026-W33",
+    "status": "active",
+    "nodes": [
+        {
+            "nodeId": "i3-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "建树（编排层派单）：范围按设计 §十 I3 大 scope（吸收 design-v2 P1 识别认领 + P2 建立注入）——① worktree 两源链路（本地仓 + GitHub 链接源）② project-registry.json 落地（注册点）③ link/claim daemon 端点（原子执行 + 注册点登记 + 内存态自热更新，TriPilot 发指令收 SSE）④ 分支规约 ⑤ 幽灵路径清理 ⑥ 向导接入 init 状态机（§2.4/2.5 向导与识别分流）⑦ design-v2 §五.1 链路五步（识别→认领→建立→注入→验证）。产品面输入：§2.5 六步向导呈现（小乔待命）。依赖：I1（init-chain 状态机 + 事件流）+ I2（装配端点 + 两入口渲染面）。节点链：i3-1 小狄技术拆解 → i3-2 小全实现 → i3-3 小柯独立验证 → i3-4 小狄终审 → i3-5 小贾收口",
+            "routedInput": "",
+            "brief": "",
+            "checkpoint": {
+                "progress": "树已建（立项周 W33）。I3 = 最大 scope 树（P1+P2+原 I3），工时放大口径在案（OP 2.27.0）。倒排：08-16 上午 I4 并行 + r20 构建 → I3 → I5 → 23:00 双验收；超预期显式降级 §8.2 条款 b（判断点 = I3 中段，小狄口径）。小狄 I3 拆解线已并行准备（P1+P2 大 scope 拆解含 design-v2 §五.1/§③/§2.4/§2.5 分流）。",
+                "artifactCommit": "",
+                "resumePoint": "i3-1 待小狄技术拆解（P1+P2 大 scope：识别认领 + 建立注入 + 注册点 + 向导分流）"
+            }
+        },
+        {
+            "nodeId": "i3-1",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "技术拆解（小狄，P1+P2 大 scope）：worktree 两源链路、link/claim 端点契约、project-registry.json schema、分支规约、幽灵路径清理、向导接入分流——输出=实现任务包 + 门禁口径",
+            "routedInput": "i3-0:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i3-2",
+            "agent": "FullStackDeveloper",
+            "status": "pending",
+            "action": "实现（小全，按 i3-1 拆解）：link/claim 端点 + 注册点 + 两源链路 + 向导接入；护栏逐项守",
+            "routedInput": "i3-1:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i3-3",
+            "agent": "TestEngineer",
+            "status": "pending",
+            "action": "独立验证（小柯，按 i3-4 门禁口径）：两源链路 + 注册点 + 向导全流程 + 护栏回归",
+            "routedInput": "i3-2:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i3-4",
+            "agent": "ChiefTechnologyOfficer",
+            "status": "pending",
+            "action": "验收口径终审（小狄）：diff 级复核 + 护栏逐项核查 → 终审结论",
+            "routedInput": "i3-3:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        },
+        {
+            "nodeId": "i3-5",
+            "agent": "CEOChiefOfStaff",
+            "status": "pending",
+            "action": "收口：终审结论登记 OP（W33）+ 树移 doneTreesThisWeek + I4 开跑信号归编排层",
+            "routedInput": "i3-4:checkpoint",
+            "brief": "",
+            "checkpoint": {}
+        }
+    ],
+    "verdict": "",
+    "completedAt": ""
+}
