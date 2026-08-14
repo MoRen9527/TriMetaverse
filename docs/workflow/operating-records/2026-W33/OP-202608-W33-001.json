@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff (I4 收官复验 PASS 放行 + I5 D/E 排期确认)",
-        "version": "2.38.0",
-        "lastUpdated": "2026-08-14T14:34:56+00:00",
+        "updatedBy": "编排层（W34 无痕回退 + CEO 亲测启动登记）",
+        "version": "2.39.0",
+        "lastUpdated": "2026-08-14T19:44:33.453Z",
         "latestActiveWeek": true
     },
     "priority": "high",
@@ -441,7 +441,8 @@
         "r20 构建完成登记（2026-08-14，OP 2.34.0）：TriMetaverse-Desktop-v0.4.10-r20-windows.zip（12.3MB，output/）构建全链 OK（TriCode/TriLC/TriPilot/16 agent dirs + roster/安装脚本），stderr 仅 LICENSE 无害警告。装后态安装按既定口径：08-16 上午 + schtasks 401 注入面确认生效；随后 i2-3 I4 补走查（3 次含 1 次两入口交替，CLI 真实 TTY）。I4 树已建（init-collab-i4-five-dim-sync，7ea979d1，i4-1 拆解已派新实例：bundle schema 拒绝 api_key 明文 + TriLC 生成链 + TriMC 接收侧 + default 收敛 + 服务器密钥前提复核 + L1-L4 内序）。当前并行：装后态安装（08-16 上午）｜I3 拆解（m2-3）｜I4 拆解（i4-1 实例）。I5 等 I3/I4 收官后立项。",
         "i3-1 拆解完成（2026-08-14，OP 2.35.0）：小狄交付 P1+P2 全量拆解（briefs/i3-1-20260814.md）——① project-registry.json 注册点 schema **先行冻结**（%LOCALAPPDATA%\\trilc\\ 固定路径；projects=project-key→{repoUrl,mainCheckoutPath,hasNpmFileDeps,defaultBranch,worktrees[]}；原子写+惰性清理+主键去重；项目仓注册表合并同文件，MVP=daemon 内置预置表；冻结供 I4 并行开发）②端点三枚（link 六步原子序含认领绝不重复 add/建立 worktree add/热更新同请求；GitHub 源=白名单规范化比对→克隆建主 checkout→转本地链路；claim + inspect 识别分流）③SSE 事件族 init:project-link-*（step 枚举八步）④链态门=仅 project-link 态生效，不转出（sync 归 I4）⑤幽灵路径=惰性移除不删磁盘；worktree remove --force 全仓禁用⑥TriPilot 仓零改动；CLI 增量 init-cli-flow.ts⑦门禁八条⑧**降级判断点=i3-2 中段（08-16 上午）**：GitHub 源克隆未收敛→按 §2.10 MVP 降级为白名单+门禁+本地克隆等价路径，报编排层走 §8.2 条款 b。i3-2 小全实现待编排层排期开工。",
         "I3 收官（2026-08-14，OP 2.36.0）：init-collab-i3-project-registry 全链 PASS（终审 73ac35ea）。范围=P1+P2 大 scope 全部落地：project-registry.ts（固定路径 + 真原子写 + 主键去重 + 惰性清理 + 预置表 repoUrl 恒预置/hasNpmFileDeps 可覆盖）+ project-link.ts（六步原子序 + GitHub 克隆链 + 失败分类十类 + 回滚非 --force）+ app.ts 三端点 + init-cli-flow project-link 文本流程零本地执行。验证：单测 30 例全绿 + 全量 398/399（1 fail=components.test.ts 环境缺口基线既有）+ 活体三重隔离（inspect 三分类/local 建立/认领幂等/claim/白名单拒绝 evil 仓零 clone/真实克隆收敛 clone2-clone3/hasNpmFileDeps 门禁 422/SSE 八帧事件族）+ prod 8711 全程健康零写入。差异点四项终审认可：202 同步 200 / GitHub match 先行 / lazyCleanup existsSync / persist 最小校验。观察项裁决：a=clone 流式 stderr + 心跳帧 + 可取消 → 后续小树（I5 立项候选）b=文档注明已采纳 c=不动作 d=确认设计。**I4 Phase D 解锁**：L1-L4 确认卡开工（编排层已发信号）。**I5 立项信号**：init-collab-i5-first-collab（平移测试 runbook 扩展 + 首个协同工作验收执行）编排层即建树。",
-        "I4 收官（2026-08-14，OP 2.38.0）：init-collab-i4-five-dim-sync 全链 PASS（verdict=复验 PASS 放行）——Phase A/B/C 五维同步面 APPROVE（bundle schema 两端字段级一致、key 只传配置面+指纹零密钥材料、幂等矩阵、TriMC sync-apply 接收侧 + default 收敛）+ Phase D 确认卡正路径 OBS-6 双阻塞 → 返修包 R（定向修复非全树返工）→ i4-3 复验正路径活体全绿（confirm 200 → ready + 幂等矩阵实证）。OBS-8（keys.fetchedAt 残留）非阻塞裁决：R1b 并入后续树 P2（频率补充=key-cache 900s 周期刷新非仅重启）。全量基线：TriLC 427/426（1 fail=components.test.ts 环境缺口基线既有）+ TriMC config-sync 43/43 互证。**I5 D/E 排期确认**：D 回退演练 08-16 白天（ssh 窗口编排层已排）；E 双验收 23:00（旧口径四判定 + 新口径三判定，verify-trigger-20260816.md 执行本已就绪）。后续树：OBS-2/OBS-4/R1b 并入 P2（幂等/对齐面完善域，编排层排期）。I4 收官后 I5 全链唯一剩余（D → E → i5-3/i5-4/i5-5）。"
+        "I4 收官（2026-08-14，OP 2.38.0）：init-collab-i4-five-dim-sync 全链 PASS（verdict=复验 PASS 放行）——Phase A/B/C 五维同步面 APPROVE（bundle schema 两端字段级一致、key 只传配置面+指纹零密钥材料、幂等矩阵、TriMC sync-apply 接收侧 + default 收敛）+ Phase D 确认卡正路径 OBS-6 双阻塞 → 返修包 R（定向修复非全树返工）→ i4-3 复验正路径活体全绿（confirm 200 → ready + 幂等矩阵实证）。OBS-8（keys.fetchedAt 残留）非阻塞裁决：R1b 并入后续树 P2（频率补充=key-cache 900s 周期刷新非仅重启）。全量基线：TriLC 427/426（1 fail=components.test.ts 环境缺口基线既有）+ TriMC config-sync 43/43 互证。**I5 D/E 排期确认**：D 回退演练 08-16 白天（ssh 窗口编排层已排）；E 双验收 23:00（旧口径四判定 + 新口径三判定，verify-trigger-20260816.md 执行本已就绪）。后续树：OBS-2/OBS-4/R1b 并入 P2（幂等/对齐面完善域，编排层排期）。I4 收官后 I5 全链唯一剩余（D → E → i5-3/i5-4/i5-5）。",
+        "W34 无痕回退 + CEO 亲测启动（2026-08-15，CEO 指令）：昨晚预演练（迁移 7210095e + I5 预收口 4191c36e + R4 预收口 b467f42a，git 历史永久保留）无痕回退——四端（本地/裸仓/fleet/origin）reset 至 c3b363ab（迁移前）；W33 恢复 active+latestActiveWeek；weekly-plane-shift job runCount=0；服务器 init-sync 清空（config-sync-apply job 15min 自动 re-apply 历史 bundle 属已知机制，CEO 新 sync 后覆盖）；本地运行态复位（init-chain ENOENT→selfcheck 待触发 / state.json / project-registry / 装配产物 C:Usersjedih 域全清）。CEO 手动 E2E 验收启动：方法 = trees/init-collab-i5-first-collab/verify/manual-e2e-runbook.md（公司初始化→项目初始化→五维同步确认→W33→W34 平移四阶段，含已知 bug 标注与迁移时点约束——周五禁 cron run 用手动五段链）。I5/R4 收口挂 CEO 亲测通过后正式执行。"
     ],
     "plans": [
         {
