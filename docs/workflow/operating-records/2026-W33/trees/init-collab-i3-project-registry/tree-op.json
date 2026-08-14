@@ -34,11 +34,15 @@
         {
             "nodeId": "i3-2",
             "agent": "FullStackDeveloper",
-            "status": "active",
+            "status": "done",
             "action": "实现（小全，按 i3-1 拆解）：link/claim 端点 + 注册点 + 两源链路 + 向导接入；护栏逐项守",
             "routedInput": "i3-1:checkpoint",
             "brief": "briefs/i3-2-20260814.md",
-            "checkpoint": {}
+            "checkpoint": {
+                "progress": "实现交付（6 项全绿）。①project-registry.ts：固定路径 %LOCALAPPDATA%\\trilc\\project-registry.json（TRILC_PROJECT_REGISTRY 仅测试隔离）+ 真 tmp→rename 原子写 + 校验读回 + 主键去重（绝对路径+gitdir）+ 惰性清理（幽灵项只登记移除不删磁盘）+ 内存态缓存 + 预置表（repoUrl 恒预置保白名单完整性；hasNpmFileDeps/defaultBranch 文件可覆盖=现场纠偏安全阀）。②project-link.ts：link 六步原子序（检测→白名单 URL 规范化比对→hasNpmFileDeps 门禁→认领绝不重复 add/建立 worktree add→登记去重+git worktree list 交叉验证→链态快照+内存态热更新同请求）+ GitHub 源克隆链（clone→defaultBranch checkout→登记 mainCheckoutPath→转本地链路）+ 失败分类十类 + 回滚（worktree remove 非 --force）；claim（§4a 同构+认领登记，零 git 写）；inspect 识别分流三分类（只读不设门）。③app.ts 三端点 POST link/claim + GET inspect（internal 面同构；链态门非 project-link 409 { chainState }；防重入 busy 409）。④init-cli-flow.ts project-link 文本流程（inspect 呈现→源选择问答→POST link/claim，零本地执行）。⑤单测 30 例全绿（新增两文件）。⑥活体全流程（CEO 机，显式 TRILC_DATA_DIR + TRILC_PROJECT_REGISTRY + TRILC_PORT=8799 三重隔离；prod 8711 全程健康、prod 注册点零写入）：inspect 三分类、local 源建立（真实 worktree add → project/trimetaverse 分支）、同目标重链认领幂等、claim 200、github 源白名单拒绝（evil 仓 422 零 clone）+ 真实克隆收敛（clone2/clone3 两次 200；首试瞬时 RPC partial transfer 失败 → 分类 clone-failed 正确 → 重试收敛）、hasNpmFileDeps 门禁活体 422 零 add、branch-conflict 分类活体、SSE 事件族活体（started/progress×6/finished/step-event 经 init/events 通道，失败帧带 classification）。活体发现两缺陷并修复：①同目标重链被自身重叠校验误拒 → 跳过同路径项走认领；②crossValidateWithGit 误判他主检出登记项为幽灵 → 按 gitdir 属主过滤（多主检出纪律）。护栏逐项：TriPilot 仓 diff 零行 ✓；git 单执行体（daemon 端点内 execFile 参数数组，无 shell）✓；worktree remove --force 全仓禁用（grep 零命中 + mock 调用日志断言）✓；原子性+回滚（add+登记+链态同请求；登记/链态失败→remove 非 --force+注册点回滚；认领路径零 git 写）✓；链态纪律（非 project-link 409；本树零 transitionTo 转出）✓；护栏零触碰（init-state.ts/session-initializer.ts diff 零行；init-chain.ts 仅 updateProjectLink 快照写入=护栏例外允许）✓；密钥纪律（凭据走 git 系统凭据管理器，代码零密钥）✓。GitHub 源收敛判定：收敛（白名单+门禁+克隆+转本地链路全链活体通过；首试网络瞬时失败属分类路径实测定效，重试即收敛，不触发 §8.2 条款 b 降级）。测试基线：399 例 398 绿 + 1 既有 fail（tui/components.test.ts ink r19 基线，与本树无关）。commit 卫生：TriLC 独占新文件 commit 71cccc9（push sg-server 权限拒绝，编排层补推）；共享文件四条（init-chain.ts/init-cli-flow.ts/bus.ts/app.ts）与 I4 并行线同文件未提交，已与 i4-1 协调：I4 收口时整体提交并注明双线归属（落盘未提交，明示）。",
+                "artifactCommit": "71cccc9（TriLC；独占文件；共享文件随 I4 收口合并提交）",
+                "resumePoint": "i3-3 小柯独立验证：验证面=工作区整树（含共享文件未提交 hunk）+ commit 71cccc9；重点回归=六步原子序/两源链路/回滚非 --force/事件族与 status 投影一致/护栏回归（I1 SELFCHECK + I2 assemble）"
+            }
         },
         {
             "nodeId": "i3-3",
