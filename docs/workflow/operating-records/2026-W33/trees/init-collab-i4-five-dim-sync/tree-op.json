@@ -34,11 +34,15 @@
         {
             "nodeId": "i4-2",
             "agent": "FullStackDeveloper",
-            "status": "active",
+            "status": "done",
             "action": "实现（小全，按 i4-1 拆解）：bundle 生成链 + TriMC 接收侧 + default 收敛 + L1-L4 确认卡；护栏逐项守",
             "routedInput": "i4-1:checkpoint",
             "brief": "",
-            "checkpoint": {}
+            "checkpoint": {
+                "progress": "Phase A/B/C 完成，Phase D 待解锁（契约已冻结）。【Phase A 契约】两端独立实现同一 schema：TriLC sync-bundle.ts + TriMC config-sync/types.ts（递归拒绝 api_key/apiKey/secret/token 非空字符串 + keys 白名单 provider/ready/fingerprint/baseUrl + fingerprint=sha256.slice(0,8) + generatedAt 单调 max(now,现存+1ms) + contentHash=五维语义哈希〔不含 bundleId/generatedAt 元字段——实测发现元字段纳入会使幂等重跑判定恒失效，两端同口径修正〕+ 序列化泄漏扫描断言 + Phase D L1-L4 类型契约冻结）。【Phase B TriMC 接收侧】src/config-sync/ 四文件（types/status/default-model/apply）+ cli.ts config-sync apply 子命令 + --sync-apply 预设（every 15min/runAs fleet/ff pull 第一步 D6）+ GET /internal/v1/config/sync/status（磁盘真源 + mtime 轻缓存 D3 无跨进程 IPC）+ 模型层 default 三级收敛（env TRIMC_DEFAULT_MODEL > applied > 兜底常量；6 处全替换：app.ts 4 + assemble.ts + spawn.ts；旧名仅存兜底常量位）+ env.ts 条目。38 新用例，全量 541/540 PASS（基线 502/503 不退化）。【Phase C TriLC 生成链】init-sync.ts sync/run 执行体（链态门 project-link/sync + 防重入 409 + 五维收集单维降级〔company 无公司态 400/project 未链 400/devHead 读失败 422 为硬错误；model/keys/employees 降级〕+ 幂等重跑同内容不换 bundleId 纯重推 + 原子写 + 固定身份 commit + 双远端 push origin+sg-server + 快照 pushed + transitionTo('confirm') D1 + 事件族）+ sync/status（remote 3s 超时降级 null）+ 启动 re-sync 只读检查（零写面）；init-chain.ts 增 updateSync/updateConfirm（字段已预留零 schema 新增）；两入口渲染增量：trilc chat SYNC 文本流程 + TriPilot 初始化阶段卡五维三态（均零本地执行）。28 新用例，全量 398/399 PASS（1 fail components.test.ts 环境缺口既有，340/341 口径不退化）。【护栏逐项】① 6.4 零改动：session-initializer.ts（两端）diff 零行 ✓ ② 公司态分离：init-state.ts diff 零行；init-chain.ts 仅 sync/confirm 快照方法（零 schema 字段新增）✓ ③ 两入口零本地执行：TriPilot/trilc chat 只渲染+发指令，单执行体=daemon（防重入 409 单测覆盖）✓ ④ 密钥纪律：bundle 内零密钥（指纹+ready+baseUrl）；生成端+服务器端双校验；序列化无 sk- 明文断言测试；指纹内存计算即刻丢弃 ✓ ⑤ 幂等单调：bundleId 唯一+generatedAt 严格递增+同内容不重新生成（单测覆盖三路径）✓ ⑥ 单维失败不阻塞全链：逐维三态事件+降级段落地（单测覆盖 model/keys/employees 降级矩阵）✓ ⑦ git 单执行体+固定身份：commit 单测断言 user.name=TriLC Init Sync；服务器侧 fleet 单身份（runAs fleet 预设）✓ ⑧ 域隔离：只写 docs/registry/init-sync/（单测断言 add 路径）；operating-records 零触碰 ✓ ⑨ 回归基线：TriLC 398/399（基线 340/341 同缺口）、TriMC 541/540（基线 502/503）✓ ⑩ 产品断言 I5/I6：I5 可见性（三态渲染+单维降级重试入口）已落地；I6 协同确认归 Phase D。【Phase D 待解锁】confirm/check + confirm 端点 + 确认卡渲染未实现（契约已冻结于 sync-bundle.ts）；解锁信号 = I3 收官（project-registry 落地 + i3-4 终审过），编排层发信号后开工。",
+                "artifactCommit": "TriMC 42a9f60（config-sync 接收侧 16 文件）+ TriLC 44c82a1（生成链 9 文件，含 i3-2 注记共享文件 I3 增量收口）+ TriPilot 4bc35b6（阶段卡渲染 2 文件）。推送 sg-server/origin 被本会话权限拒绝——编排层补推（TriMC/TriLC 双仓 sg-server 裸仓为服务器 pull 部署路径）",
+                "resumePoint": "i4-3 小柯独立验证入口：① 单测复跑（TriLC 398/399 基线 + TriMC 541/540 基线，i4-1 §八门禁 1-9 逐项核查）② 活体（编排层补推后）：服务器 pull TriMC → 部署 --sync-apply job + /var/lib/trimc/init-sync 属主 fleet 写/服务读 → 手工构造样例 bundle 试投（不依赖 TriLC 端）→ status 回读验证 → TriLC 全链（生成→commit→双 push→fleet applied→status 回读一致）③ Phase D 验证待 I3 收官解锁信号"
+            }
         },
         {
             "nodeId": "i4-3",
