@@ -81,13 +81,17 @@
         {
             "nodeId": "i2-5",
             "agent": "CEOChiefOfStaff",
-            "status": "pending",
+            "status": "done",
             "action": "收口：终审结论登记 OP（W33）+ 树移 doneTreesThisWeek + I3 开跑信号归编排层",
             "routedInput": "i2-4:checkpoint",
             "brief": "",
-            "checkpoint": {}
+            "checkpoint": {
+                "progress": "收口登记完成（OP 2.32.0）：I2 全链 CONDITIONAL_PASS（门禁 1-8 PASS + 9 部分——A1 code 级/A2-A4 PASS；唯一条件=I4 实测挂 r20 装后态补测，08-16 23:00 双验收前闭环）。三仓 commit 在案：TriLC a5cdacf + TriPilot 350bcb4 + 本仓 5ad35f51（编排层已推）。修正登记：②用例数口径=41（42/45 无依据）③TriPilot I2 增量=3 files（小柯 5 files 含 r3-1 parent 并集，模型名修正非 I2 范围）。观察项：④init-cli-flow ask() readline 每问新建（TTY 不受影响，后续树惰性单例）⑤SSE 无重放缓冲=契约设计确认+可选增强建连快照帧。TriModel 无 git 治理缺口（版本管理/备份纪律）登记路由后续树。I4 补测排期（编排层执行）：08-16 上午 r20 构建（push v* tag）→ CEO 机安装 + schtasks 401 注入面确认生效 → 下午 i2-3 补走查（3 次含 1 次两入口交替，CLI 真实 TTY 禁管道直灌）→ 23:00 前闭环；上午构建受阻 → I4 挂 I5 验收前顺延（i2-5 收口不阻塞）。树移 doneTreesThisWeek（7/7）；I3 开跑信号已发编排层",
+                "artifactCommit": "OP 2.32.0 登记 + 树收官（TriMetaverse）",
+                "resumePoint": "I2 收官。I3（项目面+注册点，吸收 P1+P2 大 scope）开跑信号已给编排层；I4 补测挂 r20 排期"
+            }
         }
     ],
     "verdict": "CONDITIONAL_PASS（i2-4 小狄终审 2026-08-14：门禁 1-8 全 PASS + 9 部分 PASS，唯一缺口 = I4 实测（r20 未装）；条件 = r20 装后态补测 3 次走查含 1 次两入口交替，08-16 23:00 双验收前闭环）",
-    "completedAt": ""
+    "completedAt": "2026-08-14T11:45:52+00:00"
 }
