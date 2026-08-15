@@ -20,7 +20,11 @@ curl http://127.0.0.1:8711/internal/v1/init/chain/status
 
 ### 入口 A：TriPilot 面板（主入口，推荐）
 
-1. **打开 TriCade** → 左侧 TriPilot 聊天面板——应显示**初始化阶段卡**（当前阶段 = 自检）
+0. **首次启动：TriCade Setup 欢迎页**（当前机器 `setupCompleted` 未设，启动会自动弹出）
+   - step1-3 连接配置：按默认即可（预配置已带 models-direct → 127.0.0.1:8711）
+   - step4「是否启用赛博公司模式？」→ **勾选启用** → 完成向导
+   - 注：此步只是**功能开关**（tricompany.enabled），真正的公司开张在下一步的聊天面板
+1. **打开 TriPilot 聊天面板**（左侧栏 TriPilot 图标）——应显示**初始化阶段卡**（当前阶段 = 自检）
 2. **点「开始自检」** → 诊断卡逐行点亮五探测：
    - 预期：healthz ✓ / tripilot（面板连通待确认，degraded 正常）/ trimodel ✓ / tristaciss ✓ / **问周面路径**（真实模型会话，30-90s）
    - ⚠️ **已知 bug**：第五探测期间面板可能卡约 1 分钟（装后态 plane-hint-probe 阻塞 HTTP 面）——等它自己恢复，恢复后继续。若超过 3 分钟未恢复 → 报编排层
