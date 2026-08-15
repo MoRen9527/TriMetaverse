@@ -347,9 +347,9 @@ function Install-FromZip {
         Copy-Item -Recurse -Force $extSrc $extDst
         Write-Ok "extensions 已复制到: $extDst"
 
-        # 2026-08-15 追加：TriCade（VS Code fork）实际加载位 = ~/.vscode/extensions（用户级优先于 builtin）
-        # —— Program Files\TriCade\extensions 只是 staging 形态；不同步用户目录则旧扩展继续生效
-        $userExtDir = Join-Path $env:USERPROFILE ".vscode\extensions"
+        # 2026-08-15 追加：TriCade = TriPilot + VSCodium 组合，实际加载位 = ~/.vscode-oss/extensions
+        # （用户级优先于 builtin；Program Files\TriCade\extensions 只是 staging 形态；~/.vscode 是 VS Code 的，不是 VSCodium 的）
+        $userExtDir = Join-Path $env:USERPROFILE ".vscode-oss\extensions"
         if (Test-Path $userExtDir) {
             $userExtSrc = Get-ChildItem $extSrc -Directory | Select-Object -First 1
             if ($userExtSrc) {
