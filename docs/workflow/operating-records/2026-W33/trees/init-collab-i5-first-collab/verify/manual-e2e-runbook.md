@@ -139,6 +139,66 @@ curl -X POST http://127.0.0.1:8711/internal/v1/init/ready/first-collab -H "Conte
 
 ---
 
+## 四B、Debug 模式与重置循环（2026-08-15 新增，CEO 需求：反复重测开业/项目/同步流程）
+
+### 开启 debug（本机已开启）
+
+debug 开关 = daemon 环境变量 `TRILC_DEBUG=1`，注入点 `C:\Users\jedih\AppData\Local\TriLC\daemon\trilc-daemon.cmd`（`set TRILC_DEBUG=1` 行——本机已加，无需操作）。生产默认**关**（端点 403 + 面板按钮不显示）。
+
+改 `.cmd` 后需规范重启 daemon（**勿裸杀进程**，pidfile 会错位）：
+
+```powershell
+node "C:\Program Files\TriCade\trilc\dist\cli.js" stop --port 8711
+# 等输出 stopped gracefully，再：
+Start-Process -WindowStyle Hidden "C:\Users\jedih\AppData\Local\TriLC\daemon\trilc-daemon.cmd"
+```
+
+### 方式一：面板「重新初始化」按钮（推荐）
+
+完全重启 TriCade 后，初始化阶段卡底部出现「**重新初始化**」按钮（仅 debug 模式显示）→ 点击 → 确认对话框（防误触）→ 确认后瞬间回到 uninitialized，daemon 启动转移 selfcheck → 从阶段一重新走。
+
+- 项目关联一并重置：确认框内勾选「同时清除项目关联」（清 project-registry；worktree 磁盘不动）
+- 会话聊天历史 / 模型密钥 / cron 任务**不受影响**
+
+### 方式二：trilc chat 指令
+
+```
+@trilc reset-company              # 重置公司（回到自检）
+@trilc reset-company --include-project   # 公司 + 项目关联
+```
+
+### 方式三：HTTP 直调（编排层/脚本用）
+
+```powershell
+curl -X POST http://127.0.0.1:8711/internal/v1/init/reset -H "Content-Type: application/json" -d "{}"
+# 带项目：-d "{\"includeProject\":true}"
+# 预期：{"ok":true,"chainState":"uninitialized","cleared":[...清理清单]}
+```
+
+### 方式四：编排层一键脚本（不依赖 debug/面板，任何环境可用）
+
+```powershell
+node D:\Code\ai\TriMetaverse\scripts\dev-reset-init.mjs --include-project
+```
+
+（走 trilc stop → 清白名单 → 起 daemon → 验证 selfcheck，实测通过）
+
+### 重置后状态语义
+
+| 项 | 重置后 |
+| --- | --- |
+| 初始化链 | uninitialized → daemon 启动自动转 selfcheck（待触发自检） |
+| 公司态 + 装配产物 | 已清（按开业岗位反查白名单，占位特征文件保护真实内容） |
+| 项目注册点 | includeProject 时清；worktree 磁盘从不删除 |
+| 服务器 applied bundle | 不动（下次 sync 新 bundle 自然覆盖——15min job 自动 re-apply 已知机制） |
+| 会话历史 / keys.json / cron | 不动 |
+
+### 测试循环建议
+
+开业 → 项目 → 同步确认一轮走完后，用「重新初始化」回到起点，换另一入口（TriPilot ↔ trilc chat）再走一轮——两入口交替即覆盖 A3 断点续跑跨入口验证与 I4 指标的两次实测。
+
+---
+
 ## 五、失败处置
 
 - 任一步失败 → 停在该步、截图留证、报编排层；**不要自行回退**
