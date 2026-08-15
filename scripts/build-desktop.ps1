@@ -144,10 +144,16 @@ Ok
 # ── 8. Extract TriPilot .vsix → staging/extensions/ ──
 
 Step "Extracting TriPilot .vsix → staging/extensions/"
-$ExtDir = Join-Path $StagingDir "extensions\tripilot-chat-0.0.1"
+# vsix 解包后扩展真身在 extension/ 子目录（顶层是 [Content_Types].xml 等 vsix 包装）。
+# 2026-08-15 修正：提取 extension/ 内容平铺为扩展目录——VS Code 扫描要求每扩展目录直接含 package.json
+$ExtDir = Join-Path $StagingDir "extensions\local.tripilot-chat-0.0.1"
 New-Item -ItemType Directory -Force -Path $ExtDir | Out-Null
 Add-Type -AssemblyName System.IO.Compression.FileSystem
-[System.IO.Compression.ZipFile]::ExtractToDirectory($VsixFile.FullName, $ExtDir)
+$VsixExtractTemp = Join-Path $env:TEMP "vsix-extract-$PID"
+if (Test-Path $VsixExtractTemp) { Remove-Item -Recurse -Force $VsixExtractTemp }
+[System.IO.Compression.ZipFile]::ExtractToDirectory($VsixFile.FullName, $VsixExtractTemp)
+Copy-Item -Recurse -Force (Join-Path $VsixExtractTemp "extension\*") $ExtDir
+Remove-Item -Recurse -Force $VsixExtractTemp -ErrorAction SilentlyContinue
 Ok
 
 # ── 9. Preconfigured settings ──
