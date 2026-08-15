@@ -334,6 +334,22 @@ function Install-FromZip {
     Copy-Item -Recurse -Force $src $dst
     Write-Ok "trilc 已复制到: $dst"
 
+    # 部署 extensions（TriPilot 扩展）——2026-08-15 补：此前 Install-FromZip 只装 trilc，
+    # extensions 从不更新（装后扩展停留在初始版本，向导/面板改动全部丢失）
+    $extSrc = "$staging\extensions"
+    if (Test-Path $extSrc) {
+        $extDst = "$InstallDir\extensions"
+        if (Test-Path $extDst) {
+            $extBak = "$extDst.bak-$((Get-Date -Format 'yyyyMMdd-HHmmss'))"
+            Write-Info "备份现有: $extBak"
+            Move-Item $extDst $extBak
+        }
+        Copy-Item -Recurse -Force $extSrc $extDst
+        Write-Ok "extensions 已复制到: $extDst"
+    } else {
+        Write-Info "ZIP 中无 extensions 目录（跳过）"
+    }
+
     # 清理 staging
     Remove-Item -Recurse -Force $staging -ErrorAction SilentlyContinue
     return $true
