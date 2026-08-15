@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（欢迎页问题链修复登记）",
-        "version": "2.42.0",
-        "lastUpdated": "2026-08-15T03:23:11.487Z",
+        "updatedBy": "编排层（CEO 手测里程碑 + debug/reset 需求登记）",
+        "version": "2.43.0",
+        "lastUpdated": "2026-08-15T05:44:21.633Z",
         "latestActiveWeek": true
     },
     "priority": "high",
@@ -445,7 +445,8 @@
         "W34 无痕回退 + CEO 亲测启动（2026-08-15，CEO 指令）：昨晚预演练（迁移 7210095e + I5 预收口 4191c36e + R4 预收口 b467f42a，git 历史永久保留）无痕回退——四端（本地/裸仓/fleet/origin）reset 至 c3b363ab（迁移前）；W33 恢复 active+latestActiveWeek；weekly-plane-shift job runCount=0；服务器 init-sync 清空（config-sync-apply job 15min 自动 re-apply 历史 bundle 属已知机制，CEO 新 sync 后覆盖）；本地运行态复位（init-chain ENOENT→selfcheck 待触发 / state.json / project-registry / 装配产物 C:Usersjedih 域全清）。CEO 手动 E2E 验收启动：方法 = trees/init-collab-i5-first-collab/verify/manual-e2e-runbook.md（公司初始化→项目初始化→五维同步确认→W33→W34 平移四阶段，含已知 bug 标注与迁移时点约束——周五禁 cron run 用手动五段链）。I5/R4 收口挂 CEO 亲测通过后正式执行。",
         "D1 修订裁决登记（2026-08-15，CEO）：默认最小上岗员工 = 7 岗（总助/CPO/CTO/开发/测试/CAO/CHO）——D1 原 5 岗集（2026-08-14 CPO 确认）基础上 +chief-product-officer +test-engineer（产品与测试职能进默认骨架）；recommendedMin 提示阈值 5→7；硬下限不变（≥1 岗可开张）。落地：TriLC eb180e8（DEFAULT_SELECTED_ROLES 常量 + init-assemble recommendedMin + 单测 19/19 绿）→ r20 重建进包（v0.4.10-r20 第四次构建）。runbook 默认岗描述同步更新（manual-e2e-runbook.md）。",
         "产品观察项（2026-08-15，CEO 手动测试发现）：开张入口分裂——TriCade Setup 欢迎页 step4「启用赛博公司模式」只是配置开关（tricompany.enabled），真正开张流程（SELFCHECK→选岗→起名→装配）在聊天面板初始化阶段卡；新用户走完欢迎页后不知道去哪开张（CEO 当场疑问实证）。建议后续树：欢迎页 step4 完成后引导跳转聊天面板阶段卡（或阶段卡入口在欢迎页直接呈现）。runbook 已补步骤 0。",
-        "欢迎页问题链修复登记（2026-08-15，CEO 手测三轮反馈）：①向导写未注册旧键名 modelsDirect.*（配置重命名后未跟上）→ 报错——修复=单步向导只写已注册键（setupCompleted/tricompany.enabled 补注册）；②CEO 指令精简=删无用连接步骤（四步→单步「启用赛博公司」，TriPilot bf295f6 -285 行）；③深层 bug A：install-tricade.ps1 从不部署 extensions（装后扩展停留初始版）→ 修（b6e58ca2）；④深层 bug B：build 脚本 vsix 嵌套解压 VS Code 扫不到 → 修平铺（621329ed）；⑤深层 bug C：扩展真实加载位 = ~/.vscode/extensions（用户级优先于 builtin，Program Files extensions 只是 staging 形态）→ 手动覆盖修复 + install 脚本补用户目录同步。CEO 侧验证=重启 TriCade 后应见单步欢迎页（默认勾选，完成即关，无报错）。"
+        "欢迎页问题链修复登记（2026-08-15，CEO 手测三轮反馈）：①向导写未注册旧键名 modelsDirect.*（配置重命名后未跟上）→ 报错——修复=单步向导只写已注册键（setupCompleted/tricompany.enabled 补注册）；②CEO 指令精简=删无用连接步骤（四步→单步「启用赛博公司」，TriPilot bf295f6 -285 行）；③深层 bug A：install-tricade.ps1 从不部署 extensions（装后扩展停留初始版）→ 修（b6e58ca2）；④深层 bug B：build 脚本 vsix 嵌套解压 VS Code 扫不到 → 修平铺（621329ed）；⑤深层 bug C：扩展真实加载位 = ~/.vscode/extensions（用户级优先于 builtin，Program Files extensions 只是 staging 形态）→ 手动覆盖修复 + install 脚本补用户目录同步。CEO 侧验证=重启 TriCade 后应见单步欢迎页（默认勾选，完成即关，无报错）。",
+        "CEO 手动 E2E 实测里程碑 + debug/reset 需求（2026-08-15）：①阶段一公司开业实测成功（SELFCHECK pass 五探测全绿〔第五探测工作区修复后 316 字符答复〕→ 默认 7 岗勾选 → CEO 现场选 9 岗起名 → 开张卡显示——I2 产品断言 A1/A2/A4 实测过，I4 计时未记录）②三轮装后态问题链修复实测闭环（欢迎页单步+配置注册〔版本 bump 机制〕/第五探测工作区/自检按钮反馈）③CEO 需求登记：全局 debug 开关 + 公司 reset 开关（重测开业便利 TriPilot/trilc chat 双入口）+ 项目 reset 联动——临时方案已交付（scripts/dev-reset-init.mjs 一键重置实测过，7f99cbd7），正式方案派小狄拆解（debug-reset-design.md）。④CEO 教学点：daemon 重启走 trilc stop/start 权威路径（编排层教训入册）"
     ],
     "plans": [
         {
