@@ -156,6 +156,17 @@ if (Test-Path $VsixExtractTemp) { Remove-Item -Recurse -Force $VsixExtractTemp }
 [System.IO.Compression.ZipFile]::ExtractToDirectory($VsixFile.FullName, $VsixExtractTemp)
 Copy-Item -Recurse -Force (Join-Path $VsixExtractTemp "extension\*") $ExtDir
 Remove-Item -Recurse -Force $VsixExtractTemp -ErrorAction SilentlyContinue
+# 2026-08-15 修复：vsce --no-dependencies（junction 出逃件致 vsce 拒打全量包）→ vsix 缺运行时依赖
+# （装后 Cannot find module 'diff' 激活失败）。提取后补拷 TriPilot node_modules（排除 .bin/@types/.codegraph/junction）。
+$NmSrc = Join-Path $TriPilotPath "node_modules"
+$NmDst = Join-Path $ExtDir "node_modules"
+if (Test-Path $NmSrc) {
+    New-Item -ItemType Directory -Force -Path $NmDst | Out-Null
+    Get-ChildItem $NmSrc | Where-Object {
+        $_.Name -notin @('.bin', '.codegraph', '.package-lock.json', '@types') -and -not ($_.Attributes -band [IO.FileAttributes]::ReparsePoint)
+    } | ForEach-Object { Copy-Item -Recurse -Force $_.FullName (Join-Path $NmDst $_.Name) }
+    Write-Host "  node_modules runtime deps copied: $((Get-ChildItem $NmDst).Count) pkgs"
+}
 Ok
 
 # ── 9. Preconfigured settings ──
