@@ -146,7 +146,9 @@ Ok
 Step "Extracting TriPilot .vsix → staging/extensions/"
 # vsix 解包后扩展真身在 extension/ 子目录（顶层是 [Content_Types].xml 等 vsix 包装）。
 # 2026-08-15 修正：提取 extension/ 内容平铺为扩展目录——VS Code 扫描要求每扩展目录直接含 package.json
-$ExtDir = Join-Path $StagingDir "extensions\local.tripilot-chat-0.0.1"
+# 版本动态化（2026-08-15）：目录名带版本号——VSCodium 缓存 manifest 按 id+版本，版本不变不重读（欢迎页注册键事故教训）
+$TriPilotVersion = (Get-Content (Join-Path $TriPilotPath "package.json") -Raw | ConvertFrom-Json).version
+$ExtDir = Join-Path $StagingDir "extensions\local.tripilot-chat-$TriPilotVersion"
 New-Item -ItemType Directory -Force -Path $ExtDir | Out-Null
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $VsixExtractTemp = Join-Path $env:TEMP "vsix-extract-$PID"
