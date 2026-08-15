@@ -346,6 +346,17 @@ function Install-FromZip {
         }
         Copy-Item -Recurse -Force $extSrc $extDst
         Write-Ok "extensions 已复制到: $extDst"
+
+        # 2026-08-15 追加：TriCade（VS Code fork）实际加载位 = ~/.vscode/extensions（用户级优先于 builtin）
+        # —— Program Files\TriCade\extensions 只是 staging 形态；不同步用户目录则旧扩展继续生效
+        $userExtDir = Join-Path $env:USERPROFILE ".vscode\extensions"
+        if (Test-Path $userExtDir) {
+            $userExtSrc = Get-ChildItem $extSrc -Directory | Select-Object -First 1
+            if ($userExtSrc) {
+                Copy-Item -Recurse -Force $userExtSrc.FullName (Join-Path $userExtDir $userExtSrc.Name)
+                Write-Ok "用户级扩展已同步: $userExtDir\$($userExtSrc.Name)"
+            }
+        }
     } else {
         Write-Info "ZIP 中无 extensions 目录（跳过）"
     }
