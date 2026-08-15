@@ -162,7 +162,7 @@ Start-Process -WindowStyle Hidden "C:\Users\jedih\AppData\Local\TriLC\daemon\tri
 
 ### 方式二：trilc chat 指令
 
-```
+```text
 @trilc reset-company              # 重置公司（回到自检）
 @trilc reset-company --include-project   # 公司 + 项目关联
 ```
