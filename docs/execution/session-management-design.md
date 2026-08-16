@@ -199,6 +199,15 @@ CEO 指令（2026-08-16 凌晨）：
 
 **建议实施顺序**：A → B → C
 
+## 三B、架构原则（CEO 裁决，2026-08-16）
+
+> 「TriPilot 和 trilc chat 都只是**入口**——原则上任一入口可创建 session，但 session 的**维护都由 daemon 维护**，这样才能随时从任一入口 reuse session id。」
+
+- **Daemon 单一真相源**：session 生命周期（创建/存储/当前指针/resume/归档/过期）全部在 daemon（sessions.db + currentSessionId 指针）
+- **入口皆薄**：任一入口只发三类请求——建新（不带 id）/ 复用当前（"use current" → daemon 返回 currentSessionId）/ 按 id resume（id 来自 daemon 会话列表）
+- **任一入口随时 reuse**：currentSessionId 在 daemon，面板与 chat 天然同步；本地 session 状态（TriPilot 的 state.historySessionId + JSONL 历史）退位为缓存/迁移源，权威归 daemon
+- 与既有契约一脉相承：W30 零本地执行、I1-I5 状态全归 daemon——session 域补齐同一原则
+
 ## 四、设计方案
 
 > 根据小乔产品口径 + 小狄技术分析，收口方案...
@@ -269,7 +278,7 @@ CEO 指令（2026-08-16 凌晨）：
   - 违背 CEO "session id 应该一致才能同步"的预期
   - 用户体验割裂（面板聊的上下文 chat 里看不到）
 
-**结论**：方案 A（/v1/messages 接收 sessionId）为推荐方向，最小改动且符合技术现状。待产品侧确认两入口共享会话的心智模型。
+**结论（CEO 裁决后收口）**：方案 A 的「sessionId 传递机制」+ 方案 B 的「daemon 侧 currentSessionId 单一真相源」**合并为 daemon 权威模型**——入口可创建（不带 id），daemon 维护全量与当前指针，任一入口随时按 id/current 复用。实施序不变（A 机制先行 → B 指针与 reset 联动 → C stream 补全）。
 
 #### 技术实现要点（基于方案 A）
 
