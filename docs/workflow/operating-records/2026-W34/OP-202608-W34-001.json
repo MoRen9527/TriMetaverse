@@ -1,38 +1,43 @@
 {
     "dependsOn": [
-        "OP-202608-W32-001"
+        "OP-202608-W33-001"
     ],
     "objectType": "WEEKLY_INDEX",
-    "objectId": "OP-202608-W33-001",
-    "title": "TriMetaverse W33 周经营维护索引",
+    "objectId": "OP-202608-W34-001",
+    "title": "TriMetaverse W34 周经营维护索引",
     "ownerRole": "CEOChiefOfStaff",
-    "status": "closed",
-    "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
+    "status": "active",
+    "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（装配落点冲突观察登记）",
-        "version": "2.54.0",
-        "lastUpdated": "2026-08-16T16:45:00.080732+00:00",
-        "latestActiveWeek": false,
-        "nextWeekRef": "docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json"
+        "updatedBy": "CEOChiefOfStaff",
+        "version": "1.0.0",
+        "lastUpdated": "2026-08-16T16:45:00.078804+00:00",
+        "workflowTags": [
+            "每周维护",
+            "CEO 总助维护面",
+            "经营维护计划单"
+        ],
+        "latestActiveWeek": true,
+        "phase": "ceo-copilot-host-coordination",
+        "previousWeekRef": "docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json"
     },
     "priority": "high",
     "timebox": {
         "scope": "weekly",
-        "label": "2026-W33 当前周维护面",
-        "startAt": "2026-08-10T00:00:00+08:00",
-        "endAt": "2026-08-16T23:59:59+08:00"
+        "label": "2026-W34 当前周维护面",
+        "startAt": "2026-08-17T00:00:00+08:00",
+        "endAt": "2026-08-23T23:59:59+08:00"
     },
-    "createdAt": "2026-08-09T15:59:00.297693+00:00",
+    "createdAt": "2026-08-16T16:45:00.078804+00:00",
     "relatedModules": [
         "TriMetaverse",
         "TriCompany",
         "TriLC",
         "TriMC"
     ],
-    "updatedAt": "2026-08-09T15:59:00.297693+00:00",
+    "updatedAt": "2026-08-16T16:45:00.078804+00:00",
     "activeTrees": [],
-    "doneTreesFromPreviousWeek": [],
-    "doneTreesThisWeek": [
+    "doneTreesFromPreviousWeek": [
         {
             "treeId": "w33-weekly-migration-ade",
             "title": "周平面迁移自动化 — 完整 ADE 五段闭环投产",
@@ -196,166 +201,8 @@
             "related": "I4 全链 PASS（Phase A/B/C + D 返修包 R + 复验正路径活体 confirm 200→ready）。OBS-8 → R1b 并入 P2；基线 TriLC 427/426 + TriMC 43/43。I5 D/E 排期在案"
         }
     ],
-    "nextActions": [
-        {
-            "id": "AGENDA-20260810-001",
-            "action": "W33 周会议题：供应链卫生基线（ChainDrop 复盘）— 8/10 审计未受影响；议题产出：ignore-scripts 决议 / lockfile review 纪律 / 复检触发条件",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "open"
-        },
-        {
-            "id": "O1-FIX-20260813-001",
-            "action": "O1 健康脚本 dirty 检测修复（CTO 小狄方案 APPROVE：--porcelain -b 全量输出，Issue 模型新增 Dirty 维度，untracked 计入，约 10 行）+ 修复后 4.3 补跑复核 — done（r11-ops-init：修复后 20 仓 / 15 issues，dirty 命中 CTO 基线 TriCompany 15 + TriModel 1，8 仓交叉验证零差异，小柯独立验证 PASS）",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "done"
-        },
-        {
-            "id": "D4-20260813-001",
-            "action": "D4（r11-2 发现，转 CTO 小狄）：TriCompany 8836e88 声称 4 契约类型标 @deprecated，实测仅类标注 + 头警告，4 类型未标注——补标或改记录 — done（补标方案，TriCompany a3b13c7：4 类型定义处补 @deprecated + dist 重建验证 + TriMC tsc 零影响；定义处 + re-export 双标注，8836e88 记录无需改动）",
-            "ownerRole": "CTO",
-            "status": "done"
-        },
-        {
-            "id": "O3-20260813-001",
-            "action": "O3（r11-2 发现，转 CTO 小狄）：TriMC initializeSession 缺 W_OK 校验（TriLC 端有）——并入 r13-contract-convergence 树 B 段（r13-2）。对齐基准已确认：TriLC src/company/session-initializer.ts:44（await access(dir, constants.W_OK)，initializeSession 入口处）",
-            "ownerRole": "CTO",
-            "status": "in_progress"
-        },
-        {
-            "id": "GOV-20260813-001",
-            "action": "Governance 口径同步（r13 建树登记，路由 CompanyGovernanceRegistry）：合同真源落点变化——docs/registry 11 份 v1 同树退役、source-agents 14 份为唯一合同真源 + 补 3 份缺口合同（business-strategy/customer-success-officer/deployment-engineer）。制度化归 CAO/registry owner，小贾负责路由与催办",
-            "ownerRole": "CompanyGovernanceRegistry",
-            "status": "open"
-        },
-        {
-            "id": "FAMILY-FIX-20260813-001",
-            "action": "family 裁决落笔（CTO 小狄，r13-4 收口）：business-strategy family Role → Registry（一行 YAML + commit + code-state.md 登记）。依据：语义自证中央 registry 职能 / roster 13 员工名册不含 / Registry Routing 惯例 / v2 原值历史笔误。roster 不动 — done（TriCompany 60bc197：family=Registry，loadContractV3 解析验证通过；code-state.md 更正依据 312952b）",
-            "ownerRole": "CTO",
-            "status": "done"
-        },
-        {
-            "id": "FORBIDDEN-LOSS-20260813-001",
-            "action": "forbidden 真丢评估（CTO 小狄）：test-engineer forbidden 的\"替代 BusinessStrategy 做中央战略裁决\"条目在 v2 golden 已缺席（迁移前既成事实，非 B 段丢失，v1 原文 git 历史可取回）——评估是否回补 — done（TriCompany 9273782：从 2c2ccf5~1 取回 v1 原文核实，对称护栏缺一即约束弱化，已回补至 v3 合同 6 条齐，解析验证通过）",
-            "ownerRole": "CTO",
-            "status": "done"
-        },
-        {
-            "id": "PACK-EXCLUDE-20260813-001",
-            "action": "打包卫生优化（r14-3 小柯 + 小狄共同发现）：发布包内 node_modules/@tricompany/agent-core/test/（9 文件 fixtures）被打进 ZIP——无害但应 exclude，建议 hygiene/assemble 加排除规则，随下次打包触发",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "open"
-        },
-        {
-            "id": "O2-B-20260813-001",
-            "action": "O2 B 方案（CTO 小狄自领）：agent-core 移除/@deprecated 死 schema 导出 + resolver 头注释修正 + TriCompany code-state.md 补 agent-core 模块登记与风险标注 — done（TriCompany commit 8836e88，5 文件 +33/-2；保留导出作 O2-A 重建锚点，弃用标注 + 死形状警示 + 首次模块登记）",
-            "ownerRole": "CTO",
-            "status": "done"
-        },
-        {
-            "id": "TIER-ASSERT-20260814-001",
-            "action": "pipeline-integration 2 条 tier 断言漂移（期望 requires tier \"main\"，agent-core canUseTool 现产 \"heartbeat\"）——非 r1-2 回归，归因 r13 合同收敛流（agent-core 9cd325b）。小票：测试串对齐 + write_file 语义（main-only → heartbeat+）确认；修复通道 TriMC 仓小改单票；语义确认 owner = CTO 小狄。非阻塞，r1 树收口后处理 — done（小狄语义确认：刻意变更非缺陷，TIER_LEVEL main=2=heartbeat，写工具最低 tier main→heartbeat 对应 REQ-20260805-006，shell 仍 main-only；修复 b7eeb50 纯测试 1 文件 5 行，全量 490/491 零失败；单票审核折入 r1-3 小柯顺手确认）",
-            "ownerRole": "CTO",
-            "status": "done"
-        },
-        {
-            "id": "MON-REFLOW-20260817-001",
-            "action": "周日 08-16 23:00 自然触发后，周一 08-17 回流检查：本地 git pull sg-server dev → 核对 W33 index closed/latestActiveWeek=false、W34 目录 OP index + unresolved-items.md + .shift-ade.json（status=pass）、diff 审查、D1 影响 §1 行 8w+ 人工补标（D1 裁决前按留意+补标口径）。cron 未触发则先 trimc cron run b00b0070-2f82-4e7d-a98c-de73e886834b 兜底再回流（job ID 必须全 ID，截断口径教训见 REHEARSAL-20260813-001）",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "open"
-        },
-        {
-            "id": "O1-SMTP-20260814-001",
-            "action": "O1 SMTP 配置跟进（非阻塞）：服务器 notify render_only 不投递邮件——接受现状（审计由 .shift-ade.json + git 承担），后续为 fleet 配 notify.json + NOTIFY_CONFIG（SMTP best-effort），随生产级开发期后续树处理 — done（CEO 要求全真实演练含邮件：编排层已部署 QQ SMTP 配置至 /home/fleet/.trimetaverse/notify.json（0600），演练二期五段链 notify 真实投递成功 run log 实锤 [weekly_shift] notify: sent；O1 关闭，周日自然触发邮件环节完整）",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "done"
-        },
-        {
-            "id": "D1-FIX-20260814-001",
-            "action": "D1 修先行（周六 08-15 中午截止）：a) 代码修复——CTO 小狄执行 TriCompany weekly_plane bump 逐行处理（修复前给小贾一版精确 diff）；diff 已过目批准（2026-08-14）：行级 bump 仅 | 开头 CARRY-\\d+ 表行、计数格单契约（✅ 清除成立——闭合信息在末列状态文本，真实文件已核）、RISK 不 bump、Python 3.8 兼容、真实数据 12 行零误伤 + 8w 提取 5/5；小柯重验（测试根 dry 链 + 真实数据本地测）b) 数据校正——W33 §1 行计数对齐 §4 实效值（编排层写权，纳入周日触发前 checklist）。未完成则接受一期（W34→W35 生效），周一回流人工补标口径不变 — done（afdae93 + 小柯重验 PASS：两型 fixture dry 链全过、真实数据 §1 五行 6→7w+ / §4 五行 7→8w+ / 8w 提取 5/5 / 变更恰 12 行 / 散文与 RISK 零变更 / 真源零污染；证据留存 D:/Code/ai/.r1-3-d1-test/）",
-            "ownerRole": "CTO",
-            "status": "done"
-        },
-        {
-            "id": "O-D1-1-PATCH-20260814-001",
-            "action": "O-D1-1 末尾换行 1 行补丁（非阻塞，外观级）：D1 新实现 splitlines/join 使产物丢失末尾换行（130 行守恒但 wc -l=129、git 标 No newline）；补丁=join 后按源文件补回结尾换行。owner CTO 小狄，小改单票（小柯快验），周日触发前完成即可。O-D1-2（Windows GBK stdout UnicodeEncodeError，发生在全部写操作完成后，产物不受影响；服务器 UTF-8 无此问题）无需处置，本地手工跑前置 PYTHONIOENCODING=utf-8 记入 runbook 即可 — done（补丁 e20fa8b + 小柯快验三点全过：产物 ends-with-newline=True 行数 130/130、diff 恰 12 对变更行无伪变更、8w 提取 5/5 无回归；D1 修复链 afdae93+e20fa8b 完整闭环）",
-            "ownerRole": "CTO",
-            "status": "done"
-        },
-        {
-            "id": "D1-B-CORRECT-20260816-001",
-            "action": "B 段数据校正（周日触发前 checklist，编排层写权）：§1 五行 6w+ ⚠️⚠️ → 7w+ ⚠️（CARRY-001/004/005/006）、6w+ ✅ → 7w+ ⚠️（CARRY-003，✅ 同步清除、闭合信息留状态列）、RISK「2w」不动；依据=08-10 迁移 §1 漏 bump 恰一档、§4 实效 7w+、§4 头注 W33 结束即 8 周。小柯已仿真验证校正后周日实跑：exit 0、两表同至 8w+ ⚠️⚠️（10 行）、escalation_8w=10/10、ADE pass；周日提取清单 10 条含 §1/§4 ID 重叠，CEO 裁决按 ID 去重阅读",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "open"
-        },
-        {
-            "id": "O-D1-3-AUTOTEST-20260814-001",
-            "action": "O-D1-3 自动化单测缺失（非阻塞，低优先）：TriCompany HEAD 无 weekly_plane 自动化单测文件——建议把两型 fixture（§1 长行/§4 短行）落为自动化测试；裁量权 CTO 小狄，随 TriCompany runtime 后续变更通道处理",
-            "ownerRole": "CTO",
-            "status": "open"
-        },
-        {
-            "id": "D1-B-CORRECT-20260817-001",
-            "action": "D1 B 段数据校正（重登记，编排层写权）：真实迁移已用修复后脚本跑完——W34 文件 §1 五行现为 7w+ ⚠️、§4 五行现为 8w+ ⚠️⚠️，两表仍差一档（B 段校正未随迁移执行）；校正=§1 五行 7w+ ⚠️ → 8w+ ⚠️⚠️ 对齐 §4 实效值（CARRY-001/003/004/005/006，CARRY-003 闭合信息在状态列）；CEO 裁决按 ID 去重阅读",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "open"
-        },
-        {
-            "id": "TRICADE-ENV-INJECT-20260817-001",
-            "action": "TriCade 打包侧 TRILC_WEEKLY_PLANE_ROOT 注入（r2-2 跟进项，本树不做）：安装态 env 显式路径需由 TriCade 打包/安装脚本注入；归仓 TriCade 打包通道（TriMetaverse scripts + .github CI），路由编排层 — 实现 done（8574d51a：install-tricade.ps1 三态解析 + Phase 3.5 用户级注入 + NSSM AppEnvironmentExtra 适配；build-desktop.ps1 install.bat [3/4] setx 段；PS 语法解析 + WhatIf 实测命中），小柯验证中（WhatIf 三态 + 装后 User env 复核），随 v0.4.5-r15 构建进包 — 段 1 PASS（小柯独立验证：WhatIf 三态实测 + install.bat 模板 diff + 双文件 PS 语法独立解析；幽灵路径注入计数 0）；段 2 装后复核折入 5.2",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "open"
-        },
-        {
-            "id": "A-PRIME-WIRING-20260817-001",
-            "action": "A' 主路径接线（后续树，CTO 评估半日~一日 + 验证）：TriStaciss 补 Anthropic /v1/messages ingress（三文件按 stash 设计参照重写：路由 /v1/messages + verify_api_key + deduct/record_usage 集成点；git stash show -p stash@{0} 提取参照，勿 pop）+ 非流式 create_completion 桩替换为真实调用（流式 stream_completion 已有真接线可复用）；验收口径=depth=0 零失败 + 直测 8000 入口真实内容 + SMOKE_OK 不绕 fallback。关联：TriStaciss 去留架构评估（B 记档）+ O-TS-1 stash 处置",
-            "ownerRole": "CTO",
-            "status": "open"
-        },
-        {
-            "id": "LS-CWD-DIAG-20260814-001",
-            "action": "ls/cwd 上下文解析缺陷诊断（派小全）：CEO 重测中发现 agent 的 ls 工具调用跑到了 C:\\Users\\jedih\\Documents（agent cwd 上下文解析错误，应指向工作区/周平面）——诊断为什么 agent 工具调用默认路径落到 Documents；输出=根因 + 修复方案 + 影响面（涉及哪些工具/哪些调用形态）；修复范围定案后另建树，本单只做诊断。关联：TriLC agent loop 工具执行 cwd 传递链",
-            "ownerRole": "FullStackDeveloper",
-            "status": "done",
-            "doneAt": "2026-08-13T19:05:00+00:00",
-            "deliverable": "诊断报告（只诊断未改码，小贾抽查实证：TriLC 5 读工具 process.cwd() 与 Write/Edit ctx?.cwd 分裂、TriMC tools.ts:231/286 同款、agent-core loop.ts:584 REQ-014b 设计注释在案）。三层根因：①主根因=工具 cwd 缺陷——LS/Read/Glob/Grep/ShellExec 用 resolve(process.cwd()) 忽略 ctx.cwd，与 Write/Edit 读写路径分裂；安装态 daemon 启动链（schtasks WorkingDirectory 空→daemon.cmd cd C:\\Users\\jedih→cli.ts spawn 不带 cwd）致 process.cwd()=C:\\Users\\jedih（sessions.db 实证）② Documents 来源=模型显式传参非 fallback——ls '.' 落在 C:\\Users\\jedih 后模型钻进 Documents 子目录打转③上下文缺失放大——TriPilot 传 systemPrompt 覆盖默认提示，周平面根提示被跳过，模型盲探。影响面：TriLC 5 读工具 + TriMC 同款 2 处；开发态路径一致故从未暴露。修复方向：A（推荐）工具层统一 ctx?.cwd ?? process.cwd() 对齐 Write/Edit；B 仅治单机不建议；C tasks/submit 无条件追加周平面根提示。建议 A 为主 + C 为辅，代码改动需 CTO 审批后动工——已路由 LS-CWD-FIX-20260814-001"
-        },
-        {
-            "id": "LS-CWD-FIX-20260814-001",
-            "action": "ls/cwd 修复方案审批与定案（派小狄）：小全诊断建议 A（工具层统一 ctx?.cwd ?? process.cwd()，TriLC 5 读工具 + TriMC 2 处同款）为主 + C（tasks/submit 无条件追加周平面根提示，独立于 systemPrompt 覆盖）为辅；B（daemon 启动目录固定）单独用否决已记。审批输出=定案修复范围与顺序，定案后另建修复树（实现小全 + 验证小柯 + 收口小贾），不在本单",
-            "ownerRole": "CTO",
-            "status": "done",
-            "doneAt": "2026-08-13T19:10:00+00:00",
-            "deliverable": "A+C 双 APPROVE，B 否决确认（小狄逐点复核与小全诊断一致：agent-core loop.ts:589 executeTool 传 cwd 契约 + ToolHandler (args, ctx?) 签名在案）。定案：① A(TriLC) 5 读工具 handler 加 ctx?: ToolContext，基准 ctx?.cwd ?? process.cwd()；shell-exec 特例 (args.cwd) || ctx?.cwd || process.cwd()（模型显式参数优先语义保留，中间补 ctx 层）② A(TriMC) 同批 3 处 handler（tools.ts:231/286/391）+ executeTool 包装（tools.ts:42）补第三参透传（标注无现役调用方）；agent-core 零改 ③ C 限定形态：只改 app.ts:1973 为 body.systemPrompt ? body.systemPrompt + buildWeeklyPlaneHint() : defaultSystemPrompt()；defaultSystemPrompt 内部 hint 不动；不扩 OpenAI 兼容端点（1165/1560/1685 跟进项 C-EXT-ENDPOINTS 转编排层定）；buildWeeklyPlaneHint 注释补外部 append 点标记 ④ 顺序 A(TriLC) → A(TriMC) → C；排期可缓，周日迁移验收前不合并 ⑤ 门禁：既有工具测试不改预期 + 新增 ctx 传递断言两型 + C 侧 1973 组装断言 + 开发态行为零变化。观察项：修复后模型仍显式传 Documents 路径属模型行为面，验证轮记录。已建修复树 prod-grade-4-lscwd-fix（r4-1 实现小全 → r4-2 验证小柯 → r4-3 终审小狄 → r4-4 收口小贾）"
-        },
-        {
-            "id": "C-EXT-ENDPOINTS-20260814-001",
-            "action": "OpenAI 兼容端点 systemPrompt 强制追加策略决策（编排层定）：TriLC app.ts:1165/1560/1685 三处同款 parsed.system ?? default 覆盖——外部客户端「全权提供 system」语义下服务端是否强制追加周平面 hint 属策略决策，C 定案不扩；由编排层定案后另排实现（若通过，同树或后续树承接）",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "open"
-        },
-        {
-            "id": "R4-RELEASE-MERGE-20260817-001",
-            "action": "r4 修复合并与发布（编排层排期，迁移验收后）：TriLC a6df674 + TriMC 7e15ecf 现为本地 dev 未 push——迁移验收（08-16 23:00 自然触发）通过后，合并进下个 release 重建进包；版本号重建时刻定（预估 v0.4.10-r20 patch bump）；装后验收含 ls/cwd 活体验证（安装态工具调用落会话工作区而非 daemon 启动目录）。**裁决 ②A（2026-08-14）**：merge 挂初始化实施树后发布窗口（同批发布）",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "open"
-        },
-        {
-            "id": "WORKTREE-ARCH-DESIGN-20260814-001",
-            "action": "CEO 架构指令设计（派小狄出设计，设计层，不阻塞周日 08-16 迁移验收）：研发仓与 TriCade 工作区改为同一仓库的不同 git worktree，与 TriMC 仓版本协同——任何一方改动互不影响，标准流程合入同一 dev。设计要求：① worktree 布局（TriCade 生产面 worktree 落点）② 分支策略（生产面写分支→合入 dev）③ TRILC_WEEKLY_PLANE_ROOT 从指向研发仓迁移为指向 worktree ④ 与服务器 /srv/fleet 对称性。输出=设计文档（落点建议 docs/engineering/ 或 TriMetaverse 设计真源，按现有设计文档规范带元信息头）；实施树在设计定案后另建，不在本单。注意：涉及 Windows 侧 junction 与 git worktree 交互风险（INCIDENT-20260814-001 纪律：禁 worktree+npm install 组合）",
-            "ownerRole": "CTO",
-            "status": "done",
-            "doneAt": "2026-08-13T18:57:00+00:00",
-            "deliverable": "docs/execution/worktree-architecture-design.md（commit 5edcbecd，source-only）— 定案：一仓三面模型（研发主 checkout / 本地生产 worktree C:\\ProgramData\\TriCade\\workspace\\TriMetaverse / 服务器舰队克隆）+ prod/windows-local 分支 ff-only + 例外写走 PR + TRILC_WEEKLY_PLANE_ROOT 安装脚本候选补档（TriLC 侧零改、迁移前行为逐字节不变）+ fleet 纪律统一（写方向单主体、git 身份单一）；实施树另建（树 A：worktree 建立+注入切换+双形态验收；树 B 可选：TriMC 同构），排期归编排层。落点理由（小狄留痕）：TriMetaverse 仓 docs/ 下无 engineering/ 目录——engineering/ 层级是 TriCompany 技术真源专属结构；TriMetaverse 仓设计/执行文档真源惯例落 docs/execution/（server-fleet-m0.md、production-dualrun-runbook.md 等先例同处）。树 A 建树技术输入（小狄承诺）：护栏清单复核 + 实施步骤顺序（worktree 建立→ACL→脚本候选补档→重注入→双形态验收→runbook）+ 验收口径（服务/登录双形态周平面读取实测、MSI 升级 worktree 完好检查、回滚单命令演练）"
-        },
-        {
-            "id": "INIT-TO-COLLAB-DESIGN-20260814-001",
-            "action": "初始化到协同设计（CEO 战略转向配套，派小乔×小狄联合设计，小贾协调收口）：产品面小乔=初始化流程/两入口体验/worktree 向导交互；技术面小狄=初始化链路架构/TriModel key 流/五维配置同步协议（模型、key、员工、公司、项目）/协同确认机制（研发仓+TriCade(TriLC)+TriMC 同一项目）。产出 docs/execution/ 设计文档（带元信息头），报 CEO 审批；设计先行实施另排。衔接：design-v2 §2.4 关联向导/§2.9 onboarding 关系（解冻触发 §2.10 升级项）/§七 树 P1-P4 排期；TriModel Phase 1 配置平面（/v1/models + /v1/config/keys）",
-            "ownerRole": "CEOChiefOfStaff",
-            "status": "done",
-            "doneAt": "2026-08-14T04:25:42+00:00",
-            "deliverable": "docs/execution/init-to-collab-design.md（v2026.W34.4：产品面小乔 §二 × 技术面小狄 §三~§十；CTO 联合评审吸收 m2-4 四点差异 commit f1dfb963；小乔 §2.9 重注 + 三要素核验 PASS commit aaff6c22；元信息头齐备；状态=报 CEO 审批）"
-        }
-    ],
+    "doneTreesThisWeek": [],
+    "nextActions": [],
     "carry_over_from_w31": [
         "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
         "CARRY-20260728-003: TriCade MSI CI — 6w+ ✅ W32 已实质完成（目录治理+MSI 自动化），建议关闭",
@@ -449,184 +296,5 @@
         "排期裁决（CEO 2026-08-16）：session 管理实施（P0 两入口 id 同步等，session-management-design.md）排入 **W34**——不挤当前优先级。本周收尾线：CEO 手测完成开业→项目初始化→23:00 周平面迁移（W33→W34，自然触发）；迁移后 W34 开周双启动：①session P0 实施树 ②能力差距反向流首轮手动盘点（CEO 已批，小狄 W34 行动清单在案）",
         "CEO 架构观察（2026-08-16 21:4x）：初始化链各阶段（自检/开业/项目初始化/五维同步）本质适合 ADE 规范——五段闭环同构（端点触发≈程序触发/模型问答≈agent plan/daemon 原子执行≈CLI 执行/确认卡≈agent close/transitionTo+产物≈CLI close），init-chain.json phaseDetail ≈ .shift-ade.json（status/changes/幂等/审计）——ADE 化后与周迁移同轨（幂等/already_exists/dry_run/可重跑/审计留痕语义直接复用）。登记 W34 设计议题（与 session 线同批）。另：探测模型伪失败间歇复发两次（21:3x，tool-calls-only，prompt 约束非硬隔离）——编排层绕行推进 onboarding（degraded 语义），硬隔离（会话级工具白名单）列观察项随 W34",
         "CEO 架构观察（2026-08-16 22:2x）：装配落点 .claude/agents 与 worktree 内 Claude Code 子代理定义冲突——①装配白名单写 .claude/agents/<roleId>.md 无 preserved 保护（同名文件直接覆盖风险，实锤）②双源歧义：Claude Code 从目录读子代理 vs TriPilot 从 TriLC 合同读（/agents API）——同名 agent 两处定义两套体系 ③修法方向（W34 议题与 ADE 化/session 同批）：装配落点迁 daemon contracts 目录（合同单源）或全量 preserved 保护+双源标记。另记：22:1x daemon 曾被 /shutdown（来源待确认——CEO 手动 or 其他调用方）；扩展不载入根因=坏 workspace 状态（指向已删 WorkTree 的 workspaceStorage）已清，扩展恢复正常"
-    ],
-    "plans": [
-        {
-            "planId": "server-fleet-trilc-parity",
-            "title": "TriMC 部署服务器 + TriLC 追平能力",
-            "source": "W33 决策登记 2026-08-11（CEO 定案）+ TriCompany trilc-trimc-runtime-parity V1.1（架构决策 2026-08-07）",
-            "planDoc": "docs/execution/server-fleet-trilc-parity-plan.md",
-            "status": "in_progress",
-            "milestones": [
-                {
-                    "id": "M0",
-                    "name": "环境",
-                    "status": "done",
-                    "evidence": "server-fleet-m0.md 12/12（2026-08-11）"
-                },
-                {
-                    "id": "M1",
-                    "name": "试点",
-                    "status": "done",
-                    "evidence": "周记 M1 段：阶段一+二完成（2026-08-11）"
-                },
-                {
-                    "id": "M2",
-                    "name": "能力验证期",
-                    "status": "done",
-                    "evidence": "trilc-capability-checklist.md v2026.W33.15 —— 全勾：§二 1-6 域 25/25 + C 层 M2 受验必需项全过（2026-08-13，12 轮 r1-r12 树全部 APPROVE）",
-                    "subStages": [
-                        {
-                            "id": "M2-R1",
-                            "name": "C12/C13 模型路由",
-                            "status": "done",
-                            "checklist": "v2026.W33.3"
-                        },
-                        {
-                            "id": "M2-R2",
-                            "name": "C8/C9 权限",
-                            "status": "done",
-                            "checklist": "v2026.W33.4"
-                        },
-                        {
-                            "id": "M2-R3",
-                            "name": "C10 MCP",
-                            "status": "done",
-                            "checklist": "v2026.W33.6"
-                        },
-                        {
-                            "id": "M2-R4",
-                            "name": "C1/C15",
-                            "status": "done",
-                            "checklist": "v2026.W33.7"
-                        },
-                        {
-                            "id": "M2-R5",
-                            "name": "C15v2+2.4+2.5",
-                            "status": "done",
-                            "checklist": "v2026.W33.8"
-                        },
-                        {
-                            "id": "M2-R6",
-                            "name": "2.1/2.2",
-                            "status": "done",
-                            "checklist": "v2026.W33.9"
-                        },
-                        {
-                            "id": "M2-R7",
-                            "name": "3.1/3.2",
-                            "status": "done",
-                            "tree": "r7-eng-gate",
-                            "checklist": "v2026.W33.10"
-                        },
-                        {
-                            "id": "M2-R8",
-                            "name": "1.1-1.5",
-                            "status": "done",
-                            "tree": "r8-base-exec",
-                            "checklist": "v2026.W33.11"
-                        },
-                        {
-                            "id": "M2-R9",
-                            "name": "3.3/3.4/4.1",
-                            "status": "done",
-                            "tree": "r9-eng-cross",
-                            "checklist": "v2026.W33.12"
-                        },
-                        {
-                            "id": "M2-R10",
-                            "name": "4.2/4.3/6.1/6.2",
-                            "status": "done",
-                            "tree": "r10-cross-ops",
-                            "checklist": "v2026.W33.13"
-                        },
-                        {
-                            "id": "M2-R11",
-                            "name": "6.3/6.4 + O1 修复",
-                            "status": "done",
-                            "tree": "r11-ops-init",
-                            "checklist": "v2026.W33.14"
-                        },
-                        {
-                            "id": "M2-R12",
-                            "name": "5.1-5.4 生产链 + 4.2 安装态",
-                            "status": "done",
-                            "tree": "r12-production-chain",
-                            "checklist": "v2026.W33.15"
-                        }
-                    ]
-                },
-                {
-                    "id": "M3",
-                    "name": "独立资格+生产双跑",
-                    "status": "done",
-                    "evidence": "运营日确认 2026-08-14：CEO 重启命令块全通过（shutdown + RegRun 清理 + schtasks /run）——version 0.4.4 + count 14 + tricompanyEnabled true（14 员工全实载、hasSystemPrompt 全 true、decisionRights 完整）+ trimc connected 恢复（uptime 87s 复测，degraded→connected 心跳闭环）。R1 合同统一 / R2 部署就绪 / R3 运营日就绪全收官",
-                    "note": "正式运营日 2026-08-14。M2 全勾自动推进（CEO 定不需提请）+ CEO 常驻授权（非关键决策自决）全程生效。遗留：#1 push sg-server（git 写权限，唯一 blocked）；git 版本化/CI 记 M3 后续；M4 deferred（CEO 另行启动）",
-                    "subStages": [
-                        {
-                            "id": "M3-R1",
-                            "name": "O2-A 合同真源统一（含 O3/O4）",
-                            "status": "done",
-                            "tree": "r13-contract-convergence",
-                            "checklist": "r13-4 收口 APPROVE（2026-08-13）：10 项口径全 PASS 零迁移丢失；family 更正 + forbidden 回补已闭环"
-                        },
-                        {
-                            "id": "M3-R2",
-                            "name": "生产双跑部署",
-                            "status": "done",
-                            "tree": "r14-production-dualrun",
-                            "checklist": "r14-4 收口 APPROVE（2026-08-13）：部署就绪——心跳契约 v1.0 对称补全接线（markNodeUnknown 有调用方）+ 产物 v0.4.4-r14（v3 合同 14/14）+ runbook + blocked 五项清单待 CEO 一次执行"
-                        },
-                        {
-                            "id": "M3-R3",
-                            "name": "运营日就绪（③b+④，CEO 授权）",
-                            "status": "done",
-                            "tree": "r15-ops-day-ready",
-                            "checklist": "r15-3 收口 APPROVE（2026-08-14）：③b connected 实测 + ④ dist 部署 active + blocked #3/#5 解锁；count 0 根因确认（旧进程未重启），CEO 重启后运营日确认"
-                        }
-                    ]
-                },
-                {
-                    "id": "M4",
-                    "name": "源码替换",
-                    "status": "deferred",
-                    "note": "延后（CEO 2026-08-13 定）：启动条件六条见 production-grade-development-plan.md §十，待 CEO 另行启动"
-                }
-            ]
-        },
-        {
-            "planId": "production-grade-development",
-            "title": "生产级开发期运行方案（TriCade + TriLC + TriMC）",
-            "source": "W33 决策登记 2026-08-13（CEO 批准）：M4 时机未到，生产级开发启动——TriLC 主力执行、TriMC 把关审核、问题回研发仓修改、循环改善至 CEO 认定首个正式生产级可用版本（建议 v1.0.0）",
-            "planDoc": "docs/execution/production-grade-development-plan.md",
-            "status": "in_progress",
-            "milestones": [
-                {
-                    "id": "P1",
-                    "name": "阶段一 全量把关期",
-                    "status": "in_progress",
-                    "evidence": "首树 prod-grade-1-trimc-weekly-cron（2026-08-13 建）——TriMC scheduler 模块（对标 TriLC cron：croner + CronJob store + CLI），定时触发 W33→W34 周平面迁移五段链；退出判据：生产环稳定连续 2 周无 P0/P1 + C4/C5/C7 闭环"
-                },
-                {
-                    "id": "P2",
-                    "name": "阶段二 抽检过渡期",
-                    "status": "pending",
-                    "evidence": "退出判据：抽检连续 4 轮零严重问题 + C2/C3/C11/C14 闭环"
-                },
-                {
-                    "id": "P3",
-                    "name": "阶段三 例外管理期",
-                    "status": "pending",
-                    "evidence": "退出判据：C16 闭环 + 三小贾收敛到位"
-                },
-                {
-                    "id": "P4",
-                    "name": "阶段四 资格认定期",
-                    "status": "pending",
-                    "evidence": "退出判据：C6 闭环 + v1.0.0 候选全链回归 + 舰队独立审核 + CEO 认定首个正式生产级可用版本"
-                }
-            ],
-            "notes": "C 层 C2-C16 归本计划消化清单（原 M3/M4 标签停用，口径修正）；M4 仍 deferred"
-        }
     ]
 }
