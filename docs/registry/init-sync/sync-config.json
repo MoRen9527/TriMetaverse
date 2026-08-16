@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "bundleId": "aa1e28ee-9a01-40d6-906e-ea6c0c10a917",
-  "generatedAt": "2026-08-14T14:27:58.971Z",
-  "generatedBy": "trilc-init-1.0.0@4bc19502",
+  "bundleId": "6c4d7d23-092d-4563-8b0e-245a66b896b0",
+  "generatedAt": "2026-08-16T14:56:17.046Z",
+  "generatedBy": "trilc-init-0.4.10@4bc19502",
   "company": {
     "state": "initialized",
-    "ceoName": "MoRen",
-    "onboardedAt": "2026-08-14T09:00:00.000Z"
+    "ceoName": "磨人",
+    "onboardedAt": "2026-08-16T14:56:16.742Z"
   },
   "model": {
     "defaultModel": "tmv-deepseek-v4-pro",
@@ -63,27 +63,6 @@
       {
         "id": "tmv-deepseek-v4-flash",
         "provider": "deepseek",
-        "capabilities": [
-          "chat"
-        ]
-      },
-      {
-        "id": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
-        "capabilities": [
-          "chat"
-        ]
-      },
-      {
-        "id": "claude-haiku-3-5-20250514",
-        "provider": "anthropic",
-        "capabilities": [
-          "chat"
-        ]
-      },
-      {
-        "id": "claude-opus-4-20250514",
-        "provider": "anthropic",
         "capabilities": [
           "chat"
         ]
@@ -150,17 +129,22 @@
       }
     ],
     "refreshIntervalS": 900,
-    "fetchedAt": "2026-08-14T14:26:20.244Z"
+    "fetchedAt": "2026-08-16T14:55:30.129Z"
   },
   "employees": {
-    "roster": [],
-    "sourceCommit": "d64ad9344a73bc2bf15f1135d494cc644e1946f4"
+    "status": "unavailable",
+    "reason": "TriCompany HEAD 读取失败（Command failed: git -C C:\\Program Files\\TriCade\\trilc\\contracts rev-parse HEAD\nfatal: not a git repository (or any of the parent directories): .git\n fatal: not a git repository (or any of the parent directories): .git）— 该维降级，§九 服务器侧校验兜底"
   },
   "project": {
     "projectKey": "trimetaverse",
     "repoUrl": "https://github.com/MoRen9527/TriMetaverse.git",
     "defaultBranch": "dev",
-    "worktrees": [],
-    "devHead": "95fd7cf8fff99037c58c5fd7cb018160317d85f0"
+    "worktrees": [
+      {
+        "path": "D:\\Code\\ai\\TriMetaverse WorkTree",
+        "branch": "project/trimetaverse"
+      }
+    ],
+    "devHead": "cf4623ad01b90ececa6e4f2c25214a1128a491d7"
   }
 }
