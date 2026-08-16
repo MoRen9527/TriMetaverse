@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（W34 排期裁决登记）",
-        "version": "2.52.0",
-        "lastUpdated": "2026-08-16T12:08:52.337Z",
+        "updatedBy": "编排层（ADE 化观察 + 探测伪失败绕行登记）",
+        "version": "2.53.0",
+        "lastUpdated": "2026-08-16T13:42:36.923Z",
         "latestActiveWeek": true
     },
     "priority": "high",
@@ -455,7 +455,8 @@
         "训练流程定义（CEO 2026-08-16）：编排=研发仓本地 claude code 默认 agent；C-level（小贾/小乔/小狄）编入 TriMC 侧（先进 harness）治理/评估/审核；执行层（小全/小柯）在 TriLC 侧执行。循环：TriMC 有意的项目任务开发考验训练审核 TriLC——每轮须有提升项与成熟项（提升=TriLC 重跑+TriMC 评估 OK 转成熟；多次未达或审核判缺陷→交本地研发仓舰队修复=医生）。成熟项沉淀 agent-core 随发布流进生产系统。编成演进注：C-level 当前实际在研发仓本地，目标态迁 TriMC（编成演进项）。已入 v2 文档训练流程节",
         "训练流程 v2.1（CEO 修正 2026-08-16，否决 v2.0 编成版）：依 docs/training/trimc-trilc-devrepo-triangle-loop.md 改进——①任务从 TriLC 端发起（贴合生产系统实际场景）②做完发 TriMC 审核③分流：项目系统级→本地研发仓修复（走 git）/非系统级→TriMC 发回 TriLC 重做④岗位一对一镜像审核：两套舰队同岗互审（TriMC 侧小贾审 TriLC 侧小贾，给改进循环至通过）。医生职责收窄：只修项目系统级 bug，其他项目开发由 TriMC/TriLC 直接推进。roadmap 训练流程节已替换（v2.0 标注作废）",
         "训练盲区漏洞与反向能力流（CEO 发现 2026-08-16）：TriLC 没有的能力→想不到发起；TriMC 有能力→收不到这类任务（任务是 TriLC 发起的）；研发仓→收不到修复需求——**缺失能力三不通永远无法被发现**（例：claude code 的 Linux 多 session 自由对话，TriLC 无此能力连任务都发不出）。CEO 解法方向：TriMC（套壳 harness）**能力基准 diff TriLC 能力清单**→反向下发测试任务（可挂周工作平面）→定向测试→缺失确认→派研发仓修复→沉淀 agent-core。派小狄（技术：能力基准建设/反向任务流/双流融合循环/分期）+ 小乔（产品：差距看板分级/优先级口径/探针验收判据/商业价值关联）并行评估",
-        "排期裁决（CEO 2026-08-16）：session 管理实施（P0 两入口 id 同步等，session-management-design.md）排入 **W34**——不挤当前优先级。本周收尾线：CEO 手测完成开业→项目初始化→23:00 周平面迁移（W33→W34，自然触发）；迁移后 W34 开周双启动：①session P0 实施树 ②能力差距反向流首轮手动盘点（CEO 已批，小狄 W34 行动清单在案）"
+        "排期裁决（CEO 2026-08-16）：session 管理实施（P0 两入口 id 同步等，session-management-design.md）排入 **W34**——不挤当前优先级。本周收尾线：CEO 手测完成开业→项目初始化→23:00 周平面迁移（W33→W34，自然触发）；迁移后 W34 开周双启动：①session P0 实施树 ②能力差距反向流首轮手动盘点（CEO 已批，小狄 W34 行动清单在案）",
+        "CEO 架构观察（2026-08-16 21:4x）：初始化链各阶段（自检/开业/项目初始化/五维同步）本质适合 ADE 规范——五段闭环同构（端点触发≈程序触发/模型问答≈agent plan/daemon 原子执行≈CLI 执行/确认卡≈agent close/transitionTo+产物≈CLI close），init-chain.json phaseDetail ≈ .shift-ade.json（status/changes/幂等/审计）——ADE 化后与周迁移同轨（幂等/already_exists/dry_run/可重跑/审计留痕语义直接复用）。登记 W34 设计议题（与 session 线同批）。另：探测模型伪失败间歇复发两次（21:3x，tool-calls-only，prompt 约束非硬隔离）——编排层绕行推进 onboarding（degraded 语义），硬隔离（会话级工具白名单）列观察项随 W34"
     ],
     "plans": [
         {
