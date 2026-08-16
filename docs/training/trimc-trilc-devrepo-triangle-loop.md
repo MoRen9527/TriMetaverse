@@ -6,6 +6,8 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-15
 
+> **v2.1 修订（CEO 2026-08-16）**：循环发起方向与审核粒度按训练流程 v2.1 修订——①任务从 **TriLC 端发起**（训练即生产形态）②TriMC 审核**岗位一对一镜像互审**（MC 侧小贾审 LC 侧小贾）③审核分流：**项目系统级问题 → 研发仓修复（走 git）**；非系统级 → 发回 TriLC 重做 ④**医生（研发仓）只修项目系统级 bug**——**TriMC/TriLC 自身的缺陷即属项目系统级**（自己没法修自己）；其他项目开发由 TriMC/TriLC 直接推进。见 two-phase-architecture-roadmap.md 训练流程节。
+
 ## 培训判断
 
 **目标读者**：技术研发新人（需要理解 TriMetaverse 三角优化循环的全局架构）
@@ -61,7 +63,7 @@ graph TD
     style TriMC_Cluster fill:#f3e5f5
 ```
 
-**一句话概括**：本地研发仓提供真实任务 → TriLC 执行并产出改进 → TriMC 编排观测并沉淀知识 → 反哺回研发仓 → TriLC 越用越强。
+**一句话概括（v2.1）**：TriLC 发起并执行任务 → TriMC 同岗镜像审核（非系统级发回重做循环至通过）→ 项目系统级问题（含 TriMC/TriLC 自身缺陷）走研发仓医生修复（git）→ 能力沉淀 agent-core → TriLC 越练越强。
 
 ---
 
@@ -253,12 +255,12 @@ TriMC/src/
 
 以 **W33 M2-R12 轮次（生产链域验证）** 为例：
 
-### 步骤 1：研发仓产出任务
+### 步骤 1（v2.1）：TriLC 发起任务（训练即生产形态）
 - 小贾（CEOChiefOfStaff）更新 `docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json`
 - 创建树文件 `trees/r12-production-chain/tree-op.json`
 - 树节点定义：验证 MSI 构建、安装态 daemon、服务管理、升级回滚
 
-### 步骤 2：TriMC 编排派发
+### 步骤 2（v2.1）：TriLC 执行，完成后提交 TriMC 审核
 - TriMC Task Controller 读取树文件
 - 通过 Node Bridge 派发任务到 TriLC
 - Soul Loader 注射小狄（CTO）、小柯（TestEngineer）人格
@@ -275,7 +277,7 @@ TriMC/src/
 - 更新 `trilc-capability-checklist.md` §5.1-5.4 状态为"通过"
 - Git 提交证据（commit SHA、日志路径）
 
-### 步骤 5：TriMC 审核沉淀
+### 步骤 5（v2.1）：TriMC 同岗镜像审核——岗位一对一（MC 侧小贾审 LC 侧小贾产出），给改进意见循环至通过；**项目系统级问题（含 TriMC/TriLC 自身缺陷——自己没法修自己）走研发仓修复（git）**，非系统级发回 TriLC 重做
 - TriMC 舰队审核结果（构建无残留、安装态验证通过）
 - 更新清单状态 + 登记证据
 - 沉淀经验到知识体系（如：安装态路径差异清单、打包 contracts 规则）
