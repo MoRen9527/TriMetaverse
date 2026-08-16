@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（训练流程定义登记）",
-        "version": "2.49.0",
-        "lastUpdated": "2026-08-16T10:35:46.934Z",
+        "updatedBy": "编排层（训练流程 v2.1 修正登记）",
+        "version": "2.50.0",
+        "lastUpdated": "2026-08-16T10:48:52.344Z",
         "latestActiveWeek": true
     },
     "priority": "high",
@@ -452,7 +452,8 @@
         "CEO 系统级设计需求（2026-08-16）：双域舰队互为镜像运营模型——本地域（TriCade 生产舰队）/服务器域（fleet 舰队）/研发仓域（.claude/agents 舰队）三面同构；六点场景：本地开业→项目初始化（含周平面治理体系）→与服务器舰队会话同步→**本地关机时段服务器授权自动推进**（舰队会话+周平面迁移等授权清单工作）→本地开机拉取+一致性校验+继续→研发仓舰队会话独立维护、治理产物（周平面/各仓代码）同步。派小贾（续 session 上下文）拉小乔小狄整体系统评估设计（dual-domain-fleet-operations-design）。与 session 管理设计（bace12fa 四节）衔接：层2 单向镜像或升级双向合并由评估定",
         "CEO 两阶段论架构裁决（2026-08-16，重要纠偏）：**训练期与正式生产期不可混为一谈**。①训练期（现在）：架构=本地研发仓（claude code）+服务域 TriMC（**套壳 claude code 驱动舰队**，不走 agent-core）+本地域 TriLC（自研，走 agent-core）；TriMC 与 TriLC 是**审核与教练关系**（非镜像）——目的=训练 TriLC 成熟，能力沉淀于共同核心 agent-core；训练期不需要两域 agent 互为镜像。②正式生产期：前提=两侧均跑成熟源码（agent-core 共同核心，TriMC 直接用 agent-core 即获成熟能力）；真正互为镜像=**同一上下文，同一时间只有一个 agent 生效，谁掉线另一个顶上**（active-passive 热备）。③双域舰队互为镜像设计（2d5936b7）归属生产期；M0-M4/M3 双跑定位需随之重审。④指令：小贾整理所有思路需求，组织小狄小乔重新整体评估两阶段与方案功能设计（干什么/怎么干/不乱）",
         "CEO 系统论二次裁决（2026-08-16）：训练期/生产期不是两个阶段而是**两套永续系统**——①训练系统（永续迭代）：服务域 TriMC 可套壳任意先进 harness（claude code/codex 等，随官方随时更新，目的=审核拦截不成熟 TriLC 问题）+ 本地域 TriLC 自研吸收 harness 能力 + 研发仓医生修全项目；持续向生产系统发布正式版本；agent-core 为两系统 TriMC/TriLC 共用核心持续改进。②生产系统（独立运营）：TriMC/TriLC 互为镜像 fallback，7×24 服务域运行+本地域无缝执行，接 CEO 任务→商业流程分析→自动生产盈利软件/自动维护/自动运营。文档 two-phase-architecture-roadmap.md 已升 v2（系统论模型置顶，两阶段表述留痕为演进记录）",
-        "训练流程定义（CEO 2026-08-16）：编排=研发仓本地 claude code 默认 agent；C-level（小贾/小乔/小狄）编入 TriMC 侧（先进 harness）治理/评估/审核；执行层（小全/小柯）在 TriLC 侧执行。循环：TriMC 有意的项目任务开发考验训练审核 TriLC——每轮须有提升项与成熟项（提升=TriLC 重跑+TriMC 评估 OK 转成熟；多次未达或审核判缺陷→交本地研发仓舰队修复=医生）。成熟项沉淀 agent-core 随发布流进生产系统。编成演进注：C-level 当前实际在研发仓本地，目标态迁 TriMC（编成演进项）。已入 v2 文档训练流程节"
+        "训练流程定义（CEO 2026-08-16）：编排=研发仓本地 claude code 默认 agent；C-level（小贾/小乔/小狄）编入 TriMC 侧（先进 harness）治理/评估/审核；执行层（小全/小柯）在 TriLC 侧执行。循环：TriMC 有意的项目任务开发考验训练审核 TriLC——每轮须有提升项与成熟项（提升=TriLC 重跑+TriMC 评估 OK 转成熟；多次未达或审核判缺陷→交本地研发仓舰队修复=医生）。成熟项沉淀 agent-core 随发布流进生产系统。编成演进注：C-level 当前实际在研发仓本地，目标态迁 TriMC（编成演进项）。已入 v2 文档训练流程节",
+        "训练流程 v2.1（CEO 修正 2026-08-16，否决 v2.0 编成版）：依 docs/training/trimc-trilc-devrepo-triangle-loop.md 改进——①任务从 TriLC 端发起（贴合生产系统实际场景）②做完发 TriMC 审核③分流：项目系统级→本地研发仓修复（走 git）/非系统级→TriMC 发回 TriLC 重做④岗位一对一镜像审核：两套舰队同岗互审（TriMC 侧小贾审 TriLC 侧小贾，给改进循环至通过）。医生职责收窄：只修项目系统级 bug，其他项目开发由 TriMC/TriLC 直接推进。roadmap 训练流程节已替换（v2.0 标注作废）"
     ],
     "plans": [
         {
