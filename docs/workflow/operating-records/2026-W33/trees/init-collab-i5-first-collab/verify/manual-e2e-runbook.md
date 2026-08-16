@@ -160,12 +160,14 @@ Start-Process -WindowStyle Hidden "C:\Users\jedih\AppData\Local\TriLC\daemon\tri
 - 项目关联一并重置：确认框内勾选「同时清除项目关联」（清 project-registry；worktree 磁盘不动）
 - 会话聊天历史 / 模型密钥 / cron 任务**不受影响**
 
-### 方式二：trilc chat 指令
+### 方式二：trilc chat reset（CLI 参数形态）
 
-```text
-@trilc reset-company              # 重置公司（回到自检）
-@trilc reset-company --include-project   # 公司 + 项目关联
+```powershell
+trilc chat reset                        # 重置公司（回到自检起点后进 init 流程）
+trilc chat reset --include-project      # 公司 + 项目关联
 ```
+
+注：聊天内 `@trilc` 前缀是 skill 域（会被当 skill 查找）——重置走 CLI 参数形态（chat 启动时识别 `reset` 参数）。
 
 ### 方式三：HTTP 直调（编排层/脚本用）
 
