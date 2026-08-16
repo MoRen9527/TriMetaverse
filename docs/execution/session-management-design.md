@@ -206,6 +206,8 @@ CEO 指令（2026-08-16 凌晨）：
 - **Daemon 单一真相源**：session 生命周期（创建/存储/当前指针/resume/归档/过期）全部在 daemon（sessions.db + currentSessionId 指针）
 - **入口皆薄**：任一入口只发三类请求——建新（不带 id）/ 复用当前（"use current" → daemon 返回 currentSessionId）/ 按 id resume（id 来自 daemon 会话列表）
 - **任一入口随时 reuse**：currentSessionId 在 daemon，面板与 chat 天然同步；本地 session 状态（TriPilot 的 state.historySessionId + JSONL 历史）退位为缓存/迁移源，权威归 daemon
+- **消息同源渲染分离**（CEO 确认 2026-08-16）：两入口从 daemon 拉同一 session 的同一消息流（sessions.db + SSE），按入口形态各自渲染——IDE 走 webview 卡片、CLI 走 TUI 文本；「同一对话、两种皮」
+- **实时互通推论**：两入口可同时订阅同一 session 的 SSE（/internal/v1/sessions/{id}/stream）——一端发消息另一端实时可见（面板聊、终端看）
 - 与既有契约一脉相承：W30 零本地执行、I1-I5 状态全归 daemon——session 域补齐同一原则
 
 ## 四、设计方案
