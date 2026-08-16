@@ -210,6 +210,22 @@ CEO 指令（2026-08-16 凌晨）：
 - **实时互通推论**：两入口可同时订阅同一 session 的 SSE（/internal/v1/sessions/{id}/stream）——一端发消息另一端实时可见（面板聊、终端看）
 - 与既有契约一脉相承：W30 零本地执行、I1-I5 状态全归 daemon——session 域补齐同一原则
 
+## 三C、TriLC ↔ TriMC session 同步（舰队域，CEO 提问 2026-08-16）
+
+**方向：单向镜像（本地权威 → 服务器镜像）**。不需要双向：session 的执行真源永远是 TriLC（本地执行；TriMC 编排的任务经 session-bridge 下发本地执行，会话天然产生在本地），TriMC 只需「看得到」（舰队审核/周会可见/存档）。
+
+**三层拼接（完整模型）**：
+- 层1（本机两入口）：daemon sessions.db 单一真相源 + currentSessionId（本设计 §四）
+- 层2（本地→服务器）：sync-engine 单向推送（状态机 local→pending→syncing→synced，409 去重）+ TaskMirrorPusher 任务镜像（S7 已接线生产在用）+ ConnectionManager replay 离线补投（已有）
+- 层3（服务器）：TriMC MirrorStore 镜像存档（舰队可见）
+
+**现状缺口（有引擎无油路）**：
+1. TriLC sync-engine（src/sync/）Phase 1 完整实现（含状态机/去重/重试）但 **app.ts 无触发接线**（无自动也无手动入口）
+2. TriMC 侧 **/internal/v1/sessions/sync 接收端点未建**（sync-engine 的目标 URL 无路由；现有只有 /internal/v1/tasks/mirror）
+3. SessionRecord 的 syncStatus/lastSyncedAt/cloudSessionId 字段已备（schema 齐待用）
+
+**实施挂 P3**（P0/P1/P2 之后）：接线触发（用户触发同步 + 可选自动）+ TriMC 接收端点 + 舰队可见渲染。
+
 ## 四、设计方案
 
 > 根据小乔产品口径 + 小狄技术分析，收口方案...
