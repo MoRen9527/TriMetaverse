@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W33 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（双域舰队运营模型需求登记）",
-        "version": "2.46.0",
-        "lastUpdated": "2026-08-16T09:15:13.340Z",
+        "updatedBy": "编排层（两阶段论架构裁决登记）",
+        "version": "2.47.0",
+        "lastUpdated": "2026-08-16T09:32:49.417Z",
         "latestActiveWeek": true
     },
     "priority": "high",
@@ -449,7 +449,8 @@
         "CEO 手动 E2E 实测里程碑 + debug/reset 需求（2026-08-15）：①阶段一公司开业实测成功（SELFCHECK pass 五探测全绿〔第五探测工作区修复后 316 字符答复〕→ 默认 7 岗勾选 → CEO 现场选 9 岗起名 → 开张卡显示——I2 产品断言 A1/A2/A4 实测过，I4 计时未记录）②三轮装后态问题链修复实测闭环（欢迎页单步+配置注册〔版本 bump 机制〕/第五探测工作区/自检按钮反馈）③CEO 需求登记：全局 debug 开关 + 公司 reset 开关（重测开业便利 TriPilot/trilc chat 双入口）+ 项目 reset 联动——临时方案已交付（scripts/dev-reset-init.mjs 一键重置实测过，7f99cbd7），正式方案派小狄拆解（debug-reset-design.md）。④CEO 教学点：daemon 重启走 trilc stop/start 权威路径（编排层教训入册）",
         "CEO 手测 D5 轮观察项（2026-08-15 深夜）：①「发起自检后 trilc 崩溃」实为事件循环阻塞数分钟（进程未死，自愈恢复；healthz 超时被判 running=false/面板红）——根因嫌疑=探测会话模型 loop 的工具执行同步 IO（agent-core 工具 readdirSync/glob 同步扫），登记后续树（探测工具面收窄/异步化）；②plane-hint-probe pseudo-success 间歇复发（模型行为不定：同 prompt 有时 316 字符 PASS 有时 tool-calls-only）——提示词已强化「务必以文字总结结尾」（TriLC 243d3cb+1，热补丁待下次 UAC 窗口）；③本轮编排层复测探测全过+自动推进 onboarding（CEO 可继续开张）。④假通过教训入册：reset ⑤ 前轮替换未命中被 ⑥⑦ grep 验证掩盖——新测试改为断言落盘文件内容",
         "CEO 需求登记（2026-08-16 凌晨）：session id 与会话历史管理缺口——① 两入口（TriPilot/trilc chat）当前 session id 各自为政不同步（应 id 相等才能共享上下文）② reset 不联动会话（初始化链重置但旧会话历史未清/归档）③ claude code 2.1.88 原生 session/resume 体系完整（--resume/会话历史/compact），移植面未接上。派小贾牵头（小乔产品口径+小狄技术分析）：现状盘点→产品口径→方案设计（docs/execution/session-management-design.md）+任务包。设计层不动代码，实施树另建",
-        "CEO 系统级设计需求（2026-08-16）：双域舰队互为镜像运营模型——本地域（TriCade 生产舰队）/服务器域（fleet 舰队）/研发仓域（.claude/agents 舰队）三面同构；六点场景：本地开业→项目初始化（含周平面治理体系）→与服务器舰队会话同步→**本地关机时段服务器授权自动推进**（舰队会话+周平面迁移等授权清单工作）→本地开机拉取+一致性校验+继续→研发仓舰队会话独立维护、治理产物（周平面/各仓代码）同步。派小贾（续 session 上下文）拉小乔小狄整体系统评估设计（dual-domain-fleet-operations-design）。与 session 管理设计（bace12fa 四节）衔接：层2 单向镜像或升级双向合并由评估定"
+        "CEO 系统级设计需求（2026-08-16）：双域舰队互为镜像运营模型——本地域（TriCade 生产舰队）/服务器域（fleet 舰队）/研发仓域（.claude/agents 舰队）三面同构；六点场景：本地开业→项目初始化（含周平面治理体系）→与服务器舰队会话同步→**本地关机时段服务器授权自动推进**（舰队会话+周平面迁移等授权清单工作）→本地开机拉取+一致性校验+继续→研发仓舰队会话独立维护、治理产物（周平面/各仓代码）同步。派小贾（续 session 上下文）拉小乔小狄整体系统评估设计（dual-domain-fleet-operations-design）。与 session 管理设计（bace12fa 四节）衔接：层2 单向镜像或升级双向合并由评估定",
+        "CEO 两阶段论架构裁决（2026-08-16，重要纠偏）：**训练期与正式生产期不可混为一谈**。①训练期（现在）：架构=本地研发仓（claude code）+服务域 TriMC（**套壳 claude code 驱动舰队**，不走 agent-core）+本地域 TriLC（自研，走 agent-core）；TriMC 与 TriLC 是**审核与教练关系**（非镜像）——目的=训练 TriLC 成熟，能力沉淀于共同核心 agent-core；训练期不需要两域 agent 互为镜像。②正式生产期：前提=两侧均跑成熟源码（agent-core 共同核心，TriMC 直接用 agent-core 即获成熟能力）；真正互为镜像=**同一上下文，同一时间只有一个 agent 生效，谁掉线另一个顶上**（active-passive 热备）。③双域舰队互为镜像设计（2d5936b7）归属生产期；M0-M4/M3 双跑定位需随之重审。④指令：小贾整理所有思路需求，组织小狄小乔重新整体评估两阶段与方案功能设计（干什么/怎么干/不乱）"
     ],
     "plans": [
         {
