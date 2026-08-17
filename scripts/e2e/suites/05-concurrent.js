@@ -10,8 +10,8 @@ async function R2_003() {
   try {
     // 并发触发两次 syncRun（模拟面板与 chat 同时操作）
     const [r1, r2] = await Promise.all([
-      daemon.syncRun('e2e'),
-      daemon.syncRun('e2e'),
+      daemon.syncRun(),
+      daemon.syncRun(),
     ]);
 
     // 预期：一个 200（成功）一个 409（Conflict，防重入）或均为 200（幂等）
@@ -59,6 +59,18 @@ async function R3_003() {
 
 // ── Runner ──
 async function run() {
+  // 前置：链推进到 project-link（sync 并发测试需此前置）
+  const cs = await daemon.chainStatus();
+  if (!cs.json || !['project-link','sync','confirm','ready'].includes(cs.json.chainState || '')) {
+    console.log('[前置] 链态 ' + (cs.json||{}).chainState + '——自动推进');
+    await daemon.reset(false); await new Promise(r => setTimeout(r, 1500));
+    await daemon.selfcheckRun();
+    for (let i = 0; i < 100; i++) { await new Promise(r => setTimeout(r, 2000));
+      const p = await daemon.chainStatus();
+      if ((p.json||{}).chainState === 'onboarding') break; }
+    await daemon.assemble('E2E-Conc', [ { roleId: 'ceo-chief-of-staff', name: 'c1' }, { roleId: 'full-stack-developer', name: 'c2' } ]);
+    await daemon.post('/internal/v1/projects/link', { source: 'local', localPath: 'D:/Code/ai/TriMetaverse', targetPath: 'D:/Code/ai/TriMetaverse WorkTree' }).catch(() => {});
+  }
   console.log('=== Concurrent Suite (R2-003, R3-003) ===');
   await R2_003();
   await R3_003();

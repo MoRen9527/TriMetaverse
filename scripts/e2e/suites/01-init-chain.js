@@ -16,10 +16,11 @@ async function case_E1_006() {
   try {
     const res = await daemon.roleCatalog();
     assertEq(res.status, 200, `${id}: role-catalog 应返回 200`);
-    const body = res.json;
-    assert(body && body.defaultSelected, `${id}: 响应应含 defaultSelected`);
-    assertEq(body.defaultSelected.length, 7, `${id}: 默认选中应为 7 岗`);
-    record(id, 'pass', `defaultSelected=${body.defaultSelected.join(',')}`);
+    const roles = (res.json || {}).roles || [];
+    const sel = roles.filter(x => x.defaultSelected).map(x => x.roleId);
+    assert(roles.length > 0, `${id}: roles 非空`);
+    assertEq(sel.length, 7, `${id}: 默认选中应为 7 岗（实际 ${sel.length}）`);
+    record(id, 'pass', `defaultSelected=${sel.join(',')}`);
   } catch (e) {
     record(id, 'fail', e.message);
   }
@@ -29,7 +30,7 @@ async function case_E1_006() {
 async function case_E1_001() {
   const id = 'E1-001';
   try {
-    const res = await daemon.assemble('E2E-CEO', [], 'e2e');
+    const res = await daemon.assemble('E2E-CEO', []);
     assertEq(res.status, 400, `${id}: 0 岗应返回 400 拒绝`);
     record(id, 'pass', `400 拒绝: ${res.raw?.slice(0, 100)}`);
   } catch (e) {

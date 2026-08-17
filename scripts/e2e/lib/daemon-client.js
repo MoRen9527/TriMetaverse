@@ -33,7 +33,7 @@ const daemon = {
   roleCatalog: () => req(TRILC, '/internal/v1/init/role-catalog'),
   assemble: (ceoName, selections, entry = 'trilc-chat') => req(TRILC, '/internal/v1/init/assemble', { method: 'POST', body: JSON.stringify({ ceoName, selections, entry }) }),
   selfcheckRun: () => req(TRILC, '/internal/v1/init/selfcheck/run', { method: 'POST', body: '{}' }),
-  syncRun: (entry = 'e2e') => req(TRILC, '/internal/v1/init/sync/run', { method: 'POST', body: JSON.stringify({ entry }) }),
+  syncRun: (entry = 'trilc-chat') => req(TRILC, '/internal/v1/init/sync/run', { method: 'POST', body: JSON.stringify({ entry }) }),
   syncStatus: () => req(TRILC, '/internal/v1/init/sync/status'),
   confirmCheck: () => req(TRILC, '/internal/v1/init/confirm/check'),
   confirm: () => req(TRILC, '/internal/v1/init/confirm', { method: 'POST', body: '{}' }),
