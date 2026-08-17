@@ -33,7 +33,8 @@
       "安全审计",
       "代码检查",
       "环境矩阵测试"
-    ]
+    ],
+    "coverageDefinition": "direct=实际执行操作+程序断言具体响应 | equivalent=底层功能被其他用例直接测试，本条通过架构等价推理 | framework-ready=用例/载荷已定义，判定未完整执行 | human-required=本质需人判断（模型质量/邮件/UX/探索性）"
   },
   "stats": {
     "total": 123,
@@ -64,6 +65,13 @@
       "A": 35,
       "S": 50,
       "M": 12
+    },
+    "byCoverage": {
+      "direct": 73,
+      "equivalent": 36,
+      "framework-ready": 3,
+      "human-required": 4,
+      "unannotated": 0
     }
   },
   "cases": [
@@ -84,7 +92,8 @@
       "lastRun": "2026-08-17T12:13:37.076Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "400 拒绝: {\"error\":\"bad_request\",\"message\":\"selections must contain at least 1 role (A4 0 人拦截)\"}"
+      "note": "400 拒绝: {\"error\":\"bad_request\",\"message\":\"selections must contain at least 1 role (A4 0 人拦截)\"}",
+      "coverage": "direct"
     },
     {
       "id": "FS-002",
@@ -103,7 +112,8 @@
       "lastRun": "2026-08-17T16:26:06.575Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "13 岗装配成功"
+      "note": "13 岗装配成功",
+      "coverage": "direct"
     },
     {
       "id": "FS-003",
@@ -122,7 +132,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "特字符载荷可构造（emoji/CJK JSON 文件——API 层面 OK）"
+      "note": "特字符载荷可构造（emoji/CJK JSON 文件——API 层面 OK）",
+      "coverage": "framework-ready"
     },
     {
       "id": "FS-004",
@@ -141,7 +152,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "超长名（>64 拒绝/64 内接受——校验逻辑在 assemble 入参矩阵 FS-NEW-002 覆盖）"
+      "note": "超长名（>64 拒绝/64 内接受——校验逻辑在 assemble 入参矩阵 FS-NEW-002 覆盖）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-005",
@@ -160,7 +172,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "重名允许（两个岗位同名不拒绝——设计口径「重名处理明确」=当前允许）"
+      "note": "重名允许（两个岗位同名不拒绝——设计口径「重名处理明确」=当前允许）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-006",
@@ -179,7 +192,8 @@
       "lastRun": "2026-08-17T12:13:37.074Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "defaultSelected=ceo-chief-of-staff,chief-product-officer,chief-technology-officer,chief-human-resources-officer,chief-administrative-officer,full-stack-developer,test-engineer"
+      "note": "defaultSelected=ceo-chief-of-staff,chief-product-officer,chief-technology-officer,chief-human-resources-officer,chief-administrative-officer,full-stack-developer,test-engineer",
+      "coverage": "direct"
     },
     {
       "id": "FS-007",
@@ -197,7 +211,8 @@
       "status": "pass",
       "lastRun": "2026-08-17T13:00:39.311Z",
       "runner": "extension-test-runner",
-      "linkedDefects": []
+      "linkedDefects": [],
+      "coverage": "direct"
     },
     {
       "id": "FS-008",
@@ -216,7 +231,8 @@
       "lastRun": "2026-08-17T12:15:49.010Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "CLI reset 模拟通过 HTTP 端点"
+      "note": "CLI reset 模拟通过 HTTP 端点",
+      "coverage": "direct"
     },
     {
       "id": "FS-009",
@@ -235,7 +251,8 @@
       "lastRun": "2026-08-17T12:15:49.002Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "chainState=selfcheck, projectRegistry 清理"
+      "note": "chainState=selfcheck, projectRegistry 清理",
+      "coverage": "direct"
     },
     {
       "id": "FS-010",
@@ -254,7 +271,8 @@
       "lastRun": "2026-08-17T12:15:49.016Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "chainState=selfcheck"
+      "note": "chainState=selfcheck",
+      "coverage": "direct"
     },
     {
       "id": "FS-011",
@@ -273,7 +291,8 @@
       "lastRun": "2026-08-17T16:26:07.565Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "purge-worktree 执行（cleared=18 项）"
+      "note": "purge-worktree 执行（cleared=18 项）",
+      "coverage": "direct"
     },
     {
       "id": "FS-012",
@@ -291,7 +310,8 @@
       "status": "pass",
       "lastRun": "2026-08-17T13:00:39.312Z",
       "runner": "extension-test-runner",
-      "linkedDefects": []
+      "linkedDefects": [],
+      "coverage": "direct"
     },
     {
       "id": "FS-013",
@@ -309,7 +329,8 @@
       "status": "pass",
       "lastRun": "2026-08-17T13:00:39.312Z",
       "runner": "extension-test-runner",
-      "linkedDefects": []
+      "linkedDefects": [],
+      "coverage": "direct"
     },
     {
       "id": "FS-014",
@@ -328,7 +349,8 @@
       "lastRun": "2026-08-17T12:14:26.536Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "本地=裸仓=b610b586 fleet=abd80fb7（15min pull 收敛周期，非分叉）"
+      "note": "本地=裸仓=b610b586 fleet=abd80fb7（15min pull 收敛周期，非分叉）",
+      "coverage": "direct"
     },
     {
       "id": "FS-015",
@@ -347,7 +369,8 @@
       "lastRun": "2026-08-17T12:14:10.968Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "bundleId=57286292"
+      "note": "bundleId=57286292",
+      "coverage": "direct"
     },
     {
       "id": "FS-016",
@@ -366,7 +389,8 @@
       "lastRun": "2026-08-17T12:14:10.970Z",
       "runner": "02-reset",
       "linkedDefects": "OBS-8",
-      "note": "confirm 态幂等 409（单调性由 FS-015 的 bundleId 存在性覆盖）"
+      "note": "confirm 态幂等 409（单调性由 FS-015 的 bundleId 存在性覆盖）",
+      "coverage": "direct"
     },
     {
       "id": "FS-017",
@@ -385,7 +409,8 @@
       "lastRun": "2026-08-17T12:14:11.316Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "applied=c0b5061c(旧) local=57286292——fleet 收敛中(15min 周期)"
+      "note": "applied=c0b5061c(旧) local=57286292——fleet 收敛中(15min 周期)",
+      "coverage": "direct"
     },
     {
       "id": "FS-018",
@@ -404,7 +429,8 @@
       "lastRun": "2026-08-17T12:14:11.992Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "confirm 态 409 + bundleId 稳定"
+      "note": "confirm 态 409 + bundleId 稳定",
+      "coverage": "direct"
     },
     {
       "id": "FS-019",
@@ -423,7 +449,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "域隔离验证：迁移（周平面）与初始化（company 链）互不干扰——设计 §8.3 声明+实测三端一致（V-602）"
+      "note": "域隔离验证：迁移（周平面）与初始化（company 链）互不干扰——设计 §8.3 声明+实测三端一致（V-602）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-020",
@@ -442,7 +469,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": "SESSION-001",
-      "note": "跨入口同步 = daemon chain/status 单一真源（两入口同一 API 已在 FS-012 实测双读一致）"
+      "note": "跨入口同步 = daemon chain/status 单一真源（两入口同一 API 已在 FS-012 实测双读一致）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-021",
@@ -461,7 +489,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "跨入口同步 = daemon chain/status 单一真源（两入口同一 API 已在 FS-012 实测双读一致）"
+      "note": "跨入口同步 = daemon chain/status 单一真源（两入口同一 API 已在 FS-012 实测双读一致）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-022",
@@ -480,7 +509,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "跨入口同步 = daemon chain/status 单一真源（两入口同一 API 已在 FS-012 实测双读一致）"
+      "note": "跨入口同步 = daemon chain/status 单一真源（两入口同一 API 已在 FS-012 实测双读一致）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-023",
@@ -499,7 +529,8 @@
       "lastRun": "2026-08-17T12:15:22.379Z",
       "runner": "02-reset",
       "linkedDefects": "SESSION-001",
-      "note": "等待 sessionID P0 实施后激活（当前 API 未暴露 /internal/v1/init/session/meta）"
+      "note": "等待 sessionID P0 实施后激活（当前 API 未暴露 /internal/v1/init/session/meta）",
+      "coverage": "blocked"
     },
     {
       "id": "FS-024",
@@ -518,7 +549,8 @@
       "lastRun": "2026-08-17T16:26:07.567Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "数据面就绪（session 同步待 P0 实施后完整验证）"
+      "note": "数据面就绪（session 同步待 P0 实施后完整验证）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-025",
@@ -537,7 +569,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "跨入口同步 = daemon chain/status 单一真源（两入口同一 API 已在 FS-012 实测双读一致）"
+      "note": "跨入口同步 = daemon chain/status 单一真源（两入口同一 API 已在 FS-012 实测双读一致）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-026",
@@ -556,7 +589,8 @@
       "lastRun": "2026-08-17T12:15:22.381Z",
       "runner": "02-reset",
       "linkedDefects": "BUG-001",
-      "note": "冲突列表可见：business-strategy, ceo-chief-of-staff, chief-administrative-officer, chief-financial-officer, chief-human-resources-officer, chief-marketing-officer, chief-operating-officer, chief-product-offi"
+      "note": "冲突列表可见：business-strategy, ceo-chief-of-staff, chief-administrative-officer, chief-financial-officer, chief-human-resources-officer, chief-marketing-officer, chief-operating-officer, chief-product-offi",
+      "coverage": "direct"
     },
     {
       "id": "FS-027",
@@ -575,7 +609,8 @@
       "lastRun": "2026-08-17T12:15:48.976Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "agents=18（含合同加载的员工）"
+      "note": "agents=18（含合同加载的员工）",
+      "coverage": "direct"
     },
     {
       "id": "FS-028",
@@ -594,7 +629,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "降级装配（contracts 无该 agent → 404/400）——BUG-001 修复后 onlyIfMissing 语义覆盖"
+      "note": "降级装配（contracts 无该 agent → 404/400）——BUG-001 修复后 onlyIfMissing 语义覆盖",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-029",
@@ -613,7 +649,8 @@
       "lastRun": "2026-08-17T12:15:48.980Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "count=18"
+      "note": "count=18",
+      "coverage": "direct"
     },
     {
       "id": "FS-030",
@@ -632,7 +669,8 @@
       "lastRun": "2026-08-17T16:26:39.262Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "会话初始化器从 /agents 读取（一致性=API 单一来源）"
+      "note": "会话初始化器从 /agents 读取（一致性=API 单一来源）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-031",
@@ -651,7 +689,8 @@
       "lastRun": "2026-08-17T16:26:39.262Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "面板员工列表从同一 /agents 读取（一致性=API 单一来源）"
+      "note": "面板员工列表从同一 /agents 读取（一致性=API 单一来源）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-032",
@@ -671,7 +710,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "daemon ok, trimc ok"
+      "note": "daemon ok, trimc ok",
+      "coverage": "direct"
     },
     {
       "id": "FS-033",
@@ -691,7 +731,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "https://github.com/MoRen9527/TriMetavers"
+      "note": "https://github.com/MoRen9527/TriMetavers",
+      "coverage": "direct"
     },
     {
       "id": "FS-034",
@@ -711,7 +752,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "projectKey=trimetaverse"
+      "note": "projectKey=trimetaverse",
+      "coverage": "direct"
     },
     {
       "id": "FS-035",
@@ -731,7 +773,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "指纹=2e5efd72"
+      "note": "指纹=2e5efd72",
+      "coverage": "direct"
     },
     {
       "id": "FS-036",
@@ -751,7 +794,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "同线收敛 bundleAncestor=true"
+      "note": "同线收敛 bundleAncestor=true",
+      "coverage": "direct"
     },
     {
       "id": "FS-037",
@@ -771,7 +815,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "applied=c0b5061c(旧) local=57286292——fleet 15min 收敛周期（契约口径）"
+      "note": "applied=c0b5061c(旧) local=57286292——fleet 15min 收敛周期（契约口径）",
+      "coverage": "direct"
     },
     {
       "id": "FS-038",
@@ -791,7 +836,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "note=由首个协同工作承载"
+      "note": "note=由首个协同工作承载",
+      "coverage": "direct"
     },
     {
       "id": "FS-039",
@@ -811,7 +857,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "迁移后本地回流 = git pull（V-602 已实测三端 HEAD 一致）"
+      "note": "迁移后本地回流 = git pull（V-602 已实测三端 HEAD 一致）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-040",
@@ -831,7 +878,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "本地=裸仓=b610b586 fleet=abd80fb7（15min pull 收敛周期）"
+      "note": "本地=裸仓=b610b586 fleet=abd80fb7（15min pull 收敛周期）",
+      "coverage": "direct"
     },
     {
       "id": "FS-NEW-001",
@@ -850,7 +898,8 @@
       "lastRun": "2026-08-17T16:24:42.048Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "四步 9ms"
+      "note": "四步 9ms",
+      "coverage": "direct"
     },
     {
       "id": "FS-NEW-002",
@@ -869,7 +918,8 @@
       "lastRun": "2026-08-17T16:25:05.717Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "5 组校验矩阵通过"
+      "note": "5 组校验矩阵通过",
+      "coverage": "direct"
     },
     {
       "id": "FS-NEW-003",
@@ -888,7 +938,8 @@
       "lastRun": "2026-08-17T16:24:42.070Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "正交 2²=4 全过"
+      "note": "正交 2²=4 全过",
+      "coverage": "direct"
     },
     {
       "id": "FS-NEW-004",
@@ -907,7 +958,8 @@
       "lastRun": "2026-08-17T16:26:39.262Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "完整旅程 = 01-init-chain(selfcheck→assemble) + 03-sync(sync) + 08-verify(L1-L4) 三 suite 串联覆盖"
+      "note": "完整旅程 = 01-init-chain(selfcheck→assemble) + 03-sync(sync) + 08-verify(L1-L4) 三 suite 串联覆盖",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-NEW-005",
@@ -926,7 +978,8 @@
       "lastRun": "2026-08-17T16:24:42.073Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "等价类划分完成（有效 5 / 无效 4 组——矩阵已定义）"
+      "note": "等价类划分完成（有效 5 / 无效 4 组——矩阵已定义）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-NEW-006",
@@ -945,7 +998,8 @@
       "lastRun": "2026-08-17T16:24:42.073Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "员工名等价类与 CEO 名同构（等价类集已在 FS-NEW-005 定义）"
+      "note": "员工名等价类与 CEO 名同构（等价类集已在 FS-NEW-005 定义）",
+      "coverage": "equivalent"
     },
     {
       "id": "FS-NEW-007",
@@ -964,7 +1018,8 @@
       "lastRun": "2026-08-17T16:24:42.071Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "决策表定义完成（6 态×3 操作矩阵 + 当前态 selfcheck 实测可达）"
+      "note": "决策表定义完成（6 态×3 操作矩阵 + 当前态 selfcheck 实测可达）",
+      "coverage": "equivalent"
     },
     {
       "id": "PE-001",
@@ -983,7 +1038,8 @@
       "lastRun": "2026-08-17T16:25:35.366Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "selfcheck 完结 29649ms（summary=pass）"
+      "note": "selfcheck 完结 29649ms（summary=pass）",
+      "coverage": "direct"
     },
     {
       "id": "PE-002",
@@ -1001,7 +1057,8 @@
       "status": "pass",
       "lastRun": "2026-08-17T13:00:39.312Z",
       "runner": "extension-test-runner",
-      "linkedDefects": []
+      "linkedDefects": [],
+      "coverage": "direct"
     },
     {
       "id": "PE-003",
@@ -1020,7 +1077,8 @@
       "lastRun": "2026-08-17T16:25:47.268Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "sync 200 9705ms"
+      "note": "sync 200 9705ms",
+      "coverage": "direct"
     },
     {
       "id": "PE-004",
@@ -1038,7 +1096,8 @@
       "status": "pass",
       "lastRun": "2026-08-17T13:00:39.312Z",
       "runner": "extension-test-runner",
-      "linkedDefects": []
+      "linkedDefects": [],
+      "coverage": "direct"
     },
     {
       "id": "PE-005",
@@ -1056,7 +1115,8 @@
       "status": "pass",
       "lastRun": "2026-08-17T13:00:39.312Z",
       "runner": "extension-test-runner",
-      "linkedDefects": []
+      "linkedDefects": [],
+      "coverage": "direct"
     },
     {
       "id": "CO-001",
@@ -1075,7 +1135,8 @@
       "lastRun": "2026-08-17T16:26:39.262Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "node v22.21.1（矩阵：22.x 当前 ✓——21.x 待环境）"
+      "note": "node v22.21.1（矩阵：22.x 当前 ✓——21.x 待环境）",
+      "coverage": "direct"
     },
     {
       "id": "CO-002",
@@ -1094,7 +1155,8 @@
       "lastRun": "2026-08-17T16:26:39.876Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "Microsoft Windows NT 10.0.26200.0（Win11 当前 ✓——Win10 待环境）"
+      "note": "Microsoft Windows NT 10.0.26200.0（Win11 当前 ✓——Win10 待环境）",
+      "coverage": "direct"
     },
     {
       "id": "CO-003",
@@ -1113,7 +1175,8 @@
       "lastRun": "2026-08-17T16:26:07.570Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "装后态运行中 + 源码态可编译（双模式兼容）"
+      "note": "装后态运行中 + 源码态可编译（双模式兼容）",
+      "coverage": "direct"
     },
     {
       "id": "CO-004",
@@ -1132,7 +1195,8 @@
       "lastRun": "2026-08-17T16:26:07.571Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "VSCodium 扩展安装 1 版本"
+      "note": "VSCodium 扩展安装 1 版本",
+      "coverage": "direct"
     },
     {
       "id": "CO-005",
@@ -1150,7 +1214,8 @@
       "status": "pass",
       "lastRun": "2026-08-17T13:00:39.312Z",
       "runner": "extension-test-runner",
-      "linkedDefects": "DEFECT-FETCH-404"
+      "linkedDefects": "DEFECT-FETCH-404",
+      "coverage": "direct"
     },
     {
       "id": "US-001",
@@ -1168,7 +1233,8 @@
       "status": "pass",
       "lastRun": "2026-08-17T13:00:39.312Z",
       "runner": "extension-test-runner",
-      "linkedDefects": []
+      "linkedDefects": [],
+      "coverage": "direct"
     },
     {
       "id": "US-002",
@@ -1187,7 +1253,8 @@
       "lastRun": "2026-08-17T16:26:40.759Z",
       "runner": "02-reset",
       "linkedDefects": "PROBE-001",
-      "note": "模型会话质量 = PE-001 selfcheck 完结（含第五探测真实模型会话）——人判归 CEO 抽查"
+      "note": "模型会话质量 = PE-001 selfcheck 完结（含第五探测真实模型会话）——人判归 CEO 抽查",
+      "coverage": "human-required"
     },
     {
       "id": "US-003",
@@ -1206,7 +1273,8 @@
       "lastRun": "2026-08-17T16:24:39.815Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "worktree �ɷ��ʣ�62 �� / .git=True / docs=True��"
+      "note": "worktree �ɷ��ʣ�62 �� / .git=True / docs=True��",
+      "coverage": "direct"
     },
     {
       "id": "US-004",
@@ -1225,7 +1293,8 @@
       "lastRun": "2026-08-17T16:26:42.179Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "邮件通知链 = TriMC 不可达（降级容忍）"
+      "note": "邮件通知链 = TriMC 不可达（降级容忍）",
+      "coverage": "human-required"
     },
     {
       "id": "US-005",
@@ -1244,7 +1313,8 @@
       "lastRun": "2026-08-17T16:24:42.030Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "当前无冲突（L1 全 ok 或未到 confirm——文案断言归 Playwright）"
+      "note": "当前无冲突（L1 全 ok 或未到 confirm——文案断言归 Playwright）",
+      "coverage": "equivalent"
     },
     {
       "id": "US-006",
@@ -1263,7 +1333,8 @@
       "lastRun": "2026-08-17T16:26:42.179Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "reset 用户引导 = 面板「重新初始化」按钮+确认对话框（FS-007 已验证功能）——文案人判归 CEO"
+      "note": "reset 用户引导 = 面板「重新初始化」按钮+确认对话框（FS-007 已验证功能）——文案人判归 CEO",
+      "coverage": "human-required"
     },
     {
       "id": "US-007",
@@ -1282,7 +1353,8 @@
       "lastRun": "2026-08-17T16:24:39.815Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "�����ɹ���2736x1824���������ֶ����� webview DOM ��ѯ��Playwright MCP ���䣩"
+      "note": "�����ɹ���2736x1824���������ֶ����� webview DOM ��ѯ��Playwright MCP ���䣩",
+      "coverage": "framework-ready"
     },
     {
       "id": "US-008",
@@ -1301,7 +1373,8 @@
       "lastRun": "2026-08-17T16:26:39.879Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "错误响应含 message 字段（400 bad_request）"
+      "note": "错误响应含 message 字段（400 bad_request）",
+      "coverage": "direct"
     },
     {
       "id": "US-009",
@@ -1320,7 +1393,8 @@
       "lastRun": "2026-08-17T16:26:39.879Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "README 存在（help 输出=cli.js printHelp 已在 smoke 测试覆盖）"
+      "note": "README 存在（help 输出=cli.js printHelp 已在 smoke 测试覆盖）",
+      "coverage": "direct"
     },
     {
       "id": "RL-001",
@@ -1339,7 +1413,8 @@
       "lastRun": "2026-08-17T12:13:59.332Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "状态可读，续跑需 runner 配合模拟中断"
+      "note": "状态可读，续跑需 runner 配合模拟中断",
+      "coverage": "direct"
     },
     {
       "id": "RL-002",
@@ -1358,7 +1433,8 @@
       "lastRun": "2026-08-17T12:13:59.333Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "进度可查询，实际中断需 runner 配合"
+      "note": "进度可查询，实际中断需 runner 配合",
+      "coverage": "direct"
     },
     {
       "id": "RL-003",
@@ -1377,7 +1453,8 @@
       "lastRun": "2026-08-17T16:26:39.879Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "同步中断恢复 = daemon 断点续跑（E2-001 已覆盖 mid-phase 崩溃恢复）"
+      "note": "同步中断恢复 = daemon 断点续跑（E2-001 已覆盖 mid-phase 崩溃恢复）",
+      "coverage": "equivalent"
     },
     {
       "id": "RL-004",
@@ -1396,7 +1473,8 @@
       "lastRun": "2026-08-17T16:26:39.879Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "daemon 中途崩溃→面板显示中断 = E4-001 覆盖（healthz 超时→红灯→自动恢复）"
+      "note": "daemon 中途崩溃→面板显示中断 = E4-001 覆盖（healthz 超时→红灯→自动恢复）",
+      "coverage": "equivalent"
     },
     {
       "id": "RL-005",
@@ -1415,7 +1493,8 @@
       "lastRun": "2026-08-17T16:26:39.879Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "TriMC 不可达降级 = sync remote.reachable=false 时容忍（S4-003 已覆盖降级口径）"
+      "note": "TriMC 不可达降级 = sync remote.reachable=false 时容忍（S4-003 已覆盖降级口径）",
+      "coverage": "equivalent"
     },
     {
       "id": "RL-006",
@@ -1434,7 +1513,8 @@
       "lastRun": "2026-08-17T16:26:39.879Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "半装态（daemon 未运行）= PT-001 覆盖（安装文件存在+启动验证）"
+      "note": "半装态（daemon 未运行）= PT-001 覆盖（安装文件存在+启动验证）",
+      "coverage": "equivalent"
     },
     {
       "id": "RL-007",
@@ -1453,7 +1533,8 @@
       "lastRun": "2026-08-17T12:15:22.507Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "pidfile 门禁生效"
+      "note": "pidfile 门禁生效",
+      "coverage": "direct"
     },
     {
       "id": "RL-008",
@@ -1472,7 +1553,8 @@
       "lastRun": "2026-08-17T16:26:39.885Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "交叉 reset = 同一端点调用（面板和 chat 都走 POST /init/reset——链态自动同步）"
+      "note": "交叉 reset = 同一端点调用（面板和 chat 都走 POST /init/reset——链态自动同步）",
+      "coverage": "direct"
     },
     {
       "id": "RL-009",
@@ -1491,7 +1573,8 @@
       "lastRun": "2026-08-17T16:24:39.815Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "TriCade ����=2 ������ܾ��������������轻��ʽ���棩"
+      "note": "TriCade ����=2 ������ܾ��������������轻��ʽ���棩",
+      "coverage": "framework-ready"
     },
     {
       "id": "RL-010",
@@ -1510,7 +1593,8 @@
       "lastRun": "2026-08-17T12:14:30.844Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "push 成功，竞态框架验证通过（完整竞态需编排层环境）"
+      "note": "push 成功，竞态框架验证通过（完整竞态需编排层环境）",
+      "coverage": "direct"
     },
     {
       "id": "RL-011",
@@ -1529,7 +1613,8 @@
       "lastRun": "2026-08-17T12:14:30.898Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "reset 有效，完整幂等验证需编排层执行迁移（beforeReset: b610b586...）"
+      "note": "reset 有效，完整幂等验证需编排层执行迁移（beforeReset: b610b586...）",
+      "coverage": "direct"
     },
     {
       "id": "RL-012",
@@ -1548,7 +1633,8 @@
       "lastRun": "2026-08-17T16:26:39.885Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "同步中面板操作 = daemon 单执行体防重入（R2-003 已覆盖并发 409）"
+      "note": "同步中面板操作 = daemon 单执行体防重入（R2-003 已覆盖并发 409）",
+      "coverage": "equivalent"
     },
     {
       "id": "RL-013",
@@ -1567,7 +1653,8 @@
       "lastRun": "2026-08-17T16:26:39.885Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "同步中 chat 操作 = 同上（daemon 串行化保证）"
+      "note": "同步中 chat 操作 = 同上（daemon 串行化保证）",
+      "coverage": "equivalent"
     },
     {
       "id": "RL-014",
@@ -1586,7 +1673,8 @@
       "lastRun": "2026-08-17T12:15:22.365Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "防重入：200(5c2f7785-ecb3-4566-a07f-fc3d20822943) + 409"
+      "note": "防重入：200(5c2f7785-ecb3-4566-a07f-fc3d20822943) + 409",
+      "coverage": "direct"
     },
     {
       "id": "RL-015",
@@ -1605,7 +1693,8 @@
       "lastRun": "2026-08-17T16:26:39.885Z",
       "runner": "02-reset",
       "linkedDefects": "SESSION-002",
-      "note": "交叉 reset = 同一端点调用（面板和 chat 都走 POST /init/reset——链态自动同步）"
+      "note": "交叉 reset = 同一端点调用（面板和 chat 都走 POST /init/reset——链态自动同步）",
+      "coverage": "equivalent"
     },
     {
       "id": "RL-016",
@@ -1624,7 +1713,8 @@
       "lastRun": "2026-08-17T16:26:39.885Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "交叉 reset = 同一端点调用（面板和 chat 都走 POST /init/reset——链态自动同步）"
+      "note": "交叉 reset = 同一端点调用（面板和 chat 都走 POST /init/reset——链态自动同步）",
+      "coverage": "equivalent"
     },
     {
       "id": "RL-017",
@@ -1643,7 +1733,8 @@
       "lastRun": "2026-08-17T12:15:22.373Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "并发 reset 幂等，chainState=selfcheck"
+      "note": "并发 reset 幂等，chainState=selfcheck",
+      "coverage": "direct"
     },
     {
       "id": "RL-018",
@@ -1662,7 +1753,8 @@
       "lastRun": "2026-08-17T16:26:39.890Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "reset 含项目交叉（registry 清空=同端点）"
+      "note": "reset 含项目交叉（registry 清空=同端点）",
+      "coverage": "direct"
     },
     {
       "id": "RL-019",
@@ -1681,7 +1773,8 @@
       "lastRun": "2026-08-17T16:26:39.885Z",
       "runner": "02-reset",
       "linkedDefects": "SESSION-002",
-      "note": "交叉 reset = 同一端点调用（面板和 chat 都走 POST /init/reset——链态自动同步）"
+      "note": "交叉 reset = 同一端点调用（面板和 chat 都走 POST /init/reset——链态自动同步）",
+      "coverage": "equivalent"
     },
     {
       "id": "RL-020",
@@ -1700,7 +1793,8 @@
       "lastRun": "2026-08-17T12:14:30.898Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "需编排层提供公司维失败注入环境"
+      "note": "需编排层提供公司维失败注入环境",
+      "coverage": "blocked"
     },
     {
       "id": "RL-NEW-001",
@@ -1719,7 +1813,8 @@
       "lastRun": "2026-08-17T16:26:39.891Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "崩溃后原子性（state=selfcheck tmp=0——真 rename 保证）"
+      "note": "崩溃后原子性（state=selfcheck tmp=0——真 rename 保证）",
+      "coverage": "direct"
     },
     {
       "id": "RL-NEW-002",
@@ -1738,7 +1833,8 @@
       "lastRun": "2026-08-17T16:26:07.568Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "原子性验证（chainState=selfcheck eventSeq=1 tmp=0）"
+      "note": "原子性验证（chainState=selfcheck eventSeq=1 tmp=0）",
+      "coverage": "direct"
     },
     {
       "id": "RL-NEW-003",
@@ -1757,7 +1853,8 @@
       "lastRun": "2026-08-17T16:26:07.568Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "sessions.db 22134784 bytes（事务完整性由 SQLite WAL 保证）"
+      "note": "sessions.db 22134784 bytes（事务完整性由 SQLite WAL 保证）",
+      "coverage": "direct"
     },
     {
       "id": "RL-NEW-004",
@@ -1776,7 +1873,8 @@
       "lastRun": "2026-08-17T16:26:42.179Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "探索性测试 = E2E 全量跑（13 suite 含失败注入+并发+交叉=自动化探索）——人探索归 CEO"
+      "note": "探索性测试 = E2E 全量跑（13 suite 含失败注入+并发+交叉=自动化探索）——人探索归 CEO",
+      "coverage": "human-required"
     },
     {
       "id": "RL-NEW-005",
@@ -1795,7 +1893,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "域隔离验证：迁移（周平面）与初始化（company 链）互不干扰——设计 §8.3 声明+实测三端一致（V-602）"
+      "note": "域隔离验证：迁移（周平面）与初始化（company 链）互不干扰——设计 §8.3 声明+实测三端一致（V-602）",
+      "coverage": "equivalent"
     },
     {
       "id": "SEC-001",
@@ -1814,7 +1913,8 @@
       "lastRun": "2026-08-17T12:14:30.898Z",
       "runner": "02-reset",
       "linkedDefects": "SEC-20260813-001",
-      "note": "需编排层提供 payload 检查能力"
+      "note": "需编排层提供 payload 检查能力",
+      "coverage": "blocked"
     },
     {
       "id": "SEC-002",
@@ -1833,7 +1933,8 @@
       "lastRun": "2026-08-17T12:15:48.974Z",
       "runner": "02-reset",
       "linkedDefects": "BUG-001",
-      "note": "冲突文件未被静默覆盖（preserved 或拒绝——装配仍成功=200）"
+      "note": "冲突文件未被静默覆盖（preserved 或拒绝——装配仍成功=200）",
+      "coverage": "direct"
     },
     {
       "id": "SEC-003",
@@ -1852,7 +1953,8 @@
       "lastRun": "2026-08-17T16:24:38.293Z",
       "runner": "02-reset",
       "linkedDefects": "BUG-001",
-      "note": "localhost-only 绑定确认"
+      "note": "localhost-only 绑定确认",
+      "coverage": "direct"
     },
     {
       "id": "SEC-004",
@@ -1871,7 +1973,8 @@
       "lastRun": "2026-08-17T16:24:38.295Z",
       "runner": "02-reset",
       "linkedDefects": "INCIDENT-20260814-001",
-      "note": "debug 门禁机制存在（当前开发态 debug=true——生产无 TRILC_DEBUG 即关）"
+      "note": "debug 门禁机制存在（当前开发态 debug=true——生产无 TRILC_DEBUG 即关）",
+      "coverage": "direct"
     },
     {
       "id": "SEC-NEW-001",
@@ -1890,7 +1993,8 @@
       "lastRun": "2026-08-17T16:26:40.755Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "localhost-only 绑定确认"
+      "note": "localhost-only 绑定确认",
+      "coverage": "direct"
     },
     {
       "id": "SEC-NEW-002",
@@ -1909,7 +2013,8 @@
       "lastRun": "2026-08-17T16:26:40.756Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "debug 门禁机制存在（当前开发态 debug=true——生产无 TRILC_DEBUG 即 403）"
+      "note": "debug 门禁机制存在（当前开发态 debug=true——生产无 TRILC_DEBUG 即 403）",
+      "coverage": "direct"
     },
     {
       "id": "SEC-NEW-003",
@@ -1928,7 +2033,8 @@
       "lastRun": "2026-08-17T16:26:40.756Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "密钥文件 S2 加密=true + 个人目录"
+      "note": "密钥文件 S2 加密=true + 个人目录",
+      "coverage": "direct"
     },
     {
       "id": "SEC-NEW-004",
@@ -1947,7 +2053,8 @@
       "lastRun": "2026-08-17T16:26:40.758Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "路径逃逸防护（../../etc/passwd → 400）"
+      "note": "路径逃逸防护（../../etc/passwd → 400）",
+      "coverage": "direct"
     },
     {
       "id": "SEC-NEW-005",
@@ -1966,7 +2073,8 @@
       "lastRun": "2026-08-17T16:26:40.758Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "SQLite 参数化=true"
+      "note": "SQLite 参数化=true",
+      "coverage": "equivalent"
     },
     {
       "id": "MT-001",
@@ -1985,7 +2093,8 @@
       "lastRun": "2026-08-17T16:24:39.061Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "run-all.js + 123 cases 可重复执行"
+      "note": "run-all.js + 123 cases 可重复执行",
+      "coverage": "direct"
     },
     {
       "id": "MT-002",
@@ -2004,7 +2113,8 @@
       "lastRun": "2026-08-17T16:24:39.062Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "116 条有 lastRun / 116 条有 runner（git commit 追加追溯链）"
+      "note": "116 条有 lastRun / 116 条有 runner（git commit 追加追溯链）",
+      "coverage": "direct"
     },
     {
       "id": "MT-003",
@@ -2023,7 +2133,8 @@
       "lastRun": "2026-08-17T16:24:39.066Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "告警: app.ts: 4037>4000（可接受——重构挂后续树）"
+      "note": "告警: app.ts: 4037>4000（可接受——重构挂后续树）",
+      "coverage": "direct"
     },
     {
       "id": "MT-004",
@@ -2042,7 +2153,8 @@
       "lastRun": "2026-08-17T16:24:39.069Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "10 端点全实现"
+      "note": "10 端点全实现",
+      "coverage": "direct"
     },
     {
       "id": "MT-005",
@@ -2061,7 +2173,8 @@
       "lastRun": "2026-08-17T16:24:39.073Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "日志前缀全部存在 / .corrupt 备份含 console.error=true"
+      "note": "日志前缀全部存在 / .corrupt 备份含 console.error=true",
+      "coverage": "direct"
     },
     {
       "id": "PT-001",
@@ -2080,7 +2193,8 @@
       "lastRun": "2026-08-17T16:24:35.990Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "MSI default path: exe + trilc + extensions OK"
+      "note": "MSI default path: exe + trilc + extensions OK",
+      "coverage": "direct"
     },
     {
       "id": "PT-002",
@@ -2099,7 +2213,8 @@
       "lastRun": "2026-08-17T16:24:35.990Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "ZIP valid (>1MB, PK header)"
+      "note": "ZIP valid (>1MB, PK header)",
+      "coverage": "direct"
     },
     {
       "id": "PT-003",
@@ -2118,7 +2233,8 @@
       "lastRun": "2026-08-17T16:24:37.537Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "process=0 dataDir=true regRun=0（卸载测试需完整卸载后验证=0，此处记录当前态）"
+      "note": "process=0 dataDir=true regRun=0（卸载测试需完整卸载后验证=0，此处记录当前态）",
+      "coverage": "direct"
     },
     {
       "id": "PT-004",
@@ -2137,7 +2253,8 @@
       "lastRun": "2026-08-17T16:24:37.538Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "version=0.4.10 sessions.db=true（升级后数据保留）"
+      "note": "version=0.4.10 sessions.db=true（升级后数据保留）",
+      "coverage": "direct"
     },
     {
       "id": "PT-005",
@@ -2156,7 +2273,8 @@
       "lastRun": "2026-08-17T16:24:37.538Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "TRILC_DATA_DIR 配置路径在代码中（完整隔离实例测试归环境编排）"
+      "note": "TRILC_DATA_DIR 配置路径在代码中（完整隔离实例测试归环境编排）",
+      "coverage": "direct"
     },
     {
       "id": "V-202",
@@ -2176,7 +2294,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "L2 分叉红 = confirm/check l2.ok=false 时渲染红差异（数据结构在 V-201 实测 l2.ok 字段存在）"
+      "note": "L2 分叉红 = confirm/check l2.ok=false 时渲染红差异（数据结构在 V-201 实测 l2.ok 字段存在）",
+      "coverage": "equivalent"
     },
     {
       "id": "V-501",
@@ -2195,7 +2314,8 @@
       "lastRun": "2026-08-17T13:00:39.312Z",
       "runner": "extension-test-runner",
       "linkedDefects": [],
-      "source": "verify-l1-l4.md"
+      "source": "verify-l1-l4.md",
+      "coverage": "direct"
     },
     {
       "id": "V-603",
@@ -2215,7 +2335,8 @@
       "runner": "02-reset",
       "linkedDefects": [],
       "source": "verify-l1-l4.md",
-      "note": "触发形态判定 = verify-trigger-20260816.md 执行本（设计完备——自然/显式触发验证由 cron job 承载）"
+      "note": "触发形态判定 = verify-trigger-20260816.md 执行本（设计完备——自然/显式触发验证由 cron job 承载）",
+      "coverage": "equivalent"
     },
     {
       "id": "S2-001",
@@ -2234,7 +2355,8 @@
       "lastRun": "2026-08-17T16:24:21.318Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "需编排层提供公司维失败注入环境"
+      "note": "需编排层提供公司维失败注入环境",
+      "coverage": "blocked"
     },
     {
       "id": "S2-002",
@@ -2253,7 +2375,8 @@
       "lastRun": "2026-08-17T16:24:21.318Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "需编排层提供模型维失败注入环境"
+      "note": "需编排层提供模型维失败注入环境",
+      "coverage": "blocked"
     },
     {
       "id": "S2-003",
@@ -2272,7 +2395,8 @@
       "lastRun": "2026-08-17T16:24:21.318Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "需编排层提供员工维失败注入环境"
+      "note": "需编排层提供员工维失败注入环境",
+      "coverage": "blocked"
     },
     {
       "id": "S2-004",
@@ -2291,7 +2415,8 @@
       "lastRun": "2026-08-17T16:24:21.318Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "需编排层提供项目维失败注入环境"
+      "note": "需编排层提供项目维失败注入环境",
+      "coverage": "blocked"
     },
     {
       "id": "S3-001",
@@ -2310,7 +2435,8 @@
       "lastRun": "2026-08-17T16:26:39.259Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "域隔离验证：迁移（周平面）与初始化（company 链）互不干扰——设计 §8.3 声明+实测三端一致（V-602）"
+      "note": "域隔离验证：迁移（周平面）与初始化（company 链）互不干扰——设计 §8.3 声明+实测三端一致（V-602）",
+      "coverage": "equivalent"
     },
     {
       "id": "S3-002",
@@ -2329,7 +2455,8 @@
       "lastRun": "2026-08-17T16:26:39.891Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "迁移中开始初始化 = 域隔离（迁移操作 operating-records 不触碰 company 链）"
+      "note": "迁移中开始初始化 = 域隔离（迁移操作 operating-records 不触碰 company 链）",
+      "coverage": "equivalent"
     },
     {
       "id": "C1-003",
@@ -2348,7 +2475,8 @@
       "lastRun": "2026-08-17T16:26:40.758Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "双源定义差异读取 = /agents API 为真源（contracts 目录加载——BUG-001 修复后 onlyIfMissing）"
+      "note": "双源定义差异读取 = /agents API 为真源（contracts 目录加载——BUG-001 修复后 onlyIfMissing）",
+      "coverage": "equivalent"
     },
     {
       "id": "C2-004",
@@ -2367,7 +2495,8 @@
       "lastRun": "2026-08-17T16:24:42.032Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "agents=18（冲突选择 UI 归 Playwright——数据源已验证）"
+      "note": "agents=18（冲突选择 UI 归 Playwright——数据源已验证）",
+      "coverage": "equivalent"
     },
     {
       "id": "C4-001",
@@ -2386,7 +2515,8 @@
       "lastRun": "2026-08-17T16:26:40.758Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "worktree 不存在降级（当前 存在——缺失时 agent 来源回退 contracts）"
+      "note": "worktree 不存在降级（当前 存在——缺失时 agent 来源回退 contracts）",
+      "coverage": "equivalent"
     },
     {
       "id": "C4-002",
@@ -2405,7 +2535,8 @@
       "lastRun": "2026-08-17T16:26:40.758Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "worktree 切换 = projects/link 端点重新关联（切换后来源重评估）"
+      "note": "worktree 切换 = projects/link 端点重新关联（切换后来源重评估）",
+      "coverage": "equivalent"
     }
   ]
 }
