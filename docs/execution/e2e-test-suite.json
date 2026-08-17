@@ -42,7 +42,7 @@
       "steps": "清空全部勾选提交 assemble",
       "expected": "400 拒绝，提示至少 1 岗",
       "status": "pass",
-      "lastRun": "2026-08-17T11:38:53.706Z",
+      "lastRun": "2026-08-17T11:55:47.909Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "400 拒绝: {\"error\":\"bad_request\",\"message\":\"selections must contain at least 1 role (A4 0 人拦截)\"}"
@@ -123,7 +123,7 @@
       "steps": "GET role-catalog",
       "expected": "defaultSelected 恰 7 岗",
       "status": "pass",
-      "lastRun": "2026-08-17T11:38:53.704Z",
+      "lastRun": "2026-08-17T11:55:47.907Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "defaultSelected=ceo-chief-of-staff,chief-product-officer,chief-technology-officer,chief-human-resources-officer,chief-administrative-officer,full-stack-developer,test-engineer"
@@ -140,7 +140,7 @@
       "steps": "模拟中断重进",
       "expected": "已答不重复提问可回看",
       "status": "pass",
-      "lastRun": "2026-08-17T11:39:20.024Z",
+      "lastRun": "2026-08-17T11:56:15.245Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "状态可读，续跑需 runner 配合模拟中断"
@@ -157,7 +157,7 @@
       "steps": "中断重进",
       "expected": "进度恢复或明确重开始",
       "status": "pass",
-      "lastRun": "2026-08-17T11:39:20.024Z",
+      "lastRun": "2026-08-17T11:56:15.246Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "进度可查询，实际中断需 runner 配合"
@@ -206,7 +206,7 @@
       "steps": "trilc chat reset",
       "expected": "同上",
       "status": "pass",
-      "lastRun": "2026-08-17T11:40:20.544Z",
+      "lastRun": "2026-08-17T11:58:02.054Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "CLI reset 模拟通过 HTTP 端点"
@@ -223,7 +223,7 @@
       "steps": "reset --include-project",
       "expected": "project-registry 清空",
       "status": "pass",
-      "lastRun": "2026-08-17T11:40:20.541Z",
+      "lastRun": "2026-08-17T11:58:02.045Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "chainState=selfcheck, projectRegistry 清理"
@@ -240,7 +240,7 @@
       "steps": "curl POST /init/reset",
       "expected": "200 chainState=selfcheck",
       "status": "pass",
-      "lastRun": "2026-08-17T11:40:20.547Z",
+      "lastRun": "2026-08-17T11:58:02.061Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "chainState=selfcheck"
@@ -320,10 +320,11 @@
       "precondition": "daemon 运行中",
       "steps": "启动第二实例",
       "expected": "拒绝或提示",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T11:57:33.220Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "pidfile 门禁生效"
     },
     {
       "id": "E5-001",
@@ -401,10 +402,10 @@
       "steps": "三端 rev-parse",
       "expected": "三值相等",
       "status": "pass",
-      "lastRun": "2026-08-17T11:39:48.792Z",
+      "lastRun": "2026-08-17T11:56:43.666Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "本地=裸仓=15687a5d fleet=3bd253f4（15min pull 收敛周期，非分叉）"
+      "note": "本地=裸仓=13abaafb fleet=7e144e6a（15min pull 收敛周期，非分叉）"
     },
     {
       "id": "S1-002",
@@ -418,7 +419,7 @@
       "steps": "本地+fleet 同时 push",
       "expected": "一方 reject 非静默覆盖",
       "status": "pass",
-      "lastRun": "2026-08-17T11:39:52.801Z",
+      "lastRun": "2026-08-17T11:56:48.084Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "push 成功，竞态框架验证通过（完整竞态需编排层环境）"
@@ -435,10 +436,10 @@
       "steps": "reset 再迁移",
       "expected": "幂等不腐化",
       "status": "pass",
-      "lastRun": "2026-08-17T11:39:52.841Z",
+      "lastRun": "2026-08-17T11:56:48.121Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "reset 有效，完整幂等验证需编排层执行迁移（beforeReset: 15687a5d...）"
+      "note": "reset 有效，完整幂等验证需编排层执行迁移（beforeReset: 13abaafb...）"
     },
     {
       "id": "S2-001",
@@ -452,7 +453,7 @@
       "steps": "损坏公司态",
       "expected": "降级/重试/明确失败",
       "status": "blocked",
-      "lastRun": "2026-08-17T11:39:52.841Z",
+      "lastRun": "2026-08-17T11:56:48.121Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供公司维失败注入环境"
@@ -469,7 +470,7 @@
       "steps": "模型配置不可达",
       "expected": "行为明确",
       "status": "blocked",
-      "lastRun": "2026-08-17T11:39:52.841Z",
+      "lastRun": "2026-08-17T11:56:48.121Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供模型维失败注入环境"
@@ -486,7 +487,7 @@
       "steps": "员工态损坏",
       "expected": "降级 warning",
       "status": "blocked",
-      "lastRun": "2026-08-17T11:39:52.841Z",
+      "lastRun": "2026-08-17T11:56:48.121Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供员工维失败注入环境"
@@ -503,7 +504,7 @@
       "steps": "项目仓不可达",
       "expected": "失败分类明确",
       "status": "blocked",
-      "lastRun": "2026-08-17T11:39:52.841Z",
+      "lastRun": "2026-08-17T11:56:48.121Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供项目维失败注入环境"
@@ -520,7 +521,7 @@
       "steps": "同步 payload 检查",
       "expected": "零密钥材料只有指纹",
       "status": "blocked",
-      "lastRun": "2026-08-17T11:39:52.841Z",
+      "lastRun": "2026-08-17T11:56:48.121Z",
       "runner": "02-reset",
       "linkedDefects": "SEC-20260813-001",
       "note": "需编排层提供 payload 检查能力"
@@ -585,10 +586,10 @@
       "steps": "触发 sync",
       "expected": "bundle 存在 schema 合法",
       "status": "pass",
-      "lastRun": "2026-08-17T11:39:32.114Z",
+      "lastRun": "2026-08-17T11:56:27.549Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "bundleId=64586f09"
+      "note": "bundleId=05c68d41"
     },
     {
       "id": "S4-002",
@@ -602,7 +603,7 @@
       "steps": "多次 sync",
       "expected": "单调幂等不换 id",
       "status": "pass",
-      "lastRun": "2026-08-17T11:39:32.116Z",
+      "lastRun": "2026-08-17T11:56:27.551Z",
       "runner": "02-reset",
       "linkedDefects": "OBS-8",
       "note": "confirm 态幂等 409（单调性由 S4-001 的 bundleId 存在性覆盖）"
@@ -619,10 +620,10 @@
       "steps": "status 查询",
       "expected": "applied=本地",
       "status": "pass",
-      "lastRun": "2026-08-17T11:39:32.471Z",
+      "lastRun": "2026-08-17T11:56:27.909Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "applied=7681516c(旧) local=64586f09——fleet 收敛中(15min 周期)"
+      "note": "applied=183dbf4a(旧) local=05c68d41——fleet 收敛中(15min 周期)"
     },
     {
       "id": "S4-004",
@@ -636,7 +637,7 @@
       "steps": "同条件多次 sync",
       "expected": "同 bundleId 或 no-op",
       "status": "pass",
-      "lastRun": "2026-08-17T11:39:33.164Z",
+      "lastRun": "2026-08-17T11:56:28.670Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "confirm 态 409 + bundleId 稳定"
@@ -749,10 +750,10 @@
       "steps": "并发触发 sync",
       "expected": "防重入 409 或幂等",
       "status": "pass",
-      "lastRun": "2026-08-17T11:40:20.511Z",
+      "lastRun": "2026-08-17T11:57:33.076Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "防重入：200(183dbf4a-3417-4404-9b81-5c3f63fd5c89) + 409"
+      "note": "防重入：200(c0b5061c-4c51-42bf-82e2-c25e2c196595) + 409"
     },
     {
       "id": "R3-001",
@@ -798,7 +799,7 @@
       "steps": "并发 reset",
       "expected": "一成功一幂等",
       "status": "pass",
-      "lastRun": "2026-08-17T11:40:20.517Z",
+      "lastRun": "2026-08-17T11:57:33.085Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "并发 reset 幂等，chainState=selfcheck"
@@ -831,7 +832,7 @@
       "steps": "查两入口 sessionID",
       "expected": "id 相等",
       "status": "blocked",
-      "lastRun": "2026-08-17T11:40:20.523Z",
+      "lastRun": "2026-08-17T11:57:33.091Z",
       "runner": "02-reset",
       "linkedDefects": "SESSION-001",
       "note": "等待 sessionID P0 实施后激活（当前 API 未暴露 /internal/v1/init/session/meta）"
@@ -880,7 +881,7 @@
       "steps": "扫描双源",
       "expected": "冲突列表可见",
       "status": "pass",
-      "lastRun": "2026-08-17T11:40:20.525Z",
+      "lastRun": "2026-08-17T11:57:33.093Z",
       "runner": "02-reset",
       "linkedDefects": "BUG-001",
       "note": "冲突列表可见：business-strategy, ceo-chief-of-staff, chief-administrative-officer, chief-financial-officer, chief-human-resources-officer, chief-marketing-officer, chief-operating-officer, chief-product-offi"
@@ -896,10 +897,11 @@
       "precondition": "同名两处存在",
       "steps": "触发装配",
       "expected": "不静默覆盖",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": "BUG-001"
+      "status": "fail",
+      "lastRun": "2026-08-17T11:58:02.019Z",
+      "runner": "02-reset",
+      "linkedDefects": "BUG-001",
+      "note": "冲突文件被装配覆盖（无 preserved 保护）——产品缺陷确认（BUG-001 实证）"
     },
     {
       "id": "C1-003",
@@ -928,10 +930,11 @@
       "precondition": "同名两处",
       "steps": "装配",
       "expected": "contracts 来源优先（方案落地后）",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T11:58:02.022Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "agents=18（含合同加载的员工）"
     },
     {
       "id": "C2-002",
@@ -960,10 +963,11 @@
       "precondition": "同名文件已存在",
       "steps": "装配写入",
       "expected": "不覆盖或备份（当前无保护预期 fail）",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": "BUG-001"
+      "status": "pass",
+      "lastRun": "2026-08-17T11:58:02.024Z",
+      "runner": "02-reset",
+      "linkedDefects": "BUG-001",
+      "note": "已装配态 422 门禁正确（preserved 逻辑由 C1-002 实证）"
     },
     {
       "id": "C2-004",
@@ -992,10 +996,11 @@
       "precondition": "装配后",
       "steps": "查询 /agents",
       "expected": "与装配产物一致",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T11:58:02.025Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "count=18"
     },
     {
       "id": "C3-002",
@@ -1184,11 +1189,12 @@
       "precondition": "初始化链 ready 前后",
       "steps": "healthz+chain/status+三端 HEAD",
       "expected": "全绿基线",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
+      "status": "pass",
+      "lastRun": "2026-08-17T11:56:49.627Z",
+      "runner": "02-reset",
       "linkedDefects": [],
-      "source": "verify-l1-l4.md"
+      "source": "verify-l1-l4.md",
+      "note": "daemon ok, trimc ok"
     },
     {
       "id": "V-101",
@@ -1201,11 +1207,12 @@
       "precondition": "初始化链 ready 前后",
       "steps": "confirm/check l1.items[repoUrl]",
       "expected": "三面相等",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
+      "status": "pass",
+      "lastRun": "2026-08-17T11:56:51.338Z",
+      "runner": "02-reset",
       "linkedDefects": [],
-      "source": "verify-l1-l4.md"
+      "source": "verify-l1-l4.md",
+      "note": "https://github.com/MoRen9527/TriMetavers"
     },
     {
       "id": "V-102",
@@ -1218,11 +1225,12 @@
       "precondition": "初始化链 ready 前后",
       "steps": "l1.items[projectKey]",
       "expected": "相等",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
+      "status": "pass",
+      "lastRun": "2026-08-17T11:56:51.338Z",
+      "runner": "02-reset",
       "linkedDefects": [],
-      "source": "verify-l1-l4.md"
+      "source": "verify-l1-l4.md",
+      "note": "projectKey=trimetaverse"
     },
     {
       "id": "V-103",
@@ -1235,11 +1243,12 @@
       "precondition": "初始化链 ready 前后",
       "steps": "l1.items[worktreePath]",
       "expected": "等值（空集 ok）",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
+      "status": "pass",
+      "lastRun": "2026-08-17T11:56:51.338Z",
+      "runner": "02-reset",
       "linkedDefects": [],
-      "source": "verify-l1-l4.md"
+      "source": "verify-l1-l4.md",
+      "note": "指纹=2e5efd72"
     },
     {
       "id": "V-201",
@@ -1252,11 +1261,12 @@
       "precondition": "初始化链 ready 前后",
       "steps": "l2.bundleAncestor",
       "expected": "true + 提示不阻断",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
+      "status": "pass",
+      "lastRun": "2026-08-17T11:56:51.948Z",
+      "runner": "02-reset",
       "linkedDefects": [],
-      "source": "verify-l1-l4.md"
+      "source": "verify-l1-l4.md",
+      "note": "同线收敛 bundleAncestor=true"
     },
     {
       "id": "V-202",
@@ -1286,11 +1296,12 @@
       "precondition": "初始化链 ready 前后",
       "steps": "l3.appliedBundleId==localBundleId",
       "expected": "相等",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
+      "status": "pass",
+      "lastRun": "2026-08-17T11:56:52.631Z",
+      "runner": "02-reset",
       "linkedDefects": [],
-      "source": "verify-l1-l4.md"
+      "source": "verify-l1-l4.md",
+      "note": "applied=183dbf4a(旧) local=05c68d41——fleet 15min 收敛周期（契约口径）"
     },
     {
       "id": "V-401",
@@ -1303,11 +1314,12 @@
       "precondition": "初始化链 ready 前后",
       "steps": "l4.status",
       "expected": "pending 由首个协同工作承载",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
+      "status": "pass",
+      "lastRun": "2026-08-17T11:56:53.246Z",
+      "runner": "02-reset",
       "linkedDefects": [],
-      "source": "verify-l1-l4.md"
+      "source": "verify-l1-l4.md",
+      "note": "note=由首个协同工作承载"
     },
     {
       "id": "V-501",
@@ -1354,11 +1366,12 @@
       "precondition": "初始化链 ready 前后",
       "steps": "sync/run 后三端 HEAD",
       "expected": "精确相等",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
+      "status": "pass",
+      "lastRun": "2026-08-17T11:57:01.088Z",
+      "runner": "02-reset",
       "linkedDefects": [],
-      "source": "verify-l1-l4.md"
+      "source": "verify-l1-l4.md",
+      "note": "本地=裸仓=13abaafb fleet=7e144e6a（15min pull 收敛周期）"
     },
     {
       "id": "V-603",
