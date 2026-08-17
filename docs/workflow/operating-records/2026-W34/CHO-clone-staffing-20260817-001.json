@@ -1,0 +1,42 @@
+{
+  "requestType": "CLONE_STAFFING_REQUEST",
+  "approver": "xiaoke-cho",
+  "approverRole": "ChiefHumanResourcesOfficer",
+  "decision": "APPROVED",
+  "approvedClones": [
+    {
+      "id": "xiaoke-e2e-alpha",
+      "role": "测试工程师",
+      "taskScope": "E 域 A 级 10 条（01-init-chain.js + 02-reset.js）",
+      "estimatedDuration": "~4h",
+      "headcountCost": 1
+    },
+    {
+      "id": "xiaoke-e2e-beta",
+      "role": "测试工程师",
+      "taskScope": "S 域 A 级 9 条（03-sync.js + 04-git.js）",
+      "estimatedDuration": "~4h",
+      "headcountCost": 1
+    },
+    {
+      "id": "xiaoke-e2e-gamma",
+      "role": "测试工程师",
+      "taskScope": "R+C 域 A 级 9 条（05-concurrent.js + 06-failure.js + 07-cross-reset.js）",
+      "estimatedDuration": "~4h",
+      "headcountCost": 1
+    }
+  ],
+  "conditions": [
+    "分身工作产出必须通过 A 级用例全量通过验收",
+    "完成后分身回收，编制释放（不占用长期 HC）",
+    "跨分身用例不得重复（已验证 α/β/γ 无交集）"
+  ],
+  "headcountUsage": {
+    "approved": 3,
+    "limit": 5,
+    "remaining": 2
+  },
+  "taskBasis": "W34 OP 1.4.0 E2E 测试自动化脚本固化（三级并行固化方案）",
+  "auditAt": "2026-08-17T00:00:00Z",
+  "protocolReference": "docs/execution/clone-dispatch-protocol.md"
+}
