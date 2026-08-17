@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "bundleId": "6c2bb69a-cfe1-4dba-a623-8d43e923c028",
-  "generatedAt": "2026-08-17T11:53:59.506Z",
+  "bundleId": "05c68d41-d9d3-46b2-a4db-9dfee7cf998b",
+  "generatedAt": "2026-08-17T11:56:17.240Z",
   "generatedBy": "trilc-init-0.4.10@4bc19502",
   "company": {
     "state": "initialized",
-    "ceoName": "E2E-Conc",
-    "onboardedAt": "2026-08-17T11:53:59.331Z"
+    "ceoName": "E2E-CEO",
+    "onboardedAt": "2026-08-17T11:56:17.063Z"
   },
   "model": {
     "defaultModel": "tmv-deepseek-v4-pro",
@@ -145,6 +145,6 @@
         "branch": "project/trimetaverse"
       }
     ],
-    "devHead": "f049b55057e775f2ee93246e3cdcd6f12ac9724d"
+    "devHead": "ccbcff39a5c799991139f06061ee05f8a79e6f5d"
   }
 }
