@@ -2160,7 +2160,7 @@
       "steps": "损坏公司态",
       "expected": "降级/重试/明确失败",
       "status": "blocked",
-      "lastRun": "2026-08-17T12:14:30.898Z",
+      "lastRun": "2026-08-17T12:34:31.965Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供公司维失败注入环境"
@@ -2179,7 +2179,7 @@
       "steps": "模型配置不可达",
       "expected": "行为明确",
       "status": "blocked",
-      "lastRun": "2026-08-17T12:14:30.898Z",
+      "lastRun": "2026-08-17T12:34:31.965Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供模型维失败注入环境"
@@ -2198,7 +2198,7 @@
       "steps": "员工态损坏",
       "expected": "降级 warning",
       "status": "blocked",
-      "lastRun": "2026-08-17T12:14:30.898Z",
+      "lastRun": "2026-08-17T12:34:31.965Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供员工维失败注入环境"
@@ -2217,7 +2217,7 @@
       "steps": "项目仓不可达",
       "expected": "失败分类明确",
       "status": "blocked",
-      "lastRun": "2026-08-17T12:14:30.898Z",
+      "lastRun": "2026-08-17T12:34:31.965Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供项目维失败注入环境"
