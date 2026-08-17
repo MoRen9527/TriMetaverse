@@ -34,7 +34,11 @@
       "代码检查",
       "环境矩阵测试"
     ],
-    "coverageDefinition": "direct=实际执行操作+程序断言具体响应 | equivalent=底层功能被其他用例直接测试，本条通过架构等价推理 | framework-ready=用例/载荷已定义，判定未完整执行 | human-required=本质需人判断（模型质量/邮件/UX/探索性）"
+    "coverageDefinition": "direct=实际执行操作+程序断言具体响应 | equivalent=底层功能被其他用例直接测试，本条通过架构等价推理 | framework-ready=用例/载荷已定义，判定未完整执行 | human-required=本质需人判断（模型质量/邮件/UX/探索性）",
+    "knownDefects": [
+      "DEFECT-PSEUDO-CHAT: 常规对话中模型调工具后无最终文字结论（pseudo-success 从 selfcheck 探测蔓延到普通 chat——CEO US-002 实测 2026-08-18）",
+      "DEFECT-MD-TABLE: TriPilot webview markdown 表格渲染为原始竖线而非格式化表格（CEO US-002 实测 2026-08-18）"
+    ]
   },
   "stats": {
     "total": 123,
@@ -1249,12 +1253,12 @@
       "precondition": "daemon 健康",
       "steps": "对话/第五探测",
       "expected": "答复合理",
-      "status": "pass",
-      "lastRun": "2026-08-17T16:26:40.759Z",
-      "runner": "02-reset",
+      "status": "fail",
+      "lastRun": "2026-08-17T17:01:46.775Z",
+      "runner": "CEO",
       "linkedDefects": "PROBE-001",
-      "note": "模型会话质量 = PE-001 selfcheck 完结（含第五探测真实模型会话）——人判归 CEO 抽查",
-      "coverage": "human-required"
+      "note": "CEO 实测 FAIL：①第一问「总结初始化状态」模型调了 Read 工具后未给最终文字结论（pseudo-success 复发于常规对话——不止 selfcheck 探测）②第二问 LS 输出 markdown 表格渲染为原始竖线（TriPilot webview md 渲染缺陷）",
+      "coverage": "direct"
     },
     {
       "id": "US-003",
