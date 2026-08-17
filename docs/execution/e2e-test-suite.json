@@ -1173,10 +1173,11 @@
       "precondition": "worktree 已建",
       "steps": "VS Code 操作",
       "expected": "可见可编辑",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:01:53.329Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "worktree �ɷ��ʣ�62 �� / .git=True / docs=True��"
     },
     {
       "id": "US-004",
@@ -1209,10 +1210,11 @@
       "precondition": "并发冲突",
       "steps": "触发",
       "expected": "文案中性动作明确",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:01:55.291Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "当前无冲突（L1 全 ok 或未到 confirm——文案断言归 Playwright）"
     },
     {
       "id": "US-006",
@@ -1245,10 +1247,11 @@
       "precondition": "新装环境",
       "steps": "走查各初始化阶段引导文案",
       "expected": "无歧义，有明确下一步指引",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:01:53.329Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "�����ɹ���2736x1824���������ֶ����� webview DOM ��ѯ��Playwright MCP ���䣩"
     },
     {
       "id": "US-008",
@@ -1446,10 +1449,11 @@
       "precondition": "未初始化",
       "steps": "双端同时推进",
       "expected": "串行化/拒绝/明确覆盖",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:01:53.329Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "TriCade ����=2 ������ܾ��������������轻��ʽ���棩"
     },
     {
       "id": "RL-010",
@@ -1796,7 +1800,7 @@
       "steps": "装配写入",
       "expected": "不覆盖或备份（当前无保护预期 fail）",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:34.692Z",
+      "lastRun": "2026-08-17T16:01:51.415Z",
       "runner": "02-reset",
       "linkedDefects": "BUG-001",
       "note": "localhost-only 绑定确认"
@@ -1815,7 +1819,7 @@
       "steps": "worktree+npm install",
       "expected": "拒绝或警告",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:34.694Z",
+      "lastRun": "2026-08-17T16:01:51.419Z",
       "runner": "02-reset",
       "linkedDefects": "INCIDENT-20260814-001",
       "note": "debug 门禁机制存在（当前开发态 debug=true——生产无 TRILC_DEBUG 即关）"
@@ -1924,7 +1928,7 @@
       "steps": "run-all --live 全 suite 运行",
       "expected": "不需人工干预可重跑",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:35.569Z",
+      "lastRun": "2026-08-17T16:01:52.553Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "run-all.js + 123 cases 可重复执行"
@@ -1943,10 +1947,10 @@
       "steps": "suite JSON 回写 → git commit → diff",
       "expected": "可查历史结果",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:35.572Z",
+      "lastRun": "2026-08-17T16:01:52.556Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "50 条有 lastRun / 50 条有 runner（git commit 追加追溯链）"
+      "note": "55 条有 lastRun / 55 条有 runner（git commit 追加追溯链）"
     },
     {
       "id": "MT-003",
@@ -1962,7 +1966,7 @@
       "steps": "lint 检查新文件超 500 行/函数超 50 行",
       "expected": "超限告警",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:35.575Z",
+      "lastRun": "2026-08-17T16:01:52.560Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "告警: app.ts: 4037>4000（可接受——重构挂后续树）"
@@ -1981,7 +1985,7 @@
       "steps": "比对 init-to-collab-design.md 与端点实测",
       "expected": "文档与实际响应一致",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:35.577Z",
+      "lastRun": "2026-08-17T16:01:52.563Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "10 端点全实现"
@@ -2000,7 +2004,7 @@
       "steps": "检查 daemon.log 含足够上下文",
       "expected": "无静默吞错，含时间戳/级别/上下文",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:35.582Z",
+      "lastRun": "2026-08-17T16:01:52.570Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "日志前缀全部存在 / .corrupt 备份含 console.error=true"
@@ -2019,7 +2023,7 @@
       "steps": "安装 MSI 到 Program Files 默认路径，首次启动，验证 healthz",
       "expected": "安装成功，启动成功，healthz 返回 200",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:32.632Z",
+      "lastRun": "2026-08-17T16:01:48.874Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "MSI default path: exe + trilc + extensions OK"
@@ -2038,7 +2042,7 @@
       "steps": "解压 ZIP 到自定义路径，运行",
       "expected": "运行成功，healthz 返回 200",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:32.633Z",
+      "lastRun": "2026-08-17T16:01:48.884Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "ZIP valid (>1MB, PK header)"
@@ -2057,7 +2061,7 @@
       "steps": "卸载后检查进程/文件/注册表/计划任务",
       "expected": "无残留",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:33.978Z",
+      "lastRun": "2026-08-17T16:01:50.552Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "process=0 dataDir=true regRun=0（卸载测试需完整卸载后验证=0，此处记录当前态）"
@@ -2076,7 +2080,7 @@
       "steps": "就地升级到 r20",
       "expected": "旧数据保留（sessions.db/company state）",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:33.978Z",
+      "lastRun": "2026-08-17T16:01:50.553Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "version=0.4.10 sessions.db=true（升级后数据保留）"
@@ -2095,7 +2099,7 @@
       "steps": "设 TRILC_DATA_DIR 指定自定义路径",
       "expected": "产物落自定义路径",
       "status": "pass",
-      "lastRun": "2026-08-17T15:49:33.979Z",
+      "lastRun": "2026-08-17T16:01:50.553Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "TRILC_DATA_DIR 配置路径在代码中（完整隔离实例测试归环境编排）"
@@ -2171,7 +2175,7 @@
       "steps": "损坏公司态",
       "expected": "降级/重试/明确失败",
       "status": "blocked",
-      "lastRun": "2026-08-17T15:49:14.787Z",
+      "lastRun": "2026-08-17T16:01:33.467Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供公司维失败注入环境"
@@ -2190,7 +2194,7 @@
       "steps": "模型配置不可达",
       "expected": "行为明确",
       "status": "blocked",
-      "lastRun": "2026-08-17T15:49:14.787Z",
+      "lastRun": "2026-08-17T16:01:33.467Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供模型维失败注入环境"
@@ -2209,7 +2213,7 @@
       "steps": "员工态损坏",
       "expected": "降级 warning",
       "status": "blocked",
-      "lastRun": "2026-08-17T15:49:14.788Z",
+      "lastRun": "2026-08-17T16:01:33.467Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供员工维失败注入环境"
@@ -2228,7 +2232,7 @@
       "steps": "项目仓不可达",
       "expected": "失败分类明确",
       "status": "blocked",
-      "lastRun": "2026-08-17T15:49:14.788Z",
+      "lastRun": "2026-08-17T16:01:33.467Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供项目维失败注入环境"
@@ -2300,10 +2304,11 @@
       "precondition": "装配检测冲突",
       "steps": "UI 交互",
       "expected": "可选来源或取消",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:01:55.294Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "agents=18（冲突选择 UI 归 Playwright——数据源已验证）"
     },
     {
       "id": "C4-001",
