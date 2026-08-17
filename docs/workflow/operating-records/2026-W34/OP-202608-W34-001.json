@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（离线推进实证 + W34 开周登记）",
-        "version": "1.2.0",
-        "lastUpdated": "2026-08-16T16:51:31.143Z",
+        "updatedBy": "编排层（W34 首任务：深度 E2E 测试计划三线派单）",
+        "version": "1.3.0",
+        "lastUpdated": "2026-08-17T01:50:48.508Z",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -296,6 +296,7 @@
         "排期裁决（CEO 2026-08-16）：session 管理实施（P0 两入口 id 同步等，session-management-design.md）排入 **W34**——不挤当前优先级。本周收尾线：CEO 手测完成开业→项目初始化→23:00 周平面迁移（W33→W34，自然触发）；迁移后 W34 开周双启动：①session P0 实施树 ②能力差距反向流首轮手动盘点（CEO 已批，小狄 W34 行动清单在案）",
         "CEO 架构观察（2026-08-16 21:4x）：初始化链各阶段（自检/开业/项目初始化/五维同步）本质适合 ADE 规范——五段闭环同构（端点触发≈程序触发/模型问答≈agent plan/daemon 原子执行≈CLI 执行/确认卡≈agent close/transitionTo+产物≈CLI close），init-chain.json phaseDetail ≈ .shift-ade.json（status/changes/幂等/审计）——ADE 化后与周迁移同轨（幂等/already_exists/dry_run/可重跑/审计留痕语义直接复用）。登记 W34 设计议题（与 session 线同批）。另：探测模型伪失败间歇复发两次（21:3x，tool-calls-only，prompt 约束非硬隔离）——编排层绕行推进 onboarding（degraded 语义），硬隔离（会话级工具白名单）列观察项随 W34",
         "CEO 架构观察（2026-08-16 22:2x）：装配落点 .claude/agents 与 worktree 内 Claude Code 子代理定义冲突——①装配白名单写 .claude/agents/<roleId>.md 无 preserved 保护（同名文件直接覆盖风险，实锤）②双源歧义：Claude Code 从目录读子代理 vs TriPilot 从 TriLC 合同读（/agents API）——同名 agent 两处定义两套体系 ③修法方向（W34 议题与 ADE 化/session 同批）：装配落点迁 daemon contracts 目录（合同单源）或全量 preserved 保护+双源标记。另记：22:1x daemon 曾被 /shutdown（来源待确认——CEO 手动 or 其他调用方）；扩展不载入根因=坏 workspace 状态（指向已删 WorkTree 的 workspaceStorage）已清，扩展恢复正常",
-        "服务域离线推进实证 + W34 开周（2026-08-17 00:45，CEO 裁决保留）：at 型一次性验证迁移由服务器 TriMC 独立完成（证据链：commit b125cf56 身份 TriMC Scheduler + 服务器 cron 日志 at-verify__16-45-00 + notify sent；本地编排层 00:30 注册定时器后零参与）——本地开机 git pull 即同步（场景 5 收尾）。根因修复登记：weekly-plane-shift 历次未自动触发=state.nextRunAtMs 被编排层手动复位抹除（引擎缺该字段永不调度）——已补 08-23 23:59 正轨 + 纪律入册（手动改 job state 禁抹 nextRunAtMs）。cron 23:59 那次未触发非关机因素（同 nextRunAtMs 缺失）。at 验证 job 用后已清。三端+worktree+origin=b125cf56"
+        "服务域离线推进实证 + W34 开周（2026-08-17 00:45，CEO 裁决保留）：at 型一次性验证迁移由服务器 TriMC 独立完成（证据链：commit b125cf56 身份 TriMC Scheduler + 服务器 cron 日志 at-verify__16-45-00 + notify sent；本地编排层 00:30 注册定时器后零参与）——本地开机 git pull 即同步（场景 5 收尾）。根因修复登记：weekly-plane-shift 历次未自动触发=state.nextRunAtMs 被编排层手动复位抹除（引擎缺该字段永不调度）——已补 08-23 23:59 正轨 + 纪律入册（手动改 job state 禁抹 nextRunAtMs）。cron 23:59 那次未触发非关机因素（同 nextRunAtMs 缺失）。at 验证 job 用后已清。三端+worktree+origin=b125cf56",
+        "CEO 最高优先级指令（2026-08-17 凌晨，W34 首任务）：深度 E2E 测试计划——开业+项目初始化测试不充分，借测试挖缺陷完善三端协同设计。范围：①三端（本地研发仓/TriMC/TriLC）协同 ②TriPilot↔trilc chat 复杂轮换同步 ③三端团队潜在冲突与协作方式（设计探索+落地）④通信通道与规则（含 OP 2.54.0 双源冲突项）。定位：**第一个元现实/元虚拟/元认知迭代优化**（纲领首用）。组织：小柯主笔 E2E 用例矩阵（e2e-deep-test-plan.md）+ 小狄三端协作与通信通道设计（tri-domain-collaboration-channels.md）+ 小乔轮换同步/冲突呈现产品口径——编排层汇成总方案，CEO 过目后转正式任务（实施树）"
     ]
 }
