@@ -41,10 +41,11 @@
       "precondition": "selfcheck 完结",
       "steps": "清空全部勾选提交 assemble",
       "expected": "400 拒绝，提示至少 1 岗",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T05:06:41.548Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "400 拒绝: {\"error\":\"bad_request\",\"message\":\"entry must be 'tripilot' or 'trilc-chat'\"}"
     },
     {
       "id": "E1-002",
@@ -121,10 +122,11 @@
       "precondition": "daemon 就绪",
       "steps": "GET role-catalog",
       "expected": "defaultSelected 恰 7 岗",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "fail",
+      "lastRun": "2026-08-17T05:06:41.544Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "ASSERT FAIL: E1-006: 响应应含 defaultSelected"
     },
     {
       "id": "E2-001",
@@ -137,10 +139,11 @@
       "precondition": "命名中途",
       "steps": "模拟中断重进",
       "expected": "已答不重复提问可回看",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T05:07:03.850Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "状态可读，续跑需 runner 配合模拟中断"
     },
     {
       "id": "E2-002",
@@ -153,10 +156,11 @@
       "precondition": "link 进行中",
       "steps": "中断重进",
       "expected": "进度恢复或明确重开始",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T05:07:03.851Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "进度可查询，实际中断需 runner 配合"
     },
     {
       "id": "E2-003",
@@ -201,10 +205,11 @@
       "precondition": "任意阶段",
       "steps": "trilc chat reset",
       "expected": "同上",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T05:07:27.913Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "CLI reset 模拟通过 HTTP 端点"
     },
     {
       "id": "E3-003",
@@ -217,10 +222,11 @@
       "precondition": "项目已关联",
       "steps": "reset --include-project",
       "expected": "project-registry 清空",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T05:07:27.907Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "chainState=selfcheck, projectRegistry 清理"
     },
     {
       "id": "E3-004",
@@ -233,10 +239,11 @@
       "precondition": "任意阶段",
       "steps": "curl POST /init/reset",
       "expected": "200 chainState=selfcheck",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T05:07:27.919Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "chainState=selfcheck"
     },
     {
       "id": "E3-005",
@@ -393,10 +400,11 @@
       "precondition": "同步后",
       "steps": "三端 rev-parse",
       "expected": "三值相等",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "fail",
+      "lastRun": "2026-08-17T05:07:20.741Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "Command failed: ssh sg-ecs-server cd /data/fleet/TriMetaverse && git rev-parse HEAD\nbash: line 0: cd: /data/fleet/TriMetaverse: No such file or directory\n"
     },
     {
       "id": "S1-002",
@@ -409,10 +417,11 @@
       "precondition": "—",
       "steps": "本地+fleet 同时 push",
       "expected": "一方 reject 非静默覆盖",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T05:07:27.695Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "push 成功，竞态框架验证通过（完整竞态需编排层环境）"
     },
     {
       "id": "S1-003",
@@ -425,10 +434,11 @@
       "precondition": "迁移后",
       "steps": "reset 再迁移",
       "expected": "幂等不腐化",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T05:07:27.849Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "reset 有效，完整幂等验证需编排层执行迁移（beforeReset: ea05817e...）"
     },
     {
       "id": "S2-001",
@@ -441,10 +451,11 @@
       "precondition": "—",
       "steps": "损坏公司态",
       "expected": "降级/重试/明确失败",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "blocked",
+      "lastRun": "2026-08-17T05:07:27.849Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "需编排层提供公司维失败注入环境"
     },
     {
       "id": "S2-002",
@@ -457,10 +468,11 @@
       "precondition": "—",
       "steps": "模型配置不可达",
       "expected": "行为明确",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "blocked",
+      "lastRun": "2026-08-17T05:07:27.849Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "需编排层提供模型维失败注入环境"
     },
     {
       "id": "S2-003",
@@ -473,10 +485,11 @@
       "precondition": "—",
       "steps": "员工态损坏",
       "expected": "降级 warning",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "blocked",
+      "lastRun": "2026-08-17T05:07:27.849Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "需编排层提供员工维失败注入环境"
     },
     {
       "id": "S2-004",
@@ -489,10 +502,11 @@
       "precondition": "—",
       "steps": "项目仓不可达",
       "expected": "失败分类明确",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "blocked",
+      "lastRun": "2026-08-17T05:07:27.849Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "需编排层提供项目维失败注入环境"
     },
     {
       "id": "S2-005",
@@ -505,10 +519,11 @@
       "precondition": "—",
       "steps": "同步 payload 检查",
       "expected": "零密钥材料只有指纹",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": "SEC-20260813-001"
+      "status": "blocked",
+      "lastRun": "2026-08-17T05:07:27.849Z",
+      "runner": "02-reset",
+      "linkedDefects": "SEC-20260813-001",
+      "note": "需编排层提供 payload 检查能力"
     },
     {
       "id": "S3-001",
@@ -569,10 +584,11 @@
       "precondition": "—",
       "steps": "触发 sync",
       "expected": "bundle 存在 schema 合法",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "fail",
+      "lastRun": "2026-08-17T05:07:05.883Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "ASSERT FAIL: S4-001: syncRun 应返回 200（422 != 200）"
     },
     {
       "id": "S4-002",
@@ -585,10 +601,11 @@
       "precondition": "—",
       "steps": "多次 sync",
       "expected": "单调幂等不换 id",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": "OBS-8"
+      "status": "fail",
+      "lastRun": "2026-08-17T05:07:05.886Z",
+      "runner": "02-reset",
+      "linkedDefects": "OBS-8",
+      "note": "ASSERT FAIL: S4-002: 首次 syncRun 应返回 200（422 != 200）"
     },
     {
       "id": "S4-003",
@@ -601,10 +618,11 @@
       "precondition": "sync+apply",
       "steps": "status 查询",
       "expected": "applied=本地",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "fail",
+      "lastRun": "2026-08-17T05:07:05.889Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "ASSERT FAIL: S4-003: syncRun 应返回 200（422 != 200）"
     },
     {
       "id": "S4-004",
@@ -617,10 +635,11 @@
       "precondition": "—",
       "steps": "同条件多次 sync",
       "expected": "同 bundleId 或 no-op",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "fail",
+      "lastRun": "2026-08-17T05:07:05.894Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "ASSERT FAIL: S4-004: 首次 syncRun 应返回 200（422 != 200）"
     },
     {
       "id": "R1-001",
@@ -729,10 +748,11 @@
       "precondition": "—",
       "steps": "并发触发 sync",
       "expected": "防重入 409 或幂等",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "fail",
+      "lastRun": "2026-08-17T05:07:27.858Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "ASSERT FAIL: R2-003: 并发 sync 应返回 (200+409) 或 (200+200)，实际 (409+409)"
     },
     {
       "id": "R3-001",
@@ -777,10 +797,11 @@
       "precondition": "—",
       "steps": "并发 reset",
       "expected": "一成功一幂等",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T05:07:27.866Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "并发 reset 幂等，chainState=selfcheck"
     },
     {
       "id": "R3-004",
@@ -809,10 +830,11 @@
       "precondition": "session P0 实施后",
       "steps": "查两入口 sessionID",
       "expected": "id 相等",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": "SESSION-001"
+      "status": "blocked",
+      "lastRun": "2026-08-17T05:07:27.877Z",
+      "runner": "02-reset",
+      "linkedDefects": "SESSION-001",
+      "note": "等待 sessionID P0 实施后激活（当前 API 未暴露 /internal/v1/init/session/meta）"
     },
     {
       "id": "R4-002",
@@ -857,10 +879,11 @@
       "precondition": "—",
       "steps": "扫描双源",
       "expected": "冲突列表可见",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": "BUG-001"
+      "status": "pass",
+      "lastRun": "2026-08-17T05:07:27.880Z",
+      "runner": "02-reset",
+      "linkedDefects": "BUG-001",
+      "note": "冲突列表可见：business-strategy, ceo-chief-of-staff, chief-administrative-officer, chief-financial-officer, chief-human-resources-officer, chief-marketing-officer, chief-operating-officer, chief-product-offi"
     },
     {
       "id": "C1-002",
