@@ -6,7 +6,7 @@
 // 结果由各 suite 的 record() 累积，flushResults 回写 e2e-test-suite.json
 
 const path = require('node:path');
-const suites = ['01-init-chain', '03-sync', '04-git', '08-verify', '10-portability', '11-maintainability', '12-desktop-gui', '13-activation', '05-concurrent', '06-failure', '07-cross-reset', '09-agents-conflict', '02-reset']; // 02-reset 破坏性（清链）放尾——首轮教训：reset 先跑污染 sync 前置
+const suites = ['01-init-chain', '03-sync', '04-git', '08-verify', '10-portability', '11-maintainability', '12-desktop-gui', '13-activation', '14-final-push', '05-concurrent', '06-failure', '07-cross-reset', '09-agents-conflict', '02-reset']; // 02-reset 破坏性（清链）放尾——首轮教训：reset 先跑污染 sync 前置
 
 async function main() {
   const args = process.argv.slice(2);
