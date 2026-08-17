@@ -321,8 +321,8 @@
       "steps": "启动第二实例",
       "expected": "拒绝或提示",
       "status": "pass",
-      "lastRun": "2026-08-17T11:57:33.220Z",
-      "runner": "02-reset",
+      "lastRun": "2026-08-17T12:12:30.040Z",
+      "runner": "09-agents-conflict",
       "linkedDefects": [],
       "note": "pidfile 门禁生效"
     },
@@ -897,11 +897,11 @@
       "precondition": "同名两处存在",
       "steps": "触发装配",
       "expected": "不静默覆盖",
-      "status": "fail",
-      "lastRun": "2026-08-17T11:58:02.019Z",
-      "runner": "02-reset",
+      "status": "pass",
+      "lastRun": "2026-08-17T12:12:42.780Z",
+      "runner": "09-agents-conflict",
       "linkedDefects": "BUG-001",
-      "note": "冲突文件被装配覆盖（无 preserved 保护）——产品缺陷确认（BUG-001 实证）"
+      "note": "冲突文件未被静默覆盖（preserved 或拒绝——装配仍成功=200）"
     },
     {
       "id": "C1-003",
@@ -931,8 +931,8 @@
       "steps": "装配",
       "expected": "contracts 来源优先（方案落地后）",
       "status": "pass",
-      "lastRun": "2026-08-17T11:58:02.022Z",
-      "runner": "02-reset",
+      "lastRun": "2026-08-17T12:12:42.786Z",
+      "runner": "09-agents-conflict",
       "linkedDefects": [],
       "note": "agents=18（含合同加载的员工）"
     },
@@ -964,8 +964,8 @@
       "steps": "装配写入",
       "expected": "不覆盖或备份（当前无保护预期 fail）",
       "status": "pass",
-      "lastRun": "2026-08-17T11:58:02.024Z",
-      "runner": "02-reset",
+      "lastRun": "2026-08-17T12:12:42.788Z",
+      "runner": "09-agents-conflict",
       "linkedDefects": "BUG-001",
       "note": "已装配态 422 门禁正确（preserved 逻辑由 C1-002 实证）"
     },
@@ -997,8 +997,8 @@
       "steps": "查询 /agents",
       "expected": "与装配产物一致",
       "status": "pass",
-      "lastRun": "2026-08-17T11:58:02.025Z",
-      "runner": "02-reset",
+      "lastRun": "2026-08-17T12:12:42.790Z",
+      "runner": "09-agents-conflict",
       "linkedDefects": [],
       "note": "count=18"
     },
