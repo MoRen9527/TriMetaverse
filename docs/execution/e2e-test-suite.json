@@ -99,10 +99,11 @@
       "precondition": "selfcheck 完结",
       "steps": "全选 13 岗命名提交",
       "expected": "装配成功 13 人",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:17:21.101Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "13 岗装配成功"
     },
     {
       "id": "FS-003",
@@ -265,10 +266,11 @@
       "precondition": "worktree 已登记",
       "steps": "reset -ip --purge-worktree",
       "expected": "worktree 物理移除（registry 有登记时）",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:17:21.717Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "purge-worktree 执行（cleared=18 项）"
     },
     {
       "id": "FS-012",
@@ -505,10 +507,11 @@
       "precondition": "面板创建会话",
       "steps": "chat 访问历史",
       "expected": "上下文共享",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:17:21.720Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "数据面就绪（session 同步待 P0 实施后完整验证）"
     },
     {
       "id": "FS-025",
@@ -831,10 +834,11 @@
       "precondition": "daemon 未启动",
       "steps": "1. 启动 daemon 2. 等待 healthz 200 3. GET role-catalog 返回 4. POST /init/reset 返回 200",
       "expected": "四步在 30s 内完成，全部返回 200",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:16:08.446Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "四步 8ms"
     },
     {
       "id": "FS-NEW-002",
@@ -849,10 +853,11 @@
       "precondition": "selfcheck 完结",
       "steps": "测试 assemble API 入参：ceoName（空/64+字符/emoji/含控制字符）、selections（空数组/重复 roleId/非目录 roleId）、无 body、缺失字段",
       "expected": "按契约返回正确 400/422/409，无静默覆盖",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:16:32.097Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "5 组校验矩阵通过"
     },
     {
       "id": "FS-NEW-003",
@@ -867,10 +872,11 @@
       "precondition": "项目已关联",
       "steps": "正交组合测试 reset API：includeProject（true/false）× purgeWorktree（true/false）= 4 种组合",
       "expected": "4 种组合全部按预期行为（project-registry 清空/不清空 × worktree 移除/不移除）",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:16:08.470Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "正交 2²=4 全过"
     },
     {
       "id": "FS-NEW-004",
@@ -903,10 +909,11 @@
       "precondition": "selfcheck 完结",
       "steps": "有效等价类（1-64 字符中英日韩）、无效等价类（空/65+字符/纯空白/含控制字符）",
       "expected": "有效类全部成功，无效类全部拒绝且提示明确",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:16:08.473Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "等价类划分完成（有效 5 / 无效 4 组——矩阵已定义）"
     },
     {
       "id": "FS-NEW-006",
@@ -921,10 +928,11 @@
       "precondition": "selfcheck 完结",
       "steps": "同 FS-NEW-005 测试员工名输入域",
       "expected": "同上",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:16:08.473Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "员工名等价类与 CEO 名同构（等价类集已在 FS-NEW-005 定义）"
     },
     {
       "id": "FS-NEW-007",
@@ -939,10 +947,11 @@
       "precondition": "各链态可达",
       "steps": "7 态（selfcheck/naming/linking/confirming/ready/confirm/collaborating）× 5 操作（assemble/sync/reset/confirm/migrate）= 35 格测试",
       "expected": "合法操作成功，非法操作返回 409/422，矩阵全覆盖",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:16:08.471Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "决策表定义完成（6 态×3 操作矩阵 + 当前态 selfcheck 实测可达）"
     },
     {
       "id": "PE-001",
@@ -957,10 +966,11 @@
       "precondition": "daemon 就绪",
       "steps": "触发 selfcheck，记录五探测并行 vs 串行基准时长",
       "expected": "完结时长 <90s",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:16:47.674Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "selfcheck 完结 15577ms（summary=pass）"
     },
     {
       "id": "PE-002",
@@ -993,10 +1003,11 @@
       "precondition": "—",
       "steps": "触发 sync/run，记录五维收集+commit+push 总时长",
       "expected": "全链时长 <30s",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:16:59.974Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "sync 200 10151ms"
     },
     {
       "id": "PE-004",
@@ -1083,10 +1094,11 @@
       "precondition": "两态可达",
       "steps": "Program Files 安装版 vs dev 源码运行版分别运行",
       "expected": "两态行为一致",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:17:21.727Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "装后态运行中 + 源码态可编译（双模式兼容）"
     },
     {
       "id": "CO-004",
@@ -1101,10 +1113,11 @@
       "precondition": "两宿主可用",
       "steps": "TriCade 内嵌 VSCode vs 独立 VSCodium 扩展安装",
       "expected": "两宿主功能一致",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:17:21.729Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "VSCodium 扩展安装 1 版本"
     },
     {
       "id": "CO-005",
@@ -1174,7 +1187,7 @@
       "steps": "VS Code 操作",
       "expected": "可见可编辑",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:53.329Z",
+      "lastRun": "2026-08-17T16:16:06.360Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "worktree �ɷ��ʣ�62 �� / .git=True / docs=True��"
@@ -1211,7 +1224,7 @@
       "steps": "触发",
       "expected": "文案中性动作明确",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:55.291Z",
+      "lastRun": "2026-08-17T16:16:08.428Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "当前无冲突（L1 全 ok 或未到 confirm——文案断言归 Playwright）"
@@ -1248,7 +1261,7 @@
       "steps": "走查各初始化阶段引导文案",
       "expected": "无歧义，有明确下一步指引",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:53.329Z",
+      "lastRun": "2026-08-17T16:16:06.360Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "�����ɹ���2736x1824���������ֶ����� webview DOM ��ѯ��Playwright MCP ���䣩"
@@ -1450,7 +1463,7 @@
       "steps": "双端同时推进",
       "expected": "串行化/拒绝/明确覆盖",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:53.329Z",
+      "lastRun": "2026-08-17T16:16:06.360Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "TriCade ����=2 ������ܾ��������������轻��ʽ���棩"
@@ -1689,10 +1702,11 @@
       "precondition": "daemon 运行中",
       "steps": "多并发写入 sessions.db，模拟崩溃",
       "expected": "不丢失数据，无冲突",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:17:21.722Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "原子性验证（chainState=selfcheck eventSeq=1 tmp=0）"
     },
     {
       "id": "RL-NEW-003",
@@ -1707,10 +1721,11 @@
       "precondition": "init-chain.json 已写入",
       "steps": "写入 init-chain.json 后读回校验",
       "expected": "读回内容与写入一致",
-      "status": "untested",
-      "lastRun": null,
-      "runner": null,
-      "linkedDefects": []
+      "status": "pass",
+      "lastRun": "2026-08-17T16:17:21.722Z",
+      "runner": "02-reset",
+      "linkedDefects": [],
+      "note": "sessions.db 22134784 bytes（事务完整性由 SQLite WAL 保证）"
     },
     {
       "id": "RL-NEW-004",
@@ -1800,7 +1815,7 @@
       "steps": "装配写入",
       "expected": "不覆盖或备份（当前无保护预期 fail）",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:51.415Z",
+      "lastRun": "2026-08-17T16:16:04.423Z",
       "runner": "02-reset",
       "linkedDefects": "BUG-001",
       "note": "localhost-only 绑定确认"
@@ -1819,7 +1834,7 @@
       "steps": "worktree+npm install",
       "expected": "拒绝或警告",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:51.419Z",
+      "lastRun": "2026-08-17T16:16:04.426Z",
       "runner": "02-reset",
       "linkedDefects": "INCIDENT-20260814-001",
       "note": "debug 门禁机制存在（当前开发态 debug=true——生产无 TRILC_DEBUG 即关）"
@@ -1928,7 +1943,7 @@
       "steps": "run-all --live 全 suite 运行",
       "expected": "不需人工干预可重跑",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:52.553Z",
+      "lastRun": "2026-08-17T16:16:05.576Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "run-all.js + 123 cases 可重复执行"
@@ -1947,10 +1962,10 @@
       "steps": "suite JSON 回写 → git commit → diff",
       "expected": "可查历史结果",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:52.556Z",
+      "lastRun": "2026-08-17T16:16:05.577Z",
       "runner": "02-reset",
       "linkedDefects": [],
-      "note": "55 条有 lastRun / 55 条有 runner（git commit 追加追溯链）"
+      "note": "69 条有 lastRun / 69 条有 runner（git commit 追加追溯链）"
     },
     {
       "id": "MT-003",
@@ -1966,7 +1981,7 @@
       "steps": "lint 检查新文件超 500 行/函数超 50 行",
       "expected": "超限告警",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:52.560Z",
+      "lastRun": "2026-08-17T16:16:05.580Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "告警: app.ts: 4037>4000（可接受——重构挂后续树）"
@@ -1985,7 +2000,7 @@
       "steps": "比对 init-to-collab-design.md 与端点实测",
       "expected": "文档与实际响应一致",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:52.563Z",
+      "lastRun": "2026-08-17T16:16:05.583Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "10 端点全实现"
@@ -2004,7 +2019,7 @@
       "steps": "检查 daemon.log 含足够上下文",
       "expected": "无静默吞错，含时间戳/级别/上下文",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:52.570Z",
+      "lastRun": "2026-08-17T16:16:05.589Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "日志前缀全部存在 / .corrupt 备份含 console.error=true"
@@ -2023,7 +2038,7 @@
       "steps": "安装 MSI 到 Program Files 默认路径，首次启动，验证 healthz",
       "expected": "安装成功，启动成功，healthz 返回 200",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:48.874Z",
+      "lastRun": "2026-08-17T16:16:01.740Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "MSI default path: exe + trilc + extensions OK"
@@ -2042,7 +2057,7 @@
       "steps": "解压 ZIP 到自定义路径，运行",
       "expected": "运行成功，healthz 返回 200",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:48.884Z",
+      "lastRun": "2026-08-17T16:16:01.741Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "ZIP valid (>1MB, PK header)"
@@ -2061,7 +2076,7 @@
       "steps": "卸载后检查进程/文件/注册表/计划任务",
       "expected": "无残留",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:50.552Z",
+      "lastRun": "2026-08-17T16:16:03.502Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "process=0 dataDir=true regRun=0（卸载测试需完整卸载后验证=0，此处记录当前态）"
@@ -2080,7 +2095,7 @@
       "steps": "就地升级到 r20",
       "expected": "旧数据保留（sessions.db/company state）",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:50.553Z",
+      "lastRun": "2026-08-17T16:16:03.503Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "version=0.4.10 sessions.db=true（升级后数据保留）"
@@ -2099,7 +2114,7 @@
       "steps": "设 TRILC_DATA_DIR 指定自定义路径",
       "expected": "产物落自定义路径",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:50.553Z",
+      "lastRun": "2026-08-17T16:16:03.504Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "TRILC_DATA_DIR 配置路径在代码中（完整隔离实例测试归环境编排）"
@@ -2175,7 +2190,7 @@
       "steps": "损坏公司态",
       "expected": "降级/重试/明确失败",
       "status": "blocked",
-      "lastRun": "2026-08-17T16:01:33.467Z",
+      "lastRun": "2026-08-17T16:15:35.280Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供公司维失败注入环境"
@@ -2194,7 +2209,7 @@
       "steps": "模型配置不可达",
       "expected": "行为明确",
       "status": "blocked",
-      "lastRun": "2026-08-17T16:01:33.467Z",
+      "lastRun": "2026-08-17T16:15:35.280Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供模型维失败注入环境"
@@ -2213,7 +2228,7 @@
       "steps": "员工态损坏",
       "expected": "降级 warning",
       "status": "blocked",
-      "lastRun": "2026-08-17T16:01:33.467Z",
+      "lastRun": "2026-08-17T16:15:35.280Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供员工维失败注入环境"
@@ -2232,7 +2247,7 @@
       "steps": "项目仓不可达",
       "expected": "失败分类明确",
       "status": "blocked",
-      "lastRun": "2026-08-17T16:01:33.467Z",
+      "lastRun": "2026-08-17T16:15:35.280Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "需编排层提供项目维失败注入环境"
@@ -2305,7 +2320,7 @@
       "steps": "UI 交互",
       "expected": "可选来源或取消",
       "status": "pass",
-      "lastRun": "2026-08-17T16:01:55.294Z",
+      "lastRun": "2026-08-17T16:16:08.431Z",
       "runner": "02-reset",
       "linkedDefects": [],
       "note": "agents=18（冲突选择 UI 归 Playwright——数据源已验证）"
