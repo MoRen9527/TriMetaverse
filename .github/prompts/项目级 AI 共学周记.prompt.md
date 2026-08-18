@@ -22,21 +22,36 @@ CEO 当前手动使用方式为：
 - [项目级 AI 共学周记归档说明](../../docs/workflow/operating-records/项目级%20AI%20共学周记/README.md)
 - [共学周记记录 ADE 规范](../../docs/workflow/operating-records/项目级%20AI%20共学周记/ade-journal-recording-spec.md)
 
-## 执行方式（ADE 链路，2026-08-18 起）
+## 执行方式（ADE 正典链路，2026-08-18 起）
 
-条目写入必须走确定性 CLI，不再手写 markdown：
+完整链路 = 事件触发 → 登记（CLI）→ Agent Qualify/Plan（skill）→ DCE（CLI）→ Agent Close Skill → Close CLI。条目写入必须走确定性 CLI，不再手写 markdown：
 
-1. 你（agent）负责语义部分：Qualify 四问（可复述/有产出/可对外/有共学价值）+ 同周去重，把 CEO 输入整理为 `entry.json`（七字段：`title` / `phenomenon` / `detail` / `solution` / `impact` / `projExp` / `modelSelfCheck`）；
-2. 机械部分交 CLI（在 TriMetaverse 仓根执行）：
+1. **登记**（CLI，拿 runId）：
 
 ```bash
-node scripts/journal/journal-cli.mjs qualify --entry <entry.json 路径>   # 结构+脱敏扫描
-node scripts/journal/journal-cli.mjs append  --entry <entry.json 路径>   # 固定格式追加为下一个 2.n
-node scripts/journal/journal-cli.mjs close                                # 收口五查
+node scripts/journal/journal-cli.mjs begin --title "<条目标题>"    # 输出 RUN <runId>；同题已存在则 ESCALATED
 ```
 
-3. 当周文件不存在时先 `node scripts/journal/journal-cli.mjs init`；
-4. CLI 的 qualify/append/close 任一非零退出码都不得跳过——REJECTED 补字段重来，ESCALATED（脱敏命中/收口未过）升级 CEO。
+2. **你（agent）负责语义部分**：Qualify 四问（可复述/有产出/可对外/有共学价值），把 CEO 输入整理为 `entry.json`（七字段：`title` / `phenomenon` / `detail` / `solution` / `impact` / `projExp` / `modelSelfCheck`）；
+
+3. **DCE**（CLI，在 TriMetaverse 仓根执行）：
+
+```bash
+node scripts/journal/journal-cli.mjs qualify --entry <entry.json 路径> --run <runId>   # 结构+脱敏扫描
+node scripts/journal/journal-cli.mjs append  --entry <entry.json 路径> --run <runId>   # 固定格式追加为下一个 2.n
+```
+
+4. 当周文件不存在时先 `node scripts/journal/journal-cli.mjs init`；
+
+5. **Close Skill（你，语义裁决）**：读回追加后的条目，判断——是否准确反映 CEO 输入、措辞是否达到对外分享口径、有无误伤；形成裁决 `approved` 或 `escalated` + 一句说明；
+
+6. **Close CLI**（校验你的裁决 + run 链 + 收口五查）：
+
+```bash
+node scripts/journal/journal-cli.mjs close --run <runId> --verdict approved --note "<裁决说明>"
+```
+
+7. CLI 任一步非零退出码都不得跳过——REJECTED 补字段重来（RETRY），ESCALATED（脱敏命中/裁决 escalated/收口未过）升级 CEO。
 
 ## 目标
 

@@ -28,14 +28,17 @@
 
 ## 二、生命周期
 
+对齐 TriCompany ADE 正典（事件 → 登记 → Qualify → Plan → DCE → Close Skill → Close CLI → 终态）：
+
 ```text
 事件或检测（对话中出现可沉淀内容，或 CEO 指令"记入周记"）
--> 登记：去重判断（同问题当周是否已有条目）+ 预分配条目编号 2.n
--> Qualify（入册资格，四问）
--> Plan（格式与落点，三查）
--> DCE（按固定格式追加写入）
--> Close（收口自查，五查）
--> 终态：APPENDED | BLOCKED | ESCALATED
+-> 登记（CLI begin）：程序去重提示 + 生成 runId（贯穿全链）
+-> Agent Qualify（语义四问）
+-> Agent Plan / Skill（格式与落点三查 + 草拟 entry.json 七字段）
+-> DCE（CLI qualify 机械资格 → CLI append 固定格式写入）
+-> Agent Close Skill（读回追加结果，语义裁决：approved | escalated + note）
+-> Close CLI（校验裁决 + run 链完整 + 收口五查 → 持久化终态）
+-> 终态：APPROVED | ESCALATED（RETRY = qualify REJECTED 后补字段重来；BLOCKED = 结构性障碍）
 ```
 
 ### 2.1 Qualify（入册资格）
@@ -76,7 +79,17 @@
 
 写入时同步更新文件头的 `lastSyncedAt`。
 
-### 2.4 Close（收口五查）
+### 2.4 Agent Close Skill（语义收口，在 Close CLI 之前）
+
+agent 读回追加后的条目，做语义裁决（这是 Close CLI 不能替代的部分）：
+
+- 条目是否准确反映 CEO 输入（无失真、无遗漏关键细节）；
+- 措辞是否达到对外分享口径（小白可读、无内部黑话）；
+- 有无误伤（修订建议不推翻已签发内容）；
+
+裁决输出：`approved`（通过）或 `escalated`（需 CEO 处理，附原因）+ 一句裁决说明，作为 Close CLI 的输入。
+
+### 2.5 Close CLI（收口五查 + 裁决校验 + 持久化）
 
 - C1 落盘路径在当周目录（不是仓库根/其他周）；
 - C2 条目五件结构完整（现象/具体表现/解决方案/问题影响/当前经验双条）；
@@ -84,7 +97,7 @@
 - C4 git 提交（或明示"落盘未提交"由编排层补）；
 - C5 回报 CEO：文件路径 + 条目编号 + 是否新建草稿。
 
-### 2.5 终态
+### 2.6 终态
 
 - `APPENDED`：条目落盘 + 收口五查全过；
 - `BLOCKED`：当周文件缺失 → 先建草稿再追加（属于正常路径，建后转 APPENDED）；格式真源缺失（prompt/README 读不到）→ 停手升级；
@@ -99,18 +112,21 @@
 
 ## 四、执行链路（CLI 已实现）与自动化的关系
 
-完整 ADE 链路（确定性执行体：`TriMetaverse/scripts/journal/journal-cli.mjs`）：
+完整 ADE 正典链路（确定性执行体：`TriMetaverse/scripts/journal/journal-cli.mjs`）：
 
 ```text
 事件触发（prompt 手动 / 未来 cron 自动检测）
--> agent Qualify：语义四问 + 同周去重，草拟 entry.json（七字段：title/phenomenon/detail/solution/impact/projExp/modelSelfCheck）
--> DCE：node journal-cli.mjs qualify --entry <json>   # 机械资格：结构完整 + 脱敏扫描（API key 形态）
-        node journal-cli.mjs append  --entry <json>   # 固定格式渲染为下一个 2.n + lastSyncedAt bump + 同题去重
--> Close CLI：node journal-cli.mjs close              # 收口五查（路径/五件结构/元信息/日期/提交）→ 终态
--> 审计：journal-run-log.jsonl（runId/ts/action/verdict/entryNo）
+-> 登记：node journal-cli.mjs begin --title "…"           # 去重提示 + 生成 runId
+-> Agent Qualify + Plan Skill：语义四问 + 草拟 entry.json（七字段）
+-> DCE：node journal-cli.mjs qualify --entry <json> --run <runId>   # 机械资格：结构+脱敏扫描
+        node journal-cli.mjs append  --entry <json> --run <runId>   # 固定格式渲染为下一个 2.n
+-> Agent Close Skill：读回追加结果，语义裁决 approved|escalated + note
+-> Close CLI：node journal-cli.mjs close --run <runId> --verdict approved --note "…"   # 校验裁决+run 链+五查 → 终态
+-> 审计：journal-run-log.jsonl（runId 贯穿 begin→qualify→append→close，ts/verdict/entryNo）
 ```
 
+- Close CLI 是裁决的**校验者**而非发起者：`--verdict` 只接受 Close Skill 的合法值（approved|escalated），且要求 run 链完整（begin+append 同 runId 在案）；机械查不过时即使 agent 裁 approved 仍 ESCALATED；
 - 格式由 CLI 代码保证（JSON 进、固定结构出），不依赖 agent 纪律——DCE 段确定性成立；
-- 语义判断（入册价值、脱敏裁决）保留在 agent + CEO——智能与确定性分离；
+- 语义判断（入册价值、脱敏裁决、收口语义裁决）保留在 agent + CEO——智能与确定性分离；
 - `init` 子命令建当周草稿骨架（active 周由 OP index 判定）；
 - 本规范同时是 automation-backlog 四项自动化（自动建草稿/对话后自动判断追加/周六午前更新/签发提醒）的**计划面**：cron/resident 实现后执行同一套 CLI 与规则，人工与自动化不双轨。

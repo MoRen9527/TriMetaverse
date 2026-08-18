@@ -124,6 +124,30 @@ function bumpSyncedAt(md) {
 }
 
 // ── 命令 ──
+function cmdBegin(title) {
+  // ADE 登记段：程序去重提示 + 生成 runId（贯穿 qualify→append→close 的执行链）
+  const week = resolveCurrentWeek();
+  const p = journalPath(week);
+  let dup = null;
+  if (title && existsSync(p)) {
+    const md = readFileSync(p, 'utf8');
+    if (new RegExp(`^### 2\\.\\d+ ${String(title).trim().replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&')}\\s*$`, 'm').test(md)) dup = '同题条目已存在';
+  }
+  const runId = randomUUID().slice(0, 8);
+  logRun({ action: 'begin', runId, week, title: title ?? null, dupHint: dup });
+  if (dup) {
+    console.log(`ESCALATED: ${dup}（${p}）——修订走 CEO 明确指令，勿重复登记`);
+    process.exit(3);
+  }
+  console.log(`RUN ${runId} week=${week}`);
+  console.log(p);
+}
+
+function readRunLog() {
+  if (!existsSync(RUN_LOG)) return [];
+  return readFileSync(RUN_LOG, 'utf8').split('\n').filter((l) => l.trim()).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+}
+
 function cmdInit() {
   const week = resolveCurrentWeek();
   const p = journalPath(week);
@@ -150,26 +174,26 @@ function cmdInit() {
   console.log(`APPENDED(init): ${p}`);
 }
 
-function cmdQualify(entryPath) {
+function cmdQualify(entryPath, runId) {
   const { entry, problems } = loadEntry(entryPath);
   const hits = scanSensitive(entry);
   for (const p of problems) console.log(`FAIL ${p}`);
   for (const h of hits) console.log(`SENSITIVE ${h}`);
-  if (problems.length > 0) { console.log('REJECTED: 结构不完整（ESCALATED → agent 补字段）'); logRun({ action: 'qualify', verdict: 'REJECTED', problems }); process.exit(1); }
-  if (hits.length > 0) { console.log('ESCALATED: 命中脱敏扫描，需 agent/CEO 裁决脱敏'); logRun({ action: 'qualify', verdict: 'ESCALATED', hits }); process.exit(3); }
+  if (problems.length > 0) { console.log('REJECTED: 结构不完整（ESCALATED → agent 补字段）'); logRun({ action: 'qualify', verdict: 'REJECTED', problems, runId: runId ?? null }); process.exit(1); }
+  if (hits.length > 0) { console.log('ESCALATED: 命中脱敏扫描，需 agent/CEO 裁决脱敏'); logRun({ action: 'qualify', verdict: 'ESCALATED', hits, runId: runId ?? null }); process.exit(3); }
   console.log('QUALIFIED: 结构完整，脱敏扫描通过（语义四问仍归 agent）');
-  logRun({ action: 'qualify', verdict: 'QUALIFIED' });
+  logRun({ action: 'qualify', verdict: 'QUALIFIED', runId: runId ?? null });
 }
 
-function cmdAppend(entryPath) {
+function cmdAppend(entryPath, runId) {
   const { entry, problems } = loadEntry(entryPath);
   if (problems.length > 0) { console.log(`REJECTED: ${problems.join('; ')}`); process.exit(1); }
   const week = resolveCurrentWeek();
   const p = journalPath(week);
-  if (!existsSync(p)) { console.log(`BLOCKED: 当周文件不存在 ${p} —— 先运行 init`); logRun({ action: 'append', verdict: 'BLOCKED', week }); process.exit(2); }
+  if (!existsSync(p)) { console.log(`BLOCKED: 当周文件不存在 ${p} —— 先运行 init`); logRun({ action: 'append', verdict: 'BLOCKED', week, runId: runId ?? null }); process.exit(2); }
   const md = readFileSync(p, 'utf8');
   if (entry.title && new RegExp(`^### 2\\.\\d+ ${entry.title.trim().replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&')}\\s*$`, 'm').test(md)) {
-    console.log('BLOCKED: 同题条目已存在（去重）——如需修订走 CEO 明确指令'); logRun({ action: 'append', verdict: 'BLOCKED-dup', week }); process.exit(2);
+    console.log('BLOCKED: 同题条目已存在（去重）——如需修订走 CEO 明确指令'); logRun({ action: 'append', verdict: 'BLOCKED-dup', week, runId: runId ?? null }); process.exit(2);
   }
   const n = nextEntryNo(md);
   const rendered = renderEntry(entry, n);
@@ -190,17 +214,37 @@ function cmdAppend(entryPath) {
   const out = bumpSyncedAt(md.slice(0, insertAt).replace(/\n*$/, '\n\n') + rendered + '\n' + md.slice(insertAt).replace(/^\n+/, ''));
   writeFileSync(p, out);
   console.log(`APPENDED: ${p} 条目 2.${n}「${entry.title.trim()}」`);
-  logRun({ action: 'append', verdict: 'APPENDED', week, entryNo: n, title: entry.title.trim(), path: p });
+  logRun({ action: 'append', verdict: 'APPENDED', week, entryNo: n, title: entry.title.trim(), path: p, runId: runId ?? null });
 }
 
-function cmdClose(weekArg) {
+function cmdClose(weekArg, runId, verdictArg, noteArg) {
+  // Close CLI：校验 agent 裁决（Close Skill 输出）+ 收口五查 + 持久化终态。
+  // --run 存在时要求裁决值合法且 run 链完整（begin→qualify→append 同 runId）。
   const week = weekArg ?? resolveCurrentWeek();
   const p = journalPath(week);
   const checks = [];
   const ok = (name, pass, note = '') => { checks.push(`${pass ? 'PASS' : 'FAIL'} C-${name}${note ? `（${note}）` : ''}`); return pass; };
   let all = true;
   if (!existsSync(p)) {
-    console.log(`BLOCKED: ${p} 不存在`); logRun({ action: 'close', verdict: 'BLOCKED', week }); process.exit(2);
+    console.log(`BLOCKED: ${p} 不存在`); logRun({ action: 'close', verdict: 'BLOCKED', week, runId: runId ?? null }); process.exit(2);
+  }
+  // 裁决校验（ADE：Close CLI 是裁决的确定性校验者，不是裁决的发起者）
+  if (runId) {
+    const VALID = ['approved', 'escalated'];
+    if (!VALID.includes(verdictArg)) {
+      console.log(`REJECTED: --verdict 必须是 ${VALID.join('|')}（agent Close Skill 的语义裁决）`); process.exit(1);
+    }
+    const chain = readRunLog().filter((r) => r.runId === runId);
+    const has = (a) => chain.some((r) => r.action === a);
+    all = ok('0 run 链完整', has('begin') && has('append'), `begin=${has('begin')} qualify=${has('qualify')} append=${has('append')}`) && all;
+    all = ok('0b agent 裁决在案', verdictArg === 'approved' || verdictArg === 'escalated', `verdict=${verdictArg}`) && all;
+    if (verdictArg === 'escalated') {
+      console.log(`CLOSE ${week}:`);
+      for (const c of checks) console.log('  ' + c);
+      console.log('ESCALATED（agent 语义裁决：需 CEO 处理）');
+      logRun({ action: 'close', verdict: 'ESCALATED', week, runId, agentVerdict: verdictArg, note: noteArg ?? null });
+      process.exit(3);
+    }
   }
   const md = readFileSync(p, 'utf8');
   all = ok('1 路径在当周目录', p.includes(join(RECORDS_ROOT, week))) && all;
@@ -221,9 +265,9 @@ function cmdClose(weekArg) {
   all = ok('5 git 已提交', clean, clean ? '' : '未提交（或明示由编排层补）') && all;
   console.log(`CLOSE ${week}:`);
   for (const c of checks) console.log('  ' + c);
-  const verdict = all ? 'CLOSED' : 'ESCALATED';
+  const verdict = all ? 'APPROVED' : 'ESCALATED';
   console.log(verdict);
-  logRun({ action: 'close', verdict, week });
+  logRun({ action: 'close', verdict, week, runId: runId ?? null, agentVerdict: verdictArg ?? null, note: noteArg ?? null });
   process.exit(all ? 0 : 1);
 }
 
@@ -235,12 +279,13 @@ const arg = (name) => {
 };
 try {
   switch (cmd) {
+    case 'begin': cmdBegin(arg('--title')); break;
     case 'init': cmdInit(); break;
-    case 'qualify': cmdQualify(arg('--entry')); break;
-    case 'append': cmdAppend(arg('--entry')); break;
-    case 'close': cmdClose(arg('--week')); break;
+    case 'qualify': cmdQualify(arg('--entry'), arg('--run')); break;
+    case 'append': cmdAppend(arg('--entry'), arg('--run')); break;
+    case 'close': cmdClose(arg('--week'), arg('--run'), arg('--verdict'), arg('--note')); break;
     default:
-      console.error('用法: journal-cli.mjs init | qualify --entry <json> | append --entry <json> | close [--week 2026-Wnn]');
+      console.error('用法: journal-cli.mjs begin [--title] | init | qualify --entry <json> [--run id] | append --entry <json> [--run id] | close [--week] [--run id --verdict approved|escalated --note ...]');
       process.exit(64);
   }
 } catch (e) {
