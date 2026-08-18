@@ -72,6 +72,6 @@
 - 不泄露 API Key、商业敏感信息、私人聊天内容或未授权的第三方资料。
 - 不跳过 CEO 签发直接生成归档正式版。
 
-## 6. 动作规范（已立册）
+## 6. 动作规范与执行体（已立册 + CLI 已实现）
 
-手动与自动化共用的动作规范见 [ade-journal-recording-spec.md](ade-journal-recording-spec.md)（2026-08-18 立册）：入册资格四问、格式与落点三查、收口五查、终态定义。自动化的计划面即该规范；触发事件：W34 周记首次写入违规（跳过规范查找、按任意旧周模板自创结构）。
+手动与自动化共用的动作规范见 [ade-journal-recording-spec.md](ade-journal-recording-spec.md)（2026-08-18 立册）：入册资格四问、格式与落点三查、收口五查、终态定义。确定性执行体已实现：`TriMetaverse/scripts/journal/journal-cli.mjs`（init / qualify / append / close + journal-run-log.jsonl 审计）；§1-§4 所列自动化实现时直接复用该 CLI，不另起炉灶。触发事件：W34 周记首次写入违规（跳过规范查找、按任意旧周模板自创结构）。

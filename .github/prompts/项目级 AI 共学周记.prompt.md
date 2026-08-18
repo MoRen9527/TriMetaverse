@@ -20,6 +20,23 @@ CEO 当前手动使用方式为：
 - [秘书处机制](../../docs/workflow/tricompany-secretariat.md)
 - [真实经营记录目录说明](../../docs/workflow/operating-records/README.md)
 - [项目级 AI 共学周记归档说明](../../docs/workflow/operating-records/项目级%20AI%20共学周记/README.md)
+- [共学周记记录 ADE 规范](../../docs/workflow/operating-records/项目级%20AI%20共学周记/ade-journal-recording-spec.md)
+
+## 执行方式（ADE 链路，2026-08-18 起）
+
+条目写入必须走确定性 CLI，不再手写 markdown：
+
+1. 你（agent）负责语义部分：Qualify 四问（可复述/有产出/可对外/有共学价值）+ 同周去重，把 CEO 输入整理为 `entry.json`（七字段：`title` / `phenomenon` / `detail` / `solution` / `impact` / `projExp` / `modelSelfCheck`）；
+2. 机械部分交 CLI（在 TriMetaverse 仓根执行）：
+
+```bash
+node scripts/journal/journal-cli.mjs qualify --entry <entry.json 路径>   # 结构+脱敏扫描
+node scripts/journal/journal-cli.mjs append  --entry <entry.json 路径>   # 固定格式追加为下一个 2.n
+node scripts/journal/journal-cli.mjs close                                # 收口五查
+```
+
+3. 当周文件不存在时先 `node scripts/journal/journal-cli.mjs init`；
+4. CLI 的 qualify/append/close 任一非零退出码都不得跳过——REJECTED 补字段重来，ESCALATED（脱敏命中/收口未过）升级 CEO。
 
 ## 目标
 

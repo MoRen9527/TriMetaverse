@@ -97,6 +97,20 @@
 - **内部台账入册**：commit 哈希索引是工程审计信息，不是对外共学内容（违反 Q4）。
 - **一次写完整个周记**：规范动作是"逐条追加"；新建草稿也应保持骨架最小（元信息+记录人行+第 2 节标题），内容按条目增量生长。
 
-## 四、与自动化的关系
+## 四、执行链路（CLI 已实现）与自动化的关系
 
-本规范是 automation-backlog 所列四项自动化（自动建草稿/对话后自动判断追加/周六午前更新/签发提醒）的**计划面**：自动化实现时，cron/resident 链路执行的本规范的 Qualify→Close 各步，终态与审计记录落周目录。人工与自动化共用同一套规则，不因自动化降级格式要求。
+完整 ADE 链路（确定性执行体：`TriMetaverse/scripts/journal/journal-cli.mjs`）：
+
+```text
+事件触发（prompt 手动 / 未来 cron 自动检测）
+-> agent Qualify：语义四问 + 同周去重，草拟 entry.json（七字段：title/phenomenon/detail/solution/impact/projExp/modelSelfCheck）
+-> DCE：node journal-cli.mjs qualify --entry <json>   # 机械资格：结构完整 + 脱敏扫描（API key 形态）
+        node journal-cli.mjs append  --entry <json>   # 固定格式渲染为下一个 2.n + lastSyncedAt bump + 同题去重
+-> Close CLI：node journal-cli.mjs close              # 收口五查（路径/五件结构/元信息/日期/提交）→ 终态
+-> 审计：journal-run-log.jsonl（runId/ts/action/verdict/entryNo）
+```
+
+- 格式由 CLI 代码保证（JSON 进、固定结构出），不依赖 agent 纪律——DCE 段确定性成立；
+- 语义判断（入册价值、脱敏裁决）保留在 agent + CEO——智能与确定性分离；
+- `init` 子命令建当周草稿骨架（active 周由 OP index 判定）；
+- 本规范同时是 automation-backlog 四项自动化（自动建草稿/对话后自动判断追加/周六午前更新/签发提醒）的**计划面**：cron/resident 实现后执行同一套 CLI 与规则，人工与自动化不双轨。
