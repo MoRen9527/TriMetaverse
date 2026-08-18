@@ -10,7 +10,7 @@
 
 维护：秘书处（当前由 `CEOChiefOfStaff` 代管）
 
-上位规范：[TriCompany ADE 模式规范](../../../../TriCompany/docs/engineering/ade-pattern-spec.md)（ADE 是事件驱动、可恢复、必须收口的 Agent 全生命周期执行协议；本文件把"记入共学周记"动作按该协议具体化）
+上位规范：[TriCompany ADE 模式规范](../../../../TriCompany/docs/engineering/ade-pattern-spec.md) §1.1（FADE = Full-cycle ADE，完整周期八段全落地实跑的实例称号；**本动作已登记为 [fade-registry.md](../../../../TriCompany/docs/engineering/fade-registry.md) FADE-003**）
 
 关联文件：
 
