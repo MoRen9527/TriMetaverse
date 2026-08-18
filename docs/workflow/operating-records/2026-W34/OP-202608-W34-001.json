@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（分身协议批准+MVP 启动登记）",
-        "version": "1.7.0",
-        "lastUpdated": "2026-08-17T04:31:19.588Z",
+        "updatedBy": "编排层（ADE 收尾对标待办登记）",
+        "version": "1.8.0",
+        "lastUpdated": "2026-08-18T15:46:19.000Z",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -202,7 +202,9 @@
         }
     ],
     "doneTreesThisWeek": [],
-    "nextActions": [],
+    "nextActions": [
+        "FADE-ASSESS-20260818-001: ADE 收尾对标两件待办（spec v1.1.1 §2.6 + 登记册补齐项在案）——① Score CLI 执行体实现（试卷模板输出合同为基准）② FADE-001~004 四实例补试卷（含测试集）并跑首次评分。前置条件（CEO 定调 2026-08-18）：文档关系（试卷↔实例↔规范↔登记册）与 FADE 实例现状梳理清楚前不启动，否则必返工"
+    ],
     "carry_over_from_w31": [
         "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
         "CARRY-20260728-003: TriCade MSI CI — 6w+ ✅ W32 已实质完成（目录治理+MSI 自动化），建议关闭",
