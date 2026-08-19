@@ -6,7 +6,7 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-18
 
-版本：v1.0（2026-08-18 立册；CEO 指令：员工上岗做成 FADE，规范名称"候选岗位发布"）
+版本：v1.1（2026-08-18 立册；2026-08-19 补三层语义分离口径）
 
 登记：[TriCompany fade-registry.md](../../TriCompany/docs/engineering/fade-registry.md) **FADE-004**
 
@@ -17,6 +17,8 @@
 ## 一、定义
 
 「候选岗位发布」= 把岗位 JD 发布到候选名册，并管理员工上岗全生命周期：**开业装配发布候选全集 → CEO 勾选选定 →（后补）settings 勾选 → CHO 审批 → JD 进在岗名册**。在岗名册是公司运行态事实（谁可被派工/被 spawn 分身），不是 agent 加载列表（13 岗合同全部常驻加载，名册只治理"上岗"状态）。
+
+**三层语义分离（2026-08-19 live entry 评审裁决，CFO 及未来上岗复用）**：决策面=在岗名册（谁在岗/编制，治理真源，本 FADE）；信息面=员工 contract（身份/职责/权限，三端可读）；适配面=live entry（当前宿主 Copilot-host 的派生加载壳——发布管线渲染/复制产物，禁人工直接编辑，hash 不一致时 `--publish-agents` 覆盖并审计留痕）。"三端可读 contract"与"Copilot-host 发现"并行互不替代。
 
 ## 二、FADE 生命周期（八段映射）
 
