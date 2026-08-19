@@ -18,8 +18,8 @@
 - 覆盖差异的关键定调：
   - §三 ADE-B 工作包「多宿主统一渲染模型」：适用范围 = TriCompany 员工发布到宿主侧（Copilot-host 面 `.github/agents/` / Claude Code 面 `.claude/agents/`）——源单份 + 每宿主渲染模板 → 渲染，两宿主面成为 contract 派生物，双源漂移从机制上消失；TriLC/TriMC runtime 直读 contract，不参与渲染面
   - 发布 CLI 宿主参数：`source_publish_check --publish-agents --host={copilot|claude}`，每宿主注册三项（渲染模板 + live manifest + 保护白名单）；未来任何新宿主 = 新增一个宿主分支，管线零改动
-  - binding profile 收敛：定性为「发布绑定关系的派生记录」，禁人工编辑、由生成管线重建（与 D-07 live entry 派生壳纪律同构），并入 ADE-B 阶段 1/2（W34 待办 FADE-ASSESS-004）
-  - 发布链 runtime 侧等价映射：source=同一源五件套+contract；support=五件套契约 + `.tricompany-cognition/` SQLite；binding=roster.active；live=`/agents` API（contract 直读，无渲染文件）；manifest=roster.status；governance=同一套 CHO handoff + CAO governance + CEO 签署。唯一真缺口 = `.tricompany-cognition/` 有存储形态无内容注入链路（W34 待办 FADE-ASSESS-003）
+  - binding profile 收敛：定性为「发布绑定关系的派生记录」，禁人工编辑、由生成管线重建（与 D-07 live entry 派生壳纪律同构），并入 ADE-B 阶段 1/2（W34 待办 FADE-ASSESS-20260819-004）
+  - 发布链 runtime 侧等价映射：source=同一源五件套+contract；support=五件套契约 + `.tricompany-cognition/` SQLite；binding=roster.active；live=`/agents` API（contract 直读，无渲染文件）；manifest=roster.status；governance=同一套 CHO handoff + CAO governance + CEO 签署。唯一真缺口 = `.tricompany-cognition/` 有存储形态无内容注入链路（W34 待办 FADE-ASSESS-20260819-003）
 
 ## 3. 差异核对表（2026-08-19 现状 vs 规划）
 
@@ -41,7 +41,7 @@
 3. `TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json`：governedBy 三文档与 liveEntryStatus 为 Copilot 口径；渲染改造涉及生成规则变更时同步更新，勿当多宿主终态引用。
 4. `TriMetaverse/docs/workflow/tricompany-copilot-host-assets-governance.md` 与 `tricompany-copilot-host-assets-migration-matrix.md`：2026-07-08 定稿于 published-copy 移除轮，未含 Claude 宿主视图；引用其资产标签体系（source-only / live-entry / support-object-set / audit-record / runtime-state）时注意后续需增补 Claude live 面归类。
 5. `TriMetaverse/scripts/sync-agents-to-claude.mjs`：当前 `.claude/agents/` 的事实生成机制，无任何治理文档引用（无 owner/门禁/验证）；提案已定调其职责收敛进统一发布管线 `--host=claude` 渲染分支，视为过渡态，**不扩展依赖、不补充治理**。
-6. 已登记的配套待办：FADE-ASSESS-003（ADE-B 知识注入消费链路）、FADE-ASSESS-004（binding profile 派生记录收敛）已入 W34 待办，与渲染改造/员工域试卷同批排期（`TriMetaverse/docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`）。
+6. 已登记的配套待办：FADE-ASSESS-20260819-003（ADE-B 知识注入消费链路）、FADE-ASSESS-20260819-004（binding profile 派生记录收敛）已入 W34 待办，与渲染改造/员工域试卷同批排期（`TriMetaverse/docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json`）。
 
 ## 5. 结论
 
