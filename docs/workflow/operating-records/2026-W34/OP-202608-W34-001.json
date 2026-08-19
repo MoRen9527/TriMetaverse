@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（ADE 整合阶段 0 待办登记）",
-        "version": "1.8.1",
-        "lastUpdated": "2026-08-18T18:57:54.000Z",
+        "updatedBy": "编排层（CFO 上岗 + token 成本控制待办登记）",
+        "version": "1.8.2",
+        "lastUpdated": "2026-08-19T02:34:02.000Z",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -204,7 +204,8 @@
     "doneTreesThisWeek": [],
     "nextActions": [
         "FADE-ASSESS-20260818-001: ADE 收尾对标两件待办（spec v1.1.2 §2.6 + 登记册补齐项在案）——① 评分执行体落地：Score CLI（测试集覆盖检查，确定性）+ Score Skill（每项处理质量评定，语义）② FADE-001~004 四实例补试卷（含测试集）并跑首次评分。前置条件（CEO 定调 2026-08-18）：文档关系（试卷↔实例↔规范↔登记册）与 FADE 实例现状梳理清楚前不启动，否则必返工",
-        "FADE-ASSESS-20260819-002: ADE 整合阶段 0 两处合同级缺口修复（提案 ade-consolidation-proposal.md §六，CEO 2026-08-19 采纳）——① employee_host_publish.py L101-102 默认 execute 改默认 dry-run + --execute 显式（§2.4 安全门）② source_publish_check.py _publish_single_agent 补白名单∩禁区=∅ 反向校验 + manifest 变更走 Close CLI 审计。验证=既有 validation 套件（基线 33/33）。待 CEO 排期指令，未排期不启动；建议 owner CTO 小狄"
+        "FADE-ASSESS-20260819-002: ADE 整合阶段 0 两处合同级缺口修复（提案 ade-consolidation-proposal.md §六，CEO 2026-08-19 采纳）——① employee_host_publish.py L101-102 默认 execute 改默认 dry-run + --execute 显式（§2.4 安全门）② source_publish_check.py _publish_single_agent 补白名单∩禁区=∅ 反向校验 + manifest 变更走 Close CLI 审计。验证=既有 validation 套件（基线 33/33）。待 CEO 排期指令，未排期不启动；建议 owner CTO 小狄",
+        "CFO-ONBOARD-20260819-001: CFO 上岗（尽快）——职责双轨：① 现实财务（原有）② 赛博公司 token 消耗成本控制（CEO 2026-08-19 定调新增）。配套机制：整套触发执行机制的 token 消耗由小贾掌控——累计消耗 >2 亿 tokens 或 单次 >1 亿 tokens 升级 CEO 决策。上岗路径：经 FADE-004 候选岗位发布链（CHO 审批）；机制定稿后落 CFO role 文档与 ceo-chief-of-staff authorization matrix"
     ],
     "carry_over_from_w31": [
         "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
