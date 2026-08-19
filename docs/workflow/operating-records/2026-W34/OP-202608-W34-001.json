@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（CFO 上岗前置工序补录）",
-        "version": "1.8.3",
-        "lastUpdated": "2026-08-19T02:57:31.000Z",
+        "updatedBy": "编排层（知识注入消费链路工作包登记）",
+        "version": "1.8.4",
+        "lastUpdated": "2026-08-19T05:56:22.000Z",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -205,7 +205,8 @@
     "nextActions": [
         "FADE-ASSESS-20260818-001: ADE 收尾对标两件待办（spec v1.1.2 §2.6 + 登记册补齐项在案）——① 评分执行体落地：Score CLI（测试集覆盖检查，确定性）+ Score Skill（每项处理质量评定，语义）② FADE-001~004 四实例补试卷（含测试集）并跑首次评分。前置条件（CEO 定调 2026-08-18）：文档关系（试卷↔实例↔规范↔登记册）与 FADE 实例现状梳理清楚前不启动，否则必返工",
         "FADE-ASSESS-20260819-002: ADE 整合阶段 0 两处合同级缺口修复（提案 ade-consolidation-proposal.md §六，CEO 2026-08-19 采纳）——① employee_host_publish.py L101-102 默认 execute 改默认 dry-run + --execute 显式（§2.4 安全门）② source_publish_check.py _publish_single_agent 补白名单∩禁区=∅ 反向校验 + manifest 变更走 Close CLI 审计。验证=既有 validation 套件（基线 33/33）。待 CEO 排期指令，未排期不启动；建议 owner CTO 小狄",
-        "CFO-ONBOARD-20260819-001: CFO 上岗（尽快）——职责双轨：① 现实财务（原有）② 赛博公司 token 消耗成本控制（CEO 2026-08-19 定调新增）。配套机制：整套触发执行机制的 token 消耗由小贾掌控——累计消耗 >2 亿 tokens 或 单次 >1 亿 tokens 升级 CEO 决策。上岗路径：经 FADE-004 候选岗位发布链（CHO 审批）；机制定稿后落 CFO role 文档与 ceo-chief-of-staff authorization matrix。前置工序（小狄核验 2026-08-19）：① host 附加段回归源（模板化）→ ② 渲染模板化改造（_publish_single_agent 复制改渲染 + manifest renderTemplate/extraSections）→ ③ 派生一致校验落 check_items → ④ CFO 走链。现状 CFO live 与源 hash 已漂移（99 vs 113 行），须先定稿派生一致语义再走链，否则出现「live 已就位但管线永远报不一致」僵局"
+        "CFO-ONBOARD-20260819-001: CFO 上岗（尽快）——职责双轨：① 现实财务（原有）② 赛博公司 token 消耗成本控制（CEO 2026-08-19 定调新增）。配套机制：整套触发执行机制的 token 消耗由小贾掌控——累计消耗 >2 亿 tokens 或 单次 >1 亿 tokens 升级 CEO 决策。上岗路径：经 FADE-004 候选岗位发布链（CHO 审批）；机制定稿后落 CFO role 文档与 ceo-chief-of-staff authorization matrix。前置工序（小狄核验 2026-08-19）：① host 附加段回归源（模板化）→ ② 渲染模板化改造（_publish_single_agent 复制改渲染 + manifest renderTemplate/extraSections）→ ③ 派生一致校验落 check_items → ④ CFO 走链。现状 CFO live 与源 hash 已漂移（99 vs 113 行），须先定稿派生一致语义再走链，否则出现「live 已就位但管线永远报不一致」僵局",
+        "FADE-ASSESS-20260819-003: ADE-B 员工域知识注入消费链路（CEO 2026-08-19 记入，ADE-B 阶段 1/2 工作包）——三端（研发仓/TriLC/TriMC）知识注入功能缺口：knowledge 资产（TriCompany-copilot-host-assets 知识工作区 + 五件套 + wiki 消费记录）处于「只生成、无消费」状态，hermes 融合（V0.1 方案 + phase-1 supermemory 实时验证实验，源侧 TriCompany/runtime/cognition）未接三端。内容：知识资产消费链路设计（三端注入形态）+ supermemory 实验接续；与 live entry 渲染改造、员工域试卷同批排期"
     ],
     "carry_over_from_w31": [
         "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
