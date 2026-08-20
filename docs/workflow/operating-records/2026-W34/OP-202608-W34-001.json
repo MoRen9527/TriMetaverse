@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（阶段 2 启动，FADE-ASSESS-007 执行中）",
-        "version": "1.9.3",
-        "lastUpdated": "2026-08-20T03:13:35.000Z",
+        "updatedBy": "编排层（阶段 2 收口 APPROVED）",
+        "version": "1.9.4",
+        "lastUpdated": "2026-08-20T03:42:55.000Z",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -210,7 +210,7 @@
         "FADE-ASSESS-20260819-004: ADE-B binding profile 收敛（CEO 2026-08-19 记入，ADE-B 渲染改造工作包）——binding-profiles/*.json 定性为「发布绑定关系的派生记录」：语义真源收敛 contract、绑定事实收敛 manifest，禁人工编辑、由生成管线重建（与 D-07 live entry 派生壳纪律同构）；不可替代部分=liveEntry.identityRule 与 notes（绑定决策证据）。生成管线重建时同步校验 binding profile 与 contract/manifest 一致性，并入 ADE-B 阶段 1/2 同批排期。范围定调（CEO 2026-08-19）：多宿主渲染模型适用于员工发布到宿主侧（Copilot-host 面 .github/agents / Claude Code 面 .claude/agents）；TriLC/TriMC runtime 直读 contract 不参与渲染面；TriLC init-assemble 的 Claude Code 模板职责随统一渲染模型收敛进统一发布管线。宿主参数定调（CEO 2026-08-19）：发布 CLI 加 --host={copilot|claude}，先支持两宿主——copilot 默认兼容现状、claude 承接 init-assemble 装配职责；每宿主注册渲染模板+live manifest+保护白名单，标准管线不变，未来新宿主=新增宿主分支（模板+manifest+白名单）",
         "FADE-ASSESS-20260819-005: ADE-B 员工域上岗 gating 落位（CEO 2026-08-19 记入）——roster.active 当前无运行态门禁（实证：/agents API contract 全量可见无过滤；派工/分身/调度未见 roster 校验）：① 派工门禁（周平面任务树 owner 校验 active）② 分身门禁（clone-dispatch spawn 前置校验在岗）③ 调度门禁（触发链只拉起在岗岗）。可见性=contract 全量（信息面，不改），可用性=roster.active gating（决策面，补）；上岗从「状态记录」升级为「功能门禁」，并入 ADE-B 员工域/FADE-004 推进",
         "FADE-ASSESS-20260820-006: ADE 整合阶段 1 报告合同收敛——**✅ 已完成（2026-08-20，APPROVED，commit 856338e + 2c407df）**：三报告统一 envelope（守恒不变量 + items 七字段基座 + scope_specific 分域）；action 词表契约化；errors>0→rc=1；drive-relative 拒绝；消费者更新。链：小全实现（60/60）→ 小柯独立验证（8/8 PASS）→ 小狄终审（APPROVE，守恒独立核算）→ 收口（spec §2.2 envelope v1.0 落位 v1.1.7）。阶段 2 去向：显式 runId 覆盖策略、组合容器聚合决策、envelope 公共函数提炼+容器防御、_make_run_id docstring 修正",
-        "FADE-ASSESS-20260820-007: ADE 整合阶段 2 生命周期骨架统一（CEO 2026-08-20 启动，**执行中**）——runId 显式化（--run-id 优先/时间戳回退）+ Close CLI 合同实现（§2.5 终态门：裁决校验 + 终态审计 + CLOSE_REJECTED）+ Score CLI 执行体（测试集覆盖检查 + quality-scores 注入合并 + 双门槛，模板 §三 合同）+ 组合容器聚合 + envelope 公共函数提炼 + docstring 修正。链：小全实现 → 小柯独立验证 → 小狄终审 → 收口（模板/规范落位）。FADE-ASSESS-001 评分执行体部分并入本阶段"
+        "FADE-ASSESS-20260820-007: ADE 整合阶段 2 生命周期骨架统一——**✅ 已完成（2026-08-20，APPROVED，commit fd59157 + efbfdf1）**：runId 显式化 + Close CLI（--close 终态审计 + CLOSE_REJECTED）+ Score CLI 执行体（覆盖检查 + quality 注入 + 双门槛三态）+ 组合容器聚合 + ade_envelope 公共函数 + 编码修复（GBK 环境依赖消除）。链：小全实现（135 全绿）→ 小柯独立验证（50/50 含 V6 中文路径）→ 小狄终审（APPROVE + 1 必修编码 → 修复复跑全绿）→ 收口（spec v1.1.8 勘误 + 模板 v1.0.4 + code-state 登记）。FADE-ASSESS-001 评分执行体部分已并入完成，剩余=四实例试卷"
     ],
     "carry_over_from_w31": [
         "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
