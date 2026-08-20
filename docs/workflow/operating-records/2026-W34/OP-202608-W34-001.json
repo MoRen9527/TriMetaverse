@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（三块分析结论登记待办）",
-        "version": "1.11.5",
-        "lastUpdated": "2026-08-20T13:10:36.000Z",
+        "updatedBy": "编排层（对齐设计文档立册，周平面指向）",
+        "version": "1.11.6",
+        "lastUpdated": "2026-08-20T13:44:30.000Z",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -211,7 +211,7 @@
         "FADE-ASSESS-20260819-005: ADE-B 员工域上岗 gating 落位——**✅ 已完成（2026-08-20，APPROVED，commit 3f11d11）**：三处运行态门禁（派工 tasks/submit ownerRoleId 409 / 分身 AgentTool 合同岗 spawn / 调度 cron roleId+shouldRunJob 含 command job）；单一校验真源 staffing.ts；可见性 contract 全量不改；终审补丁（gate 前移 + skipped 不进 degraded 解除）。验证：24 新用例 + 452/451 + 小柯独立 HTTP 实测。规范立册 fade-005-roster-gating-spec.md。观察项挂后续：分身 spawn 级端到端、setRosterGate 多实例注入、skipped-degraded 单测固化",
         "FADE-ASSESS-20260820-006: ADE 整合阶段 1 报告合同收敛——**✅ 已完成（2026-08-20，APPROVED，commit 856338e + 2c407df）**：三报告统一 envelope（守恒不变量 + items 七字段基座 + scope_specific 分域）；action 词表契约化；errors>0→rc=1；drive-relative 拒绝；消费者更新。链：小全实现（60/60）→ 小柯独立验证（8/8 PASS）→ 小狄终审（APPROVE，守恒独立核算）→ 收口（spec §2.2 envelope v1.0 落位 v1.1.7）。阶段 2 去向：显式 runId 覆盖策略、组合容器聚合决策、envelope 公共函数提炼+容器防御、_make_run_id docstring 修正",
         "FADE-QUALITY-REVIEW-20260820-001: **手动验证和审核此前 FADE 实现质量（CEO 2026-08-20 定调，待办）**——对已收口的 FADE 全链实现（阶段 0-3、渲染改造、试卷评分、上岗 gating、知识注入、批次 1-3）做手动验证与质量审核（人工走查：真实链路走一遍 + 实现质量与规范符合度）。开工条件：CEO 指定时间/方式。",
-        "ALIGN-ANALYSIS-20260820-001: **AGENTS.md 对齐与模块宿主配套分析结论（xiaojia-alignment-analysis 交付，CEO 定调待办，不开工）**——① AGENTS.md 真源化技术上可行（HostRenderSpec 注册表可承载根级规则文件，D-07 同构禁手动修改）；模块 AGENTS.md 已是统一五段式模板但手工复制无发布源 ② 模块三件套（registry）copilot 面=登记状态管道外手工维护（无渲染无 diff 校验）、claude 面无发布形态；TriMetaverse/.github/agents 有 4 个 lowercase 游离残留（可走 retiredLiveEntries）；TriCode 完全缺失标准配套；TriPilot 命名小写 p 待规范化 ③ TriLC/TriMC 运行时消费 TriCompany contract.yaml，模块 .github/agents 不被任何运行时消费；三份定义（.agent.md/.contract.yaml/binding-profile）无交叉校验。TODO：1=AGENTS.md 真源化（P0）2=CLAUDE.md/AGENTS.md 分层收口（P0）3=模块三件套进管道（P0）4=游离残留清理（P0）5=TriCode 配套补建（P1）6=三份定义交叉校验入管线（P1）。CEO 定调点 5 项（范围/CLAUDE.md 治理/跨仓写形态/claude 面发布/TriCode 地位）待确认",
+        "ALIGN-ANALYSIS-20260820-001: **AGENTS.md 对齐与模块宿主配套（CEO 定调待办，不开工）——完整设计见 [agent-governance-alignment-design.md](../execution/agent-governance-alignment-design.md)**：① AGENTS.md 真源化（TriCompany 模板发布 + D-07 同构禁手动修改）；CLAUDE.md/AGENTS.md 分层收敛（治理规则 vs 项目手册，重叠段唯一化）② 模块三件套 contract 化进管道（copilot 面登记态/管道外手工维护 → 渲染发布；claude 面补发布；游离残留 4 个清理；TriCode 配套补建；TriPilot 命名规范化）③ TriMC/TriLC 运行时消费 TriCompany contract（模块 registry 无 contract 不被运行时消费，需 contract 化）④ 多宿主演进 + 宿主退役机制（新增=注册表条目，退役=清理 agents+关联资产+归档审计）⑤ 增量管理全链路（模块内容/记忆/契约三增量 + event-watch 联动）⑥ 新模块四件套进管道标配。TODO 1-8 在案（P0×4/P1×4），CEO 定调点 6 项待 FADE 质量审核后确认",
         "FADE-ASSESS-20260820-007: ADE 整合阶段 2 生命周期骨架统一——**✅ 已完成（2026-08-20，APPROVED，commit fd59157 + efbfdf1）**：runId 显式化 + Close CLI（--close 终态审计 + CLOSE_REJECTED）+ Score CLI 执行体（覆盖检查 + quality 注入 + 双门槛三态）+ 组合容器聚合 + ade_envelope 公共函数 + 编码修复（GBK 环境依赖消除）。链：小全实现（135 全绿）→ 小柯独立验证（50/50 含 V6 中文路径）→ 小狄终审（APPROVE + 1 必修编码 → 修复复跑全绿）→ 收口（spec v1.1.8 勘误 + 模板 v1.0.4 + code-state 登记）。FADE-ASSESS-001 评分执行体部分已并入完成，剩余=四实例试卷"
     ],
     "carry_over_from_w31": [
