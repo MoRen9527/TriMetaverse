@@ -111,3 +111,5 @@ user-invocable: true
 
 ### 使用依据
 - 依据了哪些 registry 或源文件。
+
+本文件由统一发布管线渲染生成（--host=claude），禁人工编辑；岗位职责修订走源侧合同。

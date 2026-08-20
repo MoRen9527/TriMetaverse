@@ -85,3 +85,5 @@ Registry version is preserved; BusinessStrategy self-adjudication required.
 These are naming disputes beyond CPO authority; flagged for BusinessStrategy裁决.
 The 归属路由阀门 constraint was backported from live to registry in Q2 (legitimate).
 -->
+
+本文件由统一发布管线渲染生成（--host=claude），禁人工编辑；岗位职责修订走源侧合同。
