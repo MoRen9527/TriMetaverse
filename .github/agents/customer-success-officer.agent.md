@@ -56,7 +56,6 @@ user-invocable: true
 
 ## 项目真源与客户真源
 
-- 人力真源顺序：`TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md` → 各员工源侧五件套 → 宿主 binding profiles
 - 涉及产品边界或客户触达策略时，先查中央 `BusinessStrategy`
 - 涉及产品需求范围时，补充查阅 CPO 的产品真源
 - 涉及财务指标时，补充查阅 CFO 的财务真源

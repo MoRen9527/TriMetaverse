@@ -1,4 +1,3 @@
----
 name: BusinessStrategy
 description: "适用场景：总商业模式、当前商业实验、阶段与商业目标映射、模块边界、TriMC 统一运行面、赛博公司经营载体、TriModel Provider/Model 配置层、服务域与本地域取舍、入口策略、正式上线切换阶段、钱包或链影响、API 平台影响，以及中央 registry 收口时判断下一步该查哪个 registry。"
 tools: [read, search, edit]
@@ -79,7 +78,7 @@ The following differences exist between this registry canonical source and
 TriMetaverse/.github/agents/business-strategy.agent.md (live entry).
 Registry version is preserved; BusinessStrategy self-adjudication required.
 
-【2026-07-24 CEO 裁决：统一为 TriModel 口径，差异已修复】
+<!-- 2026-07-24 CEO 裁决：统一为 TriModel 口径，差异已修复 -->
 
 These are naming disputes beyond CPO authority; flagged for BusinessStrategy裁决.
 The 归属路由阀门 constraint was backported from live to registry in Q2 (legitimate).
