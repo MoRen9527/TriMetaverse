@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（binding 一致性校验收口 APPROVED）",
-        "version": "1.11.0",
-        "lastUpdated": "2026-08-20T10:40:45.000Z",
+        "updatedBy": "编排层（FADE-004 复评收口：88/100 PASS）",
+        "version": "1.11.1",
+        "lastUpdated": "2026-08-20T10:55:00.000Z",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -203,7 +203,7 @@
     ],
     "doneTreesThisWeek": [],
     "nextActions": [
-        "FADE-ASSESS-20260818-001: ADE 收尾对标——**✅ 已完成（2026-08-20）**：① 评分执行体（Score CLI 覆盖检查 + Score Skill 质量评定）随阶段 2 落地（fd59157）② 四实例试卷 + 首次评分完成（fade-papers/，4×PASS 90/90/80/81，commit 3bc176f + b753cbd）。遗留补证项推进中（小贾评估 A 类，CEO 批准批次 1+2）：FADE-001 服务器侧回流（C 类等 ssh 窗口）、FADE-003 run 链（就绪等真实周记）、FADE-004 官方审计复现（批次 2）、FADE-002 runId 回填（批次 2）+ 事件触发（W35）——补证齐后复评",
+        "FADE-ASSESS-20260818-001: ADE 收尾对标——**✅ 已完成（2026-08-20）**：① 评分执行体（Score CLI 覆盖检查 + Score Skill 质量评定）随阶段 2 落地（fd59157）② 四实例试卷 + 首次评分（4×PASS 90/90/80/81）。**FADE-004 复评 ✅（473b878）：81 → 88/100 PASS**（官方审计证据就位，audit-record 6→9）。补证项剩余：FADE-001 服务器侧回流（C 类等 ssh 窗口）、FADE-003 run 链（就绪等真实周记）、FADE-002 事件触发（W35）",
         "FADE-ASSESS-20260819-002: ADE 整合阶段 0 两处合同级缺口修复——**✅ 已完成（2026-08-20，ADE 兼容 run APPROVED，commit 004a506）**：employee_host_publish 默认 dry-run（§2.4）+ 白名单∩禁区=∅ 硬校验 + manifest 审计 + 逃逸防护补全（终审 FREEZE 返工项）。链：小全实现 → 小柯独立验证（PASS 6 项）→ 小狄终审（FREEZE→返工）→ 小全返工 → 小柯逃逸专项复测（13/13 PASS）→ 收口。validation 53/53 + 5/5。观察项挂阶段 1：agent_publish errors→rc 映射、action 词表契约化、逃逸函数复用到 host=claude、Windows drive-relative 用例",
         "CFO-ONBOARD-20260819-001: CFO 上岗——**宿主侧线 ✅ 已完成（2026-08-20）**：copilot 面（.github/agents/chief-financial-officer.agent.md 已收敛）+ claude 面（.claude/agents/chief-financial-officer.md，--host=claude 发布 df31c10a）多宿主就位（当前两宿主，未来任何宿主=注册表新增条目）——CFO 能力平移宿主侧，可被发现可被加载（13 员工 + 5 registry 全量多宿主发布，18/18 derived_identical 收敛）。**runtime 侧线 ⏸ 挂起并并入开业测试（CEO 2026-08-20 定调）**：CFO runtime 上岗与公司初始化相关，不单独追——并入赛博公司后面开业一起测试（初始化协同链 I4/I5 完成时走 FADE-004 全链；daemon 链态门拦截实证：project-link 未过五维同步确认卡）。职责双轨：① 现实财务（原有）② 赛博公司 token 消耗成本控制（CEO 2026-08-19 定调新增：累计 >2 亿 / 单次 >1 亿 升级 CEO，小贾执行监控 + CFO 成本护栏分工）。前置链三环完成（渲染重渲染/上岗 gating/知识注入）。CHO 审批 APPROVE 在案（落 CHO-staffing 审计待 runtime 线走链时）",
         "FADE-ASSESS-20260819-003: ADE-B 员工域知识注入消费链路——**✅ 已完成（2026-08-20，MVP APPROVED，commit 180cfbf）**：knowledge.db v2（契约注入面/消费记录面/指标分子面）+ 启动全量/watch 增量同步 + 三挂接点注入（session-initializer 主路径 / /agents system-prompt / heartbeat）+ 指标（escalation_blocked/routing_error + metrics 端点，CPO 三条可观测指标量化面）；supermemory phase-1 归档不演进。链：小狄设计定案（含小乔语义）→ 小全实现（29/29 + 475/474）→ 小柯独立验证（PASS 9 项 + 25/25）。规范立册 knowledge-injection-spec.md。后置：TriMC 同构、内容层、org 注入、hermes 全量、主会话越权埋点、heartbeat 注入单测",
