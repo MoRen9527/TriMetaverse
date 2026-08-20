@@ -12,6 +12,8 @@
 
 上位规范：[TriCompany ADE 模式规范 §1.1](../../TriCompany/docs/engineering/ade-pattern-spec.md)（FADE = Full-cycle ADE）
 
+整合归属（2026-08-19）：本规范即 **ADE-B 员工域**（[ade-consolidation-proposal.md](../../TriCompany/docs/engineering/ade-consolidation-proposal.md) §三 ADE-B）——上岗链 + 员工对象发布链同一生命周期域
+
 组织依据：[clone-dispatch-protocol.md](clone-dispatch-protocol.md)（岗位-员工分离：md 岗位说明 = JD 组织结构；上岗 = JD 进在岗名册；分身 spawn = 另一层 HC 流程，按 JD 可创建多个分身并行执行——防单 agent context 耗尽的原始设计目标）
 
 ## 一、定义
