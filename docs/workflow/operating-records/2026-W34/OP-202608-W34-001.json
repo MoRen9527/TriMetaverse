@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（批次 3 收口：事件自动触发 f38f15f + 内容层 4b4d8ba）",
-        "version": "1.11.3",
-        "lastUpdated": "2026-08-20T12:08:56.000Z",
+        "updatedBy": "编排层（FADE 质量手动审核待办登记）",
+        "version": "1.11.4",
+        "lastUpdated": "2026-08-20T13:08:15.000Z",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -210,6 +210,7 @@
         "FADE-ASSESS-20260819-004: ADE-B binding profile 收敛（CEO 2026-08-19 记入，ADE-B 渲染改造工作包）——binding-profiles/*.json 定性为「发布绑定关系的派生记录」：语义真源收敛 contract、绑定事实收敛 manifest，禁人工编辑、由生成管线重建（与 D-07 live entry 派生壳纪律同构）；不可替代部分=liveEntry.identityRule 与 notes（绑定决策证据）。生成管线重建时同步校验 binding profile 与 contract/manifest 一致性，并入 ADE-B 阶段 1/2 同批排期。范围定调（CEO 2026-08-19）：多宿主渲染模型适用于员工发布到宿主侧（Copilot-host 面 .github/agents / Claude Code 面 .claude/agents）；TriLC/TriMC runtime 直读 contract 不参与渲染面；TriLC init-assemble 的 Claude Code 模板职责随统一渲染模型收敛进统一发布管线。宿主参数定调（CEO 2026-08-19）：发布 CLI 加 --host={copilot|claude}，先支持两宿主——copilot 默认兼容现状、claude 承接 init-assemble 装配职责；每宿主注册渲染模板+live manifest+保护白名单，标准管线不变，未来新宿主=新增宿主分支（模板+manifest+白名单）。**渲染改造 ✅ 已完成（2026-08-20，commit 4ce113d）**：--host 两宿主 + 渲染引擎 + 附加段回归源 + 派生一致校验 + 保护链翻转逻辑闭环（P2 缺口 A/B/agents-backup 全堵，小柯终测 73/73 + 132/132 全绿）。**工作包① 渲染元数据+重渲染 ✅（501e0fb + 434db81c）**：13 role-agent 元数据 + 引擎缺陷修复 + DE/CSO 源补齐 + 重渲染全收敛——**hash 漂移从机制上消除**。**批次 1 渲染收口 ✅（2026-08-20，49e4b20 + ddbe42d + 91a8d257 + a321ae0e）**：init-assemble 装配收敛（小狄定案 A，.claude/agents 写目标移除，渲染管线唯一写者）+ claude 面派生身份标记 + TOOLS_MAP 映射/剔除双态 + CLAUDE_HOST_TOOL_ALLOWLIST 硬白名单（execute 剔除 tool_drops 审计 5 项）+ 存量 18 条收敛 + 4 小写 registry 孤儿清理。**binding profile 一致性校验 ✅ 已完成（2026-08-20，commit 55b3a2e）**：三源字段级校验（规则 A1-G1）+ CLI --validate-binding（error>0 exit 1）+ 生成路径拒绝写入；现役盘点=12 一致（G1 warn 旧生成待重建）+ full-stack-developer B1 error（重建待 CTO/CHO 确认定义侧状态）。观察项：G1 warn 全量、A3 弱校验盲区、DE/CSO 历史字段重渲染边界（CTO 定口径）",
         "FADE-ASSESS-20260819-005: ADE-B 员工域上岗 gating 落位——**✅ 已完成（2026-08-20，APPROVED，commit 3f11d11）**：三处运行态门禁（派工 tasks/submit ownerRoleId 409 / 分身 AgentTool 合同岗 spawn / 调度 cron roleId+shouldRunJob 含 command job）；单一校验真源 staffing.ts；可见性 contract 全量不改；终审补丁（gate 前移 + skipped 不进 degraded 解除）。验证：24 新用例 + 452/451 + 小柯独立 HTTP 实测。规范立册 fade-005-roster-gating-spec.md。观察项挂后续：分身 spawn 级端到端、setRosterGate 多实例注入、skipped-degraded 单测固化",
         "FADE-ASSESS-20260820-006: ADE 整合阶段 1 报告合同收敛——**✅ 已完成（2026-08-20，APPROVED，commit 856338e + 2c407df）**：三报告统一 envelope（守恒不变量 + items 七字段基座 + scope_specific 分域）；action 词表契约化；errors>0→rc=1；drive-relative 拒绝；消费者更新。链：小全实现（60/60）→ 小柯独立验证（8/8 PASS）→ 小狄终审（APPROVE，守恒独立核算）→ 收口（spec §2.2 envelope v1.0 落位 v1.1.7）。阶段 2 去向：显式 runId 覆盖策略、组合容器聚合决策、envelope 公共函数提炼+容器防御、_make_run_id docstring 修正",
+        "FADE-QUALITY-REVIEW-20260820-001: **手动验证和审核此前 FADE 实现质量（CEO 2026-08-20 定调，待办）**——对已收口的 FADE 全链实现（阶段 0-3、渲染改造、试卷评分、上岗 gating、知识注入、批次 1-3）做手动验证与质量审核（非自动测试层面的复评，是人工走查：真实链路走一遍 + 审核实现质量与规范符合度）。开工条件：CEO 指定时间/方式（建议手动 E2E 走查 + 小贾汇总审核报告）。此前分析待办（AGENTS.md 对齐/模块宿主配套/TriMC-TriLC 模块配套，xiaojia-alignment-analysis 分析中）同批待办，先分析记录不开工",
         "FADE-ASSESS-20260820-007: ADE 整合阶段 2 生命周期骨架统一——**✅ 已完成（2026-08-20，APPROVED，commit fd59157 + efbfdf1）**：runId 显式化 + Close CLI（--close 终态审计 + CLOSE_REJECTED）+ Score CLI 执行体（覆盖检查 + quality 注入 + 双门槛三态）+ 组合容器聚合 + ade_envelope 公共函数 + 编码修复（GBK 环境依赖消除）。链：小全实现（135 全绿）→ 小柯独立验证（50/50 含 V6 中文路径）→ 小狄终审（APPROVE + 1 必修编码 → 修复复跑全绿）→ 收口（spec v1.1.8 勘误 + 模板 v1.0.4 + code-state 登记）。FADE-ASSESS-001 评分执行体部分已并入完成，剩余=四实例试卷"
     ],
     "carry_over_from_w31": [
