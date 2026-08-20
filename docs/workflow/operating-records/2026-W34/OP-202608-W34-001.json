@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（阶段 2 收口 APPROVED）",
-        "version": "1.9.4",
-        "lastUpdated": "2026-08-20T03:42:55.000Z",
+        "updatedBy": "编排层（四实例试卷评分 + 阶段 3 收口）",
+        "version": "1.9.5",
+        "lastUpdated": "2026-08-20T04:30:38.000Z",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -203,7 +203,7 @@
     ],
     "doneTreesThisWeek": [],
     "nextActions": [
-        "FADE-ASSESS-20260818-001: ADE 收尾对标两件待办（spec v1.1.2 §2.6 + 登记册补齐项在案）——① 评分执行体落地：Score CLI（测试集覆盖检查，确定性）+ Score Skill（每项处理质量评定，语义）② FADE-001~004 四实例补试卷（含测试集）并跑首次评分。前置条件（CEO 定调 2026-08-18）：文档关系（试卷↔实例↔规范↔登记册）与 FADE 实例现状梳理清楚前不启动，否则必返工",
+        "FADE-ASSESS-20260818-001: ADE 收尾对标——**✅ 已完成（2026-08-20）**：① 评分执行体（Score CLI 覆盖检查 + Score Skill 质量评定）随阶段 2 落地（fd59157）② 四实例试卷 + 首次评分完成（fade-papers/，4×PASS 90/90/80/81，commit 3bc176f + b753cbd）。遗留补证项：FADE-001 服务器侧 jobs.json/per-run 日志回流、FADE-003 run 链完整审计（本机 log 现 2 行）、FADE-004 官方 CHO-staffing 审计回流、FADE-002 runId 显式化/事件触发增强——补证后复评",
         "FADE-ASSESS-20260819-002: ADE 整合阶段 0 两处合同级缺口修复——**✅ 已完成（2026-08-20，ADE 兼容 run APPROVED，commit 004a506）**：employee_host_publish 默认 dry-run（§2.4）+ 白名单∩禁区=∅ 硬校验 + manifest 审计 + 逃逸防护补全（终审 FREEZE 返工项）。链：小全实现 → 小柯独立验证（PASS 6 项）→ 小狄终审（FREEZE→返工）→ 小全返工 → 小柯逃逸专项复测（13/13 PASS）→ 收口。validation 53/53 + 5/5。观察项挂阶段 1：agent_publish errors→rc 映射、action 词表契约化、逃逸函数复用到 host=claude、Windows drive-relative 用例",
         "CFO-ONBOARD-20260819-001: CFO 上岗（尽快）——职责双轨：① 现实财务（原有）② 赛博公司 token 消耗成本控制（CEO 2026-08-19 定调新增）。配套机制：整套触发执行机制的 token 消耗由小贾掌控——累计消耗 >2 亿 tokens 或 单次 >1 亿 tokens 升级 CEO 决策。上岗路径：经 FADE-004 候选岗位发布链（CHO 审批）；机制定稿后落 CFO role 文档与 ceo-chief-of-staff authorization matrix。前置工序（小狄核验 2026-08-19）：① host 附加段回归源（模板化）→ ② 渲染模板化改造（_publish_single_agent 复制改渲染 + manifest renderTemplate/extraSections）→ ③ 派生一致校验落 check_items → ④ CFO 走链。现状 CFO live 与源 hash 已漂移（99 vs 113 行），须先定稿派生一致语义再走链，否则出现「live 已就位但管线永远报不一致」僵局",
         "FADE-ASSESS-20260819-003: ADE-B 员工域知识注入消费链路（CEO 2026-08-19 记入，ADE-B 阶段 1/2 工作包）——三端（研发仓/TriLC/TriMC）知识注入功能缺口：knowledge 资产（TriCompany-copilot-host-assets 知识工作区 + 五件套 + wiki 消费记录）处于「只生成、无消费」状态，hermes 融合（V0.1 方案 + phase-1 supermemory 实时验证实验，源侧 TriCompany/runtime/cognition）未接三端。范围确认（CEO 2026-08-19 双部署模型定调）：runtime 侧（TriMC+TriLC）知识载体=五件套 + .tricompany-cognition/（SQLite 已实现），缺宿主形态知识工作空间的 runtime 等价物与内容注入——本工作包须定义 runtime 侧知识形态与注入链路。内容：知识资产消费链路设计（三端注入形态）+ supermemory 实验接续；与 live entry 渲染改造、员工域试卷同批排期",
