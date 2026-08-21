@@ -6,13 +6,30 @@
 - publishedFrom: 当前文件（source）
 - syncMode: source-only
 - publishTier: source-only
-- lastSyncedAt: 2026-06-08
+- lastSyncedAt: 2026-08-22
 
 ## Registry 职责
 
 - 本文件是 `CompanyGovernanceRegistry` 的公司治理事实工作层。
 - 本文件记录组织制度、秘书处机制、会议治理、岗位边界、agent 发布纪律和治理文档归属。
 - 经营 owner 为 ChiefAdministrativeOfficer（CAO）；CEOChiefOfStaff 只负责路由、协调、催办、升级和中央收口。
+
+## Current Ownership
+
+- 本节是公司级职责域 owner 分工的治理真源；`TriMetaverse/docs/workflow/github-repo-governance.md` §8（Owner 分工）是本节的中央摘要消费方，只做摘要不做替代。
+- 当前职责归属矩阵：
+
+| 职责 | Owner |
+| --- | --- |
+| 模块产品事实与 PRD 归属 | CPO（小乔） |
+| 模块代码事实与技术门禁 | CTO（小狄） |
+| 公司治理、秘书处与行政制度 | CAO |
+| 人力资源、岗位启用与交接 | CHO |
+| 公司级任务分派、协调、催办与升级 | CEOChiefOfStaff（小贾） |
+| 中央战略与模块边界裁决 | BusinessStrategy |
+
+- 本表只登记公司级职责域的 owner 分工边界；单岗位职责细节以源侧岗位合同与 JD 基线为准，岗位启用与交接治理走 CHO 侧 handoff 流程，不在本表重复维护。
+- 矩阵发生变更时，先改本节，再同步 `github-repo-governance.md` §8 摘要；两处不一致时以本节为准。
 
 ## 公司级文档规则
 
@@ -100,6 +117,13 @@
 - 新增文档、重构文档或吸收上游资料时，先判断该文件是否属于 TriMetaverse / TriCompany 自有资料；自有资料默认中文化。
 - 开源吸收链中的 `reference/` 与 `vendor/` 文件默认保持上游原貌；真正进入模块自研文档、registry 或 workflow 后，应转换成中文优先口径。
 - Registry 摘要不得只保留英文标题而缺少中文解释，避免新人 agent 和岗位对象误读边界。
+
+## 动态任务树协议归属
+
+- 动态任务树描述公司岗位、总助持树、执行节点流转、升级和收口，属于 TriCompany 公司维度 workflow。
+- 公司级真源固定为 `TriCompany/docs/workflow/dynamic-task-tree-protocol.md`，可被多个项目实例和宿主复用。
+- 各项目只维护本项目 operating records、tree directories、数据库 / 导出文件与同名 `published-summary`；不得在项目摘要中独立改写公司核心状态语义。
+- TriLC 与 TriMC 应消费同一共享 Trees / ADE runtime 合同；本地域和服务域只保留 adapter 差异，并通过 run authority 防止双活写入。
 
 ## vendor 与 .gitignore 治理规则
 
