@@ -17,32 +17,35 @@
         {
             "nodeId": "TMV-R-1",
             "agent": "CTO-分身A",
-            "status": "in_progress",
-            "action": "现状盘点①：TriMC 服务器形态（claude code 原版+trimc 功能面）+ agent-core 消费实证（import 面/contracts resolver/scheduler）——回答 CEO 问题：服务器端 claude code 有没有用到 agent-core"
+            "status": "done",
+            "delivery": "trees/tmv-minimal-restructure-analysis/R1-trimc-inventory.md",
+            "action": "现状盘点①完成：服务器 claude code（session-bridge 路径）零 agent-core 依赖；agent-core 仅自研 loop 路径（8 文件 import 清单）；双路径完全隔离无互调；node-bridge 空壳、无 ssh 面"
         },
         {
             "nodeId": "TMV-R-2",
             "agent": "CTO-分身B",
-            "status": "in_progress",
-            "action": "现状盘点②：TriLC 功能面 + agent-core 包结构（谁消费什么）+ TriPilot/TriCade 连接方式与 agent 上下文可见性现状"
+            "status": "done",
+            "delivery": "trees/tmv-minimal-restructure-analysis/R2-trilc-agentcore-inventory.md",
+            "action": "现状盘点②完成：agent-core=单 agent 会话执行内核（缺 daemon 抽象/会话存储/上下文聚合/多 agent 注册表/跨节点可见性）；TriPilot 本地上下文可见性已到消息级（recoverSession）、服务器侧为零；跨机面 4 条全单向（心跳/任务镜像/会话同步死代码两端未接线/五维走 git）；安全模型不对称（TriMC 0.0.0.0 vs TriLC 127.0.0.1）；CI agent-core 步骤断链风险"
         },
         {
             "nodeId": "TMV-R-3",
             "agent": "CPO-分身",
-            "status": "in_progress",
-            "action": "现状盘点③：白皮书（tmv-whitepaper.md）与三元宇宙架构文档现状 + 全仓命名冲突检查（TriMMC/TriMLC/TriRMC/TriRLC 是否撞名）+ 改名产品面影响（TriCade 发行物/用户可见名/installer）"
+            "status": "done",
+            "delivery": "trees/tmv-minimal-restructure-analysis/R3-concept-naming-inventory.md",
+            "action": "现状盘点③完成：白皮书 1340 行三层定义在册（新定义=同名换轨升级，工程不换叙事分层换）；四新名全仓零占用（编排层补全仓 grep 八变体 0 处）；TriMLC vs TriModel 混淆风险四名最高；改名影响面 6 类实证（installer/CI/TriPilot settings 键/CLI 文档/binding/装机态迁移）；历史名兼容先例可复用"
         },
         {
             "nodeId": "TMV-R-4",
             "agent": "CTO",
-            "status": "pending",
+            "status": "in_progress",
             "action": "架构方案分析：三条 bridge 通信（TriMMC↔TriMLC ssh+bridge / 元虚拟↔元现实 / TriRMC↔TriRLC 共用 agent-core）+ 双系统各自会话/agent 管理模型 + 岗位说明书式分身调度（主控域 7×24、分身酌情跑服务器/本地）+ TriPilot+TriRLC 连 agent-core daemon 看全部上下文可行性",
             "blockedBy": ["TMV-R-1", "TMV-R-2"]
         },
         {
             "nodeId": "TMV-R-5",
             "agent": "CPO",
-            "status": "pending",
+            "status": "in_progress",
             "action": "产品/理念对齐分析：三层最小实现定义（元虚拟=成熟虚拟环境可整体换 codex / 元现实=agent-core 自研 / 元认知=项目仓+worktree 消费）+ 双向螺旋（虚拟实验→现实方案；现实需求→虚拟重放）语义边界 + 白皮书修订要点",
             "blockedBy": ["TMV-R-3"]
         },
@@ -71,7 +74,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "lastUpdated": "2026-08-21T14:48:24.000Z",
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "createdAt": "2026-08-21T14:48:24.000Z"
 }
