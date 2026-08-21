@@ -17,13 +17,15 @@
         {
             "nodeId": "TMV-P1-1",
             "agent": "CPO",
-            "status": "in_progress",
+            "status": "done",
+            "delivery": "tmv-whitepaper.md 波 1 修订（commit b52bb614：8 触点全落+不动面零触碰，1340→1356 行；状态保持草案待 CEO 签发；遗留观察=FADE 词条缺待签发前定夺）",
             "action": "白皮书波 1 主笔（R5 修订清单触点 1/2/3/6/7/8/9/10——§3.1 双层表述+演进钩子+图 3-2 接续锚、§3.3 载体行、§3.3.1 模块表、§1.3 交叉引用、附录 B 6 词条+双层定义+消歧互指、FAQ E.1 三行、文档头）；状态保持草案待 CEO 签发"
         },
         {
             "nodeId": "TMV-P1-2",
             "agent": "BusinessStrategy",
-            "status": "in_progress",
+            "status": "done",
+            "delivery": "docs/三元宇宙架构与模块说明.md v0.5（commit 874a94da：四新行双系统对+alias 触发式终点+消歧+roadmap 合流，编排层核验全过）",
             "action": "中央口径更新=架构文档 v0.5（R6 改名线 1a 叙事批：§4 模块表增 TriMMC/TriMLC/TriRMC/TriRLC 双系统对、§5 alias 条目 TriMMC↔TriMC/TriRLC↔TriLC+TriMLC/TriModel 消歧条目+触发式终点、two-phase roadmap v2 叙事合流交叉引用）；口径记录归 BusinessStrategy 域"
         },
         {
@@ -79,7 +81,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "lastUpdated": "2026-08-21T19:08:55.000Z",
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "createdAt": "2026-08-21T19:08:55.000Z"
 }
