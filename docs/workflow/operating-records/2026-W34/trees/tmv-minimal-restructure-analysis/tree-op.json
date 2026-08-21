@@ -4,7 +4,7 @@
     "treeId": "tmv-minimal-restructure-analysis",
     "title": "三元宇宙最小实现重定义——白皮书级结构调整分析（元虚拟/元现实/元认知三层）",
     "ownerRole": "CEOChiefOfStaff",
-    "status": "active",
+    "status": "done",
     "summary": "CEO 2026-08-21 提出三元宇宙最小实现重定义：元虚拟系统=TriMC 改名 TriMMC（Meta Main Controller）+ 新增 TriMLC（Meta Local Controller，FADE 多宿主发布线激活本地宿主）；元现实系统=新增 TriRMC（Reality Main Controller）+ TriLC 改名 TriRLC，共用 agent-core；元认知系统=项目代码仓（元虚拟成果经 worktree 被元现实消费，双向螺旋）。分析树分三批：现状盘点（3 分身并行）→ 架构与理念方案分析（小狄/小乔主审）→ 任务量分期与联审收口。纯分析不开工，产出白皮书修订要点供 CEO 定调。",
     "parentWeekPlan": "OP-202608-W34-001",
     "nodes": [
@@ -54,14 +54,16 @@
         {
             "nodeId": "TMV-R-6",
             "agent": "CTO",
-            "status": "in_progress",
+            "status": "done",
+            "delivery": "trees/tmv-minimal-restructure-analysis/R6-workload-phasing.md",
             "action": "任务量与分期：大改造分批（改名/新模块/bridge/会话管理各几批）+ 依赖链 + 与赛博公司开业/FADE 流水线复审/AGENTS 对齐排期关系 + 风险清单",
             "blockedBy": ["TMV-R-4", "TMV-R-5"]
         },
         {
             "nodeId": "TMV-R-7",
             "agent": "CEOChiefOfStaff",
-            "status": "pending",
+            "status": "done",
+            "delivery": "trees/tmv-minimal-restructure-analysis/R7-synthesis.md",
             "action": "联审综合收口：汇总 R1-R6 产出综合分析报告 + 回答 CEO 全部提问 + 白皮书修订要点清单 + 交付 CEO 定调（分析入册不开工）",
             "blockedBy": ["TMV-R-6"]
         }
@@ -76,7 +78,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "lastUpdated": "2026-08-21T14:48:24.000Z",
-        "version": "0.3.0"
+        "version": "1.0.0"
     },
     "createdAt": "2026-08-21T14:48:24.000Z"
 }
