@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/workflow/operating-records/项目级 AI 共学周记/automation-backlog.md
 - syncMode: audit-record
-- lastSyncedAt: 2026-06-04
+- lastSyncedAt: 2026-08-21（新增 §7 通用自动化待实现区，登记 FADE-002 事件自动触发）
 
 状态：待实现
 
@@ -75,3 +75,12 @@
 ## 6. 动作规范与执行体（已立册 + CLI 已实现）
 
 手动与自动化共用的动作规范见 [ade-journal-recording-spec.md](ade-journal-recording-spec.md)（2026-08-18 立册）：入册资格四问、格式与落点三查、收口五查、终态定义。确定性执行体已实现：`TriMetaverse/scripts/journal/journal-cli.mjs`（init / qualify / append / close + journal-run-log.jsonl 审计）；§1-§4 所列自动化实现时直接复用该 CLI，不另起炉灶。触发事件：W34 周记首次写入违规（跳过规范查找、按任意旧周模板自创结构）。
+
+## 7. 通用自动化待实现区（跨 FADE 实例）
+
+### 7.1 FADE-002 发布域：文件 / Git 事件自动触发增强（automation-backlog 在册条目）
+
+- **入册补登记（2026-08-21）**：CTO 裁决（2026-08-21，FADE-LEFTOVER-20260821-001 项 3②）"事件自动触发增强为独立工程项挂 automation-backlog"此前仅在 fade-registry.md / ade-pattern-spec.md §8.6 有记录、本文件未落文——收口遗漏由 CTO 2026-08-21 流水线分析核查发现，本条补齐在册锚点。
+- **内容**：基于 event-watch（`source_publish_check --event-watch` 单次扫描 / `--watch` 循环，指纹=文件 hash ∪ git HEAD/refs，审计 `.ade/event-watch/`）增强为发布域自动触发：变化指纹触发完整"探测→规划→挂周平面→审核门"链（检测-规划链，FADE 流水线批次 C 范围，需 agent 唤起实证）。
+- **优先级决议（CEO 2026-08-21）**：原裁决 FREEZE 触发条件式不排期 → **提级**（小乔流水线分析建议、CEO 同意）；执行时点待 FADE 流水线联审结论复审（CEO 定调：白皮书级结构调整设计后再审）后随批次 C。
+- **关联**：周平面 FADE-PIPELINE-ANALYSIS-20260821-001（联审结论在案）；FADE-002 复评 93/100 已核销 runId 显式化，本项为其唯一遗留。
