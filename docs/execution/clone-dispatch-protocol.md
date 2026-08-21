@@ -1,8 +1,8 @@
 # 分身派工协议 —— 组织 HC 机制
 
-> **版本**: v0.2
-> **日期**: 2026-08-17
-> **状态**: 架构升级（CEO 方案级输入）
+> **版本**: v0.3
+> **日期**: 2026-08-22（v0.2: 2026-08-17）
+> **状态**: 架构升级（CEO 方案级输入）；v0.3 增量＝分身调度前置（TMV-P1-6，新增 §十，v0.2 正文不动）
 > **负责人**: 小贾（CEOChiefOfStaff）收口；小乔（产品）、小狄（技术）、CHO（人力）联合分析
 
 ## 文档定位
@@ -415,3 +415,134 @@ decision_rights:
 本协议由 CEO 方案级输入升格，小贾收口组织，小乔（产品）、小狄（技术）、CHO（人力）联合分析完成。
 
 **架构设计**：岗位-员工分离原则落地；分身 = 数字化员工；增员/裁撤 = HC 机制。
+
+---
+
+## 十、placement 策略与执行面统一（v0.3 增量，2026-08-22）
+
+> 本节为 TMV-P1-6 批产出（CTO 小狄），响应 CEO 重定义问题 ④ 后半（岗位说明书式分身调度）。v0.2 正文全部保留不动；本节是 §4.6 预留字段方向（maxParallelInstances/timeout/resourceProfile/handoverProtocol）的首个落地增量。规格性质——非实施决定；实施归 R6 1.5 三批（R6:88-96）。
+
+### 文档同步元信息（v0.3 增量节）
+
+- sourceOfTruth: TriMetaverse/docs/execution/clone-dispatch-protocol.md §十
+- syncMode: source-only
+- lastSyncedAt: 2026-08-22
+
+### 10.1 裁决基线
+
+- R4 §四方案 A 三件（R4:186-190）：contract placement 字段 / CLONE_STAFFING_REQUEST 增字段＋CHO 按域分账 / 双执行面统一接口＋服务器侧门禁补齐。
+- R8 §1.3 裁决（R8:50-58）：四值不动，不细分 daemonLocal/podEdge；runtimeForm 归 resourceProfile 可选维度；either＝CHO 分账裁决，非自动负载均衡、非 k8s 调度语义。
+- 决策三分法：**APPROVE**（字段规格层——走既有协议演进路径，非新机制；e2e-staffing 链路测试基座在案，R4:196）。
+
+### 10.2 contract.yaml placement 策略字段
+
+**字段定义**（岗位合同顶层，与 decision_rights/toolControl 同级）：
+
+```yaml
+placement:
+  policy: preferLocal        # mainControllerOnly | preferServer | preferLocal | either
+```
+
+**域语义映射**（MVP）：`server` 域＝服务器执行面，当前映射 TriMMC session-bridge spawn（元虚拟 claude 会话面）；TriRMC 进程内会话执行面（R8:206 阶梯 0）落地后同属 server 域——执行面枚举可扩展，CHO 分账的 serverQuota 覆盖两者。`local` 域＝编排层本机执行面（现状，隐含 CEO 机器，R4:183）。
+
+**四值语义**：
+
+| 值 | 语义 | 落位裁决权 | 典型岗位画像 |
+| --- | --- | --- | --- |
+| mainControllerOnly | 仅主控（服务器）域可落位；本地落位申请一律拒绝 | CHO（无裁量，硬约束） | 7×24 常驻、公网面、服务器数据源、公司资产操作（R8:79-82 混合规则表） |
+| preferServer | 优先服务器域；服务器编制满或不可用时可回退本地 | CHO（回退＝placement 变更，须重批） | 算力密集、与服务器协同面大 |
+| preferLocal | 优先本地域（本地文件/IDE/宿主就近——任务-资源亲和矩阵 5/7 维占优，R8:39）；本地不可用回退服务器同理 | CHO（回退重批同上） | 写代码类、本地工作区操作（CEO 例举画像） |
+| either | 无域偏好；CHO 按两域编制余额与成本域裁决落位 | CHO（分账裁决——R8:58：不是自动负载均衡，不是 k8s 调度语义） | 通用任务型岗位 |
+
+**默认值**：`preferLocal`。存量合同未声明 placement 时行为不变——现状 spawn 执行面即编排层本机进程（R4:183），缺省值保持向后兼容；其余三值为显式 opt-in。
+
+**校验规则**（fail-fast，对齐 AgentContractV3 只收 v3 的收敛先例）：
+
+1. 枚举校验：仅接受四值；未知值 → 合同加载失败（不静默降级到默认值）。
+2. 岗位级声明：placement 只出现在岗位 contract（JD 固定资产层，§1.2），不进分身实例运行参数——运行期改落位＝placement 变更，必须重走 CHO 审批（防 JD 被运行时架空；§四 方案 B 否决理由同源，R4:191）。
+3. 正交性：placement 管资源域（服务器 vs 本地），runtimeForm 管执行形态（原生 vs 容器），互不蕴含（R8:52-56——JD 层不出现运行形态概念）。
+4. 不透传基础设施层：placement 在 CHO 层消化，不映射 k8s nodeSelector/affinity（R8:200——业务语义不漏进基础设施层，CHO 保持编制单一真源）。
+
+### 10.3 resourceProfile 可选维度：runtimeForm
+
+**字段定义**（§4.6 resourceProfile 预留方向的首个子维度）：
+
+```yaml
+resourceProfile:
+  runtimeForm: native        # native | container
+```
+
+- **默认 native**；MVP 仅 native 有执行面。
+- **container 触发条件＝任务沙箱画像**（不受信代码、需隔离），不是域偏好（R8:56）——沙箱任务裁决走向服务器容器（compose/k8s 资产已在，R8:81），不落用户 PC。
+- **校验**：枚举两值，合同层可前瞻声明；执行层无匹配执行面时 CHO **FREEZE**（编制裁决面拦截，而非合同加载失败）。本地容器形态（podEdge B2）MVP 不做、登记后置选项（R8:63、R8:82、R8:224）。
+
+### 10.4 CLONE_STAFFING_REQUEST 增 placement 字段＋CHO 按域分账编制规则
+
+**请求增字段**（小贾 → CHO）：
+
+```yaml
+placement: either            # 申请落位；缺省取岗位 JD 声明
+```
+
+**回执增字段**（CHO → 编排层）：
+
+```yaml
+grantedPlacement: server     # CHO 裁决后的实际落位域（local | server）
+domainQuotaSnapshot:         # 审批时两域用量快照（审计用）
+  local:  { used: 2, cap: 5 }
+  server: { used: 1, cap: 3 }
+```
+
+**CHO 按域分账规则**（R4:188 原文语义：服务器编制与本地编制分上限——服务器资源是公司资产，本地是 CEO 机器，成本域不同）：
+
+1. **两域分账**：localQuota / serverQuota 独立上限，CHO 维护台账；§2.1「默认 ≤5 并行分身」演进为按域各自上限。初始值建议 localQuota=5（保持现状）、serverQuota 由 CHO 会同 CEO 新设——**编制数值归 CHO 台账，不在本协议固化**（对齐 §7.1 CEO 裁决口径：CHO 管总量）。
+2. **一致性前置**：申请 placement 不得违背 JD 的 mainControllerOnly 硬约束（违背 → CHO 直接拒绝，FREEZE）。
+3. **计数规则**：每分身计入 grantedPlacement 域；跨域回退后计入回退域。
+4. **校验规则**：mainControllerOnly 只校验 serverQuota；preferLocal/preferServer 校验首选域余额，回退校验回退域余额；either 由 CHO 综合两域余额与成本域裁决。
+5. **超限处置**：超域上限 → **FREEZE**（对齐 CHO contract decision_rights freeze 条款，§2.4）；扩容 → escalate CEO（§2.4 escalate 条款同源）。
+6. **审计**：审批回执落 grantedPlacement＋两域 before/after 用量（json 审计先例＝CHO-staffing-\<requestId\>.json，TriLC/src/company/staffing.ts:199-214）。
+
+### 10.5 双 spawn 执行面统一接口＋服务器侧 roster 门禁补齐
+
+**现状缺口**（R4:183、R4:264 风险 8）：spawn 执行面两处互不知晓——本地＝编排层进程（隐含本机）；服务器＝session-bridge spawn（R1，无 roster 门禁记载）。分身跑服务器若绕过名册决策面，gating 真源被架空（R4:189）。
+
+**统一接口**（同请求/回执/审计 schema，平面无关——本地 spawn / bridge-1 服务器 spawn / 未来 TriRMC 进程内会话（R8:206）三执行面共用）：
+
+```yaml
+# SpawnRequest（编排层 → 任一执行面）
+requestId: spawn_xxx
+roleId: chief-technology-officer        # JD 引用（岗位固定资产层）
+approvalRef: <CLONE_STAFFING_APPROVAL 的 requestId>   # 必填，审批链锚点
+placement: server                       # = grantedPlacement（执行面核一致）
+runtimeForm: native
+taskRef: "<tree-id>/<nodeId> 或 OP 条目号"
+maxDuration: 2h
+requestedBy: ceo-chief-of-staff
+
+# SpawnReceipt（执行面 → 编排层）
+instanceId: <执行面侧实例标识>
+plane: local | server                   # 亦作裁撤回收路由键（CLONE_TERMINATION 执行时定位执行面）
+spawnedAt: <ISO 8601>
+expiresAt: <超时裁撤阈值点，§7.2 2h 口径>
+auditRef: <审计记录引用>
+
+# AuditRecord（每执行面每次 spawn 必落）
+requestType: CLONE_SPAWN_EXECUTION
+approvalRef / plane / roleId / spawnedAt / taskRef
+```
+
+**服务器侧 roster 门禁补齐（风险 8 处置，硬要求）**——任何执行面 spawn 前强制**门禁三查**：
+
+1. **凭证查**：approvalRef 有效（CHO 审批回执存在且 decision=approved）。roster 在岗校验（isRoleActive 单一真源，TriLC/src/company/staffing.ts:125-127；三处门禁共用语义 :7-11/:94-99）在 CHO 审批链内完成——审批即名册决策面，执行面不复制第二 roster 真源（R8:200 CHO 编制单一真源同族原则）。
+2. **一致查**：请求 placement 与回执 grantedPlacement 一致；runtimeForm 有可用执行面。
+3. **域额查**：grantedPlacement 域当前用量不超上限（以 CHO 审批时点 domainQuotaSnapshot 为准；执行面只拒绝、不裁决）。
+
+- **实现形态**：MVP＝审批凭证随请求携带（SpawnRequest 必带 approvalRef，执行面可独立校验，无 roster 数据依赖——session-bridge 无需新增名册同步面）；执行面主动回查 roster（需名册查询面）列后置选项。
+- **违例行为**：拒绝 spawn＋落审计记录（不静默——对齐 RosterGateResult error 语义，staffing.ts:101-106）。
+- **归期**：与 bridge-1 统一执行面批联动（R6:94 第三批；期 3 交付物「服务器 spawn roster 门禁＋双执行面统一」，R6:245）。
+
+### 10.6 v0.3 落盘证据（D-01）
+
+- 文件路径：`docs/execution/clone-dispatch-protocol.md`（§十 增量，v0.2 正文 418 行不动）
+- 行数：v0.3 增量 131 行（§十，:419-549）；全文档 549 行
+- 状态：规格已落盘，待编排层提交；实施归 R6 1.5（期 1 placement＋CHO 分账两批，R6:227；期 3 门禁统一批，R6:245）
