@@ -4,7 +4,7 @@
     "treeId": "tmv-restructure-p1",
     "title": "三元宇宙重定义期 1：定名立项+开业互锁（W35-W36，8-9 批）",
     "ownerRole": "CEOChiefOfStaff",
-    "status": "active",
+    "status": "done",
     "summary": "CEO 2026-08-21 六决策全批后的期 1 立项树（依据 tmv-minimal-restructure-analysis 树 R6 §五期 1 批构成 + R9 设计约束）。目标：四名立住、两新模块按四件套立项、CI 断链修复、白皮书两波修订成稿，开业（I5）先行闭环不受扰。设计约束（R6 §〇.5）：会话=一等调度记账单元/租户无全局单例。期 1 零触碰 I1-I4 运行链可与开业收官并行。",
     "parentWeekPlan": "OP-202608-W34-001",
     "nodes": [
@@ -44,7 +44,8 @@
         {
             "nodeId": "TMV-P1-5",
             "agent": "CTO",
-            "status": "in_progress",
+            "status": "done",
+            "delivery": "TriRMC 仓 8 文件建+git init 首提 5a00c6e（MIGRATION.md 五迁移批项）+ manifest 三条 77b351c + 架构文档行 e525c8d8",
             "action": "TriRMC 立项：仓+四件套+CI 接线（路径 B 资产迁入为种子方案，CEO 决策①批准）；迁移主体归期 2"
         },
         {
@@ -71,7 +72,8 @@
         {
             "nodeId": "TMV-P1-9",
             "agent": "CEOChiefOfStaff",
-            "status": "pending",
+            "status": "done",
+            "delivery": "白皮书波 2（修订 1b：§8.1 L1 行+CTO-008 段）+ CEO 签发登记（4a4b2e6）+ 期 1 全链闭环",
             "action": "期 1 收口：白皮书波 2（触点 4/5，依赖本树定稿）+CEO 签发登记+FADE 流水线批次 C 实现面挂期 2 复核+开业互锁门确认"
         }
     ],
@@ -85,7 +87,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "lastUpdated": "2026-08-21T19:08:55.000Z",
-        "version": "0.4.0"
+        "version": "1.0.0"
     },
     "createdAt": "2026-08-21T19:08:55.000Z"
 }
