@@ -74,6 +74,13 @@
             "delivery": "trees/tmv-minimal-restructure-analysis/R8-scenario2-design.md",
             "action": "CEO 追加场景 2 技术设计（2026-08-21）：k8s pod 运行 agent-core daemon+任意入口（PC/手机）接入+--resume/--reconnect 会话连续性+pod 分身水平扩展；主问=pod 落 PC vs 本地 daemon 协同（服务域/本地域原设计）——覆盖分析+增补设计+任务量增量",
             "blockedBy": ["TMV-R-7"]
+        },
+        {
+            "nodeId": "TMV-R-9",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "delivery": "trees/tmv-minimal-restructure-analysis/R9-vision-mapping.md",
+            "action": "CEO 终态愿景两轮收口（2026-08-21）：图 3-2 六步价值闭环×最小实现种子映射（FADE 评分段=AI 评估环节种子/§3.4 PC 节点化在册精确）；落地三件=白皮书第 10 触点（已补 R5）+『会话=一等调度记账单元/租户无全局单例』设计约束（已注 R6 §〇.5）+多租户与区块链激励归生产系统期（BusinessStrategy 域定调）"
         }
     ],
     "relatedDocuments": [
@@ -86,7 +93,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "lastUpdated": "2026-08-21T14:48:24.000Z",
-        "version": "1.2.0"
+        "version": "1.3.0"
     },
     "createdAt": "2026-08-21T14:48:24.000Z"
 }
