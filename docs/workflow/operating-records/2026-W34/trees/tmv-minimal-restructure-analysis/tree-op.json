@@ -66,6 +66,14 @@
             "delivery": "trees/tmv-minimal-restructure-analysis/R7-synthesis.md",
             "action": "联审综合收口：汇总 R1-R6 产出综合分析报告 + 回答 CEO 全部提问 + 白皮书修订要点清单 + 交付 CEO 定调（分析入册不开工）",
             "blockedBy": ["TMV-R-6"]
+        },
+        {
+            "nodeId": "TMV-R-8",
+            "agent": "CTO",
+            "status": "done",
+            "delivery": "trees/tmv-minimal-restructure-analysis/R8-scenario2-design.md",
+            "action": "CEO 追加场景 2 技术设计（2026-08-21）：k8s pod 运行 agent-core daemon+任意入口（PC/手机）接入+--resume/--reconnect 会话连续性+pod 分身水平扩展；主问=pod 落 PC vs 本地 daemon 协同（服务域/本地域原设计）——覆盖分析+增补设计+任务量增量",
+            "blockedBy": ["TMV-R-7"]
         }
     ],
     "relatedDocuments": [
@@ -78,7 +86,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "lastUpdated": "2026-08-21T14:48:24.000Z",
-        "version": "1.0.0"
+        "version": "1.2.0"
     },
     "createdAt": "2026-08-21T14:48:24.000Z"
 }
