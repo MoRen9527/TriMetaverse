@@ -1,10 +1,10 @@
 ﻿# 三元宇宙白皮书（TriMetaverse Whitepaper）
 
-版本：待人工审核签发（禁止预置）  
+版本：v1.0（修订 1+1a，CEO 2026-08-22 签发）  
 日期：2026-08-22  
-状态：草案（待人工审核签发；基于基线源重构完善版）
+状态：**已签发**（CEO 2026-08-22；基于基线源重构完善版 + TMV-P1-1 波 1 修订）
 
-修订说明：修订 1（2026-08-22，TMV-P1-1 波 1）——三层模型升级为双层表述（最小实现实例对+能力域原义：§3.1、§3.3 模块块首、附录 B 术语表、FAQ E.1）；模块名换轨：TriMC→TriMMC、TriLC→TriRLC（2026-08 更名，新增 TriMLC、TriRMC，兼容面沿用旧名过渡）；§3.3.1 标题改为“三元模块商业映射”并加系统对注；§1.3 创新点 2 增交叉引用；§8.1 模块名同步留待波 2。状态保持草案，待 CEO 签发。
+修订说明：修订 1（2026-08-22，TMV-P1-1 波 1）——三层模型升级为双层表述（最小实现实例对+能力域原义：§3.1、§3.3 模块块首、附录 B 术语表、FAQ E.1）；模块名换轨：TriMC→TriMMC、TriLC→TriRLC（2026-08 更名，新增 TriMLC、TriRMC，兼容面沿用旧名过渡）；§3.3.1 标题改为“三元模块商业映射”并加系统对注；§1.3 创新点 2 增交叉引用；§8.1 模块名同步留待波 2。修订 1a（2026-08-22，签发收口）——附录 B 补 FADE 词条（CEO 批准）。**状态：已签发（CEO 2026-08-22 签发，基于修订 1+1a）**；§8.1 波 2 项随后续版本登记。
 
 ---
 
@@ -1195,6 +1195,7 @@ TriMetaverse 与 Triauto 为两个独立项目：
 - 元现实：最小实现是 TriRMC+TriRLC（共用自研内核 agent-core）构成的自研工程面。能力域上指现实世界的规则与约束（物理规律、制度流程、产业链路、社会运行机制等）及其可观测数据；它回答“世界现在是怎样运转的”。
 - 最小实现：三层模型各层当前已运行的最小工程载体——元认知=项目代码仓、元虚拟=TriMMC+TriMLC、元现实=TriRMC+TriRLC（详见 §3.1）。最小实现是能力域的当前实例而非能力上限，各层沿切入点产品梯度继续演进。
 - agent-core：元现实系统（TriRMC+TriRLC）共用的自研内核，覆盖会话、agent loop、工具、权限、sub-agent、合同、cron 与进程监督；与元虚拟侧直接使用宿主原生能力的做法相对。
+- FADE（Full-cycle ADE）：完整周期 ADE（Agentic Deterministic Execution，智能化确定性执行的 agent 全生命周期执行协议）的成熟实例徽章——十段生命周期（事件→runId→Qualify→Plan→DCE→Verify→Score→Close→终态）全部落地且实跑过、评分通过。元虚拟经 FADE 发布线把员工定义灌入宿主；其评分段（Score CLI/Skill）是图 3-2 价值闭环中"AI 评估"环节的最小实现种子。规范真源见 TriCompany/docs/engineering/ade-pattern-spec.md。
 - TriMMC：元虚拟主控（原 TriMC，2026-08 更名），元虚拟系统的服务端组件，与 TriMLC 经 bridge 通信，为成熟 agent 宿主（当前为 claude code）提供服务器端宿主环境；自身不自建会话管理与执行内核。
 - TriMLC：元虚拟本地控制器，元虚拟系统的本地腿，承载本地研发仓宿主，负责把员工定义经 FADE 发布线灌入宿主、把实验成果落盘到元认知仓。勿与 TriModel 混淆：TriModel 是组件层（模型配置），TriMLC 是系统层（元虚拟本地腿）；读法约定：TriModel 读“Tri-Model”（2 音节），TriMLC 拼读“Tri-M-L-C”（4 音节）。
 - TriModel：组件层的 Provider/Model 配置（npm: trimodel），负责模型路由与配置管理；与系统层的 TriMLC 是不同对象，勿混淆（读法约定见 TriMLC 词条）。
