@@ -4,7 +4,7 @@
 日期：2026-08-22  
 状态：**已签发**（CEO 2026-08-22；基于基线源重构完善版 + TMV-P1-1 波 1 修订）
 
-修订说明：修订 1（2026-08-22，TMV-P1-1 波 1）——三层模型升级为双层表述（最小实现实例对+能力域原义：§3.1、§3.3 模块块首、附录 B 术语表、FAQ E.1）；模块名换轨：TriMC→TriMMC、TriLC→TriRLC（2026-08 更名，新增 TriMLC、TriRMC，兼容面沿用旧名过渡）；§3.3.1 标题改为“三元模块商业映射”并加系统对注；§1.3 创新点 2 增交叉引用；§8.1 模块名同步留待波 2。修订 1a（2026-08-22，签发收口）——附录 B 补 FADE 词条（CEO 批准）。**状态：已签发（CEO 2026-08-22 签发，基于修订 1+1a）**；§8.1 波 2 项随后续版本登记。
+修订说明：修订 1（2026-08-22，TMV-P1-1 波 1）——三层模型升级为双层表述（最小实现实例对+能力域原义：§3.1、§3.3 模块块首、附录 B 术语表、FAQ E.1）；模块名换轨：TriMC→TriMMC、TriLC→TriRLC（2026-08 更名，新增 TriMLC、TriRMC，兼容面沿用旧名过渡）；§3.3.1 标题改为“三元模块商业映射”并加系统对注；§1.3 创新点 2 增交叉引用；§8.1 模块名同步留待波 2。修订 1a（2026-08-22，签发收口）——附录 B 补 FADE 词条（CEO 批准）。修订 1b（2026-08-22，TMV-P1-9 波 2）——§8.1 L1 行模块名同步（TriRLC/TriMMC/TriMLC/TriRMC 入 L1 窗口）+ CTO-008 段按三层重定义改写（跨层协同语义由两条层内 bridge 取代，历史交付按新命名映射）。**状态：已签发（CEO 2026-08-22 签发，基于修订 1+1a；修订 1b 为签发后登记性同步，随下次复核确认）**。
 
 ---
 
@@ -1066,13 +1066,13 @@ OPC（One Person Company）是 TriMetaverse 商业层的核心载体，为每个
 | 层级 | 名称 | 模块范围 | 时间窗口 | 产出 |
 |------|------|----------|----------|------|
 | **L0** | 基础设施 | TriStaciss + TriModel + CARRY-004 | W29-W30 | 可用模型路由与 token 中转 |
-| **L1** | 最小独立系统 | 入口层（TriGateway/TriAvatar/TriMobile）+ PC 端（TriPilot+TriLC+TriCode+vscodium）+ TriMC + TriStaciss + TriModel | W30-W32 | 可脱离 Copilot 独立运行 |
+| **L1** | 最小独立系统 | 入口层（TriGateway/TriAvatar/TriMobile）+ PC 端（TriPilot+TriRLC+TriCode+vscodium+TriMLC）+ TriMMC + TriRMC + TriStaciss + TriModel | W30-W32 | 可脱离 Copilot 独立运行 |
 | **L2** | 组织身份 | TriCompany + TriMem + TriChain + TriWeb4 + TriSkill + TriTraining | W30+ 与 L1 并行 | 用户系统、身份 NFT、钱包 |
 | **L3** | 研发商业 | TriDev + TriTest + TriAuto + TriOPC | 待 L1 验证后启动 | IPD 自动化 + OPC 商户系统 |
 
 **IPD 策略**：全系统最小 V1 优先（L0 → L1 → L2 → L3），跑通闭环后再用 IPD 流程规范商业化交付——不阻塞上线，边跑边验证架构补足，缩短市场验证周期。
 
-**关键路径**：CTO-008（大框架：TriMC+TriLC 双模协同，四子任务 C/S/M/P）。TriLC ≈ TriMC 本地版（共享 agent-loop + contracts + types，差异在本地 toolbus/context-adapter），新增 TriMC↔TriLC 通信协议（在线 ACN 代理 + 离线 localbus 升主 + 恢复 merge）。Copilot-host 仅开发环境临时使用，上线后不存在。
+**关键路径**：CTO-008（历史任务：原"TriMC+TriLC 双模协同"，四子任务 C/S/M/P）——在 2026-08 三层重定义下，原跨层对的协同语义已由两条层内通信取代：元虚拟系统对 TriMMC↔TriMLC（ssh+bridge，会话归宿主原生能力）、元现实系统对 TriRMC↔TriRLC（共用 agent-core：心跳/任务镜像/五维 git 同步/会话投影，写权威按域分账）。原通信协议成果（在线代理、离线队列、恢复仲裁）沉淀为元现实侧 bridge 面；四子任务的历史交付按新命名自然映射（TriMC 侧资产规划双跑迁入 TriRMC，见架构文档 §5 alias 条目）。Copilot-host 仅开发环境临时使用，上线后不存在。
 
 为保证路线图可执行，每个阶段同时给出“技术交付物 + 运营交付物 + 验收门禁”。
 
