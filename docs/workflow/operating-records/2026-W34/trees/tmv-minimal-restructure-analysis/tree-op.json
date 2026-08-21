@@ -38,21 +38,23 @@
         {
             "nodeId": "TMV-R-4",
             "agent": "CTO",
-            "status": "in_progress",
+            "status": "done",
+            "delivery": "trees/tmv-minimal-restructure-analysis/R4-architecture-analysis.md",
             "action": "架构方案分析：三条 bridge 通信（TriMMC↔TriMLC ssh+bridge / 元虚拟↔元现实 / TriRMC↔TriRLC 共用 agent-core）+ 双系统各自会话/agent 管理模型 + 岗位说明书式分身调度（主控域 7×24、分身酌情跑服务器/本地）+ TriPilot+TriRLC 连 agent-core daemon 看全部上下文可行性",
             "blockedBy": ["TMV-R-1", "TMV-R-2"]
         },
         {
             "nodeId": "TMV-R-5",
             "agent": "CPO",
-            "status": "in_progress",
+            "status": "done",
+            "delivery": "trees/tmv-minimal-restructure-analysis/R5-concept-analysis.md",
             "action": "产品/理念对齐分析：三层最小实现定义（元虚拟=成熟虚拟环境可整体换 codex / 元现实=agent-core 自研 / 元认知=项目仓+worktree 消费）+ 双向螺旋（虚拟实验→现实方案；现实需求→虚拟重放）语义边界 + 白皮书修订要点",
             "blockedBy": ["TMV-R-3"]
         },
         {
             "nodeId": "TMV-R-6",
             "agent": "CTO",
-            "status": "pending",
+            "status": "in_progress",
             "action": "任务量与分期：大改造分批（改名/新模块/bridge/会话管理各几批）+ 依赖链 + 与赛博公司开业/FADE 流水线复审/AGENTS 对齐排期关系 + 风险清单",
             "blockedBy": ["TMV-R-4", "TMV-R-5"]
         },
@@ -74,7 +76,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "lastUpdated": "2026-08-21T14:48:24.000Z",
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "createdAt": "2026-08-21T14:48:24.000Z"
 }
