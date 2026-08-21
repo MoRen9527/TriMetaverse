@@ -31,7 +31,8 @@
         {
             "nodeId": "TMV-P1-3",
             "agent": "CTO",
-            "status": "pending",
+            "status": "done",
+            "delivery": "build-tricade.yml 断链修复（commit 4a4b2e6a：working-directory 改指 TriCompany/packages/agent-core canonical 真源）",
             "action": "CI 断链修复（build-tricade.yml 'Build TriMC agent-core' 步骤指向已清理目录——强制最先，修复前禁动任何 CI 改名批）"
         },
         {
@@ -43,25 +44,25 @@
         {
             "nodeId": "TMV-P1-5",
             "agent": "CTO",
-            "status": "pending",
+            "status": "in_progress",
             "action": "TriRMC 立项：仓+四件套+CI 接线（路径 B 资产迁入为种子方案，CEO 决策①批准）；迁移主体归期 2"
         },
         {
             "nodeId": "TMV-P1-6",
             "agent": "CTO",
-            "status": "pending",
+            "status": "in_progress",
             "action": "分身调度前置：contract placement 策略字段+资源画像（clone-dispatch v0.2 增量）；CHO 分账编制（CLONE_STAFFING_REQUEST placement）"
         },
         {
             "nodeId": "TMV-P1-7",
             "agent": "CTO",
-            "status": "pending",
+            "status": "in_progress",
             "action": "agent-core 进件合同设计稿（daemon 骨架/存储/注册表/聚合合同——仅设计，实现归期 4）"
         },
         {
             "nodeId": "TMV-P1-8",
             "agent": "CTO",
-            "status": "pending",
+            "status": "in_progress",
             "action": "schema 漂移核对专项（sync-engine 死代码与 session-store v2 cloud sync 字段从未接线核对，产出字段对齐表——期 2 投影 push 批的验收基线）"
         },
         {
@@ -81,7 +82,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "lastUpdated": "2026-08-21T19:08:55.000Z",
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "createdAt": "2026-08-21T19:08:55.000Z"
 }
