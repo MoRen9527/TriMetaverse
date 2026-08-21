@@ -1,0 +1,85 @@
+{
+    "objectType": "TREE_OPERATING_PLAN",
+    "objectId": "TREE-OP-tmv-restructure-p1",
+    "treeId": "tmv-restructure-p1",
+    "title": "三元宇宙重定义期 1：定名立项+开业互锁（W35-W36，8-9 批）",
+    "ownerRole": "CEOChiefOfStaff",
+    "status": "active",
+    "summary": "CEO 2026-08-21 六决策全批后的期 1 立项树（依据 tmv-minimal-restructure-analysis 树 R6 §五期 1 批构成 + R9 设计约束）。目标：四名立住、两新模块按四件套立项、CI 断链修复、白皮书两波修订成稿，开业（I5）先行闭环不受扰。设计约束（R6 §〇.5）：会话=一等调度记账单元/租户无全局单例。期 1 零触碰 I1-I4 运行链可与开业收官并行。",
+    "parentWeekPlan": "OP-202608-W34-001",
+    "nodes": [
+        {
+            "nodeId": "TMV-P1-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "总控：CEO 六决策登记（2026-08-21：①路径 B 迁 TriRMC ②元虚拟止名册+摘要 ③4 期框架期 4 触发式 ④TriMLC 保留锚定 ⑤游戏化叙事保留+标注 ⑥白皮书波 1 即刻）、立项树建立、派连锁批次"
+        },
+        {
+            "nodeId": "TMV-P1-1",
+            "agent": "CPO",
+            "status": "in_progress",
+            "action": "白皮书波 1 主笔（R5 修订清单触点 1/2/3/6/7/8/9/10——§3.1 双层表述+演进钩子+图 3-2 接续锚、§3.3 载体行、§3.3.1 模块表、§1.3 交叉引用、附录 B 6 词条+双层定义+消歧互指、FAQ E.1 三行、文档头）；状态保持草案待 CEO 签发"
+        },
+        {
+            "nodeId": "TMV-P1-2",
+            "agent": "BusinessStrategy",
+            "status": "in_progress",
+            "action": "中央口径更新=架构文档 v0.5（R6 改名线 1a 叙事批：§4 模块表增 TriMMC/TriMLC/TriRMC/TriRLC 双系统对、§5 alias 条目 TriMMC↔TriMC/TriRLC↔TriLC+TriMLC/TriModel 消歧条目+触发式终点、two-phase roadmap v2 叙事合流交叉引用）；口径记录归 BusinessStrategy 域"
+        },
+        {
+            "nodeId": "TMV-P1-3",
+            "agent": "CTO",
+            "status": "pending",
+            "action": "CI 断链修复（build-tricade.yml 'Build TriMC agent-core' 步骤指向已清理目录——强制最先，修复前禁动任何 CI 改名批）"
+        },
+        {
+            "nodeId": "TMV-P1-4",
+            "agent": "CHO",
+            "status": "pending",
+            "action": "TriMLC 立项：仓+四件套（contract/agent-body/registry/发布条目，按 AGENTS 对齐 TODO ⑥ 新模块标准合批）+FADE claude 宿主激活声明+命名锚定落册；无 daemon 侦听面（R4 裁决）"
+        },
+        {
+            "nodeId": "TMV-P1-5",
+            "agent": "CTO",
+            "status": "pending",
+            "action": "TriRMC 立项：仓+四件套+CI 接线（路径 B 资产迁入为种子方案，CEO 决策①批准）；迁移主体归期 2"
+        },
+        {
+            "nodeId": "TMV-P1-6",
+            "agent": "CTO",
+            "status": "pending",
+            "action": "分身调度前置：contract placement 策略字段+资源画像（clone-dispatch v0.2 增量）；CHO 分账编制（CLONE_STAFFING_REQUEST placement）"
+        },
+        {
+            "nodeId": "TMV-P1-7",
+            "agent": "CTO",
+            "status": "pending",
+            "action": "agent-core 进件合同设计稿（daemon 骨架/存储/注册表/聚合合同——仅设计，实现归期 4）"
+        },
+        {
+            "nodeId": "TMV-P1-8",
+            "agent": "CTO",
+            "status": "pending",
+            "action": "schema 漂移核对专项（sync-engine 死代码与 session-store v2 cloud sync 字段从未接线核对，产出字段对齐表——期 2 投影 push 批的验收基线）"
+        },
+        {
+            "nodeId": "TMV-P1-9",
+            "agent": "CEOChiefOfStaff",
+            "status": "pending",
+            "action": "期 1 收口：白皮书波 2（触点 4/5，依赖本树定稿）+CEO 签发登记+FADE 流水线批次 C 实现面挂期 2 复核+开业互锁门确认"
+        }
+    ],
+    "relatedDocuments": [
+        {
+            "note": "分析树全产出（R1-R9）",
+            "source": "docs/workflow/operating-records/2026-W34/trees/tmv-minimal-restructure-analysis/",
+            "kind": "analysis"
+        }
+    ],
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-08-21T19:08:55.000Z",
+        "version": "0.1.0"
+    },
+    "createdAt": "2026-08-21T19:08:55.000Z"
+}
