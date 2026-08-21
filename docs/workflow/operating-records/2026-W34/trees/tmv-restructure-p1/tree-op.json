@@ -55,8 +55,9 @@
         },
         {
             "nodeId": "TMV-P1-7",
+            "status": "done",
             "agent": "CTO",
-            "status": "in_progress",
+            "delivery": "TriCompany/docs/engineering/agent-core-daemon-contract-design.md 320 行（八节合同设计稿+adoption 六步+风险 6 项；补核新事实=session_messages.seq 已存在 per-session 单调，R8 缺口 2 裁闭）",
             "action": "agent-core 进件合同设计稿（daemon 骨架/存储/注册表/聚合合同——仅设计，实现归期 4）"
         },
         {
