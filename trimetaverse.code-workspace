@@ -29,6 +29,12 @@
 			"path": "../core-agent"
 		},
 		{
+			"path": "../TriMLC"
+		},
+		{
+			"path": "../TriRMC"
+		},
+		{
 			"path": "../TriMC"
 		},
 		{

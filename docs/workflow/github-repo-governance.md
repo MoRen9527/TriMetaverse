@@ -27,6 +27,8 @@
 | `TriDeployment` | B. 过渡仓 | 部署能力历史兼容占位 | `dev-first` |
 | `TriTest` | B. 过渡仓 | 测试能力历史兼容占位 | `dev-first` |
 | `TriModel` | C. 占位仓 | Provider/Model 统一配置层 | `dev-only` |
+| `TriMLC` | C. 占位仓 | 元虚拟本地控制器（Meta Local Controller，TMV-P1-4 立项 2026-08-22） | `dev-only` |
+| `TriRMC` | C. 占位仓 | 元现实主控（Reality Main Controller，TMV-P1-5 立项 2026-08-22，种子=路径 B 迁入） | `dev-only` |
 | `TriSkill` | C. 占位仓 | 统一 skill 提供模块 | `dev-only` |
 | `TriGateway` | C. 占位仓 | 社交通道连接与消息队列管理 | `dev-only` |
 | `TriMobile` | C. 占位仓 | 本地域移动端入口 | `dev-only` |
