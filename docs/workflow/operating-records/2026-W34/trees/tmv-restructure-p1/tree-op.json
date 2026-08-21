@@ -50,7 +50,8 @@
         {
             "nodeId": "TMV-P1-6",
             "agent": "CTO",
-            "status": "in_progress",
+            "status": "done",
+            "delivery": "clone-dispatch-protocol.md v0.3 §十（commit 25466d09：placement 四值+runtimeForm+分账六规则+执行面统一接口）",
             "action": "分身调度前置：contract placement 策略字段+资源画像（clone-dispatch v0.2 增量）；CHO 分账编制（CLONE_STAFFING_REQUEST placement）"
         },
         {
@@ -63,7 +64,8 @@
         {
             "nodeId": "TMV-P1-8",
             "agent": "CTO",
-            "status": "in_progress",
+            "status": "done",
+            "delivery": "TriCompany/docs/engineering/session-sync-schema-alignment.md 152 行（commit a5a2353：无阻断冲突+PG 目标 DDL+验收基线五条+seq 复用关闭 R8 缺口 2+时间戳格式分裂新风险）",
             "action": "schema 漂移核对专项（sync-engine 死代码与 session-store v2 cloud sync 字段从未接线核对，产出字段对齐表——期 2 投影 push 批的验收基线）"
         },
         {
@@ -83,7 +85,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "lastUpdated": "2026-08-21T19:08:55.000Z",
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "createdAt": "2026-08-21T19:08:55.000Z"
 }
