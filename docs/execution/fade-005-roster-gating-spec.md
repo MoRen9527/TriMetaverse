@@ -1,4 +1,6 @@
-# 上岗 gating 规范（FADE-005，roster.active 运行态门禁）
+# 上岗 gating 规范（FADE-ASSESS-20260819-005 工作包 · 并入 FADE-004 员工域，roster.active 运行态门禁）
+
+> **编号勘误（2026-08-21，FADE-LEFTOVER 批 2）**：本规范是 FADE-ASSESS-20260819-005 工作包产物，编号已并入 **FADE-004（员工域 ADE-B）**——登记册（fade-registry.md）无独立 FADE-005 条目，整合提案明确"避免另立 FADE-005"。文件名保留以兼容历史引用（周平面 / commit 记录）。
 
 版本：v1.0（2026-08-20 立册）
 日期：2026-08-20
