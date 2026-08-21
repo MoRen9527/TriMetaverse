@@ -1,0 +1,77 @@
+{
+    "objectType": "TREE_OPERATING_PLAN",
+    "objectId": "TREE-OP-tmv-minimal-restructure-analysis",
+    "treeId": "tmv-minimal-restructure-analysis",
+    "title": "三元宇宙最小实现重定义——白皮书级结构调整分析（元虚拟/元现实/元认知三层）",
+    "ownerRole": "CEOChiefOfStaff",
+    "status": "active",
+    "summary": "CEO 2026-08-21 提出三元宇宙最小实现重定义：元虚拟系统=TriMC 改名 TriMMC（Meta Main Controller）+ 新增 TriMLC（Meta Local Controller，FADE 多宿主发布线激活本地宿主）；元现实系统=新增 TriRMC（Reality Main Controller）+ TriLC 改名 TriRLC，共用 agent-core；元认知系统=项目代码仓（元虚拟成果经 worktree 被元现实消费，双向螺旋）。分析树分三批：现状盘点（3 分身并行）→ 架构与理念方案分析（小狄/小乔主审）→ 任务量分期与联审收口。纯分析不开工，产出白皮书修订要点供 CEO 定调。",
+    "parentWeekPlan": "OP-202608-W34-001",
+    "nodes": [
+        {
+            "nodeId": "TMV-R-0",
+            "agent": "CEOChiefOfStaff",
+            "status": "done",
+            "action": "总控：解析 CEO 重定义描述、建分析树、派批 1 三个现状盘点分身、登记周平面"
+        },
+        {
+            "nodeId": "TMV-R-1",
+            "agent": "CTO-分身A",
+            "status": "in_progress",
+            "action": "现状盘点①：TriMC 服务器形态（claude code 原版+trimc 功能面）+ agent-core 消费实证（import 面/contracts resolver/scheduler）——回答 CEO 问题：服务器端 claude code 有没有用到 agent-core"
+        },
+        {
+            "nodeId": "TMV-R-2",
+            "agent": "CTO-分身B",
+            "status": "in_progress",
+            "action": "现状盘点②：TriLC 功能面 + agent-core 包结构（谁消费什么）+ TriPilot/TriCade 连接方式与 agent 上下文可见性现状"
+        },
+        {
+            "nodeId": "TMV-R-3",
+            "agent": "CPO-分身",
+            "status": "in_progress",
+            "action": "现状盘点③：白皮书（tmv-whitepaper.md）与三元宇宙架构文档现状 + 全仓命名冲突检查（TriMMC/TriMLC/TriRMC/TriRLC 是否撞名）+ 改名产品面影响（TriCade 发行物/用户可见名/installer）"
+        },
+        {
+            "nodeId": "TMV-R-4",
+            "agent": "CTO",
+            "status": "pending",
+            "action": "架构方案分析：三条 bridge 通信（TriMMC↔TriMLC ssh+bridge / 元虚拟↔元现实 / TriRMC↔TriRLC 共用 agent-core）+ 双系统各自会话/agent 管理模型 + 岗位说明书式分身调度（主控域 7×24、分身酌情跑服务器/本地）+ TriPilot+TriRLC 连 agent-core daemon 看全部上下文可行性",
+            "blockedBy": ["TMV-R-1", "TMV-R-2"]
+        },
+        {
+            "nodeId": "TMV-R-5",
+            "agent": "CPO",
+            "status": "pending",
+            "action": "产品/理念对齐分析：三层最小实现定义（元虚拟=成熟虚拟环境可整体换 codex / 元现实=agent-core 自研 / 元认知=项目仓+worktree 消费）+ 双向螺旋（虚拟实验→现实方案；现实需求→虚拟重放）语义边界 + 白皮书修订要点",
+            "blockedBy": ["TMV-R-3"]
+        },
+        {
+            "nodeId": "TMV-R-6",
+            "agent": "CTO",
+            "status": "pending",
+            "action": "任务量与分期：大改造分批（改名/新模块/bridge/会话管理各几批）+ 依赖链 + 与赛博公司开业/FADE 流水线复审/AGENTS 对齐排期关系 + 风险清单",
+            "blockedBy": ["TMV-R-4", "TMV-R-5"]
+        },
+        {
+            "nodeId": "TMV-R-7",
+            "agent": "CEOChiefOfStaff",
+            "status": "pending",
+            "action": "联审综合收口：汇总 R1-R6 产出综合分析报告 + 回答 CEO 全部提问 + 白皮书修订要点清单 + 交付 CEO 定调（分析入册不开工）",
+            "blockedBy": ["TMV-R-6"]
+        }
+    ],
+    "relatedDocuments": [
+        {
+            "note": "CEO 重定义描述（2026-08-21 会话原文要点）",
+            "source": "docs/workflow/operating-records/2026-W34/trees/tmv-minimal-restructure-analysis/ceo-redefinition-brief.md",
+            "kind": "brief"
+        }
+    ],
+    "metadata": {
+        "updatedBy": "CEOChiefOfStaff",
+        "lastUpdated": "2026-08-21T14:48:24.000Z",
+        "version": "0.1.0"
+    },
+    "createdAt": "2026-08-21T14:48:24.000Z"
+}
