@@ -1,50 +1,42 @@
 {
     "dependsOn": [
-        "OP-202608-W33-001"
+        "OP-202608-W34-001"
     ],
     "objectType": "WEEKLY_INDEX",
-    "objectId": "OP-202608-W34-001",
-    "title": "TriMetaverse W34 周经营维护索引",
+    "objectId": "OP-202608-W35-001",
+    "title": "TriMetaverse W35 周经营维护索引",
     "ownerRole": "CEOChiefOfStaff",
-    "status": "closed",
-    "summary": "W34 周经营维护。任务从上周迁移，新任务待规划。",
+    "status": "active",
+    "summary": "W35 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（TMV 重定义分析树全链收口：五问全答+六决策项呈 CEO 定调）",
-        "version": "1.24.0",
-        "lastUpdated": "2026-08-23T15:59:00.092952+00:00",
+        "updatedBy": "CEOChiefOfStaff",
+        "version": "1.0.0",
+        "lastUpdated": "2026-08-23T15:59:00.078036+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
             "经营维护计划单"
         ],
-        "latestActiveWeek": false,
+        "latestActiveWeek": true,
         "phase": "ceo-copilot-host-coordination",
-        "previousWeekRef": "docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json",
-        "nextWeekRef": "docs/workflow/operating-records/2026-W35/OP-202608-W35-001.json"
+        "previousWeekRef": "docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json"
     },
     "priority": "high",
     "timebox": {
         "scope": "weekly",
-        "label": "2026-W34 当前周维护面",
-        "startAt": "2026-08-17T00:00:00+08:00",
-        "endAt": "2026-08-23T23:59:59+08:00"
+        "label": "2026-W35 当前周维护面",
+        "startAt": "2026-08-24T00:00:00+08:00",
+        "endAt": "2026-08-30T23:59:59+08:00"
     },
-    "createdAt": "2026-08-16T16:45:00.078804+00:00",
+    "createdAt": "2026-08-23T15:59:00.078036+00:00",
     "relatedModules": [
         "TriMetaverse",
         "TriCompany",
         "TriLC",
         "TriMC"
     ],
-    "updatedAt": "2026-08-16T16:45:00.078804+00:00",
-    "activeTrees": [
-        {
-            "treeId": "tmv-minimal-restructure-analysis",
-            "title": "三元宇宙最小实现重定义分析（白皮书级结构调整）",
-            "path": "trees/tmv-minimal-restructure-analysis/tree-op.json",
-            "status": "active"
-        }
-    ],
+    "updatedAt": "2026-08-23T15:59:00.078036+00:00",
+    "activeTrees": [],
     "doneTreesFromPreviousWeek": [
         {
             "treeId": "w33-weekly-migration-ade",
@@ -210,22 +202,7 @@
         }
     ],
     "doneTreesThisWeek": [],
-    "nextActions": [
-        "FADE-ASSESS-20260818-001: ADE 收尾对标——**✅ 已完成（2026-08-20）**：① 评分执行体（Score CLI 覆盖检查 + Score Skill 质量评定）随阶段 2 落地（fd59157）② 四实例试卷 + 首次评分（4×PASS 90/90/80/81）。**FADE-004 复评 ✅（473b878）：81 → 88/100 PASS**（官方审计证据就位，audit-record 6→9）。补证项剩余：FADE-001 服务器侧回流（C 类等 ssh 窗口）、FADE-003 run 链（就绪等真实周记）、FADE-002 事件触发（W35）",
-        "FADE-ASSESS-20260819-002: ADE 整合阶段 0 两处合同级缺口修复——**✅ 已完成（2026-08-20，ADE 兼容 run APPROVED，commit 004a506）**：employee_host_publish 默认 dry-run（§2.4）+ 白名单∩禁区=∅ 硬校验 + manifest 审计 + 逃逸防护补全（终审 FREEZE 返工项）。链：小全实现 → 小柯独立验证（PASS 6 项）→ 小狄终审（FREEZE→返工）→ 小全返工 → 小柯逃逸专项复测（13/13 PASS）→ 收口。validation 53/53 + 5/5。观察项挂阶段 1：agent_publish errors→rc 映射、action 词表契约化、逃逸函数复用到 host=claude、Windows drive-relative 用例",
-        "CFO-ONBOARD-20260819-001: CFO 上岗——**宿主侧线 ✅ 已完成（2026-08-20）**：copilot 面（.github/agents/chief-financial-officer.agent.md 已收敛）+ claude 面（.claude/agents/chief-financial-officer.md，--host=claude 发布 df31c10a）多宿主就位（当前两宿主，未来任何宿主=注册表新增条目）——CFO 能力平移宿主侧，可被发现可被加载（13 员工 + 5 registry 全量多宿主发布，18/18 derived_identical 收敛）。**runtime 侧线 ⏸ 挂起并并入开业测试（CEO 2026-08-20 定调）**：CFO runtime 上岗与公司初始化相关，不单独追——并入赛博公司后面开业一起测试（初始化协同链 I4/I5 完成时走 FADE-004 全链；daemon 链态门拦截实证：project-link 未过五维同步确认卡）。职责双轨：① 现实财务（原有）② 赛博公司 token 消耗成本控制（CEO 2026-08-19 定调新增：累计 >2 亿 / 单次 >1 亿 升级 CEO，小贾执行监控 + CFO 成本护栏分工）。前置链三环完成（渲染重渲染/上岗 gating/知识注入）。CHO 审批 APPROVE 在案（落 CHO-staffing 审计待 runtime 线走链时）",
-        "FADE-ASSESS-20260819-003: ADE-B 员工域知识注入消费链路——**✅ MVP（2026-08-20，180cfbf）+ 内容层 ✅（批次 3-2，4b4d8ba）**：knowledge.db v3（契约三件套 + wiki/inbox 内容层，layer CHECK 放宽 + 迁移缺陷修复）；wiki 消费记录（主）+ inbox（辅，open/近 7 天 closed 过滤 + 字段裁剪白名单）；注入块 sources 来源标签；org/shared 预留、audit 排除、源只读。规范立册 knowledge-injection-spec.md（内容层落地后待升版 v2）。后置：TriMC 同构、org/shared 注入、hermes 全量、主会话越权埋点",
-        "FADE-ASSESS-20260819-004: ADE-B binding profile 收敛（CEO 2026-08-19 记入，ADE-B 渲染改造工作包）——binding-profiles/*.json 定性为「发布绑定关系的派生记录」：语义真源收敛 contract、绑定事实收敛 manifest，禁人工编辑、由生成管线重建（与 D-07 live entry 派生壳纪律同构）；不可替代部分=liveEntry.identityRule 与 notes（绑定决策证据）。生成管线重建时同步校验 binding profile 与 contract/manifest 一致性，并入 ADE-B 阶段 1/2 同批排期。范围定调（CEO 2026-08-19）：多宿主渲染模型适用于员工发布到宿主侧（Copilot-host 面 .github/agents / Claude Code 面 .claude/agents）；TriLC/TriMC runtime 直读 contract 不参与渲染面；TriLC init-assemble 的 Claude Code 模板职责随统一渲染模型收敛进统一发布管线。宿主参数定调（CEO 2026-08-19）：发布 CLI 加 --host={copilot|claude}，先支持两宿主——copilot 默认兼容现状、claude 承接 init-assemble 装配职责；每宿主注册渲染模板+live manifest+保护白名单，标准管线不变，未来新宿主=新增宿主分支（模板+manifest+白名单）。**渲染改造 ✅ 已完成（2026-08-20，commit 4ce113d）**：--host 两宿主 + 渲染引擎 + 附加段回归源 + 派生一致校验 + 保护链翻转逻辑闭环（P2 缺口 A/B/agents-backup 全堵，小柯终测 73/73 + 132/132 全绿）。**工作包① 渲染元数据+重渲染 ✅（501e0fb + 434db81c）**：13 role-agent 元数据 + 引擎缺陷修复 + DE/CSO 源补齐 + 重渲染全收敛——**hash 漂移从机制上消除**。**批次 1 渲染收口 ✅（2026-08-20，49e4b20 + ddbe42d + 91a8d257 + a321ae0e）**：init-assemble 装配收敛（小狄定案 A，.claude/agents 写目标移除，渲染管线唯一写者）+ claude 面派生身份标记 + TOOLS_MAP 映射/剔除双态 + CLAUDE_HOST_TOOL_ALLOWLIST 硬白名单（execute 剔除 tool_drops 审计 5 项）+ 存量 18 条收敛 + 4 小写 registry 孤儿清理。**binding profile 一致性校验 ✅ 已完成（2026-08-20，commit 55b3a2e）**：三源字段级校验（规则 A1-G1）+ CLI --validate-binding（error>0 exit 1）+ 生成路径拒绝写入；现役盘点=12 一致（G1 warn 旧生成待重建）+ full-stack-developer B1 error（重建待 CTO/CHO 确认定义侧状态）。观察项：G1 warn 全量、A3 弱校验盲区、DE/CSO 历史字段重渲染边界（CTO 定口径）",
-        "FADE-ASSESS-20260819-005: ADE-B 员工域上岗 gating 落位——**✅ 已完成（2026-08-20，APPROVED，commit 3f11d11）**：三处运行态门禁（派工 tasks/submit ownerRoleId 409 / 分身 AgentTool 合同岗 spawn / 调度 cron roleId+shouldRunJob 含 command job）；单一校验真源 staffing.ts；可见性 contract 全量不改；终审补丁（gate 前移 + skipped 不进 degraded 解除）。验证：24 新用例 + 452/451 + 小柯独立 HTTP 实测。规范立册 fade-005-roster-gating-spec.md。观察项挂后续：分身 spawn 级端到端、setRosterGate 多实例注入、skipped-degraded 单测固化",
-        "FADE-ASSESS-20260820-006: ADE 整合阶段 1 报告合同收敛——**✅ 已完成（2026-08-20，APPROVED，commit 856338e + 2c407df）**：三报告统一 envelope（守恒不变量 + items 七字段基座 + scope_specific 分域）；action 词表契约化；errors>0→rc=1；drive-relative 拒绝；消费者更新。链：小全实现（60/60）→ 小柯独立验证（8/8 PASS）→ 小狄终审（APPROVE，守恒独立核算）→ 收口（spec §2.2 envelope v1.0 落位 v1.1.7）。阶段 2 去向：显式 runId 覆盖策略、组合容器聚合决策、envelope 公共函数提炼+容器防御、_make_run_id docstring 修正",
-        "FADE-QUALITY-REVIEW-20260820-001: **FADE 质量手动审核——① ✅ ② ✅ ③ 执行中**：① 小吴教程三版（8138fee + 发现 9 项）② 小柯端到端（六链五 PASS + 发现 5 项）③ CEO 配合走查：**三问题已修复**（CFO 职责范围扩大 7c96ff6/源侧维护句移除/绑定多宿主 2c8abfd + FSD 裁决与 13 profile 重建 2d5c0d1 + ⑤ 双宿主收敛验证全绿）。剩余走查项：知识注入会话/门禁/评分审阅/触发链/教程。",
-        "FADE-STRENGTHEN-20260821-001: **FADE 加固——✅ 已完成（2026-08-21，de18be3 + 72022a4e）**：B 内容归属校验（误植句 16 处清理零残余）/ C 模板治理对齐维度（v1.0.5）/ D 组件-合成同步校验（语义修正：逐行包含+锚点放宽+description 存在性传导，11 员工段落补齐）/ A 回写 checklist。CEO 定调路径核查全仓清理（121 行）+ 失控实例回滚。验证：B 零误植 + D 仅 4 历史 missing synthetic + 全量 230/230 + 双宿主重渲染 12+12 收敛。经验立册 fade-quality-lessons.md（31fc6a0）。**遗留 4 个 missing synthetic 已裁决（→FADE-LEFTOVER-20260821-001：1a/1b 补齐 + 1c registries 批量枚举误报修规则）**",
-        "FADE-LEFTOVER-20260821-001: **FADE 加固遗留项处置（小狄 CTO 裁决 2026-08-21）——批 1 ✅ + 批 2 ✅ 均终审 APPROVE，立项目整体关闭（2026-08-21 小狄确认；批 2：TriCompany 3f7e1ab + 6750594 / TriMetaverse b46ef84d）**。批 2：spec v1.2.0 四处落位（素材 fade-quality-lessons §四）/ FADE-005 悬空清扫（gating spec 标并入 FADE-004 文件名保留兼容 + code-deep-dive 收敛注记 + consolidation「避免另立」历史叙事保留）/ knowledge-injection-spec v2.0 对齐 TriLC 实现 / training 三份差异标注 / binding 全量重建 13/13 零 error 零 warn（G1 全清 + V2 措辞清零，生成器 13 set 显式 status 数据面改动经小狄裁决 1 认定合规不拆票 + 收口纪律：status 晋升只走定义处显式声明+重建、:93 默认值禁改）。链：编排层实现（全量 341 与基线同 4 项零新增）→ 小柯独立验证（4/5 PASS，条件项回归日志已补强 output/b2-docs-reg.log）→ 小狄终审 APPROVE（FSD Gate 5 note 与 live status 并存 = intended reading 显式背书）。**关闭条件登记三项（不随批闭消失）**：① spec v1.2.1 勘误 ✅ 已完成（2026-08-21，TriCompany c131f0e）：§六 表重排（断表修复+重复行移除+已收编/未收编两区）/§6.1 对齐实现现状/§2.2 补 event-watch scope/§10 双核销 + deep-dive 观察项 1/2/4/6 核销注；② knowledge-injection-spec:53 「路径」措辞微超前——随该 spec 下次触碰顺带修，登记 code-state 观察项；③ 回归落盘口径——下次起日志须含终局摘要行（pytest -ra + 完整重定向）。**在案剩余项（均有 owner 不悬空）**：FADE-003 W35 真实周记 run 触发（guard 09-06 升级 CEO）、事件自动触发（automation-backlog + spec §8.6 已声明独立工程项）、行尾归一化（管线观察项）、rd_trainer 测试小改 ✅ 已完成（2026-08-21，TriCompany e05e5f6：期望改 DECLARED_HOST_OBJECT_SETS 声明列表驱动+反快照守卫，全量失败 4→3 仅剩 IPD×3）、IPD×3 失败语义确认 ✅ 已完成（2026-08-21，TriCompany 6428464：小贾域裁决=①引擎真 bug〔_matches_module_hint 混排关键词大小写敏感退化，统一 lowered 子串匹配〕+②测试过期〔证据政策后 3 处夹具补 evidence〕；IPD 59/59 + 全量 341 首次全绿，7 周红债清零，小柯复核 CONDITIONAL_PASS→PASS：静态全过，盲区 B1〔diff 纯度 git show 实证：仅 1 匹配函数+注释+3 evidence 行〕与 B2〔动态实证五模块全命中〕已由编排层补证；观察项 O1/O2〔_derive_case_short_name 同款 isascii 风格残留、source_text 参数不再使用〕列下轮清理候选）。批 1 明细：1a CSO+DE 补合成（soul 三处同文逐字+manifest 切源零残留）；1b business-strategy 内容合并修复（围栏+映射行+SYNTHETIC_PATH_OVERRIDES 映射例外）；1c check-sync --all 批量固化（14/14 in-sync，registries 误报消除，+4 测试）；双宿主重发布恰好 3+3 更新零误伤（发布前 diff 评审留痕）；binding 13/13 零 error；**FADE-002 复评核销 PASS 93/100**（run-id-carrier 7→10，--run-id 实跑 5 次含 changed=0 收敛 envelope，遗留仅剩事件自动触发挂 automation-backlog）。链：编排层实现（四套件 239/239 OK+4 新测试）→ 小柯独立验证（静态零 FAIL 第二方法交叉，CONDITIONAL 唯一条件四命令已由编排层补跑验讫升级 PASS）→ 小狄终审 APPROVE（独立静态抽查复核）。**终审观察项处置（小狄裁决）**：① rd_trainer 测试期望 9 员工快照过期 → CTO 域小改单本周期内修（不挂批 2）；② IPD×3 失败 → 观察项+路由小贾域确认语义（测试过期 vs 引擎漂移）；③ 发布管线行尾归一化（.gitattributes eol 语义 compare/write）→ 管线改进观察项不阻塞（本次 stash CRLF churn 已字节级收敛）；④ G1 warn 全量 + CSO binding \"V2 location\" 措辞 → 随批 2 binding 全量重建一并消。批 2（spec v1.2.0/FADE-005 悬空清扫/knowledge-injection-spec 升版/training 差异标注）小狄确认可启动。原始裁决三子项：① **1a APPROVE W34 立即**：CSO+deployment-engineer 补合成文件（agent-body 全文+soul 角色气质段并入；认知分层冲突句统一采「客户成功判断框架」三处同文；manifest 两条目 source 从 agent-body 切 `<id>.agent.md`；双宿主重发布先 dry-run 后 execute+发布前 diff 评审留痕；binding 重建校验；验收=D 校验两人 green+copilot 面仅新增角色气质段+230 不回归）② **1b APPROVE 本批**：business-strategy 走内容合并修复非补目录合成（registry 类单文件即真源，补合成=第二真源）——registries/business-strategy.agent.md 开头围栏修复+组件 agent-body 模块映射行对齐兼容资料口径（TriTest/Trideployment 仅历史兼容，依据 CLAUDE.md Registry Routing）+D 校验加映射例外（合成路径=registries/business-strategy.agent.md，真漂移面从此被覆盖）+双宿主重发布；知会：映射措辞属 BusinessStrategy 语义域，按已定调真源对齐，涉新商业语义另走裁决 ③ **1c 不补（C）修规则**：registries 单文件区按设计无组件-合成二元结构，批量 D 校验枚举改仅扫含 contract.yaml/agent-body 的组件目录+固化 CLI 批量模式（check-sync --all 级）④ **项 2 APPROVE 归「审核收口统一执行」一批（W34~W35 初）**：全部文档漂移类零行为变更，批内四步定序——spec 升 v1.2.0（多宿主入 §6.1/event-watch 入 §8.6/B+D 校验入 §2.2/§2.6，素材取 fade-quality-lessons.md §四）→ FADE-005 悬空引用全仓清扫（登记册只有 001~004）→ knowledge-injection-spec 升版对齐已落地实现 → 三份 training 加差异标注头注（不重写）；护栏：行为/代码变更类剔除出批另走技术裁决 ⑤ **项 3 FREEZE 触发条件式不给固定排期**：FADE-002 runId 显式化+真实发布窗复评=随 1a/1b 双宿主发布实跑窗口 W34 内（≤08-23）一并核销（CLI --run-id 已落地），事件自动触发增强挂 automation-backlog 本批不开工；FADE-003 run 链补证（**登记勘误：FADE-003=共学周记域，员工域=FADE-004**）等 W35（08-28~30）真实周记 run 同 runId 完整链落 journal-run-log.jsonl 后一周内复评。Guard：项 1 发布延至 08-30 未执行→小贾催办；09-06 无完整 run 链→升级 CEO 定周记排期。AGENTS.md 对齐 TODO 1-8（CEO 保留）不在裁决范围",
-        "TMV-RESTRUCT-20260821-001: **三元宇宙最小实现重定义分析（白皮书级结构调整，CEO 2026-08-21 发起）——✅ 全链完成待 CEO 定调（R0-R7 八节点 done，七份交付物 275+199+276+呈报等 ≈1100 行落树目录；commit fa72996f/de0d0768/43c7bcab）**。五问全答（服务器 claude 零 agent-core/git 仓主信道/会话管理分层/本地消息级+服务器三步补/换 codex 成立但路径 B 资产需迁 TriRMC）；总任务量 34-44 批（主线 28-34）；分期 4 期（期 4 可缓）+FADE 批次不重排（仅 C 实现面挂期 2 后）+AGENTS 对齐 TODO ⑥ 建议合批；六决策项呈 CEO（路径 B 归属/元虚拟正文级可见性不承诺/分期/TriMLC 锚定/叙事保留/白皮书波 1 即刻）。**CEO 追加两场景已收口（R8 节点，3dd8acda）**：场景 1（元虚拟模拟云+本地协同）R4/R5 已覆盖 ~90%，补强=首批实验任务显式列「云+本地协同自动化」（期 1/2 内容）；场景 2（k8s pod+随处接入+--reconnect+pod 分身）四裁决——①本地 daemon 协同为正确主路径（任务-资源亲和 7 维 5 维占优，pod 落 PC 仅 B2 边缘容器可选第三形态 MVP 不做、PC 入集群否决）②reconnect=游标化 SSE 重放+单写者锁（TriLC 后台执行模型天然地基，seq 底座一次投入喂 reconnect/投影/recover 三面）③任意入口=薄 web 面板（手机走投影面看+reconnect 面接管；MVP 局域网+token，跨网 overlay VPN 零公网）④分身编排归 CHO 非 HPA（hpa CPU 驱动与编制语义不匹配）。任务量增量 4.5-6.5 批落期 3 后半/期 4 均可缓做，主线 28-34 批不冲击。**CEO 终态愿景两轮收口（R9 节点，7aa34a75）**：图 3-2 六步价值闭环×最小实现种子映射——FADE 评分段=图中『AI 评估』环节种子、§3.4 PC 节点化升级（未开钱包=服务入口/开钱包+登记=贡献记账节点）与 CEO 终态同物两述；落地三件已执行：白皮书修订清单补第 10 触点（§3.1↔图 3-2 接续锚，已补 R5）+『会话=一等调度记账单元/租户无全局单例』设计约束注记（已入 R6 §〇.5，期 1-4 各批生效）+多租户三件与区块链激励工程面归生产系统期（语义定调走 BusinessStrategy 域，白皮书波 1 启动时拉齐）。分析树 R0-R9 十节点全链闭环。**CEO 六决策全批（2026-08-21）**：①路径 B 资产迁 TriRMC 为种子 ②元虚拟可见性止名册+摘要级 ③4 期框架、期 4 触发式启动 ④TriMLC 保留+文档锚定 ⑤游戏化叙事原地保留+阶段标注 ⑥白皮书波 1 即刻——R8 四裁决与 R9 设计约束随案确认。**期 1 立项树已建**：trees/tmv-restructure-p1/（P1-0 决策登记→P1-1 白皮书波 1〔小乔主笔在跑〕→P1-2 架构文档 v0.5 中央口径〔BusinessStrategy 在跑〕→P1-3 CI 断链修复〔强制最先〕→P1-4/5 TriMLC/TriRMC 立项〔按 AGENTS TODO ⑥ 四件套合批〕→P1-6 placement/分账→P1-7 agent-core 合同设计→P1-8 schema 核对→P1-9 收口含波 2+签发+开业互锁门）。原案要点：：元虚拟=TriMC 改名 TriMMC（Meta Main Controller）+新增 TriMLC（FADE 发布线激活本地宿主）；元现实=新增 TriRMC+TriLC 改名 TriRLC（共用 agent-core）；元认知=项目仓（worktree 消费+双向螺旋）。树 trees/tmv-minimal-restruct-analysis/（R0 总控→R1-R3 现状盘点并行→R4 架构/R5 理念→R6 任务量分期→R7 联审收口），CEO 简报落 ceo-redefinition-brief.md。定调后 FADE 流水线联审结论回头复审。**期 1 ✅ 全链闭环（2026-08-22，提前于 W35-W36 窗口）**：CEO 六决策全批→白皮书 v1.0 签发（4a4b2e6+173ff677 波 1+1a+1b）/架构文档 v0.5（874a94da）/CI 断链修复（4a4b2e6）/TriMLC 立项三仓耦合（791ffa1+805a250+18a7c2e6）/TriRMC 立项三仓耦合（5a00c6e+77b351c+e525c8d8，MIGRATION.md 五迁移批项备期 2）/clone-dispatch v0.3 placement（25466d09）/agent-core 合同设计稿 320 行+schema 对齐表（a5a2353，R8 缺口 2 裁闭+时间戳分裂新风险）。执行树 tmv-restructure-p1 P1-0~P1-9 全 done。开业互锁门=期 2 迁移切换前置（I5 闭环后放行）；期 2 起点待 CEO 指令。**收口后增量 delta（P1-4/P1-5/CAO 三轮交叉修正，全部落库）**：TriMLC owner §8 收敛+gitignore 标配（3c98147）；TriRMC 消歧对齐（979ebf0）+ owner canonical 化（20b1186，与 TriMLC 双向核对闭环）；新模块登记收拢 workspace+governance §1.1（ba6d7fee）；schema 对齐表补核 §六 SSE 缺口 1 实证（bbfa473）；CAO 修 governance §8 悬空引用——补 Current Ownership 节真源+副本对齐 184 行（TriCompany 4d2dddd / TriMetaverse e9d31912）；治理悬空引用两处新发现登记（a9707f55，归治理域下轮）。期 1 最终 commit 链完整在案。",
-        "FADE-PIPELINE-ANALYSIS-20260821-001: **FADE 优化流水线联审分析（小贾×小乔×小狄，CEO 三裁决已下）——分析入册不开工，待白皮书级结构调整设计后复审**。CEO 原案六链环（检测-规划/即时指令/周期任务/平面指针+审核门/重排/建树）×CFO 成本控制×cron 入口统一×治理分级。联审结论：协议层大半在册（spec §8.6 即此愿景），净新增 4 件事；建树链/周期任务/cron 入口=已投产零新建；重排链 MVP 折叠审核门会话（0 批）；CFO 不阻塞主干（真阻塞=agent 唤起缺口：TriMC cron 仅 spawn bash 未实证 agent 会话唤起、TriLC 走 roster 门需开业）。任务量：最小可用（即时指令链闭环）≈4-7 批、cron 全自动再 +3-5 批。**CEO 三裁决（2026-08-21）**：①治理起步档采小乔修正——样本期 1-2 周逐项→类别白名单预授权→类别全自动三档（5 条可观测升级条件+降级规则，小乔分析 §五）；②分期批准——批次 A（任务落盘 CLI+平面文件制审核门，复刻 staffing pending→decide 模板）先行 / 批次 B（小赛巡检 skill 会话内闭环=event-watch 单扫+codegraph MCP+任务落盘+审核+重排折叠，CEO 全链演示）/ 批次 C（cron 定时巡检链，等开业/唤起实证）/ 批次 D（CFO 接线，开业后）/ 缓做清单（通用 ADE runtime 化维持 FREEZE、审批门 HTTP 化、跨模块 watcher 抽库、每树全 ADE 化、重排独立触发）；③FADE-002 事件自动触发提级核销（原 FREEZE→提级，automation-backlog §7.1 已补登记含本决议）。周平面瘦身 6 规则（小乔）随批次 A 落 workflow 文档：指针优先/单条≤300 字符/完成即退场/每轮写入≤3 条/index 软上限 30KB/条目字段化机读合同（流水线前置依赖）。**复审 ✅ 已完成（2026-08-21，TMV 重定义定调触发，依据 R6 §3.2 对照表）**：批次 A/B/D 维持原批零重排可随时开工；批次 C 实现面挂 TMV 期 2 后（TriRMC cron 迁移落座后落位，避免二次搬家），其先行唤起实证不受影响可在 TriMC 现址做；缓做清单维持 FREEZE。开工指令仍待 CEO 逐批发（本复审只解锁排期约束）。",
-        "ALIGN-ANALYSIS-20260820-001: **AGENTS.md 对齐与模块宿主配套（CEO 定调待办，不开工）——完整设计见 [agent-governance-alignment-design.md](../execution/agent-governance-alignment-design.md)**：① AGENTS.md 真源化（TriCompany 模板发布 + D-07 同构禁手动修改）；CLAUDE.md/AGENTS.md 分层收敛（治理规则 vs 项目手册，重叠段唯一化）② 模块三件套 contract 化进管道（copilot 面登记态/管道外手工维护 → 渲染发布；claude 面补发布；游离残留 4 个清理；TriCode 配套补建；TriPilot 命名规范化）③ TriMC/TriLC 运行时消费 TriCompany contract（模块 registry 无 contract 不被运行时消费，需 contract 化）④ 多宿主演进 + 宿主退役机制（新增=注册表条目，退役=清理 agents+关联资产+归档审计）⑤ 增量管理全链路（模块内容/记忆/契约三增量 + event-watch 联动）⑥ 新模块四件套进管道标配。TODO 1-8 在案（P0×4/P1×4），CEO 定调点 6 项待 FADE 质量审核后确认。**TODO ⑥ 合批口径已定（2026-08-21，TMV 定调连锁）**：TMV 期 1 立项批（TriMLC/TriRMC）按 TODO ⑥ 新模块四件套标准执行（合批省 1-2 批，新模块从第一天走四件套防游离残留）；TODO 1-8 整体裁决仍留 CEO 不因大改造自动启动",
-        "FADE-ASSESS-20260820-007: ADE 整合阶段 2 生命周期骨架统一——**✅ 已完成（2026-08-20，APPROVED，commit fd59157 + efbfdf1）**：runId 显式化 + Close CLI（--close 终态审计 + CLOSE_REJECTED）+ Score CLI 执行体（覆盖检查 + quality 注入 + 双门槛三态）+ 组合容器聚合 + ade_envelope 公共函数 + 编码修复（GBK 环境依赖消除）。链：小全实现（135 全绿）→ 小柯独立验证（50/50 含 V6 中文路径）→ 小狄终审（APPROVE + 1 必修编码 → 修复复跑全绿）→ 收口（spec v1.1.8 勘误 + 模板 v1.0.4 + code-state 登记）。FADE-ASSESS-001 评分执行体部分已并入完成，剩余=四实例试卷"
-    ],
+    "nextActions": [],
     "carry_over_from_w31": [
         "CARRY-20260728-001: trilc TUI CC P0 — 6w+ ⚠️⚠️ active — W33(8/10起) 首周 CEO 升级裁决",
         "CARRY-20260728-003: TriCade MSI CI — 6w+ ✅ W32 已实质完成（目录治理+MSI 自动化），建议关闭",
@@ -246,7 +223,6 @@
         "BUG-20260805-002: 安装版 healthz version 报 0.1.0 — done（2026-08-13 小全修复三处：build-desktop.ps1 注入 -Version 提取 + WriteAllText 无 BOM；build-tricade.yml 注入 CI calver；TriLC env.ts c6b635d BOM strip 防御。根因链：PS 5.1 Set-Content UTF8 写 BOM → JSON.parse 抛错 → fallback '1.0.0'，写死值与 fallback 相同掩盖了解析失败。小柯独立验证 PASS：v0.4.3 隔离实例 healthz version 实测 0.4.3。O7 观察：CI workflow 写端仍用 Set-Content -Encoding UTF8，被读端 strip 中和无害，建议 CI 侧改 WriteAllText 无 BOM 彻底闭环）",
         "BUG-20260805-003: MSI 打包缺 yoga-layout 别名 — done（2026-08-13 小全修复：TriLC package.json 加 npm 别名 89ad689 → components-smoke 30/30 转绿。小柯独立验证 PASS：smoke 独立重跑 30/30；残留 components.test.ts 以 ERR_MODULE_NOT_FOUND ink-testing-library 失败（1 fail 无挂起，D10 表述修正——r7 基线已改善，挂点从 yoga 变为 ink 缺依赖），归 CARRY-001 TUI 链）",
         "版本 revision 未自动递增（当前手动默认1）— 需改自动计数",
-        "治理文档悬空引用两处（2026-08-22 CAO 锚点修复时发现，未动待治理域下轮）：① github-repo-governance.md 元信息头 sourceOfTruth 指向不存在的根级 docs/github-repo-governance.md（疑迁移时头未更新）② TriMetaverse 副本 company-governance-state.md 来源节用 TriCompany 相对路径在副本侧不解析+publishedFrom 表述与副本身份不符",
         "INCIDENT-20260814-001: r1-2 小全 worktree 事故（已恢复，独立复核 PASS）——git worktree remove --force 穿透 npm file: 依赖 junction，误删 TriCompany/packages/agent-core 工作区 + TriModel 全目录；agent-core 已 git restore 恢复、TriModel 已从 sg-server 克隆恢复（HEAD a445b0e 与 /srv/git 及舰队克隆一致）；小贾独立复核：TriCompany status 无 agent-core 删除项且文件齐全、TriModel HEAD/status 干净；残留风险=TriModel 被删前未 push 本地提交不可验证（服务器 HEAD 一致表明大概率没有）；预防=baseline 验证改只读方式、禁 worktree+npm install 组合，junction 与 git worktree 交互危险列入 Windows 纪律（关联 W33 周记 Windows 痛点篇）",
         "r1-2 P4 环境风险 2 项（CTO 正式认定 APPROVE，A' 落地态）：① Node v18.20.8 < engines \">=20.0.0\"——engines 下调 \">=18.20.0\" 已 commit；新代码 Node 18 API 面无禁项确认（禁 import.meta.dirname/fs.glob/node:sqlite/toSorted/process.loadEnvFile）；restart 三查：journalctl 无错 + healthz cron 块（已验）+ GET /internal/v1/cron/status 200（折入 r1-3）② Python 3.6.8 实测不兼容 → A' 落地 + 正式认定：python38（3.8.17）主用（模板显式 python3.8、dry-run 门禁全过），三项影响面核查带证据（3.6 默认未动仅 squid-allowlist-sync 消费、fleet 降权两解释器可执行、五段链纯 stdlib）；python3.11 保留为备用解释器不卸载；回滚一级=模板秒切 3.11、二级=dnf remove 回 3.6+回移（B 兜底）；C docker 备选未启用",
         "r1-2 附加风险（小狄标注）：agent-core scheduler 从未在服务器进程实例化——P4 部署 smoke 为首次实战，暴露问题按共享 core 缺口通道升级，不就地改共享包",
