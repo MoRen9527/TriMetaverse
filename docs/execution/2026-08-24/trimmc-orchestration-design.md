@@ -92,6 +92,7 @@ CEO 提议 C-level 随树；小狄指出若编排会话也随树则"关树不变
 ## 九、开放问题
 
 Q-A ✅ 已裁（小狄）：维持现役直连 env 模式（fleet settings.json ANTHROPIC_BASE_URL+AUTH_TOKEN 已实证跑通）；TriModel 3333 是配置面非推理面且未部署服务器；8008 残影不复活
+Q-G ✅ 新增可选档（2026-08-25，CEO 指令）：OpenRouter 通道就绪——key 文件 /home/fleet/.trimetaverse/openrouter.key（0600 归一化 3 行：key/base/model），真实调用验证 HTTP 200（stealth/ox-alpha；注意 OpenRouter 全端点仅认 Authorization: Bearer 不认 x-api-key）。切换助手 use-openrouter.sh / use-deepseek.sh（自动备份可逆）。默认档仍 deepseek-flash（成本护栏价格表按 flash 结算——切默认前须同步 PRICES 表）；TriModel 侧 provider 登记随其服务器部署批次落（当前载体=fleet env+key 文件）。密钥卫生：本地中转已删、/tmp 粉碎、零回显、git 面 sk-or- 扫描仅历史审计文本命中
 Q-B ✅ 已裁（小狄）：K_default=4（1 编排+≤3 员工），绝对上限 6（M1 实测 p95 RSS<400MB 方可上调）；systemd-run slice MemoryMax=5G+准入排队+会话级超时
 Q-C ⏳ **CEO 决策项**：月度成本预算上限数值（超限自动降级"仅影子+人工触发"）——M2 上线前必须定
 Q-D 建议稿（小乔）：本地域不同步随树修订，维持不对称——报 CEO 确认
