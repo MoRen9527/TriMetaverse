@@ -85,7 +85,7 @@ CEO 提议 C-level 随树；小狄指出若编排会话也随树则"关树不变
 | --- | --- | --- |
 | M0 环境验证 | ✅ **PASS 2026-08-25**（5/5 判据；报告=trimmc-orchestration-m0-report.md；RSS 首样本 333MB；git 身份缺口当场修复；AGENT_TEAMS 实验旗标在册待 M1 实证） | 达成 |
 | M1 单循环手动触发 | ✅ **PASS 2026-08-25**：m1-drill-001 三节点端到端（N1 首条 EXPER_ASSET 草稿落 staging 77 行/N2 alias 核对实质差异 0/N3 收口 commit c90922a3 已 push）；并行双实例派工+红线全守+SessionRegistry 台账落盘；发现 F1 树级 status 未翻转（brief 模板待补）/F2 本地未推 commit 致服务器引用暂缺（回流纪律实证）/F3 双向通话未测（M2 项） | 达成（判据=零人工干预 ✅）|
-| M2 cron 化+通知路由 | WorkPlaneWatcher 上线；NotifyRouter 双通道；成本护栏生效 | 一个完整周末无人值守循环 |
+| M2 cron 化+通知路由 | 🔶 **已部署 2026-08-25**：orchestrate_tick.py（三重门/边沿触发/成本护栏 1000 元价格表权威取数/brief v2 含 F1 修正）装 trimc cron `13,43 * * * *`（job 09112290-34e3-48a4-8010-5bac0d385f62），首 tick ok 指纹落盘；邮件通道活，trilc push 因 Q-F NAT 缺陷挂 M3 pull-as-push。**判据「完整周末无人值守」待本周日自然验证** | 时间门 |
 | M3 观测端点 | sessions list/tail 端点；tripilot/trirlc chat 接入 | CEO 可随时看服务器干活 |
 | M4 周迁移 FADE 收口 | agent_close 裁决面由服务器小贾会话承接（与 quadmig-1 Q1-4 影子合流）；carry-over 不再等周一 | 一次真实迁移全程服务器侧闭环 |
 
