@@ -8,7 +8,12 @@
   "status": "active",
   "created": "2026-08-25",
   "nodes": [
-    {"nodeId": "AC-BOOT", "agent": "CEOChiefOfStaff", "status": "pending", "action": "读 autonomy-audit-campaign-plan.md 全文并作为战役总指挥自主执行：验证模型 stealth/ox-alpha→按计划 Step1 拆六模块审计子树（自行创建 audit-campaign-* 子树并派工）→Step2 生命周期矩阵实测→Step3 时间门规则→全程维护 state.json/log.md；本引导树节点在战役完成前保持 pending（进度看子树与 campaign state），全部完成后置 done 并收口"}
+    {
+      "nodeId": "AC-BOOT",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "读 autonomy-audit-campaign-plan.md 全文并作为战役总指挥自主执行：验证模型 stealth/ox-alpha→按计划 Step1 拆六模块审计子树（自行创建 audit-campaign-* 子树并派工）→Step2 生命周期矩阵实测→Step3 晚间收口规则(20点)→全程维护 state.json/log.md；本引导树节点在战役完成前保持 pending（进度看子树与 campaign state），全部完成后置 done 并收口"
+    }
   ],
   "doneCondition": "计划§四完成定义全达成后由编排收口"
 }
