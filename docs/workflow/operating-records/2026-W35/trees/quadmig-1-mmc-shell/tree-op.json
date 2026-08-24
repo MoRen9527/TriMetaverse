@@ -15,8 +15,8 @@
     {
       "nodeId": "Q1-2",
       "agent": "编排层",
-      "status": "pending",
-      "action": "影子隔离面搭建：独立测试 operating-root + [shadow] 前缀 + 独立目录 + dry 模式；不进现役告警通道（小乔阻断 B1 三规则先满足后开跑）"
+      "status": "done",
+      "action": "影子隔离面搭建：独立测试 operating-root + [shadow] 前缀 + 独立目录 + dry 模式；不进现役告警通道（小乔阻断 B1 三规则先满足后开跑）——完成：D:/Code/ai/shadow-plane/ 物理隔离面（仓外 operating-records+logs+README 三规则/触发窗/dry 约定）"
     },
     {
       "nodeId": "Q1-3",
@@ -33,8 +33,8 @@
     {
       "nodeId": "Q1-5",
       "agent": "编排层",
-      "status": "pending",
-      "action": "周报螺旋四行段模板上线（上行/演练/下行/复用+待签 K；counters 预留 mainPath/shadow 两组）；周迁移主路径零中断全程守恒"
+      "status": "done",
+      "action": "周报螺旋四行段模板上线（上行/演练/下行/复用+待签 K；counters 预留 mainPath/shadow 两组）；周迁移主路径零中断全程守恒——完成：experience/spiral-weekly-template.md 四行段模板（闭环率口径+双组计数器数据源）"
     }
   ],
   "doneCondition": "设计文档 APPROVE + 影子面三规则实证 + P0 条款冻结 + 试跑满 ≥2 周判据 + 四行段上线；转正另需 CEO 裁决（spec §5.1）"

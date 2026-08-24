@@ -3,12 +3,27 @@
   "title": "TriMLC 立项收尾（P1-4 核对+四件套裁定+FADE 激活声明）",
   "week": "W35",
   "source": "quad-migration-spec.md v1.0 Phase 4",
-  "status": "pending",
+  "status": "done",
   "created": "2026-08-24",
   "nodes": [
-    {"nodeId": "Q4-1", "agent": "编排层", "status": "done", "action": "TMV-P1-4 两态矛盾核对——裁定（2026-08-24）：非登记事故，是范围口径。节点与 e7813a89 逐字节一致（diff 实证）；commit message「P1-4 done」指仓立项子面完成，节点承载完整范围（仓+四件套+FADE 激活+锚定）故四件套面仍 pending。两态各自为真，历史 commit 不改写；本节点后续只覆盖剩余四件套面"},
-    {"nodeId": "Q4-2", "agent": "CTO+CAO", "status": "pending", "action": "四件套双口径裁定（R6 §1.2 vs agent-governance-alignment-design §六）+ TriMLC/STATE.md 陈旧修正（自曝 git init 未做而磁盘已有 dev 分支多提交）"},
-    {"nodeId": "Q4-3", "agent": "编排层+FADE线", "status": "pending", "action": "FADE claude 宿主激活声明 + 命名锚定落册（仓+四件套按裁定口径补齐；无 daemon 侦听面，R4 裁决）"}
+    {
+      "nodeId": "Q4-1",
+      "agent": "编排层",
+      "status": "done",
+      "action": "TMV-P1-4 两态矛盾核对——裁定（2026-08-24）：非登记事故，是范围口径。节点与 e7813a89 逐字节一致（diff 实证）；commit message「P1-4 done」指仓立项子面完成，节点承载完整范围（仓+四件套+FADE 激活+锚定）故四件套面仍 pending。两态各自为真，历史 commit 不改写；本节点后续只覆盖剩余四件套面"
+    },
+    {
+      "nodeId": "Q4-2",
+      "agent": "CTO+CAO",
+      "status": "done",
+      "action": "四件套双口径裁定（R6 §1.2 vs agent-governance-alignment-design §六）+ TriMLC/STATE.md 陈旧修正（自曝 git init 未做而磁盘已有 dev 分支多提交）——完成：双口径已在立项时裁定（STATE 口径注「按文档定义执行」）；STATE.md 陈旧待办核销（git init 磁盘实证 dev 分支 2 commit）+ quad-migration 关联节追加，TriMLC 仓 commit"
+    },
+    {
+      "nodeId": "Q4-3",
+      "agent": "编排层+FADE线",
+      "status": "done",
+      "action": "FADE claude 宿主激活声明 + 命名锚定落册（仓+四件套按裁定口径补齐；无 daemon 侦听面，R4 裁决）——完成：FADE-HOST-ACTIVATION.md 落 TriMLC 仓（激活声明+命名锚定+红线边界；实际渲染发布仍归发布线批次 per STATE 待办4）"
+    }
   ],
   "doneCondition": "矛盾清零 + 四件套按单一口径落齐 + FADE 激活声明在册"
 }

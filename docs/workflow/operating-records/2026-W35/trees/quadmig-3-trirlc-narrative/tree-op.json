@@ -3,11 +3,21 @@
   "title": "TriRLC 叙事面换轨 + R 侧职责差距清单",
   "week": "W35",
   "source": "quad-migration-spec.md v1.0 Phase 3",
-  "status": "pending",
+  "status": "done",
   "created": "2026-08-24",
   "nodes": [
-    {"nodeId": "Q3n-1", "agent": "小乔线", "status": "pending", "action": "TriLC 文档面/注册表面更名 TriRLC（bin/npm/目录名等兼容面不动；半公开协作面新起内容新名+括注，历史不追溯）"},
-    {"nodeId": "Q3n-2", "agent": "CTO线", "status": "pending", "action": "R 侧职责差距清单：对照白皮书清单（会话持久化/调度/cron/心跳/审计自持）盘点；唯一交付物=清单，若无大改清单即结论；心跳指向切换不在本树（归 quadmig-2 迁移批）"}
+    {
+      "nodeId": "Q3n-1",
+      "agent": "小乔线",
+      "status": "done",
+      "action": "TriLC 文档面/注册表面更名 TriRLC（bin/npm/目录名等兼容面不动；半公开协作面新起内容新名+括注，历史不追溯）——完成：TriLC README 命名锚定注记（TriRLC 更名+兼容面照旧+alias 指针），TriLC 仓 commit"
+    },
+    {
+      "nodeId": "Q3n-2",
+      "agent": "CTO线",
+      "status": "done",
+      "action": "R 侧职责差距清单：对照白皮书清单（会话持久化/调度/cron/心跳/审计自持）盘点；唯一交付物=清单，若无大改清单即结论；心跳指向切换不在本树（归 quadmig-2 迁移批）——完成：trirlc-duty-gap-checklist.md（6 项现状✅ + 4 缺口 G1-G4 全有归属通道，无阻断；清单即结论）"
+    }
   ],
   "doneCondition": "叙事面换轨完成 + 差距清单交付"
 }
