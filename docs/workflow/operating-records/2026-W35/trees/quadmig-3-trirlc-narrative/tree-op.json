@@ -1,0 +1,13 @@
+{
+  "treeId": "quadmig-3-trirlc-narrative",
+  "title": "TriRLC 叙事面换轨 + R 侧职责差距清单",
+  "week": "W35",
+  "source": "quad-migration-spec.md v1.0 Phase 3",
+  "status": "pending",
+  "created": "2026-08-24",
+  "nodes": [
+    {"nodeId": "Q3n-1", "agent": "小乔线", "status": "pending", "action": "TriLC 文档面/注册表面更名 TriRLC（bin/npm/目录名等兼容面不动；半公开协作面新起内容新名+括注，历史不追溯）"},
+    {"nodeId": "Q3n-2", "agent": "CTO线", "status": "pending", "action": "R 侧职责差距清单：对照白皮书清单（会话持久化/调度/cron/心跳/审计自持）盘点；唯一交付物=清单，若无大改清单即结论；心跳指向切换不在本树（归 quadmig-2 迁移批）"}
+  ],
+  "doneCondition": "叙事面换轨完成 + 差距清单交付"
+}

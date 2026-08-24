@@ -1,0 +1,14 @@
+{
+  "treeId": "quadmig-4-trimlc-closeout",
+  "title": "TriMLC 立项收尾（P1-4 核对+四件套裁定+FADE 激活声明）",
+  "week": "W35",
+  "source": "quad-migration-spec.md v1.0 Phase 4",
+  "status": "pending",
+  "created": "2026-08-24",
+  "nodes": [
+    {"nodeId": "Q4-1", "agent": "编排层", "status": "pending", "action": "TMV-P1-4 两态矛盾核对：树文件 pending vs commit e7813a89 done——查清登记链定真源（真源可修口径）"},
+    {"nodeId": "Q4-2", "agent": "CTO+CAO", "status": "pending", "action": "四件套双口径裁定（R6 §1.2 vs agent-governance-alignment-design §六）+ TriMLC/STATE.md 陈旧修正（自曝 git init 未做而磁盘已有 dev 分支多提交）"},
+    {"nodeId": "Q4-3", "agent": "编排层+FADE线", "status": "pending", "action": "FADE claude 宿主激活声明 + 命名锚定落册（仓+四件套按裁定口径补齐；无 daemon 侦听面，R4 裁决）"}
+  ],
+  "doneCondition": "矛盾清零 + 四件套按单一口径落齐 + FADE 激活声明在册"
+}

@@ -1,0 +1,16 @@
+{
+  "treeId": "quadmig-2-trirmc-port",
+  "title": "TriRMC 移植：复制换名+部署面+双跑准备",
+  "week": "W35",
+  "source": "quad-migration-spec.md v1.0 Phase 2 + TriRMC/MIGRATION.md 批项1-5",
+  "status": "pending",
+  "created": "2026-08-24",
+  "nodes": [
+    {"nodeId": "Q2n-1", "agent": "FullStack", "status": "pending", "action": "复制旧 TriMC 源码→TriRMC 仓 + 一次性标识符换名（package/env 前缀 TRIMC_→TRIRMC_/unit 名/日志路径/command 内嵌绝对路径一次写死；CEO 裁决③覆盖 MIGRATION.md 起点口径已留痕，种子清单降级为功能对齐基线）"},
+    {"nodeId": "Q2n-2", "agent": "DeploymentEngineer", "status": "pending", "action": "trirmc.service 部署面落地：8712 端口（netstat 核占位）+ TRIRMC_CONFIG_DIR=/var/lib/trirmc 镜像布局 + cgroup MemoryMax/CPUQuota 限位 + 独立 logrotate 规则文件；不新建 bare repo"},
+    {"nodeId": "Q2n-3", "agent": "CTO线", "status": "pending", "action": "agent-core 共享核对与 M 侧职能残留解耦（MIGRATION.md 种子资产七件为功能对齐基线；session-bridge/orchestration/policy-gate 桥面留 TriMMC 不迁）"},
+    {"nodeId": "Q2n-4", "agent": "编排层+小狄", "status": "pending", "action": "cron/config-sync 双跑影子期（批项 2/3；开业互锁门 I5 先行于 config-sync 切换；切换动作只选周日触发完成后窗口；applied.json 版本比对+I4 基线 43/43 对照）"},
+    {"nodeId": "Q2n-5", "agent": "编排层", "status": "pending", "action": "TriRMC/docs/runbook 独立成文（python3.8 依赖+:8712 健康检查+.git 属主基线首页化）+ docs/registry/product-state.md 拆分落位（中央留指针行）；回滚预案在册=TriRMC 异常即摘除回归 trimc 独跑"}
+  ],
+  "doneCondition": "换名完成+部署面就绪+双跑影子期启动判据满足；控制面切换与退役另按 §5.2 判据+CEO 放行"
+}

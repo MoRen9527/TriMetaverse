@@ -1,0 +1,16 @@
+{
+  "treeId": "quadmig-1-mmc-shell",
+  "title": "TriMMC 壳改造（第一优先：周迁移面稳定+影子试跑开跑）",
+  "week": "W35",
+  "source": "quad-migration-spec.md v1.0 Phase 1/§九",
+  "status": "pending",
+  "created": "2026-08-24",
+  "nodes": [
+    {"nodeId": "Q1-1", "agent": "小狄设计线", "status": "pending", "action": "宿主驱动面设计文档（输入=claude-code-spawn-resume-context 创新记录 + reference/claude-code-2.1.88 源码；不自建会话管理红线内）"},
+    {"nodeId": "Q1-2", "agent": "编排层", "status": "pending", "action": "影子隔离面搭建：独立测试 operating-root + [shadow] 前缀 + 独立目录 + dry 模式；不进现役告警通道（小乔阻断 B1 三规则先满足后开跑）"},
+    {"nodeId": "Q1-3", "agent": "编排层+CI", "status": "pending", "action": "M↔R 桥 P0 条款冻结：experience/ 目录约定 + EXPER_ASSET schema（五要素+溯源必填+状态机）+ 三门 CI 化 + securityLevel 字段 + 注入消费五条款落地"},
+    {"nodeId": "Q1-4", "agent": "编排层", "status": "pending", "action": "影子试跑 ≥2 周（跨周日自然触发窗口；判据=与主路径 .shift-ade.json+commit+日志逐字段一致，含一次故障注入对比）；产出只落 staging/ status=draft"},
+    {"nodeId": "Q1-5", "agent": "编排层", "status": "pending", "action": "周报螺旋四行段模板上线（上行/演练/下行/复用+待签 K；counters 预留 mainPath/shadow 两组）；周迁移主路径零中断全程守恒"}
+  ],
+  "doneCondition": "设计文档 APPROVE + 影子面三规则实证 + P0 条款冻结 + 试跑满 ≥2 周判据 + 四行段上线；转正另需 CEO 裁决（spec §5.1）"
+}
