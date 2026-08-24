@@ -1,0 +1,21 @@
+{
+  "treeId": "m1-drill-001",
+  "title": "M1 编排演练树（drill：TriMMC 编排会话首跑，服务器域）",
+  "week": "W35",
+  "source": "trimmc-orchestration-design.md M1；drill 类型 source=orchestration-mvp",
+  "domainRouting": "server-executable",
+  "status": "active",
+  "created": "2026-08-25",
+  "nodes": [
+    {"nodeId": "M1-N1", "agent": "FullStackDeveloper", "status": "done", "action": "撰写首条 EXPER_ASSET 草稿到 experience/staging/（主题：fleet headless CC 环境验证经验——M0 五判据与两发现；五要素齐全，status=draft，producer 溯源指向 trimmc-orchestration-m0-report.md）"},
+    {"nodeId": "M1-N2", "agent": "TestEngineer", "status": "done", "action": "alias 一致性抽查：比对 company-governance-state.md 权威表与 quad-migration-spec §2.1 的四行叙事名/读法/角色锚，产出核对结论（只读，结论写入本树 briefs/m1-n2-report.md）"},
+    {"nodeId": "M1-N3", "agent": "CEOChiefOfStaff", "status": "done", "action": "收口：核验 N1/N2 落盘三查（存在/规模/口径），更新本文件节点状态为 done，git add 明确路径提交并 push（仅本树目录与 experience/staging 路径）"}
+  ],
+  "doneCondition": "三节点 done + staging 资产在 + 收口 commit push 成功",
+  "closeout": {
+    "closedAt": "2026-08-25",
+    "closedBy": "CEOChiefOfStaff（TriMMC 编排会话首跑）",
+    "verification": "M1-N3 收口核验三查通过：N1 资产存在（experience/staging/exper-asset-fleet-headless-cc-m0.md，77 行）五要素齐全/status=draft/producer 溯源实存/五判据与两发现均行级引用 server-fleet-m0.md §三.7；N2 报告存在（briefs/m1-n2-report.md，113 行）A/B 比对完整、实质差异 0/非实质 6 处",
+    "drillFindings": "① 树 action 指名的 trimmc-orchestration-m0-report.md 全仓不存在，M0 报告实存锚为 docs/execution/server-fleet-m0.md（N1 资产已如实记录命名差异，溯源全部指向实存路径）；② N1 实例无 shell 工具无法跑 git log，收口已补跑并补全 evidence 权威 commit 清单（cff1b924/8fbc6dea/d5da2cba/34d273e3/13ae6248）；③ N2 报告发现 spec §2.1 as-of 声明 v0.2 滞后于真源生效状态（D5，引用侧收口建议 6 条，均非阻断）"
+  }
+}
