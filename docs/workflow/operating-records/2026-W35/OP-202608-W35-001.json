@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W35 周经营维护。任务从上周迁移，新任务待规划。W35 首周（8/24）CEO carry-over 裁决已登记：CARRY-001 推进 / 003、005 关闭 / 004、006 冻结维持。",
     "metadata": {
-        "updatedBy": "编排层（CEO 架构定调登记：开业装配不写 .claude/agents，员工真源=contract，入口=选择面）",
-        "version": "1.4.0",
-        "lastUpdated": "2026-08-24T12:22:39.000000+00:00",
+        "updatedBy": "编排层（CEO 裁决登记：发布产物指纹封印 publishMeta，口子①修复待排票）",
+        "version": "1.5.0",
+        "lastUpdated": "2026-08-24T12:29:32.000000+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -35,7 +35,7 @@
         "TriLC",
         "TriMC"
     ],
-    "updatedAt": "2026-08-24T12:22:39.000000+00:00",
+    "updatedAt": "2026-08-24T12:29:32.000000+00:00",
     "activeTrees": [],
     "doneTreesFromPreviousWeek": [
         {
@@ -322,6 +322,7 @@
         "分身派工协议 CEO 批准（2026-08-17 上午）+ 两微调采纳：①MVP 不跳过 CHO 审批（E2E 脚本固化=审批链首演）②编制分配动态化（CHO 管总量 ≤5，静态岗位表仅示例）。伴随待办：编排流程/任务包模板同步 TriCompany 源侧（资产收入落地）。MVP 今日实战启动：E2E 28 条 A 级脚本固化为首个分身任务（三线 α/β/γ 各 ≤10 条，CHO 审批链首演）",
         "W35 首周 CEO carry-over 裁决定案（2026-08-24 00:28 北京，OP 1.1.0，8w+ 五项全裁决）：CARRY-20260728-001 **推进**（P0 地基主线继续）｜CARRY-20260728-003 **关闭**（W32 已实质完成：目录治理+MSI 自动化）｜CARRY-20260728-005 **关闭**（Openclaw 已被 TriLC 吸收替代，验证意义完成）｜CARRY-20260728-004 冻结维持（等 001 推进）｜CARRY-20260728-006 冻结维持（等 004）。003/005 依 SOP 移出 unresolved §1 活跃面（closed 不留 active 面），历史事实留「已关闭」小节；MD 与 JSON 同步更新。生效后活跃 carry 面=001（active）+004/006（frozen），CARRY-001 为本周期唯一 P0 主线（TUI 对齐三链条上游）",
         "D-ESC-1 单票收口（2026-08-24 00:52 北京，OP 1.2.0，TriCompany 研发环：本地发起 + CTO 单票审核）：weekly_plane_shift review_shift 8w 升级提取缺陷——字面 \"8w\" 子串只命中尾数 8 计数，漏 9w+/10w+，事项过 8w 后一周升级清单静默清空（下周日 CARRY-001/004/006 bump 9w+ 即触发，与本事件错误通知同型）。修复 TriCompany commit 00ebf64：解析 Nw+ 计数 ≥8 + §1 区间限定（§4 过时建议表 5 行回声含 CEO 已关闭 003/005 会虚报；无 §1 头降级全扫 fail-open）。审核：小狄两轮（REJECT §4 回声面 → 返修 → APPROVE 独立走查复现；上轮「捕获组冗余」标注经实测证伪已修正——findall 无分组返回整串）。验证：合成区间测试 + 真实 W35 文件断言（恰 3 项）+ 全链预演 W35→W36（notify 掐断 rc=0 pass escalation 恰 3 计数 8w+→9w+）。部署硬线：2026-08-30 23:59 北京前到 /srv/fleet/TriCompany（取 commit 版本，禁工作区直拷）。forward items（非阻断下轮顺手）：§1 头匹配前缀锚定 / 降级条件语义区分 / W35 unresolved 重复节号（§4×2，数据 owner 域）",
-        "**CEO 架构定调：开业装配不得写 .claude/agents/（2026-08-24 20:22 北京，OP 1.4.0）**——口径：开业员工真源=contract（TriLC agent-core 承载），无论 TriPilot 还是 trilc chat 都是入口处对候选可用 agent 的选择面而已；装配产物应只落合同/host-object，经 /agents API 消费。现状偏差（ARCH-20260816-001 观察项升级为已确认架构偏差）：I2 实现的装配白名单写 .claude/agents/<roleId>.md 且无 preserved 保护（同名覆盖风险实锤）——与发布管线形成同目录双写入方。**性质区分**：① 发布管线向 .claude/agents/.github/agents 渲染 13 标准员工 = 合法多宿主发布（单源确定性渲染，一致性成立）② 开业运行时装配写同名目录 = 架构偏差（本条主语），两 population 不同。返修方向：装配落点改道合同单源（与 ARCH-20260814-002 design-v2 的 contracts 方向合流），入口零改动（选择面读合同不变）；路由 TriLC 研发环立项（涉 init-assemble 装配链），排期待 CEO 指令。挂账期间缓解：同名冲突人工规避"
+        "**CEO 架构定调：开业装配不得写 .claude/agents/（2026-08-24 20:22 北京，OP 1.4.0）**——口径：开业员工真源=contract（TriLC agent-core 承载），无论 TriPilot 还是 trilc chat 都是入口处对候选可用 agent 的选择面而已；装配产物应只落合同/host-object，经 /agents API 消费。现状偏差（ARCH-20260816-001 观察项升级为已确认架构偏差）：I2 实现的装配白名单写 .claude/agents/<roleId>.md 且无 preserved 保护（同名覆盖风险实锤）——与发布管线形成同目录双写入方。**性质区分**：① 发布管线向 .claude/agents/.github/agents 渲染 13 标准员工 = 合法多宿主发布（单源确定性渲染，一致性成立）② 开业运行时装配写同名目录 = 架构偏差（本条主语），两 population 不同。返修方向：装配落点改道合同单源（与 ARCH-20260814-002 design-v2 的 contracts 方向合流），入口零改动（选择面读合同不变）；路由 TriLC 研发环立项（涉 init-assemble 装配链），排期待 CEO 指令。挂账期间缓解：同名冲突人工规避",
+        "**CEO 裁决：发布产物指纹封印（2026-08-24 20:29 北京，OP 1.5.0，补 ARCH 双写入方三个口子中的口子①「绕过管线手改」）**——多宿主渲染产物（.claude/agents/*.md + .github/agents/*.agent.md）frontmatter 加 publishMeta{sourceKit, sourceCommit, renderSha256, renderedAt}，发布时盖封；下次发布前置检查重算比对：不匹配=手改实锤（连改后已 commit 也逃不掉，git diff 干净但封印碎）。**恢复口径修正（编排层补充、方向不变）**：hash 负责「发现被改」，恢复默认走管线从当前源重渲（旧版本可能过时，git 回退仅作取证）；同款哲学先例=i4-2 五维同步 contentHash。实现要点：封印字段不参与自身哈希（占位符模板先算后回填）、双宿主统一。改动面=TriCompany 发布链增量（employee_host_publish 前置验证），走研发环单票同 D-ESC-1 流程，待排票"
     ]
 }
