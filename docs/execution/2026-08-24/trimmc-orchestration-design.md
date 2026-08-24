@@ -83,7 +83,7 @@ CEO 提议 C-level 随树；小狄指出若编排会话也随树则"关树不变
 
 | 阶段 | 内容 | 判据 |
 | --- | --- | --- |
-| M0 环境验证 | fleet 身份 headless CC 跑通 hello 任务（读文件+回显）；模型接入/额度确认 | exit 0+产出落 shadow-plane 同构目录 |
+| M0 环境验证 | ✅ **PASS 2026-08-25**（5/5 判据；报告=trimmc-orchestration-m0-report.md；RSS 首样本 333MB；git 身份缺口当场修复；AGENT_TEAMS 实验旗标在册待 M1 实证） | 达成 |
 | M1 单循环手动触发 | 编排会话跑通一棵轻树（如 quadmig-4 复验或 drill 树）端到端：拆节点→起员工→收口回写 | 树 done+台账一致+零人工干预 |
 | M2 cron 化+通知路由 | WorkPlaneWatcher 上线；NotifyRouter 双通道；成本护栏生效 | 一个完整周末无人值守循环 |
 | M3 观测端点 | sessions list/tail 端点；tripilot/trirlc chat 接入 | CEO 可随时看服务器干活 |
