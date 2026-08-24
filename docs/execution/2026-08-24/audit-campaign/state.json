@@ -5,44 +5,75 @@
   "orchestratorAnchor": "ceo-chief-of-staff",
   "status": "running",
   "createdAt": "2026-08-25T05:45+08:00",
-  "updatedAt": "2026-08-25T05:46+08:00",
+  "updatedAt": "2026-08-25T06:17+08:00",
   "tick": 1,
-  "bootstrapTree": "docs/workflow/operating-records/2026-W35/trees/audit-campaign-001/tree-op.json（上tick已登记，AC-BOOT 保持 pending 至战役收口）",
+  "bootstrapTree": "docs/workflow/operating-records/2026-W35/trees/audit-campaign-001/tree-op.json（AC-BOOT 保持 pending 至战役收口）",
   "modelVerification": {
     "step": "plan-Step0",
-    "status": "pending",
-    "expectedModel": "stealth/ox-alpha"
+    "status": "passed",
+    "expectedModel": "stealth/ox-alpha",
+    "method": "运行时系统级自证；env 回显路径被沙箱权限拒（方法注记见 log 05:49 条）"
   },
   "modules": {
-    "TriMC":        { "focus": "cron/orchestration/session-bridge 质量与安全面", "repo": "/srv/fleet/TriMC", "status": "pending", "report": null },
-    "TriLC":        { "focus": "daemon/agent loop/cron/session reaper 质量", "repo": "/srv/fleet/TriLC", "status": "pending", "report": null },
-    "TriPilot":     { "focus": "扩展/webview/SSE 消费面", "repo": "/srv/fleet/TriPilot", "status": "pending", "report": null },
-    "TriCode":      { "focus": "共享 runtime 与 opencode adapter", "repo": "/srv/fleet/TriCode", "status": "pending", "report": null },
-    "TriModel":     { "focus": "配置面/key 分发设计", "repo": "/srv/fleet/TriModel", "status": "pending", "report": null },
-    "TriMetaverse": { "focus": "scripts/（含 e2e 28 条）、.claude/agents 发布一致性", "repo": "/srv/fleet/TriMetaverse", "status": "pending", "report": null }
+    "TriMC":        { "focus": "cron/orchestration/session-bridge 质量与安全面", "status": "done", "report": "reports/TriMC.md", "findings": { "P0": 1, "P1": 4, "P2": 8 }, "node": "AC-MMC", "committedAs": "acf1ed36" },
+    "TriLC":        { "focus": "daemon/agent loop/cron/session reaper 质量", "status": "done", "report": "reports/TriLC.md", "findings": { "P0": 0, "P1": 4, "P2": 8 }, "node": "AC-LC", "committedAs": "2f86c01a" },
+    "TriPilot":     { "focus": "扩展/webview/SSE 消费面", "status": "blocked_env", "note": "/srv/fleet 下无该仓，事实记录报告", "report": "reports/TriPilot.md", "findings": null, "node": "AC-PILOT(未派发，编排直出)", "committedAs": "722faac3" },
+    "TriCode":      { "focus": "共享 runtime 与 opencode adapter", "status": "done", "report": "reports/TriCode.md", "findings": { "P0": 0, "P1": 4, "P2": 8 }, "node": "AC-CODE", "committedAs": "(随8bcf0c6d后批次)" },
+    "TriModel":     { "focus": "配置面/key 分发设计", "status": "done", "report": "reports/TriModel.md", "findings": { "P0": 1, "P1": 6, "P2": 5 }, "node": "AC-MODEL", "committedAs": "acd8a1b6" },
+    "TriMetaverse": { "focus": "scripts/（含 e2e 28 条）、.claude/agents 发布一致性", "status": "done", "report": "reports/TriMetaverse.md", "findings": { "P0": 0, "P1": 3, "P2": 7 }, "node": "AC-TMV", "committedAs": "8f77e6cd" }
   },
   "lifecycleMatrix": {
-    "orchestrationTickTrack": "本会话=tick1，fresh 实例读盘续跑机制经 state.json/log.md 实证中",
+    "orchestrationTickTrack": {
+      "conclusion": "tick1 实证：fresh 编排实例经 state.json/log.md 读盘续跑机制建立并全程落盘 commit×11；跨 tick 续跑由本文件'下一tick指令'承接"
+    },
     "campaignResidentRoles": {
-      "design": "小乔(COO)/小狄(CTO)/CHO/CFO 四角色：评审签收动作由 fresh 实例承担，记忆载体=本目录 role-state 文件，多节点交叉消费",
-      "states": {}
+      "design": "小乔(COO)/小狄(CTO)/CHO/CFO 四角色战役级常驻：签收动作由 fresh 实例承担，记忆载体=roles/*-state.md",
+      "statesCreated": ["roles/coo-state.md", "roles/cto-state.md", "roles/cho-state.md", "roles/cfo-state.md"],
+      "crossNodeConsumption": "partial——tick1 仅完成骨架+种子写入（编排节点）；四角色 fresh 签收实例消费未执行，列为 tick2 首任务",
+      "nextTickInstruction": "依次派发四个 fresh 角色签收实例（各读 roles/<role>-state.md + reports/ 相关件 → 追加落款），即完成矩阵第二项测试"
     },
     "treeTrack": {
-      "design": "小全/小柯 树轨：一树一生命周期，一节点一 fresh 实例禁复用",
-      "records": []
+      "design": "树轨一树一生命周期，一节点一 fresh 实例禁复用",
+      "records": [
+        { "node": "AC-LC", "instance": "fresh", "released": true },
+        { "node": "AC-TMV", "instance": "fresh", "released": true },
+        { "node": "AC-DOC-ADD1", "instance": "fresh", "released": true },
+        { "node": "AC-MODEL", "instance": "fresh", "released": true },
+        { "node": "AC-CODE", "instance": "fresh", "released": true },
+        { "node": "AC-MMC", "instance": "fresh", "released": true },
+        { "node": "AC-PROBE-AT01", "instance": "fresh", "released": false, "note": "探测桩保留 transcript 以供续接复测" }
+      ]
     },
-    "agentTeamsProbe": { "status": "pending", "conclusion": null },
-    "staffingLedger": []
+    "agentTeamsProbe": {
+      "status": "done",
+      "conclusion": "可用（范围注记）：已结束命名实例经 SendMessage 从 transcript 成功续接（RESUME_OK magic=42，两轮往返）；真·跨进程顶层会话续接本会话内不可自证，留 R 面评估注记。F3 清账=部分实证通过",
+      "probeInstance": "ac-probe-at01 (af087bafae4738cef)"
+    },
+    "staffingLedger": [
+      { "batch": "CLONE-BATCH-001", "action": "add", "role": "DocumentationEngineer", "node": "AC-DOC-ADD1", "at": "2026-08-25T05:55+08:00", "reason": "中途增员实测：execution 目录导读索引+战役README" },
+      { "batch": "CLONE-BATCH-001", "action": "remove", "node": "AC-DOC-ADD1", "at": "2026-08-25T06:00+08:00", "reason": "产出落盘(8bcf0c6d)即释放，add→remove 同批闭环" }
+    ]
   },
   "timeGate": {
-    "rule": "模块审计完成后：北京时间<20:00→产品级自优化；>=20:00→当日收口待下一tick",
+    "rule": "模块审计完成后：<20:00→产品级自优化；>=20:00→当日收口",
     "lastCheckAt": "2026-08-25T05:44+08:00",
-    "decision": "当前 05:44 <20:00，审计完成后转自优化档"
+    "decision": "审计完成时刻≈06:12 <20:00 → 应转产品级自优化档；因单会话40分钟预算耗尽，自优化移交 tick2（预算纪律优先于档位执行，非时间门触发）"
   },
   "subtrees": [
-    "docs/workflow/operating-records/2026-W35/trees/audit-campaign-001/（引导树，上tick登记）"
+    "docs/workflow/operating-records/2026-W35/trees/audit-campaign-001/（引导树）"
   ],
   "escalations": [],
+  "incidents": [
+    { "type": "infra", "what": "git push origin dev 持续被拒：bare 仓对象迁移 Permission denied（同一对象 14/7b08bfa… 反复失败；磁盘36%正常；本地 dev 全量安全）", "firstSeen": "2026-08-25T05:54+08:00", "impact": "远端备份滞后，本地续跑不受影响", "disposition": "持续每次commit后重试；若 tick2 仍失败→按系统硬约束类升级事件上报" }
+  ],
+  "nextTickInstructions": [
+    "1. 读本文件+log.md 尾部续跑（tick 轨 fresh 实例）",
+    "2. 先重试 git push origin dev 并更新 incidents.disposition",
+    "3. 派发四角色 fresh 签收实例（补全 lifecycleMatrix.campaignResidentRoles.crossNodeConsumption）",
+    "4. 时间门<20:00 → 产品级自优化档（优先处置 TriMetaverse 报告中文档类 P2：README/索引同步类可直接修，代码类仍只登记）",
+    "5. 产出《自治能力测试报告》骨架至 reports/self-autonomy-test-report.md 并逐步填充（R面移植评估输入）",
+    "6. 全达成后置 status=done、AC-BOOT→done 收口"
+  ],
   "writeDomain": [
     "docs/execution/2026-08-24/audit-campaign/",
     "docs/workflow/operating-records/*/trees/audit-campaign-*/",
