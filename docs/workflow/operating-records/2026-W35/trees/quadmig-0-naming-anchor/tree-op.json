@@ -3,13 +3,33 @@
   "title": "四模块迁移·命名锚定落册（防混先行）",
   "week": "W35",
   "source": "quad-migration-spec.md v1.0 §三/§九",
-  "status": "pending",
+  "status": "done",
   "created": "2026-08-24",
   "nodes": [
-    {"nodeId": "Q0-1", "agent": "CompanyGovernanceRegistry", "status": "pending", "action": "权威 alias 表四列（名/读法/角色锚/兼容面载体）落 CompanyGovernanceRegistry 单一真源；各文档只许引用禁副本"},
-    {"nodeId": "Q0-2", "agent": "编排层", "status": "pending", "action": "现役 runbook 元信息处加一行别名注记（TriMC 即叙事面 TriMMC 原 TriMC），不动任何命令"},
-    {"nodeId": "Q0-3", "agent": "CHO+编排层", "status": "pending", "action": "员工 knowledge workspace 涉 TriMC 服务器操作的记忆条目刷新（防凭记忆指错对象，spec §三.7）"},
-    {"nodeId": "Q0-4", "agent": "小乔线", "status": "pending", "action": "白皮书工作区未提交修订收口归位（已在用新名，与 v1.0 对齐后 commit）"}
+    {
+      "nodeId": "Q0-1",
+      "agent": "CompanyGovernanceRegistry",
+      "status": "done",
+      "action": "权威 alias 表四列（名/读法/角色锚/兼容面载体）落 CompanyGovernanceRegistry 单一真源；各文档只许引用禁副本"
+    },
+    {
+      "nodeId": "Q0-2",
+      "agent": "编排层",
+      "status": "done",
+      "action": "现役 runbook 元信息处加一行别名注记（TriMC 即叙事面 TriMMC 原 TriMC），不动任何命令"
+    },
+    {
+      "nodeId": "Q0-3",
+      "agent": "CHO+编排层",
+      "status": "done",
+      "action": "员工 knowledge workspace 涉 TriMC 服务器操作的记忆条目刷新（防凭记忆指错对象，spec §三.7）——完成口径：编排层持久记忆已刷新（2026-08-24）；员工宿主知识库不手改生成物，挂 FADE 发布线下次灌入自然同步"
+    },
+    {
+      "nodeId": "Q0-4",
+      "agent": "小乔线",
+      "status": "done",
+      "action": "白皮书工作区未提交修订收口归位（已在用新名，与 v1.0 对齐后 commit）"
+    }
   ],
   "doneCondition": "alias 真源可引用 + runbook 注记 + 记忆刷新记录 + 白皮书工作区干净"
 }

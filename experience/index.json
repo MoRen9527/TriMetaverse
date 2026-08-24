@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "v0.1",
+  "frozenAt": "2026-08-24T14:36:28Z",
+  "source": "docs/execution/2026-08-24/quad-migration-spec.md v1.0 §九",
+  "assets": [],
+  "counters": {
+    "mainPath": { "drillRequests": 0, "drillsCompleted": 0, "assetsSigned": 0, "assetsReused": 0 },
+    "shadow": { "drillRequests": 0, "drillsCompleted": 0, "assetsSigned": 0, "assetsReused": 0 }
+  }
+}

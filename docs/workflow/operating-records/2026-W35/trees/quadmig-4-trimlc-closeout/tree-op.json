@@ -6,7 +6,7 @@
   "status": "pending",
   "created": "2026-08-24",
   "nodes": [
-    {"nodeId": "Q4-1", "agent": "编排层", "status": "pending", "action": "TMV-P1-4 两态矛盾核对：树文件 pending vs commit e7813a89 done——查清登记链定真源（真源可修口径）"},
+    {"nodeId": "Q4-1", "agent": "编排层", "status": "done", "action": "TMV-P1-4 两态矛盾核对——裁定（2026-08-24）：非登记事故，是范围口径。节点与 e7813a89 逐字节一致（diff 实证）；commit message「P1-4 done」指仓立项子面完成，节点承载完整范围（仓+四件套+FADE 激活+锚定）故四件套面仍 pending。两态各自为真，历史 commit 不改写；本节点后续只覆盖剩余四件套面"},
     {"nodeId": "Q4-2", "agent": "CTO+CAO", "status": "pending", "action": "四件套双口径裁定（R6 §1.2 vs agent-governance-alignment-design §六）+ TriMLC/STATE.md 陈旧修正（自曝 git init 未做而磁盘已有 dev 分支多提交）"},
     {"nodeId": "Q4-3", "agent": "编排层+FADE线", "status": "pending", "action": "FADE claude 宿主激活声明 + 命名锚定落册（仓+四件套按裁定口径补齐；无 daemon 侦听面，R4 裁决）"}
   ],
