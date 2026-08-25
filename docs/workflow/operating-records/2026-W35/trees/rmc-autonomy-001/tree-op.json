@@ -10,8 +10,8 @@
     {
       "nodeId": "RA-1",
       "agent": "DeploymentEngineer",
-      "status": "pending",
-      "action": "河源部署 TriRLC 服务端实例：GitHub 克隆→npm install→tsc 构建→systemd trilc-headless.service 常驻（headless daemon，数据目录隔离）→模型经 OpenRouter env 接线→控制链指向本机 trirmc :8712（token 门）"
+      "status": "done",
+      "action": "河源部署 TriRLC 服务端实例：GitHub 克隆→npm install→tsc 构建→systemd trilc-headless.service 常驻（headless daemon，数据目录隔离）→模型经 OpenRouter env 接线→控制链指向本机 trirmc :8712（token 门）——完成：河源 TriRLC headless 实例上线（systemd trilc-headless.service，`run --port 8711` 前台模式+MemoryMax=700M；Node 升 22 因 node:sqlite；模型经 OpenRouter env；控制链指向本机 trirmc :8712 token 门=批项4 在新节点出生即接通）；附带修复：TriRMC 默认绑定 127.0.0.1（6bb12d6，B2 教训结构化）"
     },
     {
       "nodeId": "RA-2",
