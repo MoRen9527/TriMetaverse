@@ -27,8 +27,8 @@
     {
       "nodeId": "TC-4",
       "agent": "TestEngineer",
-      "status": "pending",
-      "action": "验收：rmc-autonomy-001 RA-3 最小闭环 PASS（drill 全程零 CC、本地关机模拟、自治率判据 V1-V8）"
+      "status": "done",
+      "action": "验收：rmc-autonomy-001 RA-3 最小闭环 PASS（drill 全程零 CC、本地关机模拟、自治率判据 V1-V8）——验收 PASS：RA-3 达成（见 rmc-autonomy-001 收口），轨道 b.4 出站规范化已提前落地（TC-4b）"
     },
     {
       "nodeId": "TC-4b",

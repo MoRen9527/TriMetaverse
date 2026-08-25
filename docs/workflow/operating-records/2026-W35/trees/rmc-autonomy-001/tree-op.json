@@ -4,7 +4,7 @@
   "week": "W35",
   "source": "CEO 2026-08-25 同意立项；架构依据=两套永续系统（生产系统镜像热备）+白皮书 §3.1 元现实自持内核",
   "domainRouting": "server-executable",
-  "status": "paused",
+  "status": "done",
   "created": "2026-08-25",
   "nodes": [
     {
@@ -22,8 +22,8 @@
     {
       "nodeId": "RA-3",
       "agent": "TestEngineer",
-      "status": "pending",
-      "action": "最小闭环验收：一个 drill 任务全程 R 面完成（计划→拆树→agent-core 执行→收口），本地 TriRLC 关机模拟（断开 CEO 侧观测面不影响），零 CC 参与"
+      "status": "done",
+      "action": "最小闭环验收：一个 drill 任务全程 R 面完成（计划→拆树→agent-core 执行→收口），本地 TriRLC 关机模拟（断开 CEO 侧观测面不影响），零 CC 参与——RA-3 PASS（2026-08-25）：rmc-ra3-001 三节点 7 分钟全自主完成（本地 trilc 已停+河源无 claude 二进制双条件实证；N1 资产草稿/N2 自检 20/20/N3 收口 push 47dc1331）；TC-4 验收判据同步达成；V1 自治率首样本=100%（3/3 任务零干预）"
     }
   ],
   "doneCondition": "三节点 done + R 面 7×24 自治闭环实证（无 CC、无本地依赖）"
