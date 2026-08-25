@@ -55,3 +55,5 @@
 - shadow: true（影子期产出：只落 staging/，未过 §5.2 判据不进 confirmed/）
 - signOffLine: CTO 线（工程类，experience/README.md L3 门映射）；draft 态签收未过
 - domainRouting: server-executable（与树顶层一致）
+
+selfcheck-passed=2026-08-25
