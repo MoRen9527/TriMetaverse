@@ -6,7 +6,7 @@
   "status": "active",
   "created": "2026-08-25",
   "nodes": [
-    {"nodeId": "RA3-N1", "agent": "FullStack", "status": "pending", "action": "写 EXPER_ASSET 草稿 experience/staging/ra3-normalization-lesson.md——主题：OpenRouter 回喂轮 400 的教训（五要素：现象=回喂轮 400 invalid；做法=出站消息规范化层 TC-4b；证据=0825 SSE 全量捕获；边界=仅 OpenRouter anthropic 兼容面；收益=R 面多轮任务解锁），status=draft"},
+    {"nodeId": "RA3-N1", "agent": "FullStack", "status": "done", "action": "写 EXPER_ASSET 草稿 experience/staging/ra3-normalization-lesson.md——主题：OpenRouter 回喂轮 400 的教训（五要素：现象=回喂轮 400 invalid；做法=出站消息规范化层 TC-4b；证据=0825 SSE 全量捕获；边界=仅 OpenRouter anthropic 兼容面；收益=R 面多轮任务解锁），status=draft"},
     {"nodeId": "RA3-N2", "agent": "TestEngineer", "status": "pending", "action": "自检 RA3-N1 产物：核对五要素齐全且引用真实（读文件验证），在文件尾部追加一行 selfcheck-passed=2026-08-25 并 commit"},
     {"nodeId": "RA3-N3", "agent": "CEOChiefOfStaff", "status": "pending", "action": "收口：核验 N1/N2 落盘，全部节点置 done，顶层 status 置 done，commit 并 push sg-bare HEAD:dev"}
   ],
