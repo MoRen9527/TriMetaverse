@@ -12,7 +12,7 @@
 | 项 | 内容 |
 | --- | --- |
 | 现象 | 同一模型（stealth/ox-alpha）：CC 宿主内可数百轮工具调用持续执行；trilc/agent-core 裸循环 1-3 轮即自愿收工写总结 |
-| 实测 | rmc-autonomy-001 RA-2（2026-08-26 凌晨，heyuan）：system 人设强化、CRITICAL 连续执行条款、driven nudge、max_tokens 32K 均未压住 |
+| 实测 | rmc-autonomy-001 RA-2（2026-08-25 深夜，heyuan）：system 人设强化、CRITICAL 连续执行条款、driven nudge、max_tokens 32K 均未压住 |
 | 根因定性 | 持续性是宿主 harness 工程能力而非模型天赋：CC 靠系统提示词脚手架/todo 注入/上下文管理节奏等成套机制兜住；agent-core 移植时只重实现了循环骨架七件（路径 B），harness 行为层不在其中（创新记录在案的 cc-fidelity 缺口族新成员） |
 
 ## 二、战役范围
