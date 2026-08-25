@@ -5,8 +5,8 @@
   "orchestratorAnchor": "ceo-chief-of-staff",
   "status": "running",
   "createdAt": "2026-08-25T05:45+08:00",
-  "updatedAt": "2026-08-25T06:17+08:00",
-  "tick": 1,
+  "updatedAt": "2026-08-25T09:12+08:00",
+  "tick": 2,
   "bootstrapTree": "docs/workflow/operating-records/2026-W35/trees/audit-campaign-001/tree-op.json（AC-BOOT 保持 pending 至战役收口）",
   "modelVerification": {
     "step": "plan-Step0",
@@ -18,7 +18,7 @@
     "TriMC":        { "focus": "cron/orchestration/session-bridge 质量与安全面", "status": "done", "report": "reports/TriMC.md", "findings": { "P0": 1, "P1": 4, "P2": 8 }, "node": "AC-MMC", "committedAs": "acf1ed36" },
     "TriLC":        { "focus": "daemon/agent loop/cron/session reaper 质量", "status": "done", "report": "reports/TriLC.md", "findings": { "P0": 0, "P1": 4, "P2": 8 }, "node": "AC-LC", "committedAs": "2f86c01a" },
     "TriPilot":     { "focus": "扩展/webview/SSE 消费面", "status": "blocked_env", "note": "/srv/fleet 下无该仓，事实记录报告", "report": "reports/TriPilot.md", "findings": null, "node": "AC-PILOT(未派发，编排直出)", "committedAs": "722faac3" },
-    "TriCode":      { "focus": "共享 runtime 与 opencode adapter", "status": "done", "report": "reports/TriCode.md", "findings": { "P0": 0, "P1": 4, "P2": 8 }, "node": "AC-CODE", "committedAs": "(随8bcf0c6d后批次)" },
+    "TriCode":      { "focus": "共享 runtime 与 opencode adapter", "status": "done", "report": "reports/TriCode.md", "findings": { "P0": 0, "P1": 4, "P2": 8 }, "node": "AC-CODE", "committedAs": "4b77f801" },
     "TriModel":     { "focus": "配置面/key 分发设计", "status": "done", "report": "reports/TriModel.md", "findings": { "P0": 1, "P1": 6, "P2": 5 }, "node": "AC-MODEL", "committedAs": "acd8a1b6" },
     "TriMetaverse": { "focus": "scripts/（含 e2e 28 条）、.claude/agents 发布一致性", "status": "done", "report": "reports/TriMetaverse.md", "findings": { "P0": 0, "P1": 3, "P2": 7 }, "node": "AC-TMV", "committedAs": "8f77e6cd" }
   },
