@@ -1,0 +1,35 @@
+{
+  "treeId": "training-camp-001",
+  "title": "训练战役 TC-001：R 面执行持续性成熟度（agent-core 早停缺口）",
+  "week": "W35",
+  "source": "docs/execution/2026-08-24/training-campaign-001-charter.md（CEO 08-26 裁决 b/c 立项）",
+  "status": "active",
+  "created": "2026-08-26",
+  "nodes": [
+    {
+      "nodeId": "TC-1",
+      "agent": "FullStack",
+      "status": "pending",
+      "action": "trilc /v1/messages 通用续跑参数（continue_max_rounds/continue_prompt，处理器内多轮驱动； charter 轨道 b.1）"
+    },
+    {
+      "nodeId": "TC-2",
+      "agent": "CTO线",
+      "status": "pending",
+      "action": "CC 提示词脚手架体系调研与移植设计（todo/计划注入/进度 reminder/end_turn 判定纪律；对照创新记录证据链；charter 轨道 b.2）"
+    },
+    {
+      "nodeId": "TC-3",
+      "agent": "编排层+小狄",
+      "status": "pending",
+      "action": "auto-compact 补课方案合并 cc-fidelity 审计线既有挂账（charter 轨道 b.3）"
+    },
+    {
+      "nodeId": "TC-4",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "验收：rmc-autonomy-001 RA-3 最小闭环 PASS（drill 全程零 CC、本地关机模拟、自治率判据 V1-V8）"
+    }
+  ],
+  "doneCondition": "轨道 b 移植落地 + RA-3 PASS + 训练流程首战复盘归档"
+}
