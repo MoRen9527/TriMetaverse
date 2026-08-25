@@ -4,7 +4,7 @@
   "week": "W35",
   "source": "CEO 2026-08-25 同意立项；架构依据=两套永续系统（生产系统镜像热备）+白皮书 §3.1 元现实自持内核",
   "domainRouting": "server-executable",
-  "status": "active",
+  "status": "paused",
   "created": "2026-08-26",
   "nodes": [
     {
