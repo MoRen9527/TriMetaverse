@@ -1,7 +1,7 @@
 # exec-20260824 目录导读索引
 
 - 编制：DocumentationEngineer（AC-DOC-ADD1，CLONE-BATCH-001，fresh 单次实例）
-- 日期：2026-08-25
+- 同步修订：[2026-08-25T09:28+08:00] [tick2] 编排实例——补齐 TriMC/TriCode/TriModel 报告条目、修正 TriLC/TriMetaverse 状态漂移（draft→done）、增列 state.json/README/roles 条目（自优化档·索引同步类修复）
 - 覆盖范围：`docs/execution/2026-08-24/` 目录下全部 .md 文档（共 13 份，含 audit-campaign 子目录；本索引与战役 README 两份自产文件不计入）
 - 说明：各文档状态取自其文档元信息头或正文自述，未读全文的仅读头部归纳。
 
@@ -33,10 +33,16 @@
 
 | 相对路径 | 一句话主题 | 状态 |
 | --- | --- | --- |
-| `audit-campaign/log.md` | 战役日志（append-only）——tick 冷启动、Step0 模型验证、六模块盘点与增员实录 | 进行中（逐 tick 追加） |
+| `audit-campaign/state.json` | 战役进度真源——模块状态/findings 计数、生命周期矩阵、增减员台账、升级事件与下 tick 指令 | 进行中（tick2） |
+| `audit-campaign/log.md` | 战役日志（append-only）——tick 冷启动、Step0 模型验证、六模块盘点、增员实录、push 升级事件 | 进行中（逐 tick 追加） |
+| `audit-campaign/reports/TriMC.md` | TriMC 审计报告——P0x1 未认证 RCE（零鉴权全卡监听+cron 任意 bash）/P1x4/P2x8 | done |
+| `audit-campaign/reports/TriLC.md` | TriLC 模块审计报告（TestEngineer 视角，daemon/agent loop/cron 面）——P0x0/P1x4/P2x8 | done |
 | `audit-campaign/reports/TriPilot.md` | TriPilot 审计环境受限事实报告——源码不在 sg-server 部署域，不虚构发现 | done（受限记录结案） |
-| `audit-campaign/reports/TriLC.md` | TriLC 模块审计报告（TestEngineer 视角，daemon/agent loop/cron 面） | draft（骨架已建，待补全） |
-| `audit-campaign/reports/TriMetaverse.md` | TriMetaverse 模块审计报告（代码 registry 视角，scripts/.claude 发布一致性面） | draft（骨架已建，待补全） |
+| `audit-campaign/reports/TriCode.md` | TriCode 审计报告（opencode adapter 面）——P0x0/P1x4/P2x8 | done |
+| `audit-campaign/reports/TriModel.md` | TriModel 审计报告——P0x1 Authorization 硬编码必 401+静默 fallback/P1x6/P2x5 | done |
+| `audit-campaign/reports/TriMetaverse.md` | TriMetaverse 模块审计报告（代码 registry 视角，scripts/.claude 发布一致性面）——P0x0/P1x3/P2x7 | done |
+| `audit-campaign/README.md` | 战役 README——目录结构、角色分工、文件导读（AC-DOC-ADD1 产出） | 进行中（随战役更新） |
+| `audit-campaign/roles/coo-state.md` 等 4 份 | 小乔/小狄/CHO/CFO 战役常驻状态文件——记忆载体+fresh 签收落款 | 进行中（3/4 已签收） |
 
 ## 未读说明
 
