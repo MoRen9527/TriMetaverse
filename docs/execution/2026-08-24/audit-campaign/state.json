@@ -29,8 +29,8 @@
     "campaignResidentRoles": {
       "design": "小乔(COO)/小狄(CTO)/CHO/CFO 四角色战役级常驻：签收动作由 fresh 实例承担，记忆载体=roles/*-state.md",
       "statesCreated": ["roles/coo-state.md", "roles/cto-state.md", "roles/cho-state.md", "roles/cfo-state.md"],
-      "crossNodeConsumption": "partial——tick1 仅完成骨架+种子写入（编排节点）；四角色 fresh 签收实例消费未执行，列为 tick2 首任务",
-      "nextTickInstruction": "依次派发四个 fresh 角色签收实例（各读 roles/<role>-state.md + reports/ 相关件 → 追加落款），即完成矩阵第二项测试"
+      "crossNodeConsumption": "3/4 完成（tick2）：AC-CTO-SIGN(d9420b98)/AC-CHO-SIGN(1f189a6b)/AC-CFO-SIGN(d7478d8e) 三个 fresh 实例各自读 state 文件+相关报告后追加落款；AC-COO-SIGN 留作战役收口前终审门（完成定义逐项核对），为 tick2 尾部节点",
+      "conclusion": "矩阵第二项测试成立：记忆载体被多节点交叉消费实证（tick1 写入→tick2 三路 fresh 读出+落款）；CHO 复核全 pass APPROVE、CFO ROI 显著为正 APPROVE、CTO 产出 P0/P1 五组合并树建议"
     },
     "treeTrack": {
       "design": "树轨一树一生命周期，一节点一 fresh 实例禁复用",
@@ -41,7 +41,10 @@
         { "node": "AC-MODEL", "instance": "fresh", "released": true },
         { "node": "AC-CODE", "instance": "fresh", "released": true },
         { "node": "AC-MMC", "instance": "fresh", "released": true },
-        { "node": "AC-PROBE-AT01", "instance": "fresh", "released": false, "note": "探测桩保留 transcript 以供续接复测" }
+        { "node": "AC-PROBE-AT01", "instance": "fresh", "released": false, "note": "探测桩保留 transcript 以供续接复测" },
+        { "node": "AC-CTO-SIGN", "instance": "fresh", "released": true },
+        { "node": "AC-CHO-SIGN", "instance": "fresh", "released": true },
+        { "node": "AC-CFO-SIGN", "instance": "fresh", "released": true }
       ]
     },
     "agentTeamsProbe": {
