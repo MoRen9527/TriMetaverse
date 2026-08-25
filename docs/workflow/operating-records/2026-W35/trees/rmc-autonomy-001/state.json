@@ -1,0 +1,34 @@
+{
+  "tick": "20260825T101801Z",
+  "treeId": "rmc-autonomy-001",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/rmc-autonomy-001/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance"
+  },
+  "startedAt": "2026-08-25T10:20:59Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度",
+  "nodes": [
+    {
+      "nodeId": "RA-1",
+      "agent": "DeploymentEngineer",
+      "status": "done",
+      "evidence": "前 tick 收口 commit 4fb7d25c（河源 TriRLC headless 实例上线+TriRMC loopback 结构化修复 6bb12d6）"
+    },
+    {
+      "nodeId": "RA-2",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "trirmc 编排接线：orchestrate_tick R 面适配版（spawn 后端由 claude CLI 替换为 TriRLC HTTP 会话 API；brief/红线协议复用；SessionRegistry 对接）"
+    },
+    {
+      "nodeId": "RA-3",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "最小闭环验收：一个 drill 任务全程 R 面完成（计划→拆树→agent-core 执行→收口），本地 TriRLC 关机模拟（断开 CEO 侧观测面不影响），零 CC 参与"
+    }
+  ],
+  "commits": [],
+  "updatedAt": "2026-08-25T10:20:59Z"
+}
