@@ -62,9 +62,18 @@
   "subtrees": [
     "docs/workflow/operating-records/2026-W35/trees/audit-campaign-001/（引导树）"
   ],
-  "escalations": [],
+  "escalations": [
+    {
+      "type": "系统硬约束",
+      "what": "git push origin dev 跨 tick 持续被拒（tick1 05:54 起，tick2 09:12 复现同模式）：bare 仓 /srv/git/TriMetaverse.git 对象迁移 Permission denied；编排实例沙箱对 /srv/git 无读权限，诊断与修复均在域外",
+      "evidence": "tick2 push 输出: unable to write ./objects/14/{9f1da8,7b08bf}*: Permission denied → remote rejected (unable to migrate objects to permanent storage)；补偿动作 git bundle 落盘亦被沙箱权限拒",
+      "impact": "仅远端备份滞后；本地 dev 全量 commit 安全，战役续跑不受阻",
+      "at": "2026-08-25T09:12+08:00",
+      "disposition": "按 tick1 预置处置正式上报。编排侧解读并留痕：push 子系统隔离挂起待 CEO 处置 /srv/git 权限；其余战役任务全部本地可完成，继续推进不空转（若 CEO 要求全面暂停请在 state.json 标注，下 tick 只收口不推进）。恢复判据=push 成功，届时 incidents 本条关闭"
+    }
+  ],
   "incidents": [
-    { "type": "infra", "what": "git push origin dev 持续被拒：bare 仓对象迁移 Permission denied（同一对象 14/7b08bfa… 反复失败；磁盘36%正常；本地 dev 全量安全）", "firstSeen": "2026-08-25T05:54+08:00", "impact": "远端备份滞后，本地续跑不受影响", "disposition": "持续每次commit后重试；若 tick2 仍失败→按系统硬约束类升级事件上报" }
+    { "type": "infra", "what": "git push origin dev 持续被拒：bare 仓对象迁移 Permission denied（同一对象 14/7b08bfa… 反复失败；磁盘36%正常；本地 dev 全量安全）", "firstSeen": "2026-08-25T05:54+08:00", "impact": "远端备份滞后，本地续跑不受影响", "disposition": "tick2 09:12 复现确认→已升级为系统硬约束类事件（见 escalations[0]），push 隔离挂起待 CEO 处置，本地续跑继续" }
   ],
   "nextTickInstructions": [
     "1. 读本文件+log.md 尾部续跑（tick 轨 fresh 实例）",
