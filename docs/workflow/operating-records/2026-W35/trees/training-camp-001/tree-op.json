@@ -29,6 +29,12 @@
       "agent": "TestEngineer",
       "status": "pending",
       "action": "验收：rmc-autonomy-001 RA-3 最小闭环 PASS（drill 全程零 CC、本地关机模拟、自治率判据 V1-V8）"
+    },
+    {
+      "nodeId": "TC-4b",
+      "agent": "FullStack",
+      "status": "pending",
+      "action": "出站消息规范化层：trilc→OpenRouter Anthropic 兼容面的请求净化（空文本块剥离/tool_result 内容数组化/assistant null 字段清理）——RA-2 第二层根因（0826 SSE 实证 400 invalid_request）；同族参考 CC 原版请求构造"
     }
   ],
   "doneCondition": "轨道 b 移植落地 + RA-3 PASS + 训练流程首战复盘归档"

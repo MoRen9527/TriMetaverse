@@ -17,7 +17,7 @@
       "nodeId": "RA-2",
       "agent": "FullStack",
       "status": "in_progress",
-      "action": "trirmc 编排接线：orchestrate_tick R 面适配版（spawn 后端由 claude CLI 替换为 TriRLC HTTP 会话 API；brief/红线协议复用；SessionRegistry 对接）——RA-2 关键发现（2026-08-26 凌晨）：后端管线全通（SSE 恒流解析/工具执行/bypassPermissions/驱动外循环×5/记账），但**成熟度缺口实锤**——ox-alpha 在 trilc 裸循环中 1-3 轮工具调用后即自愿收工写总结（system 人设+CRITICAL 持续条款+driven nudge 均未压住）；同模型在 CC 宿主可数百轮持续。持续性属宿主 harness 能力而非模型天赋——列训练流程头号目标"
+      "action": "trirmc 编排接线：orchestrate_tick R 面适配版（spawn 后端由 claude CLI 替换为 TriRLC HTTP 会话 API；brief/红线协议复用；SessionRegistry 对接）——RA-2 关键发现（2026-08-26 凌晨）：后端管线全通（SSE 恒流解析/工具执行/bypassPermissions/驱动外循环×5/记账），但**成熟度缺口实锤**——ox-alpha 在 trilc 裸循环中 1-3 轮工具调用后即自愿收工写总结（system 人设+CRITICAL 持续条款+driven nudge 均未压住）；同模型在 CC 宿主可数百轮持续。持续性属宿主 harness 能力而非模型天赋——列训练流程头号目标——第二层根因锁定（2026-08-26 凌晨，SSE 全量捕获实证）：第一轮工具执行成功（shell_exec/LS is_error:false），回喂轮（assistant tool_use+user tool_result 结构）被 OpenRouter Anthropic 兼容面判 400「Invalid Anthropic Messages API request」——出站消息规范化层缺失（空文本块/tool_result 格式细节不符其校验）。归属 TC-001 轨道 b 新增 b.4"
     },
     {
       "nodeId": "RA-3",
