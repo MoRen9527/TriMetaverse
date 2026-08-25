@@ -4,8 +4,8 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/training-campaign-001-charter.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-26
-- 授权: CEO 2026-08-26 裁决「a 先行解燃眉，b/c 立项为训练战役」
+- lastSyncedAt: 2026-08-25
+- 授权: CEO 2026-08-25 裁决「a 先行解燃眉，b/c 立项为训练战役」
 
 ## 一、问题档案（实证）
 
