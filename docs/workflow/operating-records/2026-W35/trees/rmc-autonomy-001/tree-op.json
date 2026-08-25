@@ -1,0 +1,30 @@
+{
+  "treeId": "rmc-autonomy-001",
+  "title": "R 面自治闭环——河源 TriRLC 服务端实例+trirmc 编排接线",
+  "week": "W35",
+  "source": "CEO 2026-08-25 同意立项；架构依据=两套永续系统（生产系统镜像热备）+白皮书 §3.1 元现实自持内核",
+  "domainRouting": "server-executable",
+  "status": "active",
+  "created": "2026-08-26",
+  "nodes": [
+    {
+      "nodeId": "RA-1",
+      "agent": "DeploymentEngineer",
+      "status": "done",
+      "action": "河源部署 TriRLC 服务端实例：GitHub 克隆→npm install→tsc 构建→systemd trilc-headless.service 常驻（headless daemon，数据目录隔离）→模型经 OpenRouter env 接线→控制链指向本机 trirmc :8712（token 门）——完成：河源 TriRLC headless 实例上线（systemd trilc-headless.service，`run --port 8711` 前台模式+MemoryMax=700M；Node 升 22 因 node:sqlite；模型经 OpenRouter env；控制链指向本机 trirmc :8712 token 门=批项4 在新节点出生即接通）；附带修复：TriRMC 默认绑定 127.0.0.1（6bb12d6，B2 教训结构化）"
+    },
+    {
+      "nodeId": "RA-2",
+      "agent": "FullStack",
+      "status": "pending",
+      "action": "trirmc 编排接线：orchestrate_tick R 面适配版（spawn 后端由 claude CLI 替换为 TriRLC HTTP 会话 API；brief/红线协议复用；SessionRegistry 对接）"
+    },
+    {
+      "nodeId": "RA-3",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "最小闭环验收：一个 drill 任务全程 R 面完成（计划→拆树→agent-core 执行→收口），本地 TriRLC 关机模拟（断开 CEO 侧观测面不影响），零 CC 参与"
+    }
+  ],
+  "doneCondition": "三节点 done + R 面 7×24 自治闭环实证（无 CC、无本地依赖）"
+}

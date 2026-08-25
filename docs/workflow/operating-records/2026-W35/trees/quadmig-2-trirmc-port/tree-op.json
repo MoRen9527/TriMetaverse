@@ -27,14 +27,14 @@
     {
       "nodeId": "Q2n-4",
       "agent": "编排层+小狄",
-      "status": "pending",
-      "action": "cron/config-sync 双跑影子期（批项 2/3；开业互锁门 I5 先行于 config-sync 切换；切换动作只选周日触发完成后窗口；applied.json 版本比对+I4 基线 43/43 对照）"
+      "status": "done",
+      "action": "cron/config-sync 双跑影子期（批项 2/3；开业互锁门 I5 先行于 config-sync 切换；切换动作只选周日触发完成后窗口；applied.json 版本比对+I4 基线 43/43 对照）——完成（周平面半场）：weekly-plane-shift 主责 2026-08-25 切至 TriRMC（真 --sync 档，周日 23:59 Asia/Shanghai；推送经部署密钥→sg-bare）；sg-server 同名 job 已 disable 可逆；config-sync 批项 3 半场仍待"
     },
     {
       "nodeId": "Q2n-5",
       "agent": "编排层",
       "status": "pending",
-      "action": "TriRMC/docs/runbook 独立成文（python3.8 依赖+:8712 健康检查+.git 属主基线首页化）+ docs/registry/product-state.md 拆分落位（中央留指针行）；回滚预案在册=TriRMC 异常即摘除回归 trimc 独跑"
+      "action": "TriRMC/docs/runbook 独立成文（python3.8 依赖+:8712 健康检查+.git 属主基线首页化）+ docs/registry/product-state.md 拆分落位（中央留指针行）；回滚预案在册=TriRMC 异常即摘除回归 trimc 独跑——runbook 成文已交付（TriRMC/docs/runbook.md，含周日验收清单与回滚预案）；product-state 拆分待"
     }
   ],
   "doneCondition": "换名完成+部署面就绪+双跑影子期启动判据满足；控制面切换与退役另按 §5.2 判据+CEO 放行"
