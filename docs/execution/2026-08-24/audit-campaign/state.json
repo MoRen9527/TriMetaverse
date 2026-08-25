@@ -3,9 +3,10 @@
   "plan": "docs/execution/2026-08-24/autonomy-audit-campaign-plan.md",
   "brief": "/srv/fleet/shadow-plane/brief-campaign-v3.md",
   "orchestratorAnchor": "ceo-chief-of-staff",
-  "status": "running",
+  "status": "done",
   "createdAt": "2026-08-25T05:45+08:00",
-  "updatedAt": "2026-08-25T09:12+08:00",
+  "updatedAt": "2026-08-25T09:46+08:00",
+  "closedAt": "2026-08-25T09:46+08:00",
   "tick": 2,
   "bootstrapTree": "docs/workflow/operating-records/2026-W35/trees/audit-campaign-001/tree-op.json（AC-BOOT 保持 pending 至战役收口）",
   "modelVerification": {
@@ -29,8 +30,8 @@
     "campaignResidentRoles": {
       "design": "小乔(COO)/小狄(CTO)/CHO/CFO 四角色战役级常驻：签收动作由 fresh 实例承担，记忆载体=roles/*-state.md",
       "statesCreated": ["roles/coo-state.md", "roles/cto-state.md", "roles/cho-state.md", "roles/cfo-state.md"],
-      "crossNodeConsumption": "3/4 完成（tick2）：AC-CTO-SIGN(d9420b98)/AC-CHO-SIGN(1f189a6b)/AC-CFO-SIGN(d7478d8e) 三个 fresh 实例各自读 state 文件+相关报告后追加落款；AC-COO-SIGN 留作战役收口前终审门（完成定义逐项核对），为 tick2 尾部节点",
-      "conclusion": "矩阵第二项测试成立：记忆载体被多节点交叉消费实证（tick1 写入→tick2 三路 fresh 读出+落款）；CHO 复核全 pass APPROVE、CFO ROI 显著为正 APPROVE、CTO 产出 P0/P1 五组合并树建议"
+      "crossNodeConsumption": "4/4 完成（tick2）：AC-CTO-SIGN(d9420b98)/AC-CHO-SIGN(1f189a6b)/AC-CFO-SIGN(d7478d8e) 三路评审签收+AC-COO-SIGN 收口终审（本收口commit，完成定义四项全pass APPROVE 无 BLOCK）——矩阵第二项测试完整成立",
+      "conclusion": "记忆载体被多节点交叉消费实证闭环（tick1 编排写种子→tick2 四路 fresh 读出+落款）；CHO 台账复核全 pass、CFO ROI 显著为正+护栏数字、CTO P0/P1 五组合并树、COO 收口终审 APPROVE"
     },
     "treeTrack": {
       "design": "树轨一树一生命周期，一节点一 fresh 实例禁复用",
@@ -44,7 +45,8 @@
         { "node": "AC-PROBE-AT01", "instance": "fresh", "released": false, "note": "探测桩保留 transcript 以供续接复测" },
         { "node": "AC-CTO-SIGN", "instance": "fresh", "released": true },
         { "node": "AC-CHO-SIGN", "instance": "fresh", "released": true },
-        { "node": "AC-CFO-SIGN", "instance": "fresh", "released": true }
+        { "node": "AC-CFO-SIGN", "instance": "fresh", "released": true },
+        { "node": "AC-COO-SIGN", "instance": "fresh", "released": true }
       ]
     },
     "agentTeamsProbe": {
@@ -59,8 +61,8 @@
   },
   "timeGate": {
     "rule": "模块审计完成后：<20:00→产品级自优化；>=20:00→当日收口",
-    "lastCheckAt": "2026-08-25T05:44+08:00",
-    "decision": "审计完成时刻≈06:12 <20:00 → 应转产品级自优化档；因单会话40分钟预算耗尽，自优化移交 tick2（预算纪律优先于档位执行，非时间门触发）"
+    "lastCheckAt": "2026-08-25T09:09+08:00",
+    "decision": "tick2 09:09 <20:00 → 自优化档已执行：域内索引同步（exec-20260824-index.md 补3条修2漂移 df3ab9ea）+README 同步（c067a703）；域外修复项按写域铁律只登记移交后续树（见 test report §七.3）"
   },
   "subtrees": [
     "docs/workflow/operating-records/2026-W35/trees/audit-campaign-001/（引导树）"
@@ -79,12 +81,10 @@
     { "type": "infra", "what": "git push origin dev 持续被拒：bare 仓对象迁移 Permission denied（同一对象 14/7b08bfa… 反复失败；磁盘36%正常；本地 dev 全量安全）", "firstSeen": "2026-08-25T05:54+08:00", "impact": "远端备份滞后，本地续跑不受影响", "disposition": "tick2 09:12 复现确认→已升级为系统硬约束类事件（见 escalations[0]），push 隔离挂起待 CEO 处置，本地续跑继续" }
   ],
   "nextTickInstructions": [
-    "1. 读本文件+log.md 尾部续跑（tick 轨 fresh 实例）",
-    "2. 先重试 git push origin dev 并更新 incidents.disposition",
-    "3. 派发四角色 fresh 签收实例（补全 lifecycleMatrix.campaignResidentRoles.crossNodeConsumption）",
-    "4. 时间门<20:00 → 产品级自优化档（优先处置 TriMetaverse 报告中文档类 P2：README/索引同步类可直接修，代码类仍只登记）",
-    "5. 产出《自治能力测试报告》骨架至 reports/self-autonomy-test-report.md 并逐步填充（R面移植评估输入）",
-    "6. 全达成后置 status=done、AC-BOOT→done 收口"
+    "战役已于 2026-08-25T09:46+08:00 收口（status=done，AC-BOOT→done，完成定义全达成）。后续 tick 无战役推进任务，仅剩移交事项：",
+    "1. 重试 git push origin dev（escalations[0] 系统硬约束挂起中，恢复判据=push 成功后关闭该条）",
+    "2. CEO 阅知件：reports/self-autonomy-test-report.md（R面移植评估输入）+ roles/cto-state.md 签收落款（P0/P1 处置次序与五组合并树建议，修复走后续树需 CEO/CTO 立项）+ escalations[0]（/srv/git 权限处置）",
+    "3. 域外登记项移交：.github 4 个 PascalCase 重复条目、e2e run-all 退出码/TRIMC 默认值 hotfix 等——清单见 test report §七.3"
   ],
   "writeDomain": [
     "docs/execution/2026-08-24/audit-campaign/",
