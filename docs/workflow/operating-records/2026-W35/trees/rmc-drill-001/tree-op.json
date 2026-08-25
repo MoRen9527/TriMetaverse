@@ -1,0 +1,12 @@
+{
+  "treeId": "rmc-drill-001",
+  "title": "R 面自治演练（RA-2 后端验证：TriRLC 执行+收口）",
+  "week": "W35",
+  "domainRouting": "server-executable",
+  "status": "active",
+  "created": "2026-08-26",
+  "nodes": [
+    {"nodeId": "RD-1", "agent": "CEOChiefOfStaff", "status": "pending", "action": "在 experience/staging/ 写一份 EXPER_ASSET 草稿 rmc-first-run.md（主题：R 面首次自治执行体验，五要素简版），git add 该文件与本树 tree-op.json（节点置 done、顶层 status 置 done），commit 并 push sg-bare HEAD:dev"}
+  ],
+  "doneCondition": "staging 资产存在且树 status=done"
+}
