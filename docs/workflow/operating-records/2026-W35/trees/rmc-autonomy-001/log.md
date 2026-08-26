@@ -22,3 +22,11 @@
   - 收口 commit push origin dev：本 tick 记录提交后实测一次并如实终记于台账（预期首次真实成功——本地已与远端同步）。
 - 台账处置：instances+ticks 双条目循例追加至 session-registry.json 并随附 114800Z+121305Z 两组缺口补记说明（121305Z 链随重置孤儿化且台账未及落盘）；历史缺口维持既有口径不代填。
 - 留痕 commit 后即完成本 tick 收束。后续治理观察项移交授权侧：简报管线对收官树停发/改指（连续五十次点火同一收官树的根因仍在）；TC-001 拆树承接后的 rmc-autonomy-001 归档口径。
+
+## 2026-08-26T12:41Z 收口确认·第三序（tick 20260826T121554Z）
+
+- 编排实例就位（brief=/srv/fleet/shadow-plane/brief-20260826T121554Z.md，锚定渲染位 ceo-chief-of-staff；brief 生成 12:15:54Z），现查钟 12:21 UTC 在案。
+- **独立复勘六项实证（重置前窗口完成，非继承口径）**：origin/dev 权威版树 status=done（RA-1 done / RA-2 in_progress 移交 TC-001 轨道 b+b.4 / RA-3 done rmc-ra3-001 PASS）·对侧快照推进 affbffe3→9a488e4d「TC-001 正式拆树」且增量区间 affbffe3..origin/dev 对本树路径零触碰（路径过滤 log 空输出+diff 仅触 tc001-tc-rmc-integration/tc001-tc-s1/training-camp-001 三棵新树文件）·分叉 ahead82/behind24 非快进（rev-list 双向实测）·双桩未动（Read 实测）·简报序列已越本 tick·registry 双数组止于 111800Z。
+- **三实例并发窗口亲历**：约两分钟内四发简报（120609Z/121305Z/121554Z/121800Z）=密集连发形态首见，其中三实例并行存活交叠写同一树目录——本实例依次实测到 state.json 被 twin 翻转（Write 冲突拒写=file-modified guard 实证）、twin 骨架 5c305806+裁定 cd12c103 落盘、121800Z 写入 collision 去冲突块、12:29:27Z 授权和解重置清屏、121800Z 重建提交 727b7c7a+973a3eac（727b7c7a push 成功 9a488e4d..727b7c7a=首次真实成功推送）。本实例全程未落盘任何半成品，串行让位在先实例。
+- **裁定（红线3）：与前窗两实例同口径收敛——零派工维持，分叉障碍已由授权和解解除而非派工**：不派 RA-2（后继已实体化 tc-s1 ✅已部署+tc-rmc-integration 进行中）、不派 RA-3（验收 rmc-ra3-001 PASS 在案）；红线4 核对顶层 status=done 已为真（本地即权威），无臆造无补造；点火计数口径并陈：按简报逐发计本 tick=第五十二（含零痕 120609Z），twin 自记第五十，存差如实保留。
+- 台账处置：instances+ticks 双条目循例追加；114800Z 双缺循例补记说明不代填（121305Z 已勘正非缺口）；push 二次实测结果随台账终记。
