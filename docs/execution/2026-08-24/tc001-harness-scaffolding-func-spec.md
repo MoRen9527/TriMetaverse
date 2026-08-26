@@ -144,13 +144,13 @@ TriModel anthropic provider 的 `toAnthropicConversation` 函数：
 | 安全 | task_plan 内容不脱离 trilc 进程内存；不持久化到磁盘 |
 | 可测试 | 每个 FR 有独立的单元测试场景 |
 
-## 四、拆树建议
+## 四、拆树（已落地）
 
 | 树节点 | 内容 | 对应 FR | 预估工作量 |
 | --- | --- | --- | --- |
-| TC-s1 | FR-1+FR-2：trilc 处理器改造（task_plan 解析+end_turn 判定+消息注入） | FR-1,FR-2 | 1-2 天 |
-| TC-s2 | FR-3：进度 reminder + rmc_tick 发送端适配（task_plan 构建） | FR-3 | 半天 |
-| TC-s3 | 单元测试 + 集成验证（含 RA-3 重跑） | 全部 | 1 天 |
+| [tc001-harness-scaffold HS-1](../../../workflow/operating-records/2026-W35/trees/tc001-harness-scaffold/tree-op.json) | FR-1+FR-2：trilc 处理器改造（task_plan 解析+end_turn 判定+消息注入） | FR-1,FR-2 | 1-2 天 |
+| [tc001-harness-scaffold HS-2](../../../workflow/operating-records/2026-W35/trees/tc001-harness-scaffold/tree-op.json) | FR-3：进度 reminder + rmc_tick 发送端适配（task_plan 构建） | FR-3 | 半天 |
+| [tc001-harness-scaffold HS-3](../../../workflow/operating-records/2026-W35/trees/tc001-harness-scaffold/tree-op.json) | 单元测试 + 集成验证（含 RA-3 重跑） | 全部 | 1 天 |
 
 ## 五、成功指标
 

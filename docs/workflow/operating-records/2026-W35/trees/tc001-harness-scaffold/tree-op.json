@@ -1,0 +1,15 @@
+{
+  "treeId": "tc001-harness-scaffold",
+  "title": "TC-001 执行树：agent-core 执行持续性三机制实现（FR-1/2/3）",
+  "week": "W35",
+  "source": "docs/execution/2026-08-24/tc001-harness-scaffolding-func-spec.md v1.0（CEO 批准）",
+  "domainRouting": "server-executable",
+  "status": "active",
+  "created": "2026-08-26",
+  "nodes": [
+    {"nodeId": "HS-1", "agent": "FullStack", "status": "pending", "action": "trilc src/server/app.ts /v1/messages 处理器改造：(1) 解析 body 中 task_plan.items/currentFocus 字段 (2) 每轮 agentLoop 结束后检查 task_plan 状态变化并注入进度追加消息 (3) end_turn 且 continue_on_incomplete=true 时自动注入判定消息「你结束了回合但任务可能尚未完成。请自查：你的所有交付物是否已创建？所有 commit 是否已推送？如果未完成，继续执行。如果确实完成，回复 DONE。」(4) 每 N 轮（默认10）注入进度 reminder。全部字段可选缺省时零行为变化"},
+    {"nodeId": "HS-2", "agent": "FullStack", "status": "pending", "action": "/chat/completions 端点同步透传相同参数（与 /v1/messages 对齐）"},
+    {"nodeId": "HS-3", "agent": "TestEngineer", "status": "pending", "action": "单元测试+集成验证：FR-1 task_plan 注入正确性/FR-2 end_turn 判定拦截/FR-3 进度 reminder 触发/向后兼容（无新字段时零行为变化）/RA-3 重跑 PASS"}
+  ],
+  "doneCondition": "三节点 done + tsc clean + 测试全绿 + RA-3 重跑通过"
+}
