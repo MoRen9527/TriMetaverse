@@ -23,13 +23,31 @@
     {
       "nodeId": "AC-R1",
       "agent": "TestEngineer",
-      "status": "in_progress",
-      "evidence": "目标已在案（/srv/fleet/TriRMC/src 64 .ts）；审计焦点 cron/·orchestration/session-bridge·config-sync/·agent-loop/"
+      "status": "done",
+      "evidence": "reports/rmc-TriRMC.md 136 行（P0=3/P1=8/P2=8）已落盘提交（887b0939）；编排独立抽查五处 file:line 属实（app.ts:121-122·674/command-handler.ts:85/decision-pipeline.ts:100-108/tools.ts:194-202）"
     },
-    { "nodeId": "AC-R2", "agent": "TestEngineer", "status": "done", "evidence": "reports/rmc-agent-core.md 141 行（P0=4/P1=10/P2=14），131800Z 收敛验收固化（commit 01c5737e）" },
-    { "nodeId": "AC-R3", "agent": "TestEngineer", "status": "pending" },
-    { "nodeId": "AC-R4", "agent": "TestEngineer", "status": "pending" }
+    {
+      "nodeId": "AC-R2",
+      "agent": "TestEngineer",
+      "status": "done",
+      "evidence": "reports/rmc-agent-core.md 141 行（P0=4/P1=10/P2=14），131800Z 收敛验收固化（commit 01c5737e）"
+    },
+    {
+      "nodeId": "AC-R3",
+      "agent": "TestEngineer",
+      "status": "pending"
+    },
+    {
+      "nodeId": "AC-R4",
+      "agent": "TestEngineer",
+      "status": "pending"
+    }
   ],
-  "commits": [],
+  "commits": [
+    {
+      "hash": "887b0939",
+      "what": "AC-R1 正式审计报告（TriRMC 四域，136 行 P0=3/P1=8/P2=8）"
+    }
+  ],
   "updatedAt": "2026-08-26T15:01:13Z"
 }

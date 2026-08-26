@@ -7,10 +7,32 @@
   "status": "active",
   "created": "2026-08-26",
   "nodes": [
-    {"nodeId": "AC-R1", "agent": "TestEngineer", "status": "blocked", "action": "审计 TriRMC（/srv/fleet/TriRMC/src/ 全部 .ts 文件）：cron/session-bridge/config-sync/agent-loop 质量与安全面。产出 reports/rmc-TriRMC.md，发现按 P0/P1/P2 分级带 file:line", "blockedNote": "tick 20260826T124800Z 判 blocked：目标 /srv/fleet/TriRMC 本机不存在（四重探测实证见 reports/rmc-TriRMC.md）；TriRMC 真源在河源第二台服务器（quadmig-2 Q2n-1 在案）——改指河源侧或本机提供检出后 fresh 重派"},
-    {"nodeId": "AC-R2", "agent": "TestEngineer", "status": "done", "action": "审计 TriCompany/packages/agent-core/src/：loop.ts/tools.ts/permissions*.ts/sub-agent/*.ts 质量。产出 reports/rmc-agent-core.md 同格式", "resultNote": "tick 20260826T124800Z 完成：报告 141 行（P0=4/P1=10/P2=14），13 源文件全覆盖；编排侧抽查 file:line 三处全属实（decision-pipeline startsWith 裸匹配:215·spawn 权限配置丢弃:31-39·loop bypassPermissions 缺省:346）；子实例落盘后因 API 错误早终，产物完整由编排验收；tick 20260826T131800Z 编排收敛验收固化——该产物提交前悬空（对端 13:18Z 落盘至 13:28Z 零提交），本编排独立抽查四处 file:line 全属实（decision-pipeline.ts:215 裸 startsWith 边界判定·decision-pipeline.ts:226-232 acceptEdits 非写入工具即席放行·spawn.ts:31-39 权限配置未传入子代理 loopOptions·loop.ts:346 permissionMode 缺省 bypassPermissions）+行数/分级计数复核一致（141 行·P0=4/P1=10/P2=14）后以本 tick 提交固化"},
-    {"nodeId": "AC-R3", "agent": "TestEngineer", "status": "pending", "action": "审计 TriLC（/srv/fleet/TriLC/src/server/app.ts + src/config/ + src/cron/）：daemon HTTP 面质量。产出 reports/rmc-TriLC.md"},
-    {"nodeId": "AC-R4", "agent": "TestEngineer", "status": "pending", "action": "审计 TriModel（/srv/fleet/TriModel/src/）：config/client/providers/api。产出 reports/rmc-TriModel.md"}
+    {
+      "nodeId": "AC-R1",
+      "agent": "TestEngineer",
+      "status": "done",
+      "action": "审计 TriRMC（/srv/fleet/TriRMC/src/ 全部 .ts 文件）：cron/session-bridge/config-sync/agent-loop 质量与安全面。产出 reports/rmc-TriRMC.md，发现按 P0/P1/P2 分级带 file:line",
+      "resultNote": "tick 20260826T150113Z 解阻后完成：第六探确认 /srv/fleet/TriRMC 已在本机存在（src 64 .ts），124800Z blocked 理由失效；报告 136 行（P0=3/P1=8/P2=8），四焦点域逐文件完整 Read + 全树危险模式扫描；P0=runAs 提权面（command-handler.ts:85）/internal 鉴权 fail-open（app.ts:121-122）/权限规则子串匹配（decision-pipeline.ts:100-108 与 AC-R2 同源）；编排侧抽查五处 file:line 全属实（commit 887b0939）"
+    },
+    {
+      "nodeId": "AC-R2",
+      "agent": "TestEngineer",
+      "status": "done",
+      "action": "审计 TriCompany/packages/agent-core/src/：loop.ts/tools.ts/permissions*.ts/sub-agent/*.ts 质量。产出 reports/rmc-agent-core.md 同格式",
+      "resultNote": "tick 20260826T124800Z 完成：报告 141 行（P0=4/P1=10/P2=14），13 源文件全覆盖；编排侧抽查 file:line 三处全属实（decision-pipeline startsWith 裸匹配:215·spawn 权限配置丢弃:31-39·loop bypassPermissions 缺省:346）；子实例落盘后因 API 错误早终，产物完整由编排验收；tick 20260826T131800Z 编排收敛验收固化——该产物提交前悬空（对端 13:18Z 落盘至 13:28Z 零提交），本编排独立抽查四处 file:line 全属实（decision-pipeline.ts:215 裸 startsWith 边界判定·decision-pipeline.ts:226-232 acceptEdits 非写入工具即席放行·spawn.ts:31-39 权限配置未传入子代理 loopOptions·loop.ts:346 permissionMode 缺省 bypassPermissions）+行数/分级计数复核一致（141 行·P0=4/P1=10/P2=14）后以本 tick 提交固化"
+    },
+    {
+      "nodeId": "AC-R3",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "审计 TriLC（/srv/fleet/TriLC/src/server/app.ts + src/config/ + src/cron/）：daemon HTTP 面质量。产出 reports/rmc-TriLC.md"
+    },
+    {
+      "nodeId": "AC-R4",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "审计 TriModel（/srv/fleet/TriModel/src/）：config/client/providers/api。产出 reports/rmc-TriModel.md"
+    }
   ],
   "doneCondition": "四份报告齐 + 发现计数汇总"
 }
