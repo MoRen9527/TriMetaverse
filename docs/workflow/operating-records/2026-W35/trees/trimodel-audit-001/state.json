@@ -1,0 +1,36 @@
+{
+  "tick": "20260826T204030Z",
+  "treeId": "trimodel-audit-001",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/trimodel-audit-001/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance",
+    "mode": "execution executor (TA-1 唯一节点 fresh 派工 TestEngineer)"
+  },
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260826T204030Z.md",
+  "startedAt": "2026-08-26T20:40:30Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；先写后报（报告先落盘再翻状态，带路径+行数）；一次一节点禁复用；收口必做（全部节点 done 后置顶层 status=done）",
+  "baseline": {
+    "headAtStart": "171ad1f3",
+    "branchState": "dev 与 origin/dev 同步（HEAD=origin/dev=171ad1f3，工作树 clean；fetch 未尝试=非白名单操作，origin 引用为 remote-tracking 快照口径）",
+    "treeStatusAtStart": "active；TA-1 pending（唯一节点）"
+  },
+  "survey": {
+    "targetExists": "/srv/fleet/TriModel/src/ 在案：Glob 实测 18 个 .ts，节点所列 8 文件全部命中（config.ts/client.ts/providers/{anthropic,deepseek,deepseek-anthropic,openai,trimetaverse}.ts/api/keys.ts）；范围外另含 index/server/types/usage/api/{routes,health,models}/security/key-encryptor/providers/stream/{anthropic,openai}-sse-parser",
+    "formatBaseline": "格式对齐基准 rmc-agent-core.md（141 行，rmc-audit-cmp-001 树 reports/）在案已读，节点头/总体评估/发现清单 P0-P2/计数表/门禁评估五段式",
+    "contextHints": "树 notes 三条对照线（派工时随附，要求验证而非照抄）：api_key 经 env 广播（key-cache 同源风险）/TRIMODEL_API_TOKEN 缺省放行语义（keys.ts 'not configured' 分支）/client fallback 链终止是否都在 listModels() 内（W30 教训）",
+    "ledgerAtStart": "本 tick 台账条目已登记（rc=spawned，pid 1023214，trigger=hook），收口后回填终值"
+  },
+  "nodes": [
+    {
+      "nodeId": "TA-1",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "evidence": null
+    }
+  ],
+  "commits": [],
+  "updatedAt": "2026-08-26T20:42:36Z",
+  "mode": "execution executor (TA-1 fresh dispatch)"
+}
