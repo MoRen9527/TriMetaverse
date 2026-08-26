@@ -20,8 +20,10 @@
     {
       "nodeId": "AC-R1",
       "agent": "TestEngineer",
-      "status": "in_progress",
-      "note": "骨架期占位：目标路径勘验中，判定与证据由后续原子提交落盘"
+      "status": "blocked",
+      "evidence": "目标 /srv/fleet/TriRMC 本机不存在——四重探测实证（Glob Directory does not exist·顶层模块清点无 TriRMC·trirmc.service unit 不存在=非河源部署机·本仓 glob trirmc* 零命中）；文档佐证 quadmig-2 Q2n-1 河源直克隆部署+m1-n2-report D:/Code/ai 载体锚",
+      "artifact": "reports/rmc-TriRMC.md（blocked 证据记录，零臆造发现）",
+      "disposition": "红线3 如实标注 blocked 并停；复核路径移交授权侧：改指河源侧执行 or 本机提供检出后 fresh 重派"
     },
     { "nodeId": "AC-R2", "agent": "TestEngineer", "status": "pending" },
     { "nodeId": "AC-R3", "agent": "TestEngineer", "status": "pending" },

@@ -16,4 +16,7 @@
 
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
-| 1 | 12:55 | 骨架 state.json+log.md 落盘并提交 | (待回填) |
+| 1 | 12:55 | 骨架 state.json+log.md 落盘并提交 | 550057f8 |
+| 2 | 12:56 | AC-R1 判 blocked：reports/rmc-TriRMC.md blocked 证据记录落盘+tree-op 节点翻转 in_progress→blocked（附 blockedNote）+state/log 同步 | (本行所属提交本体) |
+
+AC-R1 判定要点：目标 /srv/fleet/TriRMC 本机不存在，四重探测实证在案；TriRMC 真源在河源第二台服务器（8.155.54.79 GitHub 直克隆部署，quadmig-2 Q2n-1/Q2n-2 在案）。红线3 如实标注 blocked 并停——不臆造审计发现、不代审 TriMC 等近似物、不改顶层 status。复核路径二选一移交授权侧：①改指河源侧会话执行；②本机提供 TriRMC 检出后后续 tick fresh 重派续做。
