@@ -95,5 +95,6 @@ CEO 收终报
 | P2-2 全 in_progress 树调度黑洞 | 未修——v1.2 候选（告警或重派策略待定） | ⏳ |
 | P2-4 AC-2 无时限/watch 超时口径 | 未修——v1.2 候选 | ⏳ |
 | P2-5 日界时区/单树串行语义未载明 | 未修——文档事项，v1.2 候选 | ⏳ |
+| **AC-4 受控实验** | **PASS**（2026-08-27 04:18 北京时间）：hook 禁用窗内 push fadeslow-verify-001 → cron tick 独立拾取 spawn（registry trigger=cron·pid 在案）→ 会话收口 done；同轮实证 P1-1 自愈同步干净通过。取证报告见 [fadeslow-verify-001/reports/slow-path.md](../../workflow/operating-records/2026-W35/trees/fadeslow-verify-001/reports/slow-path.md)；hook 已于同日恢复启用 | ✅ |
 
-**残余风险声明**：v1.1 修复尚未经第二轮真实树演练验证（代码已部署 sg）；AC-4 受控实验未执行。
+**残余风险声明**：四条 AC 全部有实证（AC-1a/AC-2/AC-3 见 fade-rehearsal-001 链路；AC-4 见本表）；唯一未复验项为 **AC-1b**（hook 恢复后首次带新树 push 的生效链路），将在下一真实战役自然覆盖。_sync_worktree 降级告警升级（现为 stdout 级可见性）列 v1.2。
