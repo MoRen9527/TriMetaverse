@@ -144,7 +144,29 @@ TriModel anthropic provider 的 `toAnthropicConversation` 函数：
 | 安全 | task_plan 内容不脱离 trilc 进程内存；不持久化到磁盘 |
 | 可测试 | 每个 FR 有独立的单元测试场景 |
 
-## 四、拆树（已落地）
+## 四、架构纠正（2026-08-26，CEO 指令）
+
+### 4.1 M/R 任务路由纪律
+
+| 面 | 职责 | 环境 |
+| --- | --- | --- |
+| TriRMC (heyuan) | 仅生产任务：周平面迁移 | /srv/fleet/TriMetaverse（独立克隆）|
+| TriMMC (sg-server) | 开发/审计/优化任务 | CC 宿主 headless |
+
+**禁止**将代码修改类任务路由到 TriRMC——它还在调试期，不承担正式代码变更。
+
+### 4.2 Worktree 隔离纪律
+
+R 面执行体运行在 git worktree 中，与研发主仓隔离：
+- 本地 cwd = `D:/Code/ai/TriMetaverse WorkTree`（project/trimetaverse 分支）
+- R 面产出走独立分支 → M 面审阅后 merge 到 dev
+- 详见 `mr-worktree-collaboration-protocol.md` v1.0
+
+### 4.3 sg-server orchestrate_tick 环境适配
+
+当前 sg-server 的 orchestrate_tick.py 连续失败 34 次——需要区分 heyuan(TriRLC backend) 与 sg-server(CLAUDE CLI backend) 两套配置。作为 TC-0c 前置节点。
+
+## 五、拆树（已落地）
 
 | 树节点 | 内容 | 对应 FR | 预估工作量 |
 | --- | --- | --- | --- |

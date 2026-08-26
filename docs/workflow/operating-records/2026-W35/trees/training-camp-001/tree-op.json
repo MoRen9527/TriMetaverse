@@ -7,6 +7,24 @@
   "created": "2026-08-25",
   "nodes": [
     {
+      "nodeId": "TC-0a",
+      "agent": "DeploymentEngineer",
+      "status": "pending",
+      "action": "前置：WorkTree 追平到当前 dev（已完成✅ 4e4fdc2c）+ project/trimetaverse 推送远端备份"
+    },
+    {
+      "nodeId": "TC-0b",
+      "agent": "编排层",
+      "status": "pending",
+      "action": "前置：M/R Worktree 协作协议落地——TriRLC daemon cwd 切至 WorkTree、heyuan 克隆与 sg-bare 同步确认、冻结窗口规则更新"
+    },
+    {
+      "nodeId": "TC-0c",
+      "agent": "FullStack",
+      "status": "pending",
+      "action": "前置：sg-server orchestrate_tick 环境修复——区分 heyuan(TriRLC backend) 与 sg-server(CLAUDE CLI backend) 两套配置，消除连续 34 次错误"
+    },
+    {
       "nodeId": "TC-1",
       "agent": "FullStack",
       "status": "pending",
@@ -28,7 +46,7 @@
       "nodeId": "TC-4",
       "agent": "TestEngineer",
       "status": "done",
-      "action": "验收：rmc-autonomy-001 RA-3 最小闭环 PASS（drill 全程零 CC、本地关机模拟、自治率判据 V1-V8）——验收 PASS：RA-3 达成（见 rmc-autonomy-001 收口），轨道 b.4 出站规范化已提前落地（TC-4b）"
+      "action": "验收：rmc-autonomy-001 RA-3 重跑 PASS（在前置节点全部完成后，使用修复后的 orchestrate_tick + 协作协议环境）"
     },
     {
       "nodeId": "TC-4b",
