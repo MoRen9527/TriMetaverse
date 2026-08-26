@@ -3,6 +3,7 @@
   "title": "R 面六模块代码审计（与 M 面 TriMMC 审计对照）",
   "week": "W35",
   "domainRouting": "server-executable",
+  "face": "r-face",
   "status": "active",
   "created": "2026-08-26",
   "nodes": [
