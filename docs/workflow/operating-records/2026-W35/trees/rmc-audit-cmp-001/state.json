@@ -1,30 +1,35 @@
 {
-  "tick": "20260826T150113Z",
+  "tick": "20260826T203116Z",
   "treeId": "rmc-audit-cmp-001",
   "treePath": "docs/workflow/operating-records/2026-W35/trees/rmc-audit-cmp-001/tree-op.json",
   "orchestrator": {
     "role": "CEOChiefOfStaff",
     "anchor": "ceo-chief-of-staff",
     "kind": "orchestration-instance",
-    "mode": "r-face executor (driven round 3, resume from AC-R3 report-write breakpoint)"
+    "mode": "closure executor (post CEO face-routing correction, zero dispatch)"
   },
-  "briefPath": "/srv/fleet/shadow-plane/brief-20260826T131800Z.md",
-  "startedAt": "2026-08-26T15:01:13Z",
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260826T203116Z.md",
+  "startedAt": "2026-08-26T20:31:16Z",
   "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；先写后报（报告先落盘再翻状态，带路径+行数）",
   "baseline": {
-    "headAtStart": "120390a1",
-    "branchState": "dev 与 origin/dev 同步；工作树仅 .tricompany-cognition/（他树产物，非本树范围，不触碰）",
-    "treeStatusAtStart": "active；AC-R1 blocked（前序 tick 124800Z 判）/ AC-R2 done（131800Z 收敛固化）/ AC-R3·AC-R4 pending"
+    "headAtStart": "923883eb",
+    "branchState": "dev 与 origin/dev 同步（HEAD..origin/dev 空+工作树 clean；fetch 未尝试=非白名单操作，origin 引用为 remote-tracking 快照口径）",
+    "treeStatusAtStart": "active；AC-R1/R2/R3 done；AC-R4 pending；notes 已载 CEO 勘正（41a788f7）：步骤3/4 现阶段归 M 面，本树 face=r-face 撤除，AC-R4 改派 M 面(TriMMC)，R1/R2/R3 报告保留归档"
   },
   "keyNewFact": {
-    "acR1Unblock": "本 tick 第六次探测：/srv/fleet/TriRMC 已在本机存在（src/ 下 64 个 .ts 实测），blockedNote 所述『本机提供检出后 fresh 重派』条件成立——AC-R1 由 blocked 转 in_progress 本 tick 直接执行；原 blocked 证据报告将覆盖为正式审计报告（git 历史留痕）"
+    "correctionDisposition": "本 tick 零派工——CEO 勘正（notes 2026-08-27~04+08，commit 41a788f7）已将 AC-R4 改派 M 面，本树此处执行三步收口：改派登记+发现计数汇总+顶层 status=done；在此派工 AC-R4 属越权抢跑（即 120390a1 面路由门所防双面抢跑），置 AC-R4=done 属臆造完成（红线3）"
+  },
+  "survey": {
+    "reportsIntact": "三报告实测行数与在案证据逐一相符：rmc-TriRMC.md 136 行（P0=3/P1=8/P2=8）·rmc-agent-core.md 141 行（P0=4/P1=10/P2=14）·rmc-TriLC.md round4 精修版 139 行（P0=1/P1=8/P2=14）；分级条目数编排侧 grep 独立清点 19/28/23 条与各报告自报计数全对，合计 70 项",
+    "spotCheck": "精修版 TriLC 报告（41a788f7 收录，此前无编排抽查记录）两处独立抽查逐字属实：P2-10 key-cache.ts:56 lastIndexOf('\\\\') 硬编码反斜杠（Linux 下 substring(0,-1)='' 目录创建跳过）·P2-2 app.ts:1235 isLocal=!A||B&&!A 第二支恒假死代码",
+    "acR4Target": "/srv/fleet/TriModel 存在性以 124800Z 勘察在案（R2/R3/R4 目标在案）；本 tick 会话沙箱目录墙拦 ls 未复核——改派处置不依赖该事实"
   },
   "nodes": [
     {
       "nodeId": "AC-R1",
       "agent": "TestEngineer",
       "status": "done",
-      "evidence": "reports/rmc-TriRMC.md 136 行（P0=3/P1=8/P2=8）已落盘提交（887b0939）；编排独立抽查五处 file:line 属实（app.ts:121-122·674/command-handler.ts:85/decision-pipeline.ts:100-108/tools.ts:194-202）"
+      "evidence": "reports/rmc-TriRMC.md 136 行（P0=3/P1=8/P2=8）已提交（887b0939）；150113Z 编排抽查五处 file:line 属实"
     },
     {
       "nodeId": "AC-R2",
@@ -36,24 +41,16 @@
       "nodeId": "AC-R3",
       "agent": "TestEngineer",
       "status": "done",
-      "evidence": "reports/rmc-TriLC.md 89 行（P0=4/P1=8/P2=6）已落盘提交（bfefa3e1）；编排侧复核十一处 file:line 全属实（app.ts:4079·1235·3044·3591-3597·1189-1196·3801·2369-2380 / timer.ts:217-239 / key-encryptor.ts:15-31 / key-cache.ts:272-290 / store.ts:294-297）"
+      "evidence": "rmc-TriLC.md 现存 round4 精修版 139 行（P0=1/P1=8/P2=14，41a788f7 收录）；89 行先发版（bfefa3e1，P0=4/P1=8/P2=6）留 git 历史；本 tick 对精修版补抽查两处 file:line 属实"
     },
     {
       "nodeId": "AC-R4",
       "agent": "TestEngineer",
-      "status": "pending"
+      "status": "pending",
+      "plan": "本 tick 不执行——按 CEO 勘正改派 M 面(TriMMC)，待落 transferred 登记"
     }
   ],
-  "commits": [
-    {
-      "hash": "887b0939",
-      "what": "AC-R1 正式审计报告（TriRMC 四域，136 行 P0=3/P1=8/P2=8）"
-    },
-    {
-      "hash": "bfefa3e1",
-      "what": "AC-R3 审计报告（TriLC 三域，89 行 P0=4/P1=8/P2=6）"
-    }
-  ],
-  "updatedAt": "2026-08-26T15:50:00Z",
-  "mode": "r-face executor (driven round 4, AC-R4 execution)"
+  "commits": [],
+  "updatedAt": "2026-08-26T20:36:00Z",
+  "mode": "closure executor (post-correction closure round, zero dispatch)"
 }
