@@ -1,0 +1,36 @@
+{
+  "treeId": "tc001-tc-rmc-integration",
+  "title": "TC-s1+RMC 集成验证：rmc_tick 发送端适配+河源部署+实测",
+  "week": "W35",
+  "domainRouting": "server-executable",
+  "status": "active",
+  "created": "2026-08-26",
+  "source": "tc001-harness-scaffolding-func-spec.md + rmc_tick.py 实测反馈",
+  "nodes": [
+    {
+      "nodeId": "RI-1",
+      "agent": "编排层",
+      "status": "done",
+      "action": "rmc_tick.py 系统提示词 v1.0 嵌入（行为规则/工具优先级/输出纪律）"
+    },
+    {
+      "nodeId": "RI-2",
+      "agent": "编排层",
+      "status": "done",
+      "action": "prev_summary 桥接（driven round 间传递上轮产出摘要）"
+    },
+    {
+      "nodeId": "RI-3",
+      "agent": "编排层",
+      "status": "done",
+      "action": "continue_on_incomplete 启用（FR-2 end_turn 自查拦截触发器）"
+    },
+    {
+      "nodeId": "RI-4",
+      "agent": "编排层",
+      "status": "in_progress",
+      "action": "完整审计重跑：rmc-audit-cmp-001 四模块审计在新脚手架下重新执行，对比 M 面基线报告产出率"
+    }
+  ],
+  "doneCondition": "R 面审计报告产出 ≥1 份且内容实质（P0/P1 发现带 file:line）"
+}

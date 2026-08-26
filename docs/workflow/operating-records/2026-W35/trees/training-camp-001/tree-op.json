@@ -9,7 +9,7 @@
     {
       "nodeId": "TC-0a",
       "agent": "DeploymentEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "前置：WorkTree 追平到当前 dev（已完成✅ 4e4fdc2c）+ project/trimetaverse 推送远端备份"
     },
     {
@@ -27,8 +27,8 @@
     {
       "nodeId": "TC-1",
       "agent": "FullStack",
-      "status": "pending",
-      "action": "trilc /v1/messages 通用续跑参数（continue_max_rounds/continue_prompt，处理器内多轮驱动； charter 轨道 b.1）"
+      "status": "done",
+      "action": "trilc /v1/messages 通用续跑参数（continue_max_rounds/continue_prompt，处理器内多轮驱动； charter 轨道 b.1）——✅ 已实现已部署（内核 continueMaxRounds/continuePrompt + trilc 双端点透传 + rmc_tick prev_summary 桥接）"
     },
     {
       "nodeId": "TC-2",
@@ -46,7 +46,7 @@
       "nodeId": "TC-4",
       "agent": "TestEngineer",
       "status": "done",
-      "action": "验收：rmc-autonomy-001 RA-3 重跑 PASS（在前置节点全部完成后，使用修复后的 orchestrate_tick + 协作协议环境）"
+      "action": "验收：RA-3 重跑 PASS（前置：TC-s1 脚手架移植完成后）"
     },
     {
       "nodeId": "TC-4b",

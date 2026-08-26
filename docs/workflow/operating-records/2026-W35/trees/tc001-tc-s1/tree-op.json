@@ -1,0 +1,30 @@
+{
+  "treeId": "tc001-tc-s1",
+  "title": "TC-s1: trilc 处理器改造——task_plan 注入+end_turn 判定+进度 reminder",
+  "week": "W35",
+  "domainRouting": "server-executable",
+  "status": "active",
+  "created": "2026-08-26",
+  "source": "tc001-harness-scaffolding-func-spec.md FR-1/FR-2/FR-3",
+  "nodes": [
+    {
+      "nodeId": "S1-1",
+      "agent": "FullStack",
+      "status": "done",
+      "action": "FR-1 task_plan 解析+system prompt 注入（taskPlanBlock 追加到 parsed.system 尾部）"
+    },
+    {
+      "nodeId": "S1-2",
+      "agent": "FullStack",
+      "status": "done",
+      "action": "FR-2 end_turn 自查拦截参数解析（continueOnIncomplete/incompleteCheckPrompt）"
+    },
+    {
+      "nodeId": "S1-3",
+      "agent": "FullStack",
+      "status": "done",
+      "action": "loopOptions 透传（continuePrompt 覆盖为自查提示；continueMaxRounds 共享上限）"
+    }
+  ],
+  "doneCondition": "tsc clean + 已部署 heyuan"
+}
