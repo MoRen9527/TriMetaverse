@@ -23,4 +23,5 @@
 | --- | --- | --- | --- |
 | 1 | 20:21 | 开工骨架落盘并提交：state.json + log.md + reports/slow-path.md 桩 | 4043d48a |
 | 2 | 20:22-20:25 | SV-1 TestEngineer fresh 派工（先写后报）：slow-path.md 88 行落盘（AC-4 PASS·registry trigger=cron L441 逐字摘录·push→spawn 4573.07s·P1-1 自愈三旁证·四条证据边界）；编排抽查 registry/fade-hook 引用与本人亲读一致后固化 | 32335eac |
-| 3 | 20:26 | SV-1 status→done 登记（tree-op resultNote+state 节点翻转+本行） | （本提交本体） |
+| 3 | 20:26 | SV-1 status→done 登记（tree-op resultNote+state 节点翻转+本行） | dc25059c |
+| 4 | 20:27 | 收口（红线4/F1 修正）：树顶层 status active→done + push origin dev；台账追加移交下一步（session-registry.json 在仓库外） | （本提交本体） |

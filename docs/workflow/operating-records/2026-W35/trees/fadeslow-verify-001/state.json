@@ -30,6 +30,7 @@
       "subInstance": { "role": "TestEngineer", "model": "glm-5.3[1m]（继承）", "fresh": true, "reportedAt": "2026-08-26T20:25:30Z" }
     }
   ],
-  "commits": ["4043d48a", "32335eac"],
-  "updatedAt": "2026-08-26T20:26:16Z"
+  "commits": ["4043d48a", "32335eac", "dc25059c"],
+  "treeStatusAtEnd": "done（红线4 收口：唯一节点 SV-1 done 后顶层翻转；收口 commit 经慢通道回流判据移交下一 tick 观察）",
+  "updatedAt": "2026-08-26T20:27:00Z"
 }

@@ -5,7 +5,7 @@
   "source": "docs/execution/2026-08-26/fade-pipeline-design.md v1.1 §六 AC-4",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-27",
   "executor": "TriMMC 编排会话（GLM glm-5.3，经 cron 慢通道拾取）",
   "nodes": [
