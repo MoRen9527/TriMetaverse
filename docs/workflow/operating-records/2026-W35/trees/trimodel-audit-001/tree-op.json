@@ -12,7 +12,8 @@
     {
       "nodeId": "TA-1",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
+      "resultNote": "reports/rmc-TriModel.md 102 行（P0=1/P1=7/P2=12，门禁 FAIL）已落盘 commit 6f272720；TestEngineer fresh 子实例先写后报，编排独立抽查 18 项 file:line 全属实（P1-7 行号枚举个别 ±1-2 漂移留痕不影响实质）；三条对照假设验证：key 明文分发同源成立/TRIMODEL_API_TOKEN 缺省放行证伪（实为 401 fail-closed）/fallback 终止散落大体证伪（收敛于 client.ts:168/:203）",
       "action": "审计 TriModel（/srv/fleet/TriModel/src/）：config.ts/client.ts/providers/*(anthropic|deepseek|deepseek-anthropic|openai|trimetaverse).ts/api/keys.ts——质量与安全面（鉴权、密钥处理、fallback 链、出站规范化）。产出 reports/rmc-TriModel.md：发现按 P0/P1/P2 分级带 file:line；先写后报；与 rmc-agent-core.md 同格式对齐便于横向汇总。git add 仅限本树目录内文件，commit 后置本节点 status=done 并置树顶层 status=done"
     }
   ],
