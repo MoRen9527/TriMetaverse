@@ -12,7 +12,8 @@
     {
       "nodeId": "SV-1",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
+      "resultNote": "tick 20260826T201800Z TestEngineer fresh 子实例先写后报落盘 reports/slow-path.md 88 行（AC-4 PASS：registry 末条 trigger=cron L441 逐字摘录+push→spawn 时延 4573.07s 独立推算到秒+P1-1 _sync_worktree 自愈三旁证+四条证据边界含 cron 侧无 actionable 留痕）；编排抽查 registry L435-442/fade-hook.log L26-28 引用与本人亲读逐字一致后以 32335eac 固化",
       "action": "慢通道验证任务：(1) 查 /srv/fleet/shadow-plane/session-registry.json 最新 ticks 条目与本树的关系，摘录 trigger 字段值（应为 cron）；(2) 写验证报告 docs/workflow/operating-records/2026-W35/trees/fadeslow-verify-001/reports/slow-path.md——含拾取时刻、tick 输出的 actionable、trigger 字段证据、从 push 到 spawn 的时延；(3) git add 仅限本树目录、commit、置本节点 status=done。报告头部注明实验背景：post-receive 已于 push 前禁用（fade-hook.log 有禁用登记行），本任务的执行本身即证明 cron 慢通道兜底成立"
     }
   ],

@@ -25,9 +25,11 @@
     {
       "nodeId": "SV-1",
       "agent": "TestEngineer",
-      "status": "pending"
+      "status": "done",
+      "evidence": "reports/slow-path.md 88 行（AC-4 PASS·trigger=cron·时延 4573.07s·P1-1 自愈三旁证·四条证据边界）先写后报落盘；编排抽查 registry L435-442/fade-hook.log L26-28 引用与亲读逐字一致后固化",
+      "subInstance": { "role": "TestEngineer", "model": "glm-5.3[1m]（继承）", "fresh": true, "reportedAt": "2026-08-26T20:25:30Z" }
     }
   ],
-  "commits": [],
-  "updatedAt": "2026-08-26T20:20:23Z"
+  "commits": ["4043d48a", "32335eac"],
+  "updatedAt": "2026-08-26T20:26:16Z"
 }
