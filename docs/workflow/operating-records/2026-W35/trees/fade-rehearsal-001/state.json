@@ -1,0 +1,33 @@
+{
+  "tick": "20260826T144848Z",
+  "treeId": "fade-rehearsal-001",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/fade-rehearsal-001/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance",
+    "model": "glm-5.3[1m]"
+  },
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260826T144848Z.md",
+  "startedAt": "2026-08-26T14:48:48Z",
+  "surveyedAt": "2026-08-26T14:52:10Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；一次一个节点 fresh 派工禁复用；先写后报（子实例先落盘再报告带路径+行数）；收口必做（全节点 done 后顶层 status=done 再提交）",
+  "baseline": {
+    "headAtStart": "d148b8a71527fbcb122146bc1698e9242b0031b5",
+    "branchState": "dev 与 origin/dev 同步（status -sb 无 ahead/behind）；工作树仅含外树未提交产物 rmc-audit-cmp-001/reports/rmc-TriLC.md（并发对端遗留，红线1 只读不动）",
+    "treeStatusAtStart": "active；FR-1 pending（唯一节点）"
+  },
+  "triggerChain": {
+    "observed": "fade-hook.log 两发快通道（14:43:03Z 收 5e41c748 / 14:45:35Z 收 d148b8a7）均 pull/rebase skipped (dirty) → tick 见旧树 actionable=[rmc-audit-cmp-001] + live session running skip spawn（该 live session 后证为 141800Z 早夭实例：14:50Z 手工清孤儿锁记录 0.8s 死亡 model 404 ox-alpha）；本会话 14:48:48Z spawn（session-registry.json ticks rc=spawned pid=1002289），tick-fingerprint.txt=b6d1899ec4926041 ≠ 14:45 时点 88ac5cfc71749bf7 证指纹边沿已变化；spawn 动作未见于 fade-hook.log 且时刻先于 14:50Z 手工清锁记录——如实留证不臆断，完整分析移交 FR-1 报告",
+    "reviewFocus": "§四.1 双通道并发 / 会话中途回收 / 指纹与锁不一致窗口（本链路即为活体证据）"
+  },
+  "nodes": [
+    {
+      "nodeId": "FR-1",
+      "agent": "TestEngineer",
+      "status": "pending"
+    }
+  ],
+  "commits": [],
+  "updatedAt": "2026-08-26T14:52:10Z"
+}
