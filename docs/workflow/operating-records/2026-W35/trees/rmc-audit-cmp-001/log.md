@@ -35,6 +35,6 @@
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
 | 1 | 20:36 | 骨架 state.json/log.md 落盘（收口轮依据+勘察证据） | （本次提交） |
-| 2 | 20:3x | 发现计数汇总 reports/rmc-summary.md 落盘 | 待填 |
-| 3 | 20:3x | AC-R4 改派登记（tree-op status pending→transferred+resultNote） | 待填 |
-| 4 | 20:4x | 收口：tree-op 顶层 status=done+notes 收口行+state/log 终值 | 待填 |
+| 2 | 20:40 | 发现计数汇总 reports/rmc-summary.md 落盘（44 行；提交信息误书 51 行勘正留痕） | ee1ddd20 |
+| 3 | 20:42 | AC-R4 改派登记（tree-op status pending→transferred+resultNote） | 4b50904b |
+| 4 | 20:44 | 收口：tree-op 顶层 status=done+notes 收口行+state/log 终值 | （本次提交） |

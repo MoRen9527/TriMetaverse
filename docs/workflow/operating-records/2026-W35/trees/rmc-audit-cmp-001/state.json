@@ -46,11 +46,24 @@
     {
       "nodeId": "AC-R4",
       "agent": "TestEngineer",
-      "status": "pending",
-      "plan": "本 tick 不执行——按 CEO 勘正改派 M 面(TriMMC)，待落 transferred 登记"
+      "status": "transferred",
+      "evidence": "改派登记（commit 4b50904b）：CEO 勘正（41a788f7）裁定归 M 面 TriMMC 承接；本树不执行不置 done，承接产物以 M 面侧树为准"
     }
   ],
-  "commits": [],
-  "updatedAt": "2026-08-26T20:36:00Z",
+  "commits": [
+    {
+      "hash": "c863f5f3",
+      "what": "收口轮骨架（state/log 依据+勘察证据：三报告 136/141/139 行+分级 19/28/23 独立清点+精修版两处抽查）"
+    },
+    {
+      "hash": "ee1ddd20",
+      "what": "发现计数汇总 reports/rmc-summary.md 44 行（P0=8/P1=26/P2=36 共 70 项；提交信息误书 51 行，实测 44 行勘正留痕）"
+    },
+    {
+      "hash": "4b50904b",
+      "what": "AC-R4 改派登记（status pending→transferred+resultNote）"
+    }
+  ],
+  "updatedAt": "2026-08-26T20:44:00Z",
   "mode": "closure executor (post-correction closure round, zero dispatch)"
 }

@@ -3,7 +3,7 @@
   "title": "R 面六模块代码审计（与 M 面 TriMMC 审计对照）",
   "week": "W35",
   "domainRouting": "server-executable",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-26",
   "nodes": [
     {
@@ -37,6 +37,7 @@
   ],
   "doneCondition": "四份报告齐 + 发现计数汇总",
   "notes": [
-    "勘正(2026-08-27~04+08, CEO 架构纠正): 步骤3(tick发现派工)/4(原子commit)现阶段归 M 面(TriRMC/TriRLC 未成熟)——本树 face=r-face 标签撤除改由 TriMMC 承接；AC-R4(round4 中断于 TriModel 报告撰写)改派 M 面；已产出的 R1/R2/R3 三份报告及 AC-R1 解阻成效保留归档；另收录 round4 精修版 rmc-TriLC.md(139行, 优于先前89行版)"
+    "勘正(2026-08-27~04+08, CEO 架构纠正): 步骤3(tick发现派工)/4(原子commit)现阶段归 M 面(TriRMC/TriRLC 未成熟)——本树 face=r-face 标签撤除改由 TriMMC 承接；AC-R4(round4 中断于 TriModel 报告撰写)改派 M 面；已产出的 R1/R2/R3 三份报告及 AC-R1 解阻成效保留归档；另收录 round4 精修版 rmc-TriLC.md(139行, 优于先前89行版)",
+    "收口(2026-08-26T20:44Z, tick 20260826T203116Z): AC-R4 transferred 归档口径收口——R1/R2/R3 三报告归档+发现计数汇总 reports/rmc-summary.md 44 行落盘（P0=8/P1=26/P2=36 共 70 项，计数经编排独立清点 19/28/23 复核全对；ee1ddd20 提交信息误书 51 行，实测 44 行，勘正留痕）；AC-R4 由 M 面 TriMMC 承接（承接产物以 M 面侧树为准）；doneCondition『四份报告齐』经上条勘正调整为三报告归档+R4 改派——顶层 status=done 为归档终态而非四报告齐终态，零臆造"
   ]
 }
