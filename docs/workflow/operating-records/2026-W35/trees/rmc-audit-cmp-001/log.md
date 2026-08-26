@@ -16,3 +16,5 @@
 | 1 | 15:02 | 骨架 state.json 重写（AC-R1 转 in_progress 依据落盘） | （本次提交） |
 | 2 | 15:10 | AC-R1 报告落盘+tree-op 翻 done（commit 887b0939/424d8a87） | 887b0939/424d8a87 |
 | 3 | 15:40 | [round 3] 断点续作骨架：AC-R3 转 in_progress（round 2 已完成全部目标 Read，断于报告撰写） | （本次提交） |
+| 4 | 15:45 | [round 3] AC-R3 报告复核+落盘（89 行 P0=4/P1=8/P2=6）| bfefa3e1 |
+| 5 | 15:50 | [round 4] AC-R3 翻 done（编排复核 11 处 file:line 属实）+ AC-R4 转 in_progress | （本次提交） |

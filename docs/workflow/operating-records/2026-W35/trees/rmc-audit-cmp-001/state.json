@@ -35,8 +35,8 @@
     {
       "nodeId": "AC-R3",
       "agent": "TestEngineer",
-      "status": "in_progress",
-      "evidence": "round2 已完成 AC-R3 全部目标文件完整 Read（app.ts 4473 行 + config/ 5 文件 + cron/ 7 文件，断点于报告撰写）；round3 从断点续作：复核读取+报告落盘"
+      "status": "done",
+      "evidence": "reports/rmc-TriLC.md 89 行（P0=4/P1=8/P2=6）已落盘提交（bfefa3e1）；编排侧复核十一处 file:line 全属实（app.ts:4079·1235·3044·3591-3597·1189-1196·3801·2369-2380 / timer.ts:217-239 / key-encryptor.ts:15-31 / key-cache.ts:272-290 / store.ts:294-297）"
     },
     {
       "nodeId": "AC-R4",
@@ -48,7 +48,12 @@
     {
       "hash": "887b0939",
       "what": "AC-R1 正式审计报告（TriRMC 四域，136 行 P0=3/P1=8/P2=8）"
+    },
+    {
+      "hash": "bfefa3e1",
+      "what": "AC-R3 审计报告（TriLC 三域，89 行 P0=4/P1=8/P2=6）"
     }
   ],
-  "updatedAt": "2026-08-26T15:40:00Z"
+  "updatedAt": "2026-08-26T15:50:00Z",
+  "mode": "r-face executor (driven round 4, AC-R4 execution)"
 }
