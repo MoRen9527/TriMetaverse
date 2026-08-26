@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   FADE 管线本地监控（fade-pipeline-design.md v1.0 §三）——轮询 sg-bare 树状态直到终态。
 
