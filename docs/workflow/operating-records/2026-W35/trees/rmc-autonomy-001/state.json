@@ -18,7 +18,7 @@
     "orphaned": "并发 twin tick 121305Z 全链（骨架 5c305806+裁定 cd12c103）与历 tick 分叉留痕随重置成为孤儿对象；其六项复勘实证与本实例独立实测一致收敛之事实以本记录承继"
   },
   "prevTickSummary": {
-    "note": "前窗并发 twin=121305Z 实例（brief=121305Z 同窗不规则点火）于本实例勘察窗口内完成骨架+裁定全链后，其链随 12:29:27Z 授权和解重置孤儿化，且其台账双条目未及落盘——121305Z 与 114800Z 两组合账缺口循例补记说明于本 tick 台账条目，不代填"
+    "note": "前窗并发 twin=121305Z 实例（brief=121305Z 同窗不规则点火）于本实例勘察窗口内完成骨架+裁定全链后，其链随 12:29:27Z 授权和解重置孤儿化；**追记勘正**：twin 于回收前已自行落盘台账双条目（含『落盘后新事态』复位补记，与本实例观测一致）=121305Z 不构成缺口，唯 114800Z 双缺维持循例补记说明不代填"
   },
   "postResetReality": {
     "branch": "dev 与 origin/dev 同步于 9a488e4d（ahead0/behind0，工作树干净）",
@@ -48,19 +48,20 @@
     }
   ],
   "commits": [
-    { "at": "2026-08-26T12:33Z", "hash": null, "kind": "closing-confirmation", "desc": "tick 121800Z 收口确认+去冲突停机记录（hash=null 由台账条目回填实证）：同窗双点火勘定 twin 121305Z 先至且六项实证与本实例独立复勘一致收敛；12:29:27Z 授权和解重置后按新现实落本记录——零派工维持·顶层 status=done 已为真·无臆造" }
+    { "at": "2026-08-26T12:33Z", "hash": "727b7c7a", "kind": "closing-confirmation", "desc": "tick 121800Z 收口确认+去冲突停机记录（hash=null 原记由本 tick 追记条目经 git log HEAD 实证回填）：同窗双点火勘定 twin 121305Z 先至且六项实证与本实例独立复勘一致收敛；12:29:27Z 授权和解重置后按新现实落本记录——零派工维持·顶层 status=done 已为真·无臆造；push origin dev 实测成功 9a488e4d..727b7c7a=连续点火以来首次真实成功推送" },
+    { "at": "2026-08-26T12:38Z", "hash": null, "kind": "closing-amendment", "desc": "追记勘正：twin 121305Z 台账双条目已在案（非缺口）+快照 push 成功终记（自身 hash 以台账条目为准，不再另轮回填）" }
   ],
   "positioningSnapshot": {
     "at": "2026-08-26T12:32Z",
-    "divergence": "已和解：本地 dev=origin/dev=9a488e4d（ahead0/behind0）；本 tick 收口确认 commit 落盘后 push origin dev 实测结果由台账 push 字段终记",
-    "oppositeTip": "9a488e4d（即本地 tip）",
+    "divergence": "已和解且收口确认 commit 已推送成功：origin/dev=727b7c7a（本地=远端 ahead0/behind0，push 实测输出 9a488e4d..727b7c7a dev -> dev）",
+    "oppositeTip": "727b7c7a（即本地 tip）",
     "worktree": "clean（重置后无遗留 draft）",
     "consecutiveFiring": 50,
     "registryGaps": [
       "114800Z 双缺（第十七组）：该实例仅骨架 b09766cd 即回收（b09766cd 本体已随重置孤儿化，事实以本记录承继）",
-      "121305Z 双缺：twin 实例裁定 commit cd12c103 随重置孤儿化且台账未及落盘，循例补记说明不代填",
+      "**追记勘正**：121305Z 双条目已由 twin 实例自身落盘收口（instances 12:26:15Z 条+ticks 含复位新事态补记条），非缺口",
       "历史缺口集合：021800Z 至 102037Z 连续十六组双缺（含四次完全无痕点火）维持既有补记口径"
     ]
   },
-  "updatedAt": "2026-08-26T12:33:00Z"
+  "updatedAt": "2026-08-26T12:38:30Z"
 }
