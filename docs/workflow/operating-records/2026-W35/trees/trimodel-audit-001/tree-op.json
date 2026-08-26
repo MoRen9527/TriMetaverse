@@ -5,7 +5,7 @@
   "source": "rmc-audit-cmp-001 树 AC-R4 改派登记（commit 4b50904b）；docs/execution/2026-08-24/ 对比审计战役延续",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-27",
   "executor": "TriMMC 编排会话（GLM glm-5.3）",
   "nodes": [
@@ -20,6 +20,7 @@
   "doneCondition": "TA-1 done + 报告落盘 + 收口 commit 已 push + 树顶层 status=done",
   "notes": [
     "承接背景：rmc-audit-cmp-001 已以 AC-R4=transferred 收口（其收口轮裁定不在归档树内执行，见 commit 22855d63/4b50904b）；本树为正式承接执行位。",
-    "上下文提示：前序 R 面 round4 曾中断于本目标报告撰写（未见产物落盘，无需衔接）；参考 rmc-TriLC.md 揭示的同类 P0 模式在 TriModel 的对应面：api_key 经 env 广播（key-cache 同源风险）、TRIMODEL_API_TOKEN 缺省放行语义（keys.ts 'not configured' 分支）、client fallback 链终止是否都在 listModels() 内（W30 教训）。"
+    "上下文提示：前序 R 面 round4 曾中断于本目标报告撰写（未见产物落盘，无需衔接）；参考 rmc-TriLC.md 揭示的同类 P0 模式在 TriModel 的对应面：api_key 经 env 广播（key-cache 同源风险）、TRIMODEL_API_TOKEN 缺省放行语义（keys.ts 'not configured' 分支）、client fallback 链终止是否都在 listModels() 内（W30 教训）。",
+    "2026-08-27 收口（tick 20260826T204030Z）：TA-1 唯一节点 done（报告 reports/rmc-TriModel.md 102 行，P0=1/P1=7/P2=12，门禁 FAIL）；doneCondition 满足（TA-1 done+报告落盘+顶层 status=done 本提交+push 随后）；四原子提交 20e2ffbd（骨架）+6f272720（TA-1 报告）+5734d0fe（TA-1 翻 done）+本提交（收口）；AC-R4 承接使命完成，与 rmc-audit-cmp-001 transferred 登记（4b50904b）闭环。"
   ]
 }

@@ -26,11 +26,24 @@
     {
       "nodeId": "TA-1",
       "agent": "TestEngineer",
-      "status": "pending",
-      "evidence": null
+      "status": "done",
+      "evidence": "reports/rmc-TriModel.md 102 行（P0=1/P1=7/P2=12，门禁 FAIL）已提交（6f272720）；编排独立抽查 18 项 file:line 全属实（P0-1 client.ts:216-229 流式中途拼接/P1-1 keys.ts:97-107 明文整包/P1-3 config.ts:53 缺省凭据逐字命中/假设二证伪=401 fail-closed；P1-7 行号枚举个别 ±1-2 漂移留痕不影响实质）；三条对照假设两立一大体证伪"
     }
   ],
-  "commits": [],
-  "updatedAt": "2026-08-26T20:42:36Z",
-  "mode": "execution executor (TA-1 fresh dispatch)"
+  "commits": [
+    {
+      "hash": "20e2ffbd",
+      "what": "骨架（state/log+报告占位件；勘察证据：基线 171ad1f3 clean、目标 18 个 .ts 在案、格式基准已读）"
+    },
+    {
+      "hash": "6f272720",
+      "what": "TA-1 报告落盘 reports/rmc-TriModel.md 102 行（P0=1/P1=7/P2=12 FAIL；编排抽查 18 项属实随提交信息在案）"
+    },
+    {
+      "hash": "5734d0fe",
+      "what": "TA-1 翻 done（status pending→done+resultNote）"
+    }
+  ],
+  "updatedAt": "2026-08-26T20:52:00Z",
+  "mode": "closed (TA-1 done + 顶层 status=done 收口)"
 }

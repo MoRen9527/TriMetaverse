@@ -14,4 +14,9 @@
 
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
-| 1 | 20:43 | 骨架 state.json/log.md+reports/rmc-TriModel.md 占位件落盘（TestEngineer 子实例为 Edit-only 工具面，占位件供其整体替换） | （本次提交） |
+| 1 | 20:43 | 骨架 state.json/log.md+reports/rmc-TriModel.md 占位件落盘（TestEngineer 子实例为 Edit-only 工具面，占位件供其整体替换） | 20e2ffbd |
+| 2 | 20:44-20:50 | TA-1 fresh 派工 TestEngineer（spawned ~20:44/released ~20:50）：8 范围文件完整逐行 Read，先写后报 reports/rmc-TriModel.md 102 行（P0=1/P1=7/P2=12，门禁 FAIL；三假设两立一大体证伪）；仅 Edit 报告单文件，红线遵守 | — |
+| 3 | 20:50 | 编排独立抽查 18 项 file:line 全属实（P1-7 行号枚举 ±1-2 漂移留痕）后固化报告 | 6f272720 |
+| 4 | 20:51 | TA-1 翻 done（tree-op status+resultNote） | 5734d0fe |
+| 5 | 20:52 | 收口：tree-op 顶层 status=done+notes 收口行+state/log 终值 | （本次提交） |
+| 6 | 20:52 | push origin dev + 台账回填（instances 双条目+ticks 终值） | — |
