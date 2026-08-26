@@ -24,4 +24,5 @@
 
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
-| 1 | 13:28 | 骨架 state.json+log.md 重写落盘并提交（含并发事实与收敛裁定） | （本提交本体） |
+| 1 | 13:28 | 骨架 state.json+log.md 重写落盘并提交（含并发事实与收敛裁定） | c8b4f6f6 |
+| 2 | 13:30 | AC-R2 收敛验收固化：tree-op resultNote 双 tick 归属并陈+state 节点翻转 done+reports/rmc-agent-core.md 纳入版本控制 | （本提交本体） |

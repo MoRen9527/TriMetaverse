@@ -31,12 +31,12 @@
     {
       "nodeId": "AC-R2",
       "agent": "TestEngineer",
-      "status": "done-pending-commit",
-      "note": "并发窗产物：报告 141 行 P0=4/P1=10/P2=14 已在盘；本编排独立抽查四处 file:line 全属实+计数复核一致，收敛固化于下一原子提交（详见 tree-op resultNote 双 tick 归属并陈）"
+      "status": "done",
+      "evidence": "报告 reports/rmc-agent-core.md 141 行（P0=4/P1=10/P2=14）13 源文件全覆盖；并发窗（对端自认 124800Z）TestEngineer 子实例产出、本编排（131800Z）独立抽查四处 file:line 全属实+计数复核一致后收敛固化，双 tick 归属在 tree-op resultNote 并陈"
     },
     { "nodeId": "AC-R3", "agent": "TestEngineer", "status": "pending" },
     { "nodeId": "AC-R4", "agent": "TestEngineer", "status": "pending" }
   ],
-  "commits": [],
-  "updatedAt": "2026-08-26T13:28:40Z"
+  "commits": ["c8b4f6f6"],
+  "updatedAt": "2026-08-26T13:30:10Z"
 }
