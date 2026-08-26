@@ -1,5 +1,5 @@
 {
-  "tick": "20260826T124800Z",
+  "tick": "20260826T131800Z",
   "treeId": "rmc-audit-cmp-001",
   "treePath": "docs/workflow/operating-records/2026-W35/trees/rmc-audit-cmp-001/tree-op.json",
   "orchestrator": {
@@ -7,28 +7,36 @@
     "anchor": "ceo-chief-of-staff",
     "kind": "orchestration-instance"
   },
-  "briefPath": "/srv/fleet/shadow-plane/brief-20260826T124800Z.md",
-  "startedAt": "2026-08-26T12:48:00Z",
-  "surveyedAt": "2026-08-26T12:54:55Z",
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260826T131800Z.md",
+  "startedAt": "2026-08-26T13:18:00Z",
+  "surveyedAt": "2026-08-26T13:21:30Z",
   "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；一次一个节点 fresh 派工禁复用；先写后报（子实例先落盘再报告带路径+行数）",
   "baseline": {
-    "headAtStart": "b374d05551f4baa0ba8d4f49ecf6742dcfbc7fc3",
-    "branchState": "dev 与 origin/dev 同步（ahead0/behind0 实测）；工作树 clean",
-    "treeStatusAtStart": "active；AC-R1 立项时即标 in_progress 但树目录仅 tree-op.json 单文件——零产物零留痕，按简报『fresh 子实例·禁复用』纪律重派"
+    "headAtStart": "76c1da835ecf6cc29917d9a0fbcdf93a260e7430",
+    "branchState": "dev 与 origin/dev 同步；工作树仅含并发对端两处未提交产物（见 concurrency）",
+    "treeStatusAtStart": "active；AC-R1 blocked 维持（前序 tick 124800Z 判定）"
+  },
+  "concurrency": {
+    "observed": "并发对端实例（自认 tick 20260826T124800Z）活跃于本树：reports/rmc-agent-core.md 于 13:18Z 落盘（mtime 实测，恰为本 tick 点火时刻）+ tree-op.json AC-R2→done 翻转于 13:23Z 观测在案；对端 resultNote 自述其 TestEngineer 子实例落盘后因 API 错误早终、产物由该编排抽查验收；至 13:28Z 对端零提交，产物悬空",
+    "protocol": "循 121305Z/121800Z/121554Z 三实例并发窗口先例：让位串行+有界观察（90s 零提交实测）→ 本编排独立验收后以本 tick 原子提交收敛固化；不销毁对端产物、不重复派工已产节点、全程零半成品互踩"
   },
   "nodes": [
     {
       "nodeId": "AC-R1",
       "agent": "TestEngineer",
       "status": "blocked",
-      "evidence": "目标 /srv/fleet/TriRMC 本机不存在——四重探测实证（Glob Directory does not exist·顶层模块清点无 TriRMC·trirmc.service unit 不存在=非河源部署机·本仓 glob trirmc* 零命中）；文档佐证 quadmig-2 Q2n-1 河源直克隆部署+m1-n2-report D:/Code/ai 载体锚",
-      "artifact": "reports/rmc-TriRMC.md（blocked 证据记录，零臆造发现）",
-      "disposition": "红线3 如实标注 blocked 并停；复核路径移交授权侧：改指河源侧执行 or 本机提供检出后 fresh 重派"
+      "evidence": "本 tick 第五次探测复核：Glob /srv/fleet/TriRMC 报 Directory does not exist——前序 tick 四重实证结论维持，blocked 不变；复核路径仍为改指河源侧 or 本机供检出后 fresh 重派（授权侧在办）",
+      "artifact": "reports/rmc-TriRMC.md（前序 tick blocked 证据记录，本 tick 无新增发现）"
     },
-    { "nodeId": "AC-R2", "agent": "TestEngineer", "status": "pending" },
+    {
+      "nodeId": "AC-R2",
+      "agent": "TestEngineer",
+      "status": "done-pending-commit",
+      "note": "并发窗产物：报告 141 行 P0=4/P1=10/P2=14 已在盘；本编排独立抽查四处 file:line 全属实+计数复核一致，收敛固化于下一原子提交（详见 tree-op resultNote 双 tick 归属并陈）"
+    },
     { "nodeId": "AC-R3", "agent": "TestEngineer", "status": "pending" },
     { "nodeId": "AC-R4", "agent": "TestEngineer", "status": "pending" }
   ],
   "commits": [],
-  "updatedAt": "2026-08-26T12:54:55Z"
+  "updatedAt": "2026-08-26T13:28:40Z"
 }

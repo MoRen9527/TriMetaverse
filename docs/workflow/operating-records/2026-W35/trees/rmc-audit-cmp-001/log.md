@@ -1,22 +1,27 @@
-# rmc-audit-cmp-001 执行日志（tick 20260826T124800Z）
+# rmc-audit-cmp-001 执行日志（tick 20260826T131800Z）
 
-编排实例：ceo-chief-of-staff 锚定渲染位（ox-alpha）。简报：/srv/fleet/shadow-plane/brief-20260826T124800Z.md。
+编排实例：ceo-chief-of-staff 锚定渲染位（ox-alpha）。简报：/srv/fleet/shadow-plane/brief-20260826T131800Z.md。
 
-## 就位勘察（12:54Z 实测）
+## 就位勘察（13:18-13:22Z 实测）
 
-- 基线：HEAD=b374d055，dev 与 origin/dev 同步 ahead0/behind0，工作树 clean。
-- 树目录仅 tree-op.json 单文件：AC-R1 虽自立项起标 in_progress（对侧 739d1451 开工留痕），但无 reports、无 state/log、零产物——前序实例未留下任何可复用工作，按简报『一次一个节点·fresh 子实例·禁复用』纪律全部 fresh 重派/重判。
-- 四节点审计目标存在性预检（派工可行性）：
+- 基线：HEAD=76c1da83，dev 与 origin/dev 同步（status -sb 无 ahead/behind）。
+- 四节点目标存在性复核：
   - AC-R2 目标 /srv/fleet/TriCompany/packages/agent-core/src/ ✅ 在案（39 个 .ts）
-  - AC-R3 目标 /srv/fleet/TriLC/src/{server,config,cron}/ ✅ 在案（16 个 .ts）
+  - AC-R3 目标 /srv/fleet/TriLC/src/{server/app.ts,config,cron} ✅ 在案（13 个文件）
   - AC-R4 目标 /srv/fleet/TriModel/src/ ✅ 在案（18 个 .ts）
-  - AC-R1 目标 /srv/fleet/TriRMC ❌ **目录不存在**——四重探测实证：① Glob 报 Directory does not exist；② /srv/fleet 顶层仅 TriCompany/TriMC/TriLC/TriModel(+本仓) 无 TriRMC；③ /etc/systemd/system/trirmc.service 不存在=本机非河源部署机；④ 本仓全树 glob trirmc* 零命中。文档侧佐证：quadmig-2 Q2n-1 记载 TriRMC=本地移植 224c95c+河源第二台服务器（8.155.54.79）GitHub 直克隆部署；m1-n2-report 记载规划载体 D:/Code/ai/TriRMC。→ 拟按红线3 判 blocked（独立原子提交），不臆造完成。
+  - AC-R1 目标 /srv/fleet/TriRMC ❌ **仍不存在**（Glob 报 Directory does not exist，本 tick 第五次探测）——前序 tick 124800Z 四重实证结论维持，blocked 不改判、不代审近似物。
+- **并发对端发现（本 tick 关键新事实）**：reports/rmc-agent-core.md mtime=13:18Z（恰为本 tick 点火时刻），自报头 tick=20260826T124800Z；13:23Z 观测 tree-op.json 被翻 AC-R2→done（resultNote 自述其子实例落盘后 API 错误早终、产物由该编排抽查验收）；至 13:28Z 对端**零提交**，产物悬空未固化。工作树脏区仅此两路径。
+
+## 处置裁定
+
+循今日同树三实例并发窗口（121305Z/121800Z/121554Z）既定先例处置：
+
+1. 不销毁对端产物、不抢写对端正在编辑的同一路径；
+2. 有界观察 90s——对端仍零提交（sleep 90 后 git log/status 实测）；
+3. 转**收敛验收**路径：本编排独立抽查报告四处 file:line 主张全部属实——decision-pipeline.ts:215 裸 `startsWith` 边界判定（无分隔符/点段归一）、decision-pipeline.ts:226-232 acceptEdits 模式对非写入工具即席 allow、spawn.ts:31-39 构造 loopOptions 未传任何权限配置字段、loop.ts:346 permissionMode 缺省 `'bypassPermissions'`——且行数/分级计数复核一致（141 行·P0=4/P1=10/P2=14）；验收成立后以本 tick 原子提交收敛固化（双 tick 归属在 resultNote 并陈），随后按 fresh 子实例禁复用纪律照常新派 AC-R3/AC-R4。
 
 ## 动作序列
 
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
-| 1 | 12:55 | 骨架 state.json+log.md 落盘并提交 | 550057f8 |
-| 2 | 12:56 | AC-R1 判 blocked：reports/rmc-TriRMC.md blocked 证据记录落盘+tree-op 节点翻转 in_progress→blocked（附 blockedNote）+state/log 同步 | (本行所属提交本体) |
-
-AC-R1 判定要点：目标 /srv/fleet/TriRMC 本机不存在，四重探测实证在案；TriRMC 真源在河源第二台服务器（8.155.54.79 GitHub 直克隆部署，quadmig-2 Q2n-1/Q2n-2 在案）。红线3 如实标注 blocked 并停——不臆造审计发现、不代审 TriMC 等近似物、不改顶层 status。复核路径二选一移交授权侧：①改指河源侧会话执行；②本机提供 TriRMC 检出后后续 tick fresh 重派续做。
+| 1 | 13:28 | 骨架 state.json+log.md 重写落盘并提交（含并发事实与收敛裁定） | （本提交本体） |
