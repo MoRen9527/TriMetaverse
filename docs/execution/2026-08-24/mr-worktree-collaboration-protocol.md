@@ -177,9 +177,66 @@ rebase 后：
 | TriRLC heyuan push 后本地 rebase 同一分支 | ❌ 危险 | heyuan 可能基于旧 SHA 继续工作 |
 | 删掉远端分支重建 | ⚠️ 可控 | 必须通知所有协作者 |
 
+### 7.5 Rebase 风险的四层规避方案（CEO 2026-08-26 指令写入）
+
+**第 1 层：结构隔离（最根本）**
+
+不同机器不共享同一个分支——每台机器推到自己的分支，由 M 面统一合并：
+
+| 机器 | 推送到 | 说明 |
+| --- | --- | --- |
+| 河源 TriRLC | `project/trimetaverse-staging` 或 `project/trimetaverse` | R 面产出分支 |
+| 本地 WorkTree | 同上（或本地合并后推） | 与河源不直接竞争 |
+| 主仓 dev | 只有 M 面编排层推 | 单一写入方 |
+
+这样 rebase 只影响本机的本地分支，永远不会破坏其他机器的历史。
+
+**第 2 层：操作纪律**
+
+三条铁律：
+
+1. **pull 后才能 push**——push 前必须先拉取远端最新并确认无分叉
+2. **已推送的 commit 不 rebase**——rebase 仅限尚未推送的本地提交
+3. **禁 force push 共享分支**——force push 仅允许在自己独占的分支使用
+
+**第 3 层：技术防护**
+
+sg-bare 服务端配置 git hook 自动拒绝 force push 到保护分支：
+
+```bash
+# /srv/git/TriMetaverse.git/hooks/pre-receive
+#!/bin/bash
+while read old new ref; do
+  if [ "$ref" = "refs/heads/dev" ]; then
+    if ! git merge-base --is-ancestor "$old" "$new" 2>/dev/null; then
+      echo "REJECTED: non-fast-forward push to protected branch $ref"
+      exit 1
+    fi
+  fi
+done
+```
+
+即使有人误操作 force push，服务端也会拦截。
+
+**第 4 层：沟通协议**
+
+如果确实需要 rebase 已共享的分支：
+1. 先通知所有协作者"我要 rebase X 分支"
+2. 等所有人确认没有基于旧 SHA 的未推工作
+3. 执行后立即广播新 SHA
+4. 所有协作者执行 `git pull --rebase` 对齐
+
 ## 八、异常处理
 
-## 七、初始化清单（一次性）
+| 场景 | 处置 |
+| --- | --- |
+| R 面污染了 dev | M 面 revert + 台账登记 |
+| 双方同时改同一文件 | 后写者 rebase 解决冲突 |
+| WorkTree 过旧导致大量冲突 | 先追平再继续 R 面任务 |
+| plane migration 与 R 面写入竞争 | 冻结窗口纪律（周日 23:00-23:59） |
+| rebase 后 push 被拒 | force push（仅限自己独占的分支）或通知协作者 rebase |
+
+## 九、初始化清单（一次性）
 
 - [x] WorkTree 存在且为合法 git worktree
 - [x] WorkTree 追平到当前 dev（4e4fdc2c）
