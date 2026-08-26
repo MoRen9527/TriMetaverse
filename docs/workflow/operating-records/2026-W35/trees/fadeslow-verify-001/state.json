@@ -1,0 +1,33 @@
+{
+  "tick": "20260826T201800Z",
+  "treeId": "fadeslow-verify-001",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/fadeslow-verify-001/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance",
+    "model": "glm-5.3[1m]"
+  },
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260826T201800Z.md",
+  "startedAt": "2026-08-26T20:18:00Z",
+  "surveyedAt": "2026-08-26T20:20:23Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；一次一个节点 fresh 派工禁复用；先写后报（子实例先落盘再报告带路径+行数）；收口必做（全节点 done 后顶层 status=done 再提交）",
+  "baseline": {
+    "headAtStart": "f5fdfd06d8a2ccbcac020f9fe7762826765f4ce0",
+    "branchState": "dev 与 origin/dev 同步（status -sb 无 ahead/behind）；工作树干净",
+    "treeStatusAtStart": "active；SV-1 pending（唯一节点）"
+  },
+  "triggerChain": {
+    "observed": "fade-hook.log 末行 16:2xZ 登记 AC-4 受控实验 post-receive 临时禁用（重命名 .off-ac4，实验后恢复），其后零 hook tick 行；19:01:47Z（北京时间 08-27 03:01:47）本树注册 7b60d5a7 入 origin/dev，fade-hook.log 无对应触发行=快通道静默符合实验设计；20:18:00Z session-registry.json ticks 末条 tree=fadeslow-verify-001 / rc=spawned / pid=1020658 / trigger=cron——本会话即该 spawn；push→spawn 时延 ≈76 分钟（19:01:47Z→20:18:00Z）；P1-1 自愈旁证：hook 禁用期间本地工作树仍见本树目录且 status 干净=工作树同步走通（唯一依赖路径即 tick 入口 _sync_worktree()）；orchestrator-session-20260826T201800Z.log 存在但 0 字节（cron spawn 会话侧留痕为空，如实记录）",
+    "reviewFocus": "AC-4 cron 慢通道独立拾取成立性 + P1-1 工作树自愈（hook 停用时 _sync_worktree 为唯一同步路径）"
+  },
+  "nodes": [
+    {
+      "nodeId": "SV-1",
+      "agent": "TestEngineer",
+      "status": "pending"
+    }
+  ],
+  "commits": [],
+  "updatedAt": "2026-08-26T20:20:23Z"
+}
