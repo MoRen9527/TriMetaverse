@@ -25,9 +25,11 @@
     {
       "nodeId": "FR-1",
       "agent": "TestEngineer",
-      "status": "pending"
+      "status": "done",
+      "evidence": "reports/design-review.md 126 行（P0=1/P1=6/P2=5）先写后报落盘；编排抽查三处 file:line 属实后固化",
+      "subInstance": { "role": "TestEngineer", "model": "glm-5.3[1m]（继承）", "fresh": true, "reportedAt": "2026-08-26T14:58:00Z" }
     }
   ],
-  "commits": [],
-  "updatedAt": "2026-08-26T14:52:10Z"
+  "commits": ["f3ba8182", "2598445d"],
+  "updatedAt": "2026-08-26T15:05:50Z"
 }

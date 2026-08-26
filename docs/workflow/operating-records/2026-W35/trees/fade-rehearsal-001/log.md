@@ -22,3 +22,6 @@
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
 | 1 | 14:53 | 开工骨架落盘并提交：state.json + log.md + reports/design-review.md 桩 | （本提交本体） |
+| 2 | 14:48-14:58 | FR-1 TestEngineer fresh 派工（先写后报）：design-review.md 126 行落盘（CONDITIONAL_PASS·P0=1/P1=6/P2=5）；编排抽查三处承重 file:line 属实（:104 判活落空/2400s=80min 兜底/_save_ledger 零调用） | 2598445d |
+| 3 | 15:05 | FR-1 status→done 登记（tree-op resultNote+state 节点翻转+本行） | （本提交本体） |
+| - | 15:06 | 并发观察：tree-op.json 被外部增补 `"face": "m-face"` 一行（14:50-15:05Z 窗口，行为者不可考；语义良性、与 domainRouting 一致，随 #3 提交携带不回滚）——P1-1 工作树并发脆弱性的又一活体例证，留证不臆断 | — |
