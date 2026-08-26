@@ -4,8 +4,9 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-26/fade-pipeline-design.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-26
-- 文档版本: v1.0（CEO 需求："我们需要一个 fade 式的标准执行，自动可靠的跑这个流程"）
+- lastSyncedAt: 2026-08-26（v1.1：按 fade-rehearsal-001 审查报告修订）
+- 文档版本: v1.1（CEO 需求："我们需要一个 fade 式的标准执行，自动可靠的跑这个流程"）
+- 首轮演练审查: [fade-rehearsal-001 报告](../../workflow/operating-records/2026-W35/trees/fade-rehearsal-001/reports/design-review.md)（CONDITIONAL_PASS·P0=1/P1=6/P2=5）
 
 ## 一、FADE 是什么
 
@@ -71,9 +72,28 @@ CEO 收终报
 - 本地监控 v1 为脚本形态（控制台+状态文件）；trilc push 通知受 NAT 方向限制（Q-F，服务器无法主动连本地），本地轮询方向天然绕开。
 - 不改 trimc 服务面（零服务端点新增，hook 直接调 tick 进程，规避生产服务变更风险）。
 
-## 六、验收标准（AC）
+## 六、验收标准（AC，v1.1 按 P1-5/P1-6 拆分强化）
 
-- AC-1：本地 push 含新树的 commit 后 ≤2 分钟，sg 侧 tick 被钩子触发（shadow-plane 有 hook tick 日志证据）。
-- AC-2：CC 编排会话（GLM）spawn 并按树执行至收口，树顶层 status=done，收口 commit 已 push。
-- AC-3：本地 fade-watch 全程捕获状态变化，done 后 ≤1 个轮询周期内终报。
-- AC-4：慢通道兜底有效——hook 停用时，30 分钟 cron 仍能推进同一棵树。
+- **AC-1a 触发**：push 落 sg-bare 时刻起 ≤2 分钟，hook 日志有对应 dev updated 行（fade-hook.log）。
+- **AC-1b 生效**：该 tick 输出 actionable 含新树，且 worktree sync 未降级（pull/rebase skipped 即 FAIL）。
+- **AC-2**：CC 编排会话 spawn 并按树执行至收口（树顶层 status=done、收口 commit 已 push）；模型证据=会话 result JSON 的 modelUsage（log 落 shadow-plane）。
+- **AC-3**：本地 fade-watch 全程捕获状态变化（append-only watch log 为证），done 后 ≤1 个轮询周期内终报；-Once 模式退出码区分终态（0）与非终态（5）。
+- **AC-4**：受控实验——临时禁用 hook → push 新树 → cron tick 台账条目（trigger=cron）在 ≤1 周期内推进该树。
+
+## 七、v1.1 修复登记（2026-08-26 夜，对应审查发现）
+
+| 发现 | 修复 | 状态 |
+| --- | --- | --- |
+| P0-1 孤儿锁默认拒斥（滞留最长 80min） | 锁内补记 pid + 无 pid 可查时 300s 短阈值判死，禁止默认拒斥 | ✅ |
+| P1-1 数据面单点（cron tick 结构性盲） | tick 入口 `_sync_worktree` fetch+rebase 自愈 | ✅ |
+| P1-2 锁 check-then-write 竞态 | O_EXCL 原子申请，失败方退出 | ✅ |
+| P1-3 预算门记账回路缺失（读数恒零） | `_harvest_usage` 收割会话 result JSON usage 入账 | ✅（金额门对 GLM 现价仍为 0 计价，token 门有效） |
+| P1-4 spawn 未钉模型（漂移即秒死） | spawn cmd 显式 `--model default_model` | ✅ |
+| P1-6 tick 来源零留痕 | `--trigger` 参数（hook/cron/manual）入台账 | ✅ |
+| P2-1 hook flock 静默丢弃 | 丢弃时补日志行 | ✅ |
+| P2-3 fade-watch 无持久证据/-Once 语义过载 | append-only watch log + 退出码 5=非终态 | ✅ |
+| P2-2 全 in_progress 树调度黑洞 | 未修——v1.2 候选（告警或重派策略待定） | ⏳ |
+| P2-4 AC-2 无时限/watch 超时口径 | 未修——v1.2 候选 | ⏳ |
+| P2-5 日界时区/单树串行语义未载明 | 未修——文档事项，v1.2 候选 | ⏳ |
+
+**残余风险声明**：v1.1 修复尚未经第二轮真实树演练验证（代码已部署 sg）；AC-4 受控实验未执行。
