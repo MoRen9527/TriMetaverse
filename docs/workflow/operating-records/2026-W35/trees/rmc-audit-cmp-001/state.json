@@ -1,0 +1,32 @@
+{
+  "tick": "20260826T124800Z",
+  "treeId": "rmc-audit-cmp-001",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/rmc-audit-cmp-001/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance"
+  },
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260826T124800Z.md",
+  "startedAt": "2026-08-26T12:48:00Z",
+  "surveyedAt": "2026-08-26T12:54:55Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；一次一个节点 fresh 派工禁复用；先写后报（子实例先落盘再报告带路径+行数）",
+  "baseline": {
+    "headAtStart": "b374d05551f4baa0ba8d4f49ecf6742dcfbc7fc3",
+    "branchState": "dev 与 origin/dev 同步（ahead0/behind0 实测）；工作树 clean",
+    "treeStatusAtStart": "active；AC-R1 立项时即标 in_progress 但树目录仅 tree-op.json 单文件——零产物零留痕，按简报『fresh 子实例·禁复用』纪律重派"
+  },
+  "nodes": [
+    {
+      "nodeId": "AC-R1",
+      "agent": "TestEngineer",
+      "status": "in_progress",
+      "note": "骨架期占位：目标路径勘验中，判定与证据由后续原子提交落盘"
+    },
+    { "nodeId": "AC-R2", "agent": "TestEngineer", "status": "pending" },
+    { "nodeId": "AC-R3", "agent": "TestEngineer", "status": "pending" },
+    { "nodeId": "AC-R4", "agent": "TestEngineer", "status": "pending" }
+  ],
+  "commits": [],
+  "updatedAt": "2026-08-26T12:54:55Z"
+}
