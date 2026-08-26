@@ -56,12 +56,12 @@
   "commits": [
     { "at": "2026-08-26T12:33Z", "hash": "727b7c7a", "kind": "closing-confirmation", "desc": "tick 121800Z 收口确认+去冲突停机记录（hash=null 原记，由该实例追记与本 tick 双重 git log HEAD 实证回填）：同窗双点火勘定 twin 121305Z 先至且六项实证与本实例独立复勘一致收敛；12:29:27Z 授权和解重置后按新现实落本记录——零派工维持·顶层 status=done 已为真·无臆造" },
     { "at": "2026-08-26T12:40Z", "hash": "973a3eac", "kind": "closing-amendment", "desc": "tick 121800Z 收口追记勘正：verdict hash 回填 727b7c7a+push 成功终记 9a488e4d..727b7c7a（连续点火以来首次真实成功推送）+twin 121305Z 台账双条目已在案勘正为非缺口·114800Z 双缺维持循例补记" },
-    { "at": "2026-08-26T12:41Z", "hash": null, "kind": "closing-confirmation", "desc": "tick 121554Z 第三序收口确认（hash=null 由台账条目/下窗回填）：重置前窗口独立复勘六项实证+三实例并发窗口亲历+授权和解重置见证；零派工维持·顶层 status=done 已为真·单原子记录提交策略" }
+    { "at": "2026-08-26T12:41Z", "hash": "ad2576f0", "kind": "closing-confirmation", "desc": "tick 121554Z 第三序收口确认（hash 由本 tick 回填自 git log HEAD；台账双条目已随 push 成功后落盘）：重置前窗口独立复勘六项实证+三实例并发窗口亲历+授权和解重置见证；零派工维持·顶层 status=done 已为真·单原子记录提交策略" }
   ],
   "positioningSnapshot": {
     "at": "2026-08-26T12:41Z",
-    "divergence": "和解后续链：9a488e4d→727b7c7a→973a3eac（origin/dev=727b7c7a 时点实测）；本 tick 第三序记录提交于 973a3eac 之上，push 二次实测结果由台账 push 字段终记（预期第二次真实成功）",
-    "oppositeTip": "727b7c7a（本 tick 提交时点的 origin/dev 实测值）",
+    "divergence": "和解后续链收束：9a488e4d→727b7c7a→973a3eac→ad2576f0——本 tick push 实测成功 973a3eac..ad2576f0 dev -> dev（授权和解后第二次成功推送；git rev-parse origin/dev=ad2576f0373075e7e74971735e3a98cff926d746 实测在案，本地与远端同步 ahead0/behind0）；台账双条目（instances+ticks）已随本字段更新前落盘",
+    "oppositeTip": "ad2576f0（即本地 tip=origin/dev）",
     "worktree": "clean（重置后无遗留 draft；本 tick 未产生任何半成品——重置前窗口的全部中间认知仅存会话内，未落盘即作废，符合只认已 commit 进度纪律）",
     "consecutiveFiring": 52,
     "firingCountNote": "口径并陈：按简报逐发计本 tick=第五十二（120609Z 零痕计第五十、121305Z 计第五十一、121554Z 计五十二）；twin 自记口径=第五十。存差如实保留不强行统一",
@@ -71,5 +71,5 @@
       "历史缺口集合：021800Z 至 102037Z 连续十六组双缺（含四次完全无痕点火）维持既有补记口径"
     ]
   },
-  "updatedAt": "2026-08-26T12:41:30Z"
+  "updatedAt": "2026-08-26T12:44:30Z"
 }
