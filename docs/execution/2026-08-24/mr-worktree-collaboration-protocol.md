@@ -4,9 +4,9 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/mr-worktree-collaboration-protocol.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-26
-- 版本: v1.0
-- 授权: CEO 2026-08-26 指令「制定好生产级协作和仓库管理方案」
+- lastSyncedAt: 2026-08-27（v1.1：§五 增补当前阶段归属条款）
+- 版本: v1.1
+- 授权: CEO 2026-08-26 指令「制定好生产级协作和仓库管理方案」；CEO 2026-08-27 纠正「步骤3/4现阶段也是M面做（TriRMC/TriRLC未成熟）」
 
 ## 一、拓扑
 
@@ -65,11 +65,15 @@ sg-bare (sg-server /srv/git/)       ← 裸仓正源
 
 ### R 面任务执行周期
 
-```
+> **当前阶段归属（CEO 2026-08-27 纠正，v1.1 生效）**：R 面能力门禁（§6.2）通过前，**步骤 3 和步骤 4 同样由 M 面执行**——tick 发现派工 = TriMMC orchestrate_tick；会话执行 + 原子 commit = TriMMC spawn 的 CC 会话；本地侧对应 TriMLC。R 面唯一例外是周工作平面迁移生产任务（§四）。下述六步为**门禁通过后**的目标态流程：
+>
+> 2026-08-26 夜实证偏差已勘正：rmc-audit-cmp-001 曾被打 face=r-face 由 heyuan R 面执行（产 R1/R2/R3 报告留档），中途按本条款纠正撤除标签、AC-R4 改派 M 面。
+
+```text
 1. M 面：计划写入 docs/execution/ + 树注册（domainRouting=server-executable）
 2. M 面：push sg-bare → fleet/WorkTree 自动拉取
-3. R 面：tick 发现 actionable tree → 在 WorkTree 中执行
-4. R 面：原子 commit 到 project/trimetaverse 分支 → push origin
+3. R 面：tick 发现 actionable tree → 在 WorkTree 中执行      ← 当前阶段由 M 面做
+4. R 面：原子 commit 到 project/trimetaverse 分支 → push origin ← 当前阶段由 M 面做
 5. M 面：审阅 R 面产出 → merge 到 dev（或要求返工）
 6. 循环直到 doneCondition 达成
 ```
