@@ -1,0 +1,23 @@
+{
+  "treeId": "fade-rehearsal-001",
+  "title": "FADE 管线端到端演练树：设计文档可执行性审查（管线首次真实任务）",
+  "week": "W35",
+  "source": "docs/execution/2026-08-26/fade-pipeline-design.md v1.0 §六 AC 清单",
+  "domainRouting": "server-executable",
+  "status": "active",
+  "created": "2026-08-26",
+  "executor": "TriMMC 编排会话（GLM glm-5.3，FADE 快通道触发）",
+  "nodes": [
+    {
+      "nodeId": "FR-1",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "审查 docs/execution/2026-08-26/fade-pipeline-design.md v1.0：(1) 逐条复核 AC-1..AC-4 验收标准是否可客观判定、验收方法是否有遗漏（对照本树自身被 FADE 管线执行的事实——本树即为 AC-1/AC-2 的活体证据，报告须引用 /srv/fleet/shadow-plane/fade-hook.log 的触发记录佐证）；(2) 复核 §四可靠性设计五条是否有未覆盖故障模式（重点：hook 与 cron 双通道并发、会话中途被回收、指纹与锁不一致窗口）；(3) 产出报告落盘 docs/workflow/operating-records/2026-W35/trees/fade-rehearsal-001/reports/design-review.md——发现项分级 P0/P1/P2，每项带设计文档段落引用+具体建议+影响面；先写后报（落盘后才算完成，报告头部注明审查日期与文档版本）；报告末尾附本树执行链路实录（从 push 到本节点执行的时间线，可引用 shadow-plane 日志与 git log）。git add 仅限本树目录内文件，commit 后置本节点 status=done"
+    }
+  ],
+  "doneCondition": "FR-1 done + 报告落盘 + 收口 commit 已 push + 树顶层 status=done",
+  "notes": [
+    "本树双重身份：FADE 管线端到端演练（AC-1 hook 秒级触发/AC-2 GLM 会话执行/AC-3 本地 fade-watch 监控）+ FADE 设计文档首轮独立审查（dogfood：管线产出对管线自身的改进项）。",
+    "触发链路预期：本地 push → sg-bare post-receive hook → fleet pull + tick → 活动锁护栏（前序 rmc-audit-cmp-001 会话运行中则排队，PID 死亡即续）→ spawn CC 会话（GLM）→ 按节点执行 → 收口 done → push 回流。"
+  ]
+}
