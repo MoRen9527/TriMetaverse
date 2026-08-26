@@ -3,7 +3,6 @@
   "title": "R 面六模块代码审计（与 M 面 TriMMC 审计对照）",
   "week": "W35",
   "domainRouting": "server-executable",
-  "face": "r-face",
   "status": "active",
   "created": "2026-08-26",
   "nodes": [
@@ -35,5 +34,8 @@
       "action": "审计 TriModel（/srv/fleet/TriModel/src/）：config/client/providers/api。产出 reports/rmc-TriModel.md"
     }
   ],
-  "doneCondition": "四份报告齐 + 发现计数汇总"
+  "doneCondition": "四份报告齐 + 发现计数汇总",
+  "notes": [
+    "勘正(2026-08-27~04+08, CEO 架构纠正): 步骤3(tick发现派工)/4(原子commit)现阶段归 M 面(TriRMC/TriRLC 未成熟)——本树 face=r-face 标签撤除改由 TriMMC 承接；AC-R4(round4 中断于 TriModel 报告撰写)改派 M 面；已产出的 R1/R2/R3 三份报告及 AC-R1 解阻成效保留归档；另收录 round4 精修版 rmc-TriLC.md(139行, 优于先前89行版)"
+  ]
 }
