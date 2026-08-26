@@ -6,10 +6,19 @@
   "domainRouting": "server-executable",
   "status": "active",
   "created": "2026-08-26",
+  "executedAt": "2026-08-26T21:30Z",
+  "executor": "TriRMC 自治执行实例（ox-alpha via agent-core/trilc）",
   "nodes": [
-    {"nodeId": "HS-1", "agent": "FullStack", "status": "pending", "action": "trilc src/server/app.ts /v1/messages 处理器改造：(1) 解析 body 中 task_plan.items/currentFocus 字段 (2) 每轮 agentLoop 结束后检查 task_plan 状态变化并注入进度追加消息 (3) end_turn 且 continue_on_incomplete=true 时自动注入判定消息「你结束了回合但任务可能尚未完成。请自查：你的所有交付物是否已创建？所有 commit 是否已推送？如果未完成，继续执行。如果确实完成，回复 DONE。」(4) 每 N 轮（默认10）注入进度 reminder。全部字段可选缺省时零行为变化"},
-    {"nodeId": "HS-2", "agent": "FullStack", "status": "pending", "action": "/chat/completions 端点同步透传相同参数（与 /v1/messages 对齐）"},
-    {"nodeId": "HS-3", "agent": "TestEngineer", "status": "pending", "action": "单元测试+集成验证：FR-1 task_plan 注入正确性/FR-2 end_turn 判定拦截/FR-3 进度 reminder 触发/向后兼容（无新字段时零行为变化）/RA-3 重跑 PASS"}
+    {"nodeId": "HS-1", "agent": "FullStack", "status": "done", "action": "trilc src/server/app.ts /v1/messages 处理器改造：(1) 解析 body 中 task_plan.items/currentFocus 字段 (2) 每轮 agentLoop 结束后检查 task_plan 状态变化并注入进度追加消息 (3) end_turn 且 continue_on_incomplete=true 时自动注入判定消息「你结束了回合但任务可能尚未完成。请自查：你的所有交付物是否已创建？所有 commit 是否已推送？如果未完成，继续执行。如果确实完成，回复 DONE。」(4) 每 N 轮（默认10）注入进度 reminder。全部字段可选缺省时零行为变化", "result": "✅ TriLC dev c4f9e0f（rebase 到远端 02e4523 之上）。宿主侧包装器 runHarnessAgentLoop 以 maxTurns=1 驱动内部循环+事件流重建历史（含 tool_blocked 回执回填）+按需重启；吞中间 loop_end 聚合 usage 合成唯一终态事件（SSE 转换器契约兼容）。全字段缺省 parseHarnessOptions=null → 原生 agentLoop 零行为变化。task_plan 不落盘符合规格安全项"}
+    ,
+    {"nodeId": "HS-2", "agent": "FullStack", "status": "done", "action": "/chat/completions 端点同步透传相同参数（与 /v1/messages 对齐）", "result": "✅ 同 commit c4f9e0f：OpenAIRequest 增同组可选字段+oaiHarness 解析+SSE/JSON 两路径接线，与 /v1/messages 完全对齐"}
+    ,
+    {"nodeId": "HS-3", "agent": "TestEngineer", "status": "in_progress", "action": "单元测试+集成验证：FR-1 task_plan 注入正确性/FR-2 end_turn 判定拦截/FR-3 进度 reminder 触发/向后兼容（无新字段时零行为变化）/RA-3 重跑 PASS", "result": "代码侧验证 ✅：新增 test/server/harness-scaffold.test.ts 17 用例全绿（FR-1 注入一次性正确性/FR-2 拦截+DONE 短路+预算耗尽/FR-3 边界触发+模板替换+短任务零注入/向后兼容 gate/tool_blocked 重建/usage 聚合/预算终止）；全套件回归 437/445，8 个失败经纯 origin/dev（02e4523）worktree 基线对照证实全部为预置问题（tui 缺 ink-testing-library、confirm/link/ctx-cwd 为并行流自身债务），本改动零回归净增 22 通过用例；tsc --noEmit clean。⚠️ 未尽项：(a) RA-3 真实重跑需 TriMC 后端+模型运行时，属 rmc-integration 集成树范围，本节点不越域代跑；(b) TriLC push origin dev 被 /srv/git/TriLC.git 裸仓拒绝——unable to migrate objects to permanent storage（实证×2：dev 与 probe 分支同样失败；根因=新对象哈希落入 root:root 755 的 fan-out 目录 2c/8c 且 refs/heads 亦 root:root，fleet 身份无写权限、无 sudo、无替代传输通道）。commit c4f9e0f 已安全落在本地 /srv/fleet/TriLC dev，待授权侧修复裸仓属主（chgrp fleet -R objects + g+w，或以 root 代推）后 fast-forward 推送即可"}
   ],
-  "doneCondition": "三节点 done + tsc clean + 测试全绿 + RA-3 重跑通过"
+  "doneCondition": "三节点 done + tsc clean + 测试全绿 + RA-3 重跑通过",
+  "notes": [
+    "环境事实（2026-08-26）：/srv/fleet 本机 node 为 v18.20.8，trilc 测试链需 node:sqlite（≥22.5）——已装用户级 node v22.14.0 于 ~/.local/opt 运行测试；@tricompany/agent-core 无 dist 已就地构建；TriModel dist 陈旧但接口兼容。",
+    "并发事件记录：会话期间有并发写入者短暂向本机 TriLC 工作树注入又移除 TC-s1 死代码块（致一次 Edit 撞上 modified-since-read 保护）；该块不在 HEAD 亦不在 origin/dev，未进入任何提交。多实例协作风险按协作协议留档。",
+    "TriMetaverse 本地 dev 亦领先 origin/dev ≥2 提交（rmc-audit-cmp-001 今日记录）——同一推送权限墙的全局佐证，建议授权侧统一处置 /srv/git/*.git 属主。"
+  ]
 }

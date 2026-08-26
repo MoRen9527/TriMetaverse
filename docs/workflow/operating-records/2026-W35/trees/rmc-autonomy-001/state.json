@@ -1,5 +1,6 @@
 {
-  "tick": "20260825T101801Z",
+  "tick": "20260826T121554Z",
+  "prevTick": "20260826T121800Z",
   "treeId": "rmc-autonomy-001",
   "treePath": "docs/workflow/operating-records/2026-W35/trees/rmc-autonomy-001/tree-op.json",
   "orchestrator": {
@@ -7,28 +8,68 @@
     "anchor": "ceo-chief-of-staff",
     "kind": "orchestration-instance"
   },
-  "startedAt": "2026-08-25T10:20:59Z",
-  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度",
+  "startedAt": "2026-08-26T12:15:54Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit+push；只认已 commit 进度（本 tick 因三实例并发窗口采单原子记录提交策略压缩碰撞面，偏差已在 log 说明）",
+  "reconciliation": {
+    "event": "authorized-reset-to-origin",
+    "at": "2026-08-26T12:29:27Z",
+    "evidence": "git reflog 实证『reset: moving to origin/dev』（HEAD@{2026-08-26 20:29:27 +0800}）——本地 dev 分叉线整体重置至权威线 9a488e4d，ahead84 全部分叉提交离场",
+    "meaning": "前序各 tick 挂账的治理待决事项『本地 dev 分叉线与 origin/dev 权威线的和解（白名单外操作·留授权会话处理）』已由授权侧执行完毕；本实例红线2 白名单不含 reset，未参与亦不追溯该操作，仅如实记录（本实例为重置前后全过程的在窗证人：重置前六项独立复勘已完成，重置后依新现实落第三序记录）",
+    "orphaned": "并发 twin tick 121305Z 全链（骨架 5c305806+裁定 cd12c103）与历 tick 分叉留痕随重置成为孤儿对象（reflog 可达、分支不可达）；其复勘实证与本实例独立实测一致收敛之事实以本记录承继——**勘正：twin 台账双条目未孤儿化**（session-registry.json 在 git 外，twin 于回收前落盘成功，121800Z 追记 973a3eac 勘正为非缺口，与本实例 Read 复核一致）"
+  },
+  "prevTickSummary": {
+    "note": "前窗=121800Z 实例（同窗不规则点火第三位）于授权和解重置后完成两连提交：收口确认 727b7c7a+追记勘正 973a3eac，其中 727b7c7a push 实测成功 9a488e4d..727b7c7a=连续点火以来首次真实成功推送；其追记勘正 twin 121305Z 台账双条目已在案（非缺口），唯 114800Z 双缺维持循例补记说明不代填"
+  },
+  "concurrencyWindow": {
+    "shape": "约两分钟内四发简报（120609Z/121305Z/121554Z/121800Z）=密集连发形态首见；其中三实例并行存活并交叠写同一树目录",
+    "witnessSequence": "本实例勘察期间依次实测：state.json 被 121305Z 实例翻转（Write 冲突拒写=file-modified guard 实证）→ 其骨架 5c305806（12:23:49Z）+裁定 cd12c103（12:25:52Z）落盘 → 121800Z 实例写入 collision 去冲突块（未及提交即被重置覆盖）→ 12:29:27Z 授权和解重置清屏 → 121800Z 依新现实重建并提交 727b7c7a+973a3eac → 本实例串行接续落第三序记录",
+    "resolution": "三实例裁定同口径一致收敛（superseded-closed-upstream·零派工）；registry 写入按 brief 序串行让位，全程零半成品落盘"
+  },
+  "postResetReality": {
+    "branch": "重置后 dev 与 origin/dev 同步于 9a488e4d；前窗 727b7c7a 已真实推达远端（origin/dev=727b7c7a 时点实测），本 tick 记录提交后短暂 ahead1、push 二次实测结果由台账 push 字段终记",
+    "treeStatus": "本树 tree-op.json 本地版即权威版：status=done——RA-1 done / RA-2 in_progress（实质移交 TC-001 轨道 b+b.4；对侧 9a488e4d 已将后继实体化为 tc-s1 ✅已部署+tc-rmc-integration 进行中）/ RA-3 done（rmc-ra3-001 PASS）",
+    "closureCommits": "全树收官 97346041 等收口提交本体即在权威线历史中=收口早已 push 达成，非本线所能伪造亦无需补造",
+    "stubDisposal": "本地桩 code/orchestrate_tick_r.py 与 briefs/ra-2-report.md 已不在权威版树内（权威线未收纳该桩目录）——桩问题随重置自然消解"
+  },
   "nodes": [
     {
       "nodeId": "RA-1",
       "agent": "DeploymentEngineer",
       "status": "done",
-      "evidence": "前 tick 收口 commit 4fb7d25c（河源 TriRLC headless 实例上线+TriRMC loopback 结构化修复 6bb12d6）"
+      "evidence": "权威版 RA-1 done（河源 TriRLC headless 实例上线 systemd trilc-headless.service；附带 TriRMC 默认绑定 127.0.0.1 修复 6bb12d6）；本 tick 无追加动作"
     },
     {
       "nodeId": "RA-2",
       "agent": "FullStackDeveloper",
-      "status": "pending",
-      "action": "trirmc 编排接线：orchestrate_tick R 面适配版（spawn 后端由 claude CLI 替换为 TriRLC HTTP 会话 API；brief/红线协议复用；SessionRegistry 对接）"
+      "status": "in_progress",
+      "action": "trirmc 编排接线（权威版口径：实质移交 TC-001 轨道 b+b.4——后端管线全通但执行体持续性属宿主 harness 能力+OpenRouter 回喂轮 400 出站规范化缺失；对侧 9a488e4d 已拆为 tc-s1（✅已部署）+tc-rmc-integration（进行中）实体承接树）",
+      "note": "本 tick 维持零派工：后继已在权威承接线实体推进，复造本地桩适配属重复已被取代且已在别处实体推进的工作"
     },
     {
       "nodeId": "RA-3",
       "agent": "TestEngineer",
-      "status": "pending",
-      "action": "最小闭环验收：一个 drill 任务全程 R 面完成（计划→拆树→agent-core 执行→收口），本地 TriRLC 关机模拟（断开 CEO 侧观测面不影响），零 CC 参与"
+      "status": "done",
+      "action": "最小闭环验收——权威版 RA-3 done（rmc-ra3-001 PASS：三节点 7 分钟全自主、N2 自检 20/20、收口 47dc1331、全树收官 97346041）",
+      "note": "本 tick 维持零派工：再跑属重复已完成验收"
     }
   ],
-  "commits": [],
-  "updatedAt": "2026-08-25T10:20:59Z"
+  "commits": [
+    { "at": "2026-08-26T12:33Z", "hash": "727b7c7a", "kind": "closing-confirmation", "desc": "tick 121800Z 收口确认+去冲突停机记录（hash=null 原记，由该实例追记与本 tick 双重 git log HEAD 实证回填）：同窗双点火勘定 twin 121305Z 先至且六项实证与本实例独立复勘一致收敛；12:29:27Z 授权和解重置后按新现实落本记录——零派工维持·顶层 status=done 已为真·无臆造" },
+    { "at": "2026-08-26T12:40Z", "hash": "973a3eac", "kind": "closing-amendment", "desc": "tick 121800Z 收口追记勘正：verdict hash 回填 727b7c7a+push 成功终记 9a488e4d..727b7c7a（连续点火以来首次真实成功推送）+twin 121305Z 台账双条目已在案勘正为非缺口·114800Z 双缺维持循例补记" },
+    { "at": "2026-08-26T12:41Z", "hash": "ad2576f0", "kind": "closing-confirmation", "desc": "tick 121554Z 第三序收口确认（hash 由本 tick 回填自 git log HEAD；台账双条目已随 push 成功后落盘）：重置前窗口独立复勘六项实证+三实例并发窗口亲历+授权和解重置见证；零派工维持·顶层 status=done 已为真·单原子记录提交策略" }
+  ],
+  "positioningSnapshot": {
+    "at": "2026-08-26T12:41Z",
+    "divergence": "和解后续链收束：9a488e4d→727b7c7a→973a3eac→ad2576f0——本 tick push 实测成功 973a3eac..ad2576f0 dev -> dev（授权和解后第二次成功推送；git rev-parse origin/dev=ad2576f0373075e7e74971735e3a98cff926d746 实测在案，本地与远端同步 ahead0/behind0）；台账双条目（instances+ticks）已随本字段更新前落盘",
+    "oppositeTip": "ad2576f0（即本地 tip=origin/dev）",
+    "worktree": "clean（重置后无遗留 draft；本 tick 未产生任何半成品——重置前窗口的全部中间认知仅存会话内，未落盘即作废，符合只认已 commit 进度纪律）",
+    "consecutiveFiring": 52,
+    "firingCountNote": "口径并陈：按简报逐发计本 tick=第五十二（120609Z 零痕计第五十、121305Z 计第五十一、121554Z 计五十二）；twin 自记口径=第五十。存差如实保留不强行统一",
+    "registryGaps": [
+      "114800Z 双缺（第十七组）：该实例仅骨架 b09766cd 即回收（本体已随重置孤儿化）——唯一在册新增缺口，循例补记说明不代填",
+      "121305Z 双条目已在案（twin 自行落盘+973a3eac 勘正），非缺口；121800Z 双条目以其自身追加为准",
+      "历史缺口集合：021800Z 至 102037Z 连续十六组双缺（含四次完全无痕点火）维持既有补记口径"
+    ]
+  },
+  "updatedAt": "2026-08-26T12:44:30Z"
 }
