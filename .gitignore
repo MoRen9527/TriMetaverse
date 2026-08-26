@@ -13,3 +13,6 @@ coverage/
 TriSkill/
 # 构建产物与本地日志（build-desktop.ps1 产出；2026-08-25 起 gitignore）
 output/
+
+# FADE 本地监控状态（fade-watch.ps1 落盘，非真源）
+.fade/
