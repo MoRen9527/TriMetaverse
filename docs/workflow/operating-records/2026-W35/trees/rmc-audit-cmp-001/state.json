@@ -6,7 +6,7 @@
     "role": "CEOChiefOfStaff",
     "anchor": "ceo-chief-of-staff",
     "kind": "orchestration-instance",
-    "mode": "r-face executor (driven round 0)"
+    "mode": "r-face executor (driven round 3, resume from AC-R3 report-write breakpoint)"
   },
   "briefPath": "/srv/fleet/shadow-plane/brief-20260826T131800Z.md",
   "startedAt": "2026-08-26T15:01:13Z",
@@ -35,7 +35,8 @@
     {
       "nodeId": "AC-R3",
       "agent": "TestEngineer",
-      "status": "pending"
+      "status": "in_progress",
+      "evidence": "round2 已完成 AC-R3 全部目标文件完整 Read（app.ts 4473 行 + config/ 5 文件 + cron/ 7 文件，断点于报告撰写）；round3 从断点续作：复核读取+报告落盘"
     },
     {
       "nodeId": "AC-R4",
@@ -49,5 +50,5 @@
       "what": "AC-R1 正式审计报告（TriRMC 四域，136 行 P0=3/P1=8/P2=8）"
     }
   ],
-  "updatedAt": "2026-08-26T15:01:13Z"
+  "updatedAt": "2026-08-26T15:40:00Z"
 }
