@@ -1,0 +1,24 @@
+{
+  "treeId": "trimodel-audit-001",
+  "title": "TriModel 源码审计（rmc-audit-cmp-001 AC-R4 的 M 面承接树）",
+  "week": "W35",
+  "source": "rmc-audit-cmp-001 树 AC-R4 改派登记（commit 4b50904b）；docs/execution/2026-08-24/ 对比审计战役延续",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "status": "active",
+  "created": "2026-08-27",
+  "executor": "TriMMC 编排会话（GLM glm-5.3）",
+  "nodes": [
+    {
+      "nodeId": "TA-1",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "审计 TriModel（/srv/fleet/TriModel/src/）：config.ts/client.ts/providers/*(anthropic|deepseek|deepseek-anthropic|openai|trimetaverse).ts/api/keys.ts——质量与安全面（鉴权、密钥处理、fallback 链、出站规范化）。产出 reports/rmc-TriModel.md：发现按 P0/P1/P2 分级带 file:line；先写后报；与 rmc-agent-core.md 同格式对齐便于横向汇总。git add 仅限本树目录内文件，commit 后置本节点 status=done 并置树顶层 status=done"
+    }
+  ],
+  "doneCondition": "TA-1 done + 报告落盘 + 收口 commit 已 push + 树顶层 status=done",
+  "notes": [
+    "承接背景：rmc-audit-cmp-001 已以 AC-R4=transferred 收口（其收口轮裁定不在归档树内执行，见 commit 22855d63/4b50904b）；本树为正式承接执行位。",
+    "上下文提示：前序 R 面 round4 曾中断于本目标报告撰写（未见产物落盘，无需衔接）；参考 rmc-TriLC.md 揭示的同类 P0 模式在 TriModel 的对应面：api_key 经 env 广播（key-cache 同源风险）、TRIMODEL_API_TOKEN 缺省放行语义（keys.ts 'not configured' 分支）、client fallback 链终止是否都在 listModels() 内（W30 教训）。"
+  ]
+}
