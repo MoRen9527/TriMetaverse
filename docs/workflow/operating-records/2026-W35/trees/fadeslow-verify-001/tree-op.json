@@ -1,0 +1,24 @@
+{
+  "treeId": "fadeslow-verify-001",
+  "title": "AC-4 受控实验树：hook 禁用状态下 cron 慢通道独立拾取验证",
+  "week": "W35",
+  "source": "docs/execution/2026-08-26/fade-pipeline-design.md v1.1 §六 AC-4",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "status": "active",
+  "created": "2026-08-27",
+  "executor": "TriMMC 编排会话（GLM glm-5.3，经 cron 慢通道拾取）",
+  "nodes": [
+    {
+      "nodeId": "SV-1",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "慢通道验证任务：(1) 查 /srv/fleet/shadow-plane/session-registry.json 最新 ticks 条目与本树的关系，摘录 trigger 字段值（应为 cron）；(2) 写验证报告 docs/workflow/operating-records/2026-W35/trees/fadeslow-verify-001/reports/slow-path.md——含拾取时刻、tick 输出的 actionable、trigger 字段证据、从 push 到 spawn 的时延；(3) git add 仅限本树目录、commit、置本节点 status=done。报告头部注明实验背景：post-receive 已于 push 前禁用（fade-hook.log 有禁用登记行），本任务的执行本身即证明 cron 慢通道兜底成立"
+    }
+  ],
+  "doneCondition": "SV-1 done + 报告含 trigger=cron 证据 + 收口 commit 经慢通道回流 + 树顶层 status=done",
+  "notes": [
+    "实验窗口 2026-08-27 00:2x 北京时间：hook 已临时重命名为 post-receive.off-ac4（fade-hook.log 登记），预期仅 trimc cron tick（约每 30 分钟）能拾取本树；成功判据=registry 出现 trigger=cron 的本树 spawn 条目。",
+    "本树同时实测 v1.1 P1-1 修复：hook 停用时工作树同步唯一依赖 tick 入口 _sync_worktree() 自愈——cron tick 能否看到新 push 的树全赖此路径。"
+  ]
+}
