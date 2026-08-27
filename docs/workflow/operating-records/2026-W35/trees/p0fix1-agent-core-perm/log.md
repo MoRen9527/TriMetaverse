@@ -125,4 +125,5 @@ TM cwd 内 git/Read/Glob/Grep 全通；Bash 工具跨仓全封维持。
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
 | 1 | 02:53 | 骨架落盘（双仓基线+墙四式重测全拒+派工角色工具面核验+superseded 排查再否定三节） | 8cbcd0c4 |
-| 2 | 02:55 | blocked 裁定终值（本节+state.json 节点 verdictNote/commits/mode 终值） | （本提交） |
+| 2 | 02:55 | blocked 裁定终值（本节+state.json 节点 verdictNote/commits/mode 终值） | b51510e0 |
+| 3 | 02:55 | push origin dev 实测一次成功：0ac5ae95..b51510e0 fast-forward（骨架+裁定两原子上权威线；post-receive hook 仍报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体不触发后续 tick，留授权侧）；push 终值留痕入 state.json（本提交） | （本提交） |
