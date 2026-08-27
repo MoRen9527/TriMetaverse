@@ -1,0 +1,185 @@
+TAP version 13
+# ◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+# ◇ injected env (0) from ../.env // tip: ⌁ auth for agents [www.vestauth.com]
+# ◇ injected env (0) from ../../.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# [trimodel-client][dbg] chat model=deepseek-chat depth=0 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] chat model=deepseek-chat depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-chat failed (depth=0, reason: DeepSeek API error 429: {"error":{"message":"rate limit exceeded"}}), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] chat model=unknown-model depth=0 msgs=1 lastRole=user known=false
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=0, reason: DeepSeek API error 503: {"error":{"message":"service unavailable"}}), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-flash failed (depth=1, reason: DeepSeek API error 503: {"error":{"message":"service unavailable"}}), trying deepseek-v4-pro
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=2 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=2, reason: DeepSeek API error 503: {"error":{"message":"service unavailable"}}), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=3 msgs=1 lastRole=user known=true
+# [anthropic-provider][dbg] outbound: claude-sonnet-4-20250514 [{"role":"user","contentType":"string"}]
+# Subtest: DeepSeekProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 43.974191
+      ...
+    # Subtest: should handle deepseek-reasoner model
+    ok 2 - should handle deepseek-reasoner model
+      ---
+      duration_ms: 1.047311
+      ...
+    1..2
+ok 1 - DeepSeekProvider
+  ---
+  duration_ms: 48.745274
+  type: 'suite'
+  ...
+# Subtest: ModelClient
+    # Subtest: should list available models
+    ok 1 - should list available models
+      ---
+      duration_ms: 1.189911
+      ...
+    # Subtest: should route chat request to correct provider
+    ok 2 - should route chat request to correct provider
+      ---
+      duration_ms: 1.652689
+      ...
+    # Subtest: should fallback from deepseek-chat to deepseek-v4-flash
+    ok 3 - should fallback from deepseek-chat to deepseek-v4-flash
+      ---
+      duration_ms: 2.091905
+      ...
+    # Subtest: should throw for unknown model
+    ok 4 - should throw for unknown model
+      ---
+      duration_ms: 1.348702
+      ...
+    # Subtest: should list Anthropic models when anthropicApiKey is set
+    ok 5 - should list Anthropic models when anthropicApiKey is set
+      ---
+      duration_ms: 0.282753
+      ...
+    # Subtest: should list OpenAI models when openaiApiKey is set
+    ok 6 - should list OpenAI models when openaiApiKey is set
+      ---
+      duration_ms: 0.245385
+      ...
+    # Subtest: should not include Anthropic models without anthropicApiKey
+    ok 7 - should not include Anthropic models without anthropicApiKey
+      ---
+      duration_ms: 0.405822
+      ...
+    # Subtest: should respect fallback depth limit (max 2 hops)
+    ok 8 - should respect fallback depth limit (max 2 hops)
+      ---
+      duration_ms: 3.252612
+      ...
+    # Subtest: should have bounded fallback ring (v4-pro <-> v4-flash stops at depth limit)
+    ok 9 - should have bounded fallback ring (v4-pro <-> v4-flash stops at depth limit)
+      ---
+      duration_ms: 3.058453
+      ...
+    1..9
+ok 2 - ModelClient
+  ---
+  duration_ms: 15.880424
+  type: 'suite'
+  ...
+# Subtest: AnthropicProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 3.544495
+      ...
+    1..1
+ok 3 - AnthropicProvider
+  ---
+  duration_ms: 4.272175
+  type: 'suite'
+  ...
+# Subtest: OpenAIProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 1.750165
+      ...
+    1..1
+ok 4 - OpenAIProvider
+  ---
+  duration_ms: 2.173607
+  type: 'suite'
+  ...
+# Subtest: Streaming
+    # Subtest: should stream from DeepSeekAnthropicProvider with SSE parsing
+    ok 1 - should stream from DeepSeekAnthropicProvider with SSE parsing
+      ---
+      duration_ms: 37.000789
+      ...
+    1..1
+ok 5 - Streaming
+  ---
+  duration_ms: 37.73255
+  type: 'suite'
+  ...
+# Subtest: readConfig
+    # Subtest: should return defaults when no env vars set
+    ok 1 - should return defaults when no env vars set
+      ---
+      duration_ms: 0.270929
+      ...
+    1..1
+ok 6 - readConfig
+  ---
+  duration_ms: 0.870362
+  type: 'suite'
+  ...
+# Subtest: UsageAccumulator
+    # Subtest: should accumulate a single response
+    ok 1 - should accumulate a single response
+      ---
+      duration_ms: 0.851433
+      ...
+    # Subtest: should accumulate multiple responses
+    ok 2 - should accumulate multiple responses
+      ---
+      duration_ms: 0.235266
+      ...
+    # Subtest: should track usage by model
+    ok 3 - should track usage by model
+      ---
+      duration_ms: 0.289713
+      ...
+    # Subtest: should detect partial (zero-filled) usage
+    ok 4 - should detect partial (zero-filled) usage
+      ---
+      duration_ms: 0.314336
+      ...
+    # Subtest: should reset to empty state
+    ok 5 - should reset to empty state
+      ---
+      duration_ms: 0.187332
+      ...
+    # Subtest: should handle reasoning_tokens when present
+    ok 6 - should handle reasoning_tokens when present
+      ---
+      duration_ms: 0.17757
+      ...
+    # Subtest: should not mark partial when usage is non-zero
+    ok 7 - should not mark partial when usage is non-zero
+      ---
+      duration_ms: 0.142132
+      ...
+    1..7
+ok 7 - UsageAccumulator
+  ---
+  duration_ms: 5.146225
+  type: 'suite'
+  ...
+1..7
+# tests 22
+# suites 7
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 590.835797

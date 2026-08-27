@@ -5,7 +5,7 @@
   "source": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md §一批E；rmc-TriModel.md P0-1",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-27",
   "executor": "TriMMC 编排会话（GLM glm-5.3）",
   "repo": "/srv/fleet/TriModel（dev 线；含 glm registry 9afe789）",
@@ -13,16 +13,16 @@
     {
       "nodeId": "PE-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "修 P0-1 stream() 流中途 fallback 拼接：一旦本流已向调用方发出任何增量事件，fallback 一律禁止——改为终止流并抛出携带原错误的 StreamAbortedError（由上层决定重试语义）；仅当流尚未发出第一个事件时允许 chat() 同款 fallback 路径。顺带在 stream 实现头部补注释说明该契约（不重构 chat/stream 双实现，那是 P2-4 范围）。先读 rmc-TriModel.md P0-1 全文取精确复现场景",
-      "resultNote": null
+      "resultNote": "client.ts.fixed-v2 在统一基线 30a671e 上重构（保留 aaba31b reason 日志增强）净增 43 行零外溢；tm-tsc/tm-round-a/b 双轮隔离 29/29 零失败；in-place 应用原子提交 3ab659a push origin dev fast-forward 一次过"
     },
     {
       "nodeId": "PE-T",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "门禁回归：构造「流中途中错已发增量」用例断言不再拼接且抛 StreamAbortedError；构造「首事件前失败」用例断言 fallback 正常接管；npm test 不新增失败；tsc clean。验证记录落本树 reports/verify.md 后收口 done",
-      "resultNote": null
+      "resultNote": "守卫 test/stream-fallback-guard.test.ts 以 repo test 身份落位；tm-round-a/b 双轮 **29 tests/29 pass/0 fail** 守卫七例全绿（既有 22 例与 T0 逐字同型零回退）；T1-T4 推演实跑正向兑现；tsc --noEmit 干净零输出"
     }
   ],
   "doneCondition": "P0-1 修复+两类边界测试齐 + 套件无新增失败 + push 完成",
