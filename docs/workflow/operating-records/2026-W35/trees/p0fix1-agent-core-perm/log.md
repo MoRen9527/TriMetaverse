@@ -194,4 +194,12 @@ TC 零推进（a22a9cdf 原地），无新一轮上游施工可指向修复；�
 | 2 | 03:55 | blocked 裁定终值（本节+state.json 节点 verdictNote/commits/mode 终值）；零派工 | 04363f1f |
 | 3 | 03:56 | push origin dev 实测**一次成功**：8dfab12d..04363f1f fast-forward（骨架+裁定两原子上权威线；post-receive hook 报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体不触发后续 tick，留授权侧）；push 终值留痕入 state.json | （下一原子同提交携带） |
 | 4 | 03:57 | 台账回填：session-registry instances 条目（tick 034801Z，model **glm-5.3-flash** 如实入账，releasedAt 03:57:00Z）+ticks 预登记条目回填 rc=1 终值（commit/push/note 全字段）+registryUpdatedAt 03:57:00Z 推进；写后机器复读实证（python3 内联结构断言 instances=36/ticks=31 通过+尾条全字段在案+全量 JSON 解析通过）。流程披露：本 tick 改用 Edit 工具手术式直写+内联断言，未再落一次性临时脚本=未新增 untracked 残留（前 tick 的 .ledger-backfill-tmp.py 残留照旧树内不入库） | —（shadow-plane 文件变更） |
-| 5 | 03:58 | 台账回填记录提交（state.json commits 补原子#3/#4/#5+push 终推预告+mode 终值）；随后终推一次将 #4/#5 两原子留痕上权威线，终值见聊天总结并以远端 reflog 为准、下轮 tick 首勘复核 | （本提交） |
+| 5 | 03:58 | 台账回填记录提交（state.json commits 补原子#3/#4/#5+push 终推预告+mode 终值） | 0bff8adb |
+| 6 | ~04:00 | 台账后终推实测+hash 勘正：终推**一次成功** 33be8fb6..0bff8adb fast-forward（五原子全数上权威线）；期间授权侧同线插入 33be8fb6（docs GLM 部署点位图 v1.2）并对我 #5 留痕原子做同文 rehash 82512cb7→b2a67cbd（详见下方勘正节，前 tick 授权侧 rebase 型先例同型） | （勘正提交，见本行内实测） |
+
+### 台账后终推实测与 hash 勘正（03:59-04:00Z）
+
+- **终推实测成功×1**：`33be8fb6..0bff8adb dev -> dev fast-forward`——本 tick 全部收束原子上权威线。
+- **期间新事实（共享仓并发施工）**：授权侧于本实例两次 push 之间在同线落 docs 提交 **33be8fb6**（`docs(exec): GLM 部署点位图 v1.2——四面 key 分发落地矩阵`，时间戳 11:56:51+0800=03:56:51Z，恰在 push#1 03:56Z 与我方终推之间），插入位置在我 04363f1f 裁定与我方 push 终值留痕原子之间。
+- **hash 勘正**：我方 push 终值留痕原子被同文 rehash 重写 **82512cb7→b2a67cbd**（提交信息逐字同文、同两文件同构 diff、时间戳 11:56:59+0800）；`git merge-base --is-ancestor 82512cb7 HEAD` 实测 rc=1 非 HEAD 祖先、对象存活——与前 tick 014800 所记「授权侧 rebase 型整体重写重落」先例同型。**以现行链为准**：8dfab12d→23dd9974→04363f1f→33be8fb6→b2a67cbd→0bff8adb。
+- **真值表述修正**：#5 提交信息中「hash 链 …82512cb7 已实证上权威线」落盘当时属实（其时该哈希即本地 dev HEAD），随后被授权侧重写置离线，非虚报；shadow-plane ticks 条目 push/commit 字段本就留有「见下轮实测/下一 tick 回填」指针句，下轮首勘以本节为准，免重复发现成本。
