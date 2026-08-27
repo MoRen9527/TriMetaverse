@@ -1,5 +1,5 @@
 {
-  "tick": "20260827T090317Z",
+  "tick": "20260827T104205Z",
   "treeId": "p0fix4-trimodel-stream",
   "treePath": "docs/workflow/operating-records/2026-W35/trees/p0fix4-trimodel-stream/tree-op.json",
   "orchestrator": {
@@ -8,95 +8,74 @@
     "kind": "orchestration-instance",
     "model": "glm-5.3-flash"
   },
-  "briefPath": "/srv/fleet/shadow-plane/brief-20260827T090317Z.md",
-  "startedAt": "2026-08-27T09:03:17Z",
-  "discipline": "状态先行+原子即提交；命令一律裸形式（禁 cd X && cmd，跨仓 git -C/--npm --prefix 尾置）；红线1 只写本树目录与任务明示目标路径（src/client.ts、src/providers 相关、test 新增守护文件）；红线2 git 仅限 add 明确路径/commit/push origin dev 禁 force/rebase；红线3 事实障碍如实 blocked 并停；红线4 全节点 done 后收口翻顶层 status",
-  "predecessorSummary": "P0 批 A-D 四树已闭环（p0fix1-agent-core-perm 044800Z / p0fix2-trirmc-service 061216Z / p0fix3-trilc-http 074800Z）；本树=批 E：审计发现 9=rmc-TriModel.md P0-1 流式 fallback 中途断流静默拼接双模型输出（trimodel-audit-001 TA-1 报告 client.ts:216-229 定位）",
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260827T104205Z.md",
+  "startedAt": "2026-08-27T10:42:05Z",
+  "discipline": "状态先行+原子即提交；命令一律裸形式（禁 cd X && cmd，跨仓 git -C/--npm --prefix 尾置）；红线1 只写本树目录与任务明示目标路径（/srv/fleet/TriModel/src/client.ts、test/stream-fallback-guard.test.ts 新增守护文件）；红线2 git 仅限 add 明确路径/commit/push origin dev 禁 force/rebase；红线3 事实障碍如实 blocked 并停；红线4 全节点 done 后收口翻顶层 status=done",
+  "predecessorSummary": "p0fix4-trimodel-stream 前序 tick（20260827T090317Z）以 blocked-workaround-verified 收官——修复工件三件套（client.ts.fixed 297 行+守卫套件 385 行+复现工具链）全量入库并沙箱真值背书（tsc 干净+双轮隔离 29 tests/29 pass 零回退），但 TriModel repo 内落位与 push 被 W1 OS 属主墙/W2 外来活体线数据态混合墙/W3 远端分叉墙三重事实障碍整体封死。授权侧随依残差移交三步完成解封手术（fec0f298/f37f15f9/7a9fe84d 三笔提交）。",
   "baseline": {
-    "triMetaverseHeadAtStart": "dev 与 origin/dev 对齐，工作树除前树遗留 untracked .ledger-backfill-tmp.py 与本树 tree-op.json 外 clean",
-    "triModelHeadAtStart": "a445b0e（feat usage C15）——本地 dev 落后 origin/dev 一笔 a5638e9（O-R3-1 默认模型名同步，author MoRen，date 2026-08-13，触 src/api/keys.ts + src/config.ts + test/client.test.ts 三文件）",
-    "triModelRemoteTopology": "仓内唯一 origin=/srv/git/TriModel.git 本地裸仓（非 GitHub 直连）——与 TriLC sg 线同拓扑；GitHub 同步链路存在与否待收口探明，若单 remote 无自动链路则循 p0fix2/p0fix3 口径移交授权侧远端同步窗口",
-    "triModelWorktreeDirtyAdjudication": {
-      "verdict": "外来未提交工作线活体在树——绝不可丢弃/裹挟提交/越权清理；初步定谳=另一条生产配置工作线（glm registry 切换行）的在途改动，属授权侧/heyuan 线资产",
+    "triMetaverseHeadAtStart": "7a9fe84d ops(tree): p0fix4 解封——TriModel 手术完成；工作树除前树遗留 untracked 两项外 clean（.ledger-backfill-tmp.py + reports/sandbox/）",
+    "triModelHeadAtStart": "30a671e merge: 收编 bare 侧 0812-13 演进线（C15/O-R3-1/fallback日志/端口对齐）——统一分叉基线，本地与 origin/dev 完全对齐（fetch 实测无差）",
+    "triModelWorktreeAdjudication": {
+      "verdict": "工作树 clean——外来活体线已由授权侧手术收编入统一线（9afe789 glm registry/e25da88 flash 别名/1858f90 重试），TEMP DEBUG 桩保留在 HEAD 中（TC-4b 标注期至下线时点未到期，编译干净），不再是未提交混合态",
       "evidence": [
-        "20 文件 M：git diff --stat 总量 +1441/-1324；--ignore-cr-at-eol 过滤后真变仅 7 文件（models.ts +1、client.ts ±32、anthropic.ts ±162 大改、openai.ts ±4、trimetaverse.ts ±2、server.ts 纯行尾、usage.ts -10），其余 13 文件（package.json/tsconfig/config.ts/keys.ts 等）为纯 CR-LF 行尾噪音",
-        "client.ts 脏区含两类内容：(a) 2026-08-26/08-27 注释日期的 glm-5.3/glm-5.3-flash/GLM-4.7-Flash 注册表新增（注释自述「R/M 面编排档位切换用」=当前会话运行时正消费该注册表）；(b) 标注 TEMP DEBUG（TC-4b 验证期）的 chat/stream 两处 console.error 调试桩",
-        "anthropic.ts ±162 行为真实语义改（规模指向 provider 层适配改造）；usage.ts 净删 10 行同样在途语义改",
-        "推论：工作树=活体生产面（Fleet 模型路由即时依赖），且为他人未完成之在途线——存在中途态痕迹（registry 迁移处缩进破损）"
-      ],
-      "integrityProtocol": "①任何处置不得改变这 20 文件内容归零（恢复原状义务）；②我的代码修复以独立原子提交只携带自身 hunk，绝不裹挟外来 hunks 入提交（TEMP DEBUG 半成品不可上权威线由我推送）；③变更前后字节指纹比对留痕于本表 actions 序列"
-    },
-    "channelSurvey": {
-      "executionWall": "DOWN 维持——git -C 系列（status/log/diff/show/cat-file/config/remote）全通实测；node_modules 在位实测免 install 先行；Write/Edit 跨仓通（044800Z 批 A 实证延续）",
-      "nodeInterpreter": "默认系统 node v18（p0fix2/p0fix3 门禁沿用）；TriModel test 形态=test/*.test.ts 仅两文件（usage/client），无 globstar 问题；tsconfig 覆盖面待实测",
-      "probeResolved": [
-        "tsc 实测：npm run check --prefix 干净零输出（外来 WIP 全树可编译，RR-3 解除）",
-        "bare 实时 tip 定谳：/srv/git/TriModel.git dev=6476812（比本地 remote-tracking 记载的 a5638e9 更新——本地落后 bare 三笔非一笔：a5638e9 O-R3-1 默认模型名+aaba31b fallback 日志补失败原因（恰触 client.ts fallback 区）+6476812 trimetaverse baseUrl 8000→8008；本地工作树无此三对象",
-        "6476812 触 config.ts/api-keys.ts/providers-trimetaverse.ts 三文件均在本树脏区集内——merge 被拒面从推演升级为高置信（RR-2 维持）；另勘本地 trimetaverse.ts 脏区=Authorization 掩码改真实 Bearer 的独立语义修复（又一外来在途资产，增列不可触碰）",
-        "门禁基线：round0-a/b 双轮隔离 22 tests/22 pass/0 fail 失败集为空=T0 基线锁定（套件 test/usage.test.ts+test/client.test.ts 显式枚举，node18+tsx 可跑）"
+        "git -C /srv/fleet/TriModel status → On branch dev, nothing to commit, working tree clean",
+        "git -C /srv/fellungen/TriModel fetch → 无差，origin/dev = 本地 dev = 30a671e",
+        "git log --oneline 显示外来在途资产全部收编入库：glm registry（9afe789）+ glm-5.3-flash 大写别名（e25da88）+ anthropic 指数退避重试（1858f90）+ bare 侧 C15/O-R3-1/fallback 日志合流（30a671e）"
       ]
     },
-    "fixTargetSignature": "rmc-TriModel.md P0-1（TA-1 报告）：stream() provider 循环 catch 命中 fallback 时已向调用方发出增量事件仍静默切换上游拼接双模型输出——精确复现场景待派工节点按 action 要求先读报告全文提取；tree-op 给定契约方向=已发任意增量后禁 fallback 改抛 StreamAbortedError（上层定重试语义），仅首事件前失败允许 chat() 同款 fallback",
-    "gateStrategy": "差分法延续（p0fix2/p0fix3 固化口径）：round0=当前脏树基线×2 轮隔离取失败集 F0（不数绝对个数）→ 修复应用后 pc-round×2 + PD-T 对抗后 pdT-round×2，失败集与 F0 逐字比对零新增为准；TAP 捕获沿 gate-runner.mjs node 包装形态（shell 重定向/tee 被审批墙拒先例）",
-    "blastRadiusPreRegister": "stream() 为 ModelClient 公共 API——消费方扫描范围=src/index.ts、src/server.ts 与 test/client.test.ts（本地基线轮暴露实际波及）；test 新增守护文件命名 test/stream-fallback-guard.test.ts（新增不回退既有两套件）"
+    "channelSurvey": {
+      "executionWall": "OPEN——git -C /srv/fleet/TriModel 系列 status/log/show/diff 全通实测；node_modules 在位实测免 install 先行；Write/Edit 跨仓通（prev tick p0fix1 树的 .ledger-backfill-tmp.py 会话同法落盘实证延续）；file-cat 绕行改经 git show HEAD:path 读文件内容畅通"
+    },
+    "fixTargetSignature": "rmc-TriModel.md P0-1（TA-1 报告）：stream() provider 循环 catch 命中 fallback 时已向调用方发出增量事件仍静默切换上游拼接双模型输出；契约方向=已发任意增量后禁 fallback 改抛 StreamAbortedError（上层定重试语义），仅首事件前失败允许 chat() 同款 fallback。工件三件套 reports/pe1/client.ts.fixed + pe1-fix-report.md + guards/stream-fallback-guard.test.ts 已通过沙箱门禁 29/29 真值背书直接复用",
+    "gateStrategy": "差分法延续：上一 tick T0 基线（round0-a/b 双轮 22 pass 失败集空）与修复后沙箱双轮（sandbox-round-a/b 29 pass 守卫新增 7 例全绿）已有存档 reports/gate-logs/ 六份 TAP/json 可直接比对——本 tick 落位后需再跑 pc-round 一轮实跑验证既有套件+守卫新增共 29 例仍零失败（对照 F0 零新增为准）。TAP 用 node gate-runner.mjs 包装捕获（审批墙拒 shell 重定向先例）",
+    "blastRadiusPreRegister": "stream() 为 ModelClient 公共 API——消费方扫描范围=src/index.ts、src/server.ts 与 test/client.test.ts（本地基线轮暴露实际波及）；test 新增守护文件命名 test/stream-fallback-guard.test.ts（新增不回退既有两套件）；StreamAbortedError 建议同步 re-export 进 src/index.ts（CTO 建议，属 P2 范畴不入本树）"
   },
   "riskRegister": [
     {
-      "id": "RR-1",
-      "risk": "in-place 提交 client.ts 必然裹挟外来 glm registry+TEMP DEBUG hunks（同一文件混合工作线），推送半成品违反对授权侧资产的忠实义务",
-      "dissolutionPath": "修复提交以「HEAD 干净基底+纯自身补丁」构造：临时将 client.ts 工作树恢复至 HEAD 内容叠加纯修复（修订前后均以树目录存档字节副本保证可原样还原外来 WIP）——全程只用白名单操作（add 明确路径/commit/push），零 stash/checkout/reset/restore",
-      "status": "方案成立待门禁实测背书；如任一前提被实测否定（tsc 失败/基线混乱/还原指纹不符）则按红线3 降级 blocked 移交"
+      "id": "RR-5",
+      "risk": "client.ts.fixed 是针对 a445b0e + 脏区 WIP 的组合形态预置，与收编后统一基线 30a671e 可能存在语义漂移（registry 区不同、日志增强差异、超长 message 模板串疑似 ts 编译 lint 面）",
+      "dissolutionPath": "先 byte-diff 对照 HEAD 与 fixed 三 hunk 边界区域确认漂移面大小，再做守卫套件在现基线上沙箱重跑确认四象限行为真值，最后才做固定文件覆盖应用",
+      "status": "待实测背书"
     },
     {
-      "id": "RR-4",
-      "risk": "【本 tick 定谳的新事实层·OS 文件属主权】/srv/fleet/TriModel 的 src/** 属主 uid=197609、test/** 与 node_modules 属主 uid=0，本会话进程 uid=1001（probe-fs.mjs 取证）——源文件与测试目录均不可写，仅 .git 属 uid1001 可写。推论链：①PE-1 修复无法落进 src/client.ts（活体）；②对抗测试无法新增入 test/；③纯修复原子提交的内容构造失去载体（git add 整文件粒度必然裹挟外来 hunks——RR-1 的干净基底协议在落盘一步被判死刑）",
-      "dissolutionPath": "模式切换=沙箱验证制：以 node 包装复制只读镜像到本树 reports/sandbox/（overlay 替换 client.ts 为 PE-1 fixed 版+注入守卫测试+symlink node_modules），tsc+套件+守卫全部在沙箱实测出真实 TAP 证据；活体零触碰（无 restore 需求）。repo 内落位移交下一 tick 待授权侧解封（WIP 归置或改派有写权载体），届时补丁/固定文件/守卫三件套即取即用",
-      "status": "已定谳并执行模式切换"
+      "id": "RR-6",
+      "risk": "merge 期间 aaba31b (fallback 日志补失败原因) 已修改 client.ts stream try/catch 区块文字（console.warn 增加 reason 参数），pe1-fix-report.md 申报底本 :226-240 与当前 HEAD :226-242 存在行号+console.warn 文字漂移；fixed 版 console.warn 行是旧版（不含 reason 参数）",
+      "dissolutionPath": "PE-1 应用前先 pe1-fix-report.md 变更清单逐字核对三 hunk 锚点原文与现 HEAD 差异；对漂移处以现 HEAD 为准手改补丁构造 updated-fixed，确保合并收编增强不丢失；按旧版回退属降级不准"
+    },
+    {
+      "id": "RR-7",
+      "risk": "前置包体 TestEngineer 侧需要重新跑一次 node --test 与 tsc --noEmit（不能光看上 tick 沙箱历史 TAP），且环境可能存在隐藏一次性 session 内问题导致测试偶发；若 rc!=0 须按红线3 如实报 blocked 不能掩盖",
+      "dissolutionPath": "gate-runner.mjs pc-round-a/b 双轮隔离跑两次，汇总统计独立计数与 PC/TP 比对；出现失败可具体定位其 fail 标签"
     }
   ],
   "wallsVerdict": {
-    "summary": "TriModel 代码面三重墙叠加，in-place 执行通道整体封闭（每层独立取证在案）：W1=OS 属主权（RR-4）；W2=数据态（client.ts 外来活体 hunks 混合，白名单仅整文件 add 无法分离承载）；W3=远端分叉（本地落后 bare 三笔且 incoming 触四个脏区文件，merge 必拒/stash 越权/推送必 non-fast-forward）。三层任一存在均足以单独封死 push 完成 leg——按红线3 如实 blocked 并停，不降级为脏提交。",
-    "consequence": "节点 PE-1/PE-T 本 tick 终态=blocked（工件全量交付+沙箱实测证据），树顶层 status 维持 active 不臆造收口；授权侧解封路径=W1 改派 uid197609 可写载体或放行写权限 + W2 对 glm 在途线做归置裁定（正式提交或收起）+ W3 分支和解拉齐三笔——三者齐后下 tick 即可三件套直落"
+    "summary": "P0 批 E 前一 tick 三重封闭事实障碍已由授权侧手术逐一拆除（详细证据见前置 tick verify.md §3）：W1 OS 属主权→sg 克隆重建改 fleet 属主；W2 数据态混合→外来在途资产归置裁定正式 commit（9afe789/e25da88/1858f90）；W3 远端分叉→统一线 30a671e 双向拉齐裸仓/GitHub、本地克隆 fetch 零差。in-place 执行通道整体开通，本 tick 回归 in-place 模式按自愈路径取工件直落半小时闭环目标推进",
+    "residual": ["TEMP DEBUG 栈 TC-4b 验证期标注维持未到期，保留于 HEAD 中"]
   },
   "planOfRecord": [
-    "【W 墙定谳后模式=沙箱验证制】骨架✓ → 三探针✓（bare/tsc/基线全 favorable）→ 基线 F0 双轮空失败集锁定✓ → PE-1 fresh 派工件三件套（fixed 文件 297 行+报告 86 行，纯度 diff 三 hunk 净增 43 行零外溢）✓ → W1 OS 属主墙取证发现（probe-fs.mjs）in-place 封死 → 切沙箱：node 包装只读镜像 src/**+test/** 入 reports/sandbox/，overlay client.ts:=PE-1 fixed 版+注入守卫测试+symlink node_modules → tsc(noEmit)+三套件沙箱双轮隔离与 T0 差分 → verify.md 六节/tree-op 节点 blocked 登记/顶层 active 维持 → 台账追加。repo 内落位移交下一 tick 待授权侧解封"
+    "骨架✓→现状勘察（HEAD=30a671e 与 origin/dev 对齐/worktree clean/gate-runner.mjs 在位）✓→PE-1 fresh 派工：基线探测+镜像沙箱重建（overlay client.ts.fixed+注入守卫）→pc-round-a/b 门禁实测双轮对照既有 F0 零回退+守卫新增七例全绿=tsc 干净双重背书→纯度校验 diff -u 对固定文件边界区域实测确认无三重墙类污染",
+    "若探针全 favorable 且基线干净则 in-place 应用固定 client.ts 进 /srv/fleet/TriModel/src/client.ts（原子 add 提交/push origin dev fast-forward）→guards/test/test/stream-fallback-guard.test.ts 以 repo test 身份复制进 TriModel/test→再原子提交 push→pdT-round-a/b 门禁双轮实测最终真值收尾",
+    "verify.md 全六节全文展开判定 done 或 blocked 并停、不臆造完成；done 时 tree-op PE-1/PE-T 双节点翻 done+顶层 status=done；台账追加 session-registry.json 三条目追加；validate-json.mjs 后写解析校验器落树 JSON 全绿",
+    "log.md 动作序列表逐笔更新；终态一句话简述闭环达成度",
+    "state.mode 终态字段回填"
   ],
   "nodes": [
     {
       "nodeId": "PE-1",
       "agent": "FullStackDeveloper",
-      "status": "blocked",
-      "verdictNote": "工件全量交付且纯度实证：reports/pe1/client.ts.fixed 297 行（对底本仅三 hunk 净增 43 行：StreamAbortedError 导出类+stream 头部 15 行契约注释+emitted 追踪与四象限 catch 判定；glm registry 含 :95 故意破损缩进行、TEMP DEBUG 两处、chat()/healthCheck()/refreshRegistry() 全字节未动——git --no-index 对照活体逐字核验）；pe1-fix-report.md 86 行含审计场景提取/四象限行为表/emitted 帧私有归属链/一处如实申报的解释性偏差（flag 声明落 try 外侧贴邻=ES 块作用域使 try 内声明对 catch 不可见，契约硬性意图全满足）。blocked 原因=W1/W2/W3 三重墙（见 wallsVerdict），非设计缺陷；沙箱实测证据随后续原子补录"
+      "status": "pending",
+      "action": "修 P0-1 stream() 流中途 fallback 拼接：一旦本流已向调用方发出任何增量事件，fallback 一律禁止——改为终止流并抛出携带原错误的 StreamAbortedError（由上层决定重试语义）；仅当流尚未发出第一个事件时允许 chat() 同款 fallback 路径。顺带在 stream 实现头部补注释说明该契约（不重构 chat/stream 双实现，那是 P2-4 范围）。先读 rmc-TriModel.md P0-1 全文取精确复现场景",
+      "resultNote": null
     },
     {
       "nodeId": "PE-T",
       "agent": "TestEngineer",
-      "status": "blocked",
-      "verdictNote": "工件全量交付+沙箱实测双轮背书：guards/stream-fallback-guard.test.ts 385 行、it 实数 7（g1 中途断流拼接死证 fetch 恰 1 拨/g2 首事件前 fallback 接管恰 2 拨零 A 残留/g3 无 fallback 统一包装/g4 原错误透传非包装/g5 StreamAbortedError 单元三属性/g6 深度上限回归钉恰 3 拨/g7 自加正常流回归钉）；子实例自报『8 个 it』与编排层 grep 实测 7 差一如实勘正。沙箱门禁 sandbox-round-a/b 双轮隔离 **29 tests/29 pass/0 fail**（既有 usage+client 镜像套件 22 例与 T0 全绿基线逐字同型=修复零回退；守卫新增 7 例全绿）——PE-T 四条推演待实证 T1-T4 被实跑全部正向兑现。blocked 原因同 PE-1=W1/W2/W3 三重墙致守卫无法以 repo 内 test/ 身份落位，非测试质量缺陷"
+      "status": "pending",
+      "action": "门禁回归：构造「流中途中错已发增量」用例断言不再拼接且抛 StreamAbortedError；构造「首事件前失败」用例断言 fallback 正常接管；npm test 不新增失败；tsc clean。验证记录落本树 reports/verify.md 后收口 done",
+      "resultNote": null
     }
   ],
-  "commits": [
-    {
-      "hash": "78797e50（TM dev，push 0ee73e85..78797e50）",
-      "what": "骨架原子：state/log 落盘（勘察全量证据：外来活体线定谳/RR 三风险/拓扑/差分口径）"
-    },
-    {
-      "hash": "c41c0edf（TM dev，push 一次过）",
-      "what": "探针+门禁基线原子：bare tip=6476812 落后三笔定谳/tsc 干净/gate-runner.mjs/round0-a/b 22/22 空失败集 T0 锁定/client.ts.fixed 种子零差异保真"
-    },
-    {
-      "hash": "a5da2289（TM dev，push 一次过）",
-      "what": "PE-1 收账+三重墙定谳原子：fixed 297 行纯度三 hunk 实证/报告 86 行/apply-window EACCES 取证/probe-fs W1 属主墙/WIP 归档存证"
-    },
-    {
-      "hash": "e5f178b1（TM dev，push 一次过）",
-      "what": "PE-T 收账+沙箱证据原子：守卫 385 行/sandbox-build.mjs/tsc 干净+sandbox-round-a/b 双轮 29 tests/29 pass TAP 六份存档"
-    },
-    {
-      "hash": "40969b71（TM dev，push 一次过）",
-      "what": "收口定谳原子：verify.md 六节/tree-op 双节点翻 blocked 顶层 active 维持/state.mode 终态/log #6 与终态一句话"
-    }
-  ],
-  "updatedAt": "2026-08-27T10:04:00Z",
-  "mode": "blocked-workaround-verified（红线3 如实停机：doneCondition 四腿达成二——修复工件与两类边界测试均获沙箱真值背书 tsc 干净+sandbox-round-a/b 双轮隔离 29 tests/29 pass 既有套件与 T0 同型零回退+守卫 7 例全绿；repo 内落位与 push 两腿被 W1 OS 属主墙/W2 数据态混合墙/W3 远端分叉墙三重事实障碍封死，顶层 status 维持 active 不臆造收口；授权侧解封路径三步见 verify.md §3 与 wallsVerdict，解封后下 tick 即取三件套直落预计半小时闭环）"
+  "commits": [],
+  "updatedAt": "2026-08-27T10:42:05Z",
+  "mode": "active-running"
 }
