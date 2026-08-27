@@ -1,0 +1,32 @@
+{
+  "treeId": "p0fix3-trilc-http",
+  "title": "P0 批 D：TriLC HTTP 面认证与 RCE 通道收敛（审计发现 8）",
+  "week": "W35",
+  "source": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md §一批D；rmc-TriLC.md P0-1（精修版归并条目）",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "status": "active",
+  "created": "2026-08-27",
+  "executor": "TriMMC 编排会话（GLM glm-5.3）",
+  "repo": "/srv/fleet/TriLC（sg 线 dev；注意该线已含 runHarnessAgentLoop 架构 c4f9e0f/ba32bc7，勿回退）",
+  "nodes": [
+    {
+      "nodeId": "PD-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "修 P0-1 三通道收敛：(1) 全局 X-Internal-Token 认证门——除 /healthz 外所有 HTTP 路由要求 TRILC_INTERNAL_TOKEN 头匹配，未配置 token 时服务仅绑定显式回环并拒绝全部非 healthz 路由（fail-closed；实现参考 TriMC 的 trimc-auth 模式）；(2) Host/Origin 校验拒绝 DNS rebinding（仅允许 localhost/127.0.0.1 Host 头或配置内白名单）；(3) cron command 白名单化入口与 MCP add 鉴权。先读 rmc-TriLC.md P0-1 全文拿精确 file:line 与三条通道清单再动手"
+    },
+    {
+      "nodeId": "PD-T",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "门禁回归：三通道各写拒绝路径测试（无 token=401、错 Host=403、白名单外 command=拒）；全套件基线对比不新增失败（预置失败基线见 tc001-harness-scaffold HS-3 登记：8 个 tui debt 用例）；tsc clean。验证记录落本树 reports/verify.md 后收口 done"
+    }
+  ],
+  "doneCondition": "P0-1 三通道全收敛 + 守护测试齐 + 套件无新增失败 + push origin 与 GitHub 双端完成",
+  "notes": [
+    "红线：只写 src/server src/config src/cron 相关文件与本树目录；兼容现有 TC-s1 harness 行为（测试不得回退）。",
+    "部署排除在树外：heyuan 生产 trilc-headless 重启属独立验收窗口（daemon 重启纪律）；本地 TriLC 亦不在本树范围。",
+    ".env 需新增 TRILC_INTERNAL_TOKEN——本树只实现读取逻辑，token 值的生成与写入由部署环节人工执行（不入 git）。"
+  ]
+}

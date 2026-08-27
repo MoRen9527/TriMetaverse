@@ -1,0 +1,31 @@
+{
+  "treeId": "p0fix4-trimodel-stream",
+  "title": "P0 批 E：TriModel 流式 fallback 静默拼接修复（审计发现 9）",
+  "week": "W35",
+  "source": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md §一批E；rmc-TriModel.md P0-1",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "status": "active",
+  "created": "2026-08-27",
+  "executor": "TriMMC 编排会话（GLM glm-5.3）",
+  "repo": "/srv/fleet/TriModel（dev 线；含 glm registry 9afe789）",
+  "nodes": [
+    {
+      "nodeId": "PE-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "action": "修 P0-1 stream() 流中途 fallback 拼接：一旦本流已向调用方发出任何增量事件，fallback 一律禁止——改为终止流并抛出携带原错误的 StreamAbortedError（由上层决定重试语义）；仅当流尚未发出第一个事件时允许 chat() 同款 fallback 路径。顺带在 stream 实现头部补注释说明该契约（不重构 chat/stream 双实现，那是 P2-4 范围）。先读 rmc-TriModel.md P0-1 全文取精确复现场景"
+    },
+    {
+      "nodeId": "PE-T",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "门禁回归：构造「流中途中错已发增量」用例断言不再拼接且抛 StreamAbortedError；构造「首事件前失败」用例断言 fallback 正常接管；npm test 不新增失败；tsc clean。验证记录落本树 reports/verify.md 后收口 done"
+    }
+  ],
+  "doneCondition": "P0-1 修复+两类边界测试齐 + 套件无新增失败 + push 完成",
+  "notes": [
+    "红线：只写 src/client.ts src/providers 相关与本树目录。",
+    "heyuan 生产 trimodel 为符号链接消费——部署=heyuan 侧 TriModel clone 拉取+trilc 重启，排除在本树外走验收窗口。"
+  ]
+}
