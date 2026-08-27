@@ -95,3 +95,42 @@ git cherry-pick <筛过的提交序列>
 - 顺序：批 A/B 同仓同包可一并做 → C、D 各自独立服务可并行 → E 独立最后
 - D 批注意与 [[trilc-daemon-restart-discipline]] 生产纪律的窗口约束
 - 执行载体由编排层裁决：FADE 派树（每批一树）或 M 面直派会话均可；代码变更建议沿用「先写后报+原子即提交+收口置 done」纪律
+
+## 四、战役对账回填（2026-08-27 19:1x 北京时间收口）
+
+### 4.1 批次终态
+
+| 批 | 树 | 终态 | 实质锚点 |
+| --- | --- | --- | --- |
+| A+B | p0fix1-agent-core-perm | ✅ done（四轮达成） | agent-core `fabcbef`(P0-1/3)+`14499e5`(P0-2/4)+`95d8713`对抗测试；46/46×2 |
+| C | p0fix2-trirmc-service | ✅ done | runAs 三层白名单+/internal 结构性 fail-closed 反转；verify.md 15.6KB |
+| D | p0fix3-trilc-http | ✅ done | 常数时比较 token 门+Host/Origin/token 三门互锁+cron/MCP 双入口白名单；verify 含与 TriMC 参照差异声明 |
+| E | p0fix4-trimodel-stream | ✅ done（三轮 blocked-workaround 后落位） | 统一线重基工件直落 `3ab659a`+守卫测试 29/29×2；沙箱方法论留档 |
+| §二合并 | trilc-lineage-merge | 🔄 active（local-executable，待本地窗口） | 方案见 §二 |
+
+**九项 P0 全部修复完成。**
+
+### 4.2 战役级快照 root（§九 9.4 首演·retrospective 口径）
+
+八棵系统树 + 一棵本地树的对账清单快照（treeId/status/文件hash16），整体 sha256：
+
+```
+CAMPAIGN-SNAPSHOT-ROOT: 40ee6f8ce950ad024e82b69309cede0b8b0cfee2cf9ab17ff26d1bafce184af5
+```
+
+诚实声明：本战役树群诞生于卷封制生效前，材料未预封——此 root 为**收口后快照**（防篡改基线，非过程完整性证明）。下战役起 sourceMaterials 预封计入。
+
+### 4.3 战役衍生资产（超出修复本身的收获）
+
+- **协议入册**：D-08 hook GIT_DIR / D-09 ps1 BOM / D-10 裸仓权限自愈 / D-11 审批前缀匹配——四条以真实事故换来的工程纪律
+- **FADE v1.1→卷封制 v1.0**：管线在实战中完成两次进化；AC-1..4 全实证
+- **执行通道定型**：spawn cwd 按树路由+白名单全家桶+BRIEF 裸命令铁律（复合 cd 形态问题根除）
+- **四面 key 分发**：tmv-mm/ml/rm/rl-face 全链实测，配 429 指数退避
+- **TriModel 三端归一**：30a671e 统一 GiHub/裸仓/克隆三线（含 0812 分叉欠账清偿）
+
+### 4.4 移交清单（战役外待办）
+
+1. 生产验收窗口：heyuan trilc 升级（含批 D token 运行手册）/ TriModel 镜像升级 / TriRMC 拉取重启
+2. trilc-lineage-merge 本地窗口执行（28 提交甄别）
+3. CEO 控制台：吊销旧共享 key（255dc140…/bef0e848…）
+4. sg TriCompany 同源治理线：从真源向 TriRMC 拷贝重出（其 P0-3 收口尾注既定路线）
