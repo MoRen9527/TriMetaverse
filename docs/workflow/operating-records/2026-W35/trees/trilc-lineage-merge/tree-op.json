@@ -5,27 +5,28 @@
   "source": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md §二（合并步骤草案与门禁以此为准）",
   "domainRouting": "local-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-27",
   "executor": "本地 M 面（TriMLC 会话人工监督执行——28 个待甄别提交只在本机）",
   "nodes": [
     {
       "nodeId": "TM-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "按排期文档 §二 步骤执行：备份分支→integrate/tc001-canonical 基线→git log origin/tc001-canonical..dev 甄别 28 提交（旧版 TC-s1 相关显式跳过）→cherry-pick 冲突集中 src/server/app.ts 以 c4f9e0f runHarnessAgentLoop 架构为准"
     },
     {
       "nodeId": "TM-2",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "门禁验收：tsc --noEmit clean + npm test 对比预置失败基线（8 个 tui debt，见 tc001-harness-scaffold HS-3 登记）零新增；记录合并台账到本树 reports/merge-log.md（保留/放弃提交清单+理由）；dev fast-forward + 双远端 push + 备份分支留存后置树 done。冲突超 10 处触发文档 §二降档路径"
     }
   ],
   "doneCondition": "dev 单线化含 canonical 全部能力 + 门禁零新增失败 + 台账落盘 + heyuan 生产切回 dev 线（或明示 tc001-canonical 继续作发布跟踪线的决策记录）",
   "notes": [
     "domainRouting=local-executable：服务端 tick 三重门不会拾取本树——刻意设计，提交甄别必须在本机做。由白班 TriMLC 监督执行，不在自动管线内。",
-    "与 p0fix3-trilc-http 的先后关系：建议先并线再修 P0（避免双线期改 sg 线造成二次冲突）；若 p0fix3 已先行完成，TM-1 需以最新 origin/dev 为基线重对齐。"
+    "与 p0fix3-trilc-http 的先后关系：建议先并线再修 P0（避免双线期改 sg 线造成二次冲突）；若 p0fix3 已先行完成，TM-1 需以最新 origin/dev 为基线重对齐。",
+    "收口(2026-08-28 00:0x+08)：TM-1/TM-2 done（§2.7 双节点报告+merge-log 台账在 reports/）；dev=ff2f970 单线化（GitHub lease 重置+sg FF）；门禁 tsc 清+585/1（唯一=HS-3 预置 tui 债）；heyuan 切线决策=下次验收窗口切 dev，tc001-canonical 转历史锚；卷封 verify=0 首试点达成"
   ],
   "sourceMaterials": [
     {
