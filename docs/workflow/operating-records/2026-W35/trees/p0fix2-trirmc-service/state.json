@@ -34,7 +34,8 @@
     {
       "nodeId": "PC-1",
       "agent": "FullStackDeveloper",
-      "status": "pending"
+      "status": "done",
+      "verdictNote": "fix 已落盘并 TriRMC 本地提交 e3545b7（12 文件 +242/-20）：P0-1 runAs 白名单化——TRIRMC_RUNAS_ALLOWLIST 逗号分隔显式声明主体精确等值命中，env 空/未配置⇒空集拒绝任意用户名（fail-closed 无内置缺省主体），routes.validateCreateInput 入口层 400＋command-handler spawn 前 throw 执行层双道防御（PATCH=P2-1 已知缺口由执行层兜底，HOME 推导后置于校验后）；P0-2 /internal 鉴权 fail-open 反转 fail-closed——凡 /internal/ 前缀无条件进门，token 空⇒401 internal_auth_disabled（与 token 不匹配 unauthorized 可区分），healthz 公开不变；既有 internal-auth.test.ts『未配置放行』用例反转为审计明文故意语义变化。爆炸半径清扫 8 fixture 套件最小对齐含返工一轮：e2e real-model 首扫漏判（据文件注释误判本机 skip，实际 TriModel dotenv 注入链真实起 app 走 HTTP）经编排层 stash 基线对照实测暴露（修复后 8 fail vs pristine 3 fail，增差 5 个全落该文件），同实例续接补 x-internal-token 注入后回绿。门禁终值：npm run check 干净＋等价套件 474 tests/471 pass 连续两轮隔离全稳（pc1-round3/round4）＝零新增失败；残余 3 失败=tools-ctx-cwd 两 suite 三 subtests 于 stash 前基线同型在案=环境性既有失败非本次回归。角色工具面 adaptations 如实记录：建议的新建独立模块因 Edit 无法新建文件改导出于 command-handler.ts 内（安全实质等价，物理拆分留纯重构项）"
     },
     {
       "nodeId": "PC-T",
@@ -42,7 +43,19 @@
       "status": "pending"
     }
   ],
-  "commits": [],
-  "push": "",
-  "updatedAt": "2026-08-27T06:17:30Z"
+  "commits": [
+    {
+      "hash": "bfb614ba（TM dev）",
+      "what": "骨架原子：TriRMC 新建检出 clone 一次成功+两处 P0 签名逐字对照+既有 internal-auth 放行断言冲突预登记+环境/通道事实"
+    },
+    {
+      "hash": "e3545b7（TriRMC dev，本地 commit 已成）",
+      "what": "PC-1 代码原子（12 文件 +242/-20）：P0-1 runAs 白名单双层防御＋P0-2 internal fail-closed 反转＋8 fixture 套件清扫对齐（含 e2e real-model 返工）；门禁三绿后才提交=check 干净/471of474 双轮隔离零新增失败（残余 3 环境性既有 stash 基线在案）/静态自查残留五项入 verdictNote 与 verify 待录"
+    }
+  ],
+  "push": {
+    "triMetaverse": "成功 a8412c92..bfb614ba fast-forward（/srv/git/TriMetaverse.git 本地镜像权威线，骨架原子）",
+    "triRMCGitHub": "被拒——`git -C /srv/fleet/TriRMC push origin dev` 实测 fatal: could not read Username for 'https://github.com'：本机无任何 GitHub 凭据通道（git config --list 无 credential.helper、~/.git-credentials 与 ~/.netrc 与 ~/.config/gh 三处 Glob 实测无文件、GITHUB_TOKEN/GH_TOKEN 类 env 键名探察空）。障碍属会话不可解非树内可修＝按红线3 如实留痕移交授权侧；代码原子以本地 commit e3545b7 计进度（dev 领先 origin/dev 1），fleet 本地检出 /srv/fleet/TriRMC 即部署拾取点不受影响，远端同步窗口由授权侧执行"
+  },
+  "updatedAt": "2026-08-27T07:01:30Z"
 }
