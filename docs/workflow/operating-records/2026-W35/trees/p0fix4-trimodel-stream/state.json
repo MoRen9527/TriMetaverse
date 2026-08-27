@@ -48,26 +48,25 @@
       "status": "方案成立待门禁实测背书；如任一前提被实测否定（tsc 失败/基线混乱/还原指纹不符）则按红线3 降级 blocked 移交"
     },
     {
-      "id": "RR-2",
-      "risk": "本地 dev 落后 bare 仓一笔（a5638e9 触 keys.ts/config.ts 恰为本树行尾脏区文件）——merge 极可能被 git 以本地改动将被覆盖为由拒绝，push 即 non-fast-forward 被拒，doneCondition 的 push 腿受阻",
-      "dissolutionPath": "bare 仓实时 tip 实测核实 + merge 拒绝取证；若拒绝坐实=分支和解类治理残差移交授权侧（同 rmc-autonomy 分叉和解先例：授权侧 reset/rebase 型动作不在本会话白名单），进度以本地 commit 计（p0fix2 残差口径）如实标注完成定义缺口",
-      "status": "探针进行中"
-    },
-    {
-      "id": "RR-3",
-      "risk": "外来 anthropic.ts 大改/usage.ts 删改若使门禁基线本身大面积翻红，套件无新增失败的判定退化",
-      "dissolutionPath": "差分法对 F0 基线固有免疫（无论基线多红，只要失败集不增即可判）；但若 tsc 直接编译失败则一切门禁失效→blocked 降级",
-      "status": "探针进行中"
+      "id": "RR-4",
+      "risk": "【本 tick 定谳的新事实层·OS 文件属主权】/srv/fleet/TriModel 的 src/** 属主 uid=197609、test/** 与 node_modules 属主 uid=0，本会话进程 uid=1001（probe-fs.mjs 取证）——源文件与测试目录均不可写，仅 .git 属 uid1001 可写。推论链：①PE-1 修复无法落进 src/client.ts（活体）；②对抗测试无法新增入 test/；③纯修复原子提交的内容构造失去载体（git add 整文件粒度必然裹挟外来 hunks——RR-1 的干净基底协议在落盘一步被判死刑）",
+      "dissolutionPath": "模式切换=沙箱验证制：以 node 包装复制只读镜像到本树 reports/sandbox/（overlay 替换 client.ts 为 PE-1 fixed 版+注入守卫测试+symlink node_modules），tsc+套件+守卫全部在沙箱实测出真实 TAP 证据；活体零触碰（无 restore 需求）。repo 内落位移交下一 tick 待授权侧解封（WIP 归置或改派有写权载体），届时补丁/固定文件/守卫三件套即取即用",
+      "status": "已定谳并执行模式切换"
     }
   ],
+  "wallsVerdict": {
+    "summary": "TriModel 代码面三重墙叠加，in-place 执行通道整体封闭（每层独立取证在案）：W1=OS 属主权（RR-4）；W2=数据态（client.ts 外来活体 hunks 混合，白名单仅整文件 add 无法分离承载）；W3=远端分叉（本地落后 bare 三笔且 incoming 触四个脏区文件，merge 必拒/stash 越权/推送必 non-fast-forward）。三层任一存在均足以单独封死 push 完成 leg——按红线3 如实 blocked 并停，不降级为脏提交。",
+    "consequence": "节点 PE-1/PE-T 本 tick 终态=blocked（工件全量交付+沙箱实测证据），树顶层 status 维持 active 不臆造收口；授权侧解封路径=W1 改派 uid197609 可写载体或放行写权限 + W2 对 glm 在途线做归置裁定（正式提交或收起）+ W3 分支和解拉齐三笔——三者齐后下 tick 即可三件套直落"
+  },
   "planOfRecord": [
-    "骨架（本笔）→ bare/merge/tsc 三探针 → 基线 F0 双轮 → PE-1 fresh 派工（产出纯补丁+契约说明落本树 reports/，子实例零触碰 src/**）→ 编排层按 RR-1 协议应用补丁并核验指纹 → PET fresh 派工对抗守护（占位锚预置先例第四次使用）→ 重开门禁双轮 → TriModel 代码/测试两原子提交（视 RR-2 push 实测定终态口径）→ verify.md/收账/顶层翻转（若达成）或 blocked 如实登记 → 台账追加"
+    "【W 墙定谳后模式=沙箱验证制】骨架✓ → 三探针✓（bare/tsc/基线全 favorable）→ 基线 F0 双轮空失败集锁定✓ → PE-1 fresh 派工件三件套（fixed 文件 297 行+报告 86 行，纯度 diff 三 hunk 净增 43 行零外溢）✓ → W1 OS 属主墙取证发现（probe-fs.mjs）in-place 封死 → 切沙箱：node 包装只读镜像 src/**+test/** 入 reports/sandbox/，overlay client.ts:=PE-1 fixed 版+注入守卫测试+symlink node_modules → tsc(noEmit)+三套件沙箱双轮隔离与 T0 差分 → verify.md 六节/tree-op 节点 blocked 登记/顶层 active 维持 → 台账追加。repo 内落位移交下一 tick 待授权侧解封"
   ],
   "nodes": [
     {
       "nodeId": "PE-1",
       "agent": "FullStackDeveloper",
-      "status": "pending"
+      "status": "blocked",
+      "verdictNote": "工件全量交付且纯度实证：reports/pe1/client.ts.fixed 297 行（对底本仅三 hunk 净增 43 行：StreamAbortedError 导出类+stream 头部 15 行契约注释+emitted 追踪与四象限 catch 判定；glm registry 含 :95 故意破损缩进行、TEMP DEBUG 两处、chat()/healthCheck()/refreshRegistry() 全字节未动——git --no-index 对照活体逐字核验）；pe1-fix-report.md 86 行含审计场景提取/四象限行为表/emitted 帧私有归属链/一处如实申报的解释性偏差（flag 声明落 try 外侧贴邻=ES 块作用域使 try 内声明对 catch 不可见，契约硬性意图全满足）。blocked 原因=W1/W2/W3 三重墙（见 wallsVerdict），非设计缺陷；沙箱实测证据随后续原子补录"
     },
     {
       "nodeId": "PE-T",
