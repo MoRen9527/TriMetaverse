@@ -45,8 +45,8 @@
     {
       "nodeId": "PA-2",
       "agent": "FullStackDeveloper",
-      "status": "pending",
-      "verdictNote": ""
+      "status": "implemented（终态翻转归 PB-T 复核）",
+      "verdictNote": "fix 已落盘并 TC 提交 14499e5：P0-2 checkAcceptEditsMode 仅界内写入类短路 allow（清单对齐 permissions.ts:49-51 补 replace_in_file；非成员 return null 落步骤9/10 规则与 default 流程——acceptEdits 下 shell_exec/MCP 自定义工具免确认面收口，read_file 隐式放行同步取消为审计明文语义变化）；P0-4 SpawnConfig 增 permissionMode/permissionRules/cwd/additionalDirectories 四通道逐字透传+loop.ts 缺省 bypassPermissions→default fail-closed。回归 test/p0-mode-spawn.test.mjs 18 例（模式×工具矩阵+规则通道+静态钉值）含残余验证残差清单。门禁实测：build 干净+46/46 双轮全绿+tsc --noEmit clean。blast-radius 自查：loop 缺省变更行为翻转点=spawn 链与未显式传 mode/engine 的 agentLoop 直调宿主（TC src 内无此类点；TriLC/TriMC/TriCode 消费仓扫描超本节点授权移交授权侧排查）"
     },
     {
       "nodeId": "PB-T",
@@ -63,9 +63,17 @@
     {
       "hash": "fabcbef（TC dev）",
       "what": "PA-1 代码原子（TC=树 repo 仓首次真实提交）：decision-pipeline.ts 两处修复+新回归套件 20 例；含首版 normalizePath .. 抵消缺陷的探针实证与同实例返工闭环；门禁 build/28of28×2/tsc --noEmit 三绿后才提交"
+    },
+    {
+      "hash": "42296c80（TM dev）",
+      "what": "PA-1 收账原子：state PA-1 implemented 终值+log 动作序列 #2-#5 与过程披露节"
+    },
+    {
+      "hash": "14499e5（TC dev）",
+      "what": "PA-2 代码原子（五文件）：checkAcceptEditsMode 收口+SpawnConfig 四通道透传+loop 缺省 fail-closed+p0-mode-spawn.test.mjs 18 例；门禁 build/46of46×2（三套件合跑，PA-1 20 例零回退）/tsc --noEmit 三绿后才提交"
     }
   ],
   "push": "—（未推送；TM 记录线与 TC 代码线收口统一终推）",
-  "updatedAt": "2026-08-27T05:33:16Z",
+  "updatedAt": "2026-08-27T05:49:55Z",
   "mode": "active-execution（执行墙已解除，进入 PA-1→PA-2→PB-T 一次一节点真实施工；完成定义尚未满足，随进度逐原子更新）"
 }

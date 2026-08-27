@@ -230,6 +230,16 @@ TC 零推进（a22a9cdf 原地），无新一轮上游施工可指向修复；�
 | 3 | 05:12 | 门禁实测第一轮 21/27 败 6：探针取证根因三件——①normalizePath 相对路径 `..` 符号性压栈被后续弹出抵消（`../../` 相互湮灭拼回界内）＝**审计向量 b 在首版修复下仍活体**（allowed=true 实测）；②规则词表 `Bash(...)` 不别名匹配 `shell_exec`（matchesTool 字面等值，同 args 换词表双结果探针在案）；③内容限定 deny 载荷先行被 bypass-immune 安全检查拦截（decidedBy=safety_check，正确更严）。另录得 exact 正例跨轮结果翻转异常一次（双轮后续全绿覆盖，机制存疑如实记录不掩盖） | — |
 | 4 | 05:20 | 探针回报同实例返工（仍属节点 PA-1 范围一次一节点纪律内）：normalizePath 改溢出通道保真前导 `../`；测试正例全部改规则契约词表真名 'Bash' 驱动+新增词汇缺口钉值负例+deny 层次断言并集化；vector b/dontAsk red 用例期望未为迁就 bug 反向修改 | —（TC 工作树变更未提交） |
 | 5 | 05:26 | 终门禁三门全绿：npm run build 干净＋node --test 双文件 **28/28 连续两轮隔离全绿**＋tsc --noEmit clean → TC 原子提交 **fabcbef**（identity 内联 TriMMC Orchestrator，Co-Authored-By Claude 入账） | fabcbef（TC dev） |
+| 6 | 05:31 | PA-1 收账原子（state implemented 终值+本表 #2-#5 与披露节） | 42296c80 |
+| 7 | 05:36 | PA-2 前置：预置 p0-mode-spawn.test.mjs 占位锚 → fresh FullStackDeveloper 派工（P0-2/P0-4，一次一节点），先写后报五文件落盘报告带行号 | —（TC 工作树变更未提交） |
+| 8 | 05:45 | PA-2 门禁三门全绿一次过：build 干净＋node --test 三套件合跑 **46/46 连续两轮隔离全绿**（PA-1 20 例零回退实证）＋tsc --noEmit clean（坐实 SpawnConfig 四通道 wiring 类型正确性）→ TC 原子提交 **14499e5** | 14499e5（TC dev） |
+
+### PA-2 过程披露与新事实
+
+- P0-2 收口语义按审计明文执行：acceptEdits 下非写入类工具全部 return null 落入规则/default 流程——**read_file 的隐式放行同步取消**（此为审计要求的故意语义变化，非误伤），已在套件中以 read_file 用例固化为 CT0 知会项活性锚。
+- P0-4 loop 层缺省 bypassPermissions→default 为**行为变更型收紧**：受影响调用点=spawn 链未传权限字段者+任何不显式传 mode/engine 的 agentLoop 直调方（TC agent-core src 内穷尽为零，消费仓 TriLC/TriMC/TriCode 内部扫描超出本树授权面——列移交授权侧清单）。
+- spawn 整链动态验证需模型凭据环境，本套件头部留「残余验证残差清单」（T1/T2 类型门禁守护+S1-S4 源码 trace 项），不留恒真假断言——如实残差而非假装覆盖。
+- 两实例全程先写后报合规：五次 Edit 全部落盘成功，无护栏拒绝记录。
 
 ### PA-1 过程披露与新事实（入 state.json 同步）
 
