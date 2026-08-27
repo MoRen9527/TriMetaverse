@@ -26,5 +26,21 @@
   "notes": [
     "domainRouting=local-executable：服务端 tick 三重门不会拾取本树——刻意设计，提交甄别必须在本机做。由白班 TriMLC 监督执行，不在自动管线内。",
     "与 p0fix3-trilc-http 的先后关系：建议先并线再修 P0（避免双线期改 sg 线造成二次冲突）；若 p0fix3 已先行完成，TM-1 需以最新 origin/dev 为基线重对齐。"
+  ],
+  "sourceMaterials": [
+    {
+      "path": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md",
+      "sha256": "ffaf893533e2ea7926b300d28f71c7d63789a44bbfd5ca3662683fbd9879e0a7",
+      "bytes": 10462,
+      "role": "campaign-plan",
+      "recordedAt": "2026-08-27T14:34:44.488147+00:00"
+    },
+    {
+      "path": "docs/execution/fade-006-execution-autopick-spec.md",
+      "sha256": "863ad15166535f299a45d965f6de8dbbf302bcb6c754bd063866fea540ec814f",
+      "bytes": 3857,
+      "role": "campaign-plan",
+      "recordedAt": "2026-08-27T14:34:44.489150+00:00"
+    }
   ]
 }
