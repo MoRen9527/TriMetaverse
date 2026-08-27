@@ -32,9 +32,14 @@ if sys.stdout and hasattr(sys.stdout, "reconfigure"):
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 
-def _sha256(p: Path) -> tuple[str, int]:
+def _sha256(p: Path) -> tuple[str, int, str]:
+    """返回 (raw_sha256, bytes, lf_sha256)。lf 为行尾归一化(\r\n→\n)后 hash——
+    SOFT-DRIFT 判据（联审 CTO-F6）：跨 Win/Unix 流转的行尾漂移不按材料
+    污染处理，仅警告留痕。"""
     data = p.read_bytes()
-    return hashlib.sha256(data).hexdigest(), len(data)
+    raw = hashlib.sha256(data).hexdigest()
+    lf = hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
+    return raw, len(data), lf
 
 
 def _find_repo_root(start: Path) -> Path:
@@ -59,10 +64,11 @@ def cmd_attach(tree_file: Path, paths: list[str], role: str, repo_root: Path) ->
         if not p.is_file():
             print(f"MISSING: {raw}", file=sys.stderr)
             return 3
-        sha, size = _sha256(p)
+        sha, size, sha_lf = _sha256(p)
         entries.append({"path": raw.replace("\\", "/"), "sha256": sha, "bytes": size,
+                        "sha256_lf": sha_lf,
                         "role": role, "recordedAt": datetime.now(timezone.utc).isoformat()})
-        print(f"sealed {sha[:12]}… {size:>7}B {raw}")
+        print(f"sealed {sha[:12]}… (lf {sha_lf[:12]}…) {size:>7}B {raw}")
     d["sourceMaterials"] = entries
     tree_file.write_text(json.dumps(d, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"attached {len(entries)} entr(ies) -> {tree_file}")
@@ -75,20 +81,29 @@ def cmd_verify(tree_file: Path, repo_root: Path) -> int:
     if not mats:
         print("UNSEALED: 该树无 sourceMaterials 登记（卷封制前旧树）")
         return 1
-    drift = []
+    drift, soft = [], []
     for m in mats:
         p = repo_root / m["path"]
         if not p.is_file():
             drift.append((m["path"], "FILE MISSING", m["sha256"][:12]))
             continue
-        sha, size = _sha256(p)
-        if sha != m["sha256"]:
-            drift.append((m["path"], f"now={sha[:12]}… ({size}B)", f"sealed={m['sha256'][:12]}… ({m['bytes']}B)"))
+        sha, size, sha_lf = _sha256(p)
+        if sha == m["sha256"]:
+            continue
+        if m.get("sha256_lf") and sha_lf == m["sha256_lf"]:
+            soft.append((m["path"], f"raw {m['sha256'][:12]}…→{sha[:12]}…（仅行尾漂移）"))
+            continue
+        drift.append((m["path"], f"now={sha[:12]}… ({size}B)", f"sealed={m['sha256'][:12]}… ({m['bytes']}B)"))
+    for path, note in soft:
+        print(f"  ⚠ SOFT-DRIFT {path}: {note}——行尾级差异留痕，不触发 §9.3 污染裁决")
     if drift:
         print("DRIFT DETECTED——材料在封卷后被改动，走 §9.3 裁决前不得通过：")
         for path, now, sealed in drift:
             print(f"  ✗ {path}\n      {now}\n      {sealed}")
         return 2
+    if soft:
+        print(f"SEALED-INTACT(WITH SOFT-DRIFT): {len(mats)} 项语义一致，{len(soft)} 项行尾漂移已留痕")
+        return 0
     print(f"SEALED-INTACT: {len(mats)} 材料全部与封卷一致 ✓")
     return 0
 
@@ -96,8 +111,8 @@ def cmd_verify(tree_file: Path, repo_root: Path) -> int:
 def cmd_manifest(paths: list[str], repo_root: Path) -> int:
     out = []
     for raw in paths:
-        sha, size = _sha256(repo_root / raw)
-        out.append({"path": raw.replace("\\", "/"), "sha256": sha, "bytes": size})
+        sha, size, sha_lf = _sha256(repo_root / raw)
+        out.append({"path": raw.replace("\\", "/"), "sha256": sha, "bytes": size, "sha256_lf": sha_lf})
     print(json.dumps(out, ensure_ascii=False, indent=1))
     return 0
 

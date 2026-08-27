@@ -107,6 +107,13 @@ CEO 收终报
 4. **裸仓权限自愈**：sg-server root crontab `bare-perm-heal` 每 15 分钟对所有 /srv/git/*.git 执行 chgrp fleet -R + chmod g+w -R——吸收混合身份 push 落下的 root 属主对象段（D-10）。
 5. **阻塞告警缺口**（v1.2 待办）：会话 blocked 目前只有 registry 自证 + 本地监控轮询才发现，缺主动边沿通知。
 
+## 十、卷封制工具合同与联审增补（2026-08-28，CPO/CTO 联审落地）
+
+1. **seal-materials.py 载体合同**：attach/verify/manifest 三模式；**双 hash**（raw + LF 归一）——行尾级差异判 **SOFT-DRIFT**（警告留痕、exit 0、不触发 §9.3 污染裁决），内容级差异判 **DRIFT**（exit 2、必须裁决）；重封仅可经 §9.3 裁决后显式执行（工具层拒绝静默重封）。rc 语义：0=一致/含 SOFT、1=未封卷、2=漂移、3=用法或缺材料。
+2. **跨仓封卷强制参数**：树经 tree.repo 路由到非注册仓工作时，封卷/验卷必须显式传 `--repo-root`（默认向上找 .git 在跨仓场景会误判）。
+3. **战役 root 范围**：Merkle root 快照纳入 `reports/` 目录（节点收口报告本体入完整性基线，联审 CPO-F15）。
+4. **节点报告校验器**：`node-report-check.py`（CTO-F1 P0 立法落地）——结构化核心九键（```json fenced）+散文必备三节；翻转前置门+编排收口双门；BRIEF_V2 已接线。
+
 ## 九、卷封制——FADE 材料完整性协议 v1.0（2026-08-27，CEO 提案立制）
 
 **考试隐喻**：F 铸计划=出卷，sourceMaterials 登记=封卷，spawn 开工核对=开考前验卷，会话产出=答卷，收口复核=对卷验收。**材料被中途改动而未走裁决程序的，第一轮验收不得通过——硬坎，无例外。**

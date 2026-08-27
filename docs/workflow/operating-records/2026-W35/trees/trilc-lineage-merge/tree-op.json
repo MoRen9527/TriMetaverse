@@ -26,22 +26,27 @@
   "notes": [
     "domainRouting=local-executable：服务端 tick 三重门不会拾取本树——刻意设计，提交甄别必须在本机做。由白班 TriMLC 监督执行，不在自动管线内。",
     "与 p0fix3-trilc-http 的先后关系：建议先并线再修 P0（避免双线期改 sg 线造成二次冲突）；若 p0fix3 已先行完成，TM-1 需以最新 origin/dev 为基线重对齐。",
-    "收口(2026-08-28 00:0x+08)：TM-1/TM-2 done（§2.7 双节点报告+merge-log 台账在 reports/）；dev=ff2f970 单线化（GitHub lease 重置+sg FF）；门禁 tsc 清+585/1（唯一=HS-3 预置 tui 债）；heyuan 切线决策=下次验收窗口切 dev，tc001-canonical 转历史锚；卷封 verify=0 首试点达成"
+    "收口(2026-08-28 00:0x+08)：TM-1/TM-2 done（§2.7 双节点报告+merge-log 台账在 reports/）；dev=ff2f970 单线化（GitHub lease 重置+sg FF）；门禁 tsc 清+585/1（唯一=HS-3 预置 tui 债）；heyuan 切线决策=下次验收窗口切 dev，tc001-canonical 转历史锚；卷封 verify=0 首试点达成",
+    "卷封裁决：§9.3(a) 授权修订裁定（2026-08-28 00:2x+08）：封卷后材料合法演进——计划文档追加 §四战役对账/§4.5 验收回执/v1.2 交付节（10462B→11696B，commit 链 cd9c1614..092ad159 可溯）；不影响 TM-1/TM-2 已执行工作语义（§二 operative 步骤零改动）→ 豁免放行+按当前版本重封留档。"
   ],
   "sourceMaterials": [
     {
       "path": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md",
-      "sha256": "ffaf893533e2ea7926b300d28f71c7d63789a44bbfd5ca3662683fbd9879e0a7",
-      "bytes": 10462,
+      "sha256": "668d30a3637b3a4e5450747fed1b8ca6da7622c7e7d69299d6c8fc83d9933cac",
+      "bytes": 11752,
       "role": "campaign-plan",
-      "recordedAt": "2026-08-27T14:34:44.488147+00:00"
+      "recordedAt": "2026-08-27T14:34:44.488147+00:00",
+      "sha256_lf": "aa3607f88567e7cc111686ca89483f198f855b86ee5ac232b06195d4f14b8638",
+      "resealed_after_adjudication": "2026-08-27T15:59:39.695768+00:00"
     },
     {
       "path": "docs/execution/fade-006-execution-autopick-spec.md",
-      "sha256": "863ad15166535f299a45d965f6de8dbbf302bcb6c754bd063866fea540ec814f",
-      "bytes": 3857,
+      "sha256": "3e412542caf312013aa8da8cb4265327cf71aa59dc8cc40ca7ed5e101f2b4edf",
+      "bytes": 3907,
       "role": "campaign-plan",
-      "recordedAt": "2026-08-27T14:34:44.489150+00:00"
+      "recordedAt": "2026-08-27T14:34:44.489150+00:00",
+      "sha256_lf": "863ad15166535f299a45d965f6de8dbbf302bcb6c754bd063866fea540ec814f",
+      "resealed_after_adjudication": "2026-08-27T15:59:39.695768+00:00"
     }
   ]
 }
