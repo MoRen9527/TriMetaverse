@@ -1,0 +1,20 @@
+{
+  "label": "round0-node22",
+  "cmd": "/home/fleet/.local/opt/node-v22.14.0-linux-x64/bin/node --import tsx --test <enum-tests.txt 显式枚举>",
+  "nodeBin": "/home/fleet/.local/opt/node-v22.14.0-linux-x64/bin/node",
+  "nodeVersion": "v22.14.0",
+  "repoCwd": "/srv/fleet/TriLC",
+  "timedOut": false,
+  "signal": null,
+  "wallMs": 14070,
+  "startedAt": "2026-08-27T08:03:30.632Z",
+  "endedAt": "2026-08-27T08:03:44.712Z",
+  "files": 40,
+  "tests": "451",
+  "suites": "82",
+  "pass": "443",
+  "fail": "8",
+  "cancelled": "0",
+  "skipped": "0",
+  "todo": "0"
+}

@@ -1,0 +1,18 @@
+{
+  "label": "round0",
+  "cmd": "node --import tsx --test <enum-tests.txt 显式枚举>",
+  "repoCwd": "/srv/fleet/TriLC",
+  "timedOut": false,
+  "signal": null,
+  "wallMs": 92730,
+  "startedAt": "2026-08-27T08:00:03.035Z",
+  "endedAt": "2026-08-27T08:01:35.767Z",
+  "files": 40,
+  "tests": "295",
+  "suites": "46",
+  "pass": "243",
+  "fail": "52",
+  "cancelled": "0",
+  "skipped": "0",
+  "todo": "0"
+}

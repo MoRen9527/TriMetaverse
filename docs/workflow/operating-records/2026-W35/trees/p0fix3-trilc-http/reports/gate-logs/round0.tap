@@ -1,0 +1,2801 @@
+TAP version 13
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/c1-session-resume.test.ts
+not ok 1 - /srv/fleet/TriLC/test/c1-session-resume.test.ts
+  ---
+  duration_ms: 390.651771
+  location: '/srv/fleet/TriLC/test/c1-session-resume.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/c15-compact.test.ts
+not ok 2 - /srv/fleet/TriLC/test/c15-compact.test.ts
+  ---
+  duration_ms: 374.30175
+  location: '/srv/fleet/TriLC/test/c15-compact.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: uninitialized when state file missing
+ok 3 - uninitialized when state file missing
+  ---
+  duration_ms: 23.825743
+  ...
+# Subtest: save transitions state
+ok 4 - save transitions state
+  ---
+  duration_ms: 14.266734
+  ...
+# Subtest: load existing state file
+ok 5 - load existing state file
+  ---
+  duration_ms: 6.112753
+  ...
+# (node:1070253) ExperimentalWarning: The MockTimers API is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: ConnectionManager — Heartbeat Wake Integration
+    # Subtest: fires the wake handler when requestHeartbeatNow is called
+    not ok 1 - fires the wake handler when requestHeartbeatNow is called
+      ---
+      duration_ms: 3.147744
+      location: 'file:///srv/fleet/TriLC/test/connection-manager.test.ts:1:370'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/connection-manager.test.ts:27:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:948:7)
+        async startSubtest (node:internal/test_runner/harness:214:3)
+      ...
+    # Subtest: handles rapid succession of wake requests (simulating replay burst)
+    not ok 2 - handles rapid succession of wake requests (simulating replay burst)
+      ---
+      duration_ms: 0.573613
+      location: 'file:///srv/fleet/TriLC/test/connection-manager.test.ts:1:691'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/connection-manager.test.ts:27:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: setEnabled(false) prevents wake requests from firing
+    not ok 3 - setEnabled(false) prevents wake requests from firing
+      ---
+      duration_ms: 0.775881
+      location: 'file:///srv/fleet/TriLC/test/connection-manager.test.ts:1:1118'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/connection-manager.test.ts:27:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: setEnabled(true) re-enables after disable
+    not ok 4 - setEnabled(true) re-enables after disable
+      ---
+      duration_ms: 0.883816
+      location: 'file:///srv/fleet/TriLC/test/connection-manager.test.ts:1:1533'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/connection-manager.test.ts:27:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: handler disposer clears the handler so no more wakes fire
+    not ok 5 - handler disposer clears the handler so no more wakes fire
+      ---
+      duration_ms: 0.688229
+      location: 'file:///srv/fleet/TriLC/test/connection-manager.test.ts:1:1947'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/connection-manager.test.ts:27:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: hasPendingWake returns true when a wake is queued and false after execution
+    not ok 6 - hasPendingWake returns true when a wake is queued and false after execution
+      ---
+      duration_ms: 0.482239
+      location: 'file:///srv/fleet/TriLC/test/connection-manager.test.ts:1:2300'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/connection-manager.test.ts:27:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: retry wake after handler error respects cooldown
+    not ok 7 - retry wake after handler error respects cooldown
+      ---
+      duration_ms: 0.655483
+      location: 'file:///srv/fleet/TriLC/test/connection-manager.test.ts:1:2728'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/connection-manager.test.ts:27:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    1..7
+not ok 6 - ConnectionManager — Heartbeat Wake Integration
+  ---
+  duration_ms: 10.15163
+  type: 'suite'
+  location: 'file:///srv/fleet/TriLC/test/connection-manager.test.ts:1:169'
+  failureType: 'subtestsFailed'
+  error: '7 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ enable debugging { debug: true }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../.env // tip: ◈ encrypted .env [www.dotenvx.com]
+# [contract-resolver] loaded 1 agent contracts
+# Subtest: AgentContractResolver
+    # Subtest: resolves contract paths from the source-agents root
+    ok 1 - resolves contract paths from the source-agents root
+      ---
+      duration_ms: 71.497233
+      ...
+# [contract-resolver] loaded 1 agent contracts
+    # Subtest: uses agent body frontmatter when the dedicated frontmatter file is empty
+    ok 2 - uses agent body frontmatter when the dedicated frontmatter file is empty
+      ---
+      duration_ms: 23.864407
+      ...
+# [contract-resolver] failed to load /tmp/trilc-contract-v2-reject-r9vIZM/legacy-agent/legacy-agent.contract.yaml: [ContractV3] /tmp/trilc-contract-v2-reject-r9vIZM/legacy-agent/legacy-agent.contract.yaml: unsupported contract version "2.0", expected "3.0" — 迁移指引见 TriCompany/docs/engineering/agent-contract-v3-spec.md §三
+# [contract-resolver] loaded 0 agent contracts
+    # Subtest: rejects v2-shaped contracts (negative path: no compat branch)
+    ok 3 - rejects v2-shaped contracts (negative path: no compat branch)
+      ---
+      duration_ms: 24.960087
+      ...
+# [contract-resolver] loaded 3 agent contracts
+# [contract-resolver] loaded 4 employee roster entries (/tmp/trilc-role-catalog-JJSzwO/docs/registry/employee-roster.json)
+    # Subtest: getRoleCatalog: identity 面解析 + roster tier/isGovernance + DEFAULT_SELECTED_ROLES 默认勾选
+    ok 4 - getRoleCatalog: identity 面解析 + roster tier/isGovernance + DEFAULT_SELECTED_ROLES 默认勾选
+      ---
+      duration_ms: 52.881634
+      ...
+# [contract-resolver] loaded 3 agent contracts
+    # Subtest: getRoleCatalog: roster 未加载 → null（端点 503 兜底，不开天窗）
+    ok 5 - getRoleCatalog: roster 未加载 → null（端点 503 兜底，不开天窗）
+      ---
+      duration_ms: 47.887815
+      ...
+    1..5
+ok 7 - AgentContractResolver
+  ---
+  duration_ms: 224.498337
+  type: 'suite'
+  ...
+# Subtest: TRILC_ENV_FILE 显式注入 = 第一候选（安装态指路，路径不含密钥）
+ok 8 - TRILC_ENV_FILE 显式注入 = 第一候选（安装态指路，路径不含密钥）
+  ---
+  duration_ms: 1.115622
+  ...
+# Subtest: 安装态 dataDir 相邻候选可达（TRILC_DATA_DIR 显式隔离优先）
+ok 9 - 安装态 dataDir 相邻候选可达（TRILC_DATA_DIR 显式隔离优先）
+  ---
+  duration_ms: 0.301084
+  ...
+# Subtest: 未设 TRILC_DATA_DIR 时回退 LOCALAPPDATA/trilc/.env
+ok 10 - 未设 TRILC_DATA_DIR 时回退 LOCALAPPDATA/trilc/.env
+  ---
+  duration_ms: 0.202059
+  ...
+# Subtest: 源码态候选保留（r19 口径不退化）
+ok 11 - 源码态候选保留（r19 口径不退化）
+  ---
+  duration_ms: 0.203376
+  ...
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/event-queue.test.ts
+not ok 7 - /srv/fleet/TriLC/test/event-queue.test.ts
+  ---
+  duration_ms: 405.065784
+  location: '/srv/fleet/TriLC/test/event-queue.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌁ auth for agents [www.vestauth.com]
+# ◇ injected env (0) from ../TriModel/.env // tip: ◈ encrypted .env [www.dotenvx.com]
+# ◇ injected env (0) from ../.env // tip: ⌘ override existing { override: true }
+# (node:1070312) ExperimentalWarning: The MockTimers API is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: TriLCHeartbeatRunner
+    # Subtest: start is idempotent — calling start twice does not create duplicate timers
+    not ok 1 - start is idempotent — calling start twice does not create duplicate timers
+      ---
+      duration_ms: 6.770157
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:1179'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-runner.test.ts:80:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:948:7)
+        async startSubtest (node:internal/test_runner/harness:214:3)
+      ...
+    # Subtest: stop before start is a no-op
+    not ok 2 - stop before start is a no-op
+      ---
+      duration_ms: 0.912031
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:1424'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-runner.test.ts:80:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: stop clears state so a subsequent start begins fresh
+    not ok 3 - stop clears state so a subsequent start begins fresh
+      ---
+      duration_ms: 0.570893
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:1479'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-runner.test.ts:80:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: arms a timer for the configured interval on start
+    not ok 4 - arms a timer for the configured interval on start
+      ---
+      duration_ms: 0.85957
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:1721'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-runner.test.ts:80:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: updateAgents merges new configs and preserves nextRunAt for existing agents
+    not ok 5 - updateAgents merges new configs and preserves nextRunAt for existing agents
+      ---
+      duration_ms: 0.882335
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:1920'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-runner.test.ts:80:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: updateAgents removes agents that are no longer in the config list
+    not ok 6 - updateAgents removes agents that are no longer in the config list
+      ---
+      duration_ms: 0.471494
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:2224'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-runner.test.ts:80:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: does not schedule a running agent
+    not ok 7 - does not schedule a running agent
+      ---
+      duration_ms: 0.699005
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:2450'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-runner.test.ts:80:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: schedules multiple agents independently
+    not ok 8 - schedules multiple agents independently
+      ---
+      duration_ms: 0.668063
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:2628'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-runner.test.ts:80:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: model and maxTurns are propagated from config
+    not ok 9 - model and maxTurns are propagated from config
+      ---
+      duration_ms: 0.550727
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:2948'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-runner.test.ts:80:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    1..9
+not ok 13 - TriLCHeartbeatRunner
+  ---
+  duration_ms: 15.319598
+  type: 'suite'
+  location: 'file:///srv/fleet/TriLC/test/heartbeat-runner.test.ts:1:660'
+  failureType: 'subtestsFailed'
+  error: '9 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# (node:1070341) ExperimentalWarning: The MockTimers API is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: TriLCHeartbeatWake
+    # Subtest: coalesces multiple rapid requests into a single handler invocation
+    not ok 1 - coalesces multiple rapid requests into a single handler invocation
+      ---
+      duration_ms: 3.155456
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:337'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:948:7)
+        async startSubtest (node:internal/test_runner/harness:214:3)
+      ...
+    # Subtest: higher-priority wake preempts lower-priority pending wake
+    not ok 2 - higher-priority wake preempts lower-priority pending wake
+      ---
+      duration_ms: 0.681849
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:865'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: lower-priority wake does not preempt higher-priority pending wake
+    not ok 3 - lower-priority wake does not preempt higher-priority pending wake
+      ---
+      duration_ms: 0.418314
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:1293'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: retry cooldown prevents premature re-fire
+    not ok 4 - retry cooldown prevents premature re-fire
+      ---
+      duration_ms: 0.341443
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:1740'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: new sooner-firing timer preempts later existing timer
+    not ok 5 - new sooner-firing timer preempts later existing timer
+      ---
+      duration_ms: 0.781122
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:2169'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: stale disposer does not clear a newer handler registration
+    not ok 6 - stale disposer does not clear a newer handler registration
+      ---
+      duration_ms: 1.087866
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:2569'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: current disposer correctly clears the handler
+    not ok 7 - current disposer correctly clears the handler
+      ---
+      duration_ms: 0.766123
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:3132'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: disabled wake ignores requestHeartbeatNow
+    not ok 8 - disabled wake ignores requestHeartbeatNow
+      ---
+      duration_ms: 0.742994
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:3487'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: re-enabling allows wake again
+    not ok 9 - re-enabling allows wake again
+      ---
+      duration_ms: 0.40098
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:3832'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: isEnabled reflects current state
+    not ok 10 - isEnabled reflects current state
+      ---
+      duration_ms: 0.549142
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:4292'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: hasPendingWake returns true when a wake is queued
+    not ok 11 - hasPendingWake returns true when a wake is queued
+      ---
+      duration_ms: 0.343756
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:4519'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: hasPendingWake returns false after execution completes
+    not ok 12 - hasPendingWake returns false after execution completes
+      ---
+      duration_ms: 0.43479
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:4760'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: each createHeartbeatWake() instance is independent
+    not ok 13 - each createHeartbeatWake() instance is independent
+      ---
+      duration_ms: 0.745207
+      location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:5083'
+      failureType: 'hookFailed'
+      error: 'The "timers" argument must be an instance of Array. Received an instance of Object'
+      code: 'ERR_INVALID_ARG_TYPE'
+      name: 'TypeError'
+      stack: |-
+        __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+        new NodeError (node:internal/errors:405:5)
+        __node_internal_ (node:internal/validators:289:11)
+        MockTimers.enable (node:internal/test_runner/mock/mock_timers:510:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/heartbeat-wake.test.ts:22:17)
+        TestHook.runInAsyncScope (node:async_hooks:203:9)
+        TestHook.run (node:internal/test_runner/test:631:25)
+        TestHook.run (node:internal/test_runner/test:856:18)
+        node:internal/test_runner/test:565:20
+        async Suite.runHook (node:internal/test_runner/test:563:7)
+        async Test.run (node:internal/test_runner/test:607:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    1..13
+not ok 14 - TriLCHeartbeatWake
+  ---
+  duration_ms: 13.565409
+  type: 'suite'
+  location: 'file:///srv/fleet/TriLC/test/heartbeat-wake.test.ts:1:169'
+  failureType: 'subtestsFailed'
+  error: '13 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: validate matrix: ceoName / selections / entry 400 族
+ok 15 - validate matrix: ceoName / selections / entry 400 族
+  ---
+  duration_ms: 2.472044
+  ...
+# Subtest: validate matrix: 白名单逃逸拒绝（路径注入 → 400，不落盘）
+ok 16 - validate matrix: 白名单逃逸拒绝（路径注入 → 400，不落盘）
+  ---
+  duration_ms: 0.340134
+  ...
+# Subtest: validate: catalog null → role_catalog_unavailable（不开天窗）
+ok 17 - validate: catalog null → role_catalog_unavailable（不开天窗）
+  ---
+  duration_ms: 0.241773
+  ...
+# Subtest: phase gate: 非 onboarding → 422 { chainState }（A' 字面门禁）
+ok 18 - phase gate: 非 onboarding → 422 { chainState }（A' 字面门禁）
+  ---
+  duration_ms: 64.316216
+  ...
+# Subtest: prewrite failure → .bak 恢复 + 删新增文件 + 500 { rollback: completed }
+ok 19 - prewrite failure → .bak 恢复 + 删新增文件 + 500 { rollback: completed }
+  ---
+  duration_ms: 32.257981
+  ...
+# Subtest: prewrite failure 回滚删新增文件（无 bak 的新文件）
+ok 20 - prewrite failure 回滚删新增文件（无 bak 的新文件）
+  ---
+  duration_ms: 22.334583
+  ...
+# Subtest: idempotent retry: state saved + transition failed → 重入跳过文件段补 transition
+ok 21 - idempotent retry: state saved + transition failed → 重入跳过文件段补 transition
+  ---
+  duration_ms: 80.430747
+  ...
+# Subtest: idempotent retry: employees 不一致 → 409 conflict
+ok 22 - idempotent retry: employees 不一致 → 409 conflict
+  ---
+  duration_ms: 32.88442
+  ...
+# Subtest: reentrancy: 运行中再触发 → 409 { busy: true }
+ok 23 - reentrancy: 运行中再触发 → 409 { busy: true }
+  ---
+  duration_ms: 37.902799
+  ...
+# Subtest: event order: assembling → assembled；chain-changed 与状态帧一致
+ok 24 - event order: assembling → assembled；chain-changed 与状态帧一致
+  ---
+  duration_ms: 41.818372
+  ...
+# Subtest: whitelist artifacts written; existing business-state/AGENTS preserved; <5 warning
+ok 25 - whitelist artifacts written; existing business-state/AGENTS preserved; <5 warning
+  ---
+  duration_ms: 43.663061
+  ...
+# Subtest: progress upsert + projection roundtrip（REQ-016 断点续跑真源）
+ok 26 - progress upsert + projection roundtrip（REQ-016 断点续跑真源）
+  ---
+  duration_ms: 14.778511
+  ...
+# Subtest: validateProgressUpsert: step 枚举 / 字段形状 / 空补丁
+ok 27 - validateProgressUpsert: step 枚举 / 字段形状 / 空补丁
+  ---
+  duration_ms: 0.861006
+  ...
+# Subtest: init mode: 链态矩阵 + 端点引用 + 零本地执行措辞
+ok 28 - init mode: 链态矩阵 + 端点引用 + 零本地执行措辞
+  ---
+  duration_ms: 0.507881
+  ...
+# Subtest: transition matrix: only linear forward single-steps are valid
+ok 29 - transition matrix: only linear forward single-steps are valid
+  ---
+  duration_ms: 1.991024
+  ...
+# Subtest: invalid transitions throw and do not persist
+ok 30 - invalid transitions throw and do not persist
+  ---
+  duration_ms: 18.314062
+  ...
+# Subtest: full forward walk: eventSeq 1..6, transitions published with correct frames
+ok 31 - full forward walk: eventSeq 1..6, transitions published with correct frames
+  ---
+  duration_ms: 22.701691
+  ...
+# Subtest: mid-phase crash recovery: resume from persisted frame
+ok 32 - mid-phase crash recovery: resume from persisted frame
+  ---
+  duration_ms: 13.228817
+  ...
+# Subtest: missing file loads default uninitialized frame (idempotent)
+ok 33 - missing file loads default uninitialized frame (idempotent)
+  ---
+  duration_ms: 1.921719
+  ...
+# Subtest: load() 三件套①：文件缺失 → 默认帧且无 .corrupt 生成（静默）
+ok 34 - load() 三件套①：文件缺失 → 默认帧且无 .corrupt 生成（静默）
+  ---
+  duration_ms: 2.369533
+  ...
+# Subtest: load() 三件套②：非法 JSON → .corrupt 备份 + 默认帧 + console.error
+ok 35 - load() 三件套②：非法 JSON → .corrupt 备份 + 默认帧 + console.error
+  ---
+  duration_ms: 17.252889
+  ...
+# Subtest: load() 三件套③：合法 JSON 正常加载（回归，且不覆盖既有 .corrupt）
+ok 36 - load() 三件套③：合法 JSON 正常加载（回归，且不覆盖既有 .corrupt）
+  ---
+  duration_ms: 5.177957
+  ...
+# Subtest: atomic write: no tmp residue, content read-back verified, eventSeq monotonic
+ok 37 - atomic write: no tmp residue, content read-back verified, eventSeq monotonic
+  ---
+  duration_ms: 20.047074
+  ...
+# Subtest: status payload matches last published event frame
+ok 38 - status payload matches last published event frame
+  ---
+  duration_ms: 10.942936
+  ...
+# Subtest: reset 落盘帧 chainState=selfcheck（UI 卡起点，防假通过）
+ok 39 - reset 落盘帧 chainState=selfcheck（UI 卡起点，防假通过）
+  ---
+  duration_ms: 14.994541
+  ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+# Subtest: runConfirmCheck — L1 三面比对
+    # Subtest: 三面一致 → l1 全 ok + readyForConfirm（全链路绿）
+    not ok 1 - 三面一致 → l1 全 ok + readyForConfirm（全链路绿）
+      ---
+      duration_ms: 5073.693737
+      location: 'file:///srv/fleet/TriLC/test/init-confirm.test.ts:1:4998'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+        
+        false !== true
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: 'strictEqual'
+      stack: |-
+        <anonymous> (/srv/fleet/TriLC/test/init-confirm.test.ts:189:14)
+        process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        withStatusServer (/srv/fleet/TriLC/test/init-confirm.test.ts:138:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/init-confirm.test.ts:187:5)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:948:7)
+        async startSubtest (node:internal/test_runner/harness:214:3)
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: repoUrl 三面任一不等 → l1 error + 元素明细（错误仓）
+    ok 2 - repoUrl 三面任一不等 → l1 error + 元素明细（错误仓）
+      ---
+      duration_ms: 5015.893072
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: worktreePath 短指纹呈现（SHA-256.slice(0,8)）+ 服务器侧不一致 → error
+    not ok 3 - worktreePath 短指纹呈现（SHA-256.slice(0,8)）+ 服务器侧不一致 → error
+      ---
+      duration_ms: 5017.626575
+      location: 'file:///srv/fleet/TriLC/test/init-confirm.test.ts:3:379'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+        
+        '' !== 'd4a4596c'
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 'd4a4596c'
+      actual: ''
+      operator: 'strictEqual'
+      stack: |-
+        <anonymous> (/srv/fleet/TriLC/test/init-confirm.test.ts:237:14)
+        process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        withStatusServer (/srv/fleet/TriLC/test/init-confirm.test.ts:138:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/init-confirm.test.ts:233:5)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: R3：worktreePath 三方空集 → 一致判 ok（L1 职责 = 一致性非完备性）
+    ok 4 - R3：worktreePath 三方空集 → 一致判 ok（L1 职责 = 一致性非完备性）
+      ---
+      duration_ms: 5012.419982
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: R3：worktreePath 一侧空集其余非空 → error
+    ok 5 - R3：worktreePath 一侧空集其余非空 → error
+      ---
+      duration_ms: 5011.585093
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: R3：repoUrl 空值维持非空要求 → error（完备性要求不回退）
+    ok 6 - R3：repoUrl 空值维持非空要求 → error（完备性要求不回退）
+      ---
+      duration_ms: 5010.275348
+      ...
+    1..6
+not ok 40 - runConfirmCheck — L1 三面比对
+  ---
+  duration_ms: 30146.632629
+  type: 'suite'
+  location: 'file:///srv/fleet/TriLC/test/init-confirm.test.ts:1:4931'
+  failureType: 'subtestsFailed'
+  error: '2 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+# Subtest: runConfirmCheck — L2 同线收敛矩阵（i4-4 修正记录 ②）+ L3 + 降级口径
+    # Subtest: 三值相等 → 同线绿（bundleAncestor=true，无 merge-base 调用）
+    ok 1 - 三值相等 → 同线绿（bundleAncestor=true，无 merge-base 调用）
+      ---
+      duration_ms: 5013.974705
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: fleet 落后（fleet 是 local 祖先）→ 同线绿 + 落后仅提示不阻断
+    ok 2 - fleet 落后（fleet 是 local 祖先）→ 同线绿 + 落后仅提示不阻断
+      ---
+      duration_ms: 5014.905201
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: fleet 领先（local 是 fleet 祖先）→ 同线绿
+    ok 3 - fleet 领先（local 是 fleet 祖先）→ 同线绿
+      ---
+      duration_ms: 5012.585302
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: 分叉（双方可解析但互非祖先）→ 红勿确认
+    ok 4 - 分叉（双方可解析但互非祖先）→ 红勿确认
+      ---
+      duration_ms: 5015.380631
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: fleetHead 本地不可解析（未拉取）→ 红 + 先 pull 诊断
+    ok 5 - fleetHead 本地不可解析（未拉取）→ 红 + 先 pull 诊断
+      ---
+      duration_ms: 5011.064908
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: bundleHead 非 localHead 祖先（分叉自 bundle）→ 红
+    ok 6 - bundleHead 非 localHead 祖先（分叉自 bundle）→ 红
+      ---
+      duration_ms: 5014.15322
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: 空 bundleHead → 红（bundleAncestor=false）
+    ok 7 - 空 bundleHead → 红（bundleAncestor=false）
+      ---
+      duration_ms: 5010.358331
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: 降级（remote null）：bundleHead 祖先/相等即绿（废止双值比较）
+    ok 8 - 降级（remote null）：bundleHead 祖先/相等即绿（废止双值比较）
+      ---
+      duration_ms: 10.399567
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: 降级（remote null）：bundleHead 非祖先 → 红
+    ok 9 - 降级（remote null）：bundleHead 非祖先 → 红
+      ---
+      duration_ms: 6.976451
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: 未 applied（applied.bundleId ≠ 本地）→ l3 未就绪 + 重试口径
+    ok 10 - 未 applied（applied.bundleId ≠ 本地）→ l3 未就绪 + 重试口径
+      ---
+      duration_ms: 5010.748667
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: 本地 bundle 缺失 → l1/l3 未就绪
+    ok 11 - 本地 bundle 缺失 → l1/l3 未就绪
+      ---
+      duration_ms: 5012.494457
+      ...
+    1..11
+ok 41 - runConfirmCheck — L2 同线收敛矩阵（i4-4 修正记录 ②）+ L3 + 降级口径
+  ---
+  duration_ms: 45135.76635
+  type: 'suite'
+  ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+# Subtest: runConfirm — POST confirm 门禁与转移
+    # Subtest: 全绿 → 200 ready + 快照 confirmed + init:step-event
+    not ok 1 - 全绿 → 200 ready + 快照 confirmed + init:step-event
+      ---
+      duration_ms: 5020.141775
+      location: 'file:///srv/fleet/TriLC/test/init-confirm.test.ts:19:75'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+        
+        409 !== 200
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 200
+      actual: 409
+      operator: 'strictEqual'
+      stack: |-
+        <anonymous> (/srv/fleet/TriLC/test/init-confirm.test.ts:497:14)
+        process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        withStatusServer (/srv/fleet/TriLC/test/init-confirm.test.ts:138:5)
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/init-confirm.test.ts:494:5)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:948:7)
+        async Test.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: readyForConfirm 未达 → 409 notReady 附 check 结果
+    ok 2 - readyForConfirm 未达 → 409 notReady 附 check 结果
+      ---
+      duration_ms: 5021.73024
+      ...
+    # Subtest: 非 confirm 链态 → 409 { chainState }
+    ok 3 - 非 confirm 链态 → 409 { chainState }
+      ---
+      duration_ms: 12.160523
+      ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry D:/Code/ai/TriMetaverse（磁盘资产保留，可重新认领）
+    # Subtest: 防重入：运行中再触发 → 409 busy
+    ok 4 - 防重入：运行中再触发 → 409 busy
+      ---
+      duration_ms: 5018.186572
+      ...
+    1..4
+not ok 42 - runConfirm — POST confirm 门禁与转移
+  ---
+  duration_ms: 15073.278915
+  type: 'suite'
+  location: 'file:///srv/fleet/TriLC/test/init-confirm.test.ts:18:224'
+  failureType: 'subtestsFailed'
+  error: '1 subtest failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: runFirstCollabUpdate — 链态门
+    # Subtest: 非 ready 链态 → 409 { chainState }
+    ok 1 - 非 ready 链态 → 409 { chainState }
+      ---
+      duration_ms: 23.653163
+      ...
+    1..1
+ok 43 - runFirstCollabUpdate — 链态门
+  ---
+  duration_ms: 26.179895
+  type: 'suite'
+  ...
+# Subtest: runFirstCollabUpdate — 合法转移
+    # Subtest: pending→triggered→passed 逐级推进（200 changed:true + 快照落盘）
+    ok 1 - pending→triggered→passed 逐级推进（200 changed:true + 快照落盘）
+      ---
+      duration_ms: 25.695947
+      ...
+    1..1
+ok 44 - runFirstCollabUpdate — 合法转移
+  ---
+  duration_ms: 26.250591
+  type: 'suite'
+  ...
+# Subtest: runFirstCollabUpdate — 非法转移拒绝
+    # Subtest: 跳级 pending→passed → 409 illegalTransition
+    ok 1 - 跳级 pending→passed → 409 illegalTransition
+      ---
+      duration_ms: 13.610254
+      ...
+    # Subtest: 回退 passed→triggered → 409 illegalTransition
+    ok 2 - 回退 passed→triggered → 409 illegalTransition
+      ---
+      duration_ms: 16.644875
+      ...
+    1..2
+ok 45 - runFirstCollabUpdate — 非法转移拒绝
+  ---
+  duration_ms: 31.175857
+  type: 'suite'
+  ...
+# Subtest: runFirstCollabUpdate — 重放幂等
+    # Subtest: 同 status 重复提交 → 200 changed:false（不写状态、eventSeq 不增长）
+    ok 1 - 同 status 重复提交 → 200 changed:false（不写状态、eventSeq 不增长）
+      ---
+      duration_ms: 19.489895
+      ...
+    1..1
+ok 46 - runFirstCollabUpdate — 重放幂等
+  ---
+  duration_ms: 20.167935
+  type: 'suite'
+  ...
+# Subtest: runFirstCollabUpdate — 载荷校验
+    # Subtest: 非法 status → 400 invalid_status；note 超长 → 400 invalid_note
+    ok 1 - 非法 status → 400 invalid_status；note 超长 → 400 invalid_note
+      ---
+      duration_ms: 13.238752
+      ...
+    1..1
+ok 47 - runFirstCollabUpdate — 载荷校验
+  ---
+  duration_ms: 13.762711
+  type: 'suite'
+  ...
+# Subtest: summarize rules: fail→blocked / degraded-only→degraded / all-ok→pass
+ok 48 - summarize rules: fail→blocked / degraded-only→degraded / all-ok→pass
+  ---
+  duration_ms: 3.234808
+  ...
+# Subtest: tripilot counter: recent-window counting + expiry
+ok 49 - tripilot counter: recent-window counting + expiry
+  ---
+  duration_ms: 0.547898
+  ...
+# [trilc:keys] fetched fresh keys (1 providers): { deepseek: { api_key: 'test-****' } }
+# [trilc:keys] refresh timer: every 900s (first in 42s stagger)
+# Subtest: five probes all-ok → summary pass, finished event + chain snapshot persisted
+ok 50 - five probes all-ok → summary pass, finished event + chain snapshot persisted
+  ---
+  duration_ms: 215.179217
+  ...
+# [trilc:keys] no cached keys and fetch failed — chat disabled: TriModel API returned 401
+# Subtest: key-cache 401 → trimodel fail → summary blocked（401 唯一认证阻塞类）
+ok 51 - key-cache 401 → trimodel fail → summary blocked（401 唯一认证阻塞类）
+  ---
+  duration_ms: 111.248824
+  ...
+# [trilc:keys] fetched fresh keys (1 providers): { deepseek: { api_key: '****' } }
+# [trilc:keys] refresh timer: every 900s (first in 34s stagger)
+# Subtest: tristaciss unreachable → degraded-only → summary degraded（降级继续）
+ok 52 - tristaciss unreachable → degraded-only → summary degraded（降级继续）
+  ---
+  duration_ms: 200.839181
+  ...
+# [trilc:keys] fetched fresh keys (1 providers): { deepseek: { api_key: '****' } }
+# [trilc:keys] refresh timer: every 900s (first in 59s stagger)
+# Subtest: plane-hint probe: task:failed → 显式红行（分类=模型链族）
+ok 53 - plane-hint probe: task:failed → 显式红行（分类=模型链族）
+  ---
+  duration_ms: 190.189812
+  ...
+# [trilc:keys] fetched fresh keys (1 providers): { deepseek: { api_key: '****' } }
+# [trilc:keys] refresh timer: every 900s (first in 52s stagger)
+# Subtest: plane-hint probe: 零答复伪成功 → fail（A3 红行，不静默吞）
+ok 54 - plane-hint probe: 零答复伪成功 → fail（A3 红行，不静默吞）
+  ---
+  duration_ms: 183.478355
+  ...
+# [trilc:keys] fetched fresh keys (1 providers): { deepseek: { api_key: '****' } }
+# [trilc:keys] refresh timer: every 900s (first in 49s stagger)
+# Subtest: anti-reentry: running 中再触发 → conflict + 同 runId；完成后复位
+ok 55 - anti-reentry: running 中再触发 → conflict + 同 runId；完成后复位
+  ---
+  duration_ms: 185.97903
+  ...
+# [trilc:keys] fetched fresh keys (1 providers): { deepseek: { api_key: 'test-****' } }
+# [trilc:keys] refresh timer: every 900s (first in 16s stagger)
+# Subtest: A': all-ok summary=pass → selfcheck→onboarding 自动转移 + 事件顺序
+ok 56 - A': all-ok summary=pass → selfcheck→onboarding 自动转移 + 事件顺序
+  ---
+  duration_ms: 213.554249
+  ...
+# [trilc:keys] fetched fresh keys (1 providers): { deepseek: { api_key: '****' } }
+# [trilc:keys] refresh timer: every 900s (first in 37s stagger)
+# Subtest: A': degraded-only → 自动推进 onboarding
+ok 57 - A': degraded-only → 自动推进 onboarding
+  ---
+  duration_ms: 198.582479
+  ...
+# [trilc:keys] no cached keys and fetch failed — chat disabled: TriModel API returned 401
+# Subtest: A': blocked → 不推进（诊断卡保留，重跑自检幂等）
+ok 58 - A': blocked → 不推进（诊断卡保留，重跑自检幂等）
+  ---
+  duration_ms: 106.50635
+  ...
+# [trilc:keys] fetched fresh keys (1 providers): { deepseek: { api_key: 'test-****' } }
+# [trilc:keys] refresh timer: every 900s (first in 29s stagger)
+# Subtest: A': onboarding 态重跑自检 → 无转移无事件（守卫幂等）
+ok 59 - A': onboarding 态重跑自检 → 无转移无事件（守卫幂等）
+  ---
+  duration_ms: 173.027429
+  ...
+# Subtest: init-sync 链态门与硬错误
+    # Subtest: 非 project-link/sync 链态 → 409 { chainState }
+    ok 1 - 非 project-link/sync 链态 → 409 { chainState }
+      ---
+      duration_ms: 14.802173
+      ...
+    # Subtest: project-link 未 linked → 422 project-link-not-linked
+    ok 2 - project-link 未 linked → 422 project-link-not-linked
+      ---
+      duration_ms: 13.881467
+      ...
+    # Subtest: 公司态未开张 → 400 company-not-initialized（硬错误）
+    ok 3 - 公司态未开张 → 400 company-not-initialized（硬错误）
+      ---
+      duration_ms: 13.821624
+      ...
+    # Subtest: 注册点无焦点项目 → 400 project-not-linked
+    ok 4 - 注册点无焦点项目 → 400 project-not-linked
+      ---
+      duration_ms: 24.669735
+      ...
+    # Subtest: 防重入：运行中再触发 → 409 busy
+    ok 5 - 防重入：运行中再触发 → 409 busy
+      ---
+      duration_ms: 56.52629
+      ...
+    1..5
+ok 60 - init-sync 链态门与硬错误
+  ---
+  duration_ms: 126.447311
+  type: 'suite'
+  ...
+# Subtest: init-sync 五维收集与单维降级
+    # Subtest: 全维收集成功：生成/写/commit/push → 快照 pushed + 转 confirm + 事件序
+    ok 1 - 全维收集成功：生成/写/commit/push → 快照 pushed + 转 confirm + 事件序
+      ---
+      duration_ms: 23.136846
+      ...
+    # Subtest: 密钥纪律：序列化无 sk- 明文、无 api_key 字段，指纹=sha256(材料).slice(0,8)
+    ok 2 - 密钥纪律：序列化无 sk- 明文、无 api_key 字段，指纹=sha256(材料).slice(0,8)
+      ---
+      duration_ms: 21.005438
+      ...
+# [trilc:init-sync] model fetch failed: TriModel down
+    # Subtest: model 不可达 + key-cache 空 → model/keys 维降级不阻塞全链
+    ok 3 - model 不可达 + key-cache 空 → model/keys 维降级不阻塞全链
+      ---
+      duration_ms: 18.675561
+      ...
+    # Subtest: employees TriCompany HEAD 读取失败 → employees 维降级
+    ok 4 - employees TriCompany HEAD 读取失败 → employees 维降级
+      ---
+      duration_ms: 21.247935
+      ...
+    # Subtest: project dev HEAD 读取失败 → 422 project-dev-head-failed
+    ok 5 - project dev HEAD 读取失败 → 422 project-dev-head-failed
+      ---
+      duration_ms: 21.985031
+      ...
+    1..5
+ok 61 - init-sync 五维收集与单维降级
+  ---
+  duration_ms: 107.678662
+  type: 'suite'
+  ...
+# Subtest: init-sync 幂等重跑与 push 失败分类
+    # Subtest: push 失败 → 500 push-failed + sync-pending 挂起（链态留 sync）；重跑同内容 = 纯重推不重新生成
+    ok 1 - push 失败 → 500 push-failed + sync-pending 挂起（链态留 sync）；重跑同内容 = 纯重推不重新生成
+      ---
+      duration_ms: 23.080798
+      ...
+    # Subtest: 内容变化重跑 → 新 bundleId + generatedAt 严格递增（模型目录变化）
+    ok 2 - 内容变化重跑 → 新 bundleId + generatedAt 严格递增（模型目录变化）
+      ---
+      duration_ms: 22.212607
+      ...
+    # Subtest: R1 幂等矩阵：仅 devHead 变化的重跑 → 不换 bundleId + 不 commit + 纯重推
+    ok 3 - R1 幂等矩阵：仅 devHead 变化的重跑 → 不换 bundleId + 不 commit + 纯重推
+      ---
+      duration_ms: 22.495753
+      ...
+    # Subtest: 成功后再触发 → 409 { chainState: confirm }
+    ok 4 - 成功后再触发 → 409 { chainState: confirm }
+      ---
+      duration_ms: 18.7451
+      ...
+    1..4
+ok 62 - init-sync 幂等重跑与 push 失败分类
+  ---
+  duration_ms: 87.701093
+  type: 'suite'
+  ...
+# Subtest: init-sync status + 启动 re-sync 检查
+    # Subtest: remote 可达 → 映射 applied/fleetHead/dims；不可达 → null（降级）
+    ok 1 - remote 可达 → 映射 applied/fleetHead/dims；不可达 → null（降级）
+      ---
+      duration_ms: 5058.343527
+      ...
+    # Subtest: 本地 bundle 存在 → localBundleId/localBundleGeneratedAt 呈现
+    ok 2 - 本地 bundle 存在 → localBundleId/localBundleGeneratedAt 呈现
+      ---
+      duration_ms: 5.520657
+      ...
+# [trilc:init-sync] daemon restart: chainState=sync but no local bundle — 面板「待补」提示（正常断点态，可 sync/run 重跑）
+    # Subtest: 启动 re-sync 检查：只读 no-op（链态 sync、无本地文件 → 提示；不写不推不生成）
+    ok 3 - 启动 re-sync 检查：只读 no-op（链态 sync、无本地文件 → 提示；不写不推不生成）
+      ---
+      duration_ms: 8.907624
+      ...
+# [trilc:init-sync] daemon restart: local bundle local-bundle-1 already applied on server — no-op
+    # Subtest: 启动 re-sync 检查：本地 bundle 与远端 applied 同 bundleId → no-op（remote 桩）
+    ok 4 - 启动 re-sync 检查：本地 bundle 与远端 applied 同 bundleId → no-op（remote 桩）
+      ---
+      duration_ms: 5014.080888
+      ...
+    1..4
+ok 63 - init-sync status + 启动 re-sync 检查
+  ---
+  duration_ms: 10087.810675
+  type: 'suite'
+  ...
+# Subtest: REQ-018 daemon PID self-registration
+    # Subtest: foreground-style daemon registers PID on listen and unregisters on graceful shutdown
+    ok 1 - foreground-style daemon registers PID on listen and unregisters on graceful shutdown
+      ---
+      duration_ms: 334.069051
+      ...
+    # Subtest: trilc stop stops a healthy daemon by port when the PID file is missing
+    ok 2 - trilc stop stops a healthy daemon by port when the PID file is missing
+      ---
+      duration_ms: 978.854003
+      ...
+    1..2
+ok 64 - REQ-018 daemon PID self-registration
+  ---
+  duration_ms: 1315.949534
+  type: 'suite'
+  ...
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/integration/replay-flow.test.ts
+not ok 17 - /srv/fleet/TriLC/test/integration/replay-flow.test.ts
+  ---
+  duration_ms: 320.014818
+  location: '/srv/fleet/TriLC/test/integration/replay-flow.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: applyKeyCacheToEnvironment
+    # Subtest: maps cached providers to the TriModel environment contract
+    ok 1 - maps cached providers to the TriModel environment contract
+      ---
+      duration_ms: 1.615848
+      ...
+    1..1
+ok 66 - applyKeyCacheToEnvironment
+  ---
+  duration_ms: 3.981544
+  type: 'suite'
+  ...
+# Subtest: parseNetstatPid (pure parser, mock netstat output)
+    # Subtest: finds the 127.0.0.1:port LISTENING owner
+    ok 1 - finds the 127.0.0.1:port LISTENING owner
+      ---
+      duration_ms: 1.814053
+      ...
+    # Subtest: returns null when the port has no listener
+    ok 2 - returns null when the port has no listener
+      ---
+      duration_ms: 0.344699
+      ...
+    # Subtest: ignores IPv6 [::1] listeners and non-TCP lines (daemon binds 127.0.0.1 only)
+    ok 3 - ignores IPv6 [::1] listeners and non-TCP lines (daemon binds 127.0.0.1 only)
+      ---
+      duration_ms: 0.168751
+      ...
+    # Subtest: matches Linux netstat LISTEN state and lowercase proto
+    ok 4 - matches Linux netstat LISTEN state and lowercase proto
+      ---
+      duration_ms: 0.473472
+      ...
+    # Subtest: returns null on empty output
+    ok 5 - returns null on empty output
+      ---
+      duration_ms: 0.141865
+      ...
+    1..5
+ok 67 - parseNetstatPid (pure parser, mock netstat output)
+  ---
+  duration_ms: 5.867421
+  type: 'suite'
+  ...
+# Subtest: PID file primitives
+    # Subtest: writePid is atomic (no tmp residue) and readPid round-trips
+    ok 1 - writePid is atomic (no tmp residue) and readPid round-trips
+      ---
+      duration_ms: 15.435385
+      ...
+    # Subtest: writePid overwrites and removePidFile cleans up
+    ok 2 - writePid overwrites and removePidFile cleans up
+      ---
+      duration_ms: 4.145891
+      ...
+    # Subtest: readPid returns null for a missing/garbage file
+    ok 3 - readPid returns null for a missing/garbage file
+      ---
+      duration_ms: 3.466183
+      ...
+    1..3
+ok 68 - PID file primitives
+  ---
+  duration_ms: 24.043584
+  type: 'suite'
+  ...
+# Subtest: registerPid / unregisterPid (daemon-side ownership)
+    # Subtest: registerPid writes this process pid; unregisterPid removes it
+    ok 1 - registerPid writes this process pid; unregisterPid removes it
+      ---
+      duration_ms: 7.528753
+      ...
+    # Subtest: unregisterPid leaves a foreign PID file untouched (own-pid guard)
+    ok 2 - unregisterPid leaves a foreign PID file untouched (own-pid guard)
+      ---
+      duration_ms: 3.247744
+      ...
+    1..2
+ok 69 - registerPid / unregisterPid (daemon-side ownership)
+  ---
+  duration_ms: 11.706263
+  type: 'suite'
+  ...
+# Subtest: waitProcessExit
+    # Subtest: resolves true once a short-lived child exits
+    ok 1 - resolves true once a short-lived child exits
+      ---
+      duration_ms: 206.059759
+      ...
+    # Subtest: resolves false when the timeout elapses while the process is alive
+    ok 2 - resolves false when the timeout elapses while the process is alive
+      ---
+      duration_ms: 404.424132
+      ...
+    # Subtest: resolves true immediately for a non-existent pid
+    ok 3 - resolves true immediately for a non-existent pid
+      ---
+      duration_ms: 0.527676
+      ...
+    1..3
+ok 70 - waitProcessExit
+  ---
+  duration_ms: 611.828079
+  type: 'suite'
+  ...
+# Subtest: normalizeGitUrl: https/ssh/scp 同仓等价，去尾 .git，主机+路径小写
+ok 71 - normalizeGitUrl: https/ssh/scp 同仓等价，去尾 .git，主机+路径小写
+  ---
+  duration_ms: 3.189554
+  ...
+# Subtest: validateLinkPayload: local 源需绝对 localPath+targetPath；github 源需 repoUrl
+not ok 72 - validateLinkPayload: local 源需绝对 localPath+targetPath；github 源需 repoUrl
+  ---
+  duration_ms: 9.851448
+  location: 'file:///srv/fleet/TriLC/test/project-link.test.ts:8:894'
+  failureType: 'testCodeFailure'
+  error: 'false == true'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (/srv/fleet/TriLC/test/project-link.test.ts:169:10)
+    Test.runInAsyncScope (node:async_hooks:203:9)
+    Test.run (node:internal/test_runner/test:631:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:374:18)
+    Test.postRun (node:internal/test_runner/test:715:19)
+    Test.run (node:internal/test_runner/test:673:12)
+    async startSubtest (node:internal/test_runner/harness:214:3)
+  ...
+# Subtest: chain gate: non project-link state returns 409 { chainState }, zero git calls
+ok 73 - chain gate: non project-link state returns 409 { chainState }, zero git calls
+  ---
+  duration_ms: 20.667574
+  ...
+# Subtest: local link full flow: 200 + registry entry + chain snapshot linked + ordered events
+ok 74 - local link full flow: 200 + registry entry + chain snapshot linked + ordered events
+  ---
+  duration_ms: 20.073524
+  ...
+# Subtest: claim path: existing owned worktree registers without any worktree add
+ok 75 - claim path: existing owned worktree registers without any worktree add
+  ---
+  duration_ms: 20.515629
+  ...
+# Subtest: relink same target: second link takes claim path, worktree add called exactly once
+ok 76 - relink same target: second link takes claim path, worktree add called exactly once
+  ---
+  duration_ms: 19.496895
+  ...
+# Subtest: gate-blocked: hasNpmFileDeps flagged repo refuses auto add (422)
+ok 77 - gate-blocked: hasNpmFileDeps flagged repo refuses auto add (422)
+  ---
+  duration_ms: 9.443562
+  ...
+# Subtest: not-whitelisted: foreign remote refused (422), zero git writes
+ok 78 - not-whitelisted: foreign remote refused (422), zero git writes
+  ---
+  duration_ms: 7.943912
+  ...
+# Subtest: target-invalid: non-empty non-git target dir refused
+ok 79 - target-invalid: non-empty non-git target dir refused
+  ---
+  duration_ms: 8.61349
+  ...
+# [trilc:project] rollback: worktree removed（非 --force）：/tmp/project-link-test-kwMbgw/wt
+# Subtest: rollback: register failure → worktree remove without --force, no registry entry, chain pending
+ok 80 - rollback: register failure → worktree remove without --force, no registry entry, chain pending
+  ---
+  duration_ms: 11.382833
+  ...
+# [trilc:project] rollback: worktree removed（非 --force）：/tmp/project-link-test-ynHUMx/wt
+# Subtest: rollback: chain-update failure → registry unregistered + worktree remove non --force
+ok 81 - rollback: chain-update failure → registry unregistered + worktree remove non --force
+  ---
+  duration_ms: 18.471567
+  ...
+# Subtest: mutex: concurrent link requests → second returns 409 busy
+ok 82 - mutex: concurrent link requests → second returns 409 busy
+  ---
+  duration_ms: 131.835288
+  ...
+# Subtest: github source: ssh url whitelist match → clone → default branch → local chain → 200
+ok 83 - github source: ssh url whitelist match → clone → default branch → local chain → 200
+  ---
+  duration_ms: 11.067064
+  ...
+# Subtest: github source: non-whitelisted repoUrl refused before any clone
+ok 84 - github source: non-whitelisted repoUrl refused before any clone
+  ---
+  duration_ms: 6.200793
+  ...
+# Subtest: github source: clone failure classified 422 clone-failed (可改走 local 源)
+ok 85 - github source: clone failure classified 422 clone-failed (可改走 local 源)
+  ---
+  duration_ms: 6.334824
+  ...
+# Subtest: claim: gate 409 outside project-link
+ok 86 - claim: gate 409 outside project-link
+  ---
+  duration_ms: 5.620615
+  ...
+# Subtest: claim: managed worktree → 200 claimed + registration + chain linked (zero git writes)
+ok 87 - claim: managed worktree → 200 claimed + registration + chain linked (zero git writes)
+  ---
+  duration_ms: 9.440552
+  ...
+# Subtest: claim: project clone (main checkout) → 422 kind=project-clone with upgrade hint
+ok 88 - claim: project clone (main checkout) → 422 kind=project-clone with upgrade hint
+  ---
+  duration_ms: 7.035435
+  ...
+# Subtest: claim: unlinked / not-found → 422
+ok 89 - claim: unlinked / not-found → 422
+  ---
+  duration_ms: 6.21365
+  ...
+# Subtest: inspect: managed-worktree / project-clone / unlinked classification
+ok 90 - inspect: managed-worktree / project-clone / unlinked classification
+  ---
+  duration_ms: 8.678889
+  ...
+# [trilc:project] cross-validate: registry entry not in git worktree list — dropping registration for /tmp/project-link-test-lHYolw/stale-wt（不删磁盘）
+# Subtest: cross-validate: registry entry absent from git worktree list is unregistered
+ok 91 - cross-validate: registry entry absent from git worktree list is unregistered
+  ---
+  duration_ms: 19.733953
+  ...
+# Subtest: cross-validate multi-main: entries owned by another main checkout are kept
+ok 92 - cross-validate multi-main: entries owned by another main checkout are kept
+  ---
+  duration_ms: 14.765783
+  ...
+# Subtest: default frame: preset table merged with empty runtime state (no file written on bare load)
+ok 93 - default frame: preset table merged with empty runtime state (no file written on bare load)
+  ---
+  duration_ms: 10.049825
+  ...
+# Subtest: atomic write: register persists via tmp→rename, content read-back correct, no tmp residue
+ok 94 - atomic write: register persists via tmp→rename, content read-back correct, no tmp residue
+  ---
+  duration_ms: 5.764141
+  ...
+# Subtest: primary-key dedup: same path+gitdir idempotent refresh; key conflicts rejected
+ok 95 - primary-key dedup: same path+gitdir idempotent refresh; key conflicts rejected
+  ---
+  duration_ms: 6.176833
+  ...
+# [trilc:project] registry lazy cleanup: dropped ghost entry /tmp/project-registry-test-6sXGHU/gone-wt（磁盘资产保留，可重新认领）
+# [trilc:project] registry lazy cleanup: dropped ghost entry /tmp/project-registry-test-6sXGHU/nogitdir-wt（磁盘资产保留，可重新认领）
+# Subtest: lazy cleanup: ghost entries dropped from registration, disk assets preserved
+ok 96 - lazy cleanup: ghost entries dropped from registration, disk assets preserved
+  ---
+  duration_ms: 9.017623
+  ...
+# Subtest: file explicit hasNpmFileDeps=true overrides preset default (gate safety valve)
+ok 97 - file explicit hasNpmFileDeps=true overrides preset default (gate safety valve)
+  ---
+  duration_ms: 5.927801
+  ...
+# Subtest: fixed path: default resolves to %LOCALAPPDATA%/trilc/project-registry.json; TRILC_PROJECT_REGISTRY overrides (test isolation)
+ok 98 - fixed path: default resolves to %LOCALAPPDATA%/trilc/project-registry.json; TRILC_PROJECT_REGISTRY overrides (test isolation)
+  ---
+  duration_ms: 0.692919
+  ...
+# Subtest: unknown project key rejected on register
+ok 99 - unknown project key rejected on register
+  ---
+  duration_ms: 1.554426
+  ...
+# Subtest: unregister removes registration only (no disk mutation)
+ok 100 - unregister removes registration only (no disk mutation)
+  ---
+  duration_ms: 4.658145
+  ...
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/r5-2.4-2.5-degraded.test.ts
+not ok 22 - /srv/fleet/TriLC/test/r5-2.4-2.5-degraded.test.ts
+  ---
+  duration_ms: 372.428111
+  location: '/srv/fleet/TriLC/test/r5-2.4-2.5-degraded.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: B+D. app.ts JSON-mode dedup shape guard
+    # Subtest: B.1+D.1 text-dedup: both JSON routes use the `!finalContent && event.content` assignment pattern
+    ok 1 - B.1+D.1 text-dedup: both JSON routes use the `!finalContent && event.content` assignment pattern
+      ---
+      duration_ms: 0.820846
+      ...
+    # Subtest: B.2+D.2 tool-render: tool_calls collection loops intact in both JSON routes
+    ok 2 - B.2+D.2 tool-render: tool_calls collection loops intact in both JSON routes
+      ---
+      duration_ms: 0.482695
+      ...
+    # Subtest: B.3+D.3 content/tool_calls separation: each route handles them in independent `if` blocks
+    ok 3 - B.3+D.3 content/tool_calls separation: each route handles them in independent `if` blocks
+      ---
+      duration_ms: 0.391001
+      ...
+    # Subtest: B.4+D.4 streaming routes unchanged: tool_calls SSE handlers still intact for both converters
+    ok 4 - B.4+D.4 streaming routes unchanged: tool_calls SSE handlers still intact for both converters
+      ---
+      duration_ms: 0.62194
+      ...
+    1..4
+ok 102 - B+D. app.ts JSON-mode dedup shape guard
+  ---
+  duration_ms: 4.657024
+  type: 'suite'
+  ...
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/server/harness-scaffold.test.ts
+not ok 24 - /srv/fleet/TriLC/test/server/harness-scaffold.test.ts
+  ---
+  duration_ms: 463.752298
+  location: '/srv/fleet/TriLC/test/server/harness-scaffold.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/server/qa-json-runtime-stub.test.ts
+not ok 25 - /srv/fleet/TriLC/test/server/qa-json-runtime-stub.test.ts
+  ---
+  duration_ms: 400.397995
+  location: '/srv/fleet/TriLC/test/server/qa-json-runtime-stub.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: QA-Anthropic stream — multi-turn + edge cases
+    # Subtest: Q1.1 multi-turn: client text is "Let me check.It is sunny." (no duplication)
+    ok 1 - Q1.1 multi-turn: client text is "Let me check.It is sunny." (no duplication)
+      ---
+      duration_ms: 2.012651
+      ...
+    # Subtest: Q1.2 multi-turn: tool_use block from turn 1 is forwarded (id, name, args)
+    ok 2 - Q1.2 multi-turn: tool_use block from turn 1 is forwarded (id, name, args)
+      ---
+      duration_ms: 0.662216
+      ...
+    # Subtest: Q2 fallback path: assistant_message with content but NO content_delta still forwards text
+    ok 3 - Q2 fallback path: assistant_message with content but NO content_delta still forwards text
+      ---
+      duration_ms: 0.372061
+      ...
+    # Subtest: Q3 empty-content + tool_calls only: no spurious text, tool forwarded
+    ok 4 - Q3 empty-content + tool_calls only: no spurious text, tool forwarded
+      ---
+      duration_ms: 0.514001
+      ...
+    1..4
+ok 105 - QA-Anthropic stream — multi-turn + edge cases
+  ---
+  duration_ms: 6.171989
+  type: 'suite'
+  ...
+# Subtest: QA-OpenAI stream — multi-turn + edge cases
+    # Subtest: Q1.3 multi-turn: client content is "Let me check.It is sunny." (no duplication)
+    ok 1 - Q1.3 multi-turn: client content is "Let me check.It is sunny." (no duplication)
+      ---
+      duration_ms: 1.007826
+      ...
+    # Subtest: Q1.4 multi-turn: OpenAI tool_calls delta forwarded with correct id/name/args
+    ok 2 - Q1.4 multi-turn: OpenAI tool_calls delta forwarded with correct id/name/args
+      ---
+      duration_ms: 0.635331
+      ...
+    # Subtest: Q2 fallback path: aggregate-only assistant_message forwards text
+    ok 3 - Q2 fallback path: aggregate-only assistant_message forwards text
+      ---
+      duration_ms: 0.324146
+      ...
+    # Subtest: Q3 empty-content + tool_calls only: tool_calls intact, no content
+    ok 4 - Q3 empty-content + tool_calls only: tool_calls intact, no content
+      ---
+      duration_ms: 0.49214
+      ...
+    1..4
+ok 106 - QA-OpenAI stream — multi-turn + edge cases
+  ---
+  duration_ms: 3.198741
+  type: 'suite'
+  ...
+# Subtest: A. /v1/messages streaming — dedup + tool_use render
+    # Subtest: A.1 text-dedup: client text strictly equals model output, no duplication
+    ok 1 - A.1 text-dedup: client text strictly equals model output, no duplication
+      ---
+      duration_ms: 1.519024
+      ...
+    # Subtest: A.2 tool-render: tool_use block structure intact
+    ok 2 - A.2 tool-render: tool_use block structure intact
+      ---
+      duration_ms: 0.613175
+      ...
+    # Subtest: A.3 tool-use-dedup: same tool_use id opens content_block_start exactly once
+    ok 3 - A.3 tool-use-dedup: same tool_use id opens content_block_start exactly once
+      ---
+      duration_ms: 0.3523
+      ...
+    1..3
+ok 107 - A. /v1/messages streaming — dedup + tool_use render
+  ---
+  duration_ms: 5.294167
+  type: 'suite'
+  ...
+# Subtest: C. /chat/completions streaming — dedup + OpenAI tool_calls render
+    # Subtest: C.1 text-dedup: client text strictly equals model output, no duplication
+    ok 1 - C.1 text-dedup: client text strictly equals model output, no duplication
+      ---
+      duration_ms: 1.243627
+      ...
+    # Subtest: C.2 tool-render: OpenAI tool_calls structure intact
+    ok 2 - C.2 tool-render: OpenAI tool_calls structure intact
+      ---
+      duration_ms: 0.52176
+      ...
+    # Subtest: C.3 tool-calls-dedup: same tool_use id emits tool_calls delta exactly once
+    ok 3 - C.3 tool-calls-dedup: same tool_use id emits tool_calls delta exactly once
+      ---
+      duration_ms: 0.33117
+      ...
+    1..3
+ok 108 - C. /chat/completions streaming — dedup + OpenAI tool_calls render
+  ---
+  duration_ms: 2.619967
+  type: 'suite'
+  ...
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/server/tasks-submit-weekly-hint.test.ts
+not ok 28 - /srv/fleet/TriLC/test/server/tasks-submit-weekly-hint.test.ts
+  ---
+  duration_ms: 469.724547
+  location: '/srv/fleet/TriLC/test/server/tasks-submit-weekly-hint.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: TC-s1: task_plan flat-array contract
+    # Subtest: parseHarnessOptions normalizes a flat task_plan array
+    ok 1 - parseHarnessOptions normalizes a flat task_plan array
+      ---
+      duration_ms: 0.47694
+      ...
+    # Subtest: flat-array + continue_on_incomplete defaults to the exact English self-check prompt
+    ok 2 - flat-array + continue_on_incomplete defaults to the exact English self-check prompt
+      ---
+      duration_ms: 0.18949
+      ...
+    # Subtest: TC-001 Chinese default self-check prompt is preserved
+    ok 3 - TC-001 Chinese default self-check prompt is preserved
+      ---
+      duration_ms: 0.122435
+      ...
+    1..3
+ok 110 - TC-s1: task_plan flat-array contract
+  ---
+  duration_ms: 2.582972
+  type: 'suite'
+  ...
+# Subtest: TC-s1: systemPrompt tail checklist injection
+    # Subtest: formatTaskPlanChecklist is exported and renders id/status/description
+    ok 1 - formatTaskPlanChecklist is exported and renders id/status/description
+      ---
+      duration_ms: 0.241613
+      ...
+    # Subtest: both /v1/messages and /chat/completions append the checklist tail
+    ok 2 - both /v1/messages and /chat/completions append the checklist tail
+      ---
+      duration_ms: 0.425792
+      ...
+    # Subtest: tail is empty-string when no task_plan — zero behavior change preserved
+    ok 3 - tail is empty-string when no task_plan — zero behavior change preserved
+      ---
+      duration_ms: 0.199898
+      ...
+    1..3
+ok 111 - TC-s1: systemPrompt tail checklist injection
+  ---
+  duration_ms: 1.454159
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# ◇ injected env (0) from ../.env // tip: ⌘ suppress logs { quiet: true }
+# [contract-resolver] loaded 1 agent contracts
+# [contract-resolver] loaded 1 employee roster entries (/tmp/trilc-session-init-AKXzO4/docs/registry/employee-roster.json)
+# Subtest: session-initializer
+    # Subtest: initializes a session with contract assembly + workspace ready
+    ok 1 - initializes a session with contract assembly + workspace ready
+      ---
+      duration_ms: 16.265711
+      ...
+    # Subtest: ensureWorkspaceDir is idempotent
+    ok 2 - ensureWorkspaceDir is idempotent
+      ---
+      duration_ms: 2.046644
+      ...
+    # Subtest: throws SessionInitError for an unloaded agent
+    ok 3 - throws SessionInitError for an unloaded agent
+      ---
+      duration_ms: 1.0119
+      ...
+    1..3
+ok 112 - session-initializer
+  ---
+  duration_ms: 59.46866
+  type: 'suite'
+  ...
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/session-reaper.test.ts
+not ok 31 - /srv/fleet/TriLC/test/session-reaper.test.ts
+  ---
+  duration_ms: 320.898575
+  location: '/srv/fleet/TriLC/test/session-reaper.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/errors:496
+#     ErrorCaptureStackTrace(err);
+#     ^
+# Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
+#     at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+#     at new NodeError (node:internal/errors:405:5)
+#     at ModuleLoader.builtinStrategy (node:internal/modules/esm/translators:300:11)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14) {
+#   code: 'ERR_UNKNOWN_BUILTIN_MODULE'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/session-store.test.ts
+not ok 32 - /srv/fleet/TriLC/test/session-store.test.ts
+  ---
+  duration_ms: 378.907249
+  location: '/srv/fleet/TriLC/test/session-store.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ◈ encrypted .env [www.dotenvx.com]
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌁ auth for agents [www.vestauth.com]
+# ◇ injected env (0) from ../.env // tip: ◈ encrypted .env [www.dotenvx.com]
+# [trilc/local-node] heartbeat iZt4n2ppusbxaxtj2qse7dZ-1070776
+# [trilc/local-node] heartbeat iZt4n2ppusbxaxtj2qse7dZ-1070776
+# [trilc] daemon started for iZt4n2ppusbxaxtj2qse7dZ-1070776
+# [trilc] daemon stopped (0 task(s) tracked)
+# Subtest: TaskRuntime
+    # Subtest: transitions queued → running → succeeded
+    ok 1 - transitions queued → running → succeeded
+      ---
+      duration_ms: 0.549538
+      ...
+    # Subtest: transitions queued → running → failed
+    ok 2 - transitions queued → running → failed
+      ---
+      duration_ms: 0.163317
+      ...
+    1..2
+ok 115 - TaskRuntime
+  ---
+  duration_ms: 2.476432
+  type: 'suite'
+  ...
+# Subtest: LocalNode
+    # Subtest: initializes with idle state
+    ok 1 - initializes with idle state
+      ---
+      duration_ms: 0.25871
+      ...
+    # Subtest: getAvailableTools returns string array
+    ok 2 - getAvailableTools returns string array
+      ---
+      duration_ms: 0.158479
+      ...
+    # Subtest: describeNode returns expected shape
+    ok 3 - describeNode returns expected shape
+      ---
+      duration_ms: 0.140109
+      ...
+    # Subtest: heartbeat resolves
+    ok 4 - heartbeat resolves
+      ---
+      duration_ms: 0.311344
+      ...
+    1..4
+ok 116 - LocalNode
+  ---
+  duration_ms: 1.488786
+  type: 'suite'
+  ...
+# Subtest: LocalPlanner
+    # Subtest: createPlan returns string array
+    ok 1 - createPlan returns string array
+      ---
+      duration_ms: 0.200867
+      ...
+    1..1
+ok 117 - LocalPlanner
+  ---
+  duration_ms: 0.50472
+  type: 'suite'
+  ...
+# Subtest: LocalRuntimeDaemon
+    # Subtest: start and stop transitions
+    ok 1 - start and stop transitions
+      ---
+      duration_ms: 0.592367
+      ...
+    # Subtest: getNode and getPlanner return instances
+    ok 2 - getNode and getPlanner return instances
+      ---
+      duration_ms: 0.144635
+      ...
+    # Subtest: submitTask returns TaskRuntime tracker
+    ok 3 - submitTask returns TaskRuntime tracker
+      ---
+      duration_ms: 0.373199
+      ...
+    1..3
+ok 118 - LocalRuntimeDaemon
+  ---
+  duration_ms: 1.416731
+  type: 'suite'
+  ...
+# Subtest: sync-bundle schema 校验（生成端拒绝密钥材料）
+    # Subtest: accepts valid bundle + 单维降级段
+    ok 1 - accepts valid bundle + 单维降级段
+      ---
+      duration_ms: 1.739959
+      ...
+    # Subtest: 拒绝 api_key / apiKey / secret / token 任意深度非空字符串值
+    ok 2 - 拒绝 api_key / apiKey / secret / token 任意深度非空字符串值
+      ---
+      duration_ms: 0.536353
+      ...
+    # Subtest: keys 维白名单：额外字段拒绝（防滑变）
+    ok 3 - keys 维白名单：额外字段拒绝（防滑变）
+      ---
+      duration_ms: 0.516042
+      ...
+    # Subtest: findSecretField 只拒绝非空字符串值（契约口径）
+    ok 4 - findSecretField 只拒绝非空字符串值（契约口径）
+      ---
+      duration_ms: 0.165522
+      ...
+    1..4
+ok 119 - sync-bundle schema 校验（生成端拒绝密钥材料）
+  ---
+  duration_ms: 5.574557
+  type: 'suite'
+  ...
+# Subtest: sync-bundle 指纹 / 哈希 / 单调性
+    # Subtest: fingerprint = sha256(material).slice(0,8)，确定性且不含材料
+    ok 1 - fingerprint = sha256(material).slice(0,8)，确定性且不含材料
+      ---
+      duration_ms: 0.857048
+      ...
+    # Subtest: contentHash 只覆盖五维语义（元字段变化不影响；内容变化影响；devHead 自引用排除 R1）
+    ok 2 - contentHash 只覆盖五维语义（元字段变化不影响；内容变化影响；devHead 自引用排除 R1）
+      ---
+      duration_ms: 1.052759
+      ...
+    # Subtest: generatedAt 严格递增：max(now, 现存 + 1ms)
+    ok 3 - generatedAt 严格递增：max(now, 现存 + 1ms)
+      ---
+      duration_ms: 0.420071
+      ...
+    # Subtest: buildGeneratedBy = trilc-init-<version>@<host-hash-8>
+    ok 4 - buildGeneratedBy = trilc-init-<version>@<host-hash-8>
+      ---
+      duration_ms: 0.868702
+      ...
+    1..4
+ok 120 - sync-bundle 指纹 / 哈希 / 单调性
+  ---
+  duration_ms: 4.060262
+  type: 'suite'
+  ...
+# Subtest: sync-bundle 序列化泄漏扫描（测试门禁②）
+    # Subtest: 干净序列化 → 断言通过
+    ok 1 - 干净序列化 → 断言通过
+      ---
+      duration_ms: 1.247767
+      ...
+    # Subtest: 含 sk- 明文 → 断言抛错
+    ok 2 - 含 sk- 明文 → 断言抛错
+      ---
+      duration_ms: 0.825576
+      ...
+    # Subtest: 含 api_key 字段名 → 断言抛错
+    ok 3 - 含 api_key 字段名 → 断言抛错
+      ---
+      duration_ms: 0.372302
+      ...
+    1..3
+ok 121 - sync-bundle 序列化泄漏扫描（测试门禁②）
+  ---
+  duration_ms: 3.124614
+  type: 'suite'
+  ...
+# Subtest: sync-engine
+    # Subtest: T01: normal sync — pending session with 10 messages → synced
+    ok 1 - T01: normal sync — pending session with 10 messages → synced
+      ---
+      duration_ms: 38.470832
+      ...
+    # Subtest: T02: 409 dedup — TriMC returns 409 → synced with existingCloudSessionId
+    ok 2 - T02: 409 dedup — TriMC returns 409 → synced with existingCloudSessionId
+      ---
+      duration_ms: 1.486106
+      ...
+    # Subtest: T03: 503 retry success — first 503, second 200 → synced + retried
+    ok 3 - T03: 503 retry success — first 503, second 200 → synced + retried
+      ---
+      duration_ms: 13.956989
+      ...
+    # Subtest: T04: all retries exhausted — always 503 → error
+    ok 4 - T04: all retries exhausted — always 503 → error
+      ---
+      duration_ms: 77.868845
+      ...
+    # Subtest: T05: sync_status='syncing' rejected — error='already_syncing'
+    ok 5 - T05: sync_status='syncing' rejected — error='already_syncing'
+      ---
+      duration_ms: 0.858219
+      ...
+    # Subtest: T06: sync_status='local' skipped — ok=true, syncedMessageCount=0
+    ok 6 - T06: sync_status='local' skipped — ok=true, syncedMessageCount=0
+      ---
+      duration_ms: 0.440362
+      ...
+    # Subtest: T07: sync_status='synced' skipped — ok=true, status unchanged
+    ok 7 - T07: sync_status='synced' skipped — ok=true, status unchanged
+      ---
+      duration_ms: 0.698706
+      ...
+    # Subtest: T08: >5000 messages truncated — payload capped at 5000, truncated=true
+    ok 8 - T08: >5000 messages truncated — payload capped at 5000, truncated=true
+      ---
+      duration_ms: 6.263944
+      ...
+    # Subtest: T09: empty messages — synced, syncedMessageCount=0
+    ok 9 - T09: empty messages — synced, syncedMessageCount=0
+      ---
+      duration_ms: 1.752104
+      ...
+    # Subtest: T10: session not found — error='session_not_found'
+    ok 10 - T10: session not found — error='session_not_found'
+      ---
+      duration_ms: 0.515464
+      ...
+    # Subtest: T11: timeout retry — AbortError → retry → success
+    ok 11 - T11: timeout retry — AbortError → retry → success
+      ---
+      duration_ms: 12.331035
+      ...
+    # Subtest: T12: non-retryable 4xx (400) — no retry, direct error
+    ok 12 - T12: non-retryable 4xx (400) — no retry, direct error
+      ---
+      duration_ms: 1.351878
+      ...
+    # Subtest: T13: batch sync — 3 pending sessions all succeed
+    ok 13 - T13: batch sync — 3 pending sessions all succeed
+      ---
+      duration_ms: 2.816266
+      ...
+    # Subtest: T14: batch sync — 2 OK + 1 always 503 → synced=2, failed=1
+    ok 14 - T14: batch sync — 2 OK + 1 always 503 → synced=2, failed=1
+      ---
+      duration_ms: 74.885646
+      ...
+    # Subtest: T15: error status retry — sync_status='error' → accepted → synced
+    ok 15 - T15: error status retry — sync_status='error' → accepted → synced
+      ---
+      duration_ms: 1.173532
+      ...
+    # Subtest: T16: toolCalls deserialization — valid JSON → correct format
+    ok 16 - T16: toolCalls deserialization — valid JSON → correct format
+      ---
+      duration_ms: 1.313191
+      ...
+    # Subtest: T17: toolCalls parse failure — corrupted JSON → silent skip, no crash
+    ok 17 - T17: toolCalls parse failure — corrupted JSON → silent skip, no crash
+      ---
+      duration_ms: 0.457812
+      ...
+    1..17
+ok 122 - sync-engine
+  ---
+  duration_ms: 240.412739
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ◈ encrypted .env [www.dotenvx.com]
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# ◇ injected env (0) from ../.env // tip: ⌘ enable debugging { debug: true }
+# Subtest: ctx.cwd propagation — five read tools (A-TriLC)
+    # Subtest: LS: relative path resolves against ctx.cwd, not process.cwd()
+    not ok 1 - LS: relative path resolves against ctx.cwd, not process.cwd()
+      ---
+      duration_ms: 26.764891
+      location: 'file:///srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:1:1222'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+        + actual - expected
+        
+        + '/srv/fleet/trilc'
+        - '/tmp/trilc-ctx-cwd-h9ccx8/dira'
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: '/tmp/trilc-ctx-cwd-h9ccx8/dira'
+      actual: '/srv/fleet/trilc'
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:57:12)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Promise.all (index 0)
+        async Suite.run (node:internal/test_runner/test:948:7)
+        async startSubtest (node:internal/test_runner/harness:214:3)
+      ...
+    # Subtest: Read: relative file_path resolves against ctx.cwd
+    not ok 2 - Read: relative file_path resolves against ctx.cwd
+      ---
+      duration_ms: 0.784909
+      location: 'file:///srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:1:1641'
+      failureType: 'testCodeFailure'
+      error: "Cannot read properties of undefined (reading 'includes')"
+      code: 'ERR_TEST_FAILURE'
+      name: 'TypeError'
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:65:30)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: Glob: relative search dir resolves against ctx.cwd
+    not ok 3 - Glob: relative search dir resolves against ctx.cwd
+      ---
+      duration_ms: 14.513883
+      location: 'file:///srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:1:1891'
+      failureType: 'testCodeFailure'
+      error: 'expected a.txt in {"filenames":[],"duration_ms":12,"num_files":0,"truncated":false}'
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:70:12)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: Grep: relative search path resolves against ctx.cwd
+    not ok 4 - Grep: relative search path resolves against ctx.cwd
+      ---
+      duration_ms: 81.629279
+      location: 'file:///srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:1:2240'
+      failureType: 'testCodeFailure'
+      error: 'expected a.txt match in {"mode":"files_with_matches","num_files":1,"filenames":["/srv/fleet/TriLC/test/tools-ctx-cwd.test.ts"]}'
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:79:12)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: shell_exec: args.cwd wins over ctx.cwd (legacy semantics preserved)
+    not ok 5 - shell_exec: args.cwd wins over ctx.cwd (legacy semantics preserved)
+      ---
+      duration_ms: 20.437315
+      location: 'file:///srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:1:2504'
+      failureType: 'testCodeFailure'
+      error: 'stdout='
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:88:12)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: shell_exec: ctx.cwd used when args.cwd omitted
+    not ok 6 - shell_exec: ctx.cwd used when args.cwd omitted
+      ---
+      duration_ms: 15.554578
+      location: 'file:///srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:1:2801'
+      failureType: 'testCodeFailure'
+      error: 'stdout='
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:94:12)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    1..6
+not ok 123 - ctx.cwd propagation — five read tools (A-TriLC)
+  ---
+  duration_ms: 167.395131
+  type: 'suite'
+  location: 'file:///srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:1:1153'
+  failureType: 'subtestsFailed'
+  error: '6 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: ctx absent — legacy fallback to process.cwd() (A-TriLC)
+    # Subtest: LS without ctx resolves against process.cwd()
+    ok 1 - LS without ctx resolves against process.cwd()
+      ---
+      duration_ms: 1.174783
+      ...
+    # Subtest: Read without ctx: absolute path still works (unchanged shape)
+    ok 2 - Read without ctx: absolute path still works (unchanged shape)
+      ---
+      duration_ms: 0.632619
+      ...
+    # Subtest: Glob without ctx defaults to process.cwd() as search base
+    ok 3 - Glob without ctx defaults to process.cwd() as search base
+      ---
+      duration_ms: 12.101636
+      ...
+    # Subtest: Grep without ctx defaults to process.cwd() as search base
+    ok 4 - Grep without ctx defaults to process.cwd() as search base
+      ---
+      duration_ms: 66.531652
+      ...
+    # Subtest: shell_exec without ctx falls back to process.cwd()
+    not ok 5 - shell_exec without ctx falls back to process.cwd()
+      ---
+      duration_ms: 11.166036
+      location: 'file:///srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:1:3956'
+      failureType: 'testCodeFailure'
+      error: 'stdout='
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:123:12)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    1..5
+not ok 124 - ctx absent — legacy fallback to process.cwd() (A-TriLC)
+  ---
+  duration_ms: 93.441735
+  type: 'suite'
+  location: 'file:///srv/fleet/TriLC/test/tools-ctx-cwd.test.ts:1:3070'
+  failureType: 'subtestsFailed'
+  error: '1 subtest failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# file:///srv/fleet/TriLC/node_modules/string-width/index.js:19
+# const zeroWidthClusterRegex = /^(?:\\p{Default_Ignorable_Code_Point}|\\p{Control}|\\p{Format}|\\p{Nonspacing_Mark}|\\p{Enclosing_Mark}|\\p{Surrogate})+$/v;
+#                               ^
+# SyntaxError: Invalid regular expression flags
+#     at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:152:18)
+#     at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:299:14)
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/tui/components-smoke.test.ts
+not ok 37 - /srv/fleet/TriLC/test/tui/components-smoke.test.ts
+  ---
+  duration_ms: 663.098612
+  location: '/srv/fleet/TriLC/test/tui/components-smoke.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/process/esm_loader:40
+#       internalBinding('errors').triggerUncaughtException(
+#                                 ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'ink-testing-library' imported from /srv/fleet/TriLC/test/tui/components.test.ts
+#     at new NodeError (node:internal/errors:405:5)
+#     at packageResolve (node:internal/modules/esm/resolve:916:9)
+#     at moduleResolve (node:internal/modules/esm/resolve:973:20)
+#     at defaultResolve (node:internal/modules/esm/resolve:1206:11)
+#     at nextResolve (node:internal/modules/esm/hooks:864:28)
+#     at resolveBase (file:///srv/fleet/TriLC/node_modules/tsx/dist/register-C4vWVmug.mjs:2:10334)
+#     at resolveDirectory (file:///srv/fleet/TriLC/node_modules/tsx/dist/register-C4vWVmug.mjs:2:11421)
+#     at resolveTsPaths (file:///srv/fleet/TriLC/node_modules/tsx/dist/register-C4vWVmug.mjs:2:13062)
+#     at resolve (file:///srv/fleet/TriLC/node_modules/tsx/dist/register-C4vWVmug.mjs:2:14748)
+#     at nextResolve (node:internal/modules/esm/hooks:864:28) {
+#   code: 'ERR_MODULE_NOT_FOUND'
+# }
+# Node.js v18.20.8
+# Subtest: /srv/fleet/TriLC/test/tui/components.test.ts
+not ok 38 - /srv/fleet/TriLC/test/tui/components.test.ts
+  ---
+  duration_ms: 373.168124
+  location: '/srv/fleet/TriLC/test/tui/components.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: V-002 Markdown parser — token coverage
+    # Subtest: heading — parsed as heading token
+    ok 1 - heading — parsed as heading token
+      ---
+      duration_ms: 6.638192
+      ...
+    # Subtest: bold — parsed as strong in inline tokens
+    ok 2 - bold — parsed as strong in inline tokens
+      ---
+      duration_ms: 12.269639
+      ...
+    # Subtest: italic — parsed as em in inline tokens
+    ok 3 - italic — parsed as em in inline tokens
+      ---
+      duration_ms: 4.141358
+      ...
+    # Subtest: codespan — parsed as codespan in inline tokens
+    ok 4 - codespan — parsed as codespan in inline tokens
+      ---
+      duration_ms: 0.420291
+      ...
+    # Subtest: unordered list — parsed as list token with items
+    ok 5 - unordered list — parsed as list token with items
+      ---
+      duration_ms: 1.388169
+      ...
+    # Subtest: ordered list — parsed as list token with start
+    ok 6 - ordered list — parsed as list token with start
+      ---
+      duration_ms: 0.899955
+      ...
+    # Subtest: blockquote — parsed as blockquote token
+    ok 7 - blockquote — parsed as blockquote token
+      ---
+      duration_ms: 0.534089
+      ...
+    # Subtest: hr — parsed as hr token
+    ok 8 - hr — parsed as hr token
+      ---
+      duration_ms: 0.288924
+      ...
+    # Subtest: strikethrough — parsed as del in inline tokens
+    ok 9 - strikethrough — parsed as del in inline tokens
+      ---
+      duration_ms: 0.524044
+      ...
+    # Subtest: code block — parsed as code token
+    ok 10 - code block — parsed as code token
+      ---
+      duration_ms: 0.438222
+      ...
+    # Subtest: link — parsed as link in inline tokens
+    ok 11 - link — parsed as link in inline tokens
+      ---
+      duration_ms: 0.572068
+      ...
+    # Subtest: nested bold + italic — nested strong/em tokens
+    ok 12 - nested bold + italic — nested strong/em tokens
+      ---
+      duration_ms: 0.266048
+      ...
+    # Subtest: empty content — returns empty token array
+    ok 13 - empty content — returns empty token array
+      ---
+      duration_ms: 0.254178
+      ...
+    # Subtest: malformed markdown — parser handles gracefully
+    ok 14 - malformed markdown — parser handles gracefully
+      ---
+      duration_ms: 0.363508
+      ...
+    1..14
+ok 127 - V-002 Markdown parser — token coverage
+  ---
+  duration_ms: 32.728719
+  type: 'suite'
+  ...
+# Subtest: V-004 CJK handling in Markdown parser
+    # Subtest: Chinese text — parses as paragraph
+    ok 1 - Chinese text — parses as paragraph
+      ---
+      duration_ms: 5.982889
+      ...
+    # Subtest: Mixed Chinese and English — parses correctly
+    ok 2 - Mixed Chinese and English — parses correctly
+      ---
+      duration_ms: 0.239083
+      ...
+    # Subtest: Emoji — parses correctly
+    ok 3 - Emoji — parses correctly
+      ---
+      duration_ms: 0.166175
+      ...
+    # Subtest: CJK in bold — parses as strong
+    ok 4 - CJK in bold — parses as strong
+      ---
+      duration_ms: 2.82221
+      ...
+    # Subtest: CJK in list items — parses as list
+    ok 5 - CJK in list items — parses as list
+      ---
+      duration_ms: 1.499706
+      ...
+    # Subtest: CJK heading — parses as heading
+    ok 6 - CJK heading — parses as heading
+      ---
+      duration_ms: 0.264631
+      ...
+    1..6
+ok 128 - V-004 CJK handling in Markdown parser
+  ---
+  duration_ms: 13.411435
+  type: 'suite'
+  ...
+# Subtest: V-003 ToolCallLine args extraction
+    # Subtest: extracts single arg correctly
+    ok 1 - extracts single arg correctly
+      ---
+      duration_ms: 1.020416
+      ...
+    # Subtest: extracts two args correctly
+    ok 2 - extracts two args correctly
+      ---
+      duration_ms: 0.25473
+      ...
+    # Subtest: only shows first 2 key-value pairs
+    ok 3 - only shows first 2 key-value pairs
+      ---
+      duration_ms: 0.196337
+      ...
+    # Subtest: truncates value longer than 40 characters
+    ok 4 - truncates value longer than 40 characters
+      ---
+      duration_ms: 0.213034
+      ...
+    # Subtest: does NOT truncate value exactly 40 characters
+    ok 5 - does NOT truncate value exactly 40 characters
+      ---
+      duration_ms: 0.140294
+      ...
+    # Subtest: empty object returns empty string
+    ok 6 - empty object returns empty string
+      ---
+      duration_ms: 0.173482
+      ...
+    # Subtest: null returns empty string
+    ok 7 - null returns empty string
+      ---
+      duration_ms: 0.106695
+      ...
+    # Subtest: invalid JSON returns empty string
+    ok 8 - invalid JSON returns empty string
+      ---
+      duration_ms: 0.157778
+      ...
+    # Subtest: non-string values are JSON-stringified
+    ok 9 - non-string values are JSON-stringified
+      ---
+      duration_ms: 0.251862
+      ...
+    1..9
+ok 129 - V-003 ToolCallLine args extraction
+  ---
+  duration_ms: 5.228095
+  type: 'suite'
+  ...
+# Subtest: V-003 ToolCallLine line formatting
+    # Subtest: formats tool name with args
+    ok 1 - formats tool name with args
+      ---
+      duration_ms: 0.235516
+      ...
+    # Subtest: formats tool name without args
+    ok 2 - formats tool name without args
+      ---
+      duration_ms: 0.10222
+      ...
+    # Subtest: truncates line longer than 70 characters
+    ok 3 - truncates line longer than 70 characters
+      ---
+      duration_ms: 0.288686
+      ...
+    # Subtest: does NOT truncate line exactly 70 characters
+    ok 4 - does NOT truncate line exactly 70 characters
+      ---
+      duration_ms: 0.162199
+      ...
+    1..4
+ok 130 - V-003 ToolCallLine line formatting
+  ---
+  duration_ms: 1.275139
+  type: 'suite'
+  ...
+# Subtest: V-003 ToolCallLine braille spinner
+    # Subtest: has 10 frames cycling correctly
+    ok 1 - has 10 frames cycling correctly
+      ---
+      duration_ms: 0.190777
+      ...
+    # Subtest: each frame is a single character
+    ok 2 - each frame is a single character
+      ---
+      duration_ms: 0.154431
+      ...
+    1..2
+ok 131 - V-003 ToolCallLine braille spinner
+  ---
+  duration_ms: 0.829674
+  type: 'suite'
+  ...
+# Subtest: V-003 ToolCallLine status prefixes
+    # Subtest: done prefix is checkmark
+    ok 1 - done prefix is checkmark
+      ---
+      duration_ms: 0.198615
+      ...
+    # Subtest: error prefix is cross mark
+    ok 2 - error prefix is cross mark
+      ---
+      duration_ms: 0.106609
+      ...
+    # Subtest: pending prefix is from braille spinner set
+    ok 3 - pending prefix is from braille spinner set
+      ---
+      duration_ms: 0.32558
+      ...
+    1..3
+ok 132 - V-003 ToolCallLine status prefixes
+  ---
+  duration_ms: 1.004241
+  type: 'suite'
+  ...
+1..132
+# tests 295
+# suites 46
+# pass 243
+# fail 52
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 92554.045864

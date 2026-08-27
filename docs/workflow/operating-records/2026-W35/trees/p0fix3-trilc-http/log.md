@@ -18,4 +18,6 @@
 
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
-| 1 | 07:53 | 骨架 state.json/log.md 落盘（勘察证据全量入 state.baseline：双基线、签名零漂移对照、参照实现定位、范围映射、环境/通道事实、爆炸半径与失败基线预登记） | （本提交） |
+| 1 | 07:53 | 骨架 state.json/log.md 落盘（勘察证据全量入 state.baseline：双基线、签名零漂移对照、参照实现定位、范围映射、环境/通道事实、爆炸半径与失败基线预登记） | 83bcf366（push a63cb3be..83bcf366 fast-forward 实测一次过） |
+| 2 | 08:00-08:02 | 门禁工具链落树（reports/gate-runner.mjs=node spawn 包装捕获 TAP 应对审批墙拒重定向/tee 先例+enum-tests.txt=40 文件显式全枚举等价口径）；首跑默认系统 node18：295 tests/243 pass/**52 fail**——大面积 `ERR_UNKNOWN_BUILTIN_MODULE: node:sqlite` 环境性失败（node:sqlite 需 ≥22.5），该轮存档留作解释器选择依据非比对基线 | — |
+| 3 | 08:03-08:06 | 启用记忆线索用户级 v22.14.0：gate-runner 增解释器选择器（优先 ~/.local/opt/node-v22.14.0-linux-x64，GATE_NODE_BIN 可覆盖+PATH 前插继承）重定基线 **451 tests/443 pass/8 fail**＝与 tc001-harness-scaffold HS-3 登记 tui debt 口径吻合；失败集五项=init-confirm×2（runConfirmCheck/runConfirm）+project-link validateLinkPayload×1+tools-ctx-cwd×2+tui/components 文件级（8 子债归并计数）——**权威比对基线=round0-node22 存档在案** | （本提交，双环境 TAP/JSON 全档入库） |

@@ -30,7 +30,12 @@
       "triLCPushPath": "memory 在案前科=「/srv/git 裸仓 root 权限墙 TriLC 全封」，但 TM 于 08-27T01:55Z 已实测修复——TriLC 通道本 tick 待 push 阶段实测定谳，若被拒按红线3 如实留痕移交授权侧；GitHub 双端形态未在仓配置中显式存在（仅 origin=/srv/git/TriLC.git 单 remote），双向端终值如实入账"
     },
     "blastRadiusPreRegister": "全局认证门将波及全部 HTTP 触达测试（Grep 预扫 10 文件命中 startAgentHttpServer/createHttpServer/localhost 形态：test/server/qa-json-runtime-stub、tasks-submit-weekly-hint 等+init/sync/pidfile 系列）；test/server/ 下 harness-scaffold 等 TC-s1 套件对现有行为的兼容红线（测试不得回退）由 PD-1 落码时同步清扫对齐，回归基线以开工轮 round0 实测为准比对",
-    "preExistingFailureBaseline": "tc001-harness-scaffold HS-3 登记的 8 个 tui debt 用例为预置失败基线（PD-T 门禁对比参照点；round0 实测核对其仍在位且新增用例不改变其数目）"
+    "preExistingFailureBaseline": "权威比对基线=round0-node22 存档（reports/gate-logs/round0-node22.tap）：451 tests/443 pass/8 fail，失败集五项=init-confirm runConfirmCheck+runConfirm×2、project-link validateLinkPayload×1、tools-ctx-cwd ctx.cwd propagation+ctx absent×2、tui/components 文件级（HS-3 登记 tui debt 8 子债归并计数）；解释器事实：默认系统 node18 因 node:sqlite（需 ≥22.5）产生 52 个环境性失败（round0-node18.tap 留档 295/243/52），gate-runner 已内置 node22 选择器"
+  },
+  "gateTooling": {
+    "runner": "reports/gate-runner.mjs（node spawn 包装捕获 TAP——审批墙拒 shell 重定向/tee 先例延续；node22 用户级解释器选择器内建）",
+    "equivalence": "package.json test script glob `test/**/*.test.ts` 在 node18 无 globstar 下展开受限 → reports/enum-tests.txt 显式 40 文件全枚举同解释器同 import 链等价运行；src/project 两 *.test.ts 不在 npm script 意图内不入门禁（如实记录）",
+    "labels": ["round0-node18（环境性失败轮非比对用）", "round0-node22（权威基线）"]
   },
   "nodes": [
     {
