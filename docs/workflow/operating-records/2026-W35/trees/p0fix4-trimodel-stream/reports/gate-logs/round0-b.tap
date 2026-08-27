@@ -1,0 +1,185 @@
+TAP version 13
+# ◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+# ◇ injected env (0) from ../.env // tip: ⌘ enable debugging { debug: true }
+# ◇ injected env (0) from ../../.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# [trimodel-client][dbg] chat model=deepseek-chat depth=0 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] chat model=deepseek-chat depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-chat failed (depth=0), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] chat model=unknown-model depth=0 msgs=1 lastRole=user known=false
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=0), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-flash failed (depth=1), trying deepseek-v4-pro
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=2 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=2), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=3 msgs=1 lastRole=user known=true
+# [anthropic-provider][dbg] outbound: claude-sonnet-4-20250514 [{"role":"user","contentType":"string"}]
+# Subtest: DeepSeekProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 31.60049
+      ...
+    # Subtest: should handle deepseek-reasoner model
+    ok 2 - should handle deepseek-reasoner model
+      ---
+      duration_ms: 0.765069
+      ...
+    1..2
+ok 1 - DeepSeekProvider
+  ---
+  duration_ms: 34.837035
+  type: 'suite'
+  ...
+# Subtest: ModelClient
+    # Subtest: should list available models
+    ok 1 - should list available models
+      ---
+      duration_ms: 1.070663
+      ...
+    # Subtest: should route chat request to correct provider
+    ok 2 - should route chat request to correct provider
+      ---
+      duration_ms: 1.595339
+      ...
+    # Subtest: should fallback from deepseek-chat to deepseek-v4-flash
+    ok 3 - should fallback from deepseek-chat to deepseek-v4-flash
+      ---
+      duration_ms: 1.850995
+      ...
+    # Subtest: should throw for unknown model
+    ok 4 - should throw for unknown model
+      ---
+      duration_ms: 1.002419
+      ...
+    # Subtest: should list Anthropic models when anthropicApiKey is set
+    ok 5 - should list Anthropic models when anthropicApiKey is set
+      ---
+      duration_ms: 0.20786
+      ...
+    # Subtest: should list OpenAI models when openaiApiKey is set
+    ok 6 - should list OpenAI models when openaiApiKey is set
+      ---
+      duration_ms: 0.181622
+      ...
+    # Subtest: should not include Anthropic models without anthropicApiKey
+    ok 7 - should not include Anthropic models without anthropicApiKey
+      ---
+      duration_ms: 0.349228
+      ...
+    # Subtest: should respect fallback depth limit (max 2 hops)
+    ok 8 - should respect fallback depth limit (max 2 hops)
+      ---
+      duration_ms: 4.482254
+      ...
+    # Subtest: should have bounded fallback ring (v4-pro <-> v4-flash stops at depth limit)
+    ok 9 - should have bounded fallback ring (v4-pro <-> v4-flash stops at depth limit)
+      ---
+      duration_ms: 0.593933
+      ...
+    1..9
+ok 2 - ModelClient
+  ---
+  duration_ms: 13.263328
+  type: 'suite'
+  ...
+# Subtest: AnthropicProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 3.349936
+      ...
+    1..1
+ok 3 - AnthropicProvider
+  ---
+  duration_ms: 4.099677
+  type: 'suite'
+  ...
+# Subtest: OpenAIProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 1.432147
+      ...
+    1..1
+ok 4 - OpenAIProvider
+  ---
+  duration_ms: 2.006465
+  type: 'suite'
+  ...
+# Subtest: Streaming
+    # Subtest: should stream from DeepSeekAnthropicProvider with SSE parsing
+    ok 1 - should stream from DeepSeekAnthropicProvider with SSE parsing
+      ---
+      duration_ms: 32.160989
+      ...
+    1..1
+ok 5 - Streaming
+  ---
+  duration_ms: 33.113426
+  type: 'suite'
+  ...
+# Subtest: readConfig
+    # Subtest: should return defaults when no env vars set
+    ok 1 - should return defaults when no env vars set
+      ---
+      duration_ms: 0.380866
+      ...
+    1..1
+ok 6 - readConfig
+  ---
+  duration_ms: 1.218767
+  type: 'suite'
+  ...
+# Subtest: UsageAccumulator
+    # Subtest: should accumulate a single response
+    ok 1 - should accumulate a single response
+      ---
+      duration_ms: 0.757068
+      ...
+    # Subtest: should accumulate multiple responses
+    ok 2 - should accumulate multiple responses
+      ---
+      duration_ms: 0.217114
+      ...
+    # Subtest: should track usage by model
+    ok 3 - should track usage by model
+      ---
+      duration_ms: 0.201412
+      ...
+    # Subtest: should detect partial (zero-filled) usage
+    ok 4 - should detect partial (zero-filled) usage
+      ---
+      duration_ms: 0.264606
+      ...
+    # Subtest: should reset to empty state
+    ok 5 - should reset to empty state
+      ---
+      duration_ms: 0.17201
+      ...
+    # Subtest: should handle reasoning_tokens when present
+    ok 6 - should handle reasoning_tokens when present
+      ---
+      duration_ms: 0.16773
+      ...
+    # Subtest: should not mark partial when usage is non-zero
+    ok 7 - should not mark partial when usage is non-zero
+      ---
+      duration_ms: 0.135382
+      ...
+    1..7
+ok 7 - UsageAccumulator
+  ---
+  duration_ms: 4.335971
+  type: 'suite'
+  ...
+1..7
+# tests 22
+# suites 7
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 451.954079

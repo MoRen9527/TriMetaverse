@@ -29,7 +29,12 @@
     "channelSurvey": {
       "executionWall": "DOWN 维持——git -C 系列（status/log/diff/show/cat-file/config/remote）全通实测；node_modules 在位实测免 install 先行；Write/Edit 跨仓通（044800Z 批 A 实证延续）",
       "nodeInterpreter": "默认系统 node v18（p0fix2/p0fix3 门禁沿用）；TriModel test 形态=test/*.test.ts 仅两文件（usage/client），无 globstar 问题；tsconfig 覆盖面待实测",
-      "probePending": ["npm run check / tsc 在脏树上可编译性", "/srv/git/TriModel.git bare 仓 dev 实时 tip（验证 behind-1 是否已在裸仓落地）", "merge --no-edit origin/dev 被拒实证预期（keys.ts/config.ts 行尾脏区重叠触碰文件）"]
+      "probeResolved": [
+        "tsc 实测：npm run check --prefix 干净零输出（外来 WIP 全树可编译，RR-3 解除）",
+        "bare 实时 tip 定谳：/srv/git/TriModel.git dev=6476812（比本地 remote-tracking 记载的 a5638e9 更新——本地落后 bare 三笔非一笔：a5638e9 O-R3-1 默认模型名+aaba31b fallback 日志补失败原因（恰触 client.ts fallback 区）+6476812 trimetaverse baseUrl 8000→8008；本地工作树无此三对象",
+        "6476812 触 config.ts/api-keys.ts/providers-trimetaverse.ts 三文件均在本树脏区集内——merge 被拒面从推演升级为高置信（RR-2 维持）；另勘本地 trimetaverse.ts 脏区=Authorization 掩码改真实 Bearer 的独立语义修复（又一外来在途资产，增列不可触碰）",
+        "门禁基线：round0-a/b 双轮隔离 22 tests/22 pass/0 fail 失败集为空=T0 基线锁定（套件 test/usage.test.ts+test/client.test.ts 显式枚举，node18+tsx 可跑）"
+      ]
     },
     "fixTargetSignature": "rmc-TriModel.md P0-1（TA-1 报告）：stream() provider 循环 catch 命中 fallback 时已向调用方发出增量事件仍静默切换上游拼接双模型输出——精确复现场景待派工节点按 action 要求先读报告全文提取；tree-op 给定契约方向=已发任意增量后禁 fallback 改抛 StreamAbortedError（上层定重试语义），仅首事件前失败允许 chat() 同款 fallback",
     "gateStrategy": "差分法延续（p0fix2/p0fix3 固化口径）：round0=当前脏树基线×2 轮隔离取失败集 F0（不数绝对个数）→ 修复应用后 pc-round×2 + PD-T 对抗后 pdT-round×2，失败集与 F0 逐字比对零新增为准；TAP 捕获沿 gate-runner.mjs node 包装形态（shell 重定向/tee 被审批墙拒先例）",
