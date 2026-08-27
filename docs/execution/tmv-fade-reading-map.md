@@ -32,8 +32,11 @@ sourceOfTruth: TriMetaverse/docs/execution/tmv-fade-reading-map.md ｜ syncMode:
 │
 ├─ ③ FADE 层：FADE 是什么（读 2 篇，约 40 分钟）
 │   ├─ ★ TriCompany/docs/engineering/fade-registry.md〔实例登记册〕
-│   │     四个已投产实例一览：FADE-001 周平面迁移（cron 链）/ 002 发布域（93 分）/
-│   │     003 共学周记 / 004 员工域（上岗）——每实例十段工件表+评分记录
+│   │     五个已投产实例一览：FADE-001 周平面迁移（cron 链）/ 002 发布域（93 分）/
+│   │     003 共学周记 / 004 员工域（上岗） / 006 执行面自动拾取（P0 战役八实例实证，
+│   │     2026-08-27 登记；规格 fade-006-execution-autopick-spec.md）——每实例十段工件表+评分记录
+│   ├─ ★ TriMetaverse/docs/execution/fade-006-execution-autopick-spec.md〔标准配方〕
+│   │     计划任务→周平面自动拾取六步流程+护栏速查+六面墙故障处置表（新战役照此复制）
 │   ├─ ★ TriCompany/docs/engineering/ade-pattern-spec.md v1.2.1〔协议规范，430 行〕
 │   │     重点：§一 定义（智能发现→确定性执行→智能审核→CLI 收口）/ §2.6 试卷-答卷-评分 /
 │   │     §6.2 多宿主渲染模型 / §8.6 触发链（定时巡检+即时指令两模式）
