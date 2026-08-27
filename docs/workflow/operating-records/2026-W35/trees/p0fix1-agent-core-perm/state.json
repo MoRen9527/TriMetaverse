@@ -47,9 +47,13 @@
     {
       "hash": "23dd9974",
       "what": "骨架（tick 20260827T034801Z 连四）：双仓基线实测（TM 同步 clean/TC 原地零推进首次）+墙四式重测全拒+派工角色工具面无 Bash 复验+superseded 排查维持否定四处签名逐字原样"
+    },
+    {
+      "hash": "04363f1f",
+      "what": "blocked 裁定（红线3 连四）：三项独立事实定谳（墙四式全拒维持+派工层无 Bash 双层阻塞维持+superseded 否定且加重 TC 原地零推进）；零派工三节点 pending 维持顶层 active 维持；修复路径留授权侧两侧缺一即 blocked"
     }
   ],
-  "push": "",
-  "updatedAt": "2026-08-27T03:55:00Z",
+  "push": "成功×1（8dfab12d..04363f1f fast-forward，2026-08-27T03:56Z 实测：骨架+裁定两原子上权威线；post-receive hook 报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体照旧不触发后续 tick，留授权侧）；台账回填后另发终推一次（本提交与台账回填记录两原子上权威线），其终值以本轮聊天总结+远端 reflog 为准、下轮 tick 首勘复核",
+  "updatedAt": "2026-08-27T03:56:40Z",
   "mode": "blocked (红线3 事实障碍连续第四 tick，终值：TriCompany 仓执行通道墙四式全拒未变+派工层两角色五件套均无 Bash 双层独立阻塞维持+TC=a22a9cdf 原地零推进 superseded 否定维持（授权侧对修复路径两侧均无动作）；零派工、三节点 pending 维持、顶层 active 维持；收束原子序列进行中=骨架 23dd9974 已落+裁定本提交+push 实测与台账回填随后均为留痕非收口——本 tick 不满足完成定义属事实障碍如实标注)"
 }

@@ -191,4 +191,7 @@ TC 零推进（a22a9cdf 原地），无新一轮上游施工可指向修复；�
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
 | 1 | 03:53 | 骨架落盘（双仓基线+墙四式重测全拒+派工角色工具面复验+superseded 排查维持否定三节） | 23dd9974 |
-| 2 | 03:55 | blocked 裁定终值（本节+state.json 节点 verdictNote/commits/mode 终值）；零派工 | （本提交） |
+| 2 | 03:55 | blocked 裁定终值（本节+state.json 节点 verdictNote/commits/mode 终值）；零派工 | 04363f1f |
+| 3 | 03:56 | push origin dev 实测**一次成功**：8dfab12d..04363f1f fast-forward（骨架+裁定两原子上权威线；post-receive hook 报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体不触发后续 tick，留授权侧）；push 终值留痕入 state.json | （下一原子同提交携带） |
+| 4 | ~03:58 | 台账回填：session-registry instances 条目（tick 034801Z，model **glm-5.3-flash** 如实入账）+ticks 预登记条目回填 rc=1 终值（commit/push/note 全字段）；机器复读实证方式与结果见下一原子披露 | —（shadow-plane 文件变更） |
+| 5 | ~03:59 | 台账回填记录提交（state.json commits 补原子#4/#5+push 终推预告）；随后终推一次将 #4 留痕与本提交上权威线，终值见聊天总结并以远端 reflog 为准、下轮 tick 首勘复核 | （本提交） |
