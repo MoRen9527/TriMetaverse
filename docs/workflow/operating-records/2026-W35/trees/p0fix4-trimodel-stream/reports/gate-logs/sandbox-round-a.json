@@ -1,0 +1,16 @@
+{
+  "label": "sandbox-round-a",
+  "argv": [
+    "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W35/trees/p0fix4-trimodel-stream/reports/sandbox/test/usage.test.ts",
+    "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W35/trees/p0fix4-trimodel-stream/reports/sandbox/test/client.test.ts",
+    "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W35/trees/p0fix4-trimodel-stream/reports/sandbox/test/stream-fallback-guard.test.ts"
+  ],
+  "cwd": "/srv/fleet/TriModel",
+  "exitCode": 0,
+  "tests": "29",
+  "pass": "29",
+  "fail": "0",
+  "cancelled": "0",
+  "skipped": "0",
+  "notOk": []
+}
