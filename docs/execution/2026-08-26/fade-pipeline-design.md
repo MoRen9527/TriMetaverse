@@ -106,3 +106,44 @@ CEO 收终报
 3. **执行通道白名单**（orchestrate_tick spawn --allowedTools，61dfaea）：git 全家桶（add/commit/push/fetch/rebase/checkout/branch/merge/cherry-pick/status/log/diff/show）+ npm/npx tsc/node/python3 + 文件检视工具族（cat/head/tail/wc/grep/find/cp/mv/touch/diff/mkdir/ls）+ Task。代码修复树的构建/测试门禁由此可达。
 4. **裸仓权限自愈**：sg-server root crontab `bare-perm-heal` 每 15 分钟对所有 /srv/git/*.git 执行 chgrp fleet -R + chmod g+w -R——吸收混合身份 push 落下的 root 属主对象段（D-10）。
 5. **阻塞告警缺口**（v1.2 待办）：会话 blocked 目前只有 registry 自证 + 本地监控轮询才发现，缺主动边沿通知。
+
+## 九、卷封制——FADE 材料完整性协议 v1.0（2026-08-27，CEO 提案立制）
+
+**考试隐喻**：F 铸计划=出卷，sourceMaterials 登记=封卷，spawn 开工核对=开考前验卷，会话产出=答卷，收口复核=对卷验收。**材料被中途改动而未走裁决程序的，第一轮验收不得通过——硬坎，无例外。**
+
+### 9.1 字段规范
+
+tree-op.json 新增可选字段 `sourceMaterials`（注册时写入，此后只读）：
+
+```json
+"sourceMaterials": [
+  { "path": "docs/execution/…/xxx.md", "sha256": "<hex>", "bytes": 12345,
+    "role": "campaign-plan|func-spec|runbook|audit-report", "recordedAt": "<UTC>" }
+]
+```
+
+### 9.2 三段校验工作流
+
+| 段 | 执行者 | 动作 |
+| --- | --- | --- |
+| 封卷（拆树时） | 注册方（TriMLC/编排） | 对全部源材料算 sha256 写入字段（工具：`scripts/fade/seal-materials.py --attach`） |
+| 验卷（spawn 开工） | 执行会话 | **铁律第一动作**：逐文件重算对照登记值；任一不符→按红线 3 blocked+差异报告，禁止带污染开卷 |
+| 对卷（收口时） | 执行会话+编排层 | 全部节点 done 后重算全量；一致→正常收口；不一致→**不得置 done**，走 §9.3 裁决 |
+
+### 9.3 材料漂移裁决程序（唯一合法通过路径）
+
+发现 hash 不符时，二选一裁决并将结论写入 state.json 后方可终态：
+
+- **a) 授权修订**：材料变更有可溯 commit 链且登记在案 → 若影响本树工作语义：受影响节点**新建跟踪树按新版重做**（旧树保留成果标注 superseded-partial）；若不影响：记录豁免理由后放行。
+- **b) 未授权漂移**：`git checkout <登记 commit> -- <path>` 恢复登记版本 + 差异事件留痕（谁/何时/动了什么）→ 重算一致后方收口。
+
+两条都要求「恢复或重做的证据 hash」回写 state.json。**没有裁决记录的漂移 = 收口无效，编排层有权拒收并重派。**
+
+### 9.4 战役级 Merkle root
+
+战役收口时将全部树的 `(treeId, 顶层status, ∏sourceMaterials.hashes, 收口commit)` 清单整体求 sha256 得 **campaign root**，记入战役档案。任何后续材料改动都会被 root 失配暴露。
+
+### 9.5 生效范围与诚实声明
+
+- **自本节入册后的下一棵注册树起强制执行**；首个试点=`trilc-lineage-merge`。
+- 当前队列中 p0fix2/3/4 系封卷制生效前启动，其计划文档 hash 只能**事后补录**（retrospective=true 标注）——按 CEO 规则口径，**该轮不计完整性分**，仅作链路演进档案。
