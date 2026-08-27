@@ -39,8 +39,8 @@
     {
       "nodeId": "PA-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
-      "verdictNote": "派工中（fresh FullStackDeveloper）：P0-1 路径边界双重绕过修复（resolve 归一化+分隔符边界断言）+P0-3 内容匹配结构化字段锚定匹配（保留 exact/wildcard 文档语义不破坏存量 allow 清单）+先构造回归测试再修"
+      "status": "implemented（终态翻转归 PB-T 复核）",
+      "verdictNote": "fix 已落盘并 TC 提交 fabcbef：P0-1 isPathInBoundary 词法归一化+锚定边界断言（normalizePath 点段折叠改 .. 溢出双通道——首版实现存在符号性点段被后续弹出抵消缺陷致审计向量 b 仍活体，探针实证后同实例返工杀灭）；P0-3 matchesContent 弃 JSON 全文子串改结构化字段锚定（exact 全等/wildcard 首部前缀/死分支真实现）。回归 test/p0-boundary-content.test.mjs 20 例。门禁实测：build 干净+28/28 双轮隔离运行全绿+tsc --noEmit clean。过程新事实入档：(1) 规则词表 Bash(...) 与工具名 shell_exec 之间无别名映射（matchesTool 字面等值），词汇缺口钉值负例已入套件，源码不动留授权侧（与 P2-10 同族）；(2) 内容限定 deny 载荷先行命中 bypass-immune 安全检查 decidedBy=safety_check（比规则层更严，正确行为）"
     },
     {
       "nodeId": "PA-2",
@@ -55,8 +55,17 @@
       "verdictNote": ""
     }
   ],
-  "commits": [],
-  "push": "—（未推送）",
-  "updatedAt": "2026-08-27T05:01:53Z",
+  "commits": [
+    {
+      "hash": "96970410（TM dev）",
+      "what": "骨架（本 tick 解封后首执行）：墙解除新事实+命令形态实测+node18 门禁基线+superseded 否定四签名原样+state.json 前 tick 非法 JSON 结构修复重写"
+    },
+    {
+      "hash": "fabcbef（TC dev）",
+      "what": "PA-1 代码原子（TC=树 repo 仓首次真实提交）：decision-pipeline.ts 两处修复+新回归套件 20 例；含首版 normalizePath .. 抵消缺陷的探针实证与同实例返工闭环；门禁 build/28of28×2/tsc --noEmit 三绿后才提交"
+    }
+  ],
+  "push": "—（未推送；TM 记录线与 TC 代码线收口统一终推）",
+  "updatedAt": "2026-08-27T05:33:16Z",
   "mode": "active-execution（执行墙已解除，进入 PA-1→PA-2→PB-T 一次一节点真实施工；完成定义尚未满足，随进度逐原子更新）"
 }

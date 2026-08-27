@@ -226,3 +226,14 @@ TC 零推进（a22a9cdf 原地），无新一轮上游施工可指向修复；�
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
 | 1 | 05:02 | 骨架落盘：本节＋state.json 重写（合法 JSON 结构修复；勘察证据=墙解除新事实/命令形态实测/node18 门禁基线 8of8/superseded 否定四签名原样） | （本提交，实测值见 git log） |
+| 2 | 05:06 | PA-1 前置：编排层预置测试文件占位锚（派工角色无 Write 工具面新事实；顺带实证本会话 Write 跨仓可达=目录级墙亦解除）→ fresh FullStackDeveloper 派工，一次一节点，先写后报（19 用例+两处修复落盘报告带行号） | —（TC 工作树变更未提交） |
+| 3 | 05:12 | 门禁实测第一轮 21/27 败 6：探针取证根因三件——①normalizePath 相对路径 `..` 符号性压栈被后续弹出抵消（`../../` 相互湮灭拼回界内）＝**审计向量 b 在首版修复下仍活体**（allowed=true 实测）；②规则词表 `Bash(...)` 不别名匹配 `shell_exec`（matchesTool 字面等值，同 args 换词表双结果探针在案）；③内容限定 deny 载荷先行被 bypass-immune 安全检查拦截（decidedBy=safety_check，正确更严）。另录得 exact 正例跨轮结果翻转异常一次（双轮后续全绿覆盖，机制存疑如实记录不掩盖） | — |
+| 4 | 05:20 | 探针回报同实例返工（仍属节点 PA-1 范围一次一节点纪律内）：normalizePath 改溢出通道保真前导 `../`；测试正例全部改规则契约词表真名 'Bash' 驱动+新增词汇缺口钉值负例+deny 层次断言并集化；vector b/dontAsk red 用例期望未为迁就 bug 反向修改 | —（TC 工作树变更未提交） |
+| 5 | 05:26 | 终门禁三门全绿：npm run build 干净＋node --test 双文件 **28/28 连续两轮隔离全绿**＋tsc --noEmit clean → TC 原子提交 **fabcbef**（identity 内联 TriMMC Orchestrator，Co-Authored-By Claude 入账） | fabcbef（TC dev） |
+
+### PA-1 过程披露与新事实（入 state.json 同步）
+
+- **双层墙正式降级为分工制**：会话执行/写通道全通（git -C 读类+add/commit 实测、Write/Edit 跨仓实测），但派工角色仍 `[Read, Glob, Edit]` 无 Bash——故「代码落盘=子实例 Edit；git 提交+门禁执行=编排层」成为本树既定执行结构，全程先写后报。
+- **子实例 Edit 对 TC 仓库路径可用且成功两次**（19 例初稿+返工整块重写均落盘无失败项）。
+- 首版 normalizePath 缺陷证明「静态逐行审计也有漏网向量」：审计只点名裸 startsWith 未点名该函数自身的新增折叠逻辑——PB-T 门禁对**新增代码本身**的对抗性复核价值被本轮实战坐实。
+- TC 仓 git 作者身份缺省缺失：以 `-c "user.name=TriMMC Orchestrator" -c "user.email=trimmc@tri.company"` 内联注入与本会话 TM 仓身份保持一致，不动仓库/全局配置。
