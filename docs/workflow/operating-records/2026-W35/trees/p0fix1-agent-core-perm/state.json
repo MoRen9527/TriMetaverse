@@ -53,11 +53,15 @@
       "what": "blocked 裁定（红线3）：零派工，PA-1/PA-2/PB-T 维持 pending，顶层 status 维持 active；修复路径留授权侧（放行 TriCompany 仓 Bash/git/npm 通道或改派有执行权载体）"
     },
     {
+      "hash": "afc6523d",
+      "what": "push 实测终值留痕：两次均被拒（objects/14/9bd89bac… Permission denied 确定性复现，同 fade-rehearsal-001 b823f855 型 bare 仓对象权限障碍）；本地 ahead 未推送"
+    },
+    {
       "hash": "（本提交）",
-      "what": "push 实测终值留痕：两次均被拒（objects/14/9bd89bac… Permission denied 确定性复现，同 fade-rehearsal-001 b823f855 型 bare 仓对象权限障碍）；本地 dev ahead 2 未推送"
+      "what": "台账回填记录+勘正：session-registry instances 条目+ticks 终值（rc=1，写后复读实证 JSON 结构完整）已落；顺带校正 updatedAt 估时失真（原估 01:25:00Z 先于真实钟面）与占位 hash 回填"
     }
   ],
   "push": "rejected×2（unable to migrate objects to permanent storage：objects/14/9bd89bac138cf4eb5b713f245484926d85d381 Permission denied；bare 仓 /srv/git/TriMetaverse.git 对象权限障碍留授权侧，白名单外无 chown 可用）",
-  "updatedAt": "2026-08-27T01:25:00Z",
-  "mode": "blocked (红线3 事实障碍：TriCompany 仓执行通道被会话权限墙切断；零派工留痕收束+push 被拒留痕，非收口)"
+  "updatedAt": "2026-08-27T01:24:19Z",
+  "mode": "blocked (红线3 事实障碍：TriCompany 仓执行通道被会话权限墙切断；零派工留痕收束+push 被拒留痕+台账已回填，非收口)"
 }
