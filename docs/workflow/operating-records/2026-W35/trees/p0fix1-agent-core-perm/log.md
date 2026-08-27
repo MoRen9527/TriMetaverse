@@ -233,6 +233,16 @@ TC 零推进（a22a9cdf 原地），无新一轮上游施工可指向修复；�
 | 6 | 05:31 | PA-1 收账原子（state implemented 终值+本表 #2-#5 与披露节） | 42296c80 |
 | 7 | 05:36 | PA-2 前置：预置 p0-mode-spawn.test.mjs 占位锚 → fresh FullStackDeveloper 派工（P0-2/P0-4，一次一节点），先写后报五文件落盘报告带行号 | —（TC 工作树变更未提交） |
 | 8 | 05:45 | PA-2 门禁三门全绿一次过：build 干净＋node --test 三套件合跑 **46/46 连续两轮隔离全绿**（PA-1 20 例零回退实证）＋tsc --noEmit clean（坐实 SpawnConfig 四通道 wiring 类型正确性）→ TC 原子提交 **14499e5** | 14499e5（TC dev） |
+| 9 | 05:50 | PA-2 收账原子 | a2c2f5bd |
+| 10 | 05:57 | PB-T fresh TestEngineer 派工（门禁回归+验证记录+状态翻转）：独立对抗复核逐向量核验+新逻辑分支清点→补录 6 例零覆盖分支用例（rooted-clamp/内嵌点段折叠/UNC fail-closed/大小写契约/跨字段 OR known-limitation 钉值/无-cwd 兜底 deny）、reports/verify.md 六节全文、tree-op.json 三节点+顶层 status=done 四笔翻转；诚实申报补录未经运行 | — |
+| 11 | 06:00 | 重开门禁闭环重开条件：build 干净＋node --test **52/52 连续两轮隔离全绿**（补录 6 例静态推演全部命中实测）＋tsc --noEmit clean → TC 补录原子提交 **95d8713** | 95d8713（TC dev） |
+| 12 | 06:03 | 收口原子：state 节点终值 done×3+commits 全链+mode=done-executed 完成定义四要件实证+残差六项移交清单；本表 #9-#12。树顶层 status=done 与节点翻转经 grep 四笔复核在位 | （本提交，实测 hash 见 git log） |
+
+### 收口披露
+
+- **完成定义四要件逐项实证**：四个 P0 各有复现性对抗用例守护（审计原始绕过向量全部「复现→必须被拒」断言在位+新增修复代码自身分支被 PB-T 清点补强）；套件无新增失败（52/52 双轮隔离全绿，基线 contract-v3 8/8 恒绿）；收口 commit 随本原子 push origin dev（双仓 TM 记录线+TC 代码线三原子）；树顶层 status=done 已置。
+- **本 tick 执行结构（授权侧解封后的分工制首例全程走通）**：派工角色先写后报三次（19 初稿→返工→18 例/六节 verify.md），编排层承担 git 提交与门禁执行，一次一节点无实例复用（PA-1 返工经 SendMessage 续接同一实例仍属同节点范围）。
+- **移交授权侧清单（不构成本树阻塞，verify.md §3 全文）**：①spawn 整链动态验证需模型凭据环境；②TriLC/TriMC/TriCode 消费仓 loop 缺省变更 blast-radius 扫描；③规则词表 Bash(...)↔shell_exec 别名缺口（P2-10 族）；④P1-7 safety-check FILE_MODIFYING_TOOLS 漏 replace_in_file 的交叉效应；⑤symlink→realpath 复核有意 deferred；⑥跨字段标量 OR 匹配残余面是否升格 P1/P2 的仲裁（现值已被 known-limitation pin 锁死防无声变化）。
 
 ### PA-2 过程披露与新事实
 

@@ -5,7 +5,7 @@
   "source": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md §一批A/B；rmc-agent-core.md P0-1..4",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-27",
   "executor": "TriMMC 编排会话（GLM glm-5.3）",
   "repo": "/srv/fleet/TriCompany（dev 线；push 前 pull --rebase 对齐远端）",
@@ -13,19 +13,19 @@
     {
       "nodeId": "PA-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "修 P0-1 路径边界双重绕过 + P0-3 内容匹配子串注入绕过（decision-pipeline.ts 路径校验改实路径解析（realpath/resolve 后前缀断言）；规则内容匹配从序列化全文 startsWith/includes 改结构化字段匹配）。先读 rmc-agent-core.md 对应条目全文获取精确 file:line 与绕过用例，逐条构造回归测试后再修"
     },
     {
       "nodeId": "PA-2",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "修 P0-2 acceptEdits 免确认放行面（只豁免白名单写入类工具，shell_exec 一律不放行）+ P0-4 spawnAgent 丢弃权限配置（透传 loopOptions.permissionMode 与 cwd 至子代理，缺省继承父级而非 bypassPermissions）（spawn.ts:31-39）"
     },
     {
       "nodeId": "PB-T",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "门禁回归：(1) 每项 P0 补对抗性测试用例（含原报告的绕过路径复现→修复后必须被拒）；(2) npm test 全套件不新增失败；(3) tsc --noEmit clean。产出修复验证记录到本树 reports/verify.md 后翻转各节点 status=done 并置树顶层 done"
     }
   ],

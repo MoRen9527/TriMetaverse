@@ -39,20 +39,20 @@
     {
       "nodeId": "PA-1",
       "agent": "FullStackDeveloper",
-      "status": "implemented（终态翻转归 PB-T 复核）",
+      "status": "done",
       "verdictNote": "fix 已落盘并 TC 提交 fabcbef：P0-1 isPathInBoundary 词法归一化+锚定边界断言（normalizePath 点段折叠改 .. 溢出双通道——首版实现存在符号性点段被后续弹出抵消缺陷致审计向量 b 仍活体，探针实证后同实例返工杀灭）；P0-3 matchesContent 弃 JSON 全文子串改结构化字段锚定（exact 全等/wildcard 首部前缀/死分支真实现）。回归 test/p0-boundary-content.test.mjs 20 例。门禁实测：build 干净+28/28 双轮隔离运行全绿+tsc --noEmit clean。过程新事实入档：(1) 规则词表 Bash(...) 与工具名 shell_exec 之间无别名映射（matchesTool 字面等值），词汇缺口钉值负例已入套件，源码不动留授权侧（与 P2-10 同族）；(2) 内容限定 deny 载荷先行命中 bypass-immune 安全检查 decidedBy=safety_check（比规则层更严，正确行为）"
     },
     {
       "nodeId": "PA-2",
       "agent": "FullStackDeveloper",
-      "status": "implemented（终态翻转归 PB-T 复核）",
+      "status": "done",
       "verdictNote": "fix 已落盘并 TC 提交 14499e5：P0-2 checkAcceptEditsMode 仅界内写入类短路 allow（清单对齐 permissions.ts:49-51 补 replace_in_file；非成员 return null 落步骤9/10 规则与 default 流程——acceptEdits 下 shell_exec/MCP 自定义工具免确认面收口，read_file 隐式放行同步取消为审计明文语义变化）；P0-4 SpawnConfig 增 permissionMode/permissionRules/cwd/additionalDirectories 四通道逐字透传+loop.ts 缺省 bypassPermissions→default fail-closed。回归 test/p0-mode-spawn.test.mjs 18 例（模式×工具矩阵+规则通道+静态钉值）含残余验证残差清单。门禁实测：build 干净+46/46 双轮全绿+tsc --noEmit clean。blast-radius 自查：loop 缺省变更行为翻转点=spawn 链与未显式传 mode/engine 的 agentLoop 直调宿主（TC src 内无此类点；TriLC/TriMC/TriCode 消费仓扫描超本节点授权移交授权侧排查）"
     },
     {
       "nodeId": "PB-T",
       "agent": "TestEngineer",
-      "status": "pending",
-      "verdictNote": ""
+      "status": "done",
+      "verdictNote": "PASS（附重开条件已闭环）：对抗复核逐向量核验四 P0 断言在位性+新逻辑分支清点，补录 6 例零覆盖分支用例（rooted-clamp/内嵌点段折叠/UNC fail-closed/大小写契约/跨字段 OR known-limitation 钉值/无-cwd 兜底 deny）→编排层重开门禁实测 52/52×2+tsc --noEmit clean 全绿，TC 提交 95d8713；reports/verify.md 六节全文落盘（§3 残差六项按归属移交授权侧）；tree-op.json 三节点+顶层 status=done 四笔翻转经 grep 实证"
     }
   ],
   "commits": [
@@ -71,9 +71,17 @@
     {
       "hash": "14499e5（TC dev）",
       "what": "PA-2 代码原子（五文件）：checkAcceptEditsMode 收口+SpawnConfig 四通道透传+loop 缺省 fail-closed+p0-mode-spawn.test.mjs 18 例；门禁 build/46of46×2（三套件合跑，PA-1 20 例零回退）/tsc --noEmit 三绿后才提交"
+    },
+    {
+      "hash": "a2c2f5bd（TM dev）",
+      "what": "PA-2 收账原子：state PA-2 implemented 终值+log 动作序列 #6-#8 与披露节"
+    },
+    {
+      "hash": "95d8713（TC dev）",
+      "what": "PB-T 对抗复核补录原子（两 .mjs 共 +82 行）：6 例零覆盖分支用例；重开门禁 build/52of52×2/tsc --noEmit 三绿后才提交=重开条件闭环"
     }
   ],
-  "push": "—（未推送；TM 记录线与 TC 代码线收口统一终推）",
-  "updatedAt": "2026-08-27T05:49:55Z",
-  "mode": "active-execution（执行墙已解除，进入 PA-1→PA-2→PB-T 一次一节点真实施工；完成定义尚未满足，随进度逐原子更新）"
+  "push": "—（收口提交随本原子落盘后单发；TM 记录线与 TC 代码线三原子同 push origin dev，终值留痕以实测为准由台账回填提交勘定）",
+  "updatedAt": "2026-08-27T06:03:01Z",
+  "mode": "done-executed（完成定义四要件实证：①四个 P0 全部修复各有复现性对抗用例守护——52 例覆盖审计全向量+新逻辑分支清点；②套件无新增失败——52/52 双轮隔离全绿且基线 contract-v3 8/8 始终未破；③收口 commit 已 push——见 push 字段终值与本提交随后单发实测；④树顶层 status=done 已置并经 grep 复核。残差六项如实移交授权侧不构成本树门禁阻塞：spawn 整链动态验证需凭据环境/消费仓 blast-radius 扫描/规则词表别名缺口=P2-10 族/P1-7 replace_in_file 安全集合/symlink realpath 复核 deferred/跨字段 OR 匹配残余面升格仲裁）"
 }
