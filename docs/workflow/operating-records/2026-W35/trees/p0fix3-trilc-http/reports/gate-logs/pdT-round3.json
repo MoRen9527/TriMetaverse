@@ -1,0 +1,20 @@
+{
+  "label": "pdT-round3",
+  "cmd": "/home/fleet/.local/opt/node-v22.14.0-linux-x64/bin/node --import tsx --test <enum-tests.txt 显式枚举>",
+  "nodeBin": "/home/fleet/.local/opt/node-v22.14.0-linux-x64/bin/node",
+  "nodeVersion": "v22.14.0",
+  "repoCwd": "/srv/fleet/TriLC",
+  "timedOut": false,
+  "signal": null,
+  "wallMs": 15344,
+  "startedAt": "2026-08-27T08:54:37.228Z",
+  "endedAt": "2026-08-27T08:54:52.582Z",
+  "files": 42,
+  "tests": "510",
+  "suites": "90",
+  "pass": "502",
+  "fail": "8",
+  "cancelled": "0",
+  "skipped": "0",
+  "todo": "0"
+}

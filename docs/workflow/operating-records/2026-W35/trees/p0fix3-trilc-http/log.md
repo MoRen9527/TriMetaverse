@@ -24,3 +24,18 @@
 | 4 | 08:07-08:19 | PD-1 fresh FullStackDeveloper 派工（先写后报）：src/server/app.ts **3 文件 202+/3-**——①新增六导出纯函数组（extractInternalToken/timingSafeStringEquals/collectHostAllowEntries/hostHeaderAllowed/originHeaderAllowed/cronCommandHttpAllowed+:104-228，adaptation=无 Write 面物理留 app.ts 不新建 security 模块）；②createServer 回调全局门（healthz 精确豁免→Host 403→Origin 403→token 401 fail-closed 反转 trimc-auth 参照）；③cron POST/PATCH 双入口白名单拦截；④MCP add 显式开关；⑤两真实 HTTP 测试文件注入 token 附头对齐；parseHarnessOptions/runHarnessAgentLoop/bypass 缺省 :4079 与 timer.ts/env.ts/package 零触碰（红线自证在报告） | —（TriLC 工作树变更未提交） |
 | 5 | 08:20-08:22 | 门禁实测：npm run check 干净（tsc strict 无输出零错误）；pc1-round1/round2 双轮隔离 **451 tests/443 pass/8 fail** 失败集与 round0-node22 逐字同型（grep not ok 六行比对在案）＝零新增失败定谳 | — |
 | 6 | 08:23-08:25 | TriLC 代码原子提交并 push **sg 线成功**（memory「TriLC 全封」权限墙前科解除实证）；GitHub 双端形态收口探明：仓内仅单 remote=/srv/git/TriLC.git 且裸仓 remote -v 空=无自动同步链路，计划文档 §42 「GitHub 分支 = sg 线」同体——GitHub 远端同步窗口如实移交授权侧（与本 tick 前序 p0fix2 残差同型口径） | TriLC dev 26720dd（ba32bc7..26720dd fast-forward 实测一次过） |
+| 7 | 08:26-08:27 | PD-1 收账原子（state PD-1 done 终值+log #4-#6） | ae94d694（push e8e16d95..ae94d694 fast-forward 实测一次过） |
+| 8 | 08:28-08:33 | 编排层预置三占位锚（TriLC test/server/ 两对抗套件锚+树 reports/verify.md stub——派工角色无 Write 面先例延续）+enum-tests.txt 扩至 42 文件；PD-T fresh TestEngineer 派工，先写后报：**59 例**两套件+verify.md 六节+tree-op.json 三笔翻转，诚实申报全程未经运行含四处推演待实证标注 | — |
+| 9 | 08:50-08:51 | 重开门禁实测 pdT-round1：**510 tests/501 pass/9 fail**——58 例首轮命中；唯一增差=e8 翻红定谳 llhttp 协议层对完全无 Host 的 HTTP/1.1 先回 400 不到达应用层门（其预登记标注正中、拒绝语义成立仅层级归属需分辨），SendMessage 续接同实例修钉断言为实测 status===400 双层拒死证并同步文件头契约表三处一致性 | — |
+| 10 | 08:53-08:55 | 复测定谳：pdT-round2/round3 连续两轮隔离 **510 tests/502 pass/8 fail** 失败集与 round0-node22 逐字同型＝新增失败集为空；npm run check 干净维持 → verify.md 终值回填+§3⑤ 层级归属修正+§5 CONDITIONAL_PASS→PASS 翻转核销 + TriLC 对抗补录原子提交 | 876d21e（TriLC dev 本地提交后 push 26720dd..876d21e fast-forward 实测一次过） |
+| 11 | 08:57 | 收口原子：state PD-T done 终值+commits 五笔全链+push 三端终值+mode=done-executed 完成定义四要件实证；本表 #7-#11。树顶层 status=done 与节点翻转 grep 三笔复核在位（tree-op.json :8/:16/:22） | （本提交，hash 见 git log 实测；随后单发终推） |
+
+### 终态一句话
+
+p0fix3-trilc-http 树 end-to-end 完成（本会话内）：TriLC HTTP 面唯一 P0（审计发现 8=P0-1 集群项）——全局 X-Internal-Token 认证门 fail-closed（未配置即全拒，反转 trimc-auth 参照的 fail-open 变体）+Host/Origin 校验拒 DNS rebinding+cron command 白名单 POST/PATCH 双入口+MCP add 显式开关——修复上码 26720dd 并有 59 例对抗守护（876d21e）实测背书（pdT-round2/round3 双轮隔离 510/502/8 零新增失败+tsc 干净）；sg 权威线双原子 fast-forward 实证（旧 TriLC push 权限墙解除）；残差七项按归属移交（CLI stop 带 token 适配/TriPilot 宿主/token 缺省收紧两步走/GitHub 同步窗口授权侧/heyuan 重启前必须预配 TRILC_INTERNAL_TOKEN）。
+
+### 门禁等价口径披露（入 verify.md §2 引用）
+
+- 解释器：默认系统 node18 因 node:sqlite（≥22.5 缺失）产生 52 个环境性失败（round0-node18 存档非比对用）；权威口径=用户级 v22.14.0 选择器（gate-runner 内建，GATE_NODE_BIN 可覆盖）。
+- 显式枚举：enum-tests.txt 42 文件全枚举（40 既有+本树 2 锚）等价 package.json glob script；src/project 两 *.test.ts 不在 npm script 意图内不入门禁。
+- 判定法：round0-node22 失败集差分而非绝对失败数；五项预置债务（init-confirm×2/project-link×1/tools-ctx-cwd×2/tui components 文件级）全程零回退。

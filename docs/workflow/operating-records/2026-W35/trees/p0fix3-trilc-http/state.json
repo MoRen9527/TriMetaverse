@@ -47,8 +47,8 @@
     {
       "nodeId": "PD-T",
       "agent": "TestEngineer",
-      "status": "pending",
-      "verdictNote": ""
+      "status": "done",
+      "verdictNote": "PASS（pdT-round2/round3 实测背书翻转，详见 reports/verify.md §5）：两套对抗守护套件 59 例落盘（通道一/二 auth-gate-rejection 41 例=六导出纯函数单元直测 26+createTriLCApp 真起服端到端 15 含门序互锁死证；通道三 cron-mcp-entry-guard 18 例=cronCommandHttpAllowed 单元 9+POST/PATCH 双入口端到端 9 含 g2×g3 拦截位辨伪/MCP 开关缺省禁用形状钉死）；verify.md 六节全文含残差七项按归属移交与零覆盖分支清点表；tree-op.json 三笔翻转（PD-1/PD-T/顶层）经编排层 grep 复核在位。诚实申报全程：59 例落盘时未经运行——编排层重开门禁实测 pdT-round1 **510 tests/501 pass/9 fail**：58 例首轮命中、唯一增差 e8 定谳为 llhttp 协议层对完全无 Host 的 HTTP/1.1 先回 400 不到达应用层门（其预登记「推演待实证」标注正中、拒绝语义成立仅层级归属需分辨）；SendMessage 续接同实例修钉 e8 断言为实测 status===400 双层拒死证并同步文件头契约表/注释三处一致性，pdT-round2/round3 连续两轮隔离 **510/502/8** 失败集与 round0-node22 基线逐字同型＝新增失败集为空；npm run check 干净维持"
     }
   ],
   "commits": [
@@ -63,13 +63,30 @@
     {
       "hash": "26720dd（TriLC dev）",
       "what": "PD-1 代码原子（3 文件 +202/-3）：全局 token 门 fail-closed+Host/Origin 校验+cron 白名单双入口+MCP add 开关+两真实 HTTP 测试对齐；门禁三绿后才提交=tsc clean/pc1-round1 与 round2 双轮隔离失败集逐字同型零新增"
+    },
+    {
+      "hash": "ae94d694（TM dev）",
+      "what": "PD-1 收账原子：state PD-1 done 终值+log 动作序列 #4-#6；push e8e16d95..ae94d694 fast-forward 实测"
+    },
+    {
+      "hash": "876d21e（TriLC dev）",
+      "what": "PD-T 对抗补录原子（2 新文件 834 行/59 例）：auth-gate-rejection 41 例+cron-mcp-entry-guard 18 例；重开门禁实测 pdT-round1 唯一增差 e8 返工修钉后 pdT-round2/round3 连续两轮隔离 510 tests/502 pass 失败集与基线逐字同型零新增+tsc 干净维持后才提交"
+    },
+    {
+      "hash": "（本收口提交，hash 见 git log HEAD 实测）",
+      "what": "收口原子：state PD-T done 终值+commits 全链+push 三端终值+mode=done-executed 完成定义四要件实证+verify.md 终值回填与 §3⑤ 层级归属修正与 §5 CONDITIONAL_PASS→PASS 翻转核销；log.md #7-#11。树顶层 status=done 与节点翻转 grep 复核在案"
     }
   ],
+  "verifyRecord": {
+    "path": "reports/verify.md",
+    "sections": "六节全文（三通道逐项核验表/门禁口径与环境事实含 TAP 七轮存档表/残差七项按归属移交/零覆盖分支清点表 23 行+半覆盖四条/结论判定 PASS 含前置条件核销记录/使用依据）",
+    "finalVerdict": "PASS——510 tests/502 pass×2 轮隔离新增失败集为空+59 例守护全绿+check 干净"
+  },
   "push": {
     "triMetaverse": "成功均一次过（/srv/git/TriMetaverse.git 权威线）：a63cb3be..83bcf366（骨架）、83bcf366..e8e16d95（工具链）；PD-1 收账本笔随后单发终推",
-    "triLCSgLine": "成功一次过：ba32bc7..26720dd → origin=/srv/git/TriLC.git——memory「TriLC 推送权限墙全封」前科本 tick 实测解除",
+    "triLCSgLine": "成功两笔均一次过（origin=/srv/git/TriLC.git）：ba32bc7..26720dd（PD-1 代码）、26720dd..876d21e（PD-T 对抗测试）——memory「TriLC 推送权限墙全封」前科本 tick 连续实测解除",
     "triLCGitHub": "形态探明非凭据阻塞类：仓内仅单 remote=/srv/git/TriLC.git 且裸仓 git remote -v 空=无自动同步链路；计划文档 §42「GitHub 分支 = sg 线」将两者视为同体——GitHub 远端同步窗口移交授权侧执行（与本 tick p0fix2 残差口径一致，非本会话白名单内可解）"
   },
-  "updatedAt": "2026-08-27T07:53:21Z",
-  "mode": "active-executing（骨架原子已落盘待首笔 commit；节点未开工）"
+  "updatedAt": "2026-08-27T08:57:10Z",
+  "mode": "done-executed（完成定义四要件逐项实证：①P0-1 三通道全收敛+守护测试齐——TriLC dev 26720dd 修复（全局 token 门 fail-closed+Host/Origin rebinding 校验+cron command 白名单 POST/PATCH 双入口+MCP add 显式开关）+876d21e 对抗 59 例各有审计向量复现→被拒死证；②套件无新增失败——重开门禁 510 tests/502 pass×pdT-round2/round3 连续两轮隔离与 round0-node22 基线失败集逐字同型（五项预置债务在案零回退），npm run check 干净；③push origin 完成——sg 线两笔 ba32bc7..26720dd..876d21e fast-forward 实测+TM 记录线全程四笔 push 上权威线；GitHub 双端形态探明=仓单 remote 无自动链路「GitHub 分支=sg 线」同体承诺下远端同步窗口移交授权侧（state.push.triLCGitHub/verify.md §3⑥ 如实在案非本会话白名单内可解）；④树顶层 status=done 与 PD-1/PD-T 两节点翻转 grep 三笔复核在位。残差七项 verify.md §3 按归属移交不构成本树门禁阻塞）"
 }

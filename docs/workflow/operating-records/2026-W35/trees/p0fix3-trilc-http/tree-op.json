@@ -5,7 +5,7 @@
   "source": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md §一批D；rmc-TriLC.md P0-1（精修版归并条目）",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-27",
   "executor": "TriMMC 编排会话（GLM glm-5.3）",
   "repo": "/srv/fleet/TriLC（sg 线 dev；注意该线已含 runHarnessAgentLoop 架构 c4f9e0f/ba32bc7，勿回退）",
@@ -13,13 +13,13 @@
     {
       "nodeId": "PD-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "修 P0-1 三通道收敛：(1) 全局 X-Internal-Token 认证门——除 /healthz 外所有 HTTP 路由要求 TRILC_INTERNAL_TOKEN 头匹配，未配置 token 时服务仅绑定显式回环并拒绝全部非 healthz 路由（fail-closed；实现参考 TriMC 的 trimc-auth 模式）；(2) Host/Origin 校验拒绝 DNS rebinding（仅允许 localhost/127.0.0.1 Host 头或配置内白名单）；(3) cron command 白名单化入口与 MCP add 鉴权。先读 rmc-TriLC.md P0-1 全文拿精确 file:line 与三条通道清单再动手"
     },
     {
       "nodeId": "PD-T",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "门禁回归：三通道各写拒绝路径测试（无 token=401、错 Host=403、白名单外 command=拒）；全套件基线对比不新增失败（预置失败基线见 tc001-harness-scaffold HS-3 登记：8 个 tui debt 用例）；tsc clean。验证记录落本树 reports/verify.md 后收口 done"
     }
   ],

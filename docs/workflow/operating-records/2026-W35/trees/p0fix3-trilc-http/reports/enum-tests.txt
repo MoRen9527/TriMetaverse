@@ -22,6 +22,9 @@ test/pidfile.test.ts
 test/project-link.test.ts
 test/project-registry.test.ts
 test/r5-2.4-2.5-degraded.test.ts
+# +p0fix3-trilc-http PD-T 对抗套件锚（tick 20260827T074800Z 新增两文件）
+test/server/auth-gate-rejection.test.ts
+test/server/cron-mcp-entry-guard.test.ts
 test/server/app-json-dedup-shape.test.ts
 test/server/harness-scaffold.test.ts
 test/server/qa-json-runtime-stub.test.ts
