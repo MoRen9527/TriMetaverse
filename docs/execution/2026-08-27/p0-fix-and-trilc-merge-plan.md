@@ -32,6 +32,17 @@
 | B 工具放行与子代理隔离 | #2 #4 | acceptEdits 只豁免白名单写入类工具；spawnAgent 透传 loopOptions.permissionMode/cwd 并缺省继承父级 |
 | C TriRMC 服务面 | #5 #6 | runAs 白名单（仅 fleet）+token 未配置即拒绝启动或拒绝路由（fail-closed） |
 | D TriLC HTTP 面 | #8 | X-Internal-Token 全局门（对齐 TriMMC 已有实现 trimc-auth 模式）+Origin/Host 校验+cron command 白名单化；分两步走避免打断 heyuan 生产周迁移链路（生产窗口外部署） |
+
+#### 批 D 生产升级运行手册（2026-08-27 增补——p0fix3 落库后生效，升级即必读）
+
+新代码将 `/healthz` 外全部路由置于 `TRILC_INTERNAL_TOKEN` 门后。**不配 token 直接重启=非 healthz 全线 401**（含 rmc_tick→TriRLC 的 `/v1/messages`）。四步：
+
+1. **生成 token**（两端各一把，openssl rand -hex 32）
+2. **服务端配置**：heyuan `/srv/fleet/TriLC/.env` 追加 `TRILC_INTERNAL_TOKEN=<rm-token>`；本机 daemon 同理加用户级 env 或 .env
+3. **调用方适配**：`TriRMC/scripts/rmc_tick.py` 的 `TRILC_MESSAGES` 请求头补 `X-Internal-Token`（读同源 env）；本地 CLI/TUI 调用面同步
+4. **验收序列**：配置后重启 → curl 无头打 `/v1/messages` 应 401 → 带 token 应业务可达 → 触发一次 rmc_tick dry-run 通链
+
+注意语义差异：本面为 fail-closed 变体（与 TriMC trimc-auth 的 fail-open 故意不同，见其 verify.md 差异声明）。
 | E TriModel 流式 fallback | #9 | 已开流的 fallback 一律终止流并向上报错（禁止拼接）；顺带处理报告指出的 chat/stream 双实现漂移（P2-4 记录） |
 
 ## 二、TriLC 双线合并方案
