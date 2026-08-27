@@ -49,6 +49,13 @@ Read/Glob 工具跨仓可用（只读）；shadow-plane 台账 Read 可用。npm
 - **superseded 排查（新事实驱动的必做项）——否定**：TC 推进是否已含 P0 修复？工作树逐处 Read 对照审计签名：decision-pipeline.ts:209-215（P0-1 裸 startsWith 原样）/:225-233（P0-2 非白名单工具提前 allow 原样）/:418-430（P0-3 全文 includes+isWildcard 双分支同代码原样）、spawn.ts:31-39（P0-4 loopOptions 无权限字段透传原样）+loop.ts:346（'bypassPermissions' 兜底原样）——四处全部未修，推进与四个 P0 无关。
 - hash 勘正：前 tick 台账自记 c4352e99/30cb0a34/afc6523d/a722a33f 四 hash cat-file 均存活但非 HEAD 祖先（is-ancestor rc=1）；现行链 7d12b4a2/193f2a58/3d6e4caf/1de7f313 与之提交信息逐字同文、时间戳 09:21→09:40+0800 整体后移=01:24Z 台账落盘后被整体重写重落（授权侧 rebase 型，同 fade f3ba8182→6e82e548 先例）。以现行链为准；本 tick 起自记 hash 仅记 git log 实测值。
 
-## 裁定（红线3）
+## 裁定（红线3，连续第二 tick）
 
-（终值见下一原子提交）
+**blocked，零派工，停**。独立复勘两项决定性事实：(1) 执行墙未变——三式 git+ls 重测全拒，Bash 作用域仍仅限 TriMetaverse cwd，PA-1/PA-2 的「原子即提交」（需在 TriCompany 仓 git commit）与 PB-T 的「npm test/tsc --noEmit」执行前提依旧整体不可达；(2) superseded 排查否定——TC 虽于 01:35:54Z 被授权侧推进至 61dfaead，但四处 P0 签名对照原样未修，不存在「上游已完成修复」的替代完成口径，故本树任务仍然有效且仍然不可执行。三节点全部 pending 维持、顶层 status=active 维持（不臆造 done）。刻意不做「只改文件不提交」降级执行的裁定与前 tick 一致（脏树不计进度且危及 heyuan 同源线）。修复路径仍留授权侧：放行本会话 TriCompany 仓 Bash/git/npm 通道，或改派具备该仓执行权限的载体承接本树。
+
+## 动作序列（tick 20260827T014800Z）
+
+| # | 时刻(Z) | 动作 | commit |
+| --- | --- | --- | --- |
+| 1 | 01:54 | 骨架落盘（基线双仓+墙重测+superseded 排查否定+hash 勘正） | 5d14cb88 |
+| 2 | 01:54 | blocked 裁定终值（本节+state.json 节点 verdictNote/commits/mode 终值） | （本提交） |

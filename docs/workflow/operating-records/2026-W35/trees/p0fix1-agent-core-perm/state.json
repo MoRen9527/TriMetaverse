@@ -27,28 +27,32 @@
       "nodeId": "PA-1",
       "agent": "FullStackDeveloper",
       "status": "pending",
-      "verdictNote": "复勘进行中（裁定终值见下一原子提交）"
+      "verdictNote": "blocked（连续第二 tick：目标仓 git 执行通道三式+ls 重测仍全拒，见 survey.wallReTest；修复标的经 superseded 排查仍缺位故无替代完成口径，见 survey.upstreamAdvanceCheck；零派工）"
     },
     {
       "nodeId": "PA-2",
       "agent": "FullStackDeveloper",
       "status": "pending",
-      "verdictNote": "复勘进行中（同上）"
+      "verdictNote": "blocked（同上）"
     },
     {
       "nodeId": "PB-T",
       "agent": "TestEngineer",
       "status": "pending",
-      "verdictNote": "复勘进行中（同上）"
+      "verdictNote": "blocked（npm test/tsc --noEmit 门禁执行不可达，同上）"
     }
   ],
   "commits": [
     {
-      "hash": "（本提交，hash 见 git log HEAD 实测）",
+      "hash": "5d14cb88",
       "what": "骨架（tick 20260827T014800Z）：双仓基线实测+墙三式+ls 重测全拒维持+TC 上游推进 superseded 排查否定（四处 P0 签名对照原样未修）+前 tick hash 链重写勘正"
+    },
+    {
+      "hash": "（本提交，hash 见 git log HEAD 实测）",
+      "what": "blocked 裁定（红线3，连续第二 tick）：零派工，PA-1/PA-2/PB-T 维持 pending，顶层 status 维持 active 不臆造；修复路径仍留授权侧（放行 TriCompany 仓 Bash/git/npm 通道或改派有执行权载体）"
     }
   ],
-  "push": "待实测（骨架与裁定落盘后）",
-  "updatedAt": "2026-08-27T01:54:02Z",
-  "mode": "in-progress（骨架已落盘，裁定下一原子提交落终值）"
+  "push": "待实测（裁定已落，下一动作）",
+  "updatedAt": "2026-08-27T01:54:48Z",
+  "mode": "blocked (红线3 事实障碍连续第二 tick：TriCompany 仓执行通道被会话权限墙切断且墙未变；superseded 排查否定=修复标的仍缺位无替代完成口径；零派工留痕收束，非收口)"
 }
