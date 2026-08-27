@@ -43,7 +43,16 @@
       "verdictNote": "blocked（npm test/tsc --noEmit 门禁执行不可达，同上）"
     }
   ],
-  "commits": [],
-  "updatedAt": "2026-08-27T01:21:05Z",
-  "mode": "open (骨架已落，blocked 裁定待录)"
+  "commits": [
+    {
+      "hash": "c4352e99",
+      "what": "骨架（state/log 落盘；勘察证据：双仓基线 TM d5a679f6 同步/TC dev=origin 1a4d0241、目标 40 .ts 只读在案、审计源 141 行+排期文档已读、访问墙三式实测）"
+    },
+    {
+      "hash": "（本提交）",
+      "what": "blocked 裁定（红线3）：零派工，PA-1/PA-2/PB-T 维持 pending，顶层 status 维持 active；修复路径留授权侧（放行 TriCompany 仓 Bash/git/npm 通道或改派有执行权载体）"
+    }
+  ],
+  "updatedAt": "2026-08-27T01:23:00Z",
+  "mode": "blocked (红线3 事实障碍：TriCompany 仓执行通道被会话权限墙切断；零派工留痕收束，非收口)"
 }
