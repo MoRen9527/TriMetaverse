@@ -48,11 +48,15 @@
       "what": "骨架（tick 20260827T014800Z）：双仓基线实测+墙三式+ls 重测全拒维持+TC 上游推进 superseded 排查否定（四处 P0 签名对照原样未修）+前 tick hash 链重写勘正"
     },
     {
-      "hash": "（本提交，hash 见 git log HEAD 实测）",
+      "hash": "29c25c34",
       "what": "blocked 裁定（红线3，连续第二 tick）：零派工，PA-1/PA-2/PB-T 维持 pending，顶层 status 维持 active 不臆造；修复路径仍留授权侧（放行 TriCompany 仓 Bash/git/npm 通道或改派有执行权载体）"
+    },
+    {
+      "hash": "（本提交，hash 见 git log HEAD 实测）",
+      "what": "push 实测终值留痕：一次成功 ca80be23..29c25c34（本地 ahead 6 全部上权威线，含前 tick 重写链 4 提交+本 tick 2 提交；bare 仓 objects/14 权限障碍已消）——但 post-receive hook 报 fade-hook.lock Permission denied+flock bad fd（P2-1 既有活体，不触发后续 tick）"
     }
   ],
-  "push": "待实测（裁定已落，下一动作）",
-  "updatedAt": "2026-08-27T01:54:48Z",
+  "push": "成功×1（ca80be23..29c25c34 fast-forward，2026-08-27T01:55Z 实测；前 tick 连续被拒的 bare 仓对象权限障碍未再现身=授权侧已修；post-receive hook P2-1 活体照旧留授权侧）",
+  "updatedAt": "2026-08-27T01:55:33Z",
   "mode": "blocked (红线3 事实障碍连续第二 tick：TriCompany 仓执行通道被会话权限墙切断且墙未变；superseded 排查否定=修复标的仍缺位无替代完成口径；零派工留痕收束，非收口)"
 }
