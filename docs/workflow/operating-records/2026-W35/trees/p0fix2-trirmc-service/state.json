@@ -1,0 +1,48 @@
+{
+  "tick": "20260827T061216Z",
+  "treeId": "p0fix2-trirmc-service",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/p0fix2-trirmc-service/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance",
+    "mode": "execution executor（PC-1 fresh 派工 FullStackDeveloper + PC-T fresh 派工 TestEngineer，一次一节点；代码/测试落盘由子实例 Edit 承担=先写后报，git 提交与门禁执行由编排层承担）"
+  },
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260827T061216Z.md",
+  "startedAt": "2026-08-27T06:12:16Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；先写后报（子实例先落盘再报告，带路径+行数）；一次一节点禁复用；事实障碍如实 blocked 并停不臆造；收口必做（全部节点 done 后置顶层 status=done）；命令一律裸/白名单前缀形态（禁止 cd X && cmd 组合，跨仓统一 git -C/--prefix 尾置）",
+  "predecessorSummary": "同日前一树 p0fix1-agent-core-perm 于 tick 044800Z 完成（TC fabcbef/14499e5/95d8713+TM 四原子，52/52 双轮+tsc clean，双仓 push 实证）；本树为 P0 批 C（审计发现 5-6=rmc-TriRMC.md P0-1 runAs 提权面/P0-2 internal 鉴权 fail-open），source=p0-fix-and-trilc-merge-plan.md §一批C。授权侧解封（git -C 白名单+Write/Edit 跨仓可达）由 p0fix1 树四 tick 复勘实证在案。",
+  "baseline": {
+    "triMetaverseHeadAtStart": "a8412c92（git rev-parse 实测；dev 与 origin/dev 逐字一致，工作树 clean 除 p0fix1 树遗留 untracked .ledger-backfill-tmp.py 照旧不入库）",
+    "triRMCCloneThisTick": "本 tick 按 tree-op repo 字段指令新建检出：`git -C /srv/fleet clone --branch dev https://github.com/MoRen9527/TriRMC.git TriRMC` 一次成功；HEAD=671b4d4（dev 与 origin/dev remote-tracking 一致）；链顶三笔 671b4d4(活动锁护栏)←92078a0(face 路由门 r-face 严格制)←0567afe(TC-s1 FR-2 end_turn)",
+    "triRMCRemote": "origin=https://github.com/MoRen9527/TriRMC.git（GitHub 直推形态；/srv/git 本地镜像实测无 TriRMC.git——五镜像仅 TM/TC/TriMC/TriLC/TriCode）",
+    "targetSignaturesVerified": "两处修复标的工作树 Read 对照与审计逐字吻合：P0-1 cron/command-handler.ts:24-25(runAs 可选 string 无白名单)/:85(cmd = payload.runAs ? 'runuser' : shell)/:86-88(-u payload.runAs 拼接)/:94(HOME=/home/${payload.runAs})，入口面 cron/routes.ts:53-56 validateCreateInput 仅校验 command/cwd 对 runAs 全透传；P0-2 server/app.ts:121(internalToken = process.env.TRIRMC_INTERNAL_TOKEN ?? '')/:122(if (internalToken && startsWith('/internal/')) 空串短路跳过整个鉴权块=fail-open 原样)",
+    "legacyTestConflictFound": "test/server/internal-auth.test.ts:77-81 既有用例『token 未配置：旧行为放行（兼容未迁移调用方）』断言未配置 token 时 /internal 返回 200——与本树 fail-closed 修复语义直接冲突，须随修复反转为拒；此为审计明文要求的故意语义变化（同 p0fix1 PA-2 read_file 隐式放行取消先例），非误伤，verify.md 将如实记录",
+    "environmentFacts": [
+      "node v18.20.8；package.json test script 为 `node --import tsx --test test/**/*.test.ts` glob 形态（node18 下 globstar 缺省不分目录层级，门禁采用显式枚举文件的等价口径如实记录）",
+      "tsconfig include 仅 [src/**/*.ts] 且 exclude test=test 不进 tsc 门禁（tsc clean 口径仅覆盖 src 面）",
+      "依赖 file:../TriCompany/packages/agent-core 与 file:../TriModel 在本机均可解析（/srv/fleet/TriModel 存在实测）；fresh clone 无 node_modules，测试执行需先行 npm install --prefix 形态（白名单 npm install:* 前缀允许尾置 --prefix）",
+      "test/ 既有 41 个 *.test.ts 覆盖 cron 三件(routes/command-handler/service/week-math/app-cron)+server/internal-auth 等；e2e/real-model-agent.test.ts 名义需真实模型凭据（不在等价门禁枚举内，既有环境残差照旧披露）"
+    ],
+    "channelSurvey": {
+      "wallStatus": "DOWN 维持——本 tick 实测 git -C 全通（clone/log/status/rev-parse 一次成功系列）；TM cwd 内 git/date 全通；权限白名单沿用 c6d0d27/61dfaea 两笔扩容（Bash(git -C:*)/npm install/npm test/npm run/npx tsc/node 等）",
+      "triRMCPushPath": "origin 为 GitHub https——clone 已证网络可达 github.com；push 凭据状态未知待实测，若被拒按红线3 如实留痕（本地 commit 计进度，push 终值下轮复核）"
+    },
+    "supersededCheck": "否定不适用前置确认——目标仓为本 tick 新建检出（GitHub dev 权威线 HEAD=671b4d4 即远端最新），两处 P0 签名在该权威线上原样缺位=不存在上游已修的替代完成口径，树任务有效"
+  },
+  "nodes": [
+    {
+      "nodeId": "PC-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending"
+    },
+    {
+      "nodeId": "PC-T",
+      "agent": "TestEngineer",
+      "status": "pending"
+    }
+  ],
+  "commits": [],
+  "push": "",
+  "updatedAt": "2026-08-27T06:17:30Z"
+}
