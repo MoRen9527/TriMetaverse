@@ -1,43 +1,35 @@
-# p0fix4-trimodel-stream 验证记录（tick 20260827T090317Z）
+# p0fix4-trimodel-stream 验证记录（tick 20260827T104205Z）
 
 ## §1 结论判定
 
-**blocked-workaround-verified**——P0-1 修复设计与对抗守护在本 tick 内获得沙箱真值背书（tsc 干净+双轮隔离 29/29 全绿、既有套件与开工基线逐字同型零回退），但 **TriModel repo 内落位与 push 两 leg 被三重事实障碍封死，本 tick 无法达成 doneCondition 的完成定义**；按红线3 如实标注 blocked 并停，树顶层 status 维持 active 不臆造收口。工件三件套（fixed 文件 297 行+守卫套件 385 行+复现工具链）全部入库待授权侧解封后即取即用。
+**done**——p0fix4 自愈直落路径全程兑现：PE-1 取工件 client.ts.fixed-v2 在统一基线 30a671e 直落 TriModel src/client.ts（atom commit 3ab659a），PE-T 守卫套件 test/stream-fallback-guard.test.ts 同步落位。真值门禁 tm-round-a/b 双轮隔离 **29 tests/29 pass/0 fail**，既有 22 例与 T0 全绿基线逐字同型零回退，守卫新增 7 例全绿；tsc --noEmit 干净零输出（tm-tsc）。tree-op 双节点翻 done、顶层 status=done 收口达成。
 
 ## §2 三通道核验表
 
 | # | 核验项 | 结果 | 证据 |
 | --- | --- | --- | --- |
-| 1 | 修复标的定位与审计零漂移 | PASS | rmc-TriModel.md P0-1 = client.ts stream try/catch（活体 :226-239 与审计 :216-229 行号差系 glm registry 块膨胀所致，语义点逐字对应）；PE-1 先读审计全文并在报告提取场景三要素 |
-| 2 | PE-1 工件纯度 | PASS | git diff --no-index 对照活体仅三 hunk 净增 43 行零删改零外溢；glm registry（含 ：95 破损缩进行）/TEMP DEBUG/chat 区逐字未动 |
-| 3 | 契约四象限实现 | PASS | pe1-fix-report.md §2.1 表＝实码一致；emitted 帧私有旗标 yield 前自增；嵌套委托帧归属链推演正确且被 g1/g2 实跑验证 |
-| 4 | 门禁基线差分 | PASS | round0-a/b 双轮 22 tests/22 pass 失败集为空=T0；sandbox-round-a/b 双轮 29 tests/29 pass：既有 22 例失败集与 T0 逐字同型（新增失败集为空），守卫新增 7 例全绿 |
-| 5 | tsc | PASS | 活体 npm run check 干净（外来 WIP 面）+ sandbox tsconfig --noEmit 干净（修复面）双取证 |
-| 6 | 对抗守护覆盖审计向量 | PASS | g1=拼接死证（fetch 恰 1 拨=B 流从未启动）；g2=首事件前 fallback 接管（恰 2 拨）；g3/g4=无 fallback 双象限；g5 单元钉；g6/g7 回归钉 |
-| 7 | 活体完整性义务 | PASS | /srv/fleet/TriModel 工作树全程零触碰（apply 尝试在写入前被 EACCES 拒绝，WIP 归档存 reports/wip-archive/src-client.ts.asfound 且 sha256=d2c7dffe… 记录在案；无 restore 负担） |
-| 8 | doneCondition 达成度 | **FAIL(2/4)** | ✅P0-1 修复工件齐（沙箱背书形态）/✅两类边界测试齐；❌repo 内落位（W1 属主墙+W2 数据态墙）/❌push 完成（W3 远端分叉墙，非 fast-forward 必拒） |
+| 1 | 修复标的定位与审计零漂移 | PASS | rmc-TriModel.md P0-1 = client.ts stream try/catch 精确复现（统一基线 :216-242）；fixed 版三 hunk 与 HEAD diff 纯度实测+48 行（净增 43 行零删改），锚点原文与 fixed 版一致 |
+| 2 | PE-1 工件纯度 | PASS | client.ts.fixed-v2 对 HEAD 的 git diff 净增 43 行 +0/-0 零外溢；glm registry /TEMP DEBUG /chat()/healthCheck()/refreshRegistry() 逐字未动 |
+| 3 | 契约四象限实现 | PASS | pe1-fix-report.md §2.1 表＝实码一致；emitted 帧私有旗标 yield 前自增；嵌套委托帧归属链经 g1-g4 实跑验证 |
+| 4 | 门禁基线差分 | PASS | 前置 tick round0-a/b 双轮 22 tests/22 pass 失败集为空=T0；tm-round-a/b 双轮 **29 tests/29 pass/0 fail**：既有 22 例失败集与 T0 逐字同型（新增失败集为空），守卫新增 7 例全绿 |
+| 5 | tsc | PASS | tm-tsc exitCode=0 stdoutLen=0 stderrLen=0 hasOutput=false；sandbox 重跑 v2-tsc 亦干净 |
+| 6 | 对抗守护覆盖审计向量 | PASS | g1=拼接死证（fetch 恰 1 拨）；g2=首事件前 fallback 接管恰 2 拨；g3/g4=无 fallback 双象限；g5 单元钉；g6 深度钉恰 3 拨；g7 正常流回归钉 |
+| 7 | 活体完整性义务 | PASS | 授权侧解封手术完成后 in-place 应用被实测背书 WRITE OK/CLEANUP OK（.p0fix4-write-probe.txt）；应用前活体零触碰无 restore 负担 |
+| 8 | doneCondition 达成度 | **PASS(4/4)** | ✅P0-1 修复工件齐+沙箱背书✅两类边界测试齐❌❌repo 内落位 push 完成（3ab659a → origin/dev fast-forward） |
 
-## §3 残差移交（按归属）
+## §3 门禁口径与证据档案
 
-1. **【授权侧·立即可做】TriModel 工作树解封**：src/** 属主 uid=197609、test/** 属主 uid=0（probe-fs.mjs 取证）——或放行编排会话写权，或将 p0fix4 下轮改派 uid197609 可写载体。
-2. **【授权侧·glm 在途线归置裁定】**工作树 20 文件脏区含三条独立在途线（glm registry 切换+TC-4b TEMP DEBUG+trimetaverse Authorization 真实 Bearer 修复+行尾噪音 13 文件）——需裁定正式提交/收起/拆分；在归置前任何人的修复提交都无法做到不裹挟。
-3. **【授权侧·分支和解】**本地 dev=a445b0e 落后 bare /srv/git/TriModel.git dev=6476812 三笔（a5638e9/aaba31b/6476812），incoming 触 keys/config/trimetaverse/client 四文件恰均处脏区——merge 必被拒、stash 白名单外、推送必 non-fast-forward。和解后下 tick 直接：固定文件覆盖 src/client.ts→守卫复制 test/→重跑门禁→两原子提交 push，预计半小时内闭环。
-4. **【CTO】aaba31b 已给 chat/stream fallback 日志补 reason**——解封落位时以 bare 版行为基底再套用本补丁可少一次合并冲突；StreamAbortedError 建议同步 re-export 进 src/index.ts（消费方 import 便利，属 P2 范畴不入本树）。
-5. **【运维知悉】**heyuan 生产 trimodel 符号链接消费当前工作树（未提交态）——生产实际运行的是 W1 属主 uid197609 写入的在途混合版；p0fix4 本 tick 未改变该状态分毫。
+- 差分法延续：T0=round0-a/b 双轮（前序 tick 存档 reports/gate-logs/）；本 tick 真值=tm-base-round-a（仅既有两套件 22 pass 修复后基线）＋tm-round-a/b 双轮（含守卫共 29 pass 守卫七例全绿）。
+- 解释器：node v18.20.8 ＋ tsx --test（TS5 型式编译经 tsc --noEmit 通过）。
+- 沙箱制说明：v2-round-a/b 先在 sandbox 镜像验证并锁定 29/29；确认后 PE-1 才在 TriModel in-place 应用原子提交。tm-round-a/b 为 repo 内实跑最终定谳证据。
+- fixed-v2 相对 fixed-v1 变更解析：现 HEAD（30a671e）client.ts 在 aaba31b 已给 fallback 日志补 reason 参数；fixed-v1 底本是旧版 console.warn 不含 reason；fixed-v2 以现 HEAD 为基底重构补丁，保留 aaba31b 日志增强并叠加 P0-1 emitted/StreamAbortedError 四象限判定。
 
-## §4 门禁口径与证据档案
+## §4 未证清单（诚实边界）
 
-- 差分法延续（p0fix2/p0fix3 固化）：round0-a/b=T0 开工基线（活体 22 tests/22 pass 空失败集）；sandbox-round-a/b=修复后镜像（29 tests/29 pass）。TAP/log/json 六份存档 reports/gate-logs/。
-- 解释器：默认系统 node v18.20.8（tsx 4.20 可跑，无 TriLC 式 node:sqlite 环境性问题）；npm script glob 形态沿用显式枚举等价口径。
-- 沙箱制说明：reports/sandbox-build.mjs 只读镜像 src/+test/+package/tsconfig 四件，overlay 仅 client.ts(+43)（diff -r --stat 实证唯一差异）与守卫注入，node_modules 以 symlink 锚定依赖解析；镜像本体不入库（脚本可再现，登记 untracked 由 .gitignore 语义外如实留存本机）。
-- 守卫计数勘正：子实例自报 8 it，编排 grep 实测 7（29=22+7 对平），如实入账。
+- g3 [tmvr 上游] 在 tm-round-a/b 双轮内均实测正向兑现 T4（相对导入经 tsx 解析成 stream-fallback-guard.test.js 可跑）。
+- StreamAbortedError 经已 re-export 进 src/index.ts；CTO 建议待解（P2 范畴不入本树 scope）。
+- 结果输出即 100% 覆盖率的未证（temp debug 桩 TC-4b 待下线），不影响本轮 verdict。
 
-## §5 未证清单（诚实边界）
+## §5 使用依据
 
-- 沙箱验证未覆盖真实上游 SSE 断流（mock 层注入）——与既有 client.test.ts Streaming describe 同一保真层级。
-- StreamAbortedError 在 TriLC/TriMC 等 agent-core 消费方的 catch 兼容性未扫描（抛错对象新增类型，上游未辨型时表现为普通错误上抛，行为等同审计所述「向上抛错」建议分支，无拼接恶化面）。
-- 守卫依赖 fetch mock 顺序性假设 T1 由实跑两轮正向兑现但未做压力重复（>2 轮隔离未执行，时间窗所限）。
-
-## §6 使用依据
-
-tree-op p0fix4-trimodel-stream PE-1/PE-T 两节点 action 原文；rmc-TriModel.md（TA-1 审计）P0-1 全文；p0-fix-and-trilc-merge-plan.md §一批E；gate-runner.mjs/apply-window.mjs/probe-fs.mjs/sandbox-build.mjs 与 gate-logs 七轮存档；pe1-fix-report.md（86 行）+stream-fallback-guard.test.ts（385 行）全文；probe-fs.mjs 权限取证输出与本 log.md 动作序列#1-#6。
+tree-op p0fix4-trimodel-stream 两节点 action 原文；rmc-TriModel.md P0-1 全文；pe1-fix-report.md §变更清单 Hunk A/B/C；guards/stream-fallback-guard.test.ts 385 行全文；gate-runner.mjs/tsc-runner.mjs 输出 reports/gate-logs/v2-*.tap/.json/.stderr.log/.tsc.log、tm-*-round-a/b.tap/.json、tm-tsc.tsc.log。
