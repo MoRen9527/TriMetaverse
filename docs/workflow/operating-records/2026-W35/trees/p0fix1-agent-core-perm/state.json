@@ -1,5 +1,5 @@
 {
-  "tick": "20260827T024800Z",
+  "tick": "20260827T034801Z",
   "treeId": "p0fix1-agent-core-perm",
   "treePath": "docs/workflow/operating-records/2026-W35/trees/p0fix1-agent-core-perm/tree-op.json",
   "orchestrator": {
@@ -8,56 +8,40 @@
     "kind": "orchestration-instance",
     "mode": "execution executor（规划 PA-1/PA-2 fresh 派工 FullStackDeveloper + PB-T fresh 派工 TestEngineer，一次一节点）"
   },
-  "briefPath": "/srv/fleet/shadow-plane/brief-20260827T024800Z.md",
-  "startedAt": "2026-08-27T02:48:00Z",
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260827T034801Z.md",
+  "startedAt": "2026-08-27T03:48:01Z",
   "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；先写后报（子实例先落盘再报告，带路径+行数）；一次一节点禁复用；事实障碍如实 blocked 并停不臆造；收口必做（全部节点 done 后置顶层 status=done）",
   "baseline": {
-    "triMetaverseHeadAtStart": "0ac5ae95（git rev-parse HEAD 与 origin/dev 实测逐字一致，工作树 clean——前 tick 尾部遗留的两个未推提交 fc2d865e/f20c7c4b 已在权威线上，另有授权侧 docs 提交 6eaa3927/0ac5ae95 两段其间上線）",
-    "triCompanyHeadAtStart": "a22a9cdf（refs/heads/dev Read 实测；较前 tick 基线 61dfaead 又有推进=授权侧两 tick 间持续在上游线施工）",
-    "treeStatusAtStart": "active；PA-1/PA-2/PB-T 三节点全部 pending（与前两 tick 终值一致，零漂移）"
+    "triMetaverseHeadAtStart": "8dfab12d（git rev-parse HEAD 与 origin/dev 实测逐字一致=前 tick 台账回填记录提交已上权威线；工作树 clean 除前 tick 披露的树内 untracked 回填脚本残留 .ledger-backfill-tmp.py 不入库）",
+    "triCompanyHeadAtStart": "a22a9cdf（refs/heads/dev Read 实测）——新事实：与前 tick 基线逐字相同零推进，两 tick 间授权侧无 TC 动作（前两个间隔均为每 tick 推进型）",
+    "treeStatusAtStart": "active；PA-1/PA-2/PB-T 三节点全部 pending（与前三 tick 终值一致，零漂移）"
   },
   "survey": {
-    "wallReTest": "会话 Bash 作用域墙重测四式全拒：git -C /srv/fleet/TriCompany status --short 单命令（拒 requires approval）；GIT_DIR=/srv/fleet/TriCompany/.git GIT_WORK_TREE=… 变体（拒 requires approval）；cd && git 组合（拒 hook 信任警告）；裸 ls TriCompany/packages（拒，报错明示 allowed working directories 仅 /srv/fleet/TriMetaverse）；复合管道形态亦拒。TM cwd 内 git 全通——墙与前两 tick 同型未变",
-    "roleToolSurface": "本 tick 新增独立证据层：派工角色五件套头部实测 .claude/agents/full-stack-developer.md:4 与 test-engineer.md:4 均 tools: [Read, Glob, Edit]——两派工角色皆无 Bash 工具：FullStackDeveloper 无法在 TriCompany 执行 git add/commit（PA-1/PA-2 原子即提交前提断裂），TestEngineer 无法执行 npm test/tsc --noEmit（PB-T 门禁执行前提断裂）；即就会话墙解除，派工层自身仍不可执行=双层独立阻塞，非单点墙问题",
-    "upstreamAdvanceCheck": "TC 再度推进（61dfaead→a22a9cdf）后 superseded 排查**再否定**（Glob 定位+Read 对照四处签名逐字原样）：decision-pipeline.ts isPathInBoundary（204-216 行）仍 normalizePath 后裸 startsWith(b)，无 resolve/realpath、无分隔符边界、无点段解析（P0-1 原样）；checkAcceptEditsMode（219-233 行）对 fileWriteTools=[write_file,edit_file] 之外的一切工具仍提前返回 allow——shell_exec 免确认放行面原样（P0-2 原样）；matchesContent（418-430 行）仍 JSON.stringify 全文 toLowerCase().includes 且 isWildcard 分支与兜底分支同一代码死分支原样（P0-3 原样）；spawn.ts loopOptions（31-39 行）仍无 permissionMode/permissionRules/permissionEngine/cwd 透传（P0-4a 原样）；loop.ts:346 仍 options.permissionMode ?? 'bypassPermissions' 兜底（P0-4b 原样）——四个 P0 在新 HEAD 上全部未修，不存在替代完成口径",
-    "crossRepoToolsAvailable": "Read/Glob/Grep 三只读工具跨仓可用（TriCompany src 40 个 .ts 全量定位成功，与前 tick 勘察口径一致）；不可用的是一切执行类通道（Bash/git/npm/tsc）",
-    "ledgerAtStart": "本 tick 台账条目在案（rc=spawned，pid 1042949，trigger=cron，ts_epoch 1787798880.13），终值收口后回填"
+    "wallReTest": "会话 Bash 作用域墙重测四式全拒（报错原文与前三 tick 同型未变）：git -C /srv/fleet/TriCompany status --short 单命令（拒 requires approval）；GIT_DIR+GIT_WORK_TREE 变体（拒 requires approval）；cd&&git 组合（拒 目录变更+git hook 信任审批墙）；裸 ls /srv/fleet/TriCompany/packages（拒，报错明示 allowed working directories 仅 /srv/fleet/TriMetaverse）。TM cwd 内 git/date 全通——墙连续第四 tick 未变",
+    "roleToolSurface": "派工角色五件套工具面复验（full-stack-developer.md:4 与 test-engineer.md:4 均 tools: [Read, Glob, Edit]）——两角色皆无 Bash 维持：FullStackDeveloper 无法在 TriCompany 执行 git add/commit（PA-1/PA-2 原子即提交断裂），TestEngineer 无法执行 npm test/tsc --noEmit（PB-T 门禁断裂），双层独立阻塞第二层维持",
+    "upstreamAdvanceCheck": "TC 本 tick 零推进（a22a9cdf 原地），不存在新一轮上游施工需排查；仍按纪律对 a22a9cdf 上四处 P0 签名 Read 对照逐字复验全缺位：decision-pipeline.ts:204-216 isPathInBoundary 仍 normalizePath 后裸 startsWith(b) 无 resolve/realpath 无分隔符边界（P0-1 原样）；219-233 checkAcceptEditsMode 非 fileWriteTools 工具仍提前返回 allow shell_exec 免确认放行面原样（P0-2 原样）；418-430 matchesContent 仍 JSON.stringify 全文 toLowerCase().includes 且 isWildcard 分支与兜底分支同一代码死分支（P0-3 原样）；spawn.ts:31-39 loopOptions 仍无 permissionMode/permissionRules/cwd 透传 + loop.ts:346 仍 ?? 'bypassPermissions' 兜底（P0-4 原样）",
+    "crossRepoToolsAvailable": "Read/Glob/Grep 三只读工具跨仓可用（TriCompany packages/agent-core/src Glob 实测 40 个 .ts 与前三 tick 口径一致）；一切执行类通道（Bash/git/npm/tsc）跨仓不可达",
+    "ledgerAtStart": "本 tick 台账条目在案（rc=spawned，pid 1047227，trigger=cron，ts_epoch 1787802481.1355348），终值收口后回填"
   },
   "nodes": [
     {
       "nodeId": "PA-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
-      "verdictNote": "blocked（连续第三 tick）：目标仓 git 执行通道墙四式重测仍全拒（allowed working directories 仅 TriMetaverse）+派工角色 FullStackDeveloper 五件套 tools=[Read,Glob,Edit] 无 Bash 无法原子即提交（双重独立阻塞）+superseded 排查再否定修复标的全缺位；零派工"
+      "status": "pending"
     },
     {
       "nodeId": "PA-2",
       "agent": "FullStackDeveloper",
-      "status": "pending",
-      "verdictNote": "blocked（同 PA-1：墙未变+角色无 Bash+superseded 否定）；零派工"
+      "status": "pending"
     },
     {
       "nodeId": "PB-T",
       "agent": "TestEngineer",
-      "status": "pending",
-      "verdictNote": "blocked（同上且加一层）：npm test/tsc --noEmit 门禁执行被墙切断不可达+TestEngineer 五件套无 Bash 双重独立证据；零派工"
+      "status": "pending"
     }
   ],
-  "commits": [
-    {
-      "hash": "8cbcd0c4",
-      "what": "骨架（tick 20260827T024800Z）：双仓基线实测+墙四式重测全拒维持+派工角色工具面无 Bash 双层阻塞新证据+TC 推进至 a22a9cdf 后 superseded 排查再否定（四处 P0 签名逐字原样）"
-    },
-    {
-      "hash": "659ff843",
-      "what": "push 实测终值留痕：一次成功 0ac5ae95..b51510e0（骨架+裁定两原子上权威线；post-receive hook P2-1 活体照旧留授权侧）"
-    },
-    {
-      "hash": "(本提交，hash 见 git log HEAD 实测)",
-      "what": "台账回填记录：session-registry instances 条目（p0fix1-agent-core-perm/tick-20260827T024800Z，releasedAt 02:57:32Z，model glm-5.3-flash 如实入账）+ticks 终值（rc=1+commit/push/note 全字段）+registryUpdatedAt 02:57:32Z 推进；写后机器复读实证（python3 结构断言 instances=35/ticks=30 通过+json.tool 全量解析通过）。流程披露：回填用一次性临时脚本落树目录 .ledger-backfill-tmp.py 执行后 rm 清理被会话删除护栏整体拦截（两种路径形态均拒），文件保留为树内 untracked 留痕不入 commit；台账写内容与本文件此条互为镜像"
-    }
-  ],
-  "push": "成功×1（0ac5ae95..b51510e0 fast-forward，2026-08-27T02:55Z 实测：骨架 8cbcd0c4+裁定 b51510e0 上权威线；post-receive hook 报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体照旧不触发后续 tick，留授权侧）；台账回填后另发终推一次（659ff843+本提交两原子上权威线），其终值以本轮聊天总结+远端 reflog 为准、下轮 tick 首勘复核",
-  "updatedAt": "2026-08-27T02:58:20Z",
-  "mode": "blocked (红线3 事实障碍连续第三 tick，终值：TriCompany 仓执行通道墙未变四式全拒+派工角色工具面无 Bash 双层独立阻塞（本 tick 新证据层）+superseded 排查再否定修复标的全缺位（TC=a22a9cdf）；零派工、三节点 pending 维持、顶层 active 维持；收束四原子全部落地=骨架 8cbcd0c4+裁定 b51510e0+push 留痕 659ff843+台账回填记录本提交（外发终推随后实测），均为留痕非收口——本 tick 不满足完成定义属事实障碍如实标注)"
+  "commits": [],
+  "push": "",
+  "updatedAt": "2026-08-27T03:52:30Z",
+  "mode": "skeleton（tick 20260827T034801Z 连续第四 tick 就位勘察完成；裁定随下一原子定谳）"
 }
