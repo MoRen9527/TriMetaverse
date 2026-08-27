@@ -203,3 +203,26 @@ TC 零推进（a22a9cdf 原地），无新一轮上游施工可指向修复；�
 - **期间新事实（共享仓并发施工）**：授权侧于本实例两次 push 之间在同线落 docs 提交 **33be8fb6**（`docs(exec): GLM 部署点位图 v1.2——四面 key 分发落地矩阵`，时间戳 11:56:51+0800=03:56:51Z，恰在 push#1 03:56Z 与我方终推之间），插入位置在我 04363f1f 裁定与我方 push 终值留痕原子之间。
 - **hash 勘正**：我方 push 终值留痕原子被同文 rehash 重写 **82512cb7→b2a67cbd**（提交信息逐字同文、同两文件同构 diff、时间戳 11:56:59+0800）；`git merge-base --is-ancestor 82512cb7 HEAD` 实测 rc=1 非 HEAD 祖先、对象存活——与前 tick 014800 所记「授权侧 rebase 型整体重写重落」先例同型。**以现行链为准**：8dfab12d→23dd9974→04363f1f→33be8fb6→b2a67cbd→0bff8adb。
 - **真值表述修正**：#5 提交信息中「hash 链 …82512cb7 已实证上权威线」落盘当时属实（其时该哈希即本地 dev HEAD），随后被授权侧重写置离线，非虚报；shadow-plane ticks 条目 push/commit 字段本就留有「见下轮实测/下一 tick 回填」指针句，下轮首勘以本节为准，免重复发现成本。
+
+---
+
+# p0fix1-agent-core-perm 执行日志（tick 20260827T044800Z，解封后首执行 tick）
+
+编排实例：ceo-chief-of-staff 锚定（trigger=cron，简报 044800Z）。任务同前四 tick：PA-1/PA-2 fresh 派工 FullStackDeveloper 修 agent-core P0-1..4 → PB-T fresh 派工 TestEngineer 门禁回归 → 全节点 done 后置顶层 status=done 收口 → push → 台账回填。
+
+## 就位勘察（04:49-04:58Z 实测）
+
+- 基线：TM HEAD=2f5e5987 工作树 clean（除树内已知 untracked 残留 .ledger-backfill-tmp.py 照旧不入库）；**TC HEAD=c6d0d27**。
+- **墙解除（决定性新事实）**：`git -C /srv/fleet/TriCompany …` rev-parse/status/log/diff/show 实测一次全通；白名单实据=c6d0d27 对 orchestrate_tick.py spawn `--allowedTools` 增补 `Bash(git -C:*)`/`git pull`/`git restore`/`python3.8`，叠 61dfaea 先行扩容的 `npm test:*`/`npm run:*`/`npx tsc:*`/`node:*` 等条目。前四 tick 的 blocked 根因已被授权侧移除。
+- **cwd 形态事实（授权侧勘误素材，本树只读不动源码）**：本会话 cwd 仍为 TM 非 TC——c6d0d27 的 spawn cwd 路由对本树 repo 字段解析失败：字段值「/srv/fleet/TriCompany（dev 线；…」含中文括注，`re.match(r"(/\S+)", …)` 连中文吞出「/srv/fleet/TriCompany（dev」不存在路径→exists()=False→fallback REPO。跨仓操作不受影响（统一 git -C/--prefix 尾置形态）；路由正则对含中文括注 repo 字段的兼容性留授权侧勘误。
+- **命令形态实测**：审批按整串白名单前缀匹配——`npm --prefix <abs> test` 被拒（首 token 失配）；`npm test --prefix <abs>` 通过并真实执行。门禁可用形态：`npm test --prefix …`、`npm run build --prefix …`、`node --test <显式文件>`、`git -C <abs> 读类系列`。
+- **门禁环境事实**：node v18.20.8——包脚本尾段 `node --test "test/*.test.mjs"` 的 glob 在 node18 不受支持，「npm test 整体调用即解析失败」为修复前既有环境事实。基线取等价口径：build 段 tsc 干净通过＋直接 `node --test test/contract-v3.test.mjs`=**8/8 pass**（全仓唯一 .mjs 套件）。另 test/ 存两份 TS 测试（c8-c9-permission-modes/c10-mcp-permissions），git log 实证自迁移提交 3288e13 即在案非新增；tsconfig include 仅 src/** 且 exclude **/*.test.ts=两者不进任何门禁，既有缺口照旧披露不擅动 package.json/tsconfig（红线仅许写 packages/agent-core/src|test 区）。新增回归用例统一落 test/*.mjs 显式命名文件。
+- superseded 否定：上游两笔纯编排侧（diff --stat 实证仅 runtime/cognition/orchestrate_tick.py）；四处 P0 签名 @c6d0d27 工作树 Read 复验逐字原样（P0-1 decision-pipeline.ts:204-216 裸 startsWith／P0-2 :225-233 非写入工具提前 allow／P0-3 :418-430 全文 includes 死分支／P0-4 spawn.ts:31-39 无权限透传+loop.ts:346 `?? 'bypassPermissions'` 兜底）。
+- 派工层工具面复读维持 `[Read, Glob, Edit]` 无 Bash（full-stack-developer.md:4/test-engineer.md:4）——墙解除后双层退化为单层分工：代码与测试落盘由子实例 Edit 承担，git 提交与门禁执行由编排层承担。
+- state.json 结构损坏修复：前 tick 遗留『updatedAt 后游离对象+重复 push/updatedAt 键』致全文非法 JSON，本 tick 骨架重写为合法结构，先前内容并入 predecessorSummary/baseline 保真留存。
+
+## 动作序列
+
+| # | 时刻(Z) | 动作 | commit |
+| --- | --- | --- | --- |
+| 1 | 05:02 | 骨架落盘：本节＋state.json 重写（合法 JSON 结构修复；勘察证据=墙解除新事实/命令形态实测/node18 门禁基线 8of8/superseded 否定四签名原样） | （本提交，实测值见 git log） |
