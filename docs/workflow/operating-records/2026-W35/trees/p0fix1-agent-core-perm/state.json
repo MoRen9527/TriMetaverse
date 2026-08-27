@@ -49,11 +49,15 @@
       "what": "骨架（tick 20260827T024800Z）：双仓基线实测+墙四式重测全拒维持+派工角色工具面无 Bash 双层阻塞新证据+TC 推进至 a22a9cdf 后 superseded 排查再否定（四处 P0 签名逐字原样）"
     },
     {
+      "hash": "659ff843",
+      "what": "push 实测终值留痕：一次成功 0ac5ae95..b51510e0（骨架+裁定两原子上权威线；post-receive hook P2-1 活体照旧留授权侧）"
+    },
+    {
       "hash": "(本提交，hash 见 git log HEAD 实测)",
-      "what": "blocked 裁定（红线3，连续第三 tick）：三项独立事实定谳=墙未变+派工层无 Bash 新证据层+superseded 再否定；零派工，PA-1/PA-2/PB-T 维持 pending，顶层 status 维持 active 不臆造；不降级为无提交脏改（裁定同前两 tick）；修复路径留授权侧=放行 TriCompany 通道 且 为两派工角色增补 Bash 工具面（或改派有执行权载体），缺一即维持 blocked"
+      "what": "台账回填记录：session-registry instances 条目（p0fix1-agent-core-perm/tick-20260827T024800Z，releasedAt 02:57:32Z，model glm-5.3-flash 如实入账）+ticks 终值（rc=1+commit/push/note 全字段）+registryUpdatedAt 02:57:32Z 推进；写后机器复读实证（python3 结构断言 instances=35/ticks=30 通过+json.tool 全量解析通过）。流程披露：回填用一次性临时脚本落树目录 .ledger-backfill-tmp.py 执行后 rm 清理被会话删除护栏整体拦截（两种路径形态均拒），文件保留为树内 untracked 留痕不入 commit；台账写内容与本文件此条互为镜像"
     }
   ],
-  "push": "成功×1（0ac5ae95..b51510e0 fast-forward，2026-08-27T02:55Z 实测：骨架 8cbcd0c4+裁定 b51510e0 两原子上权威线；post-receive hook 报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体照旧不触发后续 tick，留授权侧）；台账回填后另有终推一次见 log 动作序列#5/#6",
-  "updatedAt": "2026-08-27T02:55:40Z",
-  "mode": "blocked (红线3 事实障碍连续第三 tick：TriCompany 仓执行通道墙未变+派工角色工具面无 Bash 双层独立阻塞+superseded 排查再否定修复标的全缺位；零派工、三节点 pending 维持、顶层 active 维持；收束动作=push 留痕→台账回填→回填记录提交→终推，均为留痕原子非收口——本 tick 不满足完成定义属事实障碍如实标注)"
+  "push": "成功×1（0ac5ae95..b51510e0 fast-forward，2026-08-27T02:55Z 实测：骨架 8cbcd0c4+裁定 b51510e0 上权威线；post-receive hook 报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体照旧不触发后续 tick，留授权侧）；台账回填后另发终推一次（659ff843+本提交两原子上权威线），其终值以本轮聊天总结+远端 reflog 为准、下轮 tick 首勘复核",
+  "updatedAt": "2026-08-27T02:58:20Z",
+  "mode": "blocked (红线3 事实障碍连续第三 tick，终值：TriCompany 仓执行通道墙未变四式全拒+派工角色工具面无 Bash 双层独立阻塞（本 tick 新证据层）+superseded 排查再否定修复标的全缺位（TC=a22a9cdf）；零派工、三节点 pending 维持、顶层 active 维持；收束四原子全部落地=骨架 8cbcd0c4+裁定 b51510e0+push 留痕 659ff843+台账回填记录本提交（外发终推随后实测），均为留痕非收口——本 tick 不满足完成定义属事实障碍如实标注)"
 }

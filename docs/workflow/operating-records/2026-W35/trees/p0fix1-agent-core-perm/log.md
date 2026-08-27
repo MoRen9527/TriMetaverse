@@ -126,4 +126,6 @@ TM cwd 内 git/Read/Glob/Grep 全通；Bash 工具跨仓全封维持。
 | --- | --- | --- | --- |
 | 1 | 02:53 | 骨架落盘（双仓基线+墙四式重测全拒+派工角色工具面核验+superseded 排查再否定三节） | 8cbcd0c4 |
 | 2 | 02:55 | blocked 裁定终值（本节+state.json 节点 verdictNote/commits/mode 终值） | b51510e0 |
-| 3 | 02:55 | push origin dev 实测一次成功：0ac5ae95..b51510e0 fast-forward（骨架+裁定两原子上权威线；post-receive hook 仍报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体不触发后续 tick，留授权侧）；push 终值留痕入 state.json（本提交） | （本提交） |
+| 3 | 02:55 | push origin dev 实测一次成功：0ac5ae95..b51510e0 fast-forward（骨架+裁定两原子上权威线；post-receive hook 仍报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体不触发后续 tick，留授权侧）；push 终值留痕入 state.json | 659ff843 |
+| 4 | 02:57 | 台账回填：session-registry instances 条目（tick 024800Z，releasedAt 02:57:32Z，**model glm-5.3-flash 如实入账**=部署点位图 v1.1 双面编排档）+ticks 终值 rc=1（commit/push/note 全字段）+registryUpdatedAt 02:57:32Z；写后机器复读实证（结构断言 instances=35/ticks=30 通过 + json.tool 全量解析通过）。流程披露：一次性回填脚本落树目录执行后 rm 清理被会话删除护栏拦截，文件保留为树内 untracked 留痕不入 commit | —（shadow-plane 文件变更） |
+| 5 | 02:58 | 台账回填记录提交（state.json commits/push/mode 终值+上表 #4 披露）；随后终推一次将 #3/#5 两原子上权威线，其终值见聊天总结并以远端 reflog 为准、下轮 tick 首勘复核 | （本提交） |
