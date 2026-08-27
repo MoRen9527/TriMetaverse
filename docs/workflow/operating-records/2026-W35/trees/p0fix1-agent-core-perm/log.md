@@ -33,3 +33,22 @@ Read/Glob 工具跨仓可用（只读）；shadow-plane 台账 Read 可用。npm
 | 2 | 01:23 | blocked 裁定落盘（本文件裁定节+state.json 节点 verdictNote/commits/mode 终值） | 30cb0a34 |
 | 3 | 01:24 | push origin dev 实测两次均被拒：remote rejected（unable to migrate objects to permanent storage：objects/14/9bd89bac… Permission denied，同对象确定性复现）——与 fade-rehearsal-001 勘正提交 b823f855 同型同 objects/14/ 目录段，bare 仓对象权限障碍留授权侧；本地 dev ahead 2（c4352e99+30cb0a34）未推送，留痕以本地 commit 为准 | — |
 | 4 | 01:24 | 台账回填（instances 条目+ticks 终值 rc=1+registryUpdatedAt；写后复读实证 JSON 结构完整）+占位 hash 回填与估时勘正 | （本提交） |
+
+---
+
+# p0fix1-agent-core-perm 执行日志（tick 20260827T014800Z，连续第二 tick）
+
+编排实例：ceo-chief-of-staff 锚定（trigger=cron，台账 pid 1038189）。任务同前 tick：PA-1/PA-2 fresh 派工 FullStackDeveloper 修 agent-core P0-1..4 → PB-T fresh 派工 TestEngineer 门禁回归 → 全节点 done 后置顶层 status=done 收口 → push → 台账回填。
+
+## 就位勘察（01:49-01:54Z 实测）
+
+- 基线：TM HEAD=1de7f313（dev ahead 4 于 origin/dev=ca80be23，工作树 clean）；TC dev=61dfaead（与 origin/dev remote-tracking 逐字一致）。
+- **新事实：TC 两 tick 间被推进**——较前 tick 基线 1a4d0241 新进一段，reflog 实证 2026-08-27T01:35:54Z fleet『pull --rebase origin dev: Fast-forward』（授权侧动作，前 tick 收束 01:24Z 后 12 分钟）。
+- 树状态：active；PA-1/PA-2/PB-T 三节点全部 pending，与前 tick 终值零漂移。
+- 墙重测：git 三式（git -C/--git-dir/cd&&git）+ ls 全拒（报错明示 allowed working directories 仅 /srv/fleet/TriMetaverse）；TM cwd 内 git 全通——**墙与前 tick 同型未变**。
+- **superseded 排查（新事实驱动的必做项）——否定**：TC 推进是否已含 P0 修复？工作树逐处 Read 对照审计签名：decision-pipeline.ts:209-215（P0-1 裸 startsWith 原样）/:225-233（P0-2 非白名单工具提前 allow 原样）/:418-430（P0-3 全文 includes+isWildcard 双分支同代码原样）、spawn.ts:31-39（P0-4 loopOptions 无权限字段透传原样）+loop.ts:346（'bypassPermissions' 兜底原样）——四处全部未修，推进与四个 P0 无关。
+- hash 勘正：前 tick 台账自记 c4352e99/30cb0a34/afc6523d/a722a33f 四 hash cat-file 均存活但非 HEAD 祖先（is-ancestor rc=1）；现行链 7d12b4a2/193f2a58/3d6e4caf/1de7f313 与之提交信息逐字同文、时间戳 09:21→09:40+0800 整体后移=01:24Z 台账落盘后被整体重写重落（授权侧 rebase 型，同 fade f3ba8182→6e82e548 先例）。以现行链为准；本 tick 起自记 hash 仅记 git log 实测值。
+
+## 裁定（红线3）
+
+（终值见下一原子提交）
