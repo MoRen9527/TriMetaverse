@@ -75,7 +75,28 @@
       "verdictNote": "工件全量交付+沙箱实测双轮背书：guards/stream-fallback-guard.test.ts 385 行、it 实数 7（g1 中途断流拼接死证 fetch 恰 1 拨/g2 首事件前 fallback 接管恰 2 拨零 A 残留/g3 无 fallback 统一包装/g4 原错误透传非包装/g5 StreamAbortedError 单元三属性/g6 深度上限回归钉恰 3 拨/g7 自加正常流回归钉）；子实例自报『8 个 it』与编排层 grep 实测 7 差一如实勘正。沙箱门禁 sandbox-round-a/b 双轮隔离 **29 tests/29 pass/0 fail**（既有 usage+client 镜像套件 22 例与 T0 全绿基线逐字同型=修复零回退；守卫新增 7 例全绿）——PE-T 四条推演待实证 T1-T4 被实跑全部正向兑现。blocked 原因同 PE-1=W1/W2/W3 三重墙致守卫无法以 repo 内 test/ 身份落位，非测试质量缺陷"
     }
   ],
-  "commits": [],
+  "commits": [
+    {
+      "hash": "78797e50（TM dev，push 0ee73e85..78797e50）",
+      "what": "骨架原子：state/log 落盘（勘察全量证据：外来活体线定谳/RR 三风险/拓扑/差分口径）"
+    },
+    {
+      "hash": "c41c0edf（TM dev，push 一次过）",
+      "what": "探针+门禁基线原子：bare tip=6476812 落后三笔定谳/tsc 干净/gate-runner.mjs/round0-a/b 22/22 空失败集 T0 锁定/client.ts.fixed 种子零差异保真"
+    },
+    {
+      "hash": "a5da2289（TM dev，push 一次过）",
+      "what": "PE-1 收账+三重墙定谳原子：fixed 297 行纯度三 hunk 实证/报告 86 行/apply-window EACCES 取证/probe-fs W1 属主墙/WIP 归档存证"
+    },
+    {
+      "hash": "e5f178b1（TM dev，push 一次过）",
+      "what": "PE-T 收账+沙箱证据原子：守卫 385 行/sandbox-build.mjs/tsc 干净+sandbox-round-a/b 双轮 29 tests/29 pass TAP 六份存档"
+    },
+    {
+      "hash": "40969b71（TM dev，push 一次过）",
+      "what": "收口定谳原子：verify.md 六节/tree-op 双节点翻 blocked 顶层 active 维持/state.mode 终态/log #6 与终态一句话"
+    }
+  ],
   "updatedAt": "2026-08-27T10:04:00Z",
   "mode": "blocked-workaround-verified（红线3 如实停机：doneCondition 四腿达成二——修复工件与两类边界测试均获沙箱真值背书 tsc 干净+sandbox-round-a/b 双轮隔离 29 tests/29 pass 既有套件与 T0 同型零回退+守卫 7 例全绿；repo 内落位与 push 两腿被 W1 OS 属主墙/W2 数据态混合墙/W3 远端分叉墙三重事实障碍封死，顶层 status 维持 active 不臆造收口；授权侧解封路径三步见 verify.md §3 与 wallsVerdict，解封后下 tick 即取三件套直落预计半小时闭环）"
 }

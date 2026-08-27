@@ -20,6 +20,7 @@
 | 4 | 09:40-09:52 | PE-T fresh TestEngineer 派工（先写后报）：guards/stream-fallback-guard.test.ts 385 行落盘，it 实数 7（自报 8 差一由编排层 grep 勘正）；四条推演待实证 T1-T4 如实标注；沙箱 reports/sandbox/ 由 sandbox-build.mjs 构建（src 镜像保真经 diff -r --stat 实证仅 client.ts +43 overlay 本体+守卫注入 test/+node_modules symlink 依赖锚） | — |
 | 5 | 09:53-09:57 | 沙箱门禁实测：tsc -p sandbox/tsconfig --noEmit 干净零输出；sandbox-round-a/b 双轮隔离 **29 tests/29 pass/0 fail**——既有 usage+client 22 例与 T0 空失败集逐字同型（修复零回退）+守卫 7 例全绿（PE-T 的 T1-T4 推演全部正向兑现：拼接死证 fetch 恰 1 拨/fallback 接管恰 2 拨/深度钉恰 3 拨全命中）。修复设计在沙箱获得真值背书，blocked 仅余『repo 内落位与 push』一道治理残差 | e5f178b1（push a5da2289..e5f178b1 fast-forward 实测一次过） |
 | 6 | 10:04-10:06 | 收口定谳原子：verify.md 六节全文（判定 blocked-workaround-verified/三通道核验表八项含 doneCondition 达成度 FAIL(2/4)/残差五项按归属移交/门禁口径档案/未证清单三条/使用依据）；tree-op PE-1/PE-T 双节点翻 blocked、顶层 status 维持 active（红线4 不满足不臆造收口）；state.mode 终态字段回填。三重墙解封路径=授权侧三步（写权放行或改派载体/glm 在途线归置裁定/分支和解拉齐 bare 三笔），解封后下 tick 即取工件直落 | （本笔） |
+| 7 | 10:08-10:10 | 台账回填笔：session-registry.json 三条目追加（编排+PE-1+PE-T 实例行与 tick 条目 rc=1）+registryUpdatedAt 推进（shadow-plane 非仓直写即达标）；validate-json.mjs 后写解析校验器落树，三 JSON 文件全绿；state.commits 五笔全链回填 | （本笔，hash 见 git log HEAD 实测；随后单发终推） |
 
 ### 终态一句话
 
