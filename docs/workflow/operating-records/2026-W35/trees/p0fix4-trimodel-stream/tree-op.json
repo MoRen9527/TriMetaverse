@@ -13,19 +13,22 @@
     {
       "nodeId": "PE-1",
       "agent": "FullStackDeveloper",
-      "status": "blocked",
-      "action": "修 P0-1 stream() 流中途 fallback 拼接：一旦本流已向调用方发出任何增量事件，fallback 一律禁止——改为终止流并抛出携带原错误的 StreamAbortedError（由上层决定重试语义）；仅当流尚未发出第一个事件时允许 chat() 同款 fallback 路径。顺带在 stream 实现头部补注释说明该契约（不重构 chat/stream 双实现，那是 P2-4 范围）。先读 rmc-TriModel.md P0-1 全文取精确复现场景"
+      "status": "pending",
+      "action": "修 P0-1 stream() 流中途 fallback 拼接：一旦本流已向调用方发出任何增量事件，fallback 一律禁止——改为终止流并抛出携带原错误的 StreamAbortedError（由上层决定重试语义）；仅当流尚未发出第一个事件时允许 chat() 同款 fallback 路径。顺带在 stream 实现头部补注释说明该契约（不重构 chat/stream 双实现，那是 P2-4 范围）。先读 rmc-TriModel.md P0-1 全文取精确复现场景",
+      "resultNote": null
     },
     {
       "nodeId": "PE-T",
       "agent": "TestEngineer",
-      "status": "blocked",
-      "action": "门禁回归：构造「流中途中错已发增量」用例断言不再拼接且抛 StreamAbortedError；构造「首事件前失败」用例断言 fallback 正常接管；npm test 不新增失败；tsc clean。验证记录落本树 reports/verify.md 后收口 done"
+      "status": "pending",
+      "action": "门禁回归：构造「流中途中错已发增量」用例断言不再拼接且抛 StreamAbortedError；构造「首事件前失败」用例断言 fallback 正常接管；npm test 不新增失败；tsc clean。验证记录落本树 reports/verify.md 后收口 done",
+      "resultNote": null
     }
   ],
   "doneCondition": "P0-1 修复+两类边界测试齐 + 套件无新增失败 + push 完成",
   "notes": [
     "红线：只写 src/client.ts src/providers 相关与本树目录。",
-    "heyuan 生产 trimodel 为符号链接消费——部署=heyuan 侧 TriModel clone 拉取+trilc 重启，排除在本树外走验收窗口。"
+    "heyuan 生产 trimodel 为符号链接消费——部署=heyuan 侧 TriModel clone 拉取+trilc 重启，排除在本树外走验收窗口。",
+    "解封(2026-08-27 18:4x+08, 授权侧开窗): TriModel 三重墙手术完成——统一线 30a671e 上裸仓/GitHub、sg 克隆重建全 fleet 属主零脏、tsc GATE-0；隔离区 /srv/fleet/TriModel.quarantine-* 留档。两节点恢复 pending，按本树既定自愈路径「下 tick 取工件直落」继续；PE-1 工件 reports/pe1/client.ts.fixed 与沙箱门禁结论直接复用"
   ]
 }
