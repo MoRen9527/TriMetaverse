@@ -4,10 +4,20 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-27/glm-model-deployment-map.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-27（v1.1：双面切 glm-5.3-flash）
+- lastSyncedAt: 2026-08-27（v1.2：四面 key 分发落地）
 - 背景：ox-alpha 停服 → GLM（bigmodel.cn Anthropic 兼容端点）切换战役产物；编排层会话记忆升格为公司可读真源
 
-> **v1.1（2026-08-27 上午，CEO 指令）**：R/M 面编排档位统一切 `glm-5.3-flash`——registry 已注册（TriModel e25da88，含大写别名归一）；heyuan orchestration.json model / .env ANTHROPIC_MODEL、sg orchestration.json default_model 均已改并实测通（FLASH-OK / GLM-OK）。在途会话不受影响（--model 于 spawn 时钉死）；本地 CC 与 sg settings.json 的主力档维持 glm-5.3[1M] 不变。flash 档为 thinking 型模型（响应含 thinking 块）。
+> **v1.2（2026-08-27 午前，CEO 指令）**：按面分发 key——命名约定与落点：
+>
+> | face key 名 | 实例 | 落点 | 模型档 |
+> | --- | --- | --- | --- |
+> | `tmv-mm-face` | sg-server Claude Code（TriMMC） | `/home/fleet/.claude/settings.json` | glm-5.3-flash（spawn 编排档） |
+> | `tmv-ml-face` | 本机研发仓 Claude Code（TriMLC） | `%USERPROFILE%\.claude\settings.json` | glm-5.3[1M] 主力档 |
+> | `tmv-rm-face` | heyuan TriRMC+TriRLC daemon | `/srv/fleet/TriLC/.env` | glm-5.3-flash |
+> | `tmv-rl-face` | 本机 TriLC daemon（pidfile `~/.trimetaverse/trilc.pid`，schtasks 系） | Windows 用户级 env（HKCU\Environment 三变量：API_KEY/BASE_URL/MODEL，setx 写入） | glm-5.3-flash |
+>
+> 四面全部端到端实测通过（GLM-OK/MM-KEY-OK/RM-KEY-OK/RL-KEY-OK）。限流韧性配套：TriModel provider 层 429/5xx 指数退避重试（1858f90，双服务器已部署）。**key 值不进任何 git 仓库**；本机 rl-face 的备用记录在 `~/.trimetaverse/trilc-local.env`（用户目录，非仓库路径）。
+> **待 CEO 操作**：旧共享 key（255dc140…）与本机中途现役过的 key（bef0e848…）请在 bigmodel.cn 控制台吊销。
 
 ## 一、配置点位矩阵
 
