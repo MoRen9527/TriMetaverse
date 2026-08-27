@@ -5,6 +5,7 @@
 - sourceOfTruth: TriMetaverse/docs/execution/fade-instances-retrospective.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-27
+- 上位规范迁移注记（2026-08-28）：ade-pattern-spec.md 已重构为 **fade-protocol-spec.md v2.0.0+**（ADE 概念退役，FADE 升为协议本体）；本文件内 ADE/runId 表述为历史叙事与实例层口径
 - 立制依据: CEO 2026-08-27——前五实例早于四模块架构（TriMMC/TriMLC/TriRMC/TriRLC），严格意义上不标准；以 006 为最标准样本，六实例横断反向补充实例规范与 ADE 协议，此后所有标准化任务循此可靠执行
 
 ## 一、架构期对照（谁在什么骨架下跑的）
