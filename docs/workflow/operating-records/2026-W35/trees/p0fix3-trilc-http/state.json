@@ -1,0 +1,53 @@
+{
+  "tick": "20260827T074800Z",
+  "treeId": "p0fix3-trilc-http",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/p0fix3-trilc-http/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance",
+    "mode": "execution executor（PD-1 fresh 派工 FullStackDeveloper + PD-T fresh 派工 TestEngineer，一次一节点禁复用；代码/测试落盘由子实例 Edit 承担=先写后报，git 提交与门禁执行由编排层承担）"
+  },
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260827T074800Z.md",
+  "startedAt": "2026-08-27T07:53:21Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；先写后报（子实例先落盘再报告，带路径+行数）；一次一节点禁复用；事实障碍如实 blocked 并停不臆造；收口必做（全部节点 done 后置顶层 status=done）；命令一律裸/白名单前缀形态（禁止 cd X && cmd 组合，跨仓统一 git -C/--prefix 尾置）",
+  "predecessorSummary": "同日同周前两树已闭环：p0fix1-agent-core-perm（tick 044800Z，TC 四原子+TM 五原子双仓 push 实证）与 p0fix2-trirmc-service（tick 061216Z，TriRMC e3545b7/3589a59 本地 commit 门禁三绿，GitHub push 凭据通道缺失残差移交授权侧）。本树为 P0 批 D（审计发现 8=rmc-TriLC.md P0-1 精修版归并条目），source=p0-fix-and-trilc-merge-plan.md §一批D。",
+  "baseline": {
+    "triMetaverseHeadAtStart": "a63cb3be（dev 与 origin/dev 一致；工作树 clean 除 p0fix1 树遗留 untracked .ledger-backfill-tmp.py 照旧不入库）",
+    "triLCHeadAtStart": "ba32bc7（sg 线 dev；实测 HEAD=origin/dev=dev 三者逐字一致，工作树 clean）；remote origin=/srv/git/TriLC.git（本地镜像；仓内无第二 remote——doneCondition 的 GitHub 双端达成路径待 push 阶段实测探明）",
+    "archNote": "sg 线已含 runHarnessAgentLoop 架构 c4f9e0f/ba32bc7——勿回退（tree-op repo 字段红线）",
+    "targetSignaturesVerified": "rmc-TriLC.md P0-1 全部签名在 ba32bc7 权威线上 Grep 逐字定位零漂移：createServer 回调 app.ts:1419 起 /healthz 唯一无认证放行点 :1421；listen 仅绑回环 :3801 `server!.listen(env.port, '127.0.0.1', …)` 且全程无 Host/Origin 校验（req.headers.host 直信 6 处 :1911/:2314/:3265/:3519/:3562/:3592）；cron POST /internal/v1/cron/jobs :3391 无白名单 spread 进 addJob；执行面 cron/timer.ts:221-222 job.command 分流 + :234-245 spawn('/bin/sh' 或 'cmd.exe') 原样执行；MCP add :3691 body 直传；POST /shutdown :3600 无条件 exit；_defaultPermissionMode 模块缺省 'bypassPermissions' :4079（:1338-1342 仅 env 显式时覆盖，print 模式强制降级 :1361-1363 与任务流使用点 :3040）",
+    "referencePattern": "trimc-auth 参照实现定位于 /srv/fleet/TriMC/src/server/app.ts:118-134（x-internal-token 头 + Bearer 兜底 + 401 JSON 错误体；注意该参照为 fail-open 变体＝token 未配置放行，本树按 tree-op 明文要求反转为 fail-closed 并扩为全局门——语义差异已在派工简报中言明非逐字照抄）",
+    "scopeMapping": "§一批D 计划口径=X-Internal-Token 全局门（对齐 trimc-auth 模式）+Origin/Host 校验+cron command 白名单化；tree-op 细化为三动作：(1) 全局 token 门 fail-closed、(2) Host 校验拒 rebinding、(3) cron command 白名单入口与 MCP add 鉴权；审计修复建议中的 _defaultPermissionMode 缺省改 default 未入本树范围（分两步走避免打断 heyuan 生产链路），树内不改 permission mode 缺省",
+    "environmentFacts": [
+      "node v18.20.8（EBADENGINE 同型环境性警告预期存在非阻断）；package.json test script 为 glob 形态 `node --import tsx --test test/**/*.test.ts`（node18 globstar 缺省不分层级，门禁沿用 p0fix2 显式枚举等价口径如实记录）",
+      "/srv/fleet/TriLC/node_modules 在位实测（tsx/package.json Glob 命中）＝无需 npm install 先行",
+      "tsconfig include 仅 [src/**/*.ts, src/**/*.tsx]＝test 不进 tsc 门禁（check 口径仅覆盖 src 面）",
+      "engines node>=20：v18 运行测试为既存环境事实（上游非本树范围）"
+    ],
+    "channelSurvey": {
+      "wallStatus": "DOWN 维持——本 tick 实测 git -C 系列（status/log/rev-parse/ls-files）+ Read/Grep/Glob 跨仓全通；node/npm 白名单形态沿用 c6d0d27/61dfaea 扩容；shell 重定向/tee 拒绝＝TAP 捕获沿用 gate-runner.mjs node 包装先例",
+      "triLCPushPath": "memory 在案前科=「/srv/git 裸仓 root 权限墙 TriLC 全封」，但 TM 于 08-27T01:55Z 已实测修复——TriLC 通道本 tick 待 push 阶段实测定谳，若被拒按红线3 如实留痕移交授权侧；GitHub 双端形态未在仓配置中显式存在（仅 origin=/srv/git/TriLC.git 单 remote），双向端终值如实入账"
+    },
+    "blastRadiusPreRegister": "全局认证门将波及全部 HTTP 触达测试（Grep 预扫 10 文件命中 startAgentHttpServer/createHttpServer/localhost 形态：test/server/qa-json-runtime-stub、tasks-submit-weekly-hint 等+init/sync/pidfile 系列）；test/server/ 下 harness-scaffold 等 TC-s1 套件对现有行为的兼容红线（测试不得回退）由 PD-1 落码时同步清扫对齐，回归基线以开工轮 round0 实测为准比对",
+    "preExistingFailureBaseline": "tc001-harness-scaffold HS-3 登记的 8 个 tui debt 用例为预置失败基线（PD-T 门禁对比参照点；round0 实测核对其仍在位且新增用例不改变其数目）"
+  },
+  "nodes": [
+    {
+      "nodeId": "PD-1",
+      "agent": "FullStackDeveloper",
+      "status": "pending",
+      "verdictNote": ""
+    },
+    {
+      "nodeId": "PD-T",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "verdictNote": ""
+    }
+  ],
+  "commits": [],
+  "push": {},
+  "updatedAt": "2026-08-27T07:53:21Z",
+  "mode": "active-executing（骨架原子已落盘待首笔 commit；节点未开工）"
+}
