@@ -30,5 +30,6 @@ Read/Glob 工具跨仓可用（只读）；shadow-plane 台账 Read 可用。npm
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
 | 1 | 01:21 | 骨架 state.json/log.md 落盘（勘察证据：双仓基线、目标 40 .ts 在案、审计源+排期文档已读、访问墙三式实测） | c4352e99 |
-| 2 | 01:23 | blocked 裁定落盘（本文件裁定节+state.json 节点 verdictNote/commits/mode 终值） | （本提交） |
-| 3 | 01:2x | push origin dev 实测 + 台账回填（instances 条目+ticks 终值） | — |
+| 2 | 01:23 | blocked 裁定落盘（本文件裁定节+state.json 节点 verdictNote/commits/mode 终值） | 30cb0a34 |
+| 3 | 01:24 | push origin dev 实测两次均被拒：remote rejected（unable to migrate objects to permanent storage：objects/14/9bd89bac… Permission denied，同对象确定性复现）——与 fade-rehearsal-001 勘正提交 b823f855 同型同 objects/14/ 目录段，bare 仓对象权限障碍留授权侧；本地 dev ahead 2（c4352e99+30cb0a34）未推送，留痕以本地 commit 为准 | — |
+| 4 | 01:2x | 台账回填（instances 条目+ticks 终值 rc=1） | — |
