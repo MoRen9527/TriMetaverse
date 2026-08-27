@@ -41,8 +41,8 @@
     {
       "nodeId": "PD-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
-      "verdictNote": ""
+      "status": "done",
+      "verdictNote": "fix 已落盘并 TriLC 本地提交 26720dd（3 文件 +202/-3）+ sg 线 push 实测成功：①全局 X-Internal-Token 门（/healthz 精确豁免外一律要求匹配；未配置=401 internal_auth_disabled fail-closed，已配置不匹配=401 unauthorized 文案；timingSafeEqual 常数时间比较含长度不等哑比较抹平；请求期读 env 不做启动缓存）；②Host 校验先行 403 forbidden_host（localhost/127.0.0.1/[::1]:port + TRILC_HOST_ALLOWLIST 追加集，条目含端口整串匹配否则比 hostname）+Origin 补充校验 403 forbidden_origin——DNS rebinding 双通道收敛；③cron command 白名单化入口 TRILC_CRON_COMMAND_ALLOWLIST 精确等值 POST 创建+PATCH 更新双入口 403 command_not_allowed 缺省空集全拒（timer.ts 执行层不动=本地原生 job 行为保持）；④MCP add 显式开关 TRILC_MCP_RUNTIME_ADD 缺省禁用 403 mcp_runtime_add_disabled。门禁三绿实证=tsc clean+pc1-round1/round2 双轮隔离 451 tests/443 pass 失败集与 round0-node22 基线逐字同型零新增。角色 adaptation 如实记录：无 Write 工具面不能新建 security 模块→六导出纯函数组物理落 app.ts:104-228；TC-s1 红线自证：parseHarnessOptions/runHarnessAgentLoop/bypassPermissions 缺省 :4079 与 timer.ts/env.ts/package 零触碰。残差七项自查清单与三项波及无权改动调用面（CLI stop 的 /shutdown 通道/TriPilot 等宿主直连方/.env 运行中不刷新）见子实例报告由编排层收账 verify.md §3 承接"
     },
     {
       "nodeId": "PD-T",
@@ -51,8 +51,25 @@
       "verdictNote": ""
     }
   ],
-  "commits": [],
-  "push": {},
+  "commits": [
+    {
+      "hash": "83bcf366（TM dev）",
+      "what": "骨架原子：双基线实测、P0-1 全签名零漂移对照、trimc-auth 参照定位、范围映射、环境/通道事实、爆炸半径预登记"
+    },
+    {
+      "hash": "e8e16d95（TM dev）",
+      "what": "门禁工具链原子：gate-runner.mjs node 包装捕获 TAP+显式枚举等价口径；node18 52 fail 全环境性留档 round0-node18；用户级 v22.14.0 解释器选择器重定权威基线 round0-node22=451/443/8 与 HS-3 tui debt 口径吻合"
+    },
+    {
+      "hash": "26720dd（TriLC dev）",
+      "what": "PD-1 代码原子（3 文件 +202/-3）：全局 token 门 fail-closed+Host/Origin 校验+cron 白名单双入口+MCP add 开关+两真实 HTTP 测试对齐；门禁三绿后才提交=tsc clean/pc1-round1 与 round2 双轮隔离失败集逐字同型零新增"
+    }
+  ],
+  "push": {
+    "triMetaverse": "成功均一次过（/srv/git/TriMetaverse.git 权威线）：a63cb3be..83bcf366（骨架）、83bcf366..e8e16d95（工具链）；PD-1 收账本笔随后单发终推",
+    "triLCSgLine": "成功一次过：ba32bc7..26720dd → origin=/srv/git/TriLC.git——memory「TriLC 推送权限墙全封」前科本 tick 实测解除",
+    "triLCGitHub": "形态探明非凭据阻塞类：仓内仅单 remote=/srv/git/TriLC.git 且裸仓 git remote -v 空=无自动同步链路；计划文档 §42「GitHub 分支 = sg 线」将两者视为同体——GitHub 远端同步窗口移交授权侧执行（与本 tick p0fix2 残差口径一致，非本会话白名单内可解）"
+  },
   "updatedAt": "2026-08-27T07:53:21Z",
   "mode": "active-executing（骨架原子已落盘待首笔 commit；节点未开工）"
 }
