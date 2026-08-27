@@ -43,7 +43,17 @@
 4. **验收序列**：配置后重启 → curl 无头打 `/v1/messages` 应 401 → 带 token 应业务可达 → 触发一次 rmc_tick dry-run 通链
 
 注意语义差异：本面为 fail-closed 变体（与 TriMC trimc-auth 的 fail-open 故意不同，见其 verify.md 差异声明）。
-| E TriModel 流式 fallback | #9 | 已开流的 fallback 一律终止流并向上报错（禁止拼接）；顺带处理报告指出的 chat/stream 双实现漂移（P2-4 记录） |
+| E TriModel 流式 fallback | #9 | 已开流的 fallback 一律终止流并向上报错（禁止拼接）；顺带处理报告指出的 chat/stream 双实现漂移（P2-4 记录）。**状态：修复工件已沙箱全绿封存（p0fix4 PE-1/PE-T blocked-workaround-verified），落位被三重墙阻（W1 src/** 属主 jedih·W2 外来 WIP 层·W3 bare 领先三笔）；解封手术见下附注** |
+
+#### TriModel 三重墙解封手术清单（2026-08-27 增补——p0fix4 解封前置，需专项窗口）
+
+p0fix4 取证定谳（log.md 09:04-10:10Z）：sg `/srv/fleet/TriModel` 存在长期未提交修补层（anthropic.ts ±162/usage.ts −10/trimetaverse.ts Bearer 掩码修复等，来源非 0827 部署动作；**Bearer 掩码疑为 trimetaverse provider 生产 load-bearing 补丁，禁裸 reset**）+ 属主混杂（src=uid197609/test=root）+ bare 领先克隆三笔（a5638e9/aaba31b/6476812，内容待考古）。手术序列：
+
+1. **考古定谳**：bare 三笔逐一读 diff 归类（合法演进→收编 GitHub；误操作→revert 留痕）
+2. **外来层收编**：sg 脏区逐文件 diff——load-bearing 语义提炼为正式 commit 上推真源；确认无价值的列入废弃清单留档
+3. **统一重置**：真源对齐后 `git checkout -B dev origin/dev` + 全树 chown fleet（消灭 W1/W3）
+4. **回执落位**：p0fix4 按「解封后下 tick 即取工件直落」自愈路径恢复（其沙箱门禁结论可直接复用）
+5. **教训固化**：服务器 clone 一律走 git 通道变更，禁 tar/scp 直灌（本章第二次因直灌/半直灌付账）
 
 ## 二、TriLC 双线合并方案
 
