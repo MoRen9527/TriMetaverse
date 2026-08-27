@@ -1,5 +1,5 @@
 {
-  "tick": "20260827T014800Z",
+  "tick": "20260827T024800Z",
   "treeId": "p0fix1-agent-core-perm",
   "treePath": "docs/workflow/operating-records/2026-W35/trees/p0fix1-agent-core-perm/tree-op.json",
   "orchestrator": {
@@ -8,59 +8,48 @@
     "kind": "orchestration-instance",
     "mode": "execution executor（规划 PA-1/PA-2 fresh 派工 FullStackDeveloper + PB-T fresh 派工 TestEngineer，一次一节点）"
   },
-  "briefPath": "/srv/fleet/shadow-plane/brief-20260827T014800Z.md",
-  "startedAt": "2026-08-27T01:48:00Z",
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260827T024800Z.md",
+  "startedAt": "2026-08-27T02:48:00Z",
   "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；先写后报（子实例先落盘再报告，带路径+行数）；一次一节点禁复用；事实障碍如实 blocked 并停不臆造；收口必做（全部节点 done 后置顶层 status=done）",
   "baseline": {
-    "triMetaverseHeadAtStart": "1de7f313（dev ahead 4 于 origin/dev=ca80be23，工作树 clean；ahead 链=7d12b4a2/193f2a58/3d6e4caf/1de7f313，即前 tick 四原子留痕的重写后现行链，见 survey.hashIntegrity）",
-    "triCompanyHeadAtStart": "61dfaead（.git/refs/heads/dev 与 refs/remotes/origin/dev 逐字一致；较前 tick 基线 1a4d0241 有推进：reflog 实证 2026-08-27T01:35:54Z fleet『pull --rebase origin dev: Fast-forward』=两 tick 间授权侧推进）",
-    "treeStatusAtStart": "active；PA-1/PA-2/PB-T 三节点全部 pending（与前 tick 终值一致，零漂移）"
+    "triMetaverseHeadAtStart": "0ac5ae95（git rev-parse HEAD 与 origin/dev 实测逐字一致，工作树 clean——前 tick 尾部遗留的两个未推提交 fc2d865e/f20c7c4b 已在权威线上，另有授权侧 docs 提交 6eaa3927/0ac5ae95 两段其间上線）",
+    "triCompanyHeadAtStart": "a22a9cdf（refs/heads/dev Read 实测；较前 tick 基线 61dfaead 又有推进=授权侧两 tick 间持续在上游线施工）",
+    "treeStatusAtStart": "active；PA-1/PA-2/PB-T 三节点全部 pending（与前两 tick 终值一致，零漂移）"
   },
   "survey": {
-    "wallReTest": "会话 Bash 作用域墙重测仍全拒：git -C /srv/fleet/TriCompany status（拒）、--git-dir/--work-tree 变体（拒）、cd && git（拒，附 hook 信任警告），外加 ls TriCompany 子目录（拒，报错明示 allowed working directories 仅 /srv/fleet/TriMetaverse）；TM cwd 内 git 全通——墙与前 tick 同型未变",
-    "upstreamAdvanceCheck": "TC 1a4d0241→61dfaead 推进经工作树逐处 Read 对照与本树四个 P0 无关（superseded 排查否定）：P0-1 decision-pipeline.ts:209-215 isPathInBoundary 仍裸 startsWith（无 resolve/无分隔符边界/无点段解析）；P0-2 :225-233 checkAcceptEditsMode 仍对非白名单工具提前返回 allow（shell_exec 免确认面原样）；P0-3 :418-430 matchesContent 仍 JSON 序列化全文 includes 且 isWildcard 双分支同代码死分支原样；P0-4 spawn.ts:31-39 loopOptions 仍无 permissionMode/permissionRules/permissionEngine/cwd 透传+loop.ts:346 仍 ?? 'bypassPermissions' 兜底——四处与审计 rmc-agent-core.md P0-1..4 签名逐字一致=修复缺位",
-    "hashIntegrity": "前 tick 台账自记 hash（c4352e99/30cb0a34/afc6523d/a722a33f）cat-file 四对象均存活为 commit，但 merge-base --is-ancestor 对 HEAD 全 rc=1（非祖先）；现行链 7d12b4a2/193f2a58/3d6e4caf/1de7f313 与旧链提交信息逐字同文、author 时间戳整体后移 09:21→09:40 +0800（=01:24:19Z 台账落盘之后被整体重写重落）——同 fade-rehearsal-001 f3ba8182→6e82e548 授权侧 rebase 型；以现行本地链为准，本 tick 起自记 hash 仅记 git log 实测值",
-    "ledgerAtStart": "本 tick 台账条目在案（rc=spawned，pid 1038189，trigger=cron），终值收口后回填"
+    "wallReTest": "会话 Bash 作用域墙重测四式全拒：git -C /srv/fleet/TriCompany status --short 单命令（拒 requires approval）；GIT_DIR=/srv/fleet/TriCompany/.git GIT_WORK_TREE=… 变体（拒 requires approval）；cd && git 组合（拒 hook 信任警告）；裸 ls TriCompany/packages（拒，报错明示 allowed working directories 仅 /srv/fleet/TriMetaverse）；复合管道形态亦拒。TM cwd 内 git 全通——墙与前两 tick 同型未变",
+    "roleToolSurface": "本 tick 新增独立证据层：派工角色五件套头部实测 .claude/agents/full-stack-developer.md:4 与 test-engineer.md:4 均 tools: [Read, Glob, Edit]——两派工角色皆无 Bash 工具：FullStackDeveloper 无法在 TriCompany 执行 git add/commit（PA-1/PA-2 原子即提交前提断裂），TestEngineer 无法执行 npm test/tsc --noEmit（PB-T 门禁执行前提断裂）；即就会话墙解除，派工层自身仍不可执行=双层独立阻塞，非单点墙问题",
+    "upstreamAdvanceCheck": "TC 再度推进（61dfaead→a22a9cdf）后 superseded 排查**再否定**（Glob 定位+Read 对照四处签名逐字原样）：decision-pipeline.ts isPathInBoundary（204-216 行）仍 normalizePath 后裸 startsWith(b)，无 resolve/realpath、无分隔符边界、无点段解析（P0-1 原样）；checkAcceptEditsMode（219-233 行）对 fileWriteTools=[write_file,edit_file] 之外的一切工具仍提前返回 allow——shell_exec 免确认放行面原样（P0-2 原样）；matchesContent（418-430 行）仍 JSON.stringify 全文 toLowerCase().includes 且 isWildcard 分支与兜底分支同一代码死分支原样（P0-3 原样）；spawn.ts loopOptions（31-39 行）仍无 permissionMode/permissionRules/permissionEngine/cwd 透传（P0-4a 原样）；loop.ts:346 仍 options.permissionMode ?? 'bypassPermissions' 兜底（P0-4b 原样）——四个 P0 在新 HEAD 上全部未修，不存在替代完成口径",
+    "crossRepoToolsAvailable": "Read/Glob/Grep 三只读工具跨仓可用（TriCompany src 40 个 .ts 全量定位成功，与前 tick 勘察口径一致）；不可用的是一切执行类通道（Bash/git/npm/tsc）",
+    "ledgerAtStart": "本 tick 台账条目在案（rc=spawned，pid 1042949，trigger=cron，ts_epoch 1787798880.13），终值收口后回填"
   },
   "nodes": [
     {
       "nodeId": "PA-1",
       "agent": "FullStackDeveloper",
       "status": "pending",
-      "verdictNote": "blocked（连续第二 tick：目标仓 git 执行通道三式+ls 重测仍全拒，见 survey.wallReTest；修复标的经 superseded 排查仍缺位故无替代完成口径，见 survey.upstreamAdvanceCheck；零派工）"
+      "verdictNote": "(勘察中)"
     },
     {
       "nodeId": "PA-2",
       "agent": "FullStackDeveloper",
       "status": "pending",
-      "verdictNote": "blocked（同上）"
+      "verdictNote": "(勘察中)"
     },
     {
       "nodeId": "PB-T",
       "agent": "TestEngineer",
       "status": "pending",
-      "verdictNote": "blocked（npm test/tsc --noEmit 门禁执行不可达，同上）"
+      "verdictNote": "(勘察中)"
     }
   ],
   "commits": [
     {
-      "hash": "5d14cb88",
-      "what": "骨架（tick 20260827T014800Z）：双仓基线实测+墙三式+ls 重测全拒维持+TC 上游推进 superseded 排查否定（四处 P0 签名对照原样未修）+前 tick hash 链重写勘正"
-    },
-    {
-      "hash": "29c25c34",
-      "what": "blocked 裁定（红线3，连续第二 tick）：零派工，PA-1/PA-2/PB-T 维持 pending，顶层 status 维持 active 不臆造；修复路径仍留授权侧（放行 TriCompany 仓 Bash/git/npm 通道或改派有执行权载体）"
-    },
-    {
-      "hash": "fc2d865e",
-      "what": "push 实测终值留痕：一次成功 ca80be23..29c25c34（本地 ahead 6 全部上权威线，含前 tick 重写链 4 提交+本 tick 2 提交；bare 仓 objects/14 权限障碍已消）——但 post-receive hook 报 fade-hook.lock Permission denied+flock bad fd（P2-1 既有活体，不触发后续 tick）"
-    },
-    {
-      "hash": "（本提交，hash 见 git log HEAD 实测）",
-      "what": "台账回填记录：session-registry instances 条目（p0fix1-agent-core-perm/tick-20260827T014800Z，releasedAt 01:56:28Z）+ticks 终值（rc=1+commit/push/note 全字段）+registryUpdatedAt 推进；写后机器复读实证（python3 json.tool 全量解析通过 120.6KB）"
+      "hash": "(本提交，hash 见 git log HEAD 实测)",
+      "what": "骨架（tick 20260827T024800Z）：双仓基线实测+墙四式重测全拒维持+派工角色工具面无 Bash 双层阻塞新证据+TC 推进至 a22a9cdf 后 superseded 排查再否定（四处 P0 签名逐字原样）"
     }
   ],
-  "push": "成功×1（ca80be23..29c25c34 fast-forward，2026-08-27T01:55Z 实测；前 tick 连续被拒的 bare 仓对象权限障碍未再现身=授权侧已修；post-receive hook P2-1 活体照旧留授权侧）",
-  "updatedAt": "2026-08-27T01:57:13Z",
-  "mode": "blocked (红线3 事实障碍连续第二 tick：TriCompany 仓执行通道被会话权限墙切断且墙未变；superseded 排查否定=修复标的仍缺位无替代完成口径；零派工留痕收束+push 成功上台账已回填，非收口——本 tick 留痕四原子提交 5d14cb88/29c25c34/fc2d865e/本提交，前三已随 29c25c34..push 上权威线，第四见下一 tick 回填)"
+  "push": "待执行（骨架/裁定两原子后实测）",
+  "updatedAt": "2026-08-27T02:53:30Z",
+  "mode": "skeleton (勘察证据已落盘，blocked/done 裁定随下一原子提交定谳)"
 }
