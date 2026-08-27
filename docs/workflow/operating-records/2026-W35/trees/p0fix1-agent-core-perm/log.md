@@ -237,6 +237,12 @@ TC 零推进（a22a9cdf 原地），无新一轮上游施工可指向修复；�
 | 10 | 05:57 | PB-T fresh TestEngineer 派工（门禁回归+验证记录+状态翻转）：独立对抗复核逐向量核验+新逻辑分支清点→补录 6 例零覆盖分支用例（rooted-clamp/内嵌点段折叠/UNC fail-closed/大小写契约/跨字段 OR known-limitation 钉值/无-cwd 兜底 deny）、reports/verify.md 六节全文、tree-op.json 三节点+顶层 status=done 四笔翻转；诚实申报补录未经运行 | — |
 | 11 | 06:00 | 重开门禁闭环重开条件：build 干净＋node --test **52/52 连续两轮隔离全绿**（补录 6 例静态推演全部命中实测）＋tsc --noEmit clean → TC 补录原子提交 **95d8713** | 95d8713（TC dev） |
 | 12 | 06:03 | 收口原子：state 节点终值 done×3+commits 全链+mode=done-executed 完成定义四要件实证+残差六项移交清单；本表 #9-#12。树顶层 status=done 与节点翻转经 grep 四笔复核在位 | （本提交，实测 hash 见 git log） |
+| 13 | ~06:05 | push 实测：TM **一次成功** 2f5e5987..f5f0f9c0 fast-forward；TC 首推 rejected fetch first→fetch 勘察（远端仅 d5ce09c 纯 docs 一笔零交集）→真 merge --no-edit 对齐后 d5ce09c..**8745404** 成功。注意：post-receive fade-hook.lock Permission denied+flock bad fd 为前三 tick 每推必现的既有活体，本轮双仓三推全部未复现——或已消，留下一 tick 首勘复核 | —（本地留痕随下原子） |
+| 14 | 06:11 | 台账回填：shadow-plane session-registry.json instances=37 追加本实例条目 + ticks 尾条 rc=spawned→**rc=0** 全字段回填（commit/push/note），Edit 直写+node 内联断言 `ASSERT_ALL_PASS instances=37 ticks=32 rc=0` 复读实证；未落临时脚本=无新增 untracked 残留。本行所属回填提交随后单发终推 | （本提交，hash 见 git log HEAD 实测） |
+
+### 终态一句话
+
+p0fix1-agent-core-perm 树 end-to-end 完成：四个 P0（路径边界双重绕过/acceptEdits 免确认放行/内容匹配子串注入/spawn 权限丢弃+bypass 兜底）全部修复并各有复现性对抗用例守护，52/52×2+tsc --noEmit clean 门禁闭环，双仓收口 commit 均实测 push 成功，shadow-plane 台账 rc=0 全字段在案——前四连续 blocked tick 于本 tick（解封后首执行）终结。
 
 ### 收口披露
 

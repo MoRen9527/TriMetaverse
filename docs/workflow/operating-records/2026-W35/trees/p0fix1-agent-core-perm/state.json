@@ -79,9 +79,21 @@
     {
       "hash": "95d8713（TC dev）",
       "what": "PB-T 对抗复核补录原子（两 .mjs 共 +82 行）：6 例零覆盖分支用例；重开门禁 build/52of52×2/tsc --noEmit 三绿后才提交=重开条件闭环"
+    },
+    {
+      "hash": "f5f0f9c0（TM dev）",
+      "what": "收口原子：树顶层 status=done+节点 done×3+verify.md 六节+log #9-#12 与完成定义四要件实证"
+    },
+    {
+      "hash": "8745404（TC dev，merge 提交）",
+      "what": "对齐授权侧并发插入：首推被拒 fetch first→fetch 实证远端仅 d5ce09c 纯 docs 一笔与 agent-core 零交集→真 merge --no-edit（非 force 非 rebase）→再推成功；merge 本身零触 packages/agent-core=已过门禁结论不受影响无需重跑"
+    },
+    {
+      "hash": "(本回填提交，hash 见 git log HEAD 实测)",
+      "what": "台账回填记录：push 双仓实测终值入账（TC d5ce09c..8745404 / TM 2f5e5987..f5f0f9c0 fast-forward 一次成功且 post-receive fade-hook 报错未复现留下轮复核）；shadow-plane session-registry instances=37 追加本实例条目+ticks 尾条预登记 rc=spawned 回填 rc=0 全字段（commit/push/note），Edit 手术式直写+node 内联断言复读实证（ASSERT_ALL_PASS），未落临时脚本=无新增 untracked 残留（前 tick 的 .ledger-backfill-tmp.py 残留照旧不入库）；registryUpdatedAt 推进至 06:09:23Z"
     }
   ],
-  "push": "—（收口提交随本原子落盘后单发；TM 记录线与 TC 代码线三原子同 push origin dev，终值留痕以实测为准由台账回填提交勘定）",
-  "updatedAt": "2026-08-27T06:03:01Z",
+  "push": "成功×2 仓（2026-08-27 ~06:05-06:07Z 实测）：①TC 首推 rejected fetch first（远端新进 d5ce09c 纯 docs 一笔零交集）→fetch 勘察+真 merge 对齐后 d5ce09c..8745404 推送成功（fabcbef/14499e5/95d8713 三原子+merge 上权威线）；②TM 2f5e5987..f5f0f9c0 fast-forward 一次成功（96970410/42296c80/a2c2f5bd/f5f0f9c0 四原子上权威线；post-receive fade-hook.lock Permission denied+flock bad fd 前三 tick 既有报错本轮未复现）。本回填记录提交后另发终推一次上权威线",
+  "updatedAt": "2026-08-27T06:11:22Z",
   "mode": "done-executed（完成定义四要件实证：①四个 P0 全部修复各有复现性对抗用例守护——52 例覆盖审计全向量+新逻辑分支清点；②套件无新增失败——52/52 双轮隔离全绿且基线 contract-v3 8/8 始终未破；③收口 commit 已 push——见 push 字段终值与本提交随后单发实测；④树顶层 status=done 已置并经 grep 复核。残差六项如实移交授权侧不构成本树门禁阻塞：spawn 整链动态验证需凭据环境/消费仓 blast-radius 扫描/规则词表别名缺口=P2-10 族/P1-7 replace_in_file 安全集合/symlink realpath 复核 deferred/跨字段 OR 匹配残余面升格仲裁）"
 }
