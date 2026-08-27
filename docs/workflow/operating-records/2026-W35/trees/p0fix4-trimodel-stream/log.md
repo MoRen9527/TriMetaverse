@@ -14,4 +14,5 @@
 
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
-| 1 | 09:12 | 骨架 state.json/log.md 落盘（就位勘察证据全量入 state.baseline：落后一笔与脏区定谳、拓扑、三探针待办、RR 风险登记三项、门禁差分口径） | （本笔） |
+| 1 | 09:12 | 骨架 state.json/log.md 落盘（就位勘察证据全量入 state.baseline：落后一笔与脏区定谳、拓扑、三探针待办、RR 风险登记三项、门禁差分口径） | 78797e50（push 0ee73e85..78797e50 fast-forward 实测一次过） |
+| 2 | 09:14-09:25 | 三探针全 favorable：①bare 实时 dev tip=6476812——本地实际落后 bare **三笔**（a5638e9/aaba31b/6476812，后者触 trimetaverse baseUrl；aaba31b 恰改 client.ts fallback 日志区=修复标的近邻）；②tsc npm run check 干净（RR-3 解除）；③工具链 reports/gate-runner.mjs 落树+基线 round0-a/b 双轮隔离 **22 tests/22 pass/0 fail** 失败集为空=T0 锁定。另勘外来资产追加：trimetaverse.ts 脏区为 Authorization 掩码→真实 Bearer 的独立语义修复。PE-1 工作底本种子 reports/pe1/client.ts.fixed 经 git diff --no-index --stat 对活体文件实测零差异=字节级保真背书 | （本笔） |

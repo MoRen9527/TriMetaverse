@@ -1,0 +1,15 @@
+{
+  "label": "round0-b",
+  "argv": [
+    "test/usage.test.ts",
+    "test/client.test.ts"
+  ],
+  "cwd": "/srv/fleet/TriModel",
+  "exitCode": 0,
+  "tests": "22",
+  "pass": "22",
+  "fail": "0",
+  "cancelled": "0",
+  "skipped": "0",
+  "notOk": []
+}
