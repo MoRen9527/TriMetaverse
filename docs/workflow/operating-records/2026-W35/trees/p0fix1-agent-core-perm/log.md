@@ -59,4 +59,5 @@ Read/Glob 工具跨仓可用（只读）；shadow-plane 台账 Read 可用。npm
 | --- | --- | --- | --- |
 | 1 | 01:54 | 骨架落盘（基线双仓+墙重测+superseded 排查否定+hash 勘正） | 5d14cb88 |
 | 2 | 01:54 | blocked 裁定终值（本节+state.json 节点 verdictNote/commits/mode 终值） | 29c25c34 |
-| 3 | 01:55 | push origin dev 实测**一次成功**：ca80be23..29c25c34 fast-forward（ahead 6 全部上权威线：前 tick 重写链 4 提交+本 tick 2 提交）——前 tick 连续被拒的 bare 仓 objects/14 权限障碍未再现=授权侧已修；post-receive hook 仍报 fade-hook.lock Permission denied+flock bad fd（P2-1 既有活体不触发后续 tick，留授权侧） | （本提交） |
+| 3 | 01:55 | push origin dev 实测**一次成功**：ca80be23..29c25c34 fast-forward（ahead 6 全部上权威线：前 tick 重写链 4 提交+本 tick 2 提交）——前 tick 连续被拒的 bare 仓 objects/14 权限障碍未再现=授权侧已修；post-receive hook 仍报 fade-hook.lock Permission denied+flock bad fd（P2-1 既有活体不触发后续 tick，留授权侧） | fc2d865e |
+| 4 | 01:56 | 台账回填：session-registry instances 条目（tick 014800Z，releasedAt 01:56:28Z）+ticks 终值 rc=1（commit/push/note 全字段）+registryUpdatedAt 01:56:28Z；写后机器复读实证（python3 json.tool 全量 120.6KB 解析通过） | （本提交） |
