@@ -4,8 +4,10 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-27/glm-model-deployment-map.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-27
+- lastSyncedAt: 2026-08-27（v1.1：双面切 glm-5.3-flash）
 - 背景：ox-alpha 停服 → GLM（bigmodel.cn Anthropic 兼容端点）切换战役产物；编排层会话记忆升格为公司可读真源
+
+> **v1.1（2026-08-27 上午，CEO 指令）**：R/M 面编排档位统一切 `glm-5.3-flash`——registry 已注册（TriModel e25da88，含大写别名归一）；heyuan orchestration.json model / .env ANTHROPIC_MODEL、sg orchestration.json default_model 均已改并实测通（FLASH-OK / GLM-OK）。在途会话不受影响（--model 于 spawn 时钉死）；本地 CC 与 sg settings.json 的主力档维持 glm-5.3[1M] 不变。flash 档为 thinking 型模型（响应含 thinking 块）。
 
 ## 一、配置点位矩阵
 
