@@ -53,7 +53,7 @@
       "what": "blocked 裁定（红线3，连续第三 tick）：三项独立事实定谳=墙未变+派工层无 Bash 新证据层+superseded 再否定；零派工，PA-1/PA-2/PB-T 维持 pending，顶层 status 维持 active 不臆造；不降级为无提交脏改（裁定同前两 tick）；修复路径留授权侧=放行 TriCompany 通道 且 为两派工角色增补 Bash 工具面（或改派有执行权载体），缺一即维持 blocked"
     }
   ],
-  "push": "待执行（骨架/裁定两原子后实测，终值随台账回填记录提交定谳）",
+  "push": "成功×1（0ac5ae95..b51510e0 fast-forward，2026-08-27T02:55Z 实测：骨架 8cbcd0c4+裁定 b51510e0 两原子上权威线；post-receive hook 报 fade-hook.lock Permission denied+flock bad fd=P2-1 既有活体照旧不触发后续 tick，留授权侧）；台账回填后另有终推一次见 log 动作序列#5/#6",
   "updatedAt": "2026-08-27T02:55:40Z",
   "mode": "blocked (红线3 事实障碍连续第三 tick：TriCompany 仓执行通道墙未变+派工角色工具面无 Bash 双层独立阻塞+superseded 排查再否定修复标的全缺位；零派工、三节点 pending 维持、顶层 active 维持；收束动作=push 留痕→台账回填→回填记录提交→终推，均为留痕原子非收口——本 tick 不满足完成定义属事实障碍如实标注)"
 }
