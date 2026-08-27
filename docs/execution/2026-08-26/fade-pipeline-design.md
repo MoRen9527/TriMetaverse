@@ -98,3 +98,11 @@ CEO 收终报
 | **AC-4 受控实验** | **PASS**（2026-08-27 04:18 北京时间）：hook 禁用窗内 push fadeslow-verify-001 → cron tick 独立拾取 spawn（registry trigger=cron·pid 在案）→ 会话收口 done；同轮实证 P1-1 自愈同步干净通过。取证报告见 [fadeslow-verify-001/reports/slow-path.md](../../workflow/operating-records/2026-W35/trees/fadeslow-verify-001/reports/slow-path.md)；hook 已于同日恢复启用 | ✅ |
 
 **残余风险声明**：四条 AC 全部有实证（AC-1a/AC-2/AC-3 见 fade-rehearsal-001 链路；AC-4 见本表）；唯一未复验项为 **AC-1b**（hook 恢复后首次带新树 push 的生效链路），将在下一真实战役自然覆盖。_sync_worktree 降级告警升级（现为 stdout 级可见性）列 v1.2。
+
+## 八、运行语义备忘（2026-08-27 实测定型）
+
+1. **指纹与重入**：待办集指纹 = 可执行树 (treeId, pendingNodes) 集合的内容哈希——空提交/纯文档 push 不翻指纹；同指纹重入唯一路径 = 距上次 tick 收场 ≥1800s（防风暴冷却，无旁路可走，push 快通道只对工作项变化生效）。
+2. **台账自证合法**：编排会话按简报纪律可自行改写 session-registry 的自身条目（如 rc=spawned→1 并附 blocked 证据链）——这是特性不是数据损坏；调度只依赖锁内 PID 存活判定，不信 rc 字段。
+3. **执行通道白名单**（orchestrate_tick spawn --allowedTools，61dfaea）：git 全家桶（add/commit/push/fetch/rebase/checkout/branch/merge/cherry-pick/status/log/diff/show）+ npm/npx tsc/node/python3 + 文件检视工具族（cat/head/tail/wc/grep/find/cp/mv/touch/diff/mkdir/ls）+ Task。代码修复树的构建/测试门禁由此可达。
+4. **裸仓权限自愈**：sg-server root crontab `bare-perm-heal` 每 15 分钟对所有 /srv/git/*.git 执行 chgrp fleet -R + chmod g+w -R——吸收混合身份 push 落下的 root 属主对象段（D-10）。
+5. **阻塞告警缺口**（v1.2 待办）：会话 blocked 目前只有 registry 自证 + 本地监控轮询才发现，缺主动边沿通知。
