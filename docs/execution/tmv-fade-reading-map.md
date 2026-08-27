@@ -69,7 +69,7 @@ sourceOfTruth: TriMetaverse/docs/execution/tmv-fade-reading-map.md ｜ syncMode:
 | 概念 | 一句话 | 详见 |
 | --- | --- | --- |
 | 三层最小实现 | 元虚拟=TriMMC+TriMLC（用 claude 可换 codex）/ 元现实=TriRMC+TriRLC（自研 agent-core）/ 元认知=项目仓 | 白皮书 §3.1 |
-| FADE | 十段生命周期全落地+评分通过的 ADE 成熟实例徽章 | spec §1.1、附录 B 词条 |
+| FADE | Agent 确定性执行全生命周期协议（十段+评分通过=完整实例 FADE-XXX） | spec §一、附录 B 词条 |
 | 三条 bridge | 元虚拟内 ssh+bridge / 元虚拟↔元现实走 git 仓 / 元现实内四面复用 | R4 §2 |
 | 试卷-评分 | 每次执行有考卷（必做项+验证法）、Score CLI 查覆盖、Score Skill 评质量、双门槛 | spec §2.6 |
 | 治理三档 | 样本期逐项审批→类别白名单→类别全自动（5 条可观测升级条件） | 流水线条目 |
