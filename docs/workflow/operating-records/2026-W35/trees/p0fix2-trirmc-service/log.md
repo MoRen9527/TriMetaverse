@@ -24,6 +24,14 @@
 | 5 | 06:46-06:51 | 加根级三文件扩展口径复测（chat-endpoint/http-agent-endpoint/agent-sse 皆绿 +24 例）→ stash 基线对照实测 pristine dev@671b4d4 = **3 fail**（tools-ctx-cwd 三 subtests 同型）＝**增差 5 个新增失败全落 test/e2e/real-model-agent.test.ts**——PC-1 首扫据该文件注释误判「无 key 即 skip」漏清扫，本机 TriModel dotenv 注入链使 e2e 真实起 app 走 HTTP，被新 fail-closed 门拦截 | — |
 | 6 | 06:52-06:56 | 漏判返工：SendMessage 续接同实例（PC-1 节点范围内）补 e2e fixture 的 token 注入（postAgent 唯一出口集中加 x-internal-token 头+before/after env save/restore）；门禁 round3/round4 连续两轮隔离 **474 tests / 471 pass** 与基线逐字同型失败集＝零新增失败定谳；npm run check 干净 | e3545b7（TriRMC 本地提交，三绿后才提交） |
 | 7 | 07:00 | TriRMC push 实测被拒：`fatal: could not read Username for 'https://github.com'`——凭据通道四处探察全空（config credential.helper 缺失/.git-credentials/.netrc/.config/gh/env 键名）如实 blocked 移交授权侧，本地 commit 计进度（详见 state.push.triRMCGitHub） | — |
+| 8 | 07:01-07:03 | PC-1 收账原子（state PC-1 done 终值+上表 #2-#7 与门禁口径披露节+gate-runner.mjs/五轮 TAP 存档入库） | 2375e65b（push bfb614ba..2375e65b fast-forward 一次成功） |
+| 9 | 07:05-07:19 | PC-T fresh TestEngineer 派工（编排层预置三占位锚：两测试文件+verify.md——派工角色无 Write 工具面先例延续），先写后报：23 例对抗套件+六节 verify.md+tree-op.json 三笔翻转+对抗复核疑点四项交回，诚实申报全程未经运行 | — |
+| 10 | 07:19-07:21 | 重开门禁实测：**497 tests / 494 pass 连续两轮隔离**（pc1 时代 474 盘 + 新增 23 例首轮全部命中静态推演零回退），失败集与 pristine 基线逐字同型=零新增；npm run check 干净 → TriRMC 对抗补录原子提交；push 二试同型被拒照旧留痕（dev ahead 2 终态） | 3589a59（TriRMC 本地提交） |
+| 11 | 07:26 | 收口原子：state PC-T done 终值+commits 四笔全链+push 双线终值+mode=done-executed 完成定义四要件实证与残差移交清单；本表 #8-#11。树顶层 status=done 与节点翻转经编排层 grep 复核在位 | （本提交，hash 见 git log 实测；随后单发终推） |
+
+### 终态一句话
+
+p0fix2-trirmc-service 树 end-to-end 完成（本会话内）：TriRMC 服务面两处 P0——cron 载荷 runAs 无校验提权面（审计发现 5）与 /internal 鉴权漏配即零鉴权 fail-open（发现 6）——修复并各有复现性对抗用例守护，重开门禁 497/494×2 零新增失败+check 干净闭环；TM 记录线原子全程 push 上权威线；唯一残差为 TriRMC→GitHub 推送的凭据通道缺失（本地 commit e3545b7+3589a59 为准，远端同步窗口移交授权侧），heyuan 生产部署按 tree-op notes 维持人工窗口纪律（部署前必须预配 TRIRMC_RUNAS_ALLOWLIST）。
 
 ### 门禁等价口径披露（入 verify.md 引用）
 

@@ -40,7 +40,8 @@
     {
       "nodeId": "PC-T",
       "agent": "TestEngineer",
-      "status": "pending"
+      "status": "done",
+      "verdictNote": "PASS（附加条件已闭环）：两套对抗复现套件 23 例落盘（server 面 failclosed 6 例/cron 路由层 r1-r6/执行层 e1-e5 spawnFn 零调用死证/解析单元 u1-u6+文案契约钉定）；verify.md 六节全文（§2 等价口径与五轮 TAP 存档清单、§3 残差八项按归属移交含 GitHub push 凭据通道全空①、§4 零覆盖分支清点表与 pristine 基线对照法复盘）；tree-op.json 三笔翻转（PC-1/PC-T/顶层 status=done）经编排层 grep 复核在位。诚实申报全程：23 例未经运行＝静态推演——编排层重开门禁实测首轮即 **497 tests/494 pass**（新增 23 例全部命中静态推演）连续两轮隔离逐字稳定，残余 3 失败=pristine 基线同型环境性既有零新增；npm run check 干净。对抗复核疑点四项交回（/internal 无尾斜杠前缀不入门的收紧建议/多值数组头支未覆盖披露/env 实时读无审计日志/healthz 磁盘读 P1-1 既有）"
     }
   ],
   "commits": [
@@ -51,11 +52,20 @@
     {
       "hash": "e3545b7（TriRMC dev，本地 commit 已成）",
       "what": "PC-1 代码原子（12 文件 +242/-20）：P0-1 runAs 白名单双层防御＋P0-2 internal fail-closed 反转＋8 fixture 套件清扫对齐（含 e2e real-model 返工）；门禁三绿后才提交=check 干净/471of474 双轮隔离零新增失败（残余 3 环境性既有 stash 基线在案）/静态自查残留五项入 verdictNote 与 verify 待录"
+    },
+    {
+      "hash": "2375e65b（TM dev）",
+      "what": "PC-1 收账原子：state PC-1 done 终值+log 动作序列 #2-#7 与门禁等价口径披露节+gate-runner.mjs 工具与五轮 TAP 存档入树；push 实测 bfb614ba..2375e65b fast-forward"
+    },
+    {
+      "hash": "3589a59（TriRMC dev，本地 commit 已成）",
+      "what": "PC-T 对抗补录原子：两套件 435 行/23 例；重开门禁实测 497 tests/494 pass 连续两轮隔离全稳（新增 23 例首轮全绿零回退）+check 干净后才提交；GitHub push 二试同型被拒照旧留痕"
     }
   ],
   "push": {
-    "triMetaverse": "成功 a8412c92..bfb614ba fast-forward（/srv/git/TriMetaverse.git 本地镜像权威线，骨架原子）",
+    "triMetaverse": "成功两笔均一次通过（/srv/git/TriMetaverse.git 本地镜像权威线）：a8412c92..bfb614ba（骨架）、bfb614ba..2375e65b（PC-1 收账）；收口原子提交随后单发终推",
     "triRMCGitHub": "被拒——`git -C /srv/fleet/TriRMC push origin dev` 实测 fatal: could not read Username for 'https://github.com'：本机无任何 GitHub 凭据通道（git config --list 无 credential.helper、~/.git-credentials 与 ~/.netrc 与 ~/.config/gh 三处 Glob 实测无文件、GITHUB_TOKEN/GH_TOKEN 类 env 键名探察空）。障碍属会话不可解非树内可修＝按红线3 如实留痕移交授权侧；代码原子以本地 commit e3545b7 计进度（dev 领先 origin/dev 1），fleet 本地检出 /srv/fleet/TriRMC 即部署拾取点不受影响，远端同步窗口由授权侧执行"
   },
-  "updatedAt": "2026-08-27T07:01:30Z"
+  "updatedAt": "2026-08-27T07:26:00Z",
+  "mode": "done-executed（完成定义四要件逐项实证：①两项 P0 修复上码+守护测试齐——e3545b7 修复 12 文件+3589a59 对抗 23 例，审计原始向量「漏配即零鉴权」「runAs=root 提权/越用户/PATCH 重放」各有复现→被拒死证；②套件无新增失败——重开门禁 497 tests/494 pass 连续两轮隔离与 pristine stash 基线失败集逐字同型（残余 3 环境性既有于 round0 在案），npm run check 干净；③收口 commit 已 push——TM 记录线全程 fast-forward 实证；TriRMC 代码线 push 残差如实移交：GitHub 凭据通道四处探察全空二试同型 fatal could not read Username（verify.md §3①/state.push.triRMCGitHub），本地 commit 为准 dev ahead 2，fleet 本地检出即部署拾取点不受影响、远端同步窗口由授权侧执行；④树顶层 status=done 与节点翻转 grep 四笔复核在案。残差八项 verify.md §3 按归属移交不构成本树门禁阻塞）"
 }

@@ -1,0 +1,3644 @@
+
+> trirmc@0.1.0 test
+> node --import tsx --test test/**/*.test.ts test/chat-endpoint.test.ts test/http-agent-endpoint.test.ts test/agent-sse.test.ts
+
+TAP version 13
+# Subtest: parseRule
+    # Subtest: parses tool-level rule (no content filter)
+    ok 1 - parses tool-level rule (no content filter)
+      ---
+      duration_ms: 1.034205
+      ...
+    # Subtest: parses rule with content filter
+    ok 2 - parses rule with content filter
+      ---
+      duration_ms: 0.35933
+      ...
+    # Subtest: parses Bash() as tool-level rule
+    ok 3 - parses Bash() as tool-level rule
+      ---
+      duration_ms: 0.179833
+      ...
+    # Subtest: parses Bash(*) as tool-level rule
+    ok 4 - parses Bash(*) as tool-level rule
+      ---
+      duration_ms: 0.185872
+      ...
+    # Subtest: parses Bash exact command match
+    ok 5 - parses Bash exact command match
+      ---
+      duration_ms: 0.168876
+      ...
+    # Subtest: parses Bash wildcard prefix match
+    ok 6 - parses Bash wildcard prefix match
+      ---
+      duration_ms: 0.152866
+      ...
+    # Subtest: parses Bash python prefix with wildcard
+    ok 7 - parses Bash python prefix with wildcard
+      ---
+      duration_ms: 1.755877
+      ...
+    # Subtest: resolves legacy alias FileRead → read_file
+    ok 8 - resolves legacy alias FileRead → read_file
+      ---
+      duration_ms: 0.166556
+      ...
+    # Subtest: resolves legacy alias FileWrite → write_file
+    ok 9 - resolves legacy alias FileWrite → write_file
+      ---
+      duration_ms: 0.154076
+      ...
+    # Subtest: resolves legacy alias Task → task
+    ok 10 - resolves legacy alias Task → task
+      ---
+      duration_ms: 0.131281
+      ...
+    # Subtest: resolves legacy alias Grep → glob_search
+    ok 11 - resolves legacy alias Grep → glob_search
+      ---
+      duration_ms: 0.116352
+      ...
+    # Subtest: handles escaped parentheses in content
+    ok 12 - handles escaped parentheses in content
+      ---
+      duration_ms: 0.110023
+      ...
+    # Subtest: handles empty string rule
+    ok 13 - handles empty string rule
+      ---
+      duration_ms: 0.208071
+      ...
+    1..13
+ok 1 - parseRule
+  ---
+  duration_ms: 8.530517
+  type: 'suite'
+  ...
+# Subtest: parseRules (batch)
+    # Subtest: parses multiple rules with same behavior and source
+    ok 1 - parses multiple rules with same behavior and source
+      ---
+      duration_ms: 0.201082
+      ...
+    1..1
+ok 2 - parseRules (batch)
+  ---
+  duration_ms: 0.372215
+  type: 'suite'
+  ...
+# Subtest: runSafetyCheck
+    # Subtest: triggers for write_file targeting .git/
+    ok 1 - triggers for write_file targeting .git/
+      ---
+      duration_ms: 1.313645
+      ...
+    # Subtest: triggers for edit_file targeting .claude/
+    ok 2 - triggers for edit_file targeting .claude/
+      ---
+      duration_ms: 0.185462
+      ...
+    # Subtest: does NOT trigger for write_file targeting regular file
+    ok 3 - does NOT trigger for write_file targeting regular file
+      ---
+      duration_ms: 0.318381
+      ...
+    # Subtest: does NOT trigger for read tools (not in FILE_MODIFYING_TOOLS)
+    ok 4 - does NOT trigger for read tools (not in FILE_MODIFYING_TOOLS)
+      ---
+      duration_ms: 0.405684
+      ...
+    # Subtest: triggers for shell_exec modifying .bashrc
+    ok 5 - triggers for shell_exec modifying .bashrc
+      ---
+      duration_ms: 0.279415
+      ...
+    # Subtest: triggers for shell_exec rm -rf /
+    ok 6 - triggers for shell_exec rm -rf /
+      ---
+      duration_ms: 0.262902
+      ...
+    # Subtest: does NOT trigger for safe shell command
+    ok 7 - does NOT trigger for safe shell command
+      ---
+      duration_ms: 0.541644
+      ...
+    # Subtest: does NOT trigger for no-args case
+    ok 8 - does NOT trigger for no-args case
+      ---
+      duration_ms: 0.195267
+      ...
+    1..8
+ok 3 - runSafetyCheck
+  ---
+  duration_ms: 4.766782
+  type: 'suite'
+  ...
+# Subtest: Decision Pipeline: default mode
+    # Subtest: defaults to deny when no rules are configured
+    ok 1 - defaults to deny when no rules are configured
+      ---
+      duration_ms: 0.632307
+      ...
+    # Subtest: allows tool with matching allow rule
+    ok 2 - allows tool with matching allow rule
+      ---
+      duration_ms: 0.364355
+      ...
+    # Subtest: denies tool with matching deny rule (overrides allow of same priority)
+    ok 3 - denies tool with matching deny rule (overrides allow of same priority)
+      ---
+      duration_ms: 0.353053
+      ...
+    # Subtest: higher-priority allow overrides lower-priority deny
+    ok 4 - higher-priority allow overrides lower-priority deny
+      ---
+      duration_ms: 0.371218
+      ...
+    # Subtest: content-filtered rule only matches when args contain content
+    ok 5 - content-filtered rule only matches when args contain content
+      ---
+      duration_ms: 0.285613
+      ...
+    # Subtest: content-filtered rule does NOT match when args do not contain content
+    ok 6 - content-filtered rule does NOT match when args do not contain content
+      ---
+      duration_ms: 0.20635
+      ...
+    # Subtest: safety check blocks write to .git/ even with allow rule
+    ok 7 - safety check blocks write to .git/ even with allow rule
+      ---
+      duration_ms: 0.196325
+      ...
+    1..7
+ok 4 - Decision Pipeline: default mode
+  ---
+  duration_ms: 3.401863
+  type: 'suite'
+  ...
+# Subtest: Decision Pipeline: bypassPermissions mode
+    # Subtest: allows any tool in bypassPermissions mode
+    ok 1 - allows any tool in bypassPermissions mode
+      ---
+      duration_ms: 0.312233
+      ...
+    # Subtest: still blocks via safety check (bypass-immune)
+    ok 2 - still blocks via safety check (bypass-immune)
+      ---
+      duration_ms: 0.357129
+      ...
+    # Subtest: still honors deny rules even in bypass mode (deny is highest priority)
+    ok 3 - still honors deny rules even in bypass mode (deny is highest priority)
+      ---
+      duration_ms: 0.181616
+      ...
+    1..3
+ok 5 - Decision Pipeline: bypassPermissions mode
+  ---
+  duration_ms: 1.192414
+  type: 'suite'
+  ...
+# Subtest: Decision Pipeline: acceptEdits mode
+    # Subtest: auto-accepts write_file within CWD
+    ok 1 - auto-accepts write_file within CWD
+      ---
+      duration_ms: 0.476437
+      ...
+    # Subtest: auto-accepts edit_file within CWD
+    ok 2 - auto-accepts edit_file within CWD
+      ---
+      duration_ms: 0.337049
+      ...
+    # Subtest: does NOT auto-accept non-edit tools in acceptEdits mode
+    ok 3 - does NOT auto-accept non-edit tools in acceptEdits mode
+      ---
+      duration_ms: 0.163935
+      ...
+    # Subtest: auto-accepts edit tools even without CWD (permissive fallback)
+    ok 4 - auto-accepts edit tools even without CWD (permissive fallback)
+      ---
+      duration_ms: 0.241285
+      ...
+    # Subtest: safety check still fires in acceptEdits mode
+    ok 5 - safety check still fires in acceptEdits mode
+      ---
+      duration_ms: 0.222609
+      ...
+    1..5
+ok 6 - Decision Pipeline: acceptEdits mode
+  ---
+  duration_ms: 2.345732
+  type: 'suite'
+  ...
+# Subtest: PermissionEngine
+    # Subtest: defaults to default mode with no rules
+    ok 1 - defaults to default mode with no rules
+      ---
+      duration_ms: 0.462946
+      ...
+    # Subtest: accepts initial mode and rules
+    ok 2 - accepts initial mode and rules
+      ---
+      duration_ms: 0.138461
+      ...
+    # Subtest: addRule parses raw strings and sorts by priority
+    ok 3 - addRule parses raw strings and sorts by priority
+      ---
+      duration_ms: 0.207217
+      ...
+    # Subtest: addRules batch adds multiple rules
+    ok 4 - addRules batch adds multiple rules
+      ---
+      duration_ms: 0.168202
+      ...
+    # Subtest: addParsedRule adds pre-parsed rule
+    ok 5 - addParsedRule adds pre-parsed rule
+      ---
+      duration_ms: 0.224678
+      ...
+    # Subtest: removeRulesBySource removes all rules from a source
+    ok 6 - removeRulesBySource removes all rules from a source
+      ---
+      duration_ms: 0.167082
+      ...
+    # Subtest: clearRules removes everything
+    ok 7 - clearRules removes everything
+      ---
+      duration_ms: 0.122278
+      ...
+    # Subtest: setMode changes the permission mode
+    ok 8 - setMode changes the permission mode
+      ---
+      duration_ms: 0.116372
+      ...
+    # Subtest: decide delegates to pipeline
+    ok 9 - decide delegates to pipeline
+      ---
+      duration_ms: 0.271065
+      ...
+    # Subtest: decideAll returns map of results
+    ok 10 - decideAll returns map of results
+      ---
+      duration_ms: 0.225287
+      ...
+    # Subtest: summarize returns correct state
+    ok 11 - summarize returns correct state
+      ---
+      duration_ms: 0.223601
+      ...
+    1..11
+ok 7 - PermissionEngine
+  ---
+  duration_ms: 3.158544
+  type: 'suite'
+  ...
+# Subtest: Decision Pipeline: edge cases
+    # Subtest: ask rules return ask behavior (Tier 1: treated as blocked)
+    ok 1 - ask rules return ask behavior (Tier 1: treated as blocked)
+      ---
+      duration_ms: 0.239072
+      ...
+    # Subtest: wildcard allow rule matches partial content
+    ok 2 - wildcard allow rule matches partial content
+      ---
+      duration_ms: 0.372766
+      ...
+    # Subtest: empty rules array + default mode = deny
+    ok 3 - empty rules array + default mode = deny
+      ---
+      duration_ms: 0.34911
+      ...
+    # Subtest: conflicting same-priority rules: deny wins over ask, allow wins based on pipeline order
+    ok 4 - conflicting same-priority rules: deny wins over ask, allow wins based on pipeline order
+      ---
+      duration_ms: 0.296376
+      ...
+    # Subtest: task tool does not trigger safety check by default
+    ok 5 - task tool does not trigger safety check by default
+      ---
+      duration_ms: 0.167715
+      ...
+    1..5
+ok 8 - Decision Pipeline: edge cases
+  ---
+  duration_ms: 2.014842
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ override existing { override: true }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# Subtest: Permission Model 正确性
+    # Subtest: main 层级拥有全部 6 个工具
+    ok 1 - main 层级拥有全部 6 个工具
+      ---
+      duration_ms: 0.685862
+      ...
+    # Subtest: subagent 层级拥有 2 个只读工具（不含 task 防递归、不含写操作）
+    ok 2 - subagent 层级拥有 2 个只读工具（不含 task 防递归、不含写操作）
+      ---
+      duration_ms: 0.292414
+      ...
+    # Subtest: subagent 层级仅有只读工具（read_file, glob_search）
+    ok 3 - subagent 层级仅有只读工具（read_file, glob_search）
+      ---
+      duration_ms: 0.328213
+      ...
+    # Subtest: coordinator 层级仅拥有 task 工具
+    ok 4 - coordinator 层级仅拥有 task 工具
+      ---
+      duration_ms: 0.169554
+      ...
+    1..4
+ok 9 - Permission Model 正确性
+  ---
+  duration_ms: 3.703757
+  type: 'suite'
+  ...
+# Subtest: canUseTool 边界
+    # Subtest: main 可以使用任意工具
+    ok 1 - main 可以使用任意工具
+      ---
+      duration_ms: 0.324308
+      ...
+    # Subtest: subagent 不能使用 task
+    ok 2 - subagent 不能使用 task
+      ---
+      duration_ms: 0.156031
+      ...
+    # Subtest: subagent 可以使用 read_file
+    ok 3 - subagent 可以使用 read_file
+      ---
+      duration_ms: 0.137663
+      ...
+    # Subtest: coordinator 可以使用 task
+    ok 4 - coordinator 可以使用 task
+      ---
+      duration_ms: 0.128573
+      ...
+    # Subtest: coordinator 不能使用 write_file
+    ok 5 - coordinator 不能使用 write_file
+      ---
+      duration_ms: 0.16169
+      ...
+    # Subtest: coordinator 不能使用 shell_exec
+    ok 6 - coordinator 不能使用 shell_exec
+      ---
+      duration_ms: 0.166311
+      ...
+    # Subtest: 未注册工具默认 main-only（subagent 不能使用未知工具）
+    ok 7 - 未注册工具默认 main-only（subagent 不能使用未知工具）
+      ---
+      duration_ms: 0.135218
+      ...
+    1..7
+ok 10 - canUseTool 边界
+  ---
+  duration_ms: 2.090345
+  type: 'suite'
+  ...
+# Subtest: getToolNamesForTier
+    # Subtest: main 返回全部已注册工具名
+    ok 1 - main 返回全部已注册工具名
+      ---
+      duration_ms: 0.308671
+      ...
+    # Subtest: subagent 包含 2 个工具
+    ok 2 - subagent 包含 2 个工具
+      ---
+      duration_ms: 0.143286
+      ...
+    # Subtest: coordinator 仅包含 task
+    ok 3 - coordinator 仅包含 task
+      ---
+      duration_ms: 0.155553
+      ...
+    1..3
+ok 11 - getToolNamesForTier
+  ---
+  duration_ms: 1.065238
+  type: 'suite'
+  ...
+# Subtest: filterToolsForTier
+    # Subtest: main 不过滤
+    ok 1 - main 不过滤
+      ---
+      duration_ms: 0.183992
+      ...
+    # Subtest: subagent 过滤掉 task
+    ok 2 - subagent 过滤掉 task
+      ---
+      duration_ms: 0.16133
+      ...
+    # Subtest: 空工具列表返回空
+    ok 3 - 空工具列表返回空
+      ---
+      duration_ms: 0.13135
+      ...
+    1..3
+ok 12 - filterToolsForTier
+  ---
+  duration_ms: 0.910645
+  type: 'suite'
+  ...
+# Subtest: getTierSummary
+    # Subtest: 返回三个层级的摘要
+    ok 1 - 返回三个层级的摘要
+      ---
+      duration_ms: 0.51616
+      ...
+    # Subtest: main > subagent > coordinator（工具数量递减）
+    ok 2 - main > subagent > coordinator（工具数量递减）
+      ---
+      duration_ms: 0.246636
+      ...
+    1..2
+ok 13 - getTierSummary
+  ---
+  duration_ms: 1.013225
+  type: 'suite'
+  ...
+# Subtest: TIER_DESCRIPTIONS
+    # Subtest: 三个层级都有描述
+    ok 1 - 三个层级都有描述
+      ---
+      duration_ms: 0.174042
+      ...
+    1..1
+ok 14 - TIER_DESCRIPTIONS
+  ---
+  duration_ms: 0.343598
+  type: 'suite'
+  ...
+# Subtest: Agent Loop 层级集成（事件契约）
+    # Subtest: loop_start 事件包含 tier 字段
+    ok 1 - loop_start 事件包含 tier 字段
+      ---
+      duration_ms: 0.217668
+      ...
+    # Subtest: tool_blocked 事件包含工具名和原因
+    ok 2 - tool_blocked 事件包含工具名和原因
+      ---
+      duration_ms: 0.182066
+      ...
+    # Subtest: AgentLoopOptions 接受 tier 参数
+    ok 3 - AgentLoopOptions 接受 tier 参数
+      ---
+      duration_ms: 0.108825
+      ...
+    1..3
+ok 15 - Agent Loop 层级集成（事件契约）
+  ---
+  duration_ms: 0.795759
+  type: 'suite'
+  ...
+# Subtest: 递归防护
+    # Subtest: subagent 不能生成 sub-sub-agent（task 被禁止）
+    ok 1 - subagent 不能生成 sub-sub-agent（task 被禁止）
+      ---
+      duration_ms: 0.157963
+      ...
+    # Subtest: coordinator 不能执行文件操作
+    ok 2 - coordinator 不能执行文件操作
+      ---
+      duration_ms: 0.186453
+      ...
+    # Subtest: coordinator 仅能创建子代理（无循环风险）
+    ok 3 - coordinator 仅能创建子代理（无循环风险）
+      ---
+      duration_ms: 0.139888
+      ...
+    1..3
+ok 16 - 递归防护
+  ---
+  duration_ms: 0.839444
+  type: 'suite'
+  ...
+# Subtest: Task Handler 层级注入（CTO-009）
+    # Subtest: task 工具定义中描述已更新为子代理工具限制
+    ok 1 - task 工具定义中描述已更新为子代理工具限制
+      ---
+      duration_ms: 0.223124
+      ...
+    # Subtest: subagent 层级 loop_start 合约：tier + 2 tools
+    ok 2 - subagent 层级 loop_start 合约：tier + 2 tools
+      ---
+      duration_ms: 0.10937
+      ...
+    # Subtest: task 工具调用 agentLoop 时必定传 tier=subagent
+    ok 3 - task 工具调用 agentLoop 时必定传 tier=subagent
+      ---
+      duration_ms: 0.48054
+      ...
+    # Subtest: tool_blocked 事件包含 tool_name 和 reason（子代理被阻止时上报主代理）
+    ok 4 - tool_blocked 事件包含 tool_name 和 reason（子代理被阻止时上报主代理）
+      ---
+      duration_ms: 0.147613
+      ...
+    1..4
+ok 17 - Task Handler 层级注入（CTO-009）
+  ---
+  duration_ms: 1.301998
+  type: 'suite'
+  ...
+# Subtest: computeSystemPromptHash
+    # Subtest: returns null when no system message exists
+    ok 1 - returns null when no system message exists
+      ---
+      duration_ms: 0.679667
+      ...
+    # Subtest: returns null when system message has null content
+    ok 2 - returns null when system message has null content
+      ---
+      duration_ms: 0.268769
+      ...
+    # Subtest: returns a 64-char hex string for valid system prompt
+    ok 3 - returns a 64-char hex string for valid system prompt
+      ---
+      duration_ms: 0.95075
+      ...
+    # Subtest: returns same hash for identical content
+    ok 4 - returns same hash for identical content
+      ---
+      duration_ms: 0.237351
+      ...
+    # Subtest: returns different hash for different content
+    ok 5 - returns different hash for different content
+      ---
+      duration_ms: 0.248744
+      ...
+    1..5
+ok 18 - computeSystemPromptHash
+  ---
+  duration_ms: 5.697663
+  type: 'suite'
+  ...
+# Subtest: computeToolsHash
+    # Subtest: returns null for undefined tools
+    ok 1 - returns null for undefined tools
+      ---
+      duration_ms: 0.240174
+      ...
+    # Subtest: returns null for empty tools array
+    ok 2 - returns null for empty tools array
+      ---
+      duration_ms: 0.139262
+      ...
+    # Subtest: returns a 64-char hex string for valid tools
+    ok 3 - returns a 64-char hex string for valid tools
+      ---
+      duration_ms: 0.22186
+      ...
+    # Subtest: returns same hash for identical tools (canonical key order)
+    ok 4 - returns same hash for identical tools (canonical key order)
+      ---
+      duration_ms: 0.231806
+      ...
+    1..4
+ok 19 - computeToolsHash
+  ---
+  duration_ms: 1.646005
+  type: 'suite'
+  ...
+# Subtest: createCacheState
+    # Subtest: returns a fresh state with all nulls/zeros
+    ok 1 - returns a fresh state with all nulls/zeros
+      ---
+      duration_ms: 0.350315
+      ...
+    1..1
+ok 20 - createCacheState
+  ---
+  duration_ms: 0.56273
+  type: 'suite'
+  ...
+# Subtest: updateCacheState
+    # Subtest: sets hashes on first update without flagging changes
+    ok 1 - sets hashes on first update without flagging changes
+      ---
+      duration_ms: 0.378825
+      ...
+    # Subtest: detects system prompt change on second update
+    ok 2 - detects system prompt change on second update
+      ---
+      duration_ms: 0.484106
+      ...
+    # Subtest: detects tool change on second update
+    ok 3 - detects tool change on second update
+      ---
+      duration_ms: 0.213471
+      ...
+    # Subtest: resets change flags when content returns to original
+    ok 4 - resets change flags when content returns to original
+      ---
+      duration_ms: 0.221231
+      ...
+    1..4
+ok 21 - updateCacheState
+  ---
+  duration_ms: 1.822607
+  type: 'suite'
+  ...
+# Subtest: estimateCacheHit
+    # Subtest: returns no-hit on first call (no baseline)
+    ok 1 - returns no-hit on first call (no baseline)
+      ---
+      duration_ms: 0.274576
+      ...
+    # Subtest: returns no-hit when cache was invalidated (system prompt changed)
+    ok 2 - returns no-hit when cache was invalidated (system prompt changed)
+      ---
+      duration_ms: 0.11974
+      ...
+    # Subtest: returns hit when tokens drop >= 2000 (absolute threshold)
+    ok 3 - returns hit when tokens drop >= 2000 (absolute threshold)
+      ---
+      duration_ms: 0.11938
+      ...
+    # Subtest: returns hit when tokens drop >= 5% (percentage threshold)
+    ok 4 - returns hit when tokens drop >= 5% (percentage threshold)
+      ---
+      duration_ms: 0.353024
+      ...
+    # Subtest: returns no-hit when drop is small and under both thresholds
+    ok 5 - returns no-hit when drop is small and under both thresholds
+      ---
+      duration_ms: 0.424792
+      ...
+    # Subtest: returns no-hit when tokens increase (cache miss)
+    ok 6 - returns no-hit when tokens increase (cache miss)
+      ---
+      duration_ms: 0.257931
+      ...
+    1..6
+ok 22 - estimateCacheHit
+  ---
+  duration_ms: 2.270272
+  type: 'suite'
+  ...
+# Subtest: buildCacheMetrics
+    # Subtest: builds a complete metrics snapshot on first turn
+    ok 1 - builds a complete metrics snapshot on first turn
+      ---
+      duration_ms: 0.519963
+      ...
+    # Subtest: reports cache hit on second turn when tokens drop
+    ok 2 - reports cache hit on second turn when tokens drop
+      ---
+      duration_ms: 0.412418
+      ...
+    # Subtest: reports cacheInvalidated when system prompt changed
+    ok 3 - reports cacheInvalidated when system prompt changed
+      ---
+      duration_ms: 0.150826
+      ...
+    1..3
+ok 23 - buildCacheMetrics
+  ---
+  duration_ms: 1.529269
+  type: 'suite'
+  ...
+# Subtest: getCacheControlConfig
+    # Subtest: returns disabled for DeepSeek (current default)
+    ok 1 - returns disabled for DeepSeek (current default)
+      ---
+      duration_ms: 0.237291
+      ...
+    # Subtest: returns disabled for any model currently
+    ok 2 - returns disabled for any model currently
+      ---
+      duration_ms: 0.152125
+      ...
+    1..2
+ok 24 - getCacheControlConfig
+  ---
+  duration_ms: 0.680018
+  type: 'suite'
+  ...
+# Subtest: resetCacheStateForNewSession
+    # Subtest: clears all state fields
+    ok 1 - clears all state fields
+      ---
+      duration_ms: 0.282471
+      ...
+    1..1
+ok 25 - resetCacheStateForNewSession
+  ---
+  duration_ms: 0.508713
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ override existing { override: true }
+# ◇ injected env (0) from ../.env // tip: ⌁ auth for agents [www.vestauth.com]
+# Subtest: Built-in Agents
+    # Subtest: has exactly 4 built-in agents
+    ok 1 - has exactly 4 built-in agents
+      ---
+      duration_ms: 0.826866
+      ...
+    # Subtest: all 4 agent types are unique
+    ok 2 - all 4 agent types are unique
+      ---
+      duration_ms: 0.193815
+      ...
+    # Subtest: getBuiltInAgent returns correct agent by type
+    ok 3 - getBuiltInAgent returns correct agent by type
+      ---
+      duration_ms: 0.203372
+      ...
+    # Subtest: getBuiltInAgent returns undefined for unknown type
+    ok 4 - getBuiltInAgent returns undefined for unknown type
+      ---
+      duration_ms: 0.130312
+      ...
+    # Subtest: GeneralPurpose agent has all tools (wildcard)
+    ok 5 - GeneralPurpose agent has all tools (wildcard)
+      ---
+      duration_ms: 0.122738
+      ...
+    # Subtest: Explore agent is read-only
+    ok 6 - Explore agent is read-only
+      ---
+      duration_ms: 0.863997
+      ...
+    # Subtest: Plan agent is read-only with planning instructions
+    ok 7 - Plan agent is read-only with planning instructions
+      ---
+      duration_ms: 0.190842
+      ...
+    # Subtest: Verification agent has all tools and runs in background
+    ok 8 - Verification agent has all tools and runs in background
+      ---
+      duration_ms: 0.15144
+      ...
+    # Subtest: buildAgentCatalog returns all 4 agents formatted
+    ok 9 - buildAgentCatalog returns all 4 agents formatted
+      ---
+      duration_ms: 0.210859
+      ...
+    # Subtest: CLAUDE_TOOL_MAP has correct mappings
+    ok 10 - CLAUDE_TOOL_MAP has correct mappings
+      ---
+      duration_ms: 0.296849
+      ...
+    1..10
+ok 26 - Built-in Agents
+  ---
+  duration_ms: 5.96405
+  type: 'suite'
+  ...
+# Subtest: resolveAgentTools
+    # Subtest: resolves '*' to all subagent-tier tools
+    ok 1 - resolves '*' to all subagent-tier tools
+      ---
+      duration_ms: 0.669408
+      ...
+    # Subtest: resolves '*' with disallowedTools filter
+    ok 2 - resolves '*' with disallowedTools filter
+      ---
+      duration_ms: 0.750554
+      ...
+    # Subtest: resolves explicit Claude Code tool names
+    ok 3 - resolves explicit Claude Code tool names
+      ---
+      duration_ms: 0.357563
+      ...
+    # Subtest: resolves Bash as shell_exec but not available at subagent tier
+    ok 4 - resolves Bash as shell_exec but not available at subagent tier
+      ---
+      duration_ms: 0.170768
+      ...
+    # Subtest: resolves Write as write_file but not available at subagent tier
+    ok 5 - resolves Write as write_file but not available at subagent tier
+      ---
+      duration_ms: 0.164496
+      ...
+    # Subtest: resolves Edit as edit_file but not available at subagent tier
+    ok 6 - resolves Edit as edit_file but not available at subagent tier
+      ---
+      duration_ms: 0.144762
+      ...
+    # Subtest: strips sub-command syntax from Bash(git:*) but not available at subagent tier
+    ok 7 - strips sub-command syntax from Bash(git:*) but not available at subagent tier
+      ---
+      duration_ms: 0.223504
+      ...
+    # Subtest: strips sub-command syntax from Bash(npm:*) but not available at subagent tier
+    ok 8 - strips sub-command syntax from Bash(npm:*) but not available at subagent tier
+      ---
+      duration_ms: 0.337906
+      ...
+    # Subtest: handles already-resolved TriMC tool names passed through (subagent tier only)
+    ok 9 - handles already-resolved TriMC tool names passed through (subagent tier only)
+      ---
+      duration_ms: 0.204081
+      ...
+    # Subtest: case-insensitive fallback for tool names (subagent tier only)
+    ok 10 - case-insensitive fallback for tool names (subagent tier only)
+      ---
+      duration_ms: 0.174117
+      ...
+    # Subtest: returns empty array for unrecognized tool names
+    ok 11 - returns empty array for unrecognized tool names
+      ---
+      duration_ms: 0.295938
+      ...
+    1..11
+ok 27 - resolveAgentTools
+  ---
+  duration_ms: 4.522194
+  type: 'suite'
+  ...
+# Subtest: filterToolsForAgent
+    # Subtest: returns tools unchanged when no disallowedTools
+    ok 1 - returns tools unchanged when no disallowedTools
+      ---
+      duration_ms: 0.218459
+      ...
+    # Subtest: filters disallowed tools from resolved list
+    ok 2 - filters disallowed tools from resolved list
+      ---
+      duration_ms: 0.215026
+      ...
+    1..2
+ok 28 - filterToolsForAgent
+  ---
+  duration_ms: 0.660563
+  type: 'suite'
+  ...
+# Subtest: buildToolCatalog
+    # Subtest: returns human-readable tool list
+    ok 1 - returns human-readable tool list
+      ---
+      duration_ms: 0.263131
+      ...
+    # Subtest: returns empty message for no tools
+    ok 2 - returns empty message for no tools
+      ---
+      duration_ms: 0.094519
+      ...
+    1..2
+ok 29 - buildToolCatalog
+  ---
+  duration_ms: 0.553742
+  type: 'suite'
+  ...
+# Subtest: spawnAgent
+    # Subtest: errors immediately for unknown agent type
+    ok 1 - errors immediately for unknown agent type
+      ---
+      duration_ms: 0.701726
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=1 known=true
+    # Subtest: emits subagent_start event with correct metadata
+    ok 2 - emits subagent_start event with correct metadata
+      ---
+      duration_ms: 2085.647244
+      ...
+    # Subtest: uses correct agent prefix IDs
+    ok 3 - uses correct agent prefix IDs
+      ---
+      duration_ms: 0.493612
+      ...
+    1..3
+ok 30 - spawnAgent
+  ---
+  duration_ms: 2087.340861
+  type: 'suite'
+  ...
+# Subtest: spawnAgentAndCollect
+    # Subtest: returns error result for unknown agent type
+    ok 1 - returns error result for unknown agent type
+      ---
+      duration_ms: 0.331218
+      ...
+    1..1
+ok 31 - spawnAgentAndCollect
+  ---
+  duration_ms: 0.486405
+  type: 'suite'
+  ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=1 known=true
+# Subtest: spawnAgent with supervisor
+    # Subtest: registers a logical run when supervisor is provided
+    ok 1 - registers a logical run when supervisor is provided
+      ---
+      duration_ms: 1653.048371
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=1 known=true
+    # Subtest: completes without error when supervisor is not provided (backward compatibility)
+    ok 2 - completes without error when supervisor is not provided (backward compatibility)
+      ---
+      duration_ms: 2809.668954
+      ...
+    # Subtest: supervisor with scopeKey is propagated
+    ok 3 - supervisor with scopeKey is propagated
+      ---
+      duration_ms: 0.711949
+      ...
+    # Subtest: spawnAgentAndCollect works with supervisor
+    ok 4 - spawnAgentAndCollect works with supervisor
+      ---
+      duration_ms: 0.628236
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=1 known=true
+    # Subtest: existing behavior unchanged: 11 base tests still pass without supervisor
+    ok 5 - existing behavior unchanged: 11 base tests still pass without supervisor
+      ---
+      duration_ms: 2550.552085
+      ...
+    1..5
+ok 32 - spawnAgent with supervisor
+  ---
+  duration_ms: 7015.733825
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ suppress logs { quiet: true }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# ◇ injected env (0) from ../.env // tip: ⌘ override existing { override: true }
+# Subtest: ctx.cwd propagation — TriMC built-in tools (A-TriMC)
+    # Subtest: glob_search: relative base resolves against ctx.cwd
+    ok 1 - glob_search: relative base resolves against ctx.cwd
+      ---
+      duration_ms: 1.74732
+      ...
+    # Subtest: glob_search: dirB file invisible from dirA ctx.cwd
+    ok 2 - glob_search: dirB file invisible from dirA ctx.cwd
+      ---
+      duration_ms: 1.703245
+      ...
+    # Subtest: shell_exec: args.cwd wins over ctx.cwd (legacy semantics preserved)
+    not ok 3 - shell_exec: args.cwd wins over ctx.cwd (legacy semantics preserved)
+      ---
+      duration_ms: 34.3201
+      location: 'file:///srv/fleet/TriRMC/test/agent-loop/tools-ctx-cwd.test.ts:1:1621'
+      failureType: 'testCodeFailure'
+      error: 'stdout='
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriRMC/test/agent-loop/tools-ctx-cwd.test.ts:55:12)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: shell_exec: ctx.cwd used when args.cwd omitted
+    not ok 4 - shell_exec: ctx.cwd used when args.cwd omitted
+      ---
+      duration_ms: 26.223388
+      location: 'file:///srv/fleet/TriRMC/test/agent-loop/tools-ctx-cwd.test.ts:1:1925'
+      failureType: 'testCodeFailure'
+      error: 'stdout='
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriRMC/test/agent-loop/tools-ctx-cwd.test.ts:61:12)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    # Subtest: read_file: absolute path unaffected by ctx (unchanged shape)
+    ok 5 - read_file: absolute path unaffected by ctx (unchanged shape)
+      ---
+      duration_ms: 5.454871
+      ...
+    1..5
+not ok 33 - ctx.cwd propagation — TriMC built-in tools (A-TriMC)
+  ---
+  duration_ms: 316.825668
+  type: 'suite'
+  location: 'file:///srv/fleet/TriRMC/test/agent-loop/tools-ctx-cwd.test.ts:1:807'
+  failureType: 'subtestsFailed'
+  error: '2 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: ctx absent — legacy fallback to process.cwd() (A-TriMC)
+    # Subtest: glob_search without ctx defaults to process.cwd()
+    ok 1 - glob_search without ctx defaults to process.cwd()
+      ---
+      duration_ms: 0.698375
+      ...
+    # Subtest: shell_exec without ctx falls back to process.cwd()
+    not ok 2 - shell_exec without ctx falls back to process.cwd()
+      ---
+      duration_ms: 11.587271
+      location: 'file:///srv/fleet/TriRMC/test/agent-loop/tools-ctx-cwd.test.ts:1:2752'
+      failureType: 'testCodeFailure'
+      error: 'stdout='
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (/srv/fleet/TriRMC/test/agent-loop/tools-ctx-cwd.test.ts:80:12)
+        async Test.run (node:internal/test_runner/test:632:9)
+        async Suite.processPendingSubtests (node:internal/test_runner/test:374:7)
+      ...
+    1..2
+not ok 34 - ctx absent — legacy fallback to process.cwd() (A-TriMC)
+  ---
+  duration_ms: 13.017731
+  type: 'suite'
+  location: 'file:///srv/fleet/TriRMC/test/agent-loop/tools-ctx-cwd.test.ts:1:2424'
+  failureType: 'subtestsFailed'
+  error: '1 subtest failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../TriModel/.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# ◇ injected env (0) from ../.env // tip: ⌘ suppress logs { quiet: true }
+# [trirmc] listening on :34387
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+# Subtest: TriMC agent SSE endpoint
+    # Subtest: POST /internal/v1/agent?stream=true returns SSE stream
+    ok 1 - POST /internal/v1/agent?stream=true returns SSE stream
+      ---
+      duration_ms: 106.227635
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=1 known=true
+    # Subtest: POST /internal/v1/agent with Accept: text/event-stream uses SSE
+    ok 2 - POST /internal/v1/agent with Accept: text/event-stream uses SSE
+      ---
+      duration_ms: 11.660522
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=1 known=true
+    # Subtest: POST /internal/v1/agent without stream param returns JSON (backward compat)
+    ok 3 - POST /internal/v1/agent without stream param returns JSON (backward compat)
+      ---
+      duration_ms: 6.372683
+      ...
+    1..3
+ok 35 - TriMC agent SSE endpoint
+  ---
+  duration_ms: 5364.289263
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ override existing { override: true }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌁ auth for agents [www.vestauth.com]
+# ◇ injected env (0) from ../.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# [trirmc] listening on :34691
+# Subtest: TriMC chat endpoint
+    # Subtest: GET /healthz returns ok
+    ok 1 - GET /healthz returns ok
+      ---
+      duration_ms: 65.251804
+      ...
+# [trimodel-client][dbg] chat model=deepseek-chat depth=0 msgs=1 lastRole=user known=true
+    # Subtest: POST /internal/v1/chat with valid request returns response
+    ok 2 - POST /internal/v1/chat with valid request returns response
+      ---
+      duration_ms: 9.345241
+      ...
+# [trimodel-client][dbg] chat model=definitely-unknown-model-xyz depth=0 msgs=1 lastRole=user known=false
+    # Subtest: POST /internal/v1/chat with unknown model returns 422
+    ok 3 - POST /internal/v1/chat with unknown model returns 422
+      ---
+      duration_ms: 4.482606
+      ...
+    # Subtest: POST /internal/v1/chat with invalid body returns 400
+    ok 4 - POST /internal/v1/chat with invalid body returns 400
+      ---
+      duration_ms: 3.974224
+      ...
+    1..4
+ok 36 - TriMC chat endpoint
+  ---
+  duration_ms: 5256.106644
+  type: 'suite'
+  ...
+# Subtest: arbitrate
+    # Subtest: accepts all events when no conflicts exist (passthrough)
+    ok 1 - accepts all events when no conflicts exist (passthrough)
+      ---
+      duration_ms: 1.749506
+      ...
+    # Subtest: rejects task_assign when task already assigned to another node
+    ok 2 - rejects task_assign when task already assigned to another node
+      ---
+      duration_ms: 0.474672
+      ...
+    # Subtest: accepts task_assign when same node assigns
+    ok 3 - accepts task_assign when same node assigns
+      ---
+      duration_ms: 0.346741
+      ...
+    # Subtest: rejects task_complete when task assigned to another node
+    ok 4 - rejects task_complete when task assigned to another node
+      ---
+      duration_ms: 0.329038
+      ...
+    # Subtest: rejects task_complete when task was never assigned
+    ok 5 - rejects task_complete when task was never assigned
+      ---
+      duration_ms: 0.510982
+      ...
+    # Subtest: accepts task_complete when task was assigned to same node
+    ok 6 - accepts task_complete when task was assigned to same node
+      ---
+      duration_ms: 0.388479
+      ...
+    # Subtest: rejects tool_call when idempotency key already executed
+    ok 7 - rejects tool_call when idempotency key already executed
+      ---
+      duration_ms: 0.516567
+      ...
+    # Subtest: accepts tool_call when idempotency key not yet executed
+    ok 8 - accepts tool_call when idempotency key not yet executed
+      ---
+      duration_ms: 0.404166
+      ...
+    # Subtest: handles mixed conflicts in a batch
+    ok 9 - handles mixed conflicts in a batch
+      ---
+      duration_ms: 0.665466
+      ...
+    # Subtest: returns lastSeqNo 0 for empty events
+    ok 10 - returns lastSeqNo 0 for empty events
+      ---
+      duration_ms: 0.391462
+      ...
+    # Subtest: unknown event types are accepted by default
+    ok 11 - unknown event types are accepted by default
+      ---
+      duration_ms: 0.365066
+      ...
+    1..11
+ok 37 - arbitrate
+  ---
+  duration_ms: 9.384207
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ enable debugging { debug: true }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ override existing { override: true }
+# ◇ injected env (0) from ../.env // tip: ⌘ suppress logs { quiet: true }
+# [trirmc] listening on :33921
+# [trimc:config-sync] fleetHead git failed (head.code=128, branch.code=128): Command failed: git -C /tmp/trimc-fleet-sync-Ijzh79/TriMetaverse rev-parse HEAD
+# fatal: cannot change to '/tmp/trimc-fleet-sync-Ijzh79/TriMetaverse': No such file or directory
+#  fatal: cannot change to '/tmp/trimc-fleet-sync-Ijzh79/TriMetaverse': No such file or directory / Command failed: git -C /tmp/trimc-fleet-sync-Ijzh79/TriMetaverse rev-parse --abbrev-ref HEAD
+# fatal: cannot change to '/tmp/trimc-fleet-sync-Ijzh79/TriMetaverse': No such file or directory
+#  fatal: cannot change to '/tmp/trimc-fleet-sync-Ijzh79/TriMetaverse': No such file or directory
+# Subtest: TriMC app config-sync status assembly
+    # Subtest: 空态 status → 200 { ok:true, applied/fleetHead/dims/pending 全 null }
+    ok 1 - 空态 status → 200 { ok:true, applied/fleetHead/dims/pending 全 null }
+      ---
+      duration_ms: 85.959386
+      ...
+# [trimc:config-sync] fleetHead git failed (head.code=128, branch.code=128): Command failed: git -C /tmp/trimc-fleet-sync-Ijzh79/TriMetaverse rev-parse HEAD
+# fatal: not a git repository (or any of the parent directories): .git
+#  fatal: not a git repository (or any of the parent directories): .git / Command failed: git -C /tmp/trimc-fleet-sync-Ijzh79/TriMetaverse rev-parse --abbrev-ref HEAD
+# fatal: not a git repository (or any of the parent directories): .git
+#  fatal: not a git repository (or any of the parent directories): .git
+    # Subtest: applied 落盘后 status 呈现 applied 摘要 + pending 版本差
+    ok 2 - applied 落盘后 status 呈现 applied 摘要 + pending 版本差
+      ---
+      duration_ms: 27.894316
+      ...
+    # Subtest: 非 GET 方法 → 404（路由仅 GET）
+    ok 3 - 非 GET 方法 → 404（路由仅 GET）
+      ---
+      duration_ms: 4.191959
+      ...
+    1..3
+ok 38 - TriMC app config-sync status assembly
+  ---
+  duration_ms: 5077.06887
+  type: 'suite'
+  ...
+# Subtest: config-sync apply — 幂等单调矩阵（§一.4）
+    # Subtest: 无 bundle 文件 → no-bundle（exit 0 面）
+    ok 1 - 无 bundle 文件 → no-bundle（exit 0 面）
+      ---
+      duration_ms: 10.019895
+      ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"applied","employees":"applied","project":"applied"})
+    # Subtest: 同 bundleId 重复 apply → no-op（不重落）
+    ok 2 - 同 bundleId 重复 apply → no-op（不重落）
+      ---
+      duration_ms: 31.095776
+      ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"applied","employees":"applied","project":"applied"})
+# [trimc:config-sync] older generatedAt (2026-08-13T10:00:00.000Z < 2026-08-14T10:00:00.000Z) — 忽略
+    # Subtest: 更旧 generatedAt 且 contentHash 同 → ignored-stale
+    ok 3 - 更旧 generatedAt 且 contentHash 同 → ignored-stale
+      ---
+      duration_ms: 12.490529
+      ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"applied","employees":"applied","project":"applied"})
+# [trimc:config-sync] older generatedAt (2026-08-13T10:00:00.000Z < 2026-08-14T10:00:00.000Z) with different contentHash — 告警不动作（时钟回拨/多机写，MVP 记日志）
+    # Subtest: 更旧 generatedAt 但 contentHash 异 → warning-stale + warnings 落盘
+    ok 4 - 更旧 generatedAt 但 contentHash 异 → warning-stale + warnings 落盘
+      ---
+      duration_ms: 19.026873
+      ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"applied","employees":"applied","project":"applied"})
+# [trimc:config-sync] older generatedAt from different sourceInstanceId (trilc-init-0.9.0@99999999 vs trilc-init-0.9.0@a1b2c3d4) — 多实例初始化挂起标记（MVP 记日志）
+    # Subtest: 更旧 generatedAt 且 sourceInstanceId 异 → warning-stale（多实例挂起标记）
+    ok 5 - 更旧 generatedAt 且 sourceInstanceId 异 → warning-stale（多实例挂起标记）
+      ---
+      duration_ms: 24.477735
+      ...
+    1..5
+ok 39 - config-sync apply — 幂等单调矩阵（§一.4）
+  ---
+  duration_ms: 100.182989
+  type: 'suite'
+  ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"applied","employees":"applied","project":"applied"})
+# Subtest: config-sync apply — 落地与降级
+    # Subtest: 新 bundle → applied：applied.json + 五维文件原子落盘
+    ok 1 - 新 bundle → applied：applied.json + 五维文件原子落盘
+      ---
+      duration_ms: 22.904281
+      ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"unavailable","keys":"unavailable","employees":"applied","project":"applied"})
+    # Subtest: unavailable 维落地：dims 标 unavailable，该维文件写降级段
+    ok 2 - unavailable 维落地：dims 标 unavailable，该维文件写降级段
+      ---
+      duration_ms: 15.463596
+      ...
+# [trimc:config-sync] employees.sourceCommit reconciled after ff pull: 1111111111111111111111111111111111111111
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"applied","employees":"applied","project":"applied"})
+    # Subtest: 员工维 sourceCommit 不等 → 同 job 内 ff pull 后复核相等 → applied
+    ok 3 - 员工维 sourceCommit 不等 → 同 job 内 ff pull 后复核相等 → applied
+      ---
+      duration_ms: 18.341042
+      ...
+# [trimc:config-sync] employees.sourceCommit mismatch after ff pull (bundle=1111111111111111111111111111111111111111, fleet=3333333333333333333333333333333333333333, pull=pull failed: network) — 该维 warning 落地（§九 TriCompany fleet 滞后行）
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"applied","employees":"warning","project":"applied"})
+    # Subtest: 员工维 pull 后仍不等 → dims.employees=warning + warnings 落盘（§九 fleet 滞后行）
+    ok 4 - 员工维 pull 后仍不等 → dims.employees=warning + warnings 落盘（§九 fleet 滞后行）
+      ---
+      duration_ms: 15.072853
+      ...
+    1..4
+ok 40 - config-sync apply — 落地与降级
+  ---
+  duration_ms: 73.060404
+  type: 'suite'
+  ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"warning","employees":"applied","project":"applied"})
+# Subtest: config-sync apply — keys 维覆盖判定（i4-4 终审口径：未覆盖 → warning 非 unavailable）
+    # Subtest: 四 provider 仅 deepseek env 覆盖 → dims.keys=warning + 未覆盖条目明细
+    ok 1 - 四 provider 仅 deepseek env 覆盖 → dims.keys=warning + 未覆盖条目明细
+      ---
+      duration_ms: 14.075028
+      ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"applied","employees":"applied","project":"applied"})
+    # Subtest: 全部 provider 覆盖 → dims.keys=applied（无 warning 条目）
+    ok 2 - 全部 provider 覆盖 → dims.keys=applied（无 warning 条目）
+      ---
+      duration_ms: 12.957711
+      ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"warning","employees":"applied","project":"applied"})
+    # Subtest: opts.env 注入独立于 process.env（零覆盖 → warning）
+    ok 3 - opts.env 注入独立于 process.env（零覆盖 → warning）
+      ---
+      duration_ms: 11.248994
+      ...
+# [trimc:config-sync] applied bundle bundle-0001 (generatedAt=2026-08-14T10:00:00.000Z, dims={"company":"applied","model":"applied","keys":"unavailable","employees":"applied","project":"applied"})
+    # Subtest: keys 维 unavailable 降级段 → dims.keys=unavailable（不受覆盖判定影响）
+    ok 4 - keys 维 unavailable 降级段 → dims.keys=unavailable（不受覆盖判定影响）
+      ---
+      duration_ms: 9.333645
+      ...
+    1..4
+ok 41 - config-sync apply — keys 维覆盖判定（i4-4 终审口径：未覆盖 → warning 非 unavailable）
+  ---
+  duration_ms: 49.096398
+  type: 'suite'
+  ...
+# Subtest: config-sync apply — schema 拒绝（服务器侧双保险）
+    # Subtest: bundle 含 api_key 明文 → invalid-bundle（不落地）
+    ok 1 - bundle 含 api_key 明文 → invalid-bundle（不落地）
+      ---
+      duration_ms: 5.169672
+      ...
+    # Subtest: bundle 非 JSON → invalid-bundle
+    ok 2 - bundle 非 JSON → invalid-bundle
+      ---
+      duration_ms: 4.824908
+      ...
+    1..2
+ok 42 - config-sync apply — schema 拒绝（服务器侧双保险）
+  ---
+  duration_ms: 10.821581
+  type: 'suite'
+  ...
+# Subtest: resolveDefaultModel 三级解析
+    # Subtest: 无 env 无 applied → 兜底常量（零回归面：与现状一致）
+    ok 1 - 无 env 无 applied → 兜底常量（零回归面：与现状一致）
+      ---
+      duration_ms: 7.10464
+      ...
+    # Subtest: env TRIRMC_DEFAULT_MODEL 最高优先
+    ok 2 - env TRIRMC_DEFAULT_MODEL 最高优先
+      ---
+      duration_ms: 2.844365
+      ...
+    # Subtest: applied model.defaultModel 次优先
+    ok 3 - applied model.defaultModel 次优先
+      ---
+      duration_ms: 5.144824
+      ...
+    # Subtest: applied 为 unavailable 降级段 → 落入兜底常量
+    ok 4 - applied 为 unavailable 降级段 → 落入兜底常量
+      ---
+      duration_ms: 2.782842
+      ...
+    # Subtest: model.json 缺失/坏 JSON → 兜底常量
+    ok 5 - model.json 缺失/坏 JSON → 兜底常量
+      ---
+      duration_ms: 2.137141
+      ...
+    1..5
+ok 43 - resolveDefaultModel 三级解析
+  ---
+  duration_ms: 22.924822
+  type: 'suite'
+  ...
+# Subtest: resolveFlashModel flash 变体
+    # Subtest: applied catalog 内 flash 别名优先
+    ok 1 - applied catalog 内 flash 别名优先
+      ---
+      duration_ms: 3.284675
+      ...
+    # Subtest: 无 flash 别名 → 兜底常量（零回归面）
+    ok 2 - 无 flash 别名 → 兜底常量（零回归面）
+      ---
+      duration_ms: 2.548008
+      ...
+    1..2
+ok 44 - resolveFlashModel flash 变体
+  ---
+  duration_ms: 6.43559
+  type: 'suite'
+  ...
+# Subtest: mtime 轻缓存（D3：读取时解析）
+    # Subtest: 文件未变时复用缓存；文件更新后解析新鲜值
+    ok 1 - 文件未变时复用缓存；文件更新后解析新鲜值
+      ---
+      duration_ms: 10.477119
+      ...
+    1..1
+ok 45 - mtime 轻缓存（D3：读取时解析）
+  ---
+  duration_ms: 11.131034
+  type: 'suite'
+  ...
+# [trimc:config-sync] fleetHead git failed (head.code=1, branch.code=1): not a git repo / not a git repo
+# Subtest: readConfigSyncStatus
+    # Subtest: 空态：applied/fleetHead/pending/dims 全 null，warnings 空
+    ok 1 - 空态：applied/fleetHead/pending/dims 全 null，warnings 空
+      ---
+      duration_ms: 7.893858
+      ...
+    # Subtest: applied 后：applied 摘要 + fleetHead + dims + pending 呈现代理
+    ok 2 - applied 后：applied 摘要 + fleetHead + dims + pending 呈现代理
+      ---
+      duration_ms: 6.62644
+      ...
+# [trimc:config-sync] fleetHead git failed (head.code=0, branch.code=0):  / 
+    # Subtest: project 维文件落地 → status.project 呈现（L1 三面比对事实源）
+    ok 3 - project 维文件落地 → status.project 呈现（L1 三面比对事实源）
+      ---
+      duration_ms: 3.36009
+      ...
+# [trimc:config-sync] fleetHead git failed (head.code=1, branch.code=1): no git / no git
+    # Subtest: fleet bundle 与 applied 版本差 → pending 非 null
+    ok 4 - fleet bundle 与 applied 版本差 → pending 非 null
+      ---
+      duration_ms: 5.082766
+      ...
+# [trimc:config-sync] fleetHead git failed (head.code=1, branch.code=1): no git / no git
+    # Subtest: applied.json 坏形状 → applied null 不抛错
+    ok 5 - applied.json 坏形状 → applied null 不抛错
+      ---
+      duration_ms: 5.171777
+      ...
+    1..5
+ok 46 - readConfigSyncStatus
+  ---
+  duration_ms: 30.915316
+  type: 'suite'
+  ...
+# Subtest: config-sync schema validation
+    # Subtest: accepts a valid five-dim bundle
+    ok 1 - accepts a valid five-dim bundle
+      ---
+      duration_ms: 1.397391
+      ...
+    # Subtest: accepts single-dim unavailable segments (单维降级)
+    ok 2 - accepts single-dim unavailable segments (单维降级)
+      ---
+      duration_ms: 0.940372
+      ...
+    # Subtest: rejects api_key field at top level (snake_case)
+    ok 3 - rejects api_key field at top level (snake_case)
+      ---
+      duration_ms: 0.211673
+      ...
+    # Subtest: rejects apiKey field nested deep (camelCase)
+    ok 4 - rejects apiKey field nested deep (camelCase)
+      ---
+      duration_ms: 0.340057
+      ...
+    # Subtest: rejects secret and token fields anywhere in arrays
+    ok 5 - rejects secret and token fields anywhere in arrays
+      ---
+      duration_ms: 0.287078
+      ...
+    # Subtest: rejects non-whitelisted keys.providers[] field (防滑变)
+    ok 6 - rejects non-whitelisted keys.providers[] field (防滑变)
+      ---
+      duration_ms: 0.386513
+      ...
+    # Subtest: rejects bad schemaVersion / unparseable generatedAt / missing dim shape
+    ok 7 - rejects bad schemaVersion / unparseable generatedAt / missing dim shape
+      ---
+      duration_ms: 0.352348
+      ...
+    # Subtest: findSecretField skips empty-string secret values (契约口径：非空字符串才拒绝)
+    ok 8 - findSecretField skips empty-string secret values (契约口径：非空字符串才拒绝)
+      ---
+      duration_ms: 0.265822
+      ...
+    1..8
+ok 47 - config-sync schema validation
+  ---
+  duration_ms: 6.670017
+  type: 'suite'
+  ...
+# Subtest: config-sync contentHash + fingerprint
+    # Subtest: contentHash is stable across key-order permutations
+    ok 1 - contentHash is stable across key-order permutations
+      ---
+      duration_ms: 1.102319
+      ...
+    # Subtest: contentHash differs when content differs（devHead 除外，R1 自引用口径）
+    ok 2 - contentHash differs when content differs（devHead 除外，R1 自引用口径）
+      ---
+      duration_ms: 0.582733
+      ...
+    # Subtest: fingerprint = sha256(material).slice(0,8) and never contains material
+    ok 3 - fingerprint = sha256(material).slice(0,8) and never contains material
+      ---
+      duration_ms: 0.37037
+      ...
+    # Subtest: canonicalize is deterministic for nested structures
+    ok 4 - canonicalize is deterministic for nested structures
+      ---
+      duration_ms: 0.180724
+      ...
+    1..4
+ok 48 - config-sync contentHash + fingerprint
+  ---
+  duration_ms: 2.933382
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ enable debugging { debug: true }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# ◇ injected env (0) from ../.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# Subtest: Context Builder 完整上下文组装
+    # Subtest: 全部源提供时输出所有章节
+    ok 1 - 全部源提供时输出所有章节
+      ---
+      duration_ms: 1.418405
+      ...
+    # Subtest: 章节顺序为 Role → Tier → AGENTS.md → Code State → Extra
+    ok 2 - 章节顺序为 Role → Tier → AGENTS.md → Code State → Extra
+      ---
+      duration_ms: 0.334613
+      ...
+    1..2
+ok 49 - Context Builder 完整上下文组装
+  ---
+  duration_ms: 3.90755
+  type: 'suite'
+  ...
+# Subtest: Tier 能力注入
+    # Subtest: main tier 列出全部 6 个工具
+    ok 1 - main tier 列出全部 6 个工具
+      ---
+      duration_ms: 0.534417
+      ...
+    # Subtest: subagent tier 列出 2 个工具并说明无 task
+    ok 2 - subagent tier 列出 2 个工具并说明无 task
+      ---
+      duration_ms: 0.288076
+      ...
+    # Subtest: coordinator tier 列出 1 个工具（仅 task）
+    ok 3 - coordinator tier 列出 1 个工具（仅 task）
+      ---
+      duration_ms: 0.381355
+      ...
+    # Subtest: 每个 tier 都注入 TIER_DESCRIPTIONS
+    ok 4 - 每个 tier 都注入 TIER_DESCRIPTIONS
+      ---
+      duration_ms: 0.345354
+      ...
+    1..4
+ok 50 - Tier 能力注入
+  ---
+  duration_ms: 2.065344
+  type: 'suite'
+  ...
+# Subtest: 稀疏/最小上下文
+    # Subtest: 仅 tier 时输出仅 Capabilities 章节
+    ok 1 - 仅 tier 时输出仅 Capabilities 章节
+      ---
+      duration_ms: 0.424944
+      ...
+    # Subtest: role + tier 输出两个章节
+    ok 2 - role + tier 输出两个章节
+      ---
+      duration_ms: 0.251299
+      ...
+    # Subtest: 空 extraContext 数组不输出 Extra 章节
+    ok 3 - 空 extraContext 数组不输出 Extra 章节
+      ---
+      duration_ms: 0.253847
+      ...
+    # Subtest: agentsMd 空白字符串不输出 AGENTS.md 章节
+    ok 4 - agentsMd 空白字符串不输出 AGENTS.md 章节
+      ---
+      duration_ms: 0.257087
+      ...
+    1..4
+ok 51 - 稀疏/最小上下文
+  ---
+  duration_ms: 1.974232
+  type: 'suite'
+  ...
+# Subtest: mergeContextWithPrompt 合并行为
+    # Subtest: context + systemPrompt 用 --- 分隔
+    ok 1 - context + systemPrompt 用 --- 分隔
+      ---
+      duration_ms: 0.445022
+      ...
+    # Subtest: 仅有 context 无 systemPrompt 时不追加分隔符
+    ok 2 - 仅有 context 无 systemPrompt 时不追加分隔符
+      ---
+      duration_ms: 0.21525
+      ...
+    # Subtest: 仅有 systemPrompt 无 context 时直接返回 systemPrompt
+    ok 3 - 仅有 systemPrompt 无 context 时直接返回 systemPrompt
+      ---
+      duration_ms: 0.183122
+      ...
+    # Subtest: 两者皆空返回空字符串
+    ok 4 - 两者皆空返回空字符串
+      ---
+      duration_ms: 0.171245
+      ...
+    1..4
+ok 52 - mergeContextWithPrompt 合并行为
+  ---
+  duration_ms: 1.63446
+  type: 'suite'
+  ...
+# Subtest: ContextSources 类型合约
+    # Subtest: ContextSources 接受所有可选字段
+    ok 1 - ContextSources 接受所有可选字段
+      ---
+      duration_ms: 1.150335
+      ...
+    # Subtest: ContextSources 仅 tier 必填
+    ok 2 - ContextSources 仅 tier 必填
+      ---
+      duration_ms: 0.157024
+      ...
+    1..2
+ok 53 - ContextSources 类型合约
+  ---
+  duration_ms: 1.712014
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ enable debugging { debug: true }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# ◇ injected env (0) from ../.env // tip: ⌘ enable debugging { debug: true }
+# [trirmc] listening on :33001
+# [trimc:cron] service started with 0 job(s)
+# Subtest: TriMC app cron assembly
+    # Subtest: healthz exposes the cron block
+    ok 1 - healthz exposes the cron block
+      ---
+      duration_ms: 72.070275
+      ...
+# [trimc:cron] job added: smoke-job (5d2e5f90-2343-4186-8572-3406b3376bff)
+# [trimc:cron] job removed: 5d2e5f90-2343-4186-8572-3406b3376bff
+    # Subtest: cron job lifecycle works through the assembled app
+    ok 2 - cron job lifecycle works through the assembled app
+      ---
+      duration_ms: 27.515178
+      ...
+# [trimc:cron] job added: persist-job (951bc22e-7d60-40c3-8ed0-3580cc2423f3)
+# [trimc:cron] service stopped
+# [trirmc] listening on :33447
+# [trimc:cron] service started with 1 job(s)
+# [trimc:cron] service stopped
+    # Subtest: healthz cron.jobCount reflects persisted jobs after app restart
+    ok 3 - healthz cron.jobCount reflects persisted jobs after app restart
+      ---
+      duration_ms: 4966.026575
+      ...
+    1..3
+ok 54 - TriMC app cron assembly
+  ---
+  duration_ms: 10083.024133
+  type: 'suite'
+  ...
+# [trimc:cron] job test-job (job-1) run finished, log: /tmp/trimc-test-logs/job-1__2026-08-27T07-20-02-953Z.log
+# [trimc:cron] job test-job (job-1) run finished, log: /tmp/trimc-test-logs/job-1__2026-08-27T07-20-02-958Z.log
+# [trimc:cron] job test-job (job-1) run finished, log: /tmp/trimc-test-logs/job-1__2026-08-27T07-20-02-959Z.log
+# [trimc:cron] job test-job (job-1) failed: command exited with code 1: boom: migration failed
+# Subtest: command-handler
+    # Subtest: succeeds on exit code 0 and replaces week tokens
+    ok 1 - succeeds on exit code 0 and replaces week tokens
+      ---
+      duration_ms: 5.809249
+      ...
+    # Subtest: wraps spawn in runuser when payload.runAs is set
+    ok 2 - wraps spawn in runuser when payload.runAs is set
+      ---
+      duration_ms: 1.223903
+      ...
+    # Subtest: throws with exit code and stderr tail on non-zero exit
+    ok 3 - throws with exit code and stderr tail on non-zero exit
+      ---
+      duration_ms: 1.891054
+      ...
+# [trimc:cron] job test-job (job-1) run finished, log: /tmp/trimc-test-logs/job-1__2026-08-27T07-20-02-961Z.log
+# [trimc:cron] job test-job (job-1) failed: command timed out after 50ms: exit null
+# [trimc:cron] job test-job (job-1) run finished, log: /tmp/trimc-test-logs/job-1__2026-08-27T07-20-03-013Z.log
+# [trimc:cron] job test-job (job-1) failed: command exited with code null: spawn error: ENOENT
+    # Subtest: throws on timeout and kills the process group
+    ok 4 - throws on timeout and kills the process group
+      ---
+      duration_ms: 51.900717
+      ...
+    # Subtest: throws on spawn error (missing binary)
+    ok 5 - throws on spawn error (missing binary)
+      ---
+      duration_ms: 1.765059
+      ...
+    # Subtest: rejects payloads without command/cwd
+    ok 6 - rejects payloads without command/cwd
+      ---
+      duration_ms: 0.735652
+      ...
+    1..6
+ok 55 - command-handler
+  ---
+  duration_ms: 65.916036
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌁ auth for agents [www.vestauth.com]
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌁ auth for agents [www.vestauth.com]
+# ◇ injected env (0) from ../.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# [trimc:cron] job added: weekly-plane-shift (2ecb7644-e2f8-4cb5-870c-4538e097f959)
+# [trimc:cron] service stopped
+# Subtest: cron routes
+    # Subtest: POST jobs → 201 with persisted job
+    ok 1 - POST jobs → 201 with persisted job
+      ---
+      duration_ms: 69.951679
+      ...
+# [trimc:cron] service stopped
+    # Subtest: POST jobs validation: missing payload → 400, invalid cron → 400, bad json → 400
+    ok 2 - POST jobs validation: missing payload → 400, invalid cron → 400, bad json → 400
+      ---
+      duration_ms: 15.91419
+      ...
+# [trimc:cron] job added: weekly-plane-shift (73604c14-d0c1-4a2f-bd4b-64ba806c8212)
+# [trimc:cron] service stopped
+    # Subtest: GET jobs → list with count
+    ok 3 - GET jobs → list with count
+      ---
+      duration_ms: 15.195687
+      ...
+# [trimc:cron] job added: weekly-plane-shift (357b986b-07cc-490a-90e3-9ff4a2061b8d)
+# [trimc:cron] job updated: weekly-plane-shift (357b986b-07cc-490a-90e3-9ff4a2061b8d)
+# [trimc:cron] service stopped
+    # Subtest: PATCH jobs/{id} → update; unknown id → 404
+    ok 4 - PATCH jobs/{id} → update; unknown id → 404
+      ---
+      duration_ms: 16.660174
+      ...
+# [trimc:cron] job added: weekly-plane-shift (6f3da343-399a-4f86-a243-75f03a069298)
+# [trimc:cron] job removed: 6f3da343-399a-4f86-a243-75f03a069298
+# [trimc:cron] service stopped
+    # Subtest: DELETE jobs/{id} → removed; second delete → 404
+    ok 5 - DELETE jobs/{id} → removed; second delete → 404
+      ---
+      duration_ms: 18.941018
+      ...
+# [trimc:cron] job added: weekly-plane-shift (7c50f28a-0aeb-4f1d-89c9-fbe933d15cb5)
+# [trimc:cron] job updated: weekly-plane-shift (7c50f28a-0aeb-4f1d-89c9-fbe933d15cb5)
+# [trimc:cron] service stopped
+    # Subtest: POST jobs/{id}/run → runs; disabled job refused without force; unknown → 404
+    ok 6 - POST jobs/{id}/run → runs; disabled job refused without force; unknown → 404
+      ---
+      duration_ms: 36.55876
+      ...
+# [trimc:cron] service stopped
+    # Subtest: GET cron/log → empty list before any run
+    ok 7 - GET cron/log → empty list before any run
+      ---
+      duration_ms: 5.472846
+      ...
+# [trimc:cron] service stopped
+    # Subtest: GET cron/status → status shape
+    ok 8 - GET cron/status → status shape
+      ---
+      duration_ms: 7.170033
+      ...
+# [trimc:cron] service stopped
+    # Subtest: non-cron URLs are not handled (returns false → caller 404s)
+    ok 9 - non-cron URLs are not handled (returns false → caller 404s)
+      ---
+      duration_ms: 5.507634
+      ...
+    1..9
+ok 56 - cron routes
+  ---
+  duration_ms: 195.122181
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../.env // tip: ⌘ suppress logs { quiet: true }
+# [trimc:cron] service stopped
+# Subtest: runAs allowlist — routes 层入口校验（POST jobs 400 通道，发现5 复现）
+    # Subtest: allowlist 未配置 × runAs:fleet → 400 携 RUNAS_REJECT_PREFIX（空配置=拒一切的 fail-closed 死证）
+    ok 1 - allowlist 未配置 × runAs:fleet → 400 携 RUNAS_REJECT_PREFIX（空配置=拒一切的 fail-closed 死证）
+      ---
+      duration_ms: 37.904524
+      ...
+# [trimc:cron] service stopped
+    # Subtest: allowlist=fleet × runAs:root → 400（越权主体精确等值未命中被拒——审计越用户向量死证）
+    ok 2 - allowlist=fleet × runAs:root → 400（越权主体精确等值未命中被拒——审计越用户向量死证）
+      ---
+      duration_ms: 8.124712
+      ...
+# [trimc:cron] job added: weekly-plane-shift (74d2d34a-0876-481f-aef0-58f1619a074a)
+# [trimc:cron] service stopped
+    # Subtest: allowlist=fleet × runAs:fleet → 201（合法主体放行正向锚，落库带 runAs）
+    ok 3 - allowlist=fleet × runAs:fleet → 201（合法主体放行正向锚，落库带 runAs）
+      ---
+      duration_ms: 33.904205
+      ...
+# [trimc:cron] service stopped
+    # Subtest: allowlist=fleet × runAs:42（数字）→ 400（非 string 不隐式 String 化放行）
+    ok 4 - allowlist=fleet × runAs:42（数字）→ 400（非 string 不隐式 String 化放行）
+      ---
+      duration_ms: 6.226432
+      ...
+# [trimc:cron] service stopped
+    # Subtest: allowlist=fleet × runAs:"" 空串 → 400（falsy 但已声明，不得静默降级为进程用户）
+    ok 5 - allowlist=fleet × runAs:"" 空串 → 400（falsy 但已声明，不得静默降级为进程用户）
+      ---
+      duration_ms: 5.717036
+      ...
+# [trimc:cron] job added: weekly-plane-shift (5867a966-c726-4090-a5b0-8302d2187238)
+# [trimc:cron] service stopped
+# [trimc:cron] job pct-runas-probe (job-pct) run finished, log: /tmp/trimc-pct-runas-logs/job-pct__2026-08-27T07-20-04-529Z.log
+    # Subtest: runAs 字段整体缺省 → 201（undefined 直通语义保持——防一刀切封杀回归）
+    ok 6 - runAs 字段整体缺省 → 201（undefined 直通语义保持——防一刀切封杀回归）
+      ---
+      duration_ms: 7.988868
+      ...
+    1..6
+ok 57 - runAs allowlist — routes 层入口校验（POST jobs 400 通道，发现5 复现）
+  ---
+  duration_ms: 102.74059
+  type: 'suite'
+  ...
+# Subtest: runAs allowlist — 执行层 spawn 前兜底（发现5 重放向量复现）
+    # Subtest: allowlist 未配置 × payload.runAs 存在 → reject RUNAS_REJECT_PREFIX 且 spawnFn 零调用（重放向量死证）
+    ok 1 - allowlist 未配置 × payload.runAs 存在 → reject RUNAS_REJECT_PREFIX 且 spawnFn 零调用（重放向量死证）
+      ---
+      duration_ms: 2.183725
+      ...
+    # Subtest: allowlist=fleet × runAs:root → reject 且零 spawn（执行层独立于路由层第二道门）
+    ok 2 - allowlist=fleet × runAs:root → reject 且零 spawn（执行层独立于路由层第二道门）
+      ---
+      duration_ms: 0.621447
+      ...
+    # Subtest: allowlist=fleet × runAs:"" → reject 且零 spawn（falsy 值不降级为进程用户执行）
+    ok 3 - allowlist=fleet × runAs:"" → reject 且零 spawn（falsy 值不降级为进程用户执行）
+      ---
+      duration_ms: 0.456411
+      ...
+    # Subtest: allowlist=fleet × runAs:123（非 string）→ reject 且零 spawn（typeof 分支钉定）
+    ok 4 - allowlist=fleet × runAs:123（非 string）→ reject 且零 spawn（typeof 分支钉定）
+      ---
+      duration_ms: 0.673961
+      ...
+    # Subtest: allowlist=fleet × runAs:fleet → runuser 链 [-u fleet -- /bin/bash] 且 env.HOME=/home/fleet（正向锚，fake child 收束不真执行）
+    ok 5 - allowlist=fleet × runAs:fleet → runuser 链 [-u fleet -- /bin/bash] 且 env.HOME=/home/fleet（正向锚，fake child 收束不真执行）
+      ---
+      duration_ms: 2.35259
+      ...
+    1..5
+ok 58 - runAs allowlist — 执行层 spawn 前兜底（发现5 重放向量复现）
+  ---
+  duration_ms: 7.139201
+  type: 'suite'
+  ...
+# Subtest: runAs allowlist — resolveRunAsAllowlist 解析单元与契约钉定
+    # Subtest: env 未设置 → 空集（空集=拒绝一切的语义根基，无内置缺省主体）
+    ok 1 - env 未设置 → 空集（空集=拒绝一切的语义根基，无内置缺省主体）
+      ---
+      duration_ms: 0.407319
+      ...
+    # Subtest: source 参数注入优先于 env（env 有值也被旁路——测试/调用方直驱通道）
+    ok 2 - source 参数注入优先于 env（env 有值也被旁路——测试/调用方直驱通道）
+      ---
+      duration_ms: 0.239837
+      ...
+    # Subtest: trim 与空段过滤：baseOnlySource=" fleet ,, root , " → {fleet, root} 保序
+    ok 3 - trim 与空段过滤：baseOnlySource=" fleet ,, root , " → {fleet, root} 保序
+      ---
+      duration_ms: 0.259279
+      ...
+    # Subtest: 空串与纯逗号输入 → 空集（运维清空 env 即全面收回放行的口径）
+    ok 4 - 空串与纯逗号输入 → 空集（运维清空 env 即全面收回放行的口径）
+      ---
+      duration_ms: 0.24043
+      ...
+    # Subtest: RUNAS_REJECT_PREFIX 现值钉定（文案无声漂移将破坏 400/reject 外部契约断言）
+    ok 5 - RUNAS_REJECT_PREFIX 现值钉定（文案无声漂移将破坏 400/reject 外部契约断言）
+      ---
+      duration_ms: 0.226803
+      ...
+    # Subtest: isRunAsAllowed 仅精确等值：前缀/大小写/空串变体一律拒绝（无模式匹配语义 pin）
+    ok 6 - isRunAsAllowed 仅精确等值：前缀/大小写/空串变体一律拒绝（无模式匹配语义 pin）
+      ---
+      duration_ms: 0.249783
+      ...
+    1..6
+ok 59 - runAs allowlist — resolveRunAsAllowlist 解析单元与契约钉定
+  ---
+  duration_ms: 2.361149
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ◈ encrypted .env [www.dotenvx.com]
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../.env // tip: ◈ encrypted .env [www.dotenvx.com]
+# [trimc:cron] job added: job-a (a82ea563-8983-4dc3-beb5-5da63d0cb933)
+# [trimc:cron] job removed: a82ea563-8983-4dc3-beb5-5da63d0cb933
+# [trimc:cron] service stopped
+# Subtest: cron service
+    # Subtest: addJob / listJobs / getJob / removeJob round-trip
+    ok 1 - addJob / listJobs / getJob / removeJob round-trip
+      ---
+      duration_ms: 16.540945
+      ...
+# [trimc:cron] job added: job-b (ca81c6de-c1b9-4ca0-93b0-79506a36e771)
+# [trimc:cron] job updated: job-b2 (ca81c6de-c1b9-4ca0-93b0-79506a36e771)
+# [trimc:cron] service stopped
+    # Subtest: updateJob patches enabled/name and returns null for unknown id
+    ok 2 - updateJob patches enabled/name and returns null for unknown id
+      ---
+      duration_ms: 6.261687
+      ...
+# [trimc:cron] job added: job-c (7b6e12af-e592-421e-8285-4158de400265)
+# [trimc:cron] service stopped
+    # Subtest: runJob: disabled refused unless force, running refused always
+    ok 3 - runJob: disabled refused unless force, running refused always
+      ---
+      duration_ms: 9.055245
+      ...
+# [trimc:cron] job added: job-d (89a6f720-a332-430a-a13f-51f4fd8528d4)
+# [trimc:cron] service stopped
+    # Subtest: runJob: already-running refused
+    ok 4 - runJob: already-running refused
+      ---
+      duration_ms: 18.288707
+      ...
+# [trimc:cron] job added: job-e (12c5ba43-df72-43e2-b2c3-ccbbf3e6afce)
+# [trimc:cron] job added: job-f (c10e39b7-6c70-422b-b379-794f337a6b2d)
+# [trimc:cron] service stopped
+    # Subtest: runJob failure records lastError and consecutiveErrors; success resets
+    ok 5 - runJob failure records lastError and consecutiveErrors; success resets
+      ---
+      duration_ms: 14.14339
+      ...
+# [trimc:cron] job added: job-g (908ba880-3887-4909-b6b8-4ffd5d968933)
+# [trimc:cron] stale-run recovery: reset 1 job(s)
+# [trimc:cron] service started with 1 job(s)
+# [trimc:cron] service stopped
+    # Subtest: start() resets stale runningAtMs (crash recovery)
+    ok 6 - start() resets stale runningAtMs (crash recovery)
+      ---
+      duration_ms: 12.87388
+      ...
+# [trimc:cron] job added: job-h (07dedfc7-df1a-4e5f-91fb-312afef646fd)
+# [trimc:cron] service stopped
+    # Subtest: degraded after 3 consecutive failures, visible in getStatus
+    ok 7 - degraded after 3 consecutive failures, visible in getStatus
+      ---
+      duration_ms: 12.876064
+      ...
+# [trimc:cron] service stopped
+    # Subtest: getLogs lists parsed per-run log files, newest first
+    ok 8 - getLogs lists parsed per-run log files, newest first
+      ---
+      duration_ms: 37.29588
+      ...
+    1..8
+ok 60 - cron service
+  ---
+  duration_ms: 131.740994
+  type: 'suite'
+  ...
+# Subtest: isoWeekOf
+    # Subtest: 2026-08-17 is in ISO week 34
+    ok 1 - 2026-08-17 is in ISO week 34
+      ---
+      duration_ms: 1.329407
+      ...
+    # Subtest: Monday and Sunday of the same week share the week number
+    ok 2 - Monday and Sunday of the same week share the week number
+      ---
+      duration_ms: 0.241543
+      ...
+    # Subtest: 2026-12-28 is in week 53 (2026 has 53 ISO weeks)
+    ok 3 - 2026-12-28 is in week 53 (2026 has 53 ISO weeks)
+      ---
+      duration_ms: 0.176766
+      ...
+    1..3
+ok 61 - isoWeekOf
+  ---
+  duration_ms: 4.919505
+  type: 'suite'
+  ...
+# Subtest: computeWeekShiftTokens — design window cases
+    # Subtest: Sunday 2026-08-16 run → to=W34, from=W33, startDate=2026-08-17
+    ok 1 - Sunday 2026-08-16 run → to=W34, from=W33, startDate=2026-08-17
+      ---
+      duration_ms: 1.119316
+      ...
+    # Subtest: Monday 2026-08-17 catchup run → still to=W34
+    ok 2 - Monday 2026-08-17 catchup run → still to=W34
+      ---
+      duration_ms: 0.191451
+      ...
+    # Subtest: Wednesday 2026-08-19 catchup run → still to=W34
+    ok 3 - Wednesday 2026-08-19 catchup run → still to=W34
+      ---
+      duration_ms: 0.181299
+      ...
+    # Subtest: next Sunday 2026-08-23 run → to=W35, startDate=2026-08-24
+    ok 4 - next Sunday 2026-08-23 run → to=W35, startDate=2026-08-24
+      ---
+      duration_ms: 0.281918
+      ...
+    1..4
+ok 62 - computeWeekShiftTokens — design window cases
+  ---
+  duration_ms: 2.401292
+  type: 'suite'
+  ...
+# Subtest: computeWeekShiftTokens — year boundaries
+    # Subtest: Sunday 2026-12-27 run → to=W53 (final week of 2026)
+    ok 1 - Sunday 2026-12-27 run → to=W53 (final week of 2026)
+      ---
+      duration_ms: 0.25961
+      ...
+    # Subtest: Sunday 2027-01-03 run → to=W01, from wraps to W53 of 2026
+    ok 2 - Sunday 2027-01-03 run → to=W01, from wraps to W53 of 2026
+      ---
+      duration_ms: 0.203589
+      ...
+    # Subtest: week numbers are zero-padded (W05, not W5)
+    ok 3 - week numbers are zero-padded (W05, not W5)
+      ---
+      duration_ms: 0.221767
+      ...
+    1..3
+ok 63 - computeWeekShiftTokens — year boundaries
+  ---
+  duration_ms: 1.192976
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../.env // tip: ⌁ auth for agents [www.vestauth.com]
+# [trirmc] listening on :40209
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+# Subtest: E2E: Real model �?Contract-driven Q&A
+    # Subtest: responds with CTO identity through contract pipeline [JSON]
+    ok 1 - responds with CTO identity through contract pipeline [JSON]
+      ---
+      duration_ms: 1436.827124
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+    # Subtest: responds through contract pipeline [SSE stream]
+    ok 2 - responds through contract pipeline [SSE stream]
+      ---
+      duration_ms: 1826.43574
+      ...
+    1..2
+ok 64 - E2E: Real model �?Contract-driven Q&A
+  ---
+  duration_ms: 8291.98741
+  type: 'suite'
+  ...
+# [trirmc] listening on :33647
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+# Subtest: E2E: Real model �?Tool calling
+    # Subtest: reads a file via tool call and reports content [JSON]
+    ok 1 - reads a file via tool call and reports content [JSON]
+      ---
+      duration_ms: 2144.522732
+      ...
+    1..1
+ok 65 - E2E: Real model �?Tool calling
+  ---
+  duration_ms: 7014.99029
+  type: 'suite'
+  ...
+# [trirmc] listening on :45049
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+# Subtest: E2E: Real model �?Legacy no-contract
+    # Subtest: legacy mode produces valid response [JSON]
+    ok 1 - legacy mode produces valid response [JSON]
+      ---
+      duration_ms: 1328.107595
+      ...
+    1..1
+ok 66 - E2E: Real model �?Legacy no-contract
+  ---
+  duration_ms: 6010.505927
+  type: 'suite'
+  ...
+# [trirmc] listening on :33201
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=4 known=true
+# Subtest: E2E: Real model �?Multi-turn
+    # Subtest: handles multi-turn conversation with contract [JSON]
+    ok 1 - handles multi-turn conversation with contract [JSON]
+      ---
+      duration_ms: 1372.891291
+      ...
+    1..1
+ok 67 - E2E: Real model �?Multi-turn
+  ---
+  duration_ms: 6011.854267
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ◈ encrypted .env [www.dotenvx.com]
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ override existing { override: true }
+# ◇ injected env (0) from ../.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# [trirmc] listening on :34545
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+# Subtest: POST /internal/v1/agent [JSON, legacy]
+    # Subtest: returns 200 with legacy fields (model + systemPrompt + messages)
+    ok 1 - returns 200 with legacy fields (model + systemPrompt + messages)
+      ---
+      duration_ms: 95.405141
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=1 known=true
+    # Subtest: returns 200 with minimal payload (only model + messages)
+    ok 2 - returns 200 with minimal payload (only model + messages)
+      ---
+      duration_ms: 9.223132
+      ...
+    # Subtest: returns 400 for invalid JSON body
+    ok 3 - returns 400 for invalid JSON body
+      ---
+      duration_ms: 4.967955
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=1 known=true
+    # Subtest: still handles missing systemPrompt gracefully
+    ok 4 - still handles missing systemPrompt gracefully
+      ---
+      duration_ms: 5.41486
+      ...
+    1..4
+ok 68 - POST /internal/v1/agent [JSON, legacy]
+  ---
+  duration_ms: 5109.332566
+  type: 'suite'
+  ...
+# [trirmc] listening on :40929
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+# Subtest: POST /internal/v1/agent [JSON, contract pipeline]
+    # Subtest: runs full pipeline with contract + messages
+    ok 1 - runs full pipeline with contract + messages
+      ---
+      duration_ms: 9.399987
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+    # Subtest: contract pipeline includes identity in system prompt
+    ok 2 - contract pipeline includes identity in system prompt
+      ---
+      duration_ms: 8.217949
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+    # Subtest: respects tier parameter in contract mode
+    ok 3 - respects tier parameter in contract mode
+      ---
+      duration_ms: 6.548205
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+    # Subtest: systemPrompt override works in contract mode
+    ok 4 - systemPrompt override works in contract mode
+      ---
+      duration_ms: 6.610886
+      ...
+    # Subtest: returns 500 for malformed contract (missing required fields)
+    ok 5 - returns 500 for malformed contract (missing required fields)
+      ---
+      duration_ms: 12.314922
+      ...
+    1..5
+ok 69 - POST /internal/v1/agent [JSON, contract pipeline]
+  ---
+  duration_ms: 5015.581699
+  type: 'suite'
+  ...
+# [trirmc] listening on :38787
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+# Subtest: POST /internal/v1/agent [SSE, legacy]
+    # Subtest: streams SSE events with ?stream=true
+    ok 1 - streams SSE events with ?stream=true
+      ---
+      duration_ms: 8.507757
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+    # Subtest: streams SSE with Accept: text/event-stream header
+    ok 2 - streams SSE with Accept: text/event-stream header
+      ---
+      duration_ms: 8.011427
+      ...
+    1..2
+ok 70 - POST /internal/v1/agent [SSE, legacy]
+  ---
+  duration_ms: 5012.181031
+  type: 'suite'
+  ...
+# [trirmc] listening on :40783
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+# Subtest: POST /internal/v1/agent [SSE, contract pipeline]
+    # Subtest: streams SSE with contract pipeline
+    ok 1 - streams SSE with contract pipeline
+      ---
+      duration_ms: 10.36803
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+    # Subtest: SSE pipeline includes loop_end with correct structure
+    ok 2 - SSE pipeline includes loop_end with correct structure
+      ---
+      duration_ms: 6.937326
+      ...
+    # Subtest: SSE pipeline handles error gracefully
+    ok 3 - SSE pipeline handles error gracefully
+      ---
+      duration_ms: 5.292058
+      ...
+    1..3
+ok 71 - POST /internal/v1/agent [SSE, contract pipeline]
+  ---
+  duration_ms: 5011.866285
+  type: 'suite'
+  ...
+# [trirmc] listening on :37263
+# Subtest: POST /internal/v1/agent [cross-cutting]
+    # Subtest: GET /internal/v1/agent returns 404 (only POST allowed)
+    ok 1 - GET /internal/v1/agent returns 404 (only POST allowed)
+      ---
+      duration_ms: 5.968387
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=4 known=true
+    # Subtest: contract mode preserves messages in order
+    ok 2 - contract mode preserves messages in order
+      ---
+      duration_ms: 8.130202
+      ...
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+# [trimodel-client][dbg] STREAM model=deepseek-v4-pro depth=0 msgs=2 known=true
+    # Subtest: allows concurrent requests with different contracts
+    ok 3 - allows concurrent requests with different contracts
+      ---
+      duration_ms: 13.374836
+      ...
+    1..3
+ok 72 - POST /internal/v1/agent [cross-cutting]
+  ---
+  duration_ms: 5010.566603
+  type: 'suite'
+  ...
+# Subtest: injectSoul
+    # Subtest: writes soul/SOUL.md with identity sections
+    ok 1 - writes soul/SOUL.md with identity sections
+      ---
+      duration_ms: 4.059645
+      ...
+    # Subtest: omits Instructions section when none provided
+    ok 2 - omits Instructions section when none provided
+      ---
+      duration_ms: 2.751883
+      ...
+    # Subtest: omits Instructions section when blank
+    ok 3 - omits Instructions section when blank
+      ---
+      duration_ms: 2.266982
+      ...
+    1..3
+ok 73 - injectSoul
+  ---
+  duration_ms: 17.351571
+  type: 'suite'
+  ...
+# Subtest: injectMemories
+    # Subtest: writes one .md file per memory with key as filename
+    ok 1 - writes one .md file per memory with key as filename
+      ---
+      duration_ms: 5.91658
+      ...
+    # Subtest: returns empty result for empty array
+    ok 2 - returns empty result for empty array
+      ---
+      duration_ms: 1.231196
+      ...
+    # Subtest: sanitizes key names for safe filenames
+    ok 3 - sanitizes key names for safe filenames
+      ---
+      duration_ms: 2.159318
+      ...
+    1..3
+ok 74 - injectMemories
+  ---
+  duration_ms: 10.076115
+  type: 'suite'
+  ...
+# Subtest: injectColleagues
+    # Subtest: writes one .md per colleague with responsibilities
+    ok 1 - writes one .md per colleague with responsibilities
+      ---
+      duration_ms: 2.425721
+      ...
+    # Subtest: returns empty result for empty array
+    ok 2 - returns empty result for empty array
+      ---
+      duration_ms: 0.237008
+      ...
+    1..2
+ok 75 - injectColleagues
+  ---
+  duration_ms: 3.213198
+  type: 'suite'
+  ...
+# Subtest: injectSocial
+    # Subtest: writes social/graph.md with peers and supervises
+    ok 1 - writes social/graph.md with peers and supervises
+      ---
+      duration_ms: 2.845014
+      ...
+    # Subtest: handles empty peers and supervises lists
+    ok 2 - handles empty peers and supervises lists
+      ---
+      duration_ms: 2.150521
+      ...
+    # Subtest: omits Collaboration Notes when not provided
+    ok 3 - omits Collaboration Notes when not provided
+      ---
+      duration_ms: 2.114356
+      ...
+    1..3
+ok 76 - injectSocial
+  ---
+  duration_ms: 8.123734
+  type: 'suite'
+  ...
+# Subtest: injectAll
+    # Subtest: writes all four layers for a full payload
+    ok 1 - writes all four layers for a full payload
+      ---
+      duration_ms: 7.605047
+      ...
+    # Subtest: handles payload with only soul layer
+    ok 2 - handles payload with only soul layer
+      ---
+      duration_ms: 1.738643
+      ...
+    # Subtest: handles payload with only memories
+    ok 3 - handles payload with only memories
+      ---
+      duration_ms: 1.789144
+      ...
+    # Subtest: handles payload with only colleagues
+    ok 4 - handles payload with only colleagues
+      ---
+      duration_ms: 3.64565
+      ...
+    # Subtest: handles payload with only social
+    ok 5 - handles payload with only social
+      ---
+      duration_ms: 0.993259
+      ...
+    # Subtest: returns empty result for empty payload
+    ok 6 - returns empty result for empty payload
+      ---
+      duration_ms: 0.392745
+      ...
+    # Subtest: skips empty memories array in full payload
+    ok 7 - skips empty memories array in full payload
+      ---
+      duration_ms: 2.908953
+      ...
+    # Subtest: skips empty colleagues array in full payload
+    ok 8 - skips empty colleagues array in full payload
+      ---
+      duration_ms: 2.542241
+      ...
+    1..8
+ok 77 - injectAll
+  ---
+  duration_ms: 23.458851
+  type: 'suite'
+  ...
+# Subtest: buildMemoryContext
+    # Subtest: returns manifest lines for populated memdir
+    ok 1 - returns manifest lines for populated memdir
+      ---
+      duration_ms: 9.893788
+      ...
+    # Subtest: returns empty array for nonexistent directory
+    ok 2 - returns empty array for nonexistent directory
+      ---
+      duration_ms: 0.738371
+      ...
+    # Subtest: returns empty array for empty memdir
+    ok 3 - returns empty array for empty memdir
+      ---
+      duration_ms: 0.697626
+      ...
+    1..3
+ok 78 - buildMemoryContext
+  ---
+  duration_ms: 11.981668
+  type: 'suite'
+  ...
+# Subtest: contractToSoulMemory
+    # Subtest: extracts SoulMemory from an AgentContract
+    ok 1 - extracts SoulMemory from an AgentContract
+      ---
+      duration_ms: 0.280048
+      ...
+    # Subtest: handles contract without instructions
+    ok 2 - handles contract without instructions
+      ---
+      duration_ms: 0.139774
+      ...
+    1..2
+ok 79 - contractToSoulMemory
+  ---
+  duration_ms: 0.697704
+  type: 'suite'
+  ...
+# Subtest: Memory to Context Pipeline
+    # Subtest: injectAll then buildMemoryContext produces valid extraContext
+    ok 1 - injectAll then buildMemoryContext produces valid extraContext
+      ---
+      duration_ms: 10.685554
+      ...
+    1..1
+ok 80 - Memory to Context Pipeline
+  ---
+  duration_ms: 11.113823
+  type: 'suite'
+  ...
+# [trimc:mirror] node stale → unknown: node-a (state=connected, lastSeen=31000ms ago)
+# [trimc:mirror] node stale → unknown: node-d (state=degraded, lastSeen=181000ms ago)
+# [trimc:mirror] node stale → unknown: node-a (state=connected, lastSeen=31000ms ago)
+# [trimc:mirror] node recovered (2 heartbeats): node-a
+# [trimc:mirror] node stale → unknown: node-a (state=connected, lastSeen=31000ms ago)
+# Subtest: MirrorStore node heartbeat (dualrun contract v1.0)
+    # Subtest: records heartbeats into the node table
+    ok 1 - records heartbeats into the node table
+      ---
+      duration_ms: 0.738012
+      ...
+    # Subtest: marks node unknown after 3×interval (30s) without heartbeat
+    ok 2 - marks node unknown after 3×interval (30s) without heartbeat
+      ---
+      duration_ms: 1.319904
+      ...
+    # Subtest: uses 180s relaxed threshold for degraded nodes (slow heartbeat not misjudged)
+    ok 3 - uses 180s relaxed threshold for degraded nodes (slow heartbeat not misjudged)
+      ---
+      duration_ms: 0.276772
+      ...
+    # Subtest: recovers node to known after 2 consecutive heartbeats
+    ok 4 - recovers node to known after 2 consecutive heartbeats
+      ---
+      duration_ms: 0.356269
+      ...
+    # Subtest: markNodeUnknown marks non-terminal tasks of the node
+    ok 5 - markNodeUnknown marks non-terminal tasks of the node
+      ---
+      duration_ms: 0.681485
+      ...
+    1..5
+ok 81 - MirrorStore node heartbeat (dualrun contract v1.0)
+  ---
+  duration_ms: 5.727121
+  type: 'suite'
+  ...
+# Subtest: Capability Router — route()
+    # Subtest: Tier 1: IO Contract Hard-Match
+        # Subtest: matches employee with >= 80% output coverage
+        ok 1 - matches employee with >= 80% output coverage
+          ---
+          duration_ms: 1.408561
+          ...
+        # Subtest: rejects employee with < 80% output coverage
+        ok 2 - rejects employee with < 80% output coverage
+          ---
+          duration_ms: 0.273669
+          ...
+        # Subtest: matches with 100% coverage for exact match
+        ok 3 - matches with 100% coverage for exact match
+          ---
+          duration_ms: 0.20978
+          ...
+        # Subtest: handles empty required outputs
+        ok 4 - handles empty required outputs
+          ---
+          duration_ms: 0.20604
+          ...
+        1..4
+    ok 1 - Tier 1: IO Contract Hard-Match
+      ---
+      duration_ms: 3.753345
+      type: 'suite'
+      ...
+    # Subtest: Tier 2: Authority Soft-Match
+        # Subtest: matches employee with approve right
+        ok 1 - matches employee with approve right
+          ---
+          duration_ms: 0.3323
+          ...
+        # Subtest: matches without decision type (no authority needed)
+        ok 2 - matches without decision type (no authority needed)
+          ---
+          duration_ms: 0.36562
+          ...
+        # Subtest: rejects when decision type is forbidden
+        ok 3 - rejects when decision type is forbidden
+          ---
+          duration_ms: 0.226352
+          ...
+        # Subtest: matches freeze/escalate rights
+        ok 4 - matches freeze/escalate rights
+          ---
+          duration_ms: 0.285884
+          ...
+        1..4
+    ok 2 - Tier 2: Authority Soft-Match
+      ---
+      duration_ms: 1.830037
+      type: 'suite'
+      ...
+    # Subtest: Tier 3: Load Tuning
+        # Subtest: prefers employee with available capacity
+        ok 1 - prefers employee with available capacity
+          ---
+          duration_ms: 0.37771
+          ...
+        # Subtest: flags overloaded employee
+        ok 2 - flags overloaded employee
+          ---
+          duration_ms: 0.29147
+          ...
+        1..2
+    ok 3 - Tier 3: Load Tuning
+      ---
+      duration_ms: 1.065819
+      type: 'suite'
+      ...
+    # Subtest: Multi-Employee Routing
+        # Subtest: selects highest scorer among multiple employees
+        ok 1 - selects highest scorer among multiple employees
+          ---
+          duration_ms: 0.365127
+          ...
+        # Subtest: includes reporting chain in escalation path
+        ok 2 - includes reporting chain in escalation path
+          ---
+          duration_ms: 0.266809
+          ...
+        1..2
+    ok 4 - Multi-Employee Routing
+      ---
+      duration_ms: 1.073327
+      type: 'suite'
+      ...
+    # Subtest: Edge Cases
+        # Subtest: returns no match for empty employee list
+        ok 1 - returns no match for empty employee list
+          ---
+          duration_ms: 0.31462
+          ...
+        # Subtest: skips inactive employees
+        ok 2 - skips inactive employees
+          ---
+          duration_ms: 0.16779
+          ...
+        # Subtest: skips suspended employees
+        ok 3 - skips suspended employees
+          ---
+          duration_ms: 0.212392
+          ...
+        # Subtest: handles case-insensitive output matching
+        ok 4 - handles case-insensitive output matching
+          ---
+          duration_ms: 0.182495
+          ...
+        1..4
+    ok 5 - Edge Cases
+      ---
+      duration_ms: 1.419093
+      type: 'suite'
+      ...
+    1..5
+ok 82 - Capability Router — route()
+  ---
+  duration_ms: 10.621379
+  type: 'suite'
+  ...
+# Subtest: Cost Controller — estimateCost()
+    # Subtest: estimates tokens based on expected outputs
+    ok 1 - estimates tokens based on expected outputs
+      ---
+      duration_ms: 0.977803
+      ...
+    # Subtest: scales with number of outputs
+    ok 2 - scales with number of outputs
+      ---
+      duration_ms: 0.206532
+      ...
+    # Subtest: caps at tier maxTokensPerTurn
+    ok 3 - caps at tier maxTokensPerTurn
+      ---
+      duration_ms: 0.287668
+      ...
+    # Subtest: returns different tiers for different employees
+    ok 4 - returns different tiers for different employees
+      ---
+      duration_ms: 0.219589
+      ...
+    1..4
+ok 83 - Cost Controller — estimateCost()
+  ---
+  duration_ms: 3.642649
+  type: 'suite'
+  ...
+# Subtest: Cost Controller — checkBudget()
+    # Subtest: approves when all budgets are available
+    ok 1 - approves when all budgets are available
+      ---
+      duration_ms: 0.747209
+      ...
+    # Subtest: rejects when per-task cost exceeds employee max
+    ok 2 - rejects when per-task cost exceeds employee max
+      ---
+      duration_ms: 0.323946
+      ...
+    # Subtest: rejects when company daily cap would be exceeded
+    ok 3 - rejects when company daily cap would be exceeded
+      ---
+      duration_ms: 0.515327
+      ...
+    # Subtest: rejects when employee daily cap is exceeded
+    ok 4 - rejects when employee daily cap is exceeded
+      ---
+      duration_ms: 0.506739
+      ...
+    1..4
+ok 84 - Cost Controller — checkBudget()
+  ---
+  duration_ms: 2.965559
+  type: 'suite'
+  ...
+# Subtest: Cost Controller — recordCost()
+    # Subtest: records cost and updates budget state
+    ok 1 - records cost and updates budget state
+      ---
+      duration_ms: 0.427765
+      ...
+    # Subtest: accumulates costs for same employee
+    ok 2 - accumulates costs for same employee
+      ---
+      duration_ms: 0.333119
+      ...
+    # Subtest: tracks costs for multiple employees independently
+    ok 3 - tracks costs for multiple employees independently
+      ---
+      duration_ms: 0.520496
+      ...
+    1..3
+ok 85 - Cost Controller — recordCost()
+  ---
+  duration_ms: 1.748407
+  type: 'suite'
+  ...
+# Subtest: Cost Controller — getModelTierPolicy()
+    # Subtest: returns policy for thinking tier
+    ok 1 - returns policy for thinking tier
+      ---
+      duration_ms: 0.206917
+      ...
+    # Subtest: returns policy for balanced tier
+    ok 2 - returns policy for balanced tier
+      ---
+      duration_ms: 0.114571
+      ...
+    # Subtest: returns policy for fast tier
+    ok 3 - returns policy for fast tier
+      ---
+      duration_ms: 0.11984
+      ...
+    1..3
+ok 86 - Cost Controller — getModelTierPolicy()
+  ---
+  duration_ms: 0.978236
+  type: 'suite'
+  ...
+# Subtest: Cost Controller — resetBudget()
+    # Subtest: clears all budget state
+    ok 1 - clears all budget state
+      ---
+      duration_ms: 0.274633
+      ...
+    1..1
+ok 87 - Cost Controller — resetBudget()
+  ---
+  duration_ms: 0.46333
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ override existing { override: true }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌁ auth for agents [www.vestauth.com]
+# ◇ injected env (0) from ../.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# Subtest: Dispatch Proxy — dispatch()
+    # Subtest: Full Pipeline Success
+        # Subtest: completes full 6-step pipeline successfully
+        ok 1 - completes full 6-step pipeline successfully
+          ---
+          duration_ms: 2.37317
+          ...
+        # Subtest: generates unique task IDs
+        ok 2 - generates unique task IDs
+          ---
+          duration_ms: 0.694499
+          ...
+        1..2
+    ok 1 - Full Pipeline Success
+      ---
+      duration_ms: 4.566077
+      type: 'suite'
+      ...
+    # Subtest: Error: No Employees
+        # Subtest: fails when no employees are available
+        ok 1 - fails when no employees are available
+          ---
+          duration_ms: 0.608155
+          ...
+        1..1
+    ok 2 - Error: No Employees
+      ---
+      duration_ms: 1.168663
+      type: 'suite'
+      ...
+    # Subtest: Error: No Match
+        # Subtest: fails when no employee matches task requirements
+        ok 1 - fails when no employee matches task requirements
+          ---
+          duration_ms: 0.773033
+          ...
+        # Subtest: escalates when escalation path is available
+        ok 2 - escalates when escalation path is available
+          ---
+          duration_ms: 1.052376
+          ...
+        1..2
+    ok 3 - Error: No Match
+      ---
+      duration_ms: 2.308888
+      type: 'suite'
+      ...
+    # Subtest: Budget Failure
+        # Subtest: fails when per-task budget is exceeded
+        ok 1 - fails when per-task budget is exceeded
+          ---
+          duration_ms: 0.670392
+          ...
+        1..1
+    ok 4 - Budget Failure
+      ---
+      duration_ms: 0.883537
+      type: 'suite'
+      ...
+    # Subtest: Escalation
+        # Subtest: escalates to reporting chain when primary fails
+        ok 1 - escalates to reporting chain when primary fails
+          ---
+          duration_ms: 0.675274
+          ...
+        1..1
+    ok 5 - Escalation
+      ---
+      duration_ms: 0.84063
+      type: 'suite'
+      ...
+    # Subtest: Trace Completeness
+        # Subtest: every trace entry has timestamp
+        ok 1 - every trace entry has timestamp
+          ---
+          duration_ms: 0.464956
+          ...
+        # Subtest: every trace entry has message
+        ok 2 - every trace entry has message
+          ---
+          duration_ms: 0.730059
+          ...
+        1..2
+    ok 6 - Trace Completeness
+      ---
+      duration_ms: 1.441167
+      type: 'suite'
+      ...
+    # Subtest: Decision Type Routing
+        # Subtest: routes task with decision type to authorized employee
+        ok 1 - routes task with decision type to authorized employee
+          ---
+          duration_ms: 0.692515
+          ...
+        1..1
+    ok 7 - Decision Type Routing
+      ---
+      duration_ms: 1.096436
+      type: 'suite'
+      ...
+    1..7
+ok 88 - Dispatch Proxy — dispatch()
+  ---
+  duration_ms: 13.742724
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌁ auth for agents [www.vestauth.com]
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌁ auth for agents [www.vestauth.com]
+# ◇ injected env (0) from ../.env // tip: ⌘ enable debugging { debug: true }
+# Subtest: Employee Registry — loadEmployeeRegistry
+    # Subtest: loads valid contracts into EmployeeRecords
+    ok 1 - loads valid contracts into EmployeeRecords
+      ---
+      duration_ms: 28.046241
+      ...
+    # Subtest: handles broken contracts gracefully
+    ok 2 - handles broken contracts gracefully
+      ---
+      duration_ms: 10.266439
+      ...
+    # Subtest: returns empty employees for empty directory
+    ok 3 - returns empty employees for empty directory
+      ---
+      duration_ms: 1.129236
+      ...
+    # Subtest: returns empty for non-existent directory
+    ok 4 - returns empty for non-existent directory
+      ---
+      duration_ms: 2.824995
+      ...
+    # Subtest: EmployeeRecord has all required fields
+    ok 5 - EmployeeRecord has all required fields
+      ---
+      duration_ms: 7.370054
+      ...
+    1..5
+ok 89 - Employee Registry — loadEmployeeRegistry
+  ---
+  duration_ms: 53.01282
+  type: 'suite'
+  ...
+# Subtest: Employee Registry — source-agents v3 (14 employees)
+    # Subtest: loads 14 employees from the v3 contract source
+    ok 1 - loads 14 employees from the v3 contract source
+      ---
+      duration_ms: 64.11545
+      ...
+    1..1
+ok 90 - Employee Registry — source-agents v3 (14 employees)
+  ---
+  duration_ms: 64.531891
+  type: 'suite'
+  ...
+# Subtest: Employee Scheduler — transition()
+    # Subtest: transitions queued → assigned
+    ok 1 - transitions queued → assigned
+      ---
+      duration_ms: 1.122672
+      ...
+    # Subtest: transitions assigned → running
+    ok 2 - transitions assigned → running
+      ---
+      duration_ms: 0.19297
+      ...
+    # Subtest: transitions running → accepted
+    ok 3 - transitions running → accepted
+      ---
+      duration_ms: 0.193289
+      ...
+    # Subtest: transitions accepted → done
+    ok 4 - transitions accepted → done
+      ---
+      duration_ms: 0.201082
+      ...
+    # Subtest: transitions running → rejected
+    ok 5 - transitions running → rejected
+      ---
+      duration_ms: 0.142625
+      ...
+    # Subtest: transitions assigned → escalated
+    ok 6 - transitions assigned → escalated
+      ---
+      duration_ms: 0.160778
+      ...
+    # Subtest: transitions escalated → assigned
+    ok 7 - transitions escalated → assigned
+      ---
+      duration_ms: 0.150267
+      ...
+    # Subtest: rejects queued → running (skip assigned)
+    ok 8 - rejects queued → running (skip assigned)
+      ---
+      duration_ms: 0.186877
+      ...
+    # Subtest: rejects done → running (terminal state)
+    ok 9 - rejects done → running (terminal state)
+      ---
+      duration_ms: 0.152548
+      ...
+    # Subtest: rejects rejected → running (terminal state)
+    ok 10 - rejects rejected → running (terminal state)
+      ---
+      duration_ms: 0.192837
+      ...
+    # Subtest: does not mutate original task
+    ok 11 - does not mutate original task
+      ---
+      duration_ms: 0.161243
+      ...
+    1..11
+ok 91 - Employee Scheduler — transition()
+  ---
+  duration_ms: 6.073525
+  type: 'suite'
+  ...
+# Subtest: Employee Scheduler — assign()
+    # Subtest: assigns queued task to employee with capacity
+    ok 1 - assigns queued task to employee with capacity
+      ---
+      duration_ms: 0.460155
+      ...
+    # Subtest: rejects assignment when employee is at capacity
+    ok 2 - rejects assignment when employee is at capacity
+      ---
+      duration_ms: 0.403341
+      ...
+    # Subtest: rejects assignment for non-queued tasks
+    ok 3 - rejects assignment for non-queued tasks
+      ---
+      duration_ms: 0.176103
+      ...
+    # Subtest: ignores non-running tasks for capacity check
+    ok 4 - ignores non-running tasks for capacity check
+      ---
+      duration_ms: 0.174059
+      ...
+    1..4
+ok 92 - Employee Scheduler — assign()
+  ---
+  duration_ms: 1.673357
+  type: 'suite'
+  ...
+# Subtest: Employee Scheduler — escalate()
+    # Subtest: escalates from assigned state
+    ok 1 - escalates from assigned state
+      ---
+      duration_ms: 0.317076
+      ...
+    # Subtest: escalates from running state
+    ok 2 - escalates from running state
+      ---
+      duration_ms: 0.131202
+      ...
+    # Subtest: rejects escalation from queued state
+    ok 3 - rejects escalation from queued state
+      ---
+      duration_ms: 0.335934
+      ...
+    # Subtest: rejects escalation from done state
+    ok 4 - rejects escalation from done state
+      ---
+      duration_ms: 0.163034
+      ...
+    1..4
+ok 93 - Employee Scheduler — escalate()
+  ---
+  duration_ms: 1.438033
+  type: 'suite'
+  ...
+# Subtest: Employee Scheduler — isTimedOut()
+    # Subtest: returns false for recent task
+    ok 1 - returns false for recent task
+      ---
+      duration_ms: 0.262692
+      ...
+    # Subtest: returns true for task created long ago
+    ok 2 - returns true for task created long ago
+      ---
+      duration_ms: 0.122489
+      ...
+    # Subtest: respects custom timeout
+    ok 3 - respects custom timeout
+      ---
+      duration_ms: 0.15197
+      ...
+    1..3
+ok 94 - Employee Scheduler — isTimedOut()
+  ---
+  duration_ms: 0.851588
+  type: 'suite'
+  ...
+# Subtest: Employee Scheduler — getConfig()
+    # Subtest: returns default config
+    ok 1 - returns default config
+      ---
+      duration_ms: 0.264538
+      ...
+    1..1
+ok 95 - Employee Scheduler — getConfig()
+  ---
+  duration_ms: 0.431875
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../.env // tip: ⌘ override existing { override: true }
+# Subtest: Pipeline: Contract → Soul Loader → ContextSources
+    # Subtest: produces non-empty soul prompt from CTO contract
+    ok 1 - produces non-empty soul prompt from CTO contract
+      ---
+      duration_ms: 1.004209
+      ...
+    # Subtest: soul prompt contains all six sections
+    ok 2 - soul prompt contains all six sections
+      ---
+      duration_ms: 0.210314
+      ...
+    # Subtest: contractToContextSources has role = display_name
+    ok 3 - contractToContextSources has role = display_name
+      ---
+      duration_ms: 0.259847
+      ...
+    # Subtest: contractToContextSources extraContext is the soul prompt split by line
+    ok 4 - contractToContextSources extraContext is the soul prompt split by line
+      ---
+      duration_ms: 0.218404
+      ...
+    # Subtest: minimal contract produces valid soul prompt
+    ok 5 - minimal contract produces valid soul prompt
+      ---
+      duration_ms: 0.158611
+      ...
+    # Subtest: minimal contract context sources have extraContext from prompt
+    ok 6 - minimal contract context sources have extraContext from prompt
+      ---
+      duration_ms: 0.141303
+      ...
+    1..6
+ok 96 - Pipeline: Contract → Soul Loader → ContextSources
+  ---
+  duration_ms: 8.505741
+  type: 'suite'
+  ...
+# Subtest: Pipeline: Contract → Memory Injector → extraContext
+    # Subtest: contractToSoulMemory preserves identity fields
+    ok 1 - contractToSoulMemory preserves identity fields
+      ---
+      duration_ms: 0.282704
+      ...
+    # Subtest: minimal contract soul memory has no instructions
+    ok 2 - minimal contract soul memory has no instructions
+      ---
+      duration_ms: 0.20425
+      ...
+    # Subtest: injectAll writes memdir and buildMemoryContext returns entries
+    ok 3 - injectAll writes memdir and buildMemoryContext returns entries
+      ---
+      duration_ms: 26.625006
+      ...
+    # Subtest: empty memory payload produces only soul file
+    ok 4 - empty memory payload produces only soul file
+      ---
+      duration_ms: 1.680282
+      ...
+    1..4
+ok 97 - Pipeline: Contract → Memory Injector → extraContext
+  ---
+  duration_ms: 29.784956
+  type: 'suite'
+  ...
+# Subtest: Pipeline: Context Builder fusion (soul + memory)
+    # Subtest: buildContext from soul ContextSources produces valid block
+    ok 1 - buildContext from soul ContextSources produces valid block
+      ---
+      duration_ms: 1.372273
+      ...
+    # Subtest: mergeContextWithPrompt prepends context before system prompt
+    ok 2 - mergeContextWithPrompt prepends context before system prompt
+      ---
+      duration_ms: 0.722844
+      ...
+    # Subtest: merging without system prompt returns only context
+    ok 3 - merging without system prompt returns only context
+      ---
+      duration_ms: 0.382844
+      ...
+    # Subtest: memory context lines can be appended to soul extraContext
+    ok 4 - memory context lines can be appended to soul extraContext
+      ---
+      duration_ms: 0.37846
+      ...
+    # Subtest: minimal contract context block is still valid
+    ok 5 - minimal contract context block is still valid
+      ---
+      duration_ms: 0.475926
+      ...
+    1..5
+ok 98 - Pipeline: Context Builder fusion (soul + memory)
+  ---
+  duration_ms: 4.465796
+  type: 'suite'
+  ...
+# Subtest: Pipeline: Tool Gater with contract tools
+    # Subtest: low-risk tool (read_file) passes both tier and risk check
+    ok 1 - low-risk tool (read_file) passes both tier and risk check
+      ---
+      duration_ms: 0.30485
+      ...
+    # Subtest: medium-risk tool (write_file) passes with audit tag
+    ok 2 - medium-risk tool (write_file) passes with audit tag
+      ---
+      duration_ms: 0.447619
+      ...
+    # Subtest: high-risk tool (shell_exec) is blocked in MVP
+    ok 3 - high-risk tool (shell_exec) is blocked in MVP
+      ---
+      duration_ms: 0.157527
+      ...
+    # Subtest: subagent tier blocks write_file (heartbeat+)
+    ok 4 - subagent tier blocks write_file (heartbeat+)
+      ---
+      duration_ms: 0.120042
+      ...
+    # Subtest: summarizeGater categorizes by risk level
+    ok 5 - summarizeGater categorizes by risk level
+      ---
+      duration_ms: 0.22391
+      ...
+    # Subtest: contract tool not in toolSpecs falls back to tier-only check
+    ok 6 - contract tool not in toolSpecs falls back to tier-only check
+      ---
+      duration_ms: 0.11458
+      ...
+    # Subtest: empty tools contract — all checks are tier-only
+    ok 7 - empty tools contract — all checks are tier-only
+      ---
+      duration_ms: 0.122044
+      ...
+    1..7
+ok 99 - Pipeline: Tool Gater with contract tools
+  ---
+  duration_ms: 2.082439
+  type: 'suite'
+  ...
+# Subtest: Pipeline: Full assembly → AgentLoopOptions
+    # Subtest: assembles complete pipeline for CTO contract
+    ok 1 - assembles complete pipeline for CTO contract
+      ---
+      duration_ms: 11.342988
+      ...
+    # Subtest: assembles minimal contract pipeline without memory
+    ok 2 - assembles minimal contract pipeline without memory
+      ---
+      duration_ms: 0.355295
+      ...
+    # Subtest: pipeline preserves contract identity across all stages
+    ok 3 - pipeline preserves contract identity across all stages
+      ---
+      duration_ms: 0.267172
+      ...
+    # Subtest: subagent tier pipeline: write_file blocked (main-only), shell_exec still blocked
+    ok 4 - subagent tier pipeline: write_file blocked (main-only), shell_exec still blocked
+      ---
+      duration_ms: 0.323456
+      ...
+    1..4
+ok 100 - Pipeline: Full assembly → AgentLoopOptions
+  ---
+  duration_ms: 13.060065
+  type: 'suite'
+  ...
+# Subtest: Pipeline: Backward compatibility
+    # Subtest: context builder works without extraContext
+    ok 1 - context builder works without extraContext
+      ---
+      duration_ms: 0.217573
+      ...
+    # Subtest: tool gater works without toolSpecs (tier-only)
+    ok 2 - tool gater works without toolSpecs (tier-only)
+      ---
+      duration_ms: 0.134322
+      ...
+    # Subtest: pipeline with tier-only (no contract tools) produces valid system prompt
+    ok 3 - pipeline with tier-only (no contract tools) produces valid system prompt
+      ---
+      duration_ms: 0.159249
+      ...
+    # Subtest: soul prompt alone (no context builder) is still valid
+    ok 4 - soul prompt alone (no context builder) is still valid
+      ---
+      duration_ms: 0.113975
+      ...
+    1..4
+ok 101 - Pipeline: Backward compatibility
+  ---
+  duration_ms: 0.95679
+  type: 'suite'
+  ...
+# Subtest: Pipeline: Invariants
+    # Subtest: merged prompt always contains all key contract data
+    ok 1 - merged prompt always contains all key contract data
+      ---
+      duration_ms: 0.32181
+      ...
+    # Subtest: context block always precedes soul prompt in merged output
+    ok 2 - context block always precedes soul prompt in merged output
+      ---
+      duration_ms: 0.25537
+      ...
+    # Subtest: tool permissions are deterministic for same input
+    ok 3 - tool permissions are deterministic for same input
+      ---
+      duration_ms: 0.976772
+      ...
+    # Subtest: pipeline handles missing optional contract fields
+    ok 4 - pipeline handles missing optional contract fields
+      ---
+      duration_ms: 0.279286
+      ...
+    1..4
+ok 102 - Pipeline: Invariants
+  ---
+  duration_ms: 2.219958
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../.env // tip: ⌘ suppress logs { quiet: true }
+# [trirmc] listening on :32799
+# Subtest: TriMC /internal auth gate fail-closed（rmc-TriRMC.md 发现6 复现）
+    # Subtest: token 未配置 × 无头 → 401 internal_auth_disabled（审计向量「漏配即零鉴权」死证）
+    ok 1 - token 未配置 × 无头 → 401 internal_auth_disabled（审计向量「漏配即零鉴权」死证）
+      ---
+      duration_ms: 77.51147
+      ...
+    # Subtest: token 未配置 × 任意错头 → 同样 401 internal_auth_disabled（未配置态连头比对都不发生）
+    ok 2 - token 未配置 × 任意错头 → 同样 401 internal_auth_disabled（未配置态连头比对都不发生）
+      ---
+      duration_ms: 5.98316
+      ...
+    # Subtest: token 未配置 × /healthz → 200（fail-closed 门不得外溢到公开面）
+    ok 3 - token 未配置 × /healthz → 200（fail-closed 门不得外溢到公开面）
+      ---
+      duration_ms: 3.250203
+      ...
+    # Subtest: token 已配置 × 缺头 → 401 unauthorized:*（与 internal_auth_disabled 可区分——审计明文要求）
+    ok 4 - token 已配置 × 缺头 → 401 unauthorized:*（与 internal_auth_disabled 可区分——审计明文要求）
+      ---
+      duration_ms: 3.606473
+      ...
+    # Subtest: token 已配置 × 错头 → 401 unauthorized:*（mismatch 响应形态保持不变）
+    ok 5 - token 已配置 × 错头 → 401 unauthorized:*（mismatch 响应形态保持不变）
+      ---
+      duration_ms: 3.540017
+      ...
+    # Subtest: token 已配置 × Bearer 正确形态 → 200 放行（正向锚，防修复被反向过度收紧破坏可用性）
+    ok 6 - token 已配置 × Bearer 正确形态 → 200 放行（正向锚，防修复被反向过度收紧破坏可用性）
+      ---
+      duration_ms: 16.583601
+      ...
+    1..6
+ok 103 - TriMC /internal auth gate fail-closed（rmc-TriRMC.md 发现6 复现）
+  ---
+  duration_ms: 5078.018821
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ override existing { override: true }
+# ◇ injected env (0) from ../.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+# [trirmc] listening on :43079
+# Subtest: TriMC /internal token auth gate
+    # Subtest: token 配置后：缺头 → 401
+    ok 1 - token 配置后：缺头 → 401
+      ---
+      duration_ms: 76.105971
+      ...
+    # Subtest: token 配置后：错头 → 401
+    ok 2 - token 配置后：错头 → 401
+      ---
+      duration_ms: 6.399983
+      ...
+    # Subtest: token 配置后：对头（X-Internal-Token）→ 放行
+    ok 3 - token 配置后：对头（X-Internal-Token）→ 放行
+      ---
+      duration_ms: 26.793827
+      ...
+    # Subtest: token 配置后：Bearer 形态同样放行；healthz 保持公开
+    ok 4 - token 配置后：Bearer 形态同样放行；healthz 保持公开
+      ---
+      duration_ms: 20.469006
+      ...
+    # Subtest: token 未配置：fail-closed 直接拒绝（401 internal_auth_disabled）
+    ok 5 - token 未配置：fail-closed 直接拒绝（401 internal_auth_disabled）
+      ---
+      duration_ms: 9.669547
+      ...
+    1..5
+ok 104 - TriMC /internal token auth gate
+  ---
+  duration_ms: 5076.315112
+  type: 'suite'
+  ...
+# Subtest: Soul Loader 完整合约转提示词
+    # Subtest: 完整合约输出全部六个章节
+    ok 1 - 完整合约输出全部六个章节
+      ---
+      duration_ms: 1.20521
+      ...
+    # Subtest: 章节顺序为 Identity → Responsibilities → DecisionRights → Collaborators → Instructions → Tools
+    ok 2 - 章节顺序为 Identity → Responsibilities → DecisionRights → Collaborators → Instructions → Tools
+      ---
+      duration_ms: 0.330851
+      ...
+    1..2
+ok 105 - Soul Loader 完整合约转提示词
+  ---
+  duration_ms: 3.984807
+  type: 'suite'
+  ...
+# Subtest: 最小合约
+    # Subtest: 最少字段合约只输出有内容的章节
+    ok 1 - 最少字段合约只输出有内容的章节
+      ---
+      duration_ms: 0.477371
+      ...
+    # Subtest: user_invocable=false 时标注不可直接调度
+    ok 2 - user_invocable=false 时标注不可直接调度
+      ---
+      duration_ms: 0.183565
+      ...
+    # Subtest: Registry family 正确显示
+    ok 3 - Registry family 正确显示
+      ---
+      duration_ms: 0.151324
+      ...
+    # Subtest: 空 decision_rights 输出章节但没有内容条目
+    ok 4 - 空 decision_rights 输出章节但没有内容条目
+      ---
+      duration_ms: 0.158669
+      ...
+    1..4
+ok 106 - 最小合约
+  ---
+  duration_ms: 1.529495
+  type: 'suite'
+  ...
+# Subtest: 部分合约行为
+    # Subtest: 无 instructions 时不输出 Behavioral Instructions 章节
+    ok 1 - 无 instructions 时不输出 Behavioral Instructions 章节
+      ---
+      duration_ms: 0.352362
+      ...
+    # Subtest: 空 instructions 字符串不输出章节
+    ok 2 - 空 instructions 字符串不输出章节
+      ---
+      duration_ms: 0.220389
+      ...
+    # Subtest: 仅空白 instructions 不输出章节
+    ok 3 - 仅空白 instructions 不输出章节
+      ---
+      duration_ms: 0.365492
+      ...
+    # Subtest: 无 tools 时不输出 Authorized Tools 章节
+    ok 4 - 无 tools 时不输出 Authorized Tools 章节
+      ---
+      duration_ms: 0.228579
+      ...
+    # Subtest: decision_rights 仅有 approve+escalate 时不输出 freeze 和 forbidden
+    ok 5 - decision_rights 仅有 approve+escalate 时不输出 freeze 和 forbidden
+      ---
+      duration_ms: 0.398469
+      ...
+    1..5
+ok 107 - 部分合约行为
+  ---
+  duration_ms: 2.574227
+  type: 'suite'
+  ...
+# Subtest: 工具格式化
+    # Subtest: 低风险工具不显示风险标签
+    ok 1 - 低风险工具不显示风险标签
+      ---
+      duration_ms: 0.372854
+      ...
+    # Subtest: 中高风险工具显示风险标签
+    ok 2 - 中高风险工具显示风险标签
+      ---
+      duration_ms: 0.290653
+      ...
+    # Subtest: 需审批工具显示审批标签
+    ok 3 - 需审批工具显示审批标签
+      ---
+      duration_ms: 0.373074
+      ...
+    1..3
+ok 108 - 工具格式化
+  ---
+  duration_ms: 1.540401
+  type: 'suite'
+  ...
+# Subtest: 协作者格式化
+    # Subtest: 有 peers 时显示 peers
+    ok 1 - 有 peers 时显示 peers
+      ---
+      duration_ms: 0.39981
+      ...
+    # Subtest: 有 supervises 时显示 supervises
+    ok 2 - 有 supervises 时显示 supervises
+      ---
+      duration_ms: 0.211602
+      ...
+    # Subtest: 无 peers 无 supervises 时不显示对应行
+    ok 3 - 无 peers 无 supervises 时不显示对应行
+      ---
+      duration_ms: 0.240104
+      ...
+    1..3
+ok 109 - 协作者格式化
+  ---
+  duration_ms: 1.301666
+  type: 'suite'
+  ...
+# Subtest: contractToContextSources 集成
+    # Subtest: 输出 ContextSources 具有正确的 role 和 tier
+    ok 1 - 输出 ContextSources 具有正确的 role 和 tier
+      ---
+      duration_ms: 0.750407
+      ...
+    # Subtest: extraContext 包含 prompt 的每一行
+    ok 2 - extraContext 包含 prompt 的每一行
+      ---
+      duration_ms: 0.387292
+      ...
+    # Subtest: subagent tier 正确传递
+    ok 3 - subagent tier 正确传递
+      ---
+      duration_ms: 0.223874
+      ...
+    # Subtest: coordinator tier 正确传递
+    ok 4 - coordinator tier 正确传递
+      ---
+      duration_ms: 0.219964
+      ...
+    1..4
+ok 110 - contractToContextSources 集成
+  ---
+  duration_ms: 2.10524
+  type: 'suite'
+  ...
+# Subtest: 责任项格式
+    # Subtest: 有 priority 时显示标签
+    ok 1 - 有 priority 时显示标签
+      ---
+      duration_ms: 0.257484
+      ...
+    # Subtest: 无 priority 时不显示标签
+    ok 2 - 无 priority 时不显示标签
+      ---
+      duration_ms: 0.342263
+      ...
+    1..2
+ok 111 - 责任项格式
+  ---
+  duration_ms: 0.939988
+  type: 'suite'
+  ...
+# ◇ injected env (0) from ../TriModel/dist/.env // tip: ⌘ enable debugging { debug: true }
+# ◇ injected env (0) from ../TriModel/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# ◇ injected env (0) from ../.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+# Subtest: checkToolPermission — tier checks (no toolSpecs)
+    # Subtest: main tier: all tools allowed
+    ok 1 - main tier: all tools allowed
+      ---
+      duration_ms: 0.763559
+      ...
+    # Subtest: main tier: unknown tool still allowed
+    ok 2 - main tier: unknown tool still allowed
+      ---
+      duration_ms: 0.140962
+      ...
+    # Subtest: subagent: read_file allowed
+    ok 3 - subagent: read_file allowed
+      ---
+      duration_ms: 0.10511
+      ...
+    # Subtest: subagent: task blocked (no recursion)
+    ok 4 - subagent: task blocked (no recursion)
+      ---
+      duration_ms: 0.205811
+      ...
+    # Subtest: coordinator: task allowed (only tool)
+    ok 5 - coordinator: task allowed (only tool)
+      ---
+      duration_ms: 0.103601
+      ...
+    # Subtest: coordinator: read_file blocked
+    ok 6 - coordinator: read_file blocked
+      ---
+      duration_ms: 0.156408
+      ...
+    1..6
+ok 112 - checkToolPermission — tier checks (no toolSpecs)
+  ---
+  duration_ms: 3.64812
+  type: 'suite'
+  ...
+# Subtest: checkToolPermission — risk-level checks (with toolSpecs)
+    # Subtest: low risk: always allowed
+    ok 1 - low risk: always allowed
+      ---
+      duration_ms: 0.247712
+      ...
+    # Subtest: medium risk: allowed with audit reason
+    ok 2 - medium risk: allowed with audit reason
+      ---
+      duration_ms: 0.114668
+      ...
+    # Subtest: high risk: blocked (approval required)
+    ok 3 - high risk: blocked (approval required)
+      ---
+      duration_ms: 0.146773
+      ...
+    # Subtest: critical risk: blocked (denied no override)
+    ok 4 - critical risk: blocked (denied no override)
+      ---
+      duration_ms: 0.162971
+      ...
+    # Subtest: tool not in specs: tier-only check, no risk eval
+    ok 5 - tool not in specs: tier-only check, no risk eval
+      ---
+      duration_ms: 0.122431
+      ...
+    # Subtest: empty toolSpecs array: same as no specs
+    ok 6 - empty toolSpecs array: same as no specs
+      ---
+      duration_ms: 0.230717
+      ...
+    # Subtest: subagent + high risk: tier wins (task blocked before risk check)
+    ok 7 - subagent + high risk: tier wins (task blocked before risk check)
+      ---
+      duration_ms: 0.11009
+      ...
+    1..7
+ok 113 - checkToolPermission — risk-level checks (with toolSpecs)
+  ---
+  duration_ms: 1.950454
+  type: 'suite'
+  ...
+# Subtest: createToolGater — factory
+    # Subtest: bound gater with mixed specs blocks high risk tools
+    ok 1 - bound gater with mixed specs blocks high risk tools
+      ---
+      duration_ms: 0.228354
+      ...
+    # Subtest: bound gater allows low risk tools
+    ok 2 - bound gater allows low risk tools
+      ---
+      duration_ms: 0.114127
+      ...
+    # Subtest: bound gater with no specs: tier-only check
+    ok 3 - bound gater with no specs: tier-only check
+      ---
+      duration_ms: 0.128812
+      ...
+    # Subtest: bound gater with no specs: main always allows
+    ok 4 - bound gater with no specs: main always allows
+      ---
+      duration_ms: 0.115764
+      ...
+    # Subtest: bound gater respects tier before specs
+    ok 5 - bound gater respects tier before specs
+      ---
+      duration_ms: 0.282212
+      ...
+    1..5
+ok 114 - createToolGater — factory
+  ---
+  duration_ms: 1.417598
+  type: 'suite'
+  ...
+# Subtest: summarizeGater
+    # Subtest: empty specs: zero tools
+    ok 1 - empty specs: zero tools
+      ---
+      duration_ms: 0.847452
+      ...
+    # Subtest: undefined specs: zero tools
+    ok 2 - undefined specs: zero tools
+      ---
+      duration_ms: 0.128258
+      ...
+    # Subtest: mixed risk levels: correct buckets
+    ok 3 - mixed risk levels: correct buckets
+      ---
+      duration_ms: 0.295497
+      ...
+    # Subtest: all low risk tools
+    ok 4 - all low risk tools
+      ---
+      duration_ms: 0.14278
+      ...
+    1..4
+ok 115 - summarizeGater
+  ---
+  duration_ms: 1.820256
+  type: 'suite'
+  ...
+# Subtest: backward compatibility
+    # Subtest: no toolSpecs: behaves like original canUseTool
+    ok 1 - no toolSpecs: behaves like original canUseTool
+      ---
+      duration_ms: 0.306683
+      ...
+    1..1
+ok 116 - backward compatibility
+  ---
+  duration_ms: 0.510197
+  type: 'suite'
+  ...
+# Subtest: edge cases
+    # Subtest: undefined toolSpecs: tier check only (read_file allowed at subagent)
+    ok 1 - undefined toolSpecs: tier check only (read_file allowed at subagent)
+      ---
+      duration_ms: 0.193906
+      ...
+    # Subtest: high risk tool allowed when not in spec list
+    ok 2 - high risk tool allowed when not in spec list
+      ---
+      duration_ms: 0.115021
+      ...
+    # Subtest: tool spec with requires_approval=true but low risk: still allowed
+    ok 3 - tool spec with requires_approval=true but low risk: still allowed
+      ---
+      duration_ms: 0.149699
+      ...
+    # Subtest: tool spec with requires_approval=false but high risk: still blocked
+    ok 4 - tool spec with requires_approval=false but high risk: still blocked
+      ---
+      duration_ms: 0.164889
+      ...
+    1..4
+ok 117 - edge cases
+  ---
+  duration_ms: 0.967848
+  type: 'suite'
+  ...
+1..117
+# tests 497
+# suites 129
+# pass 494
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 40380.97856

@@ -5,7 +5,7 @@
   "source": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md §一批C；rmc-TriRMC.md P0-1/P0-2",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-27",
   "executor": "TriMMC 编排会话（GLM glm-5.3，sg 侧新建 TriRMC 检出执行）",
   "repo": "/srv/fleet/TriRMC（若 sg 本机无检出，先 git clone https://github.com/MoRen9527/TriRMC.git /srv/fleet/TriRMC 并 checkout dev）",
@@ -13,13 +13,13 @@
     {
       "nodeId": "PC-1",
       "agent": "FullStackDeveloper",
-      "status": "pending",
+      "status": "done",
       "action": "修 P0-1 runAs 提权面（command-handler.ts:85）：runAs 值白名单校验（仅允许配置文件显式声明的主体，缺省即拒绝任意用户名）；修 P0-2 internal 鉴权 fail-open（app.ts:121-122）：TRIRMC_INTERNAL_TOKEN 未配置时直接拒绝服务启动或拒绝全部 /internal 路由（fail-closed），不得维持放行"
     },
     {
       "nodeId": "PC-T",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "门禁回归：为两项修复各写复现测试（未带 token 的 /internal 请求必须 401；runAs=fleet 外的用户必须被拒）；npm test 不新增失败；tsc clean。验证记录落本树 reports/verify.md，翻转节点与树顶层 status=done 后 push（remote origin=GitHub dev，fleet 克隆回拉部署另行走验收环节不在本树内）"
     }
   ],
