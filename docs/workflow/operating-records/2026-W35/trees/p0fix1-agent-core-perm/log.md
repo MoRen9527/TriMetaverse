@@ -109,3 +109,20 @@ TM cwd 内 git/Read/Glob/Grep 全通；Bash 工具跨仓全封维持。
 | P0-4 | spawn.ts:31-39 loopOptions + loop.ts:346 | 无 permissionMode/permissionRules/cwd 透传；仍 `?? 'bypassPermissions'` 兜底 |
 
 **superseded 否定**：授权侧推进与本树四个 P0 无关，修复标的全部缺位，无替代完成口径。
+
+## 裁定（红线3，连续第三 tick）
+
+**blocked，零派工，停**。三项独立事实共同定谳：
+
+1. **执行墙未变**——TriCompany 仓 Bash/git/npm 通道四式重测全拒（报错明示 allowed working directories 仅 TriMetaverse），PA-1/PA-2 的「原子即提交」与 PB-T 的 npm test/tsc --noEmit 执行前提依旧整体不可达；
+2. **派工层自身亦不可执行（本 tick 新增独立证据）**——FullStackDeveloper 与 TestEngineer 五件套工具面均 `[Read, Glob, Edit]` 无 Bash，即使会话墙解除，节点所需的 git 提交与门禁测试在派工层仍断裂=双层阻塞非单点问题；
+3. **superseded 排查再否定**——TC 虽于两 tick 间又被授权侧推进至 a22a9cdf，四处 P0 签名工作树 Read 对照逐字原样，不存在「上游已完成修复」的替代完成口径，本树任务仍然有效且仍然不可执行。
+
+三节点全部 pending 维持、顶层 status=active 维持（不臆造 done）。刻意不做「只改文件不提交」降级执行的裁定与前两 tick 一致：未经 commit 的脏工作树在树纪律中不计进度（只认已 commit 进度），且会给共享仓 heyuan 同源线留下无账可查突变。**修复路径留授权侧**：为本编排会话放行 TriCompany 仓 Bash/git/npm 通道 **且** 为 FullStackDeveloper/TestEngineer 增补 Bash 工具面（或改由具备该仓完整执行权的载体承接本树），两者缺一即维持 blocked；简报管线随后续 tick 重发。
+
+## 动作序列（tick 20260827T024800Z）
+
+| # | 时刻(Z) | 动作 | commit |
+| --- | --- | --- | --- |
+| 1 | 02:53 | 骨架落盘（双仓基线+墙四式重测全拒+派工角色工具面核验+superseded 排查再否定三节） | 8cbcd0c4 |
+| 2 | 02:55 | blocked 裁定终值（本节+state.json 节点 verdictNote/commits/mode 终值） | （本提交） |
