@@ -1,0 +1,241 @@
+TAP version 13
+# ◇ injected env (0) from ../TriMetaverse/docs/workflow/operating-records/2026-W35/trees/p0fix4-trimodel-stream/reports/sandbox/.env // tip: ⌘ enable debugging { debug: true }
+# ◇ injected env (0) from ../TriMetaverse/docs/workflow/operating-records/2026-W35/trees/p0fix4-trimodel-stream/reports/.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# ◇ injected env (0) from ../TriMetaverse/docs/workflow/operating-records/2026-W35/trees/p0fix4-trimodel-stream/.env // tip: ⌘ suppress logs { quiet: true }
+# [trimodel-client][dbg] chat model=deepseek-chat depth=0 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] chat model=deepseek-chat depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-chat failed (depth=0), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] chat model=unknown-model depth=0 msgs=1 lastRole=user known=false
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=0), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-flash failed (depth=1), trying deepseek-v4-pro
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=2 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=2), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=3 msgs=1 lastRole=user known=true
+# [anthropic-provider][dbg] outbound: claude-sonnet-4-20250514 [{"role":"user","contentType":"string"}]
+# Subtest: DeepSeekProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 42.13235
+      ...
+    # Subtest: should handle deepseek-reasoner model
+    ok 2 - should handle deepseek-reasoner model
+      ---
+      duration_ms: 1.035789
+      ...
+    1..2
+ok 1 - DeepSeekProvider
+  ---
+  duration_ms: 46.522521
+  type: 'suite'
+  ...
+# Subtest: ModelClient
+    # Subtest: should list available models
+    ok 1 - should list available models
+      ---
+      duration_ms: 0.956587
+      ...
+    # Subtest: should route chat request to correct provider
+    ok 2 - should route chat request to correct provider
+      ---
+      duration_ms: 1.182049
+      ...
+    # Subtest: should fallback from deepseek-chat to deepseek-v4-flash
+    ok 3 - should fallback from deepseek-chat to deepseek-v4-flash
+      ---
+      duration_ms: 1.589874
+      ...
+    # Subtest: should throw for unknown model
+    ok 4 - should throw for unknown model
+      ---
+      duration_ms: 0.943695
+      ...
+    # Subtest: should list Anthropic models when anthropicApiKey is set
+    ok 5 - should list Anthropic models when anthropicApiKey is set
+      ---
+      duration_ms: 0.216895
+      ...
+    # Subtest: should list OpenAI models when openaiApiKey is set
+    ok 6 - should list OpenAI models when openaiApiKey is set
+      ---
+      duration_ms: 0.175589
+      ...
+    # Subtest: should not include Anthropic models without anthropicApiKey
+    ok 7 - should not include Anthropic models without anthropicApiKey
+      ---
+      duration_ms: 0.391924
+      ...
+    # Subtest: should respect fallback depth limit (max 2 hops)
+    ok 8 - should respect fallback depth limit (max 2 hops)
+      ---
+      duration_ms: 2.116459
+      ...
+    # Subtest: should have bounded fallback ring (v4-pro <-> v4-flash stops at depth limit)
+    ok 9 - should have bounded fallback ring (v4-pro <-> v4-flash stops at depth limit)
+      ---
+      duration_ms: 0.869375
+      ...
+    1..9
+ok 2 - ModelClient
+  ---
+  duration_ms: 13.468792
+  type: 'suite'
+  ...
+# Subtest: AnthropicProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 3.666028
+      ...
+    1..1
+ok 3 - AnthropicProvider
+  ---
+  duration_ms: 4.482855
+  type: 'suite'
+  ...
+# Subtest: OpenAIProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 1.314724
+      ...
+    1..1
+ok 4 - OpenAIProvider
+  ---
+  duration_ms: 1.812688
+  type: 'suite'
+  ...
+# Subtest: Streaming
+    # Subtest: should stream from DeepSeekAnthropicProvider with SSE parsing
+    ok 1 - should stream from DeepSeekAnthropicProvider with SSE parsing
+      ---
+      duration_ms: 33.438132
+      ...
+    1..1
+ok 5 - Streaming
+  ---
+  duration_ms: 34.350614
+  type: 'suite'
+  ...
+# Subtest: readConfig
+    # Subtest: should return defaults when no env vars set
+    ok 1 - should return defaults when no env vars set
+      ---
+      duration_ms: 0.337816
+      ...
+    1..1
+ok 6 - readConfig
+  ---
+  duration_ms: 1.079636
+  type: 'suite'
+  ...
+# [trimodel-client][dbg] STREAM model=deepseek-chat depth=0 msgs=1 known=true
+# [trimodel-client][dbg] STREAM model=deepseek-chat depth=0 msgs=1 known=true
+# [trimodel] deepseek-chat failed (depth=0), trying stream fallback deepseek-v4-flash
+# [trimodel-client][dbg] STREAM model=deepseek-v4-flash depth=1 msgs=1 known=true
+# [trimodel-client][dbg] STREAM model=tmv-deepseek-reasoner depth=0 msgs=1 known=true
+# [trimodel-client][dbg] STREAM model=tmv-deepseek-reasoner depth=0 msgs=1 known=true
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=0), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-flash failed (depth=1), trying deepseek-v4-pro
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=2 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=2), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=3 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] STREAM model=deepseek-chat depth=0 msgs=1 known=true
+# Subtest: P0-1 stream fallback 对抗守护（PE-T 沙箱）
+    # Subtest: g1 [已发>=1 x 有fallback] 中途错拒拼接：前缀全 A、抛 StreamAbortedError、cause 同实例、fetch 恰 1 次
+    ok 1 - g1 [已发>=1 x 有fallback] 中途错拒拼接：前缀全 A、抛 StreamAbortedError、cause 同实例、fetch 恰 1 次
+      ---
+      duration_ms: 75.96477
+      ...
+    # Subtest: g2 [首事件前 x 有fallback] 整体成功完成、全部事件来自 B、零 A 残留、fetch>=2
+    ok 2 - g2 [首事件前 x 有fallback] 整体成功完成、全部事件来自 B、零 A 残留、fetch>=2
+      ---
+      duration_ms: 5.077188
+      ...
+    # Subtest: g3 [已发>=1 x 无fallback(tmvr)] 统一包装口径：仍抛 StreamAbortedError、cause 在案、不重拨
+    ok 3 - g3 [已发>=1 x 无fallback(tmvr)] 统一包装口径：仍抛 StreamAbortedError、cause 在案、不重拨
+      ---
+      duration_ms: 3.196675
+      ...
+    # Subtest: g4 [首事件前 x 无fallback] 原错误原样透传：name 非 StreamAbortedError、零事件外泄、单拨号
+    ok 4 - g4 [首事件前 x 无fallback] 原错误原样透传：name 非 StreamAbortedError、零事件外泄、单拨号
+      ---
+      duration_ms: 3.822279
+      ...
+    # Subtest: g5 StreamAbortedError 单元直测：name/message/cause 三属性逐项成立
+    ok 5 - g5 StreamAbortedError 单元直测：name/message/cause 三属性逐项成立
+      ---
+      duration_ms: 0.304839
+      ...
+    # Subtest: g6 深度上限回归钉：全 provider 恒 503 时 chat(v4-pro) 仍拒 /All fallback models exhausted/
+    ok 6 - g6 深度上限回归钉：全 provider 恒 503 时 chat(v4-pro) 仍拒 /All fallback models exhausted/
+      ---
+      duration_ms: 4.72749
+      ...
+    # Subtest: g7 [补充回归钉] 修复不破常规：无失败正常流照常收尾、全 A 标记、单拨号
+    ok 7 - g7 [补充回归钉] 修复不破常规：无失败正常流照常收尾、全 A 标记、单拨号
+      ---
+      duration_ms: 2.442742
+      ...
+    1..7
+ok 7 - P0-1 stream fallback 对抗守护（PE-T 沙箱）
+  ---
+  duration_ms: 100.083569
+  type: 'suite'
+  ...
+# Subtest: UsageAccumulator
+    # Subtest: should accumulate a single response
+    ok 1 - should accumulate a single response
+      ---
+      duration_ms: 1.029797
+      ...
+    # Subtest: should accumulate multiple responses
+    ok 2 - should accumulate multiple responses
+      ---
+      duration_ms: 0.199825
+      ...
+    # Subtest: should track usage by model
+    ok 3 - should track usage by model
+      ---
+      duration_ms: 0.190637
+      ...
+    # Subtest: should detect partial (zero-filled) usage
+    ok 4 - should detect partial (zero-filled) usage
+      ---
+      duration_ms: 0.263499
+      ...
+    # Subtest: should reset to empty state
+    ok 5 - should reset to empty state
+      ---
+      duration_ms: 0.176687
+      ...
+    # Subtest: should handle reasoning_tokens when present
+    ok 6 - should handle reasoning_tokens when present
+      ---
+      duration_ms: 0.168458
+      ...
+    # Subtest: should not mark partial when usage is non-zero
+    ok 7 - should not mark partial when usage is non-zero
+      ---
+      duration_ms: 0.138437
+      ...
+    1..7
+ok 8 - UsageAccumulator
+  ---
+  duration_ms: 4.829909
+  type: 'suite'
+  ...
+1..8
+# tests 29
+# suites 8
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 643.312751
