@@ -134,3 +134,20 @@ CAMPAIGN-SNAPSHOT-ROOT: 40ee6f8ce950ad024e82b69309cede0b8b0cfee2cf9ab17ff26d1baf
 2. trilc-lineage-merge 本地窗口执行（28 提交甄别）
 3. CEO 控制台：吊销旧共享 key（255dc140…/bef0e848…）
 4. sg TriCompany 同源治理线：从真源向 TriRMC 拷贝重出（其 P0-3 收口尾注既定路线）
+
+### 4.5 验收窗口回执（2026-08-28 00:1x 北京时间，CEO 授权开窗）
+
+heyuan 生产四仓全部归一至统一 dev 线：
+
+| 仓 | 执行前 | 执行后 |
+| --- | --- | --- |
+| TriLC | tc001-canonical@ba32bc7，dirty=1 | **dev@ff2f970**，重建含 runHarnessAgentLoop+节点报告时代 |
+| TriModel | dev@62a9f12，dirty=17（tar 陈旧覆盖层） | **dev@30a671e**，重置后零脏（逐文件等值裁定后弃层，裁定记录见窗口日志） |
+| TriRMC | dev@671b4d4 | **dev@f09b633**（rmc_tick x-internal-token 头适配，单一真源读 TriLC/.env） |
+| TriCompany | dev@1e59f9c | **dev@6a6847e**（含卷封制/节点报告立法+agent-core p0fix1 修复重建） |
+
+**验证组**：healthz 公开门 ✓｜无头 401（fail-closed 活体）✓｜带头 WINDOW-OK（GLM flash 全链）✓｜rmc_tick dry-run 通且平面同步后 actionable=[] ✓
+
+**新配 token**：TRILC_INTERNAL_TOKEN 已入 heyuan .env（600/fleet）；rmc_tick 无需配置自动同源读取。
+
+**移交清单结余**：~~heyuan trilc 升级~~✅ / ~~切 dev 线~~✅ / ~~TriModel 镜像~~✅ / ~~TriRMC 拉取~~✅；余=CEO 吊销旧 key 两把 + 本机 TriLC daemon 升级时同法配 token（现役旧构建不受影响）。
