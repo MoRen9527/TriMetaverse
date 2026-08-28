@@ -63,8 +63,10 @@
     "493bbbeb（本地 248ae69a 经 watcher pull --rebase 重放上权威线）",
     "d2d36daa（并行线裁定 a 七树收口）",
     "1e00d091（并行线里程碑 18 双稿合稿定稿登记）",
-    "cdfae3a2（V1 收账）"
+    "cdfae3a2（V1 收账）",
+    "ae02968f（C1 收口/红线4）"
   ],
+  "pushTranscript": "origin dev：3c7ad7d5..ae02968f fast-forward 一次过（2026-08-28T20:45Z 实测；连带并行线 d2d36daa/1e00d091 上权威线）；github dev：fatal could not read Username for 'https://github.com'（凭据墙前科复现）→残差移交授权侧",
   "updatedAt": "2026-08-28T20:44:00Z",
   "closedAtSg": "2026-08-28T20:44:00Z（本 tick sg 执行线收口；并行线 closedAt=2026-08-29T04:20:26+08 在上，两者并存互不改写）",
   "closeNoteSg": "sg 执行线收口（tick 20260828T193147Z）：W1 真写 428 行→V1 真核验 PASS 零实质错误→C1 APPROVE（doneCondition 三腿达成，三端分端如实）；产物经并行线归一合稿 788 行 @ TC bare 190212a（目标路径逐字同）达成入库腿；本 tick 三节点报告九键齐+双门 PASS 3/3（补齐并行线裁定 a『未跑双门』偏离的 sg 侧）；残差五项（散稿 rm 越墙被拒/TC 检出落后 bare/GitHub 两端/合稿行号漂移/逐行 diff 未执行）移交断点交接清单",
