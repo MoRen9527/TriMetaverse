@@ -87,3 +87,31 @@ CEO 追问触发：六实例同段异构（登记段四种载体），runId 字�
 ## 八、ADE 概念退役记录（2026-08-28，v2.0.0 架构重构）
 
 CEO 裁定"没有 ADE 了"：FADE（Full-cycle Agentic Deterministic Execution）升为协议本体（泛化层=段合同+不变量+实现绑定），FADE-XXX 为协议实例的具体实现。本文件 §五 回填动作表中的 ade-pattern-spec 引用已迁移至 fade-protocol-spec.md（旧路径留重定向桩）；§三 七强制件的"协议/实例"分层表述以 spec §一 分层总纲为准。
+
+## 九、正面样板走查：FADE-006 十段实跑对照（2026-08-28）
+
+> 与 FADE-003 兼容档降档走查（登记册 FADE-003 条目降档标注，2026-08-28）构成**正反样本对**——003 证伪"没有真实工件也能算 FADE"，006 证明"逐段可指 hash"的实然形态。
+
+**标本**：trilc-lineage-merge run（卷封制首试点，FADE-006 管线延续运行中工件最完整的一次单树生命周期）。
+
+| 段 | 实际发生 | 工件锚 |
+| --- | --- | --- |
+| ⓪ 前置输入：任务说明书 | p0-fix-and-trilc-merge-plan.md（含 §二 合并方案与门禁）→ 程序化投送 push 双远端 | 封卷 hash `ffaf8935…` |
+| ① 事件触发 | CEO 开窗令 → 编排层接收（local-executable 树：CEO=触发权威） | 会话指令留痕 |
+| ② 登记 | 树文件 W35 平面预注册；**封卷** sourceMaterials ×2（raw+LF 双 hash） | sourceMaterials 字段，verify=0 |
+| ③ Qualify | 双门：机械门=卷封验卷（verify=0 先于开工）；语义门=CEO 开窗授权 | seal-materials verify 输出 |
+| ④ Plan Skill（实例化点） | 协议落为本实例方案：甄别规则（27 留/1 弃）+ 门禁定义（tsc 清 + 585/1 基线）+ 试卷要素 | 计划文档 §二 |
+| ⑤ DCE | TM-1：三线盘点→甄别→backup→integrate 起线→cherry-pick 27（1 冲突并集解）→全落位 | 27 重放提交（agent-carried 降级合同：先写后报+原子提交） |
+| ⑥ Verify CLI | node-report-check 首战 FAIL 0/2→机读核心增补→**PASS 2/2**；tsc 全清+npm 585/1 | 校验器退出码 0，弧线如实 |
+| ⑦ Score CLI | 增评确定性检查：必选 6/6 逐项有工件、两项重计证据链齐（§9.3(a) 工件+verify+校验器日志） | 增评卷 coverage 部分 |
+| ⑧ Score Skill | 两项重计：卷封 5/8→8/8（双分支闭环）、节点报告 3/8→7/8（格式代差如实扣 1）；逐项 evidence_ref | score-rereview-2026-08-28.json |
+| ⑨ Close Skill | 收口裁决：封卷后合法漂移 → §9.3(a) 二选一裁决真实触发（豁免+重封，非静默放过） | tree notes 裁决记录 |
+| ⑩ Close CLI | 顶层 done commit `c6f969de` 双远端；增评卷宗落册；retrospective 定级记录 | `c6f969de`/`355d24fe` |
+| 终态 | **APPROVED**（done+增评 91 PASS） | 登记册双行制（首评 80 冻结/增评 91） |
+
+**标本价值**：003 走查十段中四处 ✗◐（无真实工件可指）；本表十段全部**实然可指**（commit 或 hash）——§1.1"逐段指到真实工件，缺段即降档，不允许口头宣称"的字面执行样本。
+
+**三处诚实边界（下一实例改进输入）**：
+1. ②登记层弱化：local-executable 树不走 tick，运行标识=「treeId+执行会话」组合——段-实现映射表三字段（段名/载体/不变量证据）应声明而未声明，为首行待填（§2.8 细则 2）；
+2. ④⑦⑧试卷回溯：增评卷系收口后按 §2.6 重建（91 分如实），"Plan 时点声明试卷"的理想序未走全——细则 10 教训在评分层同样适用；
+3. ⑩单 run root 未算：战役级 Merkle root 为八树快照，本树独立 run root 未单独产出——FADE-007 探索期可顺带补（run root=单树收口完整性基线）。
