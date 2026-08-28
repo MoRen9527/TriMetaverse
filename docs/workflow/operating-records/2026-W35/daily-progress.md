@@ -50,3 +50,6 @@
 - 巡检兜底补写 @00:00 +08：自上次进度提交 c9770a36 后新增 1 条 commit：
   - caeec035 docs(fade-003): 升档完整档联审方案包——董事长助理备料（score --run 子命令设计：S1-S7 确定性检查对照周记 spec 逐条+§2.2 envelope/评分合同 80+20=100 双门槛 80 提案；Score Skill 四维度 W1-W4+evidence_ref+首 3 run 双席抽验；RETRY 状态机=score FAIL→close retry→append --revision 同 runId 重评；词表升四态 approved|escalated|retry|frozen 大小写归一，存量 2 行历史冻结不溯及；试卷 T1-T8 冻结时点=载体定版同盘提案；触发自动化不阻塞如实标注；正典链零改动 score 追加段+单实现；排期 D0+1 至达标备案）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 1fac24e1 后新增 1 条 commit：
+  - a9c6a143 ops(plane): 7 篇 FADE 深度教程树注册——FADE-006 标准管线（任务说明书→挂平面→sg 小贾拆树执行），小吴执笔+事实核验双节点
+- registry：v2.1；今日 registry 提交 1 条：9393893 docs(registry): FADE-003 升档完整档——score 全链首评 98/100（runId 7a85e3e0，卷 5220091c 双 hash 载体定版同盘）+兼容档标注撤销（v2.0.2 降档标注保留为历史档案）+升档路线五项销账（触发自动化维持增强项）+②表补 Score 双段行+Close/终态行三态化+spec v1.1 引用（LG-013）
