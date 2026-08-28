@@ -24,6 +24,7 @@
 - LG-006 TriModel 多模型额度接力立项（设计+实现待排期）
 - LG-007 FADE-003 裁决词表升四态（下次周检）+ FADE-003 降档兼容档待补课（Score 双段等五项）
 - LG-010 agent-core 加载层补齐（R 面能力门禁线，宿主治理面全盲修复）
+- LG-012 TriMC cron CLI 补 X-Internal-Token 头（董事会裁定建账，待 TriMC 侧工程窗）
 - 旧 key 255dc140 保留（额度接力候选）；TriPilot 0.0.12 来源甄别通过（a23d2a0 已推）
 
 **恢复指针**：
