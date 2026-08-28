@@ -1,0 +1,35 @@
+{
+  "treeId": "fade-tutorial-003-deep",
+  "title": "FADE-003 共学周记深度教程",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "status": "active",
+  "created": "2026-08-28",
+  "week": "W35",
+  "spec": "fade-registry FADE-003 升完整档条目（98/100 首评最高分）+ journal-cli.mjs（17649d7d：score/RETRY/三态）+ fade-003-upgrade-review.md 升档弧线",
+  "nodes": [
+    {
+      "nodeId": "W1",
+      "agent": "RAndDTrainer",
+      "status": "pending",
+      "action": "撰写 TriCompany/docs/training/fade-003-journal-deep-dive.md：FADE-003 共学周记深度教程。①journal-cli 五子命令逐个拆解（begin/qualify/append/close/score，file:line 到 journal-cli.mjs）②score 子命令 S1-S7 逐检查项拆解（含 W4 双判问/entryNo+title 定位/S5 QUALIFIED 入链强化/S7 守恒基线非本 run 条目零变化+revision 授权域）③RETRY 状态机全图（score FAIL→close retry→revision→score 重跑→PASS→close APPROVED；S7 自斥缺陷与修复弧线）④词表三态（FROZEN 留口理由：语义偏移+纸面态纪律）⑤升档弧线全录（80 卡线→降档兼容→score 落地→98/100 首评最高分——元叙事：评分体系第一个真实 run 评的就是其自身教训）。深度基线 >400 行。"
+    },
+    {
+      "nodeId": "V1",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "事实核验 fade-003-journal-deep-dive.md：file:line 对照 journal-cli.mjs 现行代码（17649d7d 版）/98 分与 fade-papers/FADE-003-* 卷宗对照/升档弧线与 git log 对照/深度 ≥400 行/核验报告落同目录。"
+    },
+    {
+      "nodeId": "C1",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
+    }
+  ],
+  "doneCondition": "三节点 done：教程入库+核验零错误+三端已推",
+  "notes": [
+    "任务说明书=本文件 action 字段（FADE-006 标准管线：说明书→挂平面→sg 小贾拆树执行）",
+    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写"
+  ]
+}

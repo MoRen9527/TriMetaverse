@@ -1,0 +1,35 @@
+{
+  "treeId": "fade-tutorial-001-deep",
+  "title": "FADE-001 周平面维护深度教程",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "status": "active",
+  "created": "2026-08-28",
+  "week": "W35",
+  "spec": "fade-registry FADE-001 扩维条目 + daily_progress_patrol.py + daily-progress.md + D-03 v2/v3",
+  "nodes": [
+    {
+      "nodeId": "W1",
+      "agent": "RAndDTrainer",
+      "status": "pending",
+      "action": "撰写 TriCompany/docs/training/fade-001-maintenance-deep-dive.md：FADE-001 周平面维护深度教程。①协议十段逐段在本实例的落地形态（事件触发=cron→事件驱动演进/登记=日期锚+git 三端/Qualify=ledger mtime+commits 变化机械门/Plan=三节结构静态固化/DCE=patrol 确定性收集+事件驱动双写/Verify=回读四查/Score=--score shadow→gate 两阶段/Close=确认+push 即终态→收口登记载体演进）②patrol 巡检三跳弧线逐跳拆解（20:10 首跳真实触发/20:20 同秒缺陷实测抓出/20:30 拓扑门限修复——file:line 到 daily_progress_patrol.py）③shadow→gate 评分接线设计与 FADE-007 E-3 对照④事件驱动+10min 兜底节奏架构图⑤与 D-03 v2/v3、D-02 纪律关联。深度基线 >400 行；commit/hash 与仓库实证一致。"
+    },
+    {
+      "nodeId": "V1",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "事实核验 fade-001-maintenance-deep-dive.md：①教程引用的每个 file:line 与仓库现行代码比对 ②每个 commit hash 用 git log 验证 ③评分数字（90/80/85）与 fade-papers/FADE-001-paper*.json 对照 ④深度 wc -l ≥400 ⑤错误逐条列出，核验报告落同目录 reports/。"
+    },
+    {
+      "nodeId": "C1",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
+    }
+  ],
+  "doneCondition": "三节点 done：教程入库 TriCompany/docs/training/ + 事实核验零错误 + 三端已推",
+  "notes": [
+    "任务说明书=本文件 action 字段（FADE-006 标准管线：说明书→挂平面→sg 小贾拆树执行）",
+    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写"
+  ]
+}

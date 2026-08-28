@@ -1,0 +1,35 @@
+{
+  "treeId": "fade-tutorial-005-deep",
+  "title": "FADE-005 号深度解读（roster-gating 规范+并入沿革）",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "status": "active",
+  "created": "2026-08-28",
+  "week": "W35",
+  "spec": "fade-005-roster-gating-spec.md 独立规范 + fade-registry FADE-004 条目（并入沿革）+ ade-consolidation-proposal.md",
+  "nodes": [
+    {
+      "nodeId": "W1",
+      "agent": "RAndDTrainer",
+      "status": "pending",
+      "action": "撰写 TriCompany/docs/training/fade-005-roster-gating-deep-dive.md：FADE-005 号深度解读。①fade-005-roster-gating-spec.md 逐条解读（三处门禁/非在岗语义/兼容性表）②编号勘误史（为何无独立 FADE-005 登记——ADE-B 扩容整合定调）③并入 FADE-004 后的 roster.active 门禁与员工域的关系④roster-gating 在 TriLC staffing.ts 的实现映射。深度基线 >350 行。"
+    },
+    {
+      "nodeId": "V1",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "事实核验 fade-005-roster-gating-deep-dive.md：file:line 对照 staffing.ts/gate 相关代码/深度 ≥350 行/核验报告落同目录。"
+    },
+    {
+      "nodeId": "C1",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
+    }
+  ],
+  "doneCondition": "三节点 done：教程入库+核验零错误+三端已推",
+  "notes": [
+    "任务说明书=本文件 action 字段（FADE-006 标准管线：说明书→挂平面→sg 小贾拆树执行）",
+    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "treeId": "fade-tutorial-007-deep",
+  "title": "FADE-007 蓄水池深度教程",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "status": "active",
+  "created": "2026-08-28",
+  "week": "W35",
+  "spec": "fade-007-context-reservoir-spec.md（探索期→兼容档：S1-S3 场景/E-1 E-2 演练/五源恢复配方）+ 工具族五件 + board-journal/ledger-mirror",
+  "nodes": [
+    {
+      "nodeId": "W1",
+      "agent": "RAndDTrainer",
+      "status": "pending",
+      "action": "撰写 TriCompany/docs/training/fade-007-reservoir-deep-dive.md：FADE-007 蓄水池深度教程。①蓄水池隐喻逐角色拆解（蓄水池=董事会/闹钟+记事本=董事会/河水水位=中枢上下文）②流程 A 受控压缩五步/流程 B 清空过渡六步逐步拆解③五源恢复配方逐步拆解（CLAUDE.md 分权制节/board-journal/ledger-mirror/full 基线/协议规范——每源各含什么、恢复时各怎么用）④S1-S3 故障场景枚举与演练证据（E-1 寻址 49s/E-2 五源重建零背景复述全对）⑤工具族五件逐件拆解（seal-materials 双 hash+SOFT-DRIFT/node-report-check 九键+三态/run-root v2 append-only/_fadehash canonical/hub-snapshot-diff 一具两段）⑥细则 10 判例×4 全弧线。深度基线 >400 行。"
+    },
+    {
+      "nodeId": "V1",
+      "agent": "TestEngineer",
+      "status": "pending",
+      "action": "事实核验 fade-007-reservoir-deep-dive.md：file:line 对照工具族五件现行代码/E-1 E-2 演练记录对照/深度 ≥400 行/核验报告落同目录。"
+    },
+    {
+      "nodeId": "C1",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
+    }
+  ],
+  "doneCondition": "三节点 done：教程入库+核验零错误+三端已推",
+  "notes": [
+    "任务说明书=本文件 action 字段（FADE-006 标准管线：说明书→挂平面→sg 小贾拆树执行）",
+    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写"
+  ]
+}
