@@ -1,0 +1,40 @@
+{
+  "tick": "20260828T193147Z",
+  "treeId": "fade-tutorial-001-deep",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/fade-tutorial-001-deep/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance",
+    "model": "glm-5.3-flash"
+  },
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260828T193147Z.md",
+  "startedAt": "2026-08-28T19:31:47Z",
+  "surveyedAt": "2026-08-28T19:42:10Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；一次一个节点 fresh 派工禁复用；先写后报（子实例先落盘再报告带路径+行数）；命令裸形式（跨仓 git -C）；翻转前置门 node-report-check.py 双门；收口必做（全节点 done 后顶层 status=done 再提交）",
+  "volumeSeal": {
+    "sourceMaterials": "缺省（tree-op.json 无 sourceMaterials 字段）→ §9.2 验卷与 §9.3 对卷均 N/A，如实记录；任务说明书=tree-op.json action 字段本体，规格材料（fade-registry FADE-001 条目/daily_progress_patrol.py/daily-progress.md/D-03 v2v3）以仓库现行版为事实源，hash/commit/评分数字一律现场取证禁凭记忆"
+  },
+  "baseline": {
+    "headAtStart": "50b3024a2c07b70d1b1e191997134cff6d2160c6",
+    "branchState": "dev 与 origin/dev 同步（status -sb 无 ahead/behind）；工作树 3 处非本树 untracked（p0fix1 .ledger-backfill-tmp.py／p0fix4 reports/sandbox/／tmp-work/）不触碰",
+    "treeStatusAtStart": "active；W1/V1/C1 三节点全 pending",
+    "concurrentWriter": "会话内实测 HEAD 快照 a9c6a143→50b3024a 前移：daily-progress-watcher 2026-08-29 03:40 +08 自动补写 1 条（本教程所记 FADE-001 维护节奏的活体标本，转交 W1 作现场素材）；此后编排层每次 push 前重核 status"
+  },
+  "divisionOfLabor": "派工角色（RAndDTrainer/TestEngineer/TriCompanyCEOChiefOfStaff）工具面=Read/Glob/Edit 无 Bash：先写后报（先落盘再报告带路径+行数）；编排层持 git 提交/push/机械门禁（git log hash 核验/wc -l/hash-object/node-report-check.py）；node 报告内机械门栏由编排层代跑并在收账 commit 回填转录",
+  "triggerChain": {
+    "observed": "session-registry.json ticks 末条 2026-08-28T19:31:47.113602+00:00 tree=fade-tutorial-001-deep rc=spawned pid=1189408 trigger=hook——本会话即该 spawn",
+    "reviewFocus": "hook 快通道触发（push→spawn 时延待测：本树注册 commit a9c6a143 时刻 vs spawn 19:31:47Z）"
+  },
+  "closePlan": {
+    "threeEnds": "TM：本地 commit 链+push origin dev（/srv/git/TriMetaverse.git sg-bare）+github remote 实测（前科无凭据预期 blocked，如 blocked 按红线3 如实移交授权侧）；TC：教程 commit+push origin dev（/srv/git/TriCompany.git sg-bare），TC bare 仓 config --list 实测无 GitHub 镜像 remote=TC 侧 GitHub 端无通道如实记录",
+    "gateOrder": "W1 done 前置门 node-report-check --node W1 → V1 同 → C1 同；编排收口对三节点 --all 复跑（双门）；全 done 后顶层 status=done+收口 commit+push+台账追加"
+  },
+  "nodes": [
+    { "nodeId": "W1", "agent": "RAndDTrainer", "status": "pending" },
+    { "nodeId": "V1", "agent": "TestEngineer", "status": "pending" },
+    { "nodeId": "C1", "agent": "CEOChiefOfStaff→TriCompanyCEOChiefOfStaff（registry 类型映射，如实记录）", "status": "pending" }
+  ],
+  "commits": [],
+  "updatedAt": "2026-08-28T19:42:10Z"
+}
