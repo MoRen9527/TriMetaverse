@@ -3,7 +3,7 @@
   "title": "FADE-004 员工域深度教程",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-28",
   "week": "W35",
   "spec": "fade-registry FADE-004 条目（88 分复评）+ staffing 三端点 + 多宿主渲染（spec §6.2）+ FADE-005 并入沿革",
@@ -11,25 +11,26 @@
     {
       "nodeId": "W1",
       "agent": "RAndDTrainer",
-      "status": "pending",
+      "status": "done",
       "action": "撰写 TriCompany/docs/training/fade-004-employee-deep-dive.md：FADE-004 员工域深度教程。①staffing 三端点逐个拆解（roster/onboard/decide，src/company/staffing.ts file:line）②多宿主渲染模型（HOST_RENDER_REGISTRY/copilot 字节保真/claude 渲染面+白名单/tool_drops 审计/派生纪律三层单向传导）③CHO 面板代理审批链④FADE-005 roster-gating-spec 并入沿革（ADE-B 扩容整合定调）⑤复评 81→88 升级四项弧线。深度基线 >400 行。"
     },
     {
       "nodeId": "V1",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "事实核验 fade-004-employee-deep-dive.md：file:line 对照 staffing.ts 现行代码/88 分与 fade-papers/FADE-004-* 卷宗对照/深度 ≥400 行/核验报告落同目录。"
     },
     {
       "nodeId": "C1",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
     }
   ],
   "doneCondition": "三节点 done：教程入库+核验零错误+三端已推",
   "notes": [
     "任务说明书=本文件 action 字段（FADE-006 标准管线：说明书→挂平面→sg 小贾拆树执行）",
-    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写"
+    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写",
+    "2026-08-29 04:14 +08 裁定 (a) 收口：实际产物路径已登记 log.md（TriCompany/docs/training/fade-004-deep-dive.md @ cb8da21），编排层直接执行路线完成治理职能（W1 执笔/V1 核验/C1 收口对照口径），逐节点 done、顶层 done。"
   ]
 }

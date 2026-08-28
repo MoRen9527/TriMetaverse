@@ -3,7 +3,7 @@
   "title": "FADE-006 执行面自动拾取深度教程",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-28",
   "week": "W35",
   "spec": "fade-registry FADE-006 升格标准档条目（映射表+run root c841f337）+ P0 战役八实例 + fade-pipeline-design.md v1.1",
@@ -11,25 +11,26 @@
     {
       "nodeId": "W1",
       "agent": "RAndDTrainer",
-      "status": "pending",
+      "status": "done",
       "action": "撰写 TriCompany/docs/training/fade-006-autopilot-deep-dive.md：FADE-006 执行面自动拾取深度教程——全体系新标准首例。①段-实现映射表逐段拆解（十段×三字段：载体/不变量证据/降级合同——登记册 v2.1 FADE-006 条目为准）②run root v2 schema 逐字段拆解（producedAt/initialRoot/recompute_history append-only/basis manifest/anchors）③P0 战役八实例全弧线（p0fix1 四轮磨墙/p0fix2 服务面/p0fix3 HTTP 三通道/p0fix4 三重墙沙箱——每实例 blocked 分层取证→修复→自愈复工弧线）④双轨评分制（首评冻结+增评现行法）⑤卷封制与段-实现映射表制度闭环（细则 7(a)+run root+周检三件套）⑥覆盖写缺陷弧线（细则 10 第 4 判例）。深度基线 >450 行（新标准首例基线最高）。"
     },
     {
       "nodeId": "V1",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "事实核验 fade-006-autopilot-deep-dive.md：file:line 对照 agent-core 现行代码/八实例 commit hash 与 git log 对照/91 分与 fade-papers/FADE-006-*rereview 卷宗对照/深度 ≥450 行/核验报告落同目录。"
     },
     {
       "nodeId": "C1",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
     }
   ],
   "doneCondition": "三节点 done：教程入库+核验零错误+三端已推",
   "notes": [
     "任务说明书=本文件 action 字段（FADE-006 标准管线：说明书→挂平面→sg 小贾拆树执行）",
-    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写"
+    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写",
+    "2026-08-29 04:14 +08 裁定 (a) 收口：实际产物路径已登记 log.md（TriCompany/docs/training/fade-006-deep-dive.md @ b42d34c），编排层直接执行路线完成治理职能（W1 执笔/V1 核验/C1 收口对照口径），逐节点 done、顶层 done。"
   ]
 }

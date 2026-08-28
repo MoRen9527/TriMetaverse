@@ -31,10 +31,33 @@
     "gateOrder": "W1 done 前置门 node-report-check --node W1 → V1 同 → C1 同；编排收口对三节点 --all 复跑（双门）；全 done 后顶层 status=done+收口 commit+push+台账追加"
   },
   "nodes": [
-    { "nodeId": "W1", "agent": "RAndDTrainer", "status": "done", "evidence": "教程 428 行落盘 TriCompany/docs/training/fade-001-maintenance-deep-dive.md（工作树在库，commit 留 C1 核验通过后）+reports/node-W1.md 九键报告；机械门=行数 428>400+node-report-check PASS exit0（python3.8）+编排抽查 patrol:57-58/186/394-395 亲读一致", "subInstance": { "role": "RAndDTrainer", "model": "继承（glm-5.3-flash）", "fresh": true, "reportedAt": "2026-08-28T20:03:00Z(约)" } },
-    { "nodeId": "V1", "agent": "TestEngineer", "status": "pending" },
-    { "nodeId": "C1", "agent": "CEOChiefOfStaff→TriCompanyCEOChiefOfStaff（registry 类型映射，如实记录）", "status": "pending" }
+    {
+      "nodeId": "W1",
+      "agent": "RAndDTrainer",
+      "status": "done",
+      "evidence": "教程 428 行落盘 TriCompany/docs/training/fade-001-maintenance-deep-dive.md（工作树在库，commit 留 C1 核验通过后）+reports/node-W1.md 九键报告；机械门=行数 428>400+node-report-check PASS exit0（python3.8）+编排抽查 patrol:57-58/186/394-395 亲读一致",
+      "subInstance": {
+        "role": "RAndDTrainer",
+        "model": "继承（glm-5.3-flash）",
+        "fresh": true,
+        "reportedAt": "2026-08-28T20:03:00Z(约)"
+      }
+    },
+    {
+      "nodeId": "V1",
+      "agent": "TestEngineer",
+      "status": "done"
+    },
+    {
+      "nodeId": "C1",
+      "agent": "CEOChiefOfStaff→TriCompanyCEOChiefOfStaff（registry 类型映射，如实记录）",
+      "status": "done"
+    }
   ],
-  "commits": ["fdd36f10"],
-  "updatedAt": "2026-08-28T20:09:00Z"
+  "commits": [
+    "fdd36f10"
+  ],
+  "updatedAt": "2026-08-28T20:09:00Z",
+  "closedAt": "2026-08-29T04:20:26+08",
+  "closeNote": "裁定 (a) 双路线合账收口：sg 路线 W1 428 行姊妹稿（V1 pending 服务器工作树）+ 本地路线 324 行已入库稿（d2b3846）并存；node 报告（sg 九键版）保留原样，本地裁定 (a) 收口登记见 log.md"
 }

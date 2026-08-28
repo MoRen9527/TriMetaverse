@@ -3,7 +3,7 @@
   "title": "FADE-002 发布域深度教程",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-28",
   "week": "W35",
   "spec": "fade-registry FADE-002 条目（93 分复评）+ envelope v1.0 + source_publish_check.py + 多宿主渲染（spec §6.2）",
@@ -11,25 +11,26 @@
     {
       "nodeId": "W1",
       "agent": "RAndDTrainer",
-      "status": "pending",
+      "status": "done",
       "action": "撰写 TriCompany/docs/training/fade-002-publishing-deep-dive.md：FADE-002 发布域深度教程。①envelope v1.0 合同逐字段拆解（protocol/version/scope/run_id/mode/status/summary 守恒/items 七字段/action 词表——v2.0.0 降格为参考实现的立法弧线）②三 scope（sync/project-docs/publish-agents）逐 scope 流程拆解（source_publish_check.py file:line）③多宿主渲染模型（HOST_RENDER_REGISTRY/copilot 字节保真/claude 渲染面+白名单/tool_drops 审计）④内容归属+跨管线派生校验（v1.2.0 B 族/D 族）⑤复评 93 分的 run-id 核销弧线。深度基线 >400 行。"
     },
     {
       "nodeId": "V1",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "事实核验 fade-002-publishing-deep-dive.md：file:line 对照 source_publish_check.py 现行代码/93 分与 fade-papers/FADE-002-* 卷宗对照/深度 ≥400 行/核验报告落同目录。"
     },
     {
       "nodeId": "C1",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
     }
   ],
   "doneCondition": "三节点 done：教程入库+核验零错误+三端已推",
   "notes": [
     "任务说明书=本文件 action 字段（FADE-006 标准管线：说明书→挂平面→sg 小贾拆树执行）",
-    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写"
+    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写",
+    "2026-08-29 04:14 +08 裁定 (a) 收口：实际产物路径已登记 log.md（TriCompany/docs/training/fade-002-deep-dive.md @ cb8da21），编排层直接执行路线完成治理职能（W1 执笔/V1 核验/C1 收口对照口径），逐节点 done、顶层 done。"
   ]
 }

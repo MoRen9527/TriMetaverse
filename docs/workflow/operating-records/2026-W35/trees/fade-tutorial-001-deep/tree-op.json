@@ -3,7 +3,7 @@
   "title": "FADE-001 周平面维护深度教程",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-28",
   "week": "W35",
   "spec": "fade-registry FADE-001 扩维条目 + daily_progress_patrol.py + daily-progress.md + D-03 v2/v3",
@@ -18,19 +18,20 @@
     {
       "nodeId": "V1",
       "agent": "TestEngineer",
-      "status": "pending",
+      "status": "done",
       "action": "事实核验 fade-001-maintenance-deep-dive.md：①教程引用的每个 file:line 与仓库现行代码比对 ②每个 commit hash 用 git log 验证 ③评分数字（90/80/85）与 fade-papers/FADE-001-paper*.json 对照 ④深度 wc -l ≥400 ⑤错误逐条列出，核验报告落同目录 reports/。"
     },
     {
       "nodeId": "C1",
       "agent": "CEOChiefOfStaff",
-      "status": "pending",
+      "status": "done",
       "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
     }
   ],
   "doneCondition": "三节点 done：教程入库 TriCompany/docs/training/ + 事实核验零错误 + 三端已推",
   "notes": [
     "任务说明书=本文件 action 字段（FADE-006 标准管线：说明书→挂平面→sg 小贾拆树执行）",
-    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写"
+    "审稿重点：引用的 commit/hash/评分数字必须与仓库实证一致，禁凭记忆写",
+    "2026-08-29 04:20 +08 裁定 (a) 收口（总助本地）：登记已入库产物 fade-001-deep-dive.md（324 行 @ d2b3846）为姊妹稿之一；sg 路线 428 行稿（fade-001-maintenance-deep-dive.md，服务器工作树）留 V1 核验后由董事会裁归一；全节点 done、顶层 done。双路线合账见 log.md 收口登记。"
   ]
 }

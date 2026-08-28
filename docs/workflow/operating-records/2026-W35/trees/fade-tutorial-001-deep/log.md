@@ -21,3 +21,13 @@
 | --- | --- | --- | --- |
 | 1 | 19:42 | 开工骨架落盘并提交：state.json + log.md + reports/node-{W1,V1,C1}.md 桩 | fdd36f10（已推 origin） |
 | 2 | 19:52-20:08 | W1 RAndDTrainer fresh 派工（先写后报）：教程 428 行落盘 TriCompany/docs/training/fade-001-maintenance-deep-dive.md（①-⑤全覆盖+影响面回滚章+待核验 4 项如实标注；STUB 残锚编排层清理 431→428）+reports/node-W1.md 九键报告（finishedAt/行数由编排层按自请回填校正）；机械门=428>400+node-report-check PASS exit0+抽查 patrol:57-58/186/394-395 亲读一致 | （本笔收账） |
+
+
+---
+
+## 收口登记（2026-08-29 04:20 +08，总助本地 C1 职能·董事会裁定 (a)）
+
+- 裁定 (a)：log 登记实际产物路径后收口 done。本地路线实际产物=`TriCompany/docs/training/fade-001-deep-dive.md`（324 行，深度基线 319 过）@ TriCompany commit d2b3846（双远端已推）——先于 sg 路线入库，两者为**姊妹教程并存**（sg 勘察同判）。
+- 双稿处置：sg 路线 428 行稿（fade-001-maintenance-deep-dive.md，服务器工作树，V1 核验/C1 入库 pending）与本稿并存，归 V1 核验后由董事会裁归一；本收口只登记已入库产物，不判姊妹稿去留。
+- 治理职能对照（双路线合账）：W1=执笔（sg spawn RAndDTrainer 428 行 + 本地 RAndDTrainer 324 行均已产出）/V1=事实核验（sg 侧机械门 PASS+总助审稿过基线）/C1=收口（本登记+1fac24e1..f6f3091d 链 push 三端）。
+- 节点状态：W1 done（sg 已收账）+ V1/C1 done（裁定 (a)：治理职能由双路线实际完成）。
