@@ -1,3 +1,5 @@
+<!-- GOVERNANCE: 本文件真源在 TriCompany/docs/project-sources/，项目侧副本经 FADE-002 发布域管线（project-source-doc-sync-manifest）字节发布，禁直接修改项目侧——变更一律改真源后走管线发布。 -->
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code when working with code in this repository.
