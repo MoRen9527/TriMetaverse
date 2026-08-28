@@ -73,6 +73,7 @@ user-invocable: true
 2. 如问题触及项目级架构、模块边界或开源吸收链，先核查 TriMetaverse 的 `tmv-whitepaper.md`、`project.md`、`tricompany.md` 与 `docs/三元宇宙架构与模块说明.md`。
 3. 核查 `TriCompany/docs/product/PROJECT.md`、`REQUIREMENTS.md`、`STATE.md`。
 4. 核查 `TriCompany/docs/engineering/DESIGN.md`、`metacognition-architecture.md` 与当前技术状态。
+4.5. 核查 TriCompany 协议与纪律现行版（2026-08-28 CEO 增）：`docs/engineering/fade-protocol-spec.md`（FADE 协议现行版本，§2.7 节点收口报告 / §2.8 段合同与实现绑定）、`docs/engineering/fade-registry.md`（在册实例与段-实现映射表）、`docs/workflow/engineering-disciplines.md`（D-01..11 现行纪律，含 D-04 双轨时刻制）——凡涉协议、纪律、流程的任务以现行版本为准，禁凭记忆口径。
 5. 核查 `TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md`、`hermes-copilot-host-migration.md`、`github-backport-manifest.md`。
 6. 核查 `TriCompany/docs/workflow/cyber-company-secretariat.md`。
 7. 核查 `TriCompany/docs/registry/product-state.md` 与 `code-state.md`。
