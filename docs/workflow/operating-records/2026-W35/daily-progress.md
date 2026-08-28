@@ -17,6 +17,7 @@
 6. heyuan 验收窗：四仓归一统一 dev 线（TriLC ff2f970/TriModel 30a671e/TriRMC f09b633）
 7. LG-011 巡检兜底落地：daily_progress_patrol.py v1.0（TriCompany fbadf21/bfad13f，内置自测 21/21）+ trimc cron job d0f87756-e941-4984-9919-1993028566bc 注册（*/10 分钟 Asia/Shanghai，runAs fleet，nextRun 20:10 +08）——「事件驱动主+10 分钟兜底」节奏上线（49287fc 节奏重设计承接，最坏丢失窗口 23h→10min）
 8. LG-011 首次接线核验 PASS（20:3x 销账）：巡检三跳实测——20:10 首跳 2014ef40（真实门限开，误标节容错识别）→20:20 skip 实测抓出门限同秒缺陷→修复 3082d7d 拓扑门限→20:30 三跳 c9300421 精确补写 marker 8ad1ab4a（20:30:06 检出，6 秒闭环）；本销账行即事件驱动主第二次执行
+9. LG-012 TriMC cron CLI 补 X-Internal-Token 头（当日闭环销账）：TriMC 1d28d13（src/internal-token.ts 新模块：env→docker/.env 兜底+CLI 接线，全套 555 测试过）；实测=HTTP 无头 401/CLI 兜底 list 200/add-remove 探针全链/restart 后 jobCount=5；restart 触发 TriModel dist 丢失潜伏损坏→重建修复（非本提交，21:08-21:11 崩循环如实入账）；D-02 四 job nextRun 逐位不变
 
 **现役挂账**（台账权威=董事长助理侧 ledger-mirror，本处为粗粒度镜像）：
 - LG-002 残余：TriCade UI 首条消息终验（CEO 随手）
@@ -24,7 +25,6 @@
 - LG-006 TriModel 多模型额度接力立项（设计+实现待排期）
 - LG-007 FADE-003 裁决词表升四态（下次周检）+ FADE-003 降档兼容档待补课（Score 双段等五项）
 - LG-010 agent-core 加载层补齐（R 面能力门禁线，宿主治理面全盲修复）
-- LG-012 TriMC cron CLI 补 X-Internal-Token 头（董事会裁定建账，待 TriMC 侧工程窗）
 - 旧 key 255dc140 保留（额度接力候选）；TriPilot 0.0.12 来源甄别通过（a23d2a0 已推）
 
 **恢复指针**：
