@@ -52,10 +52,24 @@
 | --- | --- | --- |
 | 全量快照 | `.fade/hub-snapshots/full-<ts>.md` | 中枢自述，结构化八节：任务面/决策记录/挂账台账/关键 commit/路径锚/授权边界/未完事项/教训 |
 | 压缩后快照 | `.fade/hub-snapshots/post-<ts>.md` | 压缩后同结构重产 |
-| 对比记录 | 编排层上下文（过渡期） | diff 结论与 CEO 确认记录 |
+| 董事会记事本 | `.fade/hub-snapshots/board-journal.md` | **董事会职责件（append-only）**：基线快照之后的中枢交付增量日志——双重故障（董事会 clear ∥ 中枢爆上下文）时的挖矿恢复源 |
+| 台账镜像 | `.fade/hub-snapshots/ledger-mirror.md` | 挂账台账写时镜像（中枢维护，双层保障） |
+| run root | `<树>/reports/run-root.json` | 单树收口完整性基线（v2 schema：producedAt/initialRoot/recompute_history append-only） |
+| 对比记录 | 董事会上下文（过渡期） | diff 结论与 CEO 确认记录 |
 | （候选工具） | `scripts/fade/hub-snapshot-diff.py` | 结构化 diff 辅助（探索期后按需实现） |
 
 快照目录随 `.fade/` gitignore，不入仓库。
+
+### 双重故障恢复配方（董事会 clear ∥ 中枢爆上下文不可恢复）
+
+新中枢按序重建：
+1. `CLAUDE.md` 分权制节（自动加载：角色/白名单/判据口诀）
+2. `.fade/hub-snapshots/board-journal.md` + `ledger-mirror.md`（增量交付与台账现势）
+3. `.fade/hub-snapshots/full-*.md` 最近基线（工作记忆结构模板）
+4. `fade-protocol-spec.md` + `fade-registry.md`（协议与实例现状）
+5. 董事会转录 jsonl 挖矿（`.claude/projects/` 下本会话文件——中枢交付物全文留存于此，/clear 不删盘上文件）
+
+恢复完整性判据：新中枢状态条能否复述台账现役清单与未完事项；有缺→董事会记事本补投。
 
 ## 六、升格路径（FADE 方式）
 
@@ -71,3 +85,6 @@
 | 时刻(+08) | 事件 |
 | --- | --- |
 | 2026-08-28 01:0x | 首次拉起 xiaojia-hub（就任核查+台账建册 LG-001..005 全过）；基线水位=低（新中枢），流程 A/B 待首次真实触发 |
+| 2026-08-28 15:10 | 基线快照 full-1510Z；ledger-mirror 写时镜像生效 |
+| 2026-08-28 17:2x | 中枢 API 断连死亡→transcript 续跑零损失恢复（架构首证）；董事会记事本 board-journal.md 建档（增量挖矿源） |
+| 2026-08-28 19:0x | 双重故障恢复配方入 spec；LG-008 验收实测抓出 run-root 覆盖写缺陷（细则 10 第 4 判例）→修复 9d97f563+append-only 复验 PASS |
