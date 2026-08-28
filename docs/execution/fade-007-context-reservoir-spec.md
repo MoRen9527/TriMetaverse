@@ -101,3 +101,4 @@
 | 2026-08-28 19:0x | 双重故障恢复配方入 spec；LG-008 验收实测抓出 run-root 覆盖写缺陷（细则 10 第 4 判例）→修复 9d97f563+append-only 复验 PASS |
 | 2026-08-28 19:1x-19:3x | **E-1 演练 PASS**：全新会话（零背景）经系统注入存活清单发现 xiaojia-hub→名字直连→回执 49s 全链闭环；收获=notify_when_idle 对 teammate 会话不支持、发现途径实测为注入清单（ListAgents 工具非必需） |
 | 2026-08-28 19:1x-19:3x | **E-2 演练 PASS**：中枢停止（模拟爆上下文死亡）→零背景重建体五源重建→状态条复述台账 4+6+M-001 全对+hash 级锚点+双观测自纠（spec 双 §九/mirror 滞后）→重建体转正为本尊（xiaojia-hub-r2）。恢复配方经真实双崩演练验证成立 |
+| 2026-08-28 20:0x | LG-011 巡检兜底上线：daily_progress_patrol v1.0（fbadf21/bfad13f，自测 21/21）+ trimc cron d0f87756（*/10 分钟 runAs fleet）——FADE-001 维护项②自动化期开启；本行兼作巡检门限核验 marker |
