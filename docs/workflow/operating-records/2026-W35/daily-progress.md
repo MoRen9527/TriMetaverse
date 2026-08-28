@@ -20,6 +20,7 @@
 9. LG-012 TriMC cron CLI 补 X-Internal-Token 头（当日闭环销账）：TriMC 1d28d13（src/internal-token.ts 新模块：env→docker/.env 兜底+CLI 接线，全套 555 测试过）；实测=HTTP 无头 401/CLI 兜底 list 200/add-remove 探针全链/restart 后 jobCount=5；restart 触发 TriModel dist 丢失潜伏损坏→重建修复（非本提交，21:08-21:11 崩循环如实入账）；D-02 四 job nextRun 逐位不变
 10. FADE-007 升格联审备料交付（07e44962）：docs/execution/fade-007-upgrade-review.md——十段映射草案（诚实档位：已实测 1/部分 6/纸面 4）+试卷草案 T1-T8 双门槛建议 85+缺口 10 项+实证 6 项（邻域学费如实标注）+裁决议程 8 项；建议=分档升兼容档不跳档（Score 双段未实跑不自违细则 10）；细则 10 对组织者自身适用+利益声明（双席抽验提请）
 11. FADE-007 兼容档升格落地（联审修后放行执行，双席共识+主持人合成）：spec 立法包 509ec99d（§6.4 条目在册+§五模板对齐实产八节基座+状态=FADE 兼容档+五条硬门时序锁死+利益声明在册义务+Close CLI (c)+(a)+第 11 缺口）+hub-snapshot-diff.py f902cd2b（一具两段：自测 15/15；验收=真实两代 0330Z/1510Z pass 39 条集差素材+合成篡改 rc1 守恒合账）+E-3 冻结卷备妥 67cbdecb（T1-T8 权重 100/双门槛必选全过+85/双席抽验义务/冻结程序 _fadehash 双 hash）——升完整剩余：E-3 真实压缩事件→E-4 清空过渡→评分达标入登记册
+12. FADE-001 升档联审备料交付（b98ea91d）：docs/execution/fade-001-upgrade-review.md——维护项② 十段三态表（已实测 7/纸面 3：Score CLI/Skill/Close Skill）+Score 载体评估（自测 24 项=载体质量门禁包装为 Score 实跑；方案=patrol --score 扩展单实现）+缺口 7 项+双轨扩评路径（首评 90 冻结+维护域扩评，FADE-006 先例）+扩维试卷草案 T1-T8（权重 100/双门槛 90 提案）
 
 **现役挂账**（台账权威=董事长助理侧 ledger-mirror，本处为粗粒度镜像）：
 - LG-002 残余：TriCade UI 首条消息终验（CEO 随手）
