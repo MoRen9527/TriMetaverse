@@ -25,6 +25,7 @@
 14. FADE-003 升档方案包交付（caeec035，LG-013）：docs/execution/fade-003-upgrade-review.md——score --run 子命令设计（S1-S7 确定性检查对照周记 spec+§2.2 envelope）/Score Skill 四维度/RETRY 状态机（同 runId revision 链）/词表升四态大小写归一（存量 2 行历史冻结）/试卷 T1-T8 权重 100 双门槛 80 提案/排期 D0+1 起正典链零改动追加段
 15. FADE-003 升档裁定落地（D0+1 实现窗）：TMV 17649d7d（journal-cli score 子命令 S1-S7+close 三态扩值 retry exit4+RETRY→APPROVED 前置机器校验+revision 授权域+logRun 告警；spec v1.1 §2.5 Score 段/RETRY 两义合并/词表三态 FROZEN 留口/W4 双判问/P3 豁免；材料包事实补录 run-log 实 10 行 541da30c 完整链）+TCO 9b0b378（升格卷冻结 5220091c 双 hash 载体定版同盘）——沙箱 E2E 全绿（score PASS/retry exit4/前置 REJECTED/revision 三分支/APPROVED exit0/FROZEN exit1）；剩余=首个真实周记 run 全链评分（首 3 run 双席抽验）→达标→登记册升档备案
 16. FADE-003 升档完成（LG-013 销账）：首个真实 run 7a85e3e0 全链（周记 2.2 crash loop 潜伏损坏诊断）→score PASS 98/100（S 满分地板+W 18/20）→close APPROVED→registry TCO 9393893 升完整档+兼容档标注撤销（降档标注留历史档案；路线五项销账，触发自动化维持增强项）——W35 每日进度 16 项里程碑全链闭账
+17. FADE 深度教程七篇全毕（七篇组织令）：TriCompany/docs/training/ fade-001~007-deep-dive.md（324/328/521/413/356/427/355=2724 行全超 319 基线；小吴执笔+总助审稿落盘：hash/数字仓库实证核验+行数退回扩写两轮+事实纠错 D-03 v3 引用 sed 复核确认+377→376 审改）——三提交 d2b3846/cb8da21/b42d34c 双远端（M-002 第十一次执行）
 
 **现役挂账**（台账权威=董事长助理侧 ledger-mirror，本处为粗粒度镜像）：
 - LG-002 残余：TriCade UI 首条消息终验（CEO 随手）
