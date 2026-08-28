@@ -6,7 +6,7 @@
 
 ---
 
-## 2026-08-28（周四）
+## 2026-08-28（周五）
 
 **已完成战役/里程碑**：
 1. P0 审计修复战役 9/9 收口（p0fix1-4：agent-core 权限引擎 4 + TriRMC 服务面 2 + TriLC HTTP 三通道 + TriModel 流式 fallback；fa​bcbeb/14499e5/95d8713 系）
@@ -15,6 +15,7 @@
 4. 分权制更名立法：董事会/董事长助理（CLAUDE.md 995bd161）
 5. 四面 key 分发完成（tmv-mm/ml/rm/rl-face）+ LG-001 双 key 结案（255dc140 保留接力候选/bef0e848 已吊销）
 6. heyuan 验收窗：四仓归一统一 dev 线（TriLC ff2f970/TriModel 30a671e/TriRMC f09b633）
+7. LG-011 巡检兜底落地：daily_progress_patrol.py v1.0（TriCompany fbadf21/bfad13f，内置自测 21/21）+ trimc cron job d0f87756-e941-4984-9919-1993028566bc 注册（*/10 分钟 Asia/Shanghai，runAs fleet，nextRun 20:10 +08）——「事件驱动主+10 分钟兜底」节奏上线（49287fc 节奏重设计承接，最坏丢失窗口 23h→10min）
 
 **现役挂账**（台账权威=董事长助理侧 ledger-mirror，本处为粗粒度镜像）：
 - LG-002 残余：TriCade UI 首条消息终验（CEO 随手）
@@ -22,6 +23,7 @@
 - LG-006 TriModel 多模型额度接力立项（设计+实现待排期）
 - LG-007 FADE-003 裁决词表升四态（下次周检）+ FADE-003 降档兼容档待补课（Score 双段等五项）
 - LG-010 agent-core 加载层补齐（R 面能力门禁线，宿主治理面全盲修复）
+- LG-011 巡检兜底实现（董事会委派，实施中——首次接线核验后销账）
 - 旧 key 255dc140 保留（额度接力候选）；TriPilot 0.0.12 来源甄别通过（a23d2a0 已推）
 
 **恢复指针**：
