@@ -115,3 +115,11 @@ CEO 裁定"没有 ADE 了"：FADE（Full-cycle Agentic Deterministic Execution�
 1. ②登记层弱化：local-executable 树不走 tick，运行标识=「treeId+执行会话」组合——段-实现映射表三字段（段名/载体/不变量证据）应声明而未声明，为首行待填（§2.8 细则 2）；
 2. ④⑦⑧试卷回溯：增评卷系收口后按 §2.6 重建（91 分如实），"Plan 时点声明试卷"的理想序未走全——细则 10 教训在评分层同样适用；
 3. ⑩单 run root 未算：战役级 Merkle root 为八树快照，本树独立 run root 未单独产出——FADE-007 探索期可顺带补（run root=单树收口完整性基线）。
+
+**三边界清偿记录（2026-08-28，LG-008 三方联审定案＋编排层核验＋CEO 授权落地）**：
+
+1. 边界①已清偿：FADE-006 登记册条目附十段段-实现映射表（登记册 v2.1）——唯一性补锚（instances 按 treeId 唯一＋查询命令）、去重性归因修正（真机制=指纹边沿＋活动锁＋1800s 冷却，撤"hook 幂等"误归因）、恢复锚补确定性导出路径、Verify 行如实"可选段未启用"（逐节点门禁归 DCE 段注记）、harvest-rc 三态声明（matcher 已接线/例行化核验中，解除=LG-005）、格式律=证据引用一律为锚非散文；
+2. 边界②已清偿：spec v2.0.3 试卷 Plan 时点冻结立法（B 案＋四骑缝注）——第三件 Plan 时点冻结件、冻结对象=解析后整卷双 hash raw+LF、冻结声明必含双门槛要素、试卷 hash 入 run root 引用集、语义作业方案卷封明文不涵盖试卷；
+3. 边界③已清偿：单 run root 补算——工具=TriMetaverse scripts/fade/run-root.py（LG-008 CTO 案：独立脚本＋_fadehash.py 单一 canonical 双 hash，seal-materials 回归 5/5 行为等价）；trilc-lineage-merge run root=**c841f3375b271654bf359308ca7920fb2c3544e4908a8867c2cdf65e51018b88**（basis 6 件，双卷封材料 hash 与 tree-op sourceMaterials 逐一吻合；补算五要合规：recomputed_at＋触发原因＋输入差说明＋原根历史锚声明（append-only）＋basis manifest；anchors=c6f969de/355d24fe/战役根注记）。
+
+清偿程序留痕：组织者 CEOCS 评估初稿→三方联审（CPO/CTO 双席逐项裁决）→CEOCS 合成定案（含 CPO 单一 hash×CTO 分文件结构调和：独立脚本＋共享 _fadehash 模块）→编排层核验＋CEO 授权→本落地。

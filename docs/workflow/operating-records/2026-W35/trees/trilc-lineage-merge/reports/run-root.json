@@ -1,0 +1,68 @@
+{
+  "kind": "fade-run-root",
+  "version": 1,
+  "treeId": "trilc-lineage-merge",
+  "producedAt": null,
+  "recomputedAt": "2026-08-28T07:04:02.485465+00:00",
+  "recompute": {
+    "recomputedAt": "2026-08-28T07:04:02.485465+00:00",
+    "reason": "LG-008 边界③清偿补算（编排层授权 2026-08-28；三席定案 B 案工具首测）",
+    "inputDiff": "首算即补算：Close CLI 时点未产出 root（retrospective §九 边界③），无先前输入集可比对",
+    "originalRootAnchor": null,
+    "appendOnlyNote": "原根历史锚=不存在（战役级 Merkle root 40ee6f8c… 系八树快照，非本 run root）；本件为新档，不覆盖任何既有 root；后续重算须另档新文件（append-only）"
+  },
+  "root": "c841f3375b271654bf359308ca7920fb2c3544e4908a8867c2cdf65e51018b88",
+  "algorithm": "sorted by path; per-file 'path\\0raw_sha256\\0lf_sha256' concatenated, sha256 (canonical=_fadehash.dual_sha256, shared with seal-materials)",
+  "basis": [
+    {
+      "path": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md",
+      "sha256": "668d30a3637b3a4e5450747fed1b8ca6da7622c7e7d69299d6c8fc83d9933cac",
+      "bytes": 11752,
+      "sha256_lf": "aa3607f88567e7cc111686ca89483f198f855b86ee5ac232b06195d4f14b8638"
+    },
+    {
+      "path": "docs/execution/fade-006-execution-autopick-spec.md",
+      "sha256": "3e412542caf312013aa8da8cb4265327cf71aa59dc8cc40ca7ed5e101f2b4edf",
+      "bytes": 3907,
+      "sha256_lf": "863ad15166535f299a45d965f6de8dbbf302bcb6c754bd063866fea540ec814f"
+    },
+    {
+      "path": "docs/workflow/operating-records/2026-W35/trees/trilc-lineage-merge/reports/merge-log.md",
+      "sha256": "a8542b7e4794dac936a9e165e643b98122f56c10b3614d382e18d7c6b295b25e",
+      "bytes": 1189,
+      "sha256_lf": "a8542b7e4794dac936a9e165e643b98122f56c10b3614d382e18d7c6b295b25e"
+    },
+    {
+      "path": "docs/workflow/operating-records/2026-W35/trees/trilc-lineage-merge/reports/node-TM-1.md",
+      "sha256": "cebe56634a21e13d1e8c9b26ced68867db6499fdc689ce65dbaf570f26f6d63c",
+      "bytes": 2328,
+      "sha256_lf": "0d3161bd9d01370f53a4ab7bc18906c5a85fc40a0b251a25ecd88fdd17ffa4d6"
+    },
+    {
+      "path": "docs/workflow/operating-records/2026-W35/trees/trilc-lineage-merge/reports/node-TM-2.md",
+      "sha256": "3961214d67f47addfebd455c7b84093dd8c1508c30d65b707ddf9ac4c2fe64da",
+      "bytes": 2990,
+      "sha256_lf": "64deff2d9a4839baca622a0cb0660bc95b68bc66d33c36a90cecfbb5735296f1"
+    },
+    {
+      "path": "docs/workflow/operating-records/2026-W35/trees/trilc-lineage-merge/tree-op.json",
+      "sha256": "97902deb393feeb270cf518b608165706a767f518a6c663577e60adc33c9cee2",
+      "bytes": 3608,
+      "sha256_lf": "eef9aa80ae85337092d099a5ea905ff23e90bab0b1f3e80c3d864d5f2707bf52"
+    }
+  ],
+  "anchors": [
+    {
+      "type": "commit",
+      "value": "c6f969de"
+    },
+    {
+      "type": "commit",
+      "value": "355d24fe"
+    },
+    {
+      "type": "note",
+      "value": "campaign-root 40ee6f8c 系八树快照非本run根"
+    }
+  ]
+}

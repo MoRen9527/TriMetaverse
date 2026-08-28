@@ -19,7 +19,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import io
 import json
 import sys
@@ -31,15 +30,10 @@ if sys.stdout and hasattr(sys.stdout, "reconfigure"):
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
-
-def _sha256(p: Path) -> tuple[str, int, str]:
-    """返回 (raw_sha256, bytes, lf_sha256)。lf 为行尾归一化(\r\n→\n)后 hash——
-    SOFT-DRIFT 判据（联审 CTO-F6）：跨 Win/Unix 流转的行尾漂移不按材料
-    污染处理，仅警告留痕。"""
-    data = p.read_bytes()
-    raw = hashlib.sha256(data).hexdigest()
-    lf = hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
-    return raw, len(data), lf
+# 双 hash canonical 实现抽取至 _fadehash（LG-008 联审 CTO 案：run-root 与卷封共享，
+# 防 hash 双实现漂移；CPO 单一 hash 纪律由共享模块满足）
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _fadehash import dual_sha256 as _sha256  # noqa: E402
 
 
 def _find_repo_root(start: Path) -> Path:

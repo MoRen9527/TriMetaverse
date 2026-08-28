@@ -16,3 +16,7 @@ output/
 
 # FADE 本地监控状态（fade-watch.ps1 落盘，非真源）
 .fade/
+
+# Python bytecode
+__pycache__/
+*.pyc
