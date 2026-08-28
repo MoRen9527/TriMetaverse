@@ -20,7 +20,9 @@
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
 | 1 | 19:42 | 开工骨架落盘并提交：state.json + log.md + reports/node-{W1,V1,C1}.md 桩 | fdd36f10（已推 origin） |
-| 2 | 19:52-20:08 | W1 RAndDTrainer fresh 派工（先写后报）：教程 428 行落盘 TriCompany/docs/training/fade-001-maintenance-deep-dive.md（①-⑤全覆盖+影响面回滚章+待核验 4 项如实标注；STUB 残锚编排层清理 431→428）+reports/node-W1.md 九键报告（finishedAt/行数由编排层按自请回填校正）；机械门=428>400+node-report-check PASS exit0+抽查 patrol:57-58/186/394-395 亲读一致 | （本笔收账） |
+| 2 | 19:52-20:08 | W1 RAndDTrainer fresh 派工（先写后报）：教程 428 行落盘 TriCompany/docs/training/fade-001-maintenance-deep-dive.md（①-⑤全覆盖+影响面回滚章+待核验 4 项如实标注；STUB 残锚编排层清理 431→428）+reports/node-W1.md 九键报告（finishedAt/行数由编排层按自请回填校正）；机械门=428>400+node-report-check PASS exit0+抽查 patrol:57-58/186/394-395 亲读一致 | 248ae69a 本地（watcher pull --rebase 后以 493bbbeb 上权威线，见行 2a 附注） |
+| 2a | 20:12-20:15 | push 被拒 non-fast-forward→fetch 勘察：watcher 在本工作树跑 pull --rebase（patrol:119-130 既有行为）把本地两笔重放上权威线（fdd36f10 持平/248ae69a→493bbbeb），并行线新进 0e8bf437（里程碑 17「七篇全毕」仅改 daily-progress.md 一行，未触碰本树 tree-op=非 superseded，本树执行权维持）；HEAD 与 origin/dev 同步于 8abbc24b | （ watcher 自动，非编排笔） |
+| 3 | 20:15-20:30 | V1 TestEngineer fresh 派工（先写后报）：核验 PASS 零实质错误（21 枚 hash 机械门全证实+评分数字六源对照+file:line 8 文件亲读+深度 428）；5 处 progress 行号+1 漂移（A1-A5，活文件 watcher 每 10min append 所致，教程头部已预声明漂移）+3 处精度观察非阻塞；A1 抽查亲读吻合；编排层裁定建议=接受漂移声明不回炉（交 C1 终裁）；reports/node-V1.md 九键报告+机械门回填 | （本笔收账） |
 
 
 ---

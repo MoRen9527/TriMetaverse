@@ -46,7 +46,9 @@
     {
       "nodeId": "V1",
       "agent": "TestEngineer",
-      "status": "done"
+      "status": "done",
+      "evidence": "PASS 零实质错误（reports/node-V1.md 九键+核验明细三节+编排层回填节）：21 枚 commit hash 编排层机械门全证实（TM 12/TC 8/互斥不存在项同测）+评分数字六源对照（90/100·80·90·65/80·85·780s）+file:line 八文件亲读+深度 428≥400；A1-A5 行号漂移+B1-B3 精度观察=非阻塞活文件漂移；前置门 node-report-check PASS exit0",
+      "subInstance": { "role": "TestEngineer", "model": "继承（glm-5.3-flash）", "fresh": true, "reportedAt": "2026-08-28T20:28:00Z(约)" }
     },
     {
       "nodeId": "C1",
@@ -55,7 +57,8 @@
     }
   ],
   "commits": [
-    "fdd36f10"
+    "fdd36f10",
+    "493bbbeb（本地 248ae69a 经 watcher pull --rebase 重放上权威线）"
   ],
   "updatedAt": "2026-08-28T20:09:00Z",
   "closedAt": "2026-08-29T04:20:26+08",
