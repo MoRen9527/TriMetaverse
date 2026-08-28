@@ -1,10 +1,10 @@
 {
   "kind": "fade-run-root",
-  "version": 1,
+  "version": 2,
   "treeId": "trilc-lineage-merge",
-  "producedAt": null,
-  "recomputedAt": "2026-08-28T07:04:02.485465+00:00",
-  "recompute": {
+  "producedAt": "2026-08-28T07:04:02.485465+00:00",
+  "initialRoot": "c841f3375b271654bf359308ca7920fb2c3544e4908a8867c2cdf65e51018b88",
+  "initialProvenance": {
     "recomputedAt": "2026-08-28T07:04:02.485465+00:00",
     "reason": "LG-008 边界③清偿补算（编排层授权 2026-08-28；三席定案 B 案工具首测）",
     "inputDiff": "首算即补算：Close CLI 时点未产出 root（retrospective §九 边界③），无先前输入集可比对",
@@ -13,6 +13,22 @@
   },
   "root": "c841f3375b271654bf359308ca7920fb2c3544e4908a8867c2cdf65e51018b88",
   "algorithm": "sorted by path; per-file 'path\\0raw_sha256\\0lf_sha256' concatenated, sha256 (canonical=_fadehash.dual_sha256, shared with seal-materials)",
+  "recompute_history": [
+    {
+      "recomputedAt": "2026-08-28T07:18:08.231706+00:00",
+      "reason": "LG-008 验收修复自测 R1——append-only 修复后首次重算（编排层复算差异 Bug-1 实测后）",
+      "prevRoot": "c841f3375b271654bf359308ca7920fb2c3544e4908a8867c2cdf65e51018b88",
+      "newRoot": "c841f3375b271654bf359308ca7920fb2c3544e4908a8867c2cdf65e51018b88",
+      "inputDiff": "basis 6→6 件"
+    },
+    {
+      "recomputedAt": "2026-08-28T07:18:08.338309+00:00",
+      "reason": "LG-008 验收修复自测 R2——连跑第二次：覆盖写缺陷修复验证（原根与历史须全保留）",
+      "prevRoot": "c841f3375b271654bf359308ca7920fb2c3544e4908a8867c2cdf65e51018b88",
+      "newRoot": "c841f3375b271654bf359308ca7920fb2c3544e4908a8867c2cdf65e51018b88",
+      "inputDiff": "basis 6→6 件"
+    }
+  ],
   "basis": [
     {
       "path": "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md",
