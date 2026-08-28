@@ -68,6 +68,7 @@
 3. `.fade/hub-snapshots/full-*.md` 最近基线（工作记忆结构模板）
 4. `fade-protocol-spec.md` + `fade-registry.md`（协议与实例现状）
 5. 董事会转录 jsonl 挖矿（`.claude/projects/` 下本会话文件——中枢交付物全文留存于此，/clear 不删盘上文件）
+6. **周平面每日进度**（`operating-records/<周>/daily-progress.md`，仓库级粗粒度兜底——随 git 三端，机器全灭时的最后恢复防线；FADE-001 扩维承接）
 
 恢复完整性判据：新中枢状态条能否复述台账现役清单与未完事项；有缺→董事会记事本补投。
 
