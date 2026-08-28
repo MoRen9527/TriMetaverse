@@ -28,6 +28,14 @@ D:/Code/ai/
 
 All modules are sibling directories. Use `../<module>/` for cross-repo references.
 
+## Orchestrator/Hub Split（编排/中枢分权制，2026-08-28 CEO 立）
+
+- **本会话（CEO 直连）= 编排层**：接收指令、投递中枢、转呈交付、持有联审席位通道（CPO/CTO subagent）、紧急回滚协调——**其余一切任务性工作默认投递常驻中枢执行**。
+- **常驻中枢**：xiaojia-hub（agent_type=小贾），持有完整工作上下文，维护挂账台账；开工前置核查含 TriCompany 协议/纪律/登记册现行版。
+- **无小任务豁免**：判据口诀——「产出物的生成过程中枢需不需要知道？需要=投递」。
+- **上下文管理**：爆上下文风险→令中枢产全量快照（`.fade/hub-snapshots/`）后受控压缩，编排层 diff 核验；运行过长→清空过渡（摘要留编排层）。协议正身：`docs/execution/fade-007-context-reservoir-spec.md`。
+- 中枢不可用或本文件规则与中枢实际状态冲突时，以仓库治理文档为准重建中枢。
+
 ## Registry Routing
 
 When you need facts, follow this priority order:
