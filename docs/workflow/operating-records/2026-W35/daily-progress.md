@@ -53,3 +53,6 @@
 - 巡检兜底补写 @03:40 +08：自上次进度提交 1fac24e1 后新增 1 条 commit：
   - a9c6a143 ops(plane): 7 篇 FADE 深度教程树注册——FADE-006 标准管线（任务说明书→挂平面→sg 小贾拆树执行），小吴执笔+事实核验双节点
 - registry：v2.1；今日 registry 提交 1 条：9393893 docs(registry): FADE-003 升档完整档——score 全链首评 98/100（runId 7a85e3e0，卷 5220091c 双 hash 载体定版同盘）+兼容档标注撤销（v2.0.2 降档标注保留为历史档案）+升档路线五项销账（触发自动化维持增强项）+②表补 Score 双段行+Close/终态行三态化+spec v1.1 引用（LG-013）
+- 巡检兜底补写 @03:50 +08：自上次进度提交 50b3024a 后新增 1 条 commit：
+  - fdd36f10 docs(plane): fade-tutorial-001-deep 骨架先行（tick 20260828T193147Z）——state.json+log.md+三节点报告桩；勘察实证：HEAD 50b3024a 基线/watcher 活体标本/卷封 N-A/三端前置实测（TC bare 无 GitHub 镜像）；分工制=子实例无 Bash 先写后报+编排层持 git 与机械门禁
+- registry：v2.1；今日 registry 提交 1 条：9393893 docs(registry): FADE-003 升档完整档——score 全链首评 98/100（runId 7a85e3e0，卷 5220091c 双 hash 载体定版同盘）+兼容档标注撤销（v2.0.2 降档标注保留为历史档案）+升档路线五项销账（触发自动化维持增强项）+②表补 Score 双段行+Close/终态行三态化+spec v1.1 引用（LG-013）
