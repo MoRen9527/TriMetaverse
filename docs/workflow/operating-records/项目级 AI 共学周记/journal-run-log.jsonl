@@ -8,3 +8,6 @@
 {"runId":"541da30c","ts":"2026-08-25T08:00:08.993Z","action":"append","verdict":"APPENDED","week":"2026-W35","entryNo":1,"title":"Windows 下 Claude Code 默认 Git Bash 的工具链坑与 PowerShell 工具换装","path":"D:\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W35\\project-ai-community-weekly-2026-W35.md"}
 {"runId":"541da30c","ts":"2026-08-25T08:00:28.109Z","action":"close","verdict":"ESCALATED","week":"2026-W35","agentVerdict":"approved","note":"四问全过：具体现象（robocopy/引号/CRLF 三例实测）、有方案（PS 工具换装+CRLF 清洗纪律）、脱敏无敏感、Windows AI 开发者通用"}
 {"runId":"541da30c","ts":"2026-08-25T08:00:47.415Z","action":"close","verdict":"APPROVED","week":"2026-W35","agentVerdict":"approved","note":"四问全过：具体现象（robocopy/引号/CRLF 三例实测）、有方案（PS 工具换装+CRLF 清洗纪律）、脱敏无敏感、Windows AI 开发者通用"}
+{"runId":"7a85e3e0","ts":"2026-08-28T16:26:12.872Z","action":"begin","week":"2026-W35","title":"内存存活掩盖重启必炸——dist 生产形态服务的潜伏损坏与诊断路径","dupHint":null}
+{"runId":"7a85e3e0","ts":"2026-08-28T16:26:13.440Z","action":"qualify","verdict":"QUALIFIED"}
+{"runId":"7a85e3e0","ts":"2026-08-28T18:37:14.455Z","action":"append","verdict":"APPENDED","week":"2026-W35","entryNo":2,"title":"内存存活掩盖重启必炸——dist 生产形态服务的潜伏损坏与诊断路径","path":"D:\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W35\\project-ai-community-weekly-2026-W35.md"}

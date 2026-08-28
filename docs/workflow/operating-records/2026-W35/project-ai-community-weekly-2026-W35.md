@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/workflow/operating-records/2026-W35/project-ai-community-weekly-2026-W35.md
 - syncMode: audit-record
-- lastSyncedAt: 2026-08-25
+- lastSyncedAt: 2026-08-28
 
 > 记录人：小贾（CEOChiefOfStaff）
 > 日期：2026-08-25
@@ -30,4 +30,22 @@
   用 AI 做项目在 Windows 上开发：① 选对 shell 是正确性而非偏好问题——工具链的旗标语法、引号规则、行尾处理都随 shell 变化；② 遇到「内容看起来一样但行为不同」的诡异失败，先查平台层（CRLF/路径分隔符/编码 BOM）再查业务逻辑；③ 让宿主环境声明式配置（settings env）替代临时绕行。
 - 模型自查：
   模型自查：本条目所有现象均为 2026-08-25 当日实测复现（非推测）；CRLF 根因由服务器端 key-len 前后对照实证（73→30 字节差）；教训表述限定于 Git Bash+Windows 场景，不外推到 WSL/Linux。
+
+### 2.2 内存存活掩盖重启必炸——dist 生产形态服务的潜伏损坏与诊断路径
+
+- 现象：
+  TriMC（Node 服务，编排命脉）restart 后陷入 crash loop：秒级 exit 1、restart counter 持续上涨；而重启前 healthz 全绿、已无异常运行数周——『坏』只在重启时显形。
+- 具体表现：
+  三步定性：①start 脚本揭示服务实为 node dist/src/index.js（dist 生产形态，非 tsx 直跑）；②run log 真实报错=ERR_MODULE_NOT_FOUND: node_modules/trimodel/dist/src/index.js，而 trimodel 是符号链接→/srv/fleet/TriModel；③根因=TriModel 仓重检出后 dist/（gitignored 构建产物）丢失——旧进程自 8-26 起内存存活，掩盖『任何 restart 必炸』的潜伏损坏，期间 healthz 一直正常。
+- 解决方案：
+  修复式前进而非回滚（回滚源码对 untracked 产物无效）：目标仓库重建 dist（npm run build，保持服务读属主）→restart 即恢复。沉淀纪律：dist 形态服务的 restart 前置检查应含『dist 完整性+符号链接目标存在性』；重检出/换仓类操作后必须重建构建产物。
+- 问题影响：
+  编排命脉停机约 2 分 46 秒（21:08-21:11）；最大风险是误判为新版本代码缺陷而回滚源码——无效方向且延误真因定位。
+
+当前经验：
+
+- 项目经验：
+  『运行中≠可重启』：长活进程会掩盖依赖树（尤其 gitignored 构建产物+符号链接依赖）的潜伏损坏；重启可存活性是一项目视性质，应纳入部署前置检查与演练。
+- 模型自查：
+  本条由 agent 自诊自记：从『回滚本提交』的错误直觉出发，靠 start 脚本+run log 两步定性为产物丢失，未走无效回滚弯路；诊断顺序（脚本→日志→根因→修因不修症）可复用。
 
