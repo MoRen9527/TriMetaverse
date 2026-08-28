@@ -5,7 +5,7 @@
 - sourceOfTruth: TriMetaverse/docs/execution/fade-007-context-reservoir-spec.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-28
-- 状态: **探索期**（CEO 2026-08-28 提案——先灵活探索总结经验，建立功能与代码，逐步升格验收口径，目标升档 FADE 完整实例）
+- 状态: **FADE 兼容档**（2026-08-28 升格联审修后放行——双席共识+主持人合成；原探索期，CEO 2026-08-28 提案；升完整五条硬门时序见 §6.4）
 - 关联: orchestrator-hub-split（编排/中枢分权制）；宿主 agent 定义 `.claude/agents/ceo-chief-of-staff.md`（固定前置核查）
 
 ## 一、问题定义
@@ -50,13 +50,13 @@
 
 | 工件 | 路径 | 说明 |
 | --- | --- | --- |
-| 全量快照 | `.fade/hub-snapshots/full-<ts>.md` | 中枢自述，结构化八节：任务面/决策记录/挂账台账/关键 commit/路径锚/授权边界/未完事项/教训 |
+| 全量快照 | `.fade/hub-snapshots/full-<ts>.md` | 中枢自述，结构化八节（2026-08-28 议题⑦对齐：以实产结构为基座，双代快照 0330Z/1510Z 实测同构）：任务面/决策记录/挂账台账/关键 commit 与路径锚/授权边界/未完事项/教训/上下文风险自评 |
 | 压缩后快照 | `.fade/hub-snapshots/post-<ts>.md` | 压缩后同结构重产 |
 | 董事会记事本 | `.fade/hub-snapshots/board-journal.md` | **董事会职责件（append-only）**：基线快照之后的中枢交付增量日志——双重故障（董事会 clear ∥ 中枢爆上下文）时的挖矿恢复源 |
 | 台账镜像 | `.fade/hub-snapshots/ledger-mirror.md` | 挂账台账写时镜像（中枢维护，双层保障） |
 | run root | `<树>/reports/run-root.json` | 单树收口完整性基线（v2 schema：producedAt/initialRoot/recompute_history append-only） |
 | 对比记录 | 董事会上下文（过渡期） | diff 结论与 CEO 确认记录 |
-| （候选工具） | `scripts/fade/hub-snapshot-diff.py` | 结构化 diff 辅助（探索期后按需实现） |
+| 结构化 diff | `scripts/fade/hub-snapshot-diff.py` | **一具两段**（2026-08-28 裁定落地）：Verify 段消费 exit code（节结构对齐确定性门）/Score 段消费结构化 JSON（覆盖评分素材）；确定性边界五条（节名清单配置化/锚点≥7hex/条目集差/计数守恒/语义判定留 Score Skill）；无 LLM |
 
 快照目录随 `.fade/` gitignore，不入仓库。
 
@@ -91,6 +91,30 @@
 完整实例：FADE-007 入册（十段+试卷+评分）
 ```
 
+### 6.4 FADE-007 中枢上下文蓄水池（**FADE 兼容档**——2026-08-28 升格联审修后放行：双席共识+主持人合成）
+
+材料包：`docs/execution/fade-007-upgrade-review.md`（07e44962）；spec 自身生命周期往十段上套，逐段锚见材料包 §二。
+
+| 段 | 诚实档位 | 要点 |
+| --- | --- | --- |
+| 事件触发 | 部分 | 指令触发已实测（full-1510Z 产出令/E-2 重建令）；水位启发式无机械载体（功能期机械化——确定性只读探针方向已批准，触发权留董事会） |
+| 登记 | **已实测** | full-`<ts>` 单调命名+ledger-mirror+board-journal+daily-progress 四件套；E-2 真实消费全对 |
+| Qualify | 纸面 | 水位/变化判定散文启发式；恢复完整性判据（§五）在案 |
+| Plan | 部分 | 八节模板实产消费（full-1510Z+E-2 重建体）；对比核验法声明未实跑；试卷未冻结（E-3 Plan 时点冻结，卷=fade-007-assessment-paper.md） |
+| DCE | 部分 | 流程 A 仅蓄水步实跑；流程 B 零实跑；恢复重建全链已实测（E-1 49s/E-2 全对） |
+| Verify | 部分 | 董事会人工 diff 一例（E-2 验收）；hub-snapshot-diff exit code 门落地，首跑随 E-3 |
+| Score CLI | 纸面 | hub-snapshot-diff 结构化输出已实现；覆盖评分实跑待 E-3 |
+| Score Skill | 纸面 | 重点丢失语义判定方法未成文 |
+| Close Skill | 部分 | E-2 裁决 PASS+转正令人工先例；成文词表缺位 |
+| Close CLI | 纸面 | 裁定=(c)+(a) 组合：close manifest 由确定性小程序写出入仓（快照 refs+双 hash+裁决引用+处置去向+**对比记录与 CEO 确认记录**〔第 11 缺口——审计链不能断在窗内〕，组织者会话不自证终值）；快照本体归档 `.fade/archived/`；(b) 白名单入仓否决 |
+
+- 统计（细则 10 口径）：已实测 1/部分 6/纸面 4，不虚计。
+- 实证锚：E-1（§七 L102）/E-2（§七 L103）/API 断连续跑（§七 L100）/恢复配方入 spec 7290bf31+第六源 83753b74+daily-progress 建档 17a4af84（编排层五锚补验独立验真 ✓）。
+- **升完整五条硬门（时序链锁死）**：模板对齐（本轮已落，§五）→ hub-snapshot-diff 落地（本轮）→ 试卷冻结（E-3 Plan 时点）→ E-3 受控压缩真实事件（FADE-006 AC-4 口径：人为构造触发可、链路与产出全真实；即首评 run）→ E-4 清空过渡真实事件 → 双门槛达标（必选全过+总分 ≥85）→ 升完整入登记册。
+- **在册义务（CPO 三条件）**：补齐项挂两次周检齿条；升完整前置清单；**组织者利益声明在册义务**——组织者=本域唯一执行体（董事长助理），自证风险结构性存在，Score/Verify/Close 段证据双席抽验常设。
+- **Score CLI 一具两段**：Verify 段消费 exit code/Score 段消费结构化输出——升完整时映射表两行绑同一载体，防 §7.4 双实现。
+- 补齐项：Score 双段实跑；close manifest 首跑；流程 A 放水四步；流程 B 全链；E-3/E-4 演练；run↔段证据索引（E-3 起现场建，缺口 4 不事后补）；水位机械化（功能期）。
+
 ## 七、运行日志（探索期记录）
 
 | 时刻(+08) | 事件 |
@@ -102,3 +126,4 @@
 | 2026-08-28 19:1x-19:3x | **E-1 演练 PASS**：全新会话（零背景）经系统注入存活清单发现 xiaojia-hub→名字直连→回执 49s 全链闭环；收获=notify_when_idle 对 teammate 会话不支持、发现途径实测为注入清单（ListAgents 工具非必需） |
 | 2026-08-28 19:1x-19:3x | **E-2 演练 PASS**：中枢停止（模拟爆上下文死亡）→零背景重建体五源重建→状态条复述台账 4+6+M-001 全对+hash 级锚点+双观测自纠（spec 双 §九/mirror 滞后）→重建体转正为本尊（xiaojia-hub-r2）。恢复配方经真实双崩演练验证成立 |
 | 2026-08-28 20:0x | LG-011 巡检兜底上线：daily_progress_patrol v1.0（fbadf21/bfad13f，自测 21/21）+ trimc cron d0f87756（*/10 分钟 runAs fleet）——FADE-001 维护项②自动化期开启；本行兼作巡检门限核验 marker |
+| 2026-08-28 21:4x | **兼容档升格**：升格联审修后放行（双席共识+主持人合成，材料包五锚编排层补验独立验真）——升 FADE 兼容档（§6.4 在册；统计已实测 1/部分 6/纸面 4）；升完整五条硬门时序锁死；议题⑦模板对齐回写 §五（实产八节为基座，双代快照同构实测）；hub-snapshot-diff 一具两段落地；E-3 冻结卷备妥 |
