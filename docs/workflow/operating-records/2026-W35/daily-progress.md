@@ -57,3 +57,6 @@
 - 巡检兜底补写 @03:50 +08：自上次进度提交 50b3024a 后新增 1 条 commit：
   - fdd36f10 docs(plane): fade-tutorial-001-deep 骨架先行（tick 20260828T193147Z）——state.json+log.md+三节点报告桩；勘察实证：HEAD 50b3024a 基线/watcher 活体标本/卷封 N-A/三端前置实测（TC bare 无 GitHub 镜像）；分工制=子实例无 Bash 先写后报+编排层持 git 与机械门禁
 - registry：v2.1；今日 registry 提交 1 条：9393893 docs(registry): FADE-003 升档完整档——score 全链首评 98/100（runId 7a85e3e0，卷 5220091c 双 hash 载体定版同盘）+兼容档标注撤销（v2.0.2 降档标注保留为历史档案）+升档路线五项销账（触发自动化维持增强项）+②表补 Score 双段行+Close/终态行三态化+spec v1.1 引用（LG-013）
+- 巡检兜底补写 @04:10 +08：自上次进度提交 0e8bf437 后新增 1 条 commit：
+  - 493bbbeb docs(plane): fade-tutorial-001-deep W1 收账——教程 428 行落盘（TriCompany 工作树，入库留 C1）+node-W1 报告九键+编排层机械门回填（428>400/校验器 PASS exit0/抽查 patrol 三处亲读一致）；W1 pending→done
+- registry：v2.1；今日 registry 提交 1 条：9393893 docs(registry): FADE-003 升档完整档——score 全链首评 98/100（runId 7a85e3e0，卷 5220091c 双 hash 载体定版同盘）+兼容档标注撤销（v2.0.2 降档标注保留为历史档案）+升档路线五项销账（触发自动化维持增强项）+②表补 Score 双段行+Close/终态行三态化+spec v1.1 引用（LG-013）
