@@ -11,3 +11,5 @@
 {"runId":"7a85e3e0","ts":"2026-08-28T16:26:12.872Z","action":"begin","week":"2026-W35","title":"内存存活掩盖重启必炸——dist 生产形态服务的潜伏损坏与诊断路径","dupHint":null}
 {"runId":"7a85e3e0","ts":"2026-08-28T16:26:13.440Z","action":"qualify","verdict":"QUALIFIED"}
 {"runId":"7a85e3e0","ts":"2026-08-28T18:37:14.455Z","action":"append","verdict":"APPENDED","week":"2026-W35","entryNo":2,"title":"内存存活掩盖重启必炸——dist 生产形态服务的潜伏损坏与诊断路径","path":"D:\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W35\\project-ai-community-weekly-2026-W35.md"}
+{"runId":"7a85e3e0","ts":"2026-08-28T18:38:46.800Z","action":"score","verdict":"PASS","week":"2026-W35","subtotal_s":80,"total":98,"omission":false}
+{"runId":"7a85e3e0","ts":"2026-08-28T18:38:47.212Z","action":"close","verdict":"APPROVED","week":"2026-W35","agentVerdict":"approved","note":"升档首评：score 全链 PASS（素材=LG-012 crash loop 潜伏损坏诊断），W 自评 18/20 双席抽验在案"}
