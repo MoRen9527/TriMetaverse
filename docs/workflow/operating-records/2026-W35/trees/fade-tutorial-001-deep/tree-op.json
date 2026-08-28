@@ -26,6 +26,7 @@
       "nodeId": "C1",
       "agent": "CEOChiefOfStaff",
       "status": "done",
+      "resultNote": "sg 执行线收口（tick 20260828T193147Z）：APPROVE——doneCondition 三腿达成（合稿 190212a 入库/核验零错误/三端分端如实）；报告 reports/node-C1.md 九键+残差五项+状态条；双门 --all PASS 3/3；与并行线裁定 (a) 收口登记并存互不改写",
       "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
     }
   ],
