@@ -19,4 +19,5 @@
 
 | # | 时刻(Z) | 动作 | commit |
 | --- | --- | --- | --- |
-| 1 | 19:42 | 开工骨架落盘并提交：state.json + log.md + reports/node-{W1,V1,C1}.md 桩 | （本提交本体） |
+| 1 | 19:42 | 开工骨架落盘并提交：state.json + log.md + reports/node-{W1,V1,C1}.md 桩 | fdd36f10（已推 origin） |
+| 2 | 19:52-20:08 | W1 RAndDTrainer fresh 派工（先写后报）：教程 428 行落盘 TriCompany/docs/training/fade-001-maintenance-deep-dive.md（①-⑤全覆盖+影响面回滚章+待核验 4 项如实标注；STUB 残锚编排层清理 431→428）+reports/node-W1.md 九键报告（finishedAt/行数由编排层按自请回填校正）；机械门=428>400+node-report-check PASS exit0+抽查 patrol:57-58/186/394-395 亲读一致 | （本笔收账） |

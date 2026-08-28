@@ -11,7 +11,8 @@
     {
       "nodeId": "W1",
       "agent": "RAndDTrainer",
-      "status": "pending",
+      "status": "done",
+      "resultNote": "教程 428 行落盘（机械门实测，自报 431 含编排层清理的残锚 3 行）：五部分①-⑤全覆盖+影响面回滚章+待核验 4 项如实标注；翻转前置门 node-report-check PASS exit0；编排抽查 patrol:57-58/186/394-395 亲读一致、hash 归属 git cat-file 预检背书；报告 reports/node-W1.md 九键+三散文节齐+编排层机械门回填节",
       "action": "撰写 TriCompany/docs/training/fade-001-maintenance-deep-dive.md：FADE-001 周平面维护深度教程。①协议十段逐段在本实例的落地形态（事件触发=cron→事件驱动演进/登记=日期锚+git 三端/Qualify=ledger mtime+commits 变化机械门/Plan=三节结构静态固化/DCE=patrol 确定性收集+事件驱动双写/Verify=回读四查/Score=--score shadow→gate 两阶段/Close=确认+push 即终态→收口登记载体演进）②patrol 巡检三跳弧线逐跳拆解（20:10 首跳真实触发/20:20 同秒缺陷实测抓出/20:30 拓扑门限修复——file:line 到 daily_progress_patrol.py）③shadow→gate 评分接线设计与 FADE-007 E-3 对照④事件驱动+10min 兜底节奏架构图⑤与 D-03 v2/v3、D-02 纪律关联。深度基线 >400 行；commit/hash 与仓库实证一致。"
     },
     {
