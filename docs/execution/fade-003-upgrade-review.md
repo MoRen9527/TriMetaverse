@@ -113,3 +113,9 @@ RETRY 且结构性不可修（如敏感内容） → close escalated → ESCALAT
 3. FROZEN 全开 vs 预留（本包建议：注册即全开）。
 4. 试卷冻结时点提案确认（载体定版同盘）。
 5. RETRY revision 路径与 P3 豁免条款措辞确认。
+
+## 十一、事实补录（合成裁定 9 落地，2026-08-29）
+
+- **run-log 实 10 行**（本包成文时按 registry 08-20 修正注记误写「2 行」——实态已增长）：W35 完整链 runId=541da30c 全程在案（begin→qualify QUALIFIED→append BLOCKED→init→qualify QUALIFIED→append APPENDED entryNo 1→close ESCALATED（C 查未过）→close APPROVED）——**正向证据**：run 链完整性与 close 双判机制均有真实实跑样本；S5「QUALIFIED 必须入链」的必要性亦由其中 append BLOCKED 样本实证。
+- **Close Skill 非缺位**：spec §2.4 三查（准确性/对外口径/无误伤）+W35 实跑在案——本包原表述「Close Skill 无独立裁决点」系误植，校准为：升档增量=裁决输入含 score JSON+程序化三态判定（agent 裁 approved 不达线仍 RETRY）。
+- **措辞校准**：「close 仅扩词表」→「close 增分支不重构」（close 实增 retry 终态分支+approve 前置校验+大小写归一，非纯词表演换）。

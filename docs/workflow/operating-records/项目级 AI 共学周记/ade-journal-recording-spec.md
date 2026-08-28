@@ -8,6 +8,8 @@
 
 版本：v1.0（2026-08-18 立册；触发事件：W34 周记首次写入违规——跳过规范查找、按任意旧周模板自创结构）
 
+版本：v1.1（2026-08-29，FADE-003 升档联审修后放行落地——新增 §2.5 Score 段（score --run：S1-S7 确定性覆盖+语义四维 W1-W4）/RETRY 状态机（两义合并=退回重做+stage 字段 qualify|score；RETRY→APPROVED 前置=retry 行后同 runId score PASS 行）/裁决词表升三态（APPROVED/ESCALATED/RETRY；FROZEN 留口正名后扩值）/W4 双判问/P3 评分修订豁免；映射声明：静态固化域 Plan 时点=载体定版时点——FADE-001 扩维卷/FADE-003 升格卷两先例同一原则两投影）
+
 维护：秘书处（当前由 `CEOChiefOfStaff` 代管）
 
 上位规范：[TriCompany ADE 模式规范](../../../../TriCompany/docs/engineering/ade-pattern-spec.md) §1.1（FADE = Full-cycle ADE，完整周期八段全落地实跑的实例称号；**本动作已登记为 [fade-registry.md](../../../../TriCompany/docs/engineering/fade-registry.md) FADE-003**）
@@ -38,7 +40,7 @@
 -> DCE（CLI qualify 机械资格 → CLI append 固定格式写入）
 -> Agent Close Skill（读回追加结果，语义裁决：approved | escalated + note）
 -> Close CLI（校验裁决 + run 链完整 + 收口五查 → 持久化终态）
--> 终态：APPROVED | ESCALATED（RETRY = qualify REJECTED 后补字段重来；BLOCKED = 结构性障碍）
+-> 终态：APPROVED | ESCALATED | RETRY（RETRY 两义合并=退回重做，stage 字段区分 qualify|score；BLOCKED = 结构性障碍）
 ```
 
 ### 2.1 Qualify（入册资格）
@@ -57,7 +59,7 @@
   2. 本目录 [README.md](README.md)（归档边界/版本规则/周期规则）；
   3. **最近一个已存在周**的周记文件（格式漂移以最近周为准——向上找最近，禁止跨多周翻旧模板）。
 - P2 落点 = 当前周（active week）目录 `docs/workflow/operating-records/YYYY-Wnn/project-ai-community-weekly-YYYY-Wnn.md`；不存在则按 P1 格式先建草稿（含文档同步元信息 + 记录人/日期行）。
-- P3 只追加不重写：新增 `### 2.n` 条目，不动已有条目（CEO 明确要求修订除外）。
+- P3 只追加不重写：新增 `### 2.n` 条目，不动已有条目（豁免：CEO 明确要求修订；评分驱动的 RETRY 修订——限本次 run 产出条目且须 run 链 revision 行授权，他人/已签发条目绝对禁区）。
 
 ### 2.3 DCE（固定写入格式）
 
@@ -89,7 +91,16 @@ agent 读回追加后的条目，做语义裁决（这是 Close CLI 不能替代
 
 裁决输出：`approved`（通过）或 `escalated`（需 CEO 处理，附原因）+ 一句裁决说明，作为 Close CLI 的输入。
 
-### 2.5 Close CLI（收口五查 + 裁决校验 + 持久化）
+### 2.5 Score 段（v1.1 增补：score --run，升档裁定落地）
+
+- 载体：`journal-cli.mjs score --week <周> --run <runId> [--json] [--skill-json <自评>]`——正典链**追加段**（begin/qualify/append/close 既有逻辑零改动，close 增分支不重构）。
+- S1-S7 确定性覆盖检查：S1 五件结构（本次 2.n 逐件解析）/S2 元信息+lastSyncedAt 当日/S3 落盘路径当周/S4 同题去重+2.x 序号唯一（断号告警不计分）/S5 run 链完整（begin+qualify QUALIFIED+append APPENDED，QUALIFIED 必须入链）/S6 脱敏复核（落盘条目文本重扫）/S7 守恒基线（非本 run 产物条目 diff 零变化——期望集=run-log 全历史 APPENDED/REVISED 按 entryNo 最新 title；本 run 条目改动须 revision 行授权，他人/已签发绝对禁区）。
+- 语义四维度（Score Skill，各 0-5）：W1 现象捕捉/W2 解决方案可操作性/W3 影响面真实度/W4 经验提炼+**对外口径双判问**（通用性、无内部黑话、无内部台账形态——立册反模式 §三 第三条的评分载体补位）；evidence_ref=2.n 内引文；首 3 个功能期 run 双席抽验。
+- 双门槛：必选=S1-S7 全过（omission=0）；总分=S 80+W 20=100 中 **≥90**（S 满分 80=地板，W≥10=最小裁判权——80 卡线史是教训不是基准）。
+- 评分 FAIL → Close Skill 裁 retry → Close CLI 终态 RETRY（stage=score）；RETRY→APPROVED 前置=retry 行后同 runId 存在 score PASS 行（重评必经，机器可校验）。
+- logRun 新增 `action:'score'`（verdict PASS/FAIL/BLOCKED）；审计写失败=stderr 告警+envelope `audit_log_error` 字段（防 S5 误判 FAIL 冤枉好 run）；push 持久化不查保持（纯本地确定性，映射表注记）。
+
+### 2.6 Close CLI（收口五查 + 裁决校验 + 持久化）
 
 - C1 落盘路径在当周目录（不是仓库根/其他周）；
 - C2 条目五件结构完整（现象/具体表现/解决方案/问题影响/当前经验双条）；
@@ -97,11 +108,12 @@ agent 读回追加后的条目，做语义裁决（这是 Close CLI 不能替代
 - C4 git 提交（或明示"落盘未提交"由编排层补）；
 - C5 回报 CEO：文件路径 + 条目编号 + 是否新建草稿。
 
-### 2.6 终态
+### 2.7 终态
 
-- `APPENDED`：条目落盘 + 收口五查全过；
-- `BLOCKED`：当周文件缺失 → 先建草稿再追加（属于正常路径，建后转 APPENDED）；格式真源缺失（prompt/README 读不到）→ 停手升级；
-- `ESCALATED`：入册资格不确定 / 涉及敏感内容边界判断 → CEO 裁决。
+- `APPROVED`：条目落盘 + 收口五查全过（RETRY 后须 retry 行后同 runId score PASS 行方可达此态）；（v1.1 词表统一：原 `APPENDED` 值并入 `APPROVED`）
+- `RETRY`：退回重做（两义合并：stage=qualify 资格补字段重来 / stage=score 评分未达线）——修订后重评，run-log 全程留痕；
+- `BLOCKED`：当周文件缺失 → 先建草稿再追加（属于正常路径，建后转 APPROVED）；格式真源缺失（prompt/README 读不到）→ 停手升级；
+- `ESCALATED`：入册资格不确定 / 涉及敏感内容边界判断 / 语义裁决需 CEO 处理 → CEO 裁决。
 
 ## 三、反模式（2026-08-18 实录，立册依据）
 
@@ -120,9 +132,13 @@ agent 读回追加后的条目，做语义裁决（这是 Close CLI 不能替代
 -> Agent Qualify + Plan Skill：语义四问 + 草拟 entry.json（七字段）
 -> DCE：node journal-cli.mjs qualify --entry <json> --run <runId>   # 机械资格：结构+脱敏扫描
         node journal-cli.mjs append  --entry <json> --run <runId>   # 固定格式渲染为下一个 2.n
--> Agent Close Skill：读回追加结果，语义裁决 approved|escalated + note
--> Close CLI：node journal-cli.mjs close --run <runId> --verdict approved --note "…"   # 校验裁决+run 链+五查 → 终态
--> 审计：journal-run-log.jsonl（runId 贯穿 begin→qualify→append→close，ts/verdict/entryNo）
+-> Score 段：node journal-cli.mjs score --run <runId> [--json] [--skill-json]   # S1-S7 覆盖 + W 语义合并（v1.1 增补）
+-> Agent Close Skill：读回追加结果+评分 JSON，语义裁决 approved|escalated|retry + note
+-> Close CLI：node journal-cli.mjs close --run <runId> --verdict approved|escalated|retry --note "…"   # 校验裁决（三态+不达线判 retry+RETRY→APPROVED 前置）+run 链+五查 → 终态
+-> 审计：journal-run-log.jsonl（runId 贯穿 begin→qualify→append→score→close，ts/verdict/entryNo/subtype）
+
+- 映射声明（升档联审裁定）：静态固化域的 Plan 时点=载体定版时点——FADE-001 扩维卷/FADE-003 升格卷两先例同一原则两投影；
+- 触发自动化（cron/resident）仍挂 automation-backlog——手动/指令触发列增强项，不影响档位（FADE-002 先例）。
 ```
 
 - Close CLI 是裁决的**校验者**而非发起者：`--verdict` 只接受 Close Skill 的合法值（approved|escalated），且要求 run 链完整（begin+append 同 runId 在案）；机械查不过时即使 agent 裁 approved 仍 ESCALATED；
