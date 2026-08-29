@@ -124,47 +124,60 @@ TriPilot/TriRLC 的本地域入口，由TriCade 承接更强的本地执行、�
 
 进一步展开而言：元现实提供真实约束、真实机会与真实问题；元认知把这些问题建模为任务、规则、流程与评价标准；元虚拟把这些任务与规则装入一个可运行的虚拟世界，在可控沙盒中反复演练、协作与试错；最终再把经过验证的方法投回现实执行，并以新的数据与结果持续更新模型。
 
-白皮书中的所有产品都应服务这一条”螺旋迭代”主线，而不是偏离它。
+白皮书中的所有产品都应服务这一条“螺旋迭代”主线，而不是偏离它。
 
 ### 部署拓扑（基础设施层补充）
 
 ```mermaid
+%%{init: {
+  'flowchart': {
+     'htmlLabels': true,
+     'padding': 2,
+     'rankSpacing': 40,
+     'nodeSpacing': 40
+  },
+  'theme': 'base',
+  'themeVariables': {
+      'fontFamily': 'Segoe UI, PingFang SC, Helvetica, Arial, sans-serif',
+      'fontSize': '10px'
+  }
+}}%%
 flowchart LR
     classDef sg fill:#fff5f5,stroke:#e53e3e,stroke-width:1.5px,color:#c53030;
     classDef local fill:#f0fff4,stroke:#38a169,stroke-width:1.5px,color:#276749;
     classDef heyuan fill:#ebf8ff,stroke:#3182ce,stroke-width:1.5px,color:#2a4365;
     classDef repo fill:#fffaf0,stroke:#b7791f,stroke-width:1.5px,color:#6b4600;
 
-    subgraph SG[“sg-server · 阿里云（TriMMC 面）”]
-        sgTrimc[“TriMC daemon<br/>cron 引擎：orchestrate-tick :18/:48<br/>daily-progress-watcher */10min<br/>config-sync 15min · clock-skew 1h”]:::sg
-        sgBare[“sg-bare /srv/git/<br/>TriMetaverse · TriCompany · TriLC<br/>TriModel · TriMC · TriCode”]:::repo
-        sgFleet[“/srv/fleet/<br/>TriMetaverse · TriCompany · TriLC<br/>TriModel · TriMC · TriCode<br/>hook → orchestrate_tick → CC spawn”]:::sg
-        sgTrimc ---|”消费 /srv/fleet”| sgFleet
-        sgFleet ---|”push/pull”| sgBare
+    subgraph SG["sg-server · 阿里云（TriMMC 面）"]
+        sgTrimc["TriMC daemon<br/>cron 引擎：orchestrate-tick :18/:48<br/>daily-progress-watcher */10min<br/>config-sync 15min · clock-skew 1h"]:::sg
+        sgBare["sg-bare /srv/git/<br/>TriMetaverse · TriCompany · TriLC<br/>TriModel · TriMC · TriCode"]:::repo
+        sgFleet["/srv/fleet/<br/>TriMetaverse · TriCompany · TriLC<br/>TriModel · TriMC · TriCode<br/>hook → orchestrate_tick → CC spawn"]:::sg
+        sgTrimc ---|"消费 /srv/fleet"| sgFleet
+        sgFleet ---|"push/pull"| sgBare
     end
 
-    subgraph LOCAL[“本机 · Windows（TriMLC 面 / 董事会）”]
-        board[“董事会会话<br/>（CEO 直连 · 指令源）”]:::local
-        hub[“董事长助理小贾<br/>（常驻中枢 · 完整上下文）”]:::local
-        trilcLocal[“TriLC daemon pid 27168<br/>token 门 · TriPilot 0.0.13”]:::local
-        fadeTools[“scripts/fade/ 工具族<br/>seal-materials · node-report-check<br/>run-root · _fadehash · hub-snapshot-diff”]:::local
-        board ---|”指令投递”| hub
-        hub ---|”交付转呈”| board
-        trilcLocal ---|”token 门”| fadeTools
+    subgraph LOCAL["本机 · Windows（TriMLC 面 / 董事会）"]
+        board["董事会会话<br/>（CEO 直连 · 指令源）"]:::local
+        hub["董事长助理小贾<br/>（常驻中枢 · 完整上下文）"]:::local
+        trilcLocal["TriLC daemon pid 27168<br/>token 门 · TriPilot 0.0.13"]:::local
+        fadeTools["scripts/fade/ 工具族<br/>seal-materials · node-report-check<br/>run-root · _fadehash · hub-snapshot-diff"]:::local
+        board ---|"指令投递"| hub
+        hub ---|"交付转呈"| board
+        trilcLocal ---|"token 门"| fadeTools
     end
 
-    subgraph HY[“heyuan · 阿里云（TriRMC 面）”]
-        hyRMC[“TriRMC daemon<br/>rmc_tick · 调度面”]:::heyuan
-        hyRLC[“TriRLC daemon<br/>agent-core loop”]:::heyuan
-        hyFleet[“/srv/fleet/<br/>TriMetaverse · TriCompany · TriLC<br/>TriModel · TriRMC”]:::heyuan
-        hyRMC ---|”调度”| hyRLC
-        hyRLC ---|”消费”| hyFleet
+    subgraph HY["heyuan · 阿里云（TriRMC 面）"]
+        hyRMC["TriRMC daemon<br/>rmc_tick · 调度面"]:::heyuan
+        hyRLC["TriRLC daemon<br/>agent-core loop"]:::heyuan
+        hyFleet["/srv/fleet/<br/>TriMetaverse · TriCompany · TriLC<br/>TriModel · TriRMC"]:::heyuan
+        hyRMC ---|"调度"| hyRLC
+        hyRLC ---|"消费"| hyFleet
     end
 
-    sgBare <==>||”git 三端同步（中央枢纽）”| LOCAL
-    sgBare <==>||”git 同步”| HY
-    LOCAL <-->|”SSH（heyuan-fleet ↔ sg-fleet 信任）”| HY
-    sgTrimc -->|”cron 巡检兜底<br/>daily-progress 10min”| sgFleet
+    sgBare <==>|"git 三端同步（中央枢纽）"| LOCAL
+    sgBare <==>|"git 同步"| HY
+    LOCAL <-->|"SSH（heyuan-fleet ↔ sg-fleet 信任）"| HY
+    sgTrimc -->|"cron 巡检兜底<br/>daily-progress 10min"| sgFleet
 ```
 
 图注：TriMetaverse 实际部署横跨三节点——sg-server（阿里云，TriMMC 面）、本机 Windows（TriMLC 面/董事会）、heyuan（阿里云，TriRMC 面）。sg-bare 裸仓集群为中央 git 枢纽，三端通过 push/pull 保持一致。sg 侧 TriMC daemon 承载编排 cron 引擎（orchestrate-tick 双通道拾取/每日进度巡检/配置同步/钟差检测），本机侧 TriLC daemon 承载 token 门控与 TriPilot 聊天通道，heyuan 侧 TriRMC/TriRLC 承载生产面调度与 agent-core 执行。SSH 信任链（heyuan-fleet→sg-fleet）保障跨节点 daemon 操作。董事会会话与董事长助理中枢组成编排/中枢分权制，持有完整工作上下文与挂账台账（双层镜像+蓄水池快照+周平面每日进度六源恢复体系）。
