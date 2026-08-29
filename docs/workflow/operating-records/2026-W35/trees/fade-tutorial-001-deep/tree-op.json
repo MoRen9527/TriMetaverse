@@ -19,12 +19,14 @@
       "nodeId": "V1",
       "agent": "TestEngineer",
       "status": "done",
+      "resultNote": "sg 路线真核验（tick 20260828T193147Z 编排层派工 fresh TestEngineer）：PASS 零实质错误——21 枚 hash 机械门全证实/评分数字六源对照/file:line 八文件亲读/深度 428；A1-A5 progress 行号+1 漂移与 B1-B3 精度观察均非阻塞（活文件漂移，教程头部已预声明）；报告 reports/node-V1.md 九键+三明细节+编排层回填节（前置门 PASS exit0）；核验对象 428 行稿经并行线合稿 190212a 全文并入权威 788 行版（保全特征锚验证成立）",
       "action": "事实核验 fade-001-maintenance-deep-dive.md：①教程引用的每个 file:line 与仓库现行代码比对 ②每个 commit hash 用 git log 验证 ③评分数字（90/80/85）与 fade-papers/FADE-001-paper*.json 对照 ④深度 wc -l ≥400 ⑤错误逐条列出，核验报告落同目录 reports/。"
     },
     {
       "nodeId": "C1",
       "agent": "CEOChiefOfStaff",
       "status": "done",
+      "resultNote": "sg 执行线收口（tick 20260828T193147Z）：APPROVE——doneCondition 三腿达成（合稿 190212a 入库/核验零错误/三端分端如实）；报告 reports/node-C1.md 九键+残差五项+状态条；双门 --all PASS 3/3；与并行线裁定 (a) 收口登记并存互不改写",
       "action": "收口：核验通过后 commit+push 三端（本地/sg-bare/GitHub），状态条报董事会。核验不通过→打回 W1 重写。"
     }
   ],
