@@ -49,6 +49,12 @@
   - 用途：把 §3.1 三层的最小实现画成一条闭环——元虚拟（TriMMC＋TriMLC/宿主，FADE 灌员工定义、实验成果落盘）、元认知（项目代码仓，唯一无运行时承重底座）、元现实（TriRMC＋TriRLC/agent-core，worktree 消费与需求/缺陷回写），金色粗边为螺旋迭代链（①数据与规则 → ②创新与建模 → ③验证与升级回灌），突出“代码仓是跨层流动唯一中转与可审计 git 痕迹承载”。
   - 状态：**受控主文件**
 
+- `tmv-wp-deploy-topology-3-8.mmd`
+  - 对应章节：`3.1 三层模型 · 部署拓扑（基础设施层补充）`
+  - 图题：图 3-8：TriMetaverse 三节点部署拓扑
+  - 用途：画出三节点实际基础设施层——sg-server（TriMMC 面：TriMC daemon cron 引擎 + sg-bare 裸仓枢纽 + /srv/fleet）、本机 Windows（TriMLC 面：董事会会话 + 董事长助理中枢 + TriLC daemon token 门 + scripts/fade 工具族）、heyuan（TriRMC 面：TriRMC/TriRLC daemon + /srv/fleet），及三端 git 同步与 SSH 信任链。
+  - 状态：**受控主文件**
+
 ## 3. 仓内其他 Mermaid 资产（设计文档）
 
 - `tmv-five-layer-architecture.mmd`

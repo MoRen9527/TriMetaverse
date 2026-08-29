@@ -128,6 +128,10 @@ TriPilot/TriRLC 的本地域入口，由TriCade 承接更强的本地执行、�
 
 ### 部署拓扑（基础设施层补充）
 
+图 3-8：TriMetaverse 三节点部署拓扑
+
+[查看图 3-8 原图（SVG 静态版）](mermaid/tmv-wp-deploy-topology-3-8.svg)
+
 ```mermaid
 %%{init: {
   'flowchart': {
