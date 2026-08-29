@@ -126,6 +126,62 @@ TriPilot/TriRLC 的本地域入口，由TriCade 承接更强的本地执行、�
 
 白皮书中的所有产品都应服务这一条“螺旋迭代”主线，而不是偏离它。
 
+图 3-7：三层的最小实现与螺旋迭代链
+
+[查看图 3-7 原图（SVG 静态版）](mermaid/tmv-wp-three-layer-3-7.svg)
+
+```mermaid
+%%{init: {
+  'flowchart': {
+     'htmlLabels': true,
+     'padding': 2,
+     'rankSpacing': 40,
+     'nodeSpacing': 40
+  },
+  'theme': 'base',
+  'themeVariables': {
+      'fontFamily': 'Segoe UI, PingFang SC, Helvetica, Arial, sans-serif',
+      'fontSize': '10px'
+  }
+}}%%
+flowchart TD
+    classDef virtual fill:#ffffff,stroke:#6b46c1,stroke-width:1.5px,color:#44337a;
+    classDef cognition fill:#fff7e6,stroke:#b7791f,stroke-width:1.5px,color:#6b4600;
+    classDef reality fill:#ffffff,stroke:#2b6cb0,stroke-width:1.5px,color:#1a365d;
+
+    subgraph MR["元现实层 · 验证与升级"]
+        mrImpl["TriRMC 元现实主控 ＋ TriRLC 元现实本地控制器（原 TriLC）<br/>承接生产面：稳定执行 / 无人值守 / 权限审计 / 跨节点协同<br/>能力域：真实部署 / 规则执行 / 业务变现 / 回流校准"]:::reality
+        mrCore["agent-core 自研内核：会话 / 调度 / 权限 / cron / 进程监督 / 审计<br/>不依赖任何单一宿主"]:::reality
+        mrImpl ---|"共用"| mrCore
+    end
+
+    subgraph MC["元认知层 · 创新与建模（知识生产 / 任务编排 / 评测与反馈）"]
+        repo["项目代码仓（元认知最小实现本体）<br/>三层唯一无运行时层 · 共同承重底座<br/>版本历史 = 结构化沉淀 · 跨层流动唯一中转<br/>所有跨层流动一律留可审计 git 痕迹"]:::cognition
+    end
+
+    subgraph MV["元虚拟层 · 仿真与试验"]
+        mvImpl["TriMMC 元虚拟主控（原 TriMC）＋ TriMLC 元虚拟本地控制器<br/>bridge 通信 · 宿主可整体替换（当前 claude code → 未来 codex 等）<br/>能力域：游戏化虚拟世界 / 仿真沙盒 / 策略演练 / 平行试验"]:::virtual
+        mvHost["宿主：会话 / loop / 上下文直接用宿主原生能力<br/>不自建会话管理与执行内核"]:::virtual
+        mvImpl -->|"FADE 发布线：灌入员工定义（合同 / 五件套）"| mvHost
+    end
+
+    mrImpl ==>|"① 数据与规则"| repo
+    repo ==>|"② 创新与建模"| mvImpl
+    mvImpl ==>|"③ 验证与升级 · 回灌"| mrImpl
+
+    mvImpl -->|"实验成果落盘"| repo
+    mrImpl -.->|"以 worktree 方式消费仓中事实"| repo
+    mrImpl -->|"生产需求 / 缺陷回写为实验输入"| repo
+
+    linkStyle 2,3,4 stroke:#b7791f,stroke-width:3px;
+
+    style MR fill:#f5f8ff,stroke:#2b6cb0,stroke-width:1.2px,corner-radius:6px
+    style MC fill:#fffaf0,stroke:#b7791f,stroke-width:1.2px,corner-radius:6px
+    style MV fill:#f9f5ff,stroke:#6b46c1,stroke-width:1.2px,corner-radius:6px
+```
+
+图注：这张图把 §3.1 的最小实现画成一条闭环。金色粗边为螺旋迭代链：元现实以 ①“数据与规则”进入元认知，元认知以 ②“创新与建模”装入元虚拟，元虚拟再以 ③“验证与升级”回灌元现实。元虚拟侧，TriMMC＋TriMLC 经 bridge 组成宿主可整体替换的虚拟研发环境，只负责经 FADE 发布线把仓中员工定义（合同/五件套）灌入宿主、把实验成果落盘回仓，会话与执行内核直接用宿主原生能力；元现实侧，TriRMC＋TriRLC 共用自研内核 agent-core 自持生产面，并以 worktree 方式消费仓中事实、把生产需求与缺陷回写为新的实验输入。项目代码仓作为三层中唯一无运行时的承重底座居中，是双向螺旋每一跳的唯一中转，所有跨层流动都在这里留下可审计的 git 痕迹。
+
 三层的最小实现已经是可运行的系统，并将沿各模块的切入点产品梯度演进到游戏化虚拟世界与分布式贡献网络；它同时是图 3-2 端到端价值闭环的最小子集种子——AI 调度段现役（服务域集群+本地域安装体），AI 评估段即 FADE 评分（Score CLI/Skill），区块链段（智能合约结算/通证激励）属生产系统期。
 
 ### 3.2 平台能力域拆分

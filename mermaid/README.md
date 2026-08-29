@@ -43,6 +43,12 @@
   - 用途：作为图 3-1 中 AI 核心服务（任务处理网络）的细化展开图，展示其在 Local / Server 双域中的参考实现，强调 `Task Main Controller -> Service Scheduler -> Service Pods` 的服务域链路，以及 `Task Main Controller -> Planner -> Local ToolBus -> AI Dev/Mobile Worker` 的本地域链路，并补入验证、报告回写与审计证据沉淀。
   - 状态：**受控主文件**
 
+- `tmv-wp-three-layer-3-7.mmd`
+  - 对应章节：`3.1 三层模型`
+  - 图题：图 3-7：三层的最小实现与螺旋迭代链
+  - 用途：把 §3.1 三层的最小实现画成一条闭环——元虚拟（TriMMC＋TriMLC/宿主，FADE 灌员工定义、实验成果落盘）、元认知（项目代码仓，唯一无运行时承重底座）、元现实（TriRMC＋TriRLC/agent-core，worktree 消费与需求/缺陷回写），金色粗边为螺旋迭代链（①数据与规则 → ②创新与建模 → ③验证与升级回灌），突出“代码仓是跨层流动唯一中转与可审计 git 痕迹承载”。
+  - 状态：**受控主文件**
+
 ## 3. 仓内其他 Mermaid 资产（设计文档）
 
 - `tmv-five-layer-architecture.mmd`
