@@ -109,3 +109,8 @@
 - registry：v2.1；今日 registry 提交无变化
 - LG-014 五件当日落地销账（董事会执行令即起实施）：件 1 hub-waterlevel.py 水位探针（自测 11/11；首跑即抓本中枢 89.3% warning 真实告警，auto-compact 后回落 4.8% 动态弧线入卷）+件 2 hub-heartbeat.py 心跳 hook+项目 settings.json（自测 7/7；hook 免重启生效实证）+件 3 hub-watchdog.py+TriHubWatchdog 计划任务 5min（自测 16/16；直挂 python.exe 卡控制台交互实测抓出→cmd 薄包装根治；task.log/flag 双实证）+件 4 recover-brief.py（自测 8/8；六源全在位 rc=0）+件 5 E-5 注入演练 PASS（受控构造 AC-4 口径：生产路径无误报实证+unreachable 全链两周期+flag need_rebuild+BRIEF 38 行自动生成；产物留档 .fade/hub/e5/）。四件自测合计 42/42；细则 10 第 5 判例候选从动因转接线。提交锚：e8213caa/e2d861f8/b5c313ea/afb2fa11+收口。
 - registry：无变化（LG-014 全部落 scripts/fade/+.claude/settings.json+计划任务，未动 TriCompany registry）
+- 巡检兜底补写 @21:10 +08：自上次进度提交 a235914d 后新增 3 条 commit：
+  - afb2fa11 feat(fade): LG-014 件 4 recover-brief.py——恢复简报生成器（六源逐项机器校验存在性/行数/sha1-12+代位声明 provisional 权力边界+机器校验清单+转正流程指针；缺源不失败如实标注；S3 快照/latest 自动选取+S5 转录目录探针）；自测 8/8+真实生成 rc=0 六源全在位（首跑字面 bug %%F→%F 修复+UTF-8 读回验证）；落 .fade/hub/recover-brief-latest.md 供 watchdog 联动 @MoRen
+  - f2190578 merge: 归账——并入 sg 线巡检兜底补写增量（a235914d），watchdog 件 3 同批
+  - b5c313ea feat(fade): LG-014 件 3 hub-watchdog.py——中枢 watchdog 裁决器（心跳龄 30/60min 双门+缺失+transcript 停滞 unreachable+连续 2 周期防抖 state 文件+水位≥80% pre-warning 合入+flag 文件供编排层+unreachable 生效自动调 recover-brief 生成 BRIEF）；watchdog-task.cmd 薄包装规避 schtasks /TR 引号嵌套（直挂 python.exe 卡控制台交互实测抓出→/End+包装根治）；自测 16/16（自测 FAIL 抓 flag 落盘不可测→提 write_flag 可测函数）；计划任务 TriHubWatchdog 5min 在册+task.log/flag 双实证 @MoRen
+- registry：v2.1；今日 registry 提交无变化
