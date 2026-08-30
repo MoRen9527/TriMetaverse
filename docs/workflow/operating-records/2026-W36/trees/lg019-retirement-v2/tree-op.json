@@ -4,12 +4,23 @@
   "week": "W36",
   "source": "LG-019 评估闭环（0f2418f6：底稿+双席意见书）+CEO 裁决 2026-08-31 01:0x（采 X 两步式；立法树先行→退役同树执行；clone 懒建触发器入 v2.0）",
   "domainRouting": "local-executable",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-31",
   "face": "m-face",
   "nodes": [
-    {"nodeId": "LR-1", "agent": "CEOChiefOfStaff", "status": "pending", "action": "协议 v2.0 全文一致性重写（CTO 修订面 6 节实质改+3 节局部清理：§一拓扑单 dev 化/§二分支模型双分支废+转历史锚/§三写入权矩阵 worktree 列清/§四迁移协作现行化（23:00+heyuan 唯一执行点）/§五日常流程 push origin dev 对齐（E3 矛盾行改写）/§六五实例 TriRLC 本地行现值化；§七压缩/§八分叉预案行（B1）/§九清单重立基线）+决策记录（CEO 裁决采纳 X、取代双分支模型正身、project/trimetaverse 转历史锚按 tc001-canonical 先例）"},
-    {"nodeId": "LR-2", "agent": "CEOChiefOfStaff", "status": "pending", "action": "退役动作（C2 序裁剪·懒建形态）：ProjectRegistry claim 清除→git worktree remove→project/trimetaverse 留 GitHub 历史锚不动→拓扑正身 §一 6* 回填→daemon 零影响复核留痕（CWD=C:/Users/jedih 双证：schtasks WorkingDirectory 空+cmd cd 行）"}
+    {
+      "nodeId": "LR-1",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "协议 v2.0 全文一致性重写（CTO 修订面 6 节实质改+3 节局部清理：§一拓扑单 dev 化/§二分支模型双分支废+转历史锚/§三写入权矩阵 worktree 列清/§四迁移协作现行化（23:00+heyuan 唯一执行点）/§五日常流程 push origin dev 对齐（E3 矛盾行改写）/§六五实例 TriRLC 本地行现值化；§七压缩/§八分叉预案行（B1）/§九清单重立基线）+决策记录（CEO 裁决采纳 X、取代双分支模型正身、project/trimetaverse 转历史锚按 tc001-canonical 先例）"
+    },
+    {
+      "nodeId": "LR-2",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "退役动作（C2 序裁剪·懒建形态）：ProjectRegistry claim 清除→git worktree remove→project/trimetaverse 留 GitHub 历史锚不动→拓扑正身 §一 6* 回填→daemon 零影响复核留痕（CWD=C:/Users/jedih 双证：schtasks WorkingDirectory 空+cmd cd 行）"
+    }
   ],
-  "doneCondition": "v2.0 入册+决策记录在案+worktree list 无 WorkTree+registry claim 清+拓扑正身回填；边界=不碰主仓 9 modified 在途、不建 clone（懒建）、不动 LG-017"
+  "doneCondition": "v2.0 入册+决策记录在案+worktree list 无 WorkTree+registry claim 清+拓扑正身回填；边界=不碰主仓 9 modified 在途、不建 clone（懒建）、不动 LG-017",
+  "closeNote": "收口 2026-08-31 01:2x：LR-1=v2.0 入册（e140fa38）；LR-2=退役动作全绿（claim 清/worktree remove/list 单仓）；裁决二同批=sg-bare github remote+post-receive 镜像段 v2（v1 第二循环 stdin EOF 误用实测抓出→内联修正 bash -n 校验+空提交冒烟 FAILED 行实证不阻塞）+github-reconcile 每日对账 job 注册+heyuan github 死挂 remote 删；凭证卡点=sg 无 GitHub 写凭证据实上呈（deploy key 公钥已备待 CEO 贴仓库 Deploy keys[write]）"
 }

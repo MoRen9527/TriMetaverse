@@ -37,3 +37,5 @@
 - 巡检兜底补写 @00:50 +08：自上次进度提交 41499531 后新增 1 条 commit：
   - 4ace9825 docs(exec): 仓库拓扑正身入册（repo-topology-20260831.md——五节点实勘+写读侧同步顺序图+迁移执行点锚 TriRMC-Scheduler/GitHub 现势回填 41499531 两端平齐）+heyuan-branch-switch-impact 执行点勘误（§1.5/Q1 勘误指针+修正记录段：现役唯一执行点=heyuan 9c81c7ec，五源重建漏 08-26 主责切换，Q5 结论受染度分析）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- CEO 两项裁决执行（LG-019 采 X+LG-018 镜像推）：立法树 lg019-retirement-v2（LR-1 协议 v2.0 单 dev 重构 e140fa38+LR-2 退役动作全绿——registry claim 清/worktree remove/list 单仓/拓扑正身 6* 回填/daemon cwd 实测零影响双证）；裁决二=sg-bare github remote+post-receive 镜像段（v1 第二 while read stdin EOF 误用实测抓出零日志→v2 内联修正 bash -n+空提交冒烟 FAILED 行实证不阻塞设计）+github-reconcile 每日 09:07 对账 job（trimc cron 注册）+heyuan github 死挂 remote 删（origin/sg-bare 保留=迁移 job 双依赖实勘）；**凭证卡点上呈**=sg 无 GitHub 写凭证（deploy key 公钥已备 /home/fleet/.ssh/github-mirror-ed25519.pub 待 CEO 贴仓库 Deploy keys[write]，补齐即自动通）。
+- registry：v2.1；今日 registry 提交无变化
