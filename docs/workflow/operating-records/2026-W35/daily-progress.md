@@ -74,3 +74,9 @@
   - 5a2a7b0c docs(plane): W35 共学分享会提纲落盘（AGENDA-20260829-001，周六 20:00 用）——周记条目 2.1/2.2 讲述线+跨条目方法论三条+讨论题三项+行动项收口；提醒周记今日签发归档 v2026.W35.1 @MoRen
   - ce9a000f docs(wp): 白皮书 §3.1 新增图 3-7 三层最小实现与螺旋迭代链——mermaid 资产 tmv-wp-three-layer-3-7 落库（.mmd+.svg 经 export-agent-platform-svg.ps1 导出，正文 SVG 链接+内联块+图注三件套，台账 README 登记；追加编号不重排现有图 3-1..3-6）@MoRen
 - registry：v2.1；今日 registry 提交 1 条：9393893 docs(registry): FADE-003 升档完整档——score 全链首评 98/100（runId 7a85e3e0，卷 5220091c 双 hash 载体定版同盘）+兼容档标注撤销（v2.0.2 降档标注保留为历史档案）+升档路线五项销账（触发自动化维持增强项）+②表补 Score 双段行+Close/终态行三态化+spec v1.1 引用（LG-013）
+## 2026-08-30（周日）
+
+**助理主叙事**（董事长助理；粗粒度恢复锚，权威细节见 board-journal/ledger-mirror——机器本地不入仓）：
+- 中枢重建就位：xiaojia-hub 双崩重建（r2 上下文爆掉后继），五源（CLAUDE.md 分权制节/board-journal/ledger-mirror/full-20260828T1510Z/fade-protocol-spec v2.0.3+registry v2.1）+董事会增量状态重建完毕，状态条已交。
+- 董事会首办件交付：heyuan /srv/fleet/TriMetaverse 拟切 project/trimetaverse 分支影响评估——报告落 docs/execution/heyuan-branch-switch-impact.md（实勘：分支=dev 严格祖先落后 202 提交且仅在 GitHub 不在 sg-bare；heyuan 检出 dev@c6f969de 滞 69 提交无自动拉取；rmc_tick.py:196 push origin dev 硬耦合+face 严格门零 r-face 树现势；五问逐答+七条前置清单；结论=前置未齐切=纯回退零收益，位姿隔离已由 face 门达成，分支方案建议退回提案区或按清单补齐再议）。证据：本机 git 拓扑+heyuan SSH 只读侦察（fleet 身份）+TriRMC 源码+runbook/登记册现行版。
+- registry：v2.1；今日 registry 提交无变化
