@@ -93,3 +93,7 @@
   - 762b6a8b ops(fade): sdk-evaluation-001 E2 收口——node-E2.md 九键报告+E2 翻 done+state/log 登记（同 commit）：前置门 node-report-check PASS exit0（python3.8），编排跨仓抽查 6/6 逐字命中；E2=保持自研不引入外部 SDK @MoRen
   - 56bec6de ops(fade): sdk-evaluation-001 E2 报告落账——sdk-eval-r-face.md 226 行（先写后报，CTO fresh 子实例 Edit 占位锚成稿）：R 面 agent-core 完备性分模块盘点（8 模块已有/缺口+离 dsh 过渡 M1-M7 里程碑差距）+外部 SDK 依赖风险四项命中自主可控原则，结论=保持自研不引入（dsh 过渡按 M1-M7 自研路线推进）；编排抽查 6 处 file:line 亲读全命中 @MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:20 +08：自上次进度提交 f660b9af 后新增 2 条 commit：
+  - 4649b4bf ops(fade): sdk-evaluation-001 收口（红线4）——顶层 status=done：doneCondition 两腿达成（双席评估报告齐+董事会决策建议产出），三节点九键报告齐+双门 --all PASS 3/3 exit0；M 面=不替换/不做档+R 面=保持自研（dsh 规格第 0 步+M2/M3 工程窗建议）呈董事会定夺 @MoRen
+  - 33d0c153 ops(fade): sdk-evaluation-001 E3 收口——node-E3.md 九键报告+E3 翻 done+state/log 登记（同 commit）：前置门 node-report-check PASS exit0（python3.8），引用锚点抽查 13 组全命中；doneCondition 两腿达成（双席报告齐+决策建议产出），三节点全 done @MoRen
+- registry：v2.1；今日 registry 提交无变化
