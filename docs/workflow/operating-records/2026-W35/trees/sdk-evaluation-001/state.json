@@ -1,0 +1,81 @@
+{
+  "tick": "20260830T074112Z",
+  "treeId": "sdk-evaluation-001",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/sdk-evaluation-001/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance",
+    "model": "glm-5.3-flash"
+  },
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260830T074112Z.md",
+  "startedAt": "2026-08-30T07:41:12Z",
+  "surveyedAt": "2026-08-30T07:43:14Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；一次一个节点 fresh 派工禁复用；先写后报（子实例先落盘再报告带路径+行数）；命令裸形式（跨仓 git -C）；翻转前置门 node-report-check.py（python3.8）双门；收口必做（全节点 done 后顶层 status=done 再提交+push+台账追加）",
+  "volumeSeal": {
+    "sourceMaterials": "缺省（tree-op.json 无 sourceMaterials 字段）→ §9.2 开卷验卷与 §9.3 收口对卷均 N/A，如实记录；评估事实源=官方 SDK 文档（编排层 WebFetch 转录快照 reports/agent-sdk-docs-snapshot.md，2026-08-30T07:43Z 取数）+ /srv/fleet/TriCompany/runtime/cognition/orchestrate_tick.py（M 面 Popen 实现，Popen@L459）+ /srv/fleet/TriRMC/scripts/rmc_tick.py（R 面 urllib 实现）+ /srv/fleet/TriCompany/packages/agent-core/src/**（自研内核 38 个 .ts）+ /srv/fleet/TriCompany/docs/engineering/fade-protocol-spec.md（§2.8 降级合同）；行号/commit/hash 一律现场取证禁凭记忆"
+  },
+  "baseline": {
+    "headAtStart": "38b5390d7c9cb1b5b8543c1032f3b69dbb029618",
+    "branchState": "dev 与 origin/dev 同步（status -sb 无 ahead/behind）；工作树 3 处非本树 untracked（p0fix1 .ledger-backfill-tmp.py／p0fix4 reports/sandbox/／tmp-work/）不触碰",
+    "treeStatusAtStart": "active；E1/E2/E3 三节点全 pending",
+    "concurrentWriter": "daily-progress-watcher 在共享工作树有 pull --rebase 前科（fade-tutorial-001-deep tick 20260828T193147Z 实测本地 hash 重放 248ae69a→493bbbeb）——本 tick 每 commit 后尽早 push 压缩重放窗口，push 前重核 status"
+  },
+  "divisionOfLabor": "派工角色（ChiefTechnologyOfficer/TriCompanyCEOChiefOfStaff）工具面=Read/Glob/Edit 无 Bash/Write/WebFetch：先写后报（先 Edit 占位锚成稿再报告带路径+行数）；编排层持 git 提交/push/机械门禁（node-report-check.py python3.8 + 抽查亲读）+ WebFetch 取证（SDK 文档快照由编排层落树内供子实例 Read）；节点报告 reports/node-<ID>.md 由编排层撰写（与该节点状态翻转同 commit）",
+  "triggerChain": {
+    "observed": "session-registry.json ticks 末条 2026-08-30T07:41:12.230560+00:00 tree=sdk-evaluation-001 rc=spawned pid=1288555 trigger=hook——本会话即该 spawn",
+    "reviewFocus": "hook 快通道触发；树注册 commit 56da6c57（2026-08-29）→ spawn 2026-08-30T07:41:12Z（跨夜，快通道时延非本树关注点，仅如实记录）"
+  },
+  "evalTargets": {
+    "mFace": {
+      "impl": "/srv/fleet/TriCompany/runtime/cognition/orchestrate_tick.py（Popen 发射 CC CLI 子进程：cmd 数组含 --allowedTools 白名单/--output-format json，L430-460；异步 Popen 不阻塞 L454-462；锁内补记 spawn pid L473-483）",
+      "spec": "https://code.claude.com/docs/en/agent-sdk/overview（快照=reports/agent-sdk-docs-snapshot.md）"
+    },
+    "rFace": {
+      "impl": "/srv/fleet/TriRMC/scripts/rmc_tick.py（urllib.request 自研线）",
+      "core": "/srv/fleet/TriCompany/packages/agent-core/src/**（permissions-engine/message-guard/process-supervisor/scheduler/sub-agent/contracts/loop.ts/tools.ts）",
+      "principle": "R 面自主可控原则：agent-core 自研内核不依赖单一宿主；dsh（DeepSeek Harness）作为 agent-core 核心的稳定过渡为目标态"
+    },
+    "protocol": "/srv/fleet/TriCompany/docs/engineering/fade-protocol-spec.md v2.0.3（段-实现绑定框架；E1 维度③关注 §2.8 降级合同是否因 spawn 载体形态变化需重审）"
+  },
+  "closePlan": {
+    "gateOrder": "E1 done 前置门 node-report-check --node E1 → E2 同 → E3 同；编排收口对三节点 --all 复跑（双门）；全 done 后顶层 status=done+收口 commit+push origin dev+/srv/fleet/shadow-plane/session-registry.json 追加本 tick 台账（instances+ticks 双条目）",
+    "nodeReports": "reports/node-E1.md / node-E2.md / node-E3.md 由编排层撰写，九键 fenced json+三散文节（异常与处置/断点交接/使用依据），与对应节点状态翻转同 commit"
+  },
+  "nodes": [
+    {
+      "nodeId": "E1",
+      "agent": "ChiefTechnologyOfficer",
+      "status": "done",
+      "evidence": "reports/sdk-eval-m-face.md 123 行（commit d60f70b4）四维评估：①SDK=现契约严格超集但增量能力零消费者 ②真实成本在 pid 锚全链/harvest Close CLI 载体/detach 语义三处深层重建 ③不触发 §2.8 细则4 降级合同重审（触发键=载体类别非 spawn 机制），触发细则 2/3/7b 映射表变更登记义务 ④结论=不替换+C1-C5 条件复评触发器；编排抽查实质锚点全命中（TC L290-315/L420-437/协议 L243-266/快照 L40-51），快照 §一 ±2 行漂移如实入账；前置门 node-report-check --node E1 PASS exit0",
+      "subInstance": { "role": "ChiefTechnologyOfficer", "agentId": "ad431553f992a3ef8", "model": "继承（glm-5.3-flash）", "fresh": true, "reportedAt": "2026-08-30T07:51:55Z(约)", "releasedAt": "2026-08-30T07:51:55Z(约)" }
+    },
+    {
+      "nodeId": "E2",
+      "agent": "ChiefTechnologyOfficer",
+      "status": "done",
+      "evidence": "reports/sdk-eval-r-face.md 226 行（commit 56bec6de）三维论证：①agent-core 完备性=8 模块已有/缺口盘点（DI 宿主解耦/多协议工具流归一 loop.ts:267-272/三层错误恢复/6 模式 10 步权限管线/registry-only 工具面），缺口 6 项（会话持久化/上下文压缩闭环/协议面入核/MCP client/规则加载器/可观测面），离 dsh 距离=M1-M7 里程碑差距（dsh 全仓检索零命中如实降级为推测性路线图）②外部 SDK 依赖风险四项命中自主可控原则（商业条款/闭源 native 捆绑/API key 模型面前提/权限语义不可映射 4 vs 6 模式）③结论=保持自研不引入（边界条件 A/B/C+三项可借鉴非引入）；编排抽查 6/6 file:line 逐字命中；前置门 PASS exit0",
+      "subInstance": { "role": "ChiefTechnologyOfficer", "agentId": "aeca59078af34d3fb", "model": "继承（glm-5.3-flash）", "fresh": true, "reportedAt": "2026-08-30T08:00:00Z(约)", "releasedAt": "2026-08-30T08:00:00Z(约)" }
+    },
+    {
+      "nodeId": "E3",
+      "agent": "CEOChiefOfStaff→TriCompanyCEOChiefOfStaff（registry 类型映射，如实记录）",
+      "status": "done",
+      "evidence": "reports/board-recommendation.md 120 行（commit eca6675b）合成建议书：双席结论无实质分歧（E2 证据边界9 自述未读 E1 报告=独立证据链收敛）+独立收敛点「SDK 不消除 native CLI 运行时依赖」；M 面档位=不做（C1-C5 挂监控面非工作项，附「不做 vs 工程窗」语义辨析）；R 面=dsh 规格登记立项第 0 步前置+M2/M3 入工程窗（M4 挂起待 TriLC 勘察）；呈董事会决策清单 7 条（建议≠裁决）；编排抽查 E1 侧 7 组+E2 侧 6 组引用锚点逐字全命中；前置门 PASS exit0",
+      "subInstance": { "role": "TriCompanyCEOChiefOfStaff", "agentId": "a4bd3c8115adc5f2e", "model": "继承（glm-5.3-flash）", "fresh": true, "reportedAt": "2026-08-30T08:07:30Z(约)", "releasedAt": "2026-08-30T08:07:30Z(约)" }
+    }
+  ],
+  "commits": [
+    "41775645（骨架先行）",
+    "d60f70b4（E1 报告落账）",
+    "aa2e7d10（E1 收口：node-E1.md+E1 翻 done+state/log 登记同 commit）",
+    "56bec6de（E2 报告落账）",
+    "762b6a8b（E2 收口：node-E2.md+E2 翻 done+state/log 登记同 commit）",
+    "eca6675b（E3 报告落账）",
+    "（本笔=E3 收口：node-E3.md+E3 翻 done+state/log 登记同 commit，hash 见 git log）"
+  ],
+  "updatedAt": "2026-08-30T08:12:30Z",
+  "closedAtSg": "2026-08-30T08:12:30Z",
+  "closeNoteSg": "sg 执行线收口（tick 20260830T074112Z）：doneCondition 两腿达成——双席评估报告齐（E1 sdk-eval-m-face.md 123 行 d60f70b4：M 面不替换+C1-C5 条件复评触发器；E2 sdk-eval-r-face.md 226 行 56bec6de：R 面保持自研不引入+M1-M7 里程碑差距+边界条件 ABC）+董事会决策建议产出（E3 board-recommendation.md 120 行 eca6675b：M 面=不做档+R 面 dsh 规格第 0 步+M2/M3 工程窗+7 条可决清单，建议≠裁决）。三节点九键报告齐（node-E1/E2/E3.md），单门三跑+双门 --all 复跑全 PASS 3/3 exit0（python3.8）；编排抽查实质锚点 E1 10+/E2 6/6/E3 13 组全命中，勘误（快照 §一 ±2 行漂移×3、行数估值偏差×3）全部如实入账不影响结论；卷封制 N/A（无 sourceMaterials）开卷与收口双侧声明；三次 fresh 派工一次一节点零复用（E2 证据边界9 自证双席独立证据链）。七条决策事项移交董事会定夺，本 tick 不代行裁决。模型 glm-5.3-flash 如实入账",
+  "pushTranscript": "origin dev（/srv/git/TriMetaverse.git）六笔全 fast-forward：38b5390d..41775645（骨架）..d60f70b4（E1 报告）..aa2e7d10（E1 收口）..56bec6de（E2 报告）..762b6a8b（E2 收口）..eca6675b（E3 报告）..33d0c153（E3 收口）；其间 watcher 并行笔 f453b53d/d8ea4962/f660b9af 三次插入均零冲突吸收、无 hash 重放；收口笔随后单发终推"
+}

@@ -79,4 +79,24 @@
 **助理主叙事**（董事长助理；粗粒度恢复锚，权威细节见 board-journal/ledger-mirror——机器本地不入仓）：
 - 中枢重建就位：xiaojia-hub 双崩重建（r2 上下文爆掉后继），五源（CLAUDE.md 分权制节/board-journal/ledger-mirror/full-20260828T1510Z/fade-protocol-spec v2.0.3+registry v2.1）+董事会增量状态重建完毕，状态条已交。
 - 董事会首办件交付：heyuan /srv/fleet/TriMetaverse 拟切 project/trimetaverse 分支影响评估——报告落 docs/execution/heyuan-branch-switch-impact.md（实勘：分支=dev 严格祖先落后 202 提交且仅在 GitHub 不在 sg-bare；heyuan 检出 dev@c6f969de 滞 69 提交无自动拉取；rmc_tick.py:196 push origin dev 硬耦合+face 严格门零 r-face 树现势；五问逐答+七条前置清单；结论=前置未齐切=纯回退零收益，位姿隔离已由 face 门达成，分支方案建议退回提案区或按清单补齐再议）。证据：本机 git 拓扑+heyuan SSH 只读侦察（fleet 身份）+TriRMC 源码+runbook/登记册现行版。
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @15:50 +08：自上次进度提交 b498dc80 后新增 5 条 commit：
+  - 41775645 ops(fade): sdk-evaluation-001 骨架先行——state/log/三报告占位锚+官方 Agent SDK 文档快照（编排层 WebFetch 两页转录）落盘，卷封制 N/A 判定在案（tick 20260830T074112Z 开工）@MoRen
+  - 38b5390d merge: 归账
+  - 56da6c57 ops(plane): SDK 评估树注册——M 面 Popen vs Agent SDK + R 面自主可控路线论证(CEO 指令)
+  - 54b08eab docs(wp): 部署拓扑图按资产规范收口为图 3-8——正文补图题+SVG 原图链接（tmv-wp-deploy-topology-3-8，脚本导出 32KB，正文块=源文件字节一致），台账 README 登记受控主文件；与图 3-1..3-7 资产链对齐 @MoRen
+  - 8f628e91 docs(wp): 部署拓扑图渲染修复——补图 3-7 同款 %%{init}%% 渲染头 + 全角弯引号改半角直引号（mermaid 解析阻断级缺陷）+ <==>|| 畸形标签沿修正 + §3.1 主线句行首引号回正；mmdc 渲染实测 PASS（三集群 LR 布局正常）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:00 +08：自上次进度提交 f453b53d 后新增 2 条 commit：
+  - aa2e7d10 ops(fade): sdk-evaluation-001 E1 收口——node-E1.md 九键报告+E1 翻 done+state/log 登记（同 commit）：前置门 node-report-check PASS exit0（python3.8），编排抽查实质锚点全命中 @MoRen
+  - d60f70b4 ops(fade): sdk-evaluation-001 E1 报告落账——sdk-eval-m-face.md 123 行（先写后报，CTO 子实例 Edit 占位锚成稿）：M 面 Popen vs Agent SDK 四维评估，结论=不替换（官方非 Py/TS 宿主推荐路径即 CLI 子进程形态+增量能力零消费者+三处深层重建成本-收益倒挂），附 C1-C5 条件复评触发器；编排抽查 TC/协议/快照实质锚点全命中，快照 §一 ±2 行漂移如实入账 @MoRen
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:10 +08：自上次进度提交 d8ea4962 后新增 3 条 commit：
+  - eca6675b ops(fade): sdk-evaluation-001 E3 报告落账——board-recommendation.md 120 行（先写后报，总助 fresh 子实例 Edit 占位锚成稿）：双席独立证据链无实质分歧收敛（E2 证据边界9 自述未读 E1 报告互不污染）；M 面档位=不做（维持现状，C1-C5 挂监控面非工作项）；R 面下一步=dsh 规格登记立项（第 0 步前置）+M2/M3 入工程窗；呈董事会决策清单 7 条 @MoRen
+  - 762b6a8b ops(fade): sdk-evaluation-001 E2 收口——node-E2.md 九键报告+E2 翻 done+state/log 登记（同 commit）：前置门 node-report-check PASS exit0（python3.8），编排跨仓抽查 6/6 逐字命中；E2=保持自研不引入外部 SDK @MoRen
+  - 56bec6de ops(fade): sdk-evaluation-001 E2 报告落账——sdk-eval-r-face.md 226 行（先写后报，CTO fresh 子实例 Edit 占位锚成稿）：R 面 agent-core 完备性分模块盘点（8 模块已有/缺口+离 dsh 过渡 M1-M7 里程碑差距）+外部 SDK 依赖风险四项命中自主可控原则，结论=保持自研不引入（dsh 过渡按 M1-M7 自研路线推进）；编排抽查 6 处 file:line 亲读全命中 @MoRen
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:20 +08：自上次进度提交 f660b9af 后新增 2 条 commit：
+  - 4649b4bf ops(fade): sdk-evaluation-001 收口（红线4）——顶层 status=done：doneCondition 两腿达成（双席评估报告齐+董事会决策建议产出），三节点九键报告齐+双门 --all PASS 3/3 exit0；M 面=不替换/不做档+R 面=保持自研（dsh 规格第 0 步+M2/M3 工程窗建议）呈董事会定夺 @MoRen
+  - 33d0c153 ops(fade): sdk-evaluation-001 E3 收口——node-E3.md 九键报告+E3 翻 done+state/log 登记（同 commit）：前置门 node-report-check PASS exit0（python3.8），引用锚点抽查 13 组全命中；doneCondition 两腿达成（双席报告齐+决策建议产出），三节点全 done @MoRen
