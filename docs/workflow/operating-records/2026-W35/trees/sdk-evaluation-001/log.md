@@ -18,5 +18,11 @@
 | 8 | 2026-08-30T07:51:55Z(约) | E1 子实例先写后报：sdk-eval-m-face.md 落盘（锚块整体替换，估 150 行） | — |
 | 9 | 2026-08-30T07:52:30Z(约) | 编排层抽查：TC L290-315/L420-437+协议 L243-266+快照 L40-51 实质锚点全命中；快照 §一 ±2 行漂移+行数估值偏差（150→实测 123）如实入账 | — |
 | 10 | 2026-08-30T07:53:22Z | E1 报告落账 commit+push（f453b53d..d60f70b4 fast-forward；f453b53d=watcher 巡检兜底补写并行笔，无 hash 重放） | d60f70b4 |
-| 11 | 2026-08-30T07:54:30Z | E1 翻转前置门 node-report-check --node E1（python3.8）PASS exit0 → node-E1.md+E1 翻 done+state/log 登记同 commit | （本笔） |
+| 11 | 2026-08-30T07:54:30Z | E1 翻转前置门 node-report-check --node E1（python3.8）PASS exit0 → node-E1.md+E1 翻 done+state/log 登记同 commit | aa2e7d10 |
+| 12 | 2026-08-30T07:54:52Z | E1 收口 push（d60f70b4..aa2e7d10）；E2 fresh 派工 ChiefTechnologyOfficer（agentId aeca59078af34d3fb，与 E1 实例不复用） | aa2e7d10 |
+| 13 | 2026-08-30T08:00:00Z(约) | E2 子实例先写后报：sdk-eval-r-face.md 落盘（30 工具调用分模块亲读+dsh 全仓检索零命中如实申报，估 195 行） | — |
+| 14 | 2026-08-30T08:01:00Z(约) | 编排层抽查跨仓 6 处：loop.ts:267-272/rmc_tick.py:196-212/package.json/safety-check.ts:85/permissions.ts:109/loop.ts:75-95 逐字全命中 | — |
+| 15 | 2026-08-30T08:01:46Z | E2 报告落账 commit+push（d8ea4962..56bec6de；实测 226 行 vs 估值 195 机械门定谳；中间笔 d8ea4962=watcher 并行笔零冲突吸收） | 56bec6de |
+| 16 | 2026-08-30T08:03:30Z | E2 翻转前置门 node-report-check --node E2 PASS exit0 → node-E2.md+E2 翻 done+state/log 登记同 commit | （本笔） |
+
 

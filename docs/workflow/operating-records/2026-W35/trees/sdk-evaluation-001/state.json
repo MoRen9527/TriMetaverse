@@ -53,9 +53,9 @@
     {
       "nodeId": "E2",
       "agent": "ChiefTechnologyOfficer",
-      "status": "pending",
-      "evidence": "",
-      "subInstance": null
+      "status": "done",
+      "evidence": "reports/sdk-eval-r-face.md 226 行（commit 56bec6de）三维论证：①agent-core 完备性=8 模块已有/缺口盘点（DI 宿主解耦/多协议工具流归一 loop.ts:267-272/三层错误恢复/6 模式 10 步权限管线/registry-only 工具面），缺口 6 项（会话持久化/上下文压缩闭环/协议面入核/MCP client/规则加载器/可观测面），离 dsh 距离=M1-M7 里程碑差距（dsh 全仓检索零命中如实降级为推测性路线图）②外部 SDK 依赖风险四项命中自主可控原则（商业条款/闭源 native 捆绑/API key 模型面前提/权限语义不可映射 4 vs 6 模式）③结论=保持自研不引入（边界条件 A/B/C+三项可借鉴非引入）；编排抽查 6/6 file:line 逐字命中；前置门 PASS exit0",
+      "subInstance": { "role": "ChiefTechnologyOfficer", "agentId": "aeca59078af34d3fb", "model": "继承（glm-5.3-flash）", "fresh": true, "reportedAt": "2026-08-30T08:00:00Z(约)", "releasedAt": "2026-08-30T08:00:00Z(约)" }
     },
     {
       "nodeId": "E3",
@@ -68,7 +68,9 @@
   "commits": [
     "41775645（骨架先行）",
     "d60f70b4（E1 报告落账）",
-    "（本笔=E1 收口：node-E1.md+E1 翻 done+state/log 登记同 commit，hash 见 git log）"
+    "aa2e7d10（E1 收口：node-E1.md+E1 翻 done+state/log 登记同 commit）",
+    "56bec6de（E2 报告落账）",
+    "（本笔=E2 收口：node-E2.md+E2 翻 done+state/log 登记同 commit，hash 见 git log）"
   ],
-  "updatedAt": "2026-08-30T07:55:30Z"
+  "updatedAt": "2026-08-30T08:04:00Z"
 }

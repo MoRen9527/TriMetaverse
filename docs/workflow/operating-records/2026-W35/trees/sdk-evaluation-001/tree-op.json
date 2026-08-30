@@ -17,7 +17,7 @@
     {
       "nodeId": "E2",
       "agent": "ChiefTechnologyOfficer",
-      "status": "pending",
+      "status": "done",
       "action": "R 面论证：TriRLC 用自研 agent-core（非第三方 SDK）——从自主可控角度评估是否需要引入外部 SDK。评估维度：①agent-core 的通用接口与框架完备性（/v1/messages 协议/权限引擎/工具注册——离 dsh（DeepSeek Harness）作为 agent-core 核心稳定过渡还有多远）②引入外部 SDK 的依赖风险（第三方闭源锁定/版本冲突/许可证）③结论：保持自研/混合/引入，附理由。产出 reports/sdk-eval-r-face.md。"
     },
     {
