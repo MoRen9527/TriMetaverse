@@ -129,3 +129,4 @@
   - f284c19b ops: weekly plane shift
 - registry：v2.1；今日 registry 提交无变化
 - 重建体（r4 provisional）开局动作：W35→W36 迁移回流（fetch+merge f284c19b+eb39129b，零冲突——冻结纪律生效迁移落真源基线）；README active 周指针 W35→W36 人工必查闭环（SOP 老坑，索引曾止于 W35）；TriMC runbook 时点修正行 b8ed553 双远端（23:59 历史时点冻结、23:00 现行注记+首跑锚，晨间简报派落）；TriRMC 残差清零（补推 f09b633..6a2a53a+heyuan ade009a reset 对齐 origin/dev 无损，selfcheck PASS 复核）；晨间简报干预链摘录 board-journal。
+- 转正令签发：xiaojia-hub-r4 正式中枢（董事会三关核验：台账复述/五锚实证/首件抽验全过；SOP 步 4 三处留痕落齐：台账修订史+board-journal+fade-007 §七 23:2x 行）。流程 B 清空过渡首次真实执行全链闭环（SOP 双样本+）。hook 跨会话普适性实证解除 LG-014 遗留观测①。附裁：rmc-orchestrate-tick 明日白天修复（去 runAs 同法）+首跑 1-2 周期观察治理注入消费。
