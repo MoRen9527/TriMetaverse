@@ -23,6 +23,11 @@
 | 13 | 2026-08-30T08:00:00Z(约) | E2 子实例先写后报：sdk-eval-r-face.md 落盘（30 工具调用分模块亲读+dsh 全仓检索零命中如实申报，估 195 行） | — |
 | 14 | 2026-08-30T08:01:00Z(约) | 编排层抽查跨仓 6 处：loop.ts:267-272/rmc_tick.py:196-212/package.json/safety-check.ts:85/permissions.ts:109/loop.ts:75-95 逐字全命中 | — |
 | 15 | 2026-08-30T08:01:46Z | E2 报告落账 commit+push（d8ea4962..56bec6de；实测 226 行 vs 估值 195 机械门定谳；中间笔 d8ea4962=watcher 并行笔零冲突吸收） | 56bec6de |
-| 16 | 2026-08-30T08:03:30Z | E2 翻转前置门 node-report-check --node E2 PASS exit0 → node-E2.md+E2 翻 done+state/log 登记同 commit | （本笔） |
+| 16 | 2026-08-30T08:03:30Z | E2 翻转前置门 node-report-check --node E2 PASS exit0 → node-E2.md+E2 翻 done+state/log 登记同 commit | 762b6a8b |
+| 17 | 2026-08-30T08:03:19Z | E3 fresh 派工 TriCompanyCEOChiefOfStaff（agentId a4bd3c8115adc5f2e，registry 映射 CEOChiefOfStaff；与 E1/E2 实例不复用） | — |
+| 18 | 2026-08-30T08:07:30Z(约) | E3 子实例先写后报：board-recommendation.md 落盘（五件前置输入全文亲读，估 165 行） | — |
+| 19 | 2026-08-30T08:08:00Z(约) | 编排层抽查 E3 引用锚点：E1 侧 7 组（亲读在案）+E2 侧 6 组（L85-93/L110/L142/L145-147/L150-153/L225 本轮亲读）逐字全命中 | — |
+| 20 | 2026-08-30T08:08:53Z | E3 报告落账 commit+push（762b6a8b..eca6675b 一次过；实测 120 行 vs 估值 165 机械门定谳） | eca6675b |
+| 21 | 2026-08-30T08:09:50Z | E3 翻转前置门 node-report-check --node E3 PASS exit0 → node-E3.md+E3 翻 done+state/log 登记同 commit（state.json 编辑一笔误删 commits 键行，提交前复读捕获即修复未入历史） | （本笔） |
 
 

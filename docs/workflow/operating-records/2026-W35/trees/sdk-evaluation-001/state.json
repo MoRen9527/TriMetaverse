@@ -60,9 +60,9 @@
     {
       "nodeId": "E3",
       "agent": "CEOChiefOfStaff→TriCompanyCEOChiefOfStaff（registry 类型映射，如实记录）",
-      "status": "pending",
-      "evidence": "",
-      "subInstance": null
+      "status": "done",
+      "evidence": "reports/board-recommendation.md 120 行（commit eca6675b）合成建议书：双席结论无实质分歧（E2 证据边界9 自述未读 E1 报告=独立证据链收敛）+独立收敛点「SDK 不消除 native CLI 运行时依赖」；M 面档位=不做（C1-C5 挂监控面非工作项，附「不做 vs 工程窗」语义辨析）；R 面=dsh 规格登记立项第 0 步前置+M2/M3 入工程窗（M4 挂起待 TriLC 勘察）；呈董事会决策清单 7 条（建议≠裁决）；编排抽查 E1 侧 7 组+E2 侧 6 组引用锚点逐字全命中；前置门 PASS exit0",
+      "subInstance": { "role": "TriCompanyCEOChiefOfStaff", "agentId": "a4bd3c8115adc5f2e", "model": "继承（glm-5.3-flash）", "fresh": true, "reportedAt": "2026-08-30T08:07:30Z(约)", "releasedAt": "2026-08-30T08:07:30Z(约)" }
     }
   ],
   "commits": [
@@ -70,7 +70,9 @@
     "d60f70b4（E1 报告落账）",
     "aa2e7d10（E1 收口：node-E1.md+E1 翻 done+state/log 登记同 commit）",
     "56bec6de（E2 报告落账）",
-    "（本笔=E2 收口：node-E2.md+E2 翻 done+state/log 登记同 commit，hash 见 git log）"
+    "762b6a8b（E2 收口：node-E2.md+E2 翻 done+state/log 登记同 commit）",
+    "eca6675b（E3 报告落账）",
+    "（本笔=E3 收口：node-E3.md+E3 翻 done+state/log 登记同 commit，hash 见 git log）"
   ],
-  "updatedAt": "2026-08-30T08:04:00Z"
+  "updatedAt": "2026-08-30T08:10:00Z"
 }
