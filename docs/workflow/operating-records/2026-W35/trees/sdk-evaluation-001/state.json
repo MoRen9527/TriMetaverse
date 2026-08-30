@@ -1,0 +1,70 @@
+{
+  "tick": "20260830T074112Z",
+  "treeId": "sdk-evaluation-001",
+  "treePath": "docs/workflow/operating-records/2026-W35/trees/sdk-evaluation-001/tree-op.json",
+  "orchestrator": {
+    "role": "CEOChiefOfStaff",
+    "anchor": "ceo-chief-of-staff",
+    "kind": "orchestration-instance",
+    "model": "glm-5.3-flash"
+  },
+  "briefPath": "/srv/fleet/shadow-plane/brief-20260830T074112Z.md",
+  "startedAt": "2026-08-30T07:41:12Z",
+  "surveyedAt": "2026-08-30T07:43:14Z",
+  "discipline": "状态先行+原子即提交：骨架先行落盘；此后每原子动作单独 commit；只认已 commit 进度；一次一个节点 fresh 派工禁复用；先写后报（子实例先落盘再报告带路径+行数）；命令裸形式（跨仓 git -C）；翻转前置门 node-report-check.py（python3.8）双门；收口必做（全节点 done 后顶层 status=done 再提交+push+台账追加）",
+  "volumeSeal": {
+    "sourceMaterials": "缺省（tree-op.json 无 sourceMaterials 字段）→ §9.2 开卷验卷与 §9.3 收口对卷均 N/A，如实记录；评估事实源=官方 SDK 文档（编排层 WebFetch 转录快照 reports/agent-sdk-docs-snapshot.md，2026-08-30T07:43Z 取数）+ /srv/fleet/TriCompany/runtime/cognition/orchestrate_tick.py（M 面 Popen 实现，Popen@L459）+ /srv/fleet/TriRMC/scripts/rmc_tick.py（R 面 urllib 实现）+ /srv/fleet/TriCompany/packages/agent-core/src/**（自研内核 38 个 .ts）+ /srv/fleet/TriCompany/docs/engineering/fade-protocol-spec.md（§2.8 降级合同）；行号/commit/hash 一律现场取证禁凭记忆"
+  },
+  "baseline": {
+    "headAtStart": "38b5390d7c9cb1b5b8543c1032f3b69dbb029618",
+    "branchState": "dev 与 origin/dev 同步（status -sb 无 ahead/behind）；工作树 3 处非本树 untracked（p0fix1 .ledger-backfill-tmp.py／p0fix4 reports/sandbox/／tmp-work/）不触碰",
+    "treeStatusAtStart": "active；E1/E2/E3 三节点全 pending",
+    "concurrentWriter": "daily-progress-watcher 在共享工作树有 pull --rebase 前科（fade-tutorial-001-deep tick 20260828T193147Z 实测本地 hash 重放 248ae69a→493bbbeb）——本 tick 每 commit 后尽早 push 压缩重放窗口，push 前重核 status"
+  },
+  "divisionOfLabor": "派工角色（ChiefTechnologyOfficer/TriCompanyCEOChiefOfStaff）工具面=Read/Glob/Edit 无 Bash/Write/WebFetch：先写后报（先 Edit 占位锚成稿再报告带路径+行数）；编排层持 git 提交/push/机械门禁（node-report-check.py python3.8 + 抽查亲读）+ WebFetch 取证（SDK 文档快照由编排层落树内供子实例 Read）；节点报告 reports/node-<ID>.md 由编排层撰写（与该节点状态翻转同 commit）",
+  "triggerChain": {
+    "observed": "session-registry.json ticks 末条 2026-08-30T07:41:12.230560+00:00 tree=sdk-evaluation-001 rc=spawned pid=1288555 trigger=hook——本会话即该 spawn",
+    "reviewFocus": "hook 快通道触发；树注册 commit 56da6c57（2026-08-29）→ spawn 2026-08-30T07:41:12Z（跨夜，快通道时延非本树关注点，仅如实记录）"
+  },
+  "evalTargets": {
+    "mFace": {
+      "impl": "/srv/fleet/TriCompany/runtime/cognition/orchestrate_tick.py（Popen 发射 CC CLI 子进程：cmd 数组含 --allowedTools 白名单/--output-format json，L430-460；异步 Popen 不阻塞 L454-462；锁内补记 spawn pid L473-483）",
+      "spec": "https://code.claude.com/docs/en/agent-sdk/overview（快照=reports/agent-sdk-docs-snapshot.md）"
+    },
+    "rFace": {
+      "impl": "/srv/fleet/TriRMC/scripts/rmc_tick.py（urllib.request 自研线）",
+      "core": "/srv/fleet/TriCompany/packages/agent-core/src/**（permissions-engine/message-guard/process-supervisor/scheduler/sub-agent/contracts/loop.ts/tools.ts）",
+      "principle": "R 面自主可控原则：agent-core 自研内核不依赖单一宿主；dsh（DeepSeek Harness）作为 agent-core 核心的稳定过渡为目标态"
+    },
+    "protocol": "/srv/fleet/TriCompany/docs/engineering/fade-protocol-spec.md v2.0.3（段-实现绑定框架；E1 维度③关注 §2.8 降级合同是否因 spawn 载体形态变化需重审）"
+  },
+  "closePlan": {
+    "gateOrder": "E1 done 前置门 node-report-check --node E1 → E2 同 → E3 同；编排收口对三节点 --all 复跑（双门）；全 done 后顶层 status=done+收口 commit+push origin dev+/srv/fleet/shadow-plane/session-registry.json 追加本 tick 台账（instances+ticks 双条目）",
+    "nodeReports": "reports/node-E1.md / node-E2.md / node-E3.md 由编排层撰写，九键 fenced json+三散文节（异常与处置/断点交接/使用依据），与对应节点状态翻转同 commit"
+  },
+  "nodes": [
+    {
+      "nodeId": "E1",
+      "agent": "ChiefTechnologyOfficer",
+      "status": "pending",
+      "evidence": "",
+      "subInstance": null
+    },
+    {
+      "nodeId": "E2",
+      "agent": "ChiefTechnologyOfficer",
+      "status": "pending",
+      "evidence": "",
+      "subInstance": null
+    },
+    {
+      "nodeId": "E3",
+      "agent": "CEOChiefOfStaff→TriCompanyCEOChiefOfStaff（registry 类型映射，如实记录）",
+      "status": "pending",
+      "evidence": "",
+      "subInstance": null
+    }
+  ],
+  "commits": [],
+  "updatedAt": "2026-08-30T07:44:30Z"
+}
