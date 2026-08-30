@@ -118,3 +118,7 @@
 - 巡检兜底补写 @21:20 +08：自上次进度提交 fbb1f6d5 后新增 1 条 commit：
   - 577146f6 docs(exec): LG-016 分析初稿——治理记忆索引可移植（在册治理文档盘点 10 件实勘表+schema 四字段提案+域词表 v1+宿主指针建议表；盲区实证=hub-ledger-governance/heartbeat-dualrun 新立文档指针滞后）+R 面治理记忆接入（ heyuan clone 滞后无自动拉取实勘/context-builder+soul-loader 天然锚点/方案 B 过渡+A 根治+C 长期档路线/粒度=索引摘要+关键条目+按需读盘/传播=读盘即最新+clone 拉取 job 前置；四项待双席裁决点）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 检测窗口裁决执行（board-ruling-20260830-detection-window）：30/60 门维持 V1 值守口径；「≤15min 发现」按真源可修转增强项（原始出处=LG-014 建账令件 5 描述），fade-007 spec §七 留痕修正行落盘；空闲期误报核实入卷=state 防抖 2 周期自动回 ok（自测在卷）+flag 逐周期覆写自动清理+recover-brief-latest.md 历史产物残留不删（V1 接受如实标注）。
+- LG-016 定稿（board-verdict-20260830-lg016 双席合成并入）：B 注入=索引摘要+D-04/D-01/D-10 三纪律全文按 platforms 过滤（FADE 不注、重裁触发在案）；件 2=15min cron 同构+四项实施清单（safe.directory/非零退出留日志/失败告警/fleet 单身份+sharedRepository 核查）；件 4 归 LG-010 扩词（判定未 in-flight）；域词表十一域+上限 12+两击准入+platforms 字段；渲染模板零独立件（索引即模板）+注入机器锚 sha1-12+盲区五条全落位对账表。排期：件 2/3 本工程窗（件 2 前置）、件 1 下轮联审、件 4 随 LG-010、件 5 随周检。
+- 派工单增补回改：hooks 绝对路径 C:/Python312/pythonw.exe（CEO 实测裸 python 命中商店 AppInstallerPythonRedirector 残根弹"选择打开方式"；绝对路径 pipe-test PASS）。
+- registry：无变化
