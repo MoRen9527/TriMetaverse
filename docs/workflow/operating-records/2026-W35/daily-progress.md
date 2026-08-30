@@ -103,3 +103,7 @@
 - 董事会三档落地令·立即档四项全清（r3 首批落地）：①爆溃 SOP 成文 docs/execution/fade-007-incident-sop.md（发现不可达→六源重建→provisional→转正令四步机械序+损失边界+细则 10 第 5 判例候选动因，E-2+实战双实证背书）②状态条制度补字段=M-001 延伸（水位自估低/中/高/临界+末次活动时刻 transcript mtime 现查，台账接线五条）③CLAUDE.md 分权制节末补中枢爆溃恢复 SOP 句——走 FADE-002 管线：真源 TriCompany/docs/project-sources/trimetaverse-claude-md.md 改→source_publish_check --project-docs dry-run（4 项中唯一 planned_update=目标）→--project-docs-execute（updated，changed=1 errors=0）落 TriMetaverse/CLAUDE.md:40 ④今晨爆溃事件入 fade-007 spec §七 运行日志（S3 真实事件二度实证+LG-014 立法动因挂载）。项 5（D-03 v3）编排层已入册免重复。
 - 台账：LG-014 建账（爆溃检测/恢复自动化五件·短期档 2-3 工程窗）+LG-015 建账（agent-core session-supervisor 长期档·冻结待推进）；**台账真源分裂修复**——记忆目录 open-items-ledger.md 曾滞 08-28T10:52Z，以 ledger-mirror 现势刷新归一+LG-012 标题重复修+MEMORY.md 索引行同步。
 - registry：无变化（本轮未动 TriCompany registry；TriCompany 侧改动=project-sources 真源句）
+- 巡检兜底补写 @20:50 +08：自上次进度提交 ed349dca 后新增 2 条 commit：
+  - e2d861f8 feat(fade): LG-014 件 2 中枢心跳——hub-heartbeat.py（CC Stop/PostToolUse hook 挂载，stdin 元数据 append heartbeat.jsonl；数据边界=只写追加不读正文，payload 不落盘自测断言；永不失败设计异常吞掉 exit 0）+项目 .claude/settings.json 新建 hooks 配置（async+timeout10）；自测 7/7+pipe-test 实测心跳首行落盘 @MoRen
+  - e8213caa feat(fade): LG-014 件 1 hub-waterlevel.py——中枢 token 水位探针（尾部 usage 累计→ok/warning/critical 结构化 JSON，阈值 80/90 双门+window 参数化+rc 映射 0/1/2/3）；内置自测 11/11（首跑 FAIL 抓 missing 文件崩溃→修复全绿，LG-003 弧线先例）；首跑真实读数=本中枢 89.1% warning（891046/1M）@MoRen
+- registry：v2.1；今日 registry 提交无变化
