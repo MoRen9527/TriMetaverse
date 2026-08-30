@@ -53,6 +53,8 @@
 
 ### Q1 迁移执行位置在 sg 还是 heyuan？
 
+> **勘误（2026-08-31，truth-record-amendment-policy 技术真源可修+留痕）**：本答过时——W35→W36 首跑实证迁移执行点已切 **heyuan**（f284c19b author=TriRMC-Scheduler，heyuan weekly-plane-shift job 9c81c7ec 23:00:05 +0800 ok/9342ms；主责 2026-08-26 切换、本地 TriLC job 已删、sg 同名 job 已 disable）。本评估五源重建漏 08-26 主责切换交接，致 Q1/Q5 分析失准；正文历史行冻结不改，勘误指针见文末修正段。
+
 **sg，与 heyuan 零代码耦合。** 五段链（OP index→unresolved→trees→carry-over→通知）由 sg trimc cron 拉起、写 sg 检出、push sg-bare dev；heyuan 无 trimc 服务、无 cron job、无迁移链任何环节。因此**本变更不改变迁移执行本身**。推论约束：FADE-001 迁移域的三点不变量应显式守护——sg 检出停留在 dev、push 目标 `HEAD:dev`、jobs.json 触发面不动；若未来「R 面治理对齐」同思路波及 sg 侧检出或 push 目标，将直接破坏 FADE-001 迁移域（升档 90 分冻结基线）。
 
 ### Q2 切分支后 heyuan 怎么获取 dev 上的 M 面更新？
@@ -115,3 +117,9 @@
 | 维护域②（daily-progress，事件驱动主+10 分钟巡检兜底） | 服务器侧主链不受影响（Q4-5）；heyuan 侧可见性回退至切线时点，恢复依赖 Q2 同步机制 |
 | 齿条①服务器回流复评（09-17 四周警告线） | 无直接交互；若周一回流改双线对账，回流复杂度上升，建议在复评前维持单线 |
 | 齿条②run↔段索引现场化 | 切线动作本身应按 FADE-006 惯例建树/留痕（新决策记录+操作树），不裸切 |
+
+## 五、修正记录（2026-08-31，truth-record-amendment-policy 口径）
+
+- **执行点勘误**：本文 §1.5/Q1（及受染的 Q5 分析前提）称「迁移唯一执行点=sg TriMC cron」，与 2026-08-30 W35→W36 首跑实证矛盾——**现役唯一执行点=heyuan TriRMC cron**（job 9c81c7ec，周日 23:00 北京时间，f284c19b author=TriRMC-Scheduler 实证；sg 同名 job 已 disable、本地 TriLC 旧 job 已删，主责 2026-08-26 切换）。根因=五源重建漏 08-26 主责切换交接（重建依据五源均早于切换时点或未载此节）；晨间简报干预链与 TriMC runbook 修正行（b8ed553）为正源。
+- **结论受染度**：Q1 答案反转（sg→heyuan）；Q5「直接冲突=无」结论**更强**（heyuan 自跑迁移则 heyuan 检出与迁移链同宿主，分支切换与迁移窗的隔离要求反而更紧）——其余前置条件清单与「位姿隔离已由 face 门达成」主结论不受影响。
+- 拓扑正身以 docs/execution/repo-topology-20260831.md 为准。
