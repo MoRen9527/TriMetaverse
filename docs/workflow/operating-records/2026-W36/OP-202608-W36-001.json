@@ -1,42 +1,41 @@
 {
     "dependsOn": [
-        "OP-202608-W34-001"
+        "OP-202608-W35-001"
     ],
     "objectType": "WEEKLY_INDEX",
-    "objectId": "OP-202608-W35-001",
-    "title": "TriMetaverse W35 周经营维护索引",
+    "objectId": "OP-202608-W36-001",
+    "title": "TriMetaverse W36 周经营维护索引",
     "ownerRole": "CEOChiefOfStaff",
-    "status": "closed",
-    "summary": "W35 周经营维护。任务从上周迁移，新任务待规划。W35 首周（8/24）CEO carry-over 裁决已登记：CARRY-001 推进 / 003、005 关闭 / 004、006 冻结维持。",
+    "status": "active",
+    "summary": "W36 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "编排层（CEO 裁决登记：发布产物指纹封印 publishMeta，口子①修复待排票）",
-        "version": "1.5.0",
-        "lastUpdated": "2026-08-30T15:00:04.721533+00:00",
+        "updatedBy": "CEOChiefOfStaff",
+        "version": "1.0.0",
+        "lastUpdated": "2026-08-30T15:00:04.719738+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
             "经营维护计划单"
         ],
-        "latestActiveWeek": false,
+        "latestActiveWeek": true,
         "phase": "ceo-copilot-host-coordination",
-        "previousWeekRef": "docs/workflow/operating-records/2026-W34/OP-202608-W34-001.json",
-        "nextWeekRef": "docs/workflow/operating-records/2026-W36/OP-202608-W36-001.json"
+        "previousWeekRef": "docs/workflow/operating-records/2026-W35/OP-202608-W35-001.json"
     },
     "priority": "high",
     "timebox": {
         "scope": "weekly",
-        "label": "2026-W35 当前周维护面",
-        "startAt": "2026-08-24T00:00:00+08:00",
-        "endAt": "2026-08-30T23:59:59+08:00"
+        "label": "2026-W36 当前周维护面",
+        "startAt": "2026-08-31T00:00:00+08:00",
+        "endAt": "2026-09-06T23:59:59+08:00"
     },
-    "createdAt": "2026-08-23T15:59:00.078036+00:00",
+    "createdAt": "2026-08-30T15:00:04.719738+00:00",
     "relatedModules": [
         "TriMetaverse",
         "TriCompany",
         "TriLC",
         "TriMC"
     ],
-    "updatedAt": "2026-08-24T12:29:32.000000+00:00",
+    "updatedAt": "2026-08-30T15:00:04.719738+00:00",
     "activeTrees": [],
     "doneTreesFromPreviousWeek": [
         {
