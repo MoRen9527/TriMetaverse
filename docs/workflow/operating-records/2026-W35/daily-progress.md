@@ -107,3 +107,5 @@
   - e2d861f8 feat(fade): LG-014 件 2 中枢心跳——hub-heartbeat.py（CC Stop/PostToolUse hook 挂载，stdin 元数据 append heartbeat.jsonl；数据边界=只写追加不读正文，payload 不落盘自测断言；永不失败设计异常吞掉 exit 0）+项目 .claude/settings.json 新建 hooks 配置（async+timeout10）；自测 7/7+pipe-test 实测心跳首行落盘 @MoRen
   - e8213caa feat(fade): LG-014 件 1 hub-waterlevel.py——中枢 token 水位探针（尾部 usage 累计→ok/warning/critical 结构化 JSON，阈值 80/90 双门+window 参数化+rc 映射 0/1/2/3）；内置自测 11/11（首跑 FAIL 抓 missing 文件崩溃→修复全绿，LG-003 弧线先例）；首跑真实读数=本中枢 89.1% warning（891046/1M）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- LG-014 五件当日落地销账（董事会执行令即起实施）：件 1 hub-waterlevel.py 水位探针（自测 11/11；首跑即抓本中枢 89.3% warning 真实告警，auto-compact 后回落 4.8% 动态弧线入卷）+件 2 hub-heartbeat.py 心跳 hook+项目 settings.json（自测 7/7；hook 免重启生效实证）+件 3 hub-watchdog.py+TriHubWatchdog 计划任务 5min（自测 16/16；直挂 python.exe 卡控制台交互实测抓出→cmd 薄包装根治；task.log/flag 双实证）+件 4 recover-brief.py（自测 8/8；六源全在位 rc=0）+件 5 E-5 注入演练 PASS（受控构造 AC-4 口径：生产路径无误报实证+unreachable 全链两周期+flag need_rebuild+BRIEF 38 行自动生成；产物留档 .fade/hub/e5/）。四件自测合计 42/42；细则 10 第 5 判例候选从动因转接线。提交锚：e8213caa/e2d861f8/b5c313ea/afb2fa11+收口。
+- registry：无变化（LG-014 全部落 scripts/fade/+.claude/settings.json+计划任务，未动 TriCompany registry）
