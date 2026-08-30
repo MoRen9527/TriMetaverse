@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python D:/Code/ai/TriMetaverse/scripts/fade/hub-heartbeat.py",
+            "command": "pythonw D:/Code/ai/TriMetaverse/scripts/fade/hub-heartbeat.py",
             "timeout": 10,
             "async": true,
             "statusMessage": "hub heartbeat"
@@ -19,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python D:/Code/ai/TriMetaverse/scripts/fade/hub-heartbeat.py",
+            "command": "pythonw D:/Code/ai/TriMetaverse/scripts/fade/hub-heartbeat.py",
             "timeout": 10,
             "async": true,
             "statusMessage": "hub heartbeat"

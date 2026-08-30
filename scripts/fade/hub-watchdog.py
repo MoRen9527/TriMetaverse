@@ -217,6 +217,16 @@ def evaluate(args: argparse.Namespace) -> Dict[str, Any]:
     return result
 
 
+def emit_json(result: Dict[str, Any]) -> None:
+    """stdout JSON 输出（pythonw 下 sys.stdout 为 None，判空守卫）。"""
+    if sys.stdout is None:
+        return
+    try:
+        print(json.dumps(result, ensure_ascii=False))
+    except Exception:
+        pass
+
+
 def write_flag(flag_file: str, result: Dict[str, Any]) -> Dict[str, Any]:
     """flag 文件落盘（供编排层消费）；独立函数以便自测。"""
     flag = {
@@ -352,10 +362,13 @@ def main() -> int:
         return self_test()
 
     result = evaluate(args)
-    print(json.dumps(result, ensure_ascii=False))
+    emit_json(result)
     flag = write_flag(args.flag_file, result)
-    if not args.quiet and flag["notice"]:
-        print(flag["notice"], file=sys.stderr)
+    if not args.quiet and flag["notice"] and sys.stderr is not None:
+        try:
+            print(flag["notice"], file=sys.stderr)
+        except Exception:
+            pass
     return LEVEL_RC.get(result["level"], 0)
 
 
