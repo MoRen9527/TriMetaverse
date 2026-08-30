@@ -84,3 +84,7 @@
   - 54b08eab docs(wp): 部署拓扑图按资产规范收口为图 3-8——正文补图题+SVG 原图链接（tmv-wp-deploy-topology-3-8，脚本导出 32KB，正文块=源文件字节一致），台账 README 登记受控主文件；与图 3-1..3-7 资产链对齐 @MoRen
   - 8f628e91 docs(wp): 部署拓扑图渲染修复——补图 3-7 同款 %%{init}%% 渲染头 + 全角弯引号改半角直引号（mermaid 解析阻断级缺陷）+ <==>|| 畸形标签沿修正 + §3.1 主线句行首引号回正；mmdc 渲染实测 PASS（三集群 LR 布局正常）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:00 +08：自上次进度提交 f453b53d 后新增 2 条 commit：
+  - aa2e7d10 ops(fade): sdk-evaluation-001 E1 收口——node-E1.md 九键报告+E1 翻 done+state/log 登记（同 commit）：前置门 node-report-check PASS exit0（python3.8），编排抽查实质锚点全命中 @MoRen
+  - d60f70b4 ops(fade): sdk-evaluation-001 E1 报告落账——sdk-eval-m-face.md 123 行（先写后报，CTO 子实例 Edit 占位锚成稿）：M 面 Popen vs Agent SDK 四维评估，结论=不替换（官方非 Py/TS 宿主推荐路径即 CLI 子进程形态+增量能力零消费者+三处深层重建成本-收益倒挂），附 C1-C5 条件复评触发器；编排抽查 TC/协议/快照实质锚点全命中，快照 §一 ±2 行漂移如实入账 @MoRen
+- registry：v2.1；今日 registry 提交无变化
