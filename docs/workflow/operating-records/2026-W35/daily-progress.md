@@ -68,3 +68,9 @@
   - 83c409a4 docs(plane): fade-tutorial-001-deep 收口回填——push 实测转录（origin 3c7ad7d5..ae02968f fast-forward 一次过含并行线两笔；github 凭据墙被拒残差移交）+收口 commit hash 入 commits
   - ae02968f docs(plane): fade-tutorial-001-deep 收口（sg 执行线，红线4/F1）——C1 APPROVE 三腿判定（合稿 190212a 入库目标路径逐字同/V1 核验零错误/三端分端如实）+node-C1 九键+残差五项移交+状态条；双门 --all PASS 3/3；顶层 status=done 维持并行线裁定 a 所置，sg 收口记录并存互不改写
 - registry：v2.1；今日 registry 提交 1 条：9393893 docs(registry): FADE-003 升档完整档——score 全链首评 98/100（runId 7a85e3e0，卷 5220091c 双 hash 载体定版同盘）+兼容档标注撤销（v2.0.2 降档标注保留为历史档案）+升档路线五项销账（触发自动化维持增强项）+②表补 Score 双段行+Close/终态行三态化+spec v1.1 引用（LG-013）
+- 巡检兜底补写 @19:40 +08：自上次进度提交 f72e49b0 后新增 4 条 commit：
+  - f51c494d merge: 归账
+  - ec92d68d docs(whitepaper): 部署拓扑图插入图 3-7 之上——三节点（sg/本机/heyuan）实际基础设施层补充，含 TriMC cron 引擎/sg-bare 枢纽/ token 门/SSH 信任链/分权制标注
+  - 5a2a7b0c docs(plane): W35 共学分享会提纲落盘（AGENDA-20260829-001，周六 20:00 用）——周记条目 2.1/2.2 讲述线+跨条目方法论三条+讨论题三项+行动项收口；提醒周记今日签发归档 v2026.W35.1 @MoRen
+  - ce9a000f docs(wp): 白皮书 §3.1 新增图 3-7 三层最小实现与螺旋迭代链——mermaid 资产 tmv-wp-three-layer-3-7 落库（.mmd+.svg 经 export-agent-platform-svg.ps1 导出，正文 SVG 链接+内联块+图注三件套，台账 README 登记；追加编号不重排现有图 3-1..3-6）@MoRen
+- registry：v2.1；今日 registry 提交 1 条：9393893 docs(registry): FADE-003 升档完整档——score 全链首评 98/100（runId 7a85e3e0，卷 5220091c 双 hash 载体定版同盘）+兼容档标注撤销（v2.0.2 降档标注保留为历史档案）+升档路线五项销账（触发自动化维持增强项）+②表补 Score 双段行+Close/终态行三态化+spec v1.1 引用（LG-013）
