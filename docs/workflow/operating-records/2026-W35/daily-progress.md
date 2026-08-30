@@ -115,3 +115,6 @@
   - b5c313ea feat(fade): LG-014 件 3 hub-watchdog.py——中枢 watchdog 裁决器（心跳龄 30/60min 双门+缺失+transcript 停滞 unreachable+连续 2 周期防抖 state 文件+水位≥80% pre-warning 合入+flag 文件供编排层+unreachable 生效自动调 recover-brief 生成 BRIEF）；watchdog-task.cmd 薄包装规避 schtasks /TR 引号嵌套（直挂 python.exe 卡控制台交互实测抓出→/End+包装根治）；自测 16/16（自测 FAIL 抓 flag 落盘不可测→提 write_flag 可测函数）；计划任务 TriHubWatchdog 5min 在册+task.log/flag 双实证 @MoRen
 - registry：v2.1；今日 registry 提交无变化
 - LG-014 维护增量：终端闪现修复（董事会派工单 dispatch-20260830-terminal-flash）——hooks pythonw 化（settings.json 两处，conhost 闪现消除，存量会话重启前仍走旧 python）+TriHubWatchdog pythonw 直挂无窗口化（方案 A wscript+vbs 实测失败：Interactive 任务对 GUI 进程状态跟踪卡 Running→后续周期 0x800710E0 全拒；终解=Register-ScheduledTask 重建+Parallel+ExecutionTimeLimit 5min+StartWhenAvailable；连续两自然周期 Last Result 0+flag 同步更新实证）+hub-watchdog.py 输出守卫（pythonw sys.stdout=None）+watchdog-task.cmd 补 --projects-dir 显式参数。
+- 巡检兜底补写 @21:20 +08：自上次进度提交 fbb1f6d5 后新增 1 条 commit：
+  - 577146f6 docs(exec): LG-016 分析初稿——治理记忆索引可移植（在册治理文档盘点 10 件实勘表+schema 四字段提案+域词表 v1+宿主指针建议表；盲区实证=hub-ledger-governance/heartbeat-dualrun 新立文档指针滞后）+R 面治理记忆接入（ heyuan clone 滞后无自动拉取实勘/context-builder+soul-loader 天然锚点/方案 B 过渡+A 根治+C 长期档路线/粒度=索引摘要+关键条目+按需读盘/传播=读盘即最新+clone 拉取 job 前置；四项待双席裁决点）@MoRen
+- registry：v2.1；今日 registry 提交无变化
