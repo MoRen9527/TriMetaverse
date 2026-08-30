@@ -28,6 +28,9 @@
 | 18 | 2026-08-30T08:07:30Z(约) | E3 子实例先写后报：board-recommendation.md 落盘（五件前置输入全文亲读，估 165 行） | — |
 | 19 | 2026-08-30T08:08:00Z(约) | 编排层抽查 E3 引用锚点：E1 侧 7 组（亲读在案）+E2 侧 6 组（L85-93/L110/L142/L145-147/L150-153/L225 本轮亲读）逐字全命中 | — |
 | 20 | 2026-08-30T08:08:53Z | E3 报告落账 commit+push（762b6a8b..eca6675b 一次过；实测 120 行 vs 估值 165 机械门定谳） | eca6675b |
-| 21 | 2026-08-30T08:09:50Z | E3 翻转前置门 node-report-check --node E3 PASS exit0 → node-E3.md+E3 翻 done+state/log 登记同 commit（state.json 编辑一笔误删 commits 键行，提交前复读捕获即修复未入历史） | （本笔） |
+| 21 | 2026-08-30T08:09:50Z | E3 翻转前置门 node-report-check --node E3 PASS exit0 → node-E3.md+E3 翻 done+state/log 登记同 commit（state.json 编辑一笔误删 commits 键行，提交前复读捕获即修复未入历史） | 33d0c153 |
+| 22 | 2026-08-30T08:11:30Z | 编排层收口双门：node-report-check --all → [OK]×3 RESULT: PASS (3/3) exit0（python3.8） | — |
+| 23 | 2026-08-30T08:12:30Z | 卷封制收口对卷：N/A 双侧声明（tree-op.json 无 sourceMaterials，与开工判定一致，树目录四报告文件全程仅本会话写入） | — |
+| 24 | 2026-08-30T08:12:30Z | 红线4 收口：顶层 status active→done+state.json closedAtSg/closeNoteSg/pushTranscript+本行登记 | （本笔） |
 
 

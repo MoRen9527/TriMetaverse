@@ -3,7 +3,7 @@
   "title": "Agent SDK vs Popen 评估：M 面编排引擎升级可行性 + R 面自主可控路线论证",
   "domainRouting": "server-executable",
   "face": "m-face",
-  "status": "active",
+  "status": "done",
   "created": "2026-08-29",
   "week": "W35",
   "spec": "https://code.claude.com/docs/en/agent-sdk/overview（官方 SDK 文档）+ orchestrate_tick.py（现 Popen 实现）+ rmc_tick.py（R 面 urllib 实现）+ fade-protocol-spec.md v2.0.3（段-实现绑定框架）",

@@ -74,5 +74,8 @@
     "eca6675b（E3 报告落账）",
     "（本笔=E3 收口：node-E3.md+E3 翻 done+state/log 登记同 commit，hash 见 git log）"
   ],
-  "updatedAt": "2026-08-30T08:10:00Z"
+  "updatedAt": "2026-08-30T08:12:30Z",
+  "closedAtSg": "2026-08-30T08:12:30Z",
+  "closeNoteSg": "sg 执行线收口（tick 20260830T074112Z）：doneCondition 两腿达成——双席评估报告齐（E1 sdk-eval-m-face.md 123 行 d60f70b4：M 面不替换+C1-C5 条件复评触发器；E2 sdk-eval-r-face.md 226 行 56bec6de：R 面保持自研不引入+M1-M7 里程碑差距+边界条件 ABC）+董事会决策建议产出（E3 board-recommendation.md 120 行 eca6675b：M 面=不做档+R 面 dsh 规格第 0 步+M2/M3 工程窗+7 条可决清单，建议≠裁决）。三节点九键报告齐（node-E1/E2/E3.md），单门三跑+双门 --all 复跑全 PASS 3/3 exit0（python3.8）；编排抽查实质锚点 E1 10+/E2 6/6/E3 13 组全命中，勘误（快照 §一 ±2 行漂移×3、行数估值偏差×3）全部如实入账不影响结论；卷封制 N/A（无 sourceMaterials）开卷与收口双侧声明；三次 fresh 派工一次一节点零复用（E2 证据边界9 自证双席独立证据链）。七条决策事项移交董事会定夺，本 tick 不代行裁决。模型 glm-5.3-flash 如实入账",
+  "pushTranscript": "origin dev（/srv/git/TriMetaverse.git）六笔全 fast-forward：38b5390d..41775645（骨架）..d60f70b4（E1 报告）..aa2e7d10（E1 收口）..56bec6de（E2 报告）..762b6a8b（E2 收口）..eca6675b（E3 报告）..33d0c153（E3 收口）；其间 watcher 并行笔 f453b53d/d8ea4962/f660b9af 三次插入均零冲突吸收、无 hash 重放；收口笔随后单发终推"
 }
