@@ -32,3 +32,6 @@
   - afb2fa11 feat(fade): LG-014 件 4 recover-brief.py——恢复简报生成器（六源逐项机器校验存在性/行数/sha1-12+代位声明 provisional 权力边界+机器校验清单+转正流程指针；缺源不失败如实标注；S3 快照/latest 自动选取+S5 转录目录探针）；自测 8/8+真实生成 rc=0 六源全在位（首跑字面 bug %%F→%F 修复+UTF-8 读回验证）；落 .fade/hub/recover-brief-latest.md 供 watchdog 联动 @MoRen
   - …另有 485 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:50 +08：自上次进度提交 41499531 后新增 1 条 commit：
+  - 4ace9825 docs(exec): 仓库拓扑正身入册（repo-topology-20260831.md——五节点实勘+写读侧同步顺序图+迁移执行点锚 TriRMC-Scheduler/GitHub 现势回填 41499531 两端平齐）+heyuan-branch-switch-impact 执行点勘误（§1.5/Q1 勘误指针+修正记录段：现役唯一执行点=heyuan 9c81c7ec，五源重建漏 08-26 主责切换，Q5 结论受染度分析）@MoRen
+- registry：v2.1；今日 registry 提交无变化
