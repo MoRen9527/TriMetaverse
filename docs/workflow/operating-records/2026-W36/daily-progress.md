@@ -37,3 +37,7 @@
 - 巡检兜底补写 @00:50 +08：自上次进度提交 41499531 后新增 1 条 commit：
   - 4ace9825 docs(exec): 仓库拓扑正身入册（repo-topology-20260831.md——五节点实勘+写读侧同步顺序图+迁移执行点锚 TriRMC-Scheduler/GitHub 现势回填 41499531 两端平齐）+heyuan-branch-switch-impact 执行点勘误（§1.5/Q1 勘误指针+修正记录段：现役唯一执行点=heyuan 9c81c7ec，五源重建漏 08-26 主责切换，Q5 结论受染度分析）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @01:20 +08：自上次进度提交 b5e9f5aa 后新增 2 条 commit：
+  - c86ede03 chore: 冒烟触发——LG-018 镜像 hook v2 修正验证（空提交触发 post-receive 镜像段）
+  - e140fa38 docs(protocol): 协作协议 v2.0 单 dev 模型重构（LG-019 立法树 LR-1）——双分支退役 project/trimetaverse 转历史锚/R 面产出合同对齐 push origin dev（E3 矛盾法条废止）/懒建 clone 触发器与参数/§八分叉即升级 M 面（B1）/§九清单重立基线+daemon cwd 实测留痕（CPO 盲区闭环=CWD 从未指向 WorkTree 退役零影响）；树 lg019-retirement-v2 立项+拓扑正身 6* 退役回填（LR-2 worktree remove+registry claim 清已完成，worktree list 单仓验证）@MoRen
+- registry：v2.1；今日 registry 提交无变化
