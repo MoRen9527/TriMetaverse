@@ -100,3 +100,6 @@
 - 巡检兜底补写 @16:20 +08：自上次进度提交 f660b9af 后新增 2 条 commit：
   - 4649b4bf ops(fade): sdk-evaluation-001 收口（红线4）——顶层 status=done：doneCondition 两腿达成（双席评估报告齐+董事会决策建议产出），三节点九键报告齐+双门 --all PASS 3/3 exit0；M 面=不替换/不做档+R 面=保持自研（dsh 规格第 0 步+M2/M3 工程窗建议）呈董事会定夺 @MoRen
   - 33d0c153 ops(fade): sdk-evaluation-001 E3 收口——node-E3.md 九键报告+E3 翻 done+state/log 登记（同 commit）：前置门 node-report-check PASS exit0（python3.8），引用锚点抽查 13 组全命中；doneCondition 两腿达成（双席报告齐+决策建议产出），三节点全 done @MoRen
+- 董事会三档落地令·立即档四项全清（r3 首批落地）：①爆溃 SOP 成文 docs/execution/fade-007-incident-sop.md（发现不可达→六源重建→provisional→转正令四步机械序+损失边界+细则 10 第 5 判例候选动因，E-2+实战双实证背书）②状态条制度补字段=M-001 延伸（水位自估低/中/高/临界+末次活动时刻 transcript mtime 现查，台账接线五条）③CLAUDE.md 分权制节末补中枢爆溃恢复 SOP 句——走 FADE-002 管线：真源 TriCompany/docs/project-sources/trimetaverse-claude-md.md 改→source_publish_check --project-docs dry-run（4 项中唯一 planned_update=目标）→--project-docs-execute（updated，changed=1 errors=0）落 TriMetaverse/CLAUDE.md:40 ④今晨爆溃事件入 fade-007 spec §七 运行日志（S3 真实事件二度实证+LG-014 立法动因挂载）。项 5（D-03 v3）编排层已入册免重复。
+- 台账：LG-014 建账（爆溃检测/恢复自动化五件·短期档 2-3 工程窗）+LG-015 建账（agent-core session-supervisor 长期档·冻结待推进）；**台账真源分裂修复**——记忆目录 open-items-ledger.md 曾滞 08-28T10:52Z，以 ledger-mirror 现势刷新归一+LG-012 标题重复修+MEMORY.md 索引行同步。
+- registry：无变化（本轮未动 TriCompany registry；TriCompany 侧改动=project-sources 真源句）
