@@ -1,0 +1,36 @@
+{
+  "treeId": "sdk-evaluation-001",
+  "title": "Agent SDK vs Popen 评估：M 面编排引擎升级可行性 + R 面自主可控路线论证",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "status": "active",
+  "created": "2026-08-29",
+  "week": "W35",
+  "spec": "https://code.claude.com/docs/en/agent-sdk/overview（官方 SDK 文档）+ orchestrate_tick.py（现 Popen 实现）+ rmc_tick.py（R 面 urllib 实现）+ fade-protocol-spec.md v2.0.3（段-实现绑定框架）",
+  "nodes": [
+    {
+      "nodeId": "E1",
+      "agent": "ChiefTechnologyOfficer",
+      "status": "pending",
+      "action": "M 面评估：orchestrate_tick.py 现用 subprocess.Popen 启动 CC CLI 子进程——对照官方 Agent SDK（https://code.claude.com/docs/en/agent-sdk/overview）评估是否有必要替换。评估维度：①SDK 提供的结构化 API（流式输出/工具管理/会话恢复）vs Popen 的 stdout 重定向+JSON envelope 解析 ②迁移成本（代码改动量/测试回归/部署影响）③对段-实现映射表的影响（spawn 载体形态变化是否触发 §2.8 降级合同重审）④结论：替换/不替换/条件替换，附理由。产出 reports/sdk-eval-m-face.md。"
+    },
+    {
+      "nodeId": "E2",
+      "agent": "ChiefTechnologyOfficer",
+      "status": "pending",
+      "action": "R 面论证：TriRLC 用自研 agent-core（非第三方 SDK）——从自主可控角度评估是否需要引入外部 SDK。评估维度：①agent-core 的通用接口与框架完备性（/v1/messages 协议/权限引擎/工具注册——离 dsh（DeepSeek Harness）作为 agent-core 核心稳定过渡还有多远）②引入外部 SDK 的依赖风险（第三方闭源锁定/版本冲突/许可证）③结论：保持自研/混合/引入，附理由。产出 reports/sdk-eval-r-face.md。"
+    },
+    {
+      "nodeId": "E3",
+      "agent": "CEOChiefOfStaff",
+      "status": "pending",
+      "action": "合成双席评估结论 → 董事会决策建议：M 面 Popen→SDK 的迁移优先级（立即可做/列入工程窗/不做）+ R 面自主可控路线图的下一步里程碑 → 呈董事会定夺。"
+    }
+  ],
+  "doneCondition": "双席评估报告齐 + 董事会决策建议产出",
+  "notes": [
+    "CEO 2026-08-28 指令：根据 https://code.claude.com/docs/en/agent-sdk/overview 评估 M 面是否有把 Popen 换成官方 SDK 的必要，R 面的 Popen 是否有必要（R 面是自研，更多考虑自主可控，少依赖第三方不开源代码，尽量做到通用接口和框架，为将来像 dsh（DeepSeek Harness 作为 agent-core 核心）稳定过渡做准备）。",
+    "注意：M 面 Popen 在 orchestrate_tick.py（TriCompany 仓），R 面 Popen 实际是 rmc_tick.py 的 urllib.request（TriRMC 仓）——两者技术形态不同，分别评估。",
+    "R 面自主可控原则：agent-core 是自研内核，设计目标是不依赖任何单一宿主——引入第三方 SDK 须评估对这一原则的影响。"
+  ]
+}
