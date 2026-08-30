@@ -128,3 +128,4 @@
 - 巡检兜底补写 @23:09 +08：自上次进度提交 19c39f82 后新增 1 条 commit：
   - f284c19b ops: weekly plane shift
 - registry：v2.1；今日 registry 提交无变化
+- 重建体（r4 provisional）开局动作：W35→W36 迁移回流（fetch+merge f284c19b+eb39129b，零冲突——冻结纪律生效迁移落真源基线）；README active 周指针 W35→W36 人工必查闭环（SOP 老坑，索引曾止于 W35）；TriMC runbook 时点修正行 b8ed553 双远端（23:59 历史时点冻结、23:00 现行注记+首跑锚，晨间简报派落）；TriRMC 残差清零（补推 f09b633..6a2a53a+heyuan ade009a reset 对齐 origin/dev 无损，selfcheck PASS 复核）；晨间简报干预链摘录 board-journal。

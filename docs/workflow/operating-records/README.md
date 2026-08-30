@@ -114,8 +114,8 @@
 
 当前最新 active 周经营记录位于：
 
-- `2026-W35/OP-202608-W35-001.json`
-- `2026-W35/OP-202608-W35-001.unresolved-items.md`
+- `2026-W36/OP-202608-W36-001.json`
+- `2026-W36/OP-202608-W36-001.unresolved-items.md`
 
 当前用于演示 `PRD_OWNERSHIP_ROUTING` 生命周期落盘方式的目录位于：
 
