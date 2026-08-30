@@ -74,3 +74,13 @@
   - 5a2a7b0c docs(plane): W35 共学分享会提纲落盘（AGENDA-20260829-001，周六 20:00 用）——周记条目 2.1/2.2 讲述线+跨条目方法论三条+讨论题三项+行动项收口；提醒周记今日签发归档 v2026.W35.1 @MoRen
   - ce9a000f docs(wp): 白皮书 §3.1 新增图 3-7 三层最小实现与螺旋迭代链——mermaid 资产 tmv-wp-three-layer-3-7 落库（.mmd+.svg 经 export-agent-platform-svg.ps1 导出，正文 SVG 链接+内联块+图注三件套，台账 README 登记；追加编号不重排现有图 3-1..3-6）@MoRen
 - registry：v2.1；今日 registry 提交 1 条：9393893 docs(registry): FADE-003 升档完整档——score 全链首评 98/100（runId 7a85e3e0，卷 5220091c 双 hash 载体定版同盘）+兼容档标注撤销（v2.0.2 降档标注保留为历史档案）+升档路线五项销账（触发自动化维持增强项）+②表补 Score 双段行+Close/终态行三态化+spec v1.1 引用（LG-013）
+## 2026-08-30（周日）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @15:50 +08：自上次进度提交 b498dc80 后新增 5 条 commit：
+  - 41775645 ops(fade): sdk-evaluation-001 骨架先行——state/log/三报告占位锚+官方 Agent SDK 文档快照（编排层 WebFetch 两页转录）落盘，卷封制 N/A 判定在案（tick 20260830T074112Z 开工）@MoRen
+  - 38b5390d merge: 归账
+  - 56da6c57 ops(plane): SDK 评估树注册——M 面 Popen vs Agent SDK + R 面自主可控路线论证(CEO 指令)
+  - 54b08eab docs(wp): 部署拓扑图按资产规范收口为图 3-8——正文补图题+SVG 原图链接（tmv-wp-deploy-topology-3-8，脚本导出 32KB，正文块=源文件字节一致），台账 README 登记受控主文件；与图 3-1..3-7 资产链对齐 @MoRen
+  - 8f628e91 docs(wp): 部署拓扑图渲染修复——补图 3-7 同款 %%{init}%% 渲染头 + 全角弯引号改半角直引号（mermaid 解析阻断级缺陷）+ <==>|| 畸形标签沿修正 + §3.1 主线句行首引号回正；mmdc 渲染实测 PASS（三集群 LR 布局正常）@MoRen
+- registry：v2.1；今日 registry 提交无变化
