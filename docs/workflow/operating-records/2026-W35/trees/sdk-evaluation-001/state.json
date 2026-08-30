@@ -46,9 +46,9 @@
     {
       "nodeId": "E1",
       "agent": "ChiefTechnologyOfficer",
-      "status": "pending",
-      "evidence": "",
-      "subInstance": null
+      "status": "done",
+      "evidence": "reports/sdk-eval-m-face.md 123 行（commit d60f70b4）四维评估：①SDK=现契约严格超集但增量能力零消费者 ②真实成本在 pid 锚全链/harvest Close CLI 载体/detach 语义三处深层重建 ③不触发 §2.8 细则4 降级合同重审（触发键=载体类别非 spawn 机制），触发细则 2/3/7b 映射表变更登记义务 ④结论=不替换+C1-C5 条件复评触发器；编排抽查实质锚点全命中（TC L290-315/L420-437/协议 L243-266/快照 L40-51），快照 §一 ±2 行漂移如实入账；前置门 node-report-check --node E1 PASS exit0",
+      "subInstance": { "role": "ChiefTechnologyOfficer", "agentId": "ad431553f992a3ef8", "model": "继承（glm-5.3-flash）", "fresh": true, "reportedAt": "2026-08-30T07:51:55Z(约)", "releasedAt": "2026-08-30T07:51:55Z(约)" }
     },
     {
       "nodeId": "E2",
@@ -65,6 +65,10 @@
       "subInstance": null
     }
   ],
-  "commits": [],
-  "updatedAt": "2026-08-30T07:44:30Z"
+  "commits": [
+    "41775645（骨架先行）",
+    "d60f70b4（E1 报告落账）",
+    "（本笔=E1 收口：node-E1.md+E1 翻 done+state/log 登记同 commit，hash 见 git log）"
+  ],
+  "updatedAt": "2026-08-30T07:55:30Z"
 }

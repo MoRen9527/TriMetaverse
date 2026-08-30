@@ -11,7 +11,7 @@
     {
       "nodeId": "E1",
       "agent": "ChiefTechnologyOfficer",
-      "status": "pending",
+      "status": "done",
       "action": "M 面评估：orchestrate_tick.py 现用 subprocess.Popen 启动 CC CLI 子进程——对照官方 Agent SDK（https://code.claude.com/docs/en/agent-sdk/overview）评估是否有必要替换。评估维度：①SDK 提供的结构化 API（流式输出/工具管理/会话恢复）vs Popen 的 stdout 重定向+JSON envelope 解析 ②迁移成本（代码改动量/测试回归/部署影响）③对段-实现映射表的影响（spawn 载体形态变化是否触发 §2.8 降级合同重审）④结论：替换/不替换/条件替换，附理由。产出 reports/sdk-eval-m-face.md。"
     },
     {
