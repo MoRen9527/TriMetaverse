@@ -17,7 +17,7 @@
 | 3 | heyuan 检出 `/srv/fleet/TriMetaverse`（TriRMC+TriRLC-headless 共用） | R 面生产检出（执行体 CWD） | f284c19b | **纯手工 pull 零自动化** | untracked ×2（.tmp-write-probe2.txt、.tricompany-cognition/） |
 | 4 | heyuan bare | — | **不存在**（/srv/git 无此目录，全盘仅 5 个工作 clone）——设计上不需要 | — | — |
 | 5 | 本地主仓 `D:/Code/ai/TriMetaverse`（dev，TriMLC+董事会） | 本地工作主仓 | 7b5c9162（实勘时点，落后正源 ≥1；今晨已回流） | 周一回流+日常双推 | 9 modified（W35 7 树 tree-op.json+trilc-lineage-merge run-root.json+tmv-whitepaper.md，CEO 会话在途勿动） |
-| 6* | 本地 worktree `TriMetaverse WorkTree`（project/trimetaverse） | R 面历史实验线 | 4e4fdc2c（dev 领先 202/0 独有=严格祖先；与 origin/project/trimetaverse 同步） | 与主仓共享 .git | — |
+| 6* | ~~本地 worktree `TriMetaverse WorkTree`~~ | **已退役**（2026-08-31，LG-019 方案 X：worktree remove+project/trimetaverse 转历史锚 4e4fdc2c 留 GitHub；本地 R 面 clone 转懒建，协议 v2.0 §一触发器） | — | — | — |
 
 hooks 实勘（sg-bare）：post-receive 有（dev push→fleet 检出 fetch+rebase 快通道+orchestrate_tick 异步发射，flock+GIT_DIR unset 齐备）；**pre-receive 无**；无→GitHub 镜像。
 

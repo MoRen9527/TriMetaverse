@@ -1,0 +1,15 @@
+{
+  "treeId": "lg019-retirement-v2",
+  "title": "LG-019 退役立法树：协作协议 v2.0（单 dev 模型）+决策记录+worktree 退役",
+  "week": "W36",
+  "source": "LG-019 评估闭环（0f2418f6：底稿+双席意见书）+CEO 裁决 2026-08-31 01:0x（采 X 两步式；立法树先行→退役同树执行；clone 懒建触发器入 v2.0）",
+  "domainRouting": "local-executable",
+  "status": "active",
+  "created": "2026-08-31",
+  "face": "m-face",
+  "nodes": [
+    {"nodeId": "LR-1", "agent": "CEOChiefOfStaff", "status": "pending", "action": "协议 v2.0 全文一致性重写（CTO 修订面 6 节实质改+3 节局部清理：§一拓扑单 dev 化/§二分支模型双分支废+转历史锚/§三写入权矩阵 worktree 列清/§四迁移协作现行化（23:00+heyuan 唯一执行点）/§五日常流程 push origin dev 对齐（E3 矛盾行改写）/§六五实例 TriRLC 本地行现值化；§七压缩/§八分叉预案行（B1）/§九清单重立基线）+决策记录（CEO 裁决采纳 X、取代双分支模型正身、project/trimetaverse 转历史锚按 tc001-canonical 先例）"},
+    {"nodeId": "LR-2", "agent": "CEOChiefOfStaff", "status": "pending", "action": "退役动作（C2 序裁剪·懒建形态）：ProjectRegistry claim 清除→git worktree remove→project/trimetaverse 留 GitHub 历史锚不动→拓扑正身 §一 6* 回填→daemon 零影响复核留痕（CWD=C:/Users/jedih 双证：schtasks WorkingDirectory 空+cmd cd 行）"}
+  ],
+  "doneCondition": "v2.0 入册+决策记录在案+worktree list 无 WorkTree+registry claim 清+拓扑正身回填；边界=不碰主仓 9 modified 在途、不建 clone（懒建）、不动 LG-017"
+}
