@@ -32,3 +32,5 @@
   - afb2fa11 feat(fade): LG-014 件 4 recover-brief.py——恢复简报生成器（六源逐项机器校验存在性/行数/sha1-12+代位声明 provisional 权力边界+机器校验清单+转正流程指针；缺源不失败如实标注；S3 快照/latest 自动选取+S5 转录目录探针）；自测 8/8+真实生成 rc=0 六源全在位（首跑字面 bug %%F→%F 修复+UTF-8 读回验证）；落 .fade/hub/recover-brief-latest.md 供 watchdog 联动 @MoRen
   - …另有 485 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- CEO 三件指令转投批次（拓扑正身+发现入册+worktree 评估）：任务一 repo-topology-20260831.md 落盘（五节点实勘正身+同步顺序图+GitHub 现势回填 41499531 两端平齐）；任务二 heyuan-branch-switch-impact 执行点勘误（§1.5/Q1 勘误指针+修正段：现役唯一执行点=heyuan，五源重建漏 08-26 主责切换）+发现项处置=直接修①/直接核④（heyuan probe2 已删、cognition=运行数据保留登记、sg 脚本已被夜班清、p0fix4 sandbox=verify.md 实引证据链保留登记、本地 9 文件 CEO 在途勿动）+挂账 LG-017（pre-receive 缺位）/LG-018（GitHub 镜像裁决+heyuan 死重 remote）；任务三 LG-019 评估闭环（底稿+双席意见书+合成七条：X APPROVE 两步式退役即刻+clone 懒建/Y 否决/Z 不推荐/手工对齐+tripwire 三触发器/协议 v2.0 独立树 6+3 节/分叉即升级 M 面/daemon cwd 现值实测前置——候董事会裁决）。4ace9825+0f2418f6 双远端。
+- registry：v2.1；今日 registry 提交 1 条：34753ae docs(registry): FADE-001 齿条新增③——weekly-plane-shift lastRunStatus=ok 周一晨检断言（LG-016 件 5）
