@@ -88,3 +88,8 @@
   - aa2e7d10 ops(fade): sdk-evaluation-001 E1 收口——node-E1.md 九键报告+E1 翻 done+state/log 登记（同 commit）：前置门 node-report-check PASS exit0（python3.8），编排抽查实质锚点全命中 @MoRen
   - d60f70b4 ops(fade): sdk-evaluation-001 E1 报告落账——sdk-eval-m-face.md 123 行（先写后报，CTO 子实例 Edit 占位锚成稿）：M 面 Popen vs Agent SDK 四维评估，结论=不替换（官方非 Py/TS 宿主推荐路径即 CLI 子进程形态+增量能力零消费者+三处深层重建成本-收益倒挂），附 C1-C5 条件复评触发器；编排抽查 TC/协议/快照实质锚点全命中，快照 §一 ±2 行漂移如实入账 @MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:10 +08：自上次进度提交 d8ea4962 后新增 3 条 commit：
+  - eca6675b ops(fade): sdk-evaluation-001 E3 报告落账——board-recommendation.md 120 行（先写后报，总助 fresh 子实例 Edit 占位锚成稿）：双席独立证据链无实质分歧收敛（E2 证据边界9 自述未读 E1 报告互不污染）；M 面档位=不做（维持现状，C1-C5 挂监控面非工作项）；R 面下一步=dsh 规格登记立项（第 0 步前置）+M2/M3 入工程窗；呈董事会决策清单 7 条 @MoRen
+  - 762b6a8b ops(fade): sdk-evaluation-001 E2 收口——node-E2.md 九键报告+E2 翻 done+state/log 登记（同 commit）：前置门 node-report-check PASS exit0（python3.8），编排跨仓抽查 6/6 逐字命中；E2=保持自研不引入外部 SDK @MoRen
+  - 56bec6de ops(fade): sdk-evaluation-001 E2 报告落账——sdk-eval-r-face.md 226 行（先写后报，CTO fresh 子实例 Edit 占位锚成稿）：R 面 agent-core 完备性分模块盘点（8 模块已有/缺口+离 dsh 过渡 M1-M7 里程碑差距）+外部 SDK 依赖风险四项命中自主可控原则，结论=保持自研不引入（dsh 过渡按 M1-M7 自研路线推进）；编排抽查 6 处 file:line 亲读全命中 @MoRen
+- registry：v2.1；今日 registry 提交无变化
