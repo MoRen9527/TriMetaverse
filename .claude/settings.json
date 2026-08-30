@@ -1,0 +1,31 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python D:/Code/ai/TriMetaverse/scripts/fade/hub-heartbeat.py",
+            "timeout": 10,
+            "async": true,
+            "statusMessage": "hub heartbeat"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python D:/Code/ai/TriMetaverse/scripts/fade/hub-heartbeat.py",
+            "timeout": 10,
+            "async": true,
+            "statusMessage": "hub heartbeat"
+          }
+        ]
+      }
+    ]
+  }
+}
