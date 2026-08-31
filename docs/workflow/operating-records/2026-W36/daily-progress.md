@@ -42,3 +42,4 @@
   - c86ede03 chore: 冒烟触发——LG-018 镜像 hook v2 修正验证（空提交触发 post-receive 镜像段）
   - e140fa38 docs(protocol): 协作协议 v2.0 单 dev 模型重构（LG-019 立法树 LR-1）——双分支退役 project/trimetaverse 转历史锚/R 面产出合同对齐 push origin dev（E3 矛盾法条废止）/懒建 clone 触发器与参数/§八分叉即升级 M 面（B1）/§九清单重立基线+daemon cwd 实测留痕（CPO 盲区闭环=CWD 从未指向 WorkTree 退役零影响）；树 lg019-retirement-v2 立项+拓扑正身 6* 退役回填（LR-2 worktree remove+registry claim 清已完成，worktree list 单仓验证）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- LG-018 验证收尾链执行（董事会执行令）：github-mirror SSH 通道配置+连通实证（Hi MoRen9527/TriMetaverse!）+remote url 切 ssh 别名；**镜像链四修冒烟至通**：v1 第二 while read stdin EOF 不执行（零日志实诊）→v2 内联首循环→v3 MAS root 身份读错 config（FAILED 实诊）→v4 env 双横线修正→**`github mirror pushed dca0080d` 成功行+两侧 SHA 平齐**；github-reconcile 手动触发 last=ok（SHA 相等测试过）；LG-018 凭证卡点销账+余项（origin/sg-bare 收敛）在册；LG-017 勘验项入册（heyuan/sg 同 fleet 身份→身份级写控须 heyuan 独立 key+authorized_keys restrict 分流，候 v2.1 事前审另令）。
