@@ -1,7 +1,7 @@
 # M/R 面仓库协作协议（TriMetaverse 多实例拓扑）
 
-版本：v2.0（2026-08-31：**单 dev 模型重构**——双分支模型退役，CEO 裁决采纳 LG-019 方案 X 两步式；v1.1 历史冻结留 git 档）
-日期：2026-08-24（v1.0 立）/ 2026-08-27（v1.1 归属纠正）/ 2026-08-31（v2.0 单 dev 重构）
+版本：v2.1（2026-08-31：**R→M 审核模型修**——staging 事前审+钩子强制+实绩解锁，CEO 裁决；懒激活三件套未触发前 §五 v2.0 口径继续有效；v2.0/v1.1 历史冻结留 git 档）
+日期：2026-08-24（v1.0 立）/ 2026-08-27（v1.1 归属纠正）/ 2026-08-31（v2.0 单 dev 重构；v2.1 审核模型修）
 状态：当前工程规范
 
 ## 文档同步元信息
@@ -9,9 +9,11 @@
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/mr-worktree-collaboration-protocol.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-31
-- 立法锚：LG-019（评估闭环 0f2418f6：底稿+双席意见书）+CEO 裁决（2026-08-31 01:0x，采方案 X 两步式）+树 lg019-retirement-v2
+- 立法锚：LG-019（评估闭环 0f2418f6）+CEO 裁决（2026-08-31 01:0x，采方案 X）+树 lg019-retirement-v2；**v2.1 立法锚：CEO 裁决（2026-08-31 12:0x 转投）+树 lg017-v21-legislation（V21-1 立法/V21-2 CTO 机制勘定 reports/v21-2-cto-mechanism.md）**
 
 ## 变更记录
+
+- **v2.1（2026-08-31，R→M 审核模型修）**：① **决策记录**：CEO 裁决 R 面不成熟期产出走 **staging 事前审**——理由=直推 dev 会被 sg 检出 hook 秒级吸收（坏代码先于审核进生产检出）+M 面审核的教学回路（发现 R 面自身问题反向优化）必须事前存在；**取代 v2.0 §五事后审口径**；**显式声明非回退 v1.1 双分支**（区别=钩子强制+实绩解锁+懒激活三件套三件新装备）。② §五增「门禁开启期产出流向」小节（staging 分支+审阅三件套+合并纪律冻结窗对齐）。③ **实绩解锁条款**（直推 dev=解锁特权，判据 N 入册可调，须董事会显式决策留痕不自动生效）。④ **LG-017 扩容记载**：pre-receive 从防 non-ff 扩为 **dev 写控**；撞点主条（迁移链不炸=硬约束）机制勘定=CTO V21-2（主案：作者/提交者邮箱允许单+R 面 distinct commit 身份配套+post-receive tripwire；authorized_keys 分流否决降备选；全案见树 reports/v21-2-cto-mechanism.md）。⑤ **懒激活三件套**（建 staging+rmc_tick 合同改写 push 目标 dev→staging+pre-receive 扩展生效）——三者不得单独激活，挂 R 面代码门禁开启窗，与本地 clone 懒建同批。⑥ **现状风险窗如实段**（§五末）。
 
 - **v2.0（2026-08-31，单 dev 模型重构）**：① 双分支模型退役——project/trimetaverse 与 project/trimetaverse-staging 转历史锚（tc001-canonical 先例：保留不再演进），本地 WorkTree 移除；② R 面产出合同与生产实态对齐——`push origin dev`（rmc_tick 生产合同现行，v1.1 §四规则 1/§五步骤 4 与之矛盾的法条一并废止）；③ 本地 TriRLC worktree 形态改**懒建 clone**（触发器=首个本地 R 面能力立项过 §6.2 门禁，sg-bare 拉取对齐 heyuan 形态，C1-C6 参数随案）；④ 分叉预案入 §八（B1：push 被拒即停+升级 M 面）；⑤ §九清单重立基线；⑥ 时点现行化（迁移周日 23:00，heyuan 唯一执行点）。决策记录见树 lg019-retirement-v2。
 - v1.1（2026-08-27）：R 面能力门禁（§6.2）生效——门禁通过前步骤 3/4 由 M 面执行。
@@ -39,9 +41,10 @@ sg-bare (sg-server /srv/git/TriMetaverse.git)   ← dev 唯一正源+post-receiv
 
 | 分支 | 用途 | 谁写 | 状态 |
 | --- | --- | --- | --- |
-| `dev` | 唯一演进主线（M 面+R 面产出经面路由门后同线） | M 面（人+CC 编排）+R 面执行体（face 门/合同约束，§五） | **active 唯一** |
+| `dev` | 唯一演进主线（M 面+R 面产出经面路由门后同线；**门禁开启期 R 面产出改走 staging，见 §五 v2.1 小节**） | M 面（人+CC 编排）+R 面执行体（face 门/合同约束，§五） | **active 唯一主线** |
+| `staging` | R 面产出事前审暂存线（v2.1 立法，**激活随懒激活三件套**，未激活不存在） | R 面执行体（门禁开启期） | 立法在册待激活 |
 | `project/trimetaverse` | 历史锚（4e4fdc2c，R 面双分支实验期存档） | 冻结 | **只读历史锚**（tc001-canonical 先例：保留不再演进） |
-| `project/trimetaverse-staging` | — | — | **废止**（从未启用） |
+| `project/trimetaverse-staging` | — | — | **废止**（从未启用；v2.1 的 staging 为全新短名线，与此废止名无关） |
 
 分支退役先例：tc001-canonical（trilc-lineage-merge merge-log，60e9bdcd）——保留历史发布跟踪锚不再演进。
 
@@ -78,6 +81,16 @@ sg-bare (sg-server /srv/git/TriMetaverse.git)   ← dev 唯一正源+post-receiv
 - **R 面产出合同（现行，与生产一致）**：R 面执行体在被拾取树范围内原子 commit + `push origin dev`（rmc_tick 生产合同；v1.1「R 面不直接 push dev/经 M 面合并」法条**废止**——双分支模型产物）；产出回流走 dev 单线（编排查核+顶层 done 惯例）。
 - **漂移对齐纪律**：拉取一律 `git pull --ff-only`；派工前 pull 前置；派工留痕 HEAD sha（CTO-2 机器锚）；会话运行期禁 pull。
 - **自动化 tripwire（三触发器任一命中即启动通道自动化评估）**：首棵 r-face 树挂载本地 / 30 天内 ≥2 次漂移致 push 拒绝 / LG-018 镜像通道落地。
+
+### 门禁开启期 R 面产出流向（v2.1 立法，激活随懒激活三件套）
+
+**决策记录（CEO 2026-08-31 裁决）**：R 面不成熟期产出走 **staging 事前审**——理由=直推 dev 会被 sg 检出 hook 秒级吸收（坏代码先于审核进生产检出）+M 面审核的教学回路（发现 R 面自身问题反向优化）必须事前存在。本小节**取代 v2.0 §五事后审口径**；**非回退 v1.1 双分支**（区别=钩子强制+实绩解锁+懒激活三件套三件新装备）。
+
+- **产出流向**：R 面能力门禁（§6.2）开启期，R 面执行体产出 → `push origin staging`（rmc_tick 合同改写随三件套；distinct commit 身份 rface-agent@tri.company per-command -c，配套勘定见树 lg017-v21-legislation reports/v21-2-cto-mechanism.md）。
+- **审阅三件套**：①推送权=R 面执行体 push staging；②审阅者=小贾收口核验+董事会抽验，spec/架构级 CPO/CTO 双席；③合并纪律=staging→dev 并入走周回流窗或按需窗+双席放行，保「本地回流纯 fast-forward」惯例（对齐周日冻结窗纪律）。
+- **实绩解锁条款**：直推 dev 为**解锁特权**——判据=连续 N 次 staging 合并零返工+审计抽查无遗留（N 入册可调）；解锁须董事会显式决策留痕，**不自动生效**。
+- **现状风险窗（如实）**：LG-017 pre-receive dev 写控落地前，钩子强制尚不存在，R 面 dev 直推阻拦唯一靠能力门禁（R 面零代码任务现势）——残余风险=门禁开启窗与钩子部署窗之间的裸奔窗，接受理由=激活三件套同批设计使裸奔窗为零（钩子与产出流向同批生效）+现势零 R 面产出流量。
+- **撞点机制勘定引用**：dev 写控机制（邮箱允许单+distinct 身份+tripwire+phase-2 闭环）全案见树 lg017-v21-legislation reports/v21-2-cto-mechanism.md（CTO V21-2），本协议存要点指针。
 
 ### 分叉处置预案（§八强制行）
 

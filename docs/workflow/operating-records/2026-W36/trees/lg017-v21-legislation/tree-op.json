@@ -1,0 +1,33 @@
+{
+  "treeId": "lg017-v21-legislation",
+  "title": "v2.1 立法树：R→M 审核模型修（staging 事前审+钩子强制+实绩解锁）+LG-017 扩容记载",
+  "week": "W36",
+  "source": "CEO 裁决 2026-08-31（董事会转投）：R 面不成熟期产出走事前审（取代 v2.0 §五事后审口径，非回退 v1.1 双分支——钩子强制+实绩解锁+懒激活三件新装备）；本令只立法不激活（懒激活三件套=建 staging+合同改写+钩子扩展，挂 R 面代码门禁开启窗与 clone 懒建同批）",
+  "domainRouting": "local-executable",
+  "status": "done",
+  "created": "2026-08-31",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "V21-1",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "协议 v2.0→v2.1 修订：决策记录（事前审裁决+理由+非回退声明）/§五修订（门禁开启期产出流向 staging+审阅三件套+合并纪律冻结窗对齐）/实绩解锁条款（N 入册可调+董事会显式决策不自动）/LG-017 扩容记载（dev 写控+撞点主条：迁移链不炸=硬约束）/现状风险窗如实段"
+    },
+    {
+      "nodeId": "V21-2",
+      "agent": "CTO",
+      "status": "done",
+      "action": "撞点机制勘定（立法树内必答）：身份级一刀切会炸迁移链（f284c19b=heyuan 合法 dev 流量实证）——勘定 pre-receive dev 写控机制（作者邮箱允许单方向 vs authorized_keys 分流备选）+M 面作者邮箱清单+R 面会话作者拒入与提示文案，勘定记录入树",
+      "resultNote": "勘定记录已代落盘 reports/v21-2-cto-mechanism.md（106 行，本席环境无 Write 面由助理代盘如实声明）"
+    },
+    {
+      "nodeId": "V21-3",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "合成定稿+台账（LG-019 余项加 v2.1 指针/LG-017 扩容记载+勘验项并存）+收口"
+    }
+  ],
+  "doneCondition": "v2.1 入册+CTO 勘定记录在树+台账双登记；边界=只立法，不建 staging/不改合同/不动钩子（激活另令三件套同批）",
+  "closeNote": "收口 2026-08-31 12:1x：V21-1=协议 v2.1 入册（决策记录+§五 v2.1 小节+实绩解锁+LG-017 扩容+三件套懒激活+风险窗段）；V21-2=CTO 勘定（主案邮箱允许单+distinct 身份+tripwire，authorized_keys 否决，phase-2 闭环）；V21-3=台账 LG-019/LG-017 双登记。边界守全：未建 staging/未改合同/未动钩子"
+}
