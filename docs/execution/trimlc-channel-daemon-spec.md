@@ -60,3 +60,29 @@ healthz daemon.mode 字段=**宿主 OS 平台形态标识**（app.ts:1667 平台
 ### 8.3 迁仓预告
 
 通道态代码迁仓计划（TriLC 仓→新 TriMLC 仓）见 repo-rename-migration-plan-20260831.md §三阶段 3（8713 并行换源不断服）。
+
+### 8.4 提权注册命令双口径（D-03 同型 shell 方言教训，2026-08-31 深夜）
+
+首交付命令内嵌引号 `\"...\"` 为 **cmd.exe 惯用法**，PowerShell 解析将反斜杠粘到路径尾报「无效参数」——命令交付未注明适用 shell，教训记档（D-03 同型）。双口径正身（路径无空格故 PowerShell 式去内嵌引号）：
+
+- **PowerShell（已采用，CEO 跑成）**：`schtasks /Create /TN "TriMLC-Channel" /SC ONSTART /DELAY 0001:30 /TR "C:\Users\jedih\AppData\Local\trilc-daemon-channel.cmd" /RU SYSTEM /F`
+- **cmd.exe**：`schtasks /Create /TN "TriMLC-Channel" /SC ONSTART /DELAY 0001:30 /TR "\"C:\Users\jedih\AppData\Local\trilc-daemon-channel.cmd\"" /RU SYSTEM /F`
+
+env 完整性说明（不变）：通道实例全部 env 承载于 cmd 文件内，任务行只引用路径。
+
+### 8.5 重启后收尾清单（残差①二合一处置，待 CEO 重启触发；董事会批复 2026-08-31 深夜）
+
+重启后顺序（董事会口径照录+验证锚）：
+
+1. **双 daemon 存活验证**：schtasks ONSTART 触发 TriMLC-Channel（SYSTEM）→`curl http://127.0.0.1:8713/healthz`（预期 ok+trimc connected=SYSTEM 身份下 node/.env/D: 路径全通真凭实据）；TriLC Daemon（jedih Logon 触发）→`curl http://127.0.0.1:8711/healthz` 同验。任一失败→查 8.4 双口径 cmd 与路径。
+2. **目录锁释放验证+mv 改名**：`mv D:\Code\ai\TriLC D:\Code\ai\TriRLC`（重启后进程锁清空，预期通过；再拒则 handle 定位占者升级）。
+3. **三脚本路径 sed**：build-desktop.ps1/fix-nssm-paused.ps1/fix-nssm-registry.ps1 的 `D:\Code\ai\TriLC` → `D:\Code\ai\TriRLC`（ps1 BOM 纪律：二进制替换保留 BOM）。
+4. **8711 拉起核活**：`schtasks /Run /TN "TriLC Daemon"`+healthz（connected+activeTasks=0）。
+5. 收口三件：本地 TriRLC 仓 remote 复核（sg-server=TriRLC.git）+拓扑正身 §一 本地行回填+本清单勾销。
+
+### 8.5.1 SYSTEM 任务悬案与验收状态（2026-08-31 深夜董事会定性，**验收进行中勿销账**）
+
+- **悬案定性**：任务配置全对（action 路径/SYSTEM/已启用/ONSTART）、Last Run=00:01:38 Result=0、「模式: 已排队」——但 taskrun.log 两层+监听+进程全无=**调度器自认成功而实际未执行**。判=按需 /Run 撞 ONSTART+DELAY 队列的 Windows 怪癖，今晚不追。
+- **侦测已就位**：cmd 标记行路径 bug 已修（硬编码绝对路径），下次触发必留痕 C:\Users\jedih\AppData\Local\trilc-channel\taskrun.log。
+- **晨检/重启清单增补**：CEO 任意一次重启后，读 taskrun.log——**有标记=node 层死因在日志里**（修 node 层）；**无标记=调度层**（处置=改 RunOnce 或导出 XML 任务定义换触发器绕队列）。
+- **服务现态（如实）**：8713=jedih 手动实例 connected（SYSTEM 悬案不影响通道可用性）；**「SYSTEM 身份自启」验收顺延至重启后，进行中勿销账**。
