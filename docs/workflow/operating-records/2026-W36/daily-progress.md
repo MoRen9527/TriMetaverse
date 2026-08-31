@@ -51,3 +51,5 @@
 - LG-018 镜像验证收尾链完成+引擎调度疑点登记：reconcile 手动跑平（last=ok）；**引擎今日 09:07 槽跳过未触发**（nextRun 排 09-01 09:07——每日型 cron+tz 调度行为存疑，判定点=09-01 09:07 是否触发，挂 LG-018 观察项；镜像已通使对账兜底需求降级非阻塞）；**镜像自然流量验证 ✓**（12:00 sg watcher push 91f485f0→hook 自动镜像推平，无人工干预全链）；归账 sg 线间隔增量（3b66211c）。
 - CEO v2.1 立法令执行（树 lg017-v21-legislation 三节点 done）：协议 v2.0→v2.1（R→M 审核模型修：staging 事前审决策记录+取代 v2.0 §五事后审+非回退 v1.1 声明/实绩解锁条款 N 可调/LG-017 扩容 dev 写控/懒激活三件套条款/现状风险窗段）；V21-2 CTO 撞点机制勘定记录代落盘（106 行：主案=邮箱允许单+distinct 身份 rface-agent@tri.company+tripwire，authorized_keys 否决降备选，phase-2 迁移独立身份闭环，残余风险五条+未验证项四条）；台账 LG-019 余项加 v2.1 指针+LG-017 扩容记载。边界守全：未建 staging/未改 rmc_tick 合同/未动钩子（懒激活三件套候另令）。
 - registry：v2.1；今日 registry 提交无变化
+- CEO 两单批次（单 A 实施+单 B 评估先行）：单 A LG-020 树四节点 done——设计 spec 落盘（trimlc-channel-daemon-spec.md 七条依据+两条边界如实）+TriLC 同库 channel profile（TRILC_CHANNEL_MODE=1 通道开关，三 agent 宿主路由 501，tsc clean）+8713 新实例部署冒烟全绿（healthz ok/trimc connected 心跳外拨/三路由 501 弧线：LF 换行批处理 set 不可靠→CRLF 修/sessions 客户端面 200/127.0.0.1 外拨型边界）；残差=常驻计划任务注册三法均拒绝访问（提权留待 CEO），实例手动起持续运行+协议 §6.1 联动单 B。单 B 勘验清单落盘（naming-alignment-survey-20260831.md：六面枚举+A/B/C 三档方案+待裁定三项，**候董事会过目后实施不裸改**）。
+- registry：v2.1；今日 registry 提交无变化

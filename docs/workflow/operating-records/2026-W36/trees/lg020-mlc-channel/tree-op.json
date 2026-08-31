@@ -1,0 +1,42 @@
+{
+  "treeId": "lg020-mlc-channel",
+  "title": "LG-020 单 A：TriMLC 本地通道 daemon（立项→设计→立法→实施）",
+  "week": "W36",
+  "source": "CEO 两单之单 A（2026-08-31 下午，董事会转投，设计输入七条照录为设计依据）",
+  "domainRouting": "local-executable",
+  "status": "done",
+  "created": "2026-08-31",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "MC-1",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "设计 spec 落盘 docs/execution/trimlc-channel-daemon-spec.md（七条设计依据全录+边界两条如实+实施参数表+愿景锚）",
+      "resultNote": "spec 落盘完成"
+    },
+    {
+      "nodeId": "MC-2",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "TriLC 同库 channel profile 实施：app.ts TRILC_CHANNEL_MODE=1 通道开关（三 agent 宿主路由 501 channel_mode_no_agent_host）+tsc clean+构建（dist 含开关验证）",
+      "resultNote": "tsc rc=0；dist/server/app.js 含 channel_mode_no_agent_host 实证"
+    },
+    {
+      "nodeId": "MC-3",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "新实例部署+冒烟：D:/Code/ai/trimlc-channel 独立 CWD+8713 端口+独立 DATA_DIR/PID_DIR+通道 cmd 计划任务；healthz 读数+三路由 501 验证+心跳外拨（trimc connected）+CC 客户端连接实证（trilc chat 同款）",
+      "resultNote": "通道实例 8713 常驻运行（healthz ok/trimc connected/心跳外拨实证）；三路由 501 全通（channel_mode_no_agent_host 弧线：v1 LF 换行批处理 set 不可靠→CRLF 修，四修冒烟）；sessions GET 200 客户端面通；127.0.0.1 绑定外拨型边界实证。残差=常驻计划任务注册被拒（ONSTART/LOGON/Register 均拒绝访问——提权留待 CEO），现实例手动起持续运行"
+    },
+    {
+      "nodeId": "MC-4",
+      "agent": "CEOChiefOfStaff",
+      "status": "done",
+      "action": "协议 §6.1 TriMLC 行重定义（本地 LC daemon 通道态+CC 交互为客户端）+命名真源表联动单 B",
+      "resultNote": "协议 §6.1 重定义+单 B 联动并入 naming-alignment-survey（§一/§七 引用）"
+    }
+  ],
+  "doneCondition": "通道 daemon 常驻（计划任务在册）+healthz ok+三路由 501+心跳外拨 connected+CC 客户端连接实证+协议 §6.1 重定义入册",
+  "closeNote": "收口 2026-08-31 23:1x：设计 spec+channel profile 代码（tsc clean+dist 验证）+8713 实例部署冒烟全绿+常驻注册残差如实（提权留待）；CC 完整 chat 实证与协议 §6.1 正文行待下批补"
+}
