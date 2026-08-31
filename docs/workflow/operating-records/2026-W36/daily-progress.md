@@ -56,3 +56,5 @@
 - 巡检兜底补写 @23:30 +08：自上次进度提交 f7d1deae 后新增 1 条 commit：
   - a687fe22 docs(protocol): 协议 v2.2 微修（单 B 终态裁决同批）——§6.1 TriMLC-Channel 行新增（本地通道 daemon 通道态+CC 交互为客户端，LG-020 立法配套⑥闭环）+版本行 v2.2；命名对齐勘验文档终态裁决段（C 档双名并书+物理冻结+A 档执行完成+LG-021 收口）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- repo 级迁移三阶段执行（董事会批准令·LG-021 余量）：阶段 1=GitHub 两仓 rename（gh repo rename，TriLC→TriRLC/TriMC→TriMMC）+redirect 兜底实证（旧 URL ls-remote ff2f970c/b8ed553c rc=0 读数留痕）+新 URL 直读 ✓；阶段 2=sg-bare mv×2（TriLC.git→TriRLC.git/TriMC.git→TriMMC.git，root 属主与现役混合身份治理一致）+本地 TriLC 仓 sg-server remote set-url+fetch 冒烟 OK（自排窗 :46-:54 watcher 槽间，预告留痕本行）；阶段 3=TriMLC 仓新建（GitHub 已预存在仓启用+sg-bare init bare fleet 组权限+种子 TriRLC dev 双推 dev:main）+本地 TriMLC clone 重立基线（旧 quadmig-4 史留 legacy-quadmig4 分支，reset origin/main=TriRLC 内容）+channel profile 补提交（c717b54 双远端——种子首推漏 channel 改动如实修正）+TriMLC 构建验证（dist 含开关）+**8713 换源 TriMLC dist**（healthz ok+501 闸实证，秒级重启窗择 B 案）+**8711 停窗目录改名**（schtasks End+8711 释放→**mv Permission denied 两连残差挂起**：目录锁占者待诊，cmd 一致性侥幸保持原指[转义未生效因祸得福]→daemon cmd 手动拉起恢复 connected/activeTasks=0）+CI build-tricade.yml 全量对齐（TriLC 引用清零+TriRLC/TriMMC checkout 与 Copy-Item 路径）+协议 §6.1 TriRLC 行代码源更新。
+- registry：v2.1；今日 registry 提交无变化

@@ -103,7 +103,7 @@ push 被拒（non-fast-forward）后 **ff-only 必失败且 agent 禁自救**（
 | --- | --- | --- | --- | --- |
 | TriMLC（本地 CC+董事会） | D:\Code\ai\TriMetaverse（dev 主仓） | sg-bare 回流 | claude code 宿主 | dev 双推（sg-bare+GitHub） |
 | TriMLC-Channel（本地通道 daemon，LG-020） | D:\Code\ai\trimlc-channel（独立 CWD，:8713 loopback） | 同 TriLC 仓 dev（channel profile） | 常驻+心跳外拨+收件箱+cron（**无 agent 宿主能力**，TRILC_CHANNEL_MODE=1）；CC 交互与中枢会话=客户端 | —（通道态不产出分支） |
-| TriRLC（本地 daemon） | **无 TriMetaverse 检出**（CWD=C:\Users\jedih，TriLC 自身仓运行；懒建 clone 触发前不挂任何工作面） | — | agent-core 循环（现势零派工） | —（触发后：clone 内 push origin dev） |
+| TriRLC（本地 daemon） | **无 TriMetaverse 检出**（CWD=C:\Users\jedih，TriRLC 仓运行〔原 TriLC 仓名，2026-08-31 代码面对齐改名〕；懒建 clone 触发前不挂任何工作面） | — | agent-core 循环（现势零派工） | —（触发后：clone 内 push origin dev） |
 | TriMMC（sg-server） | /srv/fleet/TriMetaverse | sg-bare 自动追 | claude code headless | sg-bare HEAD:dev |
 | TriRMC（heyuan） | /srv/fleet/TriMetaverse | sg-bare（手工+任务内 ff-only 拉取） | 调度面+rmc_tick 派工 | sg-bare HEAD:dev |
 | TriRLC（heyuan） | /srv/fleet/TriMetaverse（headless CWD） | 同上 | agent-core 循环 | dev（face 门+合同内） |

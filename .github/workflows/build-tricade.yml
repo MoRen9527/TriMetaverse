@@ -1,6 +1,6 @@
 # ── TriCade Production Build Pipeline ──
 # Triggered by version tags (v*), this workflow:
-#   1. Checks out TriLC + TriPilot + TriCode + TriMC + TriModel (sibling repos)
+#   1. Checks out TriRLC + TriPilot + TriCode + TriMC + TriModel (sibling repos)
 #   2. npm ci + tsc for each
 #   3. Packages TriPilot .vsix extension
 #   4. Assembles staging directory
@@ -86,11 +86,11 @@ jobs:
           path: TriMetaverse
           ref: ${{ github.ref }}
 
-      - name: Checkout TriLC
+      - name: Checkout TriRLC
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.repository_owner }}/TriLC
-          path: TriLC
+          repository: ${{ github.repository_owner }}/TriRLC
+          path: TriRLC
           ref: ${{ github.ref }}
 
       - name: Checkout TriPilot
@@ -107,10 +107,10 @@ jobs:
           path: TriCode
           ref: ${{ github.ref }}
 
-      - name: Checkout TriMC
+      - name: Checkout TriMMC
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.repository_owner }}/TriMC
+          repository: ${{ github.repository_owner }}/TriMMC
           path: TriMC
           ref: ${{ github.ref }}
 
@@ -135,13 +135,13 @@ jobs:
           node-version: '20'
           cache: 'npm'
           cache-dependency-path: |
-            TriLC/package-lock.json
+            TriRLC/package-lock.json
             TriPilot/package-lock.json
             TriCode/package-lock.json
             TriMC/package-lock.json
             TriModel/package-lock.json
 
-      # ── Build TriModel (no deps; needed by TriMC + TriLC) ──
+      # ── Build TriModel (no deps; needed by TriMC + TriRLC) ──
       - name: Build TriModel
         working-directory: TriModel
         run: |
@@ -162,9 +162,9 @@ jobs:
           npm ci
           npx tsc -p tsconfig.json --outDir dist
 
-      # ── Build TriLC ──
-      - name: Build TriLC
-        working-directory: TriLC
+      # ── Build TriRLC ──
+      - name: Build TriRLC
+        working-directory: TriRLC
         run: |
           npm ci
           npx tsc -p tsconfig.json --outDir dist
@@ -196,14 +196,14 @@ jobs:
           New-Item -ItemType Directory -Force -Path "$staging\config"     | Out-Null
           New-Item -ItemType Directory -Force -Path "$staging\scripts"    | Out-Null
 
-          # TriLC
-          Copy-Item -Recurse -Force TriLC\dist         "$staging\trilc\"
-          Copy-Item -Recurse -Force TriLC\node_modules  "$staging\trilc\"
+          # TriRLC
+          Copy-Item -Recurse -Force TriRLC\dist         "$staging\trilc\"
+          Copy-Item -Recurse -Force TriRLC\node_modules  "$staging\trilc\"
           if (-not (Test-Path "$staging\trilc\node_modules")) {
-            Write-Error "FATAL: TriLC node_modules copy failed — path does not exist"
+            Write-Error "FATAL: TriRLC node_modules copy failed — path does not exist"
             exit 1
           }
-          Copy-Item -Force       TriLC\package.json     "$staging\trilc\"
+          Copy-Item -Force       TriRLC\package.json     "$staging\trilc\"
           # version.json 随构建版本更新（BUG-20260805-002 修复）：注入 CI calver
           @{ version = "$env:VERSION" } | ConvertTo-Json -Compress | Set-Content "$staging\trilc\version.json" -Encoding UTF8
 
@@ -254,7 +254,7 @@ jobs:
           Add-Type -AssemblyName System.IO.Compression.FileSystem
           [System.IO.Compression.ZipFile]::ExtractToDirectory($env:VSIX_PATH, $extDir)
 
-          # Config (optional — TriLC falls back to built-in defaults if missing)
+          # Config (optional — TriRLC falls back to built-in defaults if missing)
           # Config (optional — create default if missing)
           if (Test-Path TriMetaverse\config\settings.json) {
             Copy-Item -Force TriMetaverse\config\settings.json "$staging\config\"
@@ -270,7 +270,7 @@ jobs:
           echo  TriCade Desktop Installer $env:VERSION
           echo ========================================
           echo.
-          echo TriLC Local Controller + TriPilot Extension
+          echo TriRLC Local Controller + TriPilot Extension
           echo.
           echo [1/2] Installing TriPilot extension...
           code --install-extension "%%~dp0..\extensions\tripilot-chat-0.0.1" --force
@@ -335,7 +335,7 @@ jobs:
             TriMetaverse Desktop distribution bundle.
 
             ### Contents
-            - **TriLC** — Local Controller daemon (HTTP + SSE agent loop)
+            - **TriRLC** — Local Controller daemon (HTTP + SSE agent loop)
             - **TriPilot** — Chat extension for VSCodium/VS Code
             - **TriCode** — Shared code runtime
 
