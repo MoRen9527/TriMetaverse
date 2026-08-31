@@ -60,3 +60,4 @@
 - 巡检兜底补写 @23:40 +08：自上次进度提交 5aa13596 后新增 1 条 commit：
   - 504c6ce7 docs(exec): repo 级改名迁移方案（LG-021 扩围勘验）——TriMC→TriMMC/TriLC→TriRLC/新建 TriMLC 三仓名矩阵+影响面六面勘验（分叉史已闭合实勘/heyuan TriLC 不经 sg-bare 零动作例外/CI redirect 兜底）+三阶段迁移计划（GitHub rename 零断→sg-bare 停机窗分钟级→TriMLC 新建+8713 并行换源）+TriCode 上浮备选 CTO 定；通道 spec 增补 daemon.mode 口径+宿主理由改治理边界+迁仓预告 @MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 目录改名残差终态（董事会指正后四试仍锁）：shell cwd 嫌疑排除（cd 迁出后 pwd=主仓重试仍 Permission denied）+daemon 句柄释放等待重试三连仍锁（Stop-Process 转义炸未杀成，8711 daemon pid 40204 存活 connected 722s 零中断=CEO 通道无恙）——**占锁者待诊（需 handle.exe/重启清句柄），与重启二合一处置口径合流**（spec §8.5 清单待 CEO 重启触发）；当前自洽运行态=TriLC 目录原名+cmd 原指+8711 活。8713 离线候 CEO 终端 /Run TriMLC-Channel（SYSTEM 权限我侧无）。
