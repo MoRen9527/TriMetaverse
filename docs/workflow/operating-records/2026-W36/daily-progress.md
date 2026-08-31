@@ -53,3 +53,6 @@
 - registry：v2.1；今日 registry 提交无变化
 - CEO 两单批次（单 A 实施+单 B 评估先行）：单 A LG-020 树四节点 done——设计 spec 落盘（trimlc-channel-daemon-spec.md 七条依据+两条边界如实）+TriLC 同库 channel profile（TRILC_CHANNEL_MODE=1 通道开关，三 agent 宿主路由 501，tsc clean）+8713 新实例部署冒烟全绿（healthz ok/trimc connected 心跳外拨/三路由 501 弧线：LF 换行批处理 set 不可靠→CRLF 修/sessions 客户端面 200/127.0.0.1 外拨型边界）；残差=常驻计划任务注册三法均拒绝访问（提权留待 CEO），实例手动起持续运行+协议 §6.1 联动单 B。单 B 勘验清单落盘（naming-alignment-survey-20260831.md：六面枚举+A/B/C 三档方案+待裁定三项，**候董事会过目后实施不裸改**）。
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:30 +08：自上次进度提交 f7d1deae 后新增 1 条 commit：
+  - a687fe22 docs(protocol): 协议 v2.2 微修（单 B 终态裁决同批）——§6.1 TriMLC-Channel 行新增（本地通道 daemon 通道态+CC 交互为客户端，LG-020 立法配套⑥闭环）+版本行 v2.2；命名对齐勘验文档终态裁决段（C 档双名并书+物理冻结+A 档执行完成+LG-021 收口）@MoRen
+- registry：v2.1；今日 registry 提交无变化
