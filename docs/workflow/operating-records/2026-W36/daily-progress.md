@@ -73,3 +73,6 @@
 - **转正后第一令三件执行**：①镜/账归一——LG-019 销账确认（裁决采 X+执行闭环）+LG-020 销账行补齐（通道 daemon 全实施）+LG-021 销账行补齐（转出观察=SYSTEM 打火终验电池封印面）+LG-014 物理移段归位+计数修正（**现役 8**=LG-005/006/007/010/015/016/017/018；**销账 13**）；ledger-mirror 写时镜像同步；余项 origin/sg-bare 同址收敛归 LG-018 在册低优。②恢复配方勘误留痕——fade-007 spec §七 02:5x 行（fade-protocol-spec.md/fade-registry.md 无实盘，三件替代实证；SOP 步 2 表同引顺手勘误候董事会认）。③晨检布防——09:07 github-reconcile 自然触发判定点=第一优先（09:1x cron 自触候跑，过点即核读数）；SYSTEM 打火终验候 AC 重启随清单跟踪。
 - 教训入档：Git Bash sed 静默失败（exit 0 无效果）Edit 工具兜底；目录 mv 前先排 IDE/编辑器句柄。
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:00 +08：自上次进度提交 e06d6af0 后新增 1 条 commit：
+  - 7ba9a652 docs(fade-007): SOP 步 2 表第 4 源勘误照批落地——原引 fade-protocol-spec.md/fade-registry.md 无实盘，替代三件（fade-pipeline-design/fade-007-incident-sop/fade-007-context-reservoir-spec）行内注记+r5 重建实证锚；元信息 lastSyncedAt 2026-09-01 勘误行，与 spec §七 02:5x 行同案同口径（董事会批件）@MoRen
+- registry：v2.1；今日 registry 提交无变化
