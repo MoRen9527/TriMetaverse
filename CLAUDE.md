@@ -25,7 +25,7 @@ D:/Code/ai/
 ├── TriPilot/        ← VS Code extension
 ├── TriCode/         ← Shared runtime
 ├── TriCompany/      ← Cyber-company source
-└── TriMC/           ← Meta Controller
+└── TriMMC/          ← Meta Controller〔原 TriMC，2026-09-01 代码面仓名对齐改名；sg 部署面 /srv/fleet/TriMC 照命名对齐决议 C 档物理冻结〕
 ```
 
 All modules are sibling directories. Use `../<module>/` for cross-repo references.
