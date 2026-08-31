@@ -56,3 +56,6 @@
 - 巡检兜底补写 @23:30 +08：自上次进度提交 f7d1deae 后新增 1 条 commit：
   - a687fe22 docs(protocol): 协议 v2.2 微修（单 B 终态裁决同批）——§6.1 TriMLC-Channel 行新增（本地通道 daemon 通道态+CC 交互为客户端，LG-020 立法配套⑥闭环）+版本行 v2.2；命名对齐勘验文档终态裁决段（C 档双名并书+物理冻结+A 档执行完成+LG-021 收口）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 5aa13596 后新增 1 条 commit：
+  - 504c6ce7 docs(exec): repo 级改名迁移方案（LG-021 扩围勘验）——TriMC→TriMMC/TriLC→TriRLC/新建 TriMLC 三仓名矩阵+影响面六面勘验（分叉史已闭合实勘/heyuan TriLC 不经 sg-bare 零动作例外/CI redirect 兜底）+三阶段迁移计划（GitHub rename 零断→sg-bare 停机窗分钟级→TriMLC 新建+8713 并行换源）+TriCode 上浮备选 CTO 定；通道 spec 增补 daemon.mode 口径+宿主理由改治理边界+迁仓预告 @MoRen
+- registry：v2.1；今日 registry 提交无变化
