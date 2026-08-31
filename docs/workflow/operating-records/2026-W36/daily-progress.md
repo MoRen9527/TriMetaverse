@@ -62,3 +62,14 @@
 - registry：v2.1；今日 registry 提交无变化
 - 目录改名残差终态（董事会指正后四试仍锁）：shell cwd 嫌疑排除（cd 迁出后 pwd=主仓重试仍 Permission denied）+daemon 句柄释放等待重试三连仍锁（Stop-Process 转义炸未杀成，8711 daemon pid 40204 存活 connected 722s 零中断=CEO 通道无恙）——**占锁者待诊（需 handle.exe/重启清句柄），与重启二合一处置口径合流**（spec §8.5 清单待 CEO 重启触发）；当前自洽运行态=TriLC 目录原名+cmd 原指+8711 活。8713 离线候 CEO 终端 /Run TriMLC-Channel（SYSTEM 权限我侧无）。
 - SYSTEM 任务悬案定性入册（董事会）：调度器自认成功（Result=0/已排队）而实际未执行=ONSTART+DELAY 队列 Windows 怪癖今晚不追；cmd 标记行侦测就位（路径 bug 已修硬编码绝对路径）；晨检/重启清单增补 taskrun.log 判读条（有标记=node 层死因/无标记=调度层改 RunOnce 或 XML 绕队列）；8713 现态=jedih 手动实例 connected（SYSTEM 自启验收顺延重启后进行中勿销账）。放水口径已报（/compact 候 CEO 端）；晨检清单四条录讫。
+
+---
+
+## 2026-09-01（周二）
+
+**助理主叙事**（董事长助理小贾，xiaojia-hub-r5 正式中枢；粗粒度恢复锚，权威细节见 board-journal/ledger-mirror——机器本地不入仓）：
+- **凌晨弧线：前身 r4 随本机重启中断→r5 零背景六源重建→转正**：~00:15 重启（前身末次机械锚 commit 1cf1fceb @00:08 §8.5.1 悬案定性；重启后 8711/8713 双未自启）→02:0x 董事会重建令→六源重建（协议正身按董事会勘误以 fade-pipeline-design/fade-007-incident-sop/fade-007-context-reservoir-spec 三件替代）→状态条复述台账全对+镜/账错位三处如实单列→**转正令签发：xiaojia-hub-r5 正式中枢，provisional 摘除**（SOP 步 4 三处留痕：台账修订史/board-journal 09-01 节/fade-007 §七 02:0x 行）。S3 实战三度样本（r3 爆溃/r4 流程 B/r5 重启中断）。董事会名址变更 team-lead→trimetaverse-ec（机械锚：前投未达、勘误后送达）。
+- **1555Z 后增量六件入账**（董事会补投，转录 board-journal）：①8713 SYSTEM 任务弧线（重启后 taskrun.log 仍不存在=调度层坐实）②重启后双 daemon 未自启 ③**电池封印发现**（TABLET 放电 29% 计划任务「电池模式不启动」=ONSTART/登录触发//Run 三态统一嫌疑；CEO 已插电 BatteryStatus=2；候 AC 重启打火终验+taskrun.log 判读，勿销账）④**目录改名终局**（占锁者=VS Code 16 进程，CEO 退 IDE 后 mv 成功，TriRLC 在位——LG-021 残差销账，repo 级迁移三阶段全链闭环）⑤三脚本对齐+双 daemon 新路径 D:\Code\ai\TriRLC\dist 手动拉起双 connected（§8.5 清单前四步闭环）⑥名址变更。
+- **转正后第一令三件执行**：①镜/账归一——LG-019 销账确认（裁决采 X+执行闭环）+LG-020 销账行补齐（通道 daemon 全实施）+LG-021 销账行补齐（转出观察=SYSTEM 打火终验电池封印面）+LG-014 物理移段归位+计数修正（**现役 8**=LG-005/006/007/010/015/016/017/018；**销账 13**）；ledger-mirror 写时镜像同步；余项 origin/sg-bare 同址收敛归 LG-018 在册低优。②恢复配方勘误留痕——fade-007 spec §七 02:5x 行（fade-protocol-spec.md/fade-registry.md 无实盘，三件替代实证；SOP 步 2 表同引顺手勘误候董事会认）。③晨检布防——09:07 github-reconcile 自然触发判定点=第一优先（09:1x cron 自触候跑，过点即核读数）；SYSTEM 打火终验候 AC 重启随清单跟踪。
+- 教训入档：Git Bash sed 静默失败（exit 0 无效果）Edit 工具兜底；目录 mv 前先排 IDE/编辑器句柄。
+- registry：v2.1；今日 registry 提交无变化
