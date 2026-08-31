@@ -1,6 +1,7 @@
 # M/R 面仓库协作协议（TriMetaverse 多实例拓扑）
 
-版本：v2.1（2026-08-31：**R→M 审核模型修**——staging 事前审+钩子强制+实绩解锁，CEO 裁决；懒激活三件套未触发前 §五 v2.0 口径继续有效；v2.0/v1.1 历史冻结留 git 档）
+版本：v2.2（2026-08-31：§6.1 TriMLC 行重定义——本地 LC daemon 通道态（LG-020）+CC 交互为客户端；命名对齐终态联动=alias 表 2026-08-31 决议；v2.1/v2.0/v1.1 历史冻结留 git 档）
+日期：2026-08-24（v1.0 立）/ 2026-08-27（v1.1 归属纠正）/ 2026-08-31（v2.0 单 dev 重构；v2.1 审核模型修；v2.2 §6.1 微修）
 日期：2026-08-24（v1.0 立）/ 2026-08-27（v1.1 归属纠正）/ 2026-08-31（v2.0 单 dev 重构；v2.1 审核模型修）
 状态：当前工程规范
 
@@ -101,6 +102,7 @@ push 被拒（non-fast-forward）后 **ff-only 必失败且 agent 禁自救**（
 | 实例 | 工作检出 | 代码来源 | 执行引擎 | 推送到哪 |
 | --- | --- | --- | --- | --- |
 | TriMLC（本地 CC+董事会） | D:\Code\ai\TriMetaverse（dev 主仓） | sg-bare 回流 | claude code 宿主 | dev 双推（sg-bare+GitHub） |
+| TriMLC-Channel（本地通道 daemon，LG-020） | D:\Code\ai\trimlc-channel（独立 CWD，:8713 loopback） | 同 TriLC 仓 dev（channel profile） | 常驻+心跳外拨+收件箱+cron（**无 agent 宿主能力**，TRILC_CHANNEL_MODE=1）；CC 交互与中枢会话=客户端 | —（通道态不产出分支） |
 | TriRLC（本地 daemon） | **无 TriMetaverse 检出**（CWD=C:\Users\jedih，TriLC 自身仓运行；懒建 clone 触发前不挂任何工作面） | — | agent-core 循环（现势零派工） | —（触发后：clone 内 push origin dev） |
 | TriMMC（sg-server） | /srv/fleet/TriMetaverse | sg-bare 自动追 | claude code headless | sg-bare HEAD:dev |
 | TriRMC（heyuan） | /srv/fleet/TriMetaverse | sg-bare（手工+任务内 ff-only 拉取） | 调度面+rmc_tick 派工 | sg-bare HEAD:dev |
