@@ -42,3 +42,8 @@
   - c86ede03 chore: 冒烟触发——LG-018 镜像 hook v2 修正验证（空提交触发 post-receive 镜像段）
   - e140fa38 docs(protocol): 协作协议 v2.0 单 dev 模型重构（LG-019 立法树 LR-1）——双分支退役 project/trimetaverse 转历史锚/R 面产出合同对齐 push origin dev（E3 矛盾法条废止）/懒建 clone 触发器与参数/§八分叉即升级 M 面（B1）/§九清单重立基线+daemon cwd 实测留痕（CPO 盲区闭环=CWD 从未指向 WorkTree 退役零影响）；树 lg019-retirement-v2 立项+拓扑正身 6* 退役回填（LR-2 worktree remove+registry claim 清已完成，worktree list 单仓验证）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 bc5192b3 后新增 3 条 commit：
+  - dca0080d chore: LG-018 镜像 smoke v4——env 双横线修正验证（env: -- No such file 实诊→MAS 数组修）
+  - b5e5af0e chore: LG-018 镜像 smoke v3——MAS 身份分派验证（root push→fleet HOME 通道）
+  - a5d0418a chore: LG-018 镜像 smoke——deploy key 通道验证（sg github-mirror SSH 别名）
+- registry：v2.1；今日 registry 提交无变化
