@@ -76,3 +76,7 @@
 - 巡检兜底补写 @03:00 +08：自上次进度提交 e06d6af0 后新增 1 条 commit：
   - 7ba9a652 docs(fade-007): SOP 步 2 表第 4 源勘误照批落地——原引 fade-protocol-spec.md/fade-registry.md 无实盘，替代三件（fade-pipeline-design/fade-007-incident-sop/fade-007-context-reservoir-spec）行内注记+r5 重建实证锚；元信息 lastSyncedAt 2026-09-01 勘误行，与 spec §七 02:5x 行同案同口径（董事会批件）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @07:50 +08：自上次进度提交 78c56f04 后新增 2 条 commit：
+  - 4a8643b1 merge: 归账——并入 sg 线巡检增量（CLAUDE.md TriMMC 双名并书同批）
+  - ad392e9d docs(layout): CLAUDE.md 模块布局 TriMC→TriMMC 双名并书——代码面仓名对齐（GitHub/sg-bare 已于 repo 级迁移三阶段改名）；部署面 /srv/fleet/TriMC 照命名对齐决议 C 档物理冻结；本机工作区目录改名候 IDE 锁释放 @MoRen
+- registry：v2.1；今日 registry 提交无变化
