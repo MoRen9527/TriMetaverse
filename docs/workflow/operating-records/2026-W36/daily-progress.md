@@ -48,3 +48,4 @@
   - b5e5af0e chore: LG-018 镜像 smoke v3——MAS 身份分派验证（root push→fleet HOME 通道）
   - a5d0418a chore: LG-018 镜像 smoke——deploy key 通道验证（sg github-mirror SSH 别名）
 - registry：v2.1；今日 registry 提交无变化
+- LG-018 镜像验证收尾链完成+引擎调度疑点登记：reconcile 手动跑平（last=ok）；**引擎今日 09:07 槽跳过未触发**（nextRun 排 09-01 09:07——每日型 cron+tz 调度行为存疑，判定点=09-01 09:07 是否触发，挂 LG-018 观察项；镜像已通使对账兜底需求降级非阻塞）；**镜像自然流量验证 ✓**（12:00 sg watcher push 91f485f0→hook 自动镜像推平，无人工干预全链）；归账 sg 线间隔增量（3b66211c）。
