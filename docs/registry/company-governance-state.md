@@ -6,7 +6,7 @@
 - publishedFrom: 当前文件（source）
 - syncMode: source-only
 - publishTier: source-only
-- lastSyncedAt: 2026-08-22
+- lastSyncedAt: 2026-09-01（通信名址与命名宪法指针节+CTO 交付规则分派枢纽行新立）
 
 ## Registry 职责
 
@@ -173,6 +173,7 @@
 - TestEngineer 职责：在 CTO 定义的工程门禁内执行测试验证，决策权限限于测试用例设计和测试报告格式；质量门禁判定、阻塞性缺陷或发布 readiness 判定必须升级至 CTO。
 - 该流水线适用于吸收管道（Phase 0–C 及后续阶段）的代码交付；IPD 管道的交付规则由 IPD case 独立定义。
 - 规则维护：CTO（技术交付 owner），变更需 CEO 或 CAO 确认。
+- 分派枢纽（2026-09-01 起，D-15 立法）：开发与测试分派枢纽=CTO——FD 承接开发、ST 承接测试，一律从 CTO 手里派，不接受越手直派；必要功能和模块=CPO+CTO 双席联审门（单席不得自决）。真源：`TriCompany/docs/workflow/engineering-disciplines.md` D-15。
 
 ## 来源
 
@@ -181,3 +182,27 @@
 - `../../../TriMetaverse/docs/workflow/operating-records/README.md`
 - `../../../TriMetaverse/docs/三元宇宙架构与模块说明.md`
 - `../../source-agents/registries/CompanyGovernanceRegistry.agent.md`
+
+## 模块命名权威对照表（quad-migration alias 真源）
+
+- 生效：2026-08-24，CEO 四模块迁移指令（quad-migration-spec v1.0 §三.2 授权本表为唯一真源）
+- **命名对齐决议（2026-08-31，CEO 终态裁决·单 B）**：采 **C 档双名并书+物理冻结**——叙事名（TriMMC/TriRMC/TriMLC/TriRLC）=文档与 registry 正名；物理目录（/srv/fleet/TriMC、/srv/fleet/TriRMC）及全部 systemd units **永久冻结不改**（「物理旧名照用」自 quad-migration v1.0 的过渡兼容**升格为终态冻结**，正名权归叙事面）；对旧决策的取代关系与理由（刚稳态的同步链回归风险>改名收益，勘验六面+A/B/C 分档=naming-alignment-survey-20260831.md）入册留痕。B 档项（cron payload/hook 内嵌路径）仅在自然编辑窗顺手对齐，不排停机窗。
+- 规则：各文档只许引用本表（标注 as-of 版本），禁自由复述副本；操作命令语境（ssh/bash/systemctl/git）只允许兼容面旧名原样出现；大写连写=叙事名，小写标识符=兼容面旧名
+
+| 叙事名 | 读法·口播 | 一句话角色锚 | 兼容面载体（冻结至物理迁移窗） |
+| --- | --- | --- | --- |
+| TriMMC | Tri-双M-C | 元虚拟教练系统的服务端（驱动成熟宿主 claude code 的壳） | systemd trimc.service、TRIMC_CONFIG_DIR=/var/lib/trimc、/srv/fleet/TriMC、/srv/git/TriMC.git 及全体 remotes、healthz 8710 |
+| TriMLC | Tri-M-L-C（4 音节，勿混 TriModel=Tri-Model 2 音节） | 元虚拟教练系统的本地腿（承载本地研发仓宿主；FADE 灌人+成果落盘） | D:/Code/ai/TriMLC（新仓即新名） |
+| TriRMC | Tri-R-M-C | 元现实落地队的服务端（自持生产面，与 TriRLC 共用 agent-core） | D:/Code/ai/TriRMC；未来部署面 trirmc.service/:8712 物理名一次定终身 |
+| TriRLC | Tri-R-L-C | 元现实落地队的本地控制器（原 TriLC daemon） | D:/Code/ai/TriLC 目录名、trilc bin/npm 名 |
+
+- 维护 owner：CAO（本表）；变更须 CEO 或 quad-migration-spec 升版联动
+
+## 通信名址与命名宪法（席位正名指针节，2026-09-01）
+
+- 生效：2026-09-01，CEO 裁定（命名宪法全文）；同日 COS→CAO 治理路由移交（今后工程纪律/文档治理/公司治理/项目治理内容归 CAO 写入治理真源）。
+- 正名原则=职位代号；别名=中文名/职位全称/英文名，可空缺候补。
+- 14 席正名别名全表真源：`TriCompany/docs/workflow/engineering-disciplines.md` D-13（BOD/COS/CPO/CTO/CHO/CAO/COO/CFO/CMO/CSO/FD/ST/RDT/DE）；本节只留原则与指针，禁自由复述副本。
+- spawn 面 frontmatter name 一律不改（正名属通信面/常驻会话面）；FD/ST/RDT/DE ↔ spawn 型 FullStackDeveloper/TestEngineer/RAndDTrainer/DeploymentEngineer 四映射随 D-13。
+- 通信纪律配套：发件前 ListAgents 对名址+双向纪律（呈报方核通道/转呈方核结论），随 D-13。
+- 待办注记：各员真源 description 批量补别名关键词=CHO 域同批（LG-024 fast-follow 同窗）。
