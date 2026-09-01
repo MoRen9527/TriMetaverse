@@ -6,7 +6,7 @@
   "priority": "high",
   "ownerRole": "ChiefHumanResourcesOfficer",
   "createdAt": "2026-09-01T06:41:03Z",
-  "updatedAt": "2026-09-01T16:11:50Z",
+  "updatedAt": "2026-09-01T16:22:24Z",
   "summary": "LG-023 bootstrap 统一化：中枢启动件融入 TriCompany source-agents ceo-chief-of-staff 真源并经 FADE 发布三面（copilot/claude spawn/claude session）。现态：S0 过目通过，S2 源侧修订四件落地，S3 验证三读数绿，S4 CHO 验收 10/10 PASS 源侧段 accepted；S5-S8 主窗提前开干（CEO 裁决前置全绿即启）七项全过毕；live 六点链路 CHO 终验 countersign accepted（2026-09-01T15:57Z，CHO 独立会话三重读数核验，residual 四条不阻塞）。",
   "relatedModules": ["TriCompany", "TriMetaverse"],
   "evidence": [
@@ -48,18 +48,8 @@
   ],
   "nextActions": [
     {
-      "owner": "CTO 域（小狄）/组长",
-      "action": "residual R1 一句话定性：fd8db82 提交信息及日志称 governance 加 sessionFaceRule，字面键经 git -S 与全文本 grep 于两仓历史零存在——定性为信息键另案落地（HOST_RENDER_REGISTRY 代码承载）或提交信息笔误，并把 session face rule 真源指针（代码常量）补一行进 publish manifest governance 节或 host-object-publish-flow 防后人扑空",
-      "dueAt": "2026-09-08T15:00:00Z"
-    },
-    {
-      "owner": "COS（组长）",
-      "action": "residual R2 一行对齐：bootstrap-小贾.md 降级应急件（09-01 23:35 重写版）名址行=「小贾」且示例命令 -n 小贾，晚于 21:3x 正名 COS 裁定——顺手对齐正名或候 M-001 ⑥别名表批；非身份真源不阻塞",
-      "dueAt": "2026-09-05T15:00:00Z"
-    },
-    {
       "owner": "CHO",
-      "action": "LG-025 接件对表（M0 09-05/08）：13 席五件套滚动批验收域接件（模板=本案全链 validator+CHO 状态机+对拍）+首刀 CPO colleagues 错别字「CEO 磨人→本人」+W34 审计 §3.1 漏记 9 目录勘误主笔（勘误件交 CAO 独家入册防双写）",
+      "action": "LG-025 接件对表（M0 09-05/08）：13 席五件套滚动批验收域接件（模板=本案全链 validator+CHO 状态机+对拍）+首刀 CPO colleagues 错别字「CEO 磨人→本人」+W34 审计 §3.1 漏记 9 目录勘误主笔（勘误件交 CAO 独家入册防双写）；CPO 五项发现报告候调卷",
       "dueAt": "2026-09-08T15:00:00Z"
     }
   ],
@@ -119,7 +109,7 @@
       "发布时点裁值=主窗 2026-09-04（周五）13:00-18:00 北京；备窗 09-05 10:00-14:00；硬闸 09-05 23:00；前置闸=S5-S7 完成+derived 对拍绿",
       "候改清单六条见 CHO 验收记录 §七（均不阻塞）：contract 腐点三项/前置核查 5 收敛为 chief-of-staff-rd-orchestration+host-object-publish-flow/双入口同源引用巡检化/latestActiveWeek 主从/name 双名并存既裁/S3 代跑读数由 S6 对拍独立复验",
       "评估与决策链：评估报告 docs/execution/lg-023-bootstrap-unification-evaluation.md（d95ea868）；金丝雀 Q2 定谳证据 .fade/hub/analysis/bootstrap-unification/evidence-q2-*.txt",
-      "live 终验 residual：R1 sessionFaceRule 字面键两仓历史零存在（git -S 零命中，fd8db82 实 diff 仅 sessionBody+门逻辑）=提交信息/日志措辞 vs 实盘偏差，功能由 HOST_RENDER_REGISTRY 代码承载全绿，候 CTO/组长定性；R2 bootstrap-小贾.md 名址行/示例命令未随正名 COS（23:35 重写晚于 21:3x 裁定），候组长一行对齐；R3 escalations 两项维持开放；R4 残句裁定=留（BOD 裁：勘误注框架与历史冻结同构）",
+      "live 终验 residual 收口（2026-09-01T16:22Z，CHO 复核核销）：R1 已定性+实补=信息键——根因 fd8db82 governance 插入系静默 no-op（str.replace 无命中不报错+success 打印无断言，措辞经提交信息/日志/代录件三传；COS 领受），git -S 零命中坐实；TriCompany 781a2de 行级拼接实补 governance.sessionFaceRule（含 HOST_RENDER_REGISTRY+CLAUDE_SESSION_DERIVED_MARKER 真源指针句）+写前 json 门+写后 count/json 双硬验证，教训「静默 no-op 三重防」终录；CHO 复核=新 HEAD 223/223 OK 29.6s+键文实读。R2 已对齐=降级件全改写（头部应急覆盖件声明+标准启动件表述更正+名址正名 COS 别名表引 D-13+应急命令改 -n COS 指本件〔无 frontmatter 金丝雀实证背书〕+自指段删），CHO 实读核销。R3 escalations 两项维持开放（spawn name 候 Governance 裁/contract 腐点三项候下一批）；R4 残句裁定=留（BOD 裁：勘误注框架与历史冻结同构）",
       "终验读数三重覆盖：组长代跑+BOD 本机亲验+CHO 独立会话重测（223/223 OK 30.7s+dry-run pass errors=0+六点实物逐环核验+证据回读）",
       "终态命令生效=claude -n COS --append-system-prompt-file D:\\Code\\ai\\TriMetaverse\\.claude\\hub\\ceo-chief-of-staff.session.md（正名 COS 后终态；bootstrap-小贾.md 为应急降级通道，仅候爆溃/管线不可用）"
     ]
