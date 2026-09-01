@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/fade-007-incident-sop.md
 - syncMode: source-only
-- lastSyncedAt: 2026-09-01（勘误：步 2 表第 4 源替代——原引 fade-protocol-spec.md/fade-registry.md 无实盘，董事会批件照批，与 fade-007 spec §七 02:5x 行同案同口径）
+- lastSyncedAt: 2026-09-01（首勘误 02:5x：步 2 表第 4 源「替代」原引二件——**同日二次勘误 15:2x 正名**：fade-protocol-spec.md/fade-registry.md 实盘在 `TriCompany/docs/engineering/`，恢复原引用有效性，三件 fade-007 改定位运行 SOP 伴读件；与 spec §七 二次勘误行同案同口径）
 - 性质：FADE-007 兼容档配套 SOP（纯文档立法件，非代码）；母法=`fade-007-context-reservoir-spec.md` §五（双重故障恢复配方）/§五-S3（故障场景枚举）
 - 成文动因：2026-08-30 晨 xiaojia-hub-r2 **真实爆溃**（上下文耗尽不可恢复）——临场处置实战全链走通后固化；细则 10 口径自证：本 SOP 各步均有实测背书（E-2 演练 2026-08-28 + 实战 2026-08-30），非纸面法
 
@@ -37,7 +37,7 @@
 | 1 | `CLAUDE.md` 分权制节 | 自动加载 | 角色/白名单/判据口诀在场 |
 | 2 | `.fade/hub-snapshots/board-journal.md` + `ledger-mirror.md` | 全读 | 台账现役/销账/元项清单可复述 |
 | 3 | `.fade/hub-snapshots/full-*.md` 最近基线 | 全读 | 八节结构作工作记忆模板 |
-| 4 | `docs/execution/2026-08-26/fade-pipeline-design.md`（FADE 管线正身）+ `docs/execution/fade-007-incident-sop.md`（本件）+ `docs/execution/fade-007-context-reservoir-spec.md`（配方正身） | 全读 | 协议/管线/SOP/配方口径对齐（~~原引 `fade-protocol-spec.md`+`fade-registry.md`~~ 2026-09-01 勘误替代：无实盘，r5 重建实证有效） |
+| 4 | 协议正身 `TriCompany/docs/engineering/fade-protocol-spec.md` + 登记册 `TriCompany/docs/engineering/fade-registry.md`（TriMetaverse 语境前缀 `../TriCompany/`）+ `docs/execution/fade-pipeline-design.md`（管线伴读）+ `docs/execution/fade-007-incident-sop.md`（本件）+ `docs/execution/fade-007-context-reservoir-spec.md`（配方/蓄水池伴读） | 全读 | 协议/管线/SOP/配方口径对齐（2026-09-01 **二次勘误恢复原引二件**——首勘误「无实盘」系跨仓根审计集体误判；三件 fade-007 定位运行 SOP 伴读件） |
 | 5 | 董事会转录 jsonl 挖矿（`.claude/projects/`） | 按需挖 | 中枢交付物全文留存，/clear 不删盘 |
 | 6 | 周平面每日进度 `operating-records/<周>/daily-progress.md` | 读当周节 | 仓库级粗粒度兜底（FADE-001 扩维第六源） |
 

@@ -4,6 +4,7 @@
 > 令源：董事会 2026-09-01 12:2x 令（CEO 原案转录）；分析组：小乔(CPO)内容面+小狄(CTO)工程/治理面，组长合成=小贾
 > 边界：评估件候裁，不动真源不发布——TriCompany source-agents 与 .claude/agents/ 全程只读，发布管线未运行
 > 组员全文：`.fade/hub/analysis/bootstrap-unification/xiaoqiao-content.md`（110 行）/ `xiaodi-engineering.md`（含 Q2 实测补录）；金丝雀证据 evidence-q2-canary.txt / evidence-q2-control.txt（同目录）
+> **〔2026-09-01 二次勘误指针〕**：本报告 Q1/§二等处「fade-protocol-spec.md/fade-registry.md 无实盘/幽灵引用」表述**前提有误**——二件实盘在 `TriCompany/docs/engineering/`（原引用系 TriCompany 仓根相对路径，历代审计从 TriMetaverse 根扫起集体误判），原引用恢复有效、三件 fade-007 改定位运行 SOP 伴读件。见 fade-007 spec §七 15:2x 二次勘误行+SOP 元信息二次勘误行。本报告历史记录冻结不改，仅加此指针（董事会二次勘误令 e 项）。
 
 ## 一、结论摘要
 
