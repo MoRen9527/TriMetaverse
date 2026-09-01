@@ -23,11 +23,11 @@ Concrete employee consumption records belong in employee wiki pages such as `wik
 
 ## Source Refs
 
-- TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.agent.md
-- TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.soul.md
-- TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.memory.md
-- TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.colleagues.md
-- TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.social.md
+- TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.agent.md
+- TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.soul.md
+- TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.memory.md
+- TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.colleagues.md
+- TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.social.md
 - TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
 - TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md
 - TriCompany/docs/engineering/role-employee-knowledge-workspace.md

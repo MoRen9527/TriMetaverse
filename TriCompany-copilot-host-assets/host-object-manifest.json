@@ -168,87 +168,6 @@
       "employeeDisplayName": "小狄"
     },
     {
-      "objectSetId": "ceo-chief-of-staff-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "CEOChiefOfStaff",
-      "generatedAt": "2026-04-29T00:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee ceo-chief-of-staff",
-      "sourceRefs": [
-        "TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.agent.md",
-        "TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.soul.md",
-        "TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.memory.md",
-        "TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.colleagues.md",
-        "TriCompany/.github/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.social.md",
-        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
-        "TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/ceo-chief-of-staff.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "ceo-chief-of-staff",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/ceo-chief-of-staff",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "ceo-chief-of-staff",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "legacy-chief-of-staff-knowledge-object-set",
-          "path": "TriCompany-copilot-host-assets/knowledge/chief-of-staff",
-          "tracking": "tracked",
-          "compatibilityStatus": "deprecated-legacy-path"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/ceo-chief-of-staff",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "live-entry-existing-not-changed",
-      "notes": [
-        "The existing TriMetaverse/.github ceo-chief-of-staff live entry is the active live agent; no second live agent file is published for this migration.",
-        "This object set binds that live entry to the role/employee workspace model without changing the live .github entry identity.",
-        "The legacy knowledge/chief-of-staff object set is deprecated as a compatibility path and remains retained until post-deprecation validation passes.",
-        "The existing .tricompany-cognition/employee/ceo-chief-of-staff.md file remains runtime-state, not support payload source truth.",
-        "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
-      ]
-    },
-    {
       "objectSetId": "chief-human-resources-officer-knowledge-workspace-v0.1",
       "status": "generated-staging",
       "ownerRole": "ChiefHumanResourcesOfficer",
@@ -856,6 +775,83 @@
         "Binding profile status is 'generated-staging' pending CTO activation after manifest registration."
       ],
       "employeeDisplayName": "小全"
+    },
+    {
+      "objectSetId": "ceo-chief-of-staff-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "CEOChiefOfStaff",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee ceo-chief-of-staff",
+      "sourceRefs": [
+        "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.agent.md",
+        "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.soul.md",
+        "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.memory.md",
+        "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.colleagues.md",
+        "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.social.md",
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/ceo-chief-of-staff.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "ceo-chief-of-staff",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/ceo-chief-of-staff",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "ceo-chief-of-staff",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/ceo-chief-of-staff",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "live-entry-existing-not-changed",
+      "notes": [
+        "The existing TriMetaverse/.github ceo-chief-of-staff live entry is the active live agent; no second live agent file is published for this migration.",
+        "This object set binds that live entry to the role/employee workspace model without changing the live .github entry identity.",
+        "The retired knowledge/chief-of-staff compatibility path is no longer published; the current support payload lives only under the ceo-chief-of-staff role/employee workspaces.",
+        "The existing .tricompany-cognition/employee/ceo-chief-of-staff.md file remains runtime-state, not support payload source truth.",
+        "Standard xiaojia-hub session launch: claude -n 小贾 --append-system-prompt-file D:\\Code\\ai\\TriMetaverse\\.claude\\hub\\ceo-chief-of-staff.session.md (claude-session host face; payload rendered by the unified publish pipeline from source TriCompany/source-agents/ceo-chief-of-staff/session-body.agent.md).",
+        "This session launch command supersedes the earlier plan of pointing --append-system-prompt-file at TriMetaverse/.claude/agents/ceo-chief-of-staff.md: canary evidence (TriMetaverse/.fade/hub/analysis/bootstrap-unification/evidence-q2-canary.txt + evidence-q2-control.txt, decision D25 2026-09-01) showed that flag injects frontmatter verbatim and spawn-limited tools conflict with session tool needs.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ]
     }
   ]
 }
