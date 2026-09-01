@@ -25,7 +25,7 @@ function Ok   { Write-Host "  OK" -ForegroundColor Green }
 # ── Paths (sibling repos) ──
 
 $TriCodePath  = Join-Path $RootDir "..\TriCode"
-$TriLCPath    = Join-Path $RootDir "..\TriLC"
+$TriRLCPath    = Join-Path $RootDir "..\TriRLC"
 $TriPilotPath = Join-Path $RootDir "..\TriPilot"
 $OutputFull   = Join-Path $RootDir $OutputDir
 $StagingDir   = Join-Path $OutputFull "TriMetaverse-Desktop-$Version-$Platform"
@@ -41,10 +41,10 @@ try {
     Ok
 } finally { Pop-Location }
 
-# ── 2. Build TriLC ──
+# ── 2. Build TriRLC ──
 
-Step "Building TriLC"
-Push-Location $TriLCPath
+Step "Building TriRLC"
+Push-Location $TriRLCPath
 try {
     & npm install --silent 2>&1 | Out-Null
     & npx tsc -p tsconfig.json --outDir dist
@@ -86,12 +86,12 @@ New-Item -ItemType Directory -Force -Path $StagingDir\config      | Out-Null
 New-Item -ItemType Directory -Force -Path $StagingDir\scripts     | Out-Null
 Ok
 
-# ── 6. Assemble TriLC ──
+# ── 6. Assemble TriRLC ──
 
-Step "Assembling TriLC → staging/trilc/"
-Copy-Item -Recurse -Force $TriLCPath\dist         $StagingDir\trilc\
-Copy-Item -Recurse -Force $TriLCPath\node_modules $StagingDir\trilc\ -ErrorAction SilentlyContinue
-Copy-Item -Force       $TriLCPath\package.json    $StagingDir\trilc\
+Step "Assembling TriRLC → staging/trirlc/"
+Copy-Item -Recurse -Force $TriRLCPath\dist         $StagingDir\trirlc\
+Copy-Item -Recurse -Force $TriRLCPath\node_modules $StagingDir\trirlc\ -ErrorAction SilentlyContinue
+Copy-Item -Force       $TriRLCPath\package.json    $StagingDir\trirlc\
 # version.json 随构建版本更新（BUG-20260805-002 修复）：从 -Version 参数提取数字版本
 # 用 WriteAllText + UTF8 无 BOM（PowerShell 5.1 Set-Content -Encoding UTF8 带 BOM，
 # JSON.parse 会失败 → resolveVersion fallback 掩盖真实版本）
@@ -110,7 +110,7 @@ Ok
 # Installed-state fallback: dist/config/env.js → ../../contracts = <trilc-root>\contracts
 # Copy TriCompany source-agents (v2 contracts + five-piece files) + employee-roster.
 
-Step "Copying TriCompany contracts → staging/trilc/contracts/"
+Step "Copying TriCompany contracts → staging/trirlc/contracts/"
 $TriCompanyPath = Join-Path $RootDir "..\TriCompany"
 $ContractsDest = Join-Path $StagingDir "trilc\contracts"
 Copy-Item -Recurse -Force (Join-Path $TriCompanyPath "source-agents") $ContractsDest
@@ -213,7 +213,7 @@ if exist "D:\Code\ai\TriMetaverse\docs\workflow\operating-records" (
     setx TRILC_WEEKLY_PLANE_ROOT "C:\Code\ai\TriMetaverse\docs\workflow\operating-records" >nul
     echo   [OK] injected: C:\Code\ai\TriMetaverse\docs\workflow\operating-records
 ) else (
-    echo   [SKIP] company weekly plane checkout not detected - TriLC falls back to project-track view
+    echo   [SKIP] company weekly plane checkout not detected - TriRLC falls back to project-track view
 )
 
 :: Done

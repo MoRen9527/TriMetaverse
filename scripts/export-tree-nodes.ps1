@@ -2,18 +2,18 @@
 # ============================================================================
 # TWF-001 A.4 constraint 4: SQLite session DB does not survive sessions;
 # tree_nodes must be persisted to git repo as JSON.
-# TWF-001 B.4.2: TriMC syncs same JSON format on every state change.
+# TWF-001 B.4.2: TriMMC syncs same JSON format on every state change.
 #
 # Usage:
 #   Copilot CLI (manual):  After each tree change, export via SQL tool -> JSON
-#   TriMC (auto):          API layer triggers on node state change
+#   TriMMC (auto):          API layer triggers on node state change
 #   Validate mode:         .\export-tree-nodes.ps1 -Validate
 #
 # Exit codes: 0=OK, 1=format error, 2=data inconsistency
 
 param(
     [switch]$Validate,          # Validate existing JSON only, no export
-    [string]$DbPath,           # SQLite DB path (TriMC auto mode)
+    [string]$DbPath,           # SQLite DB path (TriMMC auto mode)
     [string]$OutputPath = "docs/workflow/tree-nodes-export.json"
 )
 
@@ -77,7 +77,7 @@ if ($Validate) {
 }
 
 # ============================================================================
-# Export Mode (TriMC auto / SQLite direct read)
+# Export Mode (TriMMC auto / SQLite direct read)
 # ============================================================================
 if ($DbPath) {
     if (-not (Test-Path $DbPath)) {
@@ -87,7 +87,7 @@ if ($DbPath) {
 
     $sqliteExe = Get-Command sqlite3 -ErrorAction SilentlyContinue
     if (-not $sqliteExe) {
-        Write-Host "[EXPORT] sqlite3 CLI not found. Install it or use TriMC API to trigger export." -ForegroundColor Yellow
+        Write-Host "[EXPORT] sqlite3 CLI not found. Install it or use TriMMC API to trigger export." -ForegroundColor Yellow
         Write-Host "[EXPORT] In Copilot CLI env, export via SQL tool by CEOChiefOfStaff." -ForegroundColor Yellow
         exit 1
     }

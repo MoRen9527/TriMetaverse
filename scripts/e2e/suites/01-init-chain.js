@@ -116,7 +116,7 @@ async function main() {
   // 前置自备 reset（首轮教训：selfcheck/run 有链态门——仅 selfcheck 态受理，其他态 404）
   try { await daemon.reset(false); console.log('[前置] 已 reset → selfcheck 态'); await new Promise(r => setTimeout(r, 1500)); } catch (e) { console.log('[前置] reset 失败（容忍，可能已在 selfcheck）'); }
   console.log('[01-init-chain] 开始执行 E 域初始化链测试');
-  console.log(`[01-init-chain] TriLC: ${TRILC}`);
+  console.log(`[01-init-chain] TriRLC: ${TRILC}`);
 
   // 前置：daemon 健康检查
   const healthRes = await daemon.healthz();

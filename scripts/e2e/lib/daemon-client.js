@@ -1,4 +1,4 @@
-// ── E2E lib: TriLC/TriMC 端点封装 + 断言 + 测试集回写 ──
+// ── E2E lib: TriRLC/TriMMC 端点封装 + 断言 + 测试集回写 ──
 // 用法：suites/*.js require 本模块；runCase(id, fn) 执行断言并回写 e2e-test-suite.json 的 status
 // 纪律（D-01）：suite 文件每完成一个立即保存；跑批结果由 runner 统一回写 JSON
 

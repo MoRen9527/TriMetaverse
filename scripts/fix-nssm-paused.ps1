@@ -2,7 +2,7 @@
 # 修复 nssm PAUSED 状态：trilc daemon 初始化需 ~3s，nssm 默认 AppThrottle 1.5s 太短
 # 用法：管理员 PowerShell 运行
 $NSSM = "D:\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
-$NAME = "TriLC"
+$NAME = "TriRLC"
 
 Write-Host "=== 修复 nssm PAUSED（trilc daemon 初始化慢）===" -ForegroundColor Cyan
 
@@ -27,7 +27,7 @@ Write-Host "  AppExit: Restart"
 
 # 确认 8.3 路径（之前手动设过，这里 double-check）
 & $NSSM set $NAME Application "C:\PROGRA~1\nodejs\node.exe"
-& $NSSM set $NAME AppParameters "\"C:\PROGRA~1\TriCade\RESOUR~1\app\tools\trilc\dist\cli.js\" run"
+& $NSSM set $NAME AppParameters "\"C:\PROGRA~1\TriCade\RESOUR~1\app\tools\trirlc\dist\cli.js\" run"
 Write-Host "  Application + AppParameters: 8.3 路径确认"
 
 # 3. 清旧日志 + 启动

@@ -112,7 +112,7 @@ async function verifyResetParameters() {
 // ── 主函数 ──
 async function main() {
   console.log('[02-reset] 开始执行 E 域 reset 三形态测试');
-  console.log(`[02-reset] TriLC: ${TRILC}`);
+  console.log(`[02-reset] TriRLC: ${TRILC}`);
 
   // 前置：daemon 健康检查
   const healthRes = await daemon.healthz();

@@ -1,6 +1,6 @@
 ﻿# verify-trilc-service-s0.ps1
 # S0 技术验证：用 INSTALL_TRILC_SERVICE=1 重装 TriCade Bundle 0.2.8，
-# 验证 TriLC Windows Service 注册、运行时、崩溃恢复。
+# 验证 TriRLC Windows Service 注册、运行时、崩溃恢复。
 #
 # 必须以管理员身份运行（右键 PowerShell -> 以管理员身份运行）。
 # 脚本会：卸载现有 0.2.8 -> 全新安装传 INSTALL_TRILC_SERVICE=1 -> 逐项验证。
@@ -21,12 +21,12 @@ param(
 $ErrorActionPreference = "Continue"
 
 # ── 常量 ──
-$ServiceName  = "TriLC"
+$ServiceName  = "TriRLC"
 $ExpectedPort = 8711
 $MSI          = "D:\Code\ai\vscodium\build\windows\msi\releasedir\TriCade-Bundle-x64-0.2.8.msi"
 $Stamp        = Get-Date -Format "yyyyMMdd-HHmmss"
 $LogFile      = "$env:TEMP\verify-trilc-s0-$Stamp.log"
-$SysDataDir   = "$env:windir\System32\config\systemprofile\AppData\Local\trilc"
+$SysDataDir   = "$env:windir\System32\config\systemprofile\AppData\Local\trirlc"
 
 $Results = [System.Collections.ArrayList]::new()
 
@@ -47,7 +47,7 @@ function Record {
 
 # ── Phase 0: 预检（硬性前置，失败即退出）──
 Log "==============================================" "Cyan"
-Log " S0 TriLC 服务化验证  $Stamp" "Cyan"
+Log " S0 TriRLC 服务化验证  $Stamp" "Cyan"
 Log "==============================================" "Cyan"
 Log "[Phase 0] 预检..." "Yellow"
 

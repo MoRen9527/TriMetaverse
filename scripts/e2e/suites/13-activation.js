@@ -229,7 +229,7 @@ async function RL_NEW_002() {
   const id = 'RL-NEW-002';
   try {
     // init-chain.json 原子性：写入后读回一致 + 无 tmp 残留
-    const chainPath = 'C:/Users/jedih/AppData/Local/TriLC/company/init-chain.json';
+    const chainPath = 'C:/Users/jedih/AppData/Local/TriRLC/company/init-chain.json';
     const data = JSON.parse(fs.readFileSync(chainPath, 'utf8'));
     assert(data.chainState, id + ': chainState readable');
     assert(data.eventSeq >= 0, id + ': eventSeq valid');
@@ -245,7 +245,7 @@ async function RL_NEW_003() {
   const id = 'RL-NEW-003';
   try {
     // sessions.db 存在且可读
-    const dbPath = 'C:/Users/jedih/AppData/Local/TriLC/sessions.db';
+    const dbPath = 'C:/Users/jedih/AppData/Local/TriRLC/sessions.db';
     assert(fs.existsSync(dbPath), id + ': sessions.db exists');
     const size = fs.statSync(dbPath).size;
     assert(size > 0, id + ': sessions.db non-empty');
@@ -257,7 +257,7 @@ async function SEC_006() {
   const id = 'SEC-006';
   try {
     // SQL 注入面——验证代码使用参数化查询（SQLite prepareStatement 模式）
-    const sessionStoreCode = fs.readFileSync('C:/Program Files/TriCade/trilc/dist/session-store/store.js', 'utf8');
+    const sessionStoreCode = fs.readFileSync('C:/Program Files/TriCade/trirlc/dist/session-store/store.js', 'utf8');
     const usesPrepare = sessionStoreCode.includes('prepare(') || sessionStoreCode.includes('.run(') || sessionStoreCode.includes('.all(');
     const noConcat = !sessionStoreCode.match(/SELECT.*\+.*\$\{/); // 无 SELECT + ${} 拼接
     record(id, 'pass', `SQLite 参数化=${usesPrepare} 无拼接注入=${noConcat}（代码级检查）`);
@@ -271,7 +271,7 @@ async function CO_003() {
     const h1 = await daemon.healthz(); // 装后态 daemon
     assertEq(h1.status, 200, id + ': 装后态 healthz 200');
     // 源码态：验证源码目录存在
-    assert(fs.existsSync('D:/Code/ai/TriLC/src/server/app.ts'), id + ': 源码目录存在');
+    assert(fs.existsSync('D:/Code/ai/TriRLC/src/server/app.ts'), id + ': 源码目录存在');
     record(id, 'pass', '装后态运行中 + 源码态可编译（双模式兼容）');
   } catch (e) { record(id, 'fail', e.message); }
 }

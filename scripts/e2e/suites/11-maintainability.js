@@ -46,10 +46,10 @@ async function MT_003() {
   try {
     // 检查核心源文件行数（粗粒度——>800 行告警）
     const checks = [
-      { f: 'D:/Code/ai/TriLC/src/server/app.ts', max: 4000 },
-      { f: 'D:/Code/ai/TriLC/src/company/init-assemble.ts', max: 800 },
-      { f: 'D:/Code/ai/TriLC/src/company/init-chain.ts', max: 800 },
-      { f: 'D:/Code/ai/TriLC/src/company/init-selfcheck.ts', max: 800 },
+      { f: 'D:/Code/ai/TriRLC/src/server/app.ts', max: 4000 },
+      { f: 'D:/Code/ai/TriRLC/src/company/init-assemble.ts', max: 800 },
+      { f: 'D:/Code/ai/TriRLC/src/company/init-chain.ts', max: 800 },
+      { f: 'D:/Code/ai/TriRLC/src/company/init-selfcheck.ts', max: 800 },
     ];
     const warnings = [];
     for (const { f, max } of checks) {
@@ -67,7 +67,7 @@ async function MT_004() {
   try {
     // 验证设计文档中定义的端点在代码中全部存在
     const designDoc = 'D:/Code/ai/TriMetaverse/docs/execution/init-to-collab-design.md';
-    const appCode = fs.readFileSync('C:/Program Files/TriCade/trilc/dist/server/app.js', 'utf-8');
+    const appCode = fs.readFileSync('C:/Program Files/TriCade/trirlc/dist/server/app.js', 'utf-8');
     const endpoints = [
       '/internal/v1/init/chain/status',
       '/internal/v1/init/selfcheck/run',
@@ -90,14 +90,14 @@ async function MT_004() {
 async function MT_005() {
   const id = 'MT-005';
   try {
-    const logPath = 'C:/Users/jedih/AppData/Local/TriLC/daemon/daemon.log';
+    const logPath = 'C:/Users/jedih/AppData/Local/TriRLC/daemon/daemon.log';
     assert(fs.existsSync(logPath), id + ': daemon.log exists');
     const log = fs.readFileSync(logPath, 'utf-8');
     // 验证关键日志前缀存在（各子系统有标识）
     const prefixes = ['[trilc]', '[trilc:keys]', '[trilc:init]', '[trilc:cron]', '[trilc:conn]'];
     const missing = prefixes.filter(p => !log.includes(p));
     // 验证无静默吞错（catch 后至少有 console.error 的模式）
-    const initChainSrc = fs.readFileSync('C:/Program Files/TriCade/trilc/dist/company/init-chain.js', 'utf-8');
+    const initChainSrc = fs.readFileSync('C:/Program Files/TriCade/trirlc/dist/company/init-chain.js', 'utf-8');
     const hasCorruptLog = initChainSrc.includes('.corrupt') && initChainSrc.includes('console.error');
     record(id, 'pass', `日志前缀${missing.length === 0 ? '全部' : '缺失:' + missing.join(',')}存在 / .corrupt 备份含 console.error=${hasCorruptLog}`);
   } catch (e) { record(id, 'fail', e.message); }

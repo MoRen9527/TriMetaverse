@@ -8,8 +8,8 @@ $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIden
 if (-not $isAdmin) { Write-Host "[X] 需要管理员权限。右键 -> 以管理员身份运行 PowerShell。" -ForegroundColor Red; pause; exit 1 }
 
 $node = "C:\Program Files\nodejs\node.exe"
-$cli  = "C:\Program Files\TriCade\resources\app\tools\trilc\dist\cli.js"
-$name = "TriLC"
+$cli  = "C:\Program Files\TriCade\resources\app\tools\trirlc\dist\cli.js"
+$name = "TriRLC"
 
 if (-not (Test-Path $node)) { Write-Host "[X] node 不在: $node" -ForegroundColor Red; pause; exit 1 }
 if (-not (Test-Path $cli))  { Write-Host "[X] trilc cli.js 不在（0.2.8 没装？）: $cli" -ForegroundColor Red; pause; exit 1 }
@@ -37,7 +37,7 @@ Write-Host "  [OK] 服务创建" -ForegroundColor Green
 
 # ── 2. 配置 failure recovery + description ──
 Write-Host "`n[2/5] 配置 failure recovery..." -ForegroundColor Yellow
-& sc.exe description $name "TriLC - AI-powered local agent daemon" | Out-Null
+& sc.exe description $name "TriRLC - AI-powered local agent daemon" | Out-Null
 & sc.exe failure $name reset= 86400 actions= restart/60000/restart/60000/restart/60000 | Out-Null
 Write-Host "  [OK] 崩溃 60s 自动重启 x3" -ForegroundColor Green
 
@@ -99,6 +99,6 @@ Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "服务 $name 当前状态:"
 & sc.exe query $name
 Write-Host ""
-Write-Host "回滚（删服务）: 管理员跑 sc stop TriLC; sc delete TriLC" -ForegroundColor Cyan
+Write-Host "回滚（删服务）: 管理员跑 sc stop TriRLC; sc delete TriRLC" -ForegroundColor Cyan
 Write-Host "或保留服务试用（开机自启，关 TriCade 不影响）" -ForegroundColor Cyan
 pause

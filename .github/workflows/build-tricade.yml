@@ -1,6 +1,6 @@
 # ── TriCade Production Build Pipeline ──
 # Triggered by version tags (v*), this workflow:
-#   1. Checks out TriRLC + TriPilot + TriCode + TriMC + TriModel (sibling repos)
+#   1. Checks out TriRLC + TriPilot + TriCode + TriMMC + TriModel (sibling repos)
 #   2. npm ci + tsc for each
 #   3. Packages TriPilot .vsix extension
 #   4. Assembles staging directory
@@ -111,7 +111,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository_owner }}/TriMMC
-          path: TriMC
+          path: TriMMC
           ref: ${{ github.ref }}
 
       - name: Checkout TriModel
@@ -138,10 +138,10 @@ jobs:
             TriRLC/package-lock.json
             TriPilot/package-lock.json
             TriCode/package-lock.json
-            TriMC/package-lock.json
+            TriMMC/package-lock.json
             TriModel/package-lock.json
 
-      # ── Build TriModel (no deps; needed by TriMC + TriRLC) ──
+      # ── Build TriModel (no deps; needed by TriMMC + TriRLC) ──
       - name: Build TriModel
         working-directory: TriModel
         run: |
@@ -191,28 +191,28 @@ jobs:
         run: |
           $staging = "staging\TriCade-$env:VERSION-windows"
           New-Item -ItemType Directory -Force -Path "$staging\extensions" | Out-Null
-          New-Item -ItemType Directory -Force -Path "$staging\trilc"      | Out-Null
+          New-Item -ItemType Directory -Force -Path "$staging\trirlc"      | Out-Null
           New-Item -ItemType Directory -Force -Path "$staging\tri-code"   | Out-Null
           New-Item -ItemType Directory -Force -Path "$staging\config"     | Out-Null
           New-Item -ItemType Directory -Force -Path "$staging\scripts"    | Out-Null
 
           # TriRLC
-          Copy-Item -Recurse -Force TriRLC\dist         "$staging\trilc\"
-          Copy-Item -Recurse -Force TriRLC\node_modules  "$staging\trilc\"
-          if (-not (Test-Path "$staging\trilc\node_modules")) {
+          Copy-Item -Recurse -Force TriRLC\dist         "$staging\trirlc\"
+          Copy-Item -Recurse -Force TriRLC\node_modules  "$staging\trirlc\"
+          if (-not (Test-Path "$staging\trirlc\node_modules")) {
             Write-Error "FATAL: TriRLC node_modules copy failed — path does not exist"
             exit 1
           }
-          Copy-Item -Force       TriRLC\package.json     "$staging\trilc\"
+          Copy-Item -Force       TriRLC\package.json     "$staging\trirlc\"
           # version.json 随构建版本更新（BUG-20260805-002 修复）：注入 CI calver
-          @{ version = "$env:VERSION" } | ConvertTo-Json -Compress | Set-Content "$staging\trilc\version.json" -Encoding UTF8
+          @{ version = "$env:VERSION" } | ConvertTo-Json -Compress | Set-Content "$staging\trirlc\version.json" -Encoding UTF8
 
           # Contracts for installed-state (4.2 安装态): <trilc-root>\contracts
           # = TriCompany/source-agents (v2 contracts + five-piece) + employee-roster
-          Copy-Item -Recurse -Force TriCompany\source-agents "$staging\trilc\contracts\"
-          New-Item -ItemType Directory -Force -Path "$staging\trilc\contracts\docs\registry" | Out-Null
-          Copy-Item -Force TriCompany\docs\registry\employee-roster.json "$staging\trilc\contracts\docs\registry\employee-roster.json"
-          if (-not (Test-Path "$staging\trilc\contracts\docs\registry\employee-roster.json")) {
+          Copy-Item -Recurse -Force TriCompany\source-agents "$staging\trirlc\contracts\"
+          New-Item -ItemType Directory -Force -Path "$staging\trirlc\contracts\docs\registry" | Out-Null
+          Copy-Item -Force TriCompany\docs\registry\employee-roster.json "$staging\trirlc\contracts\docs\registry\employee-roster.json"
+          if (-not (Test-Path "$staging\trirlc\contracts\docs\registry\employee-roster.json")) {
             Write-Error "FATAL: contracts/roster copy failed"
             exit 1
           }
@@ -233,8 +233,8 @@ jobs:
           "%NODE_EXE%" "%~dp0dist\cli.js" %*
           endlocal
           "@
-          Set-Content -Path "$staging\trilc\trilc.cmd" -Value $trilcCmd -Encoding ASCII
-          if (-not (Test-Path "$staging\trilc\trilc.cmd")) {
+          Set-Content -Path "$staging\trirlc\trilc.cmd" -Value $trilcCmd -Encoding ASCII
+          if (-not (Test-Path "$staging\trirlc\trilc.cmd")) {
             Write-Error "FATAL: trilc.cmd generation failed"
             exit 1
           }

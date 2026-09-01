@@ -109,7 +109,7 @@ async function US_008() {
 async function US_009() {
   try {
     // README/help 一致性
-    const readme = 'D:/Code/ai/TriLC/README.md';
+    const readme = 'D:/Code/ai/TriRLC/README.md';
     assert(fs.existsSync(readme), 'README exists');
     record('US-009', 'pass', 'README 存在（help 输出=cli.js printHelp 已在 smoke 测试覆盖）');
   } catch (e) { record('US-009', 'pass', '文档框架就绪'); }
@@ -117,9 +117,9 @@ async function US_009() {
 
 // ═══ RL 域 ═══
 async function RL_003_005() {
-  // 同步中断 / TriMC 不可达
+  // 同步中断 / TriMMC 不可达
   record('RL-003', 'pass', '同步中断恢复 = daemon 断点续跑（E2-001 已覆盖 mid-phase 崩溃恢复）');
-  record('RL-005', 'pass', 'TriMC 不可达降级 = sync remote.reachable=false 时容忍（S4-003 已覆盖降级口径）');
+  record('RL-005', 'pass', 'TriMMC 不可达降级 = sync remote.reachable=false 时容忍（S4-003 已覆盖降级口径）');
 }
 async function RL_004_006() {
   // daemon 崩溃 / 半装态
@@ -145,7 +145,7 @@ async function RL_018() {
 }
 async function RL_NEW_001() {
   // daemon 崩溃后 init-chain.json 原子性
-  const chainPath = 'C:/Users/jedih/AppData/Local/TriLC/company/init-chain.json';
+  const chainPath = 'C:/Users/jedih/AppData/Local/TriRLC/company/init-chain.json';
   const data = JSON.parse(fs.readFileSync(chainPath, 'utf8'));
   const dir = path.dirname(chainPath);
   const tmps = fs.readdirSync(dir).filter(f => f.endsWith('.tmp'));
@@ -166,14 +166,14 @@ async function SEC_NEW_001_002() {
     record('SEC-NEW-001', 'pass', 'localhost-only 绑定确认');
   } catch (e) { record('SEC-NEW-001', 'pass', '绑定检查（框架就绪）'); }
   try {
-    const cmdFile = fs.readFileSync('C:/Users/jedih/AppData/Local/TriLC/daemon/trilc-daemon.cmd', 'utf-8');
+    const cmdFile = fs.readFileSync('C:/Users/jedih/AppData/Local/TriRLC/daemon/trirlc-daemon.cmd', 'utf-8');
     const devOn = cmdFile.includes('TRILC_DEBUG=1');
     record('SEC-NEW-002', 'pass', `debug 门禁机制存在（当前开发态 debug=${devOn}——生产无 TRILC_DEBUG 即 403）`);
   } catch (e) { record('SEC-NEW-002', 'pass', 'debug 门禁框架就绪'); }
 }
 async function SEC_NEW_003_005() {
   try {
-    const keysPath = 'C:/Users/jedih/AppData/Local/TriLC/keys.json';
+    const keysPath = 'C:/Users/jedih/AppData/Local/TriRLC/keys.json';
     const content = fs.readFileSync(keysPath);
     const isEnc = !content.toString('utf-8').includes('"api_key"');
     record('SEC-NEW-003', 'pass', `密钥文件 S2 加密=${isEnc} + 个人目录`);
@@ -185,7 +185,7 @@ async function SEC_NEW_003_005() {
     record('SEC-NEW-004', 'pass', `路径逃逸防护（${'../../etc/passwd'} → ${r.status}）`);
   } catch (e) { record('SEC-NEW-004', 'pass', '路径逃逸防护框架就绪'); }
   try {
-    const code = fs.readFileSync('C:/Program Files/TriCade/trilc/dist/session-store/store.js', 'utf-8');
+    const code = fs.readFileSync('C:/Program Files/TriCade/trirlc/dist/session-store/store.js', 'utf-8');
     const parameterized = code.includes('.run(') || code.includes('.all(') || code.includes('.get(');
     record('SEC-NEW-005', 'pass', `SQLite 参数化=${parameterized}`);
   } catch (e) { record('SEC-NEW-005', 'pass', 'SQL 注入面检查（框架就绪）'); }
@@ -208,7 +208,7 @@ async function M_degrade() {
   // US-004 邮件——降级为通知链验证
   try {
     const h = await trimc.healthz();
-    record('US-004', 'pass', `邮件通知链 = TriMC ${h.status === 200 ? 'ok（notify sent 已在 cron 日志验证）' : '不可达（降级容忍）'}`);
+    record('US-004', 'pass', `邮件通知链 = TriMMC ${h.status === 200 ? 'ok（notify sent 已在 cron 日志验证）' : '不可达（降级容忍）'}`);
   } catch (e) { record('US-004', 'pass', '邮件通知链框架就绪（cron 日志已实证 notify sent）'); }
   // US-006 reset 用户引导
   record('US-006', 'pass', 'reset 用户引导 = 面板「重新初始化」按钮+确认对话框（FS-007 已验证功能）——文案人判归 CEO');

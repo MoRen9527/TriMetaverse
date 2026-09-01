@@ -1,5 +1,5 @@
 ﻿# verify-trilc-24h.ps1
-# TriLC Daemon 24h stability verification (w32-2)
+# TriRLC Daemon 24h stability verification (w32-2)
 #
 # Usage (Admin PowerShell):
 #   .\verify-trilc-24h.ps1                     # Full 24h
@@ -33,7 +33,7 @@ function Write-Log {
 }
 
 Write-Log "============================================"
-Write-Log " TriLC Daemon Stability Verification (w32-2)"
+Write-Log " TriRLC Daemon Stability Verification (w32-2)"
 Write-Log "============================================"
 Write-Log " Port:      $Port"
 Write-Log " Duration:  $DurationHours h"

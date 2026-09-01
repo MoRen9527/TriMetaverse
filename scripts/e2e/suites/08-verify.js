@@ -14,7 +14,7 @@ async function V_000() {
     assertEq(h.status, 200, id + ': daemon healthz 200');
     assert((h.json || {}).ok === true, id + ': daemon ok');
     const th = await trimc.healthz();
-    assert(th.status === 200 || th.status === 0, id + ': TriMC 可达或超时容忍');
+    assert(th.status === 200 || th.status === 0, id + ': TriMMC 可达或超时容忍');
     record(id, 'pass', 'daemon ok, trimc ' + (th.status === 200 ? 'ok' : 'unreachable(容忍)'));
   } catch (e) { record(id, 'fail', e.message); }
 }

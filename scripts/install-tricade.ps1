@@ -17,7 +17,7 @@ param(
     [string]$MsiPath,                          # MSI 文件路径（与 ZipPath 二选一）
     [string]$ZipPath,                          # ZIP 文件路径（与 MsiPath 二选一）
     [switch]$InstallService,                   # 安装后注册为 NSSM Windows 服务
-    [string]$ServiceName = "TriLC",            # 服务名称
+    [string]$ServiceName = "TriRLC",            # 服务名称
     [int]$ServicePort = 8711,                  # 服务端口
     [switch]$SkipStop,                         # 跳过停止现有进程
     [switch]$SkipVerify,                       # 跳过安装后验证
@@ -34,7 +34,7 @@ $ScriptVersion = "1.0.0"
 # ── 常量 ──
 # Tool identity install dir (stable across projects — see tricade.wxs INSTALLFOLDER)
 $InstallDir = "C:\Program Files\TriCade"
-$TriLCDir   = "$InstallDir\trilc"
+$TriRLCDir   = "$InstallDir\trirlc"
 $Version    = ""  # 自动从 MSI/ZIP 文件名提取
 
 # ── 工具函数 ──
@@ -92,8 +92,8 @@ function Get-InstalledVersion {
         Select-Object -First 1
     if ($arp -and $arp.DisplayVersion) { return $arp.DisplayVersion }
 
-    # 2. version.json（脚本部署的 TriLC manifest）
-    $verJson = "$TriLCDir\version.json"
+    # 2. version.json（脚本部署的 TriRLC manifest）
+    $verJson = "$TriRLCDir\version.json"
     if (Test-Path $verJson) {
         try {
             $v = (Get-Content $verJson -Raw | ConvertFrom-Json).version
@@ -102,7 +102,7 @@ function Get-InstalledVersion {
     }
 
     # 3. package.json fallback
-    $pkgJson = "$TriLCDir\package.json"
+    $pkgJson = "$TriRLCDir\package.json"
     if (Test-Path $pkgJson) {
         try {
             $v = (Get-Content $pkgJson -Raw | ConvertFrom-Json).version
@@ -159,30 +159,32 @@ function Invoke-LegacyMigration {
     $legacyDir = "C:\Program Files\TriMetaverse\TriCade"
     $legacyRoot = "C:\Program Files\TriMetaverse"
     $orphanDir = "C:\Program Files\TriCade"
-    $serviceName = "TriLC"
+    $serviceName = "TriRLC"
     $runKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run"
 
     # 1. 停旧 daemon（RegRun + schtasks + 进程）
     Write-Info "停止旧 daemon 注册..."
-    if ($WhatIf) { Write-Info "(WhatIf) 将删除 HKCU Run 的 TriLC 条目 + 停止 TriLC 进程"; return }
+    if ($WhatIf) { Write-Info "(WhatIf) 将删除 HKCU Run 的 TriRLC 条目 + 停止 TriRLC 进程"; return }
 
-    try { reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v TriLC /f 2>$null | Out-Null } catch { }
+    try { reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v TriRLC /f 2>$null | Out-Null } catch { }
     Get-CimInstance Win32_Process -Filter "Name='node.exe'" -ErrorAction SilentlyContinue |
         Where-Object { $_.CommandLine -like '*trilc*' } |
         ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
     Start-Sleep -Seconds 2
 
-    # 2. 删除 schtasks 任务（如存在）
-    try {
-        schtasks /query /tn "TriLC Daemon" 2>$null | Out-Null
-        if ($LASTEXITCODE -eq 0) {
-            Write-Info "删除 schtasks: TriLC Daemon"
-            schtasks /delete /tn "TriLC Daemon" /f | Out-Null
-        } else {
-            Write-Info "schtasks: TriLC Daemon 不存在，跳过"
+    # 2. 删除 schtasks 任务（如存在；双名兼容——2026-09-01 壳名对齐，旧 TriLC Daemon 装机残留一并清）
+    foreach ($taskName in @("TriRLC Daemon", "TriLC Daemon")) {
+        try {
+            schtasks /query /tn "$taskName" 2>$null | Out-Null
+            if ($LASTEXITCODE -eq 0) {
+                Write-Info "删除 schtasks: $taskName"
+                schtasks /delete /tn "$taskName" /f | Out-Null
+            } else {
+                Write-Info "schtasks: $taskName 不存在，跳过"
+            }
+        } catch {
+            Write-Info "schtasks: $taskName 不存在，跳过"
         }
-    } catch {
-        Write-Info "schtasks: TriLC Daemon 不存在，跳过"
     }
 
     # 3. 清理旧 MSI 目录（TriMetaverse\TriCade — MSI 卸载会处理，此处兜底）
@@ -308,11 +310,11 @@ function Install-FromZip {
     Write-Ok "ZIP 已解压到: $staging"
 
     # 复制 trilc 目录到安装位置
-    $src = "$staging\trilc"
+    $src = "$staging\trirlc"
     if (-not (Test-Path $src)) {
         # 尝试查找 staging 内的子目录
         $subDirs = Get-ChildItem $staging -Directory | Select-Object -First 1
-        $src = "$($subDirs.FullName)\trilc"
+        $src = "$($subDirs.FullName)\trirlc"
     }
 
     if (-not (Test-Path $src)) {
@@ -324,7 +326,7 @@ function Install-FromZip {
         New-Item -ItemType Directory -Force -Path $InstallDir | Out-Null
     }
 
-    $dst = $TriLCDir
+    $dst = $TriRLCDir
     if (Test-Path $dst) {
         $bak = "$dst.bak-$((Get-Date -Format 'yyyyMMdd-HHmmss'))"
         Write-Info "备份现有: $bak"
@@ -376,14 +378,14 @@ function Invoke-Verify {
 
     # 基础文件
     $files = @(
-        "$TriLCDir\dist\cli.js",
-        "$TriLCDir\dist\server\app.js",
-        "$TriLCDir\package.json"
+        "$TriRLCDir\dist\cli.js",
+        "$TriRLCDir\dist\server\app.js",
+        "$TriRLCDir\package.json"
     )
     foreach ($f in $files) {
         if ($WhatIf) { Write-Info "(WhatIf) Test-Path $f"; continue }
         $ok = Test-Path $f
-        $label = ($f -replace [regex]::Escape($TriLCDir), "").TrimStart("\")
+        $label = ($f -replace [regex]::Escape($TriRLCDir), "").TrimStart("\")
         if ($ok) { Write-Ok "$label" }
         else { Write-Fail "$label 缺失" }
     }
@@ -417,7 +419,7 @@ function Invoke-Healthz {
         # 不自动启动（ONLOGON 登录触发）——此处主动拉起再查，自检覆盖
         # 非服务形态。
         Write-Warn "端口 $ServicePort 未监听——尝试拉起 daemon（schtasks/RegRun 形态）..."
-        $trilcCmdForHealth = "$TriLCDir\trilc.cmd"
+        $trilcCmdForHealth = "$TriRLCDir\trilc.cmd"
         if (Test-Path $trilcCmdForHealth) {
             if ($WhatIf) { Write-Info "(WhatIf) & $trilcCmdForHealth start --port $ServicePort" }
             else {
@@ -449,7 +451,7 @@ function Invoke-Healthz {
 }
 
 # ── 周平面根注入（r2-2 跟进项 TRICADE-ENV-INJECT，r2-1 三态设计）──
-# 安装态无 workspace sibling 可探测，安装时注入用户级 env 供 TriLC 读取
+# 安装态无 workspace sibling 可探测，安装时注入用户级 env 供 TriRLC 读取
 # （RegRun 登录启动形态）；显式参数 > sibling 检测 > 不注入（旧行为回退）。
 
 function Resolve-WeeklyPlaneRoot {
@@ -475,16 +477,16 @@ function Resolve-WeeklyPlaneRoot {
         if (Test-Path $candidate) { return $candidate }
     }
 
-    # 3. 未检测到 → 不注入（TriLC 安装态回退项目轨旧行为，逐字节不变）
+    # 3. 未检测到 → 不注入（TriRLC 安装态回退项目轨旧行为，逐字节不变）
     return $null
 }
 
-function Set-TriLCWeeklyPlaneRoot {
+function Set-TriRLCWeeklyPlaneRoot {
     Write-Step "公司周平面根注入 (TRILC_WEEKLY_PLANE_ROOT)"
 
     $planeRoot = Resolve-WeeklyPlaneRoot -Explicit $WeeklyPlaneRoot
     if (-not $planeRoot) {
-        Write-Warn "未检测到公司周平面检出——不注入 env，TriLC 回退项目轨视图（旧行为）"
+        Write-Warn "未检测到公司周平面检出——不注入 env，TriRLC 回退项目轨视图（旧行为）"
         Write-Info "  显式指定: .\install-tricade.ps1 ... -WeeklyPlaneRoot <path>"
         return
     }
@@ -498,16 +500,16 @@ function Set-TriLCWeeklyPlaneRoot {
     Write-Ok "用户级 env 已注入: $planeRoot"
 }
 
-function Install-TriLCService {
+function Install-TriRLCService {
     if (-not $InstallService) {
         Write-Info "(未指定 -InstallService) 跳过服务注册"
         return
     }
 
-    Write-Step "注册 TriLC Windows 服务"
+    Write-Step "注册 TriRLC Windows 服务"
 
     # 查找 trilc.cmd
-    $trilcCmd = "$TriLCDir\trilc.cmd"
+    $trilcCmd = "$TriRLCDir\trilc.cmd"
     if (-not (Test-Path $trilcCmd)) {
         Write-Fail "trilc.cmd 不存在: $trilcCmd"
         return
@@ -536,12 +538,12 @@ function Install-TriLCService {
 
         # 安装服务
         & $nssm install $ServiceName $nodePath
-        & $nssm set $ServiceName AppParameters "`"$TriLCDir\dist\cli.js`" run"
-        & $nssm set $ServiceName AppDirectory $TriLCDir
+        & $nssm set $ServiceName AppParameters "`"$TriRLCDir\dist\cli.js`" run"
+        & $nssm set $ServiceName AppDirectory $TriRLCDir
         & $nssm set $ServiceName AppThrottle 5000
         & $nssm set $ServiceName AppStopMethodSkip 6
         & $nssm set $ServiceName AppExit Default Restart
-        & $nssm set $ServiceName Description "TriLC Local Controller Daemon"
+        & $nssm set $ServiceName Description "TriRLC Local Controller Daemon"
         & $nssm set $ServiceName Start SERVICE_AUTO_START
 
         # 服务形态（LocalSystem）不读用户级 env——周平面根经 AppEnvironmentExtra 注入
@@ -577,7 +579,7 @@ function Show-Completion {
     Write-Host "==============================================" -ForegroundColor Cyan
 
     Write-Host ""
-    Write-Host "  安装目录: $TriLCDir" -ForegroundColor Cyan
+    Write-Host "  安装目录: $TriRLCDir" -ForegroundColor Cyan
     Write-Host "  版本: $Version" -ForegroundColor Cyan
 
     if ($MsiPath) {
@@ -592,7 +594,7 @@ function Show-Completion {
     Write-Host "    curl http://127.0.0.1:8711/healthz  # 健康检查"
     Write-Host ""
 
-    if (-not $InstallService -and (Test-Path "$TriLCDir\trilc.cmd")) {
+    if (-not $InstallService -and (Test-Path "$TriRLCDir\trilc.cmd")) {
         Write-Host "  注册为 Windows 服务:" -ForegroundColor Magenta
         Write-Host "    trilc daemon install        # 安装服务 + 开机自启"
         Write-Host ""
@@ -648,10 +650,10 @@ if ($MsiPath) {
 Invoke-Verify
 
 # Phase 3.5: 公司周平面根注入（TRICADE-ENV-INJECT）
-Set-TriLCWeeklyPlaneRoot
+Set-TriRLCWeeklyPlaneRoot
 
 # Phase 4: 服务注册
-Install-TriLCService
+Install-TriRLCService
 
 # Phase 5: 健康检查
 Invoke-Healthz

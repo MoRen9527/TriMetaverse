@@ -1,8 +1,8 @@
 # Phase P0: Zero-packaging bundle assembler
-# Assembles TriLC + TriPilot + VSCodium portable into dist/pack-pc/
+# Assembles TriRLC + TriPilot + VSCodium portable into dist/pack-pc/
 param(
   [string]$OutputDir = "$PSScriptRoot\..\..\dist\pack-pc",
-  [string]$TriLCSrc = "$PSScriptRoot\..\..\..\TriLC",
+  [string]$TriRLCSrc = "$PSScriptRoot\..\..\..\TriRLC",
   [string]$TriPilotSrc = "$PSScriptRoot\..\..\..\TriPilot",
   [string]$VSCodiumVersion = "1.98.2.25072"
 )
@@ -13,43 +13,43 @@ Write-Host "=== TriMetaverse PC Bundle (Phase P0) ===" -ForegroundColor Cyan
 
 # ── Resolve absolute paths ──
 $OutputDir = [System.IO.Path]::GetFullPath($OutputDir)
-$TriLCSrc  = [System.IO.Path]::GetFullPath($TriLCSrc)
+$TriRLCSrc  = [System.IO.Path]::GetFullPath($TriRLCSrc)
 $TriPilotSrc = [System.IO.Path]::GetFullPath($TriPilotSrc)
 
 Write-Host "Output: $OutputDir"
-Write-Host "TriLC:   $TriLCSrc"
+Write-Host "TriRLC:   $TriRLCSrc"
 Write-Host "TriPilot: $TriPilotSrc"
 
 # ── Step 1: Create output structure ──
 $dirs = @(
-  "$OutputDir\tri-lc",
-  "$OutputDir\tri-lc\dist",
-  "$OutputDir\tri-lc\node_modules\@trimetaverse",
-  "$OutputDir\tri-lc\node_modules\trimodel",
+  "$OutputDir\tri-rlc",
+  "$OutputDir\tri-rlc\dist",
+  "$OutputDir\tri-rlc\node_modules\@trimetaverse",
+  "$OutputDir\tri-rlc\node_modules\trimodel",
   "$OutputDir\vscodium\extensions\tripilot",
   "$OutputDir\config"
 )
 foreach ($d in $dirs) { New-Item -ItemType Directory -Force -Path $d | Out-Null }
 
-# ── Step 2: Build and copy TriLC ──
-Write-Host "`n[1/4] Building TriLC..." -ForegroundColor Yellow
-Push-Location $TriLCSrc
+# ── Step 2: Build and copy TriRLC ──
+Write-Host "`n[1/4] Building TriRLC..." -ForegroundColor Yellow
+Push-Location $TriRLCSrc
 npm run build 2>&1 | Out-Host
-if ($LASTEXITCODE -ne 0) { throw "TriLC build failed" }
+if ($LASTEXITCODE -ne 0) { throw "TriRLC build failed" }
 Pop-Location
 
-Write-Host "  Copying TriLC dist..."
-Copy-Item -Recurse "$TriLCSrc\dist\*" "$OutputDir\tri-lc\dist\"
+Write-Host "  Copying TriRLC dist..."
+Copy-Item -Recurse "$TriRLCSrc\dist\*" "$OutputDir\tri-rlc\dist\"
 
-Write-Host "  Copying TriLC package.json..."
-Copy-Item "$TriLCSrc\package.json" "$OutputDir\tri-lc\package.json"
+Write-Host "  Copying TriRLC package.json..."
+Copy-Item "$TriRLCSrc\package.json" "$OutputDir\tri-rlc\package.json"
 
-Write-Host "  Copying TriLC node_modules (agent-core + trimodel)..."
-if (Test-Path "$TriLCSrc\node_modules\@trimetaverse\agent-core") {
-  Copy-Item -Recurse "$TriLCSrc\node_modules\@trimetaverse\agent-core" "$OutputDir\tri-lc\node_modules\@trimetaverse\agent-core"
+Write-Host "  Copying TriRLC node_modules (agent-core + trimodel)..."
+if (Test-Path "$TriRLCSrc\node_modules\@trimetaverse\agent-core") {
+  Copy-Item -Recurse "$TriRLCSrc\node_modules\@trimetaverse\agent-core" "$OutputDir\tri-rlc\node_modules\@trimetaverse\agent-core"
 }
-if (Test-Path "$TriLCSrc\node_modules\trimodel") {
-  Copy-Item -Recurse "$TriLCSrc\node_modules\trimodel" "$OutputDir\tri-lc\node_modules\trimodel"
+if (Test-Path "$TriRLCSrc\node_modules\trimodel") {
+  Copy-Item -Recurse "$TriRLCSrc\node_modules\trimodel" "$OutputDir\tri-rlc\node_modules\trimodel"
 }
 
 # ── Step 3: Install TriPilot extension ──

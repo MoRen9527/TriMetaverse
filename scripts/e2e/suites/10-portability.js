@@ -51,9 +51,9 @@ async function PT_003() {
     const procResult = await ps('(Get-Process node -ErrorAction SilentlyContinue | Where-Object { $_.CommandLine -match "TriCade" } | Measure-Object).Count');
     const procCount = parseInt(procResult) || 0;
     // 检查 dataDir
-    const dataDirExists = fs.existsSync('C:/Users/jedih/AppData/Local/TriLC');
+    const dataDirExists = fs.existsSync('C:/Users/jedih/AppData/Local/TriRLC');
     // 检查 Run 注册表（daemon 自启动项）
-    const regResult = await ps('(Get-ItemProperty -Path "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" -ErrorAction SilentlyContinue).PSObject.Properties | Where-Object { $_.Name -match "TriLC|TriCade" } | Measure-Object | Select-Object -ExpandProperty Count');
+    const regResult = await ps('(Get-ItemProperty -Path "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" -ErrorAction SilentlyContinue).PSObject.Properties | Where-Object { $_.Name -match "TriRLC|TriLC|TriCade" } | Measure-Object | Select-Object -ExpandProperty Count');
     const regCount = parseInt(regResult) || 0;
     record(id, 'pass', `process=${procCount} dataDir=${dataDirExists} regRun=${regCount}（卸载测试需完整卸载后验证=0，此处记录当前态）`);
   } catch (e) { record(id, 'pass', '部分检查不可用（' + e.message.slice(0,60) + '）——记录当前可查态'); }
@@ -63,11 +63,11 @@ async function PT_003() {
 async function PT_004() {
   const id = 'PT-004';
   try {
-    const versionJson = JSON.parse(fs.readFileSync('C:/Program Files/TriCade/trilc/version.json', 'utf-8'));
+    const versionJson = JSON.parse(fs.readFileSync('C:/Program Files/TriCade/trirlc/version.json', 'utf-8'));
     assert(versionJson.version, id + ': version.json has version');
     assert(versionJson.version !== '0.1.0', id + ': version not default 0.1.0（BUG-20260805-002 防回归）');
     // sessions.db 保留
-    const dbExists = fs.existsSync('C:/Users/jedih/AppData/Local/TriLC/sessions.db');
+    const dbExists = fs.existsSync('C:/Users/jedih/AppData/Local/TriRLC/sessions.db');
     record(id, 'pass', `version=${versionJson.version} sessions.db=${dbExists}（升级后数据保留）`);
   } catch (e) { record(id, 'fail', e.message); }
 }
@@ -77,7 +77,7 @@ async function PT_005() {
   const id = 'PT-005';
   try {
     // 验证 TRILC_DATA_DIR 环境变量被 daemon 读取（通过隔离实例验证——只验证代码路径存在）
-    const envCode = fs.readFileSync('C:/Program Files/TriCade/trilc/dist/config/env.js', 'utf-8');
+    const envCode = fs.readFileSync('C:/Program Files/TriCade/trirlc/dist/config/env.js', 'utf-8');
     assert(envCode.includes('TRILC_DATA_DIR'), id + ': env.js reads TRILC_DATA_DIR');
     assert(envCode.includes('LOCALAPPDATA'), id + ': env.js has LOCALAPPDATA fallback');
     record(id, 'pass', 'TRILC_DATA_DIR 配置路径在代码中（完整隔离实例测试归环境编排）');
@@ -101,10 +101,10 @@ async function SEC_004() {
   const id = 'SEC-004';
   try {
     // 当前 daemon 是 debug 模式（TRILC_DEBUG=1 in .cmd）——验证机制存在
-    const cmdFile = fs.readFileSync('C:/Users/jedih/AppData/Local/TriLC/daemon/trilc-daemon.cmd', 'utf-8');
+    const cmdFile = fs.readFileSync('C:/Users/jedih/AppData/Local/TriRLC/daemon/trirlc-daemon.cmd', 'utf-8');
     const hasDebugFlag = cmdFile.includes('TRILC_DEBUG=1');
     // 检查代码中 debug 门禁存在
-    const appCode = fs.readFileSync('C:/Program Files/TriCade/trilc/dist/server/app.js', 'utf-8');
+    const appCode = fs.readFileSync('C:/Program Files/TriCade/trirlc/dist/server/app.js', 'utf-8');
     assert(appCode.includes('debug_mode_required') || appCode.includes('debugMode'), id + ': reset 端点有 debug 门禁');
     record(id, 'pass', `debug 门禁机制存在（当前开发态 debug=${hasDebugFlag}——生产无 TRILC_DEBUG 即关）`);
   } catch (e) { record(id, 'fail', e.message); }
@@ -114,7 +114,7 @@ async function SEC_004() {
 async function SEC_005() {
   const id = 'SEC-005';
   try {
-    const keysPath = 'C:/Users/jedih/AppData/Local/TriLC/keys.json';
+    const keysPath = 'C:/Users/jedih/AppData/Local/TriRLC/keys.json';
     assert(fs.existsSync(keysPath), id + ': keys.json exists');
     // Windows 上验证文件不是全局可读（通过 PowerShell ACL）
     const acl = await ps(`(Get-Acl '${keysPath}').Access | Where-Object { $_.IdentityReference -match 'Everyone|Users' -and $_.FileSystemRights -match 'FullControl' } | Measure-Object | Select-Object -ExpandProperty Count`);

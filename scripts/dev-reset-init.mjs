@@ -10,10 +10,10 @@
  *   --workspace-root    装配产物根（默认 C:\Users\jedih = 装后态 daemon cwd）
  *
  * 清理面（精确白名单，绝不多删）：
- *   运行态：%LOCALAPPDATA%\TriLC\company\init-chain.json + state.json
+ *   运行态：%LOCALAPPDATA%\TriRLC\company\init-chain.json + state.json
  *   装配产物（workspace-root 下）：.claude/agents/<开业 roleId>.md（按 state.json employees 反查）
  *     + docs/registry/company-state.json + AGENTS.md + docs/registry/business-state.md（占位特征校验）
- *   项目（--include-project）：%LOCALAPPDATA%\TriLC\project-registry.json
+ *   项目（--include-project）：%LOCALAPPDATA%\TriRLC\project-registry.json
  *
  * 安全护栏：daemon 先 trilc stop（走 pidfile 权威路径）；产物删除前打印清单；
  *   business-state.md/AGENTS.md 仅当内容为装配占位（<1KB 且含标记词）才删，否则保留并提示。
@@ -28,8 +28,8 @@ const args = process.argv.slice(2);
 const includeProject = args.includes('--include-project');
 const wsRootIdx = args.indexOf('--workspace-root');
 const wsRoot = wsRootIdx >= 0 ? args[wsRootIdx + 1] : join(homedir());
-const dataDir = join(process.env.LOCALAPPDATA || join(homedir(), 'AppData/Local'), 'TriLC');
-const CLI = 'C:\\Program Files\\TriCade\\trilc\\dist\\cli.js';
+const dataDir = join(process.env.LOCALAPPDATA || join(homedir(), 'AppData/Local'), 'TriRLC');
+const CLI = 'C:\\Program Files\\TriCade\\trirlc\\dist\\cli.js';
 
 const log = (m) => console.log('[reset]', m);
 
@@ -82,7 +82,7 @@ if (includeProject) {
 // ⑤ 起 daemon（.cmd 带 env 注入面）
 try {
   execFileSync('powershell', ['-NoProfile', '-Command',
-    "Start-Process -WindowStyle Hidden -FilePath 'C:\\Users\\jedih\\AppData\\Local\\TriLC\\daemon\\trilc-daemon.cmd'"],
+    "Start-Process -WindowStyle Hidden -FilePath 'C:\\Users\\jedih\\AppData\\Local\\TriRLC\\daemon\\trirlc-daemon.cmd'"],
     { timeout: 15000 });
   log('daemon 拉起（.cmd env 注入面）');
 } catch (e) { log('daemon 拉起失败: ' + e.message); }

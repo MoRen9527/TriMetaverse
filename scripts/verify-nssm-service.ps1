@@ -6,10 +6,10 @@ $ErrorActionPreference = "Stop"
 $NSSM  = "D:\Code\ai\TriMetaverse\tools\nssm\nssm.exe"
 # 8.3 短路径（无空格 = nssm 不截断）——实测可执行
 $NODE  = "C:\PROGRA~1\nodejs\node.exe"
-$CLI   = "C:\PROGRA~1\TriCade\RESOUR~1\app\tools\trilc\dist\cli.js"
+$CLI   = "C:\PROGRA~1\TriCade\RESOUR~1\app\tools\trirlc\dist\cli.js"
 # AppDirectory 仍用完整长路径
-$DIR   = "C:\Program Files\TriCade\resources\app\tools\trilc"
-$NAME  = "TriLC"
+$DIR   = "C:\Program Files\TriCade\resources\app\tools\trirlc"
+$NAME  = "TriRLC"
 $LOG   = "$env:PROGRAMDATA\TriCade\logs"
 
 # ── 0. 管理员 + 文件检查 ──
@@ -58,7 +58,7 @@ Write-Host "  AppExit: Default Restart"
 Write-Host "  Start: SERVICE_DELAYED_AUTO_START"
 
 # DisplayName
-& $NSSM set $NAME DisplayName "TriLC - AI-powered local agent daemon"
+& $NSSM set $NAME DisplayName "TriRLC - AI-powered local agent daemon"
 Write-Host "  [OK] 配置完成"
 
 # ── 3. nssm start ──

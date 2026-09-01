@@ -109,16 +109,16 @@ $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIden
 if (-not $isAdmin) {
     Skip "not admin — skip service check"
 } else {
-    $svc = sc.exe query TriLC 2>&1
+    $svc = sc.exe query TriRLC 2>&1
     if ($LASTEXITCODE -eq 0) {
         $stateLine = (($svc -split "`n") | Where-Object { $_ -match "STATE" } | Select-Object -First 1).Trim()
         if ($stateLine -match "RUNNING") {
-            Pass "TriLC service: $stateLine"
+            Pass "TriRLC service: $stateLine"
         } else {
-            Fail "TriLC service: $stateLine"
+            Fail "TriRLC service: $stateLine"
         }
     } else {
-        Skip "TriLC service not registered (daemon running via other method)"
+        Skip "TriRLC service not registered (daemon running via other method)"
     }
 }
 

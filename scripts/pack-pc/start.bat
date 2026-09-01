@@ -1,11 +1,11 @@
 @echo off
 REM Phase P0: One-click launcher for TriMetaverse PC
-REM Starts TriLC, then VSCodium with TriPilot preloaded
+REM Starts TriRLC, then VSCodium with TriPilot preloaded
 
 setlocal enabledelayedexpansion
 
 set BUNDLE_DIR=%~dp0..\..\dist\pack-pc
-set TRI_LC_DIR=%BUNDLE_DIR%\tri-lc
+set TRI_LC_DIR=%BUNDLE_DIR%\tri-rlc
 set VSCODIUM_DIR=%BUNDLE_DIR%\vscodium
 set CONFIG_DIR=%BUNDLE_DIR%\config
 
@@ -15,11 +15,11 @@ if defined VSCODIUM_HOME set VSCODIUM_DIR=%VSCODIUM_HOME%
 
 echo === TriMetaverse PC Launcher (Phase P0) ===
 
-REM ── 1. Start TriLC ──
+REM ── 1. Start TriRLC ──
 echo.
-echo [1/2] Starting TriLC...
+echo [1/2] Starting TriRLC...
 if not exist "%TRI_LC_DIR%\dist\index.js" (
-    echo ERROR: TriLC not found at %TRI_LC_DIR%\dist\index.js
+    echo ERROR: TriRLC not found at %TRI_LC_DIR%\dist\index.js
     echo Run bundle.ps1 first.
     pause
     exit /b 1
@@ -35,11 +35,11 @@ if exist "%CONFIG_DIR%\defaults.json" (
 set TRIMC_BASE_URL=http://127.0.0.1:8710
 set PORT=%TRILC_PORT%
 
-start "TriLC" /MIN cmd /c "cd /d %TRI_LC_DIR% && node dist\index.js"
-echo   TriLC starting on port %TRILC_PORT%...
+start "TriRLC" /MIN cmd /c "cd /d %TRI_LC_DIR% && node dist\index.js"
+echo   TriRLC starting on port %TRILC_PORT%...
 
-REM ── Wait for TriLC health check ──
-echo   Waiting for TriLC to become healthy...
+REM ── Wait for TriRLC health check ──
+echo   Waiting for TriRLC to become healthy...
 set /a RETRIES=0
 :wait_health
 timeout /t 1 /nobreak >nul
@@ -47,10 +47,10 @@ curl -s http://127.0.0.1:%TRILC_PORT%/healthz >nul 2>&1
 if %errorlevel% equ 0 goto health_ok
 set /a RETRIES+=1
 if %RETRIES% lss 10 goto wait_health
-echo   WARNING: TriLC did not respond after 10s — starting VSCodium anyway.
+echo   WARNING: TriRLC did not respond after 10s — starting VSCodium anyway.
 
 :health_ok
-echo   TriLC healthy.
+echo   TriRLC healthy.
 
 REM ── 2. Start VSCodium ──
 echo.
@@ -71,8 +71,8 @@ start "VSCodium" "%VSCODIUM_DIR%\bin\codium.exe" ^
 
 echo.
 echo === TriMetaverse PC started ===
-echo   TriLC:  http://127.0.0.1:%TRILC_PORT%
-echo   TriMC:  %TRIMC_BASE_URL% (proxy)
+echo   TriRLC:  http://127.0.0.1:%TRILC_PORT%
+echo   TriMMC:  %TRIMC_BASE_URL% (proxy)
 echo.
-echo Close VSCodium first, then this window to stop TriLC.
+echo Close VSCodium first, then this window to stop TriRLC.
 pause

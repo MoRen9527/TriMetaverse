@@ -6,15 +6,15 @@
 //   v1 搬运：identity（去 family）/ responsibilities / collaborators / tools / io_contract / instructions
 // 注意 colleagues_social 合并字段必须拆成 colleagues + social（CTO 标注的坑）。
 //
-// 用法（在 TriLC 目录跑，复用其 yaml 依赖）：
+// 用法（在 TriRLC 目录跑，复用其 yaml 依赖）：
 //   node ../TriMetaverse/scripts/migrate-contract-v3.mjs
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { createRequire } from 'node:module';
 
-// yaml 依赖取自 TriLC node_modules（脚本所在 TriMetaverse 仓库无此依赖）
-const require = createRequire('file:///D:/Code/ai/TriLC/package.json');
+// yaml 依赖取自 TriRLC node_modules（脚本所在 TriMetaverse 仓库无此依赖）
+const require = createRequire('file:///D:/Code/ai/TriRLC/package.json');
 const { parse: parseYaml, stringify: stringifyYaml } = require('yaml');
 
 const TRI_COMPANY = 'D:/Code/ai/TriCompany';
@@ -40,7 +40,7 @@ function load(path) {
   return parseYaml(readFileSync(path, 'utf-8'));
 }
 
-/** colleagues_social 合并字段拆分（对齐 TriLC 归一化逻辑）。 */
+/** colleagues_social 合并字段拆分（对齐 TriRLC 归一化逻辑）。 */
 function splitPaths(paths) {
   const out = { ...paths };
   if (out.colleagues_social) {

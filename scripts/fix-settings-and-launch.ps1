@@ -15,7 +15,7 @@ Write-Host "[OK] settings.json -> $userSettingsDir"
 # 2. 确认 daemon 在跑
 $health = curl.exe -s http://127.0.0.1:8711/healthz 2>$null
 if ($health) {
-    Write-Host "[OK] TriLC daemon healthy"
+    Write-Host "[OK] TriRLC daemon healthy"
 } else {
     Write-Host "[!] daemon not responding — trilc start 先启动"
 }
