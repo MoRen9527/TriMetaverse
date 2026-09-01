@@ -1,0 +1,114 @@
+{
+  "objectType": "RESPONSIBILITY_HANDOFF",
+  "objectId": "LG-023-bootstrap-unification",
+  "title": "CEOChiefOfStaff 源侧五件套定义增量更新+会话变体（bootstrap 统一化）",
+  "status": "in-progress",
+  "priority": "high",
+  "ownerRole": "ChiefHumanResourcesOfficer",
+  "createdAt": "2026-09-01T06:41:03Z",
+  "updatedAt": "2026-09-01T06:41:03Z",
+  "summary": "LG-023 bootstrap 统一化：中枢启动件融入 TriCompany source-agents ceo-chief-of-staff 真源并经 FADE 发布三面（copilot/claude spawn/claude session）。现态：S0 过目通过，S2 源侧修订四件落地，S3 验证三读数绿，S4 CHO 验收 10/10 PASS 源侧段 accepted；S5-S8 排程候执行（主窗 2026-09-04 13:00-18:00 北京）。",
+  "relatedModules": ["TriCompany", "TriMetaverse"],
+  "evidence": [
+    {
+      "source": "docs/execution/lg-023-bootstrap-unification-evaluation.md",
+      "kind": "document",
+      "note": "评估报告正身（五问闭环+Q2 金丝雀实测定谳），commit d95ea868"
+    },
+    {
+      "source": "TriCompany/source-agents/ceo-chief-of-staff/",
+      "kind": "registry",
+      "note": "S2 源侧修订四件：合成件重写+agent-body 现代化+contract v3.1+新增 session-body；源侧段已提交 TriCompany 6be7a4a（渲染面未动），S8 发布批次收口"
+    },
+    {
+      "source": ".fade/hub/analysis/bootstrap-unification/cho-s4-acceptance.md",
+      "kind": "document",
+      "note": "S4 CHO 验收记录全文（机器本地）：十项 10/10 PASS+双入口一致性确认+三文档勘定+io_contract 不增+发布时点 09-04 主窗"
+    },
+    {
+      "source": ".fade/hub/analysis/bootstrap-unification/s2-diff.patch",
+      "kind": "other",
+      "note": "S2 改动 diff 264 行（CHO 验收输入件）"
+    }
+  ],
+  "nextActions": [
+    {
+      "owner": "小贾（董事长助理/组长）",
+      "action": "S5 binding notes 增补（启动命令+取代关系注记，依 CTO manifest schema 勘定结论）",
+      "dueAt": "2026-09-03T15:00:00Z"
+    },
+    {
+      "owner": "CTO 域（小狄/xiaodi-s6-render）",
+      "action": "S6 claude-session 渲染条目+三面渲染+derived 对拍扩展（接令须回执确认接手）",
+      "dueAt": "2026-09-03T15:00:00Z"
+    },
+    {
+      "owner": "小贾+CTO 域",
+      "action": "主窗 2026-09-04 13:00-18:00 北京：S7 manifest+发布+unittest/对拍+S8 治理回填+终态落位+新命令拉起冒烟；备窗 09-05 10:00-14:00，硬闸 09-05 23:00",
+      "dueAt": "2026-09-04T10:00:00Z"
+    },
+    {
+      "owner": "CHO",
+      "action": "live 六点链路齐后整案终验复验再签 accepted",
+      "dueAt": "2026-09-05T15:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "董事会",
+      "status": "approved",
+      "note": "S0 过目通过+放行 S2-S8（2026-09-01，预裁五项+注记三条）"
+    },
+    {
+      "role": "ChiefHumanResourcesOfficer",
+      "status": "approved",
+      "note": "S4 源侧段 accepted（2026-09-01，十项 10/10）；整案 accepted 候 live 六点链路终验"
+    }
+  ],
+  "timebox": {
+    "scope": "deadline",
+    "startAt": "2026-09-01T00:00:00Z",
+    "endAt": "2026-09-05T15:00:00Z",
+    "label": "主窗 09-04 13:00-18:00 北京；备窗 09-05 10:00-14:00；硬闸 09-05 23:00（避开 09-06 周日迁移日）"
+  },
+  "payload": {
+    "handoffSubject": "CEOChiefOfStaff 源侧五件套定义增量更新+会话变体（bootstrap 统一化）",
+    "handoffCategory": "other",
+    "previousOwner": "旧源侧文本（W28 世代 .github 世代件）+运行态 bootstrap-小贾.md 热修件（小贾自维护）；本次施工执行=小贾",
+    "incomingOwner": "CEOChiefOfStaff 岗位本体（不变，现役载体小贾/xiaojia-hub）；验收 owner=CHO",
+    "actingOwner": "小贾（董事长助理，董事会令任组长）",
+    "scope": "source-side-not-live：S2 落源侧工作区，渲染面零改动；S6 前旧发布版继续 live；S5-S8 live 发布后更新本字段并注记",
+    "sourceOfTruthFiles": [
+      "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.agent.md",
+      "TriCompany/source-agents/ceo-chief-of-staff/agent-body.agent.md",
+      "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.contract.yaml",
+      "TriCompany/source-agents/ceo-chief-of-staff/session-body.agent.md",
+      "TriCompany/docs/workflow/host-object-publish-flow.md",
+      "TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md"
+    ],
+    "supportAssets": [
+      "S5: binding profile notes（启动命令+取代关系注记；存活链候 CTO 勘定结论）",
+      "S6: HOST_RENDER_REGISTRY claude-session 新条目+三面渲染（copilot/claude spawn/claude session）",
+      "S7: host-object manifest+derived 对拍（含工具名大小写映射显式检查）",
+      "裁决⑤: bootstrap-小贾.md 降级件改写（删自指段+应急声明，最后落）"
+    ],
+    "completionTrackingStatus": "in-progress",
+    "acceptanceCriteria": [
+      "源侧段：S3 三读数（validate 组件区零错/check-sync 0 漂移/unittest 29-29）+handoff §4 十项 checklist+F3 双入口一致性+治理 §8 七条——已全部达成（CHO 2026-09-01 签）",
+      "整案：live 六点链路（source kit/support object/binding profile/live discovery/manifest/治理回填）齐+derived 对拍绿+unittest 绿门+终态落位读数+新命令拉起冒烟（claude -n 小贾 --append-system-prompt-file ...session.md 启动→状态条→候席）——候 09-04 主窗"
+    ],
+    "nextAction": "S5 binding notes 增补（组长，依 CTO manifest schema 勘定结论）；S6 CTO 域接令回执确认",
+    "blocker": "无阻塞；S6 依赖 CTO 域接令回执",
+    "escalations": [
+      "frontmatter name 变更候 Governance 裁（spawn 标识 breaking，本案不改）",
+      "contract.yaml 残留腐点三项候下一批（io_contract ipd_heartbeat TriMC 旧径/固定前置核查三件并书/runtime_baseline.tri_mc_status 字段名）"
+    ],
+    "notes": [
+      "S4 验收记录全文=.fade/hub/analysis/bootstrap-unification/cho-s4-acceptance.md（CHO 直投组长代落盘）",
+      "io_contract 裁值=不增（status_report 已在 outputs，五字段合同真源在 D-04，增补即双真源）",
+      "发布时点裁值=主窗 2026-09-04（周五）13:00-18:00 北京；备窗 09-05 10:00-14:00；硬闸 09-05 23:00；前置闸=S5-S7 完成+derived 对拍绿",
+      "候改清单六条见 CHO 验收记录 §七（均不阻塞）：contract 腐点三项/前置核查 5 收敛为 chief-of-staff-rd-orchestration+host-object-publish-flow/双入口同源引用巡检化/latestActiveWeek 主从/name 双名并存既裁/S3 代跑读数由 S6 对拍独立复验",
+      "评估与决策链：评估报告 docs/execution/lg-023-bootstrap-unification-evaluation.md（d95ea868）；金丝雀 Q2 定谳证据 .fade/hub/analysis/bootstrap-unification/evidence-q2-*.txt"
+    ]
+  }
+}
