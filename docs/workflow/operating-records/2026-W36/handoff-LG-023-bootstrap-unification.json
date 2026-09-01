@@ -62,14 +62,14 @@
     {
       "role": "ChiefHumanResourcesOfficer",
       "status": "approved",
-      "note": "S4 源侧段 accepted（2026-09-01，十项 10/10）；整案 accepted 候 live 六点链路终验"
+      "note": "S4 源侧段 accepted（2026-09-01，十项 10/10）+live 六点终验 accepted（CHO 域验读签 2026-09-01 深夜，cho-live-final-verification.md；独立会话 [8e18eb] countersign 候录）"
     }
   ],
   "timebox": {
     "scope": "deadline",
     "startAt": "2026-09-01T00:00:00Z",
     "endAt": "2026-09-05T15:00:00Z",
-    "label": "主窗 09-04 13:00-18:00 北京；备窗 09-05 10:00-14:00；硬闸 09-05 23:00（避开 09-06 周日迁移日）"
+    "label": "主窗 09-04 13:00-18:00 北京；备窗 09-05 10:00-14:00；硬闸 09-05 23:00（避开 09-06 周日迁移日）——【CEO 令提前开干 09-01 深夜执行，前置闸（S5-S7+对拍绿）已满足，非 CHO 排程失效】"
   },
   "payload": {
     "handoffSubject": "CEOChiefOfStaff 源侧五件套定义增量更新+会话变体（bootstrap 统一化）",
@@ -95,7 +95,7 @@
     "completionTrackingStatus": "in-progress",
     "acceptanceCriteria": [
       "源侧段：S3 三读数（validate 组件区零错/check-sync 0 漂移/unittest 29-29）+handoff §4 十项 checklist+F3 双入口一致性+治理 §8 七条——已全部达成（CHO 2026-09-01 签）",
-      "整案：live 六点链路（source kit/support object/binding profile/live discovery/manifest/治理回填）齐+derived 对拍绿+unittest 绿门+终态落位读数+新命令拉起冒烟（claude -n 小贾 --append-system-prompt-file ...session.md 启动→状态条→候席）——候 09-04 主窗"
+      "整案：live 六点链路（source kit/support object/binding profile/live discovery/manifest/治理回填）齐+derived 对拍绿+unittest 绿门+终态落位读数+新命令拉起冒烟（claude -n COS --append-system-prompt-file ...session.md 启动→状态条→候席）——已全部达成（主窗提前开干七项全过+CHO 域终验 accepted 2026-09-01；独立会话 countersign 候录）"
     ],
     "nextAction": "CHO 域 live 六点终验读数（材料已提请）；终态命令生效（claude -n COS --append-system-prompt-file D:\\Code\\ai\\TriMetaverse\\.claude\\hub\\ceo-chief-of-staff.session.md）；bootstrap-小贾.md 降级件改写（裁决⑤最后落）",
     "blocker": "无阻塞",
