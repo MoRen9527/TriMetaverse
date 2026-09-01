@@ -6,7 +6,7 @@
   "priority": "high",
   "ownerRole": "ChiefHumanResourcesOfficer",
   "createdAt": "2026-09-01T06:41:03Z",
-  "updatedAt": "2026-09-01T06:41:03Z",
+  "updatedAt": "2026-09-01T15:40:00Z",
   "summary": "LG-023 bootstrap 统一化：中枢启动件融入 TriCompany source-agents ceo-chief-of-staff 真源并经 FADE 发布三面（copilot/claude spawn/claude session）。现态：S0 过目通过，S2 源侧修订四件落地，S3 验证三读数绿，S4 CHO 验收 10/10 PASS 源侧段 accepted；S5-S8 排程候执行（主窗 2026-09-04 13:00-18:00 北京）。",
   "relatedModules": ["TriCompany", "TriMetaverse"],
   "evidence": [
@@ -77,7 +77,7 @@
     "previousOwner": "旧源侧文本（W28 世代 .github 世代件）+运行态 bootstrap-小贾.md 热修件（小贾自维护）；本次施工执行=小贾",
     "incomingOwner": "CEOChiefOfStaff 岗位本体（不变，现役载体小贾/xiaojia-hub）；验收 owner=CHO",
     "actingOwner": "小贾（董事长助理，董事会令任组长）",
-    "scope": "source-side-not-live：S2 落源侧工作区，渲染面零改动；S6 前旧发布版继续 live；S5-S8 live 发布后更新本字段并注记",
+    "scope": "live（2026-09-01 主窗提前开干，CEO 裁决前置全绿即启）：三面渲染落地（spawn/copilot/claude-session 首件 1884487b），binding 双面 hostEntries，落位四断言+对拍全归位+真件金丝雀三问全否+cos-smoke 冒烟实质通过；CHO 域终验读数候（独立会话 countersign 候录/CEO 代签候）",
     "sourceOfTruthFiles": [
       "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.agent.md",
       "TriCompany/source-agents/ceo-chief-of-staff/agent-body.agent.md",
@@ -97,8 +97,8 @@
       "源侧段：S3 三读数（validate 组件区零错/check-sync 0 漂移/unittest 29-29）+handoff §4 十项 checklist+F3 双入口一致性+治理 §8 七条——已全部达成（CHO 2026-09-01 签）",
       "整案：live 六点链路（source kit/support object/binding profile/live discovery/manifest/治理回填）齐+derived 对拍绿+unittest 绿门+终态落位读数+新命令拉起冒烟（claude -n 小贾 --append-system-prompt-file ...session.md 启动→状态条→候席）——候 09-04 主窗"
     ],
-    "nextAction": "S5 binding notes 增补（组长，依 CTO manifest schema 勘定结论）；S6 CTO 域接令回执确认",
-    "blocker": "无阻塞；S6 依赖 CTO 域接令回执",
+    "nextAction": "CHO 域 live 六点终验读数（材料已提请）；终态命令生效（claude -n COS --append-system-prompt-file D:\\Code\\ai\\TriMetaverse\\.claude\\hub\\ceo-chief-of-staff.session.md）；bootstrap-小贾.md 降级件改写（裁决⑤最后落）",
+    "blocker": "无阻塞",
     "escalations": [
       "frontmatter name 变更候 Governance 裁（spawn 标识 breaking，本案不改）",
       "contract.yaml 残留腐点三项候下一批（io_contract ipd_heartbeat TriMC 旧径/固定前置核查三件并书/runtime_baseline.tri_mc_status 字段名）"
