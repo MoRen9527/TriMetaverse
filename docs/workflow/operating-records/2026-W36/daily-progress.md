@@ -99,3 +99,10 @@
   - 1884487b ops(lg-023): 主窗提前开干（CEO 裁决前置全绿即启）——S6 三面 execute 落地：claude-session 首件 .claude/hub/ceo-chief-of-staff.session.md 渲染入仓（a 案；无 frontmatter+CLAUDE_SESSION 衍生尾注+正身二件引用+27 行）+spawn/copilot 双面 ceo 渲染件追平（正名 COS+二次勘误正身引用）+support manifest 同步；落位四断言全过（Test-Path/27 行/尾注在位/无 frontmatter）；.claude/hub 其余六件系 BOD 手作临时件未入仓
 - registry：v2.1；今日 registry 提交无变化
 - **LG-024/025 建账+LG-023 主窗提前开干七项全过+S8 回填（21:4x-23:3x）**：①**LG-024 建账**（claude-session 渲染条目扩展 CPO/CTO，fast-follow 预挂候主窗后；BOD 临时手作件两件勿作真源）②**LG-025 立项**（CEO 裁决「立项，主窗后滚动批」；五件套两代清理 13 席滚动，首刀=CPO colleagues 错别字「CEO 磨人→本人」；四里程碑排程表已回报）③**主窗提前开干（CEO 裁决前置全绿即启）七项全过**——S6 三面 agent-execute（claude-session 首件 created `.claude/hub/ceo-chief-of-staff.session.md`）/落位四断言全过（A3 假红=常量名 vs 常量值口径，教训入卷）/渲染物入仓 **1884487b**（选别装筐，.claude/hub 另六件 BOD 手作件未入仓录待证）/对拍三面归位 errors=0+残句扫描功能净（双命中均勘误注留否候裁）/unittest 177+46 双绿门/**真件金丝雀三问全否**/**cos-smoke 冒烟实质通过**（恢复三关+状态条候席；-p 退出超时瑕疵如实记）④S8=handoff scope→live+回填毕；**终态命令生效=claude -n COS --append-system-prompt-file …\.claude\hub\ceo-chief-of-staff.session.md**；CHO 域终验材料已提请 ⑤**CEO 新规程宣贯**（功能模块双席联审门+CTO 分派枢纽）：CPO/CTO 直发送达双确认 ✓，FD/ST 候上线待办，候 CAO 入册（建议 D-12）。
+## 2026-09-02（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:00 +08：自上次进度提交 56f640a6 后新增 2 条 commit：
+  - fbd8c6ca docs(lg-023): CHO 域 live 六点终验 accepted——handoff 三处小勘落地（acceptanceCriteria 冒烟名 -n COS/approvals.CHO 补终验注/timebox label 加 CEO 令提前归因）；manifest 键路径归档行补录（publish manifest liveEntries[0].sessionBody+governance.sessionFaceRule）；余=独立会话 countersign 候录+裁决⑤降级件改写候 cutover
+  - 2a505c5e docs(registry): 副本同步——通信名址与命名宪法节+CTO 分派枢纽行新立+补齐 08-31 模块命名权威对照表节（真源 977bc71 滞留追平，字节级一致；lastSyncedAt 2026-09-01）
+- registry：v2.1；今日 registry 提交无变化
