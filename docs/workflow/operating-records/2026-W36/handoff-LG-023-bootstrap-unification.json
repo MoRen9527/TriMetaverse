@@ -2,12 +2,12 @@
   "objectType": "RESPONSIBILITY_HANDOFF",
   "objectId": "LG-023-bootstrap-unification",
   "title": "CEOChiefOfStaff 源侧五件套定义增量更新+会话变体（bootstrap 统一化）",
-  "status": "in-progress",
+  "status": "accepted",
   "priority": "high",
   "ownerRole": "ChiefHumanResourcesOfficer",
   "createdAt": "2026-09-01T06:41:03Z",
-  "updatedAt": "2026-09-01T15:40:00Z",
-  "summary": "LG-023 bootstrap 统一化：中枢启动件融入 TriCompany source-agents ceo-chief-of-staff 真源并经 FADE 发布三面（copilot/claude spawn/claude session）。现态：S0 过目通过，S2 源侧修订四件落地，S3 验证三读数绿，S4 CHO 验收 10/10 PASS 源侧段 accepted；S5-S8 排程候执行（主窗 2026-09-04 13:00-18:00 北京）。",
+  "updatedAt": "2026-09-01T16:11:50Z",
+  "summary": "LG-023 bootstrap 统一化：中枢启动件融入 TriCompany source-agents ceo-chief-of-staff 真源并经 FADE 发布三面（copilot/claude spawn/claude session）。现态：S0 过目通过，S2 源侧修订四件落地，S3 验证三读数绿，S4 CHO 验收 10/10 PASS 源侧段 accepted；S5-S8 主窗提前开干（CEO 裁决前置全绿即启）七项全过毕；live 六点链路 CHO 终验 countersign accepted（2026-09-01T15:57Z，CHO 独立会话三重读数核验，residual 四条不阻塞）。",
   "relatedModules": ["TriCompany", "TriMetaverse"],
   "evidence": [
     {
@@ -29,28 +29,38 @@
       "source": ".fade/hub/analysis/bootstrap-unification/s2-diff.patch",
       "kind": "other",
       "note": "S2 改动 diff 264 行（CHO 验收输入件）"
+    },
+    {
+      "source": ".fade/hub/analysis/bootstrap-unification/cho-live-countersign-acceptance.md",
+      "kind": "document",
+      "note": "live 六点终验 CHO countersign 验收记录全文（机器本地，CHO 独立会话直落）：六点逐环核验表+独立重测 223/223+dry-run pass+residual 四条"
+    },
+    {
+      "source": ".fade/hub/analysis/bootstrap-unification/evidence-q2-real-session-rerun.txt",
+      "kind": "other",
+      "note": "真件金丝雀三问全否实证（CHO 回读）"
+    },
+    {
+      "source": ".fade/hub/analysis/bootstrap-unification/evidence-cos-smoke-statusbar.txt",
+      "kind": "other",
+      "note": "cos-smoke 冒烟状态条+五源恢复实证（BOD 验收代录，CHO 回读；-p 退出超时瑕疵在册）"
     }
   ],
   "nextActions": [
     {
-      "owner": "小贾（董事长助理/组长）",
-      "action": "S5 binding notes 增补（启动命令+取代关系注记，依 CTO manifest schema 勘定结论）",
-      "dueAt": "2026-09-03T15:00:00Z"
+      "owner": "CTO 域（小狄）/组长",
+      "action": "residual R1 一句话定性：fd8db82 提交信息及日志称 governance 加 sessionFaceRule，字面键经 git -S 与全文本 grep 于两仓历史零存在——定性为信息键另案落地（HOST_RENDER_REGISTRY 代码承载）或提交信息笔误，并把 session face rule 真源指针（代码常量）补一行进 publish manifest governance 节或 host-object-publish-flow 防后人扑空",
+      "dueAt": "2026-09-08T15:00:00Z"
     },
     {
-      "owner": "CTO 域（小狄/xiaodi-s6-render）",
-      "action": "S6 claude-session 渲染条目+三面渲染+derived 对拍扩展（接令须回执确认接手）",
-      "dueAt": "2026-09-03T15:00:00Z"
-    },
-    {
-      "owner": "小贾+CTO 域",
-      "action": "主窗 2026-09-04 13:00-18:00 北京：S7 manifest+发布+unittest/对拍+S8 治理回填+终态落位+新命令拉起冒烟；备窗 09-05 10:00-14:00，硬闸 09-05 23:00",
-      "dueAt": "2026-09-04T10:00:00Z"
+      "owner": "COS（组长）",
+      "action": "residual R2 一行对齐：bootstrap-小贾.md 降级应急件（09-01 23:35 重写版）名址行=「小贾」且示例命令 -n 小贾，晚于 21:3x 正名 COS 裁定——顺手对齐正名或候 M-001 ⑥别名表批；非身份真源不阻塞",
+      "dueAt": "2026-09-05T15:00:00Z"
     },
     {
       "owner": "CHO",
-      "action": "live 六点链路齐后整案终验复验再签 accepted",
-      "dueAt": "2026-09-05T15:00:00Z"
+      "action": "LG-025 接件对表（M0 09-05/08）：13 席五件套滚动批验收域接件（模板=本案全链 validator+CHO 状态机+对拍）+首刀 CPO colleagues 错别字「CEO 磨人→本人」+W34 审计 §3.1 漏记 9 目录勘误主笔（勘误件交 CAO 独家入册防双写）",
+      "dueAt": "2026-09-08T15:00:00Z"
     }
   ],
   "approvals": [
@@ -62,7 +72,7 @@
     {
       "role": "ChiefHumanResourcesOfficer",
       "status": "approved",
-      "note": "S4 源侧段 accepted（2026-09-01，十项 10/10）+live 六点终验 accepted（CHO 域验读签 2026-09-01 深夜，cho-live-final-verification.md；独立会话 [8e18eb] countersign 候录）"
+      "note": "S4 源侧段 accepted（2026-09-01，十项 10/10）+live 六点终验 countersign accepted（2026-09-01T15:57Z/23:57 北京，独立会话 [8e18eb] CHO 本席正签）：六点实物逐环核验+独立重测第三覆盖（unittest 223/223=177 publish+46 binding，30.7s OK；employee_host_publish dry-run pass errors=0，投影经源码读定非漂移）+证据回读（金丝雀三问全否/cos-smoke 五源恢复候席）；域验读转录件=cho-live-final-verification.md，正签验收件=cho-live-countersign-acceptance.md——R1 勘正：转录件保留意见 2 所称 governance.sessionFaceRule 键路径经实核不存在（git -S 两仓零命中，fd8db82 实 diff 仅 sessionBody+门逻辑），sessionBody 实锚 publish manifest ceo 条目，候 CTO/组长一句话定性，不阻塞"
     }
   ],
   "timebox": {
@@ -77,7 +87,7 @@
     "previousOwner": "旧源侧文本（W28 世代 .github 世代件）+运行态 bootstrap-小贾.md 热修件（小贾自维护）；本次施工执行=小贾",
     "incomingOwner": "CEOChiefOfStaff 岗位本体（不变，现役载体小贾/xiaojia-hub）；验收 owner=CHO",
     "actingOwner": "小贾（董事长助理，董事会令任组长）",
-    "scope": "live（2026-09-01 主窗提前开干，CEO 裁决前置全绿即启）：三面渲染落地（spawn/copilot/claude-session 首件 1884487b），binding 双面 hostEntries，落位四断言+对拍全归位+真件金丝雀三问全否+cos-smoke 冒烟实质通过；CHO 域终验读数候（独立会话 countersign 候录/CEO 代签候）",
+    "scope": "live（2026-09-01 主窗提前开干，CEO 裁决前置全绿即启）：三面渲染落地（spawn/copilot/claude-session 首件 1884487b），binding 双面 hostEntries，落位四断言+对拍全归位+真件金丝雀三问全否+cos-smoke 冒烟实质通过；CHO 域终验读数已录（独立会话 countersign accepted 2026-09-01T15:57Z）",
     "sourceOfTruthFiles": [
       "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.agent.md",
       "TriCompany/source-agents/ceo-chief-of-staff/agent-body.agent.md",
@@ -92,12 +102,12 @@
       "S7: host-object manifest+derived 对拍（含工具名大小写映射显式检查）",
       "裁决⑤: bootstrap-小贾.md 降级件改写（删自指段+应急声明，最后落）"
     ],
-    "completionTrackingStatus": "in-progress",
+    "completionTrackingStatus": "accepted",
     "acceptanceCriteria": [
       "源侧段：S3 三读数（validate 组件区零错/check-sync 0 漂移/unittest 29-29）+handoff §4 十项 checklist+F3 双入口一致性+治理 §8 七条——已全部达成（CHO 2026-09-01 签）",
-      "整案：live 六点链路（source kit/support object/binding profile/live discovery/manifest/治理回填）齐+derived 对拍绿+unittest 绿门+终态落位读数+新命令拉起冒烟（claude -n COS --append-system-prompt-file ...session.md 启动→状态条→候席）——已全部达成（主窗提前开干七项全过+CHO 域终验 accepted 2026-09-01；独立会话 countersign 候录）"
+      "整案：live 六点链路（source kit/support object/binding profile/live discovery/manifest/治理回填）齐+derived 对拍绿+unittest 绿门+终态落位读数+新命令拉起冒烟（claude -n COS --append-system-prompt-file ...session.md 启动→状态条→候席）——已全部达成（主窗提前开干七项全过+CHO 域终验 accepted 2026-09-01；独立会话 countersign 已录 2026-09-01T15:57Z）"
     ],
-    "nextAction": "CHO 域 live 六点终验读数（材料已提请）；终态命令生效（claude -n COS --append-system-prompt-file D:\\Code\\ai\\TriMetaverse\\.claude\\hub\\ceo-chief-of-staff.session.md）；bootstrap-小贾.md 降级件改写（裁决⑤最后落）",
+    "nextAction": "整案 accepted（CHO 2026-09-01 countersign，approvals CHO 条+正签验收件 cho-live-countersign-acceptance.md）；关卷后 residual 唯二=CTO/组长 sessionFaceRule 定性+组长 bootstrap-小贾.md 名址对齐（见 nextActions）；标准启动=claude -n COS --append-system-prompt-file D:\\Code\\ai\\TriMetaverse\\.claude\\hub\\ceo-chief-of-staff.session.md（bootstrap-小贾.md 仅应急降级通道，仅候爆溃/管线不可用）",
     "blocker": "无阻塞",
     "escalations": [
       "frontmatter name 变更候 Governance 裁（spawn 标识 breaking，本案不改）",
@@ -108,7 +118,10 @@
       "io_contract 裁值=不增（status_report 已在 outputs，五字段合同真源在 D-04，增补即双真源）",
       "发布时点裁值=主窗 2026-09-04（周五）13:00-18:00 北京；备窗 09-05 10:00-14:00；硬闸 09-05 23:00；前置闸=S5-S7 完成+derived 对拍绿",
       "候改清单六条见 CHO 验收记录 §七（均不阻塞）：contract 腐点三项/前置核查 5 收敛为 chief-of-staff-rd-orchestration+host-object-publish-flow/双入口同源引用巡检化/latestActiveWeek 主从/name 双名并存既裁/S3 代跑读数由 S6 对拍独立复验",
-      "评估与决策链：评估报告 docs/execution/lg-023-bootstrap-unification-evaluation.md（d95ea868）；金丝雀 Q2 定谳证据 .fade/hub/analysis/bootstrap-unification/evidence-q2-*.txt"
+      "评估与决策链：评估报告 docs/execution/lg-023-bootstrap-unification-evaluation.md（d95ea868）；金丝雀 Q2 定谳证据 .fade/hub/analysis/bootstrap-unification/evidence-q2-*.txt",
+      "live 终验 residual：R1 sessionFaceRule 字面键两仓历史零存在（git -S 零命中，fd8db82 实 diff 仅 sessionBody+门逻辑）=提交信息/日志措辞 vs 实盘偏差，功能由 HOST_RENDER_REGISTRY 代码承载全绿，候 CTO/组长定性；R2 bootstrap-小贾.md 名址行/示例命令未随正名 COS（23:35 重写晚于 21:3x 裁定），候组长一行对齐；R3 escalations 两项维持开放；R4 残句裁定=留（BOD 裁：勘误注框架与历史冻结同构）",
+      "终验读数三重覆盖：组长代跑+BOD 本机亲验+CHO 独立会话重测（223/223 OK 30.7s+dry-run pass errors=0+六点实物逐环核验+证据回读）",
+      "终态命令生效=claude -n COS --append-system-prompt-file D:\\Code\\ai\\TriMetaverse\\.claude\\hub\\ceo-chief-of-staff.session.md（正名 COS 后终态；bootstrap-小贾.md 为应急降级通道，仅候爆溃/管线不可用）"
     ]
   }
 }
