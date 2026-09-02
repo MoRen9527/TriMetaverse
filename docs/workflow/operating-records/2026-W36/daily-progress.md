@@ -116,3 +116,11 @@
   - 2404ec13 docs(registry): 副本同步——名址指针节 14→15 席+BL 席指针行（真源 cf5b8e7 追平，字节级一致；lastSyncedAt 2026-09-02）
   - c9d31e18 docs(lg-026): P0 首件——通道 spec §8.6 组长岗位解锁附则立法落盘（解锁对象=注册制组长 in-process 资格 501 不动/治理三件套全文/事件驱动唤醒形态/业务规则锚/上岗前置闸=§8.5.1 SYSTEM 悬案勿销账）；BOD 裁决全包采纳五裁点生效；宪法加席 BL-<项目代号> 已申 CAO；P1 起 CTO 派 FD @MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:40 +08：自上次进度提交 75a9d75f 后新增 6 条 commit：
+  - 55e0e22e docs(lg-026): 重审报告候裁——CEO 两前提定谳下三问合成：功能达成度≈0 结构性归因（哑巴会话岗位不成立，双席责任认领）/letters 设施保留升格「存储+唤醒基建」/CC session 组长机制草案（ProcessSupervisor+双通道分工+§8.7 附则）/FD 771 行重估 85% 保留升格 15% 冻结/M 面 full-function R 面不设岗+件量 10-30 诚实估计；流程修正提案=联审门第四核查项「能力底座核查」；五裁点候 BOD；CTO 重审件 3e5a14e0 同录 @MoRen
+  - e8d06718 docs(governance): 分权制修订——员工全席归 COS 管，联审 COS 召集（D-15），董事会不持席位通道不直接点将（CEO 2026-09-02 立）@MoRen
+  - 3e5a14e0 docs(lg-026): 组长形态重审报告——公理②源码级实证（TriLC SendMessage 砍跨会话自证）+三问结论（letters 基建保留升格 85%/形态件降级 15%）+CC 会话组长机制草案（如实不护短）
+  - 7b22bba9 merge: 归账——并入 sg 线巡检增量（职责分界条同批）
+  - 5c7ada81 docs(governance): 分权制增职责分界条——董事会只传达 CEO 意图（做什么/为什么/边界/完成判定语义），任务拆解/分工派工/工序排期归 COS（CEO 2026-09-02 立）@MoRen
+  - 7ff8c83e docs(lg-026): 设计加篇——M/R 双 daemon 组长能力三路线评估（D-15 轻量联审 CTO 主笔，候 BOD 裁）
+- registry：v2.1；今日 registry 提交无变化
