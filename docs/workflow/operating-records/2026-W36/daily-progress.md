@@ -124,3 +124,11 @@
   - 5c7ada81 docs(governance): 分权制增职责分界条——董事会只传达 CEO 意图（做什么/为什么/边界/完成判定语义），任务拆解/分工派工/工序排期归 COS（CEO 2026-09-02 立）@MoRen
   - 7ff8c83e docs(lg-026): 设计加篇——M/R 双 daemon 组长能力三路线评估（D-15 轻量联审 CTO 主笔，候 BOD 裁）
 - registry：v2.1；今日 registry 提交无变化
+
+## 2026-09-03（周四）
+
+**r6 恢复轮主叙事**（前身会话 02:18 收口后未及 M-002 回写即遇 02:53 重启中断；本节由 xiaojia-hub-r6 转正后补写）：
+- **重启前末批补录（02:18:04-05 五笔 @MoRen）**：5e0447ff lg-026 §8.7 M 面组长 CC 会话解锁附则立法起草（第二次注册制解锁/三件套迁移版/双通道分工/看护重生/R 面降级/CC headless 预检闸，候 CHO 验收）+设计加篇勘误（路线 a TriCode 撤回）；6fb9c89e lg-026 CHO §8.7 附则验收 accepted 附保留意见三条（岗位本体走 CHO handoff/生效候两闸不开不上 live/--allowedTools 候实施批）；459ec7eb lg-024 CHO 节×席位适用性矩阵初稿（12 节族/A 全席通用 8/B 按席裁 4/C spawn 专属 1，候联审裁点四项）；24376aac lg-024 session 面合同升格方案（组合公式/五断言/三批排期/CHO 保留①定谳）；f669ec1a lg-024 批 0 ceo 席样板升格件入仓（session 变体 17→151 行 18 节终态，五断言过+正签件 diff 交叉验证）。
+- **02:18:06 十件异常覆写（冻结候 CEO 澄清）**：七棵 W35 fade-tutorial-00X-deep/tree-op.json+trilc-lineage-merge run-root.json+tmv-whitepaper.md+trimetaverse.code-workspace 同秒覆写（五件抽样 mtime ±15ms 单一写事件）；七树回 gen_tutorial_trees.py 模板态（收口记录被抹，tree-001 blob=a9c6a143 原始态）/run-root 回 LG-008 第三次重算未入仓态（误提交将动冻结根 c841f337）/whitepaper 图序回退/workspace 目录名对齐（内容独立有益）。前任 transcript 全文 grep gen_tutorial_trees 零调用痕迹，hook/watcher 副作用嫌疑上升，定谳候 CEO——澄清前不提交不 checkout。
+- **02:53 重启+r6 恢复弧线**：TriRLC Daemon 任务 02:53:59 登录触发打火成功（Last Result 0，8711 healthz ok+trimc connected，电池 40% AC）——LG-021/022 转出观察「AC 重启双任务打火终验」用户任务半边首次 PASS；8713/8008/3333 未起候令不催；LG-014 自动化实战首鸣=02:14:47（**重启前**）watchdog unreachable 裁决自动生成 recover-brief-latest，19:29Z 回 ok（streak 16，need_rebuild=false）。r6 六源重建→状态条复述台账全对（现役 13）→triage 收口 **ac55a8df**（FD 小全 TriModel 路由 triage 交付件，董事会令收口卫生补收）→**董事会核验三件过，转正令签发：xiaojia-hub-r6 正式中枢**（SOP 步 4 三处留痕）；LG-023 移销账段（现役 12/销账 14）；本节=M-002 补写。
+- registry：v2.1；今日 registry 提交无变化
