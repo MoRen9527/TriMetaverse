@@ -86,3 +86,14 @@ env 完整性说明（不变）：通道实例全部 env 承载于 cmd 文件内
 - **侦测已就位**：cmd 标记行路径 bug 已修（硬编码绝对路径），下次触发必留痕 C:\Users\jedih\AppData\Local\trilc-channel\taskrun.log。
 - **晨检/重启清单增补**：CEO 任意一次重启后，读 taskrun.log——**有标记=node 层死因在日志里**（修 node 层）；**无标记=调度层**（处置=改 RunOnce 或导出 XML 任务定义换触发器绕队列）。
 - **服务现态（如实）**：8713=jedih 手动实例 connected（SYSTEM 悬案不影响通道可用性）；**「SYSTEM 身份自启」验收顺延至重启后，进行中勿销账**。
+
+### 8.6 组长岗位解锁附则（LG-026 P0 首件；BOD 裁决 2026-09-02 全包采纳）
+
+- **解锁对象（立法写准）**：「注册制组长 in-process agent 资格」——白名单式单 agent 注册，**不开通用 agent 入口，HTTP 宿主三路由 501 闸不动**（§8.2 条文边界由 BOD 裁决明示：LG-020 封的是对外 agent 宿主服务面，非 daemon 进程内受控 agent）。
+- **治理三件套**：
+  1. **工具白名单**：信件 CRUD + SendMessage（daemon 面语义=写信端点 `/internal/v1/letters` + SSE 直推，非 CC harness 工具直通）+ 台账读（`/internal/v1/ledger`）；**无仓写权**。ALLOW/DENY 规则机制现成（app.ts:1545-1547）。
+  2. **目录约束**：组长 agent cwd 钉死通道实例 DATA_DIR（`%LOCALAPPDATA%/trilc-channel/`），不指主仓（HeartbeatAgentConfig.cwd per-agent 字段，REQ-014b 基准）。
+  3. **凭证边界**：`X-Internal-Token` 只注入 daemon 出站层；组长 agent 上下文不持 repo 凭证、不持 git 身份、不持 TriMC token。**组长管信不管码。**
+- **组长会话形态**：事件驱动唤醒（非永续对话）——`TriLCHeartbeatWake` 注册第二 handler，信箱入件即 `requestHeartbeatNow({reason:'action'})` 唤醒，heartbeat-runner 单 turn in-process agentLoop 办完即眠；状态全落信件 DB（SQLite，seq daemon 级全局单调）与台账，不吃对话上下文。
+- **业务规则锚**（详见 LG-026 设计方案书 §二③④⑦）：状态机 待投→已投（组长唯一投递执行者）→已读（收件人唯一定读权）→已升级（旁路终态，新信封引用原信 id）；优先级三档判急两段式（发件人自报+组长形式复核，终裁升级权 COS）；升级数值 C-suite 4h/执行席 1 工作日（BOD 裁）；推送三级 L1 SSE 直推/L2 离线托管上线即报/L3 急件抢占；多组长扩展触发线（日均 200 封×7 天／并行项目≥3／积压事故≥1 次）。
+- **上岗前置闸**：双 daemon ONSTART 自启验收闭环（§8.5.1 SYSTEM 悬案勿销账，候 CEO 插电重启终验）——闸不开组长不上 live。
