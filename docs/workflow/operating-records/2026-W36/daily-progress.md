@@ -106,3 +106,9 @@
   - fbd8c6ca docs(lg-023): CHO 域 live 六点终验 accepted——handoff 三处小勘落地（acceptanceCriteria 冒烟名 -n COS/approvals.CHO 补终验注/timebox label 加 CEO 令提前归因）；manifest 键路径归档行补录（publish manifest liveEntries[0].sessionBody+governance.sessionFaceRule）；余=独立会话 countersign 候录+裁决⑤降级件改写候 cutover
   - 2a505c5e docs(registry): 副本同步——通信名址与命名宪法节+CTO 分派枢纽行新立+补齐 08-31 模块命名权威对照表节（真源 977bc71 滞留追平，字节级一致；lastSyncedAt 2026-09-01）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 654bfcb8 后新增 4 条 commit：
+  - 83692331 docs(lg-026): D-15 首例联审设计方案书候裁——业务组长 daemon 常驻岗+双 daemon 互备：八条逐条结论（事件驱动唤醒底座现成/解锁对象=注册制组长资格 HTTP 501 不动+三件套/SQLite 分表+全局单调 seq/推送三级+TriMC 侧中转 fallback 拓扑 30s leader 心跳 90s 转正/多组长量化触发线/挂 COS 麾下考核三维度）+信件 API 七新端点草案+mermaid 拓扑图+实施五期（P4 seq 冲突演练为最终门禁）+风险三条；CTO 席意见件 23cea463 同录；COS 合成签
+  - 6852827b docs(lg-026): CTO 席联审技术意见件——五条结论+API 面草案+fallback 拓扑（D-15 首例，候 BOD 裁）
+  - be0588ae docs(lg-023): CHO residual 核销回写——R1 已定性+实补（信息键；根因 fd8db82 governance 静默 no-op 领受；TriCompany 781a2de 实补 governance.sessionFaceRule 含 HOST_RENDER_REGISTRY 真源指针句+写前 json 门+写后双硬验证，CHO 复核新 HEAD 223/223 OK 29.6s+键文实读）+R2 已对齐（降级件全改写实读核销：应急声明/表述更正/正名 COS 引 D-13/应急命令 -n COS 金丝雀背书/自指段删）；nextActions 收敛唯 LG-025 M0 候件 @MoRen
+  - 3bc0537b docs(lg-023): CHO live 六点终验 countersign accepted 正签——handoff status=accepted 终签（独立会话 [8e18eb] 第三覆盖：unittest 223/223=177+46 独立重跑 30.7s OK+employee_host_publish dry-run pass errors=0+六点实物逐环核验+金丝雀/冒烟证据回读）；R1 勘正代录件保留意见 2（governance.sessionFaceRule 键两仓历史零存在=措辞 vs 实盘偏差，sessionBody=liveEntries[0] 实锚，候 CTO/组长定性不阻塞）+R2 残差=降级件名址候组长一行对齐；residual 四条入 notes/nextActions；LG-025 接件候 M0（09-05/08 对表+首刀 CPO colleagues+CAO 交叉件主笔） @MoRen
+- registry：v2.1；今日 registry 提交无变化
