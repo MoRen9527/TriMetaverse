@@ -35,12 +35,6 @@
 			"path": "../TriRMC"
 		},
 		{
-			"path": "../TriMC"
-		},
-		{
-			"path": "../TriLC"
-		},
-		{
 			"path": "../TriMobile"
 		},
 		{
@@ -75,6 +69,12 @@
 		},
 		{
 			"path": "../TriCode"
+		},
+		{
+			"path": "../TriRLC"
+		},
+		{
+			"path": "../TriMMC"
 		}
 	],
 	"launch": {
