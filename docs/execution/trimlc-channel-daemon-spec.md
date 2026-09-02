@@ -97,3 +97,17 @@ env 完整性说明（不变）：通道实例全部 env 承载于 cmd 文件内
 - **组长会话形态**：事件驱动唤醒（非永续对话）——`TriLCHeartbeatWake` 注册第二 handler，信箱入件即 `requestHeartbeatNow({reason:'action'})` 唤醒，heartbeat-runner 单 turn in-process agentLoop 办完即眠；状态全落信件 DB（SQLite，seq daemon 级全局单调）与台账，不吃对话上下文。
 - **业务规则锚**（详见 LG-026 设计方案书 §二③④⑦）：状态机 待投→已投（组长唯一投递执行者）→已读（收件人唯一定读权）→已升级（旁路终态，新信封引用原信 id）；优先级三档判急两段式（发件人自报+组长形式复核，终裁升级权 COS）；升级数值 C-suite 4h/执行席 1 工作日（BOD 裁）；推送三级 L1 SSE 直推/L2 离线托管上线即报/L3 急件抢占；多组长扩展触发线（日均 200 封×7 天／并行项目≥3／积压事故≥1 次）。
 - **上岗前置闸**：双 daemon ONSTART 自启验收闭环（§8.5.1 SYSTEM 悬案勿销账，候 CEO 插电重启终验）——闸不开组长不上 live。
+
+### 8.7 M 面组长 CC 会话解锁附则（LG-026 重审后正解形态立法；BOD 授权 2026-09-02，CTO 起草候 CHO 验收）
+
+- **解锁对象（第二次注册制解锁，§8.6 同构）**：M 面业务组长=**被 daemon 拉起的独立 CC session**（spawn/看护/重生归 daemon，组长本体=全能力 CC 会话，原生跨会话通信）。立法依据=R 面 agent-core 移植子集无跨会话消息能力（TriRLC send-message.ts:1-6 自证「CC 支持 bridge/uds 跨会话 → TriLC 仅支持进程内消息」），in-process 组长=哑巴会话（LG-026 重审报告 2026-09-02，lg026-leader-form-re-review.md）。**HTTP 宿主三路由 501 闸不动**——口径重述：daemon 不做 agent 宿主服务面，做的是「进程监督的 CC 会话管理器」（组长本体=CC 进程，非 daemon 内 agentLoop）。
+- **治理三件套（§8.6 迁移版）**：
+  1. **工具白名单**：CC `--allowedTools` 裁剪=信件 API 面（letters 端点读写+台账读）；无仓写权、无 shell 泛权。**组长管信不管码条文延续。**
+  2. **目录约束**：组长工作目录钉通道实例 DATA_DIR（`%LOCALAPPDATA%/trilc-channel/`）。
+  3. **凭证边界**：CC 会话持模型凭据（组长本体必要面），不持 repo 凭证、不持 git 身份、不持 TriMC token。
+- **双通道分工（正解核心设计）**：**信箱 API=任务队列+审计轨迹**——spawn 时待办摘要注入初始 prompt，全文与办结经 letters 端点读写，状态机/台账/审计（§8.6 业务规则锚）不变；**CC 原生跨会话消息=组长↔员工席实时对话**——涉账务动作一律回写信箱留痕（跨会话对话不留审计，故账走信箱）。
+- **会话形态（§8.6 条款延续）**：事件驱动唤醒不变——信箱入件→`requestHeartbeatNow({reason:'action'})`→wake handler 目标自 `runHeartbeatAgent` 换为 `spawnCCLead`（一次投递待办批，办完即眠）；状态在信件 DB 与台账、不吃对话上下文。
+- **看护/重生**：ProcessSupervisor 进程监督（超时杀/崩溃重启计数/僵尸回收；session-reaper+registerShellExecTool 先例）；`-p` 输出 JSON 解析→台账回写；Windows 句柄教训（uvicorn reload 幽灵坑 2026-09-02/§8.5.1 SYSTEM 队列怪癖）入监督器设计约束。
+- **R 面组长降级**：in-process 形态（lead-tools/minTier/permissionRules）降为轻量降级模式，**冻结不再演进**，去留候 BOD 另裁（资产处置表见重审报告 §二问 3）。
+- **风险面（BOD 已知悉权衡）**：token 成本（全量 CC 会话 vs in-process subagent tier）/时延（CC spawn 秒级 vs 毫秒级）/Windows 进程管理面。
+- **上岗前置闸（继承+新增）**：§8.6 前置闸继承（双 daemon ONSTART 自启验收闭环）；新增 CC headless 可用性预检（二进制/凭据在位）为 spawn 面前置。

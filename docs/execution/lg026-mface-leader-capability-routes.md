@@ -2,7 +2,8 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/lg026-mface-leader-capability-routes.md
 - syncMode: source-only
-- lastSyncedAt: 2026-09-02
+- lastSyncedAt: 2026-09-02（同日勘误：路线 a 撤回，见下）
+- **勘误（2026-09-02 重审后，CEO 两前提裁定）**：路线 a「letters 抽 TriCode 共享库」**撤回**——TriCode 定位=glue 层（驱动/链接 coding agent），非共享信件库，本篇 a 路线定性错误；**中期终局改为「letters 稳定期（P4 收口后）二次解锁 M 面组长（CC 会话形态，§8.7 附则）」**；c（转发员）被「M 面组长本体」自然替代（M 面不需要转发员——M 面直接是组长宿主）；b（cherry-pick）排除结论不变。正解形态立法=通道 spec §8.7（同日重审报告 lg026-leader-form-re-review.md）。
 - 性质：CEO 新需求触发（M/R 两 daemon 均需业务组）——CTO 主笔技术评估 + COS 合成，候 BOD 裁；不抢 P4 主线
 - 需求事实：letters 全套（letter-store/sweeper/endpoints/lead-tools+agent-core minTier）只在 TriRLC 仓已全链 PASS（三期验收 2026-09-02）；TriMLC 仓停在通道 Profile（未含 letters）
 - 附加约束：M 面组长 in-process 需通道 Profile 宿主 501 **第二次注册制解锁**（LG-020 附则 + trimlc-channel-daemon-spec §8.6 先例同构，第二张附则 M 面版+治理三件套同构）
