@@ -124,8 +124,16 @@
   - 5c7ada81 docs(governance): 分权制增职责分界条——董事会只传达 CEO 意图（做什么/为什么/边界/完成判定语义），任务拆解/分工派工/工序排期归 COS（CEO 2026-09-02 立）@MoRen
   - 7ff8c83e docs(lg-026): 设计加篇——M/R 双 daemon 组长能力三路线评估（D-15 轻量联审 CTO 主笔，候 BOD 裁）
 - registry：v2.1；今日 registry 提交无变化
-
 ## 2026-09-03（周四）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @02:20 +08：自上次进度提交 5fd5d8e0 后新增 5 条 commit：
+  - f669ec1a ops(lg-024): 批 0 ceo 席样板升格件入仓——session 变体 17→151 行（合成件 body 全量直入零剥离+sessionBody 会话面补充段尾追；正名 COS+13 节治理结构+18 节终态），五断言过（无 frontmatter/尾注/补充段/节结构 golden/drift=0 幂等）+正签件 diff 交叉验证（FD e8c5e75 验证轮落盘+本轮 drift=0 确证）；如实注记：默认输出结构（CHO 矩阵 C 类）随零剥离入——C 类排除系矩阵草案候联审项与已批零剥离并存；手作件零接触（原子退役律）@MoRen
+  - 24376aac docs(lg-024): session 面合同升格方案——组合公式（全量直入+零剥离初版+sessionBody 补充段）/五断言验证（golden 节集基线）/三批排期（批0 ceo 样板 P4 前窗）/CHO 保留①复用语义定谳（复用机制不复用文件）
+  - 459ec7eb docs(lg-024): CHO 节×席位适用性矩阵初稿——三席 spawn 面实读锚定（CHO 14 节/COS 13 节/CPO 12 节，按节族非字面 14 节）；A 全席通用 8 族/B 按席位裁 4 族〔中央收口路由×BL=CEO 点名联审项，两型收口面框架〕/C spawn 专属 1 族〔默认输出结构——会话面输出契约由 M-001 状态条合同承担防双真源〕；形态轴三型（常驻中枢/常驻席位/事件驱动 BL）；升格验收口径六条衔接 LG-023 四断言链；原子退役律+7 件手作件顺序建议+sessionBody 落 manifest 不落 contract 先例延续；候联审裁点四项 @MoRen
+  - 6fb9c89e docs(lg-026): CHO §8.7 附则验收 accepted 附保留意见三条——四口径核验过（§8.6 同构/重审报告一致性/routes 勘误同向/§8.5.1 闸继承/D-04·D-13 相容〔BL 席已注册·首任正名 BL 无后缀〕）；保留=岗位本体到岗仍走 CHO handoff 流程（BL session-body 五件套候 P5 落齐）/生效候两闸（P5 批+前置闸）不开不上 live/--allowedTools 参数表候实施批；spec §8.7 标题同步签注 @MoRen
+  - 5e0447ff docs(lg-026): §8.7 M 面组长 CC 会话解锁附则立法起草（第二次注册制解锁/三件套迁移版/双通道分工/看护重生/R 面降级/CC headless 预检闸，候 CHO 验收）+设计加篇勘误（路线 a TriCode 撤回，中期终局改二次解锁 M 面组长）
+- registry：v2.1；今日 registry 提交无变化
 
 **r6 恢复轮主叙事**（前身会话 02:18 收口后未及 M-002 回写即遇 02:53 重启中断；本节由 xiaojia-hub-r6 转正后补写）：
 - **重启前末批补录（02:18:04-05 五笔 @MoRen）**：5e0447ff lg-026 §8.7 M 面组长 CC 会话解锁附则立法起草（第二次注册制解锁/三件套迁移版/双通道分工/看护重生/R 面降级/CC headless 预检闸，候 CHO 验收）+设计加篇勘误（路线 a TriCode 撤回）；6fb9c89e lg-026 CHO §8.7 附则验收 accepted 附保留意见三条（岗位本体走 CHO handoff/生效候两闸不开不上 live/--allowedTools 候实施批）；459ec7eb lg-024 CHO 节×席位适用性矩阵初稿（12 节族/A 全席通用 8/B 按席裁 4/C spawn 专属 1，候联审裁点四项）；24376aac lg-024 session 面合同升格方案（组合公式/五断言/三批排期/CHO 保留①定谳）；f669ec1a lg-024 批 0 ceo 席样板升格件入仓（session 变体 17→151 行 18 节终态，五断言过+正签件 diff 交叉验证）。
