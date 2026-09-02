@@ -112,3 +112,7 @@
   - be0588ae docs(lg-023): CHO residual 核销回写——R1 已定性+实补（信息键；根因 fd8db82 governance 静默 no-op 领受；TriCompany 781a2de 实补 governance.sessionFaceRule 含 HOST_RENDER_REGISTRY 真源指针句+写前 json 门+写后双硬验证，CHO 复核新 HEAD 223/223 OK 29.6s+键文实读）+R2 已对齐（降级件全改写实读核销：应急声明/表述更正/正名 COS 引 D-13/应急命令 -n COS 金丝雀背书/自指段删）；nextActions 收敛唯 LG-025 M0 候件 @MoRen
   - 3bc0537b docs(lg-023): CHO live 六点终验 countersign accepted 正签——handoff status=accepted 终签（独立会话 [8e18eb] 第三覆盖：unittest 223/223=177+46 独立重跑 30.7s OK+employee_host_publish dry-run pass errors=0+六点实物逐环核验+金丝雀/冒烟证据回读）；R1 勘正代录件保留意见 2（governance.sessionFaceRule 键两仓历史零存在=措辞 vs 实盘偏差，sessionBody=liveEntries[0] 实锚，候 CTO/组长定性不阻塞）+R2 残差=降级件名址候组长一行对齐；residual 四条入 notes/nextActions；LG-025 接件候 M0（09-05/08 对表+首刀 CPO colleagues+CAO 交叉件主笔） @MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:30 +08：自上次进度提交 4f1e8e02 后新增 2 条 commit：
+  - 2404ec13 docs(registry): 副本同步——名址指针节 14→15 席+BL 席指针行（真源 cf5b8e7 追平，字节级一致；lastSyncedAt 2026-09-02）
+  - c9d31e18 docs(lg-026): P0 首件——通道 spec §8.6 组长岗位解锁附则立法落盘（解锁对象=注册制组长 in-process 资格 501 不动/治理三件套全文/事件驱动唤醒形态/业务规则锚/上岗前置闸=§8.5.1 SYSTEM 悬案勿销账）；BOD 裁决全包采纳五裁点生效；宪法加席 BL-<项目代号> 已申 CAO；P1 起 CTO 派 FD @MoRen
+- registry：v2.1；今日 registry 提交无变化
