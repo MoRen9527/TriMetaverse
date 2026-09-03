@@ -12,557 +12,18 @@
   ],
   "objectSets": [
     {
-      "objectSetId": "chief-product-officer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "ChiefProductOfficer",
-      "generatedAt": "2026-04-29T00:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-product-officer",
-      "sourceRefs": [
-        "TriCompany/.github/source-agents/chief-product-officer/chief-product-officer.agent.md",
-        "TriCompany/.github/source-agents/chief-product-officer/chief-product-officer.soul.md",
-        "TriCompany/.github/source-agents/chief-product-officer/chief-product-officer.memory.md",
-        "TriCompany/.github/source-agents/chief-product-officer/chief-product-officer.colleagues.md",
-        "TriCompany/.github/source-agents/chief-product-officer/chief-product-officer.social.md",
-        "TriCompany/docs/product/PROJECT.md",
-        "TriCompany/docs/product/REQUIREMENTS.md",
-        "TriCompany/docs/product/ROADMAP.md",
-        "TriCompany/docs/product/STATE.md",
-        "TriCompany/docs/registry/product-state.md",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/chief-product-officer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "chief-product-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-product-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "chief-product-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-product-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/chief-product-officer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "live-entry-existing-not-changed",
-      "notes": [
-        "The existing TriMetaverse/.github chief-product-officer live entry is the active live agent for the current Copilot-host; no second live agent file is published.",
-        "This object set binds that live entry to the role/employee workspace model without changing the live .github entry identity.",
-        "This onboarding means current Copilot-host live enablement and TriCompany source-side handoff, not a TriMC formal host switch.",
-        "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
-      ],
-      "employeeDisplayName": "小乔"
-    },
-    {
-      "objectSetId": "chief-technology-officer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "ChiefTechnologyOfficer",
-      "generatedAt": "2026-04-29T00:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-technology-officer",
-      "sourceRefs": [
-        "TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.agent.md",
-        "TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.soul.md",
-        "TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.memory.md",
-        "TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.colleagues.md",
-        "TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.social.md",
-        "TriCompany/docs/engineering/DESIGN.md",
-        "TriCompany/docs/engineering/ROADMAP.md",
-        "TriCompany/docs/engineering/STATE.md",
-        "TriCompany/docs/engineering/metacognition-architecture.md",
-        "TriCompany/docs/registry/code-state.md",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/chief-technology-officer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "chief-technology-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-technology-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "chief-technology-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-technology-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/chief-technology-officer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "live-entry-existing-not-changed",
-      "notes": [
-        "The existing TriMetaverse/.github chief-technology-officer live entry is the active live agent for the current Copilot-host; no second live agent file is published.",
-        "This object set binds that live entry to the role/employee workspace model without changing the live .github entry identity.",
-        "This onboarding means current Copilot-host live enablement and TriCompany source-side handoff, not a TriMC formal host switch.",
-        "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
-      ],
-      "employeeDisplayName": "小狄"
-    },
-    {
-      "objectSetId": "chief-human-resources-officer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "ChiefHumanResourcesOfficer",
-      "generatedAt": "2026-04-29T00:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-human-resources-officer",
-      "sourceRefs": [
-        "TriCompany/docs/workflow/chief-human-resources-officer-role.md",
-        "TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.agent.md",
-        "TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.soul.md",
-        "TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.memory.md",
-        "TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.colleagues.md",
-        "TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.social.md",
-        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
-        "TriCompany/docs/workflow/host-object-publish-flow.md",
-        "TriCompany/docs/workflow/tricompany-secretariat.md",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/chief-human-resources-officer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "chief-human-resources-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-human-resources-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "chief-human-resources-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-human-resources-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/chief-human-resources-officer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "current-copilot-host-live",
-      "notes": [
-        "ChiefHumanResourcesOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
-        "The live discovery entry is TriMetaverse/.github/agents/chief-human-resources-officer.agent.md.",
-        "CHO owns staffing governance, role enablement and handoff completion tracking; this does not imply TriMC formal host switch.",
-        "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
-      ]
-    },
-    {
-      "objectSetId": "chief-administrative-officer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "ChiefAdministrativeOfficer",
-      "generatedAt": "2026-04-29T00:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-administrative-officer",
-      "sourceRefs": [
-        "TriCompany/docs/workflow/chief-administrative-officer-role.md",
-        "TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.agent.md",
-        "TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.soul.md",
-        "TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.memory.md",
-        "TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.colleagues.md",
-        "TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.social.md",
-        "TriCompany/docs/workflow/tricompany-secretariat.md",
-        "TriCompany/docs/workflow/host-object-publish-flow.md",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
-        "TriMetaverse/docs/registry/company-governance-state.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/chief-administrative-officer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "chief-administrative-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-administrative-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "chief-administrative-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-administrative-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/chief-administrative-officer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "current-copilot-host-live",
-      "notes": [
-        "ChiefAdministrativeOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
-        "The live discovery entry is TriMetaverse/.github/agents/chief-administrative-officer.agent.md.",
-        "CAO owns administration, secretariat mechanism, meeting governance and governance documentation ownership; this does not imply TriMC formal host switch.",
-        "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
-      ]
-    },
-    {
-      "objectSetId": "chief-marketing-officer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "ChiefMarketingOfficer",
-      "generatedAt": "2026-04-29T00:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-marketing-officer",
-      "sourceRefs": [
-        "TriCompany/docs/workflow/chief-marketing-officer-role.md",
-        "TriCompany/.github/source-agents/chief-marketing-officer/chief-marketing-officer.agent.md",
-        "TriCompany/.github/source-agents/chief-marketing-officer/chief-marketing-officer.soul.md",
-        "TriCompany/.github/source-agents/chief-marketing-officer/chief-marketing-officer.memory.md",
-        "TriCompany/.github/source-agents/chief-marketing-officer/chief-marketing-officer.colleagues.md",
-        "TriCompany/.github/source-agents/chief-marketing-officer/chief-marketing-officer.social.md",
-        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
-        "TriCompany/docs/workflow/host-object-publish-flow.md",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
-        "TriMetaverse/tricompany.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/chief-marketing-officer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "chief-marketing-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-marketing-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "chief-marketing-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-marketing-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/chief-marketing-officer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "current-copilot-host-live",
-      "notes": [
-        "ChiefMarketingOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
-        "The live discovery entry is TriMetaverse/.github/agents/chief-marketing-officer.agent.md.",
-        "CMO owns market research, competitor intelligence, trend and hotspot capture, and structured product inputs for CPO; this does not imply TriMC formal host switch.",
-        "Current enablement does not imply automated internet crawling, production market-data pipelines, or scheduled research jobs are already implemented.",
-        "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
-      ]
-    },
-    {
-      "objectSetId": "chief-operating-officer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "ChiefOperatingOfficer",
-      "generatedAt": "2026-04-29T00:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-operating-officer",
-      "sourceRefs": [
-        "TriCompany/docs/workflow/chief-operating-officer-role.md",
-        "TriCompany/.github/source-agents/chief-operating-officer/chief-operating-officer.agent.md",
-        "TriCompany/.github/source-agents/chief-operating-officer/chief-operating-officer.soul.md",
-        "TriCompany/.github/source-agents/chief-operating-officer/chief-operating-officer.memory.md",
-        "TriCompany/.github/source-agents/chief-operating-officer/chief-operating-officer.colleagues.md",
-        "TriCompany/.github/source-agents/chief-operating-officer/chief-operating-officer.social.md",
-        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
-        "TriCompany/docs/workflow/host-object-publish-flow.md",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
-        "TriMetaverse/tricompany.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/chief-operating-officer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "chief-operating-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-operating-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "chief-operating-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-operating-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/chief-operating-officer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "current-copilot-host-live",
-      "notes": [
-        "ChiefOperatingOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
-        "The live discovery entry is TriMetaverse/.github/agents/chief-operating-officer.agent.md.",
-        "COO owns operating cadence, rollout planning, cross-functional execution windows and recovery loops for CMO/CPO/CFO/CTO/TriDev collaboration; this does not imply TriMC formal host switch.",
-        "Current enablement does not imply production dashboards, automated scheduling, automated rollout, automated rollback or a complete authorization matrix are already implemented.",
-        "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
-      ]
-    },
-    {
-      "objectSetId": "chief-financial-officer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "ChiefFinancialOfficer",
-      "generatedAt": "2026-04-29T00:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-financial-officer",
-      "sourceRefs": [
-        "TriCompany/docs/workflow/chief-financial-officer-role.md",
-        "TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.agent.md",
-        "TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.soul.md",
-        "TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.memory.md",
-        "TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.colleagues.md",
-        "TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.social.md",
-        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
-        "TriCompany/docs/workflow/host-object-publish-flow.md",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
-        "TriMetaverse/tricompany.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/chief-financial-officer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "chief-financial-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-financial-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "chief-financial-officer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-financial-officer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/chief-financial-officer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "current-copilot-host-live",
-      "notes": [
-        "ChiefFinancialOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
-        "The live discovery entry is TriMetaverse/.github/agents/chief-financial-officer.agent.md.",
-        "CFO owns budget guardrails, cost controls, profitability checks, pricing assumptions and financial risk review for CMO/CPO/COO/CTO/TriDev collaboration; this does not imply TriMC formal host switch.",
-        "Current enablement does not imply production ledgers, automated settlement, on-chain budgets, on-chain revenue sharing or a complete finance authorization matrix are already implemented.",
-        "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
-      ]
-    },
-    {
       "objectSetId": "rd-trainer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
+      "status": "current-copilot-host-live",
       "ownerRole": "RAndDTrainer",
       "generatedAt": "2026-04-29T00:00:00+08:00",
       "generator": "python -m runtime.cognition.employee_host_object_generation --employee rd-trainer",
       "sourceRefs": [
         "TriCompany/docs/workflow/rd-trainer-role.md",
-        "TriCompany/.github/source-agents/rd-trainer/rd-trainer.agent.md",
-        "TriCompany/.github/source-agents/rd-trainer/rd-trainer.soul.md",
-        "TriCompany/.github/source-agents/rd-trainer/rd-trainer.memory.md",
-        "TriCompany/.github/source-agents/rd-trainer/rd-trainer.colleagues.md",
-        "TriCompany/.github/source-agents/rd-trainer/rd-trainer.social.md",
+        "TriCompany/source-agents/rd-trainer/rd-trainer.agent.md",
+        "TriCompany/source-agents/rd-trainer/rd-trainer.soul.md",
+        "TriCompany/source-agents/rd-trainer/rd-trainer.memory.md",
+        "TriCompany/source-agents/rd-trainer/rd-trainer.colleagues.md",
+        "TriCompany/source-agents/rd-trainer/rd-trainer.social.md",
         "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
         "TriCompany/docs/training/README.md",
         "TriCompany/docs/training/ipd-usage-guide.md"
@@ -619,162 +80,13 @@
       ],
       "liveEntryStatus": "current-copilot-host-live",
       "notes": [
-        "RAndDTrainer is enabled as a TriCompany module live agent in the current Copilot-host phase.",
-        "The live discovery entry is TriCompany/.github/agents/rd-trainer.agent.md; the source kit remains under TriCompany/.github/source-agents/rd-trainer.",
+        "RAndDTrainer is enabled as a current Copilot-host live employee in the current phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/rd-trainer.agent.md; the source kit remains under TriCompany/source-agents/rd-trainer.",
         "The legacy project-trainer id is retained only as a compatibility alias and is replaced in support manifests by rd-trainer.",
         "RAndDTrainer runtime cognition state is created only after a live/runtime write, not during support payload generation.",
-        "Source .github/source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
       ],
       "employeeDisplayName": "小吴"
-    },
-    {
-      "objectSetId": "test-engineer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "TestEngineer",
-      "generatedAt": "2026-07-14T05:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee test-engineer",
-      "sourceRefs": [
-        "TriCompany/.github/source-agents/test-engineer/test-engineer.agent.md",
-        "TriCompany/.github/source-agents/test-engineer/test-engineer.soul.md",
-        "TriCompany/.github/source-agents/test-engineer/test-engineer.memory.md",
-        "TriCompany/.github/source-agents/test-engineer/test-engineer.colleagues.md",
-        "TriCompany/.github/source-agents/test-engineer/test-engineer.social.md",
-        "TriCompany/docs/registry/TestEngineer.contract.yaml",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/test-engineer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "test-engineer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/test-engineer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "test-engineer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/test-engineer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/test-engineer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "current-copilot-host-live",
-      "notes": [
-        "TestEngineer is enabled as a TriCompany module live agent in the current Copilot-host phase.",
-        "The live discovery entry is TriMetaverse/.github/agents/test-engineer.agent.md; the source kit remains under TriCompany/.github/source-agents/test-engineer.",
-        "TestEngineer reports to CPO (product quality) and CTO (technical quality); peers with FullStackDeveloper.",
-        "TestEngineer runtime cognition state is created only after a live/runtime write, not during support payload generation."
-      ],
-      "employeeDisplayName": "小柯"
-    },
-    {
-      "objectSetId": "full-stack-developer-knowledge-workspace-v0.1",
-      "status": "generated-staging",
-      "ownerRole": "FullStackDeveloper",
-      "generatedAt": "2026-07-14T05:15:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee full-stack-developer",
-      "sourceRefs": [
-        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.agent.md",
-        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.soul.md",
-        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.memory.md",
-        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.colleagues.md",
-        "TriCompany/.github/source-agents/full-stack-developer/full-stack-developer.social.md",
-        "TriCompany/docs/registry/FullStackDeveloper.contract.yaml",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/full-stack-developer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "full-stack-developer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/full-stack-developer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "full-stack-developer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/full-stack-developer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/full-stack-developer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "current-copilot-host-live",
-      "notes": [
-        "FullStackDeveloper is enabled as a TriCompany module live agent in the current Copilot-host phase.",
-        "The live discovery entry is TriMetaverse/.github/agents/full-stack-developer.agent.md; the source kit remains under TriCompany/.github/source-agents/full-stack-developer.",
-        "FullStackDeveloper reports to CTO; peers with TestEngineer. Forbidden from bypassing tests before merging code.",
-        "FullStackDeveloper runtime cognition state is created only after a live/runtime write, not during support payload generation.",
-        "Binding profile status is 'generated-staging' pending CTO activation after manifest registration."
-      ],
-      "employeeDisplayName": "小全"
     },
     {
       "objectSetId": "ceo-chief-of-staff-knowledge-workspace-v0.1",
@@ -851,7 +163,860 @@
         "Standard xiaojia-hub session launch: claude -n COS --append-system-prompt-file D:\\Code\\ai\\TriMetaverse\\.claude\\hub\\ceo-chief-of-staff.session.md (claude-session host face; payload rendered by the unified publish pipeline from source TriCompany/source-agents/ceo-chief-of-staff/session-body.agent.md; session canonical name COS per CEO naming ruling 2026-09-01, aliases xiaojia/zongcai-zhuli/jarvis).",
         "This session launch command supersedes the earlier plan of pointing --append-system-prompt-file at TriMetaverse/.claude/agents/ceo-chief-of-staff.md: canary evidence (TriMetaverse/.fade/hub/analysis/bootstrap-unification/evidence-q2-canary.txt + evidence-q2-control.txt, decision D25 2026-09-01) showed that flag injects frontmatter verbatim and spawn-limited tools conflict with session tool needs.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "sessionBody": "TriCompany/source-agents/ceo-chief-of-staff/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/ceo-chief-of-staff.agent.md",
+          "source": "TriCompany/source-agents/ceo-chief-of-staff/ceo-chief-of-staff.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/ceo-chief-of-staff/session-body.agent.md",
+          "renderTemplate": "host-default"
+        }
       ]
+    },
+    {
+      "objectSetId": "chief-product-officer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "ChiefProductOfficer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-product-officer",
+      "sourceRefs": [
+        "TriCompany/source-agents/chief-product-officer/chief-product-officer.agent.md",
+        "TriCompany/source-agents/chief-product-officer/chief-product-officer.soul.md",
+        "TriCompany/source-agents/chief-product-officer/chief-product-officer.memory.md",
+        "TriCompany/source-agents/chief-product-officer/chief-product-officer.colleagues.md",
+        "TriCompany/source-agents/chief-product-officer/chief-product-officer.social.md",
+        "TriCompany/docs/product/PROJECT.md",
+        "TriCompany/docs/product/REQUIREMENTS.md",
+        "TriCompany/docs/product/ROADMAP.md",
+        "TriCompany/docs/product/STATE.md",
+        "TriCompany/docs/registry/product-state.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/chief-product-officer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "chief-product-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-product-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "chief-product-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-product-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/chief-product-officer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "live-entry-existing-not-changed",
+      "notes": [
+        "The existing TriMetaverse/.github chief-product-officer live entry is the active live agent for the current Copilot-host; no second live agent file is published.",
+        "This object set binds that live entry to the role/employee workspace model without changing the live .github entry identity.",
+        "This onboarding means current Copilot-host live enablement and TriCompany source-side handoff, not a TriMC formal host switch.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "employeeDisplayName": "小乔"
+    },
+    {
+      "objectSetId": "chief-technology-officer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "ChiefTechnologyOfficer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-technology-officer",
+      "sourceRefs": [
+        "TriCompany/source-agents/chief-technology-officer/chief-technology-officer.agent.md",
+        "TriCompany/source-agents/chief-technology-officer/chief-technology-officer.soul.md",
+        "TriCompany/source-agents/chief-technology-officer/chief-technology-officer.memory.md",
+        "TriCompany/source-agents/chief-technology-officer/chief-technology-officer.colleagues.md",
+        "TriCompany/source-agents/chief-technology-officer/chief-technology-officer.social.md",
+        "TriCompany/docs/engineering/DESIGN.md",
+        "TriCompany/docs/engineering/ROADMAP.md",
+        "TriCompany/docs/engineering/STATE.md",
+        "TriCompany/docs/engineering/metacognition-architecture.md",
+        "TriCompany/docs/registry/code-state.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/chief-technology-officer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "chief-technology-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-technology-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "chief-technology-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-technology-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/chief-technology-officer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "live-entry-existing-not-changed",
+      "notes": [
+        "The existing TriMetaverse/.github chief-technology-officer live entry is the active live agent for the current Copilot-host; no second live agent file is published.",
+        "This object set binds that live entry to the role/employee workspace model without changing the live .github entry identity.",
+        "This onboarding means current Copilot-host live enablement and TriCompany source-side handoff, not a TriMC formal host switch.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "employeeDisplayName": "小狄"
+    },
+    {
+      "objectSetId": "chief-marketing-officer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "ChiefMarketingOfficer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-marketing-officer",
+      "sourceRefs": [
+        "TriCompany/docs/workflow/chief-marketing-officer-role.md",
+        "TriCompany/source-agents/chief-marketing-officer/chief-marketing-officer.agent.md",
+        "TriCompany/source-agents/chief-marketing-officer/chief-marketing-officer.soul.md",
+        "TriCompany/source-agents/chief-marketing-officer/chief-marketing-officer.memory.md",
+        "TriCompany/source-agents/chief-marketing-officer/chief-marketing-officer.colleagues.md",
+        "TriCompany/source-agents/chief-marketing-officer/chief-marketing-officer.social.md",
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+        "TriMetaverse/cyber-company.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/chief-marketing-officer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "chief-marketing-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-marketing-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "chief-marketing-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-marketing-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/chief-marketing-officer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "ChiefMarketingOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-marketing-officer.agent.md.",
+        "CMO owns market research, competitor intelligence, trend and hotspot capture, and structured product inputs for CPO; this does not imply TriMC formal host switch.",
+        "Current enablement does not imply automated internet crawling, production market-data pipelines, or scheduled research jobs are already implemented.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ]
+    },
+    {
+      "objectSetId": "chief-operating-officer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "ChiefOperatingOfficer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-operating-officer",
+      "sourceRefs": [
+        "TriCompany/docs/workflow/chief-operating-officer-role.md",
+        "TriCompany/source-agents/chief-operating-officer/chief-operating-officer.agent.md",
+        "TriCompany/source-agents/chief-operating-officer/chief-operating-officer.soul.md",
+        "TriCompany/source-agents/chief-operating-officer/chief-operating-officer.memory.md",
+        "TriCompany/source-agents/chief-operating-officer/chief-operating-officer.colleagues.md",
+        "TriCompany/source-agents/chief-operating-officer/chief-operating-officer.social.md",
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+        "TriMetaverse/cyber-company.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/chief-operating-officer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "chief-operating-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-operating-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "chief-operating-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-operating-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/chief-operating-officer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "ChiefOperatingOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-operating-officer.agent.md.",
+        "COO owns operating cadence, rollout planning, cross-functional execution windows and recovery loops for CMO/CPO/CFO/CTO/TriDev collaboration; this does not imply TriMC formal host switch.",
+        "Current enablement does not imply production dashboards, automated scheduling, automated rollout, automated rollback or a complete authorization matrix are already implemented.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ]
+    },
+    {
+      "objectSetId": "chief-financial-officer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "ChiefFinancialOfficer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-financial-officer",
+      "sourceRefs": [
+        "TriCompany/docs/workflow/chief-financial-officer-role.md",
+        "TriCompany/source-agents/chief-financial-officer/chief-financial-officer.agent.md",
+        "TriCompany/source-agents/chief-financial-officer/chief-financial-officer.soul.md",
+        "TriCompany/source-agents/chief-financial-officer/chief-financial-officer.memory.md",
+        "TriCompany/source-agents/chief-financial-officer/chief-financial-officer.colleagues.md",
+        "TriCompany/source-agents/chief-financial-officer/chief-financial-officer.social.md",
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+        "TriMetaverse/cyber-company.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/chief-financial-officer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "chief-financial-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-financial-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "chief-financial-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-financial-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/chief-financial-officer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "ChiefFinancialOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-financial-officer.agent.md.",
+        "CFO owns budget guardrails, cost controls, profitability checks, pricing assumptions and financial risk review for CMO/CPO/COO/CTO/TriDev collaboration; this does not imply TriMC formal host switch.",
+        "Current enablement does not imply production ledgers, automated settlement, on-chain budgets, on-chain revenue sharing or a complete finance authorization matrix are already implemented.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ]
+    },
+    {
+      "objectSetId": "chief-human-resources-officer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "ChiefHumanResourcesOfficer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-human-resources-officer",
+      "sourceRefs": [
+        "TriCompany/docs/workflow/chief-human-resources-officer-role.md",
+        "TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.agent.md",
+        "TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.soul.md",
+        "TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.memory.md",
+        "TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.colleagues.md",
+        "TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.social.md",
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/workflow/cyber-company-secretariat.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/chief-human-resources-officer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "chief-human-resources-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-human-resources-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "chief-human-resources-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-human-resources-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/chief-human-resources-officer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "ChiefHumanResourcesOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-human-resources-officer.agent.md.",
+        "CHO owns staffing governance, role enablement and handoff completion tracking; this does not imply TriMC formal host switch.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ]
+    },
+    {
+      "objectSetId": "chief-administrative-officer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "ChiefAdministrativeOfficer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee chief-administrative-officer",
+      "sourceRefs": [
+        "TriCompany/docs/workflow/chief-administrative-officer-role.md",
+        "TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.agent.md",
+        "TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.soul.md",
+        "TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.memory.md",
+        "TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.colleagues.md",
+        "TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.social.md",
+        "TriCompany/docs/workflow/cyber-company-secretariat.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+        "TriMetaverse/docs/registry/company-governance-state.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/chief-administrative-officer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "chief-administrative-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/chief-administrative-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "chief-administrative-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/chief-administrative-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/chief-administrative-officer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "ChiefAdministrativeOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-administrative-officer.agent.md.",
+        "CAO owns administration, secretariat mechanism, meeting governance and governance documentation ownership; this does not imply TriMC formal host switch.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ]
+    },
+    {
+      "objectSetId": "senior-test-engineer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "TestEngineer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee senior-test-engineer",
+      "sourceRefs": [
+        "TriCompany/source-agents/test-engineer/test-engineer.agent.md",
+        "TriCompany/source-agents/test-engineer/test-engineer.soul.md",
+        "TriCompany/source-agents/test-engineer/test-engineer.memory.md",
+        "TriCompany/source-agents/test-engineer/test-engineer.colleagues.md",
+        "TriCompany/source-agents/test-engineer/test-engineer.social.md",
+        "TriCompany/docs/registry/TestEngineer.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/senior-test-engineer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "senior-test-engineer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/senior-test-engineer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "senior-test-engineer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/senior-test-engineer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/senior-test-engineer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "TestEngineer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/test-engineer.agent.md.",
+        "TestEngineer owns test design, test execution, and quality gate enforcement for module deliverables; reports to CPO (product quality direction) and CTO (technical quality standards).",
+        "Current enablement does not imply TriMC formal host switch, production test infrastructure, or automated CI/CD quality gates are already implemented.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "employeeDisplayName": "小柯"
+    },
+    {
+      "objectSetId": "full-stack-developer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "FullStackDeveloper",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee full-stack-developer",
+      "sourceRefs": [
+        "TriCompany/source-agents/full-stack-developer/full-stack-developer.agent.md",
+        "TriCompany/source-agents/full-stack-developer/full-stack-developer.soul.md",
+        "TriCompany/source-agents/full-stack-developer/full-stack-developer.memory.md",
+        "TriCompany/source-agents/full-stack-developer/full-stack-developer.colleagues.md",
+        "TriCompany/source-agents/full-stack-developer/full-stack-developer.social.md",
+        "TriCompany/docs/registry/FullStackDeveloper.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/full-stack-developer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "full-stack-developer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/full-stack-developer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "full-stack-developer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/full-stack-developer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/full-stack-developer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "FullStackDeveloper live_entry_status 对齐为 current-copilot-host-live（2026-08-21 CTO 裁决：manifest 已登记 + live 文件已发布，声明面落后事实，机械对齐，不动员工定义语义）。",
+        "The live discovery target is TriMetaverse/.github/agents/full-stack-developer.agent.md.",
+        "FullStackDeveloper is responsible for concrete coding brick assembly and component-level implementation; reports to CTO (小狄).",
+        "Current enablement does not imply TriMC formal host switch, production deployment pipelines, or automated integration test suites are already implemented.",
+        "Gate 5 (CHO approval) is required before formal live entry activation per CEO mandate.",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "employeeDisplayName": "小全"
+    },
+    {
+      "objectSetId": "deployment-engineer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "DeploymentEngineer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee deployment-engineer",
+      "sourceRefs": [
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.agent.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.soul.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.memory.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.colleagues.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.social.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/deployment-engineer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "deployment-engineer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/deployment-engineer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "deployment-engineer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/deployment-engineer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/deployment-engineer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "DeploymentEngineer (小布) is onboarded as a live host agent in the current Copilot-host phase per CEO launch approval 2026-08-01.",
+        "The live discovery target is TriMetaverse/.github/agents/deployment-engineer.agent.md.",
+        "DeploymentEngineer owns automated deployment, ADE execution, release pipelines, and environment management; reports to CTO (小狄).",
+        "Current enablement does not imply TriMC formal host switch, production deployment infrastructure, or automated CI/CD pipelines are already implemented.",
+        "Contract YAML is at TriCompany/source-agents/deployment-engineer/deployment-engineer.contract.yaml (contract v3.0).",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "employeeDisplayName": "小布"
+    },
+    {
+      "objectSetId": "customer-success-officer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "CustomerSuccessOfficer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee customer-success-officer",
+      "sourceRefs": [
+        "TriCompany/source-agents/customer-success-officer/customer-success-officer.agent.md",
+        "TriCompany/source-agents/customer-success-officer/customer-success-officer.soul.md",
+        "TriCompany/source-agents/customer-success-officer/customer-success-officer.memory.md",
+        "TriCompany/source-agents/customer-success-officer/customer-success-officer.colleagues.md",
+        "TriCompany/source-agents/customer-success-officer/customer-success-officer.social.md",
+        "TriCompany/source-agents/customer-success-officer/customer-success-officer.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/customer-success-officer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "customer-success-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/customer-success-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "customer-success-officer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/customer-success-officer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/customer-success-officer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "CustomerSuccessOfficer (小成) is onboarded as a live host agent in the current Copilot-host phase per W33 ADE onboarding (w33-3).",
+        "The live discovery target is TriMetaverse/.github/agents/customer-success-officer.agent.md.",
+        "CustomerSuccessOfficer owns customer onboarding, health monitoring, feedback loop, retention/renewal signals, and customer success case curation; reports to COO (小营), collaborates closely with CMO (小敏).",
+        "Current enablement does not imply TriMC formal host switch, production customer data pipelines, or automated satisfaction tracking are already implemented.",
+        "Contract YAML is at TriCompany/source-agents/customer-success-officer/customer-success-officer.contract.yaml (contract v3.0).",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "employeeDisplayName": "小成"
     }
   ]
 }
