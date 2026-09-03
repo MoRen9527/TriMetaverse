@@ -148,3 +148,9 @@
 - **M0e 波（午后续）**：graft 波 178ede0（11 席+工具）→soul 灌注首批 ed5235a（ceo/cpo 候 CHO 复审）→CTO 两裁 db34e59（V3 白名单登记制）+ed7b624（三席桩化修）+cd9de3e（按席纳门+摘豁免）+1bd0f6e（9/9 替换）+0c826ac（V2-soul 支架+coo 补行）+0fcd4cc（写根修正）——**validate 11/14 技术门 PASS+check-sync 13 席全过+live 面 drift=0 幂等+373 门绿**；CHO 语义门=复审 accepted 2（ceo/cpo）+基准齐 3+排期 6+特形 3；纳门 A 案渐进（ceo/cpo 已摘豁免 V1+V2+V4 实跑）。候窗残留：三席 soul 全量灌注+B 案候 CHO。
 - **M0d/LG-028 双线（午后-夜）**：M0d commit② 续作 spawn 窗（FD 上下文耗尽 M-004 场景①实勘）三修弧线（20 failures→R5 解析基座→fixture 纯化→组长直修种件连字符）**383 门 OK 清零+真值面 78 键零异常→CTO 终核验收 PASS**；两债裁示（同名类遮蔽修/backfill 再生成器删）派 FD 顺手窗。LG-028 四席意见全齐（CPO 三问判域/CTO 控死三面落点图 90f28ce7/CAO 双载体 D-16 beb65a4 入册/CHO 64c3ec53 三面初裁）→BOD 七点全裁（CLAUDE.md 入管线裁「入」）→D-16 起草 CAO 完工→CHO 内容面验证过，候 CTO 管线面对表。**批 1 收官**（CHO 复审 accepted 5c451ef+三席摘豁免 66065c9）=纳门 5/13。LG-029 切换点两条件齐（M0d 收官+批 1 签收）候董事会+CEO 明令。
 - **LG-029 窗尾（夜）**：登记对表（CHO f4996b28 骨架齐备+漏项四）→漏 1/2/3 转 CTO/FD（入仓 8 目录含 CSO/DE 同族/清保分明/ownerRole 换代）+漏 4 D-13 勘误 CAO 入册 37a4612（条 4 重写+破例注+registry 副本 bd116016 追平）；CAO 事故披露=TMV 首提 2cfc447c 卷入 CHO 窗 8 预暂存件（压缩链跳三查 D-05 违反）已 soft reset 净件重提零外泄，教训复训=并发窗 commit 前即时 cached-diff；CTO 核验收 PASS（LG-029 窗收官）+agent types 环境面换代旁证。
+
+- 巡检兜底补写 @22:30 +08：自上次进度提交 bc15df55 后新增 3 条 commit：
+  - 1f50c713 chore(lg-029): 切换窗支撑面连带收口——support README Source Refs 刷新（employee_host_publish 全量 execute 连带，16 席面）@MoRen
+  - b08f359d feat(lg-029-case-2): STE slug 全链切换 TriMetaverse 面——三件 mv+内容正名+支撑面 manifest（切换窗案二）
+  - f164698d feat(lg-029-case-1): FSD 通信面正名——发布面两件内容内 FullStackDeveloper→FSD（切换窗案一）
+- registry：v2.1；今日 registry 提交无变化
