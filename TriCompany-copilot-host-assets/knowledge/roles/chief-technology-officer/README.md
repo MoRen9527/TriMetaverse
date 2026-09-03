@@ -23,11 +23,11 @@ Concrete employee consumption records belong in employee wiki pages such as `wik
 
 ## Source Refs
 
-- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.agent.md
-- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.soul.md
-- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.memory.md
-- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.colleagues.md
-- TriCompany/.github/source-agents/chief-technology-officer/chief-technology-officer.social.md
+- TriCompany/source-agents/chief-technology-officer/chief-technology-officer.agent.md
+- TriCompany/source-agents/chief-technology-officer/chief-technology-officer.soul.md
+- TriCompany/source-agents/chief-technology-officer/chief-technology-officer.memory.md
+- TriCompany/source-agents/chief-technology-officer/chief-technology-officer.colleagues.md
+- TriCompany/source-agents/chief-technology-officer/chief-technology-officer.social.md
 - TriCompany/docs/engineering/DESIGN.md
 - TriCompany/docs/engineering/ROADMAP.md
 - TriCompany/docs/engineering/STATE.md

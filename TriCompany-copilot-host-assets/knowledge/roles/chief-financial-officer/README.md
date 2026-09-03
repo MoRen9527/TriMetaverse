@@ -24,12 +24,12 @@ Concrete employee consumption records belong in employee wiki pages such as `wik
 ## Source Refs
 
 - TriCompany/docs/workflow/chief-financial-officer-role.md
-- TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.agent.md
-- TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.soul.md
-- TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.memory.md
-- TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.colleagues.md
-- TriCompany/.github/source-agents/chief-financial-officer/chief-financial-officer.social.md
+- TriCompany/source-agents/chief-financial-officer/chief-financial-officer.agent.md
+- TriCompany/source-agents/chief-financial-officer/chief-financial-officer.soul.md
+- TriCompany/source-agents/chief-financial-officer/chief-financial-officer.memory.md
+- TriCompany/source-agents/chief-financial-officer/chief-financial-officer.colleagues.md
+- TriCompany/source-agents/chief-financial-officer/chief-financial-officer.social.md
 - TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
 - TriCompany/docs/workflow/host-object-publish-flow.md
 - TriCompany/docs/engineering/role-employee-knowledge-workspace.md
-- TriMetaverse/tricompany.md
+- TriMetaverse/cyber-company.md

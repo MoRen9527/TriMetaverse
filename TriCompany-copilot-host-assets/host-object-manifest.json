@@ -172,7 +172,15 @@
           "kind": "role-agent",
           "status": "current-copilot-host-live",
           "sessionBody": "TriCompany/source-agents/ceo-chief-of-staff/session-body.agent.md",
-          "renderTemplate": "host-default"
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/ceo-chief-of-staff/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/ceo-chief-of-staff/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/ceo-chief-of-staff/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/ceo-chief-of-staff/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/ceo-chief-of-staff/colleagues.agent.md",
+            "social": "TriCompany/source-agents/ceo-chief-of-staff/social.agent.md"
+          }
         }
       ]
     },
@@ -722,11 +730,11 @@
       "generatedAt": "2026-04-29T00:00:00+08:00",
       "generator": "python -m runtime.cognition.employee_host_object_generation --employee senior-test-engineer",
       "sourceRefs": [
-        "TriCompany/source-agents/test-engineer/test-engineer.agent.md",
-        "TriCompany/source-agents/test-engineer/test-engineer.soul.md",
-        "TriCompany/source-agents/test-engineer/test-engineer.memory.md",
-        "TriCompany/source-agents/test-engineer/test-engineer.colleagues.md",
-        "TriCompany/source-agents/test-engineer/test-engineer.social.md",
+        "TriCompany/source-agents/senior-test-engineer/senior-test-engineer.agent.md",
+        "TriCompany/source-agents/senior-test-engineer/senior-test-engineer.soul.md",
+        "TriCompany/source-agents/senior-test-engineer/senior-test-engineer.memory.md",
+        "TriCompany/source-agents/senior-test-engineer/senior-test-engineer.colleagues.md",
+        "TriCompany/source-agents/senior-test-engineer/senior-test-engineer.social.md",
         "TriCompany/docs/registry/TestEngineer.contract.yaml",
         "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
       ],
@@ -734,8 +742,8 @@
       "supportObjects": [
         {
           "kind": "role-knowledge-workspace",
-          "workspaceId": "senior-test-engineer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/senior-test-engineer",
+          "workspaceId": "test-engineer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/test-engineer",
           "tracking": "tracked"
         },
         {
@@ -783,7 +791,7 @@
       "liveEntryStatus": "current-copilot-host-live",
       "notes": [
         "TestEngineer is enabled as an independent live host agent in the current Copilot-host phase.",
-        "The live discovery entry is TriMetaverse/.github/agents/test-engineer.agent.md.",
+        "The live discovery entry is TriMetaverse/.github/agents/senior-test-engineer.agent.md.",
         "TestEngineer owns test design, test execution, and quality gate enforcement for module deliverables; reports to CPO (product quality direction) and CTO (technical quality standards).",
         "Current enablement does not imply TriMC formal host switch, production test infrastructure, or automated CI/CD quality gates are already implemented.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."

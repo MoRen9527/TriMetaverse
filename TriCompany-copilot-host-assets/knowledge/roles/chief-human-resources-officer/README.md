@@ -24,11 +24,11 @@ Concrete employee consumption records belong in employee wiki pages such as `wik
 ## Source Refs
 
 - TriCompany/docs/workflow/chief-human-resources-officer-role.md
-- TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.agent.md
-- TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.soul.md
-- TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.memory.md
-- TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.colleagues.md
-- TriCompany/.github/source-agents/chief-human-resources-officer/chief-human-resources-officer.social.md
+- TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.agent.md
+- TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.soul.md
+- TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.memory.md
+- TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.colleagues.md
+- TriCompany/source-agents/chief-human-resources-officer/chief-human-resources-officer.social.md
 - TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md
 - TriCompany/docs/workflow/host-object-publish-flow.md
 - TriCompany/docs/workflow/cyber-company-secretariat.md

@@ -24,11 +24,11 @@ Concrete employee consumption records belong in employee wiki pages such as `wik
 ## Source Refs
 
 - TriCompany/docs/workflow/chief-administrative-officer-role.md
-- TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.agent.md
-- TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.soul.md
-- TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.memory.md
-- TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.colleagues.md
-- TriCompany/.github/source-agents/chief-administrative-officer/chief-administrative-officer.social.md
+- TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.agent.md
+- TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.soul.md
+- TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.memory.md
+- TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.colleagues.md
+- TriCompany/source-agents/chief-administrative-officer/chief-administrative-officer.social.md
 - TriCompany/docs/workflow/cyber-company-secretariat.md
 - TriCompany/docs/workflow/host-object-publish-flow.md
 - TriCompany/docs/engineering/role-employee-knowledge-workspace.md

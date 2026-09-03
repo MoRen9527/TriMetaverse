@@ -25,11 +25,11 @@ Concrete employee consumption records belong in employee wiki pages such as `wik
 ## Source Refs
 
 - TriCompany/docs/workflow/rd-trainer-role.md
-- TriCompany/.github/source-agents/rd-trainer/rd-trainer.agent.md
-- TriCompany/.github/source-agents/rd-trainer/rd-trainer.soul.md
-- TriCompany/.github/source-agents/rd-trainer/rd-trainer.memory.md
-- TriCompany/.github/source-agents/rd-trainer/rd-trainer.colleagues.md
-- TriCompany/.github/source-agents/rd-trainer/rd-trainer.social.md
+- TriCompany/source-agents/rd-trainer/rd-trainer.agent.md
+- TriCompany/source-agents/rd-trainer/rd-trainer.soul.md
+- TriCompany/source-agents/rd-trainer/rd-trainer.memory.md
+- TriCompany/source-agents/rd-trainer/rd-trainer.colleagues.md
+- TriCompany/source-agents/rd-trainer/rd-trainer.social.md
 - TriCompany/docs/engineering/role-employee-knowledge-workspace.md
 - TriCompany/docs/training/README.md
 - TriCompany/docs/training/ipd-usage-guide.md
