@@ -1,0 +1,16 @@
+LG-010 加载层工程窗拉前评估件（BOD ④，只评估不实施）
+
+- sourceOfTruth: TriMetaverse/docs/execution/lg010-load-layer-deferral-review.txt
+- syncMode: draft｜lastSyncedAt: 2026-09-05
+
+【LG-010 现态】agent-core 加载层补齐——R 面能力门禁线「宿主治理面全盲修复」（LG-009 A 案入册，2026-08-28 裁）；现状保障=BRIEF 铁律+手抄副本（RFACE_SYSTEM_PROMPT/_tree_brief）；LG-016 件 4 扩词归 LG-010 已判定未 in-flight。
+
+【核心发现：LG-028 迁出改变了 LG-010 设计输入】原目标「宿主治理面全盲修复」的设计前提=CLAUDE.md 承载治理内容（agent-core 加载它即获得治理面）——**LG-028 四件迁出后 CLAUDE.md 只剩结构客观描述+路由指针**，治理内容已迁 session-body 域知识族（13/13 管线注入）+各席合同——即：①「治理面加载」目标的大半已被 LG-024 session 面管线**结构性吸收**（CC 会话席走 .session.md 合同已载全量）；②agent-core 加载层（R 面 in-process agent/宿主）剩余目标=路由指针+结构描述的加载——价值缩水但非归零（R 面 spawn agent 无 .session.md 合同，仍需最小路由面）。
+
+【拉前评估结论：**不建拉前，候 P5 与组长岗合批**】
+- 拉前收益低：设计输入已变，盲目按原范围实施=做完即返工（LG-031 期 TriCode 定性错误同族教训——前提变了先重定义再动工）；
+- 正确工序=**范围重定义先行**（按 LG-028 后形态：加载层目标=「路由指针+结构描述+session 合同引用」最小面）——重定义依赖 LG-028 全案收口（已近：第一步四件落+13/13 渲染，批 2 渲染窗收尾中）+P5 组长岗需求实锚（§8.7 spawn 加载面是加载层最大消费方）；
+- 建议排期=**P4 后窗与 P5 备料同批**（LG-026 组长岗 JD/soul 起草触发时一并重定义+实施），届时天然有消费方锚定范围。
+
+【候窗理由三条】①设计输入未稳（LG-028 尾窗）②无急迫消费方（现状保障 BRIEF 铁律+手抄副本在役零事故）③P5 合批可省一次范围重定义。
+【依据】ledger-mirror LG-010/LG-009 条+W35 daily-progress+LG-028 迁出四件实盘（CLAUDE.md 现态）+LG-024 13/13 管线实证。
