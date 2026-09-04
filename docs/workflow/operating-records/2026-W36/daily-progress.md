@@ -194,3 +194,11 @@
   - 3db39a93 Merge remote-tracking branch 'sg-server/dev' into dev
   - 7695a6f2 docs(lg-031): 终态架构段严谨性校准——补 MVP 级限定两层区分（实然层=当前落地仅最小 MVP：git 仓+项目+治理经验；应然层=元现实/元虚拟终态架构为演进方向）；对齐 §3.1 既有「最小实现」提法不另造口径（CEO 严谨性修正令）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:00 +08：自上次进度提交 6edc6d2e 后新增 6 条 commit：
+  - fe60f355 fix(lg-028): CLAUDE.md 发布面字节级修齐——TriMMC 对齐空格+File Conventions 空行位次（以真源 body 全量覆写；去 GOVERNANCE 首行逐字节 diff=零终验）；check=True 申报不实根因=我的 check 脚本只比行数未逐字节+TriMMC 排版修后重写发布面时 File Conventions 位次偏移未再校验——双重缝一并堵（逐字节比对为唯一判据）@MoRen
+  - 8f730abf Merge remote-tracking branch 'sg-server/dev' into dev
+  - 048f044e docs(lg-028): FADE-002 发布面同步——CLAUDE.md 真源减法三段式字节发布（真源 TriCompany/docs/project-sources/trimetaverse-claude-md.md 权威）@MoRen
+  - 6eeb298b docs(lg-032-case-a): runbook 终版——CTO 排布意见两条入版：P4 窗下限=09-10 下午（切指后 ≥27h，09-11 全天最稳——观测扰动归因隔离）+冻结条款「切指后 24h 内 P4 线零触 8711」（迁移窗冻结 watcher 同款保护律）@MoRen
+  - 24338a83 docs(lg-032-case-a): runbook 升执行版——BOD 定窗批令（主窗 09-09 10:30 批/备 09-10）+错峰保护两条入版（窗时 CEO 在线候命+前置门任一不过窗内中止禁硬切；P4 窗撞期即改期；CHO 签收前不执行）@MoRen
+  - 928af051 docs(lg-032-case-a): 切指操作手册落盘——时点建议（09-09 周二 10:30 主窗候 BOD）+前置门三查+现值留痕回滚锚+双注入位值切动作序（daemon cmd+User env→cli.js stop 权威重启→验证三连）+回滚预案一行（10s 默认采样免调注记在位；BOD 确认令三件套）
+- registry：v2.1；今日 registry 提交无变化
