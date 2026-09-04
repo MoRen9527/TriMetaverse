@@ -1,0 +1,10 @@
+LG-025 特形豁免面收口·CTO 席意见（≤30 行，BOD ②b 批）
+
+【1·validator 豁免面长期形态】SOUL_NAMED_GATE whitelist=「A 案门随内容走」的机械实现——豁免即「内容未灌注」状态表达，**不存在永久豁免席**：①DE/CSO 合并席 soul 灌注完成后照常规席同律摘豁免纳门（CHO 灌注节奏触发，非技术豁免）；②bs 合成席：soul 人格层对 registry 合成席=设计形态非缺口（CHO「合成性质合规」已裁）——validator 对 bs 维持全豁免+**立法注记「合成席无人格层系设计形态」**入 whitelist 头注释（区分「待灌注豁免」与「设计形态豁免」两类语义，防未来误判 bs 为漏灌）。
+
+【2·合并席双键映射】M0d sourceFiles 投影已收口（双键同指合并件=contract.paths 唯一合法态投影，真值面 78 键零异常实证）——长期形态=已收口无补线。残余立法注记一条：合并席若未来拆分独立件=contract.paths+sourceFiles+三件型结构**三面联动变更**，走 D-15（防单面改引发投影/结构漂移）。
+
+【3·bs registry 合成链补线】裁**不补线入 LG-025**：bs 合同 v3.1 与 TriRLC parser 版本漂移（ST 备案噪音）属 TriRLC 消费面版本跟进，非豁免面本体——登记 TriRLC contract parser v3.1 适配为独立跟进项（Wave 0/小令），LG-025 收官注记引述。bs 的 validator 面维持设计形态豁免（见 1②）。
+
+【收官注记建议（入 LG-025）】特形三席收口形态：DE/CSO=待灌注席（灌注毕同律纳门）+bs=设计形态豁免席（合成性质 CHO 已裁）；豁免面两类语义+合并席三面联动注记入 whitelist 头注释=技术边界收口全部落点，无新增门无新增代码（注记级）。
+【依据】M0d sourceFiles 真值面实证/contract.paths 合并式声明/CHO 合成性质裁定/ST contract v3.1 噪音备案。
