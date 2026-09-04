@@ -215,7 +215,15 @@
 - registry：v2.1；今日 registry 提交无变化
 
 - **BOD 立法修正令（CEO 教义·上下文管理新口径）落地 @22:5x +08**：CLAUDE.md 真源「上下文管理」行改「容量交宿主 auto-compact/受控压缩仅用于状态污染响应/崩溃恢复照 SOP」+FADE-002 单条 execute 发布复检 in_sync 逐字节零+fade-007 spec 修订注记一行（全文重构候窗勿急）+台账 M-004/M-001 水位条目教义对表（水位计留污染预警非容量阈值）@MoRen
-
 - **LG-024 批 1 完成判定达成 @23:1x-00:0x +08（压缩后复岗首战）**：重基线令复岗→报缺三令处置（补派×2+核稿×2，防双派头注防重做命中一次）→11 席 session-body 源件施工（六席施工单+CHO 门批签 6/6 成立+双段底线定谳+自席代验 a 案闭环）→写根 bug 勘定根治（3200b89 b 案+.github 19 幽灵清+BOD ④ 负路径增补）→manifest 窗 8 席全量落地（TriCompany 8681e90/TriMetaverse 2e3bf521/8681e90 d9ed509 系；8/8 断言+check-sync 14/14+392 门双绿）——余 5 席候 Wave 2 施工批；LG-017/006 两设计稿候裁点六项 BOD 全批（实施另令候批）@MoRen
 
 - **双收官 @00:0x-02:3x +08（09-05 凌晨）**：Wave 2 五席 spawn fan-out 全毕（5/5 回执+批签成立+统一收口 2afe1a9）→批 2 五席落地+RDT 小吴正名净尾（b096ebb/f9a8271/b149952/045e131b 链）→**LG-024 全案收官销账**（13/13 满员+写根治根 3200b89+manifest/definition 双驱动；BOD 准销账现役 14/销账 18）+**M-001 线收官**（联审三席合成四项 BOD 全批：a-lite 运行时读取 D-04 正身抽段注入 13/13+幻影真源悬空引用修复 CAO 入册正身化+披露尾注+CMO 基线升格候另批+令源唯一主源 COS）——CLAUDE.md 真源 TriLC→TriRLC 勘误（e14eb35/82babd95）随批；D-16/D-17 零违例；观察期零扰 @MoRen
+
+## 2026-09-05（周六）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:10 +08：自上次进度提交 581572e9 后新增 3 条 commit：
+  - 82babd95 docs(勘误): CLAUDE.md 发布面 Module Layout TriLC→TriRLC 双名并书（FADE-002 管线发布 in_sync 逐字节零；DE 席实勘发现，原 TriLC 2026-08-31 改名漏更补全）@MoRen
+  - 2e3bf521 chore(lg-024): manifest 窗 6 席 session 正签件管线覆盖——CAO/CFO/CHO/CPO/FSD/STE 手作件升格管线件（组合公式产物 149-174 行；先档后覆归档锚 cbaee3b7 在先；写根 fix 3200b89 后正位落盘；8 席断言 8/8+5 无源席零行为+check-sync 14/14+392 门+TriRMC 门全绿读数随批）
+  - dbd3100a chore(lg-024): CTO 席 session 正签件管线出件正位——组合公式产物 158 行覆盖手作件（先档后覆归档锚 cbaee3b7 在先；域知识族节+会话面补充节+claude-session 尾注四断言过；execute 报 created 实落 D:\Code\ai\.claude\hub 幽灵目录=写根错位 bug，本件=幽灵件正位，bug 本体候 CTO 域修）
+- registry：v2.1；今日 registry 提交无变化
