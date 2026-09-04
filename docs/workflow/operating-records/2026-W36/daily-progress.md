@@ -179,3 +179,4 @@
   - e77ab53d docs(lg-025): 特形豁免面收口 CTO 意见——两类豁免语义（待灌注/设计形态）+合并席三面联动注记+bs 合成链不补线归 parser 跟进
   - cbaee3b7 chore(lg-024): hub 手作 session 件先档后覆归档——.claude/hub/ 八件原样入仓（BOD 裁 c：untracked 件覆盖前必须 git 归档留档=不可逆防护硬要求/M0f 前置检查项；管线化覆盖时本 commit 即回滚/存档锚；原子退役律留痕）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- **LG-025 终对账三证 PASS·全线终收官**（CTO 09:53Z 独立复跑）：389 门 OK（388+V3 本体保留断言）+check-sync 14/14+真值面 78 键整；FSD 清理三件核毕（件① V3 候选段清 44266e9 孤儿保留 CHO 立法背书/件② aliases 退役 388→389/件③ backfill 零动作锚确认）——M0a→M0f 全线终收官（磨人八席→灌注滚收 11/13 纳门+check-sync 14/14→44 件退役+连带清理→三证全绿）。
