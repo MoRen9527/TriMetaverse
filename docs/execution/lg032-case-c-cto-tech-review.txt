@@ -1,0 +1,12 @@
+LG-032 案 c·CTO 技术面对审意见（对 CPO 主审件 2026-09-04T14:15Z）
+
+【总判】CPO 四节**全盘采认**——三判据路由/信封+指针拆分/「不另建状态机只做转译上报」/git 本体真源纪律，四条与既有立法（LG-028 三问判域/fd8db82 双源教训/LG-026 组长帧纪律）全部同构，产品语义面无异议。
+
+【技术面补强四点】
+1. **通道零新增实证**：M→R 下行=案 a v1 心跳响应 `pendingCommands:[]` 字段已落（TriRMC 5d40fbc 实装）——审核请求/结论信封即填此载荷，零新增端点；R→M 上行=events/replay 通道（QueuedEvent type 枚举扩 'review_signal' 一型或复用 state_change，实施期定）。
+2. **信封 schema 技术形态（v1）**：{type, from_seat, ts, priority, status, review_domain, ref:{kind: git|pr|path, sha?, id?}}——review_domain 字段即 CPO 审核域路由（LG-028 三问判域法）；ref 指针 mandatory（CPO「接口只传信封+指针」的 schema 化）；载荷上限 ≤4 条/心跳响应采认（5s 超时约束下带宽无虞，超量分周期）。
+3. **转译器落点**：TriMMC 既有审核门状态→心跳载荷的转译器落 **TriMMC 服务面侧**（状态 owner 侧出投影，R 侧纯消费）——防双向转译双源；TriRMC 侧 mc-store 台账扩 review_signals 表仅存「收到+已执行」回执，不存状态机。
+4. **实施时序（v1.1 增量）**：案 a 服务面 v1 先跑纯通道流量（P4 演练 09-07 验证稳定性）→案 c 信号载荷=v1.1 增量（P4 后+BOD 裁+D-17 门），不与切指观察期叠压。
+
+【对审结论】双席无冲突合流，候你合成结论回 COS 转 BOD；实施候裁+D-17（CEO 令）不变。
+【依据】CPO 主审件+案 a 端点契约（lg032-three-channels.md）+TriRMC 5d40fbc 实装面。
