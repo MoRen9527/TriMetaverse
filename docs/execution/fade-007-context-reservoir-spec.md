@@ -4,7 +4,8 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/fade-007-context-reservoir-spec.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-28
+- lastSyncedAt: 2026-09-04
+- 修订注记（2026-09-04，CEO 教义，BOD 立法修正令）：CLAUDE.md 分权制节「上下文管理」行已改新口径——**容量交宿主 auto-compact，受控压缩仅用于状态污染响应**（新旧混杂/陈旧态复现），崩溃恢复照 SOP；本 spec §三流程 A/§四流程 B 的容量阈值触发语义随之过时，全文重构候窗另行修订（勿急），冲突处以 CLAUDE.md 新教义口径为上位。
 - 状态: **FADE 兼容档**（2026-08-28 升格联审修后放行——双席共识+主持人合成；原探索期，CEO 2026-08-28 提案；升完整五条硬门时序见 §6.4）
 - 关联: orchestrator-hub-split（编排/中枢分权制）；宿主 agent 定义 `.claude/agents/ceo-chief-of-staff.md`（固定前置核查）
 
