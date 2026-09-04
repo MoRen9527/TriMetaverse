@@ -184,3 +184,8 @@
   - ecdfe6a2 docs(lg-032): 三通道工程骨架件落盘（三案边界+硬序先接后关+候填节六项+治理锚 D-17/LG-030/031/026；CTO 方案正文候填）@MoRen
   - c4a91fec docs(lg-031): 终裁落地——治理流向降格修正（M→R 单向吸收为主，反向改进可有但非主要）+终态架构立法段（TriRMC+TriRLC=元现实/M 面=元虚拟，「元」字辈语义正式定义+三通道先接后关注记）；LG-032 骨架件另批 @MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:20 +08：自上次进度提交 4f4194e9 后新增 3 条 commit：
+  - 37eb2e63 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 8bf0bf83 docs(lg-031): 治理流向终裁修正——恢复「双向回流」（M→R 成熟经验吸收与 R→M 反向改进回流并列保留），撤销前令「单向吸收为主」降格（CEO 终裁变更；初裁→终裁两笔弧线台账如实）@MoRen
+  - 6f4ba39c docs(lg-032): CTO 方案正文填毕——案 a 端点族四件+X-Internal-Token+systemd fleet 选型+v1 心跳载荷下派/三门实测判据+24h 观察/连锁清单（8713 零影响+迁移窗避峰）/案 b P5/案 c 09-09 后联审
+- registry：v2.1；今日 registry 提交无变化
