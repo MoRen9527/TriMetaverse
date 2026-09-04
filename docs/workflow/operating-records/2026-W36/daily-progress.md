@@ -154,3 +154,10 @@
   - b08f359d feat(lg-029-case-2): STE slug 全链切换 TriMetaverse 面——三件 mv+内容正名+支撑面 manifest（切换窗案二）
   - f164698d feat(lg-029-case-1): FSD 通信面正名——发布面两件内容内 FullStackDeveloper→FSD（切换窗案一）
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-04（周五）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @09:50 +08：自上次进度提交 43f0e590 后新增 2 条 commit：
+  - c4e9907f chore(lg-025-m0d): 漏1 收编缺口补入仓——CSO/DE 同族四目录全件（CTO 补令 2026-09-03T15:28Z：同族同裁 8 目录；实盘四 README 全件 add，tri 复证 untracked=0）
+  - 2bd6c228 chore(lg-025-m0d): M0d 顺手件漏1 入仓收口——支撑面 FSD/STE 四目录+manifest STE 同步（d78e5d5 同批续：四目录 untracked 与 binding tracked 声明矛盾消解）
+- registry：v2.1；今日 registry 提交无变化
