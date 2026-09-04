@@ -161,3 +161,8 @@
   - c4e9907f chore(lg-025-m0d): 漏1 收编缺口补入仓——CSO/DE 同族四目录全件（CTO 补令 2026-09-03T15:28Z：同族同裁 8 目录；实盘四 README 全件 add，tri 复证 untracked=0）
   - 2bd6c228 chore(lg-025-m0d): M0d 顺手件漏1 入仓收口——支撑面 FSD/STE 四目录+manifest STE 同步（d78e5d5 同批续：四目录 untracked 与 binding tracked 声明矛盾消解）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:00 +08：自上次进度提交 0a96e44c 后新增 3 条 commit：
+  - d1c4bb30 Merge commit '0a96e44c' into dev
+  - e35fb627 docs(lg-030): e 入册——whitepaper 图 3-8 图注补连接面实证（8711 上送中央面+R 面执行迁移双职责，47.245.122.61:8710 真连锚）+code-state 连接拓扑节（D-17 在册指针）；LG-030 拓扑勘定收官文档面 @MoRen
+  - 13e53601 docs(lg-030): CTO 席意见件——裁不改连接/三端 README+whitepaper 入册/两形态并存合法性（env 注入覆盖默认）+默认值注释顺手件
+- registry：v2.1；今日 registry 提交无变化
