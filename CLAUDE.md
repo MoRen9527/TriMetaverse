@@ -24,7 +24,7 @@ D:/Code/ai/
 ├── TriPilot/        ← VS Code extension
 ├── TriCode/         ← Shared runtime
 ├── TriCompany/      ← Cyber-company source
-└── TriMMC/        ← Meta Controller（原 TriMC，2026-09 改名；兼容面沿用旧名过渡）
+└── TriMMC/         ← Meta Controller（原 TriMC，2026-09 改名；兼容面沿用旧名过渡）
 ```
 
 All modules are sibling directories. Use `../<module>/` for cross-repo references.
@@ -94,7 +94,6 @@ When source and published copies conflict, source-side wins. When frozen source 
 ## Common Commands
 
 → CTO 面（域知识族）+CAO 纪律册：TriRLC daemon/健康检查/构建管线/安装脚本命令族（LG-028 迁出，路由指针）。
-
 ## File Conventions
 
 → CAO 纪律册附录（`TriCompany/docs/workflow/engineering-disciplines.md`）：commit attribution/AI co-author/markdownlint/agent 文件命名（LG-028 迁出，路由指针）。
