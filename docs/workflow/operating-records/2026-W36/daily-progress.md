@@ -180,3 +180,7 @@
   - cbaee3b7 chore(lg-024): hub 手作 session 件先档后覆归档——.claude/hub/ 八件原样入仓（BOD 裁 c：untracked 件覆盖前必须 git 归档留档=不可逆防护硬要求/M0f 前置检查项；管线化覆盖时本 commit 即回滚/存档锚；原子退役律留痕）@MoRen
 - registry：v2.1；今日 registry 提交无变化
 - **LG-025 终对账三证 PASS·全线终收官**（CTO 09:53Z 独立复跑）：389 门 OK（388+V3 本体保留断言）+check-sync 14/14+真值面 78 键整；FSD 清理三件核毕（件① V3 候选段清 44266e9 孤儿保留 CHO 立法背书/件② aliases 退役 388→389/件③ backfill 零动作锚确认）——M0a→M0f 全线终收官（磨人八席→灌注滚收 11/13 纳门+check-sync 14/14→44 件退役+连带清理→三证全绿）。
+- 巡检兜底补写 @18:10 +08：自上次进度提交 f96b1d32 后新增 2 条 commit：
+  - ecdfe6a2 docs(lg-032): 三通道工程骨架件落盘（三案边界+硬序先接后关+候填节六项+治理锚 D-17/LG-030/031/026；CTO 方案正文候填）@MoRen
+  - c4a91fec docs(lg-031): 终裁落地——治理流向降格修正（M→R 单向吸收为主，反向改进可有但非主要）+终态架构立法段（TriRMC+TriRLC=元现实/M 面=元虚拟，「元」字辈语义正式定义+三通道先接后关注记）；LG-032 骨架件另批 @MoRen
+- registry：v2.1；今日 registry 提交无变化
