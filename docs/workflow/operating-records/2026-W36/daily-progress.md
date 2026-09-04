@@ -215,3 +215,11 @@
 - registry：v2.1；今日 registry 提交无变化
 
 - **BOD 立法修正令（CEO 教义·上下文管理新口径）落地 @22:5x +08**：CLAUDE.md 真源「上下文管理」行改「容量交宿主 auto-compact/受控压缩仅用于状态污染响应/崩溃恢复照 SOP」+FADE-002 单条 execute 发布复检 in_sync 逐字节零+fade-007 spec 修订注记一行（全文重构候窗勿急）+台账 M-004/M-001 水位条目教义对表（水位计留污染预警非容量阈值）@MoRen
+## 2026-09-05（周六）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:10 +08：自上次进度提交 581572e9 后新增 3 条 commit：
+  - 82babd95 docs(勘误): CLAUDE.md 发布面 Module Layout TriLC→TriRLC 双名并书（FADE-002 管线发布 in_sync 逐字节零；DE 席实勘发现，原 TriLC 2026-08-31 改名漏更补全）@MoRen
+  - 2e3bf521 chore(lg-024): manifest 窗 6 席 session 正签件管线覆盖——CAO/CFO/CHO/CPO/FSD/STE 手作件升格管线件（组合公式产物 149-174 行；先档后覆归档锚 cbaee3b7 在先；写根 fix 3200b89 后正位落盘；8 席断言 8/8+5 无源席零行为+check-sync 14/14+392 门+TriRMC 门全绿读数随批）
+  - dbd3100a chore(lg-024): CTO 席 session 正签件管线出件正位——组合公式产物 158 行覆盖手作件（先档后覆归档锚 cbaee3b7 在先；域知识族节+会话面补充节+claude-session 尾注四断言过；execute 报 created 实落 D:\Code\ai\.claude\hub 幽灵目录=写根错位 bug，本件=幽灵件正位，bug 本体候 CTO 域修）
+- registry：v2.1；今日 registry 提交无变化
