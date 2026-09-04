@@ -166,3 +166,8 @@
   - e35fb627 docs(lg-030): e 入册——whitepaper 图 3-8 图注补连接面实证（8711 上送中央面+R 面执行迁移双职责，47.245.122.61:8710 真连锚）+code-state 连接拓扑节（D-17 在册指针）；LG-030 拓扑勘定收官文档面 @MoRen
   - 13e53601 docs(lg-030): CTO 席意见件——裁不改连接/三端 README+whitepaper 入册/两形态并存合法性（env 注入覆盖默认）+默认值注释顺手件
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:20 +08：自上次进度提交 69340064 后新增 3 条 commit：
+  - a92a41d2 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 624ec612 docs(lg-031): 入册（BOD 批令）——whitepaper 部署拓扑节 M/R 面语义矩阵段（2×2 四格定级+星形拓扑 falsify+治理流向修正版+审计条款「按承载语义连非按面名连」）+code-state 语义格注记；与 LG-030 六点并入不冲突 @MoRen
+  - 73fcec32 docs(lg-031): CTO 席意见件——2×2 逐格定谳（falsify 星形连接非面内）+治理流向修正（成熟度异质供给）+入册点并入 LG-030 六点
+- registry：v2.1；今日 registry 提交无变化
