@@ -189,3 +189,8 @@
   - 8bf0bf83 docs(lg-031): 治理流向终裁修正——恢复「双向回流」（M→R 成熟经验吸收与 R→M 反向改进回流并列保留），撤销前令「单向吸收为主」降格（CEO 终裁变更；初裁→终裁两笔弧线台账如实）@MoRen
   - 6f4ba39c docs(lg-032): CTO 方案正文填毕——案 a 端点族四件+X-Internal-Token+systemd fleet 选型+v1 心跳载荷下派/三门实测判据+24h 观察/连锁清单（8713 零影响+迁移窗避峰）/案 b P5/案 c 09-09 后联审
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:40 +08：自上次进度提交 c01314e3 后新增 3 条 commit：
+  - bb726269 docs(lg-031): MVP 措辞定稿统一——CEO 亲定句「git 仓（其中项目代码、治理等经验）」三处替换（whitepaper 实然层句/lg032 骨架终裁注/校准前稿；措辞定稿令）@MoRen
+  - 3db39a93 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7695a6f2 docs(lg-031): 终态架构段严谨性校准——补 MVP 级限定两层区分（实然层=当前落地仅最小 MVP：git 仓+项目+治理经验；应然层=元现实/元虚拟终态架构为演进方向）；对齐 §3.1 既有「最小实现」提法不另造口径（CEO 严谨性修正令）@MoRen
+- registry：v2.1；今日 registry 提交无变化
