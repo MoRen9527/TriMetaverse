@@ -173,3 +173,9 @@
 - registry：v2.1；今日 registry 提交无变化
 - **M0e 灌注波全链收官+LG-030/031 双立法（09-04）**：LG-030 连通面勘定（三查四定=8711 真连 sg 中央面 47.245.122.61:8710+双席合成+e 六点入册：whitepaper 图注/双 README/D-17 纪律 4e04212/code-state×2/顺手件 acb7f33——连接零改动）；LG-031 M/R 语义矩阵（双席 falsify 星形拓扑+治理流向修正版+审计条款「按承载语义连」四仓入册 624ec612/3f3adbd/5d3b3fa/118f9fb）；批 2 收官（7f5dd3e 纳门 8/13）→批 3 全链（CHO 基准 aef9d91 异型空壳灌注+FSD bd3b6be+CTO 核 PASS+CHO 签收 b67ee2d=12/13 常规席纳门+特形 3 豁免维持=**CHO 语义终门线全部收官**）→批 3 摘豁免 0b4e2d1（11/13）→**再生窗一次 execute 终核 PASS**（a2cc738+d54da6f3：check-sync 14/14 全漂消解+388 绿+validate 11 席 EXIT=0，我方第三覆盖抽验同读）——M0e 灌注线收官，余 registry/module 族 2 席候末批+hub 手作件管线化定性候 BOD/CHO 域裁。LG-028 立法面全闭（D-16 转正 5c82996/6e1de505+registry 指针节）。
 - **M0f 旧代退役执行（CEO 亲签明令）**：44 件旧代五件套旧名件退役（acd876b，-956 行；逐件对表清单 m0f-retirement-checklist.txt；STE 4 件=LG-029 后 senior slug 旧名形态）——三护栏全过（新代组件在位/roles.test-engineer 合法保留/特形无涉）+M0g 终门复核全绿维持（check-sync 14/14+validate 11/14+388 OK）。就绪清单前零删除全程遵守（草案 cbaee3b7 先档后覆→定稿 096a6039→执行 acd876b 三锚全链）。**LG-025 全案收官**：M0a-e 全批+M0f 退役+LG-028 D-16 立法闸+LG-030/031 双勘定——单代真源化达成。
+
+- 巡检兜底补写 @17:40 +08：自上次进度提交 a5899351 后新增 3 条 commit：
+  - 096a6039 docs(lg-025): M0f 就绪清单定稿——两前置全齐（CHO 名单勘定 bs/DE 豁免维持无末批+CTO 特形评估 e77ab53d 两类豁免分立）；退役范围 44 件旧名件+回滚锚三重+呈 CEO 明令 @MoRen
+  - e77ab53d docs(lg-025): 特形豁免面收口 CTO 意见——两类豁免语义（待灌注/设计形态）+合并席三面联动注记+bs 合成链不补线归 parser 跟进
+  - cbaee3b7 chore(lg-024): hub 手作 session 件先档后覆归档——.claude/hub/ 八件原样入仓（BOD 裁 c：untracked 件覆盖前必须 git 归档留档=不可逆防护硬要求/M0f 前置检查项；管线化覆盖时本 commit 即回滚/存档锚；原子退役律留痕）@MoRen
+- registry：v2.1；今日 registry 提交无变化
