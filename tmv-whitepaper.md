@@ -184,7 +184,7 @@ flowchart LR
     sgTrimc -->|"cron 巡检兜底<br/>daily-progress 10min"| sgFleet
 ```
 
-图注：TriMetaverse 实际部署横跨三节点——sg-server（阿里云，TriMMC 面）、本机 Windows（TriMLC 面/董事会）、heyuan（阿里云，TriRMC 面）。sg-bare 裸仓集群为中央 git 枢纽，三端通过 push/pull 保持一致。sg 侧 TriMC daemon 承载编排 cron 引擎（orchestrate-tick 双通道拾取/每日进度巡检/配置同步/钟差检测），本机侧 TriLC daemon 承载 token 门控与 TriPilot 聊天通道，heyuan 侧 TriRMC/TriRLC 承载生产面调度与 agent-core 执行。SSH 信任链（heyuan-fleet→sg-fleet）保障跨节点 daemon 操作。董事会会话与董事长助理中枢组成编排/中枢分权制，持有完整工作上下文与挂账台账（双层镜像+蓄水池快照+周平面每日进度六源恢复体系）。
+图注：TriMetaverse 实际部署横跨三节点——sg-server（阿里云，TriMMC 面）、本机 Windows（TriMLC 面/董事会）、heyuan（阿里云，TriRMC 面）。sg-bare 裸仓集群为中央 git 枢纽，三端通过 push/pull 保持一致。sg 侧 TriMC daemon 承载编排 cron 引擎（orchestrate-tick 双通道拾取/每日进度巡检/配置同步/钟差检测），本机侧 TriLC daemon 承载 token 门控与 TriPilot 聊天通道，heyuan 侧 TriRMC/TriRLC 承载生产面调度与 agent-core 执行。SSH 信任链（heyuan-fleet→sg-fleet）保障跨节点 daemon 操作。董事会会话与董事长助理中枢组成编排/中枢分权制，持有完整工作上下文与挂账台账（双层镜像+蓄水池快照+周平面每日进度六源恢复体系）。**连接面实证（LG-030 勘定 2026-09-04）**：本机 TriRLC daemon（8711）经 TRIMC_BASE_URL 注入直上送 sg 中央面（47.245.122.61:8710，sg 侧 TriMC/TriMMC 托管面）；heyuan TriRMC（8.155.54.79）为周平面迁移自治执行点（R 面执行语义）——「上送中央面+R 面执行迁移」双职责分属两节点；连接面变更须 CEO 明令（D-17 在册）。
 
 图 3-7：三层的最小实现与螺旋迭代链
 

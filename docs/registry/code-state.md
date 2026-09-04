@@ -67,6 +67,10 @@
 - **cpo-trimodel-deployment Phase 1 完成（2026-07-22，小全/小狄）**：三仓库配置平面改造交付 — TriModel（API server 4 端点 + DeepSeek-Anthropic provider + v0.2.0）、TriLC（key-cache + mirror pusher + session store v2 + contract resolver）、TriPilot（TriLCClient HTTP+SSE）。Phase 2 backlog 8 项 CONDITIONAL_PASS 已登记（TriModel/docs/execution/cpo-trimodel-deployment/phase-2-backlog.md）。树闭合裁决：APPROVE（CTO 小狄，版本 bump commit 本地已落，push 待网络恢复）
 - **Q3 Phase 2 统一发布管线完成（2026-07-24，CTO 小狄）**：`source_publish_check.py` 新增 `--publish-agents` 模式（dry-run by default, `--agent-execute` 显式写入）。核心函数：`run_agent_publish()`、`_filter_agent_publish_entries()`、`_publish_single_agent()`。manifest 动态派生 `AGENT_PUBLISH_ALLOWED_TARGETS` 白名单。`employee_host_publish.py` 末尾追加 subprocess 委托。验证：`source_publish_check_validation.py` 33/33 全部通过（13 回归 + 20 agent publish 新增）。独立于 `--sync` 模式，可与 `--check` 组合使用。关联：`TriCompany/runtime/cognition/source_publish_check.py`、`TriCompany/runtime/cognition/employee_host_publish.py`、`TriCompany/source-agents/registries/trimetaverse-live-agent-publish-manifest.json`
 
+## 连接拓扑（LG-030 勘定 2026-09-04）
+
+- 本机 TriRLC（8711）经 TRIMC_BASE_URL 注入直上送中央面（sg 47.245.122.61:8710）；heyuan TriRMC（8.155.54.79）=R 面周平面迁移自治执行点——「上送中央面+R 面执行迁移」双职责分属两节点；连接面变更须 CEO 明令（D-17 在册）。
+
 ## Change Tracking Baseline
 
 - 重大边界变化应先更新 docs/product 与 docs/engineering
