@@ -202,3 +202,7 @@
   - 24338a83 docs(lg-032-case-a): runbook 升执行版——BOD 定窗批令（主窗 09-09 10:30 批/备 09-10）+错峰保护两条入版（窗时 CEO 在线候命+前置门任一不过窗内中止禁硬切；P4 窗撞期即改期；CHO 签收前不执行）@MoRen
   - 928af051 docs(lg-032-case-a): 切指操作手册落盘——时点建议（09-09 周二 10:30 主窗候 BOD）+前置门三查+现值留痕回滚锚+双注入位值切动作序（daemon cmd+User env→cli.js stop 权威重启→验证三连）+回滚预案一行（10s 默认采样免调注记在位；BOD 确认令三件套）
 - registry：v2.1；今日 registry 提交无变化
+- **LG-028 第一步四件落位齐+CHO 门三件签收全过+第二步真源减法毕**：①COS b3c2a8f 周平面节 ②CTO 0513d96 命令族 D 类首例节（session-body 新建+件头注记完整化随批 1）③CAO 7dab375 附录四条正身零漂移 ④v0.9.x plan 文档在位指针可达——contract.paths 三件均不增键=§8.3 防双指针正确延续；真源减法三段式 dbfb492（100 行）+发布面字节同步 048f044e→fe60f355 逐字节零修齐。
+- **LG-030/031 双立法入册收官**：LG-030 e 六点（whitepaper 图注/双 README/D-17 纪律 4e04212/code-state×2/顺手件 acb7f33）连接零改动+LG-031 双席合成+BOD 七点全裁+终态架构段（MVP 两层区分 7695a6f2 校准）+全景扫描附录（TriRLC↔TriRMC 无直接通道零指向河源）——LG-031 候 CEO 终裁。
+- **LG-032 三通道工程骨架件+方案正文落盘**：案 a 端点四件表+X-Internal-Token fail-closed+systemd User=fleet+三门判据+24h 观察期（CTO 6f4ba39c 方案正文+_bb9b602f LG-017 pre-receive 立法设计稿+16263a11 LG-006 额度接力设计草案——三件设计稿候裁不实施）+案 c 联审排期勘正 09-06 日间（冻结窗 23:00 前）。
+- **LG-029 切换窗全链收官**：六 commit 切换实施+CTO 核验收 PASS+CHO 登记对表（漏四补齐派发全达）+CAO 勘误入册（37a4612+bd116016）+CSO/DE 补入仓（c4e9907f）+LG-025 移销账段收官。
