@@ -227,3 +227,6 @@
   - 2e3bf521 chore(lg-024): manifest 窗 6 席 session 正签件管线覆盖——CAO/CFO/CHO/CPO/FSD/STE 手作件升格管线件（组合公式产物 149-174 行；先档后覆归档锚 cbaee3b7 在先；写根 fix 3200b89 后正位落盘；8 席断言 8/8+5 无源席零行为+check-sync 14/14+392 门+TriRMC 门全绿读数随批）
   - dbd3100a chore(lg-024): CTO 席 session 正签件管线出件正位——组合公式产物 158 行覆盖手作件（先档后覆归档锚 cbaee3b7 在先；域知识族节+会话面补充节+claude-session 尾注四断言过；execute 报 created 实落 D:\Code\ai\.claude\hub 幽灵目录=写根错位 bug，本件=幽灵件正位，bug 本体候 CTO 域修）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:30 +08：自上次进度提交 0335fb62 后新增 1 条 commit：
+  - 91d2c7d1 docs(lg-026): BL 草案预审过门随批——CHO 四判据全过三注落（注 a D-13 注记已在册正身化/注 c 前向引用改锚 D-18 规则 2/注 b 升级链数值留 P5 批 JD 必核）+slug 定见 business-lead 候 CTO contract 核 @MoRen
+- registry：v2.1；今日 registry 提交无变化
