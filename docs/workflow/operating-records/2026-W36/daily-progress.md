@@ -235,3 +235,7 @@
 - 巡检兜底补写 @03:30 +08：自上次进度提交 0335fb62 后新增 1 条 commit：
   - 91d2c7d1 docs(lg-026): BL 草案预审过门随批——CHO 四判据全过三注落（注 a D-13 注记已在册正身化/注 c 前向引用改锚 D-18 规则 2/注 b 升级链数值留 P5 批 JD 必核）+slug 定见 business-lead 候 CTO contract 核 @MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 768686d9 后新增 2 条 commit：
+  - 8c00d430 Merge remote-tracking branch 'origin/dev' into dev
+  - 8f90ed9b docs(lg-010): 加载层拉前评估件——核心发现 LG-028 迁出改变设计输入，不建拉前候 P5 组长岗合批重定义
+- registry：v2.1；今日 registry 提交无变化
