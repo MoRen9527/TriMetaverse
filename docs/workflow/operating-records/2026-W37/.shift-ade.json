@@ -1,0 +1,101 @@
+{
+  "objectType": "ADE_SHIFT",
+  "status": "pass",
+  "from_week": "W36",
+  "to_week": "W37",
+  "start_date": "2026-09-07",
+  "dry_run": false,
+  "steps": [
+    {
+      "step": "create",
+      "result": {
+        "status": "pass",
+        "summary": {
+          "created": true,
+          "dry_run": false,
+          "object_id": "OP-202609-W37-001"
+        },
+        "changes": [
+          {
+            "action": "created",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W37/OP-202609-W37-001.json",
+            "object_id": "OP-202609-W37-001"
+          }
+        ],
+        "errors": [],
+        "check_time": "2026-09-06T15:00:05.966451+00:00"
+      }
+    },
+    {
+      "step": "migrate",
+      "result": {
+        "status": "pass",
+        "summary": {
+          "migrated": true,
+          "from_week": "W36",
+          "to_week": "W37",
+          "trees_migrated": 0
+        },
+        "changes": [
+          {
+            "action": "retired",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W36/OP-202608-W36-001.json",
+            "week": "W36"
+          },
+          {
+            "action": "migrated",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W37/OP-202609-W37-001.json",
+            "trees": 0
+          }
+        ],
+        "errors": [],
+        "check_time": "2026-09-06T15:00:05.970737+00:00"
+      }
+    },
+    {
+      "step": "carry_over",
+      "result": {
+        "status": "written",
+        "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W37/OP-202609-W37-001.unresolved-items.md"
+      }
+    },
+    {
+      "step": "validate",
+      "result": {
+        "status": "pass",
+        "summary": {
+          "valid": true,
+          "total_checks": 16,
+          "errors": 0
+        },
+        "changes": [],
+        "errors": [],
+        "check_time": "2026-09-06T15:00:05.978169+00:00"
+      }
+    },
+    {
+      "step": "agent_close",
+      "result": {
+        "status": "pass",
+        "from_week": "W36",
+        "to_week": "W37",
+        "checks": {
+          "new_index_active": true,
+          "unresolved_items_present": true
+        },
+        "escalation_8w": [
+          "`CARRY-20260728-001` | trilc TUI 对齐 CC 2.1.88 源码移植 — P0 地基 | W30 | CTO→FullStack→Test | 10w+ ⚠️⚠️ | active — W35(8/24) CEO 裁决：**推进**（P0 主线）",
+          "`CARRY-20260728-004` | trilc TUI 对齐 CC — P1 输入完整性 | W30 | CTO→FullStack→Test | 10w+ ⚠️⚠️ | frozen — W35(8/24) CEO 裁决：冻结维持（等 CARRY-001 推进）",
+          "`CARRY-20260728-006` | trilc TUI 对齐 CC — P2 安全+长会话+打磨 | W30 | CTO→FullStack→Test | 10w+ ⚠️⚠️ | frozen — W35(8/24) CEO 裁决：冻结维持（等 CARRY-004）"
+        ],
+        "errors": []
+      }
+    }
+  ],
+  "escalation_8w": [
+    "`CARRY-20260728-001` | trilc TUI 对齐 CC 2.1.88 源码移植 — P0 地基 | W30 | CTO→FullStack→Test | 10w+ ⚠️⚠️ | active — W35(8/24) CEO 裁决：**推进**（P0 主线）",
+    "`CARRY-20260728-004` | trilc TUI 对齐 CC — P1 输入完整性 | W30 | CTO→FullStack→Test | 10w+ ⚠️⚠️ | frozen — W35(8/24) CEO 裁决：冻结维持（等 CARRY-001 推进）",
+    "`CARRY-20260728-006` | trilc TUI 对齐 CC — P2 安全+长会话+打磨 | W30 | CTO→FullStack→Test | 10w+ ⚠️⚠️ | frozen — W35(8/24) CEO 裁决：冻结维持（等 CARRY-004）"
+  ],
+  "check_time": "2026-09-06T15:00:05.980689+00:00"
+}

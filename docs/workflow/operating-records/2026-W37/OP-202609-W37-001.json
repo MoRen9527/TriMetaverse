@@ -1,42 +1,41 @@
 {
     "dependsOn": [
-        "OP-202608-W35-001"
+        "OP-202608-W36-001"
     ],
     "objectType": "WEEKLY_INDEX",
-    "objectId": "OP-202608-W36-001",
-    "title": "TriMetaverse W36 周经营维护索引",
+    "objectId": "OP-202609-W37-001",
+    "title": "TriMetaverse W37 周经营维护索引",
     "ownerRole": "CEOChiefOfStaff",
-    "status": "closed",
-    "summary": "W36 周经营维护。任务从上周迁移，新任务待规划。",
+    "status": "active",
+    "summary": "W37 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "version": "1.0.0",
-        "lastUpdated": "2026-09-06T15:00:05.970737+00:00",
+        "lastUpdated": "2026-09-06T15:00:05.966451+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
             "经营维护计划单"
         ],
-        "latestActiveWeek": false,
+        "latestActiveWeek": true,
         "phase": "ceo-copilot-host-coordination",
-        "previousWeekRef": "docs/workflow/operating-records/2026-W35/OP-202608-W35-001.json",
-        "nextWeekRef": "docs/workflow/operating-records/2026-W37/OP-202609-W37-001.json"
+        "previousWeekRef": "docs/workflow/operating-records/2026-W36/OP-202608-W36-001.json"
     },
     "priority": "high",
     "timebox": {
         "scope": "weekly",
-        "label": "2026-W36 当前周维护面",
-        "startAt": "2026-08-31T00:00:00+08:00",
-        "endAt": "2026-09-06T23:59:59+08:00"
+        "label": "2026-W37 当前周维护面",
+        "startAt": "2026-09-07T00:00:00+08:00",
+        "endAt": "2026-09-13T23:59:59+08:00"
     },
-    "createdAt": "2026-08-30T15:00:04.719738+00:00",
+    "createdAt": "2026-09-06T15:00:05.966451+00:00",
     "relatedModules": [
         "TriMetaverse",
         "TriCompany",
         "TriLC",
         "TriMC"
     ],
-    "updatedAt": "2026-08-30T15:00:04.719738+00:00",
+    "updatedAt": "2026-09-06T15:00:05.966451+00:00",
     "activeTrees": [],
     "doneTreesFromPreviousWeek": [
         {
