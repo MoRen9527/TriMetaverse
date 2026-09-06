@@ -245,3 +245,7 @@
 - 巡检兜底补写 @23:10 +08：自上次进度提交 75d6e638 后新增 1 条 commit：
   - 03774c50 ops: weekly plane shift
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 08bd7016 后新增 2 条 commit：
+  - e2aed21f docs(plane): README active 周指针 W36→W37 人工必查闭环——自动迁移未覆盖的 README 翻页 SOP 老坑再证（W35→W36 同款；W37 首跑 03774c50 产物 OP-202609-W37-001 对表）@MoRen
+  - 3158bd2a docs(fade): 文档漂移勘误域候补提案草案——模块级自主维护设计（cron 每日扫描水位持久化→拉起模块负责人 agent→Qualify 漂移定级→Plan→DCE 文档落盘→owner Close；发布下游复用 FADE-002）；三真实样本在卷+待裁点五项候三方联审；候裁材料不动真源不实施（CEO 定调扩域 2026-09-06，体例照 lg026 BL 草案先例）@MoRen
+- registry：v2.1；今日 registry 提交无变化
