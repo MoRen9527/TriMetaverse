@@ -1,0 +1,20 @@
+LG-0xx 文档漂移域候补·CTO 技术面主审意见（对草案 3158bd2a，候裁不实施）
+
+- sourceOfTruth: TriMetaverse/docs/execution/fade-doc-drift-cto-tech-review.txt
+- syncMode: draft｜lastSyncedAt: 2026-09-06
+
+【技术面三视角】
+1. **cron 资源**：模块级每日扫描负载轻（水位 git log 比对零重计算），但**前置硬约束=调度器 job 持久化先修**——今晨勘定 TriRMC 三 job 疑纯内存态（/var/lib/trirmc/cron 零定义文件，进程重启即灭，trirmc.service 自 08-25 常驻故在册）——**doc-drift cron job 上线前必须先补 job 重注册脚本/runbook**，否则新 job 重蹈「重启即失」。
+2. **水位持久化形态**：扫描水位（last-scanned commit）**与扫描执行体同域**——patrol 在河源跑则水位落河源 patrol 数据目录（/var/lib/trirmc/cron/doc-drift-watermark 同族形态）；中央面只登记 run 信封（FADE 链自带）——防「水位与执行点分离」的跨机一致性问题。
+3. **agent 拉起机制**：**零新机制**——检出→run 信封→M-004 路由→负责人席 SendMessage 直达（常驻席）/spawn fan-out（无常驻席五席 Wave 2 先例实证）——§8.6「检测即触发」立法的接线成本≈0。
+
+【五裁点意见】
+- **a 触发面归属：挂 patrol 同窗**（cron 新 job 否）——patrol 管线（git 工具族/信封/DCE 链）全备可复用，同骨架不同载荷自证（草案 §三 FADE-006 关系同理）；少一 job=少一内存态风险面；水位落执行点本地+中央 run 登记。
+- **b 模块-负责人映射真源：D-13 名址表扩展**（registry 新键=第二真源违单源纪律；D-13 已是名址唯一真源，增「模块负责人」键域即得）——CHO/CTO 域联裁我投 D-13。
+- **c Qualify 判据分级**：机械存在性断言 v1 清单=「待实现/pending/TODO 类声明 × CLI 参数清单/函数存在性/symbol grep」（RDT 样本 1 形态=adeLifecycle closeCli pending 实证可机械断言）；漂移词表四档照草案（无漂移/注记级/正文级/结构级）；机械门先筛语义门精判照草案。
+- **d automation-backlog 吸收：吸收**——本域 cron 每日扫描=「文件/Git 事件自动触发」旧债（CTO 2026-08-21 裁决）的降频实现替代；旧债销账条件=本域 v1 实跑两窗稳定。
+- **e 档位路线：候补观察起步**（两次周检窗攒实跑样本）——Qualify 语义段质量未实证前不上完整实例；§五入册前置「两次周检实跑样本」条款照草案。
+
+【时点】联审窗=**周一 P4 后**（周日日间已过+BOD P4 裁据②「联审占监理带宽」同款适用——P4 后监理带宽释放）；实施=候裁后 v1 观察起步。
+
+【依据】草案 3158bd2a 全文+今晨 TriRMC 调度器勘定（三 job 内存态/8712 healthz jobCount=3）+M-004/Wave 2 spawn 实证+LG-028/024 管线在役态。
