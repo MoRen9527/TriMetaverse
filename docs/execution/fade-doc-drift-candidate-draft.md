@@ -6,7 +6,7 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-09-06
 
-**状态：候裁草案**（RDT 小吴起草，2026-09-06 CEO 定调扩域；本件不动真源不实施；新实例入册须 CPO/CTO/COS 三方常设联审裁，本件供其候裁）。体例先例：lg026-bl-session-body-draft.md。
+**状态：候裁草案**（RDT 小吴起草；扩域定调=CEO 席直入指令 2026-09-06 晚，终端原文在卷、候 BOD 补录〔通道形态=CEO 本人在 RDT 会话终端直接键入，非跨席转令——先例 U-20260901-01 CEO 终端在席确认〕；本件不动真源不实施；新实例入册须 CPO/CTO/COS 三方常设联审裁，本件供其候裁）。体例先例：lg026-bl-session-body-draft.md。
 
 ---
 
@@ -27,7 +27,7 @@
 
 | 段 | 设计 | 分权属性 |
 | --- | --- | --- |
-| 事件触发 | **cron 每日全模块代码扫描**（程序触发）：按模块持**扫描水位**（last-scanned commit，持久化工件），检出代码修改即开 run | 确定性 |
+| 事件触发 | **cron 每日全模块代码扫描**（程序触发）：按模块持**扫描水位**（持久化工件），检出代码修改即开 run。**扫描引擎=CodeGraph**（tree-sitter 代码知识图谱，本仓现役工具，自带全仓符号/边/文件索引——CEO 同通道二次定调「要把 codegraph 用起来，它本身就扫描代码」）：水位对比=索引快照 diff（符号/边/文件三面），非裸 git diff——变更天然结构化，契约面（API/命令族/调用边）直接可见，即 Qualify 机械断言的素材源 | 确定性 |
 | 路由 | 按模块路由**拉起模块负责人 agent**（TriCompany→小赛；TriMetaverse→CodeRegistry 域；类推全员）——接线 spec §8.6 检测即触发 + M-004 直达派工 | 确定性路由 |
 | Qualify | 负责人 agent 依代码修改**资格审查：判定漂移程度**——改动是否触及对外契约面（命令族/路径/schema/行为/成熟度声明），决定文档是否需要更新、更新哪些件 | **语义**（Agent） |
 | Plan | 起草更新/勘误方案：注记 vs 正文（历史冻结口径）、目标件清单、验收判据 | 语义（Agent） |
@@ -46,7 +46,7 @@
 
 ## 四、待裁点（联审必答）
 
-a. **触发面归属**：TriRMC/TriMMC cron 新 job vs 挂 patrol 同窗；扫描水位工件落点（各模块仓 `.fade/`？registry？）。
+a. **触发面归属**：TriRMC/TriMMC cron 新 job vs 挂 patrol 同窗；扫描水位工件落点（各模块仓 `.fade/`？registry？）；扫描引擎选型=**CodeGraph 图谱 diff（CEO 二次定调，建议采纳）** vs 纯 git diff——前者变更结构化+契约面直出，Qualify 机械断言零额外解析。
 b. **模块-负责人映射真源**：D-13 名址表扩展 vs registry 新键（CHO/CTO 域裁）。
 c. **Qualify 判据分级**：机械存在性断言的覆盖面清单；漂移程度词表定稿。
 d. **与 automation-backlog 的关系**：本域触发面是否吸收"文件/Git 事件自动触发"旧债（CTO 2026-08-21 裁决项）。
@@ -61,5 +61,5 @@ e. **档位路线**：候补观察起步（两次周检窗口攒实跑样本）v
 
 - 样本锚：TriCompany 5bf48b4（勘误注记）/manifest `adeLifecycle`/fade-002-deep-dive.md 头部版本差注记/ TriCompany 3b380a3（D 系教训入册）
 - 协议依据：fade-protocol-spec.md §2.8 细则 7(b)（周检漂移核对）/§8.6（检测即触发）/§六 未收编候选表/头部三方联审条款
-- 定调来源：CEO 2026-09-06 亲笔扩域指令（触发扩为模块级 cron 扫描→拉起负责人 agent→Qualify 漂移定级→Plan）
+- 定调来源：**CEO 席直入指令两道**（2026-09-06 晚，RDT 会话终端原文逐字在卷，候 BOD 补录）：①扩域指令（触发扩为模块级 cron 扫描→拉起负责人 agent→Qualify 漂移定级→Plan）②扫描引擎定调（「要把 codegraph 用起来，它本身就扫描代码」）
 - 体例先例：lg026-bl-session-body-draft.md（候裁草案落 docs/execution/，CHO 预审过门流程）
