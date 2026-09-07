@@ -25,3 +25,14 @@
   - 8792e7b4 docs(lg-026): P5 备料①BL session-body 源件草案——双段底线+域知识族五指针逐一实勘（重审报告/§8.7 验收件/双 daemon 合同/纪律册/周平面）+核心域知识五条（管信不管码/状态机/推送三级升级链/组织归属/禁编造）+五件套备料清单（BOD 加负荷令⑦；候 CHO 门预审+P5 批，预审过前不入 source-agents 不渲染）@MoRen
   - …另有 485 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:00 +08：自上次进度提交 5394f6bf 后新增 9 条 commit：
+  - 66255a46 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 00272b33 docs(lg-033): M 面值班/交互双位互备体系正式提案件——CEO 原话四段需求正源+方案 v1.1 成文（双位图/五组件/吸收裁撤清单/分期 P0-P4'/R 面预留/已裁项③⑤/四候裁点；C-Level 四席联审稿候审不动真源；素材锚 .fade 工作区件）@MoRen
+  - adeba0d9 docs(execution): 治理提案集 20260907——提案 A 任务方案四级生命周期与文件夹职能（engineering task-drafts→execution→挂平面→归档，跨模块入中央）/提案 B M-R 面环境分级与拉取范围清单化（M=dev·R=pre·prd 未建，清单真源+成熟度升降级+四席重审 docs 标准）/提案 C FADE 归 COS+inbox-schema-wiki 知识管线全链（经验→提案→批准→实例管道化）；三提案待裁点十三项；候 CAO 汇 CEO 审批+B 四席联审 @MoRen
+  - 53431a30 docs(lg-026): P4 五事项执行单备妥稿——seq 冲突对账/BOD 点名实录/8713 部署（硬前置链候①）/rateLimitedCount healthz/授权面黑盒矩阵——单文件脚本+判据+依赖标注+22:00 硬停条款（BOD 催办批，候开窗令零执行）@MoRen
+  - 0e1be43a docs(lg-020): TriMLC-Channel cmd 重建方案——CEO 提权动作卡四步+cmd 骨架（token 现取现注）+CRLF/禁 BOM/纯 ASCII 三教训条款+四步校验
+  - e0f1eb3d docs(fade): 勘误域草案触发行精化——刷新与对比解耦（会话内 watcher 自动增量无人工对齐/cron 面读图谱现势做模块级指纹水位对比，变才开 run 不变零日志）；服务器侧 CLI 增量能力候勘如实标注 @MoRen
+  - 0862040d docs(fade): 勘误域草案令源实锚化+扫描引擎定调并入——①头载通道形态勘正（CEO 席直入指令 2026-09-06 晚终端原文在卷候 BOD 补录，非跨席转令；先例 U-20260901-01；BOD 卷勘验落空根因=我初稿未载通道形态，表述债自录）②扫描引擎=CodeGraph 图谱 diff（CEO 同通道二次定调：符号/边/文件三面水位对比替代裸 git diff，契约面直出即 Qualify 机械断言素材源；待裁点 a 同步） @MoRen
+  - 11d3dbb4 docs(fade-candidate): 文档漂移域 CTO 技术面主审——cron 前置=job 持久化先修/水位同执行点/拉起零新机制+五裁点（patrol 同窗/D-13 扩展/机械门清单/吸收旧债/观察起步）
+  - 6cc3f224 docs(fade): 勘误域草案补样本四——README 周指针翻页老坑复发（自动化链自身声明漂移：迁移覆盖目录翻页未覆盖 README 翻页，W35→W36 同款再证，COS 人工翻页 e2aed21f）；样本二标注 CTO 认可收口；共性节补「漂移者可以是自动化链本身」观察 @MoRen
+- registry：v2.1；今日 registry 提交无变化
