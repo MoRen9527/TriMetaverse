@@ -72,3 +72,10 @@
   - 4e51020c docs(whitepaper): L187 8711/8713 职责认知勘正（CEO 亲定 2026-09-08）——TriRLC(8711,R 面)=token 门控+TriPilot 聊天通道；TriMLC(8713,M 面)=M 面 CC 员工会话宿主（LG-024 session 面 13 席+LG-026 spawn 宿主/§8.6-8.7 二次解锁正身）；前报「8713 消费 TriPilot」系错误已勘 @MoRen
   - b00ac3a2 docs(lg-033/lg-018): M 面函数清单对表评估（移植5/新建1/不需2）+河源 cron 重注册 runbook（三 job 参数照现役实录+验证三步+10 分钟 runbook 序）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 671dc279 后新增 5 条 commit：
+  - 1a407a48 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 2827816a docs(lg-033): 终局交互模型章补入（CEO 定谳 2026-09-08）——名字寻址+双 daemon 路由桥+阶段性互通三要素；新增联审议题「跨机名字路由层」设计评估（重要级，对接 D-13+LG-026 信件原型，与裁点⑤/safety 路径模型同场）；排期定位=P3 交接协议原生宿主+P4' 通信底座 @MoRen
+  - a91cf6b9 docs(lg-033): 演进立项 CTO 评估——轻量路径改判成立（三山消解 1-2 窗壳）+终端=接入面定谳+三路分级+协同沿用+分期依赖图
+  - 071087a0 docs(lg-020): 历史段旧名还原——§一 现勘事实段 L9 恢复旧名实盘名（当时缺失的是旧名件，历史事实段不随重建件名勘正改写；仅勘误时点注记区分）
+  - 0bcab805 docs(lg-020): cmd 重建件名勘正——旧名 trilc-daemon-channel.cmd 全替换 trimlc-daemon-channel.cmd（R 面旧名污染 M 面件名=旧名禁续禁的形态，CEO 指正）
+- registry：v2.1；今日 registry 提交无变化
