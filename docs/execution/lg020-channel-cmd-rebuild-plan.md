@@ -6,15 +6,15 @@
 
 ## 一、现勘事实（2026-09-05 勘定书在卷）
 
-- 启动件 `C:\Users\jedih\AppData\Local\trilc-daemon-channel.cmd` **缺失**（文件系统硬事实，不涉权限面）——即使 TriMLC-Channel 任务在册，打火必败（cmd 缺即败）=§8.5.1 悬案根因候选。
+- 启动件 `C:\Users\jedih\AppData\Local\trimlc-daemon-channel.cmd` **缺失**（文件系统硬事实，不涉权限面）——即使 TriMLC-Channel 任务在册，打火必败（cmd 缺即败）=§8.5.1 悬案根因候选。
 - TriMLC-Channel 任务在/缺**本席不可决**（powershell Get-ScheduledTask=Medium 盲区 §8.5.1 在册；cmd schtasks 通道输出空）——CEO 管理员终端一行枚举定谳。
 - 8713 连接拒=既知候令态（服务未起）。
 
 ## 二、CEO 提权动作卡（管理员终端，顺序执行）
 
 1. **枚举定谳**：`schtasks /query /fo LIST /v | findstr /i "TriMLC"`——在册→跳 2 只补 cmd；缺席→2+3 全做。
-2. **cmd 重建落位**：`C:\Users\jedih\AppData\Local\trilc-daemon-channel.cmd` 写入（内容骨架见 §三；**token 现取现注不入方案明文**——恢复源=中央面侧登记或 §8.4 期手执记录）。
-3. **任务重挂（若缺席）**：§8.4 双口径正身照录——PowerShell（已跑成先例）：`schtasks /Create /TN "TriMLC-Channel" /SC ONSTART /DELAY 0001:30 /TR "C:\Users\jedih\AppData\Local\trilc-daemon-channel.cmd" /RU SYSTEM /F`。
+2. **cmd 重建落位**：`C:\Users\jedih\AppData\Local\trimlc-daemon-channel.cmd` 写入（内容骨架见 §三；**token 现取现注不入方案明文**——恢复源=中央面侧登记或 §8.4 期手执记录）。
+3. **任务重挂（若缺席）**：§8.4 双口径正身照录——PowerShell（已跑成先例）：`schtasks /Create /TN "TriMLC-Channel" /SC ONSTART /DELAY 0001:30 /TR "C:\Users\jedih\AppData\Local\trimlc-daemon-channel.cmd" /RU SYSTEM /F`。
 4. **打火验证**：手动 `schtasks /Run /TN "TriMLC-Channel"`→`curl http://127.0.0.1:8713/healthz` 预期 ok——**§8.5.1 弧线注意**：/Run 撞 ONSTART+DELAY 队列怪癖（打火无痕则读 taskrun.log 判层，§8.5.1 判读条在卷）。
 
 ## 三、cmd 内容骨架（env 全集照通道 spec §四；token 现取现注）
