@@ -83,3 +83,7 @@
   - 09347a33 Merge remote-tracking branch 'sg-server/dev' into dev
   - 23ffd440 docs(lg-033): 双 COS 定名与重建流程小节补入（CEO 亲定四步立法：定名〔候选各席提/CEO 终定/全小写连字符+面归属语义+D-13 查重〕→注册〔CAO 入 D-13 双席正名+机器归属〕→双实例重建〔新名 -n+重建首动作读常驻指令区+在途对账 3.6 精神〕→收编〔映射表现查+旧名退役入沿革〕；时序=P2 读数②③采毕阶段边界）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:40 +08：自上次进度提交 7438f2e9 后新增 2 条 commit：
+  - d07133f8 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 58bbe527 docs(lg-033): 跨机派工试点双树挂 TriMMC 树区——duty-night-patrol（夜间巡检告警脚本三节点）+reservoir-alarm-table（蓄水池告警值表两节点）；FADE-006 拾取契约形态/domainRouting=sg-duty-executable；值班 COS 自主拾取执行回写（BOD 跨机派工机制激活令试点件）@MoRen
+- registry：v2.1；今日 registry 提交无变化
