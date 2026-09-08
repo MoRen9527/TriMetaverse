@@ -1,0 +1,32 @@
+{
+  "treeId": "duty-night-patrol",
+  "title": "值班位夜间巡检告警脚本树（跨机派工试点①）",
+  "week": "W37",
+  "source": "BOD 令 2026-09-08（CEO 亲定跨机派工机制激活）：值班位适合件首树——值班 COS 编写夜间巡检告警脚本并自验，验证挂树→拾取→执行→回写全链",
+  "domainRouting": "sg-duty-executable",
+  "status": "pending",
+  "created": "2026-09-08",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "DNP-1",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "编写夜间巡检告警脚本（bash 或 python）：巡检对象=8711/8713 healthz 状态+8711 出站对端（应 8.155.54.79:8710）+蓄水池台账 mtime 时效；输出=告警值行（正常=OK 行/异常=ALARM 行含对象+现值+阈值）至 stdout，脚本落 /home/fleet/.trilc/ 或值班位工作目录（禁入仓）；脚本须可被 cron/daemon 周期调用（无交互依赖）"
+    },
+    {
+      "nodeId": "DNP-2",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "自验：脚本连续跑 3 遍全 OK+人为注入一异常（如临时错端口）验证 ALARM 行触发——自验读数写入升级日志分区（值班位专写面）"
+    },
+    {
+      "nodeId": "DNP-3",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "回写：升级日志首笔追加演练记录（脚本路径/三遍读数/异常注入结果）+树状态回写 done——禁写主账（写分区纪律）"
+    }
+  ],
+  "acceptance": "脚本在位+三遍自验读数+异常注入触发实证+升级日志首笔",
+  "notes": "跨机派工试点树①——验证 FADE-006 拾取模式首次实战于值班位；零本机依赖（全部 sg 本地可完成）"
+}

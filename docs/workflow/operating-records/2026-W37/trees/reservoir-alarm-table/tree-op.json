@@ -1,0 +1,26 @@
+{
+  "treeId": "reservoir-alarm-table",
+  "title": "蓄水池告警值表起草树（跨机派工试点②）",
+  "week": "W37",
+  "source": "BOD 令 2026-09-08：值班位适合件次树——值班 COS 起草蓄水池监控告警值表（阈值/对象/升级路径三列），供池监控扩展（LG-033 五组件之 5 watcher 的告警面）",
+  "domainRouting": "sg-duty-executable",
+  "status": "pending",
+  "created": "2026-09-08",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "RAT-1",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "起草告警值表（markdown）：监控对象逐项（台账 mtime 时效/8711-8713 healthz/出站对端接线/watcher 心跳）×阈值（warn/critical 两档）×升级路径（值班位自处→升级日志→急件链）——数据基线取 7294s 归因批+健康读数在卷值"
+    },
+    {
+      "nodeId": "RAT-2",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "回写：值表落升级日志分区+树状态 done——候 COS 面审后入 watcher 实装规格"
+    }
+  ],
+  "acceptance": "值表在位（对象×阈值×升级路径三列齐）+升级日志回写首笔",
+  "notes": "跨机派工试点树②——产物供 LG-033 五组件之 5 机械 watcher 实装的告警面规格输入"
+}
