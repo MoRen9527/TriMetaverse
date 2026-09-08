@@ -57,3 +57,13 @@
   - 539e7e03 docs(lg-033): 架构叙事章补段三总纲收束（CEO 2026-09-08 定谳原话逐字——FADE 实例=横向载体正式点名入战略叙事；横向纵向两维进化总纲；BOD 补录令）@MoRen
   - 45718f5d docs(whitepaper): 两维进化总纲补入（CEO 定谳 2026-09-08）——横向=本地域交互总结固化流程（FADE 实例）输送服务器域无人值守执行；纵向=M 面成熟产品组合搭实验方案快速发挥优势/找到系统局限，R 面放大优势/破开局限；双轴交替=公司进化主循环。接 M→R 师徒传承段之后，战略叙事收口 @MoRen
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:20 +08：自上次进度提交 106a984d 后新增 8 条 commit：
+  - 4eaaf22b Merge remote-tracking branch 'sg-server/dev' into dev
+  - 71bd33fd docs(lg-033): v2 终态架构定谳章补入——启动/通信方案六段全弧线锁定（值班位=sg systemd(+tmux) 常驻 session 级/互备=蓄水池 git 中转+watcher/任务工人=ProcessSupervisor headless 正交/R 面=agent-core 学徒位 CC 不上 R 面/form c 过渡日落条款/三问质询教训入卷）@MoRen
+  - 5e98bd49 docs(lg-033): b 直上三问质询代码级实证证据书——run 型一次性铁证（supervisor.ts 295 行行号引）+pty 零命中+六维对比 systemd(+tmux) 完胜 session 级四维+分支 1 命中判定+b 直上原判勘正自领
+  - 122f40ae docs(lg-033): 启动机制修订轮主答——蓄洪必选+compact/clear 逐项/跨机双证/b 直上重估反转采纳/attach 单持有者互斥规则定谳
+  - a3d1edb8 docs(lg-033): 值班位启动机制评估主笔稿——三案对比表+b 案主干双形态并存推荐+skip/safety 非互斥勘定+补偿四件+Q1-Q4 残留清单
+  - 5abfa2d6 docs(lg-033): CFO 意见件 L51 勘误注——「经 CEO 批准」系本席转述笔误（COS 批准达知会标题原文即「COS 批准达」）；批准者归一口径=COS 批准（审批权限定则〔三类保留外归 COS 批〕首个批件，正身头性质行+首级锚 baeaa62，CAO 簿 2bfa1d8）；本席无 CEO 批文实锚，注入授权系另事候 CEO 与批件批准者两事勿混；原注留痕不删 @MoRen
+  - 14495d21 docs(lg-033): CFO 意见件风险条清偿注记——§四「裁点②未裁先实施风险」销账（密钥正身 glm-key-governance.md CEO 批准成纪律生效 2026-09-08，TRIMODEL_API_TOKEN 网关通道下裸 key 上服务器形态不成立，晨检双零命中断言在役）；时点修正注记留痕不删史 @MoRen
+  - 04214948 docs(lg-033): Wave 0 悬空引用清偿改锚——提案件 §八+CFO 意见件缺口判语后加清偿注记（正身=TriCompany/docs/engineering/glm-key-governance.md 两席联合合稿候批；历史判语冻结留痕）
+- registry：v2.1；今日 registry 提交无变化
