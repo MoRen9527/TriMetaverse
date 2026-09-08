@@ -6,7 +6,7 @@
 
 ## 一、现勘事实（2026-09-05 勘定书在卷）
 
-- 启动件 `C:\Users\jedih\AppData\Local\trimlc-daemon-channel.cmd` **缺失**（文件系统硬事实，不涉权限面）——即使 TriMLC-Channel 任务在册，打火必败（cmd 缺即败）=§8.5.1 悬案根因候选。
+- 启动件 `C:\Users\jedih\AppData\Local\trilc-daemon-channel.cmd`（旧名件，勘正前时点的实盘名）**缺失**（文件系统硬事实，不涉权限面）——即使 TriMLC-Channel 任务在册，打火必败（cmd 缺即败）=§8.5.1 悬案根因候选。
 - TriMLC-Channel 任务在/缺**本席不可决**（powershell Get-ScheduledTask=Medium 盲区 §8.5.1 在册；cmd schtasks 通道输出空）——CEO 管理员终端一行枚举定谳。
 - 8713 连接拒=既知候令态（服务未起）。
 
