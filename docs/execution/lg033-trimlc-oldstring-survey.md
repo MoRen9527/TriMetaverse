@@ -1,0 +1,433 @@
+# TriMLC 输出面旧串清查清单（2026-09-08，LG-033 ①件附属）
+
+## 源码面（grep src/*.ts 排除 trimlc/注释命中）
+- src/cli.ts:29:Usage: trilc <command> [options]
+- src/cli.ts:32:  start              Start daemon in background       trilc start [--port 8711]
+- src/cli.ts:33:  stop               Stop background daemon           trilc stop
+- src/cli.ts:34:  restart            Restart daemon (stop → start)    trilc restart [--port 8711]
+- src/cli.ts:35:  status             Show daemon status               trilc status [--port 8711]
+- src/cli.ts:36:  run                Run daemon in foreground         trilc run [--port 8711]
+- src/cli.ts:37:  chat               Start TUI chat (auto-starts daemon) trilc chat [--port 8711] [--agent &lt;id&gt;] [--resume &lt;id&gt;] [--permission-mode &lt;mode&gt;]
+- src/cli.ts:38:  list-sessions      List all saved sessions            trilc list-sessions [--port 8711]
+- src/cli.ts:39:  session compact    Compact a session's messages         trilc session compact <id>
+- src/cli.ts:40:  install-service    Register as Windows Service       trilc install-service [--name TriLC] [--displayName "..."]
+- src/cli.ts:41:  uninstall-service  Unregister Windows Service        trilc uninstall-service [--name TriLC]
+- src/cli.ts:42:  install-regrun     Register to Registry Run (no-admin) trilc install-regrun
+- src/cli.ts:43:  uninstall-regrun   Remove from Registry Run           trilc uninstall-regrun
+- src/cli.ts:44:  daemon             OS-level daemon management         trilc daemon <install|uninstall|stage|status>
+- src/cli.ts:45:  cron               Cron job management                trilc cron <add|list|update|remove|run|log|status>
+- src/cli.ts:46:  mcp                MCP server management               trilc mcp <add|remove|list|status>
+- src/cli.ts:47:  watchdog           Start watchdog supervisor process   trilc watchdog [--port 8711] [--data-dir <path>]
+- src/cli.ts:118:      console.error(`[trilc] invalid permission mode: "${permissionMode}". Valid: ${validModes.join(', ')}`);
+- src/cli.ts:127:    console.log('[trilc] -p mode: permission mode defaulting to "default" (non-interactive)');
+- src/cli.ts:130:    console.error('[trilc] -p mode: permission mode "bypass" is not allowed in non-interactive mode. Use "default" or "dontAsk".');
+- src/cli.ts:138:// A "running trilc" is a PID that is alive AND answers healthz on the port.
+- src/cli.ts:180:    console.log(`[trilc] daemon already running (pid=${existingPid})`);
+- src/cli.ts:189:      console.log(`[trilc] daemon already running on port ${port}.`);
+- src/cli.ts:195:      console.error(`[trilc] port ${port} occupied by pid ${owner.pid} — not a healthy trilc daemon.`);
+- src/cli.ts:196:      console.error('[trilc] stop that process (or run trilc stop) before starting.');
+- src/cli.ts:198:      console.error(`[trilc] port ${port} already in use by another process.`);
+- src/cli.ts:208:  const daemonDataDir = process.env.TRILC_DATA_DIR ?? `${process.env.LOCALAPPDATA ?? process.env.HOME ?? '/tmp'}/trilc`;
+- src/cli.ts:236:    console.error('[trilc] failed to spawn daemon');
+- src/cli.ts:267:    console.error(`[trilc] daemon failed to start — ${reason}`);
+- src/cli.ts:268:    console.error(`[trilc] daemon log: ${daemonLogPath}`);
+- src/cli.ts:273:    console.warn('[trilc] daemon healthy but PID file not registered (check ~/.trimetaverse permissions)');
+- src/cli.ts:275:  console.log(`[trilc] daemon started (pid=${child.pid} port=${port})`);
+- src/cli.ts:289:          console.log(`[trilc] daemon stopped gracefully (pid=${pid})`);
+- src/cli.ts:294:        console.warn(`[trilc] graceful shutdown accepted but pid ${pid} still alive, sending SIGTERM...`);
+- src/cli.ts:296:        console.log(`[trilc] shutdown endpoint unavailable, sending SIGTERM (pid=${pid})...`);
+- src/cli.ts:303:        console.error(`[trilc] failed to signal daemon (pid=${pid}):`, (err as Error).message);
+- src/cli.ts:307:        console.log(`[trilc] daemon stopped via signal (pid=${pid})`);
+- src/cli.ts:311:        console.log(`[trilc] daemon force-killed (pid=${pid})`);
+- src/cli.ts:318:    console.log(`[trilc] daemon not running (stale pid=${pid})`);
+- src/cli.ts:325:    console.log('[trilc] no daemon running');
+- src/cli.ts:331:    console.log(`[trilc] port ${port} occupied by pid ${owner.pid} — not a healthy trilc daemon; not killing it.`);
+- src/cli.ts:335:  // Healthy trilc with no PID record (foreground run / foreign path): stop it.
+- src/cli.ts:340:      console.log(`[trilc] daemon stopped via port lookup (pid=${owner.pid})`);
+- src/cli.ts:343:    console.warn(`[trilc] graceful shutdown accepted but pid ${owner.pid} still alive, sending SIGTERM...`);
+- src/cli.ts:345:    console.log(`[trilc] shutdown endpoint unavailable, sending SIGTERM (pid=${owner.pid})...`);
+- src/cli.ts:351:    console.error(`[trilc] failed to signal pid ${owner.pid}:`, (err as Error).message);
+- src/cli.ts:355:    console.log(`[trilc] daemon stopped via signal (pid=${owner.pid})`);
+- src/cli.ts:359:    console.log(`[trilc] daemon force-killed (pid=${owner.pid})`);
+- src/cli.ts:384:  console.log('[trilc] restarting daemon...');
+- src/cli.ts:389:  console.log('[trilc] daemon restarted');
+- src/cli.ts:420:    console.log(`[trilc] port ${port} already in use — daemon is already running.`);
+- src/cli.ts:443:    console.log('[trilc] daemon not running, auto-starting...');
+- src/cli.ts:449:      console.log(`[trilc] stale daemon detected (pid=${existingPid}), killing...`);
+- src/cli.ts:471:      console.log('[trilc] daemon ready, starting TUI...');
+- src/cli.ts:480:    console.error(`[trilc] daemon failed to start within ${maxWaitMs / 1000}s`);
+- src/cli.ts:511:        console.log(`[trilc] resumed session ${resume} with ${msgs.length} messages`);
+- src/cli.ts:513:        console.error(`[trilc] session ${resume} not found or has no messages`);
+- src/cli.ts:517:      console.error(`[trilc] failed to fetch session ${resume}:`, (err as Error).message);
+- src/cli.ts:531:      console.log('[trilc:init] 提示：任意阶段想重来，退出后运行 trilc chat reset（或 trilc chat reset --include-project 同时清项目关联）');
+- src/cli.ts:535:        console.log('[trilc:init] 未触发自检 — 退出（回到终端；trilc chat 随时再进）。');
+- src/cli.ts:539:        console.log('\n[trilc] 公司开张完成 ✓ — 自动衔接项目初始化…');
+- src/cli.ts:543:        console.log(`[trilc] 项目流程结束（outcome=${next.outcome}）— 五维同步/确认请重新运行 trilc chat 继续。`);
+- src/cli.ts:546:      console.warn('[trilc] init cli flow failed, falling back to chat:', (err as Error).message);
+- src/cli.ts:551:  if (agent) console.log(`[trilc] agent: ${agent}`);
+- src/cli.ts:563:    console.log('[trilc] TUI closed.');
+- src/cli.ts:565:    console.error('[trilc] TUI error:', (err as Error).message);
+- src/cli.ts:635:  console.log('[trilc] install-service → install-regrun (nssm/SYSTEM service deprecated).');
+- src/cli.ts:640:  console.log('[trilc] uninstall-service → uninstall-regrun.');
+- src/cli.ts:655:    console.error('Run trilc uninstall-service first, then retry install-regrun.');
+- src/cli.ts:660:    console.log('[trilc] TriLC already registered in Registry Run.');
+- src/cli.ts:686:    console.log('[trilc] TriLC not found in Registry Run.');
+- src/cli.ts:708:    console.log('[trilc] daemon not running. Start with: trilc start');
+- src/cli.ts:723:        console.log(`\nResume a session: trilc chat --resume <id>`);
+- src/cli.ts:729:    console.error('[trilc] failed to list sessions:', (err as Error).message);
+- src/cli.ts:742:    dataDir: process.env.TRILC_DATA_DIR ?? `${process.env.LOCALAPPDATA ?? process.env.HOME ?? '/tmp'}/trilc`,
+- src/cli.ts:851:      if (!jobId) { console.error('ERROR: job ID required. Usage: trilc cron update <id> [--enable|--disable] [--prompt ...] [--schedule ...]'); process.exit(1); }
+- src/cli.ts:870:      if (!jobId) { console.error('ERROR: job ID required. Usage: trilc cron remove <id>'); process.exit(1); }
+- src/cli.ts:878:      if (!jobId) { console.error('ERROR: job ID required. Usage: trilc cron run <id> [--force]'); process.exit(1); }
+- src/cli.ts:909:        console.error('[trilc] cron status: failed to retrieve status');
+- src/cli.ts:922:      console.error(`[trilc] cron: unknown subcommand: ${subcommand}`);
+- src/cli.ts:923:      console.error('Usage: trilc cron <add|list|update|remove|run|log|status>');
+- src/cli.ts:945:      console.log('[trilc] daemon: installing...');
+- src/cli.ts:951:      console.log('[trilc] daemon: uninstalling...');
+- src/cli.ts:967:      console.error(`[trilc] daemon: unknown subcommand: ${subcommand}`);
+- src/cli.ts:968:      console.error('Usage: trilc daemon <install|uninstall|stage|status>');
+- src/cli.ts:980:      // trilc mcp add <name> <command> [args...] [--type stdio|sse] [--url <url>] [--env KEY=VALUE] [--project]
+- src/cli.ts:983:        console.error('Usage: trilc mcp add <name> <command> [args...] [--type stdio|sse] [--url <url>] [--env KEY=VALUE] [--project]');
+- src/cli.ts:1028:          console.error('[trilc] SSE MCP server requires --url');
+- src/cli.ts:1034:          console.error('[trilc] stdio MCP server requires a command');
+- src/cli.ts:1044:        console.warn(`[trilc] unknown MCP type "${type}", defaulting to "stdio"`);
+- src/cli.ts:1056:      const targetFile = project ? '.claude/mcp.json' : '.trilc/mcp.json';
+- src/cli.ts:1064:        console.error('Usage: trilc mcp remove <name>');
+- src/cli.ts:1073:        console.error(`[trilc] MCP server "${serverName}" not found in .trilc/mcp.json or .claude/mcp.json`);
+- src/cli.ts:1092:        console.log('Add one: trilc mcp add <name> <command>');
+- src/cli.ts:1122:        console.error('Usage: trilc mcp status <name>');
+- src/cli.ts:1131:        console.error(`[trilc] MCP server "${serverName}" not configured`);
+- src/cli.ts:1165:      console.error(`[trilc] mcp: unknown subcommand: ${subcommand}`);
+- src/cli.ts:1166:      console.error('Usage: trilc mcp <add|remove|list|status>');
+- src/cli.ts:1199:        const dataDir = process.env.TRILC_DATA_DIR ?? `${process.env.LOCALAPPDATA ?? process.env.HOME ?? '/tmp'}/trilc`;
+- src/cli.ts:1202:        console.log('[trilc] company state reset — re-onboarding will start');
+- src/cli.ts:1215:          console.error(`[trilc] REFUSED: refusing to reset workspace ${target} (system directory)`);
+- src/cli.ts:1229:            console.log(`[trilc] skeleton cleaned: ${p}`);
+- src/cli.ts:1242:              console.log(`[trilc] pruned empty dir: ${p}`);
+- src/cli.ts:1246:        console.log(`[trilc] company skeleton reset — .git preserved for audit/rollback`);
+- src/cli.ts:1248:        console.error('Usage: trilc company reset');
+- src/cli.ts:1266:            console.error(`[trilc] compact failed: ${json.message ?? json.error ?? 'unknown'}`);
+- src/cli.ts:1270:          console.error(`[trilc] compact failed: ${(err as Error).message}`);
+- src/cli.ts:1274:        console.error('Usage: trilc session compact <id>');
+- src/cli.ts:1313:      const dataDir = process.env.TRILC_DATA_DIR ?? `${process.env.LOCALAPPDATA ?? process.env.HOME ?? '/tmp'}/trilc`;
+- src/cli.ts:1317:      console.log(`[trilc] watchdog starting (port=${wdConfig.port}, dataDir=${wdConfig.dataDir})`);
+- src/cli.ts:1318:      console.log(`[trilc] watchdog will restart the daemon up to 5 times per 10-minute window`);
+- src/cli.ts:1319:      console.log(`[trilc] backoff: 1s→2s→4s→8s→16s→32s cap, reset after 60s stable uptime`);
+- src/cli.ts:1320:      console.log(`[trilc] child entry: ${wdConfig.entryScript}`);
+- src/cli.ts:1332:        console.error('[trilc] watchdog failed to start child process');
+- src/cli.ts:1346:      console.error(`[trilc] unknown command: ${command}`);
+- src/cli.ts:1351:  console.error('[trilc] CLI error:', err);
+- src/company/init-assemble.ts:8:// trilc chat 两入口只发指令（本端点载荷），不写文件、不执行装配。
+- src/company/init-assemble.ts:42:export type AssembleEntry = 'tripilot' | 'trilc-chat';
+- src/company/init-assemble.ts:108:  if (entry !== 'tripilot' && entry !== 'trilc-chat') {
+- src/company/init-assemble.ts:109:    return { ok: false, error: 'bad_request', message: "entry must be 'tripilot' or 'trilc-chat'" };
+- src/company/init-assemble.ts:586:  onboarding: '公司开张阶段：引导 CEO 在 TriPilot 面板阶段卡或 trilc chat 初始化流程中选择员工岗位并起名；装配由 daemon 端点 POST /internal/v1/init/assemble 执行。',
+- src/company/init-assemble.ts:603:    '- 结构化初始化流程由两入口承载（TriPilot 面板阶段卡 / trilc chat 初始化流程）；你只负责指引与答疑，不执行任何装配、探测或文件写动作（零本地执行契约）。',
+- src/company/init-chain.ts:35:export type SourceEntry = 'tripilot' | 'trilc-chat' | 'daemon' | null;
+- src/company/init-chain.ts:187:        console.error(`[trilc:init] init-chain load access failed: ${(err as Error).message}`);
+- src/company/init-chain.ts:209:          `[trilc:init] init-chain.json parse failed (existing ${corruptPath} kept): ${(err as Error).message}`,
+- src/company/init-chain.ts:215:            `[trilc:init] init-chain.json parse failed — copied to ${corruptPath}: ${(err as Error).message}`,
+- src/company/init-chain.ts:219:            `[trilc:init] init-chain.json parse failed (corrupt backup failed too): ${(err as Error).message} / ${(backupErr as Error).message}`,
+- src/company/init-chain.ts:494:          console.log(`[trilc:init] reset: 保留（非占位，真实内容）: ${f}`);
+- src/company/init-cli-flow.ts:1:// ── Init CLI Text Flow（i2-1 拆解 §四.2：trilc chat 文本化）──
+- src/company/init-cli-flow.ts:5://   断点续跑：已答不重复问）→ 汇总确认 → POST assemble（entry=trilc-chat）。
+- src/company/init-cli-flow.ts:155:            console.log('\n[trilc:init] 检测到另一入口已推进链（→' + cs + '）— 自动衔接…');
+- src/company/init-cli-flow.ts:186:    `[trilc:init] 自检状态：${summary}${runId}`,
+- src/company/init-cli-flow.ts:209:    console.log(`[trilc:init] 断点续跑：CEO 已作答（${ceoName}），不再重复提问`);
+- src/company/init-cli-flow.ts:213:      console.log('[trilc:init] 名字必填 — 未作答，返回聊天。');
+- src/company/init-cli-flow.ts:222:    console.log(`[trilc:init] 断点续跑：岗位已选（${selectedIds.join(', ')}），不再重复提问`);
+- src/company/init-cli-flow.ts:224:    console.log('\n[trilc:init] 请选择要启用的岗位（标准岗位目录；推荐至少 5 岗，含治理角色）：');
+- src/company/init-cli-flow.ts:245:      console.log('[trilc:init] 至少选择 1 个岗位（A4 0 人拦截）— 未作答，返回聊天。');
+- src/company/init-cli-flow.ts:258:      console.log('[trilc:init] 员工名字必填 — 未作答，返回聊天。');
+- src/company/init-cli-flow.ts:266:  console.log('\n[trilc:init] 开张汇总：');
+- src/company/init-cli-flow.ts:277:    console.log('[trilc:init] 已取消 — 进度已保存，下次从当前步骤继续。');
+- src/company/init-cli-flow.ts:287:    entry: 'trilc-chat',
+- src/company/init-cli-flow.ts:291:    console.log('\n[trilc:init] 公司开张完成！');
+- src/company/init-cli-flow.ts:300:    console.log('[trilc:init] 装配进行中（单执行体互斥）— 稍后重试同一载荷。');
+- src/company/init-cli-flow.ts:304:    console.log(`[trilc:init] 当前链路状态不允许装配（${assembleRes.json?.chainState}）— 请先完成前置阶段。`);
+- src/company/init-cli-flow.ts:308:    console.log(`[trilc:init] 装配提交段失败（可重试）：${assembleRes.json?.error} — 重新提交同一载荷即续跑。`);
+- src/company/init-cli-flow.ts:311:  console.log(`[trilc:init] 装配失败（http ${assembleRes.status}）：${assembleRes.json?.error ?? 'unknown'} — ${assembleRes.json?.message ?? ''}`);
+- src/company/init-cli-flow.ts:320:  console.log(`[trilc:init] 当前目录：${cwd}`);
+- src/company/init-cli-flow.ts:333:    console.log(`[trilc:init] 当前目录已是受管 worktree（${insp.projectKey} / ${insp.branch}）— 认领登记即可。`);
+- src/company/init-cli-flow.ts:336:      console.log(`[trilc:init] 认领完成：${claimRes.json?.projectKey} / ${claimRes.json?.branch} — PROJECT-LINK 已 linked。`);
+- src/company/init-cli-flow.ts:339:    console.log(`[trilc:init] 认领失败（http ${claimRes.status}）：${claimRes.json?.message ?? claimRes.json?.error ?? 'unknown'}`);
+- src/company/init-cli-flow.ts:344:      `[trilc:init] 当前目录是项目仓普通克隆（${insp.projectKey}，分支 ${insp.branch}）— 非受管形态；\n` +
+- src/company/init-cli-flow.ts:348:    console.log('[trilc:init] 当前目录未关联项目仓（轻提示）— 可走以下两种源建立项目链路。');
+- src/company/init-cli-flow.ts:352:  console.log('\n[trilc:init] 项目源选择：');
+- src/company/init-cli-flow.ts:360:    const payload: Record<string, unknown> = { source: isLocal ? 'local' : 'github', entry: 'trilc-chat' };
+- src/company/init-cli-flow.ts:372:      const cloneTarget = await ask('克隆主检出落点（回车 = ~/trilc-projects/<key>）> ');
+- src/company/init-cli-flow.ts:375:    console.log(`[trilc:init] 提交 link（${isLocal ? 'local' : 'github'} 源）— daemon 端点执行（git 单身份），进度经 init:project-link-* 事件族…`);
+- src/company/init-cli-flow.ts:379:      console.log(`[trilc:init] 项目链路建立完成：${r.projectKey} / ${r.branch}`);
+- src/company/init-cli-flow.ts:385:      console.log(`[trilc:init] 当前链路状态不允许 project-link（${linkRes.json?.chainState}）— 请先完成前置阶段。`);
+- src/company/init-cli-flow.ts:389:      console.log('[trilc:init] 链路执行中（单执行体互斥）— 稍后重试。');
+- src/company/init-cli-flow.ts:393:      `[trilc:init] link 失败（http ${linkRes.status}，分类=${linkRes.json?.classification ?? 'unknown'}）：` +
+- src/company/init-cli-flow.ts:403:      console.log(`[trilc:init] 认领完成：${claimRes.json?.projectKey} / ${claimRes.json?.branch} — PROJECT-LINK 已 linked。`);
+- src/company/init-cli-flow.ts:406:    console.log(`[trilc:init] 认领失败（http ${claimRes.status}）：${claimRes.json?.message ?? claimRes.json?.error ?? 'unknown'}`);
+- src/company/init-cli-flow.ts:455:  console.log('[trilc:init] 提交同步（entry=trilc-chat）— daemon 端点执行（git 固定身份 + 双远端 push），进度经 init:sync-* 事件族…');
+- src/company/init-cli-flow.ts:456:  const runRes = await postJson(port, '/internal/v1/init/sync/run', { entry: 'trilc-chat' });
+- src/company/init-cli-flow.ts:459:    console.log('\n[trilc:init] 五维同步完成（bundle 已生成 + 已推送）：');
+- src/company/init-cli-flow.ts:468:    console.log('[trilc:init] 等待服务器 applied 收敛（每 5s 轮询，最多 90s）…');
+- src/company/init-cli-flow.ts:476:        console.log('[trilc:init] 服务器已应用同 bundleId — SYNC 全链闭环（协同确认卡可继续）。');
+- src/company/init-cli-flow.ts:481:    console.log('[trilc:init] 已推送待应用（fleet 每 15min 拉取收敛；稍后在确认卡查看）。');
+- src/company/init-cli-flow.ts:485:    console.log('[trilc:init] 同步进行中（单执行体互斥）— 稍后重试同一入口。');
+- src/company/init-cli-flow.ts:489:    console.log(`[trilc:init] 当前链路状态不允许同步（${body.chainState}）— 请先完成前置阶段。`);
+- src/company/init-cli-flow.ts:493:    console.log('[trilc:init] 公司态未开张 — 请先完成 ONBOARDING 开张流程再同步。');
+- src/company/init-cli-flow.ts:497:    console.log('[trilc:init] 项目链路未就绪 — 请先走 PROJECT-LINK 流程（link/claim）再同步。');
+- src/company/init-cli-flow.ts:501:    console.log(`[trilc:init] 同步可重试失败（${body.classification}）：${body.message ?? ''} — 重新提交同一入口即续跑（幂等重跑）。`);
+- src/company/init-cli-flow.ts:504:  console.log(`[trilc:init] 同步失败（http ${runRes.status}）：${body?.message ?? body?.error ?? 'unknown'}`);
+- src/company/init-cli-flow.ts:576:    console.log('[trilc:init] 未达确认门禁（readyForConfirm=false）— 按上表差异处理后重进本流程。');
+- src/company/init-cli-flow.ts:581:    console.log('[trilc:init] 已取消 — 协同未开启（重进本流程随时确认）。');
+- src/company/init-cli-flow.ts:584:  const res = await postJson(port, '/internal/v1/init/confirm', { entry: 'trilc-chat' });
+- src/company/init-cli-flow.ts:587:    console.log('\n[trilc:init] 协同开启成功 ✓（三元素一致 + 一次确认）');
+- src/company/init-cli-flow.ts:592:    console.log('[trilc:init] 门禁未达（服务端重算未就绪）— 最新 check：');
+- src/company/init-cli-flow.ts:597:    console.log('[trilc:init] 确认执行中（单执行体互斥）— 稍后重试。');
+- src/company/init-cli-flow.ts:601:    console.log(`[trilc:init] 当前链路状态不允许确认（${body.chainState}）— 请先完成前置阶段。`);
+- src/company/init-cli-flow.ts:604:  console.log(`[trilc:init] 确认失败（http ${res.status}）：${body?.message ?? 'unknown'}`);
+- src/company/init-cli-flow.ts:618:/** Debug 重置指令（2026-08-15，trilc chat reset / 流程内输入 reset）：
+- src/company/init-cli-flow.ts:623:    console.log('[trilc:init] 重置不可用（debug 未开启 — TRILC_DEBUG=1 后重启 daemon）');
+- src/company/init-cli-flow.ts:627:    console.log(`[trilc:init] 重置失败（http ${res.status}）：${JSON.stringify(res.json)}`);
+- src/company/init-cli-flow.ts:631:  console.log(`[trilc:init] 已重置 → SELFCHECK 起点（清理 ${cleared.length} 项；includeProject=${includeProject}）`);
+- src/company/init-cli-flow.ts:636:  // trilc chat reset（CLI 参数形态）：先重置再走流程
+- src/company/init-cli-flow.ts:650:      console.log('\n[trilc:init] 初始化阶段：SELFCHECK（自检）');
+- src/company/init-cli-flow.ts:653:        console.log('[trilc:init] 自检阻塞 — 修复后重新运行自检；key 类失败降级继续口径见诊断卡。');
+- src/company/init-cli-flow.ts:657:        console.log('[trilc:init] 自检已完结 — 进入公司开张流程。');
+- src/company/init-cli-flow.ts:664:          console.log(`[trilc:init] 自检触发失败（http ${runRes.status}）：${JSON.stringify(runRes.json)}`);
+- src/company/init-cli-flow.ts:667:        console.log('[trilc:init] 自检运行中（含第五探测真实模型会话，约 30-90s）…');
+- src/company/init-cli-flow.ts:689:            console.log('[trilc:init] 自检完成但链路未推进 — 返回聊天。');
+- src/company/init-cli-flow.ts:693:        console.log('[trilc:init] 自检轮询超时 — 返回聊天。');
+- src/company/init-cli-flow.ts:706:      console.log('\n[trilc:init] 初始化阶段：ONBOARDING（公司开张）');
+- src/company/init-cli-flow.ts:709:      console.log('\n[trilc:init] 初始化阶段：PROJECT-LINK（项目面初始化）');
+- src/company/init-cli-flow.ts:712:      console.log('\n[trilc:init] 初始化阶段：SYNC（五维同步）');
+- src/company/init-cli-flow.ts:715:      console.log('\n[trilc:init] 初始化阶段：CONFIRM（协同确认）');
+- src/company/init-first-collab.ts:10://     改动；两入口（TriPilot/trilc chat）零执行增量，只读呈现 firstCollab。
+- src/company/init-selfcheck.ts:345:    console.error('[trilc:init] selfcheck run failed:', errMsg(err));
+- src/company/init-sync.ts:23://      "trilc@tri.company"，绝不使用环境 git 身份）→ push origin dev &&
+- src/company/init-sync.ts:71:export type SyncEntry = 'tripilot' | 'trilc-chat' | 'daemon';
+- src/company/init-sync.ts:88:  trilcVersion: string;
+- src/company/init-sync.ts:233:    console.warn(`[trilc:init-sync] model fetch failed: ${(err as Error).message}`);
+- src/company/init-sync.ts:380:      generatedBy: buildGeneratedBy(deps.trilcVersion, hostname()),
+- src/company/init-sync.ts:422:      '-c', 'user.email=trilc@tri.company',
+- src/company/init-sync.ts:587:        console.warn(`[trilc:init-sync] chain snapshot failed: ${(chainErr as Error).message}`);
+- src/company/init-sync.ts:718:        console.log('[trilc:init-sync] daemon restart: chainState=sync but no local bundle — 面板「待补」提示（正常断点态，可 sync/run 重跑）');
+- src/company/init-sync.ts:720:        console.log('[trilc:init-sync] daemon restart: chainState=confirm but no local bundle — 待 sync/status 轮询确认');
+- src/company/init-sync.ts:727:      console.log(`[trilc:init-sync] daemon restart: local bundle ${localBundleId} already applied on server — no-op`);
+- src/company/init-sync.ts:730:        `[trilc:init-sync] daemon restart: local bundle ${localBundleId} pushed, server applied=${remote.appliedBundleId ?? 'null'}（fleet apply 每 15min 收敛）`,
+- src/company/init-sync.ts:734:    console.warn('[trilc:init-sync] startup resync check failed (read-only):', (err as Error).message);
+- src/company/sync-bundle.ts:357:/** 生成端身份：trilc-init-<version>@<host-hash-8>（§一 generatedBy 字段）。 */
+- src/company/sync-bundle.ts:360:  return `trilc-init-${version}@${hostHash}`;
+- src/company/sync-bundle.ts:443:  entry: 'tripilot' | 'trilc-chat' | 'daemon';
+- src/config/env.ts:50: *   2. dataDir 相邻 .env（TRILC_DATA_DIR ?? %LOCALAPPDATA%/trilc）——安装态可达
+- src/config/env.ts:56:    : (process.env.LOCALAPPDATA ? resolve(process.env.LOCALAPPDATA, 'trilc', '.env') : undefined);
+- src/config/env.ts:105:  // MSI deployment: contracts/ sits at tools/trilc/contracts/
+- src/config/env.ts:106:  // dist/config/env.js → ../../contracts → tools/trilc/contracts/
+- src/config/env.ts:125: * so ../../version.json resolves to <trilc-root>/version.json for
+- src/config/env.ts:151:  const dataDir = process.env.TRILC_DATA_DIR ?? `${process.env.LOCALAPPDATA ?? process.env.HOME ?? '/tmp'}/trilc`;
+- src/config/env.ts:155:    console.log('[trilc] debug mode: enabled (TRILC_DEBUG=1)');
+- src/config/key-cache.ts:64:      console.error('[trilc:keys] failed to write key cache:', err instanceof Error ? err.message : String(err));
+- src/config/key-cache.ts:86:          console.log('[trilc:keys] migrated key cache from S3 (plaintext) to S2 (AES-256-GCM)');
+- src/config/key-cache.ts:97:      console.error('[trilc:keys] failed to read/decrypt key cache:',
+- src/config/key-cache.ts:113:            console.log(`[trilc:keys] legacy S3 key cache backed up to ${backupPath}`);
+- src/config/key-cache.ts:115:            console.warn('[trilc:keys] failed to backup legacy key cache');
+- src/config/key-cache.ts:130:      console.error('[trilc:keys] failed to write encrypted key cache:',
+- src/config/key-cache.ts:255:  // The design intent: TriModel provides keys online; trilc works offline with cache.
+- src/config/key-cache.ts:259:    console.warn('[trilc:keys] key cache excessively stale (>7d), discarding');
+- src/config/key-cache.ts:263:    console.warn(`[trilc:keys] key cache expired ${Math.round((Date.now() - _keyCache.expiresAt) / 3600_000)}h ago — using stale cache until refresh succeeds`);
+- src/config/key-cache.ts:305:    console.log('[trilc:keys] using S3 plaintext storage mode (TRIMODEL_KEY_STORAGE_MODE=s3)');
+- src/config/key-cache.ts:309:    console.warn('[trilc:keys] S2 encryption requested but key derivation unavailable — falling back to S3');
+- src/config/key-cache.ts:317:    console.log(`[trilc:keys] loaded cached keys (${Object.keys(_keyCache.keys).length} providers), expires ${new Date(_keyCache.expiresAt).toISOString()}`);
+- src/config/key-cache.ts:330:    console.log(`[trilc:keys] fetched fresh keys (${Object.keys(fresh.keys).length} providers):`, sanitizeKeysForLog(_keyCache));
+- src/config/key-cache.ts:334:      console.warn(`[trilc:keys] fetch failed, using cached keys: ${err instanceof Error ? err.message : String(err)}`);
+- src/config/key-cache.ts:336:      console.error(`[trilc:keys] no cached keys and fetch failed — chat disabled: ${err instanceof Error ? err.message : String(err)}`);
+- src/config/key-cache.ts:352:  console.log(`[trilc:keys] refresh timer: every ${intervalS}s (first in ${Math.round(staggerMs / 1000)}s stagger)`);
+- src/config/key-cache.ts:375:    console.log(`[trilc:keys] refreshed keys:`, sanitizeKeysForLog(_keyCache));
+- src/config/key-cache.ts:381:        console.warn('[trilc:keys] onKeyCacheUpdated callback failed:', err instanceof Error ? err.message : String(err));
+- src/config/key-cache.ts:386:    console.warn(`[trilc:keys] refresh failed: ${err instanceof Error ? err.message : String(err)}`);
+- src/config/trilc-profile.ts:6://   import { loadProfile } from '../config/trilc-profile.js';
+- src/config/trilc-profile.ts:74:  console.warn(`[trilc:profile] unknown TRILC_PROFILE="${env}", falling back to development`);
+- src/cron/scheduler.ts:11:const LOG_PREFIX = "[trilc:cron]";
+- src/cron/service.ts:19:const LOG_PREFIX = "[trilc:cron]";
+- src/cron/session-reaper.ts:15:const LOG_PREFIX = '[trilc:reaper]';
+- src/cron/store.ts:14:const LOG_PREFIX = "[trilc:cron]";
+- src/cron/timer.ts:15:const LOG_PREFIX = "[trilc:cron]";
+- src/daemon/constants.ts:11:export const TRILC_LAUNCHD_LABEL = "com.trimetaverse.trilc";
+- src/daemon/constants.ts:14:export const TRILC_SYSTEMD_UNIT = "trilc.service";
+- src/daemon/launchd.ts:9:// Log prefix: [trilc:daemon]
+- src/daemon/launchd.ts:23:const LOG_PREFIX = "[trilc:daemon]";
+- src/daemon/launchd.ts:54:  const stdoutPath = path.join(logDir, "trilc-stdout.log");
+- src/daemon/launchd.ts:55:  const stderrPath = path.join(logDir, "trilc-stderr.log");
+- src/daemon/schtasks.ts:5:// Log prefix: [trilc:daemon]
+- src/daemon/schtasks.ts:18:const LOG_PREFIX = "[trilc:daemon]";
+- src/daemon/schtasks.ts:25:  return path.join(resolveStateDir(config), "trilc-daemon.cmd");
+- src/daemon/systemd.ts:6:// Unit file staged at ~/.config/systemd/user/trilc.service.
+- src/daemon/systemd.ts:8:// Log prefix: [trilc:daemon]
+- src/daemon/systemd.ts:22:const LOG_PREFIX = "[trilc:daemon]";
+- src/daemon/watchdog.ts:8://   trilc watchdog [--port 8711] [--data-dir <path>]
+- src/daemon/watchdog.ts:20:const LOG_PREFIX = "[trilc:watchdog]";
+- src/heartbeat/agent-runner.ts:170:      `[trilc:heartbeat] agent=${agentId} completed in ${durationMs}ms`,
+- src/heartbeat/agent-runner.ts:175:    console.error(`[trilc:heartbeat] agent ${agentId} failed:`, msg);
+- src/heartbeat/heartbeat-active-hours.ts:8:// or trilc-profile.json in the data directory.
+- src/heartbeat/heartbeat-active-hours.ts:267:        `[trilc:active-hours] Failed to parse TRILC_ACTIVE_HOURS: ` +
+- src/index.ts:63:    console.log(`[trilc] skills: ${loadedSkills.length} loaded into SkillTool registry`);
+- src/index.ts:65:    console.warn('[trilc] skills load failed (continuing):', (err as Error).message);
+- src/index.ts:83:    console.warn('[trilc] bundled skills init failed (continuing):', (err as Error).message);
+- src/index.ts:87:  console.log('[trilc] registered 14 CC-equivalent tools: Read, Write, Edit, Glob, Grep, LS, TodoWrite, TaskCreate, TaskList, TaskUpdate, SendMessage, AgentTool, SkillTool, AskUserQuestionTool');
+- src/index.ts:93:      console.log('[trilc] P6: plan mode tools registered (EnterPlanMode, ExitPlanMode)');
+- src/index.ts:95:    (err) => console.warn('[trilc] plan mode tools registration failed:', (err as Error).message),
+- src/index.ts:103:    console.warn('[trilc] permission store init failed (continuing):', (err as Error).message);
+- src/index.ts:122:      console.log(`[trilc] P6: MCP ready (${mcp.totalToolCount()} tools)`);
+- src/index.ts:124:  } catch (e) { console.warn('[trilc] MCP init failed:', (e as Error).message); }
+- src/index.ts:131:  // source of truth for "where is the daemon" (works for `trilc run` too).
+- src/index.ts:135:    console.warn('[trilc] PID registration failed (continue):', (err as Error).message);
+- src/index.ts:138:  console.log(`[trilc] ready — node=${env.nodeId} port=${app.port} pid=${process.pid}`);
+- src/index.ts:145:    console.log(`[trilc] received ${signal}, shutting down gracefully...`);
+- src/index.ts:150:      console.log('[trilc] shutdown complete');
+- src/index.ts:152:      console.error('[trilc] shutdown error:', err instanceof Error ? err.message : String(err));
+- src/index.ts:178:  console.error('[trilc] failed to start', error);
+- src/local-node/node.ts:62:        console.warn(`[trilc/local-node] agent run completed with no valid output (possible reasoning-only response)`);
+- src/local-node/node.ts:79:    console.log('[trilc/local-node] heartbeat', this.env.nodeId);
+- src/mcp/mcp-config.ts:3:// and project-local .trilc/mcp.json (TriLC-specific).
+- src/mcp/mcp-config.ts:79:  // 3. TriLC-specific: {cwd}/.trilc/mcp.json (highest priority)
+- src/mcp/mcp-config.ts:80:  const trilcPath = cwd ? join(cwd, '.trilc', 'mcp.json') : null;
+- src/mcp/mcp-config.ts:81:  const trilcConfig = trilcPath ? parseConfigFile(trilcPath) : null;
+- src/mcp/mcp-config.ts:83:  // Merge: trilc > project > global
+- src/mcp/mcp-config.ts:84:  const sources: Array<McpConfigFile | null> = [trilcConfig, projectConfig, globalConfig];
+- src/mcp/mcp-config.ts:134: * Writes to .trilc/mcp.json (TriLC-specific, highest priority) by default,
+- src/mcp/mcp-config.ts:144:    : join(cwd, '.trilc', 'mcp.json');
+- src/mcp/mcp-config.ts:164: * Searches .trilc/mcp.json first, then .claude/mcp.json project-local.
+- src/mcp/mcp-config.ts:168:    join(cwd, '.trilc', 'mcp.json'),
+- src/mcp/mcp-config.ts:192:    join(cwd, '.trilc', 'mcp.json'),
+- src/paths.ts:13:export const PID_FILE = resolve(PID_DIR, 'trilc.pid');
+- src/planner/planner.ts:62:      console.warn('[trilc/planner] sub-agent planning failed, using fallback', err);
+- src/project/multi-project-router.test.ts:25:const TEST_BASE = join(tmpdir(), `trilc-mpr-test-${randomUUID().slice(0, 8)}`);
+- src/project/multi-project-router.ts:8:// ── Two-track semantics (r2-2, prod-grade-2-trilc-plane-view) ──
+- src/project/project-link.ts:4:// TriPilot / trilc chat 两入口只发指令。
+- src/project/project-link.ts:78:export type LinkEntry = 'tripilot' | 'trilc-chat' | 'daemon';
+- src/project/project-link.ts:139:  /** GitHub 源克隆默认落点根（默认 ~/trilc-projects）。 */
+- src/project/project-link.ts:199:  if (entry !== 'tripilot' && entry !== 'trilc-chat' && entry !== 'daemon') {
+- src/project/project-link.ts:200:    return { ok: false, error: 'bad_request', message: "entry must be 'tripilot' | 'trilc-chat' | 'daemon'" };
+- src/project/project-link.ts:375:        `[trilc:project] cross-validate: registry entry not in git worktree list — dropping registration for ${wt.path}（不删磁盘）`,
+- src/project/project-link.ts:452:    const cloneTarget = req.targetPath ?? join(deps.cloneRoot ?? join(homedir(), 'trilc-projects'), projectKey);
+- src/project/project-link.ts:478:        console.log(`[trilc:project] defaultBranch ${project.defaultBranch} checkout failed — keep clone default: ${coRes.stderr}`);
+- src/project/project-link.ts:645:      console.error(`[trilc:project] rollback unregister failed: ${(unregErr as Error).message}`);
+- src/project/project-link.ts:668:      `[trilc:project] rollback worktree remove failed（非 --force，保留现场待人工处理）：${targetPath} — ${res.stderr}`,
+- src/project/project-link.ts:672:  console.log(`[trilc:project] rollback: worktree removed（非 --force）：${targetPath}`);
+- src/project/project-registry.ts:4://   落点   = %LOCALAPPDATA%\trilc\project-registry.json（固定路径，不随
+- src/project/project-registry.ts:78:/** 固定路径：%LOCALAPPDATA%\trilc\project-registry.json（不随 TRILC_DATA_DIR 覆盖）。 */
+- src/project/project-registry.ts:81:  return resolve(localAppData, 'trilc', 'project-registry.json');
+- src/project/project-registry.ts:112:        console.error(`[trilc:project] registry load access failed: ${(err as Error).message}`);
+- src/project/project-registry.ts:121:      console.error(`[trilc:project] registry parse failed — default frame: ${(err as Error).message}`);
+- src/project/project-registry.ts:157:        console.error(`[trilc:project] lazy cleanup persist failed: ${(err as Error).message}`);
+- src/project/project-registry.ts:251:            `[trilc:project] registry lazy cleanup: dropped ghost entry ${wt.path}（磁盘资产保留，可重新认领）`,
+- src/project/weekly-plane-root.test.ts:68:    const dir = join(tmpdir(), `trilc-wpr-${randomUUID()}`);
+- src/project/weekly-plane-root.test.ts:79:    process.env.TRILC_WEEKLY_PLANE_ROOT = join(tmpdir(), `trilc-wpr-missing-${randomUUID()}`);
+- src/project/weekly-plane-root.test.ts:106:  const fakeCompanyRoot = join(tmpdir(), `trilc-company-${randomUUID()}`);
+- src/project/weekly-plane-root.test.ts:139:    const fakeRoot = join(tmpdir(), `trilc-company-missing-${randomUUID()}`);
+- src/project/weekly-plane-root.ts:1:// ── Weekly Plane Root Resolver (r2-2, prod-grade-2-trilc-plane-view) ──
+- src/runtime/daemon.ts:34:    console.log(`[trilc] daemon started for ${this.env.nodeId}`);
+- src/runtime/daemon.ts:39:    console.log(`[trilc] daemon stopped (${this.tasks.size} task(s) tracked)`);
+- src/runtime/daemon.ts:55:      console.error(`[trilc] task ${task.taskId} failed`, err);
+- src/runtime/daemon.ts:125:      console.error(`[trilc] task ${task.taskId} execution error`, err);
+- src/server/app.ts:3://   GET  /healthz              → { ok: true, service: 'trilc' }
+- src/server/app.ts:120:// ── P0 加固：HTTP 面安全 helpers（p0fix3-trilc-http PD-1）──
+- src/server/app.ts:779:      logger(`[trilc:compact] auto-trigger: ${accumulatedPromptTokens} tokens > ${COMPACT_TOKEN_THRESHOLD} threshold`);
+- src/server/app.ts:786:        logger('[trilc:compact] not enough messages to compact, continuing');
+- src/server/app.ts:805:        logger(`[trilc:compact] done: removed ~${result.tokensRemoved} tokens, restart #${restartCount}`);
+- src/server/app.ts:808:        logger(`[trilc:compact] failed: ${(err as Error).message}, continuing uncompacted`);
+- src/server/app.ts:818:    logger(`[trilc:compact] max restarts (${MAX_COMPACT_RESTARTS}) reached, giving up`);
+- src/server/app.ts:908:      console.log('[trilc:conn] running in local mode — TriMC not configured');
+- src/server/app.ts:926:        console.log('[trilc:conn] recovered → connected');
+- src/server/app.ts:930:          console.error('[trilc:conn] replay failed:', err instanceof Error ? err.message : String(err));
+- src/server/app.ts:945:        console.log('[trilc:conn] degraded → will use local fallback');
+- src/server/app.ts:1049:      console.log('[trilc:conn] replay: no pending events');
+- src/server/app.ts:1052:    console.log(`[trilc:conn] replay: replaying ${events.length} events`);
+- src/server/app.ts:1060:      console.log(`[trilc:conn] replay: accepted=${response.accepted} conflicts=${response.conflicts.length}`);
+- src/server/app.ts:1062:      console.error('[trilc:conn] replay request failed:', err instanceof Error ? err.message : String(err));
+- src/server/app.ts:1101:        console.log(`[trilc:conn] restored state: ${this.state} (from ${this.stateFile})`);
+- src/server/app.ts:1304:  // git 单身份）── 注册点固定路径 %LOCALAPPDATA%\trilc\project-registry.json
+- src/server/app.ts:1343:    trilcVersion: env.version,
+- src/server/app.ts:1397:      console.log(`[trilc:cron] job triggered: ${job.name}`);
+- src/server/app.ts:1529:          console.log(`[trilc:task] result posted to TriMC: ${sessionId} status=${status}`);
+- src/server/app.ts:1531:          console.warn(`[trilc:task] failed to post result to TriMC: ${(err as Error).message}`);
+- src/server/app.ts:1541:        console.log(`[trilc] permission mode: ${_defaultPermissionMode} (from TRILC_PERMISSION_MODE)`);
+- src/server/app.ts:1551:        console.log(`[trilc] CLI rules: ${_cliAllowRulePatterns.length} allow, ${_cliDenyRulePatterns.length} deny`);
+- src/server/app.ts:1554:        console.log(`[trilc] additional dirs: ${_cliAdditionalDirs.join(', ')}`);
+- src/server/app.ts:1557:        console.log('[trilc] print mode: non-interactive (-p), ask→deny enforced');
+- src/server/app.ts:1562:          console.warn('[trilc] print mode: overriding bypassPermissions → default (bypass incompatible with -p)');
+- src/server/app.ts:1573:          console.log(`[trilc] loaded ${_persistedPermissionRules.length} persisted permission rules from disk`);
+- src/server/app.ts:1576:        console.warn('[trilc] failed to load persisted permission rules:', (err as Error).message);
+- src/server/app.ts:1592:      console.log(`[trilc] contract resolver: ${agentCount} agents loaded`);
+- src/server/app.ts:1596:      console.log(`[trilc] employee roster: ${rosterCount} employees loaded`);
+- src/server/app.ts:1607:          `[trilc] knowledge sync: ${knowledgeReport.inserted} inserted, ` +
+- src/server/app.ts:1615:        console.warn('[trilc] knowledge sync failed (daemon continues):', (err as Error).message);
+- src/server/app.ts:1641:      // 关 agent 宿主能力（agentLoop 路由）；CC 交互会话与中枢会话=客户端连接（trilc chat 同款）。
+- src/server/app.ts:1686:        // ── P0 加固（p0fix3-trilc-http PD-1）：全局安全门，置于一切业务路由之前 ──
+- src/server/app.ts:1814:            entry: (body as Record<string, unknown>).entry as 'tripilot' | 'trilc-chat',
+- src/server/app.ts:2001:            entryRaw === 'tripilot' || entryRaw === 'trilc-chat' ? entryRaw : 'daemon';
+- src/server/app.ts:2061:            entryRaw === 'tripilot' || entryRaw === 'trilc-chat' ? entryRaw : 'daemon';
+- src/server/app.ts:2415:          console.log(`[trilc] /v1/messages model=${model}`);
+- src/server/app.ts:2441:              return JSON.stringify({ _trilc_note: 'tool execution delegated to TriPilot client' });
+- src/server/app.ts:2649:            console.warn('[trilc:session] failed to save session:', (saveErr as Error).message);
+- src/server/app.ts:2703:                      'x-trilc-node-id': env.nodeId,
+- src/server/app.ts:2704:                      'x-trilc-version': env.version,
+- src/server/app.ts:2705:                      'x-trilc-connection-id': connectionId,
+- src/server/app.ts:2732:              console.log('[trilc] trimc unreachable, using local agentLoop');
+- src/server/app.ts:2818:              owned_by: 'trilc',
+- src/server/app.ts:2859:              return JSON.stringify({ _trilc_note: 'tool execution delegated to client' });
+- src/server/app.ts:3037:              console.warn('[trilc:session] failed to save session:', (saveErr as Error).message);
+- src/server/app.ts:3156:            console.log(`[trilc] forked session ${originalId.slice(0,12)} → ${forkId.slice(0,12)} (${messages.length} messages)`);
+- src/server/app.ts:3357:            console.warn('[trilc:task] failed to persist session:', (saveErr as Error).message);
+- src/server/app.ts:3415:            console.error(`[trilc:model] CRITICAL: model not in registry for task=${sessionId}: ${errDetail}`);
+- src/server/app.ts:3489:                    console.warn(`[trilc:chat] pseudo tool-text detected mid-stream (task=${sessionId}, turn buf ${turnDeltaBuf.length} chars) — aborting turn, forcing conclusion`);
+- src/server/app.ts:3593:                    console.log(`[trilc:model] degraded to fallback model: ${rec.message}`);
+- src/server/app.ts:3599:                  console.log(`[trilc:compact] ${comp.message}`);
+- src/server/app.ts:3608:                  console.warn(`[trilc:compact] failed: ${(event as any).message}`);
+- src/server/app.ts:3625:                  console.error(`[trilc:model] CRITICAL: all providers exhausted for task=${sessionId}: ${errorMessage}`);
+- src/server/app.ts:3675:              console.warn(`[trilc:chat] model ended with a trailing intent instead of a conclusion (task=${sessionId}) — forcing conclusion turn`);
+- src/server/app.ts:3678:              console.warn(`[trilc:chat] model emitted pseudo tool-call text instead of a conclusion (task=${sessionId}) — forcing conclusion turn`);
+- src/server/app.ts:3697:                console.warn('[trilc:chat] forced conclusion call failed:', (fErr as Error).message);
+- src/server/app.ts:3717:              console.error(`[trilc:model] CRITICAL: all providers exhausted for task=${sessionId}: ${emptyError}`);
+- src/server/app.ts:3748:              console.warn('[trilc:sse] failed to save session:', (saveErr as Error).message);
+- src/server/app.ts:3752:            console.error(`[trilc:model] CRITICAL: all providers exhausted for task=${sessionId}: ${msg}`);
+- src/server/app.ts:4126:        // REQ-021: system notifications for clients (TriPilot / trilc chat).
+- src/server/app.ts:4166:            console.log('[trilc] graceful shutdown via /shutdown');
+- src/server/app.ts:4352:          console.log('[trilc:init] chain uninitialized → selfcheck（daemon 启动转移；探测待端点触发）');
+- src/server/app.ts:4354:          console.log(`[trilc:init] chain resumed: ${initChain.getState()}（断点续跑）`);
+- src/server/app.ts:4357:        console.warn('[trilc:init] init chain load failed:', (err as Error).message);
+- src/server/app.ts:4376:      console.log(`[trilc] listening on :${env.port}`);
+- src/server/app.ts:4399:      console.log(`[trilc] heartbeat runner started (${agents.length} agent${agents.length > 1 ? "s" : ""})`);
+- src/server/app.ts:4407:        console.warn("[trilc] cron engine start failed:", (err as Error).message);
+- src/server/app.ts:4414:      console.log("[trilc] update check loop started");
+- src/server/app.ts:4420:        console.log(`[trilc] received ${signal}, shutting down...`);
+- src/server/app.ts:4421:        console.log('[trilc] cancelling all managed shell processes...');
+- src/server/app.ts:4595:    console.error(`[trilc:model] cannot validate model "${model}": ${msg}`);
+- src/server/app.ts:4615:      console.warn('[trilc:model] WARNING: model registry is empty — no providers configured, chat will fail');
+- src/server/app.ts:4616:      console.warn('[trilc:model]         check API keys (DEEPSEEK_API_KEY, ANTHROPIC_API_KEY, etc.)');
+- src/server/app.ts:4637:      console.warn(`[trilc:model] WARNING: model(s) not in registry: ${missing.join(', ')} — check provider API keys`);
+- src/server/app.ts:4640:      `[trilc:model] registry check: ${models.length} models (${models.join(', ')})` +
+- src/server/app.ts:4644:    console.warn(`[trilc:model] registry check failed: ${err instanceof Error ? err.message : String(err)}`);
+- src/server/app.ts:4789:    console.warn(`[trilc] TriModel API unreachable (${apiErr instanceof Error ? apiErr.message : String(apiErr)}), falling back to library`);
+- src/server/app.ts:4808:    console.error(`[trilc:model] model registry unavailable (API + library both failed): ${err instanceof Error ? err.message : String(err)}`);
+- src/server/app.ts:4810:      console.warn('[trilc:model] serving stale cached model list as last resort');
+- src/services/permissions/PermissionStore.ts:2:// Persists user's permission decisions to ~/.trimetaverse/trilc-permissions.json
+- src/services/permissions/PermissionStore.ts:52:  return join(trimetaverseDir(), 'trilc-permissions.json');
+- src/session-store/types.ts:5:// Schema v2 (2026-07-22): cloud sync fields added per arch-trilc-daemon §6.
+- src/sync/sync-engine.ts:11:// State machine (from arch-trilc-daemon §6.4):
+- src/sync/types.ts:47:  nodeId: 'trilc-unknown',
+- src/toolbus/bus.ts:8:    console.log('[trilc/toolbus] invoke', invocation.toolName);
+- src/tools/shell-exec.ts:152:export const SHELL_EXEC_SCOPE = 'trilc-shell';
+- src/trimc-auth.ts:10:const INSTALLED_FLAG = Symbol.for('trilc.trimcAuthInstalled');
+- src/tui/design-system/theme.ts:3:// trilc adapts the same token vocabulary but renders via Ink's Text color prop.
+- src/tui/hooks/useAnthropicSSE.ts:28:          'x-api-key': 'trilc-local',
+- src/update/update-check.ts:131:      console.warn(`[trilc:update] No releases found for ${repo}`);
+- src/update/update-check.ts:135:      console.warn(`[trilc:update] GitHub API returned ${res.status} for ${repo}`);
+- src/update/update-check.ts:141:      console.warn('[trilc:update] Latest release is a draft, skipping');
+- src/update/update-check.ts:149:      console.warn(`[trilc:update] Fetch failed: ${msg}`);
+- src/update/update-check.ts:190:    if (!segsA) console.warn(`[trilc:update] Unparseable version: "${a}"`);
+- src/update/update-check.ts:191:    if (!segsB) console.warn(`[trilc:update] Unparseable version: "${b}"`);
+- src/update/update-check.ts:354:        console.log(`[trilc:update] Update available: ${info.currentVersion} → ${info.latestVersion}`);
+- src/update/update-check.ts:355:        console.log(`[trilc:update] Download: ${info.releaseUrl}`);
+
+## 分级修正建议
+- healthz service 字段：本窗已修正（trimlc）
+- CLI 命令名 trilc（Usage/cli.ts 全节）：breaking change（运维脚本/文档全引用）候批非本窗
+- logger 前缀 [trilc:xxx]：日志装饰串（内部观测非对外身份）候批低优先

@@ -86,7 +86,26 @@
         "RAndDTrainer runtime cognition state is created only after a live/runtime write, not during support payload generation.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
       ],
-      "employeeDisplayName": "小吴"
+      "employeeDisplayName": "小吴",
+      "sessionBody": "TriCompany/source-agents/rd-trainer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/rd-trainer.agent.md",
+          "source": "TriCompany/source-agents/rd-trainer/rd-trainer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/rd-trainer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/rd-trainer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/rd-trainer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/rd-trainer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/rd-trainer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/rd-trainer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/rd-trainer/social.agent.md"
+          }
+        }
+      ]
     },
     {
       "objectSetId": "ceo-chief-of-staff-knowledge-workspace-v0.1",
@@ -260,7 +279,26 @@
         "This onboarding means current Copilot-host live enablement and TriCompany source-side handoff, not a TriMC formal host switch.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
       ],
-      "employeeDisplayName": "小乔"
+      "employeeDisplayName": "小乔",
+      "sessionBody": "TriCompany/source-agents/chief-product-officer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/chief-product-officer.agent.md",
+          "source": "TriCompany/source-agents/ChiefProductOfficer/ChiefProductOfficer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/chief-product-officer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/chief-product-officer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/chief-product-officer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/chief-product-officer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/chief-product-officer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/chief-product-officer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/chief-product-officer/social.agent.md"
+          }
+        }
+      ]
     },
     {
       "objectSetId": "chief-technology-officer-knowledge-workspace-v0.1",
@@ -338,7 +376,26 @@
         "This onboarding means current Copilot-host live enablement and TriCompany source-side handoff, not a TriMC formal host switch.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
       ],
-      "employeeDisplayName": "小狄"
+      "employeeDisplayName": "小狄",
+      "sessionBody": "TriCompany/source-agents/chief-technology-officer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/chief-technology-officer.agent.md",
+          "source": "TriCompany/source-agents/ChiefTechnologyOfficer/ChiefTechnologyOfficer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/chief-technology-officer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/chief-technology-officer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/chief-technology-officer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/chief-technology-officer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/chief-technology-officer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/chief-technology-officer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/chief-technology-officer/social.agent.md"
+          }
+        }
+      ]
     },
     {
       "objectSetId": "chief-marketing-officer-knowledge-workspace-v0.1",
@@ -415,6 +472,25 @@
         "CMO owns market research, competitor intelligence, trend and hotspot capture, and structured product inputs for CPO; this does not imply TriMC formal host switch.",
         "Current enablement does not imply automated internet crawling, production market-data pipelines, or scheduled research jobs are already implemented.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "sessionBody": "TriCompany/source-agents/chief-marketing-officer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/chief-marketing-officer.agent.md",
+          "source": "TriCompany/source-agents/ChiefMarketingOfficer/ChiefMarketingOfficer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/chief-marketing-officer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/chief-marketing-officer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/chief-marketing-officer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/chief-marketing-officer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/chief-marketing-officer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/chief-marketing-officer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/chief-marketing-officer/social.agent.md"
+          }
+        }
       ]
     },
     {
@@ -492,6 +568,25 @@
         "COO owns operating cadence, rollout planning, cross-functional execution windows and recovery loops for CMO/CPO/CFO/CTO/TriDev collaboration; this does not imply TriMC formal host switch.",
         "Current enablement does not imply production dashboards, automated scheduling, automated rollout, automated rollback or a complete authorization matrix are already implemented.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "sessionBody": "TriCompany/source-agents/chief-operating-officer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/chief-operating-officer.agent.md",
+          "source": "TriCompany/source-agents/ChiefOperatingOfficer/ChiefOperatingOfficer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/chief-operating-officer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/chief-operating-officer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/chief-operating-officer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/chief-operating-officer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/chief-operating-officer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/chief-operating-officer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/chief-operating-officer/social.agent.md"
+          }
+        }
       ]
     },
     {
@@ -569,6 +664,25 @@
         "CFO owns budget guardrails, cost controls, profitability checks, pricing assumptions and financial risk review for CMO/CPO/COO/CTO/TriDev collaboration; this does not imply TriMC formal host switch.",
         "Current enablement does not imply production ledgers, automated settlement, on-chain budgets, on-chain revenue sharing or a complete finance authorization matrix are already implemented.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "sessionBody": "TriCompany/source-agents/chief-financial-officer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/chief-financial-officer.agent.md",
+          "source": "TriCompany/source-agents/ChiefFinancialOfficer/ChiefFinancialOfficer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/chief-financial-officer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/chief-financial-officer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/chief-financial-officer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/chief-financial-officer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/chief-financial-officer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/chief-financial-officer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/chief-financial-officer/social.agent.md"
+          }
+        }
       ]
     },
     {
@@ -645,6 +759,25 @@
         "The live discovery entry is TriMetaverse/.github/agents/chief-human-resources-officer.agent.md.",
         "CHO owns staffing governance, role enablement and handoff completion tracking; this does not imply TriMC formal host switch.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "sessionBody": "TriCompany/source-agents/chief-human-resources-officer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/chief-human-resources-officer.agent.md",
+          "source": "TriCompany/source-agents/ChiefHumanResourcesOfficer/ChiefHumanResourcesOfficer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/chief-human-resources-officer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/chief-human-resources-officer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/chief-human-resources-officer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/chief-human-resources-officer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/chief-human-resources-officer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/chief-human-resources-officer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/chief-human-resources-officer/social.agent.md"
+          }
+        }
       ]
     },
     {
@@ -721,6 +854,25 @@
         "The live discovery entry is TriMetaverse/.github/agents/chief-administrative-officer.agent.md.",
         "CAO owns administration, secretariat mechanism, meeting governance and governance documentation ownership; this does not imply TriMC formal host switch.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "sessionBody": "TriCompany/source-agents/chief-administrative-officer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/chief-administrative-officer.agent.md",
+          "source": "TriCompany/source-agents/ChiefAdministrativeOfficer/ChiefAdministrativeOfficer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/chief-administrative-officer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/chief-administrative-officer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/chief-administrative-officer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/chief-administrative-officer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/chief-administrative-officer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/chief-administrative-officer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/chief-administrative-officer/social.agent.md"
+          }
+        }
       ]
     },
     {
@@ -796,7 +948,26 @@
         "Current enablement does not imply TriMC formal host switch, production test infrastructure, or automated CI/CD quality gates are already implemented.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
       ],
-      "employeeDisplayName": "小柯"
+      "employeeDisplayName": "小柯",
+      "sessionBody": "TriCompany/source-agents/senior-test-engineer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/senior-test-engineer.agent.md",
+          "source": "TriCompany/source-agents/TestEngineer/TestEngineer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/senior-test-engineer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/senior-test-engineer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/senior-test-engineer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/senior-test-engineer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/senior-test-engineer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/senior-test-engineer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/senior-test-engineer/social.agent.md"
+          }
+        }
+      ]
     },
     {
       "objectSetId": "full-stack-developer-knowledge-workspace-v0.1",
@@ -872,7 +1043,26 @@
         "Gate 5 (CHO approval) is required before formal live entry activation per CEO mandate.",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
       ],
-      "employeeDisplayName": "小全"
+      "employeeDisplayName": "小全",
+      "sessionBody": "TriCompany/source-agents/full-stack-developer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/full-stack-developer.agent.md",
+          "source": "TriCompany/source-agents/FullStackDeveloper/FullStackDeveloper.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/full-stack-developer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/full-stack-developer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/full-stack-developer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/full-stack-developer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/full-stack-developer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/full-stack-developer/colleagues.agent.md",
+            "social": "TriCompany/source-agents/full-stack-developer/social.agent.md"
+          }
+        }
+      ]
     },
     {
       "objectSetId": "deployment-engineer-knowledge-workspace-v0.1",
@@ -948,7 +1138,26 @@
         "Contract YAML is at TriCompany/source-agents/deployment-engineer/deployment-engineer.contract.yaml (contract v3.0).",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
       ],
-      "employeeDisplayName": "小布"
+      "employeeDisplayName": "小布",
+      "sessionBody": "TriCompany/source-agents/deployment-engineer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/deployment-engineer.agent.md",
+          "source": "TriCompany/source-agents/DeploymentEngineer/DeploymentEngineer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/deployment-engineer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/deployment-engineer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/deployment-engineer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/deployment-engineer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/deployment-engineer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/deployment-engineer/colleagues-social.agent.md",
+            "social": "TriCompany/source-agents/deployment-engineer/colleagues-social.agent.md"
+          }
+        }
+      ]
     },
     {
       "objectSetId": "customer-success-officer-knowledge-workspace-v0.1",
@@ -1024,7 +1233,26 @@
         "Contract YAML is at TriCompany/source-agents/customer-success-officer/customer-success-officer.contract.yaml (contract v3.0).",
         "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
       ],
-      "employeeDisplayName": "小成"
+      "employeeDisplayName": "小成",
+      "sessionBody": "TriCompany/source-agents/customer-success-officer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/customer-success-officer.agent.md",
+          "source": "TriCompany/source-agents/CustomerSuccessOfficer/CustomerSuccessOfficer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/customer-success-officer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/customer-success-officer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/customer-success-officer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/customer-success-officer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/customer-success-officer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/customer-success-officer/colleagues-social.agent.md",
+            "social": "TriCompany/source-agents/customer-success-officer/colleagues-social.agent.md"
+          }
+        }
+      ]
     }
   ]
 }
