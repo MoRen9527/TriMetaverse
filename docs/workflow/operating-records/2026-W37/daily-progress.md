@@ -67,3 +67,8 @@
   - 14495d21 docs(lg-033): CFO 意见件风险条清偿注记——§四「裁点②未裁先实施风险」销账（密钥正身 glm-key-governance.md CEO 批准成纪律生效 2026-09-08，TRIMODEL_API_TOKEN 网关通道下裸 key 上服务器形态不成立，晨检双零命中断言在役）；时点修正注记留痕不删史 @MoRen
   - 04214948 docs(lg-033): Wave 0 悬空引用清偿改锚——提案件 §八+CFO 意见件缺口判语后加清偿注记（正身=TriCompany/docs/engineering/glm-key-governance.md 两席联合合稿候批；历史判语冻结留痕）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:50 +08：自上次进度提交 e9862523 后新增 3 条 commit：
+  - 1d937ffb Merge remote-tracking branch 'sg-server/dev' into dev
+  - 4e51020c docs(whitepaper): L187 8711/8713 职责认知勘正（CEO 亲定 2026-09-08）——TriRLC(8711,R 面)=token 门控+TriPilot 聊天通道；TriMLC(8713,M 面)=M 面 CC 员工会话宿主（LG-024 session 面 13 席+LG-026 spawn 宿主/§8.6-8.7 二次解锁正身）；前报「8713 消费 TriPilot」系错误已勘 @MoRen
+  - b00ac3a2 docs(lg-033/lg-018): M 面函数清单对表评估（移植5/新建1/不需2）+河源 cron 重注册 runbook（三 job 参数照现役实录+验证三步+10 分钟 runbook 序）
+- registry：v2.1；今日 registry 提交无变化
