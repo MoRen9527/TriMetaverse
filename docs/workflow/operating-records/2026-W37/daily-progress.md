@@ -79,3 +79,7 @@
   - 071087a0 docs(lg-020): 历史段旧名还原——§一 现勘事实段 L9 恢复旧名实盘名（当时缺失的是旧名件，历史事实段不随重建件名勘正改写；仅勘误时点注记区分）
   - 0bcab805 docs(lg-020): cmd 重建件名勘正——旧名 trilc-daemon-channel.cmd 全替换 trimlc-daemon-channel.cmd（R 面旧名污染 M 面件名=旧名禁续禁的形态，CEO 指正）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:30 +08：自上次进度提交 7bd9a2a9 后新增 2 条 commit：
+  - 09347a33 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 23ffd440 docs(lg-033): 双 COS 定名与重建流程小节补入（CEO 亲定四步立法：定名〔候选各席提/CEO 终定/全小写连字符+面归属语义+D-13 查重〕→注册〔CAO 入 D-13 双席正名+机器归属〕→双实例重建〔新名 -n+重建首动作读常驻指令区+在途对账 3.6 精神〕→收编〔映射表现查+旧名退役入沿革〕；时序=P2 读数②③采毕阶段边界）@MoRen
+- registry：v2.1；今日 registry 提交无变化
