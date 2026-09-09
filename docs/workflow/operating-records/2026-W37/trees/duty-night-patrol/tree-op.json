@@ -4,7 +4,7 @@
   "week": "W37",
   "source": "BOD 令 2026-09-08（CEO 亲定跨机派工机制激活）：值班位适合件首树——值班 COS 编写夜间巡检告警脚本并自验，验证挂树→拾取→执行→回写全链",
   "domainRouting": "sg-duty-executable",
-  "status": "pending",
+  "status": "done",
   "created": "2026-09-08",
   "face": "m-face",
   "nodes": [
@@ -23,7 +23,7 @@
     {
       "nodeId": "DNP-3",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "回写：升级日志首笔追加演练记录（脚本路径/三遍读数/异常注入结果）+树状态回写 done——禁写主账（写分区纪律）"
     }
   ],
