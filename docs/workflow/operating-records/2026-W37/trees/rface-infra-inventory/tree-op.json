@@ -4,7 +4,7 @@
   "week": "W37",
   "source": "BOD 令 2026-09-09（值班位池空填池令）：LG-033 v2 五线之 R 面=agent-core 学徒位，P1 通用环境件转 R 面预留资产——逐件盘点定性成清册",
   "domainRouting": "sg-duty-executable",
-  "status": "pending",
+  "status": "done",
   "created": "2026-09-09",
   "face": "m-face",
   "nodes": [
@@ -23,7 +23,7 @@
     {
       "nodeId": "RFI-3",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "清册定性成文（落升级日志分区）：逐件三值定性=「R 面可直接复用/需改造（改什么）/已过时（为何）」，判据=LG-033 §十 R 面=agent-core 学徒位口径（CC 不上 R 面——CEO 定则 2，凡 CC 专属件标「M 面专属」）；清册表列化（件名/位置/实态/定性/依据）；升级日志追加笔+树状态回写 done——禁写主账"
     }
   ],
