@@ -17,7 +17,7 @@
     {
       "nodeId": "RFI-2",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "heyuan（8.155.54.79）可达性勘验+降级盘点：先探 SSH 可达性（本机无 heyuan 凭据则如实记「SSH 不可达」并降级）；可达则勘 heyuan 现有件（TriRMC daemon 实态/claude 环境/cron 面）；不可达则降级为 8710 API 面盘点（healthz 全字段/挂载能力面）——两种路径都以实测为准，禁推断补位"
     },
     {
