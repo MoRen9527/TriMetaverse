@@ -4,7 +4,7 @@
   "week": "W37",
   "source": "BOD 令 2026-09-09（任务树路由机制立法·实施件③）：巡检增第六对象=树区 pending 树超时检测——树挂了没人拾的兜底告警",
   "domainRouting": "server-executable",
-  "status": "in_progress",
+  "status": "done",
   "created": "2026-09-09",
   "face": "m-face",
   "nodes": [
@@ -17,7 +17,7 @@
     {
       "nodeId": "PTW-2",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "自验+回写：正路径（现行五树全 done=零 pending）+负路径（造一个 pending 测试树置 /tmp 外测目录或临时 mtime 触碰法，验 WARN/ALARM 行后清场）；巡检日志样本入卷；升级日志追加笔+树 done 回写——禁写主账；cron 行不变"
     }
   ],
