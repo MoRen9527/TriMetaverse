@@ -110,7 +110,7 @@
 - **任务工人**=ProcessSupervisor headless（自动化任务线执行者=LG-026 原设计角色；与值班交互位分职正交；三窗实数转用 headless 流托管）
 - **R 面**=agent-core 学徒位（M 成熟一步教一步，**CC 不上 R 面**——CEO 定则 2；heyuan CC 已清理，P1 通用环境件转 R 面预留资产）
 
-**过渡与日落**：值班位现行 SSH+tmux 形态升格 systemd(+tmux) 自动化（CTO 小窗排程：unit 编排+tmux 常驻+崩溃恢复验证）；form c 直连=过渡态（日落条款：sg 网关形态可用即切回网关 token 形态裸枚退役轮换）；组长岗退役挂 P4' 观察期满+验收过。
+**过渡与日落**：值班位启动机制 **v2 定稿（2026-09-09 CEO 亲定迁移令实施毕）=systemd(+tmux) 常驻**——/etc/systemd/system/duty-cos.service（系统级 enabled+Restart=on-failure+WantedBy=multi-user.target）+tmux 常驻会话 duty-cos+`/home/fleet/.trimmc/duty-runner.sh`（source duty-env+bypass+崩溃 10s 重启循环）+linger fleet；开机自启/断连不死/崩溃自愈三性达成（实施锚：五件验证单+COS 独立复勘 PID 1964061→1989835+V2-ALIVE 12:22:40Z context=fresh）；tmux 保留=人工接入面（BOD 触发 ssh→tmux attach 查看/干预）。form c 直连=过渡态（日落条款：sg 网关形态可用即切回网关 token 形态裸枚退役轮换）；组长岗退役挂 P4' 观察期满+验收过。
 
 **值班位启动配方（四件全要素，CEO 亲签 2026-09-09；与 systemd+tmux 并列=服务器侧标准形态，后续重建照此）**：
 1. `--dangerously-skip-permissions`（值班位自主权限——默认权限模式逐条卡审批=无人值守不可行的实证根因②）
