@@ -96,3 +96,6 @@
   - 27cbaf9e docs(lg-033): DNP-2 done——自验实证：14:17:10-11 三遍全 OK（exit=0×3，读数=trimc jobs6/trirmc ok/mcLedger ok/分区 age≈71575s）+14:17:20 错端口注入（DNP_SG_URL=127.0.0.1:8799）ALARM 行触发（unreachable Errno 111，exit=2，非注入对象不受染）——读数全文候 DNP-3 落升级日志分区 @duty-cos
   - 4202b6d7 docs(lg-033): DNP-1 done——夜间巡检告警脚本落 /home/fleet/.trilc/duty-night-patrol.py（禁入仓）：sg TriMMC healthz+河源 TriRMC 对端接线（LG-032 落定 8711 出站应 8.155.54.79:8710，sg 不可直探 8711/8713 以对端为代理读数）+蓄水池分区时效；OK/WARN/ALARM 行含对象+现值+阈值，cron 可调无交互依赖，冒烟全 OK exit=0 @duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:30 +08：自上次进度提交 c04374f9 后新增 1 条 commit：
+  - 2d795c8b docs(lg-033): reservoir-alarm-table 树 done——RAT-2 收口：值表全文落升级日志分区 E-0003（四对象×warn/critical×三段升级路径+统一≥3 周期升级线，数据基线=7294s 归因批+在卷健康读数）；验收两件齐（值表在位三列齐+日志回写首笔）；候 COS 面审入 watcher 实装规格；跨机派工试点②全链通 @duty-cos
+- registry：v2.1；今日 registry 提交无变化
