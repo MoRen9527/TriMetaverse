@@ -149,3 +149,8 @@
   - 255122fc chore(fade-002): 跨机操作路由节发布面落盘——FADE-002 project-docs execute（trimetaverse-claude-md-copy planned_update→updated；真源 TC 1be2ce5；发布面 L33 新节三行=本机 m-cos/sg BOD SSH/不跨面中转）@MoRen
   - c416522b docs(lg-033): safety 路径模型预研——三层路径安全模型架构层方案+值班位专属配置+候联审裁点
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:20 +08：自上次进度提交 789de593 后新增 3 条 commit：
+  - 3a797c81 docs(lg-033): §十四附录 CAO 主笔三点补充（保留权路径唯一性/档2分域制平移读数/名址前缀律对接——档2立法窗预备项挂账）
+  - 72145f6b docs(lg-033): 提案§十四治理架构定谳入册（CEO 终裁修正案：两档替代三档——档2=同级双BOD平行治理非子母；三席合成为基础+R面独立=终态愿景）+§十二任务树格式规范+路由层三段演进定谳§十一增补
+  - 0e042d42 docs(execution): BOD 架构走向治理结构面立场件（CAO 主笔）——单 BOD 面现役+档3条件触发型双面预留（三档演进线读数化）；权威代理定性+代理权单源原则锁死单面结论；CEO 离场三案（半自动为现役目标态，代行主体必须单一反向加强单面）；治理副产品=三类保留权清单成文动议（CAO 域自领，前置件）；四约束贯穿自检表——候 CPO/CTO 合成呈 CEO
+- registry：v2.1；今日 registry 提交无变化
