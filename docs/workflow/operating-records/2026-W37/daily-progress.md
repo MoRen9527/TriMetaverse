@@ -105,3 +105,11 @@
   - b23aae48 docs(lg-006): TriModel 配置读数四栏——keys 段表/额度参数/模型清单/记账现状（CAO 登记簿补栏材料）
   - 20b78b67 docs(lg-033): TriMLC 输出面旧串清查清单 v2 落盘（424 处分级 B/C/D 三级+healthz 已修标 A 级）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:30 +08：自上次进度提交 52ec500f 后新增 6 条 commit：
+  - 7d3280c3 docs(lg-033): RFI-2 done——heyuan 勘验走降级路径达标（E-0007）：TCP 22 OPEN 但公钥认证拒（本机仅 github-mirror 钥无 heyuan 凭据）→8710 API 面盘点：healthz 全字段（trirmc ok/mcLedger ok/cron disabled）+路由面枚举（本机 TriRMC 源码锚+远探验证：公开 3 面/internal 族令牌门 401 正确拒）+模型注册表四 tmv- 模型在册；附带真发现=hello/hello-pro 默认模型名 legacy 无前缀（400/500，registry 含 tmv- 同名项）疑 r3 改名批未覆盖 TriRMC hello 默认值——双候不归因转交互位 @duty-cos-provisional
+  - acbe9f16 docs(lg-033): RFI-1 done——sg 本机 R 面资产盘点读数落分区 E-0006：claude 2.1.227（=§十现役版本）+~/.trimmc/duty-env 在位（FSD 勘正路径实证，内容未读守 key 纪律）；TriModel 仓完整但服务未跑（3333/8000 无监听零进程）+仅 .env.example 无 .env（网关通道纪律形态）；node18.20.8+py3.6/3.8/3.11；七仓全 dev（脏=TM3/TC1）+shadow-plane 非git仓 @duty-cos-provisional
+  - 7096507b docs(lg-033): 蓄水池同步 runbook 正身转录——值班位草案 E-0004/E-0005 COS 面审通过照录入仓（四段+ahead/分叉二分判据细化并入）；终裁增补第 5 条候办件清账
+  - bfad5ae1 docs(lg-033): pool-sync-runbook 树 done——PSR-3 收口：SHA 对账三步法实跑出真发现（工作仓 38d84797≠裸仓/GitHub 52ec500f，merge-base 祖先判定=ahead 在途未推态非分叉）→判据细化条款入 E-0005（ahead=常态 push 归一/分叉=降级处置，补 §3 二分判据）+push 后三端齐平复跑入卷；验收五件齐（勘验读数+四段草案落分区+对账实跑+日志笔+树 done）；正身转录归交互位 @duty-cos-provisional
+  - 38d84797 docs(lg-033): PSR-2 done——同步 runbook 草案四段落升级日志分区 E-0004：频率表（现状/P3 两栏，触发式 hook 实测锚定）+冲突规程（ff-only/abort 上报/禁 force/双向冲突 merge-only+人工裁决线）+SHA 对账三步法（晨检①同款：工作仓/裸仓/GitHub 三 rev-parse 判据分档）+P3 主备轮换接口预留（终笔→齐平确认→开写+冻结窗+Merkre 快照哈希，语法候定稿）；判据全锚 PSR-1 实测值 @duty-cos-provisional
+  - 69b77b04 docs(lg-033): PSR-1 done——三端同步现状勘验（全实测零推断）：①接线=origin 本机裸仓+github 镜像，pull 机制=裸仓 post-receive hook（dev 更新→工作树 fetch+rebase，reflog 17:10:51 实证，skipped 线零出现）②check-ignore 实证 .gitignore:18 .fade/ ③GitHub ls-remote 匿名通（dev=52ec500f 与本地齐平，push 凭 hook HOME=fleet 路径）④机制清单=hook 三职能（工作树同步/异步 tick/异步 mirror push 60s 超时）+daily-progress-watcher+值位巡检 cron */30（交互位已挂载，日志 14:30 起全 OK）；读数候 PSR-3 落分区 @duty-cos-provisional
+- registry：v2.1；今日 registry 提交无变化
