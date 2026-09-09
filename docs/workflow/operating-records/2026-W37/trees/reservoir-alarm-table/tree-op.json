@@ -4,7 +4,7 @@
   "week": "W37",
   "source": "BOD 令 2026-09-08：值班位适合件次树——值班 COS 起草蓄水池监控告警值表（阈值/对象/升级路径三列），供池监控扩展（LG-033 五组件之 5 watcher 的告警面）",
   "domainRouting": "sg-duty-executable",
-  "status": "pending",
+  "status": "done",
   "created": "2026-09-08",
   "face": "m-face",
   "nodes": [
@@ -17,7 +17,7 @@
     {
       "nodeId": "RAT-2",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "回写：值表落升级日志分区+树状态 done——候 COS 面审后入 watcher 实装规格"
     }
   ],
