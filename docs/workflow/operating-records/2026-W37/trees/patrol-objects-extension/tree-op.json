@@ -17,7 +17,7 @@
     {
       "nodeId": "POE-2",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "三线漂移探针：新增第五对象=三线 healthz 连续性（8711/8713/3333 为交互机本机面——sg 不可直探，探针读法=代理面：sg TriMMC 8710 healthz 本机直读+对端 8.155.54.79:8710 healthz 远读+〔3333 无代理面则记「交互机本机面 P3 前盲区」如实标注〕）；判据=degraded/unreachable 持续 >30min（跨 ≥2 巡检周期）方 ALARM，单周期 transient=OK 附注；阈值行含对象+现值+持续时长+阈值"
     },
     {
