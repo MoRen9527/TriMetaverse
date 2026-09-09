@@ -11,7 +11,7 @@
     {
       "nodeId": "DNP-1",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "编写夜间巡检告警脚本（bash 或 python）：巡检对象=8711/8713 healthz 状态+8711 出站对端（应 8.155.54.79:8710）+蓄水池台账 mtime 时效；输出=告警值行（正常=OK 行/异常=ALARM 行含对象+现值+阈值）至 stdout，脚本落 /home/fleet/.trilc/ 或值班位工作目录（禁入仓）；脚本须可被 cron/daemon 周期调用（无交互依赖）"
     },
     {
