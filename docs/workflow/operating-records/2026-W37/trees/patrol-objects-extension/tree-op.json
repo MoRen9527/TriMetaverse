@@ -11,7 +11,7 @@
     {
       "nodeId": "POE-1",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "mirror push 连续失败监测对象：扩展 /home/fleet/.trilc/duty-night-patrol.py 增第四巡检对象——hook mirror push 失败监测（源=FADE 实例日志 hook 线或 git hook 日志位，勘验现役日志落点后定读法；判据=连续 ≥3 周期失败行方 ALARM，单次失败=OK 行附注——沿 E-0001 判例：瞬态自愈不值警）；保持无交互依赖+cron 兼容"
     },
     {
