@@ -4,7 +4,7 @@
   "week": "W37",
   "source": "BOD 令 2026-09-09（值班位池空填池令）：LG-033 深度议题终裁增补第 5 条「蓄水池同步 runbook」候办——P3 主备标记+re-baseline 实装的前置文档件",
   "domainRouting": "sg-duty-executable",
-  "status": "pending",
+  "status": "done",
   "created": "2026-09-09",
   "face": "m-face",
   "nodes": [
@@ -23,7 +23,7 @@
     {
       "nodeId": "PSR-3",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "自验+回写：runbook 三步法（SHA 对账）在本机实跑一遍验证可执行性（读数入卷）；升级日志追加演练记录笔（勘验读数/草案要点/自验结果）+树状态回写 done——禁写主账（写分区纪律）；候交互位 COS 面审后转录主仓正身（值表 E-0003→提案 §十二 同款模式）"
     }
   ],
