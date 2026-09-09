@@ -145,3 +145,7 @@
 - 巡检兜底补写 @22:40 +08：自上次进度提交 c6e059ec 后新增 1 条 commit：
   - 060c8348 docs(registry): 副本同步——名址节前缀律指针行+双位注册追平（真源 c9ca191 D-13 修正批，字节级一致；lastSyncedAt 2026-09-09）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 2be1c4a4 后新增 2 条 commit：
+  - 255122fc chore(fade-002): 跨机操作路由节发布面落盘——FADE-002 project-docs execute（trimetaverse-claude-md-copy planned_update→updated；真源 TC 1be2ce5；发布面 L33 新节三行=本机 m-cos/sg BOD SSH/不跨面中转）@MoRen
+  - c416522b docs(lg-033): safety 路径模型预研——三层路径安全模型架构层方案+值班位专属配置+候联审裁点
+- registry：v2.1；今日 registry 提交无变化
