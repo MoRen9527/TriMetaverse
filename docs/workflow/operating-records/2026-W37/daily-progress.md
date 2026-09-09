@@ -128,3 +128,11 @@
 - 巡检兜底补写 @21:20 +08：自上次进度提交 7b8c2bca 后新增 1 条 commit：
   - e42f574f fix(hooks): settings.json 清空 Windows 专属 hooks——hub-heartbeat 迁本机 settings.local.json 覆盖层（sg Linux 前置 1：消除每工具调用 hook 报错；跨机 settings 架构修正=tracked 中性化+本机差异入 gitignored 层）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:40 +08：自上次进度提交 98c1b9a9 后新增 6 条 commit：
+  - 6314ea1f docs(lg-033): patrol-treezone-watch 树 done——PTW-2 收口：负路径七式外测全中（server-exec -2h=WARN/-25h=ALARM；local -25h=仅 INFO 行不染 WORST 防误报实证；sg-duty-executable 同判可拾 WARN/ALARM 双档证；done 态/新鲜态零行；坏 JSON=单树 WARN 不拖垮对象）exit=2；正路径 3 遍 exit0×3+树 done 后稳态复验 pending=server:0/local:0；外测区清场+生产态 state={} 未污染；样本 3 行入卷 E-0010（分区笔，.fade 不入版控）；路由立法件③落地——与交互位 3.7 树区首查条对称成双位兜底 @duty-cos-provisional
+  - 7cfc9da5 docs(lg-033): patrol-treezone-watch 树 PTW-1 done——巡检脚本 v3 第六对象 treezone-pending 入体：扫当周+前周 trees/*/tree-op.json，status=pending 且 mtime age>60min WARN/>24h ALARM（行含对象+树id+age+阈值）；server-executable 标准值首用+试点期 sg-duty-executable 同判可拾，local-executable 超阈仅 INFO 行防误报（INFO 不计 WORST/exit）；DNP_TREEZONE_BASE/WEEKS 注入口备负路径外测；正路径 3 遍全绿 exit0×3（读数=扫2周/10树,pending=server:1 超阈0——server:1 即本树自身新鲜态如实计数）；cron 行不变 */30 沿用 @duty-cos-provisional
+  - 16857e5b docs(wave-0): C 面活修树 done 收口——WCF-3 回写（源侧 c7bc26c+渲染 efb54bf4 七文件对表零命中；评估件 C 面转已修+TriMC 残点三类判读留痕）；local-executable 路由试点全链走通
+  - b3d6f562 docs(bod-patrol): BOD 巡查职责立法 CTO 技术面立场件——三案对比/B 起步 A 演进 C 联动/双窗确认+豁免申报/催办不自动化/三线各司
+  - efb54bf4 chore(wave0-cface): WCF-2 统一管线渲染四面——WCF-1 源侧七处修正发布面自然更新（copilot updated12/claude updated12/claude-session updated2/support pass errors0；对表清单 7 文件 TriLC 旧串零命中+新串抽查 1/1；TriMC 残点=禁令句保留族+bs 引用句 assessment 件管辖如实注记不扩单）@MoRen
+  - 8b796c5e docs(lg-033): 任务树路由机制立法落地——提案§十二格式规范（domainRouting 三值+sg-duty-executable 前身兼容）+树 c2 patrol-treezone-watch（server-executable·巡检第六对象）+试点树 wave0-cface-livefix（local-executable·Wave 0 C 面活修，COS 当场拾取）
+- registry：v2.1；今日 registry 提交无变化
