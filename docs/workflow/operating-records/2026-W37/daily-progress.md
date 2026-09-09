@@ -99,3 +99,9 @@
 - 巡检兜底补写 @14:30 +08：自上次进度提交 c04374f9 后新增 1 条 commit：
   - 2d795c8b docs(lg-033): reservoir-alarm-table 树 done——RAT-2 收口：值表全文落升级日志分区 E-0003（四对象×warn/critical×三段升级路径+统一≥3 周期升级线，数据基线=7294s 归因批+在卷健康读数）；验收两件齐（值表在位三列齐+日志回写首笔）；候 COS 面审入 watcher 实装规格；跨机派工试点②全链通 @duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:20 +08：自上次进度提交 853d1387 后新增 4 条 commit：
+  - 0a54dde0 docs(lg-033): 提案§十值班位启动配方四要素正身化+§十二蓄水池告警值表正身（COS 面审通过+三条 P3 修订项）——CEO 亲签重建配方+试点件②产出转录
+  - fbdc2db1 docs(lg-033): 值班位填池三树挂 W37 树区——pool-sync-runbook（蓄水池同步 runbook，终裁增补 5 条候办）+rface-infra-inventory（R 面预留资产盘点）+patrol-objects-extension（mirror push 监测+三线漂移探针）；FADE-006 契约 sg-duty-executable，值班 COS 自主拾取；频率调优不做（如实不动）@MoRen
+  - b23aae48 docs(lg-006): TriModel 配置读数四栏——keys 段表/额度参数/模型清单/记账现状（CAO 登记簿补栏材料）
+  - 20b78b67 docs(lg-033): TriMLC 输出面旧串清查清单 v2 落盘（424 处分级 B/C/D 三级+healthz 已修标 A 级）
+- registry：v2.1；今日 registry 提交无变化
