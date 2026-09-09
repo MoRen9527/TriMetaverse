@@ -113,3 +113,9 @@
   - 38d84797 docs(lg-033): PSR-2 done——同步 runbook 草案四段落升级日志分区 E-0004：频率表（现状/P3 两栏，触发式 hook 实测锚定）+冲突规程（ff-only/abort 上报/禁 force/双向冲突 merge-only+人工裁决线）+SHA 对账三步法（晨检①同款：工作仓/裸仓/GitHub 三 rev-parse 判据分档）+P3 主备轮换接口预留（终笔→齐平确认→开写+冻结窗+Merkre 快照哈希，语法候定稿）；判据全锚 PSR-1 实测值 @duty-cos-provisional
   - 69b77b04 docs(lg-033): PSR-1 done——三端同步现状勘验（全实测零推断）：①接线=origin 本机裸仓+github 镜像，pull 机制=裸仓 post-receive hook（dev 更新→工作树 fetch+rebase，reflog 17:10:51 实证，skipped 线零出现）②check-ignore 实证 .gitignore:18 .fade/ ③GitHub ls-remote 匿名通（dev=52ec500f 与本地齐平，push 凭 hook HOME=fleet 路径）④机制清单=hook 三职能（工作树同步/异步 tick/异步 mirror push 60s 超时）+daily-progress-watcher+值位巡检 cron */30（交互位已挂载，日志 14:30 起全 OK）；读数候 PSR-3 落分区 @duty-cos-provisional
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:40 +08：自上次进度提交 c93f1df3 后新增 4 条 commit：
+  - 30251af8 docs(lg-033): patrol-objects-extension 树 done——POE-3 收口：正负自验全绿（正=3 遍 9 线全 OK exit0×3；负①错端口=直探 ALARM+连续性探针首见 0s transient 不误警——瞬态/持续分野实证；负②回拨 first_seen=-1900s=漂移持续 1900s ALARM——跨周期判定实证）；样本 3 行入卷 E-0009；trimc degraded 4h 疑案监测面就位（根因归 CTO 线不动）；§十二 R2/R3 已内化 R1 候 P3 @duty-cos-provisional
+  - 7c2cfa1e docs(lg-033): POE-2 done——第五对象三线连续性探针入脚本 v2：代理面=本机 8710 直读+河源 8710 远读+3333 盲区如实标注（交互机本机面 P3 前不计读数）；漂移持续>1800s（跨≥2 周期）方 ALARM/单周期 transient=OK 附注（状态文件 .patrol-state.json 跨周期判定，原子写+缺损重起算）；阈值行含对象+现值+持续时长+阈值；§十二 R2 热身窗豁免被 30min 持续窗涵盖+R3 jobCount 分面语义同步对齐（trimc 应 6 入判据/trirmc 预期 0 不判） @duty-cos-provisional
+  - 2f4b1830 docs(lg-033): POE-1 done——第四对象 mirror push 连败监测入脚本 v2：源=fade-hook.log 结果行（FAILED/pushed 两式格式实锚）；末位连败≥3 周期方 ALARM、单次瞬态=OK 附注（E-0001 判例）；值行含末位结果时戳+连败数+窗内行数；fleet 可读性已验（cron 面前置） @duty-cos-provisional
+  - b9827a53 docs(lg-033): rface-infra-inventory 树 done——RFI-3 收口：九件三值定性清册落分区 E-0008（可直接复用=node/python/git 三族工具链；需改造=TriModel 网关物化；已过时=heyuan hello legacy 默认名；M 面专属出清册=claude/duty-env/shadow-plane/heyuan TriRMC 四件——CEO 定则 2 判据）；heyuan 机内件 P3 前不可见如实留白候凭据开窗；零改动纪律保持 @duty-cos-provisional
+- registry：v2.1；今日 registry 提交无变化
