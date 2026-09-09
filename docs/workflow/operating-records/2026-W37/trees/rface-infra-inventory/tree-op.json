@@ -11,7 +11,7 @@
     {
       "nodeId": "RFI-1",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "sg 本机 R 面预留资产盘点（sg 本地可完成项先行）：①claude 环境件（版本/安装位/配置面）②TriModel 网关客户端可用性（3333 本地无——sg 走 sg TriModel /srv/fleet/TriModel 实态勘验：在役否/端口/keys 接线形态）③node/python 工具链版本面④git 三仓工作区实态（/srv/fleet 各仓分支/洁净度）。读数逐件记升级日志分区"
     },
     {
