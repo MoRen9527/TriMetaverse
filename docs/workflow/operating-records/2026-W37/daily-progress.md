@@ -87,3 +87,12 @@
   - d07133f8 Merge remote-tracking branch 'sg-server/dev' into dev
   - 58bbe527 docs(lg-033): 跨机派工试点双树挂 TriMMC 树区——duty-night-patrol（夜间巡检告警脚本三节点）+reservoir-alarm-table（蓄水池告警值表两节点）；FADE-006 拾取契约形态/domainRouting=sg-duty-executable；值班 COS 自主拾取执行回写（BOD 跨机派工机制激活令试点件）@MoRen
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-09（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @14:20 +08：自上次进度提交 b3b87ac1 后新增 4 条 commit：
+  - 752d588e docs(lg-033): RAT-1 done——蓄水池告警值表草案成型：四对象（台账 mtime 时效/8711-8713 healthz/出站对端接线/watcher 心跳）×两档（warn/critical）×三段升级路径（值位自处→升级日志→急件链）；台账档 warn@3600s/crit@7294s（LG-032 归因批基线）、分区档 72h/168h 宽限、接线档含 mcLedger 面、watcher 过渡读数=sg TriMMC cron 面候 P3 实装换事件心跳档；sg 不可直探 8711/8713 以对端 8.155.54.79:8710 为代理读数；阈值与试点①脚本逐项对齐——全文候 RAT-2 落升级日志分区 @duty-cos
+  - 5073b272 docs(lg-033): duty-night-patrol 树 done——DNP-3 收口：升级日志 E-0002 演练记录落分区（脚本路径/三遍读数/异常注入结果/判断链含≥3 周期升级线）；验收四件齐（脚本在位+三遍读数+注入实证+日志首笔）；FADE-006 sg-duty-executable 自主拾取试点①全链通 @duty-cos
+  - 27cbaf9e docs(lg-033): DNP-2 done——自验实证：14:17:10-11 三遍全 OK（exit=0×3，读数=trimc jobs6/trirmc ok/mcLedger ok/分区 age≈71575s）+14:17:20 错端口注入（DNP_SG_URL=127.0.0.1:8799）ALARM 行触发（unreachable Errno 111，exit=2，非注入对象不受染）——读数全文候 DNP-3 落升级日志分区 @duty-cos
+  - 4202b6d7 docs(lg-033): DNP-1 done——夜间巡检告警脚本落 /home/fleet/.trilc/duty-night-patrol.py（禁入仓）：sg TriMMC healthz+河源 TriRMC 对端接线（LG-032 落定 8711 出站应 8.155.54.79:8710，sg 不可直探 8711/8713 以对端为代理读数）+蓄水池分区时效；OK/WARN/ALARM 行含对象+现值+阈值，cron 可调无交互依赖，冒烟全 OK exit=0 @duty-cos
+- registry：v2.1；今日 registry 提交无变化
