@@ -1,0 +1,32 @@
+{
+  "treeId": "patrol-objects-extension",
+  "title": "巡检对象扩展树（mirror push 监测+三线漂移探针）",
+  "week": "W37",
+  "source": "BOD 令 2026-09-09（值班位池空填池令）：E-0001 判例场景实战化+三线 healthz 连续性监测——顺手为 trimc degraded 4h 疑案提供监测面读数",
+  "domainRouting": "sg-duty-executable",
+  "status": "pending",
+  "created": "2026-09-09",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "POE-1",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "mirror push 连续失败监测对象：扩展 /home/fleet/.trilc/duty-night-patrol.py 增第四巡检对象——hook mirror push 失败监测（源=FADE 实例日志 hook 线或 git hook 日志位，勘验现役日志落点后定读法；判据=连续 ≥3 周期失败行方 ALARM，单次失败=OK 行附注——沿 E-0001 判例：瞬态自愈不值警）；保持无交互依赖+cron 兼容"
+    },
+    {
+      "nodeId": "POE-2",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "三线漂移探针：新增第五对象=三线 healthz 连续性（8711/8713/3333 为交互机本机面——sg 不可直探，探针读法=代理面：sg TriMMC 8710 healthz 本机直读+对端 8.155.54.79:8710 healthz 远读+〔3333 无代理面则记「交互机本机面 P3 前盲区」如实标注〕）；判据=degraded/unreachable 持续 >30min（跨 ≥2 巡检周期）方 ALARM，单周期 transient=OK 附注；阈值行含对象+现值+持续时长+阈值"
+    },
+    {
+      "nodeId": "POE-3",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "自验+回写：正路径（连续 3 遍全 OK）+负路径注入两式（错端口 ALARM+持续标记模拟跨周期 degraded——DNP-2 同款自验标准加码）；巡检日志样本 3 行入卷；升级日志追加笔（扩展对象/判据/自验读数）+树状态回写 done——禁写主账；cron 行不变（脚本内扩展，*/30 周期沿用）"
+    }
+  ],
+  "acceptance": "第四五对象在脚本+正负自验读数（负路径含跨周期 degraded 模拟）+巡检日志样本+升级日志笔+树 done",
+  "notes": "扩展不新增 cron 行（脚本内迭代，易卸载原则维持）；trimc degraded 4h 疑案根因归 CTO 线（BOD 令分派），本树只建监测面不修因"
+}

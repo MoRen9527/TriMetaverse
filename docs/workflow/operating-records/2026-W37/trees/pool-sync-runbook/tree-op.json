@@ -1,0 +1,32 @@
+{
+  "treeId": "pool-sync-runbook",
+  "title": "蓄水池同步 runbook 树（LG-033 终裁增补第 5 条候办件）",
+  "week": "W37",
+  "source": "BOD 令 2026-09-09（值班位池空填池令）：LG-033 深度议题终裁增补第 5 条「蓄水池同步 runbook」候办——P3 主备标记+re-baseline 实装的前置文档件",
+  "domainRouting": "sg-duty-executable",
+  "status": "pending",
+  "created": "2026-09-09",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "PSR-1",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "三端同步现状勘验：本机（sg）侧实测勘定——①sg 工作仓 /srv/fleet/TriMetaverse 的上游接线（git remote -v + 最近 fetch/pull 机制：post-receive hook 自动/手工/无）②.fade/ 分区 gitignore 实态（check-ignore 实证）③GitHub 线可达性（git ls-remote 或 api 探测，注网络策略）④现有同步机制清单化（发现什么记什么，禁推断）。读数写升级日志分区"
+    },
+    {
+      "nodeId": "PSR-2",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "runbook 草案成文（落升级日志分区，禁入仓禁写主账）：内容四段=①三端 push/pull 频率建议表（本机↔sg↔GitHub 各向：触发式 hook/定时/事件驱动的现状与 P3 目标态两栏）②冲突处置规程（ff-only 优先/abort 上报/禁 force 推送原则/双向修改冲突的人工裁决升级线）③幂等校验法（SHA 对账三步法：工作仓 rev-parse vs bare vs GitHub api——参照晨检①既有口径）④P3 主备标记轮换接口预留（轮换时谁推谁拉+交接瞬间冻结窗）。草案形态对齐 E-0003 值表（表列化+判据锚定实测值）"
+    },
+    {
+      "nodeId": "PSR-3",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "自验+回写：runbook 三步法（SHA 对账）在本机实跑一遍验证可执行性（读数入卷）；升级日志追加演练记录笔（勘验读数/草案要点/自验结果）+树状态回写 done——禁写主账（写分区纪律）；候交互位 COS 面审后转录主仓正身（值表 E-0003→提案 §十二 同款模式）"
+    }
+  ],
+  "acceptance": "三端现状勘验读数+runbook 四段草案落分区+SHA 对账法实跑验证+升级日志笔+树 done",
+  "notes": "LG-033 P3 前置文档件——值班位只产草案落分区，正身转录归交互位（写分区纪律边界样例）；零越权（不改 hook/不改 git 配置，只勘验只成文）"
+}

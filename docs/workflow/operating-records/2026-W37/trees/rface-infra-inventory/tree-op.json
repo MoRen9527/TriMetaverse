@@ -1,0 +1,32 @@
+{
+  "treeId": "rface-infra-inventory",
+  "title": "R 面预留基础设施盘点树（P1 环境件→预留资产清册）",
+  "week": "W37",
+  "source": "BOD 令 2026-09-09（值班位池空填池令）：LG-033 v2 五线之 R 面=agent-core 学徒位，P1 通用环境件转 R 面预留资产——逐件盘点定性成清册",
+  "domainRouting": "sg-duty-executable",
+  "status": "pending",
+  "created": "2026-09-09",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "RFI-1",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "sg 本机 R 面预留资产盘点（sg 本地可完成项先行）：①claude 环境件（版本/安装位/配置面）②TriModel 网关客户端可用性（3333 本地无——sg 走 sg TriModel /srv/fleet/TriModel 实态勘验：在役否/端口/keys 接线形态）③node/python 工具链版本面④git 三仓工作区实态（/srv/fleet 各仓分支/洁净度）。读数逐件记升级日志分区"
+    },
+    {
+      "nodeId": "RFI-2",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "heyuan（8.155.54.79）可达性勘验+降级盘点：先探 SSH 可达性（本机无 heyuan 凭据则如实记「SSH 不可达」并降级）；可达则勘 heyuan 现有件（TriRMC daemon 实态/claude 环境/cron 面）；不可达则降级为 8710 API 面盘点（healthz 全字段/挂载能力面）——两种路径都以实测为准，禁推断补位"
+    },
+    {
+      "nodeId": "RFI-3",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "清册定性成文（落升级日志分区）：逐件三值定性=「R 面可直接复用/需改造（改什么）/已过时（为何）」，判据=LG-033 §十 R 面=agent-core 学徒位口径（CC 不上 R 面——CEO 定则 2，凡 CC 专属件标「M 面专属」）；清册表列化（件名/位置/实态/定性/依据）；升级日志追加笔+树状态回写 done——禁写主账"
+    }
+  ],
+  "acceptance": "sg 本机盘点读数+heyuan 勘验（可达或降级路径二选一实证）+三值定性清册落分区+升级日志笔+树 done",
+  "notes": "盘点件零改动（只勘验只成文，不动任何在役件）；heyuan SSH 凭据若无则降级路径同样算达标——可达性结论本身即盘点产出"
+}
