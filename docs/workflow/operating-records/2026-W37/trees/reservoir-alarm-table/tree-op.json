@@ -11,7 +11,7 @@
     {
       "nodeId": "RAT-1",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "起草告警值表（markdown）：监控对象逐项（台账 mtime 时效/8711-8713 healthz/出站对端接线/watcher 心跳）×阈值（warn/critical 两档）×升级路径（值班位自处→升级日志→急件链）——数据基线取 7294s 归因批+健康读数在卷值"
     },
     {
