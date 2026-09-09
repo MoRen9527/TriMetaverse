@@ -17,7 +17,7 @@
     {
       "nodeId": "DNP-2",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "自验：脚本连续跑 3 遍全 OK+人为注入一异常（如临时错端口）验证 ALARM 行触发——自验读数写入升级日志分区（值班位专写面）"
     },
     {
