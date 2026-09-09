@@ -17,7 +17,7 @@
     {
       "nodeId": "PSR-2",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "runbook 草案成文（落升级日志分区，禁入仓禁写主账）：内容四段=①三端 push/pull 频率建议表（本机↔sg↔GitHub 各向：触发式 hook/定时/事件驱动的现状与 P3 目标态两栏）②冲突处置规程（ff-only 优先/abort 上报/禁 force 推送原则/双向修改冲突的人工裁决升级线）③幂等校验法（SHA 对账三步法：工作仓 rev-parse vs bare vs GitHub api——参照晨检①既有口径）④P3 主备标记轮换接口预留（轮换时谁推谁拉+交接瞬间冻结窗）。草案形态对齐 E-0003 值表（表列化+判据锚定实测值）"
     },
     {
