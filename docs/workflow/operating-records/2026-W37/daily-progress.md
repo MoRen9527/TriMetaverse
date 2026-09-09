@@ -119,3 +119,6 @@
   - 2f4b1830 docs(lg-033): POE-1 done——第四对象 mirror push 连败监测入脚本 v2：源=fade-hook.log 结果行（FAILED/pushed 两式格式实锚）；末位连败≥3 周期方 ALARM、单次瞬态=OK 附注（E-0001 判例）；值行含末位结果时戳+连败数+窗内行数；fleet 可读性已验（cron 面前置） @duty-cos-provisional
   - b9827a53 docs(lg-033): rface-infra-inventory 树 done——RFI-3 收口：九件三值定性清册落分区 E-0008（可直接复用=node/python/git 三族工具链；需改造=TriModel 网关物化；已过时=heyuan hello legacy 默认名；M 面专属出清册=claude/duty-env/shadow-plane/heyuan TriRMC 四件——CEO 定则 2 判据）；heyuan 机内件 P3 前不可见如实留白候凭据开窗；零改动纪律保持 @duty-cos-provisional
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:00 +08：自上次进度提交 c047b9fb 后新增 1 条 commit：
+  - accc6036 docs(wave-0): 改名残留清查评估件收口——六面分类定级（A/B 冻结面长期低优/C 活面 B 级修正单 7 项源侧路由/D 数据目录四存口径分裂候 CTO 裁/E sg 新生残留随值位窗/F 引 20b78b67）；CEO 问询承诺件今夜窗兑现
+- registry：v2.1；今日 registry 提交无变化
