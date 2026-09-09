@@ -4,26 +4,26 @@
   "week": "W37",
   "source": "BOD 令 2026-09-09（任务树路由机制立法·实施件④试点树）+Wave 0 评估件 C 面修正单（wave0-rename-residue-assessment-20260909.md §二）",
   "domainRouting": "local-executable",
-  "status": "in_progress",
+  "status": "done",
   "created": "2026-09-09",
   "face": "m-face",
   "nodes": [
     {
       "nodeId": "WCF-1",
       "agent": "cos-hub→fsd",
-      "status": "pending",
+      "status": "done",
       "action": "源侧修正（TriCompany source-agents 7 处，修正单逐字）：①chief-technology-officer/session-body.agent.md 节头 TriLC daemon→TriRLC ②full-stack-developer/full-stack-developer.agent.md+soul.agent.md 模块名行 TriLC→TriRLC ③business-strategy/agent-body.agent.md+registries/business-strategy.agent.md 模块列表 TriMC、TriLC→TriMMC、TriRLC ④registries/TrideProductRegistry.agent.md 同族串——历史叙事引用不改（真源活文档面才修）"
     },
     {
       "nodeId": "WCF-2",
       "agent": "cos-hub→fsd",
-      "status": "pending",
+      "status": "done",
       "action": "渲染管线重渲+发布面验证：统一发布管线重渲→发布面（.claude/hub/*.session.md+.github/agents/*.agent.md+.claude/agents/*.md）实测旧串零命中（评估件 §二 7 文件对表）——禁直改发布件，渲染产物自然更新"
     },
     {
       "nodeId": "WCF-3",
       "agent": "cos-hub",
-      "status": "pending",
+      "status": "done",
       "action": "收口回写：双仓 commit+推平（TC 源侧+TMV 发布面随批）+Wave 0 评估件 C 面条目状态更新（B 级候修→已修）+升级日志（本机树区无分区，回写=树 done+commit 讯息）"
     }
   ],

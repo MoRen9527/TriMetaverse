@@ -17,7 +17,7 @@
 | E·sg 侧 | /home/fleet 值位工作区 | .trilc+​.trimmc 混用 | **C 新生残留**（详见 §四） | 值班位工程窗随下一窗 |
 | F·TriMLC 输出面 | （20b78b67 清单 v2） | 424 处 B/C/D 三级已分 | 引用不重做 | 按 20b78b67 既有分级路线走 |
 
-## 二、C 面活候修清单（B 级，源侧修正单）
+## 二、C 面活候修清单（~~B 级候修~~ → **已修 2026-09-09**：源侧 c7bc26c+渲染 efb54bf4，7 文件对表零命中；FSD 如实上交 TriMC 残点三类〔cto.session 禁令句保留族/bs 引用句域〕留本件判读——禁令句保留族=旧名宿主禁令语义不属残留，维持不修；bs 引用句域=历史与定义句域，逐句判读候下窗）
 
 1. `TriCompany/source-agents/chief-technology-officer/session-body.agent.md`——「### TriLC daemon（本地控制器）」节头（发布面 .claude/hub/cto.session.md L138 同源实测）→ TriRLC。
 2. `TriCompany/source-agents/full-stack-developer/full-stack-developer.agent.md`+`soul.agent.md`——「代码真源面：TriMetaverse/TriLC/TriPilot/TriCode」模块名行 → TriRLC（发布面 hub/FSD.session.md L29 实测同源）。
