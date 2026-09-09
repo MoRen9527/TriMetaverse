@@ -4,7 +4,7 @@
   "week": "W37",
   "source": "BOD 令 2026-09-09（值班位池空填池令）：E-0001 判例场景实战化+三线 healthz 连续性监测——顺手为 trimc degraded 4h 疑案提供监测面读数",
   "domainRouting": "sg-duty-executable",
-  "status": "pending",
+  "status": "done",
   "created": "2026-09-09",
   "face": "m-face",
   "nodes": [
@@ -23,7 +23,7 @@
     {
       "nodeId": "POE-3",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "自验+回写：正路径（连续 3 遍全 OK）+负路径注入两式（错端口 ALARM+持续标记模拟跨周期 degraded——DNP-2 同款自验标准加码）；巡检日志样本 3 行入卷；升级日志追加笔（扩展对象/判据/自验读数）+树状态回写 done——禁写主账；cron 行不变（脚本内扩展，*/30 周期沿用）"
     }
   ],
