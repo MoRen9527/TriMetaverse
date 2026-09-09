@@ -125,3 +125,6 @@
 - 巡检兜底补写 @20:30 +08：自上次进度提交 417cd39c 后新增 1 条 commit：
   - f07031f7 docs(lg-033): 提案§十值班位启动机制 v2 定稿正身——systemd(+tmux)+fleet+四要素最终形态（CEO 亲定迁移令实施毕+COS 独立复勘锚）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 7b8c2bca 后新增 1 条 commit：
+  - e42f574f fix(hooks): settings.json 清空 Windows 专属 hooks——hub-heartbeat 迁本机 settings.local.json 覆盖层（sg Linux 前置 1：消除每工具调用 hook 报错；跨机 settings 架构修正=tracked 中性化+本机差异入 gitignored 层）
+- registry：v2.1；今日 registry 提交无变化
