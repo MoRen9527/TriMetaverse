@@ -11,7 +11,7 @@
     {
       "nodeId": "PSR-1",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "三端同步现状勘验：本机（sg）侧实测勘定——①sg 工作仓 /srv/fleet/TriMetaverse 的上游接线（git remote -v + 最近 fetch/pull 机制：post-receive hook 自动/手工/无）②.fade/ 分区 gitignore 实态（check-ignore 实证）③GitHub 线可达性（git ls-remote 或 api 探测，注网络策略）④现有同步机制清单化（发现什么记什么，禁推断）。读数写升级日志分区"
     },
     {
