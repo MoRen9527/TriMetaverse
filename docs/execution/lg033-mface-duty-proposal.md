@@ -143,7 +143,24 @@
 
 **时序**：**P2 试点读数②③采毕后的阶段边界**执行双重建（干净边界做身份切换，符合阶段性互通设计；试点数据不弃——②③采完即闭环）。名字候选征集随联审窗顺带（各席提案趣名亦可，CEO 终定）。
 
-## 十二、蓄水池告警值表正身（P2 试点件②产出，COS 面审通过 2026-09-09）
+## 十二、任务树格式规范（domainRouting 路由标签，CEO 亲定 2026-09-09）
+
+**机制定谳**：任务树=工单，`domainRouting`=路由标签，两端 COS 各自拾取自己 face 的树——FADE-006 拾取模式扩展为**跨机双位派工**。
+
+**字段规范**：tree-op.json 增 `domainRouting` 字段（树级），取值三枚：
+- `local-executable`——交互位 COS 自动拾取（本地树区：`docs/workflow/operating-records/<week>/trees/` 本机面）
+- `server-executable`——值班 COS 自动拾取（sg 树区：`/srv/fleet/TriMetaverse/docs/workflow/operating-records/<week>/trees/`）
+- `both`——两端皆可拾取（先到先得，拾取即翻节点防重复）
+
+**兼容注记**：试点期值 `sg-duty-executable`（duty-night-patrol 等五树在卷）=`server-executable` 前身，历史树不改（历史冻结）；新树一律用三枚标准值。
+
+**路由判断权**：CEO 建议 → COS 判断面归属 → 写入 domainRouting 值 → 挂树 → 对应 COS 自动拾取。**紧急/交互类仍走 SendMessage 直达**（树路由适合可异步的结构化任务）。
+
+**拾取机制两侧形态**：
+- 值班位（server 侧）：值班 COS 拾取（现役实测九环全链通）+巡检第六对象兜底（pending 超时告警）。
+- 交互位（local 侧）：**过渡态=COS 常驻唤醒首查树区**（每次被唤醒首查 local-executable pending——常驻指令区机械条）；**P3 目标态=TriMLC daemon watcher 文件监视事件唤醒**（与值班位对称）。
+
+## 十三、蓄水池告警值表正身（P2 试点件②产出，COS 面审通过 2026-09-09；原 §十二，2026-09-09 任务树节插入后顺延）
 
 **正身源**：值班位升级日志分区 E-0003（sg 侧 `.fade/hub-snapshots/escalation-log.md`，gitignored 设计分区；本节=仓侧正本转录+面审结论）。值表全文见 E-0003（四对象×warn/critical 两档×三段升级路径，与试点①脚本 `/home/fleet/.trilc/duty-night-patrol.py` 逐项对齐）。
 

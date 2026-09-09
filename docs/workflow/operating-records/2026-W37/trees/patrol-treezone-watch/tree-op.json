@@ -1,0 +1,26 @@
+{
+  "treeId": "patrol-treezone-watch",
+  "title": "巡检第六对象树——树区未拾取树检测兜底（路由机制立法件③）",
+  "week": "W37",
+  "source": "BOD 令 2026-09-09（任务树路由机制立法·实施件③）：巡检增第六对象=树区 pending 树超时检测——树挂了没人拾的兜底告警",
+  "domainRouting": "server-executable",
+  "status": "pending",
+  "created": "2026-09-09",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "PTW-1",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "扩展 /home/fleet/.trilc/duty-night-patrol.py 增第六对象 treezone-pending：扫 /srv/fleet/TriMetaverse/docs/workflow/operating-records/*/trees/*/tree-op.json（当周+前周），status=pending 且 mtime age>60min 即 WARN 行（对象+树 id+age+阈值），>24h 即 ALARM；domainRouting=server-executable 树为监测主对象，local-executable 树在 sg 侧不可拾取仅记 INFO 行（防误报）"
+    },
+    {
+      "nodeId": "PTW-2",
+      "agent": "duty-cos",
+      "status": "pending",
+      "action": "自验+回写：正路径（现行五树全 done=零 pending）+负路径（造一个 pending 测试树置 /tmp 外测目录或临时 mtime 触碰法，验 WARN/ALARM 行后清场）；巡检日志样本入卷；升级日志追加笔+树 done 回写——禁写主账；cron 行不变"
+    }
+  ],
+  "acceptance": "第六对象在脚本+正负自验读数+日志样本+升级日志笔+树 done",
+  "notes": "路由立法件③——domainRouting=server-executable 标准值首用树（试点期 sg-duty-executable 的正式接替值）；与交互位 3.7 树区首查条对称成双位兜底"
+}
