@@ -136,3 +136,6 @@
   - efb54bf4 chore(wave0-cface): WCF-2 统一管线渲染四面——WCF-1 源侧七处修正发布面自然更新（copilot updated12/claude updated12/claude-session updated2/support pass errors0；对表清单 7 文件 TriLC 旧串零命中+新串抽查 1/1；TriMC 残点=禁令句保留族+bs 引用句 assessment 件管辖如实注记不扩单）@MoRen
   - 8b796c5e docs(lg-033): 任务树路由机制立法落地——提案§十二格式规范（domainRouting 三值+sg-duty-executable 前身兼容）+树 c2 patrol-treezone-watch（server-executable·巡检第六对象）+试点树 wave0-cface-livefix（local-executable·Wave 0 C 面活修，COS 当场拾取）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 7c83419a 后新增 1 条 commit：
+  - b2ffb1fd docs(whitepaper): 两轴进化螺旋增补为公司核心发展方法论正身（CEO 亲定 2026-09-09）——横向轴四步台阶+纵向轴传承超越+哲学根基+决策过滤器+R 面建设最高指导，照录教义文
+- registry：v2.1；今日 registry 提交无变化
