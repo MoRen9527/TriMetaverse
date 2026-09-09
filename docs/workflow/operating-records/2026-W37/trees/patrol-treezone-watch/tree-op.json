@@ -4,14 +4,14 @@
   "week": "W37",
   "source": "BOD 令 2026-09-09（任务树路由机制立法·实施件③）：巡检增第六对象=树区 pending 树超时检测——树挂了没人拾的兜底告警",
   "domainRouting": "server-executable",
-  "status": "pending",
+  "status": "in_progress",
   "created": "2026-09-09",
   "face": "m-face",
   "nodes": [
     {
       "nodeId": "PTW-1",
       "agent": "duty-cos",
-      "status": "pending",
+      "status": "done",
       "action": "扩展 /home/fleet/.trilc/duty-night-patrol.py 增第六对象 treezone-pending：扫 /srv/fleet/TriMetaverse/docs/workflow/operating-records/*/trees/*/tree-op.json（当周+前周），status=pending 且 mtime age>60min 即 WARN 行（对象+树 id+age+阈值），>24h 即 ALARM；domainRouting=server-executable 树为监测主对象，local-executable 树在 sg 侧不可拾取仅记 INFO 行（防误报）"
     },
     {
