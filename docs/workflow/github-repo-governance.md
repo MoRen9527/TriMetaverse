@@ -299,7 +299,8 @@ TriMetaverse/reference → 模块/vendor → 模块真实实现
 | 模块代码事实与技术门禁 | CTO（小狄） |
 | 公司治理、秘书处与行政制度 | CAO |
 | 人力资源、岗位启用与交接 | CHO |
-| 公司级任务分派、协调、催办与升级 | CEOChiefOfStaff（小贾） |
+| 公司级任务分派、协调与升级 | CEOChiefOfStaff（小贾） |
+| 收口督办与节奏管理（催办随迁；分派权/升级权/台账销账变更权不随迁） | COO（管）／CompanyGovernanceRegistry（执行登记） |
 | 中央战略与模块边界裁决 | BusinessStrategy |
 
 真源：`docs/registry/company-governance-state.md` §Current Ownership。
