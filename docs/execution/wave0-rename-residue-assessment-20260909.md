@@ -44,3 +44,9 @@
 - 本件收口=六面扫毕+分类定级+路由挂出（B 活面修正单/D 口径裁决/E 统一方案三项挂出）；**修正实施不属本件**（各 owner 窗执行）。
 - B 级修正单候 CTO/FSD 渲染链窗（预计一窗可毕）；D 口径裁决候 CTO 裁；E 随值班位窗；A/B 冻结面长期低优不设限期。
 - 状态条：①2026-09-09 19:5x+08 现查（UTC 11:5xZ）②联审证据=六面扫数在卷 ③水位自估：中 ④— ⑤签发时刻代之。
+
+## 六、增补（2026-09-10，CTO 小狄·BOD 派单回执附记）
+
+- **8713 healthz `trimc` 字段正名**（晨检歧义项）：字段真实指向=**TriMMC，非 TriRMC**。定谳链：`TriMLC/src/server/app.ts` healthz 段 `trimc` 与 `mc_link` 同值双写、`mc_peer:"trimmc"` 硬编码；字段源流=8711 时代 healthz 旧名（W32/W36 记录「trimc=connected 对 sg」），LG-033（2026-09-08）移植 8713 时增 mc_link/mc_peer 双字段并保留 trimc 双写。已同步正名：TriMLC src 注释、TriCompany `runtime/cognition/mc_link_check.py`（docstring/注释/打印行）、TriMLC code-state 增节。wire 字段本体不退役（消费方 mc_link_check.py 兼容读、`scripts/verify-trilc-24h.ps1` 打印未迁移），退役候另批。旁注：sg 8710 daemon 自身 healthz 仍报 `service:"trimc"`（TriMMC 侧残留，属 sg 侧工程窗件）。
+- **8713 拉起源定谳**（顺带件，§三相关）：现役进程 09-09 12:53:19+08 由**人工经常驻会话启动**（transcript 留「提权复拉」人类指令 + `Start-Process -RedirectStandardOutput` 户口规范方式 + 通道 env 块；stdout.log/stderr.log 分文件重定向为其指纹）；**非** schtasks 自启（TriMLC-Channel 任务存在但 ACL 保护不可查、进程属主 jedih 证伪 SYSTEM、开机时刻 09-09 05:16:54 与 ONSTART 窗不匹配）、**非** v3 cmd（channel.log 重定向命名/WorkingDirectory=TriMLC/env 三证据不符）、无任何脚本/cron/watchdog 管 8713。12:52:12 另有一次 UAC 提权无 env 首试（WorkingDirectory=TriMLC、默认数据目录 `trilc`），写 `%LOCALAPPDATA%\trilc` db-shm 三件（12:52 mtime 实证）后短存退场——§三「trilc 重生态某进程仍在写」的候选写手即此；现勘（09-10 13:5x）无写手存活、12:52 后无新写痕，该悬案可按「一次性首试残留」口径收窄，根治仍候 §三 工程窗三步。
+- BOD 通报「~12:46」修正：进程实启 **12:53:19+08**（stdout.log/stderr.log 创建时刻、进程 StartTime、healthz uptime 三证一致）。
