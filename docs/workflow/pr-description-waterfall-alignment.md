@@ -88,7 +88,7 @@ Unify terminology and artifact causality chain across whitepaper, spec, runbook,
 
 ## 影响文件（核心）
 
-- `project.md`
+- `../project.md`
 - `docs/tmv-whitepaper.md`
 - `docs/workflow/workflow-engine-spec.md`
 - `docs/workflow/workflow-runbook.md`
@@ -114,7 +114,7 @@ Unify terminology and artifact causality chain across whitepaper, spec, runbook,
 
 ## 验证清单
 
-- [ ] `project.md` 阶段顺序与命名为新模型
+- [ ] `../project.md` 阶段顺序与命名为新模型
 - [ ] workflow 规范/手册/矩阵/配置/schema 已一致
 - [ ] 主因果链在白皮书与 workflow 文档一致
 - [ ] 术语源与严格模式规则仍生效
@@ -125,5 +125,5 @@ Unify terminology and artifact causality chain across whitepaper, spec, runbook,
 ## 审阅建议
 
 1. 先看 `waterfall-migration-mapping.md` 把握旧新映射
-2. 再看 `project.md` 验证阶段与分叉规则
+2. 再看 `../project.md` 验证阶段与分叉规则
 3. 最后抽查 `workflow-engine-spec.md`、`workflow-runbook.md`、`phase-io-matrix.md` 的输入输出一致性

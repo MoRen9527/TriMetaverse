@@ -41,7 +41,7 @@
 
 ## 4. 推荐阅读顺序
 
-1. [01-为什么需要-tricompany](./01-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-tricompany.md)
+1. [01-为什么需要-tricompany](./01-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-../../../tricompany.md)
 2. [02-员工设计与生命周期](./02-%E5%91%98%E5%B7%A5%E8%AE%BE%E8%AE%A1%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)
 3. [03-source-publish-live-链路](./03-source-publish-live-%E9%93%BE%E8%B7%AF.md)
 4. [04-ceo-chief-of-staff-全链路案例](./04-ceo-chief-of-staff-%E5%85%A8%E9%93%BE%E8%B7%AF%E6%A1%88%E4%BE%8B.md)
@@ -53,8 +53,8 @@
 本文引用和解释时遵循当前项目的真源顺序：
 
 1. `docs/tmv-whitepaper.md`
-2. `project.md`
-3. `tricompany.md`
+2. `../../../project.md`
+3. `../../../tricompany.md`
 4. `docs/三元宇宙架构与模块说明.md`
 5. `docs/workflow/tricompany-agent-roles.md` 与相关 workflow 真源
 6. `docs/registry/*.md`

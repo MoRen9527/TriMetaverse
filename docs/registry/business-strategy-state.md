@@ -14,11 +14,11 @@ TriMetaverse 的长期商业模式主线保持为：
 
 `内容入口 -> 参与转化 -> 服务变现 -> 生态回流`
 
-这条主线以 `docs/tmv-whitepaper.md` 和 `tricompany.md` 为真源，不在本文件内重新定义白皮书级概念。
+这条主线以 `docs/tmv-whitepaper.md` 和 `../tricompany.md` 为真源，不在本文件内重新定义白皮书级概念。
 
 ## 当前默认经营实验
 
-在没有新的人工确认前，当前默认经营实验采用 `tricompany.md` 中离收入最近的方向 A：
+在没有新的人工确认前，当前默认经营实验采用 `../tricompany.md` 中离收入最近的方向 A：
 
 - `AI 内容运营与增长微服务`
 

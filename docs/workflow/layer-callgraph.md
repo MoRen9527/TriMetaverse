@@ -31,7 +31,7 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-  P[project.md<br/>10阶段流程定义] --> S[workflow-engine-spec.md]
+  P[../project.md<br/>10阶段流程定义] --> S[workflow-engine-spec.md]
   R[workflow/README.md<br/>资产入口] --> S
   R --> C[workflow-engine-config.yaml]
   R --> RB[workflow-runbook.md]

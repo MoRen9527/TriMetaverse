@@ -1,24 +1,43 @@
-﻿# TriMetaverse Project Workflow（TriMC 运行面版）
+# TriMetaverse Project Workflow
 
-版本：v0.1
+版本：v1.0
 
-日期：2026-03-03
+日期：2026-09-11
 
-目标：以 TriMetaverse 为实验场，完成一整套基于 Copilot + VS Code 的自动化工程交付流程。
+- sourceOfTruth: 本文件（TriMetaverse 项目流程书，LG-034 B2 批换代版）
+- syncMode: manual-governed（裁决面人工明示门；事实回填走 fade 自动链+commit 留痕）
+- lastSyncedAt: 2026-09-11
+
+目标：以 TriMetaverse 为实验场，完成一整套 AI 原生的自动化工程交付流程。
+
+## 修订说明（2026-09-11，LG-034 B2 批换代）
+
+本版按 2026-08-21 三元宇宙架构重定义与 LG-034 组审基线整体换代（非逐句补丁）；退役口径逐条带新口径出处：
+
+| 退役口径 | 新口径 | 出处 |
+| --- | --- | --- |
+| 「TriMC 统一运行面」 | 服务域=`TriMMC`+`TriRMC`（M/R 双面），本地域=`TriMLC`+`TriRLC` | `docs/三元宇宙架构与模块说明.md` §2/§4 |
+| 「copilot chat shadow/正式接管」「`TriMetaverse V1 正式上线切换阶段`」 | 宿主切换叙事整体退役：M面=claude code runtime（实然·现役 write 面），R面=agent-core（应然·主开发中）；宿主切换仅 M面经 fade 渲染链 | LG-034 首件组审⑤（2026-09-11） |
+| 「`TriPilot → TriLC` 直连」「以 `TriLC` 为本地主入口」 | IDE 入口=`TriPilot`，CLI 入口=`trilc chat`，PC 端=`TriCade`（TriRLC 层） | 同上 |
+| 「`Tride` 不再作为切换后的正式宿主」 | `Tride` 已更名 `TriCode`（本地域 glue 层） | `TriMetaverse/CLAUDE.md` |
+| 本文件承载商业真源 | 商业真源=`docs/tmv-whitepaper.md`；本文件为项目流程书，不承载商业裁决 | LG-034 B2 组审（BS P1） |
+| 「未来 `ChiefProductOfficer` 上岗后转为由其主责」句式 | 现状事实句：归属路由现行由 `CEOChiefOfStaff` 组织，主责归属调整候定 | LG-034 B2 挂起项①（候 CEO 裁后追平） |
+
+`Development Main Controller` 等旧主控名保留为【历史】别名映射，不作现役标准名。
 
 ---
 
 ## 1. 总体原则
 
 - 全流程采用“主线阶段串行、PRD 分支并行或先后进行、分支内串行”的编排方式。
-- 由 `TriMC` 统一运行面推进 10 个阶段，具体执行采用主执行 Agent + 子 Agent 协作，而不再单列 `Development Main Controller`。
+- 10 个阶段由 M/R 双面主控体系推进：主控编排归 MC 层（M面 `TriMMC`/R面 `TriRMC`），本地执行生命周期编排归 `TriRLC` 本域；具体执行采用主执行 Agent + 子 Agent 协作，而不再单列 `Development Main Controller`【历史】。
 - 每阶段必须定义输入、输出、质量门禁、失败回流。
 - 主链与阶段产物命名统一以 `docs/workflow/terminology.md` 为准（单一词汇源）。
 - 文档执行“严格模式”：正式章节禁止使用非标准别名（仅术语表、变更记录、自检命令可出现历史别名）。
 - 对开发型产品项目，项目级十阶段默认作为 canonical 流程主线，由 `TriDev` 承接 phase engine、门禁推进、版本签发与分支执行承接；`TriCompany` 负责组织 CEO / 总助 / CMO / COO / CFO / CPO / CTO 等员工在各阶段参与、补齐资料、形成可签核的版本化 gate package。
 - 对涉及既有正式模块的事项，`DISCOVERY` 阶段必须先形成 `ModuleTargetingReport`，并由 `TriDev` 对命中模块执行 `ModuleReadinessInit`（标配审计与缺口 init）后，才进入后续开发阶段。
-- 对涉及新增正式模块的事项，`DISCOVERY` 阶段必须先形成 `NewModuleBaselineRelease`（模块标配单项发布）：明确模块归属、六件套骨架、CodeGraph 初始化与 `vendor-extraction-profile`；通过签核后由 `TriDev init` 执行模块初始化。
-- `INTELLIGENCE` 之后每个已审核 PRD 分支，统一通过其归属模块或归属项目的 `模块六层文档协同系统` 落地；在 docs bootstrap 前必须先拿到 PRD 归属路由结论，不得把当前工作区根仓默认当成 docs 落点。当前阶段该路由由 `CEOChiefOfStaff` 组织，未来 `ChiefProductOfficer` 正式上岗后转为由其主责模块设计与归属方案。十阶段负责流程推进和门禁，该系统负责承接分支真源、执行记录、状态回写、流程机制和培训导读。
+- 对涉及新增正式模块的事项，`DISCOVERY` 阶段必须先形成 `NewModuleBaselineRelease`（模块标配单项发布）：明确模块归属、标配件套骨架、CodeGraph 初始化与 `vendor-extraction-profile`；通过签核后由 `TriDev init` 执行模块初始化。
+- `INTELLIGENCE` 之后每个已审核 PRD 分支，统一通过其归属模块或归属项目的模块文档协同系统落地；在 docs bootstrap 前必须先拿到 PRD 归属路由结论，不得把当前工作区根仓默认当成 docs 落点。当前阶段该路由由 `CEOChiefOfStaff` 组织，主责归属调整候定。十阶段负责流程推进和门禁，该系统负责承接分支真源、执行记录、状态回写、流程机制和培训导读。
 - 支持两种执行形态：
   - 形态 A：主控 + 子 Agent 并行协作（推荐）
   - 形态 B：10 Agent 全自动流水执行（实验模式）
@@ -26,16 +45,18 @@
 ### 1.1 提交前术语自检建议命令
 
 - 检查历史别名是否残留：`rg "产品实施文档|实施产物|产品实现文档" .`
-- 检查主链关键产物名是否齐全：`rg "产品实施总结|单元测试报告|集成测试报告|红队扫描报告|QA报告|部署手册|Assurance报告|交付验收报告" docs/workflow project.md docs/tmv-whitepaper.md`
+- 检查主链关键产物名是否齐全：`rg "产品实施总结|单元测试报告|集成测试报告|红队扫描报告|QA报告|部署手册|Assurance报告|交付验收报告" docs/workflow docs/project.md docs/tmv-whitepaper.md`
 - 术语权威源核对：`docs/workflow/terminology.md`
 - PR 快速入口：`docs/workflow/pr-description-waterfall-alignment.md`（优先使用文件顶部“最终直接使用版（推荐）”）
 
 ### 1.2 宿主边界说明
 
-- 研发工作流属于 `TriMC` 统一运行面中的研发执行切片，不再单列 `Development Main Controller` 标准名。
-- 当前阶段由 `copilot chat` 承载 shadow 与当前阶段正式接管，必要时可扩到 `copilot cli`。
-- 到 `TriMetaverse V1 正式上线切换阶段`：本地人机协作（编码/办公/视频）通过 `TriPilot → TriLC` 直连承载；托管无人值守工作流通过 `TriMC` 云端承载；`TriLC` 崩溃时由 TWF-001 任务树恢复机制自动切换至 `TriMC` fallback。
-- `Tride` 不再作为切换后的正式宿主；它与 `TriPilot`、`vscodium` 和 CLI 工具一起构成 PC 端软件层。该层以 `TriLC` 为本地主入口，配合 `TriLC` 承接人机协作类任务；`TriMC` 仅在 `TriLC` 不可用时作为云端 fallback 接续。
+- 研发工作流是 M/R 双面体系中的研发执行切片，不再单列 `Development Main Controller`【历史】。
+- runtime 基线：M面=claude code runtime（实然·现役 write 面）；R面=agent-core，与 `TriRLC` 共用的自研内核（应然·主开发中）。
+- 服务域=`TriMMC`（元虚拟主控，M面）+`TriRMC`（元现实主控，R面）；本地域=`TriMLC`+`TriRLC`。
+- `TriModel`=Provider/Model 统一配置层，不承载宿主切换语义；宿主切换仅发生在 M面，经 fade 标准真源发布渲染链落项目根 `.github/`/`.claude/`。
+- PC 端=`TriCade`（TriRLC 层本地自动化+编码工具）；IDE 入口=`TriPilot`，CLI 入口=`trilc chat`。
+- TWF-001 任务树恢复机制保留：触发与恢复语义以 `docs/三元宇宙架构与模块说明.md` 为活文档锚；原「崩溃自动切换云端 fallback」表述随宿主切换叙事退役，本文件不再固化其触发细节。
 
 ---
 
@@ -50,7 +71,7 @@
 - 管理中断、回滚、重试、恢复
 - 汇总阶段结果并产出全局报告
 
-当前运行模式：在当前阶段由 `copilot chat` 承载研发工作流语义，必要时可扩到 `copilot cli`；到 `TriMetaverse V1 正式上线切换阶段`，通过 `TriModel` 把同一套输出契约接入以 `TriMC` 为核心的正式运行面。当前无需新增独立主控进程。
+当前运行模式：M面=claude code runtime 承载研发工作流会话语义（实然·现役 write 面）；R面=agent-core 主控适配（应然·主开发中）。主控编排归 MC 层，本地执行生命周期编排归 `TriRLC` 本域。当前无需新增独立主控进程。
 
 ### 2.2 Phase Agents（阶段执行体）
 
@@ -127,22 +148,23 @@
 - 只回流失败分支，不阻塞已通过分支。
 - 当全部 PRD 分支通过 `ASSURANCE` 后，统一进入 `DELIVERY` 聚合交付。
 
-### 分叉承接规则（模块六层文档协同系统）
+### 分叉承接规则（模块文档协同系统）
 
-- `模块六层文档协同系统` 由 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/`、`docs/training/` 构成，是 PRD 分支进入 `DESIGNING` 之后的标准落地面。
-- 这套系统不是十阶段主线的替代品，而是十阶段在模块仓内的具体文档与执行实现面；两者关系应理解为“主线定义流程，六层系统承接流程产物”。
-- 在创建任何 PRD 分支的 docs bootstrap 前，必须先拿到该 PRD 的归属路由结论与目标落位仓：当前阶段由 `CEOChiefOfStaff` 组织路由到正确真源并形成结论；未来 `ChiefProductOfficer` 正式上岗后，由其主责模块设计、归属方案与目标落位定义。若描述的是既有模块能力，则落在对应模块根下，并在 `DISCOVERY` 先完成 `ModuleTargetingReport` 与 `ModuleReadinessInit`；若描述的是 TriMetaverse 自身项目级 / 中央层能力，才允许落在 `TriMetaverse/docs/`；若描述的是尚未存在的新模块，则应在 `DISCOVERY` 先完成 `NewModuleBaselineRelease` 签核并由 `TriDev init` 落下骨架，再进入分支 docs bootstrap。
+- 分支 docs bootstrap 的承接标准以 `../TriCompany/docs/registry/company-governance-state.md` 模块标配节（模块 docs 标准件套）为现行规范真源；本节仅保留流程视角的承接关系与推导链，件套明细不在此重述。
+- 这套系统不是十阶段主线的替代品，而是十阶段在模块仓内的具体文档与执行实现面；两者关系应理解为“主线定义流程，模块文档协同系统承接流程产物”。
+- 在创建任何 PRD 分支的 docs bootstrap 前，必须先拿到该 PRD 的归属路由结论与目标落位仓：当前阶段由 `CEOChiefOfStaff` 组织路由到正确真源并形成结论，主责归属调整候定。若描述的是既有模块能力，则落在对应模块根下，并在 `DISCOVERY` 先完成 `ModuleTargetingReport` 与 `ModuleReadinessInit`；若描述的是 TriMetaverse 自身项目级 / 中央层能力，才允许落在 `TriMetaverse/docs/`；若描述的是尚未存在的新模块，则应在 `DISCOVERY` 先完成 `NewModuleBaselineRelease` 签核并由 `TriDev init` 落下骨架，再进入分支 docs bootstrap。
 - 如涉及新的长期主模块、既有模块边界变化或中央层范围争议，当前阶段总助应先询问 `BusinessStrategy` 做范围裁决，再继续形成落位结论。
-- 若尚未形成总助路由结论，或未来尚未形成 `ChiefProductOfficer` 的模块设计 / 归属结论，则分支初始化必须阻断，不能因为当前打开的是某个工作区根仓就默认把样板建在该仓的 `docs/` 下。
-- 对接关系如下：
-  - `docs/product/`：承接该 PRD 分支的范围、需求、原型映射、产品路线和产品状态。
-  - `docs/engineering/`：承接 `DESIGNING` 阶段的 Spec、技术方案、技术路线和技术状态，并为 `CODING` 提供直接输入。
+- 若尚未形成路由结论，分支初始化必须阻断，不能因为当前打开的是某个工作区根仓就默认把样板建在该仓的 `docs/` 下。
+- 流程视角的对接关系如下（件套标准以 governance-state 模块标配节为准）：
+  - 产品面文档：承接该 PRD 分支的范围、需求、原型映射、产品路线和产品状态。
+  - 工程面文档：承接 `DESIGNING` 阶段的 Spec、技术方案、技术路线和技术状态，并为 `CODING` 提供直接输入。
   - `docs/execution/<prd-or-workstream>/<phase>/`：承接分支执行证据；标准 `phase` 应与主线保持一致，优先使用 `designing`、`coding`、`verify-integration`、`redteam`、`qa`、`deployment`、`assurance`。
   - `docs/registry/`：承接分支稳定结论对模块 business / product / code 状态的回写。
   - `docs/workflow/`：承接分支所需的 handoff、rollout、迁移、编排和治理机制。
   - `docs/training/`：承接岗位、模块、代码和流程导读，确保新成员和新人 agent 能按真源学习。
+- 文档推导链（CPO 推导链，保留）：白皮书 → PRD → 产品真源 → engineering → execution → testing；与 governance-state 模块标配节件套兼容。
 - 优化要求如下：
-  - PRD 一经审核通过并拿到当前阶段 `CEOChiefOfStaff` 的路由结论，或未来拿到 `ChiefProductOfficer` 的模块设计 / 归属结论，就应在目标落位点同步创建或更新这六层入口，避免分支推进后产物继续散落在聊天、临时文件或单独脚本里。
+  - PRD 一经审核通过并拿到当前阶段 `CEOChiefOfStaff` 的路由结论（主责归属调整候定），就应在目标落位点同步创建或更新对应入口，避免分支推进后产物继续散落在聊天、临时文件或单独脚本里。
   - `DESIGNING` 完成门禁前，至少应形成 `docs/engineering/DESIGN.md` 和对应执行层计划入口；否则不应进入 `CODING`。
   - `VERIFY-INTEGRATION` 及其后的阶段除产出测试、发布和保障结果外，还应同步更新产品 / 技术状态与 registry 收口，避免“执行已经发生，但模块真源没有跟上”。
 
@@ -223,7 +245,7 @@
 - 发布说明
 - 用户手册
 - 生产环境部署文档（含部署手册）
-- CI/CD 配置（GitHub Actions / GitLab CI / Jenkins / Azure DevOps / Bitbucket）
+- CI/CD 配置（现役=GitHub Actions，可扩展至其他 CI 平台）
 - Dockerfile / docker-compose
 - Kubernetes manifests（deployment / service / ingress / configmap / secret）
 
@@ -311,11 +333,13 @@
 
 ## 7. TriMetaverse 实验范围
 
-本实验重点：
+本实验重点（按 `docs/tmv-whitepaper.md` §3.1 当前实验口径重述，实然/应然不混写）：
 
-1. 建立可复用的主控编排方法
-2. 沉淀 Copilot + VS Code 自动化工具配置
+1. 建立可复用的主控编排方法（M面 claude code runtime 现役验证，实然；R面 agent-core 为主控演进目标，应然·主开发中）
+2. 沉淀 AI 原生自动化工具配置（IDE 入口=`TriPilot`，CLI 入口=`trilc chat`，PC 端=`TriCade`）
 3. 验证“从需求到交付再到专项测试”的全链路可执行性
+
+商业真源指针：总商业模式、模块边界与宿主基线以 `docs/tmv-whitepaper.md` 为唯一商业真源；本文件为项目流程书，不承载商业裁决。
 
 阶段目标：先在 TriMetaverse 跑通，再按模板复制到其他仓库。
 
@@ -341,3 +365,15 @@
 - `docs/workflow/workflow-runbook.md`
 
 建议：运行前先复制 `workflow-engine-config.example.yaml` 为本地 `workflow-engine-config.yaml`，再按 runbook 执行。
+
+---
+
+## 10. 信息源优先级
+
+1. `docs/tmv-whitepaper.md`（总商业模式真源）
+2. `docs/三元宇宙架构与模块说明.md`（架构与模块边界依据）
+3. `CLAUDE.md`（宿主随附渲染产物；变更走 fade 窗+CompanyGovernanceRegistry 登记，员工检查更新）
+4. `AGENTS.md`
+5. `docs/tricompany.md`（TriCompany 中央摘要）
+6. `docs/workflow/terminology.md`（术语单一词汇源）
+7. `docs/workflow/tricompany-agent-roles.md` 与各模块本地 `docs/registry/`、`AGENTS.md`、`README.md`

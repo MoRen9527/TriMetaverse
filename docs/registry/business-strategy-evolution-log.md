@@ -18,7 +18,7 @@
 
 ### 当前默认经营实验
 
-- 默认采用 `tricompany.md` 中离收入最近的方向 A 作为首轮试点
+- 默认采用 `../tricompany.md` 中离收入最近的方向 A 作为首轮试点
 - 首轮重点模块为 `TriMetaverse`、`Tristaciss`、`Tride`、`Tripilot`、`Triavatar`、`Trideployment`、`TriTest`
 
 ### 当前特殊约束
@@ -71,7 +71,7 @@
 
 - CEO 直接决策（2026-07-17 会话）；TWF-002 任务树承载执行。
 - `docs/三元宇宙架构与模块说明.md`（已更新）
-- `project.md` §1.2（已更新）
+- `../project.md` §1.2（已更新）
 - `docs/registry/business-strategy-boundaries.md`（本日更新）
 - `docs/registry/business-strategy-state.md`（本日更新）
 

@@ -25,7 +25,7 @@ TriCompany 培训最怕的不是内容不够多，而是“讲得很顺，但不
 | support payload | `TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-specs.json` | 总助当前 page spec 样板 |
 | live entry | `TriMetaverse/.github/agents/ceo-chief-of-staff.agent.md` | 当前宿主真正生效的总助入口 |
 | governance | `docs/workflow/tricompany-copilot-host-assets-governance.md` | 说明 source / support / live / central 四层治理边界 |
-| central product truth | `tricompany.md` | 说明为什么需要 TriCompany、当前阶段目标与宿主边界 |
+| central product truth | `../../tricompany.md` | 说明为什么需要 TriCompany、当前阶段目标与宿主边界 |
 
 ## 3. 阅读这些工件时的四条规则
 

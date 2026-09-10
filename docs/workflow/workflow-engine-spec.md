@@ -22,15 +22,15 @@
 - 2026-04-26：首次补充 PRD 归属路由 gate，避免执行者自行拍板或把当前仓根 docs 误当成默认落点；该规则已在 2026-05-20 按当前 live 上岗状态收敛为 `ChiefProductOfficer` 主责、`CEOChiefOfStaff` 做公司级协调。
 - 2026-05-20：根据当前 live 上岗状态，将 PRD 产品归属判断切换为 `ChiefProductOfficer` 主责；`CEOChiefOfStaff` 退回公司级任务分派、催办、升级与收口。
 - 2026-04-26：补充 `branchId` 的通用语义，明确 skill、schedule、宿主试运行等对象中的 `branchId` 不默认等同于 PRD 分支，避免误把所有 branch-aware 对象都纳入 PRD docs bootstrap 规则。
-- 影响范围：`project.md`、`docs/workflow/project-repo-document-baseline.md`、`docs/workflow/phase-io-matrix.md`、`docs/workflow/review-release-chain.md`、本规范文档、`docs/workflow/workflow-runbook.md`。
+- 影响范围：`../project.md`、`docs/workflow/project-repo-document-baseline.md`、`docs/workflow/phase-io-matrix.md`、`docs/workflow/review-release-chain.md`、本规范文档、`docs/workflow/workflow-runbook.md`。
 - 变更目的：确保 PRD 分支的真源、执行证据、状态回写与流程机制有统一落位，不再散落在临时记录中。
 - 2026-03-04：将 CODING 阶段主产物标准名统一为“产品实施总结”。
-- 影响范围：`project.md`、`docs/tmv-whitepaper.md`、`docs/workflow/review-release-chain.md`、`docs/workflow/phase-io-matrix.md`、本规范文档。
+- 影响范围：`../project.md`、`docs/tmv-whitepaper.md`、`docs/workflow/review-release-chain.md`、`docs/workflow/phase-io-matrix.md`、本规范文档。
 - 变更目的：消除同义词漂移，确保主因果链与阶段输出命名一致，提升门禁审计可追溯性。
 
 ## 1. 目标
 
-将 `project.md` 中定义的 10 阶段流程变为可执行编排规范，确保：
+将 `../project.md` 中定义的 10 阶段流程变为可执行编排规范，确保：
 
 - 阶段顺序可控（串行）
 - 阶段内任务可并行（子 Agent）

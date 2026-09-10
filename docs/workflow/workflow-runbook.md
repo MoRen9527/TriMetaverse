@@ -22,17 +22,17 @@
 - 2026-04-26：将 PRD 分支的标准文档落地系统正式命名为“模块六层文档协同系统”，并要求运行前校验最小 docs 初始化。
 - 2026-04-26：补充 PRD 归属路由 gate，要求在建立最小 docs 入口前当前先询问 `CEOChiefOfStaff`，未来由 `ChiefProductOfficer` 主责模块设计与归属方案。
 - 2026-05-20：根据当前 live 上岗状态，把 `PRD_OWNERSHIP_ROUTING` 的产品归属判断切换为 `ChiefProductOfficer` 主责；`CEOChiefOfStaff` 退回公司级任务分派、催办、升级与收口。
-- 影响范围：`project.md`、`docs/workflow/project-repo-document-baseline.md`、`docs/workflow/phase-io-matrix.md`、`docs/workflow/review-release-chain.md`、`docs/workflow/workflow-engine-spec.md`、本运行手册。
+- 影响范围：`../project.md`、`docs/workflow/project-repo-document-baseline.md`、`docs/workflow/phase-io-matrix.md`、`docs/workflow/review-release-chain.md`、`docs/workflow/workflow-engine-spec.md`、本运行手册。
 - 变更目的：把 PRD 分支初始化要求从口头约定升级为运行前检查与执行步骤的一部分。
 - 2026-03-04：将 CODING 阶段主产物标准名统一为“产品实施总结”。
-- 影响范围：`project.md`、`docs/tmv-whitepaper.md`、`docs/workflow/review-release-chain.md`、`docs/workflow/phase-io-matrix.md`、`docs/workflow/workflow-engine-spec.md`、本运行手册。
+- 影响范围：`../project.md`、`docs/tmv-whitepaper.md`、`docs/workflow/review-release-chain.md`、`docs/workflow/phase-io-matrix.md`、`docs/workflow/workflow-engine-spec.md`、本运行手册。
 - 变更目的：消除同义词漂移，确保主因果链与阶段输出命名一致，提升执行审计可追溯性。
 
 ## 1. 运行前检查
 
 - `docs/tmv-whitepaper.md` 存在
 - `docs/prd/` 已初始化
-- `project.md` 与 `workflow-engine-config.yaml` 一致
+- `../project.md` 与 `workflow-engine-config.yaml` 一致
 - 门禁规则文件可解析
 - 每个待执行 PRD 已拿到当前阶段 `ChiefProductOfficer` 的模块设计 / 归属结论，并已确认目标落位仓与目标 `docs/` 根
 - 若存在待执行 PRD 分支，则对应模块的 `模块六层文档协同系统` 最小入口已建立
@@ -47,7 +47,7 @@
 ### 1.2 自动检查建议命令（文档自检）
 
 - 检查历史别名是否作为正式产物名残留：`rg "产品实施文档|实施产物|产品实现文档" .`
-- 检查主链关键产物名是否存在：`rg "产品实施总结|单元测试报告|集成测试报告|红队扫描报告|QA报告|部署手册|Assurance报告|交付验收报告" docs/workflow project.md docs/tmv-whitepaper.md`
+- 检查主链关键产物名是否存在：`rg "产品实施总结|单元测试报告|集成测试报告|红队扫描报告|QA报告|部署手册|Assurance报告|交付验收报告" docs/workflow docs/project.md docs/tmv-whitepaper.md`
 - 提交前建议核对术语源：`docs/workflow/terminology.md`
 
 ## 2. 标准运行步骤

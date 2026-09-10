@@ -121,7 +121,7 @@
 
 ## 8. 关联文档
 
-- `tricompany.md`
+- `../tricompany.md`
 - `tricompany-agent-roles.md`
 - `tricompany-operating-workflow.md`
 - `operating-records/README.md`

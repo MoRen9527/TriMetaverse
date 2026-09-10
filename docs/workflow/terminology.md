@@ -109,7 +109,7 @@
 - 2026-05-28：模块文档基线从“模块五层文档协同系统”升级为“模块六层文档协同系统”，补入 `docs/training/` 作为正式同级子域。
 - 2026-04-26：将 `docs/product/`、`docs/engineering/`、`docs/execution/`、`docs/registry/`、`docs/workflow/` 的默认结构正式命名为“模块五层文档协同系统”，并明确其为 `INTELLIGENCE` 后 PRD 分支的标准落地面。
 - 2026-03-04：CODING 阶段主产物标准名统一为“产品实施总结”（兼容历史阶段名 IMPLEMENT）。
-- 2026-03-04：主链产物命名在 `project.md`、`docs/tmv-whitepaper.md`、`phase-io-matrix.md`、`review-release-chain.md`、`workflow-engine-spec.md`、`workflow-runbook.md` 完成对齐。
+- 2026-03-04：主链产物命名在 `../project.md`、`docs/tmv-whitepaper.md`、`phase-io-matrix.md`、`review-release-chain.md`、`workflow-engine-spec.md`、`workflow-runbook.md` 完成对齐。
 - 2026-04-09：研发主流程主控标准名统一为 `Development Main Controller`，替代 `Workflow Main Controller`。
 - 2026-04-09：服务域任务主控标准名统一为 `Task Main Controller`，替代在该语境下的 `Main Controller` / `TaskController`。
 - 2026-04-09：赛博公司自治主控标准名统一为 `Autonomy Main Controller`，替代该语境下的 `orchestrator`。

@@ -14,7 +14,7 @@
 
 ## 1. 文档定位
 
-本文是 [tricompany.md](../../tricompany.md) 的执行化补充，用于把 TriMetaverse 赛博公司的高层岗位转写为可被 Agent 实现、可被工作流编排、可被审计和可被替换的角色定义。
+本文是 [../tricompany.md](../tricompany.md) 的执行化补充，用于把 TriMetaverse 赛博公司的高层岗位转写为可被 Agent 实现、可被工作流编排、可被审计和可被替换的角色定义。
 
 本文关注的是“角色 contract”，不是最终 prompt，也不是最终技术实现。后续无论使用本地 Agent、服务端 Agent、人工参与节点，还是链上治理接口，都应优先遵守本文定义的职责边界、输入输出与升级规则。
 

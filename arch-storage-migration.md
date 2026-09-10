@@ -16,15 +16,15 @@
 
 - 文档层级：L3（工程架构层）。
 - 文档定位：本文件用于把白皮书、项目级真源与当前实验分支中的约束转译为可执行的工程架构、治理门禁与迁移路径。
-- Upstream（一级）：`docs/tmv-whitepaper.md`、`project.md`
-- Upstream（二级）：`tricompany.md`、`docs/三元宇宙架构与模块说明.md`、`docs/prd/PRD001基础平台.md`（历史实验首分支）
+- Upstream（一级）：`docs/tmv-whitepaper.md`、`docs/project.md`
+- Upstream（二级）：`docs/tricompany.md`、`docs/三元宇宙架构与模块说明.md`、`docs/prd/PRD001基础平台.md`（历史实验首分支）
 - Downstream：`tmv-phase-1-execution-plan.md`、`docs/testing/*`
 
 说明：本文件属于较早形成的架构迁移稿，当前按“白皮书 → 项目真源 → 架构迁移 → 实施计划 → 测试计划”的顺序维护。
 
 ## 术语对齐说明（2026-06-06 回填）
 
-- 本文正文保留了部分早期迁移阶段的表述；若与当前中央真源冲突，以 `project.md`、`tricompany.md`、`docs/三元宇宙架构与模块说明.md` 与 `docs/workflow/terminology.md` 为准。
+- 本文正文保留了部分早期迁移阶段的表述；若与当前中央真源冲突，以 `docs/project.md`、`docs/tricompany.md`、`docs/三元宇宙架构与模块说明.md` 与 `docs/workflow/terminology.md` 为准。
 - 文中的 `Orchestrator` 应优先理解为 `TriMC` 统一运行面中的服务域执行与控制语义，而不是继续作为独立 `Task Main Controller` 标准名使用。
 - 研发 10 阶段主流程在当前口径里由 `TriDev` 承接 phase engine，并运行在 `TriMC` 统一运行面约束之上；不再使用 `Development Main Controller` 作为标准名。
 - 公司经营与交互载体当前统一写为 `TriCompany` / 赛博公司，不再沿用 `virtual-company` 或其他历史别名。

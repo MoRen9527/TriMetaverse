@@ -8,7 +8,7 @@
 
 ## 1. 目标
 
-本文件把 `tricompany.md` 中的“公司自动运转流程”下沉为可执行的经营主工作流，用来回答三个问题：
+本文件把 `../tricompany.md` 中的“公司自动运转流程”下沉为可执行的经营主工作流，用来回答三个问题：
 
 当前文件保留 TriMetaverse 发布侧经营编排摘要职责：它描述的是中央视角下“经营主工作流如何与 registry、研发十阶段、宿主切换和发布侧执行约束衔接”，而不是赛博公司岗位制度、秘书处机制或单岗位职责的唯一源侧定义。岗位 owner 分工、秘书处规则和源侧角色边界仍以 TriCompany workflow 文档为准。
 
@@ -23,7 +23,7 @@
 本工作流以以下资产为真源和依赖：
 
 1. `BusinessStrategy`
-1. `tricompany.md`
+1. `../tricompany.md`
 1. `tricompany-agent-roles.md`
 1. `tricompany-handoff-objects.md`
 1. `tricompany-handoff-envelope.schema.json`
