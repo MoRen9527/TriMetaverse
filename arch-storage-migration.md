@@ -16,7 +16,7 @@
 
 - 文档层级：L3（工程架构层）。
 - 文档定位：本文件用于把白皮书、项目级真源与当前实验分支中的约束转译为可执行的工程架构、治理门禁与迁移路径。
-- Upstream（一级）：`tmv-whitepaper.md`、`project.md`
+- Upstream（一级）：`docs/tmv-whitepaper.md`、`project.md`
 - Upstream（二级）：`tricompany.md`、`docs/三元宇宙架构与模块说明.md`、`docs/prd/PRD001基础平台.md`（历史实验首分支）
 - Downstream：`tmv-phase-1-execution-plan.md`、`docs/testing/*`
 

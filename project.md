@@ -26,7 +26,7 @@
 ### 1.1 提交前术语自检建议命令
 
 - 检查历史别名是否残留：`rg "产品实施文档|实施产物|产品实现文档" .`
-- 检查主链关键产物名是否齐全：`rg "产品实施总结|单元测试报告|集成测试报告|红队扫描报告|QA报告|部署手册|Assurance报告|交付验收报告" docs/workflow project.md tmv-whitepaper.md`
+- 检查主链关键产物名是否齐全：`rg "产品实施总结|单元测试报告|集成测试报告|红队扫描报告|QA报告|部署手册|Assurance报告|交付验收报告" docs/workflow project.md docs/tmv-whitepaper.md`
 - 术语权威源核对：`docs/workflow/terminology.md`
 - PR 快速入口：`docs/workflow/pr-description-waterfall-alignment.md`（优先使用文件顶部“最终直接使用版（推荐）”）
 

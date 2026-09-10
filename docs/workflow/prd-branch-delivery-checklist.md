@@ -29,7 +29,7 @@
 
 ## 2. 运行前清单（研发工作流）
 
-- [ ] `tmv-whitepaper.md` 已定版或有可追溯变更记录。
+- [ ] `docs/tmv-whitepaper.md` 已定版或有可追溯变更记录。
 - [ ] `docs/prd/README.md` 已列出本轮 PRD 范围。
 - [ ] `workflow-engine-config.yaml` 已设置 `prdBranchPipeline.enable=true`。
 - [ ] 已定义 run-id：`docs/runs/<run-id>/`。

@@ -17,7 +17,7 @@
 
 - 状态：Draft
 - 负责人：TBD
-- 上游来源：`tmv-whitepaper.md#<章节>`
+- 上游来源：`docs/tmv-whitepaper.md#<章节>`
 
 ## 1. 目标与边界
 

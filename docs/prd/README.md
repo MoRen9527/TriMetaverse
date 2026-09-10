@@ -6,7 +6,7 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-06-04
 
-来源：`tmv-whitepaper.md`  
+来源：`docs/tmv-whitepaper.md`  
 状态：v0.2（渐进式 PRD 试验）
 
 当前文件是 TriMetaverse PRD 目录的本地索引真源，只负责登记白皮书衍生 PRD、使用规则和当前实验分支；它不是 TriCompany 公司级 workflow 书面真源。

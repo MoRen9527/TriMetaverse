@@ -372,7 +372,7 @@ weekly-plane shift [--from <week>] [--dry-run]
 
 - **关联资产**：
 
-  - 白皮书：`tmv-whitepaper.md`
+  - 白皮书：`docs/tmv-whitepaper.md`
 
   - 黄皮书：`docs/workflow/review-release-chain.md`
 

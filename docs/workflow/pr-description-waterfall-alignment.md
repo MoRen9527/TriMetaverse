@@ -89,7 +89,7 @@ Unify terminology and artifact causality chain across whitepaper, spec, runbook,
 ## 影响文件（核心）
 
 - `project.md`
-- `tmv-whitepaper.md`
+- `docs/tmv-whitepaper.md`
 - `docs/workflow/workflow-engine-spec.md`
 - `docs/workflow/workflow-runbook.md`
 - `docs/workflow/phase-io-matrix.md`

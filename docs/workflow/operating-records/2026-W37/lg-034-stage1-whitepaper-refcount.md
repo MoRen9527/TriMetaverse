@@ -125,3 +125,11 @@
 3. 渲染面 13+1 禁手改；source-agents [S] 件改写后必须走渲染链再生发布面，禁直改 .claude/.github。
 4. **范围外联动项如实报备**：席侧行为记忆「真源核查纪律」（白皮书在根指针）在迁移执行后须同步更新（CTO 席自领，执行窗一并）；两仓 json/yaml 面白皮书引用不在 **/*.md 口径内，如需一并收口请 COO 增补口径另批。
 5. 切片 1 靶标件（agent-body.agent.md）白皮书引用 L23/L42 已在切片 1 重写范围，迁移窗跳过防双重触碰（时序：切片 1 重写先行或同窗合并均可，跳过标记见 §三.A #27）。
+
+## 六、执行读数段（切片 2b，2026-09-11 00:4x+0800，CTO 小狄）
+
+- **步①git mv**：`tmv-whitepaper.md → docs/tmv-whitepaper.md`，commit `9ece66f9`（TMV dev，语义变更·真源位置变更独立留痕）。
+- **步②活体改写**：35/35 件完成（TMV 26 + TriCompany 9；#27/#28 按令跳过）。控字规则=相对深度感知（`../../tmv-whitepaper.md`→`../tmv-whitepaper.md` 仅 docs/ 二级深文件）+平引用→`docs/tmv-whitepaper.md`；两处定点补：CPO session-body L24 `TriMetaverse/tmv-whitepaper.md`（仓库根）→`TriMetaverse/docs/tmv-whitepaper.md`（docs/）；tmv-fade-reading-map L12 位置描述符「仓库根」→「docs/」。
+- **步③复验（行级分段）**：活体/真源类旧引用残留=**0**。预期类残留全数归类：渲染面 16 件/22 处（.claude/.github 系+output/xiaoke-isolate-support 渲染副本，候管线再生）；运行态快照系 3 件/4 处（.fade/hub-snapshots+hub/analysis，豁免）；历史冻结 11 件/19 处；#27/#28 各 1 件（切片 1 窗闭环）；资产系 2 件/5 处（copilot-host-assets，候再生——COS 两条件已入执行注记：历史条目冻结不改、件头边界声明与 wiki 通路维持）；**打包发行快照 45 件/72 处**（`output/TriMetaverse-Desktop-v*-r*-windows/trilc/contracts/`，gitignore 内主扫描未及、本次 python 全盘扫描补获——发行历史快照不手改，随未来构建自然携带新路径）。新路径 `docs/tmv-whitepaper` 引用面=37 件（35 改写件+refcount 自身+切片 1 在途件）。
+- **提交**：TMV 步②+本段=独立 commit；TriCompany 9 件=独立 commit（哈希见 commit 留痕）。
+- **范围外如实注记**：席侧记忆「白皮书在根」指针本席执行后自更新（随本段同批完成）。

@@ -19,7 +19,7 @@
 
 当前真源分工如下：
 
-1. 总商业模式、模块边界和正式宿主裁决：[tmv-whitepaper.md](tmv-whitepaper.md)、[project.md](project.md)、[docs/三元宇宙架构与模块说明.md](docs/三元宇宙架构与模块说明.md) 与中央 `BusinessStrategy`。
+1. 总商业模式、模块边界和正式宿主裁决：[docs/tmv-whitepaper.md](docs/tmv-whitepaper.md)、[project.md](project.md)、[docs/三元宇宙架构与模块说明.md](docs/三元宇宙架构与模块说明.md) 与中央 `BusinessStrategy`。
 2. TriCompany 公司宪章：[../TriCompany/tricompany.md](../TriCompany/tricompany.md)。
 3. 产品事实：[../TriCompany/docs/product/](../TriCompany/docs/product/) 与 [../TriCompany/docs/registry/product-state.md](../TriCompany/docs/registry/product-state.md)，经营 owner 为 CPO 小乔。
 4. 技术事实：[../TriCompany/docs/engineering/](../TriCompany/docs/engineering/) 与 [../TriCompany/docs/registry/code-state.md](../TriCompany/docs/registry/code-state.md)，经营 owner 为 CTO 小狄。

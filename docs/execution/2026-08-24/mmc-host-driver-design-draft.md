@@ -341,7 +341,7 @@ experience/ 内容被任何会话（含未来 R 侧）消费时，适用 spec §
 | quad-migration-spec.md | v1.0，`TriMetaverse/docs/execution/2026-08-24/`（已签发） | 范围、红线、§八十条、§九桥梁 |
 | claude-code-spawn-resume-context-innovation-record.md | V1.0.1，`TriCompany/docs/engineering/` | §2.1-2.2 全部宿主机制结论 |
 | command-handler.ts / week-math.ts | `D:/Code/ai/TriMC/src/cron/`（现役源码，本日实读） | §1.4 肌肉记忆、§5.3 窗口判断 |
-| tmv-whitepaper.md | v1.0（修订 1+1a+1b），§3.1 L114-129、附录 B L1201-1206 | 元虚拟层定义、FADE/TriMMC 词条 |
+| docs/tmv-whitepaper.md | v1.0（修订 1+1a+1b），§3.1 L114-129、附录 B L1201-1206 | 元虚拟层定义、FADE/TriMMC 词条 |
 | company-governance-state.md | as-of 2026-08-24，`TriCompany/docs/registry/` | execute 默认策略、alias 真源表 |
 | quadmig-1 tree-op.json + W35 `.shift-ade.json` | `docs/workflow/operating-records/2026-W35/` | 验收口径、五段实样 |
 | source-agents/chief-technology-officer/ 目录结构 | `TriCompany/source-agents/`（本日 Glob 实证） | §3.1 五件套实态 |

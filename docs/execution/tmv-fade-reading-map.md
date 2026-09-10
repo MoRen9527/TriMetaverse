@@ -9,7 +9,7 @@ sourceOfTruth: TriMetaverse/docs/execution/tmv-fade-reading-map.md ｜ syncMode:
 三元宇宙知识体系
 │
 ├─ ① 理念层：三元宇宙是什么（读 3 篇，约 40 分钟）
-│   ├─ ★ tmv-whitepaper.md v1.0〔已签发 2026-08-22，仓库根，1358 行〕
+│   ├─ ★ docs/tmv-whitepaper.md v1.0〔已签发 2026-08-22，docs/，1358 行〕
 │   │     总纲。重点三节：§3.1 三层模型（双层表述：最小实现实例对+能力域，2026-08-22 重定义核心）
 │   │     → 图 3-2 价值流转（:253，六步闭环：任务→执行→评估→奖励，AI/元宇宙/区块链三组成）
 │   │     → §8.1 四层推进（L0-L3，含新模块名）

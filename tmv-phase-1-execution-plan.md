@@ -5,7 +5,7 @@
 - 文档层级：L4（执行层）
 - 文档定位：本文件用于承接架构迁移文档，形成阶段化执行、资源配置、成本与里程碑计划。
 - Upstream（一级）：`arch-storage-migration.md`
-- Upstream（根源）：`tmv-whitepaper.md`
+- Upstream（根源）：`docs/tmv-whitepaper.md`
 - Downstream：`docs/testing/*`、发布与验收记录
 
 说明：本文件按上游白皮书与架构迁移文档约束持续修订。

@@ -25,7 +25,7 @@
 - 影响范围：`project.md`、`docs/workflow/project-repo-document-baseline.md`、`docs/workflow/phase-io-matrix.md`、`docs/workflow/review-release-chain.md`、本规范文档、`docs/workflow/workflow-runbook.md`。
 - 变更目的：确保 PRD 分支的真源、执行证据、状态回写与流程机制有统一落位，不再散落在临时记录中。
 - 2026-03-04：将 CODING 阶段主产物标准名统一为“产品实施总结”。
-- 影响范围：`project.md`、`tmv-whitepaper.md`、`docs/workflow/review-release-chain.md`、`docs/workflow/phase-io-matrix.md`、本规范文档。
+- 影响范围：`project.md`、`docs/tmv-whitepaper.md`、`docs/workflow/review-release-chain.md`、`docs/workflow/phase-io-matrix.md`、本规范文档。
 - 变更目的：消除同义词漂移，确保主因果链与阶段输出命名一致，提升门禁审计可追溯性。
 
 ## 1. 目标

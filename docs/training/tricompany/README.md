@@ -52,7 +52,7 @@
 
 本文引用和解释时遵循当前项目的真源顺序：
 
-1. `tmv-whitepaper.md`
+1. `docs/tmv-whitepaper.md`
 2. `project.md`
 3. `tricompany.md`
 4. `docs/三元宇宙架构与模块说明.md`

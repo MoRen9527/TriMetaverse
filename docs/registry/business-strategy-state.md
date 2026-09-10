@@ -14,7 +14,7 @@ TriMetaverse 的长期商业模式主线保持为：
 
 `内容入口 -> 参与转化 -> 服务变现 -> 生态回流`
 
-这条主线以 `tmv-whitepaper.md` 和 `tricompany.md` 为真源，不在本文件内重新定义白皮书级概念。
+这条主线以 `docs/tmv-whitepaper.md` 和 `tricompany.md` 为真源，不在本文件内重新定义白皮书级概念。
 
 ## 当前默认经营实验
 
@@ -71,7 +71,7 @@ TriMetaverse 的长期商业模式主线保持为：
 
 ## Sources
 
-- `../../tmv-whitepaper.md`
+- `../tmv-whitepaper.md`
 - `../../tricompany.md`
 - `../../project.md`
 - `../workflow/tricompany-agent-roles.md`
