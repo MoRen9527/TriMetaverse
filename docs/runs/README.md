@@ -4,7 +4,9 @@
 
 - sourceOfTruth: TriMetaverse/docs/runs/README.md
 - syncMode: source-only
-- lastSyncedAt: 2026-06-04
+- lastSyncedAt: 2026-09-11（归档注记：runs 不立存量冻结，LG-034 八件套标准）
+
+> **归档注记（2026-09-11，LG-034 八件套标准·CEO 批准令②）**：模块 `docs/` 标准件套不设 `runs/` 件（runs 不立）。本目录存量（本 README+run-R01..R04+run-2026-04-cycle-01）按**历史冻结归档**处置：原位冻结保留，不改写/不删移/不迁移；本目录**不再新增**任何 run 记录。§5 `phaseResultRef` 引用规则仅对存量继续有效；新增执行记录落 `docs/execution/` 证据面或公司级经营记录面。以下正文保留作存量规范档案。
 
 ## 1. 目标
 
