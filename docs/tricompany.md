@@ -53,7 +53,7 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 
 - 公司宪章：V1.0，2026-08-01 生效。
 - 当前经营阶段：`ceo-copilot-host-coordination`（登记名沿用；语义=CEO 直连+常驻中枢协调阶段）。
-- 当前宿主：M面 claude code runtime（实然·现役）。宿主 write master 现状：本节与 §6.2 两处口径不一致已标，孰真候 CEO 裁定（LG-034 B2 挂起项②），本批只标记不改判。
+- 当前宿主：M面 claude code runtime（实然·现役）。文档真源=TriCompany 源侧（source-agents/project-sources），两宿主位（`.claude/agents` 主力运行位、`.github/agents` 入口位）均为发布拷贝；「宿主 write master」旧概念退役（LG-034 B2-R2，经 CEO 2026-09-11 晨报裁定追平）。「Copilot-host live ≠ 正式宿主切换」边界声明语义保留。
 - 当前项目：源侧宪章登记为 TriMetaverse 主项目与 TriCade 桌面产品。
 - 当前 MVP 运行主链：`TriMMC -> TriModel -> TriStaciss -> Provider`（最简口径（简化），全链终述候 CEO——挂起项）。
 - TriCompany 在该 MVP 中属于公司治理、员工参与和交付核签层，不是模型调用业务流量的核心转发节点。
@@ -163,7 +163,7 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 | 元认知 runtime | 可回归原型 | kernel、providers、多层 validation、live smoke | production 稳定性与正式 provider 契约 |
 | IPD 公司参与层 | 部分自动化 | 十阶段 case line、sign-off、autopilot | PRD 分叉、多分支聚合、完整岗位 adapter |
 | 秘书处与经营记录 | 当前可运行 | 会议 prompt、workflow、operating records | 制度成熟度和自动化追踪 |
-| R面 agent-core 主控适配 | 应然·主开发中 | contract resolver 与迁移 gate 设计 | 稳定性验证、回退、write-master gates |
+| R面 agent-core 主控适配 | 应然·主开发中 | contract resolver 与迁移 gate 设计 | 稳定性验证、回退、并发写入安全与生产部署 gates |
 
 ## 8. 当前公司级执行链
 
@@ -195,6 +195,8 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 - **2026-09-11 LG-034 第二批退役**：上一行自身「运行面统一使用 TriMC」口径，连同「TriMC 统一运行面」「Copilot-host shadow/正式接管」「`TriMetaverse V1 正式上线切换阶段`」「`TriPilot → TriLC` 直连」「Tride=切换后正式宿主候选」等宿主切换叙事一并退役；现行口径见 §2/§3 与 `docs/三元宇宙架构与模块说明.md`（M/R 双面基线；宿主切换仅 M面经 fade 渲染链）。
 
 ## 10. 下一步
+
+> **时点注记（LG-034-B2 追加，2026-09-11）**：本节系 2026-08-07 中央追平时点的待办快照。动态进度真源=`docs/workflow/operating-records/` 当前周（COS 收口域）与 registry state，本节不承载周度进度；各项现势性由对应 owner 在下一次追平时复核刷新。
 
 ### CPO 小乔
 

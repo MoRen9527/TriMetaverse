@@ -21,7 +21,7 @@
 | 「`TriPilot → TriLC` 直连」「以 `TriLC` 为本地主入口」 | IDE 入口=`TriPilot`，CLI 入口=`trilc chat`，PC 端=`TriCade`（TriRLC 层） | 同上 |
 | 「`Tride` 不再作为切换后的正式宿主」 | `Tride` 已更名 `TriCode`（本地域 glue 层） | `TriMetaverse/CLAUDE.md` |
 | 本文件承载商业真源 | 商业真源=`docs/tmv-whitepaper.md`；本文件为项目流程书，不承载商业裁决 | LG-034 B2 组审（BS P1） |
-| 「未来 `ChiefProductOfficer` 上岗后转为由其主责」句式 | 现状事实句：归属路由现行由 `CEOChiefOfStaff` 组织，主责归属调整候定 | LG-034 B2 挂起项①（候 CEO 裁后追平） |
+| 「未来 `ChiefProductOfficer` 上岗后转为由其主责」句式 | 现状事实句：CPO 已上岗（2026-08-01 宪章 V1.0 名册），产品域收口职责经 CEO 2026-09-11 裁按授权矩阵程序落格 | LG-034 B2 挂起项①（CEO 09-11 晨报裁后追平） |
 
 `Development Main Controller` 等旧主控名保留为【历史】别名映射，不作现役标准名。
 
@@ -37,7 +37,7 @@
 - 对开发型产品项目，项目级十阶段默认作为 canonical 流程主线，由 `TriDev` 承接 phase engine、门禁推进、版本签发与分支执行承接；`TriCompany` 负责组织 CEO / 总助 / CMO / COO / CFO / CPO / CTO 等员工在各阶段参与、补齐资料、形成可签核的版本化 gate package。
 - 对涉及既有正式模块的事项，`DISCOVERY` 阶段必须先形成 `ModuleTargetingReport`，并由 `TriDev` 对命中模块执行 `ModuleReadinessInit`（标配审计与缺口 init）后，才进入后续开发阶段。
 - 对涉及新增正式模块的事项，`DISCOVERY` 阶段必须先形成 `NewModuleBaselineRelease`（模块标配单项发布）：明确模块归属、标配件套骨架、CodeGraph 初始化与 `vendor-extraction-profile`；通过签核后由 `TriDev init` 执行模块初始化。
-- `INTELLIGENCE` 之后每个已审核 PRD 分支，统一通过其归属模块或归属项目的模块文档协同系统落地；在 docs bootstrap 前必须先拿到 PRD 归属路由结论，不得把当前工作区根仓默认当成 docs 落点。当前阶段该路由由 `CEOChiefOfStaff` 组织，主责归属调整候定。十阶段负责流程推进和门禁，该系统负责承接分支真源、执行记录、状态回写、流程机制和培训导读。
+- `INTELLIGENCE` 之后每个已审核 PRD 分支，统一通过其归属模块或归属项目的模块文档协同系统落地；在 docs bootstrap 前必须先拿到 PRD 归属路由结论，不得把当前工作区根仓默认当成 docs 落点。当前阶段该路由由 `CEOChiefOfStaff` 组织；CPO 已上岗（2026-08-01 宪章 V1.0 名册），产品域收口职责经 CEO 2026-09-11 裁按授权矩阵程序落格。十阶段负责流程推进和门禁，该系统负责承接分支真源、执行记录、状态回写、流程机制和培训导读。
 - 支持两种执行形态：
   - 形态 A：主控 + 子 Agent 并行协作（推荐）
   - 形态 B：10 Agent 全自动流水执行（实验模式）
@@ -152,7 +152,7 @@
 
 - 分支 docs bootstrap 的承接标准以 `../TriCompany/docs/registry/company-governance-state.md` 模块标配节（模块 docs 标准件套）为现行规范真源；本节仅保留流程视角的承接关系与推导链，件套明细不在此重述。
 - 这套系统不是十阶段主线的替代品，而是十阶段在模块仓内的具体文档与执行实现面；两者关系应理解为“主线定义流程，模块文档协同系统承接流程产物”。
-- 在创建任何 PRD 分支的 docs bootstrap 前，必须先拿到该 PRD 的归属路由结论与目标落位仓：当前阶段由 `CEOChiefOfStaff` 组织路由到正确真源并形成结论，主责归属调整候定。若描述的是既有模块能力，则落在对应模块根下，并在 `DISCOVERY` 先完成 `ModuleTargetingReport` 与 `ModuleReadinessInit`；若描述的是 TriMetaverse 自身项目级 / 中央层能力，才允许落在 `TriMetaverse/docs/`；若描述的是尚未存在的新模块，则应在 `DISCOVERY` 先完成 `NewModuleBaselineRelease` 签核并由 `TriDev init` 落下骨架，再进入分支 docs bootstrap。
+- 在创建任何 PRD 分支的 docs bootstrap 前，必须先拿到该 PRD 的归属路由结论与目标落位仓：当前阶段由 `CEOChiefOfStaff` 组织路由到正确真源并形成结论；CPO 已上岗（2026-08-01 宪章 V1.0 名册），产品域收口职责经 CEO 2026-09-11 裁按授权矩阵程序落格。若描述的是既有模块能力，则落在对应模块根下，并在 `DISCOVERY` 先完成 `ModuleTargetingReport` 与 `ModuleReadinessInit`；若描述的是 TriMetaverse 自身项目级 / 中央层能力，才允许落在 `TriMetaverse/docs/`；若描述的是尚未存在的新模块，则应在 `DISCOVERY` 先完成 `NewModuleBaselineRelease` 签核并由 `TriDev init` 落下骨架，再进入分支 docs bootstrap。
 - 如涉及新的长期主模块、既有模块边界变化或中央层范围争议，当前阶段总助应先询问 `BusinessStrategy` 做范围裁决，再继续形成落位结论。
 - 若尚未形成路由结论，分支初始化必须阻断，不能因为当前打开的是某个工作区根仓就默认把样板建在该仓的 `docs/` 下。
 - 流程视角的对接关系如下（件套标准以 governance-state 模块标配节为准）：
@@ -164,7 +164,7 @@
   - `docs/training/`：承接岗位、模块、代码和流程导读，确保新成员和新人 agent 能按真源学习。
 - 文档推导链（CPO 推导链，保留）：白皮书 → PRD → 产品真源 → engineering → execution → testing；与 governance-state 模块标配节件套兼容。
 - 优化要求如下：
-  - PRD 一经审核通过并拿到当前阶段 `CEOChiefOfStaff` 的路由结论（主责归属调整候定），就应在目标落位点同步创建或更新对应入口，避免分支推进后产物继续散落在聊天、临时文件或单独脚本里。
+  - PRD 一经审核通过并拿到当前阶段 `CEOChiefOfStaff` 的路由结论（产品域收口职责经 CEO 2026-09-11 裁按授权矩阵程序落格），就应在目标落位点同步创建或更新对应入口，避免分支推进后产物继续散落在聊天、临时文件或单独脚本里。
   - `DESIGNING` 完成门禁前，至少应形成 `docs/engineering/DESIGN.md` 和对应执行层计划入口；否则不应进入 `CODING`。
   - `VERIFY-INTEGRATION` 及其后的阶段除产出测试、发布和保障结果外，还应同步更新产品 / 技术状态与 registry 收口，避免“执行已经发生，但模块真源没有跟上”。
 
