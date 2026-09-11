@@ -11,7 +11,7 @@
 1. 基线读数：`GET /internal/v1/events/seq-report?nodeId=<真实 nodeId>`（header X-Internal-Token）→记录 {total,gaps,duplicates,lastSeqNo} 基线；
 2. 合成断链样本：本地构造 events 3 件（seqNo=基线 lastSeqNo+101/102/103，eventId=lg026p4-synth-*）→`POST /internal/v1/events/replay`→断言响应 accepted=3 conflicts=[]；
 3. 断链模拟：临时 iptables/断网面**不实做**（sandbox 原则）——以「先发 seq+103 后发 +101/102」乱序提交复现冲突/洞→seq-report 复读验 gaps 出现→再补发缺序件→复读 gaps=0（对账闭环全录）；
-4. 全程逐条录响应 JSON+时间戳→落 `docs/test/evidence/lg-026-p4/seq-reconcile.log`。
+4. 全程逐条录响应 JSON+时间戳→落 `docs/testing/evidence/lg-026-p4/seq-reconcile.log`。
 
 **判据**：冲突检出（乱序 gaps>0）→仲裁（replay accepted+conflicts 结构化）→对账闭环（补发后 gaps=0）三段全录=过；任一段无录=不过。
 **依赖**：TriRMC 服务面（8710）在役+token。
