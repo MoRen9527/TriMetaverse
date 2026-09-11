@@ -2,8 +2,8 @@
 
 - sourceOfTruth: 本件（四卡形态产品定义正身；单卡细节以 TriMMC 卡 v3+附注 1/2、TriRLC 卡单卡件为准）
 - syncMode: static
-- lastSyncedAt: 2026-09-12T03:25+0800
-- 输入全齐: CTO 勘定矩阵终版（sg-trimmc/local-trirlc/local-trimlc/heiyuan-trirmc）+ daemon 维分叉点明示（03:17）+ 五件定谳（分发通道/班子 key/token 归属/热生效边界/scoping 深度）+ CEO 四卡令（00:27）
+- lastSyncedAt: 2026-09-12T03:30+0800（TriRMC 应用者读数回填，候 CTO 项全销）
+- 输入全齐: CTO 勘定矩阵终版（sg-trimmc/local-trirlc/local-trimlc/heiyuan-trirmc）+ daemon 维分叉点明示（03:17）+ 五件定谳（分发通道/班子 key/token 归属/热生效边界/scoping 深度）+ CEO 四卡令（00:27）+ B 案采纳与 TriRMC 应用者回填（CTO 03:22：复合目标 id `<machine>-<daemon>`，S11 零改动；护栏①②③全落地，独立性断言=测试核心）
 - 形态声明: 四卡系 CEO 令，本件不裁形态，只裁形态内数据模型与卡面语义
 
 ---
@@ -15,7 +15,7 @@
 | TriMMC | sg 远端 | 云 | 保存→待应用→应用→已生效 | COS（远端通道） | 独立域（sg） |
 | TriRLC | 本机 | 显示器 | 写入真源→轮询生效（分钟级） | 本地应用链 | **daemon 维独立域（本次裁决）** |
 | TriMLC | 本机 | 显示器 | 同 TriRLC | 本地应用链 | **daemon 维独立域（本次裁决）** |
-| TriRMC | 河源远端 | 云 | 待应用族（同 TriMMC 节奏） | 河源面直达通道（具体形态候 CTO 按各面直达原则定） | 独立域（heiyuan） |
+| TriRMC | 河源远端 | 云 | 待应用族（同 TriMMC 节奏） | 河源面直达通道——河源自持 ADMIN_TOKEN 本地回环应用，跨机只传意图文档不传凭据（CTO 03:22 回填；与 COS/sg 模式同构，v1 原则③「凭什么配不进用户面」至此四卡全域成立） | 独立域（heiyuan） |
 
 三同继承确认不变：三子栏结构／供应商级联+密文密钥+baseurl 必填（v3 增补件 2）／多卡视觉语言。呈现排序=TriMMC 卡置顶（「先调好 TriMMC」）。
 
