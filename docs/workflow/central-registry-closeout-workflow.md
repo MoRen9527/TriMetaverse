@@ -40,6 +40,7 @@ registry owner 分工的源侧规则来自 TriCompany 虚拟公司源侧：`../.
 | `<Module>ProductRegistry` | 由 CPO 小乔管理；提供模块产品定位、成熟度、依赖、规划 / 已落地边界事实 | 不做总体战略裁决，不替代技术实现判断 |
 | `<Module>CodeRegistry` | 由 CTO 小狄管理；提供模块代码结构、CodeGraph 摘要、仓库健康、实现范围、代码风险事实 | 不做总体战略裁决，不替代产品范围判断 |
 | `CTO` | 技术收口 owner 会签位：涉代码事实、CodeGraph、工程门禁的回写必经会签 | 不代行产品范围判断 |
+| `CPO` | 产品域回写 owner：产品域回写守 PRD/product-state 真源提交纪律；收口触发/时序归 COO 督办、登记归 CGR、呈报归 COS（与 CTO 会签位对称；2026-09-11 五裁① 落格） | 不握督办/分派/升级/销账权（⑦ 权界同构） |
 | `CompanyGovernanceRegistry` 补充 | 负责 agent 发布纪律、单一 discovery target、CHO/CAO 边界和 registry 运行治理 | 不替代 `BusinessStrategy` 做商业边界裁决 |
 | `CEOChiefOfStaff` | 汇总呈报半环：fan-in 呈报、registry 间冲突升级、升级链与董事会通道；公司级分派权/升级权保留 | 不进入收口督办日常环（督办/催办已迁 COO） |
 
