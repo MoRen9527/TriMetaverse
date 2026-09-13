@@ -1,0 +1,75 @@
+# LG-035 TriMLC-Channel 看门狗+晨检搬家设计方案
+
+- sourceOfTruth: 本件
+- syncMode: static（方案稿，批后由实施稿接管）
+- lastSyncedAt: 2026-09-13T21:45+0800
+- 触发: CEO 21:36 三条口谕+BOD 转令（TriMLC-Channel 二次死亡 03:41→10:00）
+- 前件: lg-035-cos-prewalkthrough-v2.md 第四趟节（预走查不合格 D 系返工线）
+
+---
+
+## §一·晨检搬家设计修订（CEO 口谕①：删 8711 对比案，宿主定死 TriMLC cron）
+
+**架构远景事实登记**：TriRLC（本机 8711）与 TriMLC（将来 sg/远端分机部署）**分机部署为架构远景终态，非暂态**——现同机仅为环境受限过渡态。本裁决影响所有「TriRLC 作为 TriMLC 备选宿主」的设计假设——全部废弃。
+
+晨检宿主定死 **TriMLC cron（本机 8713 通道 daemon 的 cron 引擎）**，无 8711 备选、无对比案。理由：TriRLC/TriMLC 分机后，跨机 cron 调用不可用；TriMLC 通道 daemon 本身自带 cron 引擎（cron/service.ts），晨检作为 cron job 天然归属。
+
+## §二·看门狗方案（三向对比+CEO 三条需求纳入）
+
+### 方案甲·用户级看门狗计划任务（推荐即刻）
+| 维度 | 评估 |
+| --- | --- |
+| 机制 | 用户级计划任务每 5 分钟→healthz 探活→死亡即调权威启动 cmd |
+| 触发延迟 | ≤5 分钟 |
+| 权限面 | 纯用户级零提权 ✓ |
+| ONSTART 冲突面 | 互补（ONSTART 管开机/watchdog 管运行中死亡） |
+| 误杀面 | 维护停机须先停看门狗（纪律入册）+连续 3 次拉起失败停手告警 |
+| 部署成本 | 零依赖（schtasks+PowerShell 探活脚本） |
+
+### 方案乙·服务化（推荐中期迁移）
+| 维度 | 评估 |
+| --- | --- |
+| 机制 | NSSM/sc 服务化+SCM failure auto-restart |
+| 触发延迟 | 秒级（SCM 检测进程退出即动作） |
+| 权限面 | 安装一次管理员、运行零人工 |
+| ONSTART 冲突面 | 服务自启取代 ONSTART 任务（须删旧任务防双拉） |
+| 误杀面 | SCM 托管无误杀；维护停机=sc stop |
+| 部署成本 | 一次管理员安装+cmd 形态迁移 |
+
+### 方案丙·事件触发任务（不推荐主力）
+静默退出不触发 Application 事件→覆盖不全，仅作辅助告警。
+
+### 推荐组合
+**甲即刻（今晚可上零依赖）→乙随运维窗迁移收编（甲退役）**。
+
+### CEO 三条需求纳入
+| 需求 | 实现方式 |
+| --- | --- |
+| a.尊重人工退出 | 有意退出标记机制：daemon 优雅退出时写 `trilc-channel.stop-flag` 文件（operator exit 路径自动落标）；watchdog 探活前检查标记存在即跳过（不复活）；标记 TTL=下次 ONSTART 清除 |
+| b.复活可重入 | daemon 启动即监听 CLI attach 端口（trilc chat/trilc attach 通道）；watchdog 拉起的 daemon 与手动拉起的 daemon 同一入口同一数据目录=天然可重入；`trilc chat` CLI 重接入路径已有（通道态已支持 CC 交互会话=客户端连接） |
+| c.同名席去重 | 单例锁：daemon 启动时尝试创建 `trilc-channel.pid` 文件（O_EXCL 语义——已存在=已有实例运行→退出）；watchdog 探活即天然去重（活着不拉）；进程名+端口绑定双重去重 |
+
+### D 系编号
+- **D20·晨检搬家设计修订**（删 8711 对比案，宿主定死 TriMLC cron，架构远景事实登记）
+- **D21·看门狗方案**（本件 §二）
+- **D22·CEO 三条需求实现**（stop-flag+attach 通道+单例锁）
+
+---
+
+## §三·m-cos 三编号清点（进程↔transcript↔编号三方对表）
+
+| 检查项 | 命令 | 判据 |
+| --- | --- | --- |
+| 进程 | `Get-CimInstance Win32_Process -Filter "Name='node.exe'"` | 命令行含 `dist/index.js` 且 `TRILC_PORT=8713` |
+| transcript | `ls ~/.claude/projects/D--Code-ai-TriMetaverse/*.jsonl` 按 mtime 最新=现役席 | 席名与进程对应 |
+| 编号 | transcript 首行 sessionId | 一个 sessionId=一个席实例 |
+
+---
+
+## 大白话摘要（D-25）
+
+**干了什么**：出了 TriMLC 服务自动复活的方案——短期的用 Windows 计划任务每 5 分钟检查一次服务是否活着，死了就自动拉起来；长期的推荐做成 Windows 系统服务（操作系统自带「挂了自动重启」功能）。同时加入了老板要求的三个保护：人手动关的服务不自动拉起（尊重人工操作）、拉起来的服务能从命令行重新接上去（不是起一个新的就找不到了）、同一个名字只允许跑一个实例（不会起一堆重复的）。还删掉了「用 8711 做备选」的旧方案（因为将来这两套系统要分开部署在不同机器上，备选没有意义）。
+
+**结果如何**：方案设计完毕，候 CEO 批。批了先上短期方案（今天就能跑），后面找窗口换长期方案。
+
+**候什么决定**：CEO 批方案选型（甲先走还是直接走乙）。
