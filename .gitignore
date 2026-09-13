@@ -20,3 +20,4 @@ output/
 # Python bytecode
 __pycache__/
 *.pyc
+.tricompany-cognition/
