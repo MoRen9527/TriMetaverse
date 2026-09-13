@@ -7,7 +7,7 @@
 
 ## Git Hub 星型拓扑（常设节）
 
-**拓扑**：GitHub ↔ M-SG（唯一中枢，M 面服务域机）↔ {本地机（TriMLC+TriRLC 双本地核心同机承载）、R-HY（R 面服务器）、未来任何新机}——星型。
+**拓扑**：GitHub ↔ M-SG（唯一中枢，M 面服务域机）↔ {本地机（TriMLC+TriRLC 双本地核心同机承载）、R-HY（R 面服务域机）、未来任何新机}——星型。
 
 - **M-SG**（M-SG-47.245.122.61）= git 中枢：唯 M-SG 与 GitHub 双向沟通。
 - 本地域成员=本机一台（TriMLC+TriRLC 双本地核心同机承载）；服务域成员=sg（M）+R-HY（R）。所有 git 远端一律指向 M-SG bare（`ssh://fleet@M-SG/srv/git/*.git`），不经直连 GitHub。

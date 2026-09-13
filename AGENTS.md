@@ -18,8 +18,8 @@
   - 公司级治理规范、文档规范、命名规范、管理流程、规则记录等应查询公司级 `CompanyGovernanceRegistry`。
   - 公司级 GitHub 仓库治理规则查询 `docs/github-repo-governance.md`文件。
   - 具体模块的内容应深入模块查询 `Business Strategy Registry`、`Product Registry`、`Code Registry`
-  - 项目级整体说明查询project.md
-  - 赛博公司内容查询tricompany.md
+  - 项目级整体说明查询docs/project.md
+  - 赛博公司内容查询docs/tricompany.md
   - TriMetaverse仓说明查询README.md
   - 模块架构和功能说明查询 `docs/三元宇宙架构与模块说明.md`。
   - TriMetaverse GitHub App + Copilot 协同落地查看`github-app-copilot-rollout-v1.md`。
