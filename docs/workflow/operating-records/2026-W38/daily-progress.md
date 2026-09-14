@@ -36,3 +36,12 @@
   - 713ef2d7 Merge remote-tracking branch 'sg-server/dev' into dev
   - d0c42b71 docs(lg-034-batch): 四件批文④⑤落盘——tricompany历史附录外移(docs/archive/tricompany-v0.1-design-20260324.md frozen-archive头,SHA对表a2982123逐字节一致;原件233行纯现役摘要+V1.2版本行+指针行)+FADE-008会签转正(CAO会签APPROVE四项过+D-16转正记录,syncMode static)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:30 +08：自上次进度提交 b9637308 后新增 7 条 commit：
+  - 955d2c9f Merge remote-tracking branch 'sg-server/dev' into dev
+  - e9ec74dd docs(gov-p2): hermes 上游新版对比件——上游 5eb99eb（2026-09-14）vs 本地副本结构级差异：state 模块族(20+)/apps 桌面化/skills 三层分发/SOUL 成熟态(default_soul)/startup_watchdog 印证（BOD 亲勘 M-SG 通道）
+  - 7e7b8203 docs(gov-p2): CPO 续件——消化管道全貌升维（接入/消化/结构化输出/wiki 对接四段产品语义；三决定降为消化段阀门；compass 命名衔接；验收锚增量六条）
+  - 15bd6b13 docs(治理体系二期): CTO 主笔件按 CEO 勘正对齐——schema=消化管道四段（①接入→②消化→③结构化输出→④wiki 对接），三选一判据降为消化段阀门；「成体系」技术判据补注（页间关系非单页质量）；勘正注记入 §一
+  - a3dc9cf7 docs: §6 C 面适配任务首词「知识体系构建」→「治理体系构建」（CEO 17:0x 一词令，其余逐字不动）
+  - 6fc6c900 docs(治理体系二期): CTO 技术主笔意见——hermes 对标四件深研（honcho porting 六模式适用性/八后端 ABC 架构教训/新版候 M-SG 通道对表）+schema 层设计输入（消化规则声明式形态+async prefetch 执行协议+注入页产物契约+基座衔接+验证锚五条）；技术主笔件候 COS 合流（CEO 13:5x 立项+16:3x 组局）
+  - 91954808 docs(gov-p2): CPO 产品视角意见——hermes 对标四问（注入页形态总纲/员工-全员边界与升格管道/沉淀定义与体积预算/schema 三决定缺 reject+escalate/13 对去重先收割再切断）
+- registry：v2.1；今日 registry 提交无变化
