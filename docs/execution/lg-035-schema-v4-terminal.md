@@ -4,6 +4,7 @@
 - syncMode: static
 - lastSyncedAt: 2026-09-14T21:08+0800（date 现查 21:08:49，本回合执行）
 - 触发: BOD 2026-09-14 21:0x 终稿令——card.model_sets/card.rules 两实体+策略 schema+boot 迁移器+求值链展开式映射；FSD 候本件动层 1（数据+引擎）
+- 修订: **v1.1 2026-09-14 22:2x——CEO 22:12 粒度令**（「规则对应规则名，下拉直接选规则名，像我们那三个时段规则，应该算一个规则，起个规则名」）：time 型规则=**命名多窗整组+窗级模型**；§一/二/三/五/七 相应改。21:0x 版「单窗实体+每窗拆一」系成稿先于 22:12 令，**属被取代非笔误**（修订留痕口径）
 - 代码实态依据: `TriModel/src/trimmc-card.ts`（card v2+strategies v3 可选域）、`src/policy.ts`（evaluatePolicy/validatePolicyShape 零改动基线）、`src/api/trimmc-card.ts` handleApplyStrategy:215-291（现行展开点）
 
 ---
@@ -28,12 +29,19 @@ export interface ModelSetEntity {
 
 export type RuleType = 'time' | 'default' | 'quota';
 
+/** 窗级模型（v1.1/CEO 22:12 粒度令）：每窗自带条目引用。 */
+export interface RuleWindow {
+  start: string;   // 'HH:MM' inclusive
+  end: string;     // 'HH:MM' exclusive；start<end（跨午夜=P2，引擎已支持、MVP 卡面拒绝）
+  entry_id: string; // 该窗用哪个条目（窗级模型）
+}
+
 export interface RuleEntity {
   name: string;          // 卡内唯一
   type: RuleType;
   enabled: boolean;      // 停用=保留但不参与组合（§一 规则卡）
-  time?: { start: string; end: string };  // time 必备；HH:MM，start<end（跨午夜=P2，引擎已支持、MVP 卡面拒绝）
-  entry_id?: string;     // time/default 必备（窗内/默认用哪个条目）
+  windows?: RuleWindow[];  // time 必备（命名多窗整组，≥1 窗）；v1.1 前规则级 entry_id+单窗 time 字段退役
+  entry_id?: string;     // default 必备（默认用哪个条目）；time 型规则级 entry_id 退役（模型在窗级）
   watch_entry_id?: string; // quota 必备（监控谁）
   fallback_ids?: string[]; // quota 必备（有序转入序列，≥1）
   created_at: string;
@@ -66,7 +74,7 @@ export interface StrategyEntityV4 {
 }
 ```
 
-**分型字段必备性**（validateCardV4 硬校验）：time→`time`+`entry_id`；default→`entry_id`；quota→`watch_entry_id`+`fallback_ids(≥1)`。三型互斥多余字段不拒绝（向前容错），缺必备字段拒绝。
+**分型字段必备性**（validateCardV4 硬校验）：time→`windows(≥1，每窗 entry_id 存在且 start<end)`；default→`entry_id`；quota→`watch_entry_id`+`fallback_ids(≥1)`。三型互斥多余字段不拒绝（向前容错），缺必备字段拒绝。**形态门**：time 实体带规则级 `entry_id`（22:12 前过渡形态）一律拒绝——该门同时服务幂等识别（§二 判据甲）。
 
 id 生成：沿现行策略 id 通道扩展三前缀（`ms_`/`rule_`/`st_` + 随机段），卡内唯一由键位保证。
 
@@ -74,19 +82,19 @@ id 生成：沿现行策略 id 通道扩展三前缀（`ms_`/`rule_`/`st_` + 随
 
 ### 幂等判据（先判后动，任一命中即不入变换）
 
-- **甲**：`version >= 4` → 原样返回（正常态）。
-- **乙**：`rules` 为对象（非数组）或 `model_sets` 为对象 → 半迁移/手工态：只补 `version=4` 与缺失缺省键（`active_strategy_id ?? null` 等），**不重跑打包**（防「当前配置」重复生成、防 id 二次生成）。
-- **丙**：变换失败（解析异常/条目解析不出的非预期态）→ **原子不落盘**，原卡保持不动（写 tmp+rename；失败即弃 tmp），下次 boot 重试。
+- **甲（版本门+形态门双门，v1.1）**：`version >= 4` **且**全部 time 实体为窗级形态（`windows[].entry_id` 齐、无规则级 `entry_id`）→ 原样返回（正常态）。version=4 但 time 实体为规则级形态（22:12 前过渡态，含 FSD 首版按模型归并落）→ **不入甲，进变换重迁**（窗级化归并）。
+- **乙**：`rules` 为对象（非数组）或 `model_sets` 为对象 → 半迁移/手工态：只补 `version=4` 与缺失缺省键（`active_strategy_id ?? null` 等），**不重跑打包**（防「当前配置」重复生成、防 id 二次生成）；但若同时命中甲的形态门失败，以形态门为准进重迁。
+- **丙**：变换失败（解析异常/条目解析不出的非预期态）→ **原子不落盘**，原卡保持不动（写 tmp+rename；失败即弃 tmp），下次 boot 重试。丙对 v4 窗级形态的识别=即甲之形态门：**只有窗级形态才封版**，过渡形态永远可重迁、重迁失败原卡不动。
 
 迁移成功即写 version=4，此后永远走甲——幂等闭封。迁移前备份 `trimmc-card.pre-v4.bak.json`（保留一代，成功不删、再迁移覆盖）。
 
 ### 变换规则（v2 / v2+strategies 入态）
 
 1. **运行真源选择**：`active_strategy_id` 命中 v3 策略（实体含 `models`+内嵌 `rules` 字段）→ 以该策略为真源；顶层 rules 数组视为陈旧展示域，清空并记日志（条数入迁移日志）。否则 → 顶层 rules（window 型）+ `default_model` 为真源。
-2. **时间规则拆分**：旧 window 引用/内嵌规则的 `windows[]` 是多窗——**每窗拆一个 time 实体**（name：单窗=原名/`rule_id`；多窗=原名#i；v3 内嵌匿名规则=策略名#i；entry_id 照搬；enabled 照搬）。
-3. **默认规则**：`default_model`（模型名）→ 解析条目：enabled 且 `model` 匹配，多条同模型取 **id 字典序最小**（确定性）；无匹配条目 → 不建 default 实体+迁移日志（语义=回落系统默认，与旧 null 等价）。v3 策略的 `default_model` 同法。
+2. **时间规则归并（v1.1/CEO 22:12 粒度令）**：旧 window 引用/内嵌规则**不再每窗拆实体**——顶层时间面（全部 window 引用，现役=三窗两模型）归并为 **1 条命名规则「三窗切换」**（CEO 令文命名）：`windows` 摊平=每窗带原 `entry_id`（窗级模型），enabled 照搬。v3 策略内嵌 window 规则 → 每策略归并 1 条「`<策略名>#时段`」（同法摊平）。过渡形态重迁（判据甲形态门拦截者）：按模型归并的多条 time 实体 → 摊平其全部窗合并回 1 条命名规则，名沿首个实体名或「三窗切换」。
+3. **默认规则**：`default_model`（模型名）→ 解析条目：enabled 且 `model` 匹配，多条同模型取 **id 字典序最小**（确定性）；命名「**默认模型**」（BOD 22:1x 口径）；无匹配条目 → 不建 default 实体+迁移日志（语义=回落系统默认，与旧 null 等价）。v3 策略的 `default_model` 同法，命名「`<策略名>#默认`」。
 4. **模型集**：v3 策略 `models[]`（catalog 名单）→ 「`<策略名>集`」：entry_ids=全部 enabled 条目中 model∈models 者（按 id 字典序稳定）；无 v3 策略 → 「当前模型集」=全部 enabled 条目。
-5. **策略打包**：无 v3 策略 → 打包「当前配置」（purpose=`boot 迁移自旧版卡`）引用上述集+实体，置活动。有 v3 策略 → **逐个升格**（活动者以原名保持活动，非活动者升格不置活动；各自的时间窗/default/模型集按 2-4 同法生成，命名空间独立）——用户历史策略是产品资产，不丢弃；升格复用同一套变换函数。
+5. **策略打包**：无 v3 策略 → 打包「当前配置」（purpose=`boot 迁移自旧版卡`）引用上述集+实体（=「三窗切换」+「默认模型」两条整组），置活动；**策略引用=选规则名整组**（层 2 下拉语义同此，非窗级选择）。有 v3 策略 → **逐个升格**（活动者以原名保持活动，非活动者升格不置活动；各自的时间窗/default/模型集按 2-4 同法生成，命名空间独立）——用户历史策略是产品资产，不丢弃；升格复用同一套变换函数。
 
 ## 三、求值链展开式映射（引擎零改动）
 
@@ -94,7 +102,7 @@ id 生成：沿现行策略 id 通道扩展三前缀（`ms_`/`rule_`/`st_` + 随
 
 活动策略 `rule_ids` → 解析实体 → **分型分流**：
 
-- **time 实体** → schedule：`{ id: 'strategy:<pid>:<rid>', target: 'daemon-default', model: provider_entries[entry_id].model, windows: [time], timezone: 'Asia/Shanghai', enabled: rule.enabled, priority: 100, type: 'window' }`。id 由现行序数 `<pid>:<i>` 改实体 id（重排序稳定）；priority 归一 100（同型时间规则 UI 级互斥窗保证唯一命中，重叠漏网时按 id 稳定排序兜底）。
+- **time 实体（命名多窗整组）** → **每窗一条 schedule**：`{ id: 'strategy:<pid>:<rid>:<wi>', target: 'daemon-default', model: provider_entries[win.entry_id].model, windows: [win], timezone: 'Asia/Shanghai', enabled: rule.enabled, priority: 100, type: 'window' }`（`<wi>`=窗序）。id 由现行序数 `<pid>:<i>` 改实体+窗序（重排序稳定）；priority 归一 100（重叠在守卫层摊平拒绝=每时刻至多一窗命中；漏网时按 id 稳定排序兜底）。
 - **default 实体** → `card.default_model = provider_entries[entry_id].model`（派生缓存同步——**保留现行 apply 时同步模式**，三层计算序 getter 零改动；v4 后卡面无 default_model 编辑面，缓存无第二真源风险）。
 - **quota 实体** → 不进 schedules（异常路径层，见 §四）。
 
@@ -132,15 +140,15 @@ MVP 实装=钩子位+空信号（层 inert，零影响常规链）；信号实�
 | 删模型集 | 被策略引用 | 该模型集正被策略「X」引用，请先解除引用 |
 | 删规则 | 被策略引用 | 该规则正被策略「X」引用，请先解除引用 |
 | 删条目 | 被模型集引用 | 该条目正被模型集「X」引用，请先从模型集移除 |
-| 删条目 | 被规则引用（entry_id/watch/fallback 任一位） | 该条目正被规则「X」引用，请先在规则中移除 |
+| 删条目 | 被规则引用（time 各窗 entry_id/default entry_id/watch/fallback 任一位） | 该条目正被规则「X」引用，请先在规则中移除 |
 | 删策略 | 是活动策略 | 活动策略使用中，请先切换 |
-| 保存 | 悬挂引用（集内条目/策略引用集与规则逐项存在） | 指名拒绝（「引用的条目/模型集/规则不存在」） |
-| 保存 | 同策略内 time 规则窗重叠 | 规则「A」与「B」的时段窗口重叠 |
+| 保存 | 悬挂引用（集内条目/策略引用集与规则逐项存在/**time 窗级逐窗 entry_id**） | 指名拒绝，悬挂指名**下移窗级**（「规则 X 第 i 窗引用的条目不存在」） |
+| 保存 | time 窗重叠（**同策略引用的全部 time 规则窗摊平**，跨实体合计判重叠） | 规则「A」第 i 窗与规则「B」第 j 窗时段重叠 |
 | 保存 | 三实体名各自卡内唯一 | 名称「X」已存在 |
 | 保存 | 分型字段必备性（§一） | 按缺失字段指名 |
 | 保存 | quota fallback_ids ≥1 且全存在 | 转入序列不能为空 |
 
-说明：条目删除守卫=被集**或被规则**引用均禁删（增补件 6 §一只列被集引用；规则三型全引用条目，校验器按全族执行——§七.2 走查断言×3 是最小集，非校验器边界）。`enabled` 条目态不进硬校验（创建时 UI 下拉过滤已启用条目；条目后停用=详情警示，不炸卡）。
+说明（v1.1）：条目删除守卫=被集**或被规则**引用均禁删（增补件 6 §一只列被集引用；规则三型全引用条目，校验器按全族执行——§七.2 走查断言×3 是最小集，非校验器边界）。**重叠判域=同策略摊平**：不同策略各拥同窗合法（同时刻只有一策略活动）；跨策略不判重叠。`enabled` 条目态不进硬校验（创建时 UI 下拉过滤已启用条目；条目后停用=详情警示，不炸卡）。
 
 ## 六、「活动策略」词汇定稿（§二 裁决落地）
 
@@ -150,17 +158,19 @@ MVP 实装=钩子位+空信号（层 inert，零影响常规链）；信号实�
 
 ## 七、FSD 层 1 任务面（数据+引擎；候本件即动）
 
-1. `src/trimmc-card.ts`：CARD_VERSION=4+三实体 interface+validateCardV4（§五 矩阵）+migrateV4（§二 幂等三判据+变换）+loadCard 接入（v2 入态自动迁移）+deleted 三通道。
+1. `src/trimmc-card.ts`：CARD_VERSION=4+三实体 interface+validateCardV4（§五 矩阵+**形态门**）+migrateV4（§二 幂等三判据+变换）+loadCard 接入（v2 入态自动迁移）+deleted 三通道。
 2. `src/api/trimmc-card.ts`：PUT 合并段透传 model_sets/rules（分型校验前置，沿 strategies 透传模式）；handleApplyStrategy v4 展开（§三 分型分流）。
 3. `src/policy.ts`：**零改动**（validatePolicyShape/savePolicyForMachine/evaluatePolicy 均不动）。
 4. `src/keys.ts`/`server.ts`：registerQuotaSignalFn 钩子位（空实装，层 inert）。
 5. 测试门：迁移幂等（同卡跑两遍零差异）/18:00 保形三锚（§三）/守卫矩阵逐条/分型校验/全量回归四项读数（含既有失败逐族归因——全量读数纪律）。
+6. **修正令项（BOD 22:1x，FSD 已受令执行中）**：首版按模型归并（2 条、规则级 entry_id）偏离 CEO 22:12 粒度令——窗级化重迁（「三窗切换」+「默认模型」两条整组）+形态门幂等（甲双门）+守卫窗级化（悬挂指名窗级/重叠摊平跨实体）+保形三锚全套重跑。CTO 审后置照常：**完工声明以盘面实勘为准**（采信规则）。
 
 层 2（API 合并面细化）/层 3（UI 三实体五区+§七 走查增补项）候层 1 验收后另派。
 
 ## 八、使用依据
 
 - 增补件 6（W37/lg-035-cpo-redesign-trimodel-ui-v3-addendum6.md）§〇/一/二/三/五/六——产品语义真源
-- BOD 2026-09-14 21:0x 终稿令（四要点：幂等判据/引用守卫/活动策略词汇/quota MVP 边界）
+- **CEO 2026-09-14 22:12 粒度令**（v1.1 上位依据，经 BOD 22:2x 转令）：「规则对应规则名，下拉直接选规则名，像我们那三个时段规则，应该算一个规则，起个规则名。」——time 型=命名多窗整组+窗级模型；现役三窗两模型归并 1 条「三窗切换」
+- BOD 2026-09-14 21:0x 终稿令（四要点：幂等判据/引用守卫/活动策略词汇/quota MVP 边界）+22:2x 增补转令（两处修订+修正审要点）
 - 代码实态：trimmc-card.ts（card v2 schema+CardRuleRef+StrategyEntity v3）、policy.ts（windowMatches 跨午夜已支持/evaluatePolicy priority desc）、api/trimmc-card.ts:215-291（apply 展开点+default_model 同步模式+id 前缀先例）
 - 增补件 4② D15（fixed 退役/type 收窄 window 单型）——迁移入态只含 window 的前提
