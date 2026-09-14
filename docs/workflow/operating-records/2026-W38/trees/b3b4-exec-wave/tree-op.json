@@ -1,0 +1,44 @@
+{
+  "treeId": "b3b4-exec-wave",
+  "title": "B3/B4 候批执行波——联审结论落地（CEO 批令④⑤ 2026-09-14）",
+  "week": "W38",
+  "source": "CEO 批令（接夜航01 候批四件）：④B3/B4 候批执行清单 6 组+共识 10 项放行，执行窗开；⑤E1 按 CAO 版裁（一裁四追平，CPO/BS 少数意见留痕）",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-14",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "BE-1",
+      "agent": "mmc-duty",
+      "status": "done",
+      "action": "B3 真源批（TriCompany/docs/project-sources 两件）：①L60 定性修正（CPO 终版文案：中央摘要+宪章真源指针+附录防误引尾注；BS 英文行方案+agents-md:22 同族联动采中文同款）②L74-76 agent_type 三处退役名→FSD/STE/TriCompanyCEOChiefOfStaff ③引用修复（:17 仓根限定/:25 处置/:88 补路径）④可选小修集 B3 部分（L104 MD022/:41 括注泛化/Key documents 补条目/:78 归属括注）→ FADE-002 发布+byte 验证"
+    },
+    {
+      "nodeId": "BE-2",
+      "agent": "mmc-duty",
+      "status": "done",
+      "action": "CAO 域批（source-agents/chief-administrative-officer）：E1 一裁四追平（soul 名字=小行+contract display_name=小行+壳补开场白身份段；roster 不动；CPO/BS 事实回填少数意见留痕在收口件）+治理真源方向三处追平（TMV-first→源=TriCompany 侧/TMV=字节级副本）+memory:19 落点改标候初始化+session-body 主笔清单补 D-26/D-27+范围句 D-01..D-27+contract paths 补 session_body+instructions 折叠标量改块标量+peers 补 COS → D-07 发布"
+    },
+    {
+      "nodeId": "BE-3",
+      "agent": "mmc-duty",
+      "status": "done",
+      "action": "CTO 域批（source-agents/chief-technology-officer）：contract supervises 补四员（employee-roster id 基准）+runtime_baseline 五字段换代（B1 切片 1 口径 business-strategy.contract.yaml 同构）+paths 补 session_body+io 源仓根声明+agent-body 补 CodeGraph 职责条（壳 7 条对齐）+退役叙事四连清理（V1 正式上线句/宿主切换触发器/TriMC/src scope）→ D-07 发布。注：runtime_baseline 处置通道按 BS 版（五字段换代）执行——H2 挂起中二选一由本批采 B1 先例口径落地，留痕"
+    },
+    {
+      "nodeId": "BE-4",
+      "agent": "mmc-duty",
+      "status": "done",
+      "action": "D-13 正名表补录（CAO 别名=小行+标题 14 席→15 席刷新）——E1 四追平之登记面；TriCompany 治理文档源侧改"
+    },
+    {
+      "nodeId": "BE-5",
+      "agent": "mmc-duty",
+      "status": "done",
+      "action": "发布+验证+收口：source_publish_check --project-docs execute（B3 面）+--publish-agents --agent-execute（B4 面）；hash/byte 一致验证+五席验收锚 grep 抽验；渲染债归零读数；收口报告+树 done 回写+呈 BOD"
+    }
+  ],
+  "acceptance": "B3 两件+CAO/CTO 域 18 件源侧改动齐+发布面同步 hash 一致+五席验收锚 grep 抽验过+D-13 补录+E1 四载体同值「小行」+渲染债归零读数+收口报告呈 BOD",
+  "notes": "共识 10 项中 H1（空件/组装差异对表）H3（监督跨度授权矩阵裁）H4（SOO 位序）维持挂起不在本波（裁则另批）；E1 裁面=CAO 版（CEO 批令⑤）；runtime_baseline 处置通道按 BS 版五字段换代（B1 先例）留痕"
+}
