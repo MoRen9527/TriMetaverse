@@ -46,6 +46,7 @@ agent-frontmatter（13 席空壳）填实=各席复合件 frontmatter 内容迁�
 3. **TC-C**：前置核查迁移（13 席 agent-body→指针+session-body 增节）→commit
 4. **TC-D**：M-001 席内版删（CEO/CHO session-body）→commit
 5. **TC-E**：manifest 切源 13 条（D1b）+lg024 校验件路径改指→commit
+5.5 **D1c 复合件退役注记头**（§三 D1c 步序漏项，2026-09-15 00:0x 补列）：**落点=TriCompany 源侧复合件** `source-agents/<seat>/<seat>.agent.md` 13 件各加一行退役头（「本件已退役出渲染链；真源=agent-body.agent.md（D1b manifest 已切源）」）——**非 TMV 发布拷贝位**（发布拷贝=重渲活产物，注记会被 TMV-1 覆盖或污染 diff=0 不变量）；独立小 commit，执行归属照 BOD 分工序（时序上须在 CP2 读数前或明确不在重渲产物面）
 6. **TC-F**：compass 管线 target_root 改（+注释+校验件）→commit
 7. **TMV-1**：全量重渲（claude-session+copilot+claude 三 host）→**渲染不变量 diff 核**→commit
 8. **TMV-2**：compass git mv+junction（+gitignore）→commit
