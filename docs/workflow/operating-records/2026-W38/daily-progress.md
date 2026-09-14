@@ -25,3 +25,6 @@
   - 244937a5 docs(lg-035): FADE-008 治理闭环标准化实例草案——CEO 治理循环（裁决→台账→COS 筛→任务书→挂平面→face 路由→树执行→销账→C 面沉淀）标准化为 FADE 四段实例；F=COS 筛台账（三判据）/A=攒批≥5 件周二五/D=face 路由自动拾取/E=树执行+销账附指针+C 面沉淀；例外=裁决交互链人工门产物回灌 F 段；必备要素（幂等/防重放/SLA/验收锚/邻接关系/故障恢复语义）；草案候 CEO 批后 D-16 转正（BOD 00:16 标准化令）
   - …另有 485 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:40 +08：自上次进度提交 2c54f07d 后新增 1 条 commit：
+  - 90089e5a closeout(b3b4-exec-wave): 批令④⑤执行波树 done——五节点全收（BE-1 B3 真源 18 处/BE-2 CAO 域 E1 四追平+七件/BE-3 CTO 域壳身对齐/BE-4 D-13 十五席补录/BE-5 三 host 发布+验收锚批验全过）；发布面 CLAUDE/AGENTS/.claude+.github+session 齐更；TC 18b898e 源侧推平；挂起维持与裁量留痕五笔在卷 @mmc-duty
+- registry：v2.1；今日 registry 提交无变化
