@@ -32,3 +32,7 @@
   - f06b4874 merge: hub 归一——W38 本地落位（含 W38 补跑+README 周指针翻页）+本地 ADR 合流
   - fd40626e docs(lg-035): ADR CC Agent(type) spawn 不消费 frontmatter tools allowlist——平台限制发现（FSD 一期试点实测），约束路径改走权限规则面+每席 deny 配置样例+Anthropic /feedback 候选报告件
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:00 +08：自上次进度提交 3a22f5d8 后新增 2 条 commit：
+  - 713ef2d7 Merge remote-tracking branch 'sg-server/dev' into dev
+  - d0c42b71 docs(lg-034-batch): 四件批文④⑤落盘——tricompany历史附录外移(docs/archive/tricompany-v0.1-design-20260324.md frozen-archive头,SHA对表a2982123逐字节一致;原件233行纯现役摘要+V1.2版本行+指针行)+FADE-008会签转正(CAO会签APPROVE四项过+D-16转正记录,syncMode static)
+- registry：v2.1；今日 registry 提交无变化
