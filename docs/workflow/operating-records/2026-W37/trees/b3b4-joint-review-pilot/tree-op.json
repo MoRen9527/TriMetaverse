@@ -1,0 +1,32 @@
+{
+  "treeId": "b3b4-joint-review-pilot",
+  "title": "B3/B4 打样批联审——树协议回归首航（D-27 第一批回归活）",
+  "week": "W37",
+  "source": "任务书 20260914-夜航01 任务3（BOD 应急打包）+ D-27 树协议执行层标准（CEO 立规 2026-09-14 00:05/00:12，TriCompany 7027a9e；B3/B4 批次=第一批回归树协议执行之活）",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-14",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "BB-1",
+      "agent": "mmc-duty",
+      "status": "done",
+      "action": "五席独立意见（B1 先例名单：COS/CTO/CAO/CPO+BS spawn）：并行 spawn、席间独立（禁参考他席稿）；每席全量表态 B3 两件（project-sources/trimetaverse-claude-md.md + trimetaverse-agents-md.md，含 CLAUDE.md:60 定性修正 rides 登记面）+ B4 首批 18 件（source-agents/chief-technology-officer 9 件 + chief-administrative-officer 9 件）；意见三要素（意见+理由+修改建议+验收锚），无意见明示「无意见」；意见件落本树 reports/"
+    },
+    {
+      "nodeId": "BB-2",
+      "agent": "mmc-duty",
+      "status": "done",
+      "action": "汇总件（COO 位代行汇总、席位形态如实标注）：共识/分歧/修改建议三类归并；三红线执行——分歧项挂起候裁清单化（进晨报线）、保留权事项候 CEO 清单化、历史冻结件豁免标注；呈 BOD"
+    },
+    {
+      "nodeId": "BB-3",
+      "agent": "mmc-duty",
+      "status": "done",
+      "action": "节点收口报告+树 done 回写：BB-1/BB-2 产出清单（路径+行数）、批号-时点-席位元数据（CFO 批毕切账闸门供料）、程序位声明（审=只出意见零改动；内容改动落地按既有通道候批）、遗留项如实标注"
+    }
+  ],
+  "acceptance": "树文件夹落 W37 trees/ + 五席意见件齐（5 份，覆盖 B3 2 件+B4 18 件全量表态）+ 汇总件（分歧/挂起/候裁清单化）+ 节点收口报告 + 呈 BOD；D-27 销账锚=树路径+收口报告指针",
+  "notes": "打样批定位=树协议流程回归首航（D-27 四条之活）；程序位=审（零改动）；B4 首批域选取=CTO 域（工程纪律正身承载）+CAO 域（组织制度/D-27 主笔域）；source-agents 现势总量 169 件与晨报 ~136 口径差如实标注（扫尾余量待后续批）"
+}
