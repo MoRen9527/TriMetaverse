@@ -33,6 +33,16 @@ def split_fm(text: str):
     return '', text
 
 
+def section_spans(body: str):
+    """head -> (start, end)：start='## Head' 起，end=下一 '## ' 起或文末。"""
+    matches = list(SEC_RE.finditer(body))
+    spans = {}
+    for i, m in enumerate(matches):
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(body)
+        spans[m.group(1).strip()] = (m.start(), end)
+    return spans
+
+
 def parse_sections(body: str):
     """Return list of (header, content) preserving order; content verbatim-ish (stripped)."""
     parts = SEC_RE.split(body)
@@ -55,30 +65,26 @@ def tc_a(seat: str, execute: bool):
     ab_p = SRC / seat / 'agent-body.agent.md'
     comp = comp_p.read_text(encoding='utf-8')
     ab = ab_p.read_text(encoding='utf-8')
-    _, comp_body = split_fm(comp)
-    _, ab_body = split_fm(ab)
-    comp_secs = parse_sections(comp_body)
-    ab_secs = parse_sections(ab_body)
-    ab_map = dict(ab_secs)
-    comp_map = dict(comp_secs)
-    merged = []
-    counts = {'ported': 0, 'kept_ab': 0, 'type_c': 0}
-    for head, cbody in comp_secs:
-        if head in ab_map:
-            if (seat, head) in TYPE_C:
-                merged.append((head, cbody)); counts['type_c'] += 1
-            else:
-                merged.append((head, ab_map[head])); counts['kept_ab'] += 1
-        else:
-            merged.append((head, cbody)); counts['ported'] += 1
-    for head, abody in ab_secs:  # agent-body-only sections → append at end
-        if head not in comp_map:
-            merged.append((head, abody)); counts['kept_ab'] += 1
-    new_body = render_sections(merged)
-    changed = new_body.strip() != ab_body.strip()
-    print(f'[TC-A] {seat}: ported={counts["ported"]} kept={counts["kept_ab"]} typeC={counts["type_c"]} changed={changed}')
+    comp_fm, comp_body = split_fm(comp)
+    ab_fm, ab_body = split_fm(ab)
+    comp_spans = section_spans(comp_body)
+    ab_spans = section_spans(ab_body)
+    # composite 基底（含前导段+全段）→ A/B 型段逆序替换为 agent-body 原文段
+    repl = [h for h in comp_spans if h in ab_spans and (seat, h) not in TYPE_C]
+    ported = len([h for h in comp_spans if h not in ab_spans])
+    type_c = len([h for h in comp_spans if h in ab_spans and (seat, h) in TYPE_C])
+    merged_body = comp_body
+    for head in reversed(repl):
+        cs, ce = comp_spans[head]
+        as_, ae = ab_spans[head]
+        merged_body = merged_body[:cs] + ab_body[as_:ae] + merged_body[ce:]
+    new_text = (ab_fm + '\n' if ab_fm else '') + merged_body
+    if not new_text.endswith('\n'):
+        new_text += '\n'
+    changed = new_text != ab
+    print(f'[TC-A] {seat}: ported={ported} replaced={len(repl)} typeC={type_c} changed={changed}')
     if execute and changed:
-        ab_p.write_text(new_body, encoding='utf-8', newline='\n')
+        ab_p.write_text(new_text, encoding='utf-8', newline='\n')
 
 
 def tc_b(seat: str, execute: bool):
