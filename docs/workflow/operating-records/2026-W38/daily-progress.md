@@ -28,3 +28,7 @@
 - 巡检兜底补写 @11:40 +08：自上次进度提交 2c54f07d 后新增 1 条 commit：
   - 90089e5a closeout(b3b4-exec-wave): 批令④⑤执行波树 done——五节点全收（BE-1 B3 真源 18 处/BE-2 CAO 域 E1 四追平+七件/BE-3 CTO 域壳身对齐/BE-4 D-13 十五席补录/BE-5 三 host 发布+验收锚批验全过）；发布面 CLAUDE/AGENTS/.claude+.github+session 齐更；TC 18b898e 源侧推平；挂起维持与裁量留痕五笔在卷 @mmc-duty
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:00 +08：自上次进度提交 a77b6584 后新增 2 条 commit：
+  - f06b4874 merge: hub 归一——W38 本地落位（含 W38 补跑+README 周指针翻页）+本地 ADR 合流
+  - fd40626e docs(lg-035): ADR CC Agent(type) spawn 不消费 frontmatter tools allowlist——平台限制发现（FSD 一期试点实测），约束路径改走权限规则面+每席 deny 配置样例+Anthropic /feedback 候选报告件
+- registry：v2.1；今日 registry 提交无变化
