@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（CTO 起草；候 BOD 转 CAO 会签后入 engineering-disciplines.md D-04 族）
 - syncMode: draft
-- lastSyncedAt: 2026-09-14（起草时点见 commit 时刻；本件起草回合未再单跑 date——如实标注起草 commit 时戳为准）
+- lastSyncedAt: 2026-09-14T17:58+0800（date 现查 17:58:28，本回合执行）
 - 触发: 2026-09-14 CTO 席时点申报失实事件（BOD 三源交叉查获）→ 审计 33 条取证出「长任务流体感时间膨胀」现象
 
 ---
