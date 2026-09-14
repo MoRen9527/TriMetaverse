@@ -49,7 +49,27 @@
 - **无别名过渡**（与 TriMC→TriMMC 兼容面先例的区别）：hub 是**纯渲染产物目录**（无运行时消费者，无外部引用），单次迁移+重渲即完成，不留双名——防双名无限延长。
 - **停止线**：步骤 3 diff≠0 → 停手回滚至产物锚+报告。
 
-## 五、与一期并行件同窗
+## 五、启动链引用面（BOD 17:3x 补勘，本席定谳）
+
+**消费者实证（启动链=真实消费者）**：
+- `TriCompany-copilot-host-assets/host-object-manifest.json:1040`：「Standard xiaojia-hub session launch: `claude -n COS --append-system-prompt-file ...\.claude\hub\ceo-chief-of-staff.session.md`」——**13 席标准启动命令逐席记载于此**（文档字段，非可执行脚本）。
+- 本机启动机制=按此命令手工/半自动拉起（无中央 launcher 脚本）；sg 侧=同款命令在 tmux 内。
+- 其余引用=文档（lg-023 等）。
+
+**二选一定谳=保留 `.claude/hub` 目录连接（junction）过渡**，判据四条：
+1. **消费者分布式且非版本化**（manifest 文档 + sg tmux 活会话 + 席重启手工命令）——无法一窗全量更新，"更新启动链"路径不可靠。
+2. **静默失败姿态**（启动链不同步=下次重启读不到手册，且无报错）——风险等级高，必须给兜底。
+3. **junction 成本≈零**（Windows `mklink /J` 无需提权；Linux sg 侧 `ln -s`）——过渡兜底廉价。
+4. **与改名前例区别**：hub 是渲染产物但**有启动链真消费者**（此前误判为纯产物——BOD 补勘探明），故照 TriMC→TriMMC 兼容面先例给过渡别名。
+
+**执行形态**（并入夜航窗）：
+1. `git mv .claude/hub .claude/compass`（13 件）
+2. `.gitignore` 增 `.claude/hub/`（junction 路径=过渡别名不进版本库，防 git 遍历 junction 双计）
+3. `cmd //c mklink /J .claude\hub .claude\compass`（junction 建立，旧路径透明可读）
+4. sg 侧随其拉取窗同法（`ln -s compass hub`）
+5. 过渡终点=**触发式**（manifest 启动命令段更新+sg tmux 全量重启过一轮+文档活件更新——三者齐即删 junction），照改名先例防双名无限延长。
+
+## 六、与一期并行件同窗
 
 - 同窗件：合同瘦身（前置核查指针挪 hub→compass 新址）+13 对文件去重（一期 FSD 工作流）——三者共同回执端=发布管线，合并一次重渲窗（避免多次全量重渲）。
 - 执行窗建议：一期去重对照表出→瘦身 diff 出→**一次窗执行**（管线改+目录迁+重渲+三件回归）。

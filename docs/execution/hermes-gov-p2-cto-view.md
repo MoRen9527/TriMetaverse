@@ -40,9 +40,15 @@
 
 **8 后端清单归册**（备查）：byterover/hindsight/holographic/honcho/mem0/openviking/retaindb/supermemory——均为「外部知识后端」的可插拔实现；我方当前路线=本地优先（knowledge.db），外部后端（supermemory 等）维持 v2.0 的「实验证据不演进」口径。
 
-## 三、c) 新版 hermes 变化（候补勘）
+## 三、c) 新版 hermes 变化（BOD M-SG 通道代勘 e9ec74dd 已回，本席技术主评）
 
-**本机实勘限制如实**：GitHub 直连不稳（星型拓扑：本地不经 GitHub），**上游版本比对需走 M-SG 通道**（BOD SSH 面或 hub mirror）——候窗执行。**本地快照基线**：`reference/hermes-agent/`（vendor 快照，版本戳待与上游对表）。对表项建议：①`plugins/memory/` 新后端增灭②honcho-integration-spec 新版增节③`agent/memory_provider.py` ABC 方法签名变更。**不阻塞本件**（吸收模式已在手）。
+上游 `NousResearch/hermes-agent @5eb99eb`（2026-09-14）vs 本地快照：11 类新增。**对我设计输入直接相关三项深评**：
+
+1. **`hermes_state_*` 模块族（20+ 单一职责文件：state_common/compression/dbfile/errors/fts/gateway/guard/holders/ids/maintenance/messages/portability/readpool/registry/repair/rewind/schema/search/sessions/telegram/titles/usage/wal）=重大架构演化，直接吸收**：会话状态层从单体拆成单一职责模块族+**registry/schema 类总控**。**对消化管道的移植判**：digest 域照此模块族范式组织——建议六件族：`digest_rules`（规则加载/校验）／`digest_executor`（消化执行）／`digest_classify`（三选一阀门）／`digest_render`（结构化输出/五段产物）／`digest_log`（事件/审计）／`digest_registry`（总控+席侧配置聚合）——**防 schema 层单体膨胀**（该演化正是单体膨胀的教训反演）。
+2. **`evals/` 一等公民化**：消化管道验收锚升级参照——我方验证锚五条（§4.6）可组成 `evals/` 式组织（每锚=一 eval 件，管线化可回归）；MVP 不建目录，锚形态先按 eval 件心智写（可测、可回归、可扩展）。
+3. **`skills/plugins/toolsets` 三层分发（核心/可选/目录）**：补我 §二 研究——hermes 不止记忆层可插拔，**技能/工具同样三层生态**；对 compass（手册）+ skill + registry 体系的成熟参照（候二期后半comparing；本期不入消化管道设计）。
+4. **旁证两条**：`hermes_startup_watchdog.py` 与本司 D21/D22 看门狗方案**互为独立印证**（不同团队同遇启动守护问题——方案可信度佐证）；`SOUL.md` 顶层+`default_soul.py` 可编程默认灵魂=我方五件套 soul 溯源对象的最新形态（合同体系吸收轨参照，非本期）。
+5. **本机 snapshots 基线注**：本地 `reference/hermes-agent/` 为旧快照（上游已大演化）——deep 对比（单文件/子树）按需报 BOD 从 M-SG 代取。
 
 ## 四、d) schema 层设计输入（本件核心=真设计缺口补全）
 
