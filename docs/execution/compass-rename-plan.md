@@ -65,9 +65,10 @@
 **执行形态**（并入夜航窗）：
 1. `git mv .claude/hub .claude/compass`（13 件）
 2. `.gitignore` 增 `.claude/hub/`（junction 路径=过渡别名不进版本库，防 git 遍历 junction 双计）
-3. `cmd //c mklink /J .claude\hub .claude\compass`（junction 建立，旧路径透明可读）
-4. sg 侧随其拉取窗同法（`ln -s compass hub`）
-5. 过渡终点=**触发式**（manifest 启动命令段更新+sg tmux 全量重启过一轮+文档活件更新——三者齐即删 junction），照改名先例防双名无限延长。
+3. **junction 建立（2026-09-14 18:3x 预验通过的命令）**：PowerShell `New-Item -ItemType Junction -Path .claude\hub -Target .claude\compass`——**坑定谳**：Git Bash `cmd //c mklink /J` 被 MSYS 路径转换吃参数（`/J`→伪路径），禁用；建立后穿透读取已验证（junction 内文件 Test-Path=True）。
+4. **删除法（终点时用）**：`[System.IO.Directory]::Delete($path, $false)`（.NET 递归=false 只删 reparse point 不跟随目标；**禁 `Remove-Item -Recurse`**——旧 PowerShell 版本会递归进目标误删真身；预验：删链接后目标 13 件完好）。
+5. sg 侧随其拉取窗同法（`ln -s compass hub`，Linux 原生）。
+6. 过渡终点=**触发式**（manifest 启动命令段更新+sg tmux 全量重启过一轮+文档活件更新——三者齐即删 junction），照改名先例防双名无限延长。
 
 ## 六、与一期并行件同窗
 
