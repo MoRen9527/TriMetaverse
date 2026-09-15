@@ -34,4 +34,17 @@
 6. **回滚锚**：`settings.json.bak-<ts>`（数据面）；功能 commit revert（代码面；只增不改无非相关面）
 
 ## 收口区
-（执行席追加：## 收口 + 时间（现查）+ 读数 + 证据指针）
+
+### 收口-FSD（2026-09-15 11:31:18 +0800 星期二，date 现查）
+
+**交付 commit**：TriModel `14efe8e`（fsd 提交，CTO 审据挂此 SHA）——src/api/claude-fallback.ts（新）+routes.ts 接线+ui/index.html（#fb-zone）+test/claude-fallback.test.ts（新）+test/ui-boot.test.ts+scripts 两件。
+
+**读数（四项）**：tests 219 / pass 214 / fail 0 / skipped 5（skip=原有 env-gated）；tsc 清零；JS 语法门过；真浏览器只读渲染验证过（.cto-walkthrough/fb-zone-first-launch.png + fb-zone-findings.json：区块在/三输入 password 态/现状展示 deepseek 现势/禁用链独立/零页面错误）。既有失败逐族归因：**零失败**（昨夜的 ui.e2e.gate W 系段位红昨夜已清零，非本任务面）。
+
+**端点真机活体**（3333 已重启载新代码）：GET 读现值=CEO 手工命令现势（https://api.deepseek.com/anthropic · deepseek-flash[1M]）；带管理令牌附尾4（****2782）✓。
+
+**证据指针**：快照 .cto-walkthrough/fb-zone-first-launch.png；findings .cto-walkthrough/fb-zone-findings.json；测试件 test/claude-fallback.test.ts（11 案）+test/ui-boot.test.ts「直连兜底区」3 案。
+
+**待办（非本席）**：①BOD 真机走查（验收锚①②——**注意真机会写实际 ~/.claude/settings.json**，走查三值建议用现势同值验证幂等「已是该值」或明示替换值）；②CTO 审。**作者侧未点击真机还原按钮**（防误写真文件，点击流由 jsdom mock 全覆盖）。
+
+**跨窗如实注记**：TriCompany `check-sync --all` 报 13/14 漂移=夜航01 任务1（TC-A/C 改组件）→任务2 TMV-1 重渲的**预期中间态**，非本任务引入；该读数供任务2 重渲前基线对照。
