@@ -92,3 +92,8 @@
   - ae89cf2b merge: 回流收编
   - 7c52f717 docs(execution): 模型-额度盘点表 P0 基线 v0.1（应 CFO 23:00 需求规格；BOD-Ops 供三面 1/2/3+4 读数：M-SG bigmodel/年订阅/遮罩 qwH7 ｜ M-本地 deepseek/按量/遮罩 2782 ｜ R-HY 无席配置未验；候补面与四悬置问句在件）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:20 +08：自上次进度提交 d821d319 后新增 3 条 commit：
+  - 1543bf6c docs(execution): 盘点表 v0.3——口径行四要素（目录/时间基准/去重键/族全id清单）+键载体列（settings vs 卡）+现金双方法交叉验证（¥132.40/¥64.46 同量级）+收敛测试（控制台数到可把同户与否变可判定）
+  - 5f810208 merge: 回流收编
+  - 715d9cbe docs(execution): 盘点表 v0.2——P0 最高悬问 A/B（本机 GLM 键 VRyY≠sg qwH7，同账号待控制台）+sg 去重复跑（dup 0.1%/峰值5h 1.53亿）+本机读（GLM 87.8亿/deepseek 16.5亿/现金≈¥132.40）
+- registry：v2.1；今日 registry 提交无变化
