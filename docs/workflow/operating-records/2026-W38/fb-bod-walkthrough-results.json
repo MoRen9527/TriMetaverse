@@ -1,0 +1,130 @@
+{
+  "ts": "2026-09-15T03:40:20.412Z",
+  "settings_path": "C:\\Users\\jedih\\.claude\\settings.json",
+  "steps": [
+    {
+      "name": "env-tokens-present",
+      "pass": true,
+      "detail": {
+        "admin_len": 64,
+        "api_len": 64
+      }
+    },
+    {
+      "name": "A1-区块渲染",
+      "pass": true,
+      "detail": {
+        "zone_visible": true
+      }
+    },
+    {
+      "name": "A2-现状展示",
+      "pass": true,
+      "detail": {
+        "shows_baseurl": true,
+        "shows_model": true,
+        "masked_tail": true
+      }
+    },
+    {
+      "name": "B1-坏地址拒",
+      "pass": true,
+      "detail": {
+        "msg": "服务地址需以 http:// 或 https:// 开头",
+        "sha_unchanged": true,
+        "posts": 0
+      }
+    },
+    {
+      "name": "B2-短密钥零请求",
+      "pass": true,
+      "detail": {
+        "msg": "API 密钥长度不足（至少 16 位），请核对后重填",
+        "posts": 0,
+        "sha_unchanged": true
+      }
+    },
+    {
+      "name": "C1-写入三值",
+      "pass": true,
+      "detail": {
+        "url": "https://open.bigmodel.cn/api/anthropic",
+        "model": "walkthrough-probe[1M]",
+        "tier_all_same": true
+      }
+    },
+    {
+      "name": "C2-其余字段逐字保留",
+      "pass": true,
+      "detail": {
+        "non_target_env_same": true,
+        "top_level_same": true
+      }
+    },
+    {
+      "name": "C3-备份==原文件",
+      "pass": true,
+      "detail": {
+        "backups_new": [
+          "settings.json.bak-2026-09-15T03-40-24-609Z"
+        ],
+        "backup_sha_matches_original": true
+      }
+    },
+    {
+      "name": "C4-无tmp残留",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "C5-成功文案",
+      "pass": true,
+      "detail": {
+        "msg": "兜底直连已写入（https://open.bigmodel.cn/api/anthropic · walkthrough-probe[1M]）。重启会话后生效。"
+      }
+    },
+    {
+      "name": "C6-密钥框清空+现状刷新",
+      "pass": true,
+      "detail": {
+        "key_cleared": true,
+        "current_refreshed": true
+      }
+    },
+    {
+      "name": "D1-幂等明示不重写",
+      "pass": true,
+      "detail": {
+        "msg": "当前已是指定值（https://open.bigmodel.cn/api/anthropic · walkthrough-probe[1M]），无需重写。重启会话后生效。",
+        "sha_unchanged": true,
+        "backups": 1
+      }
+    },
+    {
+      "name": "R1-恢复原文件字节一致",
+      "pass": true,
+      "detail": {
+        "restore_sha_matches": true,
+        "restore_sha": "3933435bad3ebe45",
+        "original_sha": "3933435bad3ebe45"
+      }
+    }
+  ],
+  "observations": [
+    {
+      "page_errors": [],
+      "original_bytes": 1554,
+      "written_bytes": 1607,
+      "trailing_newline_before": false,
+      "trailing_newline_after": false
+    },
+    {
+      "test_backup_removed": true
+    }
+  ],
+  "summary": {
+    "total": 13,
+    "pass": 13,
+    "fail": []
+  }
+}

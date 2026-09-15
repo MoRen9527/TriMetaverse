@@ -1,0 +1,73 @@
+{
+  "ts": "2026-09-15T03:33:26.082Z",
+  "settings_path": "C:\\Users\\jedih\\.claude\\settings.json",
+  "steps": [
+    {
+      "name": "env-tokens-present",
+      "pass": true,
+      "detail": {
+        "admin_len": 64,
+        "api_len": 64
+      }
+    },
+    {
+      "name": "A1-区块渲染",
+      "pass": true,
+      "detail": {
+        "zone_visible": true
+      }
+    },
+    {
+      "name": "A2-现状展示",
+      "pass": true,
+      "detail": {
+        "shows_baseurl": true,
+        "shows_model": true,
+        "masked_tail": true
+      }
+    },
+    {
+      "name": "B1-坏地址拒",
+      "pass": true,
+      "detail": {
+        "msg": "服务地址需以 http:// 或 https:// 开头",
+        "sha_unchanged": true,
+        "posts": 0
+      }
+    },
+    {
+      "name": "B2-短密钥零请求",
+      "pass": true,
+      "detail": {
+        "msg": "API 密钥长度不足（至少 16 位），请核对后重填",
+        "posts": 0,
+        "sha_unchanged": true
+      }
+    },
+    {
+      "name": "fatal",
+      "pass": false,
+      "detail": {
+        "error": "TimeoutError: page.waitForFunction: Timeout 6000ms exceeded."
+      }
+    },
+    {
+      "name": "R1-恢复原文件字节一致",
+      "pass": false,
+      "detail": {
+        "restore_sha_matches": false,
+        "restore_sha": null,
+        "original_sha": "3933435bad3ebe45"
+      }
+    }
+  ],
+  "observations": [],
+  "summary": {
+    "total": 7,
+    "pass": 5,
+    "fail": [
+      "fatal",
+      "R1-恢复原文件字节一致"
+    ]
+  }
+}
