@@ -34,14 +34,16 @@ if [ "${1:---once}" = "--once" ]; then
 else
   INTERVAL="${2:-60}"; prev=""
   while true; do
-    s=$(sample); fp=$(echo "$s" | grep -v '^NOW=' | tr '\n' '|')
+    s=$(sample); fp=$(echo "$s" | grep -vE '^(NOW|ACT)=' | tr '\n' '|')
     if [ "$fp" != "$prev" ] && [ -n "$fp" ]; then
       if [ -n "$prev" ]; then
-        # 变化面判定（事件行）
+        # 变化面判定（事件行；指纹=仓 HEAD+429 态——席位活动时间仅附注，防内部写入刷屏）
         chg=""
         ptmv=$(echo "$prev" | sed -n 's/.*TMV=\([^|]*\).*/\1/p'); ntmv=$(echo "$s" | sed -n 's/^TMV=//p')
+        ptc=$(echo "$prev" | sed -n 's/.*|TC=\([^|]*\).*/\1/p'); ntc=$(echo "$s" | sed -n 's/^TC=//p')
         pe=$(echo "$prev" | sed -n 's/.*E429=\([^|]*\).*/\1/p'); ne=$(echo "$s" | sed -n 's/^E429=//p')
         [ -n "$ntmv" ] && [ "$ptmv" != "$ntmv" ] && chg="仓动作(TMV→$ntmv) "
+        [ -n "$ntc" ] && [ "$ptc" != "$ntc" ] && chg="${chg}仓动作(TC→$ntc) "
         [ "${pe:-0}" != "${ne:-0}" ] && chg="${chg}429态变化(${pe:-?}→${ne:-?}) "
         echo "【事件】${chg}$(report "$s")"
       else
