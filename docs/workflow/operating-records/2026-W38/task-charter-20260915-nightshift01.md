@@ -59,4 +59,12 @@
 - **CP2/CP3 正式过 ✓**（CTO 22:06 正式裁决；其独立复跑与我读数逐位吻合；m0d 归向裁=丙+两加固〔白名单豁免+entry-level sessionBody×13 互补断言〕；2/13 契约不对称登记次批；backport L131 历史冻结确认）。
 - **推仓记录·2026-09-15 22:1x**：TMV `8cc07400..8984a716`（先 merge 收编 sg 侧 `8cc07400` 巡检补写〔回流解法〕再推）+ TriCompany `79027b4..396f5ef`（13 条全落；前夜 root 挡面未复现）。
 - **次批登记**（防遗忘）：①m0d 丙改+两加固执行；②contract schema 2/13 不对称校准（契约/治理面议程）；③合成件处置（check-sync 13/14，D1c 已声明待 git rm）；④`scripts/append-fm-parity.py` 顺手清。
-- **待办**：候 CTO「TMV-2+push 已落」信号 → sg S1-S4（命令单 23:53 CTO 令原样执行，m-duty-cos 留痕）→ 任务2 终收口。
+### sg 四步执行记录（CTO GO 22:08）·2026-09-15 22:0x-22:1x
+
+- **S1 拉取 ✓**：TMV 已处 `d462df9f`（Already up to date，sg 侧有自动跟进）；TC 补拉 68 文件 → `396f5ef`。
+- **S2 软链 ✓**：`/srv/fleet/TriMetaverse/.claude/hub -> compass`（fleet 位执行，root 位误落即退；readlink=compass；穿透 ls=13 件）。
+- **S3 逐席核查 ✓**：m-duty-* **13 席** capture 零读取失败类异常。
+- **S4 终点三条件登记**：①manifest 启动段仍 `.claude\hub`（未更）②tmux 未过全量重启轮（会话 Sep 10 起）③lg-024 计划仍 3 处 hub（未更）→ 三条件均未触发=**软链保留** ✓。
+- **留痕**：S1-S4 全文已 send-keys 入 m-duty-cos（独立 Enter 补发+空框核验；文本落屏在卷）。
+- **⚠ sg 席位配额挡**：m-duty-cos `429[1310]`「每周/每月使用上限，2026-09-16 20:44:33 重置」——账号级；全席可见面扫 1/13 命中（余席未发起调用，下次同阻推定）；不影响 shell 级四步，影响=sg 席位 AI 响应至重置。
+- **待办**：候 CTO 夜航全窗终报（本件收口区已全量在卷）。
