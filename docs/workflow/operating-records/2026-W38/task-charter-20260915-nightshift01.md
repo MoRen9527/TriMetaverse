@@ -56,4 +56,7 @@
 - **BOD 独立复跑（亲跑非转抄）**：employee_source_kit **39 OK**/lg024 **6 OK**/source_publish_check **180 OK**（三套件全绿）；binding 46 OK；lg025_m0d 10 案 **1 红**。
 - **m0d 红独立诊断**：B3/B4 波 `18b898e`（09-14）给 CAO/CTO 两件契约 paths 补 `session_body`（现 2/13 不对称）vs manifest 6 键/席+entry-level `sessionBody`×13 → 严格等式失效，**潜伏红非本窗引入**；归向甲/乙/丙已报 CTO 候裁（BOD 倾向丙+契约 schema 对称另立次批）。
 - **断言不弱化核 ✓**：target-derivation 仍直调 `_derive_host_target`（仅路径段随迁）；lg024 公式切源有注记；新断言为实断言。小注：`scripts/append-fm-parity.py`=一次性辅助入仓（候清）。
-- **待办**：CP2/CP3 正式过（候 CTO）→ 推仓（TMV/TriCompany → sg bare）→ CTO「TMV-2+push 已落」信号 → sg S1-S4（命令单 23:53 CTO 令原样执行）→ 任务2 终收口（含任务0/1 补录已在卷）。
+- **CP2/CP3 正式过 ✓**（CTO 22:06 正式裁决；其独立复跑与我读数逐位吻合；m0d 归向裁=丙+两加固〔白名单豁免+entry-level sessionBody×13 互补断言〕；2/13 契约不对称登记次批；backport L131 历史冻结确认）。
+- **推仓记录·2026-09-15 22:1x**：TMV `8cc07400..8984a716`（先 merge 收编 sg 侧 `8cc07400` 巡检补写〔回流解法〕再推）+ TriCompany `79027b4..396f5ef`（13 条全落；前夜 root 挡面未复现）。
+- **次批登记**（防遗忘）：①m0d 丙改+两加固执行；②contract schema 2/13 不对称校准（契约/治理面议程）；③合成件处置（check-sync 13/14，D1c 已声明待 git rm）；④`scripts/append-fm-parity.py` 顺手清。
+- **待办**：候 CTO「TMV-2+push 已落」信号 → sg S1-S4（命令单 23:53 CTO 令原样执行，m-duty-cos 留痕）→ 任务2 终收口。
