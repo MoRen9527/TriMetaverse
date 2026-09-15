@@ -84,3 +84,7 @@
   - 680087f2 merge: 收编 sg 侧新推进（回流解法）
   - 421be3b4 docs(workflow): 夜航01 sg 四步执行记录——S1-S4 全落（双仓拉取/hub→compass 软链/13 席核查零异常/终点三条件登记=软链保留）；留痕入 m-duty-cos；⚠sg 席位 429 配额挡（0916 20:44 重置）登记
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:40 +08：自上次进度提交 97c05344 后新增 2 条 commit：
+  - 8677aed6 merge: 回流收编
+  - 337f88cd docs(ops): sg 侧近 7 日 burn 曲线（应 CFO 请，transcript usage 只读汇总）——合计≈1.77 亿/99% 集中席位会话/高位稳态非单夜突增；09-15≈0（拒答不计）；口径三声明在件
+- registry：v2.1；今日 registry 提交无变化
