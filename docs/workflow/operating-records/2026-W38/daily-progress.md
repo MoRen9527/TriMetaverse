@@ -66,3 +66,16 @@
   - 293a4d80 docs(gov-p2): 产品半部草案（设计正身会稿）——管道四段产品语义+三层分发定稿+质量基线三指标+不吸收清单；落 docs/execution/ 候 CTO 合稿（D-16）
   - …另有 3 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:10 +08：自上次进度提交 8cc07400 后新增 11 条 commit：
+  - d462df9f docs(workflow): 夜航01 CP2/CP3 正式过+推仓记录——CTO 22:06 正式裁决（读数逐位吻合；m0d 归向=丙+两加固）；TMV 8984a716/TriCompany 396f5ef 推落；次批登记四项
+  - 8984a716 merge: 收编 sg 侧巡检补写（8cc07400）
+  - e8107af4 docs(workflow): 夜航01 追补批执行记录——③62d9c01+4bff853f/②e4f9323/①396f5ef 落定；BOD 独立复跑三套件全绿（39/6/180）+m0d 红独立诊断（B3/B4 波 2/13 契约不对称，潜伏非本窗）；断言不弱化核过
+  - 4bff853f chore(lg-035): 序③ 旧名残活件修（TMV 侧 5 件）——prompts 双件 agent: 字段+docs 双件同孪生改（两仓同值保孪生）+AGENTS.md（经 FADE-002 管线自真源发布，--project-docs-execute changed=1）（fsd 改 cto 审）
+  - 2c68b3bf docs(workflow): 夜航01 任务书收口区补录——任务0/1 证据核录（含 CP1 正式过）+任务2 执行记录（TC-F e5c1660/TMV-1 19f607d5/TMV-2 219f4e75/CHO 缺陷闭环/三套件读数）+追补批挂平面补录（残活①-⑤+8红+fm 断言；④已办 7c24e6b）
+  - 219f4e75 refactor(lg-035): TMV-2 compass 迁移收口——.claude/hub 退役（13 件已入 compass 新址）+junction 别名建立（hub→compass，启动链兜底）+gitignore 防遍历双计
+  - 19f607d5 refactor(lg-035): TMV-1 三 host 全量重渲——28 件更新+compass 13 件新建（TC-A..E 切源后首次全量；A1 tools 退役×14〔13 席+bs 先例〕/A3 前置核查→指针×12/B 型新增×5 席/会话面 B1 增节×12+B2 M-001 删×2；A/C 型零 delta=预期〔CP1 口径修订〕）；CHO 空 fm 缺陷经 FSD 478f3ce 补源后单件重渲闭环；CTO CP2 读数全过
+  - a6894cfc docs(lg-035): 兜底按钮终收口——CTO 审报 APPROVE+F-1 条件小修（凭据键族双载体）→回修 1e07310→BOD 复验：主链走查重跑 13/13 全绿 + F-1 分支独立第二方法 4/4 全绿（钉位临时文件+独立实例+真 HTTP）；链条 14efe8e→6120e08→1e07310
+  - a32e8a7a docs(lg-035): 兜底按钮 BOD 走查收口——run1 抓阻断级缺陷（server.ts 读体仅 PUT→POST 体丢→按钮必 400；真 HTTP 链路层双盲区）→打回→回修 6120e08→run2 13/13 全绿+终态字节恢复；裁决 A 维持（9 键 verbatim，_NAME 系展示名有源）；证据两 JSON+脚本副本入 W38
+  - 8ae4a313 docs(lg-035): 任务书 20260915-兜底按钮 收口回写——FSD 交付 commit 14efe8e（TriModel）+四项读数（219/214/0/5）+真浏览器证据指针+真机走查注记（含 TriCompany check-sync 中间态如实注记）（fsd 改 cto 审）
+  - 1daa329d docs(workflow): 兜底按钮任务书（TriModel web UI：本机 Claude 直连兜底写入）——BOD 铸；CEO 09:3x 令（TriModel 不好用时手填 模型/key/baseurl 直写 settings.json）；face=M 面本地席 FSD，M-004 直达；含验收锚三读+失败姿态+回滚锚
+- registry：v2.1；今日 registry 提交无变化
