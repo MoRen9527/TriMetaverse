@@ -88,3 +88,7 @@
   - 8677aed6 merge: 回流收编
   - 337f88cd docs(ops): sg 侧近 7 日 burn 曲线（应 CFO 请，transcript usage 只读汇总）——合计≈1.77 亿/99% 集中席位会话/高位稳态非单夜突增；09-15≈0（拒答不计）；口径三声明在件
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:10 +08：自上次进度提交 a895f1a1 后新增 2 条 commit：
+  - ae89cf2b merge: 回流收编
+  - 7c52f717 docs(execution): 模型-额度盘点表 P0 基线 v0.1（应 CFO 23:00 需求规格；BOD-Ops 供三面 1/2/3+4 读数：M-SG bigmodel/年订阅/遮罩 qwH7 ｜ M-本地 deepseek/按量/遮罩 2782 ｜ R-HY 无席配置未验；候补面与四悬置问句在件）
+- registry：v2.1；今日 registry 提交无变化
