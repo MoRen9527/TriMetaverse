@@ -90,7 +90,7 @@ POST fail-closed 三态（无令牌配置 503/错误 401/拒写零触碰）｜GE
 
 ## 六、实施分步（双签后动）
 
-1. **sg TriModel 部署（前置·DE/BOD 位·fleet 身份）**：`/srv/fleet/TriModel` 拉当前 dev（含兜底 v1 全链）→ 构建 → `systemctl restart trimodel-config trimodel-proxy` → 探测端点（本方案 F4 态消解）。
+1. ~~**sg TriModel 部署（前置·DE/BOD 位·fleet 身份）**：`/srv/fleet/TriModel` 拉当前 dev（含兜底 v1 全链）→ 构建 → `systemctl restart trimodel-config trimodel-proxy` → 探测端点（本方案 F4 态消解）~~——**已执行毕（COS，2026-09-16 02:4x）：sg TriModel ea522e2→1e07310 部署完成，端点实测 GET 200（读 13 席真值）/restore 401 fail-closed ✓；F4 态消解，version_unsupported 探测保留为常态防御**。
 2. **本地 TriModel 薄代理**：新文件 `src/api/claude-fallback-sg.ts`（status/restore 两 handler + ssh spawn 封装）+ `routes.ts` 两行接线——既有端点零改动。
 3. **UI 两栏**（CPO §三 形态）：TriMLC 栏（v1 复用）在前、TriMMC 栏在后；sg 栏凭据会话内存处理。
 4. **测试**：单测（ssh spawn 契约 mock）+ **真链路两案**（对 sg 实机：status 读通+写落盘读回）+ 零落盘断言（sg 流程前后本机文件面 diff=空）+ 凭据痕迹断言（argv/日志扫描零命中）。
