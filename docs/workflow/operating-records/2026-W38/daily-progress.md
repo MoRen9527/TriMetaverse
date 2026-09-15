@@ -79,3 +79,8 @@
   - 8ae4a313 docs(lg-035): 任务书 20260915-兜底按钮 收口回写——FSD 交付 commit 14efe8e（TriModel）+四项读数（219/214/0/5）+真浏览器证据指针+真机走查注记（含 TriCompany check-sync 中间态如实注记）（fsd 改 cto 审）
   - 1daa329d docs(workflow): 兜底按钮任务书（TriModel web UI：本机 Claude 直连兜底写入）——BOD 铸；CEO 09:3x 令（TriModel 不好用时手填 模型/key/baseurl 直写 settings.json）；face=M 面本地席 FSD，M-004 直达；含验收锚三读+失败姿态+回滚锚
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:20 +08：自上次进度提交 517af775 后新增 3 条 commit：
+  - b62551cc docs(workflow): 夜航01 全窗终报入卷——窗口闭环 ✓（CTO 22:10 终报；次批八项登记，⑧517af775 已收编闭环；sg 429=1310 账号配额族归口 CFO；junction 保留）
+  - 680087f2 merge: 收编 sg 侧新推进（回流解法）
+  - 421be3b4 docs(workflow): 夜航01 sg 四步执行记录——S1-S4 全落（双仓拉取/hub→compass 软链/13 席核查零异常/终点三条件登记=软链保留）；留痕入 m-duty-cos；⚠sg 席位 429 配额挡（0916 20:44 重置）登记
+- registry：v2.1；今日 registry 提交无变化
