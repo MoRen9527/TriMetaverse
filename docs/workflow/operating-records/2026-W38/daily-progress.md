@@ -116,3 +116,11 @@
   - 79803dac merge: 回流收编
   - 5a2212b3 docs(execution): 盘点表 v0.9——CEO 修正峰谷 3:1（GLM 高峰=3×非高峰；deepseek 才 2×）重算：11 日 315,709 分/周周期 186,536=133.2%/打穿提前至 09-14 00:14/5h 越线 205 样点/5h 峰 106%；错峰杠杆升为最高 ×3；旧 2× 读数作废留痕
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:00 +08：自上次进度提交 c028ab3a 后新增 6 条 commit：
+  - c8e77e34 merge: 回流收编
+  - c22f722f docs(workflow): M-SG 复工任务书（CEO 令：服务域积压批）——B3/B4 候批清单 6 组放行+B4 扫尾 ~151 件+夜航次批服务域面两项（tmux 重启轮/TC 回流）+COS 席位缺口转呈；前置=LG-036 收官+配额重置 20:44
+  - 0e8475b1 docs(lg-036): 方案 §六 步1 注记部署前置已消解（COS 02:4x 执行：sg TriModel ea522e2→1e07310，端点实测 GET 200/restore 401 fail-closed ✓；F4 态消解，version_unsupported 探测保留为常态防御）
+  - fdad1871 docs(fallback-dual): CPO 会签记录——签（APPROVE）：四要件全达标+R1-R5 认可；落地注记两条（sg 影响面文案/凭据不保存可感知化，诚实 UI 族）；观察项一条（version 探测精确化留实现裁）
+  - c6a6e512 docs(lg-036): 直连兜底两套·sg 写入通道技术方案（CTO 域）——选型=乙案本地薄代理+ssh 管道转发 sg 现端点（写入真 sg 侧/sg 零新代码/本机零落盘）；凭据交付五规则（stdin 管道零 argv/SEC 日志白名单/表单会话内存/admin-gated 尾4）；UI 两栏数据契约（本机前 sg 后+人话态词表）；含双机活体实勘七项（sg 端点缺席=部署前置项/sg TriModel=fleet 进程 homedir 目标位天然正确）；实施五分步+验收锚映射+风险表
+  - 838a699d docs(fallback-dual): CPO 产品定义——直连兜底分 TriMMC(sg)/TriMLC(本机) 两套（独立区两栏/互不串写/应急独立性/凭据不跨机；sg 通道待 CTO 技术方案，D-15 联审）
+- registry：v2.1；今日 registry 提交无变化
