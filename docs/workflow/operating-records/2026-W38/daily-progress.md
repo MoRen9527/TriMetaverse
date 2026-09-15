@@ -45,3 +45,24 @@
   - 6fc6c900 docs(治理体系二期): CTO 技术主笔意见——hermes 对标四件深研（honcho porting 六模式适用性/八后端 ABC 架构教训/新版候 M-SG 通道对表）+schema 层设计输入（消化规则声明式形态+async prefetch 执行协议+注入页产物契约+基座衔接+验证锚五条）；技术主笔件候 COS 合流（CEO 13:5x 立项+16:3x 组局）
   - 91954808 docs(gov-p2): CPO 产品视角意见——hermes 对标四问（注入页形态总纲/员工-全员边界与升格管道/沉淀定义与体积预算/schema 三决定缺 reject+escalate/13 对去重先收割再切断）
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-15（周二）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:20 +08：自上次进度提交 0beab588 后新增 18 条 commit：
+  - f160c587 merge: 收编 sg 侧并行线（955d2c9）
+  - bdb764d3 docs(lg-035): ruling §五 补 D1c 步序漏项（5.5 复合件退役注记头）——落点勘正=TriCompany 源侧复合件 13 件，非 TMV 发布拷贝位（发布拷贝=重渲活产物，注记会被 TMV-1 覆盖或污染 diff=0 不变量）；CP1 实勘发现 §三有 §五漏列，正身准确性补列
+  - 45b143c9 docs(workflow): 夜航01 任务书（LG-035 收敛窗：FSD 十步 1-5+BOD 十步 6-10+sg 四步；CP1/CP2/CP3 检查点锁序）
+  - 3363a740 docs(lg-035): 终稿 §五 补命名唯一性判域定谳——分型卡内唯一、跨类型同名不设硬门（命名空间分型，层2 类型标签消歧）；跨型撞名制度化解法=迁移/自愈命名约定（#时段/#默认/「集」后缀族+CEO 命名），22:3x 命名偏差事件定谳口径
+  - f22c7ee2 docs(lg-035): schema v4 终稿 v1.1 增补（CEO 22:12 粒度令）——time 型=命名多窗整组+窗级模型(windows:[{start,end,entry_id}],规则级 entry_id 退役)；幂等判据甲扩为版本门+形态门双门(22:12 前过渡形态含 FSD 按模型归并版进重迁)；迁移归并=现役三窗两模型→1条「三窗切换」+1条「默认模型」整组；apply 每窗一 schedule(id 加窗序)；守卫窗级化(悬挂指名下移窗级/重叠同策略摊平跨实体/条目守卫含窗级引用)；FSD 修正令项入 §七.6
+  - 2eeb1f31 docs(lg-035): TriMMC 卡 schema v4 终稿（三实体·CTO 收口）——裁决0 card.rules 同名翻型(数组→字典,version 2→4)+三实体分型字段制+boot 迁移器幂等三判据(甲版本/乙半态/丙原子不落盘)+求值链分型分流(引擎零改动,18:00保形三锚)+守卫族全矩阵(条目守卫补被规则引用)+quota MVP 边界(钩子位进本批,信号实接联调另排)+活动策略词汇定稿；FSD 层1任务面即解锁
+  - 15e3ab84 docs: 补注草案增 §六 实证案例（BOD 建议入正文）——案例甲「纪律起草同回合复发」（占位符+假出处同期复发=机制必要性铁证）；案例乙「自证格式启用首回合即抓违例」（机制立竿见影正面样本）
+  - 33941481 fix: 补注草案 lastSyncedAt 校正为真查值（17:58:28 date 本回合执行；前版误注「未跑 date」）——本件语境下元精度满分纪律
+  - 327c0768 docs: 对时机制 AI 特性补注草案（D-04 族附注）——感知缺陷非诚信缺陷定性（无内源时钟结构性根因）+三型易发场景（长批次复利漂移最危）+五条机制对治（自证格式/禁占位符/批量重锚/跨席抽验/禁二次加工）+判读序（感知缺陷→机制绕过→故意绕过才升级诚信）；候 BOD 转 CAO 会签入册
+  - 3937f6ac fix(lg-035): 变换引擎 TC-A 重构（composite 基底+段级替换法）——修正两预检缺陷：①agent-body 已内嵌 frontmatter（原重建法误剥→保留 ab fm）②复合件 frontmatter 后有前导身份段（段扫描盲区→composite 基底天然携带）；FSD 席实物 trial 验证（15 段序=composite 完全对齐+零重复段+第 8 条 CodeJoin typeC 并入）后回退保树净
+  - 64dc16b4 docs(lg-035): 合同瘦身变换引擎（夜航窗执行件）——TC-A 内容收敛（35 段迁入+13 段差判向+序对齐）/TC-B frontmatter 填实/TC-C 前置核查迁移/TC-D M-001 席内删/TC-E manifest 切源；dry-run 全绿（13 席 ported=35 吻合/TC-D 双席/TC-E 13 条；DE 席无前置核查段=设计差异 skip 正确）
+  - 3db0b7f5 docs(lg-035): 合同瘦身 CTO 消费裁定——格式验证合格冻结+D1-D4 裁定（D1 agent-body 真源化/内容收敛+manifest 切源+复合件降指针；D2 M-001 归位；D3 命名列批2；D4 frontmatter 随窗）+CTO 复核新发现（同段内容级分叉 13 处三型判向：A composite 冗余重复×5/B agent-body 新行未渲染×6/C composite 新行×2）+前置核查迁移三步+夜航窗十步执行序（分 commit+停止线）
+  - b52a6898 docs(lg-035): compass 方案 junction 执行命令预验更新——PowerShell New-Item -ItemType Junction（Git Bash cmd //c mklink /J 被 MSYS 路径转换吃参数=坑定谳）+删除法 [System.IO.Directory]::Delete(false) 禁 Remove-Item -Recurse；预验实证（穿透读取通+删链接目标完好）；夜航窗核心步骤降险完毕
+  - 54bc7e3b docs(治理体系二期): 设计正身会稿件（CTO 技术主笔）——消化管道四段产品×技术咬合+digest 域六件族（state_* 模块族教训吸收防单体膨胀）+三层分发+org/shared 重定义+六验收锚三质量指标+上游八项吸收+排程避夜航窗；底本=合流终版三席件全齐（CEO 18:0x 终批转正身，D-16 流程）
+  - 293a4d80 docs(gov-p2): 产品半部草案（设计正身会稿）——管道四段产品语义+三层分发定稿+质量基线三指标+不吸收清单；落 docs/execution/ 候 CTO 合稿（D-16）
+  - …另有 3 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
