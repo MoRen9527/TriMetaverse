@@ -47,4 +47,13 @@
 - ⑤ 测试 fixture——**豁免**（CTO 实勘：探针数据+配对断言强度依赖旧名同值）·不动
 - 8 红修法：publish 7 处期望随迁（**断言不弱化**硬要求：target-derivation 须保推导逻辑被验）+lg024 公式切 agent-body 源 ·FSD
 - fm≡agent-frontmatter 断言入 `employee_source_kit_validation`（前置对齐：CEO/rd-trainer af 件→agent-body 同值；CHO 已齐）·FSD
-- **待办**：FSD 批回执（三套件全绿全量读数）→ BOD 独立复跑 → CP2/CP3 正式过 → 推仓（TMV/TriCompany → sg bare）→ CTO「TMV-2+push 已落」信号 → sg S1-S4（命令单 23:53 CTO 令原样执行）。
+### 追补批执行记录·2026-09-15 22:0x-22:2x（date 现查）
+
+- **③ 残活**：TC `62d9c01`（prompts 双件+docs 双件同孪生+AGENTS 真源 4 处）+ TMV `4bff853f`（prompts/docs 同改+AGENTS.md 经 FADE-002 自真源发布 changed=1、同值核 True）✓
+- **② fm 对齐+②b 断言**：TC `e4f9323`（CEO name/description+rd-trainer description → agent-body 同值；断言入场，含 CHO 型「无 fm 段」案+双反例 fixture）✓
+- **① 8 红**：TC `396f5ef`（publish 7 处期望随迁+lg024 组合公式切实源=agent-body）✓
+- **④ 契约**=`7c24e6b`（前节）✓；**⑤ 豁免** ✓
+- **BOD 独立复跑（亲跑非转抄）**：employee_source_kit **39 OK**/lg024 **6 OK**/source_publish_check **180 OK**（三套件全绿）；binding 46 OK；lg025_m0d 10 案 **1 红**。
+- **m0d 红独立诊断**：B3/B4 波 `18b898e`（09-14）给 CAO/CTO 两件契约 paths 补 `session_body`（现 2/13 不对称）vs manifest 6 键/席+entry-level `sessionBody`×13 → 严格等式失效，**潜伏红非本窗引入**；归向甲/乙/丙已报 CTO 候裁（BOD 倾向丙+契约 schema 对称另立次批）。
+- **断言不弱化核 ✓**：target-derivation 仍直调 `_derive_host_target`（仅路径段随迁）；lg024 公式切源有注记；新断言为实断言。小注：`scripts/append-fm-parity.py`=一次性辅助入仓（候清）。
+- **待办**：CP2/CP3 正式过（候 CTO）→ 推仓（TMV/TriCompany → sg bare）→ CTO「TMV-2+push 已落」信号 → sg S1-S4（命令单 23:53 CTO 令原样执行）→ 任务2 终收口（含任务0/1 补录已在卷）。
