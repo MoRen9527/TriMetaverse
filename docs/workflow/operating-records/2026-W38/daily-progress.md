@@ -124,3 +124,7 @@
   - c6a6e512 docs(lg-036): 直连兜底两套·sg 写入通道技术方案（CTO 域）——选型=乙案本地薄代理+ssh 管道转发 sg 现端点（写入真 sg 侧/sg 零新代码/本机零落盘）；凭据交付五规则（stdin 管道零 argv/SEC 日志白名单/表单会话内存/admin-gated 尾4）；UI 两栏数据契约（本机前 sg 后+人话态词表）；含双机活体实勘七项（sg 端点缺席=部署前置项/sg TriModel=fleet 进程 homedir 目标位天然正确）；实施五分步+验收锚映射+风险表
   - 838a699d docs(fallback-dual): CPO 产品定义——直连兜底分 TriMMC(sg)/TriMLC(本机) 两套（独立区两栏/互不串写/应急独立性/凭据不跨机；sg 通道待 CTO 技术方案，D-15 联审）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:10 +08：自上次进度提交 25cebf61 后新增 2 条 commit：
+  - 74444c20 merge: 回流收编
+  - 47d3ddb6 docs(ops): M-SG 干活监控三件套落盘——watch 脚本（仓 HEAD/席位活动/429 态三标志，--once/--loop 双模）+定时留痕任务 MSG-Work-Watch（15min→.fade/msg-work-watch.log）+流式监视基线上线（首采即抓到 sg 巡检补写 25cebf61）
+- registry：v2.1；今日 registry 提交无变化
