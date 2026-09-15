@@ -97,3 +97,12 @@
   - 5f810208 merge: 回流收编
   - 715d9cbe docs(execution): 盘点表 v0.2——P0 最高悬问 A/B（本机 GLM 键 VRyY≠sg qwH7，同账号待控制台）+sg 去重复跑（dup 0.1%/峰值5h 1.53亿）+本机读（GLM 87.8亿/deepseek 16.5亿/现金≈¥132.40）
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-16（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:10 +08：自上次进度提交 d4a606d1 后新增 4 条 commit：
+  - d0b1fbc9 docs(execution): 盘点表 v0.6——582M 标记跨平台占位（正解=后台窗值反推 GLM 因子）+每日对账告警线入件（7d 3.5B/4.5B、5h 7亿/9亿）+对账工具两件落 W38（b 项即刻执行件）
+  - e067d9e8 docs(execution): 盘点表 v0.5——账户级合并读数入件（峰5h=9.97亿/本机占99.9%/后台侧估5.82亿）+校准行因子语义三则（按id分行/版本化/GLM未锚只报转录侧）
+  - 591e26e8 merge: 回流收编
+  - 592baacd docs(execution): 盘点表 v0.4——P0 定谳 A 档（CEO 直答：本机 VRyY 与 sg qwH7 同账号）⇒ 闸门账户级+耗尽主贡献=本机+兜底按钮共享额度警示；口径行增「转录侧↔后台校准行」（后台 5.6 亿锚，因子 1.7×/2.9×）
+- registry：v2.1；今日 registry 提交无变化
