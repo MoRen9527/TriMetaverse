@@ -182,3 +182,7 @@
   - e6f10ade docs(workflow): B4-sweep-b8 批毕切账回填——CFO 实测 5 件转录 129 调用 26.79M tok，26M 带沿首破 +3.0%，817.42 分闸内，批9 带沿复核批
   - fdaff4a8 closeout(b4-sweep-b8): B4 扫尾批8（DE 域 8 件）五席联审收口——08 系两代并存第二例坐实（CSO+DE 并批收编提案强化）/命名反转型首例（小布定谳归 CHO/CEO）/名址精度失配新类型（全司核查入 LG-024 窗提案）/群 D 扩员/execution 标注群 5 例/session-body 八批单件最高评级四席同认+树 done @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:50 +08：自上次进度提交 0c6b5c29 后新增 2 条 commit：
+  - f0dc9cf1 docs(workflow): B4-sweep-b9 带沿复核判定——CFO 实测 28.40M tok 二连破 +9.2%，868.37 分闸内；条件④触发：重启测算呈 BOD+带位修正 30M
+  - 0889844d closeout(b4-sweep-b9): B4 扫尾批9（FSD 域 9 件）五席联审收口——09 系预判坐实（FD 件组=08 系收编模板基准）/E2 标杆全落席/正名 FD 分裂根因闭环（任务3① 合流）/C-2 命令版扩围 live 地雷/v3.1 疑义跨批闭环/assets 勘误 CAO 自纠+值席复核（批7/8 悬空框架收回）+树 done @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
