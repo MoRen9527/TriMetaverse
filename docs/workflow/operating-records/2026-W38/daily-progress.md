@@ -151,3 +151,7 @@
   - deca8d33 docs(workflow): B4-sweep-b2 批毕切账回填——CFO 实测 5 件转录 160 调用 16.12M tok 全 Flash，非高峰 576.70 分闸内，批3 闸门开
   - 2f5057ac closeout(b4-sweep-b2): B4 扫尾批2（COO 域 9 件）五席联审收口——五意见件 433 行+汇总（共识 8/分歧 2/红线② E2 候 CEO 一裁 COO 名实追平/挂起 P2-P4/候批执行 12 项）+树 done+任务书批2 注记；增量=supervises 空载 CSO 线反证/⑦督办权界缺 contract 列/TriDev 旧名族分歧/compass live COO:93 TriMC 句 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:20 +08：自上次进度提交 4f597ec5 后新增 2 条 commit：
+  - ebb798b1 merge: 回流收编
+  - 84217556 docs(workflow): M面优劣档案任务书（CEO 令：项目真源级 M 面优势与局限文档+对照 checklist）——CAO+CPO 共建/CTO 技术核；首批 L1=Windows SSH 伪终端缺陷（判定=算，可绕过非需开发）+L2=本机 TriModel 非自启候核
+- registry：v2.1；今日 registry 提交无变化
