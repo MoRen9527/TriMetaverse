@@ -1,0 +1,34 @@
+{
+  "treeId": "b4-sweep-b3-cos",
+  "title": "B4 扫尾批·批3（COS 域 9 件）五席联审——复工批任务2 第三批",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+批2 切账回填（deca8d33）后闸门开",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-16",
+  "face": "m-duty-cos（值席编排；本批靶标=本席自家域，照 CPO 席批1 自域先例）",
+  "batchMeta": "批号=B4-sweep-b3·域=COS（source-agents/ceo-chief-of-staff）·时点=2026-09-16 22:1x +08（错峰窗）·席位=COS/CTO/CAO/CPO SendMessage 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B3-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见（批1/2 同形态）；意见件落本树 reports/"
+    },
+    {
+      "nodeId": "B3-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线"
+    },
+    {
+      "nodeId": "B3-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告；D-27 销账锚=树路径+收口报告",
+  "notes": "按域 sequential 批3；批1/2 共识基线（次批③窗/E2 命名追平/悬空落点/衍字精度/compass live 全链）作跨批对照",
+  "closeout": "reports/b3-closeout.md（2026-09-16T14:23:50Z）；五席意见件 5 份 587 行+汇总件 b3-summary.md"
+}
