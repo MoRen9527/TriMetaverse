@@ -173,3 +173,8 @@
 - 巡检兜底补写 @23:20 +08：自上次进度提交 a59078e4 后新增 1 条 commit：
   - bbe61844 docs(workflow): B4-sweep-b6 批毕切账回填——CFO 实测 5 件转录 143 调用 24.22M tok 全 Flash，非高峰 753.83 分闸内，批7 闸门开
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:30 +08：自上次进度提交 8e8e4813 后新增 3 条 commit：
+  - a0d03db6 docs(workflow): CFO 认签 26M 缓涨带——b7 触线评估闭环，系列适用四条件下生效（测算 5h 软闸 70%）
+  - 2f48548e docs(workflow): B4-sweep-b7 批毕切账回填——CFO 实测 5 件转录 129 调用 25.12M tok 全 Flash，非高峰 781.69 分闸内，批8 闸门开
+  - 2ed54d9c closeout(b4-sweep-b7): B4 扫尾批7（CSO 域 8 件）五席联审收口——域级总判=三世代并存+08 系活化石（整体收编批提案采）/候裁群 D 立案（合并件定性 CHO+CTO 联签）/E2 缺锚型子案分立（contract 小成=七域唯一）/reports_to=COO 全司唯一特例确认案/assets 路径三读并登/实勘申报样板三席认证+树 done @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
