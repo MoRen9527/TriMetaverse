@@ -202,3 +202,7 @@
   - 168c5041 merge: 回流收编
   - 2d241d29 docs: 远控方法迁位（CEO 裁：M 面档案只记优劣势）——L4 迁出优劣档案→独立成文 docs/execution/windows-seat-remote-control-runbook.md（Windows 席位窗口远控 runbook：四坑表+远控五步法+BOD 代起进程前置+单次调用要点）；档案变更记录追加迁出行
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:30 +08：自上次进度提交 aba7d8da 后新增 2 条 commit：
+  - 34c637d7 merge: 回流收编
+  - 665c407b docs(wiki-inbox): 小布 inbox 投喂——Windows 席位窗口远控 runbook 副本（正身 docs/execution/ 同名件 2d241d29；未来 wiki 输入；CEO 令）
+- registry：v2.1；今日 registry 提交无变化
