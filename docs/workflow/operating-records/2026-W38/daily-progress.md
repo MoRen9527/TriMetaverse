@@ -167,3 +167,6 @@
   - e0c5d5a5 docs(workflow): B4-sweep-b5 批毕切账回填——CFO 实测 5 件转录 154 调用 22.21M tok 全 Flash，非高峰 747.65 分闸内，批6 闸门开
   - 4740138c closeout(b4-sweep-b5): B4 扫尾批5（CHO 域 9 件）五席联审收口——汇总（正面五项/E2 第 3 案三案并案候 CEO/headcount 12vs13 席籍候裁/handoff 悬空+双载体矛盾/description 折行丢字新种/C-2 compass 勘向 3/13 扩实证/L32 动议定谳首例/候批执行 11 项）+树 done @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:10 +08：自上次进度提交 3284a055 后新增 1 条 commit：
+  - 24814baf closeout(b4-sweep-b6): B4 扫尾批6（CMO 域 9 件）五席联审收口——汇总（正面四项含 CMO session-body 纪律密度六批最高/E2 第 4 案四案并案候 CEO/悬空标注按面分治升格批量标注/批3 品牌候办销账+值席勘误留痕/C-2 compass 勘向累计 4/13/候批执行 9 项）+树 done @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
