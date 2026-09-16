@@ -198,3 +198,7 @@
   - 3a57237a docs(task-charter): M 面优劣档案收口-CPO 节——三要点读数+候门标注（CAO 校/CTO 事实核）
   - e5ad7c1a docs(product): M 面优势与局限首版（CPO 起草候 CAO 校）——S1-S6 优势经营语义/L1-L2 局限四档/L1 产品化判定=暂不入待办记录在案/checklist 三段形态
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:10 +08：自上次进度提交 e1579066 后新增 2 条 commit：
+  - 168c5041 merge: 回流收编
+  - 2d241d29 docs: 远控方法迁位（CEO 裁：M 面档案只记优劣势）——L4 迁出优劣档案→独立成文 docs/execution/windows-seat-remote-control-runbook.md（Windows 席位窗口远控 runbook：四坑表+远控五步法+BOD 代起进程前置+单次调用要点）；档案变更记录追加迁出行
+- registry：v2.1；今日 registry 提交无变化
