@@ -42,3 +42,25 @@
 - **验证**：13 席重启载新配置 → 复派开工 → 转录面实测 **6 次调用全 `GLM-5.3-Flash`** ✓。
 - **经济**：Flash 积分系数（2.3/0.56/8）≈ GLM-5.3（6.9/1.7/24）的 1/3——同等工作省 ~2/3 额度。
 - 附注：`[1M]` 后缀未带（沿用本环境 Flash 类不带 1M 的惯例）；如需保留 1M 窗口，改 `GLM-5.3-Flash[1M]` 一条命令可复。
+
+## 收口-任务1（2026-09-16T13:17:53Z＝21:17:53 +08 现查；执行席=COS 值席）
+
+- **判定：六组全数核销——09-14 批令④⑤执行波已全部落地，本批复查零重复执行**。执行波收口=90089e5a（树 `2026-W38/trees/b3b4-exec-wave/`+BE-5 收口报告，2026-09-14 11:5x）。
+- 逐组核销（本批复查=sg 真源现文实读）：
+  1. 组1 CLAUDE.md:60+agents-md:22 → BE-1 落地；真源现文=CPO 终版措辞原文（中央摘要+宪章真源指针+附录归档尾注），TMV 发布面同文 ✓
+  2. 组2 AGENTS.md L72-78 → BE-1 落地（初版 TriCompanyCEOChiefOfStaff）后经 09-15 夜航01 序③ 62d9c01 勘正为 CEOChiefOfStaff（copilot 按名绑定失配级）；现文退役名零命中 ✓
+  3. 组3 CAO 治理真源三处 → BE-2 正源化；现文 memory+agent-body 均 TriCompany 首位+「TriMetaverse 同路径字节级副本」注记 ✓
+  4. 组4 两席 paths 补 session_body → BE-2（CAO）+BE-3（CTO）落地；2/13 不对称残余经 CTO 2026-09-15 裁定**登记夜航01 次批③校准**（夜航01 终报遗留③在卷），本批零动作 ✓
+  5. 组5 CAO memory:19 → BE-2 择「候初始化」标注案（目录未建，标注在卷）✓
+  6. 组6 可选小修集 → BE-1 八+十处覆盖（Key documents 补 project.md/白皮书、括注泛化、MD022、Common Commands 路径两要素、:17/:25 降权注、:88 补路径、SOO 适用域注、:78 归属括注全、primary 发布拷贝口径、跨机现势注）✓
+- 账实注记：本任务书铸于 09-16 03:0x，清单自 bb2-summary §五平移未核执行波现势（执行波收口在先）；按「台账即真源，账实不符先核事实再改账」转核销处理，非扩大解释。
+
+## 收口-任务3（2026-09-16T13:17:53Z＝21:17:53 +08 现查；执行席=COS 值席）
+
+- **①tmux 全量重启轮（夜航01 次批⑥ sg 部分）**：重启=BOD 侧已执行（13 席 tmux 20:59:30-44 新建+进程 13 双验，同任务4 形态载 compass 手册+GLM-5.3-Flash）；本批补两级验证——13/13 banner 面读通（CLI+模型+角色名实读）+12 席零动作探测 **12/12 应答**（9-32s，各自报手册正名+模型=append-system-prompt 链载入实证；本席=第 13 席直接实证）→ **启动链读通 13/13 全绿 ✓**。
+- 观察项（不阻收口）：FSD 席自报「寻址一律正名 FD」、STE 席自报「正名=ST」，与 D-13 名册名（FSD/STE）存口径差——候名址域（CAO/CTO）对表，同族于 62d9c01 copilot 按名绑定教训。
+- **②TC GitHub 回流归账（夜航01 次批⑦）**：
+  - 实勘：GitHub `MoRen9527/TriCompany.git` dev 尖=**b3a450d（恰为本系主）**；sg 工作仓/裸仓 dev=396f5ef，b3a450d 系其严格祖先（09-15 22:1x dev 推仓 396f5ef 携入）→ **回流半环（GitHub→M-SG）零差口，事实闭环**（`rev-list b3a450d..HEAD`=20，全为 sg 领先侧）。
+  - 重推半环（sg→GitHub，照先例）：推前验尖 b3a450d 未动 → 快进推送 → **拒**：`Permission to MoRen9527/TriCompany.git denied to deploy key`——github-mirror 键=TMV 仓 deploy key（仓域限定），TC 仓无写凭据。按冲突即停条款止推。
+  - 残差登记：GitHub TC 停 b3a450d、落后 sg 20 commits（全 LG-035 夜航01 链，均已评审收口），候授权侧扩凭据（账户级键/机器用户/Token 三择）后一次快进推平；与 dev 侧 GitHub 推墙（无凭据族）、TriRMC 直推凭据缺失同族三分，归口授权侧。
+  - 证据：ls-remote 读数×3（初探/推前/推后通道在）、push 全量 stderr（deploy key 拒因原文）、本地 merge-base/rev-list 读数。
