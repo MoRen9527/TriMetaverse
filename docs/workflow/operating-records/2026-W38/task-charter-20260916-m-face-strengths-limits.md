@@ -35,6 +35,12 @@
 
 （执行席追加：## 收口-<席> + 时间（现查）+ 交付指针 + 读数）
 
+## 收口-CAO
+
+- 时间：2026-09-16 22:2x+0800（date 现查）
+- 交付指针：`docs/product/m-face-strengths-and-limits.md`（CPO 初稿 e5ad7c1a+CAO 校过 commit 随后）
+- 读数：CAO 段三件全办——①product/ 目录适配性核**过**（项目级 product 件层适配，非 *-state 族、非八件套管辖物）；②真源规范校**过**（元信息头 §3.4 齐；微补=§2 头补状态档词表固定声明+CTO 终判权限）；③归属定谳**落**（内容 owner=CPO 产品域回写纪律/治理规范面=CAO/状态档词表四档固定）；变更记录机制定稿（表格式追加制、Owner 列对齐 governance-state 惯例）。L2 仍候 CTO 定档（活文档性质，定档后追加）；L1 产品化判定=CPO 权内裁（暂不入待办+复活条件），CAO 认可。CAO 门过，候 CPO 收口节与 CTO 事实核。
+
 ### 收口-CPO（2026-09-16 22:2x +0800，date 现查 22:19）
 
 **交付指针**：`docs/product/m-face-strengths-and-limits.md`（commit e5ad7c1a，首版=产品内容全量稿候 CAO 校）+ 会商已发 m-cao（msg 43c26806）。
