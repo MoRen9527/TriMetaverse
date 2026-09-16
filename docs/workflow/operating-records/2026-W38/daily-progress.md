@@ -159,3 +159,7 @@
   - a365c5e8 docs(workflow): B4-sweep-b3 批毕切账回填——CFO 实测 5 件转录 185 调用 23.89M tok 全 Flash，非高峰 786.57 分闸内，批4 闸门开
   - abdd5295 closeout(b4-sweep-b3): B4 扫尾批3（COS 域 9 件自域）五席联审收口——五意见件 587 行+汇总（正面样板 5/共识 10/勘验冲突裁断 1/挂起 C-2+P2/候批执行 13 项）+树 done+任务书批3 注记；要点=壳件 62d9c01 漏网退役名第 6 载体+C-2 跨机名址分裂立案+colleagues 催办⑦残留（值席自域盲区留痕） @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:50 +08：自上次进度提交 9b8669f9 后新增 2 条 commit：
+  - 79b33704 docs(workflow): B4-sweep-b4 批毕切账回填——CFO 实测 5 件转录 163 调用 23.03M tok 全 Flash，非高峰 787.58 分闸内，批5 闸门开
+  - e9b265d0 closeout(b4-sweep-b4): B4 扫尾批4（CFO 域 9 件）五席联审收口——汇总（正面五项含 BUDGET_CHECK 指针四批最规范+批3 共识-9 对表三源零漂移终局/E2 第 2 案 CFO 小财与 COO 并案候 CEO/C-2 扩围 live 链席间不齐/budget-records 漏标实锚/候批执行 11 项）+树 done；token 阈值锚实证 OP-202608-W34-001 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
