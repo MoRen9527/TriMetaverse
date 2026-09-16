@@ -2,7 +2,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/product/m-face-strengths-and-limits.md
 - syncMode: source-only
-- lastSyncedAt: 2026-09-16T22:25+0800
+- lastSyncedAt: 2026-09-17T03:58+0800
 - 上位令: CEO 2026-09-16 22:1x（BOD 铸任务书 `2026-W38/task-charter-20260916-m-face-strengths-limits.md` 84217556）
 - 共建: CAO（骨架/真源规范/归属——本版骨架为 CPO 初稿候 CAO 校）+ CPO（优势经营语义/checklist 形态/L1 产品化判定）；CTO 技术事实核；BOD 收口
 - M 面定义锚: dev 机 Windows 宿主（`D:/Code/ai/` 工作区，本仓库所在机）
@@ -61,6 +61,19 @@
 ### L3（预留位）
 - （CAO/CPO 域增补入口；每条须带现象+根因+状态档+对照面）
 
+### L4 席位窗口代操：键入自动化多坑（方法论已成文）
+- 现象：BOD 代席位窗口键入（如代发 `/compact`）初试四连败——中文经 SendKeys 变乱码（"ack"→"啊惭愧"，IME 中文态组词实证）、回车单发被吞、VS Code 多 tab 无法唯一定位、后台激活被 Win11 前台锁拒绝。
+- 根因：①Win11 前台锁拒绝后台进程改焦点（AppActivate 可返回 True 但焦点未动）②IME 中文态拦截键入组词 ③SendKeys 无法直打中文、单回车易吞 ④Get-Process MainWindowTitle 只报进程主窗（同进程第二窗口不可见）。
+- 状态：**【已解决】**（2026-09-17 03:46 实证闭环：/compact 成功送达 m-cos 并完成压缩）。
+- **已验证远控五步法**（BOD 成文，CEO 令入档）：
+  1. **找窗**：`EnumWindows` P/Invoke 全量枚举可见窗（Get-Process 只报主窗会漏同进程第二窗），按标题含席位名取句柄；
+  2. **切焦点**：先发 ALT 键（keybd_event 0x12 down+up 解前台锁）→ `SetForegroundWindow(句柄)` → **`GetForegroundWindow()` 比对句柄验证**，不等即中止；
+  3. **输文本**：`Set-Clipboard` → SendKeys `^v` 粘贴（绕 IME，中英文免疫）——**禁直打**（中文必乱码、ASCII 也可能被组词）；
+  4. **提交**：`{ENTER}` 双发（单发易吞）；
+  5. **守卫**：每步校验失败即中止不发（激活 False 照发=违断链纪律，初试实录在案）。
+- 对照：sg 面 tmux `send-keys` 为原生等价能力（且 Enter 需独立补发同族坑）；本五步法=Windows 宿主的 tmux 等价远控。
+- 附带发现（同窗实证）：`CLAUDE_CODE_CHILD_SESSION=1` 环境遗传——BOD shell 代起的 claude 被标记子会话（不存转录/不注册名址/ListAgents 不可见），代起常驻进程前必 `Remove-Item Env:CLAUDE_CODE_CHILD_SESSION`（根因由 CEO 从窗口 banner 排出，2026-09-17 03:25）。
+
 ## 3. M 面对照 checklist（可执行核对单）
 
 ### 3.1 选型前对照（什么时候选 M 面）
@@ -74,6 +87,8 @@
 ### 3.2 日常自检（局限规避动作）
 - [ ] 要进远端 tmux？→ 用 send-keys 派工，**不要** `ssh -t attach`（L1【可绕过】）
 - [ ] 确需交互 attach？→ 两跳登录后手动 attach 或 `ssh -tt`（L1 绕法）
+- [ ] 要代操本机席位窗口（代发命令/键入）？→ 按 **L4 五步法**（找窗→ALT 切焦点→粘贴输文本→双回车→全程守卫），禁直打文本
+- [ ] BOD 代起常驻 claude 进程？→ 先清 `CLAUDE_CODE_CHILD_SESSION` 环境变量（L4 附带发现）
 - [ ] 调 TriModel 前先探活（3333 可能未在跑，L2【候定档】）→ `curl 127.0.0.1:3333/health`
 - [ ] 走查/派工涉及 sg？→ 走 sg 通道纪律（不经本机中转，CLAUDE.md 跨机路由）
 
@@ -89,3 +104,4 @@
 | --- | --- | --- |
 | 2026-09-16 | 首版：S1-S6 优势/L1-L2 局限/L1 产品化判定（暂不入待办）/checklist 三段 | CPO 起草候 CAO 校 |
 | 2026-09-16 | CAO 校过：状态档词表固定声明补入 §2 头+变更记录机制定稿（追加制/Owner 列对齐 governance-state 字段惯例）；其余零改动认可 | CAO |
+| 2026-09-17 | L4 新增（CEO 令直录）：席位窗口代操键入自动化——【已解决】，远控五步法成文（EnumWindows 找窗/ALT+SetForegroundWindow 切焦点/剪贴板粘贴输文本/双回车提交/全程守卫）；附带发现 CLAUDE_CODE_CHILD_SESSION 环境遗传坑（根因 CEO 排出）；checklist 3.2 增两行 | BOD（CEO 令；CPO/CAO 追认随窗） |
