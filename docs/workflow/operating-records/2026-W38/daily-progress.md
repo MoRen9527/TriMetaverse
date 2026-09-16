@@ -147,3 +147,7 @@
 - 巡检兜底补写 @22:00 +08：自上次进度提交 fa5f46b4 后新增 1 条 commit：
   - 5a3de7ef docs(workflow): B4-sweep-b1 批毕切账回填——CFO 实测 6 件转录 234 调用 18.36M tok 全 Flash，非高峰 654.02 分闸内，批2 闸门开
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:10 +08：自上次进度提交 be36a53b 后新增 2 条 commit：
+  - deca8d33 docs(workflow): B4-sweep-b2 批毕切账回填——CFO 实测 5 件转录 160 调用 16.12M tok 全 Flash，非高峰 576.70 分闸内，批3 闸门开
+  - 2f5057ac closeout(b4-sweep-b2): B4 扫尾批2（COO 域 9 件）五席联审收口——五意见件 433 行+汇总（共识 8/分歧 2/红线② E2 候 CEO 一裁 COO 名实追平/挂起 P2-P4/候批执行 12 项）+树 done+任务书批2 注记；增量=supervises 空载 CSO 线反证/⑦督办权界缺 contract 列/TriDev 旧名族分歧/compass live COO:93 TriMC 句 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
