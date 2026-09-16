@@ -1,0 +1,34 @@
+{
+  "treeId": "b4-sweep-b9-fsd",
+  "title": "B4 扫尾批·批9（FSD 域 9 件）五席联审——复工批任务2 第九批（26M 带沿复核批）",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+批8 切账回填（e6f10ade）后闸门开；26M 带沿复核批（再破触发认签条件④）",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-16",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b9·域=FSD（source-agents/full-stack-developer 9 件）·时点=2026-09-16 23:4x +08（错峰窗）·席位=COS/CTO/CAO/CPO SendMessage 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B9-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见（压缩二级令续）"
+    },
+    {
+      "nodeId": "B9-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线"
+    },
+    {
+      "nodeId": "B9-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告；D-27 销账锚=树路径+收口报告",
+  "notes": "按域 sequential 批9；FSD=小全，09 系候选域（9 件全编制，模板保真度预期高于 08 系——本批兼验该预判）；跨批基线=次批③窗/E2 并案四案/名址精度核查提案/execution 标注群/P2 八席群",
+  "closeout": "reports/b9-closeout.md（2026-09-16T15:45:26Z）；五席意见件 5 份 443 行+汇总件 b9-summary.md"
+}
