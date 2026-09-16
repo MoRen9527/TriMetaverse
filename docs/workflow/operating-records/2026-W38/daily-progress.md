@@ -138,3 +138,6 @@
   - 847dbd6e docs(workflow): M-SG 开工配置变更——GLM-5.3→GLM-5.3-Flash（兜底端点写入 9 键全族+备份；转录面 6 调用实测全 Flash）；根因=settings 优先级高于 duty-env
   - d7dc61a1 docs(ops): 新周期基线锚一键件（CFO 复位窗清单②）——本机抽取+sg 行集+合并 burn 落 .fade/cycle-anchor.log
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 84499166 后新增 1 条 commit：
+  - 69ea701b docs(workflow): M-SG 复工任务书收口任务1/3——任务1 六组核销（09-14 执行波先落，复查零重复执行）+任务3 双半环（重启轮验证 13/13 全绿+TC GitHub 回流零差口闭环/重推 deploy key 拒残差归授权侧）
+- registry：v2.1；今日 registry 提交无变化
