@@ -64,3 +64,10 @@
   - 重推半环（sg→GitHub，照先例）：推前验尖 b3a450d 未动 → 快进推送 → **拒**：`Permission to MoRen9527/TriCompany.git denied to deploy key`——github-mirror 键=TMV 仓 deploy key（仓域限定），TC 仓无写凭据。按冲突即停条款止推。
   - 残差登记：GitHub TC 停 b3a450d、落后 sg 20 commits（全 LG-035 夜航01 链，均已评审收口），候授权侧扩凭据（账户级键/机器用户/Token 三择）后一次快进推平；与 dev 侧 GitHub 推墙（无凭据族）、TriRMC 直推凭据缺失同族三分，归口授权侧。
   - 证据：ls-remote 读数×3（初探/推前/推后通道在）、push 全量 stderr（deploy key 拒因原文）、本地 merge-base/rev-list 读数。
+
+## 收口-任务2·进度注记（批1）（2026-09-16T13:41:24Z＝21:41:24 +08 现查；执行席=COS 值席）
+
+- **批1（CPO 域 9 件）已收口**：五席联审全绿（COS/CTO/CAO/CPO 直达+BS spawn；BOD 2026-09-16 双令定谳 spawn 合规）；45 行表态齐、共识 8 项/分歧 2 项/挂起候裁 2 项（P1 真源归属候 BS/P2 paths 二选一候 CHO 门）/红线②候 CEO 0 项。销账锚=树 `2026-W38/trees/b4-sweep-b1-cpo/`（tree done+五意见件 395 行+汇总件+收口报告）。
+- 批1 增量发现：PRODUCT.md 名误已入 live compass 链（2 件：CPO:162+CTO:45，后者系陈旧渲染）、description 唯一定义点制未随、FSD 退役名残留（与任务3① 探测 FSD 席自报同根）。
+- 批次元数据已供 CFO 切账（21:21-21:39 错峰窗，估 <30M 未触报备线）。
+- **余量 ~142 件候放行**：建议序 COO→COS→CFO→CHO→CMO→CSO→DE→FSD→STE→RDT→BS 余 2→registries 51 分批；本任务整体保持 open 候 BOD 逐批放行或一次授权多批。
