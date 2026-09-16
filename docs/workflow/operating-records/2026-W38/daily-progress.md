@@ -133,3 +133,21 @@
   - 458efb96 docs(workflow): M-SG 复工任务书任务4 闭幕——COS 补位+全席补真身（13 席带手册重启，tmux/进程双验）；附后台数据落地（周100%已满）+f_GLM=2.17+CEO 政策（GLM 优先/deepseek 补足）+等=定
   - 663e9694 docs(ops): 监控降噪——事件指纹收窄为仓 HEAD+429 态（席位活动时间降附注；防会话内部写入分钟级刷屏）+TC 仓动作纳入事件面
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 fbf84c55 后新增 3 条 commit：
+  - b2ba5cf6 merge: 回流收编
+  - 847dbd6e docs(workflow): M-SG 开工配置变更——GLM-5.3→GLM-5.3-Flash（兜底端点写入 9 键全族+备份；转录面 6 调用实测全 Flash）；根因=settings 优先级高于 duty-env
+  - d7dc61a1 docs(ops): 新周期基线锚一键件（CFO 复位窗清单②）——本机抽取+sg 行集+合并 burn 落 .fade/cycle-anchor.log
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 84499166 后新增 1 条 commit：
+  - 69ea701b docs(workflow): M-SG 复工任务书收口任务1/3——任务1 六组核销（09-14 执行波先落，复查零重复执行）+任务3 双半环（重启轮验证 13/13 全绿+TC GitHub 回流零差口闭环/重推 deploy key 拒残差归授权侧）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 2aaad910 后新增 1 条 commit：
+  - 3954fe8c closeout(b4-sweep-b1): B4 扫尾批1（CPO 域 9 件）五席联审收口——五意见件 395 行+汇总（共识 8/分歧 2/挂起 P1-P2/候批执行 12 项）+树 done+任务书任务2 进度注记；增量发现=PRODUCT.md 名误入 live compass 链 2 件/description 定义点制未随/FSD 退役名残留 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:00 +08：自上次进度提交 fa5f46b4 后新增 1 条 commit：
+  - 5a3de7ef docs(workflow): B4-sweep-b1 批毕切账回填——CFO 实测 6 件转录 234 调用 18.36M tok 全 Flash，非高峰 654.02 分闸内，批2 闸门开
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:10 +08：自上次进度提交 be36a53b 后新增 2 条 commit：
+  - deca8d33 docs(workflow): B4-sweep-b2 批毕切账回填——CFO 实测 5 件转录 160 调用 16.12M tok 全 Flash，非高峰 576.70 分闸内，批3 闸门开
+  - 2f5057ac closeout(b4-sweep-b2): B4 扫尾批2（COO 域 9 件）五席联审收口——五意见件 433 行+汇总（共识 8/分歧 2/红线② E2 候 CEO 一裁 COO 名实追平/挂起 P2-P4/候批执行 12 项）+树 done+任务书批2 注记；增量=supervises 空载 CSO 线反证/⑦督办权界缺 contract 列/TriDev 旧名族分歧/compass live COO:93 TriMC 句 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化

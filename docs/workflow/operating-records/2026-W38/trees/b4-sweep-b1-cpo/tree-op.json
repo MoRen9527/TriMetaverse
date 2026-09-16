@@ -1,0 +1,34 @@
+{
+  "treeId": "b4-sweep-b1-cpo",
+  "title": "B4 扫尾批·批1（CPO 域 9 件）五席联审——复工批任务2 首批",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2（BOD 派工 2026-09-16 21:0x）+ bb2-summary §六扫尾余量 + D-27 树协议 + LG-034 晨报批毕切账闸门制",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-16",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b1·域=CPO（source-agents/chief-product-officer 9 件）·时点=2026-09-16 21:2x +08（错峰窗）·席位=COS/CTO/CAO/CPO 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B1-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见：COS/CTO/CAO/CPO M-004 直达+BS spawn；席间独立禁读他席稿；9 件全量表态（意见三要素+表态表，无意见明示）；意见件落本树 reports/"
+    },
+    {
+      "nodeId": "B1-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件：共识/分歧/挂起三归并+三红线执行+批次元数据（CFO 批毕切账供料）"
+    },
+    {
+      "nodeId": "B1-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done 回写+任务书任务2 进度注记"
+    }
+  ],
+  "acceptance": "五席意见件齐（5 份全量表态）+汇总件+收口报告+任务书回写；D-27 销账锚=树路径+收口报告",
+  "notes": "按域 sequential 首批；域选取=CPO（双席条线，接 CTO/CAO 后）；余量批次候本批批毕切账后放行",
+  "closeout": "reports/b1-closeout.md（2026-09-16T13:41:24Z）；五席意见件 5 份 395 行+汇总件 b1-summary.md"
+}
