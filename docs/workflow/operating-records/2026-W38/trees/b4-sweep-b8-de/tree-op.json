@@ -1,0 +1,34 @@
+{
+  "treeId": "b4-sweep-b8-de",
+  "title": "B4 扫尾批·批8（DE 域 8 件）五席联审——复工批任务2 第八批",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+批7 切账回填（2f48548e）后闸门开；读面压缩二级令（自家既往稿禁读）生效",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-16",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b8·域=DE（source-agents/deployment-engineer 8 件）·时点=2026-09-16 23:3x +08（错峰窗）·席位=COS/CTO/CAO/CPO SendMessage 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B8-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见（压缩二级令：跨批仅族名+自家既往稿禁读）"
+    },
+    {
+      "nodeId": "B8-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线"
+    },
+    {
+      "nodeId": "B8-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告；D-27 销账锚=树路径+收口报告",
+  "notes": "按域 sequential 批8；DE=8 件（缺一件形态盘点时点 23:3x）；跨批基线=次批③窗/E2 并案四案（DE 荣一鸣? 名实盘点）/C-2/execution 面批量标注群（4 例）/P2 七席群（DE 若命中=第 8 席）",
+  "closeout": "reports/b8-closeout.md（2026-09-16T15:34:23Z）；五席意见件 5 份+汇总件 b8-summary.md"
+}
