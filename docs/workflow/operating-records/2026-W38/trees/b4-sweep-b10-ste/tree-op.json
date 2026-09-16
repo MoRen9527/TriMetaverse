@@ -1,0 +1,34 @@
+{
+  "treeId": "b4-sweep-b10-ste",
+  "title": "B4 扫尾批·批10（STE 域 9 件）五席联审——复工批任务2 第十批（30M 修正带首批）",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+批9 切账回填（f0dc9cf1）+BOD 晨间补令（2026-09-17：E2 fact-backfill 裁/CSO+DE 收编批已批/余量放行）后闸门开",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-17",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b10·域=STE（source-agents/senior-test-engineer 9 件）·时点=2026-09-17 0x:xx +08·席位=COS/CTO/CAO/CPO SendMessage 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B10-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见（压缩二级令续；特别任务=session-body 正名行 ST/FSD 勘误验证）"
+    },
+    {
+      "nodeId": "B10-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线"
+    },
+    {
+      "nodeId": "B10-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告；D-27 销账锚=树路径+收口报告",
+  "notes": "STE=小柯，senior-test-engineer 目录（名址精度族：roster senior-test-engineer vs 旧 test-engineer）；特别任务=批9 头条同族验证（session-body 正名行 ST 预判）；E2 fact-backfill 案已裁（BOD 晨令），STE 若命中同族直接入 CHO 通道不入候裁",
+  "closeout": "reports/b10-closeout.md（2026-09-16T23:44:55Z）；五席意见件 5 份+汇总件 b10-summary.md+CHO 工单并行收口"
+}
