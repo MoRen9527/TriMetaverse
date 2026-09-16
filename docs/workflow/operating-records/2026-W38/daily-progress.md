@@ -128,3 +128,8 @@
   - 74444c20 merge: 回流收编
   - 47d3ddb6 docs(ops): M-SG 干活监控三件套落盘——watch 脚本（仓 HEAD/席位活动/429 态三标志，--once/--loop 双模）+定时留痕任务 MSG-Work-Watch（15min→.fade/msg-work-watch.log）+流式监视基线上线（首采即抓到 sg 巡检补写 25cebf61）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:30 +08：自上次进度提交 e854dbf6 后新增 3 条 commit：
+  - ef24a5c1 merge: 回流收编
+  - 458efb96 docs(workflow): M-SG 复工任务书任务4 闭幕——COS 补位+全席补真身（13 席带手册重启，tmux/进程双验）；附后台数据落地（周100%已满）+f_GLM=2.17+CEO 政策（GLM 优先/deepseek 补足）+等=定
+  - 663e9694 docs(ops): 监控降噪——事件指纹收窄为仓 HEAD+429 态（席位活动时间降附注；防会话内部写入分钟级刷屏）+TC 仓动作纳入事件面
+- registry：v2.1；今日 registry 提交无变化
