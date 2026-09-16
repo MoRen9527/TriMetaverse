@@ -186,3 +186,15 @@
   - f0dc9cf1 docs(workflow): B4-sweep-b9 带沿复核判定——CFO 实测 28.40M tok 二连破 +9.2%，868.37 分闸内；条件④触发：重启测算呈 BOD+带位修正 30M
   - 0889844d closeout(b4-sweep-b9): B4 扫尾批9（FSD 域 9 件）五席联审收口——09 系预判坐实（FD 件组=08 系收编模板基准）/E2 标杆全落席/正名 FD 分裂根因闭环（任务3① 合流）/C-2 命令版扩围 live 地雷/v3.1 疑义跨批闭环/assets 勘误 CAO 自纠+值席复核（批7/8 悬空框架收回）+树 done @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-17（周四）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @04:00 +08：自上次进度提交 7d3347db 后新增 7 条 commit：
+  - efbc4b52 merge: 回流收编
+  - ef0ef3d3 docs(product): M面优劣档案 L4 入档（CEO 令）——席位窗口代操键入自动化【已解决】：远控五步法成文（EnumWindows 找窗/ALT 切焦点/剪贴板粘贴/双回车/全程守卫）+CLAUDE_CODE_CHILD_SESSION 环境遗传附带发现；checklist 3.2 增两行；lastSyncedAt 03:58
+  - 36a79c5c docs(governance): COS 定谳批 manifest 环——host-object-manifest 管线再生（语义级对表：COS 条目零变化，96 行系条目位置重排；真变化=TC 8d96ba6 binding profile 随五件套增量再生；validator 7322fe5 修复后门绿补跑 errors=0；初版 message「条目换代/陈账清偿」失准，本 message 纠正。CHO 落地）
+  - 848791c3 docs(governance): COS 定谳 CGR 副本同文——state 三处（L15/COS 行/界说注记行）随 TC 696d93a 同步；manifest/live 渲染候 validator 修复后补跑（CEO 2026-09-16 22:5x 批，CHO 落地）
+  - b984edee docs(lg-034): M面优劣档案CAO校过——状态档词表固定声明补入+变更记录机制定稿(追加制/Owner列)+任务书CAO收口节(三件全办读数:L2候CTO/L1产品化判定认可)
+  - 3a57237a docs(task-charter): M 面优劣档案收口-CPO 节——三要点读数+候门标注（CAO 校/CTO 事实核）
+  - e5ad7c1a docs(product): M 面优势与局限首版（CPO 起草候 CAO 校）——S1-S6 优势经营语义/L1-L2 局限四档/L1 产品化判定=暂不入待办记录在案/checklist 三段形态
+- registry：v2.1；今日 registry 提交无变化
