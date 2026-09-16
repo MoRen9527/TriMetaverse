@@ -141,3 +141,6 @@
 - 巡检兜底补写 @21:20 +08：自上次进度提交 84499166 后新增 1 条 commit：
   - 69ea701b docs(workflow): M-SG 复工任务书收口任务1/3——任务1 六组核销（09-14 执行波先落，复查零重复执行）+任务3 双半环（重启轮验证 13/13 全绿+TC GitHub 回流零差口闭环/重推 deploy key 拒残差归授权侧）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 2aaad910 后新增 1 条 commit：
+  - 3954fe8c closeout(b4-sweep-b1): B4 扫尾批1（CPO 域 9 件）五席联审收口——五意见件 395 行+汇总（共识 8/分歧 2/挂起 P1-P2/候批执行 12 项）+树 done+任务书任务2 进度注记；增量发现=PRODUCT.md 名误入 live compass 链 2 件/description 定义点制未随/FSD 退役名残留 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
