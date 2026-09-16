@@ -1,0 +1,34 @@
+{
+  "treeId": "b4-sweep-b5-cho",
+  "title": "B4 扫尾批·批5（CHO 域 9 件）五席联审——复工批任务2 第五批",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+批4 切账回填（79b33704）后闸门开",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-16",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b5·域=CHO（source-agents/chief-human-resources-officer）·时点=2026-09-16 22:5x +08（错峰窗）·席位=COS/CTO/CAO/CPO SendMessage 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B5-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见；意见件落本树 reports/"
+    },
+    {
+      "nodeId": "B5-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线"
+    },
+    {
+      "nodeId": "B5-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告；D-27 销账锚=树路径+收口报告",
+  "notes": "按域 sequential 批5；跨批基线=次批③窗/E2 并案（COO+CFO 已登记，CHO 预计第 3 案）/C-2 全链勘向/悬空标注案/paths 四席批量裁决群。特别注意：CHO=交接验收 owner 席（P2 paths 批量裁决+D1b manifest 核对归 CHO 门），本批意见含 CHO 自域对 P2 群的承办面读数",
+  "closeout": "reports/b5-closeout.md（2026-09-16T14:53:15Z）；五席意见件 5 份+汇总件 b5-summary.md"
+}
