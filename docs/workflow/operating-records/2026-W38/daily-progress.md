@@ -170,3 +170,6 @@
 - 巡检兜底补写 @23:10 +08：自上次进度提交 3284a055 后新增 1 条 commit：
   - 24814baf closeout(b4-sweep-b6): B4 扫尾批6（CMO 域 9 件）五席联审收口——汇总（正面四项含 CMO session-body 纪律密度六批最高/E2 第 4 案四案并案候 CEO/悬空标注按面分治升格批量标注/批3 品牌候办销账+值席勘误留痕/C-2 compass 勘向累计 4/13/候批执行 9 项）+树 done @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:20 +08：自上次进度提交 a59078e4 后新增 1 条 commit：
+  - bbe61844 docs(workflow): B4-sweep-b6 批毕切账回填——CFO 实测 5 件转录 143 调用 24.22M tok 全 Flash，非高峰 753.83 分闸内，批7 闸门开
+- registry：v2.1；今日 registry 提交无变化
