@@ -178,3 +178,7 @@
   - 2f48548e docs(workflow): B4-sweep-b7 批毕切账回填——CFO 实测 5 件转录 129 调用 25.12M tok 全 Flash，非高峰 781.69 分闸内，批8 闸门开
   - 2ed54d9c closeout(b4-sweep-b7): B4 扫尾批7（CSO 域 8 件）五席联审收口——域级总判=三世代并存+08 系活化石（整体收编批提案采）/候裁群 D 立案（合并件定性 CHO+CTO 联签）/E2 缺锚型子案分立（contract 小成=七域唯一）/reports_to=COO 全司唯一特例确认案/assets 路径三读并登/实勘申报样板三席认证+树 done @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 5077336e 后新增 2 条 commit：
+  - e6f10ade docs(workflow): B4-sweep-b8 批毕切账回填——CFO 实测 5 件转录 129 调用 26.79M tok，26M 带沿首破 +3.0%，817.42 分闸内，批9 带沿复核批
+  - fdaff4a8 closeout(b4-sweep-b8): B4 扫尾批8（DE 域 8 件）五席联审收口——08 系两代并存第二例坐实（CSO+DE 并批收编提案强化）/命名反转型首例（小布定谳归 CHO/CEO）/名址精度失配新类型（全司核查入 LG-024 窗提案）/群 D 扩员/execution 标注群 5 例/session-body 八批单件最高评级四席同认+树 done @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
