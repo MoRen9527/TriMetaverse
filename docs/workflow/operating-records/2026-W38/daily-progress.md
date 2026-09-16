@@ -133,3 +133,8 @@
   - 458efb96 docs(workflow): M-SG 复工任务书任务4 闭幕——COS 补位+全席补真身（13 席带手册重启，tmux/进程双验）；附后台数据落地（周100%已满）+f_GLM=2.17+CEO 政策（GLM 优先/deepseek 补足）+等=定
   - 663e9694 docs(ops): 监控降噪——事件指纹收窄为仓 HEAD+429 态（席位活动时间降附注；防会话内部写入分钟级刷屏）+TC 仓动作纳入事件面
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 fbf84c55 后新增 3 条 commit：
+  - b2ba5cf6 merge: 回流收编
+  - 847dbd6e docs(workflow): M-SG 开工配置变更——GLM-5.3→GLM-5.3-Flash（兜底端点写入 9 键全族+备份；转录面 6 调用实测全 Flash）；根因=settings 优先级高于 duty-env
+  - d7dc61a1 docs(ops): 新周期基线锚一键件（CFO 复位窗清单②）——本机抽取+sg 行集+合并 burn 落 .fade/cycle-anchor.log
+- registry：v2.1；今日 registry 提交无变化
