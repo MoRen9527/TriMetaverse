@@ -206,3 +206,7 @@
   - 34c637d7 merge: 回流收编
   - 665c407b docs(wiki-inbox): 小布 inbox 投喂——Windows 席位窗口远控 runbook 副本（正身 docs/execution/ 同名件 2d241d29；未来 wiki 输入；CEO 令）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:40 +08：自上次进度提交 1e589615 后新增 2 条 commit：
+  - cf039d45 merge: 回流收编
+  - d17a5f0e ops: M-SG 常驻告警监控脚本入卷（CEO 令立项）——5 分钟计划任务 MSG-Alert（采样 sg 通道/双仓 HEAD/429 态）+事件去重（心跳巡检补写不弹）+Windows 通知弹窗+告警日志 .fade/msg-alert.log；四坑对策内嵌（bash 全路径/BOM/状态去重/隐藏窗）
+- registry：v2.1；今日 registry 提交无变化
