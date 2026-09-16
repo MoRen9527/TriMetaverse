@@ -26,9 +26,12 @@
 - ① **终点三条件之 sg 部分：tmux 全量重启轮**（junction 终点触发条件之一；重启须在配额恢复后——重启即载 compass 新手册链，须逐席 capture 验启动链读通）；
 - ② **TC GitHub 面回流归账**（`b3a450d` 系：GitHub→M-SG merge 归账，照「拉取→merge 归账→重推」先例，冲突即停）。
 
-## 任务4（候裁转呈）：sg 侧组织缺口
+## 任务4（**已闭幕**）：sg 侧组织缺口——COS 补位 + 全席补真身
 
-- COS 席 sg 常驻位缺口（B3/B4 批 §一回报项·候决）；**处置=候 CEO/BOD 裁**（补位或明示豁免），本件仅转呈不计执行。
+- **裁决=补位**（CEO 2026-09-16 19:5x 令）。
+- **执行记录·2026-09-16 20:0x**：实勘=13 席原为**裸启动**（无手册参数）；COS 单席先行补位 → 随即照 CEO 令**全席补真身**：13 席全部以 `claude -n m-duty-* --dangerously-skip-permissions --append-system-prompt-file /srv/fleet/TriMetaverse/.claude/compass/<席>.session.md` 重启（tmux 13 + 进程 13 双验 ✓）；-n 依 CEO 裁定用 `m-duty-*`（名址统一）；`--agent` 非 manifest 正身组成（本机 13 席同款无此参数，不加）。
+- 过程如实：首例 COS `/exit` 时 tmux 会话随之关闭（席位=会话唯一窗口）→ 按标准式样重建，净结果=裸会话换真身。
+- **附**：控制台后台数据落地（周额度 100% 已用满/不支持按键分账）；f_GLM=2.17 校准终值；CEO 政策（GLM 优先用满/deepseek 高峰+超额补足）；等=定——详见 CFO/COS 两件。
 
 ## 收口区
 
