@@ -206,3 +206,13 @@
   - 34c637d7 merge: 回流收编
   - 665c407b docs(wiki-inbox): 小布 inbox 投喂——Windows 席位窗口远控 runbook 副本（正身 docs/execution/ 同名件 2d241d29；未来 wiki 输入；CEO 令）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:40 +08：自上次进度提交 1e589615 后新增 2 条 commit：
+  - cf039d45 merge: 回流收编
+  - d17a5f0e ops: M-SG 常驻告警监控脚本入卷（CEO 令立项）——5 分钟计划任务 MSG-Alert（采样 sg 通道/双仓 HEAD/429 态）+事件去重（心跳巡检补写不弹）+Windows 通知弹窗+告警日志 .fade/msg-alert.log；四坑对策内嵌（bash 全路径/BOM/状态去重/隐藏窗）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @07:50 +08：自上次进度提交 0d89aced 后新增 4 条 commit：
+  - 8dd1ccd8 docs(workflow): B4-sweep-b10 批毕切账回填——实测 31.08M tok 破 30M 带 +3.6%，1,156.34 分闸内；硬条款照章：批11 停发候 BOD 裁
+  - eef9a4b1 docs(workflow): M-SG 复工任务书——BOD 晨间补令三点回写（E2 fact-backfill 裁已闭账/CSO+DE 收编批已批排队/余量放行）+批10 进度注记
+  - 7e7ae10d closeout(b4-sweep-b10): B4 扫尾批10（STE 域 9 件）五席联审收口——E2 全族闭账（CHO 工单 6 席×16 处+D-07 发布+验收锚全过，commit 4dde7bd/50985ec3）/正名停旧族第 2 例 ST 坐实+compass live 污染/D-13 宪法表两列不一致新发现/标注滞后反向首例/peers 错位最重形态/测试域四条事故锚教训=十批最高价值（纪律册晋升候选）+树 done @m-duty-cos
+  - 50985ec3 docs(agents): E2 工作名回填发布位——compass 四席 session 面同步（CHO 承办，BOD 晨间补令①）
+- registry：v2.1；今日 registry 提交无变化
