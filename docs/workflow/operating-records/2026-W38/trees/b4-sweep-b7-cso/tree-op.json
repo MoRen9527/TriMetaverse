@@ -1,0 +1,34 @@
+{
+  "treeId": "b4-sweep-b7-cso",
+  "title": "B4 扫尾批·批7（CSO 域 8 件）五席联审——复工批任务2 第七批",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+批6 切账回填（bbe61844）后闸门开；CFO 预警响应=本批起读面压缩",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-16",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b7·域=CSO（source-agents/customer-success-officer 8 件）·时点=2026-09-16 23:1x +08（错峰窗）·席位=COS/CTO/CAO/CPO SendMessage 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B7-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见（读面压缩令生效：跨批对照仅列族名+一句话命中，不读先例原文）"
+    },
+    {
+      "nodeId": "B7-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线"
+    },
+    {
+      "nodeId": "B7-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告；D-27 销账锚=树路径+收口报告",
+  "notes": "按域 sequential 批7；CSO=8 件（无 agent-frontmatter 或另缺一件，盘点时点 2026-09-16 23:1x）；跨批基线=次批③窗/E2 并案四案（CSO 预计第 5 案？小成在 colleagues 已多见）/C-2/execution 面批量标注群（本域若命中直接入群）/P2 六席批量群",
+  "closeout": "reports/b7-closeout.md（2026-09-16T15:21:52Z）；五席意见件 5 份+汇总件 b7-summary.md"
+}
