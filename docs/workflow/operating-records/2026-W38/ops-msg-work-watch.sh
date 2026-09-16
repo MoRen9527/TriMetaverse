@@ -11,6 +11,7 @@ sample() {
   ssh -o ConnectTimeout=10 -o BatchMode=yes "$HOST" '
     echo "TMV=$(git -C /srv/fleet/TriMetaverse rev-parse --short dev 2>/dev/null)"
     echo "TC=$(git -C /srv/fleet/TriCompany rev-parse --short dev 2>/dev/null)"
+    echo "SUBJ=$(git -C /srv/fleet/TriMetaverse log -1 --format=%s 2>/dev/null | head -c 120)"
     newest=$(ls -t /home/fleet/.claude/projects/*/*.jsonl 2>/dev/null | head -1)
     echo "ACT=$(stat -c %Y "$newest" 2>/dev/null)"
     echo "E429=$(tmux capture-pane -t m-duty-cos -p 2>/dev/null | grep -c 429)"
@@ -42,7 +43,14 @@ else
         ptmv=$(echo "$prev" | sed -n 's/.*TMV=\([^|]*\).*/\1/p'); ntmv=$(echo "$s" | sed -n 's/^TMV=//p')
         ptc=$(echo "$prev" | sed -n 's/.*|TC=\([^|]*\).*/\1/p'); ntc=$(echo "$s" | sed -n 's/^TC=//p')
         pe=$(echo "$prev" | sed -n 's/.*E429=\([^|]*\).*/\1/p'); ne=$(echo "$s" | sed -n 's/^E429=//p')
-        [ -n "$ntmv" ] && [ "$ptmv" != "$ntmv" ] && chg="仓动作(TMV→$ntmv) "
+        if [ -n "$ntmv" ] && [ "$ptmv" != "$ntmv" ]; then
+          subj=$(echo "$s" | sed -n 's/^SUBJ=//p')
+          if echo "$subj" | grep -q "巡检兜底补写"; then
+            chg=""  # 心跳班次：静默（log 留痕由定时任务负责）
+          else
+            chg="仓动作(TMV→$ntmv) "
+          fi
+        fi
         [ -n "$ntc" ] && [ "$ptc" != "$ntc" ] && chg="${chg}仓动作(TC→$ntc) "
         [ "${pe:-0}" != "${ne:-0}" ] && chg="${chg}429态变化(${pe:-?}→${ne:-?}) "
         echo "【事件】${chg}$(report "$s")"
