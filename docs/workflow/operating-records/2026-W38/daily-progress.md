@@ -144,3 +144,6 @@
 - 巡检兜底补写 @21:50 +08：自上次进度提交 2aaad910 后新增 1 条 commit：
   - 3954fe8c closeout(b4-sweep-b1): B4 扫尾批1（CPO 域 9 件）五席联审收口——五意见件 395 行+汇总（共识 8/分歧 2/挂起 P1-P2/候批执行 12 项）+树 done+任务书任务2 进度注记；增量发现=PRODUCT.md 名误入 live compass 链 2 件/description 定义点制未随/FSD 退役名残留 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:00 +08：自上次进度提交 fa5f46b4 后新增 1 条 commit：
+  - 5a3de7ef docs(workflow): B4-sweep-b1 批毕切账回填——CFO 实测 6 件转录 234 调用 18.36M tok 全 Flash，非高峰 654.02 分闸内，批2 闸门开
+- registry：v2.1；今日 registry 提交无变化
