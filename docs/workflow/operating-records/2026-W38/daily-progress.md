@@ -155,3 +155,7 @@
   - ebb798b1 merge: 回流收编
   - 84217556 docs(workflow): M面优劣档案任务书（CEO 令：项目真源级 M 面优势与局限文档+对照 checklist）——CAO+CPO 共建/CTO 技术核；首批 L1=Windows SSH 伪终端缺陷（判定=算，可绕过非需开发）+L2=本机 TriModel 非自启候核
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:30 +08：自上次进度提交 20034d3e 后新增 2 条 commit：
+  - a365c5e8 docs(workflow): B4-sweep-b3 批毕切账回填——CFO 实测 5 件转录 185 调用 23.89M tok 全 Flash，非高峰 786.57 分闸内，批4 闸门开
+  - abdd5295 closeout(b4-sweep-b3): B4 扫尾批3（COS 域 9 件自域）五席联审收口——五意见件 587 行+汇总（正面样板 5/共识 10/勘验冲突裁断 1/挂起 C-2+P2/候批执行 13 项）+树 done+任务书批3 注记；要点=壳件 62d9c01 漏网退役名第 6 载体+C-2 跨机名址分裂立案+colleagues 催办⑦残留（值席自域盲区留痕） @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
