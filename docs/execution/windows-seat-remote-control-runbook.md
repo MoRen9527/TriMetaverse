@@ -31,8 +31,10 @@
 ```powershell
 Remove-Item Env:CLAUDE_CODE_CHILD_SESSION -ErrorAction SilentlyContinue
 $env:CLAUDE_CODE_FORCE_SESSION_PERSISTENCE = "1"
-claude --resume <名> -n <名> --agent <AgentName> --verbose --dangerously-skip-permissions --append-system-prompt-file <手册路径>
+claude --resume <名> -n <名> --agent <PascalCase正名> --verbose --dangerously-skip-permissions --append-system-prompt-file <手册路径>
 ```
+
+- **`--agent` 必须用 PascalCase 正名**（`CEOChiefOfStaff`/`ChiefFinancialOfficer`/`FSD`/`STE`/`RAndDTrainer`…）——kebab 文件名形（`ceo-chief-of-staff`）本机 2.1.273 与 sg 2.1.227 均拒绝（"not found"）；本版交互路径对无效名不致命但**静默不生效**（2026-09-17 实证：进程活着但 agent 层未挂，终验问询坐实）。
 
 不清标记的后果：子会话态=不存转录、不注册名址（ListAgents 不可见/按名 SendMessage 不可达）——2026-09-17 COS 复活窗实证，修复后名册 13/13 复原。
 
