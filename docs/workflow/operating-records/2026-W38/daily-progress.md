@@ -266,3 +266,6 @@
   - c2a5a822 merge: 回流收编
   - 038d7a3b docs(runbook): 补远控两坑——mode 态易碎（操作后必核指示条，偏离即 S-Tab 复位）+夹具消费序（生产故障态兼测试夹具时，先部署验证通道再让夹具流经）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:50 +08：自上次进度提交 a4423687 后新增 1 条 commit：
+  - 751f3f6d closeout(b4-sweep-b13): B4 扫尾批13（registries 次 20 件）五席联审收口·A′ 冷建首批——活跃三件+manifest 三验全过（source==published 同步+42 条缺失 D-24 断言机位缺仓）/群 G 新立世代家族 16 件定性候联勘/既有族全挂零新重案/owner 缺载 3-36/全席准时交付实证+树 done @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
