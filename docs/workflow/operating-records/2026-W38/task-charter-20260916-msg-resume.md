@@ -89,4 +89,15 @@
 - **BOD 晨间补令三点回写**：①E2 工作名裁 fact-backfill 案（非候裁）转 CHO 通道——**已执行闭账**：CHO 工单 6 席×16 处源侧最小面+D-07 发布（updated=4/derived_drift=0）+验收锚全过（「待命名」全域零命中），DE 定谳免 CEO 补裁，commit 锚 TriCompany 4dde7bd+TriMetaverse 50985ec3；②CSO+DE 两域整体收编批已批（CEO 23:46），随收编批并窗照 CHO 门+CTO 发布链——已排队候窗；③剩余域（STE/RDT/BS 余 2/registries 51）继续推进节奏照旧——本批即续。
 - **批10（STE 域 9 件）已收口**：五席联审+E2 闭账双收；正名停旧族第 2 例（ST，compass live 污染；D-13 宪法表两列不一致新发现移交 CAO 域）；标注滞后反向首例（test-state 已活标注未撤）；peers 错位最重形态；测试域四条事故锚教训=十批最高价值域知识（纪律册晋升候选 CTO/CAO 评估）。销账锚=树 `b4-sweep-b10-ste/`（commit 7e7ae10d）。
 - 经济：26M→30M 带位修正生效（批9 二连破触发条件④；重启测算已转呈 BOD 候裁，未裁前照跑）；批10=30M 带首批。
-- 余量：RDT 9+BS 余 2+registries 51≈62 件；下批=RDT 域候批10 切账回填后闸门开。
+
+### 收口-任务2·进度注记（批11+高峰暂停态）（2026-09-17T05:23:10Z＝13:23:10 +08 现查）
+
+- **BOD 补令（CEO 13:1x）执行态**：14:00 起全线暂停（GLM 高峰 3× 积分段），**批11 已于 13:22 前收口完毕**（五席末班全落，未开新工），18:00 后按原节奏重启批12。
+- **批11（RDT 域 9 件）已收口**：五席联审全表态；**群 E 新立**=RDT reports_to 三方分裂（contract CEO 错载 vs roster+colleagues CTO 1:2，候 CHO 终裁与群 C 并窗）；**跨批勘误**（RAndDTrainer/STE=D-13 条4 合法双名映射，批9/10 两判定降级；真失配收敛=test-engineer 旧退役名 4 处）；四层命名模型正样+session-body 正名行正确样板（FD/ST 两错例修复目标形态）；E2 五面直载标杆（小吴免回填）。销账锚=树 `b4-sweep-b11-rdt/`（commit 191f8093）。
+- 批10 切账：31.08M 触 30M 带（隔夜 cache 液化，归一 28.65M 在带）→BOD 裁选项 A+带位条款 v2 成文（8b0308f7，归一公式/停批修订/双读数义务）；批11 切账延至 18:00 后随重启首项。
+- 余量：BS 余 2+registries 51≈53 件（+差口核）；批12 候 18:00 重启。
+
+## 任务2 完成判据备忘（值席留痕）
+
+- 扫尾目标 151 件=169−18（打样首批）；批1-11 已审 97 件（CPO9+COO9+COS9+CFO9+CHO9+CMO9+STE9+DE8+CSO8+FSD9+RDT9=97），余 54 件=BS 余 2+registries 51+差口 1（盘点差候批12 首项核）。
+- 跨批候裁/候窗清单汇总位（随批累积，候 18:00 重启后随批12 归并呈报）：次批③ contract schema 校准窗（P2 paths 11 席群+responsibilities 混型 3 例+instructions 阀门列）/E2 闭账（已销账笔候台账）/CSO+DE 收编批（已批候窗）/群 C+E 汇报线并窗（CHO 终裁）/名址精度群修订版四项（LG-024 窗）/execution 标注群 5 例+反向撤注群 1 例（批量窗）/C-2 三扩全链勘向（LG-024 窗）/brand 显式化（候 CMO 门）/TriDev 族定性（候 CTO/BS）/结构标准窗（soul 双写/壳收敛/群 D 合并件定性）/hub 手作件退役（LG-024 批1 窗）/测试域教训晋升纪律册评估（CTO/CAO）/org shared+audit 认领（十一批累积候办）。

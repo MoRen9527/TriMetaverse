@@ -1,0 +1,35 @@
+{
+  "treeId": "b4-sweep-b11-rdt",
+  "title": "B4 扫尾批·批11（RDT 域 9 件）五席联审——复工批任务2 第十一批（归一口径首批）",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+批10 切账（8dd1ccd8）+BOD 裁选项 A（归一公式成文/双读数注记）后闸门开",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-17",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b11·域=RDT（source-agents/rd-trainer 9 件）·时点=2026-09-17 0x:xx +08·席位=COS/CTO/CAO/CPO SendMessage 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B11-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见（压缩二级令续）"
+    },
+    {
+      "nodeId": "B11-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线"
+    },
+    {
+      "nodeId": "B11-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告；D-27 销账锚=树路径+收口报告",
+  "notes": "RDT=小吴，rd-trainer 目录（09 系候选；批10 CTO 名址族+1=RAndDTrainer 驼峰——本域 contract agent_id 拼写对表任务）；跨批基线=次批③窗/名址精度群（FD/ST/test-engineer/RAndDTrainer 四项）/execution 标注群+反向撤注群/P2 群（RDT 命中=第 11 席）",
+  "statusNote": "done（高峰暂停收口版：BOD 补令 14:00 停，五席末班 13:22 截止前全落；CFO 切账延至 18:00 后）",
+  "closeout": "reports/b11-closeout.md（2026-09-17T05:23:10Z）；五席意见件 5 份+汇总件 b11-summary.md"
+}

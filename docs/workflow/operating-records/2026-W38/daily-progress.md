@@ -228,3 +228,15 @@
   - e9514e0e merge: 回流收编
   - f71e6f8a docs(runbook): 补 --agent PascalCase 正名要求——kebab 形本机 2.1.273 与 sg 2.1.227 均拒，交互路径静默不生效（COS 终验坐实）；五步法通道+远控标准全链已验证
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 aeb162b0 后新增 2 条 commit：
+  - 59088e4e merge: 回流收编
+  - 64c2a7f2 docs(runbook): 补实操捷径——launch-<席>.ps1 样板（清变量四步一键），代起/复活一行拉起；避免长命令跨窗粘贴被啃
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:20 +08：自上次进度提交 8c411b41 后新增 1 条 commit：
+  - 8b0308f7 docs(workflow): BOD 选项 A 裁执行——带位条款 v2 成文（CFO 承办）：隔夜归一公式+停批硬条款修订+双读数义务，批11 起适用
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 1a3f54f4 后新增 3 条 commit：
+  - 1b653817 docs(b4-sweep-b11): 汇总件 BS 行补正——分布 5/2/2+挂起明细（群 E 相抵登记）+tmv-whitepaper 定位降格建议+混型第 4 例沿族注（暂停态最小补正）
+  - 8026787f docs(workflow): M-SG 复工任务书——批11 进度注记+高峰暂停态回写（BOD 补令 14:00 停/18:00 重启批12）+跨批候裁候窗清单归并留痕
+  - 191f8093 closeout(b4-sweep-b11): B4 扫尾批11（RDT 域 9 件）五席联审收口·高峰暂停收口版——群 E 新立 reports_to 三方分裂（contract 错载 1:2 候 CHO 终裁）/跨批勘误（RAndDTrainer/STE=D-13 条4 合法双名，批9/10 判定降级，真失配收敛 test-engineer 4 处）/四层命名模型正样+E2 五面直载标杆/BOD 补令 14:00 停前全落+树 done @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
