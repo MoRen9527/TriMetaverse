@@ -43,4 +43,6 @@ claude --resume <名> -n <名> --agent <PascalCase正名> --verbose --dangerousl
 ## 四、单次调用要点
 
 - PowerShell 工具每调用=新会话：`Add-Type`（P/Invoke 类）与使用**必须在同一调用内**（跨调用不存活）。
+- **mode 态易碎**：键序误触会循环切走会话模式（bypass→plan→auto→manual 实证），manual 态下目标席全部命令卡审批弹窗——**每次远程操作后必须核屏底 mode 指示条**，偏离即 S-Tab 循环复位（逐次 capture 验证）。
+- **生产故障态兼作测试夹具时，夹具消费排在测试就绪之后**：待验证的卡点（如候裁决实例）勿用旧通道提前解除——先部署验证通道，再让夹具流经新通道完成双重验证（2026-09-18 实证：A′ 裁决提前消费致 E2E 改用合成试信）。
 - 结果验证双通道：转录文件 mtime/追加（`~/.claude/projects/**/*.jsonl`）+ 目标席 SendMessage 回执。
