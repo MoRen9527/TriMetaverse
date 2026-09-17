@@ -232,3 +232,6 @@
   - 59088e4e merge: 回流收编
   - 64c2a7f2 docs(runbook): 补实操捷径——launch-<席>.ps1 样板（清变量四步一键），代起/复活一行拉起；避免长命令跨窗粘贴被啃
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:20 +08：自上次进度提交 8c411b41 后新增 1 条 commit：
+  - 8b0308f7 docs(workflow): BOD 选项 A 裁执行——带位条款 v2 成文（CFO 承办）：隔夜归一公式+停批硬条款修订+双读数义务，批11 起适用
+- registry：v2.1；今日 registry 提交无变化
