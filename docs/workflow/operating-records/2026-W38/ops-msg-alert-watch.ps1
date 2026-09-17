@@ -48,6 +48,11 @@ $isHeartbeat = ($headSubject -match '巡检兜底补写')
 $prev = $null
 if (Test-Path $stateFile) { try { $prev = Get-Content $stateFile -Raw | ConvertFrom-Json } catch {} }
 
+# ── 候裁决内容扫描（2026-09-17 盲区补：COS 屏面候裁/候令/候批=内容级信号）──
+$pane = ssh -o ConnectTimeout=10 -o BatchMode=yes fleet@sg-ecs-server "tmux capture-pane -t m-duty-cos -p 2>/dev/null | tail -40" 2>$null
+$pendingCount = 0
+if ($pane) { $pendingCount = ([regex]::Matches(($pane -join "`n"), '候裁决|候令|候批|候 BOD|候 CEO')).Count }
+
 # ── 判定事件 ──
 $alerts = @()
 if ($prev) {
@@ -55,6 +60,8 @@ if ($prev) {
   if ($prev.blocked -eq $true -and -not $blocked) { $alerts += ,@('info', 'M-SG 配额已恢复', '429 解除——席位可正常响应') }
   if ($tmv -and $prev.tmv -and $prev.tmv -ne $tmv -and -not $isHeartbeat) { $alerts += ,@('info', "M-SG 仓推进 TMV→$tmv", "主题：$headSubject") }
   if ($tc -and $prev.tc -and $prev.tc -ne $tc) { $alerts += ,@('info', "M-SG 仓推进 TC→$tc", '') }
+  $prevPending = if ($null -ne $prev.pendingRuling) { [int]$prev.pendingRuling } else { 0 }
+  if ($pendingCount -gt $prevPending) { $alerts += ,@('warn', 'm-duty-cos 出现待裁决事项', "屏面候裁/候令类命中 $pendingCount 处（前值 $prevPending）——请查视") }
 } else {
   Write-Log '首轮=基线建立，不告警'
 }
@@ -64,6 +71,6 @@ foreach ($a in $alerts) {
   $r = Show-Toast $a[1] $a[2]
   Write-Log "ALERT[$($a[0])] $($a[1]) | $($a[2]) | toast=$r"
 }
-@{ tmv = $tmv; tc = $tc; blocked = $blocked; updated = (Get-Date -Format 'yyyy-MM-dd HH:mm:ss') } |
+@{ tmv = $tmv; tc = $tc; blocked = $blocked; pendingRuling = $pendingCount; updated = (Get-Date -Format 'yyyy-MM-dd HH:mm:ss') } |
   ConvertTo-Json | Set-Content -Path $stateFile -Encoding UTF8
-Write-Log "采样：TMV=$tmv TC=$tc blocked=$blocked alerts=$($alerts.Count)"
+Write-Log "采样：TMV=$tmv TC=$tc blocked=$blocked pending=$pendingCount alerts=$($alerts.Count)"
