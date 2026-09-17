@@ -216,3 +216,7 @@
   - 7e7ae10d closeout(b4-sweep-b10): B4 扫尾批10（STE 域 9 件）五席联审收口——E2 全族闭账（CHO 工单 6 席×16 处+D-07 发布+验收锚全过，commit 4dde7bd/50985ec3）/正名停旧族第 2 例 ST 坐实+compass live 污染/D-13 宪法表两列不一致新发现/标注滞后反向首例/peers 错位最重形态/测试域四条事故锚教训=十批最高价值（纪律册晋升候选）+树 done @m-duty-cos
   - 50985ec3 docs(agents): E2 工作名回填发布位——compass 四席 session 面同步（CHO 承办，BOD 晨间补令①）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:00 +08：自上次进度提交 d85c31b0 后新增 2 条 commit：
+  - 9cc4dcc5 merge: 回流收编
+  - 74d195c9 ops: 流式监控心跳过滤加固——采样自带 HEAD 主题行（SUBJ=），变化判定用内嵌主题（去额外 ssh），巡检兜底补写静默
+- registry：v2.1；今日 registry 提交无变化
