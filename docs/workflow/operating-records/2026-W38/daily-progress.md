@@ -247,3 +247,10 @@
   - 013c37a7 docs(b4-sweep-b12): 值席意见件补落盘（D-27 五件齐口径）——board 定性/BS 投影正身/registries owner 线 3-15 读数+群 F 随群登记
   - c15dc9ef closeout(b4-sweep-b12): B4 扫尾批12（BS 余 2+board 3+registries 首 15=20 件）五席联审收口——两大正身先例落定（BS 投影制+五字段换代，收编基准照 BS 件）/board 域定性首勘五席汇诊（候审输入包呈 BOD）/registries 三代模板+占位 12 件族判+owner 行 3/15/群 F 新立/闸门竞态如实披露批13 持有+树 done @m-duty-cos
 - registry：v2.1；今日 registry 提交 1 条：80f7941 docs(fade): FADE-008 受控压缩立章＋首跑实例 fade-cos-compact-001 入册（E 回声 F 铸）——七段工件全录+可复制性读数八条+工程坑位四条对策；转正锚=BOD diff 核验 PASSED（2026-09-17 02:5x）；补齐项三条如实（spec FADE-008 章候补/评分卷未建/跨席段低计）。
+- 巡检兜底补写 @21:40 +08：自上次进度提交 30f0f53f 后新增 5 条 commit：
+  - c62484aa merge: 回流收编
+  - dc889a27 feat(ops): 常驻席基础设施落地（CEO 令立项）——12 席开机自启+看门狗：Seat-Watchdog 5 分钟计划任务（缺席即拉起最小化窗，stop-flag 尊重人工）+Seat-Boot 登录触发（Startup 文件夹免提权方案）；实弹测试过（杀 m-cto→25 秒自动复活）；launch-seat.ps1 参数化启动器入卷；bod 缺位缓存协议投 COS
+  - 7a12c777 docs(lg-035): CGR副本同文——Board席位件知会登记行
+  - 08cd03f7 merge: 收编 origin 并行线（BOD 重启窗提交）
+  - 9b59a36a feat(governance): board 席位件两面渲染落地（.claude/agents/board.md + .github/agents/board.agent.md，fm=name Board/description 治理席/user-invocable；单条定向渲 created×2，本机 3333 渲染链零触碰）（fsd 改 cto 审）
+- registry：v2.1；今日 registry 提交 1 条：80f7941 docs(fade): FADE-008 受控压缩立章＋首跑实例 fade-cos-compact-001 入册（E 回声 F 铸）——七段工件全录+可复制性读数八条+工程坑位四条对策；转正锚=BOD diff 核验 PASSED（2026-09-17 02:5x）；补齐项三条如实（spec FADE-008 章候补/评分卷未建/跨席段低计）。
