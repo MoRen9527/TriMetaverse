@@ -228,3 +228,7 @@
   - e9514e0e merge: 回流收编
   - f71e6f8a docs(runbook): 补 --agent PascalCase 正名要求——kebab 形本机 2.1.273 与 sg 2.1.227 均拒，交互路径静默不生效（COS 终验坐实）；五步法通道+远控标准全链已验证
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 aeb162b0 后新增 2 条 commit：
+  - 59088e4e merge: 回流收编
+  - 64c2a7f2 docs(runbook): 补实操捷径——launch-<席>.ps1 样板（清变量四步一键），代起/复活一行拉起；避免长命令跨窗粘贴被啃
+- registry：v2.1；今日 registry 提交无变化
