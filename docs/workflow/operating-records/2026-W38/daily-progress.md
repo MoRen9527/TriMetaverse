@@ -254,3 +254,8 @@
   - 08cd03f7 merge: 收编 origin 并行线（BOD 重启窗提交）
   - 9b59a36a feat(governance): board 席位件两面渲染落地（.claude/agents/board.md + .github/agents/board.agent.md，fm=name Board/description 治理席/user-invocable；单条定向渲 created×2，本机 3333 渲染链零触碰）（fsd 改 cto 审）
 - registry：v2.1；今日 registry 提交 1 条：80f7941 docs(fade): FADE-008 受控压缩立章＋首跑实例 fade-cos-compact-001 入册（E 回声 F 铸）——七段工件全录+可复制性读数八条+工程坑位四条对策；转正锚=BOD diff 核验 PASSED（2026-09-17 02:5x）；补齐项三条如实（spec FADE-008 章候补/评分卷未建/跨席段低计）。
+- 巡检兜底补写 @22:40 +08：自上次进度提交 bb6dce6b 后新增 3 条 commit：
+  - bad87fb4 merge: 回流收编
+  - 6a47f802 feat(ops): 告警监控补内容级盲区——m-duty-cos 屏面候裁决/候令/候批扫描（5 分钟班，count 增量弹窗去重），CEO 22:2x 发现'候裁决监控没抓到'同族盲区补齐
+  - 27bc306e docs(lg-035): 双控制器定性补白+登记——白皮书修订1c(附录B TriMLC/TriRLC词条各补端口8713/8711与保活机制句,并行非冗余无退役关系)+CGR双控制器对照登记行(CEO 2026-09-17 面授定性)
+- registry：v2.1；今日 registry 提交 1 条：80f7941 docs(fade): FADE-008 受控压缩立章＋首跑实例 fade-cos-compact-001 入册（E 回声 F 铸）——七段工件全录+可复制性读数八条+工程坑位四条对策；转正锚=BOD diff 核验 PASSED（2026-09-17 02:5x）；补齐项三条如实（spec FADE-008 章候补/评分卷未建/跨席段低计）。
