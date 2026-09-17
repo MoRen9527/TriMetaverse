@@ -29,5 +29,7 @@ m-duty-cos → 写消息给**本机 TriMMC daemon**（同机 API，说明目标=
 
 （联审过程回写）
 
+- **命名歧义边界锁定**（CEO 勘正触发，23:0x）：「TriModel」一名两义（仓名=含 TriMMC daemon 线 vs 配置面服务=3333）——本通道实现目标=**TriMMC daemon 线**（sg 控制器），TriModel 配置面服务零触碰；已锁定 FSD 边界。
+
 - **COO 意见件**（22:40，`coo-opinion-daemon-notify-route.md`）：时效三档（T1 候裁决急四要素齐投/T2 进度摘要/T3 运维条件急）+**通知通道≠裁决通道**（双回执纪律）+催办时钟归 COO（T+30/T+2h/T+24h，红线超阈直达 CEO）+bod 缺位 COS 缓存三动作（缓存≠代裁，保留权缺位冻结）+分期=最小可行先行（先通 T1）。接口要求：对 CPO 寻址四元组/对 CTO 送达确认分级。
 - **CPO 意见件**（22:44，`trees/daemon-notify-route/cpo-view.md` 已 commit）：①路由单元=daemon 非 face，寻址 `{target_daemon, target_seat}` 二元+席名正名制（别名网关人话拒绝）②端点 `POST /v1/notify`+GET messages，X-Internal-Token fail-closed，优先级 urgent/normal 封闭集 ③**送达三态分层** accepted≠forwarded≠delivered（forward-claims 教训通道版）④最后一跳混合：SendMessage 桥主路径+落盘信箱兜底（信箱必须可见 GET 计数端点）⑤MVP=单向单目标（sg→bod 最窄切片），schema 留位 phase2 全网格。
