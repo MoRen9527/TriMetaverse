@@ -1,10 +1,11 @@
-# M 面优势与局限（项目真源·活文档）
+# M 面优势与局限（项目真源·活文档·系统演进核心文件）
 
 - sourceOfTruth: TriMetaverse/docs/product/m-face-strengths-and-limits.md
 - syncMode: source-only
-- lastSyncedAt: 2026-09-17T03:58+0800
-- 上位令: CEO 2026-09-16 22:1x（BOD 铸任务书 `2026-W38/task-charter-20260916-m-face-strengths-limits.md` 84217556）
-- 共建: CAO（骨架/真源规范/归属——本版骨架为 CPO 初稿候 CAO 校）+ CPO（优势经营语义/checklist 形态/L1 产品化判定）；CTO 技术事实核；BOD 收口
+- lastSyncedAt: 2026-09-17T23:40+0800
+- **定位定谳（CEO 2026-09-17 23:3x）**：整个系统演进最重要的文件，项目真源级，管理人=CAO
+- 上位令: CEO 2026-09-16 22:1x（BOD 铸任务书 `2026-W38/task-charter-20260916-m-face-strengths-limits.md` 84217556）；范围扩围+管理权移交：CEO 2026-09-17 23:3x（四套班子整体消化+跨面差距与吸收规划入档）
+- 共建: CAO（骨架/真源规范/**管理人**）+ CPO（首版起草/优势经营语义/checklist 形态/L1 产品化判定——转顾问贡献位）；CTO 技术事实核；BOD 收口
 - M 面定义锚: dev 机 Windows 宿主（`D:/Code/ai/` 工作区，本仓库所在机）
 
 ---
@@ -90,3 +91,4 @@
 | 2026-09-16 | 首版：S1-S6 优势/L1-L2 局限/L1 产品化判定（暂不入待办）/checklist 三段 | CPO 起草候 CAO 校 |
 | 2026-09-16 | CAO 校过：状态档词表固定声明补入 §2 头+变更记录机制定稿（追加制/Owner 列对齐 governance-state 字段惯例）；其余零改动认可 | CAO |
 | 2026-09-17 | L4 席位窗口代操条**迁出**（CEO 裁：本档只记 M 面优劣势，Windows 操作方法属运维经验不属此）——全文迁 `docs/execution/windows-seat-remote-control-runbook.md`；checklist 3.2 对应两行随迁 | BOD |
+| 2026-09-17 | **定位升级+管理权移交**（CEO 23:3x 定谳）：系统演进最重要文件·项目真源级；管理人 CPO→**CAO**（CPO 转顾问贡献位）；范围扩围预告=四套班子整体消化+跨面差距与吸收规划将入档（明晨任务书 20260918-four-team-digestion） | BOD（CEO 令） |
