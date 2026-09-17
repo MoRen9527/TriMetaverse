@@ -243,3 +243,7 @@
 - 巡检兜底补写 @21:00 +08：自上次进度提交 cdfb7fa0 后新增 1 条 commit：
   - a35175e8 docs(workflow): B4-sweep-b11 v2 归一首用——tok_归一 32.67M 二连破带 +8.9%（复利台阶实锤），批12 闸门不发候 BOD 裁
 - registry：v2.1；今日 registry 提交 1 条：80f7941 docs(fade): FADE-008 受控压缩立章＋首跑实例 fade-cos-compact-001 入册（E 回声 F 铸）——七段工件全录+可复制性读数八条+工程坑位四条对策；转正锚=BOD diff 核验 PASSED（2026-09-17 02:5x）；补齐项三条如实（spec FADE-008 章候补/评分卷未建/跨席段低计）。
+- 巡检兜底补写 @21:20 +08：自上次进度提交 2f956582 后新增 2 条 commit：
+  - 013c37a7 docs(b4-sweep-b12): 值席意见件补落盘（D-27 五件齐口径）——board 定性/BS 投影正身/registries owner 线 3-15 读数+群 F 随群登记
+  - c15dc9ef closeout(b4-sweep-b12): B4 扫尾批12（BS 余 2+board 3+registries 首 15=20 件）五席联审收口——两大正身先例落定（BS 投影制+五字段换代，收编基准照 BS 件）/board 域定性首勘五席汇诊（候审输入包呈 BOD）/registries 三代模板+占位 12 件族判+owner 行 3/15/群 F 新立/闸门竞态如实披露批13 持有+树 done @m-duty-cos
+- registry：v2.1；今日 registry 提交 1 条：80f7941 docs(fade): FADE-008 受控压缩立章＋首跑实例 fade-cos-compact-001 入册（E 回声 F 铸）——七段工件全录+可复制性读数八条+工程坑位四条对策；转正锚=BOD diff 核验 PASSED（2026-09-17 02:5x）；补齐项三条如实（spec FADE-008 章候补/评分卷未建/跨席段低计）。
