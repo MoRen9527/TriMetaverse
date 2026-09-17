@@ -11,9 +11,9 @@
 - **bod 例外+缺位规则**：bod 不入本套件；bod 缺位期间需审批/决策事项由 COS 缓存记录+写周工作平面，bod 上线后催办
 - 环境标准沿用 `launch-seat.ps1`（清 CLAUDE* 遗传+FORCE 持久化+PascalCase 正名+compass 手册）
 
-## 配套候令（不阻塞本件）
+## 配套候令（已消解，2026-09-17 21:4x 实测）
 
-- TriMLC-Channel 1.5 分钟重触发退役（保活权归一 Watchdog）——动 Channel 需管理员权限+影响 daemon 监督，**候 CEO 令**另窗执行；执行前"复活者不明"类悬案可能复现，知悉即可
+- ~~TriMLC-Channel 1.5 分钟重触发退役~~——**实测该任务已不存在**（早前 Wave 0 建删操作已清理），TriMLC-Watchdog（Ready）即 daemon 唯一保活者；8713 healthz 全绿（uptime≈40.6h）——"单一看门狗"目标态已自然达成，候令消解，CEO 零动作
 
 ## 验收锚
 
