@@ -12,7 +12,7 @@
 | CTO | b11-cto-opinion.md | 144 | 5/4/0 |
 | CAO | b11-cao-opinion.md | 89 | 3/5/1（群 B 第 9 例） |
 | CPO | b11-cpo-opinion.md | ~80 | 3/6/0 |
-| BS | b11-bs-opinion.md | ~60 | 压缩式（截断窗前落盘） |
+| BS | b11-bs-opinion.md | 68 | 5/2/2（挂起=群 E reports_to 两件相抵登记，§三-3 不代裁；补读注：tmv-whitepaper 定位降格建议一笔+responsibilities 混型第 4 例，均沿族/文案级） |
 
 - 全量表态 45 行齐（末班 13:22 落盘，14:00 截止前收齐）；独立性声明全。
 
