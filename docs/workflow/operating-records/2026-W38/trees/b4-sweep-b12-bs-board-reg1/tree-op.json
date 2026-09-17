@@ -1,0 +1,35 @@
+{
+  "treeId": "b4-sweep-b12-bs-board-reg1",
+  "title": "B4 扫尾批·批12（BS 余 2+board 新域 3+registries 首 15=20 件）五席联审——复工批任务2 第十二批（18:00 重启首批）",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+BOD 补令余量放行+18:00 重启令；批11 切账候回填（并行不阻派工——BOD 补令节奏照旧）",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-17",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b12·域=BS 余 2+board 3+registries 首 15（合计 20 件）·时点=2026-09-17 20:5x +08（错峰窗恢复）·席位=COS/CTO/CAO/CPO SendMessage 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B12-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见（压缩二级令续）"
+    },
+    {
+      "nodeId": "B12-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线"
+    },
+    {
+      "nodeId": "B12-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告；D-27 销账锚=树路径+收口报告",
+  "notes": "registries 51 拆三批（15/20/16）；board=原 169 清单外新出现域（+3，差口谜底），非 13 员工席——首勘其定位与模板符合度；BS 余 2=contract/壳（agent-body 已 B1 全链）；本批含特任务=board 域定性首勘",
+  "statusNote": "done（闸门竞态批：派工先于批10 停令，在途照完；批13 持有候 BOD A′ 裁）",
+  "closeout": "reports/b12-closeout.md（2026-09-17T13:16:19Z）；五席意见件 5 份+汇总件 b12-summary.md"
+}
