@@ -224,3 +224,7 @@
   - d302a9f5 merge: 回流收编
   - 93103cfa fix(ops): 流式监控真 bug 修复——心跳过滤后【事件】行仍无条件打印（chg 空标签照发）；修=chg 非空才发事件；语法过+采样测过
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 3025adf2 后新增 2 条 commit：
+  - e9514e0e merge: 回流收编
+  - f71e6f8a docs(runbook): 补 --agent PascalCase 正名要求——kebab 形本机 2.1.273 与 sg 2.1.227 均拒，交互路径静默不生效（COS 终验坐实）；五步法通道+远控标准全链已验证
+- registry：v2.1；今日 registry 提交无变化
