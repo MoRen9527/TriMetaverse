@@ -51,9 +51,11 @@ else
             chg="仓动作(TMV→$ntmv) "
           fi
         fi
-        [ -n "$ntc" ] && [ "$ptc" != "$ntc" ] && chg="${chg}仓动作(TC→$ntc) "
-        [ "${pe:-0}" != "${ne:-0}" ] && chg="${chg}429态变化(${pe:-?}→${ne:-?}) "
-        echo "【事件】${chg}$(report "$s")"
+        if [ -n "$ntc" ] && [ "$ptc" != "$ntc" ]; then chg="${chg}仓动作(TC→$ntc) "; fi
+        if [ "${pe:-0}" != "${ne:-0}" ]; then chg="${chg}429态变化(${pe:-?}→${ne:-?}) "; fi
+        if [ -n "$chg" ]; then
+          echo "【事件】${chg}$(report "$s")"
+        fi
       else
         echo "【基线】$(report "$s")"
       fi
