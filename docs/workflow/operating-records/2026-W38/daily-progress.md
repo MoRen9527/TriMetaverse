@@ -240,3 +240,6 @@
   - 8026787f docs(workflow): M-SG 复工任务书——批11 进度注记+高峰暂停态回写（BOD 补令 14:00 停/18:00 重启批12）+跨批候裁候窗清单归并留痕
   - 191f8093 closeout(b4-sweep-b11): B4 扫尾批11（RDT 域 9 件）五席联审收口·高峰暂停收口版——群 E 新立 reports_to 三方分裂（contract 错载 1:2 候 CHO 终裁）/跨批勘误（RAndDTrainer/STE=D-13 条4 合法双名，批9/10 判定降级，真失配收敛 test-engineer 4 处）/四层命名模型正样+E2 五面直载标杆/BOD 补令 14:00 停前全落+树 done @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 cdfb7fa0 后新增 1 条 commit：
+  - a35175e8 docs(workflow): B4-sweep-b11 v2 归一首用——tok_归一 32.67M 二连破带 +8.9%（复利台阶实锤），批12 闸门不发候 BOD 裁
+- registry：v2.1；今日 registry 提交 1 条：80f7941 docs(fade): FADE-008 受控压缩立章＋首跑实例 fade-cos-compact-001 入册（E 回声 F 铸）——七段工件全录+可复制性读数八条+工程坑位四条对策；转正锚=BOD diff 核验 PASSED（2026-09-17 02:5x）；补齐项三条如实（spec FADE-008 章候补/评分卷未建/跨席段低计）。
