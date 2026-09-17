@@ -220,3 +220,7 @@
   - 9cc4dcc5 merge: 回流收编
   - 74d195c9 ops: 流式监控心跳过滤加固——采样自带 HEAD 主题行（SUBJ=），变化判定用内嵌主题（去额外 ssh），巡检兜底补写静默
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:10 +08：自上次进度提交 0289b7e6 后新增 2 条 commit：
+  - d302a9f5 merge: 回流收编
+  - 93103cfa fix(ops): 流式监控真 bug 修复——心跳过滤后【事件】行仍无条件打印（chg 空标签照发）；修=chg 非空才发事件；语法过+采样测过
+- registry：v2.1；今日 registry 提交无变化
