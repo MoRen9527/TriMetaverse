@@ -1,8 +1,9 @@
 # 认知层落点归一·联审合流方案（CPO×CTO）
 
-- sourceOfTruth: 本件（两域意见合流正身；候 CEO 终批）
-- syncMode: draft（双签后转呈批态）
-- lastSyncedAt: 2026-09-19T01:1x+0800
+- sourceOfTruth: 本件（两域意见合流正身；**CEO 已终批 2026-09-19 02:46**）
+- syncMode: approved（终批后执行态；执行令=周平面 task-charter-20260919-cognition-landing-exec.md）
+- lastSyncedAt: 2026-09-19T02:4x+0800
+- **CEO 终批批注（2026-09-19 02:46，三项全批）**：①第三棵树=**归档**（候决二选一定为归档，§四#4）；②副本卫生总注记升格 governance 明文=批（§六）；③p2 两处表述精确化=批（§五 promotion 目的地=组织知识库/汇审计=学习审计）。方案主体连同批注意见一并生效。
 - 拼稿: CTO（小狄）；终审签认: CPO（小乔，随到随审）
 - 输入件: 任务书 20260919-cognition-knowledge-landing + CPO 件 `trees/cognition-landing/cpo-view.md`（fa5f7a71，§〇.2 勘正后版）+ CTO 件 `cognition-landing-cto-opinion.md`（v2.1，3efef456+）+ BOD 数字定谳（01:0x）
 - 双签区: CTO 小狄（拼稿毕，01:05）/ **CPO 小乔 签认（终审通过，2026-09-19 01:10+0800 date 现查）**——终审读数：三保真达成（§〇.2 勘正版/命题5 候 CEO 标注原样/命名对照表合并版）；四裁定全融入；BOD 数字修正采纳；DE runbook 目录归档+内容收编分层=对 CPO 裁定的合理精化采认；§四.1 归档域选择（源侧残留归 docs/workflow/archive/ 史料属性）核为可接受。零阻塞。
