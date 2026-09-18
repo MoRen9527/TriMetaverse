@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "description": "Claude Code 宿主席位名址录——启动/寻址/健康三面（CTO 提案，BOD 批 2026-09-17 23:5x）。真源=发布管线派生，禁手维护本件内容结构。",
+  "generatedBy": "publish-pipeline (manual seed 2026-09-17)",
+  "seats": [
+    {
+      "name": "m-cao",
+      "agent": "ChiefAdministrativeOfficer",
+      "manual": ".claude/compass/chief-administrative-officer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-cfo",
+      "agent": "ChiefFinancialOfficer",
+      "manual": ".claude/compass/chief-financial-officer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-cho",
+      "agent": "ChiefHumanResourcesOfficer",
+      "manual": ".claude/compass/chief-human-resources-officer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-cmo",
+      "agent": "ChiefMarketingOfficer",
+      "manual": ".claude/compass/chief-marketing-officer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-coo",
+      "agent": "ChiefOperatingOfficer",
+      "manual": ".claude/compass/chief-operating-officer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-cpo",
+      "agent": "ChiefProductOfficer",
+      "manual": ".claude/compass/chief-product-officer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-cso",
+      "agent": "CustomerSuccessOfficer",
+      "manual": ".claude/compass/customer-success-officer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-cto",
+      "agent": "ChiefTechnologyOfficer",
+      "manual": ".claude/compass/chief-technology-officer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-dee",
+      "agent": "DeploymentEngineer",
+      "manual": ".claude/compass/deployment-engineer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-fsd",
+      "agent": "FSD",
+      "manual": ".claude/compass/full-stack-developer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-rdt",
+      "agent": "RAndDTrainer",
+      "manual": ".claude/compass/rd-trainer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "m-ste",
+      "agent": "STE",
+      "manual": ".claude/compass/senior-test-engineer.session.md",
+      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
+    },
+    {
+      "name": "board",
+      "agent": "Board",
+      "manual": ".claude/agents/board.md",
+      "note": "非人格治理席（D2 权柄四表），无常驻实例——CEO 直连即 bod 本身"
+    }
+  ]
+}
