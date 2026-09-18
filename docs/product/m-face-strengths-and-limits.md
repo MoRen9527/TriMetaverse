@@ -62,6 +62,64 @@
 ### L3（预留位）
 - （CAO/CPO 域增补入口；每条须带现象+根因+状态档+对照面）
 
+## 3.5 跨面差距与吸收规划（四 daemon+四套班子，2026-09-18 BOD 整体消化）
+
+> CEO 令（23:3x）：「4 daemon + 4 套员工班子（m-duty-xx，m-xx，r-duty-xx，r-xx），整体消化，列举差距，规划 R 面吸收 M 面优势，改造 M 面局限」
+
+### 四套班子现状卡
+
+| | **M 面服务域**（sg, m-duty-xx） | **M 面本地域**（本机, m-xx） | **R 面服务域**（河源, r-duty-xx） | **R 面本地域**（r-xx） |
+|---|---|---|---|---|
+| 席位数 | 13 | 13 + bod | **0（不存在）** | **0（不存在）** |
+| 启动形态 | tmux 值班席+compass 手册+正名 agent | launch-seat.ps1（wt 独立窗+清环境+正名） | — | — |
+| 保活 | TriMLC-Watchdog（daemon 8713） | Seat-Watchdog（5 分钟探活）+Seat-Boot（登录触发） | — | — |
+| 通道 | tmux send-keys+capture-pane+hook | SendMessage 双向+hook 注入+剪贴板兜底 | — | — |
+| 配额纪律 | LG-036 全套（错峰/报备/闸值） | GLM-5.3-Flash[1M]+高峰暂停令 | — | — |
+| daemon | TriMLC 8713（Watchdog 唯一保活） | TriRLC 8711（保活候建，pidfile 隔离缺陷） | TriRMC（cron 空载，重注册配方已备） | — |
+| 执行状态 | B4 批1-13 完成（117/169） | 通知通道 MVP/域消化/常驻基建 | 未启动 | 未启动 |
+
+### 差距列举
+
+| # | 差距 | 面 | 严重度 | 状态 |
+|---|---|---|---|---|
+| G1 | R 面服务域零席位 | R | 高 | 候建（launch-seat.ps1 可直接挂 r-duty-xx） |
+| G2 | R 面本地域零席位 | R | 高 | 候建（同上） |
+| G3 | TriRMC cron 空载（jobCount=0） | R | 高 | 重注册配方已备（runbook 在卷） |
+| G4 | TriRLC 8711 无保活（+pidfile 隔离缺陷） | R/M | 中 | R 面保活机制候建+pidfile 按端口分文件 |
+| G5 | R 面无配额纪律体系 | R | 中 | LG-036 纪律模板可复用 |
+| G6 | R 面无通知通道 | R | 低 | 通知通道 MVP 已验通，可扩展 |
+| G7 | bod 单点（手动 VS Code 启动） | M | 低 | COS 缓存协议已建（缺位兜底）|
+| G8 | 配额单一账户依赖（bigmodel） | M-SG | 低 | deepseek 直连兜底+多账户候选 |
+
+### R 面吸收规划（草案）
+
+**直接复制（零改动）**：
+- launch-seat.ps1 参数化启动器（改参数即可挂 r-duty-xx/r-xx 席）
+- Seat-Watchdog 模式（改席位清单即覆盖 R 面）
+- LG-036 配额纪律模板（错峰/报备/闸值数值候 CFO 按 R 面实际校准）
+
+**需 R 面特化**：
+- TriRMC cron 重注册（runbook 在卷，需河源侧 SSH/token 授权窗）
+- TriRLC 8711 看门狗（新写，修 pidfile 隔离缺陷：stop/start 按端口分文件）
+- R 面 compass 手册（r-xx 席位需专用 session-body 定义+渲染）
+
+**前置依赖**：
+- 河源 SSH/token 授权窗（候 CEO 授权）
+- R 面 staffing 定谳（r-duty-xx/r-xx 各几席、什么角色——候 CEO/CHO）
+- R 面 agent 正名（r-duty-* 命名遵 D-13 名册）
+
+### M 面局限改造清单
+
+| # | 局限 | 状态 | 改造方向 |
+|---|---|---|---|
+| L1 | SSH 伪终端缺陷 | **可绕过** | 五步法已成文；不产品化（CPO 裁） |
+| L2 | TriModel 非自启 | **候 CTO 定档** | 参照 sg systemd 服务化 |
+| L4 | 键入自动化多坑 | **已解决** | 远控五步法+launch 脚本 |
+| NEW | bod 单点 | **可绕过** | COS 缓存协议已建（缺位兜底） |
+| NEW | 配额单一账户 | **可绕过** | deepseek 直连兜底+多账户候选 |
+| NEW | 推仓身份 root/fleet 混用 | **已解决** | remote URL 切 fleet 身份 |
+| NEW | mode 态易碎 | **可绕过** | 操作后核指示条+S-Tab 复位 |
+
 ## 3. M 面对照 checklist（可执行核对单）
 
 ### 3.1 选型前对照（什么时候选 M 面）
