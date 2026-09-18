@@ -1,0 +1,35 @@
+{
+  "treeId": "b4-sweep-b13-reg2",
+  "title": "B4 扫尾批·批13（registries 次 20 件）五席联审——复工批任务2 第十三批（A′ 重启后冷建首批）",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+BOD 裁 A′（四席重启基准重置）后开批",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-18",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b13·域=registries 字母序 16-35 位 20 件·时点=2026-09-18 0x:xx +08·席位=COS/CTO/CAO/CPO SendMessage 直达（重启后首批）+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B13-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见（重启后冷建批，跨批基线族名随派工单携带）"
+    },
+    {
+      "nodeId": "B13-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线"
+    },
+    {
+      "nodeId": "B13-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料（v2 重置口径）"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告；D-27 销账锚=树路径+收口报告",
+  "notes": "registries 51 拆三批之批13（16-35 位）；批12 两大正身（BS 投影制+五字段）作跨批对照锚；名址精度群/execution 标注群/owner 缺载族随批照查",
+  "statusNote": "done（A′ 重启后冷建首批；群 G 新立候 CTO+BS 联勘）",
+  "closeout": "reports/b13-closeout.md（2026-09-17T16:41:34Z）；五席意见件 5 份 420 行+汇总件 b13-summary.md"
+}
