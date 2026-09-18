@@ -16,9 +16,9 @@
 3. knowledge 活体：`TriCompany-copilot-host-assets/knowledge/employees/` 四区骨架（COO 例：inbox/wiki/workbench/audit+README）属实。
 4. 活脚本 `TriCompany/runtime/cognition/source_publish_check_validation.py` 在位（勿误伤线确认）。
 
-### 〇.2 精度勘误两笔（CTO 对表）
-1. knowledge/employees/ 实测 **11 目录**（非 15）——差 2 席骨架缺失与否候 CTO 清点（影响批量追平范围）。
-2. `TriCompany-copilot-host-assets/employees/`（DE 孤例派送）**实测不存在/已空**——死层清单该项或已自清或路径误引，处置定案前 CTO 复核。
+### 〇.2 精度勘误两笔（**本节已被 BOD 复核驳回并勘正，2026-09-19 00:5x——原始错误留痕**）
+1. ~~knowledge/employees/ 实测 11 目录~~ **勘正：权威位（TriMetaverse/TriCompany-copilot-host-assets/）实测 15 目录=13 有效席+2 脏目录（randd-trainer 旧名残留+project-trainer 名册无此席）——2 脏目录入死层/清理清单；席位数引用以 13 为准**。本席原误判根因=探错树（勘了 D:/Code/ai/ 镜像副本非 TriMetaverse 权威位——「部署副本≠权威位」自家纪律自踩）。
+2. ~~copilot-assets/employees 孤例不存在~~ **勘正：存在**——`TriMetaverse/TriCompany-copilot-host-assets/employees/deployment-engineer/inbox/windows-seat-remote-control-runbook.md`（BOD find exit=0+本席复验在）。死层清单该项维持，处置照命题 4。
 
 ## 一、命题 1：落点归一——**推荐 B 案（契约追平）+ 双腿登记**
 
