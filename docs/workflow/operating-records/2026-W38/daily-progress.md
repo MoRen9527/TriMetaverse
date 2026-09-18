@@ -302,3 +302,11 @@
 - registry：v2.1；今日 registry 提交无变化
 - COS 值席 @23:08 +08：BOD 三令执行——①四 daemon 矩阵通报 12 席投递（回执 10/12）②notify 白名单 +m-cos 源侧入 bare 79a2769（live 应用候 BOD root 通道）③bod 缺位缓存协议 C-1..C-4 入 unresolved-items+索引双写
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:20 +08：自上次进度提交 c6f9059a 后新增 6 条 commit：
+  - 04404de2 merge: 回流收编
+  - 0fe73dbb feat(claude-host): .claude/seats.json 席位名址录首版（CTO 提案落地）——13 席三面（name/agent/manual）+launchEnvPolicy.strip 标准化；board 非人格治理席备注
+  - 31a11c79 docs(workflow): 缓存补记——CAO 回执与 D-13 路由项入 C-4；c6f9059a 扫入 CPO 两树更正注权属注记 @m-duty-cos
+  - 08ce0fa6 docs(binding-audit): CPO 审核意见——判定=方向对追平未完成的半缺口（13/13 hostEntries 已立 vs 13/13 stage 陈旧+两 manifest 零 claude 记录）；形态=不做镜像树做三件收尾（schema v0.2 语义追平/manifest 盲区补登/governedBy 补依）；验收锚四条
+  - 53042c49 docs(lg-035): 宿主支撑架构缺口·CTO 审核意见（CPO 联审）——问1裁=机制差异合理(Copilot 消费 JSON/Claude Code 消费 CLI 参数)但结构化缺位真实(绑定信息只存启动命令瞬态:无落盘/无看门狗可读/无名址自检/无寻址校验)；问2裁=轻量名址录 .claude/seats.json(启动+寻址+健康三面,launchEnvPolicy.strip 直治 CHILD_SESSION 遗传事故族)+发布管线派生非第二真源(host=claude-code 第四渲染目标)+五消费者面；MVP=13席+board 名册+复活器/自检两消费者；不照搬 binding-profiles 不为统一而统一
+  - 83f72885 docs(training): 四 daemon 矩阵定谳勘正——三角循环教材历史档化+构建指南对齐 workflow 现值+名单图谱新名（RDT 域消化）
+- registry：v2.1；今日 registry 提交无变化
