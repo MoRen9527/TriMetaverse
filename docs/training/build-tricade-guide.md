@@ -9,7 +9,7 @@
 
 `build-tricade.yml` 是 **TriCade 桌面端发行包的生产构建流水线**（GitHub Actions CI/CD）。
 
-**一句话**：当有人打了一个 `v` 开头的 tag（如 `v1.0.0`），或手动触发时，GitHub 自动拉起一台 Windows 虚拟机，把四个仓库（TriMetaverse、TriLC、TriPilot、TriCode）的代码拉下来 → 编译 → 打包 → 组装成 ZIP → 发布到 GitHub Release。
+**一句话**：当有人打了一个 `v` 开头的 tag（如 `v1.0.0`），或手动触发时，GitHub 自动拉起一台 Windows 虚拟机，把四个仓库（TriMetaverse、TriRLC、TriPilot、TriCode）的代码拉下来 → 编译 → 打包 → 组装成 ZIP → 发布到 GitHub Release。
 
 整个流程分六大块：
 
@@ -71,7 +71,7 @@ on:
 ```
 GitHub Actions 虚拟机 (windows-latest)
 ├── TriMetaverse/   ← 自己（构建脚本），用 github.ref（完整引用防歧义）
-├── TriLC/          ← 兄弟仓库，用 refs/tags/xxx（精确匹配 tag）
+├── TriRLC/          ← 兄弟仓库，用 refs/tags/xxx（精确匹配 tag）
 ├── TriPilot/       ← 兄弟仓库，同上
 └── TriCode/        ← 兄弟仓库，同上
 ```
@@ -85,7 +85,7 @@ GitHub Actions 虚拟机 (windows-latest)
 | 项目 | 命令 | 输出目录 | 特别说明 |
 |---|---|---|---|
 | TriCode | `npm ci` + `tsc --outDir dist` | `dist/` | 共享运行时，`strict: true` |
-| TriLC | `npm ci` + `tsc --outDir dist` + `tsc --noEmit` | `dist/` | 多一步类型检查（历史代码渐进迁移） |
+| TriRLC | `npm ci` + `tsc --outDir dist` + `tsc --noEmit` | `dist/` | 多一步类型检查（历史代码渐进迁移） |
 | TriPilot | `npm ci` + `tsc --outDir out` | `out/` | VS Code 扩展约定输出目录 |
 
 ### 常用命令速查
@@ -118,8 +118,8 @@ $vsixFile = Get-ChildItem *.vsix | Sort-Object LastWriteTime -Descending | Selec
 staging/TriCade-v1.0.0-windows/
 ├── extensions/
 │   └── tripilot-chat-0.0.1/   ← .vsix 解压后的扩展
-├── trilc/
-│   ├── dist/                   ← TriLC 编译产物
+├── trirlc/
+│   ├── dist/                   ← TriRLC 编译产物
 │   ├── node_modules/           ← 运行时依赖
 │   ├── package.json
 │   └── version.json
@@ -137,13 +137,13 @@ staging/TriCade-v1.0.0-windows/
 
 ```powershell
 # 硬依赖：拷贝后立即校验，失败就 exit 1（P1 级 Bug——产物不可用）
-Copy-Item -Recurse -Force TriLC\node_modules "$staging\trilc\"
-if (-not (Test-Path "$staging\trilc\node_modules")) {
-  Write-Error "FATAL: TriLC node_modules copy failed"
+Copy-Item -Recurse -Force TriRLC\node_modules "$staging\trirlc\"
+if (-not (Test-Path "$staging\trirlc\node_modules")) {
+  Write-Error "FATAL: TriRLC node_modules copy failed"
   exit 1
 }
 
-# 可选依赖：不存在不报错（TriLC 有内置默认配置兜底）
+# 可选依赖：不存在不报错（TriRLC 有内置默认配置兜底）
 Copy-Item -Force TriMetaverse\config\settings.json "$staging\config\" -ErrorAction SilentlyContinue
 ```
 
@@ -160,6 +160,7 @@ echo [1/2] Installing TriPilot extension...
 code --install-extension ".\extensions\tripilot-chat-0.0.1" --force
 echo [2/2] Installation complete!
 echo Start with: trilc daemon start
+REM 注意：CLI 命令名暂仍为 trilc（package.json bin 现值），仓名已改 TriRLC——CLI 兼容面改名随 r21+ 分批执行
 ```
 
 ### 打 ZIP
@@ -258,7 +259,7 @@ git push --tags v1.0.0
     ② 环境准备（windows-latest / Node 20 / checkout 4个仓库）
         │
         ▼
-    ③ 编译构建（TriCode + TriLC + TriPilot → dist/ + .vsix）
+    ③ 编译构建（TriCode + TriRLC + TriPilot → dist/ + .vsix）
         │
         ▼
     ④ 组装打包（staging/ → 拷贝 + 校验 → ZIP）

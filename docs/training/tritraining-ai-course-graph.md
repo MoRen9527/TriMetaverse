@@ -154,7 +154,7 @@ graph TD
 1. OpenClaw / Hermes / Super-dev 等方法与骨架解读
 2. 吸收链：reference -> vendor -> real implementation
 3. host / runtime / memory / workflow 的系统演进
-4. TriCompany / TriDev / TriMC 里的真实吸收案例
+4. TriCompany / TriDev / TriMMC 里的真实吸收案例
 
 ### 6.7 AI 混合现实
 
@@ -193,7 +193,7 @@ graph TD
 
 1. 项目总览层：世界观、目标、边界、主线与当前阶段
 2. 三主轴理解层：AI、AI & Web3、AI & 元宇宙
-3. 模块专题层：TriCompany、TriAvatar、TriStaciss、TriMC、TriLC、TriPilot、TriDev 等
+3. 模块专题层：TriCompany、TriAvatar、TriStaciss、TriMMC、TriMLC、TriRMC、TriRLC、TriPilot、TriDev 等
 4. 工作流实战层：source -> publish -> live -> runtime、project-run、IPD、phase engine
 
 这意味着：

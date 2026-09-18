@@ -4,7 +4,9 @@
 
 - sourceOfTruth: TriMetaverse/docs/training/trimc-trilc-devrepo-triangle-loop.md
 - syncMode: source-only
-- lastSyncedAt: 2026-08-15
+- lastSyncedAt: 2026-09-18
+
+> **版本差注记（2026-09-18，四 daemon 矩阵定谳后历史档化）**：本文拓扑叙事为 2026-08-15/16 基线（「TriMC+TriLC」两名三角循环）——已被两波现势超越：①**2026-08-21 三元宇宙重定义**（架构说明 V0.5）：`TriLC`→`TriRLC`（元现实本地控制器，本机 8711）、`TriMC`→`TriMMC`（元虚拟主控，服务域 sg），历史名仅为兼容路径名，非新旧版本、无退役一说；②**2026-09-18 CEO 四 daemon 矩阵定谳**：TriMMC↔TriMLC（M 面，本机 8713）+TriRMC↔TriRLC（R 面，本机 8711）四名四角色，面×域绑定写死。本文中「TriLC 本地域主控」「TriMC 公司云端实体」等角色定性已被架构说明 §4 四行模块表取代；真源指针 `../TriLC/`、`../TriMC/` 已随仓改名失效（现 `TriRLC/`、`TriMMC/`）。**接手人以 `三元宇宙架构与模块说明.md` §4/§5/端口表 + `docs/tmv-whitepaper.md` §3.1 为准**；本文保留为历史档（v2.1 训练流程语义仍有效，四格拓扑版正身待重写）。
 
 > **v2.1 修订（CEO 2026-08-16）**：循环发起方向与审核粒度按训练流程 v2.1 修订——①任务从 **TriLC 端发起**（训练即生产形态）②TriMC 审核**岗位一对一镜像互审**（MC 侧小贾审 LC 侧小贾）③审核分流：**项目系统级问题 → 研发仓修复（走 git）**；非系统级 → 发回 TriLC 重做 ④**医生（研发仓）只修项目系统级 bug**——**TriMC/TriLC 自身的缺陷即属项目系统级**（自己没法修自己）；其他项目开发由 TriMC/TriLC 直接推进。见 two-phase-architecture-roadmap.md 训练流程节。
 
