@@ -34,7 +34,14 @@
 - TriMLC：593/588/5（昨日备案族原样）；TriMMC：581/577/3（同前）
 - 新面自带案：seats 校验 2/2+fm parity 3/3+notify 族 28/28 全绿
 
-## 候裁两项（段二停手件）
+## 候裁两项（段二停手件）→ BOD 03:1x 复核裁定后状态更新
 
-1. #4 第三棵树处置与学习腿在役冲突（knowledge/ 在此树）——候 BOD/CTO 裁 knowledge 迁位或树保留
-2. lg025 契约结构面红（paths 缺 session_body 键）——候独立批
+1. ~~#4 第三棵树处置~~ → **BOD 裁定=整树归档照原批执行**（归档非删除零丢失风险；判据粗系执行令沿用删除态判据之过，非执行之过）。**补做完成（03:2x）**：整树移 `_archive/third-tree-20260919/`+README-ARCHIVE.md（9 件独有清单 BOD 勘定版附卷：5×INBOX-2026072x+test-engineer README+workbench brief+tri-deployer INBOX；归档区可发现不收割）。**学习腿管道落点悬空注记**：joint-plan §一.B 学习腿路径=此树 knowledge/employees/（已随树归档）——hermes-gov-p2 管道实跑前须先解归档或定新落点（候批，p2 现未实跑无在途影响）。
+2. ~~#3 误报纠正~~ → **BOD 复测纠正采信+补做完成**：权威位=TriMetaverse 嵌套份 runtime/cognition（85 文件在，非盘根树）——本席首报探错树（盘根无 runtime/ 顶层，同 CPO/CTO v1 第三起）。**追平已执行**（republish-runtime-cognition.py 管线化留痕入卷）：甄别 orphan=0（无死层候选）／缺失 53+差异 44=**97 文件真源覆盖追平**（TriCompany 活体 77 项+子目录全量）。
+3. lg025 契约结构面红（paths 缺 session_body 键）——候独立批（原样）。
+
+## 追加读数（纠正后）
+
+- #3 追平后 TMV 嵌套份 runtime/cognition=真源 97 文件态（TriCompany 活体全量含 proving-ground IPD 证据族）
+- #4 归档后盘根位清零（TriCompany-copilot-host-assets 不存在）；归档区 third-tree-20260919 全树+README-ARCHIVE（9 件独有清单）在嵌套份 _archive
+- 副本卫生 governance 明文条+段落声明随 TriCompany b4ce908 在库
