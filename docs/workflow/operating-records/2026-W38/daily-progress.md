@@ -269,3 +269,15 @@
 - 巡检兜底补写 @00:50 +08：自上次进度提交 a4423687 后新增 1 条 commit：
   - 751f3f6d closeout(b4-sweep-b13): B4 扫尾批13（registries 次 20 件）五席联审收口·A′ 冷建首批——活跃三件+manifest 三验全过（source==published 同步+42 条缺失 D-24 断言机位缺仓）/群 G 新立世代家族 16 件定性候联勘/既有族全挂零新重案/owner 缺载 3-36/全席准时交付实证+树 done @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:00 +08：自上次进度提交 b60a25c5 后新增 3 条 commit：
+  - 9ee7d7c6 merge: 回流收编 sg 侧（fleet 身份首推验证轮）
+  - 9e4af2e3 docs(ops): pidfile 修复验收集成文——TriRLC 09980b8/TriMLC 450a286 四案回归清单（双 pidfile 并存对表/stop 定点命中/8711 无感/legacy 兼容）；窗口评估=并入下次部署窗不专门起停（CTO ③ 授权 DE 评估）；新码生效前窗口期 stop 正身细则入册 @trideployer
+  - 1074b303 docs(ops): LG-036 通知通道部署 log——BOD 部署令五要件全过（sg TriMMC 6ca9024 token门三态/本机 TriMLC 448a9c5 重启/env 两键/端到端试信 confirm 双跳/backlog=0 两端 connected）；8711 两次误停如实录（共享 pidfile 无端口命名空间结构性缺陷候 CTO）+试信 ntf-mu5rpxg212gylk 三态迁移全录 @trideployer
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:10 +08：自上次进度提交 9b9e2020 后新增 2 条 commit：
+  - 89b81432 docs(workflow): M-SG 复工任务书终版注记——批12/13/14 进度+程序事件全录（带位 v2/A′ 重启/权限墙修复）+任务2 完成判据核验（172 件全量覆盖）+四任务全闭收官候 BOD 终验
+  - b637c206 closeout(b4-sweep-b14): B4 扫尾批14（registries 末 16 件）五席联审收官收口——群 G 双侧清册在卷（占位 16/活跃误植 13/需封存 3，差集 6 件候二轮）/两批 36 件残留全在文本机械层/registries owner 缺载 48-51 定谳/任务2 完成判据核验达成（172 件全量覆盖=18+1+153）+树 done @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:30 +08：自上次进度提交 b0755853 后新增 1 条 commit：
+  - 90652230 docs(workflow): CFO 三批一联切账回填——b12 补切（归一 50.06M 破带由 A′ 裁吸收销案）+b13 冷建首批重置口径首用+b14 收官切账带内，任务2 切账链 b1-b14 闭合
+- registry：v2.1；今日 registry 提交无变化
