@@ -12,7 +12,7 @@
 1. **sg TriMMC**：`/srv/fleet/TriMC` pull `8982004`→`6ca9024`（含 `2a6047f` notify 发端；merge 收编前置见下）→ `npm run build` → `systemctl restart trimc` → active。**token 门三态**：无令牌 401 / 错令牌 401 / 对令牌+缺字段 body 400（门放行+业务校验拒，零副作用探针）✅
 2. **本机 TriMLC**：`/d/Code/ai/TriMLC` 工作树核实 HEAD=`448a9c5`（含 `fbb117c` 收端+`448a9c5` STE 复验，工作树干净，未动树）→ `npm run build`（`dist/notify/{letter-store,puller}.js` 落地）→ 8713 重启（旧 daemon pid 1888 经 `POST /shutdown`+`TRILC_INTERNAL_TOKEN` 门优雅退出→`trimlc-daemon-channel.cmd` 权威拉起）→ healthz ok ✅
 3. **功能开关**：`TRIMC_NOTIFY_SG_URL=http://47.245.122.61:8710` + `TRIMC_NOTIFY_SG_TOKEN`（=sg override.conf `TRIMC_INTERNAL_TOKEN` 同值，前缀比对 MATCH len64）追加至 `D:\Code\ai\.env`（TriMLC env.ts r19 fallback 首候选，`TRILC_ENV_FILE` 指向；loader 不覆盖已有进程 env；cmd byte-exact 定稿件未动）。poller 实跑命中为生效实证 ✅
-4. **端到端试信**：`ntf-mu5rpxg212gylk`（title 标注 WALKTHROUGH；source_seat=`m-duty-cos`——MVP 源席白名单仅此值，403 人话拒后按令正名，DE 代发已在信体标注）：POST 200 pending(16:52:50Z) → poller 60s 周期命中 → forwarded+**delivered**(16:53:12Z)=**confirm 双跳实证** → 8713 信箱落信（unread=1, delivery=mailbox）✅。toast 视觉面候 BOD 屏幕回执
+4. **端到端试信**：`ntf-mu5rpxg212gylk`（title 标注 WALKTHROUGH；source_seat=`m-duty-cos`——MVP 源席白名单仅此值，403 人话拒后按令正名，DE 代发已在信体标注）：POST 200 pending(16:52:50Z) → poller 60s 周期命中 → forwarded+**delivered**(16:53:12Z)=**confirm 双跳实证** → 8713 信箱落信（unread=1, delivery=mailbox）✅。**toast 到账补记（2026-09-18 13:41+08）**：会话 hook 注入 `[M-SG NOTIFY]` 试信全文（title+body 逐字匹配）——toast 视觉面实证补全，④全链闭合；时点差观察：delivered(00:53+08)→hook 到账(13:41+08) 差约 12.8h，最合理解读=hook 通道随下次会话消息批量注入（非 toast 面延迟），然 toast 实弹时点无屏幕观察者佐证，两说并存记档
 5. **mc_link 重连**：8713 healthz `mc_link=connected`+`trimc=connected`；sg outbox **backlog=0**；8710 healthz ok ✅
 
 ## 部署前置（令外必要环节）
