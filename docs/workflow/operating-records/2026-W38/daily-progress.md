@@ -294,3 +294,6 @@
   - acab3ba9 docs(product): 跨面差距与吸收规划章入档——四套班子现状卡/八项差距/R 面吸收规划/M 面局限改造清单；BOD 整体消化（CEO 令 23:3x）
   - b2d3e150 docs(ops): LG-036 log 补记——toast 到账实锤（hook 注入 [M-SG NOTIFY] 全文逐字匹配，④全链闭合；12.8h 时点差两说并存记档）@trideployer
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 6cc47d0d 后新增 1 条 commit：
+  - a1135e35 docs(workflow): M-SG 复工任务书——值席轮换执行记录（BOD 裁准，移交包落蓄水池 full-20260918T125349Z，新班次按启动恢复接任）
+- registry：v2.1；今日 registry 提交无变化
