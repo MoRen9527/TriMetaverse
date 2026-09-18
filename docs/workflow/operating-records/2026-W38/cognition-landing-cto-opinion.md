@@ -12,7 +12,7 @@
 | # | 事实 | 实勘读数 | 影响 |
 |---|---|---|---|
 | F-1 | COGNITION_HOME 消费面两类 | ①声明面：13 席合同件+`employee_source_kit.py:553/576`（required marker+节内落位硬检查——**改声明不同步 validator=13 席全红**，tools 退役同族教训）；②运行面：`TriCompany/runtime/cognition/kernel/` 九件活代码（build_kernel 读 env 落盘 shared/audit；05-24 时戳，含 **wiki 四件**） | 命题 1 含 kernel 维度；命题 2 必须 validator 联动 |
-| F-2 | **host-assets/runtime/cognition=37 项结构化目录树**（providers/runners/tasks/kernel/contracts，最新 providers 08-10）——非「30 个平铺死脚本」 | governance 正身 `tricompany-copilot-host-assets-governance.md:105-111` 已定性：**宿主 runtime/vendor=承接已发布副本+宿主验证辅助的合法位**，真源=TriCompany/runtime/cognition（源侧 kernel 与宿主 kernel 同名件=真源/发布副本关系）。**命题4 该项从「归档死层」改判「甄别+副本治理」**（判据=:107：有源侧对应物=合法副本随管线；无源侧对应物=COS 死自动化滞留→死层候选） | 甄别工作量=逐项对照源侧，非一刀切 |
+| F-2 | **双位形态定谳（BOD 01:0x 数字修正采纳）**：真源位 `TriCompany/runtime/cognition/`=**活体**（77 项、7 结构化子目录 contracts/dispatch/kernel/providers/proving-ground/runners/tasks，__pycache__ 2026-09-19 00:41 仍在更新=有活进程消费中——**运行腿非死，双腿第四条硬证据**）；宿主副本位=85 文件停 08-10，与真源滞后漂移（合法副本位，发布管线未跑新）。任务书「30 py 停 06-11」勘正作废 | 命题4 该项=**双动作**：真源活体不动+宿主副本走管线追平（禁手工同步）；甄别判据（:107）仍适用于副本位内无源对应物项 | §三.3 |
 | F-3 | knowledge/employees=15 目录=13 有效席+2 脏（`randd-trainer` 旧名残留/`project-trainer` 名册无此席）（CPO 勘误，权威位复验吻合 ✓）；DE runbook `employees/deployment-engineer/inbox/windows-seat-remote-control-runbook.md` **实存**（CPO 二次勘误 ✓） | 入命题 4 清单 | §三 |
 | F-4 | **第三棵树坐实**：`D:\Code\ai\TriCompany-copilot-host-assets` 非 git 仓根（裸目录老快照，knowledge/employees=11 与权威位漂移 4 项）——拷贝散落→真源漂移的活标本 | 入命题 4+副本卫生总注记 | §三.4 |
 | F-5 | 死残留数据质量：`org/shared.md` 尾部=W29（07-14）daily-close+next-actions，**中文乱码损毁**（保史不保读）；权威位与 TriCompany 侧两处 `.tricompany-cognition/` 各 3 文件同构 | 归档档位 | §三 |
@@ -52,7 +52,7 @@
 |---|---|---|---|
 | 1 | `TriCompany/.tricompany-cognition/`（07-14 停） | **归档** | git mv → docs/archive/cognition-run-2026-07/ +README 头注（停跑时点/kernel 指路/乱码如实注记）；W29 next-actions 系历史叙事有正式账，不抢救 |
 | 2 | 权威位 `.tricompany-cognition/`（04-20 停） | **归档** | 同上分代目录（-2026-04）；运行腿落点声明保留（kernel 复活时初始化新目录），归档的是死数据非腿位 |
-| 3 | 权威位 `runtime/cognition/` 37 项 | **甄别+副本治理（非归档）** | 判据=governance:107：有源侧对应物→合法发布副本，随发布管线更新（不动）；无源侧对应物→COS 死自动化滞留→死层候选归档。甄别产出=逐项清单挂方案执行件（预估多数为合法副本——kernel/providers/runners 结构化树系宿主验证辅助） |
+| 3 | 权威位 `runtime/cognition/`（85 文件停 08-10，滞后于真源） | **甄别+副本追平（双动作，非归档）** | 真源位活体不动（77 项 7 子目录，__pycache__ 09-19 00:41 更新=有活进程）；宿主副本位执行**重发布追平**（跑发布管线，禁手工同步）+甄别（判据 governance:107：副本内无源对应物项→死层候选归档）。甄别清单挂方案执行件 |
 | 4 | **第三棵树** `D:\Code\ai\TriCompany-copilot-host-assets`（裸目录老快照） | **归档或删除（候 CEO 二选一）** | 与 sg 部署副本口径对齐（部署副本≠权威位）；其 knowledge/employees=11 与权威位漂移 4 项=已失同步无增量价值初判，删除前抽查两差异目录（employees/runtime/vendor）确认零独有内容 |
 | 5 | 脏目录 `randd-trainer/` | **更名或归档** | 若内容=rd-trainer 旧名期资产→更名 rd-trainer/ 归位；若空壳/重复→归档。执行时内容二查一定 |
 | 6 | 脏目录 `project-trainer/` | **归档** | 名册无此席；内容若含 project_trainer_host_object_generation 线索件→归档区+缘由注记（该验证件在 TriCompany/runtime 活着，目录只是载荷位） |
