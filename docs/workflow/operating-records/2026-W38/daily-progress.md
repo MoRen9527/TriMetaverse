@@ -297,3 +297,6 @@
 - 巡检兜底补写 @21:00 +08：自上次进度提交 6cc47d0d 后新增 1 条 commit：
   - a1135e35 docs(workflow): M-SG 复工任务书——值席轮换执行记录（BOD 裁准，移交包落蓄水池 full-20260918T125349Z，新班次按启动恢复接任）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 fcb7231e 后新增 1 条 commit：
+  - df5710d2 docs(workflow): M-SG 复工任务书——新班次接任记录+CFO 轮换回执销案入账（启动恢复序毕；口径三条自首批生效；候 BOD 终验）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
