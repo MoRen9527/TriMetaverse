@@ -289,3 +289,16 @@
   - 179d295a Merge remote-tracking branch 'sg-server/dev' into dev
   - 67390688 fix(ops): 看门狗席位清单补 m-cos——13 席全量覆盖（原 12 席漏 COS 致今晨挂起无人拉起）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:30 +08：自上次进度提交 f8e2ffd8 后新增 3 条 commit：
+  - 874fe654 merge: 回流收编
+  - acab3ba9 docs(product): 跨面差距与吸收规划章入档——四套班子现状卡/八项差距/R 面吸收规划/M 面局限改造清单；BOD 整体消化（CEO 令 23:3x）
+  - b2d3e150 docs(ops): LG-036 log 补记——toast 到账实锤（hook 注入 [M-SG NOTIFY] 全文逐字匹配，④全链闭合；12.8h 时点差两说并存记档）@trideployer
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 6cc47d0d 后新增 1 条 commit：
+  - a1135e35 docs(workflow): M-SG 复工任务书——值席轮换执行记录（BOD 裁准，移交包落蓄水池 full-20260918T125349Z，新班次按启动恢复接任）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 fcb7231e 后新增 1 条 commit：
+  - df5710d2 docs(workflow): M-SG 复工任务书——新班次接任记录+CFO 轮换回执销案入账（启动恢复序毕；口径三条自首批生效；候 BOD 终验）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- COS 值席 @23:08 +08：BOD 三令执行——①四 daemon 矩阵通报 12 席投递（回执 10/12）②notify 白名单 +m-cos 源侧入 bare 79a2769（live 应用候 BOD root 通道）③bod 缺位缓存协议 C-1..C-4 入 unresolved-items+索引双写
+- registry：v2.1；今日 registry 提交无变化
