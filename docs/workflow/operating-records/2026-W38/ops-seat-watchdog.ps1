@@ -14,6 +14,7 @@ $seats = @(
   @('m-cfo','ChiefFinancialOfficer','chief-financial-officer'),
   @('m-cho','ChiefHumanResourcesOfficer','chief-human-resources-officer'),
   @('m-cmo','ChiefMarketingOfficer','chief-marketing-officer'),
+  @('m-cos','CEOChiefOfStaff','ceo-chief-of-staff'),
   @('m-coo','ChiefOperatingOfficer','chief-operating-officer'),
   @('m-cpo','ChiefProductOfficer','chief-product-officer'),
   @('m-cso','CustomerSuccessOfficer','customer-success-officer'),
