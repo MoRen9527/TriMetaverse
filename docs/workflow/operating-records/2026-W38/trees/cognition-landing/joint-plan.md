@@ -36,7 +36,7 @@
 
 ### B 案落点声明标准表述（13 席批量素材，两席合订版）
 
-> 认知层=双腿：**学习腿**=`TriCompany-copilot-host-assets/knowledge/employees/<席>/`（inbox/wiki/workbench/audit 四区，hermes-gov-p2 员工层管道落点；org 层=knowledge/org/ 组织知识库）；**运行腿**=`TRICOMPANY_COGNITION_HOME`（.tricompany-cognition：employee 私域运行态/org 运行共享记忆/org 运行审计——机器写入，runtime cognition backend 驱动，复活时初始化）。memory/colleagues/social 契约的「运行资产落点」按此两腿改写；soul 覆盖层语义不动。
+> 认知层=双腿：**学习腿**=`TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/<席>/`（**权威位=TriMetaverse 仓内**；inbox/wiki/workbench/audit 四区，hermes-gov-p2 员工层管道落点；org 层=knowledge/org/ 组织知识库）；**运行腿**=`TRICOMPANY_COGNITION_HOME`（.tricompany-cognition：employee 私域运行态/org 运行共享记忆/org 运行审计——机器写入，runtime cognition backend 驱动，复活时初始化）。memory/colleagues/social 契约的「运行资产落点」按此两腿改写；soul 覆盖层语义不动。（前缀显式化 2026-09-19 BOD 批：防第三棵树式相对名误读，今夜三起探错树同根预防。）
 
 ## 二、命题 2：五件套声明批量修订（CTO 主笔，单批双段段一）
 
