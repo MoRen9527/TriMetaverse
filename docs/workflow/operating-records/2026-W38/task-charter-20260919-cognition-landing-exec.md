@@ -1,8 +1,9 @@
-# 任务书·认知层落点归一执行令（单批双段）
+# 任务书·认知层落点归一执行令（单批双段）【已销账】
 
 - sourceOfTruth: 本件=董事会执行令（方案终批后执行凭据）
-- syncMode: static
-- lastSyncedAt: 2026-09-19 02:4x
+- syncMode: closed（BOD 销账核 2026-09-19 03:3x）
+- lastSyncedAt: 2026-09-19 03:3x
+- **销账注记（BOD 验收销账，2026-09-19 03:3x）**：双签齐（CTO 终验签认 52f8006e 报＋CPO 执行复核签认 6ac34159/§九）。BOD 非作者抽验 4/4 过：①盘根树消（路径不存在实锚）②双归档区在位（docs/workflow/archive/2026-07-cognition-run＋_archive/ 四批次目录）③9 件独有清单 README-ARCHIVE 全命中 9/9（初差 8 系 BOD grep 模式缺 test-engineer/README 识别词，补验闭合）④13 席净零脏残留。证据链：TriCompany ade0742/b4ce908/4c4d90b＋TriMetaverse 68d921c6/0c592ed8/db0ff614/6ac34159。§九候答闭环：校验域 14=13 员工席＋board 治理席（board 入 kit 校验不入绩效），两册各安。本线正式销账。
 - 上位令: CEO 2026-09-19 02:46 终批（三项全批，批注已入方案正身）
 - 方案正身: `trees/cognition-landing/joint-plan.md`（双签 9f47bff3/8e7f2b1c + CEO 批注）
 - 派工席: Board（BOD）
