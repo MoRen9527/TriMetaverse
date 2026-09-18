@@ -281,3 +281,7 @@
 - 巡检兜底补写 @09:30 +08：自上次进度提交 b0755853 后新增 1 条 commit：
   - 90652230 docs(workflow): CFO 三批一联切账回填——b12 补切（归一 50.06M 破带由 A′ 裁吸收销案）+b13 冷建首批重置口径首用+b14 收官切账带内，任务2 切账链 b1-b14 闭合
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 27d1ab4c 后新增 2 条 commit：
+  - cd84f4f3 merge: 回流收编
+  - 140e6346 fix(ops): 告警弹窗中文乱码修复——[Console]::OutputEncoding=UTF8 补入（PS 5.1 ssh 外部命令输出默认 GBK 解码致 UTF-8 中文花屏）；弹窗标题静态中文有 BOM 保护不受影响，动态 ssh 输出此修后正常
+- registry：v2.1；今日 registry 提交无变化
