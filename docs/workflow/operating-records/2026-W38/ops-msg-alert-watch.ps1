@@ -5,6 +5,7 @@
 param([switch]$TestToast)
 
 $ErrorActionPreference = 'SilentlyContinue'
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $repo = 'D:/Code/ai/TriMetaverse'
 $stateFile = "$repo/.fade/alert-state.json"
 $logFile = "$repo/.fade/msg-alert.log"
