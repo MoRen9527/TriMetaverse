@@ -147,6 +147,12 @@
 2. **最值得后续批优先处理的 P2 偏上位**：18 位「未来的 TriDevProductRegistry/TriDevCodeRegistry」断代措辞（事实已变、文本误导现役发现面）；23/17/26 位实断路径（调用方按图索骥必落空）。
 3. **升级项**：无。本批无触碰商业模式、模块边界或 MVP 范围的事项；TriLC/TriMC 换代窗属名址治理域（CTO/CGR 收口域），本席仅表态不裁。
 
+## 追加更正注（2026-09-18T15:06Z 签，BOD 令后补）
+
+- **更正依据**：COS 值席（m-duty-cos）代转 BOD 通报（CEO 面授·四 daemon 矩阵定名，BOD 令 2026-09-18）：TriMMC（服务域 sg 主控）↔TriMLC（本地域 本机8713 主控）=M 面通信对；TriRMC（服务域河源主控）↔TriRLC（本地域 本机8711 主控）=R 面通信对；TriMMC↔TriRMC=服务域跨面主控。命名语义：Tri=TriMetaverse，首字母 M=Meta-Virtual 元虚拟面/R=meta-Reality 现实面，L=Local 本地域，MMC 次位 M=Main 主控，C=Controller。**四 daemon 为矩阵关系，非新旧版本，无退役。**
+- **更正内容**：本稿「runtime_baseline 换代窗」家族对 21-23（TriLC 三件）与 24-26（TriMC 三件）的判读语义，由「旧代名待换代」更正为「矩阵定名映射未注记」。残留判定不变（registry 面未携带四 daemon 现名与角色映射注记），但修复方向由「名址换代升级」改为「矩阵关系与现役角色注记」：TriLC 族件按 CLAUDE.md 口径对应 R 面本地域主控 TriRLC@8711；TriMC 族件对应服务域主控 TriMMC@sg；M 面本地域主控 TriMLC@8713 在 registry 源侧无命名族件。命中统计表行义不变，判读语义以本注为准。
+- **附记（模块边界域，本席记而不裁）**：四 daemon 矩阵在 registry 发现面缺 TriMLC/TriRMC 命名族件，模块命名面与矩阵拓扑的收敛属 BusinessStrategy 中央裁决域；另据 BOD 通报同源口径「仓名 TriRLC≠daemon 名面，随改与否候 CTO 口径」，名址层最终收敛候 CTO/BS 联席口径。
+
 ### 使用依据
 
 - 20 件靶标原文全量阅读（19 件 agent 面 + 1 件 JSON 结构解析与头 120 行原文）

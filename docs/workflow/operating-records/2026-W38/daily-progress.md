@@ -300,3 +300,5 @@
 - 巡检兜底补写 @21:10 +08：自上次进度提交 fcb7231e 后新增 1 条 commit：
   - df5710d2 docs(workflow): M-SG 复工任务书——新班次接任记录+CFO 轮换回执销案入账（启动恢复序毕；口径三条自首批生效；候 BOD 终验）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- COS 值席 @23:08 +08：BOD 三令执行——①四 daemon 矩阵通报 12 席投递（回执 10/12）②notify 白名单 +m-cos 源侧入 bare 79a2769（live 应用候 BOD root 通道）③bod 缺位缓存协议 C-1..C-4 入 unresolved-items+索引双写
+- registry：v2.1；今日 registry 提交无变化
