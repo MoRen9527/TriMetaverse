@@ -1,0 +1,35 @@
+{
+  "treeId": "b4-sweep-b14-reg3",
+  "title": "B4 扫尾批·批14（registries 末 16 件）五席联审——复工批任务2 收官批",
+  "week": "W38",
+  "source": "任务书 20260916-msg-resume 任务2+权限墙修复归账（b60a25c5）后开批",
+  "domainRouting": "server-executable",
+  "status": "done",
+  "created": "2026-09-18",
+  "face": "m-duty-cos（值席编排）",
+  "batchMeta": "批号=B4-sweep-b14·域=registries 字母序 36-51 位 16 件·时点=2026-09-18 08:5x +08·席位=COS/CTO/CAO/CPO SendMessage 直达+BS spawn",
+  "nodes": [
+    {
+      "nodeId": "B14-1",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "五席独立意见（压缩二级令续）"
+    },
+    {
+      "nodeId": "B14-2",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "汇总件+三红线+任务2 完成判据核验"
+    },
+    {
+      "nodeId": "B14-3",
+      "agent": "m-duty-cos",
+      "status": "done",
+      "action": "收口报告+树 done+CFO 切账供料（收官切账）"
+    }
+  ],
+  "acceptance": "五席意见件齐+汇总件+收口报告+任务2 完成判据核验；D-27 销账锚=树路径+收口报告",
+  "notes": "收官批：批14 后扫尾 151+3（board 新域）全量覆盖；任务2 完成判据=151 靶标全表态+board 3 件定性首勘+差口归零核验；群 G（世代家族定性候 CTO+BS 联勘）可在本批收口随附联勘读数",
+  "statusNote": "done（收官批；任务2 完成判据核验随收口报告）",
+  "closeout": "reports/b14-closeout.md（2026-09-18T01:07:46Z）；五席意见件 5 份+汇总件 b14-summary.md"
+}
