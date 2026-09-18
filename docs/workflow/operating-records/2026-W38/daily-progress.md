@@ -285,3 +285,7 @@
   - cd84f4f3 merge: 回流收编
   - 140e6346 fix(ops): 告警弹窗中文乱码修复——[Console]::OutputEncoding=UTF8 补入（PS 5.1 ssh 外部命令输出默认 GBK 解码致 UTF-8 中文花屏）；弹窗标题静态中文有 BOM 保护不受影响，动态 ssh 输出此修后正常
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:40 +08：自上次进度提交 587c12c7 后新增 2 条 commit：
+  - 179d295a Merge remote-tracking branch 'sg-server/dev' into dev
+  - 67390688 fix(ops): 看门狗席位清单补 m-cos——13 席全量覆盖（原 12 席漏 COS 致今晨挂起无人拉起）
+- registry：v2.1；今日 registry 提交无变化
