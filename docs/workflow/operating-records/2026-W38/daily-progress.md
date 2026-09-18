@@ -289,3 +289,8 @@
   - 179d295a Merge remote-tracking branch 'sg-server/dev' into dev
   - 67390688 fix(ops): 看门狗席位清单补 m-cos——13 席全量覆盖（原 12 席漏 COS 致今晨挂起无人拉起）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:30 +08：自上次进度提交 f8e2ffd8 后新增 3 条 commit：
+  - 874fe654 merge: 回流收编
+  - acab3ba9 docs(product): 跨面差距与吸收规划章入档——四套班子现状卡/八项差距/R 面吸收规划/M 面局限改造清单；BOD 整体消化（CEO 令 23:3x）
+  - b2d3e150 docs(ops): LG-036 log 补记——toast 到账实锤（hook 注入 [M-SG NOTIFY] 全文逐字匹配，④全链闭合；12.8h 时点差两说并存记档）@trideployer
+- registry：v2.1；今日 registry 提交无变化
