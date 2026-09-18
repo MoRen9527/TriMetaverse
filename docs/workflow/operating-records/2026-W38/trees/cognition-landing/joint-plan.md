@@ -24,7 +24,7 @@
 
 **双腿登记（两席齐裁，四条技术硬依据）**：
 - **运行腿**：`TRICOMPANY_COGNITION_HOME`（.tricompany-cognition：employee 私域/org 运行共享记忆/org 运行审计）——机器写入、append-only、env 驱动、无人工评审。
-- **学习腿**：`TriCompany-copilot-host-assets/knowledge/employees/<席>/` 四区——人工/agent 策展、版本化、p2 管道落点骨架。
+- **学习腿**：`TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/<席>/` 四区（仓前缀显式化 2026-09-19 终验顺手校准——相对名歧义曾致 FSD 悬空误忧，已判误忧；权威位 13 目录活体无恙）——人工/agent 策展、版本化、p2 管道落点骨架。
 - 硬依据：①生命周期/保留策略本质不同（机器高频写 vs 策展资产；混树则 git 卫生互污）；②LG-036 letter-store 既有先例（运行态独立于策展面）；③kernel 读 env 零改动、复活即用；④**真源位活体消费实证**（BOD 01:0x：__pycache__ 今夜仍更新——运行态有真实消费方，非可合并的死面）。
 - **单一真源红线自查**：两腿=两类数据各归其位（运行产出 vs 策展资产），非同数据双真源——红线不破。
 
@@ -98,3 +98,9 @@
 
 - CTO 拼稿毕（本件）；CPO 终审签认后双签齐→报 BOD→候 CEO 终批（CEO 在眠，呈批时点候醒）。
 - 批后执行：单批双段一个批次窗（FSD 主执行+CTO 监督验收），三仓联动（TriCompany 源侧/TriMetaverse 权威位/host-assets 副本追平）。
+
+## 九、执行复核（CPO，2026-09-19 03:3x+0800 date 现查）
+
+**复核结论：通过，签认**——独立验证四点全绿：①五 commit 链在卷（TriCompany `ade0742`/`b4ce908`/`4c4d90b`＋TriMetaverse `68d921c6`/`0c592ed8`）②权威位 knowledge/employees=**13 席净**（randd-trainer 更名归位/project-trainer 归档执行毕）③第三棵树已消（CEO 归档裁落地）④双归档区在位（docs/workflow/archive/＋_archive/）。
+**一段澄清候答（非阻塞，销账时一句话注明口径）**：CTO 消息「14 席实盘门」与名册 13 席之差（推测=13 契约件+validator 联动位或补改计口径，候 CTO 销账注明）。
+**顺手项已落**：§一.B 学习腿路径仓前缀显式化两处（本件+声明模板）——FSD 悬空误忧根因（相对名歧义）已消。
