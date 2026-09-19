@@ -39,3 +39,14 @@
 - 完工报含**全量读数自含**（validate 门实盘 14 席读数+测试套件读数分列，既有红逐族归因）——认知层线终验漏报教训已记档，本线照纪律。
 - CTO 监督验收签认→CPO 复核签认→双签齐报 BOD 销账。
 - 证据落树：`trees/binding-closeout/exec/`；收口件回执 BOD。
+
+## 收口-CPO（独立复核，2026-09-19 10:3x+0800 date 现查）
+
+**结论：通过，签认**——四检查点独立验证全绿（第二方法非转抄 CTO 读数）：
+1. **锚 1 value 抽面**：CPO/COS/FSD 三席 profile 逐值核——`primary_host:"claude"` ✓／liveEntry 指向 `TriMetaverse/.claude/agents/<席>.md` ✓／claude-session compass 位在 ✓。
+2. **锚 2 残留语境**：13/13 文件含 `current-copilot-host-live` 字样，抽 CPO 件核 placements——全部位于 copilot 条目内部语境（hosts 映射 copilot 成员+hostEntries copilot 成员），符合锚 2「仅可存于 copilot 条目内部语境」豁免。✓
+3. **锚 3 manifest 计数**：generation manifest `claude-host-agents-v0.2` objectSet 在（validator 锚①断言 14 条 claudeCodeTarget=13 席+board）；published-copy manifest `claudeHostFace` tier 内 compass session-body **13 条**（本席逐条计数）。✓
+4. **锚 6 validator 独立复跑**：`python -m runtime.cognition.source_publish_check_validation` → **183 tests OK，exit=0**（含「manifest 14 条显式 claudeCodeTarget 登记 ok」「重渲幂等两遍零差异+名册一致性零漂移 ok」两断言直证）。✓
+5. **消费者切换 baedc02 行为面**：TriMLC puller +17/-1——target_seat 校验切 seats.json 席集且**回退链保形**（seats 缺失/坏=回退单值行为零变化）；名册外席件不落箱=LG-012 正名制收端同族；下游重投闭环+混合批 6/6 绿、TriMLC 套件 593/588/5 零失败。行为面零回归确认。✓
+
+**签认：双签齐，候 BOD 销账。**（CPO 小乔）
