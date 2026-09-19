@@ -1,85 +1,428 @@
 {
-  "version": "1.0",
-  "description": "Claude Code 宿主席位名址录——启动/寻址/健康三面（CTO 提案，BOD 批 2026-09-17 23:5x）。真源=发布管线派生，禁手维护本件内容结构。",
-  "generatedBy": "publish-pipeline (manual seed 2026-09-17)",
+  "version": "2.0",
+  "description": "派生产物勿手编（publish-pipeline seats_pipeline 派生；真源=manifest claudeCodeTarget+agent-body fm+seats-operations.json 册——手改会在下次派生被覆盖，与 compass 渲染纪律同构零双真源）。",
+  "generatedBy": "publish-pipeline seats_pipeline (derived from manifest claudeCodeTarget)",
+  "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
   "seats": [
     {
-      "name": "m-cao",
-      "agent": "ChiefAdministrativeOfficer",
-      "manual": ".claude/compass/chief-administrative-officer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-cfo",
-      "agent": "ChiefFinancialOfficer",
-      "manual": ".claude/compass/chief-financial-officer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-cho",
-      "agent": "ChiefHumanResourcesOfficer",
-      "manual": ".claude/compass/chief-human-resources-officer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-cmo",
-      "agent": "ChiefMarketingOfficer",
-      "manual": ".claude/compass/chief-marketing-officer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-coo",
-      "agent": "ChiefOperatingOfficer",
-      "manual": ".claude/compass/chief-operating-officer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-cpo",
-      "agent": "ChiefProductOfficer",
-      "manual": ".claude/compass/chief-product-officer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-cso",
-      "agent": "CustomerSuccessOfficer",
-      "manual": ".claude/compass/customer-success-officer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-cto",
-      "agent": "ChiefTechnologyOfficer",
-      "manual": ".claude/compass/chief-technology-officer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-dee",
-      "agent": "DeploymentEngineer",
-      "manual": ".claude/compass/deployment-engineer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-fsd",
-      "agent": "FSD",
-      "manual": ".claude/compass/full-stack-developer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-rdt",
-      "agent": "RAndDTrainer",
-      "manual": ".claude/compass/rd-trainer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "m-ste",
-      "agent": "STE",
-      "manual": ".claude/compass/senior-test-engineer.session.md",
-      "launchEnvPolicy": { "strip": ["CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SSE_PORT", "CLAUDE_CODE_SESSION_ID", "CLAUDE_PID", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN"] }
-    },
-    {
-      "name": "board",
+      "seat": "board",
+      "opsName": "board",
+      "workName": "",
       "agent": "Board",
-      "manual": ".claude/agents/board.md",
-      "note": "非人格治理席（D2 权柄四表），无常驻实例——CEO 直连即 bod 本身"
+      "hostFace": "local",
+      "sessionPrompt": "",
+      "launchCommand": "claude --agent Board",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/board.md"
+    },
+    {
+      "seat": "ceo-chief-of-staff",
+      "opsName": "m-cos",
+      "workName": "小贾",
+      "agent": "CEOChiefOfStaff",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/ceo-chief-of-staff.session.md",
+      "launchCommand": "claude -n M-COS --append-system-prompt-file <TriMetaverse/.claude/compass/ceo-chief-of-staff.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/ceo-chief-of-staff.md"
+    },
+    {
+      "seat": "chief-administrative-officer",
+      "opsName": "m-cao",
+      "workName": "",
+      "agent": "ChiefAdministrativeOfficer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/chief-administrative-officer.session.md",
+      "launchCommand": "claude -n M-CAO --append-system-prompt-file <TriMetaverse/.claude/compass/chief-administrative-officer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/chief-administrative-officer.md"
+    },
+    {
+      "seat": "chief-financial-officer",
+      "opsName": "m-cfo",
+      "workName": "小财",
+      "agent": "ChiefFinancialOfficer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/chief-financial-officer.session.md",
+      "launchCommand": "claude -n M-CFO --append-system-prompt-file <TriMetaverse/.claude/compass/chief-financial-officer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/chief-financial-officer.md"
+    },
+    {
+      "seat": "chief-human-resources-officer",
+      "opsName": "m-cho",
+      "workName": "",
+      "agent": "ChiefHumanResourcesOfficer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/chief-human-resources-officer.session.md",
+      "launchCommand": "claude -n M-CHO --append-system-prompt-file <TriMetaverse/.claude/compass/chief-human-resources-officer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/chief-human-resources-officer.md"
+    },
+    {
+      "seat": "chief-marketing-officer",
+      "opsName": "m-cmo",
+      "workName": "小敏",
+      "agent": "ChiefMarketingOfficer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/chief-marketing-officer.session.md",
+      "launchCommand": "claude -n M-CMO --append-system-prompt-file <TriMetaverse/.claude/compass/chief-marketing-officer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/chief-marketing-officer.md"
+    },
+    {
+      "seat": "chief-operating-officer",
+      "opsName": "m-coo",
+      "workName": "小营",
+      "agent": "ChiefOperatingOfficer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/chief-operating-officer.session.md",
+      "launchCommand": "claude -n M-COO --append-system-prompt-file <TriMetaverse/.claude/compass/chief-operating-officer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/chief-operating-officer.md"
+    },
+    {
+      "seat": "chief-product-officer",
+      "opsName": "m-cpo",
+      "workName": "小乔",
+      "agent": "ChiefProductOfficer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/chief-product-officer.session.md",
+      "launchCommand": "claude -n M-CPO --append-system-prompt-file <TriMetaverse/.claude/compass/chief-product-officer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/chief-product-officer.md"
+    },
+    {
+      "seat": "chief-technology-officer",
+      "opsName": "m-cto",
+      "workName": "小狄",
+      "agent": "ChiefTechnologyOfficer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/chief-technology-officer.session.md",
+      "launchCommand": "claude -n M-CTO --append-system-prompt-file <TriMetaverse/.claude/compass/chief-technology-officer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/chief-technology-officer.md"
+    },
+    {
+      "seat": "customer-success-officer",
+      "opsName": "m-cso",
+      "workName": "",
+      "agent": "CustomerSuccessOfficer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/customer-success-officer.session.md",
+      "launchCommand": "claude -n M-CSO --append-system-prompt-file <TriMetaverse/.claude/compass/customer-success-officer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/customer-success-officer.md"
+    },
+    {
+      "seat": "deployment-engineer",
+      "opsName": "m-dee",
+      "workName": "",
+      "agent": "DeploymentEngineer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/deployment-engineer.session.md",
+      "launchCommand": "claude -n M-DEE --append-system-prompt-file <TriMetaverse/.claude/compass/deployment-engineer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/deployment-engineer.md"
+    },
+    {
+      "seat": "full-stack-developer",
+      "opsName": "m-fsd",
+      "workName": "小全",
+      "agent": "FSD",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/full-stack-developer.session.md",
+      "launchCommand": "claude -n M-FSD --append-system-prompt-file <TriMetaverse/.claude/compass/full-stack-developer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/full-stack-developer.md"
+    },
+    {
+      "seat": "rd-trainer",
+      "opsName": "m-rdt",
+      "workName": "",
+      "agent": "RAndDTrainer",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/rd-trainer.session.md",
+      "launchCommand": "claude -n M-RDT --append-system-prompt-file <TriMetaverse/.claude/compass/rd-trainer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/rd-trainer.md"
+    },
+    {
+      "seat": "senior-test-engineer",
+      "opsName": "m-ste",
+      "workName": "小柯",
+      "agent": "STE",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/senior-test-engineer.session.md",
+      "launchCommand": "claude -n M-STE --append-system-prompt-file <TriMetaverse/.claude/compass/senior-test-engineer.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/senior-test-engineer.md"
     }
   ]
 }
