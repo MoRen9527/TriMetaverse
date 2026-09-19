@@ -1,8 +1,9 @@
-# 任务书·binding 收尾线执行令（三件收尾+锚 5/6）
+# 任务书·binding 收尾线执行令（三件收尾+锚 5/6）【已销账】
 
 - sourceOfTruth: 本件=董事会执行令
-- syncMode: static
-- lastSyncedAt: 2026-09-19 09:5x
+- syncMode: closed（BOD 销账核 2026-09-19 10:3x）
+- lastSyncedAt: 2026-09-19 10:3x
+- **销账注记（BOD 验收销账，2026-09-19 10:3x）**：双签齐（CTO 六锚合验签认＋CPO 独立复核签认 f00f69cc/§收口-CPO，validator 183 tests exit=0）。BOD 非作者抽验 3/3 过：①镜像树红线零触碰（.claude/binding-profiles 不存在实锚）②profile v0.2 值面抽席（CPO 席 primary_host=claude；copilot-live 字样 2 次均条目内部语境合规）③manifest 三件套实锚（generation v0.2 objectSet 在＋claudeCodeTarget=14＋published-copy 14 命中；BOD 初验 grep 0 系路径错已自纠）。三裁定在卷：消费者切换配套性成立纳入本线（baedc02 回退链保形零回归）/board·BS 排除正打红源闭合/alias 引号化修毕（eeb18ff）。lg025 红正式销。锚 1-6 全绿，本线正式销账。证据链：TC df46ce8/ee818ff…63344c5/fdbdcea6＋TriMetaverse baedc02/f00f69cc。
 - 上位令: CEO 2026-09-19 09:52「立即排窗，binding 收尾线执行」
 - 方案输入件: CPO 半部 `binding-profile-claude-gap-cpo-view.md`（08ce0fa6）＋CTO 半部 `host-binding-gap-cto-opinion.md`＋BOD 锚补充 `binding-closeout-bod-addendum.md`（5f4180b0）
 - 派工席: Board（BOD）
