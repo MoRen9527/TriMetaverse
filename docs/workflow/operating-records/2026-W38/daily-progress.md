@@ -310,3 +310,24 @@
   - 53042c49 docs(lg-035): 宿主支撑架构缺口·CTO 审核意见（CPO 联审）——问1裁=机制差异合理(Copilot 消费 JSON/Claude Code 消费 CLI 参数)但结构化缺位真实(绑定信息只存启动命令瞬态:无落盘/无看门狗可读/无名址自检/无寻址校验)；问2裁=轻量名址录 .claude/seats.json(启动+寻址+健康三面,launchEnvPolicy.strip 直治 CHILD_SESSION 遗传事故族)+发布管线派生非第二真源(host=claude-code 第四渲染目标)+五消费者面；MVP=13席+board 名册+复活器/自检两消费者；不照搬 binding-profiles 不为统一而统一
   - 83f72885 docs(training): 四 daemon 矩阵定谳勘正——三角循环教材历史档化+构建指南对齐 workflow 现值+名单图谱新名（RDT 域消化）
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-19（周六）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @15:30 +08：自上次进度提交 b4cff956 后新增 17 条 commit：
+  - fcfa9fcf docs(binding-closeout): BOD 销账核——双签齐+非作者抽验 3/3 过（红线零触碰/v0.2 值面/manifest 三件套实锚），三裁定在卷，lg025 红销，binding 收尾线正式销账
+  - f00f69cc docs(binding-closeout): 收口-CPO 独立复核签认——四检查点全绿（value 抽面三席/残留语境合规/manifest 计数 14+13/validator 183 OK 独立复跑/消费者切换回退链保形）；双签齐候销账
+  - fdbdcea6 docs(binding-closeout): 主窗完工证据落树（锚 1-4 全清单+全量读数自含+归因）（fsd 改 cto 审）
+  - c975face docs(binding-closeout): CEO 立即排窗令执行——三件收尾+锚5/6 执行令落树，FSD 主执行+CTO 监督验收+CHO 五件套域+CAO 归档确认位，六验收锚候销账
+  - 646bd0d8 docs(cognition-landing): BOD 销账核——双签齐+非作者抽验 4/4 过（盘根树消/双归档区在位/9 件清单 9 命中/13 席净），14 席口径两册各安，认知层落点归一线正式销账
+  - 6ac34159 docs(cognition-landing): CPO 执行复核签认——五 commit 链/权威位 13 席净/第三棵树已消/双归档区在位四点独立验证全绿；学习腿路径仓前缀补两处（§一.B 本席+声明模板 BOD 并行同批）；14 席口径澄清候答非阻塞
+  - db0ff614 docs(cognition-landing): joint-plan 学习腿路径加 TriMetaverse 仓前缀（BOD 批一行澄清——防第三棵树式相对名误读，今夜三起探错树同根预防）
+  - 0c592ed8 merge: 收编 origin 并行线
+  - 68d921c6 docs(cognition-landing): 段二候件证据落树——#3 追平脚本（甄别 orphan=0/缺失 53/差异 44=97 文件真源覆盖）+#4 整树归档（README-ARCHIVE 9 件独有清单+腿位声明保留）实锚路径与读数（fsd 改 cto 审）
+  - 5f4180b0 docs(binding-closeout): CEO 两批入线——锚5 agent-body binding 声明校准+锚6 lg025 红消红，验收锚累计六条候窗
+  - c25b6384 docs(cognition-landing): 执行证据落树（段一双段+批③+候裁两项）（fsd 改 cto 审）
+  - 4aafaa8c docs(cognition-landing): CEO 终批入正身+执行令落树——三项全批（第三棵树归档/副本卫生升格/p2 两处精确化）；单批双段执行令派 FSD 主执行+CTO 监督验收
+  - 8e7f2b1c docs(cognition-landing): CPO 终审签认——三保真达成/四裁定融入/BOD 数字修正采纳/runbook 分层精化采认/零阻塞；双签齐候 CEO 醒呈批
+  - 9f47bff3 docs(lg-035): 认知层落点归一·联审合流方案（CPO×CTO）——CTO 件 v2.1（BOD 数字定谳采纳：真源 77 项活体+副本 85 文件滞后双动作）+合流件 joint-plan（拼稿：B 案双腿四硬依据/单批双段/命名三键两纪律/org shared 双腿正名/死层七项/副本卫生总注记/三处保真照 CPO 要求）；候 CPO 终审签认→BOD→CEO
+  - 3efef456 docs(lg-035): 认知层落点归一·CTO 技术域意见 v2（联审）——实勘基线勘正（v1 误勘老快照第三棵树，v2 全对权威位重验）；命题1=认同 CPO B 案+双腿登记（三硬依据：保留策略/git 卫生/kernel 零改动；撤回 v1 env 重定义单腿案）；命题2=双腿双声明模板+双窗过渡；命题4=七项定案（runtime/cognition 37 项翻案为甄别+副本治理 per governance:107 判据/第三棵树候 CEO 归档或删除/两脏目录/DE runbook 收编）+副本卫生总注记（宿主资产复制须走管线留痕禁手工拷贝）；命题5=p2 兼容+kernel wiki 四件收编建议
+  - …另有 2 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
