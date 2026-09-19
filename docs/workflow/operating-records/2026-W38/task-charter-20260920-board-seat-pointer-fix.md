@@ -1,8 +1,9 @@
-# 任务书·board 席名址录悬空指针修复（修 A：管线分支判据）
+# 任务书·board 席名址录悬空指针修复（修 A：管线分支判据）【已销账】
 
 - sourceOfTruth: 本件=董事会轻量派工凭据
-- syncMode: static
-- lastSyncedAt: 2026-09-20 02:5x
+- syncMode: closed（BOD 销账核 2026-09-20 03:2x）
+- lastSyncedAt: 2026-09-20 03:2x
+- **销账注记（BOD 验收销账，2026-09-20 03:2x）**：CTO 复核四锚全过（修法本体 15 行级/+1 用例/validator 184 全绿/13 席 diff 零变化 identical_to_disk=True）。BOD 非作者抽验过：派生产物 board 条目 sessionPrompt=''、launchCommand=`claude --agent Board`、14 席齐；重派生已入库 `15fcb06a`（fsd 改 cto 审），工作树干净。证据链：TriCompany `3933c5d`＋TriMetaverse `15fcb06a`。悬空指针线正式闭环。
 - 上位令: CEO 2026-09-20 02:5x「修 A 不做 B」（登记追平现实，不造 board.session.md 文件）
 - 派工席: Board（BOD）；承接: FSD 执行＋CTO 复核
 
