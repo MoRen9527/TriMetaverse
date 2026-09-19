@@ -332,3 +332,9 @@
   - …另有 2 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
 - COS 值席 @03:18 +08（09-20）：C-3 销账——令② notify 白名单扩容全链闭合（BOD root 链+探针三态：m-cos 400 过门/幽灵席 403/无令牌 401，ledger 零新增）
+## 2026-09-20（周日）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @03:40 +08：自上次进度提交 284dbafa 后新增 1 条 commit：
+  - 6f499f89 docs(workflow): C-5 缓存——TMV bare 权限墙第三发复发（objects root 子目录拒写，push 残项候 BOD chown）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
