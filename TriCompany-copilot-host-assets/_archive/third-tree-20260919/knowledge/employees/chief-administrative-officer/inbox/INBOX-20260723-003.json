@@ -1,0 +1,20 @@
+{
+  "inboxId": "INBOX-20260723-003",
+  "objectId": "ET-20260723-003",
+  "objectType": "ENGINEERING_TASK",
+  "sender": "CEOChiefOfStaff",
+  "senderName": "小贾",
+  "recipient": "ChiefAdministrativeOfficer",
+  "recipientName": "CAO",
+  "interaction": "governance_approval",
+  "summary": "TriCompany.agent.md 新 module-local agent 上线治理审批：确认发布纪律归属、discovery 唯一性、与现有 15 模块 registry agent 迁移门禁兼容性。非人格模块 agent，不走员工上岗五件套流程，仅需 CAO 侧发布纪律审批。",
+  "unread": false,
+  "priority": "high",
+  "status": "closed",
+  "closedAt": "2026-07-24T02:54:00+08:00",
+  "resolution": "APPROVE — 4 条上线纪律，不触发 CHO 审批门",
+  "createdAt": "2026-07-24T02:47:00+08:00",
+  "dueAt": "2026-07-24T23:59:00+08:00",
+  "routingPackagePath": "docs/workflow/operating-records/2026-W30/ET-20260723-003-tri-company-agent-governance.json",
+  "linkedNextAction": "NA-20260723-CAO-001"
+}

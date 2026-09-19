@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import sys
@@ -11,7 +11,10 @@ from threading import Thread
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from runtime.cognition.chief_of_staff_wiki_paths import chief_of_staff_audit_root, chief_of_staff_schedule_root
+from runtime.cognition.chief_of_staff_wiki_paths import (
+    chief_of_staff_audit_root,
+    chief_of_staff_schedule_root,
+)
 from runtime.cognition.dispatch.task_resolver import resolve_schedule_task
 from runtime.cognition.kernel.schedule_registry import ScheduleRegistry
 
@@ -29,7 +32,10 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
 
             registry = ScheduleRegistry(chief_of_staff_schedule_root(workspace_root))
             schedule = registry.list_specs()[0]
-            result = resolve_schedule_task(schedule, workspace_root=str(workspace_root)).execute()
+            result = resolve_schedule_task(
+                schedule,
+                workspace_root=str(workspace_root),
+            ).execute()
 
             self.assertEqual(result["status"], "completed")
             self.assertEqual(result["deliveryStatus"], "delivered")
@@ -41,9 +47,18 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
             audit_payload = json.loads(audit_records[0].read_text(encoding="utf-8"))
             self.assertEqual(audit_payload["closeoutId"], "CRC-20260423-001")
             self.assertEqual(audit_payload["triggerMode"], "scheduled")
-            self.assertEqual(audit_payload["triggerSource"]["objectType"], "OPERATING_REVIEW")
-            self.assertEqual(audit_payload["triggerSource"]["objectId"], "OR-202604-W14-001")
-            self.assertEqual(audit_payload["triggerSource"]["sourcePath"], operating_review_path.as_posix())
+            self.assertEqual(
+                audit_payload["triggerSource"]["objectType"],
+                "OPERATING_REVIEW",
+            )
+            self.assertEqual(
+                audit_payload["triggerSource"]["objectId"],
+                "OR-202604-W14-001",
+            )
+            self.assertEqual(
+                audit_payload["triggerSource"]["sourcePath"],
+                operating_review_path.as_posix(),
+            )
             self.assertEqual(audit_payload["sourcePath"], closeout_path.as_posix())
 
             requests = list(getattr(server, "received", []))
@@ -51,9 +66,18 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
             self.assertEqual(requests[0]["path"], "/closeout")
 
             request_payload = json.loads(requests[0]["body"])
-            self.assertEqual(request_payload["triggerSource"]["objectType"], "OPERATING_REVIEW")
-            self.assertEqual(request_payload["triggerSource"]["objectId"], "OR-202604-W14-001")
-            self.assertEqual(request_payload["closeout"]["dependsOn"], ["OR-202604-W14-001"])
+            self.assertEqual(
+                request_payload["triggerSource"]["objectType"],
+                "OPERATING_REVIEW",
+            )
+            self.assertEqual(
+                request_payload["triggerSource"]["objectId"],
+                "OR-202604-W14-001",
+            )
+            self.assertEqual(
+                request_payload["closeout"]["dependsOn"],
+                ["OR-202604-W14-001"],
+            )
 
     def _seed_schedule(self, workspace_root: Path, *, delivery_base_url: str) -> None:
         schedule_root = chief_of_staff_schedule_root(workspace_root)
@@ -70,9 +94,21 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
             "timebox": {"scope": "weekly", "label": "review closeout validation"},
             "summary": "dispatch central registry closeout payload from an operating review object",
             "relatedModules": ["TriCompany", "TriMetaverse"],
-            "evidence": [{"source": "docs/workflow/operating-review.schema.json", "kind": "document"}],
-            "nextActions": [{"owner": "CEOChiefOfStaff", "action": "dispatch operating review closeout"}],
-            "workflowRefs": [{"phase": "DESIGNING", "artifact": "central-registry-closeout"}],
+            "evidence": [
+                {
+                    "source": "docs/workflow/operating-review.schema.json",
+                    "kind": "document",
+                }
+            ],
+            "nextActions": [
+                {
+                    "owner": "CEOChiefOfStaff",
+                    "action": "dispatch operating review closeout",
+                }
+            ],
+            "workflowRefs": [
+                {"phase": "DESIGNING", "artifact": "central-registry-closeout"}
+            ],
             "payload": {
                 "targetType": "operating-review-closeout",
                 "targetRef": "CRC-20260423-001",
@@ -91,12 +127,14 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
                 "note": "operating review closeout validation",
                 "taskConfig": {
                     "operatingReviewPath": "docs/workflow/operating-cycle-example/operating-review.sample.json",
-                    "closeoutPath": "docs/workflow/handoff-templates/central-registry-closeout.example.json"
+                    "closeoutPath": "docs/workflow/handoff-templates/central-registry-closeout.example.json",
                 },
             },
             "metadata": {"validation": True},
         }
-        (schedule_root / "01-chief-of-staff-operating-review-closeout.json").write_text(
+        (
+            schedule_root / "01-chief-of-staff-operating-review-closeout.json"
+        ).write_text(
             json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
@@ -120,17 +158,23 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
                         "scope": "weekly",
                         "startAt": "2026-04-03T00:00:00Z",
                         "endAt": "2026-04-09T23:59:59Z",
-                        "label": "2026-W14 样例复盘"
+                        "label": "2026-W14 样例复盘",
                     },
                     "summary": "复盘已把 PC 端软件层、TriLC 和 vscodium 上游升级口径纳入下一步中央收口议程。",
-                    "relatedModules": ["TriMetaverse", "TriPilot", "Tride", "vscodium", "TriLC"],
+                    "relatedModules": [
+                        "TriMetaverse",
+                        "Tripilot",
+                        "Tride",
+                        "vscodium",
+                        "TriLC",
+                    ],
                     "dependsOn": ["OP-202604-W14-001"],
                     "evidence": [],
                     "nextActions": [
                         {
                             "owner": "CEOChiefOfStaff",
                             "action": "发起 CRC-20260423-001，正式收口 PC 端软件层、TriLC 和 vscodium 上游升级口径",
-                            "dueAt": "2026-04-23T12:00:00Z"
+                            "dueAt": "2026-04-23T12:00:00Z",
                         }
                     ],
                     "approvals": [],
@@ -142,18 +186,30 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
                             "branchId": "branch-prd-ai-content-trial",
                             "prdId": "PRD-AI-CONTENT-TRIAL",
                             "phaseResultRef": "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/DELIVERY.phase-result.json",
-                            "note": "复盘吸收交付阶段结果"
+                            "note": "复盘吸收交付阶段结果",
                         }
                     ],
                     "payload": {
                         "reviewWindow": "2026-W14",
-                        "targetVsActual": ["已识别 PC 端软件层与 TriLC 的协同口径需要在复盘后继续收口"],
-                        "wins": ["复盘已把 PC 端软件层、TriLC 和 vscodium 上游升级口径纳入下一步中央收口议程"],
-                        "misses": ["PC 端软件层、TriLC 与 vscodium 上游升级口径仍需靠单独 closeout 样板做跨模块 fan-in"],
-                        "rootCauses": ["跨模块边界在经营样例链和中央收口样板之间仍需要显式桥接"],
-                        "corrections": ["把 CRC-20260423-001 作为本轮复盘后的跨模块事实收口 companion sample"],
-                        "nextCycleInput": ["继续细化 PC 端软件层默认开放能力与需额外授权的本地自动化能力边界"]
-                    }
+                        "targetVsActual": [
+                            "已识别 PC 端软件层与 TriLC 的协同口径需要在复盘后继续收口"
+                        ],
+                        "wins": [
+                            "复盘已把 PC 端软件层、TriLC 和 vscodium 上游升级口径纳入下一步中央收口议程"
+                        ],
+                        "misses": [
+                            "PC 端软件层、TriLC 与 vscodium 上游升级口径仍需靠单独 closeout 样板做跨模块 fan-in"
+                        ],
+                        "rootCauses": [
+                            "跨模块边界在经营样例链和中央收口样板之间仍需要显式桥接"
+                        ],
+                        "corrections": [
+                            "把 CRC-20260423-001 作为本轮复盘后的跨模块事实收口 companion sample"
+                        ],
+                        "nextCycleInput": [
+                            "继续细化 PC 端软件层默认开放能力与需额外授权的本地自动化能力边界"
+                        ],
+                    },
                 },
                 ensure_ascii=False,
                 indent=2,
@@ -181,16 +237,22 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
                     "timebox": {
                         "scope": "ad-hoc",
                         "startAt": "2026-04-23T09:30:00Z",
-                        "label": "pc-local-closeout-2026-04-23"
+                        "label": "pc-local-closeout-2026-04-23",
                     },
                     "summary": "针对 PC 端软件层、TriLC 本地化任务协同以及 vscodium 上游升级口径进行一次跨模块 registry 收口。",
-                    "relatedModules": ["TriMetaverse", "Tride", "TriPilot", "vscodium", "TriLC"],
+                    "relatedModules": [
+                        "TriMetaverse",
+                        "Tride",
+                        "Tripilot",
+                        "vscodium",
+                        "TriLC",
+                    ],
                     "dependsOn": ["OR-202604-W14-001"],
                     "evidence": [
                         {
                             "source": "OR-202604-W14-001",
                             "kind": "document",
-                            "note": "本轮经营复盘已把 PC 端软件层、TriLC 和 vscodium 上游升级口径纳入后续收口议程"
+                            "note": "本轮经营复盘已把 PC 端软件层、TriLC 和 vscodium 上游升级口径纳入后续收口议程",
                         }
                     ],
                     "nextActions": [],
@@ -199,14 +261,20 @@ class ChiefOfStaffOperatingReviewCloseoutValidationTest(unittest.TestCase):
                         "closeoutSubject": "统一 PC 端软件层 / TriLC 协同与 vscodium 上游升级口径",
                         "scopeDecision": {
                             "scopeStatus": "central-boundary",
-                            "businessStrategyRequired": True
+                            "businessStrategyRequired": True,
                         },
                         "registryFindings": [
-                            {"registryId": "TriPilotProductRegistry", "summary": "桌面入口承接用户触达"},
-                            {"registryId": "TriLCCodeRegistry", "summary": "本地控制器保持 runtime / planner 边界"}
+                            {
+                                "registryId": "TripilotProductRegistry",
+                                "summary": "桌面入口承接用户触达",
+                            },
+                            {
+                                "registryId": "TriLCCodeRegistry",
+                                "summary": "本地控制器保持 runtime / planner 边界",
+                            },
                         ],
-                        "closeoutDecision": "writeback-approved"
-                    }
+                        "closeoutDecision": "writeback-approved",
+                    },
                 },
                 ensure_ascii=False,
                 indent=2,
@@ -241,7 +309,9 @@ def _start_dispatch_server() -> tuple[ThreadingHTTPServer, Thread, str]:
     setattr(server, "received", [])
     thread = Thread(target=server.serve_forever, daemon=True)
     thread.start()
-    host, port = server.server_address
+    address = server.server_address
+    host = str(address[0])
+    port = int(address[1])
     return server, thread, f"http://{host}:{port}"
 
 

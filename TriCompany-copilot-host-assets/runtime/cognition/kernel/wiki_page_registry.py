@@ -2,11 +2,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable
 
 from runtime.cognition.contracts.wiki_source_contract import WikiPage
-from runtime.cognition.kernel.wiki_frontmatter import metadata_string_tuple, split_frontmatter
 from runtime.cognition.kernel.reviewer_router import resolve_review_policy
+from runtime.cognition.kernel.wiki_frontmatter import metadata_string_tuple, split_frontmatter
 
 
 _IGNORED_PAGE_NAMES = {"README.md", "page-template.md"}

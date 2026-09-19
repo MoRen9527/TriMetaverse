@@ -11,9 +11,16 @@ from runtime.cognition.runners.resident_runner import run_resident_chief_of_staf
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run the chief-of-staff resident schedule runner.")
+    parser = argparse.ArgumentParser(
+        description="Run the chief-of-staff resident schedule runner."
+    )
     parser.add_argument("--workspace-root", help="Override workspace root.")
-    parser.add_argument("--interval-seconds", type=float, default=60.0, help="Seconds between cycles.")
+    parser.add_argument(
+        "--interval-seconds",
+        type=float,
+        default=60.0,
+        help="Seconds between cycles.",
+    )
     parser.add_argument("--cycles", type=int, default=1, help="Maximum cycle count.")
     args = parser.parse_args()
 

@@ -20,7 +20,7 @@ from runtime.cognition.providers.repo_asset_provider import (
 CHIEF_OF_STAFF_ID = "ceo-chief-of-staff"
 CHIEF_OF_STAFF_ROLE_NAME = "ChiefOfStaff"
 CHIEF_OF_STAFF_DISPLAY_NAME = "小贾"
-CHIEF_OF_STAFF_MEMORY_FILE_NAME = "ceo-chief-of-staff.memory.md"
+CHIEF_OF_STAFF_MEMORY_FILE_NAME = "memory.agent.md"
 
 
 def _workspace_root() -> Path:
@@ -31,38 +31,44 @@ def default_ceo_chief_of_staff_asset_sources(
     workspace_root: str | Path | None = None,
 ) -> tuple[RepoAssetSource, ...]:
     root = Path(workspace_root) if workspace_root is not None else _workspace_root()
-    agents_root = _source_agents_root(root)
+    source_kit_root = _source_agent_kit_root(root)
     return (
         RepoAssetSource(
             label="Chief-of-staff durable memory",
-            path=agents_root / "ceo-chief-of-staff.memory.md",
+            path=source_kit_root / CHIEF_OF_STAFF_MEMORY_FILE_NAME,
         ),
         RepoAssetSource(
             label="Chief-of-staff personality",
-            path=agents_root / "ceo-chief-of-staff.soul.md",
+            path=source_kit_root / "ceo-chief-of-staff.soul.md",
         ),
         RepoAssetSource(
             label="Chief-of-staff work relationships",
-            path=agents_root / "ceo-chief-of-staff.colleagues.md",
+            path=source_kit_root / "ceo-chief-of-staff.colleagues.md",
         ),
         RepoAssetSource(
             label="Chief-of-staff social continuity",
-            path=agents_root / "ceo-chief-of-staff.social.md",
+            path=source_kit_root / "ceo-chief-of-staff.social.md",
         ),
     )
 
 
-def _source_agents_root(root: Path) -> Path:
+def _source_agent_kit_root(root: Path) -> Path:
+    # 现役基准（新代）优先：TriCompany/source-agents/<id>；
+    # 旧形态（.github/source-agents/<id>）降为兜底，旧代文件退役（M0f）后移除兜底段。
     candidates = (
-        root / ".github" / "agents",
-        root / "TriCompany" / ".github" / "agents",
-        root.parent / "TriCompany" / ".github" / "agents",
-        root.parent.parent / "TriCompany" / ".github" / "agents",
+        root / "TriCompany" / "source-agents" / CHIEF_OF_STAFF_ID,
+        root / "source-agents" / CHIEF_OF_STAFF_ID,
+        root.parent / "TriCompany" / "source-agents" / CHIEF_OF_STAFF_ID,
+        root.parent.parent / "TriCompany" / "source-agents" / CHIEF_OF_STAFF_ID,
+        root / ".github" / "source-agents" / CHIEF_OF_STAFF_ID,
+        root / "TriCompany" / ".github" / "source-agents" / CHIEF_OF_STAFF_ID,
+        root.parent / "TriCompany" / ".github" / "source-agents" / CHIEF_OF_STAFF_ID,
+        root.parent.parent / "TriCompany" / ".github" / "source-agents" / CHIEF_OF_STAFF_ID,
     )
     for candidate in candidates:
         if (candidate / CHIEF_OF_STAFF_MEMORY_FILE_NAME).exists():
             return candidate
-    return root / ".github" / "agents"
+    return root / "TriCompany" / "source-agents" / CHIEF_OF_STAFF_ID
 
 
 def build_ceo_chief_of_staff_kernel(

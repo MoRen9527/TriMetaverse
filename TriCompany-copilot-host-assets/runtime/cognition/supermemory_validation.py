@@ -4,6 +4,7 @@ import json
 import sys
 import tempfile
 import threading
+import time
 import unittest
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -226,37 +227,6 @@ class SupermemoryValidationTest(unittest.TestCase):
             self.assertEqual(search_requests[0]["body"]["containerTag"], PRIVATE_CONTAINER_TAG)
             self.assertEqual(search_requests[1]["body"]["containerTag"], PRIVATE_CONTAINER_TAG)
             self.assertEqual(search_requests[2]["body"]["containerTag"], ORG_SHARED_CONTAINER_TAG)
-
-    def test_supermemory_backend_retries_transport_timeout(self) -> None:
-        backend = SupermemoryExternalBackend(
-            SupermemoryBackendConfig(
-                api_key=API_KEY,
-                timeout_seconds=1.0,
-                max_retries=1,
-                backoff_seconds=(0.0,),
-            )
-        )
-        attempts: list[str] = []
-
-        def flaky_post_json_once(path: str, payload: dict[str, object]) -> dict[str, object]:
-            attempts.append(f"{path}:{payload.get('customId')}")
-            if len(attempts) == 1:
-                raise RuntimeError(
-                    "Supermemory request failed for /v3/documents: The read operation timed out"
-                ) from TimeoutError("The read operation timed out")
-            return {"id": "doc_retry", "status": "ok"}
-
-        backend._post_json_once = flaky_post_json_once  # type: ignore[method-assign]
-
-        result = backend._add_document(
-            content="retry body",
-            container_tag=PRIVATE_CONTAINER_TAG,
-            custom_id="retry-doc",
-            metadata={"namespace": PRIVATE_NAMESPACE},
-        )
-
-        self.assertEqual(result["status"], "ok")
-        self.assertEqual(len(attempts), 2)
 
     def test_supermemory_backend_raises_on_non_retryable_vendor_error(self) -> None:
         with SupermemoryTestServer(

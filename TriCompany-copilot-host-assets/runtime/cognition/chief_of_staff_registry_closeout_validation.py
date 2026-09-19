@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import sys
@@ -11,7 +11,10 @@ from threading import Thread
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from runtime.cognition.chief_of_staff_wiki_paths import chief_of_staff_audit_root, chief_of_staff_schedule_root
+from runtime.cognition.chief_of_staff_wiki_paths import (
+    chief_of_staff_audit_root,
+    chief_of_staff_schedule_root,
+)
 from runtime.cognition.dispatch.task_resolver import resolve_schedule_task
 from runtime.cognition.kernel.schedule_registry import ScheduleRegistry
 
@@ -23,11 +26,18 @@ class ChiefOfStaffRegistryCloseoutValidationTest(unittest.TestCase):
             closeout_path = self._seed_closeout_source(workspace_root)
             server, thread, base_url = _start_dispatch_server()
             self.addCleanup(_stop_dispatch_server, server, thread)
-            self._seed_schedule(workspace_root, source_path=closeout_path, delivery_base_url=base_url)
+            self._seed_schedule(
+                workspace_root,
+                source_path=closeout_path,
+                delivery_base_url=base_url,
+            )
 
             registry = ScheduleRegistry(chief_of_staff_schedule_root(workspace_root))
             schedule = registry.list_specs()[0]
-            result = resolve_schedule_task(schedule, workspace_root=str(workspace_root)).execute()
+            result = resolve_schedule_task(
+                schedule,
+                workspace_root=str(workspace_root),
+            ).execute()
 
             self.assertEqual(result["status"], "completed")
             self.assertEqual(result["deliveryStatus"], "delivered")
@@ -38,7 +48,10 @@ class ChiefOfStaffRegistryCloseoutValidationTest(unittest.TestCase):
 
             audit_payload = json.loads(audit_records[0].read_text(encoding="utf-8"))
             self.assertEqual(audit_payload["objectType"], "CENTRAL_REGISTRY_CLOSEOUT")
-            self.assertEqual(audit_payload["closeout"]["objectType"], "CENTRAL_REGISTRY_CLOSEOUT")
+            self.assertEqual(
+                audit_payload["closeout"]["objectType"],
+                "CENTRAL_REGISTRY_CLOSEOUT",
+            )
             self.assertEqual(audit_payload["registryFindingCount"], 2)
             self.assertEqual(audit_payload["delivery"]["deliveryStatus"], "delivered")
             self.assertEqual(audit_payload["sourcePath"], closeout_path.as_posix())
@@ -49,8 +62,14 @@ class ChiefOfStaffRegistryCloseoutValidationTest(unittest.TestCase):
 
             request_payload = json.loads(requests[0]["body"])
             self.assertEqual(request_payload["objectType"], "CENTRAL_REGISTRY_CLOSEOUT")
-            self.assertEqual(request_payload["closeoutSubject"], "PC 端软件层与 TriLC closeout")
-            self.assertEqual(request_payload["closeout"]["payload"]["closeoutDecision"], "writeback-approved")
+            self.assertEqual(
+                request_payload["closeoutSubject"],
+                "PC 端软件层与 TriLC closeout",
+            )
+            self.assertEqual(
+                request_payload["closeout"]["payload"]["closeoutDecision"],
+                "writeback-approved",
+            )
 
     def _seed_closeout_source(self, workspace_root: Path) -> Path:
         closeout_root = workspace_root / "docs" / "workflow" / "handoff-templates"
@@ -69,11 +88,17 @@ class ChiefOfStaffRegistryCloseoutValidationTest(unittest.TestCase):
                         "closeoutSubject": "PC 端软件层与 TriLC closeout",
                         "scopeDecision": {
                             "route": "parallel-registry-closeout",
-                            "modules": ["TriPilot", "Tride", "vscodium", "TriLC"],
+                            "modules": ["Tripilot", "Tride", "vscodium", "TriLC"],
                         },
                         "registryFindings": [
-                            {"registry": "TriPilotProductRegistry", "summary": "桌面入口承接用户触达"},
-                            {"registry": "TriLCCodeRegistry", "summary": "本地控制器保持 runtime / planner 边界"},
+                            {
+                                "registry": "TripilotProductRegistry",
+                                "summary": "桌面入口承接用户触达",
+                            },
+                            {
+                                "registry": "TriLCCodeRegistry",
+                                "summary": "本地控制器保持 runtime / planner 边界",
+                            },
                         ],
                         "closeoutDecision": "writeback-approved",
                     },
@@ -86,7 +111,13 @@ class ChiefOfStaffRegistryCloseoutValidationTest(unittest.TestCase):
         )
         return closeout_path
 
-    def _seed_schedule(self, workspace_root: Path, *, source_path: Path, delivery_base_url: str) -> None:
+    def _seed_schedule(
+        self,
+        workspace_root: Path,
+        *,
+        source_path: Path,
+        delivery_base_url: str,
+    ) -> None:
         schedule_root = chief_of_staff_schedule_root(workspace_root)
         schedule_root.mkdir(parents=True, exist_ok=True)
         payload = {
@@ -101,9 +132,18 @@ class ChiefOfStaffRegistryCloseoutValidationTest(unittest.TestCase):
             "timebox": {"scope": "weekly", "label": "closeout validation"},
             "summary": "dispatch central registry closeout payload",
             "relatedModules": ["TriCompany", "TriMetaverse"],
-            "evidence": [{"source": "docs/workflow/central-registry-closeout.schema.json", "kind": "document"}],
-            "nextActions": [{"owner": "CEOChiefOfStaff", "action": "dispatch registry closeout"}],
-            "workflowRefs": [{"phase": "DESIGNING", "artifact": "central-registry-closeout"}],
+            "evidence": [
+                {
+                    "source": "docs/workflow/central-registry-closeout.schema.json",
+                    "kind": "document",
+                }
+            ],
+            "nextActions": [
+                {"owner": "CEOChiefOfStaff", "action": "dispatch registry closeout"}
+            ],
+            "workflowRefs": [
+                {"phase": "DESIGNING", "artifact": "central-registry-closeout"}
+            ],
             "payload": {
                 "targetType": "registry-closeout",
                 "targetRef": "chief-of-staff-central-registry-closeout",
@@ -126,7 +166,9 @@ class ChiefOfStaffRegistryCloseoutValidationTest(unittest.TestCase):
             },
             "metadata": {"validation": True},
         }
-        (schedule_root / "01-chief-of-staff-central-registry-closeout.json").write_text(
+        (
+            schedule_root / "01-chief-of-staff-central-registry-closeout.json"
+        ).write_text(
             json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
@@ -156,7 +198,9 @@ def _start_dispatch_server() -> tuple[ThreadingHTTPServer, Thread, str]:
     setattr(server, "received", [])
     thread = Thread(target=server.serve_forever, daemon=True)
     thread.start()
-    host, port = server.server_address
+    address = server.server_address
+    host = str(address[0])
+    port = int(address[1])
     return server, thread, f"http://{host}:{port}"
 
 

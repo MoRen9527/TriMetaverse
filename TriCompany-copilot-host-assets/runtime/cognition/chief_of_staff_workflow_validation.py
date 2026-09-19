@@ -3,11 +3,13 @@ from __future__ import annotations
 import contextlib
 import io
 import json
+import os
+import subprocess
 import sys
 import tempfile
 import unittest
-from unittest import mock
 from pathlib import Path
+from unittest import mock
 
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
@@ -23,15 +25,26 @@ from runtime.cognition.chief_of_staff_workflow_bridge import (
 )
 
 
-GITHUB_AGENTS_PARTS = (".github", "agents")
-MEMORY_FILE_NAME = "ceo-chief-of-staff.memory.md"
-SOUL_FILE_NAME = "ceo-chief-of-staff.soul.md"
-COLLEAGUES_FILE_NAME = "ceo-chief-of-staff.colleagues.md"
-SOCIAL_FILE_NAME = "ceo-chief-of-staff.social.md"
+SOURCE_AGENT_KIT_PARTS = ("TriCompany", "source-agents", "ceo-chief-of-staff")
+MEMORY_FILE_NAME = "memory.agent.md"
+SOUL_FILE_NAME = "soul.agent.md"
+COLLEAGUES_FILE_NAME = "colleagues.agent.md"
+SOCIAL_FILE_NAME = "social.agent.md"
 SOUL_BODY = "自然、利落、有温度"
 COLLEAGUES_BODY = "磨人是当前直接汇报对象"
 SOCIAL_BODY = "非正式场景优先自然称呼"
 WEEKLY_MEETING_NAME = "TriMetaverse 每周经营同步会"
+SOURCE_ROOT = Path(__file__).resolve().parents[2]
+HOOK_SCRIPT_PATH = (
+    Path(__file__).resolve().parents[3]
+    / "TriMetaverse"
+    / ".github"
+    / "hooks"
+    / "ceo-chief-of-staff-workflow-sync.py"
+)
+HOOK_SUCCESS_MESSAGE = (
+    "chief-of-staff workflow bridge auto-synced repo memory after workflow writeback"
+)
 
 
 def _write_default_assets(agents_root: Path, memory_body: str) -> None:
@@ -50,8 +63,8 @@ class ChiefOfStaffWorkflowValidationTest(unittest.TestCase):
     def test_cli_accepts_json_from_stdin_for_workflow_commands(self) -> None:
         with tempfile.TemporaryDirectory() as workspace_dir, tempfile.TemporaryDirectory() as store_dir:
             workspace_root = Path(workspace_dir)
-            agents_root = workspace_root.joinpath(*GITHUB_AGENTS_PARTS)
-            _write_default_assets(agents_root, "当前主档记忆由仓库手工维护")
+            source_kit_root = workspace_root.joinpath(*SOURCE_AGENT_KIT_PARTS)
+            _write_default_assets(source_kit_root, "当前主档记忆由仓库手工维护")
 
             stdin_text = json.dumps(
                 {
@@ -82,11 +95,72 @@ class ChiefOfStaffWorkflowValidationTest(unittest.TestCase):
             self.assertIn("meeting-start", stdout.getvalue())
             self.assertIn("workflow-meeting-start", private_text.read_text(encoding="utf-8"))
 
+    def test_host_hook_auto_syncs_repo_memory_after_workflow_writeback(self) -> None:
+        if not HOOK_SCRIPT_PATH.exists():
+            self.skipTest(f"workflow hook script not found at {HOOK_SCRIPT_PATH}")
+
+        with tempfile.TemporaryDirectory() as workspace_dir, tempfile.TemporaryDirectory() as store_dir:
+            workspace_root = Path(workspace_dir)
+            source_kit_root = workspace_root.joinpath(*SOURCE_AGENT_KIT_PARTS)
+            _write_default_assets(source_kit_root, "repo memory remains source of truth")
+
+            bridge = ChiefOfStaffWorkflowBridge(
+                storage_root=store_dir,
+                workspace_root=workspace_root,
+            )
+            bridge.record_meeting_start(
+                MeetingStartPayload(
+                    meeting_name="Weekly start sync",
+                    purpose="enter formal record mode",
+                    participants=("CEO", "CEOChiefOfStaff"),
+                    background="wire workflow bridge to host hook",
+                    agenda=("auto sync",),
+                    expected_outputs=("repo digest",),
+                )
+            )
+
+            hook_input = json.dumps(
+                {
+                    "tool_name": "run_in_terminal",
+                    "tool_input": {
+                        "command": (
+                            "python -m runtime.cognition.chief_of_staff_workflow_bridge "
+                            "meeting-start --json meeting-start.payload.json"
+                        )
+                    },
+                },
+                ensure_ascii=True,
+            )
+            env = os.environ.copy()
+            env["TRIMETAVERSE_REPO_ROOT"] = str(workspace_root)
+            env["TRICOMPANY_COGNITION_SUPPORT_ROOT"] = str(SOURCE_ROOT)
+            env["TRICOMPANY_COGNITION_STORAGE_ROOT"] = store_dir
+
+            result = subprocess.run(
+                [sys.executable, str(HOOK_SCRIPT_PATH)],
+                input=hook_input,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                env=env,
+                cwd=workspace_root,
+            )
+
+            output = json.loads(result.stdout)
+            memory_text = (source_kit_root / MEMORY_FILE_NAME).read_text(encoding="utf-8")
+
+            self.assertEqual(result.returncode, 0)
+            self.assertTrue(output["continue"])
+            self.assertIn(HOOK_SUCCESS_MESSAGE, output.get("systemMessage", ""))
+            self.assertIn("chief-of-staff-cognition-sync:start", memory_text)
+            self.assertIn("chief-of-staff-cognition-sync:end", memory_text)
+            self.assertIn("meeting-start", memory_text)
+
     def test_workflow_writebacks_persist_to_private_shared_and_audit_namespaces(self) -> None:
         with tempfile.TemporaryDirectory() as workspace_dir, tempfile.TemporaryDirectory() as store_dir:
             workspace_root = Path(workspace_dir)
-            agents_root = workspace_root.joinpath(*GITHUB_AGENTS_PARTS)
-            _write_default_assets(agents_root, "总助主档仍以仓库文件为准")
+            source_kit_root = workspace_root.joinpath(*SOURCE_AGENT_KIT_PARTS)
+            _write_default_assets(source_kit_root, "总助主档仍以仓库文件为准")
 
             bridge = ChiefOfStaffWorkflowBridge(
                 storage_root=store_dir,
@@ -155,8 +229,8 @@ class ChiefOfStaffWorkflowValidationTest(unittest.TestCase):
     def test_bidirectional_sync_imports_repo_snapshot_and_exports_managed_digest(self) -> None:
         with tempfile.TemporaryDirectory() as workspace_dir, tempfile.TemporaryDirectory() as store_dir:
             workspace_root = Path(workspace_dir)
-            agents_root = workspace_root.joinpath(*GITHUB_AGENTS_PARTS)
-            _write_default_assets(agents_root, "当前主档记忆由仓库手工维护")
+            source_kit_root = workspace_root.joinpath(*SOURCE_AGENT_KIT_PARTS)
+            _write_default_assets(source_kit_root, "当前主档记忆由仓库手工维护")
 
             bridge = ChiefOfStaffWorkflowBridge(
                 storage_root=store_dir,
@@ -171,13 +245,13 @@ class ChiefOfStaffWorkflowValidationTest(unittest.TestCase):
                     next_actions=(
                         ActionItem(owner="CEOChiefOfStaff", action="保持 repo 主档为准"),
                     ),
-                    docs_to_update=(".github/agents/ceo-chief-of-staff.memory.md",),
+                    docs_to_update=("TriCompany/source-agents/ceo-chief-of-staff/memory.agent.md",),
                 )
             )
             result = bridge.sync_repo_memory_bidirectional(limit=3)
 
             private_text = bridge.store.read_namespace(f"employee/{CHIEF_OF_STAFF_ID}")
-            memory_text = (agents_root / "ceo-chief-of-staff.memory.md").read_text(
+            memory_text = (source_kit_root / MEMORY_FILE_NAME).read_text(
                 encoding="utf-8"
             )
 

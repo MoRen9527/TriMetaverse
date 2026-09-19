@@ -97,5 +97,3 @@ def _as_topics(value: object) -> tuple[str, ...]:
                 topics.append(text)
         return tuple(topics)
     return ()
-
-

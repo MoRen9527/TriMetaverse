@@ -19,7 +19,7 @@ from runtime.cognition.providers.repo_asset_provider import (
 CHIEF_OF_STAFF_ID = "ceo-chief-of-staff"
 USER_CONTENT = "请把这轮经营判断写入 cognition"
 ASSISTANT_CONTENT = "已桥接到 cognition durable memory"
-GITHUB_AGENTS_PARTS = (".github", "agents")
+SOURCE_AGENT_KIT_PARTS = ("TriCompany", "source-agents", "ceo-chief-of-staff")
 
 
 def _write_asset(path: Path, title: str, body: str) -> None:
@@ -31,9 +31,9 @@ class ChiefOfStaffBridgeValidationTest(unittest.TestCase):
     def test_repo_asset_provider_prefetches_durable_assets(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            agents_root = root.joinpath(*GITHUB_AGENTS_PARTS)
-            memory_path = agents_root / "ceo-chief-of-staff.memory.md"
-            soul_path = agents_root / "ceo-chief-of-staff.soul.md"
+            source_kit_root = root.joinpath(*SOURCE_AGENT_KIT_PARTS)
+            memory_path = source_kit_root / "memory.agent.md"
+            soul_path = source_kit_root / "ceo-chief-of-staff.soul.md"
             _write_asset(memory_path, "Memory", "项目级耐久记忆已经落仓库")
             _write_asset(soul_path, "Soul", "老板我在呢")
 
@@ -63,11 +63,11 @@ class ChiefOfStaffBridgeValidationTest(unittest.TestCase):
     def test_bootstrap_kernel_bridges_repo_assets_and_runtime_storage(self) -> None:
         with tempfile.TemporaryDirectory() as workspace_dir, tempfile.TemporaryDirectory() as store_dir:
             workspace_root = Path(workspace_dir)
-            agents_root = workspace_root.joinpath(*GITHUB_AGENTS_PARTS)
-            _write_asset(agents_root / "ceo-chief-of-staff.memory.md", "Memory", "当前阶段总助耐久记忆")
-            _write_asset(agents_root / "ceo-chief-of-staff.soul.md", "Soul", "自然、利落、有温度")
-            _write_asset(agents_root / "ceo-chief-of-staff.colleagues.md", "Colleagues", "磨人是当前直接汇报对象")
-            _write_asset(agents_root / "ceo-chief-of-staff.social.md", "Social", "非正式场景下优先叫磨人")
+            source_kit_root = workspace_root.joinpath(*SOURCE_AGENT_KIT_PARTS)
+            _write_asset(source_kit_root / "memory.agent.md", "Memory", "当前阶段总助耐久记忆")
+            _write_asset(source_kit_root / "ceo-chief-of-staff.soul.md", "Soul", "自然、利落、有温度")
+            _write_asset(source_kit_root / "ceo-chief-of-staff.colleagues.md", "Colleagues", "磨人是当前直接汇报对象")
+            _write_asset(source_kit_root / "ceo-chief-of-staff.social.md", "Social", "非正式场景下优先叫磨人")
 
             kernel = build_ceo_chief_of_staff_kernel(
                 storage_root=store_dir,

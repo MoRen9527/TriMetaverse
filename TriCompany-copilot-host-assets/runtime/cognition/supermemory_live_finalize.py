@@ -18,10 +18,6 @@ def _repo_root() -> Path:
     return Path(__file__).resolve().parents[2]
 
 
-def _workspace_root() -> Path:
-    return _repo_root().parent
-
-
 def _report_path() -> Path:
     return (
         _repo_root()
@@ -46,10 +42,6 @@ def _record_path() -> Path:
         / "phase-1"
         / "SUPERMEMORY-LIVE-VALIDATION.md"
     )
-
-
-def _manifest_path() -> Path:
-    return _workspace_root() / ".github" / "manifests" / "tricompany-copilot-host-backport.json"
 
 
 def _load_report(path: Path) -> dict[str, Any] | None:
@@ -135,8 +127,8 @@ def _update_state() -> None:
     )
     text = _replace_once(
         text,
-        "- 本地 provider-backed 集成、后端落盘/审计验证、模拟外部后端兼容性验证、HTTP 外部后端认证/网络验证，以及 Supermemory 官方 schema 与 SDK seam 验证已完成，但真实 Supermemory API key 下的 live 调用、账号级限流/配额语义与远端后端差异仍待验证",
-        "- 本地 provider-backed 集成、后端落盘/审计验证、模拟外部后端兼容性验证、HTTP 外部后端认证/网络验证，以及 Supermemory 官方 schema、SDK seam 与首轮 live smoke 验证已完成，但账号级限流/配额语义、持续稳定性与远端后端差异仍待验证",
+        "- 本地 provider-backed 集成、production 风格后端落盘/审计验证、模拟外部后端兼容性验证、HTTP 外部后端认证/网络验证，以及 Supermemory 官方 schema 与 SDK seam 验证已完成，但真实 Supermemory API key 下的 live 调用、账号级限流/配额语义与远端后端差异仍待验证",
+        "- 本地 provider-backed 集成、production 风格后端落盘/审计验证、模拟外部后端兼容性验证、HTTP 外部后端认证/网络验证，以及 Supermemory 官方 schema、SDK seam 与首轮 live smoke 验证已完成，但账号级限流/配额语义、持续稳定性与远端后端差异仍待验证",
     )
     text = _replace_once(
         text,
@@ -145,8 +137,8 @@ def _update_state() -> None:
     )
     text = _replace_once(
         text,
-        "- 当前已完成一轮 shadow-test 回迁、会议闭环演练、Hermes 核心契约验证、本地 provider-backed 集成验证、后端落盘/审计验证、模拟外部后端兼容性验证、HTTP 外部后端认证/网络验证，以及 Supermemory 官方 schema 与 SDK seam 验证，但仍未进入正式宿主切换",
-        "- 当前已完成一轮 shadow-test 回迁、会议闭环演练、Hermes 核心契约验证、本地 provider-backed 集成验证、后端落盘/审计验证、模拟外部后端兼容性验证、HTTP 外部后端认证/网络验证，以及 Supermemory 官方 schema、SDK seam 与首轮 live smoke 验证，但仍未进入正式宿主切换",
+        "- 当前已具备把 TriCompany/.github 以 shadow-test 方式回迁 TriMetaverse 的准备结构；其中 runtime/cognition 最小 smoke test、Hermes 核心契约验证、本地 provider-backed 集成验证、后端落盘/审计验证、模拟外部后端兼容性验证、HTTP 外部后端认证/网络验证，以及 Supermemory 官方 schema 与 SDK seam 验证均已通过",
+        "- 当前已具备把 TriCompany/.github 以 shadow-test 方式回迁 TriMetaverse 的准备结构；其中 runtime/cognition 最小 smoke test、Hermes 核心契约验证、本地 provider-backed 集成验证、后端落盘/审计验证、模拟外部后端兼容性验证、HTTP 外部后端认证/网络验证，以及 Supermemory 官方 schema、SDK seam 与首轮 live smoke 验证均已通过",
     )
     text = _replace_once(
         text,
@@ -179,39 +171,6 @@ def _update_record(report: dict[str, Any], report_path: Path) -> None:
     path.write_text(text, encoding="utf-8")
 
 
-def _update_manifest(report: dict[str, Any]) -> None:
-    path = _manifest_path()
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    payload["status"] = "shadow-supermemory-live-smoke-validated"
-
-    note = (
-        "当前已在 TriCompany-copilot-host-assets 根目录基于真实 Supermemory 账号执行 live smoke，"
-        "并把结构化证据写入 docs/execution/hermes-copilot-host/phase-1/"
-        "SUPERMEMORY-LIVE-VALIDATION.latest.json。"
-    )
-    notes = payload.get("notes", [])
-    if note not in notes:
-        notes.append(note)
-        payload["notes"] = notes
-
-    validation = payload.get("validation", {})
-    if isinstance(validation, dict):
-        validated_at = str(report.get("validatedAtUtc", "")).split("T", 1)[0]
-        if validated_at:
-            validation["validatedAt"] = validated_at
-        checks = validation.get("checks", [])
-        new_check = (
-            "The runtime/cognition Supermemory live smoke validation produced a structured evidence artifact "
-            "at docs/execution/hermes-copilot-host/phase-1/SUPERMEMORY-LIVE-VALIDATION.latest.json with private, shared, and audit namespace recall coverage"
-        )
-        if new_check not in checks:
-            checks.append(new_check)
-            validation["checks"] = checks
-        payload["validation"] = validation
-
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
 def _print_pending(report_path: Path) -> None:
     print(f"pending: live validation report not found at {report_path.as_posix()}")
     print("No status files were changed.")
@@ -224,7 +183,6 @@ def _print_preview(report: dict[str, Any], report_path: Path) -> None:
     print("apply target files:")
     print(f"- {_state_path().as_posix()}")
     print(f"- {_record_path().as_posix()}")
-    print(f"- {_manifest_path().as_posix()}")
 
 
 def main() -> int:
@@ -251,8 +209,7 @@ def main() -> int:
 
     _update_state()
     _update_record(report, report_path)
-    _update_manifest(report)
-    print("applied: shadow live validation status updated.")
+    print("applied: source live validation status updated.")
     return 0
 
 

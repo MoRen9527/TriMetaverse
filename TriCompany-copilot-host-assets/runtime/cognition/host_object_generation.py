@@ -1,0 +1,1105 @@
+from __future__ import annotations
+
+import json
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Iterable, Mapping
+
+from runtime.cognition.knowledge_workspace import (
+    KnowledgeWorkspace,
+    audit_workspace,
+    employee_workspace,
+    org_shared_workspace,
+    role_workspace,
+)
+from runtime.cognition.source_publish_check import (
+    AGENT_PUBLISH_ELIGIBLE_STATUSES,
+    DEFAULT_HOST_ID,
+    HOST_RENDER_REGISTRY,
+    SESSION_BODY_KEY,
+    SESSION_HOST_ID,
+    SOURCE_FILES_VALUE_PREFIX,
+    _derive_host_target,
+)
+
+# M0d 返工 R2（2026-09-03，LG-025）：合并席集合——contract.paths colleagues/social
+# 显式同指 colleagues-social.agent.md 的席位。规则生成照 contract 投影双键同指，
+# 禁自创文件名；非合并席照常规 soul/colleagues/social 分件投影。
+MERGED_KIT_SEAT_IDS: frozenset[str] = frozenset({
+    "customer-success-officer",
+    "deployment-engineer",
+})
+
+
+HOST_OBJECT_MANIFEST_NAME = "host-object-manifest.json"
+# ── hostEntries 多宿主承载（FADE 质量审核 3 问题 3 / CEO 2026-08-20 走查，CTO 2026-08-20 定案）──
+# liveEntry 保留 copilot 唯一承载位；hostEntries 只承载非 copilot 宿主（claude 起步）。
+# 生成管线重建时从 manifest 条目 + HOST_RENDER_REGISTRY 派生（禁人工编辑）；
+# 缺省/空 = 旧 profile 兼容。宿主注册表唯一真源 = source_publish_check.HOST_RENDER_REGISTRY
+# （渲染管线与 binding 生成管线共用，path 派生经 B2 派生关系校验闭环——新宿主 = 注册表
+# 新增一个条目，管线零改动）。
+# status 语义与 employee_host_binding_profile_generation.LIVE_STATUS_TO_MANIFEST_STATUSES
+# 同构：live 家族 = AGENT_PUBLISH_ELIGIBLE_STATUSES（= liveEntry "current-copilot-host-live"
+# 允许的 manifest status 集）；派生值为宿主中性的 "current-host-live"（宿主由条目的 host
+# 字段标识，status 词表不按宿主复制）。
+HOST_ENTRY_LIVE_MANIFEST_STATUSES: frozenset[str] = frozenset(AGENT_PUBLISH_ELIGIBLE_STATUSES)
+HOST_ENTRY_LIVE_STATUS: str = "current-host-live"
+# hostEntries 每项的 identityRule（绑定决策证据，按宿主注册表派生）：claude 面条目由
+# 统一发布管线从 manifest target 经宿主注册表渲染派生，非人工编辑、非复用既有 live 文件。
+HOST_ENTRY_IDENTITY_RULE: str = "render-derived-from-manifest"
+SOURCE_HOST_BINDING_PROFILE_DIR = Path(".github") / "binding-profiles"
+SOURCE_HOST_OBJECT_MANIFEST_REFERENCE = "TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json"
+SUPPORT_ROOT_REFERENCE = "TriCompany-copilot-host-assets"
+SUPPORT_HOST_OBJECT_MANIFEST_REFERENCE = f"{SUPPORT_ROOT_REFERENCE}/{HOST_OBJECT_MANIFEST_NAME}"
+SOURCE_AGENT_KIT_REFERENCE_ROOT = "TriCompany/source-agents"
+HOST_OBJECT_GOVERNED_BY = (
+    SOURCE_HOST_OBJECT_MANIFEST_REFERENCE,
+    "TriMetaverse/docs/workflow/tricompany-copilot-host-assets-governance.md",
+    "TriMetaverse/docs/workflow/tricompany-copilot-host-assets-migration-matrix.md",
+    "TriCompany/docs/workflow/host-object-publish-flow.md",
+)
+RD_TRAINER_OBJECT_SET_ID = "rd-trainer-knowledge-workspace-v0.1"
+CEO_CHIEF_OF_STAFF_OBJECT_SET_ID = "ceo-chief-of-staff-knowledge-workspace-v0.1"
+CHIEF_PRODUCT_OFFICER_OBJECT_SET_ID = "chief-product-officer-knowledge-workspace-v0.1"
+CHIEF_TECHNOLOGY_OFFICER_OBJECT_SET_ID = "chief-technology-officer-knowledge-workspace-v0.1"
+CHIEF_MARKETING_OFFICER_OBJECT_SET_ID = "chief-marketing-officer-knowledge-workspace-v0.1"
+CHIEF_OPERATING_OFFICER_OBJECT_SET_ID = "chief-operating-officer-knowledge-workspace-v0.1"
+CHIEF_FINANCIAL_OFFICER_OBJECT_SET_ID = "chief-financial-officer-knowledge-workspace-v0.1"
+CHIEF_HUMAN_RESOURCES_OFFICER_OBJECT_SET_ID = "chief-human-resources-officer-knowledge-workspace-v0.1"
+CHIEF_ADMINISTRATIVE_OFFICER_OBJECT_SET_ID = "chief-administrative-officer-knowledge-workspace-v0.1"
+SENIOR_TEST_ENGINEER_OBJECT_SET_ID = "senior-test-engineer-knowledge-workspace-v0.1"
+FULL_STACK_DEVELOPER_OBJECT_SET_ID = "full-stack-developer-knowledge-workspace-v0.1"
+DEPLOYMENT_ENGINEER_OBJECT_SET_ID = "deployment-engineer-knowledge-workspace-v0.1"
+CUSTOMER_SUCCESS_OFFICER_OBJECT_SET_ID = "customer-success-officer-knowledge-workspace-v0.1"
+RD_TRAINER_GENERATED_AT = "2026-04-29T00:00:00+08:00"
+CONSUMPTION_DATA_BOUNDARY_NOTE = (
+    "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; "
+    "concrete employee consumption records belong in the employee wiki or runtime cognition state."
+)
+
+
+def source_agent_kit_refs(employee_id: str) -> tuple[str, ...]:
+    return tuple(
+        f"{SOURCE_AGENT_KIT_REFERENCE_ROOT}/{employee_id}/{employee_id}.{suffix}.md"
+        for suffix in ("agent", "soul", "memory", "colleagues", "social")
+    )
+
+
+@dataclass(frozen=True)
+class HostObjectSetDefinition:
+    object_set_id: str
+    role_id: str
+    employee_id: str
+    owner_role: str
+    source_refs: tuple[str, ...]
+    role_description: str
+    employee_description: str
+    generator: str
+    live_entry_status: str
+    host_stage: str
+    notes: tuple[str, ...]
+    employee_display_name: str | None = None
+    live_entry_ref: str | None = None
+    # LG-024 批 0（2026-09-02）：session 面合同升格——声明后 manifest 条目落
+    # sessionBody 键（值=源侧片段相对路径），claude-session 面派生与组合渲染
+    # 随之生效（未声明=该面零行为，S6 门语义不变）。
+    session_body_ref: str | None = None
+    # LG-025 M0d 补强①（2026-09-03）：sourceFiles 定义字段——definition 驱动
+    # 再生成（fd8db82 双源先例：手落键防再生丢失）。None=组装段按 employee_id
+    # 规则生成六键（R1 前缀形态 + R2 合并席双键同指 + R3 frontmatter 正映射）；
+    # 显式 Mapping 覆盖规则（特例缝）。
+    # ④键族注记：sourceFiles 六键族（kit 契约完备性）与 sessionBody 独立键
+    # （claude-session 面声明，仅 ceo）正交并存，键族语义互不覆盖。
+    source_files: Mapping[str, str] | None = None
+    generated_at: str = RD_TRAINER_GENERATED_AT
+    status: str = "generated-staging"
+    legacy_support_objects: tuple[Mapping[str, str], ...] = ()
+    replaces_object_set_ids: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
+class GeneratedHostObjectSet:
+    object_set_id: str
+    support_root: Path
+    role_workspace: KnowledgeWorkspace
+    employee_workspace: KnowledgeWorkspace
+    org_shared_workspace: KnowledgeWorkspace
+    audit_workspace: KnowledgeWorkspace
+    manifest_path: Path
+
+
+def generate_rd_trainer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=RD_TRAINER_HOST_OBJECT_SET)
+
+
+def generate_project_trainer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_rd_trainer_host_objects(support_root)
+
+
+def generate_ceo_chief_of_staff_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=CEO_CHIEF_OF_STAFF_HOST_OBJECT_SET)
+
+
+def generate_chief_product_officer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=CHIEF_PRODUCT_OFFICER_HOST_OBJECT_SET)
+
+
+def generate_chief_technology_officer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=CHIEF_TECHNOLOGY_OFFICER_HOST_OBJECT_SET)
+
+
+def generate_chief_marketing_officer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=CHIEF_MARKETING_OFFICER_HOST_OBJECT_SET)
+
+
+def generate_chief_operating_officer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=CHIEF_OPERATING_OFFICER_HOST_OBJECT_SET)
+
+
+def generate_chief_financial_officer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=CHIEF_FINANCIAL_OFFICER_HOST_OBJECT_SET)
+
+
+def generate_chief_human_resources_officer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=CHIEF_HUMAN_RESOURCES_OFFICER_HOST_OBJECT_SET)
+
+
+def generate_chief_administrative_officer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=CHIEF_ADMINISTRATIVE_OFFICER_HOST_OBJECT_SET)
+
+
+def generate_test_engineer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=TEST_ENGINEER_HOST_OBJECT_SET)
+
+
+def generate_full_stack_developer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=FULL_STACK_DEVELOPER_HOST_OBJECT_SET)
+
+
+def generate_deployment_engineer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=DEPLOYMENT_ENGINEER_HOST_OBJECT_SET)
+
+
+def generate_customer_success_officer_host_objects(support_root: str | Path) -> GeneratedHostObjectSet:
+    return generate_host_object_set(support_root=support_root, definition=CUSTOMER_SUCCESS_OFFICER_HOST_OBJECT_SET)
+
+
+def generate_all_declared_employee_host_objects(support_root: str | Path) -> tuple[GeneratedHostObjectSet, ...]:
+    return tuple(generate_host_object_set(support_root=support_root, definition=definition) for definition in DECLARED_HOST_OBJECT_SETS)
+
+
+RD_TRAINER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=RD_TRAINER_OBJECT_SET_ID,
+    role_id="rd-trainer",
+    employee_id="rd-trainer",
+    # LG-024 manifest 窗（2026-09-05 凌晨窗）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/rd-trainer/session-body.agent.md",
+    owner_role="RAndDTrainer",
+    source_refs=(
+        "TriCompany/docs/workflow/rd-trainer-role.md",
+        *source_agent_kit_refs("rd-trainer"),
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+        "TriCompany/docs/training/README.md",
+        "TriCompany/docs/training/ipd-usage-guide.md",
+    ),
+    role_description="Role-level reusable training knowledge for RAndDTrainer.",
+    employee_description="Employee-instance working knowledge for the current RAndDTrainer.",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee rd-trainer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "RAndDTrainer is enabled as a current Copilot-host live employee in the current phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/rd-trainer.agent.md; the source kit remains under TriCompany/source-agents/rd-trainer.",
+        "The legacy project-trainer id is retained only as a compatibility alias and is replaced in support manifests by rd-trainer.",
+        "RAndDTrainer runtime cognition state is created only after a live/runtime write, not during support payload generation.",
+    ),
+    employee_display_name="小吴",
+    live_entry_ref="TriMetaverse/.github/agents/rd-trainer.agent.md",
+    status="current-copilot-host-live",
+    replaces_object_set_ids=("project-trainer-knowledge-workspace-v0.1",),
+)
+
+
+CEO_CHIEF_OF_STAFF_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=CEO_CHIEF_OF_STAFF_OBJECT_SET_ID,
+    role_id="ceo-chief-of-staff",
+    employee_id="ceo-chief-of-staff",
+    owner_role="CEOChiefOfStaff",
+    source_refs=(
+        *source_agent_kit_refs("ceo-chief-of-staff"),
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+    ),
+    role_description="Role-level reusable coordination knowledge for the CEOChiefOfStaff role.",
+    employee_description="Employee-instance working knowledge for the current ceo-chief-of-staff live employee.",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee ceo-chief-of-staff",
+    live_entry_status="live-entry-existing-not-changed",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "The existing TriMetaverse/.github ceo-chief-of-staff live entry is the active live agent; no second live agent file is published for this migration.",
+        "This object set binds that live entry to the role/employee workspace model without changing the live .github entry identity.",
+        "The retired knowledge/chief-of-staff compatibility path is no longer published; the current support payload lives only under the ceo-chief-of-staff role/employee workspaces.",
+        "The existing .tricompany-cognition/employee/ceo-chief-of-staff.md file remains runtime-state, not support payload source truth.",
+        # LG-023 S5/S6（2026-09-01 CTO 裁决）：binding profile 为模板重建（notes 真源=本
+        # definition，禁手改 binding JSON），启动命令注记必须生成器所有方可 S5 再生存活。
+        "Standard xiaojia-hub session launch: claude -n COS --append-system-prompt-file D:\\Code\\ai\\TriMetaverse\\.claude\\hub\\ceo-chief-of-staff.session.md (claude-session host face; payload rendered by the unified publish pipeline from source TriCompany/source-agents/ceo-chief-of-staff/session-body.agent.md; session canonical name COS per CEO naming ruling 2026-09-01, aliases xiaojia/zongcai-zhuli/jarvis).",
+        "This session launch command supersedes the earlier plan of pointing --append-system-prompt-file at TriMetaverse/.claude/agents/ceo-chief-of-staff.md: canary evidence (TriMetaverse/.fade/hub/analysis/bootstrap-unification/evidence-q2-canary.txt + evidence-q2-control.txt, decision D25 2026-09-01) showed that flag injects frontmatter verbatim and spawn-limited tools conflict with session tool needs.",
+    ),
+    live_entry_ref="TriMetaverse/.github/agents/ceo-chief-of-staff.agent.md",
+    status="current-copilot-host-live",
+    # LG-024 批 0（2026-09-02）：ceo 席 session 面合同升格样板——sessionBody
+    # 真源化声明（片段=源侧会话面补充合同，S6 已建）
+    session_body_ref="TriCompany/source-agents/ceo-chief-of-staff/session-body.agent.md",
+)
+
+
+CHIEF_PRODUCT_OFFICER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=CHIEF_PRODUCT_OFFICER_OBJECT_SET_ID,
+    role_id="ChiefProductOfficer",
+    employee_id="chief-product-officer",
+    owner_role="ChiefProductOfficer",
+    source_refs=(
+        *source_agent_kit_refs("chief-product-officer"),
+        "TriCompany/docs/product/PROJECT.md",
+        "TriCompany/docs/product/REQUIREMENTS.md",
+        "TriCompany/docs/product/ROADMAP.md",
+        "TriCompany/docs/product/STATE.md",
+        "TriCompany/docs/registry/product-state.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+    ),
+    role_description="Role-level reusable product judgment knowledge for the ChiefProductOfficer role.",
+    # LG-024 manifest 窗（2026-09-04T15:43Z）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/chief-product-officer/session-body.agent.md",
+    employee_description="Employee-instance working knowledge for the current chief-product-officer live employee.",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee chief-product-officer",
+    live_entry_status="live-entry-existing-not-changed",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "The existing TriMetaverse/.github chief-product-officer live entry is the active live agent for the current Copilot-host; no second live agent file is published.",
+        "This object set binds that live entry to the role/employee workspace model without changing the live .github entry identity.",
+        "This onboarding means current Copilot-host live enablement and TriCompany source-side handoff, not a TriMC formal host switch.",
+    ),
+    employee_display_name="小乔",
+    live_entry_ref="TriMetaverse/.github/agents/chief-product-officer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+CHIEF_TECHNOLOGY_OFFICER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=CHIEF_TECHNOLOGY_OFFICER_OBJECT_SET_ID,
+    role_id="ChiefTechnologyOfficer",
+    employee_id="chief-technology-officer",
+    owner_role="ChiefTechnologyOfficer",
+    source_refs=(
+        *source_agent_kit_refs("chief-technology-officer"),
+        "TriCompany/docs/engineering/DESIGN.md",
+        "TriCompany/docs/engineering/ROADMAP.md",
+        "TriCompany/docs/engineering/STATE.md",
+        "TriCompany/docs/engineering/metacognition-architecture.md",
+        "TriCompany/docs/registry/code-state.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+    ),
+    role_description="Role-level reusable engineering delivery knowledge for the ChiefTechnologyOfficer role.",
+    # LG-024 令一（CTO 席增量渲染，2026-09-04T15:15Z）：sessionBody 真源化声明
+    # （M0d 补强①同款防再生丢键；源件=D 类域知识族首例节 dae657c 同批）
+    session_body_ref="TriCompany/source-agents/chief-technology-officer/session-body.agent.md",
+    employee_description="Employee-instance working knowledge for the current chief-technology-officer live employee.",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee chief-technology-officer",
+    live_entry_status="live-entry-existing-not-changed",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "The existing TriMetaverse/.github chief-technology-officer live entry is the active live agent for the current Copilot-host; no second live agent file is published.",
+        "This object set binds that live entry to the role/employee workspace model without changing the live .github entry identity.",
+        "This onboarding means current Copilot-host live enablement and TriCompany source-side handoff, not a TriMC formal host switch.",
+    ),
+    employee_display_name="小狄",
+    live_entry_ref="TriMetaverse/.github/agents/chief-technology-officer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+CHIEF_MARKETING_OFFICER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=CHIEF_MARKETING_OFFICER_OBJECT_SET_ID,
+    role_id="ChiefMarketingOfficer",
+    employee_id="chief-marketing-officer",
+    # LG-024 manifest 窗（2026-09-05 凌晨窗）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/chief-marketing-officer/session-body.agent.md",
+    owner_role="ChiefMarketingOfficer",
+    source_refs=(
+        "TriCompany/docs/workflow/chief-marketing-officer-role.md",
+        *source_agent_kit_refs("chief-marketing-officer"),
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+        "TriMetaverse/cyber-company.md",
+    ),
+    role_description="Role-level reusable market intelligence, competitor research, trend tracking and product-input knowledge for the ChiefMarketingOfficer role.",
+    employee_description="Employee-instance working knowledge for the current chief-marketing-officer live employee.",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee chief-marketing-officer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "ChiefMarketingOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-marketing-officer.agent.md.",
+        "CMO owns market research, competitor intelligence, trend and hotspot capture, and structured product inputs for CPO; this does not imply TriMC formal host switch.",
+        "Current enablement does not imply automated internet crawling, production market-data pipelines, or scheduled research jobs are already implemented.",
+    ),
+    live_entry_ref="TriMetaverse/.github/agents/chief-marketing-officer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+CHIEF_OPERATING_OFFICER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=CHIEF_OPERATING_OFFICER_OBJECT_SET_ID,
+    role_id="ChiefOperatingOfficer",
+    employee_id="chief-operating-officer",
+    # LG-024 manifest 窗（2026-09-05 凌晨窗）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/chief-operating-officer/session-body.agent.md",
+    owner_role="ChiefOperatingOfficer",
+    source_refs=(
+        "TriCompany/docs/workflow/chief-operating-officer-role.md",
+        *source_agent_kit_refs("chief-operating-officer"),
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+        "TriMetaverse/cyber-company.md",
+    ),
+    role_description="Role-level reusable operating cadence, rollout planning, cross-functional execution and recovery-loop knowledge for the ChiefOperatingOfficer role.",
+    employee_description="Employee-instance working knowledge for the current chief-operating-officer live employee.",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee chief-operating-officer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "ChiefOperatingOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-operating-officer.agent.md.",
+        "COO owns operating cadence, rollout planning, cross-functional execution windows and recovery loops for CMO/CPO/CFO/CTO/TriDev collaboration; this does not imply TriMC formal host switch.",
+        "Current enablement does not imply production dashboards, automated scheduling, automated rollout, automated rollback or a complete authorization matrix are already implemented.",
+    ),
+    live_entry_ref="TriMetaverse/.github/agents/chief-operating-officer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+CHIEF_FINANCIAL_OFFICER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=CHIEF_FINANCIAL_OFFICER_OBJECT_SET_ID,
+    role_id="ChiefFinancialOfficer",
+    employee_id="chief-financial-officer",
+    owner_role="ChiefFinancialOfficer",
+    source_refs=(
+        "TriCompany/docs/workflow/chief-financial-officer-role.md",
+        *source_agent_kit_refs("chief-financial-officer"),
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+        "TriMetaverse/cyber-company.md",
+    ),
+    role_description="Role-level reusable budget guardrail, cost control, profitability check and financial-risk knowledge for the ChiefFinancialOfficer role.",
+    # LG-024 manifest 窗（2026-09-04T15:43Z）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/chief-financial-officer/session-body.agent.md",
+    employee_description="Employee-instance working knowledge for the current chief-financial-officer live employee.",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee chief-financial-officer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "ChiefFinancialOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-financial-officer.agent.md.",
+        "CFO owns budget guardrails, cost controls, profitability checks, pricing assumptions and financial risk review for CMO/CPO/COO/CTO/TriDev collaboration; this does not imply TriMC formal host switch.",
+        "Current enablement does not imply production ledgers, automated settlement, on-chain budgets, on-chain revenue sharing or a complete finance authorization matrix are already implemented.",
+    ),
+    live_entry_ref="TriMetaverse/.github/agents/chief-financial-officer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+CHIEF_HUMAN_RESOURCES_OFFICER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=CHIEF_HUMAN_RESOURCES_OFFICER_OBJECT_SET_ID,
+    role_id="ChiefHumanResourcesOfficer",
+    employee_id="chief-human-resources-officer",
+    owner_role="ChiefHumanResourcesOfficer",
+    source_refs=(
+        "TriCompany/docs/workflow/chief-human-resources-officer-role.md",
+        *source_agent_kit_refs("chief-human-resources-officer"),
+        "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/workflow/cyber-company-secretariat.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+    ),
+    role_description="Role-level reusable organization and handoff governance knowledge for the ChiefHumanResourcesOfficer role.",
+    # LG-024 manifest 窗（2026-09-04T15:43Z）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/chief-human-resources-officer/session-body.agent.md",
+    employee_description="Employee-instance working knowledge for the source-side chief-human-resources-officer employee.",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee chief-human-resources-officer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "ChiefHumanResourcesOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-human-resources-officer.agent.md.",
+        "CHO owns staffing governance, role enablement and handoff completion tracking; this does not imply TriMC formal host switch.",
+    ),
+    live_entry_ref="TriMetaverse/.github/agents/chief-human-resources-officer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+CHIEF_ADMINISTRATIVE_OFFICER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=CHIEF_ADMINISTRATIVE_OFFICER_OBJECT_SET_ID,
+    role_id="ChiefAdministrativeOfficer",
+    employee_id="chief-administrative-officer",
+    owner_role="ChiefAdministrativeOfficer",
+    source_refs=(
+        "TriCompany/docs/workflow/chief-administrative-officer-role.md",
+        *source_agent_kit_refs("chief-administrative-officer"),
+        "TriCompany/docs/workflow/cyber-company-secretariat.md",
+        "TriCompany/docs/workflow/host-object-publish-flow.md",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+        "TriMetaverse/docs/registry/company-governance-state.md",
+    ),
+    role_description="Role-level reusable administration, secretariat and governance documentation knowledge for the ChiefAdministrativeOfficer role.",
+    # LG-024 manifest 窗（2026-09-04T15:43Z）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/chief-administrative-officer/session-body.agent.md",
+    employee_description="Employee-instance working knowledge for the current chief-administrative-officer live employee.",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee chief-administrative-officer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "ChiefAdministrativeOfficer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/chief-administrative-officer.agent.md.",
+        "CAO owns administration, secretariat mechanism, meeting governance and governance documentation ownership; this does not imply TriMC formal host switch.",
+    ),
+    live_entry_ref="TriMetaverse/.github/agents/chief-administrative-officer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+TEST_ENGINEER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=SENIOR_TEST_ENGINEER_OBJECT_SET_ID,
+    role_id="TestEngineer",
+    employee_id="senior-test-engineer",
+    owner_role="STE",
+    source_refs=(
+        *source_agent_kit_refs("senior-test-engineer"),
+        "TriCompany/docs/registry/TestEngineer.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+    ),
+    role_description="Role-level reusable test design, test execution, and quality gate enforcement knowledge for the TestEngineer role.",
+    # LG-024 manifest 窗（2026-09-04T15:43Z）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/senior-test-engineer/session-body.agent.md",
+    employee_description="Employee-instance working knowledge for the current senior-test-engineer live employee (小柯).",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee senior-test-engineer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "TestEngineer is enabled as an independent live host agent in the current Copilot-host phase.",
+        "The live discovery entry is TriMetaverse/.github/agents/senior-test-engineer.agent.md.",
+        "TestEngineer owns test design, test execution, and quality gate enforcement for module deliverables; reports to CPO (product quality direction) and CTO (technical quality standards).",
+        "Current enablement does not imply TriMC formal host switch, production test infrastructure, or automated CI/CD quality gates are already implemented.",
+    ),
+    employee_display_name="小柯",
+    live_entry_ref="TriMetaverse/.github/agents/senior-test-engineer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+FULL_STACK_DEVELOPER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=FULL_STACK_DEVELOPER_OBJECT_SET_ID,
+    role_id="FullStackDeveloper",
+    employee_id="full-stack-developer",
+    owner_role="FullStackDeveloper",
+    source_refs=(
+        *source_agent_kit_refs("full-stack-developer"),
+        "TriCompany/docs/registry/FullStackDeveloper.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+    ),
+    role_description="Role-level reusable full-stack implementation, coding brick assembly, and component integration knowledge for the FullStackDeveloper role.",
+    # LG-024 manifest 窗（2026-09-04T15:43Z）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/full-stack-developer/session-body.agent.md",
+    employee_description="Employee-instance working knowledge for the current full-stack-developer live employee (小全).",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee full-stack-developer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "FullStackDeveloper live_entry_status 对齐为 current-copilot-host-live（2026-08-21 CTO 裁决：manifest 已登记 + live 文件已发布，声明面落后事实，机械对齐，不动员工定义语义）。",
+        "The live discovery target is TriMetaverse/.github/agents/full-stack-developer.agent.md.",
+        "FullStackDeveloper is responsible for concrete coding brick assembly and component-level implementation; reports to CTO (小狄).",
+        "Current enablement does not imply TriMC formal host switch, production deployment pipelines, or automated integration test suites are already implemented.",
+        "Gate 5 (CHO approval) is required before formal live entry activation per CEO mandate.",
+    ),
+    employee_display_name="小全",
+    live_entry_ref="TriMetaverse/.github/agents/full-stack-developer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+DEPLOYMENT_ENGINEER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=DEPLOYMENT_ENGINEER_OBJECT_SET_ID,
+    role_id="DeploymentEngineer",
+    employee_id="deployment-engineer",
+    # LG-024 manifest 窗（2026-09-05 凌晨窗）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/deployment-engineer/session-body.agent.md",
+    owner_role="DeploymentEngineer",
+    source_refs=(
+        *source_agent_kit_refs("deployment-engineer"),
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+    ),
+    role_description="Role-level reusable automated deployment, ADE execution, release pipeline, environment management, rollback plan, and deployment verification knowledge for the DeploymentEngineer role.",
+    employee_description="Employee-instance working knowledge for the current deployment-engineer live employee (小布).",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee deployment-engineer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "DeploymentEngineer (小布) is onboarded as a live host agent in the current Copilot-host phase per CEO launch approval 2026-08-01.",
+        "The live discovery target is TriMetaverse/.github/agents/deployment-engineer.agent.md.",
+        "DeploymentEngineer owns automated deployment, ADE execution, release pipelines, and environment management; reports to CTO (小狄).",
+        "Current enablement does not imply TriMC formal host switch, production deployment infrastructure, or automated CI/CD pipelines are already implemented.",
+        "Contract YAML is at TriCompany/source-agents/deployment-engineer/deployment-engineer.contract.yaml (contract v3.0).",
+    ),
+    employee_display_name="小布",
+    live_entry_ref="TriMetaverse/.github/agents/deployment-engineer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+CUSTOMER_SUCCESS_OFFICER_HOST_OBJECT_SET = HostObjectSetDefinition(
+    object_set_id=CUSTOMER_SUCCESS_OFFICER_OBJECT_SET_ID,
+    role_id="CustomerSuccessOfficer",
+    employee_id="customer-success-officer",
+    # LG-024 manifest 窗（2026-09-05 凌晨窗）：sessionBody 真源化声明（M0d 补强①防再生丢键）
+    session_body_ref="TriCompany/source-agents/customer-success-officer/session-body.agent.md",
+    owner_role="CustomerSuccessOfficer",
+    source_refs=(
+        *source_agent_kit_refs("customer-success-officer"),
+        "TriCompany/source-agents/customer-success-officer/customer-success-officer.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+    ),
+    role_description="Role-level reusable customer success, onboarding, health monitoring, feedback loop, retention and renewal knowledge for the CustomerSuccessOfficer role.",
+    employee_description="Employee-instance working knowledge for the current customer-success-officer live employee (小成).",
+    generator="python -m runtime.cognition.employee_host_object_generation --employee customer-success-officer",
+    live_entry_status="current-copilot-host-live",
+    host_stage="current-copilot-host-live",
+    notes=(
+        "CustomerSuccessOfficer (小成) is onboarded as a live host agent in the current Copilot-host phase per W33 ADE onboarding (w33-3).",
+        "The live discovery target is TriMetaverse/.github/agents/customer-success-officer.agent.md.",
+        "CustomerSuccessOfficer owns customer onboarding, health monitoring, feedback loop, retention/renewal signals, and customer success case curation; reports to COO (小营), collaborates closely with CMO (小敏).",
+        "Current enablement does not imply TriMC formal host switch, production customer data pipelines, or automated satisfaction tracking are already implemented.",
+        "Contract YAML is at TriCompany/source-agents/customer-success-officer/customer-success-officer.contract.yaml (contract v3.0).",
+    ),
+    employee_display_name="小成",
+    live_entry_ref="TriMetaverse/.github/agents/customer-success-officer.agent.md",
+    status="current-copilot-host-live",
+)
+
+
+DECLARED_HOST_OBJECT_SETS = (
+    RD_TRAINER_HOST_OBJECT_SET,
+    CEO_CHIEF_OF_STAFF_HOST_OBJECT_SET,
+    CHIEF_PRODUCT_OFFICER_HOST_OBJECT_SET,
+    CHIEF_TECHNOLOGY_OFFICER_HOST_OBJECT_SET,
+    CHIEF_MARKETING_OFFICER_HOST_OBJECT_SET,
+    CHIEF_OPERATING_OFFICER_HOST_OBJECT_SET,
+    CHIEF_FINANCIAL_OFFICER_HOST_OBJECT_SET,
+    CHIEF_HUMAN_RESOURCES_OFFICER_HOST_OBJECT_SET,
+    CHIEF_ADMINISTRATIVE_OFFICER_HOST_OBJECT_SET,
+    TEST_ENGINEER_HOST_OBJECT_SET,
+    FULL_STACK_DEVELOPER_HOST_OBJECT_SET,
+    DEPLOYMENT_ENGINEER_HOST_OBJECT_SET,
+    CUSTOMER_SUCCESS_OFFICER_HOST_OBJECT_SET,
+)
+
+LEGACY_EMPLOYEE_ID_ALIASES = {
+    "project-trainer": "rd-trainer",
+}
+
+DECLARED_HOST_OBJECT_SET_BY_EMPLOYEE = {definition.employee_id: definition for definition in DECLARED_HOST_OBJECT_SETS}
+DECLARED_HOST_OBJECT_SET_BY_EMPLOYEE.update(
+    {
+        legacy_employee_id: DECLARED_HOST_OBJECT_SET_BY_EMPLOYEE[canonical_employee_id]
+        for legacy_employee_id, canonical_employee_id in LEGACY_EMPLOYEE_ID_ALIASES.items()
+    }
+)
+
+
+def canonical_employee_id(employee_id: str) -> str:
+    return LEGACY_EMPLOYEE_ID_ALIASES.get(employee_id, employee_id)
+
+
+def host_binding_profile_reference(employee_id: str) -> str:
+    return f"TriCompany/.github/binding-profiles/{employee_id}.json"
+
+
+def host_binding_profile_path(source_root: str | Path, employee_id: str) -> Path:
+    return Path(source_root) / SOURCE_HOST_BINDING_PROFILE_DIR / f"{employee_id}.json"
+
+
+def write_host_binding_profiles(
+    source_root: str | Path,
+    *,
+    employee_ids: Iterable[str] | None = None,
+    manifest: Mapping | None = None,
+) -> tuple[Path, ...]:
+    definitions = DECLARED_HOST_OBJECT_SETS if employee_ids is None else tuple(DECLARED_HOST_OBJECT_SET_BY_EMPLOYEE[employee_id] for employee_id in employee_ids)
+    return tuple(
+        _write_host_binding_profile(
+            source_root=source_root,
+            definition=definition,
+            manifest_entry=_manifest_entry_for_definition(manifest, definition),
+        )
+        for definition in definitions
+    )
+
+
+def _write_host_binding_profile(*, source_root: str | Path, definition: HostObjectSetDefinition, manifest_entry: Mapping | None = None) -> Path:
+    profile_path = host_binding_profile_path(source_root, definition.employee_id)
+    profile_path.parent.mkdir(parents=True, exist_ok=True)
+    profile_path.write_text(
+        json.dumps(_render_host_binding_profile(definition, manifest_entry=manifest_entry), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return profile_path
+
+
+def render_host_binding_profile(definition: HostObjectSetDefinition, manifest_entry: Mapping | None = None) -> dict[str, Any]:
+    """渲染单个 host binding profile 字典（不落盘），供生成前校验等场景使用。
+
+    manifest_entry 可选：提供时从 manifest 条目 + HOST_RENDER_REGISTRY 派生 hostEntries
+    （非 copilot 宿主条目，禁人工编辑）；缺省 = 旧 profile 形状（无 hostEntries，兼容
+    既有消费方与无 manifest 的生成场景）。
+    """
+    return _render_host_binding_profile(definition, manifest_entry=manifest_entry)
+
+
+def _render_host_binding_profile(definition: HostObjectSetDefinition, manifest_entry: Mapping | None = None) -> dict[str, Any]:
+    support_root = Path(SUPPORT_ROOT_REFERENCE)
+    role = role_workspace(definition.role_id, support_root)
+    employee = employee_workspace(definition.employee_id, support_root)
+    org = org_shared_workspace(support_root)
+    audit = audit_workspace(support_root)
+    live_entry = {
+        "status": definition.live_entry_status,
+        "path": definition.live_entry_ref,
+        "identityRule": "reuse-existing-live-entry" if definition.live_entry_ref else "not-published",
+    }
+    profile: dict[str, Any] = {
+        "bindingProfileId": f"{definition.employee_id}-host-binding-v0.1",
+        "objectSetId": definition.object_set_id,
+        "status": definition.status,
+        "employeeId": definition.employee_id,
+        "ownerRole": definition.owner_role,
+        "hostStage": definition.host_stage,
+        "sourceManifest": SOURCE_HOST_OBJECT_MANIFEST_REFERENCE,
+        "supportManifest": SUPPORT_HOST_OBJECT_MANIFEST_REFERENCE,
+        "liveEntry": live_entry,
+        "supportObjects": _support_object_entries(
+            role=role,
+            employee=employee,
+            org=org,
+            audit=audit,
+            legacy_support_objects=definition.legacy_support_objects,
+        ),
+        "runtimeNamespaces": _runtime_namespace_entries(employee.identifier),
+        "notes": _notes_with_consumption_boundary(definition.notes),
+        "governedBy": list(HOST_OBJECT_GOVERNED_BY),
+    }
+    host_entries = derive_host_entries(manifest_entry)
+    if host_entries:
+        profile["hostEntries"] = host_entries
+    if definition.employee_display_name:
+        profile["employeeDisplayName"] = definition.employee_display_name
+    return profile
+
+
+def generate_role_employee_host_objects(
+    *,
+    support_root: str | Path,
+    object_set_id: str,
+    role_id: str,
+    employee_id: str,
+    owner_role: str,
+    source_refs: Iterable[str],
+    generated_at: str = RD_TRAINER_GENERATED_AT,
+) -> GeneratedHostObjectSet:
+    definition = HostObjectSetDefinition(
+        object_set_id=object_set_id,
+        role_id=role_id,
+        employee_id=employee_id,
+        owner_role=owner_role,
+        source_refs=tuple(source_refs),
+        role_description=f"Role-level reusable knowledge for {owner_role}.",
+        employee_description=f"Employee-instance working knowledge for {employee_id}.",
+        generator="python -m runtime.cognition.employee_host_object_generation",
+        live_entry_status="not-published",
+        host_stage="support-payload-generated-only",
+        notes=("This manifest governs host-consumed object payloads, not source truth.",),
+        generated_at=generated_at,
+    )
+    return generate_host_object_set(support_root=support_root, definition=definition)
+
+
+def _rule_generated_source_files(employee_id: str) -> dict[str, str]:
+    """M0d 返工（R1-R3，2026-09-03）规则生成：contract.paths 投影的 manifest 值形态。
+
+    - R1：值=仓库前缀形态 ``TriCompany/source-agents/<employee_id>/<suffix>.agent.md``
+      （与 liveEntries[].source 同形态，键=employee_id——contract paths 与 live
+      发现面均按 employee_id 立法，role_id 为 PascalCase 的席位不在此域）。
+    - R3：agent_frontmatter 正映射实存 ``agent-frontmatter.agent.md``。
+    - R2：合并席（MERGED_KIT_SEAT_IDS）colleagues/social 双键同指
+      ``colleagues-social.agent.md``（contract.paths 显式声明的合并式投影）。
+    """
+    prefix = SOURCE_FILES_VALUE_PREFIX
+    merged = f"{prefix}{employee_id}/colleagues-social.agent.md"
+    is_merged = employee_id in MERGED_KIT_SEAT_IDS
+    return {
+        "soul": f"{prefix}{employee_id}/soul.agent.md",
+        "agent_body": f"{prefix}{employee_id}/agent-body.agent.md",
+        "agent_frontmatter": f"{prefix}{employee_id}/agent-frontmatter.agent.md",
+        "memory": f"{prefix}{employee_id}/memory.agent.md",
+        "colleagues": merged if is_merged else f"{prefix}{employee_id}/colleagues.agent.md",
+        "social": merged if is_merged else f"{prefix}{employee_id}/social.agent.md",
+    }
+
+
+def generate_host_object_set(
+    *,
+    support_root: str | Path,
+    definition: HostObjectSetDefinition,
+) -> GeneratedHostObjectSet:
+    support_root_path = Path(support_root)
+    role = role_workspace(definition.role_id, support_root_path)
+    employee = employee_workspace(definition.employee_id, support_root_path)
+    org = org_shared_workspace(support_root_path)
+    audit = audit_workspace(support_root_path)
+    for workspace in (role, employee, org, audit):
+        workspace.ensure_directories()
+
+    _write_workspace_readme(
+        role,
+        object_set_id=definition.object_set_id,
+        owner_role=definition.owner_role,
+        source_refs=definition.source_refs,
+        generated_at=definition.generated_at,
+        live_entry_status=definition.live_entry_status,
+        description=definition.role_description,
+    )
+    _write_workspace_readme(
+        employee,
+        object_set_id=definition.object_set_id,
+        owner_role=definition.owner_role,
+        source_refs=definition.source_refs,
+        generated_at=definition.generated_at,
+        live_entry_status=definition.live_entry_status,
+        description=definition.employee_description,
+        employee_display_name=definition.employee_display_name,
+    )
+    _write_shared_workspace_readme(org, generated_at=definition.generated_at)
+    _write_shared_workspace_readme(audit, generated_at=definition.generated_at)
+
+    manifest_path = support_root_path / HOST_OBJECT_MANIFEST_NAME
+    object_set: dict[str, Any] = {
+        "objectSetId": definition.object_set_id,
+        "status": definition.status,
+        "ownerRole": definition.owner_role,
+        "generatedAt": definition.generated_at,
+        "generator": definition.generator,
+        "sourceRefs": list(definition.source_refs),
+        "bindingProfile": host_binding_profile_reference(definition.employee_id),
+        "supportObjects": _support_object_entries(
+            role=role,
+            employee=employee,
+            org=org,
+            audit=audit,
+            legacy_support_objects=definition.legacy_support_objects,
+        ),
+        "runtimeNamespaces": _runtime_namespace_entries(employee.identifier),
+        "liveEntryStatus": definition.live_entry_status,
+        "notes": _notes_with_consumption_boundary(definition.notes),
+    }
+    if definition.employee_display_name:
+        object_set["employeeDisplayName"] = definition.employee_display_name
+    if definition.session_body_ref:
+        # LG-024 批 0：sessionBody 键实落 manifest 条目（fd8db82 措辞 vs 实盘
+        # 偏差勘正——消费端三处真身已在，生产端此前的确断链）
+        object_set["sessionBody"] = definition.session_body_ref
+        # liveEntries 组装（消费端 source_publish_check 立法形态：target/source/
+        # kind/status/sessionBody）——此前 liveEntries 数组生产端缺位（现产物
+        # count=0），claude-session 面渲染白名单永不派生。声明 sessionBody 才
+        # 组装（与 derive_host_entries 门同语义）。
+        object_set["liveEntries"] = [
+            {
+                "target": definition.live_entry_ref or "",
+                "source": f"TriCompany/source-agents/{definition.role_id}/{definition.role_id}.agent.md",
+                "kind": "role-agent",
+                "status": definition.status,
+                "sessionBody": definition.session_body_ref,
+                "renderTemplate": "host-default",
+                # M0d 返工（R1-R3）：sourceFiles 六键（definition.source_files
+                # 显式优先，缺省按 employee_id 规则生成——R1 前缀形态+R2 合并席
+                # 双键同指+R3 frontmatter 正映射，见 _rule_generated_source_files）
+                "sourceFiles": definition.source_files or _rule_generated_source_files(definition.employee_id),
+            }
+        ]
+
+    _upsert_manifest(manifest_path, object_set=object_set, replaces_object_set_ids=definition.replaces_object_set_ids)
+    return GeneratedHostObjectSet(
+        object_set_id=definition.object_set_id,
+        support_root=support_root_path,
+        role_workspace=role,
+        employee_workspace=employee,
+        org_shared_workspace=org,
+        audit_workspace=audit,
+        manifest_path=manifest_path,
+    )
+
+
+def _write_workspace_readme(
+    workspace: KnowledgeWorkspace,
+    *,
+    object_set_id: str,
+    owner_role: str,
+    source_refs: Iterable[str],
+    generated_at: str,
+    live_entry_status: str,
+    description: str,
+    employee_display_name: str | None = None,
+) -> None:
+    workspace.root.mkdir(parents=True, exist_ok=True)
+    source_lines = "\n".join(f"- {source_ref}" for source_ref in source_refs)
+    display_name_line = f"- employeeDisplayName: {employee_display_name}\n" if employee_display_name else ""
+    content = (
+        f"# {workspace.identifier} {workspace.kind.title()} Knowledge Workspace\n\n"
+        f"- objectSetId: {object_set_id}\n"
+        f"- workspaceKind: {workspace.kind}\n"
+        f"- workspaceId: {workspace.identifier}\n"
+        f"- ownerRole: {owner_role}\n"
+        f"{display_name_line}"
+        f"- generatedAt: {generated_at}\n"
+        f"- syncMode: support-object-set\n"
+        f"- liveEntryStatus: {live_entry_status}\n\n"
+        f"{description}\n\n"
+        "This directory is generated as current-host payload under `TriCompany-copilot-host-assets`. "
+        "It is not source truth; source definitions remain in `TriCompany/`.\n\n"
+        "Concrete employee consumption records belong in employee wiki pages such as "
+        "`wiki/employee-consumption-records.md` or runtime cognition state; source cognitive layer files remain contracts only.\n\n"
+        "## Directory Contract\n\n"
+        "- inbox/: raw training or role/employee input material\n"
+        "- wiki/: curated knowledge pages\n"
+        "- audit/: generation, review, and source-tracking records\n"
+        "- workbench/: rendered workspace snapshots\n\n"
+        "## Source Refs\n\n"
+        f"{source_lines}\n"
+    )
+    (workspace.root / "README.md").write_text(content, encoding="utf-8")
+
+
+def _write_shared_workspace_readme(workspace: KnowledgeWorkspace, *, generated_at: str) -> None:
+    workspace.root.mkdir(parents=True, exist_ok=True)
+    title = "Org Shared" if workspace.kind == "org" else "Audit"
+    description = (
+        "Shared company knowledge workspace used by generated employee object sets."
+        if workspace.kind == "org"
+        else "Shared audit workspace used to track generated employee object sets and source boundaries."
+    )
+    content = (
+        f"# {title} Knowledge Workspace\n\n"
+        f"- workspaceKind: {workspace.kind}\n"
+        f"- workspaceId: {workspace.identifier}\n"
+        f"- generatedAt: {generated_at}\n"
+        f"- syncMode: support-object-set\n"
+        f"- liveEntryStatus: shared-support-object\n\n"
+        f"{description}\n\n"
+        "This directory is support payload under `TriCompany-copilot-host-assets`. "
+        "Runtime markdown state remains under `TRICOMPANY_COGNITION_HOME` or `.tricompany-cognition` and is not generated here.\n\n"
+        "## Directory Contract\n\n"
+        "- inbox/: shared raw inputs awaiting promotion\n"
+        "- wiki/: curated shared or audit pages\n"
+        "- audit/: generation, review, and source-tracking records\n"
+        "- workbench/: rendered workspace snapshots\n"
+    )
+    (workspace.root / "README.md").write_text(content, encoding="utf-8")
+
+
+def _upsert_manifest(
+    manifest_path: Path,
+    *,
+    object_set: dict[str, Any],
+    replaces_object_set_ids: Iterable[str] = (),
+) -> None:
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    else:
+        manifest = {
+            "manifestId": "tricompany-host-object-manifest-v0.1",
+            "status": "staging",
+            "sourceRepo": "TriCompany",
+            "supportRoot": SUPPORT_ROOT_REFERENCE,
+            "notDocsPublishedCopyManifest": True,
+            "governedBy": list(HOST_OBJECT_GOVERNED_BY),
+            "objectSets": [],
+        }
+
+    manifest["status"] = "staging"
+    manifest["sourceRepo"] = "TriCompany"
+    manifest["supportRoot"] = SUPPORT_ROOT_REFERENCE
+    manifest["notDocsPublishedCopyManifest"] = True
+    manifest["governedBy"] = list(HOST_OBJECT_GOVERNED_BY)
+
+    replaced_object_set_ids = set(replaces_object_set_ids)
+    object_sets = [
+        existing
+        for existing in manifest.get("objectSets", [])
+        if existing.get("objectSetId") != object_set["objectSetId"]
+        and existing.get("objectSetId") not in replaced_object_set_ids
+    ]
+    object_sets.append(object_set)
+    manifest["objectSets"] = object_sets
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def _notes_with_consumption_boundary(notes: Iterable[str]) -> list[str]:
+    merged = list(notes)
+    if CONSUMPTION_DATA_BOUNDARY_NOTE not in merged:
+        merged.append(CONSUMPTION_DATA_BOUNDARY_NOTE)
+    return merged
+
+
+def _support_object_entries(
+    *,
+    role: KnowledgeWorkspace,
+    employee: KnowledgeWorkspace,
+    org: KnowledgeWorkspace,
+    audit: KnowledgeWorkspace,
+    legacy_support_objects: tuple[Mapping[str, str], ...],
+) -> list[dict[str, str]]:
+    return [
+        {
+            "kind": "role-knowledge-workspace",
+            "workspaceId": role.identifier,
+            "path": _support_relative_path(role.root),
+            "tracking": "tracked",
+        },
+        {
+            "kind": "employee-knowledge-workspace",
+            "workspaceId": employee.identifier,
+            "path": _support_relative_path(employee.root),
+            "tracking": "tracked",
+        },
+        {
+            "kind": "org-shared-knowledge-workspace",
+            "workspaceId": org.identifier,
+            "path": _support_relative_path(org.root),
+            "tracking": "tracked",
+        },
+        {
+            "kind": "audit-knowledge-workspace",
+            "workspaceId": audit.identifier,
+            "path": _support_relative_path(audit.root),
+            "tracking": "tracked",
+        },
+        *[dict(item) for item in legacy_support_objects],
+    ]
+
+
+def derive_host_entry_status(manifest_entry: Mapping | None) -> str | None:
+    """生成管线从 manifest 条目派生 hostEntries[].status；不可派生返回 None。
+
+    manifest status ∈ live 家族（AGENT_PUBLISH_ELIGIBLE_STATUSES，与
+    LIVE_STATUS_TO_MANIFEST_STATUSES["current-copilot-host-live"] 同构）→
+    "current-host-live"；manifest 缺失或 status 不在 live 家族 → None
+    （该宿主不应存在条目，B6 校验拒绝）。
+    """
+    if not isinstance(manifest_entry, Mapping):
+        return None
+    manifest_status = manifest_entry.get("status")
+    if not isinstance(manifest_status, str) or manifest_status not in HOST_ENTRY_LIVE_MANIFEST_STATUSES:
+        return None
+    return HOST_ENTRY_LIVE_STATUS
+
+
+def derive_host_entries(manifest_entry: Mapping | None) -> list[dict[str, str]]:
+    """从 manifest 条目 + HOST_RENDER_REGISTRY 派生 hostEntries（仅非 copilot 宿主）。
+
+    path 与渲染管线共用 _derive_host_target（source_publish_check），派生关系经
+    B2 校验闭环；status 从 manifest status 派生（同 LIVE_STATUS_TO_MANIFEST_STATUSES
+    映射语义）；identityRule 按宿主注册表派生（绑定决策证据）。
+    claude-session 宿主只对声明 sessionBody 的条目派生（LG-023 S6，2026-09-01）：
+    与渲染管线零行为语义对齐——binding 不得声明渲染管线永不落盘的面。
+    未登记宿主、manifest 缺失或不可派生 target 不产生条目（防御——错误记录由
+    B4/B2/B6 校验拒绝）。
+    """
+    if not isinstance(manifest_entry, Mapping):
+        return []
+    manifest_target = manifest_entry.get("target")
+    if not isinstance(manifest_target, str):
+        return []
+    status = derive_host_entry_status(manifest_entry)
+    if status is None:
+        return []
+    entries: list[dict[str, str]] = []
+    for host_id in sorted(HOST_RENDER_REGISTRY):
+        if host_id == DEFAULT_HOST_ID:
+            continue  # copilot 由 liveEntry 唯一承载（防双承载漂移）
+        if host_id == SESSION_HOST_ID and not manifest_entry.get(SESSION_BODY_KEY):
+            continue  # claude-session 面零行为：未声明 sessionBody 不派生 binding 条目
+        derived_path, derive_error = _derive_host_target(manifest_target, host_id)
+        if derive_error or not derived_path:
+            continue
+        entries.append(
+            {
+                "host": host_id,
+                "status": status,
+                "path": derived_path,
+                "identityRule": HOST_ENTRY_IDENTITY_RULE,
+            }
+        )
+    return entries
+
+
+def _manifest_entry_for_definition(manifest: Mapping | None, definition: HostObjectSetDefinition) -> dict | None:
+    """按 definition.live_entry_ref 匹配 manifest liveEntries 条目（生成路径用）。
+
+    与校验侧 find_manifest_entry（按 employeeId 派生 target 匹配）对现役 13 员工
+    结果一致；此处以声明面 live_entry_ref 为基准，避免在渲染层复制 target 派生规则。
+    """
+    if not isinstance(manifest, Mapping):
+        return None
+    expected_target = definition.live_entry_ref
+    if not expected_target:
+        return None
+    for entry in manifest.get("liveEntries", []):
+        if isinstance(entry, Mapping) and entry.get("target") == expected_target:
+            return dict(entry)
+    return None
+
+
+def _runtime_namespace_entries(employee_workspace_id: str) -> list[dict[str, str]]:
+    return [
+        {
+            "kind": "employee-private-runtime-namespace",
+            "namespace": f"employee/{employee_workspace_id}",
+            "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+            "tracking": "runtime-state",
+            "creationRule": "created on first cognition write, not by host object generation",
+        },
+        {
+            "kind": "org-shared-runtime-namespace",
+            "namespace": "org/shared",
+            "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+            "tracking": "runtime-state",
+            "creationRule": "shared across employees when runtime providers write shared memory",
+        },
+        {
+            "kind": "org-audit-runtime-namespace",
+            "namespace": "org/audit",
+            "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+            "tracking": "runtime-state",
+            "creationRule": "shared audit namespace created by runtime providers",
+        },
+    ]
+
+
+def _support_relative_path(path: Path) -> str:
+    parts = path.parts
+    if "TriCompany-copilot-host-assets" in parts:
+        start = parts.index("TriCompany-copilot-host-assets")
+        return "/".join(parts[start:])
+    return path.as_posix()

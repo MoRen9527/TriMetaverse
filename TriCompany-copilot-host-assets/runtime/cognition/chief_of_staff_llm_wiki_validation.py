@@ -60,16 +60,22 @@ class ChiefOfStaffLlmWikiValidationTest(unittest.TestCase):
             result = run_chief_of_staff_wiki_batch_refresh(workspace_root=str(workspace_root))
 
             self.assertEqual(result.status, "completed")
-            self.assertEqual(set(result.output_pages), {
-                "chief-of-staff-llm-wiki-current-state",
-                "chief-of-staff-llm-wiki-semi-auto-current-state",
-            })
+            self.assertEqual(
+                set(result.output_pages),
+                {
+                    "chief-of-staff-llm-wiki-current-state",
+                    "chief-of-staff-llm-wiki-semi-auto-current-state",
+                },
+            )
             batch_audit = json.loads(result.audit_path.read_text(encoding="utf-8"))
             self.assertEqual(batch_audit["status"], "completed")
-            self.assertEqual(set(batch_audit["pageSpecIds"]), {
-                "chief-of-staff-current-state",
-                "chief-of-staff-semi-auto-current-state",
-            })
+            self.assertEqual(
+                set(batch_audit["pageSpecIds"]),
+                {
+                    "chief-of-staff-current-state",
+                    "chief-of-staff-semi-auto-current-state",
+                },
+            )
             stable_page = (chief_of_staff_wiki_root(workspace_root) / "chief-of-staff-llm-wiki-semi-auto-current-state.md").read_text(encoding="utf-8")
             self.assertIn("reviewerRoute:", stable_page)
             self.assertIn("primaryReviewer: ChiefTechnologyOfficer", stable_page)

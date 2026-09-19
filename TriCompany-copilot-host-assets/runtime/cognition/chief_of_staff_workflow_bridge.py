@@ -26,7 +26,7 @@ WORKFLOW_ENTRY_TITLES = {
     "workflow-daily-close",
 }
 REPO_MEMORY_IMPORT_TITLE = "repo-memory-import"
-MEMORY_FILE_PARTS = (".github", "agents", "ceo-chief-of-staff.memory.md")
+MEMORY_FILE_PARTS = ("TriCompany", "source-agents", "ceo-chief-of-staff", "memory.agent.md")
 EVENT_LINE_MEETING_START = "- event-type: meeting-start"
 EVENT_LINE_MEETING_END = "- event-type: meeting-end"
 EVENT_LINE_DAILY_CLOSE = "- event-type: daily-close"
@@ -624,12 +624,12 @@ def _workspace_root(path: str | Path | None) -> Path:
     if path is not None:
         return _workspace_root_with_memory(Path(path))
 
-    support_root = Path(__file__).resolve().parents[2]
-    resolved_root = _workspace_root_with_memory(support_root)
+    source_root = Path(__file__).resolve().parents[2]
+    resolved_root = _workspace_root_with_memory(source_root)
     if resolved_root.joinpath(*MEMORY_FILE_PARTS).exists():
         return resolved_root
 
-    return support_root
+    return source_root
 
 
 def _workspace_root_with_memory(root: Path) -> Path:
@@ -642,6 +642,11 @@ def _workspace_root_with_memory(root: Path) -> Path:
     for candidate in candidates:
         if candidate.joinpath(*MEMORY_FILE_PARTS).exists():
             return candidate
+    # MEMORY_FILE_PARTS 带 "TriCompany" 首段；candidate 本身即 TriCompany 仓库根时
+    # 退首段探测，命中则返回其父目录，保证 memory_repo_path 拼接后指向同一文件。
+    for candidate in candidates:
+        if candidate.name == "TriCompany" and candidate.joinpath(*MEMORY_FILE_PARTS[1:]).exists():
+            return candidate.parent
     return root
 
 
@@ -704,25 +709,19 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if args.command == "meeting-start":
         payload = _load_payload(json_path=args.json_path, json_stdin=args.json_stdin)
-        result = bridge.record_meeting_start(
-            MeetingStartPayload.from_dict(payload)
-        )
+        result = bridge.record_meeting_start(MeetingStartPayload.from_dict(payload))
         print(json.dumps(result.__dict__, ensure_ascii=False, indent=2))
         return 0
 
     if args.command == "meeting-end":
         payload = _load_payload(json_path=args.json_path, json_stdin=args.json_stdin)
-        result = bridge.record_meeting_end(
-            MeetingEndPayload.from_dict(payload)
-        )
+        result = bridge.record_meeting_end(MeetingEndPayload.from_dict(payload))
         print(json.dumps(result.__dict__, ensure_ascii=False, indent=2))
         return 0
 
     if args.command == "daily-close":
         payload = _load_payload(json_path=args.json_path, json_stdin=args.json_stdin)
-        result = bridge.record_daily_close(
-            DailyClosePayload.from_dict(payload)
-        )
+        result = bridge.record_daily_close(DailyClosePayload.from_dict(payload))
         print(json.dumps(result.__dict__, ensure_ascii=False, indent=2))
         return 0
 

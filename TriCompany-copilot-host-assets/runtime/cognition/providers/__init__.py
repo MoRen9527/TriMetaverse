@@ -6,10 +6,6 @@ from runtime.cognition.providers.external_http_backend import (
     HttpExternalBackendConfig,
     HttpExternalCognitionBackend,
 )
-from runtime.cognition.providers.repo_asset_provider import (
-    RepoAssetSource,
-    RepoBackedPrivateAssetProvider,
-)
 from runtime.cognition.providers.supermemory_backend import (
     SupermemoryBackendConfig,
     SupermemoryExternalBackend,
@@ -26,8 +22,6 @@ __all__ = [
     "HttpExternalBackendConfig",
     "HttpExternalCognitionBackend",
     "OrgSharedProvider",
-    "RepoAssetSource",
-    "RepoBackedPrivateAssetProvider",
     "SupermemoryBackendConfig",
     "SupermemoryExternalBackend",
     "SupermemorySdkBackendConfig",

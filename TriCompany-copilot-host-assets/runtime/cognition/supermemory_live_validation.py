@@ -30,43 +30,8 @@ TIMEOUT_SECONDS_ENV = "SUPERMEMORY_TIMEOUT_SECONDS"
 SEARCH_ATTEMPTS_ENV = "SUPERMEMORY_LIVE_SEARCH_ATTEMPTS"
 SEARCH_DELAY_SECONDS_ENV = "SUPERMEMORY_LIVE_SEARCH_DELAY_SECONDS"
 REPORT_PATH_ENV = "TRICOMPANY_SUPERMEMORY_LIVE_REPORT_PATH"
-ENV_FILE_NAME = ".env"
 PRIVATE_CONTEXT_MARKER = f"[external-supermemory-live::employee/{CHIEF_OF_STAFF_ID}]"
 ORG_SHARED_CONTEXT_MARKER = "[external-supermemory-live::org/shared]"
-
-
-def _repo_root() -> Path:
-    return Path(__file__).resolve().parents[2]
-
-
-def _strip_env_value(raw: str) -> str:
-    value = raw.strip()
-    if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
-        return value[1:-1]
-    return value
-
-
-def _load_repo_env_file() -> None:
-    env_path = _repo_root() / ENV_FILE_NAME
-    if not env_path.exists():
-        return
-
-    for line in env_path.read_text(encoding="utf-8").splitlines():
-        stripped = line.strip()
-        if not stripped or stripped.startswith("#"):
-            continue
-        if stripped.startswith("export "):
-            stripped = stripped[7:].lstrip()
-        if "=" not in stripped:
-            continue
-        name, value = stripped.split("=", 1)
-        name = name.strip()
-        if not name or name in os.environ:
-            continue
-        os.environ[name] = _strip_env_value(value)
-
-
-_load_repo_env_file()
 
 
 def _env_flag(name: str, default: bool = False) -> bool:
@@ -105,17 +70,21 @@ def _load_live_backend_config() -> SupermemoryBackendConfig:
     return SupermemoryBackendConfig(
         api_key=api_key,
         base_url=os.environ.get(BASE_URL_ENV, "https://api.supermemory.ai"),
-        timeout_seconds=_env_float(TIMEOUT_SECONDS_ENV, 45.0),
+        timeout_seconds=_env_float(TIMEOUT_SECONDS_ENV, 10.0),
         max_retries=2,
         backoff_seconds=(0.5, 1.0, 2.0),
         limit=8,
         threshold=0.2,
         metadata={
-            "workspace": "tricompany-copilot-host-assets",
+            "workspace": "tricompany",
             "validationMode": "live-smoke",
         },
         use_bearer_auth=_env_flag(USE_BEARER_ENV, default=True),
     )
+
+
+def _repo_root() -> Path:
+    return Path(__file__).resolve().parents[2]
 
 
 def _report_path() -> Path:

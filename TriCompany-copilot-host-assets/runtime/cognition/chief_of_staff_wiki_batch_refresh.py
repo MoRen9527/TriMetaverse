@@ -7,13 +7,22 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from runtime.cognition.runners.wiki_batch_refresh_runner import run_chief_of_staff_wiki_batch_refresh
+from runtime.cognition.runners.wiki_batch_refresh_runner import (
+    run_chief_of_staff_wiki_batch_refresh,
+)
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run chief-of-staff wiki multi-topic batch refresh.")
+    parser = argparse.ArgumentParser(
+        description="Run chief-of-staff wiki multi-topic batch refresh."
+    )
     parser.add_argument("--workspace-root", help="Override workspace root.")
-    parser.add_argument("--spec-id", action="append", dest="spec_ids", help="Only refresh the given page spec. Repeatable.")
+    parser.add_argument(
+        "--spec-id",
+        action="append",
+        dest="spec_ids",
+        help="Only refresh the given page spec. Repeatable.",
+    )
     args = parser.parse_args()
 
     result = run_chief_of_staff_wiki_batch_refresh(

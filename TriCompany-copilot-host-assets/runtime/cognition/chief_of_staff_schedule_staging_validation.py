@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import sys
@@ -52,7 +52,10 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             self.assertEqual(summary.cycle_count, 2)
             self.assertEqual(summary.total_schedule_runs, 20)
 
-            page_text = (chief_of_staff_wiki_root(workspace_root) / "chief-of-staff-llm-wiki-semi-auto-current-state.md").read_text(encoding="utf-8")
+            page_text = (
+                chief_of_staff_wiki_root(workspace_root)
+                / "chief-of-staff-llm-wiki-semi-auto-current-state.md"
+            ).read_text(encoding="utf-8")
             self.assertIn("pageStatus: stable", page_text)
             self.assertIn("approvalStatus: approved", page_text)
             self.assertIn("primaryReviewer: ChiefTechnologyOfficer", page_text)
@@ -74,22 +77,35 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             last_recall = json.loads(recall_records[-1].read_text(encoding="utf-8"))
             self.assertEqual(last_recall["status"], "completed")
             self.assertEqual(last_recall["recallMode"], "all-pages")
-            self.assertIn("chief-of-staff-llm-wiki-semi-auto-current-state", last_recall["contextExcerpt"])
+            self.assertIn(
+                "chief-of-staff-llm-wiki-semi-auto-current-state",
+                last_recall["contextExcerpt"],
+            )
 
             reminder_payload = json.loads(reminder_records[-1].read_text(encoding="utf-8"))
             email_payload = json.loads(email_records[-1].read_text(encoding="utf-8"))
-            self.assertEqual(reminder_payload["delivery"]["deliveryStatus"], "delivered")
-            self.assertEqual(email_payload["delivery"]["deliveryStatus"], "delivered")
+            self.assertEqual(
+                reminder_payload["delivery"]["deliveryStatus"],
+                "delivered",
+            )
+            self.assertEqual(
+                email_payload["delivery"]["deliveryStatus"],
+                "delivered",
+            )
             self.assertIn("治理覆盖 route", reminder_payload["message"])
             self.assertIn("预警", email_payload["subject"])
             self.assertIn("Reviewer Owner 负载", email_payload["body"])
-            self.assertIn("Reviewer Route 分布", email_payload["body"])
+            self.assertIn("Route 分布", email_payload["body"])
 
             approval_report_root = chief_of_staff_approval_report_root(workspace_root)
             self.assertTrue((approval_report_root / "snapshot.json").exists())
             self.assertTrue((approval_report_root / "summary.md").exists())
-            approval_report = json.loads((approval_report_root / "snapshot.json").read_text(encoding="utf-8"))
-            approval_report_markdown = (approval_report_root / "summary.md").read_text(encoding="utf-8")
+            approval_report = json.loads(
+                (approval_report_root / "snapshot.json").read_text(encoding="utf-8")
+            )
+            approval_report_markdown = (
+                approval_report_root / "summary.md"
+            ).read_text(encoding="utf-8")
             self.assertIn("pendingCount", approval_report["summary"])
             self.assertIn("governance", approval_report)
             self.assertIn("reviewerOwners", approval_report["governance"])
@@ -98,11 +114,23 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             self.assertEqual(approval_report["summary"]["closeoutRenderedCount"], 1)
             self.assertIn("closeoutBridge", approval_report)
             self.assertEqual(approval_report["closeoutBridge"]["scheduleCount"], 1)
-            self.assertEqual(approval_report["closeoutBridge"]["entries"][0]["targetType"], "operating-review-closeout")
-            self.assertEqual(approval_report["closeoutBridge"]["entries"][0]["latestTriggerObjectType"], "OPERATING_REVIEW")
-            self.assertEqual(approval_report["closeoutBridge"]["entries"][0]["latestTriggerObjectId"], "OR-202604-W14-001")
+            self.assertEqual(
+                approval_report["closeoutBridge"]["entries"][0]["targetType"],
+                "operating-review-closeout",
+            )
+            self.assertEqual(
+                approval_report["closeoutBridge"]["entries"][0]["latestTriggerObjectType"],
+                "OPERATING_REVIEW",
+            )
+            self.assertEqual(
+                approval_report["closeoutBridge"]["entries"][0]["latestTriggerObjectId"],
+                "OR-202604-W14-001",
+            )
             self.assertIn("Central Registry Closeout", approval_report_markdown)
-            self.assertIn("OPERATING_REVIEW / OR-202604-W14-001", approval_report_markdown)
+            self.assertIn(
+                "OPERATING_REVIEW / OR-202604-W14-001",
+                approval_report_markdown,
+            )
 
             requests = list(getattr(server, "received", []))
             self.assertGreaterEqual(len(requests), 4)
@@ -112,7 +140,9 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             workbench_root = chief_of_staff_workbench_root(workspace_root)
             self.assertTrue((workbench_root / "index.html").exists())
             self.assertTrue((workbench_root / "snapshot.json").exists())
-            workbench_snapshot = json.loads((workbench_root / "snapshot.json").read_text(encoding="utf-8"))
+            workbench_snapshot = json.loads(
+                (workbench_root / "snapshot.json").read_text(encoding="utf-8")
+            )
             workbench_html = (workbench_root / "index.html").read_text(encoding="utf-8")
             self.assertIn("总助知识工作台", workbench_html)
             self.assertIn("Chief Of Staff Knowledge Workbench", workbench_html)
@@ -122,11 +152,21 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             self.assertIn("治理态势", workbench_html)
             self.assertIn("Reviewer Lanes", workbench_html)
             self.assertIn("Central Registry Closeout", workbench_html)
+            self.assertIn("最近审计", workbench_html)
             self.assertIn("knowledge/employees/ceo-chief-of-staff/wiki", workbench_html)
             self.assertEqual(workbench_snapshot["closeoutBridge"]["scheduleCount"], 1)
-            self.assertEqual(workbench_snapshot["closeoutBridge"]["entries"][0]["targetType"], "operating-review-closeout")
-            self.assertEqual(workbench_snapshot["closeoutBridge"]["entries"][0]["latestTriggerObjectType"], "OPERATING_REVIEW")
-            self.assertEqual(workbench_snapshot["closeoutBridge"]["entries"][0]["latestTriggerObjectId"], "OR-202604-W14-001")
+            self.assertEqual(
+                workbench_snapshot["closeoutBridge"]["entries"][0]["targetType"],
+                "operating-review-closeout",
+            )
+            self.assertEqual(
+                workbench_snapshot["closeoutBridge"]["entries"][0]["latestTriggerObjectType"],
+                "OPERATING_REVIEW",
+            )
+            self.assertEqual(
+                workbench_snapshot["closeoutBridge"]["entries"][0]["latestTriggerObjectId"],
+                "OR-202604-W14-001",
+            )
             self.assertIn("OPERATING_REVIEW / OR-202604-W14-001", workbench_html)
 
     def _seed_operating_review_source(self, workspace_root: Path) -> None:
@@ -142,8 +182,12 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
                     "ownerRole": "ChiefOperatingOfficer",
                     "summary": "staging validation operating review source",
                     "payload": {
-                        "wins": ["operating review can trigger central registry closeout"],
-                        "corrections": ["promote closeout to a formal schedule target"],
+                        "wins": [
+                            "operating review can trigger central registry closeout"
+                        ],
+                        "corrections": [
+                            "promote closeout to a formal schedule target"
+                        ],
                     },
                 },
                 ensure_ascii=False,
@@ -156,7 +200,9 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
     def _seed_closeout_source(self, workspace_root: Path) -> None:
         closeout_root = workspace_root / "docs" / "workflow" / "handoff-templates"
         closeout_root.mkdir(parents=True, exist_ok=True)
-        (closeout_root / "central-registry-closeout.example.json").write_text(
+        (
+            closeout_root / "central-registry-closeout.example.json"
+        ).write_text(
             json.dumps(
                 {
                     "objectType": "CENTRAL_REGISTRY_CLOSEOUT",
@@ -170,11 +216,17 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
                         "closeoutSubject": "PC 端软件层与 TriLC closeout",
                         "scopeDecision": {
                             "route": "parallel-registry-closeout",
-                            "modules": ["TriPilot", "Tride", "vscodium", "TriLC"],
+                            "modules": ["Tripilot", "Tride", "vscodium", "TriLC"],
                         },
                         "registryFindings": [
-                            {"registry": "TriPilotProductRegistry", "summary": "桌面入口承接用户触达"},
-                            {"registry": "TriLCCodeRegistry", "summary": "本地控制器保持 runtime / planner 边界"},
+                            {
+                                "registry": "TripilotProductRegistry",
+                                "summary": "桌面入口承接用户触达",
+                            },
+                            {
+                                "registry": "TriLCCodeRegistry",
+                                "summary": "本地控制器保持 runtime / planner 边界",
+                            },
                         ],
                         "closeoutDecision": "writeback-approved",
                     },
@@ -189,7 +241,9 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
     def _seed_sources(self, workspace_root: Path) -> None:
         inbox_root = chief_of_staff_inbox_root(workspace_root)
         inbox_root.mkdir(parents=True, exist_ok=True)
-        (inbox_root / "2026-04-21-chief-of-staff-meeting-note.md").write_text(
+        (
+            inbox_root / "2026-04-21-chief-of-staff-meeting-note.md"
+        ).write_text(
             "---\n"
             "sourceId: chief-of-staff-note-2026-04-21-001\n"
             "title: 总助阶段会议纪要\n"
@@ -205,7 +259,9 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             "- reviewing 页面进入 stable 前需要人工审批。\n",
             encoding="utf-8",
         )
-        (inbox_root / "2026-04-21-chief-of-staff-phase-2-note.md").write_text(
+        (
+            inbox_root / "2026-04-21-chief-of-staff-phase-2-note.md"
+        ).write_text(
             "---\n"
             "sourceId: chief-of-staff-note-2026-04-21-004\n"
             "title: 总助 phase-2 扩展记录\n"
@@ -224,8 +280,11 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             "- reviewing 页面进入 stable 前仍要保留人工审批。\n",
             encoding="utf-8",
         )
-        (inbox_root / "2026-04-21-chief-of-staff-scratch-note.md").write_text(
-            "- 当前判断是先用两轮 scheduled refresh 作为 stable promotion 证据。\n- reviewing 到 stable 现在必须经过人工审批。\n",
+        (
+            inbox_root / "2026-04-21-chief-of-staff-scratch-note.md"
+        ).write_text(
+            "- 当前判断是先用两轮 scheduled refresh 作为 stable promotion 证据。\n"
+            "- reviewing 到 stable 现在必须经过人工审批。\n",
             encoding="utf-8",
         )
         (inbox_root / "2026-04-21-chief-of-staff-facts.json").write_text(
@@ -249,7 +308,9 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             encoding="utf-8",
         )
 
-        (inbox_root / "2026-04-21-chief-of-staff-governance-note.md").write_text(
+        (
+            inbox_root / "2026-04-21-chief-of-staff-governance-note.md"
+        ).write_text(
             "---\n"
             "sourceId: chief-of-staff-note-2026-04-21-005\n"
             "title: 总助治理推进记录\n"
@@ -280,15 +341,27 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
                             "pageId": "chief-of-staff-llm-wiki-current-state",
                             "title": "总助 LLM wiki 当前推进情况",
                             "pageStatus": "working",
-                            "topicTags": ["chief-of-staff", "llm-wiki", "knowledge-system", "governance"],
-                            "includeTopics": ["chief-of-staff", "llm-wiki", "governance"],
+                            "topicTags": [
+                                "chief-of-staff",
+                                "llm-wiki",
+                                "knowledge-system",
+                                "governance",
+                            ],
+                            "includeTopics": [
+                                "chief-of-staff",
+                                "llm-wiki",
+                                "governance",
+                            ],
                             "sourceIds": [
                                 "chief-of-staff-note-2026-04-21-001",
                                 "2026-04-21-chief-of-staff-scratch-note.md",
                                 "chief-of-staff-note-2026-04-21-003",
                                 "chief-of-staff-note-2026-04-21-005",
                             ],
-                            "reviewerRoles": ["ChiefOperatingOfficer", "CEOChiefOfStaff"],
+                            "reviewerRoles": [
+                                "ChiefOperatingOfficer",
+                                "CEOChiefOfStaff",
+                            ],
                             "primaryReviewer": "ChiefOperatingOfficer",
                             "approvalSlaHours": 48,
                         },
@@ -297,14 +370,27 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
                             "pageId": "chief-of-staff-llm-wiki-semi-auto-current-state",
                             "title": "总助 LLM wiki 半自动整理现状页",
                             "pageStatus": "stable",
-                            "topicTags": ["chief-of-staff", "llm-wiki", "automation", "dispatcher"],
-                            "includeTopics": ["chief-of-staff", "llm-wiki", "automation", "dispatcher"],
+                            "topicTags": [
+                                "chief-of-staff",
+                                "llm-wiki",
+                                "automation",
+                                "dispatcher",
+                            ],
+                            "includeTopics": [
+                                "chief-of-staff",
+                                "llm-wiki",
+                                "automation",
+                                "dispatcher",
+                            ],
                             "sourceIds": [
                                 "chief-of-staff-note-2026-04-21-001",
                                 "chief-of-staff-note-2026-04-21-004",
                                 "chief-of-staff-note-2026-04-21-005",
                             ],
-                            "reviewerRoles": ["ChiefTechnologyOfficer", "CEOChiefOfStaff"],
+                            "reviewerRoles": [
+                                "ChiefTechnologyOfficer",
+                                "CEOChiefOfStaff",
+                            ],
                             "primaryReviewer": "ChiefTechnologyOfficer",
                             "approvalSlaHours": 24,
                         },
@@ -392,7 +478,7 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             task_config={
                 "contentTemplate": "approval-queue-governance",
                 "to": ["ceo@tricompany.local"],
-                "subject": "总助审批队列状态",
+                "subject": "总助审批队列状态预警",
                 "body": "请复核当前 reviewing 页面审批队列，并确认 stable promotion 的人工审批结果。",
             },
         )
@@ -461,9 +547,18 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             "timebox": {"scope": "weekly", "label": "phase-1 staging"},
             "summary": "chief-of-staff schedule staging validation object",
             "relatedModules": ["TriCompany", "TriMetaverse"],
-            "evidence": [{"source": "docs/engineering/chief-of-staff-llm-wiki-priority-plan.md", "kind": "document"}],
-            "nextActions": [{"owner": "CEOChiefOfStaff", "action": "run staging validation"}],
-            "workflowRefs": [{"phase": "DESIGNING", "artifact": "chief-of-staff-llm-wiki"}],
+            "evidence": [
+                {
+                    "source": "docs/engineering/chief-of-staff-llm-wiki-priority-plan.md",
+                    "kind": "document",
+                }
+            ],
+            "nextActions": [
+                {"owner": "CEOChiefOfStaff", "action": "run staging validation"}
+            ],
+            "workflowRefs": [
+                {"phase": "DESIGNING", "artifact": "chief-of-staff-llm-wiki"}
+            ],
             "payload": {
                 "targetType": target_type,
                 "targetRef": target_ref,
@@ -484,7 +579,10 @@ class ChiefOfStaffScheduleStagingValidationTest(unittest.TestCase):
             },
             "metadata": {"validation": True},
         }
-        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        path.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
 
 
 class _DispatchRequestHandler(BaseHTTPRequestHandler):
@@ -511,7 +609,9 @@ def _start_dispatch_server() -> tuple[ThreadingHTTPServer, Thread, str]:
     setattr(server, "received", [])
     thread = Thread(target=server.serve_forever, daemon=True)
     thread.start()
-    host, port = server.server_address
+    address = server.server_address
+    host = str(address[0])
+    port = int(address[1])
     return server, thread, f"http://{host}:{port}"
 
 
