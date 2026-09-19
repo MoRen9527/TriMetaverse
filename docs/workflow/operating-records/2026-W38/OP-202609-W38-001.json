@@ -11,7 +11,7 @@
   "metadata": {
     "updatedBy": "COS 值席 m-duty-cos",
     "version": "1.0.0",
-    "lastUpdated": "2026-09-19T19:18:00+00:00",
+    "lastUpdated": "2026-09-19T19:32:00+00:00",
     "workflowTags": [
       "每周维护",
       "CEO 总助维护面",
@@ -26,7 +26,8 @@
         "C-1 任务书终验候 BOD",
         "C-2 基准重建窗口归属候 BOD 裁",
         "C-3 已闭（探针收口 2026-09-19T19:18Z，锚=三态探针+79a2769）",
-        "C-4 通报收敛群残项候 CAO/CTO/BS"
+        "C-4 通报收敛群残项候 CAO/CTO/BS",
+        "C-5 TMV bare objects root 属主复发（权限墙第三发），root chown 候 BOD，284dbafa 重推候窗"
       ]
     }
   },
