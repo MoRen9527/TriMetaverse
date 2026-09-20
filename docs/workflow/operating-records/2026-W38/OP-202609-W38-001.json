@@ -11,7 +11,7 @@
   "metadata": {
     "updatedBy": "COS 值席 m-duty-cos",
     "version": "1.0.0",
-    "lastUpdated": "2026-09-19T19:32:00+00:00",
+    "lastUpdated": "2026-09-20T12:55:00+00:00",
     "workflowTags": [
       "每周维护",
       "CEO 总助维护面",
@@ -23,11 +23,11 @@
     "bodAbsenceCache": {
       "protocol": "BOD 三令之③（2026-09-18）：缺位期候裁事项值席缓存+周平面双写+上线催办",
       "items": [
-        "C-1 任务书终验候 BOD",
-        "C-2 基准重建窗口归属候 BOD 裁",
-        "C-3 已闭（探针收口 2026-09-19T19:18Z，锚=三态探针+79a2769）",
-        "C-4 通报收敛群残项候 CAO/CTO/BS",
-        "C-5 TMV bare objects root 属主复发（权限墙第三发），root chown 候 BOD，284dbafa 重推候窗"
+        "C-1 已闭（BOD 终验 f31f4570，2026-09-19 19:3xZ）",
+        "C-2 已闭（CEO 批 CFO 口径 2026-09-20 03:32+08）",
+        "C-3 已闭（探针收口 2026-09-19T19:18Z）",
+        "C-4 通报收敛群残项候 CAO/CTO/BS 派工（现役唯一）",
+        "C-5 已闭（chown 落地+两笔入 bare，2026-09-20 实勘）"
       ]
     }
   },
@@ -232,9 +232,9 @@
   "doneTreesThisWeek": [],
   "nextActions": [
     {
-      "action": "BOD 上线首轮回报逐项催办缓存清单 C-1..C-4（缺位缓存协议）",
+      "action": "C-4 通报收敛群催办（CAO/CTO/BS 通道）+日常执行",
       "owner": "COS 值席 m-duty-cos",
-      "addedAt": "2026-09-18T15:08:44Z"
+      "addedAt": "2026-09-20T12:55:00Z"
     }
   ],
   "carry_over_from_w31": [
