@@ -58,7 +58,7 @@
 ## 七、分期路线（节奏令=慢优化逐步落实）
 
 - **思路阶段（本件）**：终态交付，不动现役。
-- **首落（候批）**：学习腿 commit 模板化+injector inject 事件（注入可核对先通）+colleague 账本位声明（落点定案写入契约下次批量窗）。
+- **首落（候批→已落位销账 2026-09-20 22:1x）**：✅①学习腿 commit 模板化（TMV 78a5dc80 knowledge/README 三段式：who+why+区）✅②inject 事件=改判现役已覆盖（CTO 实勘 TriRLC knowledge-db.ts knowledge_consumption 表现役每次注入写一行审计面——复用优先不另造，BOD 抽验实锚）✅③colleague 账本位声明（TC 5863a4f 13 席占座行，BOD 抽验 CPO :45 实查）。validator 除 soul 备案外全绿。
 - **次落（候触发）**：运行腿 kernel 伴生流（与归一线 kernel 收编同里程碑）；colleague 账本实装（候动态化需求首例）。
 - **不落**：查询库/social 实现/权限模型（各候触发，治理线另定）。
 
