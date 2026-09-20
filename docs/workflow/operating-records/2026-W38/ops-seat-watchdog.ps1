@@ -1,3 +1,4 @@
+# 【归档件·禁运行】本件为 2026-09-17 装配时快照副本；运行正位=.fade/seat-watchdog.ps1（Seat-Watchdog 计划任务已改指正位 2026-09-21）。本件三元组为旧名（m-dee），勿同步勿运行。
 ﻿# seat-watchdog.ps1 — 12 席常驻看门狗（单一看门狗原则，CEO 令 2026-09-17）
 # 用法：powershell -File seat-watchdog.ps1 [-Bootstrap]
 #   -Bootstrap: 开机模式（拉起全部缺席席，单 wt 窗多 tab 最小化）
