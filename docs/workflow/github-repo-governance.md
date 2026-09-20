@@ -397,7 +397,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\git-six-repo-auto-
 
 ### 12.2 同步链规则（单向正向+受限反向）
 
-1. 正向：源码侧 push GitHub → bare fetch GitHub → 工作树 fetch bare + ff-only；
+1. 正向（**双落点形态**，2026-09-20 起）：源码侧 push 双落点（origin 双 push url=GitHub canonical+sg bare）→ 工作树 fetch 双源取并集 + ff-only；bare 侧另有 bare-fetch-all cron 每小时兜底（12.4）；TriRMC bare／TriGateway 仓 09-20 补建（双落点家族 20 仓，vscodium 除外）；
 2. 反向（仅运行态产物）：工作树本地 commit（附一行事由）→ rebase 到 GitHub 顶 → push GitHub 回流（首例=TMV `7ead06f1`）；
 3. **禁手工拷贝**：任何仓内容跨机复制必须走 git 协议（clone/fetch/bundle），禁 rsync/cp 散文件——与 governance-state「宿主资产副本卫生」条（2026-09-19 升格）同族互引。
 
