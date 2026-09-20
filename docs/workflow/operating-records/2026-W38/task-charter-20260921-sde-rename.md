@@ -1,7 +1,7 @@
 # 任务书·DE→SDE 正名（高级部署工程师）+ agent-body 旧名走查
 
 - sourceOfTruth: 本件=董事会任务书（CEO 2026-09-21 01:34 令）
-- syncMode: static
+- syncMode: closed（BOD 销账 2026-09-21 01:4x）
 - lastSyncedAt: 2026-09-21 01:3x
 - 上位令: CEO 01:34（小布（DE）改为 SDE 高级部署工程师；所有路由到 DE 的修正为 SDE；走读小布 agent-body，TriDeployer 这类核实语义及定位，需修正删除的及时处理优化）
 - 主责: CHO（五件套域+D-13 名册+渲染链）
@@ -36,3 +36,7 @@
 - m-dee 寻址名、工作名小布、席位会话本体不动；
 - Trideployment 退役仓历史叙述冻结（活引用甄别后改）；
 - DE→SDE 期间在途工单（如有）由 CHO 对表衔接。
+
+## 五、销账注记（BOD 验收，2026-09-21 01:4x）
+
+五锚全过：①正名统一（SDE+TriDeployer grep=0）②走读报告（ADE/职责/三分法准确无重构+顺手两笔：上岗时点失真/多余空格）③名册双端（本地 seats+D-13 ✓；sg seats-sg.json **BOD 直改毕**——CHO 交接注记销）④Trideployment 甄别定谳：BOD 预勘 9 文件字面命中经语境甄别**全部为历史兼容/历史叙述语义正当保留，零活引用**（BS 兼容入口规则/CTO 历史补查规则×4/publish-flow 历史记录/退役 registry 本体×3+manifest 历史条目+TriTest 系档案）⑤渲染攒批。roster role/displayName 随改：**BOD 裁准 CHO 案**（随首月校准窗一并，避免第三处改名面）。
