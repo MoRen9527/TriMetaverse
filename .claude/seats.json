@@ -308,7 +308,7 @@
       "seat": "deployment-engineer",
       "opsName": "m-dee",
       "workName": "",
-      "agent": "DeploymentEngineer",
+      "agent": "SDE",
       "hostFace": "local",
       "sessionPrompt": "TriMetaverse/.claude/compass/deployment-engineer.session.md",
       "launchCommand": "claude -n M-DEE --append-system-prompt-file <TriMetaverse/.claude/compass/deployment-engineer.session.md>",
