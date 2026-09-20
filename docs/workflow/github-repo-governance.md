@@ -383,3 +383,35 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\git-six-repo-auto-
 | 仓库健康巡检 | `docs/README-git-health.md` |
 | 文档治理与真源文件系统 | `docs/文档治理与真源文件系统.md` |
 | Workspace 配置文件 | `trimetaverse.code-workspace`（根目录） |
+
+## 12. 部署面与源码面的区分管理（2026-09-20 增补；CEO「部署和源码要做好区分和管理」定调，BOD 起草+CAO 归口审正身）
+
+### 12.1 三面一定则
+
+| 面/态 | 载体 | 性质与规则 |
+| --- | --- | --- |
+| 源码真源面 | dev 机各仓工作树 + GitHub 中枢（MoRen9527 org） | 一切正式 commit 的应许地 |
+| 部署中枢面 | sg `/srv/git/*.git` bare 域 | sg 侧拉取的唯一上游；**不是真源** |
+| 部署运行面 | sg `/srv/fleet/*` 工作树 | 服务/席位实际运行副本；允许运行态本地 commit（反向流），commit 须附一行事由（运行态产物定性） |
+| 时效差豁免态 | bare/工作树相对 GitHub 的落后窗口 | 允许短暂落后（对齐操作后即追平）；落后本身非事故（系状态豁免，非第五「面」） |
+
+### 12.2 同步链规则（单向正向+受限反向）
+
+1. 正向：源码侧 push GitHub → bare fetch GitHub → 工作树 fetch bare + ff-only；
+2. 反向（仅运行态产物）：工作树本地 commit（附一行事由）→ rebase 到 GitHub 顶 → push GitHub 回流（首例=TMV `7ead06f1`）；
+3. **禁手工拷贝**：任何仓内容跨机复制必须走 git 协议（clone/fetch/bundle），禁 rsync/cp 散文件——与 governance-state「宿主资产副本卫生」条（2026-09-19 升格）同族互引。
+
+### 12.3 role 标注（身份可判读）
+
+- sg bare 的 description 字段标 `deploy-mirror`；工作树 README 尾或 `.deploy-marker` 注 `deploy-replica`；
+- 判读序：探树先读 marker/description 再取数（与 D-24 机位断言同族——先验身份后用数，防「探错树」同根事故）。
+
+### 12.4 机制化候选与排期
+
+- **主案**：bare 侧 cron 定期 fetch GitHub（建议日频起步，M-SG crontab；只增不删低风险）；
+- **二线**：push 触发钩子（GitHub webhook→sg）——复杂度高，候同步量级需要再议；
+- **排期**：随 FADE-008 攒批窗（周二/周五）入树批，不单独开窗。
+
+### 12.5 已挂账遗留
+
+A-1 旧名工作区／A-2 TriRLC origin 旧名／A-3 vscodium 浅态——见 unresolved-items 2026-W38（f912d859 后三行），随批清偿不阻本节生效（本节只指针不复制清单）。
