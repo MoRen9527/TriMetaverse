@@ -338,3 +338,6 @@
 - 巡检兜底补写 @03:40 +08：自上次进度提交 284dbafa 后新增 1 条 commit：
   - 6f499f89 docs(workflow): C-5 缓存——TMV bare 权限墙第三发复发（objects root 子目录拒写，push 残项候 BOD chown）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:00 +08：自上次进度提交 7ead06f1 后新增 1 条 commit：
+  - f912d859 docs(unresolved): 全模块对齐遗留三项入册——A-1 旧名工作区/A-2 TriRLC origin 旧名/A-3 vscodium 浅态，候专项窗
+- registry：v2.1；今日 registry 提交无变化
