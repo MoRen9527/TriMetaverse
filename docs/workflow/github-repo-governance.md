@@ -406,11 +406,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\git-six-repo-auto-
 - sg bare 的 description 字段标 `deploy-mirror`；工作树 README 尾或 `.deploy-marker` 注 `deploy-replica`；
 - 判读序：探树先读 marker/description 再取数（与 D-24 机位断言同族——先验身份后用数，防「探错树」同根事故）。
 
-### 12.4 机制化候选与排期
+### 12.4 机制化（已上线，2026-09-20）
 
-- **主案**：bare 侧 cron 定期 fetch GitHub（建议日频起步，M-SG crontab；只增不删低风险）；
-- **二线**：push 触发钩子（GitHub webhook→sg）——复杂度高，候同步量级需要再议；
-- **排期**：随 FADE-008 攒批窗（周二/周五）入树批，不单独开窗。
+- **主案已上线**：bare-fetch-all cron（M-SG fleet crontab，**每小时 :30 错峰**触发；CEO 15:24 令即装——缺环影响 sg 工作不宜候窗）——18 bare 全量 fetch GitHub，首跑 18/18 OK 零失败，日志 `/home/fleet/bare-fetch-all.log`；落后窗缩至 ≤1h（频率较 12.4 初案「日频」加密：18 仓 fetch <60s 对 GitHub 零压力）。
+- **二线**：push 触发钩子（GitHub webhook→sg）——复杂度高，候同步量级需要再议，维持候议。
 
 ### 12.5 已挂账遗留
 
