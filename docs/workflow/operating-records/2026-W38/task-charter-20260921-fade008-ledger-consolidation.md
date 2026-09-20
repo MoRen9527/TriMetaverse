@@ -30,3 +30,21 @@
 ## 收口区
 
 （E 段节点收口逐项回写于此）
+
+## 收口区（server 子集 T1-T4·m-duty-cos 执行）
+
+### T1·A-1 sg 旧名工作区处置（2026-09-20T19:4xZ 闭；m-duty-cos）
+
+- mv /srv/fleet/TriLC → /srv/fleet/TriRLC 成；引用面五处终扫零命中；TriMC 禁动边界遵守未触。三验全过：healthz ok（cron 6 jobs，consecutiveFailures=2 观察项）/tmux 14 与动作前同/settings.json mtime 09-16 不动。报告=树 reports/t1-trilc-rename.md。
+
+### T2·A-2 TriRLC origin 对齐（2026-09-20T19:4xZ 闭；m-duty-cos）
+
+- 悬空 origin /srv/git/TriLC.git→/srv/git/TriRLC.git 正名；remote -v 全现役名+fetch/pull/push 三通+HEAD==origin/dev（d60126e 同尖）。报告=树 reports/t2-origin-fix.md（含 HEAD 读数差如实注）。
+
+### T3·sg 名册 SDE 联动核验（2026-09-20T19:5xZ 核显闭+候办列；m-duty-cos）
+
+- BOD 直改实勘在位（m-duty-sde/SeniorDeploymentEngineer+compass 手册已改名）；悬空雷已排（manual 字段→senior-deployment-engineer，原指已改名旧路径）。差口四项如实列（tmux live 旧名/本机 seats.json/D-13 未入册/agents.md 旧名）各归 owner（BOD 重启窗/local 线/CAO+CTO 入册窗/CTO 发布链）；零差口候二次对表，不越域代传播。报告=树 reports/t3-sg-roster-sync.md。
+
+### T4·LG 系归档整理 sg 侧（2026-09-20T19:5xZ 闭 sg 半环；m-duty-cos）
+
+- 归档镜像=树 reports/t4-lg-archive-mirror.md（LG-001..038 repo 迹全量：引用数/闭态证据行/锚点文件，LG-038 sg 零命中如实注）；真源=本机 ledger-mirror（sg 不可达），对表定谳+瘦身 owner=本机线；销账条目经锚点文件可溯 ✓。

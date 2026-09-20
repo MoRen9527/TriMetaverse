@@ -1,0 +1,32 @@
+{
+  "treeId": "fade008-ledger-consolidation",
+  "charter": "task-charter-20260921-fade008-ledger-consolidation.md",
+  "face": "server-executable",
+  "executor": "m-duty-cos",
+  "nodes": {
+    "T1": {
+      "title": "A-1 sg 旧名工作区处置",
+      "status": "closed",
+      "report": "reports/t1-trilc-rename.md",
+      "hardBoundary": "TriMC 涉服务禁动遵守"
+    },
+    "T2": {
+      "title": "A-2 TriRLC origin 旧名对齐",
+      "status": "closed",
+      "report": "reports/t2-origin-fix.md"
+    },
+    "T3": {
+      "title": "sg 名册 SDE 联动核验",
+      "status": "partial-closed",
+      "report": "reports/t3-sg-roster-sync.md",
+      "note": "sg 真源核显+manual 同步闭；零差口候四 owner 通道后二次对表"
+    },
+    "T4": {
+      "title": "LG 系已闭条目归档整理（sg 侧镜像）",
+      "status": "closed-sg-side",
+      "report": "reports/t4-lg-archive-mirror.md",
+      "note": "repo 迹镜像在位可溯；真源对表+瘦身 owner=本机线"
+    }
+  },
+  "openedAt": "2026-09-20T19:37Z"
+}
