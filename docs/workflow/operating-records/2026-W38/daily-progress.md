@@ -348,3 +348,6 @@
 - 巡检兜底补写 @16:10 +08：自上次进度提交 c5643609 后新增 1 条 commit：
   - 2480fd89 docs(lg-034): §12.4勘正——bare-fetch-all已上线实态入卷(每小时:30错峰/18 bare首跑18/18/日志路径;频率较初案日频加密至小时级,CEO 15:24 令即装)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:10 +08：自上次进度提交 a36217d8 后新增 1 条 commit：
+  - 2da8446e docs(lg-034): §12.2勘正——正向链双落点形态入卷(CEO 09-20 19:48 折中双推已落地:origin双push url GitHub canonical+sg bare/fetch双源取并集;TriRMC bare+TriGateway仓09-20补建注记;20仓vscodium除外)
+- registry：v2.1；今日 registry 提交无变化
