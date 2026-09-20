@@ -1,7 +1,7 @@
 # 认知资产体系审计·联审合流方案（CPO×CTO）
 
 - sourceOfTruth: 本件（三命题+审计技术面合流正身；节奏令=思路件终态，候 CEO 审方向）
-- syncMode: draft（双签后呈 CEO）
+- syncMode: approved（CEO 三批 2026-09-20 22:03/22:05/22:07，首落批启动授权）
 - lastSyncedAt: 2026-09-20T21:4x+0800（date 现查 21:35:04 本回合链）
 - 拼稿: CTO（小狄）；终审签认: CPO（小乔）
 - 输入件: 命题书 task-charter-20260920 + CPO 两件（social 前瞻 87592c36/增补件 命题1·2 d0a32e61）+ CTO 件（cto-audit-tech-view.md 368630f2）
@@ -65,3 +65,10 @@
 ## 八、使用依据
 
 命题书+三输入件（87592c36/d0a32e61/368630f2）+实勘五类审计资产（letter 台账/kernel audit/knowledge audit 位/transition JSONL/session-store）+认知层归一线定案（双腿/分域同构）+LG-036 letter 台账现役+M-004 派工留痕。
+
+
+## 九、CEO 终批（2026-09-20 22:03-22:07，逐项大白话呈批三批全过）
+
+- **批 1（22:03）**：统一审计信封架构——三资产一信封四字段（装的是什么/谁写何时/为什么写 why 强制/被谁用过）+三分界（资产账/运行账/SEC 面不混）方向认可；
+- **批 2（22:05）**：social 预置不实现+反编造防线先浇筑（social 类 why must 指 raw 事件 id——格式级禁编造），功能候元虚拟场景触发；
+- **批 3（22:07）**：首落批三小活启动授权——①学习腿 commit 模板化②injector inject 事件③colleague 账本位声明（占座）。次落/不落范围照 §七原样（候触发）。
