@@ -36,7 +36,7 @@
 | `digest_classify` | 三选一阀门（match 判定 digest\|reject\|escalate） |
 | `digest_executor` | 消化执行（shallow 模板变换/deep LLM 蒸馏分流调度） |
 | `digest_render` | 结构化输出（编译五段产物+注入页约束校验） |
-| `digest_log` | 事件/审计（消化事件+reject 日志+escalate 队列汇审计） |
+| `digest_log` | 事件/审计（消化事件+reject 日志+escalate 队列汇入学习审计） |
 | `digest_registry` | 总控（席侧配置聚合+幂等状态+promotion 事件） |
 
 **执行协议**：触发=会话收口/事件（不在注入热路径）→执行者=daemon 侧消化器（TriRLC knowledge-injector 扩展）→深度分级（阈值候 CFO 体积实测）→幂等=content_hash 延伸（源变页标 stale 重消化）→失败姿态=inbox 保留+错误入审计绝不静默丢。
@@ -69,7 +69,7 @@ rules:
 - **定位**=「全员该会什么」（非公司统一规则）；现役实勘=2026-07-14 两条乱码 daily-close 残留（垃圾桶化警示）。
 - **成本纪律**：13× 注入乘数——必须分层（核心层全员全量/扩展层按岗位）；单品判据=「**不进会怎样？不怎样=不进**」。
 - **写权**：提案制+单一收口（禁单席直写）。
-- **升格管道（wiki→org/shared）**：唯一上行通道；判据=**去域化检验**（「脱离我的岗位语境还成立吗？」）——人工门（MVP）+provenance 字段溯源。
+- **升格管道（wiki→org/shared＝组织知识库）**：唯一上行通道；判据=**去域化检验**（「脱离我的岗位语境还成立吗？」）——人工门（MVP）+provenance 字段溯源。
 
 ## §6 与既有基座衔接（零破坏）
 
@@ -79,7 +79,7 @@ rules:
 
 ## §7 验收锚（合流六条+质量基线三指标）
 
-**六条**：①org/shared 分层落地（核心/扩展双档可见）②reject 规则生效（丢弃有日志）③escalate 队列汇审计（待确认不静默丢）④promotion 去域化判据人工门（provenance 留痕）⑤消化不在注入热路径（shallow 零 LLM 实测）⑥体积预算门（org/shared 注入面不爆 bootstrap 窗）。
+**六条**：①org/shared 分层落地（核心/扩展双档可见）②reject 规则生效（丢弃有日志）③escalate 队列汇入学习审计（待确认不静默丢）④promotion 去域化判据人工门（provenance 留痕）⑤消化不在注入热路径（shallow 零 LLM 实测）⑥体积预算门（org/shared 注入面不爆 bootstrap 窗）。
 **质量基线三指标（CPO 对表增量）**：归并正确率／注入页去链可读（抽 3 页断链可读）／reject·escalate 复现性。
 
 ## §8 吸收清单（上游八项并入）

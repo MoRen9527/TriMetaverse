@@ -24,3 +24,4 @@ __pycache__/
 
 # compass 过渡别名（junction → .claude/compass；过渡期启动链兜底，不随版本库，防 git 遍历双计）
 .claude/hub/
+.playwright-mcp/

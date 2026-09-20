@@ -1,0 +1,374 @@
+
+======================================================================
+SEAT: ceo-chief-of-staff
+======================================================================
+agents件段数=16 hub件段数=23
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [ 11- 17] ## 身份契约（董事会/董事长助理分权制，2026-08-28 CEO 立）   hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 18- 23] ## 当前角色定位                                hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 24- 29] ## 认知分层约束                                hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 30- 36] ## 当前原则                                  hub=✓ | agent-body=0 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 37- 43] ## 运行资产落点                                hub=✓ | agent-body=0 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 44- 49] ## 层契约                                   hub=✓ | agent-body=0 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 50- 56] ## 项目级真源路由                               hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 57- 61] ## 当前经营记录落点                              hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 62- 67] ## 使命                                    hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 68- 75] ## 核心职责                                  hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 76- 82] ## 中央收口路由                                hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 83- 97] ## 固定前置核查                                hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [ 98-100] ## 交接路径治理                                hub=✓ | agent-body=1 ceo-chief-of-staff=1 session-body=0 agent-frontmatter=0
+  [101-105] ## 决策三分法                                 hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [106-114] ## 行为护栏                                  hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+  [115-138] ## 默认输出结构                                hub=✓ | agent-body=2 ceo-chief-of-staff=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [131-137] ## 状态条机械合同（M-001，D-04 真源投影）
+  [138-139] ## 会话面补充（session-body）
+  [140-151] ## 启动恢复（自驱动；首轮执行）
+  [152-157] ## 会话面纪律
+  [158-164] ## 周平面 OP 记录（域知识族·LG-028 迁入）
+  [165-168] ## 状态条机械合同（M-001，五字段）
+  [169-174] ## 首轮自驱动收尾
+
+======================================================================
+SEAT: chief-administrative-officer
+======================================================================
+agents件段数=17 hub件段数=21
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [ 13- 21] ## 当前角色定位                                hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 22- 27] ## 认知分层约束                                hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 28- 33] ## 当前原则                                  hub=✓ | agent-body=0 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 34- 40] ## 运行资产落点                                hub=✓ | agent-body=0 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 41- 46] ## 层契约                                   hub=✓ | agent-body=0 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 47- 54] ## 回答前必须核查                               hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 55- 58] ## 使命                                    hub=✓ | agent-body=1 chief-administrative-officer=1 session-body=0 agent-frontmatter=0
+  [ 59- 67] ## 核心职责                                  hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 68- 74] ## 当前工作落点                                hub=✓ | agent-body=1 chief-administrative-officer=2 session-body=1 agent-frontmatter=0
+  [ 75- 80] ## 项目真源与治理真源                             hub=✓ | agent-body=1 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 81- 90] ## 固定前置核查                                hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 91- 97] ## 中央收口路由                                hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [ 98-101] ## 工作接手规则                                hub=✓ | agent-body=1 chief-administrative-officer=1 session-body=0 agent-frontmatter=0
+  [102-107] ## 决策三分法                                 hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [108-116] ## 行为护栏                                  hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [117-130] ## 默认输出结构                                hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+  [131-141] ## 角色气质                                  hub=✓ | agent-body=2 chief-administrative-officer=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [134-140] ## 状态条机械合同（M-001，D-04 真源投影）
+  [141-142] ## 会话面补充（session-body）
+  [143-151] ## CAO 会话开场基线（恢复/开场段·LG-024 批 1 前置）
+  [152-180] ## CAO 域知识族（域知识族·LG-028/D-16）
+
+======================================================================
+SEAT: chief-financial-officer
+======================================================================
+agents件段数=17 hub件段数=21
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [  7- 16] ## 当前角色定位                                hub=✓ | agent-body=1 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 17- 22] ## 认知分层约束                                hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 23- 27] ## 当前原则                                  hub=✓ | agent-body=0 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 28- 34] ## 运行资产落点                                hub=✓ | agent-body=0 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 35- 40] ## 层契约                                   hub=✓ | agent-body=0 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 41- 48] ## 回答前必须核查                               hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 49- 52] ## 使命                                    hub=✓ | agent-body=1 chief-financial-officer=1 session-body=0 agent-frontmatter=0
+  [ 53- 60] ## 核心职责                                  hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 61- 66] ## 当前工作落点                                hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 67- 73] ## 项目真源与财务真源                             hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 74- 83] ## 固定前置核查                                hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 84- 90] ## 中央收口路由                                hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [ 91- 94] ## 工作接手规则                                hub=✓ | agent-body=1 chief-financial-officer=1 session-body=0 agent-frontmatter=0
+  [ 95-100] ## 决策三分法                                 hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [101-106] ## 行为护栏                                  hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [107-115] ## 角色气质                                  hub=✓ | agent-body=2 chief-financial-officer=2 session-body=0 agent-frontmatter=0
+  [116-131] ## 默认输出结构                                hub=✓ | agent-body=0 chief-financial-officer=0 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [110-116] ## 状态条机械合同（M-001，D-04 真源投影）
+  [117-118] ## 会话面补充（session-body）
+  [119-128] ## 开场基线（恢复/开场）
+  [129-141] ## 财务域路由与核心域知识（域知识族·LG-028 D 类）
+
+======================================================================
+SEAT: chief-human-resources-officer
+======================================================================
+agents件段数=17 hub件段数=24
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [  7- 15] ## 当前角色定位                                hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 16- 21] ## 认知分层约束                                hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 22- 28] ## 当前原则                                  hub=✓ | agent-body=0 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 29- 35] ## 运行资产落点                                hub=✓ | agent-body=0 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 36- 41] ## 层契约                                   hub=✓ | agent-body=0 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 42- 50] ## 回答前必须核查                               hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 51- 54] ## 使命                                    hub=✓ | agent-body=1 chief-human-resources-officer=1 session-body=0 agent-frontmatter=0
+  [ 55- 63] ## 核心职责                                  hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 64- 70] ## 当前工作落点                                hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 71- 76] ## 项目真源与人力真源                             hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 77- 87] ## 固定前置核查                                hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 88- 94] ## 中央收口路由                                hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [ 95- 99] ## 工作接手规则                                hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [100-105] ## 决策三分法                                 hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [106-117] ## 行为护栏                                  hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [118-131] ## 默认输出结构                                hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+  [132-142] ## 角色气质                                  hub=✓ | agent-body=2 chief-human-resources-officer=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [135-141] ## 状态条机械合同（M-001，D-04 真源投影）
+  [142-145] ## 会话面补充（session-body）
+  [146-157] ## 启动恢复（自驱动；首轮执行）
+  [158-164] ## 会话面纪律
+  [165-172] ## 域知识族（LG-028 D 类·CHO 域路由与核心域知识）
+  [173-176] ## 状态条机械合同（M-001，五字段）
+  [177-182] ## 首轮自驱动收尾
+
+======================================================================
+SEAT: chief-marketing-officer
+======================================================================
+agents件段数=17 hub件段数=21
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [  7- 16] ## 当前角色定位                                hub=✓ | agent-body=1 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 17- 22] ## 认知分层约束                                hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 23- 27] ## 当前原则                                  hub=✓ | agent-body=0 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 28- 34] ## 运行资产落点                                hub=✓ | agent-body=0 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 35- 40] ## 层契约                                   hub=✓ | agent-body=0 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 41- 48] ## 回答前必须核查                               hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 49- 52] ## 使命                                    hub=✓ | agent-body=1 chief-marketing-officer=1 session-body=0 agent-frontmatter=0
+  [ 53- 61] ## 核心职责                                  hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 62- 67] ## 当前工作落点                                hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 68- 74] ## 项目真源与市场真源                             hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 75- 84] ## 固定前置核查                                hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 85- 91] ## 中央收口路由                                hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [ 92- 95] ## 工作接手规则                                hub=✓ | agent-body=1 chief-marketing-officer=1 session-body=0 agent-frontmatter=0
+  [ 96-101] ## 决策三分法                                 hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [102-106] ## 行为护栏                                  hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [107-115] ## 角色气质                                  hub=✓ | agent-body=2 chief-marketing-officer=2 session-body=0 agent-frontmatter=0
+  [116-131] ## 默认输出结构                                hub=✓ | agent-body=0 chief-marketing-officer=0 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [110-116] ## 状态条机械合同（M-001，D-04 真源投影）
+  [117-118] ## 会话面补充（session-body）
+  [119-129] ## 通信正名与时刻纪律（恢复/开场基线段）
+  [130-155] ## CMO 域路由与核心域知识（域知识族·LG-028 D 类）
+
+======================================================================
+SEAT: chief-operating-officer
+======================================================================
+agents件段数=17 hub件段数=21
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [  7- 16] ## 当前角色定位                                hub=✓ | agent-body=1 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 17- 22] ## 认知分层约束                                hub=✓ | agent-body=2 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 23- 27] ## 当前原则                                  hub=✓ | agent-body=0 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 28- 34] ## 运行资产落点                                hub=✓ | agent-body=0 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 35- 40] ## 层契约                                   hub=✓ | agent-body=0 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 41- 48] ## 回答前必须核查                               hub=✓ | agent-body=2 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 49- 52] ## 使命                                    hub=✓ | agent-body=1 chief-operating-officer=1 session-body=0 agent-frontmatter=0
+  [ 53- 60] ## 核心职责                                  hub=✓ | agent-body=2 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 61- 66] ## 当前工作落点                                hub=✓ | agent-body=2 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 67- 73] ## 项目真源与运营真源                             hub=✓ | agent-body=2 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 74- 83] ## 固定前置核查                                hub=✓ | agent-body=2 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 84- 90] ## 中央收口路由                                hub=✓ | agent-body=2 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [ 91- 94] ## 工作接手规则                                hub=✓ | agent-body=1 chief-operating-officer=1 session-body=0 agent-frontmatter=0
+  [ 95-100] ## 决策三分法                                 hub=✓ | agent-body=2 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [101-104] ## 行为护栏                                  hub=✓ | agent-body=1 chief-operating-officer=1 session-body=0 agent-frontmatter=0
+  [105-113] ## 角色气质                                  hub=✓ | agent-body=2 chief-operating-officer=2 session-body=0 agent-frontmatter=0
+  [114-129] ## 默认输出结构                                hub=✓ | agent-body=0 chief-operating-officer=0 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [108-114] ## 状态条机械合同（M-001，D-04 真源投影）
+  [115-116] ## 会话面补充（session-body）
+  [117-126] ## 通信正名与时刻纪律（恢复/开场基线段）
+  [127-146] ## COO 域路由与核心域知识（域知识族·LG-028 D 类）
+
+======================================================================
+SEAT: chief-product-officer
+======================================================================
+agents件段数=15 hub件段数=19
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [ 13- 18] ## 当前角色定位                                hub=✓ | agent-body=2 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 19- 24] ## 认知分层约束                                hub=✓ | agent-body=2 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 25- 31] ## 当前原则                                  hub=✓ | agent-body=0 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 32- 38] ## 运行资产落点                                hub=✓ | agent-body=0 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 39- 44] ## 层契约                                   hub=✓ | agent-body=0 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 45- 47] ## 使命                                    hub=✓ | agent-body=1 chief-product-officer=1 session-body=0 agent-frontmatter=0
+  [ 48- 55] ## 核心职责                                  hub=✓ | agent-body=2 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 56- 60] ## 当前工作落点                                hub=✓ | agent-body=2 chief-product-officer=2 session-body=1 agent-frontmatter=0
+  [ 61- 65] ## 项目真源与产品真源                             hub=✓ | agent-body=2 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 66- 81] ## 固定前置核查                                hub=✓ | agent-body=2 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 82- 87] ## 中央收口路由                                hub=✓ | agent-body=2 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 88- 90] ## 工作接手规则                                hub=✓ | agent-body=1 chief-product-officer=1 session-body=0 agent-frontmatter=0
+  [ 91- 95] ## 决策三分法                                 hub=✓ | agent-body=2 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [ 96-102] ## 行为护栏                                  hub=✓ | agent-body=2 chief-product-officer=2 session-body=0 agent-frontmatter=0
+  [103-121] ## 默认输出结构                                hub=✓ | agent-body=2 chief-product-officer=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [114-120] ## 状态条机械合同（M-001，D-04 真源投影）
+  [121-122] ## 会话面补充（session-body）
+  [123-131] ## 恢复/开场基线（CPO 小乔）
+  [132-157] ## 产品域知识族（LG-028 D 类迁入）
+
+======================================================================
+SEAT: chief-technology-officer
+======================================================================
+agents件段数=16 hub件段数=19
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [ 13- 18] ## 当前角色定位                                hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 19- 24] ## 认知分层约束                                hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 25- 31] ## 当前原则                                  hub=✓ | agent-body=0 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 32- 38] ## 运行资产落点                                hub=✓ | agent-body=0 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 39- 44] ## 层契约                                   hub=✓ | agent-body=0 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 45- 60] ## 回答前必须核查                               hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 61- 63] ## 使命                                    hub=✓ | agent-body=1 chief-technology-officer=1 session-body=0 agent-frontmatter=0
+  [ 64- 72] ## 核心职责                                  hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 73- 77] ## 当前工作落点                                hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 78- 82] ## 项目真源与技术真源                             hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 83- 92] ## 固定前置核查                                hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 93- 98] ## 中央收口路由                                hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [ 99-101] ## 工作接手规则                                hub=✓ | agent-body=1 chief-technology-officer=1 session-body=0 agent-frontmatter=0
+  [102-106] ## 决策三分法                                 hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [107-113] ## 行为护栏                                  hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+  [114-132] ## 默认输出结构                                hub=✓ | agent-body=2 chief-technology-officer=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [125-131] ## 状态条机械合同（M-001，D-04 真源投影）
+  [132-133] ## 会话面补充（session-body）
+  [134-166] ## TriRLC/构建/健康检查命令族（域知识族·LG-028 迁入）
+
+======================================================================
+SEAT: customer-success-officer
+======================================================================
+agents件段数=13 hub件段数=17
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [ 13- 20] ## 当前角色定位                                hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [ 21- 27] ## 认知分层约束                                hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [ 28- 35] ## 回答前必须核查                               hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [ 36- 39] ## 使命                                    hub=✓ | agent-body=1 customer-success-officer=1 session-body=0 agent-frontmatter=0
+  [ 40- 49] ## 核心职责                                  hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [ 50- 56] ## 当前工作落点                                hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [ 57- 62] ## 项目真源与客户真源                             hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [ 63- 72] ## 固定前置核查                                hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [ 73- 76] ## 工作接手规则                                hub=✓ | agent-body=1 customer-success-officer=1 session-body=0 agent-frontmatter=0
+  [ 77- 82] ## 决策三分法                                 hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [ 83- 92] ## 行为护栏                                  hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [ 93-106] ## 默认输出结构                                hub=✓ | agent-body=2 customer-success-officer=2 session-body=0 agent-frontmatter=0
+  [107-115] ## 角色气质                                  hub=✓ | agent-body=0 customer-success-officer=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [108-114] ## 状态条机械合同（M-001，D-04 真源投影）
+  [115-116] ## 会话面补充（session-body）
+  [117-129] ## 通信正名与时刻纪律（恢复/开场基线段）
+  [130-155] ## CSO 域路由与核心域知识（域知识族·LG-028 D 类）
+
+======================================================================
+SEAT: deployment-engineer
+======================================================================
+agents件段数=10 hub件段数=14
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [ 13- 20] ## 当前角色定位                                hub=✓ | agent-body=2 deployment-engineer=2 session-body=0 agent-frontmatter=0
+  [ 21- 27] ## 认知分层约束                                hub=✓ | agent-body=2 deployment-engineer=2 session-body=0 agent-frontmatter=0
+  [ 28- 35] ## 回答前必须核查                               hub=✓ | agent-body=2 deployment-engineer=2 session-body=0 agent-frontmatter=0
+  [ 36- 39] ## 使命                                    hub=✓ | agent-body=1 deployment-engineer=1 session-body=0 agent-frontmatter=0
+  [ 40- 49] ## 核心职责                                  hub=✓ | agent-body=2 deployment-engineer=2 session-body=0 agent-frontmatter=0
+  [ 50- 56] ## 当前工作落点                                hub=✓ | agent-body=2 deployment-engineer=2 session-body=0 agent-frontmatter=0
+  [ 57- 62] ## 部署决策三分法                               hub=✓ | agent-body=2 deployment-engineer=2 session-body=0 agent-frontmatter=0
+  [ 63- 71] ## 行为护栏                                  hub=✓ | agent-body=2 deployment-engineer=2 session-body=0 agent-frontmatter=0
+  [ 72- 85] ## 默认输出结构                                hub=✓ | agent-body=2 deployment-engineer=2 session-body=0 agent-frontmatter=0
+  [ 86- 94] ## 角色气质                                  hub=✓ | agent-body=0 deployment-engineer=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [ 87- 93] ## 状态条机械合同（M-001，D-04 真源投影）
+  [ 94- 95] ## 会话面补充（session-body）
+  [ 96-105] ## 通信正名与时刻纪律（恢复/开场基线段）
+  [106-134] ## DE 域路由与核心域知识（域知识族·LG-028 D 类）
+
+======================================================================
+SEAT: full-stack-developer
+======================================================================
+agents件段数=15 hub件段数=19
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [ 13- 19] ## 当前角色定位                                hub=✓ | agent-body=2 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 20- 25] ## 认知分层约束                                hub=✓ | agent-body=2 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 26- 31] ## 当前原则                                  hub=✓ | agent-body=0 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 32- 38] ## 运行资产落点                                hub=✓ | agent-body=0 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 39- 44] ## 层契约                                   hub=✓ | agent-body=0 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 45- 51] ## 回答前必须核查                               hub=✓ | agent-body=2 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 52- 54] ## 使命                                    hub=✓ | agent-body=1 full-stack-developer=1 session-body=0 agent-frontmatter=0
+  [ 55- 64] ## 核心职责                                  hub=✓ | agent-body=2 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 65- 70] ## 当前工作落点                                hub=✓ | agent-body=2 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 71- 75] ## 项目真源与技术真源                             hub=✓ | agent-body=2 full-stack-developer=2 session-body=1 agent-frontmatter=0
+  [ 76- 84] ## 固定前置核查                                hub=✓ | agent-body=2 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 85- 87] ## 工作接手规则                                hub=✓ | agent-body=1 full-stack-developer=1 session-body=0 agent-frontmatter=0
+  [ 88- 92] ## 实现决策三分法                               hub=✓ | agent-body=2 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [ 93-100] ## 行为护栏                                  hub=✓ | agent-body=2 full-stack-developer=2 session-body=0 agent-frontmatter=0
+  [101-119] ## 默认输出结构                                hub=✓ | agent-body=2 full-stack-developer=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [112-118] ## 状态条机械合同（M-001，D-04 真源投影）
+  [119-120] ## 会话面补充（session-body）
+  [121-127] ## 通信正名与时刻纪律（恢复/开场基线段）
+  [128-159] ## FSD 实现域路由与管线命令族（域知识族·LG-028 迁入）
+
+======================================================================
+SEAT: rd-trainer
+======================================================================
+agents件段数=15 hub件段数=19
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [  8- 17] ## 当前角色定位                                hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 18- 23] ## 认知分层约束                                hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 24- 29] ## 当前原则                                  hub=✓ | agent-body=0 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 30- 36] ## 运行资产落点                                hub=✓ | agent-body=0 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 37- 42] ## 层契约                                   hub=✓ | agent-body=0 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 43- 46] ## 使命                                    hub=✓ | agent-body=1 rd-trainer=1 session-body=0 agent-frontmatter=0
+  [ 47- 57] ## 核心职责                                  hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 58- 63] ## 当前工作落点                                hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 64- 69] ## 项目真源与培训真源                             hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 70- 79] ## 固定前置核查                                hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 80- 83] ## 工作接手规则                                hub=✓ | agent-body=1 rd-trainer=1 session-body=0 agent-frontmatter=0
+  [ 84- 93] ## 技能技艺                                  hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [ 94-103] ## 标准教学协议                                hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [104-114] ## 行为护栏                                  hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+  [115-131] ## 默认输出结构                                hub=✓ | agent-body=2 rd-trainer=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [124-130] ## 状态条机械合同（M-001，D-04 真源投影）
+  [131-132] ## 会话面补充（session-body）
+  [133-145] ## 通信正名与时刻纪律（恢复/开场基线段）
+  [146-171] ## RDT 域路由与核心域知识（域知识族·LG-028 D 类）
+
+======================================================================
+SEAT: senior-test-engineer
+======================================================================
+agents件段数=15 hub件段数=19
+
+--- agents 件段清单（含 hub 是否同现+源侧命中）---
+  [ 13- 19] ## 当前角色定位                                hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 20- 25] ## 认知分层约束                                hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 26- 31] ## 当前原则                                  hub=✓ | agent-body=0 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 32- 38] ## 运行资产落点                                hub=✓ | agent-body=0 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 39- 44] ## 层契约                                   hub=✓ | agent-body=0 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 45- 53] ## 回答前必须核查                               hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 54- 56] ## 使命                                    hub=✓ | agent-body=1 senior-test-engineer=1 session-body=0 agent-frontmatter=0
+  [ 57- 66] ## 核心职责                                  hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 67- 71] ## 当前工作落点                                hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 72- 77] ## 项目真源与测试真源                             hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 78- 87] ## 固定前置核查                                hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 88- 90] ## 工作接手规则                                hub=✓ | agent-body=1 senior-test-engineer=1 session-body=0 agent-frontmatter=0
+  [ 91- 95] ## 测试决策三分法                               hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [ 96-102] ## 行为护栏                                  hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+  [103-121] ## 默认输出结构                                hub=✓ | agent-body=2 senior-test-engineer=2 session-body=0 agent-frontmatter=0
+
+--- hub 件独有段（不在 agents）---
+  [114-120] ## 状态条机械合同（M-001，D-04 真源投影）
+  [121-122] ## 会话面补充（session-body）
+  [123-130] ## 会话面基线（恢复/开场）
+  [131-150] ## 测试域知识族（域知识族·LG-028 D 类）

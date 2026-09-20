@@ -11,9 +11,10 @@
 - **bod 例外+缺位规则**：bod 不入本套件；bod 缺位期间需审批/决策事项由 COS 缓存记录+写周工作平面，bod 上线后催办
 - 环境标准沿用 `launch-seat.ps1`（清 CLAUDE* 遗传+FORCE 持久化+PascalCase 正名+compass 手册）
 
-## 配套候令（已消解，2026-09-17 21:4x 实测）
+## 配套候令（已消解+勘正，2026-09-17 22:0x CEO 面授定性）
 
-- ~~TriMLC-Channel 1.5 分钟重触发退役~~——**实测该任务已不存在**（早前 Wave 0 建删操作已清理），TriMLC-Watchdog（Ready）即 daemon 唯一保活者；8713 healthz 全绿（uptime≈40.6h）——"单一看门狗"目标态已自然达成，候令消解，CEO 零动作
+- ~~TriMLC-Channel 1.5 分钟重触发退役~~——实测该任务已不存在，TriMLC-Watchdog（Ready）为 **M 面 daemon（8713）唯一保活者**，healthz 全绿——M 面侧"单一看门狗"达成，候令消解。
+- **⚠ CEO 勘正（推翻 BOD"过渡期双跑/退役"误判）**：8713（TriMLC）与 8711（TriRLC）**非新旧版本，是 M 面/R 面两套并行控制器**（MLC=M 面 Local Controller，RLC=R 面 Local Controller），各守各面、位于不同面。**8711 无退役一说**。R 面将建自己的同款保活机制（届时只认 8711）。已派 CAO 于 CGR 层登记+核对白皮书细节（不足则补），COS/CHO/COO 知会。
 
 ## 验收锚
 
