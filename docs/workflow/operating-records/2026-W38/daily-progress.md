@@ -355,3 +355,8 @@
 - 巡检兜底补写 @21:00 +08：自上次进度提交 8ec40534 后新增 1 条 commit：
   - c0c648f8 docs(workflow): 8ec40534 扫入 CTO 两资产权属注记+W38 落笔改白名单点名制 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 8d2c43d3 后新增 3 条 commit：
+  - e245c8d6 merge: 收编 origin 并行线（8d2c43d）
+  - 2a44aad6 chore(lg-035): 发布管线重渲追平（CHO 0330600 双腿化源侧→发布拷贝面）——claude 13 件/copilot 13 件/claude-session 13 件 updated（§12.2 纪律管线执行非手工拷贝）；fm parity 0 drift+seats 一致性零漂移+渲染产物学习腿行 2/件实锚（BOD 轻派）（fsd 改 cto 审）
+  - edbd2e58 docs(lg-034): §12.6派工同步前置增补(CEO 20:11 问定谳,BOD起草+CAO归口审)——派工方工单附同步句(D-27任务书字段衔接)+承接席开工双自验+guard-ff机制兜底注记(首跑TMV脏树正确跳过实证);归位注记=全员适用条款非COS席位纪律(单一真源防多头)
+- registry：v2.1；今日 registry 提交无变化
