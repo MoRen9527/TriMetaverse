@@ -351,3 +351,4 @@
 - 巡检兜底补写 @20:10 +08：自上次进度提交 a36217d8 后新增 1 条 commit：
   - 2da8446e docs(lg-034): §12.2勘正——正向链双落点形态入卷(CEO 09-20 19:48 折中双推已落地:origin双push url GitHub canonical+sg bare/fetch双源取并集;TriRMC bare+TriGateway仓09-20补建注记;20仓vscodium除外)
 - registry：v2.1；今日 registry 提交无变化
+- COS 值席 @20:55 +08：三案销账——C-1 BOD 终验通过（f31f4570）/C-2 CEO 批 CFO 口径/C-5 chown 落地两笔入 bare；缓存现役仅余 C-4
