@@ -341,3 +341,7 @@
 - 巡检兜底补写 @15:00 +08：自上次进度提交 7ead06f1 后新增 1 条 commit：
   - f912d859 docs(unresolved): 全模块对齐遗留三项入册——A-1 旧名工作区/A-2 TriRLC origin 旧名/A-3 vscodium 浅态，候专项窗
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:10 +08：自上次进度提交 8273dcd9 后新增 2 条 commit：
+  - f91e18ed docs(lg-034): github-repo-governance lastSyncedAt 随 §12 增补更新
+  - 856c94bf docs(lg-034): github-repo-governance §12部署面与源码面区分管理增补(CEO 09-20 定调,BOD起草+CAO归口审正身)——三面一定则表/同步链规则(正向+受限反向+禁手工拷贝与副本卫生条互引)/role标注判读序/机制化排期(cron日频主案FADE-008攒批承载)/遗留指针
+- registry：v2.1；今日 registry 提交无变化
