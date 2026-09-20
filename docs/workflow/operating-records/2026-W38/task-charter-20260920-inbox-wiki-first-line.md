@@ -36,3 +36,10 @@
 ## 五、流程
 
 接单认领即时回 BOD → 联审评估件（双栏 CPO 产品/CTO 技术）→ 合流双签 → 呈 CEO 候批。落树 `trees/inbox-wiki-first-line/`。
+
+## 六、追加命题（CEO 2026-09-20 23:42）：宿主资产目录命名评估
+
+- **背景**：`TriCompany-copilot-host-assets/` 4 月为 Copilot 宿主而建命名；今双宿主（claude+copilot）资产同栖此目录（13 席+board hostEntries/supportObjects 全指此，今晨认知层归一定谳学习腿权威位=此）——**copilot 命名名不副实**。
+- **评估对象**：改名 `TriCompany-x-host-assets`（x=宿主通配语义）是否应做——产品层（通用性/命名语义/未来宿主扩展性）+技术层（迁移工程量/引用面盘点：今晨定谳全族路径引用/发布管线/compass/13 席契约/§12/双腿表述——引用面巨大）。
+- **与首条线结合**：首条线（inbox→schema→wiki）全部落点在此目录内——**改名窗口与首条线上线窗口的先后关系**（先改名再上线 vs 先上线后改名）=联审必答。
+- **产出**：随首条线评估件并栏（CPO 产品评估/CTO 迁移工程评估），合流时作为独立决策节呈 CEO。
