@@ -30,3 +30,12 @@
 ## 收口区
 
 （E 段节点收口逐项回写于此）
+
+### E 段·server 子集收口汇总（2026-09-21 21:2x+0800 本机线对表定谳）
+
+- **T1-T4 四节点全收口**（销账锚=树 reports/ 四份收口报告+commit 9e37ee2c，sg 值席执行）：
+  - T1✓ mv /srv/fleet/TriLC→TriRLC 整体改名零改动，动前引用面终扫零命中，TriMC 禁动未触，三验过（8710 ok/tmux 14 同/配额位不动；8710 consecutiveFailures=2 列观察项不阻塞）
+  - T2✓ origin 悬空勘正三通（remote -v 现役/fetch/pull/push；中间读数差如实录，end-state 同尖为验收据）
+  - T3✓核显：sg 真源面自洽+manual 悬空排雷；**差口四项归 owner 在途**（tmux live 旧名候 BOD 重启窗/本机 seats.json 悬空候 local 线〔并 T5-T8〕/D-13+source-agents 零命中候 CAO/CTO 入册窗/.claude/agents 旧名候发布链——入册前不代传播防名址分裂族复发）
+  - T4✓镜像在位；**本机对表定谳**：repo 迹镜像与本机台账真源已闭清单（LG-001..004/008/009/011..014/019..023/038）族属一致，LG-009 repo 迹零命中与本机已销账态相容；**瘦身 owner=本机线**（现役台账不动已闭条目正文，归档=清单索引层，候 T5-T8 同窗办）；**附发现：W39 目录 sg 侧已在**（T4 报告 LG-011 锚点引 2026-W39/daily-progress.md）——周平面迁移 sg 侧已落，本机未回流（归 T6 push/回流线首查）
+- **local 子集 T5-T8**：本席排窗执行中（T6 push 首查 W39 回流+TMV/TC 未推侧）。

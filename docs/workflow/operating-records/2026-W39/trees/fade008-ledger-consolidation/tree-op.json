@@ -1,0 +1,93 @@
+{
+  "treeId": "fade008-ledger-consolidation",
+  "charter": "2026-W38/task-charter-20260921-fade008-ledger-consolidation.md",
+  "createdAt": "2026-09-21T03:2x+0800",
+  "owner": "COS",
+  "status": "open",
+  "faces": {
+    "server-executable": [
+      "T1-a1-sg-legacy-workdir",
+      "T2-a2-trirlc-origin-rename",
+      "T3-sg-roster-sync",
+      "T4-lg-closed-archive"
+    ],
+    "local-executable": [
+      "T5-render-batch",
+      "T6-push-flush-tmv-tc",
+      "T7-d29-correction",
+      "T8-s12-correction"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T1-a1-sg-legacy-workdir",
+      "face": "server",
+      "assignee": "m-duty-cos",
+      "title": "A-1 sg 旧名工作区清理（TriMC 目录涉服务禁动）",
+      "status": "done",
+      "acceptance": "旧名目录清零或归档注记+服务健康三验"
+    },
+    {
+      "id": "T2-a2-trirlc-origin-rename",
+      "face": "server",
+      "assignee": "m-duty-cos",
+      "title": "A-2 TriRLC origin 旧名勘正",
+      "status": "done",
+      "acceptance": "git remote -v 全现役名+push/pull 冒烟通"
+    },
+    {
+      "id": "T3-sg-roster-sync",
+      "face": "server",
+      "assignee": "m-duty-cos",
+      "title": "sg 名册与正名同步",
+      "status": "done",
+      "acceptance": "名册对表零差口"
+    },
+    {
+      "id": "T4-lg-closed-archive",
+      "face": "server",
+      "assignee": "m-duty-cos",
+      "title": "LG 系已闭条目归档整理（sg 侧镜像/清单同步）",
+      "status": "done",
+      "acceptance": "归档件在位+现役台账瘦身+销账条目可溯"
+    },
+    {
+      "id": "T5-render-batch",
+      "face": "local",
+      "assignee": "COS",
+      "title": "渲染攒批（TriCompany 渲管线本机）",
+      "status": "pending",
+      "acceptance": "渲讫 commit+发布面 diff 对表"
+    },
+    {
+      "id": "T6-push-flush-tmv-tc",
+      "face": "local",
+      "assignee": "COS",
+      "title": "TMV+TC push 挂账件推平",
+      "status": "pending",
+      "acceptance": "ls-remote HEAD==本地 HEAD 双仓；推拒即停登记候授权"
+    },
+    {
+      "id": "T7-d29-correction",
+      "face": "local",
+      "assignee": "COS",
+      "title": "D-29 勘正候选（详情对表 BOD 清单）",
+      "status": "pending",
+      "acceptance": "勘正 commit+引注链在卷"
+    },
+    {
+      "id": "T8-s12-correction",
+      "face": "local",
+      "assignee": "COS",
+      "title": "§12.2-12.6 勘正候选（详情对表 BOD 清单）",
+      "status": "pending",
+      "acceptance": "勘正 commit+主语同族校验"
+    }
+  ],
+  "excluded": [
+    "注入器命题联审（LG-037 在办）",
+    "首条实证线联审",
+    "FADE-009（已闭环）",
+    "Tristaciss（CEO 自处禁触）"
+  ]
+}
