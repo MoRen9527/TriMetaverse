@@ -51,3 +51,21 @@
   - 28cdf3fd docs(contract-schema): 合流命题件 A-D 双签稿落树——实勘矩阵+命题 A 终案（四键本体+host_overrides+31 处方言删）/B 三态分类处置/C 无倒退确认/D validator 接口；CHO 主笔合稿+CTO 三裁并入，双签候批（task-charter-20260921-contract-schema）
   - 67ef92f0 docs(contract-schema): contract schema 现代化命题书——真源统一工具声明+宿主覆盖开关+runtime_baseline 迁出（CEO 10:53 定调），CHO×CTO 联审排期候注入器合流后
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:30 +08：自上次进度提交 86817871 后新增 16 条 commit：
+  - 7000d98b merge: 合流 sg watcher 分叉笔（翻周归位交叉期并行写入）
+  - 999f0cdb docs(W39): W38 台账跨周补录——LG-038/039 已闭+A 系候窗+D 系已入册，翻周对表完成
+  - b369f816 chore(W39): 翻周归位——今日 41 件产出 W38→W39 批量迁移（跨周台账与归档件留 W38），修复河源迁移不完整+各席翻周认知缺失双问题
+  - 106774ac docs(lg-034): fullauto-loop树CAO制度面段——载体裁定(FADE-008补章§8候批-催办-审批环自动化,D增条/独立册双否:流程规范非行为纪律+双正身违一物一册)+状态机制度骨架(canonical七态/台账=状态真源信箱=投影/转移触发表人工保留点)+三层催办与D-27v3咬合定位+D系整合条款(27/29/30嵌入点三处,裁定无需各自v增补)+边界条款(敏感面永不自动化/BOD human in session/基建复用)
+  - 621c2f50 docs(lg-034-w38): COO 督办面主笔段——全自动化联审（三面一致咬合·三轨超时升级时点表 A常规/B阻塞/R红线+候督办失能条款+候 CEO 态不设上限·零新制度声明）
+  - 1e72c0ca docs(fullauto-loop): CPO 席位体验标准——候批信五律（一事件一信/四要素/标题扫读/信催分离/安静时段）+催办节奏表五阶段与措辞三律（催状态不催人/升级不改口/动作即清催）+状态句格式与三面同源+岗位三视角落地
+  - 15c4076e docs(fullauto): 干活流程全自动化命题书（七席联审）——候批写信箱+三层催办+服务域全自动/本地域基本自动（CEO 21:09 定调），BOD human-in-session 面自领
+  - bbcb816b docs(fade-provenance): CEO 批准落卷——迁移批启动+细则篇成册+D-30 转正随批生效
+  - 8c017818 docs(fade-provenance): CPO 签认——合流稿对表通过（三问 canonical/六锚全量承继/裁记三理由一致/三表合并如预注/sync 机制闭环）；三签齐候 CEO 候批
+  - d06a0fd4 docs(fade-provenance): CTO 签认——合流裁对表无异议（真源位结构裁 CPO 案采认：三条理由成立尤②同目录配对=双端复制体结构解，与注入器案二漂移可见性最大化同根哲学；分类判据表/sync 案照录确认无损）——两签齐候 CPO
+  - ddc19dc1 docs(lg-034): fade-provenance三席合流稿——分类判据(CPO三问三分类canonical+SEC红线)/真源位裁记(CPO功能分域+配对命名案胜出,CTO分机目录案否:config参数化冗余+配对防漂移,两案并存记录)/轻量sync发布机制/存量迁移(CTO实勘17+7件权威/迁移批序/验证锚)/治理验收(D-30在册+立规三件套+重建演练金标准+CPO六验收锚)/分期;三签区候CPO/CTO
+  - 47784945 docs(lg-034): fade-provenance树CAO制度视角段——载体裁定(D-30纪律条+script-asset-provenance细则篇两册互指针)/归档纪律细则四则/存量全扫分拣表(本机9-10件+sg7件+跨机副本优先+运行数据留位)/整改排期三原则
+  - 264a82fa docs(lg-035): 运行脚本真源化·CTO 技术方案件——分类判据先行（工具脚本 ~17 件真源化/运行数据 ~10 项留运行位/配置快照逐件裁）；真源位=TriCompany/scripts/ops/<machine> 分机目录+轻量 sync 脚本单向拷贝+生成标记注入（§12.2 轻量化，重管线过度）；存量迁移五步（原文照搬→标记→diff 零差锚→副本甄别→数据零动作）+功能零损验证锚；服务器七件逐件定性（git 运维三件来路待查值席认领/同族双端三组漂移审查组/duty-night-patrol 细勘位）；硬编码配置化随改随抽渐进；接口位=D-30 候立 CAO/CPO 可移植性标准输入
+  - fd94d5a9 docs(fade-provenance): CPO 产品标准件——三问分类判据+三分类对照实锚表/TriCompany scripts/ops 功能优先形态/命名规范（配对防漂移+禁机器入名）/可移植性四条件+重建演练金标准/先源后部+应急回写例外/运行数据红线
+  - 48d00155 docs(fade-provenance): 运行脚本真源化命题书——.fade 族+服务器同族全量定性，CPO×CTO×CAO 三席联审（先源后部纪律+立规三件套制度化）
+  - …另有 1 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
