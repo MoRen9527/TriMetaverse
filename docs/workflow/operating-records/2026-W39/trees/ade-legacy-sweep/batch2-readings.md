@@ -40,3 +40,10 @@
 ## 验收锚读数
 
 - 复扫（批准形白名单+冻结域剔除后）未审定残留：文档面已清零（本表冻结账外）；余量=O4 代码面（TMV scripts/fade 1+TC runtime/cognition 133，候 CTO 代码批窗）+上述冻结账（各带锚）
+
+## 补记 2：第三义项 CHO 定谳（2026-09-22）
+
+- 定性：Agent Delegation Engine=规划期新概念（tricade-3 件 V0.1，Phase 2 FREEZE 未实装）；**退役字母不复活**——正名脱开 ADE 缩写。
+- 正名定向：中文正名「员工委托协议」为体；缩写 **EDP**（Employee Delegation Protocol，全仓零占用已验，避开 DE 席正名冲突）。
+- 执行合轨：tricade-3 件现态「CPO APPROVE 待 CEOChiefOfStaff 收口」——EDP 正名改动**随本席收口批一并落**（CPO 小乔作者会签），禁改边界维持至收口批；8 处清单预列=:139/:196/:198/:201/:202/:206/:207/:220。
+- 域权预声明（CHO ④）：Phase 2 委托协议实装时 CHO 入联审位（组织治理设计面），届时走 handoff 流程，预先记账。
