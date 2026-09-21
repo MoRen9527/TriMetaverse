@@ -47,3 +47,7 @@
 - 正名定向：中文正名「员工委托协议」为体；缩写 **EDP**（Employee Delegation Protocol，全仓零占用已验，避开 DE 席正名冲突）。
 - 执行合轨：tricade-3 件现态「CPO APPROVE 待 CEOChiefOfStaff 收口」——EDP 正名改动**随本席收口批一并落**（CPO 小乔作者会签），禁改边界维持至收口批；8 处清单预列=:139/:196/:198/:201/:202/:206/:207/:220。
 - 域权预声明（CHO ④）：Phase 2 委托协议实装时 CHO 入联审位（组织治理设计面），届时走 handoff 流程，预先记账。
+
+## 补记 3：F5 白皮书旗链（2026-09-22）
+
+- CHO 溯源定性：whitepaper:1321 非笔误=**迁移未完成面**（词源=fade-protocol-spec:42 v1.0.5 历史沿革句，冻结不改）；正名对照=protocol-spec:55。词条链同款 3 处：whitepaper:1321（本旗，候 CPO 裁）/journal spec:15（已入正名候裁件）/candidate-staffing:13（值席车道已改）。旗现持方=m-duty-cpo，候裁回收。
