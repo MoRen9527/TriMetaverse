@@ -1,0 +1,883 @@
+# ADE 清查批2·工作清单（判定列版）
+
+- 铸：m-duty-cos 2026-09-22；裁示依据=batch2-cto-ruling.md；扫描=简报 §二等价实现
+
+## TriMetaverse（doc face 执行域=O1/O2/REF/OH 非车道；O4=CTO 代码批窗；LANE/F/O3/FLAG 冻结）
+
+### O1（15 处）
+
+- [O1] /docs/engineering/experiment-runbook.md:100 | ADE 协议 | `docs/experiments/{topic}.md` | `.github/agents/*.agent.md` |
+- [O1] /docs/engineering/experiment-runbook.md:172 2. **规则提炼后可注入**：实验中验证通过的治理规则、ADE 协议、文档模板——通过 `rule_injection sync` 注入到 main 分支的模板目录，但不包含实验期间的周报内容。
+- [O1] /docs/engineering/ROADMAP.md:49 当前裁决：保留一套 ADE 协议，提供 `runtime-owned-durable` 与 `agent-owned-interactive` 两个 profile；当前项目真源同步只完成 DCE，不写成完整 ADE 已落地。
+- [O1] /docs/workflow/dynamic-task-tree-protocol.md:229 恢复时优先从 runtime store 读取非终态树与节点；runtime 不可用时从项目导出副本重建。若节点绑定 ADE run，查询共享 ADE runtime 的 canonical / authority 状态。恢复结果由 CEOChiefOfStaff 决定继续、回退、重新路由或升级。
+- [O1] /docs/workflow/dynamic-task-tree-protocol.md:287 TriLC 与 TriMC 使用同一共享 Trees / ADE runtime 合同和状态机：两域同步时由 `homeDomain / writeAuthority / version` 确定唯一写主，禁止双活写入。除本地与服务域特殊 adapter 外，Agent loop、Skill、DCE、
+- [O1] /docs/workflow/weekly-plane-shift-sop.md:4 > ADE 模式：Agent plans → Deterministic CLI executes → Agent closes
+- [O1] /docs/workflow/tree-nodes-export.json:587 "action": "Phase 1：实现共享 ADE runtime，包括 orchestrator、phase runner、DCE registry、Verify、Close finalizer、checkpoint/retry/lease/recovery policy 和 in-memor
+- [O1] /docs/workflow/tree-nodes-export.json:627 "action": "Phase 5 协议门：按 TriCompany Trees v0.4 公司真源确认项目 adapter、ADE 投影字段、节点终态映射与 CAO 治理签核；不允许 ADE runtime 自动创建组织节点。",
+- [O1] /docs/execution/fade-instances-retrospective.md:56 - **节点收口报告**已接线：ADE 协议 §2.7（v1.3.0 增补）+ BRIEF_V2 铁律（下一 tick 生效）+ 本条目列 006 补齐项。
+- [O1] /docs/execution/tricade-implementation-playbook.md:58 5. **全程 ADE 模式**——所有流程（公司开张/雇佣/建项目/分员工/建模块/周平面）经 TriPilot 或 TriLC chat 任一入口，由 agent 引导，按 ADE（Agent → CLI → Agent）标准化严格执行，保证每次执行模板化一致
+- [O1] /docs/execution/tricade-implementation-playbook.md:277 - **ADE 模式**：Agent plans → Deterministic CLI executes → Agent closes——保证周平面创建/平移的确定性和准确性
+- [O1] /docs/registry/company-governance-state.md:129 - TriLC 与 TriMC 应消费同一共享 Trees / ADE runtime 合同；本地域和服务域只保留 adapter 差异，并通过 run authority 防止双活写入。
+- [O1] /docs/product/todo/tricompany-pluggable-module-ux.md:139 | 治理文档 | **Phase 2**：注入 CompanyGovernanceRegistry、授权矩阵、ADE 协议到 agent context |
+- [O1] /docs/product/todo/tricompany-pluggable-module-ux.md:196 #### 4.3 ADE 协议作为默认行为
+- [O1] /docs/product/todo/tricompany-pluggable-module-ux.md:206 - 当 TriCompany 启用 **且** ADE 协议可用时，AgentTool 的 sub-agent 应优先走 ADE 路由（带决策权限、审批链），而非直接 spawn
+
+### O2（2 处）
+
+- [O2] /docs/workflow/weekly-plane-shift-sop.md:92 流程 (完整 ADE 五段闭环):
+- [O2] /docs/execution/tricade-implementation-playbook.md:360 | `REQ-20260806-020` | **完整 ADE 五段闭环**（CEO 裁决）——周平面迁移补齐：① event 触发（已实现 cron）② agent plan skill（tri-weekly-shift 规划 skill）③ cli 执行（已实现 weekly_plane_shi
+
+### REF（13 处）
+
+- [REF] /docs/tmv-whitepaper.md:1321 - FADE（Full-cycle ADE）：完整周期 ADE（Agentic Deterministic Execution，智能化确定性执行的 agent 全生命周期执行协议）的成熟实例徽章——十段生命周期（事件→runId→Qualify→Plan→DCE→Verify→Score→Close
+- [REF] /docs/workflow/chief-of-staff-rd-orchestration.md:67 - 自动化测试（按用例）：路由 **TestEngineer（小柯）**，按 **ADE 模式**执行（Agent 选用例 → CLI 执行 `pytest --json-report` → Agent 读报告判断门禁）。细则见 `docs/engineering/ade-pattern-spec.
+- [REF] /docs/workflow/chief-of-staff-rd-orchestration.md:68 - 自动化部署（按步骤）：路由 **TriDeployer（小布）**，按 **ADE 模式**执行（Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口）。细则见 `docs/engineering/ade-pattern-spec.md` §六。⚠️ TriDeploy
+- [REF] /docs/execution/fade-instances-retrospective.md:26 十段依据 ade-pattern-spec §一生命周期。●=有真实工件 ◐=部分 △=缺 ▽=不适用
+- [REF] /docs/execution/fade-instances-retrospective.md:64 | fade-protocol-spec（原 ade-pattern-spec）§2.7 新增节点收口报告合同 | 立法 | ✅ 本次（v1.3.0） |
+- [REF] /docs/execution/fade-instances-retrospective.md:80 **裁定（ade-pattern-spec v1.4.0 §2.8）**：
+- [REF] /docs/execution/fade-instances-retrospective.md:89 CEO 裁定"没有 ADE 了"：FADE（Full-cycle Agentic Deterministic Execution）升为协议本体（泛化层=段合同+不变量+实现绑定），FADE-XXX 为协议实例的具体实现。本文件 §五 回填动作表中的 ade-pattern-spec 引用已迁移至 f
+- [REF] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:15 | ADE 定义 | Development Environment + Delegation Engine | **Agent plans → Deterministic CLI executes → Agent closes**（`ade-pattern-spec.md` v1.2），Deleg
+- [REF] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:312 CEO 提供的正式定义（`TriCompany/docs/engineering/ade-pattern-spec.md` v1.2）：
+- [REF] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:322 | **ADE-1** | Agent plans → Deterministic CLI executes → Agent closes | `ade-pattern-spec.md` v1.2 | ✅ 已实现（7 CLI） |
+- [REF] /docs/execution/knowledge-injection-spec.md:14 上位规范：[TriCompany ADE 模式规范](../../TriCompany/docs/engineering/ade-pattern-spec.md) + [ade-consolidation-proposal.md](../../TriCompany/docs/engineering/
+- [REF] /docs/execution/candidate-staffing-fade.md:13 上位规范：[TriCompany ADE 模式规范 §1.1](../../TriCompany/docs/engineering/ade-pattern-spec.md)（FADE = Full-cycle ADE）
+- [REF] /docs/execution/2026-08-24/mmc-host-driver-design-draft.md:182 方向判断：**灌入是"合同 → 渲染位"的单向流，fleet 侧永远是 published copy**。与 CLAUDE.md 真源序一致（source wins；frozen source stale 时报告而不静默覆盖）。白皮书 FADE 词条的"经 FADE 发布线灌入宿主"在本阶段的工程含
+
+### OH（67 处）
+
+- [OH] /docs/engineering/STATE.md:49 - 项目真源文档同步已落地 `source_publish_check --project-docs` DCE、manifest、安全门与 43 项回归；完整 ADE 的事件触发、持久 run/checkpoint、Plan / Close Skill、Close CLI、Signal 与恢复 wo
+- [OH] /docs/engineering/STATE.md:50 - 已完成 ADE 行业关键词提取、TriLC / TriMC / Trees 模块摸底、全生命周期蓝图与 [TriLC / TriMC 共享 Runtime Parity 决策](trilc-trimc-runtime-parity.md)，目标边界为“一套协议、两个 profile、TriLC/
+- [OH] /docs/engineering/STATE.md:51 - CPO / CTO 岗位实例已完成 [ADE 与 TriLC 当前实现差距评估](ade-trilc-current-gap-assessment.md)：完整 ADE 开工 FREEZE；TriLC 当前是共享 Agent loop + 类 Claude Code 基础组件集合，不是 dura
+- [OH] /docs/engineering/STATE.md:76 - 由 CEO 确认 [ADE 全生命周期实现蓝图](ade-full-lifecycle-implementation-plan.md) 的 Phase -1、Phase 0-2 local-first 范围；先关闭 TriLC P0，再通过 TriDev 启动共享 contracts、SQLit
+- [OH] /docs/engineering/ROADMAP.md:5 状态：新增 ADE 全生命周期实施路线
+- [OH] /docs/engineering/ROADMAP.md:47 ## Wave 5：ADE 全生命周期
+- [OH] /docs/engineering/ROADMAP.md:51 CPO / CTO 对 TriLC 代码审计后追加裁决：完整 ADE 开工 `FREEZE`，先完成 P0 事实基线修复，再推进单项目、单定义、TriLC 单写主的 `runtime-owned-durable` MVP。
+- [OH] /docs/engineering/ROADMAP.md:55 1. 在 `@trimetaverse/agent-core` 落共享 ADE contracts、完整 orchestrator、Skill/DCE/Close runtime 与测试向量。
+- [OH] /docs/engineering/ROADMAP.md:56 2. 优先复用 TriLC 已有类 Claude Code Agent loop、SkillTool、permissions、cron、HITL 和本地工具，完成首个 SQLite 本地域 ADE Host。
+- [OH] /docs/engineering/ROADMAP.md:59 5. 由 TriCompany Trees v0.4 公司协议投影 ADE run，各项目只维护实例 adapter。
+- [OH] /docs/engineering/ROADMAP.md:64 - [ADE 生命周期行业模式联审](ade-lifecycle-industry-review.md)
+- [OH] /docs/engineering/ROADMAP.md:65 - [ADE 与 TriLC 当前实现差距评估](ade-trilc-current-gap-assessment.md)
+- [OH] /docs/engineering/ROADMAP.md:66 - [ADE 全生命周期实现蓝图](ade-full-lifecycle-implementation-plan.md)
+- [OH] /docs/engineering/ROADMAP.md:69 进入实现前置条件：CEO 确认首期 local-first 范围、完成 TriLC P0 基线、CAO 对 Trees v0.4 公司真源补签，并以 `project-source-doc-sync@1.0.0` 作为首个 ADE definition。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:21 - 项目实例、宿主运行时与 ADE run 的引用关系。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:83 | `ade_run_id` | 可选 ADE run 引用 |
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:85 | `ade_terminal_status` | 可选 ADE 终态投影 |
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:86 | `ade_evidence_ref` | 可选 ADE close evidence 引用 |
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:140 ADE 内部的 `PLANNING / EXECUTING / VERIFYING / CLOSING`、checkpoint、attempt、lease 和 signal 不进入 Trees 状态机。Trees 只保留组织投影。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:153 ADE 投影约束：
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:156 - ADE `FROZEN` 默认不自动改变组织节点状态，由 CEOChiefOfStaff 判断继续 `in_progress` 还是升级。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:157 - ADE `ESCALATED` 可建议节点转 `escalated`，但组织分支仍由 CEOChiefOfStaff 创建。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:158 - ADE `RETRY` 不改变 Trees 状态。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:244 ## 9. ADE 与 Trees
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:246 ADE 是执行生命周期协议，Trees 是组织任务协议。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:251 -> ADE terminal / close evidence
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:255 Trees 不创建 ADE 内部 checkpoint；ADE 也不擅自创建组织节点。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:262 | ADE | Agent plans → Deterministic CLI executes + Agent closes |
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:281 - ADE run 引用。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:297 5. ADE 节点满足终态投影约束。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:318 - 数据模型、runtime parity、恢复与 ADE 映射：CTO 复核。
+- [OH] /docs/workflow/tree-nodes-export.json:536 "title": "ADE 全生命周期：TriLC 基线修复 -> Local Durable MVP -> TriMC Parity -> 双域同步 -> Trees -> 生产加固",
+- [OH] /docs/workflow/tree-nodes-export.json:547 "action": "完成 ADE 行业模式研究、TriLC/TriMC/Trees 摸底、CPO/CTO TriLC 实码审计和公司级真源收口；形成完整蓝图、差距评估、runtime parity 决策与 Trees v0.4 公司协议。",
+- [OH] /docs/workflow/tree-nodes-export.json:557 "action": "提交 CEO 范围确认：是否批准 Phase -1、Phase 0-2 作为首个 local-first 开发范围。完整 ADE、双域同步、Trees projector 继续 FREEZE；确认后再创建 TriDev run 与实施子树。",
+- [OH] /docs/workflow/tree-nodes-export.json:577 "action": "Phase 0：在 @trimetaverse/agent-core 定义 ADE 状态机、Plan/Close/DCE/Signal/checkpoint/authority schema、幂等规则和共享 conformance vectors。",
+- [OH] /docs/workflow/tree-nodes-export.json:637 "action": "Phase 5 实现门：TriLC/TriMC 共用 tree projector 接口，升级 TriMetaverse tree export/validator，验证 ADE APPROVED 可投影 done 且投影可从 authority run 重建。",
+- [OH] /docs/workflow/tree-nodes-export.json:677 "action": "公司级收口：核对 Trees、周工作平面、TriDev evidence、CPO 产品验收、CTO 技术签核和 CEO 保留事项，形成 ADE 正式交付结论。",
+- [OH] /docs/workflow/README.md:16 - [动态任务树协议](dynamic-task-tree-protocol.md)：公司员工跨项目任务树的角色、状态、信号、ADE 投影、持久化与恢复真源。
+- [OH] /docs/workflow/README.md:17 - [项目真源文档同步 ADE](project-source-document-sync-ade.md)：公司真源到项目摘要 / 副本的 DCE 与 lifecycle 边界。
+- [OH] /docs/execution/init-to-collab-design.md:228 | 周平面迁移链（r1-2） | TriMC cron job weekly-plane-shift：周日 23:00 Asia/Singapore 自然触发（run 兜底），五段 ADE 链 fleet 身份执行；两期全真实演练通过（REHEARSAL-20260813-001/002），无痕回退
+- [OH] /docs/execution/module-cooperation-plan.md:117 → 建项目/模块/分配员工（L2，ADE）→ 运营循环（L0 入口 → L1 daemon → L3 模型+计费）
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:4 > 协同评估：小狄（CTO，十件套审计 + `.claude/instructions/` 规划）+ 小乔（CPO，ADE 命名重评估 / 区块链占位设计）
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:308 ## 五、ADE 命名决议 + 周平面自动化
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:310 ### 5.1 ADE 正式定义
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:314 > **ADE = Agent plans → Deterministic CLI executes → Agent closes**
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:318 ### 5.2 三个 ADE 含义（仅 ADE-1 是正式定义）
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:323 | **ADE-2** | Agent Development Environment（产品工具链） | v2 方案（前任 CPO） | ❌ 从未独立实现 |
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:324 | **ADE-3** | Agent Delegation Engine（运行时委托协议） | `tricompany-pluggable-module-ux.md` §4.3 | 🔜 Phase 2 规划 |
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:326 v2 方案中的"保持 ADE 不变"裁定基于错误前提——当时讨论的是 ADE-2 + ADE-3，未引用正式规范。
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:334 | 执行模式 | **ADE**（不变） | 正式规范 v1.2、17 文件引用、7 CLI 实现 |
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:341 ### 5.4 周平面与 ADE 的关系
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:343 周平面自动化是 ADE 执行模式的上层用例：Agent（小贾）plan → Deterministic CLI（`weekly_plane.py`）executes → Agent closes。归属 TriLC Cron/Heartbeat 基础设施调度。
+- [OH] /docs/execution/v0.9.x-dual-track-tricompany-plan.md:535 | 2 | ADE 命名 | **ADE 不变 + ADP**（Agent Delegation Protocol）。ADE = Agent plans → Deterministic CLI executes → Agent closes | 磨人 |
+- [OH] /docs/execution/tmv-fade-reading-map.md:40 │   ├─ ★ TriCompany/docs/engineering/fade-protocol-spec.md v2.0.0〔协议规范·ADE 退役重构版〕
+- [OH] /docs/execution/tricade-implementation-playbook.md:62 ## 一、安装与初始化（ADE 引导）
+- [OH] /docs/execution/tricade-implementation-playbook.md:143 ## 二、项目创建（ADE 引导）
+- [OH] /docs/execution/tricade-implementation-playbook.md:200 | 9 | 周工作平面 | 当前周目录 + OP JSON（ADE 方式创建） |
+- [OH] /docs/execution/tricade-implementation-playbook.md:266 ## 五、周工作流（ADE 方式创建）
+- [OH] /docs/execution/tricade-implementation-playbook.md:268 ### 5.1 周工作平面（第一真源，ADE 执行）
+- [OH] /docs/execution/tricade-implementation-playbook.md:405 | ADE | Agent → Deterministic CLI → Agent（模板化执行模式） |
+- [OH] /docs/execution/tricade-implementation-playbook.md:415 | 周工作平面 | 项目周任务树（ISO 周历对齐，ADE 创建） |
+- [OH] /docs/execution/tricade-implementation-playbook.md:419 ## 附录 B：ADE 执行清单（所有流程通用）
+- [OH] /docs/product/todo/tricompany-pluggable-module-ux.md:198 **FREEZE**：Phase 1 不接入。ADE（Agent Delegation Engine / 员工委托协议）是 Phase 2 内容。
+- [OH] /docs/product/todo/tricompany-pluggable-module-ux.md:201 - tree-op 明确标注 tricade-4 的 next_agent 为 null（Phase 1 收口），ADE 上岗属于 Phase 2
+- [OH] /docs/product/todo/tricompany-pluggable-module-ux.md:202 - ADE 需要完整的员工间委托协议、决策路由、冲突仲裁——当前 AgentTool 只实现了单向 spawn，不是员工间双向委托
+- [OH] /docs/product/todo/tricompany-pluggable-module-ux.md:207 - ADE 可提升为系统级行为：当检测到需要跨角色决策时（如 CPO+CTO 联合审批），自动触发 ADE 多员工协作
+- [OH] /docs/product/todo/tricompany-pluggable-module-ux.md:220 | EmployeeRegistry / EmployeeScheduler | low | Phase A 静态加载，动态调度未实现 → 影响 cron job 和 ADE 接入时机 |
+
+### O3（6 处）
+
+- [O3] /docs/workflow/dynamic-task-tree-protocol.md:325 - V0.4（2026-08-07）：当前公司级基线；ADE V0.4 映射
+- [O3] /docs/execution/fade-instances-retrospective.md:9 - 立制依据: CEO 2026-08-27——前五实例早于四模块架构（TriMMC/TriMLC/TriRMC/TriRLC），严格意义上不标准；以 006 为最标准样本，六实例横断反向补充实例规范与 ADE 协议，此后所有标准化任务循此可靠执行
+- [O3] /docs/execution/fade-instances-retrospective.md:41 > **权威层级（联审 CPO-F1 裁定）**：本节为提炼依据，非规范本体——强制力以 ade-pattern-spec（§2.7/§2.8 及其升格件：第 1/5 原则/6/7 条）与 profile 限定为准；第 3 条（spawn 契约）属 CC 编排实例层实现细节。适用范围：**自 202
+- [O3] /docs/execution/tricompany-claude-host-chain-gap-archive.md:13 核对结论：**现状配套为 Copilot 单宿主视图；差异已被 2026-08-19 定稿的 ADE 整合提案完整覆盖**。本文档只归档差异并给出引用注意，不新增方案、不替代任何规划文档。
+- [O3] /docs/execution/tricompany-claude-host-chain-gap-archive.md:17 - 规划真源：`TriCompany/docs/engineering/ade-consolidation-proposal.md` v1.0（2026-08-19，CEO 已采纳，待分阶段执行；syncMode follow-spec 随 `ade-pattern-spec.md` 联动发布）
+- [O3] /docs/registry/code-state.md:74 - **ADE 技术风险登记（2026-08-20，CTO 终审）**：① spec §2.5「权限」校验载体=宿主层（TriLC/Agent loop permission 系统），CLI 层本轮未实现（无权威身份源，硬造 --actor 是假权限门）；② 试卷阈值设计为实例责任（total_ma
+
+### O4（1 处）
+
+- [O4] /scripts/fade/node-report-check.py:8 校验项（十字段合同，ade-pattern-spec §2.7 v1.3.0）：
+
+### F（80 处）
+
+- [F] /TriCompany-copilot-host-assets/_archive/third-tree-20260919/knowledge/employees/test-engineer/inbox/INBOX-20260724-006.json:3 "objectId": "ADE-MODE-NOTIFY-001",
+- [F] /TriCompany-copilot-host-assets/_archive/third-tree-20260919/knowledge/employees/test-engineer/inbox/INBOX-20260724-006.json:17 "pattern": "ADE",
+- [F] /TriCompany-copilot-host-assets/_archive/third-tree-20260919/knowledge/roles/tri-deployer/inbox/INBOX-20260724-001.json:3 "objectId": "ADE-MODE-NOTIFY-002",
+- [F] /TriCompany-copilot-host-assets/_archive/third-tree-20260919/knowledge/roles/tri-deployer/inbox/INBOX-20260724-001.json:22 "pattern": "ADE",
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:71 # Claude Code host face (ADE-B): the claude host itself is exempted via its
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:76 ".claude/agents/",          # ADE-B: Claude Code host face live entry agents
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:105 # -- ADE-B multi-host render registry (CEO 2026-08-19 定调, §三 ADE-B) ----------
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:133 """Single host render template registration (ADE-B)."""
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:267 ADE_PROTOCOL: str = "ade-report"
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:268 ADE_VERSION: str = "1.0"
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:269 ADE_SCOPES: tuple[str, ...] = ("sync", "project-docs", "publish-agents")
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:272 # ADE_ACTIONS, and of its scope's allowed subset (ADE_ACTIONS_PER_SCOPE).
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:275 ADE_ACTIONS: frozenset[str] = frozenset({
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:293 ADE_ACTIONS_PER_SCOPE: dict[str, frozenset[str]] = {
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:307 # it stays out of ADE_SCOPES (spec §2.2 business scopes) but reuses the
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:408 derived_identical: int = 0  # ADE-B render: live == render(source+template)
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:409 derived_drift: int = 0      # ADE-B render: live != render(source+template)
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:843 ADE-B multi-host: the sanctioned landing zone is host-specific
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:872 # the ADE-B claude face has no sanctioned binding-profiles writer).
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:889 # ADE-B: multi-host render pipeline (CEO 2026-08-19 定调)
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1107 ADE-B: the payload is *rendered* (source + host template) unless the
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1363 ADE-B: the check runs against the *final write target* (after host
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1396 # ── ADE phase-0 fix 2 + ADE-B: whitelist ∩ protected zone = ∅ ─────────
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1537 # ADE-B: the report target is the final write target (host-derived),
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1588 "protocol": ADE_PROTOCOL,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1589 "version": ADE_VERSION,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2052 "protocol": ADE_PROTOCOL,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2053 "version": ADE_VERSION,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2225 "protocol": ADE_PROTOCOL,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2226 "version": ADE_VERSION,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2286 "protocol": ADE_PROTOCOL,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2287 "version": ADE_VERSION,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2378 "protocol": ADE_PROTOCOL,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2379 "version": ADE_VERSION,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2513 if report_data.get("protocol") == ADE_PROTOCOL and "scope" in report_data:
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2520 if isinstance(r, dict) and r.get("protocol") == ADE_PROTOCOL
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3094 help="ADE-B target host face for --publish-agents: 'copilot' publishes "
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3978 # 与 close lifecycle scope 同构，不进 ADE_SCOPES 三业务域）。
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:4379 "protocol": ADE_PROTOCOL,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:4380 "version": ADE_VERSION,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/ade_envelope.py:20 # Must stay in sync with source_publish_check.ADE_PROTOCOL; duplicated here
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/ade_envelope.py:22 ADE_PROTOCOL: str = "ade-report"
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/ade_envelope.py:42 if data.get("protocol") == ADE_PROTOCOL and data.get("scope") == scope:
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/ade_envelope.py:50 and report.get("protocol") == ADE_PROTOCOL
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1559 ADE_ACTIONS, ADE_ACTIONS_PER_SCOPE,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1565 item["action"], ADE_ACTIONS,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1569 item["action"], ADE_ACTIONS_PER_SCOPE[env["scope"]],
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1576 ADE_ACTIONS, ADE_ACTIONS_PER_SCOPE, ADE_LIFECYCLE_SCOPES, ADE_SCOPES,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1578 self.assertEqual(set(ADE_SCOPES), {"sync", "project-docs", "publish-agents"})
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1579 for scope in ADE_SCOPES:
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1581 ADE_ACTIONS_PER_SCOPE[scope].issubset(ADE_ACTIONS),
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1585 "error", ADE_ACTIONS_PER_SCOPE[scope],
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1591 self.assertIn("closed", ADE_ACTIONS)
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1594 ADE_ACTIONS_PER_SCOPE[scope].issubset(ADE_ACTIONS),
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1598 "error", ADE_ACTIONS_PER_SCOPE[scope],
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:2555 # ── ADE-B: multi-host render tests (CEO 2026-08-19 定调) ──────────────────────
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:2559 """ADE-B multi-host render unit tests (source + host template → render).
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:3089 """derived_identical / derived_drift 进 ADE_ACTIONS 与 publish-agents 域子集。"""
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:3091 ADE_ACTIONS, ADE_ACTIONS_PER_SCOPE,
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:3093 self.assertIn("derived_identical", ADE_ACTIONS)
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:3094 self.assertIn("derived_drift", ADE_ACTIONS)
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:3096 "derived_identical", ADE_ACTIONS_PER_SCOPE["publish-agents"],
+- [F] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:3099 "derived_drift", ADE_ACTIONS_PER_SCOPE["publish-agents"],
+- [F] /scripts/gen_tutorial_trees.py:70 W1("撰写 TriCompany/docs/training/fade-004-employee-deep-dive.md：FADE-004 员工域深度教程。①staffing 三端点逐个拆解（roster/onboard/decide，src/company/staffing.ts file:l
+- [F] /scripts/gen_tutorial_trees.py:81 W1("撰写 TriCompany/docs/training/fade-005-roster-gating-deep-dive.md：FADE-005 号深度解读。①fade-005-roster-gating-spec.md 逐条解读（三处门禁/非在岗语义/兼容性表）②编号勘误史（为何无独立 F
+- [F] /docs/execution/fade-instances-retrospective.md:8 - 上位规范迁移注记（2026-08-28）：ade-pattern-spec.md 已重构为 **fade-protocol-spec.md v2.0.0+**（ADE 概念退役，FADE 升为协议本体）；本文件内 ADE/runId 表述为历史叙事与实例层口径
+- [F] /docs/execution/fade-instances-retrospective.md:87 ## 八、ADE 概念退役记录（2026-08-28，v2.0.0 架构重构）
+- [F] /docs/execution/fade-005-roster-gating-spec.md:3 > **编号勘误（2026-08-21，FADE-LEFTOVER 批 2）**：本规范是 FADE-ASSESS-20260819-005 工作包产物，编号已并入 **FADE-004（员工域 ADE-B）**——登记册（fade-registry.md）无独立 FADE-005 条目，整合提案明
+- [F] /docs/execution/fade-005-roster-gating-spec.md:16 上位规范：[TriCompany ADE 模式规范 §1.1](../../TriCompany/docs/engineering/ade-pattern-spec.md) + [ade-consolidation-proposal.md](../../TriCompany/docs/enginee
+- [F] /docs/execution/tricompany-claude-host-chain-gap-archive.md:19 - §三 ADE-B 工作包「多宿主统一渲染模型」：适用范围 = TriCompany 员工发布到宿主侧（Copilot-host 面 `.github/agents/` / Claude Code 面 `.claude/agents/`）——源单份 + 每宿主渲染模板 → 渲染，两宿主面成为 co
+- [F] /docs/execution/tricompany-claude-host-chain-gap-archive.md:21 - binding profile 收敛：定性为「发布绑定关系的派生记录」，禁人工编辑、由生成管线重建（与 D-07 live entry 派生壳纪律同构），并入 ADE-B 阶段 1/2（W34 待办 FADE-ASSESS-20260819-004）
+- [F] /docs/execution/tricompany-claude-host-chain-gap-archive.md:37 给 ADE-B 阶段 1/2 执行者与后续引用者的衔接提醒（仅提示，不提前执行）：
+- [F] /docs/execution/tricompany-claude-host-chain-gap-archive.md:44 6. 已登记的配套待办：FADE-ASSESS-20260819-003（ADE-B 知识注入消费链路）、FADE-ASSESS-20260819-004（binding profile 派生记录收敛）已入 W34 待办，与渲染改造/员工域试卷同批排期（`TriMetaverse/docs/work
+- [F] /docs/execution/tricompany-claude-host-chain-gap-archive.md:48 差异不是遗漏，而是已被 2026-08-19 定稿的 ADE 整合提案（ADE-B 多宿主渲染模型）规划覆盖的过渡态；本档仅作引用注意，不构成执行指令。
+- [F] /docs/execution/candidate-staffing-fade.md:15 整合归属（2026-08-19）：本规范即 **ADE-B 员工域**（[ade-consolidation-proposal.md](../../TriCompany/docs/engineering/ade-consolidation-proposal.md) §三 ADE-B）——上岗链 + 
+- [F] /docs/execution/lg-024-session-contract-upgrade-plan.md:7 - 事实基准（2026-09-02 实勘）：源侧合成件 agent.md=121 行 **13 节全量治理结构**（source-agents/<role>/ 真源）；现役 session 手作件=**8 件 877 行在 `.claude/hub/`（untracked）**，单件约 113 行，
+- [F] /docs/execution/lg-024-session-contract-upgrade-plan.md:25 | derived 对拍 | `--check` 模式对拍现役产物，复用 ADE-B derived_identical/drift 词表，drift 即 rc=1 | ADE-B 先例直用 |
+- [F] /docs/execution/lg-028-content-routing-review.md:32 **防直改闸的技术形态（三件套，本役全部有在役先例）**：①definition 驱动（手落键被再生成取代，fd8db82/M0d 双源教训固化）；②派生一致校验（derived_identical/drift，ADE-B 词表+LG-024 批 0 golden）；③渲染物禁手编辑（LG-023 
+- [F] /docs/registry/code-state.md:73 - **ADE 整合阶段 0/1/2 代码落地（2026-08-20，CEO 启动，编排层收口）**：阶段 0 `004a506`（employee_host_publish 默认 dry-run `execute = args.execute`；`--publish-agents` 白名单∩禁区=
+- [F] /docs/registry/code-state.md:76 - **ADE-B 渲染改造落地（2026-08-20，CEO 启动，commit `4ce113d`）**：`--host {copilot|claude}`（默认 copilot 兼容现状）——HOST_RENDER_REGISTRY 宿主注册表（frontmatter 形状映射/目标派生/工具
+
+### FLAG（1 处）
+
+- [FLAG] /.github/prompts/项目级 AI 共学周记.prompt.md:23 - [共学周记记录 ADE 规范](../../docs/workflow/operating-records/项目级%20AI%20共学周记/ade-journal-recording-spec.md)
+
+### LANE（167 处）
+
+- [LANE] /output/TriMetaverse-Desktop-v0.4.2-r12-windows/trilc/contracts/deployment-engineer/deployment-engineer.contract.yaml:27 - "禁止跳过 ADE 自检步骤或伪造自检结果"
+- [LANE] /output/TriMetaverse-Desktop-v0.4.2-r12-windows/trilc/contracts/deployment-engineer/soul.agent.md:11 - **自动化思维**：能交给脚本的绝不手动——遵循 ADE 模式（Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口）。
+- [LANE] /output/TriMetaverse-Desktop-v0.4.2-r12-windows/trilc/contracts/deployment-engineer/colleagues-social.agent.md:22 - **工作名**：小布（已在 orchestration 文档和 ADE spec 中预定义，2026-08-01 正式上岗）
+- [LANE] /output/TriMetaverse-Desktop-v0.4.2-r12-windows/trilc/contracts/deployment-engineer/agent-body.agent.md:3 description: "适用场景：自动化部署、ADE 模式执行、发布流水线、环境管理、回滚方案、部署验证、CI/CD 配置、构建产物管理。"
+- [LANE] /output/TriMetaverse-Desktop-v0.4.2-r12-windows/trilc/contracts/deployment-engineer/agent-body.agent.md:35 1. 按照 ADE 模式执行部署：Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口。
+- [LANE] /output/TriMetaverse-Desktop-v0.4.3-r12-windows/trilc/contracts/deployment-engineer/deployment-engineer.contract.yaml:27 - "禁止跳过 ADE 自检步骤或伪造自检结果"
+- [LANE] /output/TriMetaverse-Desktop-v0.4.3-r12-windows/trilc/contracts/deployment-engineer/soul.agent.md:11 - **自动化思维**：能交给脚本的绝不手动——遵循 ADE 模式（Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口）。
+- [LANE] /output/TriMetaverse-Desktop-v0.4.3-r12-windows/trilc/contracts/deployment-engineer/colleagues-social.agent.md:22 - **工作名**：小布（已在 orchestration 文档和 ADE spec 中预定义，2026-08-01 正式上岗）
+- [LANE] /output/TriMetaverse-Desktop-v0.4.3-r12-windows/trilc/contracts/deployment-engineer/agent-body.agent.md:3 description: "适用场景：自动化部署、ADE 模式执行、发布流水线、环境管理、回滚方案、部署验证、CI/CD 配置、构建产物管理。"
+- [LANE] /output/TriMetaverse-Desktop-v0.4.3-r12-windows/trilc/contracts/deployment-engineer/agent-body.agent.md:35 1. 按照 ADE 模式执行部署：Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口。
+- [LANE] /output/TriMetaverse-Desktop-v0.4.4-r14-windows/trilc/contracts/deployment-engineer/deployment-engineer.contract.yaml:10 description: 适用场景：自动化部署、ADE 模式执行、发布流水线、环境管理、回滚方案、部署验证、CI/CD 配置、构建产物管理。
+- [LANE] /output/TriMetaverse-Desktop-v0.4.4-r14-windows/trilc/contracts/deployment-engineer/deployment-engineer.contract.yaml:20 - description: 按照 ADE 模式执行部署：Agent 规划步骤、CLI 逐步执行、每步自检、Agent 收口
+- [LANE] /output/TriMetaverse-Desktop-v0.4.4-r14-windows/trilc/contracts/deployment-engineer/deployment-engineer.contract.yaml:41 - 禁止跳过 ADE 自检步骤或伪造自检结果
+- [LANE] /output/TriMetaverse-Desktop-v0.4.4-r14-windows/trilc/contracts/deployment-engineer/soul.agent.md:11 - **自动化思维**：能交给脚本的绝不手动——遵循 ADE 模式（Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口）。
+- [LANE] /output/TriMetaverse-Desktop-v0.4.4-r14-windows/trilc/contracts/deployment-engineer/colleagues-social.agent.md:22 - **工作名**：小布（已在 orchestration 文档和 ADE spec 中预定义，2026-08-01 正式上岗）
+- [LANE] /output/TriMetaverse-Desktop-v0.4.4-r14-windows/trilc/contracts/deployment-engineer/agent-body.agent.md:3 description: "适用场景：自动化部署、ADE 模式执行、发布流水线、环境管理、回滚方案、部署验证、CI/CD 配置、构建产物管理。"
+- [LANE] /output/TriMetaverse-Desktop-v0.4.4-r14-windows/trilc/contracts/deployment-engineer/agent-body.agent.md:35 1. 按照 ADE 模式执行部署：Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口。
+- [LANE] /TriCompany-copilot-host-assets/host-object-manifest.json:845 "CustomerSuccessOfficer (小成) is onboarded as a live host agent in the current Copilot-host phase per W33 ADE onboarding (w33-3).",
+- [LANE] /TriCompany-copilot-host-assets/host-object-manifest.json:1231 "DeploymentEngineer owns automated deployment, ADE execution, release pipelines, and environment management; reports to CTO (小狄).",
+- [LANE] /TriCompany-copilot-host-assets/knowledge/roles/senior-deployment-engineer/README.md:11 Role-level reusable automated deployment, ADE execution, release pipeline, environment management, rollback plan, and deployment verification knowledg
+- [LANE] /TriCompany-copilot-host-assets/_archive/third-tree-20260919/knowledge/employees/test-engineer/inbox/INBOX-20260724-006.json:10 "summary": "ADE 模式正式生效通知：自即日起，所有自动化测试（按用例）任务均按 ADE 模式执行——Agent 选用例 → CLI 执行 pytest --json-report → Agent 读报告判断门禁。你不再直接执行有副作用的写操作，测试执行统一通过 CLI 完成并提供结构化
+- [LANE] /TriCompany-copilot-host-assets/_archive/third-tree-20260919/knowledge/employees/test-engineer/inbox/INBOX-20260724-006.json:20 "specRef": "TriCompany/docs/engineering/ade-pattern-spec.md v1.2 §六"
+- [LANE] /TriCompany-copilot-host-assets/_archive/third-tree-20260919/knowledge/roles/tri-deployer/inbox/INBOX-20260724-001.json:10 "summary": "⚠️ 预置通知（待上岗生效）：自上岗之日起，所有自动化部署（按步骤）任务均按 ADE 模式执行——Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口。部署执行统一通过 CLI 完成并提供逐步骤结构化自检报告。此通知在 CHO 完成 TriDeplo
+- [LANE] /TriCompany-copilot-host-assets/_archive/third-tree-20260919/knowledge/roles/tri-deployer/inbox/INBOX-20260724-001.json:25 "specRef": "TriCompany/docs/engineering/ade-pattern-spec.md v1.2 §六"
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:93 # (ADE phase-0 fix 2: whitelist ∩ protected zone = ∅ hard check).
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:256 # -- ADE unified report contract (ADE consolidation phase 1) -------------------
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:306 # ADE phase 2: close is a lifecycle scope, not a business domain scope —
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:312 # -- ADE phase 2: lifecycle skeleton (runId / Close CLI / Score CLI) ----------
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:316 ADE_RUN_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$")
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:319 ADE_CLOSE_VERDICTS: tuple[str, ...] = ("APPROVED", "FROZEN", "ESCALATED", "RETRY")
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:322 ADE_LIFECYCLE_SCOPES: tuple[str, ...] = ("close",)
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:327 ADE_CLOSE_STATE_CLOSED: str = "CLOSED"
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:328 ADE_CLOSE_STATE_REJECTED: str = "CLOSE_REJECTED"
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:330 ADE_CLOSE_RECORD_SUFFIX: str = ".close-ade.json"
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:332 ADE_DEFAULT_DATA_DIR: str = ".ade"
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:336 ADE_SCORE_DEFAULT_THRESHOLD: float = 80.0
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:455 """ADE report for manifest-driven project truth document sync."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:486 (ADE phase 2: explicit id wins over this derivation).
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:494 fallback otherwise (ADE phase 2 work package 1).
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:497 ADE_RUN_ID_PATTERN) by the caller; here it is only trimmed.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:508 record file name) that callers can parse back — see ADE_RUN_ID_PATTERN.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:512 if not ADE_RUN_ID_PATTERN.match(run_id.strip()):
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:816 # explicitly at the resolution layer (ADE phase 1 observation item).
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:836 Reverse guard for the whitelist (ADE phase-0 fix 2): live entry publishing
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1567 """Serialize an AgentPublishReport to the unified ADE envelope contract.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1572 *run_id* is the explicit ``--run-id`` when given (ADE phase 2); it wins
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1579 # so the ADE invariant total == changed + skipped + errors holds.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1649 # them explicitly (ADE phase 1 observation item).
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1714 """Populate summary counters and ADE status from item actions."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:1743 """Run the manifest-driven project truth document ADE execution layer.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2042 """Serialize the project document ADE report to the unified envelope.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2047 *run_id* is the explicit ``--run-id`` when given (ADE phase 2).
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2142 """Serialize the --check / --sync report to the unified ADE envelope.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2149 *run_id* is the explicit ``--run-id`` when given (ADE phase 2).
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2251 Shape proposal (ADE phase 2 work package 2, 终审判定):
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2299 # ADE phase 2: Close CLI (spec §2.5 终态门)
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2303 """Resolve the ADE runtime records directory for close audit records."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2307 return source_root / ADE_DEFAULT_DATA_DIR
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2336 - verdict ∈ ADE_CLOSE_VERDICTS (terminal states, spec §8.3)
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2337 - run_id non-empty and parseable (ADE_RUN_ID_PATTERN)
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2345 if verdict not in ADE_CLOSE_VERDICTS:
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2372 scope is "close" (ADE_LIFECYCLE_SCOPES): reuses the envelope shape so
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2376 accepted = state == ADE_CLOSE_STATE_CLOSED
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2446 state=ADE_CLOSE_STATE_REJECTED,
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2452 audit_record = data_dir / f"{run_id.strip()}{ADE_CLOSE_RECORD_SUFFIX}"
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2461 state=ADE_CLOSE_STATE_REJECTED,
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2486 state=ADE_CLOSE_STATE_REJECTED,
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2497 state=ADE_CLOSE_STATE_CLOSED,
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2504 # ADE phase 2: Score CLI (spec §2.6 / 试卷模板 §三)
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2696 else ADE_SCORE_DEFAULT_THRESHOLD
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:2742 "threshold": float(threshold) if threshold is not None else ADE_SCORE_DEFAULT_THRESHOLD,
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3023 Windows), which corrupts ``ensure_ascii=False`` ADE reports for
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3024 downstream parsers. ADE reports are machine contracts — they must
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3110 # ── project truth document ADE arguments ─────────────────────────────
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3145 # ── ADE phase 2: lifecycle skeleton (runId / Close CLI / Score CLI) ───
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3149 help="Explicit ADE run id overriding the timestamp-derived default in "
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3164 choices=ADE_CLOSE_VERDICTS,
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3184 help="Directory for ADE runtime records (close terminal audit). "
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3605 # ── ADE phase 2: explicit run id validation (wins over timestamp) ──────
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3615 # ── ADE phase 2: Close CLI / Score CLI are exclusive lifecycle modes ───
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3746 # ADE phase 1: every scope serializes to one unified envelope; combined
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3751 # ── project truth document ADE mode ──────────────────────────────────
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3813 # ADE phase 0 observation item: errors (incl. protected_target_rejected)
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3864 # ADE phase 1: sync scope envelope
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3890 # ADE phase 1 rc mapping: sync execute errors also exit non-zero.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:3929 # 规范依据：ade-pattern-spec.md §8.6（检测即触发、触发与执行解耦）与 §2.4
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check.py:4277 return source_root / ADE_DEFAULT_DATA_DIR / EVENT_WATCH_AUDIT_DIRNAME
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish_validation.py:81 """CLI safety-gate tests (ADE phase-0 fix 1: default is dry-run, no writes)."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish_validation.py:108 """ADE fix 1: no --dry-run/--execute → dry-run, no files written."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish_validation.py:133 """ADE fix 1: --execute explicitly writes generated assets."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish_validation.py:154 """ADE fix 1: passing both --dry-run and --execute exits with code 2."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/ade_envelope.py:1 """ade_envelope — shared ADE envelope consumption helpers.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/ade_envelope.py:3 Single home for parsing ADE CLI output (source_publish_check and friends)
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/ade_envelope.py:7 Extracted in ADE phase 2 (work package 3) from two inline consumers:
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/ade_envelope.py:35 """Locate the *scope* envelope inside an ADE CLI output payload.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard.py:1 """employee_onboard — ADE 员工上岗 11 步流水线 CLI.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard.py:4 每一步输出标准 ADE JSON 自检报告。
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard.py:54 # ADE data types
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard.py:576 # ADE phase 1: --publish-agents emits the unified envelope (protocol
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard.py:580 # ADE phase 2: envelope parsing is shared via ade_envelope (bare
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard.py:990 ADE 员工上岗 11 步流水线 CLI。
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard.py:992 每步输出标准 ADE JSON 自检报告。
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/tree_op.py:1 """tree_op — ADE Tree 操作 CLI
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/tree_op.py:4 Agent 规划 → CLI 确定性执行 → ADE JSON 自检 → Agent 收口。
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/tree_op.py:46 # ── ADE types ──
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/tree_op.py:280 description="ADE Tree 操作 CLI",
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:487 # Unified ADE envelope contract keys
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:921 # ── TC-AP14: whitelist ∩ protected zone = ∅ hard check (ADE fix 2) ──────
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1176 """Manifest-driven project truth document ADE tests."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1418 """CLI contract tests for the project document ADE mode."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1507 # ── ADE phase 1: unified envelope contract tests ──────────────────────────────
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1511 """ADE phase 1: all three scopes share one envelope contract."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1536 # Business-domain scopes (spec §2.2) plus the ADE phase 2 lifecycle
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1574 """ADE phase 1: unified action vocabulary constants are consistent."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1588 # ADE phase 2: lifecycle scopes reuse the envelope but stay out of the
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1590 self.assertEqual(set(ADE_LIFECYCLE_SCOPES), {"close"})
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1592 for scope in ADE_LIFECYCLE_SCOPES:
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1603 """ADE phase 2: run_id is timestamp-derived, NOT deterministic.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1728 """ADE phase 1: 'C:foo' style targets are rejected by the resolvers.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1745 """ADE phase 2 work package 1: explicit --run-id wins, timestamp fallback."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1881 """ADE phase 2 work package 2: combined-run container aggregation."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:1977 """ADE phase 2 work package 3: shared consumer-side envelope helpers."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:2052 """ADE phase 2 work package 4: Close CLI (spec §2.5 终态门)."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:2071 from runtime.cognition.source_publish_check import ADE_CLOSE_RECORD_SUFFIX
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:2089 f"ade-sync-20260820T000000000000{ADE_CLOSE_RECORD_SUFFIX}"
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:2219 """ADE phase 2 work package 5: Score CLI (spec §2.6 / 试卷模板 §三)."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:4109 """批次 run_id 匹配 ADE_RUN_ID_PATTERN（文件系统安全单 token）。"""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:4110 from runtime.cognition.source_publish_check import ADE_RUN_ID_PATTERN
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/source_publish_check_validation.py:4114 self.assertRegex(env["run_id"], ADE_RUN_ID_PATTERN.pattern)
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/rule_injection.py:119 """Structured check output (ADE JSON format)."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/rule_injection.py:131 """Structured sync output (ADE JSON format)."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish.py:53 # 必须使用同一 manifest，否则两路 profile 内容/哈希不一致（ADE 自检报告失守）。
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish.py:103 "the CLI runs dry-run only (ADE safety gate: default is no write).",
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish.py:111 # Default behaviour (neither flag): dry-run (no writes) — ADE §2.4 safety gate.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish.py:160 # ── Build ADE structured self-check report ──
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish.py:186 # ADE 合同出口：强制 UTF-8（Windows 中文环境默认 GBK 会破坏 JSON）。
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish.py:198 # ── ADE helpers ──────────────────────────────────────────────────────────────
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish.py:349 # ADE phase 1: the delegation emits the unified envelope (protocol
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_host_publish.py:351 # reports container for combined runs. ADE phase 2: parsing is shared
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/weekly_plane_shift.py:3 完整 ADE 执行链：
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/weekly_plane_shift.py:12 5. 聚合 ADE JSON 写 <new_week>/.shift-ade.json
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/weekly_plane_shift.py:217 p = argparse.ArgumentParser(description="ADE weekly plane shift")
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/weekly_plane_shift.py:263 # 6. aggregate ADE JSON (operation record = ⑤ cli finalize)
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/weekly_plane_shift.py:265 "objectType": "ADE_SHIFT",
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/orchestrate_tick.py:229 ## 节点收口报告（ade-pattern-spec §2.7，v1.3.0 强制段；校验器联审 F1 立法 v1.4.1）
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/host_object_generation.py:546 role_description="Role-level reusable automated deployment, ADE execution, release pipeline, environment management, rollback plan, and deployment ver
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/host_object_generation.py:554 "DeploymentEngineer owns automated deployment, ADE execution, release pipelines, and environment management; reports to CTO (小狄).",
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/host_object_generation.py:582 "CustomerSuccessOfficer (小成) is onboarded as a live host agent in the current Copilot-host phase per W33 ADE onboarding (w33-3).",
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard_validation.py:3 Validates the 11-step onboarding pipeline against the ADE specification.
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard_validation.py:32 # ── ADE output contract tests ─────────────────────────────────────────────
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard_validation.py:35 """Verify every stage function returns ADE-compliant JSON structures."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard_validation.py:38 """StageResult.to_ade_json() must contain all required ADE fields."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/employee_onboard_validation.py:64 """OnboardReport.to_ade_json() must contain all required ADE fields."""
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/weekly_plane.py:1 """weekly_plane — ADE 周工作平面 CLI
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/weekly_plane.py:4 Agent 规划 → CLI 确定性执行 → ADE JSON 自检 → Agent 收口。
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/weekly_plane.py:37 # ── ADE types ──
+- [LANE] /TriCompany-copilot-host-assets/runtime/cognition/weekly_plane.py:402 description="ADE 周工作平面 CLI",
+- [LANE] /.github/agents/deployment-engineer.agent.md:3 description: "适用场景：自动化部署、ADE 模式执行、发布流水线、环境管理、回滚方案、部署验证、CI/CD 配置、构建产物管理。"
+- [LANE] /.github/agents/deployment-engineer.agent.md:48 1. 按照 ADE 模式执行部署：Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口。
+- [LANE] /.github/agents/deployment-engineer.agent.md:95 - **自动化思维**：能交给脚本的绝不手动——遵循 ADE 模式（Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口）。
+- [LANE] /.github/prompts/项目级 AI 共学周记.prompt.md:25 ## 执行方式（ADE 正典链路，2026-08-18 起）
+- [LANE] /.claude/agents/senior-deployment-engineer.md:3 description: "适用场景：自动化部署、ADE 模式执行、发布流水线、环境管理、回滚方案、部署验证、CI/CD 配置、构建产物管理。"
+- [LANE] /.claude/agents/senior-deployment-engineer.md:48 1. 按照 ADE 模式执行部署：Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口。
+- [LANE] /.claude/agents/senior-deployment-engineer.md:95 - **自动化思维**：能交给脚本的绝不手动——遵循 ADE 模式（Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口）。
+- [LANE] /.claude/compass/senior-deployment-engineer.session.md:43 1. 按照 ADE 模式执行部署：Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口。
+- [LANE] /.claude/compass/senior-deployment-engineer.session.md:90 - **自动化思维**：能交给脚本的绝不手动——遵循 ADE 模式（Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口）。
+- [LANE] /.claude/compass/senior-deployment-engineer.session.md:127 - **ADE 模式部署四步+部署三分法**：
+
+## TriCompany（doc face 执行域=O1/O2/REF/OH 非车道；O4=CTO 代码批窗；LANE/F/O3/FLAG 冻结）
+
+### O1（19 处）
+
+- [O1] /docs/engineering/ade-lifecycle-industry-review.md:63 这支持“一套状态机中同时装配 Skill 与 CLI”，而不是把 Skill 流程和 ADE 流程拆成互斥产品。
+- [O1] /docs/engineering/ade-lifecycle-industry-review.md:130 - 一套 `agent-core` ADE runtime。
+- [O1] /docs/engineering/ade-lifecycle-industry-review.md:168 结论：保留一套 ADE 协议和状态机，两个 profile 只改变触发者与生命周期 owner。
+- [O1] /docs/engineering/ade-lifecycle-industry-review.md:231 **APPROVE：保留一套 ADE 协议框架，提供两个生命周期 profile。**
+- [O1] /docs/engineering/ade-pattern-spec.md:6 > 术语对照：ADE 协议 → FADE 协议｜成熟实例称号 → FADE-XXX 实现｜envelope 普适强制 → 发布域参考实现｜runId（协议机制）→ 运行标识（聚合键）。
+- [O1] /docs/engineering/governance-memory-index.md:117 - note: 发布域管线操作面（ADE 规范）
+- [O1] /docs/engineering/ade-full-lifecycle-implementation-plan.md:237 | `protocol_version` | ADE 协议版本 |
+- [O1] /docs/engineering/ade-full-lifecycle-implementation-plan.md:764 - 现有 TaskController 暂保留；共享 ADE runtime 稳定后，TaskController 只作简单任务入口或 adapter，不扩成第二套 durable state machine。
+- [O1] /docs/engineering/ade-full-lifecycle-implementation-plan.md:787 - 维护 ADE 协议、profile 和 Trees 投影边界。
+- [O1] /docs/engineering/trilc-trimc-runtime-parity.md:15 TriLC 是本地域 Host，TriMC 是服务域 Host。除域特有能力外，两者应运行同一套 Agent / ADE runtime，并保持行为 parity。
+- [O1] /docs/engineering/trilc-trimc-runtime-parity.md:143 2. 扩展 `agent-core` 为完整可注入 ADE runtime。
+- [O1] /docs/engineering/ade-trilc-current-gap-assessment.md:100 公司协议已升级到 v0.4，但 TriMetaverse 当前导出仍是 v1.0 项目实例数据，存在历史状态与 delivery 完整性问题。它不能作为 ADE runtime 已接入证据。
+- [O1] /docs/engineering/ROADMAP.md:49 当前裁决：保留一套 ADE 协议，提供 `runtime-owned-durable` 与 `agent-owned-interactive` 两个 profile；当前项目真源同步只完成 DCE，不写成完整 ADE 已落地。
+- [O1] /docs/workflow/company-work-plane-principles.md:74 - **可恢复**：中断后通过 ADE runtime 的 checkpoint 机制续跑，不需从头开始
+- [O1] /docs/workflow/company-work-plane-principles.md:90 | 周平面 ↔ ADE | 周平面列出"哪些工作要走 ADE 流程"——不规定 ADE 内部参数 |
+- [O1] /docs/workflow/company-work-plane-principles.md:96 - 三条原则是周工作平面、动态任务树协议和 ADE 规范的总纲——三者各自独立演进，本文维护原则层一致性
+- [O1] /docs/workflow/dynamic-task-tree-protocol.md:229 恢复时优先从 runtime store 读取非终态树与节点；runtime 不可用时从项目导出副本重建。若节点绑定 ADE run，查询共享 ADE runtime 的 canonical / authority 状态。恢复结果由 CEOChiefOfStaff 决定继续、回退、重新路由或升级。
+- [O1] /docs/workflow/dynamic-task-tree-protocol.md:287 TriLC 与 TriMC 使用同一共享 Trees / ADE runtime 合同和状态机：两域同步时由 `homeDomain / writeAuthority / version` 确定唯一写主，禁止双活写入。除本地与服务域特殊 adapter 外，Agent loop、Skill、DCE、
+- [O1] /docs/registry/company-governance-state.md:129 - TriLC 与 TriMC 应消费同一共享 Trees / ADE runtime 合同；本地域和服务域只保留 adapter 差异，并通过 run authority 防止双活写入。
+
+### O2（1 处）
+
+- [O2] /docs/workflow/company-work-plane-principles.md:61 所有流程化、可重复的工作——构建、测试、发布、巡检、文档同步、审核——必须遵循 **ADE 完整五段闭环**：
+
+### REF（23 处）
+
+- [REF] /docs/engineering/fade-quality-lessons.md:14 用途：未来 FADE 协议（ade-pattern-spec）与 FADE 通用实例优化依据；周工作平面 FADE-STRENGTHEN-001 关联
+- [REF] /docs/engineering/fade-quality-lessons.md:58 - ade-pattern-spec §2.6 评分维度：增加"治理对齐/内容归属"语义检查维度（Score Skill 方法）
+- [REF] /docs/engineering/fade-protocol-spec.md:9 - sourceOfTruth: TriCompany/docs/engineering/fade-protocol-spec.md（**自 v2.0.0 起替代 ade-pattern-spec.md**，旧文件为重定向桩）
+- [REF] /docs/engineering/fade-protocol-spec.md:503 （v2.0.1 恢复注记：本三节在 v2.0.0 重构中误删，自 ade-pattern-spec 历史版本 e6ac7af 找回并做运行标识/FADE 术语对齐；§8.5 核心已部分被 §一 正交声明收编，保留全文以维完整性。）
+- [REF] /docs/engineering/ade-consolidation-proposal.md:11 - syncWith: docs/engineering/ade-pattern-spec.md
+- [REF] /docs/engineering/ade-consolidation-proposal.md:15 依据规范：[ade-pattern-spec.md](ade-pattern-spec.md) v1.1.3（§六 案例表、§1.1 十段三档、§2.4 安全门、§2.6 试卷—答卷—评分、§8 两 profile）
+- [REF] /docs/engineering/fade-papers/FADE-006-score-2026-08-27.json:98 "evidence_ref": "ade-pattern-spec.md v1.3.0 §2.7 + BRIEF_V2 接线",
+- [REF] /docs/engineering/fade-papers/FADE-006-score-2026-08-27.coverage.json:98 "evidence_ref": "ade-pattern-spec.md v1.3.0 §2.7 + BRIEF_V2 接线",
+- [REF] /docs/engineering/fade-papers/FADE-006-paper.json:90 "evidence_ref": "ade-pattern-spec.md v1.3.0 §2.7 + BRIEF_V2 接线",
+- [REF] /docs/workflow/chief-of-staff-rd-orchestration.md:67 - 自动化测试（按用例）：路由 **TestEngineer（小柯）**，按 **ADE 模式**执行（Agent 选用例 → CLI 执行 `pytest --json-report` → Agent 读报告判断门禁）。细则见 `docs/engineering/ade-pattern-spec.
+- [REF] /docs/workflow/chief-of-staff-rd-orchestration.md:68 - 自动化部署（按步骤）：路由 **TriDeployer（小布）**，按 **ADE 模式**执行（Agent 规划步骤 → CLI 逐步执行 → 每步自检 → Agent 收口）。细则见 `docs/engineering/ade-pattern-spec.md` §六。⚠️ TriDeploy
+- [REF] /docs/workflow/company-work-plane-principles.md:29 | 执行原则 | 所有流程化、可重复的工作必须遵循 ADE 完整五段闭环 | 程序触发 → Agent plan skill → CLI 执行 → Agent close → CLI close | `docs/engineering/ade-pattern-spec.md` v1.0.4 |
+- [REF] /docs/workflow/company-work-plane-principles.md:80 关联：`docs/engineering/ade-pattern-spec.md` v1.0.4
+- [REF] /docs/workflow/company-work-plane-principles.md:104 | `docs/engineering/ade-pattern-spec.md` v1.0.4 | 原则三的执行载体 |
+- [REF] /docs/registry/employee_onboard_stages.json:4 "ade_spec_reference": "ade-pattern-spec.md v1.0.2",
+- [REF] /docs/training/project-source-document-sync-fade-tutorial.md:14 - syncMode: follow-spec（本教程讲 FADE-002 发布域的项目真源文档同步面；工程规范真源 = `../engineering/fade-protocol-spec.md`（v2.0.0 起，替代 ade-pattern-spec.md），实例规范 = `../workfl
+- [REF] /docs/training/project-source-document-sync-fade-tutorial.md:549 1. FADE 总规范：[FADE 协议：Agent 确定性执行全生命周期规范](../engineering/fade-protocol-spec.md)（v2.0.0 起替代原 ADE 模式规范，旧路径 ade-pattern-spec.md 为重定向桩）
+- [REF] /docs/training/fade-product-guide.md:14 - syncMode: follow-spec（本教程讲 FADE 实例的使用方法与操作口径；工程规范真源 = `../engineering/fade-protocol-spec.md`（v2.0.0 起，替代 ade-pattern-spec.md），实例登记真源 = `../engineeri
+- [REF] /docs/training/fade-product-guide.md:227 - 规范真源：[FADE 协议：Agent 确定性执行全生命周期规范](../engineering/fade-protocol-spec.md)（v2.0.0 起替代原 ADE 模式规范；旧路径 ade-pattern-spec.md 为重定向桩）
+- [REF] /docs/training/fade-code-deep-dive.md:14 - syncMode: follow-spec（本教程讲 FADE 代码实现；工程规范真源 = `../engineering/fade-protocol-spec.md`（v2.0.0 起，替代 ade-pattern-spec.md），实例登记真源 = `../engineering/fade-
+- [REF] /docs/training/fade-code-deep-dive.md:313 1. 规范：[FADE 协议：Agent 确定性执行全生命周期规范](../engineering/fade-protocol-spec.md)（先读 §一、§2、§8；v2.0.0 起替代 ade-pattern-spec.md，旧路径为重定向桩）
+- [REF] /docs/training/fade-beginner-course.md:14 - syncMode: follow-spec（本教程讲 FADE（Full-cycle Agentic Deterministic Execution）整体概念；工程规范真源 = `../engineering/fade-protocol-spec.md`（v2.0.0 起，替代 ade-patt
+- [REF] /docs/training/fade-beginner-course.md:167 2. 工程规范真源：[FADE 协议：Agent 确定性执行全生命周期规范](../engineering/fade-protocol-spec.md)（v2.0.0 起替代原 ADE 模式规范；旧路径 ade-pattern-spec.md 为重定向桩）
+
+### OH（153 处）
+
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:1 # ADE 生命周期行业模式联审
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:5 状态：CPO / CTO 岗位实例已完成 TriLC 代码复核；双 profile 目标保留，完整 ADE 开工 FREEZE
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:26 3. 应保留两套 ADE，还是保留一套协议并提供两个 profile。
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:77 MCP 定义 host、client、server 之间的上下文与工具交换，但明确不规定 AI 应用如何使用 LLM 或管理上下文。它可以承载 DCE 工具调用，却不能单独替代 ADE 的触发、状态机、恢复和终态提交。
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:83 | 关键词 | 行业语义 | ADE 对应能力 |
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:87 | `runtime` | 持有 graph、状态、重试、暂停和恢复的生命周期 owner | ADE orchestrator 与 canonical run store |
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:89 | `graph` | 将 Agent、工具、条件路由、并行和终止组织成可观测节点/边 | ADE 状态机和 profile topology |
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:109 7. **观测数据不是运行真源**：timeline / replay 可投影 ADE 事件，但不能替代 canonical run store。
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:115 | 事件触发 | TriLC cron、heartbeat、local bus、event queue、`fs.watch` 经验 | 文件/Git ADE detector、统一事件 envelope、去重键 |
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:119 | checkpoint / 恢复 | TriLC session store、event queue；TriMC replay/observability | 独立 ADE run/event/checkpoint store 与 recovery worker |
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:122 | Trees | `task_trees` / `tree_nodes` 与 Git 导出 | ADE run 引用投影；不得复刻 ADE 内部状态机 |
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:128 因此 ADE 实施遵循：
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:241 - 把 `DCE` 单独称为完整 ADE。
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:243 - 把只有“tool call -> final response”、没有持久 run 与 Close CLI 的普通 agent loop 写成 durable ADE。
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:249 当前尚未实现完整 ADE 生命周期中的：
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:257 因此当前项目真源同步应标为：**DCE 已落地，ADE 生命周期设计已裁决，runtime/skill/close-cli 待实现。**
+- [OH] /docs/engineering/ade-lifecycle-industry-review.md:261 结合 TriLC、TriMC、`@trimetaverse/agent-core` 与 Trees 协议的模块落位、数据模型、API、恢复机制、测试矩阵和 Phase 0-6 门禁，统一见 [ADE 全生命周期实现蓝图](ade-full-lifecycle-implementation-plan.
+- [OH] /docs/engineering/STATE.md:49 - 项目真源文档同步已落地 `source_publish_check --project-docs` DCE、manifest、安全门与 43 项回归；完整 ADE 的事件触发、持久 run/checkpoint、Plan / Close Skill、Close CLI、Signal 与恢复 wo
+- [OH] /docs/engineering/STATE.md:50 - 已完成 ADE 行业关键词提取、TriLC / TriMC / Trees 模块摸底、全生命周期蓝图与 [TriLC / TriMC 共享 Runtime Parity 决策](trilc-trimc-runtime-parity.md)，目标边界为“一套协议、两个 profile、TriLC/
+- [OH] /docs/engineering/STATE.md:51 - CPO / CTO 岗位实例已完成 [ADE 与 TriLC 当前实现差距评估](ade-trilc-current-gap-assessment.md)：完整 ADE 开工 FREEZE；TriLC 当前是共享 Agent loop + 类 Claude Code 基础组件集合，不是 dura
+- [OH] /docs/engineering/STATE.md:76 - 由 CEO 确认 [ADE 全生命周期实现蓝图](ade-full-lifecycle-implementation-plan.md) 的 Phase -1、Phase 0-2 local-first 范围；先关闭 TriLC P0，再通过 TriDev 启动共享 contracts、SQLit
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:1 # ADE 全生命周期实现蓝图
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:15 目标是在不复制现有 Agent loop、Skill、调度、事件队列和 Trees 协议的前提下，补齐 ADE 的完整生命周期：
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:34 本规划不把以下现有对象直接改名为 ADE run：
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:42 它们分别是会话、传输、粗粒度任务、组织编排和审计投影，不具备完整 ADE run 语义。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:50 详细差距和 P0 门禁见 [ADE 与 TriLC 当前实现差距评估](ade-trilc-current-gap-assessment.md)。未完成 P0 前，本蓝图只作为目标设计，不表示当前运行能力。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:56 CORE[Shared ADE Runtime in agent-core]
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:59 LE[Local File/Git/Cron/Agent Events] --> LCH[TriLC ADE Host]
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:60 SE[Service Webhook/CI/Cron/Agent Events] --> MCH[TriMC ADE Host]
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:64 LCH --> LS[(SQLite ADE Store)]
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:65 MCH --> MS[(PostgreSQL ADE Store)]
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:79 ### 3.1 `@trimetaverse/agent-core`：共享 ADE Runtime
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:101 - ADE 状态枚举和合法转换。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:113 ### 3.2 TriMC：服务域 ADE Host
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:132 - 以 PostgreSQL 实现共享 ADE store 接口。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:139 ### 3.3 TriLC：本地域 ADE Host
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:162 - 以 SQLite 实现与 TriMC 等价的共享 ADE store 接口。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:170 TriLC 已具备类 Claude Code 的 Agent loop、SkillTool、permissions、session、cron 和本地工具等基础组件，但完整产品语义和 durable lifecycle 尚未成立。ADE 首个裁剪 profile 优先在 TriLC 集成；可复用部分抽
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:204 - ADE 内部 `PLANNING / EXECUTING / VERIFYING / CLOSING` 状态。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:222 - ADE run 注册后：tree node 维持 `in_progress`，仅写 `ade_run_id`。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:223 - ADE `APPROVED`：节点可转 `done`，`delivery` 引用 close report。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:224 - ADE `FROZEN`：节点保持 `in_progress` 或由总助显式转 `escalated`。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:225 - ADE `ESCALATED`：节点转 `escalated`，由总助扩展分支。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:226 - ADE `RETRY`：Trees 状态不变，只更新 evidence ref。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:238 | `definition_id` / `definition_version` | 使用的 ADE 定义 |
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:240 | `status` | ADE 状态机状态 |
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:376 触发源：Agent 在当前 loop 中检测到需要 ADE。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:398 现有 SkillSpec 只有通用 `executionSteps`，ADE 需要新增或另建 `AdeSkillBinding`：
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:434 - TriLC SkillTool 继续服务 Agent 自主调用；TriLC / TriMC 的 ADE phase runner 都使用 runtime 主动装载 API。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:555 - 扩展 event queue 类型为通用字符串或新增 ADE outbox 表；不修改现有四类事件的历史语义。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:572 - ADE event mapper。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:576 Observability replay 只用于分析和验证，不直接重放副作用。真正恢复由 ADE orchestrator + DCE probe 完成。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:582 TriCompany `dynamic-task-tree-protocol.md` 已建立 v0.4 公司真源，增加 ADE 投影字段但不增加 ADE 内部状态枚举；TriMetaverse 同名文件已降级为项目 `published-summary`。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:601 - node `escalated` 时，ADE 状态应为 `ESCALATED` 或 close evidence 说明组织升级原因。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:602 - Trees 导出损坏不影响 ADE authority run；投影器负责重建。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:603 - ADE run 终态不自动创建 Tree 节点，节点创建仍归 CEOChiefOfStaff。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:664 ### Phase 1：共享 ADE Runtime
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:683 - SQLite ADE store 与 migration。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:698 - PostgreSQL ADE store 与 migration。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:731 Gate：ADE APPROVED 可稳定投影 node done；删除投影后可从 authority run 重建；ADE 不创建新节点。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:765 - TriLC session store 保持会话恢复职责，通过 `session_id` 关联 ADE run。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:766 - TriLC event queue 保持离线通信职责；ADE 使用独立 event envelope / outbox。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:768 - `observability_events` 保持投影职责，不成为 ADE authority event store。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:775 - 不为 TriLC 和 TriMC 复制第二套 ADE orchestrator、状态机、Skill runner 或 Close finalizer。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:794 - 维护 agent-core ADE 完整 runtime、TriLC / TriMC host adapter 和 Close CLI 技术真源。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:801 - 审核具体 ADE definition 的业务触发条件和成功标准。
+- [OH] /docs/engineering/ade-full-lifecycle-implementation-plan.md:811 4. 首个 ADE definition 固定为 `project-source-doc-sync@1.0.0`。
+- [OH] /docs/engineering/fade-registry.md:226 - IPD 全流程（spec §6.3）：六组件齐但阶段输出未统一 ADE JSON 自检格式，gate 判断仍 agent 语义推断——补齐后可入册。
+- [OH] /docs/engineering/fade-protocol-spec.md:145 - `close` 为 lifecycle scope（Close CLI 输出，终态审计），复用合同但不进三业务域词表（`ADE_LIFECYCLE_SCOPES`）
+- [OH] /docs/engineering/trilc-trimc-runtime-parity.md:30 - 在 TriMC 重新编写第二套 Agent loop、Skill runner、ADE orchestrator 或 Close finalizer。
+- [OH] /docs/engineering/trilc-trimc-runtime-parity.md:45 当前 parity 只在共享 Agent loop、tool registry、权限抽象和部分 process/scheduler 能力成立；Skill 约束、pipeline、持久化、调度恢复、HITL、ADE lifecycle 和 Trees runtime parity 均未成立。
+- [OH] /docs/engineering/trilc-trimc-runtime-parity.md:54 - ADE 状态机、orchestrator、DCE registry、Verify 和 Close finalizer。
+- [OH] /docs/engineering/trilc-trimc-runtime-parity.md:58 - Agent / ADE API schema 和 conformance tests。
+- [OH] /docs/engineering/trilc-trimc-runtime-parity.md:75 ## 5. ADE 双域写权威
+- [OH] /docs/engineering/trilc-trimc-runtime-parity.md:77 TriLC 和 TriMC 都能完整运行 ADE，但同一 run 只能有一个写主：
+- [OH] /docs/engineering/trilc-trimc-runtime-parity.md:135 - runtime 只更新已有节点的 ADE 投影和 delivery 建议。
+- [OH] /docs/engineering/trilc-trimc-runtime-parity.md:150 详细差距见 [ADE 与 TriLC 当前实现差距评估](ade-trilc-current-gap-assessment.md)，阶段和 schema 见 [ADE 全生命周期实现蓝图](ade-full-lifecycle-implementation-plan.md)。
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:1 # ADE 与 TriLC 当前实现差距评估
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:5 状态：CPO / CTO 岗位实例审计完成；完整 ADE 开工 FREEZE，裁剪版 local-first MVP APPROVE
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:15 CEOChiefOfStaff 分别调用 ChiefProductOfficer（小乔）与 ChiefTechnologyOfficer（小狄），独立审计 TriLC 的 README、registry、`src/`、`test/`、`package.json`，并交叉核对 `agent-core`
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:17 审计规则：代码与测试优先于 registry 和设计文档；严格区分组件存在、生产接线、可恢复运行语义和完整 ADE lifecycle。
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:30 > 共享 Agent loop 驱动的本地 daemon，已经具备一批类 Claude Code 基础组件和局部持久化能力，但尚未形成完整、可恢复、可终态化的 ADE Host。
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:50 | ADE lifecycle | 未实现 | 无 | durable run、checkpoint、Signal、Close CLI、authority |
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:63 | ADE run/event/checkpoint store | 未实现 | 无 schema、store、API 或 recovery worker |
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:76 `TriLC/src/tools/skill-tool.ts` 只把 `allowedTools` 和 `model` 返回到 JSON；没有修改 Agent loop 的工具集合、模型或输出 schema。因此当前 Skill 是 prompt injection，不是 ADE phase run
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:88 Session store 保存消息并可标记 `interrupted`，但不保存 ADE phase、DCE 幂等键、副作用状态、attempt、lease 或 Close decision。
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:135 2. TriLC SQLite ADE store。
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:173 - 小乔结论：完整 ADE / 双域 parity 就绪声明 `FREEZE`；裁剪版 local-first MVP `APPROVE`。
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:174 - 小狄结论：当前为共享 Agent loop + 局部基础设施，完整 ADE Host 与 parity 均未成立；必须先完成 P0。
+- [OH] /docs/engineering/ade-trilc-current-gap-assessment.md:175 - 总助裁决：更新设计成熟度与 Phase 顺序；未完成 P0 前不创建完整 ADE TriDev run。
+- [OH] /docs/engineering/ade-consolidation-proposal.md:1 # ADE 四候选整合提案：发布域 + 员工域两 ADE
+- [OH] /docs/engineering/ade-consolidation-proposal.md:19 **整合为 2 个 ADE**，不另立新 FADE：
+- [OH] /docs/engineering/ade-consolidation-proposal.md:101 | 阶段 2 | 生命周期骨架统一（runId / Close CLI / 试卷评分） | ADE 升格主体 |
+- [OH] /docs/engineering/ROADMAP.md:5 状态：新增 ADE 全生命周期实施路线
+- [OH] /docs/engineering/ROADMAP.md:47 ## Wave 5：ADE 全生命周期
+- [OH] /docs/engineering/ROADMAP.md:51 CPO / CTO 对 TriLC 代码审计后追加裁决：完整 ADE 开工 `FREEZE`，先完成 P0 事实基线修复，再推进单项目、单定义、TriLC 单写主的 `runtime-owned-durable` MVP。
+- [OH] /docs/engineering/ROADMAP.md:55 1. 在 `@trimetaverse/agent-core` 落共享 ADE contracts、完整 orchestrator、Skill/DCE/Close runtime 与测试向量。
+- [OH] /docs/engineering/ROADMAP.md:56 2. 优先复用 TriLC 已有类 Claude Code Agent loop、SkillTool、permissions、cron、HITL 和本地工具，完成首个 SQLite 本地域 ADE Host。
+- [OH] /docs/engineering/ROADMAP.md:59 5. 由 TriCompany Trees v0.4 公司协议投影 ADE run，各项目只维护实例 adapter。
+- [OH] /docs/engineering/ROADMAP.md:64 - [ADE 生命周期行业模式联审](ade-lifecycle-industry-review.md)
+- [OH] /docs/engineering/ROADMAP.md:65 - [ADE 与 TriLC 当前实现差距评估](ade-trilc-current-gap-assessment.md)
+- [OH] /docs/engineering/ROADMAP.md:66 - [ADE 全生命周期实现蓝图](ade-full-lifecycle-implementation-plan.md)
+- [OH] /docs/engineering/ROADMAP.md:69 进入实现前置条件：CEO 确认首期 local-first 范围、完成 TriLC P0 基线、CAO 对 Trees v0.4 公司真源补签，并以 `project-source-doc-sync@1.0.0` 作为首个 ADE definition。
+- [OH] /docs/engineering/fade-papers/FADE-002-paper.json:37 "verify_method": "规范文档在案且含 ADE 角色表（联审裁决见 ade-lifecycle-industry-review.md）；监督契约 = TriMetaverse/tricompany.md"
+- [OH] /docs/engineering/fade-papers/FADE-002-report-rereview-2026-08-21.json:617 "reason": "项目真源同步 ADE V1.1：ADE 角色表 / manifest 合同 / 两 profile / 联审标准链路"
+- [OH] /docs/engineering/fade-papers/FADE-002-report-rereview-2026-08-21.json:633 "reason": "DCE 执行体：--project-docs / --check / --publish-agents 三 scope；_is_protected_target 硬检查；ADE envelope 合同序列化"
+- [OH] /docs/engineering/fade-papers/FADE-002-report.json:97 "reason": "项目真源同步 ADE V1.1：ADE 角色表 / manifest 合同 / 两 profile / 联审标准链路"
+- [OH] /docs/engineering/fade-papers/FADE-002-report.json:113 "reason": "DCE 执行体：--project-docs / --check / --publish-agents 三 scope；_is_protected_target 硬检查；ADE envelope 合同序列化"
+- [OH] /docs/engineering/fade-papers/FADE-001-report.json:70 "object_type": "ADE_SHIFT",
+- [OH] /docs/workflow/company-work-plane-principles.md:22 └→ 执行（ADE 原则）
+- [OH] /docs/workflow/company-work-plane-principles.md:59 ## 5. 原则三：流程化工作遵循 ADE
+- [OH] /docs/workflow/company-work-plane-principles.md:76 ADE 不等于 DCE。DCE 只是 ADE 中的确定性执行阶段；Close Skill + Close CLI 形成语义裁决和终态写入，是 ADE 完整性的保证。程序触发是 ADE 全生命周期的起点——cron 定时器、git push 事件或外部信号检测触发 runId 生成和去重，Agent 
+- [OH] /docs/workflow/company-work-plane-principles.md:78 满足以下任意两项的工作即适用 ADE：涉及文件系统写操作、需要事后审计、可被自动化重复执行、涉及跨模块/跨仓库同步、操作失败需可回滚或可追溯、需跨会话恢复。
+- [OH] /docs/workflow/company-work-plane-principles.md:89 | 任务树 ↔ ADE | 任务树定义"谁做、交付什么"，ADE 定义"如何可靠执行"——Trees 不创建 ADE 内部 checkpoint，ADE 不创建组织节点 |
+- [OH] /docs/workflow/project-source-document-sync-ade.md:1 # 项目真源文档同步 ADE
+- [OH] /docs/workflow/project-source-document-sync-ade.md:5 状态：DCE 可执行；ADE 生命周期 profile 已裁决，runtime / skill / close-cli 待实现
+- [OH] /docs/workflow/project-source-document-sync-ade.md:23 本文定义项目真源文档跨仓发布与追平的 ADE。完整协议由事件登记、Plan Skill、DCE、Close Skill 与 Close CLI 组成；当前已实现 `source_publish_check` DCE 和人工 Agent-owned 流程，其他 lifecycle 组件仍待落地。
+- [OH] /docs/workflow/project-source-document-sync-ade.md:27 ## 2. ADE 角色
+- [OH] /docs/workflow/project-source-document-sync-ade.md:29 | ADE 层 | Owner | 职责 | 当前状态 |
+- [OH] /docs/workflow/project-source-document-sync-ade.md:176 - `pass`：DCE 证据通过，可提交给 Close Skill 裁决，但尚不是 ADE 终态。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:21 - 项目实例、宿主运行时与 ADE run 的引用关系。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:83 | `ade_run_id` | 可选 ADE run 引用 |
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:85 | `ade_terminal_status` | 可选 ADE 终态投影 |
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:86 | `ade_evidence_ref` | 可选 ADE close evidence 引用 |
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:140 ADE 内部的 `PLANNING / EXECUTING / VERIFYING / CLOSING`、checkpoint、attempt、lease 和 signal 不进入 Trees 状态机。Trees 只保留组织投影。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:153 ADE 投影约束：
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:156 - ADE `FROZEN` 默认不自动改变组织节点状态，由 CEOChiefOfStaff 判断继续 `in_progress` 还是升级。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:157 - ADE `ESCALATED` 可建议节点转 `escalated`，但组织分支仍由 CEOChiefOfStaff 创建。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:158 - ADE `RETRY` 不改变 Trees 状态。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:244 ## 9. ADE 与 Trees
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:246 ADE 是执行生命周期协议，Trees 是组织任务协议。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:251 -> ADE terminal / close evidence
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:255 Trees 不创建 ADE 内部 checkpoint；ADE 也不擅自创建组织节点。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:262 | ADE | Agent plans → Deterministic CLI executes + Agent closes |
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:281 - ADE run 引用。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:297 5. ADE 节点满足终态投影约束。
+- [OH] /docs/workflow/dynamic-task-tree-protocol.md:318 - 数据模型、runtime parity、恢复与 ADE 映射：CTO 复核。
+- [OH] /docs/workflow/README.md:16 - [动态任务树协议](dynamic-task-tree-protocol.md)：公司员工跨项目任务树的角色、状态、信号、ADE 投影、持久化与恢复真源。
+- [OH] /docs/workflow/README.md:17 - [项目真源文档同步 ADE](project-source-document-sync-ade.md)：公司真源到项目摘要 / 副本的 DCE 与 lifecycle 边界。
+- [OH] /docs/testing/evidence/lg-025-m0e-graft/lg-025-d16-vs-publish-check-gate-note.md:16 | ADE 终态门 | `--close`/`--verdict`/`--run-id`/`--score` 族 | §2.5 终态门 CLOSED、run-id 贯穿、Score CLI |
+- [OH] /docs/testing/evidence/lg-025-m0e-graft/lg-025-d16-vs-publish-check-gate-note.md:26 | 禁人工直改（违手改=hash 不一致→下次 publish 覆盖+审计留痕） | D-07 处置三面通用化 | before/after hash + identical-skip + action 分类（updated 留痕）+ ADE 报告 | 已纳（检查面）；覆盖动作待真写门开 |
+- [OH] /docs/testing/evidence/lg-025-m0e-graft/lg-025-d16-vs-publish-check-gate-note.md:28 | ADE 分段闸（D-16 状态行「批 2 放行前置」） | 分段闸 | `--close`/`--verdict`/run-id/Score CLI 终态门 | 已纳 |
+- [OH] /docs/registry/employee_onboard_stages.json:8 "output_format": "ADE JSON",
+- [OH] /docs/training/project-source-document-sync-fade-tutorial.md:551 3. 项目文档同步实例规范：[项目真源文档同步 ADE](../workflow/project-source-document-sync-ade.md)（FADE-002 项目文档面；文件名为历史命名）
+- [OH] /docs/training/project-source-document-sync-fade-tutorial.md:552 4. 生命周期行业联审（历史）：[ADE 生命周期行业模式联审](../engineering/ade-lifecycle-industry-review.md)
+- [OH] /docs/training/fade-002-deep-dive.md:55 **2. 登记（运行标识）**——两套载体并存：域级是 manifest 驱动（`.github/manifests/project-source-doc-sync-manifest.json` + live-agent publish manifest，registry L74）；run 级是 e
+- [OH] /docs/training/fade-002-deep-dive.md:67 **9. Close Skill**——联审语义裁决（approve/freeze 记录于 manifest 状态，registry L77），裁决词表四态 `APPROVED|FROZEN|ESCALATED|RETRY`（`ADE_CLOSE_VERDICTS` L262）。
+- [OH] /docs/training/fade-code-deep-dive.md:136 - 四终态词表：`ADE_CLOSE_VERDICTS = (APPROVED, FROZEN, ESCALATED, RETRY)`（与 spec §8.3 一致）。
+- [OH] /docs/training/fade-code-deep-dive.md:154 - **阈值解析链**：CLI `--score-threshold` → 试卷 `threshold` → 默认 80（`ADE_SCORE_DEFAULT_THRESHOLD`）。
+- [OH] /docs/training/fade-002/03-code-map.md:49 | 运行标识 | `--run-id` | 显式优先于时间戳派生；合法性 `ADE_RUN_ID_PATTERN`（L316）；`--watch` 下被拒（L3632-3638） |
+- [OH] /docs/training/fade-002/03-code-map.md:61 - `ADE_RUN_ID_PATTERN`（L316）：run_id 同时是 close 审计文件名，必须文件系统安全。
+- [OH] /docs/training/fade-002/03-code-map.md:62 - `ADE_CLOSE_VERDICTS`（L319）/`ADE_CLOSE_STATE_*`（L327-328）：CLOSED 唯一终态写；一切校验失败=CLOSE_REJECTED 且非零 rc，**永不静默**。
+- [OH] /docs/training/fade-002/03-code-map.md:63 - `ADE_SCORE_DEFAULT_THRESHOLD=80.0`（L336）：阈值回退链=显式参数→试卷声明→80。
+
+### O3（16 处）
+
+- [O3] /docs/engineering/ade-full-lifecycle-implementation-plan.md:46 2026-08-07 CPO / CTO 岗位实例完成 TriLC 代码与测试审计。结论：完整 ADE 开工 `FREEZE`，裁剪版 local-first MVP `APPROVE`。
+- [O3] /docs/engineering/ade-full-lifecycle-implementation-plan.md:770 - W31 `tricade-ade-phase2` 交付继续登记为 DCE/CLI 标准化，不追溯改写成完整 ADE lifecycle。
+- [O3] /docs/engineering/fade-registry.md:62 - **CEO 定性入条（2026-09-21，BOD 转知；registry owner 补课承办=m-duty-cos）**：FADE-001 现行工作定性=**ADE-only 死工作**。补课两件随条：①维护项①迁移线 agent 承接计划=`fade-001-plane-shift-age
+- [O3] /docs/engineering/fade-001-plane-shift-agent-plan.md:3 - 铸：m-duty-cos（registry owner 补课承办），2026-09-21；令源=CEO 定性「ADE-only 死工作」补课（BOD 转知）
+- [O3] /docs/engineering/fade-protocol-spec.md:3 版本：v2.0.3（2026-08-28：试卷 Plan 时点冻结立法——§2.8 Plan 行+§2.6 联动，LG-008 三方联审；v2.0.2=细则 10 定级正式法条（87f16cd）；v2.0.0=架构重构 ADE 退役，FADE 升为协议本体，FADE-XXX 为实现）
+- [O3] /docs/engineering/fade-protocol-spec.md:42 - v1.0.5（2026-08-18）：CEO 定名 FADE（Full-cycle ADE，v2.0.0 起全称 Full-cycle Agentic Deterministic Execution）；新增完整周期实例定义、三档区分与 fade-registry.md 登记册立册（本行补录，原提
+- [O3] /docs/engineering/ade-consolidation-proposal.md:10 - syncMode: follow-spec（2026-08-19 CEO 定调：本提案是为修订 ade-pattern-spec.md 而生的需求文档且 spec 挂链引用，随 spec 联动发布；spec 当前 source-only，未发布前本档仅存源侧）
+- [O3] /docs/engineering/ade-consolidation-proposal.md:106 - 2026-08-19 CEO：采纳 2-ADE 方案，落本文档
+- [O3] /docs/engineering/fade-papers/FADE-001-paper-plane-shift.json:4 "domain": "维护项①周平面迁移 cron——agent 承接面（2026-09-21 补课件，BOD 转知 CEO 定性「ADE-only 死工作」）",
+- [O3] /docs/workflow/engineering-disciplines.md:71 「记入周记/共学」类动作**先查规范再动笔**：必读 prompt 固定格式（`TriMetaverse/.github/prompts/项目级 AI 共学周记.prompt.md`）+ 归档 README + **最近一个已存在周**的周记（格式随周演进，禁止跨多周翻旧模板）；条目用固定五件结构（
+- [O3] /docs/workflow/dynamic-task-tree-protocol.md:325 - V0.4（2026-08-07）：当前公司级基线；ADE V0.4 映射
+- [O3] /docs/registry/code-state.md:74 - **ADE 技术风险登记（2026-08-20，CTO 终审）**：① spec §2.5「权限」校验载体=宿主层（TriLC/Agent loop permission 系统），CLI 层本轮未实现（无权威身份源，硬造 --actor 是假权限门）；② 试卷阈值设计为实例责任（total_ma
+- [O3] /docs/training/fade-code-deep-dive.md:301 1. **spec §6.1 滞后**：spec v1.1.9 案例表已并两行（§六），但 §6.1"项目真源文档同步 ADE"一节仍写"尚待补齐：文件/Git 事件触发、runId、Plan/Close Skill 装载、Close CLI、持久状态机"——与实现现状（event-watch、显式
+- [O3] /docs/training/fade-code-deep-dive.md:308 8. **旧教程状态过时**：`project-source-document-sync-ade-tutorial.md` 状态仍为"当前 DCE 可用教程；完整 ADE 生命周期待实现"，与实际（runId/Close CLI/Score CLI/event-watch 全落地）不符，建议更新或标
+- [O3] /docs/training/fade-002/04-deep-research.md:73 | 2026-08-18/19 | ADE 整合：三 scope 统一 envelope（v1.1.7 单解析器立法）；四候选整合为发布域+员工域 | spec v1.1.7 |
+- [O3] /docs/training/fade-002/04-deep-research.md:76 | 2026-08-28 | FADE v2.0.0 重构：ADE 退役、envelope 降格"发布域参考实现"；同窗 CLAUDE.md/AGENTS.md 真源归位（published-copy 双条目入 manifest） | spec v2.0.0；manifest L54-81 |
+
+### O4（133 处）
+
+- [O4] /runtime/cognition/source_publish_check.py:93 # (ADE phase-0 fix 2: whitelist ∩ protected zone = ∅ hard check).
+- [O4] /runtime/cognition/source_publish_check.py:256 # -- ADE unified report contract (ADE consolidation phase 1) -------------------
+- [O4] /runtime/cognition/source_publish_check.py:306 # ADE phase 2: close is a lifecycle scope, not a business domain scope —
+- [O4] /runtime/cognition/source_publish_check.py:312 # -- ADE phase 2: lifecycle skeleton (runId / Close CLI / Score CLI) ----------
+- [O4] /runtime/cognition/source_publish_check.py:316 ADE_RUN_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$")
+- [O4] /runtime/cognition/source_publish_check.py:319 ADE_CLOSE_VERDICTS: tuple[str, ...] = ("APPROVED", "FROZEN", "ESCALATED", "RETRY")
+- [O4] /runtime/cognition/source_publish_check.py:322 ADE_LIFECYCLE_SCOPES: tuple[str, ...] = ("close",)
+- [O4] /runtime/cognition/source_publish_check.py:327 ADE_CLOSE_STATE_CLOSED: str = "CLOSED"
+- [O4] /runtime/cognition/source_publish_check.py:328 ADE_CLOSE_STATE_REJECTED: str = "CLOSE_REJECTED"
+- [O4] /runtime/cognition/source_publish_check.py:330 ADE_CLOSE_RECORD_SUFFIX: str = ".close-ade.json"
+- [O4] /runtime/cognition/source_publish_check.py:332 ADE_DEFAULT_DATA_DIR: str = ".ade"
+- [O4] /runtime/cognition/source_publish_check.py:336 ADE_SCORE_DEFAULT_THRESHOLD: float = 80.0
+- [O4] /runtime/cognition/source_publish_check.py:455 """ADE report for manifest-driven project truth document sync."""
+- [O4] /runtime/cognition/source_publish_check.py:486 (ADE phase 2: explicit id wins over this derivation).
+- [O4] /runtime/cognition/source_publish_check.py:494 fallback otherwise (ADE phase 2 work package 1).
+- [O4] /runtime/cognition/source_publish_check.py:497 ADE_RUN_ID_PATTERN) by the caller; here it is only trimmed.
+- [O4] /runtime/cognition/source_publish_check.py:508 record file name) that callers can parse back — see ADE_RUN_ID_PATTERN.
+- [O4] /runtime/cognition/source_publish_check.py:512 if not ADE_RUN_ID_PATTERN.match(run_id.strip()):
+- [O4] /runtime/cognition/source_publish_check.py:816 # explicitly at the resolution layer (ADE phase 1 observation item).
+- [O4] /runtime/cognition/source_publish_check.py:836 Reverse guard for the whitelist (ADE phase-0 fix 2): live entry publishing
+- [O4] /runtime/cognition/source_publish_check.py:1567 """Serialize an AgentPublishReport to the unified ADE envelope contract.
+- [O4] /runtime/cognition/source_publish_check.py:1572 *run_id* is the explicit ``--run-id`` when given (ADE phase 2); it wins
+- [O4] /runtime/cognition/source_publish_check.py:1579 # so the ADE invariant total == changed + skipped + errors holds.
+- [O4] /runtime/cognition/source_publish_check.py:1649 # them explicitly (ADE phase 1 observation item).
+- [O4] /runtime/cognition/source_publish_check.py:1714 """Populate summary counters and ADE status from item actions."""
+- [O4] /runtime/cognition/source_publish_check.py:1743 """Run the manifest-driven project truth document ADE execution layer.
+- [O4] /runtime/cognition/source_publish_check.py:2042 """Serialize the project document ADE report to the unified envelope.
+- [O4] /runtime/cognition/source_publish_check.py:2047 *run_id* is the explicit ``--run-id`` when given (ADE phase 2).
+- [O4] /runtime/cognition/source_publish_check.py:2142 """Serialize the --check / --sync report to the unified ADE envelope.
+- [O4] /runtime/cognition/source_publish_check.py:2149 *run_id* is the explicit ``--run-id`` when given (ADE phase 2).
+- [O4] /runtime/cognition/source_publish_check.py:2251 Shape proposal (ADE phase 2 work package 2, 终审判定):
+- [O4] /runtime/cognition/source_publish_check.py:2299 # ADE phase 2: Close CLI (spec §2.5 终态门)
+- [O4] /runtime/cognition/source_publish_check.py:2303 """Resolve the ADE runtime records directory for close audit records."""
+- [O4] /runtime/cognition/source_publish_check.py:2307 return source_root / ADE_DEFAULT_DATA_DIR
+- [O4] /runtime/cognition/source_publish_check.py:2336 - verdict ∈ ADE_CLOSE_VERDICTS (terminal states, spec §8.3)
+- [O4] /runtime/cognition/source_publish_check.py:2337 - run_id non-empty and parseable (ADE_RUN_ID_PATTERN)
+- [O4] /runtime/cognition/source_publish_check.py:2345 if verdict not in ADE_CLOSE_VERDICTS:
+- [O4] /runtime/cognition/source_publish_check.py:2372 scope is "close" (ADE_LIFECYCLE_SCOPES): reuses the envelope shape so
+- [O4] /runtime/cognition/source_publish_check.py:2376 accepted = state == ADE_CLOSE_STATE_CLOSED
+- [O4] /runtime/cognition/source_publish_check.py:2446 state=ADE_CLOSE_STATE_REJECTED,
+- [O4] /runtime/cognition/source_publish_check.py:2452 audit_record = data_dir / f"{run_id.strip()}{ADE_CLOSE_RECORD_SUFFIX}"
+- [O4] /runtime/cognition/source_publish_check.py:2461 state=ADE_CLOSE_STATE_REJECTED,
+- [O4] /runtime/cognition/source_publish_check.py:2486 state=ADE_CLOSE_STATE_REJECTED,
+- [O4] /runtime/cognition/source_publish_check.py:2497 state=ADE_CLOSE_STATE_CLOSED,
+- [O4] /runtime/cognition/source_publish_check.py:2504 # ADE phase 2: Score CLI (spec §2.6 / 试卷模板 §三)
+- [O4] /runtime/cognition/source_publish_check.py:2696 else ADE_SCORE_DEFAULT_THRESHOLD
+- [O4] /runtime/cognition/source_publish_check.py:2742 "threshold": float(threshold) if threshold is not None else ADE_SCORE_DEFAULT_THRESHOLD,
+- [O4] /runtime/cognition/source_publish_check.py:3023 Windows), which corrupts ``ensure_ascii=False`` ADE reports for
+- [O4] /runtime/cognition/source_publish_check.py:3024 downstream parsers. ADE reports are machine contracts — they must
+- [O4] /runtime/cognition/source_publish_check.py:3110 # ── project truth document ADE arguments ─────────────────────────────
+- [O4] /runtime/cognition/source_publish_check.py:3145 # ── ADE phase 2: lifecycle skeleton (runId / Close CLI / Score CLI) ───
+- [O4] /runtime/cognition/source_publish_check.py:3149 help="Explicit ADE run id overriding the timestamp-derived default in "
+- [O4] /runtime/cognition/source_publish_check.py:3164 choices=ADE_CLOSE_VERDICTS,
+- [O4] /runtime/cognition/source_publish_check.py:3184 help="Directory for ADE runtime records (close terminal audit). "
+- [O4] /runtime/cognition/source_publish_check.py:3605 # ── ADE phase 2: explicit run id validation (wins over timestamp) ──────
+- [O4] /runtime/cognition/source_publish_check.py:3615 # ── ADE phase 2: Close CLI / Score CLI are exclusive lifecycle modes ───
+- [O4] /runtime/cognition/source_publish_check.py:3746 # ADE phase 1: every scope serializes to one unified envelope; combined
+- [O4] /runtime/cognition/source_publish_check.py:3751 # ── project truth document ADE mode ──────────────────────────────────
+- [O4] /runtime/cognition/source_publish_check.py:3813 # ADE phase 0 observation item: errors (incl. protected_target_rejected)
+- [O4] /runtime/cognition/source_publish_check.py:3864 # ADE phase 1: sync scope envelope
+- [O4] /runtime/cognition/source_publish_check.py:3890 # ADE phase 1 rc mapping: sync execute errors also exit non-zero.
+- [O4] /runtime/cognition/source_publish_check.py:3929 # 规范依据：ade-pattern-spec.md §8.6（检测即触发、触发与执行解耦）与 §2.4
+- [O4] /runtime/cognition/source_publish_check.py:4277 return source_root / ADE_DEFAULT_DATA_DIR / EVENT_WATCH_AUDIT_DIRNAME
+- [O4] /runtime/cognition/employee_host_publish_validation.py:81 """CLI safety-gate tests (ADE phase-0 fix 1: default is dry-run, no writes)."""
+- [O4] /runtime/cognition/employee_host_publish_validation.py:108 """ADE fix 1: no --dry-run/--execute → dry-run, no files written."""
+- [O4] /runtime/cognition/employee_host_publish_validation.py:133 """ADE fix 1: --execute explicitly writes generated assets."""
+- [O4] /runtime/cognition/employee_host_publish_validation.py:154 """ADE fix 1: passing both --dry-run and --execute exits with code 2."""
+- [O4] /runtime/cognition/ade_envelope.py:1 """ade_envelope — shared ADE envelope consumption helpers.
+- [O4] /runtime/cognition/ade_envelope.py:3 Single home for parsing ADE CLI output (source_publish_check and friends)
+- [O4] /runtime/cognition/ade_envelope.py:7 Extracted in ADE phase 2 (work package 3) from two inline consumers:
+- [O4] /runtime/cognition/ade_envelope.py:35 """Locate the *scope* envelope inside an ADE CLI output payload.
+- [O4] /runtime/cognition/employee_onboard.py:1 """employee_onboard — ADE 员工上岗 11 步流水线 CLI.
+- [O4] /runtime/cognition/employee_onboard.py:4 每一步输出标准 ADE JSON 自检报告。
+- [O4] /runtime/cognition/employee_onboard.py:54 # ADE data types
+- [O4] /runtime/cognition/employee_onboard.py:576 # ADE phase 1: --publish-agents emits the unified envelope (protocol
+- [O4] /runtime/cognition/employee_onboard.py:580 # ADE phase 2: envelope parsing is shared via ade_envelope (bare
+- [O4] /runtime/cognition/employee_onboard.py:990 ADE 员工上岗 11 步流水线 CLI。
+- [O4] /runtime/cognition/employee_onboard.py:992 每步输出标准 ADE JSON 自检报告。
+- [O4] /runtime/cognition/tree_op.py:1 """tree_op — ADE Tree 操作 CLI
+- [O4] /runtime/cognition/tree_op.py:4 Agent 规划 → CLI 确定性执行 → ADE JSON 自检 → Agent 收口。
+- [O4] /runtime/cognition/tree_op.py:46 # ── ADE types ──
+- [O4] /runtime/cognition/tree_op.py:280 description="ADE Tree 操作 CLI",
+- [O4] /runtime/cognition/source_publish_check_validation.py:487 # Unified ADE envelope contract keys
+- [O4] /runtime/cognition/source_publish_check_validation.py:921 # ── TC-AP14: whitelist ∩ protected zone = ∅ hard check (ADE fix 2) ──────
+- [O4] /runtime/cognition/source_publish_check_validation.py:1176 """Manifest-driven project truth document ADE tests."""
+- [O4] /runtime/cognition/source_publish_check_validation.py:1418 """CLI contract tests for the project document ADE mode."""
+- [O4] /runtime/cognition/source_publish_check_validation.py:1507 # ── ADE phase 1: unified envelope contract tests ──────────────────────────────
+- [O4] /runtime/cognition/source_publish_check_validation.py:1511 """ADE phase 1: all three scopes share one envelope contract."""
+- [O4] /runtime/cognition/source_publish_check_validation.py:1536 # Business-domain scopes (spec §2.2) plus the ADE phase 2 lifecycle
+- [O4] /runtime/cognition/source_publish_check_validation.py:1574 """ADE phase 1: unified action vocabulary constants are consistent."""
+- [O4] /runtime/cognition/source_publish_check_validation.py:1588 # ADE phase 2: lifecycle scopes reuse the envelope but stay out of the
+- [O4] /runtime/cognition/source_publish_check_validation.py:1590 self.assertEqual(set(ADE_LIFECYCLE_SCOPES), {"close"})
+- [O4] /runtime/cognition/source_publish_check_validation.py:1592 for scope in ADE_LIFECYCLE_SCOPES:
+- [O4] /runtime/cognition/source_publish_check_validation.py:1603 """ADE phase 2: run_id is timestamp-derived, NOT deterministic.
+- [O4] /runtime/cognition/source_publish_check_validation.py:1728 """ADE phase 1: 'C:foo' style targets are rejected by the resolvers.
+- [O4] /runtime/cognition/source_publish_check_validation.py:1745 """ADE phase 2 work package 1: explicit --run-id wins, timestamp fallback."""
+- [O4] /runtime/cognition/source_publish_check_validation.py:1881 """ADE phase 2 work package 2: combined-run container aggregation."""
+- [O4] /runtime/cognition/source_publish_check_validation.py:1977 """ADE phase 2 work package 3: shared consumer-side envelope helpers."""
+- [O4] /runtime/cognition/source_publish_check_validation.py:2052 """ADE phase 2 work package 4: Close CLI (spec §2.5 终态门)."""
+- [O4] /runtime/cognition/source_publish_check_validation.py:2071 from runtime.cognition.source_publish_check import ADE_CLOSE_RECORD_SUFFIX
+- [O4] /runtime/cognition/source_publish_check_validation.py:2089 f"ade-sync-20260820T000000000000{ADE_CLOSE_RECORD_SUFFIX}"
+- [O4] /runtime/cognition/source_publish_check_validation.py:2219 """ADE phase 2 work package 5: Score CLI (spec §2.6 / 试卷模板 §三)."""
+- [O4] /runtime/cognition/source_publish_check_validation.py:4109 """批次 run_id 匹配 ADE_RUN_ID_PATTERN（文件系统安全单 token）。"""
+- [O4] /runtime/cognition/source_publish_check_validation.py:4110 from runtime.cognition.source_publish_check import ADE_RUN_ID_PATTERN
+- [O4] /runtime/cognition/source_publish_check_validation.py:4114 self.assertRegex(env["run_id"], ADE_RUN_ID_PATTERN.pattern)
+- [O4] /runtime/cognition/rule_injection.py:119 """Structured check output (ADE JSON format)."""
+- [O4] /runtime/cognition/rule_injection.py:131 """Structured sync output (ADE JSON format)."""
+- [O4] /runtime/cognition/employee_host_publish.py:53 # 必须使用同一 manifest，否则两路 profile 内容/哈希不一致（ADE 自检报告失守）。
+- [O4] /runtime/cognition/employee_host_publish.py:103 "the CLI runs dry-run only (ADE safety gate: default is no write).",
+- [O4] /runtime/cognition/employee_host_publish.py:111 # Default behaviour (neither flag): dry-run (no writes) — ADE §2.4 safety gate.
+- [O4] /runtime/cognition/employee_host_publish.py:160 # ── Build ADE structured self-check report ──
+- [O4] /runtime/cognition/employee_host_publish.py:186 # ADE 合同出口：强制 UTF-8（Windows 中文环境默认 GBK 会破坏 JSON）。
+- [O4] /runtime/cognition/employee_host_publish.py:198 # ── ADE helpers ──────────────────────────────────────────────────────────────
+- [O4] /runtime/cognition/employee_host_publish.py:349 # ADE phase 1: the delegation emits the unified envelope (protocol
+- [O4] /runtime/cognition/employee_host_publish.py:351 # reports container for combined runs. ADE phase 2: parsing is shared
+- [O4] /runtime/cognition/weekly_plane_shift.py:3 完整 ADE 执行链：
+- [O4] /runtime/cognition/weekly_plane_shift.py:12 5. 聚合 ADE JSON 写 <new_week>/.shift-ade.json
+- [O4] /runtime/cognition/weekly_plane_shift.py:217 p = argparse.ArgumentParser(description="ADE weekly plane shift")
+- [O4] /runtime/cognition/weekly_plane_shift.py:263 # 6. aggregate ADE JSON (operation record = ⑤ cli finalize)
+- [O4] /runtime/cognition/weekly_plane_shift.py:265 "objectType": "ADE_SHIFT",
+- [O4] /runtime/cognition/orchestrate_tick.py:229 ## 节点收口报告（ade-pattern-spec §2.7，v1.3.0 强制段；校验器联审 F1 立法 v1.4.1）
+- [O4] /runtime/cognition/host_object_generation.py:546 role_description="Role-level reusable automated deployment, ADE execution, release pipeline, environment management, rollback plan, and deployment ver
+- [O4] /runtime/cognition/host_object_generation.py:554 "DeploymentEngineer owns automated deployment, ADE execution, release pipelines, and environment management; reports to CTO (小狄).",
+- [O4] /runtime/cognition/host_object_generation.py:582 "CustomerSuccessOfficer (小成) is onboarded as a live host agent in the current Copilot-host phase per W33 ADE onboarding (w33-3).",
+- [O4] /runtime/cognition/employee_onboard_validation.py:3 Validates the 11-step onboarding pipeline against the ADE specification.
+- [O4] /runtime/cognition/employee_onboard_validation.py:32 # ── ADE output contract tests ─────────────────────────────────────────────
+- [O4] /runtime/cognition/employee_onboard_validation.py:35 """Verify every stage function returns ADE-compliant JSON structures."""
+- [O4] /runtime/cognition/employee_onboard_validation.py:38 """StageResult.to_ade_json() must contain all required ADE fields."""
+- [O4] /runtime/cognition/employee_onboard_validation.py:64 """OnboardReport.to_ade_json() must contain all required ADE fields."""
+- [O4] /runtime/cognition/weekly_plane.py:1 """weekly_plane — ADE 周工作平面 CLI
+- [O4] /runtime/cognition/weekly_plane.py:4 Agent 规划 → CLI 确定性执行 → ADE JSON 自检 → Agent 收口。
+- [O4] /runtime/cognition/weekly_plane.py:37 # ── ADE types ──
+- [O4] /runtime/cognition/weekly_plane.py:402 description="ADE 周工作平面 CLI",
+
+### F（116 处）
+
+- [F] /runtime/cognition/source_publish_check.py:71 # Claude Code host face (ADE-B): the claude host itself is exempted via its
+- [F] /runtime/cognition/source_publish_check.py:76 ".claude/agents/",          # ADE-B: Claude Code host face live entry agents
+- [F] /runtime/cognition/source_publish_check.py:105 # -- ADE-B multi-host render registry (CEO 2026-08-19 定调, §三 ADE-B) ----------
+- [F] /runtime/cognition/source_publish_check.py:133 """Single host render template registration (ADE-B)."""
+- [F] /runtime/cognition/source_publish_check.py:267 ADE_PROTOCOL: str = "ade-report"
+- [F] /runtime/cognition/source_publish_check.py:268 ADE_VERSION: str = "1.0"
+- [F] /runtime/cognition/source_publish_check.py:269 ADE_SCOPES: tuple[str, ...] = ("sync", "project-docs", "publish-agents")
+- [F] /runtime/cognition/source_publish_check.py:272 # ADE_ACTIONS, and of its scope's allowed subset (ADE_ACTIONS_PER_SCOPE).
+- [F] /runtime/cognition/source_publish_check.py:275 ADE_ACTIONS: frozenset[str] = frozenset({
+- [F] /runtime/cognition/source_publish_check.py:293 ADE_ACTIONS_PER_SCOPE: dict[str, frozenset[str]] = {
+- [F] /runtime/cognition/source_publish_check.py:307 # it stays out of ADE_SCOPES (spec §2.2 business scopes) but reuses the
+- [F] /runtime/cognition/source_publish_check.py:408 derived_identical: int = 0  # ADE-B render: live == render(source+template)
+- [F] /runtime/cognition/source_publish_check.py:409 derived_drift: int = 0      # ADE-B render: live != render(source+template)
+- [F] /runtime/cognition/source_publish_check.py:843 ADE-B multi-host: the sanctioned landing zone is host-specific
+- [F] /runtime/cognition/source_publish_check.py:872 # the ADE-B claude face has no sanctioned binding-profiles writer).
+- [F] /runtime/cognition/source_publish_check.py:889 # ADE-B: multi-host render pipeline (CEO 2026-08-19 定调)
+- [F] /runtime/cognition/source_publish_check.py:1107 ADE-B: the payload is *rendered* (source + host template) unless the
+- [F] /runtime/cognition/source_publish_check.py:1363 ADE-B: the check runs against the *final write target* (after host
+- [F] /runtime/cognition/source_publish_check.py:1396 # ── ADE phase-0 fix 2 + ADE-B: whitelist ∩ protected zone = ∅ ─────────
+- [F] /runtime/cognition/source_publish_check.py:1537 # ADE-B: the report target is the final write target (host-derived),
+- [F] /runtime/cognition/source_publish_check.py:1588 "protocol": ADE_PROTOCOL,
+- [F] /runtime/cognition/source_publish_check.py:1589 "version": ADE_VERSION,
+- [F] /runtime/cognition/source_publish_check.py:2052 "protocol": ADE_PROTOCOL,
+- [F] /runtime/cognition/source_publish_check.py:2053 "version": ADE_VERSION,
+- [F] /runtime/cognition/source_publish_check.py:2225 "protocol": ADE_PROTOCOL,
+- [F] /runtime/cognition/source_publish_check.py:2226 "version": ADE_VERSION,
+- [F] /runtime/cognition/source_publish_check.py:2286 "protocol": ADE_PROTOCOL,
+- [F] /runtime/cognition/source_publish_check.py:2287 "version": ADE_VERSION,
+- [F] /runtime/cognition/source_publish_check.py:2378 "protocol": ADE_PROTOCOL,
+- [F] /runtime/cognition/source_publish_check.py:2379 "version": ADE_VERSION,
+- [F] /runtime/cognition/source_publish_check.py:2513 if report_data.get("protocol") == ADE_PROTOCOL and "scope" in report_data:
+- [F] /runtime/cognition/source_publish_check.py:2520 if isinstance(r, dict) and r.get("protocol") == ADE_PROTOCOL
+- [F] /runtime/cognition/source_publish_check.py:3094 help="ADE-B target host face for --publish-agents: 'copilot' publishes "
+- [F] /runtime/cognition/source_publish_check.py:3978 # 与 close lifecycle scope 同构，不进 ADE_SCOPES 三业务域）。
+- [F] /runtime/cognition/source_publish_check.py:4379 "protocol": ADE_PROTOCOL,
+- [F] /runtime/cognition/source_publish_check.py:4380 "version": ADE_VERSION,
+- [F] /runtime/cognition/ade_envelope.py:20 # Must stay in sync with source_publish_check.ADE_PROTOCOL; duplicated here
+- [F] /runtime/cognition/ade_envelope.py:22 ADE_PROTOCOL: str = "ade-report"
+- [F] /runtime/cognition/ade_envelope.py:42 if data.get("protocol") == ADE_PROTOCOL and data.get("scope") == scope:
+- [F] /runtime/cognition/ade_envelope.py:50 and report.get("protocol") == ADE_PROTOCOL
+- [F] /runtime/cognition/source_publish_check_validation.py:1559 ADE_ACTIONS, ADE_ACTIONS_PER_SCOPE,
+- [F] /runtime/cognition/source_publish_check_validation.py:1565 item["action"], ADE_ACTIONS,
+- [F] /runtime/cognition/source_publish_check_validation.py:1569 item["action"], ADE_ACTIONS_PER_SCOPE[env["scope"]],
+- [F] /runtime/cognition/source_publish_check_validation.py:1576 ADE_ACTIONS, ADE_ACTIONS_PER_SCOPE, ADE_LIFECYCLE_SCOPES, ADE_SCOPES,
+- [F] /runtime/cognition/source_publish_check_validation.py:1578 self.assertEqual(set(ADE_SCOPES), {"sync", "project-docs", "publish-agents"})
+- [F] /runtime/cognition/source_publish_check_validation.py:1579 for scope in ADE_SCOPES:
+- [F] /runtime/cognition/source_publish_check_validation.py:1581 ADE_ACTIONS_PER_SCOPE[scope].issubset(ADE_ACTIONS),
+- [F] /runtime/cognition/source_publish_check_validation.py:1585 "error", ADE_ACTIONS_PER_SCOPE[scope],
+- [F] /runtime/cognition/source_publish_check_validation.py:1591 self.assertIn("closed", ADE_ACTIONS)
+- [F] /runtime/cognition/source_publish_check_validation.py:1594 ADE_ACTIONS_PER_SCOPE[scope].issubset(ADE_ACTIONS),
+- [F] /runtime/cognition/source_publish_check_validation.py:1598 "error", ADE_ACTIONS_PER_SCOPE[scope],
+- [F] /runtime/cognition/source_publish_check_validation.py:2555 # ── ADE-B: multi-host render tests (CEO 2026-08-19 定调) ──────────────────────
+- [F] /runtime/cognition/source_publish_check_validation.py:2559 """ADE-B multi-host render unit tests (source + host template → render).
+- [F] /runtime/cognition/source_publish_check_validation.py:3089 """derived_identical / derived_drift 进 ADE_ACTIONS 与 publish-agents 域子集。"""
+- [F] /runtime/cognition/source_publish_check_validation.py:3091 ADE_ACTIONS, ADE_ACTIONS_PER_SCOPE,
+- [F] /runtime/cognition/source_publish_check_validation.py:3093 self.assertIn("derived_identical", ADE_ACTIONS)
+- [F] /runtime/cognition/source_publish_check_validation.py:3094 self.assertIn("derived_drift", ADE_ACTIONS)
+- [F] /runtime/cognition/source_publish_check_validation.py:3096 "derived_identical", ADE_ACTIONS_PER_SCOPE["publish-agents"],
+- [F] /runtime/cognition/source_publish_check_validation.py:3099 "derived_drift", ADE_ACTIONS_PER_SCOPE["publish-agents"],
+- [F] /docs/engineering/ade-pattern-spec.md:3 > v2.0.0 架构重构（2026-08-28，CEO 提案"没有 ADE 了"）：ADE 概念退役，FADE（Full-cycle Agentic Deterministic Execution）升为协议本体，FADE-XXX 为协议实例的具体实现。
+- [F] /docs/engineering/fade-registry.md:20 v2.0 同步注记（2026-08-28）：上位规范重构迁移 ade-pattern-spec.md → **fade-protocol-spec.md v2.0.0**（ADE 概念退役，FADE 升为协议本体，FADE-XXX 为实现；"ADE-A/B 域"历史代号→发布域/员工域）；本册各条目
+- [F] /docs/engineering/fade-registry.md:90 - 范围（2026-08-19 整合定调）：扩容为 **ADE-A 发布域**——覆盖 源侧→发布侧同步、项目真源文档同步、Agent live entry 发布三候选域；CLI `source_publish_check` 三 scope（--check / --project-docs / --
+- [F] /docs/engineering/fade-registry.md:136 - 范围（2026-08-19 整合定调）：扩容为 **ADE-B 员工域**——并入员工对象发布段（host object 生成 / binding profile / 委托 publish-agents / 治理回填），上岗链 + 发布链同一生命周期域；spec §六 案例表已并入本条目
+- [F] /docs/engineering/fade-protocol-spec.md:22 - **v2.0.0（2026-08-28，架构重构·CEO 提案）**：① **ADE 概念退役**——"FADE（Full-cycle Agentic Deterministic Execution）是 Agent 确定性执行的全生命周期协议的泛化部分，FADE-XXX 是该协议实例的具体实现"
+- [F] /docs/engineering/fade-protocol-spec.md:28 - v1.2.0（2026-08-21）：FADE 加固文档收口（FADE-LEFTOVER-20260821-001 批 2，素材取 fade-quality-lessons.md §四）——§2.2 补内容归属校验与跨管线派生（组件-合成）校验入合同；§2.6 评分补治理对齐/内容归属语义维度、
+- [F] /docs/engineering/fade-protocol-spec.md:143 - `action` 词表契约化：`ADE_ACTIONS` + 每 scope 允许子集（`ADE_ACTIONS_PER_SCOPE`），validation 强制（action ∈ 词表 ∧ 域白名单）——**常量名保留历史命名**（代码级冻结合同），语义即 action 词表
+- [F] /docs/engineering/ade-consolidation-proposal.md:21 - **ADE-A 发布域** = FADE-002 扩容（候选 1 源侧→发布侧同步 + 候选 2 项目真源文档同步 + 候选 3 Agent live entry 发布）
+- [F] /docs/engineering/ade-consolidation-proposal.md:22 - **ADE-B 员工域** = FADE-004 扩容（候选 4 员工对象发布并入上岗链）
+- [F] /docs/engineering/ade-consolidation-proposal.md:53 ### ADE-A 发布域 = FADE-002 扩容（并入候选 3）
+- [F] /docs/engineering/ade-consolidation-proposal.md:59 ### ADE-B 员工域 = FADE-004 扩容（并入候选 4）
+- [F] /docs/engineering/ade-consolidation-proposal.md:62 - 候选 3 按调用上下文归属：独立调用走 ADE-A，被员工发布委托时走 ADE-B——共用 `--publish-agents` 不复制实现
+- [F] /docs/engineering/ade-consolidation-proposal.md:65 - 知识注入消费链路（CEO 2026-08-19 记入，ADE-B 阶段 1/2 工作包）：三端（研发仓/TriLC/TriMC）当前均无知识注入功能——knowledge 资产（TriCompany-copilot-host-assets 知识工作区声明壳 + 五件套 + wiki 消费记录）处
+- [F] /docs/engineering/ade-consolidation-proposal.md:66 - binding profile 收敛（CEO 2026-08-19 记入，ADE-B 渲染改造工作包）：binding-profiles/*.json 与 agent contract 字段重叠（身份/宿主状态/资产路径）但角色不同——contract=源侧语义真源、binding profil
+- [F] /docs/engineering/ade-consolidation-proposal.md:67 - 多宿主统一渲染模型（CEO 2026-08-19 定调范围，ADE-B 渲染改造工作包）：**适用范围 = TriCompany 员工发布到宿主侧**（Copilot-host 面 `.github/agents/` / Claude Code 面 `.claude/agents/`）——源单份
+- [F] /docs/engineering/ade-consolidation-proposal.md:80 - ADE-A：FADE-002 扩容（建议更名"公司发布管理 FADE"或维持原名加范围说明），补齐 runId 显式化、文件/Git 事件触发、Score CLI/Skill 试卷评分、Close CLI 落位；逐段工件 + 评分通过记录（v1.1.0 必要条件）
+- [F] /docs/engineering/ade-consolidation-proposal.md:81 - ADE-B：FADE-004 扩容，补对象发布段工件（生成/binding/委托/治理回填）+ 试卷评分
+- [F] /docs/engineering/ade-consolidation-proposal.md:107 - 2026-08-19 CEO 追加：① 本提案 syncMode 定调 follow-spec（随 ade-pattern-spec.md 联动发布，文档体系串链，FADE 源发布才完整）；② Trees 任务树融合（spec §8.6）——检测即触发、编排层建树多员工参与、触发与执行解耦（小赛
+- [F] /docs/registry/code-state.md:73 - **ADE 整合阶段 0/1/2 代码落地（2026-08-20，CEO 启动，编排层收口）**：阶段 0 `004a506`（employee_host_publish 默认 dry-run `execute = args.execute`；`--publish-agents` 白名单∩禁区=
+- [F] /docs/registry/code-state.md:76 - **ADE-B 渲染改造落地（2026-08-20，CEO 启动，commit `4ce113d`）**：`--host {copilot|claude}`（默认 copilot 兼容现状）——HOST_RENDER_REGISTRY 宿主注册表（frontmatter 形状映射/目标派生/工具
+- [F] /docs/registry/test-state.md:12 runtime 验证族+LG-035 门禁报告族落 docs/testing/（df52abe 等，CAO 复核附注 2026-09-11 追平）；source-agents 渲染验证 127/127+5/5+employee_onboard 33/33+73/73 含 e2e 零写入 8 项（AD
+- [F] /docs/training/project-source-document-sync-fade-tutorial.md:9 > **版本对齐标注（2026-08-28）**：① 工程规范已完成 ade-pattern-spec.md → **fade-protocol-spec.md v2.0.0** 架构重构（ADE 概念退役，FADE 升为协议本体，FADE-XXX 为协议实例的具体实现），本文随迁改名 `proje
+- [F] /docs/training/fade-product-guide.md:9 > **版本对齐标注（2026-08-28）**：工程规范已完成 ade-pattern-spec.md → **fade-protocol-spec.md v2.0.0** 架构重构（ADE 概念退役，FADE 升为协议本体，FADE-XXX 为协议实例的具体实现；envelope 降格为发布域参
+- [F] /docs/training/fade-product-guide.md:42 FADE-002 是"公司文档管理"（发布域，历史代号 ADE-A），CLI 是 `source_publish_check`，一个命令三个面：
+- [F] /docs/training/fade-product-guide.md:230 - 历史整合设计（发布域/员工域两域由来，ADE-A/ADE-B 为历史代号）：[ADE 四候选整合提案](../engineering/ade-consolidation-proposal.md)
+- [F] /docs/training/fade-002-deep-dive.md:26 | 4 | `TriCompany/runtime/cognition/source_publish_check.py`（4344 行，按下文锚点分段读） | 能找到 ADE_ACTIONS、保护链、渲染管线 |
+- [F] /docs/training/fade-002-deep-dive.md:153 | `protocol` | 恒为 `"ade-report"` | `ADE_PROTOCOL` L210。**代码级冻结合同**，保留历史命名（ADE 概念已退役，语义即 FADE 报告合同）——改名会破坏所有存量消费方，所以 spec 明文保留 |
+- [F] /docs/training/fade-002-deep-dive.md:154 | `version` | `"1.0"` | `ADE_VERSION` L211 |
+- [F] /docs/training/fade-002-deep-dive.md:155 | `scope` | `sync\|project-docs\|publish-agents` | `ADE_SCOPES` L212；`close`/`event-watch` 是 lifecycle/触发面 scope，**不进三业务域**（L249-252 注释、L265、L3634） |
+- [F] /docs/training/fade-002-deep-dive.md:167 ADE_ACTIONS: frozenset[str] = frozenset({
+- [F] /docs/training/fade-002-deep-dive.md:174 ADE_ACTIONS_PER_SCOPE = {
+- [F] /docs/training/fade-004-deep-dive.md:47 | 域扩容沿革 | `TriCompany/docs/engineering/ade-consolidation-proposal.md`（ADE-B 员工域） |
+- [F] /docs/training/fade-004-deep-dive.md:210 2026-08-19 整合定调（`ade-consolidation-proposal.md`，CEO 采纳）把"员工对象发布"并入 FADE-004，扩为 **ADE-B 员工域**（registry 第 132 行）：**上岗链 + 发布链同一生命周期域**。发布链四段衔接：
+- [F] /docs/training/fade-004-deep-dive.md:213 2. **binding profile**：定性为发布绑定关系的**派生记录**（liveEntry 绑定关系 + supportObjects 资产清单 + runtimeNamespaces），**禁人工编辑、由生成管线重建**（提案 §三 ADE-B"binding profile 收敛"节
+- [F] /docs/training/fade-004-deep-dive.md:382 6. **Day 6 摸发布链**：读 `ade-consolidation-proposal.md` §三 ADE-B + spec §6.2 + D-07；找到 `employee_host_publish` 委托点。
+- [F] /docs/training/fade-code-deep-dive.md:9 > **版本对齐标注（2026-08-28）**：工程规范已完成 ade-pattern-spec.md → **fade-protocol-spec.md v2.0.0** 架构重构（ADE 概念退役，FADE 升为协议本体，FADE-XXX 为协议实例的具体实现；envelope 降格为发布域参
+- [F] /docs/training/fade-code-deep-dive.md:78 - **action 词表契约化**：`ADE_ACTIONS`（15 个）+ `ADE_ACTIONS_PER_SCOPE`（每 scope 白名单子集），validation 强制（`source_publish_check.py:218/:236`，校验点 `source_publish_ch
+- [F] /docs/training/fade-code-deep-dive.md:82 ## 3. 渲染管线（publish-agents 面，ADE-B 核心）
+- [F] /docs/training/fade-code-deep-dive.md:178 - **scope 边界**：event-watch 是第四个 envelope scope（触发面审计 scope），与 close 同构——复用合同但不在 `ADE_SCOPES` 三业务域内（代码注释明确；spec §2.2 未提及此面，属文档待补项，见第 11 节）。
+- [F] /docs/training/fade-code-deep-dive.md:277 | 改报告合同 | `ADE_ACTIONS` / `ADE_ACTIONS_PER_SCOPE` / 各 `_serialize_*_report` |
+- [F] /docs/training/fade-code-deep-dive.md:303 3. **FADE-005 编号漂移**：`TriMetaverse/docs/execution/fade-005-roster-gating-spec.md` 自述"上岗 gating 规范（FADE-005）"，但整合提案（§三 ADE-B）与登记册明确"避免另立 FADE-005，并入 FA
+- [F] /docs/training/fade-code-deep-dive.md:304 4. **event-watch scope 未入 spec**：`EVENT_WATCH_SCOPE="event-watch"` 是第四个 envelope scope（触发面审计 scope），spec §2.2 只写三业务域；代码注释已声明"复用合同不进 ADE_SCOPES"，spec 未
+- [F] /docs/training/fade-code-deep-dive.md:309 9. **本教程自身基线滞后（已收口）**：v1.0 对应 v1.1.9 时代基线，遗留 §2 标题"CLI 面总览"歧义（实为 FADE-002 单实例）、envelope 未标降格、FADE-006 缺行、ADE_ACTIONS 计数过时（13→15）——2026-08-28 v1.1 同步全部
+- [F] /docs/training/fade-code-deep-dive.md:314 2. 历史整合设计：[ADE 四候选整合提案](../engineering/ade-consolidation-proposal.md)（理解发布域/员工域两域为什么这么分，ADE-A/ADE-B 为历史代号）
+- [F] /docs/training/fade-beginner-course.md:9 > **版本对齐标注（2026-08-28）**：工程规范已完成 ade-pattern-spec.md → **fade-protocol-spec.md v2.0.0** 架构重构（ADE 概念退役，FADE 升为协议本体，FADE-XXX 为协议实例的具体实现；旧规范文件保留为重定向桩）。本文
+- [F] /docs/training/fade-beginner-course.md:170 5. 历史整合设计（发布域 + 员工域两域的由来，文中 ADE-A/ADE-B 为历史代号，现称发布域/员工域）：[ADE 四候选整合提案](../engineering/ade-consolidation-proposal.md)
+- [F] /docs/training/fade-005-deep-dive.md:59 2026-08-19，CEO 指令做四候选整合分析，产出 `D:\Code\ai\TriCompany\docs\engineering\ade-consolidation-proposal.md`（115 行，v1.0，CEO 当日采纳）。四候选 = 源侧→发布侧同步、项目真源文档同步、Agent
+- [F] /docs/training/fade-005-deep-dive.md:80 > 本规范是 FADE-ASSESS-20260819-005 工作包产物，编号已并入 **FADE-004（员工域 ADE-B）**——登记册（fade-registry.md）无独立 FADE-005 条目，整合提案明确“避免另立 FADE-005”。文件名保留以兼容历史引用（周平面 / com
+- [F] /docs/training/fade-005-deep-dive.md:87 - 08-28 登记册 v2.0 同步注记（20 行）：上位规范迁移 ade-pattern-spec.md → fade-protocol-spec.md v2.0.0，「ADE-A/B 域」历史代号 → **发布域/员工域**。
+- [F] /docs/training/fade-005-deep-dive.md:206 ## 五、员工域 ADE-B 完整图景：上岗链 + 发布链同一生命周期域
+- [F] /docs/training/fade-005-deep-dive.md:246 | 登记册 | `D:\Code\ai\TriCompany\docs\engineering\fade-registry.md` | 185 行；FADE-004 条目 114-133（补齐项 130 行仍列「分身 spawn 前置校验『JD 已上岗』」，评分 81→88 弧线 131 行，ADE
+- [F] /docs/training/fade-005-deep-dive.md:306 协议于 2026-08-28 重构为 v2.0.0（`D:\Code\ai\TriCompany\docs\engineering\fade-protocol-spec.md`，535 行，当前 v2.0.3）：ADE 概念退役，FADE 升为协议本体，「ADE-A/B 域」改称历史代号「发布域/员
+- [F] /docs/training/fade-005-deep-dive.md:349 - `D:\Code\ai\TriCompany\docs\engineering\ade-consolidation-proposal.md`（全读，115 行）——并入裁定与 ADE-B 图景
+- [F] /docs/training/fade-002/04-deep-research.md:74 | 2026-08-19/20 | ADE-B 多宿主渲染模型（CEO 定调）；frontmatter 形状映射 CTO 定案 | CLI 注释 L105-121 |
+- [F] /docs/training/fade-002/03-code-map.md:58 - `ADE_PROTOCOL="ade-report"`（L267）：**代码级冻结合同**。ADE 概念已退役但字段值不改——存量消费方都按它解析（spec §2.2 明文保留历史命名）。
+- [F] /docs/training/fade-002/03-code-map.md:59 - `ADE_SCOPES`（L269）：三业务域。`close`/`event-watch` 复用 envelope 形状但**不进**此表（L306-309、L322 注释）。
+- [F] /docs/training/fade-002/03-code-map.md:60 - `ADE_ACTIONS`（L275-291）+ `ADE_ACTIONS_PER_SCOPE`（L293-310）：action 词表契约化，每 action 带一行语义注释（dry-run 意图/派生一致/触发面专属三值都在这）。
+
+### FLAG（2 处）
+
+- [FLAG] /docs/engineering/fade-papers/FADE-003-report.json:110 "reason": "83f2c1a9 docs(journal): W34 周记按规范重写 + 共学周记记录 ADE 规范立册；3e775148 docs(w34): 共学周记 — 长工具链收尾退化三层防御"
+- [FLAG] /docs/training/fade-003-deep-dive.md:345 2. **立纪律 + 立规范（同日）**：工程纪律 **D-06** 立册（`TriCompany/docs/workflow/engineering-disciplines.md:56-58`：「记入周记/共学」类动作先查规范再动笔，五件结构/当周目录/只追加不重写/台账不入册）；共学周记 ADE
+
+### LANE（6 处）
+
+- [LANE] /.github/manifests/tricompany-host-object-generation-manifest.json:806 "W33 ADE onboarding (w33-3): binding profile + manifest + host object set + live entry created per FullStack gap discovery."
+- [LANE] /.github/manifests/project-source-doc-sync-manifest.json:24 "Both ADE lifecycle profiles share one state machine and terminal Close Skill -> Close CLI order."
+- [LANE] /.github/binding-profiles/deployment-engineer.json:88 "DeploymentEngineer owns automated deployment, ADE execution, release pipelines, and environment management; reports to CTO (小狄).",
+- [LANE] /.github/binding-profiles/customer-success-officer.json:86 "CustomerSuccessOfficer (小成) is onboarded as a live host agent in the current Copilot-host phase per W33 ADE onboarding (w33-3).",
+- [LANE] /source-agents/senior-deployment-engineer/senior-deployment-engineer.contract.yaml:42 - 禁止跳过 ADE 自检步骤或伪造自检结果
+- [LANE] /source-agents/senior-deployment-engineer/colleagues-social.agent.md:22 - **工作名**：小布（已在 orchestration 文档和 ADE spec 中预定义，2026-08-01 正式上岗）
+
