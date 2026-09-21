@@ -43,3 +43,11 @@
   - 6b47edd3 docs(inbox-wiki-first-line): CPO 产品线四件——纪律手册大纲 v1 列全（五节 4.2 升格门，落 knowledge/org 组织知识库首件）/经验裁两件（索引+分席页）/schema 三键两 spec（reject 阀门首实证）/前置核查 boot 为主+确认行为辅
   - …另有 19 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:00 +08：自上次进度提交 9086cab6 后新增 6 条 commit：
+  - 657decbb docs(approval): CEO 两案一体批准——注入器架构统一+contract schema 现代化，执行窗双开（contract 候注入器首落批后）
+  - 18d90b21 docs(injector-arch): CPO 终审签认——素材全融入/案二 TriCode 单提采认（面隔离运行时概念论证成立+渐进四步迁移安全）/D 联邦软标准正解/终审补注 fail-open 红线随行为零变化锚显式断言；双签齐与 contract 件一体呈批
+  - 1f14fbcf docs(injector-arch): 联审合流方案（CPO×CTO）——矩阵基线（错位改判+真问题=双复制体单一真源缺失）+命题B 裁案二共用模块单提落 TriCode 包（B 必答四条/面隔离运行时概念论证/渐进四步行为零变化/sg 红利）+命题C 三权分置全采（餐单=配置数据非代码硬保证/加餐检索面/反馈闭环）+命题D 分库保留聚合统一（信封统一化共享包内一处落地）+E 衔接图+服务域暂时合理裁采认+验收锚五条；候 CPO 终审双签与 contract 件一并呈批
+  - c96aa764 docs(contract-schema): CTO 签认——验读三裁照录/C 预锚录位/验收锚五条覆盖 A-D（双签齐 CHO✓+CTO✓，转 BOD 呈 CEO 候批；执行窗候注入器合流呈批后）
+  - 28cdf3fd docs(contract-schema): 合流命题件 A-D 双签稿落树——实勘矩阵+命题 A 终案（四键本体+host_overrides+31 处方言删）/B 三态分类处置/C 无倒退确认/D validator 接口；CHO 主笔合稿+CTO 三裁并入，双签候批（task-charter-20260921-contract-schema）
+  - 67ef92f0 docs(contract-schema): contract schema 现代化命题书——真源统一工具声明+宿主覆盖开关+runtime_baseline 迁出（CEO 10:53 定调），CHO×CTO 联审排期候注入器合流后
+- registry：v2.1；今日 registry 提交无变化
