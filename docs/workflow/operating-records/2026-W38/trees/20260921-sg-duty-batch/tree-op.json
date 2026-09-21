@@ -1,0 +1,28 @@
+{
+  "treeId": "20260921-sg-duty-batch",
+  "charter": "task-charter-20260921-sg-duty-batch.md",
+  "executor": "m-duty-cos",
+  "nodes": {
+    "T-a": {
+      "status": "closed",
+      "report": "exec/t-a-publish-face.md",
+      "anchor": "三席 diff=0"
+    },
+    "T-b": {
+      "status": "closed",
+      "report": "exec/t-b-map-fix.md",
+      "anchor": "MAP 20 仓手跑 20/20 FETCH-OK"
+    },
+    "T-c": {
+      "status": "closed",
+      "report": "exec/t-c-tmv-catchup.md",
+      "anchor": "树顶==bare 顶"
+    },
+    "T-d": {
+      "status": "closed",
+      "report": "exec/t-d-d13-register.md",
+      "anchor": "bf4360f 入册两笔；tmux 重启残差候 BOD 窗"
+    }
+  },
+  "closedAt": "2026-09-21T04:0xZ"
+}
