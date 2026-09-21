@@ -29,3 +29,10 @@
 - REF 类 37 处（ade-pattern-spec.md 文件引用）：TMV 15/TC 22——带日期锚沿革句=冻结；活文档指针候批2 逐条改 fade-protocol-spec.md
 - 同名词旗 3 处→**抄 CHO**：TMV `.github/prompts/项目级 AI 共学周记.prompt.md:23`（共学周记记录 ADE 规范）；TC 2 处（fade-papers/FADE-003-report.json:110、docs/training/fade-003-deep-dive.md:345 语境命中）
 - 排雷建议回 COO：排除项建议增「output/」（发布产物档案类，本轮 24+ 行命中全冻结类）
+
+## 补记：同名词旗 3 处 CHO 定谳（2026-09-22）
+
+- 分类修正：三处非「另一 ADE 同名词」，系 **ADE 正典投影术语残留**（ade-journal-recording-spec.md §一自载「固化为 ADE 模式」+:15 上位规范=ade-pattern-spec §1.1）——批2 分类从「同名词旗」修正为「术语残留/正名候裁」。
+- 处置（CHO 裁）：FADE-003-report.json:110+fade-003-deep-dive.md:345 **冻结不改**（历史实录，沿革口径=历史名冻结+映射承载）；prompt.md:23 链接行候 spec 正名裁后联动，未裁前不改。
+- 升级候裁 1 项：spec 正身「共学周记记录 ADE 规范」正名 FADE 化（文件名/标题/内文 :33/:127 同步）——维护权自载归秘书处（COS 代管），CTO 协议域会签；CHO 意见支持迁移+FADE-003 registry 加历史名映射行。
+- 边界注记（CHO 划定）：journal spec :15 上位规范链接属 REF 类 37 处族（批2 车道），不混入本词旗处置。
