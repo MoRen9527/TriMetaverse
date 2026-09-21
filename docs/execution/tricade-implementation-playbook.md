@@ -55,11 +55,11 @@
 
 4. 运营中遇到的问题 → 提需求给研发 → 研发验证 → 反推手册 → 正式运营（闭环）
 
-5. **全程 ADE 模式**——所有流程（公司开张/雇佣/建项目/分员工/建模块/周平面）经 TriPilot 或 TriLC chat 任一入口，由 agent 引导，按 ADE（Agent → CLI → Agent）标准化严格执行，保证每次执行模板化一致
+5. **全程确定性执行规程（FADE DCE 段）**——所有流程（公司开张/雇佣/建项目/分员工/建模块/周平面）经 TriPilot 或 TriLC chat 任一入口，由 agent 引导，按确定性执行规程（FADE DCE 段：Agent → CLI → Agent）标准化严格执行，保证每次执行模板化一致
 
 ---
 
-## 一、安装与初始化（ADE 引导）
+## 一、安装与初始化（FADE 引导）
 
 ### 1.1 MSI 安装
 
@@ -140,7 +140,7 @@ trilc employee list
 
 ---
 
-## 二、项目创建（ADE 引导）
+## 二、项目创建（FADE 引导）
 
 ### 2.1 创建项目
 
@@ -197,7 +197,7 @@ Agent: 验证 → 更新项目 registry + 员工项目绑定
 | 6 | 黄皮书 | 正式的技术规范，包含大量数学符号和形式化定义，面向开发者和研究人员——典型是以太坊黄皮书，由 Gavin Wood 博士撰写，精确定义了 EVM。 |
 | 7 | 模块说明 | 模块边界、吸收链规则 |
 | 8 | 数据真源资产 | 源侧 → 宿主侧的产物流水线（原"发布资产/消费资产"改名） |
-| 9 | 周工作平面 | 当前周目录 + OP JSON（ADE 方式创建） |
+| 9 | 周工作平面 | 当前周目录 + OP JSON（FADE 方式创建） |
 
 ### 3.2 模块标配（十件套）
 
@@ -263,9 +263,9 @@ TriCade 运营侧
 
 ---
 
-## 五、周工作流（ADE 方式创建）
+## 五、周工作流（FADE 方式创建）
 
-### 5.1 周工作平面（第一真源，ADE 执行）
+### 5.1 周工作平面（第一真源，FADE 执行）
 
 ```text
 周日 00:00 cron 触发（TriLC）
@@ -274,7 +274,7 @@ TriCade 运营侧
   Agent: 验证新周目录 + carry-over 平移 → 报告
 ```
 
-- **ADE 模式**：Agent plans → Deterministic CLI executes → Agent closes——保证周平面创建/平移的确定性和准确性
+- **确定性执行规程（FADE DCE 段）**：Agent plans → Deterministic CLI executes → Agent closes——保证周平面创建/平移的确定性和准确性
 
 - 任务从 TriCade 周平面发起，研发仓拉取同步
 
@@ -357,7 +357,7 @@ weekly-plane shift [--from <week>] [--dry-run]
 | `REQ-20260805-013` | **onboarding 会话 systemPrompt 继承**——chat resume onboarding session 时，send 需携带该 session 的 systemPrompt（onboarding 引导），否则通用助手把 CEO 回复当闲聊。实测：回复"磨人"（CEO 名字）被解释为成语。修复：resume 时 fetch session 的 systemPrompt → /v1/messages 带 system 字段 | ✅ 验证通过（2026-08-06）agent 已意识到初始化流程。遗留：工具 cwd 错误 → REQ-014b |
 | `REQ-20260806-014b` | **agent 工具执行 cwd 错误**——onboarding agent 的 bash/工具用 daemon cwd（System32）而非 onboarding 工作区（运营仓）。实测 agent 检查 `C:\Windows\System32\.claude\agents\`（错），应检查 `D:\Code\ai\TriMetaverse-20260805`。修复：agent 工具执行传入 workspaceRoot（onboarding systemPrompt 已声明工作区） | open — 研发侧 |
 | `REQ-20260806-015` | **TUI /exit 退出花屏**——退出后屏幕残留对话内容（历史遗留）。修复：退出时清屏/恢复终端状态 | open — 研发侧 |
-| `REQ-20260806-020` | **完整 ADE 五段闭环**（CEO 裁决）——周平面迁移补齐：① event 触发（已实现 cron）② agent plan skill（tri-weekly-shift 规划 skill）③ cli 执行（已实现 weekly_plane_shift）④ agent close（review_shift 验证 + 8w 升级清单）⑤ cli 最终落地（shift-ade 操作记录 + notify 邮件 + **TriPilot/trilc chat 推送迁移完成消息**）| open — 研发侧（①-④已实现，⑤推送待补） |
+| `REQ-20260806-020` | **完整段链闭环**（CEO 裁决）——周平面迁移补齐：① event 触发（已实现 cron）② agent plan skill（tri-weekly-shift 规划 skill）③ cli 执行（已实现 weekly_plane_shift）④ agent close（review_shift 验证 + 8w 升级清单）⑤ cli 最终落地（shift-ade 操作记录 + notify 邮件 + **TriPilot/trilc chat 推送迁移完成消息**）| open — 研发侧（①-④已实现，⑤推送待补） |
 | `REQ-20260806-021` | **TriPilot/trilc chat 迁移完成推送**——周平面迁移成功后，TriLC 向接入的 TriPilot 与 trilc chat 客户端推送"迁移完成"消息（TriLC 新增通知端点 + 客户端拉取/显示）| open — 研发侧 |
 | `REQ-20260806-022` | **TriGateway 定位更正**——双向通信通道层（管理者↔agent 对话 + agent 推送，对齐 OpenClaw channel 模型），非获客/拉新；邮件为单向通知归 TriCompany notify（OpenClaw 通道列表无 email）| open — 研发侧/CPO registry 回填 |
 | `REQ-20260806-018` | **PID 生命周期修复**——daemon 自登记 PID（run/start/schtasks 全入口一致）+ 退出自清理 + stop 端口兜底 + start 占用者验证。✅ 已验证：前台 run 自登记清理 + PID 缺失端口兜底（"stopped via port lookup"） | ✅ 验证通过（TriLC f1f50b0） |
@@ -402,7 +402,7 @@ weekly-plane shift [--from <week>] [--dry-run]
 | 研发侧 | 孵化仓（Claude Code工具/源码），工程验证方 |
 | 运营仓 | 独立 git 仓库的运营项目（如 TriMetaverse-20260805） |
 | 雇佣批注 | 员工增量上岗机制（五件套装配到 .claude/agents/） |
-| ADE | Agent → Deterministic CLI → Agent（模板化执行模式） |
+| FADE（前称 ADE） | Agent → Deterministic CLI → Agent（模板化执行模式） |
 | 数据真源资产 | 源侧 → 宿主侧的产物流水线 |
 
 ### 项目级术语表（进项目治理规则）
@@ -412,11 +412,11 @@ weekly-plane shift [--from <week>] [--dry-run]
 | 十件套 | 模块标配文档集（README/AGENTS/docs×6/.gitignore/CodeGraph） |
 | 白皮书 | 项目产品愿景/商业模式 |
 | 黄皮书 | 技术描述（YP-v* 审核版本） |
-| 周工作平面 | 项目周任务树（ISO 周历对齐，ADE 创建） |
+| 周工作平面 | 项目周任务树（ISO 周历对齐，FADE 创建） |
 
 ---
 
-## 附录 B：ADE 执行清单（所有流程通用）
+## 附录 B：FADE 执行清单（所有流程通用）
 
 ```text
 

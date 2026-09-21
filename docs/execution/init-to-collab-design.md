@@ -225,7 +225,7 @@ CEO 要求「两个入口初始化都做成功（两入口体验）」。产品�
 | TriMC 形态 | 服务器 Meta Controller：HTTP agent 面 + cron 域（七端点）；**无模型/key/公司/项目配置平面**；`/hello` 等端点仍用旧模型名 deepseek-v4-pro/flash（与 tmv-* 正典不一致，已知观察）；CEO 口径：非开箱即用，初始化后同步 | `TriMC/src/` + `TriMC/docs/registry/code-state.md` + CEO-20260814-003 |
 | 项目注册点 | design-v2 §③ 设计态（`%LOCALAPPDATA%\trilc\project-registry.json`），**未实施**（P1/P2 未建树）——本设计初始化链路包含其建立 | design-v2 §③/§七 |
 | 周平面解析 | `weekly-plane-root.ts`：env 显式（existsSync 校验）> 源码态 sibling 发现 > undefined；公司轨只读绝不写入；平移 = 周目录切换（W33 → W34） | `TriLC/src/project/weekly-plane-root.ts` + design-v2 §三 |
-| 周平面迁移链（r1-2） | TriMC cron job weekly-plane-shift：周日 23:00 Asia/Singapore 自然触发（run 兜底），五段 ADE 链 fleet 身份执行；两期全真实演练通过（REHEARSAL-20260813-001/002），无痕回退已实证（裸仓 update-ref + 克隆 reset --hard + job 态复位） | OP risks 段 + `TriMC/docs/ops/trimc-cron-plane-shift-runbook.md` |
+| 周平面迁移链（r1-2） | TriMC cron job weekly-plane-shift：周日 23:00 Asia/Singapore 自然触发（run 兜底），FADE 段链 fleet 身份执行；两期全真实演练通过（REHEARSAL-20260813-001/002），无痕回退已实证（裸仓 update-ref + 克隆 reset --hard + job 态复位） | OP risks 段 + `TriMC/docs/ops/trimc-cron-plane-shift-runbook.md` |
 | 舰队拓扑 | sg-server 5 裸仓 + `/srv/fleet/<repo>` ×5 ff-only 克隆（fleet 单身份）；「本地 push → 裸仓 → fleet pull」双仓闭环已实证 | `docs/execution/server-fleet-m0.md` |
 | 排期事实 | R4-RELEASE-MERGE-20260817-001（r4 本地未 push，合并挂迁移验收后）；08-16 23:00 迁移验收原口径（部署旧版本行为不变 + 升级 install 切换）；08-16 为周日（自然触发日） | OP 1.46.0 + design-v2 §五.② |
 | 公司面落点现状 | onboarding Step5 装配落点 = workspaceRoot（现 TriMetaverse 研发仓双轨合一）：`.claude/agents/<role>.md` + `docs/registry/company-state.json` + `business-state.md` + `AGENTS.md` | `TriLC/src/company/onboarding.ts` + design-v2 §2.8 |

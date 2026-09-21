@@ -18,7 +18,7 @@
 
 - 公司角色与组织责任。
 - 树、节点、信号和状态合同。
-- 项目实例、宿主运行时与 ADE run 的引用关系。
+- 项目实例、宿主运行时与 FADE run 的引用关系。
 - 持久化、恢复和收口的最低要求。
 - 执行交接、存档检查点和幂等续跑的公司级规则。
 - 多树并行调度的组织约束。
@@ -137,7 +137,7 @@
 
 即：r7-3 开工时，应阅读 r7-0、r7-1、r7-2 的全部 brief，而不只是 r7-2 的 checkpoint。这确保收口节点拥有完整的树上下文。
 
-ADE 内部的 `PLANNING / EXECUTING / VERIFYING / CLOSING`、checkpoint、attempt、lease 和 signal 不进入 Trees 状态机。Trees 只保留组织投影。
+FADE 内部的 `PLANNING / EXECUTING / VERIFYING / CLOSING`、checkpoint、attempt、lease 和 signal 不进入 Trees 状态机。Trees 只保留组织投影。
 
 ## 5. 状态枚举
 
@@ -150,12 +150,12 @@ ADE 内部的 `PLANNING / EXECUTING / VERIFYING / CLOSING`、checkpoint、attemp
 
 历史节点状态 `active` 统一映射为 `in_progress`；`closed` 不再作为树或节点状态使用。
 
-ADE 投影约束：
+FADE 投影约束：
 
 - 节点 `done` 且 `execution_protocol=ade` 时，`ade_terminal_status` 必须为 `APPROVED`。
-- ADE `FROZEN` 默认不自动改变组织节点状态，由 CEOChiefOfStaff 判断继续 `in_progress` 还是升级。
-- ADE `ESCALATED` 可建议节点转 `escalated`，但组织分支仍由 CEOChiefOfStaff 创建。
-- ADE `RETRY` 不改变 Trees 状态。
+- FADE `FROZEN` 默认不自动改变组织节点状态，由 CEOChiefOfStaff 判断继续 `in_progress` 还是升级。
+- FADE `ESCALATED` 可建议节点转 `escalated`，但组织分支仍由 CEOChiefOfStaff 创建。
+- FADE `RETRY` 不改变 Trees 状态。
 
 ## 6. 信号协议
 
@@ -226,7 +226,7 @@ list active trees
 
 ### 7.3 恢复优先级
 
-恢复时优先从 runtime store 读取非终态树与节点；runtime 不可用时从项目导出副本重建。若节点绑定 ADE run，查询共享 ADE runtime 的 canonical / authority 状态。恢复结果由 CEOChiefOfStaff 决定继续、回退、重新路由或升级。
+恢复时优先从 runtime store 读取非终态树与节点；runtime 不可用时从项目导出副本重建。若节点绑定 FADE run，查询共享 FADE runtime 的 canonical / authority 状态。恢复结果由 CEOChiefOfStaff 决定继续、回退、重新路由或升级。
 
 ## 8. 多树并行调度
 
@@ -241,18 +241,18 @@ list active trees
 - 一棵树的节点交付可作为另一棵树的 routedInput（通过引用）。
 - 树间依赖由 CEOChiefOfStaff 在建树或路由时显式声明。
 
-## 9. ADE 与 Trees
+## 9. FADE 与 Trees
 
-ADE 是执行生命周期协议，Trees 是组织任务协议。
+FADE 是执行生命周期协议，Trees 是组织任务协议。
 
 ```text
 Tree node（谁负责、交付什么）
   -> ade_run_id（如何可靠执行）
-  -> ADE terminal / close evidence
+  -> FADE terminal / close evidence
   -> Tree node delivery / status projection
 ```
 
-Trees 不创建 ADE 内部 checkpoint；ADE 也不擅自创建组织节点。
+Trees 不创建 FADE 内部 checkpoint；FADE 也不擅自创建组织节点。
 
 ### 9.1 与 TriMC / 交付板的接口
 
