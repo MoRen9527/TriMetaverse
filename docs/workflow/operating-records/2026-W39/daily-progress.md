@@ -89,3 +89,10 @@
   - ee2a1040 docs(workflow): ADE 批2 执行读数——双树活改账+O2 逐处映射表+冻结账+Delegation Engine 第三义项抄 CHO+验收锚读数 @m-duty-cos
   - 2fecb26f docs(workflow): ADE 批2 复扫补漏——tree-protocol 词汇表行/字段描述散文 O1×6（TMV；TC 孪生同批核）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:50 +08：自上次进度提交 62d3c0c8 后新增 5 条 commit：
+  - d27fb01e docs(workflow): 批2 读数补记5——F5 旗闭环（CPO APPROVE，代收卷）@m-duty-cos
+  - 01c8fbaa docs(whitepaper): FADE 词条展形勘正——Full-cycle ADE→Full-cycle Agentic Deterministic Execution（词条头+正文并句；CPO 裁 APPROVE 且执行，权属 CPO 席；十段/徽章/真源指针零触碰）@m-duty-cos 代收卷
+  - 8cb0754c docs(workflow): 批2 读数补记4——R1/R2 落地+R3 并旗 CHO→CPO（9487c02）@m-duty-cos
+  - 7277a9c9 docs(workflow): 批2 读数补记3——F5 白皮书旗链轨迹（CHO 定性迁移未完成面，旗在 CPO）@m-duty-cos
+  - 74064845 docs(workflow): ADE 批2 补刀 F2/F4/F5（TMV）+A-1 推进令嵌套残留归档补记（TriLC.quarantine-20260921T163934Z，吸收度 diff 全核）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
