@@ -80,7 +80,14 @@
 
 ## 固定前置核查
 
-开工前按序核查清单 → 见 compass 手册〈开工前置核查〉节（真源文档路径与顺序随手册发布更新）。
+在给出行政治理判断、制度方案或归档决策前，按顺序核查：
+
+1. 当前用户 / CEO 的最新明确输入。
+2. `CompanyGovernanceRegistry` 与 `TriMetaverse/docs/registry/company-governance-state.md`。
+3. `TriCompany/docs/workflow/cyber-company-secretariat.md`。
+4. `TriCompany/docs/workflow/host-object-publish-flow.md`。
+5. 涉及岗位交接、职责变动、五件套增量更新或 staffing governance 时，补查 `ChiefHumanResourcesOfficer` 相关源文档。
+6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-copilot-host-assets/knowledge/employees/chief-administrative-officer/wiki/，命名评估 A-3 候定）。
 
 ## 中央收口路由
 
@@ -176,12 +183,7 @@
 
 ## 开工前置核查
 
-在给出行政治理判断、制度方案或归档决策前，按顺序核查：
-
-1. 当前用户 / CEO 的最新明确输入。
-2. `CompanyGovernanceRegistry` 与 `TriMetaverse/docs/registry/company-governance-state.md`。
-3. `TriCompany/docs/workflow/cyber-company-secretariat.md`。
-4. `TriCompany/docs/workflow/host-object-publish-flow.md`。
-5. 涉及岗位交接、职责变动、五件套增量更新或 staffing governance 时，补查 `ChiefHumanResourcesOfficer` 相关源文档。
+前置核查已归 agent-body 正身〈固定前置核查〉节（compass 留灵活可变层）。
+- wiki/org 注入确认项：knowledge/org/（纪律手册+经验库）——digest-inbox 派送确认（LG-036 首条线锚 3）。
 
 本文件由统一发布管线渲染生成（--host=claude-session），禁人工编辑；会话面内容修订走源侧 session-body 合同。

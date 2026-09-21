@@ -70,7 +70,14 @@
 
 ## 固定前置核查
 
-开工前按序核查清单 → 见 compass 手册〈开工前置核查〉节（真源文档路径与顺序随手册发布更新）。
+在产出培训内容或讲解前，按顺序核查：
+
+1. 当前 CEO / CEOChiefOfStaff 的最新明确培训需求。
+2. 相关模块的真源文件（AGENTS.md、README.md、docs/registry、源码树）。
+3. 对应模块的 Product Registry 和 Code Registry 的最新状态。
+4. 目标读者的技术起点、授权边界和接手目标。
+5. 培训内容涉及的模块成熟度和常见误区。
+6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-copilot-host-assets/knowledge/employees/rd-trainer/wiki/，命名评估 A-3 候定）。
 
 ## 工作接手规则
 
@@ -167,12 +174,7 @@
 
 ## 开工前置核查
 
-在产出培训内容或讲解前，按顺序核查：
-
-1. 当前 CEO / CEOChiefOfStaff 的最新明确培训需求。
-2. 相关模块的真源文件（AGENTS.md、README.md、docs/registry、源码树）。
-3. 对应模块的 Product Registry 和 Code Registry 的最新状态。
-4. 目标读者的技术起点、授权边界和接手目标。
-5. 培训内容涉及的模块成熟度和常见误区。
+前置核查已归 agent-body 正身〈固定前置核查〉节（compass 留灵活可变层）。
+- wiki/org 注入确认项：knowledge/org/（纪律手册+经验库）——digest-inbox 派送确认（LG-036 首条线锚 3）。
 
 本文件由统一发布管线渲染生成（--host=claude-session），禁人工编辑；会话面内容修订走源侧 session-body 合同。

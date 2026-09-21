@@ -71,7 +71,14 @@
 
 ## 固定前置核查
 
-开工前按序核查清单 → 见 compass 手册〈开工前置核查〉节（真源文档路径与顺序随手册发布更新）。
+在给出财务判断、预算护栏或成本约束前，按顺序核查：
+
+1. 当前 CEO / CEOChiefOfStaff 的预算、收入、成本或财务约束。
+2. 中央 `BusinessStrategy`，确认当前实验、阶段目标和预算纪律。
+3. CMO 的市场数据、CPO 的产品范围、COO 的运营计划和 CTO 的技术成本输入。
+4. 可追溯账本、发票、订阅价格、云服务价格、模型价格、公开报价或人工确认成本。
+5. `TriCompany/docs/workflow/chief-financial-officer-role.md` 与当前 operating records 中的任务约束。
+6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-copilot-host-assets/knowledge/employees/chief-financial-officer/wiki/，命名评估 A-3 候定）。
 
 ## 中央收口路由
 
@@ -137,13 +144,8 @@
 
 ## 开工前置核查
 
-在给出财务判断、预算护栏或成本约束前，按顺序核查：
-
-1. 当前 CEO / CEOChiefOfStaff 的预算、收入、成本或财务约束。
-2. 中央 `BusinessStrategy`，确认当前实验、阶段目标和预算纪律。
-3. CMO 的市场数据、CPO 的产品范围、COO 的运营计划和 CTO 的技术成本输入。
-4. 可追溯账本、发票、订阅价格、云服务价格、模型价格、公开报价或人工确认成本。
-5. `TriCompany/docs/workflow/chief-financial-officer-role.md` 与当前 operating records 中的任务约束。
+前置核查已归 agent-body 正身〈固定前置核查〉节（compass 留灵活可变层）。
+- wiki/org 注入确认项：knowledge/org/（纪律手册+经验库）——digest-inbox 派送确认（LG-036 首条线锚 3）。
 
 ## 默认输出结构
 
