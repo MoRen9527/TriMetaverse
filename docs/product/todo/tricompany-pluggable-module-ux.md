@@ -2,7 +2,7 @@
 
 版本：V0.1
 日期：2026-08-01
-状态：CPO APPROVE（待 CEOChiefOfStaff 收口）
+状态：CPO APPROVE · 已收口（收口记录见文末附卷）
 决策节点：tricade-3
 作者：ChiefProductOfficer（小乔）
 
@@ -136,7 +136,7 @@ TriCompany
 | system prompt | 每个 agent 的 soul + agent_body 组装为完整 system prompt（已实现：contract-resolver） |
 | `/agents` 命令 | `all` 和 `company` scope 返回 13 员工；`builtin` 仍只返回 4 个 |
 | AgentTool 路由 | 可从 daemon `/internal/v1/agents` 匹配 TriCompany 员工并 spawn 子代理 |
-| 治理文档 | **Phase 2**：注入 CompanyGovernanceRegistry、授权矩阵、ADE 协议到 agent context |
+| 治理文档 | **Phase 2**：注入 CompanyGovernanceRegistry、授权矩阵、EDP 协议到 agent context |
 | 员工侧边栏 | **Phase 2**：VSCodium 侧边栏新增 TriCompany 视图 |
 | 成本影响 | 无额外固定成本；按实际 token 消耗计费（后续 CFO 上线后跟踪） |
 
@@ -193,18 +193,18 @@ Phase 2 可考虑的细分策略：
 
 当前 TriLC 已有 cron scheduler（`TriLC/src/cron/`）和 heartbeat（`TriLC/src/heartbeat/`），但这些是 TriLC 自身的基础设施定时任务（session reaper、mirror push），不是 TriCompany 员工调度。
 
-#### 4.3 ADE 协议作为默认行为
+#### 4.3 EDP 协议作为默认行为
 
-**FREEZE**：Phase 1 不接入。ADE（Agent Delegation Engine / 员工委托协议）是 Phase 2 内容。
+**FREEZE**：Phase 1 不接入。EDP（Employee Delegation Protocol / 员工委托协议；曾用缩写 ADE，2026-09-22 CHO 定谳正名脱开）是 Phase 2 内容。
 
 原因：
-- tree-op 明确标注 tricade-4 的 next_agent 为 null（Phase 1 收口），ADE 上岗属于 Phase 2
-- ADE 需要完整的员工间委托协议、决策路由、冲突仲裁——当前 AgentTool 只实现了单向 spawn，不是员工间双向委托
+- tree-op 明确标注 tricade-4 的 next_agent 为 null（Phase 1 收口），EDP 上岗属于 Phase 2
+- EDP 需要完整的员工间委托协议、决策路由、冲突仲裁——当前 AgentTool 只实现了单向 spawn，不是员工间双向委托
 - Phase 1 的用户价值主张是"让用户看见和使用 13 个 AI 员工"，而不是"13 个 AI 员工自己互相协作"
 
 Phase 2 接入规划：
-- 当 TriCompany 启用 **且** ADE 协议可用时，AgentTool 的 sub-agent 应优先走 ADE 路由（带决策权限、审批链），而非直接 spawn
-- ADE 可提升为系统级行为：当检测到需要跨角色决策时（如 CPO+CTO 联合审批），自动触发 ADE 多员工协作
+- 当 TriCompany 启用 **且** EDP 协议可用时，AgentTool 的 sub-agent 应优先走 EDP 路由（带决策权限、审批链），而非直接 spawn
+- EDP 可提升为系统级行为：当检测到需要跨角色决策时（如 CPO+CTO 联合审批），自动触发 EDP 多员工协作
 
 ---
 
@@ -217,7 +217,7 @@ Phase 2 接入规划：
 | TriLC daemon `/agents` 端点 | low→medium | CTO tricade-1 1.4 正在实现；AgentTool 已预留调用代码 |
 | TriPilot welcome-setup.ts | medium | Step 4 已实现，写入 `tripilot.tricompany.enabled` + `trilc-config.json` |
 | TriCompany source-agents | high | 13 员工五件套 + contract YAML 链完备 |
-| EmployeeRegistry / EmployeeScheduler | low | Phase A 静态加载，动态调度未实现 → 影响 cron job 和 ADE 接入时机 |
+| EmployeeRegistry / EmployeeScheduler | low | Phase A 静态加载，动态调度未实现 → 影响 cron job 和 EDP 接入时机 |
 | CompanyGovernanceRegistry | medium | 治理文档存在，但 Phase 1 不注入到 agent context → Phase 2 |
 
 **总体判断**：Phase 1 的产品形态所需的技术依赖已基本到位（contract-resolver + AgentTool + welcome wizard）。agents 端点（CTO 1.4）是最后的关键缺失项，但产品决策不阻塞技术实现。
@@ -261,3 +261,13 @@ Phase 2 接入规划：
 - `TriMC/src/orchestration/employee-registry.ts`（EmployeeRegistry Phase A 静态加载）
 - `TriMC/src/orchestration/types.ts`（EmployeeRecord / RoutingDecision / DispatchResult 类型定义）
 - `TriMC/src/contracts/agent-contract.ts`（AgentContract schema v1 标准类型）
+
+---
+
+## 收口记录（2026-09-22）
+
+- **收口执行**：SDE 小布（部署/打包线），BOD 派工 LG-040 T-3（ADE 清查尾项第三条，经 m-cos 名址通道）；原「待 CEOChiefOfStaff 收口」流转至本批收口落账。
+- **EDP 正名**：Phase 2 规划概念 Agent Delegation Engine 缩写退役（CHO 2026-09-22 定谳「退役字母不复活」，正名脱开 ADE 缩写，避开 DE 席正名冲突）；正名=员工委托协议 / **EDP**（Employee Delegation Protocol，全仓零占用已验）。本件活改 8 处（:139/:196/:198/:201/:202/:206/:207/:220），定义处带沿革注。
+- **作者会签**：CPO 小乔 2026-09-22 04:1x +0800 会签同意（会签前独立对表 8 处全中+决策实质零变更确认）。
+- **决策实质零变更**：双层组合架构、Phase 1/2 划线、三处 FREEZE（4.2 cron 接入 / 4.3 委托协议 / 治理文档注入）均维持原样，仅缩写正名+收口落账。
+- **树卷**：`docs/workflow/operating-records/2026-W39/trees/ade-legacy-sweep/tricade3-closeout-report.md`
