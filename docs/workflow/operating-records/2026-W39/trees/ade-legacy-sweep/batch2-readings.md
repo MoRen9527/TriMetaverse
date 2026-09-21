@@ -58,3 +58,7 @@
 - R3=TMV todo:139 Phase2 行「ADE 协议」——product 面 CPO 归属域，并入 whitepaper:1321 旗打包 CHO→CPO（禁改维持）。
 - 冻结确认两处：colleagues-social:22 历史溯源形 ✓；employee_onboard_stages.json:8 "ADE JSON" 配置值→归 O4 代码批窗核消费面。
 - 候 CTO 定点复验销验收（免第四轮全扫）。
+
+## 补记 5：F5 旗闭环（2026-09-22）
+
+- CPO 裁勘 APPROVE 且已执行（whitepaper:1321 词条头+正文并句修复，diff 1+/1- 零越界，三锚核验在卷）——本席代收卷提交，旗链 CHO→CPO→值席收旗 **闭环** ✓。
