@@ -25,3 +25,21 @@
   - f91e18ed docs(lg-034): github-repo-governance lastSyncedAt 随 §12 增补更新
   - …另有 485 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 b9ffb993 后新增 34 条 commit：
+  - df0766cd docs(workflow): sg 值席批次四件收口——T-a 发布位三席 diff=0/T-b MAP 20 仓全 FETCH-OK/T-c TMV 追平 999b81bb/T-d D-13 入册两笔（bf4360f）@m-duty-cos
+  - 999b81bb docs(fade008): 本机 COS P/A 段产物落卷——台账整合任务书+拆树（与远端 C/E 收口笔对表）
+  - c833f7fa rename(sde)+chore: 改名笔尾段补全（旧名文件删除）+seats/manifest 派生品落卷
+  - 20831089 rename(sde): 发布位+compass 文件名 SDE 正名（deployment-engineer→senior-deployment-engineer，CEO 02:47 令；渲染对表候攒批）
+  - a096e5ac fix(watchdog): 看门狗运行链纠偏——VBS 由归档副本改指正位 .fade/seat-watchdog.ps1（SDE 新三元组），归档件加禁运行头注，全计划任务扫零残留
+  - 39b255ee docs(sde): DE→SDE 销账——五锚全过+Trideployment 甄别定谳（4活文件全历史语义零活引用）+roster 随首月校准窗裁准
+  - 5447b5ca feat(rename): DE→SDE 名册联动（TMV 面）——seats.json deployment-engineer 条 agent 字段 DeploymentEngineer→SDE（opsName m-dee 不动照令；sg seats-sg.json 远端候 m-duty-cos 通道交接）（task-charter-20260921，CHO 五件套面）
+  - 1ff94c66 docs(sde): DE→SDE 正名命题书——高级部署工程师+TriDeployer 漏网代号修正+路由引用甄别，m-dee 寻址名 BOD 裁保留，派 CHO
+  - e5383020 docs(precheck): 前置核查归位销账——CHO 185a5db+BOD 抽3席对表全过（CPO阀门/CTO七条含wiki项/DE派生归位），四锚闭
+  - b302b60c docs(precheck): 前置核查归位命题书——compass(灵活层)→agent-body(角色定义层)，13 席走查纠偏+wiki 联动项，派 CHO
+  - b20fadf1 docs(lg-035): 宿主资产目录命名·CTO 技术层评估（追加命题）——引用面实测 ~250 文件（host-assets 自引 147/docs 57/.claude 27/.github 16/三 daemon 代码 5=重启生效风险位）；窗口关系=迁移先行于首条线上线（零返工）；渐进 vs 一次到位裁渐进（junction 别名制 compass 正身先例/五步序/触发式终点）；命名形态=宿主中性化方向三候选归产品裁
+  - 144ed7a3 docs(inbox-wiki-first-line): 命题追加评估——宿主资产目录命名应做（正名候选 TriCompany-host-assets）；必答=先改名后上线且两窗合并单批双段（四理由+诚实备选注记：概念/物理分离使 B 不致破）
+  - fa033cb1 docs(inbox-wiki): 追加命题——宿主资产目录命名评估（copilot 名不副实→TriCompany-x-host-assets 提案），与首条线上线窗口先后关系联审必答
+  - 3c4e3f64 docs(lg-035): p2 首条实证线·CTO 技术线评估件——管道三段最小闭环（inbox frontmatter 两键=schema 零 LLM 锚/digest-rules.yaml 首版+脚本起步 daemon 候稳/org 层纪律手册+席级经验页，写入走首落模板）+两域分步（本地域现役注入 tag 过滤/服务域拉取式不等注入器批）+读取时机混合裁（前置核查拉取式为主+boot 摘要级辅助——全文注入=预算税与 p2 热路径锚反）+验收锚四条；评估阶段不动现役
+  - 6b47edd3 docs(inbox-wiki-first-line): CPO 产品线四件——纪律手册大纲 v1 列全（五节 4.2 升格门，落 knowledge/org 组织知识库首件）/经验裁两件（索引+分席页）/schema 三键两 spec（reject 阀门首实证）/前置核查 boot 为主+确认行为辅
+  - …另有 19 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
