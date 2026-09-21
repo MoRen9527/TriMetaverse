@@ -776,101 +776,6 @@
       ]
     },
     {
-      "objectSetId": "deployment-engineer-knowledge-workspace-v0.1",
-      "status": "current-copilot-host-live",
-      "ownerRole": "DeploymentEngineer",
-      "generatedAt": "2026-04-29T00:00:00+08:00",
-      "generator": "python -m runtime.cognition.employee_host_object_generation --employee deployment-engineer",
-      "sourceRefs": [
-        "TriCompany/source-agents/deployment-engineer/deployment-engineer.agent.md",
-        "TriCompany/source-agents/deployment-engineer/deployment-engineer.soul.md",
-        "TriCompany/source-agents/deployment-engineer/deployment-engineer.memory.md",
-        "TriCompany/source-agents/deployment-engineer/deployment-engineer.colleagues.md",
-        "TriCompany/source-agents/deployment-engineer/deployment-engineer.social.md",
-        "TriCompany/source-agents/deployment-engineer/deployment-engineer.contract.yaml",
-        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
-      ],
-      "bindingProfile": "TriCompany/.github/binding-profiles/deployment-engineer.json",
-      "supportObjects": [
-        {
-          "kind": "role-knowledge-workspace",
-          "workspaceId": "deployment-engineer",
-          "path": "TriCompany-copilot-host-assets/knowledge/roles/deployment-engineer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "employee-knowledge-workspace",
-          "workspaceId": "deployment-engineer",
-          "path": "TriCompany-copilot-host-assets/knowledge/employees/deployment-engineer",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "org-shared-knowledge-workspace",
-          "workspaceId": "shared",
-          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
-          "tracking": "tracked"
-        },
-        {
-          "kind": "audit-knowledge-workspace",
-          "workspaceId": "audit",
-          "path": "TriCompany-copilot-host-assets/knowledge/audit",
-          "tracking": "tracked"
-        }
-      ],
-      "runtimeNamespaces": [
-        {
-          "kind": "employee-private-runtime-namespace",
-          "namespace": "employee/deployment-engineer",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "created on first cognition write, not by host object generation"
-        },
-        {
-          "kind": "org-shared-runtime-namespace",
-          "namespace": "org/shared",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared across employees when runtime providers write shared memory"
-        },
-        {
-          "kind": "org-audit-runtime-namespace",
-          "namespace": "org/audit",
-          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
-          "tracking": "runtime-state",
-          "creationRule": "shared audit namespace created by runtime providers"
-        }
-      ],
-      "liveEntryStatus": "current-copilot-host-live",
-      "notes": [
-        "DeploymentEngineer (小布) is onboarded as a live host agent in the current Copilot-host phase per CEO launch approval 2026-08-01.",
-        "The live discovery target is TriMetaverse/.github/agents/deployment-engineer.agent.md.",
-        "DeploymentEngineer owns automated deployment, ADE execution, release pipelines, and environment management; reports to CTO (小狄).",
-        "Current enablement does not imply TriMC formal host switch, production deployment infrastructure, or automated CI/CD pipelines are already implemented.",
-        "Contract YAML is at TriCompany/source-agents/deployment-engineer/deployment-engineer.contract.yaml (contract v3.0).",
-        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
-      ],
-      "employeeDisplayName": "小布",
-      "sessionBody": "TriCompany/source-agents/deployment-engineer/session-body.agent.md",
-      "liveEntries": [
-        {
-          "target": "TriMetaverse/.github/agents/deployment-engineer.agent.md",
-          "source": "TriCompany/source-agents/DeploymentEngineer/DeploymentEngineer.agent.md",
-          "kind": "role-agent",
-          "status": "current-copilot-host-live",
-          "sessionBody": "TriCompany/source-agents/deployment-engineer/session-body.agent.md",
-          "renderTemplate": "host-default",
-          "sourceFiles": {
-            "soul": "TriCompany/source-agents/deployment-engineer/soul.agent.md",
-            "agent_body": "TriCompany/source-agents/deployment-engineer/agent-body.agent.md",
-            "agent_frontmatter": "TriCompany/source-agents/deployment-engineer/agent-frontmatter.agent.md",
-            "memory": "TriCompany/source-agents/deployment-engineer/memory.agent.md",
-            "colleagues": "TriCompany/source-agents/deployment-engineer/colleagues-social.agent.md",
-            "social": "TriCompany/source-agents/deployment-engineer/colleagues-social.agent.md"
-          }
-        }
-      ]
-    },
-    {
       "objectSetId": "customer-success-officer-knowledge-workspace-v0.1",
       "status": "current-copilot-host-live",
       "ownerRole": "CustomerSuccessOfficer",
@@ -1250,6 +1155,101 @@
             "memory": "TriCompany/source-agents/ceo-chief-of-staff/memory.agent.md",
             "colleagues": "TriCompany/source-agents/ceo-chief-of-staff/colleagues.agent.md",
             "social": "TriCompany/source-agents/ceo-chief-of-staff/social.agent.md"
+          }
+        }
+      ]
+    },
+    {
+      "objectSetId": "deployment-engineer-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "DeploymentEngineer",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee deployment-engineer",
+      "sourceRefs": [
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.agent.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.soul.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.memory.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.colleagues.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.social.md",
+        "TriCompany/source-agents/deployment-engineer/deployment-engineer.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/deployment-engineer.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "deployment-engineer",
+          "path": "TriCompany-copilot-host-assets/knowledge/roles/deployment-engineer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "deployment-engineer",
+          "path": "TriCompany-copilot-host-assets/knowledge/employees/deployment-engineer",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-copilot-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-copilot-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/deployment-engineer",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "DeploymentEngineer (小布) is onboarded as a live host agent in the current Copilot-host phase per CEO launch approval 2026-08-01.",
+        "The live discovery target is TriMetaverse/.github/agents/deployment-engineer.agent.md.",
+        "DeploymentEngineer owns automated deployment, ADE execution, release pipelines, and environment management; reports to CTO (小狄).",
+        "Current enablement does not imply TriMC formal host switch, production deployment infrastructure, or automated CI/CD pipelines are already implemented.",
+        "Contract YAML is at TriCompany/source-agents/deployment-engineer/deployment-engineer.contract.yaml (contract v3.0).",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "employeeDisplayName": "小布",
+      "sessionBody": "TriCompany/source-agents/deployment-engineer/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/deployment-engineer.agent.md",
+          "source": "TriCompany/source-agents/DeploymentEngineer/DeploymentEngineer.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/deployment-engineer/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/deployment-engineer/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/deployment-engineer/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/deployment-engineer/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/deployment-engineer/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/deployment-engineer/colleagues-social.agent.md",
+            "social": "TriCompany/source-agents/deployment-engineer/colleagues-social.agent.md"
           }
         }
       ]
