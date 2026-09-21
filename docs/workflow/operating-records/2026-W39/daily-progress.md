@@ -114,3 +114,6 @@
   - 13ced808 docs(ade-sweep): 清查清单审定结果附则+P1 完工读数（CTO 四裁+ADE_PROTOCOL 契约值红线+检测器口径注记）
   - …另有 1 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 bf27588f 后新增 1 条 commit：
+  - 7899453f docs(workflow): ADE 清查树收编——CTO batch2 验收单+CHO inventory-draft 实勘清单入版控（权属各归其席；root 落笔件照收）@m-duty-cos 代收卷
+- registry：v2.1；今日 registry 提交无变化
