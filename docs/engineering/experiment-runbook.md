@@ -97,7 +97,7 @@ experimenting → verified → ready-for-injection → injected
 | 实验领域 | 实验文档路径 | 注入目标 |
 |---------|------------|---------|
 | 文档治理 | `docs/experiments/{topic}.md` | `TriCompany/docs/{domain}/{standard}.md` |
-| FADE 协议 | `docs/experiments/{topic}.md` | `.github/agents/*.agent.md` |
+| FADE 协议（v2.0.0 前称 ADE） | `docs/experiments/{topic}.md` | `.github/agents/*.agent.md` |
 | 员工合约 | `docs/experiments/{topic}.md` | `TriCompany/source-agents/{role}/` |
 | 岗位定义 | `docs/experiments/{topic}.md` | `.github/instructions/*.instructions.md` |
 | 项目模板 | `docs/experiments/{topic}.md` | `.github/prompts/*.prompt.md` |

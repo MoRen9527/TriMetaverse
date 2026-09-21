@@ -69,3 +69,30 @@
   - 48d00155 docs(fade-provenance): 运行脚本真源化命题书——.fade 族+服务器同族全量定性，CPO×CTO×CAO 三席联审（先源后部纪律+立规三件套制度化）
   - …另有 1 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-22（周二）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:20 +08：自上次进度提交 040f9300 后新增 2 条 commit：
+  - f33ccab0 docs(workflow): ADE 清查读数件补记——同名词旗 3 处 CHO 定谳（分类修正/两冻结一候裁/升级候裁归秘书处×CTO）@m-duty-cos
+  - fecb8f07 docs(workflow): ADE 清查 P2-sg 面读数回执——20 仓全扫（6 命中/14 零命中）+批1 活改 8b703e9+批2 候细判清单+同名词旗 3 处抄 CHO（夜航段①留痕制）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:30 +08：自上次进度提交 797385ee 后新增 5 条 commit：
+  - b5c7e0d1 docs(workflow): ADE 批2 组2——playbook O1×9/O2 去数字化+tree-protocol 散文 O1×11（字段名 ade_*_id/状态值/协议 schema 契约面冻结）+单点两件；v0.9.x 命名决议专章 15 处裁 F 冻结 @m-duty-cos
+  - 892618f2 docs(engineering): ADE 批2——ROADMAP/STATE/README O1 概念直呼近形改 8 处（裁决引语/文件题名链接/数据快照冻结保全；todo 8 处 Agent Delegation Engine 同名义项 FLAG 抄 CHO）@m-duty-cos
+  - 8ea0a2fc docs(workflow): ADE 批2——rd-orchestration O1×2+REF 首现沿革注入卷；CTO 批2 裁示正身入版控（权属 CTO 席）@m-duty-cos
+  - c68ca846 docs(workflow): ADE 批2 文档面小件8——O1 概念直呼近形改+O2 五段→段链闭环去数字化+REF 活指针改 fade-protocol-spec（首现沿革注；O2 映射表随批2 读数附卷）@m-duty-cos
+  - 2d26b4c4 docs(workflow): ADE 批2 工作清单判定列版——821 行四分型+车道/冻结预分（批2 执行锚，D-01 断点可续）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:40 +08：自上次进度提交 e964fa04 后新增 4 条 commit：
+  - 9a319062 docs(workflow): 批2 读数补记2——第三义项 CHO 定谳入卷（EDP 正名定向+随 tricade-3 收口批合轨+8 处预列）@m-duty-cos
+  - 62b187ec docs(workflow): 批2 读数锚勘正——tree-protocol 补漏笔 2fecb26f @m-duty-cos
+  - ee2a1040 docs(workflow): ADE 批2 执行读数——双树活改账+O2 逐处映射表+冻结账+Delegation Engine 第三义项抄 CHO+验收锚读数 @m-duty-cos
+  - 2fecb26f docs(workflow): ADE 批2 复扫补漏——tree-protocol 词汇表行/字段描述散文 O1×6（TMV；TC 孪生同批核）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:50 +08：自上次进度提交 62d3c0c8 后新增 5 条 commit：
+  - d27fb01e docs(workflow): 批2 读数补记5——F5 旗闭环（CPO APPROVE，代收卷）@m-duty-cos
+  - 01c8fbaa docs(whitepaper): FADE 词条展形勘正——Full-cycle ADE→Full-cycle Agentic Deterministic Execution（词条头+正文并句；CPO 裁 APPROVE 且执行，权属 CPO 席；十段/徽章/真源指针零触碰）@m-duty-cos 代收卷
+  - 8cb0754c docs(workflow): 批2 读数补记4——R1/R2 落地+R3 并旗 CHO→CPO（9487c02）@m-duty-cos
+  - 7277a9c9 docs(workflow): 批2 读数补记3——F5 白皮书旗链轨迹（CHO 定性迁移未完成面，旗在 CPO）@m-duty-cos
+  - 74064845 docs(workflow): ADE 批2 补刀 F2/F4/F5（TMV）+A-1 推进令嵌套残留归档补记（TriLC.quarantine-20260921T163934Z，吸收度 diff 全核）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化

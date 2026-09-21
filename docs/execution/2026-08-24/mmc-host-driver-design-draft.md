@@ -179,7 +179,7 @@ TriMetaverse/.claude/agents/*.md（Claude Code 渲染位）+ .github/agents/*.ag
 /srv/fleet/TriMetaverse/.claude/agents/ ← CC 会话启动时原生加载 = 灌入生效点
 ```
 
-方向判断：**灌入是"合同 → 渲染位"的单向流，fleet 侧永远是 published copy**。与 CLAUDE.md 真源序一致（source wins；frozen source stale 时报告而不静默覆盖）。白皮书 FADE 词条的"经 FADE 发布线灌入宿主"在本阶段的工程含义即此三条箭头，ADE 十段生命周期规范见 `TriCompany/docs/engineering/ade-pattern-spec.md`（本文引用不复制）。
+方向判断：**灌入是"合同 → 渲染位"的单向流，fleet 侧永远是 published copy**。与 CLAUDE.md 真源序一致（source wins；frozen source stale 时报告而不静默覆盖）。白皮书 FADE 词条的"经 FADE 发布线灌入宿主"在本阶段的工程含义即此三条箭头，FADE 十段生命周期规范见 `TriCompany/docs/engineering/fade-protocol-spec.md`（本文引用不复制）。
 
 ### 3.3 fleet 侧灌入路径与版本锚定
 

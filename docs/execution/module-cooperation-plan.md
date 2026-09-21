@@ -114,7 +114,7 @@ L5 数据审计层  TriMem（身份中枢 SSOT）+ TriChain（链上账本，审
   → TriTraining 免费课程 → 首次对话 → 奖励 → 晋级社区成员
 
 现役核心（Phase 1）: 安装（L0 TriCade）→ 开张（L1 检测 → L2 公司 onboarding）
-  → 建项目/模块/分配员工（L2，ADE）→ 运营循环（L0 入口 → L1 daemon → L3 模型+计费）
+  → 建项目/模块/分配员工（L2，FADE）→ 运营循环（L0 入口 → L1 daemon → L3 模型+计费）
 
 资产环（Phase 2+）: TriChain 链上迁移 → TriWeb4 钱包 → TriMem 股东晋级
   → TriOPC 商户生态 → TriAvatar 元宇宙形态

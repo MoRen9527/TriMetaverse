@@ -10,7 +10,7 @@
 
 登记：[TriCompany fade-registry.md](../../TriCompany/docs/engineering/fade-registry.md) **FADE-004**
 
-上位规范：[TriCompany ADE 模式规范 §1.1](../../TriCompany/docs/engineering/ade-pattern-spec.md)（FADE = Full-cycle ADE）
+上位规范：[TriCompany FADE 协议 §1.1](../../TriCompany/docs/engineering/fade-protocol-spec.md)（FADE = Full-cycle Agentic Deterministic Execution）
 
 整合归属（2026-08-19）：本规范即 **ADE-B 员工域**（[ade-consolidation-proposal.md](../../TriCompany/docs/engineering/ade-consolidation-proposal.md) §三 ADE-B）——上岗链 + 员工对象发布链同一生命周期域
 

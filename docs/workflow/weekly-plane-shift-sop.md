@@ -1,7 +1,7 @@
 # 周度平移 SOP（标准操作流程）
 
 > w33-6: W32 手动流程提炼 → 可复用模板 → 未来 cron 自动化基础
-> ADE 模式：Agent plans → Deterministic CLI executes → Agent closes
+> 确定性执行规程（FADE DCE 段）：Agent plans → Deterministic CLI executes → Agent closes
 
 ## 流程概述
 
@@ -89,7 +89,7 @@ Options:
   --from <week>      源周 (默认: 自动检测 latestActiveWeek)
   --dry-run          干跑模式, 只输出将要执行的动作, 不写入
 
-流程 (完整 ADE 五段闭环):
+流程 (完整段链闭环):
   0. Event 触发:
      - cron 定时 (周末 23:00, TriLC cron command 模式)
      - 或手动 (trilc cron run weekly-plane-shift --force)
