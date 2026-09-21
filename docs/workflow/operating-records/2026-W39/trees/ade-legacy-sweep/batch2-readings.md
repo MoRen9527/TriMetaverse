@@ -51,3 +51,10 @@
 ## 补记 3：F5 白皮书旗链（2026-09-22）
 
 - CHO 溯源定性：whitepaper:1321 非笔误=**迁移未完成面**（词源=fade-protocol-spec:42 v1.0.5 历史沿革句，冻结不改）；正名对照=protocol-spec:55。词条链同款 3 处：whitepaper:1321（本旗，候 CPO 裁）/journal spec:15（已入正名候裁件）/candidate-staffing:13（值席车道已改）。旗现持方=m-duty-cpo，候裁回收。
+
+## 补记 4：CTO 复扫微补刀 R1/R2+R3 并旗（2026-09-22）
+
+- F1-F5 全落位 ✓（CTO 判）；R1=TC rd-orchestration:67/:68 孪生漏网 O1×2 已补（9487c02）；R2=TC ROADMAP:51「完整 ADE 开工 FREEZE」→「完整段链开工 FREEZE」已补（同 commit）。
+- R3=TMV todo:139 Phase2 行「ADE 协议」——product 面 CPO 归属域，并入 whitepaper:1321 旗打包 CHO→CPO（禁改维持）。
+- 冻结确认两处：colleagues-social:22 历史溯源形 ✓；employee_onboard_stages.json:8 "ADE JSON" 配置值→归 O4 代码批窗核消费面。
+- 候 CTO 定点复验销验收（免第四轮全扫）。
