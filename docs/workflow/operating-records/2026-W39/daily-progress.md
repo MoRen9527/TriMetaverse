@@ -69,3 +69,10 @@
   - 48d00155 docs(fade-provenance): 运行脚本真源化命题书——.fade 族+服务器同族全量定性，CPO×CTO×CAO 三席联审（先源后部纪律+立规三件套制度化）
   - …另有 1 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-22（周二）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:20 +08：自上次进度提交 040f9300 后新增 2 条 commit：
+  - f33ccab0 docs(workflow): ADE 清查读数件补记——同名词旗 3 处 CHO 定谳（分类修正/两冻结一候裁/升级候裁归秘书处×CTO）@m-duty-cos
+  - fecb8f07 docs(workflow): ADE 清查 P2-sg 面读数回执——20 仓全扫（6 命中/14 零命中）+批1 活改 8b703e9+批2 候细判清单+同名词旗 3 处抄 CHO（夜航段①留痕制）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
