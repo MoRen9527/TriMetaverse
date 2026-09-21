@@ -4,7 +4,9 @@
 
 - sourceOfTruth: TriMetaverse/docs/workflow/operating-records/项目级 AI 共学周记/ade-journal-recording-spec.md
 - syncMode: audit-record
-- lastSyncedAt: 2026-08-18
+- lastSyncedAt: 2026-08-18（消歧注 2026-09-21 增补）
+
+> **消歧注（2026-09-21，P4 甄别线 CHO 授权 RDT 径办）**：ADE=立册时协议名（v1.0 立册 2026-08-18）；2026-08-28 起协议更名 FADE（fade-protocol-spec v2.0.0，ADE 概念退役）——本规范沿用原名系同名同源的历史合法沿用（立册早于退役），非同名不同物，兼容历史引用不改名。
 
 版本：v1.0（2026-08-18 立册；触发事件：W34 周记首次写入违规——跳过规范查找、按任意旧周模板自创结构）
 
