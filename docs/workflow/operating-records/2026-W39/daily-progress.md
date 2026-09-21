@@ -83,3 +83,9 @@
   - c68ca846 docs(workflow): ADE 批2 文档面小件8——O1 概念直呼近形改+O2 五段→段链闭环去数字化+REF 活指针改 fade-protocol-spec（首现沿革注；O2 映射表随批2 读数附卷）@m-duty-cos
   - 2d26b4c4 docs(workflow): ADE 批2 工作清单判定列版——821 行四分型+车道/冻结预分（批2 执行锚，D-01 断点可续）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:40 +08：自上次进度提交 e964fa04 后新增 4 条 commit：
+  - 9a319062 docs(workflow): 批2 读数补记2——第三义项 CHO 定谳入卷（EDP 正名定向+随 tricade-3 收口批合轨+8 处预列）@m-duty-cos
+  - 62b187ec docs(workflow): 批2 读数锚勘正——tree-protocol 补漏笔 2fecb26f @m-duty-cos
+  - ee2a1040 docs(workflow): ADE 批2 执行读数——双树活改账+O2 逐处映射表+冻结账+Delegation Engine 第三义项抄 CHO+验收锚读数 @m-duty-cos
+  - 2fecb26f docs(workflow): ADE 批2 复扫补漏——tree-protocol 词汇表行/字段描述散文 O1×6（TMV；TC 孪生同批核）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
