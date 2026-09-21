@@ -97,7 +97,7 @@ experimenting → verified → ready-for-injection → injected
 | 实验领域 | 实验文档路径 | 注入目标 |
 |---------|------------|---------|
 | 文档治理 | `docs/experiments/{topic}.md` | `TriCompany/docs/{domain}/{standard}.md` |
-| ADE 协议 | `docs/experiments/{topic}.md` | `.github/agents/*.agent.md` |
+| FADE 协议（v2.0.0 前称 ADE） | `docs/experiments/{topic}.md` | `.github/agents/*.agent.md` |
 | 员工合约 | `docs/experiments/{topic}.md` | `TriCompany/source-agents/{role}/` |
 | 岗位定义 | `docs/experiments/{topic}.md` | `.github/instructions/*.instructions.md` |
 | 项目模板 | `docs/experiments/{topic}.md` | `.github/prompts/*.prompt.md` |
@@ -169,7 +169,7 @@ main 分支 = 正式运营真源
 
 **平移规则**：
 1. **不迁移历史**：dev 的 W15-W31 实验日志留在 dev，不进入 main。main 的经营记录从 TriCade 1.0 上线日开始独立编号。
-2. **规则提炼后可注入**：实验中验证通过的治理规则、ADE 协议、文档模板——通过 `rule_injection sync` 注入到 main 分支的模板目录，但不包含实验期间的周报内容。
+2. **规则提炼后可注入**：实验中验证通过的治理规则、FADE 协议、文档模板——通过 `rule_injection sync` 注入到 main 分支的模板目录，但不包含实验期间的周报内容。
 3. **运营数据独立产生**：TriCade 线上环境的经营记录由 TriLC agent 在项目运行时自动产生，写入 `docs/execution/operating-records/`，通过 `prod/Wxx` 分支 PR 回 main。
 4. **周工作平面**：生产环境的周计划（Weekly Operating Plan）由 COO 小营通过 TriCade agent 编排，独立于实验环境的研发周报。
 
