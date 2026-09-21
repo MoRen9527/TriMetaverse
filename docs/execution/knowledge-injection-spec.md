@@ -11,7 +11,7 @@
 - lastSyncedAt: 2026-08-21
 
 来源：CEO 2026-08-19 定调（FADE-ASSESS-003）+ 2026-08-20 设计定案（CTO 小狄 APPROVE + CPO 小乔语义）
-上位规范：[TriCompany ADE 模式规范](../../TriCompany/docs/engineering/ade-pattern-spec.md) + [ade-consolidation-proposal.md](../../TriCompany/docs/engineering/ade-consolidation-proposal.md)（双部署模型：runtime 侧知识形态）
+上位规范：[TriCompany FADE 协议（前称 ADE 模式规范）](../../TriCompany/docs/engineering/fade-protocol-spec.md) + [ade-consolidation-proposal.md](../../TriCompany/docs/engineering/ade-consolidation-proposal.md)（双部署模型：runtime 侧知识形态）
 
 变更记录：
 

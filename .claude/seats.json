@@ -305,37 +305,6 @@
       "claudeAgent": ".claude/agents/customer-success-officer.md"
     },
     {
-      "seat": "deployment-engineer",
-      "opsName": "m-dee",
-      "workName": "",
-      "agent": "",
-      "hostFace": "local",
-      "sessionPrompt": "",
-      "launchCommand": "",
-      "launchEnvPolicy": {
-        "strip": [
-          "CLAUDE_CODE_CHILD_SESSION",
-          "CLAUDE_CODE_SSE_PORT",
-          "CLAUDE_CODE_SESSION_ID",
-          "CLAUDE_PID",
-          "CLAUDE_CODE_MESSAGING_SOCKET",
-          "CLAUDE_CODE_MESSAGING_TOKEN"
-        ],
-        "require": [
-          "FORCE_SESSION_PERSISTENCE=1"
-        ]
-      },
-      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
-      "notifyTarget": "bod-addressable: false",
-      "health": {
-        "daemonPort": null,
-        "watchdogTask": null
-      },
-      "revivalPolicy": "manual",
-      "claudeAgent": "",
-      "manifest_drift": "no claudeCodeTarget entry"
-    },
-    {
       "seat": "full-stack-developer",
       "opsName": "m-fsd",
       "workName": "小全",
@@ -397,12 +366,12 @@
     },
     {
       "seat": "senior-deployment-engineer",
-      "opsName": "senior-deployment-engineer",
+      "opsName": "m-dee",
       "workName": "",
       "agent": "SeniorDeploymentEngineer",
       "hostFace": "local",
       "sessionPrompt": "TriMetaverse/.claude/compass/senior-deployment-engineer.session.md",
-      "launchCommand": "claude -n SENIOR-DEPLOYMENT-ENGINEER --append-system-prompt-file <TriMetaverse/.claude/compass/senior-deployment-engineer.session.md>",
+      "launchCommand": "claude -n M-DEE --append-system-prompt-file <TriMetaverse/.claude/compass/senior-deployment-engineer.session.md>",
       "launchEnvPolicy": {
         "strip": [
           "CLAUDE_CODE_CHILD_SESSION",
