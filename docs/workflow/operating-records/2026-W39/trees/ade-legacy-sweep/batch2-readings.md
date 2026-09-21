@@ -11,7 +11,7 @@
 | TMV | 8ea0a2fc | rd-orchestration | O1×2+REF 沿革注 |
 | TMV | 892618f2 | ROADMAP/STATE/README | O1×8；裁决引语/题名链接冻结 |
 | TMV | b5c7e0d1 | playbook/protocol/init-collab/coop-plan | O1×20+O2×1；字段名/状态值冻结 |
-| TMV | 87936b1x←见 git log | tree-protocol 复扫补漏 | O1×6 |
+| TMV | 2fecb26f | tree-protocol 复扫补漏 | O1×6 |
 | TC | 8b703e9 | SDE 六件（批1） | 「ADE 模式」×11 |
 | TC | ddd33ca | WaveA 七件 | work-plane-principles 全件+parity/index/gov-state/README/ROADMAP/STATE ×30 |
 | TC | （本批复扫笔） | tree-protocol 孪生 | O1×6 |
