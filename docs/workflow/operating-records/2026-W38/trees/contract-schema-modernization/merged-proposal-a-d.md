@@ -55,3 +55,8 @@
 3. 14 件 tools 段 `host_overrides` 在位（claude=disabled/copilot=enabled/openclaw=enabled）。
 4. validator 用例绿（含 legacy 红回归+白名单校验）。
 5. CTO/CAO binding profile `runtime_planes` 新键在位。
+
+
+## CEO 批（2026-09-21 13:26，两案一体呈批·contract schema 现代化批准）
+
+方案批准，执行窗开启（**候注入器首落批后**——排期咬合照案）：tools 四键+host_overrides 消费开关（claude=disabled/copilot+openclaw=enabled）/runtime_equivalent 全族删 31 处/runtime_baseline 三态分类处置/validator 接口三条。批量 14 件随窗。
