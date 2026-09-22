@@ -13,6 +13,30 @@
 
 **位置与命名**：`D:/Code/ai/TriMetaverse-worktrees/<seat>/`（**仓外独立目录**——防发布面/渲染面/扫描工具误吞；`.claude/` 内会与渲染产物混淆，弃）。13 席+board=14 worktree。
 
+### 知识区归属与映射（2026-09-22 CEO 22:41 问补·BOD 转办）
+
+**定性**：workbench 知识区（TriCompany-copilot-host-assets/knowledge/employees/，234 文件版控单源）**不随 worktree 迁移、不物理关联**——知识资产单源+不可再生，禁入可清理检出环境射程（worktree remove 族操作永不触 knowledge/）。
+
+**13 行映射表（wt/<seat>↔employees/<kebab> 一一对应）**：
+
+| 席正名 | m-名 | kebab | worktree 路径 | wt 分支 |
+| --- | --- | --- | --- | --- |
+| ceo-chief-of-staff | m-cos | ceo-chief-of-staff | TriMetaverse-worktrees/ceo-chief-of-staff/ | wt/ceo-chief-of-staff |
+| chief-administrative-officer | m-cao | chief-administrative-officer | …/chief-administrative-officer/ | wt/chief-administrative-officer |
+| chief-financial-officer | m-cfo | chief-financial-officer | …/chief-financial-officer/ | wt/chief-financial-officer |
+| chief-human-resources-officer | m-cho | chief-human-resources-officer | …/chief-human-resources-officer/ | wt/chief-human-resources-officer |
+| chief-marketing-officer | m-cmo | chief-marketing-officer | …/chief-marketing-officer/ | wt/chief-marketing-officer |
+| chief-operating-officer | m-coo | chief-operating-officer | …/chief-operating-officer/ | wt/chief-operating-officer |
+| chief-product-officer | m-cpo | chief-product-officer | …/chief-product-officer/ | wt/chief-product-officer |
+| chief-technology-officer | m-cto | chief-technology-officer | …/chief-technology-officer/ | wt/chief-technology-officer |
+| customer-success-officer | m-cso | customer-success-officer | …/customer-success-officer/ | wt/customer-success-officer |
+| senior-deployment-engineer | m-dee | senior-deployment-engineer | …/senior-deployment-engineer/ | wt/senior-deployment-engineer |
+| full-stack-developer | m-fsd | full-stack-developer | …/full-stack-developer/ | wt/full-stack-developer |
+| rd-trainer | m-rdt | rd-trainer | …/rd-trainer/ | wt/rd-trainer |
+| senior-test-engineer | m-ste | senior-test-engineer | …/senior-test-engineer/ | wt/senior-test-engineer |
+
+**发现性说明**：worktree 族位于 `../TriMetaverse-worktrees/`，`git worktree list` 可查。
+
 ## 二、分支策略（关键技术决策）
 
 **git 硬限制**：同一分支不可双 worktree 检出——13 席不能都挂 `dev`。
@@ -41,6 +65,7 @@
 1. **一期·零风险部署（FSD）**：worktree add×14+分支创建+位布局验证（不切会话，零风险——worktree 仅存在不使用亦无害）；
 2. **二期·试点切换（候你批）**：FSD/BOD/COS 三席 cwd 切换+一周试跑+三计数观察；
 3. **三期·全量铺开**（候试点验证）：余 11 席逐批切换（低活窗分批）；
+   - 随车件：各席 workbench README 加一行互指（「本席代码工作台=wt/<席> worktree，知识区本目录不变」——CEO 22:41 问缝封堵）；
 4. **归账纪律入册（随二期；推送节律四条 CEO 22:34 批定稿已并入）**：
    - wt/* 分支随日收口 push origin——每日收口批含 wt 分支推送，不靠自觉；
    - 当日未推分支=次日晨巡检兜底补推项（挂 LG-011 巡检线，daily-progress-watcher 可承载）；
