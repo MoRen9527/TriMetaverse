@@ -1,7 +1,7 @@
-# per-seat git worktree 立项·设计件（CTO 主笔直呈 CEO）
+﻿# per-seat git worktree 立项·设计件（CTO 主笔直呈 CEO）
 
 - sourceOfTruth: 本件（立项设计正身；CEO 03:12 令直呈批——BOD 不做中间质检）
-- syncMode: draft（候批）
+- syncMode: approved（CEO 22:48 三笔一次全批；窗口锁=一期部署 09-23 20:44 后启动[额度 92% 重置前禁新增大动作]；一期实况以 BOD 对表确认为准）
 - lastSyncedAt: 2026-09-22T03:1x+0800
 - 上位: parallel-cost-eval 合流件（CEO 02:52 批——混合制四层+per-seat worktree 技术优选执行启动）
 
