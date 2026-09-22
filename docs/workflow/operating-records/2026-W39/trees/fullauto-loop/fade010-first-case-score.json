@@ -1,0 +1,82 @@
+{
+  "paperId": "FADE-010-paper-first-case-v1",
+  "instance": "FADE-010 干活流程全自动化——一期首例评分卷",
+  "domain": "sg 服务域首例全环（LG-034 真实候批场景）",
+  "frozenAt": "2026-09-22T03:0xZ",
+  "provenance": "BOD 令主办首例（CEO 亲询件收口步）；照 FADE-001 先例补课-考卷-评分链；首例=LG-034（候 CEO 复走查约 5 天真实死等）",
+  "scoreable_run": "首例全环 2026-09-22 10:43-10:58+0800（信入箱→human 提醒→CEO 应答→状态跃迁闭环）",
+  "checks": [
+    {
+      "id": "T1",
+      "item": "候批信入箱（九字段全）",
+      "weight": 20,
+      "verification": "ntf-muc2kyd21axysg accepted 02:43:31Z 入 sg TriMMC outbox；九字段（type/state/track/task_ref/waiting_since/sla/source_seat/target/title/body）全载",
+      "result": "PASS"
+    },
+    {
+      "id": "T2",
+      "item": "双投（bod+coo）",
+      "weight": 15,
+      "verification": "bod ✓ accepted；coo ✗ unknown_target_seat（两轮实锚定位 sg TriMMC 入站端点名册硬编码）→CTO 真修双仓 d1189cf/d325050 已落、部署候排",
+      "result": "PARTIAL（bod 通/coo 候部署——扣分如实）"
+    },
+    {
+      "id": "T3",
+      "item": "human 提醒触发（BOD→CEO）",
+      "weight": 20,
+      "verification": "BOD 环段②触发：随 CEO 下次消息注入三行清单（10:55 CEO 亲答=送达实证）",
+      "result": "PASS"
+    },
+    {
+      "id": "T4",
+      "item": "CEO 应答闭环+状态机跃迁",
+      "weight": 20,
+      "verification": "CEO 10:55 搁置令→LG-034 转 shelved 挂账（候批时长停算）→状态跃迁信 ntf-muc34jyn6jwcwe accepted 02:58:45Z——pending-ceo→shelved 跃迁演示",
+      "result": "PASS"
+    },
+    {
+      "id": "T5",
+      "item": "真实场景非演练",
+      "weight": 15,
+      "verification": "首例实体=LG-034 真实死等（候约 5 天）——首例即修复真死等（CEO 知情搁置）；第二例素材=LG-041 3333 事故已挂账",
+      "result": "PASS"
+    },
+    {
+      "id": "T6",
+      "item": "催办机制语义保真",
+      "weight": 10,
+      "verification": "超锚 4 倍催办信息内嵌首信（urgent+超时行）；未立即二连（同主题单信不叠——应答即清催，CEO 应答后 urge 免发）；urge 二连演示注记候自然触发场景",
+      "result": "PASS"
+    },
+    {
+      "id": "T7",
+      "item": "自动化程度如实档",
+      "weight": "info",
+      "verification": "L2 半自动（收口 notify 自动✓/名册校验自动✓/候批信人工代发/催办人工代跑）→L3 全自动（次落：候批信自动生成+超时催办自动，CTO 排 W39 内 contract schema 窗后）",
+      "result": "INFO（非扣分项，档位声明）"
+    },
+    {
+      "id": "T8",
+      "item": "载体缝隙暴露与修复（首例红利）",
+      "weight": "info",
+      "verification": "缝①coo 名册硬编码（两轮实锚定位）→真修双仓；缝②中文 body toast 乱码（PowerShell WinRT 编码层）→转 DE 候修——首例把载体每道缝照出=验收意义本体",
+      "result": "INFO"
+    }
+  ],
+  "scoreRule": "T1-T6 权重合计 100；实得=20+7.5+20+20+15+10=92.5/100（T2 半扣 7.5/15）；L2 半自动档如实；评分人=COS（主办）+候 BOD 复核",
+  "notes": [
+    "首例=CEO 亲询件收口步：信入箱→提醒→应答三环 15 分钟内闭环（10:43 信→10:55 CEO 答）——机制时效首证",
+    "第二例素材已挂账（LG-041 3333 事故三件，CTO 今日窗收口→候批信全环第二例）",
+    " urge 二连演示：按机制语义待自然触发场景（非演练硬造），候 LG-041 收口后若 CEO 未及时应答自然发生"
+  ],
+  "archival": {
+    "verdict": "L2 里程碑归档（CEO 11:08 准，BOD 复核签发 2026-09-22）",
+    "scoreConfirmed": "92.5/100（扣分有据，INFO 不掺分）",
+    "responsibility": "T2 扣分=机制跑通度非 COO 绩效（COO 零责）；主锅=CTO 首落③声明可达未端到端实测（真源册改/sg 部署面名册未同步）；流程锅=载体落地未走 STE 测试门（派测缺失非 STE 漏测）；FSD 无涉",
+    "rectification": [
+      "①载体类验收锚必含端到端实测（声明≠可达）",
+      "②新载体上线必过 STE 门（FADE-010 三期制度正身时固化）"
+    ],
+    "nextCase": "LG-041（3333 事故收口后跑全环无人值守=登记册终态验收）"
+  }
+}
