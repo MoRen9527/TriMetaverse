@@ -1,0 +1,797 @@
+[
+ [
+  "runtime\\cognition\\ade_legacy_guard_validation.py",
+  16,
+  "line = \"- **工作名**：小布（已在 orchestration 文档和 FADE 协议（v2.0.0 前称 fade-protocol-spec）中"
+ ],
+ [
+  "runtime\\cognition\\ade_legacy_guard_validation.py",
+  23,
+  "\"# -- ADE-B multi-host render registry (CEO 2026-08-19 定调, §三 ADE-B)\","
+ ],
+ [
+  "runtime\\cognition\\ade_legacy_guard_validation.py",
+  25,
+  "\"- **ADE 整合阶段 0/1/2 代码落地（2026-08-20）**\","
+ ],
+ [
+  "runtime\\cognition\\ade_legacy_guard_validation.py",
+  30,
+  "\"\"\"未审定 ADE 用法（旧概念直呼）即红。\"\"\""
+ ],
+ [
+  "runtime\\cognition\\ade_legacy_guard_validation.py",
+  36,
+  "\"\"\"正名后行（确定性执行规程（FADE DCE 段））无 ADE 即静默。\"\"\""
+ ],
+ [
+  "runtime\\cognition\\ade_legacy_guard_validation.py",
+  37,
+  "line = \"1. 按照确定性执行规程（FADE DCE 段）执行部署：Agent 规划步骤 → CLI 逐步执行。\""
+ ],
+ [
+  "runtime\\cognition\\chief_of_staff_ipd_case.py",
+  133,
+  "# 统一 lowered 子串匹配（FADE-LEFTOVER IPD×3 语义裁决 2026-08-21）：原实现对"
+ ],
+ [
+  "runtime\\cognition\\daily_progress_patrol.py",
+  2,
+  "\"\"\"daily_progress_patrol.py — FADE-001 维护项②「每日工作进度」巡检兜底脚本（LG-011）。"
+ ],
+ [
+  "runtime\\cognition\\daily_progress_patrol.py",
+  5,
+  "- TriCompany/docs/engineering/fade-registry.md FADE-001 维护项②（节奏重设计 49287fc）："
+ ],
+ [
+  "runtime\\cognition\\daily_progress_patrol.py",
+  27,
+  "（/var/lib/trimc/cron/logs/<jobId>__<ISO>.log）——FADE §九.4「sync-log 或等效"
+ ],
+ [
+  "runtime\\cognition\\daily_progress_patrol.py",
+  268,
+  "\"> sourceOfTruth: 本文件（周平面维护项，FADE-001 承接）｜维护方：事件驱动主\""
+ ],
+ [
+  "runtime\\cognition\\daily_progress_patrol.py",
+  444,
+  "msg = \"docs(plane): 巡检兜底补写 {}——{} 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-"
+ ],
+ [
+  "runtime\\cognition\\daily_progress_patrol.py",
+  578,
+  "r\"（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）$\""
+ ],
+ [
+  "runtime\\cognition\\daily_progress_patrol.py",
+  671,
+  "# ── 内置验证套件（--self-test；FADE §九.3 配套 validation） ──────────────────"
+ ],
+ [
+  "runtime\\cognition\\daily_progress_patrol.py",
+  836,
+  "\"（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）\").format(stamp_s)"
+ ],
+ [
+  "runtime\\cognition\\daily_progress_patrol.py",
+  912,
+  "description=\"FADE-001 维护项② 每日进度巡检兜底（LG-011）——确定性脚本，无 LLM。\""
+ ],
+ [
+  "runtime\\cognition\\employee_host_binding_profile_generation.py",
+  30,
+  "# ── binding profile 三源一致性校验（FADE-ASSESS-004）───────────────────────"
+ ],
+ [
+  "runtime\\cognition\\employee_host_binding_profile_generation.py",
+  38,
+  "# hostEntries 多宿主承载（FADE 质量审核 3 问题 3 / CEO 2026-08-20 走查，CTO 定案）："
+ ],
+ [
+  "runtime\\cognition\\employee_host_binding_profile_generation.py",
+  304,
+  "# ── B-HOST: hostEntries 多宿主承载（FADE 质量审核 3 问题 3 / CEO 2026-08-20 走查，CTO 定案）──"
+ ],
+ [
+  "runtime\\cognition\\employee_host_binding_profile_generation_validation.py",
+  175,
+  "# ── 三源一致性校验（FADE-ASSESS-004）───────────────────────────────────────"
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish.py",
+  53,
+  "# 必须使用同一 manifest，否则两路 profile 内容/哈希不一致（ADE 自检报告失守）。"
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish.py",
+  103,
+  "\"the CLI runs dry-run only (ADE safety gate: default is no write).\","
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish.py",
+  111,
+  "# Default behaviour (neither flag): dry-run (no writes) — ADE §2.4 safety gate."
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish.py",
+  160,
+  "# ── Build ADE structured self-check report ──"
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish.py",
+  186,
+  "# ADE 合同出口：强制 UTF-8（Windows 中文环境默认 GBK 会破坏 JSON）。"
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish.py",
+  198,
+  "# ── ADE helpers ──────────────────────────────────────────────────────────────"
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish.py",
+  349,
+  "# FADE phase 1: the delegation emits the unified envelope (protocol"
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish.py",
+  351,
+  "# reports container for combined runs. FADE phase 2: parsing is shared"
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish_validation.py",
+  81,
+  "\"\"\"CLI safety-gate tests (FADE phase-0 fix 1: default is dry-run, no writes).\"\"\""
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish_validation.py",
+  108,
+  "\"\"\"ADE fix 1: no --dry-run/--execute → dry-run, no files written.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish_validation.py",
+  133,
+  "\"\"\"ADE fix 1: --execute explicitly writes generated assets.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\employee_host_publish_validation.py",
+  154,
+  "\"\"\"ADE fix 1: passing both --dry-run and --execute exits with code 2.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\employee_onboard.py",
+  1,
+  "\"\"\"employee_onboard — ADE 员工上岗 11 步流水线 CLI."
+ ],
+ [
+  "runtime\\cognition\\employee_onboard.py",
+  54,
+  "# ADE data types"
+ ],
+ [
+  "runtime\\cognition\\employee_onboard.py",
+  576,
+  "# FADE phase 1: --publish-agents emits the unified envelope (protocol"
+ ],
+ [
+  "runtime\\cognition\\employee_onboard.py",
+  990,
+  "ADE 员工上岗 11 步流水线 CLI。"
+ ],
+ [
+  "runtime\\cognition\\employee_onboard_validation.py",
+  32,
+  "# ── ADE output contract tests ─────────────────────────────────────────────"
+ ],
+ [
+  "runtime\\cognition\\employee_onboard_validation.py",
+  35,
+  "\"\"\"Verify every stage function returns ADE-compliant JSON structures.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\employee_onboard_validation.py",
+  38,
+  "\"\"\"StageResult.to_ade_json() must contain all required ADE fields.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\employee_onboard_validation.py",
+  64,
+  "\"\"\"OnboardReport.to_ade_json() must contain all required ADE fields.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\employee_source_kit.py",
+  53,
+  "# ── 内容归属校验：误植句模式清单（FADE 质量审核 2 问题 2 / CEO 2026-08-21 走查，CTO 定案）──"
+ ],
+ [
+  "runtime\\cognition\\employee_source_kit.py",
+  212,
+  "\"\"\"内容归属校验：检测角色定义文件中的模板通用纪律句误植（FFADE 加固 B 项）。"
+ ],
+ [
+  "runtime\\cognition\\employee_source_kit.py",
+  236,
+  "# ── 组件-合成文件同步校验（FFADE 加固 D 项 / fade-quality-lessons 建议 3）──────"
+ ],
+ [
+  "runtime\\cognition\\employee_source_kit.py",
+  249,
+  "# 合成路径映射例外（FADE-LEFTOVER-20260821-001 1b，CTO 裁决）：registry 类单文件区"
+ ],
+ [
+  "runtime\\cognition\\employee_source_kit.py",
+  360,
+  "1. legacy 红：`runtime_equivalent` 系退役方言键（openclaw:*/trimc:*，ADE/"
+ ],
+ [
+  "runtime\\cognition\\employee_source_kit.py",
+  471,
+  "的目录（FADE-LEFTOVER-20260821-001 1c，CTO 裁决）。"
+ ],
+ [
+  "runtime\\cognition\\employee_source_kit_validation.py",
+  128,
+  "# ── 内容归属校验（FFADE 加固 B 项 / fade-quality-lessons 案例 2）──────────────"
+ ],
+ [
+  "runtime\\cognition\\employee_source_kit_validation.py",
+  242,
+  "# ── 组件-合成文件同步校验（FFADE 加固 D 项 / fade-quality-lessons 建议 3）────"
+ ],
+ [
+  "runtime\\cognition\\employee_source_kit_validation.py",
+  799,
+  "\"\"\"FADE-LEFTOVER-20260821-001 1b/1c（CTO 裁决）覆盖："
+ ],
+ [
+  "runtime\\cognition\\host_object_generation.py",
+  35,
+  "# ── hostEntries 多宿主承载（FADE 质量审核 3 问题 3 / CEO 2026-08-20 走查，CTO 2026-08-20 定案）──"
+ ],
+ [
+  "runtime\\cognition\\host_object_generation.py",
+  546,
+  "role_description=\"Role-level reusable automated deployment, ADE execution, relea"
+ ],
+ [
+  "runtime\\cognition\\host_object_generation.py",
+  554,
+  "\"DeploymentEngineer owns automated deployment, ADE execution, release pipelines,"
+ ],
+ [
+  "runtime\\cognition\\host_object_generation.py",
+  582,
+  "\"CustomerSuccessOfficer (小成) is onboarded as a live host agent in the current Co"
+ ],
+ [
+  "runtime\\cognition\\orchestrate_tick.py",
+  295,
+  "CTO-F7（联审立法）：本收割器同时充当 FADE-006 映射表声明的 Close CLI"
+ ],
+ [
+  "runtime\\cognition\\rd_trainer_host_object_generation_validation.py",
+  78,
+  "新员工只更新声明表，本测试不再过期（FADE-LEFTOVER-20260821-001 批 1"
+ ],
+ [
+  "runtime\\cognition\\report_envelope.py",
+  1,
+  "\"\"\"ade_envelope — shared ADE envelope consumption helpers."
+ ],
+ [
+  "runtime\\cognition\\report_envelope.py",
+  3,
+  "Single home for parsing FADE CLI output (source_publish_check and friends)"
+ ],
+ [
+  "runtime\\cognition\\report_envelope.py",
+  7,
+  "Extracted in FADE phase 2 (work package 3) from two inline consumers:"
+ ],
+ [
+  "runtime\\cognition\\report_envelope.py",
+  35,
+  "\"\"\"Locate the *scope* envelope inside an FADE CLI output payload."
+ ],
+ [
+  "runtime\\cognition\\rule_injection.py",
+  119,
+  "\"\"\"Structured check output (ADE JSON format).\"\"\""
+ ],
+ [
+  "runtime\\cognition\\rule_injection.py",
+  131,
+  "\"\"\"Structured sync output (ADE JSON format).\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  71,
+  "# Claude Code host face (ADE-B): the claude host itself is exempted via its"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  93,
+  "# (FADE phase-0 fix 2: whitelist ∩ protected zone = ∅ hard check)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  105,
+  "# -- ADE-B multi-host render registry (CEO 2026-08-19 定调, §三 ADE-B) ----------"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  133,
+  "\"\"\"Single host render template registration (ADE-B).\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  257,
+  "# -- 系谱注记（ADE 概念已随 fade-protocol-spec v2.0.0 退役）--------------------"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  258,
+  "# 本文件内 ADE-B / FADE phase-0/1/2 / ADE consolidation phase 1 等标记系历史"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  278,
+  "# ADE_ACTIONS, and of its scope's allowed subset (ADE_ACTIONS_PER_SCOPE)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  312,
+  "# FADE phase 2: close is a lifecycle scope, not a business domain scope —"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  313,
+  "# it stays out of ADE_SCOPES (spec §2.2 business scopes) but reuses the"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  318,
+  "# -- FADE phase 2: lifecycle skeleton (runId / Close CLI / Score CLI) ----------"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  492,
+  "(FADE phase 2: explicit id wins over this derivation)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  500,
+  "fallback otherwise (FADE phase 2 work package 1)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  503,
+  "ADE_RUN_ID_PATTERN) by the caller; here it is only trimmed."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  514,
+  "record file name) that callers can parse back — see ADE_RUN_ID_PATTERN."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  822,
+  "# explicitly at the resolution layer (FADE phase 1 observation item)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  842,
+  "Reverse guard for the whitelist (FADE phase-0 fix 2): live entry publishing"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  849,
+  "ADE-B multi-host: the sanctioned landing zone is host-specific"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  878,
+  "# the ADE-B claude face has no sanctioned binding-profiles writer)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  895,
+  "# ADE-B: multi-host render pipeline (CEO 2026-08-19 定调)"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1113,
+  "ADE-B: the payload is *rendered* (source + host template) unless the"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1369,
+  "ADE-B: the check runs against the *final write target* (after host"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1402,
+  "# ── FADE phase-0 fix 2 + ADE-B: whitelist ∩ protected zone = ∅ ─────────"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1543,
+  "# ADE-B: the report target is the final write target (host-derived),"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1573,
+  "\"\"\"Serialize an AgentPublishReport to the unified ADE envelope contract."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1578,
+  "*run_id* is the explicit ``--run-id`` when given (FADE phase 2); it wins"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1585,
+  "# so the ADE invariant total == changed + skipped + errors holds."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1655,
+  "# them explicitly (FADE phase 1 observation item)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1720,
+  "\"\"\"Populate summary counters and ADE status from item actions.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  1749,
+  "\"\"\"Run the manifest-driven project truth document ADE execution layer."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2048,
+  "\"\"\"Serialize the project document ADE report to the unified envelope."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2053,
+  "*run_id* is the explicit ``--run-id`` when given (FADE phase 2)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2148,
+  "\"\"\"Serialize the --check / --sync report to the unified ADE envelope."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2155,
+  "*run_id* is the explicit ``--run-id`` when given (FADE phase 2)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2257,
+  "Shape proposal (FADE phase 2 work package 2, 终审判定):"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2305,
+  "# FADE phase 2: Close CLI (spec §2.5 终态门)"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2309,
+  "\"\"\"Resolve the ADE runtime records directory for close audit records.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2342,
+  "- verdict ∈ ADE_CLOSE_VERDICTS (terminal states, spec §8.3)"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2343,
+  "- run_id non-empty and parseable (ADE_RUN_ID_PATTERN)"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2378,
+  "scope is \"close\" (ADE_LIFECYCLE_SCOPES): reuses the envelope shape so"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  2510,
+  "# FADE phase 2: Score CLI (spec §2.6 / 试卷模板 §三)"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3029,
+  "Windows), which corrupts ``ensure_ascii=False`` ADE reports for"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3030,
+  "downstream parsers. ADE reports are machine contracts — they must"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3100,
+  "help=\"ADE-B target host face for --publish-agents: 'copilot' publishes \""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3116,
+  "# ── project truth document ADE arguments ─────────────────────────────"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3151,
+  "# ── FADE phase 2: lifecycle skeleton (runId / Close CLI / Score CLI) ───"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3155,
+  "help=\"Explicit ADE run id overriding the timestamp-derived default in \""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3190,
+  "help=\"Directory for ADE runtime records (close terminal audit). \""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3230,
+  "# ── FADE-002 event-watch: 文件/Git 事件自动触发发布检查 ──────────────"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3235,
+  "help=\"FADE-002 事件自动触发：执行一次事件扫描批次（监听目录 hash 变化 \""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3611,
+  "# ── FADE phase 2: explicit run id validation (wins over timestamp) ──────"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3621,
+  "# ── FADE phase 2: Close CLI / Score CLI are exclusive lifecycle modes ───"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3625,
+  "# FADE-002 event-watch 是独立触发面：不与业务 scope / lifecycle mode 组合。"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3658,
+  "# ── FADE-002 event-watch：文件/Git 事件自动触发（单次扫描 / 前台循环）──"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3752,
+  "# FADE phase 1: every scope serializes to one unified envelope; combined"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3757,
+  "# ── project truth document ADE mode ──────────────────────────────────"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3819,
+  "# FADE phase 0 observation item: errors (incl. protected_target_rejected)"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3870,
+  "# FADE phase 1: sync scope envelope"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3896,
+  "# FADE phase 1 rc mapping: sync execute errors also exit non-zero."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3934,
+  "# FADE-002 补齐项：event-watch —— 文件/Git 事件自动触发发布检查"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check.py",
+  3984,
+  "# 与 close lifecycle scope 同构，不进 ADE_SCOPES 三业务域）。"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  487,
+  "# Unified ADE envelope contract keys"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  921,
+  "# ── TC-AP14: whitelist ∩ protected zone = ∅ hard check (ADE fix 2) ──────"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1176,
+  "\"\"\"Manifest-driven project truth document ADE tests.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1418,
+  "\"\"\"CLI contract tests for the project document ADE mode.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1507,
+  "# ── FADE phase 1: unified envelope contract tests ─────────────────────────────"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1511,
+  "\"\"\"FADE phase 1: all three scopes share one envelope contract.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1536,
+  "# Business-domain scopes (spec §2.2) plus the FADE phase 2 lifecycle"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1574,
+  "\"\"\"FADE phase 1: unified action vocabulary constants are consistent.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1588,
+  "# FADE phase 2: lifecycle scopes reuse the envelope but stay out of the"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1603,
+  "\"\"\"FADE phase 2: run_id is timestamp-derived, NOT deterministic."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1728,
+  "\"\"\"FADE phase 1: 'C:foo' style targets are rejected by the resolvers."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1745,
+  "\"\"\"FADE phase 2 work package 1: explicit --run-id wins, timestamp fallback.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1786,
+  "\"\"\"FADE-002 回填：--publish-agents 单 scope 显式 --run-id 直达 envelope.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1803,
+  "\"\"\"FADE-002 回填：--project-docs 单 scope 显式 --run-id 直达 envelope.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1881,
+  "\"\"\"FADE phase 2 work package 2: combined-run container aggregation.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  1977,
+  "\"\"\"FADE phase 2 work package 3: shared consumer-side envelope helpers.\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  2052,
+  "\"\"\"FADE phase 2 work package 4: Close CLI (spec §2.5 终态门).\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  2219,
+  "\"\"\"FADE phase 2 work package 5: Score CLI (spec §2.6 / 试卷模板 §三).\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  2555,
+  "# ── ADE-B: multi-host render tests (CEO 2026-08-19 定调) ──────────────────────"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  2559,
+  "\"\"\"ADE-B multi-host render unit tests (source + host template → render)."
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  3089,
+  "\"\"\"derived_identical / derived_drift 进 ADE_ACTIONS 与 publish-agents 域子集。\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  3792,
+  "# ── FADE-002 event-watch: 文件/Git 事件自动触发 tests ────────────────────────"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  3796,
+  "\"\"\"FADE-002 事件自动触发测试（任务书批次 3-1）。"
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  4109,
+  "\"\"\"批次 run_id 匹配 ADE_RUN_ID_PATTERN（文件系统安全单 token）。\"\"\""
+ ],
+ [
+  "runtime\\cognition\\source_publish_check_validation.py",
+  4143,
+  "\"\"\"FADE-002 event-watch CLI 集成：--event-watch 单次扫描与 scope 互斥。\"\"\""
+ ],
+ [
+  "runtime\\cognition\\tree_op.py",
+  1,
+  "\"\"\"tree_op — FADE Tree 操作 CLI"
+ ],
+ [
+  "runtime\\cognition\\tree_op.py",
+  4,
+  "Agent 规划 → CLI 确定性执行 → ADE JSON 自检 → Agent 收口。"
+ ],
+ [
+  "runtime\\cognition\\tree_op.py",
+  46,
+  "# ── ADE types ──"
+ ],
+ [
+  "runtime\\cognition\\tree_op.py",
+  280,
+  "description=\"FADE Tree 操作 CLI\","
+ ],
+ [
+  "runtime\\cognition\\weekly_plane.py",
+  1,
+  "\"\"\"weekly_plane — ADE 周工作平面 CLI"
+ ],
+ [
+  "runtime\\cognition\\weekly_plane.py",
+  4,
+  "Agent 规划 → CLI 确定性执行 → ADE JSON 自检 → Agent 收口。"
+ ],
+ [
+  "runtime\\cognition\\weekly_plane.py",
+  37,
+  "# ── ADE types ──"
+ ],
+ [
+  "runtime\\cognition\\weekly_plane.py",
+  402,
+  "description=\"ADE 周工作平面 CLI\","
+ ],
+ [
+  "runtime\\cognition\\weekly_plane_shift.py",
+  3,
+  "完整 ADE 执行链："
+ ],
+ [
+  "runtime\\cognition\\weekly_plane_shift.py",
+  12,
+  "5. 聚合 ADE JSON 写 <new_week>/.shift-ade.json"
+ ],
+ [
+  "runtime\\cognition\\weekly_plane_shift.py",
+  217,
+  "p = argparse.ArgumentParser(description=\"ADE weekly plane shift\")"
+ ],
+ [
+  "runtime\\cognition\\weekly_plane_shift.py",
+  263,
+  "# 6. aggregate ADE JSON (operation record = ⑤ cli finalize)"
+ ],
+ [
+  "runtime\\cognition\\weekly_plane_shift.py",
+  265,
+  "\"objectType\": \"ADE_SHIFT\","
+ ]
+]

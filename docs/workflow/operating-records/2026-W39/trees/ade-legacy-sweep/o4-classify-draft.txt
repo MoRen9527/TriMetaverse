@@ -1,0 +1,496 @@
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:1	"""ade_legacy_guard 用例——批准形豁免/未审定红/豁免文件三性验证。"""
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:7	from runtime.cognition.ade_legacy_guard import (
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:13	class AdeLegacyGuardTest(unittest.TestCase):
+KEEP-C(批准形)	runtime\cognition\ade_legacy_guard_validation.py:15	"""批准形④「前称 ADE」溯源注记不红。"""
+KEEP-C(批准形)	runtime\cognition\ade_legacy_guard_validation.py:16	line = "- **工作名**：小布（已在 orchestration 文档和 FADE 协议（v2.0.0 前称 ADE spec）中预定义）"
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:21	"""时代标签（ADE-B/phase-X）与契约值（ade-report）豁免。"""
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:23	"# -- ADE-B multi-host render registry (CEO 2026-08-19 定调, §三 ADE-B)",
+KEEP-A	runtime\cognition\ade_legacy_guard_validation.py:24	"ADE_PROTOCOL: str = \"ade-report\"",
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:25	"- **ADE 整合阶段 0/1/2 代码落地（2026-08-20）**",
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:30	"""未审定 ADE 用法（旧概念直呼）即红。"""
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:31	line = "1. 按照 ADE 模式执行部署：Agent 规划步骤 → CLI 逐步执行。"
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:36	"""正名后行（确定性执行规程（FADE DCE 段））无 ADE 即静默。"""
+CLEAR?	runtime\cognition\ade_legacy_guard_validation.py:37	line = "1. 按照确定性执行规程（FADE DCE 段）执行部署：Agent 规划步骤 → CLI 逐步执行。"
+CLEAR?	runtime\cognition\chief_of_staff_ipd_case.py:133	# 统一 lowered 子串匹配（FADE-LEFTOVER IPD×3 语义裁决 2026-08-21）：原实现对
+CLEAR?	runtime\cognition\chief_of_staff_ipd_case_validation.py:903	"QaDefectAndRiskTriage",
+CLEAR?	runtime\cognition\chief_of_staff_operating_review_closeout_validation.py:290	content_length = int(self.headers.get("Content-Length") or "0")
+CLEAR?	runtime\cognition\chief_of_staff_operating_review_closeout_validation.py:299	self.send_header("Content-Type", "application/json; charset=utf-8")
+CLEAR?	runtime\cognition\chief_of_staff_operating_review_closeout_validation.py:300	self.end_headers()
+CLEAR?	runtime\cognition\chief_of_staff_registry_closeout_validation.py:179	content_length = int(self.headers.get("Content-Length") or "0")
+CLEAR?	runtime\cognition\chief_of_staff_registry_closeout_validation.py:188	self.send_header("Content-Type", "application/json; charset=utf-8")
+CLEAR?	runtime\cognition\chief_of_staff_registry_closeout_validation.py:189	self.end_headers()
+CLEAR?	runtime\cognition\chief_of_staff_schedule_staging_validation.py:590	content_length = int(self.headers.get("Content-Length") or "0")
+CLEAR?	runtime\cognition\chief_of_staff_schedule_staging_validation.py:599	self.send_header("Content-Type", "application/json; charset=utf-8")
+CLEAR?	runtime\cognition\chief_of_staff_schedule_staging_validation.py:600	self.end_headers()
+CLEAR?	runtime\cognition\clock_skew_check.py:15	healthz cron.degraded=true，邮件 + healthz 双通道信号）
+CLEAR?	runtime\cognition\clock_skew_check.py:56	date_hdr = resp.headers.get("Date")
+CLEAR?	runtime\cognition\clock_skew_check.py:62	return None, "bad_date_header"
+CLEAR?	runtime\cognition\clock_skew_check.py:118	"说明: 偏差修复前每小时重复提醒（持续真值 escalation，healthz degraded 同步可见）",
+CLEAR?	runtime\cognition\daily_progress_patrol.py:2	"""daily_progress_patrol.py — FADE-001 维护项②「每日工作进度」巡检兜底脚本（LG-011）。
+CLEAR?	runtime\cognition\daily_progress_patrol.py:5	- TriCompany/docs/engineering/fade-registry.md FADE-001 维护项②（节奏重设计 49287fc）：
+CLEAR?	runtime\cognition\daily_progress_patrol.py:14	数据边界：`.fade/hub-snapshots/ledger-mirror.md` 为机器本地不入仓（TriMetaverse
+CLEAR?	runtime\cognition\daily_progress_patrol.py:15	.gitignore `.fade/`），服务器巡检不可读——故门限仅用 git commits（与登记册机械门
+CLEAR?	runtime\cognition\daily_progress_patrol.py:17	fade-registry.md（版本行 + 当日 registry 提交），均为确定性收集，无 LLM。
+CLEAR?	runtime\cognition\daily_progress_patrol.py:27	（/var/lib/trimc/cron/logs/<jobId>__<ISO>.log）——FADE §九.4「sync-log 或等效
+CLEAR?	runtime\cognition\daily_progress_patrol.py:74	DEFAULT_REGISTRY_REL = "docs/engineering/fade-registry.md"
+CLEAR?	runtime\cognition\daily_progress_patrol.py:268	"> sourceOfTruth: 本文件（周平面维护项，FADE-001 承接）｜维护方：事件驱动主"
+CLEAR?	runtime\cognition\daily_progress_patrol.py:444	msg = "docs(plane): 巡检兜底补写 {}——{} 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-001 维护项②/L
+CLEAR?	runtime\cognition\daily_progress_patrol.py:578	r"（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）$"
+CLEAR?	runtime\cognition\daily_progress_patrol.py:671	# ── 内置验证套件（--self-test；FADE §九.3 配套 validation） ──────────────────
+CLEAR?	runtime\cognition\daily_progress_patrol.py:714	reg_rel = "docs/engineering/fade-registry.md"
+CLEAR?	runtime\cognition\daily_progress_patrol.py:836	"（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）").format(stamp_s)
+CLEAR?	runtime\cognition\daily_progress_patrol.py:912	description="FADE-001 维护项② 每日进度巡检兜底（LG-011）——确定性脚本，无 LLM。"
+CLEAR?	runtime\cognition\employee_host_binding_profile_generation.py:30	# ── binding profile 三源一致性校验（FADE-ASSESS-004）───────────────────────
+CLEAR?	runtime\cognition\employee_host_binding_profile_generation.py:38	# hostEntries 多宿主承载（FADE 质量审核 3 问题 3 / CEO 2026-08-20 走查，CTO 定案）：
+CLEAR?	runtime\cognition\employee_host_binding_profile_generation.py:304	# ── B-HOST: hostEntries 多宿主承载（FADE 质量审核 3 问题 3 / CEO 2026-08-20 走查，CTO 定案）──
+KEEP-A	runtime\cognition\employee_host_binding_profile_generation_validation.py:110	self.assertIn("operating cadence", notes)
+CLEAR?	runtime\cognition\employee_host_binding_profile_generation_validation.py:175	# ── 三源一致性校验（FADE-ASSESS-004）───────────────────────────────────────
+KEEP-B	runtime\cognition\employee_host_publish.py:53	# 必须使用同一 manifest，否则两路 profile 内容/哈希不一致（ADE 自检报告失守）。
+CLEAR?	runtime\cognition\employee_host_publish.py:103	"the CLI runs dry-run only (ADE safety gate: default is no write).",
+CLEAR?	runtime\cognition\employee_host_publish.py:111	# Default behaviour (neither flag): dry-run (no writes) — ADE §2.4 safety gate.
+CLEAR?	runtime\cognition\employee_host_publish.py:160	# ── Build ADE structured self-check report ──
+CLEAR?	runtime\cognition\employee_host_publish.py:186	# ADE 合同出口：强制 UTF-8（Windows 中文环境默认 GBK 会破坏 JSON）。
+CLEAR?	runtime\cognition\employee_host_publish.py:198	# ── ADE helpers ──────────────────────────────────────────────────────────────
+CLEAR?	runtime\cognition\employee_host_publish.py:349	# ADE phase 1: the delegation emits the unified envelope (protocol
+CLEAR?	runtime\cognition\employee_host_publish.py:350	# ade-report, scope publish-agents) — either directly or inside a
+CLEAR?	runtime\cognition\employee_host_publish.py:351	# reports container for combined runs. ADE phase 2: parsing is shared
+CLEAR?	runtime\cognition\employee_host_publish_validation.py:81	"""CLI safety-gate tests (ADE phase-0 fix 1: default is dry-run, no writes)."""
+CLEAR?	runtime\cognition\employee_host_publish_validation.py:108	"""ADE fix 1: no --dry-run/--execute → dry-run, no files written."""
+CLEAR?	runtime\cognition\employee_host_publish_validation.py:133	"""ADE fix 1: --execute explicitly writes generated assets."""
+CLEAR?	runtime\cognition\employee_host_publish_validation.py:154	"""ADE fix 1: passing both --dry-run and --execute exits with code 2."""
+CLEAR?	runtime\cognition\employee_onboard.py:1	"""employee_onboard — ADE 员工上岗 11 步流水线 CLI.
+KEEP-B	runtime\cognition\employee_onboard.py:4	每一步输出标准 ADE JSON 自检报告。
+CLEAR?	runtime\cognition\employee_onboard.py:54	# ADE data types
+CLEAR?	runtime\cognition\employee_onboard.py:67	def to_ade_json(self) -> dict:
+CLEAR?	runtime\cognition\employee_onboard.py:94	def to_ade_json(self) -> dict:
+CLEAR?	runtime\cognition\employee_onboard.py:113	"stages": [s.to_ade_json() for s in self.stages],
+CLEAR?	runtime\cognition\employee_onboard.py:576	# ADE phase 1: --publish-agents emits the unified envelope (protocol
+CLEAR?	runtime\cognition\employee_onboard.py:577	# ade-report, scope publish-agents); errors > 0 now also maps to a
+CLEAR?	runtime\cognition\employee_onboard.py:580	# envelope parsing is shared via report_envelope (前名 ade_envelope；bare
+CLEAR?	runtime\cognition\employee_onboard.py:990	ADE 员工上岗 11 步流水线 CLI。
+KEEP-B	runtime\cognition\employee_onboard.py:992	每步输出标准 ADE JSON 自检报告。
+CLEAR?	runtime\cognition\employee_onboard.py:1103	print(_json.dumps(report.to_ade_json(), ensure_ascii=False, indent=2))
+CLEAR?	runtime\cognition\employee_onboard.py:1105	print(_json.dumps(report.to_ade_json(), ensure_ascii=False))
+CLEAR?	runtime\cognition\employee_onboard_validation.py:3	Validates the 11-step onboarding pipeline against the ADE specification.
+CLEAR?	runtime\cognition\employee_onboard_validation.py:32	# ── ADE output contract tests ─────────────────────────────────────────────
+CLEAR?	runtime\cognition\employee_onboard_validation.py:34	class TestADEOutputContract:
+CLEAR?	runtime\cognition\employee_onboard_validation.py:35	"""Verify every stage function returns ADE-compliant JSON structures."""
+CLEAR?	runtime\cognition\employee_onboard_validation.py:37	def test_stage_result_ade_format(self):
+CLEAR?	runtime\cognition\employee_onboard_validation.py:38	"""StageResult.to_ade_json() must contain all required ADE fields."""
+CLEAR?	runtime\cognition\employee_onboard_validation.py:48	result = sr.to_ade_json()
+CLEAR?	runtime\cognition\employee_onboard_validation.py:63	def test_onboard_report_ade_format(self):
+CLEAR?	runtime\cognition\employee_onboard_validation.py:64	"""OnboardReport.to_ade_json() must contain all required ADE fields."""
+CLEAR?	runtime\cognition\employee_onboard_validation.py:90	result = report.to_ade_json()
+CLEAR?	runtime\cognition\employee_onboard_validation.py:199	def test_stage_result_has_ade_fields(self, tmp_path: Path):
+CLEAR?	runtime\cognition\employee_onboard_validation.py:203	ade = result.to_ade_json()
+CLEAR?	runtime\cognition\employee_onboard_validation.py:204	assert "status" in ade
+CLEAR?	runtime\cognition\employee_onboard_validation.py:205	assert "summary" in ade
+CLEAR?	runtime\cognition\employee_onboard_validation.py:206	assert "changes" in ade
+CLEAR?	runtime\cognition\employee_onboard_validation.py:207	assert "errors" in ade
+CLEAR?	runtime\cognition\employee_onboard_validation.py:208	assert "check_time" in ade
+CLEAR?	runtime\cognition\employee_onboard_validation.py:209	assert ade["stage"] == 1
+CLEAR?	runtime\cognition\employee_source_kit.py:53	# ── 内容归属校验：误植句模式清单（FADE 质量审核 2 问题 2 / CEO 2026-08-21 走查，CTO 定案）──
+CLEAR?	runtime\cognition\employee_source_kit.py:56	# 文件）只含角色职责。它们在角色定义中出现 = 模板段落误植（fade-quality-lessons.md
+CLEAR?	runtime\cognition\employee_source_kit.py:212	"""内容归属校验：检测角色定义文件中的模板通用纪律句误植（FADE 加固 B 项）。
+CLEAR?	runtime\cognition\employee_source_kit.py:217	误植，说明维护时把模板段落复制进了角色定义（fade-quality-lessons 案例 2）。
+CLEAR?	runtime\cognition\employee_source_kit.py:236	# ── 组件-合成文件同步校验（FADE 加固 D 项 / fade-quality-lessons 建议 3）──────
+CLEAR?	runtime\cognition\employee_source_kit.py:242	# （"改组件不传导渲染"，fade-quality-lessons 案例 3 建议 3）。
+CLEAR?	runtime\cognition\employee_source_kit.py:249	# 合成路径映射例外（FADE-LEFTOVER-20260821-001 1b，CTO 裁决）：registry 类单文件区
+CLEAR?	runtime\cognition\employee_source_kit.py:360	1. legacy 红：`runtime_equivalent` 系退役方言键（openclaw:*/trimc:*，ADE/
+CLEAR?	runtime\cognition\employee_source_kit.py:471	的目录（FADE-LEFTOVER-20260821-001 1c，CTO 裁决）。
+CLEAR?	runtime\cognition\employee_source_kit.py:494	"""读该席 contract.yaml 的 paths[colleagues/social] 声明（轻量正则，不引入完整 loader）。
+CLEAR?	runtime\cognition\employee_source_kit_validation.py:128	# ── 内容归属校验（FADE 加固 B 项 / fade-quality-lessons 案例 2）──────────────
+CLEAR?	runtime\cognition\employee_source_kit_validation.py:242	# ── 组件-合成文件同步校验（FADE 加固 D 项 / fade-quality-lessons 建议 3）────
+CLEAR?	runtime\cognition\employee_source_kit_validation.py:799	"""FADE-LEFTOVER-20260821-001 1b/1c（CTO 裁决）覆盖：
+CLEAR?	runtime\cognition\external_validation.py:148	reloaded_kernel = MetaCognitionKernel()
+CLEAR?	runtime\cognition\external_validation.py:149	reloaded_kernel.register_actor(
+CLEAR?	runtime\cognition\external_validation.py:154	reloaded_kernel.register_provider(BuiltinMarkdownProvider(temp_dir))
+CLEAR?	runtime\cognition\external_validation.py:155	reloaded_kernel.register_provider(OrgSharedProvider(temp_dir))
+CLEAR?	runtime\cognition\external_validation.py:156	reloaded_kernel.register_provider(ExternalCognitionAdapter("honcho", backend))
+CLEAR?	runtime\cognition\external_validation.py:158	context = reloaded_kernel.prefetch_context(
+CLEAR?	runtime\cognition\host_object_generation.py:35	# ── hostEntries 多宿主承载（FADE 质量审核 3 问题 3 / CEO 2026-08-20 走查，CTO 2026-08-20 定案）──
+CLEAR?	runtime\cognition\host_object_generation.py:247	"This session launch command supersedes the earlier plan of pointing --append-system-promp
+CLEAR?	runtime\cognition\host_object_generation.py:368	role_description="Role-level reusable operating cadence, rollout planning, cross-functiona
+CLEAR?	runtime\cognition\host_object_generation.py:376	"COO owns operating cadence, rollout planning, cross-functional execution windows and reco
+CLEAR?	runtime\cognition\host_object_generation.py:546	role_description="Role-level reusable automated deployment, ADE execution, release pipelin
+CLEAR?	runtime\cognition\host_object_generation.py:554	"DeploymentEngineer owns automated deployment, ADE execution, release pipelines, and envir
+CLEAR?	runtime\cognition\host_object_generation.py:582	"CustomerSuccessOfficer (小成) is onboarded as a live host agent in the current Copilot-host
+CLEAR?	runtime\cognition\http_backend_validation.py:57	length = int(self.headers.get("Content-Length", "0"))
+CLEAR?	runtime\cognition\http_backend_validation.py:63	"headers": dict(self.headers.items()),
+CLEAR?	runtime\cognition\http_backend_validation.py:73	self.send_header("Content-Type", "application/json")
+CLEAR?	runtime\cognition\http_backend_validation.py:74	self.end_headers()
+CLEAR?	runtime\cognition\http_backend_validation.py:82	self.send_header("Content-Type", "application/json")
+CLEAR?	runtime\cognition\http_backend_validation.py:83	self.end_headers()
+CLEAR?	runtime\cognition\http_backend_validation.py:115	def test_http_backend_sends_auth_headers_and_coexists_with_builtin_providers(self) -> None
+KEEP-A	runtime\cognition\http_backend_validation.py:173	self.assertEqual(sync_request["headers"].get("Authorization"), f"Bearer {API_KEY}")
+KEEP-A	runtime\cognition\http_backend_validation.py:174	self.assertEqual(end_request["headers"].get("Authorization"), f"Bearer {API_KEY}")
+KEEP-A	runtime\cognition\http_backend_validation.py:175	self.assertEqual(prefetch_request["headers"].get("Authorization"), f"Bearer {API_KEY}")
+CLEAR?	runtime\cognition\integration_validation.py:56	reloaded_kernel = MetaCognitionKernel()
+CLEAR?	runtime\cognition\integration_validation.py:57	reloaded_kernel.register_actor(
+CLEAR?	runtime\cognition\integration_validation.py:62	reloaded_kernel.register_provider(BuiltinMarkdownProvider(temp_dir))
+CLEAR?	runtime\cognition\integration_validation.py:63	reloaded_kernel.register_provider(OrgSharedProvider(temp_dir))
+CLEAR?	runtime\cognition\integration_validation.py:65	context = reloaded_kernel.prefetch_context(
+CLEAR?	runtime\cognition\ipd_case_engine.py:132	"<downloaded-product-and-official-manual-catalog>",
+CLEAR?	runtime\cognition\ipd_case_engine.py:484	"name": "QaDefectAndRiskTriage",
+CLEAR?	runtime\cognition\lg024_session_upgrade_validation.py:21	SESSION_BODY_SECTION_HEADER,
+CLEAR?	runtime\cognition\lg024_session_upgrade_validation.py:72	class Lg024SessionUpgradeValidation(unittest.TestCase):
+KEEP-A	runtime\cognition\lg024_session_upgrade_validation.py:96	self.assertIn(SESSION_BODY_SECTION_HEADER, rendered)
+CLEAR?	runtime\cognition\lg024_session_upgrade_validation.py:136	def test_6_signed_piece_diff_is_upgrade_increment(self):
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:73	_DUP_HEADER_RE = re.compile(r"^##\s+(.+?)\s*$")
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:78	for header, body in _split_sections(text):
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:79	if header.strip().lstrip("#").strip() == title:
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:80	return (header + "\n" + body).strip("\n")
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:85	return [header.strip().lstrip("#").strip() for header, _ in _split_sections(text)]
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:123	header_indices: list[tuple[int, str]] = []
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:125	m = _DUP_HEADER_RE.match(line)
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:127	header_indices.append((i, m.group(1)))
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:128	if not header_indices:
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:130	segments: list[tuple[str | None, int, int]] = [(None, 0, header_indices[0][0])]
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:131	for j, (idx, title) in enumerate(header_indices):
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:132	end = header_indices[j + 1][0] if j + 1 < len(header_indices) else len(lines)
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:316	for header, body in _split_sections(new_text):
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:317	if header.strip().lstrip("#").strip() == "认知分层约束":
+CLEAR?	runtime\cognition\lg025_m0e_graft.py:318	cognitive_block = (header + "\n" + body).strip("\n")
+CLEAR?	runtime\cognition\notify.py:25	from email.header import Header
+CLEAR?	runtime\cognition\notify.py:82	"status": "render_only",  # downgrade default: no SMTP config → render only
+CLEAR?	runtime\cognition\notify.py:119	msg["Subject"] = Header(subject, "utf-8")
+CLEAR?	runtime\cognition\orchestrate_tick.py:95	"""运行锁陈旧判定（fade-rehearsal-001 审查 P0-1 修正版）。四通道：
+CLEAR?	runtime\cognition\orchestrate_tick.py:225	## 卷封制（fade-pipeline-design.md §九）
+CLEAR?	runtime\cognition\orchestrate_tick.py:229	## 节点收口报告（ade-pattern-spec §2.7，v1.3.0 强制段；校验器联审 F1 立法 v1.4.1）
+CLEAR?	runtime\cognition\orchestrate_tick.py:232	- **翻转前置门（硬）**：置 done 前必须跑 `python3 TriMetaverse/scripts/fade/node-report-check.py --tree-
+CLEAR?	runtime\cognition\orchestrate_tick.py:236	1. 只写该树目录内与任务明示的目标路径；operating-records 其他文件与 .shift-ade.json 只读
+CLEAR?	runtime\cognition\orchestrate_tick.py:272	"""P1-1（fade-rehearsal-001 审查）：tick 入口同步工作树——数据面自愈，
+CLEAR?	runtime\cognition\orchestrate_tick.py:282	print("worktree sync degraded (fetch rc=%s rebase rc=%s)"
+CLEAR?	runtime\cognition\orchestrate_tick.py:291	"""P1-3（fade-rehearsal-001 审查）：收割已结束会话的 usage 入账——
+CLEAR?	runtime\cognition\orchestrate_tick.py:295	CTO-F7（联审立法）：本收割器同时充当 FADE-006 映射表声明的 Close CLI
+CLEAR?	runtime\cognition\rd_trainer_host_object_generation_validation.py:78	新员工只更新声明表，本测试不再过期（FADE-LEFTOVER-20260821-001 批 1
+CLEAR?	runtime\cognition\report_envelope.py:1	"""ade_envelope — shared ADE envelope consumption helpers.
+CLEAR?	runtime\cognition\report_envelope.py:3	Single home for parsing ADE CLI output (source_publish_check and friends)
+CLEAR?	runtime\cognition\report_envelope.py:7	Extracted in ADE phase 2 (work package 3) from two inline consumers:
+KEEP-A	runtime\cognition\report_envelope.py:20	# Must stay in sync with source_publish_check.ADE_PROTOCOL（历史名 ade-report，格式契约值冻结）; duplic
+KEEP-A	runtime\cognition\report_envelope.py:22	ADE_PROTOCOL: str = "ade-report"
+CLEAR?	runtime\cognition\report_envelope.py:35	"""Locate the *scope* envelope inside an ADE CLI output payload.
+KEEP-A	runtime\cognition\report_envelope.py:42	if data.get("protocol") == ADE_PROTOCOL and data.get("scope") == scope:
+KEEP-A	runtime\cognition\report_envelope.py:50	and report.get("protocol") == ADE_PROTOCOL
+CLEAR?	runtime\cognition\rule_injection.py:1	"""rule_injection — TriCade Phase 3 experiment-to-production rule injection CLI.
+CLEAR?	runtime\cognition\rule_injection.py:13	ade-protocol      → .github/agents/*.agent.md
+CLEAR?	runtime\cognition\rule_injection.py:51	"ade-protocol": [".github/agents/"],
+CLEAR?	runtime\cognition\rule_injection.py:59	"ade-protocol": ["**/*.agent.md"],
+CLEAR?	runtime\cognition\rule_injection.py:70	"ade-protocol": "workflow",
+CLEAR?	runtime\cognition\rule_injection.py:83	"""Parsed experiment marker from a file header."""
+KEEP-B	runtime\cognition\rule_injection.py:119	"""Structured check output (ADE JSON format)."""
+KEEP-B	runtime\cognition\rule_injection.py:131	"""Structured sync output (ADE JSON format)."""
+CLEAR?	runtime\cognition\rule_injection.py:593	description="TriCade Phase 3 rule injection pipeline — crystallize experiment conclusions 
+CLEAR?	runtime\cognition\rule_injection.py:599	check_parser.add_argument("--scope", required=True, help="Injection scope (doc-governance 
+CLEAR?	runtime\cognition\seats_pipeline.py:24	HEADER_NOTE = (
+CLEAR?	runtime\cognition\seats_pipeline.py:116	"description": HEADER_NOTE,
+CLEAR?	runtime\cognition\source_publish_check.py:71	# Claude Code host face (ADE-B): the claude host itself is exempted via its
+CLEAR?	runtime\cognition\source_publish_check.py:76	".claude/agents/",          # ADE-B: Claude Code host face live entry agents
+CLEAR?	runtime\cognition\source_publish_check.py:93	# (ADE phase-0 fix 2: whitelist ∩ protected zone = ∅ hard check).
+CLEAR?	runtime\cognition\source_publish_check.py:105	# -- ADE-B multi-host render registry (CEO 2026-08-19 定调, §三 ADE-B) ----------
+CLEAR?	runtime\cognition\source_publish_check.py:133	"""Single host render template registration (ADE-B)."""
+CLEAR?	runtime\cognition\source_publish_check.py:251	M001_PUBLIC_SECTION_HEADER: str = "## 状态条机械合同（M-001，D-04 真源投影）"
+KEEP-C(批准形)	runtime\cognition\source_publish_check.py:256	# -- Unified report contract（前称 ADE unified report contract；consolidation phase 1）---
+CLEAR?	runtime\cognition\source_publish_check.py:257	# -- 系谱注记（ADE 概念已随 fade-protocol-spec v2.0.0 退役）--------------------
+CLEAR?	runtime\cognition\source_publish_check.py:258	# 本文件内 ADE-B / ADE phase-0/1/2 / ADE consolidation phase 1 等标记系历史
+CLEAR?	runtime\cognition\source_publish_check.py:259	# 时代标签（前称系谱，豁免清单在案：trees/ade-legacy-sweep/）；数据契约值
+KEEP-A	runtime\cognition\source_publish_check.py:260	# ADE_PROTOCOL="ade-report" 冻结不改（改=破坏存量报告解析兼容，版本化迁移
+CLEAR?	runtime\cognition\source_publish_check.py:261	# 另窗）。代码与文档用语按 ade-legacy-sweep 对照表渐进正名。
+KEEP-A	runtime\cognition\source_publish_check.py:273	ADE_PROTOCOL: str = "ade-report"  # 历史名 ade-report，格式契约值冻结（改=破坏存量报告解析兼容，版本化迁移另窗）
+CLEAR?	runtime\cognition\source_publish_check.py:274	ADE_VERSION: str = "1.0"
+CLEAR?	runtime\cognition\source_publish_check.py:275	ADE_SCOPES: tuple[str, ...] = ("sync", "project-docs", "publish-agents")
+CLEAR?	runtime\cognition\source_publish_check.py:278	# ADE_ACTIONS, and of its scope's allowed subset (ADE_ACTIONS_PER_SCOPE).
+CLEAR?	runtime\cognition\source_publish_check.py:281	ADE_ACTIONS: frozenset[str] = frozenset({
+CLEAR?	runtime\cognition\source_publish_check.py:299	ADE_ACTIONS_PER_SCOPE: dict[str, frozenset[str]] = {
+CLEAR?	runtime\cognition\source_publish_check.py:312	# ADE phase 2: close is a lifecycle scope, not a business domain scope —
+CLEAR?	runtime\cognition\source_publish_check.py:313	# it stays out of ADE_SCOPES (spec §2.2 business scopes) but reuses the
+CLEAR?	runtime\cognition\source_publish_check.py:318	# -- ADE phase 2: lifecycle skeleton (runId / Close CLI / Score CLI) ----------
+CLEAR?	runtime\cognition\source_publish_check.py:321	# (`ade-{scope}-{ts}`) always matches this pattern.
+CLEAR?	runtime\cognition\source_publish_check.py:322	ADE_RUN_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$")
+CLEAR?	runtime\cognition\source_publish_check.py:325	ADE_CLOSE_VERDICTS: tuple[str, ...] = ("APPROVED", "FROZEN", "ESCALATED", "RETRY")
+CLEAR?	runtime\cognition\source_publish_check.py:328	ADE_LIFECYCLE_SCOPES: tuple[str, ...] = ("close",)
+CLEAR?	runtime\cognition\source_publish_check.py:333	ADE_CLOSE_STATE_CLOSED: str = "CLOSED"
+CLEAR?	runtime\cognition\source_publish_check.py:334	ADE_CLOSE_STATE_REJECTED: str = "CLOSE_REJECTED"
+CLEAR?	runtime\cognition\source_publish_check.py:336	ADE_CLOSE_RECORD_SUFFIX: str = ".close-ade.json"
+CLEAR?	runtime\cognition\source_publish_check.py:338	ADE_DEFAULT_DATA_DIR: str = ".ade"
+CLEAR?	runtime\cognition\source_publish_check.py:342	ADE_SCORE_DEFAULT_THRESHOLD: float = 80.0
+CLEAR?	runtime\cognition\source_publish_check.py:414	derived_identical: int = 0  # ADE-B render: live == render(source+template)
+CLEAR?	runtime\cognition\source_publish_check.py:415	derived_drift: int = 0      # ADE-B render: live != render(source+template)
+KEEP-C(批准形)	runtime\cognition\source_publish_check.py:461	"""发布报告（前称 ADE report）：manifest 驱动的项目真源文档同步。"""
+CLEAR?	runtime\cognition\source_publish_check.py:486	The id is derived from the execution timestamp (``ade-{scope}-{ts}``,
+CLEAR?	runtime\cognition\source_publish_check.py:492	(ADE phase 2: explicit id wins over this derivation).
+CLEAR?	runtime\cognition\source_publish_check.py:495	return f"ade-{scope}-{ts}"
+CLEAR?	runtime\cognition\source_publish_check.py:500	fallback otherwise (ADE phase 2 work package 1).
+CLEAR?	runtime\cognition\source_publish_check.py:503	ADE_RUN_ID_PATTERN) by the caller; here it is only trimmed.
+CLEAR?	runtime\cognition\source_publish_check.py:514	record file name) that callers can parse back — see ADE_RUN_ID_PATTERN.
+CLEAR?	runtime\cognition\source_publish_check.py:518	if not ADE_RUN_ID_PATTERN.match(run_id.strip()):
+CLEAR?	runtime\cognition\source_publish_check.py:723	SESSION_BODY_SECTION_HEADER: str = "## 会话面补充（session-body）"
+CLEAR?	runtime\cognition\source_publish_check.py:737	header = line.strip()
+CLEAR?	runtime\cognition\source_publish_check.py:738	if header.startswith("##"):
+CLEAR?	runtime\cognition\source_publish_check.py:739	skipping = header[2:].strip() in wanted
+CLEAR?	runtime\cognition\source_publish_check.py:772	public_section = f"{M001_PUBLIC_SECTION_HEADER}\n\n{body}\n\n{M001_TAIL_NOTE}"
+CLEAR?	runtime\cognition\source_publish_check.py:793	parts.append(f"{SESSION_BODY_SECTION_HEADER}\n\n{fragment}")
+CLEAR?	runtime\cognition\source_publish_check.py:822	# explicitly at the resolution layer (ADE phase 1 observation item).
+CLEAR?	runtime\cognition\source_publish_check.py:842	Reverse guard for the whitelist (ADE phase-0 fix 2): live entry publishing
+CLEAR?	runtime\cognition\source_publish_check.py:849	ADE-B multi-host: the sanctioned landing zone is host-specific
+CLEAR?	runtime\cognition\source_publish_check.py:878	# the ADE-B claude face has no sanctioned binding-profiles writer).
+CLEAR?	runtime\cognition\source_publish_check.py:895	# ADE-B: multi-host render pipeline (CEO 2026-08-19 定调)
+CLEAR?	runtime\cognition\source_publish_check.py:1113	ADE-B: the payload is *rendered* (source + host template) unless the
+CLEAR?	runtime\cognition\source_publish_check.py:1369	ADE-B: the check runs against the *final write target* (after host
+CLEAR?	runtime\cognition\source_publish_check.py:1402	# ── ADE phase-0 fix 2 + ADE-B: whitelist ∩ protected zone = ∅ ─────────
+CLEAR?	runtime\cognition\source_publish_check.py:1543	# ADE-B: the report target is the final write target (host-derived),
+CLEAR?	runtime\cognition\source_publish_check.py:1573	"""Serialize an AgentPublishReport to the unified ADE envelope contract.
+CLEAR?	runtime\cognition\source_publish_check.py:1578	*run_id* is the explicit ``--run-id`` when given (ADE phase 2); it wins
+CLEAR?	runtime\cognition\source_publish_check.py:1585	# so the ADE invariant total == changed + skipped + errors holds.
+KEEP-A	runtime\cognition\source_publish_check.py:1594	"protocol": ADE_PROTOCOL,
+CLEAR?	runtime\cognition\source_publish_check.py:1595	"version": ADE_VERSION,
+CLEAR?	runtime\cognition\source_publish_check.py:1655	# them explicitly (ADE phase 1 observation item).
+CLEAR?	runtime\cognition\source_publish_check.py:1720	"""Populate summary counters and ADE status from item actions."""
+CLEAR?	runtime\cognition\source_publish_check.py:1749	"""Run the manifest-driven project truth document ADE execution layer.
+CLEAR?	runtime\cognition\source_publish_check.py:2048	"""Serialize the project document ADE report to the unified envelope.
+CLEAR?	runtime\cognition\source_publish_check.py:2053	*run_id* is the explicit ``--run-id`` when given (ADE phase 2).
+KEEP-A	runtime\cognition\source_publish_check.py:2058	"protocol": ADE_PROTOCOL,
+CLEAR?	runtime\cognition\source_publish_check.py:2059	"version": ADE_VERSION,
+CLEAR?	runtime\cognition\source_publish_check.py:2148	"""Serialize the --check / --sync report to the unified ADE envelope.
+CLEAR?	runtime\cognition\source_publish_check.py:2155	*run_id* is the explicit ``--run-id`` when given (ADE phase 2).
+KEEP-A	runtime\cognition\source_publish_check.py:2231	"protocol": ADE_PROTOCOL,
+CLEAR?	runtime\cognition\source_publish_check.py:2232	"version": ADE_VERSION,
+CLEAR?	runtime\cognition\source_publish_check.py:2257	Shape proposal (ADE phase 2 work package 2, 终审判定):
+KEEP-A	runtime\cognition\source_publish_check.py:2262	"protocol": "ade-report", "version": "1.0",
+KEEP-A	runtime\cognition\source_publish_check.py:2292	"protocol": ADE_PROTOCOL,
+CLEAR?	runtime\cognition\source_publish_check.py:2293	"version": ADE_VERSION,
+CLEAR?	runtime\cognition\source_publish_check.py:2305	# ADE phase 2: Close CLI (spec §2.5 终态门)
+CLEAR?	runtime\cognition\source_publish_check.py:2308	def _close_data_dir(ade_data_dir: str | None, source_root: Path) -> Path:
+CLEAR?	runtime\cognition\source_publish_check.py:2309	"""Resolve the ADE runtime records directory for close audit records."""
+CLEAR?	runtime\cognition\source_publish_check.py:2310	if ade_data_dir:
+CLEAR?	runtime\cognition\source_publish_check.py:2311	raw = Path(ade_data_dir)
+CLEAR?	runtime\cognition\source_publish_check.py:2313	return source_root / ADE_DEFAULT_DATA_DIR
+CLEAR?	runtime\cognition\source_publish_check.py:2342	- verdict ∈ ADE_CLOSE_VERDICTS (terminal states, spec §8.3)
+CLEAR?	runtime\cognition\source_publish_check.py:2343	- run_id non-empty and parseable (ADE_RUN_ID_PATTERN)
+CLEAR?	runtime\cognition\source_publish_check.py:2351	if verdict not in ADE_CLOSE_VERDICTS:
+CLEAR?	runtime\cognition\source_publish_check.py:2378	scope is "close" (ADE_LIFECYCLE_SCOPES): reuses the envelope shape so
+CLEAR?	runtime\cognition\source_publish_check.py:2382	accepted = state == ADE_CLOSE_STATE_CLOSED
+KEEP-A	runtime\cognition\source_publish_check.py:2384	"protocol": ADE_PROTOCOL,
+CLEAR?	runtime\cognition\source_publish_check.py:2385	"version": ADE_VERSION,
+CLEAR?	runtime\cognition\source_publish_check.py:2425	ade_data_dir: str | None = None,
+CLEAR?	runtime\cognition\source_publish_check.py:2433	``<data_dir>/<run_id>.close-ade.json`` and return a CLOSED envelope.
+CLEAR?	runtime\cognition\source_publish_check.py:2452	state=ADE_CLOSE_STATE_REJECTED,
+CLEAR?	runtime\cognition\source_publish_check.py:2457	data_dir = _close_data_dir(ade_data_dir, source_root)
+CLEAR?	runtime\cognition\source_publish_check.py:2458	audit_record = data_dir / f"{run_id.strip()}{ADE_CLOSE_RECORD_SUFFIX}"
+CLEAR?	runtime\cognition\source_publish_check.py:2467	state=ADE_CLOSE_STATE_REJECTED,
+CLEAR?	runtime\cognition\source_publish_check.py:2492	state=ADE_CLOSE_STATE_REJECTED,
+CLEAR?	runtime\cognition\source_publish_check.py:2503	state=ADE_CLOSE_STATE_CLOSED,
+CLEAR?	runtime\cognition\source_publish_check.py:2510	# ADE phase 2: Score CLI (spec §2.6 / 试卷模板 §三)
+CLEAR?	runtime\cognition\source_publish_check.py:2517	containers yield [] (defensive, mirrors ade_envelope.find_scope_envelope).
+KEEP-A	runtime\cognition\source_publish_check.py:2519	if report_data.get("protocol") == ADE_PROTOCOL and "scope" in report_data:
+KEEP-A	runtime\cognition\source_publish_check.py:2526	if isinstance(r, dict) and r.get("protocol") == ADE_PROTOCOL
+CLEAR?	runtime\cognition\source_publish_check.py:2702	else ADE_SCORE_DEFAULT_THRESHOLD
+CLEAR?	runtime\cognition\source_publish_check.py:2748	"threshold": float(threshold) if threshold is not None else ADE_SCORE_DEFAULT_THRESHOLD,
+CLEAR?	runtime\cognition\source_publish_check.py:3029	Windows), which corrupts ``ensure_ascii=False`` ADE reports for
+CLEAR?	runtime\cognition\source_publish_check.py:3030	downstream parsers. ADE reports are machine contracts — they must
+CLEAR?	runtime\cognition\source_publish_check.py:3100	help="ADE-B target host face for --publish-agents: 'copilot' publishes "
+CLEAR?	runtime\cognition\source_publish_check.py:3116	# ── project truth document ADE arguments ─────────────────────────────
+CLEAR?	runtime\cognition\source_publish_check.py:3151	# ── ADE phase 2: lifecycle skeleton (runId / Close CLI / Score CLI) ───
+CLEAR?	runtime\cognition\source_publish_check.py:3155	help="Explicit ADE run id overriding the timestamp-derived default in "
+CLEAR?	runtime\cognition\source_publish_check.py:3170	choices=ADE_CLOSE_VERDICTS,
+CLEAR?	runtime\cognition\source_publish_check.py:3188	"--ade-data-dir",
+CLEAR?	runtime\cognition\source_publish_check.py:3190	help="Directory for ADE runtime records (close terminal audit). "
+CLEAR?	runtime\cognition\source_publish_check.py:3191	"Defaults to <source-root>/.ade/.",
+CLEAR?	runtime\cognition\source_publish_check.py:3230	# ── FADE-002 event-watch: 文件/Git 事件自动触发发布检查 ──────────────
+CLEAR?	runtime\cognition\source_publish_check.py:3235	help="FADE-002 事件自动触发：执行一次事件扫描批次（监听目录 hash 变化 "
+CLEAR?	runtime\cognition\source_publish_check.py:3285	help="event-watch 审计目录（默认 <source-root>/.ade/event-watch/）。",
+CLEAR?	runtime\cognition\source_publish_check.py:3611	# ── ADE phase 2: explicit run id validation (wins over timestamp) ──────
+CLEAR?	runtime\cognition\source_publish_check.py:3621	# ── ADE phase 2: Close CLI / Score CLI are exclusive lifecycle modes ───
+CLEAR?	runtime\cognition\source_publish_check.py:3625	# FADE-002 event-watch 是独立触发面：不与业务 scope / lifecycle mode 组合。
+CLEAR?	runtime\cognition\source_publish_check.py:3658	# ── FADE-002 event-watch：文件/Git 事件自动触发（单次扫描 / 前台循环）──
+CLEAR?	runtime\cognition\source_publish_check.py:3676	ade_data_dir=args.ade_data_dir,
+CLEAR?	runtime\cognition\source_publish_check.py:3752	# ADE phase 1: every scope serializes to one unified envelope; combined
+CLEAR?	runtime\cognition\source_publish_check.py:3757	# ── project truth document ADE mode ──────────────────────────────────
+CLEAR?	runtime\cognition\source_publish_check.py:3819	# ADE phase 0 observation item: errors (incl. protected_target_rejected)
+CLEAR?	runtime\cognition\source_publish_check.py:3870	# ADE phase 1: sync scope envelope
+CLEAR?	runtime\cognition\source_publish_check.py:3896	# ADE phase 1 rc mapping: sync execute errors also exit non-zero.
+CLEAR?	runtime\cognition\source_publish_check.py:3934	# FADE-002 补齐项：event-watch —— 文件/Git 事件自动触发发布检查
+CLEAR?	runtime\cognition\source_publish_check.py:3935	# 规范依据：ade-pattern-spec.md §8.6（检测即触发、触发与执行解耦）与 §2.4
+CLEAR?	runtime\cognition\source_publish_check.py:3977	# 审计目录（默认 <source-root>/.ade/event-watch/，与 close 审计同根 .ade）。
+CLEAR?	runtime\cognition\source_publish_check.py:3984	# 与 close lifecycle scope 同构，不进 ADE_SCOPES 三业务域）。
+CLEAR?	runtime\cognition\source_publish_check.py:4282	"""默认审计目录：<source-root>/.ade/event-watch/（与 close 审计同根 .ade）。"""
+CLEAR?	runtime\cognition\source_publish_check.py:4283	return source_root / ADE_DEFAULT_DATA_DIR / EVENT_WATCH_AUDIT_DIRNAME
+CLEAR?	runtime\cognition\source_publish_check.py:4378	"""序列化 event-watch 批次 envelope（复用 ade-report 合同）。
+KEEP-A	runtime\cognition\source_publish_check.py:4385	"protocol": ADE_PROTOCOL,
+CLEAR?	runtime\cognition\source_publish_check.py:4386	"version": ADE_VERSION,
+KEEP-A	runtime\cognition\source_publish_check_validation.py:468	self.assertEqual(data["protocol"], "ade-report")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:487	# Unified ADE envelope contract keys
+CLEAR?	runtime\cognition\source_publish_check_validation.py:921	# ── TC-AP14: whitelist ∩ protected zone = ∅ hard check (ADE fix 2) ──────
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1156	self.assertEqual(data["protocol"], "ade-report")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1176	"""Manifest-driven project truth document ADE tests."""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1310	"TriCompany/.ade/candidates/tricompany.md",
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1418	"""CLI contract tests for the project document ADE mode."""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1507	# ── ADE phase 1: unified envelope contract tests ──────────────────────────────
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1511	"""ADE phase 1: all three scopes share one envelope contract."""
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1534	self.assertEqual(env["protocol"], "ade-report")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1536	# Business-domain scopes (spec §2.2) plus the ADE phase 2 lifecycle
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1541	rf"^ade-{env['scope']}-\d{{8}}T\d{{12}}$",
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1542	"run_id must be deterministic: ade-{scope}-{timestamp}",
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1559	ADE_ACTIONS, ADE_ACTIONS_PER_SCOPE,
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1565	item["action"], ADE_ACTIONS,
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1569	item["action"], ADE_ACTIONS_PER_SCOPE[env["scope"]],
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1574	"""ADE phase 1: unified action vocabulary constants are consistent."""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1576	ADE_ACTIONS, ADE_ACTIONS_PER_SCOPE, ADE_LIFECYCLE_SCOPES, ADE_SCOPES,
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1578	self.assertEqual(set(ADE_SCOPES), {"sync", "project-docs", "publish-agents"})
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1579	for scope in ADE_SCOPES:
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1581	ADE_ACTIONS_PER_SCOPE[scope].issubset(ADE_ACTIONS),
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1585	"error", ADE_ACTIONS_PER_SCOPE[scope],
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1588	# ADE phase 2: lifecycle scopes reuse the envelope but stay out of the
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1590	self.assertEqual(set(ADE_LIFECYCLE_SCOPES), {"close"})
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1591	self.assertIn("closed", ADE_ACTIONS)
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1592	for scope in ADE_LIFECYCLE_SCOPES:
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1594	ADE_ACTIONS_PER_SCOPE[scope].issubset(ADE_ACTIONS),
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1598	"error", ADE_ACTIONS_PER_SCOPE[scope],
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1603	"""ADE phase 2: run_id is timestamp-derived, NOT deterministic.
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1613	self.assertTrue(run_id.startswith("ade-sync-"))
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1618	self.assertTrue(_make_run_id("publish-agents").startswith("ade-publish-agents-"))
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1728	"""ADE phase 1: 'C:foo' style targets are rejected by the resolvers.
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1745	"""ADE phase 2 work package 1: explicit --run-id wins, timestamp fallback."""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1767	self.assertNotRegex(env["run_id"], r"^ade-")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1786	"""FADE-002 回填：--publish-agents 单 scope 显式 --run-id 直达 envelope."""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1800	self.assertNotRegex(env["run_id"], r"^ade-")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1803	"""FADE-002 回填：--project-docs 单 scope 显式 --run-id 直达 envelope."""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1837	self.assertNotRegex(env["run_id"], r"^ade-")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1853	self.assertRegex(by_scope["sync"], r"^ade-sync-\d{8}T\d{12}$")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1855	by_scope["publish-agents"], r"^ade-publish-agents-\d{8}T\d{12}$",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1876	self.assertEqual(_validate_run_id("ade-sync-20260820T000000000000"), "")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1881	"""ADE phase 2 work package 2: combined-run container aggregation."""
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1885	"protocol": "ade-report", "version": "1.0", "scope": scope,
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1886	"run_id": f"ade-{scope}-20260820T000000000000",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1962	self.assertEqual(data["protocol"], "ade-report")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1976	class AdeEnvelopeHelperTests(unittest.TestCase):
+CLEAR?	runtime\cognition\source_publish_check_validation.py:1977	"""ADE phase 2 work package 3: shared consumer-side envelope helpers."""
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1984	self.assertIsNotNone(parse_cli_output('{"protocol": "ade-report"}'))
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1988	data = {"protocol": "ade-report", "scope": "publish-agents", "summary": {}}
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1996	"protocol": "ade-report", "version": "1.0",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1998	{"protocol": "ade-report", "scope": "sync"},
+KEEP-A	runtime\cognition\source_publish_check_validation.py:1999	{"protocol": "ade-report", "scope": "publish-agents"},
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2010	{"protocol": "ade-report", "reports": "not-a-list"}, "publish-agents",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2013	{"protocol": "ade-report", "reports": ["nope", 3]}, "publish-agents",
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2017	), "non-ade entries in the container must not match")
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2021	data = {"protocol": "ade-report", "scope": "sync"}
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2029	_json.dumps({"protocol": "ade-report", "scope": "publish-agents"}),
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2052	"""ADE phase 2 work package 4: Close CLI (spec §2.5 终态门)."""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2065	+ ["--close", "--ade-data-dir", str(data_dir), *extra],
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2071	from runtime.cognition.source_publish_check import ADE_CLOSE_RECORD_SUFFIX
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2076	"--run-id", "ade-sync-20260820T000000000000",
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2089	f"ade-sync-20260820T000000000000{ADE_CLOSE_RECORD_SUFFIX}"
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2097	self.assertEqual(payload["run_id"], "ade-sync-20260820T000000000000")
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2120	self.assertEqual(env["protocol"], "ade-report")
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2147	list(data_dir.root.glob("*.close-ade.json")),
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2219	"""ADE phase 2 work package 5: Score CLI (spec §2.6 / 试卷模板 §三)."""
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2244	"protocol": "ade-report", "version": "1.0", "scope": "publish-agents",
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2245	"run_id": "ade-publish-agents-20260820T000000000000",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2335	"protocol": "ade-report", "version": "1.0", "scope": "sync",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2400	"protocol": "ade-report", "version": "1.0", "scope": "sync",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2440	"protocol": "ade-report", "version": "1.0", "scope": "project-docs",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2458	"protocol": "ade-report", "version": "1.0",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2462	"protocol": "ade-report", "version": "1.0", "scope": "sync",
+KEEP-A	runtime\cognition\source_publish_check_validation.py:2507	paper=self.PAPER, report={"protocol": "ade-report", "scope": "sync"},
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2555	# ── ADE-B: multi-host render tests (CEO 2026-08-19 定调) ──────────────────────
+CLEAR?	runtime\cognition\source_publish_check_validation.py:2559	"""ADE-B multi-host render unit tests (source + host template → render).
+CLEAR?	runtime\cognition\source_publish_check_validation.py:3088	def test_ade_actions_include_derived(self) -> None:
+CLEAR?	runtime\cognition\source_publish_check_validation.py:3089	"""derived_identical / derived_drift 进 ADE_ACTIONS 与 publish-agents 域子集。"""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:3091	ADE_ACTIONS, ADE_ACTIONS_PER_SCOPE,
+KEEP-A	runtime\cognition\source_publish_check_validation.py:3093	self.assertIn("derived_identical", ADE_ACTIONS)
+KEEP-A	runtime\cognition\source_publish_check_validation.py:3094	self.assertIn("derived_drift", ADE_ACTIONS)
+CLEAR?	runtime\cognition\source_publish_check_validation.py:3096	"derived_identical", ADE_ACTIONS_PER_SCOPE["publish-agents"],
+CLEAR?	runtime\cognition\source_publish_check_validation.py:3099	"derived_drift", ADE_ACTIONS_PER_SCOPE["publish-agents"],
+CLEAR?	runtime\cognition\source_publish_check_validation.py:3792	# ── FADE-002 event-watch: 文件/Git 事件自动触发 tests ────────────────────────
+CLEAR?	runtime\cognition\source_publish_check_validation.py:3796	"""FADE-002 事件自动触发测试（任务书批次 3-1）。
+CLEAR?	runtime\cognition\source_publish_check_validation.py:3825	return self.source.root / ".ade" / "event-watch-test"
+CLEAR?	runtime\cognition\source_publish_check_validation.py:4108	def test_run_id_matches_ade_pattern(self) -> None:
+CLEAR?	runtime\cognition\source_publish_check_validation.py:4109	"""批次 run_id 匹配 ADE_RUN_ID_PATTERN（文件系统安全单 token）。"""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:4110	from runtime.cognition.source_publish_check import ADE_RUN_ID_PATTERN
+CLEAR?	runtime\cognition\source_publish_check_validation.py:4114	self.assertRegex(env["run_id"], ADE_RUN_ID_PATTERN.pattern)
+CLEAR?	runtime\cognition\source_publish_check_validation.py:4143	"""FADE-002 event-watch CLI 集成：--event-watch 单次扫描与 scope 互斥。"""
+CLEAR?	runtime\cognition\source_publish_check_validation.py:4157	"--audit-dir", str(self.source.root / ".ade" / "ew-cli")],
+CLEAR?	runtime\cognition\source_publish_check_validation.py:4183	"--audit-dir", str(self.source.root / ".ade" / "ew-cli2"),
+CLEAR?	runtime\cognition\supermemory_validation.py:60	length = int(self.headers.get("Content-Length", "0"))
+CLEAR?	runtime\cognition\supermemory_validation.py:64	{"path": self.path, "headers": dict(self.headers.items()), "body": body}
+CLEAR?	runtime\cognition\supermemory_validation.py:78	self.send_header("Content-Type", "application/json")
+CLEAR?	runtime\cognition\supermemory_validation.py:79	self.end_headers()
+CLEAR?	runtime\cognition\supermemory_validation.py:183	document_requests[0]["headers"].get("Authorization"),
+CLEAR?	runtime\cognition\tree_op.py:1	"""tree_op — ADE Tree 操作 CLI
+KEEP-B	runtime\cognition\tree_op.py:4	Agent 规划 → CLI 确定性执行 → ADE JSON 自检 → Agent 收口。
+CLEAR?	runtime\cognition\tree_op.py:46	# ── ADE types ──
+CLEAR?	runtime\cognition\tree_op.py:49	class ADEResult:
+CLEAR?	runtime\cognition\tree_op.py:56	def to_ade_json(self) -> dict:
+CLEAR?	runtime\cognition\tree_op.py:110	) -> ADEResult:
+CLEAR?	runtime\cognition\tree_op.py:118	return ADEResult(status="fail", summary={"created": False, "errors": 1},
+CLEAR?	runtime\cognition\tree_op.py:124	return ADEResult(status="fail", summary={"created": False, "errors": 1},
+CLEAR?	runtime\cognition\tree_op.py:130	return ADEResult(status="fail", summary={"created": False, "errors": 1},
+CLEAR?	runtime\cognition\tree_op.py:142	return ADEResult(status="fail", summary={"created": False, "errors": 1},
+CLEAR?	runtime\cognition\tree_op.py:177	return ADEResult(status="fail", summary={"created": False, "errors": len(errors)},
+CLEAR?	runtime\cognition\tree_op.py:204	return ADEResult(status="pass",
+CLEAR?	runtime\cognition\tree_op.py:210	return ADEResult(status="pass",
+CLEAR?	runtime\cognition\tree_op.py:218	def validate_tree_op(tree_path: Path) -> ADEResult:
+CLEAR?	runtime\cognition\tree_op.py:225	return ADEResult(status="fail", summary={"valid": False},
+CLEAR?	runtime\cognition\tree_op.py:271	return ADEResult(status=status,
+CLEAR?	runtime\cognition\tree_op.py:280	description="ADE Tree 操作 CLI",
+CLEAR?	runtime\cognition\tree_op.py:350	result = ADEResult(status="fail",
+CLEAR?	runtime\cognition\tree_op.py:353	print(_json.dumps(result.to_ade_json(), indent=2, ensure_ascii=False))
+CLEAR?	runtime\cognition\tree_op.py:362	print(_json.dumps(result.to_ade_json(), indent=2, ensure_ascii=False))
+CLEAR?	runtime\cognition\weekly_plane.py:1	"""weekly_plane — ADE 周工作平面 CLI
+KEEP-B	runtime\cognition\weekly_plane.py:4	Agent 规划 → CLI 确定性执行 → ADE JSON 自检 → Agent 收口。
+CLEAR?	runtime\cognition\weekly_plane.py:37	# ── ADE types ──
+CLEAR?	runtime\cognition\weekly_plane.py:40	class ADEResult:
+CLEAR?	runtime\cognition\weekly_plane.py:47	def to_ade_json(self) -> dict:
+CLEAR?	runtime\cognition\weekly_plane.py:147	) -> ADEResult:
+CLEAR?	runtime\cognition\weekly_plane.py:157	return ADEResult(status="fail", summary={"created": False},
+CLEAR?	runtime\cognition\weekly_plane.py:165	return ADEResult(status="fail",
+CLEAR?	runtime\cognition\weekly_plane.py:215	return ADEResult(status="pass",
+CLEAR?	runtime\cognition\weekly_plane.py:224	return ADEResult(status="pass",
+CLEAR?	runtime\cognition\weekly_plane.py:237	) -> ADEResult:
+CLEAR?	runtime\cognition\weekly_plane.py:249	return ADEResult(status="fail", summary={"migrated": False, "errors": 1},
+CLEAR?	runtime\cognition\weekly_plane.py:254	return ADEResult(status="fail", summary={"migrated": False, "errors": 1},
+CLEAR?	runtime\cognition\weekly_plane.py:262	return ADEResult(status="fail", summary={"migrated": False, "errors": 1},
+CLEAR?	runtime\cognition\weekly_plane.py:270	return ADEResult(status="pass",
+CLEAR?	runtime\cognition\weekly_plane.py:304	return ADEResult(status="pass",
+CLEAR?	runtime\cognition\weekly_plane.py:317	) -> ADEResult:
+CLEAR?	runtime\cognition\weekly_plane.py:325	return ADEResult(status="fail", summary={"closed": False},
+CLEAR?	runtime\cognition\weekly_plane.py:331	return ADEResult(status="fail", summary={"closed": False},
+CLEAR?	runtime\cognition\weekly_plane.py:339	return ADEResult(status="fail", summary={"closed": False, "active_trees": len(active)},
+CLEAR?	runtime\cognition\weekly_plane.py:343	return ADEResult(status="pass",
+CLEAR?	runtime\cognition\weekly_plane.py:355	return ADEResult(status="pass",
+CLEAR?	runtime\cognition\weekly_plane.py:363	def validate_index(path: Path) -> ADEResult:
+CLEAR?	runtime\cognition\weekly_plane.py:370	return ADEResult(status="fail", summary={"valid": False},
+CLEAR?	runtime\cognition\weekly_plane.py:393	return ADEResult(status=status,
+CLEAR?	runtime\cognition\weekly_plane.py:402	description="ADE 周工作平面 CLI",
+CLEAR?	runtime\cognition\weekly_plane.py:470	print(_json.dumps(result.to_ade_json(), indent=2, ensure_ascii=False))
+CLEAR?	runtime\cognition\weekly_plane_shift.py:3	完整 ADE 执行链：
+CLEAR?	runtime\cognition\weekly_plane_shift.py:4	Agent plans (小贾，SOP Step 1-3)  →  CLI executes (本脚本，确定性)  →  Agent closes (小贾审核 .shift-ade
+KEEP-B	runtime\cognition\weekly_plane_shift.py:12	5. 聚合 ADE JSON 写 <new_week>/.shift-ade.json
+CLEAR?	runtime\cognition\weekly_plane_shift.py:76	# Update header (lambda repl avoids backtick escape issues in re.sub templates)
+CLEAR?	runtime\cognition\weekly_plane_shift.py:94	# recomputed; manual strong annotations are transiently downgraded until
+CLEAR?	runtime\cognition\weekly_plane_shift.py:132	CEOChiefOfStaff (小贾) to make carry-over upgrade rulings.
+CLEAR?	runtime\cognition\weekly_plane_shift.py:158	# header is found, degrade to a full scan rather than report empty.
+CLEAR?	runtime\cognition\weekly_plane_shift.py:167	header_found = False
+CLEAR?	runtime\cognition\weekly_plane_shift.py:171	header_found = True
+CLEAR?	runtime\cognition\weekly_plane_shift.py:178	if not header_found:
+CLEAR?	runtime\cognition\weekly_plane_shift.py:207	headers={"Content-Type": "application/json"},
+CLEAR?	runtime\cognition\weekly_plane_shift.py:217	p = argparse.ArgumentParser(description="ADE weekly plane shift")
+CLEAR?	runtime\cognition\weekly_plane_shift.py:234	results.append({"step": "create", "result": {**r.to_ade_json(), "status": "pass" if alread
+CLEAR?	runtime\cognition\weekly_plane_shift.py:240	results.append({"step": "migrate", "result": r.to_ade_json()})
+CLEAR?	runtime\cognition\weekly_plane_shift.py:253	results.append({"step": "validate", "result": r.to_ade_json()})
+KEEP-B	runtime\cognition\weekly_plane_shift.py:263	# 6. aggregate ADE JSON (operation record = ⑤ cli finalize)
+CLEAR?	runtime\cognition\weekly_plane_shift.py:264	shift_ade = {
+CLEAR?	runtime\cognition\weekly_plane_shift.py:265	"objectType": "ADE_SHIFT",
+CLEAR?	runtime\cognition\weekly_plane_shift.py:275	out = _week_dir(root, args.to_week, args.start_date) / ".shift-ade.json"
+CLEAR?	runtime\cognition\weekly_plane_shift.py:278	out.write_text(_json.dumps(shift_ade, ensure_ascii=False, indent=2), encoding="utf-8")
+CLEAR?	runtime\cognition\weekly_plane_shift.py:282	_notify_shift(shift_ade)
+CLEAR?	runtime\cognition\weekly_plane_shift.py:284	print(_json.dumps(shift_ade, ensure_ascii=False, indent=2))
+CLEAR?	runtime\cognition\weekly_plane_shift.py:288	def _notify_shift(shift_ade: dict) -> None:
+CLEAR?	runtime\cognition\weekly_plane_shift.py:296	status = shift_ade.get("status", "?")
+CLEAR?	runtime\cognition\weekly_plane_shift.py:301	subject = f"[TriCade] 周平面迁移完成 {shift_ade['from_week']}→{shift_ade['to_week']} ({status})"
+CLEAR?	runtime\cognition\weekly_plane_shift.py:303	f"周工作平面迁移完成（TriCade 定时）",
+CLEAR?	runtime\cognition\weekly_plane_shift.py:306	f"迁移: {shift_ade['from_week']} → {shift_ade['to_week']}（起始 {shift_ade['start_date']}）",
+CLEAR?	runtime\cognition\weekly_plane_shift.py:307	f"8w+ 升级事项: {len(shift_ade.get('escalation_8w', []))} 项",
+CLEAR?	runtime\cognition\weekly_plane_shift.py:311	if shift_ade.get("escalation_8w"):
+CLEAR?	runtime\cognition\weekly_plane_shift.py:312	for item in shift_ade["escalation_8w"]:
+CLEAR?	runtime\cognition\weekly_plane_shift.py:318	"请 CEO 在 W" + shift_ade["to_week"].lstrip("W") + " 首周做 carry-over 裁决（推进/冻结/关闭）。",
