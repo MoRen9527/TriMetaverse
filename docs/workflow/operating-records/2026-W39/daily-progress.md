@@ -120,3 +120,24 @@
 - 巡检兜底补写 @04:10 +08：自上次进度提交 af897704 后新增 1 条 commit：
   - 801ce187 docs(workflow): ADE 清查 sg 轮终记——BOD 批令认可闭环+四项转本地车道 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-23（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @10:00 +08：自上次进度提交 a06b3e7b 后新增 21 条 commit：
+  - 6e472abc Merge remote-tracking branch 'sg-server/dev' into dev
+  - ea690bf2 docs(lg-046): 宿主资产目录正名迁移批任务书铸挂（CEO 09:49 三件套）——TriCompany-host-assets 命名裁决+窗口锁 09-23 20:44 后+锚基线五项（BOD 实测 502/659 行/历史冻结/junction 别名制/daemon 重启风险位）+五验收锚；face=server-executable 服务域拾取
+  - 96ecd73f docs(worktree-provision): 排程定稿口径落（BOD 对表确认转达：一期=已完成态标注[今晨 SDE 执行+19:16 活体验收]/二期试点切换锁 09-23 20:44 后额度重置启/wt 推送节律即起不受锁限）
+  - f46bfeff docs(worktree-provision): syncMode 翻转 draft→approved（CEO 22:48 三笔一次全批）+窗口锁入卷（一期部署 09-23 20:44 后；一期实况以 BOD 对表确认为准；二期照设计候验证；wt 推送节律即起照行不受锁限）
+  - d238be64 docs(worktree-provision): 知识区归属与映射小节并入（CEO 22:41 问·BOD 转办）——workbench 知识区不随 worktree 迁移不物理关联定性+13 行映射表（wt/<seat>↔employees/<kebab> 一一对应）+发现性说明（../TriMetaverse-worktrees/ git worktree list 可查）+三期随车件：workbench README 互指行（CEO 问缝封堵）
+  - b2ca24cb docs(worktree-provision): 推送节律四条并入归账纪律节（CEO 22:34 批定稿 COS 转办——wt/* 随日收口 push/晨巡检兜底补推挂 LG-011/git branch -d+worktree remove 注册流程禁裸删/多树合流照 T-c 对表先例；背景=wt/board 14 支无 upstream 单盘敞口实锤封缝）
+  - e18377ed docs(ledger): 台账现势快照 v2（BOD 盘点令同步刷新）——09-22 四单销账增量+LG-041/045 交集注记+候决候办全量
+  - 9988ab17 docs(workflow): TASK-WATCHDOG-JUDGE-FIX-01 执行读数落树——两阶段全锚+红线单全程留证
+  - d72c4182 docs(workflow): TASK-SYNC-CONSOLIDATE-01 执行读数落树——五锚全过+D-30 候选文案
+  - 7ea92ee8 docs(workflow): TASK-VBS-PROVENANCE-01 执行读数落树——6 vbs 定性全量+sync 复跑零警告
+  - e5d4f199 docs(runbook): TASK-LAUNCH-WD-01 TMV 侧——runbook 补 worktree 起席用法行+执行读数件
+  - d78e0070 docs(lg-035): 3333 单点自举悖论·兜底架构方案件（三层递增：L0 known-good 静态模板/L1 独立恢复脚本/最后已知配置冻结自动快照——全不依赖 3333）+O4 分流底稿五件入卷（FADE 子串污染勘正全过程底账 496→170/113→93/30）；双件随事故回执呈 BOD
+  - 0e6aaae3 docs(workflow): per-seat worktree 一期零风险部署完工报告落树（BOD 立项批）
+  - d6f910e0 docs(fade-010): 首例评分卷 L2 里程碑归档（CEO 11:08 准）——92.5/100 复核过+责任定性随卷（主锅=声明可达未端到端实测/流程锅=未走 STE 门/COO 零责 FSD 无涉）+整改两条随 L3（端到端实测锚+STE 门固化）；第二例=LG-041 全环无人值守
+  - c41bc82b docs(ade-sweep): O4 分流底稿三件入卷（o4-classify-draft/o4-split/o4-split-precise——FADE 子串污染勘正全过程底账：粗扫 496→tokenize 分流 170/113→-w 词边界精确 93/30；保留域分类账随 triage 清查清单）
+  - …另有 6 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
