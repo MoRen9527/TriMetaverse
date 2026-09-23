@@ -157,3 +157,8 @@
   - ff6c0037 docs(lg-046): HOLD 摘除（CEO 21:10 解冻令）——服务域拾取恢复即刻可执行；紧缩态解除按序补跑第一项
   - 67b8ded9 docs(lg-048): CPO 扩签——条 5 部门管理三钉实录核验在卷（承接确认/三钉权界认可）；如实注记：产品线执行岗汇报线在 CTO，条 5=产品域专业管理权非人事管辖转移；会签范围覆盖全 17 条
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 22b674ec 后新增 3 条 commit：
+  - 80e9ade7 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 84db8ac4 docs(inventory): 台账×任务全量盘点表（CEO 21:46 亲令）——现役在办 8+今日已销 8+长挂族 13；六列 schema 一号一行勿抽样
+  - 90375676 docs(lg-049): social 写入口径评估段落树（draft 候 CEO 二批零生效——soul 映射/runtime 分工/迁移性三点初评）
+- registry：v2.1；今日 registry 提交无变化
