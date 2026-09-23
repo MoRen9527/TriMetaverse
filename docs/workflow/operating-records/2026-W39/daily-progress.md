@@ -184,3 +184,10 @@
   - 556ab884 docs(workflow): 催办判据校准——双源取新+通报链白名单机制（总攻件④；白名单四条现役）@m-duty-cos
   - d1824cbe docs(workflow): 催办节律+晨检格式两报备入树（BOD 批令件一③；机制载体 sg crontab 双挂已实测）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-24（周四）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:00 +08：自上次进度提交 4b04e8ee 后新增 2 条 commit：
+  - ba191097 docs(workflow): 催办三源判据收敛读数——零伪报达成（全域匹配修正+白名单+3）@m-duty-cos
+  - 924de1fa docs(workflow): 催办判据三源化——+台账销账态维度（追补单；LG-042/044/043 白名单+3）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
