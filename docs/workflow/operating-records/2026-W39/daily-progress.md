@@ -96,3 +96,27 @@
   - 7277a9c9 docs(workflow): 批2 读数补记3——F5 白皮书旗链轨迹（CHO 定性迁移未完成面，旗在 CPO）@m-duty-cos
   - 74064845 docs(workflow): ADE 批2 补刀 F2/F4/F5（TMV）+A-1 推进令嵌套残留归档补记（TriLC.quarantine-20260921T163934Z，吸收度 diff 全核）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @01:00 +08：自上次进度提交 aa929148 后新增 16 条 commit：
+  - 0a68caee merge: 收编 origin 并行线（ADE 正名措辞三件取 origin 侧）+seats/org 随批（fsd 改 cto 审）
+  - 95f7df82 chore(lg-035): 锚 3 compass 渲染追平（12/13 席 session-body 指针行→.claude/compass/ 发布位；DE 席跳过；fsd 改 cto 审）
+  - ee08026f docs(ade-sweep): P3 TMV 面正名——experiment-runbook/knowledge-injection-spec/tricade playbook ADE→FADE（:360 引文原词保留）+seats.json 派生再生（senior-deployment-engineer 归一，P2 连带在卷件随批）
+  - 81e16925 docs(fade-008): §8干活流程全自动化增补入册(CEO 2026-09-22 00:26 批,七席联审合流稿v2 7/7全合零分歧转正)——九小节照录转位:机制总图/候批信规格(九字段+四行模板零LLM)/三层催办机制表/分层双真源定谳(信箱实时态+台账治理确认态+COS核认门)/human in session六保留点/成本红线R1-R5(零巡检原则)/服务域自动拾取三件/分期/D系整合与边界;归口=CAO载体裁FADE-008正文
+  - 22128c65 merge: 收编 origin 并行线
+  - 794fee5c feat(lg-036): p2 首条实证线三段实跑落位（CEO 23:56 批两精化；fsd 改 cto 审）
+  - 6b31971e docs(inbox-wiki): CEO 批准落卷——管道三端+两域共需纪律经验（两条精化随批）
+  - 2c693cc6 docs(journal): 共学周记 ADE 规范头部消歧注——ADE=立册时协议名（08-18），08-28 起更名 FADE，沿用系同名同源合法沿用（P4 甄别线 CHO 授权 RDT 径办）
+  - c0be5071 docs(ade-sweep): sg 仓面清查任务简报落树（夜航段①交接件——扫描口径/甄别规则/读数格式，COO 排窗令→值席留痕制执行）
+  - 8d4df880 docs(inbox-wiki-first-line): CTO counter-sign——技术线三段全量承继/两冲突裁记一致/命名节两席一致/验收锚六条合并确认（双签齐呈 CEO 候批，与宿主资产命名节一并；批后迁移批先行窗→首条线实跑）
+  - 9b2ec6aa docs(inbox-wiki-first-line): 联审评估合流件（CPO 拼稿候 CTO counter-sign）——管道三段闭环/两域分步（服务域首线拉取式）/读取时机冲突裁混合案（CPO §四自修：token 税论证成立）/命名追加独立决策节（正名应做+渐进 junction+迁移先行两席一致）
+  - bfb429b7 docs(parallel-assessment): 多席并行代价评估·CTO 技术面——机制分析（index 单文件共享态无事务隔离：staged 混合/lock 撞锁/半步态暴露三竞态）+48h 实证（归属混 3 例各 5 分钟/数据损坏 0/潜在高危 1 未爆）+三招防御评估（防己方失误够/防他席混入不够，per-seat worktree 结构性候选）+时延量化（今晚并行省 68 分钟 vs 竞态实耗 40 分钟——期望近似打平，尾部风险并行大一级）+裁混合制（独立域并行保留/同仓 worktree 立项或串行/高危独占窗/三招保留）
+  - 7bae838a docs(parallel-cost-eval): CPO 评估——并行竞态四项体验代价（危害不对称/归属模糊/stale 浪费/信任复利税，全实证）+串行时延分析（文档件近零/独立域真实代价）+建议混合制：产出并行+同仓提交串行化+结构变更协调+stale 自检，竞态计数周报为生效判据
+  - 3a503b0a docs(fade-010): CEO 定名——COS 链派工流程正式立项 FADE-010
+  - 13ced808 docs(ade-sweep): 清查清单审定结果附则+P1 完工读数（CTO 四裁+ADE_PROTOCOL 契约值红线+检测器口径注记）
+  - …另有 1 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 bf27588f 后新增 1 条 commit：
+  - 7899453f docs(workflow): ADE 清查树收编——CTO batch2 验收单+CHO inventory-draft 实勘清单入版控（权属各归其席；root 落笔件照收）@m-duty-cos 代收卷
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:10 +08：自上次进度提交 af897704 后新增 1 条 commit：
+  - 801ce187 docs(workflow): ADE 清查 sg 轮终记——BOD 批令认可闭环+四项转本地车道 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
