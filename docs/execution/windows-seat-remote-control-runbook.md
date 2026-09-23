@@ -40,6 +40,8 @@ claude --resume <名> -n <名> --agent <PascalCase正名> --verbose --dangerousl
 
 **实操捷径**：把上述清理+启动逻辑存为 `launch-<席>.ps1`（样板：`.fade/launch-m-cos.ps1`，含清变量/设持久化/切工作目录/正名拉起四步），代起或复活只敲 `powershell -File <脚本>` 一行——避免长命令跨窗粘贴被啃（R 被吃/| 变 I 实证，2026-09-17）。
 
+**worktree 起席**（2026-09-22 起）：参数化启动器 `TriCompany/scripts/ops/launch/launch-seat.windows.ps1` 支持可选 `-WorkingDir`（默认 `D:\Code\ai\TriMetaverse` 主仓，向后兼容）——例：`pwsh -File D:\Code\ai\TriCompany\scripts\ops\launch\launch-seat.windows.ps1 -Name <名> -Agent <PascalCase正名> -Manual <kebab手册名> -WorkingDir D:\Code\ai\TriMetaverse-worktrees\board`，工作目录与手册路径跟随同树（起席读该树 compass 发布拷贝，防跨树版本错位）。
+
 ## 四、单次调用要点
 
 - PowerShell 工具每调用=新会话：`Add-Type`（P/Invoke 类）与使用**必须在同一调用内**（跨调用不存活）。

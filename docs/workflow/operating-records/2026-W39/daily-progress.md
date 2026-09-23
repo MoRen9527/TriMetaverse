@@ -96,3 +96,69 @@
   - 7277a9c9 docs(workflow): 批2 读数补记3——F5 白皮书旗链轨迹（CHO 定性迁移未完成面，旗在 CPO）@m-duty-cos
   - 74064845 docs(workflow): ADE 批2 补刀 F2/F4/F5（TMV）+A-1 推进令嵌套残留归档补记（TriLC.quarantine-20260921T163934Z，吸收度 diff 全核）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @01:00 +08：自上次进度提交 aa929148 后新增 16 条 commit：
+  - 0a68caee merge: 收编 origin 并行线（ADE 正名措辞三件取 origin 侧）+seats/org 随批（fsd 改 cto 审）
+  - 95f7df82 chore(lg-035): 锚 3 compass 渲染追平（12/13 席 session-body 指针行→.claude/compass/ 发布位；DE 席跳过；fsd 改 cto 审）
+  - ee08026f docs(ade-sweep): P3 TMV 面正名——experiment-runbook/knowledge-injection-spec/tricade playbook ADE→FADE（:360 引文原词保留）+seats.json 派生再生（senior-deployment-engineer 归一，P2 连带在卷件随批）
+  - 81e16925 docs(fade-008): §8干活流程全自动化增补入册(CEO 2026-09-22 00:26 批,七席联审合流稿v2 7/7全合零分歧转正)——九小节照录转位:机制总图/候批信规格(九字段+四行模板零LLM)/三层催办机制表/分层双真源定谳(信箱实时态+台账治理确认态+COS核认门)/human in session六保留点/成本红线R1-R5(零巡检原则)/服务域自动拾取三件/分期/D系整合与边界;归口=CAO载体裁FADE-008正文
+  - 22128c65 merge: 收编 origin 并行线
+  - 794fee5c feat(lg-036): p2 首条实证线三段实跑落位（CEO 23:56 批两精化；fsd 改 cto 审）
+  - 6b31971e docs(inbox-wiki): CEO 批准落卷——管道三端+两域共需纪律经验（两条精化随批）
+  - 2c693cc6 docs(journal): 共学周记 ADE 规范头部消歧注——ADE=立册时协议名（08-18），08-28 起更名 FADE，沿用系同名同源合法沿用（P4 甄别线 CHO 授权 RDT 径办）
+  - c0be5071 docs(ade-sweep): sg 仓面清查任务简报落树（夜航段①交接件——扫描口径/甄别规则/读数格式，COO 排窗令→值席留痕制执行）
+  - 8d4df880 docs(inbox-wiki-first-line): CTO counter-sign——技术线三段全量承继/两冲突裁记一致/命名节两席一致/验收锚六条合并确认（双签齐呈 CEO 候批，与宿主资产命名节一并；批后迁移批先行窗→首条线实跑）
+  - 9b2ec6aa docs(inbox-wiki-first-line): 联审评估合流件（CPO 拼稿候 CTO counter-sign）——管道三段闭环/两域分步（服务域首线拉取式）/读取时机冲突裁混合案（CPO §四自修：token 税论证成立）/命名追加独立决策节（正名应做+渐进 junction+迁移先行两席一致）
+  - bfb429b7 docs(parallel-assessment): 多席并行代价评估·CTO 技术面——机制分析（index 单文件共享态无事务隔离：staged 混合/lock 撞锁/半步态暴露三竞态）+48h 实证（归属混 3 例各 5 分钟/数据损坏 0/潜在高危 1 未爆）+三招防御评估（防己方失误够/防他席混入不够，per-seat worktree 结构性候选）+时延量化（今晚并行省 68 分钟 vs 竞态实耗 40 分钟——期望近似打平，尾部风险并行大一级）+裁混合制（独立域并行保留/同仓 worktree 立项或串行/高危独占窗/三招保留）
+  - 7bae838a docs(parallel-cost-eval): CPO 评估——并行竞态四项体验代价（危害不对称/归属模糊/stale 浪费/信任复利税，全实证）+串行时延分析（文档件近零/独立域真实代价）+建议混合制：产出并行+同仓提交串行化+结构变更协调+stale 自检，竞态计数周报为生效判据
+  - 3a503b0a docs(fade-010): CEO 定名——COS 链派工流程正式立项 FADE-010
+  - 13ced808 docs(ade-sweep): 清查清单审定结果附则+P1 完工读数（CTO 四裁+ADE_PROTOCOL 契约值红线+检测器口径注记）
+  - …另有 1 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 bf27588f 后新增 1 条 commit：
+  - 7899453f docs(workflow): ADE 清查树收编——CTO batch2 验收单+CHO inventory-draft 实勘清单入版控（权属各归其席；root 落笔件照收）@m-duty-cos 代收卷
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:10 +08：自上次进度提交 af897704 后新增 1 条 commit：
+  - 801ce187 docs(workflow): ADE 清查 sg 轮终记——BOD 批令认可闭环+四项转本地车道 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+## 2026-09-23（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @10:00 +08：自上次进度提交 a06b3e7b 后新增 21 条 commit：
+  - 6e472abc Merge remote-tracking branch 'sg-server/dev' into dev
+  - ea690bf2 docs(lg-046): 宿主资产目录正名迁移批任务书铸挂（CEO 09:49 三件套）——TriCompany-host-assets 命名裁决+窗口锁 09-23 20:44 后+锚基线五项（BOD 实测 502/659 行/历史冻结/junction 别名制/daemon 重启风险位）+五验收锚；face=server-executable 服务域拾取
+  - 96ecd73f docs(worktree-provision): 排程定稿口径落（BOD 对表确认转达：一期=已完成态标注[今晨 SDE 执行+19:16 活体验收]/二期试点切换锁 09-23 20:44 后额度重置启/wt 推送节律即起不受锁限）
+  - f46bfeff docs(worktree-provision): syncMode 翻转 draft→approved（CEO 22:48 三笔一次全批）+窗口锁入卷（一期部署 09-23 20:44 后；一期实况以 BOD 对表确认为准；二期照设计候验证；wt 推送节律即起照行不受锁限）
+  - d238be64 docs(worktree-provision): 知识区归属与映射小节并入（CEO 22:41 问·BOD 转办）——workbench 知识区不随 worktree 迁移不物理关联定性+13 行映射表（wt/<seat>↔employees/<kebab> 一一对应）+发现性说明（../TriMetaverse-worktrees/ git worktree list 可查）+三期随车件：workbench README 互指行（CEO 问缝封堵）
+  - b2ca24cb docs(worktree-provision): 推送节律四条并入归账纪律节（CEO 22:34 批定稿 COS 转办——wt/* 随日收口 push/晨巡检兜底补推挂 LG-011/git branch -d+worktree remove 注册流程禁裸删/多树合流照 T-c 对表先例；背景=wt/board 14 支无 upstream 单盘敞口实锤封缝）
+  - e18377ed docs(ledger): 台账现势快照 v2（BOD 盘点令同步刷新）——09-22 四单销账增量+LG-041/045 交集注记+候决候办全量
+  - 9988ab17 docs(workflow): TASK-WATCHDOG-JUDGE-FIX-01 执行读数落树——两阶段全锚+红线单全程留证
+  - d72c4182 docs(workflow): TASK-SYNC-CONSOLIDATE-01 执行读数落树——五锚全过+D-30 候选文案
+  - 7ea92ee8 docs(workflow): TASK-VBS-PROVENANCE-01 执行读数落树——6 vbs 定性全量+sync 复跑零警告
+  - e5d4f199 docs(runbook): TASK-LAUNCH-WD-01 TMV 侧——runbook 补 worktree 起席用法行+执行读数件
+  - d78e0070 docs(lg-035): 3333 单点自举悖论·兜底架构方案件（三层递增：L0 known-good 静态模板/L1 独立恢复脚本/最后已知配置冻结自动快照——全不依赖 3333）+O4 分流底稿五件入卷（FADE 子串污染勘正全过程底账 496→170/113→93/30）；双件随事故回执呈 BOD
+  - 0e6aaae3 docs(workflow): per-seat worktree 一期零风险部署完工报告落树（BOD 立项批）
+  - d6f910e0 docs(fade-010): 首例评分卷 L2 里程碑归档（CEO 11:08 准）——92.5/100 复核过+责任定性随卷（主锅=声明可达未端到端实测/流程锅=未走 STE 门/COO 零责 FSD 无涉）+整改两条随 L3（端到端实测锚+STE 门固化）；第二例=LG-041 全环无人值守
+  - c41bc82b docs(ade-sweep): O4 分流底稿三件入卷（o4-classify-draft/o4-split/o4-split-precise——FADE 子串污染勘正全过程底账：粗扫 496→tokenize 分流 170/113→-w 词边界精确 93/30；保留域分类账随 triage 清查清单）
+  - …另有 6 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 25702697 后新增 9 条 commit：
+  - e7b5f7b6 fix(lg-048): 条 5 部门管理正文补嵌（CPO 抽验抓出头体不一致——本席脚本锚空转无断言自纠；grep 三钉全文在卷自证）+CPO 会签范围精确声明录卷（§七覆盖新 1-4+原 12 条，条 5 补嵌后扩签一行）
+  - 9f7e68c2 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7f6c6d64 docs(lg-046): 迁移批任务书 HOLD 标记（CEO 13:22 紧缩令）——取消自动拾取，20:44 窗锁解除作废改候额度恢复新窗口令；服务域拾取面读 HOLD 跳过
+  - 57422e99 docs(lg-048): 部门管理条 5 并入（BOD 追加令 13:19 三钉：部门级备案/岗位设立走 CHO/奖惩走绩效体系）——原 12 条顺移 6-17，V2 12→17 条；CPO 自审预供快签基线随稿
+  - e2c208d2 docs(lg-048): CPO 二次升级 V2 稿落树（draft 候 CEO 终批态）——四缺口对照+新置条 1-4（度量体系三档递进/信号雷达 CMO+CSO 双口 source-role 去重协议+货币化 CFO 双向接口/平台生态评估项）+原 12 条零改动顺移 5-16+description/使命同步+边界条目化+contract 增补草案；三面界面意见（CFO 三条/CMO 四点/CSO 四点）+CPO 自审预供（权属 now/运行 later 分层）全并入（task-charter-cpo-duty-clevel-upgrade，CHO 主笔连庄）
+  - 51dc6ed7 docs(lg-047): BS 意见并入——§三第四句并列追加「BS 边界裁定/白皮书一致性核查前置」（spawn 征询回：总判不相抵可采）+§七 BS 状态更新；三面意见（CPO/CTO/BS）全并齐——V2 齐备转 CEO 终批
+  - 31dee2aa docs(lg-047): 双签齐——CTO 自审签认在卷（1069c9e7 §八）+元信息头同步；V2 候 CEO 终批态（承接条件随卷：批后配套排程+首月趋势判断/度量基线兑现锚）
+  - 1069c9e7 docs(lg-047): CTO 自审会签签认——新 1-7 逐条承接判定（1/2/3/4/6 高承接[既有隐性行为显性化]/5 承接[数据源现成]/7 承接但 CHO 协同机制随批立）+边界四句/contract 增补无异议+承接条件（制度化产出节奏配套排程防条款空转，首月趋势判断+度量基线为兑现锚）
+  - d161d7a9 docs(lg-047): CTO C-level 升级 V2 稿+对标对照表落树（draft 候 CEO 终批态零自行生效）——七域对照缺口显性化（5 缺口 2 部分）+核心职责 7→14 条（新 1-7 高维层 BOD 骨架 1:1，原 7 条零改动顺移）+description/使命双层升级+BS/CPO 边界精化（追加式边界，CPO 意见①②③三处吸收标注）+contract 增补草案；CTO 自审会签候/BS 候征 spawn 式（task-charter-cto-duty-clevel-upgrade，CHO 主笔）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 caf945fb 后新增 3 条 commit：
+  - 28f62fb2 Merge remote-tracking branch 'sg-server/dev' into dev
+  - ff6c0037 docs(lg-046): HOLD 摘除（CEO 21:10 解冻令）——服务域拾取恢复即刻可执行；紧缩态解除按序补跑第一项
+  - 67b8ded9 docs(lg-048): CPO 扩签——条 5 部门管理三钉实录核验在卷（承接确认/三钉权界认可）；如实注记：产品线执行岗汇报线在 CTO，条 5=产品域专业管理权非人事管辖转移；会签范围覆盖全 17 条
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 22b674ec 后新增 3 条 commit：
+  - 80e9ade7 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 84db8ac4 docs(inventory): 台账×任务全量盘点表（CEO 21:46 亲令）——现役在办 8+今日已销 8+长挂族 13；六列 schema 一号一行勿抽样
+  - 90375676 docs(lg-049): social 写入口径评估段落树（draft 候 CEO 二批零生效——soul 映射/runtime 分工/迁移性三点初评）
+- registry：v2.1；今日 registry 提交无变化
