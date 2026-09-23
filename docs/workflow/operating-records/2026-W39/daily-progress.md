@@ -167,3 +167,13 @@
   - 824a60b4 docs(inventory): 盘点表勘误——LG-037 更正为已完成（joint-plan 双签+CEO 09-21 13:26 批三源实锚；初版误列在办系现势认知滞后，COO 枢纽首单勘误更正）
   - d953537d docs(fade-008): §8.10树协议V2对表注记增补(条③22:24修正版:COS唯一催办枢纽两向,主条D-27v4)+七列表汇报标准对表
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 ff8019db 后新增 8 条 commit：
+  - e48322c4 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 5fcf74f9 docs(lg-050): 三切 COS 位切前留痕——三读数+wt/ceo-chief-of-staff ff 追平 7adfc0b4+重启候外部代起（D-32 弃转录重生建议）
+  - 7adfc0b4 docs(lg-049): social 写入口径评估段生效翻正——draft→正身（CEO 22:45 批三点初评生效）+挂账两笔录卷（迁移细则/人格本体专项独立立项）；LG-049 全案收口（CHO 面+补刀面+评估段全讫）
+  - 341b849c docs(lg005-016): CTO counter-sign——矩阵逐格一致（R-HY 实勘）/双销不丢账+LG-022 不吞条款全录/联席补强两条采认（双签齐呈 COS 收口双销）
+  - 44eebbc2 docs(lg005-016-dual-close): 联席定案件（CPO 拼稿候 CTO counter-sign）——定稿七项联席全认可/实施现状矩阵（件 1 已实施双证·件 2/3/5 未实施+safe.directory 第一动作+件 5 同窗强制）/LG-005 两项承接处置/双销不丢账条款+LG-022 不吞
+  - e5edb1ff docs(lg005-016): CTO 定案意见段——四接口实勘定案（R-HY SSH 现勘：件 2 未实施+safe.directory 命中态警告/件 3 手抄持续/件 5 未接线/LG-022 独立追踪不吞）+LG-005 两项承接（可移植=件 1 完全承接/R 面=件 2-5 单轨转移）+技术域补充两件（safe.directory 前置警告引 D-10/platforms 过滤提醒照 §2.2）
+  - 5b9db66a docs(lg005-016-dual-close): CPO 定案意见段——两笔精度勘误（素材路径误引/定性升两级：实为 08-30 双席定稿）+定稿七项逐条认可（件 1 已实施实证双证）+LG-005 两项承接处置（销账挂接+单轨追踪条款）+CTO 接口
+  - 3f76c8a8 docs(lg-034): BOD职责终版收敛修正同步——§8.10「验收+裁决+终批」改「只有验收和呈批」(CEO 22:30 终版)
+- registry：v2.1；今日 registry 提交无变化
