@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（二期切换逐席留痕正身；三席试点 FSD/BOD/COS 随切随补）
 - syncMode: append-only（逐笔追加，不改旧笔）
-- lastSyncedAt: 2026-09-23T22:44:38+0800
+- lastSyncedAt: 2026-09-23T22:50:11+0800
 - 上位: worktree-design.md（二期试点窗）+ COS 切换令（2026-09-22T03:50+0800 达 FD）
 
 ---
@@ -64,3 +64,17 @@
 ——cos（切前段）
 
 > 〔rebase 并集解注 2026-09-24 23:3x，FSD〕本件于本席分支 replay 时与 dev 归账版冲突（dev 版仅载 COS 切前段片段、缺文件头与前两席笔）——按 append-only 并集解：本席全文为基、COS 切前段按序追加，两侧原文零改动。
+
+---
+
+## FSD（m-fsd）步骤⑥ 漂浮件清除笔——现查 2026-09-23T22:50:11+0800
+
+**授权**：COO 首切销账+处置裁示（2026-09-23T22:49+0800 hook 令）：准 BOD 位切换前清除主树 untracked 漂浮件（留痕件超集已证）；留痕随读数随本笔。
+
+**清除前双证（全过）**：
+- md5 复核：`ce4e05f6da4d81731573436171352247`——与本席 22:42 读时一致，零并行增笔
+- diff 漂浮件 vs 留痕件（`a7a4c9ee`）：唯一差异=头注 `lastSyncedAt` 一行（文档元信息头惯例随笔更新）+ 本席步骤③④⑤补笔段（纯追加）——步骤①②笔区域逐字零改动实证
+
+**清除操作**：`rm` 主树 `docs/workflow/operating-records/2026-W39/trees/parallel-mode-assessment/phase2-switch-log.md`（2026-09-23T22:50:11+0800）——清后该目录仅余三 tracked 件（cto-tech-assessment / worktree-design / worktree-phase1-deploy-report），主树对此路径 untracked 归零；主树其余 untracked 三件（W38/W39 synthesis×2 + task-charter-20260921，他线产物）未触。
+
+**效力**：此后 BOD 位 ff/merge dev 无 untracked 挡；留痕正身唯一副本=本件（`wt/full-stack-developer` 分支，`a7a4c9ee`+本笔），随日收口批推线节律。
