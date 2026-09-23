@@ -162,3 +162,8 @@
   - 84db8ac4 docs(inventory): 台账×任务全量盘点表（CEO 21:46 亲令）——现役在办 8+今日已销 8+长挂族 13；六列 schema 一号一行勿抽样
   - 90375676 docs(lg-049): social 写入口径评估段落树（draft 候 CEO 二批零生效——soul 映射/runtime 分工/迁移性三点初评）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:30 +08：自上次进度提交 bb26064c 后新增 3 条 commit：
+  - 938fbefc Merge remote-tracking branch 'sg-server/dev' into dev
+  - 824a60b4 docs(inventory): 盘点表勘误——LG-037 更正为已完成（joint-plan 双签+CEO 09-21 13:26 批三源实锚；初版误列在办系现势认知滞后，COO 枢纽首单勘误更正）
+  - d953537d docs(fade-008): §8.10树协议V2对表注记增补(条③22:24修正版:COS唯一催办枢纽两向,主条D-27v4)+七列表汇报标准对表
+- registry：v2.1；今日 registry 提交无变化
