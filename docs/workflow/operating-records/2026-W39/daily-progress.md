@@ -152,3 +152,8 @@
   - 1069c9e7 docs(lg-047): CTO 自审会签签认——新 1-7 逐条承接判定（1/2/3/4/6 高承接[既有隐性行为显性化]/5 承接[数据源现成]/7 承接但 CHO 协同机制随批立）+边界四句/contract 增补无异议+承接条件（制度化产出节奏配套排程防条款空转，首月趋势判断+度量基线为兑现锚）
   - d161d7a9 docs(lg-047): CTO C-level 升级 V2 稿+对标对照表落树（draft 候 CEO 终批态零自行生效）——七域对照缺口显性化（5 缺口 2 部分）+核心职责 7→14 条（新 1-7 高维层 BOD 骨架 1:1，原 7 条零改动顺移）+description/使命双层升级+BS/CPO 边界精化（追加式边界，CPO 意见①②③三处吸收标注）+contract 增补草案；CTO 自审会签候/BS 候征 spawn 式（task-charter-cto-duty-clevel-upgrade，CHO 主笔）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 caf945fb 后新增 3 条 commit：
+  - 28f62fb2 Merge remote-tracking branch 'sg-server/dev' into dev
+  - ff6c0037 docs(lg-046): HOLD 摘除（CEO 21:10 解冻令）——服务域拾取恢复即刻可执行；紧缩态解除按序补跑第一项
+  - 67b8ded9 docs(lg-048): CPO 扩签——条 5 部门管理三钉实录核验在卷（承接确认/三钉权界认可）；如实注记：产品线执行岗汇报线在 CTO，条 5=产品域专业管理权非人事管辖转移；会签范围覆盖全 17 条
+- registry：v2.1；今日 registry 提交无变化
