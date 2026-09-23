@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（一期执行读数+归因正身；随任务书 E 节节点流转）
 - syncMode: append-only（阶段读数追加）
-- lastSyncedAt: 2026-09-24T03:52+0800
+- lastSyncedAt: 2026-09-24T04:05+0800
 - 执行席: FSD（m-fsd，CTO 域 lead 下）；上游=COS 派工令 03:12+CTO 四裁 03:2x
 - 任务书: `trees/hermes-gov-p2-impl/task-charter.md`（本目录）
 
@@ -49,3 +49,12 @@ A/B 方法：`git worktree` 临时检出前变更基座 e7f8388→独立建 dist
 - 任务书 9bd3ead6（A/B/C/D 节）+ CTO 四裁（2026-09-24 03:2x，对话留痕）
 - TriCode e7f8388…50bcbad（git 实盘）；TriRLC 384d40a（消费方现势）
 - fade-010 两条整改（端到端实测锚=§二真文件链；STE 门=§四.4 递验中）
+
+---
+
+## 六、STE 门结果（2026-09-24 03:5x-04:1x+0800，m-ste 独立复验 50bcbad 树）
+
+- **总判定：PASS**——白盒读图 779 行（三正身 455+测试 324）；独立双跑 14/14+check/build=0 复现；覆盖充分/确定性扎实/语义符合诚实。
+- **minor gap 三条**（均防御性低险，候二期随手补，不阻塞）：g1 `{source_kind}` 占位展开 executor 层未断言（rules 层接受已证）；g2 pageTitle >80「（无题）」分支未测；g3 写盘异常 error outcome 未注入故障（try/catch 在位）。
+- **语义依赖注记（随二期 digest_log 排期显式带上，防语义悬空）**：§7②「reject 规则生效（丢弃有日志）」之日志归属 digest_log 件（非一期）——一期 reject=有 outcome 无 reject 日志持久化。
+- reject 阀门首实证顺延定性：真实运营案例缺位而非实现缺口；纯确定性阀门单元穷尽=等价覆盖。

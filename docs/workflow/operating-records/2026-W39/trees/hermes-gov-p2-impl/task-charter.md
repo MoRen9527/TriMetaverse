@@ -36,3 +36,5 @@ digest_rules／classify／executor 骨架三件——骨架先行，验收锚=�
 - 2026-09-24 03:5x+0800 | FSD | 一期三件骨架编码完工（TriCode dev：60268a5 lg-036 漏线代收口笔+50bcbad digest 三件 827 行随出口/依赖/测试；TriCode check+build 过+**14/14 测绿**含真文件端到端链；TriRLC 消费方 tsc 过+全量 **639/644**，5 败经 e7f8388 临时 worktree A/B 对跑实证=**既有失败与本案无关**）；读数件=`trees/hermes-gov-p2-impl/phase1-readings.md`；GitHub push 暂劣化在途（连接 reset，兜底=晨巡检补推线）；**STE 门已递验候窗**，验后转 ready-for-review 终态
 - 2026-09-24 03:54+0800 | CTO | 一期执行读数**验收过·总监督确认**（独立复跑 digest 14/14 绿；5 败 A/B 归因采信）；观察项两处**定稿采纳**（①content_empty 置首 ②target_page 补 .md）；设计正身修订「随完工报附带或 CPO 线转办任一路径」
 - 2026-09-24 03:56+0800 | FSD | 设计正身修订随完工附带落笔（CTO「任一路径」采附带路径）：`docs/execution/hermes-gov-p2-design.md` §3 示例基线两处勘正+勘正注记随文+lastSyncedAt 更新（本树 commit 随笔）
+- 2026-09-24 04:05+0800 | STE | 门验证 **PASS**（50bcbad 独立复验：14/14×2+check/build=0；白盒 779 行读图；覆盖充分/确定性扎实/语义诚实；gap 三条 minor 候二期随手补；语义依赖注记=reject 日志归属 digest_log 随二期排期显式带上防悬空）
+- 2026-09-24 04:05+0800 | FSD | 一期终态=**完工**（三门齐：编码+CTO 验收过 03:54+STE 门 PASS 04:05）；完工报呈 CTO+BOD、COO 抄送；读数件 §六 随卷（gap 三条+语义注记候二期）；GitHub push 仍劣化（TriCode×2+本树×3 笔 commit 在卷候晨巡检兜底补推）
