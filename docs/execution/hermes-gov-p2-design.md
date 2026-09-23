@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件
 - syncMode: static（设计正身；CEO 2026-09-14 18:0x 终批「批，转设计正身」）
-- lastSyncedAt: 2026-09-14T18:2x+0800
+- lastSyncedAt: 2026-09-24T03:56+0800（§3 示例基线两处勘正：content_empty 置首+target_page 补 .md——CTO 2026-09-24 03:54 定稿，FSD 随 LG-035 一期完工附带修订；终批形态出处不变）
 - 技术主笔: CTO（小狄）；会稿=CPO（小乔）；统筹验域=COS
 - 底本: 合流终版 `2026-W38/hermes-gov-p2-summary.md`（三席件全齐：COS 汇总+CPO 两件+CTO 修正版 15bd6b13）+上游对比件 e9ec74dd（@5eb99eb）
 - 上位令: CEO 13:31/13:5x 立项令+16:2x 正名令（知识体系→治理体系）+~17:0x schema 勘正+18:0x 终批
@@ -41,19 +41,19 @@
 
 **执行协议**：触发=会话收口/事件（不在注入热路径）→执行者=daemon 侧消化器（TriRLC knowledge-injector 扩展）→深度分级（阈值候 CFO 体积实测）→幂等=content_hash 延伸（源变页标 stale 重消化）→失败姿态=inbox 保留+错误入审计绝不静默丢。
 
-**消化规则声明式形态**（示例基线）：
+**消化规则声明式形态**（示例基线；〔勘正 2026-09-24，CTO 03:54 定稿、FSD 随一期完工附带修订〕声明序=首匹配优先级：content_empty 守门规则**置首**防被 source_kind 规则遮蔽；target_page 带 `.md` 扩展名）：
 ```yaml
 rules:
+  - match: { content_empty: true }
+    action: reject
+    reason: "空内容"
   - match: { source_kind: "daily-note" }
     action: digest
-    target_page: "工作日志/{date}"
+    target_page: "工作日志/{date}.md"
     depth: shallow
   - match: { source_kind: "decision-record" }
     action: escalate
     escalate_to: "本席+相关席"
-  - match: { content_empty: true }
-    action: reject
-    reason: "空内容"
 ```
 
 ## §4 知识分发三层（token 预算纪律正解）

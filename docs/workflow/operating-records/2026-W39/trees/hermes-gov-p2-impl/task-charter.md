@@ -34,3 +34,5 @@ digest_rules／classify／executor 骨架三件——骨架先行，验收锚=�
 - 2026-09-24 03:10+0800 | COS | 任务书落树（批准后悬空 10 天补派，BOD 三连令①），派工单随发 COO 转 CTO 域+FSD
 - 2026-09-24 03:2x+0800 | CTO | 四项裁示全开（①index.ts 出口=a 案两笔分立代收口 ②零命中默认 escalate 采纳 ③yaml@^2.9.0 采纳 ④deep-pending 队列形态确认），执行窗开
 - 2026-09-24 03:5x+0800 | FSD | 一期三件骨架编码完工（TriCode dev：60268a5 lg-036 漏线代收口笔+50bcbad digest 三件 827 行随出口/依赖/测试；TriCode check+build 过+**14/14 测绿**含真文件端到端链；TriRLC 消费方 tsc 过+全量 **639/644**，5 败经 e7f8388 临时 worktree A/B 对跑实证=**既有失败与本案无关**）；读数件=`trees/hermes-gov-p2-impl/phase1-readings.md`；GitHub push 暂劣化在途（连接 reset，兜底=晨巡检补推线）；**STE 门已递验候窗**，验后转 ready-for-review 终态
+- 2026-09-24 03:54+0800 | CTO | 一期执行读数**验收过·总监督确认**（独立复跑 digest 14/14 绿；5 败 A/B 归因采信）；观察项两处**定稿采纳**（①content_empty 置首 ②target_page 补 .md）；设计正身修订「随完工报附带或 CPO 线转办任一路径」
+- 2026-09-24 03:56+0800 | FSD | 设计正身修订随完工附带落笔（CTO「任一路径」采附带路径）：`docs/execution/hermes-gov-p2-design.md` §3 示例基线两处勘正+勘正注记随文+lastSyncedAt 更新（本树 commit 随笔）
