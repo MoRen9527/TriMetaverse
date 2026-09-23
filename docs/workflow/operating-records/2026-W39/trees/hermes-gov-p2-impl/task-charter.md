@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（W39 树·LG-035 实施任务书正身；批准后悬空 10 天补派——BOD 三连令 CEO 2026-09-24 03:09 批①）
 - syncMode: 规格面冻结；状态面随节点 append
-- lastSyncedAt: 2026-09-24T03:10+0800
+- lastSyncedAt: 2026-09-24T03:52+0800
 - 设计锚: `docs/execution/hermes-gov-p2-design.md`（本机主树实盘 7734B；CEO 2026-09-14 18:0x 终批「批，转设计正身」）
 - 编排链: cos→coo→CTO 域+FSD（V2 链）
 - **一期截点: 2026-09-26 12:00+0800**；全量按设计分期滚动（分期由 CTO 按设计定稿）
@@ -29,4 +29,8 @@ digest_rules／classify／executor 骨架三件——骨架先行，验收锚=�
 
 ## E. 节点留痕（执行席 append）
 
+## E. 节点留痕（执行席 append）
+
 - 2026-09-24 03:10+0800 | COS | 任务书落树（批准后悬空 10 天补派，BOD 三连令①），派工单随发 COO 转 CTO 域+FSD
+- 2026-09-24 03:2x+0800 | CTO | 四项裁示全开（①index.ts 出口=a 案两笔分立代收口 ②零命中默认 escalate 采纳 ③yaml@^2.9.0 采纳 ④deep-pending 队列形态确认），执行窗开
+- 2026-09-24 03:5x+0800 | FSD | 一期三件骨架编码完工（TriCode dev：60268a5 lg-036 漏线代收口笔+50bcbad digest 三件 827 行随出口/依赖/测试；TriCode check+build 过+**14/14 测绿**含真文件端到端链；TriRLC 消费方 tsc 过+全量 **639/644**，5 败经 e7f8388 临时 worktree A/B 对跑实证=**既有失败与本案无关**）；读数件=`trees/hermes-gov-p2-impl/phase1-readings.md`；GitHub push 暂劣化在途（连接 reset，兜底=晨巡检补推线）；**STE 门已递验候窗**，验后转 ready-for-review 终态
