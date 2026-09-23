@@ -141,3 +141,14 @@
   - c41bc82b docs(ade-sweep): O4 分流底稿三件入卷（o4-classify-draft/o4-split/o4-split-precise——FADE 子串污染勘正全过程底账：粗扫 496→tokenize 分流 170/113→-w 词边界精确 93/30；保留域分类账随 triage 清查清单）
   - …另有 6 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 25702697 后新增 9 条 commit：
+  - e7b5f7b6 fix(lg-048): 条 5 部门管理正文补嵌（CPO 抽验抓出头体不一致——本席脚本锚空转无断言自纠；grep 三钉全文在卷自证）+CPO 会签范围精确声明录卷（§七覆盖新 1-4+原 12 条，条 5 补嵌后扩签一行）
+  - 9f7e68c2 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7f6c6d64 docs(lg-046): 迁移批任务书 HOLD 标记（CEO 13:22 紧缩令）——取消自动拾取，20:44 窗锁解除作废改候额度恢复新窗口令；服务域拾取面读 HOLD 跳过
+  - 57422e99 docs(lg-048): 部门管理条 5 并入（BOD 追加令 13:19 三钉：部门级备案/岗位设立走 CHO/奖惩走绩效体系）——原 12 条顺移 6-17，V2 12→17 条；CPO 自审预供快签基线随稿
+  - e2c208d2 docs(lg-048): CPO 二次升级 V2 稿落树（draft 候 CEO 终批态）——四缺口对照+新置条 1-4（度量体系三档递进/信号雷达 CMO+CSO 双口 source-role 去重协议+货币化 CFO 双向接口/平台生态评估项）+原 12 条零改动顺移 5-16+description/使命同步+边界条目化+contract 增补草案；三面界面意见（CFO 三条/CMO 四点/CSO 四点）+CPO 自审预供（权属 now/运行 later 分层）全并入（task-charter-cpo-duty-clevel-upgrade，CHO 主笔连庄）
+  - 51dc6ed7 docs(lg-047): BS 意见并入——§三第四句并列追加「BS 边界裁定/白皮书一致性核查前置」（spawn 征询回：总判不相抵可采）+§七 BS 状态更新；三面意见（CPO/CTO/BS）全并齐——V2 齐备转 CEO 终批
+  - 31dee2aa docs(lg-047): 双签齐——CTO 自审签认在卷（1069c9e7 §八）+元信息头同步；V2 候 CEO 终批态（承接条件随卷：批后配套排程+首月趋势判断/度量基线兑现锚）
+  - 1069c9e7 docs(lg-047): CTO 自审会签签认——新 1-7 逐条承接判定（1/2/3/4/6 高承接[既有隐性行为显性化]/5 承接[数据源现成]/7 承接但 CHO 协同机制随批立）+边界四句/contract 增补无异议+承接条件（制度化产出节奏配套排程防条款空转，首月趋势判断+度量基线为兑现锚）
+  - d161d7a9 docs(lg-047): CTO C-level 升级 V2 稿+对标对照表落树（draft 候 CEO 终批态零自行生效）——七域对照缺口显性化（5 缺口 2 部分）+核心职责 7→14 条（新 1-7 高维层 BOD 骨架 1:1，原 7 条零改动顺移）+description/使命双层升级+BS/CPO 边界精化（追加式边界，CPO 意见①②③三处吸收标注）+contract 增补草案；CTO 自审会签候/BS 候征 spawn 式（task-charter-cto-duty-clevel-upgrade，CHO 主笔）
+- registry：v2.1；今日 registry 提交无变化
