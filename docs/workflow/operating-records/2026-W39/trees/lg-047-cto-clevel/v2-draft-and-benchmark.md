@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/lg-047-cto-clevel/ V2 稿合卷）
 - syncMode: static
-- lastSyncedAt: 2026-09-23（CHO 主笔 V2；CPO 界面意见并入；CTO 自审会签候；BS 意见候征）
+- lastSyncedAt: 2026-09-23（CHO 主笔 V2；CPO 界面意见并入；CTO 自审会签 ✓ 1069c9e7；BS 意见候征）
 - 上位: task-charter-cto-duty-clevel-upgrade.md（CEO 10:12 定调；CPO 41c45f4 同型先例）
 - 状态: **draft 候批——本稿任何条文零自行生效，CEO 终批后由 CHO 走翻正**
 
