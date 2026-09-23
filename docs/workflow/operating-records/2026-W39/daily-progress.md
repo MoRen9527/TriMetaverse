@@ -180,3 +180,7 @@
 - 巡检兜底补写 @23:30 +08：自上次进度提交 3bde3066 后新增 1 条 commit：
   - 919012fe docs(workflow): 11 席高维全查 gap-matrix-draft——四段机械提取+逐域打标（在位/部分/全缺，只挂原文依据不裁决）+孪生差异注记+汇总速览（全缺 9 域）；截点内完工（charter a9809511 A-D 段）@duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:50 +08：自上次进度提交 2929f4ad 后新增 2 条 commit：
+  - 556ab884 docs(workflow): 催办判据校准——双源取新+通报链白名单机制（总攻件④；白名单四条现役）@m-duty-cos
+  - d1824cbe docs(workflow): 催办节律+晨检格式两报备入树（BOD 批令件一③；机制载体 sg crontab 双挂已实测）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
