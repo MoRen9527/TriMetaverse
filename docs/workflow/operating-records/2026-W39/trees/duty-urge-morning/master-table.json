@@ -1,13 +1,59 @@
 {
-  "version": "50d14e1d",
-  "updated": "2026-09-24T10:2x+08",
-  "exclude": ["LG-034（搁置）"],
-  "units": [
-    {"id": "LG-039", "item": "T5-T8 窗执行", "seat": "值席自办窗", "form": "自查进度", "window": "明晨窗", "note": "本地四节点进度自查"},
-    {"id": "LG-040", "item": "T-O4 代码批窗", "seat": "m-duty-cto", "form": "催办", "window": "候 CTO 代码批窗", "note": "133 处注释旧名+1 脚本；validation 全绿为门"},
-    {"id": "LG-041", "item": "3333 事故尾项（根因定性+兜底架构）", "seat": "m-duty-cto", "form": "催办+硬截点", "window": "截点 09-25 12:00", "note": "到点未毕升级 CEO"},
-    {"id": "LG-046", "item": "宿主资产目录正名", "seat": "服务域（任务书 bare 拾取位）", "form": "催办+拾取核", "window": "执行中", "note": "500+ 引用迁移；窗锁后执行"},
-    {"id": "LG-050", "item": "试跑段", "seat": "特形", "form": "节拍状态汇报", "window": "09-30 前", "note": "无异常简报/有异常即报，非催办形态"},
-    {"id": "LG-048", "item": "渲染攒批", "seat": "本地渲染线", "form": "随车项", "window": "随车", "note": "随渲染批进度"}
-  ]
+ "version": "50d14e1d",
+ "updated": "2026-09-24T10:2x+08",
+ "exclude": [
+  "LG-034（搁置）"
+ ],
+ "units": [
+  {
+   "id": "LG-039",
+   "item": "T5-T8 窗执行",
+   "seat": "值席自办窗",
+   "form": "自查进度",
+   "window": "明晨窗",
+   "note": "本地四节点进度自查"
+  },
+  {
+   "id": "LG-040",
+   "item": "T-O4 代码批窗",
+   "seat": "m-duty-cto",
+   "form": "随车验收",
+   "window": "候 CTO 代码批窗",
+   "note": "133 处注释旧名+1 脚本；validation 全绿为门",
+   "status": "CTO 侧收口（66cf587 已推 TC dev，门=184OK+5OK+smoke 绿）——出表，销账走 COS 收口→BOD 验收链"
+  },
+  {
+   "id": "LG-041",
+   "item": "3333 事故尾项（根因定性+兜底架构）",
+   "seat": "m-duty-cto",
+   "form": "呈批候裁",
+   "window": "09-25 12:00 硬截点（CTO 侧已收口）",
+   "note": "到点未毕升级 CEO",
+   "status": "CTO 侧三件齐（根因定性件+兜底架构 draft 三层+watchdog 前销）——候 BOD 裁 L0/L1/L2（呈批面，非席间催办）"
+  },
+  {
+   "id": "LG-046",
+   "item": "宿主资产目录正名",
+   "seat": "服务域（任务书 bare 拾取位）",
+   "form": "催办+拾取核",
+   "window": "执行中",
+   "note": "500+ 引用迁移；窗锁后执行"
+  },
+  {
+   "id": "LG-050",
+   "item": "试跑段",
+   "seat": "特形",
+   "form": "节拍状态汇报",
+   "window": "09-30 前",
+   "note": "无异常简报/有异常即报，非催办形态"
+  },
+  {
+   "id": "LG-048",
+   "item": "渲染攒批",
+   "seat": "本地渲染线",
+   "form": "随车项",
+   "window": "随车",
+   "note": "随渲染批进度"
+  }
+ ]
 }
