@@ -26,10 +26,10 @@
    "id": "LG-041",
    "item": "3333 事故尾项（根因定性+兜底架构）",
    "seat": "m-duty-cto",
-   "form": "安全整改跟踪（候 BOD 裁+CTO 整改 commit）",
+   "form": "候 BOD 验收（key 轮换候裁并行 SEC-20260924-001）",
    "window": "09-25 12:00 硬截点（CTO 侧已收口）",
    "note": "到点未毕升级 CEO",
-   "status": "CTO 审验毕：env 子集覆写+CaptureRelay 验可；direct.json 活 token 入仓【驳回整改中】（aec6650 含 49 位活 key，已推 sg origin；GitHub TC 推仍凭据墙=无公共暴露面）——BOD 验收前置=整改 commit+四锚读数（通道=m-cos dev 面）+runbook 红线行；候裁=history 重写 vs 轮换窗（技术研判 CTO+DE，裁决窗候 BOD）"
+   "status": "DE 整改收口毕（四款令全落：占位符+防呆 fail-closed/真钥仅部署位/history 重写 8a5b630+双端 purge 值席独立复勘符/runbook 红线）——key「候轮换」已入账 SEC-20260924-001；HOLD=dev 侧四锚+CaptureRelay（m-cos checklist 五步已备候 BOD 链转）；候 BOD 验收"
   },
   {
    "id": "LG-046",
