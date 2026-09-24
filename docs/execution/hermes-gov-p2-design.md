@@ -74,7 +74,7 @@ rules:
 ## §6 与既有基座衔接（零破坏）
 
 - **不动**：knowledge.db v3 三表（knowledge_documents/consumption/metrics）+同步链路+注入链路（v2.0 全保留）。
-- **增量**：digest-rules.yaml（席侧配置件，`{TRICOMPANY_COGNITION_HOME}/` 或 wiki 目录约定件候设计窗定）+digest_log 表（候评审）。
+- **增量**：digest-rules.yaml（席侧配置件，`{TRICOMPANY_COGNITION_HOME}/` 或 wiki 目录约定件候设计窗定）+digest_log 表（候评审）；〔显式化 2026-09-24〕一期 reject 仅结构化 outcome 无日志面——§7②「丢弃有日志」依赖 digest_log 件，随二期排期显式带上（STE 防语义悬空注记，digest-executor 源头同注）。
 - **落点**：消化器=TriRLC knowledge-injector 扩展（既有件演进非新建）。
 
 ## §7 验收锚（合流六条+质量基线三指标）

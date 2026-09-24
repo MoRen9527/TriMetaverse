@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（一期执行读数+归因正身；随任务书 E 节节点流转）
 - syncMode: append-only（阶段读数追加）
-- lastSyncedAt: 2026-09-24T04:05+0800
+- lastSyncedAt: 2026-09-24T09:35+0800
 - 执行席: FSD（m-fsd，CTO 域 lead 下）；上游=COS 派工令 03:12+CTO 四裁 03:2x
 - 任务书: `trees/hermes-gov-p2-impl/task-charter.md`（本目录）
 
@@ -58,3 +58,21 @@ A/B 方法：`git worktree` 临时检出前变更基座 e7f8388→独立建 dist
 - **minor gap 三条**（均防御性低险，候二期随手补，不阻塞）：g1 `{source_kind}` 占位展开 executor 层未断言（rules 层接受已证）；g2 pageTitle >80「（无题）」分支未测；g3 写盘异常 error outcome 未注入故障（try/catch 在位）。
 - **语义依赖注记（随二期 digest_log 排期显式带上，防语义悬空）**：§7②「reject 规则生效（丢弃有日志）」之日志归属 digest_log 件（非一期）——一期 reject=有 outcome 无 reject 日志持久化。
 - reject 阀门首实证顺延定性：真实运营案例缺位而非实现缺口；纯确定性阀门单元穷尽=等价覆盖。
+
+---
+
+## 七、二期候项两件完工读数（2026-09-24 09:2x-09:3x+0800；COO 09:24 排窗令，截点当日 18:00）
+
+**件① gap 三条随手补**（TriCode `1c7bdee`，test/digest-chain.test.ts +3 测=17/17 全绿+check=0）：
+- g1 `{source_kind}` 占位 executor 层展开：`日志/{source_kind}/{date}.md` → `日志/daily-note/2026-09-24.md` 落盘断言 ✓
+- g2 pageTitle 边界双断言：>80 字符取「（无题）」/恰好 80 取首行 ✓（`renderShallowPage` 导出面直测）
+- g3 写盘故障注入（真 I/O 非 mock）：outDir 位置预置常规文件 → shallow/deep 双路径 error outcome（'写盘失败'/'deep 队列写盘失败'）✓
+- 修测记录：初轮 16/17——g2 用 `renderShallowPage` 漏 import（测试侧笔误，一轮修）
+
+**件② reject 日志归属 digest_log 注记显式化**（三处落地）：
+- 源头：`digest-executor.ts` DigestOutcome rejected 行+executeDigest 文档头（"reject 日志持久化=digest_log 件职责（§7②）；一期仅结构化 outcome"）
+- 设计正身：§6 增量行显式化条款随文（同注）
+- 留痕：本件 §六 原注记+任务书 E 节——依赖链闭环，二期 digest_log 排期时该条款为现成规格输入
+
+**门禁读数**：TriCode check=0+17/17（333ms）；实现逻辑零改（src 仅注释行，diff=49 行测试+4 行注释）。
+**在途差口不变项**：本席 GitHub push 持续劣化（09:27 复试仍 reset；bare 07:30 他线 PUSH-OK=环境位差）——累计候推 7 笔（TriCode×3+TMV COS×4），晨巡检兜底线承接+SDE 支撑位候查（本席出口网络 vs 他线通，环境位断点嫌疑）。

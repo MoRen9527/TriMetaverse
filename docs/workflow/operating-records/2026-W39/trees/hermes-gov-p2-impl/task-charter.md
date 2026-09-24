@@ -38,3 +38,5 @@ digest_rules／classify／executor 骨架三件——骨架先行，验收锚=�
 - 2026-09-24 03:56+0800 | FSD | 设计正身修订随完工附带落笔（CTO「任一路径」采附带路径）：`docs/execution/hermes-gov-p2-design.md` §3 示例基线两处勘正+勘正注记随文+lastSyncedAt 更新（本树 commit 随笔）
 - 2026-09-24 04:05+0800 | STE | 门验证 **PASS**（50bcbad 独立复验：14/14×2+check/build=0；白盒 779 行读图；覆盖充分/确定性扎实/语义诚实；gap 三条 minor 候二期随手补；语义依赖注记=reject 日志归属 digest_log 随二期排期显式带上防悬空）
 - 2026-09-24 04:05+0800 | FSD | 一期终态=**完工**（三门齐：编码+CTO 验收过 03:54+STE 门 PASS 04:05）；完工报呈 CTO+BOD、COO 抄送；读数件 §六 随卷（gap 三条+语义注记候二期）；GitHub push 仍劣化（TriCode×2+本树×3 笔 commit 在卷候晨巡检兜底补推）
+- 2026-09-24 09:2x+0800 | BOD/COO | 一期验收通过（BOD 亲测 14/14，四方互证）+二期候项即刻排窗令（BOD 排窗令·CEO 09:22 问询转化；COO 09:24 签发）：两件=①gap 三条随手补②reject 日志归属注记显式化；截点当日 18:00，BOD 验收后 LG-035 全单销账
+- 2026-09-24 09:3x+0800 | FSD | 二期候项两件完工（TriCode 1c7bdee：补测 g1/g2/g3 三件+executor 源头注记；设计 §6 增量行显式化条款随文）——17/17 绿+check=0；读数件 §七 随卷；完工报呈 BOD 验收候全单销账（抄 COS/COO）
