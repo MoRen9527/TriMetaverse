@@ -54,6 +54,17 @@
    "form": "随车项",
    "window": "随车",
    "note": "随渲染批进度"
+  },
+  {
+   "id": "三闸评估",
+   "item": "三闸体系评估收口（双席意见 2a8dfbac/50577d8f+收口汇总 16ce941d 已呈 BOD 候 CEO 终裁）",
+   "seat": "COS",
+   "form": "自查进度+防漏催办语义",
+   "window": "候 CEO 终裁",
+   "note": "汇总=three-gate-review/closing-summary.md（收口毕已呈）；双席意见两锚候 wt→dev 同步；闸 4 双源声明 urge-rhythm 已具备，闸 2/3/5 终裁候 CEO"
   }
- ]
+ ],
+ "metadata": {
+  "autoRegistration": "立项即登记制度补丁已转 CAO（D-27 v4 随批）：新单立项/任务书落树同步登记本表（COS 铸总表流程内自动联动，非人工补录）——0924 两缺口（core-agent 派工未对表+三闸未登记催办源）合并归因"
+ }
 }
