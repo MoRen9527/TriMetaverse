@@ -35,3 +35,17 @@
 ## 回滚方案
 
 ①②④本机面：cmd 删插行+git revert dist（重建旧 commit）+hook 还原快照单行，三件各自独立可逆；③sg 面：bare/tree `git reset --hard fd2436a`+重建+restart 即回执笔前态；stash `git stash pop` 可逆。
+
+## 阶段二部署读数（2026-09-25 02:5x +0800 追补）
+
+| 项 | 读数 |
+|---|---|
+| 测试门 | notify 三件（outbox+gate+duty-consumer）fail=0（2d262d0 线） |
+| 推送 | sg-server bare `7665bd9..2d262d0` ✓；origin GitHub 夜网 443 超时未推（候晨网补推，sg 部署不依赖） |
+| ①tmux 会话名实勘 | `tmux ls`=14 会话，**`m-duty-cos`**（09-16 建·attached）——FSD 两问之①实证答 |
+| ②信箱位裁定 | 默认树 cwd（/srv/fleet/TriMC/notify-mailbox.json）——与 outbox ledger 同址同留痕族；mailPath env 可后改候 duty-cos 异议 |
+| env 落位 | 新 drop-in `trimc.service.d/notify-duty.conf`：`TRIMC_NOTIFY_DUTY_SEATS=m-duty-cos` + `TRIMC_NOTIFY_DUTY_TMUX=m-duty-cos`；daemon-reload 后 `systemctl show -p Environment` 双断言现值 ✓ |
+| 部署 | 树 ff@2d262d0+build+restart→active+healthz {"ok":true} 零降级 ✓ |
+| 边界 | urgent tmux 实弹显不预演（留 e2e anchor C 正式发令；免向在席值席视窗注测试杂音） |
+
+回滚：drop-in 删文件+daemon-reload+restart 即卸 env；树 reset --hard 7665bd9+重建+restart 即回阶段一态。
