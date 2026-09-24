@@ -57,3 +57,18 @@
 - 任务书 20bd58ad（wt/board）§一/二/三/四/五；COO 两裁示+BOD 两预裁（2026-09-24 23:23/23:25 对话留痕）
 - TriMMC d1189cf→c6fe1fb；TriMLC d325050→ef7f8a1（git 实盘）；seats.json（派生件只读消费）
 - 既有测试件：notify-outbox.test.ts/notify-gate.ste.test.ts（TriMMC）、notify.test.ts/notify-gate.ste.test.ts（TriMLC）
+
+---
+
+## 八、阶段门 PASS+阶段二实施（2026-09-25 00:0x-02:5x+0800）
+
+**阶段门：BOD PASS 放行阶段二**（BOD 自执 e2e 非转抄：accepted 14/14→delivered 14/14→信箱落箱 14/14；锚 B 回归绿+bod/coo 零变化；锚 E 公告件一稿两用兑现——本席 hook 实收 m-fsd 公告件自证）。两裁：①m-dee/m-sde 采本席推荐案（manifest opsName 对齐，CHO sde-rename 线并车）②发端 BOD 自执。
+
+**阶段二交付（TriMMC `2d262d0`，5 文件 +347 行）**：
+- `duty-consumer.ts`：sg 值席收端消费面——同进程定向拉取（`pullPendingForSeats` 零 HTTP 回环，attempts 定向隔离不抢 trimlc 件）/normal 信箱落箱即达/urgent tmux display-message 弹显失败滞留 forwarded（与 TriMLC urgent 语义同构，不静默）/env 门（TRIMC_NOTIFY_DUTY_SEATS 未设=零行为）
+- roster 增 `m-duty-cos:trimmc`（跨面定向；本地 puller 名册外自动跳过不抢）+app 启停接线
+- 测试：duty-consumer 六测（env 门/三态回写/定向隔离/urgent 双态/信箱语义/幂等）+roster 计数 16 断言更新——notify 族 **30/30 绿**+check=0；TriMLC notify 回归绿（跨仓零变化哨兵）
+- 修测两笔（测试侧）：urgent mock 反相/名册计数未随阶段二更新——实现侧零回改
+
+**跨面实测（锚 C）候部署**：本机 POST（target m-duty-cos/daemon trimmc）→ sg 值席 consumer 拉取交付 → 三态回写。SDE 部署件：sg TriMMC 载 2d262d0+env `TRIMC_NOTIFY_DUTY_SEATS=m-duty-cos`（+候 m-duty-cos 裁 TRIMC_NOTIFY_DUTY_TMUX 会话名）+重启；m-duty-cos 协同：值席信箱位置/tmux 会话名/留痕制兼容确认。
+**在途**：TriMMC 2d262d0 GitHub push 吃 reset（本席出口差口在册，SDE/巡检通道兜底）。
