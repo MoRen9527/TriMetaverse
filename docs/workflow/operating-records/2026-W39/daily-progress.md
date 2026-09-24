@@ -191,3 +191,6 @@
   - ba191097 docs(workflow): 催办三源判据收敛读数——零伪报达成（全域匹配修正+白名单+3）@m-duty-cos
   - 924de1fa docs(workflow): 催办判据三源化——+台账销账态维度（追补单；LG-042/044/043 白名单+3）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:30 +08：自上次进度提交 4820d3f9 后新增 1 条 commit：
+  - f681e5b0 docs(workflow): 总表 6 单 50d14e1d 版入树+master 30min 模新挂首跑（LG-034 搁置除外；2h urge 保留并行）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
