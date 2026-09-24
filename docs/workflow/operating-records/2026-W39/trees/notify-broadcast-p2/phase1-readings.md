@@ -82,3 +82,13 @@
 - **②urgent 件：弹显面滞留 forwarded**（accepted→forwarded；tmux display 在 systemd service 上下文未达 tmux server socket——设计语义正确触发：不静默、status 面可见、信箱已落箱可见）→ SDE 候查项：service↔值席 tmux socket 上下文（runuser/TMUX_TMPDIR 系）；过渡态=信箱可见面已覆盖值席可见性
 - **锚 C 判定素材**：跨面链路（本机发→sg 值席收→三态回写）normal 面全绿=任务书锚 C 最小满足；urgent 弹显面=增强增强项候修（不阻收口，SDE 单随发）
 - 凭据卫生：本席发令用 daemon env 真源凭据（transcript 零 token 落盘）
+
+---
+
+## 十、终验收笔（2026-09-25 03:1x+0800）
+
+**BOD 终验：LG-052 全单验收 PASS，收口销账**（BOD 独立复核：锚 C 双件三态与本席读数逐字一致+consumer env 进程实锤+hook 行 notify-inject.cjs 实锤=锚 D；五锚全齐 A/B/C/D/E）。随门三裁：①urgent 弹显面挂账随销账（过渡态双覆盖可接受）②晨网兜底推照准③LG-050 08:00 起表确认。
+
+**任务书生命周期闭合**：派工（09-24 23:17）→摸底四裁示（23:23/23:25）→阶段一编码完工（23:42）→SDE 部署五步（23:43-23:58）→阶段门 PASS（00:0x e2e）→阶段二编码（02:54）→部署三件（03:00）→锚 C 实测（03:01）→全单销账（03:1x）——净历时约 4h，两阶段+阶段门制全程零卡点升级。
+
+**新交付面（销账注记同 BOD）**：duty-consumer（sg 值席收端）+广播展开制+单智能 hook——NOTIFY 通道自此「一稿全席 13+1+sg 值席」三面全通。遗留观察项：sg TriMC c306d00 候合流+duty 信箱路径显性化（文档面小项）+urgent socket 修（SDE 挂账）。
