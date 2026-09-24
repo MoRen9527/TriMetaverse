@@ -26,10 +26,10 @@
    "id": "LG-041",
    "item": "3333 事故尾项（根因定性+兜底架构）",
    "seat": "m-duty-cto",
-   "form": "DE 实施读数→COS 收口",
+   "form": "DE 读数已 COS 收口→HOLD dev 侧锚候 CTO 指派",
    "window": "09-25 12:00 硬截点（CTO 侧已收口）",
    "note": "到点未毕升级 CEO",
-   "status": "V2 重设计毕（CEO 11:45 三裁吸收：bottleneck-architecture-plan-v2.md 预设文件化/一键化/写入通道解单点；V1 SUPERSEDED）——实施已派 DE（断网演练验收锚），读数回 COS 收口→BOD 验收"
+   "status": "DE sg 侧实施已交（TC aec6650：restore-claude-config.ps1+presets/direct.json+README 201 行；env 子集覆写/备份轮换5/原子写/缺省 direct 安全侧/零 3333 依赖）——HOLD=dev 机面四验收锚+CaptureRelay 候 CTO 指派（sg 无 pwsh 不跨面）；CTO .design 三裁决验并行；毕后 BOD 验收"
   },
   {
    "id": "LG-046",
