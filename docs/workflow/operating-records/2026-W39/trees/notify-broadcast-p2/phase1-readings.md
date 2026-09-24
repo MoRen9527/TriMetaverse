@@ -72,3 +72,13 @@
 
 **跨面实测（锚 C）候部署**：本机 POST（target m-duty-cos/daemon trimmc）→ sg 值席 consumer 拉取交付 → 三态回写。SDE 部署件：sg TriMMC 载 2d262d0+env `TRIMC_NOTIFY_DUTY_SEATS=m-duty-cos`（+候 m-duty-cos 裁 TRIMC_NOTIFY_DUTY_TMUX 会话名）+重启；m-duty-cos 协同：值席信箱位置/tmux 会话名/留痕制兼容确认。
 **在途**：TriMMC 2d262d0 GitHub push 吃 reset（本席出口差口在册，SDE/巡检通道兜底）。
+
+---
+
+## 九、锚 C 跨面实测读数（2026-09-25 03:00-03:01+0800；SDE 部署三件毕后本席发令）
+
+- **发端**：本机 POST sg /internal/v1/notify ×2（source=bod/target=m-duty-cos/daemon=trimmc；message_id=lg052-c-{normal,urgent}-1790276411）→ 双件 accepted pending ✓
+- **①normal 件：三态回写全绿**——accepted → forwarded → **delivered**（信箱落箱语义全链，57s 内完成，consumer 30s 间隔轮转实证）
+- **②urgent 件：弹显面滞留 forwarded**（accepted→forwarded；tmux display 在 systemd service 上下文未达 tmux server socket——设计语义正确触发：不静默、status 面可见、信箱已落箱可见）→ SDE 候查项：service↔值席 tmux socket 上下文（runuser/TMUX_TMPDIR 系）；过渡态=信箱可见面已覆盖值席可见性
+- **锚 C 判定素材**：跨面链路（本机发→sg 值席收→三态回写）normal 面全绿=任务书锚 C 最小满足；urgent 弹显面=增强增强项候修（不阻收口，SDE 单随发）
+- 凭据卫生：本席发令用 daemon env 真源凭据（transcript 零 token 落盘）
