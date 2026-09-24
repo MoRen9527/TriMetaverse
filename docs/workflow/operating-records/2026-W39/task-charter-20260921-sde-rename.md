@@ -40,3 +40,7 @@
 ## 五、销账注记（BOD 验收，2026-09-21 01:4x）
 
 五锚全过：①正名统一（SDE+TriDeployer grep=0）②走读报告（ADE/职责/三分法准确无重构+顺手两笔：上岗时点失真/多余空格）③名册双端（本地 seats+D-13 ✓；sg seats-sg.json **BOD 直改毕**——CHO 交接注记销）④Trideployment 甄别定谳：BOD 预勘 9 文件字面命中经语境甄别**全部为历史兼容/历史叙述语义正当保留，零活引用**（BS 兼容入口规则/CTO 历史补查规则×4/publish-flow 历史记录/退役 registry 本体×3+manifest 历史条目+TriTest 系档案）⑤渲染攒批。roster role/displayName 随改：**BOD 裁准 CHO 案**（随首月校准窗一并，避免第三处改名面）。
+
+## 加注（2026-09-25 02:4x，COO 转办·CHO sde-rename 线并车录）
+
+- m-dee/m-sde 正名源修已裁采：manifest opsName 对齐 m-sde（BOD 裁采；本线并车加注一行，不阻塞主体）。
