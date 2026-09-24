@@ -92,3 +92,10 @@
 **任务书生命周期闭合**：派工（09-24 23:17）→摸底四裁示（23:23/23:25）→阶段一编码完工（23:42）→SDE 部署五步（23:43-23:58）→阶段门 PASS（00:0x e2e）→阶段二编码（02:54）→部署三件（03:00）→锚 C 实测（03:01）→全单销账（03:1x）——净历时约 4h，两阶段+阶段门制全程零卡点升级。
 
 **新交付面（销账注记同 BOD）**：duty-consumer（sg 值席收端）+广播展开制+单智能 hook——NOTIFY 通道自此「一稿全席 13+1+sg 值席」三面全通。遗留观察项：sg TriMC c306d00 候合流+duty 信箱路径显性化（文档面小项）+urgent socket 修（SDE 挂账）。
+
+---
+
+## 十一、销账挂账闭合（2026-09-25 03:06-03:09+0800）
+
+- urgent socket 错位修全链验证：SDE 三连（bare 推平 970b5cc/drop-in 三 env 含 TMUX_SOCK=/tmp/tmux-1001/default/restart active）→ 本席发新 urgent 件 `lg052-c-urgent2-1790276905` → **accepted→forwarded→delivered 三态全绿（41s）**——tmux `-S` 旗桥接生效，弹显面活。
+- 销账挂账项至此清零（余晨网补推批：TriMMC 970b5cc/2d262d0+本树三笔——SDE 晨批在册）。
