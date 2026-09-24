@@ -197,3 +197,4 @@
 - 巡检兜底补写 @11:00 +08：自上次进度提交 ed635516 后新增 1 条 commit：
   - ed4babe8 docs(workflow): 总表出表更新——LG-040 CTO 侧收口出表（66cf587）/LG-041 转呈批候裁 L0/L1/L2（根因定性件落树）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- LG-051 催办段 09-24 12:02+08：截点触达，名册真源 sg 零到料→挂起待料（notify bod 抄 coo 候供），到料即首催
