@@ -82,7 +82,7 @@ registry owner 分工的源侧规则来自 TriCompany 虚拟公司源侧：`../.
 
 补充约束：当样板、收口 companion doc 或中央摘要需要引用当前宿主相关资料时，默认先引用模块真源中的稳定结论或中央治理摘要；只有在确实需要指向当前宿主特有的已发布副本、phase 证据或审计记录时，才引用对应 support bundle 路径。不要把当前 support root 的物理路径写成中央协议层的默认引用入口。
 
-若某次收口需要落到“怎么更新 support published-copy / runbook / evidence”的动作层，默认引用 `TriCompany/docs/workflow/published-copy-refresh-sop.md` 与 `TriCompany/.github/manifests/tricompany-published-copy-manifest.json`；不要把 `TriCompany-copilot-host-assets/**` 下的具体物理路径写成中央收口对象的默认执行步骤。
+若某次收口需要落到“怎么更新 support published-copy / runbook / evidence”的动作层，默认引用 `TriCompany/docs/workflow/published-copy-refresh-sop.md` 与 `TriCompany/.github/manifests/tricompany-published-copy-manifest.json`；不要把 `TriCompany-host-assets/**` 下的具体物理路径写成中央收口对象的默认执行步骤。
 
 ### 5.2 范围门禁
 

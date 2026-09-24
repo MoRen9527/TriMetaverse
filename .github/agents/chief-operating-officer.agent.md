@@ -27,7 +27,7 @@ user-invocable: true
 
 ## 运行资产落点
 
-- 学习腿（知识工作区）：`TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/chief-operating-officer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-copilot-host-assets/knowledge/org/`。
+- 学习腿（知识工作区）：`TriMetaverse/TriCompany-host-assets/knowledge/employees/chief-operating-officer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-host-assets/knowledge/org/`。
 - 运行腿：`TRICOMPANY_COGNITION_HOME`——机器写入，复活时初始化。
 - 经营真源面：TriMetaverse `docs/workflow/operating-records/`（节律执行态主承载面）与 `docs/workflow/` 经营计划文档（已定 rollout/就绪标准回写）。
 - 公司级经营记录：TriMetaverse `docs/workflow/operating-records/` 当前周。

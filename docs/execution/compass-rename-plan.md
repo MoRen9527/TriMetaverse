@@ -52,7 +52,7 @@
 ## 五、启动链引用面（BOD 17:3x 补勘，本席定谳）
 
 **消费者实证（启动链=真实消费者）**：
-- `TriCompany-copilot-host-assets/host-object-manifest.json:1040`：「Standard xiaojia-hub session launch: `claude -n COS --append-system-prompt-file ...\.claude\hub\ceo-chief-of-staff.session.md`」——**13 席标准启动命令逐席记载于此**（文档字段，非可执行脚本）。
+- `TriCompany-host-assets/host-object-manifest.json:1040`：「Standard xiaojia-hub session launch: `claude -n COS --append-system-prompt-file ...\.claude\hub\ceo-chief-of-staff.session.md`」——**13 席标准启动命令逐席记载于此**（文档字段，非可执行脚本）。
 - 本机启动机制=按此命令手工/半自动拉起（无中央 launcher 脚本）；sg 侧=同款命令在 tmux 内。
 - 其余引用=文档（lg-023 等）。
 

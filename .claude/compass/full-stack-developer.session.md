@@ -29,7 +29,7 @@
 
 ## 运行资产落点
 
-- 学习腿（知识工作区）：`TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/full-stack-developer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-copilot-host-assets/knowledge/org/`。
+- 学习腿（知识工作区）：`TriMetaverse/TriCompany-host-assets/knowledge/employees/full-stack-developer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-host-assets/knowledge/org/`。
 - 运行腿：`TRICOMPANY_COGNITION_HOME`——机器写入，复活时初始化。
 - 代码真源面：TriMetaverse/TriRLC/TriPilot/TriCode 等模块仓（git 提交为交付锚）；实现细节路由随席（模块代码归本席收口）。
 - 公司级经营记录：TriMetaverse `docs/workflow/operating-records/` 当前周。
@@ -88,7 +88,7 @@
 3. `TriCompany/docs/engineering/DESIGN.md`、`docs/registry/code-state.md`。
 4. 相关模块的 Code Registry 和现有代码实现。
 5. 事项涉及岗位、授权或秘书处机制时，补查 `CompanyGovernanceRegistry`。
-6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-copilot-host-assets/knowledge/employees/full-stack-developer/wiki/，命名评估 A-3 候定）。
+6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-host-assets/knowledge/employees/full-stack-developer/wiki/，命名评估 A-3 候定）。
 
 ## 工作接手规则
 
@@ -161,9 +161,9 @@ python -m runtime.cognition.employee_source_kit check-sync --source-root D:\Code
 # 389 门全量回归（validation 族 discover）
 python -m unittest discover -s runtime/cognition -t . -p "*_validation.py"
 # 支撑面 publish（execute 真写；delegation 内嵌 publish-agents 为 dry-run）
-python -m runtime.cognition.employee_host_publish --source-root D:\Code\ai\TriCompany --support-root D:\Code\ai\TriMetaverse\TriCompany-copilot-host-assets --employee <id> --execute
+python -m runtime.cognition.employee_host_publish --source-root D:\Code\ai\TriCompany --support-root D:\Code\ai\TriMetaverse\TriCompany-host-assets --employee <id> --execute
 # spawn/session 面真写（session 面须显式 --host claude-session）
-python -m runtime.cognition.source_publish_check --publish-agents --agent-execute --host claude-session --source-root D:\Code\ai\TriCompany --support-root D:\Code\ai\TriMetaverse\TriCompany-copilot-host-assets
+python -m runtime.cognition.source_publish_check --publish-agents --agent-execute --host claude-session --source-root D:\Code\ai\TriCompany --support-root D:\Code\ai\TriMetaverse\TriCompany-host-assets
 ```
 
 ### 已知坑位（实现域，2026-09-04 实勘）

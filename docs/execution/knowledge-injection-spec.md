@@ -20,7 +20,7 @@
 
 ## 一、问题背景
 
-三端（研发仓/TriLC/TriMC）无知识注入功能：knowledge 资产（TriCompany-copilot-host-assets 知识工作区 + 五件套 layer contracts + wiki 消费记录）"只生成、无消费"。runtime 侧知识载体实证：五件套（静态契约）+ `.tricompany-cognition/`（SQLite 每项目隔离已实现）——缺宿主形态知识工作空间的 runtime 等价物与**内容注入链路**（TRICOMPANY_COGNITION_HOME 在 TriLC/TriMC 源码零使用）。
+三端（研发仓/TriLC/TriMC）无知识注入功能：knowledge 资产（TriCompany-host-assets 知识工作区 + 五件套 layer contracts + wiki 消费记录）"只生成、无消费"。runtime 侧知识载体实证：五件套（静态契约）+ `.tricompany-cognition/`（SQLite 每项目隔离已实现）——缺宿主形态知识工作空间的 runtime 等价物与**内容注入链路**（TRICOMPANY_COGNITION_HOME 在 TriLC/TriMC 源码零使用）。
 
 ## 二、语义边界
 
