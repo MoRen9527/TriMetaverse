@@ -44,7 +44,7 @@
 | `settingsPath()` | env `TRIMODEL_CLAUDE_SETTINGS` → 缺省 `~/.claude/settings.json`（:51） | 缺省解析器保留；CoreOptions.settingsPath 覆写（现役 opts 注入已通，扩展成统一 CoreOptions） |
 | `deployKeyPath()` | env `TRIMODEL_DEPLOY_KEY` → 缺省部署位（:58） | 同上；**per-provider 扩展**：`.deploy-key.bigmodel` 命名族（问3 模板三件套），缺省解析器收 provider 参 |
 | `appendAudit` | env `TRIMODEL_AUDIT_LOG` → 结构化行（:72） | CoreOptions.auditLogPath 覆写；行 schema 不变（who/mode/backup/assert/result/detail）——status 与事后取证共用此源 |
-| `DEFAULT_PROVIDER` | 无（现役模板表直取 bigmodel） | **core 常量 `bigmodel` + env 覆写一档**（CTO 裁⑤：`TRIMLC_DEFAULT_PROVIDER` 族形 env 名）；不建配置文件 |
+| `DEFAULT_PROVIDER` | 无（现役模板表直取 bigmodel） | **core 常量 `bigmodel` + env 覆写一档**（CTO 裁③：单键全局 `TRIMODEL_CLI_DEFAULT_PROVIDER` 一键四族同读——族形四键=四个可漂移面）；不建配置文件 |
 
 ### L-D 模板层
 
@@ -64,7 +64,7 @@
 | `configList` | `(io) => ResultLine` | listPresets（len-only 显示策略在此） |
 | `configGet` | `(args { keys? }, io) => ResultLine` | readSettings→键形投影（密钥 len-only；「我现在用什么配置」人话行） |
 | `configSet` | `(args { provider?, base_url?, model?, keyFile? }, io) => ResultLine` | **与页面同一套 runWrite 五门内核**（问3 判据） |
-| `status` | `(io) => ResultLine` | readSettings 键形＋listBackups＋**探针读数（注入）**＋L2 标记态（路径注入）；零参只读 |
+| `status` | `(io) => ResultLine` | readSettings 键形＋listBackups＋**实时探活（回调型注入，CTO 裁①：bin 提供 health+keys 值面 fetch）**＋日志 tail 仅探针失败辅显＋L2 标记态；零参只读 |
 
 ### L-F HTTP 壳层（留 TriModel，不进 core）
 
@@ -81,16 +81,17 @@ interface CoreIO {
   auditLogPath: string;             // 结构化审计行落点
   who: string;                      // 审计调用方标识（'trimlc-cmd' | 'trirlc-cmd' | 'ui-restore' | ...）
   machine?: string;                 // 四象限路由键（问6；本机 M/R 分族注入）
-  probes?: ProbeSource[];           // status 探针源（路径型: { name, logPath } ——core 读 tail 聚合）
+  probes?: Array<{ name: string; probe: () => Promise<ProbeReading> }>;  // 实时探活回调（CTO 裁①：
+                                    // bin 按域注入 health+keys 值面 fetch；core 零端点知识，只编排+人话渲染）
   l2FlagPath?: string;              // L2 标记态读数源
-  defaultProvider?: string;         // 缺省=core 常量 'bigmodel'，env TRIMLC_DEFAULT_PROVIDER 族再覆写
+  defaultProvider?: string;         // 缺省=core 常量 'bigmodel'，env TRIMODEL_CLI_DEFAULT_PROVIDER 单键全局覆写
 }
 
 // RESULT 行三统一 schema（CPO 判据：语法·结果行·输出风格同构）
 interface ResultLine {
   ok: boolean;
   code: 'RESTORED' | 'ALREADY_SAME' | 'ROLLED_BACK' | 'WRITE_FAILED_ROLLED_BACK'
-      | 'KEY_FAIL_CLOSED' | 'PRESET_UNKNOWN' | 'DENIED' | 'PROBE_DEGRADED' | ...;
+      | 'KEY_FAIL_CLOSED' | 'PRESET_UNKNOWN' | 'PRESET_NOT_DEPLOYED' | 'DENIED' | 'PROBE_DEGRADED' | ...;
   message: string;                  // 人话行（CPO 人话纪律：出了什么事/什么状态/做什么）
   data?: Record<string, unknown>;   // 结构化体（backup/keys_written/diff len-only/probe 读数）
 }
@@ -104,9 +105,9 @@ interface ResultLine {
 - **回归锚**：TriModel 276 测套全绿=HTTP 面零变证明；core 新增单测=五门逐门（复用 wave1 25 测形态，注入临时域）。
 - **组② trimc 双仓冲突**（CTO 裁③）：alias 期无解不阻塞，弃用引导换新名。
 
-## 4. 候 CTO 裁/核点（纯设计暴露项）
+## 4. CTO 裁决四点（2026-09-26 04:0x 裁定入册，施工照此）
 
-1. `CoreIO.probes` 路径型 vs 回调型（本稿取路径型起步——core 读日志 tail 零回调序列化问题；回调型候真实需要再扩）。
-2. `writeEnvSubset` 现役签名（who/baseUrl/apiKey/model/opts）与拟 `runWrite(WritePlan)` 的映射关系——WritePlan 蓝本=现役五参+CoreIO 归并，施工时一步到位或先薄适配层过渡（候派单定）。
-3. `TRIMLC_DEFAULT_PROVIDER` env 命名族：前缀取 `TRIMLC_`（本稿照 CTO 裁⑤原文）——但四族共用 core 时该 env 是全局一份，**分域覆写**（trimlc vs trirlc 各自默认 provider 不同）候需求确认（现势无此需求，先一份全局）。
-4. presets 装载器的 deployed 过滤：命令族 `restore-direct` 对 `deployed: false` 的 provider 是否拒写（现役 HTTP 面模板选择已拒）——建议 core 侧同 fail-closed，候裁。
+1. **probes=回调型注入**：CoreIO.probes 由 bin 侧提供探针实现（health+keys 值面 fetch），core 只编排调用+人话渲染——status 职责=「现在什么状态」需实时探活，日志 tail 是间接历史证据只配探针失败辅显；core 零端点知识（本机 3333/R-HY 端点不同，bin 按域注入正合零仓感知）。探不到=如实报不可用（探活不违零自依赖，正是 status 本职）。
+2. **runWrite 一步到位**：五门心脏直接 WritePlan 化，不做过渡壳——过渡壳=双形态并存=维护双份+漂移面，违四族一份纪律初衷；回归锚=276 测套（HTTP 面零变）+f887b27 STE 25/25（脚本侧）双基线护航。
+3. **默认 provider=单键全局**：`TRIMODEL_CLI_DEFAULT_PROVIDER` 一键四族同读（族形四键=四个可漂移面），缺省常量 bigmodel。
+4. **deployed:false 同拒**：CLI 与 HTTP 面防线一致性——同一 provider 一面拒一面放=防线漂移；fail-closed 人话报「该模板未部署」+列可用模板（ResultLine code=PRESET_NOT_DEPLOYED）。
