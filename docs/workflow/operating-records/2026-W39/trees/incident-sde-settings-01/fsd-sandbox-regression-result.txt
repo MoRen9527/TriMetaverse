@@ -1,0 +1,25 @@
+﻿PASS | T1a 占位符拒切 exit=2 | exit=2
+PASS | T1a FAIL 行含健康门 | FAIL行在=True
+PASS | T1b 空串凭据拒切 exit=2 | exit=2; msg含空=True
+PASS | T1c 纯空白凭据拒切 exit=2 | exit=2
+PASS | T2a 钥源全空 Fail exit=2 | exit=2
+PASS | T2b 活体API_KEY同形注入 | exit=0; keyshape同形=True; 值面=True
+PASS | T2b RESULT行keyshape标注 | True
+PASS | T2c keyfile优先钥源 | exit=0; 值=keyfile=True
+PASS | T2d WhatIf注钥零写 | exit=0; 零写=True
+PASS | T3a WhatIf主流程零写 | exit=0; hash同=True; 备份零增=True
+PASS | T3a diff含BASE_URL与脱敏len | diff行在=True
+PASS | T3b 活体警告=代码审读（未实跑） | 约束含读取禁触; 审读见报告
+PASS | T3c FROZEN-BACKUPS轮换豁免 | 8切后备份=7(未轮换); 豁免注记=True
+PASS | T3d 正常轮换保留近5 | 8切后备份=5
+PASS | T4a 切换成功断言pass+最小侵入 | exit=0; env覆写=True; 非env键保留=True
+PASS | T4b 断言失败自动回滚 | exit=1; 回滚恢复=A7CCB5D4408A56881FFB16B78D820B5C6BA7C4299DE30443DBEB362FE040BCF9
+PASS | T4c 冒烟200=PASS | exit=0; smoke行=True
+PASS | T4d 冒烟401=Fail exit=1 | exit=1
+PASS | T4e 冒烟不可达=跳过不阻塞 | exit=0; 跳过注记=True
+PASS | T6a CaptureRelay固化env子集 | exit=0; relay固化=True
+PASS | T6b CaptureRelay WhatIf零写 | exit=0; 零写=True
+PASS | T7a 预设非法JSON拒 exit=2 | exit=2
+PASS | T7b 活体非法JSON拒改 exit=1 | exit=1
+PASS | T7c 预设缺位补装占位符→健康门拒 exit=2 | exit=2（bundled占位符形→健康门拒=fail-closed 正确）
+PASS | T8 模式互斥拒 exit=2 | exit=2
