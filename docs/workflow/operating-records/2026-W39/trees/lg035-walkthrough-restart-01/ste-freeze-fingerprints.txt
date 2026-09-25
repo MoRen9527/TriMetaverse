@@ -1,0 +1,5 @@
+== T0 指纹（起跑前） 2026-09-25T12:01:28Z / 北京 2026-09-25 12:01:28
+trimmc-card.json sha256=880181a4645f7617e8b3c60fcd45474263dd3fabe59d5923d21b49975ff2d205 bytes=2631
+policies/local.json sha256=e197e44d74f552a40f890a4962ed06fbc408121283531df41da19c0dbc912f3d bytes=1076
+policy.json ABSENT
+model-transitions.jsonl sha256=8b70db225e888d4f3e0ea00047db3cfcd11ec9f2b15c67a036bb8b2d26a96ceb bytes=4131

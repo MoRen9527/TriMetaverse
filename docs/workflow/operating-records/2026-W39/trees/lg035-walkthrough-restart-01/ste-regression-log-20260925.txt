@@ -1,0 +1,199 @@
+TAP version 13
+# [trimodel] trimmc-card.json at C:\\Users\\jedih\\AppData\\Local\\Temp\\trimodel-proxykey2-test-aENKXo\\bad.json unparsable — ignoring: Unexpected token 'o', "not json at all" is not valid JSON
+# Subtest: proxy: upstream route table (official catalog exact match)
+    # Subtest: deepseek official names → native anthropic endpoint + DEEPSEEK key
+    ok 1 - deepseek official names → native anthropic endpoint + DEEPSEEK key
+      ---
+      duration_ms: 1.5178
+      type: 'test'
+      ...
+    # Subtest: GLM official names → GLM anthropic-compat endpoint + GLM key
+    ok 2 - GLM official names → GLM anthropic-compat endpoint + GLM key
+      ---
+      duration_ms: 1.0665
+      type: 'test'
+      ...
+    # Subtest: TMV → TriStaciss anthropic relay (base /v1 tail stripped) + platform key
+    ok 3 - TMV → TriStaciss anthropic relay (base /v1 tail stripped) + platform key
+      ---
+      duration_ms: 0.2457
+      type: 'test'
+      ...
+    # Subtest: unmatched → null (proxy refuses rather than mis-routing keys)
+    ok 4 - unmatched → null (proxy refuses rather than mis-routing keys)
+      ---
+      duration_ms: 0.4093
+      type: 'test'
+      ...
+    # Subtest: unroutable effective model → no-upstream-route
+    ok 5 - unroutable effective model → no-upstream-route
+      ---
+      duration_ms: 0.295
+      type: 'test'
+      ...
+    # Subtest: S5 归并: card enabled entry key OVERRIDES env (card-first resolution)
+    ok 6 - S5 归并: card enabled entry key OVERRIDES env (card-first resolution)
+      ---
+      duration_ms: 59.366
+      type: 'test'
+      ...
+    # Subtest: S5 归并: card absent → env fallback; corrupted card → env fallback, never throws
+    ok 7 - S5 归并: card absent → env fallback; corrupted card → env fallback, never throws
+      ---
+      duration_ms: 2.7576
+      type: 'test'
+      ...
+    # Subtest: route table: three upstream groups over the five-name catalog
+    ok 8 - route table: three upstream groups over the five-name catalog
+      ---
+      duration_ms: 33.6977
+      type: 'test'
+      ...
+    1..8
+ok 1 - proxy: upstream route table (official catalog exact match)
+  ---
+  duration_ms: 101.4177
+  type: 'suite'
+  ...
+# Subtest: proxy: body rewrite correctness
+    # Subtest: policy window hit: model rewritten to schedule model + route follows
+    ok 1 - policy window hit: model rewritten to schedule model + route follows
+      ---
+      duration_ms: 60.4514
+      type: 'test'
+      ...
+    # Subtest: no policy: falls back to official env default (deepseek-v4-pro)
+    ok 2 - no policy: falls back to official env default (deepseek-v4-pro)
+      ---
+      duration_ms: 0.4969
+      type: 'test'
+      ...
+    # Subtest: CC placeholder model semantics: whatever CC sends is overridden server-side
+    ok 3 - CC placeholder model semantics: whatever CC sends is overridden server-side
+      ---
+      duration_ms: 0.4045
+      type: 'test'
+      ...
+    # Subtest: bad JSON → bad-json; missing upstream key → no-api-key
+    ok 4 - bad JSON → bad-json; missing upstream key → no-api-key
+      ---
+      duration_ms: 0.6739
+      type: 'test'
+      ...
+    1..4
+ok 2 - proxy: body rewrite correctness
+  ---
+  duration_ms: 62.8712
+  type: 'suite'
+  ...
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+# Subtest: proxy: E2E — fidelity + SSE integrity + defense + health (in-process)
+    # Subtest: non-streaming: model rewritten, key injected server-side, CC placeholder overridden
+    ok 1 - non-streaming: model rewritten, key injected server-side, CC placeholder overridden
+      ---
+      duration_ms: 34.4569
+      type: 'test'
+      ...
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+    # Subtest: forwarding fidelity: body untouched except model field (deep-compare)
+    ok 2 - forwarding fidelity: body untouched except model field (deep-compare)
+      ---
+      duration_ms: 6.1984
+      type: 'test'
+      ...
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+    # Subtest: SSE streaming integrity: fragmented upstream chunks pipe complete (不碎不缓冲)
+    ok 3 - SSE streaming integrity: fragmented upstream chunks pipe complete (不碎不缓冲)
+      ---
+      duration_ms: 2205.7402
+      type: 'test'
+      ...
+    # Subtest: 10MB body cap: oversized request rejected at connection level
+    ok 4 - 10MB body cap: oversized request rejected at connection level
+      ---
+      duration_ms: 151.3451
+      type: 'test'
+      ...
+    # Subtest: health surface: policy effective + routes, zero key material
+    ok 5 - health surface: policy effective + routes, zero key material
+      ---
+      duration_ms: 4.1272
+      type: 'test'
+      ...
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+    # Subtest: CC real request shapes: ?query suffix + /count_tokens subpath route through (2026-09-14 405 接线根因回归)
+    ok 6 - CC real request shapes: ?query suffix + /count_tokens subpath route through (2026-09-14 405 接线根因回归)
+      ---
+      duration_ms: 10.7804
+      type: 'test'
+      ...
+# [proxy] 405 unmatched: GET /v1/messages
+    # Subtest: other routes → 405
+    ok 7 - other routes → 405
+      ---
+      duration_ms: 1.5937
+      type: 'test'
+      ...
+    1..7
+ok 3 - proxy: E2E — fidelity + SSE integrity + defense + health (in-process)
+  ---
+  duration_ms: 2433.9859
+  type: 'suite'
+  ...
+# [trimodel] card migrated to v4: 1 strategy(ies), 2 rule(s), 1 model set(s); active=st_mugwu5ot3o718g
+# Subtest: 本地侧: 应用到本机 (handleApplyStrategy, v4)
+    # Subtest: 无卡 → 404 人话
+    ok 1 - 无卡 → 404 人话
+      ---
+      duration_ms: 0.9938
+      type: 'test'
+      ...
+    # Subtest: 有卡无活动策略 → 400 人话
+    ok 2 - 有卡无活动策略 → 400 人话
+      ---
+      duration_ms: 3.8381
+      type: 'test'
+      ...
+    # Subtest: 活动策略悬挂 → 400 人话
+    ok 3 - 活动策略悬挂 → 400 人话
+      ---
+      duration_ms: 0.8468
+      type: 'test'
+      ...
+    # Subtest: 纯 quota 策略不可应用 → 400 人话（硬门：≥1 time 或 default）
+    ok 4 - 纯 quota 策略不可应用 → 400 人话（硬门：≥1 time 或 default）
+      ---
+      duration_ms: 1.4729
+      type: 'test'
+      ...
+    # Subtest: 正常路径：time→schedules（id=strategy:<pid>:<rid>、priority 归一）+ default→卡缓存 + quota 计数不进 schedules
+    ok 5 - 正常路径：time→schedules（id=strategy:<pid>:<rid>、priority 归一）+ default→卡缓存 + quota 计数不进 schedules
+      ---
+      duration_ms: 4.6966
+      type: 'test'
+      ...
+    # Subtest: v3 卡迁移入态：loadCard 自动升格 v4 → apply 可用（迁移+应用直通链）
+    ok 6 - v3 卡迁移入态：loadCard 自动升格 v4 → apply 可用（迁移+应用直通链）
+      ---
+      duration_ms: 6.5084
+      type: 'test'
+      ...
+    # Subtest: 幂等：重复 apply 结果一致
+    ok 7 - 幂等：重复 apply 结果一致
+      ---
+      duration_ms: 4.0416
+      type: 'test'
+      ...
+    # Subtest: 鉴权：错 token → 401
+    ok 8 - 鉴权：错 token → 401
+      ---
+      duration_ms: 0.8274
+      type: 'test'
+      ...
+    1..8
+ok 4 - 本地侧: 应用到本机 (handleApplyStrategy, v4)
+  ---
+  duration_ms: 28.134
+  type: 'suite'
+  ...
