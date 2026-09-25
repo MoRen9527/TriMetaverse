@@ -57,3 +57,10 @@
    - **trimmc**：M-SG Linux（sg 机），M 面服务域（对位 TriMMC）；
    - **trirmc**：河源 Linux，R 面服务域（对位 TriRMC）。
    跨平台=Windows/Linux 双形态；与问 3 命令族设计并案为「跨平台命令族」面；与 restore-claude-config.ps1 的吸收扩展关系同问 3。〔勘正留痕：本席 21:35 流转版曾误写「trirlc 管 R-HY Linux」，CEO 21:44 勘正为上表四象限，以本条为准〕
+
+## 七、批准记录与执行令（CEO 2026-09-25 22:57 批）
+
+- **批准**：CEO 22:57 批准联审设计方案（正身=`trees/trimodel-recovery-ladder-01/joint-plan.md` 双签终版，CPO 3d893e02＋CTO counter-sign c130c6c0→终版 24ba1ccc），原文「批」；BOD 亲勘在先（七问对表/三令对齐/预口径织入/边界无越位），准予呈批意见随案。
+- **执行令**：批后立即执行免再请（本任务书四·边界兑现）——按方案波次①连接配置页→②分层恢复结构→③命令族→④全链演练（R-HY M1 并入）→⑤回头测 D1；
+- **派工纪律**（照方案四节）：执行面拆派归 CTO 枢纽（D-15）；活体 settings.json 全程事故案补丁门；禁止越波；范围爬爬回方案五节对表；真活体 settings.json hash 零变化=演练总判据；
+- **BOD 哨位四读数候收**：波①②启动读数／R-HY M1 通路三态验绿／F1-F5 演练判据＋toast 实弹送达／防线继承 STE 25/25 对照验收（restore 退役前最后一门）。
