@@ -1,49 +1,49 @@
-# TriMC + TriLC + 本地研发仓：三角优化循环
+# 三角优化循环：本地研发仓 × TriRLC × TriMMC（四 daemon 矩阵现势版）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriMetaverse/docs/training/trimc-trilc-devrepo-triangle-loop.md
 - syncMode: source-only
-- lastSyncedAt: 2026-09-18
+- 事实基线时点（D-28）：2026-09-18——CEO 四 daemon 矩阵定谳口径；本版为四格拓扑现势重写
+- lastSyncedAt: 2026-09-25
+- 维护：RAndDTrainer（小吴）
 
-> **版本差注记（2026-09-18，四 daemon 矩阵定谳后历史档化）**：本文拓扑叙事为 2026-08-15/16 基线（「TriMC+TriLC」两名三角循环）——已被两波现势超越：①**2026-08-21 三元宇宙重定义**（架构说明 V0.5）：`TriLC`→`TriRLC`（元现实本地控制器，本机 8711）、`TriMC`→`TriMMC`（元虚拟主控，服务域 sg），历史名仅为兼容路径名，非新旧版本、无退役一说；②**2026-09-18 CEO 四 daemon 矩阵定谳**：TriMMC↔TriMLC（M 面，本机 8713）+TriRMC↔TriRLC（R 面，本机 8711）四名四角色，面×域绑定写死。本文中「TriLC 本地域主控」「TriMC 公司云端实体」等角色定性已被架构说明 §4 四行模块表取代；真源指针 `../TriLC/`、`../TriMC/` 已随仓改名失效（现 `TriRLC/`、`TriMMC/`）。**接手人以 `三元宇宙架构与模块说明.md` §4/§5/端口表 + `docs/tmv-whitepaper.md` §3.1 为准**；本文保留为历史档（v2.1 训练流程语义仍有效，四格拓扑版正身待重写）。
-
-> **v2.1 修订（CEO 2026-08-16）**：循环发起方向与审核粒度按训练流程 v2.1 修订——①任务从 **TriLC 端发起**（训练即生产形态）②TriMC 审核**岗位一对一镜像互审**（MC 侧小贾审 LC 侧小贾）③审核分流：**项目系统级问题 → 研发仓修复（走 git）**；非系统级 → 发回 TriLC 重做 ④**医生（研发仓）只修项目系统级 bug**——**TriMC/TriLC 自身的缺陷即属项目系统级**（自己没法修自己）；其他项目开发由 TriMC/TriLC 直接推进。见 two-phase-architecture-roadmap.md 训练流程节。
+> **版本差注记（2026-09-25 重写）**：本文前身（v2.1，2026-08-15/16 基线）以「TriMC+TriLC」两名讲三角循环。现势已两波超越：①2026-08-21 三元宇宙重定义——`TriLC`→`TriRLC`、`TriMC`→`TriMMC`（历史名保留为兼容路径名，非新旧版本、无退役一说）；②2026-09-18 CEO 四 daemon 矩阵定谳——TriMMC↔TriMLC（M 面，本机 8713）+TriRMC↔TriRLC（R 面，本机 8711）四名四角色。本版正文按现势名与现势定性重写；v2.1 训练循环语义（CEO 2026-08-16 修订）仍有效，全文保留；历史叙事浓缩入 §七（叙事冻结，原文可考 git 历史）。
+>
+> 静态架构（四格/端口/命名语源）第一站见 [四 daemon 角色矩阵导读](four-daemon-matrix-guide.md)；本文专讲**循环怎么转**。
 
 ## 培训判断
 
-**目标读者**：技术研发新人（需要理解 TriMetaverse 三角优化循环的全局架构）
+**目标读者**：技术研发新人（已读四 daemon 矩阵导读或架构说明 §4，理解 TriRLC/TriMMC 是什么）
 
 **学习起点**：
-- 已了解 TriMetaverse 是多模块 AI 原生开发平台
-- 知道 TriLC、TriMC 是什么（从 `三元宇宙架构与模块说明.md` §3/§4 获得）
+- 知道 TriMetaverse 是多模块 AI 原生开发平台，认识四 daemon 四格表
 - 对 Git、研发工作面、daemon 基本概念有认识
 
-**接手目标**：理解如何借助 TriMC 和本地研发仓来训练和改善 TriLC 能力，并能在这个循环中找到自己的参与位置。
+**接手目标**：理解如何借助 TriMMC 和本地研发仓来训练和改善 TriRLC 能力，并能在这个循环中找到自己的参与位置。
 
 ---
 
-## 一、先看全图：三角优化循环
+## 一、先看全图：三角优化循环（现势拓扑）
 
 ```mermaid
 graph TD
     subgraph DevRepo["本地研发仓 (D:/Code/ai/)"]
         A[TriMetaverse<br/>中央战略仓 + 工作面]
-        B[TriLC / TriMC / TriPilot<br/>兄弟仓群]
+        B[TriRLC / TriMMC / TriPilot<br/>兄弟仓群]
         C[OP 周记录 / 树文件<br/>docs/workflow/operating-records/]
     end
 
-    subgraph TriLC_Cluster["TriLC (本地域主控)"]
+    subgraph TriRLC_Cluster["TriRLC (R面·本地域, 本机 8711)"]
         D[HTTP + SSE Agent Loop]
         E[Daemon / Heartbeat / Cron]
         F[Session Reaper / Task Runtime]
     end
 
-    subgraph TriMC_Cluster["TriMC (公司云端实体)"]
-        G[员工编排层<br/>Soul Loader + Memory Injector]
-        H[Orchestration<br/>Task Controller]
-        I[Observability<br/>Audit + Timeline + Replay]
-        J[Node Bridge<br/>向 TriLC 派发任务]
+    subgraph TriMMC_Cluster["TriMMC (M面·服务域, sg 8710)"]
+        G[FADE 发布线<br/>员工定义灌宿主]
+        H[宿主桥主控<br/>ssh+bridge ↔ TriMLC]
+        I[实验成果落盘<br/>回元认知仓]
     end
 
     A -->|真实任务 / 需求 / 缺陷| D
@@ -51,25 +51,23 @@ graph TD
     D -->|执行结果 / 代码变更| A
     E -->|daemon 承载会话| B
 
-    G -->|注入 soul / memory / context| D
-    H -->|编排任务| J
-    J -->|派发任务| D
+    G -->|注入员工定义 / 能力| D
+    H -->|任务编排 / 派发| D
     D -->|执行回传| H
-    I -->|审计观测 / 沉淀知识| G
-
-    A -->|改进代码 / 文档| A
-    G -->|知识回哺| A
+    I -->|知识沉淀| A
 
     style DevRepo fill:#e1f5fe
-    style TriLC_Cluster fill:#fff3e0
-    style TriMC_Cluster fill:#f3e5f5
+    style TriRLC_Cluster fill:#fff3e0
+    style TriMMC_Cluster fill:#f3e5f5
 ```
 
-**一句话概括（v2.1）**：TriLC 发起并执行任务 → TriMC 同岗镜像审核（非系统级发回重做循环至通过）→ 项目系统级问题（含 TriMC/TriLC 自身缺陷）走研发仓医生修复（git）→ 能力沉淀 agent-core → TriLC 越练越强。
+**一句话概括（v2.1 语义，现势名）**：TriRLC 发起并执行任务 → TriMMC 同岗镜像审核（非系统级发回重做循环至通过）→ 项目系统级问题（含 TriRLC/TriMMC 自身缺陷）走研发仓医生修复（git）→ 能力沉淀 → TriRLC 越练越强。
+
+**三角在四格里的位置**：本循环的执行顶点是 R 面本地域格（TriRLC），编排/灌注顶点是 M 面服务域格（TriMMC）。另外两格——TriMLC（M 面本地域，8713，宿主激活+周平面回流 cron）与 TriRMC（R 面服务域，河源）——是矩阵的另外两格，不直接出现在本三角里；静态拓扑见 [四 daemon 角色矩阵导读](four-daemon-matrix-guide.md)。
 
 ---
 
-## 二、三个顶点：各是什么、真实职责
+## 二、三个顶点：各是什么、真实职责（现势定性）
 
 ### 2.1 本地研发仓（`D:/Code/ai/` 兄弟仓群）
 
@@ -77,219 +75,73 @@ graph TD
 ```
 D:/Code/ai/
 ├── TriMetaverse/    ← 中央战略仓 + 研发工作面
-├── TriLC/           ← Local Controller daemon
+├── TriRLC/          ← 现实面本地控制器（原 TriLC，2026-08-31 目录改名）
 ├── TriPilot/        ← VS Code 扩展
 ├── TriCode/         ← 共享代码运行时
-├── TriMC/           ← Meta Controller
+├── TriMMC/          ← 元虚拟面主控（原 TriMC，2026-09 目录改名）
 ├── TriCompany/      ← 赛博公司运行面
 └── ...
 ```
 
 **真实职责**：
 - **TriMetaverse**：中央战略仓 + 研发工作面
-  - `docs/workflow/operating-records/` —— 周 OP 记录（`OP-YYYYMM-Wnn-001.json`）
+  - `docs/workflow/operating-records/` —— 周 OP 记录
   - `.claude/agents/` —— 13 名 TriCompany 员工运行面
   - `docs/execution/` —— 执行计划、验证方案、能力清单
-- **兄弟仓群**：TriLC、TriPilot、TriCode、TriMC 等独立 git 仓
+- **兄弟仓群**：TriRLC、TriPilot、TriCode、TriMMC、TriRMC 等独立 git 仓
 
-**角色定位**：真实研发场景与语料的来源，也是 TriLC 改进代码的落点。
+**角色定位**：真实研发场景与语料的来源，也是 TriRLC 改进代码的落点——三层模型里的**元认知仓**（唯一无运行时的承重底座）。
 
-> 真源：`docs/三元宇宙架构与模块说明.md` §3、`v0.9.x-dual-track-tricompany-plan.md` §4.1
+> 真源：`docs/三元宇宙架构与模块说明.md` §3/§4、`docs/tmv-whitepaper.md` §3.1
 
-### 2.2 TriLC（本地域主控，`../TriLC/`）
+### 2.2 TriRLC（现实面本地控制器，`../TriRLC/`，本机 8711）
 
 **核心能力**：
 - HTTP + SSE Agent Loop（长连接会话）
-- Daemon（后台服务）
-- Heartbeat（心跳监测）
+- Daemon（后台服务）/ Heartbeat（心跳监测）
 - Cron（定时任务，支持周平面自动化）
 - Session Reaper（会话清理）
 - Task Runtime / Planner / ToolBus（任务执行编排）
-- MCP Server 接入（工具扩展）
-- Mirror / Sync / Update（状态同步）
+- MCP Server 接入（工具扩展）/ Mirror / Sync / Update（状态同步）
 
-**源码结构**（示意）：
-```
-TriLC/src/
-├── runtime/          # detached daemon shell
-├── daemon/           # daemon 服务
-├── heartbeat/        # 心跳监测
-├── cron/             # 定时任务引擎
-├── session-store/    # 会话持久化
-├── task-runtime/     # 任务执行状态
-├── planner/          # 规划与重新规划
-├── toolbus/          # 本地工具总线
-├── mcp/              # MCP server 接入
-├── skills/           # 技能封装
-├── mirror/           # 状态镜像
-├── sync/             # 同步机制
-└── update/           # 更新机制
-```
+**角色定位**：本地人机协作的本域主入口，与 TriRMC 共用自研内核 **agent-core**（元现实层策略：会话、调度、权限、cron、进程监督、审计全自研，不依赖单一宿主）；它跑着研发，同时它自己就是被研发的对象（dogfooding 自举）。
 
-**角色定位**：本地人机协作主入口，承载研发会话的运行载体；它跑着研发，同时它自己就是被研发的对象（dogfooding 自举）。
+> 真源：`../TriRLC/README.md`、`docs/execution/trilc-capability-checklist.md`、架构说明 §4
 
-> 真源：`../TriLC/README.md`、`docs/execution/trilc-capability-checklist.md`、`三元宇宙架构与模块说明.md` §4
+### 2.3 TriMMC（元虚拟面主控，`../TriMMC/`，sg 8710）
 
-### 2.3 TriMC（公司云端实体 / Meta Controller，`../TriMC/`）
+**现势定性（勘正旧版「编排观测中枢」口径）**：元虚拟系统最小实现的服务域侧——与 TriMLC 经 ssh+bridge 通信，构成**宿主可整体替换**的成熟虚拟研发环境。元虚拟**不自建会话管理与执行内核**，只负责两件事：
+- 把员工定义（合同/五件套）经 **FADE 发布线**灌入宿主
+- 把实验成果落盘回元认知仓
 
-**核心能力**：
-- **员工编排层**（TriMC 自建，高于 Claude Code infra）：
-  - Soul Loader —— 员工人格加载
-  - Memory Injector —— 记忆注入
-  - Tool Gater —— 工具门禁
-  - Context Builder —— 上下文构建
-- **Orchestration**：
-  - Task Controller —— 任务状态机
-  - Session Bridge —— 会话桥接
-  - TriLC Dispatch Executor —— 向 TriLC 派发任务
-  - Employee Scheduler / Registry —— 员工调度与注册表
-- **Observability**：
-  - Audit Mapping —— 审计映射
-  - Timeline Query / Replay —— 时间线查询与回放
-  - Postgres Stores —— 持久化存储
-- **Node Bridge**：向 TriLC 派发任务的通道
+**演进注**：TriMMC 早期自研运营资产（cron 周平面/五维同步/observability）规划双跑迁入 TriRMC，迁移后收窄为**宿主桥主控**（架构说明 §4）。
 
-**源码结构**（示意）：
-```
-TriMC/src/
-├── server/                    # HTTP 服务端点
-├── task-controller/           # 任务状态机
-├── orchestration/             # 编排层
-│   ├── session-bridge.ts
-│   ├── trilc-executor.ts
-│   └── employee-scheduler.ts
-├── observability/             # 审计与回溯
-│   ├── mapper.ts
-│   ├── timelineReplayApi.ts
-│   └── postgresClient.ts
-├── soul-loader/               # 员工人格加载
-├── memory-injector/           # 记忆注入
-├── tool-gater/                # 工具门禁
-├── context-builder/           # 上下文构建
-├── agent-loop/                # Agent 循环引擎
-├── heartbeat/                 # 心跳检查（Python）
-└── cron/                      # 定时任务（TypeScript）
-```
-
-**角色定位**：编排与观测中枢——把公司知识/员工人格注入会话、观测执行、沉淀回知识体系；TriLC 崩溃时的云端 fallback。
-
-**当前状态提醒**：员工编排层部分能力已落地（soul-loader、memory-injector、tool-gater、context-builder 已有源码），完整编排能力仍在建设中。
-
-> 真源：`../TriMC/README.md`、`三元宇宙架构与模块说明.md` §3、`server-fleet-trilc-parity-plan.md`
+> 真源：`../TriMMC/README.md`、`docs/tmv-whitepaper.md` §3.1、架构说明 §4
 
 ---
 
-## 三、三条边：数据/控制/反哺怎么流
+## 三、循环的边：数据/控制/反哺怎么流
 
-### 3.1 边 1：研发仓 → TriLC（任务与编排流）
+| 边 | 流动内容 | 方式 |
+| --- | --- | --- |
+| 研发仓 → TriRLC | 真实任务：OP 周计划、树文件、需求/缺陷 | 周计划/树文件挂 `docs/workflow/operating-records/`，cron 触发（本地周平面回流宿主=8713 TriMLC cron） |
+| TriRLC → 研发仓 | 代码变更（dogfooding）、文档更新、执行回传 | Agent 工具改码 → 工程门禁（`tsc --noEmit` + `npm test`）→ git 提交 |
+| TriMMC → TriRLC | 员工定义/能力注入、任务派发 | FADE 发布线灌宿主；宿主桥派发 |
+| 研发仓 → TriMMC | 知识反哺：员工成长、registry 更新 | Observability 沉淀 → 更新 `docs/registry/`、员工 memory |
+| TriRLC → TriMMC | 任务结果、状态上报、能力验证 | HTTP SSE 回传；审核方更新能力清单 |
 
-**流动内容**：
-- **真实任务**：OP 周计划、树文件（`tree-op.json`）、需求/缺陷
-- **工作面**：TriMetaverse 作为统一工作面（`.claude/agents/`、`docs/workflow/`）
-- **编排触发**：Cron 定时触发（周度平移、自动化任务）
-
-**流动方式**：
-- TriMC 从 `docs/workflow/operating-records/` 读取周计划
-- 通过 Task Controller 派发任务到 TriLC
-- TriLC Daemon 承载 Agent 会话在仓上执行
-
-> 真源：`v0.9.x-dual-track-tricompany-plan.md` §3.3、`trilc-capability-checklist.md` §2.1/2.2
-
-### 3.2 边 2：TriLC → 研发仓（执行产物流）
-
-**流动内容**：
-- **代码变更**：TriLC 自身改进代码（dogfooding 自举）
-- **文档更新**：OP 记录、树文件状态更新
-- **执行回传**：任务结果、日志、证据
-
-**流动方式**：
-- TriLC Agent 通过 Read/Edit/Write 工具修改代码
-- 修改后触发 `tsc --noEmit` + `npm test`（工程门禁）
-- 通过 Git 提交到研发仓（或通过 TriCode 编排层生成 PR）
-
-> 真源：`self-dev-loop-design.md` §2/§3、`trilc-capability-checklist.md` §3.1/3.2
-
-### 3.3 边 3：TriMC → TriLC（编排与观测流）
-
-**流动内容**：
-- **编排**：任务派发、员工调度、会话桥接
-- **注入**：Soul（人格）、Memory（记忆）、Context（上下文）
-- **观测**：审计事件、时间线记录、回溯数据
-
-**流动方式**：
-- TriMC Orchestration 层通过 Node Bridge 派发任务
-- Soul Loader / Memory Injector 向会话注入员工能力
-- Observability 层记录执行轨迹，支持回溯与审计
-
-> 真源：`三元宇宙架构与模块说明.md` §3、`server-fleet-trilc-parity-plan.md` §二
-
-### 3.4 边 4：研发仓 → TriMC（知识反哺流）
-
-**流动内容**：
-- **知识沉淀**：执行经验、改进方案、最佳实践
-- **员工成长**：新能力、新技能、新工作流
-- **Registry 更新**：产品状态、代码状态、边界变更
-
-**流动方式**：
-- TriMC Observability 层观测执行，沉淀到知识体系
-- 更新 `docs/registry/`、员工 memory、公司流程
-- 反哺下一轮任务编排，提升会话质量
-
-> 真源：`v0.9.x-dual-track-tricompany-plan.md` §3.2（互促闭环）
-
-### 3.5 边 5：TriLC → TriMC（执行回传与反馈流）
-
-**流动内容**：
-- **任务结果**：task_done / task_error 语义
-- **状态上报**：进度、阻塞、超时、degraded 模式
-- **能力验证**：checklist 打勾、证据登记
-
-**流动方式**：
-- TriLC 通过 HTTP SSE 回传任务结果
-- TriMC Task Controller 更新任务状态
-- 审核方（TriMC 舰队）根据结果更新能力清单
-
-> 真源：`trilc-capability-checklist.md` §一、§2.2
+> 真源：`v0.9.x-dual-track-tricompany-plan.md` §3.2/§3.3、`trilc-capability-checklist.md` §2/§3
 
 ---
 
-## 四、循环怎么转起来：用一个真实轮次走一遍
+## 四、v2.1 训练循环语义（仍有效的流程规则）
 
-以 **W33 M2-R12 轮次（生产链域验证）** 为例：
+CEO 2026-08-16 修订、经 2026-09-25 复核仍有效的四条流程语义：
 
-### 步骤 1（v2.1）：TriLC 发起任务（训练即生产形态）
-- 小贾（CEOChiefOfStaff）更新 `docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json`
-- 创建树文件 `trees/r12-production-chain/tree-op.json`
-- 树节点定义：验证 MSI 构建、安装态 daemon、服务管理、升级回滚
-
-### 步骤 2（v2.1）：TriLC 执行，完成后提交 TriMC 审核
-- TriMC Task Controller 读取树文件
-- 通过 Node Bridge 派发任务到 TriLC
-- Soul Loader 注射小狄（CTO）、小柯（TestEngineer）人格
-
-### 步骤 3：TriLC 执行任务
-- TriLC Daemon 承载会话
-- 小狄执行 `build-desktop.ps1` 构建 MSI
-- 小柯隔离实例安装验证（`/healthz` 200、14/14 agent 可用）
-- 执行结果通过 SSE 回传 TriMC
-
-### 步骤 4：产物落盘研发仓
-- 构建成功 → `v0.4.3-r12` ZIP 入 `output/`
-- 安装态验证通过 → contracts 14 份入包
-- 更新 `trilc-capability-checklist.md` §5.1-5.4 状态为"通过"
-- Git 提交证据（commit SHA、日志路径）
-
-### 步骤 5（v2.1）：TriMC 同岗镜像审核——岗位一对一（MC 侧小贾审 LC 侧小贾产出），给改进意见循环至通过；**项目系统级问题（含 TriMC/TriLC 自身缺陷——自己没法修自己）走研发仓修复（git）**，非系统级发回 TriLC 重做
-- TriMC 舰队审核结果（构建无残留、安装态验证通过）
-- 更新清单状态 + 登记证据
-- 沉淀经验到知识体系（如：安装态路径差异清单、打包 contracts 规则）
-
-### 步骤 6：反哺下一轮
-- 新知识注入下一轮任务（如 W34 周计划）
-- TriLC 能力提升 → 可承担更复杂任务
-- 循环继续，TriLC 越用越强
-
-> 真源：`docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json`、`trilc-capability-checklist.md` §5
+1. **任务从 TriRLC 端发起**（训练即生产形态）
+2. **TriMMC 审核走岗位一对一镜像互审**（MC 侧小贾审 LC 侧小贾）
+3. **审核分流**：项目系统级问题 → 研发仓修复（走 git）；非系统级 → 发回 TriRLC 重做
+4. **医生（研发仓）只修项目系统级 bug**——TriRLC/TriMMC 自身的缺陷即属项目系统级（自己没法修自己）；其他项目开发由 TriRLC/TriMMC 直接推进
 
 ---
 
@@ -300,92 +152,61 @@ TriMC/src/
 | | 开发侧（dev） | 生产侧（prod） |
 | --- | --- | --- |
 | 分支 | `dev` | `main` |
-| 运行环境 | 源码 + CLI（`claude`） | MSI 安装版（`trilc daemon`） |
+| 运行环境 | 源码 + CLI | 安装版（daemon） |
 | 节奏 | 天级迭代 | 周级 Release |
 | 谁在用 | AI C-suite + 人类开发者 | 人类用户 + daemon 自治 |
-| 代码修改 | 直接编辑文件 | 通过 TriCode 自研能力（或提 Bug） |
 | 工作面对齐 | 推送到 dev → | ← 生产自研提交 PR |
 
-**互促闭环**：
-```text
-① 需求/缺陷发现（生产轨）→ ② 实验/开发（dev）→ ③ 合入/构建
-→ ④ 部署/验证（prod）→ 回到 ①
-```
+**互促闭环**：需求/缺陷发现（生产轨）→ 实验/开发（dev）→ 合入/构建 → 部署/验证（prod）→ 回到起点。
 
-> 真源：`v0.9.x-dual-track-tricompany-plan.md` §3.1/§3.2
+> 真源：`docs/execution/v0.9.x-dual-track-tricompany-plan.md` §3.1/§3.2
 
 ---
 
-## 六、自研循环：TriLC 用自己研发自己
+## 六、自研循环：TriRLC 用自己研发自己
 
-**设计核心**：TriLC 作为 agent 执行器，产出代码变更，经过 CI 门禁，合并回 main，TriLC 拉取更新，实现自举。
+**设计核心**：TriRLC 作为 agent 执行器，产出代码变更，经过 CI 门禁，合并回 main，TriRLC 拉取更新，实现自举。
 
-**链路**：
-```text
-TriLC（agent 执行）→ TriCode（编排：diff → branch → commit → PR）
-→ OpenCode / Claude Code（代码生成，可选）
-→ prod/Wxx 分支（暂存）→ main PR（review + CI 门禁）
-→ TriCade 生产（拉取 + 热更新）
-```
-
-**当前状态**：v1 设计完成（`self-dev-loop-design.md`），代码合入 dev，Runtime 验证阻塞于生产环境。方案 B（纯 TriLC agent 编码能力）测试计划已定。
+**状态（D-28 时点标注）**：v1 设计完成（代码合入 dev），生产环境验证阻塞——此为 2026-08 基线读数，现势以 `docs/execution/selfdev-v1-test-plan.md` 与近期 operating-records 为准。
 
 > 真源：`docs/engineering/self-dev-loop-design.md`、`docs/execution/selfdev-v1-test-plan.md`
 
 ---
 
-## 七、新人怎么参与这个循环
+## 七、历史档（叙事冻结，2026-08-15/16 基线）
 
-### 7.1 理解你的位置
+**v2.1 原始基线**：以「TriMC（公司云端实体）+ TriLC（本地域主控）」两名讲三角循环；当时 TriMC 定性含员工编排层（Soul Loader/Memory Injector/Tool Gater/Context Builder）+ Orchestration + Observability。该定性已被架构说明 §4 现势口径取代（元虚拟不自建内核，见 §2.3）。
 
-| 角色 | 位置 | 参与方式 |
-| --- | --- | --- |
-| **研发新人** | 本地研发仓 | 在 `dev` 分支开发，提交 PR，改进代码 |
-| **测试工程师** | TriLC 执行层 | 通过 TriLC 会话验证，更新 checklist |
-| **培训学习者** | 教程读者 | 阅读本教程，理解循环，找到参与点 |
-
-### 7.2 从哪里开始
-
-1. **先读大图**：理解三角关系和循环流向（本教程 §一/§二）
-2. **选一个顶点深入**：
-   - 对本地开发感兴趣 → 看 `../TriLC/README.md` + `trilc-capability-checklist.md`
-   - 对编排和观测感兴趣 → 看 `../TriMC/README.md` + `server-fleet-trilc-parity-plan.md`
-   - 对战略和工作流感兴趣 → 看 `docs/execution/v0.9.x-dual-track-tricompany-plan.md`
-3. **跟踪一轮真实执行**：查看 `docs/workflow/operating-records/` 最新一周的 OP 记录和树文件
-4. **找个小任务参与**：从文档修复、测试补充、能力验证小项开始
-
-### 7.3 验证你的理解
-
-- 能画出三角循环图吗？
-- 能说出每条边流动的是什么吗？
-- 能找到最近一周的真实轮次并复述它吗？
+**历史轮次示例（W33 M2-R12，生产链域验证，2026-08）**：小贾更新 W33 OP 记录 → 创建树文件 `trees/r12-production-chain/` 验证 MSI 构建/安装态 daemon/服务管理/升级回滚 → TriMC 侧注入小狄（CTO）、小柯（TestEngineer）人格 → 执行侧构建 MSI、隔离实例安装验证（`/healthz` 200、14/14 agent 可用）→ 产物入 `output/`、清单打勾、证据登记 → 同岗镜像审核通过 → 经验沉淀反哺 W34。当时文中名（TriLC/TriMC）按架构说明 §5 别名换算为现名。完整原文见 git 历史（本文件 2026-09-18 注记版）。
 
 ---
 
-## 八、当前成熟度与常见误区
+## 八、新人怎么参与 + 常见误区
 
-### 8.1 已落地 / 建设中
+### 8.1 参与路径
 
-| 组件 | 状态 | 说明 |
-| --- | --- | --- |
-| TriLC 基础执行 | **已落地** | M2 验收完成，25/25 能力项全勾 |
-| TriLC Cron/Heartbeat | **已落地** | 三层已合入 dev；生产链 5.x 自 2026-08-13 起转为每版常设门禁 |
-| TriMC 编排层 | **建设中** | Soul/Memory/Context 已有源码，完整编排能力待完善 |
-| TriMC Observability | **已落地** | Audit、Timeline、Replay 已实现 |
-| 自研循环 v1 | **设计中** | 链路设计完成，生产环境验证阻塞 |
-| 双轨互促 | **已落地** | dev ↔ prod 共享工作面机制就绪 |
+1. **先读大图**：四 daemon 矩阵导读（静态）→ 本文（循环动态）
+2. **选一个顶点深入**：
+   - 本地执行面 → `../TriRLC/README.md` + `docs/execution/trilc-capability-checklist.md`
+   - 元虚拟/发布面 → `../TriMMC/README.md` + `docs/tmv-whitepaper.md` §3.1
+   - 战略与工作流 → `docs/execution/v0.9.x-dual-track-tricompany-plan.md`
+3. **跟踪一轮真实执行**：看 `docs/workflow/operating-records/` 最新一周的 OP 记录和树文件
+4. **找个小任务参与**：从文档修复、测试补充、能力验证小项开始
 
-> 真源：`server-fleet-trilc-parity-plan.md` §四、`v0.9.x-dual-track-tricompany-plan.md` §1.1
+### 8.2 验证理解
 
-### 8.2 常见误区
+- 能画出三角循环图并说出每条边流动的是什么吗？
+- 能说清三角与四格矩阵的关系（哪两格在循环里、哪两格在外沿）吗？
+- 能找到最近一周的真实轮次并复述它吗？
+
+### 8.3 常见误区
 
 | 误区 | 正解 |
 | --- | --- |
-| TriMC 是服务器版 runtime | TriMC 是公司级运行面，编排与观测中枢；TriLC 是本地人机协作主入口 |
-| dev 和 prod 是两个工作面 | dev 和 prod 共享同一个 TriMetaverse 工作面，只是运行环境不同 |
-| TriLC 只是个工具 | TriLC 是被研发的对象，它跑着研发，同时改进自己（dogfooding） |
-| TriMC 员工编排层已完整 | 部分能力已落地（soul-loader、memory-injector），完整编排仍在建设中 |
-| 自研循环已投产 | v1 设计完成，代码合入 dev，生产环境验证阻塞 |
+| 「TriMC 服务器正式版」是独立的服务器 runtime 目标态 | TriMMC 定性是元虚拟主控（FADE 灌宿主+落盘，宿主可整体替换），运营资产规划双跑迁 TriRMC 后收窄宿主桥主控——旧「服务器版 runtime」叙事为历史口径 |
+| TriRLC 是个普通工具 | 它是被研发的对象：跑着研发、同时改进自己（dogfooding 自举），且用自研内核 agent-core |
+| 训练循环要单独立一套「训练环境」 | 训练即生产形态（v2.1）：任务从 TriRLC 端发起，生产即训练 |
+| dev 和 prod 是两个工作面 | 共享同一个 TriMetaverse 工作面，只是运行环境与节奏不同 |
 
 ---
 
@@ -393,34 +214,16 @@ TriLC（agent 执行）→ TriCode（编排：diff → branch → commit → PR�
 
 | 主题 | 真源文件 |
 | --- | --- |
-| 三角架构与模块边界 | `docs/三元宇宙架构与模块说明.md` |
+| 四 daemon 静态矩阵/命名治理 | `docs/三元宇宙架构与模块说明.md` §4/§5 + 端口部署表；[四 daemon 角色矩阵导读](four-daemon-matrix-guide.md) |
+| 三层模型 | `docs/tmv-whitepaper.md` §3.1 |
 | 双轨互促机制 | `docs/execution/v0.9.x-dual-track-tricompany-plan.md` |
-| TriLC 能力清单 | `docs/execution/trilc-capability-checklist.md` |
-| 服务器舰队与 TriLC 追平 | `docs/execution/server-fleet-trilc-parity-plan.md` |
-| 自研循环设计 | `docs/engineering/self-dev-loop-design.md` |
-| 自研循环 v1 测试计划 | `docs/execution/selfdev-v1-test-plan.md` |
-| TriLC README | `../TriLC/README.md` |
-| TriMC README | `../TriMC/README.md` |
-| 培训目录惯例 | `docs/training/README.md` |
-| OP 记录示例 | `docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json` |
-
----
-
-## 十、总结
-
-**三角三顶点各一句**：
-- **本地研发仓**：提供真实任务和工作面，是改进代码的落点。
-- **TriLC**：本地人机协作主入口，跑着研发的同时改进自己。
-- **TriMC**：编排与观测中枢，注入能力、审计执行、沉淀知识。
-
-**循环五步一句话概括**：
-研发仓出任务 → TriLC 执行并产出改进 → TriMC 编排观测 → 沉淀知识反哺研发仓 → TriLC 越用越强。
-
-**新人参与路径**：
-理解大图 → 选一个顶点深入 → 跟踪一轮真实执行 → 找个小任务参与 → 验证理解。
+| TriRLC 能力清单 | `docs/execution/trilc-capability-checklist.md` |
+| 服务器舰队与追平计划 | `docs/execution/server-fleet-trilc-parity-plan.md` |
+| 自研循环设计/测试计划 | `docs/engineering/self-dev-loop-design.md`、`docs/execution/selfdev-v1-test-plan.md` |
+| TriRLC / TriMMC 仓 | `../TriRLC/README.md`、`../TriMMC/README.md` |
+| 历史轮次示例 | `docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json` |
 
 ---
 
 > 本教程维护：RAndDTrainer（小吴）
-> 更新触发：当三角架构、循环机制、模块边界有重大变更时，由 CEOChiefOfStaff 同步后更新。
-> 下次审查：M4 源码替换启动时。
+> 更新触发：四 daemon 矩阵、循环机制、模块边界有新定谳时，由 CEOChiefOfStaff 同步后更新。
