@@ -1,8 +1,0 @@
-﻿{
-    "steps":  [
-                  "register candidate manifest",
-                  "capture delivery outputs",
-                  "enter assurance observation"
-              ],
-    "mode":  "local-only"
-}

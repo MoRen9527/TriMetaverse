@@ -1,8 +1,0 @@
-﻿{
-    "summary":  "Verify-integration replay report",
-    "status":  "passed",
-    "checks":  [
-                   "focused template/schema unittest passed",
-                   "stage contract review completed"
-               ]
-}
