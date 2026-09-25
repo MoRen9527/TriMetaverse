@@ -1,8 +1,8 @@
 # TASK-TRIMODEL-RECOVERY-LADDER-01 联审设计方案（七问·双签呈批稿）
 
 - sourceOfTruth: 本件（双签方案正身；两独立段 `cpo-view.md`/`cto-independent-review.md` 为合成依据留树不撤）
-- syncMode: final-on-both-signs
-- lastSyncedAt: 2026-09-25T22:11+0800（合成稿 v1）
+- syncMode: final（双签闭环：CPO 3d893e02＋CTO counter-sign c130c6c0）
+- lastSyncedAt: 2026-09-25T22:2x+0800（元信息翻 final，签区零触）
 - 呈批流: COS → CEO 批；**批后立即执行免再请**（任务书四·边界）
 - 合成基线: 任务书终态 354ec7fb（七问含 21:44 勘正四象限）＋BOD 联裁预口径四条（硬约束已织入问3）
 
