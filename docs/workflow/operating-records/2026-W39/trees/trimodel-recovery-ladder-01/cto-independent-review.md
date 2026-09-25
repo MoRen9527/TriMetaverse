@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（CTO 独立意见树内正身；互不通气期独立产出，未与 CPO 交流）
 - syncMode: draft（候与 CPO 合成双签方案后转 final）
-- lastSyncedAt: 2026-09-25 22:1x +0800（date 现查 22:00:52 hook 链）
+- lastSyncedAt: 2026-09-25 22:1x +0800（date 现查 22:00:52 hook 链；22:06 按 BOD 联裁预口径四条更新问3 脚本关系条款+脚本状态事实勘正）
 - 意见基线: 任务书终态 354ec7fb（含第六节追加令+四族勘正版）+ 本席实勘四件（下标）
 
 ## 实勘基础（本席亲勘，非转抄）
@@ -75,7 +75,12 @@
 
 实现形态：**共享 core 包**（TypeScript：凭据健康门/备份轮换/原子写/断言/结果行全纪律件）+四仓 bin 薄包装——四族一份纪律，防四实现四漂移。全局命令名解析现勘候执行窗首项（本机 trilc 现指 TriMLC dist 实勘过，其余三仓装位随部署窗定）。
 
-**与 restore-claude-config.ps1 关系裁决：吸收取代。** 逻辑移植共享 core（该脚本 f887b27 FSD 修复版的修-1..6 全套纪律+沙箱 25/25 验证成果=core 实现的验收蓝本）；脚本退役为带外应急工具，保至命令族过首个里程碑后归档。注：脚本现处 frozen 态（897b0da），若裁吸收取代则解冻 revert 链可缩短——**frozen 件处置涉 BOD 权，本裁决标注候 BOD 联裁**。
+**与 restore-claude-config.ps1 关系条款（22:0x 按 BOD 联裁预口径落定；勘正注：脚本非 FROZEN 态——今晨 11:15-11:19 BOD 已亲执解冻，TC 016a05f revert 哨兵+2d08d7c merge 修复正文三面对表同值，现役=修复版在 dev 主线。本席初稿「frozen 候联裁」表述系信息滞后，以本段为准；交叉点性质=修复资产去向+防线继承，非解冻审批）：**
+
+1. **吸收取代成立**（BOD 预口径①）：restore 能力并入四族命令契约，脚本转退役通道；逻辑移植共享 core（f887b27 修复版修-1..6 全套纪律+STE 复验 25/25 读数=core 实现的**继承验收对照基线**）；
+2. **防线继承条款（硬，BOD 预口径②）**：新 trimlc 命令契约须全量继承事故五防线——空钥 fail-closed／独立钥源序／干跑沙箱／自验 token 非空+auth 冒烟／活体操作审批门——**一条不许丢**，以 STE 复验 25/25 读数为对照基线验收；
+3. **退役节奏（BOD 预口径③）**：四族命令落地+全链演练跑通（任务书步骤④毕）后脚本才退役；过渡期两套并存、以新族为准；
+4. **退役动作=BOD 验收制**（预口径④）：TC 单提交+FROZEN-NOTICE 档案互链留痕，与解冻同制。
 
 **多模型模板三件套**：`presets/<provider>.json` = `{base_url, model, key_placeholder}`；bigmodel 第一实现（现役 presets/direct.json 改模板形）；deepseek 等后续加文件即插拔；钥不进模板（独立钥文件 per-provider 命名扩展 `.deploy-key.bigmodel`）。
 
