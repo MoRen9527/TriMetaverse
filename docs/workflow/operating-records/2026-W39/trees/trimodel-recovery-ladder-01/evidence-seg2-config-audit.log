@@ -1,0 +1,5 @@
+AUDIT | 2026-09-25T20:06:38.890Z | who=ui-restore | mode=restore | backup=D:\tmp\ste-fb\settings.json.bak-2026-09-25T20-06-38-883Z | assert=pass | result=ok | detail=keys=11 rotation_removed=0
+AUDIT | 2026-09-25T20:06:40.861Z | who=ui-preview | mode=restore | backup=none | assert=n/a | result=ok | detail=idempotent-short-circuit
+AUDIT | 2026-09-25T20:06:40.935Z | who=ui-restore | mode=restore | backup=none | assert=n/a | result=ok | detail=idempotent-short-circuit
+AUDIT | 2026-09-25T20:06:44.339Z | who=ui-rollback | mode=rollback | backup=settings.json.bak-2026-09-25T20-06-38-883Z | assert=pass | result=ok | detail=pre_rollback_backup=created rotation_removed=0
+AUDIT | 2026-09-25T20:11:26.914Z | who=ui-restore | mode=restore | backup=D:\tmp\ste-fb\settings.json.bak-2026-09-25T20-11-26-911Z | assert=pass | result=ok | detail=keys=11 rotation_removed=0
