@@ -51,4 +51,9 @@
    - **问 7 恢复梯立体化**：TriModel 上 R-HY 后恢复梯重排——R-HY 服务故障→重启→无效→TriMLC（本地 daemon）探活失败自动降级本地直连→弹窗→人工；远程配置面故障与本地兜底的衔接；本地实例退役节奏与「本地直连=唯一本地恢复锚」的定位。
 3. **边界增补**：R-HY 部署=新增部署非动生产数据（CEO 明令开闸）；部署执行候方案批后，方案先行；跨机操作守机位断言纪律（D-24：dev 机/sg 机/R-HY 各走各面通道）；R-HY 生产冻结面不因本令解冻（本令只开 TriModel 部署位）。
 4. **截点**：追加面并入在途联审，总截点不变（23:30 前呈批）；联审席如评估范围扩容需延长，随首报一并申请，BOD 按需核。
-5. **二追令（CEO 2026-09-25 21:34）**：**跨平台可用的 trimlc 与 trirlc 命令族均需构建**——trimlc 管 M 面本地域（本机 Windows）、trirlc 管 R 面本地域（R-HY 为 Linux），跨平台=Windows/Linux 双形态；与问 3 命令族设计并案为「跨平台命令族」面（三机两域覆盖：本机/sg/R-HY；与 restore-claude-config.ps1 的吸收扩展关系同问 3）。
+5. **二追令（CEO 2026-09-25 21:34，21:44 勘正扩容为四族）**：**四族命令都做，两域×两面四象限全覆盖**——
+   - **trimlc**：本机 Windows，M 面本地域（对位 TriMLC daemon 8713）；
+   - **trirlc**：本机 Windows，R 面本地域（对位 TriRLC daemon 8711）；
+   - **trimmc**：M-SG Linux（sg 机），M 面服务域（对位 TriMMC）；
+   - **trirmc**：河源 Linux，R 面服务域（对位 TriRMC）。
+   跨平台=Windows/Linux 双形态；与问 3 命令族设计并案为「跨平台命令族」面；与 restore-claude-config.ps1 的吸收扩展关系同问 3。〔勘正留痕：本席 21:35 流转版曾误写「trirlc 管 R-HY Linux」，CEO 21:44 勘正为上表四象限，以本条为准〕
