@@ -2,7 +2,7 @@
 
 > sourceOfTruth: 本件（一次性手测环境说明，随树归档）
 > syncMode: snapshot
-> lastSyncedAt: 2026-09-25T19:43Z（+0800=2026-09-26 03:43）
+> lastSyncedAt: 2026-09-25T19:55Z（+0800=2026-09-26 03:55；r2=CTO 点名风险项实勘勘正笔）
 > 作者: FSD 小全（m-fsd）· 验收派单: CTO 段1 签认指示 · 手测执行: STE 小柯
 
 ---
@@ -50,7 +50,6 @@ $env:TRIMODEL_PORT = '3399'
 $env:TRIMODEL_ADMIN_TOKEN = 'ste-manual-token-2026'
 $env:TRIMODEL_CLAUDE_SETTINGS = 'D:\tmp\ste-fb\settings.json'   # 关键钉位：写路径全落临时文件
 $env:TRIMODEL_AUDIT_LOG = 'D:\tmp\ste-fb\config-audit.log'      # 审计行落临时域
-$env:TRIMODEL_DEPLOY_KEY = 'ste-deploy-key-2026'                # 预览门 dry-run 用（§3 步③需要）
 node --import tsx src\server.ts
 ```
 
@@ -100,16 +99,16 @@ if (-not (Test-Path $set)) { @'
 {"env":{"ANTHROPIC_AUTH_TOKEN":"sk-old-token-0123456789","ANTHROPIC_BASE_URL":"https://old.example.com/api","ANTHROPIC_MODEL":"old-model"},"model":"old-model"}
 '@ | Set-Content -Encoding utf8 $set }
 
-# ① 预览 dry-run：200 + 零写盘
+# ① 预览 dry-run：200 + 零写盘（三输入体：base_url/model=bigmodel 模板现值）
 $before = (Get-Item $set).LastWriteTimeUtc
 $pv = Invoke-RestMethod -Uri "$base/v1/config/claude-fallback/preview" -Method Post -Headers $H `
-  -Body (@{ template='bigmodel'; api_key=$key } | ConvertTo-Json)
+  -Body (@{ base_url='https://open.bigmodel.cn/api/anthropic'; api_key=$key; model='glm-5.3-flash' } | ConvertTo-Json)
 Check 'preview-200'            ($pv.diff -ne $null)
 Check 'preview-zero-write'     ((Get-Item $set).LastWriteTimeUtc -eq $before)
 
 # ② 写入：200 + 三组值落盘 + 其余键保留
 $r = Invoke-RestMethod -Uri "$base/v1/config/claude-fallback/restore" -Method Post -Headers $H `
-  -Body (@{ template='bigmodel'; api_key=$key } | ConvertTo-Json)
+  -Body (@{ base_url='https://open.bigmodel.cn/api/anthropic'; api_key=$key; model='glm-5.3-flash' } | ConvertTo-Json)
 $doc = Get-Content $set -Raw | ConvertFrom-Json
 Check 'write-200-message'   ($r.message -match '重启会话后生效')
 Check 'write-base-url'      ($doc.env.ANTHROPIC_BASE_URL -match 'bigmodel')
@@ -130,7 +129,7 @@ Check 'audit-no-raw-key' (($null -eq $audit) -or ($audit -notmatch [regex]::Esca
 $snap = Get-Content $set -Raw
 try { Invoke-RestMethod -Uri "$base/v1/config/claude-fallback/restore" -Method Post `
   -Headers @{ authorization = 'Bearer wrong-token'; 'content-type' = 'application/json' } `
-  -Body (@{ template='bigmodel'; api_key=$key } | ConvertTo-Json) | Out-Null; Check 'unauth-401' $false }
+  -Body (@{ base_url='https://open.bigmodel.cn/api/anthropic'; api_key=$key; model='glm-5.3-flash' } | ConvertTo-Json) | Out-Null; Check 'unauth-401' $false }
 catch { Check 'unauth-401' ($_.Exception.Response.StatusCode.value__ -eq 401) }
 Check 'unauth-zero-write' ((Get-Content $set -Raw) -eq $snap)
 
@@ -139,7 +138,7 @@ if ($fail.Count -eq 0) { Write-Host '=== 60s ACCEPT: ALL PASS ===' -ForegroundCo
 else { Write-Host "=== 60s ACCEPT: FAIL x$($fail.Count): $($fail -join '; ') ===" -ForegroundColor Red; exit 1 }
 ```
 
-> 注：`preview` 端点如实际路径为 `/v1/config/claude-fallback/preview` 之外的形态，以 `routes.ts` 现值为准（脚本①段改 URL 即可）；其余步骤不依赖预览端点。
+> 勘正注（FSD 实勘 2026-09-26，CTO 点名风险项核覆）：preview/restore 请求体=**三输入** `{ base_url, api_key, model }`——UI 前端把模板三组值代填进表单后发三输入；`{ template }` 形态属 inject-key（部署钥注入）端点，不在本手测范围。脚本三处 body 已按实勘改齐。三组值来源=TEMPLATES bigmodel 行现值（`src/api/claude-fallback.ts`）；preview 路径实勘=`routes.ts:115`，与本脚本一致。`TRIMODEL_DEPLOY_KEY` 实为**独立钥文件路径**（deployKeyPath() 读文件），非钥内容——本手测不走 inject-key，无需钉位（§1 已删）。
 
 ## 4. 「重启会话后生效」验证（分层口径）
 
