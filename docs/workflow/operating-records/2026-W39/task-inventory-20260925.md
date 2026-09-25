@@ -45,9 +45,9 @@ D-27 v7 三闸成套（防断到达确认/防漏 2h 无时段豁免/防重前置
 ## 五、亲勘差异与风险（如实档）
 
 1. **三笔供件 commit 实址**：0eec86de/4b2aa514/ba609ae1 本机全分支＋sg bare dev/wt 三分支均未达（ls-remote+fetch 亲勘）——落树位=sg 工作区（BOD 04:25 提供 hash）；本席无 sg SSH 通道不代勘，候拾取/验收时服务域或 BOD 直取对表。
-2. **两机 bare 候推债（本晨新实勘）**：昨夜 push 节律断（auth 中断窗叠加）——dev 落后 5 笔（50577d8f..6b0da5aa）/wt/board 落后 3 笔（20bd58ad/236c3619/be81dce0）/wt/cos 落后（16ce941d→fdd5342a）/wt/f 落后（203dd6ff→0c36778a）；**本表铸毕四 ref 一批推平清偿（T6 首批），ls-remote 双面复核**。
+2. **dev 真分叉＋LG-046 双态对撞（本晨实勘，勘正铸表时「落后 5 笔」初判）**：sg 侧值席笔 8+（LG-046 Phase 0-2 执行族/041 整改跟踪/快照增强/总表补录）与本机三闸评估族+LG-052 读数族互缺零丢失；本席 fetch-merge 试并中止于双态对撞（本机新旧两名并存＋manifest 两版冲突 vs sg 单态改名）——归一方向候 LG-046 承接域对表裁，**dev 推平挂起**；已推平=wt/board（含立案书 be81dce0）+wt/cos（fdd5342a）+wt/f（0c36778a）三 ref 双远端 ls-remote 核真一致。
 3. **COS 位落位差异**：本会话 cwd=主树 dev（复活续跑落位）非 wt/ceo-chief-of-staff 位——LG-050 试跑三计数 COS 侧口径候 BOD/COO 裁，本席不自行改落位防打断在办令流。
-4. CTO V2 稿（LG-041 ③）本机在盘未提交——落笔催办仍开（12:00 硬截点同悬）。
+4. CTO V2 稿（LG-041 ③）**双版并存实质差**（本机 untracked mtime 03:06 vs sg 入册版；本地版保全于 .fade/hub-snapshots/preserved-bottleneck-v2-local-0306.md）——留版裁归 CTO（12:00 硬截点同悬）。
 5. 事故余波：auth 已恢复、脚本冻结哨兵冒烟 PASS 活体零扰动（mtime 仍 04:09:35）——零进行性损伤。
 
 ## 口径注记
