@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "specId": "cto-consumption-records",
+      "pageId": "cto-consumption-records",
+      "title": "CTO employee consumption records",
+      "pageStatus": "working",
+      "topicTags": ["cto", "engineering", "architecture", "code-state", "deployment"],
+      "sourceIds": ["cto-agent-definition", "cto-contract-v1"],
+      "reviewerRoles": ["CEOChiefOfStaff"],
+      "approvalSlaHours": 168,
+      "maxSources": 20
+    }
+  ]
+}

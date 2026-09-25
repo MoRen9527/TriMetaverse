@@ -1,0 +1,18 @@
+{
+  "runId": "wiki-refresh-2026-04-21-132052-059180",
+  "triggerMode": "manual",
+  "startedAt": "2026-04-21T21:20:52+08:00",
+  "inputSources": [
+    "chief-of-staff-note-2026-04-21-005",
+    "chief-of-staff-note-2026-04-21-004",
+    "chief-of-staff-note-2026-04-20-003",
+    "chief-of-staff-note-2026-04-20-001",
+    "2026-04-20-chief-of-staff-scratch-note.md"
+  ],
+  "outputPages": [
+    "chief-of-staff-llm-wiki-current-state"
+  ],
+  "status": "completed",
+  "notes": "chief-of-staff semi-automatic wiki refresh",
+  "pageSpecId": "chief-of-staff-current-state"
+}

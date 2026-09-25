@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "specId": "cao-consumption-records",
+      "pageId": "cao-consumption-records",
+      "title": "CAO employee consumption records",
+      "pageStatus": "working",
+      "topicTags": ["cao", "administration", "governance", "secretariat"],
+      "sourceIds": ["cao-agent-definition", "cao-contract-v1"],
+      "reviewerRoles": ["CEOChiefOfStaff"],
+      "approvalSlaHours": 168,
+      "maxSources": 20
+    }
+  ]
+}

@@ -26,7 +26,7 @@
 
 1. `赛博公司 / cyber company` 是通用概念名；`TriCompany` 是它在本项目中的具体产品名。
 2. 当前 live 仍是 `Copilot-host` 本地手动版阶段，不等于 `TriMC` 服务器正式版上线完成。
-3. `TriCompany-copilot-host-assets` 是当前宿主支撑包与发布副本集合，不是第二真源。
+3. `TriCompany-host-assets` 是当前宿主支撑包与发布副本集合，不是第二真源。
 4. 运行态记忆、wiki、audit 与 workbench 不等于源码真源；training 里看到的运行对象，必须回链到其 source 规则。
 
 ## 3. 当前态 / 目标态标记规则

@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "specId": "projecttrainer-consumption-records",
+      "pageId": "projecttrainer-consumption-records",
+      "title": "Project Trainer employee consumption records",
+      "pageStatus": "working",
+      "topicTags": ["projecttrainer", "training", "project-level", "onboarding"],
+      "sourceIds": ["projecttrainer-agent-definition", "projecttrainer-contract-v1"],
+      "reviewerRoles": ["CEOChiefOfStaff"],
+      "approvalSlaHours": 168,
+      "maxSources": 20
+    }
+  ]
+}

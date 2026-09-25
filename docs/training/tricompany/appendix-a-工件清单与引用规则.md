@@ -21,8 +21,8 @@ TriCompany 培训最怕的不是内容不够多，而是“讲得很顺，但不
 | source workflow | `TriCompany/docs/workflow/host-object-publish-flow.md` | 规定入职、职责变动、binding、manifest 与 governance 回填顺序 |
 | source workflow | `TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md` | 规定总助 LLM wiki 的对象规范与 page promotion 规则 |
 | binding / manifest | `TriCompany/.github/binding-profiles/ceo-chief-of-staff.json` | 说明总助 object set、live entry、supportObjects 与 runtimeNamespaces |
-| support payload | `TriCompany-copilot-host-assets/host-object-manifest.json` | 说明 support bundle 当前发布了哪些 host object |
-| support payload | `TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-specs.json` | 总助当前 page spec 样板 |
+| support payload | `TriCompany-host-assets/host-object-manifest.json` | 说明 support bundle 当前发布了哪些 host object |
+| support payload | `TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-specs.json` | 总助当前 page spec 样板 |
 | live entry | `TriMetaverse/.github/agents/ceo-chief-of-staff.agent.md` | 当前宿主真正生效的总助入口 |
 | governance | `docs/workflow/tricompany-copilot-host-assets-governance.md` | 说明 source / support / live / central 四层治理边界 |
 | central product truth | `../../tricompany.md` | 说明为什么需要 TriCompany、当前阶段目标与宿主边界 |
@@ -39,7 +39,7 @@ TriCompany 培训最怕的不是内容不够多，而是“讲得很顺，但不
 ### 3.2 先问“这是 source truth，还是 published-copy”
 
 - `TriCompany/` 下多数是 source truth。
-- `TriCompany-copilot-host-assets/` 下多数是 support payload、published-copy 或 evidence。
+- `TriCompany-host-assets/` 下多数是 support payload、published-copy 或 evidence。
 - `TriMetaverse/.github/` 是 live 入口，不是五件套真源。
 - `TriMetaverse/docs/` 是中央摘要与协议层，不是模块全部实现真源。
 
@@ -75,8 +75,8 @@ TriCompany 培训最怕的不是内容不够多，而是“讲得很顺，但不
 4. `TriCompany/.github/binding-profiles/ceo-chief-of-staff.json`
 5. `TriCompany/docs/workflow/host-object-publish-flow.md`
 6. `TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md`
-7. `TriCompany-copilot-host-assets/host-object-manifest.json`
-8. `TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-specs.json`
+7. `TriCompany-host-assets/host-object-manifest.json`
+8. `TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-specs.json`
 9. `TriMetaverse/.github/agents/ceo-chief-of-staff.agent.md`
 10. `docs/workflow/tricompany-copilot-host-assets-governance.md`
 

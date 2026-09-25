@@ -26,9 +26,9 @@
 | 链路层 | 现状（Copilot 单宿主视图） | 规划（多宿主渲染模型） |
 | --- | --- | --- |
 | source | `TriCompany/source-agents/<id>/` 五件套 | 同一源五件套 + contract（无差别） |
-| manifest | `TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json`（liveEntryStatus 为 Copilot 口径）+ `TriCompany-copilot-host-assets/host-object-manifest.json` | 每宿主注册 live manifest（--host 分支） |
+| manifest | `TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json`（liveEntryStatus 为 Copilot 口径）+ `TriCompany-host-assets/host-object-manifest.json` | 每宿主注册 live manifest（--host 分支） |
 | binding | `TriCompany/.github/binding-profiles/*.json`（人工/生成混态） | 派生记录：生成管线重建，禁人工编辑 |
-| support | `TriCompany-copilot-host-assets/`（宿主无关知识载荷，命名/文档为 Copilot 口径） | 宿主侧沿用支撑包；runtime 侧等价 `.tricompany-cognition/` SQLite |
+| support | `TriCompany-host-assets/`（宿主无关知识载荷，命名/文档为 Copilot 口径） | 宿主侧沿用支撑包；runtime 侧等价 `.tricompany-cognition/` SQLite |
 | live | `.github/agents/`（Copilot 面，manifest 全标 current-copilot-host-live）；`.claude/agents/` 18 个入口由 `scripts/sync-agents-to-claude.mjs` 机械派生，不在任何 manifest/governance 中声明 | 两宿主面均为 contract 渲染产物；`--host=claude` 承接 Claude Code 面（TriLC init-assemble 模板职责收敛进统一发布管线） |
 | governance | `tricompany-copilot-host-assets-governance.md` + `tricompany-copilot-host-assets-migration-matrix.md`（2026-07-08 版，无 Claude 宿主视图） | 同一套 CHO handoff + CAO governance + CEO 签署（FADE-004 stage 8/10），治理规则不因宿主分裂 |
 

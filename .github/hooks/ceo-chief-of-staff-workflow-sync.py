@@ -64,7 +64,7 @@ def _main() -> int:
     )
     support_root = Path(
         os.environ.get("TRICOMPANY_COGNITION_SUPPORT_ROOT")
-        or repo_root / "TriCompany-copilot-host-assets"
+        or repo_root / "TriCompany-host-assets"
     )
     storage_root = os.environ.get("TRICOMPANY_COGNITION_STORAGE_ROOT")
 

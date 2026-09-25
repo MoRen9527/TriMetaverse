@@ -61,7 +61,7 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 宿主资产按三层管理：
 
 1. `../TriCompany/`：公司定义、源侧员工资产、合同、runtime 和发布真源。
-2. `TriCompany-copilot-host-assets/`：当前 Copilot-host 支撑包、知识对象、runtime 副本与验证材料。
+2. `TriCompany-host-assets/`：当前 Copilot-host 支撑包、知识对象、runtime 副本与验证材料。
 3. `.github/`：当前实际生效的 Copilot-host live 入口。
 
 【历史】原「到 `TriMetaverse V1 正式上线切换阶段` 切换至正式运行面」段落退役（2026-09-11 LG-034⑤e）：宿主切换叙事不再成立，现行基线见 §2/§3；V1 成熟点判读候 CEO（发布 readiness 另走门禁读数后钉措辞）。

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-autopilot-stage-package",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "assurance",
+  "phaseKey": "ASSURANCE",
+  "generatedAt": "2026-05-27T04:07:39+08:00",
+  "participantRecordRef": "workbench/ipd/cases/IPD-20260527-034923/participant-records/09-assurance.json",
+  "tridev": {
+    "runId": "ipd-ipd-20260527-034923",
+    "stage": "ASSURANCE",
+    "evidenceRefs": [
+      "docs/ipd-autopilot/IPD-20260527-034923/09-assurance.md",
+      "docs/runs/ipd-ipd-20260527-034923/phase-results/assurance.json",
+      "docs/runs/ipd-ipd-20260527-034923/gate-ledger.json"
+    ],
+    "bundleReference": ""
+  }
+}

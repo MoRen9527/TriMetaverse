@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260612-WORKFLOW-002",
+  "stageKey": "backlog",
+  "phaseKey": "BACKLOG",
+  "businessOwner": "CEOChiefOfStaff",
+  "actingOwner": "CEOChiefOfStaff",
+  "moduleExecutor": "TriCompany",
+  "gateOwner": "CEOChiefOfStaff",
+  "ownerRole": "CEOChiefOfStaff",
+  "participantRoles": [
+    "CEO",
+    "ChiefProductOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "submittedAt": "2026-06-12T12:18:52+08:00",
+  "summary": "提交全阶段 IPD 优化首轮 backlog，固定 proving-ground 回放与 Gate A/Gate B/Gate C 能力门。",
+  "details": [
+    "本轮 backlog 明确双线闭环、固定 proving-ground、Gate A 首轮切片，以及后续 Gate B/Gate C 的 capability map 入口。"
+  ],
+  "evidence": [
+    "docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/01-backlog-memo.md",
+    "docs/workflow/agile-improvement/IPD-20260612-WORKFLOW-002/01-backlog-package.json"
+  ],
+  "objectPath": "",
+  "packageHash": "0xf0facf9644e324a4783f472a25042461351e5db5130c36ff4ccdd22b68bb0148",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "CEOChiefOfStaff",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-12T12:18:52+08:00",
+      "packageHash": "0xf0facf9644e324a4783f472a25042461351e5db5130c36ff4ccdd22b68bb0148",
+      "signature": "0x456924577ba2fc88d567d3dc41a6e5b6af670b55d69f47bc1949663e97dfcaee681e95dc95c9a4350f1fac9b9bd9dadf9547c321be3050fb37bbe47f85cdf94a",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-12T12:18:52+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "同意按 Gate A 起步，并要求后续显式覆盖 Gate B/Gate C 的全阶段优化。",
+      "updatedAt": "2026-06-12T12:26:24+08:00",
+      "packageHash": "0xf0facf9644e324a4783f472a25042461351e5db5130c36ff4ccdd22b68bb0148",
+      "signature": "0xeb3cb03a292d783e0e32e616269e9239e49563c46cdfe746c8003563ab03000116cdef6d9bf65d1f28a96b7d3310ca6df2dc88c2f66d99a40e225b3efdfe5869",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "CEOChiefOfStaff"
+      ],
+      "verifiedAt": "2026-06-12T12:26:24+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "总助签发 backlog，推进到 sprint-planning，保持 PLATFORM-001 作为固定 proving-ground。",
+      "updatedAt": "2026-06-12T12:26:25+08:00",
+      "packageHash": "0xf0facf9644e324a4783f472a25042461351e5db5130c36ff4ccdd22b68bb0148",
+      "signature": "0x456924577ba2fc88d567d3dc41a6e5b6af670b55d69f47bc1949663e97dfcaee681e95dc95c9a4350f1fac9b9bd9dadf9547c321be3050fb37bbe47f85cdf94a",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-12T12:26:25+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260612-WORKFLOW-002-BACKLOG-V001",
+    "issuedAt": "2026-06-12T12:26:25+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

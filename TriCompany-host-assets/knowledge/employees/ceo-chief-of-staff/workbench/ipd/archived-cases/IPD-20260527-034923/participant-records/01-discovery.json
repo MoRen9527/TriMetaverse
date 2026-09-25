@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-participant-record",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "discovery",
+  "phaseKey": "DISCOVERY",
+  "ownerRole": "CEOChiefOfStaff",
+  "participantRoles": [
+    "CEO",
+    "ChiefMarketingOfficer"
+  ],
+  "generatedAt": "2026-05-27T04:07:37+08:00",
+  "records": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "completed",
+      "summary": "CEOChiefOfStaff 已在 discovery 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "CEO",
+      "status": "completed",
+      "summary": "CEO 已在 discovery 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "ChiefMarketingOfficer",
+      "status": "completed",
+      "summary": "ChiefMarketingOfficer 已在 discovery 阶段完成 autopilot 协同条目。"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "specId": "cfo-consumption-records",
+      "pageId": "cfo-consumption-records",
+      "title": "CFO employee consumption records",
+      "pageStatus": "working",
+      "topicTags": ["cfo", "finance", "budget", "revenue-model"],
+      "sourceIds": ["cfo-agent-definition", "cfo-contract-v1"],
+      "reviewerRoles": ["CEOChiefOfStaff"],
+      "approvalSlaHours": 168,
+      "maxSources": 20
+    }
+  ]
+}

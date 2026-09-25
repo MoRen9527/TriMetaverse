@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "specId": "cho-consumption-records",
+      "pageId": "cho-consumption-records",
+      "title": "CHO employee consumption records",
+      "pageStatus": "working",
+      "topicTags": ["cho", "hr", "staffing", "handoff", "onboarding"],
+      "sourceIds": ["cho-agent-definition", "cho-contract-v1"],
+      "reviewerRoles": ["CEOChiefOfStaff"],
+      "approvalSlaHours": 168,
+      "maxSources": 20
+    }
+  ]
+}

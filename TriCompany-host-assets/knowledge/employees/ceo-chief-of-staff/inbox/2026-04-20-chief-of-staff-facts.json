@@ -1,0 +1,18 @@
+{
+  "sourceId": "chief-of-staff-note-2026-04-20-003",
+  "title": "总助 LLM wiki 当前事实清单",
+  "sourceType": "json-record",
+  "topicHints": [
+    "chief-of-staff",
+    "llm-wiki",
+    "facts"
+  ],
+  "trustLevel": "curated",
+  "capturedAt": "2026-04-20T11:24:00+08:00",
+  "facts": [
+    "总助专属知识目录已固定为 knowledge/chief-of-staff/inbox、wiki、audit 三分结构。",
+    "LLM wiki 已提升为当前第一优先级实现任务。",
+    "首轮 MVP 验收要求是至少 3 份 inbox 资料、1 页 wiki 页面、1 份 audit 记录。",
+    "当前 LLM wiki 仍不应写成完整产品面已实现。"
+  ]
+}

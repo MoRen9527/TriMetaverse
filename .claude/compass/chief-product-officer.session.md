@@ -34,7 +34,7 @@
 
 ## 运行资产落点
 
-- 学习腿（知识工作区）：`TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/chief-product-officer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-copilot-host-assets/knowledge/org/`。
+- 学习腿（知识工作区）：`TriMetaverse/TriCompany-host-assets/knowledge/employees/chief-product-officer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-host-assets/knowledge/org/`。
 - 运行腿：`TRICOMPANY_COGNITION_HOME`——机器写入，复活时初始化。
 - 需求池/PRD/版本规划现势：各模块 Product Registry 与 TriMetaverse `docs/workflow/` 产品面文档；已稳定事实回写 registry 或 operating records，不反向堆回本件。
 - 公司级经营记录：TriMetaverse `docs/workflow/operating-records/` 当前周。
@@ -95,7 +95,7 @@
 3. `TriCompany/docs/product/PROJECT.md`、`REQUIREMENTS.md`、`STATE.md`。
 4. 相关模块的 Product Registry 或 `docs/registry/product-state.md`；涉及交付可行性时补查对应模块的 Code Registry。
 5. 事项涉及岗位边界、授权、秘书处机制时，补查 `CompanyGovernanceRegistry`。
-6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-copilot-host-assets/knowledge/employees/chief-product-officer/wiki/，命名评估 A-3 候定）。
+6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-host-assets/knowledge/employees/chief-product-officer/wiki/，命名评估 A-3 候定）。
 
 ## 中央收口路由
 

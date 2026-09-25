@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-autopilot-stage-package",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "delivery",
+  "phaseKey": "DELIVERY",
+  "generatedAt": "2026-05-27T04:07:39+08:00",
+  "participantRecordRef": "workbench/ipd/cases/IPD-20260527-034923/participant-records/10-delivery.json",
+  "tridev": {
+    "runId": "ipd-ipd-20260527-034923",
+    "stage": "DELIVERY",
+    "evidenceRefs": [
+      "docs/ipd-autopilot/IPD-20260527-034923/10-delivery.md",
+      "docs/runs/ipd-ipd-20260527-034923/phase-results/delivery.json",
+      "docs/runs/ipd-ipd-20260527-034923/gate-ledger.json",
+      "docs/runs/ipd-ipd-20260527-034923/delivery-manifest.json",
+      "docs/runs/ipd-ipd-20260527-034923/artifacts/release.zip",
+      "docs/runs/ipd-ipd-20260527-034923/artifacts/release.sha256",
+      "docs/runs/index.json"
+    ],
+    "bundleReference": "docs/runs/ipd-ipd-20260527-034923/artifacts/release.zip"
+  }
+}

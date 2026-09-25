@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-WORKFLOW-001",
+  "stageKey": "validation-handoff",
+  "phaseKey": "VALIDATION-HANDOFF",
+  "businessOwner": "CEOChiefOfStaff",
+  "actingOwner": "CEOChiefOfStaff",
+  "moduleExecutor": "TriCompany",
+  "gateOwner": "CEOChiefOfStaff",
+  "ownerRole": "CEOChiefOfStaff",
+  "participantRoles": [
+    "CEO",
+    "ChiefProductOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "submittedAt": "2026-06-12T00:25:58+08:00",
+  "summary": "validation-handoff 已形成流程优化阶段性完成结论，并明确下一步必须另开真实 project-delivery case 做独立验证。",
+  "details": [
+    "已固化 CEO demand 前门、签核链、release issuance 与聚焦验证回读这几条稳定规则。",
+    "建议另开模型 API 中转平台的 project-delivery case，独立承接真实 Discovery、Intelligence、PRD、实现与交付验证。",
+    "真实 case 开案前必须重新填写用户、场景、预算护栏、成功信号与证据路径，且不得继承当前流程优化 case 的错误外推。"
+  ],
+  "evidence": [
+    "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/06-validation-handoff-plan.md",
+    "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/05-retrospective-package.json"
+  ],
+  "objectPath": "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/06-validation-handoff-package.json",
+  "packageHash": "0x4ed28395955bd5ca0946fc774e4be3043716cb9586c9a5f3fda53d39a825b140",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "CEOChiefOfStaff",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-12T00:25:58+08:00",
+      "packageHash": "0x4ed28395955bd5ca0946fc774e4be3043716cb9586c9a5f3fda53d39a825b140",
+      "signature": "0xd3a6d01e0799ac1e34d1d57ea0869264d572259edb5040056bb244160475a86c6501bb3f17408f9a0658c75c66f06c0a4e07ec1fa2a831c055f7375923e5305c",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-12T00:25:58+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "CEO 已确认 validation-handoff 结论成立，并同意结束当前流程优化 case。",
+      "updatedAt": "2026-06-12T00:27:35+08:00",
+      "packageHash": "0x4ed28395955bd5ca0946fc774e4be3043716cb9586c9a5f3fda53d39a825b140",
+      "signature": "0x6ede449260c7fcb10ac1791c40afd1a7bdd49f0473fb210981a64e4c20006079165a93507213f7349fbf5dba20365b7e0ec310b7be7750967e7dac140896d390",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "CEOChiefOfStaff"
+      ],
+      "verifiedAt": "2026-06-12T00:27:35+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "总助已完成 CEO validation-handoff 签名验证并正式签发最终 release。",
+      "updatedAt": "2026-06-12T00:27:36+08:00",
+      "packageHash": "0x4ed28395955bd5ca0946fc774e4be3043716cb9586c9a5f3fda53d39a825b140",
+      "signature": "0xd3a6d01e0799ac1e34d1d57ea0869264d572259edb5040056bb244160475a86c6501bb3f17408f9a0658c75c66f06c0a4e07ec1fa2a831c055f7375923e5305c",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-12T00:27:36+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-WORKFLOW-001-VALIDATION-HANDOFF-V001",
+    "issuedAt": "2026-06-12T00:27:36+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

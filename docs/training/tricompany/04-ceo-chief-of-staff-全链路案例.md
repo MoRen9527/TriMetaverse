@@ -122,11 +122,11 @@ live_entry_ref = "TriMetaverse/.github/agents/ceo-chief-of-staff.agent.md"
 
 当前仓库里能直接看到的总助 support payload，主要集中在：
 
-- `TriCompany-copilot-host-assets/host-object-manifest.json`
-- `TriCompany-copilot-host-assets/knowledge/roles/ceo-chief-of-staff/**`
-- `TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/**`
-- `TriCompany-copilot-host-assets/knowledge/org/shared/**`
-- `TriCompany-copilot-host-assets/knowledge/audit/**`
+- `TriCompany-host-assets/host-object-manifest.json`
+- `TriCompany-host-assets/knowledge/roles/ceo-chief-of-staff/**`
+- `TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/**`
+- `TriCompany-host-assets/knowledge/org/shared/**`
+- `TriCompany-host-assets/knowledge/audit/**`
 
 其中 `host-object-manifest.json` 再次确认了一件事：总助的 support object 现在只包括四类 workspace，没有再把 legacy `knowledge/chief-of-staff/**` 当成当前活路径。
 
@@ -149,7 +149,7 @@ live_entry_ref = "TriMetaverse/.github/agents/ceo-chief-of-staff.agent.md"
 所谓 `schema`，当前并不是一个独立的第三层对象目录，而是以“规则 / 规格”的形式存在，代表 raw 如何被编译成 wiki。对总助来说，这层主要落在：
 
 - `TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md`
-- `TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-specs.json`
+- `TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-specs.json`
 
 `chief-of-staff-llm-wiki-object-spec.md` 规定了：
 

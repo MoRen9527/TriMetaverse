@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-intake-brief",
+  "caseId": "IPD-20260610-PLATFORM-001",
+  "title": "模型 API 转接平台生产级平台首版交付",
+  "priority": "high",
+  "status": "approved",
+  "createdAt": "2026-06-15T00:00:00+08:00",
+  "updatedAt": "2026-06-15T00:00:00+08:00",
+  "createdBy": "CEOChiefOfStaff",
+  "relatedModules": [
+    "TriCompany",
+    "TriDev",
+    "TriStaciss",
+    "TriAvatar",
+    "TriChain",
+    "TriWeb4"
+  ],
+  "caseCategory": "project-delivery",
+  "referenceTheme": "PLATFORM",
+  "executionFlow": "ipd-delivery",
+  "stageLine": [
+    "discovery",
+    "intelligence",
+    "designing",
+    "coding",
+    "verify-integration",
+    "redteam",
+    "qa",
+    "deployment",
+    "assurance",
+    "delivery"
+  ],
+  "requiredApprovers": [
+    "CEOChiefOfStaff",
+    "CEO"
+  ],
+  "approvals": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "总助按 CEO 最新纠偏完成 active case 重建。",
+      "updatedAt": "2026-06-15T00:00:00+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "按纠偏后的范围推进：TriAvatar 为现役前端入口，TriStaciss 前端不纳入新 case；目标为生产级平台首版。",
+      "updatedAt": "2026-06-15T00:00:00+08:00"
+    }
+  ],
+  "objective": "以 TriAvatar 作为现役 Web 前端入口、TriStaciss 作为后端模型 API 转接平台真源，完成第一版生产级平台交付。",
+  "taskDescription": "当前最小 gateway slice 只完成了 TriStaciss 后端 Python 回归，没有覆盖现役前端入口的最小联调。现按 CEO 最新纠偏，继续使用 20260610 platform case，但把范围改为：TriAvatar 作为唯一现役前端入口承接 Web 端功能并保持原有功能可用；TriStaciss 只负责后端 API 平台与 provider 路由，不再使用其内部遗留前端模块。当前需由 CPO 写完整 PRD，再由 CTO / TriDev 围绕模型 API 转接平台首版推进，并从 Discovery 重新走完整个流程。员工身份与签名机制当前仍限定为非链上模拟，不写成 TriChain / TriWeb4 已上线能力。",
+  "constraints": [
+    "TriAvatar 是当前新 case 的现役前端入口，必须保持原有功能可用。",
+    "TriStaciss 内部 avatar-react 属于遗留迁移模块，不纳入新 case 交付面。",
+    "必须先形成完整 PRD，再进入 Designing / Coding。",
+    "当前目标是第一版生产级平台，不写成生产机平台。",
+    "员工 NFT 与钱包密钥在当前阶段只能写成模拟身份 / 签名机制，不得写成 TriChain / TriWeb4 已上线的真实链上能力。"
+  ],
+  "expectedDelivery": "交付完整 PRD、TriAvatar 前端入口保持可用的最小联调方案、TriStaciss 后端 API 转接平台技术方案、前后端验证证据与首版生产级平台 release 决策包。",
+  "clarificationSheet": {
+    "required": true,
+    "status": "ready-for-dispatch",
+    "missingSlotKeys": [],
+    "followUpQuestions": [],
+    "slots": [
+      {
+        "slotKey": "competitorReference",
+        "label": "竞品 / 对标对象",
+        "ownerRole": "CEO",
+        "status": "provided",
+        "requiredFor": ["intake", "discovery"],
+        "currentValue": "LiteLLM、sub2api、OpenRouter、OpenAI API Platform"
+      },
+      {
+        "slotKey": "targetUserScenario",
+        "label": "首轮目标用户与使用场景",
+        "ownerRole": "CEO",
+        "status": "provided",
+        "requiredFor": ["intake", "discovery"],
+        "currentValue": "先服务内部产品负责人和技术负责人，在统一模型 API 转接平台规划、联调与首版发布验证场景下使用"
+      },
+      {
+        "slotKey": "deliveryWindow",
+        "label": "期望工期 / 节奏",
+        "ownerRole": "CEO",
+        "status": "provided",
+        "requiredFor": ["intake", "designing"],
+        "currentValue": "当前先完成 Discovery 与 Intelligence 产物收口，再进入 Designing / Coding；十阶段保持可在 CEO/总助签发点暂停"
+      },
+      {
+        "slotKey": "budgetGuardrail",
+        "label": "预算护栏 / 成本窗口",
+        "ownerRole": "CEO",
+        "status": "provided",
+        "requiredFor": ["intake", "intelligence"],
+        "currentValue": "首轮仅使用现有人力与少量工具成本，不新增正式部署预算"
+      },
+      {
+        "slotKey": "successMetric",
+        "label": "首轮成功信号",
+        "ownerRole": "CEO",
+        "status": "provided",
+        "requiredFor": ["intake", "delivery"],
+        "currentValue": "形成可签发的首版生产级平台 PRD、技术方案、验证方案，并证明 TriAvatar 现役前端入口与 TriStaciss 后端平台的最小联调链路成立"
+      },
+      {
+        "slotKey": "mustHaveScope",
+        "label": "必须交付的最小范围",
+        "ownerRole": "CEO",
+        "status": "provided",
+        "requiredFor": ["intake", "designing"],
+        "currentValue": "TriAvatar 前端入口保持原有功能可用；TriStaciss 后端完成模型 API 转接平台首版主线；支持 Discovery 到 Delivery 的十阶段推进与签发暂停点"
+      },
+      {
+        "slotKey": "explicitOutOfScope",
+        "label": "明确不做项",
+        "ownerRole": "CEO",
+        "status": "provided",
+        "requiredFor": ["intake", "discovery"],
+        "currentValue": "本轮不使用 TriStaciss 内部遗留前端模块；不涉及正式宿主切换；不涉及真实链上钱包 / NFT；不把单次阶段推进写成全平台已发布"
+      }
+    ]
+  }
+}

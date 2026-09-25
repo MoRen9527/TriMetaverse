@@ -1,0 +1,21 @@
+{
+  "inboxId": "INBOX-20260724-005",
+  "objectId": "TREE-OP-SPC-001",
+  "objectType": "TREE_SUBTASK",
+  "sender": "CEOChiefOfStaff",
+  "senderName": "小贾",
+  "recipient": "TestEngineer",
+  "recipientName": "小柯",
+  "interaction": "task_assignment",
+  "summary": "Phase B 子任务：B5 单元测试 + 冒烟测试。覆盖 diff 引擎各通道、manifest 更新、自检报告生成；端到端冒烟验证源侧变更→CLI→报告→agent 收口全链路。W31 周一 7/27 启动，周三 7/28 EOD 交付。",
+  "unread": true,
+  "priority": "high",
+  "status": "planned",
+  "createdAt": "2026-07-24T03:21:00+08:00",
+  "dueAt": "2026-07-28T23:59:00+08:00",
+  "routingPackagePath": "docs/workflow/operating-records/2026-W30/trees/source-publish-check-phase1/tree-op.json",
+  "linkedNextAction": "NA-20260724-CTO-002",
+  "taskDetail": {
+    "B5": "单元测试：覆盖 diff 引擎四通道、manifest 更新逻辑、自检报告生成。冒烟测试：端到端验证源侧变更→CLI→报告→agent 收口全链路。4 人时。"
+  }
+}

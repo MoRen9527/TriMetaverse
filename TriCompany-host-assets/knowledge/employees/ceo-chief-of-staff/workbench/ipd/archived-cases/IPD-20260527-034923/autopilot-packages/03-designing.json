@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-autopilot-stage-package",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "designing",
+  "phaseKey": "DESIGNING",
+  "generatedAt": "2026-05-27T04:07:38+08:00",
+  "participantRecordRef": "workbench/ipd/cases/IPD-20260527-034923/participant-records/03-designing.json",
+  "tridev": {
+    "runId": "ipd-ipd-20260527-034923",
+    "stage": "DESIGNING",
+    "evidenceRefs": [
+      "docs/ipd-autopilot/IPD-20260527-034923/03-designing.md",
+      "docs/runs/ipd-ipd-20260527-034923/phase-results/designing.json",
+      "docs/runs/ipd-ipd-20260527-034923/gate-ledger.json"
+    ],
+    "bundleReference": ""
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "inboxId": "INBOX-20260724-006",
+  "objectId": "ADE-MODE-NOTIFY-001",
+  "objectType": "WORK_MODE_NOTIFICATION",
+  "sender": "CEOChiefOfStaff",
+  "senderName": "小贾",
+  "recipient": "TestEngineer",
+  "recipientName": "小柯",
+  "interaction": "mode_assignment",
+  "summary": "ADE 模式正式生效通知：自即日起，所有自动化测试（按用例）任务均按 ADE 模式执行——Agent 选用例 → CLI 执行 pytest --json-report → Agent 读报告判断门禁。你不再直接执行有副作用的写操作，测试执行统一通过 CLI 完成并提供结构化自检报告。细则见 docs/engineering/ade-pattern-spec.md §六。",
+  "unread": true,
+  "priority": "high",
+  "status": "active",
+  "createdAt": "2026-07-24T14:31:41+08:00",
+  "effectiveAt": "2026-07-24T14:31:41+08:00",
+  "modeSpec": {
+    "pattern": "ADE",
+    "agentRole": "选用例、判断门禁、收口",
+    "cliRole": "pytest --json-report 确定性执行、输出结构化自检报告",
+    "specRef": "TriCompany/docs/engineering/ade-pattern-spec.md v1.2 §六"
+  }
+}

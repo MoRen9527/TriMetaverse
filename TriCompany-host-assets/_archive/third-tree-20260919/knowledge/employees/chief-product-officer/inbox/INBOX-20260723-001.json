@@ -1,0 +1,20 @@
+{
+  "inboxId": "INBOX-20260723-001",
+  "objectId": "ET-20260723-001",
+  "objectType": "ENGINEERING_TASK",
+  "sender": "CEOChiefOfStaff",
+  "senderName": "小贾",
+  "recipient": "ChiefProductOfficer",
+  "recipientName": "小乔",
+  "interaction": "product_approval",
+  "summary": "TriCompany 模块 Agent 产品范围确认：确认 TriCompany.agent.md 作为新 module-local orchestrator 的产品边界，判断其与现有 registry 三件套的分工是否冲突，以及源侧→发布侧同步链路是否属于 TriCompany 产品范围。",
+  "unread": false,
+  "priority": "high",
+  "status": "closed",
+  "closedAt": "2026-07-24T02:54:00+08:00",
+  "resolution": "APPROVE — 4 项产品边界条件",
+  "createdAt": "2026-07-24T02:47:00+08:00",
+  "dueAt": "2026-07-24T23:59:00+08:00",
+  "routingPackagePath": "docs/workflow/operating-records/2026-W30/ET-20260723-001-tri-company-module-agent-cpo.json",
+  "linkedNextAction": "NA-20260723-CPO-001"
+}

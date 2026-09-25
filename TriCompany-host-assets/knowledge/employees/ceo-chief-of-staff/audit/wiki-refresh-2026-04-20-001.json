@@ -1,0 +1,16 @@
+{
+  "runId": "wiki-refresh-2026-04-20-001",
+  "triggerMode": "manual",
+  "startedAt": "2026-04-20T11:20:00+08:00",
+  "endedAt": "2026-04-20T11:35:00+08:00",
+  "inputSources": [
+    "chief-of-staff-note-2026-04-20-001",
+    "2026-04-20-chief-of-staff-scratch-note.md",
+    "chief-of-staff-note-2026-04-20-003"
+  ],
+  "outputPages": [
+    "chief-of-staff-llm-wiki-current-state"
+  ],
+  "status": "completed",
+  "notes": "First manual MVP loop for chief-of-staff LLM wiki using three inbox sources and one compiled wiki page."
+}

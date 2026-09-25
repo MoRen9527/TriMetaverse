@@ -15,7 +15,7 @@ TriCompany 当前至少有四层承载面：
 | 层 | 位置 | 角色 |
 | --- | --- | --- |
 | source truth | `TriCompany/` | 模块源侧真源，维护规则、代码、workflow、source-agents、binding 生成逻辑 |
-| support bundle | `TriMetaverse/TriCompany-copilot-host-assets/` | 当前 Copilot-host 使用的支撑包、发布副本、对象载荷与部分证据 |
+| support bundle | `TriMetaverse/TriCompany-host-assets/` | 当前 Copilot-host 使用的支撑包、发布副本、对象载荷与部分证据 |
 | live entry | `TriMetaverse/.github/` | 当前宿主实际可发现、可调用的 live 入口 |
 | central summary | `TriMetaverse/docs/` | 中央层边界、协议、治理与 operating record 摘要 |
 
@@ -39,7 +39,7 @@ TriCompany 当前至少有四层承载面：
 
 ## 3. Publish 层：为什么要有 support bundle
 
-很多新人第一次看到 `TriCompany-copilot-host-assets/` 会问：既然 source 才是真源，为什么还要跟踪这个目录？
+很多新人第一次看到 `TriCompany-host-assets/` 会问：既然 source 才是真源，为什么还要跟踪这个目录？
 
 答案是：**因为当前宿主确实需要一个可消费的 support root。**  
 这个目录不是纯临时垃圾桶，也不是完整镜像，而是当前阶段的：
@@ -103,7 +103,7 @@ TriCompany 的当前纪律是：
 ### 当前态
 
 - `Copilot-host` 是当前 live 承载面。
-- `TriCompany-copilot-host-assets` 是当前实际需要的 support root。
+- `TriCompany-host-assets` 是当前实际需要的 support root。
 - source 到 support 到 live 的链已经存在，但仍需严格按 source-first 纪律维护。
 - 部分岗位已进入统一员工体系，但授权矩阵、成熟签字与更多自动化仍未补齐。
 

@@ -16,7 +16,7 @@
   "exactAnchors": [
     {
       "id": "host-object-manifest-json",
-      "path": "TriCompany-copilot-host-assets/host-object-manifest.json",
+      "path": "TriCompany-host-assets/host-object-manifest.json",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.host_object_generation",
@@ -25,7 +25,7 @@
     },
     {
       "id": "phase-1-supermemory-live-validation-latest-json",
-      "path": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/SUPERMEMORY-LIVE-VALIDATION.latest.json",
+      "path": "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/SUPERMEMORY-LIVE-VALIDATION.latest.json",
       "tag": "audit-record",
       "scope": "phase-1",
       "producer": "runtime.cognition.supermemory_live_validation",
@@ -34,7 +34,7 @@
     },
     {
       "id": "ceo-chief-of-staff-employee-workbench-html",
-      "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/index.html",
+      "path": "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/index.html",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.tasks.wiki_workbench_task",
@@ -42,7 +42,7 @@
     },
     {
       "id": "ceo-chief-of-staff-employee-workbench-snapshot-json",
-      "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/snapshot.json",
+      "path": "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/snapshot.json",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.tasks.wiki_workbench_task",
@@ -50,7 +50,7 @@
     },
     {
       "id": "ceo-chief-of-staff-employee-approval-report-snapshot-json",
-      "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/approval-report/snapshot.json",
+      "path": "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/approval-report/snapshot.json",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.tasks.wiki_approval_report_task",
@@ -58,7 +58,7 @@
     },
     {
       "id": "ceo-chief-of-staff-employee-approval-report-summary-md",
-      "path": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/approval-report/summary.md",
+      "path": "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/workbench/approval-report/summary.md",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.tasks.wiki_approval_report_task",
@@ -68,7 +68,7 @@
   "patternAnchors": [
     {
       "id": "project-trainer-role-employee-knowledge-workspace-pattern",
-      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{roles,employees}/project-trainer/**",
+      "pathPattern": "TriCompany-host-assets/knowledge/{roles,employees}/project-trainer/**",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.employee_host_object_generation",
@@ -77,7 +77,7 @@
     },
     {
       "id": "ceo-chief-of-staff-role-employee-knowledge-workspace-pattern",
-      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{roles,employees}/ceo-chief-of-staff/**",
+      "pathPattern": "TriCompany-host-assets/knowledge/{roles,employees}/ceo-chief-of-staff/**",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.employee_host_object_generation",
@@ -86,7 +86,7 @@
     },
     {
       "id": "chief-product-officer-role-employee-knowledge-workspace-pattern",
-      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{roles,employees}/chief-product-officer/**",
+      "pathPattern": "TriCompany-host-assets/knowledge/{roles,employees}/chief-product-officer/**",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.employee_host_object_generation",
@@ -95,7 +95,7 @@
     },
     {
       "id": "chief-technology-officer-role-employee-knowledge-workspace-pattern",
-      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{roles,employees}/chief-technology-officer/**",
+      "pathPattern": "TriCompany-host-assets/knowledge/{roles,employees}/chief-technology-officer/**",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.employee_host_object_generation",
@@ -104,7 +104,7 @@
     },
     {
       "id": "employee-shared-org-audit-knowledge-workspace-pattern",
-      "pathPattern": "TriCompany-copilot-host-assets/knowledge/{org/shared,audit}/**",
+      "pathPattern": "TriCompany-host-assets/knowledge/{org/shared,audit}/**",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition.employee_host_object_generation",
@@ -113,7 +113,7 @@
     },
     {
       "id": "ceo-chief-of-staff-employee-audit-json-pattern",
-      "pathPattern": "TriCompany-copilot-host-assets/knowledge/employees/ceo-chief-of-staff/audit/*.json",
+      "pathPattern": "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/audit/*.json",
       "tag": "support-object-set",
       "scope": "current-host",
       "producer": "runtime.cognition audit writers",
@@ -122,7 +122,7 @@
     },
     {
       "id": "phase-1-schedule-json-pattern",
-      "pathPattern": "TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/schedules/*.json",
+      "pathPattern": "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/schedules/*.json",
       "tag": "support-object-set",
       "scope": "phase-1",
       "producer": "phase-1 schedule staging inputs",

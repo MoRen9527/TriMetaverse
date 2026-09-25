@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-WORKFLOW-001",
+  "stageKey": "sprint-execution",
+  "phaseKey": "SPRINT-EXECUTION",
+  "businessOwner": "ChiefTechnologyOfficer",
+  "actingOwner": "ChiefTechnologyOfficer",
+  "moduleExecutor": "TriCompany",
+  "gateOwner": "ChiefTechnologyOfficer",
+  "ownerRole": "ChiefTechnologyOfficer",
+  "participantRoles": [
+    "ChiefProductOfficer",
+    "CEOChiefOfStaff"
+  ],
+  "submittedAt": "2026-06-12T00:04:07+08:00",
+  "summary": "sprint-execution 已固化 agile-improvement 路径的关键 runtime、CLI、测试与 live 对齐增量，并附上聚焦可执行验证结果。",
+  "details": [
+    "已落实 runtime 重复角色审批链修复、agile artifact 编号修复，以及 live case 推进所需的签发一致性。",
+    "已落实 CLI intake/refine 顺序对齐，并用聚焦回归测试覆盖关键签核链行为。",
+    "已完成四条聚焦 unittest 验证，覆盖 backlog 重复角色签核、普通 stage 签名链、intake release issuance 和 CLI intake 顺序。"
+  ],
+  "evidence": [
+    "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/03-sprint-execution-log.md",
+    "TriCompany/runtime/cognition/ipd_case_engine.py",
+    "TriCompany/runtime/cognition/chief_of_staff_ipd_case.py",
+    "TriCompany/runtime/cognition/chief_of_staff_ipd_case_validation.py"
+  ],
+  "objectPath": "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/03-sprint-execution-package.json",
+  "packageHash": "0xa363a089722a1f3131b6061bed345efdec58ba5ec7674117fc22851220bdf850",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "ChiefTechnologyOfficer",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "ChiefTechnologyOfficer",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-12T00:04:07+08:00",
+      "packageHash": "0xa363a089722a1f3131b6061bed345efdec58ba5ec7674117fc22851220bdf850",
+      "signature": "0xfd20f2d0917627b3437f4c626cc8dbdd1f2d3494cb74bdfa1a67f9b7ca5d373c70ad13e602b5d75b5c471149955c71a8529bf117b8b88121564672de932e9560",
+      "signerAddress": "0xcd5c9c7d48504c1022bcb4924de8898dda4f4dd8",
+      "publicKey": "0x04a8399409a140174c589a8e737477cce95f3aa8bdfe465dfdb0f7692c2ef32a5ec4e6af4a1b0a136bda8bfeec4570fd762b688092725bc6d4ef8a1d32c792d317",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "almost address ... adapt album",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-12T00:04:07+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "CEO 已确认本轮 execution 增量与聚焦验证结果。",
+      "updatedAt": "2026-06-12T00:08:57+08:00",
+      "packageHash": "0xa363a089722a1f3131b6061bed345efdec58ba5ec7674117fc22851220bdf850",
+      "signature": "0xd1f1535e39075988b0ce24a0f9a6b7f41e705cadff86fe809b98b3156cdee28d2e269adbbfcb2d15d8a917cecf8a0d155968ca60a9c1d57d9769e194e6b85b19",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer"
+      ],
+      "verifiedAt": "2026-06-12T00:08:57+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "总助已完成 CEO sprint-execution 签名验证并正式签发 execution release。",
+      "updatedAt": "2026-06-12T00:08:57+08:00",
+      "packageHash": "0xa363a089722a1f3131b6061bed345efdec58ba5ec7674117fc22851220bdf850",
+      "signature": "0xb201e62dbeb1c91e05d89cf40e30d5c9bd5c66dbca1df2dfaa77e1b4a65fb06e2b730998a9113b859f7cb3f65f67358c22e6830061e8c8b0d23778fc887cb180",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "ChiefTechnologyOfficer",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-12T00:08:57+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-WORKFLOW-001-SPRINT-EXECUTION-V001",
+    "issuedAt": "2026-06-12T00:08:57+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

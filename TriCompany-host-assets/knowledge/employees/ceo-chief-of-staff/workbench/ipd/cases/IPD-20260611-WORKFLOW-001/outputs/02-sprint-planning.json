@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-output",
+  "caseId": "IPD-20260611-WORKFLOW-001",
+  "stageKey": "sprint-planning",
+  "phaseKey": "SPRINT-PLANNING",
+  "businessOwner": "CEOChiefOfStaff",
+  "actingOwner": "CEOChiefOfStaff",
+  "moduleExecutor": "TriCompany",
+  "gateOwner": "CEOChiefOfStaff",
+  "ownerRole": "CEOChiefOfStaff",
+  "participantRoles": [
+    "ChiefProductOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "submittedAt": "2026-06-11T23:56:50+08:00",
+  "summary": "sprint-planning 已明确本轮 sprint goal、任务顺序、负责人和验证切片，并继续保持流程优化线与真实项目交付线分离。",
+  "details": [
+    "已固定 sprint goal：让 agile-improvement 六阶段具备可连续运行、可签发、可回退、可验证的闭环。",
+    "已明确任务顺序：先冻结 workflow contract，再准备 execution 切片，再锁定 review gate，最后定义 release validation path。",
+    "已明确验证计划：先跑聚焦验证、再扩面，并要求 live support-root 状态与 source runtime 行为一致。"
+  ],
+  "evidence": [
+    "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/02-sprint-plan.md"
+  ],
+  "objectPath": "TriCompany/docs/workflow/agile-improvement/IPD-20260611-WORKFLOW-001/02-sprint-plan-package.json",
+  "packageHash": "0xfbec6f8b62993bae332bfaa517a7aa795e9c48e04a9fbb32092cf976f91c36ca",
+  "signaturePolicy": {
+    "subjectKind": "stage-output",
+    "keyFormat": "web3-simulated",
+    "credentialInputs": [
+      "private-key",
+      "mnemonic"
+    ],
+    "curve": "secp256k1",
+    "signatureAlgorithm": "ecdsa",
+    "hashAlgorithm": "sha3_256-simulated",
+    "approvalOrder": [
+      "CEOChiefOfStaff",
+      "CEO",
+      "CEOChiefOfStaff"
+    ],
+    "finalIssuerRole": "CEOChiefOfStaff"
+  },
+  "signatureChain": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "owner package signature recorded at submit",
+      "updatedAt": "2026-06-11T23:56:50+08:00",
+      "packageHash": "0xfbec6f8b62993bae332bfaa517a7aa795e9c48e04a9fbb32092cf976f91c36ca",
+      "signature": "0x3fc8b9560d90250b84126a71044214bb2f2122fe77578f66eda4039e65b2212c411580ec2177c19c9a96fd5b77f71bdeb6332b024f7cd330590156af0b2ef6ce",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "not-required",
+      "verifiedRoles": [],
+      "verifiedAt": "2026-06-11T23:56:50+08:00"
+    },
+    {
+      "role": "CEO",
+      "status": "approved",
+      "note": "CEO 已确认本轮 sprint goal、任务顺序与验证计划。",
+      "updatedAt": "2026-06-11T23:59:22+08:00",
+      "packageHash": "0xfbec6f8b62993bae332bfaa517a7aa795e9c48e04a9fbb32092cf976f91c36ca",
+      "signature": "0xb86597ebe9550f53f5bb276004a010d0c760014ad649333f8eadf3a68f8a95cf22f44b5ac7e3b991d7fa3e0293bd2f6907eda7efcfacc63669273007d80b37e5",
+      "signerAddress": "0x351731e70635df1f1ed69ffa691df2242b88afa8",
+      "publicKey": "0x042204130833bfb46db1fe65828db301932416a0e8a39e604cfd254e4fb5d03eb4d4581649dc494c53f66d1590f250ffb6b40bf87de33c3f15e4a20d9260acdd3c",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "absorb adjust ... alcohol age",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "CEOChiefOfStaff"
+      ],
+      "verifiedAt": "2026-06-11T23:59:22+08:00"
+    },
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "approved",
+      "note": "总助已完成 CEO sprint-planning 签名验证并正式签发 sprint-planning release。",
+      "updatedAt": "2026-06-11T23:59:22+08:00",
+      "packageHash": "0xfbec6f8b62993bae332bfaa517a7aa795e9c48e04a9fbb32092cf976f91c36ca",
+      "signature": "0x3fc8b9560d90250b84126a71044214bb2f2122fe77578f66eda4039e65b2212c411580ec2177c19c9a96fd5b77f71bdeb6332b024f7cd330590156af0b2ef6ce",
+      "signerAddress": "0x35e6680653cfc87f0b419bea53c9f48640c35740",
+      "publicKey": "0x04a709788aeadc828a0e9ae9bccf555323df90daf185705c1449771ab1d12fbd6a86d88ad05a36014179a5a5ec0bfa10c365a1d5c11c3f34252d89371116ae95c6",
+      "credentialType": "simulated-mnemonic",
+      "credentialHint": "act already ... alley amateur",
+      "verificationStatus": "verified",
+      "verifiedRoles": [
+        "CEOChiefOfStaff",
+        "CEO"
+      ],
+      "verifiedAt": "2026-06-11T23:59:22+08:00"
+    }
+  ],
+  "release": {
+    "status": "issued",
+    "version": "IPD-20260611-WORKFLOW-001-SPRINT-PLANNING-V001",
+    "issuedAt": "2026-06-11T23:59:22+08:00",
+    "issuedByRole": "CEOChiefOfStaff"
+  }
+}

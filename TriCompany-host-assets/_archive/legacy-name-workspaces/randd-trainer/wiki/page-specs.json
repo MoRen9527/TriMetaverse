@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "specId": "randtrainer-consumption-records",
+      "pageId": "randtrainer-consumption-records",
+      "title": "R&D Trainer employee consumption records",
+      "pageStatus": "working",
+      "topicTags": ["randtrainer", "training", "onboarding", "methodology"],
+      "sourceIds": ["randtrainer-agent-definition", "randtrainer-contract-v1"],
+      "reviewerRoles": ["CEOChiefOfStaff"],
+      "approvalSlaHours": 168,
+      "maxSources": 20
+    }
+  ]
+}

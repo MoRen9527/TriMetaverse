@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ipd-stage-participant-record",
+  "caseId": "IPD-20260527-034923",
+  "stageKey": "delivery",
+  "phaseKey": "DELIVERY",
+  "ownerRole": "CEOChiefOfStaff",
+  "participantRoles": [
+    "CEO",
+    "ChiefOperatingOfficer",
+    "ChiefFinancialOfficer",
+    "ChiefProductOfficer",
+    "ChiefTechnologyOfficer"
+  ],
+  "generatedAt": "2026-05-27T04:07:39+08:00",
+  "records": [
+    {
+      "role": "CEOChiefOfStaff",
+      "status": "completed",
+      "summary": "CEOChiefOfStaff 已在 delivery 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "CEO",
+      "status": "completed",
+      "summary": "CEO 已在 delivery 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "ChiefOperatingOfficer",
+      "status": "completed",
+      "summary": "ChiefOperatingOfficer 已在 delivery 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "ChiefFinancialOfficer",
+      "status": "completed",
+      "summary": "ChiefFinancialOfficer 已在 delivery 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "ChiefProductOfficer",
+      "status": "completed",
+      "summary": "ChiefProductOfficer 已在 delivery 阶段完成 autopilot 协同条目。"
+    },
+    {
+      "role": "ChiefTechnologyOfficer",
+      "status": "completed",
+      "summary": "ChiefTechnologyOfficer 已在 delivery 阶段完成 autopilot 协同条目。"
+    }
+  ]
+}
