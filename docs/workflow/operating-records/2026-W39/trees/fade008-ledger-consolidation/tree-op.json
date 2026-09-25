@@ -56,16 +56,18 @@
       "face": "local",
       "assignee": "COS",
       "title": "渲染攒批（TriCompany 渲管线本机）",
-      "status": "pending",
-      "acceptance": "渲讫 commit+发布面 diff 对表"
+      "status": "frozen",
+      "acceptance": "渲讫 commit+发布面 diff 对表",
+      "note": "冻结候 TC 正名族落位——渲染管线抽验抓出反向正名（本机 TC 源侧零正名），16 件已 revert；LG-048/051 渲染链连带候窗"
     },
     {
       "id": "T6-push-flush-tmv-tc",
       "face": "local",
       "assignee": "COS",
       "title": "TMV+TC push 挂账件推平",
-      "status": "pending",
-      "acceptance": "ls-remote HEAD==本地 HEAD 双仓；推拒即停登记候授权"
+      "status": "done",
+      "acceptance": "ls-remote HEAD==本地 HEAD 双仓；推拒即停登记候授权",
+      "closeout": "TMV 侧 3d23a056（dev 真分叉清偿+LG-046 归并）+TC 侧 88a6988（ADE 五笔归并+60 笔推平），双仓双面 ls-remote 核真一致，2026-09-25 晨 COS 执行"
     },
     {
       "id": "T7-d29-correction",
