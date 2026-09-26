@@ -64,6 +64,17 @@
 - **第三刀毕（2026-09-26T06:15:25Z 新窗计时起点，cap 2h）**：注释全 ASCII 化（全文件 0 非 ASCII 字节断言）→ 两次重启（20584 硬门 FAIL 抓出假形态→**33328 显式 cmd /c 形态硬门 PASS**）→ PEB 实勘四钉位键全 PRESENT（新硬门首刀即抓真凶）；where node 直证、哨兵零触发、cron 台账 l2-scan 295/l3-remind 34 双 enabled。
 - 现役 daemon=**33328**（pidfile 跟写）；复活形态教训：**禁 `Start-Process -FilePath <.cmd>`**（幽灵尾参形态灭钉位块），用 `Start-Process cmd.exe /c "path"` 干净形态。
 - **窗毕补笔（CTO 裁，出窗动作清单新增）**：`trimlc-watchdog.ps1:29` 同为 Start-Process -FilePath 形态=存量幽灵参路径（watchdog 自动复活时钉位会再静默丢）——窗内不动；**出窗还原时一并修 ps1 为显式 cmd.exe /c 形态 + 手动触发一次复活验证父 cmdline 形态**，随出窗三读数一并报。
+
+## 五、终态段（2026-09-26T07:54Z 窗全闭，波④ 终笔）
+
+- **出窗还原五步毕**（CTO 令，STE 五臂五门全 PASS wave4-acceptance.md @ 1f7c17ba 后）：
+  1. DRILL WINDOW 块删除——文件面四钉位 set 零残留，0 非 ASCII 字节
+  2. watchdog ps1:29 修形=显式 `cmd.exe /c "path"`（原生无 BOM+全 ASCII 维持，实跑冒烟过）
+  3. 重启纪律全程 → pid=32664，**PEB 进程面出窗断言四钉位键零残留 PASS**（128 变量全量）
+  4. **watchdog 复活链验证 PASS**：手动实跑 ps1 → 日志 `15:53:20 DOWN (fail 1/3) -> reviving` → 拉起 **pid=7496** → 父 cmdline 实证干净形态（无幽灵尾参）→ pidfile 跟写
+  5. 出窗读数：healthz ok degraded=false / cron l2-scan 342 / l3-remind 37 双 enabled 跨重启存活 / 真活体 settings.json hash==基线 491F333…CD778B2
+- **现役终态**：daemon=7496（watchdog 拉起体=修形后干净形态）——幽灵参禁令自此在自动复活链闭环；恢复梯回正身态（真降级写真活体）。
+- 事故链资产沉淀：勘验记录 `fsd-drill-bleed-forensics.md`（含根因勘正）；治理条两条（非 ASCII rem 维持+幽灵参禁令新增）CTO 已落树。
 - STE 面：进窗知会已投，F2 补验门开臂条件齐（F2→F3→F4→F5 接续）；本席窗内支撑待命（臂中缺陷修正即报候审）。
 - 出窗义务（臂毕）：删 DRILL WINDOW 块→stop/start→三读数核验（钉位零残留/活体 hash 基线/cron 台账）——出窗还原比进窗重。
 - 窗全闭（STE 五臂毕+终出窗）后本件补终态段（出窗三读数+daemon 回归读数）。
