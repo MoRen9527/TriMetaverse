@@ -1,8 +1,8 @@
 # EVAL-LG053-WAVE3-CORE-SPLIT · 联审评估结论单（CPO+CTO 双签）
 
-- sourceOfTruth: 本件（联审评估结论单正身；CPO 合成＋CTO counter-sign 后呈 COS 转 CEO 批）
-- syncMode: final（CTO counter-sign 已落，2026-09-26 09:4x）
-- lastSyncedAt: 2026-09-26T09:4x+0800（final 翻转随 CTO counter-sign commit）
+- sourceOfTruth: 本件（联审评估结论单正身；CPO 合成＋CTO counter-sign 后呈 COS 转 CEO 批；**CEO 已批**，见文末批准记录）
+- syncMode: final（CEO 2026-09-26 16:08 批，BOD 落批准记录）
+- lastSyncedAt: 2026-09-26T16:0x+0800（批准记录入笔）
 - 评估对象: eval-wave3-core-split.md（54931a2b）四问；独立意见两段=eval-wave3-cto-independent.md（ac6ce3bf）＋cpo-core-split-view.md（c803028da）
 - 边界: 评估期零改动现役 core（守）；五防线语义不重开（守）；结论呈候定非自决翻案（守）
 
@@ -71,3 +71,10 @@ CEO 要的「物理上是四个单独命令包」**已经是事实，不需要�
 - 本席双段实勘交叉验证：TriCode/src/trimodel-cli/ 七文件头注与行数（双席独立读数一致）
 - 波③交付与签认（fsd-wave3-delivery-report.md 7f1c62ed：276 测零回退、CORE_VERSION 版本锁、技术债⑩）
 - joint-plan.md 双签终版（问3 三统一判据/问7 恢复梯）；CEO 09:01 令原文
+
+## 批准记录（CEO 2026-09-26 16:08 批）
+
+- **裁决**：CEO 三件裁决之一原文「1、同意补两条」——**A 强化版两治理条款照准**（BOD 大白话呈批「批了=只写两条规矩进制度，代码零改动」与结论单案裁对表一致）。
+- **兑现范围**：①域演化禁入 core（成文）——落位=core 头注/README＋纪律册附录各一笔；②core 变更门禁（frozen 门槛）——落位=core 目录 frozen 标记＋CORE_VERSION 版本锁升格为变更唯一合法门。**零运行时改动、零拆包迁移**（问④ 裁定兑现）。
+- **候裁三件之其余两件**：②部署波「现在部署」→BOD 铸部署波任务书另立（候授号 LG-054，核号防撞随流程）；③CEO 测试窗「稍后再说」→台账候 CEO 族维持。
+- 条款落盘执行面经 COS 流转 COO 派工（落章笔=治理文档面，非代码面）；本批准记录=BOD 亲笔落（2026-09-26 16:1x，date 现查 16:08 星期六）。
