@@ -133,6 +133,18 @@
 - **开位条件对表（COO 令文）**：①本项完成读数=本节 ✓；②443 通道=候 CEO——两项齐后 A4 终态+BOD 终态轮成对收官。
 - 实弹限速验证（公网侧真实触发）候 443 开位后补测（空转期公网零流量不可触发，如实记）。
 
+## 十四、TLS 站点块修正与 A4 终态轮（BOD 定谳③+①执行令，收官段）
+
+- **时序根因（闭环）**：CEO 443 开位生效于站点块修正**之前**——BOD sg 侧 17:1x 首读 alert internal error 与本席 17:15 公网 curl 000 为**同一窗口**：彼时 Caddyfile 站点块=`https://127.0.0.1`，公网 SNI=8.155.54.79 无匹配站点→服务端回 alert。BOD 定向判断（站点块匹配面）准确；17:17 修后 reload 起全绿。
+- **修法（BOD 定谳③+①并装）**：站点块显式 `https://8.155.54.79`（挂既有 IP-SAN 自签证书）+全局 `default_sni 8.155.54.79`（无 SNI/SNI 变体兜底）。如实注：Caddy 2.6.2 无 `fallback_sni` 选项（2.7+），①的兜底语义由 `default_sni` 单项全覆盖；②绑域名照裁候 M2 域名决策（ACME 真证书终态）。修前配置锚 `/etc/caddy/Caddyfile.pre-ipblock-20260926.bak`；token gate 锚段原样保留（gen/revoke 脚本兼容断言=2）。
+- **门审三件套读数**：
+  1. **公网 TLS 三态**（本机→8.155.54.79:443 真公网路径）：GET /health **200**（0.252s）✓ / PUT 无 token **401**（gate fail-closed）✓ / api-token GET keys **200** ✓；s_client SNI=IP 形握手正常（CN=trimodel-r-hy）✓；curl 无 SNI 形 200 ✓
+  2. **机内四断言回归**：lo 443 无 SNI 200 ✓ / IP-SNI 443 200 ✓ / 3333 200 ✓ / 8710 200 ✓（smoke 不回退）
+  3. **iptables hashlimit 现役**：TRIMODEL_443 链 DROP 30/min burst 20 mode srcip 在位 ✓ + 8711 监听在位 ✓
+- **A4 终态对表**：TLS 终端 ✓+写面 token ✓+3333 公网不可达（§六保持）✓+安全组最小开位（443 开/3333 不开，CEO 面）✓+限流在位（§十三）✓——**A4 五件齐**。
+- **候 BOD**：sg 侧同法复测终态轮成对归卷（修后态预期全绿；若 sg 侧仍有 alert 读数请附探测工具+参数，供工具形定位）。
+- 排查过程中途读数存档：s_client 机内双形（无 SNI/SNI=IP）修前即通（手动证书按 SAN 全索引），证明败点精确在站点块 SNI 匹配而非证书本体——与 CTO 门审预意见①一致。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
