@@ -116,6 +116,23 @@
 - CTO 定性：机内段验收通过；跨机段候 443/BOD 亲勘照旧。
 - 门审第二单与本读数件关系：追认后 §四 Caddy 层 gate=正式配置面（非临时裁量态）。
 
+## 十三、M1 基础限流落位读数（COO 排程令应答，候 CTO 随到随审）
+
+- **接令链**：CTO 门审②限流=443 开位硬前置 → COO 排程「落位即排并行非阻，M1 基础限流落位即可」→ 本席 16:52 接令回执（技术形态勘正：Caddy 2.6.2 无 rate_limit 模块，纯 Caddyfile 落不了真限流）。
+- **形态裁定**：M1 基础限流落**内核层 iptables hashlimit on 443**（活体勘实先行：TriModel src 内 429/rateLimited 全系上游 provider 换棒逻辑、无入站限流=应用层排除；xcaddy 系 CTO 裁候 M2 形态不提前）。即 **双层限流**=M1 内核层基础面（per-IP 连接速率）+M2 xcaddy 应用级精细面（method/path/token 维度）互补。
+- **落位读数**：
+  - 规则（只 append 新链，既有 INPUT 零删改——落位前锚=仅 1 行 `-P INPUT ACCEPT`）：
+    - `-A INPUT -i lo -j RETURN`（机内管理面豁免）
+    - `-A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW -j TRIMODEL_443`（仅 443 新建连接入链）
+    - `-A TRIMODEL_443 -m hashlimit --hashlimit-above 30/minute --hashlimit-burst 20 --hashlimit-mode srcip --hashlimit-name trimodel443 -j DROP`（per-IP 新建连接 30/min、burst 20，超限丢）
+    - `-A TRIMODEL_443 -j RETURN`（未超限放行）
+  - 持久化：iptables-persistent（netfilter-persistent enabled）+`netfilter-persistent save`——rules.v4 五行全录，重启自动重载 ✓
+- **smoke 四断言**：机内 443 GET 200（lo 豁免生效）✓ / 3333 GET 200（未殃及）✓ / 8710 GET 200（现役面零触碰）✓ / 8711 监听在位 ✓
+- **空转期语义**：443 安全组未开=规则装载但零流量，开位即生效——匹配 CTO「开位时限流未到位不开」硬前置时序。
+- **回滚锚（RB-02）**：`iptables -F TRIMODEL_443 && iptables -D INPUT -p tcp --dport 443 -m conntrack --ctstate NEW -j TRIMODEL_443 && iptables -D INPUT -i lo -j RETURN && iptables -X TRIMODEL_443 && netfilter-persistent save`（零既有规则回退依赖）。
+- **开位条件对表（COO 令文）**：①本项完成读数=本节 ✓；②443 通道=候 CEO——两项齐后 A4 终态+BOD 终态轮成对收官。
+- 实弹限速验证（公网侧真实触发）候 443 开位后补测（空转期公网零流量不可触发，如实记）。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
