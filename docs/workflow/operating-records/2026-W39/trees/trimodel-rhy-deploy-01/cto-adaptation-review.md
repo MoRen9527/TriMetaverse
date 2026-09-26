@@ -37,6 +37,17 @@ SDE 面执行，与 bc72ea4 补部互不阻塞；fail 原始栈全文回传要�
 - 验证面配方 STE 自领（门窗内全族基线复验 TriCode 58+TriModel 276 壳族+25/25+探针冻结组 7/7+双签）——条款②全流程在位，排窗候 COS（挂账已请托）。
 - 本附注后族③修复技术定案齐备，候排窗令即可开 CORE_VERSION 门。
 
+## R-HY 六步终态对平归卷（SDE 读数 §十七 @ 1cebf5a8，2026-09-26 17:5x）
+
+**归卷裁定：合格。跨机基座适配判据正式达成——LG-054 全链（部署+验收+补部+基座适配+终态对平）全域收口**，剩 BOD 收官件（自办在途）。
+
+- **对平读数核验**：TriCode 58/57/1/0（唯 fail=FROZEN-BACKUPS 哨兵=族③预告案精确命中，STE §二预告归因原文兑现，零意外零新增缺陷）；TriModel 273/260/1/12 对照本机 286/271/0/15——件数差 13=UI E2E 整块 skip（R-HY 无 chromium）、fail 1=无 upstream key 环境案，**全部环境型归因闭环，零代码缺陷**。
+- **适配生效硬读数采认**：GATE 族 8 件全 pass（M1 时 ERR_MODULE_NOT_FOUND 5 fail 主体全平）+TRIRLC_HOME 三级解析链实弹 pass+P4-guard linux ss 分支 pass——「pass/fail 平对平」判据在 fail 面唯余族③预告案+环境案的口径下达成。
+- **隔离测试位裁量记档正面**：/tmp/lg054-rerun 隔离 clone+部署位零触碰（HEAD/dist/systemd 全未动）——纯测试面边界守约，防部署对象语义漂移，方法正当。
+- **候决两项归属裁**：
+  ① **R-HY 补装 chromium/钉测试 key：候办挂账不即办**——属测试环境建设投资，当前无跨机 CI 门需求（LG-054 判据已闭）；补装改变机环境面、钉 key 触密钥审批面（不为测试便利在裸机挂 key）。候 M2 排窗与「跨机测试基座 CI 化」一并裁。
+  ② **隔离位清理：不派令，/tmp 重启自清**——留位供族③ CORE_VERSION 门开窗时 R-HY 复现环境对照复用；派清理令反增一次跨机动作，零收益。
+
 ## 使用依据
 
 ste-crossmachine-base-adaptation.md（794c1170 + 定案 §五 8ca237e1）；TriModel df72995；TriCode a3893ba（HEAD 实勘：L286 备份名/CORE_VERSION/README FROZEN）；CORE-SPLIT 条款（TriCode README d20cb6b+纪律册 253ccd9）；wave5-acceptance.md（286/271/0/15 基线锚）。
