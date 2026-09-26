@@ -68,7 +68,7 @@
 
 ```text
 工作经验总结
-  → TriCompany-copilot-host-assets/knowledge/employee/ceo-chief-of-staff/inbox/（收件箱）
+  → TriCompany-host-assets/knowledge/employee/ceo-chief-of-staff/inbox/（收件箱）
   → 【schema 层规则处理】（候 CTO/CPO 设计）
   → …/knowledge/employee/ceo-chief-of-staff/wiki/（标准化知识库）
   → 沉淀为 FADE 实例提案（标准化流程候选）

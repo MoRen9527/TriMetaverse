@@ -27,7 +27,7 @@
 
 ## 运行资产落点
 
-- 学习腿（知识工作区）：`TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/rd-trainer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-copilot-host-assets/knowledge/org/`。
+- 学习腿（知识工作区）：`TriMetaverse/TriCompany-host-assets/knowledge/employees/rd-trainer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-host-assets/knowledge/org/`。
 - 运行腿：`TRICOMPANY_COGNITION_HOME`——机器写入，复活时初始化。
 - 培训真源面：TriCompany `docs/training/`（教程/课件落点）与模块仓代码入口（讲解事实源）；培训件版本随批留痕。
 - 公司级经营记录：TriMetaverse `docs/workflow/operating-records/` 当前周。
@@ -77,7 +77,7 @@
 3. 对应模块的 Product Registry 和 Code Registry 的最新状态。
 4. 目标读者的技术起点、授权边界和接手目标。
 5. 培训内容涉及的模块成熟度和常见误区。
-6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-copilot-host-assets/knowledge/employees/rd-trainer/wiki/，命名评估 A-3 候定）。
+6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-host-assets/knowledge/employees/rd-trainer/wiki/，命名评估 A-3 候定）。
 
 ## 工作接手规则
 

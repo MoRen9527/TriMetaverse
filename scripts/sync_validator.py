@@ -5,9 +5,9 @@
 # 工作区布局说明：
 #   - TriMetaverse/ 是 root workspace（当前工作目录所在）
 #   - TriCompany/ 是独立模块仓（同级兄弟目录 ../TriCompany/），存放培训文档源端
-#   - TriMetaverse/TriCompany-copilot-host-assets/ 是宿主支撑包，存放 runtime engine/CLI 和 published-copy
+#   - TriMetaverse/TriCompany-host-assets/ 是宿主支撑包，存放 runtime engine/CLI 和 published-copy
 #
-# 本脚本默认从 sibling repo 读取源端文档，从 TriCompany-copilot-host-assets 读取 engine/CLI。
+# 本脚本默认从 sibling repo 读取源端文档，从 TriCompany-host-assets 读取 engine/CLI。
 # 详见 docs/文档治理与真源文件系统.md §2.1 和 docs/github-repo-governance.md §2。
 
 import argparse
@@ -77,10 +77,10 @@ def main():
     else:
         tri_company_source = Path(os.path.join(os.path.dirname(__file__), "..", "..", "TriCompany"))
 
-    # TriCompany-copilot-host-assets：存放 runtime engine/CLI + 培训文档 published-copy
+    # TriCompany-host-assets：存放 runtime engine/CLI + 培训文档 published-copy
     tri_host = Path(os.environ.get(
         "TRICOMPANY_HOST_ASSETS",
-        os.path.join(os.path.dirname(__file__), "..", "TriCompany-copilot-host-assets")
+        os.path.join(os.path.dirname(__file__), "..", "TriCompany-host-assets")
     ))
 
     # Engine & CLI 在 published host assets 中

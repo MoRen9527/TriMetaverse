@@ -1,0 +1,1677 @@
+TAP version 13
+# [trimodel] trimmc-card.json at C:\\Users\\jedih\\AppData\\Local\\Temp\\trimodel-proxykey2-test-aENKXo\\bad.json unparsable — ignoring: Unexpected token 'o', "not json at all" is not valid JSON
+# Subtest: proxy: upstream route table (official catalog exact match)
+    # Subtest: deepseek official names → native anthropic endpoint + DEEPSEEK key
+    ok 1 - deepseek official names → native anthropic endpoint + DEEPSEEK key
+      ---
+      duration_ms: 1.5178
+      type: 'test'
+      ...
+    # Subtest: GLM official names → GLM anthropic-compat endpoint + GLM key
+    ok 2 - GLM official names → GLM anthropic-compat endpoint + GLM key
+      ---
+      duration_ms: 1.0665
+      type: 'test'
+      ...
+    # Subtest: TMV → TriStaciss anthropic relay (base /v1 tail stripped) + platform key
+    ok 3 - TMV → TriStaciss anthropic relay (base /v1 tail stripped) + platform key
+      ---
+      duration_ms: 0.2457
+      type: 'test'
+      ...
+    # Subtest: unmatched → null (proxy refuses rather than mis-routing keys)
+    ok 4 - unmatched → null (proxy refuses rather than mis-routing keys)
+      ---
+      duration_ms: 0.4093
+      type: 'test'
+      ...
+    # Subtest: unroutable effective model → no-upstream-route
+    ok 5 - unroutable effective model → no-upstream-route
+      ---
+      duration_ms: 0.295
+      type: 'test'
+      ...
+    # Subtest: S5 归并: card enabled entry key OVERRIDES env (card-first resolution)
+    ok 6 - S5 归并: card enabled entry key OVERRIDES env (card-first resolution)
+      ---
+      duration_ms: 59.366
+      type: 'test'
+      ...
+    # Subtest: S5 归并: card absent → env fallback; corrupted card → env fallback, never throws
+    ok 7 - S5 归并: card absent → env fallback; corrupted card → env fallback, never throws
+      ---
+      duration_ms: 2.7576
+      type: 'test'
+      ...
+    # Subtest: route table: three upstream groups over the five-name catalog
+    ok 8 - route table: three upstream groups over the five-name catalog
+      ---
+      duration_ms: 33.6977
+      type: 'test'
+      ...
+    1..8
+ok 1 - proxy: upstream route table (official catalog exact match)
+  ---
+  duration_ms: 101.4177
+  type: 'suite'
+  ...
+# Subtest: proxy: body rewrite correctness
+    # Subtest: policy window hit: model rewritten to schedule model + route follows
+    ok 1 - policy window hit: model rewritten to schedule model + route follows
+      ---
+      duration_ms: 60.4514
+      type: 'test'
+      ...
+    # Subtest: no policy: falls back to official env default (deepseek-v4-pro)
+    ok 2 - no policy: falls back to official env default (deepseek-v4-pro)
+      ---
+      duration_ms: 0.4969
+      type: 'test'
+      ...
+    # Subtest: CC placeholder model semantics: whatever CC sends is overridden server-side
+    ok 3 - CC placeholder model semantics: whatever CC sends is overridden server-side
+      ---
+      duration_ms: 0.4045
+      type: 'test'
+      ...
+    # Subtest: bad JSON → bad-json; missing upstream key → no-api-key
+    ok 4 - bad JSON → bad-json; missing upstream key → no-api-key
+      ---
+      duration_ms: 0.6739
+      type: 'test'
+      ...
+    1..4
+ok 2 - proxy: body rewrite correctness
+  ---
+  duration_ms: 62.8712
+  type: 'suite'
+  ...
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+# Subtest: proxy: E2E — fidelity + SSE integrity + defense + health (in-process)
+    # Subtest: non-streaming: model rewritten, key injected server-side, CC placeholder overridden
+    ok 1 - non-streaming: model rewritten, key injected server-side, CC placeholder overridden
+      ---
+      duration_ms: 34.4569
+      type: 'test'
+      ...
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+    # Subtest: forwarding fidelity: body untouched except model field (deep-compare)
+    ok 2 - forwarding fidelity: body untouched except model field (deep-compare)
+      ---
+      duration_ms: 6.1984
+      type: 'test'
+      ...
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+    # Subtest: SSE streaming integrity: fragmented upstream chunks pipe complete (不碎不缓冲)
+    ok 3 - SSE streaming integrity: fragmented upstream chunks pipe complete (不碎不缓冲)
+      ---
+      duration_ms: 2205.7402
+      type: 'test'
+      ...
+    # Subtest: 10MB body cap: oversized request rejected at connection level
+    ok 4 - 10MB body cap: oversized request rejected at connection level
+      ---
+      duration_ms: 151.3451
+      type: 'test'
+      ...
+    # Subtest: health surface: policy effective + routes, zero key material
+    ok 5 - health surface: policy effective + routes, zero key material
+      ---
+      duration_ms: 4.1272
+      type: 'test'
+      ...
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+# [proxy] rewrite cc-placeholder -> deepseek-v4-pro (schedule=fallback, upstream=deepseek-anthropic)
+    # Subtest: CC real request shapes: ?query suffix + /count_tokens subpath route through (2026-09-14 405 接线根因回归)
+    ok 6 - CC real request shapes: ?query suffix + /count_tokens subpath route through (2026-09-14 405 接线根因回归)
+      ---
+      duration_ms: 10.7804
+      type: 'test'
+      ...
+# [proxy] 405 unmatched: GET /v1/messages
+    # Subtest: other routes → 405
+    ok 7 - other routes → 405
+      ---
+      duration_ms: 1.5937
+      type: 'test'
+      ...
+    1..7
+ok 3 - proxy: E2E — fidelity + SSE integrity + defense + health (in-process)
+  ---
+  duration_ms: 2433.9859
+  type: 'suite'
+  ...
+# [trimodel] card migrated to v4: 1 strategy(ies), 2 rule(s), 1 model set(s); active=st_mugwu5ot3o718g
+# Subtest: 本地侧: 应用到本机 (handleApplyStrategy, v4)
+    # Subtest: 无卡 → 404 人话
+    ok 1 - 无卡 → 404 人话
+      ---
+      duration_ms: 0.9938
+      type: 'test'
+      ...
+    # Subtest: 有卡无活动策略 → 400 人话
+    ok 2 - 有卡无活动策略 → 400 人话
+      ---
+      duration_ms: 3.8381
+      type: 'test'
+      ...
+    # Subtest: 活动策略悬挂 → 400 人话
+    ok 3 - 活动策略悬挂 → 400 人话
+      ---
+      duration_ms: 0.8468
+      type: 'test'
+      ...
+    # Subtest: 纯 quota 策略不可应用 → 400 人话（硬门：≥1 time 或 default）
+    ok 4 - 纯 quota 策略不可应用 → 400 人话（硬门：≥1 time 或 default）
+      ---
+      duration_ms: 1.4729
+      type: 'test'
+      ...
+    # Subtest: 正常路径：time→schedules（id=strategy:<pid>:<rid>、priority 归一）+ default→卡缓存 + quota 计数不进 schedules
+    ok 5 - 正常路径：time→schedules（id=strategy:<pid>:<rid>、priority 归一）+ default→卡缓存 + quota 计数不进 schedules
+      ---
+      duration_ms: 4.6966
+      type: 'test'
+      ...
+    # Subtest: v3 卡迁移入态：loadCard 自动升格 v4 → apply 可用（迁移+应用直通链）
+    ok 6 - v3 卡迁移入态：loadCard 自动升格 v4 → apply 可用（迁移+应用直通链）
+      ---
+      duration_ms: 6.5084
+      type: 'test'
+      ...
+    # Subtest: 幂等：重复 apply 结果一致
+    ok 7 - 幂等：重复 apply 结果一致
+      ---
+      duration_ms: 4.0416
+      type: 'test'
+      ...
+    # Subtest: 鉴权：错 token → 401
+    ok 8 - 鉴权：错 token → 401
+      ---
+      duration_ms: 0.8274
+      type: 'test'
+      ...
+    1..8
+ok 4 - 本地侧: 应用到本机 (handleApplyStrategy, v4)
+  ---
+  duration_ms: 28.134
+  type: 'suite'
+  ...
+# [ste-gate] ci.yml dist/ui assertion present = true (observation, see gate report)
+# Subtest: GATE P2: build chain (C)
+    # Subtest: npm run build:verify is green (tsc + copy-ui + dist assertions)
+    ok 1 - npm run build:verify is green (tsc + copy-ui + dist assertions)
+      ---
+      duration_ms: 5846.3613
+      type: 'test'
+      ...
+    # Subtest: dist/ui/index.html exists after build (compiled UI_ROOT reachable)
+    ok 2 - dist/ui/index.html exists after build (compiled UI_ROOT reachable)
+      ---
+      duration_ms: 0.9612
+      type: 'test'
+      ...
+    # Subtest: compiled server references dist/ui (UI_ROOT seam)
+    ok 3 - compiled server references dist/ui (UI_ROOT seam)
+      ---
+      duration_ms: 0.3852
+      type: 'test'
+      ...
+    # Subtest: OBSERVATION: ci.yml Verify-dist step state recorded (not a red assertion)
+    ok 4 - OBSERVATION: ci.yml Verify-dist step state recorded (not a red assertion)
+      ---
+      duration_ms: 1.267
+      type: 'test'
+      ...
+    1..4
+ok 5 - GATE P2: build chain (C)
+  ---
+  duration_ms: 5850.089
+  type: 'suite'
+  ...
+# [trimodel] legacy card migrated: C:\\Users\\jedih\\AppData\\Local\\Temp\\trimodel-cardpath-test-nr132k\\legacy\\trimmc-card.json → C:\\Users\\jedih\\AppData\\Local\\Temp\\trimodel-cardpath-test-nr132k\\fresh\\trimmc-card.json
+# Subtest: D9: path canonicalization
+    # Subtest: env override wins: TRIMODEL_CARD_FILE pins the card location
+    ok 1 - env override wins: TRIMODEL_CARD_FILE pins the card location
+      ---
+      duration_ms: 4.4654
+      type: 'test'
+      ...
+    # Subtest: legacy dist-adjacent card is migrated rename-style to the canonical path (idempotent)
+    ok 2 - legacy dist-adjacent card is migrated rename-style to the canonical path (idempotent)
+      ---
+      duration_ms: 2.1734
+      type: 'test'
+      ...
+    1..2
+ok 6 - D9: path canonicalization
+  ---
+  duration_ms: 10.2451
+  type: 'suite'
+  ...
+# Subtest: D9: merged-validation order (校验序重构)
+    # Subtest: mirror-rule reference is resolved by merge: partial PUT (rules referencing existing entry, empty provided) → 200
+    ok 1 - mirror-rule reference is resolved by merge: partial PUT (rules referencing existing entry, empty provided) → 200
+      ---
+      duration_ms: 43.1706
+      type: 'test'
+      ...
+    # Subtest: true dangling (neither provided nor existing) still 400 after merge
+    ok 2 - true dangling (neither provided nor existing) still 400 after merge
+      ---
+      duration_ms: 2.118
+      type: 'test'
+      ...
+    1..2
+ok 7 - D9: merged-validation order (校验序重构)
+  ---
+  duration_ms: 46.9486
+  type: 'suite'
+  ...
+# Subtest: 兜底端点真链路（真 server + 真 HTTP POST）
+    # Subtest: 真 HTTP POST restore：体到达 handler→200→三组值落盘（BOD 打回缺陷回归位）
+    ok 1 - 真 HTTP POST restore：体到达 handler→200→三组值落盘（BOD 打回缺陷回归位）
+      ---
+      duration_ms: 17.9776
+      type: 'test'
+      ...
+    # Subtest: 真 HTTP GET：读到刚写入的现值
+    ok 2 - 真 HTTP GET：读到刚写入的现值
+      ---
+      duration_ms: 2.9707
+      type: 'test'
+      ...
+    # Subtest: 真 HTTP POST 无令牌→401（fail-closed 链路层）
+    ok 3 - 真 HTTP POST 无令牌→401（fail-closed 链路层）
+      ---
+      duration_ms: 3.6595
+      type: 'test'
+      ...
+    # Subtest: 真 HTTP POST 空体→400 人话（体为 {} 时三值皆空）
+    ok 4 - 真 HTTP POST 空体→400 人话（体为 {} 时三值皆空）
+      ---
+      duration_ms: 4.5654
+      type: 'test'
+      ...
+    1..4
+ok 8 - 兜底端点真链路（真 server + 真 HTTP POST）
+  ---
+  duration_ms: 6054.5286
+  type: 'suite'
+  ...
+# Subtest: LG-036 sg 通道：ssh 契约（argv 零载荷 + stdin -K 配置）
+    # Subtest: argv=静态常量（零密钥零载荷零路径注入）；载荷全在 stdin curl config
+    ok 1 - argv=静态常量（零密钥零载荷零路径注入）；载荷全在 stdin curl config
+      ---
+      duration_ms: 6.9961
+      type: 'test'
+      ...
+    # Subtest: curlConfigQuote：引号/反斜杠转义正确（注入零逃逸）
+    ok 2 - curlConfigQuote：引号/反斜杠转义正确（注入零逃逸）
+      ---
+      duration_ms: 0.1865
+      type: 'test'
+      ...
+    # Subtest: buildCurlConfig：GET 无 data 项；无 bearer 时无 Authorization 头
+    ok 3 - buildCurlConfig：GET 无 data 项；无 bearer 时无 Authorization 头
+      ---
+      duration_ms: 0.1954
+      type: 'test'
+      ...
+    1..3
+ok 9 - LG-036 sg 通道：ssh 契约（argv 零载荷 + stdin -K 配置）
+  ---
+  duration_ms: 8.2929
+  type: 'suite'
+  ...
+# Subtest: LG-036 sg 通道：GET status 态映射
+    # Subtest: ok：channel=正常+地址/模型/masked 透传
+    ok 1 - ok：channel=正常+地址/模型/masked 透传
+      ---
+      duration_ms: 2.9008
+      type: 'test'
+      ...
+    # Subtest: 404 → version_unsupported（人话「版本过旧」）
+    ok 2 - 404 → version_unsupported（人话「版本过旧」）
+      ---
+      duration_ms: 0.9802
+      type: 'test'
+      ...
+    # Subtest: ssh 失败（exit≠0 或 spawn error）→ unreachable 人话
+    ok 3 - ssh 失败（exit≠0 或 spawn error）→ unreachable 人话
+      ---
+      duration_ms: 0.7529
+      type: 'test'
+      ...
+    # Subtest: X-SG-Admin-Token → 转发为 sg Authorization（config header 项）
+    ok 4 - X-SG-Admin-Token → 转发为 sg Authorization（config header 项）
+      ---
+      duration_ms: 1.6193
+      type: 'test'
+      ...
+    1..4
+ok 10 - LG-036 sg 通道：GET status 态映射
+  ---
+  duration_ms: 6.7536
+  type: 'suite'
+  ...
+# Subtest: LG-036 sg 通道：POST restore（本地 fail-closed+映射）
+    # Subtest: happy path：转发 sg 200 → 透传 message+「sg 侧会话重启后生效」+channel ok
+    ok 1 - happy path：转发 sg 200 → 透传 message+「sg 侧会话重启后生效」+channel ok
+      ---
+      duration_ms: 2.1442
+      type: 'test'
+      ...
+    # Subtest: 本地 fail-closed：无令牌配置 503 / 错令牌 401（零 spawn）
+    ok 2 - 本地 fail-closed：无令牌配置 503 / 错令牌 401（零 spawn）
+      ---
+      duration_ms: 0.6999
+      type: 'test'
+      ...
+    # Subtest: 本地前置校验：空/坏地址/短密钥/缺 sg 令牌 → 400 人话零 spawn
+    ok 3 - 本地前置校验：空/坏地址/短密钥/缺 sg 令牌 → 400 人话零 spawn
+      ---
+      duration_ms: 0.5197
+      type: 'test'
+      ...
+    # Subtest: sg 401 → token_rejected「sg 令牌不正确」；sg 404 → 版本态；ssh 失败 → 502 不可达
+    ok 4 - sg 401 → token_rejected「sg 令牌不正确」；sg 404 → 版本态；ssh 失败 → 502 不可达
+      ---
+      duration_ms: 2.0117
+      type: 'test'
+      ...
+    1..4
+ok 11 - LG-036 sg 通道：POST restore（本地 fail-closed+映射）
+  ---
+  duration_ms: 5.7056
+  type: 'suite'
+  ...
+# Subtest: LG-036 sg 通道：零落盘断言（R1 本机文件面零写）
+    # Subtest: sg 全流程前后：本机文件面 diff=空（含无新文件/无临时文件）
+    ok 1 - sg 全流程前后：本机文件面 diff=空（含无新文件/无临时文件）
+      ---
+      duration_ms: 4.1242
+      type: 'test'
+      ...
+    1..1
+ok 12 - LG-036 sg 通道：零落盘断言（R1 本机文件面零写）
+  ---
+  duration_ms: 4.4907
+  type: 'suite'
+  ...
+# Subtest: claude-fallback: GET（无鉴权读）
+    # Subtest: 无令牌：200 返回地址+模型，不含密钥位
+    ok 1 - 无令牌：200 返回地址+模型，不含密钥位
+      ---
+      duration_ms: 1.1108
+      type: 'test'
+      ...
+    # Subtest: 管理令牌正确：附密钥尾 4 位（不回显全值）
+    ok 2 - 管理令牌正确：附密钥尾 4 位（不回显全值）
+      ---
+      duration_ms: 0.3424
+      type: 'test'
+      ...
+    # Subtest: 令牌错误：等同无令牌（fail-safe 不给敏感位）
+    ok 3 - 令牌错误：等同无令牌（fail-safe 不给敏感位）
+      ---
+      duration_ms: 0.2354
+      type: 'test'
+      ...
+    # Subtest: 文件缺失：200 空值返回（读面不炸）
+    ok 4 - 文件缺失：200 空值返回（读面不炸）
+      ---
+      duration_ms: 0.2146
+      type: 'test'
+      ...
+    1..4
+ok 13 - claude-fallback: GET（无鉴权读）
+  ---
+  duration_ms: 6.1317
+  type: 'suite'
+  ...
+# Subtest: claude-fallback: POST restore（管理令牌 fail-closed）
+    # Subtest: 正常写：三组值落盘（地址/密钥/9 键全族）+ 其余字段逐字节保留 + 备份在
+    ok 1 - 正常写：三组值落盘（地址/密钥/9 键全族）+ 其余字段逐字节保留 + 备份在
+      ---
+      duration_ms: 7.0073
+      type: 'test'
+      ...
+    # Subtest: 幂等：重复提交同值 → already_same 明示、不重写不新增备份
+    ok 2 - 幂等：重复提交同值 → already_same 明示、不重写不新增备份
+      ---
+      duration_ms: 4.2694
+      type: 'test'
+      ...
+    # Subtest: 401：令牌错拒写（文件零触碰）
+    ok 3 - 401：令牌错拒写（文件零触碰）
+      ---
+      duration_ms: 0.7307
+      type: 'test'
+      ...
+    # Subtest: 503：管理令牌未配置（fail-closed）
+    ok 4 - 503：管理令牌未配置（fail-closed）
+      ---
+      duration_ms: 0.4959
+      type: 'test'
+      ...
+    # Subtest: 非法输入：坏地址/短密钥/空值 人话拒（不落盘）
+    ok 5 - 非法输入：坏地址/短密钥/空值 人话拒（不落盘）
+      ---
+      duration_ms: 1.0144
+      type: 'test'
+      ...
+    # Subtest: 文件缺失：新建并在文案注明「已新建」
+    ok 6 - 文件缺失：新建并在文案注明「已新建」
+      ---
+      duration_ms: 1.1137
+      type: 'test'
+      ...
+    # Subtest: 坏 JSON：拒写不覆盖（人话附路径）
+    ok 7 - 坏 JSON：拒写不覆盖（人话附路径）
+      ---
+      duration_ms: 1.266
+      type: 'test'
+      ...
+    # Subtest: F-1 双载体：既有 API_KEY 存在 → 同写同值（消灭残留）+幂等含 API_KEY 一致性
+    ok 8 - F-1 双载体：既有 API_KEY 存在 → 同写同值（消灭残留）+幂等含 API_KEY 一致性
+      ---
+      duration_ms: 5.105
+      type: 'test'
+      ...
+    1..8
+ok 14 - claude-fallback: POST restore（管理令牌 fail-closed）
+  ---
+  duration_ms: 22.3858
+  type: 'suite'
+  ...
+# ◇ injected env (2) from .env // tip: ⌘ enable debugging { debug: true }
+# ◇ injected env (7) from ..\\.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# ◇ injected env (0) from ..\\..\\.env // tip: ◈ secrets for agents [www.dotenvx.com]
+# [trimodel-client][dbg] chat model=deepseek-chat depth=0 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] chat model=deepseek-chat depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-chat failed (depth=0, reason: DeepSeek API error 429: {"error":{"message":"rate limit exceeded"}}), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] chat model=unknown-model depth=0 msgs=1 lastRole=user known=false
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=0, reason: DeepSeek API error 503: {"error":{"message":"service unavailable"}}), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-flash failed (depth=1, reason: DeepSeek API error 503: {"error":{"message":"service unavailable"}}), trying deepseek-v4-pro
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=2 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=2, reason: DeepSeek API error 503: {"error":{"message":"service unavailable"}}), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=3 msgs=1 lastRole=user known=true
+# [anthropic-provider][dbg] outbound: claude-sonnet-4-20250514 [{"role":"user","contentType":"string"}]
+# Subtest: DeepSeekProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 39.6615
+      type: 'test'
+      ...
+    # Subtest: should handle deepseek-reasoner model
+    ok 2 - should handle deepseek-reasoner model
+      ---
+      duration_ms: 0.4543
+      type: 'test'
+      ...
+    1..2
+ok 15 - DeepSeekProvider
+  ---
+  duration_ms: 41.46
+  type: 'suite'
+  ...
+# Subtest: ModelClient
+    # Subtest: should list available models
+    ok 1 - should list available models
+      ---
+      duration_ms: 0.5059
+      type: 'test'
+      ...
+    # Subtest: should route chat request to correct provider
+    ok 2 - should route chat request to correct provider
+      ---
+      duration_ms: 0.7539
+      type: 'test'
+      ...
+    # Subtest: should fallback from deepseek-chat to deepseek-v4-flash
+    ok 3 - should fallback from deepseek-chat to deepseek-v4-flash
+      ---
+      duration_ms: 0.9249
+      type: 'test'
+      ...
+    # Subtest: should throw for unknown model
+    ok 4 - should throw for unknown model
+      ---
+      duration_ms: 0.5097
+      type: 'test'
+      ...
+    # Subtest: should list Anthropic models when anthropicApiKey is set
+    ok 5 - should list Anthropic models when anthropicApiKey is set
+      ---
+      duration_ms: 0.201
+      type: 'test'
+      ...
+    # Subtest: should list OpenAI models when openaiApiKey is set
+    ok 6 - should list OpenAI models when openaiApiKey is set
+      ---
+      duration_ms: 0.1879
+      type: 'test'
+      ...
+    # Subtest: should not include Anthropic models without anthropicApiKey
+    ok 7 - should not include Anthropic models without anthropicApiKey
+      ---
+      duration_ms: 0.1507
+      type: 'test'
+      ...
+    # Subtest: should respect fallback depth limit (max 2 hops)
+    ok 8 - should respect fallback depth limit (max 2 hops)
+      ---
+      duration_ms: 1.1462
+      type: 'test'
+      ...
+    # Subtest: should have bounded fallback ring (v4-pro <-> v4-flash stops at depth limit)
+    ok 9 - should have bounded fallback ring (v4-pro <-> v4-flash stops at depth limit)
+      ---
+      duration_ms: 0.1965
+      type: 'test'
+      ...
+    1..9
+ok 16 - ModelClient
+  ---
+  duration_ms: 5.1925
+  type: 'suite'
+  ...
+# Subtest: AnthropicProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 1.7496
+      type: 'test'
+      ...
+    1..1
+ok 17 - AnthropicProvider
+  ---
+  duration_ms: 1.9637
+  type: 'suite'
+  ...
+# Subtest: OpenAIProvider
+    # Subtest: should complete a chat request
+    ok 1 - should complete a chat request
+      ---
+      duration_ms: 0.6077
+      type: 'test'
+      ...
+    1..1
+ok 18 - OpenAIProvider
+  ---
+  duration_ms: 0.7815
+  type: 'suite'
+  ...
+# Subtest: Streaming
+    # Subtest: should stream from DeepSeekAnthropicProvider with SSE parsing
+    ok 1 - should stream from DeepSeekAnthropicProvider with SSE parsing
+      ---
+      duration_ms: 17.0186
+      type: 'test'
+      ...
+    1..1
+ok 19 - Streaming
+  ---
+  duration_ms: 17.4514
+  type: 'suite'
+  ...
+# Subtest: readConfig
+    # Subtest: should return defaults when no env vars set
+    ok 1 - should return defaults when no env vars set
+      ---
+      duration_ms: 0.1792
+      type: 'test'
+      ...
+    1..1
+ok 20 - readConfig
+  ---
+  duration_ms: 0.7837
+  type: 'suite'
+  ...
+# [trimodel] trimmc-card entry 'e1' undecryptable: Invalid authentication tag length: 3
+# Subtest: 增补件5→v4: strategy entity persistence + validation
+    # Subtest: ①PUT 带策略→GET 读回策略在
+    ok 1 - ①PUT 带策略→GET 读回策略在
+      ---
+      duration_ms: 28.0503
+      type: 'test'
+      ...
+    # Subtest: ②active_strategy_id 悬挂→400 人话
+    ok 2 - ②active_strategy_id 悬挂→400 人话
+      ---
+      duration_ms: 0.8623
+      type: 'test'
+      ...
+    # Subtest: ③deleted_strategy_ids 含 active→400 人话（「活动策略」词汇定稿）
+    ok 3 - ③deleted_strategy_ids 含 active→400 人话（「活动策略」词汇定稿）
+      ---
+      duration_ms: 0.7528
+      type: 'test'
+      ...
+    1..3
+ok 21 - 增补件5→v4: strategy entity persistence + validation
+  ---
+  duration_ms: 30.7736
+  type: 'suite'
+  ...
+# Subtest: S11: machine domain (分域求值/隔离/迁移)
+    # Subtest: LG-035 本地侧: policies 规范位=TRIMODEL_POLICIES_DIR env 钉位（D9 同款防编译位二义）
+    ok 1 - LG-035 本地侧: policies 规范位=TRIMODEL_POLICIES_DIR env 钉位（D9 同款防编译位二义）
+      ---
+      duration_ms: 2.9419
+      type: 'test'
+      ...
+    # Subtest: sanitizeMachine: lowercase + hyphen folding + empty → local
+    ok 2 - sanitizeMachine: lowercase + hyphen folding + empty → local
+      ---
+      duration_ms: 0.1933
+      type: 'test'
+      ...
+    # Subtest: per-machine isolation: local empty vs sg-alpha window — evaluateForMachine diverges
+    ok 3 - per-machine isolation: local empty vs sg-alpha window — evaluateForMachine diverges
+      ---
+      duration_ms: 111.239
+      type: 'test'
+      ...
+    # Subtest: save/load roundtrip per machine (each machine its own truth)
+    ok 4 - save/load roundtrip per machine (each machine its own truth)
+      ---
+      duration_ms: 2.866
+      type: 'test'
+      ...
+    # Subtest: boot migration: legacy policy.json → policies/local.json (rename-style, idempotent)
+    ok 5 - boot migration: legacy policy.json → policies/local.json (rename-style, idempotent)
+      ---
+      duration_ms: 2.6205
+      type: 'test'
+      ...
+    # Subtest: proxy machine parameter: rewriteMessagesBody evaluates the given machine doc
+    ok 6 - proxy machine parameter: rewriteMessagesBody evaluates the given machine doc
+      ---
+      duration_ms: 0.4458
+      type: 'test'
+      ...
+    1..6
+ok 22 - S11: machine domain (分域求值/隔离/迁移)
+  ---
+  duration_ms: 145.3367
+  type: 'suite'
+  ...
+# [trimodel] policy.json at C:\\Users\\jedih\\AppData\\Local\\Temp\\ste-gate-u15-oA52kb\\bad.json is not valid JSON: Expected property name or '}' in JSON at position 2 (line 1 column 3)
+# [trimodel] policy.json at C:\\Users\\jedih\\AppData\\Local\\Temp\\ste-gate-u15-oA52kb\\badshape.json failed validation: schedules[0].target must be 'daemon-default'
+# Subtest: GATE L1: boundary family (independent re-assert)
+    # Subtest: U3 [start,end) adjudication: 18:00 exactly hits the [18:00,22:00) window
+    ok 1 - U3 [start,end) adjudication: 18:00 exactly hits the [18:00,22:00) window
+      ---
+      duration_ms: 15.4074
+      type: 'test'
+      ...
+    # Subtest: U5-U8 overnight window [22:00,06:00): 23:30/00:30/05:59 in, 06:00 out
+    ok 2 - U5-U8 overnight window [22:00,06:00): 23:30/00:30/05:59 in, 06:00 out
+      ---
+      duration_ms: 0.5046
+      type: 'test'
+      ...
+    # Subtest: U9 higher priority wins overlap
+    ok 3 - U9 higher priority wins overlap
+      ---
+      duration_ms: 0.3763
+      type: 'test'
+      ...
+    # Subtest: U10 equal priority: array order wins (first declared, CTO Q4a ruling)
+    ok 4 - U10 equal priority: array order wins (first declared, CTO Q4a ruling)
+      ---
+      duration_ms: 0.2717
+      type: 'test'
+      ...
+    # Subtest: U11 no/null policy evaluates to null (env fallback is caller-side)
+    ok 5 - U11 no/null policy evaluates to null (env fallback is caller-side)
+      ---
+      duration_ms: 0.1719
+      type: 'test'
+      ...
+    1..5
+ok 23 - GATE L1: boundary family (independent re-assert)
+  ---
+  duration_ms: 17.5423
+  type: 'suite'
+  ...
+# Subtest: GATE L1: U14 timezone — UTC-constructed instants map to Shanghai wall clock
+    # Subtest: 18:00 seam via UTC instants (09:59Z=17:59 out, 10:00Z=18:00 in, 10:01Z=18:01 in)
+    ok 1 - 18:00 seam via UTC instants (09:59Z=17:59 out, 10:00Z=18:00 in, 10:01Z=18:01 in)
+      ---
+      duration_ms: 0.4299
+      type: 'test'
+      ...
+    # Subtest: midnight seam via UTC instants (overnight [18:00,06:00))
+    ok 2 - midnight seam via UTC instants (overnight [18:00,06:00))
+      ---
+      duration_ms: 0.3702
+      type: 'test'
+      ...
+    # Subtest: non-Shanghai timezone schedules are skipped (P1 single-TZ)
+    ok 3 - non-Shanghai timezone schedules are skipped (P1 single-TZ)
+      ---
+      duration_ms: 0.2834
+      type: 'test'
+      ...
+    1..3
+ok 24 - GATE L1: U14 timezone — UTC-constructed instants map to Shanghai wall clock
+  ---
+  duration_ms: 1.278
+  type: 'suite'
+  ...
+# Subtest: GATE L1: U15 loadPolicy fail-safe (Q4b: corrupt file must never throw)
+    # Subtest: corrupt/absent/shape-invalid files all yield null without throwing
+    ok 1 - corrupt/absent/shape-invalid files all yield null without throwing
+      ---
+      duration_ms: 2.1064
+      type: 'test'
+      ...
+    # Subtest: savePolicy is atomic on disk (no .tmp leftover) and roundtrips
+    ok 2 - savePolicy is atomic on disk (no .tmp leftover) and roundtrips
+      ---
+      duration_ms: 2.0399
+      type: 'test'
+      ...
+    1..2
+ok 25 - GATE L1: U15 loadPolicy fail-safe (Q4b: corrupt file must never throw)
+  ---
+  duration_ms: 4.2642
+  type: 'suite'
+  ...
+# [trimodel] policy.json at C:\\Users\\jedih\\AppData\\Local\\Temp\\trimodel-policy-test-i0vsl8\\bad.json is not valid JSON: Expected property name or '}' in JSON at position 2 (line 1 column 3)
+# [trimodel] policy.json at C:\\Users\\jedih\\AppData\\Local\\Temp\\trimodel-policy-test-i0vsl8\\badshape.json failed validation: schedules[0].id must be a non-empty string
+# Subtest: policy: evaluatePolicy window boundaries
+    # Subtest: start is inclusive: 14:00 matches a 14:00-18:00 window
+    ok 1 - start is inclusive: 14:00 matches a 14:00-18:00 window
+      ---
+      duration_ms: 16.1604
+      type: 'test'
+      ...
+    # Subtest: end is exclusive: 17:59 matches, 18:00 does not
+    ok 2 - end is exclusive: 17:59 matches, 18:00 does not
+      ---
+      duration_ms: 0.3413
+      type: 'test'
+      ...
+    # Subtest: CEO demo example: 14:00-18:00 deepseek, overnight double-window glm covers the rest
+    ok 3 - CEO demo example: 14:00-18:00 deepseek, overnight double-window glm covers the rest
+      ---
+      duration_ms: 7.2604
+      type: 'test'
+      ...
+    # Subtest: overlapping windows: higher priority wins
+    ok 4 - overlapping windows: higher priority wins
+      ---
+      duration_ms: 1.0794
+      type: 'test'
+      ...
+    # Subtest: U10 equal priority: stable order — first declaration in the schedules array wins
+    ok 5 - U10 equal priority: stable order — first declaration in the schedules array wins
+      ---
+      duration_ms: 0.4166
+      type: 'test'
+      ...
+    # Subtest: U12 malformed time strings are skipped defensively by evaluate (PUT layer rejects them separately)
+    ok 6 - U12 malformed time strings are skipped defensively by evaluate (PUT layer rejects them separately)
+      ---
+      duration_ms: 0.2681
+      type: 'test'
+      ...
+    # Subtest: U13a start == end is a zero-length window matching nothing; U13b reversed window means overnight
+    ok 7 - U13a start == end is a zero-length window matching nothing; U13b reversed window means overnight
+      ---
+      duration_ms: 0.7444
+      type: 'test'
+      ...
+    # Subtest: disabled schedules never match; no/null policy returns null (env fallback is the caller job)
+    ok 8 - disabled schedules never match; no/null policy returns null (env fallback is the caller job)
+      ---
+      duration_ms: 0.2393
+      type: 'test'
+      ...
+    1..8
+ok 26 - policy: evaluatePolicy window boundaries
+  ---
+  duration_ms: 27.5366
+  type: 'suite'
+  ...
+# Subtest: policy: save/load roundtrip (path override, repo root untouched)
+    # Subtest: savePolicy then loadPolicy returns the same document
+    ok 1 - savePolicy then loadPolicy returns the same document
+      ---
+      duration_ms: 1.8782
+      type: 'test'
+      ...
+    # Subtest: loadPolicy returns null for absent file, bad JSON, and bad shape (never throws)
+    ok 2 - loadPolicy returns null for absent file, bad JSON, and bad shape (never throws)
+      ---
+      duration_ms: 1.4457
+      type: 'test'
+      ...
+    # Subtest: validatePolicyShape rejects: bad time, bad timezone, empty windows, duplicate ids, non-daemon target
+    ok 3 - validatePolicyShape rejects: bad time, bad timezone, empty windows, duplicate ids, non-daemon target
+      ---
+      duration_ms: 1.0448
+      type: 'test'
+      ...
+    1..3
+ok 27 - policy: save/load roundtrip (path override, repo root untouched)
+  ---
+  duration_ms: 6.2596
+  type: 'suite'
+  ...
+# Subtest: policy: PUT validation rejects bad documents (400, nothing persisted)
+    # Subtest: rejects invalid JSON, missing body, and shape violations with 400
+    ok 1 - rejects invalid JSON, missing body, and shape violations with 400
+      ---
+      duration_ms: 7.6272
+      type: 'test'
+      ...
+    1..1
+ok 28 - policy: PUT validation rejects bad documents (400, nothing persisted)
+  ---
+  duration_ms: 7.8705
+  type: 'suite'
+  ...
+# Subtest: policy: backward compatibility — no policy.json ⇒ env default
+    # Subtest: effectiveModel falls back to env-default when loadPolicy() is null
+    ok 1 - effectiveModel falls back to env-default when loadPolicy() is null # SKIP policy document on disk (concurrent run) - env-default precondition absent
+      ---
+      duration_ms: 0.2633
+      type: 'test'
+      ...
+    # Subtest: GET /v1/config/keys without policy.json returns default_model equal to env default (pre-P1 behaviour)
+    ok 2 - GET /v1/config/keys without policy.json returns default_model equal to env default (pre-P1 behaviour) # SKIP policy document on disk (concurrent run) - env-default precondition absent
+      ---
+      duration_ms: 0.1838
+      type: 'test'
+      ...
+    # Subtest: keys hot-path switches with an active window: 14:00-18:00 policy deepseek-v4-pro
+    ok 3 - keys hot-path switches with an active window: 14:00-18:00 policy deepseek-v4-pro
+      ---
+      duration_ms: 13.0166
+      type: 'test'
+      ...
+    1..3
+ok 29 - policy: backward compatibility — no policy.json ⇒ env default
+  ---
+  duration_ms: 14.2441
+  type: 'suite'
+  ...
+# Subtest: policy: route wiring
+    # Subtest: GET /v1/config/policy routes through dispatch with an effective preview
+    ok 1 - GET /v1/config/policy routes through dispatch with an effective preview
+      ---
+      duration_ms: 101.5506
+      type: 'test'
+      ...
+    # Subtest: unknown routes still 404
+    ok 2 - unknown routes still 404
+      ---
+      duration_ms: 1.023
+      type: 'test'
+      ...
+    1..2
+ok 30 - policy: route wiring
+  ---
+  duration_ms: 102.8045
+  type: 'suite'
+  ...
+# [trimodel-client][dbg] chat model=glm-5.3-flash depth=0 msgs=1 lastRole=user known=false
+# [trimodel-relay] 2026-09-25T12:01:50.991Z glm-5.3-flash@anthropic → deepseek-v4-flash@deepseek reason=rate_limited
+# [trimodel-relay] 已切换至 deepseek-v4-flash 模型（跨模型换棒一次性明示）
+# [trimodel-client][dbg] chat model=a depth=0 msgs=1 lastRole=user known=false
+# [trimodel-relay] 2026-09-25T12:01:50.993Z a@p1 → b@p2 reason=upstream_error
+# [trimodel-relay] 已切换至 b 模型（跨模型换棒一次性明示）
+# [trimodel-relay] 2026-09-25T12:01:50.993Z b@p2 → c@p3 reason=upstream_error
+# [trimodel-client][dbg] chat model=glm-5.3-flash depth=0 msgs=1 lastRole=user known=false
+# [trimodel-relay] 2026-09-25T12:01:50.994Z glm-5.3-flash@anthropic → glm-5.3-flash@openai reason=auth_failed
+# [trimodel-client][dbg] chat model=a depth=0 msgs=1 lastRole=user known=false
+# [trimodel-client][dbg] chat model=a depth=0 msgs=1 lastRole=user known=false
+# [trimodel-relay] 2026-09-25T12:01:50.995Z a@p1 → b@p2 reason=rate_limited
+# [trimodel-relay] 已切换至 b 模型（跨模型换棒一次性明示）
+# [trimodel-client][dbg] chat model=a depth=0 msgs=1 lastRole=user known=false
+# [trimodel-relay] node a@p1 in cooldown, skip
+# [trimodel-client][dbg] chat model=a depth=0 msgs=1 lastRole=user known=false
+# [trimodel-relay] 2026-09-25T12:01:50.997Z a@p1 → b@p2 reason=network_timeout
+# [trimodel-relay] 已切换至 b 模型（跨模型换棒一次性明示）
+# [trimodel-client][dbg] chat model=a depth=0 msgs=1 lastRole=user known=false
+# [trimodel-client][dbg] chat model=a depth=0 msgs=1 lastRole=user known=false
+# Subtest: LG-006 relay sandbox（验收五条）
+    # Subtest: 验收1 额度尽自动接力：429 触发换棒，次棒成功+跨模型 relayNote+台账
+    ok 1 - 验收1 额度尽自动接力：429 触发换棒，次棒成功+跨模型 relayNote+台账
+      ---
+      duration_ms: 3.1002
+      type: 'test'
+      ...
+    # Subtest: 验收2 严格按序：链序零跳越（attempted 序=链序）+链穷尽显式报告
+    ok 2 - 验收2 严格按序：链序零跳越（attempted 序=链序）+链穷尽显式报告
+      ---
+      duration_ms: 1.3394
+      type: 'test'
+      ...
+    # Subtest: 验收3 透明度分级：同模型账号间静默（无 relayNote 仅台账）
+    ok 3 - 验收3 透明度分级：同模型账号间静默（无 relayNote 仅台账）
+      ---
+      duration_ms: 0.5102
+      type: 'test'
+      ...
+    # Subtest: 验收4 禁接力显式失败：noRelay 主棒断即 fail 不降级
+    ok 4 - 验收4 禁接力显式失败：noRelay 主棒断即 fail 不降级
+      ---
+      duration_ms: 0.552
+      type: 'test'
+      ...
+    # Subtest: 验收5 冷却窗防回切抖动：换棒后冷却期内原棒被跳过
+    ok 5 - 验收5 冷却窗防回切抖动：换棒后冷却期内原棒被跳过
+      ---
+      duration_ms: 1.1312
+      type: 'test'
+      ...
+    # Subtest: 网络超时重试 1 次后换棒（稿 §二.2 retry_first）
+    ok 6 - 网络超时重试 1 次后换棒（稿 §二.2 retry_first）
+      ---
+      duration_ms: 0.511
+      type: 'test'
+      ...
+    # Subtest: 正常响应永不换棒 + 400 类不换棒显式抛
+    ok 7 - 正常响应永不换棒 + 400 类不换棒显式抛
+      ---
+      duration_ms: 0.3617
+      type: 'test'
+      ...
+    # Subtest: parseFallbackChain：model@账号 粒度解析+空表
+    ok 8 - parseFallbackChain：model@账号 粒度解析+空表
+      ---
+      duration_ms: 0.1342
+      type: 'test'
+      ...
+    # Subtest: 错误分类表首版码集（候裁点②落法固化）
+    ok 9 - 错误分类表首版码集（候裁点②落法固化）
+      ---
+      duration_ms: 0.2607
+      type: 'test'
+      ...
+    1..9
+ok 31 - LG-006 relay sandbox（验收五条）
+  ---
+  duration_ms: 8.9208
+  type: 'suite'
+  ...
+# [trimodel] keys.enc at C:\\Users\\jedih\\AppData\\Local\\Temp\\trimodel-securekeys-test-BcHAqT\\bad.enc undecryptable — falling back to env keys: Unsupported state or unable to authenticate data
+# [trimodel] keys.enc at C:\\Users\\jedih\\AppData\\Local\\Temp\\trimodel-securekeys-test-BcHAqT\\bad.enc undecryptable — falling back to env keys: Unsupported state or unable to authenticate data
+# [trimodel] startup self-check: keys.enc present but unusable — serving env keys until it is repaired or removed
+# Subtest: secure-keys: roundtrip + fail-safe (path override)
+    # Subtest: upsert → read returns the same key material (encrypted at rest)
+    ok 1 - upsert → read returns the same key material (encrypted at rest)
+      ---
+      duration_ms: 36.74
+      type: 'test'
+      ...
+    # Subtest: second upsert of another provider merges (read-modify-write)
+    ok 2 - second upsert of another provider merges (read-modify-write)
+      ---
+      duration_ms: 82.4194
+      type: 'test'
+      ...
+    # Subtest: readSecureKeys: absent file → null; corrupted file → null (fail-safe, never throws)
+    ok 3 - readSecureKeys: absent file → null; corrupted file → null (fail-safe, never throws)
+      ---
+      duration_ms: 49.8066
+      type: 'test'
+      ...
+    # Subtest: maskKey: tail-4 only, never more
+    ok 4 - maskKey: tail-4 only, never more
+      ---
+      duration_ms: 0.2179
+      type: 'test'
+      ...
+    # Subtest: keystoreExists + selfCheckKeystore do not throw on absent/corrupt store
+    ok 5 - keystoreExists + selfCheckKeystore do not throw on absent/corrupt store
+      ---
+      duration_ms: 17.8637
+      type: 'test'
+      ...
+    1..5
+ok 32 - secure-keys: roundtrip + fail-safe (path override)
+  ---
+  duration_ms: 189.7892
+  type: 'suite'
+  ...
+# Subtest: S5 退役面: PUT secure → 410; status → migration indicator
+    # Subtest: PUT /v1/config/keys/secure retired: always 410 + human guidance (S5)
+    ok 1 - PUT /v1/config/keys/secure retired: always 410 + human guidance (S5)
+      ---
+      duration_ms: 11.6216
+      type: 'test'
+      ...
+    # Subtest: status: 503 fail-closed / 401 wrong / 200 migration indicator (S5 semantics)
+    ok 2 - status: 503 fail-closed / 401 wrong / 200 migration indicator (S5 semantics)
+      ---
+      duration_ms: 2.0971
+      type: 'test'
+      ...
+# [trimodel] failed to append model transition record: ENOENT: no such file or directory, open 'C:\\Users\\jedih\\AppData\\Local\\Temp\\trimodel-transition-test-uGpgcV\\missing-subdir\\t.jsonl'
+    # Subtest: F1-P2 masked-echo guard lives on the card plane now: masked api_key never hydrates
+    ok 3 - F1-P2 masked-echo guard lives on the card plane now: masked api_key never hydrates
+      ---
+      duration_ms: 7.2918
+      type: 'test'
+      ...
+    1..3
+ok 33 - S5 退役面: PUT secure → 410; status → migration indicator
+  ---
+  duration_ms: 21.8547
+  type: 'suite'
+  ...
+# Subtest: transition detector: value-change semantics + whitelist record (SEC red line)
+    # Subtest: first observation records nothing; change records one line; same value records nothing
+    ok 1 - first observation records nothing; change records one line; same value records nothing
+      ---
+      duration_ms: 0.64
+      type: 'test'
+      ...
+    # Subtest: SEC-20260813-001: record contains only {at, from, to, source, matched_schedule_id} — no key material field
+    ok 2 - SEC-20260813-001: record contains only {at, from, to, source, matched_schedule_id} — no key material field
+      ---
+      duration_ms: 1.1001
+      type: 'test'
+      ...
+    # Subtest: unwritable log path: warn, no throw, state still advances
+    ok 3 - unwritable log path: warn, no throw, state still advances
+      ---
+      duration_ms: 0.3494
+      type: 'test'
+      ...
+    1..3
+ok 34 - transition detector: value-change semantics + whitelist record (SEC red line)
+  ---
+  duration_ms: 3.4247
+  type: 'suite'
+  ...
+# [trimodel-client][dbg] STREAM model=deepseek-chat depth=0 msgs=1 known=true
+# [trimodel-client][dbg] STREAM model=deepseek-chat depth=0 msgs=1 known=true
+# [trimodel] deepseek-chat failed (depth=0, reason: DeepSeek API error 429: {"error":{"message":"rate limited before first byte"}}), trying stream fallback deepseek-v4-flash
+# [trimodel-client][dbg] STREAM model=deepseek-v4-flash depth=1 msgs=1 known=true
+# [trimodel-client][dbg] STREAM model=tmv-deepseek-reasoner depth=0 msgs=1 known=true
+# [trimodel-client][dbg] STREAM model=tmv-deepseek-reasoner depth=0 msgs=1 known=true
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=0 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=0, reason: DeepSeek API error 503: {"error":{"message":"service unavailable"}}), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=1 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-flash failed (depth=1, reason: DeepSeek API error 503: {"error":{"message":"service unavailable"}}), trying deepseek-v4-pro
+# [trimodel-client][dbg] chat model=deepseek-v4-pro depth=2 msgs=1 lastRole=user known=true
+# [trimodel] deepseek-v4-pro failed (depth=2, reason: DeepSeek API error 503: {"error":{"message":"service unavailable"}}), trying deepseek-v4-flash
+# [trimodel-client][dbg] chat model=deepseek-v4-flash depth=3 msgs=1 lastRole=user known=true
+# [trimodel-client][dbg] STREAM model=deepseek-chat depth=0 msgs=1 known=true
+# Subtest: P0-1 stream fallback 对抗守护（PE-T 沙箱）
+    # Subtest: g1 [已发>=1 x 有fallback] 中途错拒拼接：前缀全 A、抛 StreamAbortedError、cause 同实例、fetch 恰 1 次
+    ok 1 - g1 [已发>=1 x 有fallback] 中途错拒拼接：前缀全 A、抛 StreamAbortedError、cause 同实例、fetch 恰 1 次
+      ---
+      duration_ms: 24.1422
+      type: 'test'
+      ...
+    # Subtest: g2 [首事件前 x 有fallback] 整体成功完成、全部事件来自 B、零 A 残留、fetch>=2
+    ok 2 - g2 [首事件前 x 有fallback] 整体成功完成、全部事件来自 B、零 A 残留、fetch>=2
+      ---
+      duration_ms: 2.129
+      type: 'test'
+      ...
+    # Subtest: g3 [已发>=1 x 无fallback(tmvr)] 统一包装口径：仍抛 StreamAbortedError、cause 在案、不重拨
+    ok 3 - g3 [已发>=1 x 无fallback(tmvr)] 统一包装口径：仍抛 StreamAbortedError、cause 在案、不重拨
+      ---
+      duration_ms: 1.15
+      type: 'test'
+      ...
+    # Subtest: g4 [首事件前 x 无fallback] 原错误原样透传：name 非 StreamAbortedError、零事件外泄、单拨号
+    ok 4 - g4 [首事件前 x 无fallback] 原错误原样透传：name 非 StreamAbortedError、零事件外泄、单拨号
+      ---
+      duration_ms: 1.3058
+      type: 'test'
+      ...
+    # Subtest: g5 StreamAbortedError 单元直测：name/message/cause 三属性逐项成立
+    ok 5 - g5 StreamAbortedError 单元直测：name/message/cause 三属性逐项成立
+      ---
+      duration_ms: 0.1533
+      type: 'test'
+      ...
+    # Subtest: g6 深度上限回归钉：全 provider 恒 503 时 chat(v4-pro) 仍拒 /All fallback models exhausted/
+    ok 6 - g6 深度上限回归钉：全 provider 恒 503 时 chat(v4-pro) 仍拒 /All fallback models exhausted/
+      ---
+      duration_ms: 2.6385
+      type: 'test'
+      ...
+    # Subtest: g7 [补充回归钉] 修复不破常规：无失败正常流照常收尾、全 A 标记、单拨号
+    ok 7 - g7 [补充回归钉] 修复不破常规：无失败正常流照常收尾、全 A 标记、单拨号
+      ---
+      duration_ms: 1.227
+      type: 'test'
+      ...
+    1..7
+ok 35 - P0-1 stream fallback 对抗守护（PE-T 沙箱）
+  ---
+  duration_ms: 34.2971
+  type: 'suite'
+  ...
+# [trimodel] card migrated to v4: 1 strategy(ies), 2 rule(s), 1 model set(s); active=st_mugwujxhind578
+# [trimodel] card migrated to v4: 1 strategy(ies), 2 rule(s), 1 model set(s); active=st_mugwujy7gunvfm
+# [trimodel] card v4 migration failed (card untouched, will retry next boot): top-level rule 'r' entry 'ghost' dangling
+# [trimodel] card migrated to v4: 2 strategy(ies), 4 rule(s), 2 model set(s); active=st_mugwujyjhjyx2d
+# [trimodel] card migrated to v4: 1 strategy(ies), 1 rule(s), 1 model set(s); active=st_mugwujymq1td75
+# Subtest: v4 迁移器：幂等三判据 + 变换规则
+    # Subtest: 变换规则 1-5：v3 卡升格（active 保持/按模型归并窗组/默认实体/策略名集）
+    ok 1 - 变换规则 1-5：v3 卡升格（active 保持/按模型归并窗组/默认实体/策略名集）
+      ---
+      duration_ms: 125.3851
+      type: 'test'
+      ...
+    # Subtest: 无 v3 策略入态：顶层 rules+default_model → 打包「当前配置」+「当前模型集」
+    ok 2 - 无 v3 策略入态：顶层 rules+default_model → 打包「当前配置」+「当前模型集」
+      ---
+      duration_ms: 2.3295
+      type: 'test'
+      ...
+    # Subtest: 判据甲：version>=4 → 原样返回零重跑（幂等闭封）
+    ok 3 - 判据甲：version>=4 → 原样返回零重跑（幂等闭封）
+      ---
+      duration_ms: 0.541
+      type: 'test'
+      ...
+    # Subtest: 判据乙：半迁移态（rules 已对象）→ 只补版本与缺省键，不重跑打包
+    ok 4 - 判据乙：半迁移态（rules 已对象）→ 只补版本与缺省键，不重跑打包
+      ---
+      duration_ms: 2.8716
+      type: 'test'
+      ...
+    # Subtest: 判据丙：变换失败 → 原子不落盘（原卡不动，返回 null）
+    ok 5 - 判据丙：变换失败 → 原子不落盘（原卡不动，返回 null）
+      ---
+      duration_ms: 1.6594
+      type: 'test'
+      ...
+    # Subtest: 迁移前备份生成（pre-v4.bak，保留一代）
+    ok 6 - 迁移前备份生成（pre-v4.bak，保留一代）
+      ---
+      duration_ms: 0.3237
+      type: 'test'
+      ...
+    # Subtest: CTO v1.1 形态门自愈：旧粒度 v4 卡（time 规则级 entry_id）→ boot 重迁窗级归并一条
+    ok 7 - CTO v1.1 形态门自愈：旧粒度 v4 卡（time 规则级 entry_id）→ boot 重迁窗级归并一条
+      ---
+      duration_ms: 2.9744
+      type: 'test'
+      ...
+    # Subtest: F-1 多 v3 策略迁移不撞名：2 策略各 default_model → 两条 \#默认 族名互异且校验过
+    ok 8 - F-1 多 v3 策略迁移不撞名：2 策略各 default_model → 两条 \#默认 族名互异且校验过
+      ---
+      duration_ms: 3.754
+      type: 'test'
+      ...
+    # Subtest: 多窗整组：v3 一条内嵌规则带 2 窗（同模型）→ 1 实体 2 窗（CEO 22:12 粒度）
+    ok 9 - 多窗整组：v3 一条内嵌规则带 2 窗（同模型）→ 1 实体 2 窗（CEO 22:12 粒度）
+      ---
+      duration_ms: 2.4339
+      type: 'test'
+      ...
+    1..9
+ok 36 - v4 迁移器：幂等三判据 + 变换规则
+  ---
+  duration_ms: 147.8784
+  type: 'suite'
+  ...
+# Subtest: v4 validateCard：分型必备性 + 守卫矩阵十条
+    # Subtest: 分型必备：time 缺 time/entry_id 拒；default 缺 entry_id 拒；quota 缺 watch/fallback 拒
+    ok 1 - 分型必备：time 缺 time/entry_id 拒；default 缺 entry_id 拒；quota 缺 watch/fallback 拒
+      ---
+      duration_ms: 0.8315
+      type: 'test'
+      ...
+    # Subtest: 三型互斥多余字段不拒（向前容错）+ 合法三型全过
+    ok 2 - 三型互斥多余字段不拒（向前容错）+ 合法三型全过
+      ---
+      duration_ms: 0.2424
+      type: 'test'
+      ...
+    # Subtest: 守卫：同策略 time 窗重叠拒（人话点名两规则）
+    ok 3 - 守卫：同策略 time 窗重叠拒（人话点名两规则）
+      ---
+      duration_ms: 0.2151
+      type: 'test'
+      ...
+    # Subtest: 守卫：三实体名各自卡内唯一；策略引用悬挂拒；active 悬挂拒
+    ok 4 - 守卫：三实体名各自卡内唯一；策略引用悬挂拒；active 悬挂拒
+      ---
+      duration_ms: 0.3056
+      type: 'test'
+      ...
+    # Subtest: 删除守卫查询族：条目被集或被规则引用均禁删（全族口径）；集/规则被策略引用禁删
+    ok 5 - 删除守卫查询族：条目被集或被规则引用均禁删（全族口径）；集/规则被策略引用禁删
+      ---
+      duration_ms: 0.3083
+      type: 'test'
+      ...
+    # Subtest: 活动策略禁删（deleteStrategy 守卫）
+    ok 6 - 活动策略禁删（deleteStrategy 守卫）
+      ---
+      duration_ms: 0.1706
+      type: 'test'
+      ...
+    1..6
+ok 37 - v4 validateCard：分型必备性 + 守卫矩阵十条
+  ---
+  duration_ms: 2.2583
+  type: 'suite'
+  ...
+# [trimodel] card migrated to v4: 1 strategy(ies), 2 rule(s), 1 model set(s); active=st_mugwujz7vrhqtq
+# Subtest: v4 18:00 保形（终稿 §三 验收锚②）
+    # Subtest: 全日 1440 分钟采样：v3 直展 policy vs v4 迁移+apply 后 policy，evaluatePolicy 逐点一致
+    ok 1 - 全日 1440 分钟采样：v3 直展 policy vs v4 迁移+apply 后 policy，evaluatePolicy 逐点一致
+      ---
+      duration_ms: 20.3958
+      type: 'test'
+      ...
+    1..1
+ok 38 - v4 18:00 保形（终稿 §三 验收锚②）
+  ---
+  duration_ms: 22.5355
+  type: 'suite'
+  ...
+# Subtest: T2: fixed-rule engine semantics (零双轨 — same evaluatePolicy)
+    # Subtest: D15/增补件4②: fixed retired - fixed-type entries no longer match (engine single-type window)
+    ok 1 - D15/增补件4②: fixed retired - fixed-type entries no longer match (engine single-type window)
+      ---
+      duration_ms: 15.9537
+      type: 'test'
+      ...
+    # Subtest: absent type defaults to window semantics (P1 back-compat)
+    ok 2 - absent type defaults to window semantics (P1 back-compat)
+      ---
+      duration_ms: 0.4521
+      type: 'test'
+      ...
+    # Subtest: quota whitelist: type=quota rejected at validation (schema-reserved, runtime 400)
+    ok 3 - quota whitelist: type=quota rejected at validation (schema-reserved, runtime 400)
+      ---
+      duration_ms: 5.8356
+      type: 'test'
+      ...
+    1..3
+ok 39 - T2: fixed-rule engine semantics (零双轨 — same evaluatePolicy)
+  ---
+  duration_ms: 23.3618
+  type: 'suite'
+  ...
+# Subtest: T1: card store — ciphertext at rest + structural validation
+    # Subtest: PUT (plaintext api_key) → server encrypts → disk holds ciphertext only
+    ok 1 - PUT (plaintext api_key) → server encrypts → disk holds ciphertext only
+      ---
+      duration_ms: 46.6107
+      type: 'test'
+      ...
+    # Subtest: dangling reference → 指名拒（悬挂引用防删除漏洞同族；v4=model_sets entry_ids 悬挂）
+    ok 2 - dangling reference → 指名拒（悬挂引用防删除漏洞同族；v4=model_sets entry_ids 悬挂）
+      ---
+      duration_ms: 1.2974
+      type: 'test'
+      ...
+    # Subtest: catalog enforcement: entry model outside five-name catalog → 400
+    ok 3 - catalog enforcement: entry model outside five-name catalog → 400
+      ---
+      duration_ms: 0.514
+      type: 'test'
+      ...
+    # Subtest: connection.name required (名称必填); v4 rule type enum enforced（fixed 退役/quota 合法）
+    ok 4 - connection.name required (名称必填); v4 rule type enum enforced（fixed 退役/quota 合法）
+      ---
+      duration_ms: 0.2934
+      type: 'test'
+      ...
+    1..4
+ok 40 - T1: card store — ciphertext at rest + structural validation
+  ---
+  duration_ms: 50.7837
+  type: 'suite'
+  ...
+# Subtest: T1: card endpoints — admin tri-state + status write-back machine
+    # Subtest: tri-state: unset token → 503; wrong token → 401; correct → 200
+    ok 1 - tri-state: unset token → 503; wrong token → 401; correct → 200
+      ---
+      duration_ms: 3.1792
+      type: 'test'
+      ...
+    # Subtest: state machine: save→pending; applied write-back; failed write-back with error; invalid state 400; no-card 404
+    ok 2 - state machine: save→pending; applied write-back; failed write-back with error; invalid state 400; no-card 404
+      ---
+      duration_ms: 4.8101
+      type: 'test'
+      ...
+    # Subtest: routes wired: GET card / PUT card / PUT status through dispatch
+    ok 3 - routes wired: GET card / PUT card / PUT status through dispatch # SKIP root trimmc-card.json present (runtime/demo data) - 404 precondition absent
+      ---
+      duration_ms: 0.3657
+      type: 'test'
+      ...
+    1..3
+ok 41 - T1: card endpoints — admin tri-state + status write-back machine
+  ---
+  duration_ms: 9.7641
+  type: 'suite'
+  ...
+# Subtest: T3: UI — card DOM channel-vocabulary absence (通道词汇零出现)
+    # Subtest: ui/index.html TriMMC section contains no channel vocabulary and no push/apply button
+    ok 1 - ui/index.html TriMMC section contains no channel vocabulary and no push/apply button
+      ---
+      duration_ms: 2.4226
+      type: 'test'
+      ...
+    1..1
+ok 42 - T3: UI — card DOM channel-vocabulary absence (通道词汇零出现)
+  ---
+  duration_ms: 2.5161
+  type: 'suite'
+  ...
+# Subtest: D7: PUT merge semantics — degraded forms rejected, explicit delete channel
+    # Subtest: id-array provider_entries (CEO 23:57 corrupted form) → 400 with human message
+    ok 1 - id-array provider_entries (CEO 23:57 corrupted form) → 400 with human message
+      ---
+      duration_ms: 3.7064
+      type: 'test'
+      ...
+    # Subtest: string-valued entry → 400 (degraded form never persists)
+    ok 2 - string-valued entry → 400 (degraded form never persists)
+      ---
+      duration_ms: 1.4867
+      type: 'test'
+      ...
+    # Subtest: deleted_entry_ids explicitly removes an existing entry (merge delete channel)
+    ok 3 - deleted_entry_ids explicitly removes an existing entry (merge delete channel)
+      ---
+      duration_ms: 37.8554
+      type: 'test'
+      ...
+    1..3
+ok 43 - D7: PUT merge semantics — degraded forms rejected, explicit delete channel
+  ---
+  duration_ms: 43.3248
+  type: 'suite'
+  ...
+# Subtest: E12: folded local-policy zone removal regression
+    # Subtest: ui/index.html carries zero folded-zone residue (DOM ids/JS fns/CSS class)
+    ok 1 - ui/index.html carries zero folded-zone residue (DOM ids/JS fns/CSS class)
+      ---
+      duration_ms: 0.5722
+      type: 'test'
+      ...
+    1..1
+ok 44 - E12: folded local-policy zone removal regression
+  ---
+  duration_ms: 0.6349
+  type: 'suite'
+  ...
+# Subtest: 直连兜底区（2026-09-15 任务书）
+    # Subtest: 区块渲染+现状展示：三输入+按钮在位；GET 填充当前地址/模型；不参与卡片禁用链
+    ok 1 - 区块渲染+现状展示：三输入+按钮在位；GET 填充当前地址/模型；不参与卡片禁用链
+      ---
+      duration_ms: 425.707
+      type: 'test'
+      ...
+    # Subtest: 点击还原兜底：POST 发出（三值 verbatim）→成功文案含「重启会话后生效」+密钥框清空
+    ok 2 - 点击还原兜底：POST 发出（三值 verbatim）→成功文案含「重启会话后生效」+密钥框清空
+      ---
+      duration_ms: 305.7513
+      type: 'test'
+      ...
+    # Subtest: 失败态：401→人话引导；短密钥→行内拒且不发请求
+    ok 3 - 失败态：401→人话引导；短密钥→行内拒且不发请求
+      ---
+      duration_ms: 293.7595
+      type: 'test'
+      ...
+    1..3
+ok 45 - 直连兜底区（2026-09-15 任务书）
+  ---
+  duration_ms: 1027.4301
+  type: 'suite'
+  ...
+# Subtest: LG-036 TriMMC（sg）栏（2026-09-16 CTO 方案 c6a6e512）
+    # Subtest: sg 栏渲染+现状展示：四输入+按钮在位；status ok → 地址/模型/尾4 展示；不参与禁用链
+    ok 1 - sg 栏渲染+现状展示：四输入+按钮在位；status ok → 地址/模型/尾4 展示；不参与禁用链
+      ---
+      duration_ms: 245.4086
+      type: 'test'
+      ...
+    # Subtest: 点击 sg 还原：POST 发出（body 四值含 sg_admin_token）→成功文案含「sg 侧会话重启后生效」+密钥框清空
+    ok 2 - 点击 sg 还原：POST 发出（body 四值含 sg_admin_token）→成功文案含「sg 侧会话重启后生效」+密钥框清空
+      ---
+      duration_ms: 273.8938
+      type: 'test'
+      ...
+    # Subtest: 失败态：短密钥行内拒零请求；sg 通道不可达→人话
+    ok 3 - 失败态：短密钥行内拒零请求；sg 通道不可达→人话
+      ---
+      duration_ms: 309.3745
+      type: 'test'
+      ...
+    # Subtest: CPO 警示文案 verbatim 在卷（两栏同构同句；LG-036 尾件）
+    ok 4 - CPO 警示文案 verbatim 在卷（两栏同构同句；LG-036 尾件）
+      ---
+      duration_ms: 265.9291
+      type: 'test'
+      ...
+    1..4
+ok 46 - LG-036 TriMMC（sg）栏（2026-09-16 CTO 方案 c6a6e512）
+  ---
+  duration_ms: 1095.9957
+  type: 'suite'
+  ...
+# Subtest: S8.2: jsdom 首启五断言
+    # Subtest: 断言① 无令牌态：连接设置自动展开+引导可见+数据面板禁用
+    ok 1 - 断言① 无令牌态：连接设置自动展开+引导可见+数据面板禁用
+      ---
+      duration_ms: 160.0738
+      type: 'test'
+      ...
+# [dbg2] before = 3 after = 10 | urls = ["/v1/config/runtime-info","/v1/config/claude-fallback","/v1/config/claude-fallback/sg/status","/v1/config/trimmc-card","/v1/config/policy","/v1/config/trimmc-card","/v1/config/keys","/v1/config/claude-fallback","/v1/config/claude-fallback/sg/status","/v1/models"]
+    # Subtest: 断言② 令牌保存→自动重拉全部数据（去静默）
+    ok 2 - 断言② 令牌保存→自动重拉全部数据（去静默）
+      ---
+      duration_ms: 312.9006
+      type: 'test'
+      ...
+    # Subtest: 断言③ 模型下拉有值（GET /v1/models 填充）
+    ok 3 - 断言③ 模型下拉有值（GET /v1/models 填充）
+      ---
+      duration_ms: 318.6732
+      type: 'test'
+      ...
+    # Subtest: 断言④ 条目提交可达：添加→保存卡片→PUT card 发出
+    ok 4 - 断言④ 条目提交可达：添加→保存卡片→PUT card 发出
+      ---
+      duration_ms: 416.6541
+      type: 'test'
+      ...
+    # Subtest: 本地侧: 域标签+应用到本机按钮（runtime-info 驱动；点击 POST apply）
+    ok 5 - 本地侧: 域标签+应用到本机按钮（runtime-info 驱动；点击 POST apply）
+      ---
+      duration_ms: 122.4195
+      type: 'test'
+      ...
+    # Subtest: 层2 段D 修复回归：规则表单三型显隐（computed display 断言——.field display:grid 覆盖 hidden 属性坑防复发）
+    ok 6 - 层2 段D 修复回归：规则表单三型显隐（computed display 断言——.field display:grid 覆盖 hidden 属性坑防复发）
+      ---
+      duration_ms: 234.695
+      type: 'test'
+      ...
+    # Subtest: 断言⑤ TriMMC 卡片区域通道词汇+结构词汇零出现
+    ok 7 - 断言⑤ TriMMC 卡片区域通道词汇+结构词汇零出现
+      ---
+      duration_ms: 2.2532
+      type: 'test'
+      ...
+    # Subtest: D17: badge is server-confirmation bound - 401 keeps non-pending, 200 flips to pending
+    ok 8 - D17: badge is server-confirmation bound - 401 keeps non-pending, 200 flips to pending
+      ---
+      duration_ms: 197.8031
+      type: 'test'
+      ...
+    # Subtest: D5: on-disk disabled entry under applied card shows fallback tip (engine fact)
+    ok 9 - D5: on-disk disabled entry under applied card shows fallback tip (engine fact)
+      ---
+      duration_ms: 139.4803
+      type: 'test'
+      ...
+    # Subtest: D5b: derivation source is the disk mirror - dirty (unsaved) toggle cannot fabricate fallback
+    ok 10 - D5b: derivation source is the disk mirror - dirty (unsaved) toggle cannot fabricate fallback
+      ---
+      duration_ms: 166.3246
+      type: 'test'
+      ...
+# [trimodel] keys.enc migrated to card entries: auto:deepseek, auto:glm; legacy renamed to keys.enc.migrated
+    # Subtest: fetch 失败 → 人话错误面板+重试钮（S3.2 禁静默空）
+    ok 11 - fetch 失败 → 人话错误面板+重试钮（S3.2 禁静默空）
+      ---
+      duration_ms: 295.8655
+      type: 'test'
+      ...
+    1..11
+ok 47 - S8.2: jsdom 首启五断言
+  ---
+  duration_ms: 2369.1498
+  type: 'suite'
+  ...
+# Subtest: S5 迁移器: keys.enc → card synthetic entries (幂等)
+    # Subtest: legacy present → synthetic entries (auto_imported, verbatim ciphertext) + .migrated rename
+    ok 1 - legacy present → synthetic entries (auto_imported, verbatim ciphertext) + .migrated rename
+      ---
+      duration_ms: 9.9193
+      type: 'test'
+      ...
+    # Subtest: migration map covers exactly the three legacy vendors (spec 定稿映射)
+    ok 2 - migration map covers exactly the three legacy vendors (spec 定稿映射)
+      ---
+      duration_ms: 0.185
+      type: 'test'
+      ...
+    # Subtest: roundtrip guard: loadCard tolerates auto_imported extra field
+    ok 3 - roundtrip guard: loadCard tolerates auto_imported extra field
+      ---
+      duration_ms: 29.4047
+      type: 'test'
+      ...
+    1..3
+ok 48 - S5 迁移器: keys.enc → card synthetic entries (幂等)
+  ---
+  duration_ms: 44.7118
+  type: 'suite'
+  ...
+# Subtest: E10: cross-reload persistence of fixed-rule selection (W3)
+    # Subtest: save entry+fixed selection → page.reload() → selector still shows last choice
+    ok 1 - save entry+fixed selection → page.reload() → selector still shows last choice # SKIP set TRICOMPANY_ENABLE_TRIMODEL_UI_E2E=1 with local Chrome
+      ---
+      duration_ms: 0.4609
+      type: 'test'
+      ...
+    1..1
+ok 49 - E10: cross-reload persistence of fixed-rule selection (W3)
+  ---
+  duration_ms: 1.063
+  type: 'suite'
+  ...
+# Subtest: 层2 段A: 默认模型编辑面退役回归
+    # Subtest: UI 零 \#tc-default-model / \#tc-s-default 编辑面（v4 派生缓存无编辑面）
+    ok 1 - UI 零 \#tc-default-model / \#tc-s-default 编辑面（v4 派生缓存无编辑面）
+      ---
+      duration_ms: 2.0873
+      type: 'test'
+      ...
+    # Subtest: boot 对无卡/v4 卡均不因退役字段崩（jsdom 冒烟）
+    ok 2 - boot 对无卡/v4 卡均不因退役字段崩（jsdom 冒烟）
+      ---
+      duration_ms: 531.6527
+      type: 'test'
+      ...
+    1..2
+ok 50 - 层2 段A: 默认模型编辑面退役回归
+  ---
+  duration_ms: 535.0644
+  type: 'suite'
+  ...
+# Subtest: E9: UI form → trimmc-card.json seam (playwright, env-gated)
+    # Subtest: two entries submitted via the real UI land as complete encrypted objects
+    ok 1 - two entries submitted via the real UI land as complete encrypted objects # SKIP set TRICOMPANY_ENABLE_TRIMODEL_UI_E2E=1 with local Chrome
+      ---
+      duration_ms: 0.4829
+      type: 'test'
+      ...
+    1..1
+ok 51 - E9: UI form → trimmc-card.json seam (playwright, env-gated)
+  ---
+  duration_ms: 1.0855
+  type: 'suite'
+  ...
+# Subtest: UsageAccumulator
+    # Subtest: should accumulate a single response
+    ok 1 - should accumulate a single response
+      ---
+      duration_ms: 0.6931
+      type: 'test'
+      ...
+    # Subtest: should accumulate multiple responses
+    ok 2 - should accumulate multiple responses
+      ---
+      duration_ms: 0.12
+      type: 'test'
+      ...
+    # Subtest: should track usage by model
+    ok 3 - should track usage by model
+      ---
+      duration_ms: 0.1031
+      type: 'test'
+      ...
+    # Subtest: should detect partial (zero-filled) usage
+    ok 4 - should detect partial (zero-filled) usage
+      ---
+      duration_ms: 0.0934
+      type: 'test'
+      ...
+    # Subtest: should reset to empty state
+    ok 5 - should reset to empty state
+      ---
+      duration_ms: 0.0933
+      type: 'test'
+      ...
+    # Subtest: should handle reasoning_tokens when present
+    ok 6 - should handle reasoning_tokens when present
+      ---
+      duration_ms: 0.0893
+      type: 'test'
+      ...
+    # Subtest: should not mark partial when usage is non-zero
+    ok 7 - should not mark partial when usage is non-zero
+      ---
+      duration_ms: 0.1278
+      type: 'test'
+      ...
+    1..7
+ok 52 - UsageAccumulator
+  ---
+  duration_ms: 2.1491
+  type: 'suite'
+  ...
+1..52
+# tests 204
+# suites 52
+# pass 199
+# fail 0
+# cancelled 0
+# skipped 5
+# todo 0
+# duration_ms 40119.5989
+RUN-EXIT=0
+RUN-DONE 2026-09-25 12:02:09

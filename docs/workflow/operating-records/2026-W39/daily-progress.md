@@ -162,3 +162,39 @@
   - 84db8ac4 docs(inventory): 台账×任务全量盘点表（CEO 21:46 亲令）——现役在办 8+今日已销 8+长挂族 13；六列 schema 一号一行勿抽样
   - 90375676 docs(lg-049): social 写入口径评估段落树（draft 候 CEO 二批零生效——soul 映射/runtime 分工/迁移性三点初评）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:30 +08：自上次进度提交 bb26064c 后新增 3 条 commit：
+  - 938fbefc Merge remote-tracking branch 'sg-server/dev' into dev
+  - 824a60b4 docs(inventory): 盘点表勘误——LG-037 更正为已完成（joint-plan 双签+CEO 09-21 13:26 批三源实锚；初版误列在办系现势认知滞后，COO 枢纽首单勘误更正）
+  - d953537d docs(fade-008): §8.10树协议V2对表注记增补(条③22:24修正版:COS唯一催办枢纽两向,主条D-27v4)+七列表汇报标准对表
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 ff8019db 后新增 8 条 commit：
+  - e48322c4 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 5fcf74f9 docs(lg-050): 三切 COS 位切前留痕——三读数+wt/ceo-chief-of-staff ff 追平 7adfc0b4+重启候外部代起（D-32 弃转录重生建议）
+  - 7adfc0b4 docs(lg-049): social 写入口径评估段生效翻正——draft→正身（CEO 22:45 批三点初评生效）+挂账两笔录卷（迁移细则/人格本体专项独立立项）；LG-049 全案收口（CHO 面+补刀面+评估段全讫）
+  - 341b849c docs(lg005-016): CTO counter-sign——矩阵逐格一致（R-HY 实勘）/双销不丢账+LG-022 不吞条款全录/联席补强两条采认（双签齐呈 COS 收口双销）
+  - 44eebbc2 docs(lg005-016-dual-close): 联席定案件（CPO 拼稿候 CTO counter-sign）——定稿七项联席全认可/实施现状矩阵（件 1 已实施双证·件 2/3/5 未实施+safe.directory 第一动作+件 5 同窗强制）/LG-005 两项承接处置/双销不丢账条款+LG-022 不吞
+  - e5edb1ff docs(lg005-016): CTO 定案意见段——四接口实勘定案（R-HY SSH 现勘：件 2 未实施+safe.directory 命中态警告/件 3 手抄持续/件 5 未接线/LG-022 独立追踪不吞）+LG-005 两项承接（可移植=件 1 完全承接/R 面=件 2-5 单轨转移）+技术域补充两件（safe.directory 前置警告引 D-10/platforms 过滤提醒照 §2.2）
+  - 5b9db66a docs(lg005-016-dual-close): CPO 定案意见段——两笔精度勘误（素材路径误引/定性升两级：实为 08-30 双席定稿）+定稿七项逐条认可（件 1 已实施实证双证）+LG-005 两项承接处置（销账挂接+单轨追踪条款）+CTO 接口
+  - 3f76c8a8 docs(lg-034): BOD职责终版收敛修正同步——§8.10「验收+裁决+终批」改「只有验收和呈批」(CEO 22:30 终版)
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:30 +08：自上次进度提交 3bde3066 后新增 1 条 commit：
+  - 919012fe docs(workflow): 11 席高维全查 gap-matrix-draft——四段机械提取+逐域打标（在位/部分/全缺，只挂原文依据不裁决）+孪生差异注记+汇总速览（全缺 9 域）；截点内完工（charter a9809511 A-D 段）@duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:50 +08：自上次进度提交 2929f4ad 后新增 2 条 commit：
+  - 556ab884 docs(workflow): 催办判据校准——双源取新+通报链白名单机制（总攻件④；白名单四条现役）@m-duty-cos
+  - d1824cbe docs(workflow): 催办节律+晨检格式两报备入树（BOD 批令件一③；机制载体 sg crontab 双挂已实测）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+## 2026-09-24（周四）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:00 +08：自上次进度提交 4b04e8ee 后新增 2 条 commit：
+  - ba191097 docs(workflow): 催办三源判据收敛读数——零伪报达成（全域匹配修正+白名单+3）@m-duty-cos
+  - 924de1fa docs(workflow): 催办判据三源化——+台账销账态维度（追补单；LG-042/044/043 白名单+3）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:30 +08：自上次进度提交 4820d3f9 后新增 1 条 commit：
+  - f681e5b0 docs(workflow): 总表 6 单 50d14e1d 版入树+master 30min 模新挂首跑（LG-034 搁置除外；2h urge 保留并行）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:00 +08：自上次进度提交 ed635516 后新增 1 条 commit：
+  - ed4babe8 docs(workflow): 总表出表更新——LG-040 CTO 侧收口出表（66cf587）/LG-041 转呈批候裁 L0/L1/L2（根因定性件落树）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- LG-051 催办段 09-24 12:02+08：截点触达，名册真源 sg 零到料→挂起待料（notify bod 抄 coo 候供），到料即首催

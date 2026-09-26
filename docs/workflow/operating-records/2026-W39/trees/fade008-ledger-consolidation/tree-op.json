@@ -56,32 +56,36 @@
       "face": "local",
       "assignee": "COS",
       "title": "渲染攒批（TriCompany 渲管线本机）",
-      "status": "pending",
-      "acceptance": "渲讫 commit+发布面 diff 对表"
+      "status": "frozen",
+      "acceptance": "渲讫 commit+发布面 diff 对表",
+      "note": "冻结候 TC 正名族落位——渲染管线抽验抓出反向正名（本机 TC 源侧零正名），16 件已 revert；LG-048/051 渲染链连带候窗"
     },
     {
       "id": "T6-push-flush-tmv-tc",
       "face": "local",
       "assignee": "COS",
       "title": "TMV+TC push 挂账件推平",
-      "status": "pending",
-      "acceptance": "ls-remote HEAD==本地 HEAD 双仓；推拒即停登记候授权"
+      "status": "done",
+      "acceptance": "ls-remote HEAD==本地 HEAD 双仓；推拒即停登记候授权",
+      "closeout": "TMV 侧 3d23a056（dev 真分叉清偿+LG-046 归并）+TC 侧 88a6988（ADE 五笔归并+60 笔推平），双仓双面 ls-remote 核真一致，2026-09-25 晨 COS 执行"
     },
     {
       "id": "T7-d29-correction",
       "face": "local",
       "assignee": "COS",
       "title": "D-29 勘正候选（详情对表 BOD 清单）",
-      "status": "pending",
-      "acceptance": "勘正 commit+引注链在卷"
+      "status": "closed-empty",
+      "acceptance": "勘正 commit+引注链在卷",
+      "closeout": "空窗销（BOD 2026-09-25 09:4x 批复：挂账清单现无新素材，本窗零新增候选，按空窗处理，空销注记候素材勿硬凑）——候素材窗重开时再启"
     },
     {
       "id": "T8-s12-correction",
       "face": "local",
       "assignee": "COS",
       "title": "§12.2-12.6 勘正候选（详情对表 BOD 清单）",
-      "status": "pending",
-      "acceptance": "勘正 commit+主语同族校验"
+      "status": "closed-empty",
+      "acceptance": "勘正 commit+主语同族校验",
+      "closeout": "空窗销（BOD 2026-09-25 09:4x 批复同 T7：零新增候选按空窗处理，空销注记候素材勿硬凑）——候素材窗重开时再启"
     }
   ],
   "excluded": [

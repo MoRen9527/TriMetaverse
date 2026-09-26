@@ -1,0 +1,70 @@
+{
+ "version": "50d14e1d",
+ "updated": "2026-09-24T10:2x+08",
+ "exclude": [
+  "LG-034（搁置）"
+ ],
+ "units": [
+  {
+   "id": "LG-039",
+   "item": "T5-T8 窗执行",
+   "seat": "值席自办窗",
+   "form": "自查进度",
+   "window": "明晨窗",
+   "note": "本地四节点进度自查"
+  },
+  {
+   "id": "LG-040",
+   "item": "T-O4 代码批窗",
+   "seat": "m-duty-cto",
+   "form": "随车验收",
+   "window": "候 CTO 代码批窗",
+   "note": "133 处注释旧名+1 脚本；validation 全绿为门",
+   "status": "CTO 侧收口（66cf587 已推 TC dev，门=184OK+5OK+smoke 绿）——出表，销账走 COS 收口→BOD 验收链"
+  },
+  {
+   "id": "LG-041",
+   "item": "3333 事故尾项（根因定性+兜底架构）",
+   "seat": "m-duty-cto",
+   "form": "候 BOD 验收（key 轮换候裁并行 SEC-20260924-001）",
+   "window": "09-25 12:00 硬截点（CTO 侧已收口）",
+   "note": "到点未毕升级 CEO",
+   "status": "DE 整改收口毕（四款令全落：占位符+防呆 fail-closed/真钥仅部署位/history 重写 8a5b630+双端 purge 值席独立复勘符/runbook 红线）——key「候轮换」已入账 SEC-20260924-001；HOLD=dev 侧四锚+CaptureRelay（m-cos checklist 五步已备候 BOD 链转）；候 BOD 验收"
+  },
+  {
+   "id": "LG-046",
+   "item": "宿主资产目录正名",
+   "seat": "服务域（任务书 bare 拾取位）",
+   "form": "催办+拾取核",
+   "window": "执行中",
+   "note": "500+ 引用迁移；窗锁后执行"
+  },
+  {
+   "id": "LG-050",
+   "item": "试跑段",
+   "seat": "特形",
+   "form": "节拍状态汇报",
+   "window": "09-30 前",
+   "note": "无异常简报/有异常即报，非催办形态"
+  },
+  {
+   "id": "LG-048",
+   "item": "渲染攒批",
+   "seat": "本地渲染线",
+   "form": "随车项",
+   "window": "随车",
+   "note": "随渲染批进度"
+  },
+  {
+   "id": "三闸评估",
+   "item": "三闸体系评估收口（双席意见 2a8dfbac/50577d8f+收口汇总 16ce941d 已呈 BOD 候 CEO 终裁）",
+   "seat": "COS",
+   "form": "自查进度+防漏催办语义",
+   "window": "候 CEO 终裁",
+   "note": "汇总=three-gate-review/closing-summary.md（收口毕已呈）；双席意见两锚候 wt→dev 同步；闸 4 双源声明 urge-rhythm 已具备，闸 2/3/5 终裁候 CEO"
+  }
+ ],
+ "metadata": {
+  "autoRegistration": "立项即登记制度补丁已转 CAO（D-27 v4 随批）：新单立项/任务书落树同步登记本表（COS 铸总表流程内自动联动，非人工补录）——0924 两缺口（core-agent 派工未对表+三闸未登记催办源）合并归因"
+ }
+}

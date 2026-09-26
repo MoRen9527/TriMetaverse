@@ -74,7 +74,7 @@ D 层：操作与实例面 ── 真实回填、through-pass 执行、批次记
 | 文件 | 角色 |
 |------|------|
 | `../TriCompany/docs/workflow/integrated-product-development-flow.md` | 公司级 IPD 主流程真源：阶段定义、岗位参与、gate、merge hook、回写原则 |
-| `TriCompany-copilot-host-assets/docs/workflow/ipd-long-term-contract-solidification-list.md` | 长期 contract 联审收口清单：承接验证通过的能力，等待 CPO/CTO 审批升级 |
+| `TriCompany-host-assets/docs/workflow/ipd-long-term-contract-solidification-list.md` | 长期 contract 联审收口清单：承接验证通过的能力，等待 CPO/CTO 审批升级 |
 
 ### 2.2 B 层：公司执行真源
 
@@ -82,24 +82,24 @@ D 层：操作与实例面 ── 真实回填、through-pass 执行、批次记
 |------|------|
 | `../TriCompany/runtime/cognition/ipd_case_engine.py` | IPD stage contract 与 automation contract 的执行真源：阶段模板、标准动作、签核对象、evidence policy、自动推进语义 |
 | `../TriCompany/runtime/cognition/chief_of_staff_ipd_case.py` | CLI 调度入口：task-intake、init、intake-approve、submit、signoff、status、step（rollback/reopen-intake/autopilot/discovery/intelligence/freeze 为 [planned]，当前引擎未实现） |
-| `TriCompany-copilot-host-assets/runtime/cognition/chief_of_staff_ipd_case_validation.py` | IPD 基线验证真源：回归、案例初始化、阶段自动化、主线验证 contract |
+| `TriCompany-host-assets/runtime/cognition/chief_of_staff_ipd_case_validation.py` | IPD 基线验证真源：回归、案例初始化、阶段自动化、主线验证 contract |
 
 ### 2.3 C 层：联审输入面
 
 | 文件 | 角色 |
 |------|------|
-| `TriCompany-copilot-host-assets/docs/workflow/ipd-product-acceptance-contract-cpo-review.md` | CPO 产品验收 contract 审批稿 |
-| `TriCompany-copilot-host-assets/docs/workflow/ipd-runtime-evidence-contract-cto-review.md` | CTO runtime/evidence contract 审批稿 |
+| `TriCompany-host-assets/docs/workflow/ipd-product-acceptance-contract-cpo-review.md` | CPO 产品验收 contract 审批稿 |
+| `TriCompany-host-assets/docs/workflow/ipd-runtime-evidence-contract-cto-review.md` | CTO runtime/evidence contract 审批稿 |
 
 ### 2.4 D 层：操作与实例面
 
 | 文件 | 角色 |
 |------|------|
-| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-backfill-runbook.md` | 真实审批回填操作手册 |
-| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-through-pass-checklist.md` | through-pass 执行清单 |
-| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-merge-candidate-matrix.md` | merge candidate 映射矩阵 |
-| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-backfill-record-template.md` | 回填记录模板 |
-| `TriCompany-copilot-host-assets/docs/workflow/ipd-first-real-approval-backfill-001.md` | 首轮回填实例 |
+| `TriCompany-host-assets/docs/workflow/ipd-first-real-approval-backfill-runbook.md` | 真实审批回填操作手册 |
+| `TriCompany-host-assets/docs/workflow/ipd-first-real-approval-through-pass-checklist.md` | through-pass 执行清单 |
+| `TriCompany-host-assets/docs/workflow/ipd-first-real-approval-merge-candidate-matrix.md` | merge candidate 映射矩阵 |
+| `TriCompany-host-assets/docs/workflow/ipd-first-real-approval-backfill-record-template.md` | 回填记录模板 |
+| `TriCompany-host-assets/docs/workflow/ipd-first-real-approval-backfill-001.md` | 首轮回填实例 |
 | `../TriCompany/docs/workflow/ipd-company-baseline-checklist.md` | 基线治理清单（本身是 D 层，但定义 A/B/C/D 分层规则） |
 
 ### 2.5 培训层补充
@@ -108,9 +108,9 @@ D 层：操作与实例面 ── 真实回填、through-pass 执行、批次记
 
 | 文件（源侧 sourceOfTruth） | 发布侧 published-copy | 角色 |
 |------|------|------|
-| `TriCompany/docs/training/ipd-usage-guide.md` | `TriCompany-copilot-host-assets/docs/training/ipd-usage-guide.md` | IPD 使用教程（面向 RAndDTrainer 与新人） |
-| `TriCompany/docs/training/IPD CASE术语.md` | `TriCompany-copilot-host-assets/docs/training/IPD CASE术语.md` | IPD Case 字段详解（case 结构、七槽位、Web3 签名、心跳卡点） |
-| `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | `TriCompany-copilot-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | CLI 与代码工作流程小白教程 |
+| `TriCompany/docs/training/ipd-usage-guide.md` | `TriCompany-host-assets/docs/training/ipd-usage-guide.md` | IPD 使用教程（面向 RAndDTrainer 与新人） |
+| `TriCompany/docs/training/IPD CASE术语.md` | `TriCompany-host-assets/docs/training/IPD CASE术语.md` | IPD Case 字段详解（case 结构、七槽位、Web3 签名、心跳卡点） |
+| `TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | `TriCompany-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md` | CLI 与代码工作流程小白教程 |
 
 ---
 

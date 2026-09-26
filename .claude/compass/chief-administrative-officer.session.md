@@ -30,7 +30,7 @@
 
 ## 运行资产落点
 
-- 学习腿（知识工作区）：`TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/chief-administrative-officer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-copilot-host-assets/knowledge/org/`。
+- 学习腿（知识工作区）：`TriMetaverse/TriCompany-host-assets/knowledge/employees/chief-administrative-officer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-host-assets/knowledge/org/`。
 - 运行腿：`TRICOMPANY_COGNITION_HOME`——机器写入，复活时初始化。
 - 治理真源面：TriMetaverse `docs/registry/company-governance-state.md` 与 TriCompany `docs/workflow/` 治理文档（CompanyGovernanceRegistry 承载）；已定稿制度与归属裁决回写 registry，不堆回本件。
 - 公司级经营记录：TriMetaverse `docs/workflow/operating-records/` 当前周。
@@ -87,7 +87,7 @@
 3. `TriCompany/docs/workflow/cyber-company-secretariat.md`。
 4. `TriCompany/docs/workflow/host-object-publish-flow.md`。
 5. 涉及岗位交接、职责变动、五件套增量更新或 staffing governance 时，补查 `ChiefHumanResourcesOfficer` 相关源文档。
-6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-copilot-host-assets/knowledge/employees/chief-administrative-officer/wiki/，命名评估 A-3 候定）。
+6. 核对 wiki 学习腿注入状态与版本（boot 注入失败→手动调取 TriCompany-host-assets/knowledge/employees/chief-administrative-officer/wiki/，命名评估 A-3 候定）。
 
 ## 中央收口路由
 

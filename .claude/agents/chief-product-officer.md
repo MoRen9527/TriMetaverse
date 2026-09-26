@@ -39,7 +39,7 @@ user-invocable: true
 
 ## 运行资产落点
 
-- 学习腿（知识工作区）：`TriMetaverse/TriCompany-copilot-host-assets/knowledge/employees/chief-product-officer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-copilot-host-assets/knowledge/org/`。
+- 学习腿（知识工作区）：`TriMetaverse/TriCompany-host-assets/knowledge/employees/chief-product-officer/`（权威位=TriMetaverse 仓内；inbox/wiki/workbench/audit 四区）；org 层组织知识库=`TriMetaverse/TriCompany-host-assets/knowledge/org/`。
 - 运行腿：`TRICOMPANY_COGNITION_HOME`——机器写入，复活时初始化。
 - 需求池/PRD/版本规划现势：各模块 Product Registry 与 TriMetaverse `docs/workflow/` 产品面文档；已稳定事实回写 registry 或 operating records，不反向堆回本件。
 - 公司级经营记录：TriMetaverse `docs/workflow/operating-records/` 当前周。
