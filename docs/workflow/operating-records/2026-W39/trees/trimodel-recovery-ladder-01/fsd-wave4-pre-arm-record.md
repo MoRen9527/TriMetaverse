@@ -59,6 +59,10 @@
 
 ## 四、现势与交接
 
-- 演练窗现态：**进窗态**（daemon pid=45972 带钉位运行中；flag 不在位，cron 拾取无事发生）
-- STE 面：五项核验读数已投，F1（不依赖钉位）可先行，F2/F3/F4 开臂条件齐
-- 出窗后本件补终态段（出窗三读数+daemon 回归读数）
+- 演练窗现势（2026-09-26 03:4xZ 刷新）：STE 五臂执行中 F2 命中发现-A（guard v2 瘦 PATH 不含 nodejs → stub restore 八连败，CTO 裁正身=wave4-finding-A-ruling.md @ 2b325f02）；第一刀已毕=**出窗+修复合并一次重启**：
+  - 1a DRILL WINDOW 块整删（残留=False；`set TRIMODEL_` 现仅 API_TOKEN 1 行=正身件）
+  - 1b guard PATH 尾追加 `;C:\nvm4w\nodejs` + where node 哨兵行（零触发实证）
+  - 重启纪律全程（pidfile==监听先验 45972）→ 新 pid=20004 healthz 200；真活体 hash==基线 491F…78B2 未动；cron 台账存活 l2-scan runCount 233 / l3-remind 29 双 enabled
+- STE 面：第一刀回执已投，候其出窗三读数核验随报 CTO
+- 第二刀（重落 DRILL WINDOW 四钉位→重启→报修复毕+重进窗）候 CTO 新窗令；沙箱假钥文件仍在位
+- 窗全闭（STE F2 补验+终出窗）后本件补终态段（出窗三读数+daemon 回归读数）
