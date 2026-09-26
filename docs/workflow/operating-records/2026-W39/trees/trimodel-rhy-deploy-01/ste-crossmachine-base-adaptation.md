@@ -40,6 +40,19 @@
 5. 任一 fail：原始栈全文回传（禁 head 截断关键行——命令链断言纪律），候本席逐族归因；
 6. 附注：bc72ea4 补部（SDE 线，触发=波⑤ D1 验收毕已达成）与本配方互不阻塞可并行；族③偶发再败候 FSD 小笔后自愈（§二）。
 
+## 五、族③修复定案书（CTO 裁定③「窗内实勘定案」应答；正身=cto-adaptation-review.md @ 4b22d9ef）
+
+- **定案=唯一性后缀**（同名 fail-closed 弃）。全源面扫描实勘（TriCode src `.bak-` 全命中 6 处）：
+  - **写点×2 同缺陷**：io-kernel L158 runWrite 备份+**L286 rollbackTo 回滚前备份**（新勘——同毫秒回滚链/写回滚并发同样覆盖丢锚，破坏回滚可逆性，与 runWrite 同根）；copyFileSync 静默覆盖（node 默认）=现行失败语义。
+  - **消费面全兼容后缀**：rotateBackups L52/listBackups L241 均 `startsWith(${path}.bak-)` 前缀过滤；rollbackTo L265 防穿越 regex `^settings\.json\.bak-[0-9A-Za-z:\-.]+$`——后缀形态 `bak-<ts>-<pid>-<seq>` 实配断言 **true**（本席 node 实测，pid 数字+连字符均在字符类内）；既有测试两处 filename 断言均前缀形不破。
+  - fail-closed 弃因：需先改现行备份失败语义（新增 existsSync 预检+失败中止路径），把同毫秒场景从「静默丢锚」变「用户可见失败」——优于现状但劣于后缀（后缀零新失败模式+操作恒成）。
+- **修法建议（FSD 动笔面，CORE_VERSION 门条款②全流程）**：io-kernel 内收敛单 helper（如 `backupName(path)`：`bak-${ts}-${process.pid}-${++seq}` 模块级单调序），L158/L286 两写点同改；注释 L256/L266「<时间戳>」形态描述随更新。
+- **验证面承诺（本席，双签制内）**：修后全族基线复验执行——TriCode 58 套+TriModel 276 壳族+25/25+探针回归（冻结组修后应 backups=7）；five-gates 哨兵案在快 fs 下转确定性绿=R-HY 对平族③清零实证。
+- 排窗：候 COS 挂账 CORE_VERSION 门窗；本席验证配方已备（探针+双仓全量命令族在卷 §四）。
+
 ## 使用依据
+
+COO 转办令（三族 owner=STE）+CTO 判据令（对平判据）；deploy-readings.md §二/§十（c91e3772 起读数，现势 5c739faa）；TriModel df72995/TriCode a3893ba/波⑤ 基线 ea2b6c60 卷；探针卷 `D:\tmp\lg054\`；工作区记忆条：命令链断言/manifest 身份验证/活体优先诊断。
+
 
 COO 转办令（三族 owner=STE）+CTO 判据令（对平判据）；deploy-readings.md §二/§十（c91e3772 起读数，现势 5c739faa）；TriModel df72995/TriCode a3893ba/波⑤ 基线 ea2b6c60 卷；探针卷 `D:\tmp\lg054\`；工作区记忆条：命令链断言/manifest 身份验证/活体优先诊断。
