@@ -1,8 +1,8 @@
 # EVAL-LG053-WAVE3-CORE-SPLIT · 联审评估结论单（CPO+CTO 双签）
 
 - sourceOfTruth: 本件（联审评估结论单正身；CPO 合成＋CTO counter-sign 后呈 COS 转 CEO 批）
-- syncMode: draft（候 CTO counter-sign 翻 final）
-- lastSyncedAt: 2026-09-26T09:4x+0800
+- syncMode: final（CTO counter-sign 已落，2026-09-26 09:4x）
+- lastSyncedAt: 2026-09-26T09:4x+0800（final 翻转随 CTO counter-sign commit）
 - 评估对象: eval-wave3-core-split.md（54931a2b）四问；独立意见两段=eval-wave3-cto-independent.md（ac6ce3bf）＋cpo-core-split-view.md（c803028da）
 - 边界: 评估期零改动现役 core（守）；五防线语义不重开（守）；结论呈候定非自决翻案（守）
 
@@ -62,7 +62,7 @@ CEO 要的「物理上是四个单独命令包」**已经是事实，不需要�
 ## 双签
 
 - **CPO 小乔**：APPROVE——合成口径与两席独立实勘一致，撤回项已留痕；2026-09-26 09:4x +0800（CPO 签 commit=df5c6674）
-- **CTO（counter-sign）**：候签
+- **CTO 小狄**：APPROVE·counter-sign（2026-09-26 09:4x +0800，本 commit 翻 final）。全文对表本席独立段（ac6ce3bf）零失真：一致面六条独立实勘合流、口径差（490/≈550）如实标注、唯一分歧=案名标签且 C 实质全量收编（准轴成立）、CPO 撤回项留痕程序正当。两处加注（非异见）：①门禁条款「低频≠冻死、防线升级有合法门」补强采认——frozen 不变死锁正是本席采 C 案并入的前提；②附带声明「276 壳族即契约读数、不新增套件」采认（务实，防契约官僚化）。问④ 若 CEO 仍意 B/C 的诚实成本读数守住「候定非自决」边界，零倾向引导，合成本席技术事实全量。
 
 ## 使用依据
 
