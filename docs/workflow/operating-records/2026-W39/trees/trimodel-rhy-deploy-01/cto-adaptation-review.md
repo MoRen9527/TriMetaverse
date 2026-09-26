@@ -55,4 +55,17 @@ SDE 面执行，与 bc72ea4 补部互不阻塞；fail 原始栈全文回传要�
 - **候决 B（测试 key）：改裁——批测试面适配（STE 荐 B）**：'no-api-key' 案改无 key skip+归因注记，基座自含可对平（把环境差异编码进测试基座优于环境钉 key/裸机挂 key）；该案与既有「环境前提案镜像互补 skip/pass」同族=无 key 环境正确行事。**STE 即刻动笔**（TriModel 测试域小笔，非 core 零门槛冲突），随卷出读数走门审。
 - **隔离位清理锚点精确化采认**：保留至族③ CORE_VERSION 修后复验毕（比「重启自清」更精确，采纳 STE 口径——届时复验毕再清）。
 
-ste-crossmachine-base-adaptation.md（794c1170 + 定案 §五 8ca237e1）；TriModel df72995；TriCode a3893ba（HEAD 实勘：L286 备份名/CORE_VERSION/README FROZEN）；CORE-SPLIT 条款（TriCode README d20cb6b+纪律册 253ccd9）；wave5-acceptance.md（286/271/0/15 基线锚）。
+## B 案小笔门审（a9d9fc8 @ 读数卷 §七 df4894b6，2026-09-26 18:1x）
+
+**门审：通过。前提勘正申报采认。**
+
+- **前提勘正采认**：原荐「无 key skip」作废正确——败案机制=before() 未自设 GLM_API_KEY、案经 env fallback 依赖 ambient 键（dev 机真席位键恒绿=**基线假象之源**，R-HY 裸机败=暴露隐性环境依赖）。**无事可 skip 勘定成立**，本体落点=before() 自设哨兵键=「基座自含」正解。机制先钉后动笔（不盲写）+点名 dev 机假象机制——记档正面。
+- **diff 面核验（本席抽验）**：单文件 test/anthropic-proxy.test.ts 26+/8- 与申报一致；哨兵键 ORIGINAL_GLM 保存/恢复对称；alwaysHitWindow now±8h 计算窗跨午夜正确（at() 归一化+start>end 包裹分支引擎支持已勘+Asia/Shanghai h23 确定性），字面端斥窗两案全替换——零扩散。
+- **同笔双义裁定**：缺陷①（哨兵键）+缺陷②（60 秒空洞）同文件同 describe 同族测试确定性缺陷，单文件内同笔可接受（回滚面一致），commit message 双义明示——不判混笔违规。
+- **读数三形采认**：裸机形（env -u）修前 18/19 精确复现 R-HY→修后 19/19（E0 同族锚：先复现后修复）+异键形 19/19+全量 286/271/0/15=波⑤ 基线全平零回归。
+- **候决② O-B1（policy-machine/policy.gate.evaluation/policy.test 等同形字面端斥窗统一计算窗化）：候选办挂账不即办**——非阻塞潜伏面（60 秒/日撞窗概率），统一化有价值候 M2 前排或下个测试域维护窗并批（与 O-E12-1/O-6 同族候选办）。
+- **候决③ SDE R-HY 重跑：准**——单文件同步入隔离位+重跑（预期 273/261/0/12 fail 清零），读数归卷即对平判据全项达成、STE 适配面全域收口。
+
+## 使用依据
+
+ste-crossmachine-base-adaptation.md（794c1170 + 定案 §五 8ca237e1 + B 案 §七 df4894b6）；TriModel df72995/a9d9fc8（HEAD 抽验）；TriCode a3893ba（HEAD 实勘：L286 备份名/CORE_VERSION/README FROZEN）；CORE-SPLIT 条款（TriCode README d20cb6b+纪律册 253ccd9）；wave5-acceptance.md（286/271/0/15 基线锚）。
