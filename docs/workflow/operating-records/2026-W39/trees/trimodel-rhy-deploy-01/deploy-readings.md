@@ -204,6 +204,7 @@
 - **重跑读数：273 tests / 64 suites / 261 pass / 0 fail / 0 cancelled / 12 skipped——与 CTO 门审预期 273/261/0/12 逐字对平**：pass 260→261（proxy「policy window hit」案修复转绿）/ fail 1→**0 清零** / skip 12 不变（chromium 族同形）。
 - **对平判据全项达成**：TriModel R-HY fail 归零 ✓；TriCode 唯一 fail=族③预告案（候 FSD 门窗修后复验，在途不在本重跑范围）。**LG-054 对平判据全项达成。**
 - 隔离位现 checkout a9d9fc8（留位供族③复验复用，纪律照旧）。
+- **适配窗全域收口**（cto-adaptation-review.md @ 31e21b2f，COO 转）：对平判据全项达成，三席义务终态全域清零（STE 适配面/CTO 门审面/SDE 执行面）；隔离位清理锚=族③ CORE_VERSION 修后复验毕由本席执行（STE 卷 §八 @ d725e7e8）。
 
 ## 使用依据
 
