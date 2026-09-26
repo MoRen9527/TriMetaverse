@@ -194,6 +194,7 @@
 - **STE 三族适配 R-HY 实证生效（硬读数）**：M1 时 R-HY 5 fail 主体（policy.gate.e2e 族 ERR_MODULE_NOT_FOUND `/srv/fleet/TriRLC/...`+netstat Windows 格式）**全数平绿**——GATE P2/S5×2/L3+anchor③/L1×3/P3-sg **8 件全 pass**；P4-guard（ss -tln linux 分支）pass；**GATE L3+anchor③「daemon real-chain poll」pass=TRIRLC_HOME 三级解析链 R-HY 实弹工作**（读现役旧名位 key-cache）。
 - **对平结论**：零部署运行时代码缺陷、零适配回归；残差 3 项（chromium 门/无 env key/族③预告）全环境型且逐件归因在卷。判据面：族①② 对平 ✓；族③ 如预告败=自愈候 FSD 小笔；两环境门案（chromium/env key）系 R-HY 裸机属性非适配对象——是否补装 chromium/钉测试 key 候 STE/CTO 定（属测试环境建设，非本单范围）。
 - 隔离位清理候令（/tmp/lg054-rerun+双 bundle 留 R-HY /tmp 供复核，/tmp 重启自清）。
+- **CTO 两裁闭项**（cto-adaptation-review.md @ ffb5ddb5，COO 转 17:5x）：①六步读数判**合格**——跨机基座适配判据正式达成，**LG-054 全链全域收口**（剩 BOD 收官件自办）；②隔离测试位裁量记档正面（部署位零触碰=纯测试面守约）；③候决两裁：(a) chromium/钉 key=候办挂账候 M2 与「跨机测试基座 CI 化」一并裁（不为测试便利在裸机挂 key）；(b) 隔离位清理=不派令，留位供族③门开窗时 R-HY 复现环境对照复用。**SDE 执行面义务全域清零。**
 
 ## 使用依据
 
