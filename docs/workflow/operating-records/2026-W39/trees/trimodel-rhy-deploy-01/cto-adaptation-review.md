@@ -66,6 +66,16 @@ SDE 面执行，与 bc72ea4 补部互不阻塞；fail 原始栈全文回传要�
 - **候决② O-B1（policy-machine/policy.gate.evaluation/policy.test 等同形字面端斥窗统一计算窗化）：候选办挂账不即办**——非阻塞潜伏面（60 秒/日撞窗概率），统一化有价值候 M2 前排或下个测试域维护窗并批（与 O-E12-1/O-6 同族候选办）。
 - **候决③ SDE R-HY 重跑：准**——单文件同步入隔离位+重跑（预期 273/261/0/12 fail 清零），读数归卷即对平判据全项达成、STE 适配面全域收口。
 
+## 适配窗终局归卷（SDE B 案重跑读数 §十八 @ 949709c3，2026-09-26 18:1x）
+
+**收口裁定：通过。跨机测试基座适配窗全域收口——对平判据全项达成。**
+
+- **终态读数核验**：273/64/261/0/0/12 与门审预期 273/261/0/12 逐字对平——pass 260→261（proxy policy window 案转绿）、fail 1→0 清零、skip 12 不变。**TriModel R-HY fail 归零**。
+- **对平判据全项达成**：TriModel fail 归零 ✓；TriCode 唯一 fail=族③预告案（CORE_VERSION 门候排窗，明确在途不在本重跑范围——账面清晰）。三族+B 案适配产出在 R-HY 裸机形全部实证生效。
+- **工序面**：三步断言制同步（勘→打→重勘）+隔离位推进 a9d9fc8+部署位零触碰（照「无需补部」裁定，TriCode 不动）——全程守约。
+- 隔离位 checkout a9d9fc8 留位供族③复验复用（清理锚=族③复验毕，前裁不变）。
+- **本窗席位义务终态**：STE 适配面全域收口；SDE 执行面全域收口；本席对表/门审义务全域清零。LG-054 剩余面=BOD 收官件（自办在途）+族③ CORE_VERSION 门（候排窗，挂账在案）。
+
 ## 使用依据
 
-ste-crossmachine-base-adaptation.md（794c1170 + 定案 §五 8ca237e1 + B 案 §七 df4894b6）；TriModel df72995/a9d9fc8（HEAD 抽验）；TriCode a3893ba（HEAD 实勘：L286 备份名/CORE_VERSION/README FROZEN）；CORE-SPLIT 条款（TriCode README d20cb6b+纪律册 253ccd9）；wave5-acceptance.md（286/271/0/15 基线锚）。
+ste-crossmachine-base-adaptation.md（794c1170 + 定案 §五 8ca237e1 + B 案 §七 df4894b6 + 门审采认 d154b398 + 重跑收口 §十八 949709c3）；TriModel df72995/a9d9fc8（HEAD 抽验）；TriCode a3893ba（HEAD 实勘：L286 备份名/CORE_VERSION/README FROZEN）；CORE-SPLIT 条款（TriCode README d20cb6b+纪律册 253ccd9）；wave5-acceptance.md（286/271/0/15 基线锚）；deploy-readings.md（§十五 b096d1c2/§十七 1cebf5a8）。
