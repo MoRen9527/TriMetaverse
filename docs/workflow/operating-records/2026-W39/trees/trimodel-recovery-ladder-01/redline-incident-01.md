@@ -59,6 +59,17 @@
 4. **全停维持至第三刀进窗知会核验毕**。
 5. 附加候选办：振荡循环节流（回滚毕报 STE 观察项）——波④ 收尾裁决并入。
 
+## 根因勘正（第三刀实证，CTO 采认 2026-09-26 14:2x）
+
+**GBK 吞行假说证伪**：纯 ASCII 化后首次重启（pid 20584）四键仍 ABSENT（硬门 FAIL 即停内续勘）→同内容文件沙箱复刻（node 行换 env dump）四键全 PRESENT→**文件与 cmd 解析双双无罪**。
+
+**真根因=`Start-Process -FilePath <.cmd>` 的 ShellExecute 调用形态**：该形态父 cmdline=`cmd /c ""path" "`（双引号嵌套+尾部幽灵空参数），实测三灭（29844/20584/推定 45972 同形态）；改显式 `cmd.exe /c "path"` 干净形态（33328 父 cmdline 实证）**一次 PASS**。第三刀 PEB 硬门四键全 PRESENT（新条款首次执行即抓假说翻案——硬门价值实证）。
+
+- **未决剖面如实挂账**：幽灵尾参形态下失效剖面=DRILL WINDOW 整块（L16-24）而前后行全活，cmd 精确解析机制未定谳——入册以**形态禁令**承载（行为实证三灭一活足够，禁令不依赖机制解释），机制解释候勘。
+- **新暴露面（勘正衍生，CTO 裁）**：watchdog 拉起链 `trimlc-watchdog.ps1:29` 同为 `Start-Process -FilePath` 形态=**存量幽灵参路径**——watchdog 自动复活 daemon 时钉位将再次静默丢失。裁：窗内不动（TriMLC daemon 演练中活性稳定，复活概率≈0；F1 臂动 3333=TriModel 链不涉此）；**窗毕出窗还原时一并修 ps1 形态（显式 cmd.exe /c）+手动触发复活验证 cmdline 形态**，入候选办硬门。
+- **事故链勘正注**：非 ASCII 注释本次非凶手（GBK 假说作废留痕），但 rem 行非 ASCII 纪律本身维持成立（schtasks.ts 纪律是真实坑）；定责三分操作面主责表述勘正为「launch 形态选择+钉位执行未验」——形态为存量链路形态非 FSD 新引入，操作面责任焦点收敛为「第二刀后未做进程面验证即报进窗」（该缺口枢纽验收门同担，三分结构不变）。
+- **治理面修正扩条**：入册两条——①cmd/ps1 注释非 ASCII 纪律（维持）②**`Start-Process -FilePath *.cmd` 幽灵参形态禁令→显式 `cmd.exe /c` 形态**（本次真凶+存量 watchdog 链在用）。
+
 ## 使用依据
 
-STE 事故上报（2026-09-26 12:4x，读数锚定全量在卷）；ste-wave4-execution-log.md；wave4-finding-A-ruling.md（修复时序）；wave4-dispatch-gap-ruling.md（窗管理四条款）；dispatch-wave4.md 验收门④（修正即报候审）；FSD 勘验五项上报（2026-09-26 14:0x，PEB 直读+五位置比对+根因剖面）；schtasks.ts:53-54（纪律源码注）。
+STE 事故上报（2026-09-26 12:4x）；FSD 勘验五项上报（14:0x）；FSD 第三刀+根因勘正上报（14:1x）；ste-wave4-execution-log.md；wave4-finding-A-ruling.md；wave4-dispatch-gap-ruling.md；dispatch-wave4.md 验收门④；schtasks.ts:53-54；trimlc-watchdog.ps1:29（存量形态暴露面）。
