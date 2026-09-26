@@ -145,6 +145,35 @@
 - **候 BOD**：sg 侧同法复测终态轮成对归卷（修后态预期全绿；若 sg 侧仍有 alert 读数请附探测工具+参数，供工具形定位）。
 - 排查过程中途读数存档：s_client 机内双形（无 SNI/SNI=IP）修前即通（手动证书按 SAN 全索引），证明败点精确在站点块 SNI 匹配而非证书本体——与 CTO 门审预意见①一致。
 
+## 十五、bc72ea4 补部执行读数（2026-09-26 17:24-17:28，date 现查 17:28:49）
+
+- **触发与配方**：CTO 补部令（波⑤验收签认 604670ee 即触发）——R-HY 单笔 fetch+checkout bc72ea4（1972d83→bc72ea4 单笔推进）→rebuild→机内 A2 三态+gate 401/400+smoke 四断言回归。
+- **打包（三步断言制，勘→打→重勘一致方出包）**：
+  1. 勘：本机 TriModel 挂临时 branch `tm-deploy-bc72ea4`=bc72ea46147c69ba286ff92caef2caa2c631e116 ✓；亲缘复核 1972d83 是 bc72ea4 祖先（merge-base --is-ancestor）+区间 count=1 ✓；
+  2. 打：`git bundle create /tmp/tm-bc72ea4.bundle tm-deploy-bc72ea4 --not 1972d83` → **1360B** verify okay（requires 1972d83=R-HY 在位可满足）；
+  3. 重勘：list-heads=bc72ea4 refs/heads/tm-deploy-bc72ea4 + branch 复勘同 sha ✓。
+- **bundle 裸 sha 坑根因落卷（排障 ~17:10-17:24）**：`git bundle create` 对裸 sha 形（含全量 `bc72ea4`、range `1972d83..bc72ea4`、`--stdin` 管道）一律 "Refusing to create empty bundle"，而 `rev-list` 同参数正常（count=1）——**本 Git for Windows 版本 bundle 头只认可广告 ref 名，裸 sha 一律拒**；修法=临时 branch 挂点后以 ref 名+`--not` 增量打包（二分定位：裸 sha 无 exclusion 全量亦 empty → 锁定 ref 广告机制，非 MSYS 转换、非 exclusion 语义）。
+- **R-HY 侧推进**：scp 1360B → 现位断言 HEAD=1972d83（工作区干净）→ `git fetch /tmp/tm-bc72ea4.bundle refs/heads/tm-deploy-bc72ea4` → `checkout --detach FETCH_HEAD` → **HEAD-AFTER=bc72ea4 断言 ✓**（单笔推进语义：detached 与原部署位形态一致，零 merge commit、零 branch 移动）。
+- **rebuild**：npm install（file: TriCode 链接在位，TriCode 面零变更不重 build）+ `npm run build`（tsc+copy-ui，17:25 新鲜）；产物断言：`deleted_strategy_ids` 命中 dist/ui/index.html（76189B，bc72ea4 前端通道正身=del handler+PUT body+hydrate 三笔）+dist/src/api/trimmc-card.js（0b4ed36 服务端通道早就在位）+test 两件——**变更落位面与 commit 文自述逐项吻合**。
+- **restart 与稳态**：systemctl restart trimodel →17:26:53 active pid=1547186 → **NRestarts=0 稳态**（零自愈触发）；token 面零触碰（tokens.list 现役两枚与 A5 实弹同 mask：23bf****b0a4+c401****34f1=M1 验收对原样，零轮换）。
+- **复验全量（Host 钉形 `--resolve 8.155.54.79:443:127.0.0.1`）**：
+
+  | # | 项 | 读数 | 判 |
+  |---|---|---|---|
+  | 1 | health 443 真透传 | 200（0.014s）+body=`{"ok":true,"service":"trimodel",...}` | ✓ A2 三态之 TLS |
+  | 2 | keys 带 api-token | 200 | ✓ A2 三态之带 token（应用层 fail-open 面正确） |
+  | 3 | PUT /v1/config/policy 无 token | **401**（gate fail-closed） | ✓ gate 401 |
+  | 4 | PUT 带 gate 枚1（23bf） | **400**（业务层，与直打对照同码） | ✓ gate 400 |
+  | 5 | PUT 带 gate 枚2（c401） | **400**（并行窗双枚全通） | ✓ A5 并行窗复验 |
+  | 6 | 3333 直打带 gate 枚 | 400（对照同码=反代透传） | ✓ |
+  | 7 | GET /v1/config/policy 无 token（读面 P1） | 200 透传 | ✓ 读面可达=现设计 |
+  | 8 | keys 带 gate 枚 | 401（应用层 fail-closed） | ✓ 双层制语义正身：gate 面 token 只过 Caddy 层、应用层只认 api-token，两层互不通用 |
+  | 9 | smoke 四断言 | lo443（Host 钉）200 ✓ / 3333 health 200 ✓ / 8710 healthz 200（现役面零触碰，unit active）✓ / 8711 监听在位 ✓ | ✓ 不回退 |
+
+- **机内测试形勘正教训（本次排障实际命中）**：机内 `curl https://127.0.0.1` 的 Host=127.0.0.1 **不匹配站点块地址 8.155.54.79**——Caddy 无路由命中返回空 200（假绿：首轮四项 200 全系空 handler 形，其中 PUT 带 token 200 vs 直打 400 异码即暴露铁证）；**机内测 443 面必须 `--resolve` 钉 Host=8.155.54.79** 方为真透传路径。§十四 L142「lo 443 无 SNI 200」读数形勘验为 default_sni 兜底下 Host 无匹配空 200 形（非应用透传），本件以 Host 钉形读数勘正之，门审结论不変（公网真路径 Host 恒匹配）。
+- **CTO 异码裁定并卷指针**（cto-gate-review-2.md @ f133b85a，COO 转）：PUT 401=Caddy 写面 gate 拦截（未达应用）；GET 404=读面放行透传后应用路由未命中；「无 token 读面 404 化防枚举」推断不采。本件 §五 BOD 对表问询项以该裁定收口——读面公网无 token 可达=现设计（M1 正身=写面 gate），读面鉴权归 M2 应用层细门议程，不阻 M1。
+- **候触发（随本件报号）**：补部毕读数为号 → ①CTO 门审（本件读数经 COO 转）②BOD 轻量跨机抽测（TLS 握手+写面 401 两读）作 M1 收官附件。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
