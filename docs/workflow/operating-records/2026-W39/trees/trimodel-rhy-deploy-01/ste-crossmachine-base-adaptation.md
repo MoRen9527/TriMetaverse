@@ -2,9 +2,9 @@
 
 - sourceOfTruth: 本件（STE 席基座适配读数正身；派工链=deploy-readings.md §二/§十候 STE 项+COO 转办令）
 - syncMode: working
-- lastSyncedAt: 2026-09-26T09:50:46Z（date 现查，17:50 +0800；§六 R-HY 重跑对表追加）
+- lastSyncedAt: 2026-09-26T10:08:48Z（date 现查，18:08 +0800；§七 B 案动笔追加）
 - 席位: STE 小柯（m-ste）；判据（CTO）：三族清零后 R-HY 双仓全量 pass/fail 平与本机基线对平
-- 适配锚: TriModel `test/policy.gate.e2e.test.ts` @ df72995；TriCode `package.json` @ a3893ba
+- 适配锚: TriModel `test/policy.gate.e2e.test.ts` @ df72995 + `test/anthropic-proxy.test.ts` @ a9d9fc8（§七 B 案）；TriCode `package.json` @ a3893ba
 
 ## 一、三族适配法与本机验证读数
 
@@ -66,12 +66,24 @@
 - 隔离测试位（/tmp/lg054-rerun）：**荐保留**至族③ CORE_VERSION 修后 R-HY 复验（复用），验毕清理。
 - SDE 同步形态裁量（隔离位零触碰部署位+TRIRLC_HOME 钉现役旧名位）=配方未钉落点处的合理裁量，追认在卷。
 
+## 七、B 案动笔：proxy 策略窗案基座自含小笔（CTO 批令 0460bb76 ③；前提勘正+伴生缺陷②同笔）
+
+- **前提勘正（对 §六候裁项 2 的「无 key skip」荐案）**：SDE 归因「R-HY 无 upstream env key」定性成立，但 skip 方案**作废——无事可 skip**。本席实勘机制：败案=`'proxy: body rewrite correctness'` describe 的「policy window hit」案（`anthropic-proxy.test.ts` L157，断言 L163 `out.code==='ok'` 实得 `'no-api-key'`——与 deploy-readings.md L192 载 R-HY 栈 `'no-api-key' !== 'ok'` **逐字吻合，行号 HEAD 精确对位**=部署测试件非旧版，版本错位假说排除）。该 describe before() **只自设 DEEPSEEK_API_KEY、未自设 GLM_API_KEY**——案经 env fallback 依赖 ambient 环境键：dev 机有真席位键恒绿（基线假象之源），R-HY 裸机无即败。同 suite 余 3 件全绿机制逐案吻合（no policy / CC placeholder 走 deepseek 已自设；bad-json+no-api-key 案自删 GLM 键期望拒绝，ambient 缺失时反而必过）。正解=**基座自含（before() 自设哨兵键）**——正是 CTO 批令「测试面适配优于环境钉 key」的本体落点。
+- **缺陷②（伴生勘得，同笔加固）**：两案原字面窗 `['00:00','23:59']` 端斥语义（policy.ts `PolicyWindow` start 含 end 斥）=每日 23:59:00–24:00 **60 秒未命中空洞**→env 兜底 deepseek→断言错位（平台无关、低概率偶发——R-HY 本次非此因，但属同案真实潜伏缺陷）。修=`alwaysHitWindow` now±8h 计算窗（跨午夜包裹窗引擎支持：`windowMatches` start>end 分支；policy.gate.e2e `policyFor` 同型），全天候确定命中。
+- **落盘**：TriModel `test/anthropic-proxy.test.ts` @ **a9d9fc8**（26+/8−，测试域小笔非 core）。
+- **验证读数（四形）**：
+
+| 形 | 修前 | 修后 |
+| --- | --- | --- |
+| A `env -u GLM_API_KEY`（R-HY 裸机形） | 18/19 败 1=policy window hit（**R-HY 精确复现**） | **19/19** |
+| B ambient GLM=异机他键形 | — | 19/19（自设哨兵覆盖 ambient） |
+| C ambient as-is（dev 机） | 19/19（真键遮蔽=基线假象） | 19/19 |
+| D 全量默认门 `npm test` | 286/271/0/15 | **286/271/0/15=波⑤ 基线全平零回归** |
+
+- 复现/验证日志全文存档：`D:\tmp\lg054\repro-pre-noglm.log`（修前败栈）+ verify-a/b/c/d 四 log。
+- **对平预期更新（候 SDE R-HY 重跑）**：新测试件（a9d9fc8）同步 R-HY 隔离位（复用，批令④保留锚不变）重跑 TriModel → 预期 **273/261/0/12**（fail 清零；skip 12=chromium 族同形）。届时对平判据全项达成，LG-054 STE 适配面全域收口。
+- 候办观察 **O-B1**（本笔范围外，非阻塞）：`policy-machine.test.ts` L24 / `policy.gate.evaluation.test.ts` L52·L102 / `policy.test.ts` L109 存在同形字面 `['00:00','23:59']` 端斥窗（同型 60 秒/日空洞）；`apply-strategy` / `trimmc-card-v4` 的 18:00–23:59 窗同理（窗口语义另族）。候 CTO 裁是否另立小批统一计算窗化——基线全平不涉，纯潜伏面收敛。
+
 ## 使用依据
 
-COO 转办令（三族 owner=STE）+CTO 判据令（对平判据）；deploy-readings.md §二/§十（c91e3772 起读数，现势 5c739faa）；TriModel df72995/TriCode a3893ba/波⑤ 基线 ea2b6c60 卷；探针卷 `D:\tmp\lg054\`；工作区记忆条：命令链断言/manifest 身份验证/活体优先诊断。
-
-
-COO 转办令（三族 owner=STE）+CTO 判据令（对平判据）；deploy-readings.md §二/§十（c91e3772 起读数，现势 5c739faa）；TriModel df72995/TriCode a3893ba/波⑤ 基线 ea2b6c60 卷；探针卷 `D:\tmp\lg054\`；工作区记忆条：命令链断言/manifest 身份验证/活体优先诊断。
-
-
-COO 转办令（三族 owner=STE）+CTO 判据令（对平判据）；deploy-readings.md §二/§十（c91e3772 起读数，现势 5c739faa）；TriModel df72995/TriCode a3893ba/波⑤ 基线 ea2b6c60 卷；探针卷 `D:\tmp\lg054\`；工作区记忆条：命令链断言/manifest 身份验证/活体优先诊断。
+CTO B 案批令（0460bb76）；COO 转办令（三族 owner=STE）+CTO 判据令（对平判据）；deploy-readings.md §二/§十/§十七·L192 R-HY 败案栈引文（c91e3772 起读数，现势 5c739faa）；TriModel a9d9fc8（本笔）/df72995/TriCode a3893ba/波⑤ 基线 ea2b6c60 卷；policy.ts 端斥语义与 windowMatches 包裹分支现勧行号；探针与验证日志卷 `D:\tmp\lg054\`；工作区记忆条：命令链断言/manifest 身份验证/活体优先诊断/键存在性抽验≠值面验证。
