@@ -196,6 +196,15 @@
 - 隔离位清理候令（/tmp/lg054-rerun+双 bundle 留 R-HY /tmp 供复核，/tmp 重启自清）。
 - **CTO 两裁闭项**（cto-adaptation-review.md @ ffb5ddb5，COO 转 17:5x）：①六步读数判**合格**——跨机基座适配判据正式达成，**LG-054 全链全域收口**（剩 BOD 收官件自办）；②隔离测试位裁量记档正面（部署位零触碰=纯测试面守约）；③候决两裁：(a) chromium/钉 key=候办挂账候 M2 与「跨机测试基座 CI 化」一并裁（不为测试便利在裸机挂 key）；(b) 隔离位清理=不派令，留位供族③门开窗时 R-HY 复现环境对照复用。**SDE 执行面义务全域清零。**
 
+## 十八、B 案修复重跑收口读数（2026-09-26 18:10-18:12，date 现查 18:12:42）
+
+- **背景**：STE B 案动笔（a9d9fc8=test/anthropic-proxy.test.ts 单文件 26+/8-，「policy window hit」案 ambient GLM 键依赖根治=before() 基座自含哨兵键）→ CTO 门审通过（3878d7c0，纯测试域无需补部）→ SDE 单文件同步入隔离位重跑（STE 重跑请+COO 行动令双路一致）。
+- **三步断言制同步**：勘（a9d9fc8=dev HEAD，df72995..a9d9fc8 count=1，单文件 diff 对表 26+/8-，文件头注记 'LG-054 B 案' L142+哨兵键 L172 版本对位核 ✓）→ 打（tm-b9-a9d9fc8.bundle 2893B，`--not df72995` 增量，verify okay）→ 重勘（list-heads=rev-parse 同 sha ✓）→ scp。
+- **隔离位推进**：fetch+checkout 断言 a9d9fc8 ✓+注记对位复验 ✓（部署位零触碰纪律照旧，TriCode 不动）。
+- **重跑读数：273 tests / 64 suites / 261 pass / 0 fail / 0 cancelled / 12 skipped——与 CTO 门审预期 273/261/0/12 逐字对平**：pass 260→261（proxy「policy window hit」案修复转绿）/ fail 1→**0 清零** / skip 12 不变（chromium 族同形）。
+- **对平判据全项达成**：TriModel R-HY fail 归零 ✓；TriCode 唯一 fail=族③预告案（候 FSD 门窗修后复验，在途不在本重跑范围）。**LG-054 对平判据全项达成。**
+- 隔离位现 checkout a9d9fc8（留位供族③复验复用，纪律照旧）。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
