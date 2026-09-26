@@ -60,8 +60,9 @@
 ## 四、现势与交接
 
 - 发现-A 修复（CTO 裁 2b325f02）：guard PATH 尾追加 `;C:\nvm4w\nodejs`（nvm4w junction）+ where node 哨兵行——第一刀落位（出窗+修复合并一次重启 pid=20004，哨兵零触发），STE 独立加验在位。
-- **第二刀毕，重进窗**（2026-09-26T03:49:14Z 新窗计时起点，cap 2h）：四钉位照第一刀形重落（CLAUDE_SETTINGS/DEPLOY_KEY 沙箱假钥/AUDIT_LOG/L2_FLAG 真路径）→ 重启纪律全程（pidfile==监听先验 20004）→ 新 pid=**29844** healthz 200，pidfile 已跟写。
-- 进窗读数：where node 于 guard PATH 直证 `C:\nvm4w\nodejs\node.exe`（哨兵零触发）；cron 台账存活 l2-scan runCount=235 / l3-remind=29 双 enabled；healthz cron.jobCount=2 degraded=false。
+- **第二刀毕重进窗后红线破事故**（12:32:48 restore-direct 写真活体，全链勘验见 `fsd-drill-bleed-forensics.md`，根因勘正=Start-Process 幽灵尾参形态非 GBK）→ STE 停臂，回滚由 STE 执行。
+- **第三刀毕（2026-09-26T06:15:25Z 新窗计时起点，cap 2h）**：注释全 ASCII 化（全文件 0 非 ASCII 字节断言）→ 两次重启（20584 硬门 FAIL 抓出假形态→**33328 显式 cmd /c 形态硬门 PASS**）→ PEB 实勘四钉位键全 PRESENT（新硬门首刀即抓真凶）；where node 直证、哨兵零触发、cron 台账 l2-scan 295/l3-remind 34 双 enabled。
+- 现役 daemon=**33328**（pidfile 跟写）；复活形态教训：**禁 `Start-Process -FilePath <.cmd>`**（幽灵尾参形态灭钉位块），用 `Start-Process cmd.exe /c "path"` 干净形态。
 - STE 面：进窗知会已投，F2 补验门开臂条件齐（F2→F3→F4→F5 接续）；本席窗内支撑待命（臂中缺陷修正即报候审）。
 - 出窗义务（臂毕）：删 DRILL WINDOW 块→stop/start→三读数核验（钉位零残留/活体 hash 基线/cron 台账）——出窗还原比进窗重。
 - 窗全闭（STE 五臂毕+终出窗）后本件补终态段（出窗三读数+daemon 回归读数）。

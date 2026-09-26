@@ -35,9 +35,21 @@
 
 ## 根因定谳
 
-**L17-18 中文 rem 行在 cmd.exe GBK 解码下，行尾字节（「。」=E3 80 82 尾字节 0x82，落 GBK 双字节首字节区）吞并 CR → 行边界破坏 → 紧随的 L19-22 四条钉位 set 行被吞**。
+> **勘正（2026-09-26T06:1xZ，第三刀后）：本段原 GBK 吞行定谳作废**——第三刀纯 ASCII 化后第一次重启（20584）四键仍 ABSENT（反例一）；同内容文件沙箱复刻（node 行换 env dump）四键全 PRESENT（反例二）。文件与 cmd 解析双双无罪。原文留痕如下，真根因见下段。
 
-同族坑项目源码早有明文：TriMLC `src/daemon/schtasks.ts:53-54`「em-dash 在 GBK cmd.exe 下尾字节解析破坏 rem 行 → 下一行被吞。**rem 行严禁非 ASCII**」——本席写 DRILL WINDOW 注释时未执行该纪律。
+~~L17-18 中文 rem 行在 cmd.exe GBK 解码下，行尾字节（「。」=E3 80 82 尾字节 0x82，落 GBK 双字节首字节区）吞并 CR → 行边界破坏 → 紧随的 L19-22 四条钉位 set 行被吞。同族坑项目源码早有明文：TriMLC `src/daemon/schtasks.ts:53-54`「rem 行严禁非 ASCII」——本席写 DRILL WINDOW 注释时未执行该纪律。~~
+（非 ASCII rem 纪律本身仍成立且已由第三刀落实；只是它不是本次事故根因。）
+
+### 勘正后真根因：Start-Process ShellExecute 幽灵尾参形态
+
+- **假形态（事故形态）**：`Start-Process -FilePath <.cmd>` → 父 cmdline=`cmd.exe /c ""C:\...\trimlc-daemon-channel.cmd" "`（双引号嵌套+**尾部幽灵空参数**）——四键 ABSENT 实测三次（29844/20584，+45972 同形态推定）。
+- **真形态（修复形态）**：`Start-Process -FilePath cmd.exe -ArgumentList '/c','"path"'` → 父 cmdline=`"C:\WINDOWS\System32\cmd.exe" /c "C:\...\trimlc-daemon-channel.cmd"`（干净单参）——33328 四键全 PRESENT（PEB 实证）。
+- 同一文件、同一解释器、两种调用形态两种结果；失效剖面=DRILL WINDOW 整块（L16-24）而块前块后行全活，cmd 精确解析机制未定谳（候后续勘/裁入册）。
+- 证据链：沙箱复刻 dump（同一文件四键 PRESENT）/ PEB 直读（假形态 ABSENT×2、真形态 PRESENT×1）/ 父 cmdline 对照。
+
+### 工程教训（三刀串）
+
+文件面读数会过、沙箱单测会过，唯有**进程面 PEB 实勘**抓真凶——CTO 新条款（进窗必附 PEB 四键 present）为对的上颚，首刀执行即抓出修复无效。
 
 ## 完整事故链
 
