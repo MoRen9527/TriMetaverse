@@ -1,0 +1,41 @@
+# CTO 技术门审·第二单（LG-054 部署段读数 c91e3772）
+
+- sourceOfTruth: 本件（LG-054 技术门门审第二单；D-15 枢纽门审留痕）
+- syncMode: final
+- lastSyncedAt: 2026-09-26 16:5x +0800（date 现查 16:49 hook 链）
+- 门审对象: deploy-readings.md @ c91e3772（SDE 部署落地段，执行序③④⑤）
+
+## 门审总览
+
+五锚读数：A1/A3/A5 全绿+A2 机内三态绿（跨机候排）+A4 4/5 绿——**构建产物过门，机内段验收通过**。技术债⑩销债读数确认（TriCode@d20cb6b 同机在位+先 build+file: 解析实证，销口即闭账）。
+
+## 候裁三项裁定
+
+### 追认① 写面 gate 落 Caddy 层：**裁可追认**
+
+- 裁量正当：代码侧原生无 gate（routes.ts L69 明示 P1 no-auth 口径），SDE 落网关层=零代码变更、零未审笔叠加、443 未开全程零裸奔窗口；实弹三读数在卷（GET 200 透传/PUT 无 token 401/PUT 带 token 400 业务层同码对照）。
+- token 生命周期成套（gen/revoke/list+tokens.list 600+Caddyfile validate fail-safe 不 reload+graceful reload）+A5 并行窗实弹（违反并行=FREEZE 硬判据达成）——**记档正面**。
+- **附带裁定**：Caddy 层 gate=部署态防线**常设**（网关粗门不拆）；方案问6「ADMIN 写面独立强 token」应用层实现仍是正身目标，候 M2 前 FSD 另笔——网关粗门+应用层细门=双层非替代。
+
+### 追认② 限流候补：**M1 不阻，裁定=443 开位前置条件**
+
+- 当前暴露面=机内+127.0.0.1+8710 对照口，3333 公网不可达保持——限流非现役暴露面防线，M1 验收不阻（A4 维持 4/5 口径）。
+- **裁**：限流到位=**443 公网开位的硬前置条件**（CEO 通道裁下开位时，限流未到位不开）；选型候 M2 排，**优先 xcaddy 插件构建**（网关层统一，避免应用层另笔叠加）。
+
+### 裁③ bc72ea4 补部时点：**波⑤ 验收毕即补部（另笔，不随 M2）**
+
+- 本席 diff 面已核验（三笔恰位+零扩散+活动守卫在位）；D1=CEO 走查实锤缺陷，修复应尽快上部署位，不候 M2。
+- **补部配方**：STE 波⑤ 实弹全绿+本席波⑤ 验收签认→R-HY 侧单笔 fetch 本机+merge bc72ea4+TriModel rebuild（内嵌 js 变更）→**机内 A2 三态复验**（回归读数）+写面 gate 401/400 复验——SDE 履行，读数随报。
+
+## 部署源污染拦截（自报）处置
+
+- 处置正确（checkout 1972d83 回退门审基线+HEAD-ASSERT+自报如实）——**记档正面**。
+- **工序教训入卷**：打包类工序「勘定基线→打包」窗口内源可漂移（本案=bc72ea4 打包前 3 分钟入 dev）——**打包前重勘 HEAD 断言**应为固定步（勘 HEAD→打 bundle→重勘 HEAD 一致方出包）。候选办转 FSD/SDE 共用纪律（与「先写后报+路径行数证据」同族）。
+
+## 双仓 fail 归因采认
+
+全环境型归因（TriRLC 旧名路径/netstat Windows 格式/哨兵 HOME 形）采认——本机对照实验（worktree 1972d83 19/19 全绿+已清理）方法正当；跨机测试基座适配 owner=STE 三族转办在途，不阻 M1 验收（构建产物过门+机内活体三态绿已足）。
+
+## 使用依据
+
+deploy-readings.md（c91e3772）；cto-gate-review-1.md（a03a81e9+勘正 76d50327）；joint-plan.md 问6（ADMIN 写面 token 正身）；dispatch-wave5.md（bc72ea4 验收链）；技术债⑩（CORE-SPLIT 结论单）。
