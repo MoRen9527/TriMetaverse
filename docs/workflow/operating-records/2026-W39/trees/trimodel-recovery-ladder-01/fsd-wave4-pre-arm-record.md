@@ -63,6 +63,7 @@
 - **第二刀毕重进窗后红线破事故**（12:32:48 restore-direct 写真活体，全链勘验见 `fsd-drill-bleed-forensics.md`，根因勘正=Start-Process 幽灵尾参形态非 GBK）→ STE 停臂，回滚由 STE 执行。
 - **第三刀毕（2026-09-26T06:15:25Z 新窗计时起点，cap 2h）**：注释全 ASCII 化（全文件 0 非 ASCII 字节断言）→ 两次重启（20584 硬门 FAIL 抓出假形态→**33328 显式 cmd /c 形态硬门 PASS**）→ PEB 实勘四钉位键全 PRESENT（新硬门首刀即抓真凶）；where node 直证、哨兵零触发、cron 台账 l2-scan 295/l3-remind 34 双 enabled。
 - 现役 daemon=**33328**（pidfile 跟写）；复活形态教训：**禁 `Start-Process -FilePath <.cmd>`**（幽灵尾参形态灭钉位块），用 `Start-Process cmd.exe /c "path"` 干净形态。
+- **窗毕补笔（CTO 裁，出窗动作清单新增）**：`trimlc-watchdog.ps1:29` 同为 Start-Process -FilePath 形态=存量幽灵参路径（watchdog 自动复活时钉位会再静默丢）——窗内不动；**出窗还原时一并修 ps1 为显式 cmd.exe /c 形态 + 手动触发一次复活验证父 cmdline 形态**，随出窗三读数一并报。
 - STE 面：进窗知会已投，F2 补验门开臂条件齐（F2→F3→F4→F5 接续）；本席窗内支撑待命（臂中缺陷修正即报候审）。
 - 出窗义务（臂毕）：删 DRILL WINDOW 块→stop/start→三读数核验（钉位零残留/活体 hash 基线/cron 台账）——出窗还原比进窗重。
 - 窗全闭（STE 五臂毕+终出窗）后本件补终态段（出窗三读数+daemon 回归读数）。
