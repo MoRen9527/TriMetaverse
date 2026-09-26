@@ -37,6 +37,28 @@
 2. 补验门 #5/#6 断言体系（钉位触达实证）正是为抓此类破线设计——抓到了，门设计必要性实证；若无数值断言仅凭「restore-done」即判绿，破线将静默。
 3. STE 停臂纪律（发现即停+全停+零动作候令）在红线事件中再次实证。
 
+## 根因定谳（FSD 勘验五项闭环，CTO 采认 2026-09-26 14:0x）
+
+**根因=channel cmd 中文 rem 行 GBK 吞行**：L17-18 DRILL WINDOW 注释含中文全角（「。」尾字节 0x82 落 GBK 双字节首字节区）→ cmd.exe GBK 解码吞并 CR → 行边界破坏 → **紧随的 L19-22 四条钉位 set 行被吞** → daemon env 四键 ABSENT（PEB 直读 128 变量全量实证）→ cron runner spawn 全量继承 daemon env → stub env 同 ABSENT → 发现-A 修复后 node 可达，12:32:48 stub 首次真执行 restore-direct → CoreIO 缺省回退真 legacy 钥写真活体；drill 产物零产生。三读数全闭环。
+
+勘验质量记档：PEB 直读（NtQueryInformationProcess+ReadProcessMemory，只读）为决定性手段；五位置单拷贝比对排除启动分叉；钉位块前后行全生效唯独块内 set 未生效的剖面定位；根因与项目已知同族坑对上（schtasks.ts:53-54 明文「rem 行严禁非 ASCII」纪律——**该纪律藏码未独立成文**）。第一刀四键 ABSENT 为同构推定（未做 PEB 勘验，如实标注）——彼时无 flag 在位故未触发。
+
+## 定责三分（CTO 裁）
+
+| 面 | 责任 | 裁语 |
+| --- | --- | --- |
+| FSD 操作面（主责） | 两刀 DRILL 注释均违反项目明文纪律（rem 行严禁非 ASCII），自认如实 | 主责成立；**如实上报+勘验高质量（PEB 硬功夫+不利读数照实录）记档正面**——事故文化面：如实不被追打 |
+| 枢纽验收门（本席共担） | 进窗知会验收只收文件面读数（True×4=文件里有四行 set）未要求 daemon env 进程面实勘——被污染的读数过了验收 | 已自认入档；窗条款增补生效：进窗知会必含 PEB 进程面实勘读数 |
+| 治理面（体系缺口，本席修正义务） | 「rem 行严禁非 ASCII」纪律只存在于 schtasks.ts 源码注释——藏码不独立成文=无强制自检门；对照 ps1 BOM 纪律已成文+有 memory 条目 | 修正动作：纪律成文（D 系入册，落 TriCompany/docs/workflow/engineering-disciplines.md，编号候台账对表）+cmd/ps1 交付自检项（非 ASCII 字节扫描，ps1 并 BOM 检查） |
+
+## 恢复与复跑裁决（CTO，2026-09-26 14:0x）
+
+1. **修复裁**：FSD 两案采「注释全改纯 ASCII」（根治；「钉位前移」否——绕当前不绕未来）。
+2. **第三刀流程**：FSD 改 channel cmd（注释 ASCII 化+钉位 set 保留）→重启纪律→**进窗知会必含 daemon env PEB 实勘四键 present 读数**（新条款首次执行）→STE 核验进窗。
+3. **复跑前提**（COO 三注承接）：隔离层修复经验收门含进程 env 面——第三刀满足后 F2 补验门重跑（10 断言表仍有效）→F3/F4/F5；窗计时随第三刀进窗重起。
+4. **全停维持至第三刀进窗知会核验毕**。
+5. 附加候选办：振荡循环节流（回滚毕报 STE 观察项）——波④ 收尾裁决并入。
+
 ## 使用依据
 
-STE 事故上报（2026-09-26 12:4x，读数锚定全量在卷）；ste-wave4-execution-log.md；wave4-finding-A-ruling.md（修复时序）；wave4-dispatch-gap-ruling.md（窗管理四条款）；dispatch-wave4.md 验收门④（修正即报候审）。
+STE 事故上报（2026-09-26 12:4x，读数锚定全量在卷）；ste-wave4-execution-log.md；wave4-finding-A-ruling.md（修复时序）；wave4-dispatch-gap-ruling.md（窗管理四条款）；dispatch-wave4.md 验收门④（修正即报候审）；FSD 勘验五项上报（2026-09-26 14:0x，PEB 直读+五位置比对+根因剖面）；schtasks.ts:53-54（纪律源码注）。
