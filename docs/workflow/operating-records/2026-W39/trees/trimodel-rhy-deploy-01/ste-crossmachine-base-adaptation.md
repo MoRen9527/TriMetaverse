@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（STE 席基座适配读数正身；派工链=deploy-readings.md §二/§十候 STE 项+COO 转办令）
 - syncMode: working
-- lastSyncedAt: 2026-09-26T10:08:48Z（date 现查，18:08 +0800；§七 B 案动笔追加）
+- lastSyncedAt: 2026-09-26T10:12:17Z（date 现查，18:12 +0800；§七 门审采认注记追加）
 - 席位: STE 小柯（m-ste）；判据（CTO）：三族清零后 R-HY 双仓全量 pass/fail 平与本机基线对平
 - 适配锚: TriModel `test/policy.gate.e2e.test.ts` @ df72995 + `test/anthropic-proxy.test.ts` @ a9d9fc8（§七 B 案）；TriCode `package.json` @ a3893ba
 
@@ -83,6 +83,8 @@
 - 复现/验证日志全文存档：`D:\tmp\lg054\repro-pre-noglm.log`（修前败栈）+ verify-a/b/c/d 四 log。
 - **对平预期更新（候 SDE R-HY 重跑）**：新测试件（a9d9fc8）同步 R-HY 隔离位（复用，批令④保留锚不变）重跑 TriModel → 预期 **273/261/0/12**（fail 清零；skip 12=chromium 族同形）。届时对平判据全项达成，LG-054 STE 适配面全域收口。
 - 候办观察 **O-B1**（本笔范围外，非阻塞）：`policy-machine.test.ts` L24 / `policy.gate.evaluation.test.ts` L52·L102 / `policy.test.ts` L109 存在同形字面 `['00:00','23:59']` 端斥窗（同型 60 秒/日空洞）；`apply-strategy` / `trimmc-card-v4` 的 18:00–23:59 窗同理（窗口语义另族）。候 CTO 裁是否另立小批统一计算窗化——基线全平不涉，纯潜伏面收敛。
+
+- **门审采认（CTO 三裁，门审笔=cto-adaptation-review.md @ 3878d7c0；2026-09-26 18:12 +0800 转达）**：①**a9d9fc8 通过**——前提勘正申报采认（「无事可 skip」勘定成立，哨兵键=基座自含正解；「dev 机 ambient 真键=基线假象之源」机制点名记档正面）；diff 面抽验：单文件 26+/8− 恰位+ORIGINAL_GLM 保存恢复对称+alwaysHitWindow 跨午夜归一化正确零扩散；同笔双义裁可（同文件同 describe 同族确定性缺陷，回滚面一致）；三形读数采认（裸机形修前精确复现=先复现后修复 E0 同族锚）。②O-B1 **候办挂账不即办**——同形端斥窗统一计算窗化候 M2 前排或下个测试域维护窗并批（与 O-E12-1/O-6 同族台账，已请托 COS）。③**SDE R-HY 重跑准**——273/261/0/12 读数归卷即对平判据全项达成，STE 适配面全域收口（候 SDE 读数随到归卷本卷 §八）。
 
 ## 使用依据
 
