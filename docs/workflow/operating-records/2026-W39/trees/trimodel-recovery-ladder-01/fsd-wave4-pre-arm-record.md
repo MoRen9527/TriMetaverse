@@ -59,10 +59,9 @@
 
 ## 四、现势与交接
 
-- 演练窗现势（2026-09-26 03:4xZ 刷新）：STE 五臂执行中 F2 命中发现-A（guard v2 瘦 PATH 不含 nodejs → stub restore 八连败，CTO 裁正身=wave4-finding-A-ruling.md @ 2b325f02）；第一刀已毕=**出窗+修复合并一次重启**：
-  - 1a DRILL WINDOW 块整删（残留=False；`set TRIMODEL_` 现仅 API_TOKEN 1 行=正身件）
-  - 1b guard PATH 尾追加 `;C:\nvm4w\nodejs` + where node 哨兵行（零触发实证）
-  - 重启纪律全程（pidfile==监听先验 45972）→ 新 pid=20004 healthz 200；真活体 hash==基线 491F…78B2 未动；cron 台账存活 l2-scan runCount 233 / l3-remind 29 双 enabled
-- STE 面：第一刀回执已投，候其出窗三读数核验随报 CTO
-- 第二刀（重落 DRILL WINDOW 四钉位→重启→报修复毕+重进窗）候 CTO 新窗令；沙箱假钥文件仍在位
-- 窗全闭（STE F2 补验+终出窗）后本件补终态段（出窗三读数+daemon 回归读数）
+- 发现-A 修复（CTO 裁 2b325f02）：guard PATH 尾追加 `;C:\nvm4w\nodejs`（nvm4w junction）+ where node 哨兵行——第一刀落位（出窗+修复合并一次重启 pid=20004，哨兵零触发），STE 独立加验在位。
+- **第二刀毕，重进窗**（2026-09-26T03:49:14Z 新窗计时起点，cap 2h）：四钉位照第一刀形重落（CLAUDE_SETTINGS/DEPLOY_KEY 沙箱假钥/AUDIT_LOG/L2_FLAG 真路径）→ 重启纪律全程（pidfile==监听先验 20004）→ 新 pid=**29844** healthz 200，pidfile 已跟写。
+- 进窗读数：where node 于 guard PATH 直证 `C:\nvm4w\nodejs\node.exe`（哨兵零触发）；cron 台账存活 l2-scan runCount=235 / l3-remind=29 双 enabled；healthz cron.jobCount=2 degraded=false。
+- STE 面：进窗知会已投，F2 补验门开臂条件齐（F2→F3→F4→F5 接续）；本席窗内支撑待命（臂中缺陷修正即报候审）。
+- 出窗义务（臂毕）：删 DRILL WINDOW 块→stop/start→三读数核验（钉位零残留/活体 hash 基线/cron 台账）——出窗还原比进窗重。
+- 窗全闭（STE 五臂毕+终出窗）后本件补终态段（出窗三读数+daemon 回归读数）。
