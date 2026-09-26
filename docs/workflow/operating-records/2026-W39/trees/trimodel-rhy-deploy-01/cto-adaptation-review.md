@@ -29,6 +29,14 @@
 
 SDE 面执行，与 bc72ea4 补部互不阻塞；fail 原始栈全文回传要求在卷。终态对平读数随到归卷。
 
+## 族③ 定案采认附注（STE 回执 8ca237e1 §五，2026-09-26 17:4x）
+
+- **定案=唯一性后缀单 helper**（`bak-<ts>-<pid>-<seq>` 收敛）——**采认**；fail-closed 弃因成文（需改现行备份失败语义+引入用户可见失败模式）与本席倾向一致。
+- **两写点扩面采认**：L158 runWrite + **L286 rollbackTo 回滚前备份**同根覆盖——后者破坏回滚可逆性（回滚链/写回滚并发同毫秒丢锚），危害面高于初判（初判仅 L286 一点）。FSD 派工单须明示**两写点同改**，防单点修残留。
+- 消费面兼容实勘采认（startsWith 前缀过滤×2+防穿越 regex 后缀形态 node 实测 true）——后缀加段零破面。
+- 验证面配方 STE 自领（门窗内全族基线复验 TriCode 58+TriModel 276 壳族+25/25+探针冻结组 7/7+双签）——条款②全流程在位，排窗候 COS（挂账已请托）。
+- 本附注后族③修复技术定案齐备，候排窗令即可开 CORE_VERSION 门。
+
 ## 使用依据
 
-ste-crossmachine-base-adaptation.md（794c1170）；TriModel df72995；TriCode a3893ba（HEAD 实勘：L286 备份名/CORE_VERSION/README FROZEN）；CORE-SPLIT 条款（TriCode README d20cb6b+纪律册 253ccd9）；wave5-acceptance.md（286/271/0/15 基线锚）。
+ste-crossmachine-base-adaptation.md（794c1170 + 定案 §五 8ca237e1）；TriModel df72995；TriCode a3893ba（HEAD 实勘：L286 备份名/CORE_VERSION/README FROZEN）；CORE-SPLIT 条款（TriCode README d20cb6b+纪律册 253ccd9）；wave5-acceptance.md（286/271/0/15 基线锚）。
