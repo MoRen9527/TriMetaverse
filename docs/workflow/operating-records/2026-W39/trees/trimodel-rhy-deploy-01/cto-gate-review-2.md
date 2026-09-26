@@ -58,3 +58,16 @@ deploy-readings.md（c91e3772）；cto-gate-review-1.md（a03a81e9+勘正 76d503
 - 时序根因闭环采认：BOD 17:1x alert=CEO 开位生效早于修点的修前态首读（17:17 reload 起全绿）——定向判断准确，时间线自洽，非回归。
 - 门审三件套全绿：公网 TLS 三态（GET 200 0.25s/PUT 无 token 401/api-token 200+s_client SNI=IP 握手正常）/机内四断言回归（smoke 不回退）/iptables hashlimit+8711 在位。
 - 收官余项：BOD sg→R-HY 三态亲勘（成对归卷）；bc72ea4 补部（另令已发）。
+
+## M1 收官附笔（BOD sg 亲勘签认+GET/PUT 异码语义裁定，2026-09-26 17:2x）
+
+**BOD 终态轮 sg 侧亲勘收讫（D-24 本席通道）：TCP 443 OPEN/TLSv1.3+自签 IP-SAN 握手/GET 404/PUT 无 token 401——与本席公网段门审读数同法同判，成对归卷达成。M1 五锚全绿，BOD 验收签认在卷——LG-054 收官余项清单余 bc72ea4 补部一项（SDE 执行中）。**
+
+**GET=404 vs PUT=401 异码语义裁定（应 BOD 实现语义确认问询）**：
+
+- **两层异源，非单层两种码**：PUT 无 token 401=Caddy 写面 gate 层拦截（`@write_no_auth` matcher 命中，请求**未达应用**）；GET 无 token=matcher 不命中读面放行→透传 upstream→应用层响应 404（所测路径应用路由未命中）。
+- **两个异码恰是双层结构的两半实证**：GET 404 证「读面放行链路通」（请求穿过 Caddy 到达应用并得应用响应——Caddy 放行请求自身不产 404）；PUT 401 证「写面被拦在网关层」（fail-closed 在位）。
+- **「无 token 读面 404 化防枚举」推断不采**：读面未做 404 化——门审二单追认① 实弹三读数含 **GET 200 透传**在卷（有效读路径可读），若防枚举设计则有效路径亦应 404，已被现卷读数证伪。
+- **安全面附注**：读面公网无 token 可达=现设计（M1 范围写面 gate 为正身）；读面鉴权需求不在 M1 裁定面——候 M2 应用层细门（joint-plan 问6 ADMIN token 面）与读/写分级一并裁。BOD 若判读面公网可读有暴露疑虑，归 M2 应用层 token 议程，不阻 M1 收官。
+
+本附笔与 SDE 读数件注记互为对表（SDE 并卷时以本裁定为语义基准）。
