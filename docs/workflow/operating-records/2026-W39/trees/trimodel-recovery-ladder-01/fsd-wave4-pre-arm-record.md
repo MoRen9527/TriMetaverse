@@ -75,6 +75,5 @@
   5. 出窗读数：healthz ok degraded=false / cron l2-scan 342 / l3-remind 37 双 enabled 跨重启存活 / 真活体 settings.json hash==基线 491F333…CD778B2
 - **现役终态**：daemon=7496（watchdog 拉起体=修形后干净形态）——幽灵参禁令自此在自动复活链闭环；恢复梯回正身态（真降级写真活体）。
 - 事故链资产沉淀：勘验记录 `fsd-drill-bleed-forensics.md`（含根因勘正）；治理条两条（非 ASCII rem 维持+幽灵参禁令新增）CTO 已落树。
-- STE 面：进窗知会已投，F2 补验门开臂条件齐（F2→F3→F4→F5 接续）；本席窗内支撑待命（臂中缺陷修正即报候审）。
-- 出窗义务（臂毕）：删 DRILL WINDOW 块→stop/start→三读数核验（钉位零残留/活体 hash 基线/cron 台账）——出窗还原比进窗重。
-- 窗全闭（STE 五臂毕+终出窗）后本件补终态段（出窗三读数+daemon 回归读数）。
+- **波④ 全闭记号（2026-09-26T15:54:35Z）**：STE 三项独立复验全绿（文件面钉位零残留 / PEB 7496 四钉全 ABSENT+128 变量算术互证 / hash 逐字基线+healthz 200），核验报已呈 CTO——本件使命毕。
+- 候办挂账（未派工，候 CTO 令）：①振荡循环节流（flag 重写节流或占口清除联动，第三刀令候选办条）②幽灵参形态下块内 set 失效的 cmd 精确解析机制勘验（不阻运营）③PEB 硬门/幽灵参禁令/勘正笔法入 role workspace 岗位知识（本席自沉淀项）。
