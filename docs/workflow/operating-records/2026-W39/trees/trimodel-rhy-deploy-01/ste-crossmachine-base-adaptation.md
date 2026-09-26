@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（STE 席基座适配读数正身；派工链=deploy-readings.md §二/§十候 STE 项+COO 转办令）
 - syncMode: working
-- lastSyncedAt: 2026-09-26T09:5xZ（date 现查链，17:5x +0800）
+- lastSyncedAt: 2026-09-26T09:50:46Z（date 现查，17:50 +0800；§六 R-HY 重跑对表追加）
 - 席位: STE 小柯（m-ste）；判据（CTO）：三族清零后 R-HY 双仓全量 pass/fail 平与本机基线对平
 - 适配锚: TriModel `test/policy.gate.e2e.test.ts` @ df72995；TriCode `package.json` @ a3893ba
 
@@ -50,7 +50,26 @@
 - **验证面承诺（本席，双签制内）**：修后全族基线复验执行——TriCode 58 套+TriModel 276 壳族+25/25+探针回归（冻结组修后应 backups=7）；five-gates 哨兵案在快 fs 下转确定性绿=R-HY 对平族③清零实证。
 - 排窗：候 COS 挂账 CORE_VERSION 门窗；本席验证配方已备（探针+双仓全量命令族在卷 §四）。
 
+## 六、R-HY 重跑对表（SDE 面 17:52 读数件 §十七 @ 1cebf5a8 回流；本席 reconciliation）
+
+- **对平判据判定：条件达成**——族①② 实证清零；族③ 唯一 fail 系预告案在途（修复门在途）；两新环境缺口（非三族、非代码缺陷）候裁。
+
+| 仓 | R-HY 读数（总/过/败/跳） | 本席逐族归因 |
+| --- | --- | --- |
+| TriCode | **58/57/1/0** | fail 1=FROZEN-BACKUPS 哨兵 6!==7=**族③预告案精确兑现**（§二归因原文，零新因；清零=FSD CORE_VERSION 门窗修后） |
+| TriModel | **273/260/1/12** vs 本机 286/271/0/15 | 件数差 13=E1-E8(8)+W1-W5(5)=R-HY 无 chromium 整 suite skip 不展开案（名级 diff LC_ALL=C 对平，零暗败）；fail 1=proxy 'no-api-key'=**R-HY 无 upstream env key**（同 suite 余 3 件全绿；环境数据缺口，fail 栈全文在 R-HY /tmp/tm-test-full.log 备核） |
+
+- **族①② 生效硬读数（Linux 实弹）**：GATE 族 8 件全 pass（M1 时 ERR_MODULE_NOT_FOUND 5 fail 主体全平）；daemon real-chain poll pass=`TRIRLC_HOME` 三级解析实弹工作；P4-guard linux 分支（ss -tln）pass。
+- **候裁两项（SDE 提请，本席附荐）**：
+  1. R-HY 补 chromium：**荐不补**——UI E2E 覆盖 dev 机已足（e12 门 TRICOMPANY_ENABLE_TRIMODEL_UI_E2E 本地可开），R-HY=部署面非 UI 开发面；记账候 M2 后有跨机 UI 需求另立窗（装后须先过 13 案 Linux chrome 实证，非零成本）。
+  2. 钉测试 key（proxy 'no-api-key' fail）：候 CTO 裁——荐**测试面适配**（本席候选小笔：该案无 key 环境下显式 skip+归因注记，或钉 key 走 SDE 测试环境建设）——荐前者（基座自含优于环境外置依赖，skip 计数透明可对平）。
+- 隔离测试位（/tmp/lg054-rerun）：**荐保留**至族③ CORE_VERSION 修后 R-HY 复验（复用），验毕清理。
+- SDE 同步形态裁量（隔离位零触碰部署位+TRIRLC_HOME 钉现役旧名位）=配方未钉落点处的合理裁量，追认在卷。
+
 ## 使用依据
+
+COO 转办令（三族 owner=STE）+CTO 判据令（对平判据）；deploy-readings.md §二/§十（c91e3772 起读数，现势 5c739faa）；TriModel df72995/TriCode a3893ba/波⑤ 基线 ea2b6c60 卷；探针卷 `D:\tmp\lg054\`；工作区记忆条：命令链断言/manifest 身份验证/活体优先诊断。
+
 
 COO 转办令（三族 owner=STE）+CTO 判据令（对平判据）；deploy-readings.md §二/§十（c91e3772 起读数，现势 5c739faa）；TriModel df72995/TriCode a3893ba/波⑤ 基线 ea2b6c60 卷；探针卷 `D:\tmp\lg054\`；工作区记忆条：命令链断言/manifest 身份验证/活体优先诊断。
 
