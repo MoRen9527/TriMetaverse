@@ -39,3 +39,13 @@
 ## 使用依据
 
 deploy-readings.md（c91e3772）；cto-gate-review-1.md（a03a81e9+勘正 76d50327）；joint-plan.md 问6（ADMIN 写面 token 正身）；dispatch-wave5.md（bc72ea4 验收链）；技术债⑩（CORE-SPLIT 结论单）。
+
+## 追认② 验收附笔（限流落位读数 a96a6ac3 §十三，随到随审，2026-09-26 16:5x）
+
+**追认② 限流候补：验收通过，M1 内核面闭项**。
+
+- 落点勘正正式采认：M1 基础限流=内核层 iptables hashlimit on 443（原追认②「xcaddy 优先」降为 M2 应用级精细面）——活体勘实先行（TriModel src 内 429/rateLimited 系上游 provider 换棒逻辑、无入站限流=应用层排除）方法正当。
+- 规则面核验：lo RETURN 豁免+仅 443 NEW 入链+per-IP 30/min burst 20 超限 DROP+未超限 RETURN——既有 INPUT 零删改（落位前锚=仅 policy 行），最小侵入达成。
+- 持久化+smoke 四断言+RB-02 回滚锚（纯 append 反向零依赖）全在卷——合格。
+- 空转期语义确认：443 未开=规则装载零流量，开位即生效——**443 开位硬前置条件已达成**（门审二单裁③对应项闭）；公网侧实弹限速验证候开位后补测（如实注，接受——空转期不可触发为物理事实）。
+- 开位条件对表状态：①限流到位 ✓（本笔）②443 通道候 CEO——两项齐后 A4 终态+BOD 终态轮成对收官。
