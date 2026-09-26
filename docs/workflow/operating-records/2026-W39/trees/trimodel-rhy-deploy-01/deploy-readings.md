@@ -181,6 +181,20 @@
 - 本席在途唯一附件：CTO 补部读数门审——**已通过**（cto-gate-review-2.md @ 762635dc：四步对表全合/双层制落证/九项+smoke 全绿）；随批并采「机内测 443 须钉 Host」教训记档正面（候与「打包前重勘 HEAD」并批入共用测试纪律）。
 - **SDE 侧 LG-054 在途清零，全收官**（COO 清零笔 2026-09-26 17:3x）；M2 候另单口径不变。
 
+## 十七、R-HY 重跑六步·终态对平读数（STE 基座适配验证；2026-09-26 17:39-17:48，date 现查 17:48:58）
+
+- **执行环境（纯测试面边界守约）**：R-HY **隔离测试位** `/tmp/lg054-rerun/`（本地 clone 部署位两仓+bundle 增量 fetch+checkout）——部署位 HEAD（TriModel bc72ea4/TriCode d20cb6b）、dist、systemd 服务**全程零触碰未 restart**；TRIRLC_HOME=/srv/fleet/TriLC 钉现役旧名位。
+- **配方①同步（三步断言制）**：TriModel tm-ste-df72995.bundle 9416B（df72995=bc72ea4+e12 测笔+STE 适配笔 2 笔增量，勘→打→重勘一致）+TriCode tc-ste-a3893ba.bundle 1029B（1 笔增量）→ R-HY checkout 断言 df72995/a3893ba 双 ✓；TriCode npm build OK（trimodel-cli 产物在位）。
+- **配方②前置断言**：node v22.23.2 ≥21 ✓（node 内部 globbing 路径，无需显式枚举 fallback）。
+- **配方④ TriCode 读数：58 tests / 57 pass / 1 fail / 0 skip**——fail=FROZEN-BACKUPS 哨兵（five-gates.test.ts:148 断言 6!==7，实得 6）=**族③预告案精确命中**（io-kernel.ts L155 备份名毫秒碰撞，STE 适配卷 §二探针双组实锤+如实预告「FSD 动笔前可能偶发再败，败读数归因=本节」）——零意外零新因，候 CTO 裁 FSD 小笔后自愈。
+- **配方③ TriModel 读数：273 tests / 260 pass / 1 fail / 12 skip**（本机同 commit 对照复现 286/271/0/15 ✓）——不平项三层归因全闭环（用例名级两 log diff，LC_ALL=C 对齐）：
+  1. **件数差 13=E1-E8（8）+W1-W5（5）**：R-HY 无 chromium → chrome 系 UI E2E **整 suite skip 不展开案**（R-HY skip 归因文亲证："chromium unavailable — tried TRIMODEL_E2E_CHROMIUM override then .../chrome.exe"）——环境门非缺陷；
+  2. **fail 1=proxy policy window hit**（anthropic-proxy.test.ts:163 断言 `'no-api-key' !== 'ok'`，栈全文在卷 /tmp/tm-test-full.log）：**R-HY 无 upstream env key 环境型**（该案期望 settings 有真 key；本机 dev settings 有、R-HY 裸机无）——同 suite 其余 3 件全 pass，非代码缺陷；
+  3. **3 个环境前提案两机镜像互补**（GET keys default/effectiveModel fallback/routes wired）：本机 repo root 有活体 policy/卡文件→前提缺席→skip；R-HY 隔离位磁盘干净→前提在场→正常 pass——两机各按其环境正确行事。
+- **STE 三族适配 R-HY 实证生效（硬读数）**：M1 时 R-HY 5 fail 主体（policy.gate.e2e 族 ERR_MODULE_NOT_FOUND `/srv/fleet/TriRLC/...`+netstat Windows 格式）**全数平绿**——GATE P2/S5×2/L3+anchor③/L1×3/P3-sg **8 件全 pass**；P4-guard（ss -tln linux 分支）pass；**GATE L3+anchor③「daemon real-chain poll」pass=TRIRLC_HOME 三级解析链 R-HY 实弹工作**（读现役旧名位 key-cache）。
+- **对平结论**：零部署运行时代码缺陷、零适配回归；残差 3 项（chromium 门/无 env key/族③预告）全环境型且逐件归因在卷。判据面：族①② 对平 ✓；族③ 如预告败=自愈候 FSD 小笔；两环境门案（chromium/env key）系 R-HY 裸机属性非适配对象——是否补装 chromium/钉测试 key 候 STE/CTO 定（属测试环境建设，非本单范围）。
+- 隔离位清理候令（/tmp/lg054-rerun+双 bundle 留 R-HY /tmp 供复核，/tmp 重启自清）。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
