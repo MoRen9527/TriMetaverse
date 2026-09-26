@@ -48,6 +48,11 @@ SDE 面执行，与 bc72ea4 补部互不阻塞；fail 原始栈全文回传要�
   ① **R-HY 补装 chromium/钉测试 key：候办挂账不即办**——属测试环境建设投资，当前无跨机 CI 门需求（LG-054 判据已闭）；补装改变机环境面、钉 key 触密钥审批面（不为测试便利在裸机挂 key）。候 M2 排窗与「跨机测试基座 CI 化」一并裁。
   ② **隔离位清理：不派令，/tmp 重启自清**——留位供族③ CORE_VERSION 门开窗时 R-HY 复现环境对照复用；派清理令反增一次跨机动作，零收益。
 
-## 使用依据
+## STE reconciliation 判定采认+B 案批令（读数卷 §六 @ 67c3cb44，2026-09-26 17:5x）
+
+- **测试面对平判定与本席归卷裁定一致**——判据条件达成双面确认，族①② Linux 实弹清零+名级 diff 对平零暗败。
+- **候决 A（chromium）：裁不补**——与 STE 荐一致；STE 附条件「如补须先过 13 案 Linux chrome 实证」入 M2 跨机 CI 化候办账作前置。
+- **候决 B（测试 key）：改裁——批测试面适配（STE 荐 B）**：'no-api-key' 案改无 key skip+归因注记，基座自含可对平（把环境差异编码进测试基座优于环境钉 key/裸机挂 key）；该案与既有「环境前提案镜像互补 skip/pass」同族=无 key 环境正确行事。**STE 即刻动笔**（TriModel 测试域小笔，非 core 零门槛冲突），随卷出读数走门审。
+- **隔离位清理锚点精确化采认**：保留至族③ CORE_VERSION 修后复验毕（比「重启自清」更精确，采纳 STE 口径——届时复验毕再清）。
 
 ste-crossmachine-base-adaptation.md（794c1170 + 定案 §五 8ca237e1）；TriModel df72995；TriCode a3893ba（HEAD 实勘：L286 备份名/CORE_VERSION/README FROZEN）；CORE-SPLIT 条款（TriCode README d20cb6b+纪律册 253ccd9）；wave5-acceptance.md（286/271/0/15 基线锚）。
