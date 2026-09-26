@@ -1,7 +1,8 @@
 # 3333 单点自举悖论·兜底架构方案件（CTO）
 
-- sourceOfTruth: 本件（3333 事故③兜底架构审视；①根因读数②watchdog 实测随事故回执）
-- syncMode: draft（候 BOD 裁）
+- **SUPERSEDED（2026-09-24 CEO 11:45 三裁）**：本件 V1 撤销重出，现行方案=`bottleneck-architecture-plan-v2.md`（L1/L2 撤销、L0 并入预设化、cc-switch 思想吸收重设计）。本件留作裁决链史档。
+- sourceOfTruth: ~~本件~~ → v2 件（3333 事故③兜底架构审视；①根因读数②watchdog 实测随事故回执）
+- syncMode: superseded（原 draft 候 BOD 裁状态终止）
 - lastSyncedAt: 2026-09-22T00:1x+0800 基线（date 本回合链）
 
 ---
