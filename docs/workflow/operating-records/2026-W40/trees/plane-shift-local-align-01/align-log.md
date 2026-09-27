@@ -1,0 +1,14 @@
+- 2026-09-27T17:07:11.190Z align run: ahead=62 behind=1
+- 2026-09-27T17:07:12.696Z merge ok: Merge made by the 'ort' strategy.; ahead 存量保留不推; done
+- 2026-09-27T17:24:53.821Z align error: spawn git ENOENT
+- 2026-09-27T17:24:54.218Z notify http=400
+- 2026-09-27T17:30:04.895Z align error: spawn git ENOENT
+- 2026-09-27T17:30:05.260Z notify http=403
+- 2026-09-27T17:33:16.122Z align error: spawn git ENOENT
+- 2026-09-27T17:33:16.127Z diag: PATH=C:\Windows\System32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\nvm4w\nodejs
+- 2026-09-27T17:33:16.535Z notify http=200
+- 2026-09-27T17:37:00.336Z align error: spawn git ENOENT
+- 2026-09-27T17:37:00.342Z diag: PATH=C:\Windows\System32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\nvm4w\nodejs
+- 2026-09-27T17:37:00.345Z diag: TRILC/TRIMC keys(14): TRILC_CHANNEL_MODE,TRILC_CRON_COMMAND_ALLOWLIST,TRILC_CWD,TRILC_DATA_DIR,TRILC_ENV_FILE,TRILC_INTERNAL_TOKEN,TRILC_PORT,TRILC_WEEKLY_PLANE_ROOT,TRIMC_BASE_URL,TRIMC_INTERNAL_TOKEN,TRIMC_NOTIFY_SEATS_FILE,TRIMC_NOTIFY_SG_TOKEN,TRIMC_NOTIFY_SG_URL,TRIMC_NOTIFY_TARGET_SEAT
+- 2026-09-27T17:37:00.346Z diag: ALLOWLIST=powershell -NoProfile -ExecutionPolicy Bypass -File D:/Code/ai/TriMetaverse/.fade/trimodel-l2-stub.ps1,wscript.exe D:\Code\ai\TriMetaverse\.fade\trimodel-l3-toast.vbs,node D:/Code/ai/TriMetaverse/.fade/plane-shift-local-align.mjs,node D:/Code/ai/TriMetaverse/.fade/tree-node-patrol.mjs
+- 2026-09-27T17:37:00.743Z notify http=200
