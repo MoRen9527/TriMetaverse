@@ -234,6 +234,21 @@
 - **回执边界**：A3 sg 侧=BOD 亲勘（本令原文，本席不越面）；A4 CEO UI 刷新=CEO 端动作。回滚锚=两机 bak-20260927-pre-flash 快照回写（sed 逆向替换同形）。
 - **途中事件两笔如实报备**：①本机 keys 端点全量回显 api_key 明文（dev 形脱敏缺口，既有行为非本次造成；本会话 transcript 已沾一枚本机 dev key 一枚——本机 3333 仅听回环无公网暴露，风险面低，候 CTO 知悉定性；后续读数已改单字段提取）②本机 `python3`=Windows Store stub 假 python（rc=49 无 traceback，早前「解析成功」实为 fallback 分支假象）——本机读数解析已改 node 形。
 
+## 二十一、后令·被沾 dev key 轮换即办（BOD 令 16:30，CTO 三裁第三条执行面，裁定正身=model-fallback-sweep-01/cto-triage-verdict.md @ e54979bd；本席 16:30 +0800 属主勘定毕，08:30Z 现查）
+
+- **①属主勘定（三枚实质沾染，较令文「一枚」扩围，全掩码呈报）**：
+  - **OpenRouter 枚**（len73，head=sk-or-v1-c 尾=2e4）：curl 直出**全量 73 位露**（§二十 途中事件①主体系此枚）。活性勘验 GET openrouter.ai/api/v1/key=**200 属主坐实**：label 对表同枚 ✓，usage=$0.0777 有真实消费，无 limit 无 expires，creator=user_2yMY\*\*\*\*（账号在 CEO 手）。**同枚两处引用**：deepseek 条（**base_url=api.deepseek.com/anthropic 错位死配**——OpenRouter key 打官方端点必 401，史疑配置）+anthropic 条（base_url=openrouter.ai/api=正确落位，消费源）。
+  - **GLM/openai 枚**（len49，head=15a23238）＋**glm 枚**（len49，head=86c08366）：json slice(0,60) 回显=**48/49 位露**——secret 段 16 位露 15 位，差 1 字符可穷举=**实质全量沾染**。两枚均 open.bigmodel.cn（智谱）平台 key（GLM 部署主力面）。
+  - trimetaverse 条=tmv-local 假值，无敏不涉。card 文件 at-rest 全密文（api_key_encrypted，机器指纹域）✓——沾染源唯一=keys GET 解密回显（脱敏缺口本体）。
+- **②轮换路径勘定**：provider 新钥生成均需控制台（服务端 keys 面只可改存不可生成；旧 keys 写面 410 退役，活源=TriMMC 卡条目）→ 走令文第 2 条后半回报 CEO。**落存配方已勘毕**：PUT /v1/config/trimmc-card（ADMIN 枚）D7 合并语义=脏条目 upsert 非整卡回写+服务端加密水合（明文不落盘）——R-HY 面 ADMIN 枚 f68d 在役即落；**本机面堵点勘实**：.env TRIMODEL_ADMIN_TOKEN=**空值**（行在值空）→ 本机活体写面 503 fail-closed，候配（补值+重启活体）或本机 node 调 dist 同指纹加密直写 card（届定时）。
+- **③候 CEO 操作项（经 BOD 转）**：
+  1. OpenRouter 控制台 https://openrouter.ai/settings/keys：生成新 key＋revoke 旧枚（c51\*\*\*\*2e4）；
+  2. 【候裁扩围】智谱控制台 https://open.bigmodel.cn（API Keys 页）：同批轮换两枚（15a2\*\*\*\*/86c0\*\*\*\*）——48/49 露+差 1 可穷举，荐同批办；
+  3. 新钥交付形态荐照 token 先例（600 件直投我落存，全值零会话）；或 CEO 自录 UI「模型信息」表单（R-HY 可即录；本机 ADMIN 面未配置候补）；
+  4. deepseek 条 base_url 错位（OpenRouter key+官方端点）顺手裁归位：a) 保 OpenRouter→base_url 改 openrouter.ai/api；b) 转 DeepSeek 官方→需官方平台 key（platform.deepseek.com）。
+- **④旧钥作废断言（候新钥落存毕执行）**：旧枚打 provider 元数据端点=401 复验（OpenRouter/api/v1/key 同法）。
+- 轮换状态：**属主与路径勘定毕，落存候 CEO 新钥**（本节为中间回执，轮毕补读数）。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
