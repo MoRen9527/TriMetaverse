@@ -198,3 +198,24 @@
   - ed4babe8 docs(workflow): 总表出表更新——LG-040 CTO 侧收口出表（66cf587）/LG-041 转呈批候裁 L0/L1/L2（根因定性件落树）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
 - LG-051 催办段 09-24 12:02+08：截点触达，名册真源 sg 零到料→挂起待料（notify bod 抄 coo 候供），到料即首催
+## 2026-09-26（周六）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @16:20 +08：自上次进度提交 8d720012 后新增 136 条 commit：
+  - c0f7b2f8 docs(lg041): BOD 代收 sg 工作树遗留收口笔——V1 SUPERSEDED 翻笔（CEO 09-24 三裁史档）+v2 思想来源路径正名（TriCompany-host-assets，LG-046 配套迁移）；堵 hook rebase skip（dirty 致 08:14Z skip 在录）
+  - e0468176 docs(task): 快照增强追加项转投——本机 14 worktree 树活性入扫描面（方案半→m-duty-cos/落地半→本机执行席，面归属 BOD 裁定拆分）
+  - 554e2254 docs(urge): LG-041 验收门四件套供件催办——DE 两件（实址diff单+全量读数）+CTO 对表件，随 041 总线 09-25 12:00 截点
+  - 8edde675 docs(urge): BOD 五单勘正衍生三件催办——040 溯源+041 落笔（→m-duty-cto）/046 读数索取（→m-duty-cos），值席拾取即办
+  - b4a079a6 docs(notice): 闸2对表范围扩展 sg 面值席知会件——派工前置对表查同树同文件在办（BOD 跨面直投；NOTIFY 通道 MVP 能力边界另报，P2 扩面候选）
+  - c72e29da docs(wave5): pending 卡挂 12 天 CPO 评估——FREEZE 维持零动作+路由 CEO 候窗：预告过的未完成态非缺陷（checklist L72 明文）；翻 applied=活体写+冻结面归 CEO 测试窗；走查收口盘点挂笔防再挂；pending 无时限引导记产品观察项（冻结面内不动盘）
+  - 68b2d624 docs(wave5): 波⑤ D1 拆派单——范围定性=修复+测（采 FSD 实勘 b91e8340：服务端通道已通断点纯前端两笔）；FSD 修复面四条+STE 回头测面五条+留存卡销项裁+pending 卡观察转 CPO；时序=电池窗毕串行入波
+  - 02c5fd0a docs(wave5): D1 前置实勘报落树——服务端通道已通（0b4ed36 增补件5）断点纯在前端两笔（L1287 零 push/L881-895 PUT 缺 deleted_strategy_ids 行）范围定性材料=修复+测；留存卡「CEO-走查临时」两面+git 全历史均无=B6 留存前提不成立线⑤清理实为空操作候裁销项
+  - 7a6bcee2 docs(battery-gate): 白天窗电池门翻位×2+幽灵参存量修复派工单（BOD 16:01 令，D-15 枢纽留痕）——Seat-Watchdog/TriRLC-Watchdog 单件串行+纪律五条+先例对表第一步+TriRLC 8711 现役纪律
+  - 26234f22 docs(joint-plan): LG-055 笔误勘正笔（BOD 15:57 裁决令）——正身=LG-053，候核句闭合请托作废，部署波候 CEO 排窗按序授号不预授；不溯改 38191181
+  - 4da74567 docs(wave4): 波④ 全闭记号入树——STE 三项独立复验 15:54:35Z 全绿（文件面零残留/PEB 7496 四钉 ABSENT/hash 逐字基线）/候办三项挂账（振荡节流候派/幽灵参机制勘/岗位知识自沉淀）
+  - cb6e79ab docs(joint-plan): 波次表④条勘正注记（BOD 15:5x 裁决令照录）——本地梯达成/R-HY 部署独立部署波候排/LG-053 收口定义同步/LG-055 号候核标注
+  - 128afabf docs(wave4): 波④ 全闭收口件落树——五臂+25/25+事故全账+出窗核验全闭/候办台账增量六施工+四备案/正式启用门禁五条/波⑤ D1 前置实勘预告
+  - 91bbc67e docs(wave4): 终态段落盘——出窗还原五步毕（DRILL 块删/watchdog ps1 修形+复活链形态验证 PASS pid 7496/PEB 进程面零残留 PASS/活体 hash==基线），恢复梯回正身态，候 STE 复验即波④ 全闭
+  - f1f89ee3 docs(task-charter): TASK-TRIMODEL-RHY-DEPLOY-01 铸——TriModel 部署 R-HY 部署波（CEO 16:08 裁决之二「现在部署」立即开窗；候授号 LG-054 核号防撞随 COS 流程；方案正身=joint-plan 问5/6/7 免重审；范围=M1 五锚）
+  - …另有 121 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化

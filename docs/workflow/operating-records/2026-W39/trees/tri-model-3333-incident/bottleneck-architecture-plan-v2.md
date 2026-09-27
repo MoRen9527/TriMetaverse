@@ -4,7 +4,7 @@
 - syncMode: final（CEO 2026-09-24 11:45 三裁落稿；实施归 DE）
 - date: 2026-09-24 11:5x CST
 - 修订缘由: CEO 三裁——L1/L2 撤销（鸡肋成立，cc-switch 覆盖且更优）；L0 保留并入预设化；按 cc-switch 思想吸收导向重设计
-- 思想来源: `TriCompany-copilot-host-assets/vendor/reference/cc-switch/README.md`（吸收件）
+- 思想来源: `TriCompany-host-assets/vendor/reference/cc-switch/README.md`（吸收件）
 
 ## 〇、紧要目标（验收总锚）
 
