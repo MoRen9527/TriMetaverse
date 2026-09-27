@@ -214,6 +214,11 @@
 - **CEO 提示随转**：取件后文件自行管理（阅后可删），浏览器 /ui 登录即用。
 - 生成时点：2026-09-27 15:07:30 +0800（R-HY date 现查）。
 - **加投·现役 API_TOKEN 取件**（BOD 令 15:12，同族安全链）：对象=api-token.env 现役读面 token（**直投不新发**，掩码 len=64 head=3608\*\*\*\*tail=cee7 与 M1 在案一致=零轮换）；R-HY 600 临时件（64B 无尾换行）→scp 字节直投 `%USERPROFILE%\.claude\settings.presets\rhy-api-token.txt` →断言 64B/无 BOM/单行无尾换行/头尾对表 ✓→活性 GET /v1/config/keys=**200** 可用 ✓→临时件 shred -u。时点 15:13:25 +0800（R-HY date）。全值零会话零账面 ✓。
+- **定向修·unit 补 TRIMODEL_ADMIN_TOKEN**（BOD 令 15:22，COS 转投=活体操作审批门授权；根因=BOD 实勘 `GET /v1/config/trimmc-card` 503 "TRIMODEL_ADMIN_TOKEN not configured (fail-closed)"——应用层 unit 缺 env 与 Caddy gate 层 ADMIN 脱节）：
+  - 修法（最小改动面）：**unit 本体零改动**，追加 `TRIMODEL_ADMIN_TOKEN=<新枚>` 进现有 EnvironmentFile `/srv/fleet/trimodel-data/api-token.env`（600 fleet 权限达标，避免 unit 文件 world-readable 泄密面）；值机内直取 tokens.list 行 3（对位断言 f68d\*\*\*\*a775 与 CEO 手上枚同枚 ✓）零回显；改前备份锚 `/etc/systemd/system/trimodel.service.bak-20260927-pre-adminenv`。
+  - 执行：15:26:00（R-HY date）追加+daemon-reload+restart → active pid=1594078。
+  - **复验五读数**：trimmc-card 带 f68d 枚=**200** ✓（BOD 复验锚）/ 无 token=**401**（fail-closed 从 503"未配置"升级 401"拒绝"=应用层 ADMIN 门挂上语义正身）/ health=200 ✓ / PUT 无 token=401（Caddy gate 零回归）✓ / NRestarts=0 稳态 ✓。
+  - v1 族 404 清单（effective/presets/healthz/fallback-info）留 BOD 跨机对照 UI 源码逐端点复验（不预判照令）。
 
 ## 使用依据
 
