@@ -40,6 +40,20 @@
   5. SOP「拉空」分支补录（CTO 注记③）：翻周迟超时本机拉空→下轮或 POST /{id}/run 手动补触发自愈，并入 weekly-plane-shift-local-align-sop.md diverged 策略段；
   6. 本卷收口（§一.4 jobA 彩排读数回填）+A4 通知通道读数+回执。
 
+## 五、复产续办读数（CEO 03:05 复产令·BOD 03:05:33 转；date 现查 2026-09-28T03:12:48+0800 星期一）
+
+**恢复前现场态验证（BOD 口径②）** ✓：daemon 32136 在役连续（uptime 5926s，停工期零中断）、4 job 一致（patrol 26 轮全 ok）、PATH guard v2.1 落盘在位、mc_link 已回 connected——与停工读数一致。**意外正向态：父 cmd C1（30992）已自然消亡**（复活机制前置解除）。
+
+**六步锚逐项**：
+1. **stop 32136** ✓：graceful+SIGTERM，端口清空，父 cmd 无残留（无复活复发，C1 消亡后机制失效——旁证根因判定）；
+2. **重启** ✓：Start-Process 现 .cmd（v2.1），新 daemon **pid 34396**，healthy after 1s（无竞争者，真 boot）；
+3. **PEB 验 env** ✓：read-env.ps1 直读 34396——`PATH=...;C:\nvm4w\nodejs;C:\Program Files\Git\cmd`（**v2.1 生效铁证**）；
+4. **jobA 重彩排**：runs 4→6，**spawn git ENOENT 已修复实证**（diag PATH 带 Git\cmd、git 真实执行至网络层）；当前 error=`git fetch` 网络失败（`Recv failure: Connection was reset`，HTTP/1.1 兜底亦 443 不通）——**本机→GitHub 直连凌晨不可达=环境态非部署缺陷**；异常安全网两轮实证工作（align-log 留痕+值班席 notify http=200）；jobA 核心逻辑（fetch→behind 分支→merge/快过）已在此前首跑真 merge 路径实证（merge a9026528，TriMLC-Scheduler 身份可审计）；
+5. **SOP 拉空分支补录** ✓（CTO 注记③）：§二增第 6 条（拉空=合法快速通过+自愈二路：下轮周日自动或 POST /{id}/run 手动补触发）+§三执行体现行态刷新（候门审→已落位+job id+运行期依赖）；
+6. **收口** ✓：本段+SOP 随批 commit；jobB 彩排 ok（fresh daemon sanity）；全量对账终态=4 jobs（l2-scan 1024 ok / l3-remind 87 ok / align last=error（网络态）/ patrol 28 ok）、healthz ok=true cron.degraded=false mc_link=connected。
+
+**遗留观-察项（不阻塞落位）**：①jobA fetch 网络态候自愈——周日 23:10 生产触发时若网络可用即正常，连续失败有 notify 安全网；②POST /run 响应偶发空体（http=000，触发实际成功，runCount+log 侧证）——候观察，非阻塞；③diag 自证段保留至下次正常彩排后删除。
+
 ## 使用依据
 
 CTO 联合技术门门审笔 cto-gate-review.md@16327ad7（配方+三注记）；TriMLC dist/app.js/timer.js/env.js+TriMMC src/notify/routes.ts 实勘；PEB 直读 D:/tmp/lg057/read-env.ps1；align-log.md 全程留痕；launcher 备份双份（0108/012814）。
