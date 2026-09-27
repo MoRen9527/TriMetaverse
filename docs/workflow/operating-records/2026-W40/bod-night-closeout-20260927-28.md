@@ -31,7 +31,7 @@
 
 ## 四、催办机制勘验＋两单机制定稿
 
-1. **双向实勘**：sg duty-urge-patrol **活在跑**（fleet crontab 全家桶：催办 2h/晨巡/夜巡 30min/notify-poller 1min/watchdog 5min/bare-fetch+worktree-ff+reverse-push 1h；00:00 周期 urged 1）但**结构性巡不到回报断链**（数据源=周平面挂账文件，非消息链）；m-cos 侧三层皆无（会话 cron 无/daemon cron.db 0 行/计划任务非催办）——与 m-cos 独立读数互证。
+1. **双向实勘**：sg duty-urge-patrol **活在跑**（fleet crontab 全家桶：催办 2h/晨巡/夜巡 30min/notify-poller 1min/watchdog 5min/bare-fetch+worktree-ff+reverse-push 1h；00:00 周期 urged 1）但**结构性巡不到回报断链**（数据源=周平面挂账文件，非消息链）；m-cos 侧**催办类三层皆无**（会话 cron 无/计划任务非催办/daemon 层见勘正注）。
 2. **LG-056 流转链勘验（CEO 判「断链」反转汇报）**：23:52 铸→23:54 COS 流转→23:56 COO 拆派（9a09f312）→00:00 SDE 回报（86a17e99）→00:00 汇 COS（86c26e1b）——**4 分钟全通无断链**，回执 id 全在案；「貌似没起作用」根因=**过程对 CEO 面不可见**（无节点状态可视件），非链断。
 3. **LG-057 铸（CEO 00:34 定稿）**：树节点收口心跳+5 分钟超时催办（8c242679）——每 T 点勘「是否完成+完成是否超 5 分钟未回报」；超时催后继责任席；**各节点强制落收口件**（时点+回执 id+done）=故障恢复读树续办+天然审计链；巡检器搭 LG-056 执行体车（周一三候选读数后落位）。
 4. **树状态账归 COS 统一维护（CEO 口径，已追发 COS）**：COS 记账人=催办人同一人；技术件（acceptance/读数）执行席落、COS 只登记指针——账货分家；COS 不可用时 BOD/值席代记（明注身份）事后补核。
@@ -66,3 +66,11 @@
 - 今晚 BOD 面事件线六段如上；裁定链 CEO 全令在卷（时间线各段内嵌）。
 - 跨席回执：LG-056/057 授号成立拆派毕（COS）；COO 勘验三答（迁移/断链/催办面）；SDE 勘验三答+勘正采纳（b0ff1c77）；COS 定时催办三层「无」回报+watcher 对表（已勘定 TriMMC 内建调度器）。
 - 技术读数勿重录：§二十七（主仓 4febf9fc）+M2 候修清单（46d857b5）为准，台账挂指针即可。
+
+## 八、勘正补记（2026-09-28 00:59）
+
+- **COS 勘正采纳+本席独立复核坐实**：m-cos 00:12 前报「TriMLC 8713 daemon cron.db 0 行」系**数据目录勘错**（误读 `%LOCALAPPDATA%\trilc\cron.db`，实际运行以 channel 配置覆盖用 `%LOCALAPPDATA%\trilc-channel\cron.db`）。BOD 亲验：trilc-channel\cron.db **cron_jobs=2 在役**（trimodel-l2-scan 每 120s＋trimodel-l3-remind 每 30min toast 提醒，均 enabled），旧目录 trilc\cron.db 确 0 行——与 SDE jobCount=2 读数互证。
+- **结论分层修订**：①「daemon 层无任何在册定时任务」**作废**（8713 在役 2 job）；②「无挂账任务催办机制」**仍成立**（l2-scan/l3-remind 系 TriModel 层级扫描+toast 提醒，无挂账清单挂载、无到期判断，非任务催办类）——CEO 问询口径：挂账催办面=无；广义含提醒类=有一枚 30min 周期 toast。
+- 对 CEO 的结论（LG-057 立论）不受影响：本机无「回报断链巡检/挂账催办」机制，恰证 LG-057 催办巡检器必要性。
+- 教训（COS 已录，本席同犯）：**目录身份未验先断言数据面**——manifest 身份验证教训同族再实证（本席复核时沿用前报路径未验目录身份，勘正后亲验才坐实）。
+- §四.1 表述已同步勘正（「m-cos 侧催办类三层皆无」口径）。
