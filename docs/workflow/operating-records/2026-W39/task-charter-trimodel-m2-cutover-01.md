@@ -37,5 +37,5 @@
 1. **sg 改指步骤按实况重定**：sg TriMMC env 无 `TRIMODEL_API_URL`，实走 3334→3333 proxy 链——改指前补勘 sg 接入形态定改法（原始 M2 前置假设有误）；
 2. **跨机配置域核验**：card 加密域锚四元组（hostname:username:platform:arch）跨机/跨用户域互解不开（R-HY 治愈案已证）——sg 侧 card 建立须 sg 机内 API PUT 机内加密，禁跨机复制 card；
 3. **proxy 3334 常驻形态待定**：现 systemd unit（trimodel-proxy.service）无 `EnvironmentFile=`，环境注入形态未决——与候修 5② dotenv 修法联动裁；
-4. **R-HY 钟漂观察项**：疑快 6m22s（2026-09-27 勘验时点读数），观察周时钟敏感读数前校；
+4. **~~R-HY 钟漂观察项~~（2026-09-28 01:0x BOD 亲勘撤销）**：疑快 6m22s 读数系 SDE 落款时戳非现查所致序列矛盾（收件早于落款三连），非 R-HY 钟漂——BOD 亲勘 chronyc tracking 微秒级健康+与本机秒级一致坐实；遗留真问题=SDE 报时纪律（落款必现查 date），转 COO/SDE 对表；
 5. **sg TriModel 断链三合一**（2026-09-27 23:2x 勘验；CEO 23:42 裁：M2 执行窗前必修）：①`GLM_API_KEY` env **空值从未配**（sg `/srv/fleet/TriModel/.env` 9/11 建档起即空，上游调用必拒 `no-api-key`）；②dotenv dist 态路径缺陷（`config.ts` L10-11 候选序只探 `dist/.env` 与 `/srv/fleet/.env`，`TriModel/.env` 永不可达）；③card 正身文件缺失（默认模型路由无卡可读）。**关联更正**：当晚 21:03-21:06 sg 面消费验证存在路由层假绿成分（rewrite 日志真、上游层从未通——与 86c0「空 key 也回 401」同族）。修复路径已勘明=机内 PUT card 零重启（键值候供；重启路堵=fleet 无免密 sudo）。
