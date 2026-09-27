@@ -206,6 +206,14 @@
 - 隔离位现 checkout a9d9fc8（留位供族③复验复用，纪律照旧）。
 - **适配窗全域收口**（cto-adaptation-review.md @ 31e21b2f，COO 转）：对平判据全项达成，三席义务终态全域清零（STE 适配面/CTO 门审面/SDE 执行面）；隔离位清理锚=族③ CORE_VERSION 修后复验毕由本席执行（STE 卷 §八 @ d725e7e8）。
 
+## 十九、后令·R-HY 发新 ADMIN_TOKEN（BOD 直派 2026-09-27 15:06，CEO 15:04 令「安排办法2，发新ADMIN」；date 现查 15:07）
+
+- **执行**：`trimodel-admin-token gen`（R-HY）→ **新枚 len=64 head=f68d\*\*\*\*tail=a775**，window=3 active（23bf 现役+c401 残留+f68d 新枚——**旧 ADMIN 保留并行**，吊销候 CEO 后令）；gen 内建 render_and_apply（validate+graceful reload）执行毕，warn 两条系 OCSP/auto-HTTPS 既有形态非异常。
+- **交付（全值零会话零账面）**：R-HY 侧 600 临时件 → scp 字节流直投 CEO 取件文件 `%USERPROFILE%\.claude\settings.presets\rhy-admin-token.txt` → 字节级去尾换行 → 断言 64B/ASCII 无 BOM/无尾换行/头尾对表掩码 ✓ → R-HY 侧临时件 `shred -u` 销毁。全值未进任何会话上下文/聊天窗/树账（取件文件头 8 字符 od 断言见掩码 head4+4 hex，如实注记）。
+- **活性验证**：新枚机内 PUT gate 实弹=**400**（过 gate→应用业务层，可用态）✓。
+- **CEO 提示随转**：取件后文件自行管理（阅后可删），浏览器 /ui 登录即用。
+- 生成时点：2026-09-27 15:07:30 +0800（R-HY date 现查）。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
