@@ -272,8 +272,23 @@
 - **条目构成对表（防 UI 达阵数错）**：BOD「现 3 条」系 keys 派生面（anthropic env+glm+deepseek）；card 条目层两面各 2→3（glm-5.3/glm-5.3-flash/deepseek-flash）——**anthropic 条在 env 面不在 card**（R-HY）/本机 anthropic 候裁①在途——CEO UI 模型信息区源=card 条目，R-HY 刷新预期见 **3 条**（glm-5.3/glm-5.3-flash/deepseek-flash），加 keys 面 anthropic 的「模型集」勾选列表合成视角或显 4——A3 达阵读数候 CEO 端刷新回传。
 - 临时件清场：两面 shred/rm 全清 ✓（card-dump/g-put/g-resp/g1-key）。
 
+## 二十四、后令·flash 窗规则挂链+真消费实证（BOD 令 20:54 收件，CEO 20:52 UI 新增 flash 窗规则未进生效面；本席 21:07 +0800 收口，13:07Z 现查）
+
+- **形态差异实勘（令面第 2 条预设 vs 实况，候报）**：CEO UI 已自毕「建策略+激活」——card v4 三实体勘实：新策略 st_mujth2j65nch「测试时段切换」（20:50:42 建）+新规则 rule_mujtfmwuzuar「测试」（time 型三窗：20:55-21:05→e-glm-flash-anthropic／21:06-21:10→e-deepseek-anthropic／21:11-22:00→e-glm-flash-anthropic，CEO 定义原样未动）+active_strategy_id 已=新策略。**真缺环=生效面投影未刷新**：policies/local.json mtime 16:06 旧投影（老策略三窗）——local.json 系 card 派生投影（schedule id 形态 `strategy:<pid>:<rid>:<wi>`），非策略真源。
+- **挂链操作**：POST /v1/config/trimmc-card/apply 200（「应用到本机」正统端点 routes.ts L146，ADMIN 门 Bearer）——服务端派生投影+savePolicyForMachine 落盘+card.default_model 同步一条龙；applied={strategy_id:st_mujth2j65nch, strategy_name:测试时段切换, schedules:3, default_model:null}。守卫 ✓：apply 零实体删改（活动策略/规则/条目原样），只写投影+default_model 派生缓存。
+- **回滚锚**：R-HY `/srv/fleet/trimodel-data/bak-apply-20260927T125946Z/`（local.json 1075B+trimmc-card.json 3900B，apply 前现势快照）；回滚=还原双件。
+- **时区校验 ✓（形态注记）**：规则实体本身无 timezone 字段（v4 schema）；投影派生层服务端硬编码 Asia/Shanghai（api/trimmc-card.ts L269 源锚）——投影三窗 tz 全=Asia/Shanghai 读数在卷。
+- **读数（令面第 5 条）**：GET /v1/config/policy → effective={model:GLM-5.3-Flash, matched_schedule_id:strategy:st_mujth2j65nch:rule_mujtfmwuzuar:0, source:policy}；投影三窗全在位（flash/deepseek/flash 各带窗+tz）；评估链=每次 readFileSync 热读（policy.ts loadPolicy 无进程缓存）→投影落盘即生效，零重启。
+- **真消费达阵 ✓（令面第 6 条，21:03:33 在窗 0 内）**：临时拉起 TriModel proxy 面（127.0.0.1:3334，**fleet 身份**）→ POST /v1/messages → **200 真响应 model=GLM-5.3-Flash**（智谱真响应 id msg_20260927210331…，usage 14+8 最小消费）+rewrite 日志一字定音：`rewrite claude-3-5-sonnet-20241022 -> GLM-5.3-Flash (schedule=strategy:st_mujth2j65nch:rule_mujtfmwuzuar:0, upstream=glm-anthropic)`——matched 三处同源一致（config 面 GET policy／proxy health／rewrite 日志）。teardown 收净（3334 关闭断言+临时件全清）。
+- **新发现候报三件**：
+  - **①R-HY proxy 路由面未随 unit 部署**：trimodel unit 只拉 config 面（ExecStart=dist/src/server.js→3333）；proxy 面（3334，TriModel 部署位组件）dist 在位但无常驻——本次临时拉起测毕收净。M2 daemon 改指后路由消费形态（daemon 侧拉取自路由 vs R-HY proxy 面常驻）候 CTO 裁。
+  - **②card 加密域锚含 username（跨用户域不匹配——§二十二 跨机域机制的同根扩展）**：security/key-encryptor.ts L27 指纹四元组=hostname:username:platform:arch——root 身份手拉 proxy 报 undecryptable（config 面 fleet 身份能解），以 fleet 身份（su - fleet）拉起即解。影响面：任何非 fleet 身份进程读 card 密文全堵（含排障场景）。候 CTO 裁（部署纪律入册「card 密文面进程须 fleet 身份」vs 域锚收敛）。
+  - **③apply 副作用如实呈报**：card.default_model 现=null（新策略无 default 规则，派生函数固有语义 L301）——窗外回落语义从 card-default(GLM-5.3) 变 env-default 链，系 CEO 测试策略定义的忠实投影非异常；规则窗间 1 分钟空洞两处（21:05-21:06／21:10-21:11，CEO 窗定义原样），空洞时刻同走 env-default 回落（proxy 面 env 无 GLM/DEEPSEEK 枚会报 not configured，daemon 消费面不受影响——走 daemon 自己 key-cache）。
+- 临时件清场：R-HY /tmp/tm-consume.sh、/tmp/tm-proxy-test*.log、/tmp/tm-cons.json 全删 ✓；proxy 进程收净 ✓。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
 - 前置勘验件：同目录 predeploy-survey-readings.md（基座/通路/技术债⑩/部署源裁定）
 - R-HY 实勘实操作批次：16:29-16:47（SSH 全程留痕+journal/systemd/ss 读数在卷）；本机对照实验（worktree 1972d83 已清理）
+- §二十四源锚：BOD flash 窗挂链令（2026-09-27 20:54 经 COO）；TriModel src：api/trimmc-card.ts（handleApplyStrategy L230-323／窗级派生 L258-274／时区硬编码 L269／requireAdmin L21）、api/routes.ts L146（apply 路由）、api/policy.ts L31-42（GET policy effective）、policy.ts（loadPolicy L325 热读／effectiveModel L361 评估序）、security/key-encryptor.ts L25-40（指纹四元组域锚）、proxy-server.ts（L25-29 默认 127.0.0.1:3334／L85 路由／L152 config 面 untouched）；R-HY 实勘批次 20:57-21:04（card 三实体/apply/消费全链 SSH 留痕）
