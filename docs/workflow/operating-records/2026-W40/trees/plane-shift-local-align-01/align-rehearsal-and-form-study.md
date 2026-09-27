@@ -39,6 +39,14 @@
 - 候选落点：周平面迁移执行 SOP 现行正身（R-HY 迁移器配套文档，真源位候周一实勘——记忆条指针=周平面迁移执行点=河源 TriRMC cron，SOP 文档落点随勘回填任务书）；
 - 路由指针更新面：TriMetaverse CLAUDE.md「Weekly Operating Records」节+MEMORY.md 周平面迁移执行点条（增补「本机对齐=TriMLC watcher 周日分支」语义）——周一与形态报告同批回报。
 
+## 五、载体归属勘正（BOD 00:1x 勘正令，2026-09-28T00:24+0800 修正落笔）
+
+- **勘正（BOD 已与 m-cos 对表闭合）**：daily-progress-watcher 真身=**sg TriMMC（8710）内建调度器**（commit author 指纹 trimc-scheduler@fleet.local＋配置面=/var/lib/trimc/cron/jobs.json，TRIMC_CONFIG_DIR 域）——**非本机 TriMLC 8713**（其 cron.db 系另一套 SQLite 调度面，0 行，与 watcher 无关）。本件 §三「TriMLC watcher 23:10 cron 铁证」表述作废，以本节为准。
+- **推断错误根源自认**：commit author「TriMC Scheduler」名字联想直接映射本机 TriMLC，未实勘调度面归属（jobs 文件所在机/daemon 归属）——教训记档：**author 指纹≠本机载体，调度面归属须实勘配置文件落点**。
+- **选 b 论文修订（周一正式报告按此重写）**：watcher 在 sg 管 sg 树 commit+push（origin 生产端）；本机对齐=消费端 fetch+merge——**两端分离**，本机侧须自有执行体。挂载点候选重勘：①本机 TriMLC 8713 cron（SQLite 调度面在册 0 行，挂 job 启用可行性候勘）②本机 TriRLC 8711 cron ③Windows schtasks（D-29 无窗纪律约束，荐度降）。时窗论证重落：本机执行体调度点仍以周日 23:1x 为宜（迁移 23:00 后）。
+- sg TriMMC watcher 角色重定位：维持 sg 树生产端现状；本机对齐不依赖它（可选冗余：watcher 失败通知面复用，候周一勘）。
+- 形态选 b 结论不变（本机管线挂一步仍是最低成本路径），**技术论证载体修正后提请 CTO 技术门**。
+
 ## 使用依据
 
 任务书正身 87d1b44b（§一范围/§二验收锚/§三边界）；COO 拆派令（2026-09-27T15:56Z 转达）；背景实证=BOD 23:49 merge 8e2c2841+迁移 ae5f83dc（R-HY 23:00:11）；watcher 先例 commit 895bd692（TriMC Scheduler author/23:10 整点）；git fetch/merge 彩排读数（15:59Z 现场执行）；工作区记忆条：收口 commit 卫生/多 agent git index 卫生/命令链断言。
