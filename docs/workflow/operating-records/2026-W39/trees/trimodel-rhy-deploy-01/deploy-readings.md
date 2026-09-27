@@ -263,6 +263,15 @@
 - 模型 id 对表（CEO 裁③）：两面 deepseek 条 model=deepseek-flash 保持现条目形制 ✓。
 - 临时件清场：R-HY /tmp/lg054-keys shred+目录删 ✓；本机 D:/tmp 临时件已删 ✓；CEO 取件四件未动（候 BOD/CEO 定）。
 
+## 二十三、后令·两面 card 增配 GLM-5.3-Flash 条目（BOD 令 20:42，CEO 20:38 令「应该增加 glm-5.3-flash」；本席 20:44 +0800 收口，12:43Z 现查）
+
+- **配方变更（钥源）**：CEO 取件四件已被阅后清空（settings.presets 20:18 目录更新，先例内）→ 钥不外求——**各面机内自取现役 glm 枚明文**（GET trimmc-card 响应顶层 entries_decrypted 字段带解密值（api/trimmc-card.ts L2/L18 在案形态），提取 e-glm-anthropic.api_key len49 验 ✓）→ 同机 PUT——全程零回显零新增钥零出机。
+- **R-HY 面**：PUT 200（单条目 upsert e-glm-flash-anthropic：provider=glm/model=GLM-5.3-Flash（目录 id 原形白名单内）/base_url 照抄 glm 条/钥=rlc 枚）→ A2 条目数 2→3+card 200 ✓。
+- **本机面**：PUT 200（同形，钥=rmc 枚）→ A2 条目数 2→3+card 200 ✓。
+- **A1 活性断言两面全绿（真消费）**：x-api-key 形 POST open.bigmodel.cn/api/anthropic/v1/messages，model=GLM-5.3-Flash，max_tokens=1——两面各 200 真响应（msg_\* 回显 model=GLM-5.3-Flash，thinking 面输出，stop=max_tokens，13+1 token 最小消费）——**智谱平台真 id 有效坐实，BOD 兜底条款（模型不存在候 CEO 勘）不触发**。
+- **条目构成对表（防 UI 达阵数错）**：BOD「现 3 条」系 keys 派生面（anthropic env+glm+deepseek）；card 条目层两面各 2→3（glm-5.3/glm-5.3-flash/deepseek-flash）——**anthropic 条在 env 面不在 card**（R-HY）/本机 anthropic 候裁①在途——CEO UI 模型信息区源=card 条目，R-HY 刷新预期见 **3 条**（glm-5.3/glm-5.3-flash/deepseek-flash），加 keys 面 anthropic 的「模型集」勾选列表合成视角或显 4——A3 达阵读数候 CEO 端刷新回传。
+- 临时件清场：两面 shred/rm 全清 ✓（card-dump/g-put/g-resp/g1-key）。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
