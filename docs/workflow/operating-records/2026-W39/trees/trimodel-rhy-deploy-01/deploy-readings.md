@@ -213,6 +213,7 @@
 - **活性验证**：新枚机内 PUT gate 实弹=**400**（过 gate→应用业务层，可用态）✓。
 - **CEO 提示随转**：取件后文件自行管理（阅后可删），浏览器 /ui 登录即用。
 - 生成时点：2026-09-27 15:07:30 +0800（R-HY date 现查）。
+- **加投·现役 API_TOKEN 取件**（BOD 令 15:12，同族安全链）：对象=api-token.env 现役读面 token（**直投不新发**，掩码 len=64 head=3608\*\*\*\*tail=cee7 与 M1 在案一致=零轮换）；R-HY 600 临时件（64B 无尾换行）→scp 字节直投 `%USERPROFILE%\.claude\settings.presets\rhy-api-token.txt` →断言 64B/无 BOM/单行无尾换行/头尾对表 ✓→活性 GET /v1/config/keys=**200** 可用 ✓→临时件 shred -u。时点 15:13:25 +0800（R-HY date）。全值零会话零账面 ✓。
 
 ## 使用依据
 
