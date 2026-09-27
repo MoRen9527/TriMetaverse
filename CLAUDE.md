@@ -102,6 +102,7 @@ When source and published copies conflict, source-side wins. When frozen source 
 ## Weekly Operating Records
 
 → COS 面（operating-records 收口域）：`docs/workflow/operating-records/<current-week>/`（LG-028 迁出，路由指针）
+→ 周平面迁移·本机主仓对齐 SOP（SDE 面）：`docs/workflow/weekly-plane-shift-local-align-sop.md`（LG-056 A3；执行体=TriMLC 8713 cron 候落位，落位前过渡人工段）
 
 ## Common Commands
 
