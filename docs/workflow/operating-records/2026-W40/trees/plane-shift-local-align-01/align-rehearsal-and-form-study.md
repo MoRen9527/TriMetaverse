@@ -47,6 +47,28 @@
 - sg TriMMC watcher 角色重定位：维持 sg 树生产端现状；本机对齐不依赖它（可选冗余：watcher 失败通知面复用，候周一勘）。
 - 形态选 b 结论不变（本机管线挂一步仍是最低成本路径），**技术论证载体修正后提请 CTO 技术门**。
 
+## 六、本机执行体三候选实勘读数（周一形态报告底稿，2026-09-28T01:05+0800 现勘）
+
+**候选① TriMLC 8713 cron——荐定（读数最硬）**：
+- 活体：`GET /healthz`＝ok，uptime 118392s（~32.9h），**cron.enabled=true、jobCount=2、degraded=false、consecutiveFailures=0**——在役生产调度器非空转面；
+- 在役 2 job 实读（`GET /internal/v1/cron/jobs` 200）：`trimodel-l2-scan`（every 120s，runCount=996，lastRunStatus=ok）＋`trimodel-l3-remind`（every 30min，runCount=84，ok）——**每 2 分钟级在役实证**；
+- API 全族在册：POST/GET/DELETE `/internal/v1/cron/jobs`＋POST `/{id}/run`（手动触发，A2/A4 彩排利器）＋GET `/internal/v1/cron/log`；
+- **schedule 原生支持 cron 表达式＋时区**：`{kind:"cron", expr, tz}`（types.ts L12）；解析器=croner **6-field**（秒 分 时 日 月 周，scheduler.ts L29）——周日 23:10＝`0 10 23 * * 0`＋`tz:"Asia/Shanghai"` 直配；
+- 认证：X-Internal-Token（TRILC_INTERNAL_TOKEN，launcher `trimlc-daemon-channel.cmd` 自持 env；HKCU 注册表值与运行时不一致——D-03 env 快照活例，真值以 launcher 为准）；
+- **命令白名单门（P0-3，唯一落位门槛）**：POST 建 command job 须命令全串精确等值命中 `TRILC_CRON_COMMAND_ALLOWLIST`（逗号分隔精确匹配，app.ts L239-246）；现值＝两在役 job 全串（launcher cmd 内）；CLI `trilc cron add` 走同一 HTTP 端点（cli.ts L837）**非旁路**；
+- 部署配方（四步）：①launcher cmd 白名单追加 align 命令全串→②按 D-03 纪律重启 daemon（stop→.cmd 拉起，重读白名单）→③POST 建 job（cron 表达式＋tz）→④GET 对账＋`/{id}/run` 手动彩排；
+- **通知通道现成**：TRIMC_NOTIFY_SG_URL 已在该 daemon env（LG-036 通道）——A4 冲突通知路径零新建；
+- 附带勘正：先前「cron.db 0 行」误读根因＝勘错数据目录——channel daemon `TRILC_DATA_DIR=%LOCALAPPDATA%\trilc-channel`（非默认 `%LOCALAPPDATA%\trilc`，后者系 8711 TriRLC 闲置面）。
+
+**候选② TriRLC 8711 cron——可行但荐度降**：
+- 活体：ok，uptime 863831s（~10d），cron.enabled=true、jobCount=0（空转面，零先例）；HKCU token 直通（200）；
+- 同款 P0-3 白名单门实测：POST command job→**403 command_not_allowed**（其启动链无 allowlist env）——落位须先给 8711 启动链注入 allowlist＋重启，改动量≥候选①；
+- 面语义：8711=TriRLC=R 面本地域 daemon（双控制器端口定性在案）——M 面本机对齐挂 R 面 daemon 跨面语义不顺。
+
+**候选③ Windows schtasks——维持荐度降**：D-29 无窗纪律约束（VBS 包装）＋零 notify 集成＋无 cron 表达式面；仅作两 daemon 均不可用时候补。
+
+**合流点（LG-057 巡检器）**：同走候选①——巡检 job（如 every 60s）读各在途树 node-status.jsonl＋时戳比对→超时 notify（§四规则）；与对齐 job 共享白名单条目与重启窗，一次门审两件落位。
+
 ## 使用依据
 
 任务书正身 87d1b44b（§一范围/§二验收锚/§三边界）；COO 拆派令（2026-09-27T15:56Z 转达）；背景实证=BOD 23:49 merge 8e2c2841+迁移 ae5f83dc（R-HY 23:00:11）；watcher 先例 commit 895bd692（TriMC Scheduler author/23:10 整点）；git fetch/merge 彩排读数（15:59Z 现场执行）；工作区记忆条：收口 commit 卫生/多 agent git index 卫生/命令链断言。
