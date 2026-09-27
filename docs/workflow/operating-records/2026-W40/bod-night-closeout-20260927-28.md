@@ -90,3 +90,11 @@
 - **手头件已 commit**：0ce02d8f（落位读数卷+403 幻影根因破案：cmd 父进程驻留+子进程旧字节偏移复活 boot 行——D-03 增补候选「daemon stop 后须验父 cmd 链消亡」候补）。
 - **恢复点锚**：deploy-record-lg056-lg057.md §四六步锚（stop 32136 验父 cmd 消亡→重启→PEB 验 env→jobA 重彩排→SOP 拉空分支补录→收口回执）——来电/复产后读树续办。
 - jobA 待重启生效一项**跨夜挂起**：周二前须完成（10-02 候修窗内），候令恢复即续。
+
+## 十一、LG-056 复产收口+BOD 验收（CEO 03:05 复产令回执 747355a8；SDE 03:13 收口回执；BOD 独立复核 03:14）
+
+- **SDE 六步锚全闭**（commit 1c8505fd 未推）：恢复前验态 ✓（32136 零中断 5926s/4 job 一致/父 cmd 消亡）→stop ✓→重启新 pid 34396 ✓→PEB 铁证 env PATH 含 Git\cmd（v2.1 生效）✓→jobA 重彩排：spawn git ENOENT **修复实证**（git 真实执行至网络层；残余 error=git fetch 凌晨网络不可达=环境态非部署缺陷，异常安全网两轮实证 align-log 留痕+值班席 notify 200）→SOP 拉空分支补录+§三执行体现行态 ✓→收口 ✓。
+- **BOD 独立复核（03:14 亲验，禁转抄）**：healthz `ok=true, jobCount=4, degraded=false, consecutiveFailures=0, mc_link=connected` ✓；cron.db 4 jobs——plane-shift-local-align(6)/tree-node-patrol(**32**，SDE 汇报时 28，4 分钟 +4=每 60s 巡检在役铁证)/trimodel-l2-scan(1026)/trimodel-l3-remind(87)；pid **34396** LISTENING 8713 ✓。
+- **验收判定**：**A2（diverged 彩排）/A3（SOP 落笔）/A4（冲突即停+值班席通知路径）闭合**——LG-056 落位宣告成立；**A1（10-04 迁移后无人工干预对齐）留生产触发自然终验**，不销账挂候验。LG-057 巡检器（tree-node-patrol）同窗落位在役。
+- 遗留观察三项（不阻塞，卷 §五）：fetch 网络态候自愈／POST /run 偶发空响应（触发实际成功）／diag 自证段候删。
+- 挂账更新：SDE「候验收销账」→BOD 判**阶段验收过、A1 终验后销账**（10-04 后）。
