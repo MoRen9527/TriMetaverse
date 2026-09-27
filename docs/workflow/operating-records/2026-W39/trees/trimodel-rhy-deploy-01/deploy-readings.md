@@ -249,6 +249,20 @@
 - **④旧钥作废断言（候新钥落存毕执行）**：旧枚打 provider 元数据端点=401 复验（OpenRouter/api/v1/key 同法）。
 - 轮换状态：**属主与路径勘定毕，落存候 CEO 新钥**（本节为中间回执，轮毕补读数）。
 
+## 二十二、后令·四枚新钥落存+旧三枚作废（BOD 令 19:52，CEO 四裁已供钥；本席 20:06 +0800 收口，12:06Z 现查）
+
+- **取件勘验**：四件 600 链在位（openrouter 73B/glm-tmv-rlc 49B/glm-tmv-rmc 49B/deepseek-tmv-rlc 35B，全单行无尾换行无 BOM，头尾掩码对表 BOD 读数 ✓；首轮 grep 词过滤误报缺失已勘正）。
+- **A1 新枚活性四枚全绿**：OpenRouter 新枚元数据 200（label …004 对表 ✓，limit=$3 CEO 设防，usage=0 干净）/glm-rlc 200/glm-rmc 200（bigmodel v4/models）/deepseek 官方枚 200（api.deepseek.com/models）。
+- **R-HY 面落存（全绿）**：PUT trimmc-card 200（D7 upsert 两枚：e-glm-anthropic=rlc 枚+e-deepseek-anthropic=官方枚，服务端水合加密落盘）→ api-token.env 备份锚（bak-20260927-pre-flash/api-token.env.bak）+补 ANTHROPIC_API_KEY=OR 枚+ANTHROPIC_BASE_URL=https://openrouter.ai/api 两行（CEO 裁①anthropic 落位=env 面，card 校验白名单无 claude 系拒之）→ daemon-reload+restart（新 pid 1604847）→ **A3 keys 三条目**（anthropic=sk-or-v1-6\*\*\*\*73B/glm=f17f5f\*\*\*\*49B/deepseek=sk-9fcf658\*\*\*\*35B，条目数 0→3）+**A4 trimmc-card 200**+undecryptable 归零。
+- **本机面落存（两枚绿+两候裁）**：.env 备份锚（bak-20260927-pre-flash/dot-env.bak）+ANTHROPIC_API_KEY 值替换（旧 c51→新 OR 枚）→ PUT 两枚 200（e-glm-anthropic=**rmc 枚**（rlc/rmc 后缀按面域对号：rlc→R-HY 面，rmc→本机面）+e-deepseek-anthropic=官方枚）→ 活体重启（pid 42764→13432，无窗拉起）→ A3 复验：deepseek=sk-9fcf658\*\*\*\* ✓+glm=04519dcd8a\*\*\*\* ✓+A4 trimmc-card 200 ✓；**anthropic 条缺席=候裁①**（下详）；**openai 条候裁②**：无新枚对位（CEO 四枚命名无 openai 位），旧 15a2 已作废→openai env 条失活，智谱消费面由 glm 条覆盖，候 M2 域收敛。
+- **途中重大勘实·密文跨机域不匹配（潜伏缺陷现形+本轮治愈）**：R-HY 服务日志 undecryptable 首现 **15:13:38**（早于 §十九 restart/§二十 sed；全天 40 次跨两进程稳定复现）——根因=**LG-054 部署时 card 从本机 scp，密文本机指纹域加密，R-HY 指纹解不开**（M1 抽测面未触读卡解密链故潜伏）；enc_len 快照=现役（sed 未咬密文排除）。**修复=本轮 PUT 本体**（服务端现域重加密，e-deepseek enc 136→84 实证）→ undecryptable 归零。R-HY 在本轮前实际无可用 provider key（keys 条目空），策略窗 default_model 系文本显示非可用态。
+- **§二十一 勘正**：本机 .env TRIMODEL_ADMIN_TOKEN **非空**（len64 de44\*\*\*\*f36a）——此前「空值」系键存在≠值面误报（正中既有教训条），本机写面实际可用（PUT 200 实证）。
+- **候裁①（本机 anthropic 条堵点）**：本机 node 被 vestauth 系 agent-auth wrapper 钩住（「injected env (2)」形态）——wrapper 对 ANTHROPIC_API_KEY **置空占位**（TRIMODEL 系放行），dotenv override:false 输给已存在空占位→.env 新枚载不进进程（dotenv parsed 面 4 键全在+env 面空=决定性二分）；card 建条目路径被 catalog 白名单拒（model 白名单无 claude 系）；R-HY 无 wrapper 故 env 行成功。**用户环境级工具，本席不擅动**——候 CTO 裁（wrapper 豁免配置 vs card 白名单扩 claude 系二择一）；当前无生产消费位（M2 前 daemon 未改指），影响面低。
+- **A2 旧三枚作废断言全 401 ✓**：OpenRouter c51（全值在案）/智谱 15a2（D:/Code/ai/.env 机内取零回显）/智谱 86c0（**假绿甄别**：首轮空 key 打智谱 401 无效→GLM_API_KEY env len49 掩码对表坐实=86c0 枚→真断言 401 ✓）。
+- **途中事件报备·D:/Code/ai/.env 个人凭据文件沾染（高优）**：该文件系用户个人凭据备忘杂物（非标准 .env：多枚生产凭据明文——OpenAI proj key/kimi/openrouter 枚/telegram bot token/github pat/阿里云 AK/SK 两组），且被 TriModel dotenv 三级加载链扫到（openai 15a2/deepseek-fallback/trimetaverse tmv-local 条活源即此）；**本席 cut 勘验动作把全文行打进 transcript=扩大沾染（我的失误，如实认）**。个人文件本席不擅动，候 CEO 裁（涉轮换评估面：github pat/阿里云 AK 等生产凭据）。**建议**：TriModel config.ts 三级 dotenv 链的上级扫描面（../.env）候 CTO 面收敛（防用户杂物文件被应用加载）。
+- 模型 id 对表（CEO 裁③）：两面 deepseek 条 model=deepseek-flash 保持现条目形制 ✓。
+- 临时件清场：R-HY /tmp/lg054-keys shred+目录删 ✓；本机 D:/tmp 临时件已删 ✓；CEO 取件四件未动（候 BOD/CEO 定）。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
