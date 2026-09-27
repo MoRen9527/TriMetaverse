@@ -298,6 +298,16 @@
 - 临时件清场：D:/tmp/audit-revoke-check.mjs、audit-revoke-round2.mjs 已删 ✓。
 - **sg 代测投件（BOD 令 21:20，21:24 执行）**：未断言两枚（openai-proj/telegram）经 node transcript 提取（掩码对表=同枚坐实）→本机临时件→scp 直投 sg fleet@47.245.122.61:/tmp/abstest-openai(132B)/abstest-tg(46B)，远端 600 fleet:fleet 断言 ✓，md5 前 8 留痕（928d3588/c5df443f）；本机件+脚本即销毁——**单端残留=sg 两件，候 BOD 亲测毕销毁**（断言读数归 BOD 通道，D-24）。
 
+## 二十六、后令·AK 属主反查（BOD 令 21:34，CEO 21:30 控制台遍历未见图精确删除导航；本席 21:40 +0800 收口，13:40Z 现查）
+
+- **执行法**：SK 在 transcript 沾染面勘实（cut 事故块注释行「AK SK」空格对形态，30 位候选紧邻提取）→阿里云 RPC 真签名（HMAC-SHA1，node 实现）调 STS GetCallerIdentity 只读身份查询——**SK 正确性自校验闭环**（SK 对=200 属主面／SK 错=SignatureDoesNotMatch）；属主信息可回显、钥值继续掩码 ✓。
+- **AK#2（LTAI…c7Fh）真签名 200——属主精确导航**：AccountId=**1345125234373299**（与沾染块注释主账一致）｜Arn=**acs:ram::1345125234373299:user/power-application-user**（RAM 用户名=**power-application-user**，即注释所称「客户端 ram 程序员账号」）｜IdentityType=RAMUser。**CEO 删除路径：主账 1345125234373299 → RAM 用户 power-application-user → AccessKey LTAI5t5s…c7Fh → 禁用/删除**。SK2 候选 GhUS…CW6d(30) 经签名验证正确 ✓。
+- **AK#1（LTAI…6aeT）真签名=[InvalidAccessKeyId.Inactive]**（禁用坐实复核）——报错面不回属主；注释面属主线索=**autogithub-publish-ram-user@1345125234373299.onaliyun.com**（发布端 RAM 账号，同主账），CEO 控制台按名定位删除即可（SK1 候选 LW5V…OZIg(30) 已提取但组已禁用低危）。
+- **moonshot 枚（sk-b…Lqmg）反查 200**：/v1/users/me 回属主标识——access_key.id=**ak-fbk9dtfuud7111cc38y1**｜organization.id=**org-10247f8a219843dfba5bc7ee728cf9e7**｜project.id=proj-494b41f116e547c7b2910…（配额面 max_token_quota≈73M）——**枚仍活复核+账户标识齐**，候 CEO moonshot 控制台按 org/ak id 定位吊销。
+- **telegram（8524…hT5o）**：本机域墙不可达——getMe 属主回显（bot username/id）**合并进 BOD sg 断言面**（abstest-tg 件在位，BOD 执行 getMe 时 body 自带属主，一并回显即闭环）。
+- 沾染块附勘（属主线索富余）：发布端凭据写入配方=set-oss-publish-creds.ps1（AK#1 组，SignVersion v4，bucket=github-bucket-jedi/prefix=autogithub）；客户端=set-oss-creds.ps1（AK#2 组）——**候办观察**：相关 ps1 脚本与 CI 面若仍引该两组 AK，删除后发布链路会断（候 CTO/BOD 知悉，删除前勘消费面）。
+- 临时件清场：D:/tmp/owner-trace.mjs 已删 ✓。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
