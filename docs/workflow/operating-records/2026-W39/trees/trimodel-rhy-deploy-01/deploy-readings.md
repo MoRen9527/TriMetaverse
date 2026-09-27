@@ -308,6 +308,15 @@
 - 沾染块附勘（属主线索富余）：发布端凭据写入配方=set-oss-publish-creds.ps1（AK#1 组，SignVersion v4，bucket=github-bucket-jedi/prefix=autogithub）；客户端=set-oss-creds.ps1（AK#2 组）——**候办观察**：相关 ps1 脚本与 CI 面若仍引该两组 AK，删除后发布链路会断（候 CTO/BOD 知悉，删除前勘消费面）。
 - 临时件清场：D:/tmp/owner-trace.mjs 已删 ✓。
 
+## 二十七、后令·flash 全时段切换终局勘验＋sg 断链三合一（CEO 23:26「查看是否生效」→23:3x「你来」亲授；本席 00:5x +0800 收口，date 现查 2026-09-28 00:5x 星期一）
+
+- **CEO UI「已切换」实未落盘**：本机 card（`D:/Code/ai/TriModel/trimmc-card.json`）mtime=20:42（CEO 增配 flash 条目时刻）后零写入——UI 切换动作未保存；如实回报「您的切换没保存上」，本机由 BOD 直改完成（先备份后改）。
+- **本机改造读数（备份先行）**：备份=`D:/Code/ai/TriModel/bak-20260927-2325-pre-fullflash/`（card+投影双件）；card 改三处——`default_model` "GLM-5.3"→**"GLM-5.3-Flash"**｜默认模型规则（rule_mu1bth1gj6n9i7, type=default）entry_id e-glm-anthropic→**e-glm-flash-anthropic**｜三窗规则（rule_mu1bth1g0jdd19）enabled→**false**；投影 `policies/local.json` 重写为 `{"version":"1","schedules":[]}`。**正解形态=全时段默认**：schedules 空窗+卡 default_model 兜底（评估序：窗口命中→卡 default_model→env 出厂默认，policy.ts L33/L61-62/L148）。
+- **零重启生效依据**：`server.ts` L92 `registerCardDefaultModelFn(() => { loadCard() ... })`——getter 每调用现读盘，改 card 即刻生效，无重启环节。
+- **sg 断链三合一（勘验 23:2x；CEO 23:42 裁 B：记 M2 候修⑤，执行窗前必修）**：①`GLM_API_KEY` env **空值从未配**（sg `/srv/fleet/TriModel/.env` 9/11 建档起 len0，上游调用必拒 `no-api-key`）；②**dotenv dist 态路径缺陷**（`config.ts` L10-11 候选序只探 `dist/.env` 与 `/srv/fleet/.env`，`TriModel/.env` 永不可达——结构缺陷非运维疏漏）；③**card 正身缺失**（默认模型路由无卡可读）。修复路径勘明=**机内 PUT card 零重启**（键值候 CEO 供枚或维持候修；重启路堵=fleet 无免密 sudo）。
+- **假绿更正（本席主动入卷）**：当晚 21:03-21:06 sg 面消费验证存在**路由层假绿**成分——rewrite 日志真（路由层通）但上游层从未通（GLM_API_KEY 空值），与 86c0「空 key 也回 401」同族教训；已记入 M2 候修⑤关联更正（46d857b5）。
+- **card 加密域锚附勘**：entry 含 api_key_encrypted 字段，指纹四元组（hostname:username:platform:arch）跨机/跨用户域互解不开——sg card 建立须 sg 机内 API PUT 机内加密，禁跨机复制 card（M2 候修②成文）。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
@@ -315,3 +324,4 @@
 - R-HY 实勘实操作批次：16:29-16:47（SSH 全程留痕+journal/systemd/ss 读数在卷）；本机对照实验（worktree 1972d83 已清理）
 - §二十四源锚：BOD flash 窗挂链令（2026-09-27 20:54 经 COO）；TriModel src：api/trimmc-card.ts（handleApplyStrategy L230-323／窗级派生 L258-274／时区硬编码 L269／requireAdmin L21）、api/routes.ts L146（apply 路由）、api/policy.ts L31-42（GET policy effective）、policy.ts（loadPolicy L325 热读／effectiveModel L361 评估序）、security/key-encryptor.ts L25-40（指纹四元组域锚）、proxy-server.ts（L25-29 默认 127.0.0.1:3334／L85 路由／L152 config 面 untouched）；R-HY 实勘批次 20:57-21:04（card 三实体/apply/消费全链 SSH 留痕）
 - §二十五源锚：BOD env 作废断言令（2026-09-27 21:14 经 COO，CEO 21:10 令）；§二十一 cut 沾染事故串（本会话 transcript a2a288c7）；验活端点族（github/openrouter/moonshot/deepseek/STS 假签名区分器）；§二十一 属主勘定回执（3d7be6b5）
+- §二十七源锚：CEO 23:26「查看是否生效」→23:3x「你来」令（本会话 transcript）；本机 card/投影备份 bak-20260927-2325-pre-fullflash；TriModel src：policy.ts（L33 优先级/L61-62 卡兜底注/L148 first-match-wins）、server.ts L92（现读盘铁证）、config.ts L10-11（dotenv dist 路径缺陷）；sg 实勘：/srv/fleet/TriModel/.env（GLM_API_KEY len0）、trimodel-{proxy,config}.service（无 EnvironmentFile）；M2 候修清单成文 46d857b5（wt/board）
