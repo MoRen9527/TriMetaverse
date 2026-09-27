@@ -286,9 +286,21 @@
   - **③apply 副作用如实呈报**：card.default_model 现=null（新策略无 default 规则，派生函数固有语义 L301）——窗外回落语义从 card-default(GLM-5.3) 变 env-default 链，系 CEO 测试策略定义的忠实投影非异常；规则窗间 1 分钟空洞两处（21:05-21:06／21:10-21:11，CEO 窗定义原样），空洞时刻同走 env-default 回落（proxy 面 env 无 GLM/DEEPSEEK 枚会报 not configured，daemon 消费面不受影响——走 daemon 自己 key-cache）。
 - 临时件清场：R-HY /tmp/tm-consume.sh、/tmp/tm-proxy-test*.log、/tmp/tm-cons.json 全删 ✓；proxy 进程收净 ✓。
 
+## 二十五、后令·env 沾染凭据全量作废断言（BOD 令 21:14 收件，CEO 21:10 令「env 轮换已毕，做作废断言」；本席 21:20 +0800 ⚠高优报警首投，13:20Z 现查）
+
+- **执行法（零新增暴露）**：旧值全部取自本会话 transcript 沾染块（§二十一 cut 事故串）——node 脚本 jsonl 行解析+字符串 walk+**独占模式共现过滤**（github_pat_/ghp_/LTAI/telegram token 形态所在串的并集=沾染面，排除 TriModel 面枚误入）；全值零回显（输出仅掩码+结果码）；D:/Code/ai/.env 未读（零转录外取值）；新值零触碰 ✓。
+- **达阵面 ✓×4 类**：github-pat gith…6bds(93)→api.github.com/user **401**；OpenRouter sk-o…8b62(73)→openrouter.ai/api/v1/key **401**；阿里云 AK#1 LTAI…6aeT(24)→STS GetCallerIdentity **InvalidAccessKeyId.Inactive**（禁用=组废，SK 随 AK）；令面外补测 .env 块内 deepseek-fallback 形态枚（sk-2…503d/sk-5…1188/另 1 枚）→api.deepseek.com 全 **401**（沾染面深挖闭环）。
+- **⚠高优报警两枚（21:20 首投 msg_id 57653e0a，候 CEO 控制台补轮）**：
+  1. **kimi/moonshot 枚 sk-b…Lqmg(51)→api.moonshot.cn/v1/models→HTTP 200 仍有效**（直接坐实）；
+  2. **阿里云 AK#2 LTAI…c7Fh(24)→STS→SignatureDoesNotMatch ×2 复现=未吊销**——判读链：阿里云校验序存在性→状态→签名；AK#1 同法报 Inactive（禁用），AK#2 走到签名步=存在+enabled（假签名区分器法，无需真 SK；连带组内 SK 候轮）。
+- **未断言两枚（网络层不可达非枚无效，候代法）**：OpenAI proj key sk-p…PeAA(132)→api.openai.com 超时×2（openrouter 可达对照=单域墙嫌疑）；telegram 8524…hT5o(46)→api.telegram.org 超时×2。候 sg 侧代测或 CEO 控制台吊销面确认。
+- **技术注记**：AK#2 报警回显 string-to-sign 系阿里云错误响应自带 AK 明文=同值再现非新增暴露；kimi 甄别：3 候选中 2 枚 hex32 形态=deepseek-fallback 枚（deepseek 端点 401 闭环），len51 含大小写 1 枚=moonshot 真候选（200 报警）。
+- 临时件清场：D:/tmp/audit-revoke-check.mjs、audit-revoke-round2.mjs 已删 ✓。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
 - 前置勘验件：同目录 predeploy-survey-readings.md（基座/通路/技术债⑩/部署源裁定）
 - R-HY 实勘实操作批次：16:29-16:47（SSH 全程留痕+journal/systemd/ss 读数在卷）；本机对照实验（worktree 1972d83 已清理）
 - §二十四源锚：BOD flash 窗挂链令（2026-09-27 20:54 经 COO）；TriModel src：api/trimmc-card.ts（handleApplyStrategy L230-323／窗级派生 L258-274／时区硬编码 L269／requireAdmin L21）、api/routes.ts L146（apply 路由）、api/policy.ts L31-42（GET policy effective）、policy.ts（loadPolicy L325 热读／effectiveModel L361 评估序）、security/key-encryptor.ts L25-40（指纹四元组域锚）、proxy-server.ts（L25-29 默认 127.0.0.1:3334／L85 路由／L152 config 面 untouched）；R-HY 实勘批次 20:57-21:04（card 三实体/apply/消费全链 SSH 留痕）
+- §二十五源锚：BOD env 作废断言令（2026-09-27 21:14 经 COO，CEO 21:10 令）；§二十一 cut 沾染事故串（本会话 transcript a2a288c7）；验活端点族（github/openrouter/moonshot/deepseek/STS 假签名区分器）；§二十一 属主勘定回执（3d7be6b5）
