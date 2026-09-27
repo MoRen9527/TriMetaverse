@@ -296,6 +296,7 @@
 - **未断言两枚（网络层不可达非枚无效，候代法）**：OpenAI proj key sk-p…PeAA(132)→api.openai.com 超时×2（openrouter 可达对照=单域墙嫌疑）；telegram 8524…hT5o(46)→api.telegram.org 超时×2。候 sg 侧代测或 CEO 控制台吊销面确认。
 - **技术注记**：AK#2 报警回显 string-to-sign 系阿里云错误响应自带 AK 明文=同值再现非新增暴露；kimi 甄别：3 候选中 2 枚 hex32 形态=deepseek-fallback 枚（deepseek 端点 401 闭环），len51 含大小写 1 枚=moonshot 真候选（200 报警）。
 - 临时件清场：D:/tmp/audit-revoke-check.mjs、audit-revoke-round2.mjs 已删 ✓。
+- **sg 代测投件（BOD 令 21:20，21:24 执行）**：未断言两枚（openai-proj/telegram）经 node transcript 提取（掩码对表=同枚坐实）→本机临时件→scp 直投 sg fleet@47.245.122.61:/tmp/abstest-openai(132B)/abstest-tg(46B)，远端 600 fleet:fleet 断言 ✓，md5 前 8 留痕（928d3588/c5df443f）；本机件+脚本即销毁——**单端残留=sg 两件，候 BOD 亲测毕销毁**（断言读数归 BOD 通道，D-24）。
 
 ## 使用依据
 
