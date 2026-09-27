@@ -1,0 +1,68 @@
+# BOD 晚间收口笔（2026-09-27 15:23 → 09-28 00:53，跨夜事件全链）
+
+- sourceOfTruth: 本件（BOD 董事会治理席晚间收口笔；供 COS 合账料+技术读数分录）
+- syncMode: 快照件（落笔即冻结；后续增补走 COS 台账合账）
+- lastSyncedAt: 2026-09-28 00:53 +0800（date 现查 00:53:36 星期一）
+- 记录席: BOD（board）；CEO 指令面全在卷，跨席回执 id 逐条录
+- 技术读数正身: LG-054 树 deploy-readings.md §二十四~二十七（主仓 dev，§二十七 本夜新增 4febf9fc）
+
+## 一、密钥线收口（终态）
+
+1. **作废断言终局**（§二十五/二十六 后续裁定）：
+   - **阿里云第三账户坐实不追**：AK#2 属主=主账 1345125234373299 / RAM power-application-user——CEO 遍历 R-HY 主账（1648593480532908）与 M-SG 主账（5382633573118081）均未见图 →BOD 判定属第三账户 →CEO 裁「不是R-HY和M-SG就行，不影响」——**留置不追，销项**。
+   - **AK#1**：Inactive 禁用坐实（注释面属主 autogithub-publish-ram-user@同第三主账）——不追。
+   - **moonshot**：CEO 已控制台删除（org/ak id 反查标识 21:40 供过导航）——**闭环**。
+   - **OpenAI / telegram**：本机域墙不可达，sg 代测件（abstest-openai/abstest-tg）在 sg:/tmp 候销——CEO 裁「**不管**」两枚——**留置，sg 临时件候清**（BOD 下轮 sg 通道顺手销毁）。
+   - **ES 密码（39.106.15.22 沾染）**：大白话汇报后 CEO 裁「**先不管**」——挂起观察，不入候修。
+2. **候办观察延续**（§二十六附勘）：set-oss-publish-creds.ps1 / set-oss-creds.ps1 与 CI 面若引两组 AK，删除会断发布链——留 CTO/BOD 知悉面，删除前勘消费。
+
+## 二、flash 全时段切换终态（四面）
+
+1. **本机=M 面（完成）**：CEO UI 切换未落盘坐实（card mtime 20:42 后零写入）→CEO「你来」→BOD 直改：card default_model=GLM-5.3-Flash+默认规则指 e-glm-flash-anthropic+三窗禁用+投影 schedules=[]；备份 bak-20260927-2325-pre-fullflash；零重启生效（现读盘铁证 server.ts L92）。**读数正身=§二十七**。
+2. **R-HY=R 面（早已毕）**：M1 收口域，治愈案在卷，不动。
+3. **sg=M 面远端（断链三合一候修）**：GLM_API_KEY 空值+dotenv dist 路径缺陷+card 缺失——CEO 裁 **B：记 M2 候修⑤，执行窗前必修**（46d857b5 成文）；修复路径=机内 PUT card 零重启（键值候 CEO 供枚或维持候修）。
+4. **CEO UI**：本机已代切完成，UI 重切与否随 CEO（不切亦生效）。
+
+## 三、周平面迁移验证＋主仓对齐
+
+1. **迁移验证（无漏）**：ae5f83dc 23:00:11 weekly plane shift——W39 收口+W40 开平面三件齐（.shift-ade.json 101 行+OP 328 行+unresolved 183 行）；`trees_migrated: 0`=迁移器如实扫描（任务书留铸造周惯例，上周同）——**未漏 Tree 迁移**。
+2. **W40 未决项真缺口补录**：M2 执行单+席看门狗单未入 unresolved——CEO 裁「补」→commit f0bf91c6（注明非迁移漏系补登记）。
+3. **主仓对齐**：CEO 23:49 指出本地无 W40 →merge 8e2c2841（diverged ahead54/behind11，ff-only 不可用）→「**固化进迁移SOP，立单流转**」→**LG-056 铸**（87d1b44b）。
+
+## 四、催办机制勘验＋两单机制定稿
+
+1. **双向实勘**：sg duty-urge-patrol **活在跑**（fleet crontab 全家桶：催办 2h/晨巡/夜巡 30min/notify-poller 1min/watchdog 5min/bare-fetch+worktree-ff+reverse-push 1h；00:00 周期 urged 1）但**结构性巡不到回报断链**（数据源=周平面挂账文件，非消息链）；m-cos 侧三层皆无（会话 cron 无/daemon cron.db 0 行/计划任务非催办）——与 m-cos 独立读数互证。
+2. **LG-056 流转链勘验（CEO 判「断链」反转汇报）**：23:52 铸→23:54 COS 流转→23:56 COO 拆派（9a09f312）→00:00 SDE 回报（86a17e99）→00:00 汇 COS（86c26e1b）——**4 分钟全通无断链**，回执 id 全在案；「貌似没起作用」根因=**过程对 CEO 面不可见**（无节点状态可视件），非链断。
+3. **LG-057 铸（CEO 00:34 定稿）**：树节点收口心跳+5 分钟超时催办（8c242679）——每 T 点勘「是否完成+完成是否超 5 分钟未回报」；超时催后继责任席；**各节点强制落收口件**（时点+回执 id+done）=故障恢复读树续办+天然审计链；巡检器搭 LG-056 执行体车（周一三候选读数后落位）。
+4. **树状态账归 COS 统一维护（CEO 口径，已追发 COS）**：COS 记账人=催办人同一人；技术件（acceptance/读数）执行席落、COS 只登记指针——账货分家；COS 不可用时 BOD/值席代记（明注身份）事后补核。
+5. **watcher 真身勘正**：daily-progress-watcher author 指纹=TriMC Scheduler（sg TriMMC 8710 内建调度器，jobs.json 文件态，root 属主）非本机 TriMLC——SDE 误挂勘正全盘采纳（主仓 b0ff1c77 §五 修正落笔）；教训=**author 指纹≠本机载体，调度面归属须实勘配置落点**。
+
+## 五、现行执行态
+
+- **LG-056 执行中**：SDE A2 彩排毕（0f71757b，diverged 策略成文）+形态荐 b；周一（今日）正式形态报告+提请 CTO 门；SOP 落笔 A3+A4 验证；硬截点 10-04。
+- **LG-057 拆派 COO 中**：候 COO 拆派承接席回报排程；规程增补草稿已落主仓（aaece6f8，六节点收口件+COS 状态账+5min 细化+代记兜底+读树续办）。
+- **M2 执行单**：候修清单 5 项成文（46d857b5），执行窗前必修⑤（sg 断链三合一）。
+
+## 六、挂账与候批
+
+| 项 | 态 | 候谁 |
+|---|---|---|
+| sg 智谱键供枚 vs 维持候修⑤ | 二选一 | CEO |
+| CEO UI flash 重切与否 | 随意（已生效） | CEO |
+| sg:/tmp abstest 两件销毁 | 留置（「不管」裁） | BOD 下轮顺手 |
+| ES 密码沾染 | 先不管（挂起） | — |
+| pool-escalation-log 18 天未动 | 夜巡黄灯观察档（连续≥3 周期 ALARM 方转真件） | — |
+| 终验收①③④（真人掐表/删除复活/toast+A4 UI 绿点） | 候排人 | 前段遗留 |
+
+## 七、推送候批（收口批全录）
+
+- **wt/board 四 commit**：f0bf91c6（W40 补录）/46d857b5（M2 候修五项）/87d1b44b（LG-056 铸）/8c242679（LG-057 铸）+本收口笔
+- **主仓 dev 排队**：54 commit 存量+今晚 COS/SDE 三笔（0f71757b/b0ff1c77/aaece6f8）+本夜 §二十七（4febf9fc）
+- **TriCompany**：e484bc8（board.contract.yaml 翻笔，CEO 15:54 审认在役）
+- 全部落盘未推，随收口批统一处理；推送动作候 CEO 知悉（惯例：收口批推 dev+同步仓）。
+
+## COS 合账供料段
+
+- 今晚 BOD 面事件线六段如上；裁定链 CEO 全令在卷（时间线各段内嵌）。
+- 跨席回执：LG-056/057 授号成立拆派毕（COS）；COO 勘验三答（迁移/断链/催办面）；SDE 勘验三答+勘正采纳（b0ff1c77）；COS 定时催办三层「无」回报+watcher 对表（已勘定 TriMMC 内建调度器）。
+- 技术读数勿重录：§二十七（主仓 4febf9fc）+M2 候修清单（46d857b5）为准，台账挂指针即可。
