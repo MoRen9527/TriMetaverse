@@ -219,3 +219,10 @@
   - f1f89ee3 docs(task-charter): TASK-TRIMODEL-RHY-DEPLOY-01 铸——TriModel 部署 R-HY 部署波（CEO 16:08 裁决之二「现在部署」立即开窗；候授号 LG-054 核号防撞随 COS 流程；方案正身=joint-plan 问5/6/7 免重审；范围=M1 五锚）
   - …另有 121 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-27（周日）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @11:50 +08：自上次进度提交 d1718e83 后新增 2 条 commit：
+  - 3f3ae9f2 Merge remote-tracking branch 'origin/dev' into wt/board
+  - e0663eac docs(task-charter): 双任务书铸——①TASK-TRIMODEL-M2-CUTOVER-01（LG-054-M2 执行单：daemon 改指 R-HY+读面细门+观察周，CEO 09-27 11:37「②先做」）②TASK-SEAT-RESUME-AUTO-01（席看门狗断线自动接续：--resume 零交互+断点验证，CEO 11:37 新令，候授号 LG-055）
+- registry：v2.1；今日 registry 提交无变化
