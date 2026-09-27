@@ -225,3 +225,28 @@ TriModel 服务端 API 面扩展=架构级改动——**实施执行单开工前
 ## 使用依据
 
 任务书正身 08b588e0（§五 五条技术事实直接引用：域锚四元组/sg 断链三合一/评估序 policy.ts L33 L61-62+server.ts L92/R-HY 问7 梯先例/白皮书对表归 CPO 件）；本席 HEAD 实勘（2026-09-28 04:0x）：TriModel routes.ts/trimmc-card.ts/ui/index.html/TriRLC config/key-cache.ts+env.ts+cli.ts/TriMLC 同构面+cli.ts model 命令/TriMMC+TriRMC config-sync 族+default-model.ts 三级解析/四仓 package.json bin；本席既裁在卷（model-fallback-sweep-01 cto-triage-verdict.md：keys 分发面定性/域锚四元组裁 A/M2 候修清单）；COO 拆派令（04:05，接令回执 69cbaa7c）。
+
+## §十 CPO 对表回执与两条确认（对表件 cpo-cto-plan-reconcile.md @ 9496b1e09，2026-09-28 04:2x）
+
+### CPO 三裁采认记录
+
+1. **§4.3 层级序采认成立**——只定序不定值，fallback 常量收敛仍挂 sweep 线同窗并裁（与本席既裁一致）。
+2. **§5.2 差异① CLI 不开卡写采认成立**——CPO 澄清其功能项4=连接配置写非卡面写，两写面分列不冲突；本件 §5.2 CLI 写面留空的裁决语义获产品侧确认。
+3. **差异② 分名分显裁采认**——网页=「应用」（服务端卡态）、daemon pull=「拉取生效」（本域面态），禁混词+徽章双字段；§5.2 矩阵相应行随此修订语义。
+
+### 两条确认（候裁→本席裁，裁毕即三方一致）
+
+1. **卡面写前备份轮换：裁「入 P0」**——机制非新发明：claude-fallback 写面备份先例在役（claude-fallback.ts L28「备份先行＋轮换近 5 份＋FROZEN-BACKUPS 哨兵豁免＋幂等短路」），卡写备份=同款机制泛化（写前 copy+唯一后缀+keep=5 轮换+幂等短路），量级小笔（~50-80 行+测试）不构成 P0 膨胀；且 §六迁移线回滚锚依赖该机制——P0 立机制、P1 迁移复用，顺序顺。
+2. **卡写操作审计：裁「入 P0」**——与本件 §2.1 拉取台账合并为 **face-events 账**（单一 jsonl 载体，事件型=pull/write/apply/status 四族），边际成本≈写路径一行 append+schema 字段；len-only 纪律**采认**（审计不落键值内容，敏感面零明文）；CPO 治理必备定性+D-15 留痕哲学同族，非增强。
+
+### 副产物知悉两项
+
+① CPO「卡文件名勘正」候办随 §六迁移线闭——知悉；② 策略卡「应用到本机」按钮 P2 重构按「拉取生效」族呈现、现役走查面文案不回改——知悉（UI 不回改惯例一致）。
+
+### P0 量级增量汇总
+
+备份轮换+审计两入合计新增 ~100-130 行+测试族——P0 分期不变，门审材料随执行单更新。
+
+### 使用依据（本节）
+
+cpo-cto-plan-reconcile.md @ 9496b1e09（sg-server 远端 tip，本席未直接读取文件面、以 CPO 回执文+COO 转达令为准——远端 tip ls-remote 验真由转达方完成）；claude-fallback.ts L28 本席 HEAD 实勘（备份机制在役先例）；m-cpo 对表知会（04:21）；COO 转达令（04:21:53 hook）。
