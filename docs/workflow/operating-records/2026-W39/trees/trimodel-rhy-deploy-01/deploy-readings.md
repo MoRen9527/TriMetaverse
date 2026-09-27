@@ -220,6 +220,20 @@
   - **复验五读数**：trimmc-card 带 f68d 枚=**200** ✓（BOD 复验锚）/ 无 token=**401**（fail-closed 从 503"未配置"升级 401"拒绝"=应用层 ADMIN 门挂上语义正身）/ health=200 ✓ / PUT 无 token=401（Caddy gate 零回归）✓ / NRestarts=0 稳态 ✓。
   - v1 族 404 清单（effective/presets/healthz/fallback-info）留 BOD 跨机对照 UI 源码逐端点复验（不预判照令）。
 
+## 二十、后令·deepseek 模型统一切 flash（BOD 定向改令 2026-09-27 16:05，CEO 16:02 令「所有用 deepseek 的位置，模型用 deepseek-flash，不要用 deepseek-v4-pro」；本席 16:13 +0800 收口，08:13Z 现查换算）
+
+- **R-HY 正源改 2 处**（备份锚先行 `/srv/fleet/trimodel-data/bak-20260927-pre-flash/`：local.json 1076B+trimmc-card.json 2631B，cp -p 权限保持，旧值保留核 ✓）：①policies/local.json schedules[1].model（strategy 窗 14:00-18:00 daemon-default）②trimmc-card.json provider_entries e-deepseek-anthropic 条 model——**勘实即 BOD 勘「keys.default_model」之源**（keys 面 default_model 系 card 条目派生）。改法=sed 字符串级替换（v4-pro→flash 全串替换，不动加密 key 材料字节）→ 双件 JSON 合法性 PASS → 残留 0/落位 1+1。
+- **A1 验收读数（R-HY 活体）**：GET policy（gate 枚）schedules[1].model=**deepseek-flash** ✓；GET keys（应用层枚 3608\*\*，gate 枚打 keys=401 两层制已知行为照实注）default_model=**deepseek-flash** ✓；trimmc-card 复验 **200** ✓（sed 直改后服务读盘正常）。loadPolicy/keys 每请求读盘语义实证=零重启即时生效。
+- **A2 验收读数（本机 3333 并行实例）**：数据面同形同改（备份锚 `D:/Code/ai/TriModel/bak-20260927-pre-flash/` 2 件+sed+JSON PASS+残留 0/落位 1+1）；活体双读数 keys.default_model=**deepseek-flash** ✓ + policy.schedules[1].model=**deepseek-flash** ✓（token 源=.env TRIMODEL_API_TOKEN 掩码 a5cb\*\*\*\*13a7 机内直取；本机 .env **无** TRIMODEL_DEFAULT_MODEL 行=env 覆盖回写风险不存在）。零重启即时生效。
+- **扫尾定性清单**（`deepseek-v4-pro` 全命中 48 文件按面拆，本机+R-HY）：
+  - **数据面（现役读盘）已清**：两机 policies/local.json+trimmc-card.json ✓；两机运行 env（本机 .env/R-HY api-token.env）均无 v4-pro ✓。
+  - **备份/证据类不改**：两机 bak-20260927-pre-flash（回滚锚语义）+本机 trimmc-card.json.pre-v4.bak.json+scripts/walkthrough/.ste-\* 历史证据件+test/evidence/lg-035-walkthrough/。
+  - **代码面列候裁（涉 core 语义，归 CTO 面非本配置令范围）**：src/config.ts L60 defaultModel fallback=`tmv-deepseek-v4-pro`（tmv- 前缀系 trimetaverse 注册表名，env 可覆盖；策略+keys 默认在位时运行时几乎不触达）+src/secure-keys.ts L38-39 MIGRATION_MODEL_MAP 一次性迁移映射（R-HY 已迁移毕不再触发；新环境初始化会合成 v4-pro=模板语义②）+其余 src/providers/client/proxy 等 fallback 常量链。R-HY dist 35 文件命中=src 编译产物同源，候代码面收敛时随 rebuild 部署波次清。
+  - **模板语义列候裁**：scripts/provision-card-entries.py L38 写死 `'model': 'deepseek-v4-pro'`——**下次跑此工具会把 v4-pro 写回 card（回写风险真实）**，荐随代码面收敛一并改。
+  - **测试/文档面**：test/ 27 文件断言 fixture（与代码默认值耦合随 B 类动）+README/docs/registry 3 件+.env.example L37 示例行——随代码面收敛波次，不单独动。
+- **回执边界**：A3 sg 侧=BOD 亲勘（本令原文，本席不越面）；A4 CEO UI 刷新=CEO 端动作。回滚锚=两机 bak-20260927-pre-flash 快照回写（sed 逆向替换同形）。
+- **途中事件两笔如实报备**：①本机 keys 端点全量回显 api_key 明文（dev 形脱敏缺口，既有行为非本次造成；本会话 transcript 已沾一枚本机 dev key 一枚——本机 3333 仅听回环无公网暴露，风险面低，候 CTO 知悉定性；后续读数已改单字段提取）②本机 `python3`=Windows Store stub 假 python（rc=49 无 traceback，早前「解析成功」实为 fallback 分支假象）——本机读数解析已改 node 形。
+
 ## 使用依据
 
 - 任务书 f1f89ee3 §三执行序③④⑤ §五验收锚；joint-plan 问5/6/7（方案正身）；BOD 四裁+附裁两笔；CTO 门审 a03a81e9
