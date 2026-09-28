@@ -1,0 +1,75 @@
+# STE 测试方案件·TASK-TRIMODEL-CONFIG-PAGE-4PLANE-P0-EXEC-01（测试族）
+
+- sourceOfTruth: 本件（STE 测试族方案与排程正身；执行单=d9df61bc，方案正身=cto-implementation-plan.md v3 @ afb0180c，判定件 v3 @ 9bd40491）
+- syncMode: working
+- lastSyncedAt: 2026-09-28T02:34:15Z（date 现查，10:34 +0800；接令排程件）
+- 席位: STE 小柯（m-ste）；拆派=COO（测试族：执行单 §一.6+验收锚测试化）
+- 验收门: A5=测试族全绿+CTO 架构门审签发
+
+## 一、测试范围
+
+| 对象 | 内容 | 来源 |
+| --- | --- | --- |
+| §一.6 测试族 | API 族单测+cache 泛化单测（TriModel cards 端点族+TriMLC/TriRLC config-cache） | 执行单 §一.6 |
+| A1 | 泛化端点四 face 可达实测+trimmc-card 别名零破坏回归实测 | 执行单 §二 |
+| A2 | 本机两卡（mlc/rlc）config pull 视图实测+face-events 四族事件 len-only 核验 | 执行单 §二 |
+| A3 | 备份轮换实弹：卡写→备份生成→轮换序→审计行全程留痕 | 执行单 §二 |
+| A4 | CLI config 族×网页×API 底表逐格核 | 执行单 §二（候 CPO 功能项清单对表时点，未定形先按方案 §5.2 底表） |
+| A5 | 测试族全绿全量读数+CTO 架构门审签发=本席放行门 | 执行单 §二 |
+| A6 | revert 演练：泛化层纯新增单 commit 回滚实测 | 执行单 §二 |
+
+不涉：R-HY（本单禁碰）；sg/河源面（P1）；UI（P2）。
+
+## 二、测试策略（三层）
+
+- **L1 单测层**（随 FSD 实现节点走，接口对表后落 TriModel/TriMLC/TriRLC 各 test 目录）：
+  - **API 族矩阵**：4 face（mmc/mlc/rmc/rlc）× 5 端点（`GET cards/{face}?view=managed`、`?view=pull`、`PUT cards/{face}`、`PUT cards/{face}/status`、`POST cards/{face}/apply`）× 鉴权态（admin token 正常/未配 TRIMODEL_ADMIN_TOKEN=503 fail-closed/api-token 通配=P0 过渡态断言）+边界：{face} 不在册=404（防枚举）、view 参数缺省与非法值形态、status 回写值域（applied|failed 外拒）。
+  - **别名零破坏双证**：①现有 trimmc-card 测试套**零改动全绿**（回归面）；②新增别名↔泛化等价断言（同卡态下 `/v1/config/trimmc-card` 与 `/v1/config/cards/mmc` 响应语义逐字段等价）。
+  - **cache 泛化单测**（TriMLC/TriRLC 同构各一套）：拉取载荷→域内重加密（PBKDF2 域指纹）落盘→读回等价；24h expiresAt 过期判定；**域不匹配 cache=无效丢弃直落 tier3+告警读数**（§3.3 不变量三）；判梯序三态（tier1 可用/tier1 败→tier2 LKG→tier2 败过期→tier3）；15min stagger 刷新节奏。
+  - **回写归因码**：pull_denied/decrypt_failed/apply_rejected 三码形态与台账/徽章同显。
+- **L2 验收锚实测层**（沙箱实弹，A1-A4+A6）：
+  - **A1**：沙箱 server 实例（独立端口+`TRIMODEL_DATA_DIR` 钉 tmp）四 face 端点可达；别名回归双证（上）。
+  - **A2**：两卡 config pull 视图实测（**沙箱卡+沙箱实例**——view=pull 落拉取台账系写行为，不在活体 3333 做；活体仅 `?view=managed` 只读抽验且不落台账路径）；face-events jsonl 四族事件（pull/write/apply/status）各≥1 行+顺序合理+**len-only 值面核验**（逐行 JSON.parse 递归扫描值面：`sk-` 前缀键材/条目明文内容零命中——键存在性抽验≠值面验证纪律，len-only 断言打在值面）。
+  - **A3** 备份轮换实弹：沙箱临时卡 6 连写→备份数=5（keep=5 轮换）→**备份名唯一性断言（`bak-<ts>-<pid>-<seq>` 唯一性后缀形态——LG-054 族③ io-kernel 同毫秒覆盖教训直引，同毫秒双写零覆盖为本案硬断言）**→FROZEN-BACKUPS 哨兵豁免在位→幂等短路→每写对应审计行。
+  - **A4**：底表逐格核（功能项×网页×API×CLI），候 CPO 清单定形对表；未定形先按方案 §5.2 六行底表核 CLI 实现面。
+  - **A6 revert 演练**：泛化层单 commit `git revert`→三仓全量门复跑→别名端点照常存活→revert 本身再 revert（演练复原，不留分叉）。
+- **L3 全量门层**（A5 门）：TriModel+TriMLC+TriRLC 三仓 `npm test` 全量读数与各自修前基线对平（既有失败逐族归因，禁只报增量）；全绿后呈 CTO 架构门审签发=放行。
+
+## 三、边界条件与关键风险（测试视角）
+
+| # | 风险/边界 | 测试对策 |
+| --- | --- | --- |
+| T1 | 泛化伤现役 trimmc-card 消费方（方案 R1） | 别名双证（L1）+三仓全量对平（L3） |
+| T2 | pull 视图明文键暴露（方案 R5） | view=pull 仅响应生命周期断言+face-events len-only 值面扫描+日志面无键值断言 |
+| T3 | face 校验防枚举缺口 | 不在册 face 404+枚举串形态用例（大小写/空/路径穿越串） |
+| T4 | 备份同毫秒覆盖（LG-054 族③同族缺陷复发） | 唯一性后缀硬断言（A3），同毫秒双写实弹 |
+| T5 | 域锚跨机误用复发（方案 R3） | 域不匹配 cache 丢弃落 tier3 用例+域核验步读数固定项 |
+| T6 | P0 通配鉴权态被误当收敛态 | 通配断言显式标注「P0 过渡态」，收敛绑定=P1 另测（防测试面给假保证） |
+| T7 | 活体生产面污染 | 全部写实弹在沙箱实例+沙箱卡；活体 3333 只读 managed 抽验上限（不落台账） |
+
+## 四、与 FSD 实现节点接口对表需求（候 FSD 定稿时随卷对表）
+
+1. **测试 seam**：`TRIMODEL_DATA_DIR` env 可钉 tmp（face-ledger.json/face-events jsonl 落点随它）；卡文件路径可参数化（沙箱卡）；server 实例可独立端口起停（createServer 同族 in-process 形态）。
+2. **face registry 常量导出面**：`FACES` 四元组可 import（单测直接对表 registry，不硬编码重复）。
+3. **face-events schema 定稿时点**：四族事件字段形态（ts/face/etype/len-only 附加字段）——L1 用例依赖 schema 冻结。
+4. **归因码枚举**：pull_denied/decrypt_failed/apply_rejected 常量导出。
+5. **CLI config 族命令面**：A4 对格需要 bin 挂族定稿（正名 bin+旧别名过渡策略）。
+
+## 五、排程（正常工时，与 FSD 备测并行）
+
+| 窗 | 工作 | 依赖 |
+| --- | --- | --- |
+| NOW（FSD 备测期） | 本方案件落卷；现有 trimmc-card 测试套基线读数固化（别名双证的「修前」锚）；L1 用例骨架按方案 §二先行（对表 §四 seam 后填充） | 无（可并行） |
+| FSD 实现节点交付 | §四对表核验→L1 填充跑绿→L2 A1-A4 实测 | FSD 交付+seam 在位 |
+| 实测窗尾 | A6 revert 演练→L3 三仓全量读数→A5 门呈 CTO 签发 | 前两窗毕 |
+
+## 六、纪律
+
+- 活体 card/settings **禁写真数据**：实弹全在沙箱实例+临时卡；活体 3333 仅只读抽验。
+- 全量读数回报：完工回报含三仓全量四项读数+既有失败逐族归因。
+- 节点收口件（LG-057 试点）：每节点回报带时点（date 现查）+回执 id+done。
+- 阻塞性缺陷即报 COO+CTO，不自裁放行。
+
+## 使用依据
+
+执行单 d9df61bc（§一.6/§二/§三/§四全读）；cto-implementation-plan.md v3 @ afb0180c（§2.1/§2.2/§2.3/§三/§四/§5.2/§十 两 P0 确认/§十一 v3）；判定件 v3 @ 9bd40491（commit 题录）；COO 拆派令（2026-09-28 10:33 hook）；LG-054 族③教训卷（ste-crossmachine-base-adaptation.md §二/§五，唯一性后缀直引）；工作区记忆条：全量读数回报/键存在性抽验≠值面验证/命令链断言。
