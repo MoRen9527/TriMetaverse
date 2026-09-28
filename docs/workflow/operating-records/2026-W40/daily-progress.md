@@ -113,3 +113,11 @@
   - 2b65d7cc Merge remote-tracking branch 'sg-server/dev' into dev
   - 73c655e6 docs(LG-058): CEO 23:39深夜提速裁录账——G10部署步今晚做(BOD应急直派m-sde回执536237fc,两仓库rebuild+8711/8713重启,事后补档D-27)+哨窗今晚续(BOD亲验A4/A3/A6+A2复核,全过=P0闭合宣告+第二期单当夜落笔)+回退条款作废(今晚一口气收口);树账37笔;总表LG-058行与候收节提速态更新
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-29（周二）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:20 +08：自上次进度提交 eded18c9 后新增 3 条 commit：
+  - 52dd2fd7 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 325b1e35 docs(LG-058): G10部署步完工全绿录账——双仓rebuild+8713/8711重启毕(验收四项全过,回滚锚未动用,读数卷bc388290)+9-18 pidfile事故族防线首次实战兑现(互踩门拒停+权威launcher保真纠偏复连河源);观察项4条=候CTO裁3件(registerPid缺port参/watchdog无env保真/boot期401转绿)+陈旧pidfile,已转CTO;合账勘正COO附注③陈旧态注记;树账38笔;总表G10毕态
+  - bc388290 docs(g10): G10部署步全绿收口读数卷——双仓rebuild(6e4feb3/1af0908→dist 23:57/23:58)+8713重启(34396→10348一致性门过+父cmd消亡+jobCount4)+8711重启(35812→15708跨daemon互踩门拒停实战兑现+保真纠偏权威launcher重走mc_link复连河源)+config族活体GLM-5.3 tier2-cache-fresh双面同拍拉取+回滚锚dist.bak未动用；观察项4条候裁(registerPid缺port参/boot期401转绿/watchdog保真缺口/陈旧pidfile)
+- registry：v2.1；今日 registry 提交无变化
