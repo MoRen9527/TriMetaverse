@@ -190,3 +190,7 @@
   - 8b0c7b28 docs(LG-058): CTO门审簿正式闭卷录账(b42faa84亲验,R-HY迁移单CLOSED-PASS)——三条件终核达成+部署锚e9938cc⊂8de8fe7恰一commit零夹带+主卡属主EACCES=fail-closed(chown挂M2);挂账续项四件入候(404/G2b/键轮换/M2清单);溯源项列账=候修①裁据候CTO查证或勘误(STE X1清单L54唯一卷面);河源链窗口账销(树N11)
   - b42faa84 docs(LG-058): R-HY rmc卡迁移门审卷§六闭卷笔CLOSED-PASS——三条件终核达成(加钉三检点兑现:migrate already-canonical双证);部署锚取舍独立实锤e9938cc⊂8de8fe7恰一commit零夹带;候修①裁据溯源记档=STE X1清单,CTO裁标注无直接出处候勘不阻;A2回滚形态升级核成立;§六.4候裁=主卡root属主不动+EACCES定性fail-closed防线+M2窗随窗chown
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:10 +08：自上次进度提交 8c995b48 后新增 2 条 commit：
+  - 8f8545d4 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 641d6f57 docs(lg-058): CPO A2基料收稿判读件落树(sg切前半实照收稿合格)——收稿三查毕:值面抽验四件物证+密文卡全过(断链三角互证闭合:台账缺席+零接线+404/US3判据落点正确/两代际对照注记成立);清单差口两笔请FSD回改manifest(sg-status-reading→effective-reading件名漂移+404件漏列,物证零缺陷);A2完整判候切后半(重启+接入后UI+台账生成,SDE切换窗补齐)两半合判;切换硬前置=服务重启加载8de8fe7已登记验收窗复核
+- registry：v2.1；今日 registry 提交无变化
