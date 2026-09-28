@@ -2,18 +2,19 @@
 
 - sourceOfTruth: 本件（FSD A3 施工卷；基座=CTO §5.2 底表 cto-implementation-plan.md @76d58282 + CPO 基线 cpo-cto-plan-reconcile.md 8/10+三裁 + STE C1 判据）
 - syncMode: working
-- lastSyncedAt: 2026-09-28T21:35Z（date 现查=2026-09-29 05:35 +0800）
+- lastSyncedAt: 2026-09-28T23:50Z（date 现查=2026-09-29 07:50 +0800）
 - 施工席: FSD 小全（m-fsd）；判据=每格「CLI 有/网页有/差异标注」三值如实，差异面显式标注归档（STE C1）
 - 候件态声明: 本件=施工中卷。本地 live 格已实测（时点+读数留痕）；sg/河源 live 格+部署窗格=候工时窗/部署窗，**候件不虚验**（STE §三）
 
-## 一、活体缺陷候裁 F-1（A3 首笔实测产出，候 CTO 裁定）
+## 一、活体缺陷 F-1（A3 首笔实测产出——**已裁已修已重测，闭环**）
 
 **TriMLC CLI `DEFAULT_PORT=8711` 镜像继承缺陷——trimlc config 族默认打 TriRLC daemon。**
 
 - 实证链：①TriMLC src/cli.ts L22 `DEFAULT_PORT = 8711`（与 TriRLC cli.ts L22 同值同文，N4 镜像注释在案）②活体：`trimlc config show` 与 `trirlc config show` 输出**逐字全同**（face=rlc，同 cache 时戳 2026-09-28T21:50:23Z）——8711=TriRLC daemon（面定谳 8713=TriMLC/8711=TriRLC，CEO 2026-09-17 面授口径）③daemon 本体面布线**正确**：本地 TriModel face-ledger 实读 mlc face 在拉 ok（last_pull 2026-09-28T22:20:21Z loopback）——错指仅在 CLI 入口层。
 - 危害面：`trimlc config pull`（触发 TriRLC 的拉取）/`trimlc stop|restart`（误停 TriRLC daemon）默认 port 全错指；与 09-18 pidfile 误杀 8711 事故族同根（镜像继承未随部署位分叉）。
-- 候裁归属：CTO（CLI 默认端口=部署拓扑语义；候修方向=TriMLC DEFAULT_PORT→8713，与 registerPid 常规窗批件同仓可并批勘定）。
-- 本席不擅修：待裁后随批实施。
+- **CTO 裁定（2026-09-29 COO 07:0x 转达）**：准修并批（DEFAULT_PORT 8711→8713，随 registerPid 批同仓实施）；重测口径=「cli status 无 --port 打 8713+config 族连通+TriRLC 零回归（8711 是正确值不动）」；顺批红线=TriLC 残留文案准顺批（TriMLC 本批）/L24+L26 服务注册标识禁顺批（M 窗三步迁移序）。
+- **修后重测四读数（2026-09-29 07:4x +0800，TriMLC 832b266）**：①`trimlc status` 无 --port→port 8713/pid 5348/service=trimlc/healthz ok ✓ ②`trimlc config show`→**face=mlc**+tier2-cache-fresh ✓（修前 face=rlc 错指翻正）③`trirlc config show`→face=rlc/8711 原样零回归 ✓ ④`trilc-8713.pid=5348`==活体监听 pid（registerPid(app.port) 同批活体落地）✓。
+- 重启纪律留痕：旧代 10348（构建早于 registerPid 提交=无 pidfile 代）停前以 Win32_Process CommandLine 身份核验（等效「不打错对象」意图）→ POST /shutdown+token 门 200 受理→端口释放→channel launcher 分离重启→新代 pid 5348 活体。09-18 误杀族纪律全程未踩。
 
 ## 二、逐格对表（§5.2 底表 6 行×三端）
 
@@ -25,8 +26,8 @@
 | --- | --- | --- |
 | 网页 | 🟡 | P2 UI @995c2f7：panel-card-<f> cf-cfg 现役配置区+cf-badge 三态+cf-pull 拉取状态行（ledger.last_pull_at/from/result）；live 点验候部署窗/本地 boot（工时窗） |
 | API | 🟡 | GET /v1/config/cards/<face>?view=managed @3e6ab37（jsdom 族 7/7+全量绿；真 HTTP 链路案=A4 R3 候窗） |
-| CLI | ✅(rlc)/⏳(mlc·mmc·rmc) | rlc bin 实测 PASS：`trirlc config show`→face=rlc、effective GLM-5.3、source=tier2-cache-fresh（归因读数在outputs）、cache fresh+expires+refresh=900s、last fetch 时戳齐（实测 2026-09-29 05:2x+0800）。mlc bin=F-1 错指（读数无效不作数，候裁后重测）；mmc/rmc bin 候 sg/河源 live（SSH 只读 show，工时窗） |
-| 覆盖列「4/4」 | ❌→候 | F-1 致 mlc bin 现不能计入；裁定+重测后 4/4 复核 |
+| CLI | ✅(rlc+mlc)/⏳(mmc·rmc) | rlc bin 实测 PASS：`trirlc config show`→face=rlc、effective GLM-5.3、source=tier2-cache-fresh（归因读数在outputs）、cache fresh+expires+refresh=900s、last fetch 时戳齐（实测 2026-09-29 05:2x+0800）。mlc bin=F-1 裁修后重测 PASS：`trimlc config show`→face=mlc+tier2-cache-fresh（07:4x，832b266 重启后活体，§一四读数）；mmc/rmc bin 候 sg/河源 live（SSH 只读 show，工时窗） |
+| 覆盖列「4/4」 | 🟡 2/4 实测 | rlc+mlc 双 bin 本地 live 实测过；mmc/rmc 候窗——F-1 阻塞面已翻正 |
 
 ### R2 修改条目/模型集/规则/策略（卡面写）
 
@@ -90,10 +91,10 @@
 1. ⏳ R1/R5/R6 CLI mmc+rmc bin live（sg/河源 SSH 只读 show/cache show，工时窗）
 2. ⏳ R3/R4 CLI pull live（状态变更面，工时窗+候 sg 稳定窗）
 3. ⏳ R5 verify live 四 bin（试拉流量，工时窗）
-4. ⏳ mlc bin CLI 全族重测（候 F-1 裁定+修后）
+4. ~~mlc bin CLI 全族重测（候 F-1 裁定+修后）~~ → **已销（2026-09-29 07:4x）**：F-1 裁修+重测四读数全绿（§一），show/verify/cache show 码锚同族；pull live 归第 2 项状态变更面候窗
 5. ⏳ 网页侧活体点验全格（本地 P2 UI boot 点验=工时窗；部署窗后 sg 活体=CEO 亲测面预验材料）
 6. ⏳ D-1/D-2/D-3/D-4/D-5 五差异标注——**裁窗已定（CPO 06:3x 回执）：A3 完工窗一并裁不散裁**；基线终态=cpo-cto-plan-reconcile.md v2 闭卷段（3f154c8e，8/10→10/10，syncMode→static）——施工卷径引终态基线；D-3 基础口径=该件 §三 分名分显已有（拉取=daemon/CLI 通道），完工窗正式化即可
-7. ⏳ F-1 候 CTO 裁定（COO 06:33 已连同 STE③④ 归并呈裁；可并 registerPid 常规窗批，批面定界候 CTO 明裁）
+7. ~~F-1 候 CTO 裁定~~ → **已裁已修已重测（CTO 2026-09-29 裁，TriMLC 832b266 闭环，§一）**；余留=L24/L26 服务注册标识禁顺批项 M 窗候议（CTO 顺批红线原文）
 
 ## 使用依据
 
