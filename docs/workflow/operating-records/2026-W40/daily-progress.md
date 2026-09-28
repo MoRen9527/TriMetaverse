@@ -125,3 +125,8 @@
   - e65f545b docs(录账): COO接令P1拆派排程——晨间09:17自醒执行(R-HY预检先审后切排首,拆派毕知会录账);P0候收面经战报归零;纯知会信录账即闭;总表P1承接态微补
   - b325a51c docs(LG-058): P0闭合宣告成立录账+P0期销账——BOD终卷A1-A6全科PASS(wt/board 231fca65:A5全量亲跑313-298-0-15归零/A3备份轮换实弹/A6 revert双向PASS+dist锚策略修正候CTO补注+dist.bak-pre-a6补位);销账验证锚链五环全(2696108c→03854395→de76b2d3→bc388290→231fca65);P1执行单已立范围六项候COO拆派(深夜禁排产);三项注记(BOD信内时戳疑预填以锚面入账/终卷wt/board线候并dev/回执链64f16790无对应不追);树账39笔
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:50 +08：自上次进度提交 cc499642 后新增 3 条 commit：
+  - ce9d7e65 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7606c16c docs(LG-058): CTO观察项裁定卷落卷录账(e24b17cc)——①registerPid裁修派FD(FSD回执自排09-29窗)②watchdog裸拉裁修派SDE③401定谳读数错配销项(face-events铁证mlc首拉从未401,denied实为rlc裸拉窗,转绿=重启非timer,根因归并②)④pidfile清档派SDE;新挂账status write-back 404 recurring(TriModel候查面下窗排);两信分发m-fsd/m-sde深夜禁排产;树账40笔;总表候修项裁毕态+新挂账
+  - e24b17cc docs(g10): CTO观察项裁定卷——①registerPid缺port参裁修(FD一行级×2处对齐TriRLC) ②trirlc-watchdog裸拉缺口裁修(SDE复活段对齐trimlc正形.cmd保真) ③boot期401定谳读数错配销项(face-events台账16:01:21Z mlc pull ok铁证,denied实为16:02:23Z rlc裸拉窗=归并②同根,转绿=8711保真纠偏重启非周期timer)+附带发现status write-back 404 recurring新挂账 ④陈旧pidfile清档可办;三件证据链=server台账+channel.log活体+3333双态探针+双ps1对表
+- registry：v2.1；今日 registry 提交无变化
