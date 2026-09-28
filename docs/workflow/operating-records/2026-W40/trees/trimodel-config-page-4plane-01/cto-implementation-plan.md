@@ -10,7 +10,7 @@
 - **卡面引擎已单套在役，四卡=泛化非新建**：TriModel 卡面（trimmc-card v4：三实体模型/逐条 AES-256-GCM 域锚加密/pending-applied-failed 状态机/ADMIN token fail-closed）系成熟能力——四卡方案=把单卡引擎**参数化出 face 维度**（mmc/mlc/rmc/rlc），不是写四份复制。改动重心在 TriModel 服务端卡面泛化+四 daemon 接入，daemon 本体架构零动。
 - **降级梯三层机制已有两块现成件**：TriRLC/TriMLC 的 key-cache（拉取+本地重加密落盘+15 分钟刷新+24h 过期）=tier1/tier2 机制本体（R-HY 问7 先例在役）；tier3（env/出厂默认）=现行 fallback 链。方案=机制泛化为 config-cache（keys+default_model+policy 摘要），四域面同构铺开。
 - **最大设计张力=MMC/RMC 双源层级**：服务域二 daemon 现行 fleet config-sync 三级解析（env TRIMC_DEFAULT_MODEL > applied bundle > 常量兜底）与 TriModel 卡面拉取是**两个独立配置源**——本方案裁：TriModel 卡拉取插队 tier1，fleet bundle 顺延 tier2，显式层级合并防双 tier2 竞争；**该层级语义候 CPO 对表确认**（默认模型指谁=产品决策，技术面不自裁，与 fallback 收敛裁定同纪律）。
-- **分期交付**：P0 卡面泛化+本地域接入（MLC/RLC）→ P1 服务域接入（MMC/RMC）+降级梯全域同构+R-HY 纠正迁移 → P2 UI 左选项卡重构（CPO IA 为准）+CLI 完整矩阵。每期独立可回滚，独立门审。
+- **分期交付**：P0 卡面泛化+MLC/RLC 域面接入 → P1 MMC/RMC 域面接入+降级梯全域同构+R-HY 纠正迁移 → P2 UI 左选项卡重构（CPO IA 为准）+CLI 完整矩阵。每期独立可回滚，独立门审。
 
 ## §一 现势实勘底图（2026-09-28 04:0x 本席 HEAD 实勘，方案全部立于此）
 
@@ -50,7 +50,7 @@
 ### 1.4 UI 现状（ui/index.html 1396 行单页）
 
 - 现有栏位：「本机（TriMLC 域）」（L99）+「TriMMC（sg）」（L124）+【TriMMC 信息】主卡（L140-142，S1 主位/S2 唯一交互/S4 只写待应用/D7 脏追踪）+连接配置区（claude-fallback 族）。
-- **错误形态坐实**：TriMMC 卡现被用作 R-HY 本地配置的承载（R-HY TriModel 3333 实例的 trimmc-card.json 装着 R-HY 本地域配置）——CEO 纠偏对象。
+- **错误形态坐实**：TriMMC 卡现被用作 TriRLC 域面配置的承载（R-HY TriModel 3333 实例的 trimmc-card.json 装着 TriRLC 域面的拉取配置）——CEO 纠偏对象（§一之二终审：无本地卡，四卡同构皆远程拉取）。
 - D13 注记（L248）：「本机策略折叠区已删除（CEO 裁）：本页单语义化=TriMMC 卡纯度；**本机直生效语义归位 TriRLC 卡四卡规划**」——四卡方向 UI 侧早有预留，本方案兑现该预留。
 
 ## §二 要素① 四卡后端支撑
@@ -67,6 +67,12 @@
 - **GET 拉取响应两档**：`?view=managed`（UI 面：掩码+状态+台账，现行语义）与 `?view=pull`（daemon 面：server 域内解密后的**受控载荷**=provider_entries 键值+default_model+策略摘要，见 §三传输语义）。
 - **face 校验守卫**：{face} 不在册=404（防枚举语义与 GET 面现役口径一致）；在册但凭据不绑定=401 fail-closed。
 - 实现量级：卡面引擎（加密/校验/状态机/apply）**零改**，新增=face 参数路由+registry 常量+pull 视图+台账，预计服务端新增 ≤400 行+测试族。**架构级（API 面扩展）——实施前过本席门审，本方案件即门审材料底稿。**
+
+### 2.2a 拉取拓扑一步到位原则（任务书 §一之二 终审语义的技术兑现）
+
+1. **端点参数化**：daemon 侧拉取端点一律走 `TRIMODEL_API_URL` env（TriRLC env.ts 既有面，Phase 1 先例=http://127.0.0.1:3333）——过渡位（同机 3333）与目标位（独立服务器）**只差 env 配置值，代码与卡语义零变化**。
+2. **卡语义与部署位正交**：卡=域面拉取配置的载体（face 维度）；server 部署位迁移不触卡语义。域锚解密链（server 域内解密→受控载荷→消费机域内重加密）**全程部署位无关**——本设计天然满足「迁独立服务器只换拉取端点」。
+3. **跨机传输安全前提**：过渡位 loopback http 系部署便利非语义依赖；目标位跨机拉取=**HTTPS+Bearer**（R-HY Caddy 443 gate+TLS 前端形态已在役，M1 落位读数先例）——端点换 https 值即得，鉴权与载荷语义不变。执行单验收含「跨机 https 形拉取试跑」固定项。
 
 ### 2.3 鉴权边界：双层制沿用，face 绑定新增
 
@@ -85,10 +91,10 @@
 ### 3.2 拉取→本地重加密时序（四域面同构）
 
 ```
-daemon(TriX)                    TriModel(同机 3333)
+daemon(TriX)                TriModel(端点 env 所指实例；过渡位=同机 3333，目标位=独立服务器)
    │  GET /v1/config/cards/{face}?view=pull
    │  Authorization: Bearer <api-token|face-token>
-   │──────────────────────────────→│ server 域内解密卡条目（同机同用户=可解）
+   │──────────────────────────────→│ server 域内解密卡条目（server 侧密文本建在其域=可解；daemon 同机与否不影响本步）
    │                               │ 校验 face 凭据绑定+落拉取台账
    │←──────200 受控载荷(JSON)──────│ （明文仅存于响应生命周期，不落 server 盘明文）
    │ 本机 key-encryptor 重加密→config-cache 落盘（tier2 载体）
@@ -97,7 +103,7 @@ daemon(TriX)                    TriModel(同机 3333)
 
 ### 3.3 失败语义：fail-closed 落梯不悬空
 
-- 拉取失败（网络/401/404/超时）→ **不阻塞本地运行**（R-HY 问7 口径）→ 落 tier2 last-known-good；
+- 拉取失败（网络/401/404/超时）→ **不阻塞本域面运行**（R-HY 问7 口径）→ 落 tier2 last-known-good；
 - cache 解密失败（域不匹配——被跨机复制过的 cache）→ **视为无效丢弃**，直落 tier3（env/出厂默认）+告警读数——**绝不静默用他域密文猜**；
 - 应用方回写 failed 时附归因码（pull_denied/decrypt_failed/apply_rejected），UI 徽章与台账同显。
 
@@ -112,7 +118,7 @@ daemon(TriX)                    TriModel(同机 3333)
 | 层 | 语义 | 载体 | 生效延迟 |
 |---|---|---|---|
 | tier1 拉取 | TriModel 卡面 pull（face 凭据） | 周期刷新（15min stagger 沿 key-cache 节奏）+CLI 手动 `config pull` | 秒级 |
-| tier2 最近已知好 | 本机 config-cache（域内重加密落盘） | key-cache S2 机制泛化：keys+default_model+策略摘要+{fetchedAt, expiresAt=24h} | 立即（本地盘） |
+| tier2 最近已知好 | 消费机 config-cache（域内重加密落盘） | key-cache S2 机制泛化：keys+default_model+策略摘要+{fetchedAt, expiresAt=24h} | 立即（消费机盘） |
 | tier3 本地直连 | env 键/出厂默认模型 | env 链（域内 .env 收敛后形态，M2 候修边界收敛不回退） | 立即 |
 
 判梯序=tier1 可用→tier1；tier1 败→tier2 未过期→tier2；tier2 败/过期/域不匹配→tier3+告警。**四域面同构=同判梯序+同归因码+同台账形态，仅 face 参数与部署位不同。**
@@ -120,7 +126,7 @@ daemon(TriX)                    TriModel(同机 3333)
 ### 4.2 先例对表（不重造轮子声明）
 
 - **TriRLC key-cache=全梯机制本体**：拉取+域内重加密+24h 过期+15min 刷新已全部在役——tier1/2=该机制从「keys 单维」泛化为「config 多维」，代码量级小笔；TriMLC 同构 fork 同步泛化。
-- **R-HY 问7 服务域梯=失败语义先例**：拉取失败不阻塞本地运行——§4.1 判梯序直接沿用其口径。
+- **R-HY 问7 服务域梯=失败语义先例**：拉取失败不阻塞本域面运行——§4.1 判梯序直接沿用其口径。
 - **TriMMC/TriRMC 服务域**：tier3=现行 fleet config-sync 兜底链原样保留（零回归面），tier1 新增 TriModel 卡拉取，tier2=新增 config-cache。
 
 ### 4.3 MMC/RMC 双源层级合并裁（本方案最大张力点，显式呈裁）
@@ -133,10 +139,12 @@ daemon(TriX)                    TriModel(同机 3333)
 
 | 域面 | tier1 拉取位 | tier2 cache 位 | tier3 | keys | default_model | 策略面（卡三实体） |
 |---|---|---|---|---|---|---|
-| TriMLC | 本机 TriModel 3333 | 本机 config-cache | env | ✓ | ✓ | ✓（mlc 卡） |
-| TriRLC | 同机 TriModel 3333（河源/本机各自实例） | 同机 config-cache | env | ✓ | ✓ | ✓（rlc 卡） |
-| TriMMC | sg TriModel 3333 | sg config-cache | env>bundle>常量（现行链尾段保留） | ✓ | ✓ | ✓（mmc 卡，回归本职） |
-| TriRMC | 河源 TriModel 3333 | 河源 config-cache | 同上同构 | ✓ | ✓ | ✓（rmc 卡） |
+| TriMLC | 端点 env 所指实例（过渡位=本机 3333） | 消费机 config-cache | env | ✓ | ✓ | ✓（mlc 卡） |
+| TriRLC | 端点 env 所指实例（过渡位=同机 3333，河源/本机各自实例） | 消费机 config-cache | env | ✓ | ✓ | ✓（rlc 卡） |
+| TriMMC | 端点 env 所指实例（过渡位=sg 3333） | 消费机 config-cache | env>bundle>常量（现行链尾段保留） | ✓ | ✓ | ✓（mmc 卡，回归本职） |
+| TriRMC | 端点 env 所指实例（过渡位=河源 3333） | 消费机 config-cache | 同上同构 | ✓ | ✓ | ✓（rmc 卡） |
+
+> tier1 拉取位=TRIMODEL_API_URL 参数化端点（一步到位原则，§2.2a）：过渡位→目标独立服务器只换端点配置值，卡语义零变化（任务书 §一之二）。
 
 ## §五 要素④ CLI 配置命令升级方案
 
@@ -147,7 +155,7 @@ daemon(TriX)                    TriModel(同机 3333)
 | `config pull` | 手动拉取+即时生效+回写 status+输出生效读数（来源归因：card/cache/env） | GET cards/{face}?view=pull + PUT status |
 | `config show` | 显示现效配置+**来源归因**（哪层梯在生效）+台账末次拉取读数 | 本地解析链（零网络） |
 | `config verify` | 连通+凭据+解密健康三查（拉取试跑不落盘），回滚前/部署后体检用 | GET 试拉 |
-| `config cache show/clear` | last-known-good 检视/清除（清=强制回 tier1/tier3 验证梯语义） | 本地盘 |
+| `config cache show/clear` | last-known-good 检视/清除（清=强制回 tier1/tier3 验证梯语义） | 消费机盘 |
 
 - TriMLC 现役 `model` 命令保留（`trimlc model` 既有语义），config 族为**并列新增**不替换；TriMMC/RMC 现役 `config-sync` 族（fleet 维）**原样保留**——卡面 config 族与 fleet 维命名空间分离，不混义。
 - CLI 走 HTTP 端点与网页同源（TriRLC cli.ts 同端点先例，非旁路）——**能力对齐=同一 API 面两个消费端**，网页能改的 CLI 能查能拉，CLI 能拉的网页能看到台账。
@@ -165,16 +173,16 @@ daemon(TriX)                    TriModel(同机 3333)
 
 **差异显式标注（候对表）**：①CLI 不开卡写面（写=网页/管理 token 面）——若 CPO 功能项要求 CLI 写，需增 face 写凭据面，授权链另议；②「应用」语义双通道（网页 apply=server 内应用；daemon pull=拉取即本地生效+回写）——两通道同 status 台账，CPO 对表 UI 呈现口径。
 
-## §六 要素⑤ 现存错误用途纠正路径（R-HY 本地配置迁出 TriMMC 卡）
+## §六 要素⑤ 现存错误用途纠正路径（TriRLC 域面配置迁出 TriMMC 卡·R-HY 实例）
 
 ### 6.1 错误形态定性
 
-R-HY TriModel 3333 实例的 `trimmc-card.json` 现承载 R-HY **本地域**（TriRLC）配置——卡 face 语义错位（mmc 卡装 rlc 域配置）。本机/sg 实例卡面与 R-HY 三断链照旧走 M2 候修清单，**本迁移不触生产写面**——本节为实施执行单的预研方案。
+R-HY TriModel 3333 实例的 `trimmc-card.json` 现承载 **TriRLC 域面的拉取配置**（本应归 rlc 卡）——卡 face 语义错位（mmc 卡装 rlc 域配置；任务书 §一之二终审定性：无本地卡，皆远程拉取，TriModel 现役位皆过渡形态）。本机/sg 实例卡面与 R-HY 三断链照旧走 M2 候修清单，**本迁移不触生产写面**——本节为实施执行单的预研方案。
 
 ### 6.2 迁移方案（server 域内流转，零跨机复制）
 
 1. **预检**：R-HY 机上读 trimmc-card.json→server 域内解密验证（同机同用户=可解；解不开=域已被破坏，先治愈后迁移）；snapshot 全卡 JSON 留档（迁移前锚点）。
-2. **映射**：卡内条目按域归属分拣——本地域配置（R-HY TriRLC 消费的条目/策略）→ 新建 **rlc 卡**（`trirlc-card.json`，同引擎 pending 态写入）；真属 TriMMC 域的条目（若有）→ mmc 卡；无法归属条目→呈报不擅断。
+2. **映射**：卡内条目按域归属分拣——**TriRLC 域面拉取配置**（R-HY 实例 TriRLC 消费的条目/策略）→ 新建 **rlc 卡**（`trirlc-card.json`，TriRLC 域面拉取卡·河源实例语义，**非「本地卡」**——§一之二语义，同引擎 pending 态写入）；真属 TriMMC 域的条目（若有）→ mmc 卡；无法归属条目→呈报不擅断。
 3. **切换**：rlc 卡 apply→TriRLC `config pull` 实拉验证（生效读数+来源归因=card）→观察窗（≥1 个 key-cache 刷新周期）。
 4. **回滚锚**：旧 trimmc-card.json **改名 `.bak-<ts>` 原位保留不删**（唯一性后缀纪律同族）+反向迁移脚本（bak→原名+回写 status）——回滚=一次 rename+一次 apply，分钟级。
 5. **UI 侧**：R-HY 实例配置页的 TriMMC 卡呈现随卡面泛化（face 参数化）自然消解——网页按 face 渲染各自卡，错误挂载面不复存在。
@@ -189,8 +197,8 @@ R-HY TriModel 3333 实例的 `trimmc-card.json` 现承载 R-HY **本地域**（T
 
 | 期 | 内容 | 门 | 回滚 |
 |---|---|---|---|
-| **P0** 卡面泛化+本地域接入 | TriModel face registry+泛化端点族（trimmc-card 别名保留）+pull 视图+台账；TriMLC/TriRLC config-cache 泛化+CLI config 族 | 架构级门审（本席）+测试族（API 族+cache 泛化单测） | 泛化层为纯新增，别名保留=老路径原样，revert 单 commit |
-| **P1** 服务域接入+全域降级梯+R-HY 纠正迁移 | MMC/RMC tier1 卡拉取+层级合并（§4.3 裁决落地）+face token 绑定收敛；§六迁移执行 | 同上+迁移预检报告审 | 层级合并 env 逃生门兜底；迁移 §6.2④ 回滚锚 |
+| **P0** 卡面泛化+MLC/RLC 域面接入 | TriModel face registry+泛化端点族（trimmc-card 别名保留）+pull 视图+台账；TriMLC/TriRLC config-cache 泛化+CLI config 族 | 架构级门审（本席）+测试族（API 族+cache 泛化单测） | 泛化层为纯新增，别名保留=老路径原样，revert 单 commit |
+| **P1** MMC/RMC 域面接入+全域降级梯+R-HY 纠正迁移 | MMC/RMC tier1 卡拉取+层级合并（§4.3 裁决落地）+face token 绑定收敛；§六迁移执行 | 同上+迁移预检报告审 | 层级合并 env 逃生门兜底；迁移 §6.2④ 回滚锚 |
 | **P2** UI 重构+矩阵收尾 | 左选项卡+右侧单页（CPO IA 方案为准）；CLI/网页能力矩阵终对表 | UI 交付渲染验证门（LG-035 家族纪律：非作者手测+首启链冒烟+真 HTTP 链路案） | UI 独立 revert |
 
 ### 7.2 依赖图
@@ -215,7 +223,7 @@ CPO 产品规划件（功能项清单）
 | R2 | 双源层级（卡面/bundle）配置漂移 | §4.3 显式层级裁+env 逃生门+config show 来源归因（漂移可见） |
 | R3 | 域锚跨机误用复发 | §三不变量+拉取流内建域核验+失败 fail-closed 落梯+域核验入验收固定项 |
 | R4 | R-HY 迁移丢配置 | snapshot+bak 回滚锚+观察窗+分钟级反向回滚 |
-| R5 | 拉取通道扩大明文键暴露面 | 受控载荷仅响应生命周期+loopback 同机传输+face 凭据；分发收敛维持 M2+ 代理化路线（本席 09-27 裁定原样） |
+| R5 | 拉取通道扩大明文键暴露面 | 受控载荷仅响应生命周期+face 凭据+传输通道分层（过渡位 loopback/目标位跨机=HTTPS TLS，§2.2a）；分发收敛维持 M2+ 代理化路线（本席 09-27 裁定原样） |
 | R6 | 四 daemon 各写一套梯实现漂移 | 同构=机制单源（key-cache 泛化件共享设计，TriMLC/TriRLC 已同构 fork；MMC/RMC config-sync 结构同构）+四域面同判梯序+CLI 同命令族 |
 
 ## §九 门审预告（任务书 §四 命令面）
@@ -250,3 +258,38 @@ TriModel 服务端 API 面扩展=架构级改动——**实施执行单开工前
 ### 使用依据（本节）
 
 cpo-cto-plan-reconcile.md @ 9496b1e09（sg-server 远端 tip，本席未直接读取文件面、以 CPO 回执文+COO 转达令为准——远端 tip ls-remote 验真由转达方完成）；claude-fallback.ts L28 本席 HEAD 实勘（备份机制在役先例）；m-cpo 对表知会（04:21）；COO 转达令（04:21:53 hook）。
+
+## §十一 终审纠偏回炉修订记录（CEO 09:34 推翻「本地卡」定名，COO 拆派 09:39，2026-09-28 09:4x 修订落笔）
+
+### 修订依据
+
+任务书补 §一之二（a8066d40）：「本地卡」概念整体不成立——四卡同构=四域面各自**远程拉取** TriModel 配置的板块，「本地/远程」非卡属性；TriModel 现役位（本机/R-HY 3333）皆过渡形态，目标=独立服务器，四卡语义对目标形态一步到位。凡「本地卡/本地域卡」表述全案清除。
+
+### 修订清单（十二处）
+
+| # | 位置 | 修订 |
+|---|---|---|
+| 1 | §0 分期句 | 「本地域接入」→「MLC/RLC 域面接入」（域面角色语义，去卡属性歧义） |
+| 2 | §1.4 错误形态 | 「R-HY 本地配置/本地域配置」→「TriRLC 域面的拉取配置」+§一之二定性引用 |
+| 3 | §2.2a（新增） | 拉取拓扑一步到位原则三条：端点参数化（TRIMODEL_API_URL env 既有面）/卡语义与部署位正交/跨机传输安全前提（HTTPS+Bearer，R-HY Caddy gate 先例） |
+| 4 | §3.2 时序图 | TriModel 标注「端点 env 所指实例（过渡位/目标位）」；server 域内解密语义精确化（与 daemon 同机与否无关） |
+| 5 | §4.1/§4.2 | 「不阻塞本地运行」→「不阻塞本域面运行」（×2）；tier2「本机 config-cache/本地盘」→「消费机 config-cache/消费机盘」 |
+| 6 | §4.4 矩阵 | tier1 拉取位列四行统一「端点 env 所指实例（过渡位=xxx）」+矩阵下加一步到位原则注 |
+| 7 | §5.1 | 「本地盘」→「消费机盘」（config cache 行） |
+| 8 | §六标题+§6.1 | 「R-HY 本地配置迁出」→「TriRLC 域面配置迁出 TriMMC 卡·R-HY 实例」；§6.1 加 §一之二定性 |
+| 9 | §6.2 映射步 | rlc 卡建卡语义改写：「TriRLC 域面拉取卡·河源实例语义，非『本地卡』」 |
+| 10 | §7.1 P0/P1 行 | 「本地域接入/服务域接入」→「MLC/RLC 域面接入/MMC/RMC 域面接入」 |
+| 11 | §八 R5 | 传输通道分层成文（过渡 loopback/目标跨机 HTTPS，§2.2a 引用） |
+| 12 | §十 对齐检查 | 备份轮换/审计两条**无本地卡残留**（机制面表述），随 §六语义修订自动对齐——检查毕零改动 |
+
+### 语义边界保留声明
+
+「**本地域**」作为两面×两域矩阵的**域面角色属性**（任务书 §一 CEO 原文「两域（服务域/本地域）」）**保留**——§1.3 矩阵「M·本地域/R·本地域」行属角色语义非卡属性，§一之二清除对象为「本地卡/本地域卡」卡承载概念，两者分离。tier3「本地直连」系任务书 §一 CEO 降级梯原话用词，保留（语义=daemon 直连 provider 不经 TriModel，梯层语义非卡属性）。
+
+### 回炉后技术判断
+
+原方案架构面（face 泛化/域锚不变量/降级梯/CLI 矩阵/双源层级裁）**零结构性变化**——本轮修订为语义对齐+一步到位原则显式成文（§2.2a 新增=本轮唯一实质新增设计面，其中跨机 HTTPS 传输前提系补终审审查抓出的显性化缺口，现役 R-HY Caddy 形态已具备非新增建设）。§十 两 P0 确认（备份轮换/审计）不受影响维持。
+
+### 使用依据（本节）
+
+任务书补 §一之二（a8066d40 本地 dev 勘讫）；BOD 会审笔 §三（70c573c4，COO 勘在位转达）；CEO 09:34 原话（COO 流转单照录）；TriRLC env.ts trimodelApiUrl 既有面（本席 04:0x 实勘）；R-HY Caddy 443 gate 形态（LG-054 M1 落位读数在卷）；COO 拆派令（09:39 hook，接令回执 f3455d1b）。
