@@ -116,6 +116,24 @@
 - §6.2 五步进度：①预检=本报告；②映射=§六分拣表+载荷草案（纸面毕）；③切换（rmc 卡 apply→TriRMC config pull 实拉验证→观察窗≥900s）与④回滚锚成文、⑤UI 侧消解=**候双门（CTO 门审+CEO 知悉窗）**。
 - 本席无写面动作申报：全程 read-only；唯二机内动作=snapshot cp（令文授权）+md5 双验。
 
+## 十二、门审裁决补注（2026-09-29 02:38+0800 回写；CTO 门审 01e9e3c8·COO 跟排转知）
+
+**门审结果：四项全 PASS+切换就绪 CONDITIONAL READY。**
+
+### 三裁要点（对前文形态的修正，以本节为准）
+
+- **ⓒ 建卡形态=新增复制，主卡保留不动**：切换步 rmc 建卡=trirmc-card.json 新增件（自主卡复制条目非移动），**主卡 trimmc-card.json 零触碰**——修正 §六分拣表处置列与 §八回滚锚主案（原「主卡改名 .bak-<ts>」不再执行）；A3 mmc 卡空白态问题**剥离归 M2 另窗另单**（§九 A3 行依赖链分析归档候 M2 引用），切换步不再涉分发面兼容性判断。回滚锚随 ⓒ 简化：反向迁移=新建 rmc 卡改名/移除+主卡原样在位（主卡自始未动）。
+- **ⓐ 策略实体=案A 全量搬运**（§六两案候裁闭合），护栏=策略链活体三验（切换步执行面：strategies/rules/model_sets 计数对表+active_strategy_id 一致+TriRMC 侧 apply/pull 载荷内策略实体可见性）。
+- **ⓑ machine 写河源实锚正名**（§六元数据候裁闭合）：rmc 卡 machine.name=河源实锚（hostname=iZf8ziw57ydktu77fsld9yZ 或 fleet 惯例正名，切换步建卡载荷落定时定稿）。
+
+### 执行链更新（三前置+候命态）
+
+1. **前置①**：FSD 范围 2 河源落位绿锚（候定，非本席域）。
+2. **前置②**：TriModel 河源升级窗——版本锚=**e9938cc**+**强制钉 `TRIMODEL_DISABLE_BOOT_MIGRATIONS=1`**（CTO 加钉理由：不钉则升级首启 boot 迁移触主卡——与 ⓒ 主卡零触碰红线直接挂钩；systemd 面落位=unit `Environment=` 行追加或 drop-in override，照 unit bak 留痕先例）。升级与切换可同窗连做。
+3. **前置③**：CEO 知悉窗（生产写面，候排期）。
+
+本席候命态维持：**FSD 落位绿锚+CEO 知悉窗双候**；升级窗 SOR（§八 systemd 形态已成文+本节强钉增补）按卷执行；观察窗≥900s 照准。
+
 ## 使用依据
 
 - 令文：CEO 02:10 显式令（预检先行）；COO 02:14 拆派（231fca65 范围 3 §六五步+部署面+A1-A4 锚）；COO 裁复（执行口径折叠形态显式写入）；CTO 补注 078f0cf7（SOR 三层回滚序+成文拉起令=门审审点）；CTO 实现计划 §六（cto-implementation-plan.md L176-192 五步+6.3 锚）。
