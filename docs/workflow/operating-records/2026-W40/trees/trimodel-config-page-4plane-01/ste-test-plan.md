@@ -120,6 +120,13 @@
 - **裁 1 联动面（本席测试文件）**：案②（decrypt_failed 行为面）=**定案形态**（裁 1 乙：server 侧不补不降维，注释已定案化 @ 86fdec2）；案③（apply）候 FSD N3-N5 补 emit 后随裁更新（apply_rejected 事件断言加入）；案①（status failed）系 200 正常路径审计案，非 200 emit 补丁不触及——COO 附注「案①随裁更新」按此澄清，案①断言不变。
 - **勘正知会入卷**：pull_denied 在役有 emit（CTO 勘正）——本席 §九 表述口径即两码（decrypt_failed/apply_rejected），无三码全缺歧义；知会收讫。
 
+## 十二、BOD 哨裁两固定项入卷 + FSD N3 对表（COS 转达 2026-09-28 15:46；N3=4d8e735）
+
+- **固定项①（BOD 令）**：`bak-20260927-2325-pre-fullflash` 双重身份（生产 policies/local.json 恢复源+本席 A5 证据）——**A5 卷收口时「该 bak 保留必要性」列入确认面**；清场流程升格=STE 确认→BOD 双确认→方可清。本席侧义务已挂 A5 收口清单。
+- **固定项②（BOD 令）**：「E2E 禁触生产路径」硬断言入 STE 固定项——栅栏要求自本令起属固定项非候选项。**落地面已勘**：FSD 族1 整改链（7f8ba7e 卡面钉沙箱+9d47ceb boot migrate seam+4d8e735 策略面 belt 全撤）已实现栅栏本体（UI E2E bootServer 三钉位：TRIMODEL_POLICIES_DIR 钉 workDir/TRIMODEL_DISABLE_BOOT_MIGRATIONS=1/TRIMODEL_CARD_FILE 钉 workDir）；**A5 复验核验项增补：栅栏在位值面验证**（bootServer env 三钉位断言+仓根活卡/活策略零接触实证）。TRANS_LOG belt 残留 2 套件与 server 侧 snapshot-protocol 同型面候勘时一并上栅栏（候勘联动项在卷）。
+- **FSD N3 对表（4d8e735，本席文件面）**：①案③更新系 FSD **代执行**（走本文件 L10 预授权条款）——断言改「恰一条 failed 审计行 reason=http_404」，与裁 1(甲) emit 形态吻合（wrapper 鉴权拒=denied/admin_auth，delegate 非 200=failed/http_<code>；apply_rejected 留 daemon 侧语义不冒用）——**对表追认**；②案①②未受 N3 触及（200 路径/decrypt_failed 定案形态）✓；③本席 bump 四点在位（L132/L146/L285/L347/L398，belt 撤除零触碰）✓；④STE 3 案复验 **3/3 全绿**（15:5x +0800，N3 树上现势）。
+- **注记**：N3 动 policy.ts（评估序投影+8 行）与 keys.secure/policy.gate.e2e/proxy.gate 四测试件——全量基线读数变化候晚间 L3 窗全量门见真章，本席 §七 基线锚对平判据照旧适用（fail⊆基线+归因独立验）。
+
 ## 使用依据
 
 执行单 d9df61bc（§一.6/§二/§三/§四全读）；cto-implementation-plan.md v3 @ afb0180c（§2.1/§2.2/§2.3/§三/§四/§5.2/§十 两 P0 确认/§十一 v3）；判定件 v3 @ 9bd40491（commit 题录）；COO 拆派令（2026-09-28 10:33 hook）；LG-054 族③教训卷（ste-crossmachine-base-adaptation.md §二/§五，唯一性后缀直引）；工作区记忆条：全量读数回报/键存在性抽验≠值面验证/命令链断言。
