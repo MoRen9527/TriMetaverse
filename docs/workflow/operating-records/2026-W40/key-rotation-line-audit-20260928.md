@@ -78,3 +78,18 @@
 ## 使用依据
 
 keys.js（dist/src/api/keys.js readKeys+S5 归并读链实勘）/key-source.js（deriveProviderKeys 卡覆盖→env 回落，1de9fe5 09-11 引入+09-27 HEAD a9d9fc8 内容实勘）/trimmc-card.js+api/trimmc-card.js（卡写面+水合语义）/security/key-encryptor.js（AES-256-GCM+PBKDF2 机器指纹）/anthropic-proxy.js L62（出站链同走卡覆盖）/config.ts L10-12（dotenv 上扫）/掩码扫描 D:/tmp/lg057/mask-scan-keys.mjs+read-env-deepseek.ps1（留档可复跑）/W39 cto-triage-verdict.md §三（09-27 泄出路径+原裁）/W40 p0 树 cto-preaudit-findings.md §三（今日两枚发现源）/GLM 四面点位图（docs/execution/2026-08-27/glm-model-deployment-map.md）/deepseek.txt+D:/Code/ai/.env 备份链（轮换执行面）。
+
+## 八、M2 候修⑤·sg GLM 键落卡执行读数（COO 22:49 拆派/COS 22:51 触发令，date 现查 2026-09-28T22:57:xx+0800）
+
+**前置⓪闸**：PEB 全值脚本闸已清（read-env.ps1 v2 掩码闸，18ca213a）——本单实际未动用 PEB（键值 sg 机内经手零落上下文），闸为备用前置 ✓。
+
+**五步逐项（SSH fleet@sg 机内作业）**：
+1. **勘验** ✓：临时件 /tmp/.sg-glm-key-20260928 在位（49 字节/fleet 600/md5=135cb7cca54c05f9caf8f042716b05db=BOD 双端断言一致零 CRLF 污染）；sg TriModel=/srv/fleet/TriModel 双进程（server.js 3333 config plane pid 3013299+proxy-server.js 3334 pid 3008009）；**卡文件不存在**（候修⑤「card 缺失」实锤）→PUT 走 emptyCard 基座首次建卡；
+2. **机内 PUT card** ✓：载荷 sg 机内构造（python3 读临时件→/tmp 600 载荷→curl PUT Bearer ADMIN_TOKEN 机内取）→**http=200**，resp `{ok:true, entries:["e-glm-anthropic"]}` status=pending（pending 仅 UI 应用态标记，读链 loadCard 现读不问 status——零重启成立）；键值全程机内经手零出机 ✓；
+3. **零重启生效断言** ✓：GET /v1/config/keys 供 glm **len=49 head=1c61 tail=CzBa**（=COO 令文公示掩码一致）——卡条目即时入分发面，server 未动 ✓；
+4. **出站真实消费断言** ✓ **200**：POST 3334/v1/messages（proxy 面，/v1/messages 404 系先打错 config plane 勘正）→真实 GLM 回包（msg id+content 实返，max_tokens=1 成本≈零）——卡路径消费实锤（proxy 经 deriveProviderKey 读卡出站）；
+5. **临时件销毁** ✓：rm+absent 断言过；载荷/响应临时件同步清 ✓。
+
+**纪律对表**：禁裸杀禁重启面（零重启硬约束）✓；钥全值禁入消息链禁落会话上下文 ✓（sg 机内脚本经手，SSH 通道只过掩码读数）；读数掩码口径 len+head4+tail4 ✓。
+
+**候修⑤三件随读数**：「键空值+card 缺失」闭环（卡建成+新键入位+消费通）；dotenv 缺陷被卡路径绕开→观察档维持。
