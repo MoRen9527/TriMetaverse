@@ -99,3 +99,13 @@
   - a6f5129c docs(m2-候修⑤): sg GLM键落卡执行读数全绿——卡缺失实锤PUT首建200/零重启生效断言tail=CzBa一致/出站3334真实消费200/临时件销毁absent;键值全程sg机内经手;PEB闸前置已清未动用
   - 2696108c docs(LG-058): STE L3 轻载窗读数全卷归卷（§十三=A5 门审包本体）——三仓独立全量 313/295/3+662/657/5+617/611/6；六案复绿 4/6（E5/E7/E8/W4 零超时不贴限，W1 click 30s 超时新形态，W2 断言失败形态迁移=真问题候选）；W3 贴限新挂；TriMLC runConfirmCheck 隔离复跑 21/21=flaky 定性；栅栏值面实证 PASS（生产双文件 before/after hash 逐位一致）；bak 保留确认面入卷；门层判定 CONDITIONAL 候 CTO 正式门审
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 598a7eb4 后新增 8 条 commit：
+  - 2c3796c0 docs(录账): 推送面三点同顶43262eca——sg bare推平(merge watcher笔598a7eb45后零diverge直推)+GitHub候推积压随sg镜像链清零(06740578→43262eca,443复通,fetch独立核真);GitHub补推候批挂账闭环;总表推送面节更新
+  - 43262eca docs(录账): LG-017/018升窗四笔全闭——①CTO hook正身入仓4e93488d(4件350行,17/17绿,入仓≠部署≠激活候部署窗)②CAO D-35毕③维持④代记;树账lg017 N5;总表升窗行终态
+  - 1a52c468 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7741a764 docs(LG-058): 终判卷转呈BOD收讫录账——A5正式PASS+FREEZE解除+09-29哨窗依约自动生效(BOD 23:24确认无需再确认);树账36行(终判卷落卷笔);总表LG-058行终判态+L3门审终判三毕链更新;FSD树内两件(fs-ack/node-n1-n2)随批补commit防丢;lg017树账N4(D-35入册毕)
+  - 4e93488d feat(LG-017): 升窗可动面①hook 脚本正身镜像入仓——pre-receive-dev-control（dev 邮箱允许单 deny-by-default 双字段判+anti-non-ff+禁删+staging 从宽+500 上限 fail-closed+拒因文案三类）+post-receive-rface-tripwire（撞点只观测不拦截，周日 23:00-23:59+0800 窗外旗标）+fixture 自测驱动（17 用例 V21-2 §四.6 六类全过+补充：边界 refs 不设防/超限/tripwire 窗内外，本机实跑 17/17 绿）+README（边界声明+部署注记：部署另令候窗，三件套同批激活约束不变；入仓≠部署≠激活）
+  - de76b2d3 docs(LG-058): P0-EXEC-01 终判卷——A5 转正式 PASS+部署步 FREEZE 正式解除：e9938cc 独立实勘授权域合格（三参签名修+7 处 click bump 零越域零断言语义变更）；收口判据全闭合（W2 隔离复跑 3421ms PASS=真回归候选证伪归因闭合测试层/13-13 绿零贴限/全量 313-298-0-15 与 N5 终读数逐字一致）；哨窗前移条件达成（落卷 23:2x 早于 09-29 20:00 前置锚）
+  - 241a2c4f docs(录账): CEO 23:14 LG-017/018三笔裁流转毕(①hook入仓→CTO②hosts纪律→CAO③候窗维持④勘正代记留痕)+FSD复绿窗完工提前两日(13/13绿W2归因闭合e9938cc)+BOD哨窗前移裁(09-29 21:30后,回退条款=CTO两卷面09-29 20:00前落卷);树账35行+lg017树账N3
+  - 6c83e392 docs(LG-058): BOD哨验收窗定窗录账——09-30(周三)21:30后启动(A6 revert BOD亲跑;N3遇阻哨窗同顺延10-01 10:00后不再二次协商;09-29 FSD提前收口可报备提前);定窗知会已达FSD
+- registry：v2.1；今日 registry 提交无变化
