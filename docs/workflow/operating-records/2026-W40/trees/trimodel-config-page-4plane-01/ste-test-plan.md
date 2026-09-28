@@ -127,6 +127,46 @@
 - **FSD N3 对表（4d8e735，本席文件面）**：①案③更新系 FSD **代执行**（走本文件 L10 预授权条款）——断言改「恰一条 failed 审计行 reason=http_404」，与裁 1(甲) emit 形态吻合（wrapper 鉴权拒=denied/admin_auth，delegate 非 200=failed/http_<code>；apply_rejected 留 daemon 侧语义不冒用）——**对表追认**；②案①②未受 N3 触及（200 路径/decrypt_failed 定案形态）✓；③本席 bump 四点在位（L132/L146/L285/L347/L398，belt 撤除零触碰）✓；④STE 3 案复验 **3/3 全绿**（15:5x +0800，N3 树上现势）。
 - **注记**：N3 动 policy.ts（评估序投影+8 行）与 keys.secure/policy.gate.e2e/proxy.gate 四测试件——全量基线读数变化候晚间 L3 窗全量门见真章，本席 §七 基线锚对平判据照旧适用（fail⊆基线+归因独立验）。
 
+## 十三、L3 轻载窗读数全卷（=A5 门审包本体；2026-09-28 22:07-22:54 +0800）
+
+- **窗令执行链**：COO 窗令（16:4x）三项=①六案真复绿（判据=裁 2(b) 零超时且不贴限）②三仓独立全量+各案耗时分布（A5 门审包）③BOD 双固定项在办面。本席轻载择时 cron 22:07 触发；负载快检过（node 进程稳态无活跃测试负载，轻载窗成立）；三仓串行链 `TriModel→TriRLC→TriMLC` 后台子壳 pid=8253，22:49 ALL-DONE。**三仓均独立全量真跑，未转抄 FSD 报读数**。
+
+### 三仓独立全量读数（含与 FSD 报对差）
+
+| 仓 | 本席独立验（tests/pass/fail/skip, exit） | FSD 终报 | 对差 |
+|---|---|---|---|
+| TriModel | **313/295/3/15, exit=1** | 313/298/0/15 | **3 fail（W1/W2/W3）FSD 报 0**——tests 数一致，差全在 fail 侧 |
+| TriRLC | **662/657/5/0, exit=1** | 662/657/5/0 | 一致；5 fail 独立提取案名=§七基线四族**逐位同构**（replay-flow 旧名残留/tui ink 缺装/P0 通道门/ASSESS-005 派工+可见性），零新增 ✓ |
+| TriMLC | **617/611/6/0, exit=1** | 617/612/5/0 | **+1 fail=runConfirmCheck — L1 三面比对**（init-confirm.test.ts，子案断言 `false !== true`，1.95s）——见下归因 |
+
+### 六案复绿判据对照（裁 2(b) 口径：零超时且不贴限）
+
+| 案 | r2 形态（§十） | L3 结果 | L3 耗时 | 判据 |
+|---|---|---|---|---|
+| E5 | goto 超时 | **pass** | 1.1s | ✓ 零超时，远不贴限 |
+| E7 | goto 超时 | **pass** | 1.4s | ✓ |
+| E8 | goto 超时 | **pass** | 1.7s | ✓ |
+| W1 | reload 77s 超时 | **FAIL** | 36.1s | ✗ `page.click #tc-r-save` **30s 默认限超时**（click 维度=裁 2(b) bump 四点未覆盖面；元素 visible/enabled/stable 后卡 hit-test——页面主线程/遮挡候选） |
+| W2 | reload 超时 | **FAIL** | 65.5s | ✗ **断言失败**「真卡规则在表（三窗切换/默认模型）」expected true actual false——**形态迁移自 r2 reload 超时，非超时族**，真问题候选（见下） |
+| W4 | reload 超时 | **pass** | 214.8s | ✓ pass；总时长含多 reload 周期累计，单步未贴限（耗时分布如实报） |
+
+- **复绿判定：4/6**。W1=超时族（click 维度新形态）；W2=断言族（**归因家族迁移**：r2 环境型定性不能外推覆盖现形态）。
+- **W2 归因独立验**（关键项）：reload 已过（bump 生效推进更深）但断言挂「规则 reload 后不在表」——W 族同域（规则实体持久）三案形态并观：W1 保存动作卡、W2 持久断言挂、W4 完整周期 pass。**本席判定：规则持久域存在真实问题候选，r2「六案全环境型」归因不完整；是否阻塞裁门候 CTO**。候勘面：W2 断言读真卡（「真服务非空卡」）与 sandbox 钉位面交互是否受 FSD 族 1 栅栏改动影响（TRIMODEL_CARD_FILE 钉 workDir 后 W2 读面断言口径）。
+- **W3（非六案，r2 pass）**：L3 **FAIL** goto 60s **贴限超时**（335.9s 总时长含多次导航重试）——按裁 2(b) 语义「贴新上限=仍脆非复绿」；r2→L3 六案外新挂=环境脆性仍在指纹（轻载窗仍挂 goto 贴限）。
+
+### TriMLC 新增案归因（runConfirmCheck）
+
+- 全量挂（子案「三面一致 → l1 全 ok + readyForConfirm」断言 false!==true）；**隔离复跑（同构命令单文件）21/21 全绿**（22:5x +0800）→ **flaky 定性，非稳定回归**。测试本体=全脚本化 mock（scriptedGit+fixture registry/bundle+本地 statusServer，零真实 git/网络）——非 LG-058 改动面（TriMLC init-confirm 与 TriModel config cards 零关联）。根因未定（长链进程间时序/资源候选，单样本复现不足定根因），候 CTO 定是否列观察项。
+
+### BOD 固定项② 栅栏值面实证（PASS）
+
+- 生产文件 before 快照（22:1x 窗起摄制）→ after（22:49 链毕摄制）**逐位一致**：`trimmc-card.json` mtime=1790580407 sha256=588117a09f92a7614f4717d639725c37335b182d484338ba997305faa2e2fdc5；`policies/local.json` mtime=1790581026 sha256=7a7b01a14dab40e6112d6d4dbbc56e3141bd597f73127c5a5d3ae2004b2d0326。三仓全量（含 UI E2E 真浏览器启动链 20+ 次 bootServer）零触生产 ✓——FSD 族 1 栅栏三钉位实证有效。静态面三钉位（L94/L95/L96+L126）§十二 已勘 ✓。
+- **固定项① 确认面（A5 收口义务，候 BOD）**：`bak-20260927-2325-pre-fullflash` 保留必要性——本席确认：该 bak=生产 policies/local.json 恢复源+本席栅栏值面实证基线（before 快照之对照锚），**A5 门审出卷期间须保留**；门审毕、BOD 哨验收（09-30）后可循升格流程（STE 确认→BOD 双确认）清场。
+
+### L3 门层判定（本席测试判断，候 CTO 正式门审）
+
+- **CONDITIONAL**：六案复绿 4/6（W1/W2 不达判据）+W3 新挂贴限+TriMLC flaky 1 案——非 FAIL（基线四族零新增、栅栏实证过、无 LG-058 改动面稳定回归），非 PASS（复绿判据未全达+W2 断言族需归因裁决）。A5 全卷（§十 r2 归因+本卷）候 CTO 正式门审裁：①W2 断言族归因方向（真回归 vs 栅栏交互 fixture 面）②W1 click 维度是否列入 bump 追加裁③W3 贴限与 TriMLC flaky 处置④门审放行/另窗复验裁量。
+
 ## 使用依据
 
 执行单 d9df61bc（§一.6/§二/§三/§四全读）；cto-implementation-plan.md v3 @ afb0180c（§2.1/§2.2/§2.3/§三/§四/§5.2/§十 两 P0 确认/§十一 v3）；判定件 v3 @ 9bd40491（commit 题录）；COO 拆派令（2026-09-28 10:33 hook）；LG-054 族③教训卷（ste-crossmachine-base-adaptation.md §二/§五，唯一性后缀直引）；工作区记忆条：全量读数回报/键存在性抽验≠值面验证/命令链断言。
