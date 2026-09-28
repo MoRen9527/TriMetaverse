@@ -49,6 +49,16 @@
 - **M5（观察窗）** 切换后 ≥1 个 key-cache 刷新周期：周期计算依据=现役刷新间隔配置现查（禁估读）；到期后 M1 复跑仍归因=card；判据=持久性成立。
 - **M6（映射面，§6.2②）** 无法归属条目呈报面核验：映射清单与 snapshot 对表（无法归属条目=呈报非擅断）；判据=分拣清单可溯源+呈报项零擅断。
 
+### 四.1 M1/M5 录位（2026-09-29 06:2x+0800 date 现查 UTC 2026-09-28T22:21Z；P1 已闭合宣告成立 04:56，COO 04:59 知会三锚）
+
+河源窗**已闭全绿非在途**（窗链 02:55→03:04→03:19→03:26-28 收口；N8 行 03:32 转 done）。本席 M1/M5 录位径引三锚+读数卷值面独立走读（非转抄）：
+
+- **三锚**：N8 done 行（03:32）+ 读数卷 `rhy-switch-readout-20260929.md`（2e262c9d）+ BOD 终卷 a2cd2538（04:56 P1 闭合宣告成立，BOD 哨窗第四时点复证）。
+- **M1（=A1）判读 ✓**：读数卷 §三.6 活体读数=`config show` face=rmc/effective model=deepseek-v4-pro/**source=tier2-cache-fresh**/cache fresh（fetched 19:04:01Z, refresh=900s）/providers(2)/ladder card-fresh+`config verify` HEALTHY（三 ok）。**本席独立判读**：tier2-cache-fresh=tier1 卡链 cache 层新鲜供数（boot 日志 `pulled fresh config (2 providers)` 上游印证），**非降级兜底态**（last-known-good 仅拉取失败后承接）；归因链=card ✓ 且卡面语义 rmc（face=rmc 非 mmc 别名残留）——与 M1 判据吻合；SDE 卷 A1 锚判定+Ladder card-fresh 双证同向。
+- **M5（观察窗持久性）判读 ✓**：读数卷 §五+§八=900s 第二轮刷新双实例 03:19 成功+主卡 md5=bac279a6 三时点全等（零触碰）+rmc 卡 pending→applied 自动写回+轮转备份 5 件；BOD 第四时点复证（终卷 a2cd2538）——≥1 key-cache 周期后归因持久性实证成立。
+- **A2/A3/A4 锚随卷判读**：A2 形态升级采认（主卡零触碰自始，反向迁移=移除 trirmc-card.json+TriRMC env 撤钉，比 .bak-<ts> 改名更简——SDE 申报+BOD 终卷已裁，形态升级非缺位）；A3 剥离归 M2（本窗不涉，SDE 申报显式）；A4 零跨机复制 ✓（SSH+机内构造，git fetch 系代码管道）。
+- **写面动作零触碰确认**：本席全程只读走读（读数卷+git show），未触任何生产写面 ✓。
+
 ## 五、T-fix：P0 候修三项随批验证（范围6）
 
 - **X1（候修①）** PUT 无 provider_entries 载荷 500→400 人话拒：L1 API 案（in-process dispatch+沙箱钉位，同 config-cards 族方法）入 `config-cards.ste.test.ts` 增补；判据=400+人话错误体+零 500。**案可即日预置候 FSD 落位同批跑**。

@@ -32,6 +32,29 @@
 - **C1** CTO §5.2 底表逐格终核：CLI 命令×网页能力矩阵每格实测（CLI 侧实跑+网页侧活体点验）；判据=每格「CLI 有/网页有/差异标注」三值如实，差异面显式标注归档。
 - 测试侧辅助面：矩阵核验读数留痕（格 ID+实测时点+读数），供 CPO IA 对表与 CTO 门审引用。
 
+#### C1 CLI 半边读数（夜窗实跑 2026-09-29 05:40-06:22+0800，date 现查 UTC 2026-09-28T21:40-22:21Z；COO 04:50 放行+04:59 启勘认可）
+
+**四面×四命令实跑矩阵**（只读面；mmc 面=sg 值 P1 收口链锚引用，rmc 面=河源值读数卷锚引用）：
+
+| CLI 命令\面 | mmc（sg TriMMC） | mlc（本机 TriMLC 8713） | rmc（河源 TriRMC 8712） | rlc（本机 TriRLC 8711） |
+|---|---|---|---|---|
+| `config show` | 候 sg 锚（P1 收口链） | **token 门拦**（401 人话报错，逐格实证） | ✓ 读数卷锚：face=rmc/source=tier2-cache-fresh（2e262c9d §三.6） | ✓ face=rlc/source=tier2-cache-fresh/cache fresh refresh=900s/providers(0) |
+| `config pull` | 候 sg 锚 | token 门拦（同门实证） | ✓ 读数卷锚：切换后 config pull 实拉验证（三键掩码吻合） | ✓ OK(mode=model-relay)/source=tier1-card（dev daemon=定时刷新同构扰动） |
+| `config verify` | 候 sg 锚 | token 门拦（同门实证） | ✓ 读数卷锚：HEALTHY（connectivity/credentials/decrypt 三 ok） | ✓ HEALTHY（decrypt: n/a, card_present: false——本机无卡预期态） |
+| `config cache show` | 候 sg 锚 | token 门拦（同门实证） | TriRMC src/cli.ts case 归并同构（L490-491）；河源 cache show 单列读数未在卷 | ✓ 与 config show 同文输出（case 归并实现，见发现④） |
+
+**矩阵发现项（呈 CTO 裁/CPO 对表，均非阻塞）**：
+
+- **①CLI help 显示名残留**：TriMLC/TriRLC 两仓 dist/cli.js help 头均=「TriLC (Local Controller)」，default port 文案=8711——仓改名（TriLC→TriRLC 2026-08-31）未触 CLI 文案；两仓 package.json 同名 `trilc`。命名类，候 P2 术语排查（G2②）合并裁。
+- **②同构 CLI 两面鉴权行为不一致**：8711（TriRLC）daemon 无 token 门放行 / 8713（TriMLC）daemon 启 token 门拦无凭据 CLI 通道（本席 CLI env 无 TRILC_INTERNAL_TOKEN）。CLI 侧 401 报错人话 ✓（且区分 internal_auth_disabled 与 token 不匹配两分支，src/cli.ts L780-782）。**佐证面**：BOD 哨验 04:4x 曾以带 token 通道实弹通过 8713 pull（N15 ③「8713 mlc pull 实弹 tier1-card」）——daemon 门活体正常，差异=CLI 通道凭据面非 daemon 故障。token 面属 P1 范围 5 候 M2 独立线——如实记录部署形态差，不判缺陷。
+- **③pull 的 source 字段语义双轴疑**：8711 实跑 `config pull` 输出 `source: tier1-card` 与同行「card absent server-side; keys preserved」自相矛盾候选（同期 `config verify` 读数 `card_present: false`）。源码印证：show 渲染 `effectiveSource`（值面归因）+`lastAttribution`（末次拉取归因）两字段（L826-836），pull 渲染独立 `source` 字段（L789-790）——pull.source 疑=「本次拉取通道归因」非「生效值来源」，与 show 的值面归因同用 source 字段名=语义歧义。**同字段名双轴语义，呈 CTO 裁字段口径**；对 A2 诚实三态的影响：三命令并读方可还原完整态（通道活+空卡+缓存承载+relay 降级），单命令读数不构成「UI 态对表基座」。
+- **④cache show 无独立降级梯视图**：`case 'show': case 'cache':` 归并实现（src/cli.ts L490-491 同构三仓）——`config cache show`=config show 别名，梯语义仅靠 show 输出的 cache 行（fresh/stale-grace(tier2.5)/expired）+source 字段承载；§5.2 矩阵行 5「降级梯检视=cache show」宣称与实装差距（四面三态链 card→last-known-good→local direct 无专门检视视图）。呈 CTO 裁：采认别名语义（矩阵行 5 改注）或增补梯视图（P2+）。
+- **⑤CLI 独有命令在矩阵无行**：`config cache clear`（DELETE cache，写面）+`model` 族（§5.1 现役保留）在 §5.2 矩阵 6 功能项无对应行——差异面另一方向（CLI 多出能力）。本席未实跑 cache clear（写面零触碰）；矩阵终对表时增补「CLI 独有」差异行候 CPO IA 对表。
+
+**格读数细节留痕**：8711 面四命令实跑时点 2026-09-28T21:40-21:55Z 窗内；`config show`/`config cache show` 同毫秒 fetched=2026-09-28T21:50:23.536Z（同 daemon 同缓存读）；8713 面 status 活体=service:trimlc/pid 10348/healthz ok（daemon 在役，仅 CLI 通道被 token 门拦）；TriRMC 河源面不重触（读数卷锚引用，SDE 已实跑留痕）。
+
+**CLI 半边结论**：矩阵宣称「4/4 daemon 覆盖」的四命令在 CLI 面**实现均在**（三仓 CLI config 族同构+mmc 面候 sg 锚），活体可达格 8711 全通、8713 全拦（token 门）、rmc/mmc 面锚引用；发现①-⑤如实入卷候裁。网页侧点验候正常工时，两半合卷后方成 C1 终对表。
+
 ### A4 渲染验证门全过（LG-035 家族，全项硬门）
 
 - **R1** 非作者手测：=A1 全案（本席亲测留痕）。
