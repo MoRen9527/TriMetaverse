@@ -130,3 +130,8 @@
   - 7606c16c docs(LG-058): CTO观察项裁定卷落卷录账(e24b17cc)——①registerPid裁修派FD(FSD回执自排09-29窗)②watchdog裸拉裁修派SDE③401定谳读数错配销项(face-events铁证mlc首拉从未401,denied实为rlc裸拉窗,转绿=重启非timer,根因归并②)④pidfile清档派SDE;新挂账status write-back 404 recurring(TriModel候查面下窗排);两信分发m-fsd/m-sde深夜禁排产;树账40笔;总表候修项裁毕态+新挂账
   - e24b17cc docs(g10): CTO观察项裁定卷——①registerPid缺port参裁修(FD一行级×2处对齐TriRLC) ②trirlc-watchdog裸拉缺口裁修(SDE复活段对齐trimlc正形.cmd保真) ③boot期401定谳读数错配销项(face-events台账16:01:21Z mlc pull ok铁证,denied实为16:02:23Z rlc裸拉窗=归并②同根,转绿=8711保真纠偏重启非周期timer)+附带发现status write-back 404 recurring新挂账 ④陈旧pidfile清档可办;三件证据链=server台账+channel.log活体+3333双态探针+双ps1对表
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:20 +08：自上次进度提交 4e3af220 后新增 3 条 commit：
+  - 6f04e296 docs(LG-058): P1改排立即拆派录账——CEO 02:10显式令缓排取消(09:17自醒件撤);四席拆派毕:FSD实现主体四件夜窗即启/SDE R-HY迁移预检read-only即启(切换步双门红线不变)/CTO门审+候裁+A6补注/STE测试族准备即启;总表P1施工态
+  - dc808b55 Merge remote-tracking branch 'sg-server/dev' into dev
+  - e1ace960 docs(LG-058): CEO 02:05令P1启动令确认录账——第一期验收收口开始第二期;施工窗=09-29白天正常工时;预检只读(河源trimmc-card解密验证+snapshot留档)可今日先做;迁移切换步双门=CTO门审过+CEO知悉窗;总表P1启动态
+- registry：v2.1；今日 registry 提交无变化
