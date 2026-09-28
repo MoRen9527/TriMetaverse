@@ -1,0 +1,24 @@
+--- face-ledger.json (archive, non-sensitive summary face) ---
+read_at_utc: 2026-09-28T20:45:09Z
+--- ls -la (face ledger files, 2026-09-29 04:40 +0800) ---
+-rw-r--r-- 1 fleet fleet 1611 Sep 29 04:40 face-events.jsonl
+-rw-r--r-- 1 fleet fleet  195 Sep 29 04:40 face-ledger.json
+--- wc -l face-events.jsonl ---
+11 face-events.jsonl
+--- face-events.jsonl field-name samples (values withheld; sensitive self-check pass) ---
+['detail', 'etype', 'face', 'result', 'ts']
+['detail', 'etype', 'face', 'reason', 'result', 'ts']
+--- face-ledger.json full content (non-sensitive summary face) ---
+{
+  "faces": {
+    "mmc": {
+      "last_pull_at": "2026-09-28T20:40:13.268Z",
+      "last_pull_from": "loopback",
+      "last_pull_result": "denied",
+      "applied_state": "applied"
+    }
+  }
+}
+--- observer-effect note ---
+cards-route-live-reading.json (401 probe, no token) 本身即一次 pull-denied 流量：
+取证探针动作同时写入台账 pull/denied 事件=台账写路径活体副产物证明（非异常，取证留痕如实注记）。
