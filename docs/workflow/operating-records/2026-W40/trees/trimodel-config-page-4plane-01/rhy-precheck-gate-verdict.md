@@ -55,6 +55,36 @@
 - FSD 范围 2 落位为切换步前置不变；升级窗与切换步可同窗连做（seam 钉制使升级对主卡零接触，两步解耦风险低）；
 - 观察窗≥900s（报告 §一原案照准）；A2 分钟级回滚已备（systemd 自拉活+目录级还原）。
 
+## 六、闭卷笔（CTO 门审面·2026-09-29 03:4x——升级窗+切换步连窗读数复核后 CLOSED）
+
+**读数卷**：rhy-switch-readout-20260929.md（2e262c9d，本席亲验在位）——三阶段连窗（TriModel 8de8fe7 升级→rmc 建卡+TriRMC 496613b 升级→900s 观察窗终验）全录，COO 03:31 汇转三条件达成。
+
+### 6.1 §四 条件三项终核（对照读数卷逐项）
+
+| 条件 | 判定 | 复核证据 |
+|---|---|---|
+| ① 范围 2 绿锚 | **达成** | 496613b 本席锚定确认笔（27cd91b5）在卷 |
+| ② 升级窗按 §三执行 | **达成** | 本席加钉三检点全兑现：TRIMODEL_DISABLE_BOOT_MIGRATIONS=1 drop-in（读数卷 §二.3）+boot 日志 `card migration: already-canonical`（强钉+canonical 判定双证=迁移链零动作实测，§二.4）+TRIMODEL_CARDS_DIR 显式（§二.3） |
+| ③ 建卡载荷按本案成文 | **达成** | ⓐ案A 密文原样搬运+护栏三验（计数 1/3/2 对表+active 一致+default_model 投影 tier2-cache-fresh+ladder=card-fresh 非兜底梯=评估序不回 fallback）✓；ⓑ machine=河源 hostname+connection=河源 ✓；ⓒ 主卡 md5 bac279a6 三时点全等零触碰 ✓。双门中 CEO 知悉窗=CEO 02:43 显式令免除（读数卷令链在卷） |
+
+### 6.2 部署锚取舍事后核（SDE 申报→本席核）
+
+- **e9938cc ⊂ 8de8fe7 独立实锤**：merge-base --is-ancestor ANCESTOR-OK；`git log e9938cc..8de8fe7` **恰一 commit**=8de8fe7（候修①）——零夹带，「无内容偏差」申报成立。
+- **候修① 裁据溯源记档**：「PUT 无 provider_entries 载荷 500→400 人话拒」修复语义独立审查成立（校验失败 400 人话拒=正形，500 裸错=缺陷）；卷面唯一出处=**STE X1 候修清单**（ste-test-plan-p1.md L54）。commit 标注「CTO 候修裁」在本席可查树面卷**无直接出处**——候 transcript 面查证（跨会话消息裁可能未落卷）或勘误标注。**不阻闭卷**（additive 守卫改善+子集零夹带+STE 清单编号连续性在），记档候勘。
+
+### 6.3 A2 回滚形态升级核
+
+「主卡自始零触碰」使反向迁移从 rename 还原简化为「rm rmirmc-card+撤钉」——比门审时预判的形态更简，分钟级判定维持成立；四层回滚锚（双 dist.bak+双 git 回退点+override 移除序列+rmc 卡 rm）读数卷 §七 在位未动用。G5 轮转备份防线河源侧首次实战兑现（写回备份 5 件，§八.5）。
+
+### 6.4 §六.4 候裁项裁定：主卡 root 属主——**不动，M2 窗候办**
+
+SDE 申报：主卡 trimmc-card.json 属主=root（09-27 flash 批产物）在 fleet 700 目录内，server 读无碍，UI 编辑 mmc 卡走 PUT 会 EACCES。
+**裁**：①**EACCES 定性=属主防线 fail-closed 生效，非缺陷**——意外写主卡被拒=摩擦面即审计面，方向正确；②ⓒ 红线语义下「UI 直接编辑主卡」本就是应退役的旧工作流（新流程=编辑 rmc 卡），不为旧工作流恢复便利而触碰主卡元数据；③**M2 键收敛窗动 mmc 卡时随窗一并 chown**（有专人窗有门审，不零散触碰）；④本项挂 M2 候办清单，不阻任何现役面。
+
+### 6.5 闭卷判定
+
+**CLOSED-PASS——门审簿本单（R-HY rmc 卡纠正迁移）闭卷。**挂账续项不变：status write-back 404 recurring（dev 侧）/G2b 候 CPO/键沾染轮换/M2 候办清单+主卡属主项。§四条件全达成，观察窗终验全绿，回滚锚全单在位未动用。
+
 ## 使用依据
 
-预检报告 42f1c584 全卷（本席直读）；seam 源码实锚 TriModel src/policy.ts L259/L313+src/trimmc-card.ts L177-185+src/server.ts L97（本席独立勘）；CTO 补注 078f0cf7（三层回滚序+拉起令成文=SOR §八照准入卷）；终判卷 de76b2d3（e9938cc 锚定谳）；门审纪律=D-04 报时/实勘先行/门不豁免。
+预检报告 42f1c584 全卷（本席直读）；seam 源码实锚 TriModel src/policy.ts L259/L313+src/trimmc-card.ts L177-185+src/server.ts L97（本席独立勘）；CTO 补注 078f0cf7（三层回滚序+拉起令成文=SOR §八照准入卷）；终判卷 de76b2d3（e9938cc 锚定谳）；门审纪律=D-04 报时/实勘先行/门不豁免。闭卷笔新增依据：执行读数卷 rhy-switch-readout-20260929.md（2e262c9d 亲验）+本席 git 层独立核（merge-base/log 区间）+STE X1 清单（ste-test-plan-p1.md L54）+TriRMC 锚定确认笔 27cd91b5。
