@@ -135,3 +135,10 @@
   - dc808b55 Merge remote-tracking branch 'sg-server/dev' into dev
   - e1ace960 docs(LG-058): CEO 02:05令P1启动令确认录账——第一期验收收口开始第二期;施工窗=09-29白天正常工时;预检只读(河源trimmc-card解密验证+snapshot留档)可今日先做;迁移切换步双门=CTO门审过+CEO知悉窗;总表P1启动态
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:30 +08：自上次进度提交 c88a4a94 后新增 5 条 commit：
+  - a47c259b docs(LG-058): P1施工读数两笔录账——STE测试族规划毕落树(6c5e2788五族+T-reg基线P0终态+HEAD现勘对平机制+X1案完工窗同批跑)+迁移线执行口径修正就低收敛(实建卡并入切换步同候双门,映射段纸面零写入);总表P1施工态更新
+  - e91e7856 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 6c5e2788 docs(LG-058): STE P1 测试族规划落树——五族=T-sg(tier1 活体四面)/T-fb(降级梯 cache show 四面三态链)/T-mig(R-HY 迁移 A1-A4 逐锚可测化+预检双要素对表)/T-fix(候修三案随批)/T-reg(三仓全量=P0 终态新基线)；写面零触碰验证族候双门；self-register 候 COS 并账
+  - 6e15fb1d docs(LG-058): P1令③A6回滚策略补注毕录账(078f0cf7)——三层回滚序(dist.bak-pre-a6主案+rebuild校验+活体三查断言)+3333孤儿进程无守护实勘(SOR拉起令必须成文,已同步SDE)+A2分钟级可回滚判定成立(门审面要件闭合);令①预检报告候件到即审;总表A6补注态
+  - 078f0cf7 docs(g10): A6回滚策略补注落门审卷(CTO裁,wt/board 231fca65令③)——单commit revert只回源码不回dist=假绿裁点;三层回滚序(dist.bak-pre-a6还原主案分钟级+rebuild校验案+活体三查断言防静默态);3333孤儿进程无守护实勘=>拉起令必须成文(TriModel仓根node dist/src/server.js);分钟级可回滚判定成立(锚在位00:27勘+目录级还原+断言面明确)
+- registry：v2.1；今日 registry 提交无变化
