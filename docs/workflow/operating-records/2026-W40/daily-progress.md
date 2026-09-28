@@ -210,3 +210,7 @@
   - a0f02e4e docs(sde): 生产依赖锁锚纪律 wiki 件落位（CTO 裁定 88a2c0b5② 承接知悉件）——TriCode sg detached d20cb6b=有意锚定非事故态；执行面两条：禁事故态误修（禁顺手追顶）+两机同锚保持/生产升级走显式窗（fetch+checkout 新锚+受影响仓重 build+活体验收）；窗内兑现先例=sg TriCode 1c7bdee→d20cb6b 显式对平（读数卷 64fc75e8 §三.2）
   - e148c662 docs(lg-058): sg 切后对照实照落树(N6-scope2,A2后半)——三角断链全翻转实照件6+manifest
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @06:00 +08：自上次进度提交 212d9db9 后新增 2 条 commit：
+  - 23bd5681 Merge remote-tracking branch 'sg-server/dev' into dev
+  - ca8d03f6 docs(LG-058): P1期闭合销账毕(BOD终卷a2cd2538亲验在位,五项亲测全过+A1-A6全PASS+偏差申报随终卷闭采CTO判据)+勘正N15过时路由(部署尾三件e24b17cc早已裁毕)+下窗排产四件入册(registerPid/watchdog/401销项/pidfile,今日正常工时错峰);哨59b6359d已收
+- registry：v2.1；今日 registry 提交无变化
