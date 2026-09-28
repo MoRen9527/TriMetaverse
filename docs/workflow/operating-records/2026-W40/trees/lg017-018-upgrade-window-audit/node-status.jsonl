@@ -1,0 +1,2 @@
+{"node":"N1-audit-commissioned","ts":"2026-09-28T23:01:17+0800","receipt_id":"m-coo-20260928-2249","status":"done","recorded_by":"cos","note":"CEO 22:24「现在就盘」令→COO 22:49 拆派 m-cto（自排 sequencing 防撞车：LG-058 门审+LG-055 在途）"}
+{"node":"N2-audit-delivered","ts":"2026-09-28T23:01:17+0800","receipt_id":"m-coo-20260928-2300","status":"done","recorded_by":"cos","note":"CTO 清单成稿 6d270ef1（22:59:50，+53 行）直呈 BOD（内容面按令不经 COO）；COO 实勘在位+COS git log 亲验锚；盘面无阻塞无失联，可动面两笔低成本前置+一笔销账，余项挂时机锚候窗；候 BOD 裁取舍"}
