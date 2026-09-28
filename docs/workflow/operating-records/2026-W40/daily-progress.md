@@ -88,3 +88,14 @@
   - 0919494d docs(workflow): W40 记分账面首铸+首笔入档——m-sde trimodel 配置页 P0 事故案轻处置终态（CEO 21:41 裁①不计误期不扣分，改进义务两项记档：值面验证习惯/无授权依据即停，列 W41/W42 观察项；效率源豁免系 CEO 终裁 override 不以分数代责同向；事故案终态闭环随入档即达）
   - 1947a718 docs(LG-055): CTO 席看门狗断线自动接续设计方案稿达笔——四问逐答：--resume <session-id> 精确形态+侧车供 id（--continue 多席串席禁用/裸 --resume 禁用）；拉起链 env 三件套（清 CLAUDE_CODE_CHILD_SESSION+FORCE_SESSION_PERSISTENCE+D-03 快照）；L1 转录增长断言+L2 断点续办回执两级验证；四级降级序+卡死检测+熔断≥3；1 席先导制；TriRLC 8711 pidfile 分文件随先导窗并勘；保活链架构零变更声明
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:10 +08：自上次进度提交 2a69eadf 后新增 9 条 commit：
+  - 85d58096 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 641a9d3d docs(LG-058): 门审卷出卷录账——CTO 03854395 G1-G10全PASS+A5=CONDITIONAL APPROVE两窗(复绿收口窗09-30 FSD授权三笔→六案复跑/部署步门禁=归因收口先于重启);W2归因裁=fixture脆性优先+真回归候选挂证伪义务;附带发现授权准;FSD复绿收口窗拆派毕;BOD哨验收A1-A6候排窗;树账34行
+  - 03854395 docs(LG-058): P0-EXEC-01 正式门审卷出卷——A5=CONDITIONAL APPROVE 带条件签发：实现/部署面放行（G1-G10 十门全 PASS+栅栏值面实证+基线四族零新增）；候裁四项裁毕（W2 归因=fixture/连接层优先挂证伪义务+W4 反向证据、W1 click bump 采 2x 封顶、W3 不阻门+TriMLC flaky 列观察、两窗结构=复绿收口窗 6/6 转正式 PASS+部署步门禁=归因收口先于重启）；附带发现授权准（connectPage 三参签名修正+L305 同型勘，断言语义零变更）；预勘四项收口（113B 闭卷/G2b 记档/键沾染指针/族1 断言窗 PASS）；固定项① bak 保留至 09-30 哨验收毕确认链齐
+  - 974325be docs(录账): BOD 23:03 三件——CEO 22:55 改口「1和5候两域两面毕统一亲测」(LG-053终验收+A3触发条件顺延注记);token两枚有效性BOD预验毕(掩码锚);M2候修⑤销账终态(BOD无异议);LG-017/018树账立2笔;P0树账33行(A5达笔)
+  - f1f96711 docs(LG-058): STE W2 隔离复跑实勘补卷——两轮均 FAIL 但失败点漂移（connectPage waitForFunction 30s 超时，未到 ruleRows 断言）；connectPage 层脆性实锤+ruleRows=0 真回归候选未证实未证伪；附带发现 waitForFunction 二参形 timeout 误传 bug（{timeout:8000} 落 arg 位，30s 默认限实跑，waitSelectOptions 同型候勘）；测试码变更不在 L10 预授权域候 FSD 修
+  - 6d270ef1 docs(LG-017/018): 升窗条款落地现势实勘清单——CEO 22:24「现在就盘」令实勘正身：LG-017 立法面/设计面双毕，余项六笔（三件套候 R 面门禁窗同批+P-a 候外部触发+phase-2 不急+trimc 退役随线）；LG-018 销账面三笔（cron runbook 已落地候收账），余项两笔（origin/sg-bare 收敛低值缓办+E 项拆两半纪律入册值得）；盘面结论=无阻塞无失联，可动面仅两笔低成本前置+一笔销账；台账勘验项代差注记（authorized_keys 分流已被 V21-2 否决）
+  - 6e34bda1 docs(m2-候修⑤): §八时戳原样粘贴补正（D-04 自纠，xx 尾→实查值）
+  - a6f5129c docs(m2-候修⑤): sg GLM键落卡执行读数全绿——卡缺失实锤PUT首建200/零重启生效断言tail=CzBa一致/出站3334真实消费200/临时件销毁absent;键值全程sg机内经手;PEB闸前置已清未动用
+  - 2696108c docs(LG-058): STE L3 轻载窗读数全卷归卷（§十三=A5 门审包本体）——三仓独立全量 313/295/3+662/657/5+617/611/6；六案复绿 4/6（E5/E7/E8/W4 零超时不贴限，W1 click 30s 超时新形态，W2 断言失败形态迁移=真问题候选）；W3 贴限新挂；TriMLC runConfirmCheck 隔离复跑 21/21=flaky 定性；栅栏值面实证 PASS（生产双文件 before/after hash 逐位一致）；bak 保留确认面入卷；门层判定 CONDITIONAL 候 CTO 正式门审
+- registry：v2.1；今日 registry 提交无变化
