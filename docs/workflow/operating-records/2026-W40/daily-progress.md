@@ -199,3 +199,8 @@
   - 64fc75e8 docs(LG-058): sg TriMMC接入切换读数卷落树+观察窗终验全绿窗闭——A TriModel 8de8fe7 build绿(假红自纠链:TS7006依赖陈旧→TS2307 TriCode双层陈旧→本机主推bare→d20cb6b对平+强钉三env+404消断言)/B TriMMC 99ed6d0 cutover(start.sh指向切换bak-201527Z+tier1精准注入+mailbox连续性搬运+config show face=mmc source=tier2-cache-fresh+verify HEALTHY);偏差申报=主卡status写回语义(mmc face即主卡身份折叠,结构diff唯一status.at,写守卫bak-1=切换前基线锚6587c69d断言OK);异常自纠五项含outbox gitignore隐件;回滚锚全单在位
   - dffbe7f4 docs(LG-058): sg段窗情更新录账(04:31 COO回执+04:30哨空转定性勘正)——FSD切前实照毕04:02(evidence-sg-preswitch 8件落树N6 done,断链+降级双态,实照硬门sg面闭环);SDE切换窗已启04:05(N13 active回滚锚定案);读数预计04:35-04:45(窗内正常时序非滞);哨判据勘正=窗毕读数实达为准非SLA
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:50 +08：自上次进度提交 993d3d6b 后新增 3 条 commit：
+  - 32d33f6c Merge remote-tracking branch 'sg-server/dev' into dev
+  - 6afb5c19 docs(LG-058): sg段观察项四件录账——outbox325条TriMC根CTO裁毕=复制留档不合并随退役窗清现无动作项(本席04:40初裁被覆盖作废留痕)/md5轮换语义候BOD并偏差申报同窗/TriCode detached d20cb6b对平策略候CTO正常工时窗/EBADENGINE已记录;时点列+04:41
+  - 88a2c0b5 docs(LG-058): sg接入窗候裁三项裁定卷——①零触碰语义承接成立(判据本体=配置内容域恒定,md5恒等=无写回链充分投影,diff除status=带写回链一般判据,形态必然非缺陷;status外置记M3候选不排期)②TriCode detached d20cb6b=有意锚定非事故态,生产依赖锁锚纪律成文(两机同锚保持+升级显式窗+禁顺手追顶)③outbox 325条=复制留档不合并(禁混入现役poller状态机面,随TriMC退役窗清)
+- registry：v2.1；今日 registry 提交无变化
