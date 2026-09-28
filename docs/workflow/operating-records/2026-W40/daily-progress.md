@@ -81,3 +81,10 @@
   - 46687349 docs(lg-058): STE §十全量r2读数+UI E2E 6fail归因落卷——308/287/6/15有效(cancelled=0)+六案全TimeoutError零断言失败+同suite 7案过+同HEAD FSD全绿293=287+6吻合+复验launch 180s超时=负载三重佐证→环境型非代码回归定性/复绿实证候窗/候CTO裁L3执行窗三择
   - …另有 7 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 fecb2e21 后新增 5 条 commit：
+  - bb7c36e3 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 0461d1a7 docs(总表回填): CEO 21:41/22:24 批令八项终态回填——终验收①③④亲测裁(③候波⑤收口补测)/SDE轻处置终态闭环/LG-057定稿生效/sg键供枚+BOD 22:51供钥SDE执行中/fs junction销项归T5攒批/017-018现在就盘CTO实勘在途;LG-055稿达笔候核(树账新立2笔);P0树账33行;候裁8项余A3 UI刷新+制度补丁批两项仍候
+  - ddd29fde docs(lg-057): 规程定稿落笔（CEO 21:41 裁②批）——草稿 aaece6f8 转定稿+恢复 SOP 增补：session-crash-recovery-spec v0.3 增「共享：读树续办步」两方案通用节+fade-007 SOP 增中枢重建体在途树恢复指针；协议真源侧（TriCompany 仓）V0.7 §8 新章随独立 commit；三轨记账口径=执行席自记明注并存形态入 §8.2
+  - 0919494d docs(workflow): W40 记分账面首铸+首笔入档——m-sde trimodel 配置页 P0 事故案轻处置终态（CEO 21:41 裁①不计误期不扣分，改进义务两项记档：值面验证习惯/无授权依据即停，列 W41/W42 观察项；效率源豁免系 CEO 终裁 override 不以分数代责同向；事故案终态闭环随入档即达）
+  - 1947a718 docs(LG-055): CTO 席看门狗断线自动接续设计方案稿达笔——四问逐答：--resume <session-id> 精确形态+侧车供 id（--continue 多席串席禁用/裸 --resume 禁用）；拉起链 env 三件套（清 CLAUDE_CODE_CHILD_SESSION+FORCE_SESSION_PERSISTENCE+D-03 快照）；L1 转录增长断言+L2 断点续办回执两级验证；四级降级序+卡死检测+熔断≥3；1 席先导制；TriRLC 8711 pidfile 分文件随先导窗并勘；保活链架构零变更声明
+- registry：v2.1；今日 registry 提交无变化
