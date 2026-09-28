@@ -181,3 +181,7 @@
   - 2e262c9d docs(LG-058): R-HY rmc 卡切换执行读数卷落树+观察窗终验全绿窗闭——三阶段连窗全录(A TriModel 8de8fe7 升级+强钉三env/B rmc建卡三发+TriRMC 496613b 升级+tier1接线/A1锚 source=tier2-cache-fresh+verify HEALTHY);终验=900s第二轮刷新双实例03:19成功+主卡md5三时点全等零触碰+rmc卡pending→applied自动写回+轮转备份5件;异常自纠三项(build假绿整链断言/face-events EACCES→TRIMODEL_DATA_DIR钉/tier1未拉→API_URL补钉);回滚锚全单在位未动用
   - 6e0f344f docs(LG-058): P2边界缝隙CTO快裁录账(facc0989亲验dev在卷)——方案①随批补全=managed 200分支body扩face+ledger投影~8行additive(401/404守卫不动),定性=§2.2契约内字段+P0 L270留口既定项=计划缝隙非边界本意;G2b明文回显不混批仍候CPO;raw审计账不进body;批注落P2单§三(wt/board 01ccdb12候并)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 2053228c 后新增 2 条 commit：
+  - a8dd6f19 docs(LG-058): BOD哨窗排期令四件+A3对裁录账(03:37)——①sg切前实照即刻(FSD执行中真断链在险)②sg TriMMC切换窗实照毕即排(授权链=BOD引CEO 02:43+02:44令链,河源先例免事前点头)③哨验收窗预计04:0x亲测五项全过=P1闭合宣告④A3对裁=BOD认可CTOⓒ裁,验收按演进基线;P1树N8→done
+  - b8c9f124 docs(LG-058): N8河源生产写面窗闭全绿录账(02:55→03:28,SDE读数卷2e262c9d亲验)——观察窗终验PASS 900s第二轮刷新双实例03:19成功error零命中;主卡md5 bac279a6三时点全等零触碰;rmc卡pending→applied自动写回;回滚锚全单未动用;异常自纠三项在卷;河源TriRMC现役配置源=卡面effective=deepseek-v4-pro;读数卷落P0树目录候归位;关键路径链全段走毕候BOD直接验收
+- registry：v2.1；今日 registry 提交无变化
