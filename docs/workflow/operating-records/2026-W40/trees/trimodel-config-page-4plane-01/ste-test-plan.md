@@ -70,6 +70,33 @@
 - 节点收口件（LG-057 试点）：每节点回报带时点（date 现查）+回执 id+done。
 - 阻塞性缺陷即报 COO+CTO，不自裁放行。
 
+## 七、修前基线锚（NOW 窗固化，2026-09-28 10:3x +0800；FSD 动笔前现跑）
+
+| 仓 | 读数（总/过/败/跳） | 既有 fail 逐族归因（4 族） |
+| --- | --- | --- |
+| TriModel | **286/271/0/15** | 零 fail（今晨现势，LG-054 卷 §七 D 形读数直引） |
+| TriMLC | **599/594/5/0** | ①`test/integration/replay-flow.test.ts` 文件级：`ERR_MODULE_NOT_FOUND D:\Code\ai\TriMC\src\comm\arbitration.js`——**TriMC 旧名路径残留**（改名迁移残留，LG-054 族①同型）；②`test/tui/components.test.ts` 文件级：`Cannot find package 'ink-testing-library'`——devDependency 缺装；③P0 通道一/二 HTTP 全局门（auth-gate-rejection）：子案「e1 /healthz 精确豁免」fail——鉴权门族；④FADE-ASSESS-005 两案（roster-gating-http）：子案「ownerRoleId 未上岗 409」+「ASSESS-003 metrics routing_error 计数」fail——值班派工门禁族 |
+| TriRLC | **644/639/5/0** | 同构镜像：not ok 清单与 TriMLC **逐位同构**（同名文件同族），归因平移①-④ |
+
+- **相关性判定**：四族均不触 LG-058 P0 改动面（key-cache→config-cache 泛化/卡面 API/face-events）——基线锚有效。
+- **改后对平判据**：三仓 fail 集合⊆本基线集合（同族同数）=零回归；任何新增 fail=回归即查，禁转抄「既有」定性须独立验。
+- **挂账候选（非本单，owner 另议）**：TriMC 旧名残留（replay-flow.test.ts）与 ink-testing-library 缺装两笔，随下一节点回报呈 COO。
+
+## 八、CTO 门审清单 G1-G10 对表映射（5c60b084 落树知会后补；A5 门审备测对表，减少返工）
+
+| G 项 | 本席测试面映射 | 增补动作 |
+| --- | --- | --- |
+| G1 face registry | L1 API 矩阵+§四.2 registry 常量导出对表 | — |
+| G2 泛化端点+别名 | L1 矩阵+别名双证（A1） | — |
+| G3 鉴权双层 | L1 矩阵鉴权态（503 fail-closed/P0 通配态 T6 显式标注） | — |
+| G4 域锚不变量 | L1 cache 泛化（域不匹配丢弃落 tier3/三归因码）+A2 | — |
+| G5 备份轮换 | A3 实弹（keep=5+哨兵豁免+幂等+唯一性后缀硬断言） | — |
+| G6 face-events | A2 len-only 值面核验 | — |
+| G7 CLI config 族 | A4 对表 | **增补负断言：CLI 不开卡写面**（CLI 命令面无卡写通道+写端点无 CLI 路径实证） |
+| G8 两卡接入 | L1 两仓 cache 单测+A2 pull 实测 | — |
+| G9 revert 单 commit | A6 演练 | **增补 diff 断言：泛化层 commit 不触老路径文件**（git show --stat 逐项核） |
+| G10 部署重启纪律 | 重启归 FSD/SDE 执行面（TriLC 重启纪律：权威路径+pidfile 按 port+禁裸杀） | 本席核验项：重启后两 daemon healthz 留痕读数入 L3 卷 |
+
 ## 使用依据
 
 执行单 d9df61bc（§一.6/§二/§三/§四全读）；cto-implementation-plan.md v3 @ afb0180c（§2.1/§2.2/§2.3/§三/§四/§5.2/§十 两 P0 确认/§十一 v3）；判定件 v3 @ 9bd40491（commit 题录）；COO 拆派令（2026-09-28 10:33 hook）；LG-054 族③教训卷（ste-crossmachine-base-adaptation.md §二/§五，唯一性后缀直引）；工作区记忆条：全量读数回报/键存在性抽验≠值面验证/命令链断言。
