@@ -92,8 +92,8 @@
 3. ⏳ R5 verify live 四 bin（试拉流量，工时窗）
 4. ⏳ mlc bin CLI 全族重测（候 F-1 裁定+修后）
 5. ⏳ 网页侧活体点验全格（本地 P2 UI boot 点验=工时窗；部署窗后 sg 活体=CEO 亲测面预验材料）
-6. ⏳ D-1/D-2/D-3/D-4/D-5 五差异标注候 CPO IA 对表+CTO 口径裁定
-7. ⏳ F-1 候 CTO 裁定（可并 registerPid 常规窗批）
+6. ⏳ D-1/D-2/D-3/D-4/D-5 五差异标注——**裁窗已定（CPO 06:3x 回执）：A3 完工窗一并裁不散裁**；基线终态=cpo-cto-plan-reconcile.md v2 闭卷段（3f154c8e，8/10→10/10，syncMode→static）——施工卷径引终态基线；D-3 基础口径=该件 §三 分名分显已有（拉取=daemon/CLI 通道），完工窗正式化即可
+7. ⏳ F-1 候 CTO 裁定（COO 06:33 已连同 STE③④ 归并呈裁；可并 registerPid 常规窗批，批面定界候 CTO 明裁）
 
 ## 使用依据
 
