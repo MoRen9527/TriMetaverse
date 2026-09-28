@@ -73,6 +73,8 @@
 
 **遗留观察**：①分发面现供 26f3（卡键，CEO 终裁销项不轮）——分发行为与本裁一致，零动作；②env 6863=备位（S5 卡覆盖），实际出站消费=卡 26f3，f738 吊销零影响实证（早非活源）；③config.js L14 deepseekApiKey 直读 env 的消费面（非主链）候下轮代码波对表。
 
+**候修正身落地（2026-09-28T19:18:24+0800，COS 19:16 知情裁转令「接钥作业前必修」即日清）**：read-env.ps1 升 v2——①**密钥族自动掩码**（键名含 KEY/TOKEN/SECRET/PASSWORD → 只出 len+头4+尾4 (MASKED)，误用面根除）；②`-Filter` 参数化（免 sed 派生变体，两旧变体已清理）。冒烟双验过：pid 11000 密钥族两键出掩码形态零全值 ✓+PATH 诊断面全值无回归 ✓。过程顺带实录 D-09 同族第三例：v2 含中文注释 UTF-8 无 BOM→5.1 按 GBK 解破 here-string 结构解析错→按纪律原文补 BOM 冒烟过——接钥检具自此自带掩码闸。
+
 ## 使用依据
 
 keys.js（dist/src/api/keys.js readKeys+S5 归并读链实勘）/key-source.js（deriveProviderKeys 卡覆盖→env 回落，1de9fe5 09-11 引入+09-27 HEAD a9d9fc8 内容实勘）/trimmc-card.js+api/trimmc-card.js（卡写面+水合语义）/security/key-encryptor.js（AES-256-GCM+PBKDF2 机器指纹）/anthropic-proxy.js L62（出站链同走卡覆盖）/config.ts L10-12（dotenv 上扫）/掩码扫描 D:/tmp/lg057/mask-scan-keys.mjs+read-env-deepseek.ps1（留档可复跑）/W39 cto-triage-verdict.md §三（09-27 泄出路径+原裁）/W40 p0 树 cto-preaudit-findings.md §三（今日两枚发现源）/GLM 四面点位图（docs/execution/2026-08-27/glm-model-deployment-map.md）/deepseek.txt+D:/Code/ai/.env 备份链（轮换执行面）。
