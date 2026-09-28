@@ -121,3 +121,7 @@
   - 325b1e35 docs(LG-058): G10部署步完工全绿录账——双仓rebuild+8713/8711重启毕(验收四项全过,回滚锚未动用,读数卷bc388290)+9-18 pidfile事故族防线首次实战兑现(互踩门拒停+权威launcher保真纠偏复连河源);观察项4条=候CTO裁3件(registerPid缺port参/watchdog无env保真/boot期401转绿)+陈旧pidfile,已转CTO;合账勘正COO附注③陈旧态注记;树账38笔;总表G10毕态
   - bc388290 docs(g10): G10部署步全绿收口读数卷——双仓rebuild(6e4feb3/1af0908→dist 23:57/23:58)+8713重启(34396→10348一致性门过+父cmd消亡+jobCount4)+8711重启(35812→15708跨daemon互踩门拒停实战兑现+保真纠偏权威launcher重走mc_link复连河源)+config族活体GLM-5.3 tier2-cache-fresh双面同拍拉取+回滚锚dist.bak未动用；观察项4条候裁(registerPid缺port参/boot期401转绿/watchdog保真缺口/陈旧pidfile)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:40 +08：自上次进度提交 8cdaf05a 后新增 2 条 commit：
+  - e65f545b docs(录账): COO接令P1拆派排程——晨间09:17自醒执行(R-HY预检先审后切排首,拆派毕知会录账);P0候收面经战报归零;纯知会信录账即闭;总表P1承接态微补
+  - b325a51c docs(LG-058): P0闭合宣告成立录账+P0期销账——BOD终卷A1-A6全科PASS(wt/board 231fca65:A5全量亲跑313-298-0-15归零/A3备份轮换实弹/A6 revert双向PASS+dist锚策略修正候CTO补注+dist.bak-pre-a6补位);销账验证锚链五环全(2696108c→03854395→de76b2d3→bc388290→231fca65);P1执行单已立范围六项候COO拆派(深夜禁排产);三项注记(BOD信内时戳疑预填以锚面入账/终卷wt/board线候并dev/回执链64f16790无对应不追);树账39笔
+- registry：v2.1；今日 registry 提交无变化
