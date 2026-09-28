@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（09-27 泄出批次 vs 09-28 两枚沾染键 域边界对表定性+预备勘察成果归档）
 - syncMode: source-only
-- lastSyncedAt: 2026-09-28T17:26:11+0800（date 现查）
+- lastSyncedAt: 2026-09-28T17:47:3x+0800（§六翻案勘正+§七 f738 轮换执行读数；date 现查）
 - 令链: CEO 17:21 终裁（BOD 转/COS 17:23 流转/m-coo 17:2x 令修三项）——两枚不构成实质沾染不轮换+候钥令撤+勘察转对表用途
 - 边界: 本件系 P0 树外线独立件，不占 trimodel-config-page-4plane-p0-exec-01 树账节点流；键值全程掩码（len+尾4），零全值回显
 
@@ -49,6 +49,30 @@
 - 09-27 裁定卷原裁「已沾 key 轮换：建议执行，归 BOD/CEO 面执行或授权 SDE 轮换（轮换即办）」；
 - 本席现态：**配方就位、候 CEO/BOD 面确认在途态**（平台是否已重发钥本机不可断言）；确认在途且钥到→按 §四配方即轮（授权链按 09-27 裁定原文补认）；确认不在途→本卷归档即闭，候排窗。
 
+## 六、勘正·S5 归并读链翻案（17:4x，执行中实勘，date 现查 2026-09-28T17:47:3x+0800）
+
+**翻案结论：§二对表定性由「异键」修正为「同键销项」**（令文③分支一）：
+
+1. **S5 归并读链 09-11 21:48 已在役**（commit 1de9fe5，LG-035 S5 存储归并；09-27 HEAD a9d9fc8 内容实勘确认）：`key-source.js deriveProviderKeys`——**卡 enabled 条目（per vendor 取 updated_at 最新）覆盖 env L1 键，.env 仅最终 bootstrap fallback**（source: card-entry vs env-fallback）。
+2. **09-27 分发面 GET /v1/config/keys 供的 deepseek 键=卡条目 26f3（card-entry 覆盖）**——09-27 时点卡（bak-20260927-2325-pre-fullflash）e-deepseek-anthropic=26f3 enabled 在役 → 覆盖生效 → **09-27 泄出枚=26f3，与今日两枚同键域**，非 f738。§三证据链第 2 条「09-27 时点供值=f738」**作废**（env 值当日被卡覆盖不对外供应）；第 1 条勘正为「分发面读链=卡覆盖→env 回落（S5）」；第 5 条弱信号重估：26f3×2 系 GET 响应真身概率大增，f738×4 系撞串/文档引用。
+3. **f738=env 备位死键**（S5 读链下卡在役即不消费；出站 anthropic-proxy.js L62 同走 deriveProviderKey 卡覆盖）——f738 进 transcript 的路径非 09-27 分发面，实际来源不明；其轮换系 CEO 17:33 供钥令独立裁量（本席照执，§七）。
+4. **§四配方勘正**：「分发面即取即供（server 重启自动换新，无第二缓存层）」**错**——分发面=卡覆盖读链，**env 轮换不改分发面输出**；将来轮卡键（26f3/tn5y）写位=卡条目（PUT trimmc-card），env 轮换不触达分发面。
+5. **今日两枚销项不变**；f738 轮换已执行毕（§七）——全局收束：卡 26f3=工作键在役（分发面+出站链活源，CEO 终裁销项不轮）、env 6863=新钥备位（fallback 位沾染清零）、f738=已吊销死键（断言 PASS）。
+
+## 七、f738 轮换执行读数（CEO 17:33 供钥令·BOD 17:34 转/COS 17:36 流转，凭据线末项）
+
+**前置核查** ✓：server 13432 活/3333 回环监听；父链 cmd.exe 34132（start-trimodel.cmd `cmd /c` 形态=D-03 复活机制同形态在役，停法采树杀）；钥文件 deepseek.txt 在位（len=35 head=sk-0 tail=**6863**=BOD 验读数一致）；.env 基线尾4=f738。
+
+**四步逐项**：
+1. **备份+行级替换** ✓：.env 备份 `.env.bak-pre-rot-f738-20260928T173750+0800`（尾4=f738 验）→ node 脚本行级替换 DEEPSEEK_API_KEY（钥值全程脚本经手零落会话上下文，Trim 一道照令）→ 回读自检 len=35 tail=**6863** isNew=true 旧值 f738 消失 ✓；
+2. **D-03 重启** ✓：先杀父 cmd 34132（防复活，D-03 增补教训直接适用）→再杀 node 13432→双消亡+3333 清空验 ✓→Start-Process start-trimodel.cmd 拉起→**新 pid 11000**（1s boot）→GET /health ok=true providers.deepseek=true ✓；
+3. **生效验证** ✓（双验）：**PEB 直读 pid 11000 env DEEPSEEK_API_KEY 尾4=6863 铁证**（read-env-deepseek.ps1 留档 D:/tmp/lg057/）+分发面 GET /v1/config/keys http=200（Bearer=TriModel 仓内 .env token，双 .env 键名同名取仓内优先实勘）；
+4. **旧键作废断言** ✓ **PASS**：deepseek 官方 `GET /models` 携旧 f738（从备份脚本内取）→ **http=401**+平台响应自证「api key: ****f738 is invalid」（吊销实锤+键身份双向确认）。
+
+**执行失误申报（如实）**：PEB 验证脚本沿用了 read-env.ps1 原生打全值设计（初为 PATH/ALLOWLIST 非密钥取证所建），本次滤 DEEPSEEK_API_KEY 后**全值入本席 transcript 一次**（sk-01af…6863，令文④零回显纪律违背一处）——按 09-27/09-28 同族口径，transcript 不改写（取证纪律），新键全值沾染面=本席 transcript，处置候 CEO/CTO 面知情裁（死循环风险提示：每轮一次沾一次，候键分发收敛 M2+ 代理化根治；不建议因此再轮）。修正件 read-env-deepseek.ps1 候改掩码化输出。
+
+**遗留观察**：①分发面现供 26f3（卡键，CEO 终裁销项不轮）——分发行为与本裁一致，零动作；②env 6863=备位（S5 卡覆盖），实际出站消费=卡 26f3，f738 吊销零影响实证（早非活源）；③config.js L14 deepseekApiKey 直读 env 的消费面（非主链）候下轮代码波对表。
+
 ## 使用依据
 
-keys.js（dist/src/api/keys.js L34-65 readKeys env 源实勘）/trimmc-card.js+api/trimmc-card.js（卡写面+水合语义）/security/key-encryptor.js（AES-256-GCM+PBKDF2 机器指纹）/config.ts L10-12（dotenv 上扫）/掩码扫描 D:/tmp/lg057/mask-scan-keys.mjs（留档可复跑）/W39 cto-triage-verdict.md §三（09-27 泄出路径+原裁）/W40 p0 树 cto-preaudit-findings.md §三（今日两枚发现源）/GLM 四面点位图（docs/execution/2026-08-27/glm-model-deployment-map.md）。
+keys.js（dist/src/api/keys.js readKeys+S5 归并读链实勘）/key-source.js（deriveProviderKeys 卡覆盖→env 回落，1de9fe5 09-11 引入+09-27 HEAD a9d9fc8 内容实勘）/trimmc-card.js+api/trimmc-card.js（卡写面+水合语义）/security/key-encryptor.js（AES-256-GCM+PBKDF2 机器指纹）/anthropic-proxy.js L62（出站链同走卡覆盖）/config.ts L10-12（dotenv 上扫）/掩码扫描 D:/tmp/lg057/mask-scan-keys.mjs+read-env-deepseek.ps1（留档可复跑）/W39 cto-triage-verdict.md §三（09-27 泄出路径+原裁）/W40 p0 树 cto-preaudit-findings.md §三（今日两枚发现源）/GLM 四面点位图（docs/execution/2026-08-27/glm-model-deployment-map.md）/deepseek.txt+D:/Code/ai/.env 备份链（轮换执行面）。
