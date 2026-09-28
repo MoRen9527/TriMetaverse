@@ -152,6 +152,7 @@
 
 - **复绿判定：4/6**。W1=超时族（click 维度新形态）；W2=断言族（**归因家族迁移**：r2 环境型定性不能外推覆盖现形态）。
 - **W2 归因独立验**（关键项）：reload 已过（bump 生效推进更深）但断言挂「规则 reload 后不在表」——W 族同域（规则实体持久）三案形态并观：W1 保存动作卡、W2 持久断言挂、W4 完整周期 pass。**本席判定：规则持久域存在真实问题候选，r2「六案全环境型」归因不完整；是否阻塞裁门候 CTO**。候勘面：W2 断言读真卡（「真服务非空卡」）与 sandbox 钉位面交互是否受 FSD 族 1 栅栏改动影响（TRIMODEL_CARD_FILE 钉 workDir 后 W2 读面断言口径）。
+- **W2 隔离复跑实勘（22:5x，两轮）**：`--test-name-pattern="W2 \("` 隔离真跑两轮**均 FAIL**（52.3s/55.2s）——但**失败点漂移**：两轮均挂 **connectPage**（L299 `waitForFunction` 30s 超时，conn-dot 未翻转 ok=服务连接实质未建立），**未走到 ruleRows=0 断言**。收束定性：①connectPage 层脆性实锤（隔离两轮复现/全量跑此步过）=环境时序型成分在案；②「ruleRows=0 断言」真回归候选**未证实亦未证伪**（被 connectPage 脆性遮蔽，候 CTO 定归因路径：修复连接脆性后单案复现，或代码面走读 ruleRows 渲染链）；③**附带发现（测试码质量项）**：`connectPage` L299 `waitForFunction(fn, {timeout:8000})` 二参形误传——Playwright 三参签名 `waitForFunction(fn, arg, options)`，`{timeout:8000}` 落在 arg 位，**实际 30s 默认限在跑**（报错 `Timeout 30000ms` 为证）。同型面 `waitSelectOptions` L305 候同勘。测试码变更不属 L10 预授权域（断言随裁更新），本席不擅动，候 FSD 修+CTO 授权。
 - **W3（非六案，r2 pass）**：L3 **FAIL** goto 60s **贴限超时**（335.9s 总时长含多次导航重试）——按裁 2(b) 语义「贴新上限=仍脆非复绿」；r2→L3 六案外新挂=环境脆性仍在指纹（轻载窗仍挂 goto 贴限）。
 
 ### TriMLC 新增案归因（runConfirmCheck）
