@@ -37,7 +37,11 @@
 
 1. **TriModel 河源升级锚=e9938cc**（裁准报告候选）——P0-EXEC-01 门审 03854395+A5 正式 PASS 终判卷 de76b2d3 定谳的现役最新绿锚；bc72ea4 无泛化端点不合用。
 2. **升级窗强制自检（本席加钉一条）**：unit 显式 `TRIMODEL_DISABLE_BOOT_MIGRATIONS=1`——seam 实锚在 e9938cc 系（policy.ts L259/L313+trimmc-card.ts L177-185）；server.ts L97 boot 即跑 migrateLegacyDistCard，**不钉则升级首启自动迁移触主卡**，正撞 ⓒ 主卡保留裁定。TRIMODEL_CARDS_DIR=/srv/fleet/trimodel-data 显式（报告 §七.1 原案照准）。
-3. **TriRMC 河源升级锚=FSD 范围 2 落位绿锚**（现无固定 commit，非本卷可定）——依赖序成立：范围 2 在先。
+3. **TriRMC 河源升级锚=TriRMC dev `496613b`**（本席锚定确认笔，2026-09-29 03:0x）——§四.条件 1 达成。COO 02:53 知会有主（FSD 范围 2 绿锚），本席独立抽验三项全过后确认：
+   - **commit 在位+内容面对表**：dev HEAD=496613b 工作树净；diff 面（key-cache +824/key-encryptor +63 泛化移植+default-model §4.3 四级 ladder+app.ts config 五路由+boot tier1 接线+cli config 族）与条件 1「config pull 能力」逐项吻合，正补预检 §七.2 a459491 无 config pull 缺口；
+   - **测试读数定点独立抽验**（40 测同跑）：新测三件（key-cache/ladder/config e2e）零挂全绿；4 挂身份逐一对表=Contract Resolver×2+Employee Registry v3，全落 TriCompany source-agents v3 契约域与改动面零交集——「既有」定性独立成立（FSD stash A/B+COO 实勘之外第三刀）；
+   - **tsc 净复现**：--noEmit exit 0。
+   - 锚效力=切换步部署源；TriModel 侧升级锚 e9938cc+seam 钉制（§三.2）不变，两锚并行候切换步连窗。
 
 ## 四、切换就绪判定（CONDITIONAL READY·条件三项）
 
