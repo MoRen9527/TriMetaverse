@@ -142,3 +142,8 @@
   - 6e15fb1d docs(LG-058): P1令③A6回滚策略补注毕录账(078f0cf7)——三层回滚序(dist.bak-pre-a6主案+rebuild校验+活体三查断言)+3333孤儿进程无守护实勘(SOR拉起令必须成文,已同步SDE)+A2分钟级可回滚判定成立(门审面要件闭合);令①预检报告候件到即审;总表A6补注态
   - 078f0cf7 docs(g10): A6回滚策略补注落门审卷(CTO裁,wt/board 231fca65令③)——单commit revert只回源码不回dist=假绿裁点;三层回滚序(dist.bak-pre-a6还原主案分钟级+rebuild校验案+活体三查断言防静默态);3333孤儿进程无守护实勘=>拉起令必须成文(TriModel仓根node dist/src/server.js);分钟级可回滚判定成立(锚在位00:27勘+目录级还原+断言面明确)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:40 +08：自上次进度提交 168eb9bf 后新增 3 条 commit：
+  - a9a36416 docs(LG-058): P1 R-HY预检报告成稿录账(42f1c584 +124行九批read-only零写面,已转CTO门审)——加密域同机同用户可解成立(root首测翻案录)+主卡实锤=dev机flash批复制产物+切换步硬前置=双仓版本缺能(依赖序=范围2升级在先范围3迁移在后,候CTO裁涉关键路径重排)+SOR双机分形成文;总表关键路径态
+  - 9c57c8d8 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 42f1c584 docs(LG-058): R-HY rmc卡纠正迁移预检报告落树——九批read-only实测:§6.2①加密域判定=同机同用户可解(root首测UNDECRYPTABLE系指纹含username身份错位,fleet复测三条件目全可解翻案录);双仓切换步硬前置判定(TriModel bc72ea4无泛化端点+TriRMC a459491无config pull,依赖序=范围2升级在先范围3迁移在后);映射分拣表纸面零写入(三键密文搬运可行源码级实锚+策略实体两案呈报不擅断+A3空白态分发面依赖链分析);SOR拉起令双机分形成文(R-HY=systemd unit非孤儿/dev=node正形)+三层回滚序+活体三查;snapshot留档md5双向一致;A1-A4基线对表
+- registry：v2.1；今日 registry 提交无变化
