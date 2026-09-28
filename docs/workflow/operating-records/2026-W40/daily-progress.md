@@ -167,3 +167,8 @@
   - bcaac965 docs(LG-058): P2 STE树账并账(7cf4bc00 dev线在卷亲验)——STE P2测试规划六案落树(选项卡矩阵/诚实三态sg实照锚/矩阵逐格终核/渲染门全家族/全量+四类排查/dist锚走读)+CEO 22:55时点硬约束入卷;锚面澄清=STE自起树账7cf4bc00与COO拆派记录e2204346并行不冲突
   - 7cf4bc00 docs(LG-058): STE P2 测试面规划落树——A1 选项卡矩阵手测案/A2 诚实三态核验(sg 实照锚禁 mock)/A3 矩阵逐格终核/A4 渲染门全家族(jsdom 第四型+真 HTTP 链路+掩码面核)/A5 全量+四类排查/A6 dist 锚走读；CEO 22:55 改口令时点硬约束(两域两面改完再测)入卷；三候件态如实登记
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:10 +08：自上次进度提交 f9895bcb 后新增 3 条 commit：
+  - 0e109b15 docs(LG-058): N8河源窗核心已毕录账+03:02判定勘正——阶段A TriModel升级绿(强钉三env+活体三查)+rmc卡建成(密文搬运+案A全量+abc三裁全落=门审条件项闭环)+TriRMC升级绿(face=rmc+tier2-cache-fresh+HEALTHY decrypt ok);观察窗900s起算约03:19到期;勘正=B步卡件判定作废(SDE 02:54-55先手双落sg bare+GitHub,多操作员窗态教训记);TriMLC/TriMMC两笔仍滞留
+  - 03ea6832 Merge remote-tracking branch 'sg-server/dev' into dev
+  - ffc6f1da docs(LG-058): push阻塞窗情判定+FSD P1四范围码面全落录账——本机→github 443断四仓滞留(496613b/8de8fe7/99d8466/99ed6d0候推);COO裁度=A步不受阻(e9938cc在origin/dev)+B步唯一卡件=TriRMC 496613b,主轨监视器自愈(2ae292ec)/备援SDE直转河源(9c4b465b)/sg PAT挂起;范围1 TriMMC 99ed6d0落笔23新测全绿
+- registry：v2.1；今日 registry 提交无变化
