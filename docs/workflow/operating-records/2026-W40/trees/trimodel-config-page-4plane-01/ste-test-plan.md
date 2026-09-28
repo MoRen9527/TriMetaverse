@@ -113,6 +113,13 @@
 - **对平判定（本席）**：fail 集合⊄基线（形式破平），归因=环境型、非 43086ff 代码回归；定性成立但复绿实证候窗。**候 CTO 裁（L3 执行窗形态）**：(a) L3 全量门排轻载窗执行；(b) UI E2E 超时裕量 bump（goto 30s/launch 180s 无重试无裕量，重载机高 flaky）；(c) UI E2E 独立于 L3 全量门另窗跑。本席荐 (a)+(b) 并做，(c) 备选。
 - **L1 增补案布景依据已勘**（落笔下节点）：decrypt 失败布景=有效 base64 非法密文（GCM auth fail 必 throw，key-encryptor.ts L59-67）；apply 失败布景=无卡 404（L238）/无活动策略 400（L242）双形态。→ **已落笔跑绿（本席更新）**：`test/config-cards.ste.test.ts` @ TriModel **54eeaab**，3/3 一跑全绿（2026-09-28 14:2x +0800；案②③固化两码无 emit 点现势形态断言，候 CTO 裁后随裁更新）。
 
+## 十一、CTO 两裁采认与裁 2(b) bump 实施（裁定卷 de6d49f8；2026-09-28 14:2x-14:3x +0800）
+
+- **裁 2(b) bump 已实施**（TriModel @ **86fdec2**）：四点定位=r2 六案超时门实测反查（launch L127 默认 180s→**360s**；goto freshPage L146 单点覆盖 E5/E7/W2/W4，30s→**60s**；screenshot L285 30s→**60s**；reload L347/L398 30s→**60s**）。验证形态=tsc 门绿+E1 单案活体过（重载机现势下 bump 参数生效，launch/goto 均未触新限）；六案真值复绿+实际耗时分布候晚间轻载窗（COO 排程，窗位候 FSD 全交付时点固化）。
+- **复绿判据（CTO 口径转录）**：轻载窗+bump 后六案零超时**且不贴限**——贴新上限（goto 60s/launch 360s）=仍脆非复绿；A5 呈报材料=r2 归因卷（§十）+复绿读数+六案耗时分布全卷。(c) 独立另窗留升级判据：(a)+(b) 复跑仍超时再议。
+- **裁 1 联动面（本席测试文件）**：案②（decrypt_failed 行为面）=**定案形态**（裁 1 乙：server 侧不补不降维，注释已定案化 @ 86fdec2）；案③（apply）候 FSD N3-N5 补 emit 后随裁更新（apply_rejected 事件断言加入）；案①（status failed）系 200 正常路径审计案，非 200 emit 补丁不触及——COO 附注「案①随裁更新」按此澄清，案①断言不变。
+- **勘正知会入卷**：pull_denied 在役有 emit（CTO 勘正）——本席 §九 表述口径即两码（decrypt_failed/apply_rejected），无三码全缺歧义；知会收讫。
+
 ## 使用依据
 
 执行单 d9df61bc（§一.6/§二/§三/§四全读）；cto-implementation-plan.md v3 @ afb0180c（§2.1/§2.2/§2.3/§三/§四/§5.2/§十 两 P0 确认/§十一 v3）；判定件 v3 @ 9bd40491（commit 题录）；COO 拆派令（2026-09-28 10:33 hook）；LG-054 族③教训卷（ste-crossmachine-base-adaptation.md §二/§五，唯一性后缀直引）；工作区记忆条：全量读数回报/键存在性抽验≠值面验证/命令链断言。
