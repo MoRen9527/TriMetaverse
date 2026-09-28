@@ -185,3 +185,8 @@
   - a8dd6f19 docs(LG-058): BOD哨窗排期令四件+A3对裁录账(03:37)——①sg切前实照即刻(FSD执行中真断链在险)②sg TriMMC切换窗实照毕即排(授权链=BOD引CEO 02:43+02:44令链,河源先例免事前点头)③哨验收窗预计04:0x亲测五项全过=P1闭合宣告④A3对裁=BOD认可CTOⓒ裁,验收按演进基线;P1树N8→done
   - b8c9f124 docs(LG-058): N8河源生产写面窗闭全绿录账(02:55→03:28,SDE读数卷2e262c9d亲验)——观察窗终验PASS 900s第二轮刷新双实例03:19成功error零命中;主卡md5 bac279a6三时点全等零触碰;rmc卡pending→applied自动写回;回滚锚全单未动用;异常自纠三项在卷;河源TriRMC现役配置源=卡面effective=deepseek-v4-pro;读数卷落P0树目录候归位;关键路径链全段走毕候BOD直接验收
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:00 +08：自上次进度提交 41d36bdb 后新增 3 条 commit：
+  - 56390eb8 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 8b0c7b28 docs(LG-058): CTO门审簿正式闭卷录账(b42faa84亲验,R-HY迁移单CLOSED-PASS)——三条件终核达成+部署锚e9938cc⊂8de8fe7恰一commit零夹带+主卡属主EACCES=fail-closed(chown挂M2);挂账续项四件入候(404/G2b/键轮换/M2清单);溯源项列账=候修①裁据候CTO查证或勘误(STE X1清单L54唯一卷面);河源链窗口账销(树N11)
+  - b42faa84 docs(LG-058): R-HY rmc卡迁移门审卷§六闭卷笔CLOSED-PASS——三条件终核达成(加钉三检点兑现:migrate already-canonical双证);部署锚取舍独立实锤e9938cc⊂8de8fe7恰一commit零夹带;候修①裁据溯源记档=STE X1清单,CTO裁标注无直接出处候勘不阻;A2回滚形态升级核成立;§六.4候裁=主卡root属主不动+EACCES定性fail-closed防线+M2窗随窗chown
+- registry：v2.1；今日 registry 提交无变化
