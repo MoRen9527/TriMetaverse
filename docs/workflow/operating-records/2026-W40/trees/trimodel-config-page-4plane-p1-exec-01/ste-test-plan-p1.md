@@ -58,6 +58,15 @@
 ## 六、T-reg：三仓全量读数（A6 锚=三仓零新增）
 
 - 方法=同构 `npm test` 三仓串行（P0 L3 窗同法：后台子壳+Monitor+`--test-concurrency=1`）；**新基线=P0 终态读数**（FSD 复绿收口三笔 e9938cc 后：TriModel 313/298/0/15｜TriRLC 662/657/5/0｜TriMLC 617/612/5/0——候 FSD P1 落位时点 HEAD 现勘确认基线锚更新，禁沿用 P0 修前旧锚）。
+- **仓集合扩注（P1 范围 2 落地）**：TriRMC 仓入对平面（COO 02:53 知会授权 TriRMC 仓侧先勘）→对平面=四仓（TriModel/TriRLC/TriMLC/TriRMC）。
+
+### 六.1 TriRMC 仓侧对平（首勘，2026-09-29 02:54-02:58 +0800）
+
+- HEAD 勘验：**496613b 在位**（P1 范围 2 落笔），工作区净；同构 `npm test`（仓 script 原样）独立全量。
+- 读数：**589/584/4案(3族)/1 skip, exit=1**——FSD 报「589 测 3 挂族=既有」对差解消：fail 4=嵌套子案计数（套件 62 含 2 子案+63/107 各 1），**顶层挂族 3=3 零实质差**。
+- 三族归因（独立验，非转抄）：①`Contract Resolver — chief-technology-officer v3.0`（子案：tool "read" 缺 runtime_equivalent+runtime_baseline 缺失）②`Contract Resolver — resolveContracts over source-agents (14 v3)`③`Employee Registry — source-agents v3 (14 employees)`——**全部=source-agents v3 契约投影测试**（TriRMC test/orchestration 面对表 TriCompany 源侧 agent 文件现势）；496613b diff 八文件（config-cache/key-cache/cli/config-sync/server+三新测试件）**零触契约投影面**——既有挂族定性实证 ✓；跨仓投影漂移（源侧文件 vs 测试期望）独立线候勘归 owner，不阻 P1 门，候 CTO 定是否列观察项。
+- 新增测试族 23 案（key-cache/default-model-ladder/config-endpoints）**全绿**（pass 584 覆盖）✓。
+- TriModel 侧（范围 1 TriMMC commit）在途，落位后补对平。
 - 判据：fail⊆新基线（同族同数）+零新增；既有失败逐族归因独立验（禁转抄）。
 - 时机：FSD 实现项落位后完工窗执行（COO 令「读数候实现落位，不空转」）。
 
