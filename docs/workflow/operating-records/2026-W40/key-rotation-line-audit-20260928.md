@@ -16,15 +16,19 @@
 
 | 线 | 键 | 载体面 | 沾染路径 | 处置 |
 | --- | --- | --- | --- | --- |
-| 09-28 今日两枚 | glm 系尾 `tn5y`（len49） | TriModel 卡密文面 provider_entries（e-glm-anthropic + e-glm-flash-anthropic 同键双 entry） | FSD 预勘 GET admin 面 entries_decrypted 段打印（p0 树 cto-preaudit-findings.md §三） | **按本裁不轮换，销项** |
+| 09-28 今日两枚 | glm 系尾 `tn5y`（len49） | TriModel 卡密文面 provider_entries（e-glm-anthropic + e-glm-flash-anthropic 同键双 entry） | CTO 预勘 GET admin 面 entries_decrypted 段打印（p0 树 cto-preaudit-findings.md §三；勘正见 §二.1） | **按本裁不轮换，销项** |
 | 09-28 今日两枚 | deepseek 系尾 `26f3`（len35） | TriModel 卡密文面（e-deepseek-anthropic） | 同上 | **按本裁不轮换，销项** |
+
+### §二.1 勘正注记（2026-09-28T17:30+0800，m-coo 勘正令）
+
+初版本卷两处沾染路径误写「FSD 预勘」——实为 **CTO 预勘自报**（CTO 16:59 急报原文「本席预勘 GET 旧 server 打印了 entries_decrypted 段」，预勘卷 411609cd ①）；FSD 本线无沾染自报记录。两处已随本笔勘正（§二表+§三.3），归属关系以本注记为准，可溯性留痕。
 | **09-27 泄出枚** | deepseek 系尾 **`f738`**（len35） | **D:/Code/ai/.env `DEEPSEEK_API_KEY`**（env 面，非卡） | 合法 GET `/v1/config/keys` 分发面（W39 cto-triage-verdict.md §三） | **异键——不受本裁影响**；轮换在途态候 CEO/BOD 面确认（§三） |
 
 ## 三、定性证据链（结构性铁证为主，transcript 计数为弱信号仅列不采）
 
 1. **分发面供 env 键非卡键**（keys.js readKeys L34-65 实勘）：GET `/v1/config/keys` 逐位读 `process.env.DEEPSEEK_API_KEY`/`ANTHROPIC_API_KEY`/`OPENAI_API_KEY`/`TRIMODEL_TRIMETAVERSE_API_KEY`——**零卡源**；卡密文仅 admin 面 GET trimmc-card（entries_decrypted）可达。
 2. **09-27 时点供值=f738**：`D:/Code/ai/.env` mtime=**2026-09-18 00:40**（09-27 之后未变过）→ 09-27 GET 响应 deepseek 位即现值 f738。
-3. **glm 键无分发面泄出路径**：.env 无 ANTHROPIC/GLM 系键（唯一异族键 OPENAI_API_KEY 尾 `TL1p`）→ 09-27 分发面响应不可能含 glm 键 → glm 沾染唯卡面路径=今日 FSD 预勘，与 09-27 批次无交集。
+3. **glm 键无分发面泄出路径**：.env 无 ANTHROPIC/GLM 系键（唯一异族键 OPENAI_API_KEY 尾 `TL1p`）→ 09-27 分发面响应不可能含 glm 键 → glm 沾染唯卡面路径=今日 CTO 预勘（勘正见 §二.1），与 09-27 批次无交集。
 4. **09-27 时点卡态旁证**（bak-20260927-2325-pre-fullflash 解出比对）：卡 deepseek 位当日已=26f3——26f3 早于今日在卡，但 09-27 泄出路径（分发面）不经卡，非同枚。
 5. 弱信号（不采为主证）：09-27 sweep 会话 transcript（0612be9f）尾4 计数 f738×4/26f3×2/tn5y×0——纯十六进制尾4（26f3/f738）易撞 commit hash/密文 base64 子串，双向皆可能假阳/假阴，故仅列备查。
 6. 同机异键边界补录（掩码全图，防将来误轮）：HKCU\Environment `GLM_API_KEY` 尾 `VRyY`（≠tn5y 异键）；.env `DEEPSEEK_API_KEY` 尾 `f738`（=09-27 枚）；.env `OPENAI_API_KEY` 尾 `TL1p`（异族）；settings.json/trilc-local.env 无 glm/deepseek 系键。
