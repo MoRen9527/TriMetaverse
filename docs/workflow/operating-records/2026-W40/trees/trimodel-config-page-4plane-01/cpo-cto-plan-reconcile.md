@@ -1,8 +1,8 @@
 # CPO↔CTO 方案对表件 · TASK-TRIMODEL-CONFIG-PAGE-4PLANE-01（三方对表产品侧回执）
 
 - sourceOfTruth: 本件（CPO 对 CTO 实施方案件的三方对表回执正身；CTO 件=cto-implementation-plan.md @ 76d58282，CPO 件=cpo-product-plan.md @ e8eb515a）
-- syncMode: working（候 CTO 两条确认回应→三方一致→BOD/CEO 合审）
-- lastSyncedAt: 2026-09-28T04:4x+0800
+- syncMode: static（v2 闭卷 2026-09-29：确认①②生产活体闭合，8/10→10/10；v1 读数保留可溯）
+- lastSyncedAt: 2026-09-29T06:30+0800（v2 闭卷；v1=2026-09-28T04:4x）
 - 对表范围: CTO 件候对表三处（§4.3 层级裁/§5.2 差异①②）+功能项清单↔能力矩阵底表逐项
 
 ---
@@ -63,3 +63,31 @@ CTO 裁序 `env 显式覆盖 > TriModel 卡面（tier1）> fleet bundle（tier2�
 - 既批在账资产：cpo-pending-card-eval.md（状态语义教训）/cpo-503-semantics.md（503 子型）/model-fallback-sweep-01 CPO 对表前置（在账候办，本件 §一.3 不预支）
 
 —— CPO 小乔，2026-09-28 04:4x +0800（三方对表产品侧回执；候 CTO 两条确认）
+
+---
+
+## v2 闭卷段（2026-09-29 06:30）：**10/10 闭卷，syncMode working→static**
+
+### 闭卷读数：两条候确认在生产活体闭合（纸面裁入 P0 → P0 实施 → 生产活体验证全链闭）
+
+| 候确认 | v1 状态 | 闭卷实证（三段链） |
+| --- | --- | --- |
+| ① 卡面写备份轮换 | ⚠ 候 CTO（§四.5） | CTO 裁入 P0（§十 @02e2db82，claude-fallback L28 同款泛化）→ P0 闭合（231fca65）→ **生产活体：sg 切换窗 trimmc-card.json.bak-1/2/3 轮转在位**（A3 施工卷 §四 @a24053ff + 本席 A2-E 合判 v2 自验 e6c6f188） |
+| ② 卡写操作审计 | ⚠ 候 CTO（§四.6） | CTO 裁入 P0（face-events 账四族+len-only）→ P0 闭合 → **生产活体：face-events.jsonl pull/write/status 全族 11 行**（同上两源；本席判词「含 denied 全量留痕=审计账预期形态」） |
+
+### §六 结论升级
+
+v1「8/10 对上，2 条候 CTO 确认」→ **10/10 对上，两确认生产活体闭合，对表件闭卷**。三方一致判定（three-way-consistency-verdict.md v1-v3）所用本件基线自此终态，后续 A3 终对表（P2 执行单锚）以本闭卷态为产品侧基线。
+
+### 登记候裁清单（A3 施工卷 @a24053ff 转来，A3 完工窗一并裁，本笔不散裁）
+
+- **D-1** 卡编辑表单骨架期布满度口径 / **D-2** 四卡应用按钮骨架期未布口径 / **D-3** 网页手动 pull 触发 vs 通道分离口径（提示：本件 §三 分名分显裁已有基础口径，A3 窗正式化）/ **D-4** 降级梯摘要级 vs 全梯级呈现 / **D-5** 徽章双字段之② tier 序号 UI 显式化——五项候本席 IA 对表+CTO 口径裁定（FSD §五.6 提请窗）。
+- **F-1** TriMLC CLI DEFAULT_PORT=8711 错指（活体缺陷）——候 CTO 裁定，本席无产品面异议于候修方向（→8713，与 09-18 pidfile 事故族同根勘正）。
+
+## v2 使用依据
+
+- A3 施工卷 fsd-a3-cli-web-matrix-verdict.md §四 @a24053ff（FSD 供料，本席实读核）
+- 本席 A2 收稿判读件 v1/v2（e6c6f188，切前/切后半自验读数）
+- 三方一致判定件 v3（9bd40491，判定链终态）
+
+—— CPO 小乔，2026-09-29 06:30 +0800（v2 闭卷；随树回执 FSD）
