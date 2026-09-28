@@ -147,3 +147,12 @@
   - 9c57c8d8 Merge remote-tracking branch 'sg-server/dev' into dev
   - 42f1c584 docs(LG-058): R-HY rmc卡纠正迁移预检报告落树——九批read-only实测:§6.2①加密域判定=同机同用户可解(root首测UNDECRYPTABLE系指纹含username身份错位,fleet复测三条件目全可解翻案录);双仓切换步硬前置判定(TriModel bc72ea4无泛化端点+TriRMC a459491无config pull,依赖序=范围2升级在先范围3迁移在后);映射分拣表纸面零写入(三键密文搬运可行源码级实锚+策略实体两案呈报不擅断+A3空白态分发面依赖链分析);SOR拉起令双机分形成文(R-HY=systemd unit非孤儿/dev=node正形)+三层回滚序+活体三查;snapshot留档md5双向一致;A1-A4基线对表
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:50 +08：自上次进度提交 13266557 后新增 7 条 commit：
+  - f0523ad8 docs(LG-058): P2期立单+四席拆派录账(CEO 02:44令+BOD单11a52dbf wt/board线)——P2执行单=UI重构+诚实三态+CLI/网页矩阵终对表+渲染验证门全家族;P1收口=BOD直接验收(CEO免候授权);COO四席拆派毕(FSD=UI骨架/CPO=IA对表+A2实照管道/CTO=门审候件/STE=测试候件);实照硬门落P1范围1执行面禁mock顶替;P2完工=CEO终验触发达成
+  - cf18c3a0 docs(LG-058): P1红线条修订录账(CEO 02:43显式裁免知悉窗)——切换步双门改单门=CTO门审过后即可执行(BOD 02:44直达+COO 02:45转令双通道同令);任务书§三条款由发令权源显式撤销,补注候晨批落笔;不变项四=观察窗900s/回滚三查/事后通报/异常即停;COO调度面排期雷达改单锚触发=唯FSD范围2落位绿锚
+  - fae7a68f docs(LG-058): R-HY迁移红线条修订回写(CEO 02:43显式令·BOD 02:44转)——切换步免CEO知悉窗(「不用我点头直接切就行」录档),双候变单候=只候FSD范围2落位绿锚;切换读数汇COS事后知悉(事后通报非事前审批);异常即停照纪律;升级窗要件不变(e9938cc+强钉DISABLE_BOOT_MIGRATIONS=1)
+  - 95fcbd00 Merge remote-tracking branch 'sg-server/dev' into dev
+  - a66b75f4 docs(LG-058): P1令①R-HY预检门审卷录账(CTO 01e9e3c8四项全PASS+CONDITIONAL READY)——关键路径单链定谳=范围2→升级窗→切换步(A3剥离归M2键收敛窗);三裁案A全量搬运/河源实锚正名/主卡保留=复制非移动;依赖序锚=e9938cc+TRIMODEL_DISABLE_BOOT_MIGRATIONS=1强制钉(policy.tsL259/server.tsL97 seam);生产写面两窗候CEO知悉窗,FSD范围2链头
+  - c649659c docs(LG-058): R-HY预检报告门审裁决补注回写(CTO门审01e9e3c8四项PASS+CONDITIONAL READY)——三裁要点:ⓒ建卡=新增复制主卡零触碰(A3空白态剥离归M2,回滚锚随简化)/ⓐ策略实体案A全量搬运(护栏=策略链活体三验)/ⓑmachine写河源实锚正名;执行链三前置(FSD范围2落位绿锚+TriModel升级窗锚e9938cc强钉TRIMODEL_DISABLE_BOOT_MIGRATIONS=1防boot迁移触主卡+CEO知悉窗);本席双候命态+升级窗SOR按卷
+  - 01e9e3c8 docs(lg-058): R-HY预检门审卷落树(CTO,P1令①)——门审四项全PASS+A2分钟级判定成立(systemd自拉活+目录级还原);三处裁:ⓐ策略实体案A全量搬运附护栏(策略链活体三验+回滚锚兜底) ⓑmachine写河源hostname正名 ⓒA3mmc空白态剥离关键路径另窗(主卡保留=复制非移动,分发面兜底,排期简化单链);依赖序锚=TriModel河源e9938cc+强制钉TRIMODEL_DISABLE_BOOT_MIGRATIONS(seam实锚policy.tsL259,bootL97即跑migrate不钉则触主卡)+TriRMC候FSD范围2绿锚;切换就绪=CONDITIONAL READY条件三项
+- registry：v2.1；今日 registry 提交无变化
