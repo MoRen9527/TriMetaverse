@@ -53,6 +53,8 @@
 
 **格读数细节留痕**：8711 面四命令实跑时点 2026-09-28T21:40-21:55Z 窗内；`config show`/`config cache show` 同毫秒 fetched=2026-09-28T21:50:23.536Z（同 daemon 同缓存读）；8713 面 status 活体=service:trimlc/pid 10348/healthz ok（daemon 在役，仅 CLI 通道被 token 门拦）；TriRMC 河源面不重触（读数卷锚引用，SDE 已实跑留痕）。
 
+**F-1 交叉注记（COO 06:33 知会+FSD 实证归并，2026-09-29 06:3x 补）**：TriMLC CLI `DEFAULT_PORT=8711` 错指 rlc daemon（FSD 缺陷单 F-1）——本卷矩阵 mlc 列四格均系 `--port 8713` 显式指面实跑（token 门拦面），不受 F-1 影响；但 **mlc bin 不带 --port 的任何读数实达 rlc 面**（本席勘察期 TriMLC CLI 不带 port 的 config show 读数 face=rlc、与 TriRLC CLI 同毫秒同文即 F-1 同源实证）——F-1 裁修后 mlc bin 默认面格重测在窗队，8713 四格 token 通道复跑同窗队。候裁期间引用本卷者勿将 mlc bin 不带 port 读数误作 mlc 面读数。
+
 **CLI 半边结论**：矩阵宣称「4/4 daemon 覆盖」的四命令在 CLI 面**实现均在**（三仓 CLI config 族同构+mmc 面候 sg 锚），活体可达格 8711 全通、8713 全拦（token 门）、rmc/mmc 面锚引用；发现①-⑤如实入卷候裁。网页侧点验候正常工时，两半合卷后方成 C1 终对表。
 
 ### A4 渲染验证门全过（LG-035 家族，全项硬门）
