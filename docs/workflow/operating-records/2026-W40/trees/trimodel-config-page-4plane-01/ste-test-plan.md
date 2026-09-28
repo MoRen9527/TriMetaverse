@@ -97,6 +97,13 @@
 | G9 revert 单 commit | A6 演练 | **增补 diff 断言：泛化层 commit 不触老路径文件**（git show --stat 逐项核） |
 | G10 部署重启纪律 | 重启归 FSD/SDE 执行面（TriLC 重启纪律：权威路径+pidfile 按 port+禁裸杀） | 本席核验项：重启后两 daemon healthz 留痕读数入 L3 卷 |
 
+## 九、FSD N1+N2 交付对表（2026-09-28 午；实现锚=TriModel 43086ff，8 files +840/-1 独立实勘吻合）
+
+- **seam 四项实勘过四**（card-faces.ts 源码面对照，非转抄自述）：①dataDir/faceCardPath 双钉位（DATA_DIR/CARDS_DIR）✓ ②FACES/FACE_IDS/isRegisteredFace 导出 ✓ ③FaceEvent schema `{ts,face,etype,result,detail,reason?}` 冻结 ✓ ④ATTRIBUTION_CODES 三枚举 ✓；⑤CLI bin 候 N4（A4 对格挂起）。
+- **FSD 22 案（test/config-cards.test.ts）覆盖 L1 矩阵主面**：防枚举 404（T3 形态族）/view 形态/managed 鉴权三态/pull 鉴权三态（fail-closed+P0 通配+FACE_TOKENS 绑定）/载荷语义（禁用不进+明文仅响应生命周期）/台账/守卫五案（T4 同毫秒唯一性硬断言在位）/别名逐字段等价（A1 双证②）/status 台账同步/apply 审计/len-only 全账扫描。本席 L1 增补面收敛为 3 案：status `failed` 合法值（值域全覆盖）/decrypt_failed 布景（坏密文卡→warnings+skipped 计数）/apply 失败布景（非 200+零 ok 审计行）；cache 泛化单测候 N3（TriMLC/TriRLC 仓）。
+- **对表发现（呈 CTO 门审裁，非阻塞）**：`decrypt_failed`/`apply_rejected` 两归因码**枚举导出但泛化层无 emit 点**——decrypt 失败走 warnings+skipped 计数进 detail（审计 result=ok，L127-150）；apply 非 200 透传无审计行（L205-215）。fail-closed 主语义达成（跳过+告警不静默猜），缺的是两码归因粒度；候裁：补 emit 点或方案 §二 L1「三码形态」降维为「一码 emit+两码行为面形态」。
+- **全量独立验**：首跑 600s timeout 残局作废（19 cancelled+usage.test.ts 0xC0000142=杀进程波及形态，禁当 fail 计——命令链断言纪律：跑完才有效）；r2 后台重跑在途（Monitor 护汇总），读数归卷候下节。
+
 ## 使用依据
 
 执行单 d9df61bc（§一.6/§二/§三/§四全读）；cto-implementation-plan.md v3 @ afb0180c（§2.1/§2.2/§2.3/§三/§四/§5.2/§十 两 P0 确认/§十一 v3）；判定件 v3 @ 9bd40491（commit 题录）；COO 拆派令（2026-09-28 10:33 hook）；LG-054 族③教训卷（ste-crossmachine-base-adaptation.md §二/§五，唯一性后缀直引）；工作区记忆条：全量读数回报/键存在性抽验≠值面验证/命令链断言。
