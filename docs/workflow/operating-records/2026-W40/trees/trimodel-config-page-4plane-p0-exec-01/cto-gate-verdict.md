@@ -70,6 +70,21 @@
 - A6 revert 演练实测在哨窗（+840/-1 单 commit revert 语义）；A5 本卷=CONDITIONAL，正式 PASS 待复绿收口窗读数；A1-A4 已在在卷证据面（执行单六项对表）。
 - 哨验收通过后：升级流程清 bak（固定项①）→CG9 常态挂账→方案 v3 归档冻结态。
 
+## 四、A6 回滚策略补注（CTO 裁·2026-09-29 02:2x，wt/board 231fca65 令③）
+
+**裁点**：G9/A6 的「单 commit revert」只回**源码**；现役 3333 server 跑的是 **dist 产物**（`node dist\src\server.js`）——git revert 后不还原 dist 即回滚假绿（进程继续跑变更态产物）。dist 锚策略自此为 A6 回滚正身：
+
+**三层回滚序**（A6 演练实测与真回滚同构）：
+1. **主案（分钟级）**：`dist.bak-pre-a6-20260929T0027` 还原（目录级 rename/copy）+server 重启。锚在位已勘（00:27 补位）；`dist.rollback-trial-a6/` 为演练工作目录。
+2. **校验案（随 revert）**：`git revert <commit>` 后 `npm run build` 重建——作源码层/产物层一致性校验，不担分钟级时限。
+3. **有效性断言（回滚完成判据，防静默态）**：活体三查——①3333 cards pull 面 200 形态（`?view=pull` 带 token）；②daemon 侧 config show 归属读数回连（refresh 900s 窗内自愈亦可）；③server 侧 face-events.jsonl 审计行新增。**进程活着≠回滚成功**。
+
+**重启纪律（本席实勘补充）**：3333 server 现态=**孤儿进程无守护**（pid 20124，父 29936 已消亡；无 watchdog 无 schtasks）——**停后不会自拉**。演练/回滚 SOR 必须成文权威拉起令：TriModel 仓根 `node dist\src\server.js`（现役同形态），照 TriRLC 重启纪律族（优雅停+port 断言禁裸杀+停后拉起断言）。
+
+**级联面**：重启窗 daemon 侧零级联已证（G10 活体）——tier2 cache 兜底+900s refresh+status report non-blocking，拉取短暂 404/断连不阻业务面。
+
+**分钟级可回滚判定（门审面裁定）**：**成立**——锚在位+还原为目录级操作+拉起令成文+断言面明确；条件=演练 SOR 按本补注执行。
+
 ## 使用依据
 
-STE ste-test-plan.md §十三全卷（2696108c+f1f96711，三仓独立全量未转抄+W2 隔离复跑两轮实勘）；预勘卷 411609cd（113B/G2b/键沾染/族1 断言窗）；裁定卷 a52ae33d（G9/写手两族）/de6d49f8（裁1/裁2）/1a74b955（N4）；门审清单 5c60b084（G1-G10+A5 双条件定义）；执行单 d9df61bc（A1-A6 锚）；门审清单/裁定卷内实勘锚（43086ff/9d47ceb/4d8e735/c7414e3/03bae30 diff 面）。
+STE ste-test-plan.md §十三全卷（2696108c+f1f96711，三仓独立全量未转抄+W2 隔离复跑两轮实勘）；预勘卷 411609cd（113B/G2b/键沾染/族1 断言窗）；裁定卷 a52ae33d（G9/写手两族）/de6d49f8（裁1/裁2）/1a74b955（N4）；门审清单 5c60b084（G1-G10+A5 双条件定义）；执行单 d9df61bc（A1-A6 锚）；门审清单/裁定卷内实勘锚（43086ff/9d47ceb/4d8e735/c7414e3/03bae30 diff 面）。A6 补注实勘：TriModel 盘面（dist.bak-pre-a6-20260929T0027/dist.rollback-trial-a6 在位）+3333 进程链（pid 20124 孤儿态、父 29936 消亡、cmdline 相对路径）+pidfile/readout 卷 G10 活体级联读数。
