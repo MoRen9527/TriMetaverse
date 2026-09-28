@@ -45,7 +45,7 @@
 | **TriMMC**（M·服务域） | TriMMC 仓，`trimmc`（trimc） | sg 8710 | fleet config-sync 三级：env TRIMC_DEFAULT_MODEL > applied bundle model.defaultModel > 常量兜底（deepseek-v4-pro） | **未接**（sg card 缺失=M2 候修⑤断链之一） | `config-sync add/list/run/log/status/update/remove`（fleet 维，非卡面） |
 | **TriMLC**（M·本地域） | TriMLC 仓，`trimlc`（trilc） | 本机 8713 | key-cache（拉 /v1/config/keys）+env | keys 分发面 ✓ | `model` 命令在役；无 config 族 |
 | **TriRMC**（R·服务域） | TriRMC 仓，`trirmc`（trimc） | 河源服务位 | 同 TriMMC（fleet config-sync 三级，结构与 MMC 同构） | **未接** | 同 TriMMC（config-sync 族） |
-| **TriRLC**（R·本地域） | TriRLC 仓，`trirlc`（trilc） | 河源 8711+本机 8711 | key-cache（拉 /v1/config/keys，S2 AES+PBKDF2 域指纹落盘，15min 刷新 stagger，24h 过期）+env | keys 分发面 ✓（**降级梯先例本体**，R-HY 问7） | 无 config 族 |
+| **TriRLC**（R·本地域） | TriRLC 仓，`trirlc`（trilc） | **本机 8711**（寄居过渡；§一之三：未来与 TriMLC 分部署不同本地 PC）——**v3 勘误**：前版「河源 8711」系角色面误推部署位（未实勘，根因自认见 §十一 v3） | key-cache（拉 /v1/config/keys，S2 AES+PBKDF2 域指纹落盘，15min 刷新 stagger，24h 过期）+env | keys 分发面 ✓（**降级梯先例本体**，R-HY 问7） | 无 config 族 |
 
 ### 1.4 UI 现状（ui/index.html 1396 行单页）
 
@@ -140,7 +140,7 @@ daemon(TriX)                TriModel(端点 env 所指实例；过渡位=同机 
 | 域面 | tier1 拉取位 | tier2 cache 位 | tier3 | keys | default_model | 策略面（卡三实体） |
 |---|---|---|---|---|---|---|
 | TriMLC | 端点 env 所指实例（过渡位=本机 3333） | 消费机 config-cache | env | ✓ | ✓ | ✓（mlc 卡） |
-| TriRLC | 端点 env 所指实例（过渡位=同机 3333，河源/本机各自实例） | 消费机 config-cache | env | ✓ | ✓ | ✓（rlc 卡） |
+| TriRLC | 端点 env 所指实例（过渡位=本机 3333；寄居过渡，未来分部署独立本地 PC 换端点） | 消费机 config-cache | env | ✓ | ✓ | ✓（rlc 卡） |
 | TriMMC | 端点 env 所指实例（过渡位=sg 3333） | 消费机 config-cache | env>bundle>常量（现行链尾段保留） | ✓ | ✓ | ✓（mmc 卡，回归本职） |
 | TriRMC | 端点 env 所指实例（过渡位=河源 3333） | 消费机 config-cache | 同上同构 | ✓ | ✓ | ✓（rmc 卡） |
 
@@ -173,23 +173,23 @@ daemon(TriX)                TriModel(端点 env 所指实例；过渡位=同机 
 
 **差异显式标注（候对表）**：①CLI 不开卡写面（写=网页/管理 token 面）——若 CPO 功能项要求 CLI 写，需增 face 写凭据面，授权链另议；②「应用」语义双通道（网页 apply=server 内应用；daemon pull=拉取即本地生效+回写）——两通道同 status 台账，CPO 对表 UI 呈现口径。
 
-## §六 要素⑤ 现存错误用途纠正路径（TriRLC 域面配置迁出 TriMMC 卡·R-HY 实例）
+## §六 要素⑤ 现存错误用途纠正路径（TriRMC 域面配置迁出 TriMMC 卡·河源实例）
 
 ### 6.1 错误形态定性
 
-R-HY TriModel 3333 实例的 `trimmc-card.json` 现承载 **TriRLC 域面的拉取配置**（本应归 rlc 卡）——卡 face 语义错位（mmc 卡装 rlc 域配置；任务书 §一之二终审定性：无本地卡，皆远程拉取，TriModel 现役位皆过渡形态）。本机/sg 实例卡面与 R-HY 三断链照旧走 M2 候修清单，**本迁移不触生产写面**——本节为实施执行单的预研方案。
+R-HY TriModel 3333 实例的 `trimmc-card.json` 现承载 **TriRMC 域面的拉取配置**（本应归 rmc 卡）——卡 face 语义错位（mmc 卡装 rmc 域配置）。**v3 双重定性**：①无本地卡，皆远程拉取（§一之二）；②河源现役域面控制器=**TriRMC**（R 面·服务域，周平面迁移 cron 9c81c7ec 在役佐证），错装配置的域面归属=TriRMC 非 TriRLC（§一之三——v2 误归 TriRLC 系同根因残留，角色面≠部署位）。本机/sg 实例卡面与 R-HY 三断链照旧走 M2 候修清单，**本迁移不触生产写面**——本节为实施执行单的预研方案。
 
 ### 6.2 迁移方案（server 域内流转，零跨机复制）
 
 1. **预检**：R-HY 机上读 trimmc-card.json→server 域内解密验证（同机同用户=可解；解不开=域已被破坏，先治愈后迁移）；snapshot 全卡 JSON 留档（迁移前锚点）。
-2. **映射**：卡内条目按域归属分拣——**TriRLC 域面拉取配置**（R-HY 实例 TriRLC 消费的条目/策略）→ 新建 **rlc 卡**（`trirlc-card.json`，TriRLC 域面拉取卡·河源实例语义，**非「本地卡」**——§一之二语义，同引擎 pending 态写入）；真属 TriMMC 域的条目（若有）→ mmc 卡；无法归属条目→呈报不擅断。
-3. **切换**：rlc 卡 apply→TriRLC `config pull` 实拉验证（生效读数+来源归因=card）→观察窗（≥1 个 key-cache 刷新周期）。
+2. **映射**：卡内条目按域归属分拣——**TriRMC 域面拉取配置**（河源 TriRMC 消费的条目/策略）→ 新建 **rmc 卡**（`trirmc-card.json`，TriRMC 域面拉取卡·河源实例语义——§一之三定性；同引擎 pending 态写入）；真属 TriMMC 域的条目（若有）→ mmc 卡；无法归属条目→呈报不擅断。
+3. **切换**：rmc 卡 apply→**TriRMC** `config pull` 实拉验证（生效读数+来源归因=card）→观察窗（≥1 个 key-cache 刷新周期）。
 4. **回滚锚**：旧 trimmc-card.json **改名 `.bak-<ts>` 原位保留不删**（唯一性后缀纪律同族）+反向迁移脚本（bak→原名+回写 status）——回滚=一次 rename+一次 apply，分钟级。
 5. **UI 侧**：R-HY 实例配置页的 TriMMC 卡呈现随卡面泛化（face 参数化）自然消解——网页按 face 渲染各自卡，错误挂载面不复存在。
 
 ### 6.3 验收锚（迁移执行单用）
 
-- TriRLC on R-HY `config show` 来源归因=card（rlc 卡）；旧卡 bak 在位可回滚；mmc 卡在 R-HY 实例呈空白待配置态（本职语义）；全程零跨机文件复制（时序留痕）。
+- **TriRMC on 河源** `config show` 来源归因=card（**rmc 卡**）；旧卡 bak 在位可回滚；mmc 卡在河源实例呈空白待配置态（本职语义）；全程零跨机文件复制（时序留痕）。
 
 ## §七 实施排程建议+依赖图
 
@@ -293,3 +293,36 @@ cpo-cto-plan-reconcile.md @ 9496b1e09（sg-server 远端 tip，本席未直接�
 ### 使用依据（本节）
 
 任务书补 §一之二（a8066d40 本地 dev 勘讫）；BOD 会审笔 §三（70c573c4，COO 勘在位转达）；CEO 09:34 原话（COO 流转单照录）；TriRLC env.ts trimodelApiUrl 既有面（本席 04:0x 实勘）；R-HY Caddy 443 gate 形态（LG-054 M1 落位读数在卷）；COO 拆派令（09:39 hook，接令回执 f3455d1b）。
+
+## §十一·v3 二轮回炉修订记录（CEO 10:04 角色↔机位映射纠正，COO 拆派 10:08，2026-09-28 10:1x 修订落笔）
+
+### 修订依据
+
+任务书补 §一之三（5f035d99）：河源那张卡应为 **TriRMC**（R-HY 机域面控制器=TriRMC，周平面迁移 cron 在役佐证）；本机两个才是 TriRLC（8711）+TriMLC（8713）——条件所限过渡形态，未来分开部署不同本地 PC。矩阵修正：TriMLC=M·本地域·本机｜TriRLC=R·本地域·**本机**｜TriMMC=M·服务域·sg｜TriRMC=R·服务域·河源。BOD 会审笔 §五（62d8a72b）在位。
+
+### 根因自认（本席）
+
+v1/v2 的「河源 8711」「TriRLC·河源实例」表述**未经本席实地勘验**——LG-054 勘验面=河源 TriModel 3333 测试基座，未勘河源控制器面；「河源 8711」系自「8711=TriRLC=R 面本地域 daemon」端口定性记忆**推及写入**：把「TriRLC=R 面本地域**角色**」误推为「TriRLC 部署**在** R 面（河源）」——角色归属面≠部署位，与 BOD 走查自认同根因（§一之三 根因注记）。教训：**机位表述须实勘来源（部署读数/活体探测），端口定性≠部署位证据**。
+
+### 修订清单（v3，六处）
+
+| # | 位置 | 修订 |
+|---|---|---|
+| 1 | §1.3 TriRLC 行部署位列 | 「河源 8711+本机 8711」→「**本机 8711**（寄居过渡，未来分部署独立本地 PC）」+勘误注指 §十一 v3 |
+| 2 | §4.4 TriRLC 行 tier1 列 | 「过渡位=同机 3333，河源/本机各自实例」→「过渡位=本机 3333；寄居过渡，未来分部署换端点」 |
+| 3 | §六标题+§6.1 | 「TriRLC 域面配置迁出」→「**TriRMC 域面配置迁出** TriMMC 卡·河源实例」；§6.1 v3 双重定性（§一之二无本地卡+§一之三域面归属=TriRMC） |
+| 4 | §6.2 映射步 | 新建 **rmc 卡**（`trirmc-card.json`，TriRMC 域面拉取卡·河源实例）；消费主体=河源 TriRMC |
+| 5 | §6.2 切换步+§6.3 验收锚 | rlc 卡 apply→TriRLC pull ⇒ **rmc 卡 apply→TriRMC pull**；验收锚=TriRMC on 河源 `config show` 归因=rmc 卡 |
+| 6 | §2.1 face registry | 部署位语义四元组随矩阵修正（mmc=sg/mlc=本机 8713/rlc=本机 8711 寄居过渡/rmc=河源）——正文未列具体部署位值，实施时按本 v3 矩阵取值 |
+
+### v1/v2 历史留痕声明
+
+§十一 v1/v2 叙述（含十二处修订清单中「TriRLC 域面拉取卡·河源实例」表述）**为历史留痕不动**——v3 为现行语义；两轮纠偏根因同源（角色面/部署位未分离），v3 修订后全案以「角色·面·机位三元分离」为表述纪律。
+
+### 物理机制面零变化声明
+
+域锚不变量/拉取时序/降级梯三层/CLI 命令族/鉴权边界/§十 两 P0 确认（备份轮换/审计）——**全维持**；本轮纠偏=映射层（域面归属与机位标注），架构与机制设计零结构性变化。分期 P0（MLC/RLC 本机域面接入）/P1（MMC/RMC 服务域接入+迁移线）/P2 不变——迁移线在 P1 的执行对象随 v3 修正为 rmc 卡。
+
+### 使用依据（v3 节）
+
+任务书补 §一之三（5f035d99 本地 dev 勘讫）；BOD 会审笔 §五（62d8a72b，COO 勘在位转达）；CEO 10:04 原话要义（COO 流转单照录）；周平面迁移执行点记忆条（河源 TriRMC cron 9c81c7ec，LG-056 迁移链实勘）；COO 拆派令（10:08 hook，接令回执 591f5cea）。
