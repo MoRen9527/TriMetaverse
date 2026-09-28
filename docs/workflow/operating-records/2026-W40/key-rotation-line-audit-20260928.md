@@ -79,7 +79,7 @@
 
 keys.js（dist/src/api/keys.js readKeys+S5 归并读链实勘）/key-source.js（deriveProviderKeys 卡覆盖→env 回落，1de9fe5 09-11 引入+09-27 HEAD a9d9fc8 内容实勘）/trimmc-card.js+api/trimmc-card.js（卡写面+水合语义）/security/key-encryptor.js（AES-256-GCM+PBKDF2 机器指纹）/anthropic-proxy.js L62（出站链同走卡覆盖）/config.ts L10-12（dotenv 上扫）/掩码扫描 D:/tmp/lg057/mask-scan-keys.mjs+read-env-deepseek.ps1（留档可复跑）/W39 cto-triage-verdict.md §三（09-27 泄出路径+原裁）/W40 p0 树 cto-preaudit-findings.md §三（今日两枚发现源）/GLM 四面点位图（docs/execution/2026-08-27/glm-model-deployment-map.md）/deepseek.txt+D:/Code/ai/.env 备份链（轮换执行面）。
 
-## 八、M2 候修⑤·sg GLM 键落卡执行读数（COO 22:49 拆派/COS 22:51 触发令，date 现查 2026-09-28T22:57:xx+0800）
+## 八、M2 候修⑤·sg GLM 键落卡执行读数（COO 22:49 拆派/COS 22:51 触发令，date 现查 2026-09-28T22:57:26+0800）
 
 **前置⓪闸**：PEB 全值脚本闸已清（read-env.ps1 v2 掩码闸，18ca213a）——本单实际未动用 PEB（键值 sg 机内经手零落上下文），闸为备用前置 ✓。
 
