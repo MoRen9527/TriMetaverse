@@ -63,3 +63,21 @@
   - b8645685 docs(lg-058): BOD 会审笔 §五 二次纠偏回录——矩阵四行修正(河源=TriRMC/TriRLC 寄居本机未来分部署)/迁移建卡 rlc→rmc/根因自认(角色归属面≠部署位,走查同犯)/三轮走查待办成文
   - fef29f46 docs(lg-058): BOD 重走查 §四——清词彻底独立验证(grep 残留全合法)/纠偏锚恢复重判 ✓/候决三条裁决(v2 确认+本地域分离口径照准+跨机 HTTPS 并 P1 固定项照准)/重走查通过呈 CEO 终审
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:30 +08：自上次进度提交 13596723 后新增 22 条 commit：
+  - 1b1a762a merge(sg): 对齐 sg bare watcher 兜底笔 13596723（LG-056 SOP diverged 策略；ahead 21/behind 1，铸表推平前置对齐）
+  - f09e888f docs(总表): task-inventory-20260928 COS 铸——CEO 21:13 拉总表令正身版
+  - 18ca213a docs(凭据线): PEB候修正身落地——read-env.ps1 v2密钥族自动掩码(KEY/TOKEN/SECRET/PASSWORD只出len+头4尾4)+-Filter参数化免sed派生;冒烟双验(pid11000密钥族掩码零全值+PATH面无回归);D-09同族第三例实录(中文注释无BOM破here-string→补BOM过);COS知情裁「接钥作业前必修」即日清
+  - 069b258f docs(凭据线): sed 双前缀瑕疵随正（lastSyncedAt 行）
+  - 9e8c6488 docs(凭据线): 时刻纪律随正——§六头+lastSyncedAt 估读时刻改 date 实查原样粘贴 17:44:05+0800（D-04 禁估读自纠）
+  - b186fa46 docs(凭据线): §六S5读链翻案+§七f738轮换执行读数——对表定性修正为「同键销项」(S5归并读链09-11在役=卡条目覆盖env,09-27分发面实供26f3非f738,证据链1de9fe5/a9d9fc8实勘);f738=env备位死键另案轮毕;执行四步全绿(行级替换6863/D-03树杀重启pid11000/PEB双验/旧键401断言PASS平台自证f738);PEB全值入transcript一处如实申报候知情裁;分发面现供26f3与终裁一致零动作
+  - 6c9ebfca docs(凭据线): 对表定性卷勘正——沾染路径归属 FSD→CTO（CTO 16:59 急报原文「本席预勘 GET 旧 server 打印 entries_decrypted 段」预勘卷 411609cd ①；FSD 本线无沾染自报记录，m-coo 勘正令）；§二表+§三.3 两处随正+§二.1 勘正注记留痕；定性结论面零变化
+  - 3f9bc835 docs(凭据线): 沾染键域对表定性卷——09-27枚=deepseek f738(env分发面)与今日两枚(卡面tn5y/26f3)异键实锤(keys.js readKeys env源+env mtime 09-18+glm无分发面路径三铁证);今日两枚按CEO 17:21终裁销项;候钥令撤回执零实改;预备勘察成果归档转f738线配方(落存点位全图+三步就位+卡写通道备查);键值全程掩码
+  - 411609cd docs(lg-058): P0-EXEC-01 CTO 门审前预勘发现——113B 增量差定性核心实体零损(恢复态/13432 内存/昨晚 bak 三方逐字节一致,形态级差挂观察,事故恢复质量合格)+managed 视图明文回显发现(G2b 门审新项,现役行为 P0 不动记档候 CPO)+键沾染自报急报(两枚 dev 键进 transcript,轮换归 BOD/CEO 面与 09-27 项并单)+族1 整改面实勘生效+G10 重启前置疑虑解除
+  - 1a74b955 docs(lg-058): P0-EXEC-01 CTO 裁认 N4——实现路径采认(daemon 内五端点=即时生效语义本体唯一形态+show daemon 视角系语义精化+全局门 L1776→路由 L1819 位置序实勘门内+CLI token fail-closed 双向)+形态差记档不回改冻结方案;观察 a cronRequest 缺 token 本单不修记候修清单(族外既有缺口+token 源三择独立设计题+直接 HTTP 先例在役)
+  - 6bd61399 docs(lg-058): STE §十二BOD哨裁两固定项入卷+N3对表——①bak双重身份A5收口确认面挂账(清场三段升格流程)+②E2E禁触生产路径栅栏(落地面已勘=FSD族1整改链三钉位;A5核验项增补栅栏值面验证)+N3对表(案③FSD代更追认http_404形态吻合裁1甲+bump四点在位+STE3案复验3/3绿)
+  - 54d3f4c8 docs(lg-058): STE §十一CTO两裁采认+bump实施归卷——四点定位封顶2x@TriModel 86fdec2(tsc绿+E1单案活体过)+复绿判据转录(零超时且不贴限)+裁1联动面(案②定案/案③候FSD补emit/案①澄清不触及)+勘正知会入卷
+  - de6d49f8 docs(lg-058): P0-EXEC-01 CTO 裁定 STE 候裁两项——裁1 分两半(status/apply 非200 审计 emit 补=N3-N5 顺手两处小笔/decrypt_failed server 侧不补不降维=本义场景在消费机 N3-N5 落;勘正 pull_denied 在役有 emit L104)+裁2 L3 窗(a 轻载窗+b bump 封顶 2x 附贴限判据,c 独立另窗留升级备选;环境型破平采认)
+  - 1ed33bc7 docs(lg-058): STE L1增补3案落笔跑绿归卷——test/config-cards.ste.test.ts @TriModel 54eeaab 3/3一跑全绿(§九增补面状态更新)
+  - 46687349 docs(lg-058): STE §十全量r2读数+UI E2E 6fail归因落卷——308/287/6/15有效(cancelled=0)+六案全TimeoutError零断言失败+同suite 7案过+同HEAD FSD全绿293=287+6吻合+复验launch 180s超时=负载三重佐证→环境型非代码回归定性/复绿实证候窗/候CTO裁L3执行窗三择
+  - …另有 7 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
