@@ -156,3 +156,14 @@
   - c649659c docs(LG-058): R-HY预检报告门审裁决补注回写(CTO门审01e9e3c8四项PASS+CONDITIONAL READY)——三裁要点:ⓒ建卡=新增复制主卡零触碰(A3空白态剥离归M2,回滚锚随简化)/ⓐ策略实体案A全量搬运(护栏=策略链活体三验)/ⓑmachine写河源实锚正名;执行链三前置(FSD范围2落位绿锚+TriModel升级窗锚e9938cc强钉TRIMODEL_DISABLE_BOOT_MIGRATIONS=1防boot迁移触主卡+CEO知悉窗);本席双候命态+升级窗SOR按卷
   - 01e9e3c8 docs(lg-058): R-HY预检门审卷落树(CTO,P1令①)——门审四项全PASS+A2分钟级判定成立(systemd自拉活+目录级还原);三处裁:ⓐ策略实体案A全量搬运附护栏(策略链活体三验+回滚锚兜底) ⓑmachine写河源hostname正名 ⓒA3mmc空白态剥离关键路径另窗(主卡保留=复制非移动,分发面兜底,排期简化单链);依赖序锚=TriModel河源e9938cc+强制钉TRIMODEL_DISABLE_BOOT_MIGRATIONS(seam实锚policy.tsL259,bootL97即跑migrate不钉则触主卡)+TriRMC候FSD范围2绿锚;切换就绪=CONDITIONAL READY条件三项
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:00 +08：自上次进度提交 b619f2db 后新增 9 条 commit：
+  - 21e02731 docs(LG-058/060): STE TriRMC对平毕录账+LG-060授号(105b39b6亲验)——对平首勘496613b净589/584/4案3族,FSD报对差解消(嵌套子案计数vs族口径);三族=source-agents v3契约投影既有挂族diff零触实证;LG-060跨仓投影漂移授号(CTO候勘分派,独立线不阻P1门);河源窗N8 active STE ride阶段C随录
+  - 27cd91b5 docs(LG-058): TriRMC河源升级锚定确认笔(496613b)——本席定点独立抽验三项全过:commit在位工作树净+内容面对表config pull能力逐项吻合;40测定点同跑新测三件零挂全绿+4挂身份逐一对表=Contract Resolver×2+Employee Registry v3(source-agents v3契约域与本单diff零交集)既有定性独立成立;tsc --noEmit净复现;§四.条件1达成,门审卷§三.3自此实锚
+  - 105b39b6 docs(LG-058): STE TriRMC 仓侧对平首勘——496613b 独立全量 589/584/4案(3族)，FSD 报对差解消(嵌套子案计数 vs 族口径)；三族=source-agents v3 契约投影既有挂族(diff 面零关联实证)；23 新测全绿；对平面扩四仓；TriModel 侧候范围1补对平
+  - b311b8a5 docs(LG-058): P1河源生产写面窗已启录账(SDE排窗回执02:54)——窗时点02:55+0800起连窗三阶段A=TriModel河源升级e9938cc+强钉→B=切换步rmc建卡案A三验+河源实锚+主卡md5零触碰+TriRMC河源升级496613b→C=观察窗900s+收口读数落树;回滚锚窗前定案六件;异常即停执行读数事后知悉
+  - 344a8a47 docs(LG-058): P1链头绿锚录账(TriRMC dev 496613b亲验=范围2河源接入)——23新测全绿/全量589测584绿3挂族既有/tsc净;生产写面单锚触发条件满足,升级窗(e9938cc+强钉)+切换步连窗候SDE排窗回时点(开窗令12741457已达);FSD剩件=范围1 TriMMC+sg实照窗时点候报
+  - d3366e54 docs(lg-058): CPO IA对表件落树(P2执行单11a52dbfc范围§一对表)——实现无偏4/4全同判(左菜单右单页/四卡同构+特有差异面/rmc河源归位v3语义守住/实照管道A2基料承接确认);实现注意点三条供FSD判据(卡模板锁死§3C/菜单折叠按实数据卡数自适应勿按期判/TriMMC信息旧栏目名随批窗销项候CEO终验);AC-A锚映射闭合零新增验收项
+  - eee9c783 Merge remote-tracking branch 'sg-server/dev' into dev
+  - bcaac965 docs(LG-058): P2 STE树账并账(7cf4bc00 dev线在卷亲验)——STE P2测试规划六案落树(选项卡矩阵/诚实三态sg实照锚/矩阵逐格终核/渲染门全家族/全量+四类排查/dist锚走读)+CEO 22:55时点硬约束入卷;锚面澄清=STE自起树账7cf4bc00与COO拆派记录e2204346并行不冲突
+  - 7cf4bc00 docs(LG-058): STE P2 测试面规划落树——A1 选项卡矩阵手测案/A2 诚实三态核验(sg 实照锚禁 mock)/A3 矩阵逐格终核/A4 渲染门全家族(jsdom 第四型+真 HTTP 链路+掩码面核)/A5 全量+四类排查/A6 dist 锚走读；CEO 22:55 改口令时点硬约束(两域两面改完再测)入卷；三候件态如实登记
+- registry：v2.1；今日 registry 提交无变化
