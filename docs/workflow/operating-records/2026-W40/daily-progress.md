@@ -204,3 +204,9 @@
   - 6afb5c19 docs(LG-058): sg段观察项四件录账——outbox325条TriMC根CTO裁毕=复制留档不合并随退役窗清现无动作项(本席04:40初裁被覆盖作废留痕)/md5轮换语义候BOD并偏差申报同窗/TriCode detached d20cb6b对平策略候CTO正常工时窗/EBADENGINE已记录;时点列+04:41
   - 88a2c0b5 docs(LG-058): sg接入窗候裁三项裁定卷——①零触碰语义承接成立(判据本体=配置内容域恒定,md5恒等=无写回链充分投影,diff除status=带写回链一般判据,形态必然非缺陷;status外置记M3候选不排期)②TriCode detached d20cb6b=有意锚定非事故态,生产依赖锁锚纪律成文(两机同锚保持+升级显式窗+禁顺手追顶)③outbox 325条=复制留档不合并(禁混入现役poller状态机面,随TriMC退役窗清)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @05:00 +08：自上次进度提交 b3c5604d 后新增 4 条 commit：
+  - e6c6f188 docs(lg-058): CPO A2合判裁决v2落树(分段合判)——A2-E证据面即启通过(三证翻转逐一验真:404→401鉴权门活/台账0→11行全族applied态/live md5=盘面8de8fe7新代装载,禁mock实质达成);A2-P呈现面候P2部署窗与A1A4同窗(P2四卡页未部署无可判对象,FSD注记③成立);分段理由=证据链时点性早锁定+呈现面候窗零损失;FSD三注记产品侧全核(备份链轮转在位=P0机制切换窗活体工作登记完工卷引用/observer effect=审计账预期形态);小瑕疵注记:401物证件未含status数字字段非阻塞
+  - b7625106 Merge origin/dev（watcher 兜底线收编：本侧 FSD 实照 e148c662+SDE 锁锚 wiki 件 × 远侧 watcher 兜底 b3c5604d）
+  - a0f02e4e docs(sde): 生产依赖锁锚纪律 wiki 件落位（CTO 裁定 88a2c0b5② 承接知悉件）——TriCode sg detached d20cb6b=有意锚定非事故态；执行面两条：禁事故态误修（禁顺手追顶）+两机同锚保持/生产升级走显式窗（fetch+checkout 新锚+受影响仓重 build+活体验收）；窗内兑现先例=sg TriCode 1c7bdee→d20cb6b 显式对平（读数卷 64fc75e8 §三.2）
+  - e148c662 docs(lg-058): sg 切后对照实照落树(N6-scope2,A2后半)——三角断链全翻转实照件6+manifest
+- registry：v2.1；今日 registry 提交无变化
