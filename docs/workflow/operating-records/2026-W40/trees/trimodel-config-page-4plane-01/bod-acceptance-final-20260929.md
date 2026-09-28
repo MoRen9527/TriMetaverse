@@ -52,7 +52,7 @@
   - 旧代（pid 20124, e9938cc 代）：PUT → **HTTP 500 `{"error":"Internal server error"}`**（缺陷现象复现=反证）
   - 新代（pid 42616, 995c2f7 代⊃8de8fe7）：同载荷 → **HTTP 400 `{"error":"条目数据格式错误，请重新添加条目"}`**（人话拒=正证）
   - 400 拒=零写入（mlc 卡未生成、write-guard 未触发）
-- **候修②（SDE 部署尾三件：registerPid port 参/watchdog 复活令 env 保真缺口/boot 期 401 自愈）**：CTO sg 窗判读卷（88a2c0b5）未含——**候裁挂账**，已转 CTO 面催裁；G10 卷 L56 watchdog 缺口定性在卷（watchdog 拉起将复现 mc_link degraded）。不阻闭合（P0 终卷同口径）
+- **候修②（SDE 部署尾三件：registerPid port 参/watchdog 复活令 env 保真缺口/boot 期 401 自愈）**：~~候裁挂账~~ **〔勘误 05:07〕CTO 已于 G10 观察项裁定卷 e24b17cc（00:37 落卷）全裁毕，本卷落笔时路由未接上**——①registerPid 裁修归 FD（TriMLC src/index.ts L145/L161 补 app.port，对齐 TriRLC L141 正形）②watchdog 裁修归 SDE（revive 段改调权威 launcher `trirlc\daemon\trirlc-daemon.cmd`，路径=子目录非根）③boot 401 销项（读数错配定谳：16:01:21Z mlc 首 pull ok 铁证，401=rlc 两笔错配拼接，②修复验收含此面）。三件转下窗并批执行（常规窗非即夜）
 - **候修③（A6 回滚策略补注）**：CTO 闭卷笔 b42faa84 在案（单 commit revert 失效→dist 锚三层序）——**已收口**
 
 ### ⑤零跨机复制时序核 — PASS
@@ -91,7 +91,7 @@
 
 | # | 候办 | 候谁 | 性质 |
 |---|---|---|---|
-| 1 | SDE 部署尾候裁三件（registerPid port 参/watchdog 复活令 env 保真缺口/boot 401 自愈判读） | CTO | 候裁挂账（已催），不阻 |
+| 1 | ~~SDE 部署尾候裁三件~~ **〔勘误 05:07〕已裁毕（e24b17cc）：①FD registerPid ②SDE watchdog 改调权威 launcher ③销项** | COO 下窗并批排产（FD+SDE） | 裁毕候执行，不阻 |
 | 2 | TriCode detached 锚纪律入 TriCompany 技术真源 code-state 注记 | CTO（随下一批 registry 窗） | 记档随窗 |
 | 3 | 本机 20:40:13Z pull denied 来源（探针错钥定性，fail-closed 正常）——无办 | — | 留痕即闭 |
 
