@@ -104,6 +104,15 @@
 - **对表发现（呈 CTO 门审裁，非阻塞）**：`decrypt_failed`/`apply_rejected` 两归因码**枚举导出但泛化层无 emit 点**——decrypt 失败走 warnings+skipped 计数进 detail（审计 result=ok，L127-150）；apply 非 200 透传无审计行（L205-215）。fail-closed 主语义达成（跳过+告警不静默猜），缺的是两码归因粒度；候裁：补 emit 点或方案 §二 L1「三码形态」降维为「一码 emit+两码行为面形态」。
 - **全量独立验**：首跑 600s timeout 残局作废（19 cancelled+usage.test.ts 0xC0000142=杀进程波及形态，禁当 fail 计——命令链断言纪律：跑完才有效）；r2 后台重跑在途（Monitor 护汇总），读数归卷候下节。
 
+## 十、全量独立验 r2 读数与 UI E2E 6 fail 归因（2026-09-28 午后）
+
+- **r2 有效读数（跑完整，cancelled=0）**：TriModel @43086ff **308/287/6/15**（1916s）。FSD 自述 308/293/0/15，差=6 fail 全部集中于 GATE UI E2E 族：E5/E7/E8/W1/W2/W4。
+- **6 fail 逐案形态**：`page.goto/reload/screenshot Timeout 30000ms`（Playwright 超时门），**零断言失败**；同 suite 7 案 pass（E1-E4/E6/W3/W5——server/浏览器活体在位）；suite 总时长 1727s。
+- **环境型定性（三重证据）**：①同 HEAD（43086ff）FSD 自测全绿 293 pass=287+6 数学吻合（11:52 前后轻载窗）；②r2 六案全 TimeoutError 形态（代码回归应为断言失败形态）；③单文件复验跑（同午）`browserType.launch: Timeout 180000ms`——浏览器冷启动都超时=机器负载活体持续佐证（13 席常驻+daemon 重载机）。
+- **复验经过如实记**：单跑命令缺 `--test-concurrency=1` 与 npm script 不同构（教训：复验方法须与原跑同构）；修正后仍不可达——launch 180s 超时，**复绿实证在本机现势负载下不可取**，不谎称复绿。
+- **对平判定（本席）**：fail 集合⊄基线（形式破平），归因=环境型、非 43086ff 代码回归；定性成立但复绿实证候窗。**候 CTO 裁（L3 执行窗形态）**：(a) L3 全量门排轻载窗执行；(b) UI E2E 超时裕量 bump（goto 30s/launch 180s 无重试无裕量，重载机高 flaky）；(c) UI E2E 独立于 L3 全量门另窗跑。本席荐 (a)+(b) 并做，(c) 备选。
+- **L1 增补案布景依据已勘**（落笔下节点）：decrypt 失败布景=有效 base64 非法密文（GCM auth fail 必 throw，key-encryptor.ts L59-67）；apply 失败布景=无卡 404（L238）/无活动策略 400（L242）双形态。
+
 ## 使用依据
 
 执行单 d9df61bc（§一.6/§二/§三/§四全读）；cto-implementation-plan.md v3 @ afb0180c（§2.1/§2.2/§2.3/§三/§四/§5.2/§十 两 P0 确认/§十一 v3）；判定件 v3 @ 9bd40491（commit 题录）；COO 拆派令（2026-09-28 10:33 hook）；LG-054 族③教训卷（ste-crossmachine-base-adaptation.md §二/§五，唯一性后缀直引）；工作区记忆条：全量读数回报/键存在性抽验≠值面验证/命令链断言。
