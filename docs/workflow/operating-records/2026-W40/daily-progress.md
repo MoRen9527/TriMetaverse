@@ -194,3 +194,8 @@
   - 8f8545d4 Merge remote-tracking branch 'sg-server/dev' into dev
   - 641d6f57 docs(lg-058): CPO A2基料收稿判读件落树(sg切前半实照收稿合格)——收稿三查毕:值面抽验四件物证+密文卡全过(断链三角互证闭合:台账缺席+零接线+404/US3判据落点正确/两代际对照注记成立);清单差口两笔请FSD回改manifest(sg-status-reading→effective-reading件名漂移+404件漏列,物证零缺陷);A2完整判候切后半(重启+接入后UI+台账生成,SDE切换窗补齐)两半合判;切换硬前置=服务重启加载8de8fe7已登记验收窗复核
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:40 +08：自上次进度提交 dc80408b 后新增 3 条 commit：
+  - 9fad2dff docs(LG-058): sg TriMMC切换窗闭全绿录账(04:05→04:32,读数卷64fc75e8亲验)——观察窗终验PASS+A1锚face=mmc source=tier2-cache-fresh+verify HEALTHY;回滚锚全单未动用+异常自纠五项;偏差申报候BOD=sg主卡status写回语义(身份折叠,唯一status.at,写守卫含切换前基线锚6587c69d);两段生产写面全闭候BOD哨验收宣告P1闭合
+  - 64fc75e8 docs(LG-058): sg TriMMC接入切换读数卷落树+观察窗终验全绿窗闭——A TriModel 8de8fe7 build绿(假红自纠链:TS7006依赖陈旧→TS2307 TriCode双层陈旧→本机主推bare→d20cb6b对平+强钉三env+404消断言)/B TriMMC 99ed6d0 cutover(start.sh指向切换bak-201527Z+tier1精准注入+mailbox连续性搬运+config show face=mmc source=tier2-cache-fresh+verify HEALTHY);偏差申报=主卡status写回语义(mmc face即主卡身份折叠,结构diff唯一status.at,写守卫bak-1=切换前基线锚6587c69d断言OK);异常自纠五项含outbox gitignore隐件;回滚锚全单在位
+  - dffbe7f4 docs(LG-058): sg段窗情更新录账(04:31 COO回执+04:30哨空转定性勘正)——FSD切前实照毕04:02(evidence-sg-preswitch 8件落树N6 done,断链+降级双态,实照硬门sg面闭环);SDE切换窗已启04:05(N13 active回滚锚定案);读数预计04:35-04:45(窗内正常时序非滞);哨判据勘正=窗毕读数实达为准非SLA
+- registry：v2.1；今日 registry 提交无变化
