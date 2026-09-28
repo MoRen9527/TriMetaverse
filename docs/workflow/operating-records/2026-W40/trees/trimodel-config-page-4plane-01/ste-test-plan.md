@@ -111,7 +111,7 @@
 - **环境型定性（三重证据）**：①同 HEAD（43086ff）FSD 自测全绿 293 pass=287+6 数学吻合（11:52 前后轻载窗）；②r2 六案全 TimeoutError 形态（代码回归应为断言失败形态）；③单文件复验跑（同午）`browserType.launch: Timeout 180000ms`——浏览器冷启动都超时=机器负载活体持续佐证（13 席常驻+daemon 重载机）。
 - **复验经过如实记**：单跑命令缺 `--test-concurrency=1` 与 npm script 不同构（教训：复验方法须与原跑同构）；修正后仍不可达——launch 180s 超时，**复绿实证在本机现势负载下不可取**，不谎称复绿。
 - **对平判定（本席）**：fail 集合⊄基线（形式破平），归因=环境型、非 43086ff 代码回归；定性成立但复绿实证候窗。**候 CTO 裁（L3 执行窗形态）**：(a) L3 全量门排轻载窗执行；(b) UI E2E 超时裕量 bump（goto 30s/launch 180s 无重试无裕量，重载机高 flaky）；(c) UI E2E 独立于 L3 全量门另窗跑。本席荐 (a)+(b) 并做，(c) 备选。
-- **L1 增补案布景依据已勘**（落笔下节点）：decrypt 失败布景=有效 base64 非法密文（GCM auth fail 必 throw，key-encryptor.ts L59-67）；apply 失败布景=无卡 404（L238）/无活动策略 400（L242）双形态。
+- **L1 增补案布景依据已勘**（落笔下节点）：decrypt 失败布景=有效 base64 非法密文（GCM auth fail 必 throw，key-encryptor.ts L59-67）；apply 失败布景=无卡 404（L238）/无活动策略 400（L242）双形态。→ **已落笔跑绿（本席更新）**：`test/config-cards.ste.test.ts` @ TriModel **54eeaab**，3/3 一跑全绿（2026-09-28 14:2x +0800；案②③固化两码无 emit 点现势形态断言，候 CTO 裁后随裁更新）。
 
 ## 使用依据
 
