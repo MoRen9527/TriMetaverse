@@ -172,3 +172,8 @@
   - 03ea6832 Merge remote-tracking branch 'sg-server/dev' into dev
   - ffc6f1da docs(LG-058): push阻塞窗情判定+FSD P1四范围码面全落录账——本机→github 443断四仓滞留(496613b/8de8fe7/99d8466/99ed6d0候推);COO裁度=A步不受阻(e9938cc在origin/dev)+B步唯一卡件=TriRMC 496613b,主轨监视器自愈(2ae292ec)/备援SDE直转河源(9c4b465b)/sg PAT挂起;范围1 TriMMC 99ed6d0落笔23新测全绿
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:20 +08：自上次进度提交 49e683db 后新增 3 条 commit：
+  - e41469a6 Merge remote-tracking branch 'sg-server/dev' into dev
+  - e9bb87f0 docs(LG-058): P1 FSD面收口卷录账(03:17 FSD报)——push全平四仓零滞留(TriMLC/TriMMC补推毕+监视器撤);码面四件全落笔读数齐(RMC/MMC各23新测全绿+挂族既有A/B实证+tsc双仓净)=FSD实现面零欠账;余义务一项=范围1切换面实照窗(COO裁排今日工时候BOD哨窗联动);P2骨架已开工+NEEDS_CLARIFICATION候CTO(managed台账接线边界)
+  - facc0989 docs(LG-058): P2边界裁定卷——managed视图台账+face投影随批补全(裁FSD请示方案①)——§2.2契约L67/L167台账=契约内字段非新增语义;P0 L270注释自记P2接线补全=既定计划,任务书§三立单时未对上=计划缝隙非边界本意;工作量实勘~8行additive(200成功分支body扩展,401/404守卫不动);程序面=任务书批注归COO转owner面,G2b明文回显不混批仍候CPO,raw审计账不进managed body
+- registry：v2.1；今日 registry 提交无变化
