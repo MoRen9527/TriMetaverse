@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+# post-receive-rface-tripwire — R 面撞点观测 tripwire（只观测不拦截）
+#
+# 正身依据：V21-2 §四.8 —— dev 新提交 author=committer=trirmc@tri.company 且
+#   committer 时刻不在周日 23:00-23:59 +0800 → 旗标留痕（撞点疑似，人工裁决）。
+# 立法依据：协议 v2.1 ⑤ 懒激活三件套（同批部署件）。
+# 部署域：sg-bare /srv/git/TriMetaverse.git hooks/ —— 注意：git 只自动执行名为
+#   post-receive 的 hook；本件部署时与既有 post-receive（镜像段）评审合并
+#   （source 本件或追加调用），禁直接覆盖既有镜像段。
+# 容忍误报：迁移改期重跑会触发旗标=预期行为（人工裁决，不自动处置）。
+# 留痕：本件同目录 tripwire.log（append-only）。
+
+set -u
+
+ZERO=0000000000000000000000000000000000000000
+LOG_DIR="$(cd "$(dirname "$0")" && pwd)"
+LOG="$LOG_DIR/tripwire.log"
+
+now_stamp() { TZ=Asia/Shanghai date '+%Y-%m-%dT%H:%M:%S%z'; }
+
+while read -r oldrev newrev refname; do
+  [ "$refname" = "refs/heads/dev" ] || continue
+  [ "$newrev" = "$ZERO" ] && continue # 删除无 commit 可观测
+
+  if [ "$oldrev" = "$ZERO" ]; then
+    range_revlist="$(git rev-list "$newrev" --not --all 2>/dev/null)" || range_revlist=""
+  else
+    range_revlist="$(git rev-list "$oldrev..$newrev" 2>/dev/null)" || range_revlist=""
+  fi
+
+  for sha in $range_revlist; do
+    author="$(git log -1 --format='%ae' "$sha" 2>/dev/null)" || author=""
+    committer="$(git log -1 --format='%ce' "$sha" 2>/dev/null)" || committer=""
+    [ "$author" = "trirmc@tri.company" ] && [ "$committer" = "trirmc@tri.company" ] || continue
+
+    cepoch="$(git log -1 --format='%ct' "$sha" 2>/dev/null)" || cepoch=""
+    dow="$(TZ=Asia/Shanghai date -d "@$cepoch" '+%u' 2>/dev/null)" || dow=""
+    hhmm="$(TZ=Asia/Shanghai date -d "@$cepoch" '+%H:%M' 2>/dev/null)" || hhmm=""
+
+    if [ -z "$cepoch" ] || [ -z "$dow" ] || [ -z "$hhmm" ]; then
+      printf '[TRIPWIRE][%s] %s cannot-parse-committer-time (cepoch=%s) author=%s committer=%s\n' \
+        "$(now_stamp)" "${sha:0:12}" "$cepoch" "$author" "$committer" >> "$LOG"
+      continue
+    fi
+
+    # 迁移窗=周日（%u：7=周日）23:00-23:59 +0800
+    in_window=0
+    if [ "$dow" = "7" ]; then
+      case "$hhmm" in
+        23:0[0-9]|23:1[0-9]|23:2[0-9]|23:3[0-9]|23:4[0-9]|23:5[0-9]) in_window=1 ;;
+      esac
+    fi
+    if [ "$in_window" -eq 0 ]; then
+      printf '[TRIPWIRE][%s] %s suspicious-rface-commit-on-dev dow=%s time=%s (expected Sun 23:00-23:59 +0800; migration-rerun false-positive tolerated)\n' \
+        "$(now_stamp)" "${sha:0:12}" "$dow" "$hhmm" >> "$LOG"
+    fi
+  done
+done
+
+exit 0

@@ -1,0 +1,114 @@
+#!/usr/bin/env bash
+# pre-receive-dev-control — LG-017/v2.1 dev 写控 hook（sg-bare TriMetaverse.git 专用）
+#
+# 正身依据：V21-2 CTO 机制勘定记录 §三/§四/§六
+#   docs/workflow/operating-records/2026-W36/trees/lg017-v21-legislation/reports/v21-2-cto-mechanism.md
+# 立法依据：mr-worktree-collaboration-protocol.md v2.1 ⑤（懒激活三件套，同批激活约束）
+#
+# 部署域：sg-bare /srv/git/TriMetaverse.git hooks/pre-receive —— 部署另令候窗（三件套同批：
+#   建 staging 分支 + rmc_tick 合同改写 + 本 hook 部署/post-receive tripwire，缺一不激活）。
+# 边界声明（V21-2 §七.5，防「已设防」误读）：本 hook 只辖 refs/heads/dev（邮箱写控+
+#   anti-non-ff+禁删）与 refs/heads/staging（anti-non-ff+禁删，无邮箱策略=事前审平面从宽）；
+#   tags 及其他 refs 本期不设防；TriMetaverse.git 之外的其他仓不设防。
+# 失败姿态：策略判定路径与 hook 自身异常一律 fail-closed（拒绝）。
+# 回滚：hooks/pre-receive chmod -x 或 rm —— 秒级，无需重启任何服务。
+# 自测：bash scripts/hooks/test-pre-receive-dev-control.sh（部署前置，fixture 全过方可上线）。
+
+set -u
+
+ZERO=0000000000000000000000000000000000000000
+SCAN_LIMIT=500
+
+# ---- dev 允许单（deny-by-default；author 与 committer 两字段都须命中；大小写不敏感精确匹配）----
+# 依据 V21-2 §三；允许单变更=改本表走评审+工程真源留痕（新 M 面写侧走允许单变更流程）。
+allow_email() {
+  local email
+  email="$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')"
+  case "$email" in
+    trirmc@tri.company)                          return 0 ;; # heyuan 检出级（TriRMC Scheduler）——迁移硬约束项，必须放行
+    trimmc@tri.company)                          return 0 ;; # sg 检出级（TriMMC Orchestrator）
+    trimc-scheduler@fleet.local)                 return 0 ;; # sg watcher/巡检脚本级作者
+    81227665+moren9527@users.noreply.github.com) return 0 ;; # 本地主仓 M 面/CEO（MoRen）
+    *)                                           return 1 ;;
+  esac
+}
+
+# R 面 distinct 身份（拒绝单显式项；随三件套激活出生，在史为零）。
+is_rface() {
+  local email
+  email="$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')"
+  [ "$email" = "rface-agent@tri.company" ]
+}
+
+reject() {
+  printf '%s\n' "$@" >&2
+  exit 1
+}
+
+# ---- 主循环：stdin 行 oldrev newrev refname ----
+while read -r oldrev newrev refname; do
+  case "$refname" in
+    refs/heads/dev)     strategy=dev ;;
+    refs/heads/staging) strategy=staging ;;
+    *) continue ;; # 其他 refs 本期不设防（边界声明）
+  esac
+
+  # 闸 1：禁删（dev/staging 均禁）
+  if [ "$newrev" = "$ZERO" ]; then
+    reject "[hook LG-017] REJECTED: deletion of $refname is forbidden."
+  fi
+
+  # 闸 2：anti-non-ff（禁 force/禁历史重写；ref 创建 oldrev=全零跳过本闸；
+  #   周一回流 merge push=old 是 new 祖先，不受影响）
+  if [ "$oldrev" != "$ZERO" ]; then
+    if ! git merge-base --is-ancestor "$oldrev" "$newrev" >/dev/null 2>&1; then
+      reject "[hook LG-017] REJECTED: non-fast-forward update to $refname forbidden (no force-push, no history rewrite). Stop and escalate to M-face per protocol §8 — do NOT rebase/force."
+    fi
+  fi
+
+  # 闸 3：dev 专属邮箱写控
+  if [ "$strategy" = "dev" ]; then
+    if [ "$oldrev" = "$ZERO" ]; then
+      count="$(git rev-list --count "$newrev" --not --all 2>/dev/null)"
+    else
+      count="$(git rev-list --count "$oldrev..$newrev" 2>/dev/null)"
+    fi
+    if [ -z "$count" ]; then
+      reject "[hook LG-017] REJECTED: internal rev-list error (fail-closed). Contact CTO to inspect the hook."
+    fi
+    if [ "$count" -gt "$SCAN_LIMIT" ]; then
+      reject "[hook LG-017] REJECTED: $count new commits exceeds the ${SCAN_LIMIT}-commit pre-receive scan limit (fail-closed). Split the push or contact CTO."
+    fi
+    if [ "$count" -eq 0 ]; then
+      continue # 无新 commit（指向既有 commit 的分支推送），闸 1/2 已过=放行
+    fi
+
+    if [ "$oldrev" = "$ZERO" ]; then
+      range_revlist="$(git rev-list "$newrev" --not --all 2>/dev/null)"
+    else
+      range_revlist="$(git rev-list "$oldrev..$newrev" 2>/dev/null)"
+    fi
+
+    # 逐 commit 扫描：author 与 committer 双字段判（单字段判定存在另一字段走私面，V21-2 §四.3）
+    for sha in $range_revlist; do
+      author="$(git log -1 --format='%ae' "$sha" 2>/dev/null)" || author=""
+      committer="$(git log -1 --format='%ce' "$sha" 2>/dev/null)" || committer=""
+      if [ -z "$author" ] || [ -z "$committer" ]; then
+        reject "[hook LG-017] REJECTED: internal git-log error on ${sha:0:12} (fail-closed). Contact CTO."
+      fi
+      if allow_email "$author" && allow_email "$committer"; then
+        continue
+      fi
+      if is_rface "$author" || is_rface "$committer"; then
+        reject "[dev-write-control LG-017/v2.1] REJECTED ${sha:0:12}: R-face session identity detected.
+dev is M-face + plane-migration only during the capability-gate phase.
+Route: git push origin HEAD:staging  (then request M-face review/merge, protocol v2.1 §5)
+Ref: rmc_tick brief Hard rules / mr-worktree-collaboration-protocol.md"
+      fi
+      reject "[dev-write-control LG-017/v2.1] REJECTED ${sha:0:12}: author/committer <$author|$committer> not on dev allowlist.
+dev writers are registry-managed. Contact CTO to review the allowlist before pushing."
+    done
+  fi
+done
+
+exit 0
