@@ -223,3 +223,14 @@
 - 巡检兜底补写 @08:50 +08：自上次进度提交 b261373c 后新增 1 条 commit：
   - 2325d9d3 docs(workflow): 立项即登记首用——LG-058 P2 执行单+LG-056 A3 落位跟踪入总表（现役 9 单）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:50 +08：自上次进度提交 570c3257 后新增 9 条 commit：
+  - e30a497d Merge origin/dev（watcher 06:40/08:50 兜底+duty 立项登记线收编，双边零交叠）
+  - c1c36f1a docs(g10-followup): watchdog复活段正形改+陈旧pidfile裁清执行读数卷（BOD 05:08常规批两件全绿收）——②ps1 L29裸拉node→cmd /c权威launcher（env保真，备份bak-20260929T0932+0800，ASCII纯净+PSParser零错+8711零扰动）；④trilc.pid陈旧档(31460/09-02/dead)删讫缺席断言OK，legacy再生候FSD①port参消解；复活路径诚实留白=改形后候自然触发本批未实弹（COO裁①口径，看门径卷内§五）
+  - 2db8d154 docs(lg-058): F-1 CLOSED录卷+②补格兑现——CTO 08:07闭合裁即时(CLOSED三点裁据:修复对象验收域对齐双源同向/401=设计行为非缺陷fail-closed+G10互证/三主判据全过);②翻正格PASS=token自channel cmd就地提取(len-only 64chars值withheld瞬态零残留)后config show face=mlc+tier2-cache-fresh(自rlc翻正,缺陷翻转闭环)+cache show同文mlc面别名行为跨面一致佐证;pull/verify照FSD口径不跑(show族已足);三要件①②③全过候办销账
+  - 27772279 docs(lg-058): STE F-1重测独立复验落卷——要件①PASS(TriMLC status无port打8713 pid5348新代默认面指正实锤)/要件③PASS(TriRLC 8711零回归face=rlc语义零漂移)/要件②端口面PASS读数面候token通道(fail-closed门app.ts L1759-1772实勘,token env凭据分发面不擅掘,候BOD N15同款带token通道或FSD env注入口径);F-1修复面实质成立,②补格候通道不阻闭合定性;TriMLC daemon门token校验源码面新增实勘(请求期读取支持运行中注入,未配置=internal_auth_disabled全拒)
+  - 9d87a368 docs(lg-058): F-1 闭环回写A3施工卷——CTO裁准修(8711→8713随registerPid批)TriMLC 832b266,重测四读数全绿(status无--port→8713/config show face=mlc/trirlc face=rlc零回归/trilc-8713.pid==活pid),重启纪律留痕(shutdown token门+CommandLine身份核验,旧代10348无pidfile代等效核验),§一候选裁段翻闭环态,R1 CLI格rlc+mlc双✅/覆盖2-4实测,候窗清单#4#7销项,L24/L26禁顺批M窗候议留原线
+  - e9aaefe9 docs(lg-058): STE 落CTO三裁(c76a48f3)——裁①发现③定性翻转:source/effectiveSource/attribution三字段三语义正交,tier1-card+card absent并存=模型维有源凭据维无源设计内形态(refreshNow model-relay L360-373实勘锚),A2入场口径遵裁=两轴+动作状态分离,card absent=诚实三态部分可用非故障,字段禁改名候M3文档面;裁②发现④=差异面标注归档非阻塞缺口,合卷第5行加注+⑤补行归STE;裁③F-1重测三要件(status无port打8713+config族连通+TriRLC零回归)
+  - bafb92d9 docs(lg-058): A3施工卷回写CPO终态基线锚(3f154c8e)+五差异到窗一并裁口径+F-1呈裁链注记
+  - c76a48f3 docs(LG-058): A3归并候裁三件裁定卷——①source双轴=动作归因/状态归因正交非矛盾(model-relay设计内形态:模型维有源+凭据维无源),字段口径维持禁改名,A2窗前入场准(两轴口径呈STE) ②cache show无独立ladder视图=差异面标注归档非阻塞缺口(show三字段已承载梯位要素,ladder全景仅TriRMC),三仓对齐列候修清单 ③F-1 DEFAULT_PORT 8711→8713准修并registerPid批;TriLC残留顺批分类:文案准/服务注册名L24-L26禁(迁移风险,列M窗候议)
+  - b825cae6 docs(lg-058): C1卷补F-1交叉注记——TriMLC CLI DEFAULT_PORT=8711错指rlc daemon(FSD缺陷单):本卷mlc列四格均系--port 8713显式指面不受F-1累,mlc bin不带port读数实达rlc面(勘察期face=rlc同毫秒同文即F-1同源实证),F-1裁修后重测+8713 token通道复跑在窗队;防引用者误读
+- registry：v2.1；今日 registry 提交无变化
