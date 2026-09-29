@@ -64,6 +64,15 @@
 - **要件③ PASS**：TriRLC CLI 零回归 ✓——`status` 无 `--port` 仍打 8711（pid 15708/service trirlc）；`config show` face=rlc/source=tier2-cache-fresh/providers(0) 正确值不动（fetched 2026-09-28T23:50:24Z 新周期刷新，语义零漂移）。
 - **小结**：三要件 ①③ 独立复验 PASS；② 端口面 PASS+读数面候 token 通道；FSD 侧四读数全绿（COO 07:5x 知会 9d87a368）与本席 ①③ 复核同向，F-1 修复面（DEFAULT_PORT 8711→8713）实质成立，② 补格候通道不阻 F-1 闭合定性（CTO 裁③三要件语义=CLI 侧连通性，端口指正已独立实证）。
 
+**CTO CLOSED 裁+② 补格兑现（2026-09-29 08:1x-08:2x+0800）**：CTO 08:07 闭合定性裁=**CLOSED 即时**（裁据三点：修复对象与验收域对齐且双源独立同向 / ②读数面 401=设计行为非缺陷——fail-closed 源码实勘+G10 期 token 通道实证互证，token 通道=凭据供给域不入 F-1 验收域 / 重测三主判据全过）。录卷照 CTO 原话：**①③独立过+②端口面过+CLOSED 即时**。
+
+**② 补格兑现（候办销，FSD 通道口径执行）**：token 自 `trimlc-daemon-channel.cmd` 就地提取（len-only=64 chars，值 withheld 勿入证据件；env 单 shell 瞬态零残留）——
+
+- **要件② 读数面 PASS（翻正格）**：`config show` → **face=mlc**/effective model GLM-5.3/source=tier2-cache-fresh/cache fresh（fetched 2026-09-29T00:03:32Z, refresh=900s）/providers(0)——**mlc bin 默认面读数自 face=rlc 翻正为 face=mlc**，F-1 缺陷翻转闭环。
+- 8713 show 族第二格：`config cache show` → 与 show 同文（face=mlc）——发现④别名行为在 mlc 面同构复现（跨面一致性佐证）。
+- pull/verify 格照 FSD 口径不跑（verify=台账流量候选，show 族已足闭合读数面格；pull=动作面 BOD N15 已实弹）。
+- **三要件终态：①✓②✓③✓ 全过，F-1 CLOSED（CTO 08:07 裁）+② 补格增强证据兑现，候办销账。**
+
 **CLI 半边结论**：矩阵宣称「4/4 daemon 覆盖」的四命令在 CLI 面**实现均在**（三仓 CLI config 族同构+mmc 面候 sg 锚），活体可达格 8711 全通、8713 全拦（token 门）、rmc/mmc 面锚引用；发现①-⑤如实入卷候裁。网页侧点验候正常工时，两半合卷后方成 C1 终对表。
 
 ### A4 渲染验证门全过（LG-035 家族，全项硬门）
