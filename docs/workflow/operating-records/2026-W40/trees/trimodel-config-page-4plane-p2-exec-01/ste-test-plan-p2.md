@@ -188,6 +188,14 @@ COO 即答=F-1 ② 先例口径（TRIMODEL_API_TOKEN 在 channel cmd 内自提�
 #### G3 走查快照敏感面复核 ✓（2026-09-29 11:0x）
 
 - a1-u1-readings.json+a1-u2-readings.json：`sk-`/`TRIMODEL_API_TOKEN=`/`Bearer ` 零命中；40+ 长串模式零命中——**证据件零明文** ✓。截图 8 张（四卡×普通/connected）本地保留不落仓（敏感面防扩散纪律）。token 值全程 len-only（64 chars withheld）。
+
+#### G1 第二轮（带 env）终读数（2026-09-29 12:0x，date 现查 UTC 04:02Z；分段跑取得）
+
+- **10 挂独立复现，与 CTO 定性逐位吻合**：e9=1 挂（`#tc-conn` resolved-but-disabled+not visible——连接配置页 v2 改版后旧 selector 未随版，fill Timeout 30s 实锚）｜e10=1 挂（同形态 TimeoutError）｜e12=8 挂（C1/C2/C3/C4/C8/C9/C10a/C11——`#tc-str-body [data-del]` resolved-but-not-visible：策略卡入 panel-strategy 单页面板，旧案未加切视图导航步）。
+- **归因闭环最强实证**：e12 组 10 tests/2 pass——挂案集（8 案）与「真浏览器 UI 路径」集合完全重合；过案集（C6 jsdom 首启链+C10b API 直打守卫）与非 UI 路径集合完全重合——**漂移点=UI 导航层改版，产品逻辑面（API 守卫/jsdom 首启）全绿，「旧案结构漂移非产品缺陷」定性独立实证闭环**。
+- **次生新发现（候件A 修案覆盖面）**：E10 失败后 **teardown hang**——browser/server close 不返回→runner `--test-concurrency=1` 串行卡死拖死全量 run（两轮全量 enev/enev2 双复现：log 双双停在 not ok 70 后 30min 零增量+`ui-e10-reload.test.ts` 子进程 46716/39780 hang 实证+测试组进程清理后 daemon 三件零误伤）。件A 修案候覆盖：selector 断言随版+teardown 健壮性双修。
+- 无 env 段基线：案 1-69 连绿实录（ok 63-69 抽验）+第一轮 324/309/0/15 EXIT=0 全量锚（fff9aae3）——**零新增挂**。分段读数证据：e9-solo2.log/e12-solo.log/enev.log/enev2.log 落 /d/tmp/lg058/。
+- 判读：G1 基线面（无 env 段 309 零漂移）成立；env 段 10 挂=件A 条件族读数基线（FSD 修案后本席 R2 独立复验对表此卷）。
 - **G3** 走查快照敏感面复核：快照样本抽验零明文 key。
 
 ### A6 UI 独立 revert 锚
