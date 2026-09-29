@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（CTO D-15 施工令：refspec 去 `+` 主修+bare 仓级 denyNonFastForwards 纵深）
 - syncMode: source-only
-- lastSyncedAt: 2026-09-30T04:02+0800（date 现查；施工窗 03:44-03:55+CTO 验收批执行 03:56-04:00 sg 面）
+- lastSyncedAt: 2026-09-30T04:11+0800（date 现查；施工窗 03:44-03:55+CTO 验收批 03:56-04:00+甲乙交叉裁决录案 04:11）
 - 令链: CTO 03:42 派工令（根因实锤=fleet crontab bare-fetch-all.sh L18 `+`refspec force fetch=今晨 03:30:06 回卷根因）→本席接令即窗（令面"今天内完成优先，窗自排"）
 - 边界: sg 面操作全程留痕（备份+LOG+本卷）；不动其他 job/行；键值 ghp_ 掩码
 
@@ -71,6 +71,14 @@
 3. **PAT 失效分支**：dry-run 仍死即报 CTO+BOD 走新发 PAT 流程；**勘点附**=fine-grained 双仓 RW 授权清单 vs MAP 20 仓（TriRMC/TriGateway 后扩两仓若不在原清单，重灌旧 PAT 仍 403）——实证法=重灌后对此两仓专项 dry-run 看 403/OK
 4. **PAT 源两案**（本席 04:0x 只读勘）：A=本机 Credential Manager 持 github.com 条目（值零出，零上下文管道直灌 sg store 可行，出处归属未验）；B=BOD 供正牌 fleet PAT（出处最净）——候 CTO/BOD 择一，BOD 供则白天窗随到随灌
 5. 根因闭环记录：随 §12.4 供料机制化（CTO 记）
+
+## 十、甲乙交叉裁决录案（CTO 04:08 裁+§九备场回执后）
+
+1. **「双仓 RW 403 面」担忧修正**：本席 root 面 20/20 dry-run 全过实证直接推翻 CTO 上回合「18 仓不在清单」推断——对该把 root token 疑虑不存在，CTO 修正入账
+2. **乙路（CM PAT 直灌）废案**：BOD 锚定读数在先（本席备场时未见）=本机 CM 那把系 **gho_ OAuth token 非 09-20 fine-grained PAT**（锚定否）；BOD 且裁 gho_ 不宜出机（单 token 双机分布+轮换静默死）——本席不再候乙路
+3. **裁决=甲路优先，候 BOD 锚定 root PAT 出处**：机器内复制（值不出 sg+20/20 实证+秒级）技术面最优；CTO 只裁技术路径，**root PAT 出处锚定权=BOD**（sg root 运维面持币人：验活+溯来源 root shell history/凭据文件 mtime——何时放的/谁批的）；**锚定认=本席即执行**（root→fleet 内部复制→整轮 push 结 9 天欠账→20 仓 OK 全单出）；锚定否（出处不明/权属不清）=不复制，转 BOD 新发路批件（CEO 面）
+4. **两路不互斥**：root 把=全仓 RW 宽授权，fleet 自动化持宽把=「凭据权限现势妥协」观察项族——甲路=应急闭合，新发路（fleet 专用窄授权 PAT 替换）=长期正解，BOD 新发路批件照常酝酿不受甲路阻
+5. 备场状态保持：store 备份（.bak-20260930T0405+0800）+push-survey-20260930.sh+双基线（fleet 20×AUTH-DEAD/root 20×OK）在位；候 BOD 锚定读数到再动
 
 ## 使用依据
 
