@@ -368,3 +368,10 @@
   - 28683aeb docs(board): 发送账对表续录#59-75——force案全链17封转录(护栏令/代推复启用/双钟对齐含本席亲历5封)+全账75封合拢
   - 9993d382 docs(d15): CTO二批四点认收录卷——①store空态入巡检=死亡前哨(三腿锚定案:FETCH-FAIL|PUSH-FAIL+wc -l==0前兆腿,自动清行行为不动)②a案重灌白天窗执行令认(链=重灌→dry-run复活读数→整轮push结9天欠账,non-FF分叉仓逐仓报)③PAT失效分支+fine-grained双仓授权清单vs MAP20仓勘点附(实证=RMC/Gateway专项dry-run看403)④PAT源两案=本机CredentialManager零上下文管道/BOD正牌,候择——录卷§九
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:20 +08：自上次进度提交 5e0ec23f 后新增 5 条 commit：
+  - ff2f2553 docs(w40): BOD R2澄清录案§十一——root store mtime 04:04:25归因=备场C root语境dry-run认证approve自动同值重写(施工失误认领+零显式写面+零值注入)+md5/sha256值面对表供料+认知盲区(dry-run零写面对credential store面不成立)+甲路冻结认领
+  - a0c3ad8c Merge origin/dev (daily-progress-watcher 5e0ec23f vs SDE D-15 三件, 零交叠)
+  - 4063cb7a docs(w40): D-15甲乙交叉裁决录案§十——CTO裁甲路优先候BOD锚定root PAT出处/乙路废案(CM那把=gho_ OAuth非fine-grained不宜出机)/两路不互斥(窄授权PAT=长期正解);备场保持候BOD读数即动
+  - d5d76413 docs(w40): CTO验收卷——FSD缺陷修批四件全APPROVE（F-3自愈机理闭合+ENV_FILE三件套+复活实弹一次过17s）+三项候裁词=TriRLC维护批四件打包候COO排窗
+  - 5d90738b docs(w40): FSD D-15缺陷修批四件读数——F-2复核三点全过/F-3机理勘明+0fd9c6f修复+活体验证/8711 ENV_FILE正形三件套/件4复活实弹一次过(04:01:20翻绿);镜像同漏等六项候裁如实标记
+- registry：v2.1；今日 registry 提交无变化
