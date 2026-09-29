@@ -62,6 +62,22 @@
    "form": "自查进度+防漏催办语义",
    "window": "候 CEO 终裁",
    "note": "汇总=three-gate-review/closing-summary.md（收口毕已呈）；双席意见两锚候 wt→dev 同步；闸 4 双源声明 urge-rhythm 已具备，闸 2/3/5 终裁候 CEO"
+  },
+  {
+   "id": "LG-058",
+   "item": "P2 期执行单（UI 重构+诚实三态+CLI/网页矩阵终对表+渲染验证门全家族）",
+   "seat": "FSD/CPO/CTO/STE（COO 四席拆派）+P1 收口=BOD 直接验收",
+   "form": "读数跟踪（立项即登记首用）",
+   "window": "CEO 02:44 令+22:55 时点硬约束",
+   "note": "立单 f0523ad8/拆派录账+STE 规划 7cf4bc00/树账并账 bcaac965"
+  },
+  {
+   "id": "LG-056",
+   "item": "A3 周平面迁移·本机主仓对齐 SOP",
+   "seat": "SDE 面（执行体=TriMLC 8713 cron 候落位，落位前过渡人工段）",
+   "form": "落位跟踪",
+   "window": "候落位",
+   "note": "CLAUDE.md 路由已挂；0928 夜 W39→W40 迁移 pass 实证（.shift-ade.json），sg TriMMC 同名 job 已 enabled=False=改制迁移非事故"
   }
  ],
  "metadata": {
