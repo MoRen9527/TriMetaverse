@@ -283,3 +283,11 @@
   - 4f27662f docs(lg-058): STE N23+plan注记——CPO placeholder补裁接收(cf574b6e:主张取舍记档+v3复扫判据升级含placeholder位)+N21 ts勘正(12:10→12:08,D-04再犯自纠)+R2复验位落plan(双修面三读数口径,分段workaround退役);node-status含COO N22-dispatch并行行同卷(共享index惯例,撞号已避N23)
   - e01dc69e docs(lg-058): STE N21——CTO teardown裁示录卷(21fe08d6):件A扩双修认承+判据分层(teardown不入判据,修后全量正常收束系clean定性前提)+R2复验位更新含双修面(分段workaround退役,三读数验收口径)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:50 +08：自上次进度提交 fe41d4a3 后新增 6 条 commit：
+  - 2cf3206a merge: 并入远端 fe41d4a3（多席共仓惯例）
+  - 08dfebab docs(w40): CPO判据件v2.1微补——CTO收口回执载体倾向(独立在办账文件,候办/在办两状态机分家)产品语义同向认(状态须答得出现在是什么教训族同源),落点仍归COO/CTO商定;CTO施工注(transcript路径约定/FSD核实)随其卷流转不重复;三方收口零分歧定卷候CAO合卷
+  - d4a1f02a docs(lg-058): STE N26——FSD三问闭环自证三连:真源第四处HKCU\Environment坐实(指纹4f94吻合,N24无真源句更正)+隐式继承假象已证(env -u即401,门从未翻转,L103勘正注终态)+8711带令200补验复现(jobs:[]逐字吻合)+TriRLC cronRequest补头修复面复验通过+风险方向修正(watchdog同用户继承门态不变)
+  - 126d40bb docs(w40): 两卷批后修订——滚动循环口径+GLM/DS双轨成文(CEO 23:24批令+23:29澄清采纳)
+  - 2a9b5e94 docs(w40): CTO 8460活体实测SOP——CEO 23:36批明窗即派,STE/DE执行规程:三读数一结论(R1 shell层env初筛非决定性,settings env系CLI内部注入shell echo只见shell层/R2流量对表决定性=日志基线wc-l→席内触发请求→60-90s增量/R3失败面补采)+判定矩阵四格(在路推翻漂移/CLI层覆盖/更深层覆盖/上游异常)+直连成功=1210风险面回归坐实+tmux坑三防+len-only掩码
+  - 14946a6f docs(w40): CAO发信路由纪律核查卷——三正身张力+17封逐条定性+R表修正案(BOD查令CEO 23:18)
+- registry：v2.1；今日 registry 提交无变化
