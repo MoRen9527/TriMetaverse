@@ -344,3 +344,8 @@
 - 巡检兜底补写 @03:30 +08：自上次进度提交 457f72c0 后新增 1 条 commit：
   - b9c745e9 docs(hub-state): FADE-010 在办账·sg-watchlist-job-second-step 转 done-waiting-cutover-check——施工毕(即做提前于18-24窗):job e7a37e66 挂载201零重启+force run ok 63ms+定时首轮0325 ok 68ms;销账候BOD首周灰度抽验(明早9-12哨窗);回滚=PATCH enabled=0
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 b3423117 后新增 3 条 commit：
+  - 196a435d Merge remote-tracking branch 'origin/dev' into dev
+  - 0f532c2a docs(workflow): 秘书处 orphan 副本归档——BOD R2 裁 B 案
+  - 7e345425 docs(lg058-p2): STE 夜验链收官读数——R2 三读数全绿(带env 326/323/0/3 EXIT=0 282s 零hang=件A双修达标信号;无env 309 与FSD件D基线精确同值零漂移)+R3 件C e13 定向复验 2/2/0 EXIT=0 PASS;8460 活体实测读数卷(触发席m-duty-ste 03:26:52+08 增量+1 200放行=漂移假设推翻,8460在路;bonus机理发现=duty-env source先于set -a未export,只记不修候CTO);N31/N32 录卷(ts动态修复一处空值变体)
+- registry：v2.1；今日 registry 提交无变化
