@@ -87,7 +87,7 @@
 
 ### §8.3 第二步（sg 版 job）施工要件成文（候一窗自动接续，授权已含免再呈）
 
-- 判据脚本同构部署 sg 机（读 sg-bare fetch 后的树内 watchlist.json，判据同三钉）；
+- 判据脚本同构部署 sg 机（读 sg-bare fetch 后的树内 watchlist.json，判据同三钉）；**候注缺口：脚本本体现居 `.fade/`（gitignored 不入仓），sg 同构部署需值席 scp 或脚本树内化裁决——候 CTO 裁（与 §8.2 锚③真源关系配套）**；
 - 发信通道=sg TriMMC notify 现役（sg 侧名册注意：bod 目标 daemon='trimlc' 走本机 puller 消费，与本机同构；sg 值席目标才用 daemon='trimmc'）；
 - job 挂 sg TriMMC cron（every 300s 对齐本机）；排窗=候 BOD/COO 一窗自动接续，本席候接续令即施工。
 
