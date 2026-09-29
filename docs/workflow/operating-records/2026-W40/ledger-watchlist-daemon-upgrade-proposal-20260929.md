@@ -71,3 +71,26 @@
 4. **施工归 COS 自施工**（脚本+job 定义+watchlist 录账工序）；上线时点候并批窗——与 F-2 修复窗并批（今日下午/M 窗，allowlist 改动一次重启两件免二次重启），并批窗由 COO 排候下午方案卷。
 5. **BOD 首周轻量灰度认领**：哨窗信箱对表抽验 2-3 次。
 6. 现役半自动照跑不停——daemon 级属增量道非替换；本裁=形态定谳非上线令。
+
+## 八、技术锚合入+活体自证终态（2026-09-29 深夜收官批补注；BOD 转知 CTO 守望两步走锚三条，CEO 终批）
+
+### §8.1 上线终态（本机第一步）
+
+- job `cron_mumsuxup_pu0y`（every 300s）22:56:48 INSERT；活体自证 **PASS**（15:35Z 窗）：定时轮+force run 双轮 execution_log ok、watchlist F-2 项转 notified（到件信真弹 BOD 信箱）、调度自续（run_count 涨、next_run_at 自续、error_count=0）。加挂笔录卷=同目录 `ledger-watchlist-job-insert-record-20260929.md`（STE 对账件）。
+- 上线过程缺陷/勘正史如实录（同加挂笔录卷 §三）：TriMLC `addJob` 不初始化 next_run_at 缺陷立案候 CTO 分派；脚本契约两处笔误（board→bod/trimmc→trimlc）由三钉②如实防住假通知（failCount=6 留痕）。
+
+### §8.2 技术锚三条合入（CTO 供锚，2026-09-29 23:3x BOD 转知，CEO 终批守望两步走）
+
+1. **路径锚**：watchlist 真源迁移至**树内固定跨周路径** `docs/workflow/hub-state/watchlist.json`（勿放周目录防翻周迁移复杂度）——已迁毕并撤销 `.fade/hub-snapshots/watchlist.json` 旧位（真源迁移笔随本批）。
+2. **提交节律锚（录账即推）**：COS 录账写 watchlist（waiting 项录入）时随手 commit push——sg 侧消费迟报上界=push 间隔，迟报不误报语义可接受；**patrol 机器写回（waiting→notified 状态转移/failCount）随 COS 日收口批推平**，不扩 patrol 脚本 git commit 义务（防 daemon spawn 面共享 index 撞车+GIT_DIR 坑族）——此裁决为本席施工面取舍，如实候注 BOD/CTO 可否决。
+3. **真源关系锚**：树内件=唯一真源（patrol 直接读写树内件，无独立缓存文件=无双写同步面）；旧 `.fade/` 位撤销。patrol 半写态窗口由三钉③（解析失败 exit 0）+原子写回自护。
+
+### §8.3 第二步（sg 版 job）施工要件成文（候一窗自动接续，授权已含免再呈）
+
+- 判据脚本同构部署 sg 机（读 sg-bare fetch 后的树内 watchlist.json，判据同三钉）；
+- 发信通道=sg TriMMC notify 现役（sg 侧名册注意：bod 目标 daemon='trimlc' 走本机 puller 消费，与本机同构；sg 值席目标才用 daemon='trimmc'）；
+- job 挂 sg TriMMC cron（every 300s 对齐本机）；排窗=候 BOD/COO 一窗自动接续，本席候接续令即施工。
+
+### §8.4 首周灰度对表锚（BOD 认领⑤）
+
+BOD 哨窗信箱对表抽验 2-3 次——对表面=watchlist.json 树内真源件（notified/notifiedAt/failCount 全字段可对）。
