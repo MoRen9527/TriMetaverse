@@ -60,6 +60,14 @@
 | 前置改造（候 COS 评估） | watchlist.json 入仓+在办账结构化——②③共享前置，建议尽早 |
 | 席内实测（候 STE/DE） | sg 席位生效 env+8460 流量增量观测（①机理终裁） |
 
+## 六、守望上线后两案补裁（2026-09-29 23:5x 补·COS 收官回执两案）
+
+守望 daemon 今夜上线成功（活体自证 PASS：cron_mumsuxup_pu0y 双轮 ok+F-2 项转 notified 真弹信箱；watchlist 真源迁 docs/workflow/hub-state/ 三点同顶 3f0901861）。
+
+1. **案 A=**F-3**（BOD 23:53 分派编号，finding 族顺延：F-1 端口/F-2 漏头/F-3 缺列）**：addJob INSERT 缺 next_run_at 列（store.ts L218）→API 直插新 job 永不调度（timer L93 enabled&&nextRunAt 永假）——「cron job state 卫生」教训同族代码根因版。修形=补列写入（INSERT 算首次触发点或 NULL+timer 补算显式化，FSD 勘后定）。**验收前置（BOD 认）：23:23 调度自愈机理勘明+修后读数含自愈触发源实勘结论**（pid 恒定无重启却有补算=未知补写路径存在；机理不明修 INSERT 可能修表面）——与「复活路径实弹禁止留白」同族。并窗=明晨 FSD 批与 F-2 同仓同 build 同重启批。
+2. **案 B 裁脚本树内化，否 scp**：分界=**脚本本体入 git**（版本链+sg fetch 同步防漂移——8460 配置-活体漂移同款盲区不再造）、**写回数据不入 git**（运行时数据留本地，关键读数随日收口批入树）。patrol+watchlist 两脚本同批迁移，落位 TriMetaverse 树内 automation/scripts 类固定路径（具体位 TriMetaverseCodeRegistry 布局定），.fade/ 侧迁移后留指针或废弃。
+3. **8713 迁移裁（COO 候裁点）**：8713 暂不迁 ENV_FILE，维持现役 channel 提取形态——其系设计内显式供给非 8711 式巧合继承；今夜+明晨已连吃两变更窗不再堆叠；远期随 TriMLC 服务化需求搭车迁。
+
 ## 使用依据
 
-sg 实探读数（proxy.mjs 源码/proxy.log 分布/settings fleet 值/ps 进程表/ss 连接，23:15 探针，URL 可示 token 掩码）；watchlist 裁定卷 34aef5c2（三钉+两道网拓扑）；c1c36f1a（watchdog 复活段改形自认留白）；双控制器端口定性（8713=M 面/8711=R 面）；D-24 机位断言；夜窗边界（只读探针+纸面，无侵入式席位操作）。
+sg 实探读数（proxy.mjs 源码/proxy.log 分布/settings fleet 值/ps 进程表/ss 连接，23:15 探针，URL 可示 token 掩码）；watchlist 裁定卷 34aef5c2（三钉+两道网拓扑）；c1c36f1a（watchdog 复活段改形自认留白）；双控制器端口定性（8713=M 面/8711=R 面）；D-24 机位断言；夜窗边界（只读探针+纸面，无侵入式席位操作）；§六=COS 收官回执（活体自证读数+BOD 转件）+CAO 合卷 4e334898（抽验零失真认承）+COO 8711 两裁点裁词（HKCU 真源证据链）。
