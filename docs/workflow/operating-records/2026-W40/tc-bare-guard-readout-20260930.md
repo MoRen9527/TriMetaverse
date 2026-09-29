@@ -95,7 +95,8 @@
 
 - **20 仓勾选清单（GitHub API full_name 规范形，20/20 逐仓活体核名 05:0x，匿名 API 零凭据）**：TriMetaverse/TriCompany/TriCode/**TriModel**/TriMLC/**TriRLC**/TriMMC/Tripilot/Tristaciss/Triavatar/Trideployment/TriTest/TriMem/TriWeb4/TriChain/TriSkill/TriTraining/TriMobile/TriRMC/TriGateway（均 MoRen9527/ 下）
 - **对表差定谳**：①差仓=**TriModel**（CTO 本机 19 仓扫描漏——本机 TriModel 双 pushurl config 实锚在位；非 vscodium 非 TriCade）；②**TriLC 已改名 TriRLC**（本机 config pushurl 旧名 TriLC.git，API 301→现名 TriRLC；push-survey MAP 值面=TriLC 走 redirect 仍工作，04:04 dry-run OK 即经 redirect）；③大小写照抄勿修正（Tripilot/Tristaciss/Triavatar/Trideployment/TriMem 五个非 CamelCase 形即规范现名）
-- 候裁一笔：bare-fetch-all.sh MAP 值 `[TriRLC]=TriLC` 旧名 redirect 形态仍工作非急，候窗正名（D-15 同款纪律：备份+bash -n+整轮验证）
+- 候裁一笔：bare-fetch-all.sh MAP 值 `[TriRLC]=TriLC` 旧名 redirect 形态仍工作非急，候窗正名（D-15 同款纪律：备份+bash -n+整轮验证）——**CTO 05:04 裁=候下个 sg 侧维护窗随批**（今夜不进：8460 job 挂载+守望轮变更堆叠防控，同 D-23 原则）
+- **施工衔接预告（CTO 05:04）**：新发 PAT 链=CEO 生成→BOD 写入 fleet store（③）→**④dry-run 20 仓验证=本席**（push-survey 现成，预期 20/20 OK 全单+store 行态正常）→⑤旧把作废+history 清理（BOD/SDE 协同）→⑥观察项闭合；备场保持，候 BOD 写入毕读数即动④
 
 ## 使用依据
 
