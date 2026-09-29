@@ -179,6 +179,10 @@ COO 即答=F-1 ② 先例口径（TRIMODEL_API_TOKEN 在 channel cmd 内自提�
 - **G2① 判读修正（重要）**：对表 CPO IA 方案（cpo-product-plan.md §4.1 L85/L26/L42）——方案原文**自带**「标注『LG-035 面·常态只读』」指定（L85）+「—（LG-035 面）」（L26）+「标注 LG-035 边界」（L42）——strategy 副标/title 的 `LG-035` 字样=**CPO 方案指定文案照落，非 FSD 漏出**。G2① 渲染面真实缺口**收窄为 2 词**：mmc 注记句（L358）的 `face` 裸词+`trimmc-card.json` 文件名直书（CPO 方案用词=「本机过渡位实例」，无 face/文件名直书出处）。LG-035 三处候 CPO 后续改口径与否=产品术语面，非本席缺陷断言（先前 4+1 报读以此修正注为准）。
 - **G2② 命名对表 ✓**：菜单 7 项与 CPO IA §4.1 逐项一致——①「当前生效」总览默认选中 ✓ ②四卡正名 mmc/mlc/rmc/rlc ✓ ③「TriModel 策略卡」✓ ④「连接配置」✓（U1 实测菜单枚举与卷面同源）；卡头身份行四要素（角色/面/域/机位）与 §三表格行对表 ✓（U2.2 读数：TriMMC·sg/M 面·服务域·sg 8710 等格式同构）；「卡如其名」三硬标准面（名实相符/诚实三态/能力对齐）在 U1/U2.2/U3 读数同向。
 
+#### G2① CPO 补裁 v2 接收注（placeholder 属性面，cf574b6e 落树，COO 12:1x 转达；N23 录卷）
+
+- ①env 键名（两输入框 placeholder 的 TRIMODEL_API_TOKEN/TRIMODEL_ADMIN_TOKEN）**入禁词域裁删**——本席「管理员引导价值」主张经 CPO 实勘不成立（两框系页头连接设置 S1 客户端令牌值输入位，label 人话+guide 行已足；真配 env 键者在服务器配 env 文件不经此页；键名直书反有「误把键名当值填」误导风险）——主张取舍如实记档。②本席「API 令牌」人话 placeholder 替代建议**不采**（label 旁立纯冗余），裁删 placeholder 属性（缺省空，password 框常态）。③件D 定形=五行（三行文案+两行属性删），零重启不扩窗。④**本席回归判据升级：件D 修后 v3 复扫渲染面+属性面零命中（含此两处 placeholder 位）**——v3 工具面（a1-g2-terminology-scan-v3.mjs 属性面 title/aria-label/placeholder 全 DOM 遍历）CPO 已认（属性面盲区照出=既有规则适用非新立），v3 升级正名。
+
 #### V1 revert 锚走读 ✓（2026-09-29 11:2x，A6）
 
 - git 层锚 ✓：995c2f7 在位+ANCESTOR-OK（3e6ab37⊂995c2f7——managed additive 先落，revert UI 骨架不回退服务端面）+触面纯度 PURE（git show 实勘：六件全 test/+ui/ 零 src——回滚不伤后端）。
@@ -196,6 +200,7 @@ COO 即答=F-1 ② 先例口径（TRIMODEL_API_TOKEN 在 channel cmd 内自提�
 - **次生新发现（候件A 修案覆盖面）**：E10 失败后 **teardown hang**——browser/server close 不返回→runner `--test-concurrency=1` 串行卡死拖死全量 run（两轮全量 enev/enev2 双复现：log 双双停在 not ok 70 后 30min 零增量+`ui-e10-reload.test.ts` 子进程 46716/39780 hang 实证+测试组进程清理后 daemon 三件零误伤）。件A 修案候覆盖：selector 断言随版+teardown 健壮性双修。
 - 无 env 段基线：案 1-69 连绿实录（ok 63-69 抽验）+第一轮 324/309/0/15 EXIT=0 全量锚（fff9aae3）——**零新增挂**。分段读数证据：e9-solo2.log/e12-solo.log/enev.log/enev2.log 落 /d/tmp/lg058/。
 - 判读：G1 基线面（无 env 段 309 零漂移）成立；env 段 10 挂=件A 条件族读数基线（FSD 修案后本席 R2 独立复验对表此卷）。
+- **CTO teardown 裁示回执（21fe08d6，门审卷 §六，COO 12:0x 转达；N21 录卷）**：本席双修主张认承——**件A 扩双修**（selector 随版+teardown 健壮性），技术锚已给 FSD（close 套 Promise.race ~15s+超时强杀进程树+after 钩子 try/catch，估半小时级）。判据面分层：①条件族判据本体不变（teardown 不入判据）；②新增读数可达性前提=修后全量带 env 复跑须**正常收束零 hang**（非判据，系 clean 定性前提）。**复验位更新：R2 复验含双修面**——修后全量应正常收束，分段跑取数 workaround 自此退役（本段分段读数=修前基线存档；修后若仍 hang=双修未达标信号）。R2 复验验收口径三读数：env 段挂案清零读数+全量正常收束零 hang+无 env 段零漂移维持。
 - **G3** 走查快照敏感面复核：快照样本抽验零明文 key。
 
 ### A6 UI 独立 revert 锚
