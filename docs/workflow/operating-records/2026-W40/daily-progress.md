@@ -328,3 +328,6 @@
   - 5897a9e7 docs(scripts-fade): 两常驻执行体树内化(CTO 案 B)——tree-node-patrol+ledger-watchlist-patrol 正身入 git(.fade/ 旧位换 import 转发壳,job 零感知零重启),README 件清单+节律+写回落点声明;落位=TriMetaverseCodeRegistry 裁(域名制先例 scripts/fade 同族在驻);端到端验:双 job force run ok(spawn→壳→正身 256/160ms)
   - 974531f7 docs(w40): 铸单主流程图制度件成卷定稿——COS执行面会签四点全认(读版4a911805:六环节fidelity认/⑥反向催专款认/人工先行可承接/落点认)+注①无意见+执行面如实注(24h软阈值人工触发=巡检节律粒度非实时盯守,记录在卷零改文);BOD走查总体绿(措辞候选项已采纳注①留痕);§八走查会签记录入卷,draft转final候CEO批
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:00 +08：自上次进度提交 b3a5c143 后新增 1 条 commit：
+  - b82069eb docs(hub-state): sg 第二步 D-15 接令转窗态——sg TriMMC 8710 同构 job,窗 09-30 18:00-24:00 与 FSD 静默探测批并行;窗前备料四项毕(树位/8710 API TriMMC 契约/token root 限/root SSH 通道)
+- registry：v2.1；今日 registry 提交无变化
