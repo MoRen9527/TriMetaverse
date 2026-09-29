@@ -238,3 +238,7 @@
   - ce064579 Merge remote-tracking branch 'sg-server/dev' into dev
   - 69d9da2b docs(W40): 催办判据增补候裁读数落树触发型(BOD 09-29 提案 COS 裁定:台账候BOD销账/验收/判读项 COS 巡检对树核查,读数落树即发 BOD 到件触发消息;触发≠催办不违董事会面不催办护栏;断点实锤=下窗两件 c1c36f1a 落树两小时零触发)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:20 +08：自上次进度提交 2568afac 后新增 2 条 commit：
+  - 9f428805 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 0bc0d068 docs(W40): BOD两问实勘入账——daily-progress巡检兜底调度真源=sg TriMMC cron d0f87756(*/10 Asia/Shanghai runAs fleet,今晨9笔TriMC Scheduler实证)+本机8713四job全景(cron.db实勘);判据型执行体两段式裁定=现役m-cos会话半自动(与60s patrol不同链)+升级候办吸收daemon级候CTO裁;8713 CLI探针401根因候选=CLI env无现役token(08e07c8b)
+- registry：v2.1；今日 registry 提交无变化
