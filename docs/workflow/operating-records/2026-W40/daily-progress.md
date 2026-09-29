@@ -291,3 +291,19 @@
   - 2a9b5e94 docs(w40): CTO 8460活体实测SOP——CEO 23:36批明窗即派,STE/DE执行规程:三读数一结论(R1 shell层env初筛非决定性,settings env系CLI内部注入shell echo只见shell层/R2流量对表决定性=日志基线wc-l→席内触发请求→60-90s增量/R3失败面补采)+判定矩阵四格(在路推翻漂移/CLI层覆盖/更深层覆盖/上游异常)+直连成功=1210风险面回归坐实+tmux坑三防+len-only掩码
   - 14946a6f docs(w40): CAO发信路由纪律核查卷——三正身张力+17封逐条定性+R表修正案(BOD查令CEO 23:18)
 - registry：v2.1；今日 registry 提交无变化
+## 2026-09-30（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:00 +08：自上次进度提交 4b95fe6a 后新增 11 条 commit：
+  - 0f500517 docs(w40): R表批令生效首档——BOD例外直发补档登记件(底稿=CAO路由审计卷§二10行,时点缺口候BOD细目,23:18后增量候续录,边界模糊两封候勘); CEO 23:55三批知会件①承接落盘
+  - e07ff9ab docs(w40): CTO裁定卷§七——CEO 23:55两批排窗裁:缺陷修批与新功能批分窗(变更堆叠防控,与8713不迁ENV_FILE裁同标准)。上午=缺陷修批四件(F-2/F-3/8711正形/实弹,TriMLC+TriRLC一轮)+COS两脚本树内化并行;下午=静默探测实施批(共享基建+900s job+通道a+值席位对象,allowlist独立重启不并上午批,在办账空=安全降级不阻塞);FADE-010三件候在办账载体落点商定(本席+COO今日内闭)后FSD小窗;TriModel件A/件C独立仓穿插。首周灰度照守望先例
+  - f00c5675 chore(d23): D-23传播落点一发布面追平——claude 16件/copilot 16件/claude-session(compass)13件统一发布管线重渲;含本批D-23两行13席投影+源侧历史漂移一并追平(09-23 social升维/09-24概念模型追改/LG-046 host-assets正名等已提交裁决投影,发布面此前滞后未渲);管线读数三面derived_drift=0;源侧TC 90274b0
+  - 23014e42 docs(w40): F-2销账(watchlist转closed,BOD亲验PASS双锚)+F-3立案(addJob缺next_run_at列,机理钉自愈触发源勘明列验收前置,明晨FSD批并窗); 总表LG-058行F-2终态刷新
+  - 416865ae docs(lg-058): STE N28——4→5jobs漂移项销项(COS合规加挂对表笔录卷8a2b625c,守望自动化件本体)+addJob缺陷立案知悉;ts动态生成根治面首用
+  - 841f7384 docs(w40): CTO裁定卷§六补裁——守望上线后两案:案A=F-3缺陷单(BOD 23:53分派编号,addJob缺next_run_at列store.ts L218→API直插永不调度,验收前置=23:23调度自愈机理勘明+修后读数含自愈触发源实勘,明晨FSD批与F-2同仓同build同重启并窗)+案B脚本树内化否scp(脚本本体入git防漂移8460盲区同款免疫/写回数据不入git,patrol+watchlist两脚本同批迁移)+8713暂不迁ENV_FILE裁(设计内显式供给非巧合继承,不堆叠变更窗,远期随服务化搭车)
+  - 3f090186 merge: 并入远端 4b95fe6a7（多席共仓惯例）
+  - 0b9e6591 docs(w40): COS守望收官批——活体自证PASS终态+技术锚三条合入(真源迁docs/workflow/hub-state/树内跨周路径+录账即推节律+唯一真源关系)§八增补; F-2项notified到件信真弹BOD信箱(15:35Z); INSERT缺陷立案候CTO(addJob不初始化next_run_at); 脚本本体.fade/不入仓候注缺口挂§8.3
+  - 8a2b625c docs(w40): 合卷并CTO抽验认承注——技术要件零失真技术面收口(23:46回执); 二跳实施位=探测job对象配置面加值席位随工程批落
+  - bd7d9498 docs(lg-058): STE N27——amend事故记档(HEAD归属未验改写CPO提交26854058→08dfebab,内容零损失哈希已扩散,不拆回处置+教训入档)+8460活体实测派工接收(SOP三读数一结论+四格矩阵,明窗12-14主选)
+  - 4e334898 docs(w40): 探测×班次一体方案合卷(CAO主笔三方零分歧)+D-27排窗字段并CTO会签两注
+- registry：v2.1；今日 registry 提交无变化
