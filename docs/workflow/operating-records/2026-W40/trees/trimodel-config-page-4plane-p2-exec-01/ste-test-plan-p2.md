@@ -213,6 +213,14 @@ COO 即答=F-1 ② 先例口径（TRIMODEL_API_TOKEN 在 channel cmd 内自提�
 - **CTO teardown 裁示回执（21fe08d6，门审卷 §六，COO 12:0x 转达；N21 录卷）**：本席双修主张认承——**件A 扩双修**（selector 随版+teardown 健壮性），技术锚已给 FSD（close 套 Promise.race ~15s+超时强杀进程树+after 钩子 try/catch，估半小时级）。判据面分层：①条件族判据本体不变（teardown 不入判据）；②新增读数可达性前提=修后全量带 env 复跑须**正常收束零 hang**（非判据，系 clean 定性前提）。**复验位更新：R2 复验含双修面**——修后全量应正常收束，分段跑取数 workaround 自此退役（本段分段读数=修前基线存档；修后若仍 hang=双修未达标信号）。R2 复验验收口径三读数：env 段挂案清零读数+全量正常收束零 hang+无 env 段零漂移维持。
 - **G3** 走查快照敏感面复核：快照样本抽验零明文 key。
 
+### R2/R3 夜验链终读数（2026-09-30 03:1x–03:3x +08，CEO 03:11 前移令；N31 录卷）
+
+- **R2 带 env 全量**（HEAD=754fc96 三件 landed；/d/tmp/lg058/r2-full-enev-post.log）：326 tests/77 suites/**323 pass/0 fail**/3 skip，EXIT=0，282s **正常收束零 hang**——修前 e10 teardown hang 信号未复现，件A teardown 双修修后收束达标（clean 定性候 CTO，判据分层口径）。
+- **R2 无 env 全量**（同 HEAD；r2-full-noenv-post.log）：326/**309 pass/0 fail**/17 skip，EXIT=0——**309 与 FSD 件D 基线（324/309/0/15）精确同值，零漂移维持**；17 skip=14 env 族+3 precondition 族（policy.json×2+trimmc-card.json×1），与带 env 跑的 3 skip 算术咬合（309+14=323）。
+- **CTO 三读数口径逐项判读（21fe08d6）**：①env 段挂案清零=14 env-gated 全过（E9/E10/E12 双案/E13/GATE E1-E8）✓ ②全量正常收束零 hang ✓ ③无 env 309 零漂移 ✓——**R2=GREEN**；分段跑 workaround 退役兑现。
+- **R3 件C 独立复验**（r3-e13-verify.log）：ui-e13-4plane-truechain 定向复跑 2/2 pass/0 fail EXIT=0（案1 四 face managed 真链+案2 错 token 401 诚实黄态）——**件C 独立复验 PASS，夜验链 v3→R2→R3 收官全绿**。
+- 遗留：4 处 LG-035 残留（L183/L758/L1150/L1160 开发者注释）候清扫批；UI 人工验辅位候 BOD 排（正常工时窗）。8460 探测读数另卷=ste-8460-probe-readout-20260930.md（N32）。
+
 ### A6 UI 独立 revert 锚
 
 - **V1** revert 锚在位+可执行性走读：dist 锚策略（P0 A6 教训=单 commit revert 失效→dist 锚+dist.bak 补位）；判据=锚在位+回滚步骤走读过+补位文件在位断言（回滚实弹候 BOD 哨验，非作者纪律）。
