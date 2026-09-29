@@ -331,3 +331,9 @@
 - 巡检兜底补写 @03:00 +08：自上次进度提交 b3a5c143 后新增 1 条 commit：
   - b82069eb docs(hub-state): sg 第二步 D-15 接令转窗态——sg TriMMC 8710 同构 job,窗 09-30 18:00-24:00 与 FSD 静默探测批并行;窗前备料四项毕(树位/8710 API TriMMC 契约/token root 限/root SSH 通道)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:10 +08：自上次进度提交 aa5558a2 后新增 4 条 commit：
+  - ad04195d docs(cast-order): 定稿树卷转历史锚——CEO 02:56批铸单主流程制度件转正式制度
+  - 2302051e Merge remote sg-server/dev
+  - f3a4d6ff docs(board): 发送账续录#47-50——铸单走查绿/壳方案处置认+sg第二步随批/CEO0256批准落正身/COS记账知会四封;全账50封合拢(补档41+R6七+R1一+宪章一);铸单批准记账毕候CAO落位卷合账
+  - c115d87d docs(w40): FSD 夜窗三件闭环读数——件D 五行/件A 双修四层随版对齐/件C 真链两案（TriModel 5be7aba/d3fda84/69ea6ac/754fc96，env 实测 12/12+2/2 绿全量零回归）+预读定形卷+挂起恢复周期留痕
+- registry：v2.1；今日 registry 提交无变化
