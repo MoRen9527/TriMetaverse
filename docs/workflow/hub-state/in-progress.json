@@ -16,5 +16,14 @@
   "priority": "默认（录入序 2）",
   "status": "done-waiting-cutover-check",
   "note": "施工毕（2026-09-30 03:2x，CEO 03:11 判据令分支一「即做」提前于 18-24 窗）：sg TriMMC 8710 无白名单机制即生效型（十文件零命中+tick 即时调度四读数），job e7a37e66（*/5 Asia/Shanghai）挂载 201 零重启，force run ok 63ms+定时首轮 03:25:00.001 ok 68ms，正身单文件双面 729108a72；销账候 BOD 首周灰度抽验（明早 9-12 哨窗随 A6）；回滚=PATCH enabled=0"
+ },
+ {
+  "id": "tc-bare-force-fetch-fix-tracking",
+  "treeAnchor": "68fd158",
+  "treePath": "TC 仓锚（TriCompany dev 现顶，非本仓对象）；修案对象=sg /home/fleet/bare-fetch-all.sh L18 refspec 去 `+`（CTO 裁主修）+rejected 不可静默告警锚",
+  "owner": "SDE（施工，今天内窗）/COS（tracking+护栏复启用）",
+  "priority": "默认（录入序 3）",
+  "status": "tracking",
+  "note": "TC bare force fetch 回卷事件修复候办（BOD R3 ②+CTO 03:44 裁决）：refspec 去 `+` 主修+denyNonFastForwards 纵深层两件，SDE 施工毕我侧对表验收；我侧护栏在位=fleet crontab bare-fetch-all 行注释停用（03:47，备份 /home/fleet/crontab-backup-20260930T0347-guard.txt，BOD 全权盯守授权），复启用判据=GitHub TC dev 顶 is-ancestor 于 bare dev 68fd158→去注释→回执 BOD；CAO GitHub 补推在途（静默重试，成功知会即触发复启用流程）"
  }
 ]
