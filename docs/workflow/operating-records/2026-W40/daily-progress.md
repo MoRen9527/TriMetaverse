@@ -322,3 +322,9 @@
   - bdf1004b docs(w40): 铸单主流程图制度件草案(CAO主笔,候COS会签→BOD呈CEO)——CEO 23:47点名流程六环节折算三方正身(分权制+树协议D-27 v2-v9+FADE-010);主流程mermaid一图收口(实线主链+虚线反向催回环腿);⑥反向催BOD专款(触发=D-34 24h软阈值/COS催/激活位=FADE-010②/人工先行机器后补/向上催与BOD不催办不冲突);不新立法声明+R表正交+值守节咬合
   - 6c61115f docs(w40): CTO裁定卷§九——D-23 SOP核对记录(CEO 23:59 R3令,触发e8972b2+fffdc93正身实勘毕):六窗逐核对——缺陷修批9-12平价款吻合维持(已派无改派)/静默探测批下午窗14-18禁排区硬对照命中实锤重排18:00-24:00最优子段(分派未发零沉没)/FADE-010双候选均最优子段维持/脚本树内化轻量维持/P2三件在跑不受影响/8460实测正常工时款。D-27 v10字段填法对表(会签两注已吸收)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:50 +08：自上次进度提交 c35eb3fc 后新增 4 条 commit：
+  - de167e43 docs(hub-state): FADE-010 在办账载体落地——in-progress.json 建载(schema 照 aa217f3a 定谳:{id,树指针,承办席,优先序,状态}),录现役在办两条(F-3 候 09-12 修批窗+sg 第二步候接续令);写边界三权分立=本席维护+销账/值席自条目/COO 覆写,优先序双层=录入时序默认+COO 显式覆写
+  - 2cd4925f Merge remote-tracking branch 'sg-server/dev' into dev
+  - 5897a9e7 docs(scripts-fade): 两常驻执行体树内化(CTO 案 B)——tree-node-patrol+ledger-watchlist-patrol 正身入 git(.fade/ 旧位换 import 转发壳,job 零感知零重启),README 件清单+节律+写回落点声明;落位=TriMetaverseCodeRegistry 裁(域名制先例 scripts/fade 同族在驻);端到端验:双 job force run ok(spawn→壳→正身 256/160ms)
+  - 974531f7 docs(w40): 铸单主流程图制度件成卷定稿——COS执行面会签四点全认(读版4a911805:六环节fidelity认/⑥反向催专款认/人工先行可承接/落点认)+注①无意见+执行面如实注(24h软阈值人工触发=巡检节律粒度非实时盯守,记录在卷零改文);BOD走查总体绿(措辞候选项已采纳注①留痕);§八走查会签记录入卷,draft转final候CEO批
+- registry：v2.1；今日 registry 提交无变化
