@@ -90,6 +90,17 @@ P2 部署窗排程不受阻（部署窗候 A2-P+CEO 亲测同窗，修案窗在�
 2. **件C 并入 CONDITIONAL PASS 条件族**（与 e12 修案并列）。技术形态最低限：循 ui.e2e.gate 现案骨架加两案——(a) 有令牌 loadFaceCards 真链路（真 server+真 fetch：view=managed×4+auth 头+200 解析+三态徽标渲染断言）；(b) 错 token 401 诚实态（不假显不造数）。判据=LG-035 R3 原文（新端点×真服务启动×断言响应契约）。
 3. **排程**：件A（e9/e10/e12 修案）+件C 同域同 e2e 基建一并做；件B（F-2）独立仓。三件一窗技术可行，件C 估量 ≈1-1.5h（骨架现成）。件C 纯测试面零重启（TriModel 侧，不并 8713 重启批）。
 
+## 六、件A 双修裁定（teardown hang 次生发现·2026-09-29 12:0x 补）
+
+**STE 二轮带 env 终读数认收**：10 挂逐位吻合本席门审读数；归因闭环最强实证=e12 挂案集与真浏览器 UI 路径集合完全重合、过案集（C6 jsdom+C10b API 直打）与非 UI 路径完全重合——「旧案结构漂移非产品缺陷」STE 独立取数同向非转抄。基线零新增（无 env 段 1-69 连绿+324/309/0/15 锚不变）。
+
+**候裁一件：E10 失败后 browser/server close 不返回→runner 串行卡死拖死全量 run（两轮全量双复现+子进程 hang 实证）。裁定=件A 扩双修，判据面分层**：
+
+1. **件A 范围=selector 随版+teardown 健壮性双修**（STE 主张认承：只修 selector 不修 teardown，修后全量仍会被任一案偶发 fail 拖死 30min+——全量兜底跑的可用性被破坏，且直接威胁条件族验收读数本身的可达性）。
+2. **条件族判据本体不变**（=selector 修后 e9/e10/e12 绿+真 reload 周期+件C 两案）——teardown 不入判据。
+3. **但加验收读数可达性前提一条**：修后全量带 env 复跑须**正常收束**（零 hang）——此非新增判据，系「全量 clean 定性」读数的前提（现形态全量带 env 跑会 hang，clean 读数不可取）。
+4. **teardown 修技术锚（供 FSD）**：browser.close()/server.close() 套 Promise.race 超时兜底（如 15s），超时后强杀子进程树（Windows=taskkill /T /F 或等价 process group kill）；after 钩子 try/catch 包装防串行链卡死。标准 e2e 基建健壮性形态，估时半小时级。
+
 ## 使用依据
 
 - 本席亲跑读数：TriModel test/ 全量分段三批+ui.e2e.gate spec reporter+ui-e9/e10/e11/e12 带 env 逐件（时点见卷内）；
