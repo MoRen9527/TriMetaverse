@@ -337,3 +337,7 @@
   - f3a4d6ff docs(board): 发送账续录#47-50——铸单走查绿/壳方案处置认+sg第二步随批/CEO0256批准落正身/COS记账知会四封;全账50封合拢(补档41+R6七+R1一+宪章一);铸单批准记账毕候CAO落位卷合账
   - c115d87d docs(w40): FSD 夜窗三件闭环读数——件D 五行/件A 双修四层随版对齐/件C 真链两案（TriModel 5be7aba/d3fda84/69ea6ac/754fc96，env 实测 12/12+2/2 绿全量零回归）+预读定形卷+挂起恢复周期留痕
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:20 +08：自上次进度提交 8d9eecfa 后新增 2 条 commit：
+  - 729108a7 Merge remote sg-server/dev
+  - 5c773ef6 docs(scripts-fade): watchlist-patrol 单文件双面平台自适应(D-15 第二步施工)——win32=本机 8713 现役行为零变化/linux=sg 8710:REPO 平台判+notify loopback 8710+token 文件直读+第二状态机落 .fade/(gitignore 非 git 防脏 fetch 链,树内真源 sg 面只读);头部上线现势更新;本机活体跑 PASS(exit=0 platform=win32)
+- registry：v2.1；今日 registry 提交无变化
