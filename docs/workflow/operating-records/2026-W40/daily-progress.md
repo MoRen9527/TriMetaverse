@@ -269,3 +269,17 @@
   - e78cacc4 docs(lg-058): STE N20——G1带env二轮终读数:10挂独立复现与CTO定性逐位吻合(e9=1 #tc-conn resolved-but-not-visible连接页v2改版/e10=1同形态/e12=8策略卡入panel-strategy未切视图)+归因闭环最强实证(挂案集与真浏览器UI路径集合完全重合,过案集C6jsdom+C10b API直打与非UI路径完全重合,结构漂移非产品缺陷定性成立)+次生新发现E10失败后teardown hang拖死runner(两轮双复现,件A修案候覆盖面)+无env段案1-69连绿零新增挂
   - b8cd4436 docs(lg-058): STE N19——G2扫描v3升级毕(CPO裁hover计入禁词域,加属性面title/aria-label/placeholder遍历)+件D修前基线(渲染面同v2/属性面新域3命中:placeholder环境变量名×2候CPO补裁+title LG-035×1)+G2③折叠形态活体定谳✓(顶部细条0/4=CPO§4.2情形1正确执行,差异点解除)+二轮enev障读数(后台收割定性,零活体污染,nohup隔离重跑)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 530cc7a5 后新增 12 条 commit：
+  - bc11e15a docs(w40): CPO判据件v2三方联审对表闭合——CTO三输入全对上零分歧:①idle组合信号采认+扩席会话一源成三源判定(树账双源防抖动+会话面防在办未落盘误报,任一源活动即active)②结构化在办账载体升级语义不改(排序权威=COO锁死,落点归COO/CTO)③误报分界确认+通道案a认(留痕点改信箱入站+值守转发双点);阈值正式定值=900s节奏与活动窗口合一/1轮15min提醒级/2轮30min idle升级,三值收敛两值;§八成卷输入五步映射汇总候CAO主笔
+  - 575436cd docs(w40): CTO四件裁定卷——8460补勘(观测窗代理层零痕,波动不在8460;增量发现=缓解位09-25起静默漂移退出流量路径,日400行→4-5行断崖,配置活体矛盾机理候席内实测终裁,探测面建议加缓解位在位性维)+sg守望互备权衡(可做分两步,前置=watchlist.json入仓,冷备兜底非双活)+静默探测技术面(统一探测架构=共享基建层+独立job,②③共享前置改造,idle组合信号双源,通道一期走信箱面)+8711 launcher按属实预裁(补位对齐8713正形+复活路径实弹禁止再留白,8711=TriRLC=R面纪律)
+  - 1d2fb3f1 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
+  - d16edf30 docs(w40): CPO语义判据件——值席静默探测方案重设计支撑卷(CEO 23:09方案语义化):idle三态分家(active/waiting/idle=无外部等待理由的静默)/watchlist消费COO排序裁不自造体系/催办信三要素+三选一零惩罚/误报三防(长思考豁免+在办单前提+从严idle);实勘增量=树协议§8.3五分钟系悬空引用(§8仅两小节,超时催办器实锚=fade-008 L120阈值未定值),联审须正式定值;与fade-008关系=一套两级同账异阈值(提醒15min/升级观察30min候CTO对表)
+  - 13babdf3 docs(w40): CAO两卷——值守班次节设计方案+D-23传播补丁扩容案(BOD两件CEO 23:09批令)
+  - 7472e7ee docs(lg-058): STE N25——改窗令接收(BOD 23:11):FSD施工窗今夜0-9,复验面拆两半(自动化面夜间跟跑v3→R2→R3次序不变+人工面候工时),A6候补解除,夜窗自动化合规边界自认
+  - beccc3f0 docs(lg-058): STE N24——F-2承接cron list独立复验:8713带令200复现(5jobs现势+1漂移注记)+8711无令401门开吻合/带令401键值分叉实锤(同TOK二分8713通8711拒,channelcmd系TriMLC launcher,8711在役token无现势落盘真源候FSD对键)+门态历史矛盾作疑存档(L103勘正注)+watchdog复活链token供给缺位次生发现
+  - ca6fc723 docs(w40): BOD查令CHO取证卷——COO排窗D-23对照与12:08中断三选一定性(值守断:候事件态+触发源未达+无自唤点,away_summary 12:21:46一手证据);值守链中断窗无必然触发点(半自动催办随COS会话挂起双失效);制度缺口三条(D-23消费方漏COO排程面/催办单点依赖/断链检测方向盲区);观察非处罚,候BOD汇裁
+  - 283cec74 docs(lg-058): F-2完工读数落树——双仓修复TriMLC ee5d7fe/TriRLC 18cd777,四步读数全绿(带令cron list 4job翻绿+无令401双层谱),8711门活体钉死翻正COO判读(门一直开着同修必要坐实),重启正形pid35520==pidfile,双仓全量同谱零新增(F-1 face=mlc回归保持),COS allowlist一次重启双件,下午窗件A/C/D未施工如实报候示下
+  - d3b5e079 docs(w40): CAO制度面查卷——D-23传播缺口+值守静默探测+12:08集体静默定性(BOD查令CEO 22:05)
+  - 4f27662f docs(lg-058): STE N23+plan注记——CPO placeholder补裁接收(cf574b6e:主张取舍记档+v3复扫判据升级含placeholder位)+N21 ts勘正(12:10→12:08,D-04再犯自纠)+R2复验位落plan(双修面三读数口径,分段workaround退役);node-status含COO N22-dispatch并行行同卷(共享index惯例,撞号已避N23)
+  - e01dc69e docs(lg-058): STE N21——CTO teardown裁示录卷(21fe08d6):件A扩双修认承+判据分层(teardown不入判据,修后全量正常收束系clean定性前提)+R2复验位更新含双修面(分段workaround退役,三读数验收口径)
+- registry：v2.1；今日 registry 提交无变化
