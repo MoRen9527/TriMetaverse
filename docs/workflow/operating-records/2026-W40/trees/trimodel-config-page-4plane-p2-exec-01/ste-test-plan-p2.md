@@ -60,12 +60,26 @@
 
 **A1 第一段结论**：U1/U3 本席独立复验 PASS（与 CTO 技术侧 PASS 互补不重复——本席=像素级走查+零残影断言+特有面语义）；U2 连接态深面候 admin 通道（候件不虚验）；发现零阻塞项。
 
+#### A1/U2.2+S1 连接态深验读数（2026-09-29 11:1x+0800，admin 供料到位后即启；a1-u2b-managed-walkthrough.mjs 独立脚本）
+
+**通道前置（T4 翻转）**：FSD 供料 TRIMODEL_ADMIN_TOKEN（落点 TriModel/.env，法面交付值零出机，COO len-only 复核一致）——curl `view=managed` Bearer admin → **200，四面全通**。双层三态全谱自此收口：T1 无凭据 managed→401 / T2 API_TOKEN managed→401（错误族拒）/ T3 API_TOKEN pull→200 / T4 ADMIN_TOKEN managed→200（四面）。FSD 择②理由备查（channel cmd=TriMLC 启动环境只载 TriMLC 消费键，admin 键入=跨 daemon 语义污染+真源分叉第二落点——TriModel .env 唯一真源）。
+
+**U2.2 连接态真链路深验 ✓（全绿）**：
+
+- **双 token 连接动作**：API 框+管理令牌框双填→conn-save→**conn-dot=ok** ✓（守卫双填语义活体复证）。
+- **managed 拉取真请求实发 ×4**：page request 监听捕获 `/v1/config/cards/{face}?view=managed` 四发——**真浏览器→真 server→admin 头→managed 端点→四卡渲染全链活体实证**（R3 缺口的 UI↔server 真链路人工验证面就此补上；自动化守卫仍候件C，CTO 裁缓解≠达标口径维持）。
+- **S1 对表 ✓**：UI 四卡 badge vs 后端 curl 基线逐卡一致——mmc badge=**待应用**↔后端 card_file_present:true；mlc/rmc/rlc badge=**未配置**↔后端 card_file_present:false×3（缺席→未配置徽标映射活体正确；后端 state 字段=null，badge 判定基于 present+state 组合语义，映射自洽）；四面 face 回显正确+ledger 面在（hasLedger:true×4）。
+- **拉取动作真实性**：四面「上次拉取」时戳=本窗连接动作触发时刻（02:56-03:01Z 实拉），非陈旧缓存 ✓；拉取源特有描述四面各异如实（mmc=sg 出面走 8460 代理/mlc=keys 分发面/rmc=同机过渡位候迁注/rlc=寄居过渡）——与 U3 特有面走读同向。
+- **reload 保持链全绿（第四型 managed 面人工验证 ✓）**：reload→conn-dot 仍 ok+四卡 badge 复读同值（待应用/未配置×3）——localStorage 双 token 保持+boot 链自动重拉+三态徽标复现全周期通。**注**：此=第四型（跨刷新持久）真链路活体面，CTO 裁件A（e12 修案）为自动化守卫位，本席人工面先行实证不替代。
+- console 零错 ✓；截图 8 张（-managed 后缀）本地保留掩码面照旧。
+
 ### A2 诚实三态呈现核验（在役/降级/断链）
 
 - **S1** 在役态：后台 card 正常态 vs UI 呈现对表（来源归因字段呈现）。
 - **S2** 降级态：真实降级触发（后台拉取失败态）vs UI 呈现；**禁 mock**=断言链必须真实后台态驱动，前端态注入仅允许作对照面且须与真实态双验。
 - **S3** 断链态：基料=sg P1 切换前后实照（COO 留档，候件）；UI 断链呈现 vs 实照对表；实照缺席=本锚不可验，如实报候件不虚验。
 - 判据总则：三态呈现与 cache show 后台读数逐态对表（「诚实」=UI 态≠后台态即 FAIL，不问美观）。
+- **S1 录位 ✓（2026-09-29 11:1x，详见 §A1/U2.2 段）**：UI 四卡在役态徽标 vs 后端读数对表一致（mmc 待应用↔present:true；三卡未配置↔present:false）——「未配置·读取失败」态活体正确呈现；降级态（S2）候真实拉取失败注入面（三卡缺席态已间接覆盖「未配置」呈现侧；「待应用·失败」降级态候注入缝，如实候件）；S3=sg 实照两半 CTO 五审点④已过，A2-P 终判归 CPO 验收窗（本席不重复）。
 
 ### A3 CLI/网页能力矩阵终对表（候 P1 CLI 落位）
 
@@ -122,10 +136,47 @@
 - **R3** 新端点真 HTTP 链路案：UI 消费的新端点（若有）必须真 HTTP 链路案覆盖——禁单测直调+jsdom mock 双盲（LG-035 第三次命中教训直引）；判据=新端点×真服务启动×断言响应契约。
 - **R4** 结构升级型改动=UI 必检触发器：候 FSD 改动清单落位后逐项核触发器命中面。
 
+#### R3/R4 独立核验录位（2026-09-29 10:5x+0800，date 现查 UTC 2026-09-29T02:58Z）
+
+**R4 触发器命中核验 ✓**：P2 改动两笔（TriModel 仓 995c2f7+3e6ab37）——`ui/index.html` +439/-74（导航层 7 视图+hash 路由+面板互斥 hidden+单页面板重构）=**结构升级型**，LG-035 必检触发器**命中** ✓。必检面映射现状：非作者手测→A1 U1-U3 本席第一段已过+CTO 技术侧亲跑过；jsdom 首启链→ui-boot 17+ui-boot-connection 8 绿；真链路门族 E1-E8 gate 适配=gotoStrategy 导航步语义零变更（diff 实勘：只加导航点击+panel 显示等待，断言本体未动）+trimmc-card E12 代际勘锚（panel-card-mmc+TriMMC（sg）双锚意图保持）✓。触发器命中→必检执行=在轨。
+
+**R3 独立核验发现：managed 新端点 UI↔server 真链路案缺失（新发现，候 CTO 裁）**：
+
+- P2 新端点=**GET /v1/config/cards/<face>?view=managed**（3e6ab37，managed 视图只读面 additive）。三层覆盖现状实勘：
+  1. 服务端单测（config-cards.test.ts +47 行）=in-process 直调，managed 分支/401/404/ledger 摘要逻辑有绿案 ✓；
+  2. UI jsdom 族（ui-fourplane.test.ts 7 案，覆盖④）=**mock fetch**（beforeParse 替换 window.fetch 为 faceResponder 假响应），view=managed URL 形态断言+三态徽标渲染绿 ✓；
+  3. **真浏览器↔真 server 全链路案=零覆盖** ✗——实勘 grep：ui.e2e.gate.test.ts / ui-e9-seam / ui-e10-reload / ui-e12-strategy-delete 四个真链路族对 `panel-card-*`/`view=managed`/`loadFaceCards` **零命中**（E1-E8 走策略卡+连接面，e9/e10/e12 走策略卡写入/删除/reload 链，全不触四卡 managed 消费）。
+- **定性**：恰为 LG-035 第三次命中教训的字面形态（单测直调+jsdom mock 双盲→真链路缝 mock 掉）——生产 fetch 下的 URL 拼接/auth 头拼接/三态解析三处集成缝无绿案覆盖。**缺案非挂案**：0 fail 读数不暴露此面，CTO 五审点②「A4 渲染门 45/45 全绿」的 45 案各自真绿，本发现不推翻门审已过面——但 P2 执行单 A4 锚字面要求「真 HTTP 链路案（**新端点真链路**，禁单测直调+mock 双盲）」，managed 系新端点，**当前形态=A4 锚字面未满足项**。
+- **缓解与闭环路径**（候裁不擅断）：①本席真浏览器活体手测候 admin 通道后补 managed 200 全链路人工验证面（真浏览器→真 server→admin 头→四卡渲染→三态徽标真实值）——人工验证=缓解面非绿案达标，如实标注；②正式达标路径=候 FSD 补自动化真链路案（E 族扩展或与 e12 修案同批，同批=一次重启两件省窗），判据=新端点×真服务启动×断言响应契约（本 R3 原判据行）。
+- **上报**：随本录位即报 COO 转 CTO 候裁（门禁面发现非放行裁量——本席不裁 A4 过/不过，如实呈报候裁）。
+- **CTO 裁词回执（6bf7a596，门审卷 §五 勘误补注落，COO 11:0x 转达）**：**裁②为准——件C 并入 CONDITIONAL PASS 条件族**（条件族两项=e12 修案+件C）；本席零命中断言 CTO 独立复核成立认承，门审自纠如实记档（当时核「在位且绿」未做覆盖面 grep 核对）——STE 第三刀补位=互检生效正名入卷。①本席活体验证=临时缓解加分项非达标替代（三集成缝守卫必须自动化持续在）；admin 供料到位早于件C 落地可先做缓解面不阻条件族。②件C 两案形态循 ui.e2e.gate 骨架：(a) 有令牌 managed×4 全链+三态徽标断言 (b) 错 token 401 诚实态；**测试自包含不候供料**（CTO 澄清：createServer 自配 env+UI 注入），纯测试面零重启——已扩批 FSD 下午窗与件A 并行。本席复验位：R2=件A 落后/R3=件C 落后独立复验照旧链。
+
+#### Token 通道适配性实测（COO 即答指针执行，2026-09-29 11:0x+0800，date 现查 UTC 2026-09-29T03:01Z）
+
+COO 即答=F-1 ② 先例口径（TRIMODEL_API_TOKEN 在 channel cmd 内自提取，键面适配性以 401→200 翻转实测为准，不合回 FSD 对键）。实测三态（值就地提取 len-only=64 chars withheld，env 单 shell 瞬态零残留）：
+
+- **键面清单**：channel cmd 含 TRIMODEL_API_TOKEN ✓ / **TRIMODEL_ADMIN_TOKEN 缺席** ✗（其余 TRILC_*/TRIMC_* 通道键在位，与本测无关）。
+- **源码实勘先行**（config-cards.ts L100-102+L60-62）：managed 视图（UI 四卡消费面，缺省 view）→`requireAdmin`=TRIMODEL_ADMIN_TOKEN（fail-closed）；pull 视图→TRIMODEL_API_TOKEN（keys 同族 bearer）。**双层鉴权设计两族 token 各管一面**。
+- **T1 无凭据 managed → 401**：admin 已配置实锤复核 ✓（非 503 fail-closed disabled，与 U2 第一段探测同向）。
+- **T2 API_TOKEN 打 managed → 401**：错误凭据族被正确拒绝——**API_TOKEN 不翻转 managed 面**，鉴权双层隔离活体实证 ✓。
+- **T3 API_TOKEN 走 pull 视图 → 200 翻转成**：`{"object":"config.card-pull","face":"mlc","card_present":false,"entries":{},"default_model":"GLM-5.3","default_model_source":"policy","warnings":[]}`——**API_TOKEN 适配面=pull 视图确认**；附读数：mlc 卡本机缺席如实回显（card_present:false 零造数，「缺席不造数」活体佐证）+server 侧 pull 视图端到端真链路（真 server 活体+真 token+响应契约断言）实测通。
+- **通道结论**：COO 指针键对 pull 面**适配**；managed 面（UI 四卡消费面）**不合**——按 COO 口径回 FSD 对键：UI 连接态深验（U2.2 四卡 managed 拉取+三态徽标真实值+S1 在役态对表）仍候 **TRIMODEL_ADMIN_TOKEN 供料**（channel cmd 无此键，供料面=FSD/BOD 裁量，本席不擅掘）。连接页双输入框语义与后端双层对表佐证：API 框↔pull 面/keys 族、管理令牌框↔probe/managed/写面（UI 源码 adminHeaders 与后端 requireAdmin 对上）。
+
 ### A5 全量测试族读数+四类排查
 
 - **G1** TriModel 全量零新增：T-reg 同法（P1 期 ste-test-plan-p1.md §六），对平基线候 P1 落位后现勘递延（P2 落位后再递延一次）。
 - **G2** 四类排查（LG-035）：①术语（结构词汇禁入 UI——「卡/face/域面」内部词不漏出）②命名（一致性与 CPO IA 方案对表）③布局（四卡矩阵+选项卡布局走查）④逻辑双路径（每交互正/反路径各一遍）。
+
+#### G2① 术语扫描录位（2026-09-29 11:0x+0800，活体 3333 独立 Playwright 扫描，v2 禁词族）
+
+- 方法：七视图逐面板 innerText 抓取（渲染面实证，注释天然排除），禁词族 12 模式（face/managed/panel-*/storage/JS 函数名/fail-closed/环境变量名/裸 HTTP 码/HTTP 头名/endpoint/`LG-\d{3}`/`*.json` 直书）——v1 扫出 face 后补 LG 编号+文件名两模式成 v2。
+- **渲染面命中 4 处（2 视图）**：card-mmc 3 处（L358 特有面过渡注记句：`face`+`LG-035`+`trimmc-card.json` 同句三连）+strategy 1 处（L188 副标 div「LG-035 面 · 常态只读…」）；**title 悬停面补计 1 处**（L404 策略卡 title「LG-035 面 · 常态只读…」——innerText 扫描不覆盖 hover 态，源码实勘补计）。overview/mlc/rmc/rlc/connect 五视图零命中 ✓。
+- **非漏出核实**：LG-036×1（L960）/LG-058×2（L64/L329）+L183/L758 注释全不渲染 ✓（grep 命中但 innerText 零命中互证）。
+- **定性**：非阻塞性 UI 文案缺陷——功能零影响，术语纪律面违 G2①「结构词汇禁入 UI」判据。路由=CPO 术语裁决+候 FSD 随批修（L188/L358/L404 三行文本改动；本席建议面：「LG-035 面」→「过渡期标注 · 常态只读」，「本 face 卡文件现役=…」→「本卡配置文件现役=策略卡过渡位」——建议非裁决）。
+
+#### G3 走查快照敏感面复核 ✓（2026-09-29 11:0x）
+
+- a1-u1-readings.json+a1-u2-readings.json：`sk-`/`TRIMODEL_API_TOKEN=`/`Bearer ` 零命中；40+ 长串模式零命中——**证据件零明文** ✓。截图 8 张（四卡×普通/connected）本地保留不落仓（敏感面防扩散纪律）。token 值全程 len-only（64 chars withheld）。
 - **G3** 走查快照敏感面复核：快照样本抽验零明文 key。
 
 ### A6 UI 独立 revert 锚
