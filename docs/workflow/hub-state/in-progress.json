@@ -1,0 +1,20 @@
+[
+ {
+  "id": "F-3-cron-addjob-next-run-fix",
+  "treeAnchor": "23014e42",
+  "treePath": "docs/workflow/operating-records/2026-W40/trees/trimodel-config-page-4plane-p2-exec-01/（F-3 缺陷单候 FSD 批立树）",
+  "owner": "FSD",
+  "priority": "默认（录入序 1）",
+  "status": "waiting-window",
+  "note": "TriMLC store.addJob INSERT 缺 next_run_at 列→API 直插 job 永不调度；CTO 裁修形二选一候 FSD 勘+机理钉「23:23 自愈触发源勘明」列验收前置；施工窗=09-30 09-12 缺陷修批（CTO §九 维持），与同仓同 build 同重启批；BOD 分派编号 F-3（4e7901ab 前案）"
+ },
+ {
+  "id": "sg-watchlist-job-second-step",
+  "treeAnchor": "0b9e6591",
+  "treePath": "docs/workflow/operating-records/2026-W40/ledger-watchlist-daemon-upgrade-proposal-20260929.md §8.3",
+  "owner": "COS",
+  "priority": "默认（录入序 2）",
+  "status": "waiting-order",
+  "note": "sg 版判据 job：脚本同构部署 sg（正身已树内化 scripts/fade/，sg fetch 天然同步）+发信通道 sg TriMMC 现役+job 挂 sg TriMMC cron every 300s；候 BOD/COO 一窗自动接续令即施工（授权已含免再呈）"
+ }
+]
