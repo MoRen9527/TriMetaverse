@@ -363,3 +363,8 @@
   - d1915d14 docs(d15): TC bare加固两件执行读数卷——①L18 refspec去+主修落位(备份bak-20260930T0349+0800,diff单行,bash -n绿)②denyNonFastForwards=true 20/20配置+20/20值面回读；验证①修后整轮FETCH-OK=19/FAIL=1(TriCompany真分歧68fd1586⊃d841fbf5=今晨事故形态活体重演被大声拒绝,零回卷)②TriTest分叉顶模拟FETCH-FAIL拒绝→还原→FETCH-OK；告警锚=LOG逐时FETCH-FAIL行可见但--quiet吞诊断文本(候裁一词)；侧发现push腿鉴权全死20/20(09-21起)致TriCompany github待补推不自裁候BOD/CTO
   - ca6c3f44 docs(hub-state): TC bare force fetch 修复候办 tracking 化——refspec 去+主修 SDE 施工/COS 护栏复启用双轨（BOD R3 ②+CTO 裁决）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:10 +08：自上次进度提交 2973ed52 后新增 3 条 commit：
+  - e39cae63 Merge sg-bare/dev（GitHub 断连窗改自 sg bare 直 fetch 收编）
+  - 28683aeb docs(board): 发送账对表续录#59-75——force案全链17封转录(护栏令/代推复启用/双钟对齐含本席亲历5封)+全账75封合拢
+  - 9993d382 docs(d15): CTO二批四点认收录卷——①store空态入巡检=死亡前哨(三腿锚定案:FETCH-FAIL|PUSH-FAIL+wc -l==0前兆腿,自动清行行为不动)②a案重灌白天窗执行令认(链=重灌→dry-run复活读数→整轮push结9天欠账,non-FF分叉仓逐仓报)③PAT失效分支+fine-grained双仓授权清单vs MAP20仓勘点附(实证=RMC/Gateway专项dry-run看403)④PAT源两案=本机CredentialManager零上下文管道/BOD正牌,候择——录卷§九
+- registry：v2.1；今日 registry 提交无变化
