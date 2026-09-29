@@ -174,6 +174,17 @@ COO 即答=F-1 ② 先例口径（TRIMODEL_API_TOKEN 在 channel cmd 内自提�
 - **非漏出核实**：LG-036×1（L960）/LG-058×2（L64/L329）+L183/L758 注释全不渲染 ✓（grep 命中但 innerText 零命中互证）。
 - **定性**：非阻塞性 UI 文案缺陷——功能零影响，术语纪律面违 G2①「结构词汇禁入 UI」判据。路由=CPO 术语裁决+候 FSD 随批修（L188/L358/L404 三行文本改动；本席建议面：「LG-035 面」→「过渡期标注 · 常态只读」，「本 face 卡文件现役=…」→「本卡配置文件现役=策略卡过渡位」——建议非裁决）。
 
+#### G2② 命名对表+CPO 方案指定文案修正注（2026-09-29 11:2x）
+
+- **G2① 判读修正（重要）**：对表 CPO IA 方案（cpo-product-plan.md §4.1 L85/L26/L42）——方案原文**自带**「标注『LG-035 面·常态只读』」指定（L85）+「—（LG-035 面）」（L26）+「标注 LG-035 边界」（L42）——strategy 副标/title 的 `LG-035` 字样=**CPO 方案指定文案照落，非 FSD 漏出**。G2① 渲染面真实缺口**收窄为 2 词**：mmc 注记句（L358）的 `face` 裸词+`trimmc-card.json` 文件名直书（CPO 方案用词=「本机过渡位实例」，无 face/文件名直书出处）。LG-035 三处候 CPO 后续改口径与否=产品术语面，非本席缺陷断言（先前 4+1 报读以此修正注为准）。
+- **G2② 命名对表 ✓**：菜单 7 项与 CPO IA §4.1 逐项一致——①「当前生效」总览默认选中 ✓ ②四卡正名 mmc/mlc/rmc/rlc ✓ ③「TriModel 策略卡」✓ ④「连接配置」✓（U1 实测菜单枚举与卷面同源）；卡头身份行四要素（角色/面/域/机位）与 §三表格行对表 ✓（U2.2 读数：TriMMC·sg/M 面·服务域·sg 8710 等格式同构）；「卡如其名」三硬标准面（名实相符/诚实三态/能力对齐）在 U1/U2.2/U3 读数同向。
+
+#### V1 revert 锚走读 ✓（2026-09-29 11:2x，A6）
+
+- git 层锚 ✓：995c2f7 在位+ANCESTOR-OK（3e6ab37⊂995c2f7——managed additive 先落，revert UI 骨架不回退服务端面）+触面纯度 PURE（git show 实勘：六件全 test/+ui/ 零 src——回滚不伤后端）。
+- dist 层锚 ✓：dist/ui/index.html 在位（92003B=活体 3333 同源产物）；**dist.bak-pre-a6-20260929T0027 补位在**（P0 A6 教训补位文件实锤，bak-<ts> 纪律同族；bak 含 P1 末代 ui/ 全量，与现 dist/ui differ=P1→P2 代差预期）。
+- 重建路径走读 ✓：`npm run build`（tsc+scripts/copy-ui.mjs）+build:verify 在 package.json——回滚三段路径全走读：①git revert 995c2f7 ②npm run build 重建 dist ③revert+build 失效时 bak 直恢复兜底。**回滚实弹候 BOD 哨窗**（N12 注 09-30 哨窗，非作者纪律本席不实弹）。
+
 #### G3 走查快照敏感面复核 ✓（2026-09-29 11:0x）
 
 - a1-u1-readings.json+a1-u2-readings.json：`sk-`/`TRIMODEL_API_TOKEN=`/`Bearer ` 零命中；40+ 长串模式零命中——**证据件零明文** ✓。截图 8 张（四卡×普通/connected）本地保留不落仓（敏感面防扩散纪律）。token 值全程 len-only（64 chars withheld）。
