@@ -101,6 +101,7 @@
 
 - **①CLI help 显示名残留**：TriMLC/TriRLC 两仓 dist/cli.js help 头均=「TriLC (Local Controller)」，default port 文案=8711——仓改名（TriLC→TriRLC 2026-08-31）未触 CLI 文案；两仓 package.json 同名 `trilc`。命名类，候 P2 术语排查（G2②）合并裁。
 - **②同构 CLI 两面鉴权行为不一致**：8711（TriRLC）daemon 无 token 门放行 / 8713（TriMLC）daemon 启 token 门拦无凭据 CLI 通道（本席 CLI env 无 TRILC_INTERNAL_TOKEN）。CLI 侧 401 报错人话 ✓（且区分 internal_auth_disabled 与 token 不匹配两分支，src/cli.ts L780-782）。**佐证面**：BOD 哨验 04:4x 曾以带 token 通道实弹通过 8713 pull（N15 ③「8713 mlc pull 实弹 tier1-card」）——daemon 门活体正常，差异=CLI 通道凭据面非 daemon 故障。token 面属 P1 范围 5 候 M2 独立线——如实记录部署形态差，不判缺陷。
+  - **【09-29 夜勘正注】**：8711「无 token 门放行」系今晨 config 族 CLI 读数原样；今夜 cron 端点实测 8711 **无令 401（门现势开着）**，与 F-2 卷翻正口径（门一直开着）吻合——今晨读数与现势矛盾（pid 15708 未重启前提下的门态翻转机制未明），今晨读数作疑存档候 FSD/CTO 勘验，工作口径从 F-2 翻正。详=F-2 承接节勘正注。
 - **③pull 的 source 字段语义双轴疑**：8711 实跑 `config pull` 输出 `source: tier1-card` 与同行「card absent server-side; keys preserved」自相矛盾候选（同期 `config verify` 读数 `card_present: false`）。源码印证：show 渲染 `effectiveSource`（值面归因）+`lastAttribution`（末次拉取归因）两字段（L826-836），pull 渲染独立 `source` 字段（L789-790）——pull.source 疑=「本次拉取通道归因」非「生效值来源」，与 show 的值面归因同用 source 字段名=语义歧义。**同字段名双轴语义，呈 CTO 裁字段口径**；对 A2 诚实三态的影响：三命令并读方可还原完整态（通道活+空卡+缓存承载+relay 降级），单命令读数不构成「UI 态对表基座」。**→ CTO 已裁（c76a48f3，COO 07:0x 转达）：数据无矛盾，口径维持**——三字段三语义正交：source（pull）=动作归因、effectiveSource（show）=状态归因、attribution=失败码；「tier1-card 与 card absent 并存」=**模型维有源+凭据维无源的设计内形态**（实勘锚=refreshNow model-relay 分支 key-cache.ts L360-373 注释明写 card absent 非故障）。本席 A2 入场口径遵裁：按「模型维/凭据维两轴+动作/状态归因分离」对表，card absent 行=诚实三态「部分可用」正确呈现（非降级故障态）；字段禁改名（消费方已对表；易混点记档候 M3 文档面）。
 - **④cache show 无独立降级梯视图**：`case 'show': case 'cache':` 归并实现（src/cli.ts L490-491 同构三仓）——`config cache show`=config show 别名，梯语义仅靠 show 输出的 cache 行（fresh/stale-grace(tier2.5)/expired）+source 字段承载；§5.2 矩阵行 5「降级梯检视=cache show」宣称与实装差距（四面三态链 card→last-known-good→local direct 无专门检视视图）。呈 CTO 裁：采认别名语义（矩阵行 5 改注）或增补梯视图（P2+）。**→ CTO 已裁（同卷 c76a48f3）：差异面标注归档=非阻塞缺口**（show 的 fresh/staleGrace/effectiveSource 已承载「当前梯位」要素）；A3 合卷第 5 行加注（与⑤补行一并归 STE 合卷时执行）；三仓 ladder 对齐列入候修清单，不排 P2 窗。
 - **⑤CLI 独有命令在矩阵无行**：`config cache clear`（DELETE cache，写面）+`model` 族（§5.1 现役保留）在 §5.2 矩阵 6 功能项无对应行——差异面另一方向（CLI 多出能力）。本席未实跑 cache clear（写面零触碰）；矩阵终对表时增补「CLI 独有」差异行候 CPO IA 对表。**→ 合卷补行任务归 STE（CTO 裁②随附），候 sg 锚+网页侧点验齐后合卷时执行**。
@@ -182,6 +183,14 @@ COO 即答=F-1 ② 先例口径（TRIMODEL_API_TOKEN 在 channel cmd 内自提�
 #### G2① CPO 补裁 v2 接收注（placeholder 属性面，cf574b6e 落树，COO 12:1x 转达；N23 录卷）
 
 - ①env 键名（两输入框 placeholder 的 TRIMODEL_API_TOKEN/TRIMODEL_ADMIN_TOKEN）**入禁词域裁删**——本席「管理员引导价值」主张经 CPO 实勘不成立（两框系页头连接设置 S1 客户端令牌值输入位，label 人话+guide 行已足；真配 env 键者在服务器配 env 文件不经此页；键名直书反有「误把键名当值填」误导风险）——主张取舍如实记档。②本席「API 令牌」人话 placeholder 替代建议**不采**（label 旁立纯冗余），裁删 placeholder 属性（缺省空，password 框常态）。③件D 定形=五行（三行文案+两行属性删），零重启不扩窗。④**本席回归判据升级：件D 修后 v3 复扫渲染面+属性面零命中（含此两处 placeholder 位）**——v3 工具面（a1-g2-terminology-scan-v3.mjs 属性面 title/aria-label/placeholder 全 DOM 遍历）CPO 已认（属性面盲区照出=既有规则适用非新立），v3 升级正名。
+
+#### F-2 承接：cron list 独立复验+8711 门态勘正注（2026-09-29 23:0x，date 现查 UTC 15:05Z；COO F-2 完工转达承接）
+
+- **F-2 读数卷对表（283cec74）**：FSD「带令 200 4 job」=**8713 面**（`trimlc cron list`：trimodel-l2-scan/l3-remind/plane-shift-local-align/tree-node-patrol）——本席 8713 带令 200 ✓ 复现（CLI+HTTP 直打双法同谱）；**现势 5 jobs**（新增 ledger-watchlist-patrol every=300s enabled，F-2 时点后有人加挂，时点漂移注记非矛盾）。
+- **8711 面复现受阻=键值分叉实锤（候 FSD 对键，值面未掘）**：本席无令 401 ✓（8711 门现势开着，与 F-2 翻正口径吻合）；带令（channel cmd `trimlc-daemon-channel.cmd` 提取 len=64）→ **8711 401 / 8713 200 同 TOK 二分**（CLI+HTTP 双法一致）——channel cmd 系 **TriMLC launcher**，其值=8713 在役值，对 8711 无效。8711 提取源排查：`trirlc-daemon.cmd`（watchdog 权威复活 launcher）**无 TRILC_INTERNAL_TOKEN 键**、`TRILC_ENV_FILE=D:\Code\ai\.env` 现内容亦无此键；源码钉死在役值=daemon 进程 env（server/app.ts L1800）→ **8711（pid 15708）在役 token 无现势落盘真源可提取**。
+- **门态历史矛盾（候 FSD/CTO 勘验，本席不裁）**：今晨 CLI config 族无凭据打 8711 放行（下条②原样）vs 今夜 cron 端点无令 401——pid 15708 未重启前提下门态翻转的机制未明（进程 env 每请求动态读+热载候选？）；现势工作口径从 F-2 翻正（门一直开着），今晨读数作疑存档待勘。
+- **次生风险发现（候 FSD 确认）**：watchdog 复活链 token 供给缺位——trirlc-daemon.cmd（env-faithful 权威 launcher）无 token 键+.env 无键 → **8711 daemon 若崩溃被 watchdog 拉起，新进程 env 无 TRILC_INTERNAL_TOKEN → 门态改变（fail-closed 全拒或 disabled）**；F-2 卷「FSD shell env token 带令 200」的提取源请 FSD 补记（值 withheld），即 8711 在役 token 现势真源位。
+- **8711 cron jobs 面**：F-2 卷带令读数=「No cron jobs.」（TriRLC 无 job 在册）——本席带令腿受阻未独立复现，如实标注候对键后补验。
 
 #### V1 revert 锚走读 ✓（2026-09-29 11:2x，A6）
 
