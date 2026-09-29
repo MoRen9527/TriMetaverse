@@ -341,3 +341,6 @@
   - 729108a7 Merge remote sg-server/dev
   - 5c773ef6 docs(scripts-fade): watchlist-patrol 单文件双面平台自适应(D-15 第二步施工)——win32=本机 8713 现役行为零变化/linux=sg 8710:REPO 平台判+notify loopback 8710+token 文件直读+第二状态机落 .fade/(gitignore 非 git 防脏 fetch 链,树内真源 sg 面只读);头部上线现势更新;本机活体跑 PASS(exit=0 platform=win32)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:30 +08：自上次进度提交 457f72c0 后新增 1 条 commit：
+  - b9c745e9 docs(hub-state): FADE-010 在办账·sg-watchlist-job-second-step 转 done-waiting-cutover-check——施工毕(即做提前于18-24窗):job e7a37e66 挂载201零重启+force run ok 63ms+定时首轮0325 ok 68ms;销账候BOD首周灰度抽验(明早9-12哨窗);回滚=PATCH enabled=0
+- registry：v2.1；今日 registry 提交无变化
