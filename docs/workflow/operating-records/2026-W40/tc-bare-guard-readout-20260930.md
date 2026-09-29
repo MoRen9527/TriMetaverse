@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（CTO D-15 施工令：refspec 去 `+` 主修+bare 仓级 denyNonFastForwards 纵深）
 - syncMode: source-only
-- lastSyncedAt: 2026-09-30T03:56+0800（date 现查；施工窗 03:44-03:55 sg 面）
+- lastSyncedAt: 2026-09-30T04:02+0800（date 现查；施工窗 03:44-03:55+CTO 验收批执行 03:56-04:00 sg 面）
 - 令链: CTO 03:42 派工令（根因实锤=fleet crontab bare-fetch-all.sh L18 `+`refspec force fetch=今晨 03:30:06 回卷根因）→本席接令即窗（令面"今天内完成优先，窗自排"）
 - 边界: sg 面操作全程留痕（备份+LOG+本卷）；不动其他 job/行；键值 ghp_ 掩码
 
@@ -51,6 +51,18 @@
 - 件1：`cp -p bare-fetch-all.sh.bak-20260930T0349+0800 bare-fetch-all.sh`（fleet 身份）即回 force-fetch 旧形
 - 件2：逐仓 `git config --unset receive.denyNonFastForwards`（20 仓）即回
 - 三次手动整轮=与逐时 cadence 同构零额外扰动；TriTest 分叉顶已还原原顶
+
+## 八、CTO 验收批执行（03:56-04:00，APPROVE 后三裁落地）
+
+- **验收 ✓**：CTO 03:54:43 APPROVE；验收记录一笔=验证①抓到 TriCompany 真分歧=护栏实战首现建功（大声拒绝非静默回卷，修的正是这个）
+- **批① --quiet 去除 ✓**（CTO 裁"批"）：增量备份 `bare-fetch-all.sh.bak2-20260930T0357+0800`（1187B）→L18 `fetch --quiet`→`fetch`→bash -n 绿→修后整轮 **20/20 FETCH-OK 零新 FAIL**（诊断文本通道开：rejected 时将带 `! [rejected] ... (non-fast-forward)` 全文，无 quiet 形态 103B 实证在 §六.a）
+- **批② b 案闭环 ✓**（CTO 自执行）：CTO 03:54 push 补推，GitHub d841fbf5→68fd1586——三层同顶 68fd1586 实测复核（本席修后整轮 TriCompany FETCH-OK 佐证）——分歧消，推手归属不考
+- **批③ a 案勘点供料 ✓**（白天窗修，勘点结果**推翻 cron-env 假设**）：
+  - system 级无 credential 配置；fleet 全局级 `~/.gitconfig` credential.helper=store **在位**
+  - `su - fleet`（HOME 正形重置）交互 shell push dry-run **同样死**（同 `could not read Username`）——**cron 环境 vs shell 环境无差**
+  - **根因=store 文件空**：`~/.git-credentials` 存在但 **0 行、github.com 条目 0**——memory 在册先例「认证失败自动清 store 行」正中（09-20 配成后某次失败清空→09-21 push 段上线即死至今）
+  - **修法供料**：重灌 PAT 行即愈（持币人=BOD 侧，2026-12-19 到期的 fine-grained PAT 若仍有效）；修后验证=任一仓 push dry-run OK 读数；加固建议候裁=store 空态入巡检（防再静默 9 天）
+- **批④ 巡检锚两腿 ✓**（录案）：grep 模式定为 `grep -E "FETCH-FAIL|PUSH-FAIL" /home/fleet/bare-fetch-all.log`（查增量段）——push 死 9 天无告警根=fetch-OK 掩盖 push-FAIL（与 8460 流量画像同构的静默失效家族第三案），两腿分别盯
 
 ## 使用依据
 
