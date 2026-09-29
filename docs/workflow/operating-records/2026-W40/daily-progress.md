@@ -261,3 +261,11 @@
   - 6bf7a596 docs(lg-058): P2门审卷§五勘误补注(STE N13)——managed新端点真链路零覆盖实勘证实(四真链路族grep零命中/E1-E8覆盖=trimmc-card族/ui-fourplane④=L72 mock fetch),LG-035第三击字面形态；R3判定自纠=当时未做新端点覆盖面grep核对,漏洞如实记档,STE第三刀互检生效；裁定②为准(FSD补自动化案=正式达标,STE人工活体仅临时缓解不替代)+件C并入CONDITIONAL PASS条件族(循e2e.gate骨架两案:有令牌真链路+错token诚实态,估1-1.5h纯测试面零重启)；条件族两项:e12修案+件C
   - fff9aae3 docs(lg-058): STE A1第一段独立手测落树——U1选项卡矩阵PASS(菜单7项/四卡单面板/12往返对零残影/active一致/console零错/face语义零串卡:四卡副标拉取源特有面各异且语义正)+U3特有面走读PASS(mlc模板实按钮/rmc cron+域锚A4语义入UI/mmc 8460代理+LG-035过渡位注/rlc寄居过渡;候建区诚实非假按钮;降级梯语义入UI;CLI对照行=A3 UI侧基座)+U2第一段(守卫人话/S3首启链源码在位/faceBadge诚实三态源码注释/S6人话映射;admin通道候件:无凭据探测401=写面启用实锤,managed视图全需admin令牌)+G1第一轮324/309/0fail/15skip零漂移独立复现(4min09s);截图掩码面核过
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 1c6ad841 后新增 6 条 commit：
+  - a319df31 Merge remote-tracking branch 'sg-server/dev' into dev
+  - cf574b6e docs(lg-058): CPO G2补裁v2落树(属性面两命中)——裁①env键名入禁词域非新立(v2 12模式本含环境变量名,属性面盲区照出即既有规则适用);实勘TriModel L84-93后裁:两框系页头连接设置S1客户端令牌值输入位,label人话+guide行已足,STE管理员引导价值经勘不成立(真正配env键者在服务器配env文件不经此页),placeholder键名直书反有误把键名当值填风险;对STE建议取舍:不采人话placeholder(label旁立纯冗余)裁删placeholder属性零新增帮助行(无配置语境白名单需求不预设机制);裁②扩展入件D合计五行三行文案+两行属性删,零重启不扩窗,回归判据升级渲染面+属性面零命中
+  - 21fe08d6 docs(lg-058): 门审卷§六件A双修裁定(teardown hang)——STE二轮10挂逐位吻合+归因闭环最强实证(挂案集==真浏览器UI路径集∩过案集==非UI路径集)认收；裁定=件A扩selector+teardown双修(只修selector全量仍会被任一案偶发fail拖死,兜底跑可用性破坏),条件族判据本体不变,加验收读数可达性前提一条(修后全量带env须正常收束零hang,clean定性读数前提)；技术锚=close套Promise.race超时+超时强杀子进程树(taskkill /T)+after钩子try/catch,半小时级
+  - 6b5cd569 docs(lg-058): STE G1二轮终读段落卷——10挂独立复现逐位吻合CTO定性+归因闭环最强实证(挂案集=UI路径集合重合,过案集=非UI路径重合)+E10 teardown hang次生发现(件A修案候覆盖双修)+无env段零新增挂
+  - e78cacc4 docs(lg-058): STE N20——G1带env二轮终读数:10挂独立复现与CTO定性逐位吻合(e9=1 #tc-conn resolved-but-not-visible连接页v2改版/e10=1同形态/e12=8策略卡入panel-strategy未切视图)+归因闭环最强实证(挂案集与真浏览器UI路径集合完全重合,过案集C6jsdom+C10b API直打与非UI路径完全重合,结构漂移非产品缺陷定性成立)+次生新发现E10失败后teardown hang拖死runner(两轮双复现,件A修案候覆盖面)+无env段案1-69连绿零新增挂
+  - b8cd4436 docs(lg-058): STE N19——G2扫描v3升级毕(CPO裁hover计入禁词域,加属性面title/aria-label/placeholder遍历)+件D修前基线(渲染面同v2/属性面新域3命中:placeholder环境变量名×2候CPO补裁+title LG-035×1)+G2③折叠形态活体定谳✓(顶部细条0/4=CPO§4.2情形1正确执行,差异点解除)+二轮enev障读数(后台收割定性,零活体污染,nohup隔离重跑)
+- registry：v2.1；今日 registry 提交无变化
