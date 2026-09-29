@@ -9,13 +9,13 @@
   "note": "TriMLC store.addJob INSERT 缺 next_run_at 列→API 直插 job 永不调度；CTO 裁修形二选一候 FSD 勘+机理钉「23:23 自愈触发源勘明」列验收前置；施工窗=09-30 09-12 缺陷修批（CTO §九 维持），与同仓同 build 同重启批；BOD 分派编号 F-3（4e7901ab 前案）"
  },
  {
-  "id": "sg-watchlist-job-second-step",
-  "treeAnchor": "0b9e6591",
-  "treePath": "docs/workflow/operating-records/2026-W40/ledger-watchlist-daemon-upgrade-proposal-20260929.md §8.3",
-  "owner": "COS",
+  "id": "sg-8460-probe-job",
+  "treeAnchor": "pending-construction",
+  "treePath": "D-15 8460 探测条目（CTO 2026-09-30 05:0x 实施令·消息面；施工卷候今夜 18-24 窗落树补锚）",
+  "owner": "COS（守望体系 owner，CTO D-15 派工）",
   "priority": "默认（录入序 2）",
-  "status": "done-waiting-cutover-check",
-  "note": "施工毕（2026-09-30 03:2x，CEO 03:11 判据令分支一「即做」提前于 18-24 窗）：sg TriMMC 8710 无白名单机制即生效型（十文件零命中+tick 即时调度四读数），job e7a37e66（*/5 Asia/Shanghai）挂载 201 零重启，force run ok 63ms+定时首轮 03:25:00.001 ok 68ms，正身单文件双面 729108a72；销账候 BOD 首周灰度抽验（明早 9-12 哨窗随 A6）；回滚=PATCH enabled=0"
+  "status": "waiting-window",
+  "note": "CEO 04:57 批①实施：8460 缓解位在位性探测——执行位=sg TriMMC 8710 job 21600s（4 轮/日，即生效型零重启零 allowlist）；双锚只读=①8460 进程在位性（systemd/ss）②proxy.log 日行数<2 告警（9-25 起低活基线 4-5 行，2=下破线候 7 日校准）；告警通道=LG-036 信箱双跳（含双锚读数+分诊指针）；异常触发→值席照 2a9b5e94 SOP 实测定谳（探测只报不定谳，低行数≠故障盲区）；回滚=enabled=0 PATCH 即停；与 D-37 条勿混（本条=8460 模型通道在位性，D-37=席位静默语义）；施工窗=今夜 18-24"
  },
  {
   "id": "tc-bare-force-fetch-fix-tracking",
