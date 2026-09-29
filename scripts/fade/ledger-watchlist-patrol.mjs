@@ -6,15 +6,24 @@
 //   ①锚核查失败须出声——rev-parse 验证+malformed error,禁静默 skip(防 is-ancestor 恒 false 盲区无声回归)
 //   ②发信失败不置 notified——保 waiting 重试+失败计数(防假通知)
 //   ③解析失败不崩 job——error 出声后正常退出
-// 上线: allowlist 追加+job INSERT 与 F-2 修复窗并批(候 COO 下午方案卷定窗);本文件=备料,非上线态。
+// 上线现势(2026-09-30): 本机双面已运行(win32 分支=TriMLC 8713 job cron_mumsuxup_pu0y 300s,正身树内化
+// 5897a9e7,job command 候晚间批切 scripts/fade/ 路径);sg 面=TriMMC 8710 job 每 300s(D-15 第二步,
+// 即生效型挂载即跑——TriMMC cron 面无白名单机制 2026-09-30 实勘:src+dist 十件零命中,addJob 写 store
+// 后 executor.tick() 即时入调度零重启)。
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
-const REPO = 'D:/Code/ai/TriMetaverse';
+// 平台自适应（D-15 sg 守望第二步 2026-09-30：单文件双面，免变体分叉）
+//   win32=本机 M 面（TriMLC 8713 daemon spawn）；linux=sg M-SG 面（TriMMC 8710 daemon spawn）。
+const IS_WIN = process.platform === 'win32';
+const REPO = IS_WIN ? 'D:/Code/ai/TriMetaverse' : '/srv/fleet/TriMetaverse';
 // 真源=树内固定跨周路径（CTO 守望锚① 2026-09-29 CEO 终批：勿放周目录防翻周迁移复杂度）；
 // .fade/hub-snapshots/watchlist.json 已迁入树内并撤销（2026-09-29 真源迁移笔）。
 const WATCHLIST = path.join(REPO, 'docs/workflow/hub-state/watchlist.json');
+// sg 面第二状态机（仅 linux）：notified/failCount 落 .fade/（gitignore 非 git 面）——
+// 树内 watchlist.json 在 sg 面只读（防 sg 工作树脏卡 fetch 链；notified 归本机 COS 录账推锚经 fetch 同步收敛）。
+const SG_STATE = path.join(REPO, '.fade/sg-watchlist-state.json');
 const SEAT_TARGET = 'bod'; // BOD 信箱面(TriMMC 名册目标=bod,勘正 2026-09-29:初版误写 board 三轮 400 unknown_target_seat;toast/信箱=兜底网;pipe 主道=COS 半自动,两道网并存)
 
 function err(msg) { console.error(`[watchlist-patrol][ERROR] ${new Date().toISOString()} ${msg}`); }
@@ -30,14 +39,30 @@ try {
   process.exit(0);
 }
 
+// sg 面第二状态机合入(linux):本地已 notified 的 waiting 项内存态跳过(树内 notified 经 COS 推锚+fetch 收敛)
+let sgState = {};
+if (!IS_WIN) {
+  try { sgState = JSON.parse(fs.readFileSync(SG_STATE, 'utf8')) ?? {}; if (typeof sgState !== 'object') sgState = {}; }
+  catch { sgState = {}; }
+  for (const it of items) {
+    const s = it && sgState[it.id];
+    if (s && s.notifiedAt && it.status === 'waiting') { it.status = 'notified'; it.notifiedAt = s.notifiedAt; }
+  }
+}
+
 function gitOk(args) {
   try { execFileSync('git', args, { cwd: REPO, stdio: 'pipe' }); return true; } catch { return false; }
 }
 
 async function notify(title, body) {
-  const url = process.env.TRIMC_NOTIFY_SG_URL;
-  const token = process.env.TRIMC_NOTIFY_SG_TOKEN;
-  if (!url || !token) return { ok: false, detail: 'notify skip: env missing' };
+  // 通道自适应：本机=daemon spawn env（TRIMC_NOTIFY_SG_URL/TOKEN）；sg=loopback 8710+token 文件直读
+  // （sg job 不带 runAs 以 trimc 主进程身份跑，/etc/trimc-internal-token root 限读可直读——2026-09-30 实勘）。
+  const url = process.env.TRIMC_NOTIFY_SG_URL ?? (IS_WIN ? undefined : 'http://127.0.0.1:8710');
+  let token = process.env.TRIMC_NOTIFY_SG_TOKEN;
+  if (!token && !IS_WIN) {
+    try { token = fs.readFileSync('/etc/trimc-internal-token', 'utf8').trim(); } catch { /* 出声在调用侧 skip detail */ }
+  }
+  if (!url || !token) return { ok: false, detail: 'notify skip: env/token missing' };
   try {
     const res = await fetch(`${url}/internal/v1/notify`, {
       method: 'POST',
@@ -93,10 +118,26 @@ for (const it of items) {
   }
 }
 
-// ── 原子写回(tmp+rename) ──
-if (changed.length > 0 || items.some((x) => x && x.failCount)) {
-  const tmp = WATCHLIST + '.tmp';
-  fs.writeFileSync(tmp, JSON.stringify(items, null, 1) + '\n');
-  fs.renameSync(tmp, WATCHLIST);
+// ── 原子写回(tmp+rename)：本机=树内真源（COS 录账推锚）；sg=.fade/ 本地状态（树内只读防脏 fetch 链） ──
+if (IS_WIN) {
+  if (changed.length > 0 || items.some((x) => x && x.failCount)) {
+    const tmp = WATCHLIST + '.tmp';
+    fs.writeFileSync(tmp, JSON.stringify(items, null, 1) + '\n');
+    fs.renameSync(tmp, WATCHLIST);
+  }
+} else {
+  let dirty = false;
+  for (const it of items) {
+    if (it && (it.status === 'notified' || it.failCount)) {
+      sgState[it.id] = { notifiedAt: it.notifiedAt ?? null, failCount: it.failCount ?? 0 };
+      dirty = true;
+    }
+  }
+  if (dirty) {
+    fs.mkdirSync(path.dirname(SG_STATE), { recursive: true });
+    const tmp = SG_STATE + '.tmp';
+    fs.writeFileSync(tmp, JSON.stringify(sgState, null, 1) + '\n');
+    fs.renameSync(tmp, SG_STATE);
+  }
 }
-console.log(`watchlist done: waiting-scan=${items.filter((x) => x && x.status === 'waiting').length} notified=${hit} bad-anchor=${skipBad}`);
+console.log(`watchlist done: platform=${IS_WIN ? 'win32' : 'linux'} waiting-scan=${items.filter((x) => x && x.status === 'waiting').length} notified=${hit} bad-anchor=${skipBad}`);
