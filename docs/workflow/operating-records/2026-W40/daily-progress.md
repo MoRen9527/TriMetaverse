@@ -375,3 +375,7 @@
   - d5d76413 docs(w40): CTO验收卷——FSD缺陷修批四件全APPROVE（F-3自愈机理闭合+ENV_FILE三件套+复活实弹一次过17s）+三项候裁词=TriRLC维护批四件打包候COO排窗
   - 5d90738b docs(w40): FSD D-15缺陷修批四件读数——F-2复核三点全过/F-3机理勘明+0fd9c6f修复+活体验证/8711 ENV_FILE正形三件套/件4复活实弹一次过(04:01:20翻绿);镜像同漏等六项候裁如实标记
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:30 +08：自上次进度提交 360eff84 后新增 2 条 commit：
+  - ddd2f9a1 Merge sg-bare/dev（daily-progress-watcher 360eff84 零交叠）
+  - 2bf1553e docs(w40): BOD R2案定谳收口——CTO裁approve同值touch机理核实成立+认知盲区定性非隐瞒+纪律候选入册(helper=store写回面+root忘降身语境漂移并入)+甲路冻结维持(gho_来历独立成立)+新发路批件加速候CEO批
+- registry：v2.1；今日 registry 提交无变化
