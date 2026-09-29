@@ -356,3 +356,10 @@
   - 8e370090 docs(lg058-p2): STE N33——BOD 点 9-12 UI 走查辅位接令(硬门三件口径+用例面两源定位+快照敏感面防复踩)+CTO 8460 汇裁回执(终裁照准/勘项入册候维护窗/修后探针复测约束认领),8460 案本席侧闭环
   - 3e660f05 docs(w40): CTO 汇裁 8460 实测——漂移假设推翻/断崖重定性流量画像/两遗留处置（探测条目候 CEO+duty-env 序勘项候窗）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:00 +08：自上次进度提交 5b3f3ecd 后新增 5 条 commit：
+  - 99519460 docs(hub-state): TC bare 加固 tracking 条更新——SDE 施工毕+COS 对表验收毕+双钟对齐，对表闭条件=a 案施工读数+quiet 补做毕（CTO ②口径）
+  - cc3498e5 docs(d15): CTO验收APPROVE批三裁落地录卷——批①--quiet去除(bak2-20260930T0357+0800,修后整轮20/20 FETCH-OK,诊断文本通道开)；批②b案CTO补推闭环三层同顶68fd1586；批③a案勘点推翻cron-env假设=store文件0行被清空(memory「认证失败自动清store行」先例正中),修法=重灌PAT行候白天窗持币人；批④巡检锚两腿FETCH-FAIL+PUSH-FAIL录案(静默失效家族第三案)
+  - aa62a605 Merge origin/dev（并行线收编）
+  - d1915d14 docs(d15): TC bare加固两件执行读数卷——①L18 refspec去+主修落位(备份bak-20260930T0349+0800,diff单行,bash -n绿)②denyNonFastForwards=true 20/20配置+20/20值面回读；验证①修后整轮FETCH-OK=19/FAIL=1(TriCompany真分歧68fd1586⊃d841fbf5=今晨事故形态活体重演被大声拒绝,零回卷)②TriTest分叉顶模拟FETCH-FAIL拒绝→还原→FETCH-OK；告警锚=LOG逐时FETCH-FAIL行可见但--quiet吞诊断文本(候裁一词)；侧发现push腿鉴权全死20/20(09-21起)致TriCompany github待补推不自裁候BOD/CTO
+  - ca6c3f44 docs(hub-state): TC bare force fetch 修复候办 tracking 化——refspec 去+主修 SDE 施工/COS 护栏复启用双轨（BOD R3 ②+CTO 裁决）
+- registry：v2.1；今日 registry 提交无变化
