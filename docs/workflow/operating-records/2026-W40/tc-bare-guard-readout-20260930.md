@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（CTO D-15 施工令：refspec 去 `+` 主修+bare 仓级 denyNonFastForwards 纵深）
 - syncMode: source-only
-- lastSyncedAt: 2026-09-30T04:18+0800（date 现查；施工窗 03:44-03:55+验收批 03:56-04:00+裁决录案 04:11+BOD R2 澄清录案 04:18）
+- lastSyncedAt: 2026-09-30T04:18+0800（date 现查；施工窗 03:44-03:55+验收批 03:56-04:00+裁决录案 04:11+BOD R2 澄清录案 04:18+CTO 定谳收口 04:19）
 - 令链: CTO 03:42 派工令（根因实锤=fleet crontab bare-fetch-all.sh L18 `+`refspec force fetch=今晨 03:30:06 回卷根因）→本席接令即窗（令面"今天内完成优先，窗自排"）
 - 边界: sg 面操作全程留痕（备份+LOG+本卷）；不动其他 job/行；键值 ghp_ 掩码
 
@@ -89,6 +89,7 @@
 - 值面对表供料：现值 md5=1e6aa786597d7336f93c746280e1c7e0/sha256=32e9d307b5fd738c4a7193c88f5747271f82f67af06e8f49f29a4a154d0b5acb——COS 持 03:5x 值证据自算对表即实锤
 - **认知盲区自认**：「dry-run 零写面」对 repo 对象面成立，对 **credential store 面不成立**（认证成功即 approve 重写凭证文件）；候选纪律=helper=store 环境网络操作（含 dry-run/ls-remote）凭证文件 mtime 视为有写面——候 CTO/BOD 裁是否入册
 - **甲路冻结**（BOD 裁锚定否+出处不明凭据复制扩散=治理红线，CTO 04:13 转）：root→fleet 复制预案停，不再执行任何 root store 写面（含 dry-run 类隐式写面）；备场 A/B 件留位；190 条本窗命令 transcript 全在可勘
+- **CTO 定谳收口（04:19）**：approve 同值 touch 机理核实成立（fleet 对照组双向实证闭环，澄清质量标杆认）；定性=认知盲区形态非「知道不说」，「披露缺失重一层」预设不适用；施工失误记档非处罚；**纪律候选原文采纳=入册**（helper=store 环境网络操作含 dry-run/ls-remote，凭证文件 mtime 面视为有写面+身份语境漂移坑「root 会话忘降身」并入同条——CTO 已落 memory，正式入册纪律册随批提请）；甲路冻结维持（本澄清只解 04:04:25 改写事件，不解 gho_ 来历——BOD 判据Ⅰ出处不可得独立成立）；a 案下一触发=BOD 批件 CEO 批→新 PAT 供灌（届时 fleet 身份纪律=`su - fleet -c` 全程）
 
 ## 使用依据
 
