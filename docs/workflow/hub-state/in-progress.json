@@ -14,7 +14,7 @@
   "treePath": "docs/workflow/operating-records/2026-W40/ledger-watchlist-daemon-upgrade-proposal-20260929.md §8.3",
   "owner": "COS",
   "priority": "默认（录入序 2）",
-  "status": "waiting-order",
-  "note": "sg 版判据 job：脚本同构部署 sg（正身已树内化 scripts/fade/，sg fetch 天然同步）+发信通道 sg TriMMC 现役+job 挂 sg TriMMC cron every 300s；候 BOD/COO 一窗自动接续令即施工（授权已含免再呈）"
+  "status": "waiting-window",
+  "note": "D-15 派工令已接（CTO 2026-09-30 02:47）：sg TriMMC 8710 新 watchlist 同构 job every 300s，窗=09-30 18:00-24:00 与 FSD 静默探测批并行；判据=树内 watchlist.json+is-ancestor（sg-bare fetch 后判）+三钉必装；发信=sg 8710 直投 bod；去重=共享树内状态机天然单发；回滚 enabled=0；读数回 CTO+BOD"
  }
 ]
