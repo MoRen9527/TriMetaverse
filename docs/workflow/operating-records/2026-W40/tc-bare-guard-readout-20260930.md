@@ -64,6 +64,14 @@
   - **修法供料**：重灌 PAT 行即愈（持币人=BOD 侧，2026-12-19 到期的 fine-grained PAT 若仍有效）；修后验证=任一仓 push dry-run OK 读数；加固建议候裁=store 空态入巡检（防再静默 9 天）
 - **批④ 巡检锚两腿 ✓**（录案）：grep 模式定为 `grep -E "FETCH-FAIL|PUSH-FAIL" /home/fleet/bare-fetch-all.log`（查增量段）——push 死 9 天无告警根=fetch-OK 掩盖 push-FAIL（与 8460 流量画像同构的静默失效家族第三案），两腿分别盯
 
+## 九、CTO 二批四点（04:00 认收录案）
+
+1. **store 空态入巡检=批（死亡前哨）**：三腿锚定案=`grep -E "FETCH-FAIL|PUSH-FAIL"`（LOG 增量段）+`wc -l ~/.git-credentials==0` 告警（前兆腿，早于 PUSH-FAIL 出声）；「认证失败自动清 store 行」行为本身不动（防撞墙语义保留），清空即不再静默
+2. **a 案重灌=白天窗执行令认**：链=重灌 PAT 行→任一仓 dry-run OK=通道复活→**跑一轮 push 段结 9 天欠账**（各仓 bare⊃github 分歧可能不止 TC 一仓；non-FF 拒=分叉仓逐仓对平报）——本席候排执行
+3. **PAT 失效分支**：dry-run 仍死即报 CTO+BOD 走新发 PAT 流程；**勘点附**=fine-grained 双仓 RW 授权清单 vs MAP 20 仓（TriRMC/TriGateway 后扩两仓若不在原清单，重灌旧 PAT 仍 403）——实证法=重灌后对此两仓专项 dry-run 看 403/OK
+4. **PAT 源两案**（本席 04:0x 只读勘）：A=本机 Credential Manager 持 github.com 条目（值零出，零上下文管道直灌 sg store 可行，出处归属未验）；B=BOD 供正牌 fleet PAT（出处最净）——候 CTO/BOD 择一，BOD 供则白天窗随到随灌
+5. 根因闭环记录：随 §12.4 供料机制化（CTO 记）
+
 ## 使用依据
 
 - 令文：CTO D-15 派工令 03:42（验证两步禁盲改+纪律三条+告警锚要求）
