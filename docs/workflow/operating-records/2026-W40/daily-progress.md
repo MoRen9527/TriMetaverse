@@ -314,3 +314,11 @@
   - 92116d14 docs(cho-workbench): 发布管线真链路图谱实勘笔记——四段链(employee_host_publish 学习腿/.Binding 腿+source_publish_check 三宿主发布腿+sync 兜底)+compass 落点勘正+发布面滞后无告警发现+路径正名 ENOTDIR 实勘(D-23 落点一施工沉淀,CHO 渲染窗域知识)
   - aa217f3a docs(w40): CTO裁定卷§八——在办账载体schema定谳(COO两确认闭合,FADE-010前置解除):hub-state/in-progress.json与watchlist同目录族;schema={id,树指针,承办席,优先序,状态};优先序双层=录入时序默认+COO显式覆写,权威链照CPO §7.2,不设定期重排仪式(缺席日时序自转);写边界三权分立(COS维护+销账/值席自条目/COO覆写);FADE-010三件窗定10-01 0:00-9:00主选18-24后备
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:40 +08：自上次进度提交 6841548e 后新增 6 条 commit：
+  - a09ed4a6 docs(w40): R 表补档续录毕——BOD 发送账增量 #34-#46 共 13 封对表入表(0fe791bf/4e7901ab/847e81e4 三 commit 逐笔),全账 46 封=例外补档 38+R6 轻留痕 6+走链 1+宪章随附 1;#41/#46 本席亲历件收发吻合
+  - 7d1b011f Merge remote-tracking branch 'sg-server/dev' into dev
+  - fa1fe0c0 docs(lg-058): STE N30——件D复验PASS(夜验链v3段):v3复扫渲染面+属性面全零达标(修前render4+attr3→修后全零)+MENU_MODE零漂移+输入框抽验(placeholder删/password常态/框在/conn-save在)+分层判断不跑全量避件A半截态
+  - 4a911805 docs(w40): 铸单草案§二②措辞修订——BOD走查候选项采纳(02:4x):「不做判断、不追真源」系Board合同定位语,本环节折算取边界义(不做方向级实质判断,裁决归CEO批),完善所需事实核查照真源核查纪律执行;注①留痕随COS会签终定
+  - bdf1004b docs(w40): 铸单主流程图制度件草案(CAO主笔,候COS会签→BOD呈CEO)——CEO 23:47点名流程六环节折算三方正身(分权制+树协议D-27 v2-v9+FADE-010);主流程mermaid一图收口(实线主链+虚线反向催回环腿);⑥反向催BOD专款(触发=D-34 24h软阈值/COS催/激活位=FADE-010②/人工先行机器后补/向上催与BOD不催办不冲突);不新立法声明+R表正交+值守节咬合
+  - 6c61115f docs(w40): CTO裁定卷§九——D-23 SOP核对记录(CEO 23:59 R3令,触发e8972b2+fffdc93正身实勘毕):六窗逐核对——缺陷修批9-12平价款吻合维持(已派无改派)/静默探测批下午窗14-18禁排区硬对照命中实锤重排18:00-24:00最优子段(分派未发零沉没)/FADE-010双候选均最优子段维持/脚本树内化轻量维持/P2三件在跑不受影响/8460实测正常工时款。D-27 v10字段填法对表(会签两注已吸收)
+- registry：v2.1；今日 registry 提交无变化
