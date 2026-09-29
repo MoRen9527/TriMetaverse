@@ -247,3 +247,8 @@
   - 9dd0ef49 docs(W40): 判据型daemon级升级提案卷落卷(COS→CTO裁)——判据对象=watchlist.json结构化清单(不扫mirror正文,键值面教训)+触发条件=树锚is-ancestor核查+两形态利弊对照(A patrol扩展故障面耦合/B独立job零代码回滚,本席荐B)+发信通道对接(TRIMC_NOTIFY_TARGET_SEAT=bod已配,pipe面缺口如实候注BOD确认)+回滚面汇总+CTO四裁点
   - dcbaa3b4 docs(lg-058): P2门审卷CONDITIONAL PASS+F-2 cron漏鉴权头裁卷——五审点①②③④过+⑤全量324独立复现对表吻合(309/15/0)；带env复跑新发现e9/e10/e12共10挂=旧案结构漂移非产品缺陷(P2导航层/策略参照层隐藏改版,旧案selector未随版,功能面P2代案+API直打全绿三面覆盖),e12真reload持久覆盖缺口实存挂候修(FSD修案不降级主张+CEO终验删除复活预演自证),不阻骨架门；A6 git层ANCESTOR-OK六件纯test/ui面回滚实弹候BOD哨窗；F-2准修一行级cronRequest补x-internal-token与configRequest同构+TriRLC同位置勘(镜像分叉同漏即同修防复踩)+cron list带token翻绿补测,排下午/M窗不阻P2线；COS判据型升级候办材料不足候件不凭半句裁架构
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:50 +08：自上次进度提交 ebb027e6 后新增 3 条 commit：
+  - dc4d9644 Merge remote-tracking branch 'sg-server/dev' into dev
+  - d36696fd docs(W40): 判据型daemon升级定谳入账+备料毕——CTO裁卷34aef5c2四裁点全裁(形态B准/300s/契约三钉/两道网并存)+提案卷§七定谳注记;备料=ledger-watchlist-patrol.mjs(三钉实装)+watchlist.json空清单,三钉冒烟三面过(malformed锚ERROR出声/发信失败保waiting failCount=1/exit=0不崩),施工候并批窗(COO下午方案卷),半自动现役照跑
+  - 34aef5c2 docs(W40): watchlist daemon级升级四裁点裁卷——形态B裁准(故障面隔离+enabled=0零代码回滚,独立复核与COS荐同向)/节奏300s准/契约照§一加三钉(锚核查失败出声禁静默skip防盲区机制自复刻+发信失败不置notified防假通知+解析失败不崩job)/通道准两道网并存(pipe=主+daemon信箱=兜底,兜底价值精化=持久性非实时转达)+首周哨窗抽验2-3次；施工归COS自施工,allowlist重启与F-2下午窗并批一次重启两件
+- registry：v2.1；今日 registry 提交无变化
