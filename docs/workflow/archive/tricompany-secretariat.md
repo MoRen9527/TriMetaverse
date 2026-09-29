@@ -1,14 +1,14 @@
-# 赛博公司秘书处机制
+# 赛博公司秘书处机制（orphan 归档件）
 
 版本：V0.1 草案
 日期：2026-04-11
-状态：草案
+状态：**归档（orphan）**——2026-09-30 BOD R2 裁 B 案：published-summary 副本无维护链（host-object-publish-flow L27 明文不覆盖 docs published-copy），四个月滞后实证（lastSyncedAt 2026-06-03，缺 §9/§10/转正态），真源唯一+派生物显式原则下废副本优于养副本；本件移档 `docs/workflow/archive/` 保留可逆，**制度援引一律以正身 `TriCompany/docs/workflow/cyber-company-secretariat.md` 为准**（正式生效 2026-09-14）
 
 ## 文档同步元信息
 
 - sourceOfTruth: TriCompany/docs/workflow/cyber-company-secretariat.md
-- syncMode: published-summary
-- lastSyncedAt: 2026-06-03
+- syncMode: archived（原 published-summary）
+- lastSyncedAt: 2026-06-03（归档时点 2026-09-30 03:3x+0800，BOD R2 裁示·CAO 执行）
 
 ---
 
