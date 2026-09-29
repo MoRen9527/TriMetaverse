@@ -252,3 +252,12 @@
   - d36696fd docs(W40): 判据型daemon升级定谳入账+备料毕——CTO裁卷34aef5c2四裁点全裁(形态B准/300s/契约三钉/两道网并存)+提案卷§七定谳注记;备料=ledger-watchlist-patrol.mjs(三钉实装)+watchlist.json空清单,三钉冒烟三面过(malformed锚ERROR出声/发信失败保waiting failCount=1/exit=0不崩),施工候并批窗(COO下午方案卷),半自动现役照跑
   - 34aef5c2 docs(W40): watchlist daemon级升级四裁点裁卷——形态B裁准(故障面隔离+enabled=0零代码回滚,独立复核与COS荐同向)/节奏300s准/契约照§一加三钉(锚核查失败出声禁静默skip防盲区机制自复刻+发信失败不置notified防假通知+解析失败不崩job)/通道准两道网并存(pipe=主+daemon信箱=兜底,兜底价值精化=持久性非实时转达)+首周哨窗抽验2-3次；施工归COS自施工,allowlist重启与F-2下午窗并批一次重启两件
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 b61d36c3 后新增 7 条 commit：
+  - b7f7cf1c Merge remote-tracking branch 'sg-server/dev' into dev
+  - f4407426 docs(lg-058): CPO G2①术语裁决件落树+IA方案上游勘正注——三点裁毕:①文案定稿三行(L188/L404「LG-035面」→「过渡期形态·常态只读」STE版删元语言冗余二字/L358采STE建议面face+trimmc-card.json清除+同句PUT括注删)②hover计入禁词域(title/aria-label/placeholder皆用户可见面,v3扫描属性面增补建议)③派工照COO排程下午窗批零重启;责任面归位如实(LG-035三处系本席IA方案§4.1指定文案照落=设计错误在我非FSD漏出,LG-\d{3}本在禁词族12模式修正的是责任面非合规面);对COO修正注对表确认(裁量框架内裁改不裁维持);IA方案§十勘正注防照落复发
+  - 913f98ae docs(lg-058): STE N18——A3网页侧点验✓(四卡CLI对照行四bin四命令与§5.2底表逐格一致+bin正名实锚零错写+能力对齐语义直书,合卷候排程)+G2④逻辑双路径收口(正反路径主链实测覆盖,写面编辑流候CEO终验窗如实标注)
+  - c8f7f68c docs(lg-058): STE G2②命名对表+CPO方案指定文案修正注——LG-035三处=CPO IA方案原文自带标注(L85/L26/L42)非FSD漏出,G2①缺口收窄为face+trimmc-card.json两词(CPO方案外);菜单7项/卡头四要素/三硬标准对表✓;V1 revert锚走读✓(git层ANCESTOR-OK+触面PURE零src+dist.bak-pre-a6补位在+build重建路径三段全走读,实弹候BOD哨窗)
+  - ad51c11d docs(lg-058): STE N13-N15落树——R3新发现managed端点真链路案缺失(CTO裁词6bf7a596:件C并入条件族,裁②为准,零命中断言独立复核认承)+R4触发器命中核验✓+token通道适配性实测(T1-T4双层三态全谱:401/401/200/200,API_TOKEN适配pull面,managed面候ADMIN供料已到)+U2.2连接态深验全绿(managed真请求实发×4/S1对表一致/reload保持链第四型人工验证过/console零错)+G2①术语扫描4+1处渲染面漏出(非阻塞候CPO裁+FSD随批修)+G3证据件零明文✓
+  - 6bf7a596 docs(lg-058): P2门审卷§五勘误补注(STE N13)——managed新端点真链路零覆盖实勘证实(四真链路族grep零命中/E1-E8覆盖=trimmc-card族/ui-fourplane④=L72 mock fetch),LG-035第三击字面形态；R3判定自纠=当时未做新端点覆盖面grep核对,漏洞如实记档,STE第三刀互检生效；裁定②为准(FSD补自动化案=正式达标,STE人工活体仅临时缓解不替代)+件C并入CONDITIONAL PASS条件族(循e2e.gate骨架两案:有令牌真链路+错token诚实态,估1-1.5h纯测试面零重启)；条件族两项:e12修案+件C
+  - fff9aae3 docs(lg-058): STE A1第一段独立手测落树——U1选项卡矩阵PASS(菜单7项/四卡单面板/12往返对零残影/active一致/console零错/face语义零串卡:四卡副标拉取源特有面各异且语义正)+U3特有面走读PASS(mlc模板实按钮/rmc cron+域锚A4语义入UI/mmc 8460代理+LG-035过渡位注/rlc寄居过渡;候建区诚实非假按钮;降级梯语义入UI;CLI对照行=A3 UI侧基座)+U2第一段(守卫人话/S3首启链源码在位/faceBadge诚实三态源码注释/S6人话映射;admin通道候件:无凭据探测401=写面启用实锤,managed视图全需admin令牌)+G1第一轮324/309/0fail/15skip零漂移独立复现(4min09s);截图掩码面核过
+- registry：v2.1；今日 registry 提交无变化
