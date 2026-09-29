@@ -242,3 +242,8 @@
   - 9f428805 Merge remote-tracking branch 'sg-server/dev' into dev
   - 0bc0d068 docs(W40): BOD两问实勘入账——daily-progress巡检兜底调度真源=sg TriMMC cron d0f87756(*/10 Asia/Shanghai runAs fleet,今晨9笔TriMC Scheduler实证)+本机8713四job全景(cron.db实勘);判据型执行体两段式裁定=现役m-cos会话半自动(与60s patrol不同链)+升级候办吸收daemon级候CTO裁;8713 CLI探针401根因候选=CLI env无现役token(08e07c8b)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 f0d244e2 后新增 3 条 commit：
+  - 4c2b83b5 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 9dd0ef49 docs(W40): 判据型daemon级升级提案卷落卷(COS→CTO裁)——判据对象=watchlist.json结构化清单(不扫mirror正文,键值面教训)+触发条件=树锚is-ancestor核查+两形态利弊对照(A patrol扩展故障面耦合/B独立job零代码回滚,本席荐B)+发信通道对接(TRIMC_NOTIFY_TARGET_SEAT=bod已配,pipe面缺口如实候注BOD确认)+回滚面汇总+CTO四裁点
+  - dcbaa3b4 docs(lg-058): P2门审卷CONDITIONAL PASS+F-2 cron漏鉴权头裁卷——五审点①②③④过+⑤全量324独立复现对表吻合(309/15/0)；带env复跑新发现e9/e10/e12共10挂=旧案结构漂移非产品缺陷(P2导航层/策略参照层隐藏改版,旧案selector未随版,功能面P2代案+API直打全绿三面覆盖),e12真reload持久覆盖缺口实存挂候修(FSD修案不降级主张+CEO终验删除复活预演自证),不阻骨架门；A6 git层ANCESTOR-OK六件纯test/ui面回滚实弹候BOD哨窗；F-2准修一行级cronRequest补x-internal-token与configRequest同构+TriRLC同位置勘(镜像分叉同漏即同修防复踩)+cron list带token翻绿补测,排下午/M窗不阻P2线；COS判据型升级候办材料不足候件不凭半句裁架构
+- registry：v2.1；今日 registry 提交无变化
