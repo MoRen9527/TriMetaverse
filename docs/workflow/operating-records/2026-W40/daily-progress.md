@@ -307,3 +307,10 @@
   - bd7d9498 docs(lg-058): STE N27——amend事故记档(HEAD归属未验改写CPO提交26854058→08dfebab,内容零损失哈希已扩散,不拆回处置+教训入档)+8460活体实测派工接收(SOP三读数一结论+四格矩阵,明窗12-14主选)
   - 4e334898 docs(w40): 探测×班次一体方案合卷(CAO主笔三方零分歧)+D-27排窗字段并CTO会签两注
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:30 +08：自上次进度提交 d9f4bcf8 后新增 5 条 commit：
+  - 5fadf9a2 docs(lg-058): STE N29——R4电量应急暂停接令(收口点即停,夜验链/8460/UI辅位三挂起候BOD通知,fsd在途件不代收)
+  - 7e5863b6 docs(w40): R 表首档补档录毕——BOD 供账细目卷对表终态(33 封逐封入表:R2/R3 补档 25/R6 轻留痕 6/走链 1/宪章随附 1),原底稿 10 行转存档,四条候注闭合(时点段位/封数三口径差定谳/增量 17+5 续录/边界模糊两封 R3),收稿侧五封交叉验证吻合
+  - e857e1d5 merge: 并入远端（BOD 供账细目卷）
+  - 92116d14 docs(cho-workbench): 发布管线真链路图谱实勘笔记——四段链(employee_host_publish 学习腿/.Binding 腿+source_publish_check 三宿主发布腿+sync 兜底)+compass 落点勘正+发布面滞后无告警发现+路径正名 ENOTDIR 实勘(D-23 落点一施工沉淀,CHO 渲染窗域知识)
+  - aa217f3a docs(w40): CTO裁定卷§八——在办账载体schema定谳(COO两确认闭合,FADE-010前置解除):hub-state/in-progress.json与watchlist同目录族;schema={id,树指针,承办席,优先序,状态};优先序双层=录入时序默认+COO显式覆写,权威链照CPO §7.2,不设定期重排仪式(缺席日时序自转);写边界三权分立(COS维护+销账/值席自条目/COO覆写);FADE-010三件窗定10-01 0:00-9:00主选18-24后备
+- registry：v2.1；今日 registry 提交无变化
