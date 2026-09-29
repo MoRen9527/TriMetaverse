@@ -57,6 +57,13 @@
 
 **F-1 重测口径（CTO 裁③，c76a48f3 随卷，COO 07:0x 转达）**：F-1 裁修后重测三要件=①`cli status` 无 `--port` 打 8713（默认面指正）②`config` 族连通 ③TriRLC 零回归（8711 正确值不动）。三要件全过方闭 F-1 重测格。
 
+**F-1 重测独立复验（STE 实跑 2026-09-29 08:00-08:03+0800，date 现查 UTC 2026-09-29T00:00:16Z；FSD 并批 832b266+daemon 新代 pid 5348 后）**：
+
+- **要件① PASS**：TriMLC CLI `status` 无 `--port` 打 8713 ✓——pid 5348（新代活体）/port 8713/service trimlc/healthz ok，默认面指正实锤。
+- **要件② 候通道（不虚验）**：`config show` 无 `--port` 已正确触达 8713（端口面 ✓）但被 token 门拦（401 人话报错同前）——新代 daemon 配置了 TRILC_INTERNAL_TOKEN（fail-closed 门，src/server/app.ts L1759-1772：未配置=internal_auth_disabled 全拒/配置后校验 X-Internal-Token；请求期读取支持运行中注入）。FSD 四读数全绿=其通道带 token；本席 token env 不可得且凭据分发面不擅掘——候 BOD 哨验同款带 token 通道（N15 先例）或 FSD 供 env 注入口径后补跑 face=mlc 翻正格。
+- **要件③ PASS**：TriRLC CLI 零回归 ✓——`status` 无 `--port` 仍打 8711（pid 15708/service trirlc）；`config show` face=rlc/source=tier2-cache-fresh/providers(0) 正确值不动（fetched 2026-09-28T23:50:24Z 新周期刷新，语义零漂移）。
+- **小结**：三要件 ①③ 独立复验 PASS；② 端口面 PASS+读数面候 token 通道；FSD 侧四读数全绿（COO 07:5x 知会 9d87a368）与本席 ①③ 复核同向，F-1 修复面（DEFAULT_PORT 8711→8713）实质成立，② 补格候通道不阻 F-1 闭合定性（CTO 裁③三要件语义=CLI 侧连通性，端口指正已独立实证）。
+
 **CLI 半边结论**：矩阵宣称「4/4 daemon 覆盖」的四命令在 CLI 面**实现均在**（三仓 CLI config 族同构+mmc 面候 sg 锚），活体可达格 8711 全通、8713 全拦（token 门）、rmc/mmc 面锚引用；发现①-⑤如实入卷候裁。网页侧点验候正常工时，两半合卷后方成 C1 终对表。
 
 ### A4 渲染验证门全过（LG-035 家族，全项硬门）
