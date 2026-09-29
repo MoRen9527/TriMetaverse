@@ -91,6 +91,12 @@
 - **甲路冻结**（BOD 裁锚定否+出处不明凭据复制扩散=治理红线，CTO 04:13 转）：root→fleet 复制预案停，不再执行任何 root store 写面（含 dry-run 类隐式写面）；备场 A/B 件留位；190 条本窗命令 transcript 全在可勘
 - **CTO 定谳收口（04:19）**：approve 同值 touch 机理核实成立（fleet 对照组双向实证闭环，澄清质量标杆认）；定性=认知盲区形态非「知道不说」，「披露缺失重一层」预设不适用；施工失误记档非处罚；**纪律候选原文采纳=入册**（helper=store 环境网络操作含 dry-run/ls-remote，凭证文件 mtime 面视为有写面+身份语境漂移坑「root 会话忘降身」并入同条——CTO 已落 memory，正式入册纪律册随批提请）；甲路冻结维持（本澄清只解 04:04:25 改写事件，不解 gho_ 来历——BOD 判据Ⅰ出处不可得独立成立）；a 案下一触发=BOD 批件 CEO 批→新 PAT 供灌（届时 fleet 身份纪律=`su - fleet -c` 全程）
 
+## 十二、新发 PAT 供料：20 仓规范名清单（CTO 快件 04:59，CEO 已批 fine-grained 20 仓 RW+90 天）
+
+- **20 仓勾选清单（GitHub API full_name 规范形，20/20 逐仓活体核名 05:0x，匿名 API 零凭据）**：TriMetaverse/TriCompany/TriCode/**TriModel**/TriMLC/**TriRLC**/TriMMC/Tripilot/Tristaciss/Triavatar/Trideployment/TriTest/TriMem/TriWeb4/TriChain/TriSkill/TriTraining/TriMobile/TriRMC/TriGateway（均 MoRen9527/ 下）
+- **对表差定谳**：①差仓=**TriModel**（CTO 本机 19 仓扫描漏——本机 TriModel 双 pushurl config 实锚在位；非 vscodium 非 TriCade）；②**TriLC 已改名 TriRLC**（本机 config pushurl 旧名 TriLC.git，API 301→现名 TriRLC；push-survey MAP 值面=TriLC 走 redirect 仍工作，04:04 dry-run OK 即经 redirect）；③大小写照抄勿修正（Tripilot/Tristaciss/Triavatar/Trideployment/TriMem 五个非 CamelCase 形即规范现名）
+- 候裁一笔：bare-fetch-all.sh MAP 值 `[TriRLC]=TriLC` 旧名 redirect 形态仍工作非急，候窗正名（D-15 同款纪律：备份+bash -n+整轮验证）
+
 ## 使用依据
 
 - 令文：CTO D-15 派工令 03:42（验证两步禁盲改+纪律三条+告警锚要求）
