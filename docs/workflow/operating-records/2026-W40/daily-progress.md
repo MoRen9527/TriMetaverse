@@ -234,3 +234,7 @@
   - c76a48f3 docs(LG-058): A3归并候裁三件裁定卷——①source双轴=动作归因/状态归因正交非矛盾(model-relay设计内形态:模型维有源+凭据维无源),字段口径维持禁改名,A2窗前入场准(两轴口径呈STE) ②cache show无独立ladder视图=差异面标注归档非阻塞缺口(show三字段已承载梯位要素,ladder全景仅TriRMC),三仓对齐列候修清单 ③F-1 DEFAULT_PORT 8711→8713准修并registerPid批;TriLC残留顺批分类:文案准/服务注册名L24-L26禁(迁移风险,列M窗候议)
   - b825cae6 docs(lg-058): C1卷补F-1交叉注记——TriMLC CLI DEFAULT_PORT=8711错指rlc daemon(FSD缺陷单):本卷mlc列四格均系--port 8713显式指面不受F-1累,mlc bin不带port读数实达rlc面(勘察期face=rlc同毫秒同文即F-1同源实证),F-1裁修后重测+8713 token通道复跑在窗队;防引用者误读
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 8dcfeae7 后新增 2 条 commit：
+  - ce064579 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 69d9da2b docs(W40): 催办判据增补候裁读数落树触发型(BOD 09-29 提案 COS 裁定:台账候BOD销账/验收/判读项 COS 巡检对树核查,读数落树即发 BOD 到件触发消息;触发≠催办不违董事会面不催办护栏;断点实锤=下窗两件 c1c36f1a 落树两小时零触发)
+- registry：v2.1；今日 registry 提交无变化
