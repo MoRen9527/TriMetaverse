@@ -220,3 +220,6 @@
   - a24053ff docs(lg-058): A3矩阵终对表施工卷落树(N4)——6行×三端逐格+差异①闭合+F-1活体缺陷候裁(TriMLC CLI默认port 8711错指)
   - c1dca80e docs(lg-058): STE M1/M5 录位+A3 C1 CLI半边夜窗实跑落树——M1判读✓(tier2-cache-fresh=卡链cache新鲜非降级兜底,归因链=card face=rmc语义正)/M5持久性✓(900s二轮+md5三时点全等+BOD第四时点复证);A3 CLI半边四面×四命令实跑矩阵(8711全通/8713 token门四格拦BOD N15带token通道佐证daemon门正常/rmc读数卷锚/mmc候sg锚);发现①-⑤入卷候裁:help旧名TriLC残留/两面鉴权形态差/pull source字段语义双轴疑(effectiveSource值面vs pull通道面同字段名)/cache show=show别名case归并无独立降级梯视图/CLI独有cache clear+model族矩阵无行;三仓CLI config族同构实证(TriRMC src L478-522同布局)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:50 +08：自上次进度提交 b261373c 后新增 1 条 commit：
+  - 2325d9d3 docs(workflow): 立项即登记首用——LG-058 P2 执行单+LG-056 A3 落位跟踪入总表（现役 9 单）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
