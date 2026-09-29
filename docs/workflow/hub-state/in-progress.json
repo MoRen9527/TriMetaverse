@@ -24,6 +24,6 @@
   "owner": "SDE（施工，今天内窗）/COS（tracking+护栏复启用）",
   "priority": "默认（录入序 3）",
   "status": "accept-waiting-final-round",
-  "note": "SDE 施工毕（d1915d14：refspec 去 `+`+denyNonFastForwards 20/20+验证两步）+COS 对表验收毕（03:5x SSH 亲验四读数全过：L18 无+/备份在位/denyNonFastForwards true 抽验/bash -n 绿/告警锚活体=03:50:24 TriCompany FETCH-FAIL 修后拒绝实证）；护栏事件全链终闭+双钟对齐（BOD 03:55 终认/CTO 03:57 认领）；对表闭条件（CTO ②口径）=a 案施工读数+quiet 补做毕一并对表闭；04:30 修后首轮定时读数=FF 正常读数组成部分；候办 a 案=push 腿凭据通道修活（CTO 裁正解：修活既有机制不新建 watcher，优先 fleet 自有凭据恢复 clean 路径，白天窗）+quiet 一行=SDE 即做中"
+  "note": "SDE 施工毕（d1915d14：refspec 去 `+`+denyNonFastForwards 20/20+验证两步）+COS 对表验收毕（03:5x SSH 亲验四读数全过：L18 无+/备份在位/denyNonFastForwards true 抽验/bash -n 绿/告警锚活体=03:50:24 TriCompany FETCH-FAIL 修后拒绝实证）；护栏事件全链终闭+双钟对齐（BOD 03:55 终认/CTO 03:57 认领）；**04:30 修后首轮真实定时轮终验 PASS（FETCH-OK 20/20 零 FAIL+TC 顶 68fd158 未卷）=FF 正常读数项 CTO 认收闭合**；对表闭条件（CTO ②口径）=a 案施工读数+quiet 补做毕一并对表闭（quiet 候自然样本禁造样本）；候办 a 案=push 腿凭据通道修活（CTO 裁正解：修活既有机制不新建 watcher，白天窗）——**前置已解锁：CEO 04:57 批新发 PAT（20 仓 RW/90 天/旧把全作废，写入=BOD 剪贴板管道零出机），a 案候新 PAT 落位后施工**"
  }
 ]
