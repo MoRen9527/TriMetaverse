@@ -70,11 +70,25 @@ fsd-a3-cli-web-matrix-verdict.md 读毕：R1-R6 判值分布（✅rlc+mlc 实测
 
 ## 四、综合判定
 
-**CONDITIONAL PASS——P2 骨架 @995c2f7 过门审**（①②③④ 审点过+⑤ 对表过），条件一项：
+**CONDITIONAL PASS——P2 骨架 @995c2f7 过门审**（①②③④ 审点过+⑤ 对表过），条件两项：
 
 - **env-gated 旧案 10 挂修案（e9/e10/e12）候修清单挂账**，e12 真 reload 持久面修绿+CEO 终验预演自证后，全量回归 clean 定性方闭。
+- **managed 新端点真链路案（件C）**——见 §五 勘误补注，FSD 补自动化案后 R3 方闭。
 
 P2 部署窗排程不受阻（部署窗候 A2-P+CEO 亲测同窗，修案窗在其前有富余）。
+
+## 五、勘误补注（STE N13 发现·2026-09-29 11:0x 补）
+
+**STE R3 新发现**：managed 新端点（GET /v1/config/cards/\<face\>?view=managed @3e6ab37）三层覆盖=服务端单测✓/UI jsdom mock fetch✓/**真浏览器↔真 server 全链路案零覆盖**——LG-035 第三击教训字面形态（三集成缝 mock 掉：URL 拼接/auth 头拼接/三态解析）。
+
+**本席独立实勘证实**（不转抄）：四真链路族 grep panel-card/view=managed/loadFaceCards 零命中（exit=1）；E1-E8 真链路覆盖端点=trimmc-card 族；ui-fourplane ④ managed 断言=L72 `window.fetch` mock（URL 形状断言非真 HTTP）。
+
+**门审自纠**：本卷审点② R3 判定当时核的是「真链路案在位且绿」（E1-E8 对既有端点族），**未做「新端点覆盖面」grep 级核对**——R3 判定对 managed 面不成立，漏洞如实记档；STE 第三刀补位=门审互检机制生效。STE「缺案非挂案、不推翻已过面」定性认承。
+
+**裁定**：
+1. **裁②为准**（FSD 补自动化真链路案=正式达标）；①STE 人工活体验证**不单取**（三集成缝守卫必须自动化持续在，人工一次性读数守不住回归）——若 admin 通道就绪早于件C，STE 人工活体可做临时缓解加分项非达标替代。
+2. **件C 并入 CONDITIONAL PASS 条件族**（与 e12 修案并列）。技术形态最低限：循 ui.e2e.gate 现案骨架加两案——(a) 有令牌 loadFaceCards 真链路（真 server+真 fetch：view=managed×4+auth 头+200 解析+三态徽标渲染断言）；(b) 错 token 401 诚实态（不假显不造数）。判据=LG-035 R3 原文（新端点×真服务启动×断言响应契约）。
+3. **排程**：件A（e9/e10/e12 修案）+件C 同域同 e2e 基建一并做；件B（F-2）独立仓。三件一窗技术可行，件C 估量 ≈1-1.5h（骨架现成）。件C 纯测试面零重启（TriModel 侧，不并 8713 重启批）。
 
 ## 使用依据
 
