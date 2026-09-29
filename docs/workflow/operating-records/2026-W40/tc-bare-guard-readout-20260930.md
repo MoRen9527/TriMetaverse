@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（CTO D-15 施工令：refspec 去 `+` 主修+bare 仓级 denyNonFastForwards 纵深）
 - syncMode: source-only
-- lastSyncedAt: 2026-09-30T04:11+0800（date 现查；施工窗 03:44-03:55+CTO 验收批 03:56-04:00+甲乙交叉裁决录案 04:11）
+- lastSyncedAt: 2026-09-30T04:18+0800（date 现查；施工窗 03:44-03:55+验收批 03:56-04:00+裁决录案 04:11+BOD R2 澄清录案 04:18）
 - 令链: CTO 03:42 派工令（根因实锤=fleet crontab bare-fetch-all.sh L18 `+`refspec force fetch=今晨 03:30:06 回卷根因）→本席接令即窗（令面"今天内完成优先，窗自排"）
 - 边界: sg 面操作全程留痕（备份+LOG+本卷）；不动其他 job/行；键值 ghp_ 掩码
 
@@ -79,6 +79,16 @@
 3. **裁决=甲路优先，候 BOD 锚定 root PAT 出处**：机器内复制（值不出 sg+20/20 实证+秒级）技术面最优；CTO 只裁技术路径，**root PAT 出处锚定权=BOD**（sg root 运维面持币人：验活+溯来源 root shell history/凭据文件 mtime——何时放的/谁批的）；**锚定认=本席即执行**（root→fleet 内部复制→整轮 push 结 9 天欠账→20 仓 OK 全单出）；锚定否（出处不明/权属不清）=不复制，转 BOD 新发路批件（CEO 面）
 4. **两路不互斥**：root 把=全仓 RW 宽授权，fleet 自动化持宽把=「凭据权限现势妥协」观察项族——甲路=应急闭合，新发路（fleet 专用窄授权 PAT 替换）=长期正解，BOD 新发路批件照常酝酿不受甲路阻
 5. 备场状态保持：store 备份（.bak-20260930T0405+0800）+push-survey-20260930.sh+双基线（fleet 20×AUTH-DEAD/root 20×OK）在位；候 BOD 锚定读数到再动
+
+## 十一、BOD R2 澄清录案（root store mtime 04:04:25 改写归因）
+
+- 事实锚：BOD 实锚 /root/.git-credentials mtime=04:04:25+0800 落本席备场窗；判据Ⅰ=该 gho_ 03:5x 前已存在（COS 代查）——系改写非创建
+- **直答=是，我备场窗内操作所致，但非显式写面**：机理=备场 C 初跑以 **root 语境**直跑 push-survey（ssh root 会话无 sudo 降身，施工失误——本应 `sudo -u fleet`），20 仓 dry-run 串行认证成功，git 自动 `credential approve`→store helper **同值重写**该文件；mtime=04:04:25.617=C 段末仓 approve 时点（C 段 ≈04:04:12-26，时序自洽）
+- transcript 逐时点（UTC 折+8）：04:04:07.386 发令 A+B+C（A=fleet 备份 cp/B=fleet tee 写脚本/C=root 语境直跑）→04:04:25.617 C 段 approve 重写（BOD 实锚点）→04:04:52.686 fleet 语境重跑（AUTH-DEAD 无 approve，fleet store 保持 0 行）+root store 只读结构勘验（值零出机）→04:05:19 回执
+- 三问披露：①值来源=该文件自身既有条目（approve 语义=认证刚用过的凭据原样交回 helper，零新值注入）②授权=CTO 04:03 备场令，root 语境直跑属施工失误，令面「备场≠灌值」未越（零灌值动作）③同值重写非异值新写（现态 1 行/github.com×1/70B/600/root:root）
+- 值面对表供料：现值 md5=1e6aa786597d7336f93c746280e1c7e0/sha256=32e9d307b5fd738c4a7193c88f5747271f82f67af06e8f49f29a4a154d0b5acb——COS 持 03:5x 值证据自算对表即实锤
+- **认知盲区自认**：「dry-run 零写面」对 repo 对象面成立，对 **credential store 面不成立**（认证成功即 approve 重写凭证文件）；候选纪律=helper=store 环境网络操作（含 dry-run/ls-remote）凭证文件 mtime 视为有写面——候 CTO/BOD 裁是否入册
+- **甲路冻结**（BOD 裁锚定否+出处不明凭据复制扩散=治理红线，CTO 04:13 转）：root→fleet 复制预案停，不再执行任何 root store 写面（含 dry-run 类隐式写面）；备场 A/B 件留位；190 条本窗命令 transcript 全在可勘
 
 ## 使用依据
 
