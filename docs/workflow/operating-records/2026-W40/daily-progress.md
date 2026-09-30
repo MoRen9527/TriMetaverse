@@ -427,3 +427,10 @@
   - c8b8749f docs(tree): cto-8710-gate-audit-01 四 daemon token 门覆盖面审计定性卷——sg 在役门 401 实锚全覆盖+TriRLC/MLC fail-closed 正形+MMC/RMC opt-in 弱形升约候迁移窗
   - 238afc10 docs(tree): hub-silent-detect-01 N2 重启节点收口——8713 全纪律四连绿，allowlist 8 串生效，COS 接棒 PATCH
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:40 +08：自上次进度提交 fd06b407 后新增 5 条 commit：
+  - 392e9039 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 4fc0c841 fix(sg-references): 两守望脚本 loopback 8710→8712 同步——TriMMC 8712 迁移窗引用点批（#130 四步③）
+  - b77c6a07 docs(tree): hub-silent-detect-01 N5 首自动轮实弹 PASS——四绿（准点/判定/零误报/双源），灰度第 1 周开跑
+  - a6678a05 docs(tree): hub-silent-detect-01 N4 COS PATCH 段收口——第三 job */15 挂载实锚，壳退役毕，串清理候下窗
+  - 05e309d0 docs(tree): hub-silent-detect-01 N3 二窗重启节点——allowlist 201 实证生效，父链断言闭环，教训两条入库
+- registry：v2.1；今日 registry 提交无变化
