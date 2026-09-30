@@ -26,22 +26,35 @@ export function resolveNotifyConfig(env = process.env) {
  * Send one mailbox message. Resolves {ok:true, status} or throws Error.
  * Caller contract (三钉②): treat throw as "not sent" — never record notified state.
  */
-// source_seat note (2026-09-30 evening batch): sg TriMMC 8710 enforces a
-// source-seat whitelist (outbox.ts SOURCE_SEAT_WHITELIST MVP = m-duty-cos/bod/
-// m-cos/m-coo). Patrol/detect infra sends ride the duty-COS system channel
-// identity (mechanism seat, not a personal seat); the body carries real-name
-// attribution (producing job + seat). CTO readout reports this choice for
-// ratification; revert is a one-line default change.
+// source_seat note (2026-09-30 evening batch, CTO-ratified A-case): sg TriMMC 8710
+// enforces a source-seat whitelist (outbox.ts SOURCE_SEAT_WHITELIST MVP =
+// m-duty-cos/bod/m-cos/m-coo). Patrol/detect infra sends ride the duty-COS system
+// channel identity (mechanism seat, not a personal seat).
+//
+// GUARDRAIL (CTO 升约, binding lib contract): any send riding a MECHANISM seat
+// identity MUST carry real-name attribution — the `attribution` argument is
+// mandatory for mechanism seats and is prepended to the body. Missing
+// attribution throws (fail-closed) so future callers cannot borrow the
+// mechanism channel anonymously.
+const MECHANISM_SEATS = new Set(["m-duty-cos"]);
+
 export async function sendNotify({
   targets,
   title,
   body,
+  attribution,
   sourceSeat = "m-duty-cos",
   targetDaemon = "trimlc",
   urgent = "normal",
   env = process.env,
   timeoutMs = 10000,
 }) {
+  if (MECHANISM_SEATS.has(sourceSeat) && !attribution) {
+    throw new Error(
+      `${LOG_PREFIX} mechanism-seat send (${sourceSeat}) requires real-name 'attribution' (guardrail: no anonymous mechanism-channel sends)`,
+    );
+  }
+  const fullBody = attribution ? `[来自: ${attribution}]\n${body}` : body;
   const { url, token } = resolveNotifyConfig(env);
   if (!url) throw new Error(`${LOG_PREFIX} TRIMC_NOTIFY_SG_URL not configured`);
   if (!token) throw new Error(`${LOG_PREFIX} TRIMC_NOTIFY_SG_TOKEN not configured (token=${tokenFingerprint(token)})`);
@@ -55,7 +68,7 @@ export async function sendNotify({
     targets,
     urgent,
     title: String(title).slice(0, 200),
-    body: String(body).slice(0, 4000),
+    body: String(fullBody).slice(0, 4000),
   };
 
   const ctrl = new AbortController();

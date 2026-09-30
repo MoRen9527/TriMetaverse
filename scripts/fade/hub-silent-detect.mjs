@@ -78,9 +78,17 @@ function readLedger() {
 
 async function notifyOrThrow({ targets, title, body, urgent }) {
   // 三钉②: this either resolves (state may be written) or throws (state untouched)
-  // source_seat=m-duty-cos (duty system channel; sg whitelist MVP) — body carries
-  // real-name attribution; CTO ratification pending (see lib/notify-sender.mjs note).
-  return sendNotify({ targets, title, body, urgent, sourceSeat: "m-duty-cos", targetDaemon: "trimlc" });
+  // source_seat=m-duty-cos (duty system channel; CTO-ratified A-case) — the lib
+  // guardrail enforces real-name attribution for mechanism-seat sends (fail-closed).
+  return sendNotify({
+    targets,
+    title,
+    body,
+    urgent,
+    attribution: "hub-silent-detect 900s job by FSD (m-fsd)",
+    sourceSeat: "m-duty-cos",
+    targetDaemon: "trimlc",
+  });
 }
 
 async function main() {

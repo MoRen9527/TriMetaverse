@@ -40,9 +40,11 @@
 - **旧 .fade 两串（tree-node-patrol/ledger-watchlist-patrol）暂留**：候 COS 双 job PATCH 完成确认后一并退役清理（债务标记：先删会致过渡期 force run 403）。
 - 900s job 挂载参数（COS 重启后 PATCH 用）：schedule=`*/15`（900s），command=第三串，enabled=1。
 
-## 候 CTO 追认项（如实呈报）
+## 候 CTO 追认项（→ 已追认终态，18:39 CTO 裁词回执）
 
-1. **source_seat 身份选择**：sg 8710 notify 端源席白名单=MVP 硬编码（TriMMC `src/notify/outbox.ts` L65：m-duty-cos/bod/m-cos/m-coo），FSD 实名不在册。冒名个人席=通信伪造红线不碰。**取 `m-duty-cos` 值守系统信道身份**（机制位非个人席；body 内实名溯源=hub-silent-detect by FSD）。候选替代：sg 面白名单增补 'm-fsd'（跨模块+sg 部署，另批）。灰度内回改=一行默认值。
+1. **source_seat 身份选择**：sg 8710 notify 端源席白名单=MVP 硬编码（TriMMC `src/notify/outbox.ts` L65：m-duty-cos/bod/m-cos/m-coo），FSD 实名不在册。冒名个人席=通信伪造红线不碰。**取 `m-duty-cos` 值守系统信道身份**（机制位非个人席；body 内实名溯源=hub-silent-detect by FSD）。→ **CTO A 案追认**（18:39）：语义自洽+红线双守+B 案成本不成比例。
+   - **护栏升约已落 lib 契约**（CTO 升约令）：`notify-sender.mjs` 机制位（m-duty-cos）发送**必带 `attribution` 实名溯源**，缺省 throw（fail-closed），溯源字段自动前缀 body。回归三绿：T1 机制位缺实名=throw ✓ / T2 带实名真火 200 ✓ / T3 个人席过护栏 ✓。
+   - **B 案归宿**（CTO 裁）：列 TriMMC 通知面正形化候办（候未来 sg 维护窗随批，非独立开窗）——本卷记一笔在案。
 2. **回滚锚为重建快照**：Copy-Item 静默失败产 0 字节死壳（已删）；改前态以「当前文件逆还原 allowlist 行」重建（3178B vs 原版 3173B，差 5B=行尾统一化，唯一被改行逐字还原，34 行数一致）。非逐字节克隆，功能等价。
 3. **947 触发的 cooldown 粒度**：状态键=`<entry-id>|<level>`——同节点 reminder 升级 idle 时各自独立冷却窗（设计意图：升级不被 reminder 冷却吞）。
 
