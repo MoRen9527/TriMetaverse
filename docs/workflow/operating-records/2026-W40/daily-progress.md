@@ -460,3 +460,7 @@
   - 681c557d Merge remote-tracking branch 'sg-server/dev' into dev
   - f6ea2eaf docs(plane): 大表 22:3x 勘正——LG-050 行「触发日无读数待确认」过时勘正为 BOD 22:2x 裁①验收销账(89efd75c+9d0b8922 双锚)；铸表 21:4x 时点无读数属实,COO 席并行回收+裁定后即勘(reflog 勘明共享仓并行交错无冲突)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:50 +08：自上次进度提交 82e2260b 后新增 2 条 commit：
+  - 3e5486cc Merge remote-tracking branch 'sg-server/dev' into dev
+  - 4a1ecea7 docs(plane): 本地域/服务域分工排查稿初版 v0.1(CEO 22:41 纪律令②)——明晨候验族7件+在途候办族11件逐项三态标(本地合规/应迁服务域/边界件)+四族归纳(8713归属专项勘建议/席位驻位合流wt稿/纯长跑直迁候选/本地合规面维持)；纪律录台账常驻指令区3.12；明早哨窗三件并呈
+- registry：v2.1；今日 registry 提交无变化
