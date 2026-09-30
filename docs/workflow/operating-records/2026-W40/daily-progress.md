@@ -434,3 +434,9 @@
   - a6678a05 docs(tree): hub-silent-detect-01 N4 COS PATCH 段收口——第三 job */15 挂载实锚，壳退役毕，串清理候下窗
   - 05e309d0 docs(tree): hub-silent-detect-01 N3 二窗重启节点——allowlist 201 实证生效，父链断言闭环，教训两条入库
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 b3223cf2 后新增 4 条 commit：
+  - 7f32c5c0 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 2a4f46cf docs(tree): 8710 审计卷 §六.4 再勘——token 驻留面全录+轮换第四同步面（本机 channel.cmd 明文×2 含 TRIMC_NOTIFY_SG_TOKEN）+grep 不设防根因归族
+  - b0de5014 docs(w40): 机制锚两段更新(daemon级判据型巡检上线段+D-23传播补丁落点一闭合)+树账N17/N18追补(COO记G10批收口+F-2分派)+preswitch证据卷归树(09-29 N6前段6件)
+  - aa78fab3 docs(tree): 8710 审计卷勘正注三条——token 双源勘正（.env 真源+unit 重复面）/零溢出范围注/轮换第三同步面（job command 引用全扫）
+- registry：v2.1；今日 registry 提交无变化
