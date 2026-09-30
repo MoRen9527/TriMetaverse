@@ -1,0 +1,34 @@
+{
+  "version": 4,
+  "machine": {
+    "name": "sg-fleet"
+  },
+  "connection": {
+    "name": "sg-glm"
+  },
+  "provider_entries": {
+    "e-glm-anthropic": {
+      "provider": "glm",
+      "model": "GLM-5.3",
+      "api_key_encrypted": "lgmMQT9bysVu0xn5aafNzFYdIHKlW3/fr+Z3GBywy89JlB3ONvBJDXV+If7tG8ToT2KuNYLfTr+Sl/s7QR76PTd0gyMcj7CGSypeeMg=",
+      "enabled": true,
+      "updated_at": "2026-09-28T14:55:13.236Z",
+      "base_url": "https://open.bigmodel.cn/api/anthropic"
+    }
+  },
+  "model_sets": {},
+  "rules": {},
+  "strategies": {},
+  "active_strategy_id": null,
+  "deleted_strategy_ids": [],
+  "status": {
+    "state": "pending",
+    "at": "2026-09-28T14:55:13.237Z"
+  },
+  "reserved": {
+    "quota_switch": null,
+    "instances_group": null,
+    "env_tag": null
+  },
+  "default_model": null
+}

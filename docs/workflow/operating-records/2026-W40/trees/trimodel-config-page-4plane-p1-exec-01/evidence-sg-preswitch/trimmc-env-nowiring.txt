@@ -1,0 +1,16 @@
+TRIMC_NOTIFY_DUTY_TMUX_SOCK=/tmp/tmux-1001/default
+LANG=en_US.UTF-8
+OLDPWD=/
+INVOCATION_ID=d9760f8b2b684bcf849b94421a5e34a1
+TRIMC_NOTIFY_DUTY_TMUX=m-duty-cos
+PWD=/srv/fleet/TriMC
+HOME=/root
+JOURNAL_STREAM=8:71072057
+TRIMC_BRIDGE_CWD=/srv/fleet
+TRIMC_CONFIG_DIR=/var/lib/trimc
+SHLVL=0
+DEEPSEEK_BASE_URL=https://api.deepseek.com/v1
+TRIMC_RUNAS=fleet
+TRIMC_NOTIFY_DUTY_SEATS=m-duty-cos
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+TRIMC_PORT=8710

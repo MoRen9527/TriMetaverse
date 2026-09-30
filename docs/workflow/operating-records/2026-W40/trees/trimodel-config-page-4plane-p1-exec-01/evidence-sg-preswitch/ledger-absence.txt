@@ -1,0 +1,20 @@
+== ls *.json *.jsonl ==
+ls: cannot access '*.jsonl': No such file or directory
+-rw-r--r-- 1 fleet fleet  1290 Sep 29 03:40 package.json
+-rw-r--r-- 1 fleet fleet 92209 Sep 29 03:40 package-lock.json
+-rw-r--r-- 1 fleet fleet   798 Sep 28 22:55 trimmc-card.json
+-rw-r--r-- 1 fleet fleet   404 Aug 27 18:40 tsconfig.json
+
+== find face ledger/events ==
+(find exit=0, no output=no file)
+
+== TriMMC pid 1406906 env (sanitized) ==
+(no TRIMODEL lines = no wiring)
+
+== uptime/build ==
+8de8fe7 fix(LG-058): P1范围6① PUT无provider_entries载荷500→400人话拒(CTO候修裁)
+active
+inactive
+
+== unit 注（防误读）==
+8710 daemon 单元名=trimc.service（TriMC Main Controller, r15-1-4, active；旧名兼容面=TriMC→TriMMC 改名过渡），pid 1406906 活体在跑（/proc 实读）；前节 "trimmc.service inactive" 系单元名不存在所致非 daemon 停机。
