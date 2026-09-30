@@ -50,6 +50,7 @@
 1. **token 注入源=双源非单源**：§三.4 原述「token 经 systemd unit override.conf 持久注入」——BOD 施工勘正：**真源=`docker/.env`**（start.sh 源读），unit L31 系重复注入面，双源并存。重启韧性结论不变（两处均磁盘持久），轮换时两处同步。本席 §五 勘验所见 override.conf 在位为实（重复注入面），单源表述随勘。
 2. **§五「transcript 零敏感材料」范围注**：该句陈述本席审计过程事实（本席操作零溢出），不受 BOD 同日 `systemctl cat` 全值溢出事件影响（彼件在 BOD transcript，已由 BOD 自报定性零真值令违反+轮换台账升级，边际泄露≈0 论证同本席 gho_/前段溢出前案）。
 3. **轮换施工要素增量（候轮换单）**：token 轮换同步面不止双源——在役 job command 内嵌 token 引用（config-sync-apply 实锚在案，COS 施工卷报备条）=**第三同步面**，轮换单须含「job command 引用面全扫+逐 job PATCH」工序。
+4. **【21:0x 再勘】token 驻留面清单与轮换同步面终版（BOD 第二起溢出事件带出）**：本机 channel.cmd 含 token 明文×2 处（`TRIMC_INTERNAL_TOKEN`+`TRIMC_NOTIFY_SG_TOKEN`，L10/L14 双处同串）=**第四同步面（本机 M 面启动器）**——sg TriMMC token 轮换时本机 channel.cmd 须同步（否则 notify 双跳链断）；`TRIMC_NOTIFY_SG_TOKEN`（notify 通道凭据）若同窗轮换则同步面+1。驻留面现知全录：sg docker/.env（真源）→sg unit drop-in（重复注入）→在役 job command（内嵌引用）→本机 channel.cmd（启动器明文×2）→transcript（溢出面，同窗两起同值）。两起根因同族=grep 敏感键名不设防，取证类一律 sed 预脱敏管道（BOD 自领执行缺口）。
 
 ## 使用依据
 
