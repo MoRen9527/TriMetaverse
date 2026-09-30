@@ -1,11 +1,12 @@
 // sg-8460-probe.mjs — D-15 8460 缓解位在位性探测执行体（CTO 派工 2026-09-30 05:0x，CEO 04:57 批①实施）
-// 执行位: sg TriMMC 8710 job `every 21600000ms`（6h，日 4 轮；TriMMC 即生效型零重启零 allowlist——
+// 执行位: sg TriMMC 8712 job `every 21600000ms`（6h，日 4 轮；TriMMC 即生效型零重启零 allowlist——
 //   2026-09-30 实勘: src/cron 十件零白名单, addJob 写 store 后 executor.tick() 即时入调度）。
 // 双锚只读（CTO 五要目②）:
 //   锚①8460 在位性 = `systemctl is-active bigmodel-h1-proxy.service` === 'active' 且 `ss -tln` 含 ':8460' 监听
 //   锚②proxy.log 当日(UTC)行数 >= 2（9-25 起低活基线 4-5 行/日；2=下破告警线，候 7 日校准；低行数≠故障盲区）
 // 告警通道（五要目③）: LG-036 notify 信箱双跳——契约同 ledger-watchlist-patrol notify()：
-//   sg 面 loopback http://127.0.0.1:8710 + /etc/trimc-internal-token 直读（trimc 主进程身份）；
+//   sg 面 loopback http://127.0.0.1:8712 + /etc/trimc-internal-token 直读（trimc 主进程身份）；
+//   （2026-09-30 8710→8712+loopback 迁移窗随批：8710 公网面退役，TriMMC 改绑 127.0.0.1:8712）。
 //   bod 目标必 target_daemon='trimlc'（'trimmc' 系 sg 值席专用, 400 daemon_seat_mismatch 勘正 2026-09-29）。
 // 异常才发（正常轮静默落 log）；探测只报异常不定谳（五要目④）——异常触发值席照
 //   docs/execution/fade-007-incident-sop.md 链 2a9b5e94 实测定谳。
@@ -39,7 +40,7 @@ async function notify(title, body) {
   try { token = fs.readFileSync('/etc/trimc-internal-token', 'utf8').trim(); } catch { /* 出声在调用侧 */ }
   if (!token) return { ok: false, detail: 'notify skip: token missing' };
   try {
-    const res = await fetch('http://127.0.0.1:8710/internal/v1/notify', {
+    const res = await fetch('http://127.0.0.1:8712/internal/v1/notify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'X-Internal-Token': token },
       body: JSON.stringify({ source_seat: 'm-cos', target_daemon: 'trimlc', targets: [SEAT_TARGET], urgent: 'normal', title, body }),

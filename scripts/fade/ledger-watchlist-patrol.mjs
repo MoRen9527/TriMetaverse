@@ -55,9 +55,10 @@ function gitOk(args) {
 }
 
 async function notify(title, body) {
-  // 通道自适应：本机=daemon spawn env（TRIMC_NOTIFY_SG_URL/TOKEN）；sg=loopback 8710+token 文件直读
+  // 通道自适应：本机=daemon spawn env（TRIMC_NOTIFY_SG_URL/TOKEN，跨机走 SSH 隧道
+  // 18710→sg 8712，2026-09-30 通道批）；sg=loopback 8712+token 文件直读
   // （sg job 不带 runAs 以 trimc 主进程身份跑，/etc/trimc-internal-token root 限读可直读——2026-09-30 实勘）。
-  const url = process.env.TRIMC_NOTIFY_SG_URL ?? (IS_WIN ? undefined : 'http://127.0.0.1:8710');
+  const url = process.env.TRIMC_NOTIFY_SG_URL ?? (IS_WIN ? undefined : 'http://127.0.0.1:8712');
   let token = process.env.TRIMC_NOTIFY_SG_TOKEN;
   if (!token && !IS_WIN) {
     try { token = fs.readFileSync('/etc/trimc-internal-token', 'utf8').trim(); } catch { /* 出声在调用侧 skip detail */ }
