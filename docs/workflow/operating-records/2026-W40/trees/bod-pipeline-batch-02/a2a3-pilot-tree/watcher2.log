@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/urllib/request.py", line 1349, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib64/python3.6/http/client.py", line 1273, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1319, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1268, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1044, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 982, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 954, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib64/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/lib64/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pilot-watcher.py", line 19, in <module>
+    mid=notify('〔LG-057 A2 试点〕5 分钟超时催办触发','试点节点 N-A2 挂起 %d 秒超阈（阈 300s）——超时催办触发实证（隔离测试树 a2a3-pilot-tree，非在役件）。'%int(age))
+  File "pilot-watcher.py", line 12, in notify
+    r=json.load(urllib.request.urlopen(req,timeout=8))
+  File "/usr/lib64/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib64/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/usr/lib64/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python3.6/urllib/request.py", line 1377, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib64/python3.6/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
