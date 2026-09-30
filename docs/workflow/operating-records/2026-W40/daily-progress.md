@@ -491,3 +491,8 @@
 - 巡检兜底补写 @00:10 +08：自上次进度提交 426f7e53 后新增 1 条 commit：
   - 0f9f9d6a docs(workflow): E-0011 trimc 失听挂账——LG-046 Phase 3 并窗注（正径 W39 路径）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:30 +08：自上次进度提交 93563d95 后新增 3 条 commit：
+  - aaea8c3d docs(workflow): LG-057 A2/A3 试点读数卷——A2 触发时点线（300.6s 实证+8712 通道）+A3 恢复周期线（读树续办全周期）+判据四条三过一观察（批次02 件4）@m-duty-cos
+  - 05c68a2f docs(workflow): BOD 流水线批次 02 件 3 读数卷——LG-060 字段族测试面跟新（TriRLC 三族 46 处逐处对表；投影穿透同构先例；node22 门 203/199/4 净收口 −9；卡点 4 挂+5 tsc 预存在案）@m-duty-fsd
+  - d35cb5d4 docs(workflow): BOD 流水线批次 02 件 2 读数卷——LG-059 TriMMC 旧名叙事面修复（888 行/120 文件改名+18 行兼容面 K 保留；测试门 476/466/10/0 零回归；复扫 R 面零命中；10 挂预存 out-of-face 逐族归因卡点在案）@m-duty-fsd
+- registry：v2.1；今日 registry 提交无变化
