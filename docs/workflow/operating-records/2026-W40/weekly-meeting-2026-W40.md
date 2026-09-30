@@ -1,0 +1,96 @@
+# 周会议记录 2026-W40（试铸第一份）
+
+- sourceOfTruth: TriMetaverse/docs/workflow/operating-records/2026-W40/weekly-meeting-2026-W40.md
+- syncMode: audit-record（动态增长族：CEO 与 BOD 对话草稿由 COS 整理落文档，每周一份随周滚动追加；随周平面迁移）
+- lastSyncedAt: 2026-10-01（W40 试铸首铸段=09-30 夜→10-01 凌晨流水线夜巨量线；本周早期段〔09-28/09-29 PAT 链收官日等〕候后续补录，如实注记不虚构）
+- 立制源: CEO 2026-10-01 02:41 令（BOD #178 转录「周会议记录制立制」）：以周为单位，CEO 与 BOD 两对话草稿由 COS 整理落文档，形成动态增长的每周会议记录。要求=完全可审计（CEO 原始需求 verbatim+时点/BOD 扩充完善/COS 整理的账/C-level 意见记录/最后落到哪个任务书拆到哪个树）。
+- 五要素: ①CEO 原始需求（verbatim+时点）②BOD 扩充完善 ③COS 整理账 ④C-level 意见记录 ⑤任务书与树落点。每条带源锚（发送账 #号+msg_id/commit SHA/树路径）。
+- 署名: cos（COS/小贾 整理落档）
+
+## 段一（09-30 21:37）七列大表纪律令
+
+1. **CEO 原始需求**（verbatim，BOD #155 f42f0aee 转录）：「任务进度大表」第一个大表必须=七列全表头（09-24 走样修正令正形一列不省：任务书〔LG号+名〕/树 id/大白话简述/树任务链/当前进度节点/派发时间/是否完成）；归堆/分组/摘要/分析视图只准附后。
+2. **BOD 扩充**：派三件=录台账常驻区+按此铸大表现势刷新版+知会 COO（#156 35b9a895 BOD 代发 COO，COS 不重复）。
+3. **COS 整理账**：3.11 条录台账常驻指令区；task-inventory-20260930.md 铸毕（现役 19 单+已闭 3+两日动态 12 笔，commit 30316a55）；亲勘差异三条如实档（LG-050 触发日无读数等）。
+4. **C-level 意见**：COO #157 遵行确认（21:43 来件：自领落盘 workbench 21:39 条，适用面=排程表/拆派单/复盘引用大表自当夜 18-24 验收窗起，排程专有列按后附处理不并摊）。
+5. **落点**：任务书=无新立（纪律入台账）；树=无；文件=task-inventory-20260930.md（docs/workflow/operating-records/2026-W40/）+ledger-mirror 3.11；commit 30316a55。
+- 源锚: 发送账 #155-#158（f42f0aee/35b9a895/来件 21:43/来件 22:08）。
+
+## 段二（09-30 22:19）token 轮换批令
+
+1. **CEO 原始需求**（verbatim 要点，#159 07542fa8 转录）：TRIMC_INTERNAL_TOKEN 轮换提请，**批**。
+2. **BOD 扩充**：排窗裁=10-01 夜窗 18-24 批首件今夜不动，裁据三条（23:00 末窗界锚今夜不再开新窗/sg TriMMC 同夜已二轮重启+本机 8713 再加=第三轮生产 daemon 变更疲劳>泄露边际≈0/工序单宜正形走审）；派 COS 今夜工序单正形落笔明早哨窗呈审。
+3. **COS 整理账**：token-rotation-trimc-internal-runbook-20261001.md 落笔毕（commit 15e4c940 候审版：五处驻留面逐处工序/新值生成法零出机/验证锚八条/回滚锚三件/候 BOD 审裁点四条）；溢出案底随段八第四起累计四起。
+4. **C-level 意见**：CTO #142/#145/#150 报备+审计卷 §六.4 五处驻留面全录（2a4f46cf）+第三同步面=在役 job command 内嵌（轮换单须含 job 全扫 PATCH 工序）；CTO 走查预验收讫。
+5. **落点**：任务书=无（工序单文件即执行面正形）；树=无；文件=token-rotation-trimc-internal-runbook-20261001.md；commit 15e4c940。
+- 源锚: 发送账 #141-#150（dde836db/474a0a7d/474916e2/aa78fab3/b4e40bc3/1dfc181a/2a4f46cf）+§段二源=#159。
+
+## 段三（09-30 22:31）wt 转常驻批令+LG-050 销账链
+
+1. **CEO 原始需求**（verbatim 要点，#163 fd217a74 转录）：wt 转常驻，**批**（LG-050 随销条件 b 落地）。
+2. **BOD 扩充**：派三件=台账候办条即销+wt 常驻化机制方案稿明早哨窗呈审+锚前只落台账行（token 工序单不挤占）。
+3. **COS 整理账**：候办条「立而即销」同笔留痕防悬空销（如实注：该条未及入台账面仅存树面 89efd75c）；大表 LG-050 行勘正「BOD 裁①验收销账」双锚（89efd75c+9d0b8922）；三层同顶 681c557d PASS（reflog 勘明 COO 席并行三笔无冲突）。
+4. **C-level 意见**：COO #160-#162 LG-050 三计数今夜窗回收读数（互吞 wt 位 0/对照主树 2/撞锁 0）+BOD 裁①销账裁据+GitHub 腿平毕报（双源核真 5589c56c）。
+5. **落点**：任务书=无；树=无；文件=task-inventory LG-050 行+mirror 段笔；wt 方案稿候明早哨窗（试铸时点未落）。
+- 源锚: 发送账 #160-#164（257e6374/58f3f984/32d2907f/fd217a74/来件 22:34）。
+
+## 段四（09-30 22:41→22:48）本地域/服务域分工纪律（D-38）
+
+1. **CEO 原始需求**（verbatim，#165 9f8a452c 转录）：「本地域班子只做讨论、分析、方案、总结、试验、验证等需要与CEO交互的任务；不做长跑、无需与CEO交互、或已与CEO确定完的任务——这些交服务域跑，节约本地PC电力。决策可以由BOD待裁分发，必要时CEO裁。比喻口径：本地开会讨论，定了之后任务书、树都跑在服务域——咱们本地开会讨论，确定了就交服务器执行。」22:48 追入册令。
+2. **BOD 扩充**：派四件=录台账常驻区+在役/计划任务面逐项对表排查出候选迁移清单（明早哨窗三件并呈）+治理文档对表修订候选办+裁决口径；BOD 两裁（#166 ca724270）=「8713 归属专项勘」准立案（候办新条候维护窗）+席位驻位族合流 wt 稿免开新线。
+3. **COS 整理账**：3.12 条录台账常驻区；local-service-domain-triage-20261001.md v0.1 落笔（18 件三态标四族归纳，最大边界族=8713 本机 cron/daemon 族）；D-38 正式入册（TC 纪律册 73e1d2e，四款+COS 代笔候 CAO 会签）。
+4. **C-level 意见**：CAO 会签追认毕（10-01 23:34，TC 8d9fdc8 会签注：逐款零冲突——D-38 会签链闭合转正，见段六会签总锚）。
+5. **落点**：任务书=无；树=无；文件=local-service-domain-triage-20261001.md+TC 纪律册 D-38 条；commit 3e5486cc（排查稿）/73e1d2e+8d9fdc8（D-38 入册+会签）。
+- 源锚: 发送账 #165-#166/#168（9f8a452c/ca724270/来件 22:45/73e1d2e）。
+
+## 段五（09-30 22:48）大令：纪律入册+大表未完成喂服务器+黄金期流水线+30 分钟节拍
+
+1. **CEO 原始需求**（verbatim 要点，#167 转录）：纪律入册+大表未完成件喂服务器跑+黄金期流水线不停+30 分钟汇报节拍。
+2. **BOD 扩充执行**：①30 分钟 cron 汇报挂 TriMMC（0a630fb7）②第一批直喂=只读勘证三件铸任务书 **bod-pipeline-batch-01** 推 sg 周平面 trees/（fleet 权修正）+m-duty-cos 值席 tmux 投令接单 **Actioning 实锚** ③纪律入册派 COS ④余件分类留档（在途不重喂/候验不喂/冻结不喂/裁决类留本地/排程内不提前）。
+3. **COS 整理账**：D-38 入册毕报（#168 来件 22:56）；值席收口读数到即并入台账。
+4. **C-level 意见**：值席（m-duty-cos）首轮 30 分钟节拍汇报（#171 bb4163ac，23:09 勘）：**batch-01 三件 5m34s 全收口**（件 1 TC502 悬案定性卷/件 2 漂移清单 45 处/件 3 残留 992 行+ink 缺装实证；收口 commit 8749f37f 纪律全守）；NOTIFY 等效投递差异如实（charter source_seat=mmc 名册无值→**名册治理窗候办+1**）。
+5. **落点**：任务书=bod-pipeline-batch-01（sg 周平面 trees/）；树=trees/bod-pipeline-batch-01/（tc502-canonical-suspense-readout.md/lg060-drift-inventory.md/lg059-legacy-path-sweep.md）；commit 8749f37f（值席收口，已随 7cb2ea2e 归并 dev）。
+- 源锚: 发送账 #167/#168/#171（0a630fb7/597e657c/来件 22:56/bb4163ac）。
+
+## 段六（09-30 23:14/23:15/23:16）三令连环：T5 解冻+全权批量裁决+D-39
+
+1. **CEO 原始需求**（verbatim 要点，#172 dc6dc95f/794cc82d 转录）：①23:14「T5 解冻判了明早跑+授权纪律入册+更新 CLAUDE.md」②23:15「大表卡审批件**都你自己决策不要等我**」③23:16「拿不准的可本地咨询团队讨论定意见再裁，入纪律更新 CLAUDE.md」。
+2. **BOD 扩充执行**：T5 解冻裁下（裁据四条+明早工序 pull→抽验→LG-048/051 连带解窗）+大表七件批量裁（LG-041 验收候形式笔/LG-046 验收销/LG-048+051 验收并流/LG-054 M2 准 12-14 主窗/LG-059+060 修复面明窗拆派/LG-057 试点随明日窗/制度补丁准入册）+维持不裁三类（LG-053 亲测保留面/冻结族对称解冻/LG-017-018）+D-39 派 COS 入册（含咨询前置附款）。
+3. **COS 整理账**：大表八行联动毕（4697374c；LG-041/046 销账禁裸销三锚）+候 CEO 项 3→2+D-39 入册（TC 1a29c72，正款三类+BOD 全域待裁+附款一册一条）+分知会 COO/CAO。
+4. **C-level 意见**：CAO 会签毕（10-01 23:34，TC 8d9fdc8：D-38/39/40 三条会签注落，逐款零冲突，D-40 技术要素如实注未独立复测）——**代笔三条全部转正**；COO 排程锚回执（10-01 00:2x 段：M2=10-01 12-14 同窗正式锚定+LG-059/060 三段链拆派=CTO 技审 0-9→FSD 18-24→STE 段内/接力，TC502 追平前置候条件，异议窗至 08:00）。
+5. **落点**：任务书=无新立（批量裁对既有 LG 条）；树=无；文件=task-inventory 八行+TC 纪律册 D-39 条；commit 4697374c/1a29c72/8d9fdc8。
+- 源锚: 发送账 #172/#174（dc6dc95f/794cc82d/来件 23:27）+COO/CAO 来件（00:2x/23:34 hook 现戳，本席收讫卷在台账）。
+
+## 段七（09-30 23:17→23:30）D-40 上报纪律+token 第四起+两点令+batch-02
+
+1. **CEO 原始需求**（verbatim 要点）：①23:17「服务域 30 分钟报进度+BOD 不在位先存+回位补投，入纪律」（#173 9558ac21）②23:30 两点=任务书纯净性（候 CEO 裁件不入任务书/形成任务书=已裁可执行不再问）+C-level 即时同步惯例（防排工基线漂移）（#175 8cc7faef）。
+2. **BOD 扩充执行**：bod-progress-report job 挂 8712（everyMs 1800000+runAs fleet+脚本 bod-progress-snapshot.sh，nextRun 23:50:04 实锚）+D-40 派 COS 入册+惯例首发直发 COO 差量同步（#175 9b2d5ea8）+按新授权重扫大表铸 **batch-02** 四席并行（#176：件 1 LG-017/018 实勘〔cto〕/件 2 LG-059 TriMMC 半仓修复〔fsd〕/件 3 LG-060 字段族 45 处跟新〔fsd〕/件 4 LG-057 A2/A3 试点〔cos〕）。
+3. **COS 整理账**：D-40 入册（1a29c72 同 commit）+3.13/3.14 录台账常驻区+token 溢出第四起入账（#173 fd8f83a4：job command 拉读案，同值无新增泄露面，BOD 脱敏管道固化承诺）+COO 排程锚联动（d7c88b30）。
+4. **C-level 意见**：COO 勘定回执（#177 3c3437d5 来件 23:36：batch-02 差量无异议+范围切分成立+明晚窗量分叉条件入排程+防撞车实效达成=**C-level 同步惯例首件闭环**）。
+5. **落点**：任务书=bod-pipeline-batch-02（sg 周平面 trees/）；树=trees/bod-pipeline-batch-02/ 四件；commit=值席线在途（试铸时点 10-01 02:4x 未收口，如实注）。
+- 源锚: 发送账 #173-#177（9558ac21/fd8f83a4/8cc7faef/9b2d5ea8/27cc481a/来件 23:36/3c3437d5）。
+
+## 段八（10-01 02:41）ink 双 ink 定性+batch-03+本制立制令
+
+1. **CEO 原始需求**（verbatim 要点，#178 转录）：ink 老墙搜证+周会议记录制立制+服务器不闲着（排程内/候验提前）。
+2. **BOD 扩充执行**：三周记录链搜证（W30 trilc-tui-absorb 自研 src/ink 80 文件+W38/39 BUG-20260805-003 缺装归 CARRY-001+今夜 react@19.2.8 reconciler 冲突）→**双 ink 并存根因定性**（npm 测试库拖官方 ink 全家 vs 自研架构冲突，非版本对齐可解）+batch-03 铸发（件 1 TriRLC 旧名修复带测试门〔fsd〕/件 2 ink 攻坚两段式〔cto 方案裁→fsd 执行〕/件 3 三 job 首轮+D-15 哨初读供弹〔cos 值席〕）+本制立制派 COS。
+3. **COS 整理账**：本件试铸+周共学勘位（真源=docs/workflow/operating-records/ 项目级 AI 共学周记/ 归档+各周 project-ai-community-weekly-*.md 草稿——已在 --operating-root 覆盖面内，结论录台账）+迁移范围三项登记（大表✓/周会议记录✓/周共学✓记录面已覆盖）。
+4. **C-level 意见**：COS D-15 观察项②闭合读数（10-01 02:1x：sg-8460-probe 首轮自动跑 00:12:28 双源互证，cron log ok×probe log VERDICT=OK service active 零告警）+CTO 认收（dailyLines 125 注记：告警线系下破判据无需动作）。
+5. **落点**：任务书=bod-pipeline-batch-03（sg 周平面 trees/，三席 tmux 派工 02:47 开工实锚 Pontificating/Combobulating/Sprouting）；树=trees/bod-pipeline-batch-03/；本制本体=weekly-meeting-2026-W40.md（本件）。
+- 源锚: 发送账 #178（637cf8b8 wt/board）+D-15 闭合读数（mirror 02:1x 段笔+CTO 认收来件 02:13）。
+
+## 迁移范围登记（CEO 02:41 令第三件）
+
+| 件 | 真源位 | 迁移覆盖态 |
+|---|---|---|
+| 任务进度大表（task-inventory 族） | operating-records/<week>/ | ✓ 已覆盖（--operating-root 默认值目录内+迁移 job git add 整目录） |
+| 周会议记录（本件族） | operating-records/<week>/weekly-meeting-*.md | ✓ 已覆盖（同上） |
+| 周共学 | 草稿=operating-records/<week>/project-ai-community-weekly-*.md；归档+run-log=operating-records/项目级 AI 共学周记/；工具=scripts/journal/journal-cli.mjs（TMV 仓） | ✓ 记录面已覆盖（草稿+归档均在 operating-records 内）；工具脚本系运行资产非记录资产，不随记录迁移（同 TC 仓 weekly_plane_shift.py 自身仓随平惯例；共学自动化候实现时按服务域部署惯例另行落位，见 automation-backlog.md） |
+
+## 立制说明（本件族）
+
+- 周期：每周一份（随周滚动），COS 整理落档；本周=W40 试铸。
+- 结构：段式组织（一会议段一节），每段五要素齐+源锚行。
+- 动态增长：新段随对话追加；早期段候补录（如实注记）。
+- 迁移：随周平面迁移（operating-records 覆盖面内，见上表）。
+- 可审计：源锚=发送账 #号+msg_id（权威源=wt/board 分支 bod-send-log-backfill 文件）/commit SHA/树路径/来件现戳。
