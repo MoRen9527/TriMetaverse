@@ -440,3 +440,7 @@
   - b0de5014 docs(w40): 机制锚两段更新(daemon级判据型巡检上线段+D-23传播补丁落点一闭合)+树账N17/N18追补(COO记G10批收口+F-2分派)+preswitch证据卷归树(09-29 N6前段6件)
   - aa78fab3 docs(tree): 8710 审计卷勘正注三条——token 双源勘正（.env 真源+unit 重复面）/零溢出范围注/轮换第三同步面（job command 引用全扫）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:30 +08：自上次进度提交 3ce77b0b 后新增 2 条 commit：
+  - c41b8644 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - e6730c51 docs(hub-state): trimmc-port-migration-8712 对表闭——六锚 APPROVE(CTO 21:20 独立走查)+A案 CEO 21:15 面裁转正式+端到端 15s 闭环; 残候办三条维护窗并档
+- registry：v2.1；今日 registry 提交无变化
