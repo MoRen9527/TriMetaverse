@@ -479,3 +479,6 @@
   - 44a06f52 Merge remote-tracking branch 'sg-server/dev' into dev
   - cc82e50f docs(workbench): COO 排程锚落位——LG-054 M2=10-01 12-14 部署主窗正式锚定(门③④+chromium+CORE_VERSION 随窗)+LG-059/060 三段链式拆派(CTO 技审 0-9/FSD 执行 18-24/STE 验接力;TC502 追平前置候条件)(BOD 23:1x 裁·COS 23:2x 知会)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:50 +08：自上次进度提交 6f7d9e19 后新增 1 条 commit：
+  - fabc4d48 docs(bod-pipeline-02): 件1 LG-017/018 未落地条款三态实勘清单——只读勘证 09-30 现势：两日增量全捕（A3前半 4e93488d/B2前半 2ba4a35 翻已落地），A1/A2 锚复新鲜（staging=0/rmc_tick:198），候窗项维持即守约，不值得办三项有锚，可动面仅 runbook 销账+复审首例两笔候窗 @m-duty-cto
+- registry：v2.1；今日 registry 提交无变化
