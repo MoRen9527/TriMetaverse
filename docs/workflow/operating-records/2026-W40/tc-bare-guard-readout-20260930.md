@@ -116,6 +116,13 @@
 - 含意：新 PAT 复活的是 cron 链（20 仓轮询形）；hook 链（TMV 专属即时形）独立存活。两链互补：hook=TMV 即时、cron=全仓小时级
 - **候批件（CTO 裁+BOD 背书 10:16，候下个巡检批随批落不催急）**：hook MIRROR 链健康检测入巡检面——检测锚=fade-hook.log FAILED 增量计数（自上次巡检水位线起算非全量重报）；告警形态=巡检读数卷一行（与 FETCH-FAIL/PUSH-FAIL 同级不开独立通道）；单锚覆盖三死因（ssh key 失效/alias 变更/github-mirror host 损坏全落 FAILED 行）；优先序钉=10:30 cron PAT 链首过结算点不受影响
 
+## 十五、三仓补扫=④真闭合（BOD 令 10:29，CEO 10:29 网页补授权毕）
+
+- 补扫读数（v2 同法子集，10:31）：**TriChain|PASS / TriMobile|PASS / TriWeb4|PASS = 3/3**，AUTH-DEAD=0（store 无扰动）
+- **④真闭合：20/20 全 PASS**（17 首轮+3 补扫）
+- 功能实证料：A 路「repository access 可编辑」坐实——同一 token 未重生成，网页编辑加仓后权限**即时生效零延迟**（403→3 分钟内 PASS）
+- BOD 验收读数链全闭合：credential fill 冒烟（③）→dry-run 17/20+403×3（④）→BOD 双族独立复跑→CEO 补授权→3/3 补扫（④真闭合）
+
 ## 使用依据
 
 - 令文：CTO D-15 派工令 03:42（验证两步禁盲改+纪律三条+告警锚要求）
