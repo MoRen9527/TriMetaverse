@@ -524,3 +524,6 @@
   - 359ef7ae docs(plane): BOD 06:1x 裁+落账四件——LG-057 销账（batch-02件4试点卷判据四条全✓，销账锚pilot-readout在卷，「到达」两态观察项并存记档）/token工序单对表定谳增注（五处全实锚sg3+本机2键同值）/batch-04件2脱敏未遂自拦分档入账（纪律条=卷写即脱敏禁先写后洗）/batch-05挂值席知悉（cos）
   - c1729ca6 docs(workflow): batch-05 件1 对表勘证卷——候修 5 项现势三态+第5项异面定性（8460=bigmodel-h1-proxy 独立项；第5项=回滚安全前提非主路径前置）+8710 插入点+窗内裁决清单六条 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @06:50 +08：自上次进度提交 3963f0bb 后新增 1 条 commit：
+  - 0a3f5f68 docs(plane): BOD 06:5x 核稿裁+落账——LG-055 方案稿核过（裁据四条，执行面=B先导实弹CTO主办+C推广毕，先导窗候COO排程）/batch-06关批（方案A倾向+8460=bigmodel TLS shim定性）/哨窗清单+2（batch-05裁决清单+batch-06连带清单随窗带）/段九吞节头勘损自纠+勘正记录条2（cos）
+- registry：v2.1；今日 registry 提交无变化
