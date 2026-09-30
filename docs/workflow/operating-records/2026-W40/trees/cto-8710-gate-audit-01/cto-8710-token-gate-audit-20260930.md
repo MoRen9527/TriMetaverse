@@ -45,6 +45,12 @@
 - 零真值令遵守：全程无 token 值/无 command 字段全文/transcript 零敏感材料。
 - 本机 Grep 全工作区超时两笔（改精确路径重发成功）——审计方法无碍。
 
+## 六、勘正注（2026-09-30 20:5x，BOD 迁移施工勘明后回补）
+
+1. **token 注入源=双源非单源**：§三.4 原述「token 经 systemd unit override.conf 持久注入」——BOD 施工勘正：**真源=`docker/.env`**（start.sh 源读），unit L31 系重复注入面，双源并存。重启韧性结论不变（两处均磁盘持久），轮换时两处同步。本席 §五 勘验所见 override.conf 在位为实（重复注入面），单源表述随勘。
+2. **§五「transcript 零敏感材料」范围注**：该句陈述本席审计过程事实（本席操作零溢出），不受 BOD 同日 `systemctl cat` 全值溢出事件影响（彼件在 BOD transcript，已由 BOD 自报定性零真值令违反+轮换台账升级，边际泄露≈0 论证同本席 gho_/前段溢出前案）。
+3. **轮换施工要素增量（候轮换单）**：token 轮换同步面不止双源——在役 job command 内嵌 token 引用（config-sync-apply 实锚在案，COS 施工卷报备条）=**第三同步面**，轮换单须含「job command 引用面全扫+逐 job PATCH」工序。
+
 ## 使用依据
 
 BOD 19:44 升急通报+R6 口径同步（安全组已关/MMC→8712+loopback 施工单发 COS/heyuan=TriRMC 解谜/审计标的不变）；TriMMC src/server/app.ts+src/cron/routes.ts+src/cron/command-handler.ts+src/internal-token.ts；TriRLC src/server/app.ts L1797-1812/4779；TriMLC src/server/app.ts L1756-1771/4481；TriRMC src/server/app.ts L148-161/805-806+src/cli.ts L440-462；sg 活体勘验（401 status-code+trimc.service unit cat）。
