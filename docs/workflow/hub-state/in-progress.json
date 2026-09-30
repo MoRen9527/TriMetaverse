@@ -18,6 +18,15 @@
   "note": "CEO 04:57 批①实施：8460 缓解位在位性探测——执行位=sg TriMMC 8710 job 21600s（4 轮/日，即生效型零重启零 allowlist）；双锚只读=①8460 进程在位性（systemd/ss）②proxy.log 日行数<2 告警（9-25 起低活基线 4-5 行，2=下破线候 7 日校准）；告警通道=LG-036 信箱双跳（含双锚读数+分诊指针）；异常触发→值席照 2a9b5e94 SOP 实测定谳（探测只报不定谳，低行数≠故障盲区）；回滚=enabled=0 PATCH 即停；与 D-37 条勿混（本条=8460 模型通道在位性，D-37=席位静默语义）；施工窗=今夜 18-24"
  },
  {
+  "id": "trimmc-port-migration-8712",
+  "treeAnchor": "pending-charter",
+  "treePath": "BOD 施工单 #130（CEO 19:54 直接令经 BOD R1 流转·消息面；任务书正形挂树候排程定）",
+  "owner": "COS（编排）+施工候派（TriMMC 面或 SDE 值席裁）",
+  "priority": "默认（录入序 4）",
+  "status": "waiting-window",
+  "note": "TriMMC（M-SG）8710→8712+改绑 127.0.0.1（两改一次重启窗合并，重启纪律照 8713 正形）；TriRMC（R-HY）守 8710 不动；安全组入站 CEO 已删双机 8710+BOD 外测复验 unreachable（19:55 实锚）。四步=①8710 全引用点扫（job command/notify 配置/席用工装/8460 探测 job 契约面——本条即引用点之一：sg-8460-probe job+ledger-watchlist-patrol sg 面版 notify loopback 8710 均候迁移窗同步）②改绑+重启③引用点逐项同步④既有 job 全数存续验证。验收锚四件+非作者走查=CTO。时点候排程：今晚 8713 窗毕后容量足则续/或明晨哨窗后；明日 14-18 禁排避让"
+ },
+ {
   "id": "tc-bare-force-fetch-fix-tracking",
   "treeAnchor": "68fd158",
   "treePath": "TC 仓锚（TriCompany dev 现顶，非本仓对象）；修案对象=sg /home/fleet/bare-fetch-all.sh L18 refspec 去 `+`（CTO 裁主修）+rejected 不可静默告警锚",
