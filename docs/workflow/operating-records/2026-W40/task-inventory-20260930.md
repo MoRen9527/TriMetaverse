@@ -62,6 +62,7 @@
 
 **10-01 凌晨段（00:1x→02:5x）**：
 17. **周会议记录制立制三件毕**（CEO 02:41 令经 BOD 02:4x 转录派 COS）：①试铸 `weekly-meeting-2026-W40.md` 落笔（96 行八段=今晚流水线夜巨量线，素材=发送账 #141-#178 逐封带 msg_id 全文亲勘）②周共学勘位毕（真源双位=operating-records/项目级 AI 共学周记/ 归档四件+各周 project-ai-community-weekly-*.md 草稿——均在 --operating-root 覆盖面内；scripts/journal/journal-cli.mjs=工具脚本非记录资产如实报）③迁移范围三项登记（大表✓/周会议记录✓/周共学✓记录面已覆盖）+LG-061 立制挂账启用（现役表+1 行）。
+18. **CARRY-001 链销账（10-01 03:4x BOD 裁）+batch-03 全件收口**：件 2 执行=TriRLC 6b845be（03:08:21+08:00 原值）撤 ink-testing-library 改自研 62 行适配件，27/27 绿全量挂 4→3；销账行落 W40 OP unresolved 件（三锚禁裸销）；本表现役表无 CARRY-001 独立行（如实注：该链挂 OP carry-over 面，非 LG 系）；CARRY-004/006 冻结维持不变。batch-03 三件全闭（件 1 LG-059 修复+件 2+件 3 哨窗初读），流水线夜收官。
 
 ## 三、长挂族核对（现役 3+常态注记）
 

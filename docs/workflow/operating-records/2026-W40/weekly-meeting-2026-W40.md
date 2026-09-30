@@ -79,6 +79,14 @@
 5. **落点**：任务书=bod-pipeline-batch-03（sg 周平面 trees/，三席 tmux 派工 02:47 开工实锚 Pontificating/Combobulating/Sprouting）；树=trees/bod-pipeline-batch-03/；本制本体=weekly-meeting-2026-W40.md（本件）。
 - 源锚: 发送账 #178（637cf8b8 wt/board）+D-15 闭合读数（mirror 02:1x 段笔+CTO 认收来件 02:13）。
 
+### 段八·执行段收口补录（10-01 03:1x→03:4x）
+
+1. **执行卷落卷**：件 2 执行读数卷 ink-testlib-fix-readout.md @ b86639a5（值席 m-duty-fsd，**10-01 03:09:09+08:00** commit 原值）；执行交付锚=TriRLC **6b845be**（**10-01 03:08:21+08:00** git show 原值：5 files +77/−506，撤 ink-testing-library+62 行自研适配件 test/tui/helpers/test-renderer.ts）。
+2. **验收锚四条对表**（本席亲验执行卷原文）：27/27 全绿（V4 校准 3 处逐处留痕零删断言）/撤库断言（npm ls empty+lock −491+devDeps −2+`from 'ink'` 直引 0）/全量 203→229 通过 226 挂 4→3（残 3 全预存 out-of-face 零变化如实记）/62 行适配件零引擎触碰（src/tui/ink/ 零 import 变更）。
+3. **BOD 裁 CARRY-001 链销账**（03:4x，裁据三条：最后一挂实证终解/残 3 挂 out-of-face 非本链面/双 ink 定谳+适配件落地=技术债面清）——W40 OP unresolved 件 CARRY-001 行销账态落笔毕（三锚全附禁裸销）；CARRY-004/006 冻结维持态不变（候各自显式解冻令）。
+4. **batch-03 全件收口**：件 1 LG-059 修复（493 行/127 文件，node22 门 203/199/4/0 与基线全等）+件 2 ink 撤库攻坚（本段）+件 3 哨窗初读供弹——三件全闭，流水线夜收官。
+- 补录源锚: b86639a5（执行卷）/6b845be（TriRLC 交付）/batch-03 树三卷/OP-202609-W40-001.unresolved-items.md 销账行。
+
 ## 迁移范围登记（CEO 02:41 令第三件）
 
 | 件 | 真源位 | 迁移覆盖态 |
