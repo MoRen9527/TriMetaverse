@@ -512,3 +512,6 @@
   - c9b9ced4 Merge remote-tracking branch 'sg-server/dev' into dev
   - 7c4e8701 docs(plane): 周会议记录 W40 勘正——CAO 会签时点两处 10-01 23:34→09-30 23:35:26+08:00（git show 8d9fdc8 亲验原值，幻觉时点族勘令指正）+自勘 COO 排程锚回执 10-01 00:2x→09-30 23:2x（mirror 写时记录在先）+卷尾勘正记录行留痕（cos）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:50 +08：自上次进度提交 bc63827b 后新增 1 条 commit：
+  - 7f05a903 docs(plane): CARRY-001 链销账落账（BOD 03:4x 裁）——W40 OP 件销账行三锚（batch-03 方案卷+执行卷 b86639a5+TriRLC 6b845be 03:08:21 原值）+周会议记录段八执行段收口补录（四锚对表亲验）+大表动态条18；CARRY-004/006 冻结维持不变（cos）
+- registry：v2.1；今日 registry 提交无变化
