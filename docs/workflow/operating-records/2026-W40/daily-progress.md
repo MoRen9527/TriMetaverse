@@ -414,3 +414,10 @@
   - 910b92a6 docs(d15): 8460 探测 job 施工读数卷——addJob d684f621 挂载+force run 实弹 PASS（84ms/双锚全绿/dailyLines=5）+五要目对表+token 溢出报备；挂账条转 done-waiting-acceptance 候 CTO 验收
   - 76e4507a feat(fade): D-15 8460 探测执行体 sg-8460-probe.mjs——双锚只读（systemd/ss 在位性+proxy.log 日行数≥2）+LG-036 异常才 notify+log 落 .fade/probe-logs；CTO 派工五要目施工卷件①（CEO 04:57 批①）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:10 +08：自上次进度提交 9a7a9e1e 后新增 5 条 commit：
+  - 602a3cfe Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - a743660b docs(hub-state): 挂账 trimmc-port-migration-8712——CEO 19:54 直接令经 BOD #130 流转，waiting-window 候排程（8713 窗毕后/明晨哨窗后，明日 14-18 禁排避让）
+  - a2ac8792 feat(fade): source_seat A 案追认落卷+护栏升约落 lib——机制位发送必带 attribution 实名（fail-closed throw）
+  - 98b64de8 docs(tree): hub-silent-detect-01 N1 施工读数节点收口（锚 7d746423）
+  - 7d746423 feat(fade): 静默探测批主体四件——900s hub-silent-detect 本体+共享 infra 三件+施工读数卷
+- registry：v2.1；今日 registry 提交无变化
