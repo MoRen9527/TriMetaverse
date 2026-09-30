@@ -67,7 +67,7 @@
 2. **BOD 扩充执行**：bod-progress-report job 挂 8712（everyMs 1800000+runAs fleet+脚本 bod-progress-snapshot.sh，nextRun 23:50:04 实锚）+D-40 派 COS 入册+惯例首发直发 COO 差量同步（#175 9b2d5ea8）+按新授权重扫大表铸 **batch-02** 四席并行（#176：件 1 LG-017/018 实勘〔cto〕/件 2 LG-059 TriMMC 半仓修复〔fsd〕/件 3 LG-060 字段族 45 处跟新〔fsd〕/件 4 LG-057 A2/A3 试点〔cos〕）。
 3. **COS 整理账**：D-40 入册（1a29c72 同 commit）+3.13/3.14 录台账常驻区+token 溢出第四起入账（#173 fd8f83a4：job command 拉读案，同值无新增泄露面，BOD 脱敏管道固化承诺）+COO 排程锚联动（d7c88b30）。
 4. **C-level 意见**：COO 勘定回执（#177 3c3437d5 来件 23:36：batch-02 差量无异议+范围切分成立+明晚窗量分叉条件入排程+防撞车实效达成=**C-level 同步惯例首件闭环**）。
-5. **落点**：任务书=bod-pipeline-batch-02（sg 周平面 trees/）；树=trees/bod-pipeline-batch-02/ 四件；commit=值席线在途（试铸时点 10-01 02:4x 未收口，如实注）。
+5. **落点**：任务书=bod-pipeline-batch-02（sg 周平面 trees/）；树=trees/bod-pipeline-batch-02/ 四件；〔收口补注 10-01 06:1x：件 4 试点卷 lg057-a2a3-pilot-readout.md 收口，判据四条全✓，BOD 06:1x 裁 **LG-057 销账**（大表联动毕；「到达」两态观察项独立记档非阻塞）〕。
 - 源锚: 发送账 #173-#177（9558ac21/fd8f83a4/8cc7faef/9b2d5ea8/27cc481a/来件 23:36/3c3437d5）。
 
 ## 段八（10-01 02:41）ink 双 ink 定性+batch-03+本制立制令
@@ -87,7 +87,14 @@
 4. **batch-03 全件收口**：件 1 LG-059 修复（493 行/127 文件，node22 门 203/199/4/0 与基线全等）+件 2 ink 撤库攻坚（本段）+件 3 哨窗初读供弹——三件全闭，流水线夜收官。
 - 补录源锚: b86639a5（执行卷）/6b845be（TriRLC 交付）/batch-03 树三卷/OP-202609-W40-001.unresolved-items.md 销账行。
 
-## 迁移范围登记（CEO 02:41 令第三件）
+## 段九（10-01 06:1x）batch-04/batch-05 段（清晨）
+
+1. **CEO 原始需求**：承夜链（token 轮换已批+驻留面收敛观察项），无新原始令——BOD 裁决面推进。
+2. **BOD 扩充执行**：batch-04 双勘证卷挂树（655cfad2：M2 前置三组+token 驻留刷新 v2 净形）；batch-05 一件挂值席（M2 执行单对表，窗内裁决清单供弹）。
+3. **COS 整理账**：LG-057 销账落账（大表行+计数 19 单）+token 工序单对表定谳增注（五处全实锚）+batch-04 件 2 值席 v1 卷**脱敏未遂自拦**分档入账（未 commit 未出机当场覆写；纪律条=卷写即脱敏禁先写后洗）——案底分档=既遂四起+未遂自拦一起。
+4. **C-level 意见**：值席（m-duty-cos）自拦即时认报（v1 截断脱敏失效自纠入卷——「写时未脱敏、后补洗」路径当场拦停覆写，未遂未出机）。
+5. **落点**：树=trees/bod-pipeline-batch-04/（task-charter+token-residency-rescan 双件 655cfad2）+batch-05 值席在途；大表/工序单/台账联动 commit 候本段 commit 锚。
+- 源锚: BOD 06:1x 裁+落账令（跨席来件 06:1x hook 现戳 06:10:01+0800）/655cfad2（batch-04 双勘证卷）/lg057-a2a3-pilot-readout.md（销账锚卷）。
 
 | 件 | 真源位 | 迁移覆盖态 |
 |---|---|---|
