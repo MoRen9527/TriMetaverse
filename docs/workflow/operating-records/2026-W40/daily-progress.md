@@ -388,3 +388,9 @@
   - 2ccd87cd docs(w40): 案b终裁回填——CEO 09-30 04:57批维持BOD原判(结构性事件三叠法定谳非个人擅离,COO低位观察);8460代理层排除回填(该窗零请求零异常,外部诱因收窄上游模型侧);外部诱因定谳续挂CHO面候令不催窗;历史叙述不改写,回填注记留痕
   - 1d5533bf docs(hub-state): tracking 条联动注记——04:30 轮终验 FF 正常读数项闭合+a 案前置解锁（CEO 04:57 批新发 PAT 链启动，a 案候新 PAT 落位后施工）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:20 +08：自上次进度提交 199d6815 后新增 4 条 commit：
+  - 61b93fb5 docs(w40): 候批件录案——hook MIRROR健康检测入巡检面(FAILED增量水位线锚/告警一行同级/单锚覆盖三死因,CTO裁+BOD背书)候下个巡检批随批
+  - 47ba9055 docs(w40): ④验收毕+双链机制定谳§十四——hook MIRROR=ssh key形(TMV专属即时,555/13,223a512e三层同顶实锚,TMV欠账=0)/cron push段=PAT形20仓(9天欠账主战场,10:30首过结算);BOD双族复跑验收全认
+  - 223a512e Merge sg-bare/dev（daily-progress-watcher 199d6815 零交叠）
+  - ff742d47 docs(w40): 施工序④完工读数§十三——新PAT验证扫17/20 PASS+403三仓(TriChain/TriMobile/TriWeb4=授权缺仓候CEO补勾)+AUTH-DEAD=0+store后验行在/md5恒等/approve同值重写正形(§十一机理预测读数);push通道复活17/20
+- registry：v2.1；今日 registry 提交无变化
