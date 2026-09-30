@@ -515,3 +515,6 @@
 - 巡检兜底补写 @03:50 +08：自上次进度提交 bc63827b 后新增 1 条 commit：
   - 7f05a903 docs(plane): CARRY-001 链销账落账（BOD 03:4x 裁）——W40 OP 件销账行三锚（batch-03 方案卷+执行卷 b86639a5+TriRLC 6b845be 03:08:21 原值）+周会议记录段八执行段收口补录（四锚对表亲验）+大表动态条18；CARRY-004/006 冻结维持不变（cos）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:50 +08：自上次进度提交 e2a7e6e9 后新增 1 条 commit：
+  - 655cfad2 docs(workflow): batch-04 双勘证卷——M2 前置三组（R-HY 面缺项如实录）+token 驻留刷新 v2 净形（v1 截断脱敏失效自纠入卷；嵌入值同基准判零异）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
