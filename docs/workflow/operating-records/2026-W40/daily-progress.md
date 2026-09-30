@@ -496,3 +496,7 @@
   - 05c68a2f docs(workflow): BOD 流水线批次 02 件 3 读数卷——LG-060 字段族测试面跟新（TriRLC 三族 46 处逐处对表；投影穿透同构先例；node22 门 203/199/4 净收口 −9；卡点 4 挂+5 tsc 预存在案）@m-duty-fsd
   - d35cb5d4 docs(workflow): BOD 流水线批次 02 件 2 读数卷——LG-059 TriMMC 旧名叙事面修复（888 行/120 文件改名+18 行兼容面 K 保留；测试门 476/466/10/0 零回归；复扫 R 面零命中；10 挂预存 out-of-face 逐族归因卡点在案）@m-duty-fsd
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:20 +08：自上次进度提交 47cb7ab4 后新增 2 条 commit：
+  - b055d60a docs(workflow): 总表补录 LG-059/060 双单（批次02 修复毕+CTO 收口成立态；族2 专窗候排）@m-duty-cos
+  - 8aeca92a docs(bod-pipeline-02): 批次02 收口审查裁决卷——三族裁毕：族1 alias 对表成立零补/族2 registry 文件名收敛不可补归专窗（manifest 三 target 同步前置）/族3 TriMC Scheduler payload 维持 K 档（真源 B 档原文预裁）+随批窗原子切换条款；LG-060 trirlc 事故字裁可；件2+3 测试门判读过=收口成立 @m-duty-cto
+- registry：v2.1；今日 registry 提交无变化
