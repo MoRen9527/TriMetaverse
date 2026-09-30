@@ -1,0 +1,992 @@
+# LG-059 旧名路径残留全扫卷（勘证半件）
+
+- 执行: m-duty-cos 0925；边界=只扫不改，修复面留 CTO 分派
+- 扫描域=TriRLC/TriMMC 两仓 test+src 面（node_modules 除外）；旧名形态=TriLC/TriMC 路径与标识残留
+
+## TriRLC（旧名 TriLC）
+
+- /README.md:1 # TriLC
+- /README.md:3 > **命名锚定（2026-08-24，quad-migration v1.0）**：本模块叙事面已更名 **TriRLC**（元现实本地控制器，读 "Tri-R-L-C"），与 TriRMC 共用自研内核 agent-core。仓目录名 
+- /README.md:5 TriLC is the TriMetaverse Local Controller.
+- /README.md:18 - this snapshot is the starting point for evolving OpenClaw into the TriLC local-domain controller
+- /AGENTS.md:1 # TriLC Agent Rules
+- /AGENTS.md:5 - TriLC 是本地域控制器。
+- /AGENTS.md:24 当前 registry agent canonical discovery 位于 `TriLC/.github/agents/`。同名中央 discovery 文件不应在 `TriMetaverse/.github/agents/` 并行保
+- /test/env-fallback.test.ts:50 const candidates = buildEnvFileCandidates('D:/Code/ai/TriLC/dist/config', 'D:/Code/ai/TriLC');
+- /test/env-fallback.test.ts:52 assert.ok(candidates.includes(resolve('D:/Code/ai/TriLC', '.env')), 'TriLC 根候选仍在');
+- /test/connection-manager.test.ts:1 // ── TriLC Connection Manager Tests ──
+- /test/sync-engine.test.ts:1 // ── TriLC Sync Engine Tests ──
+- /test/project-link.test.ts:163 assert.notEqual(normalizeGitUrl('https://github.com/MoRen9527/TriLC.git'), canonical);
+- /test/heartbeat-runner.test.ts:1 // ── TriLC Heartbeat Runner Tests ──
+- /test/init-sync.test.ts:272 assert.ok(commitCall.includes('user.name=TriLC Init Sync'));
+- /test/event-queue.test.ts:2 // Tests for TriLC/src/event-queue/* — SQLite persistence, enqueue, replay cycle.
+- /test/session-reaper.test.ts:1 // ── TriLC Session Reaper Tests ──
+- /test/heartbeat-wake.test.ts:1 // ── TriLC Heartbeat Wake Tests ──
+- /test/tools-ctx-cwd.test.ts:1 // ── Tools ctx.cwd resolution tests (r4-1 A-TriLC) ──
+- /test/tools-ctx-cwd.test.ts:54 describe('ctx.cwd propagation — five read tools (A-TriLC)', () => {
+- /test/tools-ctx-cwd.test.ts:98 describe('ctx absent — legacy fallback to process.cwd() (A-TriLC)', () => {
+- /test/smoke.test.ts:1 // ── TriLC Phase C3 Smoke Tests ──
+- /test/tools/tool-unit-tests.mjs:1 // ── TriLC Tool Unit Tests (Task D) ──
+- /test/server/cron-mcp-entry-guard.test.ts:5 // rmc-TriLC.md P0-1（发现 8）三条任意命令执行通道中的两条：(a) POST/PATCH cron jobs
+- /test/server/cron-mcp-entry-guard.test.ts:10 // 修复语义与文案契约钉死（src/server/app.ts，行号为 TriLC HEAD=26720dd 工作树 Read 实证）：
+- /test/server/auth-gate-rejection.test.ts:5 // rmc-TriLC.md P0-1（发现 8）——「全 HTTP 面零认证 + 无 Host 校验可被 DNS rebinding
+- /test/server/auth-gate-rejection.test.ts:6 // 远程触达」。修复语义（src/server/app.ts，行号为 TriLC HEAD=26720dd 工作树 Read 实证）：
+- /test/server/auth-gate-rejection.test.ts:258 describe('P0 通道一/二端到端：createTriLCApp 真实 HTTP 全局门（rmc-TriLC.md P0-1 向量复现）', () => {
+- /test/tui/components.test.ts:206 assert.ok(frame.includes('TriLC'), 'Should contain English text');
+- /.github/agents/TriLCProductRegistry.agent.md:3 description: "适用场景：TriLC 产品事实、本地域职责、当前进展、本地 runtime 范围、节点升级职责或本地域 controller 产品问题。"
+- /.github/agents/TriLCProductRegistry.agent.md:9 你是 `TriLC` 模块的无人格产品 registry，也是 TriLC 模块侧 canonical discovery 入口。
+- /.github/agents/TriLCProductRegistry.agent.md:13 1. 解释 TriLC 作为本地域 controller 的职责。
+- /.github/agents/TriLCProductRegistry.agent.md:33 - 本 agent 是 TriLC 模块侧 canonical discovery 入口；同名中央 discovery 文件不得并行保留。
+- /.github/agents/TriLCProductRegistry.agent.md:46 其中只覆盖 `TriLC` 的产品侧事实。
+- /.github/agents/TriLCBusinessStrategyRegistry.agent.md:3 description: "适用场景：TriLC 商业定位、本地域控制器职责、本地 runtime 在当前商业模式中的作用、本地执行边界、与 Tride/Tripilot/TriMC 的协同或中央收口中的模块商业事实。"
+- /.github/agents/TriLCBusinessStrategyRegistry.agent.md:9 你是 `TriLC` 模块的无人格 business strategy registry，也是 TriLC 模块 registry 三件套的商业上游。
+- /.github/agents/TriLCBusinessStrategyRegistry.agent.md:13 1. 报告 `TriLC` 的商业定位、当前默认职责、当前阶段范围和模块边界。
+- /.github/agents/TriLCBusinessStrategyRegistry.agent.md:14 2. 解释 `TriLC` 作为本地域控制器、本地 runtime 与本地执行生命周期承接层的商业作用。
+- /.github/agents/TriLCBusinessStrategyRegistry.agent.md:15 3. 在 `CENTRAL_REGISTRY_CLOSEOUT` 场景下，提供 `TriLC` 商业侧的结构化 findings、待回写项和升级项。
+- /.github/agents/TriLCBusinessStrategyRegistry.agent.md:31 - 不把 `TriLC` 写成服务域主控或中央战略层。
+- /.github/agents/TriLCBusinessStrategyRegistry.agent.md:34 - 本 agent 是 TriLC 模块侧 canonical discovery 入口；同名中央 discovery 文件不得并行保留。
+- /.github/agents/TriLCBusinessStrategyRegistry.agent.md:47 其中只覆盖 `TriLC` 的模块商业定位、本地域边界和模块级 business 文档回写建议。
+- /.github/agents/TriLCCodeRegistry.agent.md:3 description: "适用场景：TriLC 代码结构、本地 runtime 布局、planner 区域、仓库健康、代码质量风险或 git 侧结构问题。"
+- /.github/agents/TriLCCodeRegistry.agent.md:9 你是 `TriLC` 模块的无人格代码 registry，也是 TriLC 模块侧 canonical discovery 入口。
+- /.github/agents/TriLCCodeRegistry.agent.md:35 - 本 agent 是 TriLC 模块侧 canonical discovery 入口；同名中央 discovery 文件不得并行保留。
+- /.github/agents/TriLCCodeRegistry.agent.md:48 其中只覆盖 `TriLC` 的代码侧事实。
+- /src/cli.ts:2 // ── TriLC CLI ──
+- /src/cli.ts:3 // Provides start/stop/status/run commands for the TriLC daemon.
+- /src/cli.ts:21 const DEFAULT_SERVICE_NAME = 'TriLC';
+- /src/cli.ts:23 const REGRUN_VALUE = 'TriLC';
+- /src/cli.ts:27 console.log(`TriLC (Local Controller) — TriMetaverse Desktop Daemon
+- /src/cli.ts:40 install-service    Register as Windows Service       trilc install-service [--name TriLC] [--displayName "..."]
+- /src/cli.ts:41 uninstall-service  Unregister Windows Service        trilc uninstall-service [--name TriLC]
+- /src/cli.ts:642 //   RegRun auto-starts TriLC at user login — no admin, users own keys, zero external
+- /src/cli.ts:666 console.error('ERROR: TriLC already registered as Windows Service.');
+- /src/cli.ts:672 console.log('[trilc] TriLC already registered in Registry Run.');
+- /src/cli.ts:686 console.log('[OK] TriLC registered in Registry Run (auto-start on login).');
+- /src/cli.ts:698 console.log('[trilc] TriLC not found in Registry Run.');
+- /src/cli.ts:708 console.log('[OK] TriLC 已从 Registry Run 移除。');
+- /src/tools/shell-exec.ts:1 // ── TriLC shell_exec tool ──
+- /src/tools/file-edit.ts:1 // ── TriLC Edit tool ──
+- /src/tools/file-ls.ts:1 // ── TriLC LS tool (P2-Batch1-#7) ──
+- /src/tools/file-read.ts:1 // ── TriLC Read tool ──
+- /src/tools/file-write.ts:1 // ── TriLC Write tool ──
+- /src/tools/send-message.ts:1 // ── TriLC SendMessageTool (P1 A级复制) ──
+- /src/tools/send-message.ts:4 // - CC 依赖 mailbox/teammate 系统 → TriLC 使用 localbus 进程内通信
+- /src/tools/send-message.ts:5 // - CC 支持 shutdown/plan 协议 → TriLC 单进程，简化为基础消息传递
+- /src/tools/send-message.ts:6 // - CC 支持 bridge/uds 跨会话 → TriLC 仅支持进程内消息
+- /src/tools/send-message.ts:23 // CC-equivalent message tool with TriLC localbus adaptation
+- /src/tools/send-message.ts:30 description: 'Send a message to another agent.\n\n```\n{"to": "researcher", "summary": "assign task 1", "message": "star
+- /src/tools/send-message.ts:67 const from = 'agent'; // TriLC simplified - no complex teammate naming
+- /src/tools/plan-mode.ts:17 // TriLC now has TWO plan-mode enforcement layers:
+- /src/tools/todo-write.ts:1 // ── TriLC TodoWrite tool (P2-Batch1-#2 + P2-Batch2 CC-fidelity) ──
+- /src/tools/todo-write.ts:248 description: 'Task priority (TriLC extension, not in CC)',
+- /src/tools/agent-tool.ts:1 // ── TriLC AgentTool (P1 A级复制 - 子代理能力跃升) ──
+- /src/tools/agent-tool.ts:4 // - CC 使用复杂的 teammate/bridge 系统 → TriLC 使用 agent-core spawnAgent 进程内递归
+- /src/tools/agent-tool.ts:5 // - CC 支持 worktree/remote isolation → TriLC 简化为基础进程内隔离
+- /src/tools/agent-tool.ts:6 // - CC 有复杂的 agent 加载系统 → TriLC 使用 agent-core built-in agents
+- /src/tools/file-grep.ts:1 // ── TriLC Grep tool ──
+- /src/tools/file-glob.ts:1 // ── TriLC Glob tool ──
+- /src/company/sync-bundle.ts:1 // ── Sync Bundle 契约与纯函数（生成端，TriLC 侧独立实现）──
+- /src/company/sync-bundle.ts:2 // init-collab-i4-five-dim-sync i4-1 拆解 §一 schema 契约（TriLC 侧）：
+- /src/company/init-sync.ts:22 //      → commit（-c user.name="TriLC Init Sync" -c user.email=
+- /src/company/init-sync.ts:421 '-c', 'user.name=TriLC Init Sync',
+- /src/company/session-initializer.ts:2 // 6.4 会话初始化器（本地 TriLC 端）：员工会话启动统一入口
+- /src/heartbeat/heartbeat-active-hours.ts:1 // ── TriLC Heartbeat Active Hours ──
+- /src/heartbeat/heartbeat-wake.ts:1 // ── TriLC Heartbeat Wake ──
+- /src/heartbeat/index.ts:1 // ── TriLC Heartbeat Barrel ──
+- /src/heartbeat/heartbeat-runner.ts:1 // ── TriLC Heartbeat Runner ──
+- /src/heartbeat/agent-runner.ts:1 // ── TriLC Agent Runner ──
+- /src/project/weekly-plane-root.ts:3 // as a READ-ONLY shared view for TriLC. Never created, never written by TriLC —
+- /src/project/weekly-plane-root.ts:8 //   2. Workspace sibling discovery: <TriLC-root>/../TriMetaverse/docs/workflow/
+- /src/project/weekly-plane-root.ts:39 //    TriLC repo — r2-3 regression: fixed from '..', '..'.)
+- /src/project/multi-project-router.ts:15 //                 TriLC (write ownership stays with the orchestration layer).
+- /src/session-store/index.ts:1 // ── TriLC Session Store Index ──
+- /src/session-store/store.ts:1 // ── TriLC Session Store (SQLite) ──
+- /src/session-store/store.ts:60 // CTO-009-4: cloud sync schema migration — Phase 1 TriLC→TriMC single-direction push.
+- /src/session-store/types.ts:1 // ── TriLC Session Store Types ──
+- /src/mirror/types.ts:1 // ── TriLC Mirror Types ──
+- /src/mirror/types.ts:2 // S7: TriLC-side mirror types (compatible with TriMC MirrorRequest).
+- /src/mirror/types.ts:5 /** TriLC 侧 mirror 任务快照（不包含 TriMC 服务端字段） */
+- /src/mirror/pusher.ts:1 // ── TriLC TaskMirrorPusher ──
+- /src/localbus/bus.ts:1 // ── TriLC Localbus ──
+- /src/daemon/service.ts:1 // ── TriLC Daemon Service Interface ──
+- /src/daemon/service.ts:10 /** Service label / task name. Default: "TriLC Daemon". */
+- /src/daemon/service.ts:22 /** TriLC data directory for PID/session/event persistence. */
+- /src/daemon/service.ts:91 `TriLC daemon service is not supported on ${process.platform}`,
+- /src/daemon/systemd.ts:1 // ── TriLC Daemon — Linux systemd ──
+- /src/daemon/systemd.ts:49 `Description=TriMetaverse Local Controller (TriLC)`,
+- /src/daemon/systemd.ts:50 `Documentation=https://github.com/MoRen9527/TriLC`,
+- /src/daemon/launchd.ts:1 // ── TriLC Daemon — macOS launchd ──
+- /src/daemon/schtasks.ts:1 // ── TriLC Daemon — Windows schtasks ──
+- /src/daemon/watchdog.ts:1 // ── TriLC Watchdog ──
+- /src/daemon/watchdog.ts:2 // Independent watchdog process that monitors the TriLC daemon child process.
+- /src/daemon/watchdog.ts:10 // The watchdog spawns the main TriLC process as a child and monitors its
+- /src/daemon/constants.ts:1 // ── TriLC Daemon Constants ──
+- /src/daemon/constants.ts:5 export const TRILC_TASK_NAME = "TriLC Daemon";
+- /src/sync/index.ts:1 // ── TriLC Sync Engine Index ──
+- /src/sync/index.ts:2 // 会话云同步：TriLC → TriMC 单向推送（Phase 1）
+- /src/sync/payload-builder.ts:1 // ── TriLC Sync Payload Builder ──
+- /src/sync/sync-engine.ts:1 // ── TriLC Cloud Sync Engine ──
+- /src/sync/sync-engine.ts:2 // Core sync engine for TriLC → TriMC single-direction session sync (Phase 1).
+- /src/sync/types.ts:1 // ── TriLC Sync Engine Types ──
+- /src/sync/types.ts:2 // Session cloud sync: TriLC → TriMC (Phase 1 single-direction)
+- /src/sync/retry.ts:1 // ── TriLC Sync Retry Logic ──
+- /src/server/app.ts:1 // ── TriLC Local HTTP Server ──
+- /src/server/app.ts:10 // TriLC does NOT load pipeline (Soul Loader / Memory Injector / Context Builder / Tool Gater).
+- /src/server/app.ts:1569 repo: process.env.TRILC_GITHUB_REPO ?? 'MoRen9527/TriLC',
+- /src/server/app.ts:4789 `你是 TriLC 业务组长「${LEAD_AGENT_ID}」（LG-026 注册制组长，事件驱动唤醒，单次唤醒办完即眠）。`,
+- /src/server/app.ts:4822 repo: process.env.TRILC_GITHUB_REPO ?? 'MoRen9527/TriLC',
+- /src/local-node/node.ts:3 // agentLoop integration but as a direct API for other TriLC modules.
+- /src/skills/bundled-skills.ts:7 // TriLC's BundledSkillDefinition (getPromptForCommand returns a string)
+- /src/skills/bundled-skills.ts:62 // AGENT_TOOL_NAME placeholder resolved to TriLC's AgentTool name ("Agent").
+- /src/skills/bundled-skills.ts:116 // paths; both are CC-runtime-specific. TriLC adaptation keeps the diagnostic
+- /src/skills/bundled-skills.ts:141 // CC's version reviews auto-memory layers (ant-only feature). TriLC has no
+- /src/skills/bundled-skills.ts:195 // CC bundles 247KB embedded docs; TriLC condenses to a focused prompt that
+- /src/skills/bundled-skills.ts:261 // ── P6: keybindings (adapted for TriLC, CC equivalent) ──
+- /src/skills/bundled-skills.ts:457 // CC bundles 247KB of embedded docs via Bun text loader; TriLC uses a
+- /src/skills/bundled-skills.ts:476 // ── P6: keybindings (adapted for TriLC, CC equivalent) ──
+- /src/cron/service.ts:1 // ── TriLC Cron Service ──
+- /src/cron/index.ts:1 // ── TriLC Cron Barrel ──
+- /src/cron/session-reaper.ts:1 // ── TriLC Session Reaper ──
+- /src/cron/store.ts:1 // ── TriLC Cron Store ──
+- /src/cron/store.ts:2 // SQLite persistence for cron jobs (cron.db in the TriLC data directory).
+- /src/cron/types.ts:1 // ── TriLC Cron Types ──
+- /src/cron/timer.ts:1 // ── TriLC Cron Timer ──
+- /src/cron/scheduler.ts:1 // ── TriLC Cron Scheduler ──
+- /src/config/trilc-profile.ts:1 // ── TriLC Runtime Profile ──
+- /src/config/key-cache.ts:1 // ── TriLC Key Cache ──
+- /src/config/key-cache.ts:192 * Used by TriLC consumer layer to re-initialize ModelClient with fresh keys.
+- /src/config/contract-resolver.ts:4 // 用途: TriLC 启动时加载所有 agent 定义，运行时根据 agent_id 注入对应身份
+- /src/config/env.ts:47 * （工作区根/TriLC 根/cwd）全部落空 → schtasks 实例 keys fetch 401。
+- /src/config/env.ts:60 resolve(scriptDir, '..', '..', '.env'),       // TriLC 根 .env
+- /src/config/env.ts:110 // Development workspace: TriCompany/source-agents next to TriLC
+- /src/config/env.ts:119 * Resolve TriLC version from:
+- /src/config/env.ts:121 *  2. version.json at the TriLC root (relative to this module)
+- /src/config/key-encryptor.ts:1 // ── TriLC Key Encryptor (S2): AES-256-GCM + PBKDF2 machine fingerprint ──
+- /src/config/key-encryptor.ts:8 // This is a TriLC-local copy of TriModel/src/security/key-encryptor.ts
+- /src/mcp/mcp-client.ts:6 // lines for TriLC MVP. No OAuth, no resource/prompt support, no LRU cache.
+- /src/mcp/mcp-config.ts:3 // and project-local .trilc/mcp.json (TriLC-specific).
+- /src/mcp/mcp-config.ts:79 // 3. TriLC-specific: {cwd}/.trilc/mcp.json (highest priority)
+- /src/mcp/mcp-config.ts:134 * Writes to .trilc/mcp.json (TriLC-specific, highest priority) by default,
+- /src/tui/test-report.md:1 # TriLC TUI MVP 验证测试报告
+- /src/tui/test-report.md:198 - `TriLC/src/tui/tech-design.md` — CTO 技术设计
+- /src/tui/test-report.md:199 - `TriLC/package.json` — 依赖声明
+- /src/tui/test-report.md:200 - `TriLC/tsconfig.json` — 编译配置
+- /src/tui/tech-design.md:1 # TriLC TUI — T1 MVP 技术设计
+- /src/tui/tech-design.md:19 - **吸收方案**：任务描述称 absorption-plan.md 联审已通过，但经全仓搜索，`TriLC/` 及 `TriCompany/` 下均未找到该文件。本设计基于 vendor 基线实际代码状态进行独立技术评估。若吸收方案后续
+- /src/tui/tech-design.md:20 - **vendor 基线**：`TriLC/vendor/claude-code-tui/` 已就位，共 156 文件（ink/ 98 + components/ 57 + ink.ts 1）。
+- /src/tui/tech-design.md:21 - **工作路径**：所有 TUI 代码写入 `TriLC/src/tui/`，不进入 `TriMetaverse/` 项目根目录。
+- /src/tui/tech-design.md:525 TriLC/
+- /src/tui/tech-design.md:632 P1.7  ★ 冒烟验证：渲染 <Box><Text>Hello TriLC</Text></Box>
+- /src/tui/tech-design.md:636 **门禁**：`npm run check` 无类型错误 + 终端输出 "Hello TriLC"
+- /src/tui/tech-design.md:735 | Ink 引擎核心 | `TriLC/vendor/claude-code-tui/ink/root.ts`, `ink.tsx`, `reconciler.ts`, `renderer.ts`, `dom.ts`, `screen.ts
+- /src/tui/tech-design.md:736 | Yoga 布局适配器 | `TriLC/vendor/claude-code-tui/ink/layout/yoga.ts`, `engine.ts`, `node.ts` |
+- /src/tui/tech-design.md:737 | ThemeProvider 剥离证明 | `TriLC/vendor/claude-code-tui/ink.ts`（仅做 ThemeProvider 包裹） |
+- /src/tui/tech-design.md:738 | Daemon API | `TriLC/src/server/openai-stream.ts`（SSE 格式化），`TriLC/src/server/app.ts`（路由） |
+- /src/tui/tech-design.md:739 | CLI 入口 | `TriLC/src/cli.ts`（现有 start/stop/status/run 命令） |
+- /src/tui/tech-design.md:740 | Code Registry | `TriLC/docs/registry/code-state.md` |
+- /src/tui/tech-design.md:741 | Package 基线 | `TriLC/package.json`, `TriLC/tsconfig.json` |
+- /src/tui/test-report-t2.md:1 # TriLC CLI TUI T2 — 体验打磨验证测试报告
+- /src/tui/test-report-t2.md:30 Set-Location D:\OneDrive\Code\ai\TriLC; npx tsc --noEmit
+- /src/tui/test-report-t2.md:214 **说明**: `src/tui/vendor/` 目录不存在。T1 报告中提到的 `vendor/` 实际位于 TriLC 项目根级别 (`vendor/claude-code-tui/ink/`)，其内容已被吸收至 `src/tui/i
+- /src/tui/test-report-t2.md:244 - `TriLC/src/tui/hooks/useChat.ts` — chat 状态管理（T2 扩展）
+- /src/tui/test-report-t2.md:245 - `TriLC/src/tui/hooks/useSSE.ts` — SSE 流解析（T2 扩展）
+- /src/tui/test-report-t2.md:246 - `TriLC/src/tui/components/Messages.tsx` — 消息列表容器
+- /src/tui/test-report-t2.md:247 - `TriLC/src/tui/components/MessageResponse.tsx` — 单条消息渲染
+- /src/tui/test-report-t2.md:248 - `TriLC/src/tui/components/ToolCallLine.tsx` — 工具调用行组件（新）
+- /src/tui/test-report-t2.md:249 - `TriLC/src/tui/app.tsx` — TUI 根组件
+- /src/tui/test-report-t2.md:250 - `TriLC/src/tui/render.tsx` — TUI 启动器（SIGINT handler）
+- /src/tui/test-report-t2.md:251 - `TriLC/src/tui/components/Spinner.tsx` — 不变项（对照）
+- /src/tui/test-report-t2.md:252 - `TriLC/src/tui/components/PromptInput.tsx` — 不变项（对照）
+- /src/tui/test-report-t2.md:253 - `TriLC/src/tui/components/Markdown.tsx` — 不变项（对照）
+- /src/tui/test-report-t2.md:254 - `TriLC/src/cli.ts` — 不变项（对照）
+- /src/tui/test-report-t2.md:255 - `TriLC/src/server/` — 不变项（对照）
+- /src/tui/utils/Cursor.ts:389 // ── Helper stubs for CC API compatibility (TriLC has no image refs) ──
+- /src/tui/hooks/useBlink.ts:3 // Adapted: uses setInterval (no ClockContext in TriLC Ink setup),
+- /src/tui/hooks/useAnthropicSSE.ts:1 // Anthropic SSE client for TriLC daemon /v1/messages
+- /src/event-queue/store.ts:1 // ── TriLC Event Queue SQLite Store ──
+- /src/event-queue/queue.ts:1 // ── TriLC Event Queue ──
+- /src/event-queue/types.ts:1 // ── TriLC Event Queue Types ──
+- /src/update/update-check.ts:2 // Periodically checks GitHub Releases for a newer TriLC version.
+- /src/update/update-check.ts:118 'User-Agent': 'TriLC-Update-Check/1.0',
+- /src/letter-store/letter-sweeper.ts:1 // ── TriLC Letter Sweeper（LG-026-P3-R3/R4）──
+- /src/letter-store/store.ts:1 // ── TriLC Letter Store (SQLite) ──
+- /src/letter-store/types.ts:1 // ── TriLC Letter Store Types ──
+- /src/services/compact/prompt.ts:1 // ── Compact Prompt (CC prompt.ts adapted for TriLC) ──
+- /src/services/compact/compact.ts:1 // ── Compact Service (CC compact.ts adapted for TriLC) ──
+- /src/services/compact/compact.ts:4 // Shim dependencies: removed PTL retry, skill reinjection, hooks (TriLC lacks these).
+- /src/services/compact/compact.ts:26 * Adapted from CC compactConversation() with TriLC message structure.
+- /src/services/compact/compact.ts:154 * Prepare compacted message list for TriLC.
+- /src/services/compact/grouping.ts:1 // ── Message Grouping (CC grouping.ts adapted for TriLC) ──
+- /src/services/compact/grouping.ts:3 // Adapted from CC groupMessagesByApiRound for TriLC's simpler Message structure.
+- /docs/engineering/STATE.md:1 ﻿# TriLC 技术状态
+- /docs/engineering/DESIGN.md:1 ﻿# TriLC 技术设计
+- /docs/engineering/ROADMAP.md:1 ﻿# TriLC 技术路线图
+- /docs/workflow/README.md:1 ﻿# TriLC Workflow 索引
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:1 # TriLC CLI TUI T2 — 体验打磨技术设计
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:7 关联：TriLC T1 MVP（5 组件 + SSE + tsc 零错误，已完成）
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:15 - **PASS** — 目标写入路径 `TriLC/docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/` 位于正确模块 `TriLC/` 内，无路径污染。
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:21 | 中央 BusinessStrategy | TriCompany 内 | 本设计为 TriLC 模块内 TUI 体验层变更，不触及模块边界或交付优先级仲裁，无需升级 |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:22 | Code Registry | TriCompany/docs/registry/code-state.md | TriLC 当前未列入 code-state.md 显式条目，作为本地域执行节点模块，当前设计增量不改变模块面边界 |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:23 | 模块级 Code Registry | TriLC/docs/registry/ | 尚未创建。T1 MVP 属于快速验证阶段，T2 完成后应补齐模块级 code-state.md |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:24 | 工程真源 | TriCompany/docs/engineering/DESIGN.md | 不冲突。TriLC 作为 OpenTride 本地节点实现，符合当前阶段架构定位 |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:30 核查路径：`TriLC/src/server/openai-stream.ts`
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:504 - [ ] T2 代码合入 `TriLC/src/tui/` 主分支
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:505 - [ ] 更新 `TriLC/src/tui/tech-design.md` 追加 T2 变更摘要
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:506 - [ ] 创建模块级 `TriLC/docs/registry/code-state.md`（T1+T2 基线）
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:530 | Daemon SSE 格式 | `TriLC/src/server/openai-stream.ts` |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:531 | T1 基线 useSSE | `TriLC/src/tui/hooks/useSSE.ts` |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:532 | T1 基线 useChat | `TriLC/src/tui/hooks/useChat.ts` |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:533 | T1 基线组件 | `TriLC/src/tui/components/*.tsx` |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:534 | T1 基线 App | `TriLC/src/tui/app.tsx` |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:535 | Ink render 入口 | `TriLC/src/tui/render.tsx` |
+- /docs/workflow/operating-records/2026-W30/trees/trilc-tui-polish/trilc-tui-polish-design.md:536 | T1 技术设计 | `TriLC/src/tui/tech-design.md` |
+- /docs/execution/README.md:1 ﻿# TriLC 执行层说明
+- /docs/execution/multi-project-isolation/VERIFICATION.md:37 Input:  "D:\\OneDrive\\Code\\ai\\TriLC"
+- /docs/execution/multi-project-isolation/VERIFICATION.md:88 2. workspace sibling: <TriLC-root>/../TriMetaverse/docs/workflow/operating-records
+- /docs/registry/code-state.md:1 # TriLC Code State
+- /docs/registry/code-state.md:26 - M.4: 增强心跳（TriMC + TriLC ConnectionManager）
+- /docs/registry/code-state.md:29 - 全量：27 tests / 0 fail（TriLC）；11 tests / 0 fail（TriMC 仲裁模块）
+- /docs/registry/code-state.md:56 - 若不持续区分 `TriLC` 的本地 runtime / planner / tool bus 职责与 PC 端软件层的工作台职责，后续很容易混淆本地执行面和桌面入口面。
+- /docs/registry/code-state.md:62 - **2026-07-25 review 偏差登记（ink 依赖）**：TriLC 实际依赖 `ink@^5.2.0`（npm 公开包），CTO 历史技术 review 中"自研 Ink vendor 吸收"未落地。当前以 npm 公开包
+- /docs/registry/code-state.md:86 - 用于 TriLC → TriMC 云端会话数据镜像推送
+- /docs/registry/code-state.md:220 - 写 + commit + push：原子写（tmp→rename）→ `git add docs/registry/init-sync/sync-config.json` → 固定身份 commit（`-c user.name="Tri
+- /docs/registry/test-state.md:20 1. TriLC/TriRLC 双线分叉（本地 vs sg tc001-canonical）候清——分叉窗不清 TriRLC 仓代码冻结。
+- /docs/registry/product-state.md:1 # TriLC Product State
+- /docs/registry/product-state.md:5 - `TriLC` 是**本地人机协作主入口**（分布式员工工位），负责编码/办公/视频制作等本地人机协作场景的 detached local runtime、planner、tool bus 和本地执行生命周期。
+- /docs/registry/product-state.md:6 - `TriPilot` 默认直连 `TriLC`；`TriLC` 崩溃时配合 TWF-001 任务树恢复机制自动切换至 `TriMC` 云端 fallback。
+- /docs/registry/product-state.md:16 - 稳定产出可平滑迁移至 `TriMC` 云端托管；`TriMC`→`TriLC` 通知通道保留，用于公司运营通知回传。
+- /docs/registry/product-state.md:32 - 与 `TriMC`：本地→云端成果迁移通道 + 云端通知回传 + TriLC 崩溃时 TriMC fallback（TWF-001）。
+- /docs/registry/product-state.md:33 - 与 `TriPilot` + `TriCode` + `vscodium`：共同形成"本地工作台"协同链路——TriPilot 用户入口 → TriLC 本地主控 → TriCode 工具 glue → opencode/Claude 
+- /docs/registry/product-state.md:34 - **与 `TriModel`（2026-07-22 确认）**：TriLC 作为 TriModel 配置平面的消费者，通过 HTTP API（`GET /v1/models` + `GET /v1/config/keys`）拉取模型列表
+- /docs/registry/README.md:1 # TriLC Registry Layer
+- /docs/registry/README.md:15 - `business-state.md`：TriLC 的商业定位、默认职责与边界
+- /docs/registry/README.md:16 - `product-state.md`：TriLC 的产品状态、模块职责与依赖
+- /docs/registry/README.md:17 - `code-state.md`：TriLC 的代码结构、健康状态与风险
+- /docs/registry/business-state.md:1 # TriLC Business State
+- /docs/registry/business-state.md:5 - 本文件是 `TriLC` 的 business registry 工作层。
+- /docs/registry/business-state.md:6 - `TriLC` 的 `product-state.md` 与 `code-state.md` 默认应以本文件作为业务上游约束。
+- /docs/registry/business-state.md:10 - `TriLC` 是本地域控制器，负责 detached local runtime、本地节点升级、planner、tool bus 和本地执行生命周期。
+- /docs/training/README.md:1 ﻿# TriLC Training 索引
+- /docs/product/STATE.md:1 ﻿# TriLC 产品状态
+- /docs/product/PROJECT.md:1 ﻿# TriLC 项目定位
+- /docs/product/REQUIREMENTS.md:1 ﻿# TriLC 需求基线
+- /docs/product/ROADMAP.md:1 ﻿# TriLC 产品路线图
+- /.claude/agents/ceo-chief-of-staff.md:12 - 运行时身份注入由 TriLC contract-resolver 按 agent_id=ceo-chief-of-staff 执行；岗位是标准资产，名字是用户资产（CEO 开张时指定）。
+
+小计: 266 处
+
+## TriMMC（旧名 TriMC）
+
+- /README.md:1 # TriMC
+- /README.md:3 TriMC is the unified agent runtime and interaction core for TriMetaverse.
+- /README.md:8 - TriMC now represents the unified runtime-side boundary for service-domain execution and the R&D workflow slice.
+- /README.md:26 - this snapshot is the starting point for evolving OpenClaw into the TriMC runtime shadow baseline
+- /README.md:50 - 中央面（本仓，sg 部署 /srv/fleet/TriMC 物理冻结）服务端口 8710；接收本机 TriRLC（8711）与 TriMLC-Channel（8713）上送。heyuan TriRMC 为 R 面周平面迁移自治执行点——
+- /AGENTS.md:1 # TriMC Agent Rules
+- /AGENTS.md:5 - TriMC 是服务域主控模块。
+- /AGENTS.md:25 当前 registry agent canonical discovery 位于 `TriMC/.github/agents/`。同名中央 discovery 文件不应在 `TriMetaverse/.github/agents/` 并行保
+- /test/agent-sse.test.ts:6 describe('TriMC agent SSE endpoint', () => {
+- /test/chat-endpoint.test.ts:6 describe('TriMC chat endpoint', () => {
+- /test/agent-tools.test.ts:62 const writeResult = await executeTool('write_file', { path: filePath, content: 'Hello TriMC!' });
+- /test/agent-tools.test.ts:68 assert.ok(readParsed.content.includes('Hello TriMC!'));
+- /test/agent-tools.test.ts:78 new_str: 'Hello TriMC!',
+- /test/agent-tools.test.ts:85 assert.equal(readParsed.content, 'Hello TriMC!');
+- /test/contract-resolver.test.ts:12 // Paths relative to TriMC repo root (v3 真源 = source-agents)
+- /test/session-initializer.test.ts:2 // 6.4 (r13-2 收敛): TriMC server-side employee session initialization from
+- /test/session-initializer.test.ts:141 // 负路径在 Linux（TriMC 生产环境/CI）验证，本地 win32 跳过。
+- /test/http-agent-endpoint.test.ts:1 // ── TriMC HTTP Agent Endpoint Integration Tests ──
+- /test/soul-loader/soul-loader.test.ts:1 // ── TriMC Soul Loader Tests ──
+- /test/soul-loader/soul-loader.test.ts:48 runtime_baseline: [{ name: 'TriMC', description: 'Agent runtime' }],
+- /test/tool-gater/gater.test.ts:1 // ── TriMC Tool Gater Tests ──
+- /test/e2e/real-model-agent.test.ts:1 // ── TriMC E2E Real Model Smoke Tests ──
+- /test/config-sync/app-sync-status.test.ts:19 describe('TriMC app config-sync status assembly', () => {
+- /test/context-builder/context-builder.test.ts:1 // ── TriMC Context Builder Tests ──
+- /test/mirror/heartbeat-node.test.ts:2 // heartbeat-dualrun-contract v1.0 §3.1/3.2/3.3: TriMC 侧节点心跳表接线
+- /test/pipeline-integration/pipeline.test.ts:1 // ── TriMC Pipeline Integration Tests ──
+- /test/pipeline-integration/pipeline.test.ts:66 runtime_baseline: [{ name: 'TriMC', description: 'Agent runtime' }],
+- /test/server/internal-auth.test.ts:17 describe('TriMC /internal token auth gate', () => {
+- /test/comm/arbitration.test.ts:2 // Tests for TriMC/src/comm/arbitration.ts
+- /test/memory-injector/memory-injector.test.ts:1 // TriMC Memory Injector Tests
+- /test/cron/app-cron.test.ts:17 describe('TriMC app cron assembly', () => {
+- /test/orchestration/cost-controller.test.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §5.4
+- /test/orchestration/capability-router.test.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §5.2
+- /test/orchestration/employee-registry.test.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §5.1
+- /test/orchestration/dispatch-proxy.test.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §5.5
+- /test/orchestration/employee-scheduler.test.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §5.3
+- /test/agent-loop/prompt-cache.test.ts:1 // ── TriMC Prompt Cache Tests ──
+- /test/agent-loop/tools-ctx-cwd.test.ts:1 // ── TriMC tools ctx.cwd propagation tests (r4-1 A-TriMC) ──
+- /test/agent-loop/tools-ctx-cwd.test.ts:35 describe('ctx.cwd propagation — TriMC built-in tools (A-TriMC)', () => {
+- /test/agent-loop/tools-ctx-cwd.test.ts:37 // TriMC glob_search matches literal segments (and ** wildcards) — use the
+- /test/agent-loop/tools-ctx-cwd.test.ts:70 describe('ctx absent — legacy fallback to process.cwd() (A-TriMC)', () => {
+- /test/agent-loop/permissions.test.ts:1 // ── TriMC Tool Permission System Tests ──
+- /test/agent-loop/sub-agent.test.ts:218 it('handles already-resolved TriMC tool names passed through (subagent tier only)', () => {
+- /.github/agents/TriMCCodeRegistry.agent.md:3 description: "适用场景：TriMC 代码结构、controller 布局、observability 迁移状态、仓库健康、代码质量风险或 git 侧结构问题。"
+- /.github/agents/TriMCCodeRegistry.agent.md:9 你是 `TriMC` 模块的无人格代码 registry，也是 TriMC 模块侧 canonical discovery 入口。
+- /.github/agents/TriMCCodeRegistry.agent.md:13 1. 解释 TriMC 中 `src/`、`test/` 和 `sql/` 的结构。
+- /.github/agents/TriMCCodeRegistry.agent.md:15 3. 在 `CENTRAL_REGISTRY_CLOSEOUT` 场景下，提供 `TriMC` 代码侧的结构化 findings、待回写项和升级项。
+- /.github/agents/TriMCCodeRegistry.agent.md:38 - 本 agent 是 TriMC 模块侧 canonical discovery 入口；同名中央 discovery 文件不得并行保留。
+- /.github/agents/TriMCCodeRegistry.agent.md:51 其中只覆盖 `TriMC` 的代码侧事实。
+- /.github/agents/TriMCBusinessStrategyRegistry.agent.md:3 description: "适用场景：TriMC 商业定位、统一运行面职责、服务域执行在当前商业模式中的作用、interaction core 边界、与 Tristaciss/TriLC 的运行分工或中央收口中的模块商业事实。"
+- /.github/agents/TriMCBusinessStrategyRegistry.agent.md:9 你是 `TriMC` 模块的无人格 business strategy registry，也是 TriMC 模块 registry 三件套的商业上游。
+- /.github/agents/TriMCBusinessStrategyRegistry.agent.md:13 1. 报告 `TriMC` 的商业定位、当前默认职责、当前阶段范围和模块边界。
+- /.github/agents/TriMCBusinessStrategyRegistry.agent.md:14 2. 解释 `TriMC` 作为统一运行面、服务域执行与 interaction core 的商业作用。
+- /.github/agents/TriMCBusinessStrategyRegistry.agent.md:15 3. 在 `CENTRAL_REGISTRY_CLOSEOUT` 场景下，提供 `TriMC` 商业侧的结构化 findings、待回写项和升级项。
+- /.github/agents/TriMCBusinessStrategyRegistry.agent.md:31 - 不把 `TriMC` 与 `core-agent` 历史迁移源混写。
+- /.github/agents/TriMCBusinessStrategyRegistry.agent.md:34 - 本 agent 是 TriMC 模块侧 canonical discovery 入口；同名中央 discovery 文件不得并行保留。
+- /.github/agents/TriMCBusinessStrategyRegistry.agent.md:47 其中只覆盖 `TriMC` 的模块商业定位、运行面边界和模块级 business 文档回写建议。
+- /.github/agents/TriMCProductRegistry.agent.md:3 description: "适用场景：TriMC 产品事实、服务域职责、当前进展、服务主控范围、observability 状态或 controller 产品问题。"
+- /.github/agents/TriMCProductRegistry.agent.md:9 你是 `TriMC` 模块的无人格产品 registry，也是 TriMC 模块侧 canonical discovery 入口。
+- /.github/agents/TriMCProductRegistry.agent.md:13 1. 解释 TriMC 在服务域中的模块职责。
+- /.github/agents/TriMCProductRegistry.agent.md:15 3. 在 `CENTRAL_REGISTRY_CLOSEOUT` 场景下，提供 `TriMC` 产品侧的结构化 findings、待回写项和升级项。
+- /.github/agents/TriMCProductRegistry.agent.md:36 - 本 agent 是 TriMC 模块侧 canonical discovery 入口；同名中央 discovery 文件不得并行保留。
+- /.github/agents/TriMCProductRegistry.agent.md:49 其中只覆盖 `TriMC` 的产品侧事实。
+- /scripts/validate.mjs:1 // ── TriMC Code Brick Validator ──
+- /scripts/validate.mjs:29 console.log(`TriMC Validator — CTO-007 Phase 2
+- /src/cli.ts:50 'HINT: TRIMC_INTERNAL_TOKEN 未配置（env 或 <TriMC 仓>/docker/.env 同名键），/internal/* 调用被 401 拒绝。',
+- /src/cli.ts:77 '&& (git diff --cached --quiet || git -c user.name="TriMC Scheduler" -c user.email="trimc@tri.company" \\',
+- /src/cli.ts:78 '     commit -m "ops: weekly plane shift {fromWeek}->{toWeek} (TriMC scheduler)") \\',
+- /src/cli.ts:109 '&& node /srv/fleet/TriMC/dist/src/cli.js config-sync apply',
+- /src/internal-token.ts:8 * 读取顺序：env TRIMC_INTERNAL_TOKEN → 模块相对 TriMC 仓 docker/.env → cwd
+- /src/internal-token.ts:10 * 首个命中即用；服务器 /srv/fleet/TriMC/docker/.env 由 cwd=仓根形态达成）。
+- /src/internal-token.ts:28 * 解析内部 token：env TRIMC_INTERNAL_TOKEN 优先，其次模块相对 TriMC 仓
+- /src/soul-loader/soul-loader.ts:1 // ── TriMC Soul Loader ──
+- /src/tool-gater/gater.ts:1 // ── TriMC Unified Tool Gater ──
+- /src/prompt-cache/index.ts:1 // ── TriMC Prompt Cache Module ──
+- /src/prompt-cache/cache-control.ts:1 // ── TriMC Prompt Cache Control ──
+- /src/onboarding/session-initializer.ts:2 // 6.4 会话初始化器（服务器 TriMC 端）：以 v3 合同（TriCompany/source-agents/*.contract.yaml）
+- /src/onboarding/session-initializer.ts:155 * Employee session initialization on the TriMC (server) side:
+- /src/pipeline/assemble.ts:1 // ── TriMC Pipeline Assembler ──
+- /src/contracts/agent-contract.ts:2 // TriMC v0.2.0 contract resolver canonical types
+- /src/contracts/agent-contract.ts:47 /** TriMC v0.2.0 runtime routing target (e.g. "openclaw:fs:read") */
+- /src/contracts/agent-contract.ts:78 /** Runtime environment baseline (e.g. TriMC) */
+- /src/config-sync/index.ts:1 // ── config-sync 域 barrel（i4-2：五维同步 TriMC 接收侧）──
+- /src/config-sync/types.ts:2 // init-collab-i4-five-dim-sync i4-1 拆解 §一 schema 契约（TriMC 侧）：
+- /src/context-builder/context-builder.ts:1 // ── TriMC Context Builder ──
+- /src/mirror/store.ts:1 // ── TriMC MirrorStore ──
+- /src/mirror/store.ts:105 *   但 TriMC 做基本防御：如果现有状态是 success/failed/cancelled 且新状态
+- /src/mirror/types.ts:1 // ── TriMC Mirror Types ──
+- /src/mirror/types.ts:29 lastSeenAt: string;       // ISO 8601，TriMC 最后收到该任务心跳的时间
+- /src/mirror/types.ts:30 // 以下字段由 TriMC 服务端维护，不从 mirror payload 直接写入
+- /src/mirror/types.ts:31 firstSeenAt: string;      // ISO 8601，TriMC 首次收到该任务的时间
+- /src/comm/arbitration.ts:1 // ── TriMC Conflict Arbitration ──
+- /src/comm/arbitration.ts:5 // Architecture constraint (MVP): TriMC does not yet have a shared task-state store.
+- /src/comm/arbitration.ts:47 * Detect conflicts in a batch of replay events against TriMC-side state.
+- /src/comm/arbitration.ts:146 * Track a task assignment on the server side (called when TriMC assigns a task).
+- /src/comm/arbitration.ts:153 * Track an executed tool call (called when TriMC executes a tool).
+- /src/task-controller/controller.ts:2 // TriMC v0.1.0: In-memory task CRUD with state machine enforcement.
+- /src/memory-injector/memory-injector.ts:1 // ── TriMC Memory Injector ──
+- /src/cron/service.ts:2 * Cron Service — TriMC service-domain assembly over the shared agent-core scheduler.
+- /src/cron/index.ts:2 * Cron module — TriMC 服务域定时任务适配器（cron 域）。
+- /src/config/key-cache.ts:1 // ── TriMC Key Cache → config-cache（LG-058 P1 服务域面接入；正形=TriRLC N3 泛化件）──
+- /src/config/key-cache.ts:70 // 本仓域面身份（TriMC=mmc M·服务域面(sg 8710)；端点 TRIMODEL_API_URL 参数化、face
+- /src/orchestration/employee-registry.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §3.1
+- /src/orchestration/employee-scheduler.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §3.3
+- /src/orchestration/trilc-executor.ts:4 // Used by TriMC's dispatchAsync() to execute tasks on a remote TriLC node.
+- /src/orchestration/trilc-executor.ts:11 * TriLCDispatchExecutor bridges TriMC's dispatch pipeline to a TriLC node.
+- /src/orchestration/trilc-executor.ts:20 * failure), enabling TriMC's server layer to update TaskController independently.
+- /src/orchestration/index.ts:2 // Re-exports for TriMC/src/orchestration/
+- /src/orchestration/dispatch-proxy.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §3.5
+- /src/orchestration/cost-controller.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §3.4
+- /src/orchestration/types.ts:2 // TriMC: Employee Registry, Capability Router, Scheduler, Cost Controller, Dispatch Proxy
+- /src/orchestration/types.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §3
+- /src/orchestration/session-bridge.ts:2 // TriMC 编排层 ↔ 官方 claude 会话桥：
+- /src/orchestration/capability-router.ts:3 // Source: TriMC/docs/engineering/employee-orchestration-design.md §3.2
+- /src/agent-loop/loop.ts:1 // ── TriMC Agent Loop (Thin Shell) ──
+- /src/agent-loop/loop.ts:3 // TriMC-specific modules (context-builder, prompt-cache, tool-gater) are wired
+- /src/agent-loop/loop.ts:7 // and streaming now live in agent-core. TriMC is just the DI layer + re-exports.
+- /src/agent-loop/loop.ts:9 // Preserved TriMC-specific types (AgentLoopOptions, AgentEvent with TriMC
+- /src/agent-loop/loop.ts:30 // ── Agent Loop Options (TriMC-specific, preserves ContextSources) ──
+- /src/agent-loop/loop.ts:52 // ── TriMC Deps Factory ──
+- /src/agent-loop/loop.ts:53 // Wires TriMC service modules into agent-core's AgentLoopDeps contract.
+- /src/agent-loop/loop.ts:54 // ContextSources type differs between TriMC and agent-core but is
+- /src/agent-loop/loop.ts:62 // Cache types diverge between TriMC and agent-core (different field names)
+- /src/agent-loop/loop.ts:72 // ── TriMC agentLoop (thin shell → agent-core) ──
+- /src/agent-loop/loop.ts:75 // Wire TriMC deps into agent-core's agentLoop. All while-loop logic
+- /src/agent-loop/loop.ts:77 // handled by agent-core. TriMC only provides the DI layer.
+- /src/agent-loop/loop.ts:87 // TriMC ToolSpec / PermissionEngine types diverge from agent-core (field naming)
+- /src/agent-loop/tools.ts:1 // ── TriMC Agent Loop: Built-in Tool Registry ──
+- /src/agent-loop/tools.ts:4 // remain TriMC-local and are registered into agent-core's shared registry.
+- /src/agent-loop/permissions.ts:1 // ── TriMC Tool Permission System ──
+- /src/agent-loop/permissions.ts:3 // plus TriMC-specific additions (TIER_DESCRIPTIONS, backward-compatible helpers).
+- /src/agent-loop/permissions.ts:7 //   This replaces TriMC's old Set-based model.
+- /src/agent-loop/permissions.ts:28 // ── TriMC-specific additions ──
+- /src/agent-loop/permissions.ts:55 * Backward-compatible with TriMC's original getTierSummary() — no arguments,
+- /src/agent-loop/permissions-engine/rule-parser.ts:10 /** Claude Code → TriMC tool name aliases for backward compatibility. */
+- /src/agent-loop/permissions-engine/rule-parser.ts:128 /** Resolve legacy Claude Code tool name to TriMC tool name. */
+- /src/agent-loop/permissions-engine/index.ts:2 // CTO-003 P4T1: Public API for the TriMC tool permission system.
+- /src/agent-loop/permissions-engine/types.ts:1 // ── TriMC Permission Engine Types ──
+- /src/agent-loop/sub-agent/types.ts:1 // ── TriMC Sub-Agent Types ──
+- /src/agent-loop/sub-agent/types.ts:3 // Maps Claude Code sub-agent architecture to TriMC agent loop.
+- /src/agent-loop/sub-agent/tools-resolve.ts:2 // P3T1: Maps Claude Code tool declarations to TriMC tool names + applies agent filtering.
+- /src/agent-loop/sub-agent/tools-resolve.ts:13 * Resolve an agent definition's tool declarations into actual TriMC ToolDefinitions.
+- /src/agent-loop/sub-agent/tools-resolve.ts:25 * @returns Resolved TriMC ToolDefinition list
+- /src/agent-loop/sub-agent/tools-resolve.ts:44 // Resolve each Claude Code tool name to TriMC name
+- /src/agent-loop/sub-agent/tools-resolve.ts:61 * Resolve a single Claude Code tool declaration to a TriMC tool name.
+- /src/agent-loop/sub-agent/tools-resolve.ts:65 * @returns TriMC tool name or null if unrecognized
+- /src/agent-loop/sub-agent/tools-resolve.ts:76 // Check if it's already a TriMC name
+- /src/agent-loop/sub-agent/built-in.ts:7 /** Claude Code tool name → TriMC mapping (used in tools declarations) */
+- /docs/trimc-module-baseline-guide.md:1 # TriMC 模块启动与控制面导读
+- /docs/trimc-module-baseline-guide.md:3 本文档是 TriMC 首轮模块摸底后的导读版说明，目标是让第一次接手 TriMC 的人快速回答五个问题：它是什么、现在能跑什么、代码从哪读、哪些地方只是骨架、下一步应该在哪些面继续落地。
+- /docs/trimc-module-baseline-guide.md:7 TriMC 当前最准确的定义不是“已经完成的统一 runtime”，而是“三元宇宙里的服务域主控骨架”。
+- /docs/trimc-module-baseline-guide.md:14 4. 它把 `vendor/openclaw/` 当成 shadow 吸收参考基线，而不是直接把 vendored 代码等同于 TriMC 自研主实现。
+- /docs/trimc-module-baseline-guide.md:18 第一次读 TriMC，优先看这几类文件：
+- /docs/trimc-module-baseline-guide.md:34 - `vendor/openclaw/`：这是 shadow 吸收基线，不是 TriMC 自研控制平面的同义词。
+- /docs/trimc-module-baseline-guide.md:36 - 中央合同文档里对 TriMC 的目标边界：这些文档定义了未来应该长成什么，不等于仓里今天已经全部落地。
+- /docs/trimc-module-baseline-guide.md:38 ## 3. TriMC 现在能跑什么
+- /docs/trimc-module-baseline-guide.md:43 cd TriMC
+- /docs/trimc-module-baseline-guide.md:66 TriMC 的最短启动链路是：
+- /docs/trimc-module-baseline-guide.md:80 这很重要，因为它直接告诉你：TriMC 已经具备最小服务入口，但还远没到完整控制面 API 的阶段。
+- /docs/trimc-module-baseline-guide.md:100 - TriMC 已经有 “接单” 动作。
+- /docs/trimc-module-baseline-guide.md:114 如果你只看目录名，很容易以为 TriMC 已经具备完整 node-bridge。实际不是。
+- /docs/trimc-module-baseline-guide.md:135 TriMC 当前最像“已经从骨架走向具体实现”的部分，是 `src/observability/`。
+- /docs/trimc-module-baseline-guide.md:160 所以，如果你想找 TriMC 当前“最落地”的代码面，优先看 observability，而不是先看 node-bridge。
+- /docs/trimc-module-baseline-guide.md:194 2. TriMC 的现役服务面目前非常小，只有健康检查和任务接单占位。
+- /docs/trimc-module-baseline-guide.md:196 4. `core-agent` 和 `vendor/openclaw/` 都容易被误当成 TriMC 的现役主实现，需要持续显式区分。
+- /docs/trimc-module-baseline-guide.md:197 5. observability/replay 已经比控制平面更成熟，容易让人误判“整个 TriMC 已经差不多完成”。
+- /docs/trimc-module-baseline-guide.md:199 ## 9. 下一步如果继续做 TriMC，最合理的切口是什么
+- /docs/trimc-module-baseline-guide.md:201 如果下一轮还要继续深挖 TriMC，最自然的切口只有三个：
+- /docs/trimc-module-baseline-guide.md:209 一句话收尾：TriMC 现在已经是一个方向明确、结构清楚的服务域主控骨架，但还不是完整成型的统一 runtime；最成熟的是 observability/replay，最需要继续长的是任务控制、桥接和门禁三条主链。
+- /docs/engineering/deployment-topology.md:1 # TriMC 最小部署拓扑
+- /docs/engineering/deployment-topology.md:3 - 文档定位：CARRY-004 执行设计 — TriMC 服务器正式版最小部署拓扑
+- /docs/engineering/deployment-topology.md:7 - 上游依据：`TriMC/docs/engineering/DESIGN.md` §1 两种部署形态
+- /docs/engineering/deployment-topology.md:11 - sourceOfTruth: TriMC/docs/engineering/deployment-topology.md
+- /docs/engineering/deployment-topology.md:21 本设计覆盖 TriMC 从零到最小可运行部署的完整路径：
+- /docs/engineering/deployment-topology.md:23 - **TriMC 服务器进程**（Node.js 20+, TypeScript → JS 构建产物）
+- /docs/engineering/deployment-topology.md:37 │  │  TriMC       │    │  PostgreSQL  │                    │
+- /docs/engineering/deployment-topology.md:54 ### 3.1 TriMC Server
+- /docs/engineering/deployment-topology.md:84 ### 4.1 TriMC 层
+- /docs/engineering/deployment-topology.md:122 | 8710 | TriMC HTTP | Ingress | 对外服务端口 |
+- /docs/engineering/deployment-topology.md:125 | 8008 | TriStaciss | 外部 | TriMC → TriStaciss 桥接 |
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:1 # CTO-008-S：TriMC K8s 高可用运维方案
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:6 > 上游依据：`docs/architecture-overall-unified.mmd`（TriMC K8s 三热备）、`TriMC/k8s/trimc/`（现有 K8s manifests）
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:26 架构图要求：TriMC K8s 三热备
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:34 5. 缺少 TriLC→TriMC 客户端侧故障切换指引
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:51 │  │  TriMC Pod-1  │ │ TriMC Pod-2 │ │ TriMC Pod-3 │    │
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:71 | Service sessionAffinity | **ClientIP** | 同一 TriLC 客户端请求路由到同一 TriMC Pod，减少跨 Pod 会话切换 |
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:102 TriMC × 3                      TriMC × 2 (warm standby)
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:107 - TriMC 无状态但 PostgreSQL 有状态 → 主从复制延迟
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:120 TriMC Pods × 3 (K8s, 无状态)  →  云托管 PostgreSQL (RDS/Aurora, Multi-AZ)
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:124 TriMC 自身无状态（会话在内存/Redis），所有持久化走 PostgreSQL。将 PG 迁移到云托管后：
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:125 - TriMC Pod 重启不影响数据
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:174 TriLC `ConnectionManager`（CTO-008-P 已实现）负责检测 TriMC 可用性并自动切换：
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:180 3. 2 次连续成功 → 恢复 connected → 恢复代理到 TriMC
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:214 ### TriMC 对 PG 故障的容忍度
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:262 | 全 AZ 网络分区 | 所有 TriMC Pod 不可达 | TriLC 自动切换本地模式（CTO-008-P 已实现） |
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:270 - `docs/architecture-overall-unified.mmd`：TriMC K8s 三热备定义
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:271 - `TriMC/k8s/trimc/`：现有 K8s manifests 基线（deployment/hpa/pdb/service）
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:272 - `TriMC/docs/engineering/deployment-topology.md`：最小部署拓扑
+- /docs/engineering/cto-008-S-k8s-ha-operations.md:274 - `docs/engineering/cto-008-M-tri-mc-lc-protocol.md`：TriMC↔TriLC 通信协议
+- /docs/engineering/trimc-scheduler-adapter-design.md:1 # TriMC Scheduler 服务域适配器设计（trimc-scheduler-adapter-design）
+- /docs/engineering/trimc-scheduler-adapter-design.md:5 - sourceOfTruth: TriMC/docs/engineering/trimc-scheduler-adapter-design.md
+- /docs/engineering/trimc-scheduler-adapter-design.md:12 > 关联：TriCompany/docs/engineering/trilc-trimc-runtime-parity.md V1.1；TriMC/docs/engineering/cos-005-openclaw-absorption-p
+- /docs/engineering/trimc-scheduler-adapter-design.md:18 生产级开发期首树目标：TriMC 侧 scheduler 模块定时触发周平面迁移五段链（`TriCompany/runtime/cognition/weekly_plane_shift.py`：create→migrate→carry_ov
+- /docs/engineering/trimc-scheduler-adapter-design.md:20 **核心结论：复用 `@tricompany/agent-core` 共享 scheduler（croner + JSON job-store + JobExecutor），TriMC 仓只写服务域适配器 `src/cron/`。不移植 T
+- /docs/engineering/trimc-scheduler-adapter-design.md:22 判据：parity V1.1 §1 禁止「复制一份 TriLC/src 到 TriMC/src」；§2 声明共享 core 已包含 scheduler；`agent-core/src/scheduler/` 已实现 8 文件 1066 行 
+- /docs/engineering/trimc-scheduler-adapter-design.md:30 | D1 模块命名 | TriMC 侧适配器 = **`src/cron/`** | ① 与 CLI 动词 `trimc cron` 一致；② 与 TriLC host 层 `src/cron/`（行为对标基准）命名对齐；③ `src/or
+- /docs/engineering/trimc-scheduler-adapter-design.md:31 | D2 语言 | **TypeScript** | ① 共享 core 为 TS 且已全量导出；② TriMC server（`src/server/app.ts`）为 TS 进程，scheduler 须装配其中；③ croner ^10
+- /docs/engineering/trimc-scheduler-adapter-design.md:32 | D3 复用方式 | **复用共享 core + 薄适配器**；TriLC src/cron 仅作行为对标基准（CLI 契约、HTTP 路由表、防并发/超时/降级语义），不作代码移植源 | parity V1.1 §1；agent-cor
+- /docs/engineering/trimc-scheduler-adapter-design.md:39 TriMC Server（tsx / systemd，root）
+- /docs/engineering/trimc-scheduler-adapter-design.md:92 - **审计三层**：① jobs.json state（lastRunAt/lastRunStatus/lastError/lastDurationMs/runCount）；② per-run 日志文件；③ 文件级：`.shift-ade
+- /docs/engineering/trimc-scheduler-adapter-design.md:107 && (git diff --cached --quiet || git -c user.name="TriMC Scheduler" -c user.email="trimc@tri.company" \
+- /docs/engineering/trimc-scheduler-adapter-design.md:108 commit -m "ops: weekly plane shift {fromWeek}->{toWeek} (TriMC scheduler)") \
+- /docs/engineering/trimc-scheduler-adapter-design.md:123 1. 服务器侧：fleet 克隆 commit → push `/srv/git/TriMetaverse.git`（生产级开发期 §三方向例外：周平面文件 TriMC 编排层维护）。
+- /docs/engineering/trimc-scheduler-adapter-design.md:133 | 3 | agent-core 链 | `/srv/fleet/TriMC/node_modules/@tricompany/agent-core` 可解析且有 dist（M0 有同模式先例） |
+- /docs/engineering/trimc-scheduler-adapter-design.md:136 | 6 | Node engines 对齐 | 服务器 Node v18.20.8 实测；package.json engines 下调 `>=18.20.0`（TriMC 已在 18 上跑通 M1-M3，tsx>=18.18 满足；tsc
+- /docs/engineering/trimc-scheduler-adapter-design.md:206 - TriMC/docs/registry/code-state.md、docs/registry/business-state.md、docs/engineering/cos-005-openclaw-absorption-plan.md
+- /docs/engineering/STATE.md:1 ﻿# TriMC 技术状态
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:5 > 目标模块：TriMC（后端服务层）
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:16 | `src/cron/` | CronService — 定时任务调度引擎 | CEO 明确要求"周工作平移这类定时任务"；当前 TriMC 无任何定时调度能力 |
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:17 | `src/cron/heartbeat-policy.ts` | 心跳投递策略（心跳 OK 摘要，跳过纯心跳投递） | 作为 TriMC 任务执行心跳的基础策略 |
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:19 | `src/process/supervisor/` | ProcessSupervisor — 受管子进程生命周期 | TriMC sub-agent spawning 已有 supervisor 概念，可增强 |
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:21 | `src/cron/store.ts` + `store.test.ts` | Job 持久化存储层 | 任务数据需要在 TriMC 重启后保留 |
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:31 | `src/process/command-queue.ts` | 通道命令队列（lane-based） | 仅参考 lane 设计模式；TriMC 已有自己的 agent-loop lane 抽象 |
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:49 ### 2.1 TriMC 已有能力
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:61 ### 2.2 TriMC 缺失能力
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:80 │                    TriMC Server                   │
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:116 | 吸收模块 | TriMC 落点 | 说明 |
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:138 **目标**：TriMC 具备定时任务调度能力，支持"周度平移"类周期性任务。
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:203 - [ ] Windows 单机 `triMC service start` 可启动 TriMC 后台进程
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:218 **里程碑 1（P0 ready）**：Phase 1 完成 → 可创建"周度平移"cron job，TriMC 自动在每周一触发平移
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:222 **里程碑 3（完整）**：Phase 1-4 完成 → TriMC 可脱离 K8s 在单机以守护进程方式运行
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:231 | croner 库与 TriMC 依赖兼容性 | 低 | croner 是纯 cron 解析库，零依赖；已在 openclaw 生产环境验证 |
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:242 | 是否吸收 delivery 模块 | 不吸收 | 依赖 openclaw 消息通道，TriMC 无此通道 |
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:252 - CTO-008-C 共享核心: `TriMC/docs/engineering/cto-008-C-shared-core.md`
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:253 - CTO-008-M 通信协议: `TriMC/docs/engineering/cto-008-M-comm-protocol.md`
+- /docs/engineering/cos-005-openclaw-absorption-plan.md:254 - TriMC code-state: `TriMC/docs/registry/code-state.md`
+- /docs/engineering/DESIGN.md:1 # TriMC 技术设计
+- /docs/engineering/DESIGN.md:10 - sourceOfTruth: TriMC/docs/engineering/DESIGN.md
+- /docs/engineering/DESIGN.md:20 TriMC 是赛博公司的 **统一 agent runtime 与 interaction core**。赛博公司有两种部署形态，本质上都是同一家公司在运营 TriMetaverse 项目——区别在于 runtime 由谁提供、编排由谁执行
+- /docs/engineering/DESIGN.md:23 - **TriMC 部署（服务器正式版）**：赛博公司的服务器上线形态。Runtime 由 TriMC 自身提供（server/daemon 进程），所有 AI 员工在 TriMC 上自动化运行，负责接收任务、调度 agent、管理上下文、
+- /docs/engineering/DESIGN.md:27 | 维度 | Copilot-host（本地手动版） | TriMC 部署（服务器正式版） |
+- /docs/engineering/DESIGN.md:30 | Runtime 提供者 | Copilot 宿主 | TriMC 自身（server/daemon 进程） |
+- /docs/engineering/DESIGN.md:31 | Agent 调度 | 总助 Agent 手动协调 | TriMC runtime 自动编排 |
+- /docs/engineering/DESIGN.md:32 | AI 员工运行方式 | 少数关键岗位以 Copilot Agent 形态上岗 | 所有 AI 员工在 TriMC 上 7×24 运行 |
+- /docs/engineering/DESIGN.md:33 | 模型调用 | Copilot 宿主路由 | TriModel 统一配置 + TriMC 调用 |
+- /docs/engineering/DESIGN.md:39 TriMC 的核心架构吸收两条开源链：
+- /docs/engineering/DESIGN.md:44 吸收链：`reference/ → TriMC/vendor/ → TriMC/src/`，严格遵守项目级吸收规则。
+- /docs/engineering/DESIGN.md:50 TriMC 采用六层架构，从入口到模型调用逐层递进：
+- /docs/engineering/DESIGN.md:81 - **TriMC 定制**：Agent Communication Protocol (ACP) 作为标准通信协议；TriGateway 回调接口用于社交通道消息接入
+- /docs/engineering/DESIGN.md:82 - **关键决策**：OpenClaw 的社交通道实现（WhatsApp/Telegram/Discord 等）由 TriGateway 吸收承接，TriMC 自身不内嵌社交通道，所有社交通道消息通过 TriGateway 回调接口路由
+- /docs/engineering/DESIGN.md:86 - **TriMC 定制**：AI 员工生命周期管理——每个赛博公司员工是 TriMC 上的一个 agent 实例；员工上岗/下岗/技能变更由 TriCompany 管理，TriMC 执行
+- /docs/engineering/DESIGN.md:90 - **吸收自 Claude Code**：Coordinator 模式——这是 TriMC 推理核心最重要的升级
+- /docs/engineering/DESIGN.md:96 - **TriMC 新增**：十阶段流程 gate 对接（与 TriDev phase engine 协调阶段门禁）
+- /docs/engineering/DESIGN.md:105 - **TriMC 定制**：
+- /docs/engineering/DESIGN.md:125 - **TriModel Adapter**（TriMC 自有）：
+- /docs/engineering/DESIGN.md:133 - **TriMC 定制**：
+- /docs/engineering/DESIGN.md:142 这是 TriMC 相比 OpenClaw 原生 pi-agent ReAct 最关键的升级。吸收自 Claude Code 的 coordinator 推理核心。
+- /docs/engineering/DESIGN.md:181 | 决策点 | Claude Code 方案 | TriMC 采用 |
+- /docs/engineering/DESIGN.md:192 Coordinator 模式下，TriMC 的 agent 分为两个层级：
+- /docs/engineering/DESIGN.md:214 ### 4.2 TriMC 增强
+- /docs/engineering/DESIGN.md:226 - **Owning**：引擎完全控制压缩行为（建议 TriMC 默认模式）
+- /docs/engineering/DESIGN.md:233 吸收自 OpenClaw 的双轨 hook 体系，TriMC 扩展为赛博公司业务流程 hook。
+- /docs/engineering/DESIGN.md:246 ### 5.2 TriMC 扩展 Hook
+- /docs/engineering/DESIGN.md:257 吸收 OpenClaw `plugin-sdk/*` 设计，TriMC 提供稳定的公共合约边界：
+- /docs/engineering/DESIGN.md:270 每个 TriMC agent 拥有：
+- /docs/engineering/DESIGN.md:279 | TriMC Agent 属性 | TriCompany 员工属性 |
+- /docs/engineering/DESIGN.md:297 在 TriMC 场景下，路由还包括：
+- /docs/engineering/DESIGN.md:316 ### 7.2 TriMC 增强
+- /docs/engineering/DESIGN.md:327 TriMC ←→ TriModel    : 模型调用（provider/model/fallback 统一配置）
+- /docs/engineering/DESIGN.md:328 TriMC ←→ TriGateway  : 社交通道消息收发
+- /docs/engineering/DESIGN.md:329 TriMC ←→ TriLC       : 本地域任务分发与执行
+- /docs/engineering/DESIGN.md:330 TriMC ←→ TriCompany  : 员工体系、岗位管理、记忆系统
+- /docs/engineering/DESIGN.md:331 TriMC ←→ TriDev      : 十阶段流程门禁对接
+- /docs/engineering/DESIGN.md:332 TriMC ←→ TriSkill    : 统一 skill 供给（未来）
+- /docs/engineering/DESIGN.md:337 TriMC 不直接管理 provider/model 配置，统一通过 TriModel：
+- /docs/engineering/DESIGN.md:345 - **吸收自 OpenClaw**：社交通道实现（WhatsApp/Telegram/Discord 等消息收发、协议适配、消息排队）由 TriGateway 承接，不内嵌于 TriMC
+- /docs/engineering/DESIGN.md:348 - TriMC 通过 ACP（Agent Communication Protocol）接收 TriGateway 转发的消息
+- /docs/engineering/DESIGN.md:349 - TriMC 的回复通过 TriGateway 发送回社交通道
+- /docs/engineering/DESIGN.md:350 - **与 Tripilot 的关系**：TriGateway 社交通道与 Tripilot webview 聊天界面是并存的两条用户交互通道——如同 OpenClaw 自身架构中 web 主聊天界面与 WhatsApp/Telegram/
+- /docs/engineering/DESIGN.md:354 - 本地域任务（文件操作、本地编译、本地测试）由 TriMC 调度 TriLC 执行
+- /docs/engineering/DESIGN.md:377 TriMC 服务端 ←→ TriLC 本地域
+- /docs/engineering/DESIGN.md:384 | Tripilot | Webview 主控界面；ACP 连接 TriMC；任务状态展示 | OpenClaw macOS app / WebChat |
+- /docs/engineering/DESIGN.md:393 - 支持断线重连与状态恢复（关闭 Tripilot 后下次打开自动重连 TriMC，继续原有会话）
+- /docs/engineering/DESIGN.md:407 **Tripilot 的特殊性**：与 OpenClaw WebChat 不同，Tripilot 打包为 PC 端本地应用。即使关闭 PC 客户端，下次打开时通过 ACP 断线重连机制自动恢复与 TriMC 的连接，继续原有会话——用户不会
+- /docs/engineering/DESIGN.md:411 基于对 `reference/openclaw-v2026.3.28/` 源码的逐文件阅读，以下 TriMC 会话模型设计已有明确吸收基准。
+- /docs/engineering/DESIGN.md:424 **TriMC 吸收策略**：赛博公司场景默认采用 `"main"` 级别——用户从 Tripilot、Telegram、Discord 等任意通道发消息，默认路由到同一个 agent session，保证上下文连续性。
+- /docs/engineering/DESIGN.md:431 # OpenClaw 配置示例（TriMC 等价实现）
+- /docs/engineering/DESIGN.md:450 #### 9.5.4 TriMC 实施决策
+- /docs/engineering/DESIGN.md:452 | 决策点 | 吸收来源 | TriMC 实现方向 |
+- /docs/engineering/DESIGN.md:454 | 默认 dmScope | OpenClaw `"main"` | TriMC 默认所有 DM 共享同一 session |
+- /docs/engineering/DESIGN.md:457 | 显式绑定 API | `SessionBindingService` | TriMC Session Store 层提供等价 API |
+- /docs/engineering/DESIGN.md:459 **关键结论**：OpenClaw 原生支持隔离与合并两种模式，TriMC 选择"默认共享 + 可选隔离 + 显式绑定兜底"三层策略，完全覆盖赛博公司"用户从多个入口访问同一赛博员工"的业务场景。
+- /docs/engineering/DESIGN.md:482 | 维度 | Go | 为什么匹配 TriMC |
+- /docs/engineering/DESIGN.md:484 | **并发模型** | goroutine + channel | TriMC 的本质是并发 agent 调度——每个 agent、每个 worker、每个 tool call 都可以是一个 goroutine。`select` 多路复用
+- /docs/engineering/DESIGN.md:485 | **部署形态** | 单二进制，零依赖 | TriMC 最终要部署到服务器做 daemon，拷一个文件就能跑 vs Node.js 需要 runtime + node_modules |
+- /docs/engineering/DESIGN.md:531 - TriMC 角色：`vendor/openclaw/` 作为 shadow 基线参考，为正式版架构设计提供输入
+- /docs/engineering/DESIGN.md:532 - 产出：确认哪些编排路径是必要的、哪些可以简化，沉淀为 TriMC 正式版的需求基线
+- /docs/engineering/DESIGN.md:534 ### Phase 2：TriMC 最小 Runtime（V0.1）
+- /docs/engineering/DESIGN.md:538 - 目标：TriMC 作为一个独立进程运行，能接收消息并回复——赛博公司首次脱离 Copilot 宿主运行
+- /docs/engineering/DESIGN.md:544 - 目标：TriMC 能自主编排多 worker 完成复杂任务——编排能力从手动升级为自动
+- /docs/engineering/DESIGN.md:551 - 目标：全部赛博公司 AI 员工在 TriMC 上运行——从少数关键岗位扩展到全员上岗
+- /docs/engineering/DESIGN.md:581 3. **员工模型定位**：赛博公司员工体系本身在演进中，TriMC 需要与之对齐
+- /docs/engineering/wiki-absorption-integration-plan.md:1 # TriMC Wiki Absorption Integration Plan
+- /docs/engineering/wiki-absorption-integration-plan.md:5 状态：架构草案（待 CPO / CTO 联审确认后进入 TriMC ROADMAP）
+- /docs/engineering/wiki-absorption-integration-plan.md:9 - sourceOfTruth: TriMC/docs/engineering/wiki-absorption-integration-plan.md
+- /docs/engineering/wiki-absorption-integration-plan.md:38 TriMC daemon 模式下：
+- /docs/engineering/wiki-absorption-integration-plan.md:39 - TriMC 自身提供 7×24 runtime，不依赖 Copilot 会话存活
+- /docs/engineering/wiki-absorption-integration-plan.md:40 - Hermes cron → TriMC cron_runner → task-controller 分发 → wiki_refresh_runner 执行
+- /docs/engineering/wiki-absorption-integration-plan.md:42 - 员工进入任何宿主（Copilot / Claude Code / TriMC Web Dashboard）时，wiki 已经是最新状态
+- /docs/engineering/wiki-absorption-integration-plan.md:64 │                    TriMC daemon（目标）                       │
+- /docs/engineering/wiki-absorption-integration-plan.md:66 │  Hermes schedule_registry ──→ TriMC cron_runner             │
+- /docs/engineering/wiki-absorption-integration-plan.md:86 | TriCompany 当前组件 | TriMC 目标组件 | 映射说明 |
+- /docs/engineering/wiki-absorption-integration-plan.md:88 | `runtime/cognition/runners/wiki_refresh_runner.py` | `TriMC/src/task-controller/tasks/wiki-refresh.ts` | 单页刷新逻辑迁移到 Tri
+- /docs/engineering/wiki-absorption-integration-plan.md:89 | `runtime/cognition/runners/wiki_batch_refresh_runner.py` | `TriMC/src/task-controller/tasks/wiki-batch-refresh.ts` | 批
+- /docs/engineering/wiki-absorption-integration-plan.md:90 | `runtime/cognition/tasks/wiki_ingest_task.py` | `TriMC/src/task-controller/tasks/wiki-ingest.ts` | inbox 源读取与标准化 |
+- /docs/engineering/wiki-absorption-integration-plan.md:91 | `runtime/cognition/tasks/wiki_compile_task.py` | `TriMC/src/task-controller/tasks/wiki-compile.ts` | LLM 编译逻辑（用 TriMod
+- /docs/engineering/wiki-absorption-integration-plan.md:92 | `runtime/cognition/chief_of_staff_wiki_paths.py` | `TriMC/src/knowledge/employee-paths.ts` | 通用化员工知识路径解析 |
+- /docs/engineering/wiki-absorption-integration-plan.md:93 | `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/schedules/*.json` | `TriMC/config/schedules
+- /docs/engineering/wiki-absorption-integration-plan.md:98 TriMC 的 Task Controller 当前是占位实现（`TriMC/src/task-controller/controller.ts` 仅有 `acceptPlaceholder()`）。
+- /docs/engineering/wiki-absorption-integration-plan.md:103 // TriMC/src/task-controller/controller.ts 扩展
+- /docs/engineering/wiki-absorption-integration-plan.md:137 Hermes schedule_registry 已定义定时规则（如每 2 小时检查 inbox、每日凌晨批量刷新）。TriMC cron_runner 负责：
+- /docs/engineering/wiki-absorption-integration-plan.md:139 1. 解析 `TriMC/config/schedules/` 下的 schedule JSON
+- /docs/engineering/wiki-absorption-integration-plan.md:146 // TriMC/src/cron/runner.ts 伪代码
+- /docs/engineering/wiki-absorption-integration-plan.md:175 **目标**：不依赖 TriMC daemon，先在 Copilot-host 内泛化 wiki 吸收代码。
+- /docs/engineering/wiki-absorption-integration-plan.md:184 ### Phase 2：TriMC Task 注册（TriMC scaffold 阶段）
+- /docs/engineering/wiki-absorption-integration-plan.md:186 **目标**：在 TriMC task-controller 中注册 wiki 吸收 task type。
+- /docs/engineering/wiki-absorption-integration-plan.md:188 1. 实现 `TriMC/src/task-controller/tasks/wiki-refresh.ts`
+- /docs/engineering/wiki-absorption-integration-plan.md:189 2. 实现 `TriMC/src/task-controller/tasks/wiki-batch-refresh.ts`
+- /docs/engineering/wiki-absorption-integration-plan.md:193 **产出**：TriMC 可以执行 wiki 吸收任务，但需要手动触发。
+- /docs/engineering/wiki-absorption-integration-plan.md:195 ### Phase 3：Cron 与 Schedule 接入（TriMC daemon 阶段）
+- /docs/engineering/wiki-absorption-integration-plan.md:197 **目标**：Hermes schedule registry → TriMC cron_runner → 自动触发 wiki 吸收。
+- /docs/engineering/wiki-absorption-integration-plan.md:199 1. 实现 `TriMC/src/cron/runner.ts`
+- /docs/engineering/wiki-absorption-integration-plan.md:200 2. 将 `TriCompany-copilot-host-assets/docs/execution/hermes-copilot-host/phase-1/schedules/` 下的 schedule JSON 迁移到 `TriMC/
+- /docs/engineering/wiki-absorption-integration-plan.md:206 ### Phase 4：多员工并行（TriMC 正式运营阶段）
+- /docs/engineering/wiki-absorption-integration-plan.md:232 **决策**：Phase 2-3 期间，TriMC wiki 吸收的读写目标保持为 `TriCompany-copilot-host-assets/knowledge/`，不迁移数据目录。
+- /docs/engineering/wiki-absorption-integration-plan.md:236 - TriMC 启动后 Copilot-host 与 TriMC 可能短期内并行运行
+- /docs/engineering/wiki-absorption-integration-plan.md:241 **决策**：在 TriMC daemon 模式下，page promotion 的 `working → reviewing` 在达到 schedule 刷新次数阈值后自动晋升；`reviewing → stable` 需要人工或 Age
+- /docs/engineering/wiki-absorption-integration-plan.md:255 | knowledge/ 目录并发读写冲突（Copilot-host 与 TriMC 并行） | 数据不一致 | Phase 3 前明确文件锁策略（如 sqlite WAL 或文件锁） |
+- /docs/engineering/wiki-absorption-integration-plan.md:256 | Hermes schedule JSON schema 需适配 TriMC cron_runner | 迁移成本 | Phase 2 输出 schema 差异分析后再进入 Phase 3 |
+- /docs/engineering/wiki-absorption-integration-plan.md:264 - TriMC Agent Runtime Layer 可创建独立 inference session
+- /docs/engineering/wiki-absorption-integration-plan.md:273 - **Hermes 融合**：本计划是 Hermes 融合中"cron / 定时复杂任务"从 Copilot-host 手动 → TriMC 自动的关键迁移路径
+- /docs/engineering/wiki-absorption-integration-plan.md:286 - [ ] TriMC task-controller 接受 `wiki-refresh` task type
+- /docs/engineering/cto-008-C-shared-core-proposal.md:1 # CTO-008-C: TriMC/TriLC 共享核心抽象方案
+- /docs/engineering/cto-008-C-shared-core-proposal.md:12 | 维度 | TriMC | TriLC | 差距 |
+- /docs/engineering/cto-008-C-shared-core-proposal.md:21 **结论**：TriLC 当前不是"共享核心后差异化"，而是**根本没有 agent 能力**。CTO-008-C 的本质是把 TriMC 已验证的 agent-loop 核心抽象为独立包，让 TriLC 从零实现改为"导入共享核心 + 本
+- /docs/engineering/cto-008-C-shared-core-proposal.md:29 | 模块 | TriMC 现状 | 共享理由 | 风险 |
+- /docs/engineering/cto-008-C-shared-core-proposal.md:31 | `agent-loop/loop.ts` | ~300 行 async generator | 核心 while-true + streaming + error recovery，TriLC 离线退化必须用到 | 与 TriMC 内部
+- /docs/engineering/cto-008-C-shared-core-proposal.md:41 **TriMC 独有**（server/gateway 面）：
+- /docs/engineering/cto-008-C-shared-core-proposal.md:68 ### 决策：TriMC workspace 子包 `packages/agent-core`
+- /docs/engineering/cto-008-C-shared-core-proposal.md:72 | **TriMC workspace 子包** | ① 代码所有权 TriMC（架构上游）② TriLC 只引用子目录，不拉整个 TriMC ③ `file:` 协议开发期零耦合 ④ PC 端打包时随 TriLC bundle ⑤ 不新建
+- /docs/engineering/cto-008-C-shared-core-proposal.md:73 | 独立仓库 TriAgentCore | 独立版本号，跨仓平等 | ① 多一个仓库维护 ② TriMC/TriLC/TriAgentCore 三角依赖升级复杂 ③ 与 trimodel 的 `file:` 协议模式不一致 | ❌ |
+- /docs/engineering/cto-008-C-shared-core-proposal.md:74 | 放 TriLC 仓库 | TriLC 离线绝对独立 | 架构反向：服务器端 TriMC 依赖本地端仓库，所有权错位 | ❌ |
+- /docs/engineering/cto-008-C-shared-core-proposal.md:79 TriMC/
+- /docs/engineering/cto-008-C-shared-core-proposal.md:89 ├── src/                       ← TriMC 自身（server/observability/pipeline/...）
+- /docs/engineering/cto-008-C-shared-core-proposal.md:92 │   └── package.json           "devDependencies": { "@trimetaverse/agent-core": "file:../TriMC/packages/agent-core" }
+- /docs/engineering/cto-008-C-shared-core-proposal.md:98 - **运行时零网络依赖**：TriMC 服务器崩了不影响 TriLC 已 bundle 的 agent-loop 能力
+- /docs/engineering/cto-008-C-shared-core-proposal.md:106 ├── 在 TriMC/ 内创建 packages/agent-core/
+- /docs/engineering/cto-008-C-shared-core-proposal.md:107 ├── 从 TriMC/src/agent-loop/ 提取共享模块
+- /docs/engineering/cto-008-C-shared-core-proposal.md:115 ├── TriMC/package.json → pnpm workspace root（packages: ["packages/*"]）
+- /docs/engineering/cto-008-C-shared-core-proposal.md:116 └── 70 个已有测试从 TriMC 迁移到 agent-core，保持全绿
+- /docs/engineering/cto-008-C-shared-core-proposal.md:118 Phase C2: TriMC 适配（Week 1-2）
+- /docs/engineering/cto-008-C-shared-core-proposal.md:119 ├── TriMC/src/agent-loop/loop.ts → re-export from @trimetaverse/agent-core
+- /docs/engineering/cto-008-C-shared-core-proposal.md:121 ├── 6 个 built-in tools 保留在 TriMC/src/agent-loop/tools.ts（通过 registry 注册）
+- /docs/engineering/cto-008-C-shared-core-proposal.md:125 ├── TriLC/package.json: "devDependencies": { "@trimetaverse/agent-core": "file:../TriMC/packages/agent-core", "trimodel"
+- /docs/engineering/cto-008-C-shared-core-proposal.md:144 // TriMC 注入
+- /docs/engineering/cto-008-C-shared-core-proposal.md:157 | 解耦 context-builder / prompt-cache / tool-gater 破坏 TriMC 70 个现有测试 | 中 | Phase C2 先 re-export 保持 API 兼容，再渐进迁移 |
+- /docs/engineering/cto-008-C-shared-core-proposal.md:159 | agent-core 版本管理与 TriMC/TriLC 版本耦合 | 低 | `file:` 协议开发阶段零耦合；未来可切 npm registry |
+- /docs/engineering/cto-008-C-shared-core-proposal.md:169 | 落点 | `TriMC/packages/agent-core/`（workspace 子包） | ✅ **CEO 已确认** |
+- /docs/engineering/cto-008-C-shared-core-proposal.md:170 | 离线 | `file:` 编译时依赖，构建时 bundle，运行时零 TriMC 网络依赖 | ✅ **CEO 已确认** |
+- /docs/engineering/cto-008-C-shared-core-proposal.md:178 - TriMC/src/ 与 TriLC/src/ 全量文件对比（42 vs 10 files）
+- /docs/engineering/cto-008-C-shared-core-proposal.md:179 - TriMC Phase 2 agent-loop 70/70 tests pass 状态
+- /docs/engineering/cto-008-C-shared-core-proposal.md:183 - business-state.md：TriMC 为 agent runtime 与 interaction core
+- /docs/engineering/employee-orchestration-design.md:1 # TriMC 员工编排层技术方案 V1.0
+- /docs/engineering/employee-orchestration-design.md:7 **Dependencies**: TriMC Phase 1 & 2（55 tests ✅）、Contract Resolver v0.2.0（17 tests ✅）
+- /docs/engineering/employee-orchestration-design.md:13 在 TriMC 已有 agent-loop + contract resolver 基础上，补齐**员工编排层（Employee Orchestration Layer）**的架构设计。编排层负责：
+- /docs/engineering/employee-orchestration-design.md:19 本方案不替代 TriMC DESIGN.md 中已有的六层架构，而是在第 3 层（Orchestration Engine Layer）和第 2 层（Agent Runtime Layer）之间补充一个**员工编排子层**，充当 Coord
+- /docs/engineering/employee-orchestration-design.md:26 TriMC 六层架构（现有）              员工编排子层（新增）
+- /docs/engineering/employee-orchestration-design.md:96 - Phase 2（后续）：从 TriMC 运行时状态实时更新 `currentLoad`、`status`
+- /docs/engineering/employee-orchestration-design.md:192 Layer 1: 公司级（TriMC 全局）
+- /docs/engineering/employee-orchestration-design.md:366 TriMC/src/orchestration/
+- /docs/engineering/employee-orchestration-design.md:401 | E2E | 集成 | TriMC server + 真实 contract + agent loop task dispatch |
+- /docs/engineering/employee-orchestration-design.md:410 | 并发模型 | 单进程 Node.js 事件循环 | 与 TriMC 一致，不引入 worker_threads |
+- /docs/engineering/employee-orchestration-design.md:444 - `TriMC/docs/engineering/DESIGN.md` §2 六层架构、§3 Coordinator 模式、§6 多 Agent 隔离
+- /docs/engineering/employee-orchestration-design.md:445 - `TriMC/docs/engineering/phase-1-execution-note.md` — Phase 1&2 交付物列表
+- /docs/engineering/employee-orchestration-design.md:446 - `TriMC/src/contracts/resolver.ts` — Contract Resolver v0.2.0 API
+- /docs/engineering/employee-orchestration-design.md:447 - `TriMC/src/agent-loop/loop.ts` — agentLoop() API（AsyncGenerator + 8 事件类型）
+- /docs/engineering/employee-orchestration-design.md:448 - `TriMC/src/task-controller/controller.ts` — 当前占位，将被本方案替代
+- /docs/engineering/cto-008-M-comm-protocol.md:1 # CTO-008-M: TriMC ↔ TriLC 通信协议设计
+- /docs/engineering/cto-008-M-comm-protocol.md:13 本协议定义 **TriMC（中央调度）** 与 **TriLC（本地执行）** 之间的通信规约，支持三种运行模式的无缝切换：
+- /docs/engineering/cto-008-M-comm-protocol.md:17 | **在线 ACN 代理**       | TriMC 可达时                     | TriLC 透明代理请求到 TriMC，零本地智能            |
+- /docs/engineering/cto-008-M-comm-protocol.md:18 | **离线 localbus 升主**  | TriMC 不可达时                   | TriLC 降级为本机 Agent 引擎，独立执行              |
+- /docs/engineering/cto-008-M-comm-protocol.md:19 | **恢复 merge/冲突仲裁** | 离线→在线切换时                  | 将离线期间产生的事件/结果回放给 TriMC，冲突时仲裁  |
+- /docs/engineering/cto-008-M-comm-protocol.md:25 ### 2.1 TriMC 侧 (`TriMC/src/server/app.ts`)
+- /docs/engineering/cto-008-M-comm-protocol.md:49 - **`POST /internal/v1/agent`** — 与 TriMC 同签名的代理入口：
+- /docs/engineering/cto-008-M-comm-protocol.md:50 - **connected 状态**：透明 proxy 到 TriMC，pipe 响应流
+- /docs/engineering/cto-008-M-comm-protocol.md:67 TriLC 代理到 TriMC 时，注入 TriLC 侧元数据：
+- /docs/engineering/cto-008-M-comm-protocol.md:77 - `X-TriLC-Node-ID`：唯一标识本地节点（TriMC 据此追踪多台 TriLC）
+- /docs/engineering/cto-008-M-comm-protocol.md:79 - `X-TriLC-Version`：协议版本，TriMC 据此判断兼容性
+- /docs/engineering/cto-008-M-comm-protocol.md:83 TriMC 在非流式 JSON 响应中附加元数据：
+- /docs/engineering/cto-008-M-comm-protocol.md:95 - `sessionId`：TriMC 侧分配的全局唯一会话 ID
+- /docs/engineering/cto-008-M-comm-protocol.md:111 (TriMC 恢复后) replay
+- /docs/engineering/cto-008-M-comm-protocol.md:115 │   TriMC     │
+- /docs/engineering/cto-008-M-comm-protocol.md:124 每个事件携带足够的上下文以便 TriMC 侧重放：
+- /docs/engineering/cto-008-M-comm-protocol.md:178 #### 3.3.2 TriMC 侧新增端点
+- /docs/engineering/cto-008-M-comm-protocol.md:207 当 TriMC 发现离线期间有冲突时（如同一 taskId 同时被 TriMC 分配给了其他在线 TriLC 节点）：
+- /docs/engineering/cto-008-M-comm-protocol.md:211 | **任务双重分配**       | TriMC 侧 winner-takes-last           | 同一 taskId 在离线期间被分配给了其他在线节点      |
+- /docs/engineering/cto-008-M-comm-protocol.md:212 | **状态版本落后**       | TriMC 侧 apply-offline-changes       | 离线节点的状态版本号 < TriMC 当前版本号           |
+- /docs/engineering/cto-008-M-comm-protocol.md:213 | **工具调用幂等冲突**   | TriMC 侧标记为 `already_executed`    | 同一幂等键的工具调用已由其他节点执行              |
+- /docs/engineering/cto-008-M-comm-protocol.md:214 | **无冲突**             | TriMC 侧直接合并                     | 离线期间无其他节点操作同一资源                    |
+- /docs/engineering/cto-008-M-comm-protocol.md:247 当前 TriLC ↔ TriMC 仅通过 HTTP 通信；在离线模式下需要一种**进程内+本机 IPC**机制来：
+- /docs/engineering/cto-008-M-comm-protocol.md:251 - 待恢复后批量上传状态变更到 TriMC
+- /docs/engineering/cto-008-M-comm-protocol.md:278 **Phase 2（TriMC 正式宿主后）**：升级为 Unix Domain Socket / Named Pipe：
+- /docs/engineering/cto-008-M-comm-protocol.md:281 TriLC (app process) ──UDS──► TriLC (localbus daemon) ──HTTP──► TriMC
+- /docs/engineering/cto-008-M-comm-protocol.md:285 - 与 TriMC 侧的 `TRISTACISS_BASE_URL` 和 `OPENCLOW_GATEWAY_URL` 对齐
+- /docs/engineering/cto-008-M-comm-protocol.md:293 - TriLC `ConnectionManager.checkHealth()`：GET TriMC `/healthz`，每 10s
+- /docs/engineering/cto-008-M-comm-protocol.md:311 TriMC 响应：
+- /docs/engineering/cto-008-M-comm-protocol.md:322 - `commands`：TriMC 可下发的指令队列（如 `replay_now`、`switch_connection`、`shutdown`、`drain_queue`）
+- /docs/engineering/cto-008-M-comm-protocol.md:332 | `/internal/v1/agent`              | POST  | TriMC   | Agent 执行（pipeline 模式）| ✅ 已实现  |
+- /docs/engineering/cto-008-M-comm-protocol.md:334 | `/internal/v1/chat`               | POST  | TriMC   | 单轮对话                   | ✅ 已实现  |
+- /docs/engineering/cto-008-M-comm-protocol.md:335 | `/internal/v1/tasks`              | POST  | TriMC   | 任务提交                   | ✅ 骨架    |
+- /docs/engineering/cto-008-M-comm-protocol.md:336 | `/internal/v1/heartbeat`          | POST  | TriMC   | 增强心跳                   | 📋 已设计 |
+- /docs/engineering/cto-008-M-comm-protocol.md:337 | `/internal/v1/events/replay`      | POST  | TriMC   | 离线事件回放               | 📋 已设计 |
+- /docs/engineering/cto-008-M-comm-protocol.md:351 | M.5  | 冲突仲裁逻辑 (TriMC 侧)                        | 2h     | 小柯       |
+- /docs/engineering/cto-008-M-comm-protocol.md:377 - **TriLC 单机模式**：即使 TriMC 永不可达，TriLC 仍可通过 `agentLoop` 本地执行——不依赖协议实现
+- /docs/engineering/cto-008-M-comm-protocol.md:378 - **新旧协议共存**：TriLC 注入的 `X-TriLC-Version` 头允许 TriMC 降级响应
+- /docs/engineering/cto-008-M-comm-protocol.md:391 | 恢复 replay 期间 TriMC 再次断连 | 中   | 中   | 断点续传：replay 返回 `lastSeqNo`，续传未完成的  |
+- /docs/engineering/phase-1-execution-note.md:1 # TriMC Phase 1 & 2 CTO Execution Note
+- /docs/engineering/phase-1-execution-note.md:12 Phase 1 delivered TriMC's own while-true agent loop, absorbed from Claude Code 2.1.88 vendor pattern, using TriModel/Dee
+- /docs/engineering/phase-1-execution-note.md:53 | TriMC build (`tsc -p tsconfig.json`) | ✅ Pass |
+- /docs/engineering/phase-1-execution-note.md:54 | TriMC tests (10 suites, 34 tests) | ✅ All pass |
+- /docs/engineering/phase-1-execution-note.md:56 | De-anthropic audit — TriMC | ✅ Zero references found |
+- /docs/engineering/phase-1-execution-note.md:63 1. **No Anthropic SDK**: TriMC uses TriModel (DeepSeek provider), not Anthropic. The Claude Code 2.1.88 vendor absorptio
+- /docs/engineering/phase-1-execution-note.md:106 - Includes `X-TriMC-Stream-Version: 1` header in responses
+- /docs/engineering/phase-1-execution-note.md:158 | TriMC tests (12 suites, 55 tests) | ✅ 55/55 pass, 0 fail |
+- /docs/engineering/phase-1-execution-note.md:181 - `D:\OneDrive\Code\ai\TriMC\src\agent-loop\loop.ts`
+- /docs/engineering/phase-1-execution-note.md:182 - `D:\OneDrive\Code\ai\TriMC\src\agent-loop\tools.ts`
+- /docs/engineering/phase-1-execution-note.md:183 - `D:\OneDrive\Code\ai\TriMC\src\server\app.ts`
+- /docs/engineering/cto-008-P-pc-packaging.md:24 | **TriMC**  | 中央调度服务器（远端）                     | 🟢 N/A     | 不参与 PC 打包（云端部署）                    |
+- /docs/engineering/cto-008-P-pc-packaging.md:40 — TriPilot 通过 `models-direct` 模式直连 TriLC，TriLC 负责代理到 TriMC
+- /docs/engineering/cto-008-P-pc-packaging.md:45 - `POST /internal/v1/agent`：SSE/JSON 双模式，自动 proxy 到 TriMC 或本地 agentLoop
+- /docs/engineering/cto-008-P-pc-packaging.md:94 │  │  │  connected → proxy to TriMC                   │  │  │
+- /docs/engineering/cto-008-P-pc-packaging.md:106 │     TriMC (云端)      │
+- /docs/engineering/cto-008-P-pc-packaging.md:120 ├── TriMC 在线 → proxy → TriMC agentLoop
+- /docs/engineering/cto-008-P-pc-packaging.md:121 └── TriMC 离线 → local agentLoop (agent-core)
+- /docs/engineering/cto-008-P-pc-packaging.md:131 | 8710  | TriMC（云端）              | PC 桌面不捆绑              |
+- /docs/engineering/cto-008-P-pc-packaging.md:345 1. TriMC/packages/agent-core  →  npm pack  →  trilc-v0.1.0.tgz
+- /docs/engineering/ROADMAP.md:1 ﻿# TriMC 技术路线图
+- /docs/engineering/tasks/CTO-007-smoke-test.md:22 实现 `TriMC/src/task-controller/controller.ts` 的基础任务生命周期管理，取代当前仅有的 `acceptPlaceholder()` 空壳。
+- /docs/engineering/tasks/CTO-007-smoke-test.md:64 - 测试文件：`TriMC/test/task-controller.test.ts`（放入 `test/` 目录，与项目现有测试一致）
+- /docs/engineering/tasks/CTO-007-smoke-test.md:81 构建 `TriMC/scripts/validate.mjs`，作为编码积木的自动化质量门禁工具。
+- /docs/engineering/tasks/CTO-007-smoke-test.md:121 - 先在 TriMC 现有 9 个测试文件上运行，确认能产出合法 JSON
+- /docs/engineering/tasks/CTO-007-smoke-test.md:189 - 该接口是否作为 TriMC agent loop 的标准 observability 指标
+- /docs/engineering/tasks/CTO-007-smoke-test.md:207 | 1 | `TriMC/src/task-controller/controller.ts` | 小全 | 修改 |
+- /docs/engineering/tasks/CTO-007-smoke-test.md:208 | 2 | `TriMC/test/task-controller.test.ts` | 小全 | 新建 |
+- /docs/engineering/tasks/CTO-007-smoke-test.md:209 | 3 | `TriMC/scripts/validate.mjs` | 小柯 | 新建 |
+- /docs/engineering/tasks/CTO-006-memory-injector.md:58 - 未使用 Claude Code 的 `user` / `feedback` / `project` / `reference` 分类体系——TriMC 使用独立的四层记忆模型（soul / memory / colleagues / s
+- /docs/engineering/tasks/CTO-004-context-builder.md:8 TriMC v0.2.0 编排层四组件之一：**Context Builder**（公司背景 + registry 引用 → CLAUDE.md 注入）。目标是让每个 agent 实例的 system prompt 自动携带项目上下文（模块
+- /docs/engineering/tasks/CTO-004-context-builder.md:70 - **后续集成点**: TriMC HTTP server 在构建 agent 实例时可通过 ContextSources 注入模块背景
+- /docs/engineering/tasks/CTO-008-tool-permission-system.md:9 Claude Code 的 agent 工具体系有明确的分层权限模型（5 个权限集合），确保不同角色代理不能越权操作。TriMC 在 CTO-007 前所有子代理拥有完整 6 工具权限——缺乏递归防护和权限隔离。
+- /docs/engineering/tasks/CTO-005-soul-loader.md:8 TriMC v0.2.0 编排层四组件之二：**Soul Loader**（agent contract → 系统提示词）。将 AgentContract 六要素（Identity / Responsibilities / Decision
+- /docs/engineering/tasks/CTO-005-soul-loader.md:83 - **后续集成**: TriMC HTTP server 可通过 `resolveContracts()` → `contractToContextSources()` → `agentLoop({context})` 启动员工 agen
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:7 **Target**: TriMC (currently **zero caching infrastructure**)
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:15 **Key finding**: TriMC currently implements **0%** of Claude Code's prompt caching infrastructure. This is the single la
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:162 ## 3. Gap Analysis: TriMC vs Claude Code
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:166 TriMC has **no prompt caching infrastructure whatsoever**:
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:168 | Capability | Claude Code | TriMC | Gap |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:187 - TriMC: Full system + tools re-sent every turn → **0 tokens saved**
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:192 | Component | Lines (CC) | Est. TriMC Lines | Difficulty | Dependency |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:239 - Skip scope/org distinction initially (TriMC has no org concept yet)
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:259 - Skip betas, effort, extraBody tracking (add as TriMC gains those features)
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:284 | `Bun.hash()` / Bun-specific fallback | TriMC uses Node.js; use `crypto.createHash` |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:285 | GrowthBook feature flag gating | TriMC doesn't use GrowthBook; use env vars or config |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:287 | `autoModeActive` / `overage` / `cachedMCEnabled` tracking | Claude Code-specific features; add when TriMC has equivale
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:288 | `AnalyticsMetadata_I_VERIFIED_THIS_IS_NOT_CODE_OR_FILEPATHS` type branding | Claude Code's analytics privacy type; Tri
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:289 | Agent/sub-agent tracking key isolation | No sub-agents in TriMC yet; add when Phase 3 (sub-agent tree) is absorbed |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:290 | Fire-and-forget fork handling | No forked queries in TriMC yet |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:383 1. **Start with 5min TTL only**: 1h requires user eligibility logic (ant/subscriber detection) that TriMC doesn't have y
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:385 2. **Skip scope/org caching**: TriMC has no org/multi-user concept. All cache is per-user (no scope annotation needed).
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache.md:389 4. **Console log before analytics**: Claude Code fires `tengu_prompt_cache_break` to BQ. TriMC should start with structu
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:7 **Target**: TriMC agent loop（`src/agent-loop/loop.ts`, 181 行）
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:16 TriMC 当前 `agentLoop()` 实现约 **10–15%** 的 Claude Code loop 复杂度。核心差距为：
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:57 TriMC 当前使用 `state.messages.push(...)` + `state.turnCount++` 原地修改模式。一旦增加更多 continue 站点，原地修改会导致状态漂移 bug。
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:225 ## 9. Gap Analysis：TriMC loop.ts vs Claude Code queryLoop
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:229 | 能力 | TriMC | Claude Code | 说明 |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:232 | AsyncGenerator yield | ✅ | ✅ | TriMC: AgentEvent, CC: StreamEvent |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:233 | Max turns guard | ✅ | ✅ | TriMC: 25, CC: 可配置 |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:234 | Tool dispatch | ✅ | ✅ | TriMC: sequential for-of, CC: streaming executor or batch |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:236 | State management | ⚠️ in-place | ✅ spread-replace | TriMC 原地修改，CC 全局替换 |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:240 | 能力 | TriMC 当前 | 差距 |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:251 | 能力 | TriMC 当前 | 差距 |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:263 | 能力 | TriMC 当前 | 差距 |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:302 1. **Spread-replace state IS correct for multi-continue loops**。TriMC 当前仅 1 个 continue 站点，但这不会持续。
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:304 2. **Streaming tool execution IS NOT premature optimization**。Claude Code 在 60+ 工具规模上证明了其价值。TriMC 目前 6 个工具，但 sub-agent d
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:310 5. **TriMC does NOT need all 11 terminal / 7 transition reasons**。从 4 个终端原因（`completed`, `max_turns`, `model_error`, `ab
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:343 | V-024 | TriMC loop.ts 仅有 1 个 continue 站点（next_turn），无 stop hooks / budget / compaction | loop.ts:152–154 | ✅ PASS |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:344 | V-025 | TriMC 使用 in-place mutation (state.messages.push)，非 spread-replace | loop.ts:107, 153–154 | ✅ PASS |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:350 - `TriMC/vendor/claude-code/src/query.ts`（全文 1730 行，分段读取验证）
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:351 - `TriMC/vendor/claude-code/src/query/tokenBudget.ts`（全文 94 行，完整读取）
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:352 - `TriMC/vendor/claude-code/src/query/stopHooks.ts`（全文 474 行，完整读取）
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:353 - `TriMC/vendor/claude-code/src/query/config.ts`（QueryConfig 模式）
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:354 - `TriMC/vendor/claude-code/src/query/deps.ts`（QueryDeps DI 模式）
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:355 - `TriMC/src/agent-loop/loop.ts`（TriMC 当前实现，181 行，完整读取）
+- /docs/engineering/claude-code-absorption/phase-1-core-loop-v2.md:356 - `TriMC/docs/registry/code-state.md`（当前 code readiness）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:7 **Target**: TriMC（当前 sub-agent 基础设施：0%）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:13 Claude Code 的 sub-agent 系统是其最关键的分工原语——把"一个 agent 做所有事"升级为"树形多 agent 协同"。TriMC 当前完全没有 sub-agent 概念（`src/agent-loop/` 只有单 
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:658 ## 4. TriMC Current State Gap Analysis
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:662 | 子系统 | TriMC 现状 | Claude Code 实现 | 差距 |
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:676 **结论**：TriMC sub-agent 基础设施覆盖率 = **0%**。
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:691 **目标**：让 TriMC 的子代理能工作——spawn → run → return results
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:700 | **AgentTool 注册到 tool registry** | 将 Agent 工具注入 TriMC 的 tool dispatch | AgentTool spawn router | S |
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:732 ## 6. Key Design Decisions for TriMC
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:744 理由：TriMC 的 sub-agent 使用场景当前主要是代码分析和规划（只读），Worktree 隔离的主要价值在"可写并行 agent"场景。Tier 1 可先跳过，用文件操作日志/锁替代。
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:748 **建议**: Tier 3 采纳，但先定义记忆 schema 与 TriMC 的四层记忆体系（Soul Memory → Project Memory → Session Memory → Tool Memory）的映射关系。
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:752 TriMC 当前不需要全部 6 个 Claude Code built-in agent：
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:754 - ✅ **适配**: Plan → 结合 TriMC 的产品规划体系
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:812 - `TriMC/vendor/claude-code/src/tools/AgentTool/AgentTool.tsx` — 完整阅读（1200+ 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:813 - `TriMC/vendor/claude-code/src/tools/AgentTool/loadAgentsDir.ts` — 完整阅读（500+ 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:814 - `TriMC/vendor/claude-code/src/tools/AgentTool/runAgent.ts` — 完整阅读（730+ 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:815 - `TriMC/vendor/claude-code/src/tools/AgentTool/agentToolUtils.ts` — 完整阅读（400+ 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:816 - `TriMC/vendor/claude-code/src/tools/AgentTool/prompt.ts` — 完整阅读（288 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:817 - `TriMC/vendor/claude-code/src/tools/AgentTool/forkSubagent.ts` — 完整阅读
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:818 - `TriMC/vendor/claude-code/src/tools/AgentTool/forkedAgent.ts` — 完整阅读
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:819 - `TriMC/vendor/claude-code/src/tools/AgentTool/builtInAgents.ts` — 完整阅读（72 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:820 - `TriMC/vendor/claude-code/src/tools/AgentTool/built-in/generalPurposeAgent.ts` — 完整阅读
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:821 - `TriMC/vendor/claude-code/src/tools/AgentTool/built-in/exploreAgent.ts` — 完整阅读
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:822 - `TriMC/vendor/claude-code/src/tools/AgentTool/built-in/planAgent.ts` — 完整阅读
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:823 - `TriMC/vendor/claude-code/src/tools/AgentTool/built-in/verificationAgent.ts` — 完整阅读（153 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:824 - `TriMC/vendor/claude-code/src/tools/AgentTool/built-in/claudeCodeGuideAgent.ts` — 完整阅读（206 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:825 - `TriMC/vendor/claude-code/src/tools/AgentTool/built-in/statuslineSetup.ts` — 完整阅读（145 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:826 - `TriMC/vendor/claude-code/src/tools/AgentTool/agentMemory.ts` — 完整阅读（178 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:827 - `TriMC/vendor/claude-code/src/tools/AgentTool/agentMemorySnapshot.ts` — 完整阅读（198 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:828 - `TriMC/vendor/claude-code/src/tools/AgentTool/resumeAgent.ts` — 完整阅读（200+ 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:829 - `TriMC/vendor/claude-code/src/tools/AgentTool/agentDisplay.ts` — 完整阅读（105 行）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:830 - `TriMC/vendor/claude-code/src/constants/tools.ts` — 工具禁止列表常量验证
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:831 - `TriMC/vendor/claude-code/src/coordinator/workerAgent.ts` — 验证为空壳
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree.md:832 - `TriMC/docs/registry/code-state.md` — TriMC 当前 sub-agent 状态（0%）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:14 Claude Code 的 sub-agent 系统是分层分工体系的核心——从"单体 agent"升级到"树形多 agent 协同"。TriMC 当前 sub-agent 基础设施：**0%**。
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:337 ## 4. TriMC Current State Gap
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:339 | 子系统 | TriMC | Claude Code | Gap |
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:353 **结论**：TriMC sub-agent 基础设施 = **0%**。
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:368 | AgentTool 注册 | 注入 TriMC agent loop 的 tool dispatch | S |
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:406 ### 6.3 Agent 记忆与 TriMC 四层记忆体系映射
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:407 **建议**：Agent 记忆的 user/project/local 三层映射到 TriMC 的 Session Memory 层，保持与 Soul/Project/Tool Memory 的隔离。
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:411 - ✅ 适配：Plan（结合 TriMC 产品规划）
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:467 - `TriMC/vendor/claude-code/src/tools/AgentTool/AgentTool.tsx` — call() 完整追踪 (L239-1050+)
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:468 - `TriMC/vendor/claude-code/src/tools/AgentTool/runAgent.ts` — 完整阅读 (900+ lines)
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:469 - `TriMC/vendor/claude-code/src/tools/AgentTool/loadAgentsDir.ts` — 完整阅读
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:470 - `TriMC/vendor/claude-code/src/tools/AgentTool/agentToolUtils.ts` — 完整阅读
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:471 - `TriMC/vendor/claude-code/src/tools/AgentTool/prompt.ts` — 完整阅读 (~450 lines)
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:472 - `TriMC/vendor/claude-code/src/tools/AgentTool/forkSubagent.ts` — 完整阅读 (211 lines)
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:473 - `TriMC/vendor/claude-code/src/tools/AgentTool/builtInAgents.ts` — 完整阅读 (72 lines)
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:474 - `TriMC/vendor/claude-code/src/tools/AgentTool/resumeAgent.ts` — 完整阅读
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:475 - `TriMC/vendor/claude-code/src/tools/AgentTool/agentMemory.ts` — 完整阅读 (175 lines)
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:476 - `TriMC/vendor/claude-code/src/tools/AgentTool/agentMemorySnapshot.ts` — 完整阅读 (160+ lines)
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:477 - `TriMC/vendor/claude-code/src/tools/AgentTool/constants.ts` — 完整阅读 (13 lines)
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:478 - `TriMC/docs/engineering/claude-code-absorption/phase-3-subagent-tree.md` — v1 文档
+- /docs/engineering/claude-code-absorption/phase-3-subagent-tree-v2.md:479 - `TriMC/docs/registry/code-state.md` — TriMC 当前状态
+- /docs/engineering/claude-code-absorption/README.md:5 > **Source**: Claude Code 2.1.88 vendor (`TriMC/vendor/claude-code/src/`)
+- /docs/engineering/claude-code-absorption/README.md:6 > **Target**: TriMC agent architecture (`TriMC/src/agent-loop/`)
+- /docs/engineering/claude-code-absorption/README.md:30 1. **TriMC currently at 0–15% of Claude Code's agent infrastructure**
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:7 **Target**: TriMC agent loop (`src/agent-loop/loop.ts`, 181 lines)
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:13 Claude Code's `queryLoop()` is a 1730-line while-true generator — far richer than TriMC's current 181-line agent loop. T
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:15 **Key finding**: TriMC currently implements ~15% of the Claude Code loop complexity. The missing 85% breaks into three t
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:54 This pattern prevents state drift across 11 continue sites and simplifies reasoning about loop invariants. Contrast with
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:202 ## 7. Gap Analysis: TriMC loop.ts vs Claude Code queryLoop
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:206 | Capability | TriMC | Claude Code | Notes |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:209 | AsyncGenerator yield | ✅ | ✅ | TriMC yields AgentEvent, CC yields StreamEvent |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:210 | Max turns guard | ✅ | ✅ | TriMC: 25, CC: configurable via params |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:211 | Tool dispatch | ✅ | ✅ | TriMC: sequential for-of, CC: streaming executor or batch |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:213 | State management | ⚠️ Partial | ✅ | TriMC mutates in-place, CC uses spread-replace |
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:220 | **Streaming tool executor** | TriMC executes tools after full response; CC executes tools during streaming | Reduces l
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:276 ## 9. Recommended TriMC Implementation Order
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:315 1. **Spread-replace state IS the correct pattern** for loops with multiple continue sites. In-place mutation is acceptab
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:317 2. **Streaming tool execution is NOT premature optimization.** Claude Code shows it works for 60+ tools. TriMC has 6 too
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:319 3. **Error recovery cascade IS the highest-leverage pattern** in the entire query.ts. Without it, any model error kills 
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:321 4. **Dependency injection (QueryDeps) is nice-to-have, not must-have** for TriMC's current scale. TriModel's provider sy
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:323 5. **TriMC does NOT need all 11 terminal reasons or 11 transition reasons.** Start with 4 terminal (`completed`, `max_tu
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:329 - `TriMC/vendor/claude-code/src/query.ts` (full file, 1730 lines — read in 6 passes)
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:330 - `TriMC/vendor/claude-code/src/query/config.ts` (QueryConfig pattern)
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:331 - `TriMC/vendor/claude-code/src/query/deps.ts` (QueryDeps DI pattern)
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:332 - `TriMC/vendor/claude-code/src/query/tokenBudget.ts` (BudgetTracker + checkTokenBudget)
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:333 - `TriMC/vendor/claude-code/src/query/stopHooks.ts` (handleStopHooks)
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:334 - `TriMC/src/agent-loop/loop.ts` (current TriMC implementation, 181 lines)
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:335 - `TriMC/docs/engineering/phase-1-execution-note.md` (Phase 1 & 2 completion record)
+- /docs/engineering/claude-code-absorption/phase-1-core-loop.md:336 - `TriMC/docs/registry/code-state.md` (current code readiness)
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:7 **Target**: TriMC（当前权限系统成熟度：0% — 无独立的工具权限决策管道）
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:13 Claude Code 的工具权限系统是其安全架构的脊梁——不是简单的"允许/拒绝"二元开关，而是一个**15 步决策管道**，融合了规则匹配、模式覆盖、分类器 AI 判断、拒绝追踪、路径验证和 Kill Switch 熔断。TriMC 当
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:32 **核心发现**：Claude Code 的权限系统采用了"规则优先 + 分类器兜底"的纵深防御架构。最关键的安全设计是 **Safety Check 的 bypass-immune 属性**——即使在 `bypassPermissions
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:646 ## 14. TriMC Gap Analysis
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:650 TriMC 当前**完全没有独立的工具权限决策系统**。当前安全依赖：
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:656 | # | 维度 | Claude Code | TriMC 当前 | 差距 |
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:663 | 6 | 分类器系统 | tool-use + XML 2-Stage | 0（TriMC 无 auto 模式概念） | ⬜⬜⬜⬜⬜ 100% |
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:670 **总体评估**：TriMC 权限系统成熟度 = **0%**。Claude Code 的权限系统是一个完整、经过生产验证的安全架构，覆盖了从规则到 AI 分类到熔断的全链路。
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:676 ### Tier 1 — MVP 必需（与 TriMC agent-loop 直接耦合）
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:700 **预估工时**：3-5 天（基于 TriMC 当前 TypeScript 基础设施）
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:713 - 与 TriMC 项目特定的安全路径扩展
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:717 - 与 TriMC 的 auto-fallback 机制集成（入口路由层 auto-fallback 循环）
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:726 ### Tier 3 — 智能分类（与 TriMC 的 Copilot-host/TriMC-host 双模式集成）
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:730 1. **分类器白名单**（22 个安全工具 → TriMC 等价映射）：
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:734 - TriMC 使用自己的模型端点（而非 Claude API）
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:744 **预估工时**：7-10 天（取决于 TriMC 模型端点的可用性）
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:751 - TriMC 自己的远程配置端点（替代 Statsig/GB）
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:761 - TriMC 自己的 Shift+Tab 等效模式切换
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:772 1. **Safety Check 的 bypass-immune 属性**：TriMC 入口路由层 auto-fallback 设计中的"健康检查 3 次失败自动回退"应该也保留类似的 bypass-immune 锚点——某些关键安全检查
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:776 3. **Denial Tracking 双重阈值**：consecutive（短窗口异常）和 total（长期趋势）分开追踪的设计很聪明，TriMC 直接采用。
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:778 4. **Mode Transition 的 Transform 模式**：`verifyAutoModeGateAccess` 返回 Transform 函数而非预计算 context，避免了异步配置查询期间的竞态条件——TriMC 的入
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:780 5. **Rule Source 优先级分级**：policySettings > userSettings > projectSettings > localSettings > cliArg 的分级设计保证了企业策略不被本地覆盖——Tr
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:812 | V-025 | Absorption Tiers 在 TriMC 当前架构下可行 | TriMC 当前 `src/agent-loop/` 结构 | ✅ PASS |
+- /docs/engineering/claude-code-absorption/phase-4-tool-permission.md:854 - `TriCompany/docs/engineering/entry-routing-layer-design.md` — TriMC 入口路由层设计（CTO-008）
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:13 **Target**: TriMC (currently **zero caching infrastructure** — confirmed: no cache-related source files or annotations)
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:31 **Key finding**: TriMC currently implements **0%** of Claude Code's prompt caching infrastructure. Every TriMC API call 
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:380 ## 3. Gap Analysis: TriMC vs Claude Code
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:384 TriMC has **no prompt caching infrastructure whatsoever** — confirmed by code search: no `cache_control`, `cacheControl`
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:386 | Capability | Claude Code | TriMC | Gap |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:405 - **TriMC**: Full system + tools re-sent every turn → **0 tokens saved**
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:410 | Component | Actual Lines (CC) | Est. TriMC Lines | Difficulty | Dependency |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:423 **Total estimated**: ~1,295 lines in CC; ~940 lines for TriMC full, ~570 lines for Tier 1+2 only.
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:457 - Skip scope/org distinction initially (TriMC has no org concept)
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:460 - Skip fire-and-forget fork handling (no forked agents in TriMC yet)
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:472 - Skip betas, effort, extraBody tracking (add as TriMC gains those features)
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:489 | `Bun.hash()` / Bun-specific fallback | TriMC uses Node.js; use `crypto.createHash('sha256')` |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:490 | GrowthBook feature flag gating | TriMC uses env vars or config |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:493 | `AnalyticsMetadata_I_VERIFIED_THIS_IS_NOT_CODE_OR_FILEPATHS` type branding | Claude Code's analytics privacy type; Tri
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:494 | Agent/sub-agent tracking key isolation | No sub-agents in TriMC yet; add when Phase 3 absorbed |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:495 | Fire-and-forget fork handling (`skipCacheWrite`) | No forked queries in TriMC yet |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:496 | `sanitizeToolName()` for MCP tools | No MCP tools in TriMC yet |
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:503 1. **Start with 5min TTL only**: 1h requires user eligibility logic (ant/subscriber detection) that TriMC doesn't have. 
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:505 2. **Skip scope/org caching**: TriMC has no org/multi-user concept. All cache is per-user (no scope annotation needed in
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:507 3. **Aggregate tool hash before per-tool**: Claude Code computes per-tool hashes lazily — only when the aggregate tool h
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:509 4. **Console log before analytics**: Claude Code fires `tengu_prompt_cache_break` to BQ with 31 fields. TriMC should sta
+- /docs/engineering/claude-code-absorption/phase-2-prompt-cache-v2.md:513 6. **Use `crypto.createHash('sha256')` not Bun.hash**: Claude Code uses `Bun.hash()` with a `djb2Hash` fallback (L171–17
+- /docs/workflow/README.md:1 ﻿# TriMC Workflow 索引
+- /docs/execution/README.md:1 ﻿# TriMC 执行层说明
+- /docs/ops/trimc-cron-plane-shift-runbook.md:1 # TriMC Cron Scheduler 运维 Runbook（周平面迁移五段链）
+- /docs/ops/trimc-cron-plane-shift-runbook.md:5 - sourceOfTruth: TriMC/docs/ops/trimc-cron-plane-shift-runbook.md
+- /docs/ops/trimc-cron-plane-shift-runbook.md:10 - 命名注记（quad-migration v1.0）：本 runbook 所述"TriMC"= 服务器现役实例，叙事面已更名 **TriMMC**（原 TriMC，元虚拟主控壳）；兼容面物理名照旧。权威 alias 表：TriCompan
+- /docs/ops/trimc-cron-plane-shift-runbook.md:12 > 关联：TriMC/docs/engineering/trimc-scheduler-adapter-design.md（r1-1 APPROVED，r1-2 实现）
+- /docs/ops/trimc-cron-plane-shift-runbook.md:23 ├─ git add + commit（内联身份 TriMC Scheduler）
+- /docs/ops/trimc-cron-plane-shift-runbook.md:35 2. 服务器：`cd /srv/fleet/TriMC && git pull`（执行身份二选一：**root**——TriMC 工作区新文件写成 root 属主无碍（fleet 不消费 TriMC 仓）；**`runuser -u fle
+- /docs/ops/trimc-cron-plane-shift-runbook.md:50 cd /srv/fleet/TriMC
+- /docs/ops/trimc-cron-plane-shift-runbook.md:170 - **周日全仓推送软习惯（2026-08-24 增，冻结窗口的姊妹条）**：周日 23:00 前顺手把全部仓（TriMetaverse/TriCompany/TriMC 及其他活跃仓）的未推 commit 一并推送 sg-server——
+- /docs/registry/code-state.md:1 # TriMC Code State
+- /docs/registry/code-state.md:5 - `src/index.ts`：进程入口，读取环境变量并启动 TriMC HTTP 服务。
+- /docs/registry/code-state.md:20 - `vendor/openclaw/`：已裁为薄参考层（2026-07-10 中央收口），社交通道归入 TriGateway，消息队列归入 TriMC，不再作为 agent runtime 参考主线。
+- /docs/registry/code-state.md:21 - `vendor/claude-code/`：Claude Code 2.1.88 restored-src 复制的吸收基线，作为 TriMC agent 循环 infra 层。同源代码同时驱动本地 Claude Code CLI 演练场
+- /docs/registry/code-state.md:33 - **2026-07-14（CARRY-004）**：Docker 多阶段构建完成（137MB）、docker-compose（TriMC + PostgreSQL）健康检查通过（`/healthz` → 200）、K8s manifes
+- /docs/registry/code-state.md:49 - **2026-07-16（CTO-008-S K8s HA）**：TriMC K8s 高可用运维方案 APPROVED。①设计文档 `docs/engineering/cto-008-S-k8s-ha-operations.md`（3 
+- /docs/registry/code-state.md:52 - **2026-07-17（CTO-008-M Comm Protocol Implementation）**：TriMC ↔ TriLC 通信协议全线实现。M.1-M.6（6/7）代码落地 + 测试通过。① `src/comm/arbi
+- /docs/registry/code-state.md:57 - **2026-08-14（i4-2 五维同步 TriMC 接收侧）**：`src/config-sync/` 新模块落地（types/status/default-model/apply 四文件）+ cli.ts `config-syn
+- /docs/registry/code-state.md:58 - **2026-08-14（i4-4 返修包 R，TriMC 面）**：contentHash 排除 project.devHead（自引用字段，两端同口径，i4-4 终审修正记录 ②/OBS-1 裁决候选 a）；apply 幂等矩阵差异
+- /docs/registry/code-state.md:88 - `src/observability/` 是当前最成熟的落地面，因此很容易让人误以为 TriMC 已整体完成迁移；实际上 observability 已落、控制平面仍薄。
+- /docs/registry/code-state.md:90 - `vendor/openclaw/` 若与 `src/` 不持续区分，后续很容易把 shadow 吸收层误写成 TriMC 自研现役实现。
+- /docs/registry/product-state.md:1 # TriMC Product State
+- /docs/registry/product-state.md:5 - `TriMC` 是服务域主控模块，当前仓内已验证的现役产品面是“服务域控制骨架 + observability/replay 基线 + OpenClaw shadow 吸收起点”。
+- /docs/registry/product-state.md:14 - 以 `vendor/openclaw/` 作为 shadow 吸收参考基线之一，用于承接 Gateway 协议、节点执行语义与后续服务域演进。2026-07-10 中央收口后已裁为薄参考层：社交通道归入 TriGateway，消息队列管
+- /docs/registry/product-state.md:15 - 正在吸收 Claude Code 2.1.88 的 agent 循环、tool system、task system、cron/hooks 与 permission 设计，用于支撑赛博岗位的常驻任务与定时任务。**Claude Code
+- /docs/registry/product-state.md:19 - **本地演练场（2026-07-10 新增）**：Claude Code CLI 直接运行于 Windows，使用同一份 restored-src 源码。本地验证通过后发布至 TriMC 服务器，保证绝对 dev-prod parity
+- /docs/registry/product-state.md:37 - README 的长期目标口径比当前代码落地更宽，若直接照抄，会高估 TriMC 已经承接的运行面能力。
+- /docs/registry/product-state.md:45 - 与 `TriMetaverse` 中央战略和合同文档对齐，尤其是 “TriStaciss 做模型路由与 API 调用平台、TriMC 做服务域主控、TriLC 做本地域适配层” 的边界。
+- /docs/registry/product-state.md:53 - 当前不应把 TriMC 描述为“完整统一 runtime 已成型”；更准确的说法是“服务域主控骨架已建立，部分 observability 基线已吸收，其他运行面能力待继续落地”。
+- /docs/registry/claude-code-absorption-consensus.md:12 | Phase | 分析文档 | 分析质量 | TriMC 当前吸收率 | 代码落地 |
+- /docs/registry/claude-code-absorption-consensus.md:63 | **Tier 1 (MVP)** | 必须吸收才能进入下一阶段 | 吸收后 TriMC 具备该维度的最小可行能力 |
+- /docs/registry/claude-code-absorption-consensus.md:66 | **Tier 4 (Extend)** | 生态扩展 | TriMC 正式宿主阶段再评估 |
+- /docs/registry/README.md:1 # TriMC Registry Layer
+- /docs/registry/README.md:15 - `business-state.md`：TriMC 的商业定位、默认职责与边界
+- /docs/registry/README.md:16 - `product-state.md`：TriMC 的产品状态、模块职责与依赖
+- /docs/registry/README.md:17 - `code-state.md`：TriMC 的代码结构、健康状态与风险
+- /docs/registry/business-state.md:1 # TriMC Business State
+- /docs/registry/business-state.md:5 - 本文件是 `TriMC` 的 business registry 工作层。
+- /docs/registry/business-state.md:6 - `TriMC` 的 `product-state.md` 与 `code-state.md` 默认应以本文件作为业务上游约束。
+- /docs/registry/business-state.md:10 - `TriMC` 是服务域主控模块，也是统一运行面、任务控制、服务域执行、审计和事件聚合的承接层。
+- /docs/training/README.md:1 ﻿# TriMC Training 索引
+- /docs/training/phase-1-core-loop-tutorial.md:4 **蓝本**：`TriMC/docs/engineering/claude-code-absorption/phase-1-core-loop.md`（CTO 小狄，2026-07-17）
+- /docs/training/phase-1-core-loop-tutorial.md:5 **目标读者**：需要接手 TriMC agent-loop 代码的研发新人
+- /docs/training/phase-1-core-loop-tutorial.md:6 **前提**：已读过 `TriMC/AGENTS.md` 和 `TriMC/README.md`，了解 TriMC 是服务域主控模块
+- /docs/training/phase-1-core-loop-tutorial.md:18 **我们把 Claude Code 2.1.88 的 agent 主循环（1730 行）完整拆解成了 337 行的吸收分析文档，并标记了 TriMC 当前实现（181 行）与它的差距。**
+- /docs/training/phase-1-core-loop-tutorial.md:22 TriMC 的 agent-loop 是服务域的核心引擎——所有任务控制、工具调度、模型调用都在这个循环里跑。当前实现是一个「能跑通」的 181 行 while-true：
+- /docs/training/phase-1-core-loop-tutorial.md:36 这些 TriMC 目前都没有。**Phase 1 吸收分析的产出，就是把「都没有」变成「都知道缺什么、先补什么」**。
+- /docs/training/phase-1-core-loop-tutorial.md:66 TriMC 目前只有内层（`agentLoop()`），这是正确的——我们先吸收内层，外层按需补。
+- /docs/training/phase-1-core-loop-tutorial.md:72 | 结构 | 类比 | 可变？ | TriMC 对应 |
+- /docs/training/phase-1-core-loop-tutorial.md:86 // ❌ 就地修改（TriMC 当前做法）
+- /docs/training/phase-1-core-loop-tutorial.md:121 TriMC 当前实现等价于：Phase B（非流式）→ Phase D（顺序执行工具）→ 循环。缺少 Phase A 的预处理和 Phase C 的自愈能力。
+- /docs/training/phase-1-core-loop-tutorial.md:127 ### 3.1 跑起来：TriMC 当前 agent-loop 的完整走读
+- /docs/training/phase-1-core-loop-tutorial.md:129 打开 `TriMC/src/agent-loop/loop.ts`（181 行），我们从入口一路走到出口。
+- /docs/training/phase-1-core-loop-tutorial.md:184 cd TriMC
+- /docs/training/phase-1-core-loop-tutorial.md:205 TriMC 的 `AgentLoopOptions`（8 个字段）对应 Claude Code 的 `QueryParams`（20+ 字段）。差距不是「写更多字段」，而是 Claude Code 把入口分成了三层：
+- /docs/training/phase-1-core-loop-tutorial.md:213 TriMC 当前把所有配置都塞在 `AgentLoopOptions` 里，这在小规模 OK，但随着 compaction、hooks、attachment pipeline 等能力加入，需要提前规划分层。**先不用改，但要记住这个三明治模
+- /docs/training/phase-1-core-loop-tutorial.md:217 | Claude Code State 字段 | TriMC State 字段 | 用途 |
+- /docs/training/phase-1-core-loop-tutorial.md:230 **关键理解**：State 的字段数量和循环的 continue 点数量正相关。TriMC 只有 1 个 continue 点（tool exec 后 always continue），所以 3 个字段够用。Claude Code 有 1
+- /docs/training/phase-1-core-loop-tutorial.md:234 当前 TriMC 的决策树：
+- /docs/training/phase-1-core-loop-tutorial.md:258 这是整个吸收分析中**杠杆率最高**的一个模式。TriMC 当前：
+- /docs/training/phase-1-core-loop-tutorial.md:302 每种消息的注入时机和优先级不同。TriMC 目前只处理前两种。
+- /docs/training/phase-1-core-loop-tutorial.md:312 这两层校验在 Claude Code 中是独立的决策点，不是耦合在循环逻辑里的。TriMC 吸收时也应该保持独立。
+- /docs/training/phase-1-core-loop-tutorial.md:477 当前 TriMC → 生产级，按 5 步走：
+- /docs/training/phase-1-core-loop-tutorial.md:489 | 蓝本（吸收分析） | `TriMC/docs/engineering/claude-code-absorption/phase-1-core-loop.md` |
+- /docs/training/phase-1-core-loop-tutorial.md:490 | 当前实现 | `TriMC/src/agent-loop/loop.ts`（181 行） |
+- /docs/training/phase-1-core-loop-tutorial.md:491 | 吸收目标 | `TriMC/vendor/claude-code/src/query.ts`（1730 行） |
+- /docs/training/phase-1-core-loop-tutorial.md:492 | 代码状态 | `TriMC/docs/registry/code-state.md` |
+- /docs/training/phase-1-core-loop-tutorial.md:493 | 模块规则 | `TriMC/AGENTS.md` |
+- /docs/training/phase-1-core-loop-tutorial.md:494 | Phase 1 执行记录 | `TriMC/docs/engineering/phase-1-execution-note.md` |
+- /docs/training/phase-1-core-loop-tutorial.md:495 | 配套组件 | `TriMC/vendor/claude-code/src/query/tokenBudget.ts`、`stopHooks.ts`、`config.ts`、`deps.ts` |
+- /docs/product/STATE.md:1 ﻿# TriMC 产品状态
+- /docs/product/PROJECT.md:1 ﻿# TriMC 项目定位
+- /docs/product/REQUIREMENTS.md:1 ﻿# TriMC 需求基线
+- /docs/product/ROADMAP.md:1 ﻿# TriMC 产品路线图
+
+小计: 705 处
+
+## ink-testing-library 在缺态
+
+- TriRLC package.json: 缺（0 命中）
+- TriMMC package.json: 缺（0 命中）
+
+LG-059 两笔实证齐：旧路径挂（上行逐条）+测试库缺装（本节）。修复面留 CTO 分派，本卷勘证毕。
