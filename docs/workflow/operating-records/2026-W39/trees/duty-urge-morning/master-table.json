@@ -37,7 +37,7 @@
    "seat": "服务域（任务书 bare 拾取位）",
    "form": "催办+拾取核",
    "window": "执行中",
-   "note": "500+ 引用迁移；窗锁后执行"
+   "note": "500+ 引用迁移；窗锁后执行；0930 E-0011：Phase 3 daemon restart 可并入 trimc restart 同窗（BOD 到场一次带两单）"
   },
   {
    "id": "LG-050",
@@ -78,6 +78,22 @@
    "form": "落位跟踪",
    "window": "候落位",
    "note": "CLAUDE.md 路由已挂；0928 夜 W39→W40 迁移 pass 实证（.shift-ade.json），sg TriMMC 同名 job 已 enabled=False=改制迁移非事故"
+  },
+  {
+   "id": "LG-059",
+   "item": "测试基座技术债两笔（旧路径修复+ink 补装）",
+   "seat": "m-duty-fsd（批次02 件2）",
+   "form": "候 BOD 验收链",
+   "window": "批次02 毕",
+   "status": "修复毕+CTO 收口审查成立（TriMMC bfbfcfe 888 行/120 文件+ink devDeps 补；测试门件2 零回归 476/466/10/0）；残项=预存挂归域+族2 registry 收敛归 host-object 命名专窗（候 BOD 排）"
+  },
+  {
+   "id": "LG-060",
+   "item": "跨仓投影漂移（字段族测试面跟新）",
+   "seat": "m-duty-fsd（批次02 件3）",
+   "form": "候 BOD 验收链",
+   "window": "批次02 毕",
+   "status": "跟新毕+CTO 收口成立（TriRLC 3800e2d 46 处对表；净收口 −9=13→4，trirlc 事故字附裁可）；残项=预存挂 4 归域"
   }
  ],
  "metadata": {

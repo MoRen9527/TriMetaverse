@@ -474,3 +474,29 @@
   - f91eef75 Merge remote-tracking branch 'sg-server/dev' into dev
   - 4697374c docs(plane): BOD 23:1x 全权裁决批大表联动——T5 解冻/LG-041+046 销账（禁裸销三锚）/LG-048+051 并流/M2 窗定 10-01 12-14/LG-057 试点单/LG-059+060 明窗拆派/候 CEO 项 3→2+token 第四起入账（cos）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 0744474e 后新增 3 条 commit：
+  - d7c88b30 docs(plane): COO 排程锚回执联动——LG-054 M2 排程锚毕（10-01 12-14 同窗锚定+门链）/LG-059+060 三段链拆派落位（TC502 追平前置候条件登记）（cos）
+  - 44a06f52 Merge remote-tracking branch 'sg-server/dev' into dev
+  - cc82e50f docs(workbench): COO 排程锚落位——LG-054 M2=10-01 12-14 部署主窗正式锚定(门③④+chromium+CORE_VERSION 随窗)+LG-059/060 三段链式拆派(CTO 技审 0-9/FSD 执行 18-24/STE 验接力;TC502 追平前置候条件)(BOD 23:1x 裁·COS 23:2x 知会)
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:50 +08：自上次进度提交 6f7d9e19 后新增 1 条 commit：
+  - fabc4d48 docs(bod-pipeline-02): 件1 LG-017/018 未落地条款三态实勘清单——只读勘证 09-30 现势：两日增量全捕（A3前半 4e93488d/B2前半 2ba4a35 翻已落地），A1/A2 锚复新鲜（staging=0/rmc_tick:198），候窗项维持即守约，不值得办三项有锚，可动面仅 runbook 销账+复审首例两笔候窗 @m-duty-cto
+- registry：v2.1；今日 registry 提交无变化
+## 2026-10-01（周四）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:00 +08：自上次进度提交 921819c4 后新增 1 条 commit：
+  - 41e26c21 docs(workflow): A2 试点 attempt-1 裸崩案入卷（8710 失听事件笔+重试环补丁落 watcher）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:10 +08：自上次进度提交 426f7e53 后新增 1 条 commit：
+  - 0f9f9d6a docs(workflow): E-0011 trimc 失听挂账——LG-046 Phase 3 并窗注（正径 W39 路径）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:30 +08：自上次进度提交 93563d95 后新增 3 条 commit：
+  - aaea8c3d docs(workflow): LG-057 A2/A3 试点读数卷——A2 触发时点线（300.6s 实证+8712 通道）+A3 恢复周期线（读树续办全周期）+判据四条三过一观察（批次02 件4）@m-duty-cos
+  - 05c68a2f docs(workflow): BOD 流水线批次 02 件 3 读数卷——LG-060 字段族测试面跟新（TriRLC 三族 46 处逐处对表；投影穿透同构先例；node22 门 203/199/4 净收口 −9；卡点 4 挂+5 tsc 预存在案）@m-duty-fsd
+  - d35cb5d4 docs(workflow): BOD 流水线批次 02 件 2 读数卷——LG-059 TriMMC 旧名叙事面修复（888 行/120 文件改名+18 行兼容面 K 保留；测试门 476/466/10/0 零回归；复扫 R 面零命中；10 挂预存 out-of-face 逐族归因卡点在案）@m-duty-fsd
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:20 +08：自上次进度提交 47cb7ab4 后新增 2 条 commit：
+  - b055d60a docs(workflow): 总表补录 LG-059/060 双单（批次02 修复毕+CTO 收口成立态；族2 专窗候排）@m-duty-cos
+  - 8aeca92a docs(bod-pipeline-02): 批次02 收口审查裁决卷——三族裁毕：族1 alias 对表成立零补/族2 registry 文件名收敛不可补归专窗（manifest 三 target 同步前置）/族3 TriMC Scheduler payload 维持 K 档（真源 B 档原文预裁）+随批窗原子切换条款；LG-060 trirlc 事故字裁可；件2+3 测试门判读过=收口成立 @m-duty-cto
+- registry：v2.1；今日 registry 提交无变化

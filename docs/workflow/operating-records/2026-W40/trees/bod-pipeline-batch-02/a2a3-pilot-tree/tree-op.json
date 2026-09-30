@@ -1,0 +1,27 @@
+{
+ "treeId": "a2a3-pilot-tree",
+ "pilot": "LG-057 A2/A3 试点（隔离测试树，非在役件）",
+ "nodes": {
+  "N-A2": {
+   "status": "done",
+   "title": "A2 试点挂起节点（超时催办实测）",
+   "created_at": "2026-09-30T16:14:27Z",
+   "timeout_min": 5,
+   "owner": "m-duty-cos",
+   "chase_channel": "M-SG NOTIFY→bod",
+   "attempt": 3,
+   "attempt1_note": "attempt-1 触发步 8710 ConnectionRefused（daemon 重启窗）裸崩无重试——失败入卷驱动重试环补丁",
+   "attempt2_note": "attempt-2 触发步再遇 8710 失听（E-0011 事件窗）——BOD 即裁 8710 退役永不恢复，A2 触发路径改打 127.0.0.1:8712 loopback（带 token 门）",
+   "resume": {
+    "via": "读树续办步（冷读重建，零会话上下文）",
+    "resumed_at": "2026-09-30T16:20:38Z",
+    "closeout": "A2 判定成立（300.6s 触发+NOTIFY 投递）；试点节点办结"
+   }
+  },
+  "N-A3": {
+   "status": "reserved",
+   "title": "A3 恢复彩排位（A2 触发后启动）",
+   "note": "读树续办步全周期"
+  }
+ }
+}
