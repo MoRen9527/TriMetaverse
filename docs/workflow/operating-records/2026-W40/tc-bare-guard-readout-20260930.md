@@ -114,6 +114,7 @@
   - **hook MIRROR 链（LG-018）**：TriMetaverse.git post-receive 内联块 `git push github HEAD:dev`（异步+timeout 60），remote github=`ssh://github-mirror/`（fleet ssh config alias，**SSH key 认证，与 PAT/store 无关**）——fade-hook.log 全史 pushed=555/FAILED=13（末败 09-17 21:20+0800 后零败）；本席 10:11 sg push 的 223a512e 即被即时镜像（fade-hook.log `10:11:45 github mirror pushed 223a512e` 实锚）——**TMV 三层同顶 223a512e 实锚，TMV 欠账=0，此前「TMV GitHub 滞后」=443 断连窗暂态非链死**
   - **cron push 段链（bare-fetch-all L19）**：https+store PAT 形，服务全 20 仓=9 天欠账主战场——10:30 cron 首次带新 PAT 跑=结算点，10:33 后补 PUSH 读数
 - 含意：新 PAT 复活的是 cron 链（20 仓轮询形）；hook 链（TMV 专属即时形）独立存活。两链互补：hook=TMV 即时、cron=全仓小时级
+- **候批件（CTO 裁+BOD 背书 10:16，候下个巡检批随批落不催急）**：hook MIRROR 链健康检测入巡检面——检测锚=fade-hook.log FAILED 增量计数（自上次巡检水位线起算非全量重报）；告警形态=巡检读数卷一行（与 FETCH-FAIL/PUSH-FAIL 同级不开独立通道）；单锚覆盖三死因（ssh key 失效/alias 变更/github-mirror host 损坏全落 FAILED 行）；优先序钉=10:30 cron PAT 链首过结算点不受影响
 
 ## 使用依据
 
