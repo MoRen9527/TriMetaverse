@@ -98,6 +98,15 @@
 - 候裁一笔：bare-fetch-all.sh MAP 值 `[TriRLC]=TriLC` 旧名 redirect 形态仍工作非急，候窗正名（D-15 同款纪律：备份+bash -n+整轮验证）——**CTO 05:04 裁=候下个 sg 侧维护窗随批**（今夜不进：8460 job 挂载+守望轮变更堆叠防控，同 D-23 原则）
 - **施工衔接预告（CTO 05:04）**：新发 PAT 链=CEO 生成→BOD 写入 fleet store（③）→**④dry-run 20 仓验证=本席**（push-survey 现成，预期 20/20 OK 全单+store 行态正常）→⑤旧把作废+history 清理（BOD/SDE 协同）→⑥观察项闭合；备场保持，候 BOD 写入毕读数即动④
 
+## 十三、施工序④完工读数：新 PAT 验证扫（BOD 直派 10:06+增补判据，CEO 04:57 批件链）
+
+- 前置③毕（BOD）：新 PAT 写入 fleet store（1 行/600/fleet:fleet/123B，credential fill 冒烟 PASS）；跑前断言=1 行/34f8a883… 基线 md5/mtime 10:05:26
+- 施工形：v2 脚本（push-survey-v2-20260930.sh，fleet 面留档 700；AUTH-DEAD 即停 exit 2/403 标记续扫/token 零回显三钉形，MAP 块自 v1 抄件零漂）+`su - fleet -c` 语境全程（BOD 钉，HOME 正形）
+- **读数：SUMMARY|PASS=17|FAIL=3|AUTH-DEAD=0**——403-FORBIDDEN×3=**TriChain/TriMobile/TriWeb4**（授权清单缺仓面，候 CEO 补授权）；PASS×17 含 TriRLC（旧名 redirect 形工作实证）+TriModel（差仓补入清单正确性实证）
+- **store 后验（增补判据）**：wc -l=**1 行在**（未被 reject 清行）；md5=34f8a883… **与跑前恒等**（不变量）；mtime 10:05:26→10:09:17=**approve 同值重写正形**（§十一入册机理的预测读数：mtime 变/md5 不变/行数 1=健康形）
+- 分诊（BOD 钉）：403 族=授权清单缺仓回 CEO 补授权非推倒重来；401 族=0 凭据面健康，无即停触发
+- **结论：push 通道复活 17/20**；余 3 仓候 CEO 授权补勾即 20/20；后续⑤旧把作废+history 清理（BOD/SDE 协同）⑥观察项闭合
+
 ## 使用依据
 
 - 令文：CTO D-15 派工令 03:42（验证两步禁盲改+纪律三条+告警锚要求）
