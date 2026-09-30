@@ -456,3 +456,7 @@
   - 5589c56c Merge remote-tracking branch 'sg-server/dev' into dev
   - 89efd75c docs(parallel-mode-assessment): LG-050 裁定注记——BOD 裁①验收销账(22:2x)三裁据+随销两条(COS切位缺口归代起链候办/wt推广候CEO批); 树面正身闭环(BOD 22:2x裁定·COO录)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:40 +08：自上次进度提交 fcf3c7e6 后新增 2 条 commit：
+  - 681c557d Merge remote-tracking branch 'sg-server/dev' into dev
+  - f6ea2eaf docs(plane): 大表 22:3x 勘正——LG-050 行「触发日无读数待确认」过时勘正为 BOD 22:2x 裁①验收销账(89efd75c+9d0b8922 双锚)；铸表 21:4x 时点无读数属实,COO 席并行回收+裁定后即勘(reflog 勘明共享仓并行交错无冲突)
+- registry：v2.1；今日 registry 提交无变化
