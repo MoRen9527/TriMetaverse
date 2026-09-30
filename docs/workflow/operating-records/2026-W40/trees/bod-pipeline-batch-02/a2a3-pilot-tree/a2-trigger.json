@@ -1,0 +1,8 @@
+{
+ "triggered_at_utc": "2026-09-30T16:19:27Z",
+ "detected_latency_s": 300.6,
+ "message_id": "ntf-muob92qpfs7441",
+ "attempts": 1,
+ "last_error": null,
+ "note": "attempt-1 \u88f8\u5d29\u6848\u540e\u52a0\u91cd\u8bd5\u73af\uff1b\u672c\u8f6e\u9047 8710 \u5931\u542c\u4e8b\u4ef6\u5b9e\u6d4b\u91cd\u8bd5\u73af"
+}

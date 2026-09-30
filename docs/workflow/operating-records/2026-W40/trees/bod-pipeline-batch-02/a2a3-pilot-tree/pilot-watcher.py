@@ -6,7 +6,7 @@ T0=json.load(open(D+'/tree-op.json'))['nodes']['N-A2']['created_at']
 t0=datetime.datetime.strptime(T0,'%Y-%m-%dT%H:%M:%SZ')
 TOKEN=[l.split('=',1)[1].strip().strip('"') for l in open('/srv/fleet/TriMC/docker/.env') if l.startswith('TRIMC_INTERNAL_TOKEN')][0]
 def notify(title,body):
-    req=urllib.request.Request('http://localhost:8710/internal/v1/notify',
+    req=urllib.request.Request('http://127.0.0.1:8712/internal/v1/notify',
         data=json.dumps({'source_seat':'m-duty-cos','target_daemon':'trimlc','target_seat':'bod','urgent':'normal','title':title,'body':body}).encode(),
         headers={'content-type':'application/json','X-Internal-Token':TOKEN})
     r=json.load(urllib.request.urlopen(req,timeout=8))
