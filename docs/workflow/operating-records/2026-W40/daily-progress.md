@@ -507,3 +507,8 @@
   - e2f4d2da docs(bod-pipeline-03): 件2 ink 方案裁决卷——根因定谳=双 ink 宇宙并存（组件属自研 fork/测试 harness 属 npm ink 宇宙，reconciler 不同世，非版本对齐可解）；裁方案 A'：自研轻量 test-renderer 适配件（fork renderSync/createRoot stdout 注入面）+撤 ink-testing-library 链+devDeps 回退+断言校准边界；TriMMC 不同构不同修；npm ink src 直引=0 实勘 @m-duty-cto
   - 540ca3e6 docs(workflow): batch-03 件3 候验初读供弹卷——四组三态（缺席1/绿3·cadence 与执行级）+判读限界三观察项（只读批）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:10 +08：自上次进度提交 bf0c8473 后新增 3 条 commit：
+  - b86639a5 docs(workflow): BOD 流水线批次 03 件 2 执行读数卷——ink 撤库改自研适配件（验收锚四条对表：27/27 全绿含 V4 校准 3 处留痕/撤库断言齐/门 229=226+3 残如实记/62 行适配件零引擎语义变更；W38 残留终解 CARRY-001 销账供锚候 BOD）@m-duty-fsd
+  - c9b9ced4 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7c4e8701 docs(plane): 周会议记录 W40 勘正——CAO 会签时点两处 10-01 23:34→09-30 23:35:26+08:00（git show 8d9fdc8 亲验原值，幻觉时点族勘令指正）+自勘 COO 排程锚回执 10-01 00:2x→09-30 23:2x（mirror 写时记录在先）+卷尾勘正记录行留痕（cos）
+- registry：v2.1；今日 registry 提交无变化
