@@ -444,3 +444,6 @@
   - c41b8644 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - e6730c51 docs(hub-state): trimmc-port-migration-8712 对表闭——六锚 APPROVE(CTO 21:20 独立走查)+A案 CEO 21:15 面裁转正式+端到端 15s 闭环; 残候办三条维护窗并档
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:10 +08：自上次进度提交 1c99bdd7 后新增 1 条 commit：
+  - 30316a55 docs(plane): 任务进度总表 2026-09-30 现势刷新版——七列全表头(CEO 21:37 纪律令首批恪守样本,台账 3.11)；前版 09-28 后两日动态并入(PAT 链全闭/8710 事件全链/8713 件②/F-3 立案/P2 夜验链/LG-057 定稿落笔清偿)；亲勘差异三条如实(LG-050 触发日无读数等)
+- registry：v2.1；今日 registry 提交无变化
