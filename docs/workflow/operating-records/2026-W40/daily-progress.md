@@ -404,3 +404,8 @@
   - 650fca97 Merge sg-bare/dev（并行收编 vs tracking 条 a 案读数更新 e5492f7c）
   - e5492f7c docs(hub-state): tracking 条更新——a 案施工读数项成立（10:30 轮 PUSH-OK 20/20 双链双活），对表闭独差 quiet 自然样本项
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:20 +08：自上次进度提交 78c11821 后新增 3 条 commit：
+  - fc59907c Merge sg-bare/dev（并行收编 vs 对表闭 commit eabc9728）
+  - eabc9728 docs(hub-state): tc-bare-force-fetch-fix-tracking 对表闭——三锚（双轮 PUSH-OK 20/20+L18 无--quiet 亲验+凭据线①-⑥全闭），quiet 自然样本观察项保留
+  - 3cb43724 docs(w40): §十七⑤清理单录案=凭据线收官——root store 0行+fill零命中exit128旁路消亡/history 888→885行residual两计数0/限定面三处计数表(CTO验收树档原件)/gho_探针三缺席降级预案适用/bak冲突报备(BOD备案认:CTO后令裁清零=正形,含密备份自败目的)/CEO 11:30点废已删+1把⑥闭/全线清账
+- registry：v2.1；今日 registry 提交无变化
