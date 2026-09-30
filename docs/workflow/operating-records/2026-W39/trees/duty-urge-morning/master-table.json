@@ -37,7 +37,7 @@
    "seat": "服务域（任务书 bare 拾取位）",
    "form": "催办+拾取核",
    "window": "执行中",
-   "note": "500+ 引用迁移；窗锁后执行"
+   "note": "500+ 引用迁移；窗锁后执行；0930 E-0011：Phase 3 daemon restart 可并入 trimc restart 同窗（BOD 到场一次带两单）"
   },
   {
    "id": "LG-050",
