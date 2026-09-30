@@ -107,6 +107,14 @@
 - 分诊（BOD 钉）：403 族=授权清单缺仓回 CEO 补授权非推倒重来；401 族=0 凭据面健康，无即停触发
 - **结论：push 通道复活 17/20**；余 3 仓候 CEO 授权补勾即 20/20；后续⑤旧把作废+history 清理（BOD/SDE 协同）⑥观察项闭合
 
+## 十四、④验收+双链机制定谳（BOD 验收毕 10:12+本席机制勘验）
+
+- **BOD ④验收毕**：独立复跑双族实锚（TriChain rc=128「Permission denied to MoRen9527」同形坐实 403 族身份面/TriCompany PASS 族坐实）——PASS=17/FAIL=3/AUTH-DEAD=0 全数认+store 后验四读数认；403×3 已呈 CEO 补授权（编辑加仓或重生成两路候 CEO 页面实况）；三仓补扫小单候令
+- **bare→GitHub 双链定谳（本席机制勘验，修正「9 天欠账」判读域）**：
+  - **hook MIRROR 链（LG-018）**：TriMetaverse.git post-receive 内联块 `git push github HEAD:dev`（异步+timeout 60），remote github=`ssh://github-mirror/`（fleet ssh config alias，**SSH key 认证，与 PAT/store 无关**）——fade-hook.log 全史 pushed=555/FAILED=13（末败 09-17 21:20+0800 后零败）；本席 10:11 sg push 的 223a512e 即被即时镜像（fade-hook.log `10:11:45 github mirror pushed 223a512e` 实锚）——**TMV 三层同顶 223a512e 实锚，TMV 欠账=0，此前「TMV GitHub 滞后」=443 断连窗暂态非链死**
+  - **cron push 段链（bare-fetch-all L19）**：https+store PAT 形，服务全 20 仓=9 天欠账主战场——10:30 cron 首次带新 PAT 跑=结算点，10:33 后补 PUSH 读数
+- 含意：新 PAT 复活的是 cron 链（20 仓轮询形）；hook 链（TMV 专属即时形）独立存活。两链互补：hook=TMV 即时、cron=全仓小时级
+
 ## 使用依据
 
 - 令文：CTO D-15 派工令 03:42（验证两步禁盲改+纪律三条+告警锚要求）
