@@ -518,3 +518,9 @@
 - 巡检兜底补写 @04:50 +08：自上次进度提交 e2a7e6e9 后新增 1 条 commit：
   - 655cfad2 docs(workflow): batch-04 双勘证卷——M2 前置三组（R-HY 面缺项如实录）+token 驻留刷新 v2 净形（v1 截断脱敏失效自纠入卷；嵌入值同基准判零异）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @06:20 +08：自上次进度提交 632af934 后新增 4 条 commit：
+  - c1300cb0 docs(workflow): batch-06 改指落点重勘卷——8460 定性突破（bigmodel TLS 规避 shim 自证）+两方案对照七维+方案 A 倾向+连带清单五条 @m-duty-cos
+  - f47bda6a Merge remote-tracking branch 'sg-server/dev' into dev
+  - 359ef7ae docs(plane): BOD 06:1x 裁+落账四件——LG-057 销账（batch-02件4试点卷判据四条全✓，销账锚pilot-readout在卷，「到达」两态观察项并存记档）/token工序单对表定谳增注（五处全实锚sg3+本机2键同值）/batch-04件2脱敏未遂自拦分档入账（纪律条=卷写即脱敏禁先写后洗）/batch-05挂值席知悉（cos）
+  - c1729ca6 docs(workflow): batch-05 件1 对表勘证卷——候修 5 项现势三态+第5项异面定性（8460=bigmodel-h1-proxy 独立项；第5项=回滚安全前提非主路径前置）+8710 插入点+窗内裁决清单六条 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
