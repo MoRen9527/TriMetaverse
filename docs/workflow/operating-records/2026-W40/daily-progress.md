@@ -421,3 +421,9 @@
   - 98b64de8 docs(tree): hub-silent-detect-01 N1 施工读数节点收口（锚 7d746423）
   - 7d746423 feat(fade): 静默探测批主体四件——900s hub-silent-detect 本体+共享 infra 三件+施工读数卷
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:20 +08：自上次进度提交 12c1e86b 后新增 4 条 commit：
+  - a7d9de59 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - fc2a5e2b docs(hub-state): #130 迁移单增补三小项入账（fail-closed 门/bindHost env 化/token 恒时比较+验收锚两条）——BOD #134/#135 流转，CTO 模板支持注随记
+  - c8b8749f docs(tree): cto-8710-gate-audit-01 四 daemon token 门覆盖面审计定性卷——sg 在役门 401 实锚全覆盖+TriRLC/MLC fail-closed 正形+MMC/RMC opt-in 弱形升约候迁移窗
+  - 238afc10 docs(tree): hub-silent-detect-01 N2 重启节点收口——8713 全纪律四连绿，allowlist 8 串生效，COS 接棒 PATCH
+- registry：v2.1；今日 registry 提交无变化
