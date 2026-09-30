@@ -464,3 +464,6 @@
   - 3e5486cc Merge remote-tracking branch 'sg-server/dev' into dev
   - 4a1ecea7 docs(plane): 本地域/服务域分工排查稿初版 v0.1(CEO 22:41 纪律令②)——明晨候验族7件+在途候办族11件逐项三态标(本地合规/应迁服务域/边界件)+四族归纳(8713归属专项勘建议/席位驻位合流wt稿/纯长跑直迁候选/本地合规面维持)；纪律录台账常驻指令区3.12；明早哨窗三件并呈
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 ff91bc82 后新增 1 条 commit：
+  - 8749f37f docs(workflow): BOD 流水线批次 01 三件勘证收口——TC502 悬案三答卷/LG-060 漂移清单卷/LG-059 残留全扫卷 992 行（只读勘证批；零改码零写源面）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
