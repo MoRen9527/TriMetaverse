@@ -447,3 +447,7 @@
 - 巡检兜底补写 @22:10 +08：自上次进度提交 1c99bdd7 后新增 1 条 commit：
   - 30316a55 docs(plane): 任务进度总表 2026-09-30 现势刷新版——七列全表头(CEO 21:37 纪律令首批恪守样本,台账 3.11)；前版 09-28 后两日动态并入(PAT 链全闭/8710 事件全链/8713 件②/F-3 立案/P2 夜验链/LG-057 定稿落笔清偿)；亲勘差异三条如实(LG-050 触发日无读数等)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:20 +08：自上次进度提交 3162ab68 后新增 2 条 commit：
+  - d16b4889 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 9d0b8922 docs(parallel-mode-assessment): LG-050 三计数验收回收笔观测#2——试点wt位三族全零/对照主树互吞2例(观测#1在卷)/COS切位缺口如实档2of3在位/候裁归BOD(BOD 22:09处置令·COO回收)
+- registry：v2.1；今日 registry 提交无变化
