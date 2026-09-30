@@ -470,3 +470,7 @@
 - 巡检兜底补写 @23:20 +08：自上次进度提交 449ba2f6 后新增 1 条 commit：
   - 7cb2ea2e docs(plane): BOD 23:0x 值席读数并入台账——大表三行联动 LG-039/LG-060/LG-059 全转候 owner 消费态（锚=8749f37f 三卷）+流水线现态如实录+名册治理窗候办+1（cos）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:30 +08：自上次进度提交 4c2c2897 后新增 2 条 commit：
+  - f91eef75 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 4697374c docs(plane): BOD 23:1x 全权裁决批大表联动——T5 解冻/LG-041+046 销账（禁裸销三锚）/LG-048+051 并流/M2 窗定 10-01 12-14/LG-057 试点单/LG-059+060 明窗拆派/候 CEO 项 3→2+token 第四起入账（cos）
+- registry：v2.1；今日 registry 提交无变化
