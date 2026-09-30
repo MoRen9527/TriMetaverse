@@ -467,3 +467,6 @@
 - 巡检兜底补写 @23:00 +08：自上次进度提交 ff91bc82 后新增 1 条 commit：
   - 8749f37f docs(workflow): BOD 流水线批次 01 三件勘证收口——TC502 悬案三答卷/LG-060 漂移清单卷/LG-059 残留全扫卷 992 行（只读勘证批；零改码零写源面）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:20 +08：自上次进度提交 449ba2f6 后新增 1 条 commit：
+  - 7cb2ea2e docs(plane): BOD 23:0x 值席读数并入台账——大表三行联动 LG-039/LG-060/LG-059 全转候 owner 消费态（锚=8749f37f 三卷）+流水线现态如实录+名册治理窗候办+1（cos）
+- registry：v2.1；今日 registry 提交无变化
