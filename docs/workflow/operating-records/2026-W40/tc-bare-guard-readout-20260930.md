@@ -123,6 +123,15 @@
 - 功能实证料：A 路「repository access 可编辑」坐实——同一 token 未重生成，网页编辑加仓后权限**即时生效零延迟**（403→3 分钟内 PASS）
 - BOD 验收读数链全闭合：credential fill 冒烟（③）→dry-run 17/20+403×3（④）→BOD 双族独立复跑→CEO 补授权→3/3 补扫（④真闭合）
 
+## 十六、10:30 cron 轮结算读数=9 天欠账全清零（a 案收尾定时 10:37 采）
+
+- ①PUSH 逐仓表：**PUSH-OK=20/20，PUSH-FAIL=0，FETCH-FAIL=0**（10:30:03-10:30:27 整轮 24s）——含 TriChain/TriMobile/TriWeb4（CEO 补授权后 cron 链全通）/TriModel/TriRLC（redirect 形经 PAT 链通）
+- ②残余差仓清单（BOD 追加判据）：**0/20——20 仓 bare 顶 vs GitHub 顶逐仓全 SAME，差仓清单=空**，欠账地图数字收口=欠账 0 仓
+- ③store 复验：lines=1/123B/600/mtime 10:31:48（approve 同值重写正形，无 reject 清行）
+- **a 案全链收口终态**：fleet store 空态根因（09-21 起 9 天）→BOD 写入新 PAT（③）→dry-run 17/20+403×3（④）→BOD 双族独立复跑→CEO 网页补授权→补扫 3/3（④真闭合 20/20）→cron 首过 PUSH-OK 20/20+差仓清零（本节结算）
+- 双链双活终态：hook MIRROR（ssh key，TMV 即时形，555+/零新败）+cron push 段（PAT，20 仓小时级，首过全绿）——互补覆盖即时与轮询
+- 候⑤：sg 侧清理单（root store gho_ 行移除+root bash history 三行清理，备份+留痕+零真值纪律）候 BOD 详单排窗
+
 ## 使用依据
 
 - 令文：CTO D-15 派工令 03:42（验证两步禁盲改+纪律三条+告警锚要求）
