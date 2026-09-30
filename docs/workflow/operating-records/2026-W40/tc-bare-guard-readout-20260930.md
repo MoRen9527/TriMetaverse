@@ -132,9 +132,55 @@
 - 双链双活终态：hook MIRROR（ssh key，TMV 即时形，555+/零新败）+cron push 段（PAT，20 仓小时级，首过全绿）——互补覆盖即时与轮询
 - 候⑤：sg 侧清理单（root store gho_ 行移除+root bash history 三行清理，备份+留痕+零真值纪律）候 BOD 详单排窗
 
+## 十七、⑤sg 侧清理单=凭据线收官（CTO 详单施工+P3 收口读数树档原件）
+
+- sourceOfTruth: 本节（SDE 施工读数；CTO 详单 10:46 插队形态为准，BOD 详单①备案）
+- 施工窗：10:47-10:49（P1/P2/验证）；全程零真值掩码带跑（sed -E 三形态正则）；边界钉=root home 除两文件零触碰/fleet store+新 PAT 零涉及/helper 配置不动只动行
+
+### P1 root store（/root/.git-credentials）
+
+- 前态：1 行/70B/md5=1e6aa786…（gho_ 单行条目，09-21 轮换旁路遗存）
+- 删除：`truncate -s 0` → **后态 0 行/0B**
+- fill 零命中验证（决定性）：`printf "protocol=https\nhost=github.com\n" | GIT_TERMINAL_PROMPT=0 timeout 5 git credential fill` → **exit=128「fatal: could not read Username for 'https://github.com': terminal prompts disabled」=root 代推旁路消亡实锤**
+  - 注记：首跑语法错（`</dev/null` 吞 heredoc stdin → usage exit 129 假跑）→补跑正确形上方实锚。教训=验证命令自身吞 stdin/漏转义会造假阴性，断言须断整链（memory「命令链断言失败须断整链」同族）
+
+### P2 root history（/root/.bash_history）
+
+- 预检（CTO P2.1）：github_pat_ count=3 / gho_ count=0 / 行号 **[878, 882, 886]**——与 CTO 预勘完全对齐，**零第四行**
+- 前态：888 行/32470B → `sed -i -E "/github_pat_|gho_/d"` → **后态 885 行/31984B（-3 行全清）**；residual 两计数=0/0
+- 防重写窗口（CTO P2.4）：active-root-pts=0（无活跃 root 交互会话）+清后 residual 不回弹；本席会话为 ssh 非交互不回写 history
+
+### 限定面排查表（CTO P2.3 限定三处，计数级不搞全盘扫——本表即 CTO 验收留痕树档原件）
+
+| 面 | 读数 |
+| --- | --- |
+| /root/.netrc | ABSENT |
+| /home/fleet/.bash_history | github_pat_ count=0，gho_ count=0 |
+| /home/fleet/.git-credentials | 1 行/123B/600，github_pat_ count=1（正路原样零触碰） |
+
+### gho_ 出处探针（BOD ②）=降级预案适用
+
+- gh-dir(/root/.config/gh/) ABSENT／gh-bin ABSENT／hosts.yml ABSENT——三者全缺席=出处不可定位
+- →CTO 降级预案适用：本地清除已毕+自然失效闭合注记，不强求网页 revocation
+
+### ⚠ 冲突处理报备（BOD 详单①备份先行 vs CTO 后令 P1 不备份直接删）
+
+- 时序：BOD 详单先到→.bak 两文件已建；CTO 详单插队裁「不备份直接删=驻留面清零优先，旧旁路本废无回滚需求」→**按后令 .bak 随删（rm，remain=0）**；删前 len 在案（70B/1 行+888 行/32470B）
+- BOD 11:38 备案裁：**CTO 后令裁清零=正形**——理由认领=备份体本身即含密驻留面（history .bak 含 PAT 明文），留存自败清理目的；废旧凭据+append 日志无回滚场景，零残留优先正确
+- BOD 教训注自吞（随读数入档，候 CAO 纪律册候选非急）：对含密文件的清理令，备份条款须自带销毁条款或明示豁免
+- 本席执行序认定：先建后删+删前读数在案，规范无责
+
+### 收官链（凭据线全链清账）
+
+- BOD 11:38 ⑤完工读数全数认（P1 旁路消亡实锤/P2 三行全清零第四行/限定面排查表绿/gho_ 探针料采）
+- CEO 11:30 网页点废确认「已删+1 把」（列表余 1 推定 09-21 轮换初版已废，推定标注入账）→P4 闭
+- BOD 11:38+11:50 收官通报：施工序①-⑥全闭——指引→生成→写入→20/20（含补授权）→旧把全废+清理→观察项闭合（fleet PAT 重配观察项随批件闭；root 身份自动化观察项随 root store 清空降级「旁路已退役」注记；quiet 候裁词观察照挂 SDE 侧不扰）
+- **本线全闭**：D-15 甲乙裁决→R2 澄清案→新 PAT ③④→10:30 cron 结算（§十六）→⑤清理（本节）→⑥观察项，全线清账；余线（18-24 工程批/8460 午窗条）照旧
+
 ## 使用依据
 
 - 令文：CTO D-15 派工令 03:42（验证两步禁盲改+纪律三条+告警锚要求）
 - 盘面实锚：/home/fleet/bare-fetch-all.sh（bak-20260930T0349+0800）+bare-fetch-all.log+/srv/git/20 bare config
 - 读数实锚：LOG 03:47 整轮 40 行精算/03:50:18+03:50:36 TriTest 双行/rev-parse 三探 68fd1586/ls-remote github d841fbf5
 - 纪律：D-04（时刻现查）/fleet 身份操作（防属主污染）/掩码（ghp_）/留痕制/不越界（ TriCompany 补推不自裁）
+- §十七 令文：CTO ⑤详单 10:46（P1 不备份直接删/P2 预检限定面/P3 收口读数/P4 CEO 侧非我面）+BOD 详单五步（备份/探针/删除/留痕/边界钉）+BOD 11:38 认收+11:38/11:50 收官通报；fill 验证=git credential helper 语义（exit 128 terminal prompts disabled=store 空态零命中）；录案落款现查 2026-09-30 11:58:35 +0800
