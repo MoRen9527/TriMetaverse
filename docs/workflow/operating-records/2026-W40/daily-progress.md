@@ -409,3 +409,8 @@
   - eabc9728 docs(hub-state): tc-bare-force-fetch-fix-tracking 对表闭——三锚（双轮 PUSH-OK 20/20+L18 无--quiet 亲验+凭据线①-⑥全闭），quiet 自然样本观察项保留
   - 3cb43724 docs(w40): §十七⑤清理单录案=凭据线收官——root store 0行+fill零命中exit128旁路消亡/history 888→885行residual两计数0/限定面三处计数表(CTO验收树档原件)/gho_探针三缺席降级预案适用/bak冲突报备(BOD备案认:CTO后令裁清零=正形,含密备份自败目的)/CEO 11:30点废已删+1把⑥闭/全线清账
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:20 +08：自上次进度提交 310c6511 后新增 3 条 commit：
+  - 98fd3bb4 docs(hub-state): sg-8460-probe-job 销账——CTO 五要目 APPROVE 认销（锚四件齐）；观察两条随记（回滚实弹补白+明日首轮自动跑验）
+  - 910b92a6 docs(d15): 8460 探测 job 施工读数卷——addJob d684f621 挂载+force run 实弹 PASS（84ms/双锚全绿/dailyLines=5）+五要目对表+token 溢出报备；挂账条转 done-waiting-acceptance 候 CTO 验收
+  - 76e4507a feat(fade): D-15 8460 探测执行体 sg-8460-probe.mjs——双锚只读（systemd/ss 在位性+proxy.log 日行数≥2）+LG-036 异常才 notify+log 落 .fade/probe-logs；CTO 派工五要目施工卷件①（CEO 04:57 批①）
+- registry：v2.1；今日 registry 提交无变化
