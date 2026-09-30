@@ -14,7 +14,7 @@
   "treePath": "docs/workflow/operating-records/2026-W40/trees/d15-8460-probe-job-01/cos-d15-8460-probe-construction-readout.md",
   "owner": "COS（守望体系 owner，CTO D-15 派工）",
   "priority": "默认（录入序 2）",
-  "status": "done-waiting-acceptance",
+  "status": "closed",
   "note": "CEO 04:57 批①实施：8460 缓解位在位性探测——执行位=sg TriMMC 8710 job 21600s（4 轮/日，即生效型零重启零 allowlist）；双锚只读=①8460 进程在位性（systemd/ss）②proxy.log 日行数<2 告警（9-25 起低活基线 4-5 行，2=下破线候 7 日校准）；告警通道=LG-036 信箱双跳（含双锚读数+分诊指针）；异常触发→值席照 2a9b5e94 SOP 实测定谳（探测只报不定谳，低行数≠故障盲区）；回滚=enabled=0 PATCH 即停；与 D-37 条勿混（本条=8460 模型通道在位性，D-37=席位静默语义）；施工窗=今夜 18-24"
  },
  {
