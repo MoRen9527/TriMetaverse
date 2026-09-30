@@ -500,3 +500,10 @@
   - b055d60a docs(workflow): 总表补录 LG-059/060 双单（批次02 修复毕+CTO 收口成立态；族2 专窗候排）@m-duty-cos
   - 8aeca92a docs(bod-pipeline-02): 批次02 收口审查裁决卷——三族裁毕：族1 alias 对表成立零补/族2 registry 文件名收敛不可补归专窗（manifest 三 target 同步前置）/族3 TriMC Scheduler payload 维持 K 档（真源 B 档原文预裁）+随批窗原子切换条款；LG-060 trirlc 事故字裁可；件2+3 测试门判读过=收口成立 @m-duty-cto
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:00 +08：自上次进度提交 6ef11b05 后新增 5 条 commit：
+  - 49cf23fc Merge remote-tracking branch 'sg-server/dev' into dev
+  - a9bba5d5 docs(plane): 周会议记录制立制试铸——LG-061 启用 weekly-meeting-2026-W40.md 首铸（八段=09-30夜→10-01凌晨流水线夜巨量线，源锚发送账#141-#178逐封msg_id）+周共学勘位（真源双位均在--operating-root覆盖面）+迁移范围三项登记+大表LG-061行（cos）
+  - bb07a579 docs(workflow): BOD 流水线批次 03 件 1 读数卷——LG-059 TriRLC 旧名叙事面修复（493 行/127 文件+34 K+2 件 2 排除面；node22 门 203/199/4/0 与基线全等零新增挂硬门达成；rmc 卷名引用 K 网格漏项人工回正在案）@m-duty-fsd
+  - e2f4d2da docs(bod-pipeline-03): 件2 ink 方案裁决卷——根因定谳=双 ink 宇宙并存（组件属自研 fork/测试 harness 属 npm ink 宇宙，reconciler 不同世，非版本对齐可解）；裁方案 A'：自研轻量 test-renderer 适配件（fork renderSync/createRoot stdout 注入面）+撤 ink-testing-library 链+devDeps 回退+断言校准边界；TriMMC 不同构不同修；npm ink src 直引=0 实勘 @m-duty-cto
+  - 540ca3e6 docs(workflow): batch-03 件3 候验初读供弹卷——四组三态（缺席1/绿3·cadence 与执行级）+判读限界三观察项（只读批）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
