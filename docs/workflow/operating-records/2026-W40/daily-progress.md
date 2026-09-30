@@ -482,3 +482,9 @@
 - 巡检兜底补写 @23:50 +08：自上次进度提交 6f7d9e19 后新增 1 条 commit：
   - fabc4d48 docs(bod-pipeline-02): 件1 LG-017/018 未落地条款三态实勘清单——只读勘证 09-30 现势：两日增量全捕（A3前半 4e93488d/B2前半 2ba4a35 翻已落地），A1/A2 锚复新鲜（staging=0/rmc_tick:198），候窗项维持即守约，不值得办三项有锚，可动面仅 runbook 销账+复审首例两笔候窗 @m-duty-cto
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-01（周四）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:00 +08：自上次进度提交 921819c4 后新增 1 条 commit：
+  - 41e26c21 docs(workflow): A2 试点 attempt-1 裸崩案入卷（8710 失听事件笔+重试环补丁落 watcher）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
