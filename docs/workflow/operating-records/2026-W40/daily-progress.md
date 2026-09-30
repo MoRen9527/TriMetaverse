@@ -394,3 +394,8 @@
   - 223a512e Merge sg-bare/dev（daily-progress-watcher 199d6815 零交叠）
   - ff742d47 docs(w40): 施工序④完工读数§十三——新PAT验证扫17/20 PASS+403三仓(TriChain/TriMobile/TriWeb4=授权缺仓候CEO补勾)+AUTH-DEAD=0+store后验行在/md5恒等/approve同值重写正形(§十一机理预测读数);push通道复活17/20
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 d6cdef2d 后新增 3 条 commit：
+  - 1457b2f7 docs(w40): 10:30cron轮结算读数§十六——PUSH-OK=20/20零FAIL+残余差仓清单空(20仓bare vs GitHub全SAME,欠账=0仓)+store复验1行approve正形;9天欠账全清零,a案全链收口,双链双活(hook ssh+cron PAT)
+  - dc0bdbde Merge sg-bare/dev（cron 轮后增量收编）
+  - b170d88d docs(w40): 三仓补扫3/3 PASS=④真闭合20/20§十五——CEO网页补授权即时生效零延迟(403→3分钟内PASS,A路可编辑功能实证);验证链fill冒烟→17/20+403×3→双族复跑→补授权→3/3全闭合
+- registry：v2.1；今日 registry 提交无变化
