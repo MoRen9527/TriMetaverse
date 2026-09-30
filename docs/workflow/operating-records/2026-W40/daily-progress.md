@@ -379,3 +379,12 @@
   - ddd2f9a1 Merge sg-bare/dev（daily-progress-watcher 360eff84 零交叠）
   - 2bf1553e docs(w40): BOD R2案定谳收口——CTO裁approve同值touch机理核实成立+认知盲区定性非隐瞒+纪律候选入册(helper=store写回面+root忘降身语境漂移并入)+甲路冻结维持(gho_来历独立成立)+新发路批件加速候CEO批
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @05:10 +08：自上次进度提交 e97c8f6a 后新增 7 条 commit：
+  - 8f92c68d docs(w40): MAP正名裁录案+PAT施工链预告——TriRLC正名候下个sg维护窗随批(今夜不进=变更堆叠防控)/新发PAT六步链④dry-run验证=本席候BOD写入毕即动
+  - cbc84468 docs(w40): CTO出件——CEO新发PAT网页生成操作指引（20仓API实锚清单+Contents RW+90天+交接安全三防）施工序第①步经BOD转呈
+  - 959c9535 docs(hub-state): 挂账 sg-8460-probe-job 候办条（D-15 接令，五要目无疑义，窗=今夜 18-24）
+  - 413a65ef docs(w40): 新发PAT供料§十二——20仓规范名清单(20/20逐仓API活体核名)+差仓定谳TriModel(CTO19仓扫描漏,双pushurl实锚)+TriLC改名TriRLC实证(301,MAP旧名redirect仍工作)+五仓非CamelCase规范形照抄注记
+  - 5bac9e50 Merge sg-bare/dev（watcher e97c8f6a 巡检兜底 vs 本地 tracking 注记 1d5533bf+案b回填 2ccd87cd，零交叠）
+  - 2ccd87cd docs(w40): 案b终裁回填——CEO 09-30 04:57批维持BOD原判(结构性事件三叠法定谳非个人擅离,COO低位观察);8460代理层排除回填(该窗零请求零异常,外部诱因收窄上游模型侧);外部诱因定谳续挂CHO面候令不催窗;历史叙述不改写,回填注记留痕
+  - 1d5533bf docs(hub-state): tracking 条联动注记——04:30 轮终验 FF 正常读数项闭合+a 案前置解锁（CEO 04:57 批新发 PAT 链启动，a 案候新 PAT 落位后施工）
+- registry：v2.1；今日 registry 提交无变化
