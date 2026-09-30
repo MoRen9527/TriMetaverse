@@ -24,7 +24,7 @@
   "owner": "COS（编排）+施工候派（TriMMC 面或 SDE 值席裁）",
   "priority": "默认（录入序 4）",
   "status": "waiting-window",
-  "note": "TriMMC（M-SG）8710→8712+改绑 127.0.0.1（两改一次重启窗合并，重启纪律照 8713 正形）；TriRMC（R-HY）守 8710 不动；安全组入站 CEO 已删双机 8710+BOD 外测复验 unreachable（19:55 实锚）。四步=①8710 全引用点扫（job command/notify 配置/席用工装/8460 探测 job 契约面——本条即引用点之一：sg-8460-probe job+ledger-watchlist-patrol sg 面版 notify loopback 8710 均候迁移窗同步）②改绑+重启③引用点逐项同步④既有 job 全数存续验证。验收锚四件+非作者走查=CTO。时点候排程：今晚 8713 窗毕后容量足则续/或明晨哨窗后；明日 14-18 禁排避让"
+  "note": "TriMMC（M-SG）8710→8712+改绑 127.0.0.1（两改一次重启窗合并，重启纪律照 8713 正形）；TriRMC（R-HY）守 8710 不动；安全组入站 CEO 已删双机 8710+BOD 外测复验 unreachable（19:55 实锚）。**BOD #134 增补三小项随同窗**：①TriMMC 门升 fail-closed（env 未设→401 全拒，模板=审计卷 c8b8749f §二 TriRLC app.ts L1797-1812 门正形）②bindHost env 化（默认 127.0.0.1，TriRMC app.ts:805 形态）③token 恒时比较替换!==；验收锚追加两条=无令 GET /internal/* 401 实锚（status-code-only 零真值）+带令健康 200+systemd override.conf token 常驻迁后复核。四步=①8710 全引用点扫（job command/notify 配置/席用工装/8460 探测 job 契约面——本条即引用点之一：sg-8460-probe job+ledger-watchlist-patrol sg 面版 notify loopback 8710 均候迁移窗同步）②改绑+重启③引用点逐项同步④既有 job 全数存续验证。CTO 支持注=diff 形态随叫随到（#135）；非作者走查=CTO。时点候排程：今晚 8713 窗毕后容量足则续/或明晨哨窗后；明日 14-18 禁排避让。另候办一笔：TriRMC 河源 unit TRIRMC_HOST 复核（R 面通道维护窗，非急，安全组已兜）"
  },
  {
   "id": "tc-bare-force-fetch-fix-tracking",
