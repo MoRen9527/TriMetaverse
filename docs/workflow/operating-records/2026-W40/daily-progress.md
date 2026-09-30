@@ -474,3 +474,8 @@
   - f91eef75 Merge remote-tracking branch 'sg-server/dev' into dev
   - 4697374c docs(plane): BOD 23:1x 全权裁决批大表联动——T5 解冻/LG-041+046 销账（禁裸销三锚）/LG-048+051 并流/M2 窗定 10-01 12-14/LG-057 试点单/LG-059+060 明窗拆派/候 CEO 项 3→2+token 第四起入账（cos）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 0744474e 后新增 3 条 commit：
+  - d7c88b30 docs(plane): COO 排程锚回执联动——LG-054 M2 排程锚毕（10-01 12-14 同窗锚定+门链）/LG-059+060 三段链拆派落位（TC502 追平前置候条件登记）（cos）
+  - 44a06f52 Merge remote-tracking branch 'sg-server/dev' into dev
+  - cc82e50f docs(workbench): COO 排程锚落位——LG-054 M2=10-01 12-14 部署主窗正式锚定(门③④+chromium+CORE_VERSION 随窗)+LG-059/060 三段链式拆派(CTO 技审 0-9/FSD 执行 18-24/STE 验接力;TC502 追平前置候条件)(BOD 23:1x 裁·COS 23:2x 知会)
+- registry：v2.1；今日 registry 提交无变化
