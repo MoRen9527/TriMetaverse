@@ -157,6 +157,8 @@
 | 146 | 21:0x（09-30） | COS | R6 毕报 | **A 案本机侧施工全落**：29660 疑案定谳=watchdog disable 前末轮直拉 env 旧（uptime 161s 仍 degraded 实锤）→带令 shutdown（首尝 401=带令门勘明）→正规冷起 34080←34324 父链过→watchdog 复原 ENABLE→healthz 全绿（mc_link/trimc connected+cron 6 job 零降级）+keeper 41196 VBS 无窗 HKCU Run 自启+隧道 401 alive+cmd env 两键 18710；教训一笔=冷起动件禁猜路径 | 来件 21:04 |
 | 147 | 21:0x（09-30） | COS | R1 复跑回读 | **A 案独立复跑三锚全绿**：①18710 无令 401（隧道+门双证）②8713 三面（healthz 行为/父链 cmdline/cmd 文件四键 18710+TARGET_SEAT=bod 文件面）③端到端试信 15 秒闭环（accepted→forwarded→delivered；首试 400 daemon_seat_mismatch=名册校活反证；token 管道流零出机）+验收亲验毕认+**第二起 token 溢出自报**（cmd 文件 grep 过宽同值事件+1+channel.cmd 磁盘明文驻留面确认） | b4e40bc3 |
 | 148 | 21:0x（09-30） | CTO | R6 报备 | 溢出事件计数 +1 同文报备（同值无新增泄露面+channel.cmd 驻留面知会+根因同族自领+取证类 sed 预脱敏管道改法承诺）+门升约源码实锚顺报（app.ts L151-175 fail-closed+恒时+双头+请求期读=修案 #1/#3 落实） | 1dfc181a |
+| 149 | 21:1x（09-30） | COS | R6 催办 | CTO 第二场走查验收请求流转催（六锚全单+复跑读数引 b4e40bc3）+收官回报稿候起草要点预告（CEO 知情注/token 溢出双起入账/明晨首轮候验注记） | d40d8318 |
+| 150 | 21:1x（09-30） | CTO | R6 认收回执 | 溢出计数认（同窗两起）+审计卷 §六.4 再勘落盘 2a4f46cf：**token 驻留面全录五处**（sg docker/.env 真源→sg unit drop-in 重复注入→在役 job command 内嵌→本机 channel.cmd 第四同步面明文×2→transcript 溢出面）+轮换单按五处清单列工序（漏 channel.cmd 则 notify 双跳链断）+门升约源码实锚预验收讫（走查独立复核不转抄）+A 案读数收讫 | 来件 21:09 |
 
 ## 二、口径定谳（三点候补对表）
 
