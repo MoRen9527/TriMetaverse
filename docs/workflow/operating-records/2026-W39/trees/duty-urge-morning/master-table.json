@@ -18,10 +18,10 @@
    "id": "LG-040",
    "item": "T-O4 代码批窗",
    "seat": "m-duty-cto",
-   "form": "随车验收",
+   "form": "残差候 CTO 窗",
    "window": "候 CTO 代码批窗",
    "note": "133 处注释旧名+1 脚本；validation 全绿为门",
-   "status": "CTO 侧收口（66cf587 已推 TC dev，门=184OK+5OK+smoke 绿）——出表，销账走 COS 收口→BOD 验收链"
+   "status": "已收口双锚（batch-12 件② 定谳：ed4babe8 活址实 commit+66cf587 活址，LG-040 实为双锚已闭——台账误挂 7 日勘正）；残差仅 T-O4b 守卫对表+pytest 供给（CTO 行文直摘）"
   },
   {
    "id": "LG-041",
