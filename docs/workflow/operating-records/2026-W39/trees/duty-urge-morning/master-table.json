@@ -96,6 +96,14 @@
    "form": "候 BOD 验收链",
    "window": "批次02 毕",
    "status": "跟新毕+CTO 收口成立（TriRLC 3800e2d 46 处对表；净收口 −9=13→4，trirlc 事故字附裁可）；残项=预存挂 4 归域"
+  },
+  {
+   "id": "LG-053",
+   "item": "TriModel 恢复阶梯（终稿铸毕候正式流转）",
+   "seat": "COS 铸（batch-12 件①）→COO 白昼排程",
+   "form": "候正式流转",
+   "window": "候排程",
+   "status": "终稿 v1.0 铸毕（batch-12 树 lg053-recovery-ladder-final.md：四态表 T-3 单列/R-HY 同构标注/接口候审面两条）；候 COO 白昼排程+CTO 技审两条回流"
   }
  ],
  "metadata": {
