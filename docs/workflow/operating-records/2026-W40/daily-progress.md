@@ -536,3 +536,9 @@
   - ab3a3cfd docs(workflow): LG-056 A1 断言脚本预置卷——/home/fleet/bin 落位（偏差如实注）+干跑 5/5+周日触发式+源码嵌入防丢 @m-duty-cos
   - fecf89b8 docs(bod-pipeline-07): 件1 三段链技审裁决卷——LG-060 三族修法（letters 测试跟新 LG-026 正形/FADE-005 候产品定性/FADE-003 fixture 校准禁降阈）+LG-059 残挂（401 三族跟 fail-closed 正形/花名册对真源/ctx.cwd 环境哨兵 skip）+TC 源侧 6 处机械正名入 LG-059 族（活护栏句非两族）+16 件 revert 案闭环条件成立（本机追平+渲染复验）+143 行两族框架+FSD 工单 A-F 预开 @m-duty-cto
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:30 +08：自上次进度提交 90dcdc01 后新增 4 条 commit：
+  - 80a3cc19 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 511e9be5 docs(plane): BOD 08:2x 惯例同步两笔联动——周日10-04迁移链悬空已修（PATCH enabled=true，LG-056 A1如期候验+执行体表述勘正）/TriMLC F-3加重实证（六job全灭零run，哨位已知态非异常，修复窗=今晚18-24 FSD段并窗，哨窗清单三job首轮勠除队）（cos）
+  - 9ccd5046 docs(workflow): LG-056 A1 锚卷补嵌防丢——脚本全文入 fence（根因=bash 未引 heredoc 吞变量自领；零功能变更纯文档补嵌）@m-duty-cos
+  - cf5f215f ops: weekly plane shift W39->W40 (TriMC scheduler)
+- registry：v2.1；今日 registry 提交无变化
