@@ -1,7 +1,7 @@
-# CORE_VERSION 门·SDE 侧 checklist（伴窗项；分工候 COO 标注，本件=sg 侧执行面备料）
+# CORE_VERSION 门·SDE 侧 checklist（BOD 分工裁复已回填·动笔窗=明晚窗）
 
 - 制备: m-duty-sde（2026-10-01 窗内）；门条款正身=TriCode/src/trimodel-cli/README.md 条款②+纪律册附录 253ccd9
-- 分工疑点（读数报①已请核）：修复动笔=CTO 卷明文 FSD（io-kernel 两写点窗内定案）——SDE 份额候标注；本 checklist 先备 sg 侧无争议执行面
+- **〔BOD 裁复回填 21:4x〕分工定谳**：修复动笔（io-kernel 两写点）+CORE_VERSION bump=**FSD 同批同席**；SDE 份额=**本表四项**（#1 防线回归 58 套/#2 壳族对照 276+25/25/#3 四仓同步重装读数/#4 读数归卷）；**双签=FSD+SDE**；动笔窗=**明晚窗**（frozen 纪律下与 bump 同窗并批）；本席 sg #1「补丁到位前零动作」**维持**
 
 ## 一、门流程全景（条款②正身）
 
