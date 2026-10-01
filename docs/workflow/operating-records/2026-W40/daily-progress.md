@@ -542,3 +542,6 @@
   - 9ccd5046 docs(workflow): LG-056 A1 锚卷补嵌防丢——脚本全文入 fence（根因=bash 未引 heredoc 吞变量自领；零功能变更纯文档补嵌）@m-duty-cos
   - cf5f215f ops: weekly plane shift W39->W40 (TriMC scheduler)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:40 +08：自上次进度提交 0fe8e37c 后新增 1 条 commit：
+  - 4907a853 docs(plane): shift-ade 审计链勘误恢复——cf5f215f 重放降级覆盖反转
+- registry：v2.1；今日 registry 提交无变化
