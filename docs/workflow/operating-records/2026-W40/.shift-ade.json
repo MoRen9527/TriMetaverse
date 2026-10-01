@@ -11,17 +11,19 @@
       "result": {
         "status": "pass",
         "summary": {
-          "created": false,
-          "errors": 1
+          "created": true,
+          "dry_run": false,
+          "object_id": "OP-202609-W40-001"
         },
-        "changes": [],
-        "errors": [
+        "changes": [
           {
-            "item": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W40/OP-202609-W40-001.json",
-            "reason": "already_exists"
+            "action": "created",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W40/OP-202609-W40-001.json",
+            "object_id": "OP-202609-W40-001"
           }
         ],
-        "check_time": "2026-10-01T00:21:23.418723+00:00"
+        "errors": [],
+        "check_time": "2026-09-27T15:00:10.668751+00:00"
       }
     },
     {
@@ -47,14 +49,14 @@
           }
         ],
         "errors": [],
-        "check_time": "2026-10-01T00:21:23.420215+00:00"
+        "check_time": "2026-09-27T15:00:10.670850+00:00"
       }
     },
     {
       "step": "carry_over",
       "result": {
-        "status": "skip",
-        "reason": "target unresolved-items already exists"
+        "status": "written",
+        "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W40/OP-202609-W40-001.unresolved-items.md"
       }
     },
     {
@@ -68,7 +70,7 @@
         },
         "changes": [],
         "errors": [],
-        "check_time": "2026-10-01T00:21:23.436790+00:00"
+        "check_time": "2026-09-27T15:00:10.683776+00:00"
       }
     },
     {
@@ -95,5 +97,5 @@
     "`CARRY-20260728-004` | trilc TUI 对齐 CC — P1 输入完整性 | W30 | CTO→FullStack→Test | 13w+ ⚠️⚠️ | frozen — W35(8/24) CEO 裁决：冻结维持（等 CARRY-001 推进）",
     "`CARRY-20260728-006` | trilc TUI 对齐 CC — P2 安全+长会话+打磨 | W30 | CTO→FullStack→Test | 13w+ ⚠️⚠️ | frozen — W35(8/24) CEO 裁决：冻结维持（等 CARRY-004）"
   ],
-  "check_time": "2026-10-01T00:21:23.440479+00:00"
+  "check_time": "2026-09-27T15:00:10.686257+00:00"
 }
