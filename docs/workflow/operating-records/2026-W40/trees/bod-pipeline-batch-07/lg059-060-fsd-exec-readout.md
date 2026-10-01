@@ -73,7 +73,7 @@
 
 ## 全量门（窗内终读数）
 
-- **TriMMC：476/473/0/3**——基线 10 挂全消（auth 7+花名册 1+ctx.cwd 3=11-1 重叠？逐数：466+WO-C 7+WO-D 1+WO-E 3=477-1 计数修边=473，零新增 fail）+3 skip=WO-E 显性化
+- **TriMMC：476/473/0/3**——基线 10 挂全数处置：7 挂治愈转过（internal-auth 1+config-sync 3+cron 2+花名册 1）+3 挂转显性 skip（ctx.cwd win32 形，WO-E）＝466+7=473、零新增 fail、总 476 不变
 - **TriRLC：229/229/0/0 全绿**——残 3 挂全消（letters R1+roster 409×2），lead-tools tsc 5 错预存除外零错
 - 硬门遵守：既有挂全等基线外零新增 fail ✓；TriMC 目录现名零触碰 ✓；commit 分件独立 ✓
 
