@@ -527,3 +527,12 @@
 - 巡检兜底补写 @06:50 +08：自上次进度提交 3963f0bb 后新增 1 条 commit：
   - 0a3f5f68 docs(plane): BOD 06:5x 核稿裁+落账——LG-055 方案稿核过（裁据四条，执行面=B先导实弹CTO主办+C推广毕，先导窗候COO排程）/batch-06关批（方案A倾向+8460=bigmodel TLS shim定性）/哨窗清单+2（batch-05裁决清单+batch-06连带清单随窗带）/段九吞节头勘损自纠+勘正记录条2（cos）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @07:10 +08：自上次进度提交 dba97f27 后新增 2 条 commit：
+  - a6b5957d Merge remote-tracking branch 'sg-server/dev' into dev
+  - b6902c9a docs(plane): LG-018 runbook 销账笔落账（BOD 07:0x 裁）——锚=batch-02件1勘证卷可动面段（亲验在卷）+长挂区「清单未见回卷」过时注勘正（勘证卷即清单本体三态清点毕）；余=LG-017立法面维持+B2复审候首盘窗排程不动（cos）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:20 +08：自上次进度提交 c455c906 后新增 3 条 commit：
+  - 6d084297 docs(batch07): STE 件3·LG-058 UI 走查辅位材料预备出卷——走查门纪律单（硬门三件+LG-035 家族四教训+CEO 七条否决+四族排查检具）+快照敏感面防复踩单（09-14 教训在册引用+三变体原档未溯得如实注）+P2 四域面走查点清单与夜窗三件/R2R3 全绿面映射表 @m-duty-ste
+  - ab3a3cfd docs(workflow): LG-056 A1 断言脚本预置卷——/home/fleet/bin 落位（偏差如实注）+干跑 5/5+周日触发式+源码嵌入防丢 @m-duty-cos
+  - fecf89b8 docs(bod-pipeline-07): 件1 三段链技审裁决卷——LG-060 三族修法（letters 测试跟新 LG-026 正形/FADE-005 候产品定性/FADE-003 fixture 校准禁降阈）+LG-059 残挂（401 三族跟 fail-closed 正形/花名册对真源/ctx.cwd 环境哨兵 skip）+TC 源侧 6 处机械正名入 LG-059 族（活护栏句非两族）+16 件 revert 案闭环条件成立（本机追平+渲染复验）+143 行两族框架+FSD 工单 A-F 预开 @m-duty-cto
+- registry：v2.1；今日 registry 提交无变化
