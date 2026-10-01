@@ -55,3 +55,38 @@
 ## 使用依据
 
 工单正身 §五；batch-02 两读数卷 §四挂名单；BOD T5 抽验读数；company-governance-state.md:198-211；source-agents 全谱 live grep（本席实勘 2026-10-01）；roster-gating/letters 测试文件实读
+
+---
+
+# 窗内执行段读数续篇（2026-10-01 夜窗·T5 工单段）
+
+## 执行锚总表
+
+| 工单 | 仓锚 | 门读数 |
+| --- | --- | --- |
+| WO-A | TriCompany 63b8c3a（本地，推候裁见下）+ TMV 96e24972 | 发布管线双面真写 updated 15/15+derived_drift=0；TMV 两面复扫 **2K+0 残**✓（余=business-strategy :33/:45 历史别名两面投影）；22 件集完整零回流；前置断言自测 0/2 基线放行 |
+| WO-C | TriMMC 7beac36 | 三套件 11/11 绿；tsc 零错 |
+| WO-D | TriMMC 8ab3281 | 套件 6/6 绿；LOADED=13=13 席真源精确吻合 |
+| WO-E | TriMMC e6f7e98 | 套件 7/4/0/**3 显性 skip**（win32 形留痕） |
+| WO-B | TriRLC 2ab47df | letters 套件 12/12 绿 |
+| WO-F | TriRLC 2afffe1 | roster 套件 7/7 绿；FADE-003 计数自然 ≥3 |
+
+## 全量门（窗内终读数）
+
+- **TriMMC：476/473/0/3**——基线 10 挂全数处置：7 挂治愈转过（internal-auth 1+config-sync 3+cron 2+花名册 1）+3 挂转显性 skip（ctx.cwd win32 形，WO-E）＝466+7=473、零新增 fail、总 476 不变
+- **TriRLC：229/229/0/0 全绿**——残 3 挂全消（letters R1+roster 409×2），lead-tools tsc 5 错预存除外零错
+- 硬门遵守：既有挂全等基线外零新增 fail ✓；TriMC 目录现名零触碰 ✓；commit 分件独立 ✓
+
+## 关键定性（窗内新勘）
+
+- WO-D 双根因：①TriMMC 内 agent-core dist 陈旧拒 v3.1（cso 契约被拒）——agent-core dist 重建+重挂治愈；②SDE 合同 agent_id=deployment-engineer 残留（LG-059 源侧族候裁）
+- WO-E 根因：cd 裸命令回显 cwd=Windows cmd 语义，POSIX sh 零输出（win32 形用例；POSIX 形等价用例候语义分形另派）
+- WO-B 定性：未注册 runner 会话流=连接即 task_error+res.end（src:3540-3543 结构行为）；payload 泄漏防线保留；live letter 直推可观测面=注册 runner 会话（候语义分形）
+- WO-F 根因：candidate 判据依赖 resolver 单例 roster（无即全 unknown）——原过=dev 跨文件单例泄漏偶通；fixture 自足化治愈
+
+## 卡点在案（候裁/候令）
+
+1. **TriCompany 推送纠缠**：WO-A 63b8c3a 本地锚在；remote 已前移（CAO docs+CTO T-O4 66cf587 本地未推纠缠）——rebase 重放撞 CTO 在途件，已 abort 保三方原态；推送候 CTO T-O4 先推或 BOD 裁序（WO-A 源侧件不影响 TMV 渲染门已达面）
+2. **WO-A 勘外清单 25+ 处**：窗内六处修毕复扫 0 残达门=未触发扩裁呈报；清单留档候 CTO 圈面（:11 句×6/soul×2[渲染不入面实证]/他席禁令句/TriMC*Registry 三件/manifest/cso heartbeat）
+3. **连锁段**：候 BOD 联动评估另令（COS 派裁位裁定）；补丁稿 566fd195 暂存态；sg→dev SSH 不可达实锚在卷
+4. TriModel 工作区预存残留：lock M+两 bak 目录+stash@{0}（in-flight residue preserve）

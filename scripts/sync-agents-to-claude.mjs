@@ -64,6 +64,31 @@ function convert(text) {
 
 function main() {
   if (!existsSync(SRC)) { console.error('源目录不存在: ' + SRC); process.exit(1); }
+
+  // ── 渲染前置断言（batch-07 随批·BOD 批准）：源侧旧名现役句族防复发门 ──
+  // 语义：`.github/agents` 输入面中「写成 TriMC 正式 X」现役禁令句族超基线新增即拦
+  // （exit 1）；存量基线=WO-A 后候扩裁清单（fsd/ste soul 句 2 处，2026-10-01），
+  // 基线随正名批次递减更新。K 豁免=business-strategy 历史别名声明（自带禁现役化限定）。
+  // 零渲染行为变更：门只读输入面，基线内放行照渲。
+  {
+    const LEGACY_FAMILY = /写成\s*TriMC\s*正式|写成TriMC正式/;
+    const BASELINE = 2;
+    const offenders = [];
+    for (const f of readdirSync(SRC)) {
+      if (!f.endsWith('.agent.md')) continue;
+      if (f.startsWith('business-strategy')) continue; // K 豁免：历史别名声明面
+      const lines = readFileSync(resolve(SRC, f), 'utf-8').split(/\r?\n/);
+      lines.forEach((line, i) => {
+        if (LEGACY_FAMILY.test(line)) offenders.push(`${f}:${i + 1}`);
+      });
+    }
+    if (offenders.length > BASELINE) {
+      console.error(`[sync][gate] 源侧旧名现役句超基线（${offenders.length}>${BASELINE}）——先正名再渲染：\n  ${offenders.join('\n  ')}`);
+      process.exit(1);
+    }
+    console.log(`[sync][gate] 旧名现役句 ${offenders.length}/${BASELINE}（基线内，放行）`);
+  }
+
   mkdirSync(DST, { recursive: true });
   const files = readdirSync(SRC).filter(f => f.endsWith('.agent.md'));
   let n = 0;
