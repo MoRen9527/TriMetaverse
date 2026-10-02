@@ -81,9 +81,23 @@
 2. **worktree 清理前先断言链接面**：node_modules 是 junction 的仓，worktree remove 前先摘 junction（本案 git worktree remove 是否贡献未单点定性，联合窗口记档）。
 3. **事故响应序验证**：停手→git 可恢复性先查（agent-core 秒回）→远端 bare 恢复源排查（sg bare 克隆）→活体风险评估先行上报——本次恢复链零真码损失，流程可复用。
 
+### 边界盘点补记（COO ②b 只读盘点令，20:19Z）
+
+- **第三条链接现形**：TriMLC/node_modules 内 junction 实为**三条**（原树灭后以现树枚举+npm 声明面双证）——`trimodel`→TriModel／`@tricompany/agent-core`→TriCompany/packages/agent-core／**`@trimetaverse/tricode`→TriCode**（后者此前 grep 漏 @trimetaverse 域，边界盘点枚举现形）。**TriCode 仓同遭穿透灭失**（目录空+.git 灭），已从 sg bare TriCode.git 克隆恢复（**a3893ba** 顶，7 项 tracked 面回位）。
+- **闭界抽查**：TriRLC/node_modules 链接面（未触仓）=`trimodel`→TriModel TargetExists=True 完好、@scope 层零额外链接——损伤面收敛于 TriMLC/node_modules 单树内三条链接目标，无第四条。
+- 现树三条 junction 目标在位性：TriModel ✓（克隆恢复）/agent-core ✓（checkout+npm 重建）/TriCode ✓（克隆恢复）。
+
+### T7 bak 族核（CTO 回执③问询，答案=灭失·真损）
+
+- T7 裁决清单（t7-four-blockers-verdict L47）：目录四（bak-20260927-2325-pre-fullflash/bak-20260927-pre-flash/dist.bak-pre-a6-20260929T0027/dist.rollback-trial-a6）+文件六（trimmc-card.json.bak-20260928T 系×4+pre-v4×1+48660-4 系），全 ?? untracked，位于 TriModel 仓工作区。
+- **现迹核：全灭失**——克隆后仓内 17 项=纯 tracked 面，bak 系零命中（git status 零）。灭失时点=**穿透删除**（非克隆清除：克隆发生在仓已空之后只写入）；untracked=sg bare 无副本=**不可 git 恢复，真损**。9-27~9-29 操作保护性快照（T7 定性「保护价值随现役稳定时长衰减」）随仓灭失，CTO 卫生候办对象面自然消解但属事故损失非卫生处置。
+- TriModel/TriCode 两仓的 untracked 工作区残留+本地未推提交同族**不可知不可恢复**（本机 .git 丢失；sg bare 顶=161d0ca/a3893ba 是否已含本机全部工作无法本地验证）——真损边界以此为止，候 CTO 裁卷标注。
+
 ## 三、发现项汇总
 
-1. **（阻塞·我方事故）**：见 §二专节——TriModel/.env+dist 待恢复窗、3333 禁重启候裁、类型门 baseline 待补验。
+
+
+1. **（阻塞·我方事故）**：见 §二专节+边界盘点补记——TriModel/.env+dist 待恢复窗、3333 禁重启候裁、类型门 baseline 待补验；TriCode 已克隆恢复（untracked/未推提交同族不可知）；T7 bak 族灭失真损。
 2. **（非阻塞·完整性补注）**：updateJobRun 调用面实为十点（timer.ts 九+service.ts 一），FSD 主张限定域属实，修复覆盖全域，无需改码。
 3. **（非阻塞·既有失败族实证增量）**：本轮全量 5 fail（vs FSD 8）——并发干扰族轮间随机性实证（同族不同例+隔离全绿），支持 FSD「测试隔离性改善候 STE/CTO 面」候办；P0 端到端 suite 向量数轮间不稳（6→1）注记入档。
 4. **（非阻塞·观察）**：裸 `node --test` 跑 .ts 缺 `--import tsx` 报 ERR_MODULE_NOT_FOUND——命令形态坑，npm test 正形无此问题，备注档。
