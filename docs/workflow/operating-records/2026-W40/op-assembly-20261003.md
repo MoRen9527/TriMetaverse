@@ -40,6 +40,7 @@
 - **运营计划表共创五问挂起**（CEO 令 21:14 经 BOD：「五问先暂时搁置，COO 记着点，等岗位审完再回答」）——挂起触发器=**CEO 宣布 COS/COO 岗位审完**（预计 10-03 上午），届时五问 verbatim 底稿（已呈 BOD）重启候 CEO 答；首版规划对话不丢仅顺延。
 - **岗位件最高优先级插入**（BOD 21:11 令）：COS/COO 两岗 source-agents 岗位职责优化，CEO 亲审经 BOD 转达即拆任务书派工；死线=10-03 上午；COO 岗件不自改不自裁条款。**主审面勘正（BOD 21:26）**：两主 .agent.md 文件已退役出渲染链（L6 退役声明），正确主审面=零件（agent-body COS 159L/COO 122L+agent-frontmatter+soul 60L/50L），任务书铸材以零件为对象。**第一波已拆派（10-02 22:51，batch-17 件①四环闭）**：COS 岗 agent-body 23 条意见→STE 主刀（车道裁+BOD 采信），任务书+处置单（BOD worktree staging/sg commit 1524f279 双通道）本机直读开工；三防+C15 先勘 spec 铸令；COO 岗批候 CEO 意见第二波。
 - **CLI 2.1.287 升级窗恢复韧性实证收档**（LG-055 B 段副产品，10-02 夜）：282 期 resume 挂死×2 轮→287 期 watchdog 自动拉起即成活（CMO resume 续载满分）——版本升级窗席位恢复韧性已实证一轮，无候办；窗尾卷四条判据修正提案候 CTO 落盘后入册面（判据归 CTO 汇裁链）。
+- **TMV sg bare remote hook rebase error**（STE 件④ push 留痕，10-03 00:0x）：push ref 本身成功更新，系 sg 树自动追平 hook 面报 rebase error——值席域候值席窗处置，不阻验收链；与 8712 根治窗同域可并勘。
 - **退役主文件归档清理**（BOD 21:26 勘正附带）：chief-operating-officer/ceo-chief-of-staff 两主 .agent.md 已退役出渲染链，归档清理候后续窗（不入 10-03 必办）。
 - **维护窗增补两件**（BOD 22:35 补窗单，STE 走查衍生）：①CTO 维护窗双源收敛批增补=本机 channel.cmd 权限 644→收紧核（sg 侧 override.conf 600 已毕）——窗内只核本机侧；②FSD 交卷附注要求=precheck 卷 errs 26→27 跨卷 +1 无归因，下次交卷附一句归因注（不立单）。BOD 面 18 项四族窗单整理稿明晨组窗合流本席。
 - **8712 config-sync 根治（BOD 明窗单，#248 续）**：第一层 root 污染已修毕；第二层=git pull --ff-only 撞 sg 工作仓脏面（m-duty-cos 22:00 前后直接工作仓 commit+值席未同步现场 4M/3D）。BOD 裁今晚停手，三设计候选明窗裁：fetch+reset 硬对齐（须先迁出值席现场）/值席现场迁出工作仓（结构性最净）/pull 前自动 stash。**值席知悉面：工作仓现场与 config-sync 冲突中，动 sg 工作仓前先看此条**。cf 预计明早 ~24 degraded（服务本体绿无积压危害）。
