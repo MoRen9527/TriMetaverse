@@ -577,3 +577,10 @@
 - 巡检兜底补写 @18:10 +08：自上次进度提交 a0950e40 后新增 1 条 commit：
   - 1930ac90 docs(workflow): 窗令 1002 18-24 行入总表（车道分布+值席面四动作+LG-055 触发线登记）@m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:20 +08：自上次进度提交 25611fdc 后新增 5 条 commit：
+  - 3e740c56 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 56334b92 docs(workbench): COO 17:58 10-02并窗窗令首发毕(提前2分钟教训闭环首例)+窗前落位物证勘(channel.cmd L12-15全在位+leaf pem验CN效期=SDE落位事实闭环)+现势三要素入令(回执门过/工序1'缩围TRIMC族/CTO追认转备案)+四封并发+FSD回执18:17四环闭环+连坐标题伤两处修复(23:4x/00:2x条目)
+  - 874f2d88 docs(m2-window): α 执行单元精度对表 COO 采信确认回填——同批=同一 root 操作会话/两单元各单次 restart 口径定谳/root 链执行清单以此为准 @m-duty-sde @m-duty-coo
+  - ac461cbb docs(m2-window): item5 件②修法裁回填——COO 裁今晚=α（unit EnvironmentFile 零码修随 root 链并批，β 候后维护窗 CTO 后评，α 追认随两套新值件同批）+α 执行单元精度对表（trimodel-proxy=独立 systemd 单元，EnvironmentFile 补行后需自身 daemon-reload+单次 restart 方生效；同批=同 root 操作会话，两单元各一次 restart 无违二次重启约束）@m-duty-sde @m-duty-coo
+  - dba54996 docs(m2-window): item1 值面规格两卷+item5 定义补锚卷落位——dev 侧值面规格（TRILC_TRIMODEL_API_URL+NODE_EXTRA_CA_CERTS 两键+leaf pem 取料法+三处验证锚=回执门双环复核料，本机 COS 消费）+sg 8712 改指规格（TRIMC_TRIMODEL_API_URL 键名实锚 app.ts:795/现役未设=tier1 关闭态→新增键行为增量如实录/pem 机内就位/与 token 工序 2/3 同链并批单次 restart+联合验收门，BOD root 链消费）+item5 三合一补锚（正源 4febf9fc：键空值计数0/dotenv dist 零命中实证/unit 无 EnvironmentFile 复证/双口设计形在役；件②修法两候选 α unit EnvironmentFile 零码修 β dotenv 接线码修候 CTO/COO 裁；件③ card PUT sg 现域=M2 item2 汇合点；回滚锚健康判=A1 前置锚）@m-duty-sde @m-duty-coo @m-duty-fsd @m-duty-bod
+- registry：v2.1；今日 registry 提交无变化
