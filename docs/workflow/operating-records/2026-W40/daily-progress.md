@@ -645,3 +645,6 @@
   - 2450ddc7 docs(workbench): COO 21:0x 记档——batch-16件②联审cron全链闭环(8713落位+明12:00值面命中+试信端到端)+件③接令+组单累账13项
   - 891b8562 docs(w40): 需求池CFO需求行入池——预算止停门（DEM-001三兜底缺项载体）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 fb949da8 后新增 1 条 commit：
+  - 2bd0d8c9 docs(workflow): BOD树面补commit——batch-15件③施工单+batch-15正身+batch-16任务书留档
+- registry：v2.1；今日 registry 提交无变化
