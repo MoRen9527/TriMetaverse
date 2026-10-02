@@ -90,3 +90,12 @@
 2. **WO-A 勘外清单 25+ 处**：窗内六处修毕复扫 0 残达门=未触发扩裁呈报；清单留档候 CTO 圈面（:11 句×6/soul×2[渲染不入面实证]/他席禁令句/TriMC*Registry 三件/manifest/cso heartbeat）
 3. **连锁段**：候 BOD 联动评估另令（COS 派裁位裁定）；补丁稿 566fd195 暂存态；sg→dev SSH 不可达实锚在卷
 4. TriModel 工作区预存残留：lock M+两 bak 目录+stash@{0}（in-flight residue preserve）
+
+---
+
+# WO-A 补刀卷（batch-13 复勘扩裁令·10-02 凌晨）
+
+- **扩裁令**: CTO 复勘揭族面真相——T5 抽验 22 agent 采样未覆盖全族（口径欠账如实注）；「TriMC 正式」护栏句族 18 处/15 文件（含 soul 句 2 处随扩裁收编，原候扩裁态收束）
+- **补刀**: TriCompany **4a50910**（18 处单 token 替换，残 0/新形 29）→双面重渲（copilot 15/claude 19，derived_drift=0）→**两面「TriMC 正式」零残**；渲染联动 TMV commit 独立分件
+- **边界遵守**: 其余 67 行广义 TriMC 残归 143 行批次决策台账族（B 档 payload 身份/历史叙事族/路径族）**不扩未动** ✓
+- **T5 口径修正注**: WO-A 门「2K+0 残」系 3 席面内口径；全族口径以本补刀卷为准（两面 0 残全量达成）
