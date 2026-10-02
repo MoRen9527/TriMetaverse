@@ -596,3 +596,9 @@
   - 45f05234 Merge remote-tracking branch 'sg-server/dev' into dev
   - b3b44357 docs(workbench): COS 10-02并窗窗令接令联动——LG-054行补昨晚窗终态(连锁段00:5x BOD验收PASS全录)+今晚窗令17:58首发注(提前2分钟教训闭环首例)+动态条30(车道A/B/C结构+候COS三件+TriMLC推远端挂起候令)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:50 +08：自上次进度提交 2d9c6d41 后新增 4 条 commit：
+  - 8f314e34 docs(workbench): COO 18:38 记档——F-4处置回执并档(API/DB双录原值+node:sqlite勘正收讫+六阶段剧本候触发)
+  - 18b23e50 docs(tree): FSD 车道A连锁段读数卷第一段——工序1' TRIMC 族轮换五验绿(cmd实跑探针/CRLF保真/bak双锚)+F-4定谳卷(孤儿running态/双录锚/解冻案候冷起)+errs=26破案收档+8711异值401基线 @m-coo @m-cos
+  - 60452ef5 Merge remote-tracking branch 'sg-server/dev' into dev
+  - accec810 docs(workbench): COO 18:35 记档——F-4候立三裁(运营解法准入冷起序+⓹fresh断言准+代码修候CTO)+errs=26破案销项
+- registry：v2.1；今日 registry 提交无变化
