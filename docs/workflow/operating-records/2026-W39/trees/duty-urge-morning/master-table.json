@@ -21,7 +21,7 @@
    "form": "残差候 CTO 窗",
    "window": "候 CTO 代码批窗",
    "note": "133 处注释旧名+1 脚本；validation 全绿为门",
-   "status": "已收口双锚（batch-12 件② 定谳：ed4babe8 活址实 commit+66cf587 活址，LG-040 实为双锚已闭——台账误挂 7 日勘正）；残差仅 T-O4b 守卫对表+pytest 供给（CTO 行文直摘）；残差 T-O4b+pytest 拆派见排程单（项4）"
+   "status": "已收口双锚（batch-12 件② 定谳：ed4babe8 活址实 commit+66cf587 活址，LG-040 实为双锚已闭——台账误挂 7 日勘正）；残差仅 T-O4b 守卫对表+pytest 供给（CTO 行文直摘）；残差 T-O4b+pytest 拆派见排程单（项4）；T-O4 了结（BOD 验收 PASS 裁复 13:1x 行文）"
   },
   {
    "id": "LG-041",
@@ -87,16 +87,16 @@
    "item": "测试基座技术债两笔（旧路径修复+ink 补装）",
    "seat": "m-duty-fsd（批次02 件2）",
    "form": "候 BOD 验收链",
-   "window": "批次02 毕",
-   "status": "修复毕+CTO 收口审查成立（TriMMC bfbfcfe 888 行/120 文件+ink devDeps 补；测试门件2 零回归 476/466/10/0）；残项=预存挂归域+族2 registry 收敛归 host-object 命名专窗（候 BOD 排）；现势勘正：FSD 执行段已毕（流水线夜 batch-02/03+CTO 收口成立 8aeca92a）；残面=STE 验段（10-02 午后）+族2 专窗候排"
+   "window": "验段闭合（残差 T-O4b+pytest 候 COO 白昼排程）",
+   "status": "修复毕+CTO 收口审查成立（TriMMC bfbfcfe 888 行/120 文件+ink devDeps 补；测试门件2 零回归 476/466/10/0）；残项=预存挂归域+族2 registry 收敛归 host-object 命名专窗（候 BOD 排）；现势勘正：FSD 执行段已毕（流水线夜 batch-02/03+CTO 收口成立 8aeca92a）；残面=STE 验段（10-02 午后）+族2 专窗候排；batch-14 验段闭合（STE 六门 GREEN 卷 65466538+FSD 执行卷 63e1a1a5，BOD 亲验四锚 PASS 裁复 13:1x）"
   },
   {
    "id": "LG-060",
    "item": "跨仓投影漂移（字段族测试面跟新）",
    "seat": "m-duty-fsd（批次02 件3）",
    "form": "候 BOD 验收链",
-   "window": "批次02 毕",
-   "status": "跟新毕+CTO 收口成立（TriRLC 3800e2d 46 处对表；净收口 −9=13→4，trirlc 事故字附裁可）；残项=预存挂 4 归域；现势勘正：FSD 执行段已毕（流水线夜 batch-02/03+CTO 收口成立 8aeca92a）；残面=STE 验段（10-02 午后）+族2 专窗候排"
+   "window": "验段闭合",
+   "status": "跟新毕+CTO 收口成立（TriRLC 3800e2d 46 处对表；净收口 −9=13→4，trirlc 事故字附裁可）；残项=预存挂 4 归域；现势勘正：FSD 执行段已毕（流水线夜 batch-02/03+CTO 收口成立 8aeca92a）；残面=STE 验段（10-02 午后）+族2 专窗候排；batch-14 验段闭合（同上链，BOD 验收 PASS）"
   },
   {
    "id": "LG-053",
