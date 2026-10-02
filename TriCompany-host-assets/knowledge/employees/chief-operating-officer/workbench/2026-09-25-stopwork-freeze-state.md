@@ -142,6 +142,7 @@
 ## 2026-10-01（周四）
 
 - **18:35（10-02）F-4 候立处置+F-4 缺陷发现记档**：①FSD 窗令执行中发现 hub-silent-detect 停排 18h=孤儿 running 态冻结（force-run 中途 daemon 停→boot 无 orphan 清理→双排除永不可调度，API 面解冻不通）；②本席三裁：运营解法准（冷起序内 cron.db 单行 UPDATE state='idle'+UPDATE 前双录原值留回滚锚）/⓹ 判据微调准（fresh 断言）/代码级修候 CTO 批立 F-4 不入今晚窗（CTO 候办+1）；③errs=26 破案销项（迁移窗 notify abort 族 10-01 14:48Z 自愈非调度缺陷）；④FSD 冷起剧本候 root 链毕触发。
+- **18:53（10-02）root 链 sg 段全毕记档+B 项裁定**：①BOD 回执六点全绿收讫（token sg 侧落点 PATCH+门三态 401/200/401+trimc/trimodel-proxy 双 unit 各单次重启+**工序 4 空集销项** jobs.json 正身=/var/lib/trimc/cron/ 活体 fd 反推 9 job 零嵌 token 走活体 env+TriMLC clone a66b3b2 同顶零手工补丁含 Part B+路由键顺录=落点二择一素材）；②**B 项疑点本席裁定=删**：override.conf 挂 trimmc.service 空壳（unit 本体不存在）零功能驻留却持新值明文=泄露面纯负债+trimmc/trimc 命名歧义隐患——执行形 rm+daemon-reload 免重启+门双态复测闭，#234 附 systemctl cat trimc 键名行消歧义；③A 项 CRLF 第三型实锚收讫（PS→跨机行尾族并档，纪律条候 CAO 本席支持）；④C 项 FSD 冷起 BOD 直触（触发中转位自然消解，候六阶段+三探针 ⓵⓶⓷⓹ 读数）；⑤/tmp 暂存 shred 零留+落账 #234 候收。runbook 18:5x 增注并档毕。
 - **18:38（10-02）F-4 处置接令回执并档**：四裁全收讫+验收锚升级落实——API/DB 双录原值在卷（state=running/nextRunAt=2026-10-01T16:30Z/lastRunAt=16:15Z/runs=97/errs=27，回滚锚=原值可回写）；**技术通道勘正收讫**：store.ts 用 node:sqlite DatabaseSync（Node 22 内置）非本席裁文所提 better-sqlite3——解冻脚本零依赖，本席工具名裁定即此勘正，运营解法本体不变；冷起剧本六阶段备妥候触发（触发权=BOD root 链毕信号，本席接读数即转 FSD）。
 
 - **18:31（10-02）工序1' 完工+root 链触发令发**：FSD 五验全绿（TRIMC 族三落点换新：行在/len64/同族同值/旧值零残留〔新 4842/旧 d2cd 退役〕/cmd 实跑探针 PASS+CRLF 零漂移 38:0/137:0+回滚锚 .bak 双件候探针毕即删+在役 8713 无感 env 冻结）——root 链触发条件达成，触发令发 BOD（预授权即行：sg 段清单三方定稿口径+次序合同=sg 门先轮换→FSD 一次冷起→⓵⓷复验+⓶首验）。
