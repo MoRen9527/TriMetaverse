@@ -1,0 +1,1 @@
+{"ts":"2026-10-03T02:19+08:00","seat":"FSD","op":"done","item":"batch-15 件① LG-053 恢复阶梯执行面（triladder.ps1 312 行+direct-probe.ps1 125 行；四态六形实测+a1a2a3 全测+5.1 兼容；未提交候收口批）","evidence":"trees/bod-pipeline-batch-15/fsd-batch15-1-completion-readout-20261003.md","code":"TriCompany scripts/ops/local/{triladder,direct-probe}.ps1"}

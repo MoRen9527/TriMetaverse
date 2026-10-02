@@ -16,7 +16,7 @@
 
 | # | 事项 | owner | 窗 | 状态 |
 | --- | --- | --- | --- | --- |
-| 1 | batch-15 件①②复工（①LG-053 执行面 FSD 主+STE 验；②T7 卡点四项裁决 CTO） | FSD/CTO（排窗 COO） | 10-03 黄金窗 | **件②毕报收（01:53，接令 6 分钟）**：裁决卷 t7-four-blockers-verdict-20261003.md 74 行/0e6e2067（本席盘验吻合），裁态=结项2（推送纠缠已消解 5cf5501+勘外扩裁收束）/转承1（连锁段→BOD 另令+COS 派裁位，前置门 sg→dev SSH）/改判1（TriModel 残留**不归 LG-025**，行不动；bak 族立独立卫生候办归 CTO 域）/附勘结项（junction 化=销项后无施工对象非漏项）；T8 候 BOD 留手——**候 BOD 复核**。件① FSD 施工中（R-HY 勘验已毕 01:4x：三勘面实锚，读数单 trees/rhy-401-key-audit/），毕报候窗内；STE 验随毕接 |
+| 1 | batch-15 件①②复工（①LG-053 执行面 FSD 主+STE 验；②T7 卡点四项裁决 CTO） | FSD/CTO（排窗 COO） | 10-03 黄金窗 | **件②毕报收（01:53，接令 6 分钟）**：裁决卷 t7-four-blockers-verdict-20261003.md 74 行/0e6e2067（本席盘验吻合），裁态=结项2（推送纠缠已消解 5cf5501+勘外扩裁收束）/转承1（连锁段→BOD 另令+COS 派裁位，前置门 sg→dev SSH）/改判1（TriModel 残留**不归 LG-025**，行不动；bak 族立独立卫生候办归 CTO 域）/附勘结项（junction 化=销项后无施工对象非漏项）；T8 候 BOD 留手——**候 BOD 复核**。件① **毕报收（02:20）**：triladder.ps1 312L 四子命令+direct-probe.ps1 125L 落 TC scripts/ops/local/（收口批已代 commit 安全网）+卷 fsd-batch15-1-completion-readout-20261003.md 74L；验收锚全达（A1-A3/探活四态六形超集/直连面通，-Live 真推理候值席窗如实标）；技术债四条如实在卷（restore 38 行前窗在途 diff 零触/notify 链候接等）；**STE 验已派（02:2x）**，验毕→BOD 复核→R-HY 修复窗串行接排 |
 | 2 | 维护批③④（8711 配令+优雅停实弹复测+updateJobRun 一行修） | FSD | 10-03 窗候排 | 在单（车道候 FSD：R-HY 勘验+件① 毕后顺延） |
 | 3 | FADE-010 三项 | 候 | 10-03 | 在单 |
 | 4 | R-HY 401 键值窗：TRIMODEL_API_TOKEN（门面）与 GLM_API_KEY（上游）两键分勘 | FSD/CEO/BOD 面 | 10-03 | 在单（**勘验面已毕（01:4x FSD）**：三勘面全实锚，读数单 trees/rhy-401-key-audit/rhy-401-key-audit-readout-20261003.md 在卷——候 CEO/BOD 面读数消费；token 轮换 CEO 定性「不急」挂起） |
