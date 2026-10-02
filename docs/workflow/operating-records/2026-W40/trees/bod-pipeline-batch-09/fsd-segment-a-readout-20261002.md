@@ -1,8 +1,8 @@
-# FSD·车道A连锁段施工读数卷（10-02 18-24 窗·分段落盘 第一段）
+# FSD·车道A连锁段施工读数卷（10-02 18-24 窗·分段落盘 全二段收口）
 
-- sourceOfTruth: 本件（FSD 施工读数卷；令源=COO 17:58 窗令→COO 18:2x 勘正令→COS 18:2x 防坑要项→COO 18:3x F-4 处置裁复）
-- syncMode: incremental（第一段=工序1'+F-4+候链基线；第二段=冷起+探针+⓶双向，候 sg root 链毕续写）
-- lastSyncedAt: 2026-10-02T18:4x+08:00（date 现查=2026-10-02 18:40:21 +08:00）
+- sourceOfTruth: 本件（FSD 施工读数卷；令源=COO 17:58 窗令→COO 18:2x 勘正令→COS 18:2x 防坑要项→COO 18:3x F-4 处置裁复→BOD 18:5x root 链完工触发令+BOD 机位勘正令）
+- syncMode: static（A 段全毕终态；T5 接力候 COO 排程）
+- lastSyncedAt: 2026-10-02T19:00+08:00（date 现查=2026-10-02 18:59:15 +08:00）
 - 施工席: FSD 小全（m-fsd）
 
 ## 一、窗令叙事正名（COO 18:2x 勘正令承接）
@@ -48,9 +48,29 @@
 - watchdog 现势：TriMLC-Watchdog Ready，5min 节律（18:27 轮 daemon 健康空过）；冷起序含 disable→复原双步。
 - sg root 链：候 BOD 触发中（本席不抢 sg 面）；触发后按六阶段剧本执行（disable→带令优雅停→解冻→冷起→核 pid/pidfile/healthz→watchdog 复原→探针⓵⓷复验+⓹严化+⓶TRIMC 双向首验）。
 
-## 六、使用依据
+## 六、第二段：冷起六阶段+探针全毕（sg root 链触发后，BOD 18:5x 令）
 
-- COO 17:58:49 窗令（hook 18:17:43 递）+18:2x 勘正令+18:3x F-4 裁复（SendMessage 实收）
+**触发与措辞矛盾注**：BOD 令文「sg 面，起非重启——trilc-8713.pid 现空」系机位错语（BOD 勘正令自认，归属 BOD）；冷起正身=本机 8713（F-4 cron.db+notify 验收+新值激活全指向本机面），照跑。sg TriMLC 起役不立单（备料态维持）。
+
+- **阶段0 噪音窗取证**（18:54:21）：mc_link=**degraded**（在役旧值 env 打已轮换新 sg 门=401 重试中，预期内）；cron 面 degraded=False/jobCount=6。
+- **阶段1 watchdog disable**（18:54:21）：Disabled，Next Run N/A 双验证 ✓。
+- **阶段2 带令优雅停**（18:54:42）：POST /shutdown +X-Internal-Token（in-flight 0641 机内提取零出机）→**200**；node 17876+cmd 壳 21424 二十秒窗内干净退场，零残留断言 ✓。禁裸杀遵守。
+- **阶段3 F-4 解冻**（18:54:58）：停态安全窗 node:sqlite 单行 UPDATE；PRE 原值第三录=running（与 API/DB 双录逐字段一致）；**UPDATE changes=1**；POST 回读 state=idle ✓。
+- **阶段4/5 冷起+三验**（18:55:18）：Start-Process cmd /c channel.cmd（Hidden）唯一一次起；healthz ok+jobCount=6；**新 pid=50268←壳 52424 父链匹配（同秒 18:55:18 起，单代无老壳）**；pidfile ~/.trimetaverse/trilc-8713.pid=50268 与新 pid 同值 ✓。uptime=0 时 mc_link=degraded 系启动初态，45s 复测 **mc_link=connected+trimc=connected**（18:56:47）——新值链通，噪音窗散。
+- **阶段6 watchdog 复原**（18:57:36）：Ready，下轮 19:02:00 ✓。
+- **探针三套全绿（缺一不销项律闭合）**：
+  - ⓵ F-3 五步：POST probe **201**+nextRunAt 非 NULL（Part A 直证）/GET gtNow=true/DELETE **200**+零残留；⓷ 端到端触发以在役四活跃 job 自然轮替代（lastRun 分钟级新鲜；draft 原文「可选加件」——allowlist exact-match 下临时 probe command 必拒，如实注）。
+  - ⓹ 严化六 job fresh 断言：**全 true**（含 hub-silent-detect）。
+  - **F-4 复活终证**：lastRun=10-02T10:55:20Z（**冷起后 2 秒 catchup 补跑**）、runs=97→**98**、state=idle、next fresh——运营解法全链闭环。
+  - ⓶ TRIMC 族双向首验（经隧道 18710→sg 8712 门）：**新值 200/旧值 401** ✓（值零出机，旧值自 bak 机内读取）。
+  - 8711 异值维持：冷起前基线 401（18:40:21，首测误用无令牌面 /healthz 得 200 系探针端点错误已勘，/internal 复测正判）+冷起后复测 **401**（18:59）双录 ✓。
+  - **notify 端到端投递验收（BOD 点名归我段）**：试信 ntf-muqufn0olpwou5（root-chain-acceptance-probe）**18:56:20+08 落箱**（mailbox API total=474/unread 面活）——8712 出队→8713 poller 拉取→信箱落箱全链通，冷起后首轮即达。
+- **bak 即删制闭合**（18:59:15）：探针全绿后 channel.cmd/.env 双 bak 退役删除 ✓。
+- ⓷ M2 键链端到端 200（SDE 主验）：我段供料齐——TRILC_TRIMODEL_API_URL/NODE_EXTRA_CA_CERTS 随冷起在役+trimc=connected+mc_link connected；终验候 SDE 段。
+
+## 七、使用依据
+
+- COO 17:58:49 窗令（hook 18:17:43 递）+18:2x 勘正令+18:3x F-4 裁复+18:4x 回执确认（SendMessage 实收）
 - COS 18:2x 防坑要项（CRLF 保真+cmd 实跑探针+壳代次勘验，实锚=昨晚 LF 漂移 8711 EADDRINUSE 事故）
 - TriMLC 实勘：git log（a66b3b2/0fd9c6f 谱系）/src/cron/timer.ts 全文（L88-142 arm/tick、L203-220 throw 路径、L329-355 catchup）/store.ts L218-260（Part A 在库）L285-334（updateJob 白名单）/service.ts 特征串/dist mtime 00:01:05
 - 在役 API 读数：/healthz、/internal/v1/cron/jobs、/internal/v1/cron/logs（门令机内提取零出机）

@@ -1,2 +1,3 @@
 {"ts":"2026-10-02T00:07+08:00","node":"N-fsd-precheck","status":"done","note":"FSD 窗尾预勘卷落树(fs-chain-precheck-readout-20261002.md)：A 段顺延申报(窗尾+SDE 回执门双卡)+前置①②全量读数(sg-bare 同顶 14092e5d/TRILC 消费方零跨机/两套新值裁定+.env 第 6 驻留面新发现)+F-3 版本差定谳(Part A=0fd9c6f 已在役,Part B 候冷起窗)+账面条刷新"}
 {"ts":"2026-10-02T18:45+08:00","node":"N-fsd-segment-a-p1","status":"done","note":"工序1' TRIMC 族三落点换新毕五验绿(cmd 实跑探针含)+F-4 定谳卷落树(双录锚原值已录/解冻案候冷起)+errs=26 破案收档+8711 异值 401 基线+候 sg root 链触发"}
+{"ts":"2026-10-02T19:01+08:00","node":"N-fsd-segment-a-p2","status":"done","note":"A 段全毕:冷起六阶段毕(pid 50268 父链匹配/pidfile 同值/禁二次重启)+F-4 解冻复活终证(catchup 2 秒补跑 runs=98)+探针三套全绿(F-3 五步/双向新200旧401/notify 端到端 18:56:20 落箱)+8711 维持双录+bak 即删退役"}
