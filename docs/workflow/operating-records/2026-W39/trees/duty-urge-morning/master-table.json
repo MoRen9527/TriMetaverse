@@ -28,7 +28,7 @@
    "item": "3333 事故尾项（根因定性+兜底架构）",
    "seat": "m-duty-cto",
    "form": "候 BOD 验收（key 轮换候裁并行 SEC-20260924-001）",
-   "window": "09-25 12:00 硬截点（CTO 侧已收口）",
+   "window": "09-25 12:00 硬截点（CTO 侧已收口）；D-15 线今晚读数候录（sg-8460-probe 并入今晚窗=STE 车道 standby 空档跑，SOP 正身）",
    "note": "到点未毕升级 CEO",
    "status": "DE 整改收口毕（四款令全落：占位符+防呆 fail-closed/真钥仅部署位/history 重写 8a5b630+双端 purge 值席独立复勘符/runbook 红线）——key「候轮换」已入账 SEC-20260924-001；HOLD=dev 侧四锚+CaptureRelay（m-cos checklist 五步已备候 BOD 链转）；候 BOD 验收"
   },
@@ -120,7 +120,7 @@
    "seat": "A=FSD 连锁段/B=SDE 主链/C=T5 FSD/STE 链尾复验/伴窗=BOD 代执 chromium+CORE_VERSION FSD·SDE 双签",
    "form": "在办候读数（值席面：总表随更+10min 催线+20min 无回执报 BOD+batch-14 教训条随批并入）",
    "window": "10-02 18-24",
-   "status": "窗启动；LG-055 提前触发线登记=22:00 本席裁量（判据=A 段收口+CTO 车道空闲自报），成立则补发 CTO 令（B 先导）经值席转总表"
+   "status": "窗启动；LG-055 提前触发线登记=22:00 本席裁量（判据=A 段收口+CTO 车道空闲自报），成立则补发 CTO 令（B 先导）经值席转总表；增补注记（BOD 18:2x）：①root 链预授权生效=工序1' 毕即执行不等批（全扫 PATCH+TriMLC 仓同步 0fd9c6f+TriMMC 域勘+路由键顺录），完成回报经值席勔回链；②batch-15 裁量=两件基准 10-03 主排，件② 提前三条件（A 段+T5 收口∧LG-055 未拉入∧窗余量≥2h，22:00 检点）默认不动今晚；③10-03 预载偏重——组文时按超载顺延序再平衡或分 10-04（A1 哨位在途），呈 BOD"
   }
  ],
  "metadata": {
