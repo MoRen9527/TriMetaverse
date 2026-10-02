@@ -637,3 +637,11 @@
   - 82fe61f0 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
   - d0181d3a docs(w40): batch-16件①公司需求池建制(CPO主责)——表名定谳'公司需求池'(别名需求大表,池=汇入→周六联审筛→进方案/实现,留池不丢);权柄三裂(管理CPO/写入全员/裁决周六三席四态留痕);首审定谳2026-10-03(周六)12:00(建制今晚毕取最近周六);DEM-001首行铸入agent-loop轮数上限可配置+无上限模式(源锚loop.ts L304硬编码100+built-in.ts L36帮手25+官方max_turns查证毕;三兜底压缩/中断/预算铸为无上限放行前提;初判进方案候选);边界铸入只记需求不实施,技审归CTO;迁移注记入表头随周平面平移
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 6ba5c7d8 后新增 6 条 commit：
+  - 1e65e264 docs(plane): COO组单2026-10-03落盘——14项累账收拢+维护窗三件比窗序+固定节律面
+  - 195386cd docs(plane): 运营计划表V0.1骨架建制——四柱(收入/成本/里程碑/周迭代)+CFO供数三行形+共创待定清单候CEO对话填充
+  - 1513e8e5 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
+  - 2ad0ee9d docs(w40): 需求池DEM-002收理配号+CPO初判——CFO预算止停门行配号DEM-002;初判倾向并入DEM-001批3作独立验收项不另立执行线(名实一致防两名指同物分裂,受益面扩展作批3验收范围注记,账户级日限联动系CFO在役资产批3对接);候明午联审三席裁
+  - 2450ddc7 docs(workbench): COO 21:0x 记档——batch-16件②联审cron全链闭环(8713落位+明12:00值面命中+试信端到端)+件③接令+组单累账13项
+  - 891b8562 docs(w40): 需求池CFO需求行入池——预算止停门（DEM-001三兜底缺项载体）
+- registry：v2.1；今日 registry 提交无变化
