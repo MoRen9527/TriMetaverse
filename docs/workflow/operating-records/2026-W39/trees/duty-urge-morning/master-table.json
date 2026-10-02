@@ -21,7 +21,7 @@
    "form": "残差候 CTO 窗",
    "window": "候 CTO 代码批窗",
    "note": "133 处注释旧名+1 脚本；validation 全绿为门",
-   "status": "已收口双锚（batch-12 件② 定谳：ed4babe8 活址实 commit+66cf587 活址，LG-040 实为双锚已闭——台账误挂 7 日勘正）；残差仅 T-O4b 守卫对表+pytest 供给（CTO 行文直摘）"
+   "status": "已收口双锚（batch-12 件② 定谳：ed4babe8 活址实 commit+66cf587 活址，LG-040 实为双锚已闭——台账误挂 7 日勘正）；残差仅 T-O4b 守卫对表+pytest 供给（CTO 行文直摘）；残差 T-O4b+pytest 拆派见排程单（项4）"
   },
   {
    "id": "LG-041",
@@ -71,7 +71,8 @@
    "seat": "FSD/CPO/CTO/STE（COO 四席拆派）+P1 收口=BOD 直接验收",
    "form": "读数跟踪（立项即登记首用）",
    "window": "CEO 02:44 令+22:55 时点硬约束",
-   "note": "立单 f0523ad8/拆派录账+STE 规划 7cf4bc00/树账并账 bcaac965"
+   "note": "立单 f0523ad8/拆派录账+STE 规划 7cf4bc00/树账并账 bcaac965",
+   "status": "；UI 走查窗重排 10-03 9-12；10-01 9-12 未行原因勘明中（COS 汇办四席自报）"
   },
   {
    "id": "LG-056",
@@ -87,7 +88,7 @@
    "seat": "m-duty-fsd（批次02 件2）",
    "form": "候 BOD 验收链",
    "window": "批次02 毕",
-   "status": "修复毕+CTO 收口审查成立（TriMMC bfbfcfe 888 行/120 文件+ink devDeps 补；测试门件2 零回归 476/466/10/0）；残项=预存挂归域+族2 registry 收敛归 host-object 命名专窗（候 BOD 排）"
+   "status": "修复毕+CTO 收口审查成立（TriMMC bfbfcfe 888 行/120 文件+ink devDeps 补；测试门件2 零回归 476/466/10/0）；残项=预存挂归域+族2 registry 收敛归 host-object 命名专窗（候 BOD 排）；现势勘正：FSD 执行段已毕（流水线夜 batch-02/03+CTO 收口成立 8aeca92a）；残面=STE 验段（10-02 午后）+族2 专窗候排"
   },
   {
    "id": "LG-060",
@@ -95,7 +96,7 @@
    "seat": "m-duty-fsd（批次02 件3）",
    "form": "候 BOD 验收链",
    "window": "批次02 毕",
-   "status": "跟新毕+CTO 收口成立（TriRLC 3800e2d 46 处对表；净收口 −9=13→4，trirlc 事故字附裁可）；残项=预存挂 4 归域"
+   "status": "跟新毕+CTO 收口成立（TriRLC 3800e2d 46 处对表；净收口 −9=13→4，trirlc 事故字附裁可）；残项=预存挂 4 归域；现势勘正：FSD 执行段已毕（流水线夜 batch-02/03+CTO 收口成立 8aeca92a）；残面=STE 验段（10-02 午后）+族2 专窗候排"
   },
   {
    "id": "LG-053",
@@ -103,7 +104,15 @@
    "seat": "COS 铸（batch-12 件①）→COO 白昼排程",
    "form": "候正式流转",
    "window": "候排程",
-   "status": "终稿 v1.0 铸毕（batch-12 树 lg053-recovery-ladder-final.md：四态表 T-3 单列/R-HY 同构标注/接口候审面两条）；候 COO 白昼排程+CTO 技审两条回流"
+   "status": "终稿 v1.0 铸毕（batch-12 树 lg053-recovery-ladder-final.md：四态表 T-3 单列/R-HY 同构标注/接口候审面两条）；候 COO 白昼排程+CTO 技审两条回流；接口候审两条 CTO 技审在途（batch-13 件③）；执行面任务书拆派见 batch-13 件② 排程单（项1）"
+  },
+  {
+   "id": "LG-055",
+   "item": "（COO 排程单随更新增行）",
+   "seat": "",
+   "form": "",
+   "window": "",
+   "status": "；先导窗 COO 排程落定（batch-13 件②）：主排 10-03 维护窗，提前触发线=今晚 22:00 A 段收口且 CTO 空闲"
   }
  ],
  "metadata": {
