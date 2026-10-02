@@ -30,6 +30,7 @@
 | 12 | bare gc 晨勘首项（轻勘+因明即 gc；ownship 面 Fleet/git）+TMV 根 `sg` 空文件核（0 字节/10-02 00:49 产物/无席认领，核毕即清或归主） | BOD/晨勘 | 10-03 晨 | 在单（晨勘首项+ⓘ①） |
 | 13 | 三席（cpo/coo/cto）TriMMC 信箱目标名勘验（seats 全员 bod-addressable:false，直寻址未实证） | COO | 10-03 | 在单（batch-16 件②嗣项） |
 | 14 | plane-shift-local-align.mjs LOG 硬编码 W40→周目录动态化（翻周落错位小项）+10-04 23:10 首次真实周考验观察 | COO 随修+观察 | 10-04 前修/10-04 夜观察 | 在单（六错归因毕=启动期 PATH+瞬断，非结构性病） |
+| 15 | **R-HY 401 修复窗**（a 项 8713 token 同步七步序+b 项 GLM key 只读对照勘四步；禁区九条带施工，方向性禁区=门面权威值零改修复恒本机对齐） | FSD 施工+CTO 技审（BOD 裁准修，窗点 COO 裁） | 件①毕+STE 验后串行接排 | **技审审定单毕（02:0x）**：cto-401-fix-procedure-review-20261003.md 136 行/b6e6db9f（盘验吻合）——a 项七步序过+D-04 三层完工锚（**主锚=face-events mlc pull 转 ok；「临时 job POST」探针裁不可用作 token 生效判据=F-3 缺陷恒假阴性**）；b 项工序过，**值源授权面候 COS/CEO**，补齐写操作另窗独立施工单；补勘=channel.cmd 20:48 窗系行尾还原窗非值面变更窗 |
 
 ## 三、比窗裁定（#9/#10/#11 维护窗候选三件）
 
