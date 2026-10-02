@@ -617,3 +617,7 @@
   - 41db3ea1 Merge remote-tracking branch 'sg-server/dev' into dev
   - ead0026e docs(m2-window): SDE 10-02 窗读数③——item4 观察周低频维持①稳定同步级(+0.78~+0.99s 四采样同族旧疑持续不复现)+⓷支②坐实定谳链(冷起新形态 trimc connected+401 行号定谳 L44205<冷起横幅 L44211=冷起前末态+首刷监视命中复现+status report 写面双拒)+归因四件候明晚(信任面 NODE_EXTRA_CA_CERTS 实锤/收敛 gate Bearer 对表面/non-blocking 在役/TRIMODEL_API_TOKEN≠GLM_API_KEY 两键分勘)+schannel IP-SAN 工具局限注防误读+α 两笔三确认销项(ac461cbb/874f2d88)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 1e75f043 后新增 2 条 commit：
+  - dd257a31 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 4b48a0fc docs(workbench): COO 19:2x 记档——SDE车道B义务毕+⓷监视条款+bare gc件BOD先期轻勘(锁面排除候晨勘)+处置口径统一
+- registry：v2.1；今日 registry 提交无变化
