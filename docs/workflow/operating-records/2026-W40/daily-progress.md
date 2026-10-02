@@ -566,3 +566,11 @@
   - 63a9c1ad docs(workflow): batch-11 件①读数卷迁正——落任务书正目录（BOD 03:4x chown 裁落；验收 PASS 归档；残面注记经 BOD dev 自勘销）@m-duty-fsd
   - …另有 38 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:50 +08：自上次进度提交 8b059d3b 后新增 6 条 commit：
+  - 2b8646f4 docs(workflow): batch-14 收口批——LG-059/060 验段闭合+LG-040 T-O4 了结总表随更+progress-snapshot 污染件勘源止损卷（写入者=bod-progress-report job 已停写+checkout 恢复）@m-duty-cos
+  - 65466538 docs(batch14): STE 件①续·验段六门复验全 GREEN 出卷——TC 源侧/双面冲突标记 0+TriMC正式 零残维持+derived_drift 重放实质零漂移（2105B 全机械层）+Registry 6/6 十三席 ok+全量门 TriMMC 476/473/0/3+TriRLC 229/229/0/0 双 EXIT=0 与基线逐位恒等；件① CONDITIONAL 解除；附带注=断言 BASELINE 仍 2 候维护窗递减 @m-duty-ste
+  - 63e1a1a5 docs(workflow): batch-14 件①执行读数卷——T-O4 冲突标记解除五条顺序照裁（门①grep=0/②双面渲 drift=0/③断言三绿/④Registry 13/13+全量 476/473/0 恒等/⑤永久门升格自测过；SDE 源内句形两代并存观察注如实）@m-duty-fsd
+  - 3c556b26 fix(t-o4): ⑤冲突标记断言升格渲染管线前置永久门（batch-14 件①）——渲染输入面零容忍（<<<<<<< />>>>>>> /行首 ======= 任一即拦 exit1）；88a6988 类事故常设防复发门；随渲双面 21 件投影同步（derived_drift=0）；自测冲突标记 0+0/2 基线放行 @m-duty-fsd
+  - 1c5633e5 docs(bod-pipeline-14): 件① CONDITIONAL 修法裁卷——措辞归属裁=采 sg-server/dev 侧（三 hunk 对批1 典形全胜，HEAD 截断形弃）；STE 五条全裁可+⑤升格永久门（冲突标记断言入渲染前置）；前向修复不重写历史；教训条=双机分叉清偿 merge 必附冲突标记 grep 自检 @m-duty-cto
+  - e94c8b3d docs(batch14): STE 件①·LG-059/060 三段链验段出卷——主锚①两面 TriMC正式 零残独立证实+主锚② derived_drift 复算≠0（SDE 件冲突残留）；新发现阻塞候选=SDE 件冲突标记三块（88a6988 双机分叉 merge 未解入库+f00c5675 渲染扩散+89580548 半解，源 3 块/copilot 3 块/claude 2 块）→TriMMC Employee Registry 载 12/13 WO-D 复现 FAIL 同根；WO-B/C/E/F 抽验 ✓；全量门停跑；不一致即停触发，修面建议五条候 CTO 裁 @m-duty-ste
+- registry：v2.1；今日 registry 提交无变化
