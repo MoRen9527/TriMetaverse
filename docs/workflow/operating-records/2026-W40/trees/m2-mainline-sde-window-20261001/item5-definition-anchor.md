@@ -10,7 +10,7 @@
 | ① | 键空值（.env GLM_API_KEY 空） | 非空计数=**0**（实证不变，batch-05 卷 06:2x 读数维持） | 键值候供（CEO/BOD 键值窗→COS 转接→机内管道零出机） |
 | ② | dotenv dist 路径缺陷 | **proxy-server.js dist 零 dotenv 命中实证**（grep 零输出——proxy 进程不接 .env）；trimodel-proxy.service unit 直读：`Environment=NODE_ENV=production` 单行，**无 EnvironmentFile**（batch-05 候修 3 复证） | **〔COO 裁 18:3x〕今晚=α（unit 补 `EnvironmentFile=/srv/fleet/TriModel/.env` 零码修）**，随 root 链并批落（与 token+改指同批操作会话），零码不增冷起载荷；β（dotenv 接线码修）=候后维护窗 CTO 技术后评再定（候选枝不预落）；α 的 CTO 追认随今晚「两套新值追认」件同批走 |
 
-**〔α 执行单元精度对表〕**：trimodel-proxy 为**独立 systemd 单元**（≠trimmc 8712）——EnvironmentFile 补行后需**自身 daemon-reload+单次 restart 方生效**（proxy 进程 env 刷新）。「随 root 链同批落」=同一 root 操作会话内执行（不开独立变更窗 ✓）；两单元（trimmc/trimodel-proxy）各单次 restart，无二次重启违约（约束语义=同一单元禁反复重启）。
+**〔α 执行单元精度对表〕**：trimodel-proxy 为**独立 systemd 单元**（≠trimmc 8712）——EnvironmentFile 补行后需**自身 daemon-reload+单次 restart 方生效**（proxy 进程 env 刷新）。「随 root 链同批落」=同一 root 操作会话内执行（不开独立变更窗 ✓）；两单元（trimmc/trimodel-proxy）各单次 restart，无二次重启违约（约束语义=同一单元禁反复重启）。**〔COO 采信确认〕口径定谳**：同批=同一 root 操作会话；两单元各单次 restart（trimmc 承载 token+改指值+信任面/trimodel-proxy 承载 α EnvironmentFile）；root 链执行清单以此为准，COO 向 BOD 面同步更正。
 | ③ | card 缺失 | TriModel trimmc-card 面缺（M1 卷形态；card=TriMMC 配置卡含加密 key 条目） | **机内 PUT card 零重启**（sg 现域重加密，M1 R-HY 治愈案先例形；sg 机内 PUT 禁跨机复制=加密四元组 sg 域） |
 
 - 双口在听现势：3333（server.js）+3334（proxy-server.js）双进程 uptime 3-13:53——**设计形在役**（config 面+proxy 面），非异常双拉
