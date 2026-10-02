@@ -49,6 +49,7 @@ ce70115 两脚本（triladder.ps1 四子命令+direct-probe.ps1 三段检）**�
 ## 三、发现项（4 条，均非阻塞）
 
 1. **a1 shutdown 令头默认值与 daemon 门头族不匹配**（A1-4 实录）：plan 行显示 shutdown 用默认 Authorization 头，而 TriRLC/TriMLC 门优先头=X-Internal-Token——真动作时 shutdown 会 401（有 catch 兜底继续拉活，安全侧不劣化，但 T-1 优雅停设计目标失效）。用法面需显式 -TokenHeader X-Internal-Token；建议 a1 用法例（头注）补注记或 shutdown 段默认头与探针段一致化。候 CTO 裁。
+   > **【勘正 2026-10-03 02:5x·COO 勘正自办令】本条定性经 CTO 速裁驳回（裁卷=同目录 cto-finding1-header-verdict-20261003.md，3c0a2753）——「令头族不匹配致 shutdown 401」断言被源码+活体双重证伪：`extractInternalToken` 内建 Bearer fallback（TriMLC app.ts L138-139/TriRLC L135-142 两仓同族，本席独立复核 L138-139 在目确认）；活体三态 02:50 实测=无令 401/对令+Bearer 形 404（过门路由未命中）/对令 X-Internal-Token 404 对照。triladder.ps1 代码零修。误判根因（CTO 定性+本席认账）：本卷只测「错令+Bearer 形」（401 系令错非头形错），未测「对令+Bearer 形」组合即外推否定断言——教训=组合面未测不做否定断言，本条按裁卷为准，原定性作废。**
 2. **a3 bak 缺失文案误导**（A3-5 实录）：.json 后缀 bak 不存在时报「bak JSON 校验失败」（Get-Content FileNotFound 被 catch 混入 JSON 校验败因）——拒切形态正确（rejected exit 1），文案失真；Test-Path 前置可修。候 FSD 属窗修。
 3. **-Pid 别名机制与注释不符**：-Pid 形实测可用，但机制=PowerShell 参数名前缀缩写（-Pid→-Pid2 绑定），头注宣称的 BoundParameters 兼容行（L72）为死码（BoundParameters 键恒='Pid2'）。当前无歧义稳定可用；未来若加 -PidX 族参数会产生缩写歧义。观察项。
 4. **（验证侧瑕疵备查，非脚本缺陷）**：pwsh 管道读 git show 输出按 GBK 解码破坏 UTF-8 中文注释致 A2-5 首跑语法错误——bash 字节流重定向修复后复跑过；同形读数见 A2-5 行。
