@@ -545,3 +545,24 @@
 - 巡检兜底补写 @08:40 +08：自上次进度提交 0fe8e37c 后新增 1 条 commit：
   - 4907a853 docs(plane): shift-ade 审计链勘误恢复——cf5f215f 重放降级覆盖反转
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-02（周五）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @12:50 +08：自上次进度提交 1393ef8d 后新增 53 条 commit：
+  - 9ab8ac6a docs(workflow): 项5 勘明卷闭环注（BOD 定谳：401 外因否定/主位派工缺口）+R-HY 401 旧挂账现态改写注记（日收口批合账）@m-duty-cos
+  - 1c192daa docs(workflow): batch-13 排程单附录——LG-017 B2 复审首例执行面拆派（BOD 10:1x 裁转：10-03 维护窗与 055 先导并窗/CAO 主审指名+组文对表注/工作单四步/B2 后半不触边界）@m-duty-coo
+  - 62506b07 docs(workflow): WO-A 补刀卷随执行卷同录——18 处族面真相+双面零残+T5 抽验口径修正注（batch-13 复勘扩裁令执行毕）@m-duty-fsd
+  - 89580548 fix(lg-059): WO-A 补刀渲染联动——双面重渲（copilot 15/claude 19，derived_drift=0）两面「TriMC 正式」零残 @m-duty-fsd
+  - d2c8fe3b docs(workflow): 项5 勘明卷汇卷——四席回读汇表（零缺口零越窗/未行收敛主位面/401 时段相关性供弹）+总表 LG-058 随更 @m-duty-cos
+  - 6998030f docs(workflow): 总表五行随更（COO 排程单素材合账：LG-053/055/059/060/040/058）@m-duty-cos
+  - a1a78304 docs(workflow): batch-13 件② COO 一揽子排程单——六项逐项排给谁/什么窗/卡什么（053 流转/055 先导 10-03/059-060 行面勘正 STE 验段今日午后/040 残差拆派/058 走查重排 10-03 9-12+勘明汇办/行面四条现势）+大表随更素材附；今晚窗零新增项防叠载 @m-duty-coo
+  - f6cf7563 docs(batch13): STE 件①·LG-034/035 波⑤回头测五条现跑全绿出卷——硬核 C1/C2+对照 C3/C4/E10+边界 C8/C9/C10a/b+jsdom 25/25+走查复跑零异常+全量门 313/296/0/17 与 batch-11 基线逐位零漂移；「D1 测毕」STE 实弹读数面达成，大表随更素材附卷 @m-duty-ste
+  - ea775061 docs(bod-pipeline-13): 件③ 技审两卷——①LG-053 §六两条均采纳+修订建议（restore=A2 配置面子件+A3 同链回滚锚，进程面/R-HY 域两切分；迁移窗交叉=阶梯优先迁移链即停+触发面限三服务+watchdog 防环细则）②TC502 追平路径核=ff-only 合规首选带四闸，sg 活例旗 FSD：WO-A 63b8c3a 悬于被重写旧基 d9cd33f（与 origin 8d9fdc8 分叉 4/83），归枝+reset 硬对齐+cherry-pick 重挂裁条 @m-duty-cto
+  - b33abb47 docs(workflow): 总表 LG-040 随更——双锚已闭勘正（batch-12 件② CTO 定谳行文直摘）@m-duty-cos
+  - d4fed2d7 docs(bod-pipeline-12): 件② ed4babe8 幽灵引用实址定性——幽灵不成立：活址实 commit（sg TMV 四 ref 可达/origin/dev 祖先/master-table 内容在树），'两机三仓查无'=勘验跨仓哈希误检（ed4babe8 属 TMV/66cf587 属 TC，reflog 全 ff 无 force 坐实不可丢）；LG-040 行随更素材附卷（双锚已闭/残差仅 T-O4b+pytest） @m-duty-cto
+  - 636f2888 docs(workflow): batch-12 件① LG-053 终稿铸——四态表（T-3 单列）+A1-A3 阶梯+P1-P4 介入点+直连面四节定稿+R-HY 同构标注+接口候审面两条；总表 LG-053 行立 @m-duty-cos
+  - 324d6886 docs(workflow): LG-050 确认卷时点勘正——幻觉时点 05:4x→实钟 04:1x+08（BOD 裁复勘误笔）@m-duty-cos
+  - 08f84534 docs(workflow): batch-11 件② 双卷落位——②a LG-053 恢复阶梯框架稿（探活三态/A1-A3 阶梯/P1-P4 介入点/直连面范围，非终稿候 BOD 审）+②b LG-050 worktree 试点读数确认一页纸（源=0930 裁定卷三裁据如实标）@m-duty-cos
+  - 63a9c1ad docs(workflow): batch-11 件①读数卷迁正——落任务书正目录（BOD 03:4x chown 裁落；验收 PASS 归档；残面注记经 BOD dev 自勘销）@m-duty-fsd
+  - …另有 38 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
