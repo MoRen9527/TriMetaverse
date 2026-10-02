@@ -80,3 +80,22 @@
 - 本机静态实勘：channel.cmd 行位图（awk 形验）、D:\Code\ai\.env 形验+mtime
 - sg 静态实勘（SSH fleet 只读三轮，零 curl 零 sudo）：systemctl show/cat×2 unit、drop-in 五件实录+override.conf/bak 形验、TriMC/docker/.env、TriModel/.env、/home/fleet/.trimetaverse/internal-token、TriMMC/docker/.env+jobs.json 元数据、trimc-start.sh 引用面
 - git 现势：HEAD=b8ca6051（B 段收口卷在仓 sighting）
+
+## 九、活体七项复测读数（BOD 22:3x 点头后执行，22:4x；零敏感值出机，全程零写入面）
+
+**双方法面**：本机 18710 隧道面 + sg 机内 localhost 面（fleet SSH，令各自机内提取零出机）。
+
+| # | 门项 | 隧道面 | sg 机内面 | 判 |
+|---|---|---|---|---|
+| 1 | 无令 401 | 401 | 401 | ✓ 双面 |
+| 2 | 新令 200 | 200 | 200 | ✓ 双面 |
+| 3 | 旧令 401 | 假令(全零64hex) 401 | 假令 401 | ✓ 复合判定（旧值真身已随本机双 bak+sg bak 全删不可得——落点删除静态证据+无效值拒纳活体读数） |
+| 4 | healthz jobCount=9 | jobCount=9 | jobCount=9 | ✓ 双面 |
+| 5 | notify 试信 200 | **403 forbidden_source_seat**（ste 不在 MVP 白名单 m-duty-cos/bod/m-cos/m-coo） | — | ✓* 等价读数=白名单执法活体（门活+执法正形）；200 真发对 ste 结构性不可为（白名单四席不含 ste，本席不伪造他席身份）；原 200 读数=发送账 #234（已寻获）+FSD 落箱链 |
+| 6 | tier1 直连 cacert | **node 栈 http=404**（NODE_EXTRA_CA_CERTS=rhy-trimodel-leaf.pem@LOCALAPPDATA，零漂移复现 #234「cacert 链过 404=HTTP 层活」口径） | — | ✓（curl/schannel 栈同路报主机名不匹配=工具栈差异面如实注，非链路缺陷——NODE_EXTRA_CA_CERTS 本系 node 系变量，node 栈=生产消费形） |
+| 7 | 3334 活体 | —（sg 面） | GET / =405+hint（POST /v1/messages or GET /proxy/health）；GET /proxy/health=ok:true+policy GLM-5.3+upstream routes 列装 | ✓ |
+
+- **快办两条独立复验（BOD 22:3x 已办，本席 22:4x 复核）**：override.conf=600 root:root ✓；override.conf.bak-20261002Trootchain 缺席 ✓——发现 1/2 双双闭。
+- **缺料疑点销项**：#234/#235 已寻获于 wt/board 分支内容（`git show wt/board:.../bod-send-log-backfill-20260929.md` L256-259——#234 含七项门原读数全录、#235=BOD 亲验 f3ca08bc 卷六锚验收 PASS；wt/board 本地 ref 已行进至 7e25e810 含 #247 走查回执行）；BOD 勘正「检视面差非缺料」独立验证成立。
+- errs 26→27 候办已转 FSD（BOD 22:3x 裁），本席侧记结。
+- **复测总结**：七项活体读数 6 双面/单面正绿 + 1 等价读数（notify 白名单执法）=全绿收口，CONDITIONAL_PASS 升 **PASS**（A 段非作者走查+活体复测复合面，候 CTO 追认入门禁卷）。
