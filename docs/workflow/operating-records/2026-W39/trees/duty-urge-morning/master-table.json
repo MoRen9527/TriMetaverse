@@ -113,6 +113,14 @@
    "form": "",
    "window": "",
    "status": "；先导窗 COO 排程落定（batch-13 件②）：主排 10-03 维护窗，提前触发线=今晚 22:00 A 段收口且 CTO 空闲"
+  },
+  {
+   "id": "窗令1002",
+   "item": "10-02 18-24 窗车道分布（COO 组文 BOD 18:0x 启动）",
+   "seat": "A=FSD 连锁段/B=SDE 主链/C=T5 FSD/STE 链尾复验/伴窗=BOD 代执 chromium+CORE_VERSION FSD·SDE 双签",
+   "form": "在办候读数（值席面：总表随更+10min 催线+20min 无回执报 BOD+batch-14 教训条随批并入）",
+   "window": "10-02 18-24",
+   "status": "窗启动；LG-055 提前触发线登记=22:00 本席裁量（判据=A 段收口+CTO 车道空闲自报），成立则补发 CTO 令（B 先导）经值席转总表"
   }
  ],
  "metadata": {
