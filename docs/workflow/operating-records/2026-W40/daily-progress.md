@@ -584,3 +584,15 @@
   - ac461cbb docs(m2-window): item5 件②修法裁回填——COO 裁今晚=α（unit EnvironmentFile 零码修随 root 链并批，β 候后维护窗 CTO 后评，α 追认随两套新值件同批）+α 执行单元精度对表（trimodel-proxy=独立 systemd 单元，EnvironmentFile 补行后需自身 daemon-reload+单次 restart 方生效；同批=同 root 操作会话，两单元各一次 restart 无违二次重启约束）@m-duty-sde @m-duty-coo
   - dba54996 docs(m2-window): item1 值面规格两卷+item5 定义补锚卷落位——dev 侧值面规格（TRILC_TRIMODEL_API_URL+NODE_EXTRA_CA_CERTS 两键+leaf pem 取料法+三处验证锚=回执门双环复核料，本机 COS 消费）+sg 8712 改指规格（TRIMC_TRIMODEL_API_URL 键名实锚 app.ts:795/现役未设=tier1 关闭态→新增键行为增量如实录/pem 机内就位/与 token 工序 2/3 同链并批单次 restart+联合验收门，BOD root 链消费）+item5 三合一补锚（正源 4febf9fc：键空值计数0/dotenv dist 零命中实证/unit 无 EnvironmentFile 复证/双口设计形在役；件②修法两候选 α unit EnvironmentFile 零码修 β dotenv 接线码修候 CTO/COO 裁；件③ card PUT sg 现域=M2 item2 汇合点；回滚锚健康判=A1 前置锚）@m-duty-sde @m-duty-coo @m-duty-fsd @m-duty-bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:30 +08：自上次进度提交 2cdeea34 后新增 10 条 commit：
+  - c1e4e82b docs(d15): STE 8460 日课读数卷 10-02——R1 双法(shell PRESENT/进程快照 ABSENT 态翻转只记)+R2 增量+1 200 放行(10:21:35Z 活体行,工具循环触发法如实注差异)=漂移假设推翻 8460 在路,日课 PASS @m-duty-ste
+  - a2ce8626 docs(workbench): COO 18:31 记档——工序1'五验全绿+root链触发令发BOD(预授权即行+次序合同sg门先轮换)
+  - 965c44cd docs(workbench): COO 18:23 记档——FSD勘正回执闭环(PartB零对象销项三重勘验吻合+修订执行序接领零纠偏)
+  - 991bbab0 docs(workbench): COO 18:31 记档——TriMLC推bare销案(三面同顶a66b3b2+99d8466快进=root链sg段零手工补丁就绪)+GitHub腿复活观察更新
+  - 9d696d0f docs(workbench): COO 18:2x 第二波——昨晚双通道真相勘正(COS执行席通道五步完工BOD验收PASS,本席单通道定谳信息缺口认账)+今晚叙事修订令FSD(补充轮换+复验+PartB自勘+CRLF铁律)+a66b3b2推准+教训条+1(直调通道读数流未过编排层)
+  - 2c943839 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 620a2031 docs(workbench): COO 18:2x 窗内首波读数批——三席四环齐(FSD 18:17/SDE 18:18/BOD 18:2x预授权)+SDE两笔候确认采信(α零码修+单元精度对表)+batch-15裁量今晚零入10-03主排+SDE读数①钟漂同族稳定
+  - 8699c19d docs(workflow): 总表增补注记随更——root 链预生效/batch-15 裁量/10-03 预载再平衡呈 BOD/D-15 今晚读数候录（COO 增补对表）@m-duty-cos
+  - 45f05234 Merge remote-tracking branch 'sg-server/dev' into dev
+  - b3b44357 docs(workbench): COS 10-02并窗窗令接令联动——LG-054行补昨晚窗终态(连锁段00:5x BOD验收PASS全录)+今晚窗令17:58首发注(提前2分钟教训闭环首例)+动态条30(车道A/B/C结构+候COS三件+TriMLC推远端挂起候令)
+- registry：v2.1；今日 registry 提交无变化
