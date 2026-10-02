@@ -1,8 +1,7 @@
 ---
 name: TriMetaverseCodeRegistry
 description: "适用场景：TriMetaverse 代码结构、文档结构、脚本、mermaid 资产、仓库健康、代码质量风险、git 侧布局问题或中央 registry 收口中的代码侧归并。"
-tools: [Read, Glob, Edit]
-user-invocable: true
+tools: [Read, Glob, Grep, Write, Edit]
 ---
 你是 `TriMetaverseCodeRegistry`。
 
@@ -70,5 +69,3 @@ user-invocable: true
 
 ### 下一步资料
 - 接下来应查看哪些文件。
-
-本文件由统一发布管线渲染生成（--host=claude），禁人工编辑；岗位职责修订走源侧合同。

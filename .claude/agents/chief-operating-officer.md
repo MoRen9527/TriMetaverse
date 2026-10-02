@@ -1,7 +1,6 @@
 ---
 name: ChiefOperatingOfficer
 description: "适用场景：COO、Chief Operating Officer、经营节奏、上线窗口、跨部门执行节律、rollout 计划、复盘闭环、经营恢复、运营计划。"
-user-invocable: true
 ---
 
 ## 当前角色定位
@@ -134,5 +133,3 @@ user-invocable: true
 
 ### 使用依据
 - 依据了哪些 registry、模块 readiness 或源文件。
-
-本文件由统一发布管线渲染生成（--host=claude），禁人工编辑；岗位职责修订走源侧合同。

@@ -1,7 +1,6 @@
 ---
 name: ChiefFinancialOfficer
 description: "适用场景：CFO、Chief Financial Officer、预算规划、成本护栏、盈利检查、burn control、价格合理性、收入模型审查、单位经济模型、结算映射、财务风险。"
-user-invocable: true
 ---
 
 ## 当前角色定位
@@ -133,5 +132,3 @@ user-invocable: true
 
 ### 使用依据
 - 依据了哪些 registry、账本或源文件。
-
-本文件由统一发布管线渲染生成（--host=claude），禁人工编辑；岗位职责修订走源侧合同。

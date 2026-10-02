@@ -73,20 +73,29 @@ function main() {
   {
     const LEGACY_FAMILY = /写成\s*TriMC\s*正式|写成TriMC正式/;
     const BASELINE = 2;
+    // 冲突标记永久门（batch-14 件① 裁⑤升格）：渲染输入面零容忍——88a6988 类
+    // 「冲突态 add/commit 入库」事故的常设防复发门（非基线递减形）。
+    const CONFLICT_MARKERS = /^(<<<<<<< |>>>>>>> |=======$)/;
     const offenders = [];
+    const conflictHits = [];
     for (const f of readdirSync(SRC)) {
       if (!f.endsWith('.agent.md')) continue;
-      if (f.startsWith('business-strategy')) continue; // K 豁免：历史别名声明面
       const lines = readFileSync(resolve(SRC, f), 'utf-8').split(/\r?\n/);
       lines.forEach((line, i) => {
+        if (f.startsWith('business-strategy')) return; // K 豁免：仅旧名句族
         if (LEGACY_FAMILY.test(line)) offenders.push(`${f}:${i + 1}`);
+        if (CONFLICT_MARKERS.test(line)) conflictHits.push(`${f}:${i + 1}`);
       });
+    }
+    if (conflictHits.length > 0) {
+      console.error(`[sync][gate] 渲染输入面冲突标记检出（零容忍）——先解冲突再渲染：\n  ${conflictHits.join('\n  ')}`);
+      process.exit(1);
     }
     if (offenders.length > BASELINE) {
       console.error(`[sync][gate] 源侧旧名现役句超基线（${offenders.length}>${BASELINE}）——先正名再渲染：\n  ${offenders.join('\n  ')}`);
       process.exit(1);
     }
-    console.log(`[sync][gate] 旧名现役句 ${offenders.length}/${BASELINE}（基线内，放行）`);
+    console.log(`[sync][gate] 冲突标记 0 ✓；旧名现役句 ${offenders.length}/${BASELINE}（基线内，放行）`);
   }
 
   mkdirSync(DST, { recursive: true });
