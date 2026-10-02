@@ -627,3 +627,8 @@
   - 00c6945b docs(workbench): COO 19:5x 记档——BOD备案三准#239合落+CTO B段令四环闭(D-15)+窗前预备在动
   - 3a1a80b9 docs(tree): LG-055 备料段A读数卷——现役拉起链全景+CMO锁定制sessions/32456.json+侧车建档+8711 pidfile并勘结项(分文件已落地运行态)+设计稿对表修正三点+B实弹操作单 @m-coo @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:30 +08：自上次进度提交 fae9879d 后新增 3 条 commit：
+  - 75f9b27f Merge remote-tracking branch 'sg-server/dev' into dev
+  - 17855506 docs(workbench): COO 20:2x 记档——T5接力段收口(FSD四环闭)+三卡点归10-03裁定+组单累账11项
+  - 375881d9 docs(tree): FSD T5 接力段读数卷——三仓对齐毕(TC/MMC ff+RLC 冲突 abort 回原态)+六单门终验(A 三面 0 残/CD E 修面零挂/F 7/7/B 11/12 R1 形差归因)+挂条 45 独立归因(宿主.env 注入 401 连坐+合同面跨仓漂移)+卡点三项候裁 @m-coo @bod
+- registry：v2.1；今日 registry 提交无变化
