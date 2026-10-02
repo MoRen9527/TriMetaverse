@@ -574,3 +574,6 @@
   - 1c5633e5 docs(bod-pipeline-14): 件① CONDITIONAL 修法裁卷——措辞归属裁=采 sg-server/dev 侧（三 hunk 对批1 典形全胜，HEAD 截断形弃）；STE 五条全裁可+⑤升格永久门（冲突标记断言入渲染前置）；前向修复不重写历史；教训条=双机分叉清偿 merge 必附冲突标记 grep 自检 @m-duty-cto
   - e94c8b3d docs(batch14): STE 件①·LG-059/060 三段链验段出卷——主锚①两面 TriMC正式 零残独立证实+主锚② derived_drift 复算≠0（SDE 件冲突残留）；新发现阻塞候选=SDE 件冲突标记三块（88a6988 双机分叉 merge 未解入库+f00c5675 渲染扩散+89580548 半解，源 3 块/copilot 3 块/claude 2 块）→TriMMC Employee Registry 载 12/13 WO-D 复现 FAIL 同根；WO-B/C/E/F 抽验 ✓；全量门停跑；不一致即停触发，修面建议五条候 CTO 裁 @m-duty-ste
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:10 +08：自上次进度提交 a0950e40 后新增 1 条 commit：
+  - 1930ac90 docs(workflow): 窗令 1002 18-24 行入总表（车道分布+值席面四动作+LG-055 触发线登记）@m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
