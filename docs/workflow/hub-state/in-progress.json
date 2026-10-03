@@ -5,8 +5,8 @@
   "treePath": "docs/workflow/operating-records/2026-W40/trees/trimodel-config-page-4plane-p2-exec-01/（F-3 缺陷单候 FSD 批立树）",
   "owner": "FSD",
   "priority": "默认（录入序 1）",
-  "status": "waiting-window",
-  "note": "TriMLC store.addJob INSERT 缺 next_run_at 列→API 直插 job 永不调度；CTO 裁修形二选一候 FSD 勘+机理钉「23:23 自愈触发源勘明」列验收前置；施工窗=09-30 09-12 缺陷修批（CTO §九 维持），与同仓同 build 同重启批；BOD 分派编号 F-3（4e7901ab 前案）【10-02 00:0x FSD 窗尾刷新】Part A 已在役（0fd9c6f 09-30 03:49 缺陷批+CTO 验收卷在案+dist 同刻构建+在役活证=hub-silent-detect 创建即排 94 轮自动轮）；Part B（service.ts +17 行自愈回填）代码成未提交未部署，候冷起窗 commit+check+build 随窗带出；现役六 job nextRunAt 全非 NULL（23:45 API 读数）；本条实态=A 段收口（Part B 落地+token 轮换+一次冷起+三套探针）顺延明晚窗（COO 23:41 裁；窗尾时点+SDE 落位回执门双卡如实注），收口时改 closed；预勘卷=trees/bod-pipeline-batch-09/fsd-chain-precheck-readout-20261002.md"
+  "status": "closed",
+  "note": "TriMLC store.addJob INSERT 缺 next_run_at 列→API 直插 job 永不调度；CTO 裁修形二选一候 FSD 勘+机理钉「23:23 自愈触发源勘明」列验收前置；施工窗=09-30 09-12 缺陷修批（CTO §九 维持），与同仓同 build 同重启批；BOD 分派编号 F-3（4e7901ab 前案）【10-02 00:0x FSD 窗尾刷新】Part A 已在役（0fd9c6f 09-30 03:49 缺陷批+CTO 验收卷在案+dist 同刻构建+在役活证=hub-silent-detect 创建即排 94 轮自动轮）；Part B（service.ts +17 行自愈回填）代码成未提交未部署，候冷起窗 commit+check+build 随窗带出；现役六 job nextRunAt 全非 NULL（23:45 API 读数）；本条实态=A 段收口（Part B 落地+token 轮换+一次冷起+三套探针）顺延明晚窗（COO 23:41 裁；窗尾时点+SDE 落位回执门双卡如实注），收口时改 closed；预勘卷=trees/bod-pipeline-batch-09/fsd-chain-precheck-readout-20261002.md【10-02 19:03 FSD 收口闭账】A 段全毕：Part B a66b3b2 在役+冷起六阶段毕+探针三套全绿+F-4 解冻复活终证（catchup 2 秒 runs=98）+notify 端到端落箱（18:56:20）+bak 即删退役；BOD 亲验 PASS 闭合+COO 收讫（19:03 双裁复）。全卷=trees/bod-pipeline-batch-09/fsd-segment-a-readout-20261002.md（18b23e50+f3ca08bc）；F-4 代码级修候 CTO 批立（10-03 窗候选）"
  },
  {
   "id": "sg-8460-probe-job",
