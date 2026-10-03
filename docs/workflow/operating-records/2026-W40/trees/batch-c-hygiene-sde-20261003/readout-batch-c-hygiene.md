@@ -244,6 +244,29 @@
 1. **方案 b（config-sync 代码层）**：command-handler 加「uid==target 直跑」分支——一劳永逸但涉代码+重编译+sg 树冻结面；现 PATCH 面已解 runAs 残留，方案 b 降级为候办归 CTO 台账勘
 2. **allowlist 转发壳退役时点**：TriMLC（8713）转发壳（旧位 import 指针）须有退役时点——候 CTO 勘归并（三形态对表 TriMMC 零白名单已实证，转发壳退役条件面渐熟）
 
+### ④ 收编执行录（16:05 裁后开工→16:22 毕；COO 三裁 R1×2+授权）
+
+- **轮 1（16:06-16:07）**：backup 快照 `/srv/fleet/backup-pre-reconcile-20261003T080622Z`（47 件 908K cp 零错=**回滚锚**）→B2 恢复毕（D 残留 0）→B1+B3 收编 commit `7424e3cd`（13 件 154+/34-）→A 域 numstat 32 行全档（**全加<删零反例**，人工逐行断言；最大 15<27）→checkout A 域毕（残留 0）
+- **清点口径勘（自纠）**：D 实 9 件非 7/agents 实 32 件非 30（首轮清点读数偏差，收编清单以 status 快照实锚为准）
+- **轮 2 第一轮 rebase（16:06:57）**：pull --rebase onto bfdafcb9——49f132d1（复工令'）重放毕；收编 7424e3cd 撞 **4 文件冲突**挂起→**停手报裁**（护栏）→裁料实证：四件（workbench/op-assembly/task-inventory/node-status.jsonl）**sg 收编版⊆bare 版零独有增量**（workbench 零差/其余=旧简态，bare 详化超集含动态条 30-34 等）
+- **R1 裁（COO 16:09:29）**：四件 --theirs 取 bare 顶版→执行毕→rebase continue 毕=2d80488b→push 被拒（bare 已前进）
+- **车道交叠插曲+误归因勘正认领**：工作仓现 rebase 挂起（新冲突 workbench 单件）——我初判「COO 16:1x fetch --rebase 所留」=**误归因**（COO 全程未动 sg 工作仓；我把其预告推定成既成动作=拓扑断言禁由恢复源推定同族再犯自记）；**reflog 佐证=COO 假说成立：post-receive hook 自动 rebase**（16:17:4x 某席推 1dfa79b5 落 bare→hook 对工作仓 pull --rebase→onto 1dfa79b5 重放我两笔→16:18:00 rebase start+撞 workbench 挂起→hook 进程退完；reflog `rebase (start): checkout origin/dev` 命令形态+时点链吻合）
+- **R1 延续（COO 16:20:26 授权）**：workbench --theirs 取 1dfa79b5 版→continue 毕=**a0f7cc13**（收编'）→porcelain=0→**push 成功 `1dfa79b5..a0f7cc13` exit 0+hook 全输出零报错**（前两笔均有 cannot rebase——**hook 活体验证锚 ✓ 工作仓已净 hook 正常**）
+- **终态链（bare 顶=a0f7cc13）**：a0f7cc13 收编'→09d96bd1 复工令'→1dfa79b5 COS 大表→19514659 CPO 对表段→f1f59443 COO 组窗议程（对表材料：COO 本机四笔之一 f1f59443 已在 bare）
+
+### ⑤ 三 job PATCH 后首轮触发读数 3/3（机位=sg 8712 TriMMC，值面三件套全绿）
+
+| job | 首轮 | runAs | stderr | exit |
+| --- | --- | --- | --- | --- |
+| daily-progress-watcher | 07:40:00Z | (process user) | 零 | 0 |
+| orchestrate-tick | 07:48:00Z | (process user) | 零 | 0 |
+| clock-skew-check | 08:19:45Z | (process user) | 零 | 0 |
+
+### ④/组窗验证锚两件
+
+- **hook 报错消失 ✓**：收编毕 push exit 0+零 cannot rebase（活体）
+- **consecutiveFailures 回落清零**：现值 65 仍涨（config-sync 下轮 08:31:49Z=PATCH 后首跑）——**候 08:31:49Z 轮回落验证，到点补勘**（job 级 state 无 fail 计数键唯 runCount=4785=COO ②笔口径注笔实证）
+
 ## 使用依据
 
 - 令: COO→SDE 批C 卫生族令（BOD #300，2026-10-03 07:57；现戳 07:59:53 同窗无矛盾）+COO #305 执行面转知（10:0x，复核 PASS，③④⑤⑥⑦四件）
