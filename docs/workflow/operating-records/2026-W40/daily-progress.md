@@ -692,3 +692,6 @@
   - 5275bb7e docs(lg058): STE 批A 配置页工程面非作者走查卷（走查窗提前 NOW）——四族零实锤（术语属性面 9 模式零命中/命名零串卡/布局 12 表列头对位零 W39 同族回潮/逻辑双路径守卫零请求）+真链路全绿（双 token managed 4×200+mmc=已生效实锤批A 卡接入+reload 保持链第四型通）+脚本选择器盲区自纠如实注；附 P2 卷勘误注兑现（#306 转办：2 键形作废采 transcript 五键形） @m-duty-ste
   - f6b16296 docs(lg-055): B 段实弹修正案落盘入设计稿（§八四条：L1 唯一真锚=sessions 注册面/卡死四证法/wt 真终端唯一正形/死注册自清观察+版本 pin 风险条）——10-03 汇办候 CTO 落盘项闭合，原 L1 transcript 判据废止 @m-duty-cto
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:20 +08：自上次进度提交 91ed0940 后新增 1 条 commit：
+  - 6c718fc4 docs(f3): dev face 三步执行读数续篇（COS）——8713 冷起毕（stop-flag 守卫+trilc stop 权威路径+6s healthz OK+新 pid 13756）+探针 #136 全谱绿（Part A nextRun 非 NULL/短周期 lastRun 实锤/DELETE 零残留/双读数 jobCount=7 degraded=false）+「六 job 全灭」已知态勘正（Part B 前窗已自愈生效,本窗=升级窗非救活窗）+对证案勘正（三笔在本机 TriMLC 仓 ODB,昨晚 probe 漏勘断言证伪;非 m-cos 会话铸维持）+token 泄显同族二犯自报
+- registry：v2.1；今日 registry 提交无变化
