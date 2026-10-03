@@ -671,3 +671,7 @@
 - 巡检兜底补写 @17:00 +08：自上次进度提交 1bd38c02 后新增 1 条 commit：
   - 8476d4c7 docs(coo): 16:00组窗闭宣录账——BOD三点抽验毕(runAs 9/9亲证+翻转独立复得+bare顶多席笔全入)#340入账,原六项+扩容五项+护栏三条验收成立,候办九项零裸挂,D项明晨随日报照裁,车道转向19:00批B+10-04组窗预告
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:20 +08：自上次进度提交 a9ce4fce 后新增 2 条 commit：
+  - 9766ab58 docs(coo): cf=1真凶勘正受理——github-reconcile(ce1@0107Z exit1 443族)非config-sync(config-sync五轮全绿ce=0清白),SDE§十五修订段+本条双锚勘正,cf清零车道改挂443恢复线候CTO勘毕,SDE笔完整性核验零触碰收口卷
+  - 714f3b02 docs(sde): 验证锚自收报修订——config-sync五轮全绿ce=0清白+cf=1真凶github-reconcile(ce1@0107Z exit1 443族疑似)源码定谳cf=max over jobs consecutiveErrors+COO归因勘正一笔 Co-Authored-By: Claude Code <noreply@anthropic.com>
+- registry：v2.1；今日 registry 提交无变化
