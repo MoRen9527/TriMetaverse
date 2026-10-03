@@ -1,8 +1,8 @@
 # STE·SDE trimc 修窗卷验卷（readout-batch-c-hygiene.md §十一§十二 验；COO 15:2x 派）
 
 - sourceOfTruth: 本件（修窗执行录+收口段 STE 验正身；对象=batch-c-hygiene-sde-20261003/readout-batch-c-hygiene.md §十一§十二，f62facaf）
-- syncMode: static（四环+加验首轮 A/B 实证；orchestrate-tick 15:48 / clock-skew 15:19 前两轮+三 PATCH job 余两轮候补随卷补记）
-- lastSyncedAt: 2026-10-03T07:36Z 窗（date 现查 15:36+0800）
+- syncMode: static（终版：四环+首轮 A/B 实证+16:23 补记轮候补三枚实测毕，身份层缺口全闭合终证）
+- lastSyncedAt: 2026-10-03T08:2xZ 窗（补记轮 16:23+0800 date 现查）
 - 验证席: STE 小柯（m-ste）；零转抄 ✓（sg 只读 SSH 全读数独立复得：jobs.json 值面/快照对表/首轮日志/healthz/双树 find；SDE 读数仅对表）
 
 ## 一、验面四环读数总表
@@ -38,16 +38,22 @@
 | config-sync-apply | fleet（未 patch，对照组） | 15:31:48 | status=error / **runuser 秒败 exit 1**（10ms）/ 连败 61→62 | ✓ 对照正中 |
 
 - 同 runner 同机同窗，唯一变量=runAs 清除与否 → **runAs 字段=失败唯一变量的 A/B 实证成立**，patch 机制面闭合。
-- 候补轮（随卷补记）：orchestrate-tick 15:48 / clock-skew-check 16:19（预测 ok）；**bod-progress-report nextRunAtMs 已过期**（catch-up 待触发）且 runAs=fleet 未 patch → **预测 runuser 败**（候触发实测）；config-sync-apply 系分叉冻结面持续败（既有观察面，候其归属窗裁）。
+- **候补轮实测（16:23 补记轮，BOD #332 自收）**：
+  - orchestrate-tick（patch 后 16:18 轮）：**status=ok / 234ms / exit 0**，errRunuser=false ✓（预测实锚；stdout 内「worktree sync degraded (fetch rc=0 rebase rc=1)」=sg 树 conflict 面观察，见下）
+  - clock-skew-check（patch 后 16:19 轮）：**status=ok / 325ms / exit 0**，skew_s=0.591 status ok ✓（预测实锚；兼旁证 §十一 T+6 校时零漂移反转收项）
+  - daily-progress-watcher（15:30 首轮）：ok/5120ms/exit0（见上表）
+  - **预测翻转两笔如实记档**：①bod-progress-report——本席 15:33 读 runAs=fleet 预测「catch-up 触发+runuser 败」，实测**未触发 catch-up**（nextRunAtMs 逾期 10-02 05:50Z 至今零触发）且 runAs 已被**第二笔 PATCH 清除**（16:01:48 weekly/bod-progress 同簇 updated 实证）——预测前提翻转，不展开假说；catch-up 不触发面=daemon 逾期策略观察项候 SDE/CTO 注笔。②config-sync-apply——亦被清 runAs（errRunuser=false 实证 runuser 族灭），16:16 轮仍败=**新错形 git pull unmerged conflict exit 128**（分叉冻结面既有观察，非身份层非本窗对象），healthz 连败 62→65 持续涨由该面贡献。
+  - **patch 总面终态：9/9 runAs 全清**（批1 15:24:52 三 job+批2 16:01:48 weekly/bod-progress+config-sync 清除）；四 runuser 族 job patch 后轮 errRunuser 全 false=**身份层缺口全闭合实证**。
 
 ## 三、余项
 
 - healthz consecutiveFailures 与 job 级 state.consecutiveFailures（读数 0）口径不同源——healthz=daemon 级连败面（62 持续涨），job 级字段恒 0 疑未接线/复位语义，观察项不改判定，候 SDE 注一笔。
 - 环境面轻验按 COO 令执行（读数复核+日志抽验，未做全量重扫）。
 
-## 四、判定
+## 四、判定（终版，16:23 补记轮后）
 
-**四环 PASS+patch A/B 实证闭合**：三护栏全过、如实报面成立、notify 链活、双树 0/0；runuser 缺口=非修窗引入 ✓+真凶层勘正（runAs 字段）+三 job patch 首轮生效直证。修窗主体质量门过；候补轮三枚（15:48/16:19/bod-progress catch-up）随卷补记后本卷终版。
+**四环 PASS+身份层缺口全闭合终证**：三护栏全过、如实报面成立、notify 链活、双树 0/0；runuser 缺口=非修窗引入 ✓+真凶层勘正（payload.runAs+runner 包装）+**9/9 runAs 全清+四 job patch 后轮 errRunuser 全 false**。修窗主体质量门过，本卷终版。
+残余两观察项（均非本窗对象非阻塞）：①config-sync-apply 持续败=git pull unmerged conflict 面（分叉冻结既有观察，归属窗另裁）；②bod-progress-report catch-up 逾期不触发面（daemon 逾期策略，候 SDE/CTO 注笔）。
 
 ## 五、使用依据
 
