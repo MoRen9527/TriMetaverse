@@ -274,6 +274,7 @@
 - healthz：degraded=**false** + consecutiveFailures 高位回落至 **1**（残余 1=config-sync exit128 冻结面既有错形非身份层——COO 16:38 采认口径）
 - config-sync PATCH 后首轮 08:31:49Z（log 5a8e6eac__08-31-49Z，滤 command 行取值面）：runAs:(process user) + 零 stderr + **exit 0**（outcome=no-op，bundle cdcaae60 already applied）——值面三件套全绿
 - 锚全达成时点=候下轮绿后 cf 清零，自收报续（COO 16:38 裁）
+- **自收报修订（17:1x 现勘，date 锚 09:1xZ）**：config-sync PATCH 后五轮全绿（08:01/08:16/08:31/08:46/09:01Z 均 runAs 正形+零 stderr+exit 0，ce=**0**）；cf=1 真凶=**github-reconcile**（job 级 ce=1，last 10-03T01:07Z，exit 1，443 阻塞族疑似）——源码定谳 cf 语义=max over jobs(state.consecutiveErrors)（service.ts getStatus），与 config-sync 无关；COO 16:38「残余 1=config-sync exit128」归因勘正；cf=1 挂至 github-reconcile 下轮成功（低频 job，443 恢复线）——degraded=false 健康面不受影响
 
 ### 收编事故复盘（COO 核对令回执三读数，16:38 裁收讫）
 
