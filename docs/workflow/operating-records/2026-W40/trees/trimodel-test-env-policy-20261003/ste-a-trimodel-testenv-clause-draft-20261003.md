@@ -20,8 +20,8 @@ CEO 令落档件三句（COO 转令口径）：
 
 **条款名（拟）：TriModel 测试族执行环境条款**
 
-- **T1（适用域）**：本条款适用于 TriModel 仓（权威位=sg bare；工作副本含 M 面本机 dev 机与 R 面河源机）全部测试族，包括：单元测试（`npm test`/`node --test` 形）、集成测试、活体冒烟（healthz/端到端探针类），以及为跑测试所必需的 build 置换与依赖重装动作。
-- **T2（执行环境）**：TriModel 测试族执行位=R 面（河源机，TriModel 运行权威位）。
+- **T1（适用域）**：本条款适用于 TriModel 仓全部测试族（工作副本含 M 面本机 dev 机与 R 面河源机；仓线拓扑权威立场不载于本条款——测试基线取线照 CTO R 面隔离方案卷拓扑注），包括：单元测试（`npm test`/`node --test` 形）、集成测试、活体冒烟（healthz/端到端探针类），以及为跑测试所必需的 build 置换与依赖重装动作。
+- **T2（执行环境）**：TriModel 测试族执行位=R 面（河源机）；隔离形细则（目录/服务/端口/面隔离、施工序、验收锚）照 CTO〈R 面测试环境勘+隔离方案〉卷执行（`trees/rhy-test-env-isolation-20261003/cto-rhy-test-env-isolation-plan-20261003.md`，3532a1c5），本条款不重复载。
 - **T3（M 面禁令）**：M 面（本机 dev 机）禁跑 TriModel 测试族。
 - **T4（M 面定位）**：M 面 TriModel 工作副本定位=开发调试工作台——源码阅读、规格推演、单点断点调试可用；受保护对象=8713 GLM 直连通道（TriMLC 8713→本机 3333 keys 链）；凡涉 3333 起/停、build 产物置换、依赖重装类动作，一律不入 M 面（与测试族禁令同域）。
 - **T5（只读例外）**：只读操作（git 读面/grep/源码阅读/边界盘点）不受本条款限制（与 2026-10-03 事故围栏「只读不受限」口径一致）。
@@ -54,7 +54,8 @@ TriModel 仓无独立 CONTRIBUTING.md，贡献指引职能在 README（Scripts �
   为开发调试工作台，**禁跑测试族**（保护 8713 GLM 直连通道：TriMLC 8713 → 本机 3333 keys 链）。
 - M 面允许：源码阅读、规格推演、单点断点调试；只读操作不受限。
 - 涉 3333 起/停、build 产物置换、依赖重装的动作与测试族禁令同域，不入 M 面。
-- R 面执行指引：<候 CTO B 件方案卷落地后补节链接>
+- R 面执行指引：CTO〈R 面测试环境勘+隔离方案〉（TriMetaverse `docs/workflow/operating-records/2026-W40/trees/rhy-test-env-isolation-20261003/cto-rhy-test-env-isolation-plan-20261003.md`）——目录/端口/施工序以该卷为准。
+- 条款正身=CAO 册〈TriModel 测试族执行环境条款〉（TriCompany 治理面）；本节为工程侧摘要，铸句冲突以册条款为准。
 ```
 
 **改写点 3（可选）｜Deployment (sg) 节首行域注（现 L104 前）**：
@@ -87,3 +88,16 @@ TriModel 仓无独立 CONTRIBUTING.md，贡献指引职能在 README（Scripts �
 
 - COO BOD #302 起草令（09:3x）；令源链=CEO 令
 - 事实锚：ste-maint34-verification-readout.md §二（事故专节）；BOD #297 围栏口径（只读不受限）；fsd-401-fix-completion-readout-20261003.md（R-HY 权威值面先例）；cto-p1-versionbase-verdict-20261003.md（3333 单向门态）；TriModel README.md 现势（只读实勘）
+
+## 七、补记（COO 验收判据对表修订 2026-10-03 10:2x）
+
+COO 收讫随办预告 CAO 验收判据，本卷对表自校并修订三处（T1/T2/README 改写点 2）：
+
+| CAO 验收判据预告 | 对表 |
+| --- | --- |
+| 铸句合规 | T1-T6 规范句形 ✓ |
+| 号位顺延 | 编号体例归 CAO 裁已声明（§二铸句注）✓ |
+| 两草稿一致性+引用方向防双真源 | **补强**：README 改写点 2 增「条款正身=CAO 册，冲突以册为准」权威方向句；T2 增 CTO B 件卷细则指针（本条款不重复载）——引用方向=README→CAO 册（权威）、README/条款→CTO 卷（施工细则），三层单向无环 ✓ |
+| README 节候 CTO B 件卷落地对表更实 | B 件卷已在库（3532a1c5），占位链接换实路径 ✓ |
+
+修订记录：①T1 去「权威位=sg bare」钉位——仓线拓扑权属另案，CTO 卷拓扑注=github 线为 R-HY 生产行为可比基线，条款不载仓线权威立场（防与 CTO 卷双真源）；②T2 增 CTO 卷指针；③README 改写点 2 增两行。B 件卷一致性实读对表：硬边界五条（目录/服务/端口/面/GLM 稳态）与 T4「3333 起停/置换禁入 M 面」同域兼容无冲突 ✓；CTO 卷 B 件③验收锚已点名 STE 复验位（生产服务面零变化+硬边界五条逐条自查），本席候施工单到场。
