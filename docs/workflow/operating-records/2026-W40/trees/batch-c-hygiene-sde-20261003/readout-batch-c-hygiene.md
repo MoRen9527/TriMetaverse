@@ -187,6 +187,13 @@
 - **候裁件（新增）**: 4 job command runuser 适配——修法建议=PATCH 四 job payload.command 去 runuser 段（直跑即 fleet=原降权意图天然达成；数据面+零重启+即生效，applyJobPatch 支持 payload 字段实锚）vs command-handler 代码层加「uid==target 直跑」分支（一劳永逸但涉代码+重编译+sg 树冻结面）。裁定权 CTO/COO，本窗零擅动
 - fallback 全程未触发；修窗主体（③ User=fleet+④ root 归还+⑥校时反转收项）全达成，窗内主体耗时 ~15 分钟（15:02-15:17）
 
+## §十三 勘记（2026-10-03 15:4x，COO 转达 STE 验+值面复锚；历史段冻结原文不动，本节勘正）
+
+- **勘 §十二「锚②阻塞归因」表述**：「四 job command 字符串硬编码 runuser」**不成立**（STE 15:03 快照 cmdHasRunuser=false 实锚）——真凶=**payload.runAs 嵌套字段+runner 包装层**（command-handler.ts L85 `payload.runAs ? 'runuser' : shell`，runuser 包裹唯一判定点在 payload 键非 command 串）。stderr 的 runuser 报错系包装层生成命令所出，非 command 串含 runuser。
+- **勘 §十二「候裁件」修法表述**：正形=**PATCH payload 去 runAs 键**（非「去 command runuser 段」）——已由 COO 裁 a 分批执行毕：三 job（clock-skew-check/orchestrate-tick/daily-progress-watcher）15:24:52 同簇 PATCH 200×3+回读断言 runAs 已除；config-sync-apply+weekly-plane-shift+bod-progress-report 候 16:00 组窗段。
+- **A/B 天然对照进卷（STE 加验一锤+本席值面补强）**：daily-progress（patch 后）15:30 轮 ok/exit 0 vs config-sync（未 patch 对照）15:31 轮 runuser 败=runAs 唯一变量实证。本席补强：daily-progress 15:40Z…07:40Z PATCH 后首轮 log 值面三件套实锚=「runAs: (process user)」+零 stderr+`RESULT: exit code 0`（值面完工锚达成）。
+- **注笔（计数口径）**：healthz `degraded/consecutiveFailures`（全局连败计数）与 job 级 state 计数**不同源**（后者恒 0）——两口径勿互套，故障归因以 log+state 双面为准。
+
 ## 使用依据
 
 - 令: COO→SDE 批C 卫生族令（BOD #300，2026-10-03 07:57；现戳 07:59:53 同窗无矛盾）+COO #305 执行面转知（10:0x，复核 PASS，③④⑤⑥⑦四件）
