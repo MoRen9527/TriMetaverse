@@ -267,6 +267,26 @@
 - **hook 报错消失 ✓**：收编毕 push exit 0+零 cannot rebase（活体）
 - **consecutiveFailures 回落清零**：现值 65 仍涨（config-sync 下轮 08:31:49Z=PATCH 后首跑）——**候 08:31:49Z 轮回落验证，到点补勘**（job 级 state 无 fail 计数键唯 runCount=4785=COO ②笔口径注笔实证）
 
+## §十五 收口补记（2026-10-03 16:3x，date 现查 08:37:06Z 锚；验证锚①读数+收编事故复盘+残留四件转裁）
+
+### 验证锚①读数（08:3x 现勘，#332 线自收报）
+
+- healthz：degraded=**false** + consecutiveFailures 高位回落至 **1**（残余 1=config-sync exit128 冻结面既有错形非身份层——COO 16:38 采认口径）
+- config-sync PATCH 后首轮 08:31:49Z（log 5a8e6eac__08-31-49Z，滤 command 行取值面）：runAs:(process user) + 零 stderr + **exit 0**（outcome=no-op，bundle cdcaae60 already applied）——值面三件套全绿
+- 锚全达成时点=候下轮绿后 cf 清零，自收报续（COO 16:38 裁）
+
+### 收编事故复盘（COO 核对令回执三读数，16:38 裁收讫）
+
+- 事故：a0f7cc13 收编 sg 工作区陈旧版 M 件→stopwork 冻结件今日段 44 行覆盖删除（COO 口径 48 行含段界计法差，diff 实测 44）
+- 缺陷步=收编 add 前零值面对照：numstat 清点只覆盖 git 面；M 态判定基线=工作仓旧 HEAD——M≠含新内容，也可能是缺 bare 已有内容；fetch 缺位+add 直收=覆盖链。实证：`git diff bfdafcb9 a0f7cc13` 对该件=44 删 0 增；现顶 f151469c 对该件 53 行回补（COS 本机全文修复）
+- hook 绿≠语义面：④锚「hook 零报错」实为 git 面锚（rebase/merge 成功+报错消失），内容面零覆盖——与「键存在性抽验≠值面验证」族并档候 CAO；本卷该锚表述不再引用为内容面验证
+- 同族自查（bfdafcb9→f151469c 净变化逐件）：op-assembly-20261003 净删 44（**残留**，转 COS 修复）；seat-resume-auto-01/node-status.jsonl 净删 7 + bod-pipeline-batch-09/node-status.jsonl 净删 3（转 COS 认领）；task-inventory-20260930 净删 11（候合法迁移 COS 值面认领，1003 新台账 99 行新件在 bare）；daily-progress 净删 2（巡检下轮自然观察）；其余 10 件收编=纯新增正常形态零反例
+- 护栏三条议定（组窗尾落纪要+CAO 入册族）：①活文档收编/回写前必 fetch 最新 ②回写覆盖风险护栏 ③M 件收编前必跑 `git diff <bare顶> -- <件>` 值面预检，净删除分量>0 即停手报 owner——通用判别式正身采纳（COO 16:38）
+
+### 车道终态
+
+- bare 顶 16:3x=f151469c（COO 插曲录账+修复线）；本机 dev 对齐 0/0；残留修复归 COS/owner，本席不再动 bare 面
+
 ## 使用依据
 
 - 令: COO→SDE 批C 卫生族令（BOD #300，2026-10-03 07:57；现戳 07:59:53 同窗无矛盾）+COO #305 执行面转知（10:0x，复核 PASS，③④⑤⑥⑦四件）
