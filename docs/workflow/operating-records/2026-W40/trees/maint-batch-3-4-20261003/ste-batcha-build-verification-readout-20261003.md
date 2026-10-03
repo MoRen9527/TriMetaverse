@@ -41,6 +41,12 @@ A 层毕报（a59dd89f 后 Send）自报「15:0x」vs COO 收信 hook 现戳 **1
 - **对既有裁决的影响**：批B③ 域②「轮询主案 FREEZE」维持正确（轮询治滞后不治缺失，现缺失是确定性的更治不了）；「并发干扰族」总定性对 roster 族**失效**（该族现=确定性，与负载零关），对 ctx-cwd/roster-unit 残余（两轮未复现）不影响。
 - **修法方向候裁**（STE 主张形）：①staffing 'unknown' 漂移根因勘（疑 projectRoot/staffingDir 解析或 requests.json 读形态在新 deps 下变）→ TriCode resolver/knowledge-injector 与 agent-core 重建 diff 为首查位；②metrics ≥3 断言与 L191 注释按现子测清单重锚（2 枚→断言 ≥2 或补第 3 向量）——书纪修归 FSD 批B 攒；③域③ 4×TS2322 枚举已齐，修法归 CTO 裁（候选：v3 schema 侧 undefined 容忍 vs 本地侧断言收窄）。
 
+## 三-补：roster 翻转件 CTO 定性认领+本卷一处读数勘正（COO 15:3x 转达，fcf9bf0a）
+
+1. **定性认领**：翻转件终裁=**测试假设过期，非重建回归**——roleId 改名（LG-029 案二，9-03 slug 切换 test-engineer→senior-test-engineer）后 roster-gating-http.test.ts 四处（L122/127/131/155）未跟，该族自 9-03 起**一直确定性挂**；本卷 §三「疑 P2/P3 重建链行为漂移」主 hypothesis **否决**，重建 diff 勘查不需要。本席 instrument 读数与定性自洽反证齐：'unknown' 系 roleId 不在册正形；count=2 系**断言级联**（candidate 子测 rosterStatus 断言挂→该子测后续 unk 409 不再发→仅 cand+pending-cho 两枚埋点）——非埋点丢失，批B③「静默降级」假说正式关闭、roster 取证线关闭。
+2. **读数勘正自领**：本卷 §三「事故前夜同 HEAD 同测试文件隔离=绿（ste-maint34 块3 实锚）」引证**无存证**——maint34 fullrun 日志 04:01 candidate 断言已挂同形同位（9-03 起一直挂）、isolated.log 里 roster 族零在场、「三文件隔离全绿」绿组日志无存。教训条（自领）：**读数引用必附日志实锚，无存证的绿不能引**。该族既往「满载偶发挂」定性=确定性挂被误归因并发干扰，总定性修正随 CTO 裁落档。
+3. **批B 攒单更新**：书纪修四处（L122/127/131/155 roleId 正名）+L191 注释重锚（≥3→按现子测清单 ≥2 或补向量）+头注锚注，归 FSD 19:00 批B 零新增窗；本卷 §三 修法方向①（staffing 漂移根因勘）随定性否决销项，③（TS2322 修法）仍候 CTO 裁。
+
 ## 四、判定
 
 - **复验三件套=PASS**（build 修复实证：crash 消失/全量回基线同数/类型门 TS2307 灭+TS2322 枚举齐）。
