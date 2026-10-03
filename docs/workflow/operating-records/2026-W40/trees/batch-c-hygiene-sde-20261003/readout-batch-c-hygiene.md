@@ -104,6 +104,15 @@
 - jobs.json 快照前置: 9 jobs 全态导出+nextRunAtMs 完整性断言（cron-job-state-hygiene）
 - 观察注: config-sync 连败归零候分叉解（COO 12:00 后窗）后自然归零——窗内验证口径=job 派发执行正常+失败归因转为 ff 分叉族（权限族失败消除证据），非强求窗内归零
 
+## 十、chown 口径收敛（CTO 11:4x 回·对表闭环）——两棵不同的树
+
+- **口径差定谳**: 两边读数都对=两棵树。CTO 14080=`find /var/lib/trimc -user root`（TriMMC **数据面**：cron store/logs/config，root 跑 13h+ 写出，无 .git）；本席 82=`find /srv/fleet -user root`（git 操作污染面）。本席晨勘漏 /var/lib/trimc 树（只勘了 /srv/fleet）——CTO 补第二棵树
+- **④域双树工序（CTO 正形+本席精准 chown 采纳）**:
+  - 树 A /var/lib/trimc: 前置 T+0 **双计数对表**（总件数 vs root 件数——相等=全树 root 精准=-R 等价；不等=非 root 件异常面清单留痕单独报不动）→精准 chown `find /var/lib/trimc -user root -exec chown fleet:fleet {} +`→**必须在 restart 前**（数据面可写性）
+  - 树 B /srv/fleet: 同款精准 chown 82 件+清零断言，与 restart 无序依赖，同窗顺带
+  - 清零断言两树各自跑（`find <树> -user root | wc -l`=0）
+- **间隙新增件注（本席补）**: 树 A chown 后至 restart 前，root 主进程仍续写（cron 5min 周期）——T+5 清零断言在 **restart 后**跑可捕获全部残留；若间隙新增件在，补一轮精准 chown 再断言（restart 后 fleet 进程新件=fleet，补一轮即稳收敛）
+
 ## 使用依据
 
 - 令: COO→SDE 批C 卫生族令（BOD #300，2026-10-03 07:57；现戳 07:59:53 同窗无矛盾）+COO #305 执行面转知（10:0x，复核 PASS，③④⑤⑥⑦四件）
