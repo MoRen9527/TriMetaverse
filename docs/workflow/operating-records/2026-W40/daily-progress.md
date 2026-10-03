@@ -662,3 +662,9 @@
   - f151469c docs(coo): 收编事故插曲录账——a0f7cc13陈旧源删今日段48行(COS本机全文修复)+本席值面验证585行今日段全程在完整性恢复+教训双条(hook绿≠语义面无覆盖/活文档回写前必fetch最新)护栏候组窗+CAO+5471ac26推bare hook零报错 Co-Authored-By: Claude Code <noreply@anthropic.com>
   - 5471ac26 docs(coo): 共享仓push分歧整合闭环录账——五席笔全入sg bare(34aa9376 merge+1d97aaa9巡检笔)+SDE④毕录收稿(hook零报错验证锚达成+误归因勘正认领reflog佐证hook假说成立)+runAs 9/9全清终证互证+挂账GitHub候443+多席并行推bare竞争教训候办 Co-Authored-By: Claude Code <noreply@anthropic.com>
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:50 +08：自上次进度提交 c1ef5d5d 后新增 4 条 commit：
+  - 258dafda docs(coo): 16:00组窗收口卷——原六项对表全闭(runAs 9/9终证+WPS写面通+ff分叉收编hook零报错锚+cf回落至1残余=冻结面既有)+扩容五项对表(A编排B终裁C读数到齐D留位E合并)+插曲两笔闭+护栏三条议定+候办移交九项清单+D项呈报段 Co-Authored-By: Claude Code <noreply@anthropic.com>
+  - 10fe7b5e docs(coo): 残留四件回补毕收编事故链全闭(COS 2a80d627+388a44ad:op-assembly恢复51行/task-inventory销项不成立恢复11行历史追笔/node-status照回补)+C项读数索令发CTO(LG-039 T5/T7+LG-059/060+443归口,死线10-05)+收口卷候C项读数与cf清零后呈 Co-Authored-By: Claude Code <noreply@anthropic.com>
+  - 388a44ad merge: 并行笔收编（COO 组窗收口线 16:4x）
+  - 2a80d627 docs(cos): SDE收编事故残留四件回补(COO认领令)——op-assembly今晨全程段51行+0930件11行历史追笔(LG-062/063三行+动态条30-34)+两jsonl 10行历史记录;cc8afa4d版整恢复,0930头注因blob同hash天然在位
+- registry：v2.1；今日 registry 提交无变化
