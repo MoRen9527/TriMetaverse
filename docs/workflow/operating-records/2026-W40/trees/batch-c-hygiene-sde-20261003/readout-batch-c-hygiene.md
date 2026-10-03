@@ -65,8 +65,33 @@
 6. sg 钟+20s: NTP 面候运维
 7. 自曝件 §五: 候定性
 
+## 七、收口补记（10:1x-10:2x 窗）+ #305 接令段
+
+- **毕报卷 push 双端**: GitHub 成（a5679008..a75cfc58）；sg bare 首推被拒（objects/a3 Permission denied，remote rejected）——复勘反转：bare 现勘零异常（a3=fleet:fleet 2775 可写、非 fleet 属主 0 件），疑 gc2 后瞬时态/ssh 瞬断同源
+- **复推读数交错（并发 push 竞态窗）**: 我方复推期间并行席（STE/CTO 维护批收口流）活跃推送，bare ref 回报混读——判定以 fetch 后 ancestry 断言为准：**a75cfc58 YES-ancestor 在 bare dev 线上 ✓**（经并行线通道到达），我方零重推零冲突零数据损
+- **hook 撞脏实证（§三归因材料+1）**: bare post-receive hook auto-pull sg 工作树报 `cannot rebase: You have unstaged changes`——sg 树 unstaged agents 13+ 件在挡 hook 自动同步=树落后 bare（HEAD 2ec7dfe4 悬空分叉件+落后 6+ commits）——config-sync 连败根因机制面闭合，修否候 COO/CTO（不越界不动）
+- **meta-*.md 三件勘定（⑤认领询材料）**: 本机同款 0 字节（2025-10-23 建仓件），git 历史仅 bootstrap 一笔（0a8127819 chore: bootstrap TriMetaverse meta-repo）=**bootstrap 骨架件非内容丢失**；认领询照发，认领不着窗尾删报（**双机同删对齐**：sg 删+本机删，防 push 回流复活）
+- **#305 四件接领**:
+  - ③ trimc.service User=fleet 准修——候 CTO 窗令，预案已备（见 §八）；禁二次重启纪律适用
+  - ④ 80 件扩围归还——序随③，③窗内并批执行（含**序调正**：TriMC 活体写入面 notify-mailbox/outbox 等 chown 必须先于 restart，否则 fleet 进程启动即写 root 属主文件被拒）
+  - ⑤ 认领询已启动（附 bootstrap 勘定材料）
+  - ⑥ sg 钟+20s——知悉，候今日运维窗与 CTO 顺带校时
+  - ⑦ 自曝件 BOD 定性认收讫；「整文件 cat 前先 grep 键名清单」候补转 CAO（COO 打包族）
+
+## 八、③重启预案（候 CTO 窗令，备妥待命）
+
+- 前置: CTO 窗令+时点核对（执行令时点交叉核对纪律）；禁二次重启语义=同一单元（trimc.service）本窗仅一次 restart
+- 步1 job state 快照: 9 jobs 全态导出（含 nextRunAtMs 完整性断言——cron-job-state-hygiene：禁抹 nextRunAtMs），快照落 /root 或 /tmp 带 ts 文件名
+- 步2 chown 归还先于 restart（④并批）: TriMC 活体写入面（notify-mailbox.json/notify-outbox.json/docker/.env 读面豁免仅需可读）+源码族+.git 内部面统一 chown fleet:fleet→find ! -user fleet 清零断言（bare 仓与活体写入面 sg-watchlist-state.json 不动——watchlist job root 跑态随③修后自然转 fleet）
+- 步3 drop-in 落位: /etc/systemd/system/trimc.service.d/user-fleet.conf（[Service] User=fleet Group=fleet）——前置断言 trimc-start.sh 全链 fleet 可读（TriModel/.env 读 token 行+dist+node 可执行）
+- 步4 daemon-reload+restart trimc（一次）
+- 步5 完工判据（重启窗完工判据=进程内生效验证）: healthz 200 ok:true+**进程身份断言 ps -o user= -p MainPID=fleet**（值面探针，healthz 绿≠身份切换生效）+cron jobCount:9+notify 双文件新写入属主 fleet 断言
+- 步6 观察: config-sync-apply 连败计数归零+watchlist job 续跑+degraded 转 false 候观察窗
+- 回滚预案: drop-in 移除+daemon-reload+restart（回 root 形态）+job state 快照在案可回灌；触发条件=restart 后 healthz 非绿或主进程起败
+- 风险注: fleet HOME/.trimmc 面依赖（duty-env source 链）——drop-in 现有 env-home.conf 已管 HOME，落位前 cat 断言
+
 ## 使用依据
 
-- 令: COO→SDE 批C 卫生族令（BOD #300，2026-10-03 07:57；现戳 07:59:53 同窗无矛盾）
+- 令: COO→SDE 批C 卫生族令（BOD #300，2026-10-03 07:57；现戳 07:59:53 同窗无矛盾）+COO #305 执行面转知（10:0x，复核 PASS，③④⑤⑥⑦四件）
 - 纪律: 确定性执行四步/09-30 root store 教训（gc 走 fleet 身份+root 操作后清点归还）/掩码纪律（日志 tail 前滤 command:/runAs 行）/活体优先（healthz 值面探针）/禁二次重启（unit 修法候裁不动）/机位断言活体现探（pid+ss 双锚）
 - 实锚: /etc/systemd/system/trimc.service.d/{port-bind,override}.conf+/usr/local/sbin/trimc-start.sh+ss -tlnp+8712 healthz+git count-objects -v 前后对+find 三轮清单+/var/lib/trimc/cron/logs 抽样（滤密行）
