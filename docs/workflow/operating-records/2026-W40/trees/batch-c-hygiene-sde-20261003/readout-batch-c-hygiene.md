@@ -194,6 +194,56 @@
 - **A/B 天然对照进卷（STE 加验一锤+本席值面补强）**：daily-progress（patch 后）15:30 轮 ok/exit 0 vs config-sync（未 patch 对照）15:31 轮 runuser 败=runAs 唯一变量实证。本席补强：daily-progress 15:40Z…07:40Z PATCH 后首轮 log 值面三件套实锚=「runAs: (process user)」+零 stderr+`RESULT: exit code 0`（值面完工锚达成）。
 - **注笔（计数口径）**：healthz `degraded/consecutiveFailures`（全局连败计数）与 job 级 state 计数**不同源**（后者恒 0）——两口径勿互套，故障归因以 log+state 双面为准。
 
+## §十四 16:00 config-sync 组窗·SDE 执行录（2026-10-03 16:00 起，COO 主刀/SDE 执行位）
+
+- 窗令: COO 16:00:10 组窗开场令（hook 现戳 16:00:31 收，延迟 21s 零矛盾）；护栏五条接领（④未裁禁动面/③只读先行/23:00 死线险情即报/禁重启 TriMMC 全走 API/时刻现查）
+- 执行序: ①开场对表留档→②runAs 清三件 PATCH（config-sync-apply/bod-progress-report/weekly-plane-shift）→③WPS 写面只读预检→④config-sync ff 分叉收编（清点→报裁→裁后 rebase→hook 验证）→⑤bod 一致性→⑥两候办归台账
+
+### ① 开场对表留档（先对表后动操作）
+
+- 实锚一（BOD 节拍）: config-sync-apply job id `5a8e6eac` logs 路径族——BOD 节拍独立捕得 jobCount:9 对表一致
+- 实锚二（SDE PATCH 执行记录）: 三 job（clock-skew-check/orchestrate-tick/daily-progress-watcher）15:24:52 同簇 PATCH 200×3+回读 runAs 已除+PATCH 后首轮值面两连绿（daily 07:40Z/orchestrate 07:48Z `runAs: (process user)`+零 stderr+exit 0）——**零 403**（TriMMC cron PATCH 面无白名单门实证）
+- 实锚三（CTO 机位错认领笔）: TriMLC 8713 allowlist 门执行单作废认领（sg 四 job 驻留 TriMMC 8712 零白名单口径定谳）
+- STE 验卷引用: 2ee7930d（修窗卷 STE 验四环 PASS+A/B 对照一锤）
+- **SDE 补锚（trimc 树 PATCH 入口 grep，07:49:18Z 预采）**: `src/cron/routes.ts` L114-115 `PATCH /internal/v1/cron/jobs/{id}` 路由在位+`src/cron/service.ts` L151 `jobs[id] = applyJobPatch(job, patch)`；**src/cron 域零 ALLOWLIST 命中**（全 src grep 4 命中全在 agent-loop 面 tools.ts TRIMC_SHELL_ALLOWLIST/permissions.ts TOOL_TIER_ALLOWLIST=域外另一门，cron command 面零白名单维持——域限定词防「全 src 零 allowlist」误读）
+
+### ② runAs 清三件 PATCH（16:01 执行，sg 8712 TriMMC API 面零重启）
+
+| job | HTTP | hadRunAs→after | command sha8 | updatedAtMs |
+| --- | --- | --- | --- | --- |
+| config-sync-apply | 200 | True→None | 011e5e6a→011e5e6a 零变 | 1791014509049=08:01:49Z |
+| bod-progress-report | 200 | True→None | d7e6a7f0→d7e6a7f0 零变 | 1791014508000=08:01:48Z |
+| weekly-plane-shift | 200 | True→None | a74098a3→a74098a3 零变 | 1791014508004=08:01:48Z |
+
+- 手法=同三 job 簇：PATCH {"payload": <去 runAs 全量>}；回读经进程内 API+command sha8 前后断言（零动 command 段实证）
+- ⑤随②闭：bod-progress-report patch 毕=catch-up 预测败轮消（STE 预测面）；weekly-plane-shift 23:00 死线压力随 patch 消（今晚 23:00 触发轮即 patched 形态首跑）
+
+### ③ WPS 写面只读预检复采（16:01，全绿零 chown 需求）
+
+- TMV 树根 fleet:fleet 755/operating-records fleet:fleet 755/W40 fleet:fleet 775+fleet 写探针 W40-WRITE-OK
+- sg bare refs/heads/dev+HEAD fleet:fleet 664；bare dev ref=64f12c97
+- **结论：23:00 weekly-plane-shift 迁移写面通，零精准 chown 需求，直接可跑**
+
+### ④ config-sync ff 分叉·现勘清点+分域收编方案（报裁中，裁前零动面）
+
+- **形态定谳（ancestry 断言）**：merge-base=d2c8aeac；工作仓 HEAD=2ec7dfe4（领先 merge-base 1 提交，未推 bare）；origin/dev=64f12c97（领先 94 提交）——**真分叉非单纯落后**
+- **脏件清点（git status 全列 50 项）**：30 M（.claude/agents 19+.github/agents 12 域）+6 M（operating-records 周平面）+7 D（ceo-review 3+trees 4）+7 ??（batch-16 任务书 4+batch-17 任务书+CEO review 2+task-charter .bak 1）
+- **抽样判读**：board.md diff 方向=工作树缺 `user-invocable: true`+渲染尾注=**旧渲染拷贝**（HEAD 新版反超）；D 类抽样两件 bare 顶树 ls-tree 仍在=**删除孤立**；C 域断言=bare 94 件 grep 零「BOD复工令batch-15三件」同内容
+- **五域收编方案（16:0x 报 COO 裁，裁前零动面）**：
+  | 域 | 范围 | 推荐案 | 依据 |
+  | --- | --- | --- | --- |
+  | A | agents 发布拷贝 30 M | discard 恢复 HEAD 版 | 旧渲染拷贝零保留价值；真源=TriCompany source-agents 渲染管线 |
+  | B1 | operating-records 6 M | 收编一笔提交 | 周平面在途产出真值 |
+  | B2 | D 7 件 | 恢复（候案=收编删除须席位归属确认） | bare 顶树仍含抽样件=删除无收编依据 |
+  | B3 | ?? 7 件 | 收编提交（.bak 候 BOD 定去留） | batch-16/17 任务书+CEO review=在途真值 |
+  | C | 本地提交 2ec7dfe4 | (c1) rebase 保留推 bare（候案 c2=drop 若 bare 线 batch-15 链已覆盖） | bare 94 件无同内容断言 |
+- **执行序（裁后）**：backup 指针（回滚锚）→B2 恢复→B1+B3 收编 commit→A 域 checkout→pull --rebase→推 bare→hook 活体验证（后续 push 零 cannot rebase 报错）
+
+### ⑥ 两候办归台账（录账候 COO 转 CTO）
+
+1. **方案 b（config-sync 代码层）**：command-handler 加「uid==target 直跑」分支——一劳永逸但涉代码+重编译+sg 树冻结面；现 PATCH 面已解 runAs 残留，方案 b 降级为候办归 CTO 台账勘
+2. **allowlist 转发壳退役时点**：TriMLC（8713）转发壳（旧位 import 指针）须有退役时点——候 CTO 勘归并（三形态对表 TriMMC 零白名单已实证，转发壳退役条件面渐熟）
+
 ## 使用依据
 
 - 令: COO→SDE 批C 卫生族令（BOD #300，2026-10-03 07:57；现戳 07:59:53 同窗无矛盾）+COO #305 执行面转知（10:0x，复核 PASS，③④⑤⑥⑦四件）
