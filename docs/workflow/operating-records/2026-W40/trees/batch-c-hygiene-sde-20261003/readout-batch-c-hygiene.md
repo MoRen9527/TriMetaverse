@@ -71,6 +71,8 @@
 - **复推读数交错（并发 push 竞态窗）**: 我方复推期间并行席（STE/CTO 维护批收口流）活跃推送，bare ref 回报混读——判定以 fetch 后 ancestry 断言为准：**a75cfc58 YES-ancestor 在 bare dev 线上 ✓**（经并行线通道到达），我方零重推零冲突零数据损
 - **hook 撞脏实证（§三归因材料+1）**: bare post-receive hook auto-pull sg 工作树报 `cannot rebase: You have unstaged changes`——sg 树 unstaged agents 13+ 件在挡 hook 自动同步=树落后 bare（HEAD 2ec7dfe4 悬空分叉件+落后 6+ commits）——config-sync 连败根因机制面闭合，修否候 COO/CTO（不越界不动）
 - **meta-*.md 三件勘定（⑤认领询材料）**: 本机同款 0 字节（2025-10-23 建仓件），git 历史仅 bootstrap 一笔（0a8127819 chore: bootstrap TriMetaverse meta-repo）=**bootstrap 骨架件非内容丢失**；认领询照发，认领不着窗尾删报（**双机同删对齐**：sg 删+本机删，防 push 回流复活）
+- **meta-*.md 终态（COO 10:4x 裁）**: 三件**留**——BS 实勘改定性（白皮书 tmv-whitepaper.md L1292-1294 待补清单明文点名三件+L1432-1444 参考基线在列，双删=断白皮书两处显式指针）；CPO 裁不认领（归属 BS 域白皮书概念延伸非产品域）；BS 挂账=候写非今日成稿。**删除窗取消，双删预案作废**
+- **§三归因链处置终态（COO 10:4x）**: hook 撞脏+config-sync 分叉归并 #305 ② 不新立单——COO 组窗（12:00 联审后窗）一并配方处置，SDE 零触碰维持；push 竞态教训（并发推送窗判定一律 ancestry 断言）录账候 CAO 打包
 - **#305 四件接领**:
   - ③ trimc.service User=fleet 准修——候 CTO 窗令，预案已备（见 §八）；禁二次重启纪律适用
   - ④ 80 件扩围归还——序随③，③窗内并批执行（含**序调正**：TriMC 活体写入面 notify-mailbox/outbox 等 chown 必须先于 restart，否则 fleet 进程启动即写 root 属主文件被拒）
