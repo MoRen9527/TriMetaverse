@@ -12,7 +12,7 @@
 |---|---|---|
 | node/npm | v22.23.2 / 10.9.8（/usr/bin/node） | node 22 原生 test runner 稳定态 ✓——TriModel test script（`node --import tsx --test --test-concurrency=1`）原生兼容 |
 | 代码布局 | `/srv/fleet/` 下 TriModel+TriCode 同构兄弟目录在位 | `file:../TriCode` 相对依赖形态天然满足 ✓ |
-| 生产 clone | /srv/fleet/TriModel 顶=8de8fe7（LG-058 P1 范围 6①），origin=github MoRen9527/TriModel；node_modules 在位含 tricode link | 生产位健康；**拓扑注**：R-HY 线=github 镜像线，顶比本机/sg bare 线（161d0ca）新（含 LG-058 新笔）——双线非冲突（R-HY unit 自述 company truth=github 拉取线），测试基线取 github 线与 R-HY 生产行为可比（§三.1） |
+| 生产 clone | /srv/fleet/TriModel 顶=8de8fe7（LG-058 P1 范围 6①），origin=github MoRen9527/TriModel；node_modules 在位含 tricode link | 生产位健康；**拓扑注（09:5x 原稿）**：R-HY 线=github 镜像线，顶比本机/sg bare 线（161d0ca）新（含 LG-058 新笔）——双线非冲突（R-HY unit 自述 company truth=github 拉取线），测试基线取 github 线与 R-HY 生产行为可比（§三.1）。**【13:2x 勘正】本行「github 线顶 8de8fe7」表述过强：09:45 实锚仅=「R-HY 本地 clone 顶 8de8fe7」，github 远端 HEAD 未现查即被注记并入；SDE 步 0（13:22:57）ls-remote 实测 github HEAD=161d0ca（与本机/sg bare 线同源）——即 R-HY 本地 clone 领先 github 远端（LG-058 笔未推或另有推送链），非「github 被推平」。施工基线裁答随勘正改：**clone 改从 R-HY 生产 clone 本地 clone（8de8fe7 基）**，理由=测试位与生产位同基可比性最强+LG-058 笔属 P1 范围相关笔不该回退+零 github 外网依赖；§三.1 同步勘正（步 1 命令改 `git clone /srv/fleet/TriModel /srv/fleet/trimodel-test`） |
 | TriCode clone | /srv/fleet/TriCode 顶=d20cb6b（9-26，与 sg bare 顶一致） | tricode 依赖源就位 ✓ |
 | 生产服务面 | trimodel.service（LG-054 R-HY company truth，WorkingDirectory=/srv/fleet/TriModel，ExecStart=node dist/src/server.js）+caddy.service（443 门）running | **硬边界对象=trimodel.service+caddy+api-token.env 三面**（§二） |
 | 磁盘/内存 | 32G 空闲 / 内存 1.6G（available 1064M） | 足够；小内存机约束=构建与测试串行、test-concurrency=1 维持不动 |
@@ -36,7 +36,7 @@ node 22+同构布局+registry 标准+轻依赖测试族=零新增基建；隔离
 ## 三、施工序（施工单素材，六步）
 
 - **步 0 预检**（R-HY 只读+最小写）：npm ping；`git ls-remote https://github.com/MoRen9527/TriModel.git` 可达性；3433 端口占用检查。
-- **步 1 clone**：`git clone https://github.com/MoRen9527/TriModel.git /srv/fleet/trimodel-test`（github 线顶为基，记录顶 hash 入卷）。
+- **步 1 clone（13:2x 勘正后正形）**：`git clone /srv/fleet/TriModel /srv/fleet/trimodel-test`（**R-HY 生产 clone 本地为源，8de8fe7 基**——与生产位同基可比+零 github 外网依赖；原 github URL 命令作废，勘正缘由见 §一拓扑注【13:2x 勘正】；记录顶 hash 入卷）。
 - **步 2 依赖**：cd trimodel-test && npm install（devDeps 含 tsx/typescript——file:../TriCode 相对依赖 resolve 至 /srv/fleet/TriCode 既有 clone，**复用不重装**；若 npm 对 file: 走复制则尊重 npm 行为，不动 TriCode clone 本体）。
 - **步 3 构建门**：npm run check（tsc --noEmit 类型门）——先类型后测试，失败即停（呼应 STE 类型门 baseline 同根因面）。
 - **步 4 样本冒烟（验收锚）**：样本集=card-path.test.ts（纯逻辑零 mock）+apply-strategy.test.ts+anthropic-proxy.test.ts（14 mock 形态）——`npm test` 限定三文件跑；全量 test 族跑候窗（内存 1.6G 面全族时长未验，先样本后全量两段走）。
