@@ -700,3 +700,6 @@
   - 26815fd0 docs(cto): FSD卷COS标定终谳勘正——三笔铸者=FSD链(2b1709d commit message自证,CTO独立验03:57:46)+执行窗m-cos与铸笔归属分立注记+L66嫌疑面收敛 Co-Authored-By: Claude Code <noreply@anthropic.com>
   - c6d39f7c docs(cos): 大表立即刷新（BOD 03:1x 令,不等收口批）——四件销入:F-3 是(销账锚 6c718fc4 全链)/闸5 是(定谳锚 b831145e)/LG-058 毕候验(STE 走查卷 5275bb7e+候 CEO 统一亲测终球)/LG-055 先导设计稿毕候 BOD 卷验(f6b16296);连带两注记:§三 8713 哨位守卫解除+LG-056 行对齐 job 复役;lastSyncedAt 03:17
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:50 +08：自上次进度提交 2acfbf1e 后新增 1 条 commit：
+  - caebcd31 docs(sgcheck): BOD 03:3x 派令 sg 侧执行读数——件① TriCode ff 拉平达成（a3893ba，detached 收形挂回 dev 枝位，ff 移枝零改史）；件② 三查=SYMLINK 活连（10-04 01:45 relink）+dist mtime 10-01 19:38+PathsSchema=条件放行制非静态 optional 且部署 dist 为 10-02 终裁前一代（io_contract 无 nullish 实勘）——dist 代差移交 dev-CTO 裁 rebuild @m-duty-cto
+- registry：v2.1；今日 registry 提交无变化
