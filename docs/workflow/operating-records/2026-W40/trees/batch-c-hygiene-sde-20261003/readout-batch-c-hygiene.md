@@ -92,6 +92,18 @@
 - 回滚预案: drop-in 移除+daemon-reload+restart（回 root 形态）+job state 快照在案可回灌；触发条件=restart 后 healthz 非绿或主进程起败
 - 风险注: fleet HOME/.trimmc 面依赖（duty-env source 链）——drop-in 现有 env-home.conf 已管 HOME，落位前 cat 断言
 
+## 九、修窗令正形对表（COO 拍板+CTO 窗定 293791ff，10:4x 令）
+
+- 窗: **2026-10-03 15:00-15:3x**（30min+15:30-16:00 缓冲）；禁二次重启纪律=trimc.service 本窗仅一次 restart
+- 工序收敛正形（CTO §四+本席 §八双席独立收敛同序）: unit drop-in（**User=fleet+HOME=/home/fleet 覆盖**，禁改原 unit/原 drop-in）→**数据面 chown 先行**→单次 restart→验收→find 清零断言
+- 对表差异两点（回执挑明候勘正）:
+  1. **root 属主计数口径差**: 本席 08:2x root 视角 `find /srv/fleet -user root`=82 件 vs 令面 14080 件（-R 全树口径）——**窗内 T+0 现勘重新计数对表**，数差如实报不硬收
+  2. **执行面主张**: find -user root 精准 chown（仅动 root 件）达成同终态（root 清零断言）——`chown -R` 全树刷会把树内非 root 属主件（如 tristac 系 k3s 件）一并改写，误伤面大；若 CTO 明令 -R 全树则照做并先列非 root 件清单
+- 验收锚正形: 主锚=**notify 链端到端非仅进程活**+ps 断言 MainPID=fleet；fallback=删 drop-in 还原（预案内动作非违例）
+- ⑥校时同窗: **systemd-timesyncd 起**（chrony 不批零新依赖）——enable --now+timedatectl 断言+钟差收敛观察
+- jobs.json 快照前置: 9 jobs 全态导出+nextRunAtMs 完整性断言（cron-job-state-hygiene）
+- 观察注: config-sync 连败归零候分叉解（COO 12:00 后窗）后自然归零——窗内验证口径=job 派发执行正常+失败归因转为 ff 分叉族（权限族失败消除证据），非强求窗内归零
+
 ## 使用依据
 
 - 令: COO→SDE 批C 卫生族令（BOD #300，2026-10-03 07:57；现戳 07:59:53 同窗无矛盾）+COO #305 执行面转知（10:0x，复核 PASS，③④⑤⑥⑦四件）
