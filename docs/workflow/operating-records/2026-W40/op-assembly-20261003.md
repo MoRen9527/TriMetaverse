@@ -49,6 +49,14 @@
 - **TriModel 事故修复序**（04:1x 立，候 BOD 认账）：P1 版本基勘定（CTO/SDE：主开发位+未推提交风险+3333 内存版本基证据链+161d0ca 可否作重建基准判定）→P2 .env 重建（FSD：TRIMODEL_API_TOKEN 从 8711 a5cb..13a7 配对取+第二键值源勘，七步序纪律）→P3 dist 重建+3333 受控重启解围栏（D-04 锚链）；围栏现行态=**3333 禁重启+禁 build**（pid 42616 内存存活，五面已发）；STE 复验余两块排 P3 后。
 - **CAO 册候选条·PS5.1 Remove-Item 穿 junction**（04:1x 事故衍生）：`Remove-Item -Recurse` 过 junction/symlink 面穿透删真实目标（node_modules/trimodel 符号链接先例=GLM 点位图）；worktree 清理正形=`git worktree remove`+`rmdir` 断链，禁 Remove-Item -Recurse 过链接面——与 ps1 BOM/CRLF/PSModulePath 族并档，明窗打包落册；**连锁 lesson 入册面（BOD #297）**=深夜疲劳窗二案（#295 值面回显+#297 junction 事故）晨窗一并铸句；**CTO P1 随卷教训四条并打包（04:30）**=删除前 LinkType 断言/l2-stub 命名演练歧义（真调用器冒名 stub）/TRIMODEL_API_TOKEN 单键双链耦合/回滚锚活体验证缺位（M2 切链未验回退）。
 - **T7 bak 族独立卫生候办·自然销项**（BOD #298）：T7 裁决卷 §4 立项对象已随事故灭失（9-27~9-29 操作快照，TriModel HEAD 对 sg 权威一致，灭失影响低）——晨窗记账销项，CTO 域不再追。
+
+## 晨窗三批拆投（BOD #300 点火 07:57，夜班收线令失效）
+
+- **批A 首序（FSD 主刀，开工令 e6bbbf2d）**：P2（.env 重建，8711 a5cb..13a7 配对取值七步序+第二键候勘 dotenvx 2 键形）→build 窗（TriModel dist 161d0ca 基准+入口断言 dist/src/server.js+TriCode+agent-core 同窗）→P3（3333 受控重启+回归门四项：keys 探针/GLM smoke/watchdog 复验/relay 卡面对表；**重启前候 BOD 亲验到场门**）→解围栏→M2 单向门闭合；围栏部分解除=P2/build 面放行，其余清理类冻至 P3 毕；sg 备选锚休眠不变；毕报节点=P2 毕+build 毕两节点，链尾 STE 验→BOD 复核。
+- **批B 并行（车道错开防叠载）**：③测试隔离性→STE 即刻开工（ed6a9886：P0 向量 40/41 差+并发干扰归因修法+TS2322 baseline；复验余两块候批A build 毕）；①② cli 状态码修双仓→FSD 批A 毕接续（CTO 语义门三条件 22b41974 随行）。
+- **批C 卫生族（SDE，cd40433c）**：sg bare gc+空文件清点+所有权面+W39 root 属主 chown（find -user root 先清点）+8710 无监听勘——sg SSH 车道，修否候裁。
+- **单列件**：graceful 链技审→CTO（0640cbc9 三问：消费方盘点/与四笔关系/生效窗）；CFO 值源闸→m-cfo（3adee43c 三笔：GLM 空+deepseek c2e4 invalid+pro 键态核+s3-backup 清判据；裁毕呈 CEO 知情；item5 sg 面独立走不受批影响）。
+- **链尾总则**：各批毕报→STE 验→BOD 复核；批A P3 解围栏前 BOD 亲验到场。
 - **值面回显二案已定性（BOD 03:38 #295）=操作瑕疵非安全事故不提前轮换**：三裁据（同盘同权限面增量≈零/旁路漏网非施工动面/即时自报+即时改正闭环时效满分=纪律面正面样本）；过滤器白名单形改法认可；CAO 册值面回显族打包扩容准（10-02 三 token 案+本案 sk-/点分形漏网案并条，教训句=「黑名单追形必漏新形→白名单形为过滤器正解」，素材随 #295 记账，CAO 域落册明窗办）；FSD 候裁环已闭合（回执毕），预勘续行中（8711 同键异值实锚在卷=③ 对象面确证，候毕报）。
 - **岗位件最高优先级插入**（BOD 21:11 令）：COS/COO 两岗 source-agents 岗位职责优化，CEO 亲审经 BOD 转达即拆任务书派工；死线=10-03 上午；COO 岗件不自改不自裁条款。**主审面勘正（BOD 21:26）**：两主 .agent.md 文件已退役出渲染链（L6 退役声明），正确主审面=零件（agent-body COS 159L/COO 122L+agent-frontmatter+soul 60L/50L），任务书铸材以零件为对象。**第一波已拆派（10-02 22:51，batch-17 件①四环闭）**：COS 岗 agent-body 23 条意见→STE 主刀（车道裁+BOD 采信），任务书+处置单（BOD worktree staging/sg commit 1524f279 双通道）本机直读开工；三防+C15 先勘 spec 铸令；COO 岗批候 CEO 意见第二波。
 - **CLI 2.1.287 升级窗恢复韧性实证收档**（LG-055 B 段副产品，10-02 夜）：282 期 resume 挂死×2 轮→287 期 watchdog 自动拉起即成活（CMO resume 续载满分）——版本升级窗席位恢复韧性已实证一轮，无候办；窗尾卷四条判据修正提案候 CTO 落盘后入册面（判据归 CTO 汇裁链）。
