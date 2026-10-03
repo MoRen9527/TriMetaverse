@@ -70,3 +70,14 @@
 ## 使用依据
 
 任务书 3f3ae9f2（四问/边界/锚）；工作区记忆条：席位复活名址缺口（CLAUDE_CODE_CHILD_SESSION 根因+03:29 复原实证）、tmux send-keys Enter 吞噬、capture 暗示提示判读；LG-057 §六读树续办步；LG-036 通知通道现成面；TriLC 重启纪律（pid 验对/禁裸杀/D-03 env 快照）。
+
+## §八 实弹修正案（2026-10-04 落盘·B 段实证四条，前版判据条款以此为准）
+
+> 依据=cto-resume-live-b-readout-20261002.md（B 段收口正身）§三五项发现；本节为 10-03 汇办「四条判据修正提案候 CTO 落盘」之落盘件，落盘后 §三 L1 原判据（transcript 增长≥1KB@T+120s）废止。
+
+1. **L1 唯一真锚=sessions/ 注册面**：启动完成真锚=`sessions/<pid>.json` 注册出现（name/sessionId/status 全字段，Claude Code 自维护）；原「transcript 自动增长」判据与交互式 resume 形态不符（启动毕静等输入，transcript 静止属正常）——transcript 增长降级为 L2 消息驱动后活性判据。
+2. **卡死检测=进程读数四证法**：挂死轮注册面零写入（无死注册可辨）——卡死判定仍需四证齐：注册零+CPU 低位+内存下行+零新 transcript；四证齐→降级序④。
+3. **拉起通道唯一正形=wt 真终端**：工具链拉起（Start-Process pwsh 直起）判非 TTY→claude 自动 --print 模式即退（报错原文捕档在卷）；半残 TTY 形态下 resume 挂死（三轮回证）。操作单所有「人工拉起」项绑定 wt 形态（watchdog 同款），禁工具链直起。
+4. **死注册自清观察更新+版本 pin 风险条**：死注册跨版本升级窗内 Claude Code 自清（32456 期 22:1x 实证），时长未定续挂观察；新增风险条=claude CLI 自动升级撞维护窗（282×2 挂/287×1 成三样本）——未来席位操作窗前 `claude --version` 查验或 pin 版本。
+
+（并勘项读数：watchdog 日志「12 席」计数措辞陈旧，零功能影响，候组单勘正——10-03 已挂。TriRLC 8711 pidfile 分文件观察项随先导窗并勘读数另报。）
