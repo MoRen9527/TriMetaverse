@@ -68,6 +68,8 @@
 | TriMLC node_modules（正常包体） | 全删 | npm ci+npm install | **已恢复** ✓（file: 依赖链接重建） |
 | TriModel 代码面（src/test/docs/ui/scripts） | 全删含 .git | **sg bare TriModel.git 克隆**（dev 顶 161d0ca） | **已恢复** ✓ |
 | TriModel/.env（2 键形，dotenvx log 实锚 injected(2)） | 删 | 不入 git；TRIMODEL_API_TOKEN 值可从 8711 trirlc-daemon.env（a5cb..13a7 配对）取 | **待恢复窗**（敏感值面+活体门，候授权） |
+
+> **【勘误注 2026-10-03，BOD #306】**上行「2 键形，dotenvx log 实锚 injected(2)」系**转述读数，未附实锚原文**；实值形以**一手 transcript 五键**为锚（BOD 采信层级裁：一手 transcript＞二手转述，2026-10-03）。非打回重验——端到端生验已盖（8711→3333 keys 链活体锚），本注仅为卷面读数层级如实声明。
 | TriModel/dist+node_modules（build 产物） | 删 | 可重建，但**活体版本基未知**（3333 活体 9-29 起，161d0ca 与活体启动基可能不同代） | **待裁**（贸然 build 有版本漂移风险） |
 | TriModel 本地未推提交（若有） | 不可知 | 本机 .git 丢失，reflog 随之；本机疑非 TriModel 主开发位（CLAUDE.md 模块布局无此仓+sg 有 p3sg-deploy 部署线），低险但不可证伪 | **候勘** |
 
