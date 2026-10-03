@@ -113,6 +113,80 @@
   - 清零断言两树各自跑（`find <树> -user root | wc -l`=0）
 - **间隙新增件注（本席补）**: 树 A chown 后至 restart 前，root 主进程仍续写（cron 5min 周期）——T+5 清零断言在 **restart 后**跑可捕获全部残留；若间隙新增件在，补一轮精准 chown 再断言（restart 后 fleet 进程新件=fleet，补一轮即稳收敛）
 
+## 十一、修窗执行录（15:00-15:3x 窗，cron e0372e84 触发）
+
+- 窗时点核对: 本地 date 现查 `2026-10-03 15:02:31 +0800`（原值粘贴）∈窗内开工；sg 钟 15:02:43 CST（同分钟对齐）
+
+### T+0 现勘（15:02-15:03，全只读）
+
+- 树A /var/lib/trimc: 总 14210 / root 14203 / 非 root 非 fleet 0——差值 7 件=fleet 属主件（合法目标身份非异常第三方），**精准 chown 正形通行**
+- 树B /srv/fleet: root=80（vs 晨勘 82，差 2=今晨 W39 已归还，账实自洽）
+- env-home.conf 键名清单=仅 HOME 单键现值 `/root`——证实 user-fleet.conf 必须带 HOME 覆盖（字典序 u 后载 ✓）
+- jobs.json 快照 `/tmp/trimc-jobs-snapshot-20261003T150313.json`，9 jobs / nextRunAtMs 9/9 完整 ✓
+- trimc-start.sh 四链 fleet 可读: SCRIPT/DIST/NODE/CWD 全 OK；TriModel/.env fleet 可读 ✓；/home/fleet fleet 可写 ✓
+
+### T+1 双树精准 chown（15:04）
+
+- 树A `find -user root -exec chown fleet:fleet {} +` 14203 件+树B 80 件→即时清零断言 0/0；活体写入面（jobs.json/notify-mailbox/outbox）fleet:fleet ✓
+
+### T+2 drop-in 落位+预检拦截（15:05-15:07）
+
+- user-fleet.conf 初版（User=fleet/Group=fleet/裸 HOME=/home/fleet）落位+daemon-reload
+- **预检拦截一处缺陷**: systemctl show 合并视图 HOME 仍=/root 且 cat-config 无 user-fleet 的 HOME 行——实锚=裸 `HOME=` 非 [Service] 合法键被 systemd **静默忽略**（unknown key）；修正=`Environment=HOME=/home/fleet`；复验 cat-config 双 HOME 行按载入序 /root→/home/fleet（后值胜）✓。**未伤活体（restart 前抓到）**
+- systemd-analyze verify trimc.service exit 0 唯一 warning=override.conf:1 assignment outside section（既有件非本窗引入，键名提取空疑特殊字符首行，本窗未动候令勘）
+- DROPIN-PATHS 六 conf 全加载（含 override/user-fleet）
+
+### T+3 单次 restart（15:06-15:08）+起败插曲
+
+- restart 前终检: NRestarts=0+since 10-02 18:50=窗内首 restart 确认
+- restart 后**起败**: activating/auto-restart，MainPID=0，healthz 000
+- journal 真因一行: `trimc-start.sh: line 17: /tmp/trimc-run.log: Permission denied`——root 期 13h+ 遗留日志文件 root:root，fleet 首启 exec 前写日志被拒 exit 1
+- 处置: /tmp 下 trimc 系 root 件三件（run.log 凶手 644+本席快照件 600+trimodel-surgery 旧目录 755）一并 chown fleet:fleet→**auto-restart 下一轮自愈成功**（journal 实锚 32 次失败循环后第一成功轮）——零我方二次 restart 动作
+
+### T+4 验收（15:09-15:10）
+
+- ps 断言: MainPID=3959407 **user=fleet** ✓；proc env 值面探针: USER=fleet/HOME=/home/fleet/TRIMC_PORT=8712/TRIMC_HOST=127.0.0.1/TRIMC_RUNAS=fleet 全对 ✓
+- 监听: 127.0.0.1:8712 pid 3959407 ✓；healthz 200 `ok:true degraded:false consecutiveFailures:0`（连败清零 ✓）
+
+### T+5 双树清零断言（15:10，restart 后跑捕获间隙件）
+
+- 首断言非零（树A=2/树B=1）——定位=15:05:00 旧 root 进程 cron 5min 周期写**间隙新增件**（jobs.json+cron log+sg-watchlist-state.json，CTO §十间隙注预言正中）——补一轮精准 chown→**两树清零 0/0** ✓
+
+### T+6 校时项定谳反转（15:11）
+
+- 令面 systemd-timesyncd enable 失败: unit 文件不存在——但 timedatectl `NTP service: active / synchronized: yes`
+- 实锚: **chronyd.service 在役自 2026-08-11 20:32（近两月）**，chronyc tracking: Stratum 3 / System time 0.000044s slow of NTP time——**sg 钟零漂移**
+- **定谳: 晨勘 §四「sg 钟快 +20s」=测量假象**（同轮区间法 LOCAL→SG→LOCAL2 的 SSH 延迟不对称所致），非真漂移
+- 处置: ⑥校时项**零动作收项**（chronyd 已覆盖 NTP 面，零新依赖满足令面「chrony 不批」；timesyncd 无需装）；§四晨勘结论候勘正
+
+### 残留一件+报裁（15:1x，双报已达）
+
+- healthz **jobCount:0（应 9）**: 源码级定谳=agent-core `dist/scheduler/job-store.js` L67-95 `loadJobStore()` 进程级 `memCache` 缓存——fleet 首启（15:06）时 jobs.json 尚 root:root 600（15:05 旧 root 进程写回的间隙件）→EACCES→`memCache={}` **永久固化**（`if (memCache)` 空对象 truthy；invalidateJobStoreCache 无运行时入口）；15:1x 补 chown 后不复愈
+- 热修复路径全堵: API PATCH/addJob 均过污染缓存；addJob 会以空缓存为基 save=丢 9 jobs（禁用）
+- **唯一修复=进程再 restart 一次**——与「本窗仅一次 restart」纪律冲突，报裁 COO（c6851db0）+CTO（df862a1d）：①特批窗内二次 restart 一次到位 ②窗收口候下窗载入
+- fallback 未触发（healthz 绿+主进程活，不在触发面）
+- 影响面注: jobCount:0 期间 sg cron 9 job 停摆（config-sync 本就分叉冻结面零新增损；watchlist 停=BOD 读数源暂缺）
+- T+7 观察注记（config-sync 权限族失败消除证据）随 cron 载入后补取
+
+## 十二、修窗收口（15:16-15:2x）——COO 裁①特批+CTO APPROVE 执行段
+
+- **裁决链**: 报裁（COO c6851db0+CTO df862a1d）→COO 裁①特批护栏三条→CTO 独立验源码级定谳（零转抄）APPROVE+BOD 特批背书（COO 转达）
+- **护栏①执行**: restart2 前 jobs.json 属主断言 `fleet:fleet 600`+FLEET-READABLE ✓（EACCES 根因面确认消除）
+- **二次 restart（15:16:44，COO/CTO/BOD 三批特批内）**: active running MainPID=3961889 **user=fleet** ✓
+- **完工锚读数（15:16:50+）**:
+  - **healthz `jobCount:9`** ✓（污染清除值面探针过；date 现查 15:16:44 死线内）
+  - **9 jobs 逐一在册**: weekly-plane-shift / config-sync-apply / clock-skew-check / orchestrate-tick / daily-progress-watcher / github-reconcile / sg-watchlist-patrol / sg-8460-probe / bod-progress-report——id 9 / nextRunAtMs 9 ✓
+  - 进程 env 终态复验（新 pid）: USER=fleet / HOME=/home/fleet / TRIMC_PORT=8712 ✓；双树终断言 root 0/0 ✓
+- **CTO 四锚对照**:
+  1. jobCount:9 ✓
+  2. degraded:false+连败零 **未达成**——归因见下（runuser 适配缺口），如实报
+  3. notify 链端到端（二次 restart 后复验）✓: 本机 8713 healthz 15:17:19（>restart2 15:16:44）`mc_link:connected / trimc:connected`=poller↔终态进程拉取链活；watchlist job 15:16:48 exit 0 执行面佐证（BOD 读数源恢复）
+  4. addJob 禁令全程维持 ✓（零 addJob/零 PATCH，store 未动）
+- **锚②阻塞归因（新暴露适配缺口，非修窗引入）**: 四 job（config-sync-apply/clock-skew-check/orchestrate-tick/daily-progress-watcher）command 字符串**硬编码 runuser**（早期按「root 主进程+runuser 降权」形态写死）——fleet 主进程下 `runuser: may not be used by non-root users` 秒败 exit 1（四 log stderr 实锚；config-sync 连败 61 持续涨，其余三个单败）。**root 跑法下这些 job 表面正常（runuser 在 root 下合法降权）——缺口=身份修复暴露旧形态依赖**。github-reconcile errs=1（01-07 旧轮 exit 1 无 runuser 字样）=非同族既有观察面
+- 成功面: weekly-plane-shift（5434ms exit 0）/sg-watchlist-patrol（exit 0）/sg-8460-probe 零败
+- **候裁件（新增）**: 4 job command runuser 适配——修法建议=PATCH 四 job payload.command 去 runuser 段（直跑即 fleet=原降权意图天然达成；数据面+零重启+即生效，applyJobPatch 支持 payload 字段实锚）vs command-handler 代码层加「uid==target 直跑」分支（一劳永逸但涉代码+重编译+sg 树冻结面）。裁定权 CTO/COO，本窗零擅动
+- fallback 全程未触发；修窗主体（③ User=fleet+④ root 归还+⑥校时反转收项）全达成，窗内主体耗时 ~15 分钟（15:02-15:17）
+
 ## 使用依据
 
 - 令: COO→SDE 批C 卫生族令（BOD #300，2026-10-03 07:57；现戳 07:59:53 同窗无矛盾）+COO #305 执行面转知（10:0x，复核 PASS，③④⑤⑥⑦四件）
