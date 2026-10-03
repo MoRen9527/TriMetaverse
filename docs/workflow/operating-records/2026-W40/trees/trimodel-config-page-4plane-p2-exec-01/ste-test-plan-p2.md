@@ -236,3 +236,7 @@ COO 即答=F-1 ② 先例口径（TRIMODEL_API_TOKEN 在 channel cmd 内自提�
 ## 使用依据
 
 P2 执行单正身（wt/board 11a52dbf 全文）；LG-035 渲染验证门家族（记忆条四条：UI spec 实现态走查/UI 交付渲染验证门/第四型跨刷新持久/真 HTTP 链路）；P1 期测试规划（ste-test-plan-p1.md，T-reg 方法与基线递延链）；P0 期 W 族教训卷（ste-test-plan.md §十三）。
+
+## 勘误注（#306 转办·STE 下窗顺手笔，2026-10-04 补）
+
+- 本卷 §Token 通道适配性实测段「channel cmd 含 TRIMODEL_API_TOKEN ✓ / TRIMODEL_ADMIN_TOKEN 缺席」所引「injected(2) 键形」读数**无独立实锚**——批A P2 毕报矛盾案（op-assembly-20261003 §55）BOD 已裁（#306，10-09）：采信层级 FSD 判定准（一手 transcript 五键形 > 二手转述两键形），本席卷面据以勘误：P2 时点通道键形以 transcript 重建面（5 键）为准，本卷原两键形表述作废；ADMIN_TOKEN 供料到位时点等卷面结论不因键形计数受影响（managed 200 四发活体读数独立成立）。教训归族=二手转述读数须附独立实锚，转述链与一手证据矛盾时先 JSON/transcript 对表（键存在性抽验≠值面验证同族）。
