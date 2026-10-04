@@ -417,6 +417,7 @@
 | 376 | 23:5x | m-cos×1（CEO批令转发b7179fc4）——CEO 23:52批「批了，加活体告警」→任务书落W41树 cron-liveness-alert-20261005（wt/board 99f4aad1：三机覆盖/三硬维度〔进程活体+cron心跳+disabled检测，healthz≠活今晚实证盲区〕/三机真实告警演练+24h零误报验收）；COS转COO排窗（建议10-05晚窗）；LG号候铸W41大表分配 |
 | 377 | 23:5x | m-cos×2（转发义务毕收讫/候推注销回执）——COS 三件转 COO 毕（8e41ec06）+合账 #374/#375 记毕+挂账 cron-liveness-alert 候 LG 号排窗读数；候推注（99f4aad1 未达 bare）已销=wt/board 28301ddf 推平 sg bare（de8ea45a..28301ddf）；COO 本机磁盘路径直读亦可 |
 | 378 | 23:5x | m-coo×2（立项承接收讫/三件回7eba97b5）——COO 有条件APPROVE 10-05晚窗（前置：白窗三死线全闭+执行席不双载）；BOD裁=执行席决策树下放（SDE双载则FSD，皆满移10-06攒批并批；CTO仅方案确认）+验收取数随施工日+1；推平口径澄清=wt/board分支09d272d2推平毕非dev收编（COO晨窗分支读法/磁盘直读两法，dev收编候收口批） |
+| 379 | 23:5x | m-coo×2（正式排窗单收讫/认裁回执）——告警排面定稿：10-05白窗三死线+CTO案头方案确认／10-06攒批窗施工(SDE/FSD余量,死线EOD)／10-07验收日(STE+BOD非作者走查,死线EOD)／滑窗保白窗优先；BOD六条全认无异议，10-07走查窗自挂 |
 致首探401（65B）剥后200——PS→跨机行尾族第三型实锚候CAO；过程坑二：append脚本io.open(w)先清空后join炸=账本文件瞬空，git checkout 38f945e5秒恢复（open-w副作用教训候CAO：先join后open-w）；/tmp token暂存shred零留。FSD开工报①抓BOD令文机位错（「sg面起非重启」vs本机8713 pid 17876在役实况）——BOD勘正令即发：冷起正身=本机面照跑（COO窗令A段正意），sg起役不立单备料态维持，在役旧值→401=预期噪音窗判读正确；m-fsd触发令+勘正令+m-coo完工回执三发成功（ad0f97f3/b6d5deef/3644b937）；8713冷起读数+notify端到端+F-4解冻候FSD段回报 |
 
 
