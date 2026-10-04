@@ -410,6 +410,7 @@
 | 369 | 21:4x | COS渲染炉毕报（21:40，硬界前1.5h收口）→BOD非作者终验PASS（本机发布位四断言全绿：旧名回流零+B5/B11词面13/13+LG-062改写词面在位+改名kebab-case 22件生效；a4dd5064达本机dev 0/0）→终验注记令发COS录大表触发令④尾闭（回执7c2fe754）——LG-062/LG-063全链闭合；附：agent-body在途改动L19候归属知情+教训三条候CAO；卡点链=COO报执行位缺位属实→COS考古配方正身A案自跑3分钟炉毕 |
 | 370 | 21:5x | CEO 21:43 两点：①公司运营大表与需求表=空表迁移即可（裁）→转COS落COO前置梳理令③④收口（回执11e68720）；②质询迁移执行主体→BOD实锚答：R-HY 河源机 TriRMC cron job 9c81c7ec（trirmc-mc.service+job store+cron 0 23 * * 0+nextRun 今晚23:00+四周成功日志）——M-SG 非执行方（sg=sg-bare git 枢纽+23:10 watcher 生产端跟跑）；BOD 预检 R-HY→sg-bare 通道✓通（fleet 身份 ls-remote，dev 顶 fdc1666=今晚渲染 merge） |
 | 371 | 22:0x | COO翻周前置梳理毕报（21:59硬界前1h）BOD验收达标回执（0d8e77aa）：①毕树登记45卷断更归零②在途挂载4线（batch-01/m2-mainline/plane-shift-local-align/rhy-401-fix均带清尾窗死线）③需求池④大表按CEO空表迁移裁落注记——锚三项全锁b16d7812 VERIFIED；23:00迁移照跑+23:10后COO核W41读数 |
+| 372 | 22:1x | CEO 22:10 令「整理进周工作平面迁移事项+定名+一并迁移」→BOD 立 runbook 正身=weekly-plane-shift-runbook.md（commit 85610ff0 本机 dev；六节：职责分工实勘定稿/翻周时间线/前置梳理五件〔含CARRY销行〕/空表迁移裁入册/W40→W41 实例/滚动规则 rolling-weekly）→随迁令发 COO（回执7655b7ce：23:11核W41时复制滚动更新实例段+W40版归档） |
 致首探401（65B）剥后200——PS→跨机行尾族第三型实锚候CAO；过程坑二：append脚本io.open(w)先清空后join炸=账本文件瞬空，git checkout 38f945e5秒恢复（open-w副作用教训候CAO：先join后open-w）；/tmp token暂存shred零留。FSD开工报①抓BOD令文机位错（「sg面起非重启」vs本机8713 pid 17876在役实况）——BOD勘正令即发：冷起正身=本机面照跑（COO窗令A段正意），sg起役不立单备料态维持，在役旧值→401=预期噪音窗判读正确；m-fsd触发令+勘正令+m-coo完工回执三发成功（ad0f97f3/b6d5deef/3644b937）；8713冷起读数+notify端到端+F-4解冻候FSD段回报 |
 
 
