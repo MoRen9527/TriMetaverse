@@ -749,3 +749,10 @@
   - 405f6678 docs(coo): 组窗三件排布+回执录账(18:2x/19:0x两段)——三件owner窗位死线全锚(CFO已签+M2明晚窗+STE/CTO勘明21:00/21:30)+SDE ScopeA毕ccfcc750互等链+ScopeB勘正认领(copilot系LG-046兼容锚非残留壳,ls-files模式漏根级文件误判)+C面五分读数+push链merge保hash解法
   - b2876290 docs(cto): 组窗令两件裁答——件③TC502追平候条件四闸全满足(0/0推平96fab42已完成态,10-05施工窗对象勘定=渲染链解冻复验链,owner=COS值席+STE验段,死线可保)+件①b14-core-bump CTO侧双签(bump形0.2.1-wave3审定+门路径/红线/四仓确认+作废条款+双签席位演进注记)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:20 +08：自上次进度提交 2c5e1edb 后新增 5 条 commit：
+  - f9b4492b merge: 并行笔收编（COO 组窗读数线）
+  - 010e7efc merge: 并行笔收编（如有）
+  - 7dc8dd1e docs(cos): 大表 LG-054 双签齐+LG-060 勘明改貌入表（COO 20:0x 读数）——054 明晚窗前置闸开（卷 b2876290）/060 追平本体完成态·10-05 对象=复验链三步·owner=COS+STE；本席两裁同发（LG-046 锚保留+TriDev 建锚）；lastSyncedAt 20:10
+  - 89f4fa9f docs(coo): 20:1x组窗三件读数进账+双签齐录账——push互等链解(405f6678+COS并行merge+2c771977推bare顶含ccfcc750),b14双签齐M2闸开(明晚SDE),LG-060改貌复验链三发毕(COS值席+STE复验+CTO门),COS锚两裁转SDE,候STE 21:00/SDE 20:30两报
+  - 0bfecf18 rename(lg-063): C2 本仓活面正名 10 件——.gitignore 两条旧目录名规则失效修正+TriDev host-onboard 探针 6 件+host-publish-manifest+TC 资产 runtime py 1+github-repo-governance；残留=小写治理锚文件名引用族候 COS 裁（README/manifest/code-state/SOP 等内容面零大写旧名）；workbench 历史条目 2+IPD events.jsonl 5+_archive 1 豁免未触（其一系 COO 在途件双禁）；py 冒烟 PY-OK
+- registry：v2.1；今日 registry 提交无变化
