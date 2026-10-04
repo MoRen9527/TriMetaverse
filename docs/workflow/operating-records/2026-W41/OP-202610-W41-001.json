@@ -11,7 +11,7 @@
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "version": "1.0.0",
-        "lastUpdated": "2026-10-04T15:26:27.403030+00:00",
+        "lastUpdated": "2026-10-04T15:46:00+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -35,8 +35,37 @@
         "TriLC",
         "TriMC"
     ],
-    "updatedAt": "2026-10-04T15:26:27.403030+00:00",
-    "activeTrees": [],
+    "updatedAt": "2026-10-04T15:46:00+00:00",
+    "activeTrees": [
+        {
+            "treeId": "bod-pipeline-batch-01",
+            "title": "LG-059/060 测试基座技术债+跨仓投影执行线（sg 值席）",
+            "status": "in-flight",
+            "path": "trees/bod-pipeline-batch-01/",
+            "related": "段1 TriRLC 收敛=10-05 白窗（CTO 解冻令 APPROVE·merge 配方禁 reset --hard·229 全量门绿+零新增回归）+② TriLC×3 同窗并批≤3h+⑤ 挂窗族并入 CTO 143 行窗；死线=10-05 EOD（CTO 圈令 20:3x 判可达不需报阻）；【加急】死线≤10-05（BOD 2026-10-04 23:4x 裁标）; W41 迁挂=BOD 23:4x 授权 COO（W40 周闭清零后补挂）"
+        },
+        {
+            "treeId": "m2-mainline-sde-window-20261001",
+            "title": "M2 主线窗余件（chromium R-HY 安装+b14 CORE_VERSION 四仓门）",
+            "status": "in-flight",
+            "path": "trees/m2-mainline-sde-window-20261001/",
+            "related": "双签齐（CFO 18:5x APPROVE+CTO 20:0x 签认五条，卷=trees/bod-pipeline-batch-13/cto-tc502-conditions-b14-cosign-20261004.md）；SDE R-HY 磁盘预检 PASS（32G 裕度 ~20×）；清尾窗=10-05 晚窗（FSD bump 落窗头→广播→SDE 四仓读数+chromium）；死线=10-05 EOD 钉死；【加急】死线≤10-05（BOD 2026-10-04 23:4x 裁标）; W41 迁挂=BOD 23:4x 授权 COO（W40 周闭清零后补挂）"
+        },
+        {
+            "treeId": "plane-shift-local-align-01",
+            "title": "LG-056 周平面迁移本机对齐（A1 自然验收腿）",
+            "status": "done",
+            "path": "trees/plane-shift-local-align-01/",
+            "related": "**毕（10-04 23:3x 闭，W41 迁挂时按实况标 done 带锚·BOD 23:4x 授权挂载）**——A1 自然验收达成：23:10:07Z TriMLC 8713 自动对齐执行体首跑 merge ok（7ef4b9c5..889c316e 机写 align-log，落位实证）+COO 23:29 补 ff 至迁移补跑笔 d0552559+23:35 收编并行笔 merge a96337bd（补对齐留痕 align-log 4 行：2 机写+1 COO）；冲突零；锚=trees/plane-shift-local-align-01/align-log.md+runbook W41 §四"
+        },
+        {
+            "treeId": "rhy-401-fix-20261003",
+            "title": "R-HY 401 修复 a 项（token 门放行链）",
+            "status": "in-flight",
+            "path": "trees/rhy-401-fix-20261003/",
+            "related": "10-03 完工卷+STE 验证卷在树（fsd-401-fix-completion/ste-401-fix-verification）；开放尾=token 同步+8713 重启照 D-04+进程内生效验证；清尾窗=10-05 晚窗（BOD 准修明窗）；今晚冻结维持；【加急】死线≤10-05（BOD 2026-10-04 23:4x 裁标）; W41 迁挂=BOD 23:4x 授权 COO（W40 周闭清零后补挂）"
+        }
+    ],
     "doneTreesFromPreviousWeek": [
         {
             "treeId": "w33-weekly-migration-ade",
