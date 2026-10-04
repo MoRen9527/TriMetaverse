@@ -796,3 +796,7 @@
 - 巡检兜底补写 @23:30 +08：自上次进度提交 889c316e 后新增 1 条 commit：
   - d0552559 ops: weekly plane shift
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 444dc067 后新增 2 条 commit：
+  - a96337bd merge: 并行笔收编（COO runbook 首滚线）
+  - fdb94849 docs(coo): runbook 首滚 W41——§四铸 W41 实例段（executor停摆→BOD补跑 d0552559→修复全链+前置五件毕况+空表裁 gap 候裁注记）；W40 版原样归档；workbench 录账
+- registry：v2.1；今日 registry 提交无变化
