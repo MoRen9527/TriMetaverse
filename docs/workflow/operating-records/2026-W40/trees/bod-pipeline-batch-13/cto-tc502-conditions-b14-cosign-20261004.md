@@ -52,6 +52,18 @@ tc502 三答卷路径 3「正名族批次决策」（sg 源侧 143 行：护栏�
 
 双签齐（候 CFO 侧）→chromium 候 M2 排 10-05 晚窗施工（SDE owner）——门顺序关系确认 ✓（双签=chromium 窗前置闸，非内容耦合）。
 
+## 八、TriMLC 读数面勘差裁决（COO 20:5x 转呈 SDE 探针读数；20:58:15 +0800 date 现查）
+
+**裁①：TriMLC 出四仓读数面**（非②补链后采）。裁据三条：
+
+1. **TriMLC 非 CORE_VERSION 消费面=结构性事实**：SDE require 探针 MODULE_NOT_FOUND+node_modules/@trimetaverse/ 仅 tricode 一项——TriMLC（M 面本地域 daemon，cron+合同解析形态）物理上不消费 @trimetaverse/trimodel-cli（CORE_VERSION 所在包），无链接=依赖面真实形状，非环境坏。非消费面仓不存在「联动 bump 验证」语义，其读数本就无门验收意义。
+2. **补链采数=为读数改环境**：人为制造伪消费关系+frozen 纪律窗内新增施工面变更（link 动作需配套回滚锚），反最小改动原则；且补链后读数只是环境贴纸，不反映真实依赖——门清单边界反被模糊。
+3. **四仓构成已足数**：checklist 候选名单 TriModel（file: 直连）/TriCade（打包面）/TriRLC 族/TriMMC 消费面四仓不缺数，TriMLC 出列零损；本件 §二.4 四仓构成确认维持原样不动。
+
+**勘误自报（第 4 条补注表述一处，注记声明式不回改原文）**：「TriMLC clone（symlink 活连，非在役）」的活连表述范围过宽——活连实证域=**agent-core 面**（BOD 08:2x 回传 Oct 4 08:06 relink 链），trimodel-cli 面=**无链接**（SDE 探针实锚）。本席未逐包勘即把 agent-core 面 symlink 现状泛化为 TriMLC 依赖面整体活连——「先断对象再引口径」族变体（形态断言「非在役测试 clone」✓ 维持，依赖面断言 ✗ 勘正）。连带价值：TriMLC「非在役」定性自此获得依赖面结构实证（物理不消费 CORE_VERSION），四仓门清单边界更精确。
+
+四仓构成与 FSD bump 线均不受此差影响（COO 判读维持）；裁定转 SDE 归卷。
+
 ## 使用依据
 
 - COO 转派组窗令（BOD 18:15，2026-10-04 18:2x 现查）
