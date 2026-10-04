@@ -11,7 +11,7 @@
   "metadata": {
     "updatedBy": "CEOChiefOfStaff",
     "version": "1.0.0",
-    "lastUpdated": "2026-10-03T03:45:52+00:00",
+    "lastUpdated": "2026-10-04T13:52:08+00:00",
     "workflowTags": [
       "每周维护",
       "CEO 总助维护面",
@@ -35,8 +35,37 @@
     "TriLC",
     "TriMC"
   ],
-  "updatedAt": "2026-09-27T15:00:10.668751+00:00",
-  "activeTrees": [],
+  "updatedAt": "2026-10-04T13:52:08+00:00",
+  "activeTrees": [
+    {
+      "treeId": "bod-pipeline-batch-01",
+      "title": "LG-059/060 测试基座技术债+跨仓投影执行线（sg 值席）",
+      "status": "in-flight",
+      "path": "trees/bod-pipeline-batch-01/",
+      "related": "段1 TriRLC 收敛=10-05 白窗（CTO 解冻令 APPROVE·merge 配方禁 reset --hard·229 全量门绿+零新增回归）+② TriLC×3 同窗并批≤3h+⑤ 挂窗族并入 CTO 143 行窗；死线=10-05 EOD（CTO 圈令 20:3x 判可达不需报阻）"
+    },
+    {
+      "treeId": "m2-mainline-sde-window-20261001",
+      "title": "M2 主线窗余件（chromium R-HY 安装+b14 CORE_VERSION 四仓门）",
+      "status": "in-flight",
+      "path": "trees/m2-mainline-sde-window-20261001/",
+      "related": "双签齐（CFO 18:5x APPROVE+CTO 20:0x 签认五条，卷=trees/bod-pipeline-batch-13/cto-tc502-conditions-b14-cosign-20261004.md）；SDE R-HY 磁盘预检 PASS（32G 裕度 ~20×）；清尾窗=10-05 晚窗（FSD bump 落窗头→广播→SDE 四仓读数+chromium）；死线=10-05 EOD 钉死"
+    },
+    {
+      "treeId": "plane-shift-local-align-01",
+      "title": "LG-056 周平面迁移本机对齐（A1 自然验收腿）",
+      "status": "in-flight",
+      "path": "trees/plane-shift-local-align-01/",
+      "related": "落位毕维持（SOP @ 28e8b16b；8713 对齐 job F-3 已修复复役）；A1=今晚 23:00 自然迁移后无人工干预对齐自然终验；死线=10-04 23:00 迁移+核（毕候验·自然验收自动销）"
+    },
+    {
+      "treeId": "rhy-401-fix-20261003",
+      "title": "R-HY 401 修复 a 项（token 门放行链）",
+      "status": "in-flight",
+      "path": "trees/rhy-401-fix-20261003/",
+      "related": "10-03 完工卷+STE 验证卷在树（fsd-401-fix-completion/ste-401-fix-verification）；开放尾=token 同步+8713 重启照 D-04+进程内生效验证；清尾窗=10-05 晚窗（BOD 准修明窗）；今晚冻结维持"
+    }
+  ],
   "doneTreesFromPreviousWeek": [
     {
       "treeId": "w33-weekly-migration-ade",
@@ -219,9 +248,326 @@
       "related": "W34 本地完成、迁移时未推送致 W35 台账漏登（2026-08-24 补）。P1-0~P1-9：白皮书 v1.0 签发+波 2、架构 v0.5、TriMLC/TriRMC 双模块立项、协议 v0.3、agent-core 合同设计稿+schema 对齐表；commit 链见 6d2357e4/37924dd8"
     }
   ],
-  "doneTreesThisWeek": [],
+  "doneTreesThisWeek": [
+    {
+      "treeId": "batch-c-hygiene-sde-20261003",
+      "title": "SDE 仓卫生批（readout+STE 验证双卷）",
+      "status": "done",
+      "path": "trees/batch-c-hygiene-sde-20261003/",
+      "related": "卷毕 10-03（施工+独立验证双卷在树）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-02",
+      "title": "批管线②：LG-057 A2/A3 试点+LG-017/018 未实现审计",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-02/",
+      "related": "LG-057 销账锚=BOD 亲验 10-01 06:1x（四判据全✓，卷 lg057-a2a3-pilot-readout.md）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-03",
+      "title": "批管线③：ink-testlib 修复策略+LG-059 TriRLC 修复读数",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-03/",
+      "related": "批链毕（09-29 窗；LG-059 本体现势另挂 activeTrees batch-01）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-04",
+      "title": "批管线④：M2 窗预检+token 驻留复扫",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-04/",
+      "related": "预检卷毕"
+    },
+    {
+      "treeId": "bod-pipeline-batch-05",
+      "title": "批管线⑤：M2 执行序对齐",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-05/",
+      "related": "对齐卷毕（M2 本体现势另挂 activeTrees）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-06",
+      "title": "批管线⑥：改指落位复查",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-06/",
+      "related": "复查卷毕"
+    },
+    {
+      "treeId": "bod-pipeline-batch-07",
+      "title": "批管线⑦：FSD T5 中继+LG-034/035 wave5 修复+LG-056 A1 断言脚本",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-07/",
+      "related": "卷毕 10-02"
+    },
+    {
+      "treeId": "bod-pipeline-batch-08",
+      "title": "批管线⑧：STE 闸3/4 复查",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-08/",
+      "related": "复查卷毕"
+    },
+    {
+      "treeId": "bod-pipeline-batch-09",
+      "title": "批管线⑨：编译门 53 读数+CTO 裁定+F-3 窗执行读数",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-09/",
+      "related": "F-3 销账锚=6c718fc4（BOD 采信 10-04 03:1x）；编译门卷毕"
+    },
+    {
+      "treeId": "bod-pipeline-batch-11",
+      "title": "批管线⑪：LG-034/035 复活读数+LG-050 试点确认+LG-053 框架稿",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-11/",
+      "related": "卷毕（LG-050 销账锚=09-30 22:2x BOD 裁① 89efd75c+9d0b8922）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-12",
+      "title": "批管线⑫：LG-040 幽灵溯源+LG-053 终稿",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-12/",
+      "related": "BOD 裁复双锚=d4fed2d7+batch-14（10-02 13:1x「LG-040 残差 T-O4 项了结」）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-13",
+      "title": "批管线⑬：TC502 路由审+CTO 双签卷+LG-053 接口审+COO 排程卷",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-13/",
+      "related": "卷功能毕——四闸全满足+双签五条签认+§八 TriMLC 裁定 f2fe323e 全落（LG-059/060 执行线另挂 activeTrees batch-01）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-14",
+      "title": "批管线⑭：STE LG-059/060 验证绿+T-O4 了结裁复",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-14/",
+      "related": "BOD 裁复双锚在案 10-02"
+    },
+    {
+      "treeId": "bod-pipeline-batch-15",
+      "title": "批管线⑮：LG-053 件①复工卷（FSD 落盘+STE 验证+BOD 复核）",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-15/",
+      "related": "复核锚=ce70115（02:44 f37e878e 验证 PASS 在链）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-16",
+      "title": "批管线⑯：公司需求池建制（CPO 铸 V1.0）",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-16/",
+      "related": "建制毕（首审取消=CEO 10-03 11:2x 令，模板保留候下周；处置裁=CEO 10-04 21:43 空表迁移，见 company-demand-pool.md 注记）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-17",
+      "title": "批管线⑰：LG-062 族施工卷（COS/COO 岗位审查+B5/B11 补写）",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-17/",
+      "related": "全链闭合——CEO 终审 PASS 10-04 17:07+渲染尾闭 BOD 非作者终验 PASS 21:47（销账锚=lg-062-final-review-pack+41 件炉毕）"
+    },
+    {
+      "treeId": "bod-pipeline-batch-18",
+      "title": "批管线⑱：batch-15 复工单",
+      "status": "done",
+      "path": "trees/bod-pipeline-batch-18/",
+      "related": "复工完成态毕（batch-15 件①毕在链）"
+    },
+    {
+      "treeId": "bod-routing-audit",
+      "title": "BOD 路由审计（CAO）",
+      "status": "done",
+      "path": "trees/bod-routing-audit/",
+      "related": "审计卷毕"
+    },
+    {
+      "treeId": "cast-order-mainflow",
+      "title": "cast-order 主流程草案卷（CAO）",
+      "status": "done",
+      "path": "trees/cast-order-mainflow/",
+      "related": "草案卷存档态归档——无未决项登记（unresolved-items 零登记）、无开放尾；owner CAO 需续笔时走新周立卷"
+    },
+    {
+      "treeId": "config-sync-window-20261003",
+      "title": "16:00 config-sync 组窗收口卷（COO 主刀）",
+      "status": "done",
+      "path": "trees/config-sync-window-20261003/",
+      "related": "六项+扩容五项全闭（收口锚=coo-window-closeout-readout.md 16:45:21）"
+    },
+    {
+      "treeId": "coo-d23-duty-interruption-01",
+      "title": "D-23 值席中断案（CHO findings 卷）",
+      "status": "done",
+      "path": "trees/coo-d23-duty-interruption-01/",
+      "related": "案闭（D-23 审计线随 d23-standby-gap-audit 同闭）"
+    },
+    {
+      "treeId": "cto-8710-gate-audit-01",
+      "title": "8710 端口事件 token 门审计",
+      "status": "done",
+      "path": "trees/cto-8710-gate-audit-01/",
+      "related": "技术线全闭（大表 8710 行：①审计②迁移③A 案 CEO 面裁转正式 09-30 21:15）"
+    },
+    {
+      "treeId": "custom-slot-eval-20261003",
+      "title": "插值填槽双席评估（briefs 卷）",
+      "status": "done",
+      "path": "trees/custom-slot-eval-20261003/",
+      "related": "定谳锚=f6ebe0201+6a45c6bbc 批令链当日闭（10-03 13:26 CEO 批令；试点本体候 COO 排窗令，无树面）"
+    },
+    {
+      "treeId": "d15-8460-probe-job-01",
+      "title": "D-15 8460 探针 job 施工读数",
+      "status": "done",
+      "path": "trees/d15-8460-probe-job-01/",
+      "related": "探针毕（D-15 线闭）"
+    },
+    {
+      "treeId": "d23-standby-gap-audit",
+      "title": "D-23 值席缺口审计三卷（CAO）",
+      "status": "done",
+      "path": "trees/d23-standby-gap-audit/",
+      "related": "审计线闭（传播补丁计划+制度审计+值席排班设计）"
+    },
+    {
+      "treeId": "duty-silence-probe-01",
+      "title": "值席静默探测排班设计+CPO 语义裁定",
+      "status": "done",
+      "path": "trees/duty-silence-probe-01/",
+      "related": "探测线闭"
+    },
+    {
+      "treeId": "gate5-pause-protocol-01",
+      "title": "闸5 暂停规程 CPO 对表正身",
+      "status": "done",
+      "path": "trees/gate5-pause-protocol-01/",
+      "related": "定谳锚=b831145e（BOD 采信 03:1x）+B 件解冻毕对表 19514659"
+    },
+    {
+      "treeId": "hub-silent-detect-01",
+      "title": "hub 静默探测读数（FSD 09-30）",
+      "status": "done",
+      "path": "trees/hub-silent-detect-01/",
+      "related": "探测毕"
+    },
+    {
+      "treeId": "lg017-018-upgrade-window-audit",
+      "title": "LG-017/018 升级窗审计（CTO）",
+      "status": "done",
+      "path": "trees/lg017-018-upgrade-window-audit/",
+      "related": "审计毕（LG-017/018 已销账族）"
+    },
+    {
+      "treeId": "lg059-seg13-survey-20261004",
+      "title": "LG-059 段13 勘明卷（STE survey+CTO 收敛裁定）",
+      "status": "done",
+      "path": "trees/lg059-seg13-survey-20261004/",
+      "related": "勘明毕——CTO 圈令三项裁笔 20:3x 落（解冻令 APPROVE+TriLC×3 同窗+⑤挂窗族入 143 行窗）；LG-059 执行本体另挂 activeTrees batch-01"
+    },
+    {
+      "treeId": "lg063-render-batch-20261004",
+      "title": "LG-063 渲染三并批执行卷",
+      "status": "done",
+      "path": "trees/lg063-render-batch-20261004/",
+      "related": "炉毕 21:35 全绿（41 件/drift 0/errors 0/旧名零回流）+BOD 非作者终验 PASS 21:47；渲染位 a4dd5064 推平 sg bare 同顶（卷=cos-render-exec-readout-20261004.md）"
+    },
+    {
+      "treeId": "maint-batch-3-4-20261003",
+      "title": "维护批 3/4 CTO 裁定五卷",
+      "status": "done",
+      "path": "trees/maint-batch-3-4-20261003/",
+      "related": "裁定全落（roster 定性销账锚=fcf9bf0a+8234a935；unresolved-items 零登记）"
+    },
+    {
+      "treeId": "rhy-401-key-audit",
+      "title": "R-HY 401 key 审计+CTO 程序审",
+      "status": "done",
+      "path": "trees/rhy-401-key-audit/",
+      "related": "审计毕 10-03（修复线开放尾另挂 activeTrees rhy-401-fix）"
+    },
+    {
+      "treeId": "rhy-test-env-isolation-20261003",
+      "title": "R-HY 测试环境隔离（plan+B 段执行+双验证）",
+      "status": "done",
+      "path": "trees/rhy-test-env-isolation-20261003/",
+      "related": "隔离落地验证毕 10-03（SDE 执行+STE 双验证卷在树）"
+    },
+    {
+      "treeId": "seat-resume-auto-01",
+      "title": "LG-055 席看门狗断线接续（设计+B 段实弹收口）",
+      "status": "done",
+      "path": "trees/seat-resume-auto-01/",
+      "related": "是（BOD 核过 10-01 四条裁据+B 段实弹 10-02 夜窗完跑收口；C 13 席推广候窗另令非本件阻塞）"
+    },
+    {
+      "treeId": "tonight-window-order-20261001",
+      "title": "10-01 晚窗令（BOD 代发版+M2 链 owner 勘卷）",
+      "status": "done",
+      "path": "trees/tonight-window-order-20261001/",
+      "related": "窗链毕；杂散令文件 tonight-window-order-20261001.md 已归位本目录（COO 10-04 21:52 git mv）"
+    },
+    {
+      "treeId": "tree-node-closure-01",
+      "title": "LG-057 树节点收口心跳规程",
+      "status": "done",
+      "path": "trees/tree-node-closure-01/",
+      "related": "是（10-01 06:1x BOD 裁销账，ddd29fde 三件套+batch-02 试点卷）"
+    },
+    {
+      "treeId": "tricode-agenticore-sgcheck",
+      "title": "TriCode agent-core sg 三查读数",
+      "status": "done",
+      "path": "trees/tricode-agenticore-sgcheck/",
+      "related": "毕（roster 定性族销账锚=8234a935）"
+    },
+    {
+      "treeId": "trimc-root-to-fleet-migration-20261003",
+      "title": "trimc runAs 清三件修窗（CTO 窗计划卷）",
+      "status": "done",
+      "path": "trees/trimc-root-to-fleet-migration-20261003/",
+      "related": "是（修窗终批销账锚=8b6f6767 15:47 COO 录账）"
+    },
+    {
+      "treeId": "trimodel-config-page-4plane-01",
+      "title": "LG-058 配置页四域面主树（联审+双席计划+P2 IA）",
+      "status": "done",
+      "path": "trees/trimodel-config-page-4plane-01/",
+      "related": "毕候验——P0/P1 期+批A 工程面销账（1beeed95 14:28）+非作者走查毕（5275bb7e）；候 CEO 统一亲测终球（与 LG-053 同球）"
+    },
+    {
+      "treeId": "trimodel-config-page-4plane-p0-exec-01",
+      "title": "LG-058 P0 执行单（G10 门+终裁）",
+      "status": "done",
+      "path": "trees/trimodel-config-page-4plane-p0-exec-01/",
+      "related": "毕（批A 完工销账锚=1beeed95）"
+    },
+    {
+      "treeId": "trimodel-config-page-4plane-p1-exec-01",
+      "title": "LG-058 P1 执行单",
+      "status": "done",
+      "path": "trees/trimodel-config-page-4plane-p1-exec-01/",
+      "related": "毕（P1 期闭合销账）"
+    },
+    {
+      "treeId": "trimodel-config-page-4plane-p2-exec-01",
+      "title": "LG-058 P2 执行单",
+      "status": "done",
+      "path": "trees/trimodel-config-page-4plane-p2-exec-01/",
+      "related": "毕（批A 完工销账+走查四族零实锤 5275bb7e）"
+    },
+    {
+      "treeId": "trimodel-test-env-policy-20261003",
+      "title": "TriModel 测试环境策略定稿",
+      "status": "done",
+      "path": "trees/trimodel-test-env-policy-20261003/",
+      "related": "策略定稿毕 10-03"
+    },
+    {
+      "treeId": "trirlc-defect-batch-d15-01",
+      "title": "TriRLC D-15 缺陷批",
+      "status": "done",
+      "path": "trees/trirlc-defect-batch-d15-01/",
+      "related": "毕（D-15 线闭）"
+    }
+  ],
   "nextActions": [
-    "2026-10-03 CEO 11:2x 令：CPO 需求池首审本周取消（模板保留，下周研究填入）；12:00 联审 cron 已禁用（cron_muqyqy4g_ippm enabled=0 回滚锚 --enable）；company-demand-pool.md 随 W40→W41 周平面迁移勿遗漏（MIG-W41-demandpool）"
+    "2026-10-03 CEO 11:2x 令：CPO 需求池首审本周取消（模板保留，下周研究填入）；12:00 联审 cron 已禁用（cron_muqyqy4g_ippm enabled=0 回滚锚 --enable）；company-demand-pool.md 随 W40→W41 周平面迁移勿遗漏（MIG-W41-demandpool）",
+    "2026-10-04 21:4x COO 翻周前置梳理（BOD 令·CEO 21:37 点正，23:00 硬界前毕）：①doneTreesThisWeek=45 卷登记+②activeTrees=4 线挂载（bod-pipeline-batch-01/m2-mainline/plane-shift-local-align/rhy-401-fix，均带清尾窗+死线）——分类以 trees/ 目录实清点+大表行态为据；③需求池处置=CEO 21:43 裁空表迁移（W41 空表新立，旧表原 W40 归档，注记落 company-demand-pool.md）；④大表落位=CEO 21:43 裁 W41 空表新命名立+在途行照未决项机制滚动（对表结论落 task-inventory-20260930.md §四）；⑤OP 未决项=迁移器自动面"
   ],
   "carry_over_from_w31": [
     "CARRY-20260728-001: trilc TUI CC P0 — 8w+ ⚠️⚠️ active — W35(8/24) CEO 裁决：推进（P0 主线）",
