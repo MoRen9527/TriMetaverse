@@ -77,3 +77,6 @@
   - d7120691 merge: 并行笔收编（晨线）
   - c7a8ce7e docs(coo): workbench——LG-064 施工放派流转毕（排窗照生效单+FSD 主派/SDE 备援拆派毕+验收流前三棒全闭，候 10-06 施工）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @07:40 +08：自上次进度提交 86ca16a2 后新增 1 条 commit：
+  - 3b83ae56 docs(cos): LG-059 走销已销态（BOD 认定 06:52 门绿 693/693/0 判据满足）+双调度器裁停执行毕注记（PATCH 200+store/api 双面 False 零重启，job b00b0070 勘注）；lastSyncedAt 随更
+- registry：v2.1；今日 registry 提交无变化
