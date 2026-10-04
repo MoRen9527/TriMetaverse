@@ -725,3 +725,11 @@
   - aea79e89 docs(cto): rebuild前置勘反预期终裁——生产面全symlink活连读数下维持顺序末位(生效时机=Node模块缓存重启才载+雷向复核:旧dist才是炸形无急性雷+引入炸唯一通道superRefine未勘)+执行三条款(备份锚/验证读数/症状驱动反转)
   - 87634c56 docs(cto): loadOne family 修法稿审裁 APPROVE——family早退+逐字段守卫对表终谳架构面+行为核三读数采信(可见性零回归实证注)+终谳卷验收门warn表述勘意注记+sg dist rebuild并裁(排序末位+symlink前置勘分支)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:30 +08：自上次进度提交 d3d0d563 后新增 3 条 commit：
+  - 7e98e4ef docs(workflow): 编译门 §五序 3/4 读数卷——TriCompany 拉平 96fab42+dist 重建（备份锚先行）+TC 包门 55/55+TriMLC 双态读数（a 未合 4 错预告兑现/b 修稿 0 错效力实证）+TriMMC 活面健康；TriMLC 拉平腿止停候裁（2bf1919 仅存 dev 机未达 sg bare 实锚）@m-duty-fsd
+  - 9395bc6e docs(coo): D-42链收尾+排期锁确认——CAO落章毕(TC 96fab42)+机器门排期锁10-06同炉(contingence 10-07),转呈链全闭;FSD loadOne录账知会收讫(2bf1919,617/623);晨笔race照判例处置毕
+  - 492acf6e docs(coo): D-42裁决闭环录账——CAO件转呈BOD四裁全准(升格准/D-42四款批准落章/打包窗变更准/机器门排期CAO-COO对表定),排期提议10-06同炉+contingence 10-07,COS席同步令照转CAO,本席合规面即时生效(款1-4)
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 87235612 后新增 1 条 commit：
+  - 986ad2ae docs(workflow): 编译门序3收尾补记——TriMLC 拉平 2bf1919+check 0 错转正（(b) 预演转正式）；拉平腿闭 §五序 3/4 收官 @m-duty-fsd
+- registry：v2.1；今日 registry 提交无变化
