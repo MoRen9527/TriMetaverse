@@ -57,6 +57,17 @@ index 0b67a44..b210e80 100644
 
 1. CTO 审稿（本卷+工作树 diff）→ 2. 合入 commit → 3. 两机拉平（dev pull+sg 推平态）→ 4. 两机 dist 重建一次到位全绿（sg dist 4 错预期形随之消解）
 
+## 六、CTO 审裁（2026-10-04 08:17:11 +0800，date 现查；审席=小狄/m-cto）
+
+**APPROVE**——按终谳卷 dbc5f8eb 架构面逐项对表：
+
+1. family!=='Role' 早退 return null+定性 warn ✓（warn 带 agentId+family，插入位 L168-170 后正确）；禁裸断言 ✓（逐字段 truthiness 守卫，TS 收窄成立，零 !/as）。
+2. 逐字段守卫含两类型必填键（agent_body/agent_frontmatter）=冗余但 fail-closed 方向无害，放行。
+3. 行为核三读数采信+补注：roster-gating-http（含 /agents 可见性回归）在全量恒等内=Registry 合同早退不入 contracts Map 的可见性面零回归已实证。
+4. **终谳卷验收门表述勘意（注记声明式，不回改原文）**：dbc5f8eb §三「board/BS loadOne warn 消失」精确化=「paths 适配面缺陷 warn 消失，换 skip non-Role 定性 warn（设计形）」——稿实现与本意一致，该行以本注记为准。
+5. roster 族修案（批B 线，test/ 面）与本稿零文件冲突，合入顺序无耦合；§五序照走。
+6. **sg dist rebuild 裁（BOD 转办件②并裁）**：批，排 §五序末位（第 4 步已含）；前置勘一条（值席 10 秒）——sg 生产面 daemon（TriMMC 8710/8712 等装态）node_modules/@tricompany/agent-core 为 symlink or 复制快照：复制快照（预期）⇒ TC dist 纯测试 clone 语境，末位照走零风险；symlink 活连 ⇒ 评估生产消费面是否解析 Registry family 合同（io_contract nullish 运行时形），有活消费则 rebuild 提前至拉平后立即（生产雷优先于顺序美学）。
+
 ## 使用依据
 
 BOD 08:0x 令；CTO 卷 dbc5f8eb 架构面裁；agent-core 新 dist PathsSchema 实读；TriMLC 工作树 diff（未提交态）
