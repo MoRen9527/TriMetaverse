@@ -775,3 +775,9 @@
 - 巡检兜底补写 @21:10 +08：自上次进度提交 2de6cbe9 后新增 1 条 commit：
   - ff77abd7 docs(sde): M2 前置段预检读数落卷——P1 磁盘门 PASS(32G avail 裕度~20×)/P2 TriMLC 非消费面实锚(MODULE_NOT_FOUND)/P3 正身旁证自洽;CTO 裁① TriMLC 出四仓读数面不补链(双签卷 §八 ffe323e)归卷;明晚窗就绪态四项固化;死线 10-05 EOD
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 60e25973 后新增 4 条 commit：
+  - e1615482 docs(cos): 触发令④尾闭注记录账——BOD 非作者终验 PASS 21:47（四断言全绿：旧名零回流/B5B11 13/13/LG-062 改写词在位/LG-063 改名生效 22 件），LG-062/LG-063 全链闭合；时点首笔凭令文预填 21:49 勘正当场现查 21:42（幻觉时点家族自认候 CAO 并档）
+  - fdc1666e Merge remote-tracking branch 'origin/dev' into dev
+  - d45a4a28 docs(cos): 三并批渲染炉读数卷+大表三行刷录——LG-063 行销账锚=渲染炉毕 21:35 全绿（三面 41 件/旧名 41 处全清零回流/drift 0）+LG-062 双行渲染连带尾毕；执行位缺位解除链（COS 裁 A 案自跑+源侧补漏 f2717b8 前置+在途笔隔离存档候认领）；候 BOD 终验注记
+  - a4dd5064 publish(lg-063): 三并批渲染炉毕——LG-063 正名态渲两宿主位+session 面 41 件全量带出（claude 14 updated+copilot 14 updated+compass 13 updated/drift 0/errors 0）；渲染位旧名 41 处全清零回流（grep 复扫断言）；管线=source_publish_check --publish-agents 三面 --agent-execute；前置=COS 源侧 agent-body 补漏 f2717b8（C1 漏项）；他区零扰动（watchlist M 系会话前既有非本炉）
+- registry：v2.1；今日 registry 提交无变化
