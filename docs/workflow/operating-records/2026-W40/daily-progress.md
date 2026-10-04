@@ -800,3 +800,9 @@
   - a96337bd merge: 并行笔收编（COO runbook 首滚线）
   - fdb94849 docs(coo): runbook 首滚 W41——§四铸 W41 实例段（executor停摆→BOD补跑 d0552559→修复全链+前置五件毕况+空表裁 gap 候裁注记）；W40 版原样归档；workbench 录账
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:50 +08：自上次进度提交 56fd399e 后新增 4 条 commit：
+  - f104435c docs(coo): workbench 终锚——BOD 追认 align-01 done 处置+三件验收 PASS（487561ca）+今晚翻周线闭合确认
+  - 487561ca docs(coo): BOD 23:4x 两裁授权直落——α 空表两件立（W41 需求池 DEM-003 续号+大表 task-inventory-20261005 七列骨架）+β 挂 4 线入 W41 activeTrees（三线加急死线≤10-05，align-01 按实况标 done 带锚）+在途迁挂机制转正铸 runbook §二 常设步
+  - 8a34c720 merge: 并行笔收编（COO 翻周收官线）
+  - a849806f docs(coo): 翻周线收官——runbook 勘注（BOD 根因终版+复活探针+gap② 在途线未迁挂候裁+TriMLC 自动对齐落位实证）；align-log 补 COO 补对齐留痕；workbench 录账
+- registry：v2.1；今日 registry 提交无变化
