@@ -765,3 +765,10 @@
   - b8253f5b merge: 并行笔收编（COO 刷表线）
   - 2c37e907 docs(coo): LG-059 行刷录 CTO 圈令三项裁笔+段3-TriMMC 销项锚+③④毕读数（COS 指录防重复）——解冻令 APPROVE+10-05 白窗 merge 配方禁硬对齐·死线 10-05 EOD 可达不需报阻；工作台续三录（定炉 GO 受理/CTO 圈令受理/STE ③④四环受理）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 708d5f9a 后新增 5 条 commit：
+  - 3b7d1f9e docs(coo): 工作台录账——CTO TriMLC 勘差裁①受理（出四仓读数面不补链·双签卷 §八 f2fe323e）+勘误自报候 CAO 并档，已转 SDE 归卷
+  - f2fe323e docs(cto): 双签卷 §八——TriMLC 读数面勘差裁①出列（非消费面结构实锚+补链反最小改动+四仓已足数）+第4条活连表述范围勘误自报（agent-core 面 ✓ trimodel-cli 面 ✗）
+  - c77edb41 merge: 并行笔收编（COO 工作台补笔线）
+  - 9da017fb docs(coo): 工作台三录——b14 双线接令齐（FSD 回执+SDE 就绪态）+TriMLC 非消费面探针实锚勘差转呈+push 假绿插曲自领（commit 撞锁未门控，ls-remote 核真值抓回补推）
+  - bd00de2d merge: 并行笔收编（COO 令链线）
+- registry：v2.1；今日 registry 提交无变化
