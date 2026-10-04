@@ -781,3 +781,9 @@
   - d45a4a28 docs(cos): 三并批渲染炉读数卷+大表三行刷录——LG-063 行销账锚=渲染炉毕 21:35 全绿（三面 41 件/旧名 41 处全清零回流/drift 0）+LG-062 双行渲染连带尾毕；执行位缺位解除链（COS 裁 A 案自跑+源侧补漏 f2717b8 前置+在途笔隔离存档候认领）；候 BOD 终验注记
   - a4dd5064 publish(lg-063): 三并批渲染炉毕——LG-063 正名态渲两宿主位+session 面 41 件全量带出（claude 14 updated+copilot 14 updated+compass 13 updated/drift 0/errors 0）；渲染位旧名 41 处全清零回流（grep 复扫断言）；管线=source_publish_check --publish-agents 三面 --agent-execute；前置=COS 源侧 agent-body 补漏 f2717b8（C1 漏项）；他区零扰动（watchlist M 系会话前既有非本炉）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:00 +08：自上次进度提交 4cc96b31 后新增 4 条 commit：
+  - 764d104d merge: 并行笔收编（COO 翻周四件线）
+  - b16d7812 docs(coo): 翻周前置梳理四件毕——W40 索引毕树登记 45 卷+在途挂载 4 线（均带清尾窗+死线）+需求池空表迁移处置注记（CEO 21:43 裁）+大表 §四落位对表结论+杂散令文件归位 git mv；workbench 补催炉 A 案毕/勘误受理/翻周令三笔
+  - ec1c3664 docs(cto): 渲染 runbook 技审卷——APPROVE+勘意三条（19/22 语境钉死/status 同病补注/样板微勘）+长期修法约束（summary 四键=ADE 不变式禁动，最小修=status 扩容一行）
+  - 3ec26d69 docs(board): 翻周迁移遗漏查证卷——近4周三类索引登记系统性失灵(毕树W39断/在途零挂载/裁而未销8项)+未决项平移唯一健康
+- registry：v2.1；今日 registry 提交无变化
