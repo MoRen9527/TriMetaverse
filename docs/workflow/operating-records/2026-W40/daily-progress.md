@@ -756,3 +756,7 @@
   - 89f4fa9f docs(coo): 20:1x组窗三件读数进账+双签齐录账——push互等链解(405f6678+COS并行merge+2c771977推bare顶含ccfcc750),b14双签齐M2闸开(明晚SDE),LG-060改貌复验链三发毕(COS值席+STE复验+CTO门),COS锚两裁转SDE,候STE 21:00/SDE 20:30两报
   - 0bfecf18 rename(lg-063): C2 本仓活面正名 10 件——.gitignore 两条旧目录名规则失效修正+TriDev host-onboard 探针 6 件+host-publish-manifest+TC 资产 runtime py 1+github-repo-governance；残留=小写治理锚文件名引用族候 COS 裁（README/manifest/code-state/SOP 等内容面零大写旧名）；workbench 历史条目 2+IPD events.jsonl 5+_archive 1 豁免未触（其一系 COO 在途件双禁）；py 冒烟 PY-OK
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:30 +08：自上次进度提交 fd6bf1ca 后新增 2 条 commit：
+  - d35a1426 merge: 并行笔收编（如有）
+  - 30f04151 docs(cos): LG-063 施工面全绿+定炉 GO 今晚收口批同炉入表（COS 裁 20:23）——四料齐 23:00 硬界前置全清+尾注小写治理锚三串候 CTO 统裁；段3-TriMMC 缺测试库笔准销（双锚证据，裁发 COO 随 059 行刷录）；lastSyncedAt 20:24
+- registry：v2.1；今日 registry 提交无变化
