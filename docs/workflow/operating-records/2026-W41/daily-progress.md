@@ -62,3 +62,10 @@
 - 巡检兜底补写 @06:50 +08：自上次进度提交 7172302c 后新增 1 条 commit：
   - 79db9669 docs(coo): workbench——STE 白窗读数收讫（②⑥毕/①CONDITIONAL 在修）+GitHub 仓名裕度裁（不插白窗攒批窗办+CTO/BOD 两前置）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @07:00 +08：自上次进度提交 081cd073 后新增 5 条 commit：
+  - d77d80d9 docs(board): BOD认账——LG-064方案确认毕施工放派(排窗COO裁)
+  - 0cdc55ae docs(cto): LG-064 活体告警技术方案确认——两层监控架构（L1 异体发报+L2 SSH 跨机兜底=递归盲区正解）+心跳判据（3×容差+30min 绝对窗+degraded 直告）+演练安全形四款（mock unit+测试 job disabled，禁停正主可达）
+  - b9c26b11 docs(board): LG-059认定笔勘正——毕卷随b34357db上树缺席句作废
+  - 11a54655 docs(board): BOD裁笔——LG-059施工毕验收认定(毕卷缺席候补推不阻裁)+双调度器定谳认账(sg侧裁停放行)
+  - b34357db docs(cto): LG-059 收敛窗毕卷（五步链+fail 四族归因+693/693/0 门绿三端推平 5481f4f）+双调度器定谳（留 R-HY 正形，sg TriMMC 周迁移 job 裁停非删）
+- registry：v2.1；今日 registry 提交无变化
