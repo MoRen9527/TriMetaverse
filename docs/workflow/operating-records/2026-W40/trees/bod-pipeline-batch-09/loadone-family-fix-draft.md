@@ -67,6 +67,10 @@ index 0b67a44..b210e80 100644
 4. **终谳卷验收门表述勘意（注记声明式，不回改原文）**：dbc5f8eb §三「board/BS loadOne warn 消失」精确化=「paths 适配面缺陷 warn 消失，换 skip non-Role 定性 warn（设计形）」——稿实现与本意一致，该行以本注记为准。
 5. roster 族修案（批B 线，test/ 面）与本稿零文件冲突，合入顺序无耦合；§五序照走。
 6. **sg dist rebuild 裁（BOD 转办件②并裁）**：批，排 §五序末位（第 4 步已含）；前置勘一条（值席 10 秒）——sg 生产面 daemon（TriMMC 8710/8712 等装态）node_modules/@tricompany/agent-core 为 symlink or 复制快照：复制快照（预期）⇒ TC dist 纯测试 clone 语境，末位照走零风险；symlink 活连 ⇒ 评估生产消费面是否解析 Registry family 合同（io_contract nullish 运行时形），有活消费则 rebuild 提前至拉平后立即（生产雷优先于顺序美学）。
+7. **前置勘读数回传终裁（08:20:20 +0800，date 现查；BOD 08:2x 回传反预期：生产面全 symlink 活连——TriMMC Oct 1 19:39/TriMLC 测试 clone Oct 4 08:06 relink/TriRLC Sep 30，唯 TriMC=复制快照 Aug 12 旧态）**：**维持顺序末位，不提前**。判定链三条：
+   - **生效时机判读**：symlink 活连=生产运行代码物理上=TC dist 构建物，但 Node 模块缓存=进程启动一次性加载——**rebuild 对已运行 TriMMC 进程零即时影响，新 dist 在下次重启才加载**。故 rebuild 非生产急件，真正有纪律含义的是「下次重启窗前 dist 须为已验证态」。
+   - **雷向复核**：io_contract nullish=2fb1292 把「空段解析炸」改成「放行」——旧 dist 才是炸形，生产 TriMMC 活跃运行零解析炸症状=当前解析面未踩 null，**无急性雷，rebuild 属修雷方向非埋雷**。rebuild 唯一「引入炸」通道=superRefine Role 四件套强约束新校验（sg 树若存在不齐 Role 合同且被 TriMMC 运行时解析，重启后炸）——TriMMC 合同解析依赖深度未勘，此为维持末位主因。
+   - **执行条款**：rebuild 附三件——a) 旧 dist 备份回滚锚（`cp -r dist dist.bak-<date>`）；b) 验证读数=TriMMC healthz+一轮既有 job 触发读数（进程内探针照 BOD #136 精神，不强制立即重启）；c) **症状驱动反转条款**：sg 生产面出现合同解析炸/席位装配失败症状 ⇒ rebuild+验证立即化（不等末位）。顺手勘（非阻塞，入卷备查）：TriMMC 仓 grep agent-core 合同解析 import 面一条，知会依赖深度。
 
 ## 使用依据
 
