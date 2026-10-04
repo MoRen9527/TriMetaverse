@@ -737,3 +737,9 @@
   - 8246b41d merge: 并行笔收编（如有）
   - 9f548d24 docs(cos): CEO 终审 PASS 销账三行（BOD 17:07 触发令）——LG-062 主行+件②行改是（销账锚=17:07+终审包+STE 13/13）+LG-063 行转在途（COS→COO 派工令已发 8bdd758f）；渲染三并批排窗挂本席；lastSyncedAt 17:09
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:50 +08：自上次进度提交 e0fd48f8 后新增 4 条 commit：
+  - 12dfa86d merge: 并行笔收编（如有）
+  - 8533cdac docs(cos): 大表 LG-054 行死线 10-05 EOD 钉死（组窗令落 17:48 确认+BOD 18:49 催办令载）；组窗三件催办在途 COO 回执候达；lastSyncedAt 18:59
+  - ccfcc750 rename(lg-063): TriDev-copilot-host-assets→TriDev-host-assets 目录正名 226 件（git mv 保历史；CEO 终审 10-04 17:07/COS 令 COO 转派；LinkType 两层零 REPARSE 预检过；参照 LG-046 TriCompany 侧先例；旧路径别名锚候裁未建）Co-Authored-By: Claude Code <noreply@anthropic.com>
+  - d4710ef5 docs(coo): LG-063改名派工录账——实勘三读数(TriCompany侧已新名459在轨/copilot残留壳0在轨候勘删/TriDev 226在轨=主标的),派工SDE三Scope(A git mv+B先勘后删+C两分含历史面硬豁免),时点A+B 18:3x/C报20:30/收口22:00护23:00迁移,COS排窗预裁同炉优先
+- registry：v2.1；今日 registry 提交无变化
