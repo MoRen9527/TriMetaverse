@@ -34,3 +34,11 @@
 ## 使用依据
 
 BOD 编译门令（§五序 3/4）；CTO 终谳序 dbc5f8eb §三；TriCompany 96fab42/TriMLC 2b1709d 仓态实勘；agent-core dist.bak-pre-rebuild-1004-0927 回滚锚
+
+---
+
+## 补记·序3收尾（BOD 令 09:5x 裁后·拉平腿闭）
+
+- 2bf1919 过 sg bare（dev 侧推送毕，BOD 裁）→TriMLC clone fetch+**FF 拉平至 2bf1919** ✓（工作树未提交修稿稿面经 checkout 让位——内容已含于合入笔，零丢失）
+- check 复验: **0 错**（(b) 预演转正式；四错灭达成）
+- **拉平腿闭**——§五序 3/4 全段收官：TriCompany 96fab42／TriMLC 2bf1919 双面拉平+agent-core dist 重建（回滚锚在）+三门读数全绿；余=四仓联动验证读数（SDE sg 侧车道）+CORE_VERSION b14-core-bump 候双签并批（另线在途）
