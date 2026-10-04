@@ -71,6 +71,7 @@ index 0b67a44..b210e80 100644
    - **生效时机判读**：symlink 活连=生产运行代码物理上=TC dist 构建物，但 Node 模块缓存=进程启动一次性加载——**rebuild 对已运行 TriMMC 进程零即时影响，新 dist 在下次重启才加载**。故 rebuild 非生产急件，真正有纪律含义的是「下次重启窗前 dist 须为已验证态」。
    - **雷向复核**：io_contract nullish=2fb1292 把「空段解析炸」改成「放行」——旧 dist 才是炸形，生产 TriMMC 活跃运行零解析炸症状=当前解析面未踩 null，**无急性雷，rebuild 属修雷方向非埋雷**。rebuild 唯一「引入炸」通道=superRefine Role 四件套强约束新校验（sg 树若存在不齐 Role 合同且被 TriMMC 运行时解析，重启后炸）——TriMMC 合同解析依赖深度未勘，此为维持末位主因。
    - **执行条款**：rebuild 附三件——a) 旧 dist 备份回滚锚（`cp -r dist dist.bak-<date>`）；b) 验证读数=TriMMC healthz+一轮既有 job 触发读数（进程内探针照 BOD #136 精神，不强制立即重启）；c) **症状驱动反转条款**：sg 生产面出现合同解析炸/席位装配失败症状 ⇒ rebuild+验证立即化（不等末位）。顺手勘（非阻塞，入卷备查）：TriMMC 仓 grep agent-core 合同解析 import 面一条，知会依赖深度。
+8. **顺手勘读数回传终判（08:41:33 +0800，date 现查；BOD 08:3x 回传）**：TriMMC import 面=广而浅（8+ 文件 type-only 居多运行时零加载），运行时值 import 三点中合同解析唯一点=**onboarding/session-initializer.ts:12 loadContractV3**（新会话装配时点触发，非常驻主路径；cron/routes validateCronExpression 与合同解析无关）。**炸形条件两收窄全灭**：①暴露时点=onboarding 装配瞬间（onboarding 对象=员工席=Role 形，Registry 合同不在装配路径）；②对象合同=13 员工席合同四件套全齐（2fb1292 包门 55/55 时「13 Role 现役全约束」实证+source-agents 零 diff+两机同顶 20cf17f）——**rebuild 后重启加载新 dist，onboarding 装配零炸**。§六.7 维持末位主因（依赖深度未勘）就此勘毕消解：维持末位从「有未勘通道的保守」升级为「零风险确认+纯排序等待窗短」，§五序末位 rebuild 放心走，无需本席二次确认。验证三条款照旧（备份锚/读数/症状反转条款保留为一般性护栏）。
 
 ## 使用依据
 
