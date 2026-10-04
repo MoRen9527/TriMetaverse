@@ -37,3 +37,7 @@
   - 0b8d007c docs(cos): W41 大表活体告警行授号 LG-064——行首列回刷+BOD 03:2x 令晨窗项提前办；lastSyncedAt 随更
   - 524c69cf docs(board): W41大表首刷——W40未完11行+W41新增活体告警1行(CEO 03:1x令提前首刷,收口批改复核)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 5d86b00c 后新增 2 条 commit：
+  - 955c5f15 docs(coo): workbench——LG-056 走销毕回执录账（全链闭环：定谳→认定→走销；复核锚10-11/尾验10-12）
+  - 2dcf334e docs(cos): LG-056 A1 主项走销——已销态落行（BOD 03:26 认定采 COO 三判据放行；复核锚 10-11 照带行内+10-12 尾验核候排）；lastSyncedAt 随更
+- registry：v2.1；今日 registry 提交无变化
