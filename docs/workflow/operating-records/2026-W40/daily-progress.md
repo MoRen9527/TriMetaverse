@@ -760,3 +760,8 @@
   - d35a1426 merge: 并行笔收编（如有）
   - 30f04151 docs(cos): LG-063 施工面全绿+定炉 GO 今晚收口批同炉入表（COS 裁 20:23）——四料齐 23:00 硬界前置全清+尾注小写治理锚三串候 CTO 统裁；段3-TriMMC 缺测试库笔准销（双锚证据，裁发 COO 随 059 行刷录）；lastSyncedAt 20:24
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:50 +08：自上次进度提交 2faed261 后新增 3 条 commit：
+  - 88213891 docs(coo): 工作台补两录——CTO TS2345 既有红维护批攒单定性受理+M2 chromium 施工令发 SDE（10-05 晚窗·双签闸开·R-HY 磁盘预检≥2×）
+  - b8253f5b merge: 并行笔收编（COO 刷表线）
+  - 2c37e907 docs(coo): LG-059 行刷录 CTO 圈令三项裁笔+段3-TriMMC 销项锚+③④毕读数（COS 指录防重复）——解冻令 APPROVE+10-05 白窗 merge 配方禁硬对齐·死线 10-05 EOD 可达不需报阻；工作台续三录（定炉 GO 受理/CTO 圈令受理/STE ③④四环受理）
+- registry：v2.1；今日 registry 提交无变化
