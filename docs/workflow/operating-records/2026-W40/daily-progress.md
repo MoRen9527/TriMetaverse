@@ -695,3 +695,14 @@
 - 巡检兜底补写 @03:20 +08：自上次进度提交 91ed0940 后新增 1 条 commit：
   - 6c718fc4 docs(f3): dev face 三步执行读数续篇（COS）——8713 冷起毕（stop-flag 守卫+trilc stop 权威路径+6s healthz OK+新 pid 13756）+探针 #136 全谱绿（Part A nextRun 非 NULL/短周期 lastRun 实锤/DELETE 零残留/双读数 jobCount=7 degraded=false）+「六 job 全灭」已知态勘正（Part B 前窗已自愈生效,本窗=升级窗非救活窗）+对证案勘正（三笔在本机 TriMLC 仓 ODB,昨晚 probe 漏勘断言证伪;非 m-cos 会话铸维持）+token 泄显同族二犯自报
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:30 +08：自上次进度提交 2a927dc3 后新增 3 条 commit：
+  - 067acdec merge: 并行笔收编（daily-progress 巡检兜底 03:20）
+  - 26815fd0 docs(cto): FSD卷COS标定终谳勘正——三笔铸者=FSD链(2b1709d commit message自证,CTO独立验03:57:46)+执行窗m-cos与铸笔归属分立注记+L66嫌疑面收敛 Co-Authored-By: Claude Code <noreply@anthropic.com>
+  - c6d39f7c docs(cos): 大表立即刷新（BOD 03:1x 令,不等收口批）——四件销入:F-3 是(销账锚 6c718fc4 全链)/闸5 是(定谳锚 b831145e)/LG-058 毕候验(STE 走查卷 5275bb7e+候 CEO 统一亲测终球)/LG-055 先导设计稿毕候 BOD 卷验(f6b16296);连带两注记:§三 8713 哨位守卫解除+LG-056 行对齐 job 复役;lastSyncedAt 03:17
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:50 +08：自上次进度提交 2acfbf1e 后新增 1 条 commit：
+  - caebcd31 docs(sgcheck): BOD 03:3x 派令 sg 侧执行读数——件① TriCode ff 拉平达成（a3893ba，detached 收形挂回 dev 枝位，ff 移枝零改史）；件② 三查=SYMLINK 活连（10-04 01:45 relink）+dist mtime 10-01 19:38+PathsSchema=条件放行制非静态 optional 且部署 dist 为 10-02 终裁前一代（io_contract 无 nullish 实勘）——dist 代差移交 dev-CTO 裁 rebuild @m-duty-cto
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:10 +08：自上次进度提交 64c5dfef 后新增 1 条 commit：
+  - 3b8466e8 docs(w40): STE 上午窗令两件读数卷——①白名单反例 403 覆盖核对即闭（CTO 勘正③核实：g1/g2/g3 三例在库 cron-mcp-entry-guard.test.ts :230/:240/:252 实锚+签名 18/18 EXIT=0 零排测）+②LG-034/035 波⑤清尾回头测段（E12+E10 11/11 EXIT=0+全量 313/296/0/17 与 batch-13 基线逐位零漂移） @m-duty-ste
+- registry：v2.1；今日 registry 提交无变化
