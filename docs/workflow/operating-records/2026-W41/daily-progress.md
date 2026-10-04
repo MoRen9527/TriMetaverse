@@ -49,3 +49,8 @@
   - cc8e6a59 docs(cos): LG-060 复验链三步全绿读数卷——前置断言门 3K+0 残+T5 三面 dry-run drift=0+LG-048/051 解窗读数候裁（BOD 05:23 起跑令）
   - bca09579 docs(board): LG-064行id刷收编态(任务书+需求单dev在树fd08057d,BOD抽验)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @05:50 +08：自上次进度提交 c0882271 后新增 3 条 commit：
+  - 3bad6b9b docs(board): LG-060三步毕裁+LG-048/051解窗+LG-039 T5复核PASS(销账均候STE回卷唯COS)
+  - db0f6626 merge: 并行笔收编（晨航线）
+  - d6281c45 docs(coo): workbench——CEO 05:23 两件毕录账+L BOD 05:37 收讫认可终锚（本单闭）
+- registry：v2.1；今日 registry 提交无变化
