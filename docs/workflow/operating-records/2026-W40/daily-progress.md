@@ -706,3 +706,15 @@
 - 巡检兜底补写 @08:10 +08：自上次进度提交 64c5dfef 后新增 1 条 commit：
   - 3b8466e8 docs(w40): STE 上午窗令两件读数卷——①白名单反例 403 覆盖核对即闭（CTO 勘正③核实：g1/g2/g3 三例在库 cron-mcp-entry-guard.test.ts :230/:240/:252 实锚+签名 18/18 EXIT=0 零排测）+②LG-034/035 波⑤清尾回头测段（E12+E10 11/11 EXIT=0+全量 313/296/0/17 与 batch-13 基线逐位零漂移） @m-duty-ste
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:20 +08：自上次进度提交 8901d91d 后新增 10 条 commit：
+  - 7ad05160 merge: 并行笔收编（如有）
+  - 06d67cd6 docs(cos): 波⑤残留裁点裁答落卷+大表①行转毕候验（BOD 08:1x 裁）——ste-wave5 卷残留注记补裁答(不另派本机面,候 CEO 终球覆盖)+①行 BOD 验讫入表+完成列转毕候验(候 CEO 统一亲测终球,与 LG-053 同球)
+  - 9af14041 docs(cos): 大表随更——LG-040/LG-055 两行落已毕态止复派环(CTO 上午窗三发锚点回执采纳:batch-12 d4fed2d7 BOD 05:4x PASS 幽灵不成立+batch-14 T-O4 项了结 10-02 13:1x+B 实弹窗尾卷 282挂287成;两 follow-up 候 COO 排程注记随行;C 13 席推广候窗另令除外;lastSyncedAt 08:12) @m-duty-cos
+  - 12475cb8 merge: 并行笔收编（如有）
+  - 1416e725 docs(cos): 大表①行连带刷（BOD 上午窗令滚动刷新授权）——LG-034/035 波⑤清尾回头测段闭入表（STE 上午窗卷 3b8466e8:11/11+全量零漂移,哨里程碑①读数在卷,终球 CEO 亲测维持）
+  - 8d576dbf docs(workflow): TriMLC loadOne family 修法稿（维护批④余块·候 CTO 审）——4 错类型真源实锚（PathsSchema 四字段 optional）+两件套修法（family 早退+paths 逐字段守卫，禁裸断言）+行为核 13 席载/194 恒等；工作树未提交候审按 §三序 @m-duty-fsd
+  - 5cb69a31 merge: 并行笔收编（如有）
+  - db31e5ad docs(cos): 大表三行组窗对表更新（BOD 08:1x 上午窗令,据组窗收口卷 258dafda L24）——B 件终批行钉死 B 件=LG-059 段2/LG-059 行组窗对表毕余段在轨(完成列死线不变)/LG-060 完成列改主体勘毕候条件(8749f37f 两卷+TC502 候条件);lastSyncedAt 08:09
+  - dbc5f8eb docs(cto): 勘定终谳卷坐实回填——BOD代勘三查全中(sg dist mtime=10-01 19:38旧构建铁证/symlink真链/源面optional实锚)+TriCode sg拉平毕(a3893ba)+sg侧dist重建翻4错预告(预期非回归,修稿先合入再重建)
+  - d5bbb4ce docs(cto): 编译门四处TS2322勘定终谳——2fb1292四件套optional化消费端未跟(方向反转:非依赖旧,本机dist含新类型真值,sg=旧类型假绿)+修法family分支配方(禁裸断言)+TriCode已推平sg拉ff即闭+三处→四处/未推→已推双勘误自报
+- registry：v2.1；今日 registry 提交无变化
