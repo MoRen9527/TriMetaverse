@@ -1,42 +1,41 @@
 {
     "dependsOn": [
-        "OP-202609-W39-001"
+        "OP-202609-W40-001"
     ],
     "objectType": "WEEKLY_INDEX",
-    "objectId": "OP-202609-W40-001",
-    "title": "TriMetaverse W40 周经营维护索引",
+    "objectId": "OP-202610-W41-001",
+    "title": "TriMetaverse W41 周经营维护索引",
     "ownerRole": "CEOChiefOfStaff",
-    "status": "closed",
-    "summary": "W40 周经营维护。任务从上周迁移，新任务待规划。",
+    "status": "active",
+    "summary": "W41 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "version": "1.0.0",
-        "lastUpdated": "2026-10-04T15:26:27.405083+00:00",
+        "lastUpdated": "2026-10-04T15:26:27.403030+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
             "经营维护计划单"
         ],
-        "latestActiveWeek": false,
+        "latestActiveWeek": true,
         "phase": "ceo-copilot-host-coordination",
-        "previousWeekRef": "docs/workflow/operating-records/2026-W39/OP-202609-W39-001.json",
-        "nextWeekRef": "docs/workflow/operating-records/2026-W41/OP-202610-W41-001.json"
+        "previousWeekRef": "docs/workflow/operating-records/2026-W40/OP-202609-W40-001.json"
     },
     "priority": "high",
     "timebox": {
         "scope": "weekly",
-        "label": "2026-W40 当前周维护面",
-        "startAt": "2026-09-28T00:00:00+08:00",
-        "endAt": "2026-10-04T23:59:59+08:00"
+        "label": "2026-W41 当前周维护面",
+        "startAt": "2026-10-05T00:00:00+08:00",
+        "endAt": "2026-10-11T23:59:59+08:00"
     },
-    "createdAt": "2026-09-27T15:00:10.668751+00:00",
+    "createdAt": "2026-10-04T15:26:27.403030+00:00",
     "relatedModules": [
         "TriMetaverse",
         "TriCompany",
         "TriLC",
         "TriMC"
     ],
-    "updatedAt": "2026-10-04T13:52:08+00:00",
+    "updatedAt": "2026-10-04T15:26:27.403030+00:00",
     "activeTrees": [],
     "doneTreesFromPreviousWeek": [
         {
@@ -218,9 +217,7 @@
             "status": "done",
             "path": "2026-W34/trees/tmv-restructure-p1/tree-op.json",
             "related": "W34 本地完成、迁移时未推送致 W35 台账漏登（2026-08-24 补）。P1-0~P1-9：白皮书 v1.0 签发+波 2、架构 v0.5、TriMLC/TriRMC 双模块立项、协议 v0.3、agent-core 合同设计稿+schema 对齐表；commit 链见 6d2357e4/37924dd8"
-        }
-    ],
-    "doneTreesThisWeek": [
+        },
         {
             "treeId": "batch-c-hygiene-sde-20261003",
             "title": "SDE 仓卫生批（readout+STE 验证双卷）",
@@ -537,10 +534,8 @@
             "related": "毕（D-15 线闭）"
         }
     ],
-    "nextActions": [
-        "2026-10-03 CEO 11:2x 令：CPO 需求池首审本周取消（模板保留，下周研究填入）；12:00 联审 cron 已禁用（cron_muqyqy4g_ippm enabled=0 回滚锚 --enable）；company-demand-pool.md 随 W40→W41 周平面迁移勿遗漏（MIG-W41-demandpool）",
-        "2026-10-04 21:4x COO 翻周前置梳理（BOD 令·CEO 21:37 点正，23:00 硬界前毕）：①doneTreesThisWeek=45 卷登记+②activeTrees=4 线挂载（bod-pipeline-batch-01/m2-mainline/plane-shift-local-align/rhy-401-fix，均带清尾窗+死线）——分类以 trees/ 目录实清点+大表行态为据；③需求池处置=CEO 21:43 裁空表迁移（W41 空表新立，旧表原 W40 归档，注记落 company-demand-pool.md）；④大表落位=CEO 21:43 裁 W41 空表新命名立+在途行照未决项机制滚动（对表结论落 task-inventory-20260930.md §四）；⑤OP 未决项=迁移器自动面"
-    ],
+    "doneTreesThisWeek": [],
+    "nextActions": [],
     "carry_over_from_w31": [
         "CARRY-20260728-001: trilc TUI CC P0 — **已销账**（2026-10-01 03:4x BOD 裁，链销账；2026-10-04 22:2x COO 翻周前置⑤销行移出活跃面，销账锚=batch-03 双卷+TriRLC 6b845be，详见 unresolved-items §4/已关闭节）",
         "CARRY-20260728-003: TriCade MSI CI — closed — W35(8/24) CEO 裁决关闭（W32 已实质完成：目录治理+MSI 自动化）",
