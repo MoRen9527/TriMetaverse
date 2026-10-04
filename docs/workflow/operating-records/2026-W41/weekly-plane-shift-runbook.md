@@ -45,7 +45,9 @@
 - **补跑落地**：BOD 23:26 生产同命令补跑成功——commit d0552559「ops: weekly plane shift」（889c316e..d0552559），W41 三件套齐（`.shift-ade.json` status=pass dry_run=false / `OP-202610-W41-001.json` / `OP-202610-W41-001.unresolved-items.md`）；**前置⑤销行迁移链生效实证**：CARRY-001 不在 escalation_8w 清单（仅剩 004/006），销行注记随 carry_over 入 W41 档（已关闭节 1 处、§1 活跃表零挂）。
 - **executor 修复毕**（BOD）：停服→patch 三 job nextRunAtMs（周任务推 2026-10-11 23:00 防二次平移双滚错账；两短 job 推当晚 23:30 节奏槽）→起服 healthz 200，store 属主/权限照归还。
 - **缺口候裁**：CEO 21:43 空表迁移裁两件（W41 需求池 `company-demand-pool.md` 空表新立+大表空表新命名立）未随补跑落地——生产脚本未含该裁扩展（裁后未及进脚本）；裁定执行面=迁移器，COO 未代建，候 BOD 裁补法（迁移器扩展 or 显式授权补立）。
-- 本机对齐：LG-056 SOP fetch+ff 已由 COO 23:29 执行毕（本机顶=bare 顶 d0552559，冲突零）。
+- **缺口候裁②（在途线迁挂）**：W40 四条在途线（bod-pipeline-batch-01 死线 10-05 EOD/m2-mainline-sde-window 10-05 晚窗/plane-shift-local-align-01 今晚/rhy-401-fix 10-05 晚窗）随周闭转换被迁移器清零（W40 activeTrees 0/4），**未迁挂 W41**（W41 activeTrees=0）——两条死线=次日 10-05，失挂=明日窗口线无索引承载；候裁挂载 owner（COS 索引 owner or COO 领令）。
+- **根因终版勘注（BOD 23:35）**：cron 正主=trirmc.service（8712），10-01 10:46:23 **人工 systemctl stop**（journal 铁证，干净停非崩溃）+unit disabled 无自启→静默三日；修复终态=23:33 起 active+enable 补自启+8712 healthz 200，复活探针 PASS（两短 job 23:33:33 自动开火，新日志两件落 /var/lib/trirmc/cron/logs/，store 重算 nextRun 23:45/23:52；周任务 9c81c7ec 停靠 10-11 23:00 防二次平移双滚）。停手人与动因未勘（auth.log 无 10-01 窗痕迹）候归属确认；回滚锚=`/tmp/jobs.json.prepatch-bod-20261004.bak`（root 600）。
+- 本机对齐：**TriMLC 8713 自动对齐执行体已落位实证**——23:10:07Z `plane-shift-local-align.mjs` 自动跑 merge ok（7ef4b9c5..889c316e，align-log 机写两行）；COO 23:29 补 ff 至迁移笔 d0552559、23:35 收编并行笔 merge a96337bd（补对齐留痕行已补 align-log）。runbook §一「自动化候落位」注记自此可销。
 - 前置梳理五件毕况：四件毕 21:59（COO b16d7812 VERIFIED；BOD 验收认账 22:00）+⑤ CARRY 销行毕（ad89b95f，22:2x 推平候迁移）——**五件全毕**，迁移链生效。
 
 ## 五、已知缺口与长期修复候选（候 CAO/CTO 排）
@@ -54,7 +56,8 @@
 - 任务书毕后归档位约定（W38 根 24 张/W39 根 60 张滞留实例）；
 - CARRY 销行与裁决联动（裁毕即销行）；
 - 索引登记面失灵根因勘（五周 doneThis/activeTrees 全 0——机制在、执行断，root cause 未勘）；
-- **TriRMC cron executor 死而服务活无告警面**（2026-W41 开周实例：10-01 10:45 起 executor 停摆三日无人察，23:00 迁移未触发方暴露；BOD 10-04 夜已修复——候 CTO 排 executor 健康自检/心跳告警，防再隐伏）。
+- **TriRMC cron executor 死而服务活无告警面**（2026-W41 开周实例：cron 正主 trirmc.service 10-01 10:46 人工 stop+disabled 无自启，静默三日无人察，23:00 迁移未触发方暴露；BOD 10-04 夜已修复+补 enable——候 CTO 排 cron 服务态健康自检/心跳告警+unit disabled 告警面，防再隐伏）；
+- **在途树随周闭清零未迁挂**（2026-W41 开周实例：activeTrees 周闭清零属迁移器设计，但在途线未迁挂新周=清尾窗/死线失承载——候定「在途线跨周迁挂」机制归属：迁移器扩展 or COO 周初梳理件）。
 
 ## 六、翻周滚动规则（本文档自身的迁移方式）
 
