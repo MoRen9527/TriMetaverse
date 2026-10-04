@@ -45,3 +45,7 @@
   - 171c3d11 merge: 并行笔收编（晨航线）
   - fd08057d docs(coo): LG-064 需求单正式件归树+任务书 wt/board 单文件收编（CEO 05:23 令「拉到现在跑」；排窗=BOD 02:24 认账生效：CTO 方案10-05案头/施工10-06/验收10-07；全 merge 试算冲突改单文件收编，全并候收口批惯例窗）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @05:40 +08：自上次进度提交 fa9fb34f 后新增 2 条 commit：
+  - cc8e6a59 docs(cos): LG-060 复验链三步全绿读数卷——前置断言门 3K+0 残+T5 三面 dry-run drift=0+LG-048/051 解窗读数候裁（BOD 05:23 起跑令）
+  - bca09579 docs(board): LG-064行id刷收编态(任务书+需求单dev在树fd08057d,BOD抽验)
+- registry：v2.1；今日 registry 提交无变化
