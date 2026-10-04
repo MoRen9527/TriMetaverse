@@ -703,3 +703,6 @@
 - 巡检兜底补写 @03:50 +08：自上次进度提交 2acfbf1e 后新增 1 条 commit：
   - caebcd31 docs(sgcheck): BOD 03:3x 派令 sg 侧执行读数——件① TriCode ff 拉平达成（a3893ba，detached 收形挂回 dev 枝位，ff 移枝零改史）；件② 三查=SYMLINK 活连（10-04 01:45 relink）+dist mtime 10-01 19:38+PathsSchema=条件放行制非静态 optional 且部署 dist 为 10-02 终裁前一代（io_contract 无 nullish 实勘）——dist 代差移交 dev-CTO 裁 rebuild @m-duty-cto
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:10 +08：自上次进度提交 64c5dfef 后新增 1 条 commit：
+  - 3b8466e8 docs(w40): STE 上午窗令两件读数卷——①白名单反例 403 覆盖核对即闭（CTO 勘正③核实：g1/g2/g3 三例在库 cron-mcp-entry-guard.test.ts :230/:240/:252 实锚+签名 18/18 EXIT=0 零排测）+②LG-034/035 波⑤清尾回头测段（E12+E10 11/11 EXIT=0+全量 313/296/0/17 与 batch-13 基线逐位零漂移） @m-duty-ste
+- registry：v2.1；今日 registry 提交无变化
