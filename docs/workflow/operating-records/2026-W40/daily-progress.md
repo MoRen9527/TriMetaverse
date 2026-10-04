@@ -733,3 +733,7 @@
 - 巡检兜底补写 @10:00 +08：自上次进度提交 87235612 后新增 1 条 commit：
   - 986ad2ae docs(workflow): 编译门序3收尾补记——TriMLC 拉平 2bf1919+check 0 错转正（(b) 预演转正式）；拉平腿闭 §五序 3/4 收官 @m-duty-fsd
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:40 +08：自上次进度提交 ed2a2d60 后新增 2 条 commit：
+  - 8246b41d merge: 并行笔收编（如有）
+  - 9f548d24 docs(cos): CEO 终审 PASS 销账三行（BOD 17:07 触发令）——LG-062 主行+件②行改是（销账锚=17:07+终审包+STE 13/13）+LG-063 行转在途（COS→COO 派工令已发 8bdd758f）；渲染三并批排窗挂本席；lastSyncedAt 17:09
+- registry：v2.1；今日 registry 提交无变化
