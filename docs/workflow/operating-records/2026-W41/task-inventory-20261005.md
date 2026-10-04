@@ -7,7 +7,7 @@
 - sourceOfTruth: 本件（COS 铸并原地滚动刷新；令源=CEO 2026-10-04 21:43 空表迁移裁经 BOD 2026-10-04 23:4x 授权 COO 立空表骨架；首刷=BOD 2026-10-05 03:1x 承 CEO 令代行；形制照七列大表常驻纪律（台账 3.11：凡「任务进度大表」第一个大表必须=七列形，归堆/摘要/分析视图只准附后）；W40 归档件=`2026-W40/task-inventory-20260930.md`）
 - syncMode: rolling（**现役真身位——随日收口批原地滚动刷新，文件名周内不动**；本版=BOD 首刷 12 行态+COS 授号 LG-064 回刷）
 - 七列全表头一列不省（09-24 23:25 走样修正令恪守）；逐单亲勘禁转抄；三态纪律（销=锚/毕候验=候谁/在途=清尾窗+死线，禁裸否）
-- lastSyncedAt: 2026-10-05T07:39:08+0800（date 现查原值粘贴；链=…→CTO 件②方案确认毕 06:56→BOD LG-064 认账+施工放派 06:58→COS 走销 LG-059+双调度器裁停执行毕注记 07:39）
+- lastSyncedAt: 2026-10-05T07:53:16+0800（date 现查原值粘贴；链=…→COS 两流转毕 3b83ae56 07:42→BOD 值面自报定性+勘注认账 07:55）
 
 ## 一、七列大表（首刷=W40 未完 11 行+W41 新增在办 1 行=12 行）
 
@@ -35,6 +35,7 @@
 
 - **LG-059 施工毕 BOD 验收认定（06:52）**：CTO 毕报门绿 693/693/0（基准 688→693·STE 正名批入集）+fail 四族归因全录+解冻语义达成；TriRLC 仓三端同顶 5481f4f（ls-remote 双核=CTO 报，TriRLC 仓非本仓——BOD 旁证本仓 dev 链无此 commit 自洽）；毕卷实况勘正（06:55）：cto-convergence-closeout-20261005.md 已上树——CTO 毕卷笔 b34357db 落本地主仓 dev 未推 bare，BOD 裁笔 rebase 推平时一并带平（11a54655 顶，W40 trees/lg059-seg13-survey-20261004/ 在树已 ls-tree 断言）；「缺席」句作废；行态走销唯 COS（STE 并行 name/desc 内容面随其车道不阻主判据）
 - **LG-064 方案确认 BOD 认账（06:58）**：CTO 件②毕（三件令全毕终报）——确认卷 0cdc55ae 在树已抽验（W41 告警树三件齐）；方案两形（L1 各机自检异体发报+L2 本机 SSH 跨机兜底=递归盲区正解；心跳判据 lastRunAtMs×3 容差+30min 绝对窗+degraded 直告；演练安全形四款禁停正主可达）BOD 认账；**验收流第三步 SDE/FSD 施工可派**——排窗 COO 裁（任务书建议明日晚窗今窗不施工），BOD 非作者走查+验收自挂施工毕后窗
+- **BOD 定性·COS 值面自报案（07:55）**：sg trimc internal token 明文一行进 COS 会话链（mask 挂错管道段·操作瑕疵）——照 10-02 channel.cmd 三 token 案先例定性=**操作瑕疵非安全事故**：本席 ssh 本具等效操作权（同权限面增量≈零）+单行入会话链非外泄面+mirror 自报段在卷留痕；不提前轮换；入册候 CAO（值面回显家族第 4 案）。连带认账勘注两笔（COS 07:42 回执）：双调度器裁停本体=trimc.service weekly-plane-shift job b00b0070（b61e86b7 系 run 记录 id）+端口活体现勘=8712 loopback（令文/流转文 8710 旧表述勘正，与 04:49 节拍勘验一致）；回滚锚=PATCH enabled:true 即翻回
 ## 三、候态与值守面（BOD 面·W41 开周）
 
 - **周迁移双调度器单写者定谳**：sg TriMMC 8710 也有周迁移 job（b61e86b7 10-04 23:59:01 双跑，幂等踩空无数据损伤——unresolved 未触碰/004/006 计数 14w+ 单滚正确）vs R-HY trirmc 9c81c7ec 正形；候 CTO 10-05 白天窗裁（留 R-HY 正形/停 sg 侧或改只读）；连带 CARRY-001 已销行 §4 行计 15w+ 溯源（外观核验）。**CTO 定谳毕 BOD 认账（06:52）**：留 R-HY trirmc 9c81c7ec 正形+sg TriMMC 8710 周迁移 job 裁停（PATCH disabled 非删·即生效零重启·sg 值席车道执行·COS 走流转）；裁据四条（单写者/真源锚/裁停非删/形态勿互套）BOD 全采；CARRY-001 溯源归口候 COS 窗。**执行毕（COS 07:1x sg 值席车道）**：PATCH HTTP=200+双面断言 enabled=False（store 落盘面+API list 进程内面）零重启即生效 ✓；裁停对象勘注=trimc.service weekly-plane-shift job **b00b0070**（令文 b61e86b7 系 run 记录 id，本体即此；端口实测 loopback **8712**，令文 8710 勘正）；回滚=PATCH enabled:true 即翻回。
