@@ -718,3 +718,10 @@
   - dbc5f8eb docs(cto): 勘定终谳卷坐实回填——BOD代勘三查全中(sg dist mtime=10-01 19:38旧构建铁证/symlink真链/源面optional实锚)+TriCode sg拉平毕(a3893ba)+sg侧dist重建翻4错预告(预期非回归,修稿先合入再重建)
   - d5bbb4ce docs(cto): 编译门四处TS2322勘定终谳——2fb1292四件套optional化消费端未跟(方向反转:非依赖旧,本机dist含新类型真值,sg=旧类型假绿)+修法family分支配方(禁裸断言)+TriCode已推平sg拉ff即闭+三处→四处/未推→已推双勘误自报
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:20 +08：自上次进度提交 d33b3503 后新增 5 条 commit：
+  - 80b1e54a merge: 并行笔收编（如有）
+  - 1a1d9c9d docs(cos): 大表 LG-062 两行死线实体澄清（BOD 09:0x 三并批排窗裁决）——完成列补「CEO 终审（材料已呈 10-04 晨 BOD 提请）+渲染三并批候终审后最近收口批（前置=终审 PASS）」；lastSyncedAt 09:16
+  - 438d184f docs(cto): 顺手勘读数回填终判——TriMMC合同解析运行时唯一点=onboarding装配时点+炸形条件两收窄全灭(对象13席合同四件套全齐实证)→维持末位从保守升级为零风险确认,序末位rebuild无需二次确认
+  - aea79e89 docs(cto): rebuild前置勘反预期终裁——生产面全symlink活连读数下维持顺序末位(生效时机=Node模块缓存重启才载+雷向复核:旧dist才是炸形无急性雷+引入炸唯一通道superRefine未勘)+执行三条款(备份锚/验证读数/症状驱动反转)
+  - 87634c56 docs(cto): loadOne family 修法稿审裁 APPROVE——family早退+逐字段守卫对表终谳架构面+行为核三读数采信(可见性零回归实证注)+终谳卷验收门warn表述勘意注记+sg dist rebuild并裁(排序末位+symlink前置勘分支)
+- registry：v2.1；今日 registry 提交无变化
