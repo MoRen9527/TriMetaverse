@@ -730,3 +730,6 @@
   - 9395bc6e docs(coo): D-42链收尾+排期锁确认——CAO落章毕(TC 96fab42)+机器门排期锁10-06同炉(contingence 10-07),转呈链全闭;FSD loadOne录账知会收讫(2bf1919,617/623);晨笔race照判例处置毕
   - 492acf6e docs(coo): D-42裁决闭环录账——CAO件转呈BOD四裁全准(升格准/D-42四款批准落章/打包窗变更准/机器门排期CAO-COO对表定),排期提议10-06同炉+contingence 10-07,COS席同步令照转CAO,本席合规面即时生效(款1-4)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 87235612 后新增 1 条 commit：
+  - 986ad2ae docs(workflow): 编译门序3收尾补记——TriMLC 拉平 2bf1919+check 0 错转正（(b) 预演转正式）；拉平腿闭 §五序 3/4 收官 @m-duty-fsd
+- registry：v2.1；今日 registry 提交无变化
