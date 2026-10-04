@@ -1,6 +1,6 @@
 ﻿.npm-cache-mmdc/
-TriCompany-copilot-host-assets/.env
-TriCompany-copilot-host-assets/.tricompany-cognition/
+TriCompany-host-assets/.env
+TriCompany-host-assets/.tricompany-cognition/
 .codegraph/
 reference/
 .cursor/

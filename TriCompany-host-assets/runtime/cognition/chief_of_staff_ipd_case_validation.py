@@ -941,7 +941,7 @@ class ChiefOfStaffIpdCaseValidationTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             workspace_root = Path(temp_dir)
             tridev_root = workspace_root / "TriDev"
-            support_root = workspace_root / "TriMetaverse" / "TriDev-copilot-host-assets"
+            support_root = workspace_root / "TriMetaverse" / "TriDev-host-assets"
             run_id = "ipd-ipd-auto-bridge-001"
             run_dir = support_root / "docs" / "runs" / run_id
             tridev_root.mkdir(parents=True, exist_ok=True)

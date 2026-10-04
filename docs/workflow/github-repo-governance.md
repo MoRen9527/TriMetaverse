@@ -267,7 +267,7 @@ TriMetaverse/reference → 模块/vendor → 模块真实实现
 ### 6.1 真源唯一性
 
 - 每个模块的事实真源只有一个物理仓。
-- `TriCompany-host-assets` 和 `TriDev-copilot-host-assets` 是当前宿主支撑包，不是第二真源。
+- `TriCompany-host-assets` 和 `TriDev-host-assets` 是当前宿主支撑包，不是第二真源。
 - 支撑包内发生的变更，必须回写到对应模块源仓。
 
 ### 6.2 四层资产定位

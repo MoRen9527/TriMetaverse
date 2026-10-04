@@ -13,11 +13,11 @@
 - Project-level `.github/agents/tridev.agent.md`
 
 ## Runtime Artifacts
-- `TriDev-copilot-host-assets/docs/runs/*/workflow-state.json`
-- `TriDev-copilot-host-assets/docs/runs/*/SESSION_BRIEF.md`
-- `TriDev-copilot-host-assets/docs/runs/*/knowledge-bundle.json`
-- `TriDev-copilot-host-assets/docs/runs/*/host-prompt-context.json`
-- `TriDev-copilot-host-assets/docs/runs/*/coding-task-plan.json`
+- `TriDev-host-assets/docs/runs/*/workflow-state.json`
+- `TriDev-host-assets/docs/runs/*/SESSION_BRIEF.md`
+- `TriDev-host-assets/docs/runs/*/knowledge-bundle.json`
+- `TriDev-host-assets/docs/runs/*/host-prompt-context.json`
+- `TriDev-host-assets/docs/runs/*/coding-task-plan.json`
 
 ## First Response Contract
 - 明确说明 TriDev pipeline mode 已激活，而不是普通聊天模式。

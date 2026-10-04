@@ -4,15 +4,15 @@
   "status": "active",
   "sourceManifest": "TriDev/.github/manifests/tridev-host-publish-manifest.json",
   "sourceRepo": "TriDev",
-  "supportRoot": "TriDev-copilot-host-assets",
+  "supportRoot": "TriDev-host-assets",
   "supportArtifacts": [
     {
       "kind": "run-artifacts",
-      "path": "TriDev-copilot-host-assets/docs/runs"
+      "path": "TriDev-host-assets/docs/runs"
     },
     {
       "kind": "host-onboard-artifacts",
-      "path": "TriDev-copilot-host-assets/docs/host-onboard"
+      "path": "TriDev-host-assets/docs/host-onboard"
     }
   ],
   "liveSurfaces": [
