@@ -25,3 +25,7 @@
   - ad89b95f docs(coo): 翻周前置⑤ CARRY 销行——CARRY-001 按 10-01 BOD 销账裁移出 §1 活跃面入已关闭节（runbook 85610ff0 §三.5 裁而未销滚计数防制）；004/006 冻结维持不动；JSON carry_over 面同步
   - …另有 485 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:30 +08：自上次进度提交 0339ac6e 后新增 2 条 commit：
+  - ecbef1c9 merge: 并行笔收编（watcher 巡检线）
+  - 7a464188 docs(coo): workbench 终锚——cron 告警排窗定稿生效（施工10-06/CTO案头10-05/验收10-07，BOD 认账无异议；晨窗铸需求单归树）
+- registry：v2.1；今日 registry 提交无变化
