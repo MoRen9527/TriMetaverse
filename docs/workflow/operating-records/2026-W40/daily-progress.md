@@ -787,3 +787,9 @@
   - ec1c3664 docs(cto): 渲染 runbook 技审卷——APPROVE+勘意三条（19/22 语境钉死/status 同病补注/样板微勘）+长期修法约束（summary 四键=ADE 不变式禁动，最小修=status 扩容一行）
   - 3ec26d69 docs(board): 翻周迁移遗漏查证卷——近4周三类索引登记系统性失灵(毕树W39断/在途零挂载/裁而未销8项)+未决项平移唯一健康
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:20 +08：自上次进度提交 50e7acbe 后新增 4 条 commit：
+  - 7ef4b9c5 docs(coo): workbench 录账——runbook 随迁令回执+前置⑤ CARRY-001 销行毕（ad89b95f）挂 23:11 滚动窗
+  - d87bf6a0 merge: 并行笔收编（COO CARRY 销行线）
+  - ad89b95f docs(coo): 翻周前置⑤ CARRY 销行——CARRY-001 按 10-01 BOD 销账裁移出 §1 活跃面入已关闭节（runbook 85610ff0 §三.5 裁而未销滚计数防制）；004/006 冻结维持不动；JSON carry_over 面同步
+  - 85610ff0 docs(board): 周工作平面迁移事项runbook首立——职责分工/时间线/前置梳理五件/空表迁移裁/滚动规则(CEO 22:10令,定名weekly-plane-shift-runbook)
+- registry：v2.1；今日 registry 提交无变化
