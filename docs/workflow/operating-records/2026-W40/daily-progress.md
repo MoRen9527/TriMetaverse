@@ -772,3 +772,6 @@
   - 9da017fb docs(coo): 工作台三录——b14 双线接令齐（FSD 回执+SDE 就绪态）+TriMLC 非消费面探针实锚勘差转呈+push 假绿插曲自领（commit 撞锁未门控，ls-remote 核真值抓回补推）
   - bd00de2d merge: 并行笔收编（COO 令链线）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 2de6cbe9 后新增 1 条 commit：
+  - ff77abd7 docs(sde): M2 前置段预检读数落卷——P1 磁盘门 PASS(32G avail 裕度~20×)/P2 TriMLC 非消费面实锚(MODULE_NOT_FOUND)/P3 正身旁证自洽;CTO 裁① TriMLC 出四仓读数面不补链(双签卷 §八 ffe323e)归卷;明晚窗就绪态四项固化;死线 10-05 EOD
+- registry：v2.1；今日 registry 提交无变化
