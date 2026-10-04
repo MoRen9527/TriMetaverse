@@ -570,7 +570,7 @@
     "2026-10-04 21:4x COO 翻周前置梳理（BOD 令·CEO 21:37 点正，23:00 硬界前毕）：①doneTreesThisWeek=45 卷登记+②activeTrees=4 线挂载（bod-pipeline-batch-01/m2-mainline/plane-shift-local-align/rhy-401-fix，均带清尾窗+死线）——分类以 trees/ 目录实清点+大表行态为据；③需求池处置=CEO 21:43 裁空表迁移（W41 空表新立，旧表原 W40 归档，注记落 company-demand-pool.md）；④大表落位=CEO 21:43 裁 W41 空表新命名立+在途行照未决项机制滚动（对表结论落 task-inventory-20260930.md §四）；⑤OP 未决项=迁移器自动面"
   ],
   "carry_over_from_w31": [
-    "CARRY-20260728-001: trilc TUI CC P0 — 8w+ ⚠️⚠️ active — W35(8/24) CEO 裁决：推进（P0 主线）",
+    "CARRY-20260728-001: trilc TUI CC P0 — **已销账**（2026-10-01 03:4x BOD 裁，链销账；2026-10-04 22:2x COO 翻周前置⑤销行移出活跃面，销账锚=batch-03 双卷+TriRLC 6b845be，详见 unresolved-items §4/已关闭节）",
     "CARRY-20260728-003: TriCade MSI CI — closed — W35(8/24) CEO 裁决关闭（W32 已实质完成：目录治理+MSI 自动化）",
     "CARRY-20260728-004: trilc TUI P1 — 8w+ ⚠️⚠️ frozen — W35(8/24) CEO 裁决冻结维持（等 CARRY-001 推进）",
     "CARRY-20260728-005: Openclaw daemon验证 — closed — W35(8/24) CEO 裁决关闭（已被 TriLC 吸收替代，验证意义完成）",
