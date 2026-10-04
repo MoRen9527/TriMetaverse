@@ -54,3 +54,8 @@
   - db0f6626 merge: 并行笔收编（晨航线）
   - d6281c45 docs(coo): workbench——CEO 05:23 两件毕录账+L BOD 05:37 收讫认可终锚（本单闭）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @06:10 +08：自上次进度提交 e53f566e 后新增 3 条 commit：
+  - 213e352e docs(cos): 四行走销——LG-060/048/051/039 已销态统一落行（STE 回卷 PASS 06:02+BOD 采双卷裁 06:04 放行；销账唯 COS）；lastSyncedAt 随更
+  - 9b590697 docs(ste): LG-060 独立复验卷 PASS+LG-059 段1/段3 勘明卷归位
+  - a51040f1 docs(board): BOD采双卷裁——STE回卷PASS四行销账放行(LG-060/048/051/039,走销唯COS)
+- registry：v2.1；今日 registry 提交无变化
