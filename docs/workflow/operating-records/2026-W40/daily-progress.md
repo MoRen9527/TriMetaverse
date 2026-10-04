@@ -743,3 +743,9 @@
   - ccfcc750 rename(lg-063): TriDev-copilot-host-assets→TriDev-host-assets 目录正名 226 件（git mv 保历史；CEO 终审 10-04 17:07/COS 令 COO 转派；LinkType 两层零 REPARSE 预检过；参照 LG-046 TriCompany 侧先例；旧路径别名锚候裁未建）Co-Authored-By: Claude Code <noreply@anthropic.com>
   - d4710ef5 docs(coo): LG-063改名派工录账——实勘三读数(TriCompany侧已新名459在轨/copilot残留壳0在轨候勘删/TriDev 226在轨=主标的),派工SDE三Scope(A git mv+B先勘后删+C两分含历史面硬豁免),时点A+B 18:3x/C报20:30/收口22:00护23:00迁移,COS排窗预裁同炉优先
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:10 +08：自上次进度提交 3028ff7a 后新增 4 条 commit：
+  - 0eddaea6 docs(cos): 组窗落位三行录毕（BOD 19:51 校正令：COO 19:27 回执验收毕）——LG-054=SDE 明晚窗+双签现势/LG-059=STE 21:00 清单/LG-060=CTO 21:30 候条件，死线统一 10-05 EOD；本席撤催转盯三时点交卷转呈；lastSyncedAt 20:08
+  - 2c771977 merge: 并行笔收编（COO 组窗录账线）
+  - 405f6678 docs(coo): 组窗三件排布+回执录账(18:2x/19:0x两段)——三件owner窗位死线全锚(CFO已签+M2明晚窗+STE/CTO勘明21:00/21:30)+SDE ScopeA毕ccfcc750互等链+ScopeB勘正认领(copilot系LG-046兼容锚非残留壳,ls-files模式漏根级文件误判)+C面五分读数+push链merge保hash解法
+  - b2876290 docs(cto): 组窗令两件裁答——件③TC502追平候条件四闸全满足(0/0推平96fab42已完成态,10-05施工窗对象勘定=渲染链解冻复验链,owner=COS值席+STE验段,死线可保)+件①b14-core-bump CTO侧双签(bump形0.2.1-wave3审定+门路径/红线/四仓确认+作废条款+双签席位演进注记)
+- registry：v2.1；今日 registry 提交无变化
