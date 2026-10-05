@@ -41,7 +41,7 @@ $blocked = ($line -match '配额挡')
 # 心跳过滤：HEAD 变化时查 commit 主题，巡检补写不算业务动作
 $headSubject = ''
 if ($tmv) {
-  $headSubject = ssh -o ConnectTimeout=10 -o BatchMode=yes fleet@sg-ecs-server "git -C /srv/fleet/TriMetaverse log -1 --format=%s" 2>$null
+  $headSubject = ssh -n -o ConnectTimeout=10 -o BatchMode=yes fleet@sg-ecs-server "git -C /srv/fleet/TriMetaverse log -1 --format=%s" 2>$null
 }
 $isHeartbeat = ($headSubject -match '巡检兜底补写')
 
@@ -50,7 +50,7 @@ $prev = $null
 if (Test-Path $stateFile) { try { $prev = Get-Content $stateFile -Raw | ConvertFrom-Json } catch {} }
 
 # ── 候裁决内容扫描（2026-09-17 盲区补：COS 屏面候裁/候令/候批=内容级信号）──
-$pane = ssh -o ConnectTimeout=10 -o BatchMode=yes fleet@sg-ecs-server "tmux capture-pane -t m-duty-cos -p 2>/dev/null | tail -40" 2>$null
+$pane = ssh -n -o ConnectTimeout=10 -o BatchMode=yes fleet@sg-ecs-server "tmux capture-pane -t m-duty-cos -p 2>/dev/null | tail -40" 2>$null
 $pendingCount = 0
 if ($pane) { $pendingCount = ([regex]::Matches(($pane -join "`n"), '候裁决|候令|候批|候 BOD|候 CEO')).Count }
 

@@ -8,7 +8,7 @@ set -u
 HOST="${SG_HOST:-fleet@sg-ecs-server}"
 
 sample() {
-  ssh -o ConnectTimeout=10 -o BatchMode=yes "$HOST" '
+  ssh -n -o ConnectTimeout=10 -o BatchMode=yes "$HOST" '
     echo "TMV=$(git -C /srv/fleet/TriMetaverse rev-parse --short dev 2>/dev/null)"
     echo "TC=$(git -C /srv/fleet/TriCompany rev-parse --short dev 2>/dev/null)"
     echo "SUBJ=$(git -C /srv/fleet/TriMetaverse log -1 --format=%s 2>/dev/null | head -c 120)"
