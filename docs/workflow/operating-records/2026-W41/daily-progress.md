@@ -91,3 +91,21 @@
 - 巡检兜底补写 @09:40 +08：自上次进度提交 21cf3851 后新增 1 条 commit：
   - 2e513210 docs(board): CEO令09:30三否向前挪——LG-054/快照增强/LG-064三行排窗全撤改现窗(SDE直派+COS流转)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 a9cbb96b 后新增 32 条 commit：
+  - ed6dd37c docs(board): BOD认定——LG-064 STE验证PASS+值面自报第5案定性(操作瑕疵非事故)
+  - 6b043be6 docs(ste): LG-064 验证卷 PASS——三走查重点全 CONFIRMED（矩阵真实性 TriMMC ledger 三态链+02:41 幻影双宿主独立复现+注入面七项全撤）+R-HY store 位置补勘+瑕疵自领两笔
+  - 6bebc4dc docs(fsd): LG-064 四裁落档回填——P2/P3x3归置注记入规则文档§六+毕报债表(对锚CTO§七76621e93)
+  - c3336bd7 docs(board): BOD认账——LG-064技术门APPROVE行27转毕候验(施工毕·较原死线提前一天)
+  - 76621e93 docs(cto): LG-064 方案卷 §七 技术门判读——APPROVE 转验证窗，候办四条归置（P2/P3×3）+假读数第五向定性
+  - 3d40070b docs(fsd): LG-064 施工毕报三件——规则文档+演练收款证据+FSD毕报
+  - 7dd6db85 docs(cos): 快照器候办四——停滞旗标缺毕树豁免判据(BOD 11:1x裁·lg060已闭树误报实证)，候判据迭代窗带；两停滞树裁答不派催办入卷
+  - 168a07e4 docs(cos): 快照v2终验绿全链闭环(02:45轮state+快照行双证+四点②停滞旗标生产首秀两树=4)+dispatch退役注落办(BOD裁留档)——卷§八+大表行25/44
+  - 85ddcd38 docs(board): BOD认账——僵尸清场三件毕+dispatch.ps1裁留档退役
+  - b6874b2f fix(ops): 僵尸ssh清场三件毕——源头watch.ps1两处ssh补-n+修复版活体实证(10:40轮15s自然退)；52实例+52僵尸全清红线52916双活体完好；扩勘扩修6文件18处(MSG-Work-Watch链sh+TC真源两ps1+.fade死副本与dispatch旧件7处防误用)；12席自查令11/12回执零涉事
+  - 2f64ae45 docs(coo): workbench——僵尸 ssh 自查毕（现役零涉事+.fade 两旧件他面转知）
+  - f1f8679f docs(board): 新候办——TriMMC executor停摆自愈家族缺陷(两机同签名·LG-064活体实证)+52僵尸清场派发落表
+  - 9eb2b14e docs(cto): LG-064 方案卷 §六 施工中程异常裁——TriMMC executor 停摆家族性缺陷独立候办+判据实证收录
+  - a000c1f9 docs(coo): workbench——FSD 中程报（三机部署全绿+滑窗闸门解除+bod-progress 停摆案知会备档）
+  - 0bff429e docs(cos): 快照首跑红→修复→复验绿——root属主遗留致fleet写权拒（既有教训实证），chown归还+fleet同身份复验OK；终验锚02:45Z
+  - …另有 17 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
