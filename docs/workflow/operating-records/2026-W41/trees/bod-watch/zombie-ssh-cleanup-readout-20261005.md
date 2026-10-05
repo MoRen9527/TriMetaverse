@@ -51,3 +51,8 @@
 - 11/12 席回执**零涉事**：cho（无自动化面）/cao（230 任务枚举+两仓 remote 全 git-transport 形）/cfo（ops-*.py 五脚本零 ssh）/cpo（产出面 grep 零命中，联审 cron 归 COO 域）/cso（无 cron 无脚本）/cmo（人工检索形态）/rdt（培训件两仓零 ssh）/sde（tunnel-keeper -N -L 豁免形+TriMLC cron 8 jobs no-ssh）/ste（rhy 探针落款 SDE 非本席资产）/coo（git URL 数据流形+knowledge 零命中）/cto（TriMLC-Watchdog 零 ssh+8713 cron git-fetch 形不悬挂——git 接管管道，52 僵尸零 git-fetch 形=实证）。余 m-fsd 施工窗随毕报捎带。
 - **CTO 裁**：采纳 `-n -o ServerAliveInterval=15 -o ServerAliveCountMax=3` 三件套为远程执行形标准配方（-n 防 stdin 悬挂+ServerAlive 防 TCP 半开，正交），**LG-064 验收窗不追改**（FSD L2 巡检脚本在验收中，加参数触发重验），正形=验收毕后维护窗统一补齐+规则文档写配方；CTO 自挂验收判读条。
 
+## §八 dispatch 裁答落办（BOD 11:1x 裁·11:13 执行）
+
+- BOD 裁：**留档退役标注，不删**（-n 保险已足+git 可溯+防删后引用断裂）。
+- 执行：本机 `.fade/bod-to-sg-dispatch.ps1` 文件头加一行注 `# RETIRED 2026-10-05·M-004 SendMessage 直达为现役·本件仅存档（BOD 裁 11:1x；防误用 -n 已补 7 处）`——闭环。sg 面无此件（未涉）。
+
