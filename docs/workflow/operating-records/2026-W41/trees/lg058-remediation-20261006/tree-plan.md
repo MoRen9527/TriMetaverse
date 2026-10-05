@@ -63,9 +63,9 @@
 
 | 节点 | 状态 | 收口锚 |
 |---|---|---|
-| N1 | 夜干施工中（链路勘明：三段链 161d0ca 全在、face 键两侧一致，空白收敛=运行态断点三候选候白窗实勘；真代码缺口=tier 全链无数据源，正补 daemon 上报→服务端台账→UI 三段） | — |
+| N1 | **夜干毕（代码面）**——链路勘定（三段链 161d0ca 全在、face 键两侧一致，CEO 空白=运行态数据面，白窗实勘三候选）；真代码缺口=「配置层级」全链无数据源→三段补建毕（TriRMC reportCardStatus 带 tier 上报→TriModel 台账 applied_tier→UI「配置层级」行）；本地活体端到端复现全链通（pull 记账→status tier 回写→managed 四要素读出，3941 沙箱在案）。白窗部署清单：TriModel+TriRMC 新版随 N2 升版一次落 R-HY，重启后 TriRMC 例行 pull，值面探针=managed `ledger.faces.rmc` 四字段非空 | TriModel 5b4dedb + TriRMC 8249eb7（sanity: config-cards 29/29、key-cache 14/14、ui-fourplane 7/7；TriModel 全量 313 pass/0 fail/14 skip） |
 | N2 | 候白窗（R 面双卡先行；M 面切换暂缓候 CEO 后令） | — |
-| N3 | 夜干候拾取（N1 后） | — |
+| N3 | **夜干毕（代码面）**——现役配置表增「来源」列（静态 TriMLC 卡+JS 模板两处五列化），faceEntrySource 与 N1 tier 同源：tier1/2=远程拉取配置/tier3=本地配置/null=暂无回写不造数；「直连/中转」编造概念两仓 src/ui/docs 全扫零命中（既有「直连」命中全属 Claude 兜底通道语义域非 #4 对象） | TriModel e099329（ui-fourplane 7/7 含来源列 4 断言） |
 | N4 | **施工毕**（TriModel c4d9137，四处替换+grep 零残留+sanity 7/7；候 STE 验收+流水线正式读数） | c4d9137 |
 | N5 | 候拾取·白窗（门槛已落 9f86ff34） | — |
 
