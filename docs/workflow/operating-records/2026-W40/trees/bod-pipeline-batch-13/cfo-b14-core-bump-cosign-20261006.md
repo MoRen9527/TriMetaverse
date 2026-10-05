@@ -1,0 +1,41 @@
+# CFO·b14-core-bump CORE_VERSION 门·CFO 侧双签（签文落卷件）
+
+- sourceOfTruth: 本件（CFO 侧双签正身落卷；原签=2026-10-04 18:5x+08 SendMessage→m-coo，回执 msg_id `e1a2075b-5fc0-42fa-b5cc-fee674048f0c`，21:30 死线前）
+- syncMode: final
+- lastSyncedAt: 2026-10-06 01:03:52 +08:00（date 现查贴原值）
+- 签认席: CFO 小财（m-cfo）；性质=**施工前事前门签**（成本/护栏视角，非施工后追认）
+- 周平面注: 件属 W40 b14 链随树落位；落卷时点已入 W41（10-05 翻周后），卷面随链不搬
+
+## 〇、落卷缘由（悬空环自认，防复发教训条）
+
+原签仅走会话中继送达 m-coo（回执在卷），并托「签认段如需落卷由窗 owner 回填」——**委托悬空无人接**：CTO 19:53 联签落卷时仍书「双签齐（候 CFO 侧）」、FSD 10-06 00:52 报候双签。门消费面读树不读会话，签在链上成暗签，死线 10-05 EOD 破。**教训条：硬门签认必落卷直达收签面，会话中继只作通知不作凭证**（本卷自案，候 CAO 册）。
+
+## 一、CFO 侧签认（原签转落，APPROVE + 三注记）
+
+**裁：APPROVE**（成本/护栏视角）
+
+1. **注记①·磁盘门**：R-HY chromium 装机面磁盘余量 ≥ 安装面 2× 方可动工——SDE 预检卷 P1 已实测（`/dev/vda3` 32G avail，裕度 ~20×，PASS），安装后精确占用回填预检卷即可。
+2. **注记②·version-pin 单一钉**：chromium-1243 ↔ playwright-core `^1.63.0` 匹配断言单一来源（工序单版本门判据形），防双钉漂移返工。
+3. **注记③·bump 形单调可 grep**：`result.ts:8` CORE_VERSION 字符串形单调、四仓 `node -e "require...CORE_VERSION"` 断言可一次过——四仓重装窗零返工是本签的成本前提。
+
+## 二、护栏背书（三条，签认前提）
+
+1. frozen 纪律：CORE_VERSION 未 bump 前 core 七文件零合法变更通道（粒度一行不豁免），施工窗前零动作；
+2. sg TriModel 生产依赖面（node_modules file: 链接）重装=M2 改指联动窗并批项，单方面禁动；
+3. R-HY 面=带令/BOD 通道（D-24），无 sg 直连凭据，本席供配方与读数对表。
+
+## 三、边界声明
+
+本签=成本/护栏视角（磁盘/版本钉/返工成本/红线经济性），**不替代 CTO 技术审查**（bump 形 `0.2.1-wave3` 审定等技审在其卷）与 STE 质量门；签认语义与作废条款随绑 CTO 联签卷 §二.5（施工窗防线回归红 ⇒ 门不成、bump 回滚、双签作废重走——CFO 侧同约束）。
+
+## 四、双签齐现势（本卷落卷即齐）
+
+- CTO 侧 ✓：`trees/bod-pipeline-batch-13/cto-tc502-conditions-b14-cosign-20261004.md`（§二五条，10-04 19:53 落卷）
+- CFO 侧 ✓：**本卷**（原签 10-04 18:5x 在 21:30 时限内；落卷 10-06 01:03）
+- **双签齐 ⇒ b14 今晚 10-06 晚窗可开跑**（BOD 死线一次到位顺延 10-06 晚窗、不二次滑窗裁在案）
+
+## 使用依据
+
+- 原签发信凭证：SendMessage→m-coo 回执 msg_id `e1a2075b-5fc0-42fa-b5cc-fee674048f0c`（2026-10-04 18:5x+08）
+- 收达旁证：`trees/m2-mainline-sde-window-20261001/sde-precheck-readout-20261004.md` L31「双签前置闸开：CFO 18:5x APPROVE 三注记+CTO 五条」（ff77abd7 落卷）
+- CTO 联签卷（同目录，§二.5 双签席位演进注记=现行令 CTO+CFO）；core-version-gate-sde-checklist.md；chromium-rhy-install-runbook.md（同窗树）
