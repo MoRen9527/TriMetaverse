@@ -127,3 +127,6 @@
   - e00766fd docs(board): 发送账#392——COS三件毕收讫+值面自报定性(操作瑕疵非事故)
   - …另有 317 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:40 +08：自上次进度提交 3af36b49 后新增 1 条 commit：
+  - f5868f90 docs(board): 发送账#407——COS/FSD弹窗终因(worktree同名残留)修复毕+CEO终验过
+- registry：v2.1；今日 registry 提交无变化
