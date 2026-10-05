@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（任务书验收流「CTO 技术方案确认」正身；令源=task-charter.md 99f4aad1）
 - syncMode: final
-- lastSyncedAt: 2026-10-05 10:32:37 +0800（date 现查贴原值；§六 中程异常裁追加版）
+- lastSyncedAt: 2026-10-05 11:45:51 +0800（date 现查贴原值；§七 技术门判读追加版）
 - 确认席: CTO 小狄（m-cto）；**结论=方案批准可施工，演练形四款按本卷执行，排窗 COO 裁**
 
 ## 一、监控形（技术方案主体）
@@ -75,6 +75,19 @@
 - **判据设计确认**：store 细判（per-job 窗=max(3×everyMs,30min)）=心跳正判据，logs 90min coarse 只作辅助——本例 coarse 抓不到（其他 job 一直在跑），细判是唯一可抓面，判据形正确不动。规则文档收本例为「判据有效性实证」：停摆 68.8h >> 90min 细判窗，监控若在 10-02 前在位必触发（落位时已自愈=时序巧合非漏报）。
 - **判据失真警示**：nextRunAtMs 持续滚动但执行停=「调度面活信号」语义在该缺陷形下失真——心跳判据以 lastRun 为主/nextRun 为辅的设计本次侥幸正确，规则文档注明「nextRun 滚动不可单独作为活信号」（TriMLC F-3 同款教训）。
 - **连带（BOD 已知会）**：①本机 52 条僵尸 ssh.exe（9/18 起 capture/log 两族无 -n 同因，源头轮询器今晨仍在产新）；pid 52916（18710 隧道）活体禁动；②PS5.1 引号吞噬=假读数家族第四向定性确认（远端命令静默失败→假读数链路），入册候 CAO（跨管道行尾族三坑并档扩四向）。
+
+## 七、施工毕报技术门判读（2026-10-05 11:45，FSD READY_FOR_REVIEW 3d40070b·三件审毕）
+
+- **结论：APPROVE（技术面验收通过，候办四条全非阻塞）**——转 STE 验证窗+24h 零假阳性观察窗（03:45Z 起算）+BOD 10-07 走查。
+- **卷面核对（独立验）**：判据设计对表本卷 §1.2 表成立（store 精判正判据/SSH 失联第四维禁误判文本/A 形 L2 中继）；收款矩阵三机×三维+通道自检齐，本机 degraded 维不可演练=设计缺口如实标注改记录覆盖（非虚报）；假告警 1 条闭环链完整（根因→修复→双宿主复验→污染账 1/13）；注入面全撤清单七项在卷；本卷前六节裁决令五条全收编规则文档。
+- **四件候裁**：
+  1. TriMLC degraded 全局计数掩蔽（任一 job ok 清零 vs TriMMC/TriRMC per-job max）→**独立候办 P2**：与 TriMMC executor 停摆家族勘同批进维护窗（TriMLC 修时对表 TriMMC per-job max 作旁证，同 trimc-mlc-addjob 分野先例）；监控面补偿已成立（store 精判覆盖单 job 故障）故 P2 非急。
+  2. notify source_seat 白名单缺口→**候办 P3**：现役借用形可运行（三重可追溯：title 前缀+body src+message_id 对表）不阻验收；正解='tri-liveness' 专用 seat 形，挂值席窗白名单修订窗与死路径清理同批。
+  3. R-HY store 精判缺失→**残差声明确认收编**：现役覆盖形（healthz+粗判+L2 独立精判）可接受；TriRMC 本地面精判=R 面线候办 P3 后续窗。
+  4. allowlist 2 死路径→**卫生项 P3**：exact-match 门下无敞口，白名单修订窗清理（与 2 同窗）。
+- **第五向定性确认**：假读数家族第五向=JSON 反序列化类型变形（pwsh7 ConvertFrom-Json DateTime→culture ToString 丢 Kind→+8h 幻影）——与 GBK 编码/转义毁语法/截断伪影/PS5.1 引号吞噬并档五向，入册候 CAO。
+- **演练纪律补强确认**：测试 job 无 command LLM 形 ~65 次模型调用成本泄漏（FSD 如实记账 ✓）——「演练测试 job 一律带 command 形」进规则文档 §六.7，入册候 CAO 候办。
+- 走查重点建议（对 STE/BOD）：矩阵真实性抽验（TriMMC 侧 message_id 对表：ntf-muup44srtrcrbs/ntf-muuowofa66paor/ntf-muupa76l8x3rge）+02:41 污染告警闭环定性复认+注入面全撤复核。
 
 ## 使用依据
 
