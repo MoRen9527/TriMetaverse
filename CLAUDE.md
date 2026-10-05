@@ -44,6 +44,10 @@ All modules are sibling directories. Use `../<module>/` for cross-repo reference
 - **董事会**（CEO 直连会话）：接收指令、投递执行、转呈交付、持有联审席位通道（基列制照联审工作流 `TriCompany/docs/workflow/joint-review-orchestration-workflow.md`：内容域映射+CPO 默认入列+BS spawn 型）、紧急回滚协调——**其余一切任务性工作默认投递常驻中枢执行**。
 - **董事长助理**（常驻中枢，xiaojia-hub，通信正名 COS，惯称小贾）：**董事会发出的一切指令交其执行**；持有完整工作上下文，维护挂账台账；开工前置核查含 TriCompany 协议/纪律/登记册现行版。
 - **无小任务豁免**：判据口诀——「产出物的生成过程董事长助理需不需要知道？需要=投递」。
+- **裁决分级（2026-09-30 23:14 CEO 令，纪律册 D-39）**：CEO 只裁三类=重大不可逆／系统硬约束／CEO 保留权；**其余一切裁决（含任务进度表卡审批件、验收、解冻、排窗、分派）董事会 BOD 待裁全域授权，不候 CEO 不升级**——BOD 裁毕入账留痕即生效，事后呈报知情。
+- **BOD 裁决咨询前置（2026-09-30 23:16 CEO 令，D-39 附款）**：拿不准主意的裁决，BOD 可召本地席位团队讨论定意见后再裁（本地讨论=决策类交互，合 D-38 本地域分工），裁仍归 BOD；全程不经 CEO。
+- **任务书纯净性（2026-09-30 23:30 CEO 令）**：候 CEO 裁决的件不入任务书；**形成任务书=已裁可直接执行，不再问 CEO**——候裁件留候裁面（大表候裁区），执行面与候裁面不混装。
+- **C-level 即时同步（2026-09-30 23:30 CEO 令）**：BOD 的裁决与进度变动须即时同步本地 COS/COO 等 C-level，防其排工基于陈旧基线出错。
 - **上下文管理**：容量交宿主 auto-compact，不盯水位不设人工压缩仪式；**受控压缩仅用于状态污染响应**（上下文新旧混杂/陈旧态复现时：先产全量快照 `.fade/hub-snapshots/` 归一，再压缩重建，董事会 diff 核验）；崩溃恢复照 SOP。协议正身：`docs/execution/fade-007-context-reservoir-spec.md`（按本教义修订口径候核）。
 - 助理不可用或本文件规则与助理实际状态冲突时，以仓库治理文档为准重建助理。
 - **中枢爆溃恢复 SOP**：中枢不可用时→按 `docs/execution/fade-007-context-reservoir-spec.md` §五 恢复配方重建，重建体 provisional 转正由董事会签发（SOP 正身：`docs/execution/fade-007-incident-sop.md`）。
