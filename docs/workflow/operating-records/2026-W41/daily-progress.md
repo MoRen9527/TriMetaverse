@@ -109,3 +109,21 @@
   - 0bff429e docs(cos): 快照首跑红→修复→复验绿——root属主遗留致fleet写权拒（既有教训实证），chown归还+fleet同身份复验OK；终验锚02:45Z
   - …另有 17 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 06613a38 后新增 332 条 commit：
+  - 00b68fd8 docs(board): 发送账#406——COS/FSD启动弹窗根因(会话名历史重名)核查归档毕
+  - 1ca61481 docs(board): 发送账#405——LG-064验证窗双报收讫+第5案定性确认
+  - 415e4661 docs(board): 发送账#404——LG-064技术门APPROVE收讫行27转毕候验
+  - 2b9c7744 docs(board): 发送账#403——COS裁答落办认收(纯回执)
+  - c74e5add docs(board): 发送账#402——快照终验绿全链闭环+两停滞树不催裁
+  - 8a355d5c docs(board): 发送账#401——清场三件毕收讫+dispatch留档裁
+  - 55880eed docs(board): 发送账#400——CTO三件知会收讫(清场派发+家族候办认账落表)
+  - 3432cbec docs(board): 发送账#399——快照首跑红修复复验绿(终验锚10:47)+BOD premature汇报勘正
+  - 1d874c12 docs(board): 发送账#398——SDE两件毕报收讫+401a完工认定
+  - f29b3030 docs(board): 发送账#397——COS首跑时点勘正收讫+BOD裁笔句随勘
+  - 1bb65a4c docs(board): 发送账#396——LG-064形A认账+LG-054件a裁B收口
+  - 6979984a docs(board): 发送账#395——COS流转毕收讫+四点④降级销项裁笔落表
+  - 3a9d5e06 docs(board): 发送账#394——SDE现窗接令回执(施工序+磁盘门过)
+  - 1aca65e4 docs(board): 发送账#393——CEO令三否现窗(SDE直派+COS流转+大表三行死线前移)
+  - e00766fd docs(board): 发送账#392——COS三件毕收讫+值面自报定性(操作瑕疵非事故)
+  - …另有 317 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
