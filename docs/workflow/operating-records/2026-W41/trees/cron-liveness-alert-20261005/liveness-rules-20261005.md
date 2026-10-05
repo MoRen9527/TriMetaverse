@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（LG-064 施工交付三件之一：规则文档；令源=task-charter.md 99f4aad1+CTO 方案确认 cto-tech-plan-confirm-20261005.md 0cdc55ae）
 - syncMode: final
-- lastSyncedAt: 2026-10-05 11:40:34 +0800（date 现查贴原值）
+- lastSyncedAt: 2026-10-05 11:52:26 +0800（date 现查贴原值；§六四裁注记回填）
 - 编写席: FSD 小全（m-fsd）；演练证据正身=同目录 drill-receipts-20261005.md
 
 ## 一、判据与阈值总表
@@ -96,14 +96,16 @@
 
 | # | 项 | 级别 | 处置 |
 | --- | --- | --- | --- |
-| 1 | TriMLC degraded 全局计数掩蔽（§二.4） | 判据设计缺口（TriMLC 侧源码形态，非监控面） | 候独立候办报 CTO；监控面补偿=store 精判已覆盖单 job 故障 |
-| 2 | R-HY store 精判缺失（store 位置 4 探未定，timebox 已到） | 残差如实声明 | R-HY 心跳判据现役=healthz 面+粗判+L2 独立精判（M-SG store 由 L2 跨机覆盖）；R-HY 本地面候后续窗补 |
+| 1 | TriMLC degraded 全局计数掩蔽（§二.4） | 判据设计缺口（TriMLC 侧源码形态，非监控面） | **已裁（CTO §七 76621e93）**：独立候办 P2，与 TriMMC executor 停摆家族同批维护窗（修时对表 TriMMC per-job max 旁证）；监控面补偿=store 精判已覆盖单 job 故障 |
+| 2 | R-HY store 精判缺失（store 位置 4 探未定，timebox 已到） | 残差如实声明 | R-HY 心跳判据现役=healthz 面+粗判+L2 独立精判（M-SG store 由 L2 跨机覆盖）；**已裁（§七）**：残差声明确认收编，TriRMC 本地面精判=R 面线候办 P3 后续窗 |
 | 3 | R-HY daemon 死×本机离线双故障窗漏告 | A 形固有（无发报能力） | 如实声明级；全盲区=三机同挂=声明盲 |
 | 4 | sg-daemon-total-down 时 duty-notify 通道同死 | 声明盲 | 本机 8713 fallback 候 CTO（方案确认卷已列） |
-| 5 | notify source_seat 白名单缺口 | 待裁 | §五，候 CTO 毕报裁 |
-| 6 | TRILC_CRON_COMMAND_ALLOWLIST 含 2 条死路径（.fade/tree-node-patrol.mjs、.fade/ledger-watchlist-patrol.mjs，迁移残留） | 卫生项 | 不急（exact-match 门下无风险敞口），候白名单下次修订窗清理 |
+| 5 | notify source_seat 白名单缺口 | 已裁 P3 | **已裁（§七）**：现役借用形可运行不阻验收（三重可追溯=title 前缀+body src+message_id）；正解='tri-liveness' 专用 seat 形，挂值席窗白名单修订窗与 #6 同批 |
+| 6 | TRILC_CRON_COMMAND_ALLOWLIST 含 2 条死路径（.fade/tree-node-patrol.mjs、.fade/ledger-watchlist-patrol.mjs，迁移残留） | 卫生项（已裁 P3） | **已裁（§七）**：exact-match 门下无敞口，白名单修订窗清理（与 #5 同窗） |
 | 7 | 本地演练测试 job alert-drill-hb 系无 command LLM 形（每分钟一次模型调用，施工期 02:35-03:40 约 65 次） | 成本泄漏（已删） | 毕报记账；后续演练测试 job 一律带 command 形 |
 | 8 | L2 ServerAlive 两参未补（验收窗内不追改，§四.2） | 排程项 | 验收毕维护窗统一补 |
+
+> 判读出处：CTO 技术门判读 §七（方案卷 commit 76621e93，2026-10-05 APPROVE 转验证窗）——#1 P2 独立候办（与 TriMMC executor 停摆家族同批维护窗）、#2 残差收编+R 面线 P3、#5 P3 正解='tri-liveness' seat 形、#6 P3 卫生项；#5/#6 同窗=值席窗白名单修订窗。#7 成本记账 CTO 定性记功不记过（诚实披露）；第五向（JSON 反序列化类型变形）CTO 已确认候 CAO 并档。
 
 ## 七、演练注入面清单（施工终态=全部撤离）
 

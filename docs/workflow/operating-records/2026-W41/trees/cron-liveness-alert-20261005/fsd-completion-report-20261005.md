@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（FSD 毕报正身；候 STE 验证→BOD 非作者走查 10-07→CEO 知会）
 - syncMode: final
-- lastSyncedAt: 2026-10-05 11:50:00 +0800（date 现查贴原值 11:49:5xZ 段落）
+- lastSyncedAt: 2026-10-05 11:52:26 +0800（date 现查贴原值；CTO 技术门 APPROVE 四裁注记回填）
 - 编写席: FSD 小全（m-fsd）；配套=liveness-rules-20261005.md（规则）+drill-receipts-20261005.md（证据）
 
 ## 实现方案
@@ -37,10 +37,10 @@
 
 | # | 项 | 去向 |
 | --- | --- | --- |
-| 1 | TriMLC degraded 全局计数掩蔽（单 job 连败不可见；TriMMC/TriRMC=per-job max 三形态分野） | 候 CTO 独立候办；rules §二.4/§六.1 |
-| 2 | R-HY store 精判缺失（4 探 timebox 到，store 位置未定）+A 形双故障窗漏告 | rules §六.2/.3 残差声明 |
-| 3 | notify source_seat 白名单缺口（监控面借用 m-duty-cos） | 候 CTO 毕报裁，rules §五 |
-| 4 | allowlist 2 死路径+本地 LLM 测试 job 成本泄漏（~65 次调用，已删） | rules §六.6/.7 |
+| 1 | TriMLC degraded 全局计数掩蔽（单 job 连败不可见；TriMMC/TriRMC=per-job max 三形态分野） | **已裁 P2** 独立候办（CTO §七 76621e93，与 TriMMC executor 家族同批维护窗）；rules §二.4/§六.1 |
+| 2 | R-HY store 精判缺失（4 探 timebox 到，store 位置未定）+A 形双故障窗漏告 | **已裁**：残差声明确认收编+TriRMC 本地面精判=R 面线 P3；rules §六.2/.3 |
+| 3 | notify source_seat 白名单缺口（监控面借用 m-duty-cos） | **已裁 P3**（正解='tri-liveness' 专用 seat 形，候白名单修订窗）；rules §五/§六.5 |
+| 4 | allowlist 2 死路径+本地 LLM 测试 job 成本泄漏（~65 次调用，已删） | 死路径**已裁 P3** 白名单修订窗同批清理；rules §六.6/.7 |
 | 5 | L2 ServerAlive 两参（验收窗内不追改） | 验收毕维护窗，rules §四.2 |
 | 6 | M-SG /etc/trimc-internal-token 陈旧（未触，消费方未知） | 已记录；权威位=/proc daemon env |
 | 7 | 假读数家族第五向候选：pwsh7 ConvertFrom-Json DateTime 类型变形 | rules §3.2，候 CAO 并档 |
@@ -54,6 +54,7 @@
 
 ## 排窗事项（候 COO）
 
+- 技术门判读：**APPROVE**（CTO 方案卷 §七，commit 76621e93，2026-10-05）——四裁已回填本件债表与 rules §六；已转 STE 验证窗+BOD 走查链。
 - 24h 零假阳性窗：**2026-10-05T03:45Z 起**（施工收口锚）；窗内唯一持续真实信号=M-SG config-sync degraded（COS 修线）。
 - b14-core-bump 晚窗：族③ CORE_VERSION 门随链尾（COO 认定卷），本席候令。
 - STE 验证→BOD 非作者走查（10-07）：建议走查重点=演练矩阵真实性抽验（message_id 回执可对 TriMMC 侧查询）+01 污染告警已闭环定性。
