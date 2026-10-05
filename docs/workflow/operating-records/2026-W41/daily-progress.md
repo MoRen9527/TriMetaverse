@@ -169,3 +169,7 @@
   - cec113ef merge: 并行笔收编（BOD 任务书改令笔 × 巡检兜底自动笔）
   - a5a00e7a docs(board): 任务书改令·深夜段低风险三件即启(N4→N1→N3)+N2留白窗+M面切换暂缓(候后令)+R面测试放开授权（CEO 03:10 令；深夜禁动R-HY生产部署统一白窗）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:30 +08：自上次进度提交 84d86e9f 后新增 2 条 commit：
+  - f2430983 merge: 并行笔收编（COO 夜干滚动线）
+  - 0181161f docs(coo): LG-058 夜干滚动——N4 施工毕（c4d9137 候 STE+流水线读数）/N1 施工中（tier 上报链三段补建+白窗只读实勘三候选）；树单 §四刷新+workbench 记账
+- registry：v2.1；今日 registry 提交无变化
