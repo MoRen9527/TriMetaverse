@@ -39,6 +39,14 @@
 - git 面零扰动：v2 快照行只追加工作区文件，本卷+首批快照行随本席收口 commit 一并落（不自动 commit 不添机器齿轮）。
 - TriMMC 禁动面未触（weekly-plane-shift b00b0070 维持 disabled 裁停态未碰）。
 
+## §五½ 首跑事故与修复（10:15 生产轮红→10:19 修复复验绿）
+
+- 首跑实况（02:15:21.301Z，runCount 77）：**error Permission denied 双写面**（last-run.txt L14+progress-snapshot.md L95）——job 本体调度面全正常（到点即跑）。
+- 根因：本席 ssh sg 为 **root 身份**，§三手动冒烟轮所建 `/srv/fleet/var/bod-progress/`+`trees/bod-watch/` 目录及 state.json/last-run.txt 全 root:root，fleet executor（trimc.service User=fleet）无写权。**正中既有教训**（root 操作 sg 面 root 属主遗留致 fleet job 连败案）：root 操作后必 find -user root 清点+chown 归还——本席冒烟环节漏做属主清点，候 CAO 并档。
+- 修复（10:19）：`chown -R fleet:fleet` 两目录归还→`sudo -u fleet` 同身份复验跑 FLEET-RUN-OK（state/last-run 归 fleet uid 新写+快照新段落盘）。
+- 意外收获：复验轮 capture 段实显 **m-duty-cos tmux 会话已复活**（值席会话重启，capture 容错分支生产首显）——名册仍 13 席无它，会话与名册注册态分离如实注记。
+- 终验锚：02:45:21.326Z 下一生产轮（cron 10:47 一次性验证在挂）——fleet 身份复验绿+调度面正常，生产轮终确认预期绿。
+
 ## §五 移交与候办
 
 - 首次生产轮 02:15:21Z（北京 10:15:21，10:03 验证 turn 勘正确认）；后续每 30min 一轮（02:45/03:15…）。停滞旗标生产显影最早=12 轮后（同态 6h）——本树 bod-watch 自身每轮刷新（快照行自指）永不停滞。
