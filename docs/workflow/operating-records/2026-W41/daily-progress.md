@@ -173,3 +173,8 @@
   - f2430983 merge: 并行笔收编（COO 夜干滚动线）
   - 0181161f docs(coo): LG-058 夜干滚动——N4 施工毕（c4d9137 候 STE+流水线读数）/N1 施工中（tier 上报链三段补建+白窗只读实勘三候选）；树单 §四刷新+workbench 记账
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:50 +08：自上次进度提交 00b708fb 后新增 3 条 commit：
+  - 1dd2028f docs(coo): workbench 03:4x 笔——LG-058 夜干段收口三件代码面全毕（N4 c4d9137/N1 5b4dedb+8249eb7/N3 e099329）；白窗预排四活+窗尾并报裁定+STE 同批验收预排
+  - 017c99c3 merge: 并行笔收编（FSD 树单回写笔 × 巡检兜底自动笔）
+  - 1705654b docs(fsd): LG-058 树单 §四回写——N1 毕(5b4dedb+8249eb7 tier三段+活体链验证)/N3 毕(e099329 来源二分列)；夜干三件代码面收口
+- registry：v2.1；今日 registry 提交无变化
