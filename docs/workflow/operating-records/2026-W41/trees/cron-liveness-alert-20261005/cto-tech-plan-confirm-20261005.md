@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（任务书验收流「CTO 技术方案确认」正身；令源=task-charter.md 99f4aad1）
 - syncMode: final
-- lastSyncedAt: 2026-10-05 06:52:09 +0800（date 现查贴原值）
+- lastSyncedAt: 2026-10-05 09:52:09 +0800（date 现查贴原值；§五 分歧裁决勘正版）
 - 确认席: CTO 小狄（m-cto）；**结论=方案批准可施工，演练形四款按本卷执行，排窗 COO 裁**
 
 ## 一、监控形（技术方案主体）
@@ -12,10 +12,10 @@
 核心约束=「监控探针不得与被监控面同生共死」（本次事故盲区即同体形：healthz 活+cron 死无人知）。监控通道若挂在被监控 daemon 上，daemon 死则告警也死——故取两层：
 
 - **L1 各机本地自检**（发报位与被监控面异体）：
-  - R-HY：探 trirmc.service（8712 正主）——发报经 trirmc-mc（8710）notify（8712 死 8710 活时告警仍可达，正是本次事故场景的补位形）；
-  - M-SG：探 8712 MC face+TriMMC watcher cron 链——发报经 TriMMC 8710 notify；
+  - R-HY：探 trirmc.service（8712 正主）——**退化形：自检+写状态文件，无本地发报**（R-HY 面 notify 能力不存在——FSD 2026-10-05 实勘 8710/8712 POST /internal/v1/notify 均 404+TriRMC src 零 notify 路由；本卷原稿「发报经 8710 notify」系发报位假设错误，已裁决勘正，见 §五）；发报全走 L2 代发，状态文件兜底供 L2 恢复后拉读（事后审计面）；
+  - M-SG：探 8712 MC face+TriMMC watcher cron 链——发报经 TriMMC 8710 notify（本地 POST 实勘可达）；
   - 本机：探 TriMLC 8713——探针挂 TriMLC-Watchdog 既有轮（5 分钟轮现役），发报经 8713 notify+watchdog 通道（同体盲区由 L2 兜底）。
-- **L2 本机远程巡检**（跨机兜底）：本机探针经 SSH 拉 R-HY/M-SG 三态读数（`systemctl is-active/is-enabled`+cron store 心跳文件读数），异常经本机 notify 链发报。L1 死区域（notify 链随 daemon 全死）由 L2 兜底；L2 盲区（本机离线）由 L1 独立存续兜底。全盲区=三机同时挂=公司整体停摆，超监控范畴（如实声明）。
+- **L2 本机远程巡检**（跨机兜底）：本机探针经 SSH 拉 R-HY/M-SG 三态读数（`systemctl is-active/is-enabled`+cron store 心跳文件读数），异常经本机 notify 链发报（本机发报正形=经 18710 隧道 notify，FSD 实勘 healthz 200+notify 401 门在）。L1 死区域（notify 链随 daemon 全死）由 L2 兜底；L2 盲区（本机离线）由 L1 独立存续兜底。**SSH 失联增为 L2 第四告警维度**（本卷 §1.2 表外补充维度，2026-10-05 分歧裁决追加）：SSH 连接失败即告，文本写「R-HY SSH 失联（原因未定，含本机离线可能）」禁写死定性。全盲区=三机同时挂=公司整体停摆，超监控范畴（如实声明）；**R-HY 面残差：daemon 死×本机离线双故障窗漏告**（L1 无发报能力所致），同族如实声明级。
 - SSH 拉数=**零生产机改动**（边界 1 最彻底形：监控面外挂，TriRMC/TriMMC/TriMLC 源码零改动成立）。
 
 ### 1.2 三维度实现路径（对任务书硬要求四条）
@@ -25,7 +25,7 @@
 | 进程活体 | `systemctl is-active <unit>`（R-HY/M-SG）；本机=端口监听+pidfile 对表（Get-NetTCPConnection+~/.trimetaverse/trilc-8713.pid，per-port pidfile 纪律在案） | 非 active 即告 |
 | **cron 心跳（核心盲区）** | ①healthz `.cron` 子键（jobCount/degraded/consecutiveFailures——F-3 后读数面现成，双读数先例）②cron store 各 enabled job 的 lastRunAtMs/nextRunAtMs ③store 文件 mtime | `now - lastRunAtMs > 周期×容差系数` 即告；容差系数=**3×**（覆盖偶发延迟）+最小绝对窗 30 分钟（防长周期 job 误报钝化）；nextRunAtMs 非 NULL 且滚动=调度面活信号（F-3 修复后语义）；degraded=true 即告 |
 | disabled 无自启 | `systemctl is-enabled <unit>`（Linux）；本机=TriMLC-Watchdog 计划任务态（Get-ScheduledTask State≠Ready 即告） | disabled/missing 即告（人工停+无自启=静默死亡第二半因） |
-| 告警通道 | notify 值席链（R-HY 端到端已验通） | 文本模板零敏感值：只带 unit/job 名+维度码+状态+时戳；token/密钥/路径值面禁入（值面纪律） |
+| 告警通道 | notify 值席链（M-SG 本地 8710+本机经 18710 隧道两发报位实勘可达；R-HY 面无 notify 能力，FSD 2026-10-05 实勘，R-HY 发报走 L2 代发） | 文本模板零敏感值：只带 unit/job 名+维度码+状态+时戳；token/密钥/路径值面禁入（值面纪律） |
 
 探针节奏：L1 各机 cron 跑自检脚本每 5 分钟；L2 本机巡检每 10 分钟（SSH 成本）；告警去抖=连续 2 轮异常才发报（防瞬断误报，20:5x watchdog 瞬断先例）。
 
@@ -58,6 +58,15 @@
 - 施工席=SDE/FSD（验收流第三步）；排窗 COO 裁（任务书建议明日晚窗，本卷维持不施工今窗）；
 - 施工注意：探针脚本落位与 TriRLC-Watchdog 同域（Windows 计划任务无窗纪律 D-29 在案）；R-HY/M-SG 侧 SSH 通道凭据走既有值席通道，**凭据零入脚本明文**（ssh config 别名形）；
 - 本卷=技术方案确认毕，SDE/FSD 可按此施工；施工中遇方案分歧回本席裁决，不自行变更维度判据。
+
+## 五、施工分歧裁决（2026-10-05 09:52，FSD 报裁·裁候选形 A）
+
+- **分歧事实**：FSD 施工实勘 R-HY 8710/8712 POST /internal/v1/notify 带 token 均 404（TriRMC src 零 notify 路由佐证=端点不存在非门拦截），证伪本卷 §1.1 R-HY L1 发报位设计。残差=R-HY「daemon 死×本机离线」双故障窗漏告。
+- **裁决=候选形 A**（FSD 荐；B 动 R-HY 禁区面违边界 1，不采）：R-HY L1 退化「自检+写状态文件」，发报全走 L2 代发；SSH 失联增为 L2 告警维度；残差如实入规则文档。
+- **裁据三条**：①边界 1「TriRMC 源码零改动」+R-HY 禁区照旧=B 违边界，为一个发报位动生产机成本倒挂；②残差与全盲区声明同族（声明级非缺陷级），L2 架构对本机离线本就全盲（三机全漏不止 R-HY），A 未引入新类别盲区；③SSH 失联维度把本机离线从纯盲变可观测信号，补住残差可探测半边。
+- **施工细则三条（随裁决下传 FSD）**：状态文件=只追加+按周轮转+零敏感值面（路径格式 FSD 定，回报留卷）；SSH 失联告警文本禁写死「R-HY 挂了」（原因未定含本机离线可能，误定性禁令）；残差入文档措辞格式对齐 §1.1 全盲区声明款。
+- **勘误自领**：本卷原稿 §1.1 R-HY 发报位系未经实勘的假设（「R-HY notify 端到端已验通」采信自任务书转述链，未验来源）——假读数家族记认，教训=发报位/端点类设计前先实勘对端能力面。
+- FSD 回执（2cea1fed）：施工放行，M-SG/本机 L1 照常推进，R-HY 部署形=A 形即起不抢跑。
 
 ## 使用依据
 
