@@ -73,6 +73,19 @@
 - 时窗自查: 21:39 报备，23:00 前毕充裕
 - **GO-r3 双批（COO 21:40+BOD 21:40）→续环一次绿**: 13:41:15Z 续环→deploy-sha 0a2ce5b 断言 ok→环B active 13:41:19Z→/health ok+环C 全绿 13:41:22Z→**STAGE2-R3-DONE（文件式探针零假阴性，r2 教训闭环实证）**；二轮锚⑤ menu-full 保持+正名锚全绿（全格式签/M-SG/R-HY 在场+河源/压缩形渲染面零残留）；三服务终态 active，TriRMC 双 unit 零触碰；GO flag/中间物清 13:41:54Z
 - 第①刻毕报: 13:42Z 双发 COO+BOD（②f mock 8710 边界外单列注明遵 BOD 令）；BOD playwright 复验候触发
+
+### r3b 补钉段（BOD 21:44 复验打回单点→21:56 GO 双批→21:57 毕，一次绿）
+
+- 打回面: 正名锚全过 PASS 维持，**单点打回**=#connect R 服务域卡头实例行缺端口（「TriRMC · R-HY」→须「TriRMC · R-HY 8712」）；对称性缺口——三姊妹卡头均带端口，本席原以最小 diff/原形无端口为由漏改（UI 对称性走查教训族，候 CAO 与四签对等正形并档）
+- 补钉: `CONN_DOMAINS` rmc 行→`TriRMC · R-HY 8712`；**四签端口对等显式化三层锚**——②g jsdom 逐 pane 断言（`M-SG 8712`/`本机 8713`/`R-HY 8712`/`本机 8711` 四卡头逐一在场）+Stage1/Stage2 构建产物 grep 四条（`port-parity:` 前缀 fail 硬断言）+BOD playwright 真浏览器终验
+- 代码: **0a2ce5b→ce153a9**（ui/index.html 单点+②g 端口对等扩展；其余零变），已推 sg bare（ls-remote 证实 dev=ce153a9）
+- 自测门: UI 四门 52/52；全量 **345/331 pass / 0 fail / 14 skip**；lint 与基线同零新增
+- 流水线 r3b: Stage1-r3 绿（十锚=六正名+四端口对等，TM_SHA=ce153a9）；传输腿 sha256 -c OK；Stage2 环A skip 复用 r3 备份锚（BACKUP-ANCHOR-r3.ready，dist bak a6af0b9b…f50 纯前端零变）；**GO gate 真值注记**: COO 令文「touch GO-r3b.flag」而脚本停等门真值=`GO-r3.flag`——按脚本真值触发并如实注记（候毕报核实项，已毕）
+- 回滚语义如实: 备份锚=r2 dist（文案级回退——r3b 回滚将回到二轮形态，重跑即恢复；COO/BOD 双认账）
+- **GO-r3b 双批（COO 21:56+BOD 21:56）→续环一次绿**: 13:57:03Z GO flag 读入→deploy-sha ce153a9 断言 ok→环B **trimodel active 13:57:06Z**→/health ok+环C 十锚全绿 13:57:07Z（文件式零管道，r2 教训持续生效）→**STAGE2-R3B-DONE**
+- **活体值面终刀 13:57:48Z**（/ui 独立 grep）: 四端口对等 PASS×4+RMC 卡头「TriRMC · R-HY 8712」在位 PASS+无裸「TriRMC · R-HY」卡头+三服务 active；GO flag/b64/stage 中间物清毕
+- 触发形勘误候记: ssh 后台触发 `A && B & C` 中 `&` 使整链后台化挂 ssh 90s（读数完整无碍）——正形=换行语句形分离（候入 D 系触发令形条）
+- 时窗自查: 21:57 毕，23:00 界内充裕
 - 一轮执行卷: rhy-upgrade-pipeline-20261006.md（形态/硬门/教训全供）
 - 三机现势实勘: sg bare dev=0359b89（ls-remote 值面）/R-HY 在役 deploy-sha=45757bd
 - 纪律: 硬门①报备义务（一轮 COO 令原文）/D-17 本机传输腿/B64 内联 aegis 对症/值面三断言（截断伪影与键值掩码面零触碰——本卷零 token 值出机）

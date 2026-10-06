@@ -7,8 +7,8 @@
 set -uo pipefail
 UP=/srv/fleet/lg058-upgrade
 IN=$UP/in
-TM_SHA=0a2ce5b7c79067387705d56c5ff47115fc1dda72
-TM_SHORT=0a2ce5b
+TM_SHA=ce153a9bc4f678eef592f24fd531dbf4f2f891ba
+TM_SHORT=ce153a9
 TS=$(date -u +%Y%m%dT%H%M%SZ)
 CARDS=/srv/fleet/trimodel-data
 LOG=$UP/stage2-r3.log
@@ -92,6 +92,11 @@ grep -q 'body class="menu-full"' "$UIF" || fail "锚⑤回退: 二轮冷态静�
 grep -q 'M 面 · 服务域' "$UIF" || fail "三轮锚: 三段式全格式签缺失"
 grep -q 'M-SG' "$UIF" || fail "三轮锚: M-SG 正名缺失"
 grep -q 'R-HY' "$UIF" || fail "三轮锚: R-HY 正名缺失"
+# 四签端口对等（BOD 复验打回钉）
+grep -q 'M-SG 8712' "$UIF" || fail "端口对等: mmc M-SG 8712 缺失"
+grep -q '本机 8713' "$UIF" || fail "端口对等: mlc 本机 8713 缺失"
+grep -q 'R-HY 8712' "$UIF" || fail "端口对等: rmc R-HY 8712 缺失"
+grep -q '本机 8711' "$UIF" || fail "端口对等: rlc 本机 8711 缺失"
 if grep -q '河源' "$UIF"; then fail "三轮锚: 机器位旧名「河源」渲染面残留"; fi
 for CMP in 'M 服务域' 'M 本地域' 'R 服务域' 'R 本地域'; do
   if grep -q "$CMP" "$UIF"; then fail "三轮锚: 压缩形「$CMP」渲染面残留"; fi
