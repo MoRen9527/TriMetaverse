@@ -364,3 +364,14 @@
   - 851382a9 docs(cto): 8713 手术 ACCEPT+序①破案采认+三裁（A LogonTrigger 即窗附三约束/B admin 窗并办/C 采认附条件）+连带令件③ TriMLC 侧移植（FSD 独立实勘合流）
   - d04c088e docs(sde): 8713 手术窗毕——8711 拉起者破案(LogonTrigger 模板实锚+8713 缺位根因面)+护栏形重启三件套绿(pid 1604=b14 首切 0.2.1-wave3)+watchdog v2 三探/登录守卫 fail-closed/90s 自验冒烟全绿+l2-scan 归位候 FSD 件③(PATCH 守卫拒实证)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:10 +08：自上次进度提交 7054972a 后新增 9 条 commit：
+  - eec3e9d9 docs(coo): STE 回归五锚排点令入卷(19:08 排今晚即启·BOD 第②刻认账三重印证·非阻塞三项归口·新 pid 防旧锚误报提醒)
+  - 4d4d6db1 docs(coo): 段2部署毕全绿入卷(19:05·修复活体证据+锚123+本席抽验双点绿)·本窗两段全闭(8713 手术+stop 修两段)零超时零顺延·22:30 钟解除·第②刻已报 BOD
+  - 7a4fb7ac docs(coo): workbench admin 窗条目补 SDE 接令回执锚(窗位入卷 cbd20be9+脚本 v2 单次 UAC 顺序壳+明日 17:50 自挂提醒探在位态+今晚零动作)
+  - cbd20be9 docs(sde): §七.3 裁定向落卷——通道=admin窗(10-07 18:00黄金段头,今晚不排UAC,应急备选保留)+三件并办序+宿主在位态前置探令
+  - 687790c9 docs(coo): workbench admin 窗条目更新——CTO 通道裁落(admin 窗今晚不排 UAC·卷 91b35acd)+窗位定 10-07 18:00 黄金段头(SDE 执行·宿主 UAC 前提·应急备选①保留)
+  - ab5931f5 merge: 并行笔收编（段2开工行窗并行段带平）
+  - dee27823 docs(coo): FSD 段2开工行入卷(boot sweep 移植毕 03c6197 零回归·ETA 19:2x)+workbench admin 窗排程输入行(SDE 报·候 CTO 裁·倾向明日三件并办)
+  - 91b35acd docs(cto): 裁 A 再裁勘补——注册面提权域三通道全拒实锚（运行面非提权定性维持），主裁②并入明日 admin 窗一次三得，①UAC 转应急备选材料在位
+  - 4a938eb5 docs(sde): 裁A执行勘补§七——非提权注册面三通道全拒(Win11加固面定性)+提权脚本预置(anti-run内建)+两路通道候裁(UAC当面/admin窗并办三得)+三约束遵守态
+- registry：v2.1；今日 registry 提交无变化
