@@ -5,8 +5,8 @@
 # 执行形: B64 内联 nohup（aegis 间歇锁对症）；脚本落盘件=素材+审计锚
 set -uo pipefail
 BASE=/srv/fleet/lg058-upgrade
-TM_SHA=0a2ce5b7c79067387705d56c5ff47115fc1dda72
-TM_SHORT=0a2ce5b
+TM_SHA=ce153a9bc4f678eef592f24fd531dbf4f2f891ba
+TM_SHORT=ce153a9
 
 log(){ echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] $*"; }
 
@@ -48,6 +48,11 @@ echo "$TM_SHA" > dist/.deploy-sha
 grep -q 'M 面 · 服务域' dist/ui/index.html || fail "fullformat-domain-tab-missing (三段式全格式签未进产物)"
 grep -q 'M-SG' dist/ui/index.html || fail "m-sg-name-missing"
 grep -q 'R-HY' dist/ui/index.html || fail "r-hy-name-missing"
+# 四签端口对等（BOD 复验 21:44 打回钉）：四卡头实例行各含自己端口值
+grep -q 'M-SG 8712' dist/ui/index.html || fail "port-parity: mmc M-SG 8712 missing"
+grep -q '本机 8713' dist/ui/index.html || fail "port-parity: mlc 本机 8713 missing"
+grep -q 'R-HY 8712' dist/ui/index.html || fail "port-parity: rmc R-HY 8712 missing"
+grep -q '本机 8711' dist/ui/index.html || fail "port-parity: rlc 本机 8711 missing"
 if grep -q '河源' dist/ui/index.html; then fail "heyuan-residual (机器位旧名残留)"; fi
 for CMP in 'M 服务域' 'M 本地域' 'R 服务域' 'R 本地域'; do
   if grep -q "$CMP" dist/ui/index.html; then fail "compact-tab-residual ($CMP)"; fi
