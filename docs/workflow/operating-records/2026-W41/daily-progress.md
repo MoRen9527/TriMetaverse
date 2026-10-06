@@ -205,3 +205,13 @@
   - c652edfe docs(sde): hub-silent-detect 停摆诊断+复活读数卷——全7job自10-05 17:44集体停(错位daemon 20140 store-blind五证据),正途带token /shutdown退+channel.cmd冷启31800 jobs=7,补跑轮1已落,缺陷三锚+拉起者考古候移交
   - 59310fe6 docs(fsd): LG-058 树单 N5 方案二收口笔+断点续干笔——联席毕(51b8e39)三件之二,断点08:49停摆35分档→09:23复活续干→09:45收口,方案三候做
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:30 +08：自上次进度提交 424428ca 后新增 8 条 commit：
+  - 3a81e036 docs(coo): workbench 10:2x 笔勘销注——9b9de084 推平项系时序差（已在我 merge 32f4aef5 链内顺带推平，三面顶一致，FSD 10:3x 实锚互证），提醒即自愈销
+  - 0e641383 docs(sde): 8713错位考古实锚卷+修复方案一页草稿——四daemon对照表/时间线/缺陷五件(stop双缺陷+watchdog判活盲区+revive无自验+l2scan链断裂+env未pin)/拉起者排查终局,方案=判活三件套+无人登录守卫(红线①②入合同),候CTO b14窗核
+  - 32f4aef5 merge: 并行笔收编（COO 10:2x 对表笔 × watcher 10:10 巡检笔）
+  - 4c955c01 docs(coo): workbench 10:2x 笔——五节点代码面全毕对表+升版排窗接令（触发锚=STE 卷落树+BOD 复验回执）+伪 YES 勘正自领（echo 串接假读数，真判定 9b9de084 未在 bare 候 FSD 推平）
+  - 6717d1e5 docs(cos): 大表 LG-058 行刷态——N5 三件毕 10:22 五节点代码面全收口/账本对表 81a0b390/STE 卷落树后三面对表候触发
+  - 81a0b390 docs(cos): 账本对表——LG-058 N5 三件毕 10:22（366eecb+99806cf）N2/N5 现势改毕候验·STE 走查已派即启；五节点代码面全收口
+  - 9b9de084 docs(fsd): LG-058 树单 N5 方案三收口笔——三件全毕(TriModel 366eecb+TriRMC 99806cf),四域签五步数据流诚实三态,触发 STE 走查+升版流水线候备
+  - 4cf0c9f1 docs(cto): LG-064 方案卷§八——8713停摆案三件裁决(根治窗并b14/SDE独立包+红线两条;stop双缺陷独立窗不搭b14车)+考古扩围(l1.log实锚23980错位形#1重启前2h无窗顶port,复发条件放宽至daemon死亡窗)+BOD ladder四款裁准+监控第三次真实捕获实证(67条/16h/零漏轮全合法)+值席认领断链发现
+- registry：v2.1；今日 registry 提交无变化
