@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（8713 手术施工读数正身；方案卷=同目录 trimlc-8713-fix-proposal-1p-20261006.md，CTO 放行 10:42+18:2x 回执「§四序照案打头，术后读数照三件套+首切锚」）
 - syncMode: static
-- lastSyncedAt: 2026-10-06T19:23:00+08:00（date 现查原样粘贴）
+- lastSyncedAt: 2026-10-06T19:25:30+08:00（date 现查原样粘贴）
 - 施工席: SDE 小布（m-sde）；施工窗=2026-10-06 18:27-18:48；硬门=全过（见 §六）
 
 ## 一、序① 8711 正形拉起者追查（破案）+序①A 提权验证
@@ -195,4 +195,4 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 - daemon-down 窗压至 S2b-S3（SQL+boot 秒级）——build 前置于 shutdown 前=down 窗最短化（FSD「冷起前须 build」口径的执行序精确化，语义不变）
 - 2b1709d 同窗带出（updateJobRun 尾补 saveCronStore，行为锚测试两例在 03c6197 同顶）
 - 回滚三层：store 备份+10-04 dist bak+watchdog v1 bak（今晚 §四 回滚方案态延续）
-- **STE 回归读数互引（19:1x，卷 2ef063b9）**：调度器本体 6/7 job 健康滚动+korw 卡态独立复确认（state=running/updatedAt 10:39:54Z 被动 touch 未解卡=PATCH 零写路径旁证，与 §二.3 勘补互证）。STE 建议「PATCH state→idle」**不可行已勘正回执**（可写清单白盒+本席两轮 PATCH 实证+force 先后序三重堵死）；korw 冻结=CTO 裁 C 明令今晚零动作，归位=明晚冷起窗三得（boot sweep 自动归位先于补跑）。STE 增量：挂死根因侧读数（stub.log 末行 10-03 09:42+08→10-05 09:42Z 执行无 log=早期挂死未退出，为何挂死候 STE 窗另查）；锚2/3/5 补测候解卡后；degraded per-job max 掩蔽案例+1（候办维持，TriMMC 形对齐）
+- **STE 回归读数互引（19:1x，卷 2ef063b9→b2ebb06f 采录入卷）**：调度器本体 6/7 job 健康滚动+korw 卡态独立复确认（state=running/updatedAt 10:39:54Z 被动 touch 未解卡=PATCH 零写路径旁证，与 §二.3 勘补互证）。STE 建议「PATCH state→idle」**不可行已勘正回执**（可写清单白盒+本席两轮 PATCH 实证+force 先后序三重堵死——STE 三重全采，「键存在≠值面生效」家族候 CAO 并档）；korw 冻结=CTO 裁 C 明令今晚零动作（STE ②遵令确认）。**补测触发点锁定（STE ③对表）**：明晚冷起窗毕本席毕报直达 STE=开跑信号，锚2/3/5 补测走 19:00-19:30 窗缝，五锚终态随卷直达 COO+BOD。STE 增量：挂死根因侧读数（stub.log 末行 10-03 09:42+08→10-05 09:42Z 执行无 log=早期挂死未退出，为何挂死候 STE 窗另查，与卡态残留两层分立）；degraded per-job max 掩蔽案例+1（候办维持，TriMMC 形对齐）
