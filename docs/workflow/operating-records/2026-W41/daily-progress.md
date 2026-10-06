@@ -184,3 +184,9 @@
   - 60dd226c docs(fsd): LG-058 树单 N2 开工笔——白窗段即启(BOD 07:5x 令，R面双卡 TriRMC 先行，测试放开授权，M面暂缓)
   - a2aa5774 docs(fsd): LG-058 树单 N1 行补 BOD 复验通过+TriRMC 8249eb7 推 sg bare 锚(ls-remote 复验 ff 496613b→8249eb7)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:20 +08：自上次进度提交 24250601 后新增 4 条 commit：
+  - eb0efdc3 docs(coo): workbench 08:1x 笔——CEO 升版形态令接令对表毕（R-HY 流水线形态四硬点/FSD+BOD+COS 三面同步）；候同窗预排退役改候 N5 毕+流水线形态；共享仓编辑即提交纪律自领
+  - e3fcedc4 merge: 并行笔收编（COO 升版形态令对表线）
+  - 43a1ac88 docs(coo): 树单对表 CEO 08:17 升版形态令——R-HY 升版 N5 毕后走服务域流水线无人值守（禁手动逐跳），全链读数五环落卷 BOD 核后呈 CEO；备份锚+值面探针+回滚预案嵌入流水线步骤；令源链补 07:5x 白窗定序+08:17 形态令
+  - 8e128000 docs(fsd): LG-058 树单 N2 代码面收口笔——卡面维护面端点族+UI真按钮毕(46b80b2)，演练读数候升版窗
+- registry：v2.1；今日 registry 提交无变化
