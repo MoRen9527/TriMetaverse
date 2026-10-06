@@ -151,6 +151,17 @@
 - **总裁**：**CONDITIONAL_FAIL 候裁**——P1 候选若裁必修，则 N5 回炉一点（工程量小）；九条整改锚主体已答到，候 BOD 复验+CTO 裁 P1 归口与修窗。
 - **流水线终读数锚（走查门②闭环）**：TriModel 全量 330/316 pass/0 fail/14 skip 全绿；TriRMC 全量 472/462 pass/10 fail——10 fail 四族终归因零一落 N1-N5 对象域（无凭据环境型×4/流水线执行环境族×2/sg git 环境候选×1/跨仓硬编码漂移×1 套件），本波对象域套件全绿。TriRMC 10 fail 中族④（Employee Registry 14→15 漂移）系真测试腐化候选，候 CTO 知情+TriRMC 测试维护波另立，不阻塞本波收口判读。
 
+### 七.1 候复验清单（P1 裁定落卷；CTO 快核 b6dea60a，2026-10-06 11:2x 回执）
+
+- **裁定**：案一=nav 移入 `#app-layout` 容器内（首子节点，置于 `#page-main` 前），CSS/JS 零改；案二（body 级 flex）否决——body 直子节点含 conn-settings 面板，body 级 flex 拖其入 flex 流，侵入面反大。
+- **本席单点复验清单（FSD 案一施工毕后启，非作者同沙箱形）**：
+  1. 结构断言：`nav.parentElement === #app-layout`（ui-fourplane 增补①）。
+  2. 几何断言：宽视口 menu-full 态 `menuRect.right <= mainRect.left`（ui-fourplane 增补②；**几何才是 CEO #1「分左右」真回归门**——结构对齐不保证视觉兑现，本席 §2.1 三层证据即结构在场而视觉不兑现的实例）。
+  3. 活体走查：playwright menu-full 切换→左右分栏视觉实态+四族复查（布局族）+截图附卷。
+  4. 可选微整核验（非阻塞）：menu-full 态 nav `margin:0`。
+  5. 回归面：menu 收起态/默认态零涟漪（#app-layout 无基础规则，CTO 依据①的对表复核）。
+- 复验毕回执 BOD 终裁（流程：FSD 施工→STE 单点复验→BOD 终裁→CEO 终验位）。
+
 ## 八、使用依据
 
 - 受理依据/树单/任务书/CPO 方稿/九条件：本目录与 W41 目录四件（commit 8835f58d/015d2884/a5a00e7a/9f86ff34）
