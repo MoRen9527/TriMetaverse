@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（8713 手术施工读数正身；方案卷=同目录 trimlc-8713-fix-proposal-1p-20261006.md，CTO 放行 10:42+18:2x 回执「§四序照案打头，术后读数照三件套+首切锚」）
 - syncMode: static
-- lastSyncedAt: 2026-10-06T18:58:40+08:00（date 现查原样粘贴）
+- lastSyncedAt: 2026-10-06T19:05:10+08:00（date 现查原样粘贴）
 - 施工席: SDE 小布（m-sde）；施工窗=2026-10-06 18:27-18:48；硬门=全过（见 §六）
 
 ## 一、序① 8711 正形拉起者追查（破案）+序①A 提权验证
@@ -150,10 +150,10 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 - **预置提权注册脚本**：`C:\Users\jedih\AppData\Local\trimlc-daemon-logon-task-register.ps1`——对抄 XML 内嵌+根夹注册+三点 query 断言+**anti-run 内建**（零 /run 零 Start-ScheduledTask）；BOM ✓+PSParser 0 错 ✓（parse-only，未执行）
 - `\TriCompany` 子夹留置（空夹无害；root 对抄注册优先，子夹为 fallback 候选落点）
 
-### 7.3 两路执行通道候裁（CTO/COO）
+### 7.3 两路执行通道候裁（CTO/COO）→ **已裁（COO 19:03 裁定，CTO 通道裁 19:0x 卷 91b35acd 收悉）**
 
-1. **UAC 当面即窗**：jedih 在位确认即发 `Start-Process -Verb RunAs`（单次 UAC 确认）→ 脚本即成
-2. **并入明日 admin 窗（裁 B 并办）**：一次提权三得=TaskScheduler Operational log 启用+systemprofile 提权验证+本注册——候 COO 定窗
+1. ~~UAC 当面即窗~~ **今晚不排**（CTO 四理由；应急备选保留：8713 再缺位或 BOD/CEO 明示即补，UAC 材料随令即成）
+2. **并入明日 admin 窗=已定窗位**：**2026-10-07（周二）18:00 黄金段头**，估 15-30min；并办序=①TaskScheduler Operational log 启用→②systemprofile 提权验证→③TriMLC Daemon LogonTrigger 注册（§7.2 预置脚本，扩三件并办版）；前提=宿主 jedih 在位 UAC 当面确认——**18:00 前本席探在位态**（qwinsta/CSU 机器面+问 BOD 动线），在位即发不在位同窗内顺延；与 N2 施工（FSD 主车道）不同资源面并行无碍
 
 ### 7.4 三约束遵守态
 
