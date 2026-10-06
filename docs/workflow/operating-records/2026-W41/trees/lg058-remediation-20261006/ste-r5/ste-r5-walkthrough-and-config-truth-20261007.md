@@ -132,6 +132,26 @@ FSD 毕报触发（19:28:16Z active，两键精确名白名单+变体泛拦照�
 - **拉取周期修正**：15min 级实证（trirmc 19:17:23→19:32:23→19:47:23；trirmc-mc 19:26:47→19:41:47——各 15min 整）；§2.4 的 ~5.6min/9.4min 推断系两 daemon 交错回写误读，**以 15min 为准**（tier1 refreshIntervalS=900s+stagger 吻合）
 - 零触碰遵令：本席对双 unit 仅只读探针，未动任何 unit/服务进程
 
+### 2.8 终态回滚执行（CEO 2026-10-07 07:08 裁·BOD 派工令·回滚 GLM 态）
+
+- **执行**（2026-10-06T23:10Z）：rmc 卡照 §2.6 步2 已验 v3 形态原样重存——密钥行=智谱真 Key（…Dmsf 同值）+MODEL=glm-5.3-flash+**BASE_URL 清空**（v3 无端点键，照快照原样勿手填新变体）→**保存 200，v5=23:10:01.165Z**（预览两键 AUTH_TOKEN+MODEL、零 deepseek 残留、phase 已存未拉）
+- **双 unit 落盘终态断言**（轮询至 23:18:02Z 全落）：
+
+| 面 | updated_at | sha 前16 | 键名清单 | TOKEN | 判 |
+|---|---|---|---|---|---|
+| /var/lib/trirmc/settings.json | 23:17:23.715Z | **caa204d2be504761** | [ANTHROPIC_AUTH_TOKEN, ANTHROPIC_MODEL] | …Dmsf len49 | **PASS** |
+| /var/lib/trirmc-mc/settings.json | 23:11:47.670Z | **44f773de32d832b1** | [ANTHROPIC_AUTH_TOKEN, ANTHROPIC_MODEL] | …Dmsf len49 | **PASS** |
+
+- BASE_URL 键双面 ABSENT（已清）✓ · MODEL=glm-5.3-flash ✓ · 零多余键 ✓
+- **UI 复位**：整页强刷后 phase=**已落生效**；state 行「配置版本 v5（23:10:01.165Z）· 上次下发 23:17:23.712Z（ok）· 落盘结果 v5 ok → /var/lib/trirmc/settings.json」；表单回灌 glm-5.3-flash+BASE 空+pwLen=49（同值）
+- **拉取周期第四证**：trirmc 23:02:23→23:17:23、trirmc-mc 22:56:47→23:11:47（15min 整链系）；源码级实锚 KEY_REFRESH_INTERVAL_S_DEFAULT=15*60（key-cache.ts L222）
+- 触发径选径注记：TriRMC server 面无手动触发拉取 POST API（app.ts 无 post 路由；调度=_refreshTimer+stagger）——走自然拉取轮，双落 8min 内全齐
+- **回滚毕判定：PASS——R-HY 配置终态=GLM 态（v5），CEO 07:08 裁执行毕**
+
+### 2.9 DeepSeek 态作废注记（BOD 令③·留卷备查）
+
+- v4 DeepSeek 态（§2.6 步3/§3.2/§3.4）**作废**——作废时点=CEO 07:08 裁；测试数据全读数留卷备查不删除（append-only evidence）：v4 保存 23:33Z 序列（19:33:00.245Z）、双 unit v4 sha（trirmc 3e497758fb1d2529/trirmc-mc 374846d20ccfa9c7）、UI 已落生效读数、Key 活性直探 200——DeepSeek 切换技术可行性证据链完整在卷，候未来重启用
+
 ## 三、DeepSeek 段读数（追加令③）
 
 ### 3.1 端点/模型官方源实证（网搜毕，禁凭记忆达成）
