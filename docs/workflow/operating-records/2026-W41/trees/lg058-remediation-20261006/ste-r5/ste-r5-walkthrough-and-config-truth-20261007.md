@@ -8,12 +8,13 @@
 
 ## 〇、判读（先答）
 
-**走查① PASS（全绿）**；**真值② 遇阻转对照链推进中**（阻塞缺陷已裁定 a 案修复派 FSD r5b，本席候部署毕复测）；**DeepSeek③ 实搜毕、配置链候 r5b**。
+**三段全闭合：走查① PASS（全绿）·真值② PASS（r5b 复测毕+全链闭环）·DeepSeek③ PASS（投影面切换达成）**：
 
-- 走查①：四域卡同构五件+交互级五项+r3b 回归——全绿。
-- 真值②：真 Key 保存链被 server 守卫 400 阻塞（trimmc-card.ts L162 密钥正则拒 ANTHROPIC_AUTH_TOKEN/API_KEY 键名）→BOD 裁 a 案（两键精确名白名单豁免）候 FSD r5b 部署毕本席复测；**守卫只拒密钥键名的边界+「拉→落→效」全链主体已用无 Key 对照链闭合实证**（保存 200 v1→拉取→落盘 settings.json→applied 回执 ok→UI 四态机「已落生效」全绿）。
-- DeepSeek③：官方源实证毕（base_url=https://api.deepseek.com/anthropic、模型 deepseek-chat（实测映射 deepseek-v4-flash）/deepseek-reasoner、认证形态 ANTHROPIC_AUTH_TOKEN）；**Key 活性直探 200 全绿**（真调用 end_turn+usage 正常）；配置链候 r5b；生效级受 env 钉定语义约束候 CEO 裁（§3.4）。
-- **现势重大发现（候裁入卷）**：R-HY 现役路由=OpenRouter（api-token.env 的 ANTHROPIC_API_KEY/ANTHROPIC_BASE_URL env 钉定）——**settingOrEnv 语义 env 优先，表单值压不过 env 钉定**：即使表单保存成功，TriRMC→宿主投影的生效级语义受 env 面约束，真切换 DeepSeek 需动 env 面（涉 unit 重启=边界外）→候 CEO 裁。
+- 走查①：四域卡同构五件+交互级五项+r3b 回归——全绿；流水线独立复跑 347/333/0/14 与 commit 注全对齐。
+- 真值②：守卫 400 阻塞→BOD 裁 a 案→FSD r5b（73ca1cc）部署毕本席复测 **PASS**（三形态保存全 200：假 Key/智谱形真 Key/DeepSeek sk 形——修复面关闭实证）；无 Key 对照链+密钥链双路「拉→落→效」全链闭环（双 unit settings.json 落盘+applied 回执+UI 四态机「已落生效」全绿）。
+- DeepSeek③：官方源实证+Key 活性直探 200 全绿+**切换已持久化到投影真源**（双 unit settings.json v4=BASE_URL api.deepseek.com/anthropic+MODEL deepseek-chat+AUTH_TOKEN 掩码，零多余键）；UI 终态「已落生效」；宿主级验证候宿主席（R-HY 现无，烟测不可判如实作废）。
+- **语义勘验修正（自领）**：原「env 钉定压制表单值=切换不生效」判断系消费面误置——env.ts 实锚 settings.json ANTHROPIC_* 消费者=宿主接入面（LG-058 N5「效」步），与 daemon env 并行两轨；**零 env 动作、零 unit 重启已达成投影面切换**（§3.4 订正）。
+- **现势发现（候关注）**：双 unit（trirmc 8712/trirmc-mc 8710）均拉卡各落各盘+回执竞争回写（§2.7）——数据无损害，语义面候 CTO/FSD 关注；拉取周期 15min 级实证（修正此前 5.6min 误推断）。
 
 ## 一、走查①读数（非作者 playwright 走查·全绿）
 
@@ -85,7 +86,7 @@
 - 结论三锚：**守卫只拒密钥键名**（MODEL 键放行，缺陷边界钉窄）/ **保存链+版本单调 v1 正常** / **daemon 拉取轮活体**（19:02:23Z、19:11:47Z 两轮，间隔实测 ~9.4min≈600s 级 tier1 周期）
 - 候补段 A（拉取轮落盘断言·**已闭合全绿**）：见 §2.5
 
-### 2.5 拉取→落盘→生效链断言（候补段 A·2026-10-06T19:17-19:25Z 全链闭环）
+### 2.5 拉取→落盘→生效链断言（候补段 A·2026-10-06T19:17-19:25Z 全链闭环·首验对照链）
 
 **server 值面三锚**：
 
@@ -110,6 +111,27 @@
 2. **bfcache 旧页快照**：navigate 首读「v1+上次下发 19:11:47（ok）落盘结果暂无回写」系 19:17 拉取前旧页实例快照（缓存假阴性，r3b 同族再现）——部署主张与活体读数矛盾时先 `fetch('/ui',{cache:'reload'})` 分离服务器真值（r3b 教训复用有效）。
 3. hidden pane 的 innerText 为空串（display:none 区）——断言抓样用 textContent 或先切 tab 激活。
 
+### 2.6 r5b 守卫豁免复测（FSD 73ca1cc 部署毕·19:31-19:33Z 三步保存序列）
+
+FSD 毕报触发（19:28:16Z active，两键精确名白名单+变体泛拦照旧+真链卷两态断言 3/3 绿）。本席按衔接令复测，**纪律遵 FSD 令：假 Key（sk-test 形）先行，真值随后**：
+
+| 步 | 内容 | 保存读数 | 判 |
+|---|---|---|---|
+| 步1 | 密钥行（AUTH_TOKEN 键）填**假 Key** sk-test-r5b-guard-check →保存 | **200**，v2（19:31:29.368Z），预览含键联动正常 | **PASS**（400 消失·豁免活体） |
+| 步2 | 密钥行填**真 Key**（sg-glm-direct，智谱形 …Dmsf）→保存 | **200**，v3（19:32:34.863Z） | **PASS**（真值面过守卫） |
+| 步3 | DeepSeek 态三件套（BASE_URL=api.deepseek.com/anthropic+Key=sk-…6863+MODEL=deepseek-chat）→保存 | **200**，v4（19:33:00.245Z），预览三键齐（BASE_URL/AUTH_TOKEN/MODEL） | **PASS**（切绑保存毕） |
+
+- **r5b 修复复测结论：PASS**——三形态（sk-test 假 Key/智谱中点形真 Key/DeepSeek sk 形）全部 200，03:11 报的密钥行必 400 缺陷**修复面关闭实证**；黑名单泛拦面未松（FOO_API_KEY/小写变体由 FSD 真链卷覆盖，本席不重复）。
+- 步1 回执链活体：v2 保存→19:32:23 拉取→落盘回执「v2 ok → /var/lib/trirmc/settings.json」——**拉→落→效链对密钥键内容同样成立**（非仅 MODEL 键）。
+
+### 2.7 双 unit 落盘拓扑现势（勘验发现·如实入卷候 CTO/FSD 关注）
+
+- **双 unit 实锚**（systemctl show/cat 只读探针）：trirmc=8712·127.0.0.1·CONFIG_DIR=/var/lib/trirmc；trirmc-mc=**8710**·0.0.0.0·CONFIG_DIR=/var/lib/trirmc-mc——两 daemon 均引用同一 api-token.env+同一 TriModel API，**都在拉 rmc 卡 local_config 各落各盘**
+- v1→v4 全程双落实证：trirmc 落 19:17:23(v1)/19:32:23(v2)/19:47:23(v4)；trirmc-mc 落 19:26:47(v1)/19:41:47(v4)
+- **回执竞争回写**：卡面 status.local_config 回执字段被两 daemon 交替覆盖（19:31 UI 回执=trirmc-mc 路径→19:32=trirmc 路径→终态=trirmc 路径）——回执 file 字段**单值语义在双写者下不确定**，如实记录；数据面无损害（两处文件内容一致 v4）
+- **拉取周期修正**：15min 级实证（trirmc 19:17:23→19:32:23→19:47:23；trirmc-mc 19:26:47→19:41:47——各 15min 整）；§2.4 的 ~5.6min/9.4min 推断系两 daemon 交错回写误读，**以 15min 为准**（tier1 refreshIntervalS=900s+stagger 吻合）
+- 零触碰遵令：本席对双 unit 仅只读探针，未动任何 unit/服务进程
+
 ## 三、DeepSeek 段读数（追加令③）
 
 ### 3.1 端点/模型官方源实证（网搜毕，禁凭记忆达成）
@@ -120,10 +142,18 @@
 - API 格式：anthropic（默认）保持——Anthropic Messages 直连，无裁A警示触发面
 - Key 源：deepseek.txt（同目录，掩码 sk-…尾4=…6863）
 
-### 3.2 配置链（候 r5b·候补段 B）
+### 3.2 配置链（候补段 B·**已闭合全绿**）
 
-- 切换三件套：ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic + ANTHROPIC_AUTH_TOKEN=<DeepSeek Key> + ANTHROPIC_MODEL=deepseek-chat（1M 勾不勾：deepseek 系不适用 [1m] 尾缀语义，保持不勾）
-- 保存→落盘断言→生效级三锚（curl DeepSeek 真调用掩码/settings.json 值面断言/宿主无头烟测软锚）——【候补：r5b 部署毕执行】
+- 切换三件套保存（§2.6 步3）：v4=19:33:00.245Z 200——BASE_URL=https://api.deepseek.com/anthropic+AUTH_TOKEN=sk-…6863（掩码）+MODEL=deepseek-chat；1M 不勾（deepseek 系不适用 [1m] 语义）
+- **双 unit 落盘终态断言**（掩码）：
+
+| 面 | updated_at | sha 前16 | items 值面 | 判 |
+|---|---|---|---|---|
+| /var/lib/trirmc/settings.json | 19:47:23.670Z | 3e497758fb1d2529 | BASE_URL=api.deepseek.com/anthropic · MODEL=deepseek-chat · AUTH_TOKEN=sk-9a…6863 len35 · 零多余键 | **PASS** |
+| /var/lib/trirmc-mc/settings.json | 19:41:47.662Z | 374846d20ccfa9c7 | 同三键同值 | **PASS** |
+
+- **UI 终态活体**（整页强刷后）：phase=**已落生效**；state 行「配置版本 v4（19:33:00.245Z）· 上次下发 19:47:23.667Z（ok）· 落盘结果 v4 ok → /var/lib/trirmc/settings.json」；表单回灌 deepseek-chat ✓
+- 观察项（如实记录非缺陷）：**存量密钥 DOM value 回显**——v4 有密钥后密钥行 password input value 回灌 35 字符（视觉掩码但同源脚本可读）——cc-switch 对齐的编辑面语义（所见即所存），r5 设计面内；同源可读面特性供 CAO/FSD 知晓
 
 ### 3.3 Key 活性直探（不经 daemon·候补段 C·已闭合）
 
@@ -132,12 +162,18 @@
 - **模型映射实证**：请求 model=`deepseek-chat` →响应回显 **`model: "deepseek-v4-flash"`**——deepseek-chat 系非思考别名，2026-10 现势实际映射 deepseek-v4-flash（网搜文档+活体回显双证）
 - 出口面：R-HY 直连 api.deepseek.com 可达（无代理依赖，与 OpenRouter 现役路由并存无冲突）
 
-### 3.4 生效级语义边界（候裁入卷·关键）
+### 3.3b 宿主无头烟测（软锚·**不可判如实作废**）
 
-- R-HY 现役路由=**OpenRouter**：api-token.env 的 `ANTHROPIC_API_KEY=sk-or-v1-…`+`ANTHROPIC_BASE_URL=https://openrouter.ai/api` env 钉定（trimodel.service EnvironmentFile）
-- `settingOrEnv` 语义（TriRMC local-settings.ts）：**env 钉定优先，settings 表单值只补 env 未钉位**——表单保存 DeepSeek 配置后，若 env 面不撤，宿主投影面仍走 OpenRouter env 值=**切换不生效**
-- 真切换需动 env 面（api-token.env 改写+trimodel.service 或 trirmc unit 重启）=**TriRMC 双 unit 零触碰边界之外**→候 CEO 裁（终态 GLM/DeepSeek 并列呈报）
-- 本席边界内可达成面：表单保存+落盘断言（settings.json 值面=切换意图已持久化）；生效级真调用三锚中 curl 直探可验 Key 活性（不经 daemon）；daemon 消费投影面受 env 约束如实呈报候裁
+- 本机降级等效尝试（settings.json 终态三键同值起 claude -p 一句）：**会话能起**（回复「在线」）但 `[claude-code:unrecognized_model] {"model":"glm-5.3-flash"}`——**本机 settings env 覆盖 shell env**（已知家族：settings env > shell env），请求被钉回本机 GLM 形态——三键投影形态未获剥离验证，**烟测不可判，作废不作锚**（BOD 令③「仅供参考不作硬锚」预期风险兑现）
+- R-HY 面宿主烟测对象缺失（无 claude CLI+无 ~/.claude+tmux 空）——**宿主级烟测候宿主席部署 R-HY 后补**（挂候办）
+- DeepSeek 链活性硬锚以 §3.3 curl 直探为准（同端点同 Key 同模型真调用 200 end_turn）
+
+### 3.4 生效级语义（**勘验修正**·原「env 钉定压制」判断订正）
+
+- **修正依据**（TriRMC src/config/env.ts L32 实锚）：「LG-058 N5 方案三：『效』步兑现点——boot 型键经 settingOrEnv 读取」——TriRMC 自身只消费 **boot 型键**（TRIRMC_PORT 等）；**settings.json 的 ANTHROPIC_* 三键消费者=宿主 Claude Code 接入面**（宿主席读本地配置直连模型），非 daemon 转发路由（TriRMC 无模型代理转发面）
+- **api-token.env 的 ANTHROPIC_*（OpenRouter）=daemon 进程 env**（trimodel.service+两 trirmc unit 共享 EnvironmentFile），消费面=daemon 自身，与宿主接入面（settings.json）**并行两轨互不压制**
+- **修正后结论**：DeepSeek 切换**已持久化到投影真源**（双 unit settings.json v4 三键 DeepSeek 态）=**投影面生效达成**；R-HY 现势无宿主席（tmux 空+无 ~/.claude）→无现役消费方受扰、无 env 压制问题；**宿主级真切换验证候宿主席部署 R-HY 后补**（现势无验证对象，如实报）
+- 原 §3.4「表单值压不过 env 钉定=切换不生效」判断系消费面误置（把 daemon env 当宿主接入 env），**订正如上**；「真切换需动 env 面/涉 unit 重启」的候裁前提随之消解——**零 env 动作、零 unit 重启即已完成投影面切换**
 
 ### 3.5 managed 条目域现势发现（2026-10-06T19:2xZ 勘验·供裁决面参考）
 
@@ -156,12 +192,14 @@
 
 | 面 | 现势 | 候裁 |
 |---|---|---|
-| R-HY `/var/lib/trirmc/settings.json` | **已落**（v1 ok：items={ANTHROPIC_MODEL: glm-5.3-flash}，19:17:23Z，sha 前16=4d30cf347b00e739） | 对照形态（无 Key 无 BASE_URL 改动）保留 or 清理候 CEO 裁 |
-| rmc 卡 local_config | MODEL=glm-5.3-flash v1+applied 回执 ok | 同上 |
+| R-HY `/var/lib/trirmc/settings.json` | **v4 DeepSeek 态**（19:47:23Z，三键掩码 §3.2，sha 前16=3e497758fb1d2529） | **DeepSeek 态保留 or 回滚 GLM 态候 CEO 裁**（回滚操作面=UI 改绑重存即可，零 unit 动作） |
+| R-HY `/var/lib/trirmc-mc/settings.json` | **v4 DeepSeek 态**（19:41:47Z，sha 前16=374846d20ccfa9c7，与上同值） | 同上 |
+| rmc 卡 local_config | v4=DeepSeek 三键+applied 回执 ok+UI「已落生效」 | 同上 |
 | rmc 卡条目域 | 未动（DeepSeek/GLM 密文条目+三窗规则原样） | — |
-| R-HY 现役路由 | OpenRouter env 钉定未动 | DeepSeek 真切换需动 env 面（unit 重启边界外）候 CEO 裁 |
-| TriModel 源 | 5188e7f 未动（守卫修复归 FSD r5b） | a 案修复在途 |
-| TriRMC 双 unit | 零触碰（边界遵令） | — |
+| R-HY daemon env | api-token.env（OpenRouter ANTHROPIC_*）未动——与宿主接入面并行两轨（§3.4），无压制关系 | 无需动作 |
+| 宿主接入面 | R-HY 现无宿主席（tmux 空+无 ~/.claude）——投影真源已切 DeepSeek，宿主席部署后即消费 | 宿主级烟测候主席部署（候办） |
+| TriModel 源 | 5188e7f+r5b 73ca1cc（守卫豁免）在役 | — |
+| TriRMC 双 unit | 零触碰（只读探针外零动作，边界遵令） | — |
 
 ## 六、使用依据
 
@@ -176,6 +214,6 @@
 
 ## 状态条（M-001）
 
-- date 现查：2026-10-06T19:15:58Z（03:15:58+0800 Wednesday）
-- 水位自估：中（走查毕+对照链在途+r5b 复测候触发；DeepSeek 生效级候 CEO 裁）
-- 末次活动：2026-10-06T19:16:30Z（落卷现查时刻）
+- date 现查：2026-10-06T19:15:58Z（03:15:58+0800 Wednesday）→终态增补落款 **2026-10-06T19:54:02Z**（03:54:02+0800 Wednesday，当场重跑）
+- 水位自估：中（三段全闭合在卷；候 CEO 裁终态去留+宿主级烟测候主席+双 unit 回执竞争候关注）
+- 末次活动：2026-10-06T19:54:02Z（终态增补落款现查时刻）
