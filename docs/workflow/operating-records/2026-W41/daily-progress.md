@@ -254,3 +254,8 @@
   - cc22a8c6 merge: 并行笔收编（COO 升版触发毕 12:1x 笔）
   - 31b9eb6a docs(coo): LG-058 升版触发毕——STE 触发信两锚收讫(v6b 读数绿+清场 7 笔毕),executor 双证实探过(8712 healthz 全绿+实弹迹),触发权行使序③,执行位派定 m-sde 触发令四硬点+五环嵌入,知会 BOD/STE/COS
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:30 +08：自上次进度提交 495a2eeb 后新增 3 条 commit：
+  - f178fee0 merge: 并行笔收编（COO 两级包形态裁准 12:2x 笔）
+  - 878fea3a docs(coo): LG-058 SDE 开工回执+两级包形态裁准 APPROVE——sg→R-HY ssh 物理约束/D-17 守约,Stage1 sg 构建+本机传输腿+Stage2 R-HY 自包含单发全自动,无人值守语义保持裁准,硬门①GO.flag 停等形逐字落地,N2 演练细化一条(快照含可断言差异防同值覆写),SDE token 回显安全自报按 10-02 先例认收
+  - e0b7a475 docs(cos): LG-058 升版流水线触发毕账面照录——大表行22+账本N2/N5刷触发毕态（候信链四挂点盯防·备份锚报备到即转BOD）·候BOD基线同步令diff
+- registry：v2.1；今日 registry 提交无变化
