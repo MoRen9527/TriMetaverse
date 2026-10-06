@@ -69,6 +69,13 @@
 | N4 | **施工毕**（TriModel c4d9137，四处替换+grep 零残留+sanity 7/7；候 STE 验收+流水线正式读数） | c4d9137 |
 | N5 | **白窗三件全毕（10:22，方案三收口）**——方案一卡名正名（ed01fc2）+方案二域卡×策略卡联席（51b8e39，菜单点菜+条目引用化+规则勾选+悬挂 400 硬门+溯源标注+反向引用+删除拦截+key 不进策略面；P1 候修①以 UI 空 provider_entries 搭载规避 server 零改）+**方案三本地配置直改面（366eecb+99806cf）**：四域签（M 服务域/M 本地域/R 服务域/R 本地域同序同构）+五步数据流 改→存（PUT local_config 整表替换+版本单调+密钥禁入守卫）→拉（pull 载荷携带）→落（TriRMC daemon 先导：$TRIRMC_CONFIG_DIR/settings.json 原子写、版本幂等防抖、失败不推进下轮重试）→效（readEnv 叠加 settingOrEnv env-wins，boot 项重启生效=升版流水线 restart 即效步）+落地回执随 status 回写（version_applied/write_result/file，失败如实）+诚实三态派生（已存未拉/已拉未落/已落生效，落盘失败+拉取链异常如实显）；fb-sg 表单退役（CPO §3.2 旧口径作废）两 stale suite 按换代契约改写（退役零残留断言）。**三件毕触发：STE 同批走查（N2+N5）+R-HY 升版流水线候备**（TriModel 七笔 c4d9137/5b4dedb/e099329/46b80b2/ed01fc2/51b8e39/366eecb + TriRMC 两笔 8249eb7/99806cf；首触前备份锚 hash+时点报备；TriMMC executor 活体断言双证前置） | TriModel 366eecb + TriRMC 99806cf（TriModel 全量 343/329 pass/0 fail/14 skip 零新增失败，基线 340/326/0/14；config-cards 42/42 含 plan3 四 it、ui-fourplane 12/12 含 ②f；TriRMC key-cache 18/18 含 plan3 四 it+sanity 56/56；tsc 双仓净零新增（TriRMC 基线既有 2 error stash 前后同读）；~~lint 目标文件零增~~→**勘正 10:4x：该读数系假读数**——判定命令 2>/dev/null 吞 stderr+夹带跨仓不存在路径，eslint 整链静默失败出空输出；真增量=+1 error（config-cards.test.ts String() 冗余转换），修毕归基线（TriModel 12caab0，已平 sg bare 顶，ls-remote 复验），config-cards 42/42 复验绿；warnings +17/+3 留档=it(async) 回调+cast 风格两家族性读数（基线 53/22 条同族）非真悬垂。**STE 走查消费勘正版口径**：TriModel lint 现势=config-cards.test.ts 1e（L352 既有）/ui-fourplane 13e（既有）/其余目标文件零增，全量测试读数不变） |
 
+### 验收现势（滚动；COS 入账 11:2x 照 BOD 基线同步令）
+
+- **STE 走查卷落 df1ab55d**：总裁 CONDITIONAL_FAIL——TriModel 全量 330/316 pass 全绿+TriRMC 472/462 十 fail 四族归因零落五节点对象域。
+- **BOD 复验毕裁 P1 必修回炉**：menu-full 布局 DOM 宿主错位，FSD 即启回炉（口径候 CTO 快核；TriRMC 99806cf 平 bare 并行）。
+- **升版触发条件更新**：原「STE 卷+BOD 复验毕触发」作废→**新条件=P1 修复毕+STE 单点复验过+BOD 终裁**；午后窗预期顺延，幅度候 FSD 回执。
+- 账本对表=BOD 裁后 COS 笔（in-progress.json N2/N5 现势回炉中）；大表 W41 行随刷。
+
 ## 五、使用依据
 
 - 任务书 384000f5+015d2884+改令笔 a5a00e7a；9 条原文 8835f58d；CPO 方稿 9f86ff34；CPO 讲解件勘误 ab1aecc5
