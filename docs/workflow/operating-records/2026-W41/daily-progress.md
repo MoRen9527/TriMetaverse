@@ -303,3 +303,8 @@
   - 8ed40c7b docs(coo): LG-058 BOD 活体抽验勘漏+闭合落卷——trirmc 本体漏重启(环B 清单漏 unit,读数绿≠进程已换第五变体),SDE 补毕实锚+STE 起动时戳锚两裁采认,restart 清单实勘枚举候办
   - 199fcea4 docs(sde): 候办条 deployment-runbook-multunit-restart-anchor 挂账——同 dist 多 unit 部署教训正式化候选(BOD 复核+STE 环3 双实证),三锚候选条目候 CTO/CAO 定入册位
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:10 +08：自上次进度提交 aaa733c1 后新增 3 条 commit：
+  - 79d44482 docs(coo): LG-058 对表扫撤账兑现落卷——ac9baa8c 按 cron 原始合同条件(全节点收口+BOD 复验毕)即撤,早于树单原预告时点口径差如实注记,COS 知会毕
+  - 6bc373ec merge: 并行笔收编（勘误笔窗并行段带平）
+  - 6bbe7ce1 docs(coo): LG-058 树单勘误——终复核卷引用 8439fabf→c354a580(BOD 勘误 13:59 竞笔重 commit 孤儿,悬空 hash 防考古踩坑)
+- registry：v2.1；今日 registry 提交无变化
