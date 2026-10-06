@@ -223,3 +223,9 @@
 - 巡检兜底补写 @11:20 +08：自上次进度提交 d9f7b62c 后新增 1 条 commit：
   - df1ab55d docs(ste): LG-058 走查卷——N2/N3/N4/N5 同批非作者走读 CONDITIONAL_FAIL 候裁——P1 候选=menu-full 左右布局不兑现(nav 为 app-layout 兄弟节点,flex 宿主错位,证据三层含截图);九条回对 N1/N3/N4 过+N2 沙箱演练链全通+N5 三件主体锚达成;流水线终读数 TriModel 330/316 pass/0 fail 全绿+TriRMC 472/462 pass/10 fail 四族归因零一落对象域(无凭据环境/执行环境/sg git/跨仓硬编码漂移 14→15);v1-v4 作废链全档
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 6cf9755d 后新增 4 条 commit：
+  - 77c2799b docs(cos): P1 口径定谳（CTO 案一）+TriRMC 维护波定谳（FSD 车道·活读 v3 contract 源）补笔三面——BOD 11:22 候办入账令
+  - 3140fd16 docs(ste): LG-058 走查卷§七.1 候复验清单固化——CTO 快核 b6dea60a 案一(nav 移入 app-layout 首子节点,CSS/JS 零改)+门禁双断言(结构 parentElement+几何 menuRect.right<=mainRect.left)+单点复验五项清单
+  - 7d2bd997 docs(cto): LG-058 走查P1技术门裁定卷——定谳必修+案一(nav移入app-layout,CSS/JS零改)案二否决(conn-settings入flex流实锚)+双断言门禁(结构+几何menuRect.right<=mainRect.left)+并裁件②Registry期待值活读contract源/件③知情附清空语义技术注记
+  - 958e8c6f docs(cos): LG-058 STE 卷落+P1 回炉基线五面入账（BOD 11:2x 同步令）——树单验收现势段/账本 N2-N5 回炉中/大表行 22/候办区两笔（STE 观察项候 CPO+TriRMC 维护波 owner 候定）/升版触发条件更新
+- registry：v2.1；今日 registry 提交无变化
