@@ -124,3 +124,19 @@
 - **BOD 复验七锚全 PASS 00:2x+08（护栏② 闭环·r5 全链毕）**: playwright 强刷+textContent 逐卡+交互级实测——①四卡五件 10/10 ②眼睛双态还原 ③认证字段切换键跟随+旧键消失（假 Key sk-test 形，真值零进链）④裁 A 双断言绿 ⑤1M 勾→[1m] 即现 ⑥放弃清场正形（首读 HAS-VALUE 假象=400ms 异步重渲窗时序，与 r4 innerText 假象同族，BOD 已入任务书附注）⑦两面 200+r5 特征命中；截图留锚；BOD 勾账 commit a750e565；双实例重放勘误收讫入账不追责，「自挂前先查停等实例存活」正形候记收到——本席 r5 义务至此清，呈 CEO 深验（九条第 3 项重开），收工
 - 三机现势实勘: sg bare dev=0359b89（ls-remote 值面）/R-HY 在役 deploy-sha=45757bd
 - 纪律: 硬门①报备义务（一轮 COO 令原文）/D-17 本机传输腿/B64 内联 aegis 对症/值面三断言（截断伪影与键值掩码面零触碰——本卷零 token 值出机）
+
+## 十一、r5b 缺陷修复段（密钥行保存必 400·STE 真链路实测暴露·BOD 03:12 阻塞级派工·裁 a）
+
+- 令面: BOD 03:12 阻塞级——STE 03:11 报 r5 密钥行保存必 400：`handlePutTrimmcCard`（config-cards.ts L208）→`trimmc-card.ts` L162 守卫黑名单正则 100% 命中 ANTHROPIC_AUTH_TOKEN/ANTHROPIC_API_KEY（`tokens?`/`api[_-]?keys?` 段）；jsdom 全绿+真链 400=「单测直调+jsdom mock」双盲（09-15 家族第三次实证）。修法裁 a=守卫两键精确名白名单豁免（黑名单前置），其余泛拦照旧不松；密文存储候办另议不阻；真链路测试必补（硬锚）；禁再 jsdom 单过即报完工
+- 代码: **5188e7f→73ca1cc**（src/api/trimmc-card.ts+新卷 test/config-cards.r5b-truechain.test.ts，+151/−1）:
+  ①守卫豁免: `LOCAL_CONFIG_KEYREF_ALLOWED = Set(['ANTHROPIC_AUTH_TOKEN','ANTHROPIC_API_KEY'])`（精确名/大小写敏感），黑名单判定前置 `!ALLOWED.has(k) &&` 短路——api_key/token/secret 泛拦照旧（含小写变体仍拒）；与 UI CONN_FORM_SPEC.authfields 同名同集，改一处须同步另一处（单点真源候办候 CTO 排窗）
+  ②真链路硬锚（新卷 3 案）: 真 socket serve→真 dispatch→PUT /v1/config/cards/rmc→落盘→HTTP+文件双面回读。案1 两键+普通键 200+值面（假 Key sk-test 形）回读；案2 FOO_API_KEY 仍 400 人话拒+卡零污染（version 不动+键零落盘+案1 值面不受扰）；案3 小写 anthropic_auth_token 仍 400（精确名边界不外溢）
+- 施工中间修复三笔（如实）: ①首跑 400「条目数据格式错误」=载荷保真缺 provider_entries（写守卫要求键在场）——对齐 ui L1736 r5 表单 save 正形 `{provider_entries:{}, local_config:{items}}`；②二跑 400「connection.name 必填」=沙箱无存量卡（emptyCard('') 空名），生产现势=表单编辑既有卡——布景种子卡（引擎层 saveCard 直写仅作 arrangement，被测面仍是 HTTP 全链）；③after 钩子内嵌+死代码 pin 清理（server 生命周期外提统一收口）
+- 自测门: 新卷 **3/3**；定向族（trimmc-card/v4/config-cards/ste/card-path/ui-fourplane）**96/96** 零旧案翻绿（既有守卫案用泛键 api_key 不受豁免影响）；全量 **350=336 pass / 0 fail / 14 skip**（env 门控既有形态）；tsc 清；build:verify 绿
+- 推送: origin（sg bare）dev=73ca1ccfd1f5df3cf34419cb947ef972180c29da（5188e7f..73ca1cc，19:23:11Z）
+- 流水线小轮: `stage1-r5b-sg-build.sh`（新增 r5b 守卫值面锚 3 条=编译产物 LOCAL_CONFIG_KEYREF_ALLOWED+两键；r5 五件+r4/三轮/二轮回归锚全保持）+`stage2-r5b-rhy-execute.sh`（GO-r5b.flag 停等+回滚 bak-pre-lg058r5b+环C r5b 守卫面探针——活体进程读的就是这份编译文件）；双脚本落树+双端部署 bash -n 过
+- Stage1 毕 19:25:02Z（包 trimodel-dist-73ca1cc.tar.gz sha256 **a44e6fe0…9096**）；传输腿 sg→本机→R-HY sha256 -c 双跳 OK；环A 备份锚毕 19:25:51Z（dist bak=dist.bak-pre-lg058r5b-20261006T192551Z，server.js 指纹 a6af0b9b…f50=**五轮同指纹**·守卫面单文件变更实证+cfg tar f4480246…5442）；硬门① 报备 19:26Z 双发（BOD 6fc2ec35/COO 5841923f），停等 GO-r5b 候批——120s 超时自 HOLD exit 42（设计内），环A 锚持久批后重入零重复备份
+- 纪律: 真 socket 真路由（dispatch 零 mock，唯一替身=无关 ModelClient）；载荷保真对齐 UI 正形；假 Key 全程（sk-test-r5b-*），真值零进链；防双实例候记正形待触发段执行（触发前查停等实例存活）
+- **GO-r5b 签发（BOD 03:2x 三面复核 PASS·裁 b 即时走·三护栏）→全链毕（防双实例正形首用）**: 收令 19:27:38Z 即查停等实例存活——首实例 pid 2110137 存活且在停等窗（剩 ~13s）、flag 未落→正形只挂 flag 不起二实例；flag 19:27:57Z 落，首实例 19:27:51Z 已 HOLD 退出（早 6s，设计内安全停零部署）→旧实例确认死+重入单实例：环A skip 复用备份锚→GO 读入 19:28:12Z→deploy-sha 73ca1cc 断言 ok→**active 19:28:15Z**→/health ok→环C 全绿→**STAGE2-R5B DONE 19:28:16Z**
+- **活体终刀 19:28:4xZ（独立于环C 复核）**: 三服务 active；TriRMC 双 unit 零触碰实证（ActiveEnterTimestamp 13:46:38/13:25:47 CST=早于本窗未重启）；活体守卫面 LOCAL_CONFIG_KEYREF_ALLOWED×2 命中（活体进程所读编译文件）；/ui 独立落盘 133862B 十锚 PASS+河源零残留；中间物双机清毕（in 包+备份锚+READOUT+log 留审计）
+- 毕报两刻制: 第①刻部署毕 19:28:16Z+第②刻终刀 19:28:4xZ 合并双发（窗短）；知会 STE 即启两 Key 保存链复测（BOD 令附款）
