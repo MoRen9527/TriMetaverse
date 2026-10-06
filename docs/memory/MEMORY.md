@@ -1,0 +1,90 @@
+# Memory Index
+
+> 记忆治理分工（2026-08-27 CEO 规则）：项目/公司维度事实真源在仓库治理文档，本目录只留行为反馈与导航指针；映射真源=TriCompany/docs/engineering/governance-memory-index.md（LG-016）——见 [记忆治理分工](org-memory-governance-split.md)。台账真源=TriCompany/docs/workflow/hub-ledger-governance.md；心跳双跑真源=TriCompany/docs/engineering/heartbeat-dualrun-contract.md（LG-014）——本表 open-items-ledger 为其指针。
+> 编排/中枢分权制（2026-08-28 CEO 指令）：直连会话只做编排，常驻小贾中枢（xiaojia-hub）持完整上下文执行任务——见 [编排中枢分权制](orchestrator-hub-split.md)。
+
+- [ChainDrop 供应链审计 2026-08-10](chaindrop-supply-chain-audit-20260810.md) — 全工作区审计未受影响，证据链 + 后续观察项
+- [多 agent 共享仓库 git index 卫生](multi-agent-git-index-hygiene.md) — 提交前三查（status/cached diff/log），commit -- <path> 与 checkout 暂存陷阱
+- [文档元信息头约定](doc-metadata-header.md) — 所有文档必须带 sourceOfTruth/syncMode/lastSyncedAt 元信息头（§3.4 规范）
+- [树文件路径规范](tree-file-path-convention.md) — tree-op.json/briefs 必须写 operating-records 周目录，禁止写仓库根
+- [验证工作方式（小贾确认）](verification-style-confirmed.md) — 独立重测 + 第二方法交叉验证 + 盲区/错位观察项单列
+- [CEO 常驻授权](ceo-standing-authorization.md) — 非关键决策自裁决不升级；升级仅限不可逆/保留权/硬约束三类
+- [收口 commit 卫生](closeout-commit-hygiene.md) — 落文档后自己 commit，或明说"落盘未提交"由编排层补
+- [历史冻结/真源可修口径](truth-record-amendment-policy.md) — 树文件修正取舍：历史叙事冻结、技术真源可修+修正记录留痕
+- [工具 cwd 基准口径](tool-ctx-cwd-baseline.md) — 新写文件工具必须以 ctx.cwd 为相对路径基准并补两型断言（REQ-014b）
+- [设计文档落点惯例](design-doc-placement-convention.md) — TriMetaverse 设计/执行文档落 docs/execution/；engineering/ 专属 TriCompany 技术真源
+- [并行线文件纪律](parallel-design-file-discipline.md) — 写联合文档前先 git log 查该路径并行落盘，磁盘列表滞后于并行提交
+- [事实引用须可溯源](fact-citation-source-required.md) — 设计引用事实必须带 OP 条目/commit/代码来源，推断显式标注
+- [git index 提交纪律](git-index-commit-convention.md) — 共享 index：统一 git add + git commit，禁用 git commit -- <path>；分支被 reset 先查 reflog
+- [amend 前必验 HEAD 归属](amend-head-ownership-check.md) — 共享仓多席并行：amend 前三查（HEAD==自己上一提交/工作区并行在途/已推远端）；2026-09-29 改写 CPO 提交实证；ts 勘正用动态生成禁手写预填
+- [TriLC daemon 重启纪律](trilc-daemon-restart-discipline.md) — trilc stop/start 权威路径，禁裸杀；双 daemon 主机 stop 前必验监听 pid==pidfile pid（09-18 误杀 8711 两次事故+CTO 裁修 pidfile 按 port 分文件）；优雅停=POST /shutdown+TRILC token 门；装后扩展位 ~/.vscode-oss + 版本必须 bump
+- [cron job state 卫生](cron-job-state-hygiene.md) — 手动改 job state 禁抹 nextRunAtMs（缺它永不调度）；只 patch 目标字段+改 cron 后重算
+- [真源核查纪律](source-verification-discipline.md) — 答不存在前必须全仓扫过；白皮书已迁 docs/tmv-whitepaper.md（LG-034 切片 2b，2026-09-11），位置类记忆随迁移窗刷新
+- [subagent 落盘纪律+时刻引用纪律](subagent-persist-discipline.md) — 先写后报+路径行数证据；收稿三查；长任务分段落盘；报时必现查 date（UTC Z 后缀 +8，禁推算）；跨域纪律归 TriCompany/docs/workflow/engineering-disciplines.md
+- [共学周记 ADE 规范](journal-recording-ade-spec.md) — 记周记先走规范（四问/三查/五查），格式基准取最近周，内部台账不入册
+- [模型事实禁凭记忆](llm-limits-never-from-memory.md) — 上下文/价格/发布日期先查 claude-api skill；网搜失败明说无法验证，禁编造来源；Opus 4.8/Fable 5 = 1M 上下文
+- [周平面迁移执行点](weekly-plane-shift-executor.md) — 唯一执行点=河源 TriRMC cron（周日 23:00 北京时间，08-30 自 23:59 提前留补救窗）；job 禁带 runAs（trirmc=fleet 身份，runuser 必炸）；迁移窗冻结 sg watcher；回流冲突解法+README 指针必查；本机对齐 SOP=docs/workflow/weekly-plane-shift-local-align-sop.md（LG-056，消费端 fetch+merge 不推，冲突即停+值班席通知；执行体=TriMLC 8713 cron 已落位现役，10-04 夜生产实跑实证机写 ff 至 bare 顶）；迁移链实勘：R-HY job 9c81c7ec ff-only 拉 sg-bare→push 回，sg-bare=origin 权威；10-04 夜该 job 未跑=TriRMC executor 停摆（trirmc.service 人工 stop+disabled 三日，BOD 补跑修复，HTTP 活≠executor 活）
+- [FADE 管线架构](fade-pipeline-architecture.md) — FADE=框架（非字母缩写）；PACE=路径之一（Plan/Attach/Commission/Echo）；带编号 FADE-00X=实现实例；hook 快通道+cron 慢通道；face 字段面路由；攒批窗周二/周五+周三兜底（008 正名 09-20）
+- [GLM 部署点位图](glm-model-deployment-map.md) — glm-5.3 三端配置位置+重启要求；node_modules/trimodel 是符号链接
+- [TriLC 双线分叉待合并](trilc-lineage-divergence.md) — 本地 28 提交 vs sg tc001-canonical（c4f9e0f 正式架构）；app.ts 必冲突需人工合并
+- [hook 内 GIT_DIR 陷阱](post-receive-gitdir-trap.md) — git hook 里操作其他仓库必须 unset GIT_DIR 系变量，git -C 也挡不住
+- [ps1 中文须 UTF-8 BOM](ps1-utf8-bom-requirement.md) — Windows PowerShell 5.1 无 BOM 按 ANSI 读中文乱码破坏语法；写完补 BOM+冒烟
+- [任务中枢挂账台账](open-items-ledger.md) — 小贾主控挂账台账：现役 12（LG-005/006/007/010/015/016/017/018/024/025/026/027）+已销账 15（LG-001..004/008/009/011..014/019..023）+元项 M-001 状态条五字段机械合同/M-002 每日进度/M-003 全员席管理权/M-004 席位直达派工协议（spawn 仅限三残留场景）；写时镜像=.fade/hub-snapshots/ledger-mirror.md（2026-09-03 裁点② 泸 LG-022 销账/件 1 会签闭环）
+- [bigmodel H1.1 代理缓解位](bigmodel-h1-proxy-mitigation.md) — sg 13 席走本地 8460 代理（WAF 拦 Bun TLS 指纹）；分诊：1210=指纹族查代理 service / 1310=账号配额族查控制台（非代理非 WAF）；settings env 覆盖 shell env
+- [sg GitHub 直推通道](sg-github-pat-push-channel.md) — 新 PAT 09-30 全链收官（20/20 闭账+旧把全废+history 清零；12-22 左右提请轮换；403 补授权实证 access 面可编辑，「生成时定死」坑已勘）；root store gho_ 旁路已退役；推进=本机主推+sg 备援；坑：sudo -u fleet 不重置 HOME 用 su -、fine-grained access 面可编辑/permissions 面改动词慎、认证失败自动清 store 行、PS→ssh stdin CRLF 行尾粘 \r 写后必剥、零真值取证先脱敏遇结构冲突先请示
+
+- [工具权限双层探边教训](tool-authz-double-layer-testing.md) — 清单可见≠执行放行，黑盒须断言实际调用非 blocked（LG-026 第五型实证）
+- [命令链断言失败须断整链](chained-command-assert-abort.md) — 校验失败≠流程停止（r6 冲突标记入库事故）；验证输出禁 head 截断关键文件行；未推 amend 合法
+- [manifest 身份验证](manifest-identity-verification.md) — 「实盘未落」断言前必验勘验文件身份（支撑面/生成计划面/发布登记册三 identity；一名多文件）；grep 无命中≠未落盘；矛盾证据先 json 对表；LG-024 伪阴性教训（含先于缺席断言条，两文件并此）
+- [M-004 席位派工口径](m004-seat-dispatch-via-sendmessage.md) — 派工默认 SendMessage 直达常驻席（活干在谁会话经验留谁），spawn 仅限三残留场景；2026-09-02 BOD 即时生效
+- [M-004 适用域：registry agent 可 spawn](m004-scope-registry-agents-spawn-ok.md) — M-004 只约束 13 员工常驻席；BusinessStrategy 等 registry 型非常驻、spawn 合规（CEO 2026-09-16 勘正；发纠偏令前先分类核验）
+- [键存在性抽验≠值面验证](key-presence-vs-value-validation.md) — 数据面核验必含值面三查（契约对表/文件 resolve/权威源投影）；内部自洽+门全绿并存先疑解析基座（M0d 三缺陷实证）
+- [BOD harness 自动化授权](bod-harness-automation-authorization.md) — CEO 授权窗口自动化代敲 /compact：仅限独立窗口可唯一定位，VS Code 多 tab 拓扑禁用（敲错风险）
+- [BOD 发任务前先对时间](bod-date-check-before-report.md) — CEO 常驻令：每次发任务/回报先 date 现查+星期算验；BOD 自己也犯星期错（监督者不豁免）；时点=date 原样粘贴禁 hook+耗时推算
+- [全量读数回报纪律](full-regression-reading-report-discipline.md) — 完工回报必含全量测试四项读数+既有失败逐族归因；只报增量自测=漏报（CTO 2026-09-04 指正）；「既有」定性禁转抄须独立验（09-14，三层转抄遮活回归实证）
+- [CEO 大白话汇报规矩](ceo-plain-language-reporting.md) — 下传任务先理解再扩写（总助准确转达/COO 可拆解）；上报必大白话+摘要段（零缩写：干了什么→结果→候 CEO 决什么）；指令面=收到即照单执行不猜缩写；席间互报免附（合 bod-report-plain-summary-rule/plain-language-report-rule 两条）
+- [执行令时点交叉核对](exec-order-time-crosscheck-discipline.md) — 执行令必含绝对时点+date 现查须与令文比对起疑（查而不比照跑=超跑根因之一，BOD 教训条 2026-09-04）；任一矛盾即停回询
+- [会话取证三要点](session-forensics-basics.md) — transcript 时戳是 UTC（本地-8h 再搜）；PowerShell 工具每调用留 Id400 引擎事件；PSReadLine 只收交互台；stdout/stderr 分文件=Start-Process 指纹
+- [「已发/已转」主张先查发信记录](forward-claims-verify-send-log.md) — 收口件写「已转 N 件」前逐件回查 SendMessage 回执；随收随转+收口并发时收口动作会遮蔽漏转（LG-034 CAO 漏发实证）；漏发更正须声明「非丢信勿计丢信家族」
+- [服务器正名 M-SG-ip / R-HY-ip](m-sg-r-hy-server-naming.md) — sg=M面新加坡机 47.245.122.61、河源=R面 cn-heyuan 机 8.155.54.79，两台独立机器；说河源=R面说sg=M面；部署副本≠权威位（2026-09-13 立）
+- [双控制器端口定性](dual-controller-ports-m-mlc-r-rlc.md) — 8713=TriMLC=**M面本地域 daemon**（TriMLC-Watchdog 唯一保活）/8711=TriRLC=**R面本地域 daemon**（R面保活候建）——并行机制位不同面，非新旧版本无退役一说（CEO 2026-09-17 面授，勘正 BOD"过渡期双跑"误判）
+- [TriRMC 独立仓拓扑](trirmc-independent-repo-topology.md) — TriRMC=独立仓 D:/Code/ai/TriRMC（河源服务域 daemon，GitHub+sg bare 双源）≠TriRLC 仓——两仓两 daemon 查 R 面代码先分仓；工作区拓扑禁由文档布局推定先活体现探；R-HY root git 遇 fleet 仓 dubious ownership 用 -c safe.directory 单次豁免（2026-10-06 复验扑空实证）
+- [任务书树协议恢复](task-charter-tree-protocol-restore.md) — 执行层标准=任务书挂周平面→face 路由→自动拾取→拆树→节点收口；对话派工仅限裁决链；台账销账必附树指针；可自含打包的活禁走便道（2026-09-14 立）
+- [UI spec 必附实现态走查](ui-spec-needs-implementation-walkthrough.md) — 纸面合格≠实现合格（LG-035 七条否决教训）；UI spec 必读实现源码对照+结构词汇禁入 UI+灰度前三遍走查+四族排查（术语/命名/布局/逻辑双路径）
+- [MVP 划线纪律](mvp-line-core-requirement-discipline.md) — 核心原始需求不得划出首版（LG-035 时段切换被走查推翻）；划线须对 CEO 原始令逐条回对，后置须显式标注+知情；被形态取代的 P2 项及时销项
+- [概念建模一等实体](concept-modeling-first-class-entity.md) — 设计前先问「领域一等实体是什么」（LG-035 子栏三三版才定：CEO 定谳策略=命名实体，切换=选名字非选条目）；实体=命名+可管理+可被指向；「类 X」原型类比主动回查
+- [UI 交付渲染验证门](ui-delivery-render-gate.md) — code review+逻辑门禁对首启 UX 全盲（135 绿但用户零可用）；硬门=非作者手测+jsdom 首启链冒烟+spec 交互级；09-14 复发三变体：结构升级型改动=UI 必检触发器/失败族误归因遮活回归/走查快照泄敏感输入框；09-15 第三次命中=真 HTTP 链路层（单测直调+jsdom mock 双盲→新端点必配真链路案）
+- [活体优先诊断法](liveness-first-diagnostics.md) — 环境状态类问题第一步直接测活体当前态（curl 三态/键名扫描/查现 pid），禁远程推演历史（LG-035 谜题三轮不完整答案教训）
+- [token 实测协议](token-metering-protocol.md) — CFO 成本读数=本机 transcript usage 逐条汇总；窗级+turn 级冷/热拆分双口径（冷呼 6% 承载 86% fresh input；bootstrap 47-48K）+cacheR 92% 分列+不折现金；轮级净耗候批标记机制；实测单席窗 80 万-5500 万（假设口径作废）
+- [绩效记分·CFO 成本源](performance-scoring-cfo-cost-source.md) — 2026-09-18 生效（W38 首周期）：周 100 基−缺陷扣（CFO 供成本数据）+验证加分封顶+10；量比修正；扣分封顶−20；观察非处罚；正身=TriCompany/docs/workflow/performance-scoring-workflow.md（TC f537a1e）
+- [LG-034 常驻授权](lg034-cos-coo-standing-authz.md) — CEO 2026-09-11 04:12：实验范围文件实审发起权=COS+COO 联署面，该形态组审令照常执行非违规；范围外条 0 原样；实验收口后失效（台账为正式记录源）
+- [bash cd 后台链坑](bg-chain-cd-trap.md) — 「cd X && cmd &」使 cd 随链后台化，后续命令落旧 cwd——status/ls 假象先查 cwd；后台服务用独立行 cd 或子壳包裹
+- [tmux Enter 吞噬坑](tmux-sendkeys-enter-trap.md) — sg 席位 send-keys 派工：文本附带的 Enter 常被 bracketed paste 吞——补发独立 Enter+capture-pane 验空框（两次实证；sg 直连操作须 m-duty-cos 留痕制）
+- [tmux capture 暗示提示判读](tmux-capture-suggestion-ghost-line.md) — ❯ 后文字可能是 claude code 暗示提示非真实输入（Enter/C-c 全无效）；**Tab 采纳才变真实输入再 Enter 提交**；验证提交只认 thinking/对话流增量（2026-09-20 CEO 指正）
+- [第四型盲区·跨刷新持久](fourth-type-cross-reload-persistence.md) — jsdom/进程内复刻不覆盖真 reload boot 链；持久化语义 E2E 必含保存→reload→断言仍在完整周期（LG-035 W3 实锤 2026-09-12）
+- [发布重渲攒批节奏](republish-batch-rhythm.md) — 每日收口一批+FADE-008 攒批窗并批，急件单独追（BOD 裁 2026-09-20）；push 断连切 HTTP/1.1+ls-remote 核真值（"up-to-date"尾行可能是 RPC 失败误导）
+- [Windows 计划任务无窗纪律](windows-schtasks-no-window.md) — powershell 直启必闪 conhost 黑窗；合格式=VBS 包装（Run 第二参=0）或 pythonw；正身=D-29 已入册（2026-09-18 Sync-Alert 惯例案例）
+- [Claude Code 模型 env 键语义](claude-code-model-env-semantics.md) — _MODEL 系=真 ID / _NAME 系=仅 /model 展示名 / [1M]=客户端 1M 开关发请求前剥除 / HAIKU=小快副查询通道；双凭据键同写同值消解优先级（2026-09-15 核查有源，版本敏感）
+- [本机席位复活名址缺口](local-seat-relaunch-name-registration-gap.md) — **根因=CLAUDE_CODE_CHILD_SESSION=1 环境遗传**（BOD 代起的进程被当子会话：不存转录不注册名址）；修复=启动前清该变量+设 FORCE_SESSION_PERSISTENCE=1（03:29 已验证：名册 13/13 复原）；BOD 代起常驻进程前必清；键入自动化=剪贴板粘贴唯一可靠、回车常被吞
+- [联审收稿双查](joint-review-intake-dual-check.md) — 段稿正位=树目录未必发消息；查树先 git log 定位实际周目录（翻周归位迁件）；催办「欠稿」断言前三查（2026-09-21 误催双席教训）
+- [嵌套 pwsh -Command $env 转义坑](nested-pwsh-command-dollar-escape.md) — 启动令一行式经外层双引号转发时 $env: 被外层先展开成空→赋值变 `=1` 废命令报错（擦除/启动不受影响只丢 flag）；整条单引号或逐处反引号转义；正形=.ps1 启动器脚本；修法验证命令自身漏转义会造假阴性（2026-09-22 BOD 启动实证）
+- [PowerShell→ssh stdin CRLF 行尾坑](powershell-ssh-stdin-crlf-trap.md) — PS 管道经 ssh stdin 落盘物行尾粘 
+ 致精确匹配零命中（09-30 PAT 写入实证 124→123B）；修=sed 剥 
+ 或管道侧统一 LF；跨管道行尾族=PS→跨机三坑（BOM/转义/CRLF）并档
+- [TriRLC cron command 白名单精确等值](trilc-cron-command-allowlist-exact-match.md) — TRILC_CRON_COMMAND_ALLOWLIST=精确字符串全串比对（app.ts L246，双入口 fail-closed）——command 字段任何变更含路径迁移=必 403 须 allowlist 追加+重启，「API patch 非重启」只对非 command 字段成立；过渡用转发壳（旧位 import 指针）须有退役时点（2026-09-30 COS 实弹 403 勘正 CTO 错误指引）
+- [Bash 链调 5.1 的 PSModulePath 污染](powershell51-modulepath-bash-chain.md) — Bash→powershell.exe 继承 pwsh7 目录→5.1 加载 pwsh7 版 Utility→Get-FileHash 缺失而 ConvertFrom-Json 正常（假象极似脚本 bug）；驱动入口净化 PSModulePath+cmdlet 可用性断言；坑随父链 env 走跨入口结论不可互推（2026-09-25 ste-postunfreeze R1 实证）
+- [git credential approve 隐式写面](git-credential-approve-implicit-write.md) — 「dry-run 零写面」迷思：认证成功即 approve 重写凭证文件（同值 touch）——helper=store 环境网络操作 mtime 面一律视为有写面；身份语境漂移（root 会话忘降身）同族坑；不知情未报≠隐瞒（2026-09-30 sg root store 澄清案实证）
+- [幻觉时点·compaction/挂起窗 后首回合高发](cto-phantom-timestamp-compaction-resume.md) — 未现查凭印象写「03:5x」被抓（时序倒挂铁证）；同日 SDE 变体=上窗读数加工推算当现查（陈旧真值复贴更难自察，伴误判 sg 钟+2.5h 幸未上报）；落款当场重跑 date 贴原值禁引用上窗读数；自报时点晚于收信方 hook 现戳=必错即认（2026-09-30 CTO+SDE 两案实证）；FSD 耗时推算变体=长流程后凭「流程走完大概几点」造新值落款（10-06 实测晚 10 分钟倒挂，跨长流程后首信必重跑 date，「3x/5x」尾段=造值自指纹）
+- [重启窗完工判据=进程内生效验证](restart-window-completion-criteria.md) — healthz 绿≠配置生效；完工锚必含目标变更值面探针（同值 PATCH/临时 job POST+DELETE）；env 遗传族正解=冷起整树+父链断言（BOD #136 纪律候补条候 CAO 册，2026-09-30 件② 实证）
+- [TriMMC 与 TriMLC cron addJob 行为分野](trimmc-mlc-addjob-divergence.md) — TriMMC 8710（sg）addJob 写 store 后 executor.tick() 即时入调度+nextRunAtMs 正常排=即生效零白名单零重启（src/cron 十文件零 ALLOWLIST 命中 2026-09-30 实勘）；TriMLC 8713 F-3 缺陷（store.ts L218 INSERT 缺 next_run_at 列=永不调度）系 TriMLC 特有非家族性——修 TriMLC 时对表 TriMMC 正形作旁证；判 daemon cron 行为先分清 TriMMC/TriMLC/TriRLC 三形态勿互套；degraded 语义分野（10-05 增补）：TriMMC/RMC=per-job max 可见单 job 连败/TriMLC=全局计数任一 ok 清零掩蔽单 job（候办 P2）；TriMMC executor「调度活执行停」家族性缺陷（nextRun 滚动+零日志+自愈，10-01/10-02 两形态同签名）根因勘候窗——nextRun 滚动禁单独作活信号
+- [值面字段禁进打印路径](value-face-never-print-path.md) — 含密文件行级盘点键名提取按 '=' 首段截断，split 边界错会把值面整段带进打印路径经工具输出回显入会话链（2026-10-02 channel.cmd 快照 L10-12 三 token 实证；BOD 定性操作瑕疵非安全事故：三未实锚+同盘同权限面增量≈零，不提前轮换）；回显即自曝三态实锚候定性；入册候 CAO
+- [PS5.1 Remove-Item 穿 junction](ps-removeitem-junction-penetration.md) — Remove-Item -Recurse 穿链接面递归删真实目标（worktree junction→主仓 node_modules→仓级符号链接两层链直达兄弟仓，2026-10-03 STE 事故三仓实证）；正形=git worktree remove+rmdir 断链；删前 Get-Item LinkType 断言 REPARSE_POINT 即改道；事故后纪律=围栏先于施工+活体保活优先（内存进程=最后真值禁重启）；入册候 CAO
+- [cmd 批文件程序化写入必保 CRLF+实跑探针](cmd-batch-crlf-preservation.md) — LF-only set 区静默失效最毒（TRILC_PORT 不生效→绑默认 8711→EADDRINUSE 冷起崩，2026-10-02 M2 落位件 COS 还原）；写前测行尾写后断 CR 数/反常形态必追源（batch 文件 LF-only+旧进程 uptime 活着=矛盾信号禁放过）/验证含安全形态实跑探针（临时 cmd 剥启动行 call+echo，禁直接 call 生产启动器）；漂移引入时点候勘（我写前快照已无 CRLF，先于我写入可能性留痕）；关联候办=R-HY 401 pull_denied（信任面 TLS 已通，token 门未放行）候明晚窗
+- [append 脚本 open-w 二犯](append-script-openw-double-blow.md) — io.open("w") 先清空、write 参数 join 后炸=0字节；安全版唯一正形=拼好 new_lines 再单次 open-w（模板在条目内，禁手写变形）；插入用 `lines[:end] + row.splitlines(True) + lines[end:]` 禁嵌套 list；炸后 git checkout 秒回+行号序列完整验证（2026-10-02 BOD 二犯实证，三犯自禁手写）
+- [trimc cron 日志 token 嵌 header](trimc-cron-log-token-in-header.md) — /var/lib/trimc/cron/logs/ header 嵌 command 全文明文 token——tail 前必 `grep -vE "^command:|^runAs"` 滤（2026-10-02 BOD tail 未滤实证，sg 活体 token 进会话链）；同族=sg 仓 root 身份 git 操作留 root 属主文件致 fleet job 连败——root 操作后必 find -user root 清点+chown 归还
+- [拓扑断言禁由恢复源推定](topology-assertion-from-recovery-source-trap.md) — 「已从 sg bare 克隆恢复」误读成「sg 机受损」（2026-10-03 STE 复验事故回执，COO 勘正）；机位断言必活体现探禁推定，候 P1 钉死前拓扑断言一律标注；M2 回滚锚=本机 3333 本体受损=改指单向门态候 P1-P3 闭合
+- [resume-by-title 跨项目目录同名歧义](resume-title-cross-project-ambiguity.md) — title 匹配面=projects/ 全部项目目录含 worktree，残留同名 customTitle=弹会话选择器根因（2026-10-05 m-cos/m-fsd 实证，worktree 目录 119/77 行残留）；jsonl meta 行无 timestamp 字段判活用 mtime 勿单信 tail 时戳；修复=备份+归档改名禁删文件（锚=W40 发送账 #407）
+- [截断伪影=假读数家族](truncation-artifact-false-reading.md) — 定长截断显示双向造假：泄值向（10-02 值头带出案）+缺失向（substr 40 字符丢行尾 NEL→trilc-channel 显成假名 TRILC-CHAN→误报切空面观察点，CTO 勘定销案 b4bf42b8）；键名面用 -F= 取段不定长、值片段只取尾指纹、显示长≠全行长=伪影信号；家族五向并档（10-05 LG-064 扩）：编码毁匹配/转义毁语法/截断毁值面/**PS5.1 引号吞噬毁远程命令**/**pwsh7 JSON DateTime 类型变形毁时戳（+8h 幻影，'o' 回环+Invariant+AssumeUniversal 修）**；共同根式=中间层隐式变形+静默失败，识别信号=单点伤/双宿主分叉/读数与旁证矛盾
+- [硬门签认必落卷直达](hard-gate-signs-land-in-tree.md) — 已发≠在链：门消费面读树不读会话，会话中继签=暗签（b14 CFO 签 10-04 18:5x 已发有回执仍破死线，CTO 落卷仍书「候 CFO 侧」）；正形=签认席自己落卷+commit 直达通知，托回填=悬空环；「已发」后追问第二问「消费面读得到吗」（2026-10-06 fd74d22f 自补实证）
+- [跨仓 git hash 混读](cross-repo-git-hash-confusion.md) — 双仓连作后 hash/reflog 断言不带仓向=全错推演（TriModel lint 笔安全无恙却被误判「被挤落」）；正形=pwd+remote -v 双证仓向、bad revision=仓向错强信号即停、reflog 考古先内容面验证、共享仓 reflog 是全席序列先分属主；零损害系运气非设计（2026-10-06 FSD 实证）
+- [共享 JSON 账本写法纪律](shared-json-ledger-write-discipline.md) — 禁 Edit 文本行插入改账本（锚含邻条开头行忘补回=吞行断链，9f6b1bd4 坏形入库三小时实证）；正形=load→改→dump 全程解析+commit 前 json.load 断言一行；同窗多席双写竞争写前 fetch 写后速推（COS dd7bca7f 修复实证）
