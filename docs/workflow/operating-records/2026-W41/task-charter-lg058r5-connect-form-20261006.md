@@ -24,15 +24,17 @@ cc-switch（farion1231/cc-switch）官方用户手册 2.1 添加供应商章（G
 4. **模型映射表增「1M」列开关**：行级开关，开启→该行实际请求模型值尾缀 `[1m]`（依据：Claude Code 客户端 1M 开关语义，发请求前剥除；记忆条 claude-code-model-env-semantics）。
 5. **配置预览联动增补**：API Key 值落所选认证字段键（默认 ANTHROPIC_AUTH_TOKEN）；1M 开关联动尾缀实时出预览；API 格式不出现于预览（裁 A）。
 
-## 验收锚（BOD 复验逐条）
+## 验收锚（BOD 复验逐条）——**2026-10-07 00:2x BOD playwright 独立复验七锚全 PASS**
 
-- [ ] 四域卡同构五件全渲染（textContent 逐卡断言，防折叠态 innerText 假象）
-- [ ] API Key 显隐眼睛切换可用
-- [ ] 认证字段切换→预览 JSON 键名跟随（AUTH_TOKEN↔API_KEY）
-- [ ] API 格式选非原生→警示文案现；保存后配置无格式键（裁 A 断言）
-- [ ] 1M 开关→预览对应模型值尾缀 [1m]；关闭→尾缀移除
-- [ ] 保存/放弃双钮行为不回退（放弃清场含新五件）
-- [ ] Stage2 部署绿+环C 探针绿
+- [x] 四域卡同构五件全渲染（textContent 逐卡断言，防折叠态 innerText 假象）——四卡 10/10 全绿（Key 行/认证字段双键/API 格式四选项/警示/1M 列/请求地址/主模型/预览/password 框/眼睛钮 data-cd-eye）
+- [x] API Key 显隐眼睛切换可用——password↔text+钮文「显示↔隐藏」双态还原（mmc 卡实测）
+- [x] 认证字段切换→预览 JSON 键名跟随（AUTH_TOKEN↔API_KEY）——假 Key（sk-test 形）默认落 AUTH_TOKEN，切 API_KEY 后旧键消失值随迁
+- [x] API 格式选非原生→警示文案现；保存后配置无格式键（裁 A 断言）——「需本地路由」警示现+预览零 apiFormat 键
+- [x] 1M 开关→预览对应模型值尾缀 [1m]；关闭→尾缀移除——映射表四行 checkbox×4，勾选预览即出 [1m]
+- [x] 保存/放弃双钮行为不回退（放弃清场含新五件）——放弃后 Key 清空/格式回原生/预览归 {}（首读 HAS-VALUE 假象=400ms 异步重渲窗时序，细判终态正形，与 r4 innerText 假象同族记录）
+- [x] Stage2 部署绿+环C 探针绿——两刻 16:14:00Z/16:16:22Z（GO 起 8 分钟）；环C 六项两遍全绿；本机+R-HY 3333 双面 200+r5 特征 10 处命中；FSD 17 锚全 PASS
+
+**复验附注**：假 Key 纪律全守（sk-test-bod-verify-000，真值零进链）；部署期双实例幂等重放勘误（GO 停等窗 120s 内自挂快于首实例超时→同包二次部署 5s 闪断）已如实入 FSD 执行卷，终态正确；BOD 先头 vitest 误跑（node:test 基座）自纠无欺。截图锚=lg058r5-connect-form-verify.png。
 
 ## 边界与纪律
 
