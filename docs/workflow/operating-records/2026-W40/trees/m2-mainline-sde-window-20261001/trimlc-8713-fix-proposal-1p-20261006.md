@@ -1,7 +1,7 @@
 # TriMLC 8713 错位根治·修复方案一页（CTO 技术门 APPROVE 附三核意见——本版=三核落实稿）
 
 - 执行: m-sde；时点: 2026-10-06 10:2x+08 草拟；窗位=今晚 b14 晚窗（与 FSD TriRLC 仓主活零冲突）
-- 核状态: CTO 技术门 APPROVE 附三核意见（判读锚 30699063；同刻前身 0f66b394 系 amend 遗留不可达，不引用）。核①fail-closed 已改（§二守卫+§五风险段口径贯通）｜核②jobCount 语义注记已落（§一.3）｜核③8711 拉起者并案已入施工序（§四.1，与提权验证并列打头）｜FSD 件②token 落盘限权+件③boot 恢复清扫 scope 增补已入（§三）。**改毕回执即视为施工放行（CTO 判读原文）**
+- 核状态: CTO 技术门 APPROVE 附三核意见（判读锚 30699063；同刻前身 0f66b394 系 **rebase 重放前身**（CTO reflog 实勘勘正，10:42 回执；三连=rebase start checkout sg-server/dev→pick 本席笔→finish return dev）不可达，不引用）。核①fail-closed 已改（§二守卫+§五风险段口径贯通）｜核②jobCount 语义注记已落（§一.3）｜核③8711 拉起者并案已入施工序（§四.1，与提权验证并列打头）｜FSD 件②token 落盘限权+件③boot 恢复清扫 scope 增补已入（§三）。**施工放行已生效（CTO 独立验毕确认 10:42）**
 - 红线对照: ①**宁可不拉，不可拉错**（无人登录窗保不了 jedih 正形拉起→宁可 8713 短时缺位走 L1 告警，绝不留 store-blind 假活）②**禁新引入 SYSTEM/提权上下文拉起面**（本方案全部动作在 jedih Interactive 面内，零新提权）
 
 ## 一、判活探针三件套（治「假活 16h」——watchdog.ps1 改造，配置面无源码依赖）
@@ -26,7 +26,7 @@ watchdog.ps1 revive 前加登录态守卫：`qwinsta`/`Get-CimInstance Win32_Com
 ## 四、施工序（b14 窗内）
 
 1. 提权验 systemprofile store 落点（考古最后一块，10min）＋**8711 正形拉起者追查（CTO 核③并案，与上项并列打头）**：19:50 无人登录窗内 8711（TriRLC 16500）正形拉起+pidfile 写入——若非人工即=「正确拉起模板已实证存在」（TriMLC 对抄候选）+23980 破案钥匙；候选面同 TriMLC 查法，首查 TriRLC-Watchdog（jedih/Interactive）在 19:50 窗的运行态与登录时序对表
-2. l2-scan 解卡：daemon 重启（带 token /shutdown 正途+channel.cmd 冷启，复活链同款；~60s 空窗，三件套自验收）
+2. l2-scan 解卡：daemon 重启（带 token /shutdown 正途+channel.cmd 冷启，复活链同款；~60s 空窗，三件套自验收）。**前置护栏（CTO 注记二，10:42 回执采纳）**：空窗内在役 watchdog 仍系旧判活逻辑（healthz 单探）——探 DOWN 即抢拉与冷启撞 port（EADDRINUSE 冷起崩家族）→复刻今晨复活链护栏：**重启前临时 Disable TriMLC-Watchdog→重启+三件套自验收→恢复 Ready**。channel.cmd 冷启不触文件零风险；后续 FSD 件④改 channel.cmd 时 CRLF 纪律入施工清单（写前测行尾/写后断 CR 数/安全形态实跑探针，10-02 M2 落位件族教训）
 3. watchdog.ps1 改造（§一+§二， jedih 面配置文件，D-09 UTF-8 BOM 纪律+改后单轮探测冒烟）
 4. FSD 件③④（TriMLC src）——若 FSD 无窗则候下一批，本窗只交 §一/§二/§四 配置面件
 5. 收口断言：watchdog 三探冒烟（错位形模拟：临时停 pidfile 探 DOWN 路径）+l2-scan 归位读数+全 7 job 推进读数

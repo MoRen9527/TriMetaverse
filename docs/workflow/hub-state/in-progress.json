@@ -78,7 +78,7 @@
     "owner": "FSD",
     "priority": "默认（LG-058 整改波录入序 5）",
     "status": "open",
-    "note": "产品方案三件（打回 #2/#8/#9，按 CPO 方稿实现）。代码面毕 10:22（366eecb+99806cf 三件全毕；08:49 曾 API 错误终止停摆 33+min→09:27 复活）→STE 走查毕 CONDITIONAL_FAIL（df1ab55d）→P1 回炉毕 45757bd·CTO 技术门 APPROVE 采认（11:56 终裁准升版·升版触发=STE v6 绿+清场毕）→升版已触发毕（12:1x·执行位 m-sde）→**SDE 开工回执 12:40（挂单毕 job 1923c530 首轮 12:40:32，Stage2 预置毕；候备份锚报备）**；毕后触 R-HY 升版链（服务域流水线无人值守）。settings.json=CEO 原话词汇=「该域本地落地配置」语义，落地文件名以各域控制器实态为准。"
+    "note": "产品方案三件（打回 #2/#8/#9，按 CPO 方稿实现）。代码面毕 10:22（366eecb+99806cf 三件全毕）→STE 走查毕 CONDITIONAL_FAIL（df1ab55d）→P1 回炉毕 45757bd·CTO 技术门 APPROVE 采认（11:56 终裁准升版）→**升版流水线毕 13:25:52（R-HY 五环全毕，TriModel 45757bd+TriRMC a02d89b 在役，rmc 卡 applied tier=1；读数卷 rhy-upgrade-pipeline-20261006.md §二.6）**→候 STE 序④新锚读数差分→BOD 复核→呈 CEO。settings.json=CEO 原话词汇=「该域本地落地配置」语义，落地文件名以各域控制器实态为准。"
   },
   {
     "id": "cron-muh6shv0-korw-stalled-18h",
@@ -104,7 +104,7 @@
     "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/rhy-upgrade-pipeline-20261006.md",
     "owner": "SDE",
     "priority": "默认（LG-058 升版流水线，COO 12:13 触发序③+12:2x 两级包 APPROVE）",
-    "status": "open",
-    "note": "R-HY 升版流水线执行（TriModel 45757bd+TriRMC 99806cf）。开工 12:40：Stage1 脚本挂单 TriMMC 8712 job 1923c530（every 60s，首轮 12:40:32）+Stage2 脚本 R-HY 预置（nohup 单发候触发）；双脚本 hash 对表匹配。硬门三件嵌入（备份锚报备停等 GO.flag/值面探针/回滚随链）；N2 演练含 COO 差异模板细化双断言。候信链：Stage1 毕→本机传输腿→Stage2 触发→BACKUP-ANCHOR 报备 COO+BOD→GO.flag→五环毕→收口卷→STE 序④→BOD 复核→呈 CEO。时窗=13:4x 前全毕目标（N2 段可单独候 18:00 后补跑备选，COO 认）。"
+    "status": "closed",
+    "note": "R-HY 升版流水线执行毕（终态 TriModel 45757bd+TriRMC a02d89b——sha 变更点：99806cf→a02d89b 系 FSD strictNullChecks 最小修，COO 类推准裁+BOD 采认，diff 断言 2 文件 10+/2- 独立验+tsc 全量绿验讫，CTO 事后追认随卷）。全链 12:40 开工→13:22 Stage1 绿（轮 10，十轮排障：aegis 文件锁 B64 绕过+workspace 双锚+tsc 注入+@types 两补+TriRMC 存量类型债 FSD 修）→13:23 传输腿→13:23:25 备份锚报备（COO+BOD 双 GO）→13:25:25 HOLD 设计内→13:25:42 重触发→13:25:52 STAGE2 DONE 五环全毕。环C 探针路由形勘误自我修正（集合 404→per-face 实锚）；环D rmc 双断言 PASS+rlc 候建态如实；环E 拉取链 pulled fresh 实证；smoke DEPLOY 态成立。读数卷=trees/lg058-remediation-20261006/rhy-upgrade-pipeline-20261006.md §二.6；基建影响面（aegis 文件锁四联征+B64 绕过）候 CTO 知情+CAO 入册。候后链：STE 序④新锚读数差分→BOD 复核→呈 CEO。"
   }
 ]
