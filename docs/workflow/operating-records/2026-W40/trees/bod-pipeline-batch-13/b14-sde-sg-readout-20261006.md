@@ -74,7 +74,8 @@ ESM 正形探针（`node --input-type=module -e "await import('file://.../result
 ## 四、观察项（不阻门）
 
 1. sg node v18 vs 本机/R-HY v22 三机版本差——`node --test` glob 支持差（v21+）已入本卷勘差；sg node 升级候独立窗（系统面变更非本席单方面动域）。
-2. 25/25 对照抽验定义源候 FSD 指认（TriCode 面无 25 案族实锚）。
+2. 25/25 对照抽验定义源**已答销项**（FSD 18:50）：=STE 09-25 settings 解冻复验门自建 25 用例沙箱驱动 `ste-sandbox-reverify.ps1`（W39 incident-sde-settings-01，PASS 9919800f，R5 终跑 25/25）——脚本侧回归冒烟口径，不在 TriCode 58/TriModel 284 套件计数内（TriCode 面无 25 案族实锚与本卷勘验一致，定义源在 STE 沙箱非套件）。
+   - **276→284 构成拆解对表**（FSD 18:50 供，git log 实证）：276=编制时点（10-01）sg clone 壳族基线；本机 344−sg 284=60 全部来自 161d0ca..45757bd 九笔 LG-058 提交（N1..N5+P1 回炉+lint 勘补全触 test/）——sg TriModel 树停 161d0ca（LG-058 九笔未达 sg）。fail5 全 UI 族与 bump 零因果旁证（该族=161d0ca 时代 UI/E2E 门测，bump 只动 TriCode dist/core 导出；本机同族 0 fail）。276→284 差 8 与 skip 17vs14 属 sg headless 门控口径差方向（候 STE 终判，FSD 标注推断）
 3. fail 5 全 UI 族的引擎敏感性定性（jsdom/无头链 v18 形态差候选）——候 STE 面 UI 测试族基线对照时对表。
 4. 在役传导窗：sg 3333/3334/8712 与 R-HY 3333/8712/8710 下次重启即消费 0.2.1-wave3——各 daemon 下一自然重启窗的 healthz 读数=软观察锚（零行动项，除非 smoke 异常）。
 
