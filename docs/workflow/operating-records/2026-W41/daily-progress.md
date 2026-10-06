@@ -375,3 +375,13 @@
   - 91b35acd docs(cto): 裁 A 再裁勘补——注册面提权域三通道全拒实锚（运行面非提权定性维持），主裁②并入明日 admin 窗一次三得，①UAC 转应急备选材料在位
   - 4a938eb5 docs(sde): 裁A执行勘补§七——非提权注册面三通道全拒(Win11加固面定性)+提权脚本预置(anti-run内建)+两路通道候裁(UAC当面/admin窗并办三得)+三约束遵守态
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:20 +08：自上次进度提交 f7ece67b 后新增 8 条 commit：
+  - 2ef063b9 docs(ste): 8713 修窗回归五锚读数卷——锚1/4 PASS 锚5 FAIL(1/7 job trimodel-l2-scan 卡 running 冻结 nextRun -25.5h) 锚2/3 连带不成立 调度器本体 6/7 健康滚动已修净 卡点候令不自裁
+  - fcf71acc docs(coo): 双接令齐入卷(FSD N2 窗细化+锚3 ACL 精化今晚毕只剩补推+SDE 双窗序 S0-S5 钉死 e3783e63+build 前置序优化认账 down 窗压秒级·17:50 提醒升级双窗链)
+  - a9728822 docs(cto): 流程面追认定谳——双条件实际闭合非超跑，随令即动歧义责任本席领+铸条教训候 CAO（后令显式废止前条款+触发语点名全名）+锚3 user-only 闭合确认
+  - e3783e63 docs(sde): §七.6 双窗序排定落卷——8713合流冷起窗施工预案S0-S5(build前置shutdown前=down窗最短化+korw真刀三断言+回滚三层)
+  - 7b57c9c7 merge: 并行笔收编（明日窗序排定并行段带平）
+  - 637548f8 docs(coo): 10-07 晚窗序排定入卷(SDE 钉死项 8418a002 勘出→三窗串行 admin 18:00→8713 合流冷起→N2 19:30 后·N2 前置追加合流冷起毕·三席对表毕)
+  - 8418a002 docs(sde): §七.5 段2交接dist对表勘补——TriMLC顶03c6197对表一致+src符号三文件在位+dist零命中实证(10-04旧build)+下窗钉死项=冷起前npm run build一次带出两笔
+  - 0f6fbc62 docs(cto): stop 修段2 部署 ACCEPT（修②活体证据 fail-loud 闭环）+锚3 裁移除 CodexSandboxUsers(RX)+两观察裁+TriMLC 移植毕 ACCEPT+流程面回询（报备制条款差候 FSD 说明）
+- registry：v2.1；今日 registry 提交无变化
