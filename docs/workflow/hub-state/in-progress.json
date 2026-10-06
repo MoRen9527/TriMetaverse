@@ -124,5 +124,23 @@
     "priority": "P2（候排窗并入制度面·与 D-43 后打包窗同批排）",
     "status": "open",
     "note": "账本并发双写同窗竞争候办（12:16 COS×SDE 310c8561 同窗实证·幸无叠损；9f6b1bd4 吞行断链 3h 同族）。方向=单写者收口：他席插条经 COS 中转 or 原子 append+冲突检测。防坏笔面已落 pre-commit gate（本机仓 .git/hooks/pre-commit·14:12 BOD 裁一·负向实弹过）；sg 面仓 gate 同步候办；对表扫 JSON.parse 兜底判据候 COO 下次设扫模板。"
+  },
+  {
+    "id": "lg065-duty-seat-bc-combo",
+    "treeAnchor": "07683648",
+    "treePath": "docs/workflow/operating-records/2026-W41/task-charter-duty-seat-bc-20261006.md",
+    "owner": "COS（N1 会话实体化）+CTO/FSD（N2 daemon）+STE（N3 实测）",
+    "priority": "高（CEO 17:21 批令·值席载体缺陷链动因）",
+    "status": "open",
+    "note": "值席 b+c 组合案：sg 独立值席会话 7×24+两机盯梢 daemon+四跳兜底+链路唯一；CEO 点名 m-cos 零改动断言=N1 验收锚；排窗避让今晚 b14 晚窗。17:2x COS 授号毕流转 COO 拆树派工。"
+  },
+  {
+    "id": "lg066-trirmc-merge-receipt-unit",
+    "treeAnchor": "BOD 17:23 落账令",
+    "treePath": "立单候排期定后 BOD 落",
+    "owner": "候排期定后派（施工前置=LG-058 CEO 终验毕+CTO 技术门）",
+    "priority": "中（CEO 17:21 批方向·候排非候裁）",
+    "status": "open",
+    "note": "TriRMC 合并回单单元+trirmc-mc 名字消失修复；排 10-13 须附队列+黄金时段占用理由（COO 排期定中盯防）。"
   }
 ]
