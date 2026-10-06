@@ -85,6 +85,22 @@ Stage2 R-HY 自包含执行包（ssh nohup 单发触发，全自动）
 3. **bundle 备援缺失**：sg 侧 git bundle create 未产出（Stage1 日志 WARN 非门）——备援件缺位影响面=仅灾备冗余，双 dist tar+裸仓 sha 锚三重在，候办：下次构建环补 bundle 或裁撤该项。
 4. 演练 backups 路径形：restored_from 锚文件在卡同目录（`trirmc-card.json.bak-*`）非 `backups/rmc/` 目录——路径认知勘误，不影响回滚链实证。
 
+## 二.7 环B 疏漏勘误+trirmc 本体补重启段（BOD 复核问实闭合，13:46-13:48）
+
+**BOD 复核问实（13:46）**：活体抽验发现 trirmc.service 本体（8712）起动时戳仍=10-05 23:18:35 未重启，而 dist 已换 a02d89b（node 进程不热加载）——问实①「进程内生效」探针取哪个单元进程面？②本体是否设计内不重启？
+
+**实勘定谳（13:46）**：trirmc.service 与 trirmc-mc.service **两 unit ExecStart 完全相同**（`/usr/bin/node dist/src/index.js`）同 WorkingDirectory=/srv/fleet/TriRMC，仅 env 差异（8712=127.0.0.1+cron 主实例+CONFIG_DIR=/var/lib/trirmc；8710=0.0.0.0+cron disabled+CONFIG_DIR=/var/lib/trirmc-mc）——两进程跑同一份 dist，本体进程内存=旧代码。**问实②答：非设计内不重启，系环B 脚本疏漏**（环B 只 stop/start trirmc-mc.service+trimodel.service 双 unit，漏 trirmc.service 本体）。问实①答：环C 探针面=trimodel 3333（/health+卡面 API）+trirmc-mc 8710（/healthz）；环E journalctl 仅 -u trirmc-mc——均未及本体 8712 进程面。
+
+**补重启执行读数（13:46:38，BOD 问实信指令路径授权：restart+值面探针+回执）**：
+- `systemctl restart trirmc.service` → MainPID 2019007→**2064924**，ActiveEnterTimestamp=**Tue 2026-10-06 13:46:38 CST**（刷新实证）
+- healthz 200：`{"ok":true,"service":"trirmc","mcLedger":"ok","cron":{"enabled":true,"jobCount":3,"degraded":false,"consecutiveFailures":0}}`——cron 主实例 3 job 存续零降级（周平面迁移 job 在册；今天周二 13:4x 非周日 23:00 迁移窗，重启窗口零迁移风险）
+- journalctl 起动链：Started→listening on :8712→loaded cached config (2 providers)→**pulled fresh config (2 providers)**→cron service started with 3 job(s)——与 trirmc-mc 重启后（05:25:48）同谱拉取链行=新代码进程内拉取链路径实锚（a02d89b 构建产物 .deploy-sha 环B 双断言在案，pid 2064924 自该 dist 拉起=内存代码=磁盘代码）
+- **新代码路径覆盖定性**：两 unit 同 dist 同入口=import 树完全相同，本体补重启后版本一致性恢复（disk a02d89b=内存 a02d89b，消除「磁盘新版/内存旧版」漂移态及其后续无验证跳版风险）
+
+**操作瑕疵自报（候定性）**：补重启前实勘 `systemctl cat trirmc.service` 输出带出 unit 内 `TRIMC_INTERNAL_TOKEN` 值进会话链（grep Environment= 行未滤值面，同 10-02 channel.cmd 三 token 族坑）——同盘同权限面增量≈零，如实报备，不提前轮换自裁，候 BOD/CAO 定性。
+
+**回滚方案状态**：dist.bak-pre-lg058up-* 备份锚本体面同样适用（环A 备份含 TriRMC dist 全量），补重启不改变回滚路径。
+
 ## 三、账本同步行（树单合同）
 
 in-progress.json 增条 `lg058-rhy-upgrade-pipeline`（owner=SDE，status=open，本笔 commit 随带）；N5 条候信态（开工回执）随本笔同步。
