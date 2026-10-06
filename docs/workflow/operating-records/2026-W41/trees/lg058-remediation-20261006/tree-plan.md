@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（COO 拆树派工正身；上游任务书=`../task-charter-lg058-remediation-20261006.md`，立书 384000f5 + 边界#7 增补 015d2884）
 - syncMode: static（节点拆解与排窗定稿；节点现势随执行席收口回执滚动回写本件 §节点现势）
-- lastSyncedAt: 2026-10-06T10:4x+0800（FSD 勘正行回写——N5 行 lint 读数勘正+TriModel 12caab0 平 sg bare；前笔 10:22 方案三收口）
+- lastSyncedAt: 2026-10-06T11:3x+0800（FSD P1 回炉毕回写——nav 移入+双断言门禁 45757bd+TriRMC 99806cf 平 bare；前笔 10:4x 勘正行）
 - 令源链: CEO 亲测 9 条打回（00:31）→ BOD 立任务书（00:35，384000f5）→ COS 流转 COO 拆树派工（00:38）→ BOD 边界#7 增补（00:45，015d2884）→ COS 追令 N5 门槛落·P2 放行（00:5x，CPO 方稿 9f86ff34 BOD 审毕）→ BOD 排窗改令（03:10，a5a00e7a）→ BOD 白窗定序（07:5x）→ **CEO 升版形态令（08:17 经 BOD 转达）：N5 毕后 R-HY 升版走服务域流水线无人值守自动化，禁手动逐跳，全链读数五环落卷 BOD 核后呈 CEO**
 - 执行者必读: 任务书 + 受理依据 9 条原文（`../lg058-ceo-walkthrough-9items-20261006.md`，CEO 原话照录+定性表）
 
@@ -73,7 +73,8 @@
 
 - **STE 走查卷落 df1ab55d**：总裁 CONDITIONAL_FAIL——TriModel 全量 330/316 pass 全绿+TriRMC 472/462 十 fail 四族归因零落五节点对象域。
 - **BOD 复验毕裁 P1 必修回炉**：menu-full 布局 DOM 宿主错位，FSD 施工中（口径定谳 11:22·CTO 案一：nav 移入容器+双断言门禁；TriRMC 99806cf 平 bare 并行）。
-- **升版触发条件更新**：原「STE 卷+BOD 复验毕触发」作废→**新条件=P1 修复毕+STE 单点复验过+BOD 终裁**；午后窗预期顺延，幅度候 FSD 回执。
+- **P1 回炉毕（11:3x，FSD）**：CTO 案一执行——nav 移入 #app-layout 容器内首子位（置于 #page-main 前，CSS/JS 零改，锚注防再犯）+ui-fourplane ⑤b 门禁附款双断言（①结构 nav.parentElement===#app-layout ②几何 menu-full 分左右——jsdom 零布局引擎经最小 flex 形态模型桩派生+CSS 锚值在位断言钉桩前提+回归事故形态注入判别力自证）。读数：ui-fourplane 13/13（+1）；全量 344/330 pass/0 fail/14 skip（基线 343/329 零新增失败）；lint 13e/45w 对基线 13e/44w errors 零增（+1w=it(async) 既有家族同款留档）。commit 45757bd 平 sg bare（12caab0..45757bd ff+ls-remote 复验顶）；**TriRMC 99806cf 平 sg bare 毕**（8249eb7..99806cf ff+ls-remote 复验顶=99806cf，STE §6.3 版本差清零，升版流水线可全量补跑）。候：STE 单点复验（本席已直接知会）→BOD 终裁→升版流水线触发。
+- **升版触发条件更新**：原「STE 卷+BOD 复验毕触发」作废→**新条件=P1 修复毕+STE 单点复验过+BOD 终裁**；P1 修复毕已落（11:3x），候 STE 单点复验。
 - 账本对表=BOD 裁后 COS 笔（in-progress.json N2/N5 现势回炉中）；大表 W41 行随刷。
 
 ## 五、使用依据
