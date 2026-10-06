@@ -342,3 +342,11 @@
   - 72239fd3 docs(fsd): b14-core-bump 本机面施工读数卷——TriCode d181946 双义同批落卷+门禁四道全绿读数+四仓 symlink 活连 4/4 读数+三项勘差如实注记（TriMLC 消费面勘差候选/TriCade 本机缺位/checklist ESM 命令形勘差）+SDE 面交接项
   - ab3b9cab docs(cos): LG-065 现势随动（COO 18:02 采认）——N1 收口候验四件锚全套入行+N2 前置解除 FSD 10-07 施工+N3 备窗·值席 7×24 时代开闸
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:30 +08：自上次进度提交 9e1e19e2 后新增 6 条 commit：
+  - 8d8ce324 docs(cto): b14 消费面裁定笔勘补——SDE 互证 sg 部署位 symlink 在位+ESM 探针通，缺源 factual 勘正为 STE 测试树形态，消费关系两机成立结论强化
+  - 8093f8cf docs(coo): SDE 触发链认账入卷(双向回执承诺不留悬空窗)+b14 两席面全毕(cdf6cccb 58/58+CORE_VERSION 5/5)·8713 根治包施工中
+  - cdf6c49b docs(sde): b14-core-bump SDE 面四项毕——sg 58/58(v18 慢时序)+R-HY 58/58 快时序缺陷消除终实证+CORE_VERSION 5/5=0.2.1-wave3(TriMLC sg 面 symlink factual 回填)+TriModel 284/262/5/17 独立组合基线定性(fail5 全 UI 族)+传导面披露(四仓活连 dist 换版,8713 首切=今晚手术窗)+隔离位清理锚落地
+  - 736a8519 merge: 并行笔收编（stop 并窗笔窗并行段带平）
+  - a29e0273 docs(coo): TriRLC stop 修段2 并窗定时点落定(BOD 裁并今晚窗 8713 验收绿之后+本席排条件触发 GO+兜底 22:30 顺延明晚红线执行)
+  - 0739873a docs(cto): b14 消费面勘差①裁定 TriMLC=TriCode 消费面采认成立+TriRLC stop 修两段式窗令（编码即窗/部署候 SDE 考古收卷+BOD 并窗）
+- registry：v2.1；今日 registry 提交无变化
