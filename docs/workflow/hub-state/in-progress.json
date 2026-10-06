@@ -34,5 +34,50 @@
   "priority": "默认（录入序 3）",
   "status": "closed",
   "note": "**对表闭（2026-09-30 11:4x，COS 亲验三锚）**：①a 案施工读数✓=10:30+11:30 双轮 cron 实测 PUSH-OK 20/20 零 FAIL（凭据补齐自愈型闭合，双链双活：hook MIRROR ssh 即时+cron PAT 段小时级，9 天欠账清零）②quiet 补做毕✓=L18 亲验 11:4x `--quiet` 已去（SDE 补做落位，诊断文本 $out 全量入 FAIL 行）③全链终态=refspec 去 `+` 主修+denyNonFastForwards 纵深+告警锚+凭据线①-⑥全闭（新 PAT 20/20 验活/旧把全废 CEO 11:30 网页点废/gho_ 出处三缺席本地清+自然失效闭合/root history 清零/观察项族闭合 11:3x）。全链参与席：SDE 施工/CTO 裁决权衡/BOD 护栏令+值席代查+剪贴板管道/CAO 合账/COS tracking+护栏+亲验销账。quiet 自然样本观察项保留（候真 FAIL 出现验诊断文本可见性，不入闭条件）"
+ },
+ {
+  "id": "lg058-N1-pull-status-chain",
+  "treeAnchor": "1705654b",
+  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 task-charter-lg058-remediation-20261006.md 384000f5）",
+  "owner": "FSD",
+  "priority": "默认（LG-058 整改波录入序 1）",
+  "status": "closed",
+  "note": "拉取状态数据链路修复（CEO 亲测打回 #3）。BOD 定性 closed（09:3x 增令）。代码面毕 03:4x：TriModel 5b4dedb+TriRMC 8249eb7（tier 三段补建+3941 沙箱活体链通）；树单自回写 1705654b；毕报候 BOD 复验 678c9c49；实勘随 R-HY 升版窗（服务域流水线无人值守形态，N5 毕后触发）。"
+ },
+ {
+  "id": "lg058-N2-rplane-dual-cards",
+  "treeAnchor": "1705654b",
+  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
+  "owner": "FSD",
+  "priority": "默认（LG-058 整改波录入序 2）",
+  "status": "open",
+  "note": "R 面双卡功能补齐（打回 #5+#6：TriRMC·河源/TriRLC·本机 模板切换+备份回滚）。代码面收口 08:15（进度超前）；现势=候验收：候 STE 非作者走查+流水线正式读数（边界#7 禁本地跑）+R 面切换→备份→回滚演练全程无人工补手。M 面两卡暂缓候 CEO 后令解锁（03:10 改令）；测试顺序 CEO 钉死 R 面先行。"
+ },
+ {
+  "id": "lg058-N3-config-source-binary",
+  "treeAnchor": "1705654b",
+  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
+  "owner": "FSD",
+  "priority": "默认（LG-058 整改波录入序 3）",
+  "status": "open",
+  "note": "配置来源二分（打回 #4 后半：本地配置 vs 远程拉取配置，「直连/中转」编造概念全链清洗）。代码面毕 03:4x=e099329（来源二分列+直连中转零命中）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
+ },
+ {
+  "id": "lg058-N4-copy-domain-wording",
+  "treeAnchor": "1705654b",
+  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
+  "owner": "FSD",
+  "priority": "默认（LG-058 整改波录入序 4）",
+  "status": "open",
+  "note": "文案「本卡特有」→「本域特有」（打回 #7）。代码面毕 03:4x=c4d9137（TriModel 仓；grep 零残留+sanity 7/7）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
+ },
+ {
+  "id": "lg058-N5-product-plan-three",
+  "treeAnchor": "1705654b",
+  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5；CPO 方稿 9f86ff34）",
+  "owner": "FSD",
+  "priority": "默认（LG-058 整改波录入序 5）",
+  "status": "open",
+  "note": "产品方案三件（打回 #2/#8/#9，按 CPO 方稿实现）。在途施工：08:49 API 错误终止（ENOTFOUND）停摆 33+min→09:27 复活续干（断点报已回 BOD：工作区三文件完好零半笔，现干方案二联席规则勾选段+测试对表中）；毕后触 R-HY 升版链（服务域流水线无人值守）。settings.json=CEO 原话词汇=「该域本地落地配置」语义，落地文件名以各域控制器实态为准。"
  }
 ]
