@@ -220,3 +220,6 @@
   - 0bff654f docs(fsd): LG-058 树单 N5 勘正行——lint 假读数勘正(真+1 已修 12caab0 平 sg bare),STE 走查消费勘正版口径
   - 30699063 docs(cto): LG-064 方案卷§八增补——勘误自领(13756=watchdog revive正形先例证伪本席推论,23980改判竞争假设)+0e641383考古卷/方案一页技术门APPROVE附三核意见(守卫fail-closed须改/jobCount>0空store边界注记/8711正形拉起者追问并案钥匙)+FSD件scope增补(boot恢复清扫/token落盘限权)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 d9f7b62c 后新增 1 条 commit：
+  - df1ab55d docs(ste): LG-058 走查卷——N2/N3/N4/N5 同批非作者走读 CONDITIONAL_FAIL 候裁——P1 候选=menu-full 左右布局不兑现(nav 为 app-layout 兄弟节点,flex 宿主错位,证据三层含截图);九条回对 N1/N3/N4 过+N2 沙箱演练链全通+N5 三件主体锚达成;流水线终读数 TriModel 330/316 pass/0 fail 全绿+TriRMC 472/462 pass/10 fail 四族归因零一落对象域(无凭据环境/执行环境/sg git/跨仓硬编码漂移 14→15);v1-v4 作废链全档
+- registry：v2.1；今日 registry 提交无变化
