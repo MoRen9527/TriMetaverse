@@ -229,3 +229,7 @@
   - 7d2bd997 docs(cto): LG-058 走查P1技术门裁定卷——定谳必修+案一(nav移入app-layout,CSS/JS零改)案二否决(conn-settings入flex流实锚)+双断言门禁(结构+几何menuRect.right<=mainRect.left)+并裁件②Registry期待值活读contract源/件③知情附清空语义技术注记
   - 958e8c6f docs(cos): LG-058 STE 卷落+P1 回炉基线五面入账（BOD 11:2x 同步令）——树单验收现势段/账本 N2-N5 回炉中/大表行 22/候办区两笔（STE 观察项候 CPO+TriRMC 维护波 owner 候定）/升版触发条件更新
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:40 +08：自上次进度提交 f13d4e22 后新增 2 条 commit：
+  - c252c1f2 docs(ste): LG-058 P1 单点复验读数落卷——五项四过一非阻塞(nav 移入实锚+真浏览器几何门 420<=434 过+活体左右分栏截图+默认态零涟漪)+切态路径等价性+FSD 桩/真两层合拢认领+FSD 信时序倒挂附注;复验结论 PASS 候 v6 流水线读数回填毕回执 BOD 终裁
+  - 441fac08 docs(fsd): LG-058 P1 回炉毕回写——nav 移入+双断言门禁 45757bd 平 bare+TriRMC 99806cf 平 bare，候 STE 单点复验
+- registry：v2.1；今日 registry 提交无变化
