@@ -25,13 +25,17 @@
 2. 停 20140（§二正途）→ channel.cmd 冷启（10-04 03:07 同款 Start-Process 形）
 3. **正形断言全绿**：新 pid **31800**（10:05:19，jedih 身份）；healthz **jobs=7**（错位形时=0）；pidfile 自注册=31800；channel.log/cron.db-wal/config-cache/cron.db.json（3940→3943B）全部 10:05 恢复写入
 4. **补跑轮 1 落定**：probe log `2026-10-06T02:05:21Z` round start（pid 14084）→ `02:06:25Z` 全量 ledger 读数（LG-058 N2-N5 各 ok、duty-cos silent ok）。轮耗时 64s=账本 4 条 open 走逐条扫描分支（10-05 的 3ms=空账本秒退，形态差解释闭合）
-5. 轮 2 候 10:20±（15min 节奏）落定后续报——BOD 令「连续两轮」断言的另一半
+5. **轮 2 落定=两轮断言闭合**：`02:15:01Z` round start（pid 35660）→ `02:16:22Z` 全量读数（lg058 N2-N5 ok 族）；hub-silent-detect last=02:15:01Z status=ok、**next=02:30:00Z 恢复 */15 标准网格**。间隔勘准：轮 1→轮 2 实为 10min（补跑轮不在网格上，轮 2 回整刻钟），此后标准 15min 节奏
+6. **全 7 job 复活推进读数（10:17 API 全表）**：hub-silent-detect/l3-remind/tree-node-patrol/ledger-watchlist-patrol 全 idle+last 今日推进+status ok；plane-shift-local-align 周节奏 last=10-04 next=10-11 正常；joint-review-demand-pool=disabled 本态
+7. **观察项（不阻塞毕认定）**：trimodel-l2-scan（every 2min）补跑首轮 state=running 12min+ 未归（last 冻 10-05 09:42、triggered 5662=runCount 5661+1=首轮在跑实锚）——历史节奏秒-分钟级；候 10:30 轮 3 窗复验，若仍冻升级疑点（候 CTO/FSD：l2-scan 挂轮+running 状态下 next 不推进的引擎行为）
 
 ## 四、挂账移交项（候 CTO/FSD）
 
 1. **缺陷三锚**：①`isProcessAlive` 吞 EPERM（pidfile.ts）②`gracefulShutdown` 不校状态码（cli.ts L380）③stop 假成功链（双缺陷叠加，对提权 daemon 完全失效）
 2. **20140 拉起者考古未结**：提权身份（EPERM+Session 0）+父链 svchost→cmd(已退)→node+19:51:43 born；watchdog 已排除（Interactive 无人登录没跑）；候选=某 SYSTEM 计划任务/服务（Get-Service tri 族零命中，任务全名单仅 5 watchdog 族已查 Principal 唯此三者未深查）。**复发条件=下次机器重启无人登录窗**——根治候移交
 3. 20140 store 落点未定（systemprofile 三处不存在；GET=[]+POST 绑定错的库在哪未锚）——随考古并案
+4. **19:50 重启性质（BOD 考古补件）**：System 事件 1074 @ 19:49:26——`MoNotificationUx.exe` 代表 jedih 启动重启，原因「操作系统: Service Pack (计划内)」原因代码 0x80020010 = **Windows 更新计划内重启**（更新服务发起，非人工关机非断电异常）。复发概率面：Windows 更新节奏（月度 Patch Tuesday 为主+偶发增量），每次更新重启落在无人登录窗即重演「重启后拉起生态不齐」风险窗（20140 拉起者根治候件并此）
+5. 轮 2 时点勘准：schedule=cron `*/15 * * * *`（对齐整刻钟）→ nextRunAt=10:15:00+08（非 10:20）；l2-scan（every 2min）补跑首轮 state=running 未归观察项随轮 2 复验
 
 ## 五、使用依据
 
