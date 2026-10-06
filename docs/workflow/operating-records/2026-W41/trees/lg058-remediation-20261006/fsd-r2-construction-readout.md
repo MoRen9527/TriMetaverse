@@ -117,5 +117,9 @@
 - 推送: sg bare ls-remote 证实 dev=5188e7f8d18dc02f2c5325ece0b23503db259235（75986ad..5188e7f）
 - 流水线备便: `stage1-r5-sg-build.sh`（sg sha256 cf628659…8d39，锚=五件特征 12 条+r4 回归 8 条+三轮/二轮回归 4 条）+`stage2-r5-rhy-execute.sh`（R-HY sha256 69e6a6fb…f1b9，GO-r5.flag 停等+回滚 bak-pre-lg058r5）双端已部署 bash -n 过；候 BOD GO-r5 硬门签发后开跑
 - 时窗: 施工毕 16:08Z（00:08+08，10-07 凌晨）；「是否可入部署窗」如实两案候裁（①顺延 10-07 晚窗②特批即时走 r4 裁 b 同款三护栏）
+- **GO-r5 签发（BOD 00:12 裁 b 即时走·三护栏全程不省·自挂 flag 授权）→全链毕**: Stage1-r5 绿 16:13:02Z（五件特征 12 锚+回归 12 锚全过）；包 sha256 **61fba299…0a0a** 传输腿 sha256 -c OK；环A 备份锚毕 16:13:26Z（dist bak=/srv/fleet/TriModel/dist.bak-pre-lg058r5-20261006T161325Z，server.js 指纹 a6af0b9b…f50=**四轮同指纹**纯前端零变+cfg tar c5508d57…684）；硬门① 报备 16:13:40Z（msg 8eb68764）→自挂 GO-r5.flag→重入→**STAGE2-R5-DONE 16:14:00Z**（deploy-sha 5188e7f 断言 ok→active 16:13:59Z→/health ok→环C 六项全 PASS）
+- **双实例重放勘误（如实）**: GO 停等设计下首实例（16:13:25Z 启动，停等窗 120s 未超时）与我方 16:13:5xZ 重入实例**并存竞争**——首实例 16:14:01Z 读到 flag 续环二次部署（同包 5188e7f 幂等重放：deploy-sha 同值断言过/环B active 16:14:04Z/环C 复验全绿 16:14:05Z/二次 DONE）；trimodel 闪断一次（~5s，16:14:01-04Z 窗）；根因=本次报备+自挂快于停等窗（r4 报备时首实例已 HOLD 退出故无双跑）；终态三服务 active+deploy-sha 5188e7f 正确；候记 GO 停等门纪律条（自挂触发前先查停等实例存活，正形=轮询 HOLD/done 后再触发）
+- **活体值面终刀 16:16:22Z**（/ui 独立落盘 grep 133862B+**拉取面 HTTP 200 断言**）: r5 五件锚 PASS×9（API Key/认证字段/API 格式/keyref/eye/1M/AUTH_TOKEN/API_KEY/警示文案）+四选项文案 PASS+r4 回归 2 锚+三轮四签对等 PASS×4+menu-full 保持+河源 0 残留；GO flag/b64/stage-r5 中间物双机清毕（in 包+备份锚留审计）
+- 毕报两刻制: 第①刻部署毕 16:14:05Z（环C 读数随报）；第②刻活体终刀 16:16:22Z——候 BOD playwright 即时复验（护栏②）
 - 三机现势实勘: sg bare dev=0359b89（ls-remote 值面）/R-HY 在役 deploy-sha=45757bd
 - 纪律: 硬门①报备义务（一轮 COO 令原文）/D-17 本机传输腿/B64 内联 aegis 对症/值面三断言（截断伪影与键值掩码面零触碰——本卷零 token 值出机）
