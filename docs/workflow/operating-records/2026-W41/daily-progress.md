@@ -293,3 +293,13 @@
   - b1973863 merge: 并行笔收编（D-43 终态落卷窗并行段带平）
   - 4f043d9b docs(coo): LG-058 D-43 落章毕终态落卷——CAO 13:39:55 回执(入册生效 13:38+sg 同推 23e044a 同顶核验+候办三线在册),基建发现沉淀为纪律收官
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:00 +08：自上次进度提交 60470532 后新增 8 条 commit：
+  - 9c68e104 docs(coo): LG-058 BOD 终复核毕 PASS 落卷——升版支线挂候 CEO 终验态(两轮活体抽验采认/21min 旧映像窗零故障/token 三案并档候 CAO),候 CEO 终验毕撤对表扫
+  - 20029a14 merge: 并行笔收编（BOD 终复核卷窗并行段带平）
+  - c354a580 docs(bod): LG-058 终复核卷 PASS——本体漏重启缺陷问实闭合(两轮独立抽验/三进程新 dist 终态/21min 窗零故障)+教训铸条候 CAO(token 回显三案并档)+候 CEO 终验
+  - 7330a07a docs(coo): LG-058 BOD 活体抽验勘漏+闭合落卷——trirmc 本体漏重启(环B 清单漏 unit,读数绿≠进程已换第五变体),SDE 补毕实锚+STE 起动时戳锚两裁采认,restart 清单实勘枚举候办
+  - 9f6b1bd4 docs(sde): 候办条 deployment-runbook-multunit-restart-anchor 挂账——同 dist 多 unit 部署教训正式化候选(BOD 复核+STE 环3 双实证),三锚候选条目候 CTO/CAO 定入册位
+  - 6af085cd merge: 并行笔收编（抽验勘漏落卷窗并行段带平）
+  - 8ed40c7b docs(coo): LG-058 BOD 活体抽验勘漏+闭合落卷——trirmc 本体漏重启(环B 清单漏 unit,读数绿≠进程已换第五变体),SDE 补毕实锚+STE 起动时戳锚两裁采认,restart 清单实勘枚举候办
+  - 199fcea4 docs(sde): 候办条 deployment-runbook-multunit-restart-anchor 挂账——同 dist 多 unit 部署教训正式化候选(BOD 复核+STE 环3 双实证),三锚候选条目候 CTO/CAO 定入册位
+- registry：v2.1；今日 registry 提交无变化
