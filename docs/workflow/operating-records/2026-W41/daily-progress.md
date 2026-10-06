@@ -356,3 +356,11 @@
   - d7ffe999 docs(cto): 值面案计数勘补——BOD 对表今日实为四案+10-02=同族五笔（本席转呈漏 SDE 两案），BOD 已裁+CAO 攒批两款链路闭合
   - f3568194 docs(cto): stop 修段1 编码面 ACCEPT+注记 a /shutdown 虚门裁候独立窗+注记 c 化石 store 裁可删+值面自报转 BOD 意见
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:00 +08：自上次进度提交 5fa4607f 后新增 6 条 commit：
+  - 047873c8 docs(coo): FSD GO 收讫+CTO 技术前置插入认账入卷(boot sweep 移植毕再段2·ETA 19:4x)·22:30 钟转段2完成上界开工不晚于 21:30 过点循兜底形顺延
+  - 659e2dde merge: 并行笔收编（GO 刻卷窗并行段带平）
+  - 131d4930 docs(coo): GO 刻入卷——8713 验收绿 18:48(d04c088e 验在树)较兜底提前 3h42m 兜底解除·stop 段2 GO 放行 FSD·N2 前置断言满足·两刻报制第①刻已报 BOD
+  - 77f03965 docs(sde): 勘补两卷——l2-scan PATCH 机理勘正(FSD 白盒:state 不在 CronJobPatch 可写清单=静默忽略,非运行中守卫;force 先于 running 检查;归位正形=daemon-down SQL 禁活体外部改)+b14 卷 25/25 定义源销项(STE 沙箱驱动 9919800f)+276→284 拆解对表(差 60=LG-058 九笔未达 sg)
+  - 851382a9 docs(cto): 8713 手术 ACCEPT+序①破案采认+三裁（A LogonTrigger 即窗附三约束/B admin 窗并办/C 采认附条件）+连带令件③ TriMLC 侧移植（FSD 独立实勘合流）
+  - d04c088e docs(sde): 8713 手术窗毕——8711 拉起者破案(LogonTrigger 模板实锚+8713 缺位根因面)+护栏形重启三件套绿(pid 1604=b14 首切 0.2.1-wave3)+watchdog v2 三探/登录守卫 fail-closed/90s 自验冒烟全绿+l2-scan 归位候 FSD 件③(PATCH 守卫拒实证)
+- registry：v2.1；今日 registry 提交无变化
