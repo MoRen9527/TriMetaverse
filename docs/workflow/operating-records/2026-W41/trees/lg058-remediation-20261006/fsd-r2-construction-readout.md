@@ -89,5 +89,16 @@
 - **BOD 快复验 PASS 22:03（三轮闭环）**: playwright reload 强刷后渲染面逐一实锚——打回单点「R 面 · 服务域 TriRMC · R-HY 8712」在位✓+四签端口对等 8712/8713/8712/8711 逐卡在场✓+截图存证（lg058r3b-rmc-card-header-verify.png）；候 CEO 亲测归真终态。首验两次零命中=浏览器缓存旧 bundle（r3 形）非部署面（BOD 观察注记如实转记）
 - **候办两条（BOD 候办不强令，本席记挂）**: ①index.html 加 no-cache 头 ②bundle 文件名 content-hash 核验项——涉服务响应头与构建管线形态，归 CTO lane 裁后再动（模块边界与技术栈不经裁不擅动）；本席登记不擅启
 - 一轮执行卷: rhy-upgrade-pipeline-20261006.md（形态/硬门/教训全供）
+
+## 九、r4 施工段（连接配置「添加项」预置项名改造·表单化，CEO 22:41 批+BOD 裁 b 今夜续走）
+
+- 令面链: BOD 22:21 r4 单→22:25 首暂停（CEO 勘正 settings.json 面）→22:29 重拟 15 项→22:33 追加 crossSessionInbound=16 项→22:37 二暂停（CEO 22:36 令改 CC Switch「编辑供应商」表单化形态，16 项清单仍有效）→22:41 CEO 批 v2 表单化「照这个派工」→22:43 BOD 裁 b 特批今夜续走+三护栏（①硬门①全程不省②毕报候 BOD 即时复验③复验异常即时回滚不过夜，回滚判据=四签/表单/预览任一渲染面异常即滚）
+- 代码: **ce153a9→75986ad**（ui/index.html+test/ui-fourplane.test.ts 两文件单包）；表单化布局: 主平铺 2 件（请求地址 ANTHROPIC_BASE_URL+主模型 ANTHROPIC_MODEL，中文标签+键名小字注）/高级选项▼折叠内三块（模型映射表 4 行×映射模型+展示名 8 键+行为开关组 6 项含 crossSessionInbound+自定义项折叠兜底）/配置预览折叠区实时 JSON 预览（input 事件委托→connRefreshPreview→所见即落盘）；密钥禁入（AUTH_TOKEN/API_KEY 结构性零出现，域卡自管边界照旧）；四域统一同组件，各域值独立；存量分流（CONN_FORM_KEYS 内键填表单、外键走既有自由行零冲突）；保存链零变更（隐藏 data-cd-key 承键名，connCollectItems 内部升级位置配对+表单行空值=未设）
+- 自测门: UI 四门 **51/51**（r3 报 52 系含 skip 口径差，如实注明）；全量 **346/332 pass / 0 fail / 14 skip** 零失败零归因；lint errors 13=基线（5 处 no-non-null-assertion+1 处 prefer-const 新引入即修，stash 对照法）；build:verify 绿
+- 流水线 r4: Stage1-r4 绿 15:10:28Z（值面锚: 表单 8 特征+密钥两键零出现+三轮回归）；包 sha256 **7360ed48…2712**；传输腿 sg→本机→R-HY sha256 -c **OK**；Stage2 环A 锚毕 15:11:06Z（dist bak=/srv/fleet/TriModel/dist.bak-pre-lg058r4-20261006T151106Z，server.js 指纹 a6af0b9b…f50=与 r2/r3 同指纹·纯前端零变实证+cfg tar 5c40ffbb…9b2）→**HOLD 安全停 15:13:06Z（exit 42 设计内）**→硬门① 报备 15:13Z 双发（COO bc464814/BOD f208cfc3），候 GO-r4
+- 触发形勘误候记（B64 heredoc 经 ssh 变形）: 首触发用「双引号 ssh+内嵌 heredoc+$(cat 展开)」形——远端 /tmp/s1r4.b64 落成 4184B **明文**（非 base64 5580B），base64 -d 解不出→管道 bash 收空→静默未跑（TRIGGERED 回显但 log 零建立）；正形=**本地管道直灌**（`cat local.b64 | ssh 'cat > remote.b64'` 传后验 wc -c+解码 head+bash -n 三验，再单独 ssh 触发 nohup）；根因未深挖（heredoc+ssh 参数化形态在链上被隐式变形，截断伪影家族「中间层隐式变形+静默失败」同族候记）
+- **GO-r4 批（BOD 23:13+08 单批）→续环一次绿**: 15:14:26Z 重入→环A skip 复用 r4 备份锚→GO flag 读入→环B untar/stop/cp/deploy-sha 断言 ok（75986ad）→**trimodel active 15:14:29Z**→/health ok 15:14:30Z→环C 全绿 15:14:31Z（文件式零管道，r2 教训持续生效）→**STAGE2-R4-DONE**；三服务终态 active（trimodel/trirmc-mc/trirmc），TriRMC 双 unit 零触碰零重启
+- **活体值面终刀 15:14:54Z**（/ui 独立落盘 grep，128388B）: r4 表单 8 锚 PASS×8（请求地址/主模型/高级选项/模型映射表/行为开关/配置预览/BASE_URL/crossSessionInbound）+三轮四签端口对等 PASS×4（M 面 · 服务域/R-HY 8712/本机 8713/本机 8711）+menu-full 保持 PASS+密钥两键 0 出现+河源 0 残留；GO flag/HOLD/b64/stage-r4 中间物双机清毕（in 包+备份锚留审计）
+- 部署毕时点 23:14+08；第①刻毕报候发双（COO+BOD），BOD 护栏② 即时复验在挂；回滚锚毕（护栏③ 备而未用）
 - 三机现势实勘: sg bare dev=0359b89（ls-remote 值面）/R-HY 在役 deploy-sha=45757bd
 - 纪律: 硬门①报备义务（一轮 COO 令原文）/D-17 本机传输腿/B64 内联 aegis 对症/值面三断言（截断伪影与键值掩码面零触碰——本卷零 token 值出机）
