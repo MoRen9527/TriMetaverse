@@ -51,7 +51,7 @@
     "owner": "FSD",
     "priority": "默认（LG-058 整改波录入序 2）",
     "status": "open",
-    "note": "R 面双卡功能补齐（打回 #5+#6：TriRMC·河源/TriRLC·本机 模板切换+备份回滚）。代码面收口 08:15（进度超前）；现势=回炉中（11:2x BOD 基线同步）：STE 走查卷 df1ab55d 总裁 CONDITIONAL_FAIL→BOD 裁 P1 必修回炉（menu-full 布局 DOM 宿主错位）FSD 回炉毕（45757bd 平 bare）·CTO 技术门 APPROVE 采认（11:56 BOD 终裁准升版）·升版链闭环毕：五环全 DEPLOY 态（TriModel 45757bd+TriRMC a02d89b 在役）+环 B 勘误补重启闭合+BOD 终复核 13:53 PASS（卷 c354a580）→候 CEO 终验；流水线正式读数候回炉毕（边界#7 禁本地跑）+R 面切换→备份→回滚演练全程无人工补手。M 面两卡暂缓候 CEO 后令解锁（03:10 改令）；测试顺序 CEO 钉死 R 面先行。"
+    "note": "R 面双卡功能补齐（打回 #5+#6：TriRMC·河源/TriRLC·本机 模板切换+备份回滚）。代码面收口 08:15（进度超前）；现势=回炉中（11:2x BOD 基线同步）：STE 走查卷 df1ab55d 总裁 CONDITIONAL_FAIL→BOD 裁 P1 必修回炉（menu-full 布局 DOM 宿主错位）FSD 回炉毕（45757bd 平 bare）·CTO 技术门 APPROVE 采认（11:56 BOD 终裁准升版）·升版链闭环毕：五环全 DEPLOY 态（TriModel 45757bd+TriRMC a02d89b 在役）+环 B 勘误补重启闭合+BOD 终复核 13:53 PASS（卷 c354a580）→候 CEO 终验；流水线正式读数候回炉毕（边界#7 禁本地跑）+R 面切换→备份→回滚演练全程无人工补手。M 面两卡暂缓候 CEO 后令解锁（03:10 改令）；测试顺序 CEO 钉死 R 面先行。【21:03 刷注·BOD 转达】整改波打回首球闭环：20:29 打回件（左右布局）FSD 二轮 0359b89 上役→BOD playwright 独立复验 PASS 20:59→CEO 亲测 pass 21:03:22（FSD 卷 ebeb3c2a·BOD 发送账 #420-421）；行态维持毕候验（九条面余八条+收尾两件仍候 CEO·M 面两卡解锁仍候令）。"
   },
   {
     "id": "lg058-N3-config-source-binary",
