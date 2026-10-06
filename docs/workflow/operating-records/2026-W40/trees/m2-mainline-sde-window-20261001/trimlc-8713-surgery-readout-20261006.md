@@ -56,8 +56,10 @@
 
 - patch 前值面全档：state=running/nextRunAt=**2026-10-05T09:44Z（过期 25h）**/lastRunAt=09:42Z lastRunStatus=**ok**/errorCount=17/runCount=5661/schedule=every 2min
 - **因果链闭环**：10-05 17:44 轮进 running（updatedAt 实锚）→ 8713 于 17:47 前窗死亡（watchdog DOWN 行实证窗）→ running 态 store 持久 → 10:05/18:34 两轮 boot 均读回卡态（boot 清扫=FSD 件③未施工，方案卷「重启即清」预期**不成立**，如实勘正）
-- **PATCH state=idle 实证被拒**：PATCH HTTP 200 ok:true 但响应体+GET 均 state=running（重放取证一致）——**引擎运行中守卫拒改态，返回 ok+原态**；无 catch-up 触发（updatedAt 冻结 patch 时刻、零轮转写、无 spawn 子进程）
-- **外部零归位通道定谳**：PATCH 守卫拒+boot 不清+store 持久 → l2-scan 归位候 FSD 件③根治（boot 清扫即根治此态，本卷卡态=件③施工验收天然样例）；不阻本窗硬门（调度推进面实证见 §五）
+- **PATCH state=idle 实证无效**：PATCH HTTP 200 ok:true 但响应体+GET 均 state=running（重放取证一致）；无 catch-up 触发（updatedAt 冻结 patch 时刻、零轮转写、无 spawn 子进程）
+- **机理勘正（FSD 白盒根因 18:50 到达，勘补留痕）**：本席初判「引擎运行中守卫拒改态」**机理归因有误**——真因=**state 根本不在 CronJobPatch 可写清单**（types.ts L55 起：name/schedule/systemPrompt/command/roleId/enabled 等，state 不在），载荷 state 键被静默忽略→200+原态回显（「200 接受」=处理器 ok:true 非状态变更）。force 亦不通：timer.ts runJobNow L366 running 检查**先于** force 判定（force 只豁免 enabled 检查）。state=running 时 API 零写路径
+- **归位正形（FSD 供）**：daemon-down 窗直接 SQL——stop → `UPDATE cron_jobs SET state='idle' WHERE id='<l2-scan-id>'`（sqlite3 CLI 正常处理 WAL）→ 冷启（boot loadAll 全新读→idle）。**禁** daemon 活着时外部 SQL 改（内存缓存看不到：WAL 写不 bump 主 db mtime+loadAll no-op——FSD 10-06 TriRLC 白盒同签名实证）；备选 DELETE+重建不推荐（级联删 execution_log+换 id）
+- **外部零归位通道定谳（维持）**：API 零写路径+boot 不清+store 持久 → l2-scan 归位候 FSD 件③根治（boot 清扫）或下个 8713 合法重启窗并批 SQL 归位（本卷卡态=两路天然验收样例）；不阻本窗硬门（调度推进面实证见 §五）；**不再连轴重启**（b14 首切观察窗稳定性读数优先，本席裁量）
 - hub-silent-detect 排除卡嫌：updatedAt 18:33:42=旧进程死前正常归位（短周期 job 抽样恰逢执行中）
 
 ### 2.4 b14 首切实锚（CTO 观察锚①）
@@ -114,7 +116,7 @@ FSD 18:33:25 落新版（TRILC_DATA_DIR 字面化+USERPROFILE pin，bak-20261006
 
 1. watchdog 任务 10-05 19:50 后停摆根因候 admin 窗（TaskScheduler Operational log 未启用=根堵点；启用+复验候 admin 窗，涉 UAC 交互需人在位）
 2. **TriMLC Daemon LogonTrigger 任务缺失**（对照 TriRLC 模板实证）=候批新件：登录窗自拉支柱补齐——涉新增拉起面（D-17 敏感面），**候 CTO 裁**，本席不擅动
-3. l2-scan 归位候 FSD 件③；件③施工时本卷 §二.3 卡态=验收样例
+3. l2-scan 归位候 FSD 件③或下个 8713 合法重启窗并批 SQL 归位（正形见 §二.3 勘补段）；件③施工时本卷 §二.3 卡态=验收样例；TriMLC boot 清扫家族性缺失 FSD 已报 CTO 候排（TriRLC 侧 resetStaleRunningJobs 03b3220 今日已落可对抄）
 4. cron PATCH 响应体含 command 字段全量回显（API 面改进候 FSD）；本窗两笔命令行头 50 字符入 transcript（低敏非钥值，如实注记）
 5. 序①A systemprofile 提权验证候 admin 窗（与观察项 1 同窗并办）
 6. 8711 面零触碰红线全程遵守（TriRLC-Watchdog 未 Disable、8711 进程/pidfile/脚本零动作，只读勘验）
