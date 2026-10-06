@@ -233,3 +233,14 @@
   - c252c1f2 docs(ste): LG-058 P1 单点复验读数落卷——五项四过一非阻塞(nav 移入实锚+真浏览器几何门 420<=434 过+活体左右分栏截图+默认态零涟漪)+切态路径等价性+FSD 桩/真两层合拢认领+FSD 信时序倒挂附注;复验结论 PASS 候 v6 流水线读数回填毕回执 BOD 终裁
   - 441fac08 docs(fsd): LG-058 P1 回炉毕回写——nav 移入+双断言门禁 45757bd 平 bare+TriRMC 99806cf 平 bare，候 STE 单点复验
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 4e3bdad8 后新增 9 条 commit：
+  - 1060ae2e docs(cto): LG-064 终判卷增终读数对表段——STE 1ed31e66 PASS 框架分歧留痕(STALE族残留真告警vs本席假阳性定性:主张异常不存在=非真实出闸,有用≠为真)+两读数并存效力注记+其余面对表一致认收
+  - 3a3d4be8 docs(cos): LG-064 销账（主锚终判卷 8343c810·走销 COS）+LG-058 P1 终裁准升版基线三面随动——BOD 11:56 流转令；FSD P1 回炉毕 441fac08 并行笔收编不覆
+  - 1ed31e66 docs(ste): LG-064 窗毕终读数落卷——三面纯日志读数判读 PASS(窗内非真实异常告警=0)
+  - 8343c810 docs(cto): LG-064 24h窗终判——零假阳性不成立(严格口径,破口=窗尾ste流水线一次性job STALE 2条/1族,80=78真+2假)+验收建议有条件通过+裁请三终裁(korw入根治窗收口断言/STALE豁免裁修归维护波附终态成功红线/聚合去重同批)+并案LG-058 P1回炉45757bd技术门APPROVE
+  - b50c1a00 merge: 并行笔收编（COS LG-064 大表勘注笔 × COO 补跑令笔+watcher 11:40）
+  - 836b46ba docs(cos): LG-064 大表行 27 勘注——读数毕与 STE 短报链未达两事不矛盾（COO 11:53 补跑令在途·候活收口即接）
+  - 712deba5 merge: 并行笔收编（COO 补跑令笔 × watcher 11:40 巡检笔）
+  - 7e078abb docs(coo): workbench 11:53 笔——LG-064 终读数补跑令发（盯防 cron 触发，m-ste 在册 busy 活，轮形不变+不抢车道款，COS 知会同发）
+  - 5455ddca docs(cos): LG-064 24h 读数毕+收口候办两笔入账（BOD 11:52 令）——大表行 27/候办区+账本两笔 open（cron 停摆归今晚 8713 窗 SDE/l2 去重归 CTO 维护波）+毕即 delete 纪律新立
+- registry：v2.1；今日 registry 提交无变化
