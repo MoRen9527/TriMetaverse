@@ -493,3 +493,7 @@
   - 808a0a32 docs(coo): 值席树§四 r5b部署毕同步——防双实例正形首用6s安全停+十锚PASS+守卫面关闭,LG-058六轮全绿候CEO深验
   - 99de9a47 docs(fsd): LG-058 r5b 守卫修复执行卷+双脚本落树——73ca1cc 全链毕候BOD复验
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:00 +08：自上次进度提交 8a7745ac 后新增 2 条 commit：
+  - 6b073293 docs(ste): r5 卷终态——r5b复测三形态200全绿+DeepSeek双unit落盘v4+UI已落生效+env钉定语义勘验修正+双unit回执竞争现势入卷
+  - 72e77ac4 docs(fsd): LG-058 r5b BOD护栏②复验四点PASS关账锚——r5b面闭
+- registry：v2.1；今日 registry 提交无变化
