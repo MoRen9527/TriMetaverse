@@ -244,3 +244,9 @@
   - 7e078abb docs(coo): workbench 11:53 笔——LG-064 终读数补跑令发（盯防 cron 触发，m-ste 在册 busy 活，轮形不变+不抢车道款，COS 知会同发）
   - 5455ddca docs(cos): LG-064 24h 读数毕+收口候办两笔入账（BOD 11:52 令）——大表行 27/候办区+账本两笔 open（cron 停摆归今晚 8713 窗 SDE/l2 去重归 CTO 维护波）+毕即 delete 纪律新立
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 bdee8ccc 后新增 4 条 commit：
+  - 89d3a2e0 docs(ste): LG-058 v6b 终读数回填——双新顶正式读数判绿放行闸过
+  - 6f3cd884 merge: 并行笔收编（COO 闸锚刷新 v6b 12:05 笔）
+  - 18eced52 docs(coo): LG-058 升版闸锚刷新 v6→v6b——v6 6c738670 03:34:33Z 执行即崩零读数(STE 勘误自领),v6b d967e1e9 12:03 running;触发锚=v6b 全量读数绿+清场 7 笔毕→STE 回执本席→本席即触;树单 §二窗行+验收现势双笔+workbench 12:05 笔
+  - f70dac7d docs(cto): LG-064 终判对表段增补——COO 11:57 复核维持PASS并入(归因分野成形:检测器语义面FSD/CTO vs 运营操作面STE/COO,BOD材料齐)+维护波扩围注记(终态语义缺口双探针共存l2.ps1+sg侧heartbeat-check,首报差15min认收)
+- registry：v2.1；今日 registry 提交无变化
