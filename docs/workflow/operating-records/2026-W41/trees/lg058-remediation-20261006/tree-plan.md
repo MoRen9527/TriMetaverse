@@ -72,7 +72,7 @@
 ### 验收现势（滚动；COS 入账 11:2x 照 BOD 基线同步令）
 
 - **STE 走查卷落 df1ab55d**：总裁 CONDITIONAL_FAIL——TriModel 全量 330/316 pass 全绿+TriRMC 472/462 十 fail 四族归因零落五节点对象域。
-- **BOD 复验毕裁 P1 必修回炉**：menu-full 布局 DOM 宿主错位，FSD 即启回炉（口径候 CTO 快核；TriRMC 99806cf 平 bare 并行）。
+- **BOD 复验毕裁 P1 必修回炉**：menu-full 布局 DOM 宿主错位，FSD 施工中（口径定谳 11:22·CTO 案一：nav 移入容器+双断言门禁；TriRMC 99806cf 平 bare 并行）。
 - **升版触发条件更新**：原「STE 卷+BOD 复验毕触发」作废→**新条件=P1 修复毕+STE 单点复验过+BOD 终裁**；午后窗预期顺延，幅度候 FSD 回执。
 - 账本对表=BOD 裁后 COS 笔（in-progress.json N2/N5 现势回炉中）；大表 W41 行随刷。
 

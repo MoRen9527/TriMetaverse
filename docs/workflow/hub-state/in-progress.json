@@ -51,7 +51,7 @@
   "owner": "FSD",
   "priority": "默认（LG-058 整改波录入序 2）",
   "status": "open",
-  "note": "R 面双卡功能补齐（打回 #5+#6：TriRMC·河源/TriRLC·本机 模板切换+备份回滚）。代码面收口 08:15（进度超前）；现势=回炉中（11:2x BOD 基线同步）：STE 走查卷 df1ab55d 总裁 CONDITIONAL_FAIL→BOD 裁 P1 必修回炉（menu-full 布局 DOM 宿主错位）FSD 即启回炉口径候 CTO 快核；流水线正式读数候回炉毕（边界#7 禁本地跑）+R 面切换→备份→回滚演练全程无人工补手。M 面两卡暂缓候 CEO 后令解锁（03:10 改令）；测试顺序 CEO 钉死 R 面先行。"
+  "note": "R 面双卡功能补齐（打回 #5+#6：TriRMC·河源/TriRLC·本机 模板切换+备份回滚）。代码面收口 08:15（进度超前）；现势=回炉中（11:2x BOD 基线同步）：STE 走查卷 df1ab55d 总裁 CONDITIONAL_FAIL→BOD 裁 P1 必修回炉（menu-full 布局 DOM 宿主错位）FSD 即启回炉口径定谳（CTO 案一：nav 移入容器+双断言门禁）FSD 施工中；流水线正式读数候回炉毕（边界#7 禁本地跑）+R 面切换→备份→回滚演练全程无人工补手。M 面两卡暂缓候 CEO 后令解锁（03:10 改令）；测试顺序 CEO 钉死 R 面先行。"
  },
  {
   "id": "lg058-N3-config-source-binary",
