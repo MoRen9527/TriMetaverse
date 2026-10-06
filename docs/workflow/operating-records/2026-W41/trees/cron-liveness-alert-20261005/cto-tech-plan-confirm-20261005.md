@@ -89,6 +89,18 @@
 - **演练纪律补强确认**：测试 job 无 command LLM 形 ~65 次模型调用成本泄漏（FSD 如实记账 ✓）——「演练测试 job 一律带 command 形」进规则文档 §六.7，入册候 CAO 候办。
 - 走查重点建议（对 STE/BOD）：矩阵真实性抽验（TriMMC 侧 message_id 对表：ntf-muup44srtrcrbs/ntf-muuowofa66paor/ntf-muupa76l8x3rge）+02:41 污染告警闭环定性复认+注入面全撤复核。
 
+## 八、8713 停摆案三件裁决+监控第三次真实捕获（2026-10-06 10:12，BOD 三件候裁）
+
+- **裁决①根治窗**：并今晚 b14 晚窗时段、SDE 独立工作包（b14 主活=FSD 在 TriRLC 仓，零冲突）。序=考古实锚今晚落卷→修复方案一页报本席核→核毕施工；毕不了顺延明晚独立小窗。修复红线两条：**宁可不拉，不可拉错**（无人登录窗保不了 jedih 正形拉起时宁可 8713 缺位——L1 在位必告——绝不留 store-blind 假活：healthz 绿骗过一切活体检查系本案最毒处）；禁为修案新引入 SYSTEM/提权上下文拉起面（再造同款错位）。
+- **考古扩围（本席独立读 l1.log 新实锚，SDE c652edfe 卷未含）**：10-05 09:40:02Z OK（listener=13756 正形）→09:50:02Z listener=**23980**（pidfile 仍 13756，未写=错位形）——错位拉起发生于 17:43-17:50 本地窗、**无重启**，比 20140 早 2 小时。复发条件据此从「重启无人登录窗」放宽为「daemon 死亡窗即可能触发」；23980 拉起上下文/父链/身份已并案 SDE 考古（另并 8711 同族盘点、20140 store 落点）。
+- **裁决②stop 假成功双缺陷修窗**（三锚=isProcessAlive 吞 EPERM / gracefulShutdown 不校状态码 / 叠加链）：独立小变更窗**不搭 b14 车**（b14 带 CORE_VERSION bump 是发布链，行为修复混入搅乱回滚锚）；FSD N5 毕后自择时点报备；独立 commit+独立门跑；修法 fail-loud（EPERM=探测失败非死，非 2xx 必报错回退人工路径）；部署自举险注记=修毕重启在役 8711 仍用旧 stop，stop 后必验端口监听消失再 start。
+- **连带（TriMLC 面维护批增补）**：TriMLC-Watchdog 判活口径缺 pidfile/store 校验（port-alive 即判活，被 20140 healthz 绿骗过 16 小时未纠）——判活补探针与 degraded P2/executor 家族勘同批。
+- **监控第三次真实捕获实证（本席日志面确认轮先行版）**：17:44 停摆→09:55Z 首条 ALERT-SENT，16 小时 **67 条全 200 抵值席链、零漏轮、维度全对**（pidfile-mismatch+5 job stale+watchdog Disabled 均实锚），全部真实异常=合法告警非假阳性。**但升级实际靠 CEO 09:27 活性质询——告警到达≠被处理，值席认领环节=现役最弱环**；升级 ladder（N 轮未认领→升 BOD 通道+severity 递增）候 BOD/COO 裁流程面，技术面（重发文本带 UNACKED 轮数）本席候办。
+- 轮 2 观察：probe 02:15Z 轮 6 job 已复、唯 cron_muh6shv0_korw 仍 stale（疑=SDE 卷 §四.5 l2-scan 首轮 running 未归同 job）——候 SDE 轮 2 归因，job 级 hang 与 daemon 级缺陷分案勿混。
+- 令锚：BOD b674e8c7 / SDE 555dd60c / FSD 079e52fe（2026-10-06 10:1x）；24h 窗正式终判 03:45Z（11:45 本地）后本席出。
+- **BOD ladder 裁准（10:1x 回令，四款）**：a. 触发=同一告警源连续 3 轮（15min 节奏即 45 分钟）未认领→升 BOD 直通道；b. severity 前缀随 UNACKED 轮数递增+重发文本带 UNACKED 轮数（技术面=本席候办，**窗毕后施工**防扰动观察窗）；c. 认领凭证=处置留痕（「已读」不算——硬门签认必落卷同族教训）；d. 流程正身入 COS 值守规+COO 树单合同面同批；今晨催办梯与告警 ladder 合成值守双梯，梯尾归 BOD。LG-064 三次真实捕获零假阳性记正例入观察口径。
+- **SDE 考古咬合（10:19 回执）**：watchdog.log **17:47:05 DOWN→17:52:03 recovered 正覆盖 23980 出生窗**——23980 高嫌疑=watchdog revive 产物；若坐实则错位成因不在身份而在 watchdog revive 的调用形态（watchdog.ps1=破案钥匙，SDE 本窗即读）。推论增量：13756 系 10-04 03:07 channel.cmd 形手启（SDE 卷 §三.2 旁证）——**watchdog revive 可能从未产出过正形 daemon**，修法方向=revive 路径改 proven channel.cmd 形（或等效非提权 spawn）+daemon 启动自检 fail-fast 兜底。本席已致 SDE 令其验证「revive 历史产出正形与否」。
+
 ## 使用依据
 
 - task-charter.md（99f4aad1，CEO 23:52 批令）；demand-order.md 同树
