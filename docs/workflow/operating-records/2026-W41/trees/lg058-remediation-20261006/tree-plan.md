@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（COO 拆树派工正身；上游任务书=`../task-charter-lg058-remediation-20261006.md`，立书 384000f5 + 边界#7 增补 015d2884）
 - syncMode: static（节点拆解与排窗定稿；节点现势随执行席收口回执滚动回写本件 §节点现势）
-- lastSyncedAt: 2026-10-06T08:17+0800（hook 现查 08:17:33——COO 对表 CEO 08:17 升版形态令；前笔 FSD 08:15 N2 代码面收口回写）
+- lastSyncedAt: 2026-10-06T09:45+0800（date 现查 01:45:35Z——FSD N5 方案二收口回写+断点续干笔；前笔 COO 09:24 第二催办位增补）
 - 令源链: CEO 亲测 9 条打回（00:31）→ BOD 立任务书（00:35，384000f5）→ COS 流转 COO 拆树派工（00:38）→ BOD 边界#7 增补（00:45，015d2884）→ COS 追令 N5 门槛落·P2 放行（00:5x，CPO 方稿 9f86ff34 BOD 审毕）→ BOD 排窗改令（03:10，a5a00e7a）→ BOD 白窗定序（07:5x）→ **CEO 升版形态令（08:17 经 BOD 转达）：N5 毕后 R-HY 升版走服务域流水线无人值守自动化，禁手动逐跳，全链读数五环落卷 BOD 核后呈 CEO**
 - 执行者必读: 任务书 + 受理依据 9 条原文（`../lg058-ceo-walkthrough-9items-20261006.md`，CEO 原话照录+定性表）
 
@@ -67,7 +67,7 @@
 | N2 | **白窗代码面毕（08:15，commit 46b80b2，BOD 方案认收 07:59）**——卡面维护面泛化四 face 端点族实装（GET/POST backups｜rollback＋templates｜apply-template；语义=整卡替换非 PUT 合并，写路径全走 preSaveCardGuard 守卫单源 keep=5，白名单防穿越，模板实体=templates/<face>/*.json 完整卡文档快照）；UI rlc/rmc 四槽候建文字态→真按钮（两击确认照 fb 栏形），mmc bak 槽候建如实维持（M 面暂缓），mlc 静态 fb 栏零动；sanity：config-cards 36 it＋ui-fourplane 8 it 全绿，全量 334/320 pass/0 fail/14 skip（既有跳过零变化），真 HTTP 链路 E2E 十步（3947 沙箱：apply→读卡→PUT→backups→rollback→恢复值面+穿越 400+无令牌 401）；**演练读数候 N5 毕后升版窗**（R-HY 一次落 TriModel 四笔+TriRMC 8249eb7 后流水线产出「切换→备份→回滚」全程无人工补手正式读数，边界#7）；TriModel 四笔 push 候升版窗同流 | 46b80b2 |
 | N3 | **夜干毕（代码面）**——现役配置表增「来源」列（静态 TriMLC 卡+JS 模板两处五列化），faceEntrySource 与 N1 tier 同源：tier1/2=远程拉取配置/tier3=本地配置/null=暂无回写不造数；「直连/中转」编造概念两仓 src/ui/docs 全扫零命中（既有「直连」命中全属 Claude 兜底通道语义域非 #4 对象） | TriModel e099329（ui-fourplane 7/7 含来源列 4 断言） |
 | N4 | **施工毕**（TriModel c4d9137，四处替换+grep 零残留+sanity 7/7；候 STE 验收+流水线正式读数） | c4d9137 |
-| N5 | 候拾取·白窗（门槛已落 9f86ff34） | — |
+| N5 | **白窗施工中（三件之二毕）**——方案一卡名正名毕（ed01fc2）；**方案二域卡×策略卡联席毕（09:45，51b8e39）**：菜单点菜（模型下拉出自策略卡清单 menuSnapshot 合并视图，手填降高级 optgroup）+条目引用化（点菜预填菜单条目 id——规则跨卡移植按 id 解析的前提）+规则适用勾选（勾=策略卡规则对象复制进域卡 rules／取消=deleted_rule_ids；悬挂=客户端 ruleEntryIds 分型 diff 人话引导「先点同名条目」+server 400 硬门 backstop）+溯源标注 menuOriginLabel（验收锚①零手填孤儿）+反向引用可见（faceRefsOf 查四域 entries_masked 零额外请求）+策略卡删除拦截（验收锚②③）+key 不进策略面（方稿 2.4）；P1 候修①守卫（rules-only 载荷被「条目数据格式错误」拒）以 UI 空 provider_entries 搭载规避（语义=本次不改条目），server 零改，守卫放宽记候办候 CTO 窗；渲染竞态闭合（loadTrimmc 尾幂等 renderFaceCards）。**断点续干笔：08:49 API 错误终止（ENOTFOUND）停摆 35 分钟档（BOD 记 08:49-09:2x）→09:23 BOD 复活令+断点自检（工作区三文件完好零半笔、方案一已 commit）→即续方案二→09:45 收口**。方案三（连接配置四域化）候做，三件毕触发 STE 同批走查（N2+N5） | 方案一 ed01fc2 + 方案二 51b8e39（全量 340/326 pass/0 fail/14 skip 既有跳过零变化；config-cards 38/38 含 N5 join 两 it、ui-fourplane 11/11 含 ②d/②e、tsc --noEmit 净、lint 新增面零 error） |
 
 ## 五、使用依据
 
