@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（任务书正身；CEO 2026-10-06 17:21 批令「TriRMC 合并回单单元+trirmc-mc 名字消失」）
 - syncMode: static
-- lastSyncedAt: 2026-10-06T17:29+0800（date 现查 17:29:12）
+- lastSyncedAt: 2026-10-06T22:12+0800（date 现查 22:12:19；CEO 22:12 端口收敛终态令增补：N4 迁移轮+目标形态段终态端口）
 - 立书位: 董事会 BOD（排期 COO 已裁 10-09 晚窗=授权域，本席认账落单；D-39 BOD 待裁全域授权）
 - 受理依据: CEO 17:21 批令（含 10-13 理由质询）+COO 排期回卷树单 ba8dbe17（trees/lg065-duty-seat-bc-20261006/tree-plan.md §二；原笔 9966b061 收编正形=ba8dbe17）+CTO 质询卷双卷（CPO cf9dcfd3/CTO f1bc62a5）
 - 挂账号: LG-066（COS 已录，态=候排→本件落单后=已排）
@@ -11,6 +11,8 @@
 ## 目标形态
 
 TriRMC systemd 双单元合并回**单单元**：trirmc 本体（8712，cron 主实例+CONFIG_DIR=/var/lib/trirmc）保留为唯一服务面；trirmc-mc（8710+TRIRMC_CRON_ENABLED=false+CONFIG_DIR=/var/lib/trirmc-mc）**名字全面消失**——unit 文件/配置目录/监听面/文档与台账表述联动清洗清单（随施工方案落）。合并依据：CPO+CTO 双卷认「CEO 判断站得住」（单模块双服务面=维护复杂+误导源）；CTO 定性五天三笔债（10-01 误退役循环论证/10-04 周迁移停摆/10-06 漏枚举）中两笔与双单元形态直接相关。
+
+**端口收敛终态（CEO 2026-10-06 22:12 令）**：合并毕 trirmc 本体 **8712→8710**（腾出的口回归服务域位）。四 daemon 终态端口=R-HY TriRMC **8710**／M-SG TriMMC 8712／本机 TriRLC 8711／本机 TriMLC 8713——R 面 8710-8711、M 面 8712-8713 两族规整。
 
 ## 排期与双门（COO 裁，本席认账）
 
@@ -23,6 +25,7 @@ TriRMC systemd 双单元合并回**单单元**：trirmc 本体（8712，cron 主
 - **N2 施工**（SDE/FSD 按 COO 树单）：停 mc 面→配置数据面迁移→本体单单元收敛→trirmc-mc 清洗清单执行→起动验证。
 - **N3 验证**（STE）：值面探针（8712 单点+cron 面+面路由全量回对）+双单元零残留断言+72h 观察窗挂账。
 - **N3+ 端口全表交付件**（CEO 2026-10-06 21:27 令）：合并完成后出《R-HY 端口监听与通信用途全表》——ss -tlnp 全枚举+逐端口用途标注（daemon 面/TriModel UI 面/依赖面），附合并前后 diff（**8710 消失断言**+8712 唯一 daemon 面断言）。合并前基线已由 BOD 21:3x 实勘存档（发送账）：R-HY=8710(trirmc-mc·0.0.0.0)/8712(trirmc·127.0.0.1)/3333(TriModel·0.0.0.0)；M-SG=8712(TriMMC·127.0.0.1)/3333(回环)/8460(代理)；本机=8713/8711/3333(回环)。
+- **N4 端口迁移轮（CEO 22:12 令，合并后事件）**：trirmc TRIRMC_PORT 8712→**8710**+联动清洗清单——systemd unit/启动器 env、UI 四签与实例行文案（R 服务域行 8712→8710，走升版轮）、连接配置 endpoint 值面、liveness/守望探针族（LG-064 观察窗 R-HY healthz 探针若指 8712 联动改）、升版流水线探针、文档与记忆条。**施工形态候 CTO 技术门裁**：合并窗内同窗连环（一次 restart 合并+迁口两事毕，经济倾向）vs 独立后置窗；迁移轮照三轮同款硬门+备份锚+trap+值面探针（新口 8710 healthz 实锚）。
 
 ## 施工纪律（LG-058 教训族全带，verbatim 约束）
 
