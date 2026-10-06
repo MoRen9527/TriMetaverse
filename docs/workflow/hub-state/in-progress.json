@@ -136,11 +136,11 @@
   },
   {
     "id": "lg066-trirmc-merge-receipt-unit",
-    "treeAnchor": "BOD 17:23 落账令",
-    "treePath": "立单候排期定后 BOD 落",
+    "treeAnchor": "445e2705",
+    "treePath": "docs/workflow/operating-records/2026-W41/task-charter-lg066-trirmc-merge-20261006.md（COO 树单 ba8dbe17）",
     "owner": "候排期定后派（施工前置=LG-058 CEO 终验毕+CTO 技术门）",
     "priority": "中（CEO 17:21 批方向·候排非候裁）",
     "status": "open",
-    "note": "TriRMC 合并回单单元+trirmc-mc 名字消失修复；排 10-13 须附队列+黄金时段占用理由（COO 排期定中盯防）。"
+    "note": "TriRMC 合并回单单元+trirmc-mc 名字消失修复。**已排 10-09（周四）晚窗**（BOD 17:29 认账落单·态 候排→已排）；施工前置双门（门1=LG-058 CEO 终验毕/门2=CTO 合并技术门）任一 10-08 18:00 未齐顺延 10-10 或 10-13 即报禁自动再滑；施工纪律四条全带任务书。"
   }
 ]
