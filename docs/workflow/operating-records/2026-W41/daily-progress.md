@@ -350,3 +350,9 @@
   - a29e0273 docs(coo): TriRLC stop 修段2 并窗定时点落定(BOD 裁并今晚窗 8713 验收绿之后+本席排条件触发 GO+兜底 22:30 顺延明晚红线执行)
   - 0739873a docs(cto): b14 消费面勘差①裁定 TriMLC=TriCode 消费面采认成立+TriRLC stop 修两段式窗令（编码即窗/部署候 SDE 考古收卷+BOD 并窗）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:50 +08：自上次进度提交 2d3db487 后新增 4 条 commit：
+  - 318b047e merge: 并行笔收编（CTO 值面案勘补两笔+watcher 巡检笔·段1毕卷窗并行段带平）
+  - 9cf36cf6 docs(coo): FSD stop 修段1 编码毕入卷(四件+tsc 0+700/700·GO 门候中·22:30 兜底不变)+对表扫首轮静默过(账本名笔误勘正 cron 重建 ff67f1cf)
+  - d7ffe999 docs(cto): 值面案计数勘补——BOD 对表今日实为四案+10-02=同族五笔（本席转呈漏 SDE 两案），BOD 已裁+CAO 攒批两款链路闭合
+  - f3568194 docs(cto): stop 修段1 编码面 ACCEPT+注记 a /shutdown 虚门裁候独立窗+注记 c 化石 store 裁可删+值面自报转 BOD 意见
+- registry：v2.1；今日 registry 提交无变化
