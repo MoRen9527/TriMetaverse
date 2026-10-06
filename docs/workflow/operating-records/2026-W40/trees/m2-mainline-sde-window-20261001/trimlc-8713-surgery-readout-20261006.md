@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（8713 手术施工读数正身；方案卷=同目录 trimlc-8713-fix-proposal-1p-20261006.md，CTO 放行 10:42+18:2x 回执「§四序照案打头，术后读数照三件套+首切锚」）
 - syncMode: static
-- lastSyncedAt: 2026-10-06T19:05:10+08:00（date 现查原样粘贴）
+- lastSyncedAt: 2026-10-06T19:09:30+08:00（date 现查原样粘贴）
 - 施工席: SDE 小布（m-sde）；施工窗=2026-10-06 18:27-18:48；硬门=全过（见 §六）
 
 ## 一、序① 8711 正形拉起者追查（破案）+序①A 提权验证
@@ -159,3 +159,15 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 
 - ①禁手动 run：全程零 run 触发（脚本 anti-run 断言在位）；②验证=query 在册三点（脚本内置）+下次自然登录窗实测（候窗）；③语义精确化注记=本段+§一.1 判读在案（**模板覆盖「重启+登录」窗非无人窗**——无人窗守卫=watchdog v2 登录守卫 fail-closed 互补，双层拼图闭合）
 - 裁 B/C 知悉态：B 候窗（两路候裁 7.3-2）；C korw 冻结遵守（本席零 store 手工触碰；8713 下次冷起窗三得=件③移植生效+SQL 归位+korw 真刀，候 FSD 移植毕+段2 触发链）
+
+### 7.5 段2 交接 dist 对表勘验（FSD 毕信 19:06 交接项，本席 19:07 read-only 现勘）
+
+| 项 | 读数 |
+| --- | --- |
+| 仓向双证 | `D:\Code\ai\TriMLC` origin=github.com/MoRen9527/TriMLC.git ✓（非 TriRLC，跨仓防混） |
+| 本地顶 | **03c6197**（boot recovery sweep TriMLC 移植——残留 running 归位 idle 先于补跑，l2-scan 永卡族根治，LG-064 §八裁决②）与 FSD 报一致 |
+| 触及面 | src/cron/{service+store+timer}.ts+test/cron-boot-recovery.test.ts 96 行，共 136 insertions |
+| src 侧符号 | resetStaleRunningJobs 在 service/store/timer 三文件在位+timer.ts L34 接口声明 ✓ |
+| **dist 现态** | mtime=**10-04 03:05**（旧 build）+resetStaleRunningJobs **零命中**=移植码未带出实证 |
+| **下窗施工项（钉死）** | **8713 冷起前必 `npm run build`**——同窗一次带出 03c6197（件③移植）+2b1709d（updateJobRun saveCronStore 补刷，行为锚测试两例）；现役 pid 1604 跑 10-04 dist，两笔均在冷起窗生效 |
+| 段2 毕读数（FSD 报，本席转记） | 8711 pid 33280 LISTEN==pidfile+healthz 200+heartbeat 已跑；stop 段修②活体证据（实报 unavailable 不谎报）；8711 cron store 0 jobs→boot sweep no-op；锚1/2/3 齐（锚3 token ACL 有 CodexSandboxUsers(RX) 继承条目候 CTO，主面达标未擅动） |
