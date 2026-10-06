@@ -162,6 +162,22 @@
   5. 回归面：menu 收起态/默认态零涟漪（#app-layout 无基础规则，CTO 依据①的对表复核）。
 - 复验毕回执 BOD 终裁（流程：FSD 施工→STE 单点复验→BOD 终裁→CEO 终验位）。
 
+### 七.2 P1 单点复验读数（2026-10-06 11:3x 本席执行；FSD 施工=TriModel 45757bd，本机工作树对表干净在位）
+
+| 项 | 结果 | 读数实锚 |
+|---|---|---|
+| ①结构断言 | **PASS** | `nav.parentElement===#app-layout` 且 `firstElementChild===nav`；layout.children=[page-menu,page-main]（真浏览器 DOM 实测） |
+| ②几何断言（真回归门） | **PASS** | menu-full 态 nav={left:210,right:420,width:210}（flex 0 0 210px 生效）main={left:434}——**nav.right 420 ≤ main.left 434（gap 14 与 FSD 桩锚值同源吻合）**，顶对齐 113.6=113.6；撤态再切回复测仍 true（双向稳定）。**真浏览器 getBoundingClientRect 实测非桩基**——FSD jsdom 桩基几何（无布局引擎）的盲区由本项真值补位，两层合拢 |
+| ③活体走查+截图 | **PASS** | 左右分栏视觉真兑现（左 210px 侧栏垂直菜单+右主区两卡正常渲染）；令牌输入框掩码显示零明文泄露。截图=ste-p1-reverify-menufull-20261006.png |
+| ④可选微整 margin:0 | 未做（非阻塞） | nav 实测 margin=`0px 0px 12px`（底 12px 残留；CTO 标可选非阻塞，留 FSD 顺手项） |
+| ⑤默认态零涟漪 | **PASS** | 撤 menu-full 后 main 在 nav 下方（顶部细条形恢复）+7 菜单钮单行横排不折行+页面零横向溢出 |
+| 切态路径等价性 | PASS | JS 真实路径=index.html L1129 `classList.toggle('menu-full', withData>=4)` 数据驱动自动切；本复验 classList 直加同类名同源 CSS，断言有效性成立 |
+| FSD 双断言 it（⑤b） | 消费认收 | 桩基几何判别力=事故注入自证（nav.remove()→门必不成立）；其 jsdom 恒零矩形局限已由本表②项真浏览器几何补位——两层桩/真合拢，spec 侧桩基形态注记 FSD 已带 |
+
+**复验结论：P1 修复 PASS（五项四过一非阻塞未做）**——CEO #1「分左右」视觉实态兑现，文案与视觉自洽回归。流水线正式读数（45757bd+99806cf 双新顶全量）=v6 在跑候回填（§6.2 续）；v6 毕回执 BOD 终裁。
+
+**附注（收信时序对表）**：FSD 知会信状态条落款 11:40 晚于本席收信 hook 现戳 11:29:38+0800=时序倒挂——按「自报时点晚于收信方现戳=必错即认」惯例由 FSD 侧认勘，本卷以 hook 现戳为本段时序锚，不影响读数面。
+
 ## 八、使用依据
 
 - 受理依据/树单/任务书/CPO 方稿/九条件：本目录与 W41 目录四件（commit 8835f58d/015d2884/a5a00e7a/9f86ff34）
