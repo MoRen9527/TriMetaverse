@@ -101,5 +101,26 @@
 - **活体值面终刀 15:14:54Z**（/ui 独立落盘 grep，128388B）: r4 表单 8 锚 PASS×8（请求地址/主模型/高级选项/模型映射表/行为开关/配置预览/BASE_URL/crossSessionInbound）+三轮四签端口对等 PASS×4（M 面 · 服务域/R-HY 8712/本机 8713/本机 8711）+menu-full 保持 PASS+密钥两键 0 出现+河源 0 残留；GO flag/HOLD/b64/stage-r4 中间物双机清毕（in 包+备份锚留审计）
 - 部署毕时点 23:14+08；第①刻毕报候发双（COO+BOD），BOD 护栏② 即时复验在挂；回滚锚毕（护栏③ 备而未用）
 - **BOD 复验 PASS 23:18（护栏② 关账·r4 闭环候 CEO 深验）**: playwright 强刷独立复验全绿——四卡表单 11 锚×4 全 PASS（请求地址/主模型/高级选项/映射表四行 Sonnet-Opus-Fable-Haiku/行为开关/自定义项/配置预览）+密钥两键零出现×4+河源零残留×4+四签端口对等（M-SG 8712/本机 8713/R-HY 8712/本机 8711）+**交互级实测 PASS**（主模型填值→配置预览实时出 `{"ANTHROPIC_MODEL":"glm-5.3-flash"}` 联动，放弃改动清场毕）+视觉截图 lg058r4-form-verify.png 留锚；护栏③ 未触发零回滚；本席 r4 义务至此清，收工候 CEO 亲测
+
+## 十、r5 施工段（连接配置表单增补·cc-switch 对齐，CEO 23:31 打回三缺口+23:41 批令·裁 A）
+
+- 令面: BOD 23:42 派工（任务书正身=board worktree W41 `task-charter-lg058r5-connect-form-20261006.md`——已读照办）；CEO 23:31 深验打回 r4 三缺口（API Key 无填写位/高级选项缺 API 格式与认证字段）→功课（cc-switch 手册 2.1）→23:41 批「范围认，API 格式裁 A，派工」
+- 代码: **75986ad→5188e7f**（ui/index.html+test/ui-fourplane.test.ts 两文件，+210/−7）；五件落点:
+  ①API Key 密钥行: password+显隐眼睛钮（`data-cd-eye` click 委托切换 type+钮文），主平铺紧跟请求地址（`__APIKEY__` 哨兵行）；值落所选认证字段键（`data-cd-keyref` 行→收集链取 pane 内 `[data-cd-authfield]` select 现值作键——收集链语义零变更扩展）
+  ②认证字段下拉: AUTH_TOKEN（默认）/API_KEY，说明文照任务书；两键入 CONN_FORM_KEYS=存量分流走表单不再落自由行；密钥存量填充判定 AUTH_TOKEN 优先/API_KEY 缺位回落
+  ③API 格式下拉: 四选项照录（Anthropic Messages（原生）默认/OpenAI Chat Completions/OpenAI Responses API/Gemini Native generateContent，均「需开启路由」）；**裁 A**: select 无 data-cd-key/val=零收集=不落盘不进预览（结构性保证）+非原生警示 span（「需本地路由，TriModel 现役仅支持 Anthropic Messages 直连」）显隐联动
+  ④模型映射表行级 1M 开关: checkbox `data-cd-1m`，change 剥/加 `[1m]` 尾缀（CONN_1M_RE 幂等正则，_NAME 展示名不加）；预览实时联动
+  ⑤预览联动增补: Key 值落所选键/1M 尾缀实时/格式零出现
+- 施工中间修复两笔（如实）: ①接入设置两行初带 data-cd-row 致 ②h/②i 自由行断言 3≠1——该两行无收集语义摘除属性（select 刷新走 change 委托不依赖 input 面）；②jsdom 环境无全局 HTMLElement——instanceof 断言改存在性断言
+- 自测门: UI 四门 **52/52**（②i 新增一案: 五件渲染×4 卡+眼睛切换+键名跟随+裁 A 双断言+1M 联动+放弃清场五断言）；全量 **347/333 pass / 0 fail / 14 skip**（+1 案）；lint 全仓 108 errors=基线零新增（改动文件 13=r4 同面）；build:verify 绿
+- 密钥纪律: 测试全假值（sk-test-stock-fsd/sk-test-live-fsd），真值零进会话链；锚语义反转如实注记（r4 密钥禁入→r5 密钥行在位，任务书纪律「密钥明文落投影对齐 cc-switch」）
+- 推送: sg bare ls-remote 证实 dev=5188e7f8d18dc02f2c5325ece0b23503db259235（75986ad..5188e7f）
+- 流水线备便: `stage1-r5-sg-build.sh`（sg sha256 cf628659…8d39，锚=五件特征 12 条+r4 回归 8 条+三轮/二轮回归 4 条）+`stage2-r5-rhy-execute.sh`（R-HY sha256 69e6a6fb…f1b9，GO-r5.flag 停等+回滚 bak-pre-lg058r5）双端已部署 bash -n 过；候 BOD GO-r5 硬门签发后开跑
+- 时窗: 施工毕 16:08Z（00:08+08，10-07 凌晨）；「是否可入部署窗」如实两案候裁（①顺延 10-07 晚窗②特批即时走 r4 裁 b 同款三护栏）
+- **GO-r5 签发（BOD 00:12 裁 b 即时走·三护栏全程不省·自挂 flag 授权）→全链毕**: Stage1-r5 绿 16:13:02Z（五件特征 12 锚+回归 12 锚全过）；包 sha256 **61fba299…0a0a** 传输腿 sha256 -c OK；环A 备份锚毕 16:13:26Z（dist bak=/srv/fleet/TriModel/dist.bak-pre-lg058r5-20261006T161325Z，server.js 指纹 a6af0b9b…f50=**四轮同指纹**纯前端零变+cfg tar c5508d57…684）；硬门① 报备 16:13:40Z（msg 8eb68764）→自挂 GO-r5.flag→重入→**STAGE2-R5-DONE 16:14:00Z**（deploy-sha 5188e7f 断言 ok→active 16:13:59Z→/health ok→环C 六项全 PASS）
+- **双实例重放勘误（如实）**: GO 停等设计下首实例（16:13:25Z 启动，停等窗 120s 未超时）与我方 16:13:5xZ 重入实例**并存竞争**——首实例 16:14:01Z 读到 flag 续环二次部署（同包 5188e7f 幂等重放：deploy-sha 同值断言过/环B active 16:14:04Z/环C 复验全绿 16:14:05Z/二次 DONE）；trimodel 闪断一次（~5s，16:14:01-04Z 窗）；根因=本次报备+自挂快于停等窗（r4 报备时首实例已 HOLD 退出故无双跑）；终态三服务 active+deploy-sha 5188e7f 正确；候记 GO 停等门纪律条（自挂触发前先查停等实例存活，正形=轮询 HOLD/done 后再触发）
+- **活体值面终刀 16:16:22Z**（/ui 独立落盘 grep 133862B+**拉取面 HTTP 200 断言**）: r5 五件锚 PASS×9（API Key/认证字段/API 格式/keyref/eye/1M/AUTH_TOKEN/API_KEY/警示文案）+四选项文案 PASS+r4 回归 2 锚+三轮四签对等 PASS×4+menu-full 保持+河源 0 残留；GO flag/b64/stage-r5 中间物双机清毕（in 包+备份锚留审计）
+- 毕报两刻制: 第①刻部署毕 16:14:05Z（环C 读数随报）；第②刻活体终刀 16:16:22Z——候 BOD playwright 即时复验（护栏②）
+- **BOD 复验七锚全 PASS 00:2x+08（护栏② 闭环·r5 全链毕）**: playwright 强刷+textContent 逐卡+交互级实测——①四卡五件 10/10 ②眼睛双态还原 ③认证字段切换键跟随+旧键消失（假 Key sk-test 形，真值零进链）④裁 A 双断言绿 ⑤1M 勾→[1m] 即现 ⑥放弃清场正形（首读 HAS-VALUE 假象=400ms 异步重渲窗时序，与 r4 innerText 假象同族，BOD 已入任务书附注）⑦两面 200+r5 特征命中；截图留锚；BOD 勾账 commit a750e565；双实例重放勘误收讫入账不追责，「自挂前先查停等实例存活」正形候记收到——本席 r5 义务至此清，呈 CEO 深验（九条第 3 项重开），收工
 - 三机现势实勘: sg bare dev=0359b89（ls-remote 值面）/R-HY 在役 deploy-sha=45757bd
 - 纪律: 硬门①报备义务（一轮 COO 令原文）/D-17 本机传输腿/B64 内联 aegis 对症/值面三断言（截断伪影与键值掩码面零触碰——本卷零 token 值出机）
