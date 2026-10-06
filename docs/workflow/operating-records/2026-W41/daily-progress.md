@@ -215,3 +215,8 @@
   - 9b9de084 docs(fsd): LG-058 树单 N5 方案三收口笔——三件全毕(TriModel 366eecb+TriRMC 99806cf),四域签五步数据流诚实三态,触发 STE 走查+升版流水线候备
   - 4cf0c9f1 docs(cto): LG-064 方案卷§八——8713停摆案三件裁决(根治窗并b14/SDE独立包+红线两条;stop双缺陷独立窗不搭b14车)+考古扩围(l1.log实锚23980错位形#1重启前2h无窗顶port,复发条件放宽至daemon死亡窗)+BOD ladder四款裁准+监控第三次真实捕获实证(67条/16h/零漏轮全合法)+值席认领断链发现
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 12be50c7 后新增 3 条 commit：
+  - 8539a4f0 docs(sde): 8713 修复方案一页三核落实稿——核①守卫fail-closed(§二判态失败不revive+§五fail-open残留句撤销)/核②jobCount空store语义注记(§一.3)/核③8711拉起者并案入施工序(§四.1与提权验证并列)+FSD件②token落盘限权件③boot恢复清扫scope增补(§三);判读锚30699063(0f66b394=amend前身不可达不引用),改毕回执=施工放行
+  - 0bff654f docs(fsd): LG-058 树单 N5 勘正行——lint 假读数勘正(真+1 已修 12caab0 平 sg bare),STE 走查消费勘正版口径
+  - 30699063 docs(cto): LG-064 方案卷§八增补——勘误自领(13756=watchdog revive正形先例证伪本席推论,23980改判竞争假设)+0e641383考古卷/方案一页技术门APPROVE附三核意见(守卫fail-closed须改/jobCount>0空store边界注记/8711正形拉起者追问并案钥匙)+FSD件scope增补(boot恢复清扫/token落盘限权)
+- registry：v2.1；今日 registry 提交无变化
