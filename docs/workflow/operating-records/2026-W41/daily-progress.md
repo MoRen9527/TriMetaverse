@@ -272,3 +272,9 @@
   - 75312141 merge: 并行笔收编（LG-058 裁示落卷窗并行段带平）
   - f83bf883 docs(coo): LG-058 第9轮败定性+类推准裁示落卷——TriRMC 99806cf 存量 strictNullChecks 类型债2处(FSD 源码车道修),锚漂移三护栏+SHA 变更点双模板标注,STE 逐行差分口径,BOD 全采认+两硬要求传导毕
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 d6ab5201 后新增 4 条 commit：
+  - cfd1ffb6 docs(coo): LG-058 BACKUP-ANCHOR 报备+GO 放行落卷——硬门①闭环(备份锚三件 hash 在卷,报备毕置 GO 同刻双信,BOD 双 GO 留痕先到为准),两 WARN 非门,候五环读数卷
+  - 9ea25620 docs(coo): LG-058 SDE 重挂回执落卷——FSD 验收四项全过(diff 面断言独立跑零夹带),锚替换四处+99806cf 零残留,轮 10 在跑 Monitor 盯防,sha 标注入双模板
+  - 88c44009 merge: 并行笔收编（LG-058 修笔回执落卷窗并行段带平）
+  - 90f4b224 docs(coo): LG-058 FSD 修笔回执三件齐落卷——新 sha a02d89b+diff 摘要+tsc 全量绿,throw 守卫撤回=BOD 自证锚硬要求首单拦真雷,SDE 清门重挂道开
+- registry：v2.1；今日 registry 提交无变化
