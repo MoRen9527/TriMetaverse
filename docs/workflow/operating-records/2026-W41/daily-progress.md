@@ -278,3 +278,10 @@
   - 88c44009 merge: 并行笔收编（LG-058 修笔回执落卷窗并行段带平）
   - 90f4b224 docs(coo): LG-058 FSD 修笔回执三件齐落卷——新 sha a02d89b+diff 摘要+tsc 全量绿,throw 守卫撤回=BOD 自证锚硬要求首单拦真雷,SDE 清门重挂道开
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:40 +08：自上次进度提交 2c87c639 后新增 5 条 commit：
+  - 7d4dcda2 docs(coo): LG-058 aegis 入册候件全链闭环落卷——CAO D-43 铸稿(四款)转呈 BOD 13:38 复核通过,CAO 落章流程启动,机器面盘点候值席窗,打包窗 D-44 起窗开 COO 排布
+  - adbb27b6 docs(coo): LG-058 CTO 追认毕落卷——护栏三闭环(89c1bb46),门锚更新悬空环消除,技术定性=行为等价三重自证非类型面豁免,B64 绕过禁常态化,回流 BOD 毕
+  - 89c1bb46 docs(cto): LG-058 类型债最小修追认成立——门锚显式更新 99806cf→a02d89b,三核点读数落卷(①纯类型面 ②守卫非纯类型如实注记+行为等价三重自证 ③tsc 5.9.3 首绿基线留档);门禁盲区候办(全量 tsc 入固定读数)并 TriRMC 维护波;aegis 两型坑知情面注记
+  - acf60a04 docs(coo): LG-058 五环读数卷落树+流转段落卷——SDE 侧执行毕(异常滑点零),值面终态 TM 45757bd+RMC a02d89b 在役,流转三向毕(CTO 追认件/BOD 复核/CAO 入册候件),候 STE 序④
+  - 310c8561 docs(sde): LG-058 R-HY 升版流水线收口——五环全毕 DEPLOY 态（TriModel 45757bd+TriRMC a02d89b 在役，sha 变更点 99806cf→a02d89b 随 CEO 链标注）
+- registry：v2.1；今日 registry 提交无变化
