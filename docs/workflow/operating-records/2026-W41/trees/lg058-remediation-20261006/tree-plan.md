@@ -2,8 +2,8 @@
 
 - sourceOfTruth: 本件（COO 拆树派工正身；上游任务书=`../task-charter-lg058-remediation-20261006.md`，立书 384000f5 + 边界#7 增补 015d2884）
 - syncMode: static（节点拆解与排窗定稿；节点现势随执行席收口回执滚动回写本件 §节点现势）
-- lastSyncedAt: 2026-10-06T03:1x+0800（hook 现查 03:12:47——排窗改令对表修订）
-- 令源链: CEO 亲测 9 条打回（00:31）→ BOD 立任务书（00:35，384000f5）→ COS 流转 COO 拆树派工（00:38）→ BOD 边界#7 增补（00:45，015d2884）→ COS 追令 N5 门槛落·P2 放行（00:5x，CPO 方稿 9f86ff34 BOD 审毕）→ **BOD 排窗改令（03:10，CEO 原话「低风险的现在干，N2留白窗，M面切换先不做，R面切换随便测试」；任务书改令笔 a5a00e7a）**
+- lastSyncedAt: 2026-10-06T08:17+0800（hook 现查 08:17:33——COO 对表 CEO 08:17 升版形态令；前笔 FSD 08:15 N2 代码面收口回写）
+- 令源链: CEO 亲测 9 条打回（00:31）→ BOD 立任务书（00:35，384000f5）→ COS 流转 COO 拆树派工（00:38）→ BOD 边界#7 增补（00:45，015d2884）→ COS 追令 N5 门槛落·P2 放行（00:5x，CPO 方稿 9f86ff34 BOD 审毕）→ BOD 排窗改令（03:10，a5a00e7a）→ BOD 白窗定序（07:5x）→ **CEO 升版形态令（08:17 经 BOD 转达）：N5 毕后 R-HY 升版走服务域流水线无人值守自动化，禁手动逐跳，全链读数五环落卷 BOD 核后呈 CEO**
 - 执行者必读: 任务书 + 受理依据 9 条原文（`../lg058-ceo-walkthrough-9items-20261006.md`，CEO 原话照录+定性表）
 
 ## 一、节点拆解
@@ -52,7 +52,7 @@
 | 节点序（BOD 白窗定序 07:5x） | 夜干 N4→N1→N3（毕）→ 白窗 **N2（即启，BOD 开工令已发）→ 毕后接 N5**；R-HY 生产升版候代码毕同窗一次落（**含深夜段三件新版**）；N1 只读实勘随升版窗 |
 | 检查点 | 10-06 窗尾 FSD 进度报一封（已收口节点+受阻面如实） |
 | 滑窗规则 | 受阻如实报候裁，不硬挤 |
-| R-HY 生产变更窗 | **生产升版统一白窗，与 N2 同窗一次升版**（避免深夜双动生产，改令硬界）；变更前备份锚（沿 20261005T2316Z 惯例形，hash+时点随派工回执报备）+ 变更后值面探针硬门（边界 1） |
+| R-HY 生产变更窗 | **〔CEO 令 08:17〕N5 毕后升版改走服务域流水线形态**——无人值守自动化，**禁手动逐跳**；全链读数五环（构建/部署/进程内生效/N2 演练/拉取链对表）落卷毕 BOD 核后呈 CEO。硬门嵌入流水线步骤：变更前备份锚（沿 20261005T2316Z 惯例形）+变更后值面探针（边界 1）+回滚预案随链（N2 备份回滚能力即安全网）；流水线挂单前提行（TriMMC executor 活体断言双证）同适用；白窗时界不变（深夜禁动硬界仍束触发时点） |
 | 流水线挂单前提 | 正式读数挂 sg 无人值守通道（边界#7）——挂单前对表 TriMMC executor「调度活执行停」家族缺陷：nextRun 滚动禁单独作活信号，活体断言双证（HTTP 活≠executor 活）；sg 通道阻塞→报董事会裁决替代执行位，**不得自行落回本地跑** |
 
 ## 三、边界（全程约束，任务书 §边界七条全文为准）
@@ -64,7 +64,7 @@
 | 节点 | 状态 | 收口锚 |
 |---|---|---|
 | N1 | **夜干毕（代码面，BOD 复验通过 03:4x）**——链路勘定（三段链 161d0ca 全在、face 键两侧一致，CEO 空白=运行态数据面，白窗实勘三候选）；真代码缺口=「配置层级」全链无数据源→三段补建毕（TriRMC reportCardStatus 带 tier 上报→TriModel 台账 applied_tier→UI「配置层级」行）；本地活体端到端复现全链通（pull 记账→status tier 回写→managed 四要素读出，3941 沙箱在案）。TriRMC 8249eb7 已推 sg bare（ls-remote 复验 dev 顶=8249eb7，ff 自 496613b）；TriModel 三笔候同流。白窗部署清单：TriModel+TriRMC 新版随 N2 升版一次落 R-HY，重启后 TriRMC 例行 pull，值面探针=managed `ledger.faces.rmc` 四字段非空 | TriModel 5b4dedb + TriRMC 8249eb7（sanity: config-cards 29/29、key-cache 14/14、ui-fourplane 7/7；TriModel 全量 313 pass/0 fail/14 skip） |
-| N2 | **白窗施工中（BOD 开工令 07:5x，hook 现戳 07:55）**——R 面双卡模板切换+备份回滚实装，序钉死先 TriRMC·河源 毕后再 TriRLC·本机；测试放开授权（实弹演练充分性不设保守上限）；M 面两步暂缓候 CEO 后令；验收锚=真实完成一次「切换→备份→回滚」演练全程无人工补手+候建文字态清除；R-HY 生产升版候 N2/N5 代码毕同窗一次落（深夜三件+8249eb7 一并升）；正式读数挂 sg 流水线（边界#7） | 施工中 |
+| N2 | **白窗代码面毕（08:15，commit 46b80b2，BOD 方案认收 07:59）**——卡面维护面泛化四 face 端点族实装（GET/POST backups｜rollback＋templates｜apply-template；语义=整卡替换非 PUT 合并，写路径全走 preSaveCardGuard 守卫单源 keep=5，白名单防穿越，模板实体=templates/<face>/*.json 完整卡文档快照）；UI rlc/rmc 四槽候建文字态→真按钮（两击确认照 fb 栏形），mmc bak 槽候建如实维持（M 面暂缓），mlc 静态 fb 栏零动；sanity：config-cards 36 it＋ui-fourplane 8 it 全绿，全量 334/320 pass/0 fail/14 skip（既有跳过零变化），真 HTTP 链路 E2E 十步（3947 沙箱：apply→读卡→PUT→backups→rollback→恢复值面+穿越 400+无令牌 401）；**演练读数候 N5 毕后升版窗**（R-HY 一次落 TriModel 四笔+TriRMC 8249eb7 后流水线产出「切换→备份→回滚」全程无人工补手正式读数，边界#7）；TriModel 四笔 push 候升版窗同流 | 46b80b2 |
 | N3 | **夜干毕（代码面）**——现役配置表增「来源」列（静态 TriMLC 卡+JS 模板两处五列化），faceEntrySource 与 N1 tier 同源：tier1/2=远程拉取配置/tier3=本地配置/null=暂无回写不造数；「直连/中转」编造概念两仓 src/ui/docs 全扫零命中（既有「直连」命中全属 Claude 兜底通道语义域非 #4 对象） | TriModel e099329（ui-fourplane 7/7 含来源列 4 断言） |
 | N4 | **施工毕**（TriModel c4d9137，四处替换+grep 零残留+sanity 7/7；候 STE 验收+流水线正式读数） | c4d9137 |
 | N5 | 候拾取·白窗（门槛已落 9f86ff34） | — |
