@@ -28,6 +28,12 @@
 
 件③ boot 清扫 §八 增补本意=「防下次重启 **l2-scan 型**永停复发」——病灶在 8713=TriMLC，FSD 段1 实现落 TriRLC 系落点错置（或误认镜像关系；实勘 TriMLC=独立代码线独立仓）。**段2 部署窗前补 TriMLC 侧移植**：store.resetStaleRunningJobs 同构实现+挂载点对齐 TriMLC daemon 起动链+三案测试（幂等/多 job/WAL 逐行刷新坑同款防御）+独立 commit 落 TriMLC 仓+全量门读数——归件③ scope 内本意落点非新 scope，段2 触发链前置项加此一件。
 
+## 勘补：裁 A 执行受阻再裁（SDE 19:0x 报，19:0x 裁）
+
+**新事实**：非提权注册三通道全拒（schtasks/Register-ScheduledTask/COM 逐一实证 0x80070005）——本机 Win11 新版 TaskScheduler=**任务注册全提权域**（TriRLC Daemon 任务系 08-14 提权时代注册产物旁证）。本席原裁「非提权拉起」定性勘补：**运行面=非提权（jedih 登录上下文，红线③不触维持）**；注册面=提权域，需一次提权窗——原裁定注册面定性遗漏，如实勘补。SDE 护栏正确（材料预置 BOM+PSParser 0 错未执行+未单方面弹 UAC）。
+
+**再裁：②并入明日 admin 窗为主，①UAC 即窗为应急备选**——理由：a) 三通道全拒=今晚无零惊扰通道；b) 一次提权三得（Operational log 启用+systemprofile 验证+本注册）省窗；c) 今晚风险敞口有对冲——watchdog v2 在岗+告警链+ladder 升级链在役，缺位可发现可催办（「缺位一夜无人知」结构性条件已消除）；d) watchdog 停摆根因明日才勘（裁 B）——今晚单补 LogonTrigger 半边保险收益打折，不如明日双半齐修。**①启用条件**：今晚若 8713 再缺位或 BOD/CEO 明示即补——脚本材料在位随令即成（jedih 应 UAC 即注册毕）。
+
 ## 使用依据
 
 - SDE 手术毕回执 18:50（施工卷 d04c088e）；本席独立实勘 TriMLC 仓（grep resetStaleRunningJobs 零命中+git log 顶 2bf1919/2b1709d 独立线）
