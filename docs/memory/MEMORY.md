@@ -1,5 +1,6 @@
 # Memory Index
 
+> **随仓镜像（2026-10-06 20:27 CEO 令）**：本目录全量自动镜像至 `TriMetaverse/docs/memory/`（sync-memory-mirror.ps1 每小时+登录时，只增改不删，删除面人工）——随仓记录不丢失，换机/迁移环境后纪律指向 `TriMetaverse/docs/memory/<name>.md` 仍可达；TriCompany 纪律引用项目记忆一律指向该镜像位。
 > 记忆治理分工（2026-08-27 CEO 规则）：项目/公司维度事实真源在仓库治理文档，本目录只留行为反馈与导航指针；映射真源=TriCompany/docs/engineering/governance-memory-index.md（LG-016）——见 [记忆治理分工](org-memory-governance-split.md)。台账真源=TriCompany/docs/workflow/hub-ledger-governance.md；心跳双跑真源=TriCompany/docs/engineering/heartbeat-dualrun-contract.md（LG-014）——本表 open-items-ledger 为其指针。
 > 编排/中枢分权制（2026-08-28 CEO 指令）：直连会话只做编排，常驻小贾中枢（xiaojia-hub）持完整上下文执行任务——见 [编排中枢分权制](orchestrator-hub-split.md)。
 
