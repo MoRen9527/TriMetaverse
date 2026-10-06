@@ -86,6 +86,8 @@
 - **活体值面终刀 13:57:48Z**（/ui 独立 grep）: 四端口对等 PASS×4+RMC 卡头「TriRMC · R-HY 8712」在位 PASS+无裸「TriRMC · R-HY」卡头+三服务 active；GO flag/b64/stage 中间物清毕
 - 触发形勘误候记: ssh 后台触发 `A && B & C` 中 `&` 使整链后台化挂 ssh 90s（读数完整无碍）——正形=换行语句形分离（候入 D 系触发令形条）
 - 时窗自查: 21:57 毕，23:00 界内充裕
+- **BOD 快复验 PASS 22:03（三轮闭环）**: playwright reload 强刷后渲染面逐一实锚——打回单点「R 面 · 服务域 TriRMC · R-HY 8712」在位✓+四签端口对等 8712/8713/8712/8711 逐卡在场✓+截图存证（lg058r3b-rmc-card-header-verify.png）；候 CEO 亲测归真终态。首验两次零命中=浏览器缓存旧 bundle（r3 形）非部署面（BOD 观察注记如实转记）
+- **候办两条（BOD 候办不强令，本席记挂）**: ①index.html 加 no-cache 头 ②bundle 文件名 content-hash 核验项——涉服务响应头与构建管线形态，归 CTO lane 裁后再动（模块边界与技术栈不经裁不擅动）；本席登记不擅启
 - 一轮执行卷: rhy-upgrade-pipeline-20261006.md（形态/硬门/教训全供）
 - 三机现势实勘: sg bare dev=0359b89（ls-remote 值面）/R-HY 在役 deploy-sha=45757bd
 - 纪律: 硬门①报备义务（一轮 COO 令原文）/D-17 本机传输腿/B64 内联 aegis 对症/值面三断言（截断伪影与键值掩码面零触碰——本卷零 token 值出机）
