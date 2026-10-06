@@ -100,5 +100,6 @@
 - **GO-r4 批（BOD 23:13+08 单批）→续环一次绿**: 15:14:26Z 重入→环A skip 复用 r4 备份锚→GO flag 读入→环B untar/stop/cp/deploy-sha 断言 ok（75986ad）→**trimodel active 15:14:29Z**→/health ok 15:14:30Z→环C 全绿 15:14:31Z（文件式零管道，r2 教训持续生效）→**STAGE2-R4-DONE**；三服务终态 active（trimodel/trirmc-mc/trirmc），TriRMC 双 unit 零触碰零重启
 - **活体值面终刀 15:14:54Z**（/ui 独立落盘 grep，128388B）: r4 表单 8 锚 PASS×8（请求地址/主模型/高级选项/模型映射表/行为开关/配置预览/BASE_URL/crossSessionInbound）+三轮四签端口对等 PASS×4（M 面 · 服务域/R-HY 8712/本机 8713/本机 8711）+menu-full 保持 PASS+密钥两键 0 出现+河源 0 残留；GO flag/HOLD/b64/stage-r4 中间物双机清毕（in 包+备份锚留审计）
 - 部署毕时点 23:14+08；第①刻毕报候发双（COO+BOD），BOD 护栏② 即时复验在挂；回滚锚毕（护栏③ 备而未用）
+- **BOD 复验 PASS 23:18（护栏② 关账·r4 闭环候 CEO 深验）**: playwright 强刷独立复验全绿——四卡表单 11 锚×4 全 PASS（请求地址/主模型/高级选项/映射表四行 Sonnet-Opus-Fable-Haiku/行为开关/自定义项/配置预览）+密钥两键零出现×4+河源零残留×4+四签端口对等（M-SG 8712/本机 8713/R-HY 8712/本机 8711）+**交互级实测 PASS**（主模型填值→配置预览实时出 `{"ANTHROPIC_MODEL":"glm-5.3-flash"}` 联动，放弃改动清场毕）+视觉截图 lg058r4-form-verify.png 留锚；护栏③ 未触发零回滚；本席 r4 义务至此清，收工候 CEO 亲测
 - 三机现势实勘: sg bare dev=0359b89（ls-remote 值面）/R-HY 在役 deploy-sha=45757bd
 - 纪律: 硬门①报备义务（一轮 COO 令原文）/D-17 本机传输腿/B64 内联 aegis 对症/值面三断言（截断伪影与键值掩码面零触碰——本卷零 token 值出机）
