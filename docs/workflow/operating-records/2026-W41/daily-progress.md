@@ -201,3 +201,7 @@
   - 3a607f24 docs(coo): workbench 09:3x 笔——树单合同注入接令（BOD 裁准：开工/收口笔自带 in-progress.json 账本同步行，下轮拆树起注入生效；LG-058 既有树单不回溯，COS 已录五节点兜底对表）
   - 9d99501b docs(cos): 账本补登记 LG-058 五节点（BOD 09:3x 增令）——N1 closed（BOD 定性）/N2 open 候验收/N3-N4 open 候 STE+流水线正式读数/N5 open 在途施工；破 FSD 死 33+min 零告警的空账本态
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 4e919b8d 后新增 2 条 commit：
+  - c652edfe docs(sde): hub-silent-detect 停摆诊断+复活读数卷——全7job自10-05 17:44集体停(错位daemon 20140 store-blind五证据),正途带token /shutdown退+channel.cmd冷启31800 jobs=7,补跑轮1已落,缺陷三锚+拉起者考古候移交
+  - 59310fe6 docs(fsd): LG-058 树单 N5 方案二收口笔+断点续干笔——联席毕(51b8e39)三件之二,断点08:49停摆35分档→09:23复活续干→09:45收口,方案三候做
+- registry：v2.1；今日 registry 提交无变化
