@@ -2,7 +2,7 @@
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/ste-seq4-independent-verify-20261006.md
 - syncMode: append-only evidence
-- lastSyncedAt: 2026-10-06T05:44:30Z（13:44+0800）
+- lastSyncedAt: 2026-10-06T05:48:42Z（13:48+0800；BOD 问实补验+本体重启终态闭合并档毕）
 - 席位: STE 小柯（m-ste）
 - 令源: BOD 终裁令（11:56）执行序④+COO 序④口径更新（N2 双断言+差分口径）+SDE 交接信（13:31，五环卷 310c8561 落树）
 
@@ -49,6 +49,8 @@
 - 8710（MC face）：/healthz=`{"ok":true,"service":"trirmc","mcLedger":"ok","cron":{"enabled":false,"jobCount":0,...}}`（cron enabled=false=SDE 卷观察项② 设计内）。
 - 8712（trirmc 主）：无 /health 路由（45757bd 形态）——活体判定沿端口监听+双 unit active+journal 拉取链三锚。
 - env 键名扫描：trirmc-mc 有 TRIRMC_INTERNAL_TOKEN 键、trimodel server 有 TRIMODEL_ADMIN_TOKEN/TRIMODEL_API_TOKEN 键（值面零出机）。
+- **【BOD 问实补验增补，13:46-48 活体】本体起动时戳抽验缺口自领+闭合**：BOD 13:46 问实指出 trirmc 本体起动时戳 10-05 23:18:35（未重启）——本席首发补验（13:45-46）实证为真：ExecMainStartTimestamp=Mon 2026-10-05 23:18:35 CST（pid 2019007），且部署窗（13:25）trirmc unit journal **零条目**（未 stop/start），stage2 脚本 stop/start 清单实锚（lg058-stage2-rhy-execute.sh L84/L89/L100-112）**只含 trirmc-mc+trimodel，不含 trirmc 本体**——脚本清单缺口（SDE 面缺陷候选）。本席环3 原读数只验 unit active 未验起动时戳——**active≠重启，值面抽验缺口自领**（「键存在性抽验≠值面验证」家族）。**终态闭合（13:46:38）**：本体经 systemctl 正规 restart（journal Stopping→Deactivated→Stopped→Started 全链；新 pid 2064924，旧 2019007 退出；重启主体非本席——本席全程只读探针，时点与 BOD 抽验窗吻合候对表）；新进程 13:46:39 listening 8712+**loaded cached→pulled fresh config (2 providers)**=本体拉取链新 dist 活体绿（cache expires 2026-10-07T05:34:14.765Z=今日 05:34 stagger 锚+24h 自洽）；8712 /healthz 现有响应（新 dist 特征，旧版 404）。**现势三进程全在役新 dist**：2062559（trimodel，13:25:43）/2062569（trirmc-mc，13:25:46）/2064924（trirmc，13:46:38）。
+- 影响面评估（13:25-13:46 本体旧映像窗，21 分钟）：旧映像缺 99806cf-era N5 特性集（本体面），但期间拉取链照常（旧版机制+cache 今日 05:34 已刷新），零行为故障实证；a02d89b 类型修行为等价（CTO 追认）→旧映像期间无新回归风险。终态已闭合，不构成升版有效性质疑，脚本清单缺口候 SDE/CTO 裁修。
 
 ### 环4 N2 演练（证据链+终态对表口径，未重跑生产演练）
 
@@ -69,7 +71,7 @@
 - 本席 admin token 探针四 face managed 全通（值面结构字段过滤形）：
   - **rmc：version=4，status={state:applied, at:2026-10-06T05:34:14.820Z}**，card_file_present=true，provider_entries=3（e-glm-anthropic/e-deepseek-anthropic/e-glm-flash-anthropic，masked 尾指纹 ****7d6v/****26f3/****7d6v）、strategies=2、model_sets=1、rules=3——与 SDE 环C「entries_masked 3 条目」吻合 ✓。
   - mmc：pending（2026-09-27，R-HY 无 MMC 消费者=合理）；mlc：pending；rlc：pending（候建）。
-- SDE stage2-READOUT 内嵌 FACES_PROBE 异常（`{"error":{},"path":{}}`+WARN）定性：本席未复现该形状（本席走 3333 managed 直探全通）；SDE 探针路径疑对 8710 打卡面路由（not_found 域）或脚本汇总对象形态——「候人工对表」项以本席直接读数**补位闭合**；SDE 异常形状留观察不掩埋。
+- SDE stage2-READOUT 内嵌 FACES_PROBE 异常（`{"error":{},"path":{}}`+WARN）定性：「候人工对表」项以本席直接读数补位闭合；形状来源 SDE 13:45 对表勘正收档——**非打 8710**，系 Stage2 脚本首版探针打 3333 集合路由（`GET /v1/config/cards?view=managed` 得 404 `{error:"Not found",path:...}`）被白名单解析器遍历后仅剩无字段键洗成该形；SDE 修正探针（同 3333 per-face）四 face 全通+rmc applied tier=1 与本席 v4 读数互证。双卷并档闭案。
 - ledger 读数：rmc face applied_state=applied/applied_tier=null；响应含 entries_decrypted 字段（admin 门后明文视图=设计内——本席探针事故即因打印该字段，§五.A）。
 
 ## 四、锚漂移差分专节（99806cf→a02d89b）
@@ -112,8 +114,10 @@
 1. **3333 ledger last_pull 语义可被 loopback 探针污染**——后见 denied 先查探针史（CTO 归口：TriRMC 测试维护波，探针与业务拉取分账/专属标记，owner=FSD 车道，与全量 tsc 门禁读数/Employee Registry 活读并批）。
 2. **managed GET touch pending 卡 status.at**（GET 非幂等读观察面）——同上归口。
 3. SDE stage2-READOUT 四观察项知悉（锚脚本指纹笔误/cron enabled=false 设计/bundle 备援缺失/backups 路径形勘误）——不重复展开，随 SDE 卷候办。
-4. SDE FACES_PROBE 异常形状未复现——候 SDE 侧探针脚本对表（低优）。
+4. ~~SDE FACES_PROBE 异常形状未复现——候 SDE 侧探针脚本对表（低优）~~ **已闭（13:45 SDE 勘正）**：形状来源=首版探针打 3333 集合路由 404 被解析器洗形；本席 §三 定性段已收档并档。教训面同族：解析器对 error 响应对象照白名单遍历会洗掉错误语义——错误形状应短路直出（候 FSD 车道脚本卫生并入）。
 5. 8713 今晚修窗后回归验证（pidfile-mismatch+heartbeat 两维止报+恢复锚）——LG-064 遗留候办不变。
+6. **stage2 脚本 stop/start 清单缺 trirmc 本体**（L84/L89/L100-112 实锚只含 trirmc-mc+trimodel）——部署半程缺陷候选：升版落盘含本体面路径（a02d89b 触 onboarding/session-initializer）但本体未被重启轮换。本次由 13:46:38 补重启闭合（主体候对表），脚本面候 SDE/CTO 裁修（清单补全或部署读数断言增「进程起动时戳>部署时戳」值面锚——防 active≠重启再犯）。
+7. **「unit active≠进程重启」读数教训**：部署类读数的进程内生效断言必含起动时戳值面（ExecMainStartTimestamp>部署时点），名义面 active 断言不足以证换代——候 CAO 纪律册与「键存在性抽验≠值面验证」条同族并档（攒批窗）。
 
 ## 七、判读与质量门禁评估（三分法）
 
@@ -132,6 +136,6 @@
 
 ## 状态条（M-001）
 
-- date 现查：2026-10-06T05:42:08Z（13:42:08+0800 Tuesday）；lastSyncedAt 补记 05:44:30Z（落卷毕复跑）
-- 水位自估：低（序④收口毕，候 BOD 终复核+8713 今晚回归窗）
-- 末次活动：2026-10-06T05:44:30Z（落卷时刻）
+- date 现查：2026-10-06T05:48:42Z（13:48:42+0800 Tuesday）
+- 水位自估：低（序④收口毕+问实补验闭合，候 BOD 终复核+8713 今晚回归窗）
+- 末次活动：2026-10-06T05:48:42Z（问实并档时刻）
