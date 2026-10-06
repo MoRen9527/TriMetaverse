@@ -406,3 +406,13 @@
   - dbc0cffb docs(cos): CEO 20:27 令流转记账——记忆镜像纪律指向变更呈请转投 CAO（BOD 20:35 呈请·COS 20:38 转 m-cao：LG-016 governance-memory-index 增补镜像位指针+D-44 候编号铸条三款；四锚轻核验过 99d74cda/aeedeea5/8d5f225/schtasks Ready；候 CAO 会签落册 BOD 复核随侍）
   - aeedeea5 docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 b6313dcb 后新增 8 条 commit：
+  - f7da7d5f docs(coo): 值席树§四 二轮复验双道现势——BOD playwright冷态复验PASS(七项常驻+骨架+零残留,截图留证)呈CEO候亲测+STE走查并行在跑+FSD执行卷锚ebeb3c2a(219行+锚指纹坑勘正)
+  - 5f4333b0 docs(coo): 值席树§四 二轮毕报第①刻转+复验链触发——TriModel 0359b89上役环C全绿(冷态三断言+TriRMC零触碰+备份锚在挂)+SIGPIPE假阴性插曲如实自报(rc141实锤非部署问题)+BOD转报毕+STE链触发+二轮线两刻齐
+  - ebeb3c2a docs(lg058): 二轮施工树收口——r2 两级流水线脚本+执行卷（GO-r2 毕 TriModel 0359b89 上役+环C 锚⑤三断言绿+SIGPIPE 探针假阴性勘误留痕）
+  - f58910a9 docs(memory): 镜像 README 第4条候办销——GID-12 本位指针登记+D-44 生效链闭环锚补注
+  - e8b8268d merge: 并行笔收编（值席窗并行段带平）
+  - e1745a39 docs(coo): 值席树§四 GO-r2放行——LG-058二轮硬门①达(Stage1构建三断言绿+传输sha256 OK+备份锚双件齐+HOLD设计内)+升版面纯前端TriRMC双unit零触碰=术后观察窗零扰+毕报两刻制+STE复验链候毕报触发
+  - 05502a30 docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - 13c69d41 docs(cos): 记忆镜像纪律指向变更销账——D-44 入册（TC 27f9358）+GID-12 登记（TC 32b848e）CAO 落正身毕，COS 20:44 亲验双锚销账（账本 memory-mirror-discipline-d44→closed·大表笔刷已落册态）；差口如实记随录（D-18 引用纪律册零命中未硬造·docs/execution 2 处候施工窗）
+- registry：v2.1；今日 registry 提交无变化
