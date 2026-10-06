@@ -100,6 +100,8 @@
 - 令锚：BOD b674e8c7 / SDE 555dd60c / FSD 079e52fe（2026-10-06 10:1x）；24h 窗正式终判 03:45Z（11:45 本地）后本席出。
 - **BOD ladder 裁准（10:1x 回令，四款）**：a. 触发=同一告警源连续 3 轮（15min 节奏即 45 分钟）未认领→升 BOD 直通道；b. severity 前缀随 UNACKED 轮数递增+重发文本带 UNACKED 轮数（技术面=本席候办，**窗毕后施工**防扰动观察窗）；c. 认领凭证=处置留痕（「已读」不算——硬门签认必落卷同族教训）；d. 流程正身入 COS 值守规+COO 树单合同面同批；今晨催办梯与告警 ladder 合成值守双梯，梯尾归 BOD。LG-064 三次真实捕获零假阳性记正例入观察口径。
 - **SDE 考古咬合（10:19 回执）**：watchdog.log **17:47:05 DOWN→17:52:03 recovered 正覆盖 23980 出生窗**——23980 高嫌疑=watchdog revive 产物；若坐实则错位成因不在身份而在 watchdog revive 的调用形态（watchdog.ps1=破案钥匙，SDE 本窗即读）。推论增量：13756 系 10-04 03:07 channel.cmd 形手启（SDE 卷 §三.2 旁证）——**watchdog revive 可能从未产出过正形 daemon**，修法方向=revive 路径改 proven channel.cmd 形（或等效非提权 spawn）+daemon 启动自检 fail-fast 兜底。本席已致 SDE 令其验证「revive 历史产出正形与否」。
+- **勘误自领（10:3x 考古卷 0e641383 证伪上条推论）**：「watchdog revive 可能从未产出过正形」**证伪**——考古卷对照表实锚 13756（正形，10-04 03:07:55，写 pidfile+store 正常+jedih 会话）系 watchdog revive（jedih/Interactive）产物；23980 高嫌疑改判=**竞争假设**（watchdog 17:47 revive 失败/慢 vs 非 watchdog 拉起者顶 port；jedih 上下文产物应正形有 13756/31800 双先例）。教训复认：假设须与全量对照表对撞，勿以单点旁证（复活卷「同款 Start-Process 形」措辞）推拉起链归属。
+- **技术门判读（0e641383 考古卷+方案一页，10:3x 核毕）：APPROVE 附三核意见**——①【须改】无人登录守卫判态失败语义 fail-open→**fail-closed**（登录态不可判=不 revive+ALERT 行注记「登录态不可判不拉起」；红线①合同原文推导：不可判≠可拉，宁可不拉）；②【注记】判活三件套 jobCount>0 的合法空 store 边界写入方案注释（现役 7 job 恒真，不阻施工；未来合法空 store 需基线配置）；③【并案追问】**8711（TriRLC 16500）19:50 重启后正形拉起者是谁**——考古卷 §二 实锚其重启即写 pidfile（正形态），若系无人登录窗内被正确拉起，该拉起机制=已实证的正确模板（TriMLC 对抄候选+破案钥匙），与 systemprofile 提权验证并列为最后两块钥匙。FSD 件 scope 增补：件③加 boot 恢复清扫（陈旧 running→idle 开机归位，防下次重启 l2-scan 型永停复发）；件② token 落盘限权（user-only ACL）注记。缺陷件④（l2-scan 完成链断裂=TriMLC 特有新形态第三签名，nextRun 冻结+不自愈）已入 memory 分野档案与 TriMLC 维护批。
 
 ## 使用依据
 
