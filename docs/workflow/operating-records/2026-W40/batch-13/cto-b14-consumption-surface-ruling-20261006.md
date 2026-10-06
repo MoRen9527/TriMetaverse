@@ -12,7 +12,9 @@
 1. **运行时 import 实锚**：TriMLC `src/cli.ts:17` `import { defaultL2FlagPath, makeCoreIO, runCli, type ProbeReading } from '@trimetaverse/tricode/trimodel-cli'`——同段注释「TASK-TRIMODEL-RECOVERY-LADDER-01 波③：TriModel 直连恢复梯命令族（core=TriCode trimodel-cli）」=设计面即消费，非偶然引用。
 2. **物理链实锚**：TriMLC `node_modules/@trimetaverse/tricode` symlink→TriCode 仓（2026-10-03 04:09 建），在位。
 3. **「非消费面」表述溯源**：本席全部落卷文件 grep 零命中——该表述系会话层口头/转述面，从未落卷成裁定。FSD 所指 factual=STE walkthrough 卷 v1-v3 归因链 sg 面 ERR_MODULE_NOT_FOUND（`Cannot find module .../tricode/dist/trimodel-cli/index.js`）——**该 factual 系 sg /tmp 独立 clone 环境缺兄弟源（file: 协议依赖 ../TriCode 无物）+缺 dist 构建产物（bare clone 无产物，v4 勘定）的环境缺源读数，非消费关系反证**。附包名勘误成立：正形=@trimetaverse/tricode/trimodel-cli（子路径 exports），顶层 @trimetaverse/trimodel-cli 包不存在。
-4. **sg 面裁定域维持不动**（FSD 自守边界正确）：sg 面缺源是部署形态事实，勘差仅及本机面消费关系。
+4. **sg 面裁定域维持不动**（FSD 自守边界正确=机位域分工，勘差仅及本机面消费关系）。
+
+**勘补（18:2x，SDE 互证读数后，同日勘补合规）**：第 3 点「sg 面缺源」表述**勘正**——缺源 factual 系 STE /tmp 独立 clone **测试树形态**（v1-v3 归因链正身），非 sg 部署位形态。SDE b14 卷 §二.3 互证实锚：**sg TriMLC 部署位 symlink 在位+ESM 探针通**=sg 部署位同样有源且同消费。裁定结论**不变且强化**：消费关系两机成立，bump 覆盖面=本机+sg 部署位；sg 面 8713 型部署位的 bump 生效时点同样系「下次重启」，sg 侧重启窗照各自车道排程，不在本卷 scope。
 
 **b14 覆盖面定谳**：bump 变更面=io-kernel uniqueBackupPath（写点内部加固，API 签名不变）+CORE_VERSION 字符串——对 trimodel-cli 出口面零破坏；TriMLC 消费链=四仓 symlink 活连 4/4 读数已实测（FSD 读数卷 72239fd3）。**bump 有效性覆盖 TriMLC，无豁免面。**
 
