@@ -196,3 +196,8 @@
   - b6ba28a7 merge: 并行笔收编（COO 催办位落卷线）
   - 0360691f docs(coo): 第二催办位接令落卷——树单 §二检查点行增补在途必查项（在途时长/最后动静时点）+workbench 09:2x 监督缺位认领笔（N5 停摆 33+min 未补催自领/30min 在途对表扫 cron 0dfda9ba 落地/催办梯闭环备案）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 4b361881 后新增 3 条 commit：
+  - 3937865c merge: 并行笔收编（COO 树单合同注入接令笔 × watcher 09:30 巡检笔）
+  - 3a607f24 docs(coo): workbench 09:3x 笔——树单合同注入接令（BOD 裁准：开工/收口笔自带 in-progress.json 账本同步行，下轮拆树起注入生效；LG-058 既有树单不回溯，COS 已录五节点兜底对表）
+  - 9d99501b docs(cos): 账本补登记 LG-058 五节点（BOD 09:3x 增令）——N1 closed（BOD 定性）/N2 open 候验收/N3-N4 open 候 STE+流水线正式读数/N5 open 在途施工；破 FSD 死 33+min 零告警的空账本态
+- registry：v2.1；今日 registry 提交无变化
