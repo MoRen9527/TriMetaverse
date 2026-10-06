@@ -336,3 +336,9 @@
   - 6d63af20 merge: 并行笔收编（N1 收口笔窗并行段带平）
   - bd6b65ca docs(coo): LG-065 N1 收口毕入卷(17:59 交接锚·活体追认禁重启保活/§9 正身 9682f04/m-cos 零改动三面零diff/黄金段全责衔接起·值席 7x24 时代开闸),候验面=STE N3 锚②③
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:20 +08：自上次进度提交 590aa94d 后新增 4 条 commit：
+  - 52f11d5a merge: 并行笔收编（b14 现势笔窗并行段带平）
+  - 3ac62b4e docs(coo): LG-065 现势滚动——FSD b14 本机面毕转 SDE 交接+N2 备工毕(判据④按 CTO 勘正定形·10-07 不变)+stop 修候 BOD 并窗结论后定时点不抢先
+  - 72239fd3 docs(fsd): b14-core-bump 本机面施工读数卷——TriCode d181946 双义同批落卷+门禁四道全绿读数+四仓 symlink 活连 4/4 读数+三项勘差如实注记（TriMLC 消费面勘差候选/TriCade 本机缺位/checklist ESM 命令形勘差）+SDE 面交接项
+  - ab3b9cab docs(cos): LG-065 现势随动（COO 18:02 采认）——N1 收口候验四件锚全套入行+N2 前置解除 FSD 10-07 施工+N3 备窗·值席 7×24 时代开闸
+- registry：v2.1；今日 registry 提交无变化
