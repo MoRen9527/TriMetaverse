@@ -308,3 +308,9 @@
   - 6bc373ec merge: 并行笔收编（勘误笔窗并行段带平）
   - 6bbe7ce1 docs(coo): LG-058 树单勘误——终复核卷引用 8439fabf→c354a580(BOD 勘误 13:59 竞笔重 commit 孤儿,悬空 hash 防考古踩坑)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:20 +08：自上次进度提交 ac255b70 后新增 4 条 commit：
+  - b8ff735b docs(coo): 扫模板候办入 workbench——对表扫下次设扫补 JSON.parse 判据(COS 裁一兜底归 COO 面,防扫撤窗盲区复现),主判据 pre-commit gate COS 面已落
+  - 5545b70c docs(cos): BOD 14:12 两裁落位——裁一 pre-commit gate 已落本机仓（负向实弹过·本笔正向放行验证）+对表扫 JSON.parse 兜底知会 COO+sg 面仓 gate 候办；裁二 ledger-concurrent-write-p2 候办条入账本+大表候办区；定性采认留痕
+  - 0e3cdcda merge: 并行笔收编（勘误对表窗并行段带平）
+  - dd7bca7f fix(cos): 账本 JSON 损坏修复（9f6b1bd4 SDE 候办条插入吞 l2 条 id 行致断链·自 470cccf1 合法基底重建 13 条全量断言过）+大表行22升版链闭环笔（五环 DEPLOY a02d89b+环B勘误闭合+终复核 13:53 PASS c354a580→候 CEO 终验）+N2/N5 闭环刷态
+- registry：v2.1；今日 registry 提交无变化
