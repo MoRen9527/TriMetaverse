@@ -259,3 +259,8 @@
   - 878fea3a docs(coo): LG-058 SDE 开工回执+两级包形态裁准 APPROVE——sg→R-HY ssh 物理约束/D-17 守约,Stage1 sg 构建+本机传输腿+Stage2 R-HY 自包含单发全自动,无人值守语义保持裁准,硬门①GO.flag 停等形逐字落地,N2 演练细化一条(快照含可断言差异防同值覆写),SDE token 回显安全自报按 10-02 先例认收
   - e0b7a475 docs(cos): LG-058 升版流水线触发毕账面照录——大表行22+账本N2/N5刷触发毕态（候信链四挂点盯防·备份锚报备到即转BOD）·候BOD基线同步令diff
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:50 +08：自上次进度提交 a81fbba8 后新增 3 条 commit：
+  - 7c239872 merge: 并行笔收编（SDE 开工笔 07e206d0+COO 开工现势笔带平）
+  - d6ad556a docs(coo): LG-058 SDE 开工毕+Stage1 构建中——job 1923c530 12:40:32 首轮触发,Stage2 预置毕(N2 双断言内嵌),sha256 对表全匹配,开工笔 07e206d0+账本同步行(树单合同新规首例),BOD 采认+STE 口径认收双信毕
+  - 07e206d0 docs(sde): LG-058 升版流水线开工笔——Stage1 挂单 TriMMC 8712 job 1923c530（首轮 12:40:32）+Stage2 R-HY 预置毕,双脚本 hash 对表匹配,硬门三件嵌入+COO 差异模板细化,账本增条 lg058-rhy-upgrade-pipeline+N5 开工回执同步,候备份锚报备
+- registry：v2.1；今日 registry 提交无变化
