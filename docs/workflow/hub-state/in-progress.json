@@ -115,5 +115,14 @@
     "priority": "默认（LG-058 升版流水线，COO 12:13 触发序③+12:2x 两级包 APPROVE）",
     "status": "closed",
     "note": "R-HY 升版流水线执行毕（终态 TriModel 45757bd+TriRMC a02d89b——sha 变更点：99806cf→a02d89b 系 FSD strictNullChecks 最小修，COO 类推准裁+BOD 采认，diff 断言 2 文件 10+/2- 独立验+tsc 全量绿验讫，CTO 事后追认随卷）。全链 12:40 开工→13:22 Stage1 绿（轮 10，十轮排障：aegis 文件锁 B64 绕过+workspace 双锚+tsc 注入+@types 两补+TriRMC 存量类型债 FSD 修）→13:23 传输腿→13:23:25 备份锚报备（COO+BOD 双 GO）→13:25:25 HOLD 设计内→13:25:42 重触发→13:25:52 STAGE2 DONE 五环全毕。环C 探针路由形勘误自我修正（集合 404→per-face 实锚）；环D rmc 双断言 PASS+rlc 候建态如实；环E 拉取链 pulled fresh 实证；smoke DEPLOY 态成立。**环B 疏漏勘误+本体补重启（13:46 BOD 复核问实闭合）**：环B 漏 trirmc.service 本体（8712）——实勘两 unit 同 ExecStart 同 dist 非设计内不重启；补 restart 13:46:38 pid→2064924+healthz 200 jobCount=3 零降级+pulled fresh 拉取链同谱实锚，版本一致性恢复（卷 §二.7）。读数卷=trees/lg058-remediation-20261006/rhy-upgrade-pipeline-20261006.md §二.6+§二.7；基建影响面（aegis 文件锁四联征+B64 绕过）候 CTO 知情+CAO 入册。后链毕：STE 序④差分零漂移（b0e9d467）→BOD 复核闭合→呈 CEO。"
+  },
+  {
+    "id": "ledger-concurrent-write-p2",
+    "treeAnchor": "BOD 14:12 裁二",
+    "treePath": "BOD 消息面（裁二令·候排窗候办）",
+    "owner": "COS",
+    "priority": "P2（候排窗并入制度面·与 D-43 后打包窗同批排）",
+    "status": "open",
+    "note": "账本并发双写同窗竞争候办（12:16 COS×SDE 310c8561 同窗实证·幸无叠损；9f6b1bd4 吞行断链 3h 同族）。方向=单写者收口：他席插条经 COS 中转 or 原子 append+冲突检测。防坏笔面已落 pre-commit gate（本机仓 .git/hooks/pre-commit·14:12 BOD 裁一·负向实弹过）；sg 面仓 gate 同步候办；对表扫 JSON.parse 兜底判据候 COO 下次设扫模板。"
   }
 ]
