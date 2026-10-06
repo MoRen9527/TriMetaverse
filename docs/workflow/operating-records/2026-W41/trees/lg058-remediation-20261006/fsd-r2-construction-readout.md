@@ -61,6 +61,18 @@
 - 全链时点: GO-r2 20:50 批→部署毕 20:57 毕报→BOD playwright 复验 PASS 20:59→**CEO 亲测「左右布局 pass」21:03:22**——更正令 20:31 起 ~32 分钟闭环
 - COO 认收传达 21:04（msg 收讫）: 二轮升版本体收口；STE 非作者走查照跑作质量门归档（结论可引 CEO pass 终验背书）；执行卷 ebeb3c2a 收口认账
 - 本席二轮义务至此清；候办照前令: github 补推 ×2+根治设计小方案+明晚 N2
+
+## 八、三轮施工段（机器位三段式正名，CEO 21:22 令+BOD 21:3x 端口勘正）
+
+- 令面: 四域签三段式全格式（压缩形清零）+机器位正名 sg→M-SG/河源→R-HY+四签定谳端口（BOD 勘正 M 服务域=8712 实勘，8710 无监听）；值面 endpoint 存量零触碰边界
+- 代码: **0a2ce5b**（ui/index.html 12 处正名+测试三件同步——②f 断言换全格式/⑥案压缩形勘正/新增②g 正名案（压缩形·河源·裸 sg 词边界渲染面清零）/trimmc 代际锚 TriMMC（M-SG)）；代码标识符面（fb-sg/sg_admin_token/claude-fallback-sg）非机器位称呼不动；已推 sg bare（ls-remote 证实）
+- 自测门: UI 四门 **52/52**；全量 **345/331/0/14** 零失败零归因；lint 108 errors 与二轮基线同零新增；build:verify 绿；显示层 8710 清零独立 grep 验
+- 流水线: Stage1-r3 绿 13:36:45Z（六条值面锚: 全格式签/M-SG/R-HY 在场+河源/压缩形零残留）；包 sha256 **14947679…77e**；传输腿 R-HY sha OK；Stage2-r3 环A 锚毕 13:37:39Z（dist bak a6af0b9b…f50=与二轮同指纹·纯前端 server.js 零变实证+cfg tar 86d30fa4…575）→**HOLD 停等，硬门①报备 13:39:57Z 双发（f44652f9/534e06e4），候 GO-r3**
+- r2 教训落正形: 环C 探针文件式 grep（管道零参与）；传输腿 scp 双文件合发被 sg 侧老 scp 拒（拆两条）实录
+- 脚本母本: `stage1-r3-sg-build.sh`（sg sha256 7c94991f…c09）+`stage2-r3-rhy-execute.sh`（R-HY sha256 a5e9b0fc…457）
+- 时窗自查: 21:39 报备，23:00 前毕充裕
+- **GO-r3 双批（COO 21:40+BOD 21:40）→续环一次绿**: 13:41:15Z 续环→deploy-sha 0a2ce5b 断言 ok→环B active 13:41:19Z→/health ok+环C 全绿 13:41:22Z→**STAGE2-R3-DONE（文件式探针零假阴性，r2 教训闭环实证）**；二轮锚⑤ menu-full 保持+正名锚全绿（全格式签/M-SG/R-HY 在场+河源/压缩形渲染面零残留）；三服务终态 active，TriRMC 双 unit 零触碰；GO flag/中间物清 13:41:54Z
+- 第①刻毕报: 13:42Z 双发 COO+BOD（②f mock 8710 边界外单列注明遵 BOD 令）；BOD playwright 复验候触发
 - 一轮执行卷: rhy-upgrade-pipeline-20261006.md（形态/硬门/教训全供）
 - 三机现势实勘: sg bare dev=0359b89（ls-remote 值面）/R-HY 在役 deploy-sha=45757bd
 - 纪律: 硬门①报备义务（一轮 COO 令原文）/D-17 本机传输腿/B64 内联 aegis 对症/值面三断言（截断伪影与键值掩码面零触碰——本卷零 token 值出机）
