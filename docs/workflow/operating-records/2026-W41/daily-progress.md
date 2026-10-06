@@ -497,3 +497,8 @@
   - 6b073293 docs(ste): r5 卷终态——r5b复测三形态200全绿+DeepSeek双unit落盘v4+UI已落生效+env钉定语义勘验修正+双unit回执竞争现势入卷
   - 72e77ac4 docs(fsd): LG-058 r5b BOD护栏②复验四点PASS关账锚——r5b面闭
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:40 +08：自上次进度提交 89fd8529 后新增 3 条 commit：
+  - 760a767d merge: 并行笔收编（值席窗并行段带平）
+  - 749673eb docs(coo): 值席树§四 04:3x对表扫——r5b线全闭转记(BOD护栏②四点PASS+STE复测三形态200全绿,六轮全绿终态候CEO深验)+分叉带平
+  - f4ad915c docs(fsd): LG-058 r5b STE复测PASS活体实锚——缺陷修复面全链关闭+两现势归属标注
+- registry：v2.1；今日 registry 提交无变化
