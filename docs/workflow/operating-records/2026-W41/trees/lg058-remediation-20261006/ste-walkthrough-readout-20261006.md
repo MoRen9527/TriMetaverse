@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（STE 非作者走查读数正身；走查门四条照 BOD 派工令 10:2x）
 - syncMode: static
-- lastSyncedAt: 2026-10-06T11:15+0800（date 现查 2026-10-06T03:15:44Z → +0800 11:15；流水线终读数 v5 回填毕）
+- lastSyncedAt: 2026-10-06T12:10+0800（date 现查；v6b 终读数回填毕+P1 复验正式读数成立）
 - 走查席: STE 小柯（m-ste；非作者——本波九 commit 作者=FSD，符合「非作者手测」硬门）
 - 走查对象: TriModel 七笔 c4d9137(N4)/5b4dedb(N1)/e099329(N3)/46b80b2(N2)/ed01fc2(N5-1)/51b8e39(N5-2)/366eecb(N5-3)+lint 勘补 12caab0；TriRMC 两笔 8249eb7(N1 tier)/99806cf(N5-3 daemon)
 - 受理依据: `../lg058-ceo-walkthrough-9items-20261006.md`（8835f58d，CEO 九条原话+BOD 定性表）
@@ -136,12 +136,19 @@
     | ④ Employee Registry | 82（1 子测试） | `expected 14, got 15`——TriCompany v3 contract 源实载 15 条 vs TriRMC@8249eb7 测试硬编码期待 14 | **跨仓硬编码漂移**（TriCompany 席位源增条后 TriRMC 测试期待值未跟）——真测试腐化候选但非本波对象，候 TriRMC 测试维护波+CTO 知情 |
   - N2/N5 对象域 TriRMC 套件（config-cards/ui-fourplane/key-cache/sanity 56/56）全绿——本波对象域质量面成立。
   - 附记：v5 build 序修正（TriModel 先于 agent-core）后 `ac_build_exit=0`——该修正对流水线基座成立（虽非②族根因）。
+- **v6 事故笔（勘误自领）**：v6 job 6c738670 于 2026-10-06T03:34:33Z 执行即崩——exit 126「`/tmp/ste-lg058-pipeline-v6.sh: Permission denied`」，8ms 终态，零读数产出。根因=本席部署 v6.sh 漏 `chmod +x`（对照 v5 脚本 `-rwxr-xr-x` 取证）；本席「v6 在跑」主张系未活体现探的推定=违活体优先诊断法，勘误入档（BOD 12:06 裁回采认记账）。处置：`chmod a+x`+`bash -n` 过→照原 payload 重提 **v6b d967e1e9**（12:03:43+0800 executor 拾取，实证 running+fleet 属主）。
+- **v6b 终读数（P1 复验正式读数；45757bd+99806cf 双新顶；date 2026-10-06T04:0xZ 毕，duration 135376ms 与 v5 141358ms 同量级正形）**：
+  - 顶确认：**TC=a3893ba / TM_SIB=TM=45757bd / RLC=5481f4f / RMC=99806cf** / node22.23.3——P1 修复顶+TriRMC 平 bare 顶双兑现（§6.3 候补线闭合）。
+  - **TriModel 全量：331 tests / 317 pass / 0 fail / 0 cancelled / 14 skipped，exit=0——全绿**（v5=330/316/0/14；+1 测试且过=45757bd 新顶增量，P1 双断言门禁不破全绿）。
+  - TriRMC 全量：472 tests / 462 pass / 10 fail / 0 skip——**与 v5 逐行同谱零漂移**：not-ok 实名行 8 行四族不变（33/34 族②、60-63 族①、64 族③、82 族④），定性沿 v5 口径（TAP `# fail 10` 与实名行 8 的差=子测试计入既存口径，v5 同谱非 v6b 新异）。**对象域（N1-N5）零失败**。
+  - 判读：**v6b 绿（BOD 11:56 放行闸过）**——对象域零失败+失败全归因非对象域+双新顶确认，P1 复验正式读数成立。
 
 ### 6.3 版本差标注（工作接手规则）
 
 - TriModel：bare dev 顶=12caab0 ✓（七笔整改+lint 勘补全在）。
 - TriRLC：sg bare 顶=5481f4f（v5 GATE 族 TRIRLC_HOME pin 消费源；GATE L3 对该版本全绿=锚面读数有效）。
 - **TriRMC：sg bare dev 顶=8249eb7，缺 99806cf（版本差 1 笔）**——FSD 平 bare 时序（树单 N5 行两笔候升版窗同流）；本卷 TriRMC 流水线段以 8249eb7 为基跑（读数标注基线），99806cf 段读数以本席本地独立复跑 18/18 附卷，正式流水线读数候 FSD 平 bare 后补跑。推笔归 FSD/升版窗，本席不撞部署面。
+  - **候补兑现（v6b，2026-10-06 12:05）**：RMC_TOP=99806cf 平 bare 顶已由 FSD 落位，v6b 正式流水线读数即 99806cf 顶全量（472/462/10 四族同谱）——本条版本差闭合，§6.2 v6b 段为正读数。
 
 ## 七、质量门禁评估（三分法）
 
@@ -174,7 +181,7 @@
 | 切态路径等价性 | PASS | JS 真实路径=index.html L1129 `classList.toggle('menu-full', withData>=4)` 数据驱动自动切；本复验 classList 直加同类名同源 CSS，断言有效性成立 |
 | FSD 双断言 it（⑤b） | 消费认收 | 桩基几何判别力=事故注入自证（nav.remove()→门必不成立）；其 jsdom 恒零矩形局限已由本表②项真浏览器几何补位——两层桩/真合拢，spec 侧桩基形态注记 FSD 已带 |
 
-**复验结论：P1 修复 PASS（五项四过一非阻塞未做）**——CEO #1「分左右」视觉实态兑现，文案与视觉自洽回归。流水线正式读数（45757bd+99806cf 双新顶全量）=v6 在跑候回填（§6.2 续）；v6 毕回执 BOD 终裁。
+**复验结论：P1 修复 PASS（五项四过一非阻塞未做）**——CEO #1「分左右」视觉实态兑现，文案与视觉自洽回归。流水线正式读数（45757bd+99806cf 双新顶全量）=v6b 毕已回填 §6.2（TriModel 331/317/0 全绿+TriRMC 四族同谱对象域零失败）——**BOD 11:56 放行闸判读=绿**，v6 事故笔（126 崩零读数）与 v6b 重提（d967e1e9）如实并档；清场 7 笔按 BOD 11:52 备料令执行，毕后回执 COO 触发升版。
 
 **附注（收信时序对表）**：FSD 知会信状态条落款 11:40 晚于本席收信 hook 现戳 11:29:38+0800=时序倒挂——按「自报时点晚于收信方现戳=必错即认」惯例由 FSD 侧认勘，本卷以 hook 现戳为本段时序锚，不影响读数面。
 
