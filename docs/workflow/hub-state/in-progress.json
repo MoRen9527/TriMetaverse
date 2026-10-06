@@ -142,5 +142,14 @@
     "priority": "中（CEO 17:21 批方向·候排非候裁）",
     "status": "open",
     "note": "TriRMC 合并回单单元+trirmc-mc 名字消失修复。**已排 10-09（周四）晚窗**（BOD 17:29 认账落单·态 候排→已排）；施工前置双门（门1=LG-058 CEO 终验毕/门2=CTO 合并技术门）任一 10-08 18:00 未齐顺延 10-10 或 10-13 即报禁自动再滑；施工纪律四条全带任务书。"
+  },
+  {
+    "id": "memory-mirror-discipline-d44",
+    "treeAnchor": "99d74cda",
+    "treePath": "TriMetaverse/docs/memory/（镜像位正身：99d74cda 初装+aeedeea5 自动首笔）；候落正身=TriCompany/docs/engineering/governance-memory-index.md（LG-016）+纪律册 D-44",
+    "owner": "CAO（会签落册）",
+    "priority": "默认（CEO 20:27 令流转·BOD 20:35 呈请）",
+    "status": "open",
+    "note": "项目记忆随仓镜像纪律铸条+映射真源增补（BOD 20:35 呈请·COS 20:38 转 m-cao 回执 f7254d53）。两件：①governance-memory-index.md（LG-016）增补镜像位指针（TMV docs/memory/<name>.md 随 git 不丢·换机/迁移可达）；②D-44 候编号铸条三款=写记忆后 sync 机制自动镜像免手动／教训族引用一律指 TMV 镜像位（含 D-18 根因族段既有引用随批补指针）／下架=人工删镜像+commit 留痕。落地事实锚（BOD 已建·COS 20:38 轻核验四锚过）：镜像位 99d74cda+自动首笔 aeedeea5+TC sync 脚本 8d5f225（schtasks Sync-Memory-Mirror=Ready·每小时+登录自启·只增改不删+源缩量判卫+staged 面检查）+源 MEMORY.md 头注。候 CAO 会签落册·BOD 复核随侍。"
   }
 ]
