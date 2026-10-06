@@ -1,0 +1,1 @@
+"{\n  \"honestNotes\": [\n    \"菜单形态：左侧菜单（常驻骨架）· 有实数据卡 0/4 · 缺卡菜单项置灰待数据\"\n  ],\n  \"navComputed\": {\n    \"flex\": \"0 0 210px\",\n    \"flexDirection\": \"column\",\n    \"width\": \"210px\",\n    \"margin\": \"0px 0px 12px\"\n  },\n  \"layoutComputed\": {\n    \"display\": \"flex\",\n    \"gap\": \"14px\"\n  },\n  \"menuModeState\": \"no-debug-hook\",\n  \"cardsCount\": 0\n}"
