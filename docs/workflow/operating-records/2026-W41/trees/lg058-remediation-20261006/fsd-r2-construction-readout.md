@@ -140,3 +140,4 @@
 - **GO-r5b 签发（BOD 03:2x 三面复核 PASS·裁 b 即时走·三护栏）→全链毕（防双实例正形首用）**: 收令 19:27:38Z 即查停等实例存活——首实例 pid 2110137 存活且在停等窗（剩 ~13s）、flag 未落→正形只挂 flag 不起二实例；flag 19:27:57Z 落，首实例 19:27:51Z 已 HOLD 退出（早 6s，设计内安全停零部署）→旧实例确认死+重入单实例：环A skip 复用备份锚→GO 读入 19:28:12Z→deploy-sha 73ca1cc 断言 ok→**active 19:28:15Z**→/health ok→环C 全绿→**STAGE2-R5B DONE 19:28:16Z**
 - **活体终刀 19:28:4xZ（独立于环C 复核）**: 三服务 active；TriRMC 双 unit 零触碰实证（ActiveEnterTimestamp 13:46:38/13:25:47 CST=早于本窗未重启）；活体守卫面 LOCAL_CONFIG_KEYREF_ALLOWED×2 命中（活体进程所读编译文件）；/ui 独立落盘 133862B 十锚 PASS+河源零残留；中间物双机清毕（in 包+备份锚+READOUT+log 留审计）
 - 毕报两刻制: 第①刻部署毕 19:28:16Z+第②刻终刀 19:28:4xZ 合并双发（窗短）；知会 STE 即启两 Key 保存链复测（BOD 令附款）
+- **BOD 护栏② 复验毕·关账 03:30+08（r5b 面关闭）**: 四点全 PASS——①UI 零变实证（/ui 133862B 与 r5 毕报同值，r5b 纯 API 层）②API 门 fail-closed 裸探 401 正确+守卫层证据双卷（本席真链 3/3+BOD 本地独立复跑 3/3 同卷同码，免 token 探针免值面风险）③双 unit 零触碰 Timestamp 实证收讫 ④防双实例正形首用落地认可——执行卷 99de9a47 收讫；STE 复测窗衔接，本席 r5b 义务至此清
