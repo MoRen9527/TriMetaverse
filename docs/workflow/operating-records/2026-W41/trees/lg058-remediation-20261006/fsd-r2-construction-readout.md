@@ -141,3 +141,5 @@
 - **活体终刀 19:28:4xZ（独立于环C 复核）**: 三服务 active；TriRMC 双 unit 零触碰实证（ActiveEnterTimestamp 13:46:38/13:25:47 CST=早于本窗未重启）；活体守卫面 LOCAL_CONFIG_KEYREF_ALLOWED×2 命中（活体进程所读编译文件）；/ui 独立落盘 133862B 十锚 PASS+河源零残留；中间物双机清毕（in 包+备份锚+READOUT+log 留审计）
 - 毕报两刻制: 第①刻部署毕 19:28:16Z+第②刻终刀 19:28:4xZ 合并双发（窗短）；知会 STE 即启两 Key 保存链复测（BOD 令附款）
 - **BOD 护栏② 复验毕·关账 03:30+08（r5b 面关闭）**: 四点全 PASS——①UI 零变实证（/ui 133862B 与 r5 毕报同值，r5b 纯 API 层）②API 门 fail-closed 裸探 401 正确+守卫层证据双卷（本席真链 3/3+BOD 本地独立复跑 3/3 同卷同码，免 token 探针免值面风险）③双 unit 零触碰 Timestamp 实证收讫 ④防双实例正形首用落地认可——执行卷 99de9a47 收讫；STE 复测窗衔接，本席 r5b 义务至此清
+- **STE r5b 复测毕回执 PASS（03:57+08·r5b 流水线终点闭）**: 三步序列全 200——①假 Key sk-test 形（AUTH_TOKEN 键）保存 200 v2（400 消失·豁免活体实锚）②真 Key 智谱形 200 v3 ③DeepSeek 三件套 200 v4（预览三键齐）；「拉→落→效」链成立（v2 落盘回执 ok）；全链终态双 unit settings.json 落 DeepSeek v4 三键+UI「已落生效」；STE 卷=trees/lg058-remediation-20261006/ste-r5/（sg bare 6b0732934）。**r5b 缺陷修复面就此全链关闭**（BOD 裁 a→FSD 修→部署→护栏② 复验→STE 活体复测五段全绿）
+- STE 附报两现势（本席记录+归属标注，不代转不代决）: a) 双 unit（trirmc 8712/trirmc-mc 8710）各落各盘+卡面回执竞争回写（file 字段交替覆盖，数据无损害）→**CTO lane 候办**（语义面关注，与候办清单「密文存储」并列候 CTO 排窗）；b) 存量密钥 DOM value 回显（r5 编辑面回填语义，password 掩码但同源可读）→**CAO 知晓面**（第一知情人 STE，本席卷面留痕）
