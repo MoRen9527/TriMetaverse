@@ -502,3 +502,6 @@
   - 749673eb docs(coo): 值席树§四 04:3x对表扫——r5b线全闭转记(BOD护栏②四点PASS+STE复测三形态200全绿,六轮全绿终态候CEO深验)+分叉带平
   - f4ad915c docs(fsd): LG-058 r5b STE复测PASS活体实锚——缺陷修复面全链关闭+两现势归属标注
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @07:30 +08：自上次进度提交 8184e531 后新增 1 条 commit：
+  - f7df7e0a docs(ste): LG-058 r5 卷增补§2.8/§2.9——CEO 07:08 裁回滚 GLM 态执行毕（v5 保存200+双unit落盘全绿+UI已落生效·判定PASS）+DeepSeek v4 作废留卷注记
+- registry：v2.1；今日 registry 提交无变化
