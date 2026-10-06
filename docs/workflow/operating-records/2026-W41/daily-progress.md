@@ -285,3 +285,11 @@
   - acf60a04 docs(coo): LG-058 五环读数卷落树+流转段落卷——SDE 侧执行毕(异常滑点零),值面终态 TM 45757bd+RMC a02d89b 在役,流转三向毕(CTO 追认件/BOD 复核/CAO 入册候件),候 STE 序④
   - 310c8561 docs(sde): LG-058 R-HY 升版流水线收口——五环全毕 DEPLOY 态（TriModel 45757bd+TriRMC a02d89b 在役，sha 变更点 99806cf→a02d89b 随 CEO 链标注）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:50 +08：自上次进度提交 cd6a32db 后新增 6 条 commit：
+  - 470cccf1 docs(sde): LG-058 环B 疏漏勘误+trirmc 本体补重启闭合——BOD 复核问实(13:46)定谳两 unit 同 ExecStart 同 dist 非设计内不重启系环B 漏 unit;补 restart 13:46:38 pid 2064924+healthz 200 jobCount=3 零降级+pulled fresh 同谱实锚;token 回显操作瑕疵自报候定性;卷 §二.7+账本同步
+  - 595cbc06 docs(ste): LG-058 序④卷增补——BOD 问实补验闭合(本体起动时戳缺口自领:active≠重启)+13:46:38 本体补重启终态三进程全在役新 dist(本体拉取链活体绿 pulled fresh 2 providers)+stage2 脚本 stop/start 清单缺本体实锚(缺陷候选候裁)+FACES_PROBE 勘正并档闭案
+  - 16cec9c2 docs(coo): LG-058 STE 序④毕 PASS 落卷——执行序①②③④全毕(b0e9d467:五环零矛盾+锚漂移差分零漂移+N2 证据链完整+per-face 补位闭合),终复核三卷齐流转 BOD
+  - b0e9d467 docs(ste): LG-058 序④独立复验卷落树——五环全过 PASS+锚漂移差分零漂移(99806cf→a02d89b not-ok 8行逐行同谱)+per-face 卡面核验补位闭合(路由真形 3333+rmc applied v4)+值面出机事故笔(BOD 定性不轮换)+假差分/疑点误报两自纠笔+v7 毕即 delete 残留 ZERO
+  - b1973863 merge: 并行笔收编（D-43 终态落卷窗并行段带平）
+  - 4f043d9b docs(coo): LG-058 D-43 落章毕终态落卷——CAO 13:39:55 回执(入册生效 13:38+sg 同推 23e044a 同顶核验+候办三线在册),基建发现沉淀为纪律收官
+- registry：v2.1；今日 registry 提交无变化
