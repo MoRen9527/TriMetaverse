@@ -90,7 +90,14 @@
     "note": "cron_muh6shv0_korw 单 job 停摆 18h 残留（LG-064 收口候办①）。修法二择=SDE 车道：修覆盖核 or 手工 nextRun 重算；**禁抹 nextRunAtMs 纪律**（缺它永不调度）。验收锚=今晚 8713 修复验证窗。"
   },
   {
-    "id": "l2-aggregate-dedup-minor",
+    "id": "deployment-runbook-multunit-restart-anchor",
+    "treeAnchor": "470cccf1",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/rhy-upgrade-pipeline-20261006.md（§二.7）+.fade/lg058-stage2-rhy-execute.sh 勘误版（模板素材）",
+    "owner": "SDE",
+    "priority": "P3（部署 runbook 初始化素材，候 TriCompany/docs/execution/deployment-runbooks/ 目录立）",
+    "status": "open",
+    "note": "同 dist 多 unit 部署教训正式化候选（2026-10-06 BOD 复核问实+STE 环3 同踩双实证）：①部署对象 unit 集合按 ExecStart 枚举全清单，禁按服务面直觉清单（同 ExecStart 多 unit 形态=同 dist 必须同轮换）②完工断言=ExecMainStartTimestamp>部署时点值面锚（「重启窗完工判据」机械可检化，active≠重启）③探针面盲区自检=journalctl/unit 枚举覆盖部署对象全集。勘误版脚本=.fade/lg058-stage2-rhy-execute.sh（stop/start/rollback 三处+restart anchor 断言已入）。候 CTO/CAO 面定入册位。"
+  },
     "treeAnchor": "11:52 令",
     "treePath": "BOD 11:52 收口候办令（消息面）",
     "owner": "CTO",
