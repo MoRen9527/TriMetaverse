@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（8713 手术施工读数正身；方案卷=同目录 trimlc-8713-fix-proposal-1p-20261006.md，CTO 放行 10:42+18:2x 回执「§四序照案打头，术后读数照三件套+首切锚」）
 - syncMode: static
-- lastSyncedAt: 2026-10-06T19:09:30+08:00（date 现查原样粘贴）
+- lastSyncedAt: 2026-10-06T19:11:00+08:00（date 现查原样粘贴）
 - 施工席: SDE 小布（m-sde）；施工窗=2026-10-06 18:27-18:48；硬门=全过（见 §六）
 
 ## 一、序① 8711 正形拉起者追查（破案）+序①A 提权验证
@@ -171,3 +171,25 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 | **dist 现态** | mtime=**10-04 03:05**（旧 build）+resetStaleRunningJobs **零命中**=移植码未带出实证 |
 | **下窗施工项（钉死）** | **8713 冷起前必 `npm run build`**——同窗一次带出 03c6197（件③移植）+2b1709d（updateJobRun saveCronStore 补刷，行为锚测试两例）；现役 pid 1604 跑 10-04 dist，两笔均在冷起窗生效 |
 | 段2 毕读数（FSD 报，本席转记） | 8711 pid 33280 LISTEN==pidfile+healthz 200+heartbeat 已跑；stop 段修②活体证据（实报 unavailable 不谎报）；8711 cron store 0 jobs→boot sweep no-op；锚1/2/3 齐（锚3 token ACL 有 CodexSandboxUsers(RX) 继承条目候 CTO，主面达标未擅动） |
+
+### 7.6 明日双窗序排定+8713 合流冷起窗施工预案（COO 19:09 排定，CTO 19:1x 知会同口径）
+
+**双窗串行**：①18:00 admin 提权窗（§7.3-2，17:50 自挂提醒 6651f5ce）→②**8713 合流冷起窗紧随（估 18:20-19:00，本席车道）**→③N2 施工 19:30 后 FSD 车道（双窗毕+8713 稳定在役后方交）。
+
+**冷起窗施工序预案（护栏形，照今晚 18:34 先例+build 前置优化）**：
+
+| 步 | 动作 | 自检/回滚锚 |
+| --- | --- | --- |
+| S0 | 三件套基线读数+**store 备份刷新**（当日态新目录）+**dist 备份**（10-04 现役 dist 改名留 bak=回滚锚） | 备份文件在位断言 |
+| S1 | TriMLC-Watchdog **Disable**（护栏） | Status: Disabled |
+| S2a | **在役先 `npm run build`**（TriMLC 仓，零影响——在役进程不消费新 dist；build 炸=中止窗零损，8713 照旧在役） | build exit 0+dist 新 mtime+resetStaleRunningJobs 命中 |
+| S2b | POST /shutdown（token 正途） | port 8713 释放 |
+| S2c | **SQL 归位**：daemon-down 窗 sqlite3 `UPDATE cron_jobs SET state='idle' WHERE id='<l2-scan-id>'` | 查询回读 state=idle |
+| S3 | channel.cmd 冷启（新 dist 即刻生效） | healthz 200+listen==pidfile |
+| S4 | **korw 真刀三断言**：①l2-scan state=idle 落地 ②boot sweep 行为（03c6197 生效实证——残留 running 归位 idle 先于补跑）③saveCronStore 补刷（2b1709d）值面抽查 | jobs API 值面+三件套全绿 |
+| S5 | TriMLC-Watchdog **Enable** | Status: Ready+下轮自然执行零误行 |
+| 毕报 | 三件套读数→COO+CTO | 卷收口段 |
+
+- daemon-down 窗压至 S2b-S3（SQL+boot 秒级）——build 前置于 shutdown 前=down 窗最短化（FSD「冷起前须 build」口径的执行序精确化，语义不变）
+- 2b1709d 同窗带出（updateJobRun 尾补 saveCronStore，行为锚测试两例在 03c6197 同顶）
+- 回滚三层：store 备份+10-04 dist bak+watchdog v1 bak（今晚 §四 回滚方案态延续）
