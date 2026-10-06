@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（8713 手术施工读数正身；方案卷=同目录 trimlc-8713-fix-proposal-1p-20261006.md，CTO 放行 10:42+18:2x 回执「§四序照案打头，术后读数照三件套+首切锚」）
 - syncMode: static
-- lastSyncedAt: 2026-10-06T18:48:17+08:00（date 现查原样粘贴）
+- lastSyncedAt: 2026-10-06T18:58:40+08:00（date 现查原样粘贴）
 - 施工席: SDE 小布（m-sde）；施工窗=2026-10-06 18:27-18:48；硬门=全过（见 §六）
 
 ## 一、序① 8711 正形拉起者追查（破案）+序①A 提权验证
@@ -115,7 +115,7 @@ FSD 18:33:25 落新版（TRILC_DATA_DIR 字面化+USERPROFILE pin，bak-20261006
 ## 五、观察项（不阻门）
 
 1. watchdog 任务 10-05 19:50 后停摆根因候 admin 窗（TaskScheduler Operational log 未启用=根堵点；启用+复验候 admin 窗，涉 UAC 交互需人在位）
-2. **TriMLC Daemon LogonTrigger 任务缺失**（对照 TriRLC 模板实证）=候批新件：登录窗自拉支柱补齐——涉新增拉起面（D-17 敏感面），**候 CTO 裁**，本席不擅动
+2. **TriMLC Daemon LogonTrigger 任务缺失**（对照 TriRLC 模板实证）=候批新件：登录窗自拉支柱补齐——**CTO 裁 A 18:52 APPROVE 即窗，执行态见 §七（候提权完成）**
 3. l2-scan 归位候 FSD 件③或下个 8713 合法重启窗并批 SQL 归位（正形见 §二.3 勘补段）；件③施工时本卷 §二.3 卡态=验收样例；TriMLC boot 清扫家族性缺失 FSD 已报 CTO 候排（TriRLC 侧 resetStaleRunningJobs 03b3220 今日已落可对抄）
 4. cron PATCH 响应体含 command 字段全量回显（API 面改进候 FSD）；本窗两笔命令行头 50 字符入 transcript（低敏非钥值，如实注记）
 5. 序①A systemprofile 提权验证候 admin 窗（与观察项 1 同窗并办）
@@ -127,3 +127,35 @@ FSD 18:33:25 落新版（TRILC_DATA_DIR 字面化+USERPROFILE pin，bak-20261006
 - CTO 知会 18:1x（首切观察锚+8711 考古零部署约束）；COO 触发链 18:2x（验收绿直达+22:30 兜底红线）
 - FSD 件④知会 18:36（channel.cmd 新版时戳对表）；实勘读数全原样（本卷 §一-§四）
 - 纪律：D-04 时刻现查/D-09 BOM+冒烟/D-17 零拓扑擅动/8711 零触碰/token 掩码/禁裸杀（/shutdown 正途）
+
+## 七、裁 A 执行勘补（2026-10-06 18:52-18:59 增补）
+
+CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务（三约束：禁手动 run/验证=query 在册+下次自然登录窗实测/语义注记入卷）；B=候 admin 窗并办（TaskScheduler Operational log 启用+systemprofile 提权验证）；C=korw 本态冻结保留禁手工强改 store，8713 下次冷起窗真刀验收（前提=FSD 段2 前补 TriMLC 侧 resetStaleRunningJobs 移植，已令）。另 CTO 18:5x 采准信：勘正采认+排程采准（三得时点三席咬合）+b14 首切稳定性裁量确认。
+
+### 7.1 裁 A 非提权注册面三通道全拒（终读数）
+
+| 通道 | 读数 | 时刻 |
+| --- | --- | --- |
+| `schtasks /create /sc onlogon /ru jedih /rl limited` | **ERROR: Access is denied** | 18:53:22 |
+| `Register-ScheduledTask -Xml`（对抄 XML，根夹） | 拒绝访问 | 18:55 |
+| COM `RegisterTaskDefinition`（`\TriCompany` 子夹，flag 6+InteractiveToken 3） | **0x80070005 E_ACCESSDENIED** | 18:57 |
+| COM `CreateFolder("\TriCompany")` | **成功**（建夹放行、注册不放行=加固面边界实证） | 18:57 |
+
+- **定性**：本机 Win11 新版 TaskScheduler 加固面=**任务注册全提权域**（含子夹；LogonTrigger 非提权零通道）。旁证：`\TriRLC Daemon` RegDate 2026-08-14=提权时代注册产物。本会话 Medium Mandatory Level 实证（非提权）
+- **对抄 XML 构造毕**：仅 URI/Date/Command 三点异于模板，Principal（jedih/InteractiveToken/LeastPrivilege）+Settings（含 ExecutionTimeLimit PT72H——TriRLC 先例 daemonize 父退形态不触及）逐项原抄
+
+### 7.2 HOLD 依护栏+预置（本席裁量，候裁）
+
+- **UAC 提权不单方面触发**：提权确认门=人在位（jedih console Active 实证在位但不知情），单方面弹 UAC=惊扰+2min 超时风险——依「提权面零擅动」护栏转 HOLD，候 CTO 裁执行通道
+- **预置提权注册脚本**：`C:\Users\jedih\AppData\Local\trimlc-daemon-logon-task-register.ps1`——对抄 XML 内嵌+根夹注册+三点 query 断言+**anti-run 内建**（零 /run 零 Start-ScheduledTask）；BOM ✓+PSParser 0 错 ✓（parse-only，未执行）
+- `\TriCompany` 子夹留置（空夹无害；root 对抄注册优先，子夹为 fallback 候选落点）
+
+### 7.3 两路执行通道候裁（CTO/COO）
+
+1. **UAC 当面即窗**：jedih 在位确认即发 `Start-Process -Verb RunAs`（单次 UAC 确认）→ 脚本即成
+2. **并入明日 admin 窗（裁 B 并办）**：一次提权三得=TaskScheduler Operational log 启用+systemprofile 提权验证+本注册——候 COO 定窗
+
+### 7.4 三约束遵守态
+
+- ①禁手动 run：全程零 run 触发（脚本 anti-run 断言在位）；②验证=query 在册三点（脚本内置）+下次自然登录窗实测（候窗）；③语义精确化注记=本段+§一.1 判读在案（**模板覆盖「重启+登录」窗非无人窗**——无人窗守卫=watchdog v2 登录守卫 fail-closed 互补，双层拼图闭合）
+- 裁 B/C 知悉态：B 候窗（两路候裁 7.3-2）；C korw 冻结遵守（本席零 store 手工触碰；8713 下次冷起窗三得=件③移植生效+SQL 归位+korw 真刀，候 FSD 移植毕+段2 触发链）
