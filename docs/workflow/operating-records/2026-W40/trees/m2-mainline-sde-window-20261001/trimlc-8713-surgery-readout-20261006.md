@@ -188,7 +188,7 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 | S2d | **korw 归位双分支**（COO 治标令 19:20 并入+CTO 裁 C 真刀验收的调和序）：**分支 A（主）**：冷启后读 korw state——boot sweep（03c6197）自动归位 idle=**真刀验收达成**，SQL 跳过；**分支 B（兜底）**：sweep 未归位（03c6197 缺陷实证）→POST /shutdown 二次→停机态 sqlite3 `UPDATE cron_jobs SET state='idle' WHERE id='cron_muh6shv0_korw'`（**state 单字段最小写面，nextRunAt 禁抹不碰**——过期值保留，冷启后调度器 catch-up 立即补跑+自算刷新 nextRun=COO「重算」终态由调度器达成零手算误差）→再冷启 | 分支 A：state=idle 且零 SQL 写面；分支 B：SQL 回读 idle |
 | S4 | **korw 归位读数四件（毕报带）**：①state=idle 落地 ②nextRunAt 合理（调度器自算非冻结值）③**首滚验证**（补跑一轮正常收尾，非再挂）④saveCronStore 补刷（2b1709d）值面抽查 | jobs API 值面+三件套全绿 |
 
-**双分支序设计理由（报备 COO/CTO→CTO 19:2x 采认不纠偏，卷 03864ae1）**：SQL 治标前置与 CTO 裁 C「korw 本态=件③验收样例真刀」互斥（同一样本二选一）——sweep 优先=保全 CTO 真刀活体样本；sweep 失败时 SQL 兜底=COO 治标终态保证（state=idle 必达）。最坏路径=两次停机（down 窗仍分钟级内，黄金窗无碍）；分支 A 路径 down 窗=单次冷启。若 sweep 归位成功，sweep 行为实证+ korw catch-up 首滚=一次冷起双验收。
+**双分支序设计理由（报备 COO/CTO→双 C-level 齐认：CTO 19:2x 采认不纠偏卷 03864ae1+COO 19:27 认账「不改单分支，SQL 直改优先不采」）**：SQL 治标前置与 CTO 裁 C「korw 本态=件③验收样例真刀」互斥（同一样本二选一）——sweep 优先=保全 CTO 真刀活体样本；sweep 失败时 SQL 兜底=COO 治标终态保证（state=idle 必达）。最坏路径=两次停机（down 窗仍分钟级内，黄金窗无碍）；分支 A 路径 down 窗=单次冷启。若 sweep 归位成功，sweep 行为实证+ korw catch-up 首滚=一次冷起双验收。
 
 **CTO 采认三细化（照录进预案，03864ae1）**：
 1. **SQL 兜底写面**：state 单字段（running→idle）；next_run_at 禁置空禁手改保持原值——catch-up 自算=派发恢复自然路径（比 COO 裁文「重算」更小写面，COO 终态不损）
