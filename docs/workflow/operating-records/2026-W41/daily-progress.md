@@ -484,3 +484,7 @@
   - 729fac70 docs(fsd): LG-058 r5 部署毕两刻毕报——61fba299包/200断言/双实例重放勘误候BOD复验
   - 5a953abe docs(fsd): LG-058 r5 表单增补施工收口——5188e7f 全门绿候GO-r5硬门
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:30 +08：自上次进度提交 dd889201 后新增 2 条 commit：
+  - c2f9a098 docs(coo): 值席树§四 r5b硬门①同步入账——守卫修复全门绿+环A锚毕+真链路两态断言绿,GO面=BOD本席不代批
+  - 89084e9d docs(ste): r5 走查+R面配置真值测试卷——走查全绿+对照链拉落效全链闭环+DeepSeek活性200+a案裁定入卷
+- registry：v2.1；今日 registry 提交无变化
