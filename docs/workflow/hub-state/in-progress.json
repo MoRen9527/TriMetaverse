@@ -1,101 +1,101 @@
 [
- {
-  "id": "F-3-cron-addjob-next-run-fix",
-  "treeAnchor": "23014e42",
-  "treePath": "docs/workflow/operating-records/2026-W40/trees/trimodel-config-page-4plane-p2-exec-01/（F-3 缺陷单候 FSD 批立树）",
-  "owner": "FSD",
-  "priority": "默认（录入序 1）",
-  "status": "closed",
-  "note": "TriMLC store.addJob INSERT 缺 next_run_at 列→API 直插 job 永不调度；CTO 裁修形二选一候 FSD 勘+机理钉「23:23 自愈触发源勘明」列验收前置；施工窗=09-30 09-12 缺陷修批（CTO §九 维持），与同仓同 build 同重启批；BOD 分派编号 F-3（4e7901ab 前案）【10-02 00:0x FSD 窗尾刷新】Part A 已在役（0fd9c6f 09-30 03:49 缺陷批+CTO 验收卷在案+dist 同刻构建+在役活证=hub-silent-detect 创建即排 94 轮自动轮）；Part B（service.ts +17 行自愈回填）代码成未提交未部署，候冷起窗 commit+check+build 随窗带出；现役六 job nextRunAt 全非 NULL（23:45 API 读数）；本条实态=A 段收口（Part B 落地+token 轮换+一次冷起+三套探针）顺延明晚窗（COO 23:41 裁；窗尾时点+SDE 落位回执门双卡如实注），收口时改 closed；预勘卷=trees/bod-pipeline-batch-09/fsd-chain-precheck-readout-20261002.md【10-02 19:03 FSD 收口闭账】A 段全毕：Part B a66b3b2 在役+冷起六阶段毕+探针三套全绿+F-4 解冻复活终证（catchup 2 秒 runs=98）+notify 端到端落箱（18:56:20）+bak 即删退役；BOD 亲验 PASS 闭合+COO 收讫（19:03 双裁复）。全卷=trees/bod-pipeline-batch-09/fsd-segment-a-readout-20261002.md（18b23e50+f3ca08bc）；F-4 代码级修候 CTO 批立（10-03 窗候选）"
- },
- {
-  "id": "sg-8460-probe-job",
-  "treeAnchor": "76e4507a",
-  "treePath": "docs/workflow/operating-records/2026-W40/trees/d15-8460-probe-job-01/cos-d15-8460-probe-construction-readout.md",
-  "owner": "COS（守望体系 owner，CTO D-15 派工）",
-  "priority": "默认（录入序 2）",
-  "status": "closed",
-  "note": "CEO 04:57 批①实施：8460 缓解位在位性探测——执行位=sg TriMMC 8710 job 21600s（4 轮/日，即生效型零重启零 allowlist）；双锚只读=①8460 进程在位性（systemd/ss）②proxy.log 日行数<2 告警（9-25 起低活基线 4-5 行，2=下破线候 7 日校准）；告警通道=LG-036 信箱双跳（含双锚读数+分诊指针）；异常触发→值席照 2a9b5e94 SOP 实测定谳（探测只报不定谳，低行数≠故障盲区）；回滚=enabled=0 PATCH 即停；与 D-37 条勿混（本条=8460 模型通道在位性，D-37=席位静默语义）；施工窗=今夜 18-24"
- },
- {
-  "id": "trimmc-port-migration-8712",
-  "treeAnchor": "4fc0c841",
-  "treePath": "BOD 施工单 #130（CEO 19:54 直接令经 BOD R1 流转·消息面；任务书正形挂树候排程定）",
-  "owner": "COS（编排）+施工候派（TriMMC 面或 SDE 值席裁）",
-  "priority": "默认（录入序 4）",
-  "status": "closed",
-  "note": "TriMMC（M-SG）8710→8712+改绑 127.0.0.1（两改一次重启窗合并，重启纪律照 8713 正形）；TriRMC（R-HY）守 8710 不动；安全组入站 CEO 已删双机 8710+BOD 外测复验 unreachable（19:55 实锚）。**BOD #134 增补三小项随同窗**：①TriMMC 门升 fail-closed（env 未设→401 全拒，模板=审计卷 c8b8749f §二 TriRLC app.ts L1797-1812 门正形）②bindHost env 化（默认 127.0.0.1，TriRMC app.ts:805 形态）③token 恒时比较替换!==；验收锚追加两条=无令 GET /internal/* 401 实锚（status-code-only 零真值）+带令健康 200+systemd override.conf token 常驻迁后复核。四步=①8710 全引用点扫（job command/notify 配置/席用工装/8460 探测 job 契约面——本条即引用点之一：sg-8460-probe job+ledger-watchlist-patrol sg 面版 notify loopback 8710 均候迁移窗同步）②改绑+重启③引用点逐项同步④既有 job 全数存续验证。CTO 支持注=diff 形态随叫随到（#135）；非作者走查=CTO。时点候排程：今晚 8713 窗毕后容量足则续/或明晨哨窗后；明日 14-18 禁排避让。另候办一笔：TriRMC 河源 unit TRIRMC_HOST 复核（R 面通道维护窗，非急，安全组已兜） **【对表闭 2026-09-30 21:2x，COS 记账】**：全链毕六锚 APPROVE（CTO 独立走查 21:20 回执：源码面 03fecb0 独立读+锚①jobCount=8 八 job 名全录 8710 残引 NONE 值面全文扫描+锚②无令 401 fleet 通道直测+锚③带令 200 经本机 18710 隧道三重实证+锚④ss 唯一 127.0.0.1:8712+锚⑤公网双 exit 28+锚⑥token 计数=1 root 单源标记 COS+BOD 双源接受；观察两条在卷=F-3 现役不复现+双层注入收敛候维护窗）。本机侧 A 案（SSH 隧道 18710→sg 8712 常驻）CEO 21:15 面裁认可转正式；BOD 复跑三件全绿+端到端试信 delivered 15 秒闭环（ntf-muo4eghvjfy1dg）；8713 healthz mc_link=connected 零降级。TMV 三层同顶 7f32c5c0f。残候办：隧道活性断言挂巡检（#140 骑缝①）/port-host 双层注入收敛/隧道身份 fleet 化（均候维护窗）。施工形态注=消息面施工单（#130+#134+#137+#140）+mirror 段笔，任务书正形树卷未立（本条树锚=TMV 引用点同步 commit 4fc0c841）。"
- },
- {
-  "id": "tc-bare-force-fetch-fix-tracking",
-  "treeAnchor": "68fd158",
-  "treePath": "TC 仓锚（TriCompany dev 现顶，非本仓对象）；修案对象=sg /home/fleet/bare-fetch-all.sh L18 refspec 去 `+`（CTO 裁主修）+rejected 不可静默告警锚",
-  "owner": "SDE（施工，今天内窗）/COS（tracking+护栏复启用）",
-  "priority": "默认（录入序 3）",
-  "status": "closed",
-  "note": "**对表闭（2026-09-30 11:4x，COS 亲验三锚）**：①a 案施工读数✓=10:30+11:30 双轮 cron 实测 PUSH-OK 20/20 零 FAIL（凭据补齐自愈型闭合，双链双活：hook MIRROR ssh 即时+cron PAT 段小时级，9 天欠账清零）②quiet 补做毕✓=L18 亲验 11:4x `--quiet` 已去（SDE 补做落位，诊断文本 $out 全量入 FAIL 行）③全链终态=refspec 去 `+` 主修+denyNonFastForwards 纵深+告警锚+凭据线①-⑥全闭（新 PAT 20/20 验活/旧把全废 CEO 11:30 网页点废/gho_ 出处三缺席本地清+自然失效闭合/root history 清零/观察项族闭合 11:3x）。全链参与席：SDE 施工/CTO 裁决权衡/BOD 护栏令+值席代查+剪贴板管道/CAO 合账/COS tracking+护栏+亲验销账。quiet 自然样本观察项保留（候真 FAIL 出现验诊断文本可见性，不入闭条件）"
- },
- {
-  "id": "lg058-N1-pull-status-chain",
-  "treeAnchor": "1705654b",
-  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 task-charter-lg058-remediation-20261006.md 384000f5）",
-  "owner": "FSD",
-  "priority": "默认（LG-058 整改波录入序 1）",
-  "status": "closed",
-  "note": "拉取状态数据链路修复（CEO 亲测打回 #3）。BOD 定性 closed（09:3x 增令）。代码面毕 03:4x：TriModel 5b4dedb+TriRMC 8249eb7（tier 三段补建+3941 沙箱活体链通）；树单自回写 1705654b；毕报候 BOD 复验 678c9c49；实勘随 R-HY 升版窗（服务域流水线无人值守形态，N5 毕后触发）。"
- },
- {
-  "id": "lg058-N2-rplane-dual-cards",
-  "treeAnchor": "1705654b",
-  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
-  "owner": "FSD",
-  "priority": "默认（LG-058 整改波录入序 2）",
-  "status": "open",
-  "note": "R 面双卡功能补齐（打回 #5+#6：TriRMC·河源/TriRLC·本机 模板切换+备份回滚）。代码面收口 08:15（进度超前）；现势=回炉中（11:2x BOD 基线同步）：STE 走查卷 df1ab55d 总裁 CONDITIONAL_FAIL→BOD 裁 P1 必修回炉（menu-full 布局 DOM 宿主错位）FSD 回炉毕（45757bd 平 bare）·CTO 技术门 APPROVE 采认（11:56 BOD 终裁准升版）·升版触发=STE v6 绿+清场毕（链在走）；流水线正式读数候回炉毕（边界#7 禁本地跑）+R 面切换→备份→回滚演练全程无人工补手。M 面两卡暂缓候 CEO 后令解锁（03:10 改令）；测试顺序 CEO 钉死 R 面先行。"
- },
- {
-  "id": "lg058-N3-config-source-binary",
-  "treeAnchor": "1705654b",
-  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
-  "owner": "FSD",
-  "priority": "默认（LG-058 整改波录入序 3）",
-  "status": "open",
-  "note": "配置来源二分（打回 #4 后半：本地配置 vs 远程拉取配置，「直连/中转」编造概念全链清洗）。代码面毕 03:4x=e099329（来源二分列+直连中转零命中）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
- },
- {
-  "id": "lg058-N4-copy-domain-wording",
-  "treeAnchor": "1705654b",
-  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
-  "owner": "FSD",
-  "priority": "默认（LG-058 整改波录入序 4）",
-  "status": "open",
-  "note": "文案「本卡特有」→「本域特有」（打回 #7）。代码面毕 03:4x=c4d9137（TriModel 仓；grep 零残留+sanity 7/7）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
- },
- {
-  "id": "lg058-N5-product-plan-three",
-  "treeAnchor": "1705654b",
-  "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5；CPO 方稿 9f86ff34）",
-  "owner": "FSD",
-  "priority": "默认（LG-058 整改波录入序 5）",
-  "status": "open",
-  "note": "产品方案三件（打回 #2/#8/#9，按 CPO 方稿实现）。代码面毕 10:22（366eecb+99806cf 三件全毕；08:49 曾 API 错误终止停摆 33+min→09:27 复活）→STE 走查毕 CONDITIONAL_FAIL（df1ab55d）→P1 回炉毕 45757bd·CTO 技术门 APPROVE 采认（11:56 终裁准升版·升版触发=STE v6 绿+清场毕）；毕后触 R-HY 升版链（服务域流水线无人值守）。settings.json=CEO 原话词汇=「该域本地落地配置」语义，落地文件名以各域控制器实态为准。"
- },
- {
-  "id": "cron-muh6shv0-korw-stalled-18h",
-  "treeAnchor": "11:52 令",
-  "treePath": "BOD 11:52 收口候办令（消息面）；施工窗=今晚 8713 修复验证窗",
-  "owner": "SDE",
-  "priority": "今晚窗（8713 修复验证窗验收锚）",
-  "status": "open",
-  "note": "cron_muh6shv0_korw 单 job 停摆 18h 残留（LG-064 收口候办①）。修法二择=SDE 车道：修覆盖核 or 手工 nextRun 重算；**禁抹 nextRunAtMs 纪律**（缺它永不调度）。验收锚=今晚 8713 修复验证窗。"
- },
- {
-  "id": "l2-aggregate-dedup-minor",
-  "treeAnchor": "11:52 令",
-  "treePath": "BOD 11:52 收口候办令（消息面）",
-  "owner": "CTO",
-  "priority": "低危（监控维护波）",
-  "status": "open",
-  "note": "l2 聚合去重小缺陷（LG-064 收口候办②·低危）。归 CTO 面监控维护波，不阻本波。"
- }
+  {
+    "id": "F-3-cron-addjob-next-run-fix",
+    "treeAnchor": "23014e42",
+    "treePath": "docs/workflow/operating-records/2026-W40/trees/trimodel-config-page-4plane-p2-exec-01/（F-3 缺陷单候 FSD 批立树）",
+    "owner": "FSD",
+    "priority": "默认（录入序 1）",
+    "status": "closed",
+    "note": "TriMLC store.addJob INSERT 缺 next_run_at 列→API 直插 job 永不调度；CTO 裁修形二选一候 FSD 勘+机理钉「23:23 自愈触发源勘明」列验收前置；施工窗=09-30 09-12 缺陷修批（CTO §九 维持），与同仓同 build 同重启批；BOD 分派编号 F-3（4e7901ab 前案）【10-02 00:0x FSD 窗尾刷新】Part A 已在役（0fd9c6f 09-30 03:49 缺陷批+CTO 验收卷在案+dist 同刻构建+在役活证=hub-silent-detect 创建即排 94 轮自动轮）；Part B（service.ts +17 行自愈回填）代码成未提交未部署，候冷起窗 commit+check+build 随窗带出；现役六 job nextRunAt 全非 NULL（23:45 API 读数）；本条实态=A 段收口（Part B 落地+token 轮换+一次冷起+三套探针）顺延明晚窗（COO 23:41 裁；窗尾时点+SDE 落位回执门双卡如实注），收口时改 closed；预勘卷=trees/bod-pipeline-batch-09/fsd-chain-precheck-readout-20261002.md【10-02 19:03 FSD 收口闭账】A 段全毕：Part B a66b3b2 在役+冷起六阶段毕+探针三套全绿+F-4 解冻复活终证（catchup 2 秒 runs=98）+notify 端到端落箱（18:56:20）+bak 即删退役；BOD 亲验 PASS 闭合+COO 收讫（19:03 双裁复）。全卷=trees/bod-pipeline-batch-09/fsd-segment-a-readout-20261002.md（18b23e50+f3ca08bc）；F-4 代码级修候 CTO 批立（10-03 窗候选）"
+  },
+  {
+    "id": "sg-8460-probe-job",
+    "treeAnchor": "76e4507a",
+    "treePath": "docs/workflow/operating-records/2026-W40/trees/d15-8460-probe-job-01/cos-d15-8460-probe-construction-readout.md",
+    "owner": "COS（守望体系 owner，CTO D-15 派工）",
+    "priority": "默认（录入序 2）",
+    "status": "closed",
+    "note": "CEO 04:57 批①实施：8460 缓解位在位性探测——执行位=sg TriMMC 8710 job 21600s（4 轮/日，即生效型零重启零 allowlist）；双锚只读=①8460 进程在位性（systemd/ss）②proxy.log 日行数<2 告警（9-25 起低活基线 4-5 行，2=下破线候 7 日校准）；告警通道=LG-036 信箱双跳（含双锚读数+分诊指针）；异常触发→值席照 2a9b5e94 SOP 实测定谳（探测只报不定谳，低行数≠故障盲区）；回滚=enabled=0 PATCH 即停；与 D-37 条勿混（本条=8460 模型通道在位性，D-37=席位静默语义）；施工窗=今夜 18-24"
+  },
+  {
+    "id": "trimmc-port-migration-8712",
+    "treeAnchor": "4fc0c841",
+    "treePath": "BOD 施工单 #130（CEO 19:54 直接令经 BOD R1 流转·消息面；任务书正形挂树候排程定）",
+    "owner": "COS（编排）+施工候派（TriMMC 面或 SDE 值席裁）",
+    "priority": "默认（录入序 4）",
+    "status": "closed",
+    "note": "TriMMC（M-SG）8710→8712+改绑 127.0.0.1（两改一次重启窗合并，重启纪律照 8713 正形）；TriRMC（R-HY）守 8710 不动；安全组入站 CEO 已删双机 8710+BOD 外测复验 unreachable（19:55 实锚）。**BOD #134 增补三小项随同窗**：①TriMMC 门升 fail-closed（env 未设→401 全拒，模板=审计卷 c8b8749f §二 TriRLC app.ts L1797-1812 门正形）②bindHost env 化（默认 127.0.0.1，TriRMC app.ts:805 形态）③token 恒时比较替换!==；验收锚追加两条=无令 GET /internal/* 401 实锚（status-code-only 零真值）+带令健康 200+systemd override.conf token 常驻迁后复核。四步=①8710 全引用点扫（job command/notify 配置/席用工装/8460 探测 job 契约面——本条即引用点之一：sg-8460-probe job+ledger-watchlist-patrol sg 面版 notify loopback 8710 均候迁移窗同步）②改绑+重启③引用点逐项同步④既有 job 全数存续验证。CTO 支持注=diff 形态随叫随到（#135）；非作者走查=CTO。时点候排程：今晚 8713 窗毕后容量足则续/或明晨哨窗后；明日 14-18 禁排避让。另候办一笔：TriRMC 河源 unit TRIRMC_HOST 复核（R 面通道维护窗，非急，安全组已兜） **【对表闭 2026-09-30 21:2x，COS 记账】**：全链毕六锚 APPROVE（CTO 独立走查 21:20 回执：源码面 03fecb0 独立读+锚①jobCount=8 八 job 名全录 8710 残引 NONE 值面全文扫描+锚②无令 401 fleet 通道直测+锚③带令 200 经本机 18710 隧道三重实证+锚④ss 唯一 127.0.0.1:8712+锚⑤公网双 exit 28+锚⑥token 计数=1 root 单源标记 COS+BOD 双源接受；观察两条在卷=F-3 现役不复现+双层注入收敛候维护窗）。本机侧 A 案（SSH 隧道 18710→sg 8712 常驻）CEO 21:15 面裁认可转正式；BOD 复跑三件全绿+端到端试信 delivered 15 秒闭环（ntf-muo4eghvjfy1dg）；8713 healthz mc_link=connected 零降级。TMV 三层同顶 7f32c5c0f。残候办：隧道活性断言挂巡检（#140 骑缝①）/port-host 双层注入收敛/隧道身份 fleet 化（均候维护窗）。施工形态注=消息面施工单（#130+#134+#137+#140）+mirror 段笔，任务书正形树卷未立（本条树锚=TMV 引用点同步 commit 4fc0c841）。"
+  },
+  {
+    "id": "tc-bare-force-fetch-fix-tracking",
+    "treeAnchor": "68fd158",
+    "treePath": "TC 仓锚（TriCompany dev 现顶，非本仓对象）；修案对象=sg /home/fleet/bare-fetch-all.sh L18 refspec 去 `+`（CTO 裁主修）+rejected 不可静默告警锚",
+    "owner": "SDE（施工，今天内窗）/COS（tracking+护栏复启用）",
+    "priority": "默认（录入序 3）",
+    "status": "closed",
+    "note": "**对表闭（2026-09-30 11:4x，COS 亲验三锚）**：①a 案施工读数✓=10:30+11:30 双轮 cron 实测 PUSH-OK 20/20 零 FAIL（凭据补齐自愈型闭合，双链双活：hook MIRROR ssh 即时+cron PAT 段小时级，9 天欠账清零）②quiet 补做毕✓=L18 亲验 11:4x `--quiet` 已去（SDE 补做落位，诊断文本 $out 全量入 FAIL 行）③全链终态=refspec 去 `+` 主修+denyNonFastForwards 纵深+告警锚+凭据线①-⑥全闭（新 PAT 20/20 验活/旧把全废 CEO 11:30 网页点废/gho_ 出处三缺席本地清+自然失效闭合/root history 清零/观察项族闭合 11:3x）。全链参与席：SDE 施工/CTO 裁决权衡/BOD 护栏令+值席代查+剪贴板管道/CAO 合账/COS tracking+护栏+亲验销账。quiet 自然样本观察项保留（候真 FAIL 出现验诊断文本可见性，不入闭条件）"
+  },
+  {
+    "id": "lg058-N1-pull-status-chain",
+    "treeAnchor": "1705654b",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 task-charter-lg058-remediation-20261006.md 384000f5）",
+    "owner": "FSD",
+    "priority": "默认（LG-058 整改波录入序 1）",
+    "status": "closed",
+    "note": "拉取状态数据链路修复（CEO 亲测打回 #3）。BOD 定性 closed（09:3x 增令）。代码面毕 03:4x：TriModel 5b4dedb+TriRMC 8249eb7（tier 三段补建+3941 沙箱活体链通）；树单自回写 1705654b；毕报候 BOD 复验 678c9c49；实勘随 R-HY 升版窗（服务域流水线无人值守形态，N5 毕后触发）。"
+  },
+  {
+    "id": "lg058-N2-rplane-dual-cards",
+    "treeAnchor": "1705654b",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
+    "owner": "FSD",
+    "priority": "默认（LG-058 整改波录入序 2）",
+    "status": "open",
+    "note": "R 面双卡功能补齐（打回 #5+#6：TriRMC·河源/TriRLC·本机 模板切换+备份回滚）。代码面收口 08:15（进度超前）；现势=回炉中（11:2x BOD 基线同步）：STE 走查卷 df1ab55d 总裁 CONDITIONAL_FAIL→BOD 裁 P1 必修回炉（menu-full 布局 DOM 宿主错位）FSD 回炉毕（45757bd 平 bare）·CTO 技术门 APPROVE 采认（11:56 BOD 终裁准升版）·升版流水线触发毕（12:1x COO 知会：序③ STE 触发信两锚+executor 双证实探；执行位=m-sde e4abb7cf 四硬点+五环嵌入；候信链=开工回执→备份锚报备→五环读数卷→STE 序④→BOD 复核→呈 CEO）；流水线正式读数候回炉毕（边界#7 禁本地跑）+R 面切换→备份→回滚演练全程无人工补手。M 面两卡暂缓候 CEO 后令解锁（03:10 改令）；测试顺序 CEO 钉死 R 面先行。"
+  },
+  {
+    "id": "lg058-N3-config-source-binary",
+    "treeAnchor": "1705654b",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
+    "owner": "FSD",
+    "priority": "默认（LG-058 整改波录入序 3）",
+    "status": "open",
+    "note": "配置来源二分（打回 #4 后半：本地配置 vs 远程拉取配置，「直连/中转」编造概念全链清洗）。代码面毕 03:4x=e099329（来源二分列+直连中转零命中）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
+  },
+  {
+    "id": "lg058-N4-copy-domain-wording",
+    "treeAnchor": "1705654b",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
+    "owner": "FSD",
+    "priority": "默认（LG-058 整改波录入序 4）",
+    "status": "open",
+    "note": "文案「本卡特有」→「本域特有」（打回 #7）。代码面毕 03:4x=c4d9137（TriModel 仓；grep 零残留+sanity 7/7）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
+  },
+  {
+    "id": "lg058-N5-product-plan-three",
+    "treeAnchor": "1705654b",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5；CPO 方稿 9f86ff34）",
+    "owner": "FSD",
+    "priority": "默认（LG-058 整改波录入序 5）",
+    "status": "open",
+    "note": "产品方案三件（打回 #2/#8/#9，按 CPO 方稿实现）。代码面毕 10:22（366eecb+99806cf 三件全毕；08:49 曾 API 错误终止停摆 33+min→09:27 复活）→STE 走查毕 CONDITIONAL_FAIL（df1ab55d）→P1 回炉毕 45757bd·CTO 技术门 APPROVE 采认（11:56 终裁准升版·升版触发=STE v6 绿+清场毕）→升版已触发毕（12:1x·执行位 m-sde·候 SDE 开工回执+备份锚报备）；毕后触 R-HY 升版链（服务域流水线无人值守）。settings.json=CEO 原话词汇=「该域本地落地配置」语义，落地文件名以各域控制器实态为准。"
+  },
+  {
+    "id": "cron-muh6shv0-korw-stalled-18h",
+    "treeAnchor": "11:52 令",
+    "treePath": "BOD 11:52 收口候办令（消息面）；施工窗=今晚 8713 修复验证窗",
+    "owner": "SDE",
+    "priority": "今晚窗（8713 修复验证窗验收锚）",
+    "status": "open",
+    "note": "cron_muh6shv0_korw 单 job 停摆 18h 残留（LG-064 收口候办①）。修法二择=SDE 车道：修覆盖核 or 手工 nextRun 重算；**禁抹 nextRunAtMs 纪律**（缺它永不调度）。验收锚=今晚 8713 修复验证窗。"
+  },
+  {
+    "id": "l2-aggregate-dedup-minor",
+    "treeAnchor": "11:52 令",
+    "treePath": "BOD 11:52 收口候办令（消息面）",
+    "owner": "CTO",
+    "priority": "低危（监控维护波）",
+    "status": "open",
+    "note": "l2 聚合去重小缺陷（LG-064 收口候办②·低危）。归 CTO 面监控维护波，不阻本波。"
+  }
 ]
