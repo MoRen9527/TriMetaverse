@@ -51,7 +51,7 @@
     "owner": "FSD",
     "priority": "默认（LG-058 整改波录入序 2）",
     "status": "open",
-    "note": "R 面双卡功能补齐（打回 #5+#6：TriRMC·河源/TriRLC·本机 模板切换+备份回滚）。代码面收口 08:15（进度超前）；现势=回炉中（11:2x BOD 基线同步）：STE 走查卷 df1ab55d 总裁 CONDITIONAL_FAIL→BOD 裁 P1 必修回炉（menu-full 布局 DOM 宿主错位）FSD 回炉毕（45757bd 平 bare）·CTO 技术门 APPROVE 采认（11:56 BOD 终裁准升版）·升版流水线触发毕（12:1x COO 知会：序③ STE 触发信两锚+executor 双证实探；执行位=m-sde e4abb7cf 四硬点+五环嵌入；候信链=开工回执→备份锚报备→五环读数卷→STE 序④→BOD 复核→呈 CEO）；流水线正式读数候回炉毕（边界#7 禁本地跑）+R 面切换→备份→回滚演练全程无人工补手。M 面两卡暂缓候 CEO 后令解锁（03:10 改令）；测试顺序 CEO 钉死 R 面先行。"
+    "note": "R 面双卡功能补齐（打回 #5+#6：TriRMC·河源/TriRLC·本机 模板切换+备份回滚）。代码面收口 08:15（进度超前）；现势=回炉中（11:2x BOD 基线同步）：STE 走查卷 df1ab55d 总裁 CONDITIONAL_FAIL→BOD 裁 P1 必修回炉（menu-full 布局 DOM 宿主错位）FSD 回炉毕（45757bd 平 bare）·CTO 技术门 APPROVE 采认（11:56 BOD 终裁准升版）·升版链闭环毕：五环全 DEPLOY 态（TriModel 45757bd+TriRMC a02d89b 在役）+环 B 勘误补重启闭合+BOD 终复核 13:53 PASS（卷 c354a580）→候 CEO 终验；流水线正式读数候回炉毕（边界#7 禁本地跑）+R 面切换→备份→回滚演练全程无人工补手。M 面两卡暂缓候 CEO 后令解锁（03:10 改令）；测试顺序 CEO 钉死 R 面先行。"
   },
   {
     "id": "lg058-N3-config-source-binary",
@@ -98,6 +98,8 @@
     "status": "open",
     "note": "同 dist 多 unit 部署教训正式化候选（2026-10-06 BOD 复核问实+STE 环3 同踩双实证）：①部署对象 unit 集合按 ExecStart 枚举全清单，禁按服务面直觉清单（同 ExecStart 多 unit 形态=同 dist 必须同轮换）②完工断言=ExecMainStartTimestamp>部署时点值面锚（「重启窗完工判据」机械可检化，active≠重启）③探针面盲区自检=journalctl/unit 枚举覆盖部署对象全集。勘误版脚本=.fade/lg058-stage2-rhy-execute.sh（stop/start/rollback 三处+restart anchor 断言已入）。候 CTO/CAO 面定入册位。"
   },
+  {
+    "id": "l2-aggregate-dedup-minor",
     "treeAnchor": "11:52 令",
     "treePath": "BOD 11:52 收口候办令（消息面）",
     "owner": "CTO",
