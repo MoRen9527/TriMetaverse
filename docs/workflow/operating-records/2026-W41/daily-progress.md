@@ -385,3 +385,13 @@
   - 8418a002 docs(sde): §七.5 段2交接dist对表勘补——TriMLC顶03c6197对表一致+src符号三文件在位+dist零命中实证(10-04旧build)+下窗钉死项=冷起前npm run build一次带出两笔
   - 0f6fbc62 docs(cto): stop 修段2 部署 ACCEPT（修②活体证据 fail-loud 闭环）+锚3 裁移除 CodexSandboxUsers(RX)+两观察裁+TriMLC 移植毕 ACCEPT+流程面回询（报备制条款差候 FSD 说明）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:30 +08：自上次进度提交 7fe9ab0e 后新增 8 条 commit：
+  - ca8ab8bf docs(coo): 值席树§四 STE五锚卷收敛+根治候裁项闭环——CONDITIONAL_FAIL卡点单一(l2-scan卡running25.5h,2ef063b9)+治标并明晚冷起窗(SDE双分支A主sweep真刀/B兜SQL治标,CTO采认双裁同向)+FSD勘正件③今晚已毕(03c6197,0f6fbc62双ACCEPT)+CTO终裁根治另立窗(FSD明白日设计小方案→审→10-08后首合法重启窗候门齐)+明日窗序不变
+  - 8d2eff52 docs(sde): §七.6 双C-level齐认锚补——COO认账(双分支不改/SQL直改优先不采/catch-up自算认)与CTO采认(03864ae1)并录
+  - 7ab9e258 docs(sde): §七.6 CTO采认三细化落卷(03864ae1互引)——SQL兜底state单字段+next_run_at禁手改+B2判定点(catch-up证伪则显式置now)+19:00窗界硬锚
+  - 03864ae1 docs(cto): cronEngine根治排期裁(另立窗四理由+三段分离令)+korw双分支调和采认(SQL兜底写面最小化state单字段/next_run_at保持原值catch-up自算)+BOD S0-S5延伸技术确认(daemon-down窗SQL铁律重申)
+  - d90ee446 docs(sde): §七.6 STE采认对表落卷——三重实证全采(b2ebb06f)+korw零动作遵令确认+补测触发点锁定(毕报直达STE=开跑信号,19:00-19:30窗缝)
+  - e4151ce4 docs(sde): §七.6 korw治标并入——双分支序调和COO治标令与CTO真刀验收(sweep优先保全活体样本/SQL兜底state单字段nextRun禁抹调度器自算重算/毕报归位四读数)
+  - b2ebb06f docs(ste): 8713 回归卷增补段——三席裁定接令(处置归明晚合流冷起窗+今晚零动作+补测排明晚 19:00-19:30 窗缝)+本席主选①PATCH 勘正证伪(SDE 白盒 types.ts L55 state 静默忽略 200 假阳性=静默失败家族活体)+CTO 裁 C 禁改 store 遵令零动作
+  - 7f43b458 docs(sde): §七.6 STE回归读数互引——korw卡态独立复确认+PATCH方案勘正(零写路径三重堵死)+冻结令重申(CTO裁C今晚零动作,归位=明晚冷起窗)
+- registry：v2.1；今日 registry 提交无变化
