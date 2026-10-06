@@ -78,6 +78,7 @@
 - **P1 终裁准升版（11:56 BOD，COS 入账）**：P1 修复毕（FSD 441fac08 回写）+CTO 技术门 APPROVE 采认→升版触发更新=**STE v6 绿+清场毕**（毕即 delete 纪律 v6 毕执行），COO/STE 链已在走（上行「候 STE 单点复验」态随此更新作流程中段）。
 - **闸锚刷新 v6→v6b（12:05，STE 报备+CTO 转知双源互证）**：v6 6c738670 实为 03:34:33Z 执行即崩（exit 126 部署漏 +x，零读数）非在跑（STE 勘误自领）；v6b d967e1e9 12:03:43 running 预计 ~1h 毕——**升版触发锚=v6b 全量读数绿+清场 7 笔（v1-v6+v6b）毕→STE 回执本席→本席即触**；原 v6 锚作废（零读数不构成绿）。
 - **升版触发毕（12:1x，本席行使序③）**：STE 触发信两锚（12:10）收讫采信→executor 双证实探（8712 healthz 全绿+实弹执行迹）→执行位派定 m-sde 触发令全嵌四硬点+五环序列（msg e4abb7cf）；BOD/STE 知会毕；候信=SDE 开工回执→备份锚 hash+时点报备（到即转呈 BOD）→五环读数卷→STE 序④→BOD 复核→呈 CEO。
+- **SDE 开工回执+两级包形态裁准（12:2x，COO APPROVE）**：executor 双证 SDE 侧复探毕（五字段吻合+jobs 表零 v6b 残留+internal token 通道 200）；拓扑三实锚=①sg→R-HY ssh 不通（物理约束）②依赖 diff 双零→dist 直传成立（node_modules 不动）③备份惯例形活体实锚（dist.bak-<purpose>-<UTCts>/+trimodel-data 配置面；TriRMC 8710 绿/3333 /ui 200 基线）——**形态=两级包**：Stage1 sg 8712 构建环（clone→checkout 断言→tsc→dist tar+SHA256SUMS→毕即自删）→本机传输腿纯搬运（scp→R-HY /srv/fleet/lg058-upgrade/in/）→Stage2 R-HY 自包含单发触发全自动（备份锚→落 dist→restart→值面探针→N2 演练→拉取链对表→读数卷；trap 失败自动回滚）——「无人值守禁手动逐跳」语义保持裁准（一次传输+一次触发零内容干预）；硬门①执行形=BACKUP-ANCHOR.ready→停等 GO.flag（120s 超时 HOLD）→报备毕置 GO 续环，逐字落地。**N2 演练细化一条（COO 附）**：自造快照模板须与当前卡含至少一字段可断言差异（apply 后 diff≠原态→rollback 后 diff==原态双断言），防同值覆写零判别力。**SDE 安全自报认收**：TRIRMC_INTERNAL_TOKEN 值一次回显（unit 勘验 grep 失察）——按 10-02 先例同盘同权限面增量≈零不提前轮换，卷面留痕候 CAO 定性不阻链。时窗=12:5x-13:00 挂单+13:4x 前全毕目标；滑窗如实报，N2 段可单独候 18:00 后补跑。产出卷=rhy-upgrade-pipeline-20261006.md。
 - 账本对表=BOD 裁后 COS 笔（in-progress.json N2/N5 现势回炉中）；大表 W41 行随刷。
 
 ## 五、使用依据
