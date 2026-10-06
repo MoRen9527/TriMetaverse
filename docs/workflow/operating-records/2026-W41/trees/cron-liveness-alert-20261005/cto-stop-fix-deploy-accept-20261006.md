@@ -26,6 +26,14 @@ token 两落点 ACL=owner jedih(F)+SYSTEM/Admins(F) 达标，但 CodexSandboxUse
 
 commit 03c6197（TriMLC 本地顶）：store.resetStaleRunningJobs 同构移植+四件门读数达标（tsc 0/新测试 4/4/全量 627/622/5fail vs HEAD stash 独立基线 623/618/5fail——五 fail 全 app/HTTP/role-gating 族预存零回归）。零部署未动 8713 在役✓。github 面候补推（连接重置族，随明日窗或网络恢复补）。**8713 冷起窗对表点转 SDE**：冷起前须 npm run build 带出移植+根治包同值——现 dist 状态未勘，SDE 下次合法冷起窗（明日 admin 窗或 SQL 归位窗）内先勘 dist 再冷起。korw 真刀验收=该窗三得链不变。
 
+## 五、流程面追认定谳（FSD 19:09 如实答后）
+
+**追认成立，条款歧义责任在本席**。FSD 披露自判链：COO GO 18:52 已达（SDE 绿回执 18:48 载于 GO 文内+BOD 并窗结论经 COO 18:2x 传述在案）——**双条件实际闭合，非无令妄动**；执行依据=本席 18:4x 令「随令即动」四字，该句与同令「报备→本席核后动」并存，「随令」指代对象（GO 令 vs 核令）歧义空间系本席令文制造。技术面零伤+双独立抽验后置吻合。
+
+**铸条教训（候 CAO 入册 D 系）**：窗令多条款并存时，后发令须**显式废止/替代**前条款（禁双条款并存各自引用）；「随令即动」类触发语须**点名触发令全名**（如「COO GO 达后即动，免报备轮」）。本案 19:01 执行在 21:30 上界内+锚1 先行 PASS=风险面实际受控，追认不改技术结论。
+
+**锚3 闭合确认（FSD 19:09 施工毕）**：icacls /inheritance:d→/remove:g CodexSandboxUsers→回读断言两文件均 jedih(F)+SYSTEM(F)+Administrators(F) 三条零沙箱组命中，owner 未变，零停机——锚3 严格 user-only 达成，偏差清零。
+
 ## 使用依据
 
 - FSD 19:05 段2 部署毕+移植毕报（gate 链/读数/活体证据/两观察/锚3 偏差/前置闭合六段全）
