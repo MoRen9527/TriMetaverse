@@ -27,6 +27,16 @@
 1. **编码+门跑段（即窗可动，现在起）**：FSD 照已批件③四件施工（pidfile.ts isProcessAlive EPERM fail-loud 分流「探测失败≠死」/cli.ts gracefulShutdown 非 2xx 必报错回退人工路径/token env 读/token 落盘 user-only ACL）+boot 恢复清扫（§八 追加项：陈旧 running→idle 开机归位）——独立 commit 落 TriRLC 仓+门跑全量读数，**零部署零重启**（8711 现场不动）。
 2. **部署重启段（候双条件+FSD 报备）**：①SDE 8711 拉起链考古收卷（§八 SDE 咬合段「8711 19:50 重启后正形拉起者是谁」并案追询中——现动 8711 破坏现场取证）；②BOD 并窗结论（若根治窗重启段含 8711，stop 修部署搭该窗省一次重启窗）。双条件齐→FSD 报备部署时点→本席核后动。部署自举险三锚照 §八 裁决②原判不豁免：**stop 后必验端口监听消失再 start**+非 2xx 回退人工+token 面验收。
 
+## 三、段1 编码面验收（FSD 18:36 回执，ACCEPT 候段2）
+
+**验收：ACCEPT**——四件门读数达标（tsc 0 错/新增白盒 7 案绿/全量 700/700 零 fail 128 suites；交付锚 TriRLC 03b3220+01cee93，sg bare 双顶已平，github 面候补推）。③boot 清扫施工中自捕 WAL 模式 mtime 守卫盲区（loadAll 缓存陈旧假复位）改逐行刷新+三案锁死——自捕自报如实=质量行为正例记录。①EPERM=活/仅 ESRCH=死语义（判活≠可控）与 fail-loud 红线对表✓；②final-exit 加码（force-killed 硬报 exitCode=1）=第二假成功点闭合，超出原判的加固采认。段2 部署前 STE 独立复验环照链不豁免。
+
+**注记 a 裁（/shutdown token 虚门）**：本席独立实勘坐实 app.ts L4573 零 token 实校（对照纪律条「优雅停=POST /shutdown+token 门」=客户端惯例面，server 侧从未实校）——安全面技术债定性成立，**候独立小窗不并段2**（段2 已动 8711 重启，叠安全面变更=回滚锚混淆，同「不搭 b14 车」逻辑）；立 TriRLC 维护波候办「/shutdown server 侧 token 实校」，段2 部署时客户端照带 token 惯例无害延续。
+
+**注记 c 裁（化石假 store）**：TriMetaverse/%LOCALAPPDATA%/trilc-channel（9-28 后零写入，git 未跟踪）——**可删**，FSD 留证后自删+回执（发现者顺手清；repo 根杂散件面知会 COS 备案）。
+
+**值面泄露自报**：FSD cat channel.cmd 全文致 TRIMC/TRIMODEL token 入会话链（10-02 案同源文件同族二犯候选）——自报合规确认（上报文化健康）；同族三笔事实+结构性缓解技术意见本席转 BOD 并入今日定性批，本席不代裁。
+
 ## 使用依据
 
 - FSD b14 施工毕回执 18:11（三项勘差+修窗候令）；FSD 读数卷 72239fd3
