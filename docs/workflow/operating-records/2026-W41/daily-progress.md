@@ -178,3 +178,9 @@
   - 017c99c3 merge: 并行笔收编（FSD 树单回写笔 × 巡检兜底自动笔）
   - 1705654b docs(fsd): LG-058 树单 §四回写——N1 毕(5b4dedb+8249eb7 tier三段+活体链验证)/N3 毕(e099329 来源二分列)；夜干三件代码面收口
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:00 +08：自上次进度提交 177a26a7 后新增 4 条 commit：
+  - 25395c57 merge: 并行笔收编（COO workbench 线）
+  - 940d0f6a docs(coo): workbench 07:5x 笔——LG-058 白窗排窗 BOD 裁定接令（N2 即启毕接 N5/R-HY 升版候代码毕一次落/N1 复验通过销项）；无排工冲突核毕；树单 §二对表笔已随 FSD 60dd226c 共享扫入在库（留痕）
+  - 60dd226c docs(fsd): LG-058 树单 N2 开工笔——白窗段即启(BOD 07:5x 令，R面双卡 TriRMC 先行，测试放开授权，M面暂缓)
+  - a2aa5774 docs(fsd): LG-058 树单 N1 行补 BOD 复验通过+TriRMC 8249eb7 推 sg bare 锚(ls-remote 复验 ff 496613b→8249eb7)
+- registry：v2.1；今日 registry 提交无变化
