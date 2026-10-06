@@ -264,3 +264,7 @@
   - d6ad556a docs(coo): LG-058 SDE 开工毕+Stage1 构建中——job 1923c530 12:40:32 首轮触发,Stage2 预置毕(N2 双断言内嵌),sha256 对表全匹配,开工笔 07e206d0+账本同步行(树单合同新规首例),BOD 采认+STE 口径认收双信毕
   - 07e206d0 docs(sde): LG-058 升版流水线开工笔——Stage1 挂单 TriMMC 8712 job 1923c530（首轮 12:40:32）+Stage2 R-HY 预置毕,双脚本 hash 对表匹配,硬门三件嵌入+COO 差异模板细化,账本增条 lg058-rhy-upgrade-pipeline+N5 开工回执同步,候备份锚报备
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:10 +08：自上次进度提交 d751a300 后新增 2 条 commit：
+  - 0877e891 merge: 并行笔收编（LG-058 滑点落卷窗并行段带平）
+  - 33c2b67d docs(coo): LG-058 Stage1 滑点排障落卷——aegis 间歇锁+B64 零文件面绕过+三构建缺陷活体 PATCH,梯次裁示 13:05/14:00 双阈(BOD 采认),基建影响面候流转 CTO/CAO,树单 §四+workbench 双落
+- registry：v2.1；今日 registry 提交无变化
