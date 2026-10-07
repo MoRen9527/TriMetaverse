@@ -697,3 +697,8 @@
   - caa2281b docs(board): TriModel任务书挂CPO观察项四锚指针(批B验收并验·cfcc055b正身防双写)
   - …另有 21 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:40 +08：自上次进度提交 2544d5f8 后新增 3 条 commit：
+  - 471c6c0f docs(board): 发送账#442落盘——CPO防错机制申报采认落位即闭(扫描门实弹第三咬应验·四件候CAO定形·github443间歇候办回滚)
+  - bda794ec merge: 收编 CPO 补裁决节笔（b9f134aa/c0782cd3）后补推
+  - 0fea1c69 docs(board): 发送账#441落盘——差异项销案闭账+三犯升处置(CPO防错机制强制申报令·github补推候办销双路推平)
+- registry：v2.1；今日 registry 提交无变化
