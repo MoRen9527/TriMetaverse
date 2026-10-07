@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（8713 手术施工读数正身；方案卷=同目录 trimlc-8713-fix-proposal-1p-20261006.md，CTO 放行 10:42+18:2x 回执「§四序照案打头，术后读数照三件套+首切锚」）
 - syncMode: static
-- lastSyncedAt: 2026-10-07T11:12:46+08:00（date 现查原样粘贴；§7.10 提醒链修复+F-3 家族谱系勘正）
+- lastSyncedAt: 2026-10-07T11:18:50+08:00（date 现查原样粘贴；§7.10 补 CTO 裁断两件：F-3 修复入维护波+8711 禁 ps1 链重启硬约束）
 - 施工席: SDE 小布（m-sde）；施工窗=2026-10-06 18:27-18:48；硬门=全过（见 §六）
 
 ## 一、序① 8711 正形拉起者追查（破案）+序①A 提权验证
@@ -253,6 +253,10 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 3. **值面终验：next_run_at=2026-10-07T09:50:00.000Z=今晚 17:50:00+08:00 精确命中**（state=idle enabled=1，sqlite 回读）
 
 **store 落位勘验注记（8711 数据目录漂移观察项，不阻窗）**：8711 现役进程 cwd=TriRLC 仓裸形（无 TRILC_DATA_DIR）→store=代码默认 `$LOCALAPPDATA\trilc\cron.db`（WAL 面活跃实锤，POST 时点 wal mtime 11:09）；`trirlc-daemon.ps1` L10 另设 TRILC_DATA_DIR=trirlc\（**另一条链**）+watchdog 拉起的 trirlc-daemon.cmd **不设**该键——现役/watchdog 链同落 trilc\ 自洽；**若经 ps1 链重启则 store 切至 trirlc\=job 全丢分裂风险**——ps1 链使用前须先对齐 DATA_DIR，候独立窗项（本窗零动作）。
+
+**CTO 裁断落卷（11:18 四项逐答信，两件入档）**：
+- **③ TriRLC F-3 修复入 FSD 车道，不搭今晚窗**（今晚 TriRLC 侧零动作维持不破）——并入 TriRLC 维护波合并窗（候办并道：/shutdown token 实校+SIGTERM handler+endpoint 复测、UNACKED 计数施工、本条④ store 对齐），目标 10-08 后首个合法窗，COO 排程面候定窗；修复配方=回流 TriMLC 09-30 修复批（INSERT 补 next_run_at 或插入即 recompute），小改低险；**修复落地前「新建 job 必验 next_run_at 值面」临时纪律维持有效**
+- **④ 硬约束（对齐落地前）**：**8711 禁经 ps1 链重启**——重启一律走 trilc stop/start 保持无该 env 的缺省 store；**canonical store 钉死=`$LOCALAPPDATA\trilc\cron.db`**（现役 job 所在面）；对齐方向=ps1 链向现役 store 看，维护窗前不现动数据迁移
 
 **对今晚窗影响**：零——提醒链修复毕（17:50 触发保障），工序照 §7.6/7.8/7.9 不变。
 
