@@ -49,6 +49,8 @@
 
 - S2b 勘差注记：TriMLC /shutdown 门形=**X-Internal-Token header**（源码 src/server/app.ts L4275 现顶代码为无门形，现役旧 build 行为带门——版本差行为分叉，token 门随新 build 带出后的行为候观察）；TriRLC 家族 Authorization Bearer 形不同，勿互套
 - 12min 复读锚：korw 滚动持续性复读候 17:24（last_run 推进+next_run 滚动+state=idle 三点）
+- **17:24 复读毕（验收完整闭环）**：korw state=idle／last_run=09:24:00.021Z ok／**run_count 5662→5668（+6 轮滚动）**／next_run=09:26:00Z 持续滚；其余 5 enabled job 零连坐（全 idle/ok/next_run 正常滚动）；healthz 终读 connected/uptime 759s/degraded=false——根治包验收 PASS
+- CTO 认收+归项（17:2x）：段2 全绿认收；/shutdown 门形版本差=低危技术债非事故，**归 S3 TriRLC/TriMLC 维护波并项**（8711 F-3 修复窗顺带补形）；鉴权门形四 daemon 碎片化（RLC=Bearer/MLC=X-Internal-Token/RMC 双收/MMC 候勘）升 S3 判据卷「鉴权门形统一标准」条（基准候选=TriRMC 双收形）——SDE 面知悉待命
 
 ## 段2 收口
 
