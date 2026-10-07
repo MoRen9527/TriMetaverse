@@ -565,3 +565,11 @@
   - d9ff2d21 docs(sde): 手术卷 §7.10——双窗提醒链修复+F-3 家族谱系勘正：TriRLC addJob 同缺陷实锤（INSERT 无 next_run_at+timer 过滤=永不调度，四代提醒 job 全灭根因闭环），job cron_muxj3q29_2utj PATCH recompute 补值 next_run_at=今晚 17:50 精确落位，8711 store 目录漂移观察项
   - c9dac14b docs(cfo): CEO 11:06 裁答三件入账——年费 ¥3939.6/max 档/2027-08-14 续费入账（浪费建模=年费×(1−利用率)·三档算例标注非预测·真决策变量=续费档位观测）+relay 供数两行排期（今晚 20:44 前钉首窗终值·10-08 起双行日报）+护栏三线计数基准提案=分层双轨（触发面 bigmodel 权威口径/归因面 raw 可复算口径/周对照校准）候批·α 假设作废销案留痕·三 meter 脚本补入库
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 ac9878cf 后新增 6 条 commit：
+  - 6cca26a7 docs(cho): 反省会议程卷终态注记——M1-M6 六条全部批令生效（CEO 11:27）+验收义务三项在挂（M1 抽验/M2 抽验/M3 对照留痕），本树归档态
+  - 720ac40c docs(cfo): M6 生效注记入卷（CEO 11:27 批）——分层双轨即日生效·触发面挂 bigmodel 口径护栏空转解除·今晚 20:30=新基准第一笔·候批表述标历史快照
+  - 97ba475f docs(coo): 值席树 11:0x 条勘正——嫌疑面改指本席 reset 对（transcript 定谳 --hard 两笔 10:55:30/10:56:59），巡检自动机三重排除洗清；收编链 v3 本条首跑（porcelain 第 2 断言非空禁全树 reset+ff-only 对齐替位）
+  - c2a0f24d docs(cho): 反省报告勘正——RC-A1 失实修正（执行通道本体 9-14 夜航01 已通，6天空窗期表述撤销），并入 RC-A2 升首因（有轨但排工路由不上轨），四条→实质三条；排除项论据+摘要段+COO 自领句三处同源联动勘正（修正注记体例原文保留五处）
+  - a1d896dd docs(sde): §7.10 补 CTO 裁断落卷——TriRLC F-3 修复入 FSD 车道维护波(10-08 后首窗,不搭今晚)，硬约束:8711 禁 ps1 链重启+canonical store 钉死 trilc\cron.db，新建 job 验值面纪律维持有效
+  - 743c79d6 docs(cto): 手术卷整写覆盖勘验卷——sg巡检自动机排除(物理不可达+append-only写域+diff干净三重,嫌疑链勘撤),嫌疑改指席位侧git销毁类(COO 10:55/10:56 reset对首查,reflog mode不可辨候transcript一锤),裁令三条(D类候条全树销毁硬禁/收编链v3双断言/未提交窗收敛),今晚窗零影响
+- registry：v2.1；今日 registry 提交无变化
