@@ -245,7 +245,7 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 
 **勘出**：§7.6 所引提醒 job 四代 id（6651f5ce→dd5ff1b5→5097d5b0→6569f870）**全灭于现役 store**——8713 API 7 席全平台族+8711 现役 store 零命中。根因闭环：**TriRLC addJob INSERT 无 next_run_at 列**（store.ts L228-231，13 列清单无此列）+timer L95/L134 `enabled && nextRunAt` 过滤=**next_run_at 空的 job 永不进调度**——POST 201 不等于会触发。
 
-**F-3 家族谱系勘正（候 CAO/memory 并档）**：「F-3（INSERT 缺 next_run_at=永不调度）系 TriMLC 特有非家族性」**被活体推翻**——TriRLC 同缺陷实锤（同源代码，TriMLC 移植时一并带过去）；TriMMC 独立实现才是正形（addJob 即时排程）。正确谱系：**TriRLC+TriMLC 同族缺陷，TriMMC 正形**。
+**F-3 家族谱系勘正（候 CAO/memory 并档）**：「F-3（INSERT 缺 next_run_at=永不调度）系 TriMLC 特有非家族性」**被活体推翻**——双事实：**TriRLC 现役在册**（store.ts L228-231 源码实读+活体 POST 201→next_run_at=null 实证）+**TriMLC 已修**（09-30 修复批，hub-silent-detect POST 正常排程实锚）。同源代码族缺陷，修复未回流 TriRLC；移植方向不作断言（未勘）。TriMMC 独立实现=正形（addJob 即时排程）。
 
 **修复读数（API 正途，零手写库）**：
 1. POST 重建 job=`cron_muxj3q29_2utj`（8711，TriRLC 调度面；落 8713 禁——同缺陷+今晚冷起对象）：name=sde-dual-window-reminder-20261007，cron=`50 17 7 10 *`，systemPrompt=双窗全链+**终版三笔钉死条款**（免再询+顶快验 6f832a1 不符即停+BOD 10:56 程序锚+stop 双锚+完工判据+毕报两刻+STE 短讯+19:00 硬界），201 落地
