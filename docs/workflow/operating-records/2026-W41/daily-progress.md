@@ -505,3 +505,8 @@
 - 巡检兜底补写 @07:30 +08：自上次进度提交 8184e531 后新增 1 条 commit：
   - f7df7e0a docs(ste): LG-058 r5 卷增补§2.8/§2.9——CEO 07:08 裁回滚 GLM 态执行毕（v5 保存200+双unit落盘全绿+UI已落生效·判定PASS）+DeepSeek v4 作废留卷注记
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:10 +08：自上次进度提交 92c6b5a2 后新增 3 条 commit：
+  - 1aa68a1e merge: 并行笔收编（值席窗并行段带平）
+  - 7593ac64 docs(coo): 值席树§四 09:0x对表扫——CEO 07:08裁r5回滚GLM态毕PASS转记(DeepSeek v4作废留卷)+分叉带平,白天车道今日启
+  - ee5515d1 docs(cos): LG-058 大表行合账——r5 回滚段毕 PASS 补注（STE 知会·CEO 07:08 裁/BOD 派工：R-HY rmc 卡回滚 GLM 态 v5 保存 200+双 unit settings.json 终态断言全绿+UI 生效；DeepSeek v4 作废快照留卷；卷增补 f7df7e0a3 亲验 dev 同含）
+- registry：v2.1；今日 registry 提交无变化
