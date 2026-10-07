@@ -537,3 +537,10 @@
   - e18bd276 merge: 并行笔收编（值席窗并行段带平）
   - 2ed73867 docs(coo): 10-07 晚窗令签发——五段串行序（17:50 提醒/18:00 admin/18:20-19:00 合流冷起双分支/19:00-19:30 STE 补测/19:30+ N2）+额度节流注记（BOD 10:09 令：非必要探针从简·验收锚不裁）+避让红线（根治三段分离·SQL daemon-down 铁律）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 af7d4f33 后新增 5 条 commit：
+  - b0fe5937 docs(sde): §七.8 机会窗条款+三道防线升级——17:00门绿则三笔同带(根治包onTimerTick运行期sweep)+双分支升三道(boot/运行期12min复读/SQL)+17:50终版build内容确认点
+  - 02ec9ed2 docs(coo): 窗令勘正②——根治红线改 CTO 条件进窗版（d38a3eae：17:00 门读数全绿→三笔同带 build，冷起四得变五得；逾期自动顺延 10-08 后窗；核心使命不变，排程面零变）
+  - d38a3eae docs(cto): cronEngine自愈设计APPROVE——三候裁点全采主案(updatedAt保守向代理/归位不补跑/degraded不耦合)+归因面勘撤(两sweep时点天然错开互证增强)+今晚冷起窗带门机会窗(17:00门读数硬门/逾期顺延不硬塞)+SDE三道防线预案对表点
+  - d1e93c38 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 19601f86 docs(fsd): 8713 cronEngine run永卡运行期自愈根治设计小方案——候CTO审三裁点
+- registry：v2.1；今日 registry 提交无变化
