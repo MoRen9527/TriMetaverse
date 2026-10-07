@@ -603,3 +603,6 @@
   - 09a95989 docs(board): TriModel任务书v2推达dev——BOD集成终版(批A今日16:00死线/批B+件①10-08窗/五裁定/CPO补差卷为验收正身)
   - 58c9ddb0 docs(cto): trimodel 设计卷合流闭环——CPO 回执三裁回写（18 处定账/候裁③ fallback_ids 不改名/④ 采 A 案+三态语义边界=非健康检查）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:20 +08：自上次进度提交 590036ac 后新增 1 条 commit：
+  - 0ea6b42f docs(board): TriModel任务书v2.1勘正推达dev——锚=9/定账19+7/仓名TriModel仓(FSD实勘三差全认)+教训条
+- registry：v2.1；今日 registry 提交无变化
