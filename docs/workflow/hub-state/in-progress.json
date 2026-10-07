@@ -160,5 +160,14 @@
     "priority": "高（CEO 22:49 裁启动·单立 LG 级三理由：CEO 亲提+跨全司变更+独立验证周期）",
     "status": "open",
     "note": "DEM-003 v2 串联流水线制度单立 LG 级。授号触发已达（CEO 22:49 裁原话「如有必要可以动」——授权可动，一轮 ESCALATE 撤销终局闭合；BOD 22:50 令·COO 22:5x 流转）。材料真源=需求池 DEM-003 全款（v2 演进注+授号与授权注·treeAnchor 126c3789/bare 顶 755331ba）+二轮汇总卷 trees/cos-serial-pipeline-eval-20261007/synthesis-round2-20261007.md（四席二轮全 APPROVE）。链后续=授号（本条·COS 22:54 date 现查 2026-10-07 22:54:53+0800）→任务书（明窗节律制作·不熬夜赶·COO）→一期影子试运行（5-10 件低风险活·CPO 七锚·积压>5 件告警→COO 调节供货节律）。随件注：伴生件 b（session 合同面/岗位变更流程）BOD 另转 CHO/CAO 不经本链；CEO 22:49 两笔（服务器+PC 自动化测试新用途/R 面战略定性 verbatim）已入 DEM-003 演进注。"
+  },
+  {
+    "id": "lg068-perf-scoring-resume",
+    "treeAnchor": "f6be6d44",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/perf-system-trace-cos-20261007/cos-ledger-trace-report.md",
+    "owner": "COS（补录主办+每周结算对表自查）+CHO（记账面：W40 补结算+W41 首跑）+COO（周日 21:00 cron 挂载编排）",
+    "priority": "高（BOD 23:4x 现裁·绩效复活执行序第一步·催办有据自此始）",
+    "status": "open",
+    "note": "绩效评分制度复活执行序挂账（BOD 23:4x 四卷齐裁现裁令）。本条=协查卷改进①「CHO W40 挂账未入共享台账」补录先办：CHO 跨窗挂账项（W38 首周期结算未办）补入共享台账——事实=首周期 W38 结算至今未办（协查卷 f6be6d44 实证·scoring-ledger-w40 自注「W38 结算读数尚未办〔CHO 跨窗挂账项〕」）；补结算计划指针=W40 补结算→W41 10-11 首跑（BOD 复活方案·裁断正身 COO 面·周日 21:00 cron 挂载/10-18 校准语义收窄采 CHO 案）。改进②=周期性结算对表：cron 挂载后机械叫醒消解主害，保留 COS 每周对表自查一条随收口批走。补录执行：COS 23:4x（date 现查后落笔）·补录毕报 BOD。与 COO 挂载编排并行不撞。"
   }
 ]
