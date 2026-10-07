@@ -586,3 +586,13 @@
   - 33110ff1 docs(cpo): trimodel 树件 seg2——「模型策略」IA 三概念分区提案+改名文案全表 16 行+禁改清单
   - 101d60e2 docs(cpo): trimodel 树件 seg1——cc-switch 对表调研+定位对比叙事（三件任务之一/之二-a）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 6af3e135 后新增 8 条 commit：
+  - 5d175a26 docs(cpo): trimodel 设计卷 v1.1——CTO 交叉实勘 16/16 认账+增补 #17/#18 采认(用户可见面 16→18)+候裁点③层级消解+三态读数 A 案采认附语义边界条件
+  - 13032642 Merge remote-tracking branch 'origin/dev' into dev
+  - ed06a2b8 docs(cto): trimodel 三件 seg4——件③ CLI 直配能力盘点（四仓 model 同源 harness 位/config 族触发器/daemon 运行态缺口定谳/兜底二层判定）+收口五段
+  - 882ed16a docs(cpo): trimodel 树 charter 对表补差卷+设计卷施工边界勘误——验收锚合并稿(禁改五处假阳性防)+边界节补块 A/B+终验顺延认账
+  - b0608d88 docs(cto): trimodel 三件 seg3——件② 模型策略前端结构改造（工程盘点+CPO 16 行表核对 16/16 命中+实勘增补 4 处+两批解耦改动面）
+  - fb4aeb73 docs(cto): trimodel 三件 seg2——件① 兜底模型直配 settings.json 技术设计（四域映射矩阵+r5 五件投影+五步验证点+三态支撑+候裁五点）
+  - d45f9c2a docs(cto): trimodel 三件 seg1——cc-switch 机制对照面（六机制+对齐/超出/异构三表+结论）
+  - 9f5e8e8b docs(board): CEO 11:35令任务书推达dev——TriModel模型策略重整+兜底模型改名改造(树trimodel-strategy-revamp-01·CPO对表基座·BOD 13d6c63f 同件)
+- registry：v2.1；今日 registry 提交无变化
