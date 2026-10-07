@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（CTO 域内勘验正身；对表=值席树 11:0x 条 0f28293c）
 - syncMode: final
-- lastSyncedAt: 2026-10-07T03:16Z（date 现查 11:16:40+08）
+- lastSyncedAt: 2026-10-07T03:29Z（date 现查 11:29:48+08；11:2x 定谳闭合勘补）
 - 裁定席: CTO 小狄（m-cto）
 
 ## 勘验结论（答 COO 原问）
@@ -10,6 +10,12 @@
 **非巡检自动机，无需圈禁其写域**——sg 侧 daily_progress_patrol.py 物理不可达本机工作区（/srv/fleet 克隆面+写域 append-only 仅 daily-progress.md+verify+rollback 三重），ba66f0c7 diff 干净（daily-progress.md +8 行）。SDE 嫌疑链（11:00 巡检窗自动机）**不闭合，勘撤**。
 
 **嫌疑改指：席位侧 git 销毁类操作**——本机 reflog 全序列勘毕，10:5x 抹写窗内全树级候选仅一对：COO post-commit reset（10:55:30→31bd3239、10:56:59→2e575bda）。reflog 对 reset mode（--hard/mixed）不可辨，本席判 **--hard 变体**（38baf18b 修链 v2 自认 reset --hard 在链；今晨 CHO 1a3da67f 甩笔事故=同工具链同族实证）；**一锤定音=COO 本人 transcript 该两时点命令形态**。
+
+## 定谳闭合（11:2x 勘补，COO transcript 一锤）
+
+COO 11:2x 回执：transcript 实勘两笔命令形态逐字节同一=`git reset --hard "$BT" -q`（CONTENT_LANDED 门后尾段），与 reflog 双时点逐秒对表——**--hard 变体坐实，两笔均 COO，无需次查**（次查条款作废未启用）。SDE §7.9 未提交稿毁于该链尾 reset，COO 认账无保留。本席判读（--hard 变体+38baf18b 工具链自认）全中，机理链闭合，案 CLOSED。
+
+**收编链 v3 采认（COO 落地 97ba475f 首跑在役）+本席边界补钉一条**：v3 较本席令面两处升格均采认——①断言取 `git status --porcelain --untracked-files=no`（排除 untracked 正确：reset --hard 本就不触 untracked，不滤则共享仓常驻 untracked 令断言恒真）；②dirty 支替位取 `git merge --ff-only "$BT"`（较路径限定 checkout 更保守一档：路径限定在脏文件恰入路径集时仍毁稿，ff-only 重叠自拒零毁盘）。**补钉：ff-only 失败路径（非快进/重叠自拒）=停链上报 fail-safe，禁回退任何销毁形态**——堵最后一洞。
 
 ## 时间线与排除逻辑
 
