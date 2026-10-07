@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/lg065-duty-seat-bc-20261006/coo-window-log-20261007.md）
 - syncMode: rolling（窗程事件即刷即 commit）
-- lastSyncedAt: 2026-10-07 17:41 +0800（date 现查 hook 17:39:40；三刷）
+- lastSyncedAt: 2026-10-07 18:29 +0800（date 现查 10:27:59Z；四刷）
 - 编排席: COO 小营（GO 门两候：≤18:10 段2 验收绿判读+≤18:45 N2 GO）
 - 窗令源: CEO 16:49:29 亲令「开」（原 17:50 窗框与提醒段作废；段序不变；断点按实绩重算）
 
@@ -64,6 +64,17 @@
 - **N2 GO 刻 17:39**：门条件三齐（冷起毕✓+护栏三件套绿✓+STE 补测绿✓）——FSD GO 令发（开切即刻，完工目标 ≤19:45 上界 ≤20:00，过点自动兜底形报；S2b token 勘差随达；19:23 c9739989 盯梢 cron 照旧）。
 - **BOD 终判 PASS 签发**（b2f6e005）：LG-064 B 族闭案；PENDING-RESEND 裁入 S3 维护波候选清单（纯通道面·42s 时序明证·不阻塞窗链）——两笔对齐收讫（BOD 17:39:40 信与 GO 刻报交会，交会确认回执 17:40）。
 - 窗链现势：段1 16:57 GO→段2 17:12:30 毕（判读 17:15 PASS）→段3 17:38 毕（判读 17:39 PASS+BOD 终判）→段4 N2 开切中（17:39 GO）——四段毕三段全绿，全窗超前 ~1h。
+
+## 段4 N2 毕报判读 PASS + 收口链启动（18:26 毕报→判读 18:28）
+
+- FSD N2 两刻制毕报：开工 09:48:23Z／毕报 10:26:46Z（18:26+08）——**38min 施工守窗提前 ~79min**；卷=fsd-n2-watchdog-receipt-20261007.md @09645364。
+- 落位面：dev 侧 tri-watchdog-n2.ps1 挂 TriMLC 8713 job cron_muxxy5w7_wbb7（cron 白名单追加+冷起轮 pid 31796→3628，jobCount 7→8 带全）；sg 侧 tri-watchdog-n2-sg.sh 挂 TriMMC 8712 job 2608a629…8b7b；四判据+hop1/hop2 叫醒链+cron 自检+对侧互备全落。
+- 自测读数：10:20Z 双侧自然轮全绿（dev runCount=2/lastRunStatus=ok/peer=0min；sg 10:20:05 轮 OK）——互备闭环。
+- 勘差两笔施工内即修：①launcher PATH guard 无 System32\OpenSSH→cron 生成面裸 ssh 静默哑火（首火 10:10 揪出，绝对路径修毕 10:20 轮实证）；②d3c 任务态 Running 误报双放行修毕。
+- 技术债六项如实入卷（sg d1 身份墙降级／CN 数词解析脆弱含一回失灵实证／JSON 注引／hop4=runbook 性质／launcher bak 候 CTO 验收毕清／8713 完成链断裂知情在案）。
+- 本席活体独立抽验（18:27:59Z）：healthz ok／uptime 1476s 倒推冷启 ≈18:03:23+08 落 FSD 施工窗内 ✓／pid 3628 node 活体+8713 LISTENING 一致 ✓／**jobCount=8**（7+watchdog 带全）／degraded=false——双证判读 **PASS（18:28）**。
+- 收口链（BOD 18:27 启动）：**STE 验收令已发**（164c5b94·五锚：双侧自然轮复测/四判据抽验/互备对章/技术债定性核/hop1/2 真发归 N3 确认）→BOD 复核→呈 CEO 知情；窗毕两刻制收官候 STE 验收毕。
+- N2 静默令达 FSD（18:28，照段3 STE 先例）；hop1/2 真发路径实测守节流归 10-08 N3 窗。
 
 ## 候续（滚动）
 
