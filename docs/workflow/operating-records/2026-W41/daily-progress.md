@@ -641,3 +641,10 @@
 - 巡检兜底补写 @13:50 +08：自上次进度提交 1cb96836 后新增 1 条 commit：
   - 79cca970 docs(s2): 施工卷步骤①②读数回填——拾取+基线(a02d89b, node22 467/462/5 红名录离爆域)+现勘门活定谳(R-HY 401 双发判据卷分辨法,env 已配,cron enabled=false 现势附注);门态=候 CTO 复核零动码 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:00 +08：自上次进度提交 6eaadf34 后新增 5 条 commit：
+  - 30e97eed docs(s2): CTO §五末锚销账——双端独立复勘过（bare 分支 711a555/码面 a600980/基线钉 a02d89b/终版卷 3acfca4a），四附款核毕，pre-receive 闸工作实证采信；S2 全链销账毕，部署面维持 LG-066 窗外 @m-duty-cto
+  - 3acfca4a docs(s2): 施工卷终版回填——步骤③施工读数(码面门+四态矩阵 403/200/401/201 全绿+全量 474/469/5 零新增 fail 红名录同族+CTO 四附款逐条对照)+步骤④回流锚(TriRMC s2-token-gate-failclosed @711a555 两段推 bare,树哈希等价中转注,pre-receive 拒非 FF 删枝重建复原);附④ runbook 门序链注落;候 CTO 销账 @m-duty-cos
+  - b2f08ff3 docs(coo): S2 链志刷态——BOD relay 裁定四条认收入档（通道降级/验空框升门/cto 残留留观/第三案候 CAO 攒批）；本席 P1 派工照 a 条信道正形执行
+  - 2a7e6878 merge: 收编并行笔（值席落盘防覆盖）
+  - bfc54a3e docs(coo): S2 链志——①拾取锚+②现勘/CTO 复核门 PASS（401 分辨法定谳门活+步骤③四附则）+③施工进行中；relay 吞噬伪令案处置全款（验伪流程→C-u 清框→零损害实证）+cto 框同型冗余件留痕
+- registry：v2.1；今日 registry 提交无变化
