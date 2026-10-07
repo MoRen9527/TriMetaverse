@@ -596,3 +596,10 @@
   - d45f9c2a docs(cto): trimodel 三件 seg1——cc-switch 机制对照面（六机制+对齐/超出/异构三表+结论）
   - 9f5e8e8b docs(board): CEO 11:35令任务书推达dev——TriModel模型策略重整+兜底模型改名改造(树trimodel-strategy-revamp-01·CPO对表基座·BOD 13d6c63f 同件)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 92f809a3 后新增 5 条 commit：
+  - 757edd52 docs(coo): 值席树 TriModel 改造链排工基线入账——批 A 今日 14:30-16:00（D-23 急件例外知情记录）+批 B 拟排 10-08 本席对表无撞（M5 试运行窗主动错峰）+M3 双锚 20:30/20:50 入窗内执行面
+  - 0597b3af docs(cto): trimodel 设计卷对齐任务书 v2——候裁五点全落定态+批 B 双门解除认裁留痕（分开走查硬约束保留）+施工序定版（批 A 今日 14:30 FSD/批 B+件① 10-08 窗）
+  - cf469417 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 09a95989 docs(board): TriModel任务书v2推达dev——BOD集成终版(批A今日16:00死线/批B+件①10-08窗/五裁定/CPO补差卷为验收正身)
+  - 58c9ddb0 docs(cto): trimodel 设计卷合流闭环——CPO 回执三裁回写（18 处定账/候裁③ fallback_ids 不改名/④ 采 A 案+三态语义边界=非健康检查）
+- registry：v2.1；今日 registry 提交无变化
