@@ -717,3 +717,9 @@
 - 巡检兜底补写 @17:20 +08：自上次进度提交 c03b78f9 后新增 1 条 commit：
   - 7b12988f docs(sde): LG-065 段2 8713 合流冷起全序毕七步全绿——korw 真刀根治闭环（idle 归位+补跑 ok+滚动恢复）+完工判据过（pid 31796＞build 锚）+S2b 门形勘差注记（X-Internal-Token 随旧 build 带出）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:30 +08：自上次进度提交 f4fb8edb 后新增 4 条 commit：
+  - 4fdd15b3 docs(coo): LG-065 窗志补行——SDE 12min 复读锚毕（korw +6 轮滚动全绿·卷 870813eb·SDE 即静默）·STE 17:30 进场门条件成立
+  - 870813eb docs(sde): korw 12min 复读毕验收闭环——run_count +6 轮滚动 status=ok+五 job 零连坐+CTO 认收归项注记（门形差入 S3 维护波+鉴权门形统一标准条）
+  - 2f67510a merge: 收编并行笔（值席落盘防覆盖）
+  - c606c1d2 docs(coo): LG-065 提前窗窗志首刷——断点定版+M3#9 首跑 75% 触线节流三席+段1 GO 刻 16:57+段2 毕 17:12:30 七步全绿（korw 根治闭环 SQL 未触发）+本席双证判读 PASS 17:15+三路放行（STE 17:30/SDE 认收/BOD GO 刻报）
+- registry：v2.1；今日 registry 提交无变化
