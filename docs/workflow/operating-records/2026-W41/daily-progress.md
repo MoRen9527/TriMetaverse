@@ -745,3 +745,6 @@
   - 5fa62e0a docs(board): 发送账#447落盘——N2验收终判PASS·LG065提前窗全闭(四段全绿收官提前1h·三证合流·ssh单通道域知CTO·N3预载10-08)
   - 66a4b6cb docs(ste): N2 盯梢 daemon 落位验收五锚全 PASS——双侧自然轮独立复测（dev rc 2→3/sg log+1 行）+四判据代码面逐条对照 CTO 定形+互备双章 fleet 双向新鲜+技术债六项面核三笔勘定注记+pidfile 勘差自纠（.trimetaverse 面）+ssh 单通道观察项单列
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:50 +08：自上次进度提交 ce0c3d7a 后新增 1 条 commit：
+  - 3445cf46 docs(cto): ssh 单通道依赖评估——观测性单点非可用性单点(daemon 运行不依赖 ssh)+处置采 A+D 组合(告警出站 HTTPS 化+failcount 盲区自告警)候维护波/B healthz 公网 C 外部心跳双否决
+- registry：v2.1；今日 registry 提交无变化
