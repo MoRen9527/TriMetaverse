@@ -835,3 +835,8 @@
   - 29170685 merge: 收编并行笔（值席落盘防覆盖）
   - 413d3d52 docs(coo): 编排卷追记——joint-review-demand-pool 同批复活裁断入卷（BOD 23:51 裁·enable 翻真+nextRunAtMs 值面验证并入挂载序步骤 2.5·提醒对象错漏如实报再调）+备案生效注记（挂载窗 10-09/10-10 联审后自排·首跑 10-11 21:00 硬时点不变）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:20 +08：自上次进度提交 254e58bd 后新增 3 条 commit：
+  - 40d9d1a2 docs(cto): LG-066 N1技术门APPROVE卷——三面细案判据对表全合（端口收敛/CONFIG_DIR copy-not-move方向裁决/面路由10条实锚清单）；六候裁逐条裁毕：bind 0.0.0.0采（本席独立复验8711 healthz mc_peer=trirmc degraded活出站+S2 token门fail-closed在岗）·token对齐采合并毕再修24h内·CPO验收口径采degraded可达即达标（链路通+门活双证据·禁认证修复混合并窗）·stale指针分裁（trimc名随段2窗/NOTIFY_SG_URL挂候办改前活体实勘不盲改）；两条窗前注记=trirlc-daemon.ps1与l2.ps1文件级锚dev仓内未中留窗前定位；收编FSD方案稿055c40a7
+  - 6a94a377 docs(cpo): 深测②方案卷定名勘正落卷（CEO 00:06 打回 e45f64be）——「可切换素材」「模型清单」两词作废：块1=已添加模型条目（三候选裁采）/块2=可切换模型集（条4原词升块名）；素材壳连词带构撤销终态改四区块平铺+条8扫描清单「条目」项随定名撤销+自身勘正清单补第三笔（教训：三候选授权=三选一禁造第四词判断不构成造词授权）；旧词残留grep自查零命中
+  - 6eaa07c9 docs(fsd): LG-066 合并方案稿（N1 候审材料）——三面可施工细案零硬凑：①端口收敛=段1 mc 停+unit 备份位移/段2 8712→8710+bind 0.0.0.0 裁决建议(存在理由实锚=dev TriRLC 跨机出站消费 trirlc-daemon.ps1 L11 硬编码 8.155:8710·现 degraded 401=在册候办非合并新伤)②CONFIG_DIR copy-not-move 逐项处置表(唯一存续面=/var/lib/trirmc 零触碰·mc-store.sqlite checkpoint 后复制覆盖本体陈旧副本·cache 不复制防过期污染·settings 施工时 diff)③面路由消费方清单十条实锚(l2 探针 8712→8710 段2 同窗原子改+l2 trimc 旧名悬空实证入清洗+TRIMC_NOTIFY_SG_URL sg 8710 退役 stale 指针候 CTO 域+token 对齐候办时序建议合并毕修)；候裁回填七条有主(跨机清点=升格③窗前回填)；纪律五条 verbatim 全带
+- registry：v2.1；今日 registry 提交无变化
