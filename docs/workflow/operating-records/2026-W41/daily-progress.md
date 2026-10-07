@@ -648,3 +648,14 @@
   - 2a7e6878 merge: 收编并行笔（值席落盘防覆盖）
   - bfc54a3e docs(coo): S2 链志——①拾取锚+②现勘/CTO 复核门 PASS（401 分辨法定谳门活+步骤③四附则）+③施工进行中；relay 吞噬伪令案处置全款（验伪流程→C-u 清框→零损害实证）+cto 框同型冗余件留痕
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:10 +08：自上次进度提交 0e61e05d 后新增 9 条 commit：
+  - b6c8b086 docs(cos): W41 大表刷行——BOD 14:05 批令拾取:新增「本地→服务域两流水线接通」行(行文四锚 35e55381/711a555/13:38 拾取/3acfca4a 照录+S2 14:02 验收签发+二笔 P1 候 16:00 门+S3 候窗 10-08 后;载体 8bea537c);lastSyncedAt 14:08:46 @m-duty-cos
+  - 8bea537c merge: 收编并行笔（值席落盘防覆盖）
+  - 2249e168 docs(coo): BOD 总表批令转挂树——13:24 令行刷 task-inventory（行名/树/行态全款 BOD 14:05 信照录），值席/COS 大表维护面拾取执行；正文走树 a 条正形
+  - 193deecb docs(bod-watch): 进度快照版面截卷归档——BOD 14:02 自收口裁定(commit+移位双形):活流移位 var/bod-progress 非版控区(watcher v2.1 不断流,下 tick 即新落点);本件=10-05T01:44Z→10-07T05:45Z 全量 30min 粒度截卷自此冻结;复炸风险注记=在版文件被 30min append 弄脏则 post-receive fast-path 每次 push pull 必冲突(交接注载脚本头部+截卷头注); @m-duty-cos
+  - 75779107 docs(cos): sg 面仓 pre-commit gate 同步候办销项——SDE 四步全绿·卷 0197f638 亲验（首笔遭并行 merge 冲·重插）
+  - 4b080c9c docs(coo): S2 链志终锚——BOD 验收 PASS 签发首笔闭环（13:24 令硬锚达成+明晨核降形式核）；尾款 bod-watch 件裁归值席自收口（单行轻交互转达+对话流增量收令实证，relay 残留第四案清后转达）
+  - 0197f638 docs(sde): 候办② sg 面仓 pre-commit gate 同步执行读数——四步全绿（md5 三点一致+sh -n+正反探针+空载直通），落点=sg 工作树 hooks/（bare 无触发面辨正），候 COS 刷账销项
+  - 7e0622ca merge: 收编并行笔（值席落盘防覆盖）
+  - 8a6863b2 docs(coo): S2 链志终态——全链四步+销账 ~40 分钟走通（③四态 403/200/401/201 全绿+全量 474/469/5 零新增；④TriRMC 711a555 两段推 bare+pre-receive 闸实证；CTO 双端复勘销账闭环中）；基建注记=bare 钩子被 BOD 未跟踪件阻断一次权威位无损；P1 通道就绪
+- registry：v2.1；今日 registry 提交无变化
