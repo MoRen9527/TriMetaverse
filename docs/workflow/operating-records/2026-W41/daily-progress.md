@@ -727,3 +727,9 @@
   - 0d3ed833 merge: 收编 TC 并行笔后补推 #446
   - 6fcf2f7d docs(board): 发送账#446落盘——LG-065段2/段3全毕全绿+LG-064B族闭案终判PASS(冷起2.5min·五锚全绿·PENDING-RESEND入S3候选·段4GO前置齐)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:50 +08：自上次进度提交 0e12f983 后新增 4 条 commit：
+  - 32b1cbc7 merge: 收编并行笔（值席落盘防覆盖）
+  - b4f50b61 docs(coo): LG-065 窗志三刷——段3 STE 五锚补测判读 PASS 17:39（korw 三证差分 5668→5670+活体双证）+N2 GO 刻 17:39 放行 FSD+BOD 终判 b2f6e005 对齐（LG-064 B 族闭案·PENDING-RESEND 裁 S3 候选）·窗链四段毕三段全绿超前 ~1h
+  - 946746cc docs(ste): LG-064 B族闭案终局落卷——BOD 终判 PASS 签发（主链闭）+PENDING-RESEND 终裁入 S3 候选清单+COO 认收 korw 三证差分+补测段毕即静默
+  - 80bb38eb docs(ste): LG-064 B族五锚全绿闭案条件达成——锚2/3/5 补测全 PASS（korw rc 5670 独立滚动+2/恢复锚 L595 在位/6 enabled 全 FUTURE）+PENDING-RESEND 通道 fail 单列候判+挂死根因读数侧归因（channel.log 零执行行=可观测缺口）
+- registry：v2.1；今日 registry 提交无变化
