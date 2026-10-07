@@ -748,3 +748,9 @@
 - 巡检兜底补写 @18:50 +08：自上次进度提交 ce0c3d7a 后新增 1 条 commit：
   - 3445cf46 docs(cto): ssh 单通道依赖评估——观测性单点非可用性单点(daemon 运行不依赖 ssh)+处置采 A+D 组合(告警出站 HTTPS 化+failcount 盲区自告警)候维护波/B healthz 公网 C 外部心跳双否决
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 7193d49e 后新增 4 条 commit：
+  - a54a94a8 merge: 收编并行笔（值席落盘防覆盖）
+  - 6cec8eeb docs(coo): LG-065 窗志六刷补正笔——FSD d1 PS5.1 编码分叉勘正（生产永久哑火重定性·双宿主分叉坑第二例）修毕三级终证（c65a0bb6·-Encoding UTF8）+8713 迟火抖动活体实证三笔自愈（根治归 CTO 域）·STE 验收面转达以补正为准·BOD 值面勘正知情
+  - c65a0bb6 docs(fsd): LG-065 N2 回执补正——勘差第三笔（d1 账本解析 PS5.1 编码分叉：cron 生产面 openItems 恒-1 d1 告警腿哑火，-Encoding UTF8 单 token 修毕+PS5.1 定点/全脚本/11:32 生产自然轮三级终证）+§六.2 瞬时锁假设推翻勘正+§六.6 8713 迟火抖动活体实证补记
+  - 21b8209e docs(cos): LG-065 提前窗收官刷账——四段全毕+STE N2 五锚 PASS 66a4b6cb+BOD 终判 PASS·对表扫撤·余 N3 候 10-08
+- registry：v2.1；今日 registry 提交无变化
