@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（8713 手术施工读数正身；方案卷=同目录 trimlc-8713-fix-proposal-1p-20261006.md，CTO 放行 10:42+18:2x 回执「§四序照案打头，术后读数照三件套+首切锚」）
 - syncMode: static
-- lastSyncedAt: 2026-10-07T10:59:06+08:00（date 现查原样粘贴；并行撞车结构修复+§7.9 终版钉死补落）
+- lastSyncedAt: 2026-10-07T11:12:46+08:00（date 现查原样粘贴；§7.10 提醒链修复+F-3 家族谱系勘正）
 - 施工席: SDE 小布（m-sde）；施工窗=2026-10-06 18:27-18:48；硬门=全过（见 §六）
 
 ## 一、序① 8711 正形拉起者追查（破案）+序①A 提权验证
@@ -240,6 +240,21 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 - **信面仓向笔误勘正（如实落卷，不指错）**：CTO 10:54 信写「TriRLC 侧 2b1709d+TriMLC 侧 03c6197+6f832a1」——实测三笔全 TriMLC 仓，信面「TriRLC 侧」系笔误；build 消费面语义零变（build 就在 TriMLC 仓做，三笔同顶同带出），如实勘正入卷
 - **根治包构成（顶笔 6f832a1 勘验）**：src/cron/store.ts(+65)/timer.ts(+57)/localbus/bus.ts(+3)+test/cron-stale-reclaim.test.ts(216 行)——onTimerTick 内嵌 stale-running sweep 运行期自愈+零 schema，冷起即生效
 - 防线链三道照 §7.8 执行；毕报两刻照 §7.7 落卷
+
+### 7.10 双窗提醒链修复+F-3 家族谱系勘正（11:12，CTO 采认信后勘出）
+
+**勘出**：§7.6 所引提醒 job 四代 id（6651f5ce→dd5ff1b5→5097d5b0→6569f870）**全灭于现役 store**——8713 API 7 席全平台族+8711 现役 store 零命中。根因闭环：**TriRLC addJob INSERT 无 next_run_at 列**（store.ts L228-231，13 列清单无此列）+timer L95/L134 `enabled && nextRunAt` 过滤=**next_run_at 空的 job 永不进调度**——POST 201 不等于会触发。
+
+**F-3 家族谱系勘正（候 CAO/memory 并档）**：「F-3（INSERT 缺 next_run_at=永不调度）系 TriMLC 特有非家族性」**被活体推翻**——TriRLC 同缺陷实锤（同源代码，TriMLC 移植时一并带过去）；TriMMC 独立实现才是正形（addJob 即时排程）。正确谱系：**TriRLC+TriMLC 同族缺陷，TriMMC 正形**。
+
+**修复读数（API 正途，零手写库）**：
+1. POST 重建 job=`cron_muxj3q29_2utj`（8711，TriRLC 调度面；落 8713 禁——同缺陷+今晚冷起对象）：name=sde-dual-window-reminder-20261007，cron=`50 17 7 10 *`，systemPrompt=双窗全链+**终版三笔钉死条款**（免再询+顶快验 6f832a1 不符即停+BOD 10:56 程序锚+stop 双锚+完工判据+毕报两刻+STE 短讯+19:00 硬界），201 落地
+2. next_run_at=null 确诊（sqlite 只读）→**PATCH {schedule} 同值触发 store.ts L294-300 recompute 分支**（API 正途）→200
+3. **值面终验：next_run_at=2026-10-07T09:50:00.000Z=今晚 17:50:00+08:00 精确命中**（state=idle enabled=1，sqlite 回读）
+
+**store 落位勘验注记（8711 数据目录漂移观察项，不阻窗）**：8711 现役进程 cwd=TriRLC 仓裸形（无 TRILC_DATA_DIR）→store=代码默认 `$LOCALAPPDATA\trilc\cron.db`（WAL 面活跃实锤，POST 时点 wal mtime 11:09）；`trirlc-daemon.ps1` L10 另设 TRILC_DATA_DIR=trirlc\（**另一条链**）+watchdog 拉起的 trirlc-daemon.cmd **不设**该键——现役/watchdog 链同落 trilc\ 自洽；**若经 ps1 链重启则 store 切至 trirlc\=job 全丢分裂风险**——ps1 链使用前须先对齐 DATA_DIR，候独立窗项（本窗零动作）。
+
+**对今晚窗影响**：零——提醒链修复毕（17:50 触发保障），工序照 §7.6/7.8/7.9 不变。
 
 - daemon-down 窗压至 S2b-S3（SQL+boot 秒级）——build 前置于 shutdown 前=down 窗最短化（FSD「冷起前须 build」口径的执行序精确化，语义不变）
 - 2b1709d 同窗带出（updateJobRun 尾补 saveCronStore，行为锚测试两例在 03c6197 同顶）
