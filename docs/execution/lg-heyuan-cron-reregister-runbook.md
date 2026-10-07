@@ -6,6 +6,8 @@
 
 ## 勘正注记（2026-09-14 批令①执行实录）
 
+> 〔S2 门序链注 2026-10-07〕TriRMC cron 写族门已 fail-closed 化（TriRMC 分支 s2-token-gate-failclosed @711a555；现勘卷=trees/local-svc-pipeline-link-01/s2-exec-readout-20261007.md，R-HY env 已配门活 401 实勘在卷）：本 runbook 重注册窗起时三 job POST **必携 `X-Internal-Token` 头**；若窗起前 env 缺配则先补配再窗（未配=写族 403 全拒）——门序衔接备忘。
+
 1. **双面真相**：河源 trirmc 有两面——8712=systemd 服务本体（cron 引擎，三 job 健在）；8710=对外 API 面实例（cron disabled/jobCount=0 属该面形态，非引擎空载）。外网 8710 healthz 的 cron 指标**不代表**引擎真态；昨夜（2026-09-14 凌晨）以 8710 读数判「三 job 灭失」系误判，实际三 job 一直在册（id 与本 runbook 原值一致）。巡检第五对象以 8710 为代理面的 cron 指标读数=R-HY 侧盲区（如实标注，候巡检面修订）。
 2. **token 键名**：本 runbook 原写 `TRIMC_INTERNAL_TOKEN`，实际 systemd Environment 键名=`TRIRMC_INTERNAL_TOKEN`（R 前缀）——前置取 token 命令已勘正。
 3. **job 修复形态**：job 在册时用 `PATCH /internal/v1/cron/jobs/{id}`（payload 整体替换）；仅进程重启/灭失后用本件 POST 重注册。

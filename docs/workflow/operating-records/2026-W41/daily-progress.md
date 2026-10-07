@@ -423,3 +423,259 @@
   - 9147ad7b docs(lg058): 执行卷补终验锚——CEO 亲测 pass 21:03:22 二轮闭环（全链时点+COO 认收）
   - c882d899 docs(ste): LG-058 二轮复验走查卷——新锚未连接冷态无条件左右布局六断言全 PASS(几何 420≤434+结构 nav∈app-layout+无条件语义代码面闭合+文案一致+置灰分域+流水线 28/28) 连接态活体候授权非阻塞 0359b89
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 6cfae14f 后新增 6 条 commit：
+  - f39943e4 docs(board): 发送账#422——CEO删备份双令执行毕(5份41M清零/断言过/定时清零)
+  - a295d942 docs(board): 发送账#421——CEO亲测pass锚(21:03:22左右布局)整改波首球闭环
+  - 650c7eec docs(board): 发送账#419-420——记忆镜像触发形态改毕(hook正身+端到端冒烟)/LG-058二轮升版全链毕(GO-r2双放行+BOD复验PASS呈CEO)
+  - bd9a32bd docs(board): 发送账#415-418——LG-065 N1认账+并窗裁+晚窗两段收口链/值面案定性+高危打印面防线/亲测打回第一件更正派工/记忆镜像令落地毕
+  - f0437624 docs(board): 发送账#414——CEO 17:21 双批令流转毕(LG-065 值席b+c组合案任务书07683648授号/COS 433ce79e回执/LG-066 TriRMC合并候排+COO排期令ea92b177附10-13两问质询)
+  - 709ee46a docs(board): 发送账#411-413——LG-058 全链毕终读数呈CEO(终复核卷8439fabf/本体重启缺陷闭合)/值席三问答+token回显三案定性/LG-064销账+D-43复核过+晚窗三件在案
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 6c5e7b89 后新增 8 条 commit：
+  - cf38e2a4 docs(coo): 值席树§四 三轮口径微更——BOD playwright抓单点(R面卡头缺8712)打回+FSD r3b补钉在途+STE覆盖缺口自领(候毕补四签端口对等断言非全量)+主体PASS维持·双道复验价值实证
+  - ea272142 docs(ste): 三轮卷增补——BOD 21:44 单点打回入卷(TriRMC 卡头缺 8712 三姊妹对照不齐)+本席覆盖缺口自领(四签横向端口对等未显式化入断言,层面误置卡头作实例行)+对等性锚入走查清单正形候 CAO+r3b 毕单点验证注候触发
+  - 895095be docs(coo): 值席树§四 STE三轮走查毕PASS——正名锚三面闭合(4/4tab活体+回归零漂移+显示层8710清零)+44/44流水线·卷441b3b51·候CEO亲测+BOD终验归三轮终态
+  - 441b3b51 docs(ste): LG-058 三轮复验走查卷——正名锚全 PASS(四签三段式 4/4 活体+压缩形/河源/裸 sg/(sg)栏渲染面全清零+8710 显示层清零)+二轮回归零破(420≤434)+流水线 44/44 三套 0a2ce5b 8712 系 BOD 勘正边界确认
+  - ac207d07 docs(coo): 值席树§四 三轮毕报第①刻转+STE链触发——0a2ce5b上役一次绿(正名锚全绿+二轮锚保持+TriRMC/endpoint零触碰+文件式探针零假阴性)+②f mock边界外单列+FSD卷910ecb74义务毕+时窗界内
+  - 910ecb74 docs(lg058): 三轮施工收口——机器位三段式正名（0a2ce5b 上役环C一次绿）r3 流水线脚本+执行卷三轮段
+  - a9241100 merge: 并行笔收编（值席窗并行段带平）
+  - 12228032 docs(coo): 值席树§四 GO-r3放行——三轮机器位三段式正名(CEO 21:22令)硬门①五点判据核毕(值面锚六条全过+备份锚双件+升版面纯显示名endpoint值面零触碰+自测门345/331零失败+SIGPIPE教训落正形)·毕报两刻制+BOD知情
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:00 +08：自上次进度提交 9c70c5b8 后新增 2 条 commit：
+  - 1c74f087 merge: 并行笔收编（值席窗并行段带平）
+  - 6f5eae4d docs(coo): 值席树§四 GO-r3b放行——单点补钉硬门①达(ce153a9卡头R-HY 8712直击打回+四签端口对等内建+十锚全过+52/52+345/331零失败+回滚语义如实注记)·毕候BOD快复验+STE单点行归终态
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:10 +08：自上次进度提交 eadc78aa 后新增 6 条 commit：
+  - 1001ce2c docs(coo): 值席树§四 r3b单点行毕=三轮真终态达——STE四签端口对等4/4全绿(b0154b67)与BOD 22:03快复验双法互证+缓存假阴性排障注记候CAO家族·候CEO亲测归LG-058全链终态
+  - b0154b67 docs(ste): 三轮真终态——r3b 单点验证注(四签端口对等 4/4 全绿 TriRMC·R-HY·8712 打回闭合+旧形零残留)+BOD 快复验双法互证+缓存假阴性排障注(服务器真值/浏览器渲染值分离法)候 CAO
+  - 5b3f4b03 docs(fsd): LG-058 r3b 执行卷补 BOD 快复验 PASS 锚——三轮闭环
+  - 88358daa merge: 并行笔收编（值席窗并行段带平）
+  - f6a541cd docs(coo): 值席树§四 r3b毕报第①刻转——打回单点修复一次绿闭环(R-HY 8712卡头+四签端口对等全绿+环C十锚+活体终刀PASS)+FSD卷054bd764·候BOD快复验+STE单点行归三轮真终态
+  - 054bd764 docs(fsd): LG-058 r3b 补钉收口——BOD 21:44 打回单点修复毕
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:20 +08：自上次进度提交 96a71fc2 后新增 6 条 commit：
+  - b4726a87 docs(coo): 值席树§四排障注记——ALREADY_IN_REMOTE误判(fetch陈旧FETCH_HEAD)ls-remote验新正形,候CAO家族
+  - 02486dbf docs(coo): 值席树§四 LG-066车道钉死——CTO预裁同窗分段连环(段1全绿=段2硬门)+方案稿死线10-08午前+8712消费方活体探车道,独立窗分支作废
+  - 136dff92 docs(cto): LG-066 N4端口迁移施工形态预裁——同窗分段连环段间硬绿门(段1合并8712原口全绿+段2切8710联动面六项原子切换)+终态四daemon采认(河源单机动作爆炸半径有界)+段归属分账(CONFIG_DIR copy-not-move/8712空置时序)+方案稿10-08午前时点依赖暴露
+  - 4a217062 merge: 并行笔收编（值席窗并行段带平）
+  - a98074e2 docs(coo): 值席树§四双账实行——LG-066 N4端口迁移轮候裁挂账(候CTO落卷排期对表)+CAO打包窗6→8件候D-45起(D-45前不排布)
+  - 323e44fc docs(cos): LG-066 挂账范围增补入账——CEO 22:12 令范围扩「合并+端口收敛终态」（合并毕 trirmc 8712→8710 N4 迁移轮+四 daemon 终态端口规整+N3+ 端口全表交付件 CEO 21:27 令·任务书后续笔 4b045840 亲验）；LG-058 行九条现势轻注随录（3 pass+三轮正名候亲测+②深验挂起）；账本 lg066 条同步增补
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 51af7650 后新增 3 条 commit：
+  - ee45de3f docs(coo): 值席树§四 LG-066同窗分段连环终化——CPO+CTO双ok四点并皮(回滚三锚量化/8712并轨N3观察窗/清点回填敏感项/CPO三条入施工纪律)+10-09窗基线终版
+  - 66fbab3b docs(cpo): N4联合评估卷CPO侧OK成立——三视角全过(用户可见面一轮升版锚终态中间态不进卡面/端口两族规整采认终态8710无跨面漂移/暗窗有界诚实呈现)+产品条件三条(暗窗超窗不放水绿门/段2终验含端到端消费链/中间态只落施工卷)+LG-030有意值迁移防误引
+  - d95018fe docs(cto): N4联合评估卷CTO侧OK成立——同窗连环即CEO合并意向形态(维持136dff92)+避免重复验证三层辨析(验证锚不省/省流程轮次+双重观察+N3观察窗直接观察终态)+两升格(8712空置并轨72h观察窗/回滚判据预置量化)+跨机消费方敏感项标注
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:20 +08：自上次进度提交 3f791859 后新增 6 条 commit：
+  - c8a26a6a docs(coo): 值席树§四 r4护栏②复验PASS全链闭环——BOD playwright四卡11锚×4全绿+护栏③解除,候CEO深验
+  - 6a3c0512 docs(fsd): LG-058 r4 执行卷补 BOD 复验 PASS 锚——护栏②关账闭环候CEO深验
+  - e0516421 docs(coo): 值席树§四 r4部署毕第①刻转——STAGE2-R4一次绿(六探针+活体终刀八锚全绿+TriRMC零触碰)+GO双批时序交叠如实注记(BOD先批FSD执行COO补批零超跑),候BOD护栏②复验
+  - 00aebac7 docs(fsd): LG-058 r4 表单化施工收口——部署毕一次绿候BOD护栏②复验
+  - aa6a9d63 merge: 并行笔收编（值席窗并行段带平）
+  - 35367c32 docs(coo): 值席树§四 GO-r4放行——r4表单化硬门①五点判据核毕(单包75986ad/Stage1绿/sha256传输OK/环A双锚/HOLD设计内),毕报候BOD护栏②复验
+- registry：v2.1；今日 registry 提交无变化
+## 2026-10-07（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @03:00 +08：自上次进度提交 87df3348 后新增 5 条 commit：
+  - a1e4c316 docs(coo): 值席树§四 02:4x对表扫——r5全链闭环转记(BOD复验七锚PASS护栏②毕,LG-058五轮全绿候CEO深验)+分叉带平4390a37d,凌晨窗静默过
+  - 4390a37d merge: 并行笔收编（值席窗并行段带平）
+  - 2108c45d docs(fsd): LG-058 r5 执行卷补 BOD 复验七锚 PASS 锚——护栏②闭环全链毕
+  - 729fac70 docs(fsd): LG-058 r5 部署毕两刻毕报——61fba299包/200断言/双实例重放勘误候BOD复验
+  - 5a953abe docs(fsd): LG-058 r5 表单增补施工收口——5188e7f 全门绿候GO-r5硬门
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:30 +08：自上次进度提交 dd889201 后新增 2 条 commit：
+  - c2f9a098 docs(coo): 值席树§四 r5b硬门①同步入账——守卫修复全门绿+环A锚毕+真链路两态断言绿,GO面=BOD本席不代批
+  - 89084e9d docs(ste): r5 走查+R面配置真值测试卷——走查全绿+对照链拉落效全链闭环+DeepSeek活性200+a案裁定入卷
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 40ec333f 后新增 3 条 commit：
+  - 7700c0e0 merge: 并行笔收编（值席窗并行段带平）
+  - 808a0a32 docs(coo): 值席树§四 r5b部署毕同步——防双实例正形首用6s安全停+十锚PASS+守卫面关闭,LG-058六轮全绿候CEO深验
+  - 99de9a47 docs(fsd): LG-058 r5b 守卫修复执行卷+双脚本落树——73ca1cc 全链毕候BOD复验
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:00 +08：自上次进度提交 8a7745ac 后新增 2 条 commit：
+  - 6b073293 docs(ste): r5 卷终态——r5b复测三形态200全绿+DeepSeek双unit落盘v4+UI已落生效+env钉定语义勘验修正+双unit回执竞争现势入卷
+  - 72e77ac4 docs(fsd): LG-058 r5b BOD护栏②复验四点PASS关账锚——r5b面闭
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:40 +08：自上次进度提交 89fd8529 后新增 3 条 commit：
+  - 760a767d merge: 并行笔收编（值席窗并行段带平）
+  - 749673eb docs(coo): 值席树§四 04:3x对表扫——r5b线全闭转记(BOD护栏②四点PASS+STE复测三形态200全绿,六轮全绿终态候CEO深验)+分叉带平
+  - f4ad915c docs(fsd): LG-058 r5b STE复测PASS活体实锚——缺陷修复面全链关闭+两现势归属标注
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @07:30 +08：自上次进度提交 8184e531 后新增 1 条 commit：
+  - f7df7e0a docs(ste): LG-058 r5 卷增补§2.8/§2.9——CEO 07:08 裁回滚 GLM 态执行毕（v5 保存200+双unit落盘全绿+UI已落生效·判定PASS）+DeepSeek v4 作废留卷注记
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:10 +08：自上次进度提交 92c6b5a2 后新增 3 条 commit：
+  - 1aa68a1e merge: 并行笔收编（值席窗并行段带平）
+  - 7593ac64 docs(coo): 值席树§四 09:0x对表扫——CEO 07:08裁r5回滚GLM态毕PASS转记(DeepSeek v4作废留卷)+分叉带平,白天车道今日启
+  - ee5515d1 docs(cos): LG-058 大表行合账——r5 回滚段毕 PASS 补注（STE 知会·CEO 07:08 裁/BOD 派工：R-HY rmc 卡回滚 GLM 态 v5 保存 200+双 unit settings.json 终态断言全绿+UI 生效；DeepSeek v4 作废快照留卷；卷增补 f7df7e0a3 亲验 dev 同含）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:50 +08：自上次进度提交 faf106f5 后新增 6 条 commit：
+  - c503b342 merge: 并行笔收编（值席窗并行段带平）
+  - 1f800cfc docs(coo): 排工反省会交付卷落树——W40+W41 排工台账 14 窗（域别双口径驻位/目标）+本地集中四依据+D-23 sizing 三自述+根因四归因（载体在途/口径分叉/链整块×粒度缺口/额度感知缺位）+改进候选四条候批+局限如实注记
+  - 67811e96 docs(cho): 反省会 R1 交付跟踪——COS 已交（1ae4529f）·COO 盘面在候交卷·CFO 施工中
+  - 1ae4529f docs(cos): 排工反省会 R1 材料——COS 派工机制面事实卷落树（CHO 09:30 召集·CEO 09:24 令）：三通道盘点（M-004 主通道单侧化/D-27 树 7 目录 face 服务域 1/7/便道 4 例小活）+D-23 窗对照（段位合规·粒度整晚窗无 sizing·BOD'三晚窗无压满'实锚）+服务域拾取启用 1 例+卡点四条+根因五条（face=席非域为核心）+CFO 对照预注册+改进候选四条
+  - e3c5a8cc docs(cho): 反省会 R1 三席接令回执留痕（COO/COS/CFO 全确认，施工中）
+  - a9ae23d4 docs(cho): 排工反省会树建立——议程卷（CEO 2026-10-07 09:24 令，两问归因+CFO供数+三席书面轮，18:00 前报 BOD）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:20 +08：自上次进度提交 9340e034 后新增 11 条 commit：
+  - 38baf18b docs(coo): 值席树 10:1x 收编链甩笔事故认账+修链 v2——reset --hard 前增独有笔断言（rev-list BT..dev 非空即禁 reset 报警），CHO 1a3da67f 甩出已由其 reflog 自愈零损失
+  - 7d284221 docs(cho): workbench 沉淀——多席书面反省会运行模式五件套+三实证发现（worktree 落账断言/定向回询补数/cron 卫生）
+  - 135cd8f9 docs(cho): 反省会闭会注记——BOD 复核 PASS+自省段 wt/board 1016d1de+今窗节流即生效裁认
+  - b8fd8ba5 merge: 并行笔收编（值席窗并行段带平）
+  - aae81daa docs(coo): 值席树 10:09 受领条——BOD 今窗额度节流注记（D-39 单次细则即生效）：17:50-19:30+ 窗令签发时附节流注记，验收锚不裁节流面=非必要探针从简，M3 候批与反省会候选 4 并卷
+  - 0ff6534a docs(cho): 反省会材料轮闭合注记——报告终稿已投递 BOD
+  - e09f3530 docs(cho): 排工反省报告终稿——两问根因归因+改进五条候批+候CEO裁三项+今日节流时效项（CFO 补数 bb93cbd2 已收口入卷）
+  - bb93cbd2 docs(cfo): 反省会 R1 补数两数入卷（CHO 定向回询 10-07 10:0x）——①晚窗段拆分实测（meter-local-evening.py 在树：晚窗日 26.0%/61.1%/36.3%·窗内整体 36.4%·10-03/05 晚窗近零=整晚窗框错位实证）②sg 覆盖域收口（tristaciss 无 projects·root 目录仅 08-11 旧件窗内零行→rowsB=0 即全量读数成立）
+  - b31088db docs(cho): 反省会 R1 全齐——CFO 已交（8ef4252f）·定向回询两补数已发·进入汇卷段·自检点撤销
+  - 8ef4252f docs(cfo): 排工反省会 R1 额度面数据卷——66% 核验口径（console 语义单列候定谳·三口径对照）+按席×域别 raw 拆解（窗A 4.201B·sg 21.1%全落W40/W41 1.528B·100%本地）+服务域闲置量化（sg W41 席位作业面 0/809.8 席时·R-HY 停摆54%窗时+忙而零耗双口径）+预付费浪费口径（两不可验证数显式标注·拒虚假精确）+护栏三线双口径判定相反单列+对表五预注册点应答
+  - 939ad9e4 docs(cho): 反省会 R1 交付跟踪——COO 已交（1f800cfc）·事实面双卷收敛预注·CFO 候 14:00
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:30 +08：自上次进度提交 8d5b3791 后新增 4 条 commit：
+  - 7e68200b docs(coo): 窗令勘正——段①提醒 job id 6651f5ce 系旧 id 已更替，现役 5097d5b0（SDE 10:23 勘正 1aa16f73 照录）；SDE 接令回执收讫令文三席+BOD 全接
+  - 1aa16f73 docs(sde): §七.7 窗令正文对表(2ed73867互引)——stop双锚(非2xx即停+端口空核验)+完工判据ExecMainStartTimestamp>build时点+毕报两刻制+节流纪律+korw判读lastRun为主
+  - e18bd276 merge: 并行笔收编（值席窗并行段带平）
+  - 2ed73867 docs(coo): 10-07 晚窗令签发——五段串行序（17:50 提醒/18:00 admin/18:20-19:00 合流冷起双分支/19:00-19:30 STE 补测/19:30+ N2）+额度节流注记（BOD 10:09 令：非必要探针从简·验收锚不裁）+避让红线（根治三段分离·SQL daemon-down 铁律）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 af7d4f33 后新增 5 条 commit：
+  - b0fe5937 docs(sde): §七.8 机会窗条款+三道防线升级——17:00门绿则三笔同带(根治包onTimerTick运行期sweep)+双分支升三道(boot/运行期12min复读/SQL)+17:50终版build内容确认点
+  - 02ec9ed2 docs(coo): 窗令勘正②——根治红线改 CTO 条件进窗版（d38a3eae：17:00 门读数全绿→三笔同带 build，冷起四得变五得；逾期自动顺延 10-08 后窗；核心使命不变，排程面零变）
+  - d38a3eae docs(cto): cronEngine自愈设计APPROVE——三候裁点全采主案(updatedAt保守向代理/归位不补跑/degraded不耦合)+归因面勘撤(两sweep时点天然错开互证增强)+今晚冷起窗带门机会窗(17:00门读数硬门/逾期顺延不硬塞)+SDE三道防线预案对表点
+  - d1e93c38 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 19601f86 docs(fsd): 8713 cronEngine run永卡运行期自愈根治设计小方案——候CTO审三裁点
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:00 +08：自上次进度提交 133f60f0 后新增 6 条 commit：
+  - 2e575bda docs(coo): 窗令增 build 取数一致性锚（BOD 10:56 程序备注）——三笔钉死至 17:50 开窗前新进顶须勘正报备禁静默换笔，本席扫窗+SDE 探报双核查点
+  - 31bd3239 docs(coo): 窗令勘正③——根治门 10:52 四门全绿提前闭门 CTO 已验收，终版 build=三笔（2b1709d+03c6197+6f832a1 三端同顶）五得链成立，17:50 SDE 按三笔口径开窗，排程面零变
+  - 549bf552 docs(cto): 验收卷勘补——github补推已落三端同顶欠账清零(FSD 10:53勘正ls-remote真值),前文未落挂账表述作废
+  - d8bfc96b docs(cto): 根治包四门全绿验收——确认进今晚带门冷起窗三笔(6f832a1叠03c6197)+写入面增补+1采认(localbus类型化必然面非蔓延)+github补推挂账知情不阻窗
+  - 80fa66f6 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 3e1ed63e docs(fsd): 根治包施工+四门读数落卷——TriMLC 6f832a1（tsc 0/新卷6/6/全量633零新败/独立基线627同五名）+写入面增补标注+github补推欠账挂账
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:10 +08：自上次进度提交 ba66f0c7 后新增 5 条 commit：
+  - 087ca373 docs(cho): 反省报告按 CEO 11:06 裁答收口——M1 执行域枚举勘正为四控制器域名+§六三项候裁闭项注记（定谳卷 59ea28bdf wt/board 分支位如实注记）
+  - 5dc5b52c docs(coo): 窗令增域别口径注记（CEO 11:06 M1 枚举裁正）——四控制器域名当维度（TriMMC/TriMLC/TriRMC/TriRLC），机器系实例注记禁写死；段③=TriMLC（本机实例）8713、段⑤=TriMLC+TriMMC 双域落位
+  - 0f28293c docs(coo): 值席树 11:0x——手术卷撞车转记（SDE 自愈 e0d79170·巡检自动机嫌疑候勘 CTO 域·防再撞双端=编辑前 pull+收编断言）+三笔归属勘正（全 TriMLC 仓同顶 6f832a1，一致性锚口径精化）
+  - 9c8691a2 docs(cto): 验收卷仓向勘正——2b1709d系TriMLC仓笔非TriRLC(本席笔误,SDE活体勘验cat-file实证三笔同顶6f832a1),今晚TriRLC侧零动作;跨仓hash混读自铸条自踩如实入卷
+  - e0d79170 docs(sde): 手术卷 §7.9 终版 build 钉死补落+并行撞车结构修复——三笔全 TriMLC 仓同顶 6f832a1 实证（信面 TriRLC 侧笔误勘正），§7.6 表 S5/毕报行+尾注归位，17:50 免再询按三笔开窗
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 d2be970d 后新增 4 条 commit：
+  - 4793e36d docs(coo): 窗令段①勘正②——提醒链四代 job 全灭（TriRLC F-3 同源）SDE 修复，现役=cron_muxj3q29_2utj@TriRLC 8711，sqlite 值面 next_run_at=17:50 精确命中（§7.10 ec66dceb），工序零变
+  - ec66dceb docs(sde): §7.10 F-3 谱系精化——TriMLC 已修(09-30 批)/TriRLC 现役在册(未回流)，移植方向不作断言，中性双事实表述
+  - d9ff2d21 docs(sde): 手术卷 §7.10——双窗提醒链修复+F-3 家族谱系勘正：TriRLC addJob 同缺陷实锤（INSERT 无 next_run_at+timer 过滤=永不调度，四代提醒 job 全灭根因闭环），job cron_muxj3q29_2utj PATCH recompute 补值 next_run_at=今晚 17:50 精确落位，8711 store 目录漂移观察项
+  - c9dac14b docs(cfo): CEO 11:06 裁答三件入账——年费 ¥3939.6/max 档/2027-08-14 续费入账（浪费建模=年费×(1−利用率)·三档算例标注非预测·真决策变量=续费档位观测）+relay 供数两行排期（今晚 20:44 前钉首窗终值·10-08 起双行日报）+护栏三线计数基准提案=分层双轨（触发面 bigmodel 权威口径/归因面 raw 可复算口径/周对照校准）候批·α 假设作废销案留痕·三 meter 脚本补入库
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 ac9878cf 后新增 6 条 commit：
+  - 6cca26a7 docs(cho): 反省会议程卷终态注记——M1-M6 六条全部批令生效（CEO 11:27）+验收义务三项在挂（M1 抽验/M2 抽验/M3 对照留痕），本树归档态
+  - 720ac40c docs(cfo): M6 生效注记入卷（CEO 11:27 批）——分层双轨即日生效·触发面挂 bigmodel 口径护栏空转解除·今晚 20:30=新基准第一笔·候批表述标历史快照
+  - 97ba475f docs(coo): 值席树 11:0x 条勘正——嫌疑面改指本席 reset 对（transcript 定谳 --hard 两笔 10:55:30/10:56:59），巡检自动机三重排除洗清；收编链 v3 本条首跑（porcelain 第 2 断言非空禁全树 reset+ff-only 对齐替位）
+  - c2a0f24d docs(cho): 反省报告勘正——RC-A1 失实修正（执行通道本体 9-14 夜航01 已通，6天空窗期表述撤销），并入 RC-A2 升首因（有轨但排工路由不上轨），四条→实质三条；排除项论据+摘要段+COO 自领句三处同源联动勘正（修正注记体例原文保留五处）
+  - a1d896dd docs(sde): §7.10 补 CTO 裁断落卷——TriRLC F-3 修复入 FSD 车道维护波(10-08 后首窗,不搭今晚)，硬约束:8711 禁 ps1 链重启+canonical store 钉死 trilc\cron.db，新建 job 验值面纪律维持有效
+  - 743c79d6 docs(cto): 手术卷整写覆盖勘验卷——sg巡检自动机排除(物理不可达+append-only写域+diff干净三重,嫌疑链勘撤),嫌疑改指席位侧git销毁类(COO 10:55/10:56 reset对首查,reflog mode不可辨候transcript一锤),裁令三条(D类候条全树销毁硬禁/收编链v3双断言/未提交窗收敛),今晚窗零影响
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:40 +08：自上次进度提交 d5b49540 后新增 5 条 commit：
+  - 7e268c9c docs(coo): 值席树打包窗 8 件二次顺延勘正——D-45 已落章被急插队占用（TC 894e866），候窗位后移 D-46 起，清单不变
+  - 5f6a1316 docs(coo): 值席树收编链 v3 补边界钉——ff-only 失败=停链上报 fail-safe 终态禁回退销毁形态（CTO 采认补款），销毁面全量核销读数入条
+  - 5d21fb0e docs(sde): §7.9 补撞车定谳注记——COO reset 链尾肇事认账(transcript 定谳两笔 hard reset)，收编链 v3+双端保护闭环，§7.9 稿无损闭环
+  - 6a7e823e docs(cto): 抹写案定谳闭合勘补——COO transcript坐实--hard两笔逐字节同一(次查条款作废),案CLOSED;收编链v3采认(untracked排除+ff-only替位两升格)+边界补钉(ff-only失败=停链上报禁回退销毁形态)
+  - 2e4f7f36 docs(cfo): M4 口径会签闭环入卷——COO 全认回（11:29）·口径A/B 定义+双栏规则+R-HY 归属双方认定·W42 周报起双栏执行
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 b70bd81d 后新增 4 条 commit：
+  - 6c8efc33 Merge remote-tracking branch 'origin/dev' into dev
+  - deb3fa08 docs(cpo): trimodel 树件 seg3——「兜底模型」三层语义文案+r5 五件并入锚+施工边界与验收锚；三件任务齐
+  - 33110ff1 docs(cpo): trimodel 树件 seg2——「模型策略」IA 三概念分区提案+改名文案全表 16 行+禁改清单
+  - 101d60e2 docs(cpo): trimodel 树件 seg1——cc-switch 对表调研+定位对比叙事（三件任务之一/之二-a）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 6af3e135 后新增 8 条 commit：
+  - 5d175a26 docs(cpo): trimodel 设计卷 v1.1——CTO 交叉实勘 16/16 认账+增补 #17/#18 采认(用户可见面 16→18)+候裁点③层级消解+三态读数 A 案采认附语义边界条件
+  - 13032642 Merge remote-tracking branch 'origin/dev' into dev
+  - ed06a2b8 docs(cto): trimodel 三件 seg4——件③ CLI 直配能力盘点（四仓 model 同源 harness 位/config 族触发器/daemon 运行态缺口定谳/兜底二层判定）+收口五段
+  - 882ed16a docs(cpo): trimodel 树 charter 对表补差卷+设计卷施工边界勘误——验收锚合并稿(禁改五处假阳性防)+边界节补块 A/B+终验顺延认账
+  - b0608d88 docs(cto): trimodel 三件 seg3——件② 模型策略前端结构改造（工程盘点+CPO 16 行表核对 16/16 命中+实勘增补 4 处+两批解耦改动面）
+  - fb4aeb73 docs(cto): trimodel 三件 seg2——件① 兜底模型直配 settings.json 技术设计（四域映射矩阵+r5 五件投影+五步验证点+三态支撑+候裁五点）
+  - d45f9c2a docs(cto): trimodel 三件 seg1——cc-switch 机制对照面（六机制+对齐/超出/异构三表+结论）
+  - 9f5e8e8b docs(board): CEO 11:35令任务书推达dev——TriModel模型策略重整+兜底模型改名改造(树trimodel-strategy-revamp-01·CPO对表基座·BOD 13d6c63f 同件)
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 92f809a3 后新增 5 条 commit：
+  - 757edd52 docs(coo): 值席树 TriModel 改造链排工基线入账——批 A 今日 14:30-16:00（D-23 急件例外知情记录）+批 B 拟排 10-08 本席对表无撞（M5 试运行窗主动错峰）+M3 双锚 20:30/20:50 入窗内执行面
+  - 0597b3af docs(cto): trimodel 设计卷对齐任务书 v2——候裁五点全落定态+批 B 双门解除认裁留痕（分开走查硬约束保留）+施工序定版（批 A 今日 14:30 FSD/批 B+件① 10-08 窗）
+  - cf469417 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 09a95989 docs(board): TriModel任务书v2推达dev——BOD集成终版(批A今日16:00死线/批B+件①10-08窗/五裁定/CPO补差卷为验收正身)
+  - 58c9ddb0 docs(cto): trimodel 设计卷合流闭环——CPO 回执三裁回写（18 处定账/候裁③ fallback_ids 不改名/④ 采 A 案+三态语义边界=非健康检查）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:20 +08：自上次进度提交 590036ac 后新增 1 条 commit：
+  - 0ea6b42f docs(board): TriModel任务书v2.1勘正推达dev——锚=9/定账19+7/仓名TriModel仓(FSD实勘三差全认)+教训条
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:20 +08：自上次进度提交 bfc820ea 后新增 6 条 commit：
+  - 92674427 docs(coo): LG-066 10-09 窗令 v1 草稿——M2 两栏机制首版实操（链结构声明+窗下限推算 2.5-3h，窗框 17:50-21:00 较惯性框降半），候 10-08 方案稿校准 v2 终稿
+  - 71dedc16 merge: 收编并行笔（值席落盘防覆盖）
+  - 384d5f4a docs(coo): 值席树批 A 例外记账升级——急件例外升 CEO 13:14 亲令例外（额度 71%/20:44 重置禁排区解锁，BOD 转达），非新裁决
+  - 67d47df8 docs(fsd): 批A施工地图+r6双脚本预稿落卷——定账19+7禁改9逐锚地图/替换文全照抄CPO正身/断言面零残留+禁改九处正向/部署链六步(TM_SHA执行时回填自卫门)
+  - d345fdd9 merge: BOD charter v2.1 (0ea6b42f) 入本席基线——批A施工锚正身对齐
+  - 433cf387 docs(cpo): trimodel 两卷勘正——禁改正文五处→九处(独立 grep 复勘 9/9 确认非转抄)+正向断言锚 =5→=9+定账口径从 v2.1(19 用户可见+7 注释)+教训条认领(正向断言数值禁锚点清单推定)
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 206531a6 后新增 12 条 commit：
+  - 58ab340d docs(cto): local-svc-pipeline 技术面盘点——S1 推 bare/S2 TriRMC token 缺口改派候选(首笔推荐)/S3-S4 候定/留本地五件注理由/face 双名空间防混
+  - f52ae3b0 docs(cos): C/D 条 CTO 认领裁决刷账——C 条排 10-09 后配置链维护波首窗·D 条采切签主案（卷 04f97398 亲验）
+  - 04f97398 docs(cto): STE 观察项 C/D 条 CTO 裁决——C 条认领排 10-09 后配置链维护波（tier2 不得回拉复活先钉）+D 条采切签轻量重拉主案（断链不空屏边界+快照注记退役）
+  - 0a43fec5 merge: 收编并行笔（本地 CTO/COS 三笔 × BOD 任务书树 local-svc-pipeline-link-01）
+  - a8db08b1 docs(board): 立树任务书——本地规整→服务域自动化两条流水线接通(CEO 13:24令·三席分工+首笔全链硬锚EOD)
+  - cfc18654 docs(cos): l2 聚合去重排窗刷态——CTO 判据卷 7aec11ec·D-15 派 FSD 车道·今日 17:30 前毕
+  - 9236e1de docs(cos): STE 观察项 B/C/D/E 四条 CPO 裁决毕刷账——施工归批 B 10-08 窗·C 条 daemon 缺口转 CTO 认领
+  - 7aec11ec docs(cto): l2 聚合去重修复判据卷——relay dim 重复入列根因（tail-3 尾窗×逐行入列）+轮内全列表去重唯一正形+四条施工门禁+验收锚（候办 l2-aggregate-dedup-minor，FSD 车道派工基座）
+  - cfcc055b docs(cpo): STE 观察项 B/C/D/E 四条产品裁决——注记案/真清除语义/切签重拉/文案附目录，全归批 B；C 条 daemon 行为候 CTO 认领
+  - bc3388ad merge: 收编并行笔（值席落盘防覆盖）
+  - bc635fdf docs(coo): LG-066 窗令 v1 候校准清单增补——断点数学勘正（BOD 预览指出 21:30 晚于窗框终点不自洽，倾向 a 采：20:00 前 GO 判读毕为断点，段2 完工 ≤21:00 恰合框）
+  - e381b278 docs(cos): D-23 禁排区例外解锁令随动——大表记令+三线候办 owner 知会直达+korw 窗况回报入账
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:40 +08：自上次进度提交 c60206fd 后新增 8 条 commit：
+  - bb026dae docs(coo): 服务域流水线汇总卷+S2 派工 brief 合卷投递——盘点汇总（CTO S1 已毕/S2 首笔实证 35e55381/S3 候窗 10-08 后与 M5 邻接/S4 备选；CPO P1 二笔触发门挂批 A 毕）；S2 四步读数锚编排（打包/推 bare/sg 值席拾取/回流收口）+判据卷内嵌 CTO 现勘复核门；值席树 13:3x 条刷态
+  - 760f5621 docs(cpo): C 条裁决卷勘正——工程量定性归 CTO 实勘(两端件中·本卷『小』越界估作废)·A 案显式清除背书/B 案否决产品面背书·验收锚正身改指 CTO 卷 §四
+  - f1517d68 docs(cto): C 条修法卷——缺口根因=L582 防抖与清空 null 语义混同(结构性)+A 案协议显式清除指令(B 案缺席=清除否决 fail-safe)+tier2 版本栅栏+两端件工程量勘正(中,排期不变)
+  - 2f1b6518 docs(coo): 收编链甩笔三案闭环（CTO 判据卷竞态窗）——13:20:33 CTO 落顶 102f06e0 恰入本席 merge→reset 竞态窗被甩、cherry-pick 自愈 7aec11ec 零损失；v3 跑对仍拦不住=断言①链首时点+porcelain 只见未提交=结构缺口；修链 v4（reset 前一刻 LO2 重查非空禁 reset 改 ff-only+PRE_TIP 甩笔复核响报）本条起即用；CAO D-45 补款候选全数支持
+  - dedbce1f docs(cos): 补收 LG-062 终审包归档件（W40 漏网·值席代收）
+  - 35e55381 docs(cto): S2 判据卷——TriRMC cron 写族 token 门 fail-closed 化（缺口本体=L148 fail-open 默认态非零门代码+写族硬门读族过渡梯度+四态测试锚+部署面候 LG-066 解冻另窗）
+  - fa1181e3 merge: 收编并行笔后补推（流水线令两件+STE png 顺带入库笔）
+  - b5131e77 docs(cpo): 流水线令盘点卷+打包件任务书——批 A 文档清洗出 v2/v3 一件打包(face server-executable)·留本地三件注理由·grep 14 件全量定性·记忆面零命中空集
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:50 +08：自上次进度提交 1cb96836 后新增 1 条 commit：
+  - 79cca970 docs(s2): 施工卷步骤①②读数回填——拾取+基线(a02d89b, node22 467/462/5 红名录离爆域)+现勘门活定谳(R-HY 401 双发判据卷分辨法,env 已配,cron enabled=false 现势附注);门态=候 CTO 复核零动码 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:00 +08：自上次进度提交 6eaadf34 后新增 5 条 commit：
+  - 30e97eed docs(s2): CTO §五末锚销账——双端独立复勘过（bare 分支 711a555/码面 a600980/基线钉 a02d89b/终版卷 3acfca4a），四附款核毕，pre-receive 闸工作实证采信；S2 全链销账毕，部署面维持 LG-066 窗外 @m-duty-cto
+  - 3acfca4a docs(s2): 施工卷终版回填——步骤③施工读数(码面门+四态矩阵 403/200/401/201 全绿+全量 474/469/5 零新增 fail 红名录同族+CTO 四附款逐条对照)+步骤④回流锚(TriRMC s2-token-gate-failclosed @711a555 两段推 bare,树哈希等价中转注,pre-receive 拒非 FF 删枝重建复原);附④ runbook 门序链注落;候 CTO 销账 @m-duty-cos
+  - b2f08ff3 docs(coo): S2 链志刷态——BOD relay 裁定四条认收入档（通道降级/验空框升门/cto 残留留观/第三案候 CAO 攒批）；本席 P1 派工照 a 条信道正形执行
+  - 2a7e6878 merge: 收编并行笔（值席落盘防覆盖）
+  - bfc54a3e docs(coo): S2 链志——①拾取锚+②现勘/CTO 复核门 PASS（401 分辨法定谳门活+步骤③四附则）+③施工进行中；relay 吞噬伪令案处置全款（验伪流程→C-u 清框→零损害实证）+cto 框同型冗余件留痕
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:10 +08：自上次进度提交 0e61e05d 后新增 9 条 commit：
+  - b6c8b086 docs(cos): W41 大表刷行——BOD 14:05 批令拾取:新增「本地→服务域两流水线接通」行(行文四锚 35e55381/711a555/13:38 拾取/3acfca4a 照录+S2 14:02 验收签发+二笔 P1 候 16:00 门+S3 候窗 10-08 后;载体 8bea537c);lastSyncedAt 14:08:46 @m-duty-cos
+  - 8bea537c merge: 收编并行笔（值席落盘防覆盖）
+  - 2249e168 docs(coo): BOD 总表批令转挂树——13:24 令行刷 task-inventory（行名/树/行态全款 BOD 14:05 信照录），值席/COS 大表维护面拾取执行；正文走树 a 条正形
+  - 193deecb docs(bod-watch): 进度快照版面截卷归档——BOD 14:02 自收口裁定(commit+移位双形):活流移位 var/bod-progress 非版控区(watcher v2.1 不断流,下 tick 即新落点);本件=10-05T01:44Z→10-07T05:45Z 全量 30min 粒度截卷自此冻结;复炸风险注记=在版文件被 30min append 弄脏则 post-receive fast-path 每次 push pull 必冲突(交接注载脚本头部+截卷头注); @m-duty-cos
+  - 75779107 docs(cos): sg 面仓 pre-commit gate 同步候办销项——SDE 四步全绿·卷 0197f638 亲验（首笔遭并行 merge 冲·重插）
+  - 4b080c9c docs(coo): S2 链志终锚——BOD 验收 PASS 签发首笔闭环（13:24 令硬锚达成+明晨核降形式核）；尾款 bod-watch 件裁归值席自收口（单行轻交互转达+对话流增量收令实证，relay 残留第四案清后转达）
+  - 0197f638 docs(sde): 候办② sg 面仓 pre-commit gate 同步执行读数——四步全绿（md5 三点一致+sh -n+正反探针+空载直通），落点=sg 工作树 hooks/（bare 无触发面辨正），候 COS 刷账销项
+  - 7e0622ca merge: 收编并行笔（值席落盘防覆盖）
+  - 8a6863b2 docs(coo): S2 链志终态——全链四步+销账 ~40 分钟走通（③四态 403/200/401/201 全绿+全量 474/469/5 零新增；④TriRMC 711a555 两段推 bare+pre-receive 闸实证；CTO 双端复勘销账闭环中）；基建注记=bare 钩子被 BOD 未跟踪件阻断一次权威位无损；P1 通道就绪
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:50 +08：自上次进度提交 105a847d 后新增 6 条 commit：
+  - 5cd18c85 docs(cto): l2 去重修验收 APPROVE 销账——独立核三面全绿(卷身份/施工面逐字对 7aec11ec/值面 x2→x1 折叠实锚)+还原纪律超预期正形+备份清理令随卷
+  - 5f6c14ac docs(cos): l2 施工毕刷态（FSD 车道 14:47·回执卷 4ada12df）——候 CTO 销账后终态
+  - 4ada12df docs(fsd): l2聚合去重小修施工回执——L117锚前插6行去重块(142行)，DryRun+真轮OK+构造性x2→x1折叠证，statefile注入即还原计数器清零，零行为变更证成立(D-15/判据7aec11ec)
+  - 8f003f6f Merge remote-tracking branch 'sg-server/dev' into dev
+  - 516d93ae docs(fsd): 批A毕报+文档面联动清洗——TriModel 72d3099 改名全链收口（19可见+9注释逐锚/禁改九处=9/Stage1+Stage2-R6 部署读数/GO-r6 BOD 06:39 签发）；讲解件 6 处+方案稿 17 处活引用刷名+改名追记（§2.4 旧定位标注 v3 候件①）
+  - 162276f7 docs(fsd): r6双脚本回填交付锚 72d3099——批A ui commit 已推 sg bare(73ca1cc..72d3099)，Stage1/Stage2 就绪态
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:00 +08：自上次进度提交 21d801ce 后新增 3 条 commit：
+  - d4d1dcbb docs(coo): P1 二笔投递 brief——批 A 全闭门开证据（STE 14:57 PASS/施工 516d93ae+验收 cb6e037ab）+四步锚映射+回流通道注（origin dev 主/bare fallback）+总表刷注转达；判据正身=CPO 打包任务书零复制
+  - cb6e037a docs(ste): 批A改名验收卷——四锚PASS（禁改九处零误伤+双label渲染+r5五件回归零破+双面部署核.deploy-sha全sha一致）+截图两帧+值面回显自领第四例候定性
+  - dc38819b docs(cos): l2 聚合去重销账终态刷注 closed——CTO 验收 APPROVE 5cd18c85 亲验（全链三锚 7aec11ec/4ada12df/5cd18c85）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:10 +08：自上次进度提交 b3a0dfd4 后新增 5 条 commit：
+  - 97b1dcee docs(p1): P1 二笔复核结论卷(独立复核型·BOD 15:03 裁定)——触发门三读数原文 9/0/双label 全绿(克隆 161d0ca→72d3099 拉平勤务如实注)+对表 CPO 卷 a4f4a95b 六面双证零实质分歧(L68 补刷 diff+现文双锚/记忆面 LG-030 动宾同判/计数口径差 21vs18 如实列差异候 CPO 判);全程零施工零写 v2/v3 @m-duty-cos
+  - 0d01318d docs(coo): P1 brief 改排增补——CPO 15:02 取消窗→本席即停（Esc 断读卷面零施工零 commit）→BOD 15:03 裁转独立复核型（三读数机判+对表 CPO 卷 a4f4a95b 交叉→复核结论卷回流，零施工）
+  - 14073bf8 docs(cpo): 打包件任务书形态修订注——BOD 裁独立复核型(施工面已吸收执行·值席三读数机判+对表 a4f4a95b 出复核结论即毕·防值席按原文施工型双写)
+  - d7da71a3 merge: 收编 sg-server 并行笔后补推（批A清洗对表卷）
+  - a4f4a95b docs(cpo): 批A清洗对表卷——FSD 活刷覆盖度复核(漏刷1处补毕·方案稿L68活锚)+设计卷改名前档案追记+注释定账7→9并记+打包件任务书改已闭(吸收执行·第二笔投递取消)
+- registry：v2.1；今日 registry 提交无变化

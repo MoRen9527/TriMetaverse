@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（8713 手术施工读数正身；方案卷=同目录 trimlc-8713-fix-proposal-1p-20261006.md，CTO 放行 10:42+18:2x 回执「§四序照案打头，术后读数照三件套+首切锚」）
 - syncMode: static
-- lastSyncedAt: 2026-10-06T19:28:40+08:00（date 现查原样粘贴）
+- lastSyncedAt: 2026-10-07T11:29:55+08:00（date 现查原样粘贴；§7.9 补撞车定谳注记：COO reset 链尾肇事认账+收编链 v3 双端保护闭环）
 - 施工席: SDE 小布（m-sde）；施工窗=2026-10-06 18:27-18:48；硬门=全过（见 §六）
 
 ## 一、序① 8711 正形拉起者追查（破案）+序①A 提权验证
@@ -187,6 +187,8 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 | S2c | **冷启**（新 dist 即刻生效）——**S2c 前不做 SQL**（治标步改兜底，见双分支） | healthz 200+listen==pidfile |
 | S2d | **korw 归位双分支**（COO 治标令 19:20 并入+CTO 裁 C 真刀验收的调和序）：**分支 A（主）**：冷启后读 korw state——boot sweep（03c6197）自动归位 idle=**真刀验收达成**，SQL 跳过；**分支 B（兜底）**：sweep 未归位（03c6197 缺陷实证）→POST /shutdown 二次→停机态 sqlite3 `UPDATE cron_jobs SET state='idle' WHERE id='cron_muh6shv0_korw'`（**state 单字段最小写面，nextRunAt 禁抹不碰**——过期值保留，冷启后调度器 catch-up 立即补跑+自算刷新 nextRun=COO「重算」终态由调度器达成零手算误差）→再冷启 | 分支 A：state=idle 且零 SQL 写面；分支 B：SQL 回读 idle |
 | S4 | **korw 归位读数四件（毕报带）**：①state=idle 落地 ②nextRunAt 合理（调度器自算非冻结值）③**首滚验证**（补跑一轮正常收尾，非再挂）④saveCronStore 补刷（2b1709d）值面抽查 | jobs API 值面+三件套全绿 |
+| S5 | TriMLC-Watchdog **Enable** | Status: Ready+下轮自然执行零误行 |
+| 毕报 | 三件套读数→COO+CTO | 卷收口段 |
 
 **双分支序设计理由（报备 COO/CTO→双 C-level 齐认：CTO 19:2x 采认不纠偏卷 03864ae1+COO 19:27 认账「不改单分支，SQL 直改优先不采」）**：SQL 治标前置与 CTO 裁 C「korw 本态=件③验收样例真刀」互斥（同一样本二选一）——sweep 优先=保全 CTO 真刀活体样本；sweep 失败时 SQL 兜底=COO 治标终态保证（state=idle 必达）。最坏路径=两次停机（down 窗仍分钟级内，黄金窗无碍）；分支 A 路径 down 窗=单次冷启。若 sweep 归位成功，sweep 行为实证+ korw catch-up 首滚=一次冷起双验收。
 
@@ -194,8 +196,71 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 1. **SQL 兜底写面**：state 单字段（running→idle）；next_run_at 禁置空禁手改保持原值——catch-up 自算=派发恢复自然路径（比 COO 裁文「重算」更小写面，COO 终态不损）
 2. **B2 判定点**：冷启后若过期 next_run_at 未触发补跑（catch-up 假设证伪）→退一步显式 `UPDATE next_run_at=now` 写面，读数如实入卷（假设证伪本身=值面情报）
 3. **窗界硬锚**：分支 B 二次停机控制在冷起窗上界 **19:00 前**，勿溢入 STE 补测窗缝（19:00-19:30）；溢界风险时优先保 S4-S5 收口+毕报，SQL 退让写面如实挂起候窗
-| S5 | TriMLC-Watchdog **Enable** | Status: Ready+下轮自然执行零误行 |
-| 毕报 | 三件套读数→COO+CTO | 卷收口段 |
+
+- daemon-down 窗压至 S2b-S3（SQL+boot 秒级）——build 前置于 shutdown 前=down 窗最短化（FSD「冷起前须 build」口径的执行序精确化，语义不变）
+- 2b1709d 同窗带出（updateJobRun 尾补 saveCronStore，行为锚测试两例在 03c6197 同顶）
+- 回滚三层：store 备份+10-04 dist bak+watchdog v1 bak（今晚 §四 回滚方案态延续）
+- **STE 回归读数互引（19:1x，卷 2ef063b9→b2ebb06f 采录入卷）**：调度器本体 6/7 job 健康滚动+korw 卡态独立复确认（state=running/updatedAt 10:39:54Z 被动 touch 未解卡=PATCH 零写路径旁证，与 §二.3 勘补互证）。STE 建议「PATCH state→idle」**不可行已勘正回执**（可写清单白盒+本席两轮 PATCH 实证+force 先后序三重堵死——STE 三重全采，「键存在≠值面生效」家族候 CAO 并档）；korw 冻结=CTO 裁 C 明令今晚零动作（STE ②遵令确认）。**补测触发点锁定（STE ③对表）**：明晚冷起窗毕本席毕报直达 STE=开跑信号，锚2/3/5 补测走 19:00-19:30 窗缝，五锚终态随卷直达 COO+BOD。STE 增量：挂死根因侧读数（stub.log 末行 10-03 09:42+08→10-05 09:42Z 执行无 log=早期挂死未退出，为何挂死候 STE 窗另查，与卡态残留两层分立）；degraded per-job max 掩蔽案例+1（候办维持，TriMMC 形对齐）
+
+### 7.7 窗令正文对表（10-07 签发，commit 2ed73867，落 W41 树 `trees/window-order-20261007/`）
+
+我名下两段（②admin/③合流冷起）与 §七.6 预案对表——预案三处吸收令文新增锚：
+
+| 令文新增锚 | 预案落点 |
+| --- | --- |
+| **stop 双锚**：POST /shutdown 锚2 非 2xx 即停（中止窗不硬进）+锚1 端口 8713 空核验（确认真退） | S2b 细化 |
+| **完工判据值面锚：ExecMainStartTimestamp＞build 时点**（防「build 后冷启读旧 dist」时序假阴性——进程内生效验证纪律投影） | S4 收口判据+1 |
+| **毕报两刻制**：COO+CTO 直达（令文毕报链）；STE 开跑信号=另行一行短讯触发（STE 补测前置=段③毕+三件套绿，昨对表承诺不废） | 毕报链 |
+
+- **节流纪律（BOD 10:09 令随窗）**：非必要重复探针从简（一过即停不重复扫）、毕报两刻不追加流水账、席间确认信免附；护栏三件套+STE 验收锚**全数保留不精简**
+- **避让红线遵守**：8713 引擎根治（run 永卡 running 无自愈）不随本窗（三段分离，候 10-08 后合法重启窗）——本窗只做移植带出+治标归位；**korw 判读纪律=lastRun 事实为主禁 nextRun 活信号**（TriMMC executor 家族教训带窗，S4 首滚验证看 lastRunStatus/lastRunAt 滚动）
+- 分支 B 触发=如实记两笔（本窗认终态 state=idle+双分支执行卷，不认「一次冷起」面子账）——与预案双分支如实性同构
+- 提醒 job：令文引用 6651f5ce 系成文时点旧 id，现役=dd5ff1b5（本节锚吸收后续更）
+
+### 7.8 机会窗条款+三道防线升级（CTO 10:33 裁，FSD 根治包 APPROVE 联动 d38a3eae）
+
+**机会窗**：若 17:00 前 FSD 门读数全绿，今晚 build **三笔同带**=03c6197（boot sweep）+2b1709d（saveCronStore）+**根治包**（onTimerTick 内嵌 stale-running sweep，运行期 12min 级=10min+grace 120s 锁内，零 schema 冷起即生效）——窗令 2ed73867「根治不随本窗」红线由此条款修订（CTO APPROVE 权面，架构真源值席树口径）。若 17:00 门未绿：根治包顺延，今晚照原双分支。
+
+**防线链升级（三笔同带时生效；否则双分支原样）**：
+
+| 道 | 机制 | 触发/验证 |
+| --- | --- | --- |
+| ① | boot sweep（03c6197，冷起一次性） | 冷启后首读 korw state=idle 即真刀达成收口 |
+| ② | 运行期 sweep（根治包，12min 级 onTimerTick 锁内） | 首读未归位→**12min 复读点**（≈18:3x+12min）——归位=**根治包验收读数**（活体双证：boot 败+运行期胜=两 sweep 独立验证） |
+| ③ | SQL 兜底（state 单字段+B2 判定，§7.6 不变） | **前提=①②均未归位**；12min 复读撞 19:00 上界→照溢界降级序挂起候窗（korw 本态保持冻结语义） |
+
+- **17:50 探报确认点修订（CTO 10:54 终版钉死信）**：终版 build 内容已钉死三笔——17:50 探报**免再询 build 内容**，按三笔口径开窗（见 §7.9）
+- S4 归位读数按实际生效道标注（①=boot sweep 真刀/②=根治包运行期验收/③=SQL 治标+根治包候窗），毕报带防线链执行轨迹
+
+### 7.9 终版 build 钉死+仓向勘正（CTO 10:54 确认信，FSD 门 10:52 四门全绿验收）
+
+> **撞车定谳补注（11:29 COO 认账信+CTO 勘验 1ca1ef05）**：本段初稿曾毁于并行覆盖——肇事=COO post-commit reset 对（10:55:30/10:56:59 均 `git reset --hard`，transcript 定谳；巡检自动机嫌疑三重勘撤），v2 断言对未提交工作区增量结构性盲。COO 收编链 v3 已在役（reset 前 porcelain 非空即禁全树 reset 改 ff-only，首跑 97ba475f）+「编辑共享卷前先 pull 现顶」双端保护入树。本席 §7.9 修复重写即现文，无损闭环。
+
+**终版 build=三笔，全 TriMLC 仓同顶**：6f832a1（根治包）叠 03c6197（boot sweep）叠 2b1709d（saveCronStore）——CTO 10:54 信「FSD 门读数 10:52 四门全绿已验收」钉死；验收卷=d8bfc96b（勘补 549bf552）；17:50 探报免再询此点，按三笔口径开窗（§7.8 机会窗条款确认兑现）。
+
+- **本席活体勘验实证（10:54，TriMLC 本地仓）**：`git cat-file -t` 三笔全在 TriMLC 仓（2b1709d/03c6197/6f832a1 均 commit；TriRLC 仓三笔均不在）+ TriMLC 本地顶=**6f832a1**（根治包在顶）——窗内 S2a 前保留顶 hash 快验一步（`git rev-parse --short HEAD`==6f832a1 即进 build）
+- **信面仓向笔误勘正（如实落卷，不指错）**：CTO 10:54 信写「TriRLC 侧 2b1709d+TriMLC 侧 03c6197+6f832a1」——实测三笔全 TriMLC 仓，信面「TriRLC 侧」系笔误；build 消费面语义零变（build 就在 TriMLC 仓做，三笔同顶同带出），如实勘正入卷
+- **根治包构成（顶笔 6f832a1 勘验）**：src/cron/store.ts(+65)/timer.ts(+57)/localbus/bus.ts(+3)+test/cron-stale-reclaim.test.ts(216 行)——onTimerTick 内嵌 stale-running sweep 运行期自愈+零 schema，冷起即生效
+- 防线链三道照 §7.8 执行；毕报两刻照 §7.7 落卷
+
+### 7.10 双窗提醒链修复+F-3 家族谱系勘正（11:12，CTO 采认信后勘出）
+
+**勘出**：§7.6 所引提醒 job 四代 id（6651f5ce→dd5ff1b5→5097d5b0→6569f870）**全灭于现役 store**——8713 API 7 席全平台族+8711 现役 store 零命中。根因闭环：**TriRLC addJob INSERT 无 next_run_at 列**（store.ts L228-231，13 列清单无此列）+timer L95/L134 `enabled && nextRunAt` 过滤=**next_run_at 空的 job 永不进调度**——POST 201 不等于会触发。
+
+**F-3 家族谱系勘正（候 CAO/memory 并档）**：「F-3（INSERT 缺 next_run_at=永不调度）系 TriMLC 特有非家族性」**被活体推翻**——双事实：**TriRLC 现役在册**（store.ts L228-231 源码实读+活体 POST 201→next_run_at=null 实证）+**TriMLC 已修**（09-30 修复批，hub-silent-detect POST 正常排程实锚）。同源代码族缺陷，修复未回流 TriRLC；移植方向不作断言（未勘）。TriMMC 独立实现=正形（addJob 即时排程）。
+
+**修复读数（API 正途，零手写库）**：
+1. POST 重建 job=`cron_muxj3q29_2utj`（8711，TriRLC 调度面；落 8713 禁——同缺陷+今晚冷起对象）：name=sde-dual-window-reminder-20261007，cron=`50 17 7 10 *`，systemPrompt=双窗全链+**终版三笔钉死条款**（免再询+顶快验 6f832a1 不符即停+BOD 10:56 程序锚+stop 双锚+完工判据+毕报两刻+STE 短讯+19:00 硬界），201 落地
+2. next_run_at=null 确诊（sqlite 只读）→**PATCH {schedule} 同值触发 store.ts L294-300 recompute 分支**（API 正途）→200
+3. **值面终验：next_run_at=2026-10-07T09:50:00.000Z=今晚 17:50:00+08:00 精确命中**（state=idle enabled=1，sqlite 回读）
+
+**store 落位勘验注记（8711 数据目录漂移观察项，不阻窗）**：8711 现役进程 cwd=TriRLC 仓裸形（无 TRILC_DATA_DIR）→store=代码默认 `$LOCALAPPDATA\trilc\cron.db`（WAL 面活跃实锤，POST 时点 wal mtime 11:09）；`trirlc-daemon.ps1` L10 另设 TRILC_DATA_DIR=trirlc\（**另一条链**）+watchdog 拉起的 trirlc-daemon.cmd **不设**该键——现役/watchdog 链同落 trilc\ 自洽；**若经 ps1 链重启则 store 切至 trirlc\=job 全丢分裂风险**——ps1 链使用前须先对齐 DATA_DIR，候独立窗项（本窗零动作）。
+
+**CTO 裁断落卷（11:18 四项逐答信，两件入档）**：
+- **③ TriRLC F-3 修复入 FSD 车道，不搭今晚窗**（今晚 TriRLC 侧零动作维持不破）——并入 TriRLC 维护波合并窗（候办并道：/shutdown token 实校+SIGTERM handler+endpoint 复测、UNACKED 计数施工、本条④ store 对齐），目标 10-08 后首个合法窗，COO 排程面候定窗；修复配方=回流 TriMLC 09-30 修复批（INSERT 补 next_run_at 或插入即 recompute），小改低险；**修复落地前「新建 job 必验 next_run_at 值面」临时纪律维持有效**
+- **④ 硬约束（对齐落地前）**：**8711 禁经 ps1 链重启**——重启一律走 trilc stop/start 保持无该 env 的缺省 store；**canonical store 钉死=`$LOCALAPPDATA\trilc\cron.db`**（现役 job 所在面）；对齐方向=ps1 链向现役 store 看，维护窗前不现动数据迁移
+
+**对今晚窗影响**：零——提醒链修复毕（17:50 触发保障），工序照 §7.6/7.8/7.9 不变。
 
 - daemon-down 窗压至 S2b-S3（SQL+boot 秒级）——build 前置于 shutdown 前=down 窗最短化（FSD「冷起前须 build」口径的执行序精确化，语义不变）
 - 2b1709d 同窗带出（updateJobRun 尾补 saveCronStore，行为锚测试两例在 03c6197 同顶）
