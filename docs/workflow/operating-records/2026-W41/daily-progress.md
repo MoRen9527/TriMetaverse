@@ -628,3 +628,13 @@
   - bc635fdf docs(coo): LG-066 窗令 v1 候校准清单增补——断点数学勘正（BOD 预览指出 21:30 晚于窗框终点不自洽，倾向 a 采：20:00 前 GO 判读毕为断点，段2 完工 ≤21:00 恰合框）
   - e381b278 docs(cos): D-23 禁排区例外解锁令随动——大表记令+三线候办 owner 知会直达+korw 窗况回报入账
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:40 +08：自上次进度提交 c60206fd 后新增 8 条 commit：
+  - bb026dae docs(coo): 服务域流水线汇总卷+S2 派工 brief 合卷投递——盘点汇总（CTO S1 已毕/S2 首笔实证 35e55381/S3 候窗 10-08 后与 M5 邻接/S4 备选；CPO P1 二笔触发门挂批 A 毕）；S2 四步读数锚编排（打包/推 bare/sg 值席拾取/回流收口）+判据卷内嵌 CTO 现勘复核门；值席树 13:3x 条刷态
+  - 760f5621 docs(cpo): C 条裁决卷勘正——工程量定性归 CTO 实勘(两端件中·本卷『小』越界估作废)·A 案显式清除背书/B 案否决产品面背书·验收锚正身改指 CTO 卷 §四
+  - f1517d68 docs(cto): C 条修法卷——缺口根因=L582 防抖与清空 null 语义混同(结构性)+A 案协议显式清除指令(B 案缺席=清除否决 fail-safe)+tier2 版本栅栏+两端件工程量勘正(中,排期不变)
+  - 2f1b6518 docs(coo): 收编链甩笔三案闭环（CTO 判据卷竞态窗）——13:20:33 CTO 落顶 102f06e0 恰入本席 merge→reset 竞态窗被甩、cherry-pick 自愈 7aec11ec 零损失；v3 跑对仍拦不住=断言①链首时点+porcelain 只见未提交=结构缺口；修链 v4（reset 前一刻 LO2 重查非空禁 reset 改 ff-only+PRE_TIP 甩笔复核响报）本条起即用；CAO D-45 补款候选全数支持
+  - dedbce1f docs(cos): 补收 LG-062 终审包归档件（W40 漏网·值席代收）
+  - 35e55381 docs(cto): S2 判据卷——TriRMC cron 写族 token 门 fail-closed 化（缺口本体=L148 fail-open 默认态非零门代码+写族硬门读族过渡梯度+四态测试锚+部署面候 LG-066 解冻另窗）
+  - fa1181e3 merge: 收编并行笔后补推（流水线令两件+STE png 顺带入库笔）
+  - b5131e77 docs(cpo): 流水线令盘点卷+打包件任务书——批 A 文档清洗出 v2/v3 一件打包(face server-executable)·留本地三件注理由·grep 14 件全量定性·记忆面零命中空集
+- registry：v2.1；今日 registry 提交无变化
