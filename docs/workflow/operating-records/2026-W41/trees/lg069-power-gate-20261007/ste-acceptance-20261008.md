@@ -107,6 +107,16 @@ executeJobScheduled 单点闸（timer.ts L210）：`shouldDispatchNewJobs` 谓�
 - **缺陷面收敛后现状**：LG-069 交付自身缺陷面=**通知腿静默吞可观测缺口一项**（副因位）；主因位=共享通道 POST 403（S3 在账非本交付）；检测源分叉自缺陷列移出转观察列。
 - 落款：date 现查 2026-10-07T19:56:17Z（2026-10-08 03:56+08 周四）
 
+## 十三、复验销账卷（CTO 销账触发令·轻量三件·append 追加）
+
+- 令源: m-cto 复验销账触发令（2026-10-08 03:58+08 收）；上游=FSD 修复批 TriMLC d344017（双读保守 min+双读可见化+notify 可观测面，3 文件 +250/-39）+CTO 验收 PASS 裁定卷 046ce0c4
+- **复验① 六字段可见化值面活体核 — PASS**：`/internal/v1/power` 与 healthz power 投影双面九字段全可见——percent=54（min 语义值）/percentRaw=54/percentCim=54（接电态 min 无差，形态正常）/acOnline=true/gate=none/batteryPresent=true/readFailures=0/**notifyFailures=0（新可观测面在位）**/lastReadAt=2026-10-07T19:57:40Z 鲜；8713 pid=25300（修复批部署新 pid，非验收时 7624——部署守约）。
+- **复验② min 语义单测在卷核 — PASS**：power-gate.test.ts 隔离复跑 **23/23 全绿**（原 14+修复批 9 新）；D 族（「修复批① 双读保守 min」套件）实测 **7 例绿**（CTO 令面 6 例——实测只多不少，差 1 注记如实不阻销账）；CTO 点名端到端例实锚绿：`状态机端到端：mock 分叉读数 → 闸判定吃 min 值（raw 21/cim 19 → hard）`（与令文逐字对符）；「修复批③ notify 失败计数+降级告警」绿。
+- **复验③ 全量复跑对读数 — PASS**：**656 tests / 123 suites / 651 pass / 5 fail**（与 CTO 期望 656/651/5 逐项对平）；5 败逐名与首轮全同（replay-flow/P0/FADE-ASSESS×2/tui）零新增；既有面抽验 2 名（CTO 令「抽验 2 名即可」）：P0 e1 同 location auth-gate-rejection.test.ts:1:11531 同败形、FADE routing_error `≥3（实际 2）` 逐字同文——既有面确认。
+- **两面挂账如实注明（不阻销账，照 CTO 令）**：①临界区 20-25 N≥5 同时刻对照=候办挂自然放电窗（FSD 面，无幅度硬门）；②复验锚②通道腿（gate-soft 注入告警四面落信）=挂 S3 通道线（POST 403 三要素已在 81c8b938 卷 §二）——通道修后补验。
+- **销账**：轻量三件全 PASS，LG-069 台账依 CTO 令即闭。卷链终态：81c8b938（七锚+实弹补录）→9cef221c（终判采认+复验锚裁正）→59437071（缺陷①定性勘正）→本节（复验销账）。
+- 落款：date 现查 2026-10-07T20:00:00Z（2026-10-08 04:00+08 周四）
+
 ## 状态条（M-001）
 
 - date 现查：2026-10-07T19:24:01Z（2026-10-08 03:24+0800 Thursday）
