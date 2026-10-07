@@ -580,3 +580,9 @@
   - 6a7e823e docs(cto): 抹写案定谳闭合勘补——COO transcript坐实--hard两笔逐字节同一(次查条款作废),案CLOSED;收编链v3采认(untracked排除+ff-only替位两升格)+边界补钉(ff-only失败=停链上报禁回退销毁形态)
   - 2e4f7f36 docs(cfo): M4 口径会签闭环入卷——COO 全认回（11:29）·口径A/B 定义+双栏规则+R-HY 归属双方认定·W42 周报起双栏执行
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 b70bd81d 后新增 4 条 commit：
+  - 6c8efc33 Merge remote-tracking branch 'origin/dev' into dev
+  - deb3fa08 docs(cpo): trimodel 树件 seg3——「兜底模型」三层语义文案+r5 五件并入锚+施工边界与验收锚；三件任务齐
+  - 33110ff1 docs(cpo): trimodel 树件 seg2——「模型策略」IA 三概念分区提案+改名文案全表 16 行+禁改清单
+  - 101d60e2 docs(cpo): trimodel 树件 seg1——cc-switch 对表调研+定位对比叙事（三件任务之一/之二-a）
+- registry：v2.1；今日 registry 提交无变化
