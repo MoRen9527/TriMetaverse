@@ -706,3 +706,11 @@
   - 1034bd9b Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 5b128aa6 docs(board): 发送账#443落盘——CPO误报口径立场入档(维持现正则不收紧·维护席单点·并档素材六件)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:00 +08：自上次进度提交 cc503bfc 后新增 6 条 commit：
+  - de91141a docs(sde): LG-065 段1 GO 刻+段2 S0 基线六件落卷——三件全绿（log 启用/牵引面实锚/注册四点补验）+korw 挂死实锚（next_run_at 冻结 10-05T09:44Z）+S1 对象勘定（watchdog=ScheduledTask 每分钟形）
+  - 25e83308 docs(cfo): M3#9 额度水位首跑落卷——周窗 75% 观测线 70% 首触发·M6 新基准报告义务首笔执行（COO c443b2c5/BOD 040049b9 双达）·节流判据供数·暂停线/日线无锚如实申报
+  - 61cb654b docs(cos): LG-065 今晚窗提前开记账——CEO 16:49 亲令「开」16:50 即起·原 17:50 窗框作废·COO 执行令 37f4214a
+  - 623a89f5 docs(board): 发送账#445落盘——窗令断点定版认账+M6观测线首触发(实绩定标48min·宁停不挤·korw同名异标零冲突·周窗75%观测线·四席派工全达)
+  - 83da2211 merge: 收编 TC 并行巡检笔后补推 #444
+  - 774eeb4f docs(board): 发送账#444落盘——CEO质询兑现LG-065今晚窗提前即开(CEO亲令开16:49:29·断点重算M2两栏照走·COS即时同步)
+- registry：v2.1；今日 registry 提交无变化
