@@ -573,3 +573,10 @@
   - a1d896dd docs(sde): §7.10 补 CTO 裁断落卷——TriRLC F-3 修复入 FSD 车道维护波(10-08 后首窗,不搭今晚)，硬约束:8711 禁 ps1 链重启+canonical store 钉死 trilc\cron.db，新建 job 验值面纪律维持有效
   - 743c79d6 docs(cto): 手术卷整写覆盖勘验卷——sg巡检自动机排除(物理不可达+append-only写域+diff干净三重,嫌疑链勘撤),嫌疑改指席位侧git销毁类(COO 10:55/10:56 reset对首查,reflog mode不可辨候transcript一锤),裁令三条(D类候条全树销毁硬禁/收编链v3双断言/未提交窗收敛),今晚窗零影响
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:40 +08：自上次进度提交 d5b49540 后新增 5 条 commit：
+  - 7e268c9c docs(coo): 值席树打包窗 8 件二次顺延勘正——D-45 已落章被急插队占用（TC 894e866），候窗位后移 D-46 起，清单不变
+  - 5f6a1316 docs(coo): 值席树收编链 v3 补边界钉——ff-only 失败=停链上报 fail-safe 终态禁回退销毁形态（CTO 采认补款），销毁面全量核销读数入条
+  - 5d21fb0e docs(sde): §7.9 补撞车定谳注记——COO reset 链尾肇事认账(transcript 定谳两笔 hard reset)，收编链 v3+双端保护闭环，§7.9 稿无损闭环
+  - 6a7e823e docs(cto): 抹写案定谳闭合勘补——COO transcript坐实--hard两笔逐字节同一(次查条款作废),案CLOSED;收编链v3采认(untracked排除+ff-only替位两升格)+边界补钉(ff-only失败=停链上报禁回退销毁形态)
+  - 2e4f7f36 docs(cfo): M4 口径会签闭环入卷——COO 全认回（11:29）·口径A/B 定义+双栏规则+R-HY 归属双方认定·W42 周报起双栏执行
+- registry：v2.1；今日 registry 提交无变化
