@@ -738,3 +738,19 @@
   - baca4435 docs(coo): LG-065 窗志四刷——段4 N2 毕报判读 PASS 18:28（FSD 38min 守窗提前 ~79min·卷 09645364+本席活体四点双证·jobCount=8 watchdog 带全）+BOD 收口链启动（STE 验收令 164c5b94 五锚→BOD 复核→呈 CEO）·FSD 静默令回执毕·窗链四段全毕全绿
   - 09645364 docs(fsd): LG-065 N2 盯梢 daemon 两机落位施工回执——双侧 cron job 值面锚+四判据落位对照+叫醒链/互备红线对表+自测读数链 10 轮（10:20 双自然轮 PATH-guard 修复 cron 面实证）+首火勘差两笔+技术债六项如实标注
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:40 +08：自上次进度提交 cfbf68d7 后新增 5 条 commit：
+  - 967fe0e7 merge: 收编并行笔（值席落盘防覆盖）
+  - 85ad5f3a docs(coo): LG-065 提前窗收官刷——STE N2 验收五锚全 PASS（66a4b6cb）+BOD 终判 PASS 签发三证合流（pidfile 勘差对上闭）·四段全毕全绿提前 ~1h 完赛零回滚·观察项三笔记账·对表扫撤扫+知会 COS
+  - 850ca4ce merge: 收编并行笔后补推 #447
+  - 5fa62e0a docs(board): 发送账#447落盘——N2验收终判PASS·LG065提前窗全闭(四段全绿收官提前1h·三证合流·ssh单通道域知CTO·N3预载10-08)
+  - 66a4b6cb docs(ste): N2 盯梢 daemon 落位验收五锚全 PASS——双侧自然轮独立复测（dev rc 2→3/sg log+1 行）+四判据代码面逐条对照 CTO 定形+互备双章 fleet 双向新鲜+技术债六项面核三笔勘定注记+pidfile 勘差自纠（.trimetaverse 面）+ssh 单通道观察项单列
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:50 +08：自上次进度提交 ce0c3d7a 后新增 1 条 commit：
+  - 3445cf46 docs(cto): ssh 单通道依赖评估——观测性单点非可用性单点(daemon 运行不依赖 ssh)+处置采 A+D 组合(告警出站 HTTPS 化+failcount 盲区自告警)候维护波/B healthz 公网 C 外部心跳双否决
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 7193d49e 后新增 4 条 commit：
+  - a54a94a8 merge: 收编并行笔（值席落盘防覆盖）
+  - 6cec8eeb docs(coo): LG-065 窗志六刷补正笔——FSD d1 PS5.1 编码分叉勘正（生产永久哑火重定性·双宿主分叉坑第二例）修毕三级终证（c65a0bb6·-Encoding UTF8）+8713 迟火抖动活体实证三笔自愈（根治归 CTO 域）·STE 验收面转达以补正为准·BOD 值面勘正知情
+  - c65a0bb6 docs(fsd): LG-065 N2 回执补正——勘差第三笔（d1 账本解析 PS5.1 编码分叉：cron 生产面 openItems 恒-1 d1 告警腿哑火，-Encoding UTF8 单 token 修毕+PS5.1 定点/全脚本/11:32 生产自然轮三级终证）+§六.2 瞬时锁假设推翻勘正+§六.6 8713 迟火抖动活体实证补记
+  - 21b8209e docs(cos): LG-065 提前窗收官刷账——四段全毕+STE N2 五锚 PASS 66a4b6cb+BOD 终判 PASS·对表扫撤·余 N3 候 10-08
+- registry：v2.1；今日 registry 提交无变化

@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（N2 施工回执；定形正身=同目录 cto-n2-scheme-review-20261006.md CTO APPROVE 附条件版+tree-plan N2 节点+window-order 段⑤；GO 令=m-coo 17:39 三门判读）
 - syncMode: static
-- lastSyncedAt: 2026-10-07T10:25:05Z（18:25:05+08，落卷当场 date 现查）
+lastSyncedAt: 2026-10-07T11:34:37Z（毕报补正增补当场 date 现查）
 - 两刻制: **开工刻 2026-10-07T09:48:23Z（17:48:23+08，GO 后 9min）／毕报刻见毕报信（当场现查）**
 - 施工标的: dev 侧 `%LOCALAPPDATA%\tri-watchdog-n2.ps1`（8713 cron job 执行体）+ sg 侧 `/usr/local/sbin/tri-watchdog-n2-sg.sh`（8712 cron job 执行体）；两机 cron job + 四判据扫描 + 叫醒链 + cron 存活自检 + 对侧互备
 
@@ -54,15 +54,16 @@
 
 1. **launcher PATH guard 无 `System32\OpenSSH` 目录**（本笔 finding）：cron 生成面裸 `ssh` 解析不到（Git\cmd 亦无 ssh.exe），2>$null 吞成静默无操作——10:10 首轮 push/stat 双哑实锚；我会话 PATH 含该目录故 DryRun 侥幸绿（**双宿主分叉型坑：同脚本两会话行为分叉**）。修法=b 案脚本内绝对路径 `C:\Windows\System32\OpenSSH\ssh.exe`（零 launcher 改动零旁系扩散）；launcher PATH 补目录候 CTO 域另裁（不影响本件现役）。
 2. **d3c 任务态过滤缺 `Running`**：TriMLC Daemon 任务活实例态=Running，原过滤仅放行 Ready→首火假 issue（debounce 1/2 未外溢）。修=Ready|Running 双放行。
+3. **d1 账本解析 PS5.1 编码分叉（毕报后冗余盯梢巡检揪出，11:25Z 修毕）**：allowlist 用 `powershell`（5.1），`Get-Content` 无 `-Encoding` 对 UTF-8 无 BOM 账本按 ANSI 读→中文数词乱码→regex 永不命中→**cron 生产面 openItems 恒=-1，d1「在办>0」腿生产永久哑火**（DryRun 绿=我会话 pwsh7 UTF-8 默认，双宿主分叉型坑第二例；§六.2 原「瞬时锁」假设被推翻——10:20 起每轮恒 -1 非一回）。修=读账本行加 `-Encoding UTF8`（单 token）；验证链：PS5.1 定点 parse v=14/负对照 matched=False→5.1 全脚本 DryRun `OK all-dims (open=14)` 零残留→11:32:26Z 生产自然轮 `open=14 peer=2min` 值面终证。
 
 ## 六、技术债务与诚实降级标注（如实全列）
 
 1. **sg d1 席位静默判读缺席**：duty tmux socket=root 私有，job 身份（fleet）不可达——非不作为，身份墙实证后诚实降级；席位静默盯梢由 dev 侧承载（13 席 transcript 皆 dev 面）。候窗方案（值席位迁移/socket 共享/CLI 面探测）候 CTO 裁。
-2. **d1 在办单解析脆弱性**：挂账台账现役项=中文数词行解析（十四→14）；台账描述行格式漂移即失效——失效形态=注记跳过（不假报不漏报双保守），候机器可读在办单源升格（CTO「钉死机器可读」正向形态候窗）。**10:20 轮实测一回失灵**（10:14/15 轮=14、10:20 轮=-1，疑 docs/memory 镜像并发写瞬时锁；该轮静默=1min 未触双条件，无告警影响），脆弱性实证在卷。
+2. **d1 在办单解析脆弱性**：挂账台账现役项=中文数词行解析（十四→14）；台账描述行格式漂移即失效——失效形态=注记跳过（不假报不漏报双保守），候机器可读在办单源升格（CTO「钉死机器可读」正向形态候窗）。~~10:20 轮实测一回失灵（疑瞬时锁）~~**勘正（11:25Z）：非瞬时失灵，根因=PS5.1 编码分叉生产面恒 -1，已修毕**（见 §五.3）；格式漂移脆弱性仍在（失效形态同上保守跳过）。
 3. **notify payload JSON 注引**：issue 串拼入 JSON body 未做转义（现役 issue 源=枚举词+代码态，无引号源）；send-keys 文本已去单引号。候窗加转义。
 4. **hop4=runbook 性质**：sg 物理独立位人工窗未自动化（超最小 sufficient 边界，如实披露）；hop1/hop2 真发路径**未实测**（构造真发=扰值席，守节流纪律）——N3 兜底链实测 10-08 STE 窗覆盖。
 5. launcher `bak-pre-n2-20261007T100135Z` 候 CTO 验收毕清（l2 备份先例同款）。
-6. 本机 8713「完成链断裂」缺陷（件③候窗）知情在案：N2 dev job 为潜在受害者，兜底=对侧互备 30min 过期判读——按 CTO 加固条件②设计自洽。
+6. 本机 8713「完成链断裂」缺陷（件③候窗）知情在案：N2 dev job 为潜在受害者，兜底=对侧互备 30min 过期判读——按 CTO 加固条件②设计自洽。**活体实证补记（11:33Z）**：job 持续在火但带迟火抖动（10:32:51/11:01:43/11:32:26 三笔，≥3min 内自愈）+`lastRunAtMs/nextRunAtMs` API 面不持久化（恒 null）——本件自检窗 30min=3 迟火余量，现役覆盖；根治归件③ CTO 域。
 
 ## 七、M3#9 节流对表
 
