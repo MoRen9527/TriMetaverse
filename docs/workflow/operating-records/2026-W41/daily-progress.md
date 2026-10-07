@@ -552,3 +552,10 @@
   - 80fa66f6 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - 3e1ed63e docs(fsd): 根治包施工+四门读数落卷——TriMLC 6f832a1（tsc 0/新卷6/6/全量633零新败/独立基线627同五名）+写入面增补标注+github补推欠账挂账
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:10 +08：自上次进度提交 ba66f0c7 后新增 5 条 commit：
+  - 087ca373 docs(cho): 反省报告按 CEO 11:06 裁答收口——M1 执行域枚举勘正为四控制器域名+§六三项候裁闭项注记（定谳卷 59ea28bdf wt/board 分支位如实注记）
+  - 5dc5b52c docs(coo): 窗令增域别口径注记（CEO 11:06 M1 枚举裁正）——四控制器域名当维度（TriMMC/TriMLC/TriRMC/TriRLC），机器系实例注记禁写死；段③=TriMLC（本机实例）8713、段⑤=TriMLC+TriMMC 双域落位
+  - 0f28293c docs(coo): 值席树 11:0x——手术卷撞车转记（SDE 自愈 e0d79170·巡检自动机嫌疑候勘 CTO 域·防再撞双端=编辑前 pull+收编断言）+三笔归属勘正（全 TriMLC 仓同顶 6f832a1，一致性锚口径精化）
+  - 9c8691a2 docs(cto): 验收卷仓向勘正——2b1709d系TriMLC仓笔非TriRLC(本席笔误,SDE活体勘验cat-file实证三笔同顶6f832a1),今晚TriRLC侧零动作;跨仓hash混读自铸条自踩如实入卷
+  - e0d79170 docs(sde): 手术卷 §7.9 终版 build 钉死补落+并行撞车结构修复——三笔全 TriMLC 仓同顶 6f832a1 实证（信面 TriRLC 侧笔误勘正），§7.6 表 S5/毕报行+尾注归位，17:50 免再询按三笔开窗
+- registry：v2.1；今日 registry 提交无变化
