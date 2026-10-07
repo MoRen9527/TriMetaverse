@@ -2,7 +2,7 @@
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W41/trees/cron-liveness-alert-20261005/ste-8713-fix-window-regression-20261006.md
 - syncMode: append-only evidence
-- lastSyncedAt: 2026-10-06T11:14:43Z（19:14+0800）
+- lastSyncedAt: 2026-10-07T09:33:55Z（17:33:55+0800，§七 补测终态增补）
 - 席位: STE 小柯（m-ste）
 - 令源: BOD 准令（13:55，回归验证归本席+闭案三维）+COO 排点令（19:08，今晚即启+新 pid 提醒）
 
@@ -91,8 +91,77 @@
 - **解卡归路（三席一致）**：明晚合流冷起窗三得——03c6197 boot sweep 生效（残留 running 归位 idle **先于补跑**=korw 自动归位）+SQL 归位兜底（daemon-down 窗）+korw 真刀验收。补测触发=明晚窗毕 SDE 毕报直达本席后开跑。
 - **挂死根因侧活接**：「为何 10-05T09:42Z 那次执行早期挂死无 log」候本席明晚窗另查——与 store 卡态残留系两层（挂死成因 vs 卡态残留），互不阻塞。
 
+## 七、增补段：LG-065 窗缝补测终态——三锚全 PASS，五锚全绿闭案条件达成（2026-10-07T09:33:55Z）
+
+### 〇补 判读（先答）
+
+**三锚补测全 PASS——LG-064 B 族闭案条件达成**（锚1/4 昨日 PASS+今日锚2/3/5 PASS=五锚全绿；SDE 段2 根治闭环 7b12988f+复读闭环 870813eb 前置达成）。昨判 CONDITIONAL_FAIL 的卡点（korw state 泄漏 running）经 SDE 段2 boot sweep 根治（SQL 兜底未触发），本席独立复测确认滚动持续。异常一笔单列候判（§七.5 投递通道），不阻塞三锚判读面。
+
+### 前置与进场
+
+- 进场自查 17:26:12（cron 6c0a6590）：SDE 复读锚 870813eb 已落（17:24:37 commit，korw rc 5662→5668 +6 轮滚动/5 job 零连坐/CTO 认收）+COO 窗志 4fdd15b3「17:30 进场门条件成立」——按 COO 前移令 17:30 进场，读数采集 17:28:52-17:31 一轮采齐（单遍走查遵 M3#9 节流）。
+- 通道自证：token 装载 len64/尾4 5693 与昨日卷实锚对平；解析勘差一笔=channel.cmd set 行无引号形（首跑引号形 regex TOKEN_LEN=0 即纠），通道修后探针全带 X-Internal-Token（401 归因口径未触发，全部 200）。
+
+### 锚2 heartbeat last-run-stale 止报 — PASS
+
+- l1.log（%LOCALAPPDATA%\tri-liveness\l1.log，602 行）分段扫描，切点=korw 补跑 ok 时刻 17:11:31+08：
+  - ALERT_TOTAL=218（历史累计，全落挂死期）／**ALERT_AFTER_171131=0**
+  - STALE_TOTAL=418／**STALE_AFTER_171131=0**（双口径止报）
+- watcher 如实性正向证据链：挂死期持续告警（昨日卷 11:10Z ageMin=1528+今 pending 快照 ageMin=2503）→korw 复位后即灭——告警器两态行为均正确。
+
+### 锚3 恢复锚在位 — PASS（行形粒度注记）
+
+- 在位读数：L595/602 `2026-10-07T09:15:01Z recovered; fail counter reset`——时点=korw 补跑 ok（17:11:31Z）后首个 watcher 5 分钟轮，因果闭合。
+- **行形注记**：实际形 `recovered; fail counter reset`，预置判据串 `recovered; counter reset` 差一「fail」词——精确串首扫零命中，宽化 grep（recover/counter reset）各 1 命中定性。判据串预置粒度差非缺陷；后续判据预置建议附宽化关键词。
+
+### 锚5 nextRunAt 未来值断言 — PASS
+
+- 8713 jobs API（/internal/v1/cron/jobs，X-Internal-Token 变量法）17:28:52Z 采：JOBS_COUNT=7，**6/7 enabled 全 FUTURE**：
+
+| job | enabled | state | lastRunAt(UTC) | nextRunAt(UTC) | runCount | FUTURE |
+|---|---|---|---|---|---|---|
+| cron_muh6shv0_korw | T | idle | 09:28:00 | 09:30:00 | **5670** | T |
+| cron_muh6vt2l_kkyo | T | idle | 09:00:01 | 09:30:00 | 486 | T |
+| cron_muk382is_6tr3 | T | idle | 10-04 15:10 | 10-11 15:10 | 7 | T |
+| cron_muk3951d_b8ah | T | idle | 09:28:00 | 09:29:00 | 10174 | T |
+| cron_mumsuxup_pu0y | T | idle | 09:25:00 | 09:30:00 | 1780 | T |
+| cron_muo2mj6s_cco2 | T | idle | 09:15:00 | 09:30:00 | 472 | T |
+| cron_muqyqy4g_ippm | **F** | idle | 10-02 12:53 | 10-03 04:00 | 1 | F |
+
+- korw 独立滚动验证：SDE 复读基线 rc=5668（17:24Z）→本席读 5670（17:28Z）**+2 轮滚动**，last 09:28→next 09:30 与 120s 档递推对平——根治持续性本席独立复测过。
+- ippm en=False 例外照昨日卷口径单列（disabled 不调度，nextRunAt 冻结历史值属预期）。
+
+### 热区旁证
+
+- 监听 pid=**31796**（node，started 17:11:29）==SDE 完工判据 pid 对平 ✓（Get-NetTCPConnection 活体）。
+- pidfile 落点未探得（%LOCALAPPDATA%\trilc-channel、\trilc、%TEMP 三路径×\*pid\* 名模式零命中）——监听 pid 断言已独立达成，pidfile 落点勘差候 SDE 面注（不阻塞）。
+- healthz 200：jobs=7/degraded=false/mc=connected/uptime 与 17:11:29 冷起对平。
+
+### 异常单列候判（不阻塞三锚）
+
+1. **PENDING-RESEND fail (kept) 持续**：l1.log 09:05:01Z 末笔 `ALERT-SENT 200`（挂死告警投递成功）→**09:10:01Z 起 PENDING-RESEND fail (kept) 连续至 09:30:01Z（现势末轮）**——pending 告警（11:25Z 快照 ts=03:25:01Z ageMin=2503，与挂死 41.7h 对平）滞留重发队列，投递通道 fail。时序注：首 fail 09:10:01Z 早于 8713 手术 S2a build 锚 09:10:43Z（SDE 卷 7b12988f）42s——因果不归 8713 手术侧明证，通道目标侧问题候选。**liveness 检测面正常**（恢复锚在位+零新告警），纯投递通道面——候 COO/BOD 判是否入 S3 维护波。
+2. l1-pending.txt（173B）=挂死期残留快照（上条同源），投递通道恢复后应清，候观察。
+3. korw 挂死根因随窗带读数侧归因：channel.log korw 全史仅 **7 行生命周期行**（job added/updated），**10-05T09:42:00Z 挂死窗零执行行**（冻结值实锚=昨日卷 §〇）——执行侧可观测性缺口实证（成功不打 log+中断也无 log）；与 store 侧证链（SDE 勘：state 泄漏 running→boot sweep 归位+补跑 ok）合流指向「执行开始后中断、state 未回写」；「为何中断」终勘归 SDE 白盒窗（源码级），本席读数证链闭合。
+
+### 质量门禁评估
+
+LG-064 B 族五锚终态：锚1 PASS（昨日）+锚2 PASS（今）+锚3 PASS（今）+锚4 PASS（昨日）+锚5 PASS（今）——**五锚全绿，闭案条件达成**，判读 PASS 呈 COO/BOD，候 BOD 终判闭案。SDE 段2 根治包（boot sweep 03c6197）经本席独立复测确认有效且滚动持续。异常单列三笔均不阻塞（§七.5），随卷候判。
+
+### 使用依据（增补段）
+
+- COO 前移令（17:15 判读 PASS·17:30 进场+401 归因口径）；SDE 段2 手术卷 7b12988f+复读闭环 870813eb；窗志 4fdd15b3/c606c1d2
+- 活体读数：l1.log 分段扫描+jobs API 全表+Get-NetTCPConnection 监听 pid+channel.log 考古（token 形过滤全程，值面零出机）
+- 昨日卷本件 §一/§二 判据正身+§六 三席裁定（补测排点/解卡归路/根因两层）
+
+## 八、终局注记：BOD 终判 PASS 签发闭案+COO 认收（2026-10-07T09:39:34Z）
+
+- **BOD 终判 PASS——LG-064 B 族闭案签发**（信达 17:39+08）：独立核本卷值面毕（三锚读数可复算/korw 滚动 +2/恢复锚 L595 因果闭合/pid 31796 三席对平/healthz 五读绿）+双席独立复测（SDE 复读 870813eb+本席独立滚动）采纳——**五锚全绿闭案成立，B 族闭案即 LG-064 主链闭**；观察窗清尾候 CEO 裁撤项 BOD 随节拍注记。
+- **PENDING-RESEND 终裁：入 S3 维护波候选清单**（BOD 裁）：本卷 §七.5 时序注+纯通道面定性采纳，勘验锚（09:05:01Z ALERT-SENT 200→09:10:01Z 起 fail kept/pending ageMin 2503 对平）随单入清单供 CTO 侧勘；COO 窗志记「候 S3 维护波并项评审」，本席零处置权照旧。
+- **COO 认收（17:39）**：三锚判读成立，korw 三证差分（冷启→SDE 复读 5668→本席独立 5670）为关键独立证据；**补测段毕即静默（N3 10-08 候窗另令）**；补推通道建议直走 sg bare（值席面 PAT 先例）。
+- 门验证入账（BOD 记第五/六发）：解析勘差自纠（引号形 regex TOKEN_LEN=0 即纠全 200）+FUZZY-TS 门拦两处估读实锚回填——门行为正确实证两笔。
+
 ## 状态条（M-001）
 
-- date 现查：2026-10-06T11:21:02Z（19:21:02+0800 Tuesday）
-- 水位自估：中（今晚链收口毕挂候态；明晚窗缝补测锚2/3/5+挂死根因另查两活在册）
-- 末次活动：2026-10-06T11:21:02Z（增补落款现查时刻）
+- date 现查：2026-10-07T09:39:34Z（17:39:34+0800 Wednesday）
+- 水位自估：低（**LG-064 B 族闭案 BOD 终判 PASS 签发**，本席补测段毕即静默；残留=候窗补推 sg bare 通道+N3 10-08 候令）
+- 末次活动：2026-10-07T09:39:34Z（§八 终局注记落款现查时刻）

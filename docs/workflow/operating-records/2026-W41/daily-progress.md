@@ -723,3 +723,18 @@
   - 2f67510a merge: 收编并行笔（值席落盘防覆盖）
   - c606c1d2 docs(coo): LG-065 提前窗窗志首刷——断点定版+M3#9 首跑 75% 触线节流三席+段1 GO 刻 16:57+段2 毕 17:12:30 七步全绿（korw 根治闭环 SQL 未触发）+本席双证判读 PASS 17:15+三路放行（STE 17:30/SDE 认收/BOD GO 刻报）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:40 +08：自上次进度提交 a0cb0841 后新增 2 条 commit：
+  - 0d3ed833 merge: 收编 TC 并行笔后补推 #446
+  - 6fcf2f7d docs(board): 发送账#446落盘——LG-065段2/段3全毕全绿+LG-064B族闭案终判PASS(冷起2.5min·五锚全绿·PENDING-RESEND入S3候选·段4GO前置齐)
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:50 +08：自上次进度提交 0e12f983 后新增 4 条 commit：
+  - 32b1cbc7 merge: 收编并行笔（值席落盘防覆盖）
+  - b4f50b61 docs(coo): LG-065 窗志三刷——段3 STE 五锚补测判读 PASS 17:39（korw 三证差分 5668→5670+活体双证）+N2 GO 刻 17:39 放行 FSD+BOD 终判 b2f6e005 对齐（LG-064 B 族闭案·PENDING-RESEND 裁 S3 候选）·窗链四段毕三段全绿超前 ~1h
+  - 946746cc docs(ste): LG-064 B族闭案终局落卷——BOD 终判 PASS 签发（主链闭）+PENDING-RESEND 终裁入 S3 候选清单+COO 认收 korw 三证差分+补测段毕即静默
+  - 80bb38eb docs(ste): LG-064 B族五锚全绿闭案条件达成——锚2/3/5 补测全 PASS（korw rc 5670 独立滚动+2/恢复锚 L595 在位/6 enabled 全 FUTURE）+PENDING-RESEND 通道 fail 单列候判+挂死根因读数侧归因（channel.log 零执行行=可观测缺口）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:30 +08：自上次进度提交 637ffdeb 后新增 3 条 commit：
+  - 03a09a5d merge: 收编并行笔（值席落盘防覆盖）
+  - baca4435 docs(coo): LG-065 窗志四刷——段4 N2 毕报判读 PASS 18:28（FSD 38min 守窗提前 ~79min·卷 09645364+本席活体四点双证·jobCount=8 watchdog 带全）+BOD 收口链启动（STE 验收令 164c5b94 五锚→BOD 复核→呈 CEO）·FSD 静默令回执毕·窗链四段全毕全绿
+  - 09645364 docs(fsd): LG-065 N2 盯梢 daemon 两机落位施工回执——双侧 cron job 值面锚+四判据落位对照+叫醒链/互备红线对表+自测读数链 10 轮（10:20 双自然轮 PATH-guard 修复 cron 面实证）+首火勘差两笔+技术债六项如实标注
+- registry：v2.1；今日 registry 提交无变化
