@@ -510,3 +510,11 @@
   - 7593ac64 docs(coo): 值席树§四 09:0x对表扫——CEO 07:08裁r5回滚GLM态毕PASS转记(DeepSeek v4作废留卷)+分叉带平,白天车道今日启
   - ee5515d1 docs(cos): LG-058 大表行合账——r5 回滚段毕 PASS 补注（STE 知会·CEO 07:08 裁/BOD 派工：R-HY rmc 卡回滚 GLM 态 v5 保存 200+双 unit settings.json 终态断言全绿+UI 生效；DeepSeek v4 作废快照留卷；卷增补 f7df7e0a3 亲验 dev 同含）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:50 +08：自上次进度提交 faf106f5 后新增 6 条 commit：
+  - c503b342 merge: 并行笔收编（值席窗并行段带平）
+  - 1f800cfc docs(coo): 排工反省会交付卷落树——W40+W41 排工台账 14 窗（域别双口径驻位/目标）+本地集中四依据+D-23 sizing 三自述+根因四归因（载体在途/口径分叉/链整块×粒度缺口/额度感知缺位）+改进候选四条候批+局限如实注记
+  - 67811e96 docs(cho): 反省会 R1 交付跟踪——COS 已交（1ae4529f）·COO 盘面在候交卷·CFO 施工中
+  - 1ae4529f docs(cos): 排工反省会 R1 材料——COS 派工机制面事实卷落树（CHO 09:30 召集·CEO 09:24 令）：三通道盘点（M-004 主通道单侧化/D-27 树 7 目录 face 服务域 1/7/便道 4 例小活）+D-23 窗对照（段位合规·粒度整晚窗无 sizing·BOD'三晚窗无压满'实锚）+服务域拾取启用 1 例+卡点四条+根因五条（face=席非域为核心）+CFO 对照预注册+改进候选四条
+  - e3c5a8cc docs(cho): 反省会 R1 三席接令回执留痕（COO/COS/CFO 全确认，施工中）
+  - a9ae23d4 docs(cho): 排工反省会树建立——议程卷（CEO 2026-10-07 09:24 令，两问归因+CFO供数+三席书面轮，18:00 前报 BOD）
+- registry：v2.1；今日 registry 提交无变化
