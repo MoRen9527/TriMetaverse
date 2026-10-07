@@ -659,3 +659,11 @@
   - 7e0622ca merge: 收编并行笔（值席落盘防覆盖）
   - 8a6863b2 docs(coo): S2 链志终态——全链四步+销账 ~40 分钟走通（③四态 403/200/401/201 全绿+全量 474/469/5 零新增；④TriRMC 711a555 两段推 bare+pre-receive 闸实证；CTO 双端复勘销账闭环中）；基建注记=bare 钩子被 BOD 未跟踪件阻断一次权威位无损；P1 通道就绪
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:50 +08：自上次进度提交 105a847d 后新增 6 条 commit：
+  - 5cd18c85 docs(cto): l2 去重修验收 APPROVE 销账——独立核三面全绿(卷身份/施工面逐字对 7aec11ec/值面 x2→x1 折叠实锚)+还原纪律超预期正形+备份清理令随卷
+  - 5f6c14ac docs(cos): l2 施工毕刷态（FSD 车道 14:47·回执卷 4ada12df）——候 CTO 销账后终态
+  - 4ada12df docs(fsd): l2聚合去重小修施工回执——L117锚前插6行去重块(142行)，DryRun+真轮OK+构造性x2→x1折叠证，statefile注入即还原计数器清零，零行为变更证成立(D-15/判据7aec11ec)
+  - 8f003f6f Merge remote-tracking branch 'sg-server/dev' into dev
+  - 516d93ae docs(fsd): 批A毕报+文档面联动清洗——TriModel 72d3099 改名全链收口（19可见+9注释逐锚/禁改九处=9/Stage1+Stage2-R6 部署读数/GO-r6 BOD 06:39 签发）；讲解件 6 处+方案稿 17 处活引用刷名+改名追记（§2.4 旧定位标注 v3 候件①）
+  - 162276f7 docs(fsd): r6双脚本回填交付锚 72d3099——批A ui commit 已推 sg bare(73ca1cc..72d3099)，Stage1/Stage2 就绪态
+- registry：v2.1；今日 registry 提交无变化
