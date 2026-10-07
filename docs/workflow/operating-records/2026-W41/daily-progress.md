@@ -559,3 +559,9 @@
   - 9c8691a2 docs(cto): 验收卷仓向勘正——2b1709d系TriMLC仓笔非TriRLC(本席笔误,SDE活体勘验cat-file实证三笔同顶6f832a1),今晚TriRLC侧零动作;跨仓hash混读自铸条自踩如实入卷
   - e0d79170 docs(sde): 手术卷 §7.9 终版 build 钉死补落+并行撞车结构修复——三笔全 TriMLC 仓同顶 6f832a1 实证（信面 TriRLC 侧笔误勘正），§7.6 表 S5/毕报行+尾注归位，17:50 免再询按三笔开窗
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 d2be970d 后新增 4 条 commit：
+  - 4793e36d docs(coo): 窗令段①勘正②——提醒链四代 job 全灭（TriRLC F-3 同源）SDE 修复，现役=cron_muxj3q29_2utj@TriRLC 8711，sqlite 值面 next_run_at=17:50 精确命中（§7.10 ec66dceb），工序零变
+  - ec66dceb docs(sde): §7.10 F-3 谱系精化——TriMLC 已修(09-30 批)/TriRLC 现役在册(未回流)，移植方向不作断言，中性双事实表述
+  - d9ff2d21 docs(sde): 手术卷 §7.10——双窗提醒链修复+F-3 家族谱系勘正：TriRLC addJob 同缺陷实锤（INSERT 无 next_run_at+timer 过滤=永不调度，四代提醒 job 全灭根因闭环），job cron_muxj3q29_2utj PATCH recompute 补值 next_run_at=今晚 17:50 精确落位，8711 store 目录漂移观察项
+  - c9dac14b docs(cfo): CEO 11:06 裁答三件入账——年费 ¥3939.6/max 档/2027-08-14 续费入账（浪费建模=年费×(1−利用率)·三档算例标注非预测·真决策变量=续费档位观测）+relay 供数两行排期（今晚 20:44 前钉首窗终值·10-08 起双行日报）+护栏三线计数基准提案=分层双轨（触发面 bigmodel 权威口径/归因面 raw 可复算口径/周对照校准）候批·α 假设作废销案留痕·三 meter 脚本补入库
+- registry：v2.1；今日 registry 提交无变化
