@@ -723,3 +723,7 @@
   - 2f67510a merge: 收编并行笔（值席落盘防覆盖）
   - c606c1d2 docs(coo): LG-065 提前窗窗志首刷——断点定版+M3#9 首跑 75% 触线节流三席+段1 GO 刻 16:57+段2 毕 17:12:30 七步全绿（korw 根治闭环 SQL 未触发）+本席双证判读 PASS 17:15+三路放行（STE 17:30/SDE 认收/BOD GO 刻报）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:40 +08：自上次进度提交 a0cb0841 后新增 2 条 commit：
+  - 0d3ed833 merge: 收编 TC 并行笔后补推 #446
+  - 6fcf2f7d docs(board): 发送账#446落盘——LG-065段2/段3全毕全绿+LG-064B族闭案终判PASS(冷起2.5min·五锚全绿·PENDING-RESEND入S3候选·段4GO前置齐)
+- registry：v2.1；今日 registry 提交无变化
