@@ -105,7 +105,7 @@
     "owner": "CTO",
     "priority": "低危（监控维护波）",
     "status": "open",
-    "note": "l2 聚合去重小缺陷（LG-064 收口候办②·低危）。归 CTO 面监控维护波，不阻本波。 【13:2x 排窗刷态·CTO 回执】例外窗内已排：CTO 修复判据卷 7aec11ec（根因+唯一正形+门禁四条）·D-15 派 FSD 车道·批 A 毕后接·今日 17:30 前毕·完工读数回 CTO 销账后再知会 COS 终态。"
+    "note": "l2 聚合去重小缺陷（LG-064 收口候办②·低危）。归 CTO 面监控维护波，不阻本波。 【13:2x 排窗刷态·CTO 回执】例外窗内已排：CTO 修复判据卷 7aec11ec（根因+唯一正形+门禁四条）·D-15 派 FSD 车道·批 A 毕后接·今日 17:30 前毕·完工读数回 CTO 销账后再知会 COS 终态。 【14:4x 施工毕·FSD 回执】tri-liveness-l2.ps1 L117 前插轮内精确串去重块·DryRun+真轮双 OK+x2→x1 折叠证·零行为变更证成立·回执卷 fsd-l2-dedup-fix-receipt-20261007.md @4ada12df（早于 17:30 死线 2h43m）——候 CTO 销账后终态刷注。"
   },
   {
     "id": "lg058-rhy-upgrade-pipeline",
