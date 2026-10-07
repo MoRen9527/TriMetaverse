@@ -56,4 +56,75 @@
 
 cc-switch 验证了「模型配置直配 settings.json + 键字段级替换 + 写面安全」这条路是行业收敛形态——**我们 r5 五件与 io-kernel 设计与其同构且更严**；我们的代差优势在**拉取下发链+域锚密文+CLI 对等+多机拓扑+降级梯**五项（服务化 vs 桌面工具的代差）；它可借鉴的两处细节=「首次改写留档原始件」（live-first-write，补进 io-kernel 备份语义）与「生效语义分级提示」（对应我们诚实三态，已有）。**不需要为对表引入任何 cc-switch 组件；「兜底模型」设计完全落在自家 r5/claude-fallback 基座上。**
 
-<!-- seg2 件① 兜底模型直配技术设计（待续） -->
+## 第二部分 · 件① 兜底模型直配 settings.json 技术设计
+
+### 2.0 定位语义（先立正，防与既有概念撞车）
+
+「兜底模型」（BOD 裁名，原「连接配置」）=**四域各一份直连供应商的最小直配，直接落到该域落地配置（settings.json 语义），不经 TriModel 代理中转**。CEO 定性原话（CPO 9items 卷转录）：「这个卡就是给四个域留一份直接修改本地配置的配置，拉取下发下去直接影响 setting.json」。
+
+术语区隔（硬约束）：兜底模型 ≠ 策略卡 quota 规则里的 `fallback_ids`（那是**策略内**切换转入序列，走 TriModel 代理域内降级）。两者一外一内：兜底模型=代理链**外**的直连护栏；fallback_ids=代理链**内**的降级序。改名后 CPO 面 IA 须消解这组同名异义（本件候裁点③）。
+
+### 2.1 四域兜底映射结构（每域一卡的落地矩阵）
+
+| 域 | 面·位 | 消费端 | 落地配置 | 现役通道 | 缺口/状态 |
+| --- | --- | --- | --- | --- | --- |
+| TriMLC | M 面·本地域·本机 8713 | 本机 Claude Code harness | `~/.claude/settings.json` | **claude-fallback 端点族现役 7 端点**（templates/preview/backups/rollback/inject-key/restore+info；UI fb-zone 已挂） | 无——本件基座即此 |
+| TriRLC | R 面·本地域·本机 8711（寄居过渡） | 同机 Claude Code harness | `~/.claude/settings.json`（**与 MLC 域同位共享**） | 同上（寄居期同一落地件） | 候裁点①：隔离语义候 R 面独立部署 PC 落地后自然分离 |
+| TriMMC | M 面·服务域·M-SG 8712 | sg 机 harness | sg `~/.claude/settings.json` | 现役走 8460 代理+卡面=策略卡过渡位（trimmc-card.json）；**兜底下发通道候建** | 候裁点②：sg 侧自动落地链缺——SSH/值席手工 or sg TriModel 实例，走排程不并本设计 |
+| TriRMC | R 面·服务域·R-HY 8712 | R-HY daemon 侧 | `$TRIRMC_CONFIG_DIR/settings.json`（**四 daemon 中唯一 daemon 侧落地件**，local-settings.ts:46-57） | 卡面 pull 链现役（LG-058 N5）；R-HY 3333 r5 部署形态（本机+R-HY 双面 200）=底座实证 | 无结构性缺口 |
+
+**结构裁决**：兜底卡=**每域一张独立小卡**（非策略卡分节）。理由：①字段集精简（见 2.2，⊆r5 五件）与策略卡三实体（条目/模型集/规则）结构异构，塞同一卡违「卡名=角色」正名原则（CPO 9items 方案一）；②兜底卡生命周期独立（正常态不拉不动、只作护栏），与策略卡高频编辑域解耦；③域锚继承不变（同一卡面引擎，CARD_VERSION 同族递增）。
+
+### 2.2 兜底卡字段集 × r5 五件合并形态
+
+r5 五件=API Key/认证字段/API 格式/1M/映射表（W40 实施方案正身 §五件定义）。兜底卡取五件的**直连必需投影**：
+
+| r5 件 | 兜底卡字段 | 落地键位（settings.json 语义） | 实锚 |
+| --- | --- | --- | --- |
+| API Key | **钥引用**（钥 slot 名）——**不存钥值** | 钥走独立钥文件（`settings.presets/.deploy-key.<provider>` 族，零过 argv）或 env 键注入 | io-kernel 键族（TriCode io-kernel.ts 五门）+key-cache.ts:446-464 注入键族 |
+| 认证字段 | auth 键位二选一 | `ANTHROPIC_AUTH_TOKEN`（token 门）vs `ANTHROPIC_API_KEY`（key 门） | presets 真源 `TriCode/presets/` 字段正形 |
+| API 格式 | 端点协议族 | `ANTHROPIC_BASE_URL`（anthropic 兼容=缺省直连官方/供应商兼容端点；OpenAI 兼容态走 relay——兜底语义下**默认 anthropic 直连**，不引入第二代理层） | 同上 |
+| 1M | 上下文窗开关 | 客户端 1M 语义（[1M] 后缀发请求前剥除） | claude-code-model-env 语义档（MEMORY 实锚） |
+| 映射表 | **兜底语义下简化**：单模型直映射（tier→同模型），不做多 tier 表 | 模型键位按 presets 真源字段 | `TriCode/presets/`（现役 deployed=bigmodel/glm-5.3-flash；deepseek 未部署） |
+
+**密钥边界（硬规则，CPO 方案三既定沿用）**：密钥禁入兜底卡与兜底 UI 表单——兜底卡只存钥引用；钥值各域域内自管（UI fb-zone L314 既有话术「密钥禁入本表——各域密钥走域卡条目域内自管」原样承袭）。
+
+**合并形态一句话**：兜底卡不新增字段体系，就是 r5 五件在「直连场景」下的最小闭包——五件在策略卡条目（走代理）与兜底卡（直连）是同一字段语义的两种投影，落库同引擎、下发同链路、落地同 io-kernel，**零新轮子**。
+
+### 2.3 保存链五步投影验证点（改→存→拉→落→效）
+
+CPO 方案三五步数据流逐环投影+验证锚（对表「键存在性抽验≠值面验证」纪律，每环值面断言）：
+
+| 步 | 动作 | 环节主体 | 投影验证点 |
+| --- | --- | --- | --- |
+| 1 改 | UI 四域签表单提交/（未来）CLI 写 | TriModel API | **写后读回断言**：GET 返回与提交体值面一致（非仅 201 状态码） |
+| 2 存 | 卡面引擎落库+域锚加密 | TriModel 卡面 | 域锚属主断言（创建机+用户）+卡版本递增+写前自动备份在册（备份轮换读数） |
+| 3 拉 | daemon 定时 pull（15min stagger） | 各域 daemon | pull 响应读数落日志+键族应用记录（key-cache 键族）；拉取失败走降级梯（tier1 缓存 24h 过期→tier2 last-known-good→tier3 env）不入死态 |
+| 4 落 | 写落地配置文件 | 各域落地链 | **io-kernel 五门**：备份轮换+键名锁+写后断言（落地文件键名/值面 hash）+不符自动回滚+掩码审计；**首次接管前留档原始件**（cc-switch live-first-write 同款，本件采纳补强） |
+| 5 效 | 运行态消费 | 消费端（harness/daemon） | 诚实三态读数暴露（见 2.4）+探针：兜底端点请求实际命中（v 值面验证，非配置文件在即认为生效） |
+
+### 2.4 诚实三态的技术支撑面
+
+UI 话术已挂（fb-zone sub 行「已存未拉 / 已拉未落 / 已落生效」），读数源须各域落地链暴露三态字段：
+
+- **已存未拉**：卡面卡版本 > daemon 上次拉取记录版本——数据源 daemon pull 记录；
+- **已拉未落**：已拉版本 > 落地文件指纹（文件 hash/版本注记）——数据源落地链写后读数；
+- **已落生效**：消费端实读（harness 进程 env 快照 / daemon config verify 探针）。
+
+**候裁点④（三态读数通道）**：A 案=各域 daemon `config verify` 端点扩三态字段（CLI show 同源，一份数据两消费端——推荐，与一致面八项第⑧项 CLI 对等咬合）；B 案=UI 端跨端点聚合（零 daemon 改动但 UI 承担聚合逻辑，verify 语义分散）。候 CPO 合流时一并定，技术面推荐 A。
+
+### 2.5 层级裁对表（兜底卡插入位置）
+
+现役层级裁（W40 §4.3）：**env 显式覆盖 > TriModel 卡面 > fleet bundle > 常量兜底**。兜底卡=卡面层的直连投影，**不新增层级、不动层序**——它与策略卡同处卡面层，区别只在消费语义（直连 vs 经代理）。env 钉定项优先级高于兜底卡落地值（fb-zone L314 既有话术「域内 env 钉定项以 env 为准，表单值补缺省位」原样有效）。
+
+### 2.6 件① 候裁点汇总
+
+| # | 候裁点 | 本席倾向 |
+| --- | --- | --- |
+| ① | TriRLC 寄居期与 MLC 域共享落地件（同 `~/.claude/settings.json`） | 如实标注共享态，R 面独立部署后自然分离；不为此提前引入拆分复杂度 |
+| ② | MMC 域兜底下发通道候建（sg 侧无自动落地链） | 不并本设计排程；候值席/sg TriModel 实例窗另立 |
+| ③ | 「兜底模型」卡 vs quota 规则 `fallback_ids` 同名异义 | CPO 面 IA 消解（改名文案表顺带处理） |
+| ④ | 三态读数通道 A 案（daemon verify 扩字段）vs B 案（UI 聚合） | 推荐 A 案 |
+| ⑤ | 兜底卡写面权限 | 沿用现役管理令牌 fail-closed（写面拒绝时 UI 如实提示，fb-zone 既有行为） |
+
+<!-- seg3 件② 模型策略前端结构改造（待续） -->
