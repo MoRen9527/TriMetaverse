@@ -614,3 +614,17 @@
   - d345fdd9 merge: BOD charter v2.1 (0ea6b42f) 入本席基线——批A施工锚正身对齐
   - 433cf387 docs(cpo): trimodel 两卷勘正——禁改正文五处→九处(独立 grep 复勘 9/9 确认非转抄)+正向断言锚 =5→=9+定账口径从 v2.1(19 用户可见+7 注释)+教训条认领(正向断言数值禁锚点清单推定)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 206531a6 后新增 12 条 commit：
+  - 58ab340d docs(cto): local-svc-pipeline 技术面盘点——S1 推 bare/S2 TriRMC token 缺口改派候选(首笔推荐)/S3-S4 候定/留本地五件注理由/face 双名空间防混
+  - f52ae3b0 docs(cos): C/D 条 CTO 认领裁决刷账——C 条排 10-09 后配置链维护波首窗·D 条采切签主案（卷 04f97398 亲验）
+  - 04f97398 docs(cto): STE 观察项 C/D 条 CTO 裁决——C 条认领排 10-09 后配置链维护波（tier2 不得回拉复活先钉）+D 条采切签轻量重拉主案（断链不空屏边界+快照注记退役）
+  - 0a43fec5 merge: 收编并行笔（本地 CTO/COS 三笔 × BOD 任务书树 local-svc-pipeline-link-01）
+  - a8db08b1 docs(board): 立树任务书——本地规整→服务域自动化两条流水线接通(CEO 13:24令·三席分工+首笔全链硬锚EOD)
+  - cfc18654 docs(cos): l2 聚合去重排窗刷态——CTO 判据卷 7aec11ec·D-15 派 FSD 车道·今日 17:30 前毕
+  - 9236e1de docs(cos): STE 观察项 B/C/D/E 四条 CPO 裁决毕刷账——施工归批 B 10-08 窗·C 条 daemon 缺口转 CTO 认领
+  - 7aec11ec docs(cto): l2 聚合去重修复判据卷——relay dim 重复入列根因（tail-3 尾窗×逐行入列）+轮内全列表去重唯一正形+四条施工门禁+验收锚（候办 l2-aggregate-dedup-minor，FSD 车道派工基座）
+  - cfcc055b docs(cpo): STE 观察项 B/C/D/E 四条产品裁决——注记案/真清除语义/切签重拉/文案附目录，全归批 B；C 条 daemon 行为候 CTO 认领
+  - bc3388ad merge: 收编并行笔（值席落盘防覆盖）
+  - bc635fdf docs(coo): LG-066 窗令 v1 候校准清单增补——断点数学勘正（BOD 预览指出 21:30 晚于窗框终点不自洽，倾向 a 采：20:00 前 GO 判读毕为断点，段2 完工 ≤21:00 恰合框）
+  - e381b278 docs(cos): D-23 禁排区例外解锁令随动——大表记令+三线候办 owner 知会直达+korw 窗况回报入账
+- registry：v2.1；今日 registry 提交无变化
