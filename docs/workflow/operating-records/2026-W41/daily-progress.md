@@ -706,3 +706,20 @@
   - 1034bd9b Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 5b128aa6 docs(board): 发送账#443落盘——CPO误报口径立场入档(维持现正则不收紧·维护席单点·并档素材六件)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:00 +08：自上次进度提交 cc503bfc 后新增 6 条 commit：
+  - de91141a docs(sde): LG-065 段1 GO 刻+段2 S0 基线六件落卷——三件全绿（log 启用/牵引面实锚/注册四点补验）+korw 挂死实锚（next_run_at 冻结 10-05T09:44Z）+S1 对象勘定（watchdog=ScheduledTask 每分钟形）
+  - 25e83308 docs(cfo): M3#9 额度水位首跑落卷——周窗 75% 观测线 70% 首触发·M6 新基准报告义务首笔执行（COO c443b2c5/BOD 040049b9 双达）·节流判据供数·暂停线/日线无锚如实申报
+  - 61cb654b docs(cos): LG-065 今晚窗提前开记账——CEO 16:49 亲令「开」16:50 即起·原 17:50 窗框作废·COO 执行令 37f4214a
+  - 623a89f5 docs(board): 发送账#445落盘——窗令断点定版认账+M6观测线首触发(实绩定标48min·宁停不挤·korw同名异标零冲突·周窗75%观测线·四席派工全达)
+  - 83da2211 merge: 收编 TC 并行巡检笔后补推 #444
+  - 774eeb4f docs(board): 发送账#444落盘——CEO质询兑现LG-065今晚窗提前即开(CEO亲令开16:49:29·断点重算M2两栏照走·COS即时同步)
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:20 +08：自上次进度提交 c03b78f9 后新增 1 条 commit：
+  - 7b12988f docs(sde): LG-065 段2 8713 合流冷起全序毕七步全绿——korw 真刀根治闭环（idle 归位+补跑 ok+滚动恢复）+完工判据过（pid 31796＞build 锚）+S2b 门形勘差注记（X-Internal-Token 随旧 build 带出）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:30 +08：自上次进度提交 f4fb8edb 后新增 4 条 commit：
+  - 4fdd15b3 docs(coo): LG-065 窗志补行——SDE 12min 复读锚毕（korw +6 轮滚动全绿·卷 870813eb·SDE 即静默）·STE 17:30 进场门条件成立
+  - 870813eb docs(sde): korw 12min 复读毕验收闭环——run_count +6 轮滚动 status=ok+五 job 零连坐+CTO 认收归项注记（门形差入 S3 维护波+鉴权门形统一标准条）
+  - 2f67510a merge: 收编并行笔（值席落盘防覆盖）
+  - c606c1d2 docs(coo): LG-065 提前窗窗志首刷——断点定版+M3#9 首跑 75% 触线节流三席+段1 GO 刻 16:57+段2 毕 17:12:30 七步全绿（korw 根治闭环 SQL 未触发）+本席双证判读 PASS 17:15+三路放行（STE 17:30/SDE 认收/BOD GO 刻报）
+- registry：v2.1；今日 registry 提交无变化
