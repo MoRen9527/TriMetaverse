@@ -6,8 +6,8 @@
 # 锚面: r5 五件+r4/三轮/二轮回归锚全保持 + 批A 新锚（模型策略/兜底模型 label）+零残留文件式断言+禁改九处正向断言
 set -uo pipefail
 BASE=/srv/fleet/lg058-upgrade
-TM_SHA=__FILL_AT_EXEC__
-TM_SHORT=__FILL_AT_EXEC__
+TM_SHA=72d30995494c0876ce3ab34a9e4445049a0bd435
+TM_SHORT=72d3099
 
 case "$TM_SHA" in *FILL*) echo "FATAL: TM_SHA placeholder unfilled"; exit 9;; esac
 

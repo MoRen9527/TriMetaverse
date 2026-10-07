@@ -8,8 +8,8 @@
 set -uo pipefail
 UP=/srv/fleet/lg058-upgrade
 IN=$UP/in
-TM_SHA=__FILL_AT_EXEC__
-TM_SHORT=__FILL_AT_EXEC__
+TM_SHA=72d30995494c0876ce3ab34a9e4445049a0bd435
+TM_SHORT=72d3099
 TS=$(date -u +%Y%m%dT%H%M%SZ)
 CARDS=/srv/fleet/trimodel-data
 LOG=$UP/stage2-r6.log
