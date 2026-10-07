@@ -28,3 +28,22 @@ bigmodel 有一个**半公开监控端点** `GET https://open.bigmodel.cn/api/mo
 ## 候令项
 
 候 CEO 一句批即可执行验证：本机取 sg-glm-direct.txt key→curl 直调端点→读数回呈（百分比+重置时点，与面板 66% 对照定谳）。零敏感值回显（只回百分比与倒计时，不回 key）。
+
+## 验证定谳（CEO 10:44「批」→10:45 直调 200·一次打通）
+
+**调用形态实证**：`curl -H "Authorization: <key裸值>" https://open.bigmodel.cn/api/monitor/usage/quota/limit` → HTTP 200 零额外头（个人版 Coding Plan 确认，organization 头不需要）。
+
+**三源对照表（周窗）**：
+
+| 读数面 | 时点 | 5h 窗 | 周窗 | 周窗重置时点 |
+|---|---|---|---|---|
+| CEO 面板（09:24 令） | 09:24 | — | 66% | 20:44（令原话） |
+| cc-switch 截图 | ~10:36 | 6% 3h32m | 67% | ~20:46（10h10m 倒计时） |
+| **端点直调** | 10:45 | **7%** | **68%** | **10-07 20:44:33 北京（date 工具换算）** |
+
+**定谳三件**：
+1. **同源铁证**：周窗重置时点三源精确同点（端点 20:44:33 vs CEO 令 20:44，秒级吻合）；66%→67%→68% 单调爬升=同源滚动窗消耗曲线（时点差正常推进）。
+2. **候裁① 定谳**：CEO 面板 66% 语义=**bigmodel Coding Plan 周窗（7 天滚动）套餐额度百分比，bigmodel 计费口径**——与本地 raw token 汇总是两套计量体系（非折算关系，CFO 卷 α≈0.382 折算假设作废）；护栏三线双口径矛盾的根解=计数基准二选一：raw 本地口径（可自查复算，程序化护栏用）或 bigmodel 口径（读数权威，须走端点 relay）。
+3. **候裁③ relay 实证**：三行脚本（读 key 文件→curl→提取 percentage/nextResetTime）即可出每日额度读数行——5h 窗+周窗两行+各自重置时点；M3「额度感知排程」数据源实证可用，剩 owner 指派。
+
+**响应结构备查**：`data.limits[]` 三型——TOKENS_LIMIT×2（5h 窗=unit:3/number:5；周窗=unit:6/number:1，各带 percentage+nextResetTime ms 时戳）+TIME_LIMIT（Z.ai 内置工具次数配额：search-prime/web-reader/zread，与套餐 token 额度无关）+`level:"max"`=套餐档位。key 值面零回显（内存态使用，tail4 掩码 …Dmsf 与 STE 卷 v3/v5 同 key）。
