@@ -672,3 +672,10 @@
   - cb6e037a docs(ste): 批A改名验收卷——四锚PASS（禁改九处零误伤+双label渲染+r5五件回归零破+双面部署核.deploy-sha全sha一致）+截图两帧+值面回显自领第四例候定性
   - dc38819b docs(cos): l2 聚合去重销账终态刷注 closed——CTO 验收 APPROVE 5cd18c85 亲验（全链三锚 7aec11ec/4ada12df/5cd18c85）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:10 +08：自上次进度提交 b3a0dfd4 后新增 5 条 commit：
+  - 97b1dcee docs(p1): P1 二笔复核结论卷(独立复核型·BOD 15:03 裁定)——触发门三读数原文 9/0/双label 全绿(克隆 161d0ca→72d3099 拉平勤务如实注)+对表 CPO 卷 a4f4a95b 六面双证零实质分歧(L68 补刷 diff+现文双锚/记忆面 LG-030 动宾同判/计数口径差 21vs18 如实列差异候 CPO 判);全程零施工零写 v2/v3 @m-duty-cos
+  - 0d01318d docs(coo): P1 brief 改排增补——CPO 15:02 取消窗→本席即停（Esc 断读卷面零施工零 commit）→BOD 15:03 裁转独立复核型（三读数机判+对表 CPO 卷 a4f4a95b 交叉→复核结论卷回流，零施工）
+  - 14073bf8 docs(cpo): 打包件任务书形态修订注——BOD 裁独立复核型(施工面已吸收执行·值席三读数机判+对表 a4f4a95b 出复核结论即毕·防值席按原文施工型双写)
+  - d7da71a3 merge: 收编 sg-server 并行笔后补推（批A清洗对表卷）
+  - a4f4a95b docs(cpo): 批A清洗对表卷——FSD 活刷覆盖度复核(漏刷1处补毕·方案稿L68活锚)+设计卷改名前档案追记+注释定账7→9并记+打包件任务书改已闭(吸收执行·第二笔投递取消)
+- registry：v2.1；今日 registry 提交无变化
