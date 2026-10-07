@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/cos-serial-pipeline-eval-20261007/synthesis-round2-20261007.md）
 - syncMode: static
-- lastSyncedAt: 2026-10-07 21:4x +0800（date 现查 21:39 UTC→+8）
+- lastSyncedAt: 2026-10-07 22:5x +0800（二刷=授号链触发追记段；首刷 21:4x，date 现查 21:39 UTC→+8）
 - 汇总人: COO 小营（BOD 连任；四席意见以各席原卷为真源，本卷零转抄只做归并、对表与裁定）
 - 死线: 10-08 12:00 —— 实际回齐 10-07 21:39（四席全部提前，余量 ~14.5h）
 - 一轮汇总卷: trees/dual-cos-mutual-standby-eval-20261007/synthesis-20261007.md（820a8b00 顶）
@@ -75,3 +75,9 @@
 ## 使用依据
 
 - CEO 21:33 提议（BOD 21:33 转达+21:3x/21:4x 三信）+CEO 13:24 令双笔实证（trees/local-svc-pipeline-link-01/s2-chain-log-20261007.md）；四席卷（§一登记，四 commit 均在 sg bare）；CPO 判据并轨对表材料（21:40 信）；一轮汇总卷+LG-065 条款；CTO 勘验卷 c44de340；BOD 13:56 relay 降级裁定。
+
+## 追记（2026-10-07 22:5x·BOD 22:50 令·static 快照正文不动，追记承载联动）
+
+- **确认件 a 已达**：CEO 22:49 裁原话「预处理供货增量职能，是否需要动 m-cos 合同/LG-065 边界？——如有必要可以动」——授权可动，一轮 ESCALATE 撤销流程终局闭合；**授号链启动**（DEM-003 v2→LG 授号 COS 流转→任务书→一期影子试运行 5-10 件低风险·七锚；节奏 COO 自裁=授号今晚走，任务书+排窗按明窗节律不熬夜赶）。
+- **确认件 b 改道**：从「候 CEO 澄清」变「执行流程面判读」，BOD 另转 CHO/CAO。
+- **CEO 22:49 两笔随件入注**（落 DEM-003 v2 演进注，需求池为活现势面）：①流水线新用途=服务域配合本地域做服务器+PC 自动化测试；②R 面战略定性 verbatim 入 R 面二期愿景段（只定性不排期，BOD 另 spawn BusinessStrategy 入商业战略档案）。
