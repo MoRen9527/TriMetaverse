@@ -87,7 +87,7 @@
     "owner": "SDE",
     "priority": "今晚窗（8713 修复验证窗验收锚）",
     "status": "open",
-    "note": "cron_muh6shv0_korw 单 job 停摆 18h 残留（LG-064 收口候办①）。修法二择=SDE 车道：修覆盖核 or 手工 nextRun 重算；**禁抹 nextRunAtMs 纪律**（缺它永不调度）。验收锚=今晚 8713 修复验证窗。"
+    "note": "cron_muh6shv0_korw 单 job 停摆 18h 残留（LG-064 收口候办①）。修法二择=SDE 车道：修覆盖核 or 手工 nextRun 重算；**禁抹 nextRunAtMs 纪律**（缺它永不调度）。验收锚=今晚 8713 修复验证窗。 【13:19 窗况回报】SDE：korw 未毕今晚窗执行——18:20-19:00 合流冷起窗 S2d 双分支（boot sweep 真刀优先保全验收样本+SQL 兜底 state 单字段·防线三道）·本态冻结维持（CTO 裁 C 禁手工强改）·毕报两刻后随卷刷账（最迟明晨）。"
   },
   {
     "id": "deployment-runbook-multunit-restart-anchor",
