@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/lg065-duty-seat-bc-20261006/coo-window-log-20261007.md）
 - syncMode: rolling（窗程事件即刷即 commit）
-- lastSyncedAt: 2026-10-07 17:20 +0800（date 现查 09:19:59Z；首刷）
+- lastSyncedAt: 2026-10-07 17:26 +0800（date 现查 hook 17:25:15；补行二刷）
 - 编排席: COO 小营（GO 门两候：≤18:10 段2 验收绿判读+≤18:45 N2 GO）
 - 窗令源: CEO 16:49:29 亲令「开」（原 17:50 窗框与提醒段作废；段序不变；断点按实绩重算）
 
@@ -41,6 +41,12 @@
 - **STE**：补测进场前移 17:30（候 SDE 17:24 korw 12min 复读锚先落，锚5 korw 读数以复读后态为准保单遍纪律）；S2b 勘差注记随达（探针带 token 调用，401 不判失败按勘差归因）。
 - **SDE**：判读 PASS 认收（活体双证清单回附）+STE 17:30 进场对齐+12min 复读毕补行候；毕补行后即静默勿再触发写面。
 - **BOD**：GO 刻报（段1 GO 刻+段2 毕报+双证判读 PASS 17:15+两笔窗志+S2b 注记+STE 前移+N2 GO 估 ≤18:05 守完工 ≤20:00）。
+
+## SDE 12min 复读锚毕补行（17:24·STE 进场门条件成立）
+
+- korw 三点全过：run_count 5662→5668（+6 轮滚动）＋status=ok＋state=idle＋next_run 持续滚；其余 5 enabled job 零连坐；healthz connected/degraded=false——根治包验收完整闭环。
+- 卷补行 commit 锚=870813eb；CTO 认收+门形归 S3 维护波并项已随卷注记。
+- SDE 即静默；STE 17:30 进场无阻（其锚5 korw 读数以复读后态为准，单遍纪律保全）。
 
 ## 候续（滚动）
 
