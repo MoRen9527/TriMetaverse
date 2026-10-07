@@ -54,6 +54,18 @@
 - **双裁同向收敛零冲突**：案 a 成立；段名两席异称（CTO 裁决卷=S4.5/BOD 件=S4b）实指同段——**BOD 裁段名统一 S4b**（派工令在先·任务书 6d633582 已载，CTO 21:33 命名对齐信），后续卷面锚面口径一律称 **S4b**，历史卷不改，对表锚=「S4.5 即 S4b」。
 - **S5 执行口径（两裁合成）**：①四锚并验照任务书 L70 原锚不降级；②开场 dist 快照版本核=S4b/S4.5 毕+新 build/重启窗后的最新指纹（先核后测）；③S5 19:00 排程不动；④本席候 FSD 补载段毕报后预读，锚面照全锚清单。
 
+## 七、S4b 毕报预读对表毕（21:58Z）
+
+- **毕报卷**：fsd-s4b-completion-20261008.md（fa20b528）全读；代码锚=TriModel 断点⑤ `9557aa1`（单段单 commit 实锚）。
+- **四锚源面独立复验全翻转**（对照本卷 §一零命中读数，同 grep 口径复跑）：
+  - B：ui/index.html L1571（badge applied 态）+L2299（页顶缀 allApplied 分支）+L2303（逐 face 分支）——「已落 · 重启生效」三处，语义锚四字必在 ✓
+  - C：L1772 注记全文「已清 · 待落地（机器侧现持旧值）——清除落地链修复前，机器侧将继续持旧值运行」✓
+  - D：L460 切签 handler `void reloadFaceCard(connDomainActive)`+L734-743 函数实读——GET 既有单卡端点（`?view=managed` 零新增端点）→成功 faceState 更新+loadVerifyFaces+重渲；**失败不空屏**（warn「重拉未成（保留当前显示）」）=CTO 技术边界落实 ✓
+  - E：trimmc-card.ts L619+policy.ts L175 同族同稿「模型「X」不在目录内。可用模型：${MODEL_CATALOG_LIST}」（=五名全列，model-catalog.ts L20 join 实锚）；校验行为零改动 ✓
+- **本席 §一 FAIL 预警撤**（源面已落实；S5 并验照全锚跑，预期四锚 PASS，以 S5 实测读数为最终锚）。
+- **S5 走查面三点预载增量**：①FSD 自纠①（既有「已保存」注记一闪即逝缺陷随注记置后修闭环）——S5 C 锚注记可见性断言天然覆盖其回归面；②GATE 口径差（57 subtest 摊平 vs 13 顶层 it）零失败同向，候 CTO 口径裁定，本席 S5 独立复跑两口径各报；③自纠② msg 节点引用坑与 S4 cd-*-phase 可选链同族，我方脚本 waitFor 内现取节点。
+- **段验收归属注记**：本预读=对表非段验收，S4b 段门认收归 CTO（卷状态 READY_FOR_REVIEW）；S5 开场 dist 锚候第二轮 build/重启窗新指纹（第一轮三件自然过期）。
+
 ## 使用依据
 
 - CPO 观察项裁决卷 cfcc055b（cpo-ste-observations-verdict-20261007.md，四锚正身+归批总表+验收锚）
