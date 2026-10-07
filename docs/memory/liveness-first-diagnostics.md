@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: d7be6c8b-3fe9-49c2-810d-fd112b5be174
-  modified: 2026-09-12T07:47:09.354Z
+  modified: 2026-10-06T14:12:01.251Z
 ---
 
 LG-035 CEO 走查 PUT 400 谜题：本席先后给出三个不完整答案（存储源不明→dist 谜题源→终谳=本机 .env 已配 ADMIN_TOKEN 而 CEO 填入值错配+徽标假待应用），根因=未第一时间做两个十秒钟实证动作（活体三态快测+本机 .env 键名扫描），远程推演三轮。
@@ -15,3 +15,4 @@ LG-035 CEO 走查 PUT 400 谜题：本席先后给出三个不完整答案（存
 **How to apply:** ①环境状态类问题第一步=直接测活体（curl 现役端点三态/读现役配置文件键名/查现 pid 的启动参数），推演放最后；②涉及「我以为配了/我以为写了」类断言，先 rg/ls 实盘再开口；③给出路径/键名答案前必须验证该键在指认文件中真实存在（本轮 TRILC_INTERNAL_TOKEN 零命中教训）；④发现自己前函有误，立即发更正函，不静默修正。
 
 - 2026-10-04 R-HY TriRMC 实证：HTTP 8710 活+服务进程活，但 cron executor 整体停摆（三 job 全过期、store 末次写 10-01 10:45）——「服务活」探针不含 executor 心跳；多 job 全过期+store 末次写陈旧=executor 停摆指纹，调度面健康核读必查 nextRun 过期数与 store 写时点（根因勘验=BOD R-HY 三刀，假设 nextRunAtMs 缺失被证伪）。
+- **缓存分离变体（LG-058 R3 2026-10-06，STE 供料并档）**：部署主张与活体表现矛盾时先分离缓存层再定论——`fetch cache:reload` 拆「服务器真值/浏览器渲染值」两面各测；附两小坑：/ui 类端点不收查询参数（reload 参数会被路由吞）、404 残留页可被缓存当活体。锚=2026-W41/trees/lg058-remediation-20261006/ste-r3/ste-r3-walkthrough-20261006.md §六。

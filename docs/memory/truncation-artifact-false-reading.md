@@ -8,4 +8,5 @@
 - **第四向·PS5.1 引号吞噬（LG-064 2026-10-05）**：计划任务 powershell.exe 5.1 原生传参吃内层双引号→远程 `find -newermt "-90 minutes"` 静默失败→假读数 LOGSFRESH=no（同串无引号段全好=单点伤极难察）。修=PS 字符串内远程命令一律单引号形（`''…''`）。
 - **第五向·JSON 反序列化类型变形（LG-064 2026-10-05）**：pwsh7 ConvertFrom-Json 把 ISO-Z 串转 DateTime 对象，经 culture ToString 丢 Kind→裸数字按本地时区读→+8h 幻影 stale（6 健康job 全误报；PS5.1 同 API 保持 String 恒正确=双宿主分叉）；修=DateTime→`ToString('o')` 回环保 Z→`[DateTimeOffset]::Parse(s, InvariantCulture, AssumeUniversal)`。教训=跨宿主解析面禁依赖隐式类型转换，时间戳全程字符串形态传递。
 - **家族总图（五向）**：编码毁匹配/转义毁语法/截断毁值面/PS5.1 引号吞噬毁远程命令/JSON 类型变形毁时戳。共同根式=「中间层隐式变形+静默失败无报错」——假读数识别信号=单点伤（同串他段全好）/双宿主行为分叉/读数与旁证矛盾。
+- **超限向处置正形（LG-058 R2 2026-10-06，STE 供料并档）**：工具输出超限被截断时禁凭截断显示下结论——正形=先 token 正则族扫描判 NONE/非 NONE，后 raw_decode 切片+SCRIPT 排除收敛重跑取全量；「显示长≠全行长」时切片重跑是唯一可入卷读数。锚=2026-W41/trees/lg058-remediation-20261006/ste-r2/ste-r2-walkthrough-20261006.md §五 安全注记。
 

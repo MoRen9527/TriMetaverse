@@ -1,11 +1,16 @@
 # TriMMC 与 TriMLC cron addJob 行为分野
 
-TriMMC 8710（sg M 面）：addJob 写 store 后 `executor.tick()` 即时入调度，nextRunAtMs 挂载即排——**即生效型**，零白名单零重启（COS 2026-09-30 实勘：src/cron+dist/src/cron 十文件零 ALLOWLIST/not_allowed 命中；routes 仅 command/cwd 必填校验；command-handler=确定性 spawn bash -e -c 无命令 gate）。job id e7a37e66（守望 sg 版 300s 轮）挂载即跑实锤。
+**【2026-10-06 21:3x BOD 端口勘正】TriMMC 现役监听=sg 8712（127.0.0.1），非 8710**——healthz 实锚 `service:"trimc"` cron 9 jobs；M-SG 8710 实勘无监听。旧记忆「TriMMC 8710」口径作废；8710 现役真身=R-HY trirmc-mc 第二实例（TriRMC 同代码双单元，LG-066 合并后 8710 消失）。四 daemon 现役端口权威读数：M-SG TriMMC **8712**／本机 TriMLC 8713／R-HY TriRMC 8712／本机 TriRLC 8711（全部 2026-10-06 21:3x ss+healthz 双证）。
+
+TriMMC 8710（sg M 面，**旧口，现役已迁 8712**）：addJob 写 store 后 `executor.tick()` 即时入调度，nextRunAtMs 挂载即排——**即生效型**，零白名单零重启（COS 2026-09-30 实勘：src/cron+dist/src/cron 十文件零 ALLOWLIST/not_allowed 命中；routes 仅 command/cwd 必填校验；command-handler=确定性 spawn bash -e -c 无命令 gate）。job id e7a37e66（守望 sg 版 300s 轮）挂载即跑实锤。
 
 TriMLC 8713（本机 M 面）：**F-3 缺陷**——store.ts L218 addJob INSERT 缺 next_run_at 列→API 直插新 job 永不调度（timer L93 enabled&&nextRunAt 永假）。修复批 09-30 即刻窗 FSD 执行中。
 **【09-30 20:2x 勘正观察：F-3 现役不复现】**——二窗磁盘 cmd 冷起（pid 41872，20:14）后 CTO 验收独立实锚：POST 新建 hub-silent-detect（cron_muo2mj6s_cco2）nextRunAt 正常排（12:30Z）+双 patrol PATCH 后调度节律推进（60s/300s 档 lastRunStatus=ok 连跑）——在役版本 INSERT→调度链无「永不调度」行为，F-3 或已随修复批闭/或仅旧进程版本存在。FSD 修 TriMLC 缺陷时以本实锚对表现势，勿按 F-3 旧断言套现役。
 
 TriRLC 8711（R 面）：cronCommandHttpAllowed=TRILC_CRON_COMMAND_ALLOWLIST 精确等值白名单（app.ts L246，见 trilc-cron-command-allowlist-exact-match 条）。
+**【2026-10-07 11:0x 活体实证：F-3 同源缺陷 TriRLC 现役在册（TriMLC 已修未回流）】**——POST 201≠会触发：TriRLC addJob INSERT 无 next_run_at 列（store.ts L228-231 源码实读）+timer L95/L134 `enabled&&nextRunAt` 过滤=新 job next_run_at=null 永不调度（sqlite 只读回读 null 实锤）。**API 正途修复=PATCH {schedule:{kind,expr}} 同值重 patch**（store.ts L294-300 patch.schedule 分支必 recompute next_run_at）——禁手写库。**新建 job 后必验 next_run_at 值面**（node:sqlite readOnly 回读，空即 PATCH 补）；「键存在≠值面生效」同族（POST 201+GET 可见仍可能是死 job）。实证案=双窗提醒 job cron_muxj3q29_2utj（PATCH 后 next_run_at=当晚 17:50+08 精确落位）。
+**【8711 store 落位漂移注记】**：现役进程（无 TRILC_DATA_DIR）store=代码默认 `$LOCALAPPDATA\trilc\cron.db`（WAL 面活跃；`trilc-channel\`/`trirlc\` 两同名库均死档）；`trirlc-daemon.ps1` L10 另设 TRILC_DATA_DIR=trirlc\ 为另一条链，watchdog 拉起的 trirlc-daemon.cmd **不设**——**经 ps1 链重启=store 切换 job 全丢分裂风险**，ps1 链使用前必先对齐 DATA_DIR。
+**【CTO 硬约束 2026-10-07 11:18】对齐落地前 8711 禁经 ps1 链重启**——重启一律走 trilc stop/start（无该 env 的缺省 store）；**canonical store 钉死=`$LOCALAPPDATA\trilc\cron.db`**；对齐方向=ps1 链向现役 store 看，维护窗前禁现动数据迁移。TriRLC F-3 修复已裁入 FSD 车道 TriRLC 维护波合并窗（10-08 后首个合法窗，COO 排窗；与 /shutdown 三件+UNACKED 计数并道），修复落地前「新建 job 必验 next_run_at 值面」临时纪律维持有效。
 
 **推论**：三 daemon cron 行为两两不同（即生效/缺列缺陷/白名单拦截）——判 daemon cron 变更窗先分清 TriMMC/TriMLC/TriRLC 三形态，勿互套。修 TriMLC F-3 时对表 TriMMC 正形（tick 即时入调度）作旁证。
 
