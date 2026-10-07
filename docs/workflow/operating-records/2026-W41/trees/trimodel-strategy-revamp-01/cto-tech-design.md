@@ -186,4 +186,84 @@ CPO 16 行表锚行逐一实勘核对：**16/16 行号全部命中、文案逐�
 
 批 B 施工时「模型策略」页顶状态行与「兜底模型」页三态读数共用取数通道设计（件① 候裁点④ A 案：daemon `config verify` 扩三态字段）——两页读数同源，施工一并接线省一轮。
 
-<!-- seg4 件③ CLI 直配能力盘点（待续） -->
+## 第四部分 · 件③ 各面域 CLI 直配能力盘点（CLI 本体不改造，只盘点——按令）
+
+实勘方法：四 daemon 仓（TriMLC/TriRLC/TriMMC/TriRMC）+TriCode core 源码定点实读，全部结论带 file:line 实锚（盘点子代理 2026-10-07 回收+本席复核）。
+
+### 4.1 `model` 直配命令族——四仓同源，只达 harness 位
+
+| 仓 | model 命令实锚 | 直配目标 | 写面内核 |
+| --- | --- | --- | --- |
+| TriMLC | `src/cli.ts:1334-1343`（dispatch 1353-1537；help 34-52 在列；machine=local-m） | `~/.claude/settings.json`（harness 位） | TriCode core 五门内核（io-kernel.ts：备份轮换/键名锁/写后断言自动回滚/掩码审计；钥走独立钥文件 `settings.presets/.deploy-key.<provider>` 零过 argv） |
+| TriRLC | `src/cli.ts:1371-1373`；**help L34-51 漏列 model 行** | 同上 | 同上 |
+| TriMMC | `src/cli.ts:544-598` | 同上 | 同上 |
+| TriRMC | `src/cli.ts:547-598` | 同上 | 同上 |
+
+**同源定谳**：四仓 `model` 命令全部派发同一 TriCode core 入口（`TriCode/src/trimodel-cli/index.ts:128-193`）——一次实现四处复用，行为一致（这正是公司级选型治理的现役正例）。**直配语义=harness 位直配**：改的是 Claude Code 实例读的落地文件，对**新起的** harness 会话即时生效。
+
+### 4.2 `config` 族——拉取触发器，零写面
+
+四仓 `config pull｜show｜verify｜cache` 族实锚：TriRLC cli.ts:813-882、TriMMC/TriRMC 544-598/547-598 区段内。语义=**HTTP 触发器**（触发 daemon 向 TriModel 拉取/读缓存/校验），对本地配置**零写面**——写面只发生在 daemon 落地链内（io-kernel/卡面链）。与件① 五步链对应：`config pull`=第 3 步的手动触发形态，`config show/verify`=三态读数通道的自然挂点（候裁点④ A 案）。
+
+### 4.3 核心定谳：daemon 运行态无 CLI 直配面（缺口如实记）
+
+**daemon 进程运行态不读 `~/.claude/settings.json`**——四 daemon agent-loop 走 agent-core→trimodel 库读**进程 env**，四仓 src 均无读取 harness 位 settings.json 的代码路径。daemon 运行态配置来源四条非 CLI 通道：
+
+| 通道 | 适用 | 实锚 |
+| --- | --- | --- |
+| 卡面 pull（key-cache apply 键族 env 注入） | 四 daemon | key-cache.ts:446-464（DEEPSEEK/ANTHROPIC/OPENAI API_KEY+BASE_URL、TRIMODEL_* 键族） |
+| 重启读 env 文件 | RLC 族 | env.ts 五候选（trilc-local.env 现役仅 ANTHROPIC_API_KEY 一键） |
+| systemd+compose env | MC 族（sg/R-HY） | trirmc-mc.service:20-28（零模型键）、docker-compose.yml:19-33（九键族） |
+| daemon 侧 settings.json | **TriRMC 独有** | `$TRIRMC_CONFIG_DIR/settings.json`（local-settings.ts:46-57；写方只有卡面 pull 链 LG-058 N5；boot 键 settingOrEnv 消费 env.ts:36-47） |
+
+### 4.4 兜底第二层（CLI 直配）可行性判定——支撑 CPO 三层故事
+
+CEO 令「trimodel 不可用时第二保底=各面域 CLI 命令行直配」。技术判定：**成立，带一条边界**。
+
+1. **域存活不绑 TriModel 存活：成立**。已落地配置持续生效——daemon 进程 env 已注入（不因 TriModel 死而消失）、harness 位文件已在；TriModel 整机不可用各域照常运转。「只发配置不传话」设计的兑现面实勘无反例。
+2. **CLI 直配=harness 位即时、daemon 位经重启**：TriModel 不可用窗内，`model` 直配改 harness 位（新会话即效）；daemon 运行态改模型须改 env 面（RLC 族 env 文件/MC 族 compose env）+重启 daemon——重启后读的是**本地** env，仍不依赖 TriModel 在线。**边界=daemon 运行态无热切换**（须重启窗），此为现状如实记，非缺陷追改项（兜底场景频率低，重启窗成本可接受；若未来要求 daemon 运行态热直配，候独立窗项另议）。
+3. **MMC 域四级梯旁路**：TriMMC 缺省模型四级梯（default-model.ts:25-26,89-102：env `TRIMC_DEFAULT_MODEL` > 卡面 cache > fleet bundle > 常量 deepseek-v4-pro）——TriModel 不可用时卡面 cache 与 bundle 仍在域内，第四级常量保底永在。四级梯=MMC 域兜底语义的既有实现，与兜底模型卡互补不冲突。
+
+### 4.5 盘点附记缺口（如实入卷，候窗项，本件不改造）
+
+| # | 缺口 | 实锚 | 处置 |
+| --- | --- | --- | --- |
+| 1 | TriRLC help 漏列 model 行（用户 `trirlc --help` 看不到直配命令） | cli.ts:34-51 | 小修候 TriRLC 维护波（已在本席维护波清单） |
+| 2 | TriRMC cronRequest 无 token（CLI 侧 cron 触发不带认证头） | cli.ts:23-45 vs 443-468 | 仓内自记候修；涉安全面组合排程（技术风险组合管理域） |
+| 3 | TriRLC 8711 store 对齐（ps1 链 trirlc\ vs 现役 $LOCALAPPDATA\trilc\） | 前案在册 | 已挂 TriRLC 维护波，不重复立项 |
+
+## 第五部分 · 收口（技术判断/施工序/风险/发布姿态）
+
+### 技术判断
+
+三件齐。「兜底模型直配」**零新轮子**：r5 五件+claude-fallback 族+io-kernel 五门+卡面引擎全部现役，本设计只是把它们在「四域各一兜底卡」的结构上收拢（件①）；前端改名+IA 三区重排与 CPO 提案合流无冲突，实勘增补 4 处回 CPO 采认（件②）；CLI 直配第二保底成立带「daemon 运行态经重启」一条边界（件③）。cc-switch 对表结论：同构印证+五项代差优势+两处细节借鉴（live-first-write 留档、生效分级提示），**不引入任何外部组件**。
+
+### 施工序（候 BOD 集成排窗，不占今晚窗）
+
+1. **批 A 改名**（文案级 18 处+禁改保护）：候 LG-058 终验不阻（文案不动布局）→ 排窗施工 → STE 双向 grep 验收；
+2. **件① 兜底卡结构**（四域小卡+三态读数 A 案）：候 P2 批窗，与批 B 同窗接线省一轮；
+3. **批 B IA 三区重排**：LG-058 CEO 终验毕+P2 批窗，先批 A 后批 B 分开走查。
+
+### 风险与缓解
+
+| 风险 | 缓解 |
+| --- | --- |
+| 「兜底模型」与 quota 规则 fallback_ids 同名异义混淆 | 件① 候裁点③：CPO IA 面消解（tooltip/副题辨析，CPO §4.2 已备文案） |
+| 走查冻结期误动布局 | 批 A/B 硬解耦+冻结注记 L189 在卷+施工窗候终验毕 |
+| mmc 域兜底下发通道缺（sg 侧） | 候裁点②：不并本设计，sg 窗另立；现役 8460 代理+四级梯旁路可用 |
+| 改名 grep 误伤禁改五处 | CPO 禁改清单+验收锚双向 grep（正向残留+反向原样） |
+
+### 发布姿态
+
+本件=调研+设计正身，**零施工零端点变更**；施工批候 BOD 集成排窗独立走门禁（批 A 走查、批 B 终验前置+P2 批窗）。task-charter.md 本地与 origin/dev 均未见（与 CPO 同注），按派工信全要素先行，charter 推达后对表补差。
+
+### 使用依据
+
+- cc-switch README 全文（raw.githubusercontent.com/farion1231/cc-switch/main/README.md，535 行 curl 取得）——本席独立取证，与 CPO 卷对表一致
+- TriModel `ui/index.html` 实勘（2448 行：区块地图/改名锚 18 处/禁改 5 处/claude-fallback 族）
+- 四 daemon+TriCode 源码定点实勘（file:line 全锚见件③各表）
+- CPO 提案正身 cpo-product-design.md（同树，11:46 落）——件② 合流对表
+- W40 实施方案正身（r5 五件/域锚/降级梯/层级裁）+CPO 9items 卷（方案三四域化五步链+CEO 原话）
+- BOD 派工令（CEO 2026-10-07 11:35 令）原文三件清单+死线
+
+—— CTO 小狄，2026-10-07 11:51 起卷，四段分卷即 commit（D-45 款3）
