@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（8713 手术施工读数正身；方案卷=同目录 trimlc-8713-fix-proposal-1p-20261006.md，CTO 放行 10:42+18:2x 回执「§四序照案打头，术后读数照三件套+首切锚」）
 - syncMode: static
-- lastSyncedAt: 2026-10-07T10:35:30+08:00（date 现查原样粘贴）
+- lastSyncedAt: 2026-10-07T10:59:06+08:00（date 现查原样粘贴；并行撞车结构修复+§7.9 终版钉死补落）
 - 施工席: SDE 小布（m-sde）；施工窗=2026-10-06 18:27-18:48；硬门=全过（见 §六）
 
 ## 一、序① 8711 正形拉起者追查（破案）+序①A 提权验证
@@ -187,6 +187,8 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 | S2c | **冷启**（新 dist 即刻生效）——**S2c 前不做 SQL**（治标步改兜底，见双分支） | healthz 200+listen==pidfile |
 | S2d | **korw 归位双分支**（COO 治标令 19:20 并入+CTO 裁 C 真刀验收的调和序）：**分支 A（主）**：冷启后读 korw state——boot sweep（03c6197）自动归位 idle=**真刀验收达成**，SQL 跳过；**分支 B（兜底）**：sweep 未归位（03c6197 缺陷实证）→POST /shutdown 二次→停机态 sqlite3 `UPDATE cron_jobs SET state='idle' WHERE id='cron_muh6shv0_korw'`（**state 单字段最小写面，nextRunAt 禁抹不碰**——过期值保留，冷启后调度器 catch-up 立即补跑+自算刷新 nextRun=COO「重算」终态由调度器达成零手算误差）→再冷启 | 分支 A：state=idle 且零 SQL 写面；分支 B：SQL 回读 idle |
 | S4 | **korw 归位读数四件（毕报带）**：①state=idle 落地 ②nextRunAt 合理（调度器自算非冻结值）③**首滚验证**（补跑一轮正常收尾，非再挂）④saveCronStore 补刷（2b1709d）值面抽查 | jobs API 值面+三件套全绿 |
+| S5 | TriMLC-Watchdog **Enable** | Status: Ready+下轮自然执行零误行 |
+| 毕报 | 三件套读数→COO+CTO | 卷收口段 |
 
 **双分支序设计理由（报备 COO/CTO→双 C-level 齐认：CTO 19:2x 采认不纠偏卷 03864ae1+COO 19:27 认账「不改单分支，SQL 直改优先不采」）**：SQL 治标前置与 CTO 裁 C「korw 本态=件③验收样例真刀」互斥（同一样本二选一）——sweep 优先=保全 CTO 真刀活体样本；sweep 失败时 SQL 兜底=COO 治标终态保证（state=idle 必达）。最坏路径=两次停机（down 窗仍分钟级内，黄金窗无碍）；分支 A 路径 down 窗=单次冷启。若 sweep 归位成功，sweep 行为实证+ korw catch-up 首滚=一次冷起双验收。
 
@@ -194,6 +196,11 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 1. **SQL 兜底写面**：state 单字段（running→idle）；next_run_at 禁置空禁手改保持原值——catch-up 自算=派发恢复自然路径（比 COO 裁文「重算」更小写面，COO 终态不损）
 2. **B2 判定点**：冷启后若过期 next_run_at 未触发补跑（catch-up 假设证伪）→退一步显式 `UPDATE next_run_at=now` 写面，读数如实入卷（假设证伪本身=值面情报）
 3. **窗界硬锚**：分支 B 二次停机控制在冷起窗上界 **19:00 前**，勿溢入 STE 补测窗缝（19:00-19:30）；溢界风险时优先保 S4-S5 收口+毕报，SQL 退让写面如实挂起候窗
+
+- daemon-down 窗压至 S2b-S3（SQL+boot 秒级）——build 前置于 shutdown 前=down 窗最短化（FSD「冷起前须 build」口径的执行序精确化，语义不变）
+- 2b1709d 同窗带出（updateJobRun 尾补 saveCronStore，行为锚测试两例在 03c6197 同顶）
+- 回滚三层：store 备份+10-04 dist bak+watchdog v1 bak（今晚 §四 回滚方案态延续）
+- **STE 回归读数互引（19:1x，卷 2ef063b9→b2ebb06f 采录入卷）**：调度器本体 6/7 job 健康滚动+korw 卡态独立复确认（state=running/updatedAt 10:39:54Z 被动 touch 未解卡=PATCH 零写路径旁证，与 §二.3 勘补互证）。STE 建议「PATCH state→idle」**不可行已勘正回执**（可写清单白盒+本席两轮 PATCH 实证+force 先后序三重堵死——STE 三重全采，「键存在≠值面生效」家族候 CAO 并档）；korw 冻结=CTO 裁 C 明令今晚零动作（STE ②遵令确认）。**补测触发点锁定（STE ③对表）**：明晚冷起窗毕本席毕报直达 STE=开跑信号，锚2/3/5 补测走 19:00-19:30 窗缝，五锚终态随卷直达 COO+BOD。STE 增量：挂死根因侧读数（stub.log 末行 10-03 09:42+08→10-05 09:42Z 执行无 log=早期挂死未退出，为何挂死候 STE 窗另查，与卡态残留两层分立）；degraded per-job max 掩蔽案例+1（候办维持，TriMMC 形对齐）
 
 ### 7.7 窗令正文对表（10-07 签发，commit 2ed73867，落 W41 树 `trees/window-order-20261007/`）
 
@@ -222,10 +229,17 @@ CTO 三裁 18:52 到达（卷 851382a9）：A=即窗注册 LogonTrigger 任务�
 | ② | 运行期 sweep（根治包，12min 级 onTimerTick 锁内） | 首读未归位→**12min 复读点**（≈18:3x+12min）——归位=**根治包验收读数**（活体双证：boot 败+运行期胜=两 sweep 独立验证） |
 | ③ | SQL 兜底（state 单字段+B2 判定，§7.6 不变） | **前提=①②均未归位**；12min 复读撞 19:00 上界→照溢界降级序挂起候窗（korw 本态保持冻结语义） |
 
-- **17:50 探报新增确认点**：在位态探明报 CTO 时**同请确认终版 build 内容**（两笔 or 三笔，以 17:00 门读数为准）——CTO 确认后开窗执行
+- **17:50 探报确认点修订（CTO 10:54 终版钉死信）**：终版 build 内容已钉死三笔——17:50 探报**免再询 build 内容**，按三笔口径开窗（见 §7.9）
 - S4 归位读数按实际生效道标注（①=boot sweep 真刀/②=根治包运行期验收/③=SQL 治标+根治包候窗），毕报带防线链执行轨迹
-| S5 | TriMLC-Watchdog **Enable** | Status: Ready+下轮自然执行零误行 |
-| 毕报 | 三件套读数→COO+CTO | 卷收口段 |
+
+### 7.9 终版 build 钉死+仓向勘正（CTO 10:54 确认信，FSD 门 10:52 四门全绿验收）
+
+**终版 build=三笔，全 TriMLC 仓同顶**：6f832a1（根治包）叠 03c6197（boot sweep）叠 2b1709d（saveCronStore）——CTO 10:54 信「FSD 门读数 10:52 四门全绿已验收」钉死；验收卷=d8bfc96b（勘补 549bf552）；17:50 探报免再询此点，按三笔口径开窗（§7.8 机会窗条款确认兑现）。
+
+- **本席活体勘验实证（10:54，TriMLC 本地仓）**：`git cat-file -t` 三笔全在 TriMLC 仓（2b1709d/03c6197/6f832a1 均 commit；TriRLC 仓三笔均不在）+ TriMLC 本地顶=**6f832a1**（根治包在顶）——窗内 S2a 前保留顶 hash 快验一步（`git rev-parse --short HEAD`==6f832a1 即进 build）
+- **信面仓向笔误勘正（如实落卷，不指错）**：CTO 10:54 信写「TriRLC 侧 2b1709d+TriMLC 侧 03c6197+6f832a1」——实测三笔全 TriMLC 仓，信面「TriRLC 侧」系笔误；build 消费面语义零变（build 就在 TriMLC 仓做，三笔同顶同带出），如实勘正入卷
+- **根治包构成（顶笔 6f832a1 勘验）**：src/cron/store.ts(+65)/timer.ts(+57)/localbus/bus.ts(+3)+test/cron-stale-reclaim.test.ts(216 行)——onTimerTick 内嵌 stale-running sweep 运行期自愈+零 schema，冷起即生效
+- 防线链三道照 §7.8 执行；毕报两刻照 §7.7 落卷
 
 - daemon-down 窗压至 S2b-S3（SQL+boot 秒级）——build 前置于 shutdown 前=down 窗最短化（FSD「冷起前须 build」口径的执行序精确化，语义不变）
 - 2b1709d 同窗带出（updateJobRun 尾补 saveCronStore，行为锚测试两例在 03c6197 同顶）
