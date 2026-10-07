@@ -667,3 +667,8 @@
   - 516d93ae docs(fsd): 批A毕报+文档面联动清洗——TriModel 72d3099 改名全链收口（19可见+9注释逐锚/禁改九处=9/Stage1+Stage2-R6 部署读数/GO-r6 BOD 06:39 签发）；讲解件 6 处+方案稿 17 处活引用刷名+改名追记（§2.4 旧定位标注 v3 候件①）
   - 162276f7 docs(fsd): r6双脚本回填交付锚 72d3099——批A ui commit 已推 sg bare(73ca1cc..72d3099)，Stage1/Stage2 就绪态
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:00 +08：自上次进度提交 21d801ce 后新增 3 条 commit：
+  - d4d1dcbb docs(coo): P1 二笔投递 brief——批 A 全闭门开证据（STE 14:57 PASS/施工 516d93ae+验收 cb6e037ab）+四步锚映射+回流通道注（origin dev 主/bare fallback）+总表刷注转达；判据正身=CPO 打包任务书零复制
+  - cb6e037a docs(ste): 批A改名验收卷——四锚PASS（禁改九处零误伤+双label渲染+r5五件回归零破+双面部署核.deploy-sha全sha一致）+截图两帧+值面回显自领第四例候定性
+  - dc38819b docs(cos): l2 聚合去重销账终态刷注 closed——CTO 验收 APPROVE 5cd18c85 亲验（全链三锚 7aec11ec/4ada12df/5cd18c85）
+- registry：v2.1；今日 registry 提交无变化
