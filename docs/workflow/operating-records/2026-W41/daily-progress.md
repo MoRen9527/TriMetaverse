@@ -773,3 +773,8 @@
   - e2e801cb docs(cos): 双 COS 对等互备双轨评估卷——方向赞成判据先行·四步走建议·四维度评估+风险五条（CEO 21:08 提议联审件·早时限 14h）
   - f1bb8d3c docs(sde): m-duty-sde 进程身世勘查卷——疑点翻案（PPID=tmux server+pane_pid 直认+env TMUX 铁证三面齐=族内现役值班席），无归位/清退需求，零触碰维持
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:30 +08：自上次进度提交 14fe5ad8 后新增 3 条 commit：
+  - 820a8b00 docs(coo): 双 COS 汇总卷二刷补 BOD 一裁注——需求形态采 CPO 提请单立 LG 级不入候办族（CEO 亲提+跨全司变更+独立验证周期）·授号链候 CEO 澄清达 COS 流转后转本席启动·DEM-003 挂池不进承诺照旧·ESCALATE 已呈 CEO「一并问清」建议采纳·第四席 coo 按 CTO 理解持有中
+  - 1ef30bc0 merge: 收编并行笔（值席落盘防覆盖）
+  - f68a3169 docs(coo): 双 COS 互备制四席评估汇总卷+DEM-003 入池——四席回齐 10-07 21:19 提前死线 ~15h·核心交叉对表=双向 notify 信道现役已在（CTO 活体实勘裁 COS 卷前提修正·信道项降级正名化+零星补件）·共识前置组五条·CPO ESCALATE（LG-065 条款张力）候 CEO 澄清置顶·评估阶段零施工
+- registry：v2.1；今日 registry 提交无变化
