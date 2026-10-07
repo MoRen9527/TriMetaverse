@@ -79,7 +79,7 @@ sg 面：tri-heartbeat-check.py 零 R-HY 端口引用；sg 侧无指向 R-HY 871
 | 6 | mc_link_check.py | 本地 8711/8713 检查+`mc_peer:'trirmc'` 字段断言 | 零影响（peer=族名语义非端口） | 零动作；其 8710 注释系陈旧 docstring，随手勘正随卷 |
 | 7 | sg tri-heartbeat-check.py | 零 R-HY 端口引用（grep 实锚） | 无 | 无 |
 | 8 | R-HY cron store（本体目录内） | 周迁移 job 在役 | 零触碰 | 零触碰（§二表裁定红利） |
-| 9 | 跨机消费方（sg/其他→R-HY 8712） | dev+sg 面清点=零实锚 | — | **CTO 升格③敏感项**：窗前清点回填（R-HY 对外暴露面 ss+配置面复扫），清点结果回填本表后段2 方可放行 |
+| 9 | 跨机消费方（sg/其他→R-HY 8712） | **窗前清点回填毕（2026-10-08 00:40-00:46 +0800 实勘窗；两端实证=dist build 文件时戳 00:40 与 hook 时戳 00:46:48）**：①R-HY ss 实锚 8712=127.0.0.1 loopback-only（跨机消费者物理不可达）+8710=0.0.0.0（trirmc-mc face，pid 2062569；本体 8712 pid 2064924）；②R-HY 配置面 8712 引用仅 trirmc.service/trirmc-mc.service 两 unit 自身，机上零第三方引用；③sg 出站活连接→8.155.54.79 采样时刻零；sg 配置面指向 R-HY 871x 唯一活件=`/home/fleet/.trilc/duty-night-patrol.py`（fleet crontab `*/30`，仅 `DNP_PEER_URL=8.155.54.79:8710/healthz` GET 巡检，不碰 8712，对 mc-face↔本体身份无断言，段2 后 healthz 形态同 `ok:true` 巡检零影响且语义更对）；其余命中=sg `~/.claude/file-history` 历史快照非活配置（排除） | — | **清点结论：8712 跨机消费方=零实锚达成，段2 放行硬前置闭合**（本行即回填件） |
 | 10 | 相邻面 R-HY 3333 TriModel | dev TriMLC 消费中 | 零触碰 | 零触碰（写入边界红线） |
 
 段2 联动面六项（预裁清单）对表落位：systemd unit env✓（§一.1）/启动器 env（R-HY 面无独立启动器实锚，窗前确认）✓/UI 文案升版轮✓（#5）/endpoint 值面✓/探针族✓（#2+#3）/文档与记忆条✓（随本卷+施工卷）。
