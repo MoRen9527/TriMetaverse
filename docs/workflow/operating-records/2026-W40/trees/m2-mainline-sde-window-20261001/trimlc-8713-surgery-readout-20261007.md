@@ -34,6 +34,26 @@
 - channel.cmd 键名面盘点（值零回显）：TRILC_DATA_DIR/TRIMC_INTERNAL_TOKEN/TRILC_INTERNAL_TOKEN/TRILC_CRON_COMMAND_ALLOWLIST 等 20 键在位——S2b shutdown token 门源确认
 - 旧提醒链拆除（16:54）：8711 job cron_muxj3q29_2utj DELETE 200（首次 404 系请求少 /internal/v1 前缀勘差即纠）+会话 cron 6569f870 删——17:50 误触发面清零
 
-## 段2 执行（17:10 开窗后续写）
+## 段2 执行读数（17:10:03 开窗，全序毕 ~17:12:30，用时 ~2.5min vs 定标 48min）
 
-（执行中逐段补）
+| 步 | 动作 | 读数 | 判 |
+| --- | --- | --- | --- |
+| S0 | store 三件+dist 双备份 | 锚=`20261007T091014Z`（cron.db+wal+shm+dist.bak-pre-surgery2-*） | ✓ |
+| S1 | watchdog Disable | schtasks SUCCESS+query **Disabled** | ✓ |
+| S2a | npm run build（仓顶 6f832a1） | exit=0，09:10:34Z→09:10:43Z（9s）；dist 新锚 mtime Oct 7 17:10；**build 时点锚=2026-10-07T09:10:43Z** | ✓ |
+| S2b | POST /shutdown | **首发 401 即停**（裸 POST 无门形系源码 L4275 旧读，现役进程带 X-Internal-Token 门）；勘因修正带 token 重发=**200 {"ok":true}**；锚1：8713 端口空+pid 1604 exited | ✓ |
+| S2c | 冷启 channel.cmd（用户身份分离，无提权） | healthz 200 uptime=4s、**新 pid=31796**、jobCount=7 store 完整带出 | ✓ |
+| S2d | korw 真刀（boot sweep 优先） | **state=idle**（泄漏归位）+**last_run_at=09:11:31.160Z status=ok**（boot 补跑执行成功）+**next_run_at=09:12:00Z 恢复滚动**（120s every 档）；updated_at=09:11:31.679Z=sweep 动作时点；run_count=5662。**根治包验收过，SQL 兜底分支未触发** | ✓ |
+| S4 | 归位四读数 | ①healthz 二读 trimc=**connected**（mc_link 恢复）②pid 31796 created=**17:11:29.742+08 ＞ build 17:10:43**（完工判据 PASS，差 46.7s）③store jobCount=7 对平 ④korw idle/ok/滚动 | ✓ |
+| S5 | watchdog Enable | schtasks SUCCESS+Status **Ready**+Next Run 17:17:00（恢复巡检） | ✓ |
+
+- S2b 勘差注记：TriMLC /shutdown 门形=**X-Internal-Token header**（源码 src/server/app.ts L4275 现顶代码为无门形，现役旧 build 行为带门——版本差行为分叉，token 门随新 build 带出后的行为候观察）；TriRLC 家族 Authorization Bearer 形不同，勿互套
+- 12min 复读锚：korw 滚动持续性复读候 17:24（last_run 推进+next_run 滚动+state=idle 三点）
+
+## 段2 收口
+
+- **最终状态：全序 S0-S5 七步全绿，零回滚零阻塞**
+- smoke：healthz 200 ok（三读：冷启 4s/30s/终态 connected）
+- 完工判据：ExecMainStart（17:11:29.742+08）＞ build 时点（17:10:43Z+08）✓
+- 回滚方案状态：store 三件+dist 备份在位未动用（bak-pre-surgery2-20261007T091014Z），保留至观察窗毕
+- korw 挂死（10-05 冻结态）**根治闭环**：boot sweep 归位+补跑 ok+调度滚动恢复
