@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/lg065-duty-seat-bc-20261006/coo-window-log-20261007.md）
 - syncMode: rolling（窗程事件即刷即 commit）
-- lastSyncedAt: 2026-10-07 18:39 +0800（date 现查 hook 18:38:36；五刷·收官候 BOD 复核）
+- lastSyncedAt: 2026-10-07 19:36 +0800（date 现查 hook 19:35:04；六刷·补正笔）
 - 编排席: COO 小营（GO 门两候：≤18:10 段2 验收绿判读+≤18:45 N2 GO）
 - 窗令源: CEO 16:49:29 亲令「开」（原 17:50 窗框与提醒段作废；段序不变；断点按实绩重算）
 
@@ -89,6 +89,13 @@
 - 窗志五刷收官；对表扫 cron（v3.1）撤扫条件达成（三节点全收口+STE 验收+BOD 复核毕）——CronDelete 撤扫+知会 COS。
 - 候办面随窗毕归档：技术债六项已 STE 定性毕／launcher bak 候 CTO 验收指令／hop1/2+N3 预载 10-08／pidfile 勘差闭合（STE 自纠）／白盒窗终勘候排／PENDING-RESEND S3 波候选／S2b token 门行为观察项候录。
 - 本窗本席产出：窗志本件五刷全链（断点定版→M3#9 首跑→四段判读双证→收口链收官）+三路放行六信+活体抽验三道（17:15/17:38/18:27）。
+
+## 补正一笔 · FSD d1 编码分叉勘正+修毕（19:35·窗毕后冗余盯梢自检自愈）
+
+- 起因：19:23 冗余盯梢 cron 到点巡检读数起疑顺藤——d1 账本解析 **PS5.1 编码分叉**：allowlist 面 powershell 5.1 `Get-Content` 无 `-Encoding` 对 UTF-8 无 BOM 账本按 ANSI 读 → cron 生产面 openItems 恒=-1，d1「在办>0」告警腿**生产永久哑火**（较毕报所报「一回失灵」重；DryRun 绿系 FSD 会话 pwsh7 UTF-8 默认=**双宿主分叉型坑第二例**）。
+- 修毕三级终证：①PS5.1 定点 parse v=14 ②负对照 False→5.1 全脚本 DryRun OK open=14 ③11:32:26Z 生产自然轮 open=14 值面——单 token 修（`-Encoding UTF8`）。
+- 补正回执 commit **c65a0bb6**（§五.3 勘差+§六.2 假设推翻勘正）；随附 §六.6 **8713 迟火抖动活体实证**：10:32/11:01/11:32 三笔迟火 ≥3min 内自愈+lastRun/nextRun 不持久化，自检窗 30min 覆盖——根治归件③ CTO 域。
+- 处置：STE 验收面以补正后 c65a0bb6 为准（本席转达）；BOD 终判值面依据勘正知情达（d1 项=脆弱→生产哑火已修毕，验收结论增强非推翻）；N2 watchdog 自检自愈自窗自身缺陷=闭环好形态如实录。
 
 ## 候续（滚动）
 
