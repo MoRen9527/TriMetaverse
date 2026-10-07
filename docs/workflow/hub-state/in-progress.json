@@ -151,5 +151,14 @@
     "priority": "默认（CEO 20:27 令流转·BOD 20:35 呈请）",
     "status": "closed",
     "note": "项目记忆随仓镜像纪律铸条+映射真源增补（BOD 20:35 呈请·COS 20:38 转 m-cao 回执 f7254d53）。两件：①governance-memory-index.md（LG-016）增补镜像位指针（TMV docs/memory/<name>.md 随 git 不丢·换机/迁移可达）；②D-44 候编号铸条三款=写记忆后 sync 机制自动镜像免手动／教训族引用一律指 TMV 镜像位（含 D-18 根因族段既有引用随批补指针）／下架=人工删镜像+commit 留痕。落地事实锚（BOD 已建·COS 20:38 轻核验四锚过）：镜像位 99d74cda+自动首笔 aeedeea5+TC sync 脚本 8d5f225（schtasks Sync-Memory-Mirror=Ready·每小时+登录自启·只增改不删+源缩量判卫+staged 面检查）+源 MEMORY.md 头注。候 CAO 会签落册·BOD 复核随侍。【20:44 COS 亲验销账】CAO 落正身毕：D-44 纪律册入册 TC 27f9358（engineering-disciplines.md 15+/1-·三款+域界注+立规三件套·纪律册存量零命中实勘差口如实记）+GID-12 索引登记 TC 32b848e（governance-memory-index.md 10+/2-·机制指针 99d74cda/aeedeea5/8d5f225+索引 owner 默认三环（COS）流程注记）；本席亲验双锚（commit 存在+触碰文件面对表）·sg-server 同推同顶 9682f04..32b848e 系 CAO 报未独立复探；铸条锚 2026-10-06T20:40:59+0800；差口如实记=「D-18 根因族段既有引用」纪律册实勘零命中（L159 系机制描述非路径引用）未硬造补编辑，真涉存量=docs/execution 2 处描述性引用候施工窗非阻塞；BOD 复核随侍异议走勘正。"
+  },
+  {
+    "id": "lg067-serial-pipeline-dem003",
+    "treeAnchor": "126c3789",
+    "treePath": "docs/workflow/operating-records/2026-W41/company-demand-pool.md",
+    "owner": "COS（授号流转+预处理供货主位）+COO（任务书制作+排窗节律）+CTO（三组件：资格门/接单触发器/活性探针）+m-duty-cos（7×24 接单侧）",
+    "priority": "高（CEO 22:49 裁启动·单立 LG 级三理由：CEO 亲提+跨全司变更+独立验证周期）",
+    "status": "open",
+    "note": "DEM-003 v2 串联流水线制度单立 LG 级。授号触发已达（CEO 22:49 裁原话「如有必要可以动」——授权可动，一轮 ESCALATE 撤销终局闭合；BOD 22:50 令·COO 22:5x 流转）。材料真源=需求池 DEM-003 全款（v2 演进注+授号与授权注·treeAnchor 126c3789/bare 顶 755331ba）+二轮汇总卷 trees/cos-serial-pipeline-eval-20261007/synthesis-round2-20261007.md（四席二轮全 APPROVE）。链后续=授号（本条·COS 22:54 date 现查 2026-10-07 22:54:53+0800）→任务书（明窗节律制作·不熬夜赶·COO）→一期影子试运行（5-10 件低风险活·CPO 七锚·积压>5 件告警→COO 调节供货节律）。随件注：伴生件 b（session 合同面/岗位变更流程）BOD 另转 CHO/CAO 不经本链；CEO 22:49 两笔（服务器+PC 自动化测试新用途/R 面战略定性 verbatim）已入 DEM-003 演进注。"
   }
 ]
