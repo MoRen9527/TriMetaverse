@@ -714,3 +714,6 @@
   - 83da2211 merge: 收编 TC 并行巡检笔后补推 #444
   - 774eeb4f docs(board): 发送账#444落盘——CEO质询兑现LG-065今晚窗提前即开(CEO亲令开16:49:29·断点重算M2两栏照走·COS即时同步)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:20 +08：自上次进度提交 c03b78f9 后新增 1 条 commit：
+  - 7b12988f docs(sde): LG-065 段2 8713 合流冷起全序毕七步全绿——korw 真刀根治闭环（idle 归位+补跑 ok+滚动恢复）+完工判据过（pid 31796＞build 锚）+S2b 门形勘差注记（X-Internal-Token 随旧 build 带出）
+- registry：v2.1；今日 registry 提交无变化
