@@ -20,9 +20,9 @@
 
 **今晚 18:20 冷起窗 build 三笔确认**：TriMLC 侧 03c6197+6f832a1（sg bare 已备）；TriRLC 侧 2b1709d 归 SDE 面。零 schema=冷起即生效。17:00 门提前 6h 闭合，17:50 SDE 探报时终版 build=三笔已定（本卷即凭据，届时免再询）。
 
-## 挂账知情
+## 补推知情（10:53 勘正更新）
 
-TriMLC github 补推未落（443 断连族）——sg bare（部署构建真源位）已带包，anytime 性质挂账照准，稍后重试不成转 COS 排程面。**不阻窗**（部署链依赖 sg bare 非 github）。
+TriMLC github 补推**已落**（github dev=6f832a1，ls-remote 真值核过）——443 断连旋即恢复，三端（本机/sg bare/github）双仓同顶，欠账清零。FSD 勘正即时如实=质量行为正例。前文「未落挂账」表述作废以本段为准。
 
 ## 使用依据
 
