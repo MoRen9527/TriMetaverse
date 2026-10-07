@@ -869,3 +869,9 @@
   - 850c6b9b docs(ste): LG-069 复验销账卷 §十三 落树——轻量三件全 PASS（①九字段活体双面 percent=min/raw/cim/notifyFailures 全可见 pid25300 部署守约 ②23/23 全绿含端到端 min 硬闸 raw21/cim19→hard 实锚·D 族实测 7 绿注记 ③656/123/651/5 对平·5 败逐名同·抽验 2 名既有面）；两面挂账如实注明（N≥5 候放电窗 FSD 面/锚②挂 S3）不阻销账；LG-069 台账依令即闭
   - 587060cc docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @05:40 +08：自上次进度提交 5ece03b4 后新增 4 条 commit：
+  - 179834cb docs(cto): S4.5 补载段裁决卷——四锚案 a 补载（S5 锚面照验不降级）+细估第四件换位失误认领+S4.5 段位定义（B/C/D/E 全 UI 面+断点⑤+第二轮 build 重启窗）；STE 铁证 baa73055 采信，FSD 无错编排面缺口归本席
+  - baa73055 docs(ste): S5 预载发现卷落树——观察项四锚未落实锚+断链归因呈裁（v3 令面四处在载但源面零落·细估五段序无四锚段位=施工无段验收有锚悬空；B重启生效/C清空注记/D切签重拉/E五名文案四条逐条铁证含L456切签handler实读；FSD无错系编排面缺口；补载或剥离两案候BOD/CTO裁；S5并验四锚必FAIL如实预警）
+  - 26fa6a6c docs(fsd): 深测②合一 统一 build+重启窗毕报——pid 27252→28368 换主，值面五探针全绿
+  - 2e954f9a docs(fsd): 深测② S4 件① UI 接线毕报+完工门机读卷落树——两页读数同源 11/11（CPO 搭车复扫 7+verify 渲染实证 4）；全量 372/358/0 零失败+GATE 13/13+ui-boot 21/21+fourplane 16/16；交付锚 TriModel 572e59a 断点④（四断点制 4/4）；special 起草候 S5 CPO 校验+渲染面残余如实注记；候统一 build+重启窗进 S5
+- registry：v2.1；今日 registry 提交无变化
