@@ -754,3 +754,7 @@
   - c65a0bb6 docs(fsd): LG-065 N2 回执补正——勘差第三笔（d1 账本解析 PS5.1 编码分叉：cron 生产面 openItems 恒-1 d1 告警腿哑火，-Encoding UTF8 单 token 修毕+PS5.1 定点/全脚本/11:32 生产自然轮三级终证）+§六.2 瞬时锁假设推翻勘正+§六.6 8713 迟火抖动活体实证补记
   - 21b8209e docs(cos): LG-065 提前窗收官刷账——四段全毕+STE N2 五锚 PASS 66a4b6cb+BOD 终判 PASS·对表扫撤·余 N3 候 10-08
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:50 +08：自上次进度提交 b503ffd9 后新增 2 条 commit：
+  - 4cb42f1f merge: 收编并行笔后补推 #448
+  - bae6c75d docs(board): 发送账#448落盘——FSD补正+N2验收补验毕N2全闭(PS5.1编码分叉根因·原判不撤·三连生产轮边界清晰·共享树并发写观察候办)
+- registry：v2.1；今日 registry 提交无变化
