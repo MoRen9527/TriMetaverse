@@ -1,5 +1,7 @@
 # 任务书 · 批 A 文档面清洗（讲解件 v2 + plan v3 出新版）
 
+> **〔形态修订 2026-10-07T07:03:56Z（15:03+08）·BOD 裁定，值席执行以本注为准〕**本件原「出 v2/v3 新版」施工范围**已被吸收执行完毕**（FSD 批 A 毕报联动清洗 516d93ae：讲解件 6 处+方案稿 17 处活刷；CPO 对表卷 a4f4a95b 补漏 1 处+设计卷档案追记）——**施工步骤 2/3/4 不再执行，再做出版即双写**。本笔现形态=**独立复核型**（BOD 15:03 裁）：①跑下方「执行步骤 1」触发门三读数机判（TriModel 仓 ui/index.html）；②对表正身=cpo-batcha-cleanup-reconciliation-20261007.md（trimodel-strategy-revamp-01 树内）逐项核；③出**服务域独立复核结论**（三读数原文+与我卷结论一致/分歧判定）落回流卷即毕——分钟级验收型，产双证交叉验证锚值。验收锚段相应缩至：触发门三读数+复核结论一致性两锚。
+
 - sourceOfTruth: 本件（trees/local-svc-pipeline-link-01/task-charter-cpo-batcha-doc-cleanup.md）
 - syncMode: static
 - lastSyncedAt: 2026-10-07T05:31:15Z（13:31+08，date 现查制）
