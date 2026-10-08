@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（trees/lg058-remediation-20261006/ste-s5-dryrun-20261008.md）
 - syncMode: snapshot-on-close
-- lastSyncedAt: 2026-10-08T01:44:00Z（09:44+08 周四，date 现查；01:44 §七 第三笔——前两笔 01:38Z/01:41Z 均被并行收编踩失，上下文重放三写）
+- lastSyncedAt: 2026-10-08T01:57:09Z（09:57+08 周四，date 现查；01:57 增补 §八 R-HY 部署毕锚面件收讫——S5 开场锚正式换锚）
 - 树节点: STE S5 预载干跑（候窗期预演；脚本仓外 %TEMP%/ste-s5-dryrun/，jsdom 经 TriModel node_modules 解析）
 - 状态: 干跑毕——**脚本自测非 S5 读数**；S5 正跑 19:00 窗照全锚清单实测
 
@@ -86,6 +86,18 @@ S5 前置干跑两批（负向+静态面 44 断言/四锚交互面 26 断言）*
 > 域知会闭环（01:46Z CTO 信认领）：缺口定性成立——零净损=上下文可重放（运气）非设计保障（跨仓 hash 混读条「零损害系运气非设计」同族判断语，按缺口记不按幸免记）；路由=纪律候选条提请 CAO 入册（D-45 同族第三例，条款方向 a 收编窗操作前置 git status 检视在途编辑即广播等待或改道/b 长文段落毕即 commit，措辞归 CAO 裁）；CTO 族即时防坑=派工令对长卷写作席附「段落毕即 commit 不攒」（01:46 令起生效）。本席实证供料（两犯时序铁证+机制+卷指针）已随发 CAO。
 >
 > CAO 裁定收讫（01:52Z 信）：供料认收——时序铁证作款 4 机制定性、porcelain 可见态实证作款 4 技术判据注；方向 a=**D-45 款 4 增补**（收编窗前置 porcelain 检视·见在途即广播等待落卷或改道·禁覆盖式推进），方向 b=**款 3 注记并入**（段落毕即 commit 节奏收紧+本例卷 §七 实证锚回填）；铸稿已呈 BOD 复核（D-43 正序），通过即落章生效。本席即时正形=写作段落毕即 commit（本卷第三写背靠背 commit 即标准执行），无需候册。
+
+## 八、R-HY 部署毕锚面件收讫（FSD 卷 df65d515，01:53 信——S5 开场锚正式换锚）
+
+- **R-HY 活体**：trimodel.service @ **e30ea20**（full=e30ea2016fd3e1debc6ce34f2db1cddc9ad45b5d，deploy-sha 对表）pid 2207670 active；间隙修（`margin-bottom: 12px` 含分号 [1]）+S1–S4b 全量积码活体生效。
+- **S5 开场 dist 锚=R-HY 指纹三件**（sha256sum 前 16，FSD R-HY 实测；本席开场独立复算对象=R-HY 盘面，达锚判据=同机 served 面与盘面自洽）：index.html=`8ca70d3d56b334db` / trimmc-card.js=`a9991c020df51c09` / policy.js=`4b7924fa1b1bb0c3`。本机第二轮窗三件自然过期+本机 index.html 已被 e30ea20 重建（勿再对本机比对）。
+- **policy.js 跨机异值根因清案**（FSD §二.2）：行尾差（本机 CRLF+LF 混合 vs R-HY 纯 LF），语义零差——CTO 边界④「build 非确定性」机制具体化；trimmc-card.js 跨机同值系该文件无行尾敏感差异。
+- **verify 四 face 现势**（FSD 探针 #9）：mmc/mlc/rlc=not-configured+**rmc=applied**——mmc 系真卡 3 entries 在位但 status.state 未回写 applied（卡状态机现势非部署引入，候走查单定处置）。CTO 态覆盖分层据此微调：R-HY 活体「已落生效」主态=**rmc 一签可达**，mmc「未配置」徽章系现势如实呈报；其余态引 jsdom+构造态引证。
+- **providers 现势**（探针 #2）：{anthropic:false, trimetaverse:false}——R-HY 未配 deepseek 族键（与本机不同），health ok:true 不受影响，探活读数如实。
+- **S4b 四锚 R-HY 活体读数**（FSD 探针 #5）：重启生效[5]/已清·待落地[1]+机器侧现持旧值[1]/reloadFaceCard[2]/void reloadFaceCard(connDomainActive)[1]——与本机第二轮窗 P2 同构；S5 活体对表按「渲染面 N+源码面 M」分列归因（我源面口径 3/1/2）。
+- **served 面自洽核对参数**：GET /ui len=139927（FSD 实测，部署前 133976+6KB 增量合理）；**R-HY trimodel served 端口卷面未载**——本席开场 ssh 自探（ss/unit 对表）不猜，跨机面 D-24 hostname 断言首行。
+- **版本核预期**：e30ea20 系本机 TriModel 推 GitHub/sg bare 同顶（FSD §〇.0/§四.5）——开场 `git rev-parse HEAD` 对 e30ea20 预期同值，回归复跑基线=同版零差异面（间隙修已含）。
+- **卡基线**（探针 #1/#10）：entries_masked 3 条逐 id 同基线（e-glm-anthropic/e-deepseek-anthropic/e-glm-flash-anthropic）——S5 零触红线对表锚。
 
 ## 使用依据
 
