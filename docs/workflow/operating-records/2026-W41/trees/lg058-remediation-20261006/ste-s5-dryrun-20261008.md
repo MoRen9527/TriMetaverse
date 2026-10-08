@@ -95,7 +95,7 @@ S5 前置干跑两批（负向+静态面 44 断言/四锚交互面 26 断言）*
 - **verify 四 face 现势**（FSD 探针 #9）：mmc/mlc/rlc=not-configured+**rmc=applied**——mmc 系真卡 3 entries 在位但 status.state 未回写 applied（卡状态机现势非部署引入，候走查单定处置）。CTO 态覆盖分层据此微调：R-HY 活体「已落生效」主态=**rmc 一签可达**，mmc「未配置」徽章系现势如实呈报；其余态引 jsdom+构造态引证。
 - **providers 现势**（探针 #2）：{anthropic:false, trimetaverse:false}——R-HY 未配 deepseek 族键（与本机不同），health ok:true 不受影响，探活读数如实。
 - **S4b 四锚 R-HY 活体读数**（FSD 探针 #5）：重启生效[5]/已清·待落地[1]+机器侧现持旧值[1]/reloadFaceCard[2]/void reloadFaceCard(connDomainActive)[1]——与本机第二轮窗 P2 同构；S5 活体对表按「渲染面 N+源码面 M」分列归因（我源面口径 3/1/2）。
-- **served 面自洽核对参数**：GET /ui len=139927（FSD 实测，部署前 133976+6KB 增量合理）；**R-HY trimodel served 端口卷面未载**——本席开场 ssh 自探（ss/unit 对表）不猜，跨机面 D-24 hostname 断言首行。
+- **served 面自洽核对参数**：GET /ui len=139927（FSD 实测，部署前 133976+6KB 增量合理）；**R-HY trimodel served 端口=3333**（FSD 补询答 02:04：unit `TRIMODEL_PORT=3333`+`TRIMODEL_HOST=0.0.0.0` 监听，FSD 探针走 127.0.0.1:3333 本环回；另两键 `TRIMODEL_DISABLE_BOOT_MIGRATIONS=1`/`EnvironmentFile=/srv/fleet/trimodel-data/api-token.env` 供开场对表）——开场 ss/unit 对表一眼验+D-24 hostname 断言首行；探针路径=本机直连 `http://8.155.54.79:3333/ui` 优先（防火墙行为开场实测不猜），不通走 ssh 本环回 curl。
 - **版本核预期**：e30ea20 系本机 TriModel 推 GitHub/sg bare 同顶（FSD §〇.0/§四.5）——开场 `git rev-parse HEAD` 对 e30ea20 预期同值，回归复跑基线=同版零差异面（间隙修已含）。
 - **卡基线**（探针 #1/#10）：entries_masked 3 条逐 id 同基线（e-glm-anthropic/e-deepseek-anthropic/e-glm-flash-anthropic）——S5 零触红线对表锚。
 
