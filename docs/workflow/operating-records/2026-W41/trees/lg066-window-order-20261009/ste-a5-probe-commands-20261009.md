@@ -5,7 +5,9 @@
 - lastSyncedAt: 2026-10-09T01:50:30+08:00（date 现查原值·凌晨段；CEO 01:46 全线停工令下落盘留痕件）
 - 执行席: STE 小柯（m-ste）；令源=COO 排工令 01:42:54（接 BOD 01:34:40 知会·三齐条件③快核面）
 - 消费位: sg duty 值席（窗内执行）；判读与毕报归 sg 值席转本机 COO/CTO
-- 状态: **卷正形落位**；本席未跑窗内自验（停工令下不接新活），复工后候 COO 派验
+- 状态: **卷正形落位（v1.1 复工勘形）**；本席未跑窗内自验（照原序候窗），窗令流转面候 COO
+- 勘形注记（复工自验 03:3x）：P1-4/P2-6 token/env 计数原 `<(...)` 进程替换形依赖远端 login shell=bash（dash 无进程替换）→改**管道形**（零嵌套零依赖，sh 兼容）；引号面复查=外层单引号内全双引号零单引号嵌套（ssh 转发安全）；`tr "\0"` 双引号形与 l2 现役 `'\0'` 单引号形在 GNU tr 等价（R-HY Linux 实证面）
+- 丢笔复原注记：merge b006ef71（03:31:53 收编并行笔）曾将本卷倒退合并回 v1.0 形（勘形三处被另一分支线旧文本覆盖）——本席复原笔正向追加，v1.1 语义以本笔为准
 
 ## 〇、执行形与通用纪律
 
@@ -55,7 +57,7 @@ ssh heyuan 'find /var/lib/trirmc/cron/logs -type f -newermt "-90 minutes" 2>/dev
 ### P1-4 面路由回对与 token 门在岗（段1 语义=路由未断+门活）
 
 ```bash
-ssh heyuan 'SF=$(ls -t /var/lib/tri-liveness/state-*.log 2>/dev/null | head -1); if [ -n "$SF" ]; then echo "STATEAGE=$(( ($(date +%s) - $(stat -c %Y $SF)) / 60 ))"; else echo STATE=absent; fi ; grep -c "^TRIRMC_INTERNAL_TOKEN=" <(tr "\0" "\n" </proc/$(systemctl show -p MainPID --value trirmc)/environ) ; curl -s -o /dev/null -w "%{http_code}\n" --max-time 4 http://127.0.0.1:8712/internal/v1/agents'
+ssh heyuan 'SF=$(ls -t /var/lib/tri-liveness/state-*.log 2>/dev/null | head -1); if [ -n "$SF" ]; then echo "STATEAGE=$(( ($(date +%s) - $(stat -c %Y $SF)) / 60 ))"; else echo STATE=absent; fi ; tr "\0" "\n" </proc/$(systemctl show -p MainPID --value trirmc)/environ | grep -c "^TRIRMC_INTERNAL_TOKEN=" ; curl -s -o /dev/null -w "%{http_code}\n" --max-time 4 http://127.0.0.1:8712/internal/v1/agents'
 ```
 
 | 读数 | 预期 | fail 判读 |
@@ -112,7 +114,7 @@ ssh heyuan 'curl -s --max-time 4 http://127.0.0.1:8710/internal/v1/agents ; echo
 ### P2-6 mcLedger 与「改动最小面」判读锚（CTO 12:05 裁）
 
 ```bash
-ssh heyuan 'grep -c "^TRIRMC_MC_DB_PATH=" <(tr "\0" "\n" </proc/$(systemctl show -p MainPID --value trirmc)/environ) ; curl -s --max-time 4 http://127.0.0.1:8710/healthz | grep -o "\"mcLedger\":\"[a-z]*\""'
+ssh heyuan 'tr "\0" "\n" </proc/$(systemctl show -p MainPID --value trirmc)/environ | grep -c "^TRIRMC_MC_DB_PATH=" ; curl -s --max-time 4 http://127.0.0.1:8710/healthz | grep -o "\"mcLedger\":\"[a-z]*\""'
 ```
 
 预期：计数 `0`（主 unit 无该键=DB 路径走代码默认 /var/lib/trirmc/mc-store.sqlite=§九注记 2 现状）+`mcLedger:"ok"`。判读：两读数与窗前一致→**不补键**（改动最小面）；唯见 mcLedger 非 ok 或 DB 分裂实证（两 store 并存读写分叉）→如实报候 GO 断点裁（非本席判）。
