@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/stopwork-drill-20261009/coo-schedule-adjust-and-drill-chain-plan-20261009.md）
 - syncMode: rolling（14:00 分发/回执/18:00 复工实锚随链回写）
-- lastSyncedAt: 2026-10-09T00:38:25+08:00（date 现查原值·接令成文）
+- lastSyncedAt: 2026-10-09T03:49:04+08:00（date 现查原值·挂载窗增件窗序终稿并入）
 - 令源: BOD 00:37:2x 令（CEO 00:36 令）两条；执行位: COO（令链落地执行位·演练验的就是本段）
 - CFO 任务书: 已由 BOD 直发 CFO（时段门挂接+演练序五验收锚）——本席只承接令链落地与排工调整面
 
@@ -14,6 +14,14 @@
    - 午前三步工序下限 ~30min（8713 优雅重启 trilc 权威路径→job 挂载 nextRunAtMs 值面对表→联审 job enable 翻真），1.5h 窗宽裕；
    - 10:00-11:30 在 GLM 轨黄金段内（18:00→次日 14:00）；8713 重启毕距 14:00 停工窗与 17:50 LG-066 开窗均留足缓冲（重启异常不撞窗）。
 3. 10-10 12:00 联审（DEM-003/004）与 10-10 S3 窗（14:00-16:30·周六非停工演练日）不在避让面，照旧。
+4. **挂载窗增件·窗序终稿（BOD 03:44 裁·本席 03:49 定稿·CTO 三点回点 03:48 并入）**：CTO 电源门通知链勘修件（commit **d7693c6**·build 03:47 已落位就绪）随第一步 8713 优雅重启带出，零额外重启；**预检提前不需要（build 现已就绪·09:57 照旧）**。窗序六步：
+   - ①置位断言两读数（FSD 跑·贴读数 CTO 复核）：`grep -c "target_daemon: 'trimlc'" D:/Code/ai/TriMLC/dist/server/app.js` 预期 `1`；辅锚 `git -C D:/Code/ai/TriMLC log -1 --oneline` 预期 `d7693c6` 开头
+   - ②8173 优雅重启（trilc 权威路径·随车部署修复 build）
+   - ③healthz 探针（FSD：ok:true+uptime 重置+power 块在位）
+   - ④模拟投递 200 探针（CTO 命令单候随发·FSD 执行·贴读数 CTO 复核；token 零值面 sed 提取形+源席 m-cos/目标 trimlc 全形）
+   - ⑤job 挂载 nextRunAtMs 值面对表（2026-10-11 21:00+08·空则 PATCH 同值 schedule 触发 recompute）
+   - ⑥联审 job enable 翻真
+   - **如实注记（防误判「修完」·CTO 03:48 原文意）**：晨窗带出=target_daemon 半件——source_seat 'power-gate' 403 缺口属 sg 白名单件（LG-066 毕后窗落位），**闸真身通知在 sg 件落位前仍 403**；晨窗探针验证范围=「链路+新代码+重启后健康」（m-cos 源形 200），power-gate 端到端真验证归 sg 件落位后。
 
 ## 二、演练落地链预案（②令·14:00 触发）
 
