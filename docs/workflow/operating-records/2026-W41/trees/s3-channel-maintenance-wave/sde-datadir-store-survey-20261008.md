@@ -49,6 +49,7 @@
 - CTO 独立抽验四点与卷面一致（非转抄）；窗内 DATA_DIR 段收窄=**纯 ps1 链配置归一+可选清理，零迁移零数据风险**（「有分叉先迁移」分支不触发）
 - **清理边界（SDE 值面勘定）**：trirlc\ 非空壳——除 cron store 族外含 .env（5.4KB Aug 15）/keys.json+11 s3-backup/config-cache+5 s3-backup/company//daemon//letters+event-queue 全家；8713 channel TRILC_ENV_FILE 已值面核验**不指向 trirlc\**（布尔判定 False，值未回显）
 - **窗内清理限定 cron store 族四件**（cron.db/-wal/-shm/cron.db.json）；.env/keys.json 系含密历史遗产，处置不属归一 scope，候专项裁量（删错零回滚面）
+- **CTO 处置意见落定（12:30 信采纳我版口径）**：含密遗产**留原地零接触**，列入本机含密历史遗产清单（与 channel.cmd 高危打印面同族管理），候 CFO 轮换策略/CAO 专项一并裁量——届时按「零真值取证先脱敏」流程办；CTO 自报「空壳」预判系 ls grep 过滤盲区（键存在性≠值面同族），本卷全量勘验兜住
 
 ## 五、红线遵守
 
