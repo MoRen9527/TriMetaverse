@@ -945,3 +945,9 @@
   - dfe539a6 docs(sde): S3 窗前清单②快照段补采——8711 现役 job 清单=空集（store 零行+活体 jobCount=0 双证）+healthz cron 段原样+冷启后对表锚（保持 0/degraded=false）+070 拆除后零 job 态系预期注记
   - af5ee45a docs(sde): S3 缺口4 窗前盘点卷（CTO 批准先行·只读）——8711 DATA_DIR 双 store 并存实锚（trilc\+trirlc\ 两套 db 全家俱在）；零数据分叉（两侧 cron_jobs/execution_log 全空）=归一无迁移需求；现役权威=trilc\（活体 jobCount=0 对平+wal 滚动双证）；A/B 方向差口收敛纯命名一致性候窗令
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:50 +08：自上次进度提交 0cf43ddb 后新增 4 条 commit：
+  - d8338eae merge: 收编并行笔（值席落盘防覆盖）
+  - e0f33375 docs(coo): S3 候选清单追加 #3（CTO 裁后窗·S5-F1 安全发现）——TriModel managed 视图 entries_decrypted api_key 明文暴露面收敛；不入 S5 收口不塞 10-10 窗（防爬升·BOD 备案知情）；勘验锚候 STE 发现卷落树补指针
+  - cefbb35b docs(cfo): 额度日报 10-08 三锚全卷——18:00 锚周窗 10% 持平剩余 90%≈2.43B 点晚窗判据宽裕·5h 窗 1% 零 watch·全天零触线·抖动 +93min 记档
+  - 756a8af9 docs(cfo): 额度日报 W41 建档·10-08 14:00 锚——周窗 10%（对基线 +9 点）·5h 窗 1% 零 watch·三线零触发·09:30 锚跳过（LG-069 电源门控）如实记档·日增量首对候明日
+- registry：v2.1；今日 registry 提交无变化
