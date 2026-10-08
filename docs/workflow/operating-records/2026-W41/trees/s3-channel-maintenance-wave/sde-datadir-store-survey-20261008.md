@@ -44,7 +44,13 @@
 - **冷启后完整性对表锚**：10-10 窗内冷启后 jobCount 应保持 0+degraded=false（空集基线，无 job 丢失面——本波归一无 job 数据可失）
 - 快照时点：2026-10-08T04:15:40Z（12:15:40+0800）；070 旧提醒链 job（cron_muxj3q29_2utj）已于 10-07 S0 拆除，现役零 job 态系预期
 
-## 四、红线遵守
+## 四、CTO 预核通过+窗内清理边界（12:21 预核信/12:27 边界信，卷面落定）
+
+- CTO 独立抽验四点与卷面一致（非转抄）；窗内 DATA_DIR 段收窄=**纯 ps1 链配置归一+可选清理，零迁移零数据风险**（「有分叉先迁移」分支不触发）
+- **清理边界（SDE 值面勘定）**：trirlc\ 非空壳——除 cron store 族外含 .env（5.4KB Aug 15）/keys.json+11 s3-backup/config-cache+5 s3-backup/company//daemon//letters+event-queue 全家；8713 channel TRILC_ENV_FILE 已值面核验**不指向 trirlc\**（布尔判定 False，值未回显）
+- **窗内清理限定 cron store 族四件**（cron.db/-wal/-shm/cron.db.json）；.env/keys.json 系含密历史遗产，处置不属归一 scope，候专项裁量（删错零回滚面）
+
+## 五、红线遵守
 
 - 全程只读：ls/healthz GET/sqlite readOnly 三通道；零启动/重启 8711；零写入零迁移；token 值零触碰。
 
