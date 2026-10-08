@@ -27,7 +27,7 @@
 | 材料 | owner | 状态 | 落位 |
 | --- | --- | --- | --- |
 | DEM-004 技术形态输入 | CTO | 信面 11:45 已到 | 候 CTO 落卷（本表回填指针） |
-| DEM-004 CFO 两件 input | CFO | 信面 11:49 已到 | 候 CFO 落卷（本表回填指针） |
+| DEM-004 CFO 两件 input | CFO | 已落卷正身 @67c68de1 | cfo-dem004-quota-observation-inputs.md（本树·52 行·四点增补：行格式样例/谱系注/首窗实证备查段/使用依据五源） |
 | DEM-004 CPO 初判 | CPO | 候收理（轻催 10-08） | 候落卷 |
 | DEM-003 池行全款（v2 演进注+授号注） | COS 收口 | 已在池 | company-demand-pool.md DEM-003 全节 |
 | DEM-004 池行全款 | COS 收口 | 已在池 | company-demand-pool.md DEM-004 全节 |
