@@ -70,7 +70,7 @@ SDE 施工毕报→STE 验收锚对表→CTO 技术收口→本席督办收口�
 
 ## 十、窗前清单执行实锚注记（10-08 白窗 SDE 窗前三件毕 @dfe539a6·append 不改正文）
 
-1. 清单第 1 条（DATA_DIR 盘点）毕 @dfe539a6（sde-datadir-store-survey-20261008.md）：双 store 并存实锚成立（trilc\+trirlc\ 两套 db 全家俱在）**但零数据分叉**——两侧 cron_jobs/execution_log 全空，归一无迁移需求；现役权威=trilc\（活体 jobCount=0 对平+wal 滚动双证）；**方向 A/B 差口收敛为纯命名一致性**——窗内归一工序按判据卷 §缺口4「无分叉直接归一」轻量执行。**CTO 预核毕（12:21 信·独立抽验通过：python 只读双查亲验+wal 对表同读数）**，收窄三点照采：①窗内动作=纯 ps1 链归一（TRILC_DATA_DIR 正名 trirlc\·一处脚本 diff）+可选清理空壳旧目录，零迁移零数据风险 ②栏①下限构成内 DATA_DIR 预算 ~20min→~10min 微调（窗框 14:00-16:30 与段锚时点不动·富余归 F-3+ 回归缓冲）③判据卷「分叉先定权威再迁移」分支不触发——CTO 判无需窗令变更，本席注记层采认，正文不动。
+1. 清单第 1 条（DATA_DIR 盘点）毕 @dfe539a6（sde-datadir-store-survey-20261008.md）：双 store 并存实锚成立（trilc\+trirlc\ 两套 db 全家俱在）**但零数据分叉**——两侧 cron_jobs/execution_log 全空，归一无迁移需求；现役权威=trilc\（活体 jobCount=0 对平+wal 滚动双证）；**方向 A/B 差口收敛为纯命名一致性**——窗内归一工序按判据卷 §缺口4「无分叉直接归一」轻量执行。**CTO 预核毕（12:21 信·独立抽验通过：python 只读双查亲验+wal 对表同读数）**，收窄三点照采：①窗内动作=纯 ps1 链归一（TRILC_DATA_DIR 正名 trirlc\·一处脚本 diff）+可选清理 cron store 族四件（cron.db/-wal/-shm/cron.db.json——【12:30 CTO 更正信收敛：SDE 全量勘验实证 trirlc\ 非空壳，.env 含密/keys.json/s3-backup/letters/event-queue 双 db 等在位】零迁移零数据风险 ②栏①下限构成内 DATA_DIR 预算 ~20min→~10min 微调（窗框 14:00-16:30 与段锚时点不动·富余归 F-3+ 回归缓冲）③判据卷「分叉先定权威再迁移」分支不触发——CTO 判无需窗令变更，本席注记层采认，正文不动。**含密历史遗产切面**：.env（含密）/keys.json 处置候专项裁量（删错回滚面为零）——明确不搭 S3 窗、不顺手删（CTO 12:30 信原文），候办如实记，本窗零接触。
 2. 清单第 2 条（job 快照基线）毕（同卷 §三）：8711 现役 job 清单=**空集**（store 零行+活体 jobCount=0 双证）——冷启后对表锚=保持 0+degraded=false（活体验收锚「job 清单完整带出」即带出空集）。
 3. 清单第 3 条（修法确认）毕：**法 B** 确认（SDE 与 CTO 判据卷倾向一致·无需裁）——窗内零修法争论面。
 4. 清单第 4 条（TriRMC 探针对象确认）候窗前一刻：依 10-09 LG-066 段2 终态定 8710/8712（窗令 §窗序条件分支照执行）。
