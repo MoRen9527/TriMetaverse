@@ -74,3 +74,10 @@
 - v1 草稿 window-order-20261009-draft-v1.md（M2 两栏骨架+断点数学自勘案）
 - 任务书 task-charter-lg066-trirmc-merge-20261006.md+CTO N4 预裁 136dff92
 - BOD 10-08 08:09 挂账令（窗令落树正身制）；BOD 23:56 窗令三栏强制令
+
+## 九、窗前清单执行实锚注记（10-08 白窗 FSD 单 1 毕报 @f06b60c7 对表·append 不改正文）
+
+1. 清单第 1 条（文件级锚定位）毕：trirlc-daemon.ps1 实位 `AppData\Local\trirlc\daemon\`，**L11 本就指 8710 终态=零改动确认**；tri-liveness-l2.ps1 同目录面，R-HY 段 L56/L66-78 改址对象勘清。
+2. 清单第 2 条（EnvironmentFile 复核）毕：段2 改点=trirmc 主 unit HOST→0.0.0.0+PORT→8710 两键；**新发现补点=trirmc 主 unit 无 TRIRMC_MC_DB_PATH 键**（trirmc-mc 现值 /var/lib/trirmc-mc/mc-store.sqlite）——段2 收敛指向候窗内裁，并入 GO 断点判读面。
+3. 清单第 6 条（l2 改址+trimc 勘正脚本预 commit）毕：`scripts/ops-local/tri-liveness-l2.post-lg066-seg2.ps1` 预 commit 落位（M-SG 段字节级未触·Parser 0 错·no-index diff 逐 hunk 核）；段2 窗内 cp 覆盖，窗前禁部署照旧。
+4. **方案稿 #3 误定位勘正（FSD 实勘·候 CTO 采信）**：方案稿称 L92「is-active trimc」系 R-HY 悬空名=误——L92 系 M-SG 段 sg 机 unit 正名（l2 自身 L26/L38 也经 trimc 读 sg token），照稿改 L92 会坏 sg 探针（恒误报）；正当残余四点已在预 commit 版全含。窗令 §四段 2「l2 trimc 勘正」工序范围据此收敛（L92 不在勘正面）。
