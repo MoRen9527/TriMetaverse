@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "pwsh -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File ""D:\Code\ai\TriMetaverse-worktrees\board\docs\workflow\operating-records\2026-W41\trees\python-leak-cleanup-20261009\cleanup-blackformatter-leak.ps1""", 0, False
