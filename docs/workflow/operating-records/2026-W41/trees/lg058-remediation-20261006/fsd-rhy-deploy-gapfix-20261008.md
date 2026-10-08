@@ -58,6 +58,7 @@ STE 复算=`sha256sum` 前 16 位对前缀（R-HY 面实测值；本机第二轮
 4. **R-HY git 属 dubious ownership 态**（fleet 属主仓+root 会话操作）——全程 `-c safe.directory` 单次豁免未写 global config；root 操作后 chown 归还完毕。
 5. **本机 git remote 新增 `github`**（https://github.com/MoRen9527/TriModel.git）——为 GitHub 追平而加，origin（sg bare）语义不变。GitHub 追平后与 sg bare 同顶 e30ea20。
 6. **回滚面**：`dist.bak-pre-gapfix-20261008T014508Z` 在位；回滚=stop trimodel→rm dist→cp -a bak→chown→start（stage2-r6 rollback 正形）；git 侧 revert 锚=e30ea20（单段单 commit 不变式保持）。
+7. **本机 pid 序列补痕（CTO 裁 2026-10-08 10:06 补记）**：pid 32756→28524 换主系间隙修派工令（BOD 4f16274b）施工预验重启（09:33:44 起，当时交付面按本机理解执行）；CTO 交付面切 R-HY 修正令 09:34 达后存活约 20 分钟，09:56 随本机退役由 BOD 终止。本机 pid 序列闭链：27252→28368（S4 窗）→32756（S4b 窗）→28524（间隙修预验）→停服退役（e5394a4）。漏记定性：小修段未开卷系流程习惯非有意省略。
 
 ## 五、CTO 部署链六点边界逐项对表
 
