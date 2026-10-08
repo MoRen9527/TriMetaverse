@@ -2,7 +2,7 @@
 
 - sourceOfTruth: docs/workflow/seat-cycle-restart-window.md（本件；首拟历史件=W41 树 seat-cycle-restart-window/ 两卷）
 - syncMode: live（制度正身，随窗运行修订，修订走 CTO 版本递增）
-- lastSyncedAt: 2026-10-08T03:35:42Z（11:35:42+08 周四，date 现查）
+- lastSyncedAt: 2026-10-08T03:47:06Z（11:47:06+08 周四，date 现查·v2 回补笔）
 - 制度状态: **已签发生效**（CEO 2026-10-08 11:33 批准方案卷三项；BOD 11:33 令转达）
 - owner: CTO（方案与修订）；执行: 本机批=BOD（或值席 COS 操+BOD 监督）/sg 批=值班位 COS；监督: BOD 验收
 
@@ -23,7 +23,7 @@
 
 ## 二、执行依据链
 
-- **执行单**：每窗前拟制候 BOD 批（窗令三栏：窗下限推算/段锚/超窗即报+席位顺序表+护栏核对单+止损细则+窗毕交付）——首窗执行单=W41 树 `seat-restart-window-r1-execution-order-20261011.md`
+- **执行单**：每窗前拟制候 BOD 批（窗令四栏：窗下限推算/段锚/超窗即报/**链声明指针·指锚卷**+席位顺序表+护栏核对单+止损细则+窗毕交付）——首窗执行单=W41 树 `seat-restart-window-r1-execution-order-20261011.md`（窗令栏数系 M2 族全窗令 regime 元素，随 M2 回补笔三栏→四栏；非本窗制度参数变更）
 - **名址复活 SOP**：清 `CLAUDE_CODE_CHILD_SESSION=1`+设 `FORCE_SESSION_PERSISTENCE=1`（03:29 案 13/13 实证）；与 resume 叠加（环境变量管名址注册，resume 管上下文续接）
 - **纪律依赖**：D-45 款3「段落毕即 commit」——预备广播工作区零未提交面的制度保障
 - **sg 操作纪律**：tmux send-keys 补独立 Enter+capture-pane 验证真实输入落位，禁凭发送成功即判成
@@ -45,3 +45,4 @@
 | 版本 | 时点 | 修订 | 依据 |
 | --- | --- | --- | --- |
 | v1 | 2026-10-08 11:33+08 | CEO 签发生效（方案卷 2d1ae525 三项批准） | CEO 11:33 批令 |
+| v2 | 2026-10-08 11:47+08 | §二执行单窗令栏枚举三栏→四栏（增「链声明指针·指锚卷」行）——M2 族 regime 元素回补，非本窗制度参数变更 | COO 11:44 自裁采认+CHO M2 回补 owner（BOD 23:56 尾款条款）+对表卷 63dba297；CTO 知会候认 |

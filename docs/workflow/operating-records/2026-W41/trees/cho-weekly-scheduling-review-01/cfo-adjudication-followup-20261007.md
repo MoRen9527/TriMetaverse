@@ -108,6 +108,13 @@ R-HY 停摆 3.53 天 + sg W41 809.8 席时（R1 卷 §3.3）——服务器租�
 - 认定内容：口径 A 执行席驻地域（额度消费，会话基座归属·数据源=CFO transcript metering）+ 口径 B 任务目标域（资源利用率，任务书/窗令域别栏·数据源=COO 排工台账 task×domain）；双栏并排不混算，冲突单列以 CFO 实测为准；R-HY 归属规则（远程操作型活=目标域 R-HY、消费记本地操作席）双方认定。
 - 生效：**W42 周报起排工台账双栏执行**。
 
+### 附·DEM-004 CFO 两件 input（2026-10-08 11:47:19+08 COO 预请·11:49 交付，联审 10-10 材料面）
+
+> LG-069 停工令背景：本席电源门控验电 BatteryStatus=2（已接电源）后恢复执行。
+
+1. **读数行落点**：daemon 追加写 JSONL 观测文件，落 TriMLC 8713 运行数据目录（目录根 CTO 面按 TriMLC 惯例钉；**不落 git 工作树**=硬要求，防 index 污染+多席冲突）。建议 `glm-quota-obs.jsonl`，行格式 `{"ts","weekly_pct","weekly_reset","fiveh_pct","fiveh_reset","level"}`。两腿分离：观测文件=运行腿（daemon 独占写），digest 落 operating-records=记录腿（CFO 收口 commit）。
+2. **三线阈值**（bigmodel 周窗口径，引擎配置）：观测线 weekly_pct≥**70**（名义 1.89B）报 COO+BOD；日 pace 警告单日增量≥**15**（名义 400M 点）报 COO；暂停线单日增量≥**30**（名义 800M 点）报 COO+BOD+制停建议；5h 窗 ≥**70** watch/≥**90** 即报减速。注：端点 pct 整数粒度，14.8/29.6 取整 15/30 防取整边界抖动；单日增量=同锚跨日差（09:30/14:00/18:00 三锚各对昨日同锚）。
+
 - BOD 转令（CEO 2026-10-07 11:06 裁答两件+计数基准知会）
 - BOD 定谳卷 ccswitch-quota-endpoint-research.md（bcec4e825，wt/board 线——本席经 git show 读定谳段全文，dev 汇流候管线，内容引用如实标注读数方式）
 - 本席 R1 数据卷 cfo-quota-breakdown.md（8ef4252f/bb93cbd2）：三口径对照/服务域闲置/浪费公式框架
