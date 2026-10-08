@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（trees/lg058-remediation-20261006/ste-s5-dryrun-20261008.md）
 - syncMode: snapshot-on-close
-- lastSyncedAt: 2026-10-08T01:57:09Z（09:57+08 周四，date 现查；01:57 增补 §八 R-HY 部署毕锚面件收讫——S5 开场锚正式换锚）
+- lastSyncedAt: 2026-10-08T02:03:42Z（10:03+08 周四，date 现查；02:03 增补 §九 本机 3333 退役·CTO 口径更新三条收讫）
 - 树节点: STE S5 预载干跑（候窗期预演；脚本仓外 %TEMP%/ste-s5-dryrun/，jsdom 经 TriModel node_modules 解析）
 - 状态: 干跑毕——**脚本自测非 S5 读数**；S5 正跑 19:00 窗照全锚清单实测
 
@@ -98,6 +98,12 @@ S5 前置干跑两批（负向+静态面 44 断言/四锚交互面 26 断言）*
 - **served 面自洽核对参数**：GET /ui len=139927（FSD 实测，部署前 133976+6KB 增量合理）；**R-HY trimodel served 端口卷面未载**——本席开场 ssh 自探（ss/unit 对表）不猜，跨机面 D-24 hostname 断言首行。
 - **版本核预期**：e30ea20 系本机 TriModel 推 GitHub/sg bare 同顶（FSD §〇.0/§四.5）——开场 `git rev-parse HEAD` 对 e30ea20 预期同值，回归复跑基线=同版零差异面（间隙修已含）。
 - **卡基线**（探针 #1/#10）：entries_masked 3 条逐 id 同基线（e-glm-anthropic/e-deepseek-anthropic/e-glm-flash-anthropic）——S5 零触红线对表锚。
+
+## 九、本机 3333 退役·CTO 口径更新三条收讫（02:02 信——§六.4/§七.4 构造态条款作废更新）
+
+- **现势**：本机 3333 已由 BOD 09:56+08 执行退役（TriModel e5394a4 ARCHIVED.md，CEO 令面）——「构造态回本机 3333（退役前窗口内可用）」前提关闭，§六.4/§七.4 该条款以此节为准作废更新。
+- **三条更新（CTO 口径）**：①S5 19:00 活体锚=**R-HY 单锚不变**，四锚活体写面构造需求为零（C 已裁降级只读串在场引证/D 失败态构造走 jsdom/E 只读 400 探针）——对 S5 走查执行零影响；②构造态引证正身=本卷 jsdom 干跑 70/70 读数+本机第二轮窗活体探针读数（历史卷 fsd-unified-build-restart-window-r2 P2-P4 五探针引证）；③日后写面构造态（维护波修 C 清空落地链验证时）=**临时端口实例定点**（非 3333，数据目录隔离临时目录，合 ARCHIVED.md「禁本机 3333 自验交付」纪律——临时验证实例非交付面），候维护波 CTO 另行定点，S5 不涉。
+- 自醒 prompt 已同步修正（构造态条款换引证口径，job 9aae22ad→重挂）。
 
 ## 使用依据
 
