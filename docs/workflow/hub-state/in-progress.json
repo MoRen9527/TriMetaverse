@@ -151,5 +151,41 @@
     "priority": "默认（CEO 20:27 令流转·BOD 20:35 呈请）",
     "status": "closed",
     "note": "项目记忆随仓镜像纪律铸条+映射真源增补（BOD 20:35 呈请·COS 20:38 转 m-cao 回执 f7254d53）。两件：①governance-memory-index.md（LG-016）增补镜像位指针（TMV docs/memory/<name>.md 随 git 不丢·换机/迁移可达）；②D-44 候编号铸条三款=写记忆后 sync 机制自动镜像免手动／教训族引用一律指 TMV 镜像位（含 D-18 根因族段既有引用随批补指针）／下架=人工删镜像+commit 留痕。落地事实锚（BOD 已建·COS 20:38 轻核验四锚过）：镜像位 99d74cda+自动首笔 aeedeea5+TC sync 脚本 8d5f225（schtasks Sync-Memory-Mirror=Ready·每小时+登录自启·只增改不删+源缩量判卫+staged 面检查）+源 MEMORY.md 头注。候 CAO 会签落册·BOD 复核随侍。【20:44 COS 亲验销账】CAO 落正身毕：D-44 纪律册入册 TC 27f9358（engineering-disciplines.md 15+/1-·三款+域界注+立规三件套·纪律册存量零命中实勘差口如实记）+GID-12 索引登记 TC 32b848e（governance-memory-index.md 10+/2-·机制指针 99d74cda/aeedeea5/8d5f225+索引 owner 默认三环（COS）流程注记）；本席亲验双锚（commit 存在+触碰文件面对表）·sg-server 同推同顶 9682f04..32b848e 系 CAO 报未独立复探；铸条锚 2026-10-06T20:40:59+0800；差口如实记=「D-18 根因族段既有引用」纪律册实勘零命中（L159 系机制描述非路径引用）未硬造补编辑，真涉存量=docs/execution 2 处描述性引用候施工窗非阻塞；BOD 复核随侍异议走勘正。"
+  },
+  {
+    "id": "lg067-serial-pipeline-dem003",
+    "treeAnchor": "126c3789",
+    "treePath": "docs/workflow/operating-records/2026-W41/company-demand-pool.md",
+    "owner": "COS（授号流转+预处理供货主位）+COO（任务书制作+排窗节律）+CTO（三组件：资格门/接单触发器/活性探针）+m-duty-cos（7×24 接单侧）",
+    "priority": "高（CEO 22:49 裁启动·单立 LG 级三理由：CEO 亲提+跨全司变更+独立验证周期）",
+    "status": "open",
+    "note": "DEM-003 v2 串联流水线制度单立 LG 级。授号触发已达（CEO 22:49 裁原话「如有必要可以动」——授权可动，一轮 ESCALATE 撤销终局闭合；BOD 22:50 令·COO 22:5x 流转）。材料真源=需求池 DEM-003 全款（v2 演进注+授号与授权注·treeAnchor 126c3789/bare 顶 755331ba）+二轮汇总卷 trees/cos-serial-pipeline-eval-20261007/synthesis-round2-20261007.md（四席二轮全 APPROVE）。链后续=授号（本条·COS 22:54 date 现查 2026-10-07 22:54:53+0800）→任务书（明窗节律制作·不熬夜赶·COO）→一期影子试运行（5-10 件低风险活·CPO 七锚·积压>5 件告警→COO 调节供货节律）。随件注：伴生件 b（session 合同面/岗位变更流程）BOD 另转 CHO/CAO 不经本链；CEO 22:49 两笔（服务器+PC 自动化测试新用途/R 面战略定性 verbatim）已入 DEM-003 演进注。"
+  },
+  {
+    "id": "lg068-perf-scoring-resume",
+    "treeAnchor": "f6be6d44",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/perf-system-trace-cos-20261007/cos-ledger-trace-report.md",
+    "owner": "COS（补录主办+每周结算对表自查）+CHO（记账面：W40 补结算+W41 首跑）+COO（周日 21:00 cron 挂载编排）",
+    "priority": "高（BOD 23:4x 现裁·绩效复活执行序第一步·催办有据自此始）",
+    "status": "open",
+    "note": "绩效评分制度复活执行序挂账（BOD 23:4x 四卷齐裁现裁令）。本条=协查卷改进①「CHO W40 挂账未入共享台账」补录先办：CHO 跨窗挂账项（W38 首周期结算未办）补入共享台账——事实=首周期 W38 结算至今未办（协查卷 f6be6d44 实证·scoring-ledger-w40 自注「W38 结算读数尚未办〔CHO 跨窗挂账项〕」）；补结算计划指针=W40 补结算→W41 10-11 首跑（BOD 复活方案·裁断正身 COO 面·周日 21:00 cron 挂载/10-18 校准语义收窄采 CHO 案）。改进②=周期性结算对表：cron 挂载后机械叫醒消解主害，保留 COS 每周对表自查一条随收口批走。补录执行：COS 23:4x（date 现查后落笔）·补录毕报 BOD。与 COO 挂载编排并行不撞。"
+  },
+  {
+    "id": "lg069-battery-gate",
+    "treeAnchor": "候补（CTO 方案卷落树后 COS 补注·BOD 23:53 授号令载明）",
+    "treePath": "候补（CTO 方案回 BOD 集成、施工任务书立时定树位）",
+    "owner": "COS（授号流转+恢复通知链：恢复时 COS 通知 COO）+CTO（技术方案在途+daemon 施工主责）+COO（闸消费侧：<30% 禁其新增派单）",
+    "priority": "高（CEO 23:52 亲提·本地域供电安全闸·防低电量作业中断）",
+    "status": "open",
+    "note": "本地域 daemon 挂本机电量检测双阈值闸（CEO 23:52 令·BOD 23:53 授号流转令）。需求规格冻结面存照（BOD 授号令转述面·CEO 令原文 verbatim 补存照（BOD 23:55 认收令转·原文正身即此·不等方案卷）：「本地域daemon挂一个本机电量检测，发现低于30%不让coo新增派单，低于20%本地域全体暂停工作，待接通电源或电量高于20%时，cos通知coo恢复全员工作。」）：①电量<30%：禁 COO 新增派单；②电量<20%：本地域全体暂停；③恢复条件：接通电源或>20%·恢复时 COS 通知 COO。链后续：CTO 技术方案并行在途→方案回 BOD 集成→立施工任务书。授号时点：2026-10-07 23:53（hook 现戳·date 现查 Wednesday +0800）。"
+  },
+  {
+    "id": "lg070-time-window-stop-gate",
+    "treeAnchor": "trees/stopwork-drill-20261009/（W41·首件=coo-schedule-adjust-and-drill-chain-plan-20261009.md COO 落地链计划 00:38 在途；CFO 五验收锚+演练令文件落定后随链补注）",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/stopwork-drill-20261009/",
+    "owner": "COS（授号流转+台账+大表挂行）+CAO（制度正身域·CEO 00:28 裁归 CAO）+CFO（触发方+演练五验收锚）+COO（落地链+施工席停工落地+避让编排）",
+    "priority": "高（CEO 00:36 令·第三道停工门制度化+今日实弹演练）",
+    "status": "open",
+    "note": "时段停工门新制度（CEO 00:36 令·BOD 00:37:4x 转授号令）：非节假日 14:00-18:00 全施工席停工，与电源门（LG-069）/额度五线并列第三道停工门，节假日不适用；BOD 节拍值守不受三门控制照旧。制度正身归 CAO 域（CEO 00:28 裁「制度件统一归 CAO」·CAO 知会已发），施工/执行仓留执行实例与指针。首跑实弹演练=今日 2026-10-09 14:00-17:50 停工令链全链演练（CEO 令「用这个测下」：CFO 触发→发令→COO 落地→各席停；17:50-18:00 LG-066 特窗例外段照开·BOD 裁特窗优先呈报知情；18:00 复工）——任务书已发 CFO（五验收锚）/COO（避让+落地链）。挂账时点：2026-10-09 00:38:07（date 现查 Friday +0800）。"
   }
 ]
