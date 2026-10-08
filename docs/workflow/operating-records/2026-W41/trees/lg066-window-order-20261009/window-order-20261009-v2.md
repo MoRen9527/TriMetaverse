@@ -80,4 +80,5 @@
 1. 清单第 1 条（文件级锚定位）毕：trirlc-daemon.ps1 实位 `AppData\Local\trirlc\daemon\`，**L11 本就指 8710 终态=零改动确认**；tri-liveness-l2.ps1 同目录面，R-HY 段 L56/L66-78 改址对象勘清。
 2. 清单第 2 条（EnvironmentFile 复核）毕：段2 改点=trirmc 主 unit HOST→0.0.0.0+PORT→8710 两键；**新发现补点=trirmc 主 unit 无 TRIRMC_MC_DB_PATH 键**（trirmc-mc 现值 /var/lib/trirmc-mc/mc-store.sqlite）——段2 收敛指向候窗内裁，并入 GO 断点判读面。
 3. 清单第 6 条（l2 改址+trimc 勘正脚本预 commit）毕：`scripts/ops-local/tri-liveness-l2.post-lg066-seg2.ps1` 预 commit 落位（M-SG 段字节级未触·Parser 0 错·no-index diff 逐 hunk 核）；段2 窗内 cp 覆盖，窗前禁部署照旧。
-4. **方案稿 #3 误定位勘正（FSD 实勘·候 CTO 采信）**：方案稿称 L92「is-active trimc」系 R-HY 悬空名=误——L92 系 M-SG 段 sg 机 unit 正名（l2 自身 L26/L38 也经 trimc 读 sg token），照稿改 L92 会坏 sg 探针（恒误报）；正当残余四点已在预 commit 版全含。窗令 §四段 2「l2 trimc 勘正」工序范围据此收敛（L92 不在勘正面）。
+4. **方案稿 #3 误定位勘正（FSD 实勘·候 CTO 采信）**：方案稿称 L92「is-active trimc」系 R-HY 悬空名=误——L92 系 M-SG 段 sg 机 unit 正名（l2 自身 L26/L38 也经 trimc 读 sg token），照稿改 L92 会坏 sg 探针（恒误报）；正当残余四点已在预 commit 版全含。窗令 §四段 2「l2 trimc 勘正」工序范围据此收敛（L92 不在勘正面）。**【CTO 终裁采信 12:05 信】**技术判据三重确认（L92 系 sg 机 systemd unit 正名 TriMC 现役名族/l2 自身 L26-L38 同名引用同源/照稿改=跨段误伤恒误报）——本注记转终裁，收敛照执行。
+5. **TRIRMC_MC_DB_PATH 补点窗内判读锚（CTO 12:05 裁·GO 断点判读面用）**：DB 路径键缺省=trirmc-mc 落 /var/lib/trirmc-mc/mc-store.sqlite 系代码默认行为，段2 改点只涉 HOST/PORT 两键不涉 DB 路径；判读原则=**改动最小面**——窗内探针读数与现值一致（store 路径无迁移需求实证）则不补键（无需求变更面反增回滚锚复杂度）；唯发现 DB 路径分裂实证（两 store 并存读写分叉/旧路径残留写入）才立项迁移另行排窗。FSD GO 断点判读时供现值实勘。
