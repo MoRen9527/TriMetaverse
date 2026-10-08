@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/lg066-window-order-20261009/cto-condition3-quick-review-20261009.md）
 - syncMode: final（快核裁决·条件③闭合面；X1/X2 一项候 BOD 裁后 A3 微调）
-- lastSyncedAt: 2026-10-09T03:51:45+08:00（date 现查原值粘贴·初稿 03:50 估算值已勘正）
+- lastSyncedAt: 2026-10-09T04:00:06+08:00（date 现查原值粘贴·§五 X1 执行留痕增补笔）
 - 快核对象: FSD A3/A4 合并卷 @b5082736 + STE A5 命令单 @6b3e7568（v1.1 复原笔·COO 03:40 勘正确认）
 - 对表正身: cto-sudo-verb-index-20261009.md @e135f445（14 行白名单判据卷·本席拟制）
 - 快核结论: **A5=五点全过零修正 APPROVE；A3/A4=整体 APPROVE 附四项裁+一项白名单缺口呈 BOD 二择**
@@ -45,6 +45,15 @@
 - **A5：APPROVE（终稿即正形）**。
 - **A3/A4：APPROVE（附本卷四项裁进终稿）**；P4.1 形候 X1/X2 BOD 裁后 FSD 微调一步——**该项不阻条件③闭合**（语义两案皆已确定化，BOD 裁哪案走哪案）。
 - 随卷转 COO：三齐条件②（试水拾取链）+③（本卷）已齐面，v3 窗令出令面候 BOD 对 X1/X2 的裁。
+
+## 五、X1 执行留痕（03:58-04:00·BOD 03:57 裁后即办）
+
+- **裁源**: BOD 03:57 裁 X1（保方案稿 unit 移走原语义·精确枚举不破零通配纪律·FSD 零改动=A3 原稿即终形）。
+- **通道实勘**: 本机 `ssh -i ~/.ssh/河源-key.pem root@8.155.54.79`＝R-HY root 直达（sg root 无对 R-HY key 实锚；fleet 的 heyuan 别名=一钥双用 github-mirror-ed25519 走 fleet 身份）。
+- **安全序**: 备份 /tmp/fleet-trirmc-lg066.bak-x1 → /tmp 拼新件（+1 注释行+1 授权行）→ `visudo -cf` **parsed OK** → `install -m 0440 -o root -g root` 原子落位 → `visudo -c` 全量三件 OK。
+- **落位读数**: 0440 root:root·1798B·md5 `eb70973f9f50d4cdd7d92592890735d9`（前值基线 `e6b6dc30…`·1512B）；19 行=3 注释头+15 授权。
+- **双验证（fleet 身份经 sg→R-HY 窗内同通道）**: ①放行向 `sudo -n -l <新 mv 全参数序列>`＝回显允许（参数序列匹配面·零副作用形）②越权拒 `sudo -n /usr/bin/mv trirmc.service /tmp/…`＝`a password is required`（fail-closed 保持）③存量不回归 `daemon-reload`＝OK（01:32 同形）④清单计数＝15 条 NOPASSWD。
+- **生产零变更锚**: trirmc-mc active＋trirmc active＋unit 原地在位——X1 只动白名单配置面，P4.1 真 mv 仍属 17:50 窗内施工步。
 
 ## 使用依据
 
