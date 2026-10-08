@@ -1,0 +1,26 @@
+{
+  "treeId": "sg-duty-trial-20261009",
+  "title": "sg duty 值席试水双件树（TriModel 残留卫生+TriMMC executor 根因勘）",
+  "week": "W41",
+  "source": "CEO 2026-10-09 01:03 批令（BOD 分析呈裁三答之①同意排）——sg duty 值席试水：机械轻判断件+判断力勘件各一，验证挂树→拾取→执行→回卷全链与值席判断力上限",
+  "domainRouting": "sg-duty-executable",
+  "status": "open",
+  "created": "2026-10-09",
+  "face": "m-face",
+  "nodes": [
+    {
+      "nodeId": "SGA-1",
+      "agent": "duty-cos",
+      "status": "open",
+      "action": "拾取 task-charter-sgA-trimodel-residue-hygiene-20261009.md 照单执行：/srv/fleet/TriModel 三残留（package-lock.json M+两个 09-28 .bak 目录）逐一处置+回卷 sgA-closure-report-20261009.md 落本树目录；边界照任务书红线（禁动生产 daemon/禁 push/禁 credential 面）"
+    },
+    {
+      "nodeId": "SGB-1",
+      "agent": "duty-fsd",
+      "status": "open",
+      "action": "拾取 task-charter-sgB-trimmc-executor-rootcause-20261009.md 照单执行：TriMMC executor「调度活执行停」家族缺陷根因勘（活体取证先行+src/cron 十文件走读+10-01/10-02 实录对表）+回卷 sgB-rootcause-report-20261009.md 落本树目录；只勘不修，日志 tail 前必滤 token 行，root 操作后清点归还"
+    }
+  ],
+  "acceptance": "两回卷文件落树+两节点 status 翻 done+值席回报候 BOD 认账；回卷质量纳入试水评估",
+  "notes": "试水树①（CEO 批 2026-10-09）——机械件（sgA）+判断力件（sgB）各一；拾取触发形态本身在试水观察面（BOD 01:1x 实勘：sg tmux default 会话=裸 bash 待命态，值席会话未起，自动拾取触发器现势待勘）"
+}
