@@ -2,9 +2,9 @@
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/ste-s5-walkthrough-20261008.md
 - syncMode: live（窗内分段落盘，段落毕即 commit——D-45 款3 现役纪律）
-- lastSyncedAt: 2026-10-08T11:54:55Z（19:54:55+08 周四，date 现查原值）
+- lastSyncedAt: 2026-10-08T12:02:15Z（20:02:15+08 周四，date 现查原值）
 - 执行席: STE 小柯（m-ste）；锚面=R-HY 单锚（干跑卷 §六-§九 口径终版）
-- 状态: **正跑读数齐，走查判定 CONDITIONAL_PASS（§四）**——放行裁决候 CTO
+- 状态: **CTO 放行裁决 APPROVE（§四.1）——S5 技术面收口**；判定基线=CONDITIONAL_PASS（§四，CTO 独立抽验全对表后转正）
 
 ## 〇、开场锚四件（全绿）
 
@@ -91,6 +91,16 @@ C 锚（禁触生产卡）：served 源码串面在场验证=「已清 · 待落
 4. **R-HY 配置面现势**：providers 两键 false/mlc 有拉取无卡=如实呈报非缺陷（FSD 注记 3 同源）。
 
 覆盖缺口如实：UI 浏览器端真渲染+真人交互链（BOD playwright 预验截图作参考）不在本席工具面——CEO 走查为该层终验；本席活体层止于 API/served bytes/盘面三面自洽。
+
+### §四.1 CTO 放行裁决收讫（收口终态，本席回填）
+
+**裁决=APPROVE（放行）**——CTO 落款现查 2026-10-08 20:00:48+08，本席收信 hook 现戳 20:01:21+08（双锚精确值，时序正常无倒挂）。
+
+1. **独立抽验（第二方法）全对表**：CTO 本机跨机复测 served 面 /ui=200 len=139927+sha256 前 16 位 8ca70d3d56b334db 逐字同 §〇.3 卷值；/health ok:true+providers 双 false 同值；verify 无 token=401 独立实证 fail-closed；全量回归于 TriModel 顶 e5394a4 独立复跑=374/360 pass/0 fail/14 skipped 逐字同构 §三.1（并注：全量绿含 GATE 子集，57/57 无需单跑即上位证明）。两法交叉验证闭合，四层 PASS 全数采信——**CONDITIONAL_PASS 转正=APPROVED 放行**。
+2. **条件面定性**：浏览器真渲染+真人交互链=本席工具面覆盖缺口如实、不属测试面欠账，该层终验归 CEO 走查（BOD playwright 预验作参考）——**不阻技术面收口，S5 技术面至此收口**。
+3. **非阻塞四项归宿复核全认**（§四表）；走查层留注记：CEO 走查若见 mmc「未配置」徽章系 pending 未走 apply 回写链现势，非缺陷（同 §四.2 口径）。
+4. §三.2 伪迹归因独立验+教训即录处置获 CTO 认领（首轮 loader fail 自查自纠路径干净）。
+5. 放行毕报走 BOD/COO 收口链（CTO 令面指令）；BOD 值面自报裁况（不轮换，10-02 口径）见席位卷与记忆条，卷面历史态不回填。
 
 ## 使用依据
 
