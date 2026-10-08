@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/s3-channel-maintenance-wave/s3-candidates-20261008.md）
 - syncMode: static
-- lastSyncedAt: 2026-10-08T19:44:21+08:00（date 现查原值·追加 #3 行）
+- lastSyncedAt: 2026-10-08T20:04:14+08:00（date 现查原值·#3 指针落笔）
 - 编排席: COO 小营（收口督办面职责·排工卷单 7 后半应办）
 - 性质: 两单 BOD 裁定「入 S3」在账在先（各裁定卷为登记正身），本卷=督办面汇总并表供 S3 维护波排窗勘验——值面勘验锚全走指针不转抄
 - 排窗面: 候 CTO S3 判据卷（CTO 11:45 信预告今晚/明上午·判据需 8711 代码现勘落准）→本席出 S3 窗令（三栏+落树正身制+链声明指针行首例适用）；候选窗 10-10+ 白窗
@@ -13,7 +13,7 @@
 | --- | --- | --- | --- | --- |
 | 1 | PENDING-RESEND 投递通道 fail kept | BOD 终裁入 S3 维护波候选清单（10-07 17:39·LG-064 B 族闭案终局） | ste-8713-fix-window-regression-20261006.md §七.5 时序注+§八 终局注记（cron-liveness-alert-20261005 树） | 在账候勘 |
 | 2 | sg TriMMC POST 403 共享通道缺陷（LG-069 通知腿主因） | CTO 终验收裁「归 S3 勘验升格·本交付不修」照 BOD 裁升 S3（卷落款 10-08 03:27+08） | cto-final-acceptance-20261008.md §三.2 三要素勘验锚（403 定性/GET-POST 同 token 分叉/token len=64 tail=4aa5 一致）+ste-acceptance-20261008.md §二（lg069-power-gate-20261007 树） | 在账候勘 |
-| 3 | TriModel managed 视图暴露面收敛（S5-F1 安全发现） | CTO 裁入 S3 候选清单**后窗**（10-08 19:55 信：不入本 S5 收口、不塞 10-10 窗——TrimModel 面与 8711 面不同仓不同 daemon，防窗令范围爬升；BOD 已备案知情） | 勘验锚=STE S5 毕报发现卷（落树中·候位补指针）+CTO 本裁定信；修法面=managed 剥离 entries_decrypted[].api_key 明文（暴露面过宽·非门禁破口）；过渡态=admin fail-closed 已实证·风险中低可接受 | 在账候勘（后窗） |
+| 3 | TriModel managed 视图暴露面收敛（S5-F1 安全发现） | CTO 裁入 S3 候选清单**后窗**（10-08 19:55 信：不入本 S5 收口、不塞 10-10 窗——TriModel 面与 8711 面不同仓不同 daemon，防窗令范围爬升；BOD 已备案知情） | 勘验锚（20:04 CTO 供料落笔）=ste-s5-walkthrough-20261008.md（@ebae409e 判定基线·@9cbb3868 演化笔）§二 发现+§二.1 CTO 裁定收讫+§三.4 判据预供（entries_decrypted 全仓扫=零 daemon/CLI 消费者·修法影响面=producer 响应体+两测试文件对表）+CTO 放行裁决信（20:00:48+08）；修法面=managed 剥离 entries_decrypted[].api_key 明文（暴露面过宽·非门禁破口）；过渡态=admin fail-closed 已实证·风险中低可接受 | 在账候勘（后窗） |
 
 ## 二、同签名关系注
 
