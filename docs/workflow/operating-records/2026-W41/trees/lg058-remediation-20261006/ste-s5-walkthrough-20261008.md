@@ -2,9 +2,9 @@
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/ste-s5-walkthrough-20261008.md
 - syncMode: live（窗内分段落盘，段落毕即 commit——D-45 款3 现役纪律）
-- lastSyncedAt: 2026-10-08T11:43:29Z（19:43:29+08 周四，date 现查原值）
+- lastSyncedAt: 2026-10-08T11:54:55Z（19:54:55+08 周四，date 现查原值）
 - 执行席: STE 小柯（m-ste）；锚面=R-HY 单锚（干跑卷 §六-§九 口径终版）
-- 状态: **进行中**（§〇-§二 已落读数；§三 回归/GATE/jsdom 候跑）
+- 状态: **正跑读数齐，走查判定 CONDITIONAL_PASS（§四）**——放行裁决候 CTO
 
 ## 〇、开场锚四件（全绿）
 
@@ -50,10 +50,47 @@ C 锚（禁触生产卡）：served 源码串面在场验证=「已清 · 待落
 4. **本席值面自报**：10-02 口径初判适用（同盘同权限面增量≈零，操作瑕疵非新增泄露面）——转 BOD 备案定性，轮换与否候 BOD 裁。
 5. 本席随跑供料项：全仓 entries_decrypted 消费面扫描（候选条判据预供，只读零险），见 §三.3。
 
-## 三、构造态引证与回归（进行中，候补）
+## 三、构造态引证与回归（读数齐，全绿）
 
-- 全量回归+GATE 双口径：本机 e5394a4 顶（代码面=e30ea20 等价）复跑，候读数。
-- jsdom 正跑：干跑两批 70 断言布景照用+活体布景增量场景，候读数。
+### §三.1 全量回归（npm test 正形，本机 e5394a4 顶=代码面 e30ea20 等价）
+
+- **374 用例 / 360 pass / 0 fail / 14 skipped / 0 cancelled**（duration 185.8s）——对 S4b 基线读数（360/0/14）逐字同构，**零新增 fail**；skip=env-gated E2E 设计跳过（与两轮窗同数）。
+- 既有失败归因：无既有失败族在册，0 fail 即全绿，无归因面。
+
+### §三.2 GATE 双口径（六 *.gate*.test.ts）
+
+- **正形读数（--import tsx，与 npm test 同链）：57/57 pass / 0 fail**——对 S4b GATE 读数同数（subtest 摊平口径）。
+- **调用伪迹归因（独立验，如实注记）**：本席首轮裸 `node --test`（缺 `--import tsx` loader）跑出 3 文件级 fail（keys.secure/policy.gate.evaluation/proxy.gate）——单文件复跑勘验=整文件加载即崩（exitCode 1，Node 版本头=加载器级非断言）；根因=三文件含非可擦除语法需 tsx 转译、另三文件恰为原生可剥离语法故裸跑亦过；`package.json` test 脚本实锚=`node --import tsx --test …`。**定性=本席调用伪迹，非代码缺陷**；子集复跑必走项目自带入口/loader——假阴性机器教训即录（与「命令链断言失败须断整链」同族）。
+
+### §三.3 jsdom 正跑（构造态引证正身）
+
+- 干跑两批照用：**70/70 全绿**（dryrun1 负向+静态 44/44+dryrun2 四锚交互 26/26），防坑六条全在效（渲染面排 script/D- observer 法/同签重试/动态现取等）。
+- 引证分层注记：jsdom=构造态（mock fetch+本地工作树文件，行尾差语义等价见 §〇.4）；活体可达态=§一 API 探针+served 逐字节；两态分列不互充。
+
+### §三.4 entries_decrypted 全仓消费面扫描（S3 候选条判据预供，CTO §二.1.3 委托项）
+
+- 扫描域=TriModel 全仓（ts/js/mjs/sh/ps1，排除 node_modules 与 .d.ts）：命中=`src/api/trimmc-card.ts`（producer 本体）/`test/keys.secure.gate.test.ts`/`test/trimmc-card.test.ts`（测试对表）/dist 镜像三件（构建产物随源）。
+- **零 daemon/CLI 消费者**——UI 面已核 0 引用（§二）；剥离影响面=producer 响应体+两测试文件对表，候选条施工判据预供闭合。
+
+## 四、S5 走查判定（本席三分法，放行裁决候 CTO）
+
+**CONDITIONAL_PASS**——测试覆盖充分、门禁全绿、无阻塞性缺陷；非阻塞项在册需 CTO 确认收口：
+
+| 层 | 读数 | 判 |
+| --- | --- | --- |
+| 开场锚 | 版本演化核+指纹三件+served/盘面逐字节自洽+防火墙实测通行 | ✓ PASS |
+| 活体可达态 | B verify 四态对 FSD 同构（活体主态仅 rmc）/D 四 face 卡基线逐 id 同/E 400 五名全列+零态变双证/neg 401 fail-closed | ✓ PASS |
+| 构造态引证 | jsdom 70/70+第二轮窗 P2-P4 历史卷（引证正身=干跑卷 §八 口径） | ✓ PASS |
+| 回归门 | 全量 360/0/14 零新增 fail+GATE 57/57 | ✓ PASS |
+
+非阻塞在册项（不阻本判，逐项有归宿）：
+
+1. **S5-F1 暴露面过宽**：CTO 已裁 S3 候选新条（§二.1）；候选判据预供已闭合（§三.4）。
+2. **mmc 卡状态机现势**（card_present=true 而 status.state=pending→verify 显 not-configured）：非本次部署引入，候走查单定处置（FSD 毕报注记 2 同源）——CEO 走查若见 mmc「未配置」徽章系此现势非缺陷。
+3. **D- warn transient**：CTO 已裁独立改进项挂 FSD 候办（与 C 注记退役同维护波），S5 对表口径=「出现过」达锚。
+4. **R-HY 配置面现势**：providers 两键 false/mlc 有拉取无卡=如实呈报非缺陷（FSD 注记 3 同源）。
+
+覆盖缺口如实：UI 浏览器端真渲染+真人交互链（BOD playwright 预验截图作参考）不在本席工具面——CEO 走查为该层终验；本席活体层止于 API/served bytes/盘面三面自洽。
 
 ## 使用依据
 
