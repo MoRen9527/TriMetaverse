@@ -1,6 +1,8 @@
 # 席位周期重启窗方案卷 · CTO 拟制
 
-- sourceOfTruth: docs/workflow/operating-records/2026-W41/trees/seat-cycle-restart-window/seat-cycle-restart-window-plan-20261008.md
+> **【迁位注记 2026-10-08】** CEO 11:33 签发生效后，制度正身已迁 `docs/workflow/seat-cycle-restart-window.md`（持久位，翻周不归档）；本卷降为 W41 首拟历史件，后续修订以正身 §五 修订记录为准。
+
+- sourceOfTruth: docs/workflow/operating-records/2026-W41/trees/seat-cycle-restart-window/seat-cycle-restart-window-plan-20261008.md（历史件；制度正身=docs/workflow/seat-cycle-restart-window.md）
 - syncMode: final（方案卷正身，候 CEO 签发后入 recurring 制度面）
 - lastSyncedAt: 2026-10-08T03:11:33Z（11:11:33+08 周四，date 现查）
 - 拟制席: CTO 小狄（m-cto）；令源=CEO 2026-10-08 11:01 批「同意」（BOD 两建议：7 孤儿 conhost 清杀【已办毕】+立席位周期重启窗【本卷】）
