@@ -37,7 +37,14 @@
 3. **现役权威 store=trilc\**（活体对平+wal 滚动双证）；方向 A（ps1 显式 TRILC_DATA_DIR=trirlc\）切换后旧 trilc\ 空库作废无数据损失，方向 B（删 ps1 设回默认）亦零数据代价——A/B 差口收敛为纯命名一致性，CTO 倾向 A 照旧候窗令。
 4. 附带观察：trirlc\cron.db-shm mtime Oct 5 19:50 晚于其 wal（Sep 3）——只读打开 touch shm 迹候选（10-05 前后 korw 排查窗勘验在案），无数据面影响，如实录。
 
-## 三、红线遵守
+## 三、窗前清单② · 8711 现役 job 清单+nextRunAt 值面快照（COO 窗令清单项，12:22 补采）
+
+- **job 清单=空集（0 job）**：trilc\cron.db cron_jobs 零行（§1.2）+8711 活体 healthz jobCount=0 双证（§1.3）
+- healthz cron 段快照原样（12:15:40Z）：`{"enabled":true,"jobCount":0,"degraded":false,"consecutiveFailures":0}`
+- **冷启后完整性对表锚**：10-10 窗内冷启后 jobCount 应保持 0+degraded=false（空集基线，无 job 丢失面——本波归一无 job 数据可失）
+- 快照时点：2026-10-08T04:15:40Z（12:15:40+0800）；070 旧提醒链 job（cron_muxj3q29_2utj）已于 10-07 S0 拆除，现役零 job 态系预期
+
+## 四、红线遵守
 
 - 全程只读：ls/healthz GET/sqlite readOnly 三通道；零启动/重启 8711；零写入零迁移；token 值零触碰。
 
