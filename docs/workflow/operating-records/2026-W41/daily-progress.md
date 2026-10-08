@@ -935,3 +935,13 @@
   - 19c68e3a docs(coo): S3 通道维护波窗令落树（10-10 周六 14:00-16:30·四栏首例·候 BOD 认账）——栏④链声明指针=CTO 判据卷；窗序两段（段1 F-3+ 法 B 硬绿门→段2 归一+冷启+探针四连+两候选单分线）；清单卷 §四 对表更新（门形统一销案改探针验锚·翻案成立）
   - b2c96967 docs(sde): LG-065 S2b 勘差注记勘误行（CTO 考古翻案②）——「源码现顶 L4275 无门形/版本差行为分叉」定性撤销：8713 现顶 L1754 全局门在位（26720dd 08-27 fail-closed 双仓同批），首发 401=门行为实证非旧 build 遗产；原文留痕不改，判据锚 cto-s3-criteria-20261008.md §1.2
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:30 +08：自上次进度提交 08df5a8a 后新增 8 条 commit：
+  - eae718e9 docs(coo): S3 窗令 §十清单 1 清理面收敛（CTO 12:30 更正信）——窗内清理限 cron store 族四件（trirlc\ 非空壳实证）；.env/keys.json 含密历史遗产候专项裁量明确不搭 S3 窗；其余口径不变
+  - 6dfb0151 docs(sde): 盘点卷补 CTO 处置意见落定行——含密遗产留原地零接触+列本机含密历史遗产清单候 CFO 轮换/CAO 专项+「空壳」预判系 ls grep 过滤盲区自报录
+  - 38276907 docs(sde): 盘点卷补 §四 清理边界——trirlc 非空壳实勘（.env/keys.json+16 备份/company/daemon/双 db 全家）+TRILC_ENV_FILE 值面核验不指向 trirlc+窗内清理限定 cron store 族四件·含密历史面候专项裁量（CTO 预核收窄口径+边界信落卷）
+  - ff2e8fba docs(coo): S3 窗令 §十清单 1 补 CTO 预核毕注记（12:21 信）——DATA_DIR 收窄三点采认：纯 ps1 链归一零迁移+预算 20→10min（窗框段锚不动）+判据卷分叉迁移分支不触发；正文不动注记层采认
+  - 29841f01 docs(coo): S3 窗令 §十窗前三件执行实锚注记（SDE 窗前毕报 @dfe539a6 对表）——DATA_DIR 零分叉零数据实证（归一无迁移·方向 A/B 收敛纯命名面）+job 快照空集基线（保持 0+degraded=false）+修法法 B 确认零争论面+BOD 12:18 生效注记；清单 4 候窗前一刻
+  - dedde9c6 docs(coo): LG-058 CEO 终验材料单落树（单6 自产·S5 卷留槽）——全链脉络八轮一览+S 序列段卷指针+CEO 历轮打回点对表汇总+全量读数最新基线+S5 走查窗现势（19:00 R-HY 活体）+候办遗留如实面七条；S5 毕补 §七即成完整呈报包
+  - dfe539a6 docs(sde): S3 窗前清单②快照段补采——8711 现役 job 清单=空集（store 零行+活体 jobCount=0 双证）+healthz cron 段原样+冷启后对表锚（保持 0/degraded=false）+070 拆除后零 job 态系预期注记
+  - af5ee45a docs(sde): S3 缺口4 窗前盘点卷（CTO 批准先行·只读）——8711 DATA_DIR 双 store 并存实锚（trilc\+trirlc\ 两套 db 全家俱在）；零数据分叉（两侧 cron_jobs/execution_log 全空）=归一无迁移需求；现役权威=trilc\（活体 jobCount=0 对平+wal 滚动双证）；A/B 方向差口收敛纯命名一致性候窗令
+- registry：v2.1；今日 registry 提交无变化
