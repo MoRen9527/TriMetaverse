@@ -81,31 +81,51 @@ const probes = {};
   }
 }
 
-// ② sg MMC 三探针 + 值席 pane（一管 ssh）
+// ② sg MMC 三探针 + m-duty-* 全组 pane（一管 ssh；CEO 11:00 令：重点=duty 组谁在干活，自动发现非硬编码）
 {
   const r = ssh(
     SG,
     `echo 'h8712:'$(curl -s -m 4 http://127.0.0.1:8712/healthz | head -c 150); echo; ` +
       `echo 'lognew:'$(ls -t --time-style='+%H:%M:%S' -l /var/lib/trimc/cron/logs/ 2>/dev/null | head -2 | tail -1 | awk '{print $6}'); ` +
-      `echo 'sgnow:'$(date '+%H:%M:%S'); echo '---pane---'; su - fleet -c "tmux capture-pane -t m-duty-cos -p 2>/dev/null | tail -6"`,
+      `echo 'sgnow:'$(date '+%H:%M:%S'); echo '---duty---'; ` +
+      `for s in $(su - fleet -c "tmux ls -F '#S'" 2>/dev/null | grep '^m-duty-'); do echo "===SEAT:$s==="; su - fleet -c "tmux capture-pane -t $s -p 2>/dev/null | tail -6"; done`,
     45000,
   );
   if (r.ok) {
-    const m = r.out.match(/h8712:(.*)\s+lognew:(\S+)\nsgnow:(\S+)(?:[\s\S]*---pane---\n?([\s\S]*))?/);
+    const m = r.out.match(/h8712:(.*)\s+lognew:(\S+)\nsgnow:(\S+)(?:[\s\S]*---duty---\n?([\s\S]*))?/);
     if (m) {
       probes.mmc = `8712${m[1]} | logs 最新=${m[2]} (sg now=${m[3]})`;
-      const pane = (m[4] || '').trim();
-      // 值席状态粗判：busy 动画行（✻ …）/ ❯ 空框=候令
-      if (/✻|Crystallizing|Scampering|Brewing|Pondering|Forging/.test(pane)) { probes.duty = `在役·处理中（pane 动画行在）`; probes.dutyBusy = true; }
-      else if (/^❯\s*$/m.test(pane) || pane.includes('❯')) { probes.duty = `在役·候令（❯ 空框）`; probes.dutyBusy = false; }
-      else { probes.duty = `在役·态不明（pane 尾：${pane.split('\n').slice(-2).join(' / ').slice(0, 120)}）`; probes.dutyBusy = false; }
+      // m-duty-* 全组逐席判态（CEO 11:00 令：duty 组为重点）
+      // 判据（11:17 勘）：尾 6 行有 ❯ 行=候令（输入框在底）；✻ 行须排除「Brewed for」完成行（过去式≠在干活）
+      const paneState = (pane) => {
+        const tail = pane.split('\n').slice(-6).join('\n');
+        if (/^❯/m.test(tail)) return { label: '候令', busy: false };
+        if (/✻/.test(tail) && !/✻\s*\S+ed for/.test(tail)) return { label: '处理中', busy: true };
+        if (/✻/.test(tail)) return { label: '完成待命', busy: false };
+        return { label: `态不明（尾：${tail.split('\n').slice(-2).join(' / ').slice(0, 80)}）`, busy: false };
+      };
+      const dutySeg = (m[4] || '').trim();
+      const dutyParts = [];
+      let dutyBusyAny = false;
+      if (dutySeg) {
+        const blocks = dutySeg.split(/^===SEAT:(m-duty-[^=\n]+)===$/m);
+        for (let i = 1; i + 1 < blocks.length; i += 2) {
+          const st = paneState(blocks[i + 1].trim());
+          dutyParts.push(`${blocks[i].trim()}=${st.label}`);
+          if (st.busy) dutyBusyAny = true;
+        }
+      }
+      probes.duty = dutyParts.length ? dutyParts.join('·') : (dutySeg ? `段解析失败（${dutySeg.slice(0, 80)}）` : '无 m-duty-* 会话');
+      probes.dutyBusy = dutyBusyAny;
     } else {
       probes.mmc = `读数解析失败: ${r.out.slice(0, 150)}`;
       probes.duty = '解析失败';
+      probes.dutyBusy = false;
     }
   } else {
     probes.mmc = `ssh 失败: ${r.err}`;
     probes.duty = 'ssh 失败不可判';
+    probes.dutyBusy = false;
   }
 }
 
@@ -137,13 +157,14 @@ const seats = scanLocalSeats();
 const activeLocal = seats.active || [];
 const dutyBusy = probes.dutyBusy === true;
 const totalBusy = activeLocal.length + (dutyBusy ? 1 : 0);
-const seatLine = seats.err
-  ? `本机席扫描失败（${seats.err}）`
-  : activeLocal.length ? `本机在干活：${activeLocal.join('、')}` : '本机 12 席全空闲';
+const dutyLine = `**sg duty 组（重点）**：${probes.duty}`;
+const localLine = seats.err
+  ? `本地 12 席扫描失败（${seats.err}）`
+  : activeLocal.length ? `本地在干活：${activeLocal.join('、')}` : '本地 12 席全空闲';
 const L = [];
 L.push(`**节拍（daemon 版）${ts}**`);
 L.push('');
-L.push(`**⓪ 全席现态（13 席）**：${totalBusy > 0 ? `**非空闲·${totalBusy} 席在干活**` : '全席空闲'}——${seatLine}；sg 值席=${probes.duty}`);
+L.push(`**⓪ 全席现态**：${totalBusy > 0 ? `**非空闲·${totalBusy} 席在干活**` : '全席空闲'}——${dutyLine}；${localLine}（附注）`);
 L.push('');
 L.push(`**① 双树**：sg 试水树=done 收口（认账毕）；LG-066=v3 生效态候 17:50 窗`);
 L.push(`**② 三链**：8713 ${probes.mlc}`);
