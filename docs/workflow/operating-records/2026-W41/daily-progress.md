@@ -1160,3 +1160,6 @@
 - 巡检兜底补写 @19:50 +08：自上次进度提交 269c7f3b 后新增 1 条 commit：
   - da4fe3ed docs(lg066): 窗段2执行卷——迁8710原子切换毕(tee+掩形零差+restart 19:03:29 CST 新PID 2306757;Q2.2 十轮10/10;Q2.4 schedule-aware 裁+19:15 首滚实证;Q2.5 8712 空置 N3 72h 起点记卷;A5 P2-1..6 全绿含 neg401 门在岗+P2-6 不补键;五裁台账全录;R-2/3/4 零触发);Q2.3/Q3.1 dev-sg 链毕(l1-latch 挂账 BOD 裁);候 CTO 终判+CEO 终验链 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:00 +08：自上次进度提交 ff2483d7 后新增 1 条 commit：
+  - 9c3d9be8 docs(lg066): R-4 台账勘注——白名单窗内即撤毕(COO 裁四据+撤前双确认核+BOD SSH 直达 rm exit0+root 面验①file 消失②fleet fail-closed 双证+本席独立复验 19:55:43Z 三面撤净;sudoers 读数语义两态判据注+head -3 自盲教训随录);段2 全卷终态=R-2/3/4 闭环零回滚 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
