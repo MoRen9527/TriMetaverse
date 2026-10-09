@@ -94,6 +94,12 @@
 - **新风险面（BOD 23:14 呈报·随拍转 CEO）**：本机电池 37%（22:50 时 57%）持续下降——若不插电 1-2h 内耗尽→全席+8711/8713 双 daemon 死机·深夜窗本机段验证+今夜值守全断。技术面注记：8713 S4U 形任务依 LogonTrigger+会话探针，硬断电复活链=开机后需会话在位（watchdog logon-guard fail-closed 先例在案）——断电非仅中断值守，复活亦有会话前置。
 - **sg bare push 拒异常闭案**（本席处置·23:09-23:2x）：d09828b9/f3a272ef 两推连拒「unable to migrate objects to permanent storage」——根因=sg bare 库内 **44 项非 fleet 属主残留**（objects/ed+objects/35 两子目录本身+loose objects+pack 三件套+refs/heads/board-live·潜伏雷早于 23:00·我两笔文档对象前缀撞中坏槽位引爆=fleet migrate rename EACCES）；fleet 身份 hash-object 写面探针通（排除整体写面故障）→find 清点 44 项→root chown 归还 fleet:fleet→双清零→重推过。现 **GitHub=sg bare 双腿同顶 7c745af6**。教训与「sg 仓 root 身份 git 操作留 root 属主文件」记忆条同族（该条正向应用实例）。
 
+### l2 复活终态（23:3x·BOD 三锚定谳+本席第四误判撤销）
+
+- **l2 已复活跑绿**：BOD 23:32 直读三锚——①L1+L2 双任务 DisallowStartIfOnBatteries=**False**（BOD 23:20 裁①·FSD 改面两处全落）；②**L2 LastRun=23:30:01 Result=0x0**（改后首滚·电池态跑成）；③l2 脚本**零 issues 轮零行**（只记异常轮设计）——l1 两滚全绿（23:25/23:30）→l2 中继零 issues→l2.log 零行恰为全绿读数。
+- **本席第四误判撤销**：23:30:18 读「l2.log 23:30 滚零新行」推「L2 未在改面或改失败」——log 面（应用层）零行反证调度面=**单一读数面跨层定谳**（零行两义：没跑/跑了零异常，须 LastRun 调度面字段消歧）。当晚二犯同族：§七教训「调度面才是复活判据」写入后 8 分钟即反向违犯——已并入记忆条与联审教训面候选（BOD 点名今晚第三次，值席静默同根式）。
+- 现势：l1/l2 双任务电池态正常滚；**插电仍候 CEO**（8713 acOnline=False·28% 速降中——监测活≠电池续航，耗尽风险未消解，BOD 呈报链在途）。
+
 ## 使用依据（终勘增补）
 
 - 河源活体三探 22:53-22:56（root 通道只读：is-active/is-enabled/ss/healthz/show/list-unit-files/ls 备份锚/find cron logs/journalctl tail）
