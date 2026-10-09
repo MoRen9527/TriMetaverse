@@ -1157,3 +1157,6 @@
 - 巡检兜底补写 @19:10 +08：自上次进度提交 efa403ca 后新增 1 条 commit：
   - 2881a452 docs(lg066): 窗段1执行卷——P0-P6 全绿零 fail(TS0 10:55:16Z,段1锚达标;双锚制 .bak×2+tar 5523 条;本体零触碰 PID/TS 逐字同;8710 暗窗;A5 四件全绿+neg401 门在岗;白名单 15 行抽验过);P2.1 updated_at 一行差候 COO/CTO 窗内裁(GO-1 闸,毕报双刻已发);MC-2 行数零变 checkpoint 自致注 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:50 +08：自上次进度提交 269c7f3b 后新增 1 条 commit：
+  - da4fe3ed docs(lg066): 窗段2执行卷——迁8710原子切换毕(tee+掩形零差+restart 19:03:29 CST 新PID 2306757;Q2.2 十轮10/10;Q2.4 schedule-aware 裁+19:15 首滚实证;Q2.5 8712 空置 N3 72h 起点记卷;A5 P2-1..6 全绿含 neg401 门在岗+P2-6 不补键;五裁台账全录;R-2/3/4 零触发);Q2.3/Q3.1 dev-sg 链毕(l1-latch 挂账 BOD 裁);候 CTO 终判+CEO 终验链 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
