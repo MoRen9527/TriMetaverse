@@ -1054,3 +1054,12 @@
   - f5559cee merge: 收编并行笔——sg power-gate 留痕卷正向保留
   - 05258531 docs(cto): sg power-gate 白名单件留痕卷——CEO 08:14 令提前窗执行毕：SOURCE_SEAT_WHITELIST 加 power-gate（outbox.ts L65 一行·tsc build 产物断言）+重启三带全绿（jobs 备份/10 存续值面/executor 08:18 两笔新笔）+毕探针三刻全绿（healthz 200/power-gate 200 缺口闭合锚+m-cos 200·信箱 letters=1330 尾两笔值面）+notifyFailures=7 冻结清零路径知会+sg 仓 decba1f→bare 顶 0e12959
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:40 +08：自上次进度提交 48142056 后新增 7 条 commit：
+  - 92eb15fb merge: 收编并行笔（值席落盘防覆盖）
+  - ff283806 docs(coo): ④步判据定版勘新——命令单 P3 补勘毕升锚 e138d8da[全卷双 200 单形零残留·CTO 补勘]+FSD 挂位定版 d37091a1[cd962747→d37091a1 同刻 09:57·S4 段与卷现势零差]；排程卷窗序④命令单指针+注记一勘定版态·403 中间态全链退役；评估卷 lastSyncedAt 注记同勘。判据语义零变化[双 200=PASS 不变]·此后候窗静默
+  - b31728e1 docs(tree): 试水树 SGB-1 翻 done——FSD 根因勘回卷 f3651027 值席验物在树(401 窗空壳跑→runningAtMs 卡死+already-running skip 两点锚→10-05 复活非重启;修复分级六项三档;实录观察源解读差如实录);双节点全 done 候 BOD 认账 @m-duty-cos
+  - f3651027 docs(workflow): SGB-1 根因勘报告——TriMMC executor 调度活执行停家族（主案 ae02593a 停摆 66h 全谱：401 窗空壳跑→runningAtMs 卡死+already-running skip 两点代码锚→10-05 02:15 复活对位 TriModel 链恢复；修复分级六项三档；实录滚动差如实录；零 token 值面零 root 操作）@m-duty-fsd
+  - e138d8da docs(cto): 命令单 P3 残留补勘——行内注释预期 403→200+body 文案勘毕态（FSD 换芯毕报提请·判据表已勘 P3 漏更随补·全卷单形现势=双 200）
+  - bf9bae34 merge: 收编并行笔（值席落盘防覆盖）
+  - 39cdb46b docs(coo): 条件②现势刷新勘新+④步判据勘定闭环勘新——评估卷：BOD 08:29 刷新勘正入卷[假阴性勘正·m-duty-cos 在役未死 10-03 起 tmux 在册·root 视角查 fleet 域 tmux 不可见]+值席开跑试水双件[执行段已通·全链绿候 sgA/sgB 回卷·v3 生效链候回卷一件·认账已毕]；排程卷：sg power-gate 件提前落位[CEO 08:14 令·CTO 08:26 毕报 @f5559cee 端到端 200]→CTO 08:27 判据勘定[双 200=PASS·任一 403/400 异常停报·命令单 @9ac5b647 随勘落卷]→08:30 转 FSD 挂位换芯[09:57 前毕]——403 中间态注记全链退役
+- registry：v2.1；今日 registry 提交无变化
