@@ -1092,3 +1092,9 @@
   - 0833da76 merge: 收编并行笔（二）
   - 98c4187c docs(cto): 五 .bak 定性销案——TriModel Config Plane 写卡轮转机制设计行为（pid 2518071=trimodel-config.service LG-035 P3-sg·15 分钟节拍·深度 5·现役在写）+归域勘正（写面 owner=TriModel 面非 TriMMC·卡名 trimmc 字样误导）+卫生候办转 owner
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 6a258f6c 后新增 4 条 commit：
+  - c056bb05 docs(coo): 窗令 v4 签发（裁 A 改形）——CEO 10:23 裁 A[TriMMC 留 sg 8712·裁决件 @3e93dbff]→段2 取消·段1 验收绿=窗收口·N3 72h 取消·Q2.3 候召解除·窗框 17:50 不动预计 ~19:30 收·窗前清单增 9=CTO 技术确认回点；v3 卷存档注记+评估卷 17:50 行勘注 v4 签发态
+  - 3d9a1fa2 docs(fsd): sgB 备码毕报——两锚改码+G1 四案一次过+G2 三面全绿[精勘读数:方案稿三符号两悬空一证伪·loadJobStore 吞错静默放弃第三路径新证·双锚联动闭环]+测试管线缺口修复实录[11 处存量错最小修]+分支 fsd-sgb-fix-20261009@1713614 sg bare 落位验真·READY_FOR_REVIEW 候部署窗
+  - 410dba91 merge: 收编并行笔（三·巡检兜底·sg-server 别名）
+  - 6141a459 docs(cto): 结构修稿 BOD 认账批注三点收编勘新——H2 补隧道 keeper 自愈+18710 可达断言（待机杀面顺手一探）+S4U 兼容预判注记+回卷要求（H1-H3 贴毕报/H4 挂 10-18 巡检）+cron 空拍预期注记·转 final
+- registry：v2.1；今日 registry 提交无变化
