@@ -1074,3 +1074,10 @@
   - 217b4e8a merge: 收编并行笔（值席落盘防覆盖）
   - e3f45844 docs(coo): v3 正式生效勘终态——条件②绿 09:38[SGA-1/sgB-1 双 PASS·BOD 认账件 fb083499·拾取触发=形态一人工直派·自动拾取环=观察项]+认账 04:09 双件齐→17:50 v3 正式生效开窗[执行位=sg 值席]·v2 fallback 不触发·15:30 锚保底使命完成；评估卷：三条件终态全毕+排程表 15:30/17:50 行勘生效态；v3 卷：生效条件行勘已生效态[门消费面读树即得]·零新语义纯状态翻面
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 c7ab3adc 后新增 5 条 commit：
+  - 1df2114a docs(coo): CTO 挂载窗三影响注记四入卷——①d7693c6 置位断言 CTO 替跑全绿[FSD 照跑=双确认·S2 纯化]②probeA/B 双 200 不变③notifyFailures 7→0 验证形作废[7 基线随 08:39 重启物理归零·新锚=真闸恒 0+channel.log 痕迹]；勘记卷指针 b1323f31+8713 结构修候 10-11 窗族候编排注记[与 8711 复活+sgB 部署+black-formatter 复探并窗族]
+  - b1323f31 merge: 收编并行笔（值席/COO 线落盘防覆盖）
+  - a268a19e docs(cto): 8713 死因勘记——Modern Standby 待机转换控制台清理族（0xC000013A 实锚·三层证据互锁）+复发判定 11 次 revive 史=结构性非偶发+挂载窗三影响（修件已生效实锚/探针判据不变/notifyFailures 7 基线随重启作废·新锚恒 0）+结构修候排（daemon 去 console 绑定·与 R 面 8711 同族治理）
+  - 44d948a6 merge: 收编并行笔（值席落盘防覆盖）
+  - 64c8e5b2 docs(coo): 节拍件 allowlist 落位毕勘新——注记三勘落位态[BOD 09:49 报·trimlc-daemon-channel.cmd L25 字节面追加+CRLF 保形+行数断言过·09:48 落位赶上车点]+重启后动作序列入卷[BOD 面 POST bod-tick-30min→201→next_run 值面验证→双跑观察→撤会话 cron]+多 job 并存零冲突注记[与 FSD S1-S6 零冲突]·窗序六步零变化
+- registry：v2.1；今日 registry 提交无变化
