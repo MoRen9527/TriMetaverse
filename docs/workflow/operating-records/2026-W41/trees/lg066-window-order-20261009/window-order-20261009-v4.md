@@ -1,5 +1,7 @@
 # 窗令 v4（裁 A 改形·v3 修订形） · 10-09 17:50 施工窗 · 段2 取消·段1 验收绿=窗收口
 
+> **⛔ 本卷作废（BOD 10:47 勘正令·CEO 10:34 指正）**：本卷所承预排整包错误——LG-066 施工对象=河源 R-HY TriRMC（trirmc）非 sg TriMC，段2 不取消照 v3 全量跑。**窗令正身=v3**，本卷存档留史不执行；勘正留痕=裁决件 §四勘正节 @d00e6999·勘注卷=coo-v4-voided-restore-v3-20261009.md。值席勿按本卷施工。
+
 - sourceOfTruth: 本件（trees/lg066-window-order-20261009/window-order-20261009-v4.md）
 - syncMode: static
 - lastSyncedAt: 2026-10-09T10:30:21+08:00（date 现查原值·本席签发）
