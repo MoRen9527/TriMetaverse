@@ -1134,3 +1134,7 @@
   - a54741ef docs(coo): 10-11 深夜窗令勘正两栏现势（BOD 11:26 认账 PASS→11:30 勘正令 R1 撤）——8711=本机 R 面活体在跑[healthz ok·uptime 64h]复活伪命题·三栏改两栏·V2 裁词随对象废·窗框 22:30-01:00 硬锚不动·sg 值席链单段化换段缓冲取消·收口可提前 00:15-00:30·H2 待机预告+BOD 对偶确认收编·timeoutMs 裁量注收编·H4 巡检 10-18·河源 trilc-headless 定性勘件候 CTO 另呈挂账
   - 459e62f9 fix(fade): 节拍②段探针错位勘正（CEO 11:27 令）——TriRLC 8711=R面本地域=本机（活体实锚 healthz ok 64h uptime），探针从 ssh 河源 127.0.0.1:8711 改本机 fetch；河源只探 trirmc（服务域）；②段改四口表
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 fb2e2c98 后新增 2 条 commit：
+  - 537490a9 merge: 收编 sg dev 线（CTO 三勘卷等）——裁决件 48bccf1e 引用基线防悬空
+  - 48bccf1e docs(bod): 河源 trilc-headless 归宿裁决——裁②正式退役（归档注记形）——CTO 三选候裁闭合：判据活体实勘（TriRMC store 3 job 零 autonomy+journal 10-05 后零提及+停摆 8 天零感知）→恢复判据不满足/迁移无需求驱动；disabled 态不动·unit 与 /srv/fleet/TriLC 保留·物理退役候 RDT 规划再议；unit Description「TriRLC」字样=历史名残留防混注记（与 R 面本地域 8711 正身零涉）
+- registry：v2.1；今日 registry 提交无变化
