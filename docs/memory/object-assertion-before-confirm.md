@@ -2,8 +2,10 @@
 
 **教训（2026-10-09 LG-066 实证）**：BOD 10:26 知会错误框架（把 CEO 对 sg TriMMC 口位的裁 A 套到河源 TriRMC 段2 上——trirmc=R-HY 8.155.54.79 与 trimmc=M-SG 47.245.122.61 两机面被缝合），我 10:52 技术确认**未查施工对象是谁**，直接顺着框架推「段2 失去前提不执行」并给了技术背书→错误框架获 CTO 印章→10:41 滞后污染扩散至 A5 步骤单头部勘注笔（「段2 取消（TriMMC 留 sg 8712 现役）」）——CEO 10:34 指正后三处连环勘正。CEO 点名「你们经常把 trirmc 和 trimmc 搞错」=家族性。
 
-**正形**：接令确认/会签/复核准入前三问对象断言——①对象是谁（daemon 名/service 名逐字）②哪个机面（M-SG/R-HY/dev 本机·说河源=R面说sg=M面）③哪个仓（TriRMC 独立仓≠TriRLC 仓）。断言不齐先回询再确认，禁在未断言对象上推「同向强化/失去前提」类语义链。
+**正形**：接令确认/会签/复核准入前三问对象断言——①对象是谁（daemon 名/service 名逐字）②哪个机面（M-SG/R-HY/dev 本机·说河源=R面说sg=M面）③哪个仓（TriRMC 独立仓≠TriRLC 仓）④**正身现在哪台机上活着（活体断言先于历史考古）**。断言不齐先回询再确认，禁在未断言对象上推「同向强化/失去前提」类语义链。
 
-**识别信号**：确认对象与令文主语不同名（TriMMC≠TriRMC≠TriMLC≠TriRLC 四 daemon 名近亲）；端口号跨机面复用（8710/8712 两面各有语义，sg 面「8712→8710」与河源面「8712→8710」方向还相同=完美混淆温床）；「同向强化」结论找不到共同对象时的舒服感=红旗。
+**二犯（同日 11:0x）**：BOD 件③「河源 TriRLC 8711 死」框架本身含错（8711 正身=本机 dev 活着·uptime 64h），本席实勘河源发现形似件（trilc-headless.service·端口也配 8711）未验「正身在哪」即认领→复活稿+BOD 认账双过→CEO 勘正兜住。最痛一笔：**复活稿 §五 自书「8711=本地域（TriRLC）」与「河源复活对象」矛盾同页共存未起疑**——矛盾证据同页出现即停是硬纪律；考古发现的形似件≠令文对象（既有真源记忆条 dual-controller-ports 明写 8711=本地域=本机，失对表=根因）。R 面「本地域」语义=本机 dev 侧非河源——「R 面」修饰的是对端方向，「本地」修饰的是机位，两词连读必须拆解。
 
-**同族**：exec-order-time-crosscheck-discipline（时点维度交叉核对）——本条=对象维度，两条合用=接令确认双查。关联：trirmc-independent-repo-topology/m-sg-r-hy-server-naming/trimmc-mlc-addjob-divergence。
+**识别信号**：确认对象与令文主语不同名（TriMMC≠TriRMC≠TriMLC≠TriRLC 四 daemon 名近亲）；端口号跨机面复用（8710/8712 两面各有语义，sg 面「8712→8710」与河源面「8712→8710」方向还相同=完美混淆温床）；「同向强化」结论找不到共同对象时的舒服感=红旗；**自家稿面出现与令文对象矛盾的既有真源字样=最响警报**。
+
+**同族**：exec-order-time-crosscheck-discipline（时点维度交叉核对）——本条=对象维度，两条合用=接令确认双查。关联：trirmc-independent-repo-topology/m-sg-r-hy-server-naming/trimmc-mlc-addjob-divergence/dual-controller-ports-m-mlc-r-rlc（正身位真源）。
