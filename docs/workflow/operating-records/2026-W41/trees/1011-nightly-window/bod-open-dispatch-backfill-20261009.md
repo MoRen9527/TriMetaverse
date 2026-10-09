@@ -32,3 +32,11 @@
 - 窗框 22:30-01:00 硬锚；22:44 双带实开=窗偏 14 分；预计 00:15-00:30 收（sg 段单段+FSD 独立带并行）
 - 23:35 FSD 待机预告刻候收；23:45± H2 待机（~10min 本机全离线·BOD 会话同挂起·醒后读盘对表·拍延迟预期内非异常）
 - 段毕报链：sg 段→COO+CTO+pane 留尾；本机段 H1-H4 毕报→BOD 本通道
+
+## 五、本机段异常停位与 CEO 裁 A 案（22:50-22:5x）
+
+1. **异常实锚（FSD 22:50:33 停+报）**：S4U 任务注册在本会话权限面不可达——四条非交互路径全断（schtasks /np Access denied／COM RegisterTaskDefinition E_ACCESSDENIED／RunAs 弹 UAC 无人值守挂死风险未采用／WinRM 死循环）；gsudo 不在位。**定性=Windows 管理员授权墙，系统安全设计正确行为，AI 席面无解**。
+2. **停位干净度**：零改动（备份三件已落 %LOCALAPPDATA%\trimlc-s4u-migration-20261009\：旧任务 XML+watchdog.ps1+launch.vbs；watchdog 未改·daemon 未停·任务未动）。基线注记：jobCount 活体=10（H1 字面「8」系编排时点陈旧·实质判据照旧）；acOnline=false 电池 57%（施工环境注记）。
+3. **H2 待机预告撤单**：23:35 预告+23:45± 待机不触发（验证对象=S4U 后形态·施工未达待机无意义）——sg 值席侧预告无发无悬空。
+4. **候裁四案→CEO 22:5x 裁 A 案**（BOD 确认面）：现在授权——FSD 触发 UAC 弹窗，CEO 点确认，~15 分钟全毕（注册+拉起+H1+H3）；H2 待机专项另约窗。BOD 令达 FSD（回执 e4d6fdbe·22:5x），UAC 授权链启动。
+5. FSD 候裁 B/C/D 案随裁废（B=降级过渡态不解决根因/C=收窗改期/D=席面外通道不存在）。
