@@ -1044,3 +1044,7 @@
   - fb4724d7 docs(coo): 条件②晨窗中期实态勘新——树可达✓[sg 顶=acf3d2b0·fetch 链活]/值席会话不在位✗[断点=值席会话在位性非树路由·复活动作候 CEO 晨间定·涉 LG-065 交接正形]；排程双形备妥[v3 目标形+v2 fallback 保底]+v3 出令决策时点锚 15:30 候 BOD 采
   - 35e04aa3 docs(cto): X1 执行留痕入卷——BOD 03:57 裁后即办：R-HY 白名单 14→15 授权行（施工方向 mv 精确枚举），安全序备份→/tmp 拼→visudo -cf 绿→install 0440 原子落位→visudo -c 全量绿；双验证 fleet 同通道（放行 -l 形 allowed/越权 mv 拒/daemon-reload 存量通/计数 15）+生产零变更锚（双 unit active·unit 原地）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:20 +08：自上次进度提交 8ad71eda 后新增 2 条 commit：
+  - ed77c517 merge: 收编并行笔（值席落盘防覆盖）
+  - 40ed9522 docs(coo): BOD v3 认账勘新+Q2.3 执行位裁+A3/A4 终稿指针勘新——v3 卷：BOD 04:09 认账毕[生效条件①就位·仅余②]+Q2.3 本机残留动作位注记[值席停+通知→FSD 执行→回读续·本席 04:09 裁 FSD 问询]+步骤单终稿指针 84b5f9cc[syncMode=final 五项裁决全收编·窗内施工正形]；评估卷：A3 行勘终稿毕链[稿 b5082736→快核 5c90deaa→终稿 84b5f9cc]
+- registry：v2.1；今日 registry 提交无变化
