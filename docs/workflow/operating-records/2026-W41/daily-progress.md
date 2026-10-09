@@ -1194,3 +1194,12 @@
   - 60b56c34 Merge remote-tracking branch 'sg-server/dev' into dev
   - b52e17a7 docs(cto): LG-066 勘卷五度反转终态(重落笔·前笔 Edit 被并行席工作区操作冲回 c7cf01af 版——收编族第三形态实证·本笔压窗即提)——BOD 23:37 撤回其 23:33「零行=全绿」：l2.log 23:30:07Z ALERT-SENT 200 已落盘(两人读零行=write 延迟读空窗)；真态=l1 latch 未自解·l2 忠实中继·误报链 10min 照跑(扫尾 §四.1 维持)；调度面结论稳(LastRun 23:30:01 rc=0)；本席第五误判自认(log 缺席 write 延迟场景双向不可定谳·正解=statefile 值面或等终态轮·BOD 同踩并列)；插电仍候 CEO
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-10（周六）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @01:40 +08：自上次进度提交 e9b58ecb 后新增 4 条 commit：
+  - e0e3ff15 docs(disposal): trilc-headless 归档执行回执——unit 全文 verbatim 入树(源 sha256 19d8b4b16fb55179·R 面自治实验史唯一物证留痕)+归档时点现势复核(disabled/inactive 双零+真实进程 0〔ssh 自回声假阳判读注〕+8711 零监听);删除随窗可选未执行·禁原形复活红线知悉 @m-duty-cos
+  - e827b4cb docs(nightly): 补录段——COO 一字令阈值行 6→10 毕(L323 运行判据+L99 同源注释随改·备份续用今夜带累计 diff 5 行全证·AST_OK·三态复验全绿含 8712 阈值行零 WARN 消音达成;余 ALARM 池面登记态照令不动;补窗令面收口) @m-duty-cos
+  - f9e9cfd8 docs(lg): trilc-headless unit 处置定性卷——8月末 R 面自治实验载体残留定性（惰性/前改名期/未转正），裁=归档留痕优先+删除随窗可选+禁原形复活（复活走新名新 unit 立项）；R1 伪命题闭合采信 @m-duty-cto
+  - 8f1178b4 docs(nightly): 深夜补窗令三件毕报——扫尾批②③毕(L49/L194 运行行 8710→8712+L12 注释 6→10·diff 三行证·AST_OK·测试轮 8712 直读复活对端 8710 绿;发现 jobs=6 阈值行候令不自裁)+河源 trilc-headless 初勘(rmc-autonomy-001 8-25 遗留件·disabled·10-01 停机 9 天零复跑·惰性无害候 CTO 定性) @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
