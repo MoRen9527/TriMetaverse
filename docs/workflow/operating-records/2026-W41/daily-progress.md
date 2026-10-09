@@ -1081,3 +1081,8 @@
   - 44d948a6 merge: 收编并行笔（值席落盘防覆盖）
   - 64c8e5b2 docs(coo): 节拍件 allowlist 落位毕勘新——注记三勘落位态[BOD 09:49 报·trimlc-daemon-channel.cmd L25 字节面追加+CRLF 保形+行数断言过·09:48 落位赶上车点]+重启后动作序列入卷[BOD 面 POST bod-tick-30min→201→next_run 值面验证→双跑观察→撤会话 cron]+多 job 并存零冲突注记[与 FSD S1-S6 零冲突]·窗序六步零变化
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 fb7404a1 后新增 3 条 commit：
+  - cdd8c662 docs(coo): 挂载窗毕锚入卷——六步全绿 PASS 窗毕 10:06[窗框提前 84 分钟收·预检三查绿+S1 双确认+S2 冷起 pid 24164 随车 allowlist+S3 notifyFailures=0 新锚+S4 双 200 token_len=64+S5 绩效 job nextRun 10-11 21:00+08 正中+S6 联审 enable 翻真 PATCH recompute 明 12:00+08 正中]；毕报卷指针 4f2d3fb7+挂位链终态 8d0aa34b+窗内注记三条[端点勘正/MSYS 坑/F-3 族新形态候 CTO 归档]
+  - 4f2d3fb7 docs(fsd): 挂载窗毕报——10:00 六步全绿[绩效 job 挂载 201·nextRunAt=10-11 21:00+08 正中+联审 job enable 翻真·nextRunAt recompute 修正笔至 10-10 12:00+08+F-3 族伴生新形态实录]+8713 优雅重启 d7693c6[旧 pid 36444→新 pid 24164·uptime 重置·双 connected·power 全值面]+S4 双 200 PASS[token_len=64·probeA/B 双刻]+端点勘正笔[/api/cron/jobs→/internal/v1/cron/jobs 正形]+冷起通道注记[Start-ScheduledTask 正形·MSYS /run 毁参坑记录]
+  - 47a5b616 docs(cfo): W41 日报 10-09 09:30 锚——周窗 14%（对表✓）三线零触发；同锚跨日对未成立（昨日缺锚·LG-069）首对候明日；raw 10-08=440M 显著回落；5h 窗 7% 零 watch
+- registry：v2.1；今日 registry 提交无变化
