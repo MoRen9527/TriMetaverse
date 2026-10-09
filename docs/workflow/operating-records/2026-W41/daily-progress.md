@@ -1063,3 +1063,9 @@
   - bf9bae34 merge: 收编并行笔（值席落盘防覆盖）
   - 39cdb46b docs(coo): 条件②现势刷新勘新+④步判据勘定闭环勘新——评估卷：BOD 08:29 刷新勘正入卷[假阴性勘正·m-duty-cos 在役未死 10-03 起 tmux 在册·root 视角查 fleet 域 tmux 不可见]+值席开跑试水双件[执行段已通·全链绿候 sgA/sgB 回卷·v3 生效链候回卷一件·认账已毕]；排程卷：sg power-gate 件提前落位[CEO 08:14 令·CTO 08:26 毕报 @f5559cee 端到端 200]→CTO 08:27 判据勘定[双 200=PASS·任一 403/400 异常停报·命令单 @9ac5b647 随勘落卷]→08:30 转 FSD 挂位换芯[09:57 前毕]——403 中间态注记全链退役
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 9ea8267e 后新增 4 条 commit：
+  - 2c147c1f merge+docs(board): 收编 bare 线（值席翻态/回卷/v3 窗令正形/巡检兜底笔）+试水树顶层 status 翻 done（认账 fb083499 延伸收口）
+  - bac1035d Merge remote-tracking branch 'origin/dev' into wt/board
+  - fb083499 docs(board): sg 试水双件 BOD 认账落卷——SGA-1/sgB-1 双 PASS·条件②绿·v3 正式生效（15:30 锚保底完成使命）；sgB 修复分级转 CTO 候排+场外五 .bak 录卷转 owner 面；拾取触发=形态一·自动拾取环维持观察项
+  - a3c75bc5 docs(board): sg 试水树 notes 勘正——值席「未起」判定=假阴性（root 视角漏 fleet 用户域 tmux），COS 毕报实证在役未死已接令开跑；直派触发=形态一，自动拾取环维持观察项
+- registry：v2.1；今日 registry 提交无变化
