@@ -1,8 +1,8 @@
 # TriMLC 8713 daemon 形态治理方案稿（去 console 生命周期绑定）
 
 - sourceOfTruth: 本件（docs/execution/trimlc-daemon-hardening-plan-20261009.md）
-- syncMode: draft（候 BOD 认账·10-11 周日窗族施工）
-- lastSyncedAt: 2026-10-09T10:32:00+08:00（date 现查原值）
+- syncMode: final（BOD 认账 PASS·10:4x 批注三点收编勘新）
+- lastSyncedAt: 2026-10-09T10:47:00+08:00（date 现查原值）
 - 死因勘正身: docs/workflow/operating-records/2026-W41/trees/lg066-window-order-20261009/cto-8713-death-cause-20261009.md @b1323f31
 - 并窗件: ①TriMLC cron enable recompute 缺陷修复（F-3 家族第三形态·挂载窗 S6 发现·一次重启带两修）②R 面 8711 复活（R1 窗另稿·同族治理对照）
 
@@ -41,7 +41,7 @@
 | 门 | 判据 | 验形 |
 | --- | --- | --- |
 | H1 | 重启换形后 healthz 绿+8713 监听 pid 一致+cron jobCount=8 照旧 | 读数贴毕报 |
-| H2 | **待机-恢复存活专项**：窗内人为触发一次待机→恢复→断言 8713 进程同一 pid 存活+watchdog.log 零新 DOWN | 窗内实测·本方案核心门 |
+| H2 | **待机-恢复存活专项**：窗内人为触发一次待机→恢复→断言 ①8713 进程同一 pid 存活+watchdog.log 零新 DOWN ②**隧道 keeper（sg-trimc-tunnel）自愈+8712 经隧道 18710 探针可达**（BOD 批注①·待机杀面可能不止 console 进程族·keeper 同为 HKCU Run 自启形态顺手一探免二次窗） | 窗内实测·本方案核心门 |
 | H3 | 通知链回归：probeA/B 双 200（挂载窗同款命令单）+notifyFailures 恒 0 | 双刻读数 |
 | H4 | 7 天自然观察：watchdog.log 零 DOWN→revive 新笔（对照史 11 次/14 天基线） | 10-18 收口巡检 |
 
@@ -63,6 +63,9 @@
 - 窗位：10-11 周日窗族**本机段**（R1 窗前后·与 sg 段 TriMMC 修复分机分带）·正式排定走 COO 面。
 - 施工位：FSD（本机）·复核位：CTO·值席知情：BOD。
 - 并件同窗：cron enable recompute 修复（FSD 裁量已并·改码+单测同批）。
+- **回卷要求（BOD 批注③）**：施工毕 H1-H3 读数贴毕报 BOD 面；H4 挂 10-18 巡检候办。
+- **预期注记（BOD 批注③）**：换形重启窗内 daemon cron 节拍会空拍（cron_mv0bvbzc_ir5r 随 store 持久·恢复即续）——预期内不算异常。
+- **S4U 兼容预判（BOD 批注②）**：daemon 链上 ssh 全 key 认证（bod-tick-runner 至 sg/河源）+HTTP 本地·无交互凭据依赖——S4U 会话兼容成立·H1 全值面探针兜底。
 
 ## 使用依据
 
