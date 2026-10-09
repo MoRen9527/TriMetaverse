@@ -62,6 +62,7 @@
 1. 部署=TriCompany 仓拉 `fsd-sgb-fix-20261009` @1713614→`npm run build`（packages/agent-core）→TriMMC 侧 npm install（file: 依赖重链）→重启 TriMMC daemon（窗内照 restart 清单纪律）。
 2. 完工判据（进程内生效验证）：制造一次 stale 场景（手写 store runningAtMs=过去 1h）→重启后下 tick warn+job 恢复调度——或以 G1 案 1 同构活体验证。
 3. GitHub 腿恢复后补推分支（sg bare 已为权威·fsd-sgb-fix-20261009@1713614）。
+4. **门禁第四条（CTO 复核裁量·2026-10-09 10:41 信·时序=值席施工前必做）**：对表 sg 面 jobs.json 现役 10 job 的 `timeoutMs` 全谱 vs `staleRunningMs=20min`（默认=TriMMC DEFAULT_JOB_TIMEOUT_MS 10min×2）——全 ≤10min 则默认值覆盖无忧；有 >10min 者**部署窗当场调 `staleRunningMs=该最大值×2`**（packages/agent-core 再 build 一次后 install）。机理注：合法长跑 job 的 runningAtMs 存活上限≈其 timeoutMs，stale 阈值须对最大 timeout 留 ×2 slack，否则真在跑的长 job 会被锚 1 误清。
 
 ## 使用依据
 
