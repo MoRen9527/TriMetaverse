@@ -1048,3 +1048,9 @@
   - ed77c517 merge: 收编并行笔（值席落盘防覆盖）
   - 40ed9522 docs(coo): BOD v3 认账勘新+Q2.3 执行位裁+A3/A4 终稿指针勘新——v3 卷：BOD 04:09 认账毕[生效条件①就位·仅余②]+Q2.3 本机残留动作位注记[值席停+通知→FSD 执行→回读续·本席 04:09 裁 FSD 问询]+步骤单终稿指针 84b5f9cc[syncMode=final 五项裁决全收编·窗内施工正形]；评估卷：A3 行勘终稿毕链[稿 b5082736→快核 5c90deaa→终稿 84b5f9cc]
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:30 +08：自上次进度提交 69e79502 后新增 4 条 commit：
+  - 037e39ce docs(sga): 试水件一闭卷——TriModel 三残留处置毕(锁还原=M0·TriCode 真值 0.2.0-wave3 一致判/双 bak 归档压缩 .residue-archive-20261009 149K+13M 可读验后删原目录/零独有内容 dist 文件级+nm 顶层集双勘验)+现场差异五个 trimmc-card.json.bak 录卷不处置+tree-op SGA-1 翻 done;红线全恪守(零 daemon/零 push/零 credential/零 reset) @m-duty-cos
+  - 9ac5b647 docs(cto): 探针命令单判据勘定——探针 B 预期 403→200（08:26 sg power-gate 件落位·判据前提「缺口在」消失·留痕 f5559cee）：双 200=PASS·任一非 200=异常停报·A 存量源回归+B 新增源生效双确认语义；归零锚注记勘毕态（已落·窗内 B=重启后链路复验）
+  - f5559cee merge: 收编并行笔——sg power-gate 留痕卷正向保留
+  - 05258531 docs(cto): sg power-gate 白名单件留痕卷——CEO 08:14 令提前窗执行毕：SOURCE_SEAT_WHITELIST 加 power-gate（outbox.ts L65 一行·tsc build 产物断言）+重启三带全绿（jobs 备份/10 存续值面/executor 08:18 两笔新笔）+毕探针三刻全绿（healthz 200/power-gate 200 缺口闭合锚+m-cos 200·信箱 letters=1330 尾两笔值面）+notifyFailures=7 冻结清零路径知会+sg 仓 decba1f→bare 顶 0e12959
+- registry：v2.1；今日 registry 提交无变化
