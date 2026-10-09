@@ -1,9 +1,11 @@
 # TriRLC 8711 复活方案稿（R 面 trilc-headless.service 恢复性两步）
 
+> **【FROZEN·施工资格撤销 11:3x】** CEO 11:27 勘正：**TriRLC 8711=R 面本地域 daemon（本机 dev 侧）·正身活着无需复活**（127.0.0.1:8711 healthz ok·10-06 19:04 起·schtasks+watchdog 双保活）——本稿的「河源 trilc-headless 复活」对象错位（河源 trilc-headless=服务域伴生件·定性另卷候裁，见 trees/lg066-window-order-20261009/cto-8711-object-forensics-20261009.md）。10-11 窗族 R1 栏撤（COO 同刻）。本稿留档作对象断言教训正身（稿面 §五 自书「8711=本地域」矛盾证据未起疑=教训条实证），禁照本稿施工。
+
 - sourceOfTruth: 本件（docs/execution/trirlc-8711-revival-plan-20261009.md）
-- syncMode: final（BOD 认账 PASS·11:19 回信三点批注收编）
-- lastSyncedAt: 2026-10-09T11:20:11+08:00（date 现查原值）
-- 死因考古身: 本件 §一（河源活体现探 11:01-11:05·root 通道只读）
+- syncMode: frozen（原 final @c7ff3198·BOD 11:30 勘正令撤施工资格·留档不执行）
+- lastSyncedAt: 2026-10-09T11:20:11+08:00（date 现查原值·终笔=撤资标注）
+- 死因考古身: 本件 §一（河源活体现探 11:01-11:05·root 通道只读——**考古对象实为河源伴生件非 8711 正身**，读数本身仍真，归属判读随定性卷勘正）
 - 并窗件: 本机 8713 结构修稿（trimlc-daemon-hardening-plan-20261009.md·同族 daemon 形态治理对照）；与 R-HY 401 pull_denied 同域不同因（401=token 门，本件=unit 停用）
 
 ## 一、死因与现态（考古实锚·含 BOD 件③表述勘正）

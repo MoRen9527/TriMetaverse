@@ -129,13 +129,16 @@ const probes = {};
   }
 }
 
-// ③ 河源 8711 + trirmc
+// ③ 本机 8711（TriRLC·R面本地域·11:27 CEO 勘正后改位）+ 河源 trirmc（服务域）
 {
-  const r = ssh(
-    RHY,
-    `echo 'r8711:'$(curl -s -m 4 -w '%{http_code}' -o /dev/null http://127.0.0.1:8711/healthz); echo 'trirmc:'$(systemctl is-active trirmc 2>/dev/null)`,
-    30000,
-  );
+  try {
+    const r = await fetch('http://127.0.0.1:8711/healthz', { signal: AbortSignal.timeout(6000) });
+    const j = await r.json();
+    probes.rlc = `ok=${j.ok} uptime_h=${Math.round((j.uptime || 0) / 3600)} cron=${j.cron?.jobCount ?? '?'} mc_link=${j.mc_link}`;
+  } catch (e) {
+    probes.rlc = `探针失败: ${String(e).slice(0, 120)}`;
+  }
+  const r = ssh(RHY, `echo 'trirmc:'$(systemctl is-active trirmc 2>/dev/null)`, 30000);
   probes.rhy = r.ok ? r.out.replace(/\n/g, ' | ') : `ssh 失败: ${r.err}`;
 }
 
@@ -167,8 +170,9 @@ L.push('');
 L.push(`**⓪ 全席现态**：${totalBusy > 0 ? `**非空闲·${totalBusy} 席在干活**` : '全席空闲'}——${dutyLine}；${localLine}（附注）`);
 L.push('');
 L.push(`**① 双树**：sg 试水树=done 收口（认账毕）；LG-066=v3 生效态候 17:50 窗`);
-L.push(`**② 三链**：8713 ${probes.mlc}`);
-L.push(`　　TriRMC/TriRLC（河源）：${probes.rhy}`);
+L.push(`**② 四口**：8713 TriMLC ${probes.mlc}`);
+L.push(`　　8711 TriRLC（本机·R面本地域）：${probes.rlc}`);
+L.push(`　　河源 TriRMC（服务域）：${probes.rhy}`);
 L.push(`**③ MMC**：${probes.mmc}`);
 L.push(`**④ 大表**：${probes.board}`);
 L.push(`**⑤ 卡什么**：（daemon 版无信件面，事件面以拍报差异与本机席转录为准）`);
