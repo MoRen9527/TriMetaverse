@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/stopwork-drill-20261009/coo-schedule-adjust-and-drill-chain-plan-20261009.md）
 - syncMode: rolling（14:00 分发/回执/18:00 复工实锚随链回写）
-- lastSyncedAt: 2026-10-09T09:43:33+08:00（date 现查原值·**节拍件搭窗报备收编**（BOD 09:41 报备·CEO 09:39 令）：BOD 节拍体系迁 8713 daemon cron——allowlist 追加+重启生效**搭 10:00 挂载窗车**[②步重启随车带出·零额外重启窗]·窗序零变化·注记三入卷；另 v3 正式生效 09:38[条件②绿·评估卷/v3 卷终态已勘]）
+- lastSyncedAt: 2026-10-09T09:50:03+08:00（date 现查原值·**节拍件搭窗·allowlist 已落位赶上车点**（BOD 09:49）：trimlc-daemon-channel.cmd L25 字节面追加+CRLF 保形+行数断言过 09:48 落位毕——②步重启照常带新 env·窗序零变化；重启后动作序列=BOD 面[POST bod-tick-30min·cron 7,37 上海时区→201→next_run 值面验证→双跑 1-2 拍→撤会话 cron 收口]）
 - 令源: BOD 00:37:2x 令（CEO 00:36 令）两条；执行位: COO（令链落地执行位·演练验的就是本段）
 - CFO 任务书: 已由 BOD 直发 CFO（时段门挂接+演练序五验收锚）——本席只承接令链落地与排工调整面
 
@@ -23,7 +23,7 @@
    - ⑥联审 job enable 翻真
    - **如实注记一（08:3x 定版毕·原 403 中间态注记全链退役）**：source_seat 'power-gate' 白名单件已提前落位毕（CEO 08:14 令提前窗·CTO 08:26 毕报全绿：SOURCE_SEAT_WHITELIST 加 power-gate+trimc 重启+端到端实测 200+信箱落盘实证·留痕 cto-sg-powergate-whitelist-20261009.md @f5559cee）→④步探针 B 判据随缺口闭合勘 403→**200**（CTO 08:27 勘定回点）→FSD 换芯两轮定版：cd962747[08:32·按 @9ac5b647]→**d37091a1**[08:3x·按 **@e138d8da** P3 补勘零残留定版·同刻 09:57]——**挂位定版·probeB=403 旧形作废勿用·此后候窗静默**。
    - **如实注记二（R-1 过夜·CTO 快核卷 §二附注 @5c90deaa）**：若窗收过夜=8710 暗窗过夜，夜航探 8710 **预期红=暗窗非故障**，防误报刷屏。
-   - **如实注记三（节拍件搭窗·BOD 09:41 报备·CEO 09:39 令·窗序零变化）**：BOD 节拍体系迁 8713 daemon cron（节拍 job=8713 cron 首个 job）——command 白名单追加系启动 env·**搭②步 8713 优雅重启随车带出·零额外重启窗**；allowlist 追加落位节奏=BOD 面在办（**须在②重启前落位方搭上车**·过点则另排重启窗）；重启后 8713 cron 出现 bod-tick 节拍 job 属**预期非异常**（FSD 判读勿误报）·拍报落盘 operating-records/trees/bod-tick/（BOD 稳定路径）。节拍件施工/挂载归 BOD 面·窗序六步本体零变化。
+   - **如实注记三（节拍件搭窗·BOD 09:41 报备·CEO 09:39 令·窗序零变化·09:50 勘落位毕态）**：BOD 节拍体系迁 8713 daemon cron（节拍 job=8713 cron 首个 job）——command 白名单追加系启动 env·**搭②步 8713 优雅重启随车带出·零额外重启窗**；**allowlist 追加已 09:48 落位毕**（trimlc-daemon-channel.cmd L25 字节面追加+CRLF 保形+行数断言过·赶上车点）——②重启照常带新 env；**重启后动作序列=BOD 面**：POST /internal/v1/cron/jobs[name=bod-tick-30min·cron 7,37 \* \* \* \* 上海时区]→预期 201→**next_run 值面验证**（F-3 已修值面照验）→与会话节拍双跑 1-2 拍观察→撤会话 cron 收口；重启后 8713 cron 出现 bod-tick 节拍 job 属**预期非异常**（FSD 判读勿误报）·拍报落盘 operating-records/<周>/trees/bod-tick/。节拍件施工/挂载归 BOD 面·窗序六步本体零变化·与 FSD S1-S6 零冲突（8713 cron 多 job 并存）。
 
 ## 二、演练落地链预案（②令·14:00 触发）
 
