@@ -93,3 +93,4 @@
 - [共享 JSON 账本写法纪律](shared-json-ledger-write-discipline.md) — 禁 Edit 文本行插入改账本（锚含邻条开头行忘补回=吞行断链，9f6b1bd4 坏形入库三小时实证）；正形=load→改→dump 全程解析+commit 前 json.load 断言一行；同窗多席双写竞争写前 fetch 写后速推（COS dd7bca7f 修复实证）
 - [「未发生」定性必穷尽事件日志+等终态](negation-claim-needs-exhaustive-event-log.md) — 闸态类「X 未发生」定性前两道必做：事件日志反向关键词搜索（定性「硬闸未触发」前必搜 gate-hard）+防抖确认窗终态等待（瞬态探针读数禁作终态定性）；BOD+STE 双实证 2026-10-08 LG-069 夜（gate-hard(18) 铁证在 channel.log，两席均误判「未触发」）
 - [并行窗提交互踩族](parallel-window-commit-interference.md) — 两向机理两正形：merge 倒退合并丢笔（收编笔旧文本覆盖新版本）=正向追加复原笔+丢笔注记入卷禁 revert；add 后 commit 撞 ref 推进失败暂存件滞留 index 被他人笔顺带收编（署名错位内容零损）=empty commit 归属勘正；预防=add-commit 窗压最短+失败即重试+porcelain 见他人暂存项先协调（2026-10-09 STE 双案 6ccfe545/b006ef71 实证）
+- [接令确认先做对象断言](object-assertion-before-confirm.md) — 错误框架经我确认获技术背书=传染二传手（BOD 误套裁 A→CTO 未查对象确认「段2 失去前提」→污染扩散至 A5 勘注笔三处连环勘正，2026-10-09 实证）；准入前三问对象断言（daemon 名逐字/机面 M-SG·R-HY·dev/独立仓）；8710/8712 跨机面复用+同向迁移=完美混淆温床；与 exec-order-time-crosscheck-discipline（时点维度）合用=接令双查
