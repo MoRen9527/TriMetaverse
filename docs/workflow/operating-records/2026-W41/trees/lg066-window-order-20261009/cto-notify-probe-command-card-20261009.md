@@ -27,10 +27,10 @@ curl -sS -o /dev/null -w 'probeA=%{http_code}\n' -X POST http://127.0.0.1:18710/
   -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
   -d '{"source_seat":"m-cos","target_daemon":"trimlc","target_seat":"bod","title":"[PROBE] LG-069 挂载窗探针A","body":"notify chain probe after d7693c6","urgent":"normal"}'
 
-# P3 探针 B：power-gate 源如实中间态（预期 403；零副作用=sg 拒收无写面）
+# P3 探针 B：power-gate 源新增生效实证（预期 200·08:26 勘定·重启后链路复验）
 curl -sS -o /dev/null -w 'probeB=%{http_code}\n' -X POST http://127.0.0.1:18710/internal/v1/notify \
   -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
-  -d '{"source_seat":"power-gate","target_daemon":"trimlc","target_seat":"bod","title":"[PROBE] LG-069 挂载窗探针B","body":"whitelist gap expected 403","urgent":"normal"}'
+  -d '{"source_seat":"power-gate","target_daemon":"trimlc","target_seat":"bod","title":"[PROBE] LG-069 挂载窗探针B","body":"power-gate source live check after 8713 restart","urgent":"normal"}'
 
 # P4 清变量收尾
 unset TOKEN
