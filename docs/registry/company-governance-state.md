@@ -6,7 +6,7 @@
 - publishedFrom: 当前文件（source）
 - syncMode: source-only
 - publishTier: source-only
-- lastSyncedAt: 2026-09-11（⑤e 叙事裁定登记节+模块标配节八件套修订，LG-034 阶段 1）
+- lastSyncedAt: 2026-10-09（公司级文档规则节增「制度件归域规则」指针条=CEO 令归域裁决回写；前账 2026-09-11=⑤e 叙事裁定登记节+模块标配节八件套修订，LG-034 阶段 1）
 
 ## Registry 职责
 
@@ -44,6 +44,7 @@
   3. 对外发布、国际化、双语教程、英文 prompt / agent frontmatter 等确有目标读者或宿主格式要求的内容。
   4. 需要与第三方工具、协议、SDK、模型平台或文档规范保持英文一致的技术材料。
 - 若同一文档同时面向内部治理和外部英文读者，应至少保证中文主说明完整，英文内容作为对照、引用或附录存在。
+- **制度件归域规则（CEO 令 2026-10-09 00:28，归属裁决回写指针）**：凡纪律正身/流程规范/治理规则类文档，正身位统一归 CAO 纪律册域；脚本/代码可住施工仓，其纪律面正身归 CAO 域，施工仓只留执行实例与指针。规则正身=`TriCompany/docs/workflow/engineering-disciplines.md` 附录·制度件归域规则节（判据+归属边界+首例适用全在该节），本行系指针防双写。
 
 ## 公司级状态术语
 
@@ -134,6 +135,7 @@
 - 这条规则**不改变** `vendor/` 作为冻结基线、需要被版本控制和审计的事实；已有受治理的 vendor 文件继续受 git 跟踪，后续有意升级 vendor 快照时，由对应 owner 显式纳入提交。
 - `vendor/` 默认不进入模块主 `CodeGraph`；只有在开源吸收、差异拆解、adapter 映射或 schema 对照等专项任务下，才临时纳入 vendor 视图。
 - `TriCompany-host-assets/vendor/` 不属于模块真源 `vendor/`；它只允许保留从源侧发布过来的冻结 `reference` 副本或当前宿主验证辅助代码，不得演化成 support 侧独立研发面。
+- **宿主资产副本卫生（2026-09-19 升格明文；LG-035 认知层落点归一联审第三棵树根因条）**：任何宿主资产复制（含 `TriCompany-host-assets/` 全域及其嵌套副本）**须走发布管线留痕**（发布 commit+manifest 登记），禁手工拷贝散落——手工散落副本=真源漂移与多树并存的结构性根因；副本与真源漂移时以真源为准追平，追平须留甄别清单（副本内无源对应物项→死层候选归档，判据照归档治理）。
 - 新增正式模块时，`Discovery` 阶段的 `NewModuleBaselineRelease` 必须带上 `vendor-extraction-profile`，最少包含 source、version anchor、subpath 映射、patch 策略、回滚点与 license / 审计说明。
 
 ## Git Health 与本地提交治理规则

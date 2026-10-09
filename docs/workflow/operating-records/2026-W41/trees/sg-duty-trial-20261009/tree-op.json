@@ -11,14 +11,18 @@
     {
       "nodeId": "SGA-1",
       "agent": "duty-cos",
-      "status": "open",
-      "action": "拾取 task-charter-sgA-trimodel-residue-hygiene-20261009.md 照单执行：/srv/fleet/TriModel 三残留（package-lock.json M+两个 09-28 .bak 目录）逐一处置+回卷 sgA-closure-report-20261009.md 落本树目录；边界照任务书红线（禁动生产 daemon/禁 push/禁 credential 面）"
+      "status": "done",
+      "action": "拾取 task-charter-sgA-trimodel-residue-hygiene-20261009.md 照单执行：/srv/fleet/TriModel 三残留（package-lock.json M+两个 09-28 .bak 目录）逐一处置+回卷 sgA-closure-report-20261009.md 落本树目录；边界照任务书红线（禁动生产 daemon/禁 push/禁 credential 面）",
+      "closedAt": "2026-10-09T00:30:00Z",
+      "closure": "三残留处置毕（锁还原=M0 真值一致判/双 bak 归档压缩 .residue-archive-20261009 后删原目录/零独有内容双勘验）；回卷 sgA-closure-report-20261009.md 落树；现场差异五个 trimmc-card.json.bak 文件录卷不处置"
     },
     {
       "nodeId": "SGB-1",
       "agent": "duty-fsd",
-      "status": "open",
-      "action": "拾取 task-charter-sgB-trimmc-executor-rootcause-20261009.md 照单执行：TriMMC executor「调度活执行停」家族缺陷根因勘（活体取证先行+src/cron 十文件走读+10-01/10-02 实录对表）+回卷 sgB-rootcause-report-20261009.md 落本树目录；只勘不修，日志 tail 前必滤 token 行，root 操作后清点归还"
+      "status": "done",
+      "action": "拾取 task-charter-sgB-trimmc-executor-rootcause-20261009.md 照单执行：TriMMC executor「调度活执行停」家族缺陷根因勘（活体取证先行+src/cron 十文件走读+10-01/10-02 实录对表）+回卷 sgB-rootcause-report-20261009.md 落本树目录；只勘不修，日志 tail 前必滤 token 行，root 操作后清点归还",
+      "closedAt": "2026-10-09T00:37:22Z",
+      "closure": "回卷 f3651027 落树（值席验物：卷实体在树+commit 在 dev）。根因一句话=401 池窗 bod-progress-report(ae02593a) 10-02 05:20 空壳跑后 runningAtMs 置位未清+executor tick already-running 过滤(job-executor.ts:97)致独享停摆 66h，10-05 02:15 随 TriModel 链恢复自愈（非重启）；缺口本体=runningAtMs 运行中无守卫(service.ts:102 仅 start 清)。修复分级六项三档随卷；红线四条全守。候 BOD 认账转 CTO 面排修"
     }
   ],
   "acceptance": "两回卷文件落树+两节点 status 翻 done+值席回报候 BOD 认账；回卷质量纳入试水评估",
