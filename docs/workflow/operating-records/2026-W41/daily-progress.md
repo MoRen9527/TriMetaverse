@@ -1086,3 +1086,9 @@
   - 4f2d3fb7 docs(fsd): 挂载窗毕报——10:00 六步全绿[绩效 job 挂载 201·nextRunAt=10-11 21:00+08 正中+联审 job enable 翻真·nextRunAt recompute 修正笔至 10-10 12:00+08+F-3 族伴生新形态实录]+8713 优雅重启 d7693c6[旧 pid 36444→新 pid 24164·uptime 重置·双 connected·power 全值面]+S4 双 200 PASS[token_len=64·probeA/B 双刻]+端点勘正笔[/api/cron/jobs→/internal/v1/cron/jobs 正形]+冷起通道注记[Start-ScheduledTask 正形·MSYS /run 毁参坑记录]
   - 47a5b616 docs(cfo): W41 日报 10-09 09:30 锚——周窗 14%（对表✓）三线零触发；同锚跨日对未成立（昨日缺锚·LG-069）首对候明日；raw 10-08=440M 显著回落；5h 窗 7% 零 watch
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:20 +08：自上次进度提交 b36fdb5d 后新增 4 条 commit：
+  - 8a9381d2 docs(cto): TriMLC 8713 daemon 形态治理方案稿——S4U 非交互计划任务形两入口合一（TriMLC Daemon 任务重注册+watchdog revive 改 Start-ScheduledTask）+门判据 H1-H4（待机-恢复存活专项=核心门）+回滚两文件链+并窗件 cron enable recompute 修复
+  - ffa9c748 docs(cto): sgB 修复方案稿——立即修 2 锚（stale-runningAtMs tick 守卫×2 裕度+executeJob finally 兜底 settle 完备·双层任一独立生效）+技术门 G1-G4+10-11 窗族 sg 段部署工序+排窗/候批 2+2 裁量意见（并发化维持候批立独立稿入技术债组合）
+  - 0833da76 merge: 收编并行笔（二）
+  - 98c4187c docs(cto): 五 .bak 定性销案——TriModel Config Plane 写卡轮转机制设计行为（pid 2518071=trimodel-config.service LG-035 P3-sg·15 分钟节拍·深度 5·现役在写）+归域勘正（写面 owner=TriModel 面非 TriMMC·卡名 trimmc 字样误导）+卫生候办转 owner
+- registry：v2.1；今日 registry 提交无变化
