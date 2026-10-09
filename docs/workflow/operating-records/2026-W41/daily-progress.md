@@ -1109,3 +1109,11 @@
   - 39c2fba4 docs(fsd): sgB 备码毕报卷补部署窗门禁第四条（CTO 10:41 复核裁量）——值席施工前对表 jobs.json 现役 10 job timeoutMs 全谱 vs staleRunningMs=20min·有 >10min 者当场调该最大值×2 再 build·含误清机理注（合法长跑 runningAtMs 存活上限≈timeoutMs·阈值须留 ×2 slack）
   - 5f0600c3 docs(ste): A5 v4 勘注归属勘正（empty 记账笔·零文件改动）——上笔 6ccfe545（COO S3 候选卷勘注）stat 中 ste-a5-probe-commands +3-2 两处修改（头部 v4 适用面收窄勘注行+状态行勘新+lastSyncedAt）实为 STE 本席 10:41 工作区写入经共享 index 并行窗顺带入库，非 COO 手笔；内容面与 6b3e7568 命令形零差异仅头部勘注，v4 链声明 @6b3e7568 引用语义不变；共享 index add-commit 窗口期残留暂存件被他人 commit 收编=署名错位族实证，教训候记
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:10 +08：自上次进度提交 13a0af77 后新增 6 条 commit：
+  - 5439b258 merge: 收编并行笔（值席落盘防覆盖）
+  - 22fd1090 docs(cto): 8711 复活方案稿（R 面 trilc-headless 恢复性两步 enable+start）——死因考古实锚=10-01 10:42:07 人工 SIGTERM 停机+disabled·与 10-04 TriRMC 修复既录同波操作·trilc-headless 系修复轮漏网件；BOD 件③「无 unit」勘正=unit 在但 disabled（Restart=always 保活定义在随 disable 失效）；复活≠升级分离（dist 8-27 原样拉起·仓顶追平挂升级候办）；门 V1-V4（NRestarts=0/store 存量对表/F-3 next_run_at 活体验证/72h 观察）；候 BOD 认账+COO 排窗 R1 段
+  - 43eb71da feat(fade): BOD 半小时节拍 daemon 化执行体 bod-tick-runner.mjs——五段探针+13 席全席现态段（CEO 10:34 令）+拍报落盘；附首日拍报存档（daemon cron cron_mv0bvbzc_ir5r 挂载 8713·首跑 10:40:20 ok）
+  - 8f6677ab docs(memory): 镜像面 7 件收口——幻觉时点条双变体（CTO UTC 换算/COO 卷信时源分化）+对象断言前置新条（CTO 提请）+拓扑/截断/值面/落点四条勘补
+  - f2000e57 docs(ste): A5 卷勘回 v3 正身——执行 BOD 10:47 勘正令[CEO 10:34 指正·勘注卷 266e16c6]：LG-066 对象=河源 TriRMC 非 sg TriMC，v4 作废→10:41 收窄勘注标〔已作废〕留卷+勘回注记（段2 六件恢复执行/P2-1 8712 空置并轨 72h 恢复在册/R-1 过夜注记按 v3 原语义·8710=段2 迁移目标口回滚后暗窗面）+状态行勘 v3 恢复正身态+STE 72h 挂账恢复；命令形自 v2 起即为河源对象零触碰
+  - c22f704f docs(memory): 镜像面 3 件收口——m-plane-duty-workspace-design/parallel-window-commit-interference/trimetaverse-dual-pushurl-topology（COO 交接滞留暂存件·FUZZY-TS 门判据现跑零命中过门）
+- registry：v2.1；今日 registry 提交无变化
