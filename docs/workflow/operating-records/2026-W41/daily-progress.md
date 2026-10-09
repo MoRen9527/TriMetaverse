@@ -1190,3 +1190,7 @@
   - 44935d69 docs(coo): LG-066 收口跟踪卷·Q3.2 落定+bare 观察项销项+电池盲区裁①执行毕收编——Q3.2 窗 10-10 16:30-17:30 正式落定[双件齐 23:2x=BOD 采认+CTO 工量 ≤1h 回点·排队顺延 10-11 缓冲口径随窗]；bare 拒闭案 BOD 23:28 定性终版[44 项 root 属主残留雷潜伏早于 23:00·前缀撞坏槽位爆 EACCES·「瞬时自愈疑竞态」作废·观察项销项·周日 23:00 迁移链依赖面健康]；电池盲区裁① FSD 23:24 执行毕[l1 15:25:14Z 全绿首读 latch 疑自解+l2 23:30:07Z 电池态真跑 200 验证绿·本席代收·statefile 滞后观察注记]；电池 29% FSD 23:32 按 25% 兜底令收工·值席窗收口缺席预期知情
   - 00de0b3d docs(fsd): 本机段 8713 S4U 换形毕报——五实锚全齐·H1/H3 全绿：S4U 注册态（LogonType=S4U·22:55:56 拉起·LastResult 267009 运行中·XML 电池安全旗 false/false）+pid 17936 三面对表+session-0 非交互（console 绑定根治实锚）+起点双旁证钉死（uptime 1138s 原点≈22:56:07↔LastRun 22:55:56 互洽·StartTime 不可读=session-0 属性伪影定性）+H1 healthz 全绿 jobCount=10 照旧（BOD 已勘认编排陈旧）+H3 probeA/B 双 200 notifyFailures=0·backup 六件在挂未触发·watchdog L87 改造未做候裁·TriMLC-Watchdog 复位在位零误 revive·随程新发现 l1/l2 电池盲区实锚（AC 断 21:40-45 窗·电池条件静默跳过非任务死·95min 熄灯零自警·硬证据 23:15 急呈防误判分支）→BOD 23:20 裁①已执行毕（DisallowStartIfOnBatteries→false×2·回滚锚=改回 true·值面验证点 23:25/23:30）·H2 候窗位 10-11 22:30
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:50 +08：自上次进度提交 72770d96 后新增 2 条 commit：
+  - 60b56c34 Merge remote-tracking branch 'sg-server/dev' into dev
+  - b52e17a7 docs(cto): LG-066 勘卷五度反转终态(重落笔·前笔 Edit 被并行席工作区操作冲回 c7cf01af 版——收编族第三形态实证·本笔压窗即提)——BOD 23:37 撤回其 23:33「零行=全绿」：l2.log 23:30:07Z ALERT-SENT 200 已落盘(两人读零行=write 延迟读空窗)；真态=l1 latch 未自解·l2 忠实中继·误报链 10min 照跑(扫尾 §四.1 维持)；调度面结论稳(LastRun 23:30:01 rc=0)；本席第五误判自认(log 缺席 write 延迟场景双向不可定谳·正解=statefile 值面或等终态轮·BOD 同踩并列)；插电仍候 CEO
+- registry：v2.1；今日 registry 提交无变化
