@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（trees/stopwork-drill-20261009/coo-schedule-adjust-and-drill-chain-plan-20261009.md）
 - syncMode: rolling（14:00 分发/回执/18:00 复工实锚随链回写）
-- lastSyncedAt: 2026-10-09T08:37:02+08:00（date 现查原值·**④步判据勘定闭环+定版**：sg power-gate 件提前落位[CTO 08:26 毕报 @f5559cee·端到端 200 实证]→CTO 08:27 勘定回点[双 200=PASS·命令单随勘]→08:30 转 FSD 换芯 cd962747→CTO 08:3x P3 补勘毕[命令单 **@e138d8da** 全卷双 200 单形零残留]→FSD 再换芯定版 **d37091a1**[同刻 09:57]——403 中间态全链退役·挂位定版候窗）
+- lastSyncedAt: 2026-10-09T10:08:37+08:00（date 现查原值·**挂载窗六步全绿 PASS·窗毕 10:06**（FSD 毕报 10:07·毕报卷 fsd-mount-window-report-20261009.md @4f2d3fb7）：窗框 10:00-11:30 提前 84 分钟收·预检三查绿+六步读数全 PASS——窗毕锚入 §一.4·挂位链终态 8d0aa34b[58 9 9 10 \*·三影响收编形]）
 - 令源: BOD 00:37:2x 令（CEO 00:36 令）两条；执行位: COO（令链落地执行位·演练验的就是本段）
 - CFO 任务书: 已由 BOD 直发 CFO（时段门挂接+演练序五验收锚）——本席只承接令链落地与排工调整面
 
@@ -23,6 +23,9 @@
    - ⑥联审 job enable 翻真
    - **如实注记一（08:3x 定版毕·原 403 中间态注记全链退役）**：source_seat 'power-gate' 白名单件已提前落位毕（CEO 08:14 令提前窗·CTO 08:26 毕报全绿：SOURCE_SEAT_WHITELIST 加 power-gate+trimc 重启+端到端实测 200+信箱落盘实证·留痕 cto-sg-powergate-whitelist-20261009.md @f5559cee）→④步探针 B 判据随缺口闭合勘 403→**200**（CTO 08:27 勘定回点）→FSD 换芯两轮定版：cd962747[08:32·按 @9ac5b647]→**d37091a1**[08:3x·按 **@e138d8da** P3 补勘零残留定版·同刻 09:57]——**挂位定版·probeB=403 旧形作废勿用·此后候窗静默**。
    - **如实注记二（R-1 过夜·CTO 快核卷 §二附注 @5c90deaa）**：若窗收过夜=8710 暗窗过夜，夜航探 8710 **预期红=暗窗非故障**，防误报刷屏。
+   - **如实注记三（节拍件搭窗·BOD 09:41 报备·CEO 09:39 令·窗序零变化·09:50 勘落位毕态）**：BOD 节拍体系迁 8713 daemon cron（节拍 job=8713 cron 首个 job）——command 白名单追加系启动 env·**搭②步 8713 优雅重启随车带出·零额外重启窗**；**allowlist 追加已 09:48 落位毕**（trimlc-daemon-channel.cmd L25 字节面追加+CRLF 保形+行数断言过·赶上车点）——②重启照常带新 env；**重启后动作序列=BOD 面**：POST /internal/v1/cron/jobs[name=bod-tick-30min·cron 7,37 \* \* \* \* 上海时区]→预期 201→**next_run 值面验证**（F-3 已修值面照验）→与会话节拍双跑 1-2 拍观察→撤会话 cron 收口；重启后 8713 cron 出现 bod-tick 节拍 job 属**预期非异常**（FSD 判读勿误报）·拍报落盘 operating-records/<周>/trees/bod-tick/。节拍件施工/挂载归 BOD 面·窗序六步本体零变化·与 FSD S1-S6 零冲突（8713 cron 多 job 并存）。
+   - **如实注记四（CTO 挂载窗三影响·BOD 09:52 转同步·勘记卷 cto-8713-death-cause-20261009 @b1323f31 在树）**：①**d7693c6 置位断言 CTO 已替跑全绿**（grep trimlc=1+git 顶+mtime 03:47）——FSD 窗内照跑=双确认（或引卷）·S2 重启环节随之纯化；②**probeA/B 双 200 判据不变**；③**notifyFailures「7→0 真闸清零」验证形作废**——7 基线已随 08:39 死机重启物理归零·**新锚=真闸时恒 0+channel.log 投递痕迹**（窗内 S4/S5 若含 7→0 断言按新锚判读）。附候编排注记：8713 死因定谳=今晨 08:39 整机待机转换清理（复发态非偶发·watchdog 全史 11 次 DOWN）·结构修方案稿候 10-11 周日窗族[与 8711 复活+sgB 部署+black-formatter 复探并窗族]——正式排窗届时走本席编排。
+   - **✅ 窗毕锚（10:06·六步全绿 PASS·FSD 毕报 10:07:51·毕报卷 fsd-mount-window-report-20261009.md @4f2d3fb7[trees/coo-dispatch-20261008/]）**：窗框 10:00-11:30 提前 84 分钟收。预检三查绿（healthz+jobs 8 清单+allowlist 双件实证）；S1 双确认绿（grep=1+d7693c6+mtime 与 @b1323f31 一致）；S2 优雅重启毕（旧 pid 36444 EXITED→schtasks 正形冷起 pid 24164·随车新 allowlist env）；S3 healthz 绿（双 connected·notifyFailures=0 新锚记录）；S4 **双 200 PASS**（token_len=64·probeA=200+probeB=200 双刻齐）；S5 绩效 job 挂载 201+nextRunAt=2026-10-11T13:00Z=**21:00+08 正中**（F-3 未现）；S6 联审 job enable 翻真——nextRunAt 初值停摆 10-03→PATCH 同值 recompute 修正至 **2026-10-10T04:00Z=明 12:00+08 正中**（API 正途禁手写库）。窗内注记三条：端点勘正[/api→/internal/v1 正形]·S2 冷起 Start-ScheduledTask 正形[Git Bash /run MSYS 毁参坑记录]·S6 F-3 族伴生新形态[enable 翻真不滚 next_run_at·实录候 CTO 域归档]。挂位链终态=f6eb237b→cd962747→d37091a1→**8d0aa34b**[58 9 9 10 \*·三影响收编形]；bod-tick 未在预检列=非异常（BOD 面②后自挂·双跑观察候 BOD 面读数）。
 
 ## 二、演练落地链预案（②令·14:00 触发）
 

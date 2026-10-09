@@ -9,4 +9,5 @@
 - **第五向·JSON 反序列化类型变形（LG-064 2026-10-05）**：pwsh7 ConvertFrom-Json 把 ISO-Z 串转 DateTime 对象，经 culture ToString 丢 Kind→裸数字按本地时区读→+8h 幻影 stale（6 健康job 全误报；PS5.1 同 API 保持 String 恒正确=双宿主分叉）；修=DateTime→`ToString('o')` 回环保 Z→`[DateTimeOffset]::Parse(s, InvariantCulture, AssumeUniversal)`。教训=跨宿主解析面禁依赖隐式类型转换，时间戳全程字符串形态传递。
 - **家族总图（五向）**：编码毁匹配/转义毁语法/截断毁值面/PS5.1 引号吞噬毁远程命令/JSON 类型变形毁时戳。共同根式=「中间层隐式变形+静默失败无报错」——假读数识别信号=单点伤（同串他段全好）/双宿主行为分叉/读数与旁证矛盾。
 - **超限向处置正形（LG-058 R2 2026-10-06，STE 供料并档）**：工具输出超限被截断时禁凭截断显示下结论——正形=先 token 正则族扫描判 NONE/非 NONE，后 raw_decode 切片+SCRIPT 排除收敛重跑取全量；「显示长≠全行长」时切片重跑是唯一可入卷读数。锚=2026-W41/trees/lg058-remediation-20261006/ste-r2/ste-r2-walkthrough-20261006.md §五 安全注记。
+- **第六向·grep 猜名假阴性（LG-066 实勘 2026-10-09 01:2x，CTO 自勘自纠）**：找 trirmc 系服务却 `grep -i trim`——`trirmc` 不含连续子串 `trim`（t-r-i-**r**-m-c），连续两轮读数「unit 不在 list」全系模式假阴性，第三轮 `systemctl show -p FragmentPath` 推翻（双 unit enabled 在位）。识别信号=「缺席断言」与旁证矛盾（systemctl cat 却有内容）。正形=**服务名探查禁 grep 猜名，直接 systemctl show/status/cat 定名定路径**；缺席断言前先验模式本身能否命中已知真值（grep trim 预置 trimodel 作阳性对照）。
 

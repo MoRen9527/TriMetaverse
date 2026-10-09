@@ -1063,3 +1063,57 @@
   - bf9bae34 merge: 收编并行笔（值席落盘防覆盖）
   - 39cdb46b docs(coo): 条件②现势刷新勘新+④步判据勘定闭环勘新——评估卷：BOD 08:29 刷新勘正入卷[假阴性勘正·m-duty-cos 在役未死 10-03 起 tmux 在册·root 视角查 fleet 域 tmux 不可见]+值席开跑试水双件[执行段已通·全链绿候 sgA/sgB 回卷·v3 生效链候回卷一件·认账已毕]；排程卷：sg power-gate 件提前落位[CEO 08:14 令·CTO 08:26 毕报 @f5559cee 端到端 200]→CTO 08:27 判据勘定[双 200=PASS·任一 403/400 异常停报·命令单 @9ac5b647 随勘落卷]→08:30 转 FSD 挂位换芯[09:57 前毕]——403 中间态注记全链退役
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 9ea8267e 后新增 4 条 commit：
+  - 2c147c1f merge+docs(board): 收编 bare 线（值席翻态/回卷/v3 窗令正形/巡检兜底笔）+试水树顶层 status 翻 done（认账 fb083499 延伸收口）
+  - bac1035d Merge remote-tracking branch 'origin/dev' into wt/board
+  - fb083499 docs(board): sg 试水双件 BOD 认账落卷——SGA-1/sgB-1 双 PASS·条件②绿·v3 正式生效（15:30 锚保底完成使命）；sgB 修复分级转 CTO 候排+场外五 .bak 录卷转 owner 面；拾取触发=形态一·自动拾取环维持观察项
+  - a3c75bc5 docs(board): sg 试水树 notes 勘正——值席「未起」判定=假阴性（root 视角漏 fleet 用户域 tmux），COS 毕报实证在役未死已接令开跑；直派触发=形态一，自动拾取环维持观察项
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:50 +08：自上次进度提交 cbd69440 后新增 3 条 commit：
+  - 5bf7a3d9 docs(coo): 节拍件搭窗报备收编——注记三入卷[BOD 节拍迁 8713 daemon cron·CEO 09:39 令·allowlist 追加搭②步重启随车带出·零额外重启窗·窗序六步零变化]+时序协同点注明[allowlist 追加须②重启前落位方搭上车·BOD 面在办]+判读防误报[重启后 8713 cron bod-tick job 属预期非异常]；v3 生效态注记随卷
+  - 217b4e8a merge: 收编并行笔（值席落盘防覆盖）
+  - e3f45844 docs(coo): v3 正式生效勘终态——条件②绿 09:38[SGA-1/sgB-1 双 PASS·BOD 认账件 fb083499·拾取触发=形态一人工直派·自动拾取环=观察项]+认账 04:09 双件齐→17:50 v3 正式生效开窗[执行位=sg 值席]·v2 fallback 不触发·15:30 锚保底使命完成；评估卷：三条件终态全毕+排程表 15:30/17:50 行勘生效态；v3 卷：生效条件行勘已生效态[门消费面读树即得]·零新语义纯状态翻面
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 c7ab3adc 后新增 5 条 commit：
+  - 1df2114a docs(coo): CTO 挂载窗三影响注记四入卷——①d7693c6 置位断言 CTO 替跑全绿[FSD 照跑=双确认·S2 纯化]②probeA/B 双 200 不变③notifyFailures 7→0 验证形作废[7 基线随 08:39 重启物理归零·新锚=真闸恒 0+channel.log 痕迹]；勘记卷指针 b1323f31+8713 结构修候 10-11 窗族候编排注记[与 8711 复活+sgB 部署+black-formatter 复探并窗族]
+  - b1323f31 merge: 收编并行笔（值席/COO 线落盘防覆盖）
+  - a268a19e docs(cto): 8713 死因勘记——Modern Standby 待机转换控制台清理族（0xC000013A 实锚·三层证据互锁）+复发判定 11 次 revive 史=结构性非偶发+挂载窗三影响（修件已生效实锚/探针判据不变/notifyFailures 7 基线随重启作废·新锚恒 0）+结构修候排（daemon 去 console 绑定·与 R 面 8711 同族治理）
+  - 44d948a6 merge: 收编并行笔（值席落盘防覆盖）
+  - 64c8e5b2 docs(coo): 节拍件 allowlist 落位毕勘新——注记三勘落位态[BOD 09:49 报·trimlc-daemon-channel.cmd L25 字节面追加+CRLF 保形+行数断言过·09:48 落位赶上车点]+重启后动作序列入卷[BOD 面 POST bod-tick-30min→201→next_run 值面验证→双跑观察→撤会话 cron]+多 job 并存零冲突注记[与 FSD S1-S6 零冲突]·窗序六步零变化
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 fb7404a1 后新增 3 条 commit：
+  - cdd8c662 docs(coo): 挂载窗毕锚入卷——六步全绿 PASS 窗毕 10:06[窗框提前 84 分钟收·预检三查绿+S1 双确认+S2 冷起 pid 24164 随车 allowlist+S3 notifyFailures=0 新锚+S4 双 200 token_len=64+S5 绩效 job nextRun 10-11 21:00+08 正中+S6 联审 enable 翻真 PATCH recompute 明 12:00+08 正中]；毕报卷指针 4f2d3fb7+挂位链终态 8d0aa34b+窗内注记三条[端点勘正/MSYS 坑/F-3 族新形态候 CTO 归档]
+  - 4f2d3fb7 docs(fsd): 挂载窗毕报——10:00 六步全绿[绩效 job 挂载 201·nextRunAt=10-11 21:00+08 正中+联审 job enable 翻真·nextRunAt recompute 修正笔至 10-10 12:00+08+F-3 族伴生新形态实录]+8713 优雅重启 d7693c6[旧 pid 36444→新 pid 24164·uptime 重置·双 connected·power 全值面]+S4 双 200 PASS[token_len=64·probeA/B 双刻]+端点勘正笔[/api/cron/jobs→/internal/v1/cron/jobs 正形]+冷起通道注记[Start-ScheduledTask 正形·MSYS /run 毁参坑记录]
+  - 47a5b616 docs(cfo): W41 日报 10-09 09:30 锚——周窗 14%（对表✓）三线零触发；同锚跨日对未成立（昨日缺锚·LG-069）首对候明日；raw 10-08=440M 显著回落；5h 窗 7% 零 watch
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:20 +08：自上次进度提交 b36fdb5d 后新增 4 条 commit：
+  - 8a9381d2 docs(cto): TriMLC 8713 daemon 形态治理方案稿——S4U 非交互计划任务形两入口合一（TriMLC Daemon 任务重注册+watchdog revive 改 Start-ScheduledTask）+门判据 H1-H4（待机-恢复存活专项=核心门）+回滚两文件链+并窗件 cron enable recompute 修复
+  - ffa9c748 docs(cto): sgB 修复方案稿——立即修 2 锚（stale-runningAtMs tick 守卫×2 裕度+executeJob finally 兜底 settle 完备·双层任一独立生效）+技术门 G1-G4+10-11 窗族 sg 段部署工序+排窗/候批 2+2 裁量意见（并发化维持候批立独立稿入技术债组合）
+  - 0833da76 merge: 收编并行笔（二）
+  - 98c4187c docs(cto): 五 .bak 定性销案——TriModel Config Plane 写卡轮转机制设计行为（pid 2518071=trimodel-config.service LG-035 P3-sg·15 分钟节拍·深度 5·现役在写）+归域勘正（写面 owner=TriModel 面非 TriMMC·卡名 trimmc 字样误导）+卫生候办转 owner
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 6a258f6c 后新增 4 条 commit：
+  - c056bb05 docs(coo): 窗令 v4 签发（裁 A 改形）——CEO 10:23 裁 A[TriMMC 留 sg 8712·裁决件 @3e93dbff]→段2 取消·段1 验收绿=窗收口·N3 72h 取消·Q2.3 候召解除·窗框 17:50 不动预计 ~19:30 收·窗前清单增 9=CTO 技术确认回点；v3 卷存档注记+评估卷 17:50 行勘注 v4 签发态
+  - 3d9a1fa2 docs(fsd): sgB 备码毕报——两锚改码+G1 四案一次过+G2 三面全绿[精勘读数:方案稿三符号两悬空一证伪·loadJobStore 吞错静默放弃第三路径新证·双锚联动闭环]+测试管线缺口修复实录[11 处存量错最小修]+分支 fsd-sgb-fix-20261009@1713614 sg bare 落位验真·READY_FOR_REVIEW 候部署窗
+  - 410dba91 merge: 收编并行笔（三·巡检兜底·sg-server 别名）
+  - 6141a459 docs(cto): 结构修稿 BOD 认账批注三点收编勘新——H2 补隧道 keeper 自愈+18710 可达断言（待机杀面顺手一探）+S4U 兼容预判注记+回卷要求（H1-H3 贴毕报/H4 挂 10-18 巡检）+cron 空拍预期注记·转 final
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:50 +08：自上次进度提交 937f2fd2 后新增 2 条 commit：
+  - ea4b2958 merge: 收编并行笔（值席落盘防覆盖）
+  - 6ccfe545 docs(coo): S3 候选卷窗前一刻探针对象裁定勘注——SDE 10:40 联动提示认收：裁 A 后段2 毕探 8710 前提消失·10-10 窗前一刻按活体 curl 三态勘定两机实际在役端口落指针·旧指针不作前提不推定 D-24
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:00 +08：自上次进度提交 b66ad53d 后新增 5 条 commit：
+  - a9714a19 docs(cto): A3/A5 机位标注抽验卷——锚内容双绿零混入（84b5f9cc+6b3e7568 三维全过）；A5 头部 10:41 v4 勘注笔=错误框架污染件认定（段2 取消指引须窗前再勘正·§二六件/P2-1 空置断言/STE 72h 挂账恢复）；v4 窗令段2 取消语义连带失效提请 COO；本席 10:52 确认作废重认（段1 与裁 A=零关非同向强化·对象断言缺失教训条）
+  - fd395fd6 merge: 收编并行笔（值席落盘防覆盖）
+  - 266e16c6 docs(coo): v4 作废·v3 恢复窗令正身（执行 BOD 10:47 勘正令·CEO 10:34 指正）——LG-066 对象=河源 TriRMC 非 sg TriMC[裁决件勘正节 d00e6999 §四]·段2 不取消照 v3 全量跑（TriRMC 河源 8712→8710 回迁+N3 72h）·v4 卷头部作废标记+v3 恢复正身注记+评估卷 17:50 行勘回+10-11 窗族 sgB 门禁新件记认+本席带疑签发自省入档
+  - 39c2fba4 docs(fsd): sgB 备码毕报卷补部署窗门禁第四条（CTO 10:41 复核裁量）——值席施工前对表 jobs.json 现役 10 job timeoutMs 全谱 vs staleRunningMs=20min·有 >10min 者当场调该最大值×2 再 build·含误清机理注（合法长跑 runningAtMs 存活上限≈timeoutMs·阈值须留 ×2 slack）
+  - 5f0600c3 docs(ste): A5 v4 勘注归属勘正（empty 记账笔·零文件改动）——上笔 6ccfe545（COO S3 候选卷勘注）stat 中 ste-a5-probe-commands +3-2 两处修改（头部 v4 适用面收窄勘注行+状态行勘新+lastSyncedAt）实为 STE 本席 10:41 工作区写入经共享 index 并行窗顺带入库，非 COO 手笔；内容面与 6b3e7568 命令形零差异仅头部勘注，v4 链声明 @6b3e7568 引用语义不变；共享 index add-commit 窗口期残留暂存件被他人 commit 收编=署名错位族实证，教训候记
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:10 +08：自上次进度提交 13a0af77 后新增 6 条 commit：
+  - 5439b258 merge: 收编并行笔（值席落盘防覆盖）
+  - 22fd1090 docs(cto): 8711 复活方案稿（R 面 trilc-headless 恢复性两步 enable+start）——死因考古实锚=10-01 10:42:07 人工 SIGTERM 停机+disabled·与 10-04 TriRMC 修复既录同波操作·trilc-headless 系修复轮漏网件；BOD 件③「无 unit」勘正=unit 在但 disabled（Restart=always 保活定义在随 disable 失效）；复活≠升级分离（dist 8-27 原样拉起·仓顶追平挂升级候办）；门 V1-V4（NRestarts=0/store 存量对表/F-3 next_run_at 活体验证/72h 观察）；候 BOD 认账+COO 排窗 R1 段
+  - 43eb71da feat(fade): BOD 半小时节拍 daemon 化执行体 bod-tick-runner.mjs——五段探针+13 席全席现态段（CEO 10:34 令）+拍报落盘；附首日拍报存档（daemon cron cron_mv0bvbzc_ir5r 挂载 8713·首跑 10:40:20 ok）
+  - 8f6677ab docs(memory): 镜像面 7 件收口——幻觉时点条双变体（CTO UTC 换算/COO 卷信时源分化）+对象断言前置新条（CTO 提请）+拓扑/截断/值面/落点四条勘补
+  - f2000e57 docs(ste): A5 卷勘回 v3 正身——执行 BOD 10:47 勘正令[CEO 10:34 指正·勘注卷 266e16c6]：LG-066 对象=河源 TriRMC 非 sg TriMC，v4 作废→10:41 收窄勘注标〔已作废〕留卷+勘回注记（段2 六件恢复执行/P2-1 8712 空置并轨 72h 恢复在册/R-1 过夜注记按 v3 原语义·8710=段2 迁移目标口回滚后暗窗面）+状态行勘 v3 恢复正身态+STE 72h 挂账恢复；命令形自 v2 起即为河源对象零触碰
+  - c22f704f docs(memory): 镜像面 3 件收口——m-plane-duty-workspace-design/parallel-window-commit-interference/trimetaverse-dual-pushurl-topology（COO 交接滞留暂存件·FUZZY-TS 门判据现跑零命中过门）
+- registry：v2.1；今日 registry 提交无变化
