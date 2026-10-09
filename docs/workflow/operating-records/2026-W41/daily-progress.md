@@ -1163,3 +1163,6 @@
 - 巡检兜底补写 @20:00 +08：自上次进度提交 ff2483d7 后新增 1 条 commit：
   - 9c3d9be8 docs(lg066): R-4 台账勘注——白名单窗内即撤毕(COO 裁四据+撤前双确认核+BOD SSH 直达 rm exit0+root 面验①file 消失②fleet fail-closed 双证+本席独立复验 19:55:43Z 三面撤净;sudoers 读数语义两态判据注+head -3 自盲教训随录);段2 全卷终态=R-2/3/4 闭环零回滚 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:20 +08：自上次进度提交 8bf41c74 后新增 1 条 commit：
+  - 49010a87 docs(nightly): sg 段闭卷——TriMMC 8712 两锚修复部署毕 CTO 采信段闭(门禁第四条全谱零超 20min 免调/工作树 build 69/0/symlink 重链/TS 22:55:33+四笔新 fire log 调度活铁证/探针清退;stale-guard live 不排窗 YAGNI 两路随线;教训两笔入册素材) @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
