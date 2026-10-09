@@ -37,9 +37,11 @@ function scanLocalSeats() {
   return { active: LOCAL_SEATS.filter((s) => active.has(s)) };
 }
 
+// ssh 绝对路径——daemon 环境（TriMLC cron 执行体）PATH 无 ssh，spawnSync 'ssh' ENOENT（11:40 拍实证；首修 11:54 未 commit 被并行 git 操作洗掉·14:37 拍复发实证=未提交修复必洗，当场 commit）
+const SSH_EXE = 'C:/Program Files/Git/usr/bin/ssh.exe';
 // spawnSync 数组参数不过本地 shell——远端命令原样交 ssh，零引号地狱
 function ssh(host, remoteCmd, timeoutMs = 40000) {
-  const r = spawnSync('ssh', ['-o', 'ConnectTimeout=12', host, remoteCmd], {
+  const r = spawnSync(SSH_EXE, ['-o', 'ConnectTimeout=12', host, remoteCmd], {
     encoding: 'utf8',
     timeout: timeoutMs,
     windowsHide: true,
