@@ -1117,3 +1117,13 @@
   - f2000e57 docs(ste): A5 卷勘回 v3 正身——执行 BOD 10:47 勘正令[CEO 10:34 指正·勘注卷 266e16c6]：LG-066 对象=河源 TriRMC 非 sg TriMC，v4 作废→10:41 收窄勘注标〔已作废〕留卷+勘回注记（段2 六件恢复执行/P2-1 8712 空置并轨 72h 恢复在册/R-1 过夜注记按 v3 原语义·8710=段2 迁移目标口回滚后暗窗面）+状态行勘 v3 恢复正身态+STE 72h 挂账恢复；命令形自 v2 起即为河源对象零触碰
   - c22f704f docs(memory): 镜像面 3 件收口——m-plane-duty-workspace-design/parallel-window-commit-interference/trimetaverse-dual-pushurl-topology（COO 交接滞留暂存件·FUZZY-TS 门判据现跑零命中过门）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 a3d9c211 后新增 8 条 commit：
+  - 8062718d merge: 收编并行笔（值席落盘防覆盖）
+  - 012d572b docs(coo): 10-11 三栏深夜窗令成稿（候 BOD 认账）——窗框 22:30-01:00 硬锚预计 00:30 收·分带并行：sg 段 TriMMC 两锚修复部署[门禁 timeoutMs 全谱 vs staleRunningMs 校准 ×2 slack]+R1 段 8711 复活 enable+start 两步[V1-V4·V2 裁口占位候 BOD 随令裁]·同值席串行×本机段 8713 S4U 换形[H1-H4·H2 待机专项 23:45 预告刻]·FSD 独立带·避开 21:00 绩效首跑+bod-tick 拍次瞬断知会+V4/H4 巡检挂账 10-14/10-18
+  - 6bbe9354 merge: 收编 dev 线（COO v4 作废执行/CTO 8711 final/巡检笔）——解裁决件悬空引用
+  - 8a13a11b merge: 收编并行笔（值席落盘防覆盖）
+  - c7ff3198 docs(cto): 8711 复活稿转 final（BOD 认账 PASS）——批注三点收编：①P0 对象身份断言行前置（trilc-headless.service 逐字+近亲四名对照表+EXPECTED Description 断言·trirmc/trilc 混淆实证入注）②V2 过期 job 触发面裁口=BOD 面随三栏窗令裁 ③复活≠升级分离原意确认零改
+  - b2efd5a0 feat(fade): 节拍⓪段改形——sg duty 组全组自动发现前置（CEO 11:00 令·m-duty-* tmux ls 动态枚举非硬编码·本地 12 席降附注）；判态勘正（❯ 行=候令优先·✻ 排除 Brewed 完成行·反引号经 ssh 链变命令替换的段头坑改 SEAT 标记）
+  - d00e6999 docs(board): 裁决件§四五勘正——LG-066 对象=河源 TriRMC 非 sg TriMC（CEO 10:34 指正）·裁 A 与 LG-066 无关·段2 照 v3 全量跑·v4 作废恢复 v3 正身
+  - 3e93dbff docs(board): BOD 裁决留痕·裁 A——TriMMC 留 sg 8712 现役（CEO 10:23 裁）·LG-066 段2 取消·8712 不退役·表述勘误认账（8713=本机 TriMLC 专口非 sg 面）
+- registry：v2.1；今日 registry 提交无变化
