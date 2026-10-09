@@ -49,7 +49,15 @@
 
 ## 回滚锚终态
 
-R-2/R-3/R-4 全程备而未触发（零回滚）；白名单 /etc/sudoers.d/fleet-trirmc-lg066 在役（R-4 全撤候施工毕或 BOD 令——**候裁一项随毕报**：白名单撤否窗内即撤或随 N3 72h 观察窗后撤）。
+R-2/R-3 全程备而未触发（零回滚）。
+
+**R-4 已执行毕（台账）**：
+- 裁定：COO 裁**窗内即撤**（19:4x；裁据四条=段2 毕特权面终了/N3 72h 系 fleet 可读被动观察面零 sudo 依赖/R-4 零触发撤不失备/最小特权纪律；再授路径=异常时值席缓存＋BOD 催办协议在册）。
+- 撤前双确认 ✓：收口链剩余段（STE 读数对表/BOD 裁决面）零 sudo 依赖断言成立。
+- 执行：sg 侧三席均无 R-HY root 通道（CTO 实测 sudoers.d 权限墙＋X1 卷载 root 通道=dev 面）→**BOD SSH 直达执行**（19:5x）：root `rm /etc/sudoers.d/fleet-trirmc-lg066` exit=0。
+- 验证双面：①root 面 ls＝No such file or directory ✓；②fleet `sudo -n daemon-reload`＝`a password is required` exit=1（fail-closed 撤净）✓。
+- 本席独立复验（19:55:43Z）：daemon-reload 与 `sudo -n -l` 双转 password-required exit=1 ✓——撤净三面实证。
+- 插曲录：CTO 19:46 「password required」读数与彼时地面真值（15 行在役）一度矛盾，经本席全量 -l 复跑定谳=执行上下文产物非撤态（当时白名单未撤）；白名单读数语义注=有 NOPASSWD 条目则 -l 免密显形、撤净后 -l 转索密——两态可分判据成立。本席 head -3 自盲教训随卷（读数截断禁预限行数）。
 
 ## 段2 判读汇总（A5 正形）
 
