@@ -1,8 +1,8 @@
 # LG-066 段2 Q2.3/Q3.1 dev 读数·BOD 判读转传与三裁留痕
 
 - sourceOfTruth: 本件（trees/lg066-window-order-20261009/bod-q23-q31-adjudication-20261009.md）
-- syncMode: rolling（值席 P2-3 判读汇总+Q3.3 毕报随链补）
-- lastSyncedAt: 2026-10-09 19:43:53 +0800（date 现查原值）
+- syncMode: final（窗终态已回写 §六·收口链余 STE 72h 验收→BOD 复核→呈 CEO）
+- lastSyncedAt: 2026-10-09 20:24 +0800（date 现查制）
 - 通道: FSD→BOD cross-session 回报（19:44 现查 19:44:xx·硬锚 21:00 内）→BOD tmux 直传值席（D-39 全域授权·事后呈报）
 
 ## 一、FSD 执行回报要点（入档）
@@ -33,6 +33,14 @@ BOD 19:43 tmux send-keys 直传 m-duty-cos（令文=Q2.3/Q3.1 读数+三裁结�
 
 ## 五、候办与呈报
 
-- 值席 P2-3 判读汇总+Q3.3 段2 卷毕报→COO+BOD 两刻+STE 72h 挂账知会（在途·本卷随链补实锚）
+- 值席 P2-3 判读汇总+Q3.3 段2 卷毕报→COO+BOD 两刻+STE 72h 挂账知会（**已毕**·见 §六）
 - 窗毕收口链照任务书：值席收口→STE 验收→BOD 复核→呈 CEO 知情
 - 通知链第二处缺口（值席 pane 派工请求未自动达本机席）已合入触发器缺口族（10-10 联审机制化议题）
+
+## 六、窗终态回写（BOD 20:24 复验）
+
+1. **R-4 执行实锚（BOD SSH 直达·19:55）**：值席判读产出 R-4 判定=撤 LG-066 施工期白名单 `/etc/sudoers.d/fleet-trirmc-lg066`（COO 裁据四条「窗内即撤」+撤前双确认在卷；sg 侧全席无 R-HY root 通道·CTO 实测权限墙；值席明示两通道任选）——BOD 择直达：root 身份断言+文件身份三重对上（文件名/头部 CEO 01:29 批令注/内容面全 trirmc 系白名单）后 `rm` exit 0；**双面验证全绿**：①root 面 ls=No such file or directory ②fleet 身份 `sudo -n /usr/bin/systemctl daemon-reload`=`sudo: a password is required` exit 1=**fail-closed 撤净实证**。读数 19:55:21 tmux 转值席，值席独立复验 19:55:43Z 三面撤净（其 ssh heyuan sudo -n 复验+sudo -n -l）。
+2. **R-4 台账卷**：`9c3d9be8` 落 dev 线（三面撤净+sudoers 读数语义两态判据注+head -3 自盲教训随录）——段2 全卷终态=**R-2/3/4 闭环零回滚**。
+3. **窗终态（值席线全毕）**：段1（P0-P6 全绿·2881a452）+GO 断点+段2（原子切换毕·da4fe3ed：Q2.2 十轮 10/10·Q2.4 19:15 cron 首滚·Q2.5 8712 空置 N3 72h 起点记卷·A5 P2-1..6 全绿含 neg401 门在岗·五裁台账全录）+R-4（特权面归零·9c3d9be8）——**全毕，零回滚**。河源 trirmc 单体 8710 现役（19:03:29 新 PID 2306757）、8712 空置并轨 **N3 72h 窗至 10-12 19:03 CST**。
+4. **毕报两刻+STE 挂账（值席确权）**：COO 刻 19:2x 达；BOD 刻=段2 卷本通道；STE 72h 观察窗挂账=STE 席回执登记（10-12 19:03 CST 三判读面验收）。
+5. **余程（非值席窗内）**：STE 72h 验收→BOD 复核→呈 CEO 知情收口链；窗后扫尾四件批（§四）；dev 两口（8711/8713）补探归本机窗段 STE；CTO 终判候其自排（段2 卷候终判标注在卷）。
