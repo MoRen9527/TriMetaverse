@@ -42,7 +42,7 @@
 ## 五、使用依据
 
 - SDE 毕报 @95631ff9（本卷唯一对表对象·读数逐项核过）
-- FSD pending 修复毕报卷 @366679c4b 系（今晨验收 APPROVE·§二.2 值面依据）
+- FSD pending 修复毕报卷 @36679c4b 系（今晨验收 APPROVE·§二.2 值面依据）〔勘正 2026-10-11T03:45:59+08（date 现查原值）：原笔 366679c4b 系抄写多插一位·全仓面不可解·经 S1 批资格门判读机首例真悬空实锚暴露后 git log 对表勘正（真值锚 6b5186685 message「卷 36679c4b/34ee74c1」）——技术真源可修+修正留痕〕
 - l1 判定面刷新卷 @43a41b63（§二.2 relay dim 依据）
 - 记忆条：trimc-mlc-addjob-divergence（A3 两形）/trilc-cron-command-allowlist-exact-match（A1 绕行）/trilc-daemon-restart-discipline（停启正形）/file-identity-hash-and-task-liveness-dual-face（§二.2 校正依据）
 

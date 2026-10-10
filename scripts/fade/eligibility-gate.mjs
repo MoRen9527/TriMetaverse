@@ -107,13 +107,34 @@ function extractPointers(text) {
 const SIBLING_ROOTS = ['TriRLC', 'TriMLC', 'TriModel', 'TriCode', 'TriPilot', 'TriCompany', 'TriRMC', 'TriMMC'];
 const SIBLINGS_BASE = resolve(REPO_ROOT, '..');
 
+// v1.2 跨仓 hash 路由（S1 批校准增量·2026-10-11）:
+//   显式形 `@仓名:hash`  : 直解指定仓（TriMetaverse|TriRLC|TriMLC|TriModel|TriCode|TriPilot|TriCompany|TriRMC|TriMMC）
+//   裸形 `@hash`        : 本仓优先（默认本仓=现状兼容）；不可解→兄弟仓消歧尝试——
+//                         唯一命中=可解 PASS+WARN（引导模板 v1 显式仓向写法）/多仓命中=歧义 FAIL/零命中=真悬空 FAIL
+//   写法规范正形（模板 v1 收口用）: 跨仓 hash 必须显式标注仓向 @仓名:hash；裸 hash 语义=本仓。
+function resolveHashIn(base, h) {
+  try { execFileSync('git', ['cat-file', '-e', h, '--'], { cwd: base, stdio: 'pipe' }); return true; }
+  catch { return false; }
+}
+
 function resolvePointer(p) {
   if (p.startsWith('@')) {
+    // 显式仓向形 @仓名:hash
+    const em = p.match(/^@([A-Za-z][\w-]*):([0-9a-f]{7,40})$/);
+    if (em) {
+      const [, repo, h] = em;
+      if (repo !== 'TriMetaverse' && !SIBLING_ROOTS.includes(repo)) return { ok: false, why: `显式仓向「${repo}」不在仓单（TriMetaverse+8 兄弟）` };
+      const base = repo === 'TriMetaverse' ? REPO_ROOT : resolve(SIBLINGS_BASE, repo);
+      if (resolveHashIn(base, h)) return { ok: true };
+      return { ok: false, why: `hash 在 ${repo} 仓不可解（git cat-file 失败）` };
+    }
+    // 裸 hash：本仓优先→兄弟仓消歧
     const h = p.slice(1);
-    try {
-      execFileSync('git', ['cat-file', '-e', h, '--'], { cwd: REPO_ROOT, stdio: 'pipe' });
-      return { ok: true };
-    } catch { return { ok: false, why: 'hash 不可解（git cat-file 失败）' }; }
+    if (resolveHashIn(REPO_ROOT, h)) return { ok: true };
+    const hits = SIBLING_ROOTS.filter((s) => resolveHashIn(resolve(SIBLINGS_BASE, s), h));
+    if (hits.length === 1) return { ok: true, warn: `裸跨仓 hash 命中 ${hits[0]} 仓（候模板 v1 显式仓向写法 @${hits[0]}:${h}）` };
+    if (hits.length >= 2) return { ok: false, why: `跨仓 hash 歧义（${hits.join('/')} 共 ${hits.length} 仓同命中·须显式仓向标注 @仓名:hash）` };
+    return { ok: false, why: 'hash 不可解（本仓+8 兄弟仓均无此对象——辨抄写错位/历史改写/未 fetch）' };
   }
   // R1 直解析
   const cand = isAbsolute(p) ? p : resolve(REPO_ROOT, p);
@@ -138,15 +159,19 @@ function resolvePointer(p) {
 
 function check2Resolve(text) {
   const pointers = extractPointers(text);
-  const ok = []; const dangling = [];
+  const ok = []; const dangling = []; const warn = [];
   for (const p of pointers) {
     const r = resolvePointer(p);
-    (r.ok ? ok : dangling).push(`${p}${r.ok ? '' : ' ← ' + r.why}`);
+    if (r.ok) {
+      ok.push(p);
+      if (r.warn) warn.push(`${p} ← ${r.warn}`);
+    } else dangling.push(`${p} ← ${r.why}`);
   }
   return {
     pass: dangling.length === 0,
     evidence: [`指针共 ${pointers.length} 条·可解 ${ok.length}·悬空 ${dangling.length}`],
     fail: dangling.slice(0, 20),
+    warn,
   };
 }
 
@@ -217,7 +242,7 @@ export function judge(text) {
     file: null,
     checks: { c1_schema: c1, c2_resolve: c2, c3_anchor: c3 },
     readiness_suggestion: allPass ? 'AUTOMATION-READY（建议值·机先判人后签·COS 签挂为准）' : 'FAIL（影子期只读数不拦截·人工复核）',
-    warn: c3.warn,
+    warn: [...c2.warn, ...c3.warn],
   };
 }
 
