@@ -91,3 +91,10 @@
 - **LG-071 CAO 会签毕**（b1fcc7a·五条款铸入纪律册附录）：BOD 复核裁认=采认（边界三注正确·条款 2 冲突细则一并裁认）；sg-server 推送被 root 属主污染阻断候 BOD root 面。
 - **sg bare 仓修复（BOD root 面 11:38-11:39）**：TriCompany.git 24 件 chown fleet 归还清零（CAO 请求项）+**扩勘 130 件同批清零**（TriRLC.git 91/TriMMC.git 25/TriMLC.git 11/TriTest.git 3——CAO「仅 TriCompany 中招」断言勘正·静默潜伏面真值=全仓扫非单仓查）；全 /srv/git 归零断言读数=0；CAO 补推候回执（72414bbb）。
 - **FSD 转知**（04cd7ded）：fsd 分支顶 CAO 误笔 d634fe4 随收口 rebase 自行 drop（patch-id 同自动跳过零实害）。
+
+## §26 FSD 任务②毕报收讫+pending 重发修复裁（11:47 BOD 落）
+
+- **FSD 任务②毕**（毕报 11:46 达·卷 43a41b63 上 dev 顶 bd54d51a）：R-HY l1 判定面刷新毕——旧拓扑 latch 根治+新拓扑判据部署（md5 ff801684）+4 连绿+l2 08:20「recovered+OK all-hosts」端到端闭；两路不同步勘定=statefile 单点源无第二缺陷；备份锚 bak-pre-lg066l1fix-20261010。
+- **BOD 裁（24e0b806）**：l1/l2 pending 重发静默失效修复**准修即做**（PS 5.1 ConvertTo-Json ETS 序列化族根因采信=假读数家族 PS5.1 变体并档候 CAO）——两脚本一行强转+耦合必做清双陈旧 pending；红线=l1 判定面本体零触碰；毕报两刻照走。
+- **keep-awake 裁②事后知情面**：随 11:47 回报转呈 CEO（keeper ~09:02 自熄零残留·裁②惯例化形态=深夜窗临时进程窗毕即撤）。
+- **34 笔未推**（本机 dev 领先 origin/dev）：BOD 候办录账，收口批统一推；FSD detached HEAD 插曲自愈毕（checkout -B dev 纯 ref 归位树零变化）。
