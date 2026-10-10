@@ -1246,3 +1246,11 @@
   - 103651b8 docs(coo): LG-066 收口卷 l1 latch 行闭卷——FSD 任务②毕报收编（旧拓扑 latch 根治 md5 ff801684+4 连绿+持续绿 03:40Z+l2 08:20 recovered OK all-hosts 端到端闭）·随程域外候裁件转 BOD 面（pending 400 根因+一行修复×2 零动刀）[43a41b63]
   - 1d4bced5 docs(cto): LG-066 勘卷终态补笔——l1 判定面刷新毕收编（FSD 任务② @43a41b63·误报链根治·l2 relay dim 全清 08:20 recovered·扫尾 §四.1 latch 项随之销）+耦合候裁件 ETS 注记修复裁词 APPROVE 录卷（catch 升必做+排 10-10 攒批窗）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 b5495cb8 后新增 6 条 commit：
+  - 375af212 docs(coo): 收口卷联审毕挂账三行——W41 首审三席一致（DEM-003 进实现/DEM-004 进方案+8713 一期本周排窗硬 deadline/第五面进实现）+DEM-004 排窗督办行+DEM-003 影子链行·l1 latch 闭卷·验收链改形知情行[12:00-12:05 联审]
+  - 5ceb13e9 docs(cpo): DEM-004 读数行 schema v1+口径五要素定稿落树（联审承接点②施工前交付）——五要素全必填（面/服务域/账户/模型/用量基数·metric_basis 灵魂字段防 LG-036 双口径失真）+阈值快照制（调整不失真）+重置日 pair_ref 互指（锚④字段级判据）+账户禁明文 key+ts 机写禁手填；五锚判法字段级落地；阈值数值域候 CFO 正身禁硬编码
+  - 8f2479df merge: 收编并行笔（值席落盘防覆盖）
+  - fa238472 docs(coo): W41 需求池首次联审裁决留痕+第五面议程件§八联审结论（12:00 三席 CPO/COO/CTO 一致）——DEM-003 进实现（影子试运行·资格门 10-11 日间段→探针→触发器红线只通知不承接·七锚+N=5）/DEM-004 进方案+8713 daemon 化一期本周排窗（硬 deadline CFO 定时器 7 天过期·嵌 10-11 深夜窗并批）/第五面 #3 即时立项+#1#2 随 shadow+#4 融合裁+提案 ABC 进方案+问题#2 拒独立值拍·毕转 static
+  - 34ee74c1 docs(fsd): staged 正身 l2.post-lg066-seg2.ps1 重发块修复重落（前笔 Edit 被并行席工作区操作冲回——本窗冲刷第三犯实证·grep 零命中+status 干净+log 顶 f06b60c7 三证；36679c4b 只收毕报卷系 add 时文件已被刷回）·三处=[string] 强转+ok 清计数+catch 落 status/fail 计数·与部署拷贝 md5 c2c54945 修复面对齐·本笔 Edit+commit 同回合压冲窗
+  - 36679c4b docs(fsd): pending 重发修复毕报——BOD 11:47 准修即做+CTO 11:46 APPROVE 两微调照单全收（[string] 强转剥 ETS 注记/catch 落 HTTP status+fail 计数升必做/清队归档留日志行）·三面同步（l1/l2 部署拷贝+l2 staged 正身防重部署回滚雷）·备份 md5 双录 7da6f90e/c2c54945·验证门两条全过（构造 pending 实发 200 PENDING-RESENT ok 03:51:47Z+负验证双绿+生产轮 03:50:03Z 新代码双绿）·红线 R-HY l1 判定面零触碰·PS5.1 ETS 序列化第五变体族注候 CAO
+- registry：v2.1；今日 registry 提交无变化
