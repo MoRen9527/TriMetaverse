@@ -84,3 +84,10 @@
 - **LG-071 授号毕**（COS 11:15:35 回执）：验收链改形入账 lg071-ceo-review-batch-cos-final-accept·台账 22 条·98548743 推平 sg 顶三面一致；CEO-review-reminder 三项对表挂讫（LG-034/035 终验+LG-053 终球+LG-066 终验）；首笔适用=LG-066 终验环节。
 - **两行勘补刷毕**（BOD 10:50 承诺项·COS 代办）：LG-054 补族③破线解除实证（b14 毕 8093f8cf CORE_VERSION 5/5+8713 首切 d04c088e 全绿·余隔离位清理候 FSD 件③）；LG-065 补现势段（N2 五锚 PASS+值席 7×24 三刻活体实证·余销账判据链 BOD 复核+呈 CEO 知情）——大表滞后两洞全闭。
 - **BOD 动作**：LG-071 制度正身归 CAO 域（CEO 00:28 归域裁）——BOD 11:16 直派 CAO 会签（流程性会签不候联审·D-39）；并行踩窗二次实证（COS 工作区态被 rebase 窗吞→重放锁笔）并档请 CAO 随会签收。
+
+## §25 双域模型令落地+CAO 会签毕+sg 仓修复（11:40 BOD 落）
+
+- **CEO 11:34 双域流水线模型令**：录联审第五面定调材料（1ea8dfa8·六要件拆解+三期落地序）+转 COO 原样转问——**COO 11:37:21 明确回执「明白，无疑问点」**+理解复述正确+三提案候联审（A 拆树模板 v1/B COS 开收口位制式/C 预处理准入判据五条）；CEO 11:36 勘正（必须要待裁→不需要待裁）落卷 1d0afe5c·COO 采勘定义。
+- **LG-071 CAO 会签毕**（b1fcc7a·五条款铸入纪律册附录）：BOD 复核裁认=采认（边界三注正确·条款 2 冲突细则一并裁认）；sg-server 推送被 root 属主污染阻断候 BOD root 面。
+- **sg bare 仓修复（BOD root 面 11:38-11:39）**：TriCompany.git 24 件 chown fleet 归还清零（CAO 请求项）+**扩勘 130 件同批清零**（TriRLC.git 91/TriMMC.git 25/TriMLC.git 11/TriTest.git 3——CAO「仅 TriCompany 中招」断言勘正·静默潜伏面真值=全仓扫非单仓查）；全 /srv/git 归零断言读数=0；CAO 补推候回执（72414bbb）。
+- **FSD 转知**（04cd7ded）：fsd 分支顶 CAO 误笔 d634fe4 随收口 rebase 自行 drop（patch-id 同自动跳过零实害）。
