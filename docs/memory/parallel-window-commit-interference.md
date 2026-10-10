@@ -1,10 +1,10 @@
 ---
 name: parallel-window-commit-interference
-description: 并行窗提交互踩族——merge 倒退合并丢笔（正向追加复原）、index 残留暂存件被他人笔收编（empty 归属勘正）、未提交工作区态被并行 rebase 窗重置吞（盘点重放+写后即 commit 锁笔）三机理
+description: 并行窗提交互踩族——merge 倒退合并丢笔（正向追加复原）、index 残留暂存件被他人笔收编（empty 归属勘正）、未提交工作区态被并行 rebase 窗重置吞（盘点重放+写后即 commit 锁笔）、共享工作区分支向踩窗（commit 落他人分支=临时 worktree cherry-pick 重落）四机理
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-10-10T03:27:34.453Z
+  modified: 2026-10-10T03:33:21.981Z
   originSessionId: cdeaa3bc-3f3b-4724-a7d2-2e5da881f2c2
 ---
 
