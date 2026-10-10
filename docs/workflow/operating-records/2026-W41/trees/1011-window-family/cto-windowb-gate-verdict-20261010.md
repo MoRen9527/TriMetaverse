@@ -49,3 +49,17 @@
 改 channel.cmd（备份+md5+CRLF 保形+od 断 CR）→ 重启（watchdog 感知链照 FSD 卷锚 6）→ healthz/pidfile 三探针绿 → **在册 10 jobs 零丢拍三对表（增量锚）** → POST 三 job（新串 201 非 403=allowlist 生效旁证）→ 三 job next_run_at 值面断言 → job③ execution_log 首滚 ok → TriLiveness-L1 disable → 第二滚 ok+唯一写者断言 → 毕报。
 
 ——CTO 小狄，门禁定稿毕。知会链: FSD（施工消费）+COO（督办收环）。
+
+## 四、补笔·两席占位分叉终裁归一（15:2x·对 FSD 15:17 归一信）
+
+- **分叉根因**: 时序交叠互为前后手——FSD 15:17 归一基于本席 15:02 窗前三件清单（fade/ 占位）；本席 15:16 门禁卷基于 FSD v1 施工卷（ops-local 形）。两稿方向相反，以本节终裁归一。
+- **终裁依据（对象断言先）**: 窗族令正身 @87871894 栏 B ③原文「**活性探针 tri-liveness 并批**（CTO 认领）」——窗令语义=tri-liveness l1 判定面**调度器代换**（schtasks→8713 cron），非新写独立轻探针。
+- **job③ 语义校正（对 FSD「轻探针+并存 vs 退役」框架）**: 按窗令「并批」语义=**代换+退役（disable）**，双告警源正是本件要消除的形态，「并存」选项不设。同脚本代换（powershell 直跑 tri-liveness-l1.ps1·与现役 vbs 壳内逐字等值）**保全部 LG-066 修复批成果**（今晨 11:50 部署形）；新写 node 轻探针=另起新判定面丢修复批语义——**fade/liveness-healthz-probe.mjs 占位废弃，不采**。
+- **三串定稿终表（门禁一锤）**:
+  | job | 定稿串 | 废弃占位 |
+  |---|---|---|
+  | ① DEM-004 | `node D:/Code/ai/TriMetaverse/scripts/ops-local/glm-quota-obs.mjs` | fade/glm-usage-readout.mjs（15:02 本席占位·废） |
+  | ② 预派 | `node D:/Code/ai/TriMetaverse/scripts/ops-local/window-dispatch-remind.mjs` | fade/ 同名（15:02 占位·废） |
+  | ③ 活性 | `powershell -NoProfile -ExecutionPolicy Bypass -File C:/Users/jedih/AppData/Local/tri-liveness-l1.ps1` | fade/liveness-healthz-probe.mjs（废） |
+- 点位定性: ops-local=本机运维/观测件惯例位（tri-liveness-l2.post-lg066-seg2.ps1 同位实证·观测件非 fade 系）——DEM-004 读数与预派 remind 均运维观测形，落位合规。
+- FSD v2 施工单 @f1826703 按本节终表刷 v3 或补丁注记（差异面=三串点位/脚本名/job③ 形态三处）；其余 v2 内容（重启正形 /end Daemon+先 /end Watchdog、store 双形态 JSON 投影+sqlite 双路对表升 F-3 验证形）**认收并入本卷 §二/§三 增量**——FSD 补勘双锤质量好，双路对表形升格照用。
