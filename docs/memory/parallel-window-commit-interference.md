@@ -4,7 +4,7 @@ description: 并行窗提交互踩族——merge 倒退合并丢笔（正向追�
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-10-10T03:33:40.520Z
+  modified: 2026-10-10T03:42:23.347Z
   originSessionId: cdeaa3bc-3f3b-4724-a7d2-2e5da881f2c2
 ---
 
@@ -19,5 +19,9 @@ metadata:
 **机理四·共享工作区分支向踩窗（commit 落他人分支）**（2026-10-10 CAO 案同日第三实例）：多席共享工作区 HEAD 停在他人施工分支时，我方 commit 默认落**他人分支线**——对象零丢失，但推线错位：`git push <remote> dev` 推的是本地 dev ref≠当前分支，返回「Everything up-to-date」假象（非谎报，是 refspec 语义），而误笔实际叠在他人分支顶。实例：CAO 2026-10-10 LG-071 铸条 commit 落 fsd-sgb-fix-20261009（FSD 施工线）顶 d634fe4。**处置=不切主工作区**（他人分支+他席在途件，checkout=机理三现场重演）——临时 worktree 重落：`git worktree add ../tmp <目标分支>`→`git cherry-pick <误笔>`→push→`git worktree remove`（正形清理，禁 Remove-Item 穿 junction）；误落他人分支的原笔**不代 drop**（改他人分支指针=越界），留注记由分支主收口 rebase 时自行 drop（patch-id 同自动跳过）。**预防=commit 前必验分支向**：`git branch --show-current` 非预期分支即停；`push <remote> <branch>` 后 rev-parse 本地 branch 与 ls-remote 对表——对不上=分支向断言缺失强信号，勿单信「Everything up-to-date」尾行。
 
 **识别信号**：porcelain 干净但文件内容与 HEAD 预期不符（机理一）；porcelain 无我方 M 行但修改已入库于他人笔 stat（机理二）；文件内容消失/整段回退旧版且 git 全无我方记录痕（无 stat 无 reflog 本笔=机理三，与机理一区分=机理一有 merge 倒退痕可考古）；commit 输出方括号里分支名非预期分支（机理四，`[分支名 hash]` 首字段即分支向铁证）；四案共同点=「修改/笔去哪了」先验文件现势与当前分支再验 git 对象，矛盾证据先 `git show <笔>:<path>` 对表禁臆断。
+
+**机理四二犯注记（2026-10-10 同日二犯）**：CAO 复核补录笔再落 fsd 分支——`git branch --show-current` 跑了、非预期值也读到了，**但没停**。条款要点不是「跑命令」而是「读到非预期值即停」；硬防线=共享工作区常驻他人分支态时（如 TC 仓 HEAD 长停 fsd 施工分支），**落笔直接走临时 worktree**（`git worktree add` 指定分支），不经主工作区 commit。
+
+**rebase 中断现场归属判定（2026-10-10 COS 案同族补充）**：共享仓 rebase 中断后，现场可能已被他席接手改道（merge 收编重写 HEAD）——恢复动作前先 `git status`+`git log -1` 判现场归属（与自己命令序比对），禁按自己中断前的计划盲续；rebase 失败后 push 须 RC 守卫（[[chained-command-assert-abort]] 变体）。零丢失判据=账本/大表双向对表一致（COS 11:37-11:41 三方同窗实证·零内容丢失系时序运气非设计）。
 
 相关：[[git-index-commit-convention]]（path-scoped 例外口径）、[[parallel-design-file-discipline]]、[[closeout-commit-hygiene]]。

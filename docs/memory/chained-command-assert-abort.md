@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 85f22528-5773-4301-ab5a-59e47b3efda4
-  modified: 2026-09-02T20:00:30.577Z
+  modified: 2026-10-10T03:42:08.276Z
 ---
 
 2026-09-03 r6 merge 归账事故（dc8bab38 带 conflict marker 入库，未推即 amend 修复）双教训，董事会回执批「随案入档」：
@@ -16,3 +16,5 @@ metadata:
 **Why:** 校验的价值在"失败时挡住后续"，链式命令里校验与动作不连通时校验形同虚设；截断的验证输出=没验证。
 
 **How to apply:** ①校验脚本与依赖其结果的动作必须用 `&&` 连接或合成同一脚本内联（失败即停），禁「校验一行、动作另起一行」的写法；②提交/落盘前的验证输出以目标文件为中心取证（`git diff --cached --stat` 全量+对关键文件 grep 断言），head 只用于浏览不用于门禁；③坏提交未推远端时 amend 修复合法（零外泄前提），已推则新提交修复并如实披露。关联 [[multi-agent-git-index-hygiene]]（提交前三查）。
+
+**git push RC 守卫变体**（2026-10-10 COS 案）：rebase 失败/中断后禁无守卫连推——push 前 RC 检查失败即停，push 无 RC 守卫直推=把中间态推上共享顶（幸他席 merge 笔恰先落未成真，时序运气非设计）。正形=rebase 类高风险操作后，下一动作前先验上一命令 exit code（`&&` 串联或显式 `$?` 断言），非零即停盘点现场；推共享仓前 `git log -1` 确认顶笔归属再推。
