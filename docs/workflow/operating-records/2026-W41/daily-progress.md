@@ -1236,3 +1236,8 @@
   - 9081fa4a docs(memory): 并行窗互踩族增机理三（未提交工作区态被并行 rebase 窗重置吞=COS LG-071 首授 98548743 重放笔二次实证·盘点重放+写后即 commit 锁笔·三态保护梯度）——随仓镜像同步
   - 1a1108ed docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 e89ace5d 后新增 3 条 commit：
+  - 15937ad6 merge: 收编远端 watcher 巡检笔 e89ace5d（本地勘正批 bd54d51a 与机写巡检笔分叉收编·双方 hash 零重写）
+  - bd54d51a docs(memory): 勘正批——trimc 条 root 污染读数勘正（fleet 侧初扫 24 件被 BOD root 面扩勘推翻=实 154 件五仓·fleet 自查扫有静默漏报·真值=root 面全仓扫·11:40 已清零）+互踩族机理四二犯注记（读到非预期分支没停≠防线·常驻他人分支态仓直接 worktree 落笔）+rebase 中断现场归属判定（COS 三方同窗案）+chained 条 RC 守卫变体——随仓镜像同步
+  - 43a41b63 docs(fsd): 任务②毕报——R-HY l1 判定面刷新毕（旧拓扑 latch 根治·新拓扑判据部署 md5 ff801684·验证 4 连绿 00:09-00:20Z+持续绿至 03:40Z·l2 08:20 recovered+OK all-hosts 端到端闭·两路不同步勘明三线一致）·随程勘出 pending 重发 400 根因全链（PS5.1 ConvertTo-Json 序列化 Get-Content ETS 注记属性致 title 变对象·sg 严格校验拒 400·新鲜通道不受影响）——域外零动刀候裁（一行修复×2+耦合清双陈旧 pending）·R-HY 备份回滚锚 bak-pre-lg066l1fix md5 787437fe·随收 BOD 11:40 知情项登记（d634fe4/33152bd rebase 对表候办）
+- registry：v2.1；今日 registry 提交无变化
