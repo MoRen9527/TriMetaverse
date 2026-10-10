@@ -187,5 +187,14 @@
     "priority": "高（CEO 00:36 令·第三道停工门制度化+今日实弹演练）",
     "status": "open",
     "note": "时段停工门新制度（CEO 00:36 令·BOD 00:37:4x 转授号令）：非节假日 14:00-18:00 全施工席停工，与电源门（LG-069）/额度五线并列第三道停工门，节假日不适用；BOD 节拍值守不受三门控制照旧。制度正身归 CAO 域（CEO 00:28 裁「制度件统一归 CAO」·CAO 知会已发），施工/执行仓留执行实例与指针。首跑实弹演练=今日 2026-10-09 14:00-17:50 停工令链全链演练（CEO 令「用这个测下」：CFO 触发→发令→COO 落地→各席停；17:50-18:00 LG-066 特窗例外段照开·BOD 裁特窗优先呈报知情；18:00 复工）——任务书已发 CFO（五验收锚）/COO（避让+落地链）。挂账时点：2026-10-09 00:38:07（date 现查 Friday +0800）。"
+  },
+  {
+    "id": "lg071-ceo-review-batch-cos-final-accept",
+    "treeAnchor": "trees/joint-review-20261010/（W41·12:00 联审面；BOD 演练卷 bod-mechanism-dryrun-20261010.md §六=CEO 树协议全链责任制素材同源；大表锚注区 CEO-review-reminder 候办条锚 2520551a·BOD wt/board 线随收口批并 dev）",
+    "treePath": "docs/workflow/operating-records/2026-W41/trees/joint-review-20261010/",
+    "owner": "COS（终验执行+攒批单维护+台账）+CAO（制度正身域·CEO 00:28 归域裁照用）+BOD（改形令流转+大表三行刷账）",
+    "priority": "高（CEO 11:02 改形令·即刻生效·验收链权责变更）",
+    "status": "open",
+    "note": "验收链改形（CEO 11:02 令·BOD 11:06:15 hook 现戳转达·即刻生效）：①凡「候 CEO 终验/亲测」环节一律改 COS 终验——COS 终验毕即销账收口，不候 CEO 不阻塞排工；②CEO 亲测项攒批单记提醒（候办条 CEO-review-reminder 已立大表锚注区 2520551a·BOD wt/board 线），现挂三项=LG-034/035 终验+LG-053 终球+LG-066 终验，攒批呈 CEO 择时亲测；③首笔适用=LG-066 终验环节（候 CTO 终判照走+CEO 终验位改 COS 终验）。制度正身归 CAO 域（CEO 00:28 裁照用）。〔授号重放注：首授 11:10 工作区态被并行 rebase 窗重置吞·11:1x 重放·并行踩窗实证照 parallel-window-commit-interference 并档〕挂账时点：2026-10-10 11:14:24 +0800（date 现查 Saturday +0800·UTC 2026-10-10T03:14:24Z）。"
   }
 ]
