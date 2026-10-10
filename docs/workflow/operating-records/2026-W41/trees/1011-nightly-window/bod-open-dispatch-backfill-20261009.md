@@ -113,3 +113,4 @@
 - **FSD 修复毕（11:55:41 回执）**：①两脚本 [string] 强转 ②catch 落 status+fail 计数升必做 ③清双陈旧 pending（move 归档 stale-pending-archive-20261010/ 零丢失）+MANUAL-CLEAR 日志双落。**验证门两条全过**：构造 DIAG pending 实发→PENDING-RESENT ok 200（03:51:47Z·文件清+零计数残留+信箱验证信显式标注）+负验证/生产轮双绿（03:50:03Z 首轮零 PENDING）。红线对表：l1 判定面零触碰·备份 md5 双录（7da6f90e/c2c54945）。卷=36679c4b（毕报）+34ee74c1（staged 正身重落）。
 - **工作区冲刷第三犯随录**：FSD 首笔被并行席工作区冲回→Edit+commit 同回合压窗重落——正形再实证，tick-latest gitignore 化+写后即 commit 惯例候联审并案。
 - **候办**：CTO 验收读数候收（修后构造 pending 一发 200 已由 FSD 验证门①覆盖·CTO 侧复核）；34 笔未推维持收口批。
+- **环闭（CTO 11:58 回执）**：pending 修复验收毕 APPROVE 全绿（判词回 FSD·读数与 §28 逐项一致零分歧）——本环自此闭。附加认收两笔：①FSD 主动补裁词漏项（tri-liveness-l2.post-lg066-seg2.ps1 同步修三处·防重部署 bug 回流）=本批最有价值一笔；②技术债 §五（catch-status fail 路径无负向实测）挂账不阻收口候窗销项。ETS 序列化家族第七向已并 CTO truncation-artifact 记忆条（与截断/引号/BOM/CRLF 族同档）。
