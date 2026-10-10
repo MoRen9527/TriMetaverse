@@ -42,14 +42,14 @@ $issues = New-Object System.Collections.Generic.List[string]
 if (Test-Path $pendF) {
   $pl = Get-Content $pendF
   if ($pl.Count -ge 2) {
-    $pt = $pl[0]; $pb = ($pl | Select-Object -Skip 1) -join ' '
+    $pt = [string]$pl[0]; $pb = ($pl | Select-Object -Skip 1) -join ' '
     $tok = ssh -n -T -o BatchMode=yes -o ConnectTimeout=8 M-SG-47.245.122.61 'tr ''\0'' ''\n'' </proc/$(systemctl show -p MainPID --value trimc)/environ | grep ^TRIMC_INTERNAL_TOKEN= | cut -d= -f2-' 2>$null
     if ($tok) {
       $payload = @{ source_seat='m-duty-cos'; target_daemon='trimmc'; target_seat='m-duty-cos'; urgent='urgent'; title=$pt; body=$pb } | ConvertTo-Json -Compress
       try {
         $r = Invoke-WebRequest -Uri 'http://127.0.0.1:18710/internal/v1/notify' -Method POST -Headers @{ 'X-Internal-Token'=$tok } -ContentType 'application/json' -Body $payload -TimeoutSec 10 -UseBasicParsing
-        if ($r.StatusCode -eq 200) { Remove-Item $pendF -Force; "$nowIso PENDING-RESENT ok: $pt" | Add-Content $log }
-      } catch { "$nowIso PENDING-RESEND fail (kept): $pt" | Add-Content $log }
+        if ($r.StatusCode -eq 200) { Remove-Item $pendF -Force; Remove-Item "$dir\l2-pendingfail.count" -ErrorAction SilentlyContinue; "$nowIso PENDING-RESENT ok: $pt" | Add-Content $log }
+      } catch { $sc = $null; if ($_.Exception.Response) { $sc = [int]$_.Exception.Response.StatusCode }; $fcF = "$dir\l2-pendingfail.count"; $fc = 1 + [int](Get-Content $fcF -ErrorAction SilentlyContinue); Set-Content $fcF $fc -ErrorAction SilentlyContinue; "$nowIso PENDING-RESEND fail #$fc (kept): $pt status=$sc" | Add-Content $log }
     }
   }
 }
