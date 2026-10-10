@@ -179,3 +179,6 @@
 - **迁位链**：正身落 `TriCompany/docs/engineering/windows-seat-remote-control-runbook.md`（与 render-pipeline-runbook 同族；内容=现役全文+升维迁移注记+公司维度适用声明）；本仓原位改指针（sourceOfTruth 改指 TriCompany 侧）；m-face L151 引用行同步注再迁；历史卷引用 6 处冻结不动。
 - **落错线勘误（互踩族第四向 BOD 自犯·当场即停即纠）**：TriCompany 共享仓 HEAD 停 fsd-sgb-fix-20261009 分支，初笔 1c46fce 落错线——「读到非预期分支即停」纪律触发，worktree 从 dev 建账 cherry-pick 重落 **bcca6b5=dev 顶**；fsd 线原件不动（其 merge dev 时已应用自动消解）；先例同形=CAO 今日 LG-071 铸条笔 d634fe4 误落同分支→b1fcc7a 重落。
 - **推欠账**：GitHub 443 全断（Connection reset，HTTP/1.1 切换无效）+TriCompany 无 sg-bare pushurl（branch -a 里的 sg-bare/dev=packed-refs 残留，remote config 实无）——bcca6b5 本地 dev 线锁定，推候网络恢复收口批（与 wt/board 线推欠账同批）；CAO 知会不受影响（同机同仓可见）。
+
+- **§37 推欠账勘正（17:40 CAO 回执触发）**：「TriCompany 无 sg 备援 pushurl」表述不准——sg-server remote 实存（我 get-url 断在 sg-bare 后未续勘 sg-server，本仓 branch -a 见 sg-server/dev），CAO 登记（GID-13·TC b4fe919）推 sg-server dev 时连带 bcca6b5 快进推平（c8e1443..b4fe919，ls-remote 双面一致 17:40:30）——**正身已达 sg 侧，GitHub origin 欠账降级为双源对齐欠账**（候网络恢复补推 origin 即平）。教训随录：remote 通道断言须逐个 get-url 勘完再下「无备援」结论，断链勘验不完整=假阴性同族。
+- **CAO 登记三事项回执归档**：GID-13 增毕（工具选型域 1→2）+纪律册零改动如实（无「跨项目通用能力」类目不硬造）+指针件零登记（GID-13 已声明 pointer 态防重复登记）。升维链全环闭。
