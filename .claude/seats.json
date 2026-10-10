@@ -366,12 +366,12 @@
     },
     {
       "seat": "senior-deployment-engineer",
-      "opsName": "m-dee",
+      "opsName": "m-sde",
       "workName": "",
       "agent": "SeniorDeploymentEngineer",
       "hostFace": "local",
       "sessionPrompt": "TriMetaverse/.claude/compass/senior-deployment-engineer.session.md",
-      "launchCommand": "claude -n M-DEE --append-system-prompt-file <TriMetaverse/.claude/compass/senior-deployment-engineer.session.md>",
+      "launchCommand": "claude -n M-SDE --append-system-prompt-file <TriMetaverse/.claude/compass/senior-deployment-engineer.session.md>",
       "launchEnvPolicy": {
         "strip": [
           "CLAUDE_CODE_CHILD_SESSION",
