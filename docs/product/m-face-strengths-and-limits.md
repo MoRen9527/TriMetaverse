@@ -148,7 +148,7 @@
 | --- | --- | --- |
 | 2026-09-16 | 首版：S1-S6 优势/L1-L2 局限/L1 产品化判定（暂不入待办）/checklist 三段 | CPO 起草候 CAO 校 |
 | 2026-09-16 | CAO 校过：状态档词表固定声明补入 §2 头+变更记录机制定稿（追加制/Owner 列对齐 governance-state 字段惯例）；其余零改动认可 | CAO |
-| 2026-09-17 | L4 席位窗口代操条**迁出**（CEO 裁：本档只记 M 面优劣势，Windows 操作方法属运维经验不属此）——全文迁 `docs/execution/windows-seat-remote-control-runbook.md`；checklist 3.2 对应两行随迁 | BOD |
+| 2026-09-17 | L4 席位窗口代操条**迁出**（CEO 裁：本档只记 M 面优劣势，Windows 操作方法属运维经验不属此）——全文迁 `docs/execution/windows-seat-remote-control-runbook.md`（2026-10-10 再迁公司维度正身 `TriCompany/docs/engineering/windows-seat-remote-control-runbook.md`，本仓原位改指针）；checklist 3.2 对应两行随迁 | BOD |
 | 2026-09-17 | **定位升级+管理权移交**（CEO 23:3x 定谳）：系统演进最重要文件·项目真源级；管理人 CPO→**CAO**（CPO 转顾问贡献位）；范围扩围预告=四套班子整体消化+跨面差距与吸收规划将入档（明晨任务书 20260918-four-team-digestion） | BOD（CEO 令） |
 | 2026-09-17 | 管理人就任：§4 机制注记对齐新权属（管理人=CAO／CPO 顾问贡献位／CTO 技术核）；明晨新章候任务书 20260918-four-team-digestion | CAO |
 | 2026-09-17 | **管理权回拨**（CEO 23:4x 定谳）：管理人 **CAO→CPO**（重要性定谳保留：系统演进最重要文件），**CAO 转辅助治理**（变更审判/归档/真源规范校）；§4 机制行+共建行同步回拨 | BOD（CEO 令） |
