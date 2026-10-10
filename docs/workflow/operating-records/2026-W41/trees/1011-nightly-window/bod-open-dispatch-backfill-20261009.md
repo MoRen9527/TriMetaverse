@@ -164,3 +164,11 @@
 - m-coo 候办 P2（hook 追平失败无告警面）已在其 21ef59c9 笔内记，不重复立。
 
 - **环闭注记（16:49）**：m-coo 认收回执四点全认（根因自领+处置序认收+影响面如实收窄+候办 P2 独立存活），销案笔落 bare @b845d1db（ls-remote 对表实锚）；16:49 推拍 hook 零报错=「恢复自动追平」判读活体复证。双边留痕齐（本卷 §35+COO 销案笔），观察项正式销案。
+
+## §36 MMC cron 三连败勘明=§35 同根因第二症状（16:5x 拍报差异触发·已自愈闭环）
+
+- **拍报差异**：16:40 拍 MMC degraded=true cf=3（16:10 拍 cf=1）→BOD 实勘。
+- **勘明**：config-sync 类 job（5a8e6eac）16:04/16:19/16:34 三连败，败因日志逐字=「Your local changes to .claude/seats.json would be overwritten by merge」——**与 §35 hook rebase 失败同一根因**（BOD 15:4x seats.json 脏笔），两处消费族（hook 链+cron job 链）被同一笔挡住。
+- **恢复链自洽**：16:45 BOD 还原脏笔→16:49 该 job 下一拍成功清零（healthz 现查 degraded:false cf:0 终态复证+m-coo 16:49 推拍 hook 零报错互证）——单一根因两症状一处置全愈。
+- **教训（BOD 自犯追加）**：§35 处置时只验了 hook 链恢复，未扫全 git 消费族——cron job 链三连败若非本拍 cf=3 差异提示即漏报。正形=脏笔类根因处置后，恢复面验证须扫全消费族（hook+config-sync cron+其他 git 消费者）。本条与 §35 合并读：动手面现场清点（留痕）+消费面全族复证（收口）两道缺一不可。
+- **latest 冲回第四犯随录**：本拍转报时 tick-latest.md 被冲回昨日 10:49 拍（git 拉平冲回家族，恰与 16:42 sg rebase 同窗）——转报切 tick-log 存档直取（现行纪律），gitignore 化根治候联审并案（四犯实证加重）。
