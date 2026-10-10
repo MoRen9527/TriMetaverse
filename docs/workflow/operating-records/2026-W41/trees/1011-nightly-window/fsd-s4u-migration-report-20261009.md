@@ -44,6 +44,13 @@
 ## 七、随程发现与候裁项（零动刀·如实呈）
 
 1. **l1/l2 电池盲区（本夜新发现·与 S4U 独立·已 23:15/23:16 急呈 BOD+COO）**：TriLiveness-L1/L2 双任务 DisallowStartIfOnBatteries=True+StopIfGoingOnBatteries=True（默认电池条件）·AC 断于 ~21:40-21:45 窗（推断锚：L1 最后成功跑 21:40:01/事件日志其后零事件/NextRun 在排/机器醒着排除睡眠）→电池态下 liveness 触发全静默跳过=**存活监测整体熄灯且无自警**（21:40→23:15 实证 95min 静默零告警）。误报 ALERT-SENT 链 21:40 后零发=事实止损达成（l2 停摆副产）。候裁候选：①允许电池启动 ②电池切换自警 ③维持现状定性——**BOD 23:20 裁①照办（②不做·③不采·COO 排程建议随裁词归档）**：l1/l2 双任务 DisallowStartIfOnBatteries→false 已执行毕（23:24·Set-ScheduledTask 一行 Settings 变更·自席位权限零提权·StopIfGoingOnBatteries 未动=裁词字面照办）·回读三面验证（旗值 False×2+触发器 PT5M/PT10M 完整+Action wscript→vbs 链完整+State Ready/NextRun 顺延）·回滚锚=改回 true。**值面验证点=23:25:00 L1 触发/23:30:00 L2 触发**（电池态下应真跑出 l1.log/l2.log 新行——结果候补呈报本卷）。
+
+**值面验证结果（23:42 补·BOD 23:38 勘正口径）**：
+- **L1 双绿**：23:25:00 触发·23:25:14Z l1.log 新行（PENDING-RESEND fail(kept)+OK all-dims）——电池态真跑·任务面+日志面双绿。
+- **L2 任务面绿**：LastRun=23:30:01·rc=0·NextRun 23:40 在排——电池门已破（Disallow=false 生效）·电池态真触发；23:32:55 现值复验 `Settings.DisallowStartIfOnBatteries=False (Boolean)`。
+- **L2 日志面**：23:30 轮 ALERT-SENT 200 行 15:30:07Z 落盘（BOD 23:31 读零行系 write 延迟读空窗）——**BOD 23:38 勘正：l1 latch 未自解**·statefile ALERT-NEEDED 仍在·l2 忠实中继·误报链每 10min 一轮照跑·窗后扫尾批 §四.1 维持原急迫度。
+- l1-pending.txt 陈旧 resend fail(kept)：mtime 10-07 11:25 既存·候办标记非本窗产物。
+- 回滚锚=改回 true。
 2. jobCount=10 vs 字面 8：编排陈旧·BOD 22:52 已勘认（§二.4 在案）。
 3. watchdog L87 revive 行改造未做（§五·候裁随 H2 窗）。
 4. Q3.1 运行行陈旧（sg duty-night-patrol.py L49/L194 持续探死端口·LG-066 段2 在案残留）：候 BOD 裁（改行后续窗或 DNP_SG_URL env 过渡）。

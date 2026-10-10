@@ -1,8 +1,8 @@
-# 两栏深夜窗令 · 10-11（周日）22:30-01:00 · sg TriMMC 修复 / 本机 8713 S4U 换形
+# 两栏深夜窗令 · 10-11（周日）22:30-01:00 · sg TriMMC 修复 / 本机 8713 S4U 换形（【已毕归档】两带全毕·10-10 09:33 勘正落卷）
 
 - sourceOfTruth: 本件（trees/1011-nightly-window/coo-window-order-20261011-nightly.md）
 - syncMode: static
-- lastSyncedAt: 2026-10-09T11:30:40+08:00（date 现查原值·**BOD 11:26 认账 PASS 生效**→**【11:30 勘正】BOD 11:30 勘正令（CEO 11:27）**：TriRLC 8711=R 面本地域（本机）非河源·活体实锚本机 8711 正身活着（healthz ok=true·uptime 64h·10-06 起）——「TriRLC 8711 复活」伪命题→**R1 栏撤除·三栏改两栏**·BOD V2 裁词随对象不存在作废·河源 trilc-headless 定性勘件候 CTO 勘毕另呈不混本窗；R1 通知面零残留（认账毕未及铺开即接勘正））
+- lastSyncedAt: 2026-10-10T09:33:28+08:00（date 现查原值·**【10-10 09:33 勘正落卷】BOD 10-10 09:31 裁准④「实况为准」·两栏全毕终态收编**：sg 段闭卷 @49010a87+窗收口提前 23:2x 两带全毕 @window-closeout；本机段 S4U 换形毕全绿（FSD 毕报卷 00de0b3d+补值面段 b9a4660d·五实锚·H1/H3 全绿）；H2 待机专项=BOD 深夜补窗令面直派另跑毕（FSD 10-10 08:03 毕报 c5fc0c5f·断言四件全绿·随程新观察项睡眠超时候裁）；H4 7 天→10-18 巡检照挂。窗全卷转历史归档态）
 - 签发位: COO 小营（三栏分机分带排窗·BOD 11:19 三栏排窗令→11:30 勘正改两栏）
 - 令源链: BOD 11:19 知会（三栏正式排窗候本席成稿）→本席 11:2x 成稿→BOD 11:26 认账 PASS（V2 裁词三条随令裁·候收编）→**BOD 11:30 勘正令：R1 栏撤·改两栏·V2 裁词作废**→本卷两栏现势
 - 令源两稿: sg 段=TriCompany agent-core **@1713614**（sgB cron 两锚修复·READY_FOR_DEPLOY 备码态）+FSD 交接要点卷 @39c2fba4（部署窗门禁第四条）；本机段=trimlc-daemon-hardening-plan-20261009.md **@6141a459**（final·BOD 认账）。~~R1 段=trirlc-8711-revival-plan @22fd1090~~（**随勘正撤·对象伪命题·稿面定性候 CTO 勘件另呈**）
@@ -11,8 +11,8 @@
 
 | 栏 | 对象 | 方案正形（窗令不重抄工序·值席/施工席照稿执行） | 执行位 | 门 | 回滚 |
 |---|---|---|---|---|---|
-| sg 段 | sg TriMMC 8712（loopback+隧道·裁 A 现役形态） | TriCompany agent-core **@1713614** 两锚修复部署（stale 守卫+settle 兜底·「调度活执行停」家族根治）+交接要点 @39c2fba4 | sg 值席 | **门禁第四条（部署前）**：jobs.json 现役 job timeoutMs 全谱 vs staleRunningMs=20min 校准——有超 10min 者当场调该最大值 ×2 再 build（误清机理注：合法长跑 runningAtMs 存活上限≈timeoutMs·阈值须留 ×2 slack）；**BOD 11:26 认账补裁**：值席当场调 ×2 阈值属裁量内动作·毕报带调改哪几个即可 | 照 TriCompany 部署惯例回滚面 |
-| 本机段 | 本机 TriMLC 8713（console 生命周期绑定根治） | 形态治理稿 @6141a459 §二：**两入口合一 S4U 换形**（schtasks 重注册+watchdog revive 改 Start-ScheduledTask·两文件链） | 本机 FSD（8713 域操作惯例位·SDE 备援） | H1-H4（H1 healthz+jobCount=8/H2 **待机-恢复存活专项=核心门**[pid 存活+watchdog 零 DOWN+隧道 keeper 自愈+18710 可达]/H3 双 200+notifyFailures 恒 0/H4 7 天自然观察） | 旧任务 XML+watchdog.ps1 备份→恢复旧定义+重启 |
+| sg 段 | sg TriMMC 8712（loopback+隧道·裁 A 现役形态） | **闭**（窗内照稿部署毕·CTO 技术判读采信）：门禁第四条全谱零超→DEFAULT 20min 免调+build tsc 0 错+scheduler 69/0+新 PID 1959958（TS 22:55:33＞施工时点）+四笔新 fire log 调度活铁证——**闭卷 @49010a87·窗收口 @window-closeout（23:2x 提前收口两带全毕）** | sg 值席 | 门禁第四条 ✓（全谱零超免调） | 未触发 |
+| 本机段 | 本机 TriMLC 8713（console 生命周期绑定根治） | **毕全绿**（窗内 S4U 换形照稿执行毕）：H1/H3 全绿五实锚+pid 17936 三面对表+session-0 非交互+TriMLC-Watchdog 复位在位零误 revive——**毕报卷 00de0b3d+补值面验证段 b9a4660d** | 本机 FSD | H1 ✓/H3 ✓/H4 7 天自然观察→**10-18 巡检**（H2 见下注） | 未触发（零回滚需求） |
 
 ~~R1 段（河源 trilc-headless 8711 复活）~~——**11:30 勘正撤栏**：8711=R 面本地域（本机）daemon 且活体在跑，「复活」伪命题；V1-V4 门与 BOD V2 裁词三条随对象不存在一并作废；河源 trilc-headless 定性勘件候 CTO 勘毕另呈（§五挂账）。
 
@@ -29,7 +29,7 @@
 | ~00:1x | — | H2 断言毕（pid/零 DOWN/keeper/18710） |
 | ~00:15-00:30 | **窗收口毕报 BOD**（两带全绿·先毕带候后带≤窗框） | 同 |
 
-- **H2 待机预告条款**：本机段 23:45± 人为待机→恢复（~10min 本机全离线·本机席会话挂起）——FSD 提前 10min（23:35）预告 BOD+sg 值席；预告窗内 sg 链异常=**停报等本机恢复勿候判**（悬空容忍 ~10min）。**BOD 面对偶确认（11:26 认账信）**：待机窗 BOD 本机会话同挂起，醒后首拍读盘对表，拍延迟预期内不算异常（BOD 会话转报 cron 已内置「拍超 12 分钟旧报上一拍」预案）。
+- **H2 待机专项终态（09:33 勘正收编）**：窗内 22:5x 裁撤（另约窗）→**BOD 深夜补窗令面直派 FSD 另跑毕**——FSD 10-10 08:03 毕报 @c5fc0c5f：断言四件全绿（pid 17936 两轮挂起+6h17m 二次睡眠全程零重启·uptime 严格连续/watchdog 睡眠窗零误 revive/keeper 自愈 connected/18710 True·自动唤醒计时器 FSD-H2-Wake 精确命中零人工）；**随程新观察项**：无人参与睡眠超时 2min 致二次入眠 6h17m=liveness 监测盲区第二形态候裁（FSD 倾向窗口期 keep-awake 惯例化）——**挂联审附议+候办在册**。
 - **硬约束注记**：①21:00 绩效首跑（8713 面 job·nextRun 10-11 21:00+08 已锚）→本机段窗位 22:30 起=首跑+读数验毕后 1h+ 缓冲；②8713 换形重启瞬断知会：bod-tick 节拍（7,37 半小时拍）当次拍延迟=BOD 面知情项非异常；③联审 job（nextRun 10-11 12:00+08）不在窗内零涉。
 
 ## 三、施工纪律（LG-066 族照带·11:30 勘正后适用面收敛）
