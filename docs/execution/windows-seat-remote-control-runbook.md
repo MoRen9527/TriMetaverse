@@ -2,11 +2,11 @@
 
 - sourceOfTruth: 本件
 - syncMode: source-only
-- lastSyncedAt: 2026-09-17T04:05+0800
+- lastSyncedAt: 2026-10-10T16:22+0800
 - 缘起: CEO 令（2026-09-17 04:0x）——操作经验属 Windows 系统运维面，自 M 面优劣档案（`docs/product/m-face-strengths-and-limits.md`）迁出独立成文
 - 适用: 本机（M 面 dev 机）代席位窗口键入/代发命令（如代发 `/compact`、跨窗派工、触发回合）；对照 sg 面=tmux `send-keys` 原生等价能力
 
-## 一、已知坑位（四连败实证，2026-09-17）
+## 一、已知坑位（实证累积：2026-09-17 四连败 + 2026-10-10 wt 多 tab 增量）
 
 | 坑 | 实证 |
 | --- | --- |
@@ -15,13 +15,14 @@
 | VS Code 多 tab / 同进程第二窗无法唯一定位 | Get-Process MainWindowTitle 只报进程主窗 |
 | Win11 前台锁 | AppActivate 可返回 True 但焦点未动（后台改焦点被拒） |
 | CLAUDE_CODE_CHILD_SESSION=1 环境遗传 | BOD shell 代起的 claude 被标记子会话：不存转录/不注册名址/ListAgents 不可见（根因由 CEO 从窗口 banner 排出） |
+| wt 多 tab 拓扑回车吞噬加重 | WindowsTerminal 单进程多 tab（13 tab 实例）：ENTER 双发 350ms 被吞（五步全绿但转录 4h 零动）；三发间隔 ≥450ms 过（2026-10-10 m-cos 两轮对照实证，唯一差异变量） |
 
-## 二、远控五步法（已验证：/compact 送达 m-cos 并完成压缩，03:46）
+## 二、远控五步法（已验证：/compact 送达 m-cos 并完成压缩，09-17 03:46；2026-10-10 复验：m-cos 中文打招呼全链通+ack 回，§34）
 
 1. **找窗**：`EnumWindows` P/Invoke 全量枚举可见窗（Get-Process 只报主窗会漏同进程第二窗），按标题含席位名取句柄（hWnd）。
 2. **切焦点**：先发 ALT 键（`keybd_event(0x12,0,0,…)` down + `(…,0,2,…)` up 解前台锁）→ `SetForegroundWindow(hWnd)` → **`GetForegroundWindow()` 比对句柄验证**——不等即中止，绝不盲发。
 3. **输文本**：`Set-Clipboard` → SendKeys `^v` 粘贴（绕 IME 组词，中英文免疫）——**禁直打**（中文必乱码，ASCII 也可能被组词）。
-4. **提交**：`{ENTER}` 双发（单发易吞；疑似被 IME/终端层吃掉）。
+4. **提交**：先 `{ESC}` 清输入框（防残串拼接保险步）→ `{ENTER}` **三发、每发间隔 ≥450ms**（单发易吞；wt 多 tab 拓扑下双发 350ms 实证也被吞——2026-10-10）。
 5. **守卫**：每步校验失败即中止不发（激活 False 照发=违断链纪律，初试实录在案）。
 
 ## 三、BOD 代起常驻 claude 进程前置
