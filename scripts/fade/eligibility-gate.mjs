@@ -87,11 +87,15 @@ function extractPointers(text) {
   const out = new Set();
   // 判据边界（v1 定稿·自指/待产物豁免）:
   //   sourceOfTruth 行=自指声明非输入依赖；输出 行=待产物（产出后才有）——两行不提取。
-  //   查二审对象=输入料指针（依赖物）·「零悬空依赖」语义域。
+  //   v1.2.1 增（S1 批交叉验证暴露）: 批定性转录行（`件名 → FAIL（…）` 形·判读结果叙述）
+  //   中引用的悬空 hash/路径=被讨论缺陷对象非输入依赖——豁免提取（与全文级待裁词=WARN 同构：
+  //   历史叙述段合法）。
   const skipRe = /^\s*[-*]?\s*(sourceOfTruth|输出)\s*[:：]/;
+  const verdictLineRe = /→\s*\*{0,2}FAIL\*{0,2}|→\s*FAIL\b/;
   const pathRe = /(?:trees|docs|scripts|src|test)\/[\w\-./]+\.\w+|[A-Za-z]:[\/\\][\w\-. \\/]+\.\w+/g;
   for (const l of linesOf(text)) {
     if (skipRe.test(l)) continue;
+    if (verdictLineRe.test(l)) continue;
     for (const m of l.matchAll(pathRe)) out.add(m[0]);
     for (const m of l.matchAll(/@([0-9a-f]{7,40})\b/g)) out.add(`@${m[1]}`);
   }
