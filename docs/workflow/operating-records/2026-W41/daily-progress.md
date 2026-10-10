@@ -1227,3 +1227,12 @@
   - 98548743 docs(cos): LG-071 授号挂账+大表三笔——验收链改形台账条（CEO 11:02 令·候 CEO 终验改 COS 终验+CEO 亲测项攒批单 lg071-ceo-review-batch-cos-final-accept·22 条断言过·首授被并行 rebase 窗重置吞 11:1x 重放）+大表 LG-071 挂行+LG-054/LG-065 两行勘补刷（BOD 10:50 承诺项：LG-054 族③ CORE_VERSION 5/5 破线解除实证 b14 链尾/LG-065 N2 五锚 PASS+值席三刻+试水认账现势）
   - 6d2ab6f3 docs(coo): CEO 11:02 改形令收编——议程件§三议题面扩展（树协议全链责任制并裁项+验收链改形知情）+LG-066 收口卷§四验收末棒换 COS 知情行（候 CEO 终验→COS 终验即销账·大表 2520551a 对表）[BOD 11:06 转令·今日三节点排工照走]
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:40 +08：自上次进度提交 b2045414 后新增 7 条 commit：
+  - e6bd20f5 merge: 收编并行笔（值席落盘防覆盖）
+  - e697fab2 docs(coo): 第五面议程件§七 CEO 11:34 双域分工模型收编——本地域预处理工组×服务域自动化流水线（零待裁零确认=准入条件·预演意义）上位定调收拢四议题+本席落地提案三项候联审（拆树模板 v1 节点六要素/COS 开收口位制式/预处理准入判据五条）[BOD 11:34 转令]
+  - c9ebdc5f docs(cos): LG-071 台账条补制度正身锚——CAO 铸条毕回执对表（TC engineering-disciplines.md 附录 b1fcc7a·sg 推送候 root 污染修复毕补推·改形即刻生效不受影响）
+  - ba9f89cd docs(memory): 互踩族增机理四（共享工作区分支向踩窗=CAO LG-071 铸条误落 fsd 分支案·临时 worktree cherry-pick 重落法+commit 前必验分支向）+trimc 条勘补 bare 仓 root 污染变体（remote rejected 静默潜伏面·TriCompany.git 24 件实勘）——随仓镜像同步
+  - 5f38ee00 docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - 9081fa4a docs(memory): 并行窗互踩族增机理三（未提交工作区态被并行 rebase 窗重置吞=COS LG-071 首授 98548743 重放笔二次实证·盘点重放+写后即 commit 锁笔·三态保护梯度）——随仓镜像同步
+  - 1a1108ed docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+- registry：v2.1；今日 registry 提交无变化
