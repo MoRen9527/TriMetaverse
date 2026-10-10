@@ -1288,3 +1288,11 @@
   - e1763ee4 docs(fsd): 栏 B 窗前预备施工单落卷——8713 并批三件一次重启就位供料·六锚实勘（allowlist 真源位 channel.cmd 12 串/CRLF 形/重启链/避触三拍绕行重启窗收敛 22:46-22:58）·三 job command 拟稿+白名单追加行清单候 CTO 门禁·候定项五条汇总 @87871894 栏 B
   - f73b832c docs(cto): 10-11 窗族令窗前三件落树——栏 A 资格门三查方案稿（SER 三轴机器可判化·三段施工序·影子期只读数不拦截）+栏 B 白名单追加清单（实勘 cmd L25 现值 12 条·必追加三条候选·施工注意四条含 watchdog 先停/CRLF 探针）+栏 C token 漂移族勘验路径（三路零写面·三分支判定树·掩形工具行）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:30 +08：自上次进度提交 431bdea2 后新增 6 条 commit：
+  - 1e940a63 docs(cto): Q3.2 UI 升版施工单落树——TriModel 卡面 8712→8710 窗前对料（改动面六行锁定=index.html 四行+fourplane 断言两行同步防假绿·正名核验 MMC/RMC 双 8710·施工序六步·跨机发布位追平归值席/COS 通道=README Deployment 分工 LG-035 P3-sg 切片 2 定谳·回滚=revert 单 commit）
+  - ebb16958 docs(coo): FSD 全就位终态知会入卷+新挂账——施工单 v3 @b75497c0 消费毕零候定项·阈值数值域 CFO 正身催办挂账（窗后启动·DEM-004 硬 deadline≈10-16 前必落·本席线认领）
+  - b75497c0 docs(fsd): 栏 B 预备卷 v3 门禁终形版——CTO 门禁卷 §四终表一锤照抄（ops-local 三串终形·A/C 双 APPROVE+job③ 调度器代换语义=同脚本保 LG-066 修复批·disable 禁 delete 硬序）·增量锚全并入（端点配置化实测验收/阈值缺位显式 degraded/零丢拍三对表步 4/九步序列终形）·§七版本链 v1 方向复活/v2 归一被推翻如实录·双稿时序交叠分叉根因在卷
+  - 638ba59f docs(coo): 10-11 窗族令三栏全就位终态——CTO 栏 B 门禁定稿闭环 15:16（五项裁 APPROVE·三串 ops-local 形一锤归一·时序收敛窗 22:46-22:58 认+零丢拍三对表增量锚·l1 退役硬序）·窗前清单 §五全绿收环·候窗日
+  - c4d15c11 Merge remote-tracking branch 'origin/dev' into dev
+  - 831f3f66 docs(cto): 栏 B 门禁卷补笔·两席占位分叉终裁归一——对 FSD 15:17 归一信（时序交叠互为前后手根因如实录）；对象断言=窗令正身 87871894 栏 B ③「活性探针 tri-liveness 并批」原文；job③ 语义校正=调度器代换非新轻探针（保 LG-066 修复批成果·并存选项不设）；三串定稿终表 ops-local 形一锤+fade 占位三处废弃；FSD v2 双锤认收并入
+- registry：v2.1；今日 registry 提交无变化
