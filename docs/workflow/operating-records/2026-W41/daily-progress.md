@@ -1279,3 +1279,12 @@
   - d1061a17 merge: 收编并行笔（值席落盘防覆盖）
   - 87871894 docs(coo): 10-11 周日窗族令三栏成稿——A 栏 DEM-003 资格门（09:30-13:30·CTO·候稿落位）/B 栏 8713 并批深夜窗（22:30-01:00·DEM-004 一期+预派 job+活性探针·FSD 施工 CTO 门禁·硬 deadline 10-16）/C 栏 R 面 token 漂移族勘验（并案 R-HY 401 复核同根销项·CTO·零写面）·呈 BOD 认账（14:49 预授权通道）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:20 +08：自上次进度提交 85c0c5ab 后新增 7 条 commit：
+  - 894ec51d docs(cto): 栏 B 门禁定稿卷落树——FSD 五候定项全裁（job② 串定稿 ops-local/window-dispatch-remind+schedule 运营域可调/端点配置化实测验收不凭记忆/l1 退役实证在先 disable 禁 delete/串 A·C 逐字节 APPROVE 占位归一·l1 vbs 壳逐字等值+修复批后形 md5 基线/阈值结构先落+degraded 显式门）+时序窗 22:46-22:58 认+在册 10 jobs 零丢拍增量锚
+  - f1826703 docs(fsd): 栏 B 预备卷 v2 归一版——CTO 栏 B 门禁稿读毕分叉归一从 CTO 形（fade/ 三串占位·job② window-dispatch-remind 形得答·job③ 新写轻探针形）·补勘双锤（TriMLC Daemon schtasks 在册=重启正形禁裸杀/store 双形态 sqlite WAL+JSON 投影定谳）·重启序列并 CTO 注意 2/4（先停 watchdog+uptime 重置断言+触发链实证探针）·v1→v2 差异表 §七
+  - b9b6b815 docs(coo): FSD 栏 B 就位确认入卷——窗前清单 §五全绿（CTO 三件在位核+FSD 六锚施工单 @e1763ee4·候 CTO 门禁定稿末环）·A/C 两串占位分叉转门禁归一·迁移 job 实勘 23:10 勘正采认·CTO 腿断笔补推实锚（f73b832c∈28287b8b 链）
+  - 28287b8b merge: 收编并行笔（值席落盘防覆盖）
+  - 24310650 docs(coo): 10-11 窗族令窗前三件在位确认毕——CTO @f73b832c 三件逐一开卷核（栏 A 方案稿/栏 B 白名单清单/栏 C 勘验路径·窗前清单 §五.1/2/3 达成·候 FSD 就位确认）·本席笔随 ff 补推 CTO 腿断笔上 bare
+  - e1763ee4 docs(fsd): 栏 B 窗前预备施工单落卷——8713 并批三件一次重启就位供料·六锚实勘（allowlist 真源位 channel.cmd 12 串/CRLF 形/重启链/避触三拍绕行重启窗收敛 22:46-22:58）·三 job command 拟稿+白名单追加行清单候 CTO 门禁·候定项五条汇总 @87871894 栏 B
+  - f73b832c docs(cto): 10-11 窗族令窗前三件落树——栏 A 资格门三查方案稿（SER 三轴机器可判化·三段施工序·影子期只读数不拦截）+栏 B 白名单追加清单（实勘 cmd L25 现值 12 条·必追加三条候选·施工注意四条含 watchdog 先停/CRLF 探针）+栏 C token 漂移族勘验路径（三路零写面·三分支判定树·掩形工具行）
+- registry：v2.1；今日 registry 提交无变化
