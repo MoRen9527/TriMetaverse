@@ -154,3 +154,11 @@
 - **中文通道验收 ✓**：测试话术全中文经剪贴板直达，m-cos 引复无乱码（IME 免疫实证）。
 - **runbook 增量（候 CAO 铸）**：wt（Windows Terminal）多 tab 拓扑=13 tab 同进程，EnumWindows 唯一命中+焦点守卫照用有效；**ENTER 吞噬加重变体实锚——双发 350ms 不够，三发 ≥450ms 过**（二轮唯一差异对）；ESC 预清框为防残串拼接保险步。宿主判定小改：wt 主窗标题=聚焦 tab 标题，发送前标题即聚焦面断言（本案 ✳ m-cos ✓）。
 - **链路事实随录**：m-cos 真身链=claude 19452←pwsh 10152←wt 4924（13 tab 之一）——活体断言先行（进程在+宿主 tab 对）防发错窗；转录零动静不是发送失败独断（write 延迟窗教训双向）——本案两轮对照=提交差实锚非延迟。
+
+## §35 sg hook rebase 失败观察项处置毕（16:4x BOD 直连·根因=BOD 自己）
+
+- **m-coo 16:40 知会**：16:39 推链时 sg bare post-receive 报 cannot rebase unstaged changes，bare ref 成功但 fleet 工作树追平失败——按 M 面路由归 BOD 直连实勘。
+- **根因勘明=BOD 自己**：15:4x sg 侧 seats.json 名册热修笔（fleet python patch）**未提交**，停在裸工作区档，16:42 m-coo 推链时挡住 hook 自动 rebase（hooklog「pull/rebase skipped」+worktree sync degraded rc=1）——三态保护梯度教训的 BOD 自犯变体：sg 面动手笔当时应 commit 锁笔或事后还原。
+- **处置**（fleet 身份全程）：同值性对表先行——sg 脏笔与流内正名笔 65209c44（已随 m-coo 推链入 bare 顶）diff **逐字节同**（blob hash bcc00a70..b9f94f16 双侧一致）→ `git checkout --` 还原+fetch+rebase 拉平 → **HEAD=21ef59c9=bare 顶、值面 m-sde×1/m-dee×0、diff CLEAN**。后续 hook 拍恢复自动追平。
+- **影响面核**：GitHub 镜像腿未受影响（hooklog 16:42 mirror pushed 21ef59c9 实锚）；tick 照常 dispatched；degraded 窗口=16:42-16:4x 约 10 分钟消费端读旧版（15:30 巡检笔止），无消费事故回报。
+- m-coo 候办 P2（hook 追平失败无告警面）已在其 21ef59c9 笔内记，不重复立。
