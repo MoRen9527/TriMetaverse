@@ -141,3 +141,9 @@
 - **认账裁（D-39 排窗分派域·零待裁零例外）**：三栏结构+工量+门禁+回滚锚全数认——A 栏 10-11 09:30-13:30 DEM-003 资格门（CTO·红线只通知不承接照带）；B 栏 22:30-01:00 本机 8713 并批三件一次重启（DEM-004 一期 job 挂 09:30+8713 预派 shadow job+tri-liveness·FSD 施工 CTO 门禁·allowlist 备份 trap 回滚锚·不触 21:00 绩效 job）；C 栏日间弹性段 token 漂移族勘验（CTO 零写面·**与 R-HY 401 复核并案销项**按 BOD 14:49 注记铸入·修复面另呈窗）。
 - **硬约束三件认**：DEM-004 deadline≈10-16 超窗即报；周日 23:00 周平面迁移在 B 栏窗内纪律照带+毕报含正常读数；8713 重启瞬断致 bod-tick 当次拍延迟=知情项不判停摆。
 - **后手**：COO 即 SendMessage 直达 CTO/FSD 知会执行位（M-004 直达正形）。
+
+## §33 教训勘正+sg sde 席正名重启（15:56 BOD 落·CEO 15:44 双令）
+
+- **教训勘正（CEO 质询①·归因错误认领）**：「fleet 自查静默漏报」条归因错——实证链：CAO fleet 扫 TriCompany.git 单仓 24 件 vs BOD root 扫同仓 24 件**一致零漏**（fleet 在其扫描范围无盲区）；漏的 130 件全在未扫四仓=**根因=扫描范围窄（单仓自查）非 fleet 身份缺陷**；污染造因=root（root 污染 root 清·chown 权限对齐）。修正后教训两道分立：①范围面——「归零/无污染」断言必须全仓扫禁单仓自查；②身份面——清除操作权限对齐污染源。记忆条已改+CAO 纪律册条目勘正候转。
+- **sg sde 席正名重启（CEO 令②·15:47-15:52 执行）**：①三份名册 sde 正名——sg /srv/fleet/TriMetaverse/.claude/seats.json（fleet 笔 m-dee→m-sde+M-DEE→M-SDE）+本机 .claude/seats.json 同改（主仓 commit 94f7c1d8）+本机 .fade/seats-sg.json（m-duty-dee→m-duty-sde+agent/manual D-13 正名补齐）；②会话重启——kill 旧（pid 210215·挂旧 agent 名 DeploymentEngineer=D-13 前残）+新起 pid 2202128（--agent SeniorDeploymentEngineer 正名·❯ 空框候令态）；③env 形态对照三席（fsd/cto/sde）envkeys 全 0=settings 兜底为现役标准形非缺陷（旧 sde 22 变量系更早起法特例）；④root 清点零残留+/tmp 临时脚本已删。
+- **名册谱系勘明随录**：seats.json opsName 短形（m-fsd/m-sde）vs tmux 会话名长形（m-duty-*）为既定模式非错位；.fade/seats-sg.json 为长形独立文件。CEO 口径「本机已是 m-sde」定谳正名方向=sde，dee 谱系（D-13 后某轮所写·未上线过）就此退役。
