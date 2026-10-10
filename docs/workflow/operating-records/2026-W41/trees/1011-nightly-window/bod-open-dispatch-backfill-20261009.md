@@ -172,3 +172,10 @@
 - **恢复链自洽**：16:45 BOD 还原脏笔→16:49 该 job 下一拍成功清零（healthz 现查 degraded:false cf:0 终态复证+m-coo 16:49 推拍 hook 零报错互证）——单一根因两症状一处置全愈。
 - **教训（BOD 自犯追加）**：§35 处置时只验了 hook 链恢复，未扫全 git 消费族——cron job 链三连败若非本拍 cf=3 差异提示即漏报。正形=脏笔类根因处置后，恢复面验证须扫全消费族（hook+config-sync cron+其他 git 消费者）。本条与 §35 合并读：动手面现场清点（留痕）+消费面全族复证（收口）两道缺一不可。
 - **latest 冲回第四犯随录**：本拍转报时 tick-latest.md 被冲回昨日 10:49 拍（git 拉平冲回家族，恰与 16:42 sg rebase 同窗）——转报切 tick-log 存档直取（现行纪律），gitignore 化根治候联审并案（四犯实证加重）。
+
+## §37 runbook 升维公司维度迁位毕（17:3x CEO 17:27 令·含落错线勘误一次）
+
+- **CEO 令**：windows-seat-remote-control-runbook.md 落回 TriCompany——通用能力进公司维度，同步知会 CAO 记公司纪律。
+- **迁位链**：正身落 `TriCompany/docs/engineering/windows-seat-remote-control-runbook.md`（与 render-pipeline-runbook 同族；内容=现役全文+升维迁移注记+公司维度适用声明）；本仓原位改指针（sourceOfTruth 改指 TriCompany 侧）；m-face L151 引用行同步注再迁；历史卷引用 6 处冻结不动。
+- **落错线勘误（互踩族第四向 BOD 自犯·当场即停即纠）**：TriCompany 共享仓 HEAD 停 fsd-sgb-fix-20261009 分支，初笔 1c46fce 落错线——「读到非预期分支即停」纪律触发，worktree 从 dev 建账 cherry-pick 重落 **bcca6b5=dev 顶**；fsd 线原件不动（其 merge dev 时已应用自动消解）；先例同形=CAO 今日 LG-071 铸条笔 d634fe4 误落同分支→b1fcc7a 重落。
+- **推欠账**：GitHub 443 全断（Connection reset，HTTP/1.1 切换无效）+TriCompany 无 sg-bare pushurl（branch -a 里的 sg-bare/dev=packed-refs 残留，remote config 实无）——bcca6b5 本地 dev 线锁定，推候网络恢复收口批（与 wt/board 线推欠账同批）；CAO 知会不受影响（同机同仓可见）。
