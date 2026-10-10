@@ -1265,3 +1265,12 @@
   - 95631ff9 docs(sde): S3 窗施工毕报落卷——段1 硬绿门全绿(法 B+7 单测+707/707+59 P0 构成实勘)·A 区四步全过(execution_log id=448 正面实证)·B 区四连全 401 零升级·C 区归一六锚(C1 既有正形链口径修正+C5 保留态如实录)·D 区两分线(PENDING-RESEND 571 笔未自愈+两机 token 尾指纹非同值 e075≠4aa5)·mc degraded 既有定性·E 区红线全清[判读:PASS 域候选候 STE 对表]
   - 65b57cc1 docs(cfo): W41 日报 10-10 14:00 锚——周窗 28%；同锚跨日首对成立（17%→28%=+11 点/24h）日 pace 警告线 15 未触发·M6 日 pace 线首次可判；三线零触发；周六无门令面
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:50 +08：自上次进度提交 d15ba36d 后新增 7 条 commit：
+  - d903bcdf docs(coo): S3 窗督办收口终态——三席链合流毕（SDE 施工毕 @95631ff9+STE 锚对表 PASS 全绿 @d7a8bb78+CTO 技术收口 APPROVE @738d50eb）·窗收口 14:44 提前 ~1h45m 零拖窗零超窗·新立案 R 面 token 分发漂移族候窗族令·BOD 呈报随发
+  - 2bf72a8f docs(sde): S3 毕报卷 C1 行号微瑕勘正(L11→L10·STE 判定卷 @d7a8bb78 微瑕注采认·判定 PASS 13 项全独立验)
+  - d7a8bb78 docs(ste): S3 窗 STE 锚对表判定卷——判定 PASS 主体全绿零阻塞零升级（对 SDE 毕报 13 项第二方法独立验全录：P0 59 例独立复跑绿/R-HY 8710 外部面复探 401/sqlite_sequence seq=448 结构级铁证三重 A3/分线① CTO 校正第三读数源）；方法论增量三条（DELETE 级联清 log→snapshot 前置纪律/GET 同门面安全形/sqlite_sequence 补位法）
+  - 21809243 docs(coo): S3 CTO 技术收口毕收编——主体 APPROVE 无保留 @738d50eb·分线①校正闭案（修复后队列空载静默·DIAG 200 值面正解）·新立案 R 面 token 分发漂移族（三症状同根·owner CTO·候 10-11 窗族优先排·R 面观测盲区 4 天注记）·候 STE 判定达后督办收口终态
+  - acc0d3dc docs(sde): S3 毕报卷分线①勘误行(CTO 收口 §二.2 值面校正采认·原文留痕不改)——「未自愈」判词撤销(log 零行双向不可定谳同族):最新 fail 03:45:02Z 早于 FSD 修复毕 03:51:47Z 6 分钟·修复毕后队列空载静默=正常形·分线①随修复闭案 571 笔归档
+  - 9e61eed6 merge: 收编并行笔后重推 CTO S3 技术收口卷 738d50eb
+  - 738d50eb docs(cto): S3 窗技术收口卷——主体 APPROVE（四缺口施工面全过·红线全清）+R 面 token 分发漂移族一案立项（mc degraded+两机 token 非同值+R-HY 401 同根·排 10-11 窗族跨机对表）+SDE「未自愈」定性值面校正（log 零行双向不可定谳同族·队列空载静默形·分线①随 FSD 修复闭案）+C1 判据卷勘漏自认（盘点未下探 daemon 子目录）
+- registry：v2.1；今日 registry 提交无变化
