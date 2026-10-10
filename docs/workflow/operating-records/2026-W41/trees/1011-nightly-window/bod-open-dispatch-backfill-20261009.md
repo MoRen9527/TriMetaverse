@@ -120,3 +120,11 @@
 - **12:00 三席联审（CPO/COO/CTO）开审即毕**：三席立场件会前齐·零分歧·全案一致通过；裁决落池推 bare 毕（议程件 §八回写转 static）。
 - **三项裁决**：①DEM-003 双 COS 制=进实现——一期影子试运行（5-10 件低风险活·七锚+N=5 件连续走通）·三组件顺序=资格门（10-11 日间段）→活性探针→接单触发器·**红线=只通知不自动承接**·影子选件 COS 提单+COO 排程；②DEM-004 GLM 用量观测=进方案+daemon 化一期**本周排窗**（技术裁 TriMLC 8713 四据·一期=每日读数行·硬 deadline=CFO 会话定时器 7 天过期·嵌 10-11 深夜窗白名单并批·CTO 估 0.5 天·COO 督办挂账）；③第五面触发机制化=进实现——**消费侧刷新纪律即时立项**+触发面随流水线一期 shadow 配套（8713 预派 job）+晨间盘点=**CEO 事件触发四步为主+COO 巡检兜底融合裁**+独立值拍=拒（过度设计）+拆树模板/开收口位/准入判据三提案全进方案（SER 双轨并档）+教训专面拆归 CAO 铸卷+CAO 尾署即作者三席带过确认毕。
 - **BOD 对照注**：CEO 11:34 双域模型落点=流水线一期 shadow 配套进裁（三期落地序之一二期对位入裁·三期停工门对齐未见条候一期毕再排）；CEO 盘点四步=融合裁主位（演练卷方向采认）；三提案=排工形制令载体面进方案。
+
+## §30 m-duty-de 残留席关停（13:23 BOD 落·CEO 质询触发）
+
+- **CEO 质询（13:17）**：de/sde 同一员工（D-13 双名族·小布），de 该关——为何 tick 仍报「sg duty 组 14 席」含 m-duty-de。
+- **勘明三层错位**：①sg fleet tmux live 实存 14 个 m-duty-* 会话（含 m-duty-de 残留）——tick 为 tmux 自动发现忠实读数（非错报）；②D-13（09-21）定谳 DE→SDE 正名族，**残差「tmux live m-duty-de 改名重启候 BOD 窗」挂账三周未落**=本根因；③名册双份（本地+sg seats.json）现用 **dee 谱系**（m-dee/m-duty-dee=senior-deployment-engineer 正名），live tmux 却是按 D-13 旧正名 sde 起的会话——live sde 与名册 dee 错位并存。
+- **BOD 执行（13:2x·D-39 运维小窗）**：fleet 身份 `tmux kill-session -t m-duty-de`——KILLED，残列表 13 席唯 sde 无 de（会话 created 1789563580≈09-25 前后建·全天各拍 m-duty-de=候令零在途·安全）；tick 下拍起自动读 13。
+- **残差挂账（不改·候窗）**：live m-duty-sde vs 名册 m-duty-dee 名字统一——需 sde 席会话改名重启选窗执行（原残差账 T3/T-d 本笔·候 BOD 窗排期）；今日不动避免无谓重启。
+- 探针插曲随录：BOD 首轮 root 身份 `tmux ls` 探不到 fleet socket（tmux server 按用户隔离）差点误判「14 席假读数」——fleet 身份重探修正，身份语境漂移族又一实锚。
