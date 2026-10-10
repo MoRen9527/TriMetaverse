@@ -147,3 +147,10 @@
 - **教训勘正（CEO 质询①·归因错误认领）**：「fleet 自查静默漏报」条归因错——实证链：CAO fleet 扫 TriCompany.git 单仓 24 件 vs BOD root 扫同仓 24 件**一致零漏**（fleet 在其扫描范围无盲区）；漏的 130 件全在未扫四仓=**根因=扫描范围窄（单仓自查）非 fleet 身份缺陷**；污染造因=root（root 污染 root 清·chown 权限对齐）。修正后教训两道分立：①范围面——「归零/无污染」断言必须全仓扫禁单仓自查；②身份面——清除操作权限对齐污染源。记忆条已改+CAO 纪律册条目勘正候转。
 - **sg sde 席正名重启（CEO 令②·15:47-15:52 执行）**：①三份名册 sde 正名——sg /srv/fleet/TriMetaverse/.claude/seats.json（fleet 笔 m-dee→m-sde+M-DEE→M-SDE）+本机 .claude/seats.json 同改（主仓 commit 94f7c1d8）+本机 .fade/seats-sg.json（m-duty-dee→m-duty-sde+agent/manual D-13 正名补齐）；②会话重启——kill 旧（pid 210215·挂旧 agent 名 DeploymentEngineer=D-13 前残）+新起 pid 2202128（--agent SeniorDeploymentEngineer 正名·❯ 空框候令态）；③env 形态对照三席（fsd/cto/sde）envkeys 全 0=settings 兜底为现役标准形非缺陷（旧 sde 22 变量系更早起法特例）；④root 清点零残留+/tmp 临时脚本已删。
 - **名册谱系勘明随录**：seats.json opsName 短形（m-fsd/m-sde）vs tmux 会话名长形（m-duty-*）为既定模式非错位；.fade/seats-sg.json 为长形独立文件。CEO 口径「本机已是 m-sde」定谳正名方向=sde，dee 谱系（D-13 后某轮所写·未上线过）就此退役。
+
+## §34 远控五步法现役实测 m-cos（16:18 BOD 落·CEO 16:10 令·两轮闭环）
+
+- **实测结果=通**：CEO 令打招咕一轮——第一轮（粘贴+双 ENTER·间隔 350ms）发送守卫全过（唯一命中窗 1182324+焦点验证过）但**未提交**（转录 4h 零动静）；第二轮（ESC 清框+三 ENTER·间隔 450ms）**提交成功**——转录 16:17:05 动（+225KB 回合）+尾段命中测试话术+m-cos 回 ack（16:16「COS 在位·收到远控五步法通道验证」·date 现查自附）。
+- **中文通道验收 ✓**：测试话术全中文经剪贴板直达，m-cos 引复无乱码（IME 免疫实证）。
+- **runbook 增量（候 CAO 铸）**：wt（Windows Terminal）多 tab 拓扑=13 tab 同进程，EnumWindows 唯一命中+焦点守卫照用有效；**ENTER 吞噬加重变体实锚——双发 350ms 不够，三发 ≥450ms 过**（二轮唯一差异对）；ESC 预清框为防残串拼接保险步。宿主判定小改：wt 主窗标题=聚焦 tab 标题，发送前标题即聚焦面断言（本案 ✳ m-cos ✓）。
+- **链路事实随录**：m-cos 真身链=claude 19452←pwsh 10152←wt 4924（13 tab 之一）——活体断言先行（进程在+宿主 tab 对）防发错窗；转录零动静不是发送失败独断（write 延迟窗教训双向）——本案两轮对照=提交差实锚非延迟。
