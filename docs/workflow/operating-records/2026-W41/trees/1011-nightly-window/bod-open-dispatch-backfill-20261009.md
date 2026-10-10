@@ -182,3 +182,10 @@
 
 - **§37 推欠账勘正（17:40 CAO 回执触发）**：「TriCompany 无 sg 备援 pushurl」表述不准——sg-server remote 实存（我 get-url 断在 sg-bare 后未续勘 sg-server，本仓 branch -a 见 sg-server/dev），CAO 登记（GID-13·TC b4fe919）推 sg-server dev 时连带 bcca6b5 快进推平（c8e1443..b4fe919，ls-remote 双面一致 17:40:30）——**正身已达 sg 侧，GitHub origin 欠账降级为双源对齐欠账**（候网络恢复补推 origin 即平）。教训随录：remote 通道断言须逐个 get-url 勘完再下「无备援」结论，断链勘验不完整=假阴性同族。
 - **CAO 登记三事项回执归档**：GID-13 增毕（工具选型域 1→2）+纪律册零改动如实（无「跨项目通用能力」类目不硬造）+指针件零登记（GID-13 已声明 pointer 态防重复登记）。升维链全环闭。
+
+## §38 大表 open=14 质询答实+归类落卷+对表令（02:53 CEO 02:45 问实·CEO 令三件）
+
+- **CEO 问实**：「大表 open=14，是还有 14 个没完成么？我不是把 CEO 终验都改成 COS 了么」——BOD 实勘台账正身 `docs/workflow/hub-state/in-progress.json`（daemon 大表统计源=bod-tick-runner.mjs L149 直读该文件）全读 22 项。
+- **答实定性**：open=未销账≠卡验收。LG-071 改形（COS 终验毕即销）管的是验收排队段，对存量构成无追溯——14 项真卡验收仅 4 项。
+- **14 项归类**：①候验收 4=lg058-N3/N4（候 STE+流水线读数）+N5（升版段）+N2（回炉中）；②候窗 2=cron-muh6shv0 stalled（验收锚=10-10 晚 8713 窗·账面待刷）+lg066 TriRMC 合并回单（顺延窗条款）；③观察期 1=lg065 值席组合（N3 72h 窗至 10-12 19:03）；④制度大活在途 4=lg067 流水线（10-11 09:30 A 栏资格门）+lg068 绩效复活+lg069 电池闸+lg070 停工门；⑤条款本体 1=lg071 自身（改形生效+攒批单/刷账落地段在途）；⑥长有效候办 2=ledger-concurrent-write-p2+deployment-runbook-anchor（P2/P3 挂账不销）。
+- **CEO 令（02:53）**：落卷✓+催对表+昨晚（B 栏 22:30-01:00 8713 并批）窗后账面刷新——催信发台账主控小贾（xiaojia-hub），对表真值=树面毕报，回执候。
