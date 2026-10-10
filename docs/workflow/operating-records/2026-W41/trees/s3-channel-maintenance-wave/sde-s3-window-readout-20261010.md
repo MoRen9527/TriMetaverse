@@ -68,6 +68,7 @@
 - 末笔 ALERT-SENT 200 停在 **2026-10-07T09:05:01Z**——与 STE 锚卷 §七.5 时序注**逐字对平**；此后 fail 连续滚 3 天。
 - 告警体：[L1/dev-win] trimlc liveness issues x1（korw job cron_muh6shv0 state=last-run-stale 快照滞留重发队列）。
 - 归因候选（承 STE 卷 L142 注）：通道目标侧问题（首 fail 早于 8713 手术 build 锚 42s）——本席零处置，读数归 CTO。
+- **【勘误 2026-10-10 14:4x·CTO 技术收口 §二.2 值面校正采认，原文留痕不改】上条「现役未自愈」判词撤销**——系单点 log 面推得（log 零行双向不可定谳教训同族）：最新 fail 笔 03:45:02Z 早于 FSD 修复毕（03:51:47Z）6 分钟，修复毕后队列空载静默=正常形非通道死；值面正解=FSD 今晨验证（DIAG 200+文件清+零 failcount 残留）。分线①随修复**闭案**，571 笔积压归档保留。锚=trees/s3-channel-maintenance-wave/cto-s3-technical-closeout-20261010.md §二.2。
 
 **分线② sg TriMMC POST 403 共享通道（本机侧可勘面）**：
 - 本机 trirlc-daemon.env TRIMC_INTERNAL_TOKEN 值面指纹：**len=64，tail4=`e075`**（sha8=d50a0760）。
