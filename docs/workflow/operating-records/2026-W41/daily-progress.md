@@ -1254,3 +1254,8 @@
   - 34ee74c1 docs(fsd): staged 正身 l2.post-lg066-seg2.ps1 重发块修复重落（前笔 Edit 被并行席工作区操作冲回——本窗冲刷第三犯实证·grep 零命中+status 干净+log 顶 f06b60c7 三证；36679c4b 只收毕报卷系 add 时文件已被刷回）·三处=[string] 强转+ok 清计数+catch 落 status/fail 计数·与部署拷贝 md5 c2c54945 修复面对齐·本笔 Edit+commit 同回合压冲窗
   - 36679c4b docs(fsd): pending 重发修复毕报——BOD 11:47 准修即做+CTO 11:46 APPROVE 两微调照单全收（[string] 强转剥 ETS 注记/catch 落 HTTP status+fail 计数升必做/清队归档留日志行）·三面同步（l1/l2 部署拷贝+l2 staged 正身防重部署回滚雷）·备份 md5 双录 7da6f90e/c2c54945·验证门两条全过（构造 pending 实发 200 PENDING-RESENT ok 03:51:47Z+负验证双绿+生产轮 03:50:03Z 新代码双绿）·红线 R-HY l1 判定面零触碰·PS5.1 ETS 序列化第五变体族注候 CAO
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:00 +08：自上次进度提交 99e7a695 后新增 3 条 commit：
+  - 0c280f6e merge: 收编并行笔（值席落盘防覆盖）
+  - 325ab66f docs(coo): S3 窗前对表毕入卷——STE 预备件 @0ad1e9d2 五区+探针对象 8710 现势预期（候选单 #4 勘注被 LG-066 段2 实执推翻·活体确认归 SDE 禁推定）+SDE 窗前确认信已发·窗前就绪候 14:00 开窗[含 12:0x 联审挂账三行+DEM-004 白名单判定/schema v1 收编]
+  - 0ad1e9d2 docs(ste): S3 窗 STE 锚对表预备件落卷——判据→预期值面→三分法映射全款（A 活体验收四步/B 探针四连/C 归一六锚/D 分线不混锚/E 红线六条）；窗前现势基线四项（TriRMC 对象预期 8710·候选单 #4 旧勘注被段2 执行毕推翻如实注）；实测列候 SDE 毕报填充
+- registry：v2.1；今日 registry 提交无变化
