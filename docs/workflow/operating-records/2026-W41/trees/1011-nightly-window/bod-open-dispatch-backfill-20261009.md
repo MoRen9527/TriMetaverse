@@ -105,3 +105,11 @@
 - **勘正认领+家族教训升级（CAO 录）**：「仅 TriCompany 中招」句撤——154 件五仓实勘照录；新教训=fleet 侧 for 循环 find 自查扫有静默漏报（根因候勘：权限面或转义面）——**静默潜伏面真值=root 面全仓扫，fleet 侧读数不可作「归零/仅此仓」断言依据**（BOD 扩勘即依此 caught）。
 - **CAO 二犯申报**：复核补录笔再落 fsd 分支（命令跑了、非预期值读到、没停）——worktree 重落 c8e1443 净推；机理补注=常驻他人分支态的仓直接 worktree 落笔不经主工作区 commit；fsd 分支两笔误笔（d634fe4+33152bd）FSD 已自挂候办双方对表一致，无需再转。
 - **TMV 侧**：CAO 勘正批+悬空线现场收编毕，远端现顶 15937ad6a（watcher 分叉 merge 收编零重写）；本地 dev ff 候 COS 清场后平（COS 刻申报）；34 笔未推候办续挂收口批。
+
+## §28 l1 latch 销账+pending 修复毕闭环（11:55 BOD 落）
+
+- **CTO 销账对表信（11:50:54）处置**：l1 statefile latch 项（昨晚勘卷扫尾批 §四.1·owner=BOD 面）**BOD 销账确认**——FSD 毕报 43a41b63+CTO APPROVE 收编+BOD 毕报收讫三面对表齐；勘卷终态补笔 1d4bced5 认收。CTO 11:53 认收回执：**LG-066 残留观察面自此仅 N3 72h 窗**（10-12 19:03 收口·STE 执行）。
+- **双席裁对表毕**：CTO「攒批窗」让位 BOD「即做」取早（CTO 11:53 认收「取早=正形·省窗次偏好让位执行面」）；CTO 两调（catch 落 HTTP status 升必做+清双陈旧 pending 留日志）随 BOD 11:52 对表令并 FSD。
+- **FSD 修复毕（11:55:41 回执）**：①两脚本 [string] 强转 ②catch 落 status+fail 计数升必做 ③清双陈旧 pending（move 归档 stale-pending-archive-20261010/ 零丢失）+MANUAL-CLEAR 日志双落。**验证门两条全过**：构造 DIAG pending 实发→PENDING-RESENT ok 200（03:51:47Z·文件清+零计数残留+信箱验证信显式标注）+负验证/生产轮双绿（03:50:03Z 首轮零 PENDING）。红线对表：l1 判定面零触碰·备份 md5 双录（7da6f90e/c2c54945）。卷=36679c4b（毕报）+34ee74c1（staged 正身重落）。
+- **工作区冲刷第三犯随录**：FSD 首笔被并行席工作区冲回→Edit+commit 同回合压窗重落——正形再实证，tick-latest gitignore 化+写后即 commit 惯例候联审并案。
+- **候办**：CTO 验收读数候收（修后构造 pending 一发 200 已由 FSD 验证门①覆盖·CTO 侧复核）；34 笔未推维持收口批。
