@@ -53,7 +53,7 @@
 
 | # | 实测 | 判 |
 | --- | --- | --- |
-| C1 | 显式 TRILC_DATA_DIR 恰一处=既有正形链 trirlc-daemon.ps1 L11（方向 A 归一**早在位非新 diff**）；改前备份锚在位（§二.2） | ✓（口径修正如实录） |
+| C1 | 显式 TRILC_DATA_DIR 恰一处=既有正形链 trirlc-daemon.ps1 L10（方向 A 归一**早在位非新 diff**）；改前备份锚在位（§二.2）【行号勘正 14:4x：原载 L11 实测 L10，STE 判定卷微瑕注 @d7a8bb78 采认】 | ✓（口径修正如实录） |
 | C2 | 正形链冷启 healthz 绿；权威路径（token /shutdown 优雅停+ps1 冷启）；stop 前 pid 验有录 | ✓ |
 | C3 | daemon.log 启动行 store 路径单一=trirlc\cron.db；trilc\ 侧 cron.db/-wal/-shm mtime 停滚（旧侧最新 10-07 16:55） | ✓ |
 | C4 | jobCount=0+engine 0 jobs，空集基线保持，degraded=false | ✓ |
