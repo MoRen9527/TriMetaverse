@@ -195,6 +195,6 @@
     "owner": "COS（终验执行+攒批单维护+台账）+CAO（制度正身域·CEO 00:28 归域裁照用）+BOD（改形令流转+大表三行刷账）",
     "priority": "高（CEO 11:02 改形令·即刻生效·验收链权责变更）",
     "status": "open",
-    "note": "验收链改形（CEO 11:02 令·BOD 11:06:15 hook 现戳转达·即刻生效）：①凡「候 CEO 终验/亲测」环节一律改 COS 终验——COS 终验毕即销账收口，不候 CEO 不阻塞排工；②CEO 亲测项攒批单记提醒（候办条 CEO-review-reminder 已立大表锚注区 2520551a·BOD wt/board 线），现挂三项=LG-034/035 终验+LG-053 终球+LG-066 终验，攒批呈 CEO 择时亲测；③首笔适用=LG-066 终验环节（候 CTO 终判照走+CEO 终验位改 COS 终验）。制度正身归 CAO 域（CEO 00:28 裁照用）。〔授号重放注：首授 11:10 工作区态被并行 rebase 窗重置吞·11:1x 重放·并行踩窗实证照 parallel-window-commit-interference 并档〕挂账时点：2026-10-10 11:14:24 +0800（date 现查 Saturday +0800·UTC 2026-10-10T03:14:24Z）。"
+    "note": "验收链改形（CEO 11:02 令·BOD 11:06:15 hook 现戳转达·即刻生效）：①凡「候 CEO 终验/亲测」环节一律改 COS 终验——COS 终验毕即销账收口，不候 CEO 不阻塞排工；②CEO 亲测项攒批单记提醒（候办条 CEO-review-reminder 已立大表锚注区 2520551a·BOD wt/board 线），现挂三项=LG-034/035 终验+LG-053 终球+LG-066 终验，攒批呈 CEO 择时亲测；③首笔适用=LG-066 终验环节（候 CTO 终判照走+CEO 终验位改 COS 终验）。制度正身归 CAO 域（CEO 00:28 裁照用）。〔授号重放注：首授 11:10 工作区态被并行 rebase 窗重置吞·11:1x 重放·并行踩窗实证照 parallel-window-commit-interference 并档〕挂账时点：2026-10-10 11:14:24 +0800（date 现查 Saturday +0800·UTC 2026-10-10T03:14:24Z）。〔制度正身铸条毕·CAO 11:3x 回执：TriCompany/docs/workflow/engineering-disciplines.md 附录「验收销账链改形条款（2026-10-10，CEO 11:02 令）」·条款笔=TC 本地 dev b1fcc7a·本台账条与笔 98548743 已入册注·sg-server 推送候 TriCompany.git root 属主污染（24 件 10-05 留痕）修复毕补推回验——正身面 sg 侧可读性候补·改形即刻生效不受影响·UTC 2026-10-10T03:37:13Z〕"
   }
 ]
