@@ -162,3 +162,5 @@
 - **处置**（fleet 身份全程）：同值性对表先行——sg 脏笔与流内正名笔 65209c44（已随 m-coo 推链入 bare 顶）diff **逐字节同**（blob hash bcc00a70..b9f94f16 双侧一致）→ `git checkout --` 还原+fetch+rebase 拉平 → **HEAD=21ef59c9=bare 顶、值面 m-sde×1/m-dee×0、diff CLEAN**。后续 hook 拍恢复自动追平。
 - **影响面核**：GitHub 镜像腿未受影响（hooklog 16:42 mirror pushed 21ef59c9 实锚）；tick 照常 dispatched；degraded 窗口=16:42-16:4x 约 10 分钟消费端读旧版（15:30 巡检笔止），无消费事故回报。
 - m-coo 候办 P2（hook 追平失败无告警面）已在其 21ef59c9 笔内记，不重复立。
+
+- **环闭注记（16:49）**：m-coo 认收回执四点全认（根因自领+处置序认收+影响面如实收窄+候办 P2 独立存活），销案笔落 bare @b845d1db（ls-remote 对表实锚）；16:49 推拍 hook 零报错=「恢复自动追平」判读活体复证。双边留痕齐（本卷 §35+COO 销案笔），观察项正式销案。
