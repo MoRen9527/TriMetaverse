@@ -1203,3 +1203,10 @@
   - f9e9cfd8 docs(lg): trilc-headless unit 处置定性卷——8月末 R 面自治实验载体残留定性（惰性/前改名期/未转正），裁=归档留痕优先+删除随窗可选+禁原形复活（复活走新名新 unit 立项）；R1 伪命题闭合采信 @m-duty-cto
   - 8f1178b4 docs(nightly): 深夜补窗令三件毕报——扫尾批②③毕(L49/L194 运行行 8710→8712+L12 注释 6→10·diff 三行证·AST_OK·测试轮 8712 直读复活对端 8710 绿;发现 jobs=6 阈值行候令不自裁)+河源 trilc-headless 初勘(rmc-autonomy-001 8-25 遗留件·disabled·10-01 停机 9 天零复跑·惰性无害候 CTO 定性) @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 9715eb20 后新增 5 条 commit：
+  - af8949ec merge: 收编并行笔（值席落盘防覆盖）
+  - 8feac66e docs(coo): 10-11 窗令勘正落卷毕+收口卷晨收编+第五面议程件落树——窗令[BOD 09:31 裁准④实况为准·两带全毕终态收编：sg 段闭卷 49010a87+本机段 S4U 毕全绿 00de0b3d/b9a4660d+H2 深夜补窗另跑毕 c5fc0c5f·转历史归档]；收口卷[值席毕报已达 window-closeout+三裁两派落账·署名核实→STE 已派+修复分级①②→sg 值席 BOD 面派+H2 睡眠超时观察项候联审]；第五面议程件[全链触发器机制化·六起事件全录+四要件+候裁四问·CEO 质询闲置案实证入面]
+  - c5fc0c5f docs(fsd): H2 待机专项毕报——断言四件全绿（pid 17936 两轮挂起+6h17m 二次睡眠全程零重启·uptime 严格连续/watchdog 睡眠窗零误 revive/keeper 自愈 connected/18710 True）·自动唤醒=唤醒计时器 FSD-H2-Wake 精确命中零人工·随程新观察项：无人参与睡眠超时 2min 致二次入眠 6h17m=liveness 监测盲区第二形态候裁（倾向窗口期 keep-awake 惯例化）·零持久改动零回滚需求
+  - d5cde19a docs(ste): LG-066 N3 引用锚刷正——BOD 23:37 二次勘正撤回 23:33 三锚之第③锚（零行=全绿·latch 自解）：真相=l2.log 23:30:07Z ALERT-SENT 实已落盘（write 延迟读空窗）·l1 latch 未自解误报中继照跑归 BOD 扫尾批；引用锚刷为 23:33+23:37 合并定谳·基线语义补全=调度面复活+误报中继照跑并存；巡检增量判读=l2.log 预期含 latch 误报行非 l2 故障·健康判读仍以 LastRun+8710 healthz 为准（log 双重不可代）；判据四条不受影响
+  - b9a4660d docs(fsd): S4U 毕报卷补值面验证段（BOD 23:38 勘正口径）——L1 双绿 23:25:14Z+L2 任务面绿 23:30:01 rc=0 电池态触发+L2 日志面 ALERT-SENT 200 行 15:30:07Z 落盘（BOD 23:1 读零行系 write 延迟读空窗）·l1 latch 未自解维持窗后扫尾批 §四.1 寎急迫度·l1-pending 陈旧件注记·回滚锚=改回 true——本机段 10-11 深夜窗令 FSD 带全锚收口·25% 兜底线触线收工（前两笔被并行席工作区操作冲回·本笔同回合背靠背 commit 防冲）
+- registry：v2.1；今日 registry 提交无变化
