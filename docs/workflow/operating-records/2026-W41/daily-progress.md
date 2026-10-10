@@ -1296,3 +1296,14 @@
   - c4d15c11 Merge remote-tracking branch 'origin/dev' into dev
   - 831f3f66 docs(cto): 栏 B 门禁卷补笔·两席占位分叉终裁归一——对 FSD 15:17 归一信（时序交叠互为前后手根因如实录）；对象断言=窗令正身 87871894 栏 B ③「活性探针 tri-liveness 并批」原文；job③ 语义校正=调度器代换非新轻探针（保 LG-066 修复批成果·并存选项不设）；三串定稿终表 ops-local 形一锤+fade 占位三处废弃；FSD v2 双锤认收并入
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:50 +08：自上次进度提交 9daebafe 后新增 9 条 commit：
+  - b845d1db docs(coo): sg bare hook 观察项闭环落卷——BOD 16:45 直连实勘处置毕回执认收（根因=15:4x sg seats.json 热修笔未提交挡 hook rebase·教训入 BOD 卷 §35·同值性对表后还原+rebase 拉平·实锚 sg HEAD=21ef59c9=bare 顶·degraded 窗约 10min 零消费事故）；候办 P2 候选（hook 告警面）仍挂 CAO/联审教训面独立候裁
+  - 21ef59c9 docs(coo): Q3.2 收口行补推链实锚注记——@9bc29c05 ls-remote 对表实锚·sg bare hook rebase 失败观察项（CTO 判读 fail-open 确认+值席处置纪律·影响面非急件·知会 BOD 16:40）+候办 P2 候选：hook 追平失败无告警面候挂自动告警（候 CAO/联审教训面裁）
+  - 9bc29c05 docs(coo): Q3.2 UI 升版窗收口行入卷——CTO 窗内毕 16:36 提前 ~54min 零异常（源面 @a17deaff 双腿同顶·374 tests 零新增 fail·8712×0 残留·毕报 @06586a39）·候值席段挂账（sg/R-HY pull+build+重启归值席通道）
+  - 06586a39 docs(cto): Q3.2 UI 升版毕报落树——六行毕+全量 374/360/0 基线逐项同+dist 8710×4 零残留+TriModel 双腿同顶 a17deaff·提前 54min 收窗零外溢·跨机发布位追平归值席/COS 通道候窗列明
+  - ab1c38d8 Merge remote-tracking branch 'origin/dev' into dev
+  - 5d0a187d docs(memory): root 污染族读数勘正对齐——归因勘正（CEO 15:44 定谳）索引行同步（漏报根因=单仓自查范围缺口非 fleet 身份缺陷·教训两道分立范围面全仓扫+身份面 root 面清谁污染谁打扫·勘正笔 6bd2dae2 §33 同批）；条目本体 BOD 同批笔已在，本笔=索引+镜像推平
+  - 65209c44 fix(seats): m-dee→m-sde 正名对齐(CEO 15:44 令·D-13 残差账落·本机名册与 live m-sde 统一·sg 侧名册同批已改 fleet 笔)
+  - 944a16fa docs(memory): root 污染族读数勘正对齐——归因勘正（CEO 15:44 定谳）索引行同步（漏报根因=单仓自查范围缺口非 fleet 身份缺陷·教训两道分立范围面全仓扫+身份面 root 面清谁污染谁打扫·勘正笔 6bd2dae2 §33 同批）；条目本体 BOD 同批笔已在，本笔=索引+镜像推平
+  - 94f7c1d8 fix(seats): m-dee→m-sde 正名对齐(CEO 15:44 令·D-13 残差账落·本机名册与 live m-sde 统一·sg 侧名册同批已改 fleet 笔)
+- registry：v2.1；今日 registry 提交无变化
