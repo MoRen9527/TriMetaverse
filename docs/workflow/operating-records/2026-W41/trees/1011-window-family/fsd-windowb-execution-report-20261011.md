@@ -73,7 +73,10 @@
 - 旁证链：**bod-tick 09:37:00+08 拍 status=ok 窗内已验**（恢复实证第二刀·lastRunAt=01:37:00Z·nextRun=02:07Z=10:07+08 节拍正常）+watchdog 复位 Ready 确认（09:39）+当晚 23:10 周平面迁移读数（窗后引·v3.1 保留条款）+窗内 09:30 job① 首滚读数（本卷 §三门④·窗内化已验）+21:00 绩效 job=重启后首验点（BOD 指定·候当晚读数）
 - 转发链：本席→CTO+COO（SendMessage）→窗收口毕报 BOD
 
-## 使用依据
+## 八、窗后收笔：映射消费面（2026-10-11T01:53:16Z 补·静态锚不改动原文仅追加）
+
+- CFO 09:44+08 正身回信：阈值/端点**两项全确认零更正**——§五.7「候 CFO 正身」就此闭合，thresholds.json 数值即正身（_comment 已更新为 canonical 确认形·asof 保留原值+asofNote 注明确认时点）。
+- COO 09:48+08 转办动作面映射（载体=CFO input §六.3）：observe70→报 COO+BOD／pace15→报 COO／pause30→报 COO+BOD+制停建议／5h70→行内 watch 注记不外报／5h90→即报 COO+BOD 减速。FSD 裁决：**映射面落 thresholds.json `actions` 块**（纯数据·脚本显式五键拷贝自动忽略=零代码改·cron 每滚重读=零重启合规）；**行内路由注记不采用**（jsonl schema 不再扩面·附加键已在 §五.5 技术债）；**notify 外发实现=一期 scope 外候派**（CPO 锚② 端到端属验收锚·施工单未派·如实标注）。
 
 ## 使用依据
 
