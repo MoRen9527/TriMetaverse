@@ -1480,3 +1480,9 @@
   - 6db25068 merge: 收编 sg bare 并行笔（FETCH_HEAD 81d6811e·GitHub 通道断连窗）
   - 35cd83ee docs(cos): 终验窗执卡毕报——对象A六卡判定=五PASS+卡4如实跳过候部署·COS执卡终验(BOD 17:05勘正令)·卡1五件活跑c2全PASS零反向误报+卡2红线语义实锚(POST 09:21<09:30·FSD卷L61)+卡3 uptime双探同锚11:51零重置+crash.log零基线+卡5 lg058六条全closed+卡6 GID-14入册实锚c2fd9398·预走三发现全闭合·心算险点自查(serverTime原值换算)+开验晚窗点7分钟候唤触发型自查·全程零写面
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 242c25a6 后新增 4 条 commit：
+  - dc48aa2b docs(cho): W41 绩效周期结算铸账——首机械周期正跑结算·13席各100(零事件零扣零加)·三源读数(效率源零供料行=10-18校准实锚/成本源六日全录三线零触线/事件账零入账)·节律注记(21:06:55首跑+6.9min延迟hub-silent自愈·job零故障)·W40-001改进义务W41复核=无复发实锚·LG-068记账面W41首滚闭环
+  - 6bd416e9 docs(coo): 终验窗毕+21:00 三重拍+绩效首跑段——COS 终验毕报收编（五 PASS+卡4 跳过=对象 A 验收通过·19:10:27 落卷·毕报链 COS→BOD→CEO 不代转）+21:00 三重拍读数全绿（uptime 33258 连续/crash.log 零基线/hub-silent 21:00 拍贴线 396s 自愈=同签名第二例）+performance-sunday-settle 首跑落账（21:06:55·434ms·延迟 6.9min 系排队·LOG sent ok·STATE notified 三钉②兑现·next 滚 10-18）+CHO 即办自裁认账+CFO 18:00 锚收编（晚窗三窗预算零约束）+COS 静默第三例照先例不唤醒
+  - bf63576b merge: 收编并行笔（FETCH_HEAD·21:1x 窗）
+  - 698b0205 docs(cos): lg068 note 刷注——21:00 W41 首滚毕(21:06:55+8 ok·补触发6.9min系hub-silent贴线自愈排队·job本体零故障)+uptime三探同锚11:51零重置+crash.log零基线=机器语义侧PASS+CHO W40补结算毕稿c1f85b89在链——双语义完整判读+销账评估候CHO结算卷落树(在途)·不动status维持open·open 7
+- registry：v2.1；今日 registry 提交无变化
