@@ -59,8 +59,8 @@
     "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
     "owner": "FSD",
     "priority": "默认（LG-058 整改波录入序 3）",
-    "status": "open",
-    "note": "配置来源二分（打回 #4 后半：本地配置 vs 远程拉取配置，「直连/中转」编造概念全链清洗）。代码面毕 03:4x=e099329（来源二分列+直连中转零命中）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
+    "status": "closed",
+    "note": "**对表闭（2026-10-11 14:19:00 +0800，COS 亲验复核销——COO 14:1x 督办判定「三条销账条件具足」·STE 正式读数卷 31bce9f7 实读·LG-071 终验制）**：锚四层——①STE 读数卷在树三条全 PASS（N3 五锚/N4 四锚/N5 六锚·非作者双面核·ste-lg058-n3n4n5-readout-20261011.md）②本席独立抽验同向：TriModel git 链 e099329/c4d9137/366eecb/e30ea20 四笔全 ON-CHAIN（HEAD=a17deaf）+R-HY served sha256 8ca70d3d…≡git show e30ea20:ui/index.html 钉死在役=深测②终态+「本卡特有」词面零残留③版本基线勘正在案（STE §六）：COO 令「13:25 部署毕」系台账 10-06 时点转抄误读·45757bd 已被 10-08 部署升 e30ea20·读数效力覆盖并前移至现役④LG-058 整单 10-08 CEO 终验 PASS 闭账（STE §七引证）——本三条=闭账后台账销账材料补齐。台账 note「候 STE 走查」系滞后态（N3/N4 10-06 已过走查·N5 序④ 10-06 13:44 毕 PASS b0e9d467）——本窗价值=以台账条目为锚的销账正式读数+现役面增量复核。刷后大表 open 11→8。原 note 保留尾接：配置来源二分（打回 #4 后半：本地配置 vs 远程拉取配置，「直连/中转」编造概念全链清洗）。代码面毕 03:4x=e099329（来源二分列+直连中转零命中）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
   },
   {
     "id": "lg058-N4-copy-domain-wording",
@@ -68,8 +68,8 @@
     "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5）",
     "owner": "FSD",
     "priority": "默认（LG-058 整改波录入序 4）",
-    "status": "open",
-    "note": "文案「本卡特有」→「本域特有」（打回 #7）。代码面毕 03:4x=c4d9137（TriModel 仓；grep 零残留+sanity 7/7）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
+    "status": "closed",
+    "note": "**对表闭（2026-10-11 14:19:00 +0800，COS 亲验复核销——COO 14:1x 督办判定「三条销账条件具足」·STE 正式读数卷 31bce9f7 实读·LG-071 终验制）**：锚四层——①STE 读数卷在树三条全 PASS（N3 五锚/N4 四锚/N5 六锚·非作者双面核·ste-lg058-n3n4n5-readout-20261011.md）②本席独立抽验同向：TriModel git 链 e099329/c4d9137/366eecb/e30ea20 四笔全 ON-CHAIN（HEAD=a17deaf）+R-HY served sha256 8ca70d3d…≡git show e30ea20:ui/index.html 钉死在役=深测②终态+「本卡特有」词面零残留③版本基线勘正在案（STE §六）：COO 令「13:25 部署毕」系台账 10-06 时点转抄误读·45757bd 已被 10-08 部署升 e30ea20·读数效力覆盖并前移至现役④LG-058 整单 10-08 CEO 终验 PASS 闭账（STE §七引证）——本三条=闭账后台账销账材料补齐。台账 note「候 STE 走查」系滞后态（N3/N4 10-06 已过走查·N5 序④ 10-06 13:44 毕 PASS b0e9d467）——本窗价值=以台账条目为锚的销账正式读数+现役面增量复核。刷后大表 open 11→8。原 note 保留尾接：文案「本卡特有」→「本域特有」（打回 #7）。代码面毕 03:4x=c4d9137（TriModel 仓；grep 零残留+sanity 7/7）；树单自回写 1705654b；现势=候 STE+流水线正式读数。"
   },
   {
     "id": "lg058-N5-product-plan-three",
@@ -77,8 +77,8 @@
     "treePath": "docs/workflow/operating-records/2026-W41/trees/lg058-remediation-20261006/tree-plan.md（任务书 384000f5；CPO 方稿 9f86ff34）",
     "owner": "FSD",
     "priority": "默认（LG-058 整改波录入序 5）",
-    "status": "open",
-    "note": "产品方案三件（打回 #2/#8/#9，按 CPO 方稿实现）。代码面毕 10:22（366eecb+99806cf 三件全毕）→STE 走查毕 CONDITIONAL_FAIL（df1ab55d）→P1 回炉毕 45757bd·CTO 技术门 APPROVE 采认（11:56 终裁准升版）→**升版流水线毕 13:25:52（R-HY 五环全毕，TriModel 45757bd+TriRMC a02d89b 在役，rmc 卡 applied tier=1；读数卷 rhy-upgrade-pipeline-20261006.md §二.6）**→候 STE 序④新锚读数差分→BOD 复核→呈 CEO。settings.json=CEO 原话词汇=「该域本地落地配置」语义，落地文件名以各域控制器实态为准。"
+    "status": "closed",
+    "note": "**对表闭（2026-10-11 14:19:00 +0800，COS 亲验复核销——COO 14:1x 督办判定「三条销账条件具足」·STE 正式读数卷 31bce9f7 实读·LG-071 终验制）**：锚四层——①STE 读数卷在树三条全 PASS（N3 五锚/N4 四锚/N5 六锚·非作者双面核·ste-lg058-n3n4n5-readout-20261011.md）②本席独立抽验同向：TriModel git 链 e099329/c4d9137/366eecb/e30ea20 四笔全 ON-CHAIN（HEAD=a17deaf）+R-HY served sha256 8ca70d3d…≡git show e30ea20:ui/index.html 钉死在役=深测②终态+「本卡特有」词面零残留③版本基线勘正在案（STE §六）：COO 令「13:25 部署毕」系台账 10-06 时点转抄误读·45757bd 已被 10-08 部署升 e30ea20·读数效力覆盖并前移至现役④LG-058 整单 10-08 CEO 终验 PASS 闭账（STE §七引证）——本三条=闭账后台账销账材料补齐。台账 note「候 STE 走查」系滞后态（N3/N4 10-06 已过走查·N5 序④ 10-06 13:44 毕 PASS b0e9d467）——本窗价值=以台账条目为锚的销账正式读数+现役面增量复核。刷后大表 open 11→8。原 note 保留尾接：产品方案三件（打回 #2/#8/#9，按 CPO 方稿实现）。代码面毕 10:22（366eecb+99806cf 三件全毕）→STE 走查毕 CONDITIONAL_FAIL（df1ab55d）→P1 回炉毕 45757bd·CTO 技术门 APPROVE 采认（11:56 终裁准升版）→**升版流水线毕 13:25:52（R-HY 五环全毕，TriModel 45757bd+TriRMC a02d89b 在役，rmc 卡 applied tier=1；读数卷 rhy-upgrade-pipeline-20261006.md §二.6）**→候 STE 序④新锚读数差分→BOD 复核→呈 CEO。settings.json=CEO 原话词汇=「该域本地落地配置」语义，落地文件名以各域控制器实态为准。"
   },
   {
     "id": "cron-muh6shv0-korw-stalled-18h",
