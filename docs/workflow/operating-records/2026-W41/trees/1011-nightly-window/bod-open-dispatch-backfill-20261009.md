@@ -245,3 +245,4 @@
 - **CTO 终裁采认**：四门独立复核全 PASS 终裁 **APPROVE**（终裁卷 cto-windowb-gate-verdict-20261011.md @5dfed913·sg 已推）；FSD 三建议全裁入册（/end→/shutdown 正形·F-3 三查升级·executor 停摆并族）+两增量锚定稿（重启完工三断言+cron POST 三查）。
 - **卷外 pid 更替归因采认**：09:32:11 DOWN→revive=**watchdog 自愈按设计动作**（watchdog.log 铁证·98 秒窗口零拍丢业务零损害）——与 FSD 09:17-09:20 人工修复链两事件并行不悖，CTO 勘因清晰。
 - **BOD 签认**：窗族令栏 A+栏 B 窗收口正式闭合（签认载体=本笔·COO 收口卷 ebc4d10a+CTO 终裁卷 5dfed913 双锚）；毕报链 FSD→CTO+COO→窗收口 BOD 全环走毕。栏 C 候 CTO 报备照令。今晚 21:00 绩效首验点+23:10 迁移 BOD 盯。
+- **pid 读数更正收讫（09:52 COO 补充知情）**：FSD 卷「pid 43480」读数系采集时点有效现已过时——43480 于 09:32:11 死亡（**死因未锚·COO 如实挂知情**）→watchdog 98s 自愈（09:32:17 self-check OK→09:37:20 recovered·零拍丢）→现役进程=watchdog 起新实例 jobs 照常。收口卷更新 **@440b19b1**（bare 顶 6779708a）。BOD 09:54 知会 CTO 死因候并入族线勘窗清单（三向：收工段操作波及/家族另一面/独立崩溃·防漏项）。
