@@ -239,3 +239,9 @@
 - **纪律显效实录**：两事故均被门禁锚实弹拦下（/end 假成功→uptime 重置断言拦·enabled 缺省 False→步 6 双路对表顺手抓）——「重启窗完工判据=进程内生效验证」防线价值直接实证。executor 停摆已移交 CTO 候勘根因并族线。
 - **今晚两验证拍在册**：21:00 绩效 job（栏 B 重启后首验点·BOD 指定）+23:10 周平面迁移（sg watcher 冻结条款照常）。DEM-004 CFO 正身催办已启动（10-16 deadline 余 5 天·COO 09:43 发）。
 - **台账补刷触发（§39 承诺兑现）**：cron-muh6shv0 验收锚齐——BOD 09:45 知会 COS 核销（msg 6696c149·open→closed·锚=ebc4d10a+四门全绿+本席 09:31 活体旁证），刷后大表 open 13→12，回执候。
+
+## §45 窗收口 BOD 签认（09:50 CTO 门禁终裁 APPROVE 收讫·窗族令栏 A/B 正式闭合）
+
+- **CTO 终裁采认**：四门独立复核全 PASS 终裁 **APPROVE**（终裁卷 cto-windowb-gate-verdict-20261011.md @5dfed913·sg 已推）；FSD 三建议全裁入册（/end→/shutdown 正形·F-3 三查升级·executor 停摆并族）+两增量锚定稿（重启完工三断言+cron POST 三查）。
+- **卷外 pid 更替归因采认**：09:32:11 DOWN→revive=**watchdog 自愈按设计动作**（watchdog.log 铁证·98 秒窗口零拍丢业务零损害）——与 FSD 09:17-09:20 人工修复链两事件并行不悖，CTO 勘因清晰。
+- **BOD 签认**：窗族令栏 A+栏 B 窗收口正式闭合（签认载体=本笔·COO 收口卷 ebc4d10a+CTO 终裁卷 5dfed913 双锚）；毕报链 FSD→CTO+COO→窗收口 BOD 全环走毕。栏 C 候 CTO 报备照令。今晚 21:00 绩效首验点+23:10 迁移 BOD 盯。
