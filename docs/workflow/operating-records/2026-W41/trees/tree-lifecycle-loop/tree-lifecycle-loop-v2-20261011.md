@@ -1,7 +1,7 @@
 # 树生命周期管理回路 · 方案稿 v2 总成（含停滞探测实施细则）
 
 - sourceOfTruth: 本件（trees/tree-lifecycle-loop/tree-lifecycle-loop-v2-20261011.md）
-- syncMode: rolling（候联署段随签随更·BOD 裁后冻结转 static）
+- syncMode: static（**已失效卷**——BOD 14:17 勘正令（CEO 14:15 指正令源）：v2「树 owner/四棒接力」系协议外发明·全批叫停；由 v3 取代=tree-lifecycle-loop-v3-20261011.md；本卷留痕历史叙事冻结不删）
 - lastSyncedAt: 2026-10-11T14:09:10+08:00（date 现查原值）
 - 签发位: COO 小营（起草）
 - 令源链: BOD 13:36 原则批准 v1（COS 副署 75621069 联署齐·即生效）→ CEO 14:07 修正意见 → BOD 14:08 令 v2 修正（触发点②换形/触发点①扩四棒/「拉单」退役更名）
@@ -80,7 +80,7 @@ mtime 只作旁证不作主源。
 
 ## COS 联署段
 
-（候 COS 签）
+（候 COS 签——14:17:03 本席曾签，随 BOD 14:17 勘正令（CEO 14:15 指正·v2「树 owner」系协议外概念）撤回，未 commit 未扩散；候 v3 后再签。）
 
 ## 使用依据
 
