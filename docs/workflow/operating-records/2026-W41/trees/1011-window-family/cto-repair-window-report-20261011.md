@@ -51,7 +51,7 @@
 
 ## 八、风险与残余
 
-1. **origin/dev 追平挂账**：本地 dev 现领先 origin 6 笔（d7693c6 前基线 3+窗内 3）——GitHub 443 断续+sg bare 双腿推平候窗（known 挂账延续）。
+1. **origin/dev 追平挂账（窗内收窄）**：sg-server bare 腿窗内已推平（6f832a1→baf800d·独立 ls-remote 验真 ✓）；GitHub 腿 443 Connection reset 挂账延续（known 断续·候窗追平——两腿终态以各腿独立 ls-remote 验真为准，tail 截断不可作判读）。
 2. hub-silent-detect 贴线 timeout 率 26% 运行质量观察项——候性能勘另窗（本窗已给双防线，非根治）。
 3. 既有 5 fail 五族归因候另勘。
 4. 8711（TriRLC）回流评估：崩溃 handler/F-3/race 三件 8711 侧同源在位性候下窗（F-3 家族性已在册）。
