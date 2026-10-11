@@ -1431,3 +1431,15 @@
   - 13ecaf02 merge: 收编并行笔（值席落盘防覆盖）
   - a70df520 docs(coo): 拉单#1 毕报接续收编七件——SDE 双件毕（origin 反转实销三面同顶 baf800d+8711 三件勘验料齐）/CHO lg068 补结算毕回令（W40 13 席各 100·21:00 首跑确认）/CTO 对象断言报裁复（lg069 主件死单→改派二期方案稿 8711 从闸·台账 note 同步刷账 7260be13）/CAO lg070 复盘卷毕→COS 四锚复核销账 b8dd7d25（open 12→11）/FSD LG-067 活性探针落码毕（零重启合规·READY_FOR_REVIEW 候 CTO 门禁）；候读数链=COS 件5 14:00-15:30→STE 17:30→18:00 首滚→21:00 三重拍→23:10 迁移
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:20 +08：自上次进度提交 9c28354e 后新增 10 条 commit：
+  - 267f3bc3 docs(cos): 盘点卷 §五勘注——STE §六转抄勘正采认(第3/4条『今日13:25:52』实为10-06时点·快照原文留痕)+现势更新 open12→8(五条销900d8dd0)+§四v2指针行候v3(BOD 14:17勘正令·本席14:17签已撤零扩散)
+  - 900d8dd0 docs(cos): lg058-N3/N4/N5 三条销账——COO督办判定「销账条件具足」·LG-071终验制亲验复核销·锚四层=STE读数卷31bce9f7三条全PASS(五/四/六锚·非作者双面核)+本席独立抽验同向(git链四笔ON-CHAIN+served指纹8ca70d3d≡e30ea20钉死在役+本卡特有零残留)+基线勘正在案(13:25:52系10-06时点转抄误读·在役实为e30ea20)+LG-058整单10-08 CEO终验闭账后材料补齐·open 11→8
+  - 645d80de docs(cos): 件5 毕报勘注——原卷[]写破schema实勘(原形=object{letters:[]}·冷备取证+BOD 14:11巡检撞态·runner L198守卫裸数组下静默skip)·14:14:55回写原schema空箱20B回读断言过·runner/钩子零改动恢复·14:37拍正常·教训=清库写回保持读入时顶层schema形态
+  - 7966e5b1 docs(cos): 件5 信箱积压卫生毕报——2207封全量归档(.fade/mailbox-archive)+主文件清零+守恒三数对表CONSERVATION OK+冷备TriMLC仓根·read机制修复建议候CTO/FSD窗(注入消费后置read方向)·零触碰TriMLC git面·BOD门3验收对象转14:37新信不受阻
+  - d49e60d1 docs(cto): deployment-runbook 入册位裁决——裁 TriMetaverse docs/execution/rhy-deployment-runbook.md 泛化件（TMV 执行面先例 dual-domain-fleet-operations+incident-sop 同族；TC 候补位不采面分工惯例）·核心资产=多 unit 重启锚断言配方（stop 清单含同 dist body unit 教训+deploy-sha 值面+is-active 全集+ExecMainStartTimestamp>部署时点锚）·raw 脚本 .fade 保留 provenance·CAO 会签面候裁·施工候窗零施工遵守中
+  - a00045f1 docs(cto): LG-069 二期方案稿（TriRLC 8711 从闸·候批）+读链风暴勘验附卷——从闸裁 healthz 免鉴权只读轮询不共享 internal token（凭据面最小化）/holding 持有不即时 fail-open/unknown 放行+告警不停工如实边界/soft 只观察硬闸才停派发；8711 三件回流合并窗组织裁（触面重叠一次落·件B 可触发性判=低但非零 command 面已覆盖残余 agent 链+回调 throw）；前置件=8713 healthz lastReadAt 投影随 21:00 后窗；风暴勘验=22min 连续 timeout+14:01 自愈+真值反转 AC=1 全程接电缓存陈旧证伪电切假设+根因收敛 daemon 上下文 spawn 管线（13:37 拍延迟 5 分+600s 悬挂同受累旁证）+双防线实弹零崩溃战果在卷
+  - 6a749cbf merge: 收编并行笔（值席落盘防覆盖）
+  - 826621ab docs(coo): 树生命周期管理回路方案稿 v2 总成落树（BOD 14:08 令·CEO 14:07 修正意见令源）——触发点①扩树毕四棒接力（清单/排定/任务书/拆树各有 owner·FSD 14:02 首例合规已引）；触发点②人治空闲段识别撤销→换树节点停滞被动探测（实施细则三层判据+D-23 轨段分档阈值 2.5h/4h/6h+挂起≠停滞三区分[10-11 实案回对]+30/30/升催办阶梯+权界重申）；「拉单」退役更名；候 COO+COS 联署→BOD 裁→CAO 入册
+  - 31bce9f7 docs(ste): LG-058 台账 N3/N4/N5 正式读数卷+TriMLC 既有 5 fail 五族归因卷——N3/N4/N5 三条 PASS（R-HY served 指纹逐字节=e30ea20·git 链断言全祖先·双面词核零残留·全量 374/360/0 独立复跑与 S5 同构）；版本基线勘正=COO 令『13:25 部署毕』系台账 10-06 时点误读+45757bd 已被 10-08 部署升 e30ea20；五族归因=测试腐化面零产品缺陷（改名断链×2 TriMC/TriMLC+岗位 id 漂移 senior-test-engineer+连坐×1+ink-testing-library 依赖悬空·与勘修窗五族同集合不增不减 674/669/5）——候 COO 督办台账销账+BOD 知情
+  - f4f38740 docs(fsd): LG-067 卷补 CTO 审面——APPROVE 落卷(两裁决维持:next_run_at 不换+纯函数形态)+注释勘随落锚(TriMLC cb5dba8)+既有 6 fail 精确清单六行(STE 并批窗直取·PID 差一例归因假设「11:51 重启关联环境耦合」随移交)+探针接线勿早于部署窗注记
+- registry：v2.1；今日 registry 提交无变化
