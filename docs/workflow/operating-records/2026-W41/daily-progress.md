@@ -1467,3 +1467,8 @@
   - f6ce8cdb merge: 收编并行笔（值席落盘防覆盖）
   - 91d41e78 docs(coo): 材料包执卡面勘正+收口卷 14:3x-17:0x 接续行——材料包头部执行面勘正块+§三改 COS 执卡形（BOD 17:05 令·CEO 17:04 点破 11:02 改形令未贯通：今晚终验窗执行面=COS 执卡终验·CEO 无需到场·动线清障对象改 COS 到点即验·卡4 照旧跳过·毕报链 COS→BOD→CEO 知情全量读数纪律）；收口卷接续行七段=v3 全生命周期闭合（联署 644107da+GID-14 入册 c2fd939·CAO 考古披露 v1 入册从未落盘）+材料包全毕（0dbfae4e+卡5 注记 5eebe565·B/C 轨勘空归档）+N2 销毕 lg058 五条全清+明晨 TriMLC 部署窗合并裁定+W1 就绪（CTO/FSD 双回执）+push 拒推竞态勘正（COS merge 收编 4a4e349e 本席笔在链验真）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:20 +08：自上次进度提交 4aac13a8 后新增 3 条 commit：
+  - b758ca41 docs(coo): 8713 悬挂结案终态——CTO 结算后取证收编（自愈退出·兜底未需触发[453s<600s 勘正]+hook 显现点≠投递点勘注+重复投递推定[同值两条=半死态重试候选归因·标注推定]+灰度三项汇总[误报/重复投递/贴线 76% 窗耗候 FSD 灰度周评估]）+18:10 疏通实锚（window 首滚补触发落账 run_count=1）+m-cos 候窗静默误报闭环——CTO 判读义务全闭·两案双收敛·终验窗 19:00 照排
+  - 51d70a2a merge: 收编并行笔（值席落盘防覆盖）
+  - 72998f2a docs(coo): 8713 悬挂结案段——CTO 判读三问答收编（归因 hub-silent 贴线长耗·件B 指纹排除·24min 先例外推勘正采纳）+SIGKILL 兜底/per-job cancel 无 双实锚+18:10 复探疏通实锚（hub-silent 结算 453s/滞留三 job 补触发/window 首滚补触发落账 run_count=1 next 滚明 09:00/bod-tick 补触发/tree-node 60s 拍恢复·hang 全程零重启 uptime 连续未断）+m-cos 候窗静默误报闭环（hub-silent-detect 灰度运行质量反馈：候窗态 duty-escalate 误报候 FSD 判据改进·两案分立）+§67 反例库第二条候选·终验窗 19:00 照排
+- registry：v2.1；今日 registry 提交无变化
