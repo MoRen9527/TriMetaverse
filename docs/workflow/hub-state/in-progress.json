@@ -172,12 +172,12 @@
   },
   {
     "id": "lg069-battery-gate",
-    "treeAnchor": "候补（CTO 方案卷落树后 COS 补注·BOD 23:53 授号令载明）",
-    "treePath": "候补（CTO 方案回 BOD 集成、施工任务书立时定树位）",
+    "treeAnchor": "方案卷已回：CTO 方案稿 c05d4342（trees/lg069-power-gate-20261007/cto-power-gate-tech-plan.md）；BOD 集成毕",
+    "treePath": "trees/lg069-power-gate-20261007/（施工 3cc439f→STE 七锚 CONDITIONAL_PASS 81c8b938→终判 PASS c663b82f）",
     "owner": "COS（授号流转+恢复通知链：恢复时 COS 通知 COO）+CTO（技术方案在途+daemon 施工主责）+COO（闸消费侧：<30% 禁其新增派单）",
     "priority": "高（CEO 23:52 亲提·本地域供电安全闸·防低电量作业中断）",
     "status": "open",
-    "note": "本地域 daemon 挂本机电量检测双阈值闸（CEO 23:52 令·BOD 23:53 授号流转令）。需求规格冻结面存照（BOD 授号令转述面·CEO 令原文 verbatim 补存照（BOD 23:55 认收令转·原文正身即此·不等方案卷）：「本地域daemon挂一个本机电量检测，发现低于30%不让coo新增派单，低于20%本地域全体暂停工作，待接通电源或电量高于20%时，cos通知coo恢复全员工作。」）：①电量<30%：禁 COO 新增派单；②电量<20%：本地域全体暂停；③恢复条件：接通电源或>20%·恢复时 COS 通知 COO。链后续：CTO 技术方案并行在途→方案回 BOD 集成→立施工任务书。授号时点：2026-10-07 23:53（hook 现戳·date 现查 Wednesday +0800）。"
+    "note": "主线全闭（2026-10-08 03:55 CTO 毕报）：方案卷 c05d4342→施工 3cc439f→STE 七锚 CONDITIONAL_PASS 81c8b938→终判 PASS c663b82f→修复批 PASS。剩余非阻塞两面=FSD 临界区 N≥5 对照+S3 线通知通道 POST 403（均非 CTO 面）。台账陈旧 note 勘正：原 note 停「候补 CTO 方案卷回 BOD 集成」态系 10-08 全闭后未刷账，致 COS 10-11 盘点卷开出「方案未回」伪需求（CTO 13:45 对象断言报拦下死单）；COO 13:54 裁改派 LG-069 二期方案稿（TriRLC 8711 从闸·真实在途 CTO 纸面对象·今日下午段出）——二期稿列本条二期延伸不复活已闭主线。刷账时点：2026-10-11T13:54:37+08:00（date 现查原值·对象断言→死单即刷=窗毕拉单回路内禀环节首例执行）"
   },
   {
     "id": "lg070-time-window-stop-gate",
