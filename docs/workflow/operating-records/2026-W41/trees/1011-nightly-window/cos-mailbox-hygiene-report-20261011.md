@@ -34,3 +34,10 @@
 
 - 毕报→BOD→COO 双信（14:1x）；毕报卷 commit 随批推平。
 - 验收门（任务书口径外本席自定）：14:37 拍后主文件新增 1 封 board 信值面复验（候下个观察点顺带）。
+
+## 五、勘注（14:14:55 亲验·BOD 14:11 巡检撞态发现）
+
+- **原卷 §一「主文件 清空 `[]`（保持数组形）」表述错误**：实破原 schema——原顶层形态=**object{letters:[…]}**（冷备取证 keys=['letters']·2207 封）；本席清库脚本读时兼容两形态故读数无恙，写时统一写数组形=形态瑕疵。后果=BOD 实勘 runner L198 `if (Array.isArray(mb.letters))` 守卫在裸数组下 mb.letters=undefined→静默 skip（14:37 拍起断流）·钩子读端同疑。
+- **修复**：14:14:55 主文件写回 `{"letters": []}`（20B·回读断言 type=dict/keys=['letters']/letters=0 过）——**无新 schema，恢复原 schema 空箱**，runner/钩子零改动恢复，14:37 拍正常（拍点前 22 分钟安全段）。
+- **BOD 三问对答**：①新 schema 声明=无（回原形）②归档去向=`.fade/mailbox-archive/notify-mailbox-archive-20261011.json`（2207 全量·含 bod 552 封历史信）③runner 适配派工=不需要（schema 回滚即恢复；健壮化建议=runner 写信段兼容两顶层形态，候 FSD 窗非急件）。
+- **教训**：清库写回必须保持读入时顶层 schema 形态——「读时兼容≠写时可变形」；次修复面活（BOD 巡检兜底真值）在 14:37 拍点前拦截了静默断流。
