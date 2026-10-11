@@ -50,3 +50,13 @@
 - CEO 22:49 令（BOD 22:50 转达）——14:00/18:00 双锚+5h 窗常态关注
 - BOD 定谳卷 ccswitch-quota-endpoint-research.md（bcec4e825）——端点形态与响应结构
 - 本席入账卷 cfo-adjudication-followup-20261007.md（1f26577e/ca7f963e/083ebb65/bfc7f090/82af13f3）——首窗读数与阈值判定全链
+
+## 六、正身确认补记（2026-10-11 09:44+08，CFO 对 FSD 窗内落盘件对表）
+
+COO 09:43 催办（DEM-004 deadline≈10-16）：FSD 窗内按本件 input 落 config `glm-quota-obs.thresholds.json`（observe70/pace15/pause30/5h70/90·asof 10-08）+端点独立实测。本席对表现状：
+
+1. **阈值五值：确认，零更正**——observe70/pace15/pause30/5h70/90 与本件 §二五值逐一吻合（含整数粒度取整口径 14.8→15/29.6→30）。
+2. **端点：确认为正身**——`GET https://open.bigmodel.cn/api/monitor/usage/quota/limit`、`Authorization` 裸值零 Bearer、200 `success:true` `level:"max"`、三型 limits（周窗 TOKENS_LIMIT unit6/5h 窗 unit3/TIME_LIMIT unit5）——与本席 10-07 起六次锚读活体形态全同（本卷 §三+日报卷全链佐证）。
+3. **动作面映射随值正身**（触发→上报路由，属正身组成非可选注记）：观测线 70→报 COO+BOD；日 pace 15→报 COO；暂停线 30→报 COO+BOD+**制停建议**；5h 70→读数行注记 watch；5h 90→即报 COO+BOD 减速。config 文件若仅载数值，本映射以本件为载体（第 3 点系 CPO v2 收编候选一并归一）。
+4. **首滚对表认收**：daemon 首行 09:30 quota_used=32%/5h 1%/weekly_reset=2026-10-14T12:44:33Z——与本席昨 18:00 锚（30%/1%）同向自洽、重置秒级吻合✓；观察线现役正常区。
+5. 附加键（fiveh_pct/weekly_reset/plan_level/fiveh_watch）超 CPO schema v1 字段表——知情，本席行样例候 v2 一并归一，现不阻塞。
