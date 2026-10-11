@@ -1365,3 +1365,10 @@
   - 440b19b1 docs(coo): 栏 B 门禁终裁 APPROVE 落卷——CTO 5dfed913 四门独立验全绿·三移交全裁 APPROVE（/end 不可靠入册裁候 CAO/F-3 三查升级 8711 并族/executor 停摆 8710+8713 并族候勘窗）；pid 二次更替知情更正=watchdog 自愈（43480 死窗 98s 零拍丢·死因未锚如实）——BOD 毕报 pid 读数随补充知情更正·21:00 绩效首验点照常
   - 11d2cc30 docs(cos): cron-muh6shv0-korw-stalled-18h 销账v2——栏B窗毕四门全绿·LG-071终验制亲验自销(BOD 09:45知会)·三锚=COO收口卷ebc4d10a+FSD毕报卷d0cb0db8可解+本席09:46 healthz活体(ok·uptime865s=09:32重置吻合·schtasks·mc_link)·open 13→12·v1销账09:47写盘未即commit被并行写覆盖回滚(互踩族·本笔写后即commit锁笔)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 b796cff4 后新增 5 条 commit：
+  - 21efe249 docs(cto): 勘修窗提案两案并勘落卷（executor停摆家族根因勘+修·修复包五件按依赖序·43480死因随崩溃handler机制性解决·F-3第三型源码锚store.ts L252新补）+栏C勘读指令单落卷（R-HY TriRMC token掩形三键·零写面值面零回显红线·值席通道消费件）——候BOD排窗+值席拾取
+  - fd300395 docs(coo): hub-silent-detect 定性撤回勘正——CTO 10:03 即认即勘：非卡死非降级=01:49 快照进行时误判（01:55:02Z 结算实证正常滚动无丢拍·1551b313）·本席 09:56 降级运行中表述随之作废·改列性能观察项（timeout 率 26%·检测延迟 10-15min=延迟非盲）；勘修窗改两案并勘（43480 死因源码面增量=TriMLC 零全局崩溃 handler）+锁笔惯例并提候 CAO
+  - 917de1d0 merge: 收编 bare 并行笔（值席笔·CTO 收编）
+  - 1551b313 docs(cto): 终裁卷§五.6勘读段落卷(重落·原笔被并行值席窗吞·写后即commit锁笔)——hub-silent-detect「卡死」定性撤回=进行时误判(01:45拍正常起轮·01:55结算state=failed+next滚02:00Z·无丢拍·跳槽=next()结算语义)·真问题收窄=运行质量劣化观察项(贴600s线·timeout率26%·撤回立项)·勘修窗改两案并勘(+43480死因源码面:TriMLC零全局崩溃handler独立崩溃向成立·根治包dist在役)·三重同族坑+增量笔被吞四教训并档
+  - 5139b08b docs(cfo): W41 日报 10-11 09:30 锚跳过——电源门未过（BatteryStatus=1·73%）锚协议记档；daemon 观测腿照跑（首滚 32% 信转引注未复验）；周日门不适用
+- registry：v2.1；今日 registry 提交无变化
