@@ -1472,3 +1472,7 @@
   - 51d70a2a merge: 收编并行笔（值席落盘防覆盖）
   - 72998f2a docs(coo): 8713 悬挂结案段——CTO 判读三问答收编（归因 hub-silent 贴线长耗·件B 指纹排除·24min 先例外推勘正采纳）+SIGKILL 兜底/per-job cancel 无 双实锚+18:10 复探疏通实锚（hub-silent 结算 453s/滞留三 job 补触发/window 首滚补触发落账 run_count=1 next 滚明 09:00/bod-tick 补触发/tree-node 60s 拍恢复·hang 全程零重启 uptime 连续未断）+m-cos 候窗静默误报闭环（hub-silent-detect 灰度运行质量反馈：候窗态 duty-escalate 误报候 FSD 判据改进·两案分立）+§67 反例库第二条候选·终验窗 19:00 照排
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:40 +08：自上次进度提交 3782ddf6 后新增 2 条 commit：
+  - 91ba803e docs(cfo): W41 日报 10-11 18:00 锚+W41 全件收口——周窗 40%·余 60%≈1.62B 点（晚窗宽裕）；18:00 槽对 +10 与 14:00 槽互证；三线零触发全天；W41 六日全录闭卷·明日翻 W42
+  - b2c72590 docs(fsd): 灰度三项评估+CTO 会签落卷——①候窗态误报候选 B 采（duty hop 单源根因+长任务深潜反例必入测试面）②幂等键采（同轮双投机理勘正认领+谁去重随定禁悬空）③贴线照排·施工窗位候排不入 W1 备料
+- registry：v2.1；今日 registry 提交无变化
