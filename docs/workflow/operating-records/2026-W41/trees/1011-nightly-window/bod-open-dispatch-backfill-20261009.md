@@ -294,3 +294,9 @@
 - **③COS 知会**（00743aaa）：勘修窗提前+任务书+件5 排窗候+今晚三拍不变——C-level 即时同步防陈旧基线。
 - 并行面控制：CTO 动 src/+dist、FSD 只动 scripts/bod-tick-runner.mjs——file 面零交叉+写后即 commit 锁笔+禁 amend（互踩族防线随任务书）。
 - 落点注：任务书原拟落 trees/1011-window-family/（COO 主仓树目录）——wt/board 分支无该目录，改落本席主树 1011-nightly-window/（同源家族：节拍转报即 bod-tick 家族件）。
+
+## §52 勘修窗开工回执（2026-10-11 11:38）
+
+- CTO 开工回执收讫（落款 11:38:11+08 date 现查原值——**§49 回勘立竿见影·S0 热身自证生效**·时序双锚自洽）。接令确认：即刻开窗/硬锚 16:00/知情三项/并行条款（8713 重启专管恪守）全收讫。
+- 施工序（草案 @e0387550+S0-S7）：date 热身✓→TriMLC 现势重勘（含 FSD 并行笔对表）→S1 三件独立 commit（崩溃 handler/race guarded/F-3 enabled ?? true）→S2 五族测试→S3 build→S4 重启窗（避 bod-tick 整拍±2min·/shutdown 正形链）→S5 handler 活体探针→S6 三查门回归→S7 毕报（→CTO+COO→窗收口 BOD）。
+- BOD 面零回复（施工中勿扰），候 S4 重启窗拍延迟知情+16:00 硬锚前毕报。
