@@ -1396,3 +1396,15 @@
 - 巡检兜底补写 @11:50 +08：自上次进度提交 3d75a69e 后新增 1 条 commit：
   - 7091b8fb docs(coo): COS 排工基线同步收编——勘修窗窗位勘正即刻开（BOD 11:37 知会·硬锚 16:00 不动·原 14:00 开窗点作废）+Option A 任务书 8088337f 五件并一+COS 件5 信箱卫生排窗 14:00-15:30 知情入表（边界自划开与勘修窗零冲突·候 12:07 验收门）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:50 +08：自上次进度提交 86cb80a7 后新增 10 条 commit：
+  - ebf4e5a4 docs(coo): 勘修窗毕收编——CTO 毕报@5cbfe118 验读入卷（三 commit 件A fc44904/件B cc52c89/件C baf800d·门禁全绿·S5/S6 活体锚·bod-tick 双拍 ok·crash.log 零基线·hub-silent 11:51 timeout 拍=双防线活体实证未崩）；BOD 抽验签认 §56@a76bb807 收口闭环；督办两点（五族归因 STE 候排建议 10-12 上午或 18:00 后黄金段+两惯例制度化提请知情）入卷；21:00 双语义候拍
+  - 98b490be docs(cto): 毕报 §十一落款族第三犯勘注——收口回执落款 5 秒造值即认（体感外推微差型·性质同族零豁免）+整改升级自裁（每信落款写前必先跑 date·禁引同窗先前读数）
+  - fec22c41 docs(cto): 毕报 §八勘注——sg bare 腿窗内推平（6f832a1→baf800d 独立验真）·GitHub 443 挂账收窄候追；随 BOD 签认收口令（§56 a76bb807）知情归档
+  - 5cbfe118 docs(cto): 勘修窗毕报——三件落位（件A fc44904/件B cc52c89/件C baf800d）+重启窗闭环+S5 探针+S6 三查活体锚+bod-tick 双拍 ok+crash.log 零基线；残余五项挂账（origin 追平/贴线 26%/五族归因/8711 回流/两惯例制度化提请）
+  - 2d2baad0 docs(fsd): Option A 闭合确认补笔——BOD 回执门3 自然验收当场实锚(hook 注入原文在)·四门全 PASS 资质闭合·兜底 cron v2(99885773·单轮 5 封上限)防 552 封爆屏隐患·主树别名候办 BOD 认收挂账
+  - c8a93dd5 merge: 收编 FSD Option A 毕报笔（件5 料源·开工前预读）
+  - 33fcf929 docs(fsd): Option A 验收门终值补笔——门1 PASS(信箱首封十键值面对表·target_seat=board·body 500 整)+门2 PASS(13 席文案)+门3 候 BOD 面自然验收+门4 FSD 面零重启 PASS·uptime 断档归因 CTO 勘修窗 11:51 并行重启如实注记(重启后 12:07 拍照常=功能面不受扰实证)
+  - bea5d45f docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - e7289a26 docs(fsd): Option A 施工毕报卷——三件实勘实录(b41230e2)+runner 真身勘正(TMV scripts/fade 非 TriMLC/scripts)+件2 裁决甲四条依据+历史 552 封 bod 信处置建议(件4 双捞/件5 清库两路线不冲突)+验收门候 12:07 拍
+  - b41230e2 feat(fsd): Option A 节拍投递三件（BOD 派工@8088337f·零重启面）——件1 runner L188 后写信箱段(逐段 try/catch·拍报落盘优先·竞争面注释在)·件2 名址裁决甲=target_seat='board'(notify-inject worktree 路径 opsName 推导在役机制·seats.json 派生产物勿手编故不动配置·主树'bod'行为零变化)·件3 LOCAL_SEATS 补 m-fsd 12→13+文案三处·runner 真身=TMV scripts/fade/ 非任务书所写 TriMLC/scripts(毕报注明)·TriMLC 仓零触碰=CTO 并行窗安全
+- registry：v2.1；今日 registry 提交无变化
