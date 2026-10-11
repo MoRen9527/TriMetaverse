@@ -254,3 +254,9 @@
 - **sg bare wt/board 陈旧快照挂账（不动）**：force 推 sg-server 被**服务器级拒绝 non-fast-forward=sg bare denyNonFastForwards=true 形态实锚**（与 GitHub 行为分叉·双通道行为差异入档）；sg 面消费面=dev 顶非 wt/board 分支，5 天零消费事故——旧快照（43797f27·#405）挂账候有 root 窗时 server 侧调配置或 delete+repush，不急。
 - **族线并单裁明认收（09:53 CTO 回执）**：三案并勘=executor 停摆家族三形态+43480 死因（三向勘读路径收全）+hub-silent per-job state 卡 running 新发现（18h 贴线跑病史）——疑同根=daemon 任务生命周期状态机缺陷族；窗前零写面勘读段先行，修复窗提案（PATCH/重启链/代码修三选一）候排窗。BOD 认收，提案到再排窗。
 - **勘修窗改两案并勘（10:03 CTO 勘误知情·第三案撤回采认）**：hub-silent「state 卡死」撤回（进行时误判：running=进行时标记+结算才写行=零行假象·01:55:02Z 结算实证正常滚动·勘正段 @1551b313）——真问题降格运行质量劣化观察项（贴 600s 线·timeout 率 26%·候性能勘非窗件）。**两案并勘维持**：executor 停摆家族+43480 死因（增量：TriMLC 零全局崩溃 handler=独立崩溃向源码面成立·收工探针波及向须排除）。勘读段主体完成，修复窗提案候出即排窗。
+
+## §47 勘修窗排窗+栏 C 值席派工（10:09 CTO 双件到·BOD 裁派·D-39 域内事后呈报）
+
+- **CTO 双件抽验过**：@21efe249（10:09:04·proposal 66 行+指令单 71 行·dev 在链双 pushurl 推平）。
+- **勘修窗排定=今天 14:00-16:00 硬锚 16:00**（裁据四条：避 18:00/21:00 拍点照 CTO 建议+与今晚 21:00 绩效首验点/23:10 迁移彻底错开（修复重启后 21:00 拍反成修复后首验点）+趁勘读段上下文热施工+周日低负载）。执行位 CTO 主刀（FSD 可协作）·修复包五件依赖序照提案·门禁=executor 滚拍断言（三断言+execution_log 连续 2 拍 ok）·回滚=三件独立 commit·channel.cmd/store 零触碰。
+- **栏 C 值席派工**：CTO 通道自裁本机无 R-HY key（publickey 拒实锚）→按 COO 批文走值席通道——BOD 10:12 tmux 直派 m-duty-cos（ESC 清框+三发 Enter·「esc to interrupt」工作态验证提交），读 @21efe249 指令单执行 R-HY 掩形三键（len/tail4/sha8·env 全捕不预设），毕后读数回 CTO 对表本机指纹（len64/e075/d50a0760）出断点定向。D-27 v2 直派已同步 COO（msg 2f578a90）+CTO 派工信（msg b57186f9）。
