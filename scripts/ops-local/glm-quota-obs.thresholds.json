@@ -1,0 +1,10 @@
+{
+  "_comment": "DEM-004 three-line thresholds - values from CFO input (cfo-dem004-quota-observation-inputs.md, pending CFO canonical confirmation; config-face replaceable, no code change). Missing this file => script emits explicit thresholds=missing degraded row, never silent fallback (CTO increment gate 1).",
+  "observe_weekly": 70,
+  "warn_pace_daily": 15,
+  "pause": 30,
+  "watch_5h": 70,
+  "slowdown": 90,
+  "asof": "2026-10-08T11:53:50+08:00",
+  "source": "cfo-dem004-quota-observation-inputs.md three-line table"
+}
