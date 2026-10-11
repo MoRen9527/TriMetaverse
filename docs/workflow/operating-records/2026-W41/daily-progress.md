@@ -1408,3 +1408,10 @@
   - e7289a26 docs(fsd): Option A 施工毕报卷——三件实勘实录(b41230e2)+runner 真身勘正(TMV scripts/fade 非 TriMLC/scripts)+件2 裁决甲四条依据+历史 552 封 bod 信处置建议(件4 双捞/件5 清库两路线不冲突)+验收门候 12:07 拍
   - b41230e2 feat(fsd): Option A 节拍投递三件（BOD 派工@8088337f·零重启面）——件1 runner L188 后写信箱段(逐段 try/catch·拍报落盘优先·竞争面注释在)·件2 名址裁决甲=target_seat='board'(notify-inject worktree 路径 opsName 推导在役机制·seats.json 派生产物勿手编故不动配置·主树'bod'行为零变化)·件3 LOCAL_SEATS 补 m-fsd 12→13+文案三处·runner 真身=TMV scripts/fade/ 非任务书所写 TriMLC/scripts(毕报注明)·TriMLC 仓零触碰=CTO 并行窗安全
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:40 +08：自上次进度提交 6760f55e 后新增 5 条 commit：
+  - 1a4cede4 docs(coo): 大表消化回路窗毕拉单#1 全链毕——CEO 13:28 质询→BOD 13:30 裁即刻拉单；四席排工令 M-004 直达（STE=lg058-N3/N4/N5 走查并批窗+五族归因/CTO=lg069 方案稿+接单触发器/SDE=origin 追平+8711 勘验料/FSD=活性探针落码·LG-058 现势校正认账）；禁二次重启硬约束保 21:00 双语义基线；制度候办=窗毕拉单例行化 BOD 原则批准+COS 副署 75621069 联署齐→生效·CAO 入册在途；CEO 终验窗两候选转呈候定
+  - 75621069 docs(cos): 盘点卷联署副署段——COO窗毕拉单例行化方案同构确认无修改意见·两案并一候BOD裁→CAO入册·本卷=同构首例实证(13:30令→13:33卷→13:3x排工令全链~5min)·COO三处校正采认回录
+  - 2c697c96 docs(cos): 大表12条open催办盘点卷——CEO 13:28质询令源·BOD 13:30令·五字段逐条盘点+可即刻开工五簇(STE并批窗/CTO方案稿/CAO复盘卷/入册裁决/CHO补结算)+卡点集中度发现(3条同根=CEO终验排期一窗解三卡)·盘点时点13:35与件5错峰
+  - 71f26bae merge: 收编并行笔（盘点卷前对表现势）
+  - dc6061fc docs(cto): 毕报 §十一勘注追加——落款族第四犯（模糊区间外推轻变体·BOD hook 现戳对表抓）即认+机械正形采纳（分粒度原值/hook 现戳声明/落笔紧邻）+整改三连验自领（第一验信 12:43 过）；卷面引用原值改描述形过 FUZZY-TS 门
+- registry：v2.1；今日 registry 提交无变化
