@@ -8,11 +8,11 @@ import { readFileSync, writeFileSync, appendFileSync, mkdirSync, readdirSync, st
 const SG = 'M-SG-47.245.122.61';
 const RHY = 'R-HY-8.155.54.79';
 const REPO = 'D:/Code/ai/TriMetaverse';
-// 13 席名册（CEO 10:34 令：节拍须报全席在岗态，一席在干活=非空闲）
-const LOCAL_SEATS = ['m-cho', 'm-cfo', 'm-rdt', 'm-cto', 'm-sde', 'm-ste', 'm-cpo', 'm-cmo', 'm-coo', 'm-cao', 'm-cos', 'm-cso'];
+// 13 席名册（CEO 10:34 令：节拍须报全席在岗态，一席在干活=非空闲；m-fsd 补漏 2026-10-11 BOD 派工件3——名册缺漏实锚=拍报「12 席」而本注释写 13 席）
+const LOCAL_SEATS = ['m-cho', 'm-cfo', 'm-rdt', 'm-cto', 'm-sde', 'm-ste', 'm-cpo', 'm-cmo', 'm-coo', 'm-cao', 'm-cos', 'm-cso', 'm-fsd'];
 const ACTIVE_MS = 120_000; // transcript mtime 120s 内有写=会话在干活
 
-// 本机 12 席探针：扫 transcript jsonl，活跃者读头 4KB 提 customTitle 归席位
+// 本机 13 席探针：扫 transcript jsonl，活跃者读头 4KB 提 customTitle 归席位
 function scanLocalSeats() {
   const root = 'C:/Users/jedih/.claude/projects';
   const active = new Set();
@@ -164,8 +164,8 @@ const dutyBusy = probes.dutyBusy === true;
 const totalBusy = activeLocal.length + (dutyBusy ? 1 : 0);
 const dutyLine = `**sg duty 组（重点）**：${probes.duty}`;
 const localLine = seats.err
-  ? `本地 12 席扫描失败（${seats.err}）`
-  : activeLocal.length ? `本地在干活：${activeLocal.join('、')}` : '本地 12 席全空闲';
+  ? `本地 13 席扫描失败（${seats.err}）`
+  : activeLocal.length ? `本地在干活：${activeLocal.join('、')}` : '本地 13 席全空闲';
 const L = [];
 L.push(`**节拍（daemon 版）${ts}**`);
 L.push('');
@@ -186,4 +186,41 @@ const dir = `${REPO}/docs/workflow/operating-records/${week}/trees/bod-tick`;
 mkdirSync(dir, { recursive: true });
 writeFileSync(`${dir}/tick-latest.md`, report, 'utf8');
 appendFileSync(`${dir}/tick-log-${ts.slice(0, 10)}.md`, report + '\n', 'utf8');
+
+// ── 件1 写信箱段（Option A 节拍投递，BOD 2026-10-11 派工；拍报落盘已在上面发生，本段任一挂≠拍炸）──
+// target_seat='board'（件2 裁决甲）：notify-inject.cjs worktree 路径按 seats.json opsName 推导
+// （wt/board → 'board'），主树路径 'bod' 行为零变化；seats.json=派生产物勿手编，故不改配置改写信名。
+// 竞争面注：信箱全量读改写与 notify 注入端存在理论竞争，拍频 30min 概率极低（BOD 任务书定）。
+{
+  const MAILBOX = 'D:/Code/ai/TriMLC/notify-mailbox.json';
+  try {
+    const mb = JSON.parse(readFileSync(MAILBOX, 'utf8'));
+    if (Array.isArray(mb.letters)) {
+      const letter = {
+        message_id: `ntf-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}--bod-tick`,
+        source_seat: 'bod-tick',
+        target_seat: 'board',
+        urgent: 'normal',
+        title: `节拍 ${ts}`,
+        body: report.slice(0, 500),
+        delivery: 'mailbox',
+        received_at: new Date().toISOString(),
+        delivered_at: new Date().toISOString(),
+        read: false,
+      };
+      try {
+        mb.letters.push(letter);
+        writeFileSync(MAILBOX, JSON.stringify(mb, null, 2), 'utf8');
+        console.log(`[bod-tick] mailbox letter ${letter.message_id} -> board`);
+      } catch (e) {
+        console.error(`[bod-tick] mailbox write fail (拍报已落盘不受影响): ${String(e).slice(0, 120)}`);
+      }
+    } else {
+      console.error('[bod-tick] mailbox letters not array - skip (拍报已落盘不受影响)');
+    }
+  } catch (e) {
+    console.error(`[bod-tick] mailbox read/parse fail - skip (拍报已落盘不受影响): ${String(e).slice(0, 120)}`);
+  }
+}
+
 console.log(`[bod-tick] ${ts} report written -> ${dir}/tick-latest.md`);
