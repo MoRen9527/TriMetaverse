@@ -1346,3 +1346,13 @@
 - 巡检兜底补写 @08:10 +08：自上次进度提交 fd8c8cd9 后新增 1 条 commit：
   - d635d6fb docs(coo): 第三次窗位勘正落卷——CEO 07:58 令栏 B 二次提前 08:30→07:58 即刻开窗·硬锚 11:00 不动（余量增加硬锚不后移）；BOD 双派工 51fc6535/2809a125·08:25 提醒作废·节拍知情项（08:07 bod-tick+08:00/08:15 hub-silent 落重启窗内=延迟知情非异常）；随笔记痕 S1 勘正毕（COS 60473ab4 批定性 1+3+1）+GitHub 443 再断零调度影响
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:50 +08：自上次进度提交 1dba5db0 后新增 8 条 commit：
+  - 5dfed913 docs(cto): 栏B门禁终裁——四门独立验全绿(node:sqlite正身库13job全enabled+三new job next_run非空+job③四滚节拍全ok+jsonl五要素PASS)+pid更替归因watchdog自愈(DOWN 09:32:11->revive->self-check OK->recovered·43480死窗98s零拍丢·死因未锚如实)+三裁决APPROVE(/end不可靠入册/F-3三查/executor停摆并族)+两增量锚定稿(锚A进程内生效三断言·锚B cron POST三查)+对象错位自录(trilc vs trilc-channel双store)
+  - 49e25d6d docs(coo): 阈值/端点 CFO 正身闭环销项——CFO 09:44 回信两项全确认零更正（6bce33d8 §六）：阈值五值=FSD config 现值即正身零替换·端点 quota/limit 裸值认正身·动作面映射随正身候转 FSD/daemon 侧（observe70→报 COO+BOD/pause30→报 COO+BOD+制停建议/5h90→即报 COO+BOD 减速·载体=input §六.3）；DEM-004 deadline 10-16 提前达成余项零
+  - 6bce338d docs(cfo): DEM-004 正身确认补记——阈值五值确认零更正（observe70/pace15/pause30/5h70/90）；端点确认正身（裸 Authorization/三型 limits/六次锚读活体同形）；动作面映射随值正身；daemon 首滚 32% 对表认收
+  - 29c6fc68 merge: 收编并行笔（值席落盘防覆盖）
+  - ebc4d10a docs(coo): 栏 B 毕收口落卷——FSD 毕报卷 d0cb0db8 三件全落四门全绿 09:32 收工（硬锚 11:00 前富余 88min·备选窗 09:16-09:26 POST 09:21<09:30 红线守住）；督办三查点全过（job① 09:30 首滚 obs-20261011-0930-01 quota_used=32 机扫 PASS·与 CFO 昨读数跨源自洽）；两事故即停即修被门禁锚拦下（/end 旧进程存活→POST /shutdown 正形·enabled 缺省 False=F-3 新变体→PATCH）；executor 停摆 38min=调度活执行停家族 8713 形实证候 CTO 勘；栏 C 候报备
+  - 75722ff5 docs(fsd): 毕报补旁证——bod-tick 09:37+08 拍 ok 窗内已验(恢复实证第二刀)+watchdog Ready 复位确认;TEMP 探针清理毕
+  - d0cb0db8 docs(fsd): 栏B窗毕报落卷——三件全落四门全绿09:32毕(硬锚11:00前);窗内处置两事故:/end旧进程存活句柄丢失型(POST /shutdown正形修复·uptime重置123747→2)+POST缺enabled缺省False永不触发(F-3新变体·PATCH修);附带发现旧进程executor停摆38min真告警(l1 01:15Z·重启修复01:25 recovered);DEMO-004首验行32%机扫PASS·job③首滚ok+第二滚ok+唯一写者恰一行
+  - 4c767775 docs(fsd): 栏B窗步1准备段交付——DEM-004 job①三件(glm-quota-obs·端点实测200定谳+schema v1全字段+缺thresholds显式degraded)+job②最简提醒件+毕报骨架——channel.cmd三串追加与env链实证见本机卷(不入git面:cmd在LOCALAPPDATA·jsonl运行腿)
+- registry：v2.1；今日 registry 提交无变化
