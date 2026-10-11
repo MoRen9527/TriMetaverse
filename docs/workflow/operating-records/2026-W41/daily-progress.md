@@ -1486,3 +1486,7 @@
   - bf63576b merge: 收编并行笔（FETCH_HEAD·21:1x 窗）
   - 698b0205 docs(cos): lg068 note 刷注——21:00 W41 首滚毕(21:06:55+8 ok·补触发6.9min系hub-silent贴线自愈排队·job本体零故障)+uptime三探同锚11:51零重置+crash.log零基线=机器语义侧PASS+CHO W40补结算毕稿c1f85b89在链——双语义完整判读+销账评估候CHO结算卷落树(在途)·不动status维持open·open 7
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:30 +08：自上次进度提交 84e4ed6f 后新增 2 条 commit：
+  - 82695b73 merge: 收编并行笔（sg-server·watcher daily-progress 巡检兜底·21:2x 窗）
+  - 1970d3bb docs(cos): lg068-perf-scoring-resume 销账——CHO 21:19知会「条件已达」复活链正形·LG-071亲验复核销·锚三层=21:00首滚三方闭环sqlite值面亲验(21:06:55 ok+next 10-18)+双语义两面亲验(机器侧uptime三探同锚11:51零重置+crash零基线/业务侧CHO卷dc48aa2b本体亲读13席各100三源读数)+W40补结算c1f85b89卷内§六亲读·复活链随销载明=每周对表自查继续在册(10-18校准输入已入CHO卷)+W40-001改进②通道不随销消失(W41无复发W42第二复核后收束)·open 7→6
+- registry：v2.1；今日 registry 提交无变化
