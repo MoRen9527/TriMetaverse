@@ -36,6 +36,25 @@ healthz `.cron` 段现役已有 jobCount/degraded/consecutiveFailures 四键（a
 
 CTO 勘修窗三 commit（fc44904/cc52c89/baf800d）已收笔后本席开工；本单只动 src/cron/service.ts+src/server/app.ts（healthz 段）+新测试文件，src 面零重叠；未触 dist·未触 8713 进程（uptime 连续性=21:00 双语义验收基线保全）。
 
+## CTO 门禁审结果（APPROVE·2026-10-11 14:05+08 审·本节 2026-10-11T06:08:13Z 补）
+
+- **两裁决候审项裁下**：①healthz 键名 `next_run_at` **维持不换**（healthz 面 mc_link/mc_peer 蛇形先例+令面字面+store 列名同形三据；探针消费代码尚不存在=契约未冻结，现改名是最后廉价窗口但裁不改）；②纯函数导出形态 APPROVE（零 stub 白盒立先例·ReadonlyArray 最小面）。
+- **注释勘已随落**：接口注释「最近未来拍点」→「最早拍点（含过期未触发值——正是本探针要抓的形态）」——实现语义=min(全部 enabled 非空可解析)含过期值，past-due 持续无执行增长=「调度活执行停」铁证（CTO 指出含过期值恰是探针最强信号）。TriMLC cb5dba8。
+- **探针接线时序注**：此键随下个重启窗才活（dist 未构建）——探针消费面写码勿早于部署窗接线。
+
+## 既有 6 fail 精确清单（STE 五族归因并批窗直取·2026-10-12 上午或 18:00 后窗）
+
+| # | 测试文件 | 测试名 | 形态 |
+|---|---|---|---|
+| 1 | test/integration/pidfile-flow.test.ts | REQ-018 daemon PID self-registration | **CTO 窗基线绿/我窗红=差一例**·首嫌疑 11:51 重启关联环境耦合（pidfile 集成测试与活体 daemon/pidfile 环境耦合·两读数间恰有 CTO 勘修窗冷启）——**并入 STE 归因批窗复核·假设随卷移交** |
+| 2 | test/integration/replay-flow.test.ts | 文件级 fail | 稳定坏（单文件亦红） |
+| 3 | test/server/auth-gate-rejection.test.ts | P0 通道一/二端到端：createTriLCApp 真实 HTTP 全局门（rmc-TriLC.md P0-1 向量复现） | 环境型（单文件 pass·全量红） |
+| 4 | test/server/roster-gating-http.test.ts | FADE-ASSESS-005 派工门禁 (tasks/submit ownerRoleId) | 环境型 |
+| 5 | test/server/roster-gating-http.test.ts | FADE-ASSESS-005 可见性回归 (/agents contract 全量不改) | 环境型 |
+| 6 | test/tui/components.test.ts | 文件级 fail | 稳定坏（单文件亦红） |
+
+对表注：CTO 勘修窗 12:40 前基线=5（replay/auth-gate P0/roster×2/tui）——除 #1 外逐名对上；#1 差例处置=不扩今日 scope·并入 STE 并批窗（归因假设「重启关联环境耦合」随移交）。
+
 ## 使用依据
 
 - COO 排工令 13:34+08（窗毕拉单#1）·需求池 DEM-003 v2 三组件清单（company-demand-pool.md L47）·CTO 三组件评估卷 5841c1fb
