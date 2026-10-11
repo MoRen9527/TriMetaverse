@@ -1,0 +1,12 @@
+{
+  "_comment": "DEM-004 job① config — endpoint verdicted by FSD live test 2026-10-11 (HTTP 200 + data.limits[] with percentage/nextResetTime; CTO acceptance anchor). CFO canonical may replace values here with zero code change.",
+  "endpoint": "https://open.bigmodel.cn/api/monitor/usage/quota/limit",
+  "keyEnvName": "GLM_CODING_KEY",
+  "plane": "M",
+  "service_domain": "local",
+  "model": "glm-coding-plan",
+  "accountMode": "tail8",
+  "outputFile": "%LOCALAPPDATA%\\trilc-channel\\glm-quota-obs.jsonl",
+  "weekly": { "unit": 6, "number": 1 },
+  "fiveh": { "unit": 3, "number": 5 }
+}
