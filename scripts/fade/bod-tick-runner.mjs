@@ -136,7 +136,15 @@ const probes = {};
   try {
     const r = await fetch('http://127.0.0.1:8711/healthz', { signal: AbortSignal.timeout(6000) });
     const j = await r.json();
-    probes.rlc = `ok=${j.ok} uptime_h=${Math.round((j.uptime || 0) / 3600)} cron=${j.cron?.jobCount ?? '?'} mc_link=${j.mc_link}`;
+    // LG-069 二期候批条③（CTO 稿 cto-power-gate-phase2-plan-20261011 §四.4/§八.3·BOD 转单 2026-10-11）：
+    // 扩 8711 healthz 探=预埋读 follower 段（从闸 v1 落窗后 8711 app.ts 投影四键
+    // state/lastPollAt/lastGateSeen/pollFailures）——现役段不在位如实标 absent，
+    // 落窗后本探针自动变活，覆盖 unknown 段告警盲区（§2.4 巡检面=BOD 第二双眼睛）。
+    const f = j.follower || null;
+    const fSeg = f
+      ? ` follow=${f.state ?? '?'} lastPoll=${f.lastPollAt ?? '?'} gateSeen=${f.lastGateSeen ?? '?'} pollFail=${f.pollFailures ?? '?'}`
+      : ' follow=absent(从闸未落窗)';
+    probes.rlc = `ok=${j.ok} uptime_h=${Math.round((j.uptime || 0) / 3600)} cron=${j.cron?.jobCount ?? '?'} mc_link=${j.mc_link}${fSeg}`;
   } catch (e) {
     probes.rlc = `探针失败: ${String(e).slice(0, 120)}`;
   }
@@ -191,11 +199,17 @@ appendFileSync(`${dir}/tick-log-${ts.slice(0, 10)}.md`, report + '\n', 'utf8');
 // target_seat='board'（件2 裁决甲）：notify-inject.cjs worktree 路径按 seats.json opsName 推导
 // （wt/board → 'board'），主树路径 'bod' 行为零变化；seats.json=派生产物勿手编，故不改配置改写信名。
 // 竞争面注：信箱全量读改写与 notify 注入端存在理论竞争，拍频 30min 概率极低（BOD 任务书定）。
+// 件2 健壮化（BOD 转单 2026-10-11·COS 毕报 7966e5b1/645d80de 建议）：兼容两顶层形态——
+// object{letters:[…]}（主形）+ array 裸形（COS 清库短暂切换态，14:1x 曾致旧守卫静默 skip 实锚）；
+// 写回保持原顶层形态（裸形不擅自升格主形，避免与注入端在过渡窗的形态预期分叉）。
 {
   const MAILBOX = 'D:/Code/ai/TriMLC/notify-mailbox.json';
   try {
     const mb = JSON.parse(readFileSync(MAILBOX, 'utf8'));
-    if (Array.isArray(mb.letters)) {
+    const bare = Array.isArray(mb);
+    const letters = bare ? mb : mb && Array.isArray(mb.letters) ? mb.letters : null;
+    const container = bare ? null : mb; // 主形=整个 object 写回；裸形=数组本身写回
+    if (letters) {
       const letter = {
         message_id: `ntf-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}--bod-tick`,
         source_seat: 'bod-tick',
@@ -209,14 +223,14 @@ appendFileSync(`${dir}/tick-log-${ts.slice(0, 10)}.md`, report + '\n', 'utf8');
         read: false,
       };
       try {
-        mb.letters.push(letter);
-        writeFileSync(MAILBOX, JSON.stringify(mb, null, 2), 'utf8');
+        letters.push(letter);
+        writeFileSync(MAILBOX, JSON.stringify(container ?? letters, null, 2), 'utf8');
         console.log(`[bod-tick] mailbox letter ${letter.message_id} -> board`);
       } catch (e) {
         console.error(`[bod-tick] mailbox write fail (拍报已落盘不受影响): ${String(e).slice(0, 120)}`);
       }
     } else {
-      console.error('[bod-tick] mailbox letters not array - skip (拍报已落盘不受影响)');
+      console.error('[bod-tick] mailbox unrecognized shape (neither object{letters} nor bare array) - skip (拍报已落盘不受影响)');
     }
   } catch (e) {
     console.error(`[bod-tick] mailbox read/parse fail - skip (拍报已落盘不受影响): ${String(e).slice(0, 120)}`);
