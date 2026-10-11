@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本稿（trees/lg069-power-gate-20261007/cto-power-gate-phase2-plan-20261011.md）
 - syncMode: static（二期方案稿·纸面件零施工·施工候批后排窗）
-- lastSyncedAt: 2026-10-11T14:08:41+08:00（date 现查原值）
+- lastSyncedAt: 2026-10-11T14:28:55+08:00（date 现查原值·勘正注刷）
 - 方案席: CTO 小狄（m-cto）；令源=COO 窗毕拉单#1 改派裁（13:4x，对象断言报采信后裁 (b)）；一期正身=同树 cto-power-gate-tech-plan.md c05d4342
 - 一期钩子原文（一期方案卷 §边界 3）：「TriRLC 8711 不在本闸 scope……TriRLC 从闸（轮询 /internal/v1/power）候二期另批，不混本窗」——本稿即该「二期另批」的批前方案纸。
 
@@ -32,7 +32,7 @@ TriMLC 8713（主闸·现状不动）            TriRLC 8711（从闸·本二期
 
 一期钩子写「轮询 /internal/v1/power」——**本稿改裁 healthz**，裁据三条：
 1. **凭据面最小化**：/internal/v1/power 需 X-Internal-Token，从闸持有主闸 token=8711 被 compromising 即全权 8713 控制面（含 cron 写/shutdown）；healthz 免鉴权只读，从闸需要的恰只是只读闸态——零新增凭据面。
-2. **字段面已足**：healthz.power 现役已投影 gate/percent/percentRaw/percentCim/acOnline/batteryPresent/readFailures/notifyFailures 八字段（本席 14:0x 活体核），gate 字段即从闸唯一必需消费面。
+2. **字段面已足**：**8713 主闸侧** healthz.power 现役已投影 gate/percent/percentRaw/percentCim/acOnline/batteryPresent/readFailures/notifyFailures 八字段（本席 14:0x 活体核），gate 字段即从闸唯一必需消费面。〔勘正注 14:28（FSD 活体现探勘正·BOD 知会·本席采信）：本裁据「八字段」归属钉明=**8713 主闸侧既有面，非 8711 侧**——8711 healthz 现役无 power/follower 段，follower 段系本稿 §四.4 触面新建；本稿 §2 语境下「healthz」均指从闸轮询对象 8713 侧〕
 3. **前置件已在我今天勘验清单**：healthz.power 缺 lastReadAt 投影（snapshot 有、healthz 落投影——今天风暴「陈旧缓存不可信」的可见性缺口本体），从闸 staleness 判定必需该字段——作为二期前置小件随 8713 下个构建重启窗一并落（一行投影+单测，已向 BOD 中报 §⑥ 报备）。
 
 ### 2.3 从闸状态机（纯函数·单测直驱）
@@ -100,7 +100,7 @@ TriMLC 8713（主闸·现状不动）            TriRLC 8711（从闸·本二期
 
 1. BOD 排「8711 修复+从闸合并窗」窗令（分件清单照 §四；窗序建议=件A→件C→件B→从闸，回流在前从闸在后）；
 2. 8713 侧前置件（healthz lastReadAt 投影）随 21:00 后窗落；
-3. bod-tick 巡检面扩 8711 healthz 探（BOD 面候办，覆盖 unknown 段告警盲区）；
+3. ~~bod-tick 巡检面扩 8711 healthz 探~~ **已施工**（BOD 转单 FSD 两改 7b36e036·毕报 c763c581：follower 段四键预埋·现役 absent 如实标·从闸落窗自动变活，另写信段两顶层形态兼容 object{letters}主形+array 裸形；自然验收点=14:37 拍 bod-tick 行尾 follow=absent 尾注）——候批条③就此闭，unknown 段告警盲区覆盖面已就位；
 4. 二期施工派工（FSD 施工/STE 门禁预置/本席终验——M-004 直达分派候窗令）。
 
 ## 使用依据
