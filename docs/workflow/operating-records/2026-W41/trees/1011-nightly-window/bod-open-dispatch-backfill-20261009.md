@@ -271,3 +271,10 @@
 - **Q3（sg 钩子支持性）**：实勘 sg 三级 settings（ssh cat）——项目级 `{}` 零 hooks/fleet 用户级仅 env 零 hooks/local 仅 permissions 零 hooks→**「没设置」非「不支持」**（同一 Claude Code 程序，hook=应用级功能与 tmux 终端形态无关）。sg 现役装的是 notify-poller.sh 轮询器（fleet crontab 每分钟读 TriMC **outbox**→tmux send-keys 直打 m-duty-cos 框+双 Enter）——**选型根因=形态适配非遗忘**：duty 席可能数小时无人交互，钩子捎带（被动等下轮）会饿死；poller 的 send-keys=模拟用户输入，同时解决「送达+触发回合」两件事。两面各选合自身交互节奏的形态：本机 BOD 高频交互→捎带够用；sg duty 低频待命→主动推必需。
 - **⚠ 操作瑕疵申报**：上述实勘 `cat` 未滤值面，sg fleet 用户级 settings 的 API key/token 值面回显进会话链。定性=操作瑕疵非安全事故（token 本躺 CEO 本机 settings.json·transcript 同在 CEO 本机·同盘同权限增量≈零），按 2026-10-02 channel.cmd 案前例不提前轮换；教训=跨机 cat 配置文件一律先 sed 掩形（值面字段禁进打印路径纪律跨机面同样适用）。
 - **Option A 落地五件**（任务书候落 COS 链排工）：①bod-tick-runner.mjs 落盘段后加写信箱段（~10 行）②seats.json board 条目 notifyTarget 对齐（现役信写 target_seat='bod' vs 钩子推导 seatFilter='board' 名对不上=BOD 从未收到信箱信的根因·2158 积压成分之一）③本会话小时级兜底 cron（读未读转报·防长空闲漏信）④现役看拍 cron 74b83c49 prompt 内 tick-log 文件名形态勘正（YYYYMMDD→YYYY-MM-DD）⑤信箱 2158 未读积压卫生（read 机制修复+清库/归档）候 COS 排。
+
+## §49 栏 C 终裁收讫+值席转达毕+CTO 落款倒挂回勘（2026-10-11 10:2x）
+
+- **CTO 栏 C 定谳收讫**（裁决卷 @cb599805·bare 推平验真过）：断点③=各机独立 token 系（本机 e075/d50a0760 vs R-HY 78a1/38731fd9 三键全异）；401 根因=调用方持本机 token 打 R-HY 门=用错 token，非配置缺陷，**配置面零修复需求**；并案解绑（R-HY 401 pull_denied=git 凭据面·与 daemon 门 token 面不同根·候办 P2 原档不动）；剩余观察项=401 调用方流量面排查候下拍（无常驻调用方则本卷即终态）；勘修窗 14:00 照令·窗前预研已毕（@e0387550）。CTO 自录勘差=栏 C 值席指令单写「R-HY 8712」系对象断言失误（正身 8710）。
+- **值席转达毕**（CTO 指定经 BOD 派工链转达）：m-duty-cos tmux 直派——①勘验段采纳入终裁卷 @cb599805 无返工 ②回卷落款 +1 天时点勘差（写 10-12·今日 10-11）纪律知悉。链路=ESC 清框+literal 文本+三发 Enter（600ms 间隔）+capture 验证（「Incubating…」处理态+框空✓）。
+- **框残留清理录痕**：清框时 m-duty-cos 输入框挂残留未提交令「BOD 确认栏C Preliminary 裁成立转 dev-CTO；昨夜①②复合块（chown+restart）一并候窗执行」——无对话流增量证据=未送达态，内容已被终裁覆盖（Preliminary→定谳），清框丢弃。来源候勘（压缩前段 BOD 派工疑 Enter 吞噬残留）；「昨夜①②复合块（chown+restart）候窗执行」候办项以本条录痕为准候值席面排窗。
+- **⚠ CTO 落款倒挂回勘**（幻觉时点族新案·即认机制）：CTO 信落款声称「10:33:12+08 date 现查」，双锚硬矛盾——①信 10:24:30 已达本席（hook 现戳）②本席 date 现查 10:25:39——信体不可能在落款前 9 分钟已存在。定性=落款凭体感造值（「3x 尾段」指纹；Z/+8 自洽=造值自洽非现查实证；同 FSD 10-06 耗时推算变体族）。CTO 线三案在录（10-08 UTC 换算错+本日指令单 8712 对象失误+本日落款倒挂）——**勘修窗 14:00 同频提醒候带**（纪律面意识项非阻断项）。已 SendMessage 回勘，候 CTO 即认。
