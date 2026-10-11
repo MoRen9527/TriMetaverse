@@ -262,3 +262,12 @@
 - **栏 C 值席派工**：CTO 通道自裁本机无 R-HY key（publickey 拒实锚）→按 COO 批文走值席通道——BOD 10:12 tmux 直派 m-duty-cos（ESC 清框+三发 Enter·「esc to interrupt」工作态验证提交），读 @21efe249 指令单执行 R-HY 掩形三键（len/tail4/sha8·env 全捕不预设），毕后读数回 CTO 对表本机指纹（len64/e075/d50a0760）出断点定向。D-27 v2 直派已同步 COO（msg 2f578a90）+CTO 派工信（msg b57186f9）。
 - **勘修窗接令回执（10:12 CTO·收讫）**：主刀位接手；窗前预研三件草案（崩溃 handler 注入点/完成链断裂修复面+FSD 方案 scope 原文/F-3 落点+单测基线）**零代码写面守约**（改动全落 14:00 窗内·预研=读码+草案落树）；工作区现势申报：TriMLC dev 顶 d7693c6+未跟踪 scripts/digest-inbox.mjs（非本席面不动不删·施工 add 走明确路径——互踩族防线自用）。栏 C 读数候收中。
 - **COO 合规核呈报（10:13·收讫落卷 @47838b89）**：勘修窗排窗合规核过（D-23「工作日 14:00-18:00 禁排」今日周日不适用·窗族令 §二对轨同款）；本席原深夜段建议被日间方案取代如实记卷+裁据更优认收（21:00 拍双语义天然验收）。今晚节律四拍全在册：18:00 预派拍→21:00 绩效（重启存活+修复验收双语义）→23:10 迁移。
+
+## §48 节拍投递 Option A 裁决收讫+三问实勘答毕（2026-10-11 10:2x）
+
+- **CEO 10:15 裁决**：投递提醒挪 daemon 侧方案选 **A 捎带+兜底**（daemon 写信箱+钩子捎带为主+低频兜底）。三问随令作答：
+- **Q1（宿主如何贴上下文）**：Claude Code hooks 机制——宿主启动读 settings.json（用户级/项目级/local 三层合并）；每轮用户提交消息，宿主先 spawn UserPromptSubmit 匹配的 hook 命令（本机两条=date+node notify-inject.cjs），stdin 喂 JSON（session_id/transcript_path/prompt），**stdout 非空即被宿主拼接进本轮发往模型的上下文**（UserPromptSubmit 事件契约=stdout as context）——每轮「Today's date is …」注入即活证据。宿主闭源看不到源码行，行为契约+实证双锚。
+- **Q2（自建信箱 vs SendMessage）**：载体（磁盘 JSON vs 宿主进程消息/云中转）；写方（任何进程 vs 仅 Claude Code 会话）；时效（等下轮交互捎带 vs 即时推送+唤醒）；回执（字段靠自觉·2158 积压实证 vs 机制内建）；跨机（文件天然跨机 vs 外部 daemon 不可发）；持久（不怕会话死 vs 绑会话生命周期）；卫生（自管 vs 宿主管）。**互补非替代**：daemon 非 Claude Code 会话发不了 SendMessage→daemon→BOD 线必须走信箱+钩子；会话间优先 SendMessage。
+- **Q3（sg 钩子支持性）**：实勘 sg 三级 settings（ssh cat）——项目级 `{}` 零 hooks/fleet 用户级仅 env 零 hooks/local 仅 permissions 零 hooks→**「没设置」非「不支持」**（同一 Claude Code 程序，hook=应用级功能与 tmux 终端形态无关）。sg 现役装的是 notify-poller.sh 轮询器（fleet crontab 每分钟读 TriMC **outbox**→tmux send-keys 直打 m-duty-cos 框+双 Enter）——**选型根因=形态适配非遗忘**：duty 席可能数小时无人交互，钩子捎带（被动等下轮）会饿死；poller 的 send-keys=模拟用户输入，同时解决「送达+触发回合」两件事。两面各选合自身交互节奏的形态：本机 BOD 高频交互→捎带够用；sg duty 低频待命→主动推必需。
+- **⚠ 操作瑕疵申报**：上述实勘 `cat` 未滤值面，sg fleet 用户级 settings 的 API key/token 值面回显进会话链。定性=操作瑕疵非安全事故（token 本躺 CEO 本机 settings.json·transcript 同在 CEO 本机·同盘同权限增量≈零），按 2026-10-02 channel.cmd 案前例不提前轮换；教训=跨机 cat 配置文件一律先 sed 掩形（值面字段禁进打印路径纪律跨机面同样适用）。
+- **Option A 落地五件**（任务书候落 COS 链排工）：①bod-tick-runner.mjs 落盘段后加写信箱段（~10 行）②seats.json board 条目 notifyTarget 对齐（现役信写 target_seat='bod' vs 钩子推导 seatFilter='board' 名对不上=BOD 从未收到信箱信的根因·2158 积压成分之一）③本会话小时级兜底 cron（读未读转报·防长空闲漏信）④现役看拍 cron 74b83c49 prompt 内 tick-log 文件名形态勘正（YYYYMMDD→YYYY-MM-DD）⑤信箱 2158 未读积压卫生（read 机制修复+清库/归档）候 COS 排。
