@@ -306,3 +306,12 @@
 - COS 三件基线收编（勘修窗提前/任务书 8088337f 全件已读·merge 收编推平 3d75a69e/今晚三拍）。
 - **件5 排窗=14:00-15:30 段**：硬锚=件2 名址裁定+FSD 随卷历史信处置建议到位后启（估 12:30-13:00 件2 毕·14:00 开工错峰）；FSD 顺延则联动顺延不抢跑。施工边界自律：只动 notify-mailbox.json（备份先行+归档守恒断言 2158 对账）+归档件，禁触 runner（FSD 领地）与 8713/勘修窗（CTO 领地），零重启面。毕报走 BOD→COO 链。
 - 领地核对：件5（mailbox json）×勘修窗（src/+dist+重启）×Option A（runner scripts/）三面 file 零交叉✓——三线并行拓扑干净。BOD 零回复（COS 有明确联动条件自转）。
+
+## §54 Option A 四门全闭·捎带链 LIVE 首航（2026-10-11 12:1x）
+
+- **FSD 三件全毕**（毕报卷 trees/1011-nightly-window/fsd-optiona-build-report-20261011.md·commit b41230e2→e7289a26/33fcf929·12:07 拍实弹验收）：门1 PASS（信箱首信十键值面）/门2 PASS（「本地 13 席」文案·m-fsd 入册）/门4 PASS（FSD 面零重启·11:51 一次重启断档有主=CTO 勘修窗并行动作）/**门3 自然验收当场闭门**——BOD 本轮交互 hook 注入原文实锚「[M-SG NOTIFY] 节拍 2026-10-11 12:07:05」：daemon runner 写信箱→钩子读→注入 BOD 上下文**全链首次 LIVE**。
+- **实勘勘正两项（FSD 勘·BOD 认领）**：①runner 真身=**TMV 仓 scripts/fade/bod-tick-runner.mjs**——§51 任务书写 TriMLC/scripts/ 系 BOD 凭印象笔误（FSD 以 8713 store job command 实勘为对·施工在 TMV 仓·TriMLC 仓零触碰=CTO 并行窗天然安全）；②件2 甲路线落地（target_seat='board' 单点字符串）——依据=seats.json 头部「派生产物勿手编」→乙路线超 scope；主树 'bod' 行为零变化。
+- **兜底 cron 防爆修版**：4f7a746d 删→**99885773 v2**（单轮上限 5 封+received_at 最新优先+余量注记）——隐患=FSD 毕报暴露 552 封 bod 历史未读会全量转报爆屏；v1 无上限设计缺陷当场修。
+- **历史信现势基线**（FSD 实勘）：2184 封/未读 2183/bod 未读 552（旧积压）——已同步 COS 作件5 归档守恒断言基线（14:00-15:30 照排·硬锚已满足）。
+- **候办注记认收**：BOD 未来回主树会话（钩子 cwd 推导硬编码 'bod'）将收不到 board 信——候钩子层 bod→board 别名改造（非本件 scope·随卷留痕）。
+- 双信回执：FSD a4038a09（四门确认+笔误认领）/COS 3d935e9f（件5 硬锚+新基线）。
