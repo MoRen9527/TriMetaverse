@@ -1372,3 +1372,11 @@
   - 1551b313 docs(cto): 终裁卷§五.6勘读段落卷(重落·原笔被并行值席窗吞·写后即commit锁笔)——hub-silent-detect「卡死」定性撤回=进行时误判(01:45拍正常起轮·01:55结算state=failed+next滚02:00Z·无丢拍·跳槽=next()结算语义)·真问题收窄=运行质量劣化观察项(贴600s线·timeout率26%·撤回立项)·勘修窗改两案并勘(+43480死因源码面:TriMLC零全局崩溃handler独立崩溃向成立·根治包dist在役)·三重同族坑+增量笔被吞四教训并档
   - 5139b08b docs(cfo): W41 日报 10-11 09:30 锚跳过——电源门未过（BatteryStatus=1·73%）锚协议记档；daemon 观测腿照跑（首滚 32% 信转引注未复验）；周日门不适用
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:20 +08：自上次进度提交 e11e3d0f 后新增 6 条 commit：
+  - 7fc21946 merge: 收编并行笔（值席落盘防覆盖）
+  - c90c9255 docs(coo): 勘修窗窗前预研增量落卷——43480 死因最强机制候选=Promise.race 滞后 reject→unhandledRejection（rejection 传播面=方案未覆盖缺口）；修复包草案三件定稿全最小面（件A 崩溃 handler/件B race guarded 一行级/件C F-3 enabled ?? true）·14 例基线为准·草案落树后 14:00 窗内施工；FSD 10-07 自愈卷复用+spawn error 嫌疑勘伪
+  - 31275a02 docs(columnc): 栏C勘读回卷——R-HY TriRMC token 指纹三路掩形(env TRIRMC_INTERNAL_TOKEN 64/78a1/38731fd9+TRIMODEL 双键同源互证+unit 直行/env 文件不在;端口现势勘正 8710=LG-066 后·8712 零监听;vs 本机基准三键全异=矩阵③向候 CTO 裁;零值出机零写面零硬闯) @m-duty-cos
+  - 47838b89 docs(coo): 勘修窗 BOD 排窗落定+栏 C 值席段已派——修复窗今天 14:00-16:00 硬锚 16:00（BOD 裁·21:00 绩效拍转修复后首验点·门禁升 executor 滚拍断言·D-23 周日禁排区不适用已核·本席深夜段建议被日间方案取代如实记）；栏 C BOD 10:12 tmux 直派 m-duty-cos 执行中
+  - 9f44cbb5 merge: 收编并行笔（值席落盘防覆盖）
+  - a495c4ba docs(coo): 栏 C 通道自裁定谳+勘修窗提案落卷——直连 R-HY Permission denied→值席通道·指令单 21efe249 候派值席拾取；勘修窗两案修复窗提案 21efe249 呈 BOD 排窗·本席窗位建议=避开今晚 21:00/23:10 两验证拍·候选明晨 0-9 GLM 最优段或今晚迁移毕后深夜段
+- registry：v2.1；今日 registry 提交无变化
