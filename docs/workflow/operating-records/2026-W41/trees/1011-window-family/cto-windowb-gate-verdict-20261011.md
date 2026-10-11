@@ -46,6 +46,11 @@
 3. **watchdog 形管理面脱钩**：watchdog revive 走直接跑 channel.cmd（非 schtasks /run——任务 LastRunTime 停 09:19:48 铁证）→进程活着而任务态 Ready，**/end 管理面对 watchdog 形进程打空**——§三①「/end 不可靠」变体+1，并族知情。
 4. job① 附加键超 CPO schema v1 字段表（fiveh_pct/fiveh_reset/weekly_reset/plan_level/fiveh_watch）——候 CPO v2 收编或裁剪（锚⑤机扫不破坏·FSD §五.5 同判）；model=glm-coding-plan 语义候 CPO 确认（§五.6 同判）——两件候 CPO 面非门项。
 5. 今晚验证拍照 BOD/COO 知情：21:00 绩效 job=重启后首验点（三查门覆盖）+23:10 周平面迁移旁证。
+6. **【窗后勘读段产出·含一误判即认即勘·10:00:05+08 date 现查】hub-silent-detect「state 卡死」定性撤回+运行质量观察项立项**：
+   - **原判作废**：本席 01:49:41Z 快照判「state 卡 running+next_run 停 01:45 到期不执行=卡死」——**进行时误判**。01:45:00Z 拍已正常起新一轮（state=running=正在进行时标记·600s 超时窗跑到一半·结算 log 行 race 结束才写=进行时 log 面零行）；01:55:02Z 结算实证=23694 timeout 落行·state=failed·next_run=02:00Z 正常滚动——**无卡死无丢拍**。「01:30 槽跳过」系 timeout 结算后 next() 自结算时刻起算下一匹配的设计语义（TriMLC timer.ts L283-287），非拍丢失。
+   - **真问题收窄=运行质量劣化观察项（非缺陷·撤回立项）**：command=`node scripts/fade/hub-silent-detect.mjs` 每轮 550-787s 贴 600s timeout 线·timeout 率 199/764≈26%·每轮吞下槽位致检测延迟 10-15min——候性能勘（脚本慢因+timeout 预算），观察项非窗件。
+   - **勘修窗三案并单改两案并勘**：executor 停摆家族+43480 死因（hub-silent-detect 项移出）。43480 死因源码面新增支撑：**TriMLC 零全局崩溃 handler**（src/index.ts+src/daemon/ uncaughtException/unhandledRejection 零命中=任何异步未捕获异常即 node 默认静默 crash）——BOD 三向中「独立崩溃」向源码面成立。根治包 d38a3eae（sweepStaleRunning 运行期 stale 对账）经 dist/cron/timer.js 实勘**在役**（真 stale 有兜底）。
+   - **教训并档（三重同族坑一击+增量笔被吞）**：①log 零行双向不可定谳（10-09 条）②单时点进程缺席≠任务死（进行时轮=周期任务间隙正常形）③**源码先读后定性**（本席先查库后读码序倒置——正序=state 机语义在先再判读快照）④本节原增量笔（09:52 前后）落盘后被并行值席「落盘防覆盖」窗回退吞没（工作区回退+commit 空·git HEAD 从未含之·本席验证亦假阴性——grep「五.6」命中的是 L47 原有引用非增量段），未提交工作区防护最薄档再实证：**写后即 commit 锁笔纪律重申，联合工作区写前先报值席知会**。
 
 ## 六、使用依据
 
