@@ -1490,3 +1490,7 @@
   - 82695b73 merge: 收编并行笔（sg-server·watcher daily-progress 巡检兜底·21:2x 窗）
   - 1970d3bb docs(cos): lg068-perf-scoring-resume 销账——CHO 21:19知会「条件已达」复活链正形·LG-071亲验复核销·锚三层=21:00首滚三方闭环sqlite值面亲验(21:06:55 ok+next 10-18)+双语义两面亲验(机器侧uptime三探同锚11:51零重置+crash零基线/业务侧CHO卷dc48aa2b本体亲读13席各100三源读数)+W40补结算c1f85b89卷内§六亲读·复活链随销载明=每周对表自查继续在册(10-18校准输入已入CHO卷)+W40-001改进②通道不随销消失(W41无复发W42第二复核后收束)·open 7→6
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:40 +08：自上次进度提交 447ff9ea 后新增 2 条 commit：
+  - d8cb7457 merge: 收编并行笔（值席落盘防覆盖）
+  - 3cdac54f docs(coo): 终验窗毕+21:00 三重拍+绩效首跑段——COS 终验毕报收编（五 PASS+卡4 跳过=对象 A 验收通过·19:10:27 落卷·毕报链 COS→BOD→CEO 不代转）+21:00 三重拍读数全绿（uptime 33258 连续/crash.log 零基线/hub-silent 21:00 拍贴线 396s 自愈=同签名第二例）+performance-sunday-settle 首跑落账（21:06:55·434ms·延迟 6.9min 系排队·LOG sent ok·STATE notified 三钉②兑现·next 滚 10-18）+CHO 即办自裁认账+CFO 18:00 锚收编（晚窗三窗预算零约束）+COS 静默第三例照先例不唤醒
+- registry：v2.1；今日 registry 提交无变化
