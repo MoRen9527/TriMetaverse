@@ -246,3 +246,10 @@
 - **卷外 pid 更替归因采认**：09:32:11 DOWN→revive=**watchdog 自愈按设计动作**（watchdog.log 铁证·98 秒窗口零拍丢业务零损害）——与 FSD 09:17-09:20 人工修复链两事件并行不悖，CTO 勘因清晰。
 - **BOD 签认**：窗族令栏 A+栏 B 窗收口正式闭合（签认载体=本笔·COO 收口卷 ebc4d10a+CTO 终裁卷 5dfed913 双锚）；毕报链 FSD→CTO+COO→窗收口 BOD 全环走毕。栏 C 候 CTO 报备照令。今晚 21:00 绩效首验点+23:10 迁移 BOD 盯。
 - **pid 读数更正收讫（09:52 COO 补充知情）**：FSD 卷「pid 43480」读数系采集时点有效现已过时——43480 于 09:32:11 死亡（**死因未锚·COO 如实挂知情**）→watchdog 98s 自愈（09:32:17 self-check OK→09:37:20 recovered·零拍丢）→现役进程=watchdog 起新实例 jobs 照常。收口卷更新 **@440b19b1**（bare 顶 6779708a）。BOD 09:54 知会 CTO 死因候并入族线勘窗清单（三向：收工段操作波及/家族另一面/独立崩溃·防漏项）。
+
+## §46 推欠账清偿+账面核销+族线并单（09:5x 值班·GitHub 恢复窗口实锚）
+
+- **cron-muh6shv0 核销采认（09:5x COS 回执）**：open→closed·销账笔 11d2cc30·三层平顶 6779708a（sg=GitHub=本地 ls-remote 对表）·三锚齐（COO 收口卷+FSD 卷+COS 09:46:40 活体现探 uptime 865s 倒推 09:32:15=watchdog 代进程·与 BOD 09:31 读数 682s=43480 代两代进程时间线互证）。**大表 open 13→12**。过程注记：COS v1 销账写盘未即 commit 被并行写覆盖→v2 写后即 commit 锁笔（互踩族教训自用）。
+- **推欠账清偿（GitHub 443 恢复窗口）**：①TriMetaverse wt/board 线（§1-§45 全量）**force-with-lease 推达 GitHub 顶 c7cbb488**（ls-remote 对表✓）——推送勘验过程：远端 wt/board=10-05 旧快照（GitHub 停 #380/sg 停 #405 两点分叉），抽验两笔（#380→dev 524c69cf+cron-liveness 树、#405→dev b4f50b61/946746cc LG-064 闭案卷）坐实旧线内容以收口重落形态在 dev，本地线=正统现行线；②TriCompany 零欠账实锚（本地 dev=origin/dev=b4fe919 平）。
+- **sg bare wt/board 陈旧快照挂账（不动）**：force 推 sg-server 被**服务器级拒绝 non-fast-forward=sg bare denyNonFastForwards=true 形态实锚**（与 GitHub 行为分叉·双通道行为差异入档）；sg 面消费面=dev 顶非 wt/board 分支，5 天零消费事故——旧快照（43797f27·#405）挂账候有 root 窗时 server 侧调配置或 delete+repush，不急。
+- **族线并单裁明认收（09:53 CTO 回执）**：三案并勘=executor 停摆家族三形态+43480 死因（三向勘读路径收全）+hub-silent per-job state 卡 running 新发现（18h 贴线跑病史）——疑同根=daemon 任务生命周期状态机缺陷族；窗前零写面勘读段先行，修复窗提案（PATCH/重启链/代码修三选一）候排窗。BOD 认收，提案到再排窗。
