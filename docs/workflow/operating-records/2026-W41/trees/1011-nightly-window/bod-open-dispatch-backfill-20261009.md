@@ -322,3 +322,12 @@
 - **重复注入观察点**：12:16 轮 hook 再注入同封 12:07 信——机理=notify-inject.cjs 只读不落 read，兜底 cron 首跑 13:11 前无人落 read→每轮交互重复注入 500 字符拍报（上下文膨胀面）。**止血**：BOD 手动落 read=true（node load→改→dump 纪律·marked=1·postcheck board 未读=0·写回复读断言过）——13:11 起兜底 cron 接管 read 落位，本观察点销。
 - **架构注记候办**（钩子层候改）：notify-inject.cjs 注入后不落 read 是设计缺口——每轮重复注入直到外部落 read；候钩子层加「注入即标 delivered/read」（与主树别名 bod→board 并单候改造窗）。
 - 信箱现势：total=2186（FSD 基线 2184+2 席间信）；board 名未读=0；bod 名未读 552（旧积压·候件5）。
+
+## §56 勘修窗毕报签认·收口（2026-10-11 12:4x）
+
+- **CTO 勘修窗全工序毕**（毕报卷 @5cbfe118·trees/1011-window-family/cto-repair-window-report-20261011.md·70 行·落款 12:40:09 时序自洽）——BOD 抽验过：三 commit 表（件A fc44904 崩溃 handler/件B cc52c89 race guarded=43480 机制候选根治/件C baf800d F-3 enabled ?? true store 层归一）+668 测试读数（656+12 新例·663 pass/5 fail 同集合不增不减）+锚A 三断言（uptime=1@11:51:01/pid 41536 对表/watchdog 零误 revive 旁证）+executor 连续两拍 ok（12:07+12:38）+crash.log 零基线——**信面卷面逐项对上，签认成立**。
+- 亮点存档：①F-3 HTTP 路径活体锚=故意缺 enabled 回读 true（S6 门禁设计佳）②操作勘误如实记档（/shutdown 正身路径 401≠存在鉴权先拦·schtasks MSYS 坑）③token 全程 shell 变量零回显。
+- **残余五项转记**（CTO 卷 §八·候窗性质不另派）：TriMLC origin/dev 追平（本地领先 6 笔候推）/hub-silent 26% 贴线性能另窗/既有 5 fail 归因另勘/8711 三件回流评估/两惯例制度化提请 CAO。
+- **21:00 绩效拍=修复后首验点**双语义预案在卷 §九——BOD 21:00 值守验证。
+- **捎带链第二封实锚**：12:39 拍信自动注入本席上下文（12:37 拍→12:39 入箱→12:40 轮捎带）——read 落位生效（12:07 信零重复注入）+链路持续工作双实证。
+- 签认直达通知 CTO+COO 窗收口知会随发。
