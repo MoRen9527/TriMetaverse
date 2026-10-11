@@ -8,4 +8,6 @@
 
 **识别信号**：确认对象与令文主语不同名（TriMMC≠TriRMC≠TriMLC≠TriRLC 四 daemon 名近亲）；端口号跨机面复用（8710/8712 两面各有语义，sg 面「8712→8710」与河源面「8712→8710」方向还相同=完美混淆温床）；「同向强化」结论找不到共同对象时的舒服感=红旗；**自家稿面出现与令文对象矛盾的既有真源字样=最响警报**。
 
+**三犯（2026-10-11 栏 C 指令单·出单者亦犯）**：本席出 R-HY token 勘读指令单写「R-HY TriRMC 8712」——出单前未对 daemon-plane-locality-matrix 权威端口读数（10-06 21:3x 勘正在册：R-HY TriRMC=8710）复核，凭对话语境「8712」顺手落单=踩条实证。值席红线 4（daemon 名逐字断言+多 daemon 全报）拦下并报出现势 8710，防线有效。**教训升级：对象断言不只约束「接令确认」——出指令单/写报备/起草令文这些「发令侧」动作同样要对权威读数条复核，出单者不豁免**（我发的话会成为别人的执行对象，发令侧错位比接收侧更毒）。
+
 **同族**：exec-order-time-crosscheck-discipline（时点维度交叉核对）——本条=对象维度，两条合用=接令确认双查。关联：trirmc-independent-repo-topology/m-sg-r-hy-server-naming/trimmc-mlc-addjob-divergence/dual-controller-ports-m-mlc-r-rlc（正身位真源）。

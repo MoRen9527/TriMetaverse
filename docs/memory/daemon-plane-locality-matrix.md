@@ -15,4 +15,6 @@
 
 **硬规则**：任何 daemon 状态叙述（节拍探针/窗令对象/复活稿/四口终态表）**先活体现探正身机位**（healthz 实探+监听面实勘），禁由文档/记忆/他人叙述推定机位。四 daemon 名近亲+端口跨机复用（8710/8711/8712 都曾在多机出现不同语义）=完美混淆温床——对象断言三问（object-assertion-before-confirm 条）之上再加「机位活体验」一层。
 
+**store 位维度同理（2026-10-11 栏 B 门禁实锚增补）**：本机双 daemon **双 store 分立**——8711 TriRLC 现役进程无 DATA_DIR→代码默认 `%LOCALAPPDATA%\trilc\cron.db`；8713 TriMLC 启动链 channel.cmd 显式 `TRILC_DATA_DIR=trilc-channel`→`%LOCALAPPDATA%\trilc-channel\cron.db`。**探库先对 DATA_DIR（活体 cmdline/启动链脚本）禁按路径直觉**——CTO 门禁复核首发探成 8711 库得 jobCount=0 假矛盾（真身 13 job 在 trilc-channel 库），被矛盾信号拦下即纠；若非零 job 库（如只有旧 job）矛盾会更隐蔽。判 store 正身链：daemon cmdline（CIM）→启动脚本 env 行→库文件 jobCount 合理性三步。
+
 **关联**：object-assertion-before-confirm（对象三问）/dual-controller-ports-m-mlc-r-rlc（端口定性）/m-sg-r-hy-server-naming（机位正名）/trirmc-independent-repo-topology（TriRMC 独立仓）。
