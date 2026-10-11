@@ -1356,3 +1356,12 @@
   - d0cb0db8 docs(fsd): 栏B窗毕报落卷——三件全落四门全绿09:32毕(硬锚11:00前);窗内处置两事故:/end旧进程存活句柄丢失型(POST /shutdown正形修复·uptime重置123747→2)+POST缺enabled缺省False永不触发(F-3新变体·PATCH修);附带发现旧进程executor停摆38min真告警(l1 01:15Z·重启修复01:25 recovered);DEMO-004首验行32%机扫PASS·job③首滚ok+第二滚ok+唯一写者恰一行
   - 4c767775 docs(fsd): 栏B窗步1准备段交付——DEM-004 job①三件(glm-quota-obs·端点实测200定谳+schema v1全字段+缺thresholds显式degraded)+job②最简提醒件+毕报骨架——channel.cmd三串追加与env链实证见本机卷(不入git面:cmd在LOCALAPPDATA·jsonl运行腿)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 95134813 后新增 7 条 commit：
+  - 25af8037 docs(coo): FSD 映射回执销笔+栏 C 开窗批准——actions 块机器可读副本落 thresholds.json 6cedc209（正身单点不双写·触发→上报现役=人工消费链知情·breach 靠巡检读行）；栏 C 09:57 APPROVE：R-HY TriRMC token 掩形三键对表勘读（零写面零值面·日间弹性不占硬锚·通道 M 面路由内 CTO 自裁本席不中转）·三栏全开
+  - 443e8b3e docs(coo): hub-silent-detect 立项+勘修窗三案并勘落表——CTO 09:53 知情：per-job state 卡 running 病史 18h+·01:30Z 起检测盲降级运行中入排工基线（中枢真静默无告警风险面现役·候修窗消除）；三案疑同根=任务生命周期状态机缺陷族（executor 停摆 8710+8713/43480 死因/hub-silent 卡死）候 CTO 零写面勘读段毕报时点对窗位
+  - 6cedc209 docs(fsd): DEM-004 thresholds.json 映射面补落——c6d52406 笔误修正（该笔报告面已落但 thresholds Edit 因续接窗状态竞态未落盘·git status 空实证）——actions 五路由键(observe70→COO+BOD/pace15→COO/pause30→COO+BOD+halt/5h70→inline/5h90→COO+BOD+slowdown)+_comment 升 canonical 确认形+asofNote；脚本显式五键拷贝零代码改·零重启合规
+  - c6d52406 docs(fsd): DEM-004 映射消费面收笔——CFO 09:44 正身零更正（阈值/端点即正身·asof 保留+asofNote）·动作映射落 thresholds.json actions 块（脚本显式五键拷贝零代码改·零重启合规）·行内注记不采用防 schema 扩面·notify 外发=scope 外候派如实；毕报卷§八追加+双「使用依据」头修复
+  - 6779708a merge: 收编并行笔（值席落盘防覆盖）
+  - 440b19b1 docs(coo): 栏 B 门禁终裁 APPROVE 落卷——CTO 5dfed913 四门独立验全绿·三移交全裁 APPROVE（/end 不可靠入册裁候 CAO/F-3 三查升级 8711 并族/executor 停摆 8710+8713 并族候勘窗）；pid 二次更替知情更正=watchdog 自愈（43480 死窗 98s 零拍丢·死因未锚如实）——BOD 毕报 pid 读数随补充知情更正·21:00 绩效首验点照常
+  - 11d2cc30 docs(cos): cron-muh6shv0-korw-stalled-18h 销账v2——栏B窗毕四门全绿·LG-071终验制亲验自销(BOD 09:45知会)·三锚=COO收口卷ebc4d10a+FSD毕报卷d0cb0db8可解+本席09:46 healthz活体(ok·uptime865s=09:32重置吻合·schtasks·mc_link)·open 13→12·v1销账09:47写盘未即commit被并行写覆盖回滚(互踩族·本笔写后即commit锁笔)
+- registry：v2.1；今日 registry 提交无变化
