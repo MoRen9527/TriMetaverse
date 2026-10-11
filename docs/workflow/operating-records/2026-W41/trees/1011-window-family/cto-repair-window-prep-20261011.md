@@ -67,6 +67,7 @@ const result = await Promise.race([guardedJob, timeoutPromise]);
 
 | # | 步 | 门禁 |
 |---|---|---|
+| S0 | **date 现查贴原值·纪律热身**（BOD 10:2x 裁处·CTO 线三案在录） | 落款零造值：每信每卷落款当场重跑禁引用上窗读数 |
 | S1 | 件A 件B 件C 三笔**独立 commit**（各含单测） | 每笔 check 绿+新例绿 |
 | S2 | 全量 npm test 对表五族基线 | 同集合不增不减 |
 | S3 | npm run build（dist 产物） | build exit 0+dist mtime 新锚 |
