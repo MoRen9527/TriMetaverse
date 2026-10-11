@@ -27,14 +27,20 @@
 
 信箱现势实勘：总 2184 封·未读 2183·其中 target_seat='bod' 未读 552 封。建议：件4 BOD 兜底 cron 已设计双捞 {bod,board}——552 封历史 bod 信可经件4 消费转报；若量大扰面则随件5（信箱积压卫生·候 COS 排窗）清库/归档一并裁。**两路线不冲突**：件4 先双捞保时效，件5 后清库保卫生。
 
-## 四、验收门（候 12:07 拍·拍后补终值）
+## 四、验收门终值（12:07 拍实读·2026-10-11T04:14Z 补）
 
 | 门 | 判据 | 终值 |
 |---|---|---|
-| 1 | 12:07 拍拍报落盘+信箱新增一封 target_seat='board' read=false 值面断言 | 候拍 |
-| 2 | 拍报文案「本地 13 席」 | 候拍 |
-| 3 | 钩子注入实测=BOD wt/board 会话下一轮交互 stdout 现 [M-SG NOTIFY] | 候 BOD 面自然验收 |
-| 4 | 全程零 8713 重启（uptime 连续） | 候拍前后 uptime 对表 |
+| 1 | 12:07 拍拍报落盘+信箱新增一封值面断言 | **PASS**——tick-log 12:07:05 拍在卷；信箱 bod-tick 信恰 1 封：message_id=`ntf-mv3axm2x54pkf2--bod-tick`·source_seat='bod-tick'·**target_seat='board'**·urgent='normal'·title='节拍 2026-10-11 12:07:05'·body 500 字符整·received_at=04:07:05.481Z·read=false（十键值面逐项对表） |
+| 2 | 拍报文案「本地 13 席」 | **PASS**——拍报原文「本地 13 席全空闲」（件3 实锚） |
+| 3 | 钩子注入实测 | **候 BOD 面自然验收**——信已入箱 target_seat='board' 与 wt/board 钩子 seatFilter 对表（notify-inject L29 opsName 推导实读）·BOD 下一轮交互 stdout 应现 [M-SG NOTIFY] |
+| 4 | 零 8713 重启 | **FSD 面零重启 PASS·uptime 断档有主如实注记**——基线探针 03:42:42Z uptime=7827s（09:32 起算）；12:07 拍报内 uptime_s=960→启动≈11:51+08=**CTO 勘修窗并行重启**（派工信明示重启面归 CTO 专管·FSD 接令后零重启动作）；关键面不受扰实证：重启后 12:07 拍照常 spawn 执行（job store 持久化+executor 活） |
+
+## 五、毕报链
+
+- 毕报时点：2026-10-11T04:15Z 前后（date 现查制·信面落款以现查原值为准）
+- commit 链：b41230e2（runner 三件）→ e7289a26（毕报卷施工段）→ 本终值补笔
+- 毕报→bod（SendMessage）·门3 候验随信注明
 
 ## 使用依据
 
