@@ -222,7 +222,9 @@ async function main() {
     let urgent = "normal";
     if (a.level === "duty-escalate") {
       targets = ["bod"];
-      title = `[silent-detect] 值席静默直报：中枢 m-cos 已静默 ${a.silentMin}min`;
+      // 件③(10-12夜调参): 插条目 id 真名 — 原硬编码「中枢 m-cos」对任何 duty-escalate
+      // 节点都错（变体⑤实锚: 条目=duty-cos 时标题张冠李戴）。信号源如实在 body。
+      title = `[silent-detect] 值席静默直报：${a.id} 已静默 ${a.silentMin}min`;
       urgent = "urgent";
     } else if (a.level === "idle-escalate") {
       targets = ["m-cos"];
