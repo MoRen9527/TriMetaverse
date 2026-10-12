@@ -132,3 +132,6 @@
   - 5a2794d6 merge: 收编并行笔（值席落盘防覆盖）
   - 762a89c4 docs(coo): 晚间加段令四席毕报汇总卷（BOD ①·冻结前落盘）——CAO D-47 入册 @a54ba43/FSD hub-silent 调参三件/CTO 盖章主稿两批（63f2636c8·0c369adc7 本席 IN-BARE 双验风险解除）/CPO 产品段宣告面+全推核验+②斟酌不另发知会·冻结预期窗 ~23:15-25·复活后首动作引本卷呈报
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 eba0fed3 后新增 1 条 commit：
+  - b5f8ea61 docs(audit): 维度4主审材料·发布拷贝漂移清单——归一化比对法(裸 hash 22/22 DIFF 系宿主形制包装·归一后 15/22 同体);真漂移=双形重复文件族 4 件(claude 小写旧代残留×2+gh 全同复本×2)+宿主方言族设计内(tools/BOM/user-invocable);源-发布时效零漏发布信号;只审不改恪守 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
