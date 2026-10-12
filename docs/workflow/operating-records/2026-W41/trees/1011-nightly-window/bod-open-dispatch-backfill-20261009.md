@@ -723,3 +723,10 @@
 - **活体现探（12:49·禁推演原则）**：①8713 healthz 活（ok=true·uptime 12262s 连续·serverTime 与挂钟一致=当下无冻结·pwr 98% ac=true gate=none）；②**cron 面三异常并现**：consecutiveFailures=1+cron_muo2mj6s st=error；**03:30Z（11:30 本地）毫秒级补跑批后大批 job next 停过点不滚**（mv0bvbzc 拍报 job last=03:07Z 后 next=03:37Z 停滞；muh6shv0/muk3951d/mumsuxup/mv3506jr 等 next 停 03:31-04:00Z 段）；readFailures=3 新信号；③例外活体=cron_muxxy5w7 正常滚动（last=04:47Z 刚跑·next=05:00Z 未来）；④jobCount=13（较上午 10→+3 新 job 现势注记）。
 - **电源事件旁证（12:50 取证）**：近 3h 零睡眠事件（无 42/107 系）——**今晨同型睡眠冻结排除**，系统全程醒着。异常收窄=8713 cron 调度器内部缺陷形态（勘修三件现役版上的新表现·候选关联：件B race 吸收漏网/补跑批阻塞滚动/新 job 交互——定性归 CTO）。
 - **BOD 处置裁**：①CTO 只读勘验令即发（根因定性归 CTO 面）；②**勘验避让**——12:00-14:00 COO 补课窗在 8713 有 API 活，勘验限只读不动 8713；重启修复候 14:00 窗毕后另裁窗位（或并入今晚 R1 窗前检查段，候 CTO 定性）；③COO 即时同步（其新加 job 可能不入调度风险知情）；④CEO 拍报断供面=BOD 人工转报兜底（本节 healthz 读数即代拍）；⑤hub-silent-detect 等断滚 job 的运营盲区清单候 CTO 勘验随附。
+
+## §108 供电断开急报收账+bod-tick 复活确认+补课批五件落位（2026-10-12·时点=commit 时戳）
+
+- **急报主因（COO 12:59:40 三连探实锚）**：acOnline=false 持续翻转（12:50 true→12:58 false 窗口·percent 97/readFailures=0 非读误读）——风险链=DC 侧睡眠策略未豁免（a 件只管 AC 面）+CEO 离机闲置即入眠门。**BOD 13:00 即转 CEO 物理面**（终端直报插电请求）；CEO 当下在机活跃无即时风险，COO 复探回归断言入毕报，持续 false 超 30 分钟 BOD 再升报。
+- **bod-tick 复活确认（COO 三源旁证）**：healthz cron 投影全绿（cf=0）+channel.log triggered 行活产（12:59 mtime 活跃）=复活实拍成立；**分叉读数如实呈报**——cron.db.json 镜像（12:58 mtime）bod-tick/hub-silent 的 lastRunAtMs/nextRunAtMs=None vs 活体触发活产，镜像滞后/异常清空/§107 异常残余三候选不定谳，归 CTO 勘验窗（只读勘验令 aa99f869 已发，COO 旁证补其弹药库）。
+- **补课批五件落位收账（COO 报）**：activeTrees 8 树挂载毕+需求池空表+大表空表+追加 scoring-w42 账面+m2/runbook 指针件——CEO 12:51 迁移检查令的漏项追加令（c812dca6）已并入执行，14:00 毕报照约候 BOD 验收。
+- **§107 处置不变**：CTO 只读勘验约束在令；COO 补课面勿动 8713；CEO 拍报断供人工兜底持续（12:50 拍已随注入转）。
