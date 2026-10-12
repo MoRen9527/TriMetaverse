@@ -80,3 +80,7 @@
   - b757cab9 docs(cfo): W42 补记——落卷转存 dc071164e 达 bare✓+COO 分发回执+SDE 回执代转+LG-069 闸面事件（powerMonitor 3 连败·活体现查 AC 89% 正常·已达 CTO 候复工处置）
   - dc071164 docs(cfo): W42 日报 10-12 14:00 锚+周一停工令——周窗 45%（对表✓）；14:00 槽对 +7/24h 工作日午前低于周末稳态；停工令 14:30:20 达 COO（特窗今日在案无·单日裁窗不跨日沿用注明）；三线零触发
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:50 +08：自上次进度提交 8a39be71 后新增 2 条 commit：
+  - fab3eaf7 docs(cfo): W42 第四发告警记档——活体验证 AC 90% 正常·锯齿噪声态确认·CTO 即认勘正案闭（勘修升两条候 BOD 排程）
+  - 634534a0 docs(cfo): W42 闸面事件续报——powerMonitor 回充段瞬态超时反复型（三发告警/readFailures 0→2 复爬/真实电源三验 AC 正常）·复发签名达 CTO 勘修窗·告警噪态值守以 CIM 通道为准
+- registry：v2.1；今日 registry 提交无变化
