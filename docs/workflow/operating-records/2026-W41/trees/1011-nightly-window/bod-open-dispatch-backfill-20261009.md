@@ -939,3 +939,12 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 4. **首投误中即勘**：首 POST target=m-duty-cho 被拒 unknown_target_seat（名册回执告知 MVP 名册全域）——即改投值席·对象断言教训（接令先做对象断言）又一实证：**sg duty 席位拓扑与本地席位名册不同构·跨面派工前先勘对端名册**。
 5. **git 面晨后补**：任务书文件+§132-138 卷笔留 wt/board·晨后走 sg bare 直推通道收编（origin 恢复另说）。
 6. 送达确认候值席回信（信箱 target=bod）·明晨复核交付物=audit-report-20261013.md 落 sg 树 duty-audit-agent-roles-20261012/。
+
+## §139 送达链闭环·CHO 起轮实锚（真落款 date 现查 2026-10-12 23:29:08+08:00）
+
+1. **跑道延长**：COO 锚报 23:24（38%·24%/h 较 FSD 120%/h 预估显著放缓·低电段非线性）——冻结窗延至 ~00:40 域·跑道多出 ~1h。BOD 裁：不新派施工活（深夜加派违收工节律·候办均明窗级）·COO 静默维持；跑道内只做收尾两件（git 补推+送达确认）。
+2. **sg bare 补推成功**：board-dispatch-20261012 分支顶=dcfd01a94==本地 HEAD（任务书+§132-138 全过河·23:25:11）——GitHub 腿瘫痪≠sg bare 腿（双 pushurl 拓扑实锚）；**root 属主雷 4 件**（ref+pack×3）chown fleet 归还毕（谁污染谁打扫）。
+3. **outbox 通道定性**：POST accepted=内存队列受理·落盘零痕迹（find 23:15 后新写文件无 notify 状态面·GET 无查询端点）·notify-outbox.json mtime=09-29 十三天陈旧——易失通道非可靠送达面。
+4. **tmux socket 盲区勘误（§138「13 席非 tmux 形态」判断作废）**：13 席全在 **fleet 用户 tmux server**（socket=/tmp/tmux-1001/default·TRIMC_NOTIFY_DUTY_TMUX_SOCK 实锚）——root 身份 tmux list 只见 root socket=探针探错 socket（与「探错机报假缺口」同族·对象断言教训新变体：**socket 位也是对象**）。CHO pane attached·13 会话 9/16 建·sde 10/10 重建。
+5. **CHO 送达三重实锚**：①tmux -l 字面发送+独立 Enter（首试默认 send 吞噬空框·-l 重试进框·queued 回执「Press up to edit queued messages」）；②**CHO 起轮 23:27:47 域**（capture：thinking 45s+↓654 tokens+读 /tmp/audit-letter.json——早于我 23:28:14 直插·动力源=信箱信或值席 COS 转达链·任务已在手）；③直插文本 queued 成补充指令（CHO 现轮毕后可见）。
+6. **责任面自领**：首试 send-keys 非 -l 形态吞噬空框一次（Enter 吞噬坑第 3 次家族实证·-l 字面+独立 Enter=正形两件套）；consumer 弹显通道假设先行未先验 env 门（绕了三步才到 tmux 正形——下次 sg 席位送达先查 TRIMC_NOTIFY_DUTY_* 三 env+fleet socket）。
