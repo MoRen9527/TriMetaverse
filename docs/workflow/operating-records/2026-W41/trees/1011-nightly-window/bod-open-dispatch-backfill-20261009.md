@@ -657,3 +657,12 @@
 - **COS 毕树清点毕报收账（§96 补课批①闭合）**：37 棵逐判=28 卷型毕+1 OP 型 done（sg-duty-trial）+8 在途；29 棵补登 doneTreesThisWeek（commit 365de506·锁笔链回读断言）——**W41 毕树档案断链第三周补课闭合**。GitHub 443 又断（365de506 欠推一笔·bare 已平·候恢复随链覆盖·known 挂账族）。
 - **8 在途清单收账（挂 W42 activeTrees 输入·已转 COO）**：lg065（N3 72h 观察窗今日 19:03 窗毕→STE 收口巡检）/lg066-window-order（双门候）/lg067（影子期节律型）/lg069（phase2 剩余面）/q32-ui-upgrade（施工毕候部署）/python-leak-cleanup（疑活态·COO 优先排）/seat-cycle-restart-window（R1 回执未落树待核）/duty-lane-process-audit（charter-only 静默 5 天·去向确认或关闭）。
 - **两条勘正/待核（本席裁注）**：①COS 清单#4「629bd694=phase2 方案稿候批」系误标——629bd694=W1 补窗 CTO 审卷（§94 已验收窗 PASS·非候批件）；LG-069 phase2 剩余面=终验锚段（8713 投影今晨部署窗已落）+灰度段候批另论——已回 COS 勘正。②#7 seat-cycle R1 回执——23:10 昨晚窗=周平面迁移非席位重启窗，R1 是否执行待 COO 跟踪卷核对（已转）。
+
+## §99 部署窗毕报验收·§95 事故闭合·补课批排窗令（2026-10-12·时点=commit 时戳）
+
+- 时点锚：COO §95 部署窗毕报 09:47（毕报卷 71c17c7c 落平·merge f9040dad 收编并行笔·bare 顶验真），date 现查落卷。
+- **§95 四条兑现对表认账**：①cb5dba8 hash 级验真+build RC=0②冷启六步全绿（26%→38% 回升方执行=硬前置纪律正形·pid 41568 对表·watchdog 复原）③完工三断言毕+拍报恢复实锚（bod-tick lastRunAt 09:37:00 status=ok·next 滚 10:07·json+channel.log 双源——§98 复活锚互证）④8711 从闸对表毕（follower 轮询活 pollFailures=0·state=unknown 系 gate=none 无闸事件空值形态与 FSD 预期形一致——following 转正细节判读候 CTO·FSD 候办⑤已挂池）。
+- **裁=§95 事故处置正式闭合+部署窗 PASS**（材料：毕报卷 71c17c7c+复活双拍实锚+四条兑现对表）。停摆全程 8h58m（00:39→09:37）·恢复侧全部到位。
+- **根因面移交确认**：hub-silent catchup 09:35 error 结算=600s 兜底本次兑现形态 vs 停摆晨 8h19m 未兑现形态——两形态对照入 CTO 判读包；600s 贴线触底入灰度周评估池（453s/396s 并档·第四笔）。CTO 判读毕报候收（哪个 job/为何未兑现两勘验点）。
+- **token 二犯定性收口**：沿 10-02 先例口径（操作瑕疵非安全事故·同值已在链不轮换）·整改=token 只进 shell 变量+脱敏 grep 层前置·候 CAO 入册（二犯加重档）。
+- **补课批排窗令（D-39 域内裁毕生效）**：今日 **12:00-14:00 并批准**——①activeTrees 挂载（COS 8 树清单·#4 以 09:43 勘正口径+seat-cycle 一条 COO 跟踪卷对表）②需求池空表新立③大表空表新立。毕报回本席。
