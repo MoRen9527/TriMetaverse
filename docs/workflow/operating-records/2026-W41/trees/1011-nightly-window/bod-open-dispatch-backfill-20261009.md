@@ -869,3 +869,8 @@
 - **异常③powercfg CLI 异常（BOD 环境·候 CTO 知情）**：/getactivesource 与 -getactivesource 双形式均拒「参数无效」（pwsh 环境）——v8 窗前检查若依赖 powercfg CLI 需备选（**Get-CimInstance Win32_Battery 已实证可用**·建议纳入 v9 替代项）。
 - **物理面定谳**：插电 100% 满电（CIM 独立源+healthz 读数一致）——无断供。
 - **影响面与处置**：值守设施降级（tick 拍/信箱 daemon 注入/LG-069 闸失明）；R1 操盘面不受影响（BOD SendMessage 直发不经 8713）。**候 CEO 请示=是否唤 CTO 提前复工处置 daemon 半瘫**（变更停工令属 CEO 保留权·BOD 不自行唤席）；候 CTO 知情三件=半瘫勘验+506 序列+powercfg 备选。
+
+## §128 §127 勘正条+19:07 拍转报（2026-10-12 19:13 窗）
+
+- **§127 异常①勘正**：18:37 拍非缺失——daemon 版 tick **18:41:31 出**（延迟 4.5min=B 型滞后自愈型·与 13:40 案同签名）。「bod-tick 18:37 拍真缺失」表述勘误；log 那批四 job triggered（trimodel-l2-scan/tree-node-patrol/ledger-watchlist-patrol/hub-silent-detect）=18:41:31 拍非 18:45 拍。daemon 形态收窄=**power 读路径挂（20 连发未恢复·硬伤维持）+调度滞后（触发面确认仍活）**——「半瘫」降格为「power 读单边挂+调度滞后」，勘验归 CTO 不变。
+- **19:07:33 拍转报**：本地 m-ste/m-coo 活跃（2 席·复工迹象观察——候 CEO 答复「是否已唤人」一并定性）；8711 uptime_h=20、四口绿、大表 22/6。LG-069 第三波告警 19:10:14 入（§127 power 读挂段延续·已覆盖）。
