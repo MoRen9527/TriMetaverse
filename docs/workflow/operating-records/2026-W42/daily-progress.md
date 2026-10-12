@@ -104,3 +104,8 @@
   - 56b601f5 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
   - c333ff92 docs(cto): §十三 §127 三件定性——8713 power 挂=间歇自恢复型暂不重启(触发条件挂账)+调度滞后根因勘正=贴线 serial 占用级联滚雪球三连环实锚(bod-tick 25644 拍 600s)+两案解耦(hub-silent 19:15 拍贴线时 power 正常)+506 配对判读口径修正(结算面为主)+v9 纳入 CIM 备选+§115④ 断供归因不成立(恢复后 20 拍 dur 5-7min 常态)+03:30Z 拍 77min=A 型 job 维度复现+8711 staleness 源字段勘误附笔
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:30 +08：自上次进度提交 17240b32 后新增 3 条 commit：
+  - 027b08f2 merge: 收编并行笔（值席落盘防覆盖）
+  - 3fdae420 docs(coo): R1 窗改排知会版预拟落卷（候发稿）——今晚窗不执行+原因供电不稳（BOD 22:26 探 ac=false·窗前提 v8 升格条款不满足）+锁笔维持+新窗候令+断电冻结预期形注记·发否候 BOD 22:45 令面·b5b3bbf5 正稿保持候命
+  - 2fb43b13 docs(fsd): 灰度第五例增量入卷——变体⑤ title 硬编码定谳（L225 字面量不插 a.id·BOD 二选一候选当场钉死）+锚值序列破匀速 .744+模板值⑤犯 40vs53min·零施工只读续勘
+- registry：v2.1；今日 registry 提交无变化
