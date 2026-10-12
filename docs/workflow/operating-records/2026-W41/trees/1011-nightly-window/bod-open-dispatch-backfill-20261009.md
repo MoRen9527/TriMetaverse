@@ -750,3 +750,11 @@
 - **R1 窗前检查加项认**：506/507 扫读+UNATTENDSLEEP 值面补勘两只读项入 v7→v8（转 COO）。
 - **挂账**：l1 告警 debounce 对「冻结+5min 快自愈」零通知形态候 FSD 窗（与 c 件 ssh 超时同窗评估）；DC 侧 standby-timeout-dc=0x0 已读（CTO 卷 §七——拉高非正解，物理供电=正解维持）。
 - **断供面续**：CEO 物理处置在途（13:01 false 96%），13:30 BOD 升报线+COO 13:35 锚 v8 双线盯防不变。
+
+## §111 UNATTENDSLEEP AC 归零闭环+因果链定谳收账（2026-10-12·时点=commit 时戳）
+
+- **收讫（13:15 CTO 执行毕报·5f1b2fda1）**：①补勘实锚=UNATTENDSLEEP AC/DC=0x78（120s）——§七嫌疑定谳转正，**AC 面唯一自主入睡源**；②黄金因果锚：11:19:53 醒（无人输入）→VIDEOIDLE 600s 灭屏+UNATTENDSLEEP 120s=理论入睡 11:31:53≈实锚 11:31:54（**1 秒差**）——今日四大觉同链全可拆；③归零落地+读回 AC=0x00000000（DC=0x78 保持照裁）·SUB_SLEEP 全段与 10:48 基线逐键零漂移。§110 ① 闭环。
+- **PlatformAoAc=0 候裁必要性大降（弹药收账）**：powercfg /a 实锚 S0 低电量待机=本机唯一待机形态（S1/S2/S3 固件不支持）——若禁=系统完全失去睡眠能力含过夜保命面，取舍变硬；SUB_PRESENCE AC 侧全零=AC 面无自适应因素。**BOD 判读：UNATTENDSLEEP AC 归零已堵唯一 AC 自主入睡源，PlatformAoAc=0 大概率无需提请 CEO——候下轮冻结窗观察实绩，若 AC 面冻结绝迹即销项，观察期至 R1 窗后首日收口。**
+- **DC 面风险在册（断供期升级注记）**：DC=0x78+budget 系现役在册——当前断供状态下 CEO 离机约 12 分钟（灭屏 600s+UNATTENDSLEEP 120s）即可自主入睡=基线预期非异常。物理供电恢复=唯一正解维持；13:30 BOD 升报线+COO 13:35 复探锚双线盯防中。
+- **方法勘注收账（候 CAO 并档）**：powercfg /q 系 Git Bash MSYS 路径转换污染伪影（正形=PowerShell 工具跑）+UNATTENDSLEEP 别名表缺席（/q 点名只回 scheme 行·/qh 组段才显值）——CTO 上午「点名查询不显值面」结论自勘正。
+- **R1 窗前检查段复验项确认**：506/507 扫读+UNATTENDSLEEP AC=0 复验（v8 已转 COO）+下轮冻结窗观察（AC 面应绝迹）。
