@@ -642,3 +642,10 @@
 - **迁移器机制缺陷三件（挂账候 FSD 窗·不动本周）**：a.unresolved-items.md 串周滚旧模板（「# W32 未决事项」标题滚 10 周·内容与现役脱钩——W42 件零条现役 open）b.doneFromPrev 滚雪球（60+ 棵 W33/M2 时代陈树一路滚挂）c.unresolved 件与 hub-state/in-progress.json 两套大表脱钩（真源分裂·hub-state 才现役）——修源=TriCompany/runtime/cognition/weekly_plane_shift.py。
 - **裁=翻周梳理补课批**：①毕树清点登记派 COS 先行（持树职责正形·37 棵逐判毕/在途+补 W41 doneTreesThisWeek+在途清单交下）②COO 三件补课（activeTrees 挂载+需求池/大表空表新立形制照 W41 模板·**候部署窗毕报后同日排窗**——COO 主力在部署窗线不并行）③hub-state 不迁确认+lg069 销账复核候终验④共学断更呈 CEO 知情（恢复候办不派工·W41 无内容可迁）。
 - W41 需求池现势：零需求行（首审未启用态·DEM-001/002 留 W40 归档）——W42 空表新立零在途条迁移，DEM 续号照旧。
+
+## §97 部署窗中段知情·停摆根因勘注·token 二犯收账（2026-10-12 09:30）
+
+- 时点锚：COO 部署窗中段知情 09:29（date 现查 09:33 落卷）。
+- **§95 根因假设勘注（活体证据推翻）**：「件B race 滞后 rejection」假设不成立——COO 现场证据=**单 job 8h19m 串行阻塞+600s 兜底未兑现形态**（executor 串行单链·一 job 卡死拖停全队列）。判读移交 CTO 定谳（哪个 job/为何 600s 兜底未兑现=两个勘验点）。§95 段「候部署验证非定谳」注记兑现，本勘注为正式勘正。
+- **部署窗主体执行毕**：硬前置解除实锚（09:20 acOnline=true·29% 充电中——CEO 插电到位）→build RC=0→重启链全绿（shutdown 200/PORT_FREE/冷启 pid 41568@09:25:18/watchdog 复原）→f612b9e 生效值面锚实锤（healthz cron.next_run_at 字段首现=LG-067 探针上线）。过期 job 7 个按序补触发中·**bod-tick 09:37 正拍落盘=恢复终验锚**·8711 follower 转正（unknown→following）随终验段。
+- **token 二犯事故收账**：COO 启动器 token 查验脱敏失手·四 token 值面进会话链——10-02 同文件同坑二犯即认·同值已在链未新增暴露面（不提前轮换先例口径沿·BOD 定性=操作瑕疵非安全事故同 10-02 口径）·候 CAO 入册（二犯加重档）。
