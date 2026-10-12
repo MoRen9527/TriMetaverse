@@ -49,3 +49,8 @@
   - 1d9d896c merge: 收编并行笔（巡检兜底 10:10·sg-server 通道对表）
   - ee2976b3 docs(cto): §95 判读卷 §九补笔——a 件落地毕（CEO 10:44 裁插电恒醒）+入眠机制精化
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:10 +08：自上次进度提交 397fd660 后新增 3 条 commit：
+  - 760687e6 docs(cto): §107 勘验卷——第二次 Modern Standby 睡眠冻结定谳（11:32-12:47 74.8min 主冻结·506/507 全族实锚）+muo2mj6s timeout 同构+调度器自愈两读对比+三候选全否+42/107 扫族勘误+§七 a 件实效断言修正（插电也睡·候 BOD 勘正 §106）+DC 侧 standby-timeout-dc 已 0x0 拉高非正解+§八.5 v7 锚延迟同根定谳（时序嵌合冻结窗）
+  - f627f8c8 merge: 收编并行笔（值席落盘防覆盖）
+  - bbd589de docs(coo): 补课批毕报——五件落位（activeTrees 8 树挂载/需求池空表 DEM-005 续号/大表新命名首刷候日收口/追加 scoring-w42 账面+m2 账本判定正身单点 W42 指针+runbook 入口指针）+急报面收编（12:58 断供 acOnline=false 三连探实锚·DC 侧睡眠缺口·13:01 仍 false 96%·CEO 插电在途 BOD 盯防）+§107 bod-tick 复活旁证三源（镜像 next=None 分叉归 CTO 勘验）+§101 R1 窗回复项 v7 终版+锚延迟 52 分钟观察+幻觉时点 COO 案透明面
+- registry：v2.1；今日 registry 提交无变化
