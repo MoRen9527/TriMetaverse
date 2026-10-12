@@ -956,3 +956,15 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 3. **暗示误读二犯（CEO 02:56 勘正·即认）**：CHO 输入框「复核完了，按报告启动 P1 批量追平」系 **claude 界面暗示提示非真实输入**——本席误读为 queued 消息·连带造出「核实 CEO 发没发令」假问题（两轮 CEO 直报+CFO 信均带）。**铁证缺失自领**：真 queued 必有「Press up to edit queued messages」横幅（23:28 本席自触发的真 queued 有）·02:52 capture 无此横幅即应否定 queued——未验铁证先定性=草率。**判读纪律三正形强化**：❯ 后文字默认暗示态·真实输入只认对话流增量（thinking/tool 调用）·queued 只认横幅铁证——三判据缺一不可（tmux capture 暗示提示判读家族 BOD 二犯·教训条候更新）。P1 追平从未启动·sg 工作区 source-agents 零改动实锚（02:54:25 git status 快照）。
 4. **hub-silent 值席静默直报收账**（23:30:08 信·本轮已读）：duty-cos-silent 39min——值席静默系 CHO 主导审核+协同面待命分工态·非故障；FSD hub-silent-detect 900s job 直报链路首弹实锚（LG-052 阶段二生效面）。
 5. **sg bare 补推**：§139 后再推（5e155ccef→含 §140 待推）·board-dispatch-20261012 现 da1d06f5c 顶（CHO 两笔叠上）。
+
+## §141 大表清零战役·两域派工批（真落款 date 现查 2026-10-13 03:25:50+08:00·CEO 03:22 令）
+
+**CEO 令**：接电后分服务域/本地域清大表活·8 点前干完。open 面 6 行+候办 4 条定性毕·分域：
+
+**本地域批 5 件**（COO 拆派·3f334fc4·回执 03:24:45 四件认领）：①LG-056 周迁移复核锚核验（COO 拆两半：8713 对齐 job 执行读数派 SDE+晨检记录面自核·合流 COS 销账终闭）②LG-064 候办 8713 残留 job cron_muh6shv0_korw 停摆 18h 清理（SDE·修覆盖核 or nextRun 重算·禁抹 nextRunAtMs）③LG-071 改形首笔适用·LG-066 终验环节 CEO→COS（COS 授行·毕即销不候 CEO）④07:30 前毕报汇总。⑤BOD 自办两件：LG-065 值席 b+c 案复核+呈报、LG-061 周会议记录试铸验收（03:30-05:00 自办窗）。
+
+**服务域批 4 件**（sg 值席 COS 牵头·信箱 duty-mtable-batch-1791804268+tmux queued×2·Enter 唤醒起轮实锚 03:25·56s/995 tokens）：①LG-066 CTO 终判（段1 2881a452+段2 da4fe3ed 执行卷在·转 m-duty-cto）②LG-054 隔离位清理（l2-scan·daemon-down SQL 禁活体外部改·77f03965 件③·转 m-duty-fsd）③流水线接通 S3 删分支无闸评估（BOD 今晨裁启窗令）④快照增强四点①席级映射补配。
+
+**候 CEO 面**（不派只呈）：LG-034/035+LG-053 终球·LG-054 验收判定面·维持攒批单 LG-071。
+
+**派工通道注**：sg tmux 首发长文本 capture 时机早误判空框（实为真 queued·「Press up to edit queued messages」横幅候出现滞后 ~15s）——**queued 横幅出现有时滞·capture 判读须候 ≥15s 二验**；空闲会话 queued 不自触发·独立 Enter 唤醒有效（COS 实锚）。树任务书后补档（D-27 直派例外通道·凌晨抢窗）。
