@@ -25,3 +25,6 @@
   - 42fdce1a docs(plane): 巡检兜底补写 2026-10-11 22:40——2 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）
   - …另有 485 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 613529f7 后新增 1 条 commit：
+  - 365de506 docs(cos): W41 毕树清点补登 doneTreesThisWeek 29 棵——BOD §96 补课批①(毕树登记断链第三周)·37 棵逐判=28 卷型毕+1 OP 型 done 免判+8 在途(回 BOD 转 COO 挂 W42 activeTrees)·逐树附收口/销账锚·LG-071 判读依据=卷面收口态+最后 commit+台账现势+卷尾抽读 18 棵+daily-progress 三点定谳
+- registry：v2.1；今日 registry 提交无变化
