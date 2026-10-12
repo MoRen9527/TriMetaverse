@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（trees/bod-tick/cto-executor-stall-verdict-20261012.md）
 - syncMode: static（技术复核判读卷·BOD §95 三面+COO 09:29 判读移交）
-- lastSyncedAt: 2026-10-12T09:45:35+08:00（date 现查原值）
+- lastSyncedAt: 2026-10-12T10:01:31+08:00（date 现查原值·§八 落地补笔随改）
 - 判读席: CTO 小狄（m-cto）；令源=BOD §95 技术复核三面请求（卷 465ee2f3）+COO 09:29 部署窗中段呈报（判读义务移交）
 - 对象: 8713 TriMLC executor——bod-tick-30min 自北京 01:07 起 17 拍全缺、next 停 2026-10-11T17:07Z 过点 8.2h
 
@@ -84,3 +84,24 @@ COO 部署链已执行毕（09:25:18 新 pid），把关意见转为**生效后�
 - 仓面：TriMLC git log（HEAD cb5dba8·勘修窗三件+f612b9e/cb5dba8 链）+dist 特征串三件在役判别（09:23 build 前 mtime 旁证）
 - 交叉验证：COO 09:29 呈报证据包（execution_log id 24934 同 job id 同 duration 同结算时点——独立读数逐值互证）
 - 记忆条引用：file-identity-hash-and-task-liveness-dual-face（教训二·evt105 电池门家族）/liveness-first-diagnostics/value-face-never-print-path（COO ④ 二犯知情·本卷不展开）
+
+## §八 落地补笔（10-12 10:01·缓解-b 执行勘面——§四电池门归因修正）
+
+**BOD 09:50 裁判**：缓解-b schtasks 电池条件豁免=域内准行，本席/COO 落地（今日内毕）；缓解-c ssh 超时=准行候 FSD 窗挂账；缓解-a powercfg=候 CEO 请裁中。**落地勘面证伪 §四.2 归因，修正如下**：
+
+### 勘面新证据（推翻卷面归因）
+
+1. **TriLiveness-L1 schtasks 腿非「被电池条件拦」——是有意退役态**：TaskScheduler 操作日志 evt142 实锚 **2026-10-11 09:25:28 用户 jedih 禁用**——即 W1 窗（1011-window-family）既定迁移硬序第 8 步（本席门禁卷 cto-windowb-gate-verdict-20261010 自裁：job③ daemon cron 首滚 ok→schtasks L1 /disable·禁 delete·回滚=re-enable），FSD 毕报 PASS 在案。今晨冻结期 schtasks 腿不在场的原因=退役，非电池门。
+2. 10-09 夜 BOD 电池门定谳（DisallowStartIfOnBatteries 缺省 True）系**当时点真值**——现勘 DisallowStartIfOnBatteries=False（改点候勘不阻塞），卷面 §四.2 引教训二归因未核现值=引用陈旧真值，本笔修正。
+3. §二「01:00 l1 schtasks 拍 OK all-dims」拍别归属存疑：L1 已于前日 09:25 禁用，17:00:00.94Z 行作者（daemon 挂死轮中途行 vs 其他腿）微观未勘——§六.4 同族补条，「最后活体证据」时点定性不变。
+
+### 落地变形与读数（10-12 10:00 值面探针读回）
+
+| 对象 | 改前 | 改后 | 依据 |
+| --- | --- | --- | --- |
+| TriLiveness-L2（现役 Ready） | StopIfGoingOnBatteries=True·StartWhenAvailable=False | **False·True** | BOD 裁决意图正中面：探针链在电池段也活+睡眠错过补跑 |
+| TriLiveness-L1（退役 Disabled） | 同上 | **False·True**（State=Disabled 保持） | 退役态顺修保回滚通道健康；**禁 Enable**——re-enable 即与 8713 daemon job③ 双写者撞车（W1 窗唯一调度源架构） |
+
+- DisallowStartIfOnBatteries 两任务均已 False 无需改；改法=Set-ScheduledTask Settings 翻转，值面读回验证全 PASS（上表后值即读回原值）。
+- **缓解-b 由此落地毕**（变形知情：原设计前提「schtasks 独立拍在场被电池拦」不成立，实际落地=L2 现役豁免+L1 退役态顺修；「跨失效域探针」真缺口归候办-d 锁占看门狗+§四.4 跨机告警面，不因本件销项）。
+- l1.log 现役旁证：daemon 腿 01:36:56Z ISSUES 自指涉→01:40:17Z recovered→01:55:05Z OK 持续拍动。
