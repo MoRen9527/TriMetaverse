@@ -1,8 +1,8 @@
 # LG-066 收口跟踪卷（COO 运营督办面·毕报投递链异常处置+N3 督办）
 
 - sourceOfTruth: 本件（trees/lg066-window-order-20261009/coo-lg066-closeout-track-20261009.md）
-- syncMode: rolling（候办随链回写·收口毕转 static）
-- lastSyncedAt: 2026-10-11T21:10:33+08:00（date 现查原值·**终验窗毕（五 PASS 验收通过）+21:00 三重拍全绿+绩效首跑落账（settle 21:06:55 成·延迟系排队非故障）+CHO 即办自裁——候 W1 毕报收编→23:10 迁移**）
+- syncMode: static（**N3 72h 观察窗 10-12 19:03 毕·收口巡检 PASS·8712 放归执行毕——LG-066 全链闭合·本卷转 static 归档态**）
+- lastSyncedAt: 2026-10-12T19:17:43+08:00（date 现查原值）
 
 ## 一、异常全况（勘定终态·22:52 触发→23:10 勘定）
 
@@ -30,6 +30,13 @@
 - **收口判据**：8712 空置保持（unit 不复活/端口不复占）+8710 现役三判据持续绿 → 毕后放归服务域池。
 - **观察注记**：窗内如 8712 复活或双 daemon 痕迹→即报 BOD+CTO（不自动处置）。
 
+### 收口终态（2026-10-12 19:03-19:16·毕后放归执行毕）
+
+- **收口巡检 PASS**（STE 验收面 19:14 毕报·四锚+附锚全绿·卷=TriCompany `docs/testing/lg-066-n3-72h-window-closeout-acceptance-report-20261012.md` dev @f05d1ba·98 行）：①探针活性 TriLiveness-L2 LastRun=19:00:01 Result=0 MissedRuns=0·l2.log 19:01 OK all-hosts；②主判读 8710 healthz 与 10-09 P2-1 逐字同构（ok:true/jobCount=3/degraded:false/consecFailures:0）；③8712 空置 ss 计数=0（T0 基线维持 72h）；④cron 19:00 到点真触发 exit 0；附锚 trirmc ExecMainStartTimestamp=2026-10-09 19:03:29 CST 逐字同值=**72h 零重启**。窗内全谱 330 行 52 非 OK 行分型毕（l1 latch 误报段已 MANUAL-CLEAR 闭合+四段瞬态全自愈·MANUAL-CLEAR 后零 ALERT-SENT）。
+- **BOD §129 复核毕**（19:16 转办令）：8712 放归服务域池归值席/COO 面处置。
+- **放归执行毕（登记面·19:17）**：8712 观察占用登记销账·**河源 8712 端口回归服务域可用池**（物理面 ss=0 空置 72h 已实锚·零机器操作）；本卷 syncMode rolling→static 转（收口毕转 static 条款兑现）——**LG-066 窗序树全链闭合**。
+- 台账归属差勘正闭合：19:03 巡检义务行 lg065→lg066 勘正迁注毕（COS cb0dda006·18:5x·d5cde19a 实锚）。
+
 ## 四、候办与挂账总表（23:10 勘定）
 
 | 项 | 时点/触发 | 位 | 状态 |
@@ -50,7 +57,7 @@
 | **勘修窗单·两案并勘候排程（CTO 10:03 勘正·原三案移出一案）** | ①executor 停摆家族根因（8710+8713 两形态在册）②43480 死因（BOD 三向全收）——疑同根=任务生命周期状态机缺陷族；**源码面增量：TriMLC 零全局崩溃 handler**（uncaughtException/unhandledRejection 零命中=异步未捕获异常即静默 crash·「独立崩溃」向源码面成立·根治包 sweepStaleRunning dist 在役[真 stale 有兜底]）；hub-silent-detect 移出（→上行性能观察项）；**→修复窗提案已落卷 @21efe249（cto-repair-window-proposal-20261011.md·勘读段主体完成·呈 BOD 排窗 D-39 域内）**；本席窗位建议随 10:1x 信 BOD：避开今晚 21:00/23:10 两验证拍·候选明晨 0-9 GLM 最优段（勘正先例裁据同构）或今晚 23:10 迁移毕后深夜段；**→BOD 排窗落定（10:13 呈报）：今天 14:00-16:00·硬锚 16:00**（避 18:00/21:00 拍点+与今晚两拍彻底错开·**修复重启后 21:00 绩效拍反成修复后首验点**·CTO 主刀纯代码窗·门禁=executor 滚拍断言[healthz 绿≠executor 活·今晨假绿教训制度化]）；本席合规核=D-23 周日非工作日 14:00-18:00 禁排区不适用已核（正身 §二同款对轨）·本席深夜段建议被日间修复方案取代如实记（BOD 裁据更优：风险面今天消+21:00 拍天然验收双语义）；**→窗前预研增量（CTO 10:16 报·零代码写面守约）**：FSD 10-07 自愈方案卷调出（三路径全谱勘过·sweepStaleRunning 已在役·剩余修复面比提案预想小）+**43480 死因最强机制候选=Promise.race 滞后 reject**（executeJobCoreWithTimeout timeout 先 settle 后 jobPromise 滞后 reject=unhandledRejection→零 handler→node 默认 crash·P3「race 已堵死」仅状态面成立·rejection 传播面=方案未覆盖缺口）+spawn error 嫌疑面勘伪（10-06 考古嫌疑点不成立·如实记档）；**修复包定稿草案三件全最小面**：件A 崩溃 handler（独立 crash.log+优雅停+exit(1)·env 开关回滚通道）/件B race guarded 一行级（catch 转 error 结果再入 race·状态面不变 rejection 面归零）/件C F-3 enabled ?? true（引擎缺省翻正·今晨新变体根治面）——单测各配一例·14 例基线跑通为准·草案落树后窗内施工；**→草案卷落树确认（CTO 10:34·@e0387550）**：施工三件最小面+S1-S7 工序+拍点避让·窗前预研毕·照令 14:00 主刀·21:00 双语义读数预案随窗毕报 | CTO owner·本席窗位协调 | **排窗落定 14:00-16:00·预研毕候窗**→**窗位勘正 11:39（BOD 11:37 三件知会·COS 排工基线同步转）：即刻开窗[11:3x 起]·硬锚 16:00 不动·原 14:00 开窗点作废**；连带=今晚拍点三项不变（18:00 预派首滚/21:00 绩效首验/23:10 迁移）+Option A 任务书 8088337f 五件并一收编→**→勘修窗毕（CTO 12:40 毕报·@5cbfe118·提前硬锚 3h+ 全工序毕）**：三笔独立 commit（件A fc44904 崩溃 handler/件B cc52c89 race 滞后 rejection 吸收/件C baf800d F-3 enabled 归一）+门禁全绿（五族基线不增不减·重启窗锚A 三断言·S5 handler 活体探针 PASS·S6 F-3 HTTP 活体锚[故意缺 enabled POST→enabled=true]·S4 executor 滚拍 12:01-12:04 四拍+续滚 ok·bod-tick 12:07/12:38 双拍 ok·uptime 2941s 零非计划重启·crash.log 零基线）·**活体实证=hub-silent 11:51 timeout 拍经双防线落账未崩[degraded=False]——修复前该形态即 43480 crash 同签名**；本席督办两点：①既有 5 fail 五族归因候另勘（CTO 不扩窗·STE 面候本席排程建议=10-12 上午平价段或 18:00 后黄金段·D-23 周一 14-18 禁排避开·候排单对 STE 无强制力）②两惯例制度化[写前值席知会+写后即 commit 锁笔]已随卷 §八 提请 CAO/联审教训面（本席知情·本席席面即日恪守已践 9 笔）·21:00 双语义预案在卷 §九（语义①存活/语义②修复验收·crash.log 零新增行计数自 11:51）→**BOD 抽验签认 12:41（§56@a76bb807）·勘修窗收口闭环**；连带知情=TriMLC 仓本地领先 origin 6 笔候推（CTO §八.1 残余·候窗双腿推平·周平面收口知悉） |
 | 联合工作区写后锁笔惯例并提（CTO 10:03 风险知会·10-11） | CTO §五.6 增量笔（09:52 前）被值席「落盘防覆盖」窗回退吞没（工作区回退+commit 空·HEAD 从未含之）=**未提交工作区防护最薄档再实证**（与并行窗提交互踩族四向机理同族）；建议面：各席写前值席知会+**写后即 commit 锁笔**两惯例并提——本席席面即日恪守锁笔；制度化候 CAO/联审教训面裁 | 候 CAO/联审教训面 | 候裁·席面先恪守 |
 | **Q3.2 UI 升版窗（16:30-17:30 今日）** | **窗内毕·16:36 提前 ~54min 收窗·零异常零外溢**：TriModel 卡面端口文案 8712→8710 六行一次落（mmc/rmc 双卡 nav meta+四签实例行四处+fourplane 端口对等断言两行·改文改测同批防假绿·施工单 @1e940a63 六步照走）——源面毕 @a17deaff（TriModel 双腿同顶双验）；全量读数 374 tests/360 pass/0 fail/14 skipped 改前先跑录档→改后逐项同零新增 fail；dist/ui 渲染追平 8710×4 在场·8712×0 残留；毕报卷 @06586a39（TriMetaverse 双腿已推）；**候值席段挂账：sg/R-HY 服务机侧 pull+build+服务重启归值席/COS 通道（本窗不硬凑跨机施工）·回滚锚=revert 单 commit 零风险**；推链实锚注记：16:39 笔 @9bc29c05 FAST_FORWARD+ls-remote 对表实锚（bare 顶=本地顶）·**bare post-receive hook 报 cannot rebase: unstaged changes=sg 侧某工作树追平未遂（sg 面消费端或读旧版·处置归 sg 面/值席通道·本席观察知会 BOD 16:40）**；CTO 技术判读三条取回 16:4x（①fail-open 设计确认=push 面无损仅 sg 工作树滞旧版 ②值席处置纪律=先 git status 辨归属禁直接 discard[共享工作区未提交态教训族] ③影响面=sg 面值席读旧版·候值席窗非急件）+**候办 P2 候选新立：hook 追平段失败无告警面·候挂自动告警（候 CAO/联审教训面裁）**；**→观察项闭环（BOD 16:45 直连实勘处置毕回执·16:48 认收落卷）**：根因=BOD 自身 15:4x sg seats.json 热修笔（正名 m-sde）patch 后未提交·裸工作区态挡 hook 自动 rebase（hooklog「pull/rebase skipped」rc=1·非 sg 席位或施工笔·教训入 BOD 卷 §35）；处置=同值性对表先行（sg 脏笔与流内 65209c44 逐字节同·blob hash 一致）→还原+fetch+rebase 拉平→实锚 sg HEAD=21ef59c9=本席笔=bare 顶·seats.json 值面对表 m-sde×1/m-dee×0·diff CLEAN·后续 hook 拍恢复自动追平；影响面核毕=GitHub 镜像腿未受影响（16:42 mirror pushed 实锚）·degraded 窗约 10 分钟（消费端读旧版止于 15:30 巡检笔）·零消费事故回报——本席观察项销案·候办 P2 候选（告警面）仍挂 CAO/联审教训面独立候裁 | CTO 施工/本席督办 | **闭·窗收口毕·候值席段** |
-| 10-12 19:03 N3 收口巡检 | 72h 窗毕 | 本席督办+STE 探 | §三已立 |
+| 10-12 19:03 N3 收口巡检 | 72h 窗毕 | 本席督办+STE 探 | **闭·收口毕**（STE 四锚+附锚全绿 PASS @f05d1ba+BOD §129 复核毕+8712 放归执行毕登记面销账·§三终态段） |
 | ~~10-11 窗令本机段栏勘正~~ | **落卷毕**（BOD 10-10 09:31 裁准④「实况为准」→窗令 09:33 勘正落卷·两带全毕终态收编·转历史归档态） | 本席 | **闭** |
 | H2 待机专项 | **毕**（BOD 深夜补窗令面直派 FSD·10-10 08:03 毕报 @c5fc0c5f 断言四件全绿·零持久改动零回滚）；**随程新观察项**：无人参与睡眠超时 2min 致二次入眠 6h17m=liveness 监测盲区第二形态候裁（FSD 倾向 keep-awake 惯例化）——挂联审附议 | FSD/联审 | 毕·观察项候裁 |
 | 段2 卷署名核实 | **毕·判定采认**（STE 7min 毕 09:42·@8adac301 树 ste-signature-verification-20261010.md）：三笔[seg1 2881a452/seg2 da4fe3ed/R-4 9c3d9be8]=**sg 值席 COS 本笔（自署值席名）·非 CTO 本笔·非代拟 CTO 名**——五面证据（git 身份零交集+行文指纹+引用锚抽验+时间线+CTO d09828b9 自述合证）；**本席挂账口径连带勘正**：核验对象原表述「sg CTO 席署名」系误标·卷面实署值席名（STE 边界③勘明）；**三边界路由**：①五处窗内「CTO 裁」转述信源判别=候值席毕报自核/sg 会话记录→**第五面议题本体** ②「尾署即作者」硬约定→**CAO 已裁面回 09:46:53**（正名入册+局限注记同条·联审带过确认·确认后 CAO 即铸今天内闭环；per-seat git 身份=候办线） ③派工表述勘正=我面挂账已改 | STE→第五面/CAO | **毕·采认** |
