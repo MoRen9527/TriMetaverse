@@ -50,4 +50,11 @@
 - 现役同族机械边界先例：无锚不施工/D-15 联审双签/硬门签认必落卷（盖章=执行前硬门同族逻辑）
 - tmv-whitepaper 产品面（TriMetaverse 数字人与链上愿景承接）
 
-—— CPO 小乔，2026-10-12 22:41 +0800（草案毕零施工；窗后首窗与 CTO 技术方案并稿对表，三边界例候并稿定谳）
+## 并流预备段（BOD 22:52 加段令·分段制·22:5x 补）
+
+- **TriChain/TriWeb4 轻量定位读数**（BOD 22:44 素材入口·22:52 令轻量级不展开重读）：两模块=兄弟目录（`../TriChain/`、`../TriWeb4/`），文档五件套同构——`docs/product/{PROJECT,REQUIREMENTS,ROADMAP,STATE}.md` + `docs/engineering/{DESIGN,ROADMAP,STATE}.md`。
+- **明窗并稿对表计划**：读 TriChain `docs/product/PROJECT.md`（模块边界/产品定位面）+ `docs/engineering/DESIGN.md`（链上身份/架构面），对表本草案①迁移路径（鉴权四要素↔链上身份模型映射）与签发身份-席位解耦立场；TriWeb4 同法对表 web4 面兼容口径（多端②）。
+- **CTO 框架段引用位**：候 CTO 框架段落卷（现势 22:52 树内未落）——落卷后并流为合卷（框架段=技术正身，本卷产品段=产品正身，两正身互引不混写）。
+- 分段制执行注记：本段=产品侧并流预备毕即 commit；三边界例定谳与框架段合流候 CTO 段到位。
+
+—— CPO 小乔，2026-10-12 22:41 +0800 初稿 / 22:5x 并流预备段补（分段制·毕一段 commit 一段·候 CTO 框架段并流）
