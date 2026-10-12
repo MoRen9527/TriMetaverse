@@ -145,3 +145,10 @@
   - 8dac44be docs(sde): 大表清零战役两件读数卷落位——件① LG-056 三断言全过(align run 10-11 周日 23:10:26+08 ok·令文周日域勘正·零人工旁证判)·件② korw 对象不成立销项(10-12 全天 275 拍全 ok·停摆真身=LG-069 硬闸 skipped 非故障·零操作)[候 COS 销账面调取·COO 03:28 收稿闭段]
   - f68e4ba1 docs(s3): 删分支无闸评估件——四实锚(删除无闸/reflog 缺/未知名删除实害/root 残留伴生)+闸分级(a reflog 即挂建议 四 bare 一行·b 删除禁令候窗·c 操作登记随制度批);只评估零实施 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 10c85b94 后新增 5 条 commit：
+  - 708da97d merge: 收编 sg 值席三笔（CTO LG-066 终判卷+m-duty-cos 大表落态+巡检兜底）——与 COS 销账终态同源同向（CEO 03:22 共同令源）·lg066 行冲突以销账终态为准并入 sg 落态注记
+  - 57414fcf docs(cos): W41 大表 LG-066 行落态——CTO 终判 PASS 全链闭合(3e7e5d5f 四步锚+段2 三判据+N3 72h 窗闭四日健康·残差四项出窗随线)→候 CEO 知情(大表清零战役·箱 lg066-final-01 已投) @m-duty-cos
+  - 29ead84a docs(cos): 大表清零两件销账面——LG-056周迁移复核终闭(尾验核补毕双源=SDE读数卷三断言+COS sqlite亲验id=24820·10-11周日23:10:26拍ok·6732ms·令文时点勘正随带=执行日10-11非10-12)+LG-064 korw残留销项(对象不成立·korw=trimodel-l2-scan现势健康289拍全ok·停摆真身=LG-069硬闸跳派5笔skipped亲验·零操作免扰动)
+  - 3e7e5d5f docs(lg-066): CTO 终判卷——恢复阶梯窗 v3 全链 PASS（四步锚/三判据/N3 72h 窗闭+活体现勘四日连续健康 cron 3 job 零劣化）；残差四项出窗随线；死线 07:30 前 @m-duty-cto
+  - 6ce0015b docs(cos): lg066-trirmc-merge-receipt-unit 销账——LG-071改形首笔适用(CEO 03:22令/BOD 03:24令)·COS终验四件亲验=STE N3四锚+附锚全绿f05d1ba卷本体亲读+BOD §129复核(转录面两源如实注记)+8712放归登记面销账+卷转static 8f6fa240 diff亲读·时序自洽无倒挂·连带勘正=note「九条3pass候CEO」系10-08旧刷(已10-11勘空归档)+双门施工前置语义完结·LG-066全链闭合·open 6→5
+- registry：v2.1；今日 registry 提交无变化
