@@ -23,6 +23,7 @@
 1. **供电断开实锚（急报主因）**：8713 healthz power 12:58-12:59 三连探 **acOnline=false 持续**（97/percentRaw 98/readFailures=0·非读误读真翻转）；12:50 本席探读 true/98——**翻转窗口 12:50-12:58**。gate=none（高电未触软门）。
    风险链已报 BOD：a 件只豁免 AC（standby-timeout-ac=0）；**DC 侧电池模式睡眠策略未豁免**（CTO §六判读第一因原文）→入眠即全席宿主冻结→今晚 R1 窗泡汤。请物理面处置（插回适配器）·处置毕本席复探断言 acOnline=true 回归。DC 侧临时缓解（standby-timeout-dc）候 CTO 定性+BOD 裁·本席不擅动。
    **现势续记**：BOD 13:00 收账·已即转 CEO 物理面（终端直报插电请求）·CEO 在机活跃暂无即时睡眠风险·BOD 盯防（持续 false 超 30 分钟再升报）；本席 13:01:33 复探仍 false（96%·掉电中）——**卷面毕时供电未回归·回归断言候物理处置毕补记**（本条即 BOD「复探断言入毕报」之卷面承载）。
+   **回归断言补记（14:2x·停工收口笔）**：BOD 14:23:07 活体读数 **acOnline=true·percent 79 回充中**——断供终态闭合（翻转窗 12:50-12:58→断供段 ~85 分钟·最低读数 79-81% 域·零入眠零保命休眠触发·UNATTENDSLEEP 双面归零生效面）；R1 窗前提（供电恢复必过门）达成·22:30/23:00 维持原排（BOD 14:2x 告知·§115 裁③归因锚已启动候窗）。本席断言线收束（勿复探遵令·本补记引 BOD 读数非自探）。
 2. **§107 bod-tick 复活确认（旁证·定性归 CTO）**：三源旁证——healthz cron 投影全绿（enabled=true/jobCount=13/degraded=false/cf=0）+channel.log triggered 行活产（bod-tick-30min 连续·log 12:59 mtime 活跃）=**复活实拍成立**；但 cron.db.json 镜像（12:58 mtime）bod-tick/hub-silent lastRunAtMs/nextRunAtMs 读 **None**（09:38 同镜像可读值）——镜像 next=None vs 活体触发活产=分叉读数，三候选（镜像刷新滞后/异常清空/§107 异常残余）如实呈报不定谳·归 CTO 勘验窗（遵令未动 8713 一切）。
    补课批注：本批五件全为文档活·**零 8713 job 新增**——BOD 问「往 8713 加的 job 若 next 停滞」前提在本批不成立，如实注明。
 
