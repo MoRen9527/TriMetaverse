@@ -2,7 +2,7 @@
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W42/trees/coo-evening-closeout-20261012/summary-2310.md
 - syncMode: static（汇总终卷·冻结前落盘）
-- lastSyncedAt: 2026-10-12T23:05:00+08:00（date 现查原值·D-47 正形 A）
+- lastSyncedAt: 2026-10-12T23:04:11+08:00（date 现查原值·D-47 正形 A·勘注：初版 23:05:00 系写时推算预填违 D-47·本笔即认即勘真值替换）
 - 编排位: COO 小营（m-coo）；令源=BOD 22:52 加段令（CEO 22:51「有活尽快安排」）+BOD 23:02 全线收工宣告（①汇总四席毕报明早呈 ②冻结窗前移知会候斟酌）
 - 现势: FSD 22:57 探针 49%·掉速恶化 120%/h（低电段加速）·冻结预期窗前移 ~23:15-25·断电冻结属预期形·复活链候供电恢复照 SOP·明晨复活候 CEO 令
 
