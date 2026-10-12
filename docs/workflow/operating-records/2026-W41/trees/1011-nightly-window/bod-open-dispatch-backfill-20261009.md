@@ -948,3 +948,11 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 4. **tmux socket 盲区勘误（§138「13 席非 tmux 形态」判断作废）**：13 席全在 **fleet 用户 tmux server**（socket=/tmp/tmux-1001/default·TRIMC_NOTIFY_DUTY_TMUX_SOCK 实锚）——root 身份 tmux list 只见 root socket=探针探错 socket（与「探错机报假缺口」同族·对象断言教训新变体：**socket 位也是对象**）。CHO pane attached·13 会话 9/16 建·sde 10/10 重建。
 5. **CHO 送达三重实锚**：①tmux -l 字面发送+独立 Enter（首试默认 send 吞噬空框·-l 重试进框·queued 回执「Press up to edit queued messages」）；②**CHO 起轮 23:27:47 域**（capture：thinking 45s+↓654 tokens+读 /tmp/audit-letter.json——早于我 23:28:14 直插·动力源=信箱信或值席 COS 转达链·任务已在手）；③直插文本 queued 成补充指令（CHO 现轮毕后可见）。
 6. **责任面自领**：首试 send-keys 非 -l 形态吞噬空框一次（Enter 吞噬坑第 3 次家族实证·-l 字面+独立 Enter=正形两件套）；consumer 弹显通道假设先行未先验 env 门（绕了三步才到 tmux 正形——下次 sg 席位送达先查 TRIMC_NOTIFY_DUTY_* 三 env+fleet socket）。
+
+## §140 复活窗三笔·暗示误读二犯即认（真落款 date 现查 2026-10-13 02:56:45+08:00）
+
+1. **复活窗现势**（02:50 hook 恢复触发）：本机夜段 CFO 定性「未冻结熬过夜」（三锚活）·本席 23:31→02:50 三小时余 hook 轮空（会话侧调度轮空·与未冻结并存两记·候明窗勘）；02:52 CEO 插电（CFO CIM 双源·AC 27.5W·33% 充电）——跑道危机解除。00:10 拍 sg「ssh 失败不可判」系瞬时（02:51 复探 SSH_OK）。
+2. **M 面审核任务完成实锚**：总报告已落 sg bare board-dispatch-20261012 分支（da1d06f5c 总报告合稿·CHO 主导三席组队·23:42 done；bb3edc07c 维度4 发布拷贝漂移材料·归一化比对 22/22 DIFF 系宿主形制包装·归一后 15/22 同体·真漂移=双形重复文件族 4 件+宿主方言族设计内·**只审不改恪守**原话在卷）——候 CEO 晨复核。
+3. **暗示误读二犯（CEO 02:56 勘正·即认）**：CHO 输入框「复核完了，按报告启动 P1 批量追平」系 **claude 界面暗示提示非真实输入**——本席误读为 queued 消息·连带造出「核实 CEO 发没发令」假问题（两轮 CEO 直报+CFO 信均带）。**铁证缺失自领**：真 queued 必有「Press up to edit queued messages」横幅（23:28 本席自触发的真 queued 有）·02:52 capture 无此横幅即应否定 queued——未验铁证先定性=草率。**判读纪律三正形强化**：❯ 后文字默认暗示态·真实输入只认对话流增量（thinking/tool 调用）·queued 只认横幅铁证——三判据缺一不可（tmux capture 暗示提示判读家族 BOD 二犯·教训条候更新）。P1 追平从未启动·sg 工作区 source-agents 零改动实锚（02:54:25 git status 快照）。
+4. **hub-silent 值席静默直报收账**（23:30:08 信·本轮已读）：duty-cos-silent 39min——值席静默系 CHO 主导审核+协同面待命分工态·非故障；FSD hub-silent-detect 900s job 直报链路首弹实锚（LG-052 阶段二生效面）。
+5. **sg bare 补推**：§139 后再推（5e155ccef→含 §140 待推）·board-dispatch-20261012 现 da1d06f5c 顶（CHO 两笔叠上）。
