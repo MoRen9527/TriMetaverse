@@ -100,3 +100,7 @@
   - b55d17fb merge: 收编并行笔（值席落盘防覆盖）
   - 8f6fa240 docs(coo): LG-066 N3 72h 观察窗收口闭合——STE 四锚+附锚全绿 PASS（f05d1ba·72h 零重启）+BOD §129 复核毕+8712 放归服务域池登记面销账毕·卷转 static 归档态·LG-066 窗序树全链闭合
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 26352d6e 后新增 2 条 commit：
+  - 56b601f5 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
+  - c333ff92 docs(cto): §十三 §127 三件定性——8713 power 挂=间歇自恢复型暂不重启(触发条件挂账)+调度滞后根因勘正=贴线 serial 占用级联滚雪球三连环实锚(bod-tick 25644 拍 600s)+两案解耦(hub-silent 19:15 拍贴线时 power 正常)+506 配对判读口径修正(结算面为主)+v9 纳入 CIM 备选+§115④ 断供归因不成立(恢复后 20 拍 dur 5-7min 常态)+03:30Z 拍 77min=A 型 job 维度复现+8711 staleness 源字段勘误附笔
+- registry：v2.1；今日 registry 提交无变化
