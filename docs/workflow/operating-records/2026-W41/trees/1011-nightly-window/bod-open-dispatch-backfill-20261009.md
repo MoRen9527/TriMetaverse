@@ -765,3 +765,10 @@
 - **DC 面 UNATTENDSLEEP 改裁：归零准行（§110 ② 反转）**。裁据三条：①CEO 13:26 澄清=电池模式「永不睡眠」意图显式证据——DC=0x78（120s）与其 UI 设置意图相违（正如 AC 面曾违），归零=意图补全与 AC 面完全同构，非新取舍；②断供期值守连续性随裁恢复（12 分钟入睡链消除·97%→3% 约 4.5h 缓冲）；③DC 侧 standby-timeout-dc 本=0（CEO 设置在位）唯 UNATTENDSLEEP 隐藏项违逆。即转 CTO 落地+读回验锚。
 - **BATACTIONCRIT 3% 保命休眠维持不动（§106 裁不变）**：硬件保命层（防硬断电丢数据）与睡眠策略两类——DC 归零后断供形态=不自动睡·值守连续，电池耗尽至 3% 仍保命休眠（CEO 插电则两层都无感）。
 - **勘正留痕**：§110「DC 面 UNATTENDSLEEP 不动（CEO『电池面不动』取舍维持）」行作废——裁据系 BOD 对 CEO 既有设置意图的误推（未勘 CEO UI 层设置面即代立取舍），候 CAO 记忆条：**代立「CEO 取舍」前必先勘 CEO 既有设置/意图实锚**。
+
+## §113 DC 归零闭环收账+宿主睡眠策略全景终态（2026-10-12·时点=commit 时戳）
+
+- **收讫（13:31 CTO 执行毕报·§十一.1 续笔 31af52c85/验真 b81b5132c）**：UNATTENDSLEEP **AC/DC 双面归零**读回断言 ✓（setdcvalueindex 0+setactive）——CEO UI「睡眠两面均永不」意图两面补全毕；SUB_SLEEP 全段与 13:13 读数逐键一致零旁伤 ✓；BATACTIONCRIT 0x02/BATLEVELCRIT 3% 保命层未触碰 ✓。§112 闭环。
+- **宿主睡眠策略全景终态（入册级快照）**：①timeout 型自主入睡路径 AC/DC 两面全堵（UNATTENDSLEEP 0/0+STANDBYIDLE 0/0+HIBERNATEIDLE AC=0）；②残余睡眠面=3% 硬件保命层（§106 裁维持）+DC standby budget 系（SUB_PRESENCE DC 非零项·CEO UI 未涉面）——budget 系在册观察：若冻结窗观察期出现电池模式入睡再勘补面（CTO 候裁不擅动姿态认）；③PlatformAoAc=0 销项倾向维持（§111·观察期至 R1 窗后首日）。
+- **断供面现势**：13:31 活体 ac=false pct=83%（升报已发·终端通知送达/手机通道未激活）——DC 归零后机器不再自主睡，3% 保命线约 3.2h 窗口；插电=唯一正解，COO 13:35 复探锚候断言。
+- **复探锚终版**：R1 窗前检查段（v8 三值+两读项+AC/DC=0 双断言）+冻结窗观察期（至 R1 窗后首日收口·AC 面绝迹销 PlatformAoAc 候裁·DC 面再入睡勘 budget 系）。
