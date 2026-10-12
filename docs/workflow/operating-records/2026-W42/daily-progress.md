@@ -135,3 +135,9 @@
 - 巡检兜底补写 @23:40 +08：自上次进度提交 eba0fed3 后新增 1 条 commit：
   - b5f8ea61 docs(audit): 维度4主审材料·发布拷贝漂移清单——归一化比对法(裸 hash 22/22 DIFF 系宿主形制包装·归一后 15/22 同体);真漂移=双形重复文件族 4 件(claude 小写旧代残留×2+gh 全同复本×2)+宿主方言族设计内(tools/BOM/user-invocable);源-发布时效零漏发布信号;只审不改恪守 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-13（周二）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @03:00 +08：自上次进度提交 b38903e5 后新增 1 条 commit：
+  - 91801c1d docs(cfo): W42 复电实锚 10-13 02:52——PowerOnline=True·33% 充电中·机器未冻结·one-shot +2h58m 补触发（睡眠冻结 timer 假说候证）·跑道警示撤销·谷值/恢复窗缺样如实记
+- registry：v2.1；今日 registry 提交无变化
