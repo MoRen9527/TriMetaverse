@@ -84,3 +84,6 @@
   - fab3eaf7 docs(cfo): W42 第四发告警记档——活体验证 AC 90% 正常·锯齿噪声态确认·CTO 即认勘正案闭（勘修升两条候 BOD 排程）
   - 634534a0 docs(cfo): W42 闸面事件续报——powerMonitor 回充段瞬态超时反复型（三发告警/readFailures 0→2 复爬/真实电源三验 AC 正常）·复发签名达 CTO 勘修窗·告警噪态值守以 CIM 通道为准
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:40 +08：自上次进度提交 1d670e95 后新增 1 条 commit：
+  - 263f0dd1 docs(cfo): W42 日报 10-12 18:00 锚+周一复工令——周窗 48% 剩 52%≈1.40B 点宽裕；18:00 槽对 +8/24h 工作日 pace 低于周末；锯齿终态 readFailures=0 回充段窗闭自愈；三锚全卷三线零触发
+- registry：v2.1；今日 registry 提交无变化
