@@ -1,8 +1,8 @@
 # §95 TriMLC 8713 部署窗毕报 · 2026-10-12 晨窗（COO 编排收口）
 
 - sourceOfTruth: 本件（2026-W42/trees/lg069-power-gate-20261007/coo-deploy-window-report-20261012.md）
-- syncMode: static（毕报终卷·§六 CTO 判读追补段 09:49 并入）
-- lastSyncedAt: 2026-10-12T09:49:12+08:00（date 现查原值·追补刷新）
+- syncMode: static（毕报终卷·§六 CTO 判读追补段 09:49 并入·活雷处置面 10:07 刷新）
+- lastSyncedAt: 2026-10-12T10:07:21+08:00（date 现查原值·处置面刷新）
 - 编排位: COO 小营（m-coo）；令源=BOD §95 派工（09:20·落卷 465ee2f3）·窗族令原则批（23:58 §94·窗位本席/CTO 对表落定即动）
 - 窗位: 2026-10-12 09:20-09:45（实际 09:20 硬前置→09:4x 终验毕·硬锚内）
 - 对象: TriMLC dev 顶 cb5dba8（f612b9e LG-067 活性探针+cb5dba8 注释勘语义）一次冷启部署生效 + 8713 停摆恢复 + 8711 从闸转正对表
@@ -49,6 +49,7 @@ BOD §96 三件认领毕（09:34 回执·候部署窗毕报后同日排窗不并
 - **本席 §四① 三点答复**：①「600s 兜底未兑现」勘正=**兑现了，被睡眠冻结延迟到唤醒**（setTimeout 睡眠期不过期·解冻即 kill+resolve timeout·形态自洽）；②「件B 在役仍发生」=无关已证伪三重（旧 dist 特征串在位+channel.err 零 crash 行+uptime 连续）；③部署窗价值不受损·f612b9e 探针首战抓真形态·mc_link/trimc connected·degraded 自愈项闭。
 - **cron 引擎代码零缺陷零改动如实**——本窗观察项 §四① 判读义务闭合。
 - **活雷交底（第一因未除）**：值班机睡眠策略电池模式仍触发·复发即 8h 级全冻结。速效缓解三件候批：a) 电源策略改接电恒醒（powercfg standby-timeout-ac 0·机器级·候 BOD 裁）b) schtasks l1 拍电池条件豁免 c) l1 脚本 ssh ServerAlive 超时（候 FSD 窗）——三件本席候排池登记·a 项建议 BOD 裁（值班机为运营生产面·机器级改动涉全席会话宿主·非本席自裁域）。
+- **【处置面刷新·10:03 CTO 信收编】**：a 项=CEO 个人工作机全局电源策略超 BOD 域→**候 CEO 请裁中**（BOD 09:50 裁转）；b 项=**域内准行·CTO 10:00 落地毕销项**（f87489134·落地变形=L1 schtasks 腿 10-11 09:25 已按 W1 窗迁移硬序退役〔门禁卷自裁·daemon cron 接管〕非电池拦→实际落 TriLiveness-L2 现役豁免两键翻转 StopIfGoingOnBatteries/StartWhenAvailable+L1 退役态顺修禁 Enable 防 8713 双写者·判读卷 §八补笔自纠）；c 项=准行候 FSD 窗挂账。**候排池现势=①a 候 CEO ②b 销项 ③c 候 FSD 窗**。
 
 ## 使用依据
 
