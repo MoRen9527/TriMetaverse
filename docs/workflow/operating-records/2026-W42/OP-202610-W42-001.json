@@ -9,9 +9,9 @@
     "status": "active",
     "summary": "W42 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
-        "updatedBy": "CEOChiefOfStaff",
+        "updatedBy": "ChiefOperatingOfficer（activeTrees 挂载·BOD §96/§98 授权补课批①）",
         "version": "1.0.0",
-        "lastUpdated": "2026-10-11T15:00:11.036520+00:00",
+        "lastUpdated": "2026-10-12T12:52:30+08:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
@@ -35,8 +35,97 @@
         "TriLC",
         "TriMC"
     ],
-    "updatedAt": "2026-10-11T15:00:11.036520+00:00",
-    "activeTrees": [],
+    "updatedAt": "2026-10-12T12:52:30+08:00",
+    "activeTrees": [
+        {
+            "treeId": "lg065-duty-seat-bc-20261006",
+            "title": "LG-065 值席 b+c 组合案（sg 独立值席+两机盯梢 daemon 化）",
+            "path": "2026-W41/trees/lg065-duty-seat-bc-20261006/",
+            "owner": "COS 收口+STE 巡检（清单推定·候席位对表刷注）",
+            "closeoutWindow": "今晚 19:03 窗毕→STE 巡检（COS 清单原文）",
+            "deadline": "19:03 窗",
+            "status": "active",
+            "registeredBy": "BOD §96 补课批（09:34 认领）+§98 转件 8 在途清单（f27a9260c·09:41）",
+            "registeredAt": "2026-10-12T12:52:30+08:00"
+        },
+        {
+            "treeId": "lg066-window-order-20261009",
+            "title": "LG-066 TriRMC 合并回单单元+端口收敛终态",
+            "path": "2026-W41/trees/lg066-window-order-20261009/",
+            "owner": "CTO 终判+COS 终验（LG-071 改形双门）",
+            "closeoutWindow": "双门候（CTO 终判+COS 终验）",
+            "deadline": "候门令",
+            "status": "active",
+            "registeredBy": "BOD §96 补课批（09:34 认领）+§98 转件 8 在途清单（f27a9260c·09:41）",
+            "registeredAt": "2026-10-12T12:52:30+08:00"
+        },
+        {
+            "treeId": "lg067-fsd-report",
+            "title": "LG-067 活性探针（tri-liveness·TriMLC 8713 在役）",
+            "path": "2026-W41/trees/lg067-fsd-report/",
+            "owner": "CTO（探针在役面）",
+            "closeoutWindow": "影子期（影子试运行进行中）",
+            "deadline": "影子期读数窗候排",
+            "status": "active",
+            "registeredBy": "BOD §96 补课批（09:34 认领）+§98 转件 8 在途清单（f27a9260c·09:41）",
+            "registeredAt": "2026-10-12T12:52:30+08:00"
+        },
+        {
+            "treeId": "lg069-power-gate-20261007",
+            "title": "LG-069 电源门 phase2（终验锚段+灰度段候批另论）",
+            "path": "2026-W41/trees/lg069-power-gate-20261007/",
+            "owner": "CTO（phase2 方案稿 a00045f1 候批）",
+            "closeoutWindow": "终验锚段+灰度段候批（COS 09:43 勘正口径：629bd694=CTO W1 补窗值窗审卷非 phase2 候批件）",
+            "deadline": "候批窗",
+            "status": "active",
+            "registeredBy": "BOD §96 补课批（09:34 认领）+§98 转件 8 在途清单（f27a9260c·09:41）",
+            "registeredAt": "2026-10-12T12:52:30+08:00"
+        },
+        {
+            "treeId": "q32-ui-upgrade",
+            "title": "Q3.2 卡面端口收敛（8712→8710·施工毕候部署窗）",
+            "path": "2026-W41/trees/q32-ui-upgrade/",
+            "owner": "值席 COS（部署段）",
+            "closeoutWindow": "候部署窗（施工毕 @a17deaff 未部署）",
+            "deadline": "候窗令",
+            "status": "active",
+            "registeredBy": "BOD §96 补课批（09:34 认领）+§98 转件 8 在途清单（f27a9260c·09:41）",
+            "registeredAt": "2026-10-12T12:52:30+08:00"
+        },
+        {
+            "treeId": "python-leak-cleanup-20261009",
+            "title": "python-leak-cleanup（泄漏清理·疑活态）",
+            "path": "2026-W41/trees/python-leak-cleanup-20261009/",
+            "owner": "FSD（施工面推定）",
+            "closeoutWindow": "疑活态——优先排（COS 清单优先级最高条）",
+            "deadline": "优先·候活态勘明窗",
+            "status": "active",
+            "registeredBy": "BOD §96 补课批（09:34 认领）+§98 转件 8 在途清单（f27a9260c·09:41）",
+            "registeredAt": "2026-10-12T12:52:30+08:00"
+        },
+        {
+            "treeId": "seat-cycle-restart-window",
+            "title": "席位周期重启窗 R1（§101 三裁今晚 23:00 重排）",
+            "path": "2026-W41/trees/seat-cycle-restart-window/",
+            "owner": "BOD 执行+COO 协调（§105 案一：批 1-3 COS 操→批 4 BOD 操+COO 观）",
+            "closeoutWindow": "今晚 23:00-00:15 窗（§98 答复：昨晚 23:10 窗=周平面迁移非席位重启窗·R1 未执行实锚经本席跟踪卷对表+§101 重排裁定）",
+            "deadline": "2026-10-12 23:00",
+            "status": "active",
+            "registeredBy": "BOD §96 补课批（09:34 认领）+§98 转件 8 在途清单（f27a9260c·09:41）",
+            "registeredAt": "2026-10-12T12:52:30+08:00"
+        },
+        {
+            "treeId": "duty-lane-process-audit-20261007",
+            "title": "duty-lane 流程审计（charter-only）",
+            "path": "2026-W41/trees/duty-lane-process-audit-20261007/",
+            "owner": "COS（charter 域）",
+            "closeoutWindow": "charter-only 静默 5 天（处置候：清尾收口或冻结候裁）",
+            "deadline": "候处置裁",
+            "status": "active",
+            "registeredBy": "BOD §96 补课批（09:34 认领）+§98 转件 8 在途清单（f27a9260c·09:41）",
+            "registeredAt": "2026-10-12T12:52:30+08:00"
+        }
+    ],
     "doneTreesFromPreviousWeek": [
         {
             "treeId": "w33-weekly-migration-ade",
