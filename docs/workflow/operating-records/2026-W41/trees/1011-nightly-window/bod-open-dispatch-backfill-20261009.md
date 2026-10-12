@@ -874,3 +874,10 @@
 
 - **§127 异常①勘正**：18:37 拍非缺失——daemon 版 tick **18:41:31 出**（延迟 4.5min=B 型滞后自愈型·与 13:40 案同签名）。「bod-tick 18:37 拍真缺失」表述勘误；log 那批四 job triggered（trimodel-l2-scan/tree-node-patrol/ledger-watchlist-patrol/hub-silent-detect）=18:41:31 拍非 18:45 拍。daemon 形态收窄=**power 读路径挂（20 连发未恢复·硬伤维持）+调度滞后（触发面确认仍活）**——「半瘫」降格为「power 读单边挂+调度滞后」，勘验归 CTO 不变。
 - **19:07:33 拍转报**：本地 m-ste/m-coo 活跃（2 席·复工迹象观察——候 CEO 答复「是否已唤人」一并定性）；8711 uptime_h=20、四口绿、大表 22/6。LG-069 第三波告警 19:10:14 入（§127 power 读挂段延续·已覆盖）。
+
+## §129 LG-066 N3 72h 观察窗收口复核 PASS（STE 毕报·19:15 窗）
+
+- **STE 毕报收账**（19:14）：四锚+附锚全绿收口 PASS（LastRun 19:00:01 Result=0+8710 healthz 同构+8712 空置 0 维持 72h+cron 拍 exit 0+trirmc 72h 零重启）；52 非 OK 行全谱独立重读毕；勘正链如实录（初笔误落 fsd-sgb-fix 分支→即认即勘 worktree cherry-pick 重落 dev f05d1ba·教训自领 commit 前四查补第四查=分支名断言）。
+- **BOD 轻量值面抽验 PASS**（19:15:18）：卷存在 8922B/**98 行逐字吻合**+dev 顶笔 **f05d1ba** 与毕报一致（标题逐字对表）；TriCompany 工作区检出 fsd-sgb-fix 分支=BOD 只读抽验未触碰。
+- **三注记处置**：①lg065/LG-066 令文归属差=候 COS 刷账面（候办转 COS）；②dev 本地 ahead 7 未推（含 CAO 在途笔）=候收口批推（既有 GitHub 443 欠推挂账并批）；③8712 放归服务域池=转 COO/值席面处置。
+- **R1 窗**：STE 段 23:35-23:50 候令（在批 1-3 COS 操盘段内·编排吻合）。
