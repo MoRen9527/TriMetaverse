@@ -222,7 +222,9 @@ async function main() {
     let urgent = "normal";
     if (a.level === "duty-escalate") {
       targets = ["bod"];
-      title = `[silent-detect] 值席静默直报：中枢 m-cos 已静默 ${a.silentMin}min`;
+      // 件③(10-12夜调参): 插条目 id 真名 — 原硬编码「中枢 m-cos」对任何 duty-escalate
+      // 节点都错（变体⑤实锚: 条目=duty-cos 时标题张冠李戴）。信号源如实在 body。
+      title = `[silent-detect] 值席静默直报：${a.id} 已静默 ${a.silentMin}min`;
       urgent = "urgent";
     } else if (a.level === "idle-escalate") {
       targets = ["m-cos"];
@@ -243,10 +245,22 @@ async function main() {
           .map(([k, v]) => `${k}=${v ? new Date(v).toISOString() : "n/a"}`)
           .join(" ")
       : a.error || "";
+    // 件②(10-12夜调参): silentMin 用 round start 基点——贴线跑时滞后发送最长一轮(900s+)，
+    // 报文静默值系统性低估（模板值⑤犯实锚: 报 40min 实距 53min）。发送时按信号源重算实距。
+    const sendMs = Date.now();
+    const srcVals = a.perSource
+      ? Object.values(a.perSource).filter((v) => typeof v === "number")
+      : [];
+    const realMin = srcVals.length
+      ? Math.floor((sendMs - Math.max(...srcVals)) / 60000)
+      : a.silentMin;
     const body =
-      `条目=${a.id} 状态=${a.status || "-"} 级别=${a.level} 静默=${a.silentMin === Infinity ? "∞(无信号)" : a.silentMin + "min"}\n` +
+      `条目=${a.id} 状态=${a.status || "-"} 级别=${a.level} 静默=${realMin === Infinity ? "∞(无信号)" : realMin + "min"}` +
+      (realMin !== a.silentMin ? `（round 基点读数 ${a.silentMin}min）\n` : "\n") +
       `信号源: ${src}\n` +
       `来源=hub-silent-detect 900s job（灰度第 1 周；三源 OR 豁免；冷却 ${COOLDOWN_MIN}min/节点/级）`;
+    // title 同步用实距
+    title = title.replace(`${a.silentMin}min`, `${realMin === Infinity ? "∞" : realMin + "min"}`);
 
     try {
       await notifyOrThrow({ targets, title, body, urgent });

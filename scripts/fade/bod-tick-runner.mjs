@@ -8,11 +8,11 @@ import { readFileSync, writeFileSync, appendFileSync, mkdirSync, readdirSync, st
 const SG = 'M-SG-47.245.122.61';
 const RHY = 'R-HY-8.155.54.79';
 const REPO = 'D:/Code/ai/TriMetaverse';
-// 13 席名册（CEO 10:34 令：节拍须报全席在岗态，一席在干活=非空闲）
-const LOCAL_SEATS = ['m-cho', 'm-cfo', 'm-rdt', 'm-cto', 'm-sde', 'm-ste', 'm-cpo', 'm-cmo', 'm-coo', 'm-cao', 'm-cos', 'm-cso'];
+// 13 席名册（CEO 10:34 令：节拍须报全席在岗态，一席在干活=非空闲；m-fsd 补漏 2026-10-11 BOD 派工件3——名册缺漏实锚=拍报「12 席」而本注释写 13 席）
+const LOCAL_SEATS = ['m-cho', 'm-cfo', 'm-rdt', 'm-cto', 'm-sde', 'm-ste', 'm-cpo', 'm-cmo', 'm-coo', 'm-cao', 'm-cos', 'm-cso', 'm-fsd'];
 const ACTIVE_MS = 120_000; // transcript mtime 120s 内有写=会话在干活
 
-// 本机 12 席探针：扫 transcript jsonl，活跃者读头 4KB 提 customTitle 归席位
+// 本机 13 席探针：扫 transcript jsonl，活跃者读头 4KB 提 customTitle 归席位
 function scanLocalSeats() {
   const root = 'C:/Users/jedih/.claude/projects';
   const active = new Set();
@@ -37,9 +37,11 @@ function scanLocalSeats() {
   return { active: LOCAL_SEATS.filter((s) => active.has(s)) };
 }
 
+// ssh 绝对路径——daemon 环境（TriMLC cron 执行体）PATH 无 ssh，spawnSync 'ssh' ENOENT（11:40 拍实证；首修 11:54 未 commit 被并行 git 操作洗掉·14:37 拍复发实证=未提交修复必洗，当场 commit）
+const SSH_EXE = 'C:/Program Files/Git/usr/bin/ssh.exe';
 // spawnSync 数组参数不过本地 shell——远端命令原样交 ssh，零引号地狱
 function ssh(host, remoteCmd, timeoutMs = 40000) {
-  const r = spawnSync('ssh', ['-o', 'ConnectTimeout=12', host, remoteCmd], {
+  const r = spawnSync(SSH_EXE, ['-o', 'ConnectTimeout=12', host, remoteCmd], {
     encoding: 'utf8',
     timeout: timeoutMs,
     windowsHide: true,
@@ -134,7 +136,15 @@ const probes = {};
   try {
     const r = await fetch('http://127.0.0.1:8711/healthz', { signal: AbortSignal.timeout(6000) });
     const j = await r.json();
-    probes.rlc = `ok=${j.ok} uptime_h=${Math.round((j.uptime || 0) / 3600)} cron=${j.cron?.jobCount ?? '?'} mc_link=${j.mc_link}`;
+    // LG-069 二期候批条③（CTO 稿 cto-power-gate-phase2-plan-20261011 §四.4/§八.3·BOD 转单 2026-10-11）：
+    // 扩 8711 healthz 探=预埋读 follower 段（从闸 v1 落窗后 8711 app.ts 投影四键
+    // state/lastPollAt/lastGateSeen/pollFailures）——现役段不在位如实标 absent，
+    // 落窗后本探针自动变活，覆盖 unknown 段告警盲区（§2.4 巡检面=BOD 第二双眼睛）。
+    const f = j.follower || null;
+    const fSeg = f
+      ? ` follow=${f.state ?? '?'} lastPoll=${f.lastPollAt ?? '?'} gateSeen=${f.lastGateSeen ?? '?'} pollFail=${f.pollFailures ?? '?'}`
+      : ' follow=absent(从闸未落窗)';
+    probes.rlc = `ok=${j.ok} uptime_h=${Math.round((j.uptime || 0) / 3600)} cron=${j.cron?.jobCount ?? '?'} mc_link=${j.mc_link}${fSeg}`;
   } catch (e) {
     probes.rlc = `探针失败: ${String(e).slice(0, 120)}`;
   }
@@ -162,8 +172,8 @@ const dutyBusy = probes.dutyBusy === true;
 const totalBusy = activeLocal.length + (dutyBusy ? 1 : 0);
 const dutyLine = `**sg duty 组（重点）**：${probes.duty}`;
 const localLine = seats.err
-  ? `本地 12 席扫描失败（${seats.err}）`
-  : activeLocal.length ? `本地在干活：${activeLocal.join('、')}` : '本地 12 席全空闲';
+  ? `本地 13 席扫描失败（${seats.err}）`
+  : activeLocal.length ? `本地在干活：${activeLocal.join('、')}` : '本地 13 席全空闲';
 const L = [];
 L.push(`**节拍（daemon 版）${ts}**`);
 L.push('');
@@ -184,4 +194,47 @@ const dir = `${REPO}/docs/workflow/operating-records/${week}/trees/bod-tick`;
 mkdirSync(dir, { recursive: true });
 writeFileSync(`${dir}/tick-latest.md`, report, 'utf8');
 appendFileSync(`${dir}/tick-log-${ts.slice(0, 10)}.md`, report + '\n', 'utf8');
+
+// ── 件1 写信箱段（Option A 节拍投递，BOD 2026-10-11 派工；拍报落盘已在上面发生，本段任一挂≠拍炸）──
+// target_seat='board'（件2 裁决甲）：notify-inject.cjs worktree 路径按 seats.json opsName 推导
+// （wt/board → 'board'），主树路径 'bod' 行为零变化；seats.json=派生产物勿手编，故不改配置改写信名。
+// 竞争面注：信箱全量读改写与 notify 注入端存在理论竞争，拍频 30min 概率极低（BOD 任务书定）。
+// 件2 健壮化（BOD 转单 2026-10-11·COS 毕报 7966e5b1/645d80de 建议）：兼容两顶层形态——
+// object{letters:[…]}（主形）+ array 裸形（COS 清库短暂切换态，14:1x 曾致旧守卫静默 skip 实锚）；
+// 写回保持原顶层形态（裸形不擅自升格主形，避免与注入端在过渡窗的形态预期分叉）。
+{
+  const MAILBOX = 'D:/Code/ai/TriMLC/notify-mailbox.json';
+  try {
+    const mb = JSON.parse(readFileSync(MAILBOX, 'utf8'));
+    const bare = Array.isArray(mb);
+    const letters = bare ? mb : mb && Array.isArray(mb.letters) ? mb.letters : null;
+    const container = bare ? null : mb; // 主形=整个 object 写回；裸形=数组本身写回
+    if (letters) {
+      const letter = {
+        message_id: `ntf-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}--bod-tick`,
+        source_seat: 'bod-tick',
+        target_seat: 'board',
+        urgent: 'normal',
+        title: `节拍 ${ts}`,
+        body: report.slice(0, 500),
+        delivery: 'mailbox',
+        received_at: new Date().toISOString(),
+        delivered_at: new Date().toISOString(),
+        read: false,
+      };
+      try {
+        letters.push(letter);
+        writeFileSync(MAILBOX, JSON.stringify(container ?? letters, null, 2), 'utf8');
+        console.log(`[bod-tick] mailbox letter ${letter.message_id} -> board`);
+      } catch (e) {
+        console.error(`[bod-tick] mailbox write fail (拍报已落盘不受影响): ${String(e).slice(0, 120)}`);
+      }
+    } else {
+      console.error('[bod-tick] mailbox unrecognized shape (neither object{letters} nor bare array) - skip (拍报已落盘不受影响)');
+    }
+  } catch (e) {
+    console.error(`[bod-tick] mailbox read/parse fail - skip (拍报已落盘不受影响): ${String(e).slice(0, 120)}`);
+  }
+}
+
 console.log(`[bod-tick] ${ts} report written -> ${dir}/tick-latest.md`);

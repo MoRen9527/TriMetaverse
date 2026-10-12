@@ -112,7 +112,24 @@ export function readTreeGitTs(repoRoot, treePath) {
   }
 }
 
-/** Source ③: freshest transcript mtime among alias names for one seat key. */
+/** Read only the first line of a file without loading the whole file (10-12夜件④:
+ *  full readFileSync on multi-MB transcripts was the serial-round slowdown main
+ *  suspect — collectNodeSignals × every .jsonl × full content each round). */
+function readFirstLine(p) {
+  const fd = fs.openSync(p, "r");
+  try {
+    const buf = Buffer.alloc(4096);
+    const n = fs.readSync(fd, buf, 0, 4096, 0);
+    return buf.toString("utf8", 0, n).split("\n", 1)[0];
+  } finally {
+    fs.closeSync(fd);
+  }
+}
+
+/** Source ③: freshest transcript mtime among alias names for one seat key.
+ *  勘验注（10-12夜·灰度素材④面）: mtime = fs.statSync 真读非算法生成值；观测到的
+ *  毫秒段匀速递增（.301→…→.744）真源=常驻席 hook 低频注入 touch transcript，
+ *  非人工活动亦非读数面造假 — mtime 信号无法区分系统注入与真人席活动（灰度观察项）。 */
 export function readTranscriptMtime(seatKey, projectDir = DEFAULT_PROJECT_DIR) {
   const aliases = SEAT_ALIASES[seatKey] || [];
   let best = null;
@@ -125,7 +142,7 @@ export function readTranscriptMtime(seatKey, projectDir = DEFAULT_PROJECT_DIR) {
   for (const f of files) {
     const full = path.join(projectDir, f);
     try {
-      const first = fs.readFileSync(full, "utf8").split("\n", 1)[0];
+      const first = readFirstLine(full);
       const obj = JSON.parse(first);
       const title = obj?.customTitle;
       if (!title || !aliases.includes(title)) continue;

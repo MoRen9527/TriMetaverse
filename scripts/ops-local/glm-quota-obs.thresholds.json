@@ -1,0 +1,19 @@
+{
+  "_comment": "DEM-004 three-line thresholds - CFO canonical 2026-10-11T09:44+08 confirmed zero corrections (values = endpoint = unchanged). Missing this file => script emits explicit thresholds=missing degraded row, never silent fallback (CTO increment gate 1).",
+  "observe_weekly": 70,
+  "warn_pace_daily": 15,
+  "pause": 30,
+  "watch_5h": 70,
+  "slowdown": 90,
+  "asof": "2026-10-08T11:53:50+08:00",
+  "asofNote": "asof kept at CFO input-letter time (values unchanged since; canonical confirmation 2026-10-11T09:44+08 zero-correction)",
+  "source": "cfo-dem004-quota-observation-inputs.md (canonical confirmed 2026-10-11, COO relay @6bce33d8)",
+  "actions": {
+    "_comment": "breach->report routing map, carrier = CFO input sec-6.3 (COO relay 2026-10-11T09:48+08). Consumers: phase-2 notify implementation; script phase-1 ignores unknown keys (explicit five-key snapshot copy).",
+    "observe_weekly": "report:COO+BOD",
+    "warn_pace_daily": "report:COO",
+    "pause": "report:COO+BOD+suggestion:halt",
+    "watch_5h": "inline-note-only",
+    "slowdown": "report:COO+BOD+action:slowdown"
+  }
+}

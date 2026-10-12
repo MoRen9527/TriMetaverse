@@ -1,0 +1,129 @@
+# 2026-W42 每日工作进度（仓库级粗粒度恢复兜底）
+
+> sourceOfTruth: 本文件（周平面维护项，FADE-001 承接）｜维护方：事件驱动主（董事长助理）+ 巡检兜底（daily-progress-watcher，本节即其自动补写）｜粒度：粗（日级战役/挂账/锚点）
+
+---
+
+## 2026-10-12（周一）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:00 +08：自上次进度提交 周初基线 后新增 500 条 commit：
+  - 7478caa1 docs(coo): 终验窗毕+21:00 三重拍+绩效首跑段——COS 终验毕报收编（五 PASS+卡4 跳过=对象 A 验收通过·19:10:27 落卷·毕报链 COS→BOD→CEO 不代转）+21:00 三重拍读数全绿（uptime 33258 连续/crash.log 零基线/hub-silent 21:00 拍贴线 396s 自愈=同签名第二例）+performance-sunday-settle 首跑落账（21:06:55·434ms·延迟 6.9min 系排队·LOG sent ok·STATE notified 三钉②兑现·next 滚 10-18）+CHO 即办自裁认账+CFO 18:00 锚收编（晚窗三窗预算零约束）+COS 静默第三例照先例不唤醒
+  - 8509ba69 docs(coo): 终验窗毕+21:00 三重拍+绩效首跑段——COS 终验毕报收编（五 PASS+卡4 跳过=对象 A 验收通过·19:10:27 落卷·毕报链 COS→BOD→CEO 不代转）+21:00 三重拍读数全绿（uptime 33258 连续/crash.log 零基线/hub-silent 21:00 拍贴线 396s 自愈=同签名第二例）+performance-sunday-settle 首跑落账（21:06:55·434ms·延迟 6.9min 系排队·LOG sent ok·STATE notified 三钉②兑现·next 滚 10-18）+CHO 即办自裁认账+CFO 18:00 锚收编（晚窗三窗预算零约束）+COS 静默第三例照先例不唤醒
+  - 2220897d docs(plane): 巡检兜底补写 2026-10-11 23:50——4 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）
+  - fe01639d merge: 收编并行笔（值席落盘防覆盖）
+  - e50c2bb4 docs(coo): 终验窗毕+21:00 三重拍+绩效首跑段——COS 终验毕报收编（五 PASS+卡4 跳过=对象 A 验收通过·19:10:27 落卷·毕报链 COS→BOD→CEO 不代转）+21:00 三重拍读数全绿（uptime 33258 连续/crash.log 零基线/hub-silent 21:00 拍贴线 396s 自愈=同签名第二例）+performance-sunday-settle 首跑落账（21:06:55·434ms·延迟 6.9min 系排队·LOG sent ok·STATE notified 三钉②兑现·next 滚 10-18）+CHO 即办自裁认账+CFO 18:00 锚收编（晚窗三窗预算零约束）+COS 静默第三例照先例不唤醒
+  - 629bd694 docs(cto): W1 补窗值窗审卷——五笔全 APPROVE 窗 PASS（5ce806e 盘点/5874375 件A/6fbde65 件C/130133a 件B/2e1e594 从闸逐销·TriMLC 三正形同构对表全合·从闸五转移对表 a00045f1·staleness 严格形未采降级·unknown 放行态活体在位·tsc 独立复跑 0）+审面发现三条候办（启动段吞告警观察项/终验锚①②③④顺延明晨前置件窗与 8713 配合窗/f612b9e 6fail 归属勘定=两仓两基线无冲突）
+  - 5576ee20 docs(fsd): W1 补窗毕报卷——五 commit 全落+495/495 零 fail+生效验证值面探针全 PASS
+  - aca02b44 docs(plane): 巡检兜底补写 2026-10-11 23:20——1 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）
+  - d6e1594f docs(coo): 终验窗毕+21:00 三重拍+绩效首跑段——COS 终验毕报收编（五 PASS+卡4 跳过=对象 A 验收通过·19:10:27 落卷·毕报链 COS→BOD→CEO 不代转）+21:00 三重拍读数全绿（uptime 33258 连续/crash.log 零基线/hub-silent 21:00 拍贴线 396s 自愈=同签名第二例）+performance-sunday-settle 首跑落账（21:06:55·434ms·延迟 6.9min 系排队·LOG sent ok·STATE notified 三钉②兑现·next 滚 10-18）+CHO 即办自裁认账+CFO 18:00 锚收编（晚窗三窗预算零约束）+COS 静默第三例照先例不唤醒
+  - 0578ecf2 docs(plane): 巡检兜底补写 2026-10-11 23:10——1 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）
+  - 1c8d9185 ops: weekly plane shift
+  - 8eb29313 docs(plane): 巡检兜底补写 2026-10-11 22:50——2 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）
+  - 6755f6c8 merge: 收编并行笔（值席落盘防覆盖）
+  - 9416ba97 docs(coo): 终验窗毕+21:00 三重拍+绩效首跑段——COS 终验毕报收编（五 PASS+卡4 跳过=对象 A 验收通过·19:10:27 落卷·毕报链 COS→BOD→CEO 不代转）+21:00 三重拍读数全绿（uptime 33258 连续/crash.log 零基线/hub-silent 21:00 拍贴线 396s 自愈=同签名第二例）+performance-sunday-settle 首跑落账（21:06:55·434ms·延迟 6.9min 系排队·LOG sent ok·STATE notified 三钉②兑现·next 滚 10-18）+CHO 即办自裁认账+CFO 18:00 锚收编（晚窗三窗预算零约束）+COS 静默第三例照先例不唤醒
+  - 42fdce1a docs(plane): 巡检兜底补写 2026-10-11 22:40——2 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）
+  - …另有 485 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 613529f7 后新增 1 条 commit：
+  - 365de506 docs(cos): W41 毕树清点补登 doneTreesThisWeek 29 棵——BOD §96 补课批①(毕树登记断链第三周)·37 棵逐判=28 卷型毕+1 OP 型 done 免判+8 在途(回 BOD 转 COO 挂 W42 activeTrees)·逐树附收口/销账锚·LG-071 判读依据=卷面收口态+最后 commit+台账现势+卷尾抽读 18 棵+daily-progress 三点定谳
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:50 +08：自上次进度提交 a94d9fea 后新增 2 条 commit：
+  - f9040dad merge: 收编并行笔（值席落盘防覆盖）
+  - 71c17c7c docs(coo): §95 部署窗毕报——8713 停摆恢复+cb5dba8 部署生效（四条兑现面全毕：硬前置插电 26%→38% acOnline 确认+build RC=0 dist 0923+重启链六步全绿 pid 41568+三断言毕·bod-tick 0937 正拍 ok next 滚 1007=BOD 判据恢复实锚兑现）+f612b9e 生效锚 next_run_at 首现活滚+补触发队列消化毕（hub-silent 600s 兜底兑现形态 vs 8h19m 对照入 CTO 判读包）+8711 从闸对表（follower 轮询活零失败·unknown/null 空值形态注记候判）+值面泄漏二犯即认即报（10-02 先例口径·入册候 CAO）+§96 补课排程建议（今日 12-14 段并批）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 30ff28ba 后新增 3 条 commit：
+  - b476ab1c merge: 收编并行笔（值席落盘防覆盖）
+  - 3dae0fed docs(coo): §95 毕报 §六追补——CTO 判读收编（d2dd450d9 主判=系统睡眠非 executor 缺陷·电池耗尽 0100-0107 入眠全冻结 7.33h·091537 插电唤醒 7 秒后 600s timer 集中触发·id24934 墙钟含睡眠段·cron 引擎零缺陷零改动·本席三点 gap 全答复收编）+活雷交底三条候批（powercfg 接电恒醒候 BOD 裁/schtasks l1 电池豁免/ssh ServerAlive 候 FSD 窗）
+  - d2dd450d docs(cto): §95 判读卷——bod-tick 17 拍全缺根因定谳=系统睡眠主因（evt105 插电 09:15:37→结算 09:15:44 七秒强耦合实锚·Modern Standby 冻结期 600s timer 不过期矛盾消解）+件B 未部署假设三重证伪（dist 特征在位+crash 面零记录+uptime 连续）+tri-liveness ssh 无界挂辅因+探针双失明元层缺口（daemon 拍锁占+schtasks 电池条件拦）+速效缓解三件候批（电源恒醒/schtasks 电池豁免/ssh 超时）+cron 引擎零缺陷零改动如实
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 78977abc 后新增 6 条 commit：
+  - 5dd6d969 docs(coo): §95 毕报活雷处置面刷新——CTO 10:03 信收编（候排池①a 候 CEO 请裁[BOD 09:50 裁转·机器级超域]/②b 销项=CTO 10:00 落地毕 f87489134·L2 现役豁免两键翻转+L1 退役态禁 Enable 防 8713 双写者/③c 候 FSD 窗维持）
+  - 169b7314 merge: 收编并行笔（round1 自动收编）
+  - 60bf8455 merge: 收编并行笔（巡检兜底 10:00·origin/dev 稳定 ref 对表）
+  - 4a43aad5 docs(cfo): W42 日报件开卷+10-12 09:30 锚——周窗 43%（对表✓）三线零触发；09:30 槽对不成立（昨日缺锚）参考 +3 点/15.5h 夜段慢速；raw 10-11=526.5M；周一门令面恢复·周三重置日双锚候发
+  - 76a15f69 docs(cfo): W42 日报件开卷+10-12 09:30 锚——周窗 43%（对表✓）三线零触发；09:30 槽对不成立（昨日缺锚）参考 +3 点/15.5h 夜段慢速；raw 10-11=526.5M；周一门令面恢复·周三重置日双锚候发
+  - f8748913 docs(cto): §95 判读卷 §八落地补笔——缓解-b 执毕+§四电池门归因勘面修正（BOD 09:50 裁判落地）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:00 +08：自上次进度提交 0d965e1a 后新增 2 条 commit：
+  - 1d9d896c merge: 收编并行笔（巡检兜底 10:10·sg-server 通道对表）
+  - ee2976b3 docs(cto): §95 判读卷 §九补笔——a 件落地毕（CEO 10:44 裁插电恒醒）+入眠机制精化
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:10 +08：自上次进度提交 397fd660 后新增 3 条 commit：
+  - 760687e6 docs(cto): §107 勘验卷——第二次 Modern Standby 睡眠冻结定谳（11:32-12:47 74.8min 主冻结·506/507 全族实锚）+muo2mj6s timeout 同构+调度器自愈两读对比+三候选全否+42/107 扫族勘误+§七 a 件实效断言修正（插电也睡·候 BOD 勘正 §106）+DC 侧 standby-timeout-dc 已 0x0 拉高非正解+§八.5 v7 锚延迟同根定谳（时序嵌合冻结窗）
+  - f627f8c8 merge: 收编并行笔（值席落盘防覆盖）
+  - bbd589de docs(coo): 补课批毕报——五件落位（activeTrees 8 树挂载/需求池空表 DEM-005 续号/大表新命名首刷候日收口/追加 scoring-w42 账面+m2 账本判定正身单点 W42 指针+runbook 入口指针）+急报面收编（12:58 断供 acOnline=false 三连探实锚·DC 侧睡眠缺口·13:01 仍 false 96%·CEO 插电在途 BOD 盯防）+§107 bod-tick 复活旁证三源（镜像 next=None 分叉归 CTO 勘验）+§101 R1 窗回复项 v7 终版+锚延迟 52 分钟观察+幻觉时点 COO 案透明面
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:20 +08：自上次进度提交 72d517e5 后新增 3 条 commit：
+  - 5f1b2fda docs(cto): §110 裁决①执行回执——UNATTENDSLEEP 现值实锚 0x78(120s) 定谳 AC 面唯一自主入睡源（11:19:53 醒+600s 灭屏+120s unattend=11:31:53≈实锚 11:31:54 秒级嵌合）+AC 归零落地读回 0x0·DC 0x78 保持+旁伤对表零漂移+powercfg Bash MSYS 转换坑勘注+S0ix 唯一待机形态/SUB_PRESENCE AC 侧全零补勘
+  - 812e1ce8 merge: 收编并行笔（值席落盘防覆盖）
+  - 41d46722 docs(coo): 毕报 §六 CTO §107 勘验卷收编追补笔——锚延迟同根定谳勘正（uptime 连续≠醒着·OS 睡眠冻结唯一公共因·教训五当日实例自录）+DC 侧机理勘正（sleep 路径不分校别·拉高 timeout 非正解）+镜像分叉收窄（sqlite 权威面定谳·镜像写面候办单列）+窗前检查 v8 终版（§110·506/507 扫读+UNATTENDSLEEP 读值两只读项追加·升格条款不变）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:40 +08：自上次进度提交 2aef5f25 后新增 2 条 commit：
+  - b81b5132 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 31af52c8 docs(cto): §112 DC 面归零续笔——UNATTENDSLEEP AC/DC 双面 0x0 读回断言+旁伤对表唯一变化零漂移+BATACTIONCRIT 保命层未触碰维持+CEO UI 澄清(AC/DC 均永不)意图补全同构落地
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:50 +08：自上次进度提交 b27a9c05 后新增 2 条 commit：
+  - c0eb3979 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 14a6def4 docs(cto): §十二 第二例并勘定谳——next 滞后=hub-silent-detect 贴线跑满 600s race 占用型（id 25183 dur=600026 settle 13:40:02 与恢复秒级吻合）+§107 族 A/B 分型（睡眠冻结已堵 vs 贴线占用运行质量项）+贴线恶化实锚 26%→近三拍 100%（13:00/15/30 连续 timeout）+恶化归因断供期嫌疑候深勘
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:00 +08：自上次进度提交 81b713c4 后新增 2 条 commit：
+  - edec314a Merge remote-tracking branch 'sg-server/dev' into dev
+  - b09c748e docs(cto): §十二.1 灰度首例直报对表闭环——COS 候令静默终判值面准确零误报+疑点②解除(race 影响面=触发时延非值面)+分流素材两件候灰度评估+escalate 前置判据输入(在途任务表/尾态分型·实现归 FSD 调参)
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:30 +08：自上次进度提交 364e0db6 后新增 3 条 commit：
+  - f4fa4e94 merge: 收编并行笔（值席落盘防覆盖）
+  - bb7e4959 docs(coo): 毕报回归断言补记——断供终态闭合（BOD 14:23:07 读数 acOnline=true/79%% 回充·断供段 ~85 分钟零入眠·UNATTENDSLEEP 归零生效面·R1 窗前提达成 22:30/23:00 维持原排·勿复探遵令引 BOD 读数非自探·停工收口笔）
+  - 0b375a32 docs(fsd): hub-silent 灰度素材④勘验附注——冷却本机在位/静默值销案/新锚 m-sde 级联链
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:40 +08：自上次进度提交 3c23fd71 后新增 2 条 commit：
+  - b757cab9 docs(cfo): W42 补记——落卷转存 dc071164e 达 bare✓+COO 分发回执+SDE 回执代转+LG-069 闸面事件（powerMonitor 3 连败·活体现查 AC 89% 正常·已达 CTO 候复工处置）
+  - dc071164 docs(cfo): W42 日报 10-12 14:00 锚+周一停工令——周窗 45%（对表✓）；14:00 槽对 +7/24h 工作日午前低于周末稳态；停工令 14:30:20 达 COO（特窗今日在案无·单日裁窗不跨日沿用注明）；三线零触发
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:50 +08：自上次进度提交 8a39be71 后新增 2 条 commit：
+  - fab3eaf7 docs(cfo): W42 第四发告警记档——活体验证 AC 90% 正常·锯齿噪声态确认·CTO 即认勘正案闭（勘修升两条候 BOD 排程）
+  - 634534a0 docs(cfo): W42 闸面事件续报——powerMonitor 回充段瞬态超时反复型（三发告警/readFailures 0→2 复爬/真实电源三验 AC 正常）·复发签名达 CTO 勘修窗·告警噪态值守以 CIM 通道为准
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:40 +08：自上次进度提交 1d670e95 后新增 1 条 commit：
+  - 263f0dd1 docs(cfo): W42 日报 10-12 18:00 锚+周一复工令——周窗 48% 剩 52%≈1.40B 点宽裕；18:00 槽对 +8/24h 工作日 pace 低于周末；锯齿终态 readFailures=0 回充段窗闭自愈；三锚全卷三线零触发
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:00 +08：自上次进度提交 3a575c42 后新增 3 条 commit：
+  - cb0dda00 docs(cfo): W42 勘误条——锯齿「自愈」定性撤回（第二波 18:35-18:43 五发+readFailures 0→6 满电 AC 态仍复爬·跨充放电态持续）；「未再入」断言与 CTO 同族失误自领；值守 CIM 四验全 AC 零事件
+  - 98213228 docs(cos): W42 OP activeTrees 19:03 巡检注记 lg065→lg066 勘正迁注——COO 18:44 补遗归属差实锚(d5cde19a STE 判据卷物理位=lg066 树书 LG-066 N3·72h 窗=8712 空置并轨段2毕10-09 19:03:29+72h=今日19:03:29·系LG-066窗序树义务)·lg065行挂载推定错位勘正+amendNote留痕·STE执行无歧义(按判据卷唯一真源照跑)·台账面勘正非执行面变更
+  - d830f3d5 docs(rdt): R1 窗前现势快照落 workbench——批 1（23:00-23:20）受重启席窗前留痕：在办零/候办三项状态（B1 gating 未满足挂起·TriMC 对齐候示下·04 版锚点观察项今日闭环零漂移）/已交付件三批在卷/复活后首动作=向 COS 值席发复活回执
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:10 +08：自上次进度提交 87ccb7a1 后新增 2 条 commit：
+  - f50f6b0d merge: 收编并行笔（值席落盘防覆盖）
+  - b5b3bbf5 docs(coo): R1 窗 22:30 预备广播稿落卷——五批段位表今晚版（§104 bod 特例豁免双标注+§105 案一 BOD 操盘批4/COO 观察位）+窗前检查 v8 终版+各席三时点义务（22:45 锁笔/22:50 cos mirror/22:55 resume 预制）+复活首动作状态条直呈 BOD+现势基线注记（8711 unknown 预期形/LG-069 真值锚 CIM/落款机械合同 R1 后首窗非今晚）·候 BOD 22:30 唤发
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:20 +08：自上次进度提交 5d3c486f 后新增 2 条 commit：
+  - b55d17fb merge: 收编并行笔（值席落盘防覆盖）
+  - 8f6fa240 docs(coo): LG-066 N3 72h 观察窗收口闭合——STE 四锚+附锚全绿 PASS（f05d1ba·72h 零重启）+BOD §129 复核毕+8712 放归服务域池登记面销账毕·卷转 static 归档态·LG-066 窗序树全链闭合
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 26352d6e 后新增 2 条 commit：
+  - 56b601f5 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
+  - c333ff92 docs(cto): §十三 §127 三件定性——8713 power 挂=间歇自恢复型暂不重启(触发条件挂账)+调度滞后根因勘正=贴线 serial 占用级联滚雪球三连环实锚(bod-tick 25644 拍 600s)+两案解耦(hub-silent 19:15 拍贴线时 power 正常)+506 配对判读口径修正(结算面为主)+v9 纳入 CIM 备选+§115④ 断供归因不成立(恢复后 20 拍 dur 5-7min 常态)+03:30Z 拍 77min=A 型 job 维度复现+8711 staleness 源字段勘误附笔
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:30 +08：自上次进度提交 17240b32 后新增 3 条 commit：
+  - 027b08f2 merge: 收编并行笔（值席落盘防覆盖）
+  - 3fdae420 docs(coo): R1 窗改排知会版预拟落卷（候发稿）——今晚窗不执行+原因供电不稳（BOD 22:26 探 ac=false·窗前提 v8 升格条款不满足）+锁笔维持+新窗候令+断电冻结预期形注记·发否候 BOD 22:45 令面·b5b3bbf5 正稿保持候命
+  - 2fb43b13 docs(fsd): 灰度第五例增量入卷——变体⑤ title 硬编码定谳（L225 字面量不插 a.id·BOD 二选一候选当场钉死）+锚值序列破匀速 .744+模板值⑤犯 40vs53min·零施工只读续勘
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:50 +08：自上次进度提交 c5924c3f 后新增 5 条 commit：
+  - 7873f527 docs(cfo): W42 夜段三事——真断供实锚（CIM 双源 22:45 放电 64%·AC 失去窗收窄 21:37-22:10 BOD 密采样并卷）+R1 窗改排知情+23:53 复测挂上+BOD 查令三问即答（执行面对称·可见性缺口·门令加抄 BOD 自今起执行）
+  - 8013b14e docs(cto): 指令盖章方案令前置盘点留痕——TriChain/TriWeb4 文档面路径定位(两仓同构 registry/engineering/product 三面齐)+出稿对表清单四条+方向预判 Ed25519 候选在档·排期窗后首窗候令(R1 今晚改排·static 留痕断电不丢)
+  - b120f231 docs(rdt): R1 窗前快照补改排注记——今晚（10-12 23:00-00:15）不执行（BOD 22:44 令·供电不稳 ac=false 双探·供电门不满足），批 1 段解除，快照窗前部分转历史档，新窗候令态
+  - 02a5435a Merge remote-tracking branch 'sg-server/dev' into dev
+  - 17ec2995 docs(cpo): 指令盖章机制产品输入草案落树（BOD 22:40 协同令三协同点·窗后首窗并稿用·今晚零通道占用）——①迁移路径=形态先行后端可换（鉴权结构四要素与链上同构·签发身份与席位解耦）②多端口径=协议层统一+能力分层（安卓验签必达）+验签<100ms+时戳容差窗防时钟误伤+验证失败三态禁静默③无签=留痕不生效（数据面全保留控制面零效力·审计/执行视图分离）+三边界例候并稿定谳（人发直令免自盖/系统通知不入域/补签新立效力防倒签）
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 dafbecd2 后新增 9 条 commit：
+  - 0c369adc docs(cto): 盖章主稿细节短件第二批定谳——验签实现形态=收席侧宿主 hook(block=数据不执行语义原生实现·M-SG NOTIFY 同位先例·双宿主投放)+库选型=@noble/ed25519 纯 JS(零原生编译跨平台零负担·@noble/curves 覆盖 secp256k1=以太坊系切换平滑)
+  - 63f2636c docs(cto): 盖章主稿细节短件第一批——轮换链(旧钥私签新钥绑定书·90 天对齐 PAT 节奏·失窃=号册吊销+多数席会签防滥权)+重放窗前提注记(sg 跨机面 NTP 同步为前提·漂移>窗宽=合法令误拒假阳性·列入启用前检查清单)
+  - 10a76bac perf(fade): 件④ transcript 首行流读替换全量 readFileSync——readTranscriptMtime 逐轮全量读多 MB jsonl 系串行 round 贴线主嫌疑（4KB 首块直取 meta 行）+勘验注: mtime=statSync 真读非算法假值·毫秒段匀速递增真源=hook 低频注入（灰度素材④面修正 BOD 嫌疑方向）
+  - 38af23bf fix(fade): 件② 报文静默值改发送时实距动态值——round start 基点贴线滞后系统性低估（模板值五犯实锚 40vs53min）·title/body 双改·附 round 基点读数对照
+  - fe8f1e3f fix(fade): 件③ duty-escalate title 硬编码改插条目 id 真名——原「中枢 m-cos」字面量对任何节点恒错（灰度变体⑤实锚·scripts/fade/hub-silent-detect.mjs L225）
+  - 82abcc96 docs(cto): 指令盖章主稿框架段毕——五节骨架(Ed25519 定谳候选/签名头结构/收信侧网关验签/warn-only→enforce 两阶段/编号防伪并轨)+TriChain·TriWeb4 实勘对表结论(两仓占位空壳·对齐预留边界非实现·TriWeb4=席位钱包种子锚点)+跨平台评估(四凭据箱适配器+安卓 TEE 同构)+同批优先序建议(①hub-silent 调参②M-001 落款合同③本方案细节)·细节段候新窗(23:20 止损内框架先行)
+  - 2de33c66 docs(cao): 信面落款机械合同候选条草案——幻觉时点家族基建（M-001 同族·BOD 22:52 加段令 CEO 22:51 令源·止损修正 23:20）·正形二选一（date +%H:%M 分粒度原值/声明式 hook 现戳锚）+双保险条款化（写前必跑防发生+发完重跑对表防漏网·实证起效）+禁则五条（模糊段/虚标现查/括号辩解/备稿复贴/手算换算）·候审链=明窗 BOD 审批后 CAO 线入纪律册附录定编 D-XX·本件草案不具纪律效力
+  - 1de49156 docs(cpo): 盖章机制产品段并流预备段补（BOD 22:52 加段令·分段制）——TriChain/TriWeb4 轻量定位读数（兄弟目录五件套同构 product/{PROJECT,REQUIREMENTS,ROADMAP,STATE}+engineering/{DESIGN,ROADMAP,STATE}）+明窗对表计划（TriChain PROJECT/DESIGN 对表迁移四要素与签发身份解耦·TriWeb4 对表多端口径）+CTO 框架段引用位预留（候落卷并流·两正身互引不混写）
+  - 7c4098a7 docs(cfo): W42 断供跑道警示——二点实测 61%/h 陡降证实（64%→59%/4.9min·11W）·冻结预期窗 23:30-23:50·锁笔建议达 COO+BOD·CTO 三案并勘素材收编
+- registry：v2.1；今日 registry 提交无变化

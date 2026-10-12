@@ -1,0 +1,39 @@
+{
+  "schema_version": "eligibility-gate/v1",
+  "ts_hint": "由调用方填 date 现查原值（脚本不取时·禁估读）",
+  "file": "D:\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W41\\trees\\1011-window-family\\cos-shadow-supply-order-20261011.md",
+  "checks": {
+    "c1_schema": {
+      "pass": true,
+      "evidence": [
+        "头部字段 sourceOfTruth: 在位",
+        "头部字段 syncMode: 在位",
+        "头部字段 lastSyncedAt: 在位",
+        "owner 起始位: 在位",
+        "准入标记 AUTOMATION-READY: 在位",
+        "节点#1「### 节点 1（S1 批判读执行·随 COO 排程窗）」六要素齐",
+        "树尾 COS 收口段: 在位"
+      ],
+      "fail": []
+    },
+    "c2_resolve": {
+      "pass": true,
+      "evidence": [
+        "指针共 7 条·可解 7·悬空 0"
+      ],
+      "fail": []
+    },
+    "c3_anchor": {
+      "pass": true,
+      "evidence": [
+        "节点#1 完成判据=断言形（命中: 6 份 JSON 全部落树（文件实存可 ls）+读数与 §二预期列对表零反向矛盾…）",
+        "节点#1 失败行为=停/报形"
+      ],
+      "fail": [],
+      "warn": []
+    }
+  },
+  "readiness_suggestion": "AUTOMATION-READY（建议值·机先判人后签·COS 签挂为准）",
+  "warn": [],
+  "ts": "2026-10-10T19:37:30Z"
+}

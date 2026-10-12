@@ -1,0 +1,41 @@
+{
+  "schema_version": "eligibility-gate/v1",
+  "ts_hint": "由调用方填 date 现查原值（脚本不取时·禁估读）",
+  "file": "D:\\Code\\ai\\TriMetaverse\\docs\\workflow\\operating-records\\2026-W41\\trees\\q32-ui-upgrade\\cto-q32-readout-20261010.md",
+  "checks": {
+    "c1_schema": {
+      "pass": false,
+      "evidence": [
+        "头部字段 sourceOfTruth: 在位",
+        "头部字段 syncMode: 在位",
+        "头部字段 lastSyncedAt: 在位"
+      ],
+      "fail": [
+        "owner 起始位: 缺失（模板 v1 要件）",
+        "准入标记 AUTOMATION-READY: 缺失（模板 v1 要件）",
+        "节点段: 零命中（无 `### 节点` 形段——模板 v1 建议形·候模板推广）",
+        "树尾 COS 收口段: 缺失"
+      ]
+    },
+    "c2_resolve": {
+      "pass": false,
+      "evidence": [
+        "指针共 3 条·可解 2·悬空 1"
+      ],
+      "fail": [
+        "@a17deaff ← hash 不可解（git cat-file 失败）"
+      ]
+    },
+    "c3_anchor": {
+      "pass": false,
+      "evidence": [],
+      "fail": [
+        "无节点段可判读（查三依赖节点段）"
+      ],
+      "warn": []
+    }
+  },
+  "readiness_suggestion": "FAIL（影子期只读数不拦截·人工复核）",
+  "warn": [],
+  "ts": "2026-10-10T19:37:30Z"
+}

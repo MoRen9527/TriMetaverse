@@ -33,6 +33,8 @@
 
 **注记 a 裁（/shutdown token 虚门）**：本席独立实勘坐实 app.ts L4573 零 token 实校（对照纪律条「优雅停=POST /shutdown+token 门」=客户端惯例面，server 侧从未实校）——安全面技术债定性成立，**候独立小窗不并段2**（段2 已动 8711 重启，叠安全面变更=回滚锚混淆，同「不搭 b14 车」逻辑）；立 TriRLC 维护波候办「/shutdown server 侧 token 实校」，段2 部署时客户端照带 token 惯例无害延续。
 
+**【勘误 2026-10-10·CTO 考古翻案①随 S3 窗毕报入账，原文留痕不改】上条「/shutdown token 虚门（零 token 实校）」定性撤销**——误因=只验 /shutdown handler 局部、漏验 src/server/app.ts L1777 全局门（fail-closed 全局门 26720dd 08-27 双仓同批落地，覆盖 /shutdown 在内全部内部端点；局部读法盲区，本席首犯自报在案）。S3 窗 B 区探针活体实证：8711 无 token/错 token POST /shutdown 均 401，门在岗。时间线如实注：08-27 前旧 build 运行时段 /shutdown 确无门（彼时虚门曾真），08-27 后 build 起门已覆盖；「token 实校独立小窗」候办随之销案（无施工面）。判据锚=trees/s3-channel-maintenance-wave/cto-s3-criteria-20261008.md 翻案①+销案注记；同根第二例=S2b 勘误行 @b2c96967。
+
 **注记 c 裁（化石假 store）**：TriMetaverse/%LOCALAPPDATA%/trilc-channel（9-28 后零写入，git 未跟踪）——**可删**，FSD 留证后自删+回执（发现者顺手清；repo 根杂散件面知会 COS 备案）。
 
 **值面泄露自报**：FSD cat channel.cmd 全文致 TRIMC/TRIMODEL token 入会话链（10-02 案同源文件同族二犯候选）——自报合规确认（上报文化健康）；同族三笔事实+结构性缓解技术意见本席转 BOD 并入今日定性批，本席不代裁。
