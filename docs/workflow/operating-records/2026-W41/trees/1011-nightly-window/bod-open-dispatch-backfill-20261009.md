@@ -625,3 +625,12 @@
 - **裁=窗 PASS 签发**（§8 节点 6 验收·D-39 域内裁毕生效）。三条非阻塞候办收账：启动段吞告警观察项候评（§67 反例库方向·与 13:37 悬挂首条并档）/f612b9e「6 fail」勘定=两仓两基线（TriMLC 仓基线·TriRLC 495/495）无冲突·STE 归因批候批窗/终验锚①②③④顺延明晨窗族。
 - **两条候知回执**：①TriRLC ahead 5 审毕单批推条件达成=知情准行（FSD 即动·双向验真纪律）②明晨 TriMLC 部署窗（lastReadAt 投影+LG-067 dist 一次冷启）=**窗族令原则批**（D-39 排窗域内）——窗位明晨 CTO/COO 对表落定即动，不另候 BOD；窗毕照窗令毕报链回环。
 - 8711 生产现态：新 dist 运行·五笔全在·从闸 v1 投影活——LG-069 二期 R 面本地域从闸链落位。
+
+## §95 拍报停摆 8.5h 事故勘定·部署窗提前裁（2026-10-12 09:20）
+
+- 时点锚：节拍转报 hook 轮 date 现查 09:16:01——末拍 00:39:55 后 17 拍全缺（01:07→09:10），date 现查落卷。
+- **事故勘定（活体诊断四步）**：①8713/8711 healthz 双活且 uptime 连续（77139s≈21.4h 未重启/36865s）=daemon 本体活非机器睡眠非崩溃 ②bod-tick job 状态面（API 字段勘正=lastRunAt/nextRunAt ISO 非 ms）：enabled=true·lastRunAt=00:39:48Z lastRunStatus=ok runCount=109·**nextRunAt=01:07:00Z 过点 8h 未触发=executor timer 链停摆实锚**（job 面全绿+调度面停滚）③gate 事件链（channel.log 反向搜索）：gate-soft 29% 置位+notify 已发（LG-069 软闸正形·软闸不停 cron·无 gate-hard 命中=非闸停）+power read failure timeout 族多序列（readFailures 现值 1）④conn recovered→connected 后 healthz 仍报 mc_link=degraded·trimc=degraded（恢复链疑未完成·候部署窗对表）。
+- **根因假设（候部署验证非定谳）**：件B race 滞后 rejection 现役未部署（勘修包 f612b9e 候明晨窗中）——timer 链 race 断链形态与「HTTP 活+调度停」吻合（TriMLC 贴线 timeout 26% 观察项同家族旁证）。「log 零行双向不可定谳」纪律在案：triggered 尾行无时戳不溯判，以 nextRunAt 停滚为准。
+- **裁=TriMLC 部署窗提前至现在执行**（D-39 排窗域内·窗族令内容一次冷启全兑现：LG-067 dist+lastReadAt 投影+勘修三件 A/B/C——附带产品：拍报链恢复+8711 从闸 unknown→following 转正+race 根治）。**硬前置=pwr 26% ac=false 掉电中，插电到位前禁动冷启链**（防部署中途断电=灾难态·gate=soft 已在位无新增风险窗）。执行链照勘修窗实操序（watchdog Disable→/shutdown 根路径→port FREE→schtasks 冷启→pid/CIM 对表→Enable+完工三断言）。
+- 派工面：COO 牵头对表现勘（窗族令既有授权）+CTO 技术复核（冷启链+dist 版本身份 hash 级核验）——静默席唤醒照 M-004 直达。CEO 插电请求并行发出。
+- 电量线：00:39=31%→09:16=26%（8.6h 掉 5%·低速待机掉电态）——gate=soft 告警在位·插电后解除。
