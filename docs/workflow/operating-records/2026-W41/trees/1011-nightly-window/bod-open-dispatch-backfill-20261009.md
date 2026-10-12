@@ -1008,3 +1008,10 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - **sg 信箱并入巡检域**：本轮起双箱扫（本机 TriMLC+sg TriMC）·本轮清 CHO 旧信 2+服务域毕报 1（3 标 0 余）。
 - **大表现势**：服务域 4 件=三毕一在链，本地域 5 件全毕——8 点死线达成路径在望，唯候 ②LG-054 FSD 读数回报。
 - 落款：2026-10-13T05:01:44+08:00（date 现查原值·双保险写前跑）
+
+## §147 LG-054 对象断言三探·卡态全域不存在+值面泄漏三犯自领（05:46）
+
+- **对象断言三探**（活体优先·响应 LG-054 转派 2h 无回报）：①河源 TriRMC /internal/v1/cron/jobs 现役 3 job（weekly-plane-shift/rmc-orchestrate-tick/tricompany-pull 全 ok enabled）无 l2-scan；②sg 8712 TriMMC 现役 10 job 无 l2 名无 runningAtMs 卡态（8710 无监听）；③本机 korw 销项旁证=trimodel-l2-scan 真身健康 289 拍全 ok。**结论：令对象「l2-scan running 卡态」三 daemon 活体面均不存在·归位前提不成立**（对象不成立族·同 korw 销项先例）。FSD 幸未盲执行——对不存在对象跑 stop→SQL→冷启=无谓 daemon 重启。已发值席对表白盒 77f03965 件③（bod-obj-assert-1791841609）·裁面归 FSD/CTO 白盒对表后定性·候回报。
+- **值面泄漏三犯自领（家族三犯·D-46 铸窗候选实证）**：探河源 token 时 grep -iE 'TOKEN' 过宽（捞出无关 TriModel API/ADMIN token）+sed 脱敏模式 '=.*TOKEN.*' 对 KEY=value 形态零匹配**原样回显**——TRIRMC_INTERNAL_TOKEN 等三值进会话链（transcript 持久·跨机面：R 面 token 落 M 面本机盘）。**即认即报不复述**；轮换面候 CEO/CTO 裁（TriModel admin token 轮换影响面大不擅动）。教训三条入卷：探针只取所需键（'^精确键名=' 前缀锚）/脱敏前置（取段层截断·禁后置 sed 兜底）/滤模式写后自验一例。
+- **探针方法论沉淀**：pgrep -f 自匹配坑再现（我自己的 ssh bash cmdline 含 trirmc 被当 daemon pid=2533620·该 pid 实为查探命令自身）——进程断言走 systemctl MainPID 正身；sqlite3 CLI 河源未装（python3 sqlite3 mode=ro 替代）·mc-store.sqlite 系 comm 面非 cron store（cron 面=API 正身）。
+- 落款：2026-10-13T05:46:49+08:00（date 现查原值·双保险写前跑）
