@@ -63,3 +63,7 @@
   - b81b5132 Merge remote-tracking branch 'sg-server/dev' into dev
   - 31af52c8 docs(cto): §112 DC 面归零续笔——UNATTENDSLEEP AC/DC 双面 0x0 读回断言+旁伤对表唯一变化零漂移+BATACTIONCRIT 保命层未触碰维持+CEO UI 澄清(AC/DC 均永不)意图补全同构落地
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:50 +08：自上次进度提交 b27a9c05 后新增 2 条 commit：
+  - c0eb3979 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 14a6def4 docs(cto): §十二 第二例并勘定谳——next 滞后=hub-silent-detect 贴线跑满 600s race 占用型（id 25183 dur=600026 settle 13:40:02 与恢复秒级吻合）+§107 族 A/B 分型（睡眠冻结已堵 vs 贴线占用运行质量项）+贴线恶化实锚 26%→近三拍 100%（13:00/15/30 连续 timeout）+恶化归因断供期嫌疑候深勘
+- registry：v2.1；今日 registry 提交无变化
