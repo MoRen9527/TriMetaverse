@@ -32,3 +32,8 @@
   - f9040dad merge: 收编并行笔（值席落盘防覆盖）
   - 71c17c7c docs(coo): §95 部署窗毕报——8713 停摆恢复+cb5dba8 部署生效（四条兑现面全毕：硬前置插电 26%→38% acOnline 确认+build RC=0 dist 0923+重启链六步全绿 pid 41568+三断言毕·bod-tick 0937 正拍 ok next 滚 1007=BOD 判据恢复实锚兑现）+f612b9e 生效锚 next_run_at 首现活滚+补触发队列消化毕（hub-silent 600s 兜底兑现形态 vs 8h19m 对照入 CTO 判读包）+8711 从闸对表（follower 轮询活零失败·unknown/null 空值形态注记候判）+值面泄漏二犯即认即报（10-02 先例口径·入册候 CAO）+§96 补课排程建议（今日 12-14 段并批）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 30ff28ba 后新增 3 条 commit：
+  - b476ab1c merge: 收编并行笔（值席落盘防覆盖）
+  - 3dae0fed docs(coo): §95 毕报 §六追补——CTO 判读收编（d2dd450d9 主判=系统睡眠非 executor 缺陷·电池耗尽 0100-0107 入眠全冻结 7.33h·091537 插电唤醒 7 秒后 600s timer 集中触发·id24934 墙钟含睡眠段·cron 引擎零缺陷零改动·本席三点 gap 全答复收编）+活雷交底三条候批（powercfg 接电恒醒候 BOD 裁/schtasks l1 电池豁免/ssh ServerAlive 候 FSD 窗）
+  - d2dd450d docs(cto): §95 判读卷——bod-tick 17 拍全缺根因定谳=系统睡眠主因（evt105 插电 09:15:37→结算 09:15:44 七秒强耦合实锚·Modern Standby 冻结期 600s timer 不过期矛盾消解）+件B 未部署假设三重证伪（dist 特征在位+crash 面零记录+uptime 连续）+tri-liveness ssh 无界挂辅因+探针双失明元层缺口（daemon 拍锁占+schtasks 电池条件拦）+速效缓解三件候批（电源恒醒/schtasks 电池豁免/ssh 超时）+cron 引擎零缺陷零改动如实
+- registry：v2.1；今日 registry 提交无变化
