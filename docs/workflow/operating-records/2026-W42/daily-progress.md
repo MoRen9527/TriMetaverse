@@ -67,3 +67,7 @@
   - c0eb3979 Merge remote-tracking branch 'sg-server/dev' into dev
   - 14a6def4 docs(cto): §十二 第二例并勘定谳——next 滞后=hub-silent-detect 贴线跑满 600s race 占用型（id 25183 dur=600026 settle 13:40:02 与恢复秒级吻合）+§107 族 A/B 分型（睡眠冻结已堵 vs 贴线占用运行质量项）+贴线恶化实锚 26%→近三拍 100%（13:00/15/30 连续 timeout）+恶化归因断供期嫌疑候深勘
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:00 +08：自上次进度提交 81b713c4 后新增 2 条 commit：
+  - edec314a Merge remote-tracking branch 'sg-server/dev' into dev
+  - b09c748e docs(cto): §十二.1 灰度首例直报对表闭环——COS 候令静默终判值面准确零误报+疑点②解除(race 影响面=触发时延非值面)+分流素材两件候灰度评估+escalate 前置判据输入(在途任务表/尾态分型·实现归 FSD 调参)
+- registry：v2.1；今日 registry 提交无变化
