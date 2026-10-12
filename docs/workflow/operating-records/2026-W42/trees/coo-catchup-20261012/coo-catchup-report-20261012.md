@@ -43,6 +43,14 @@
 4. **值面泄漏二犯指针**（09:2x 启动器 cmd 探针·四 token 回显）：§95 毕报 §三 全卷在·候 CAO 二犯注记·不赘。
 5. **8713 python 读视图分叉**（§95 §四③）：本轮复现同形态（json 镜像可读·无碍值面判定）——观察项维持候入册。
 
+## §六 CTO §107 勘验卷收编（追补笔·13:1x·卷=cto-s107-verdict-20261012.md·760687e68·BOD §109 验收后勘注不改前文只补笔）
+
+1. **锚延迟定性勘注收编（§五① 勘正）**：CTO §八.5 **同根定谳**——v7 应触发 11:58 落 Kernel-Power 冻结窗（11:32:23 入睡→12:47:10 醒）内·唤醒后 2.75min 触发逐秒嵌合；Claude 会话 cron 与 8713 executor 双 timer 同被 OS 睡眠冻结，唯一公共因成立。**本席 §五①「排除本机睡眠重启段」勘验依据勘正：uptime 连续≠醒着（Modern Standby 无 42 事件·uptime 不重置——教训五当日实例）**；「延迟系会话级 cron 调度面」表述保留但根因面更正=OS 睡眠冻结（非调度器自身缺陷）。AC=true 段照睡三大觉实锚=timeout 面归零对 Modern Standby 自主入睡路径无效。
+2. **DC 侧机理勘注收编（§三① 勘正）**：本席「DC 侧睡眠策略未豁免→入眠风险」机理面勘正——standby-timeout-dc 已 0x0（昨 10:48 a 件勘面 AC/DC 均 0）·**睡眠路径不分 AC/DC 校别（同源 Modern Standby 自主路径）·拉高 timeout 非正解反引入超时入睡**；断供活跃风险提醒方向保留正确·正解=物理供电恢复（CEO 在途）·写面缓解（UNATTENDSLEEP 归零等）候 BOD 裁。
+3. **镜像分叉收窄（§三② 续记）**：权威值面=现役 sqlite store（next=04:56:00Z 活·lastRun 滚·execution_log 25126+ 补跑全 ok·cf 清零）——引擎活性由权威面定谳；cron.db.json 镜像 None 系镜像写面问题（候非只读窗勘镜像写者·单列候办）·不构成活性反证。
+4. **R1 窗前检查判读口径升级（供 22:30 广播稿/窗前检查引用）**：Modern Standby 正身=Kernel-Power **506/507**（42/107 系查不到）·旁证 105/566/172——今晚电源前检查与巡检判读照此新扫族口径。
+5. **窗前检查 v8 终版（BOD §110·80c9b7d99·13:10 令）**：CTO 三值口径（standby-timeout-ac AC 索引=0x00000000+平衡计划+HIBERNATEIDLE AC=0）+**两只读项追加=①Kernel-Power 506/507 扫读（Modern Standby 正身族）②UNATTENDSLEEP 值面读断言 AC=0**（CTO 补勘+AC 归零落地中·检查时读现值）；healthz acOnline+percent 照旧；升格条款不变（供电恢复必过门·断供不复位候 BOD 改排）。
+
 ## 使用依据
 
-- BOD §96（64c9cfbf）+§98（f27a9260c·8 在途清单）+追加漏项令（12:55·c161d81d4·两件半+14:00 域内自裁授权）+§107 知情；COS 毕树清点双信（09:40/09:41）+勘正（09:43）；BOD §104（6c15986fa）+§105（0da7f2094）+COS 值席答复（10:47/10:51/10:53）；CTO a 件落地对表口径信（10:55·ee2976b30）+§107 CTO 只读勘验并行知情；W41 模板四件（company-demand-pool/task-inventory-20261005/scoring-ledger-w41/m2-approval-gate-ledger/weekly-plane-shift-runbook）形制基准实读；值面读数=8713 healthz 现探（12:50/12:58/12:59 三轮）+cron.db.json 镜像（12:58 mtime）+channel.log（12:59）+自醒锚 hook 时戳（12:49:55）；锚 v7 任务书（三件施工形制+毕报必含项）。
+- BOD §96（64c9cfbf）+§98（f27a9260c·8 在途清单）+追加漏项令（12:55·c161d81d4·两件半+14:00 域内自裁授权）+§107 知情；COS 毕树清点双信（09:40/09:41）+勘正（09:43）；BOD §104（6c15986fa）+§105（0da7f2094）+§109 验收 PASS（8dc4ce3f1·13:04）+COS 值席答复（10:47/10:51/10:53）；CTO a 件落地对表口径信（10:55·ee2976b30）+§107 勘验卷毕报（13:08·cto-s107-verdict-20261012.md·760687e68·四料全吸收）；W41 模板四件（company-demand-pool/task-inventory-20261005/scoring-ledger-w41/m2-approval-gate-ledger/weekly-plane-shift-runbook）形制基准实读；值面读数=8713 healthz 现探（12:50/12:58/12:59/13:01 四轮）+cron.db.json 镜像（12:58 mtime）+channel.log（12:59）+自醒锚 hook 时戳（12:49:55）+Kernel-Power 时间线（CTO 卷·12:53:50 [105] 交流→电池）；锚 v7 任务书（三件施工形制+毕报必含项）。
