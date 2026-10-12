@@ -245,10 +245,22 @@ async function main() {
           .map(([k, v]) => `${k}=${v ? new Date(v).toISOString() : "n/a"}`)
           .join(" ")
       : a.error || "";
+    // 件②(10-12夜调参): silentMin 用 round start 基点——贴线跑时滞后发送最长一轮(900s+)，
+    // 报文静默值系统性低估（模板值⑤犯实锚: 报 40min 实距 53min）。发送时按信号源重算实距。
+    const sendMs = Date.now();
+    const srcVals = a.perSource
+      ? Object.values(a.perSource).filter((v) => typeof v === "number")
+      : [];
+    const realMin = srcVals.length
+      ? Math.floor((sendMs - Math.max(...srcVals)) / 60000)
+      : a.silentMin;
     const body =
-      `条目=${a.id} 状态=${a.status || "-"} 级别=${a.level} 静默=${a.silentMin === Infinity ? "∞(无信号)" : a.silentMin + "min"}\n` +
+      `条目=${a.id} 状态=${a.status || "-"} 级别=${a.level} 静默=${realMin === Infinity ? "∞(无信号)" : realMin + "min"}` +
+      (realMin !== a.silentMin ? `（round 基点读数 ${a.silentMin}min）\n` : "\n") +
       `信号源: ${src}\n` +
       `来源=hub-silent-detect 900s job（灰度第 1 周；三源 OR 豁免；冷却 ${COOLDOWN_MIN}min/节点/级）`;
+    // title 同步用实距
+    title = title.replace(`${a.silentMin}min`, `${realMin === Infinity ? "∞" : realMin + "min"}`);
 
     try {
       await notifyOrThrow({ targets, title, body, urgent });
