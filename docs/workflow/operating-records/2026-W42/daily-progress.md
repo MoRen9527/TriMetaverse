@@ -54,3 +54,8 @@
   - f627f8c8 merge: 收编并行笔（值席落盘防覆盖）
   - bbd589de docs(coo): 补课批毕报——五件落位（activeTrees 8 树挂载/需求池空表 DEM-005 续号/大表新命名首刷候日收口/追加 scoring-w42 账面+m2 账本判定正身单点 W42 指针+runbook 入口指针）+急报面收编（12:58 断供 acOnline=false 三连探实锚·DC 侧睡眠缺口·13:01 仍 false 96%·CEO 插电在途 BOD 盯防）+§107 bod-tick 复活旁证三源（镜像 next=None 分叉归 CTO 勘验）+§101 R1 窗回复项 v7 终版+锚延迟 52 分钟观察+幻觉时点 COO 案透明面
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:20 +08：自上次进度提交 72d517e5 后新增 3 条 commit：
+  - 5f1b2fda docs(cto): §110 裁决①执行回执——UNATTENDSLEEP 现值实锚 0x78(120s) 定谳 AC 面唯一自主入睡源（11:19:53 醒+600s 灭屏+120s unattend=11:31:53≈实锚 11:31:54 秒级嵌合）+AC 归零落地读回 0x0·DC 0x78 保持+旁伤对表零漂移+powercfg Bash MSYS 转换坑勘注+S0ix 唯一待机形态/SUB_PRESENCE AC 侧全零补勘
+  - 812e1ce8 merge: 收编并行笔（值席落盘防覆盖）
+  - 41d46722 docs(coo): 毕报 §六 CTO §107 勘验卷收编追补笔——锚延迟同根定谳勘正（uptime 连续≠醒着·OS 睡眠冻结唯一公共因·教训五当日实例自录）+DC 侧机理勘正（sleep 路径不分校别·拉高 timeout 非正解）+镜像分叉收窄（sqlite 权威面定谳·镜像写面候办单列）+窗前检查 v8 终版（§110·506/507 扫读+UNATTENDSLEEP 读值两只读项追加·升格条款不变）
+- registry：v2.1；今日 registry 提交无变化
