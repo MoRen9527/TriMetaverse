@@ -71,3 +71,8 @@
   - edec314a Merge remote-tracking branch 'sg-server/dev' into dev
   - b09c748e docs(cto): §十二.1 灰度首例直报对表闭环——COS 候令静默终判值面准确零误报+疑点②解除(race 影响面=触发时延非值面)+分流素材两件候灰度评估+escalate 前置判据输入(在途任务表/尾态分型·实现归 FSD 调参)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:30 +08：自上次进度提交 364e0db6 后新增 3 条 commit：
+  - f4fa4e94 merge: 收编并行笔（值席落盘防覆盖）
+  - bb7e4959 docs(coo): 毕报回归断言补记——断供终态闭合（BOD 14:23:07 读数 acOnline=true/79%% 回充·断供段 ~85 分钟零入眠·UNATTENDSLEEP 归零生效面·R1 窗前提达成 22:30/23:00 维持原排·勿复探遵令引 BOD 读数非自探·停工收口笔）
+  - 0b375a32 docs(fsd): hub-silent 灰度素材④勘验附注——冷却本机在位/静默值销案/新锚 m-sde 级联链
+- registry：v2.1；今日 registry 提交无变化
