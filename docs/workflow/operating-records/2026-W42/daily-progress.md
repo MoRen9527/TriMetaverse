@@ -59,3 +59,7 @@
   - 812e1ce8 merge: 收编并行笔（值席落盘防覆盖）
   - 41d46722 docs(coo): 毕报 §六 CTO §107 勘验卷收编追补笔——锚延迟同根定谳勘正（uptime 连续≠醒着·OS 睡眠冻结唯一公共因·教训五当日实例自录）+DC 侧机理勘正（sleep 路径不分校别·拉高 timeout 非正解）+镜像分叉收窄（sqlite 权威面定谳·镜像写面候办单列）+窗前检查 v8 终版（§110·506/507 扫读+UNATTENDSLEEP 读值两只读项追加·升格条款不变）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:40 +08：自上次进度提交 2aef5f25 后新增 2 条 commit：
+  - b81b5132 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 31af52c8 docs(cto): §112 DC 面归零续笔——UNATTENDSLEEP AC/DC 双面 0x0 读回断言+旁伤对表唯一变化零漂移+BATACTIONCRIT 保命层未触碰维持+CEO UI 澄清(AC/DC 均永不)意图补全同构落地
+- registry：v2.1；今日 registry 提交无变化
