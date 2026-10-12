@@ -634,3 +634,11 @@
 - **裁=TriMLC 部署窗提前至现在执行**（D-39 排窗域内·窗族令内容一次冷启全兑现：LG-067 dist+lastReadAt 投影+勘修三件 A/B/C——附带产品：拍报链恢复+8711 从闸 unknown→following 转正+race 根治）。**硬前置=pwr 26% ac=false 掉电中，插电到位前禁动冷启链**（防部署中途断电=灾难态·gate=soft 已在位无新增风险窗）。执行链照勘修窗实操序（watchdog Disable→/shutdown 根路径→port FREE→schtasks 冷启→pid/CIM 对表→Enable+完工三断言）。
 - 派工面：COO 牵头对表现勘（窗族令既有授权）+CTO 技术复核（冷启链+dist 版本身份 hash 级核验）——静默席唤醒照 M-004 直达。CEO 插电请求并行发出。
 - 电量线：00:39=31%→09:16=26%（8.6h 掉 5%·低速待机掉电态）——gate=soft 告警在位·插电后解除。
+
+## §96 W41→W42 翻周评估·补课批裁（2026-10-12 09:29）
+
+- 时点锚：CEO 09:24 令「W41 周平面大表/树进度/周共学等做评估，必要迁移到 W42」→本席五面实勘，date 现查落卷。背景：昨晚三自动链已跑（河源迁移器 23:00/sg watcher 23:10/本机对齐 job 23:10:26 ok fetch+merge W42 已到位——LG-056 链健康）。
+- **评估读数五面**：①OP-W42 骨架在（OP 件+unresolved 平移+shift-ade pass）但 **activeTrees=[] 空**②W42 需求池空表/大表空表两件未立（COO 23:1x 新周挂载三件义务全缺位·runbook §二 常设步）③W41 OP doneTreesThisWeek=[] 空=**毕树登记断链**（runbook §三.1 硬界义务·W39-W40 断更后 W41 又断一周·37 棵树仅 sg-duty-trial 有 tree-op done·余 36 棵卷型树毕/在途未判）④hub-state 大表现役真源 total=22 open=6 跨周自然延续不随周滚✓（lg069-battery-gate note 主线全闭候终验后销账复核）⑤**共学周记断更六周**（run-log 停 W35·W36-W41 零记录·W41 无成册内容可迁）。
+- **迁移器机制缺陷三件（挂账候 FSD 窗·不动本周）**：a.unresolved-items.md 串周滚旧模板（「# W32 未决事项」标题滚 10 周·内容与现役脱钩——W42 件零条现役 open）b.doneFromPrev 滚雪球（60+ 棵 W33/M2 时代陈树一路滚挂）c.unresolved 件与 hub-state/in-progress.json 两套大表脱钩（真源分裂·hub-state 才现役）——修源=TriCompany/runtime/cognition/weekly_plane_shift.py。
+- **裁=翻周梳理补课批**：①毕树清点登记派 COS 先行（持树职责正形·37 棵逐判毕/在途+补 W41 doneTreesThisWeek+在途清单交下）②COO 三件补课（activeTrees 挂载+需求池/大表空表新立形制照 W41 模板·**候部署窗毕报后同日排窗**——COO 主力在部署窗线不并行）③hub-state 不迁确认+lg069 销账复核候终验④共学断更呈 CEO 知情（恢复候办不派工·W41 无内容可迁）。
+- W41 需求池现势：零需求行（首审未启用态·DEM-001/002 留 W40 归档）——W42 空表新立零在途条迁移，DEM 续号照旧。
