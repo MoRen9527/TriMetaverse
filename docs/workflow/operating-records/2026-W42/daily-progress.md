@@ -116,3 +116,14 @@
   - 02a5435a Merge remote-tracking branch 'sg-server/dev' into dev
   - 17ec2995 docs(cpo): 指令盖章机制产品输入草案落树（BOD 22:40 协同令三协同点·窗后首窗并稿用·今晚零通道占用）——①迁移路径=形态先行后端可换（鉴权结构四要素与链上同构·签发身份与席位解耦）②多端口径=协议层统一+能力分层（安卓验签必达）+验签<100ms+时戳容差窗防时钟误伤+验证失败三态禁静默③无签=留痕不生效（数据面全保留控制面零效力·审计/执行视图分离）+三边界例候并稿定谳（人发直令免自盖/系统通知不入域/补签新立效力防倒签）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 dafbecd2 后新增 9 条 commit：
+  - 0c369adc docs(cto): 盖章主稿细节短件第二批定谳——验签实现形态=收席侧宿主 hook(block=数据不执行语义原生实现·M-SG NOTIFY 同位先例·双宿主投放)+库选型=@noble/ed25519 纯 JS(零原生编译跨平台零负担·@noble/curves 覆盖 secp256k1=以太坊系切换平滑)
+  - 63f2636c docs(cto): 盖章主稿细节短件第一批——轮换链(旧钥私签新钥绑定书·90 天对齐 PAT 节奏·失窃=号册吊销+多数席会签防滥权)+重放窗前提注记(sg 跨机面 NTP 同步为前提·漂移>窗宽=合法令误拒假阳性·列入启用前检查清单)
+  - 10a76bac perf(fade): 件④ transcript 首行流读替换全量 readFileSync——readTranscriptMtime 逐轮全量读多 MB jsonl 系串行 round 贴线主嫌疑（4KB 首块直取 meta 行）+勘验注: mtime=statSync 真读非算法假值·毫秒段匀速递增真源=hook 低频注入（灰度素材④面修正 BOD 嫌疑方向）
+  - 38af23bf fix(fade): 件② 报文静默值改发送时实距动态值——round start 基点贴线滞后系统性低估（模板值五犯实锚 40vs53min）·title/body 双改·附 round 基点读数对照
+  - fe8f1e3f fix(fade): 件③ duty-escalate title 硬编码改插条目 id 真名——原「中枢 m-cos」字面量对任何节点恒错（灰度变体⑤实锚·scripts/fade/hub-silent-detect.mjs L225）
+  - 82abcc96 docs(cto): 指令盖章主稿框架段毕——五节骨架(Ed25519 定谳候选/签名头结构/收信侧网关验签/warn-only→enforce 两阶段/编号防伪并轨)+TriChain·TriWeb4 实勘对表结论(两仓占位空壳·对齐预留边界非实现·TriWeb4=席位钱包种子锚点)+跨平台评估(四凭据箱适配器+安卓 TEE 同构)+同批优先序建议(①hub-silent 调参②M-001 落款合同③本方案细节)·细节段候新窗(23:20 止损内框架先行)
+  - 2de33c66 docs(cao): 信面落款机械合同候选条草案——幻觉时点家族基建（M-001 同族·BOD 22:52 加段令 CEO 22:51 令源·止损修正 23:20）·正形二选一（date +%H:%M 分粒度原值/声明式 hook 现戳锚）+双保险条款化（写前必跑防发生+发完重跑对表防漏网·实证起效）+禁则五条（模糊段/虚标现查/括号辩解/备稿复贴/手算换算）·候审链=明窗 BOD 审批后 CAO 线入纪律册附录定编 D-XX·本件草案不具纪律效力
+  - 1de49156 docs(cpo): 盖章机制产品段并流预备段补（BOD 22:52 加段令·分段制）——TriChain/TriWeb4 轻量定位读数（兄弟目录五件套同构 product/{PROJECT,REQUIREMENTS,ROADMAP,STATE}+engineering/{DESIGN,ROADMAP,STATE}）+明窗对表计划（TriChain PROJECT/DESIGN 对表迁移四要素与签发身份解耦·TriWeb4 对表多端口径）+CTO 框架段引用位预留（候落卷并流·两正身互引不混写）
+  - 7c4098a7 docs(cfo): W42 断供跑道警示——二点实测 61%/h 陡降证实（64%→59%/4.9min·11W）·冻结预期窗 23:30-23:50·锁笔建议达 COO+BOD·CTO 三案并勘素材收编
+- registry：v2.1；今日 registry 提交无变化
