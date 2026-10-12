@@ -152,3 +152,9 @@
   - 3e7e5d5f docs(lg-066): CTO 终判卷——恢复阶梯窗 v3 全链 PASS（四步锚/三判据/N3 72h 窗闭+活体现勘四日连续健康 cron 3 job 零劣化）；残差四项出窗随线；死线 07:30 前 @m-duty-cto
   - 6ce0015b docs(cos): lg066-trirmc-merge-receipt-unit 销账——LG-071改形首笔适用(CEO 03:22令/BOD 03:24令)·COS终验四件亲验=STE N3四锚+附锚全绿f05d1ba卷本体亲读+BOD §129复核(转录面两源如实注记)+8712放归登记面销账+卷转static 8f6fa240 diff亲读·时序自洽无倒挂·连带勘正=note「九条3pass候CEO」系10-08旧刷(已10-11勘空归档)+双门施工前置语义完结·LG-066全链闭合·open 6→5
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:50 +08：自上次进度提交 08cbf145 后新增 4 条 commit：
+  - e1ec1375 docs(coo): 大表清零战役本地域批毕报汇总（BOD ③·五件全毕·07:30 前 3.7h）——LG-056 终闭（晨检漏核属实+10-11 机写 ok 双源·令文时点勘正周日域）/LG-064 korw 销项（对象不成立·停摆=LG-069 硬闸跳拍非故障）/LG-066 COS 终验 PASS 销账（LG-071 改形首笔落地·open 6→5）/W41 weekly-meeting 补铸毕 236249e2d/台账 open=5+GitHub 欠补链 5 笔挂账
+  - 3f38eaba docs(cos): 大表 LG-061 行走销——BOD §142 试铸验收 PASS 采认+§143 断链补铸毕（weekly-meeting-2026-W41.md 236249e2d）·三锚销账（§142+§143+236249e2d）·W42 起恢复每周滚动（触发机制挂修候办在册）
+  - 50933b8f merge: 收编 sg 巡检兜底笔（W42 daily-progress 增量）——与本席 W41 补铸笔异文件零冲突
+  - 236249e2 docs(cos): 补铸 weekly-meeting-2026-W41.md（LG-061 续铸断链补铸·BOD §143 令）——W41 周史回溯补录九段（LG-058 战役立案→r5/r5b→九条 23:53 整单闭账/LG-066 段1段2+N3 窗起/LG-071 改形授号/10-11 窗族大日+COS 执卡终验五 PASS+绩效 W41 首滚 13 席全 100）·形制照 W40 试铸五要素·补铸声明+发送账 #号锚候补录如实注·W42 起恢复每周滚动
+- registry：v2.1；今日 registry 提交无变化
