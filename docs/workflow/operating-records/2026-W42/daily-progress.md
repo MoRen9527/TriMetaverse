@@ -292,3 +292,9 @@
   - 611e28584 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - 2465e09b9 docs(cto): LG-069 勘修窗勘测定性卷——hub-silent 贴线反转降级观察(52/53 秒级·当日现象非稳态)+powerMonitor 机理修正(PS spawn 慢>10s 主候选·timeout 10s→20s 单参数候会签)+8711 staleness 定性再修正(lastReadAt 已在·healthz 挑字段系免鉴权面设计·零代码改)+channel.log 块缓冲盲区三观察项+D-46 族再犯如实申报
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @16:40 +08：自上次进度提交 697077bc8 后新增 4 条 commit：
+  - 407c77b88 docs(coo): LG-069 合并窗排窗令（BOD 排窗裁精排）——10-14 晨窗 10:30-12:30 确认（D-23 对照·禁排区外 90min 缓冲·GLM 轨平价位如实标）/分件序=前置件(8713 lastReadAt 投影+窗内短重启生效)→件A→件C→件B→从闸/12:30 硬止损砍件保窗·溢出缓冲禁新施工面/派工令明日 10:00-10:15 发
+  - bd2910be9 docs(cos): W42 大表四行批刷——LG-074 已销（COS 终验毕即销·LG-071 改形：三锚内容面验真+两面 drift=0 独立抽验 13/13+毕报自洽+BOD §172 复核在先）/LG-073 已销（BOD 复核毕通过移交令·9857da13+c45b7af4 锚）/LG-072 销正（行态滞后两头账销正·台账 closed@8ccc7c141 对表）/duty-lane 冻结留档（BOD 裁）；汇总行实数派 16=在途 7+毕候验 2+冻结 1+已销 6
+  - 4dddbff4f merge: 收编 sg bare 并行四笔（BOD §175/LG-054 定性卷/bod-tick 卫生/watcher 补写）
+  - 8777922bd docs(fsd): python 泄漏疑活态三态定性=活——54/54 black-formatter 签名命中·批量触发型（16:08 单桶 54 个 20min 零增长·1544MB WS）·清后 2.5 天复发实锚·巡杀兜底实效面（16:08:01 rc=0 后 3-23 秒复批=秒级再 spawn 形态复现）·BOD 未提交情报勘正（c9b5dd5b7 已入库）·候裁三条
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
