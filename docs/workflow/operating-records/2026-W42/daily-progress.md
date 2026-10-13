@@ -331,3 +331,8 @@
   - 46ab9c4e2 Merge remote-tracking branch 'sg-server/dev' into dev
   - a37622a71 docs(cos): Q3.2 部署段窗前预检卷落树——双机活体读数（sg 顶 a17deaff 已到位+dist 旧/R-HY 顶旧+活体旧值 8712x4 在役）+窗内施工序+fleet 身份正形注+回滚锚；lastSyncedAt 估值自抓勘正随录
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @21:10 +08：自上次进度提交 fa5353585 后新增 3 条 commit：
+  - 78a283419 docs(bod): §182 合同修订审核开卷+merge 倒退丢笔插曲（v1 卷被吞重放复原·排查转 COO·推笔后复验正形起）
+  - d9fbb81f4 docs(bod): 合同审核记录卷流程链补全（三份修订面一块联审 COS/COO/CHO/CAO·员工影响面同步改·CEO 终审签批→董事会令→任务书→source-agents→重渲染）
+  - 4414ab89c docs(bod): board.contract.yaml 修订审核记录卷建卷（CEO 逐条口审 19 条照录·BOD 只记录底稿·候 COS 汇总呈批·签发令后下发）
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
