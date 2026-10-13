@@ -7,7 +7,7 @@
 
 ## 对象断言实锚（08:1x 本席 sg 直勘·fleet SSH 只读三发）
 
-- **8712=trimc 现役正确**：healthz `"service":"trimc"` jobCount=10；`ss` 实锚 node pid=1959958 监听 127.0.0.1:8712；**8710 现无监听**——本席记忆条「TriMMC 8710」系过时读数（端口已迁 8712·10-11「8712 放归服务域池」窗后迁入·旧真值未随迁移更新——修正注记在此·记忆条更新候选）。
+- **8712=trimc 现役正确**：healthz `"service":"trimc"` jobCount=10；`ss` 实锚 node pid=1959958 监听 127.0.0.1:8712；**8710 现无监听**——**【08:35 勘正】记忆条勘正头注 10-06 已在（trimmc-mlc-addjob-divergence L3「TriMMC 现役监听=sg 8712 非 8710」）——本行原注「记忆条未随迁移更新」系假修正：条未过时，是本席引用时未读全条只记 L5 旧开头——教训入记忆条「引用记忆条先读全条再断言过时」。**
 - **outbox.ts L65 白名单现值与令面逐字一致**：`['m-duty-cos', 'bod', 'm-cos', 'm-coo']`；注释确认 LG-036 MVP=m-duty-cos/LG-052 扩治理链三席——m-duty-coo 缺位实锚。
 - **形态断言**：sg TriMC=**systemd 形态非 watchdog 形态**（trimc.service 直管·PPID=1·「dist production form, r15-1-4」）——BOD 令面重启链（watchdog Disable→优雅停→FREE→冷启→pid 对表→Enable）系 Windows schtasks/watchdog 模板，sg 面**同构映射**：systemd stop（SIGTERM 优雅停）→port FREE 断言→systemd start→MainPID 对表+healthz 值面探针；Enable 面 systemd 自管无需步骤。
 - **git 现势**：顶=970b5cc（LG-052 urgent tmux 修）；源码面干净（仅 notify 运行时 json 三件未跟踪=运行数据非源码）。
