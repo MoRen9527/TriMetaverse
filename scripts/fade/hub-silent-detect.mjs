@@ -24,6 +24,7 @@ import { fileURLToPath } from "node:url";
 import { sendNotify } from "./lib/notify-sender.mjs";
 import { collectNodeSignals } from "./lib/tree-signals.mjs";
 import { isQuietHours } from "./lib/quiet-hours.mjs";
+import { readDutyTickSignal } from "./lib/duty-tick-signal.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..", "..");
@@ -217,12 +218,22 @@ async function main() {
 
   // dispatch alerts
   const failCount = { n: 0 };
+  // 件①(10-14 晨窗·B 主拍文判据): bod-tick 拍文值守候令豁免——判据源=BOD 答询 04:33
+  // (tick-latest.md ⓪段·8713 :07/:37 双点·内容节拍时戳判新鲜两机一致)。fail-open:
+  // 拍文缺失/不新鲜→不豁免照发(保守:失联不漏报)。A 辅时段豁免保留为 B 主缺位期兜底层。
+  const tick = readDutyTickSignal(REPO_ROOT, Date.now());
+  if (!tick.fresh) appendLog(`duty-tick signal not fresh (${tick.reason}) — tick-exempt inactive`);
   for (const a of alerts) {
-    // A 辅(10-14 晨窗·值守候令静默态豁免): 22:00-08:00 duty/idle 两 band 降 log-only。
-    // 依据与裁量见灰度卷 290a3feb4 续勘节; B 主(拍文判据)候下窗。豁免不写 state——
-    // 出豁免窗首轮即正常告警(无冷却残留); anchor-error/reminder 不豁免。
-    if (isQuietHours() && (a.level === "duty-escalate" || a.level === "idle-escalate")) {
-      skipped.push(`${a.id}: ${a.level} quiet-hours suppressed (22:00-08:00 值守候令豁免)`);
+    // 值守候令静默态豁免(A 辅+B 主): quiet-hours 22:00-08:00 OR 拍文值守候令。
+    // 豁免不写 state——出豁免态首轮即正常告警(无冷却残留); anchor-error/reminder 不豁免。
+    const quiet = isQuietHours();
+    const tickExempt =
+      tick.fresh &&
+      (a.level === "duty-escalate" ? tick.dutyIdle : a.level === "idle-escalate" ? tick.allIdle : false);
+    if ((quiet || tickExempt) && (a.level === "duty-escalate" || a.level === "idle-escalate")) {
+      skipped.push(
+        `${a.id}: ${a.level} suppressed (${quiet ? "quiet-hours 22:00-08:00" : "bod-tick 值守候令拍文"}豁免)`,
+      );
       continue;
     }
     let targets;
