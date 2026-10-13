@@ -389,3 +389,7 @@
   - ff3471a08 Merge remote-tracking branch 'origin/dev' into dev
   - c3ebf82c1 docs(cos): R1 批5 sg 面毕报——13/13 全毕 23:15-23:31 早止损14min·resume 起点 RSS 高于重启前(平均+31% 回收收益为负·cos 唯一降)§五条款兜住·5席--agent漂移修复·5席选择器双Enter过·实ping首响未做如实注记
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @23:40 +08：自上次进度提交 1f3a843b0 后新增 2 条 commit：
+  - f3a2ef1c6 docs(cto): 锁笔注记补 COO 电源核查对表——瞬态三连失败自愈（观察项认领候勘·负载超时候勘修窗）+本机放电态背景（CEO 知情照开·明晨窗第一动作先探电源态）+LG-075 渲染笔基线注记
+  - e5dc8b382 docs(cos): 大表补刷 LG-075 行（在途态·施工窗00:30-02:30·BOD裁向框架载注）——CEO 23:21 问询触发·双面 grep 零命中缺口补齐·LG-069 核查毕双源正形注随
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
