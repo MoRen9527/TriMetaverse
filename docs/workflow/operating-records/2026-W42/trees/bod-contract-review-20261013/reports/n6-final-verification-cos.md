@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（docs/workflow/operating-records/2026-W42/trees/bod-contract-review-20261013/reports/n6-final-verification-cos.md）
 - syncMode: static（终验定格）
-- lastSyncedAt: 2026-10-13T23:58:00+08:00（date 现查·写前跑）
+- lastSyncedAt: 2026-10-13T23:52:27+08:00（时点勘正 2026-10-14 00:0x：原载 23:58 系未来时戳瑕〔D-47 族·BOD §187 观察项〕·实证=销账 commit 9a509f3a1 git log 时刻·推平 1300a15d1=23:52:48；四面同勘=大表/mirror/机器账 closedAt/本卷）
 - 终验对象: LG-075 board 三件套修订施工全链（CEO 21:49:02 签发令·任务书生效卷 df129d3c）
 - **终验判定: PASS·五项判据全绿→LG-075 销账（LG-071 改形·COS 终验毕即销）**
 

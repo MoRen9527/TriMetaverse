@@ -214,7 +214,7 @@
     "priority": "high",
     "status": "done",
     "note": "【董事会令·CEO 2026-10-13 21:49:02 签发·BOD 发令走 COS 链】board 三件套修订施工六步：①纪律册先立（CAO 主笔·铸条清单 COS 七+COO 五并集去重+被迁出条承接先立后破·双向一行指针·联审表增纯度核查必查项）②source-agents/board 三件修订（25 条 CEO 意见+联审精化全量·含 #7 规则句正形/#14 前置门+涉人员不入 D-39 声明句/#45 绕链禁令增补/#47 删·body 第 7 行虚拟董事会定性+#23/#24/#17 三处同词同序）③发布管线重渲染两宿主位 ④关联件追平（CGR L223 第三次变更注记+CLAUDE.md 分权制节两处）⑤称谓勘误面=不勘（CEO 备注 bod 董事会不算错误·撤销连带勘误候选）⑥验收销账走 COS 链正形。排窗约束：今晚 22:00 Q3.2+23:00 R1 两窗已占·本施工另排不抢窗。",
-    "closedAt": "2026-10-13T23:58:00+08:00",
-    "closeNote": "N6 终验 PASS 五项判据全绿·销账锚=n6-final-verification-cos.md（LG-071 改形·COS 终验毕即销）"
+    "closedAt": "2026-10-13T23:52:27+08:00",
+    "closeNote": "MACHINE-LEDGER-CLOSE-ASSERT-OK; time-corrected 23:58->23:52:27 (9a509f3a1 commit ts, D-47 future-ts flaw, BOD §187 obs)"
   }
 ]
