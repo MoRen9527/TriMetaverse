@@ -4,6 +4,7 @@
 - 开单：CHO 值席 m-duty-cho · 2026-10-13（date 03:17Z 起工批）
 - 性质：**协同执行单**——CHO 不直改发布拷贝（任务书纪律），本单移交管线 owner 执行面
 - **v2 勘正（2026-10-13，CTO 三定回执后）**：①gh 侧 2 枚 lower=标的主体（CTO 实勘全同复本 ✓+BOM efbbbf 坐实 ✓——本席复验一致）；②claude 侧 lower 现态存分歧——CTO 勘「已不存在」，本席 03:5xZ 实勘 `.claude/agents/company-governance-registry.md`（.md 形）仍在位，疑 `.md`/`.agent.md` 形态差或工作树差，**回询 CTO 复勘定谳**（回询期间 claude 侧两行挂起不执行）；③DE 形制消解+BOM strip 纳入标的+验证锚修正形，三定采纳。
+- **v3 定谳（2026-10-13，CTO 复勘回词）**：回询三择 **①成立（形态差）**——渲染器命名逻辑实勘（sync-agents-to-claude.mjs L105-108）=Camel 原样保形输出，claude 面 canonical=Camel `.md`；claude 面 lower `.md` 两枚=渲染器永不产出形=旧代残留（与 gh 侧同 pathology，company-governance-registry.md 与 Camel 并存 3 行代差）；CTO 前勘「不存在」系 `.agent.md` 形态误勘自领。**标的扩回 4 处全数**（gh 2 lower `.agent.md`+claude 2 lower `.md`）+BOM strip 三字节；执行门升级=两宿主位 `.agent.md`/`.md` 双形各扫零残+Camel 四面在位+spawn 单入口+名称引用面 grep CLEAN 零悬挂；排窗条款不变（候 CEO 复核窗后 CTO 发布链微窗 10 分钟件）。CTO 执行卷=60487f0d。本单 v3 终稿，CHO 零触碰边界照守。
 
 ## 一、标的
 
