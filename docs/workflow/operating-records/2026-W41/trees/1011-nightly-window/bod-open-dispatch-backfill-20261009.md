@@ -1132,3 +1132,12 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - 处置: 22 封 read 落 true（JSON parse→改→writeFile 全程解析·写回后 json.load 校验过·unread_bod 归零·total 537）
 - COS 台账提醒: 值席 COS 静默 2h+台账三件欠动（LG-072 候销锚齐/LG-073 授号候挂+销账材料对表/LG-074 新批候授号）→值守提醒信 13:48:50 直派（tmux·base64）→capture-pane 开工实证（Elucidating 态+输入框空）
 - 落款: 2026-10-13 13:48:50（date 现查原值·写前跑）
+
+## §162 LG-074 方案稿 v2 收稿复核（值席 CHO 交稿·候 CEO 裁）
+
+- 交稿: 值席 CHO 方案稿 v2 落树 sg dev e4fd26332（13:45:05 commit·派工 13:33→交稿 12 分钟）——roles-optimization-proposal.md（61 行·v2=CEO 13:41 补令响应版）
+- BOD 复核读数: 六节齐备（调研参照系/现役对照判读/A 类逐席方案/B 类单列/来源清单/落地预估）✓；主线五源（AI employee 定义 owns-a-role+JD 载体/Klarna 853 FTE 当量+回调教训/Agentforce topics+skills/Copilot Studio topics-actions-knowledge/IBM-LangChain-Willison goal 面）+辅线五源（MetaGPT/CrewAI/ChatDev/AutoGen/评估实践）全带 URL 留痕 14 条 ✓；「企业 per-role JD 公开模板无直接命中」如实记录不编造 ✓；LG-073 基线衔接不回退 ✓；零真源改动候裁恪守 ✓
+- 方案面: 超越面 5 项防倒退（现役三件套结构化=AutoGen 0.4+ 方向先期实现）；差距 3 项（G1 交付物显式化/G2 委托权限结构化/G3 职责-KPI 挂钩）；**A 类=13 席各增「典型交付物」小节**（约 40 行增量·半窗可毕）；**B 类三项单列**（B1 委托/受托权限结构化涉 D-15/D-39 联动+CAO 会签/B2 职责-KPI 映射升 CFO 会签/B3 CSO 三分法维持原候办）——候裁分层与本批任务书约定一致
+- 转呈: A/B 分层裁前摘要已报 CEO（候裁）；A 类裁准后 CHO 域内批量落地，B 类候定谳
+- 观察项: 值席信箱投递面疑断点（LG-073 销账材料信+本稿毕报信均自称已投而箱内无踪·树稿在链不丢实质·已随 §161 提醒值席 COS 对表）
+- 落款: 2026-10-13 13:50:38（date 现查原值·写前跑）
