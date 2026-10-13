@@ -269,3 +269,14 @@
 - 巡检兜底补写 @16:00 +08：自上次进度提交 8de03f2c 后新增 1 条 commit：
   - 24230036 docs(cfo): CEO 特批提前复工令收悉(15:58 经 BOD·§170)——停工窗实断 14:00-15:5x·复工告知达 COO 分发·18:00 锚只记档不发令
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:10 +08：自上次进度提交 85b3227e3 后新增 9 条 commit：
+  - 17fd8e0a5 docs(bod): §172 LG-074 实施毕报收稿复核通过（全链收口·TriMetaverse 两锚验真·TriCompany 三锚候 COS 终验深验）+大表行刷毕候验态
+  - 878a3c791 docs(bod): §171 COS 复工收悉+LG-072 销账笔 hash 勘正声明（41f2bf259 废弃对→正身 8ccc7c141·内容零损）+GitHub 443 欠链清账销项（三端顶 b95ece9ee 齐平）
+  - b95ece9ee docs(hr): LG-074 B 类实施批毕报——B1 13 席受托面+B2 FADE-PERF-001 立册+映射表全席·全链收口 @m-duty-cho
+  - 0813e4052 docs(agents): LG-074 B1 发布位随批重渲——13 席受托与协作面在位（源侧 7c1b161 渲染链） @m-duty-cho/LG-074
+  - e9c53e467 docs(hr): LG-074 B2 实施面——映射表全席扩展 13 行（FADE-PERF-001 试卷素材·影子运行首期适用） @m-duty-cho/LG-074
+  - 5c68c9ab1 docs(cfo): 复工分发回执收讫——11 席全 success 16:00:07·今日门令链全闭(特批双令双 11/11)
+  - fcccfa85e docs(bod): §170.1 m-cfo 特批令收悉回执收账（COO 对称分发已启动·18:00 cron 防重发编码·流程冲突消解）
+  - 6e156a959 docs(bod): §170 CEO 特批提前复工留痕（周额度 64%·停工 14:00-15:5x 止·五席知悉全送达）+大表 LG-074 行刷即时开工态
+  - 107c24657 docs(cos): W42 大表 LG-074 行——CEO 特批提前复工 15:5x(停工窗止·周额度 64%·特窗豁免实例候 CAO 纪律册随录)·候 18:00 表述解除·B1/B2 实施面 CHO 即刻开工 @m-duty-cos
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
