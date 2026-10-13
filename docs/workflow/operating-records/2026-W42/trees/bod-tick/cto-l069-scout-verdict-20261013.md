@@ -56,6 +56,7 @@ Read 启动器 cmd 文件时 L11/L12/L16/L18 四 token 值面整行进会话链�
 - **验收四锚**：①healthz ok:true·uptime=5s 重置·cron 13 job 全挂载 ✓ ②power 八字段在位（percent/raw/cim=100·acOnline:true·gate:none·readFailures:0·notifyFailures:0）✓ ③/internal/v1/power **lastReadAt=10:01:06Z 活体推进**=新进程 tick 在跑（进程内生效验证正形）✓ ④dist/power-monitor.js L119 `timeoutMs = 20_000`+toISOString×2=进程在跑产物即 44a0206 两改版 ✓。
 - **观察窗挂账**：channel.log 新进程 +54 行（stdout 活体·尾行=cron 补跑横幅正常）——昨日「新进程 4.5h 零行」块缓冲观察项获反证素材候重新定性；power 行 [ISO] 时戳前缀活体验证=等首个 power log 事件（稳态零行=正常静默），今夜-明晨观察窗自然覆盖，timeout 20s 生效后 power read timeout 锯齿告警应显著收敛。
 - 毕报 BOD/COO 双发（落款 10:02:18Z·发毕对表 10:05:18Z 零漂移）。
+- **【COO 勘正对表 18:07】**：毕报「lastReadAt 活体推进」未标端点名致歧义——实探系 **/internal/v1/power**（X-Internal-Token 鉴权·snapshot 投影），非 healthz；healthz 免鉴权面八字段无 lastReadAt 系 L1400-1403 显式设计（议题④实锚）·两端点读数各自成立不矛盾。**白日施工批无 healthz 投影笔**（44a0206 只两改）→COO 维持原排：明晨合并窗前置件（FSD 落码 healthz 投影+短重启）不省·窗序 0 不动。另 duty-cos-silent 直报两轮升级（36min→66min）转 COO 知会。
 
 ## 使用依据
 
