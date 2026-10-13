@@ -3,6 +3,7 @@
 - 令源：LG-073 审核修订批（CEO 2026-10-13 11:00 裁准四件·task-charter.md 件 4）
 - 开单：CHO 值席 m-duty-cho · 2026-10-13（date 03:17Z 起工批）
 - 性质：**协同执行单**——CHO 不直改发布拷贝（任务书纪律），本单移交管线 owner 执行面
+- **v2 勘正（2026-10-13，CTO 三定回执后）**：①gh 侧 2 枚 lower=标的主体（CTO 实勘全同复本 ✓+BOM efbbbf 坐实 ✓——本席复验一致）；②claude 侧 lower 现态存分歧——CTO 勘「已不存在」，本席 03:5xZ 实勘 `.claude/agents/company-governance-registry.md`（.md 形）仍在位，疑 `.md`/`.agent.md` 形态差或工作树差，**回询 CTO 复勘定谳**（回询期间 claude 侧两行挂起不执行）；③DE 形制消解+BOM strip 纳入标的+验证锚修正形，三定采纳。
 
 ## 一、标的
 
