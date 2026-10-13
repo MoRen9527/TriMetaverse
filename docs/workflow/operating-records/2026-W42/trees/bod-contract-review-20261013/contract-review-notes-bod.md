@@ -42,9 +42,10 @@
 
 ## 流程状态
 
-- [进行中] CEO 逐条口审（本卷 19 条已录·候 CEO 后续补充）；
-- [候办] CEO 审毕 → COS 汇总呈批（呈批件由 COS 出）；
-- [候令] CEO 明说「签发」→ BOD 下发 COS → 源侧合同修订 → 发布管线重渲染。
+- [进行中] CEO 逐条口审 board.contract.yaml（本卷 19 条已录·候 CEO 后续补充）；
+- [进行中] CEO 续审 **agent-frontmatter.agent.md + agent-body.agent.md**——三份（contract/frontmatter/agent-body）修订面齐后**一块联审**；
+- [候办] **COS、COO、CHO、CAO 四席联审**——影响到 COS 和 COO 等员工的条款**同步改**；
+- [候办] 联审毕 → **CEO 终审** → CEO **签批** → **发董事会令** → **做任务书** → 改 **source-agents 三件** → 发布管线**重新渲染**。
 
 ## 涉及正身与关联件
 
