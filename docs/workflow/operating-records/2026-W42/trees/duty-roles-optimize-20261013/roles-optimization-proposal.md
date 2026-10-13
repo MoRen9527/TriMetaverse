@@ -1,13 +1,25 @@
 # 全司岗位职责完善优化方案稿（LG-074 候授·CHO 主稿·候裁不直改）
 
-- 令源：CEO 2026-10-13 13:29「值席 CHO 站本职位角度对全公司岗位职责做完善优化，可搜互联网参照其他项目 AI agent 岗位定义」（BOD 派工·LG-074 候授）
+- 令源：CEO 2026-10-13 13:29「值席 CHO 站本职位角度对全公司岗位职责做完善优化，可搜互联网参照其他项目 AI agent 岗位定义」（BOD 派工·LG-074 候授）；**v2 调研范围细化（CEO 13:41 补令）：主线=互联网科技公司 AI agent/虚拟员工/数字员工岗位职责实践，开源框架降辅线**
 - 审核基线：13 席现役五件套亲勘（本席 2026-10-12 全量审读+LG-073 修订批施工面），**禁转抄发布拷贝** ✓ 已守；LG-073 基线（新式 description/层契约 social/归档纪律）全案衔接不回退
 - 纪律：本稿为**方案稿候裁**——零真源改动；A 类候 CEO 裁准后 CHO 域内批量落地；B 类单列候 CEO 定谳；调研来源逐条留痕 §五
 - 任务书：board 链 033b24519 未达本机 dev 线（fetch 复验），要点以派工信为准
 
 ---
 
-## 一、调研参照系（五源留痕，要点提炼）
+## 一、调研参照系
+
+### 1.1 主线：真实科技公司 AI 员工/数字员工岗位职责实践（CEO 13:41 细化面）
+
+| 源 | 要点 | 来源 |
+|---|---|---|
+| AI employee 定义共识（Vida Global/cellcog/Medium 行业面） | **「AI employee owns a role」**：持岗位语境+标准+端到端完成工作（区别于逐条应答的 chatbot）；**JD 载体=AGENTS.md/岗位文件**——「招聘数字员工先问：这个人具体负责什么」（HR 化框架：job description/roles/responsibilities） | [Vida Global](https://vida.io/blog/what-hiring-a-digital-employee-actually-means) · cellcog.ai 行业面 · Medium（V. Nagin）AI employee 指南 |
+| Klarna 案例（2025 全年） | AI 客服 agent=**853 全职人力当量**（2025-11，年初约 700）；人头自 5,527 缩减；**回调教训：过度替代后重雇真人**（CEO 自认「cut too far」）——AI 岗位定义需预载人机协同边界与回摆弹性 | [Customer Experience Dive](https://www.customerexperiencedive.com) · CNBC 2025-05-14 · Business Insider 2025-09-02 |
+| Salesforce Agentforce | **digital labor 平台化**：autonomous AI agents 按 **topics（职责域）+skills（能力面）** 结构化组织岗位职责，24/7 数字劳动力 | [salesforce.com/agentforce](https://www.salesforce.com/agentforce) · Salesforce News 2025-03-19「Building the AI-Powered Workforce」 |
+| Microsoft Copilot Studio | 企业 agent 定义=**topics+actions+knowledge 三面结构化**（职责域/可执行动作/知识面） | [microsoft.com/copilot](https://www.microsoft.com/en-us/copilot/products) · Microsoft Learn Copilot Studio 文档 |
+| IBM/LangChain/Willison agent 定义面 | agent=目标导向、迭代行动、自评下一步（goals-driven）——goal 显式为岗位定义核心件 | [IBM AI agents](https://www.ibm.com) · [langchain.com](https://www.langchain.com) · [simonwillison.net](https://simonwillison.net) |
+
+### 1.2 辅线：开源框架角色设计（13:29 原面，降辅线保留）
 
 | 源 | 要点 | 来源 |
 |---|---|---|
@@ -19,12 +31,13 @@
 
 ## 二、现役体系对照判读（先说超越面，再列差距面）
 
-**超越面（不动，防倒退）**：①结构化面——contract.yaml/binding profile/host-object manifest 三件套即 AutoGen 0.4+ 「结构化编排」方向的先期实现；②双向审核——CPO↔CTO 互锁闭环与 ChatDev 成对互审同构且已制度化（联审门 D-15）；③SOP 化——各席固定前置核查/决策三分法/行为护栏即 MetaGPT SOP 编码的岗位级实现；④评估基础——performance-scoring-workflow（初始 100 分/缺陷扣分/验证加分/干活量底分）已有 KPI 骨架。**主流框架可借鉴的，现役体系大多已有对应物或更先进形态。**
+**超越面（不动，防倒退）**：①结构化面——contract.yaml/binding profile/host-object manifest 三件套即 AutoGen 0.4+ 「结构化编排」方向的先期实现，亦与主线企业平台（Agentforce topics/skills、Copilot Studio topics/actions/knowledge）的「职责域+能力面+知识面」三件结构化同构；②双向审核——CPO↔CTO 互锁闭环与 ChatDev 成对互审同构且已制度化（联审门 D-15）；③SOP 化——各席固定前置核查/决策三分法/行为护栏即 MetaGPT SOP 编码的岗位级实现；④评估基础——performance-scoring-workflow（初始 100 分/缺陷扣分/验证加分/干活量底分）已有 KPI 骨架；⑤JD 载体面——主线共识「AI employee 需要 JD 文件+owns a role」，TriCompany 五件套+contract 即此形态且更完备（身份/层契约/真源顺序企业平台未见对应物）。**主线+辅线可借鉴的，现役体系大多已有对应物或更先进形态。**
 
 **差距面（三处，均 incongruent-补写级）**：
-- **G1 交付物/接口显式化不足**（MetaGPT 对照）：各席职责写「做什么」清楚，但「交什么」多为隐含——缺结构化「典型交付物」声明，跨席 handoff 靠真源顺序节间接推导。
+- **G1 交付物/接口显式化不足**（MetaGPT+主线双印证：Agentforce topics/skills 与 Copilot Studio topics/actions 均将「职责域+能力面」显式结构化）：各席职责写「做什么」清楚，但「交什么」多为隐含——缺结构化「典型交付物」声明，跨席 handoff 靠真源顺序节间接推导。
 - **G2 委托/受托权限未结构化**（CrewAI 对照）：派工权限散载（COS 三权/COO 督办无强制力/D-15 枢纽），无每席「可受托面」声明——跨席委托依赖路由节推定。
-- **G3 职责-KPI 挂钩无锚**（评估实践对照）：scoring 体系存在，但席级核心职责与账面读数无显式映射（评分靠通用扣分/加分，缺「该席该考什么」锚）。
+- **G3 职责-KPI 挂钩无锚**（评估实践对照+Klarna 当量度量启示）：scoring 体系存在，但席级核心职责与账面读数无显式映射（评分靠通用扣分/加分，缺「该席该考什么」锚）。
+- **正面印证（不立项）**：Klarna 回调教训提示的「人机协同回摆弹性」——现役各席 ESCALATE 升级链+「不覆盖 CEO 级组织调整」护栏+LG-073 护栏通用化面已实质覆盖回摆边界，方向正确，无需新增。
 
 ## 三、A 类逐席方案（表述完善·13 席·候 CEO 裁准后 CHO 批量落地）
 
@@ -64,25 +77,25 @@
 | B2 | 职责-KPI 显式映射 | 席级核心职责↔scoring 账面读数映射表（该席该考什么锚）——涉绩效体系细化 | 评估实践 task completion/多层度量 | 候裁：CHO 绩效定义权域内可拟稿，升 CFO 会签（成本读数同源纪律） |
 | B3 | CSO 决策三分法标准化+原则补实 | FORBIDDEN 迁护栏+第三态补 FREEZE+原则 3-4 条（审核报告 F2-3/F2-2 原样） | 全司三分法统一形 | 候裁：随 CSO owner 批窗（原候办面，不因本批激活） |
 
-## 五、调研来源清单（逐条留痕）
+## 五、调研来源清单（逐条留痕·主线+辅线）
 
-1. MetaGPT 论文：https://arxiv.org/abs/2308.00352（五角色+SOP 结构化通信）
-2. MetaGPT GitHub：https://github.com/FoundationAgents/MetaGPT（软件公司全流程+编排 SOP）
-3. MetaGPT 官方文档：https://docs.deepwisdom.ai（角色专业化分解）
-4. CrewAI Agents 文档：https://docs.crewai.com/concepts/agents（role/goal/backstory 三件套）
-5. CrewAI Collaboration：https://docs.crewai.com/v1.15.1/en/concepts/collaboration（delegation+ask questions）
-6. CrewAI GitHub：https://github.com/crewAIInc/crewAI（声明式 config）
-7. ChatDev 论文：https://arxiv.org/abs/2307.07924（ChatChain/成对角色/去幻觉）
-8. ChatDev ACL 2024：https://aclanthology.org/2024.acl-long.810
-9. ChatDev GitHub：https://github.com/OpenBMB/ChatDev
-10. AutoGen 指南：https://www.autolearningagents.com/autogen（AssistantAgent system_message）
-11. AutoGen GitHub：https://github.com/microsoft/autogen
-12. Arize 评估指标：https://arize.com（quality/cost/safety/behavior/performance 五类）
-13. Splunk 生产 Agent 度量：https://www.splunk.com（session/trace 多层）
-14. Confident AI：https://www.confident-ai.com（task completion LLM-as-judge）
-15. Braintrust：https://www.braintrust.dev（多步任务系统测试）
-16. Workday Agent KPI：https://www.workday.com（2025-08）
-17. 「squad-based AI-native org chart」专项检索：**无直接命中**（composite 概念过窄，如实记录不编造）
+**主线（互联网科技公司 AI 员工/数字员工实践·CEO 13:41 细化面）**
+1. Vida Global「What Hiring a Digital Employee Actually Means」：https://vida.io/blog/what-hiring-a-digital-employee-actually-means（数字员工=HR 化框架：先问具体负责什么）
+2. cellcog.ai 行业面（AI employee owns a role：持语境+标准+端到端，区别 chatbot）
+3. Medium（V. Nagin）AI employee 指南（JD 载体=AGENTS.md+工具访问+职责定义）
+4. Klarna 案例：https://www.customerexperiencedive.com（2025-11-20，AI agent=853 FTE 当量）+CNBC 2025-05-14（人头 5,527 缩减）+Business Insider 2025-09-02（过度替代回调重雇真人）
+5. Salesforce Agentforce：https://www.salesforce.com/agentforce（digital labor：topics+skills 结构化职责域）+Salesforce News 2025-03-19「Building the AI-Powered Workforce」
+6. Microsoft Copilot Studio：https://www.microsoft.com/en-us/copilot/products（agent=topics+actions+knowledge 三面）
+7. IBM「What Are AI Agents」：https://www.ibm.com（企业跨应用复杂任务）；LangChain：https://www.langchain.com（goal 导向迭代行动）；Simon Willison：https://simonwillison.net（agent=工具+模型接线行动）
+8. 专项检索如实记录：「digital employee JD 模板/企业 per-role agent 岗位说明书」公开模板**无直接命中**（企业级 per-role JD 多为私有部署内件，公开面稀薄——不编造，以平台文档结构化面为替代参照）
+
+**辅线（开源框架角色设计·降辅线保留）**
+9. MetaGPT 论文：https://arxiv.org/abs/2308.00352（五角色+SOP 结构化通信）
+10. MetaGPT GitHub：https://github.com/FoundationAgents/MetaGPT；官方文档 https://docs.deepwisdom.ai
+11. CrewAI Agents：https://docs.crewai.com/concepts/agents（role/goal/backstory）；Collaboration：https://docs.crewai.com/v1.15.1/en/concepts/collaboration；GitHub https://github.com/crewAIInc/crewAI
+12. ChatDev：https://arxiv.org/abs/2307.07924；ACL 2024 https://aclanthology.org/2024.acl-long.810；GitHub https://github.com/OpenBMB/ChatDev
+13. AutoGen：https://www.autolearningagents.com/autogen；GitHub https://github.com/microsoft/autogen（0.4+ 结构化编排转向）
+14. 评估面：Arize https://arize.com；Splunk https://www.splunk.com（session/trace 多层）；Confident AI https://www.confident-ai.com（task completion）；Braintrust https://www.braintrust.dev；Workday https://www.workday.com（2025-08）
 
 ## 六、落地预估与清尾
 
