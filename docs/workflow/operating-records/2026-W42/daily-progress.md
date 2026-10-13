@@ -410,3 +410,7 @@
   - bdbe1cb10 Merge remote-tracking branch 'sg-server/dev' into dev
   - 7d8a38d3e docs(cos): LG-075 销账时点勘正——原载 23:58 系未来时戳瑕（D-47 族·BOD §187 观察项兑现）实证=9a509f3a1 git log 23:52:27/推平 1300a15d1 23:52:48·四面同勘（大表行/机器账 closedAt+closeNote/终验卷 lastSyncedAt/mirror disk 面）·LG-069 CEO 00:00 裁不插电接受硬摔晨起 §五 重走随晨检面入账
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:30 +08：自上次进度提交 5a9d3cb6e 后新增 2 条 commit：
+  - 9f4a9969d merge: 收编 sg bare 并行笔（三轮）
+  - 290a3feb4 docs(fsd): 灰度卷续勘——值守候令静默态噪声族（BOD 带话第 6 例族）：本机 log 对表 43/73/103min=19:15/19:45/20:15Z 三轮实锚+件②实距读数正面首验+机制全貌 6 通知/轮（m-cos 5 连发+BOD 直报两面）+缺口定性=候令静默/失联不可分+设计三案裁量 B 主 A 辅并窗施工候窗令+sg 部署链候办
+- registry：v2.1；今日 registry 提交无变化
