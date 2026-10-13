@@ -1,9 +1,9 @@
 # CTO · TriMC 白名单补 m-duty-coo·变更方案卷（BOD 2026-10-13 08:09 令）
 
 - sourceOfTruth: 本卷（trees/bod-tick/cto-trimc-whitelist-change-plan-20261013.md）
-- syncMode: work（变更窗执行时升·毕报后归 static）
-- lastSyncedAt: 2026-10-13T08:20+08:00（date 现查见 commit 卷笔）
-- 令链：BOD 变更令 08:09（CEO 指出口径不一致成立·LG-052 扩面遗漏非设计意图·治理链补对称）
+- syncMode: work（变更段 08:29 全毕毕报 BOD·重启段候 BOD root 操盘+候裁点见毕报段）
+- lastSyncedAt: 2026-10-13T08:30+08:00（date 现查 00:29:49Z/08:29:49 见毕报）
+- 令链：BOD 变更令 08:09（CEO 指出口径不一致成立·LG-052 扩面遗漏非设计意图·治理链补对称）+BOD 分工裁 08:15（我变更段/BOD root 重启段）
 
 ## 对象断言实锚（08:1x 本席 sg 直勘·fleet SSH 只读三发）
 
@@ -31,6 +31,14 @@
 - 工作所属模型=GLM 轨（本席）；D-23 指导表：GLM 轨黄金段=18:00→次日 14:00——现时 08:2x **在黄金窗内**；禁排区=工作日 14:00-18:00（不涉）。
 - **自排：今日 09:00-09:20 微窗**（变更笔+门禁+落笔我 fleet 身份段约 10 分钟；重启段候 root 通道到位即续·两段可跨微窗拼接）。
 - 候 BOD 一句：root 重启段执行位=您直执（SSH 两令）或授权 sg 值席位执行——候令指定，不指定则毕报变更笔毕+重启段挂候。
+
+## 变更段执行记录（08:15-08:29 全毕·毕报已发 BOD）
+
+- **步骤 1-3 全毕**：sed 单行补+注释 → 门禁三步（tsc check+build 过+测试 466/457/9 fail 经 stash 对照实锚既有）→ commit caadfbc。
+- **并行笔收编**：push 遇 sg bare 已推进至 82a3d52（正名 TriMC→TriMMC 大线+key-cache+recovery-ladder 批）——decba1f（10-9 历史笔·LG-069 电源门配套）同文件同数组加 'power-gate'。merge 冲突解=两笔并集六席终态 `['m-duty-cos', 'bod', 'm-cos', 'm-coo', 'power-gate', 'm-duty-coo']`；merge 顶 9561273 push 验真（sg bare dev 顶=9561273306f）。
+- **merge 树复门禁**：check 报 TS2307×1（src/cli.ts L13 引 `@trimetaverse/tricode/trimodel-cli`·sg node_modules 旧未装——**合并线自带非本笔引入**；实锚 dist/src/index.js 启动链零 cli 引用=主服务不触及，仅独立 bin 破面）；build 过；测试 476/467/6 fail（resolveInternalToken cwd 链 5+Employee Registry 1·既有环境依赖族与白名单零关；上基线 ctx.cwd 族 4 件随新线已修）。
+- **重启上线面候裁（毕报核心申报）**：现位 dist=merge 全量产物，照令直重启=白名单+sg 未上线全量代码一次性进生产（超令面单点最小改）。已备**最小集 dist 备用位 `/tmp/trimc-min-dist/`**（caadfbc 基线+六席白名单并集·零新线耦合·负向探针 key-cache 缺席+六席 2/2 实锚）——推荐 BOD 换装后重启。npm install 补 tricode 依赖未做（生产 node_modules 操作超令面·归 sg 推进线候办）。
+- **分工链现势**：毕报 08:29 发 BOD（候裁+候操盘）→ BOD root 四步链（备份换装→stop→FREE→start→MainPID）→ 回信后我值面探针验收三锚（dist 白名单六席 grep+healthz 值面+uptime 重置）。
 
 ## 附：夜间灰度积压直报×4 留素材
 
