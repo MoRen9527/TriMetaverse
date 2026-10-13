@@ -29,3 +29,12 @@
 ## 使用依据
 
 CHO 协同单（902039b2）；本席活体勘验（ls/diff/grep/xxd 六面读数，上列）；manifest liveEntries（batch-13 勘：两枚覆盖外）；.claude/agents 22 件清点。
+
+## 四、v2 勘正（回询复勘定谳·2026-10-13 11:4x）
+
+**CHO 回询成立（假设①），且标的扩回 4 处全数**——复勘三证：
+1. 渲染器命名逻辑（sync-agents-to-claude.mjs L105-108）：`name.replace(/\.agent\.md$/,'')+'.md'`=**Camel 原样保形输出**——claude 面 canonical=Camel .md（CompanyGovernanceRegistry.md/TriMetaverseCodeRegistry.md 均在）；
+2. claude 面 lower .md 两枚（company-governance-registry.md 与 Camel 并存 3 行代差/tri-metaverse-code-registry.md）=渲染器永不产出形=旧代残留，与 gh 侧 lower 同性质同 pathology；
+3. 本席前勘「不存在」系 .agent.md 形态误勘（.md 形漏检）， CHO 三择①定谳；名称引用面 grep=CLEAN（唯文件本体，删除零悬挂引用）。
+
+**执行规格 v2**：WO-F4-1 标的恢复 4 处全数=gh 2 枚 lower(.agent.md)+claude 2 枚 lower(.md)+BOM strip 三字节（不变）；门=两宿主位 lower 复扫 0（.agent.md 与 .md 双形各扫）+Camel 四面在位（gh 2+claude 2）+spawn 单入口；其余排窗条款（候 CEO 复核窗/本席发布链执行/10 分钟件）不变。
