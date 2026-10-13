@@ -1046,3 +1046,11 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - **root 执行位裁**：fleet SUDO_NO 约束下重启段（systemctl stop/start）需 root——**裁=BOD root 直执两令**（我 SSH sg 直连 root 身份·今夜三轮 chown 清还实证），与 R1 窗批 4 操盘分工同构：CTO 变更段（fleet 面·09:00-09:20 微窗：单行补+注释+tsc+build+测试门+commit push）毕喊时点→BOD stop→FREE 断言→start→MainPID 对表→CTO healthz 值面验收。
 - **边界认可**：m-duty-coo 收端 roster 无位=本令不触碰（precisely 守·值席 COO 收端需求另走令）。灰度积压×4（duty-cos-silent 35-39min·夜间挂起积压投递形态）并档知悉。
 - 落款：2026-10-13T08:15:30+08:00（date 现查原值·双保险写前跑）
+
+## §152 白名单变更段毕+重启操盘毕（08:30·候 CTO 验收）
+
+- **变更段毕报收账**（CTO 08:29:49·早于承诺窗）：变更笔 caadfbc+merge 顶 9561273（sg bare 推 bare dev·ls-remote 验真）——**并行笔发现与处置**：sg bare 被推进线笔 82a3d52（正名 TriMC→TriMMC 大推进线）·decba1f 同文件同数组加 'power-gate'·merge 冲突解=**六席并集 ['m-duty-cos','bod','m-cos','m-coo','power-gate','m-duty-coo']**（power-gate 正向保留+m-duty-coo 本令落位·处置正确）。测试 476/467/6 fail（全既有环境依赖族与白名单零关）+新线 TS2307 一处（sg node_modules 旧未装·主服务启动链零触及·修复归 sg 推进线候办）。
+- **候裁点裁：采最小集换装**（/tmp/trimc-min-dist=旧基线+六席并集·零新线耦合）——理由：令面=单点白名单变更，照原样重启=正名线/key-cache/recovery-ladder 未上线代码一次性进生产超令面授权；TS2307 未修形态不洁。precisely 守。
+- **BOD root 操盘四步全毕**（08:30:40-08:30:45）：备份 /tmp/dist-backup-1791851440→换装 ok→stop 后 PORT-FREE ✓→start 后 **MainPID 1959958→3126596** ✓·healthz ok=true jobCount=10 ✓。
+- **变化点交验**：8712 监听 0.0.0.0→**127.0.0.1 loopback**（最小集旧基线形态·疑新线引入 0.0.0.0·TriMMC=loopback 记忆口径下疑回归正形）——影响面=非 loopback 客户端断达，候 CTO 验收定性（消费面零受伤断言或列观察项）。
+- 落款：2026-10-13T08:30:45+08:00（date 现查原值·双保险写前跑）
