@@ -369,3 +369,9 @@
   - 0de48eac9 merge: 收编并行笔后推平 LG-075 台账笔
   - 02ae3a36a docs(cos): LG-075 授号入账——board 三件套修订施工董事会令（CEO 21:49:02 签发·六步·称谓不勘·排窗另排不抢今晚两窗）
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @22:10 +08：自上次进度提交 da4eea3c1 后新增 4 条 commit：
+  - b87b08274 docs(bod): 大表 Q3.2 行刷毕态——22:01 双机验锚全绿窗毕（8710×4/8712×0 双机兑现·毕报 cd9afad37·候 COS 终验销账）
+  - cd9afad37 docs(cos): Q3.2 部署段毕报——窗终态毕(22:01:06 双机验锚全绿·早窗界29min)：sg build 21:59+restart+活体 8710x4/8712x0；R-HY detached HEAD 形态勘正改 fetch+checkout 正形+build 22:00+同验全绿；回滚锚未触发
+  - 667263cb1 merge: 收编并行笔（值席落盘防覆盖）
+  - df129d3fc docs(coo): LG-075 任务书会签生效笔——COS 会签签(主案裁认+补 N6 终验锚五项判据:25 条全量对表含三处同词同序断言/渲染 drift=0/关联件两处/纪律册在册/称谓零改动断言)+BOD 排法认+两处留意入卷·派工令 00:30 发
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
