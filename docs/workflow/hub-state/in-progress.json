@@ -205,5 +205,14 @@
     "priority": "高（CEO 10:39 令派·清尾窗=本周）",
     "status": "closed",
     "note": "LG-072 授号挂账（2026-10-13 10:47:18+08:00 date 现查·写前跑）：OP unresolved-items 正身件清淤批。令源=CEO 2026-10-13 10:39「派，转 COS 线清淤批」→BOD 10:42 立书流转（任务书 d5f531707 落树·主仓 dev 顶）。对象=docs/workflow/operating-records/2026-W42/OP-202610-W42-001.unresolved-items.md（W41 同名件平移链正身单点）。病灶三条（BOD 亲勘）=①标题失真（正文仍「W32 未决事项」）②万年流水账（W31 起已闭历史叙事与现役挂账混装）③活跃态存疑（多处 open 系 W32-W33 时代标注未经验证）。施工三件=①历史段切归档件 unresolved-items-archive-20261013.md（销账锚一字不动·正文留指针）②活跃件逐单亲勘归拢现役区（frozen CARRY-004/006 只归位不解冻；BUG/REQ/RISK/VER/AGENDA 各族现势核验定性；SEC-20260924-001/A-1/A-2/A-3/R-HY-401 注记态/C-4 残项/MIG-W41-demandpool 逐单对表）③结构定型（标题勘正+元信息头+节构定型·此后各周平移只动现役区）。纪律=逐单亲勘禁转抄/open 定性必附现势依据/历史叙事冻结不改写/归档不删。同窗联动=「各周平移只动现役区」条随批铸入周迁移 runbook 候办清单（转 CAO 归口）。毕报落本树目录回 BOD；清尾窗=本周。W42 大表行=BOD 已挂（d5f531707）·销账态 COS 毕报后刷。；施工毕（毕报 11:15:14 定格·69d04c72e 正身改形+runbook 铸条·wt/board 同笔 1f9225392·sg bare dev 推达）；尾项候 BOD 两项：①归档件入库候 FUZZY-TS 门豁免裁（照录历史原文含 Nx 时点非造值·exclude 增补请裁）②bare board 链分叉（43797f2774 发送账#405）收笔；豁免落地归档件入库后本条销账（锚=毕报卷+69d04c72e+归档件 commit）；【销账 2026-10-13 14:29:40 hook 现戳】尾项双闭实锚：①归档件入库=d3aed52a6（BOD 裁二 GATE exclude trees/**/*archive*.md 落地·照录一字未改）②board 链收笔=1f9225392（BOD §157）·施工锚=69d04c72e+毕报卷+合流 539184a11·COS 终验毕即销（LG-071 改形）"
+  },
+  {
+    "id": "lg075-board-contract-revision",
+    "treeAnchor": "待树挂（任务书候 COO 共制·施工另排不抢今晚 Q3.2/R1 两窗）",
+    "treePath": "docs/workflow/operating-records/2026-W42/trees/bod-contract-review-20261013/",
+    "owner": "COS（验收销账链）+CAO（纪律册先立主笔）+COS/COO（三件修订与任务书）",
+    "priority": "high",
+    "status": "active",
+    "note": "【董事会令·CEO 2026-10-13 21:49:02 签发·BOD 发令走 COS 链】board 三件套修订施工六步：①纪律册先立（CAO 主笔·铸条清单 COS 七+COO 五并集去重+被迁出条承接先立后破·双向一行指针·联审表增纯度核查必查项）②source-agents/board 三件修订（25 条 CEO 意见+联审精化全量·含 #7 规则句正形/#14 前置门+涉人员不入 D-39 声明句/#45 绕链禁令增补/#47 删·body 第 7 行虚拟董事会定性+#23/#24/#17 三处同词同序）③发布管线重渲染两宿主位 ④关联件追平（CGR L223 第三次变更注记+CLAUDE.md 分权制节两处）⑤称谓勘误面=不勘（CEO 备注 bod 董事会不算错误·撤销连带勘误候选）⑥验收销账走 COS 链正形。排窗约束：今晚 22:00 Q3.2+23:00 R1 两窗已占·本施工另排不抢窗。"
   }
 ]
