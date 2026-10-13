@@ -1,8 +1,8 @@
 # CTO · TriMC 白名单补 m-duty-coo·变更方案卷（BOD 2026-10-13 08:09 令）
 
 - sourceOfTruth: 本卷（trees/bod-tick/cto-trimc-whitelist-change-plan-20261013.md）
-- syncMode: work（变更段 08:29 全毕毕报 BOD·重启段候 BOD root 操盘+候裁点见毕报段）
-- lastSyncedAt: 2026-10-13T08:30+08:00（date 现查 00:29:49Z/08:29:49 见毕报）
+- syncMode: static（变更令全程闭环·08:32 验收毕三锚全绿·归档）
+- lastSyncedAt: 2026-10-13T08:33+08:00（验收毕报 00:32:14Z 发 BOD·发后对表 00:32:36Z 零漂移）
 - 令链：BOD 变更令 08:09（CEO 指出口径不一致成立·LG-052 扩面遗漏非设计意图·治理链补对称）+BOD 分工裁 08:15（我变更段/BOD root 重启段）
 
 ## 对象断言实锚（08:1x 本席 sg 直勘·fleet SSH 只读三发）
@@ -39,6 +39,14 @@
 - **merge 树复门禁**：check 报 TS2307×1（src/cli.ts L13 引 `@trimetaverse/tricode/trimodel-cli`·sg node_modules 旧未装——**合并线自带非本笔引入**；实锚 dist/src/index.js 启动链零 cli 引用=主服务不触及，仅独立 bin 破面）；build 过；测试 476/467/6 fail（resolveInternalToken cwd 链 5+Employee Registry 1·既有环境依赖族与白名单零关；上基线 ctx.cwd 族 4 件随新线已修）。
 - **重启上线面候裁（毕报核心申报）**：现位 dist=merge 全量产物，照令直重启=白名单+sg 未上线全量代码一次性进生产（超令面单点最小改）。已备**最小集 dist 备用位 `/tmp/trimc-min-dist/`**（caadfbc 基线+六席白名单并集·零新线耦合·负向探针 key-cache 缺席+六席 2/2 实锚）——推荐 BOD 换装后重启。npm install 补 tricode 依赖未做（生产 node_modules 操作超令面·归 sg 推进线候办）。
 - **分工链现势**：毕报 08:29 发 BOD（候裁+候操盘）→ BOD root 四步链（备份换装→stop→FREE→start→MainPID）→ 回信后我值面探针验收三锚（dist 白名单六席 grep+healthz 值面+uptime 重置）。
+
+## 验收毕（08:32·三锚全绿·全程闭环）
+
+- **BOD 裁采最小集换装**：备份锚 /tmp/dist-backup-1791851440 →换装 /tmp/trimc-min-dist→stop→PORT-FREE ✓→start→MainPID 1959958→**3126596** ✓。
+- **三锚读数**：①dist 白名单六席 `'m-duty-cos', 'bod', 'm-cos', 'm-coo', 'power-gate', 'm-duty-coo'` ✓ ②healthz ok:true·jobCount:10·degraded:false·cf:0 ✓ ③pid 3126596 etimes=74s uptime 重置 ✓。
+- **监听面勘正**：换装前后均 127.0.0.1:8712（旧进程 08:1x 断言实锚在卷）——「0.0.0.0→loopback 变化」不成立（BOD 操盘读数误记已勘）；ESTAB 消费连接全源 loopback 零跨机直连=绑定面零受伤。**真观察项**：merge 全量线疑改 0.0.0.0→列 sg 推进线部署窗绑定面复核候办。
+- **m-duty-coo 活体终验**：候值席 COO 首次实际直发入 outbox 自证（不伪造源席）。
+- 闭环台账：令 08:09→分工 08:15→变更段毕 08:29→操盘毕 08:30→验收毕 08:32。
 
 ## 附：夜间灰度积压直报×4 留素材
 
