@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（BOD 整理；令源=CEO 2026-10-04 22:10 令「把这些工作整理进周工作平面迁移事项，你定markdown文档名，也一并迁移」）
 - syncMode: **rolling-weekly**（翻周随迁文档：每翻周由 COO 在新周目录更新「当周实例」节后复制滚动，旧周版随周归档）
-- lastSyncedAt: 2026-10-04 23:31+08:00（COO 现查，W41 首滚实例版）
+- lastSyncedAt: 2026-10-13T11:07:43+08:00（COS 现查·LG-072 清淤联动铸条笔；前值=2026-10-04 23:31+08:00 COO W41 首滚实例版）
 - 关联真源：本机对齐 SOP=`docs/workflow/weekly-plane-shift-local-align-sop.md`（LG-056）；迁移器源码=`TriCompany/runtime/cognition/weekly_plane_shift.py`+`weekly_plane.py`；遗漏查证卷=`2026-W40/plane-shift-missing-audit-20261004.md`
 
 ## 一、职责分工（2026-10-04 实勘定稿）
@@ -61,6 +61,7 @@
 - **TriRMC cron executor 死而服务活无告警面**（2026-W41 开周实例：cron 正主 trirmc.service 10-01 10:46 人工 stop+disabled 无自启，静默三日无人察，23:00 迁移未触发方暴露；BOD 10-04 夜已修复+补 enable——候 CTO 排 cron 服务态健康自检/心跳告警+unit disabled 告警面，防再隐伏）；
 - **在途树随周闭清零未迁挂**（2026-W41 开周实例；**已转正修复**——BOD 23:4x 裁铸 §二 常设步「23:1x COO 挂载三件毕」，下周起常态执行，本条留档为转正源起）；
 - **迁移异常窗自动对齐追平轮**（LG-056 A1 定谳配套候补项，BOD 2026-10-05 03:26 全采认定）：自动对齐 job 现为迁移日后单次跑，异常窗内迁移笔晚落时追不到（10-04 实例：15:10Z 单次跑追不到 23:26 补跑笔 d0552559，COO 人工补 ff）——候 CTO 排重试/追平机制（对 bare 顶前进的二次对齐轮，不改调度本体）；复核锚=10-11 下次周迁移，零人工自然对齐即双实证终闭，再现缺则本项转正排修。
+- **未决项 OP 件「现役区/归档分区」平移纪律**（LG-072 清淤批联动，2026-10-13 铸）：OP unresolved-items 正身件自 LG-072 清淤起为「现役区+归档指针+平移说明」节构（W42 归档件=`2026-W42/trees/op-unresolved-cleanup-20261013/unresolved-items-archive-20261013.md`·历史面+销账锚冻结）——**各周平移只动现役区**，历史面与归档件不随周复制不滚动；迁移器（weekly_plane_shift.py）对新节构的平移兼容对表候 CAO 归口排修（含迁后标题改写根因——W32 失真病灶即迁移器只搬内容不改题所致，转 CAO）。
 
 ## 六、翻周滚动规则（本文档自身的迁移方式）
 
