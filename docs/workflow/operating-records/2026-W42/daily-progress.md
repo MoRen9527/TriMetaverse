@@ -316,3 +316,11 @@
   - 7b59e14e6 docs(coo): LG-069 合并窗排窗令（BOD 排窗裁精排）——10-14 晨窗 10:30-12:30 确认（D-23 对照·禁排区外 90min 缓冲·GLM 轨平价位如实标）/分件序=前置件(8713 lastReadAt 投影+窗内短重启生效)→件A→件C→件B→从闸/12:30 硬止损砍件保窗·溢出缓冲禁新施工面/派工令明日 10:00-10:15 发
   - b6cab510c docs(bod): §179 CEO 批两条挂明晨窗序（python 根治小窗排窗令发 COO+LG-067 读数毕当场裁流程知悉 CTO·大表两行 CEO 批注·100% 校准问答如实卷）
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @18:10 +08：自上次进度提交 713443a78 后新增 6 条 commit：
+  - 2ee8b0bef Merge remote-tracking branch 'sg-server/dev' into dev
+  - 13009c01e docs(cto): LG-069 卷补勘正对表注记——lastReadAt 端点名歧义自认（实探=/internal/v1/power 非 healthz·两端点各自成立）·无 healthz 投影笔→COO 维持原排前置件不省
+  - 012e72cbb docs(bod): §180.1 COO 值面勘正知情收账（lastReadAt=internal 面独有·§180 锚点零冲突零更正·明晨前置件序 0 维持）
+  - c24add0ea docs(bod): §180 powerMonitor 重启窗毕报收账（CTO 18:02 回执·90 秒链·pid 7764→24628·四锚全绿·观察窗两条挂账）
+  - d4099b4ad Merge remote-tracking branch 'sg-server/dev' into dev
+  - 9821c598a docs(cto): LG-069 勘修窗重启段毕——18:00 黄金窗链全绿（pid 7764→24628·uptime 5s·四锚验收含 lastReadAt 活体+dist 两改生效面）·44a0206 生产生效闭环·任务正名 TriMLC Daemon 勘误注记
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
