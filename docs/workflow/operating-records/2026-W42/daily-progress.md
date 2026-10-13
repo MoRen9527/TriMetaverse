@@ -336,3 +336,9 @@
   - d9fbb81f4 docs(bod): 合同审核记录卷流程链补全（三份修订面一块联审 COS/COO/CHO/CAO·员工影响面同步改·CEO 终审签批→董事会令→任务书→source-agents→重渲染）
   - 4414ab89c docs(bod): board.contract.yaml 修订审核记录卷建卷（CEO 逐条口审 19 条照录·BOD 只记录底稿·候 COS 汇总呈批·签发令后下发）
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @21:20 +08：自上次进度提交 b51b2d2da 后新增 4 条 commit：
+  - 9617bd0fc docs(bod): §182-勘正 merge 倒退定性反转（COO 三实锚定谳=v1 笔从未达 sg bare·验真对表错位认领·指控撤回·ls-remote 显式 URL 正形起）
+  - 59c49b40e docs(coo): 「merge 倒退丢笔」案排查回执——终局=无倒退无丢笔管线全 ff 健康（bare 流水 20:48-21:10 全 ff+1644d0fc3 两端零痕+denyNonFastForwards=true 双证互锁）·实态=v1 笔未达 sg bare 验真对表错位（双 pushurl 撕裂族变体）·净损害零（重放笔在链）·候修观察项=watcher commit 前不 pull 低危·验真正形补勘=ls-remote 必显式目标 URL
+  - 3e9be9d8b merge: 收编并行笔（值席落盘防覆盖）
+  - ee9c74762 docs(coo): 「merge 倒退丢笔」案排查回执——终局=无倒退无丢笔管线全 ff 健康（bare 流水 20:48-21:10 全 ff+1644d0fc3 两端零痕+denyNonFastForwards=true 双证互锁）·实态=v1 笔未达 sg bare 验真对表错位（双 pushurl 撕裂族变体）·净损害零（重放笔在链）·候修观察项=watcher commit 前不 pull 低危·验真正形补勘=ls-remote 必显式目标 URL
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
