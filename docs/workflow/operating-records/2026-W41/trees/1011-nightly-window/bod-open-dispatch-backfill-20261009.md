@@ -1085,3 +1085,12 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - **值席派工通道**（本机名址无 m-duty-*·13 席全常驻）：SSH sg-server+fleet socket tmux send-keys 直派（M 面路由纪律：sg 活直达 sg 席不经本地 COS 中转）。派工信随发，回执=值席席面 capture-pane 留痕制。
 - **教训入册候办（对象断言三犯族新变体）**：跨席派工前先断言「任务归哪个面的哪个席」——CHO 职责归属面（本机常驻 CHO vs sg 值席 CHO）BOD 派工时未做面归断言即按惯例发本机席；CEO 接收侧一眼看穿。与 object-assertion-before-confirm 同根（接收侧三犯·出单侧本犯）。
 - 落款：〔D-47 二犯即勘〕写前漏跑 date、落笔估尾占位 11:10:00——毕查现值 2026-10-13T11:10:38+08:00 锚定（本节落笔窗 11:09-11:10·自领：BOD 窗第二犯·§154 首犯同型·D-47 双保险两半条此后每信必全执）
+
+## §157 LG-072 候裁双尾项闭环+主仓分叉合流（11:23）
+
+- **GATE 豁免裁（裁二）**：COS 毕报 §四.1 候裁（归档件照录历史原文含 Nx 时点·FUZZY-TS GATE 两度拦截·COS 不擅改门不绕门立场正）→**裁准 exclude 增补归档照录域** `docs/workflow/operating-records/**/trees/**/*archive*.md`（判据=历史原文≠占位真值·与 docs/memory/** 10-08 豁免同构；真值主战场=新写卷面落款域照拦不误）——BOD 亲改 .git/hooks/pre-commit（gate=裁决装备·exclude pathspec+注释补裁记），归档件收口 commit d3aed52a6 入库推达 bare dev=gate 放行实证。
+- **主仓分叉合流**：COS 毕报窗与 BOD dev 同笔窗真分叉（共同祖先 69d04c72e·双线各 2 笔：COS 线 6bf8c2dec 毕报+4f0876071 归属勘正〔我 LG-073 大表行搭车收编·署名勘正正形处置〕vs BOD 线 0635bfe6f 任务书卷+7eb30624c watcher）→merge 合流笔 539184a11（大表单冲突块取 COS 施工毕态版·LG-073 行两线并存零损）推达 bare dev 验真。
+- **board 链收笔（尾项②）**：COS cherry-pick 笔 1f9225392 已落 worktree 顶（父=fff20b163 线性非分叉·毕报「43797f2774 真分叉」判读已过时）→fast-forward 推达 bare board-dispatch-20261012 验真（fff20b163→1f9225392）。
+- **LG-072 终态**：施工三件全毕+候裁双尾项双闭（①归档件入库 d3aed52a6 ②board 链收笔 1f9225392）——候 COS 台账销账（锚=毕报卷+69d04c72e+d3aed52a6）·大表行态随刷（在途→施工毕尾项双闭候销）。
+- **LG-073 值席链**：m-duty-cho tmux 直派 11:1x 提交实证（capture-pane 信文全量入对话流+处理中态·输入框残留 C-u 清行防拼接·ghost suggestion 与 CEO 未提交输入二义判读=语义已被 11:00 令覆盖清行风险可接受留痕）。GitHub 443 持续断（COS 双证+BOD 21s connect fail 复证）——dev 线 GitHub 腿欠链候通道恢复。
+- 落款：2026-10-13T11:23:32+08:00（写前 date 现查原值·D-47 双保险）
