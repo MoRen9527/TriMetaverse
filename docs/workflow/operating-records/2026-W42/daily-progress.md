@@ -186,3 +186,6 @@
 - 巡检兜底补写 @10:30 +08：自上次进度提交 39e26786 后新增 1 条 commit：
   - ff699a33 docs(bod): W42 大表周度汇总两行+LG-066 误刷勘正+LG-061 迁漏补正（CEO 10:20 令）·与 wt/board cf4253aea 同内容
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:50 +08：自上次进度提交 c2b1a566 后新增 1 条 commit：
+  - d5f53170 docs(bod): LG-072 清淤批任务书落树+大表挂行（CEO 10:39 令派·转 COS 线）·与 wt/board 04b77dcaf 同内容
+- registry：v2.1；今日 registry 提交无变化
