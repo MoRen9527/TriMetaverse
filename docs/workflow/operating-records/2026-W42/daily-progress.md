@@ -175,3 +175,7 @@
   - 5d536452 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
   - dc5d9fba docs(cto): TriMC 白名单变更段全毕落卷——caadfbc+merge 9561273 收编 decba1f power-gate 并行笔六席并集·push 验真 9561273306f·TS2307 实锚合并线自带(启动链零触及)·重启上线面候裁(最小集 dist 备 /tmp/trimc-min-dist 推荐·全量 dist 候选)·候 BOD root 操盘回信即验收
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 c620ab8b 后新增 2 条 commit：
+  - a8f9bbc2 docs(cfo): W42 10-13 09:30 锚——二次断 AC（12h 两断）·周窗 57% 槽对首立 +14 贴线在册·重腿跳过电源门·跑道 2.6h 冻结预期 12:45± 警示达 COO+BOD·R1 前提再失效
+  - 8f1ced6a docs(bod): W42 大表首刷勘正版落主仓——18行在途9+毕候验2+已销7·W41未完成项全量迁入·跨周迁移强制项立规（CEO 10:01定谳：新周表必含上周未完成项·禁查旧表断层）·原首刷注指引作废
+- registry：v2.1；今日 registry 提交无变化
