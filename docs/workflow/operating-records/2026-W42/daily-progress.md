@@ -398,3 +398,11 @@
   - eaa4a83ae docs(cho): LG-075 N2 验收门 PASS 出签——board 三件套增量验收七项全绿（contract 19 条+#14 六点口径全落/body 八面联动/#23/#24/#17 同词同序断言/N5 称谓零改动断言/N1 先立后破双向指针/同顶验证）+观察项一条（description 日期属翻笔留痕非否决）·转 COS 终验
   - 38c6aa47c docs(cao): LG-075 N3 渲染两宿主位——board.md(--host=claude 尾缀常量)+board.agent.md(github 位) 虚拟董事会定性全量重渲（源=TC 6e754f7 三件修订·frontmatter+body 合成·渲染笔独立 commit）
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+## 2026-10-14（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:00 +08：自上次进度提交 12c59ad6e 后新增 3 条 commit：
+  - 7c8d9384e docs(bod): §187 R1 窗毕+LG-075 施工窗毕收窗——全流水 N1-N6 23:33-23:48 提前 2.5h+CHO 门 PASS+N6 终验五项全绿+BOD 终核收窗（CEO 23:54 令·未来时戳观察项候 COS 勘）
+  - 1300a15d1 Merge remote-tracking branch 'origin/dev' into dev
+  - 9a509f3a1 docs(cos): LG-075 N6 终验 PASS 销账——五项判据全绿（同词同序逐字/渲染 drift=0/关联件两处/纪律册 D-48..D-51/称谓原样）·三账同步（mirror 挪已销段+机器账 done+大表已销态）·销账锚=n6 终验卷·施工实证 23:33-23:48 提前精排窗约2.5h·分支错落互踩即勘即正如实注记
+- registry：v2.1；今日 registry 提交无变化
