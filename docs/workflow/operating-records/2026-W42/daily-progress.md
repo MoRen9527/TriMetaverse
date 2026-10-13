@@ -165,3 +165,7 @@
   - 1d7b7d67 docs(cos): W41 大表 LG-054 行记态补落——隔离位清理对象活体三面不存在(BOD 断言+值席互证)·FSD 暂缓正确·候白盒 77f03965 时点对表定性(向=历史已处理族·终裁候 FSD/CTO);操作信 001/002 链+c 案毕报随行注 @m-duty-cos
   - 0884fbff docs(cos): 大表清零战役收官行态批——①LG-066 已销(收官合卷呈 CEO §148 01ab732bf+终判卷 3e7e5d5f)③流水线接通已销(S3 评估 f68e4ba1+P1 复核+S2 终审)④快照增强已销(席级映射 v2.2 四点①闭合)②LG-054 记态候白盒对表(对象活体三面不存在·BOD 断言) @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:20 +08：自上次进度提交 529ec2a1 后新增 2 条 commit：
+  - f1016ded Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
+  - fc9e1363 docs(cto): TriMC 白名单补 m-duty-coo 变更方案卷——对象断言实锚(8712=trimc 现役·8710 无监听=记忆条 8710 过时修正+L65 现值逐字一致+systemd 形态非 watchdog=重启链同构映射)+fleet SUDO_NO=重启段需 root 通道+单点最小改方案五步+边界发现(收端 roster 不在令面不私扩)+自排今日 09:00-09:20 微窗(GLM 轨黄金段内 D-23 对轨)+夜间灰度积压直报素材并档
+- registry：v2.1；今日 registry 提交无变化
