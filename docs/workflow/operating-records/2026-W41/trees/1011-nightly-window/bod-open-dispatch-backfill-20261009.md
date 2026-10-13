@@ -1254,3 +1254,10 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - 议题④ 8711 staleness 源字段·定性再修正零代码改: lastReadAt 源码已在+/internal/v1/power 端点已投影（九字段）——CTO 前判「无该字段」系只探 healthz 八字段未探 power 端点·勘测盲区自纠；8713 零改·8711 消费端接线候其侧窗口
 - 事故申报收账: CTO Read 启动器 cmd 四 token 值面整行进会话链——D-46 族再犯（正形在记忆条未执行）；按 10-02 BOD 定性先例口径=操作瑕疵非安全事故·同盘同权限面增量≈零·不提前轮换·卷内留痕·D-46 族谱随铸窗并档
 - 落款: 2026-10-13 16:11:33（date 现查原值·写前跑）
+
+## §174 CEO 两问处置（LG-066 现态澄清+FADE-PERF-001 定位）
+
+- CEO 16:12:38 两问: ①「17:50 LG-066 窗——这个还没完成么？」②「FADE-PERF-001，这个文件在哪里」
+- ①LG-066 澄清: **主任务已完成且已销账**（铁证=台账 lg066-trirmc-merge-receipt-unit 行 closed 10-13 03:28 COS 终验·LG-071 改形首笔+大表已销态留痕+CTO 终判 PASS+N3 72h 窗闭活体四日零劣化）——节拍「LG-066=v3 生效态候 17:50 窗」系 **daemon 拍状态源陈旧残留**（10-09 排窗时代旧态未随销账刷新）非未完成活。已派 m-duty-fsd 定位拍报状态源清理该行（16:1x tmux 直派·对话流入流实锚·清毕回执）——daemon 状态源卫生件
+- ②FADE-PERF-001 定位: 正身文件=**TriCompany/docs/engineering/fade-registry.md**（FADE 实例登记册）——FADE-PERF-001 席级考核实例=CHO 今日 16:04 笔 18cc0a0 所增（sg 侧 /srv/fleet/TriCompany cat-file 验真在位·标题对）；**本机工作副本尚未含此笔**（本地顶 3785f08 FADE-010·GitHub origin 443 Connection reset 拉不动——TriCompany 仓走 GitHub 单腿）随通道恢复 fetch 可见
+- 落款: 2026-10-13 16:1x（date 现查原值·写前跑）
