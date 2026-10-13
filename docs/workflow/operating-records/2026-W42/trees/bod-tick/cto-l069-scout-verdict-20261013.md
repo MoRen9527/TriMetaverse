@@ -50,6 +50,13 @@ Read 启动器 cmd 文件时 L11/L12/L16/L18 四 token 值面整行进会话链�
 - **落笔**：TriMLC 仓 commit **44a0206**（fix(power)·署名照仓惯例 MoRen+Co-Authored-By）→push——GitHub 443 Connection reset（今日第 4 例同形态）→**sg-server bare 通道绕行成功·ls-remote 验真顶=44a0206ec5a**；GitHub 侧候腿恢复追平（既有候办并档）。
 - **生效面候排**：dist 已重 build 含两改，重启链照昨夜实操序（TriMLC-Watchdog Disable→根路径 POST /shutdown→port FREE→schtasks 冷启→pid/CIM 对表→Enable）——**候 18:00 黄金窗执行**；验收探针=healthz power 八字段在位+channel.log 新 power 行带时戳前缀+uptime 重置。
 
+## 重启段执行记录（18:00 黄金窗·全毕验收四锚全绿）
+
+- **链实操**（18:00:33 窗正点起 90 秒毕）：Watchdog Disable 17:56 预备（赶在 17:57 tick 前）→根路径 POST /shutdown（X-Internal-Token·token 变量读入零回显）→port FREE 1s→schtasks 冷启任务正名 **`TriMLC Daemon`**（空格名——`trimlc-daemon-channel` 系启动器文件名非任务名，/TN 直用报 file not found·查询 CSV 列表勘正）→listen back 4s→pid **7764→24628**→Watchdog Enable。
+- **验收四锚**：①healthz ok:true·uptime=5s 重置·cron 13 job 全挂载 ✓ ②power 八字段在位（percent/raw/cim=100·acOnline:true·gate:none·readFailures:0·notifyFailures:0）✓ ③/internal/v1/power **lastReadAt=10:01:06Z 活体推进**=新进程 tick 在跑（进程内生效验证正形）✓ ④dist/power-monitor.js L119 `timeoutMs = 20_000`+toISOString×2=进程在跑产物即 44a0206 两改版 ✓。
+- **观察窗挂账**：channel.log 新进程 +54 行（stdout 活体·尾行=cron 补跑横幅正常）——昨日「新进程 4.5h 零行」块缓冲观察项获反证素材候重新定性；power 行 [ISO] 时戳前缀活体验证=等首个 power log 事件（稳态零行=正常静默），今夜-明晨观察窗自然覆盖，timeout 20s 生效后 power read timeout 锯齿告警应显著收敛。
+- 毕报 BOD/COO 双发（落款 10:02:18Z·发毕对表 10:05:18Z 零漂移）。
+
 ## 使用依据
 
 - sqlite trilc-channel\cron.db execution_log/cron_jobs 只读实勘（16:02-16:04）
