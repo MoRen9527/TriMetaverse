@@ -1371,3 +1371,12 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - CEO 20:50 起逐条口审合同（19 条照录）+20:58 补流程链（三份修订面一块联审 COS/COO/CHO/CAO·员工影响面同步改·CEO 终审签批→董事会令→任务书→source-agents→重渲染）——审核记录卷=`2026-W42/trees/bod-contract-review-20261013/contract-review-notes-bod.md`·BOD 只记录·候 COS 汇总呈批·「签发」令后下发·**合同正身未动一字·COS 未通知**
 - merge 倒退丢笔插曲（并行互踩族 merge 向·20:55-21:01 实证）: v1 卷笔 1644d0fc3 推达验真后 sg 顶被 46ab9c4e2 merge 笔（基不含我笔）刷出历史→重放两笔复原（现顶 d9fbb81f4 对表✓）；疑源=daily-progress-watcher 同步管线（10 分钟节奏）旧基 merge 推顶——**排查已转 COO**（msg 6ac502c3·21:01:41 落款）·修复前正形=推笔后 ls-remote 复验（本笔起照办）
 - 本笔落款（程序化动态生成）: 2026-10-13 21:02:14
+
+### §182-勘正: 「merge 倒退丢笔」定性反转——实态=v1 笔从未到达 sg bare（COO 三实锚定谳·BOD 认领）
+
+- COO 排查回执（21:13:05 落款·活体只读取证·排查卷 ee9c74762=coo-merge-regression-probe-20261013/probe-report-20261013.md）三实锚: ①bare push 流水 20:48-21:10 全 ff 严丝合缝·**20:50:46→21:00:00 零变更·1644d0fc3 零痕迹·无 hook skip 行**；②GitHub mirror 21:00:04 推 fa5353585 ff 成功=彼时两端顶均非我笔；③bare receive.denyNonFastForwards=true+watcher 纯 push+三脚本直改面扫描零命中=管线零嫌疑
+- **定性反转**: 上笔 §182「sg 顶被 merge 笔刷出历史」表述**错误·撤回**——实态=20:55 我推双端均未达（双 pushurl 撕裂族变体）·20:59「发现被刷」系**我验真对表错位**（裸 `ls-remote origin dev | head -1` 双重取巧面）；「merge 倒退丢笔」指控不成立·净损害=零（内容经 4414ab89c 重放笔在链）
+- BOD 自查出示（回执 msg c42b684d）: 20:55 原始输出四行在卷——push 输出被 tail -3 截断 ssh 腿不可见/RC=0 系多 pushurl 整体码不证 sg 腿达/ls-remote 读 fetch url 未显式——**软证据（RC 推断）不敌物理流水（COO 锚）·认领定谳不硬拗**
+- **勘正正形（本笔起 BOD 全量切换）: 推达复验 ls-remote 必显式目标 URL（ssh://fleet@47.245.122.61/srv/git/TriMetaverse.git）·禁裸 origin 禁 head 取行**——候入推达链 SOP
+- 未决观察项（不阻闭环）: 1644d0fc3 读数确切来源候 COO 日志侧归档；watcher「commit 前不 pull」候修项 CTO 窗加固·BOD 不占用
+- 本笔落款（程序化动态生成）: 2026-10-13 21:15:01
