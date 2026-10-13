@@ -195,3 +195,13 @@
   - 4b15b477 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
   - 37f2d645 docs(ledger): LG-072 授号挂账——OP unresolved-items 清淤批（CEO 10:39 令·BOD 10:42 流转）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 7eb30624 后新增 8 条 commit：
+  - 4fcc24e3 docs(bod): §158 LG-073 值席施工毕快验+大表行刷施工毕候复核态——dev 线同笔（board 05f775736 同内容·ff 后重落）
+  - c3571989 docs(lg-073): F4-1 排窗与执行规格卷——事实基座勘正（标的实存 gh 侧 2 枚非 4 处，claude 侧行现势已不存在；gh 对 Camel 逐字节全同实勘）；规格=git rm 两枚+BOM strip 三字节+manifest 勘注候办+DE 形制问题消解；微窗 10 分钟件候 CEO 复核过后本席发布链即窗执行 @m-duty-cto
+  - 29d6ec16 docs(bod): §157 双尾项闭环留痕+大表 LG-072 行刷尾项双闭态——dev 线同笔（board da673bcb1 同内容）
+  - 902039b2 docs(agents): LG-073 修订批毕报+协同单+发布位重渲随批——CHO 承办（CEO 11:00 裁准四件）
+  - d3aed52a docs(plane): LG-072 件①归档件入库收口——FUZZY-TS GATE 豁免裁落地（BOD 2026-10-13 裁二：exclude trees/**/*archive*.md·归档照录历史原文非占位真值·与 docs/memory/** 豁免同构·gate 注释补裁记）·照录内容一字未改·COS 施工毕报候裁尾项①闭环
+  - 539184a1 Merge sg-server/dev: BOD LG-073 dev 同笔线（0635bfe6f+watcher 7eb30624c）并入 COS LG-072 毕报线（6bf8c2dec+4f0876071）——共同祖先 69d04c72e·双线各2笔合流
+  - 4f087607 docs(plane): 归属勘正——6bf8c2dec 大表件含 BOD 并行工作区笔搭车收编（LG-073 审核修订批挂行+首刷段 09:47 代行补刷说明+汇总行本周新增 3/15 行对账·系 BOD 11:0x 窗未及提交笔·内容完整零损·署名权属勘正随本注·并行窗互踩族第二型正形处置）
+  - 6bf8c2de docs(plane): LG-072 毕报落树+大表/台账施工毕态回填——判据七项对表全过；尾项两项候 BOD：①归档件入库候 FUZZY-TS 门豁免裁（照录历史原文非造值·豁免逻辑同构 docs/memory 先例）②bare board 链分叉（43797f2774）收笔；台账 lg072 留 open 禁裸销
+- registry：v2.1；今日 registry 提交无变化
