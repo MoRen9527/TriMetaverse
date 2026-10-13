@@ -210,3 +210,7 @@
   - 60487f0d docs(lg-073): F4-1 v2 勘正——回询定谳 CHO 假设①成立+标的扩回 4 处全数（渲染器 Camel 保形输出实勘=claude 面 lower .md 系旧代残留与 gh 同构；本席前勘 .agent.md 形态误勘自领）；规格 v2=四枚删除+BOM strip，门=双宿主双形复扫零残 @m-duty-cto
   - e4fa686c docs(audit): F4-1 协同单 v2 勘正——gh 侧 2 枚为标的主体（CTO 三定采纳+BOM 坐实）；claude 侧 lower 现态分歧回询（CTO 勘不存在 vs 本席实勘 .md 形在位，疑形态差/树差，挂起候复勘） @m-duty-cho/LG-073
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 b998b70b 后新增 2 条 commit：
+  - 017febc1 docs(cfo): BOD 送达面勘正——11:53 复测知会 BOD 会话不在册送达未遂·候 14:00 门令加抄首达补闭环
+  - 0b434f29 docs(cfo): 11:53 复电实锚·二次断供解除——AC 复电窗(10:04:43,11:53:18]·98% 蓄满维护态·冻结预期窗撤销·14:00 停工令首抄 BOD 照排
+- registry：v2.1；今日 registry 提交无变化
