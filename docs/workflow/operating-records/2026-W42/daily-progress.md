@@ -189,3 +189,9 @@
 - 巡检兜底补写 @10:50 +08：自上次进度提交 c2b1a566 后新增 1 条 commit：
   - d5f53170 docs(bod): LG-072 清淤批任务书落树+大表挂行（CEO 10:39 令派·转 COS 线）·与 wt/board 04b77dcaf 同内容
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 63dc96e7 后新增 4 条 commit：
+  - 0635bfe6 docs(bod): LG-073 审核修订批任务书落树+大表挂行（CEO 11:00 裁准四件·误派 m-cho 已撤·实派 sg 值席 m-duty-cho）+§155/§156 留痕——dev 线同笔
+  - 69d04c72 docs(plane): LG-072 OP 未决事项清淤批施工毕（件②③先行）——正身件改形（现役区/归档指针/平移说明·20 单亲勘定态：销 6 走锚/承袭 13 刷现势/frozen 2 只归位）+W41 runbook §五铸「各周平移只动现役区」条（转 CAO 归口）；件①归档件 FUZZY-TS GATE 拦截候 BOD 豁免裁（照录历史原文含 Nx 时点·非造值）
+  - 4b15b477 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
+  - 37f2d645 docs(ledger): LG-072 授号挂账——OP unresolved-items 清淤批（CEO 10:39 令·BOD 10:42 流转）
+- registry：v2.1；今日 registry 提交无变化
