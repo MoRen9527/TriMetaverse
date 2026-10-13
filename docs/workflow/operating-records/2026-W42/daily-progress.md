@@ -219,3 +219,6 @@
   - c45b7af4 fix(lg-073): F4-1 双形 registry 发布面清理执行——CEO 13:17 复核批「批，执行」：gh 2 枚 lower(.agent.md)+claude 2 枚 lower(.md) 全同复本/旧代残留删除（规格 v2 四枚）+gh TriMetaverseProductRegistry BOM strip 三字节（管线 hygiene 附带 2）；门读数随毕报卷 @m-duty-cto
   - 36287fac docs(bod): §159 F4-1 批文转达值席+定时器重挂注——dev 线同笔（board de9365bd2 同内容）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 56cab6ce 后新增 1 条 commit：
+  - 9857da13 docs(audit): F4-1 微窗执行 CHO 四门复核毕报——全 PASS（双形零残/Camel 四面/BOM 去除/引用零悬挂 9 命中全沿革定性）；LG-073 全批收口申明+销账材料索引 @m-duty-cho
+- registry：v2.1；今日 registry 提交无变化
