@@ -179,7 +179,7 @@ L.push(`**节拍（daemon 版）${ts}**`);
 L.push('');
 L.push(`**⓪ 全席现态**：${totalBusy > 0 ? `**非空闲·${totalBusy} 席在干活**` : '全席空闲'}——${dutyLine}；${localLine}（附注）`);
 L.push('');
-L.push(`**① 双树**：sg 试水树=done 收口（认账毕）；LG-066=v3 生效态候 17:50 窗`);
+L.push(`**① 双树**：sg 试水树=done 收口（认账毕）；LG-066=已销账（10-13 03:28 COS 终验·台账 closed·大表销态）`);
 L.push(`**② 四口**：8713 TriMLC ${probes.mlc}`);
 L.push(`　　8711 TriRLC（本机·R面本地域）：${probes.rlc}`);
 L.push(`　　河源 TriRMC（服务域）：${probes.rhy}`);

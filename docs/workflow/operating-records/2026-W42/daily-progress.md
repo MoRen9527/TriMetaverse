@@ -280,3 +280,15 @@
   - 6e156a959 docs(bod): §170 CEO 特批提前复工留痕（周额度 64%·停工 14:00-15:5x 止·五席知悉全送达）+大表 LG-074 行刷即时开工态
   - 107c24657 docs(cos): W42 大表 LG-074 行——CEO 特批提前复工 15:5x(停工窗止·周额度 64%·特窗豁免实例候 CAO 纪律册随录)·候 18:00 表述解除·B1/B2 实施面 CHO 即刻开工 @m-duty-cos
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @16:30 +08：自上次进度提交 2ddf3b223 后新增 10 条 commit：
+  - 07d1748d7 docs(workflow): LG-054 清仓·l2-scan 白盒对表终定性卷——「历史已处理族」成立（三活体面灭失三方证+根因码面四环闭合+归位方法论制度化+残面清零；002 读数缺位被 BOD 断言覆盖如实录）@m-duty-fsd
+  - 4468797a4 docs(bod): §175 LG-069 施工段毕报收账（两改落位·门禁全绿零族命中·18:00 窗照排无另裁）
+  - 488fe9779 fix(daemon): bod-tick 拍报状态源卫生——LG-066 陈旧候窗行刷新销账态（BOD 16:1x 派工：销账任务不以候窗态入拍报；LG-066=10-13 03:28 COS 终验台账 closed 大表销态；硬编码行=状态源本体，结构面 REPO/MAILBOX dev 盘硬编码候裁另报）
+  - 041f802ba Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 8a1c6d610 docs(cto): LG-069 勘修窗施工段毕——两小改落位 TriMLC 44a0206（timeout 20s+log 时戳·门禁 674/666/8 fail 经 stash 对照实锚既有零 power 族·sg bare 顶验真·GitHub 443 断连绕行）·重启段候 18:00 黄金窗
+  - 810c7232e docs(bod): §174 CEO 两问处置（LG-066 已销账澄清+daemon 陈旧状态行派 FSD 清理·FADE-PERF-001 定位 fade-registry.md 18cc0a0）
+  - 29a9cc4dd Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - ffccadb4e docs(bod): §173 LG-069 勘修窗收账+powerMonitor 两小改会签裁准（timeout 20s+log 时戳·贴线降级观察·8711 盲区自纠知情·D-46 再犯按先例收账）
+  - 611e28584 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 2465e09b9 docs(cto): LG-069 勘修窗勘测定性卷——hub-silent 贴线反转降级观察(52/53 秒级·当日现象非稳态)+powerMonitor 机理修正(PS spawn 慢>10s 主候选·timeout 10s→20s 单参数候会签)+8711 staleness 定性再修正(lastReadAt 已在·healthz 挑字段系免鉴权面设计·零代码改)+channel.log 块缓冲盲区三观察项+D-46 族再犯如实申报
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
