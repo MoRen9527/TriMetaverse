@@ -1123,3 +1123,12 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - CEO 13:41:12 补令原话「范围在互联网科技公司、ai agent虚拟员工的岗位职责，搜索相关岗位职责」→追加信直派值席（13:41:50·同通道 tmux）——细化=参照系主线聚焦互联网科技公司 AI agent/虚拟员工/数字员工岗位职责实践，开源框架角色设计降辅线；其余任务面不变
 - 收悉实证: capture-pane 证值席回「补令收悉（主线转向真实科技公司 AI 员工岗位实践，框架降辅线）。主线调研启动」+已开 WebSearch（digital employee/AI employee tech company job description·Salesforce/Klarna 2025 词组）
 - 落款: 2026-10-13 13:41:50（date 现查原值·写前跑）
+
+## §161 读信窗·22 封处置+CHO 信未达+COS 台账提醒（CEO「读信」令）
+
+- 令源: CEO 2026-10-13 13:46:53「读信」→BOD 信箱巡检（13:47:03 现查）
+- 箱况: unread_bod 22 封，两族——①节拍 daemon 版重复拍 13 封（12:07→13:37 北京各拍·转报面已按拍报过重复）；②hub-silent-detect duty-cos-silent 升级信 9 封（04:30→13:30 北京·35→39→43→73→103min 梯度·灰度第 1 周样本·判读=值席 COS 候令静默属正常待命形非故障·transcript 末活动 11:46:33）
+- CHO 销账材料信未达: CHO 13:21 pane 自述「销账材料已投 BOD 信箱」——箱内实搜无踪（source_seat=m-duty-cho 零命中·已发≠在链族实证）；材料实质不丢（pane 直读+复核毕报 9857da13 落树在手），候值席 COS 向 CHO 对表补录或按树卷采信办理
+- 处置: 22 封 read 落 true（JSON parse→改→writeFile 全程解析·写回后 json.load 校验过·unread_bod 归零·total 537）
+- COS 台账提醒: 值席 COS 静默 2h+台账三件欠动（LG-072 候销锚齐/LG-073 授号候挂+销账材料对表/LG-074 新批候授号）→值守提醒信 13:48:50 直派（tmux·base64）→capture-pane 开工实证（Elucidating 态+输入框空）
+- 落款: 2026-10-13 13:48:50（date 现查原值·写前跑）
