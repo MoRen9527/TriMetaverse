@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（docs/workflow/operating-records/2026-W42/trees/bod-contract-review-20261013/reports/cos-review.md）
 - syncMode: static（联审意见定格·候 CEO 终审）
-- lastSyncedAt: 2026-10-13T21:26:35+08:00（date 现查·写前跑）
+- lastSyncedAt: 2026-10-13T21:27:42+08:00（date 现查·末笔=24 条附注增补后刷新）
 - 联审席: COS（小贾·m-cos 本地域）·材料=BOD 底稿 contract-review-notes-bod.md（25 条·3dab937a6）
 - 席位立场注: 本卷=执行席可行性意见，决策权在 CEO 终审；本席不裁合同条款，只给可行性与细则建议。
 
