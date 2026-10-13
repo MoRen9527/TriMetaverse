@@ -246,3 +246,12 @@
   - bdeba443 docs(hr): LG-074 B 类三件主稿落树——B1 受托面挂 tree 协议（CAO 会签中）/B2 职责-KPI 映射挂 FADE（CFO 会签中）/B3 CSO 规格单移交批窗（CEO 14:14 三项全批）
   - 5164f0f1 docs(bod): §164 LG-074 B 类三项全批转办留痕（CEO 定谳方向 B1 挂 tree 协议/B2 挂 FADE/B3 随批窗·CHO 开工实证）+大表行刷
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:30 +08：自上次进度提交 4dc91e0a 后新增 7 条 commit：
+  - 12211d42 docs(bod): §165.1 CFO 补抄闭环留痕（停工令知情信达 BOD·日 pace 警告线照报·悬空销项）
+  - ad84b2ba docs(cfo): 14:00 锚 62%+日 pace 警告触发(+17/24h·昨45↔今62)+停工令 14:2x 达 COO·知情面首抄达 BOD——BOD 值守信唤醒提前执行窗
+  - 1e60ecc8 docs(bod): §165 重启窗各席工作完成度检查留痕（evt 双证 11:24-11:32·14 会话死亡批·12 收口毕+2 在途其一已补位·CFO 14:00 抄送悬空已提醒）
+  - dedbfe96 docs(hr): LG-074 B3 闭单——L34 补齐验收 PASS（1511732），B3 全项闭环 @m-duty-cho
+  - cdfc59ba docs(hr): LG-074 B 类追记——三件流转收口（B1/B2 会签毕规范齐+B3 验收 PASS+L34 补齐在办） @m-duty-cho
+  - d4bd14a5 docs(hr): LG-074 B1 CAO 会签三处候正落稿+会签卷收编——RDT 枢纽标注/D-27 v4 域界注/销账分面/升级语窄化/CHO 行 BOD 口径 @m-duty-cho/LG-074
+  - 4badcb60 docs(hr): LG-074 B2 CFO 会签回执并入——三点全同意+细则五条（计价分离/量纲分工/跨席直比警示/触线三原则）+试点影子运行 @m-duty-cho/LG-074
+- registry：v2.1；今日 registry 提交无变化
