@@ -414,3 +414,9 @@
   - 9f4a9969d merge: 收编 sg bare 并行笔（三轮）
   - 290a3feb4 docs(fsd): 灰度卷续勘——值守候令静默态噪声族（BOD 带话第 6 例族）：本机 log 对表 43/73/103min=19:15/19:45/20:15Z 三轮实锚+件②实距读数正面首验+机制全貌 6 通知/轮（m-cos 5 连发+BOD 直报两面）+缺口定性=候令静默/失联不可分+设计三案裁量 B 主 A 辅并窗施工候窗令+sg 部署链候办
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:40 +08：自上次进度提交 4c2b52e38 后新增 4 条 commit：
+  - 59a4c0f2c docs(fsd): 豁免施工毕报卷主体——三件现势（A 辅落位 10393c34f/件③hook 链勘毕+GitHub 镜像发现+sg 零发修正/件①B 主 1665ad3b1 追落）+落款勘正注记（首写预填造值 +47 秒对表抓到）+isoWeek 测试期望错辨正注记
+  - 1665ad3b1 perf(fade): 件①B 主拍文判据落位——bod-tick tick-latest.md 值守候令豁免（duty-tick-signal.mjs: ISO 周目录定位+内容节拍时戳判新鲜≤35min 两机一致〔sg 侧 mtime 经 checkout 不保源不可用〕+⓪段全席空闲/m-duty-cos=候令解析·fail-open 拍文断供照发不漏报）；hub-silent-detect 豁免段 A 辅+B 主双判据并联（duty=idle 兜全空闲/idle=allIdle·quiet-hours 保留兜底）——判据源=BOD 答询 04:33（拍文真身=本机 8713 :07/:37 双点·我四向勘 sg 侧系机位错向在案）；自测=isoWeek 4 例边界+现役信号真读+stale/miss degrade+实跑端到端（alerts=0 分支未实触·走查覆盖）
+  - 64689db4b merge: 收编 sg bare 并行笔（四轮）
+  - 10393c34f perf(fade): A 辅值守候令静默态豁免——22:00-08:00 duty/idle 两 band 降 log-only（quiet-hours.mjs 谓词+dispatch 豁免段·豁免不写 state 出窗首轮即告警·anchor/reminder 不豁免）——依据 BOD 10-14 04:19 带话+290a3feb4 裁量+COO 04:40-06:10 窗；自测=语法+真值表 8/8+静默期实跑轮端到端（alerts=0 豁免分支未实触·走查覆盖如实标注）
+- registry：v2.1；今日 registry 提交无变化
