@@ -55,7 +55,7 @@
 
 ## 锚清单
 
-- date 现查：2026-10-13 21:47:03+0800。
+- date 现查：2026-10-13 21:27:29+0800（勘正：本行原误留初稿造值 21:47:03——§头 lastSyncedAt 勘正时本行漏改·D-47 双保险漏网残留·21:34 现查随收口批补改）。
 - 联审底稿：contract-review-notes-bod.md 25 条（3dab937a6·本刻全读）。
 - 三件套源侧现状：TriCompany/source-agents/board/ 三件（contract v3.1 58 行+body 30 行+frontmatter 5 行·本刻实读）。
 - 现行规则对表：CHO 合同正身（本席 system 侧现役版）·D-39 裁决分级令·M-004 派工协议·D-13 名址表·employee-roster.json v1.0.0（13 席不含 board）·W41 结算卷「非员工席不入评」注记（dc48aa2b）。
