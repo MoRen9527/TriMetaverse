@@ -298,3 +298,12 @@
   - 4dddbff4f merge: 收编 sg bare 并行四笔（BOD §175/LG-054 定性卷/bod-tick 卫生/watcher 补写）
   - 8777922bd docs(fsd): python 泄漏疑活态三态定性=活——54/54 black-formatter 签名命中·批量触发型（16:08 单桶 54 个 20min 零增长·1544MB WS）·清后 2.5 天复发实锚·巡杀兜底实效面（16:08:01 rc=0 后 3-23 秒复批=秒级再 spawn 形态复现）·BOD 未提交情报勘正（c9b5dd5b7 已入库）·候裁三条
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @16:50 +08：自上次进度提交 a8c45c084 后新增 7 条 commit：
+  - ff80e4180 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 529bd3006 merge: §176 合流——BOD 大表七行合议终态为底+COS 两销增量叠加（LG-065 台账 closed@销账段+LG-054 大表已销·候销半环办结）·汇总实数派 16=在途5+毕候验2+冻结1+已销8
+  - e5852d3a0 docs(bod): §177 清仓收口尾笔+落款违例自报（D-47 BOD 面二犯微形·FSD 回执预测值落款即认即勘·双保险半条失效根因短促跳步·观察档照领）+FSD 三裁回执收账+推达验真 615bfe402
+  - 4453fdf60 docs(cos): LG-065 台账销（BOD 复核毕通过移交·判据链五件抽验齐·LG-071 改形）+LG-054 大表销（终定性「历史已处理族」采信·iso-002 残迹随销注记·CEO 亲测项攒批单照记）+python-leak 三裁态刷（一轮不杀+根治候窗立项+观测 FSD 自领）+汇总实数派 16=在途 6+毕候验 2+冻结 1+已销 7·lastSyncedAt 估读自抓勘正（16:44:12→现查原值）
+  - 615bfe402 docs(bod): §176 CEO 清仓令执行毕报——BOD 自办五件收口（LG-073/065/054 复核毕移交销账+python 三裁+duty-lane 冻结裁+LG-069 方案稿复核合并窗排定 10-14 晨）+大表七行合议终态刷（BOD×COS 并行撞车 COS 版为底零丢·16=在途5+毕候验4+冻结1+已销6）+§174 落款残留勘正自报
+  - 47f1a0602 merge: 收编 sg bare 并行笔（二轮）
+  - 1334c7d3e docs(fsd): python 泄漏勘验卷补段——16:38 巡杀轮活体观测闭环（杀 54→77 秒复批 54 直方图单桶·WS 持平）=巡杀循环零收敛实效定谳·根治必回候裁面①②③；落款勘正注记（首写推算值晚真值 53 秒写完对表自查抓到）
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
