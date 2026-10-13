@@ -23,6 +23,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { sendNotify } from "./lib/notify-sender.mjs";
 import { collectNodeSignals } from "./lib/tree-signals.mjs";
+import { isQuietHours } from "./lib/quiet-hours.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..", "..");
@@ -217,6 +218,13 @@ async function main() {
   // dispatch alerts
   const failCount = { n: 0 };
   for (const a of alerts) {
+    // A 辅(10-14 晨窗·值守候令静默态豁免): 22:00-08:00 duty/idle 两 band 降 log-only。
+    // 依据与裁量见灰度卷 290a3feb4 续勘节; B 主(拍文判据)候下窗。豁免不写 state——
+    // 出豁免窗首轮即正常告警(无冷却残留); anchor-error/reminder 不豁免。
+    if (isQuietHours() && (a.level === "duty-escalate" || a.level === "idle-escalate")) {
+      skipped.push(`${a.id}: ${a.level} quiet-hours suppressed (22:00-08:00 值守候令豁免)`);
+      continue;
+    }
     let targets;
     let title;
     let urgent = "normal";
