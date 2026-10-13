@@ -196,5 +196,14 @@
     "priority": "高（CEO 11:02 改形令·即刻生效·验收链权责变更）",
     "status": "closed",
     "note": "**对表闭（2026-10-11 03:06:50 +0800，COS 亲验自销——BOD/CEO 02:53 对表令·LG-071 条款 COS 终验制首笔自适用）**：本席段三锚齐——①改形正身铸条=TC engineering-disciplines.md 附录 b1fcc7a（CAO 铸·sg 侧 c8e1443 同顶回验毕）②大表三行刷账=L20 LG-054/L28 LG-065/L33 LG-071 行 dev 在链（98548743 重放笔·含 BOD 侧 2520551a 内容引用）③攒批单机制已运行=CEO-review-reminder 候办条（本体=BOD 2520551a wt/board 线在途随收口批并 dev·大表三处引用指向·现挂四项=LG-034/035 终验+LG-053 终球+LG-066 终验）。边界如实：攒批单本体行并 dev 属 BOD 收口批非本席段；机制运行面（引用+挂项）已生效。销后随链义务不变：攒批单维护=COS 常设（新亲测项随现随挂）+首笔适用 LG-066 终验环节候 CTO 终判后本席终验。原 note：验收链改形（CEO 11:02 令·BOD 11:06:15 hook 现戳转达·即刻生效）：①凡「候 CEO 终验/亲测」环节一律改 COS 终验——COS 终验毕即销账收口，不候 CEO 不阻塞排工；②CEO 亲测项攒批单记提醒（候办条 CEO-review-reminder 已立大表锚注区 2520551a·BOD wt/board 线），现挂三项=LG-034/035 终验+LG-053 终球+LG-066 终验，攒批呈 CEO 择时亲测；③首笔适用=LG-066 终验环节（候 CTO 终判照走+CEO 终验位改 COS 终验）。制度正身归 CAO 域（CEO 00:28 裁照用）。〔授号重放注：首授 11:10 工作区态被并行 rebase 窗重置吞·11:1x 重放·并行踩窗实证照 parallel-window-commit-interference 并档〕挂账时点：2026-10-10 11:14:24 +0800（date 现查 Saturday +0800·UTC 2026-10-10T03:14:24Z）。〔制度正身铸条毕·CAO 11:3x 回执：TriCompany/docs/workflow/engineering-disciplines.md 附录「验收销账链改形条款（2026-10-10，CEO 11:02 令）」·条款笔=TC 本地 dev b1fcc7a·本台账条与笔 98548743 已入册注·sg-server 推送候 TriCompany.git root 属主污染（24 件 10-05 留痕）修复毕补推回验——正身面 sg 侧可读性候补·改形即刻生效不受影响·UTC 2026-10-10T03:37:13Z〕"
+  },
+  {
+    "id": "lg072-op-unresolved-items-cleanup",
+    "treeAnchor": "d5f531707",
+    "treePath": "docs/workflow/operating-records/2026-W42/trees/op-unresolved-cleanup-20261013/task-charter.md",
+    "owner": "COS（小贾·运营记录收口域 owner）",
+    "priority": "高（CEO 10:39 令派·清尾窗=本周）",
+    "status": "open",
+    "note": "LG-072 授号挂账（2026-10-13 10:47:18+08:00 date 现查·写前跑）：OP unresolved-items 正身件清淤批。令源=CEO 2026-10-13 10:39「派，转 COS 线清淤批」→BOD 10:42 立书流转（任务书 d5f531707 落树·主仓 dev 顶）。对象=docs/workflow/operating-records/2026-W42/OP-202610-W42-001.unresolved-items.md（W41 同名件平移链正身单点）。病灶三条（BOD 亲勘）=①标题失真（正文仍「W32 未决事项」）②万年流水账（W31 起已闭历史叙事与现役挂账混装）③活跃态存疑（多处 open 系 W32-W33 时代标注未经验证）。施工三件=①历史段切归档件 unresolved-items-archive-20261013.md（销账锚一字不动·正文留指针）②活跃件逐单亲勘归拢现役区（frozen CARRY-004/006 只归位不解冻；BUG/REQ/RISK/VER/AGENDA 各族现势核验定性；SEC-20260924-001/A-1/A-2/A-3/R-HY-401 注记态/C-4 残项/MIG-W41-demandpool 逐单对表）③结构定型（标题勘正+元信息头+节构定型·此后各周平移只动现役区）。纪律=逐单亲勘禁转抄/open 定性必附现势依据/历史叙事冻结不改写/归档不删。同窗联动=「各周平移只动现役区」条随批铸入周迁移 runbook 候办清单（转 CAO 归口）。毕报落本树目录回 BOD；清尾窗=本周。W42 大表行=BOD 已挂（d5f531707）·销账态 COS 毕报后刷。"
   }
 ]
