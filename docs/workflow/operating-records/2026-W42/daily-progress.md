@@ -384,3 +384,8 @@
 - 巡检兜底补写 @23:10 +08：自上次进度提交 a55a290a7 后新增 1 条 commit：
   - e251ad1e8 docs(bod): §186 R1 窗执行流水——批 1-3 毕+批 4 提前亲操+5.1 宿主误用 CEO 令归一 pwsh（正形铸=复活宿主一律 pwsh 7）+电池硬风险直报
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @23:30 +08：自上次进度提交 3ca69e0e5 后新增 3 条 commit：
+  - 98a244a2f docs(bod): 大表 R1 行刷毕态——全窗毕 13/13 零失败（批 1-3+批 4 归一+批 5 sg·BOD 验收 PASS·毕报 ff3471a08）
+  - ff3471a08 Merge remote-tracking branch 'origin/dev' into dev
+  - c3ebf82c1 docs(cos): R1 批5 sg 面毕报——13/13 全毕 23:15-23:31 早止损14min·resume 起点 RSS 高于重启前(平均+31% 回收收益为负·cos 唯一降)§五条款兜住·5席--agent漂移修复·5席选择器双Enter过·实ping首响未做如实注记
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
