@@ -393,3 +393,8 @@
   - f3a2ef1c6 docs(cto): 锁笔注记补 COO 电源核查对表——瞬态三连失败自愈（观察项认领候勘·负载超时候勘修窗）+本机放电态背景（CEO 知情照开·明晨窗第一动作先探电源态）+LG-075 渲染笔基线注记
   - e5dc8b382 docs(cos): 大表补刷 LG-075 行（在途态·施工窗00:30-02:30·BOD裁向框架载注）——CEO 23:21 问询触发·双面 grep 零命中缺口补齐·LG-069 核查毕双源正形注随
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @23:50 +08：自上次进度提交 04307b93d 后新增 3 条 commit：
+  - 52810b3ab docs(cos): LG-075 N4 关联件·TMV CLAUDE.md 渲染面同两处施工——投递执行句补 COS 中转正形+跨面交互正形句（与 TC 真源 7cf3dc9 两面同批·既存两面漂移如实注记候考不越域修）
+  - eaa4a83ae docs(cho): LG-075 N2 验收门 PASS 出签——board 三件套增量验收七项全绿（contract 19 条+#14 六点口径全落/body 八面联动/#23/#24/#17 同词同序断言/N5 称谓零改动断言/N1 先立后破双向指针/同顶验证）+观察项一条（description 日期属翻笔留痕非否决）·转 COS 终验
+  - 38c6aa47c docs(cao): LG-075 N3 渲染两宿主位——board.md(--host=claude 尾缀常量)+board.agent.md(github 位) 虚拟董事会定性全量重渲（源=TC 6e754f7 三件修订·frontmatter+body 合成·渲染笔独立 commit）
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
