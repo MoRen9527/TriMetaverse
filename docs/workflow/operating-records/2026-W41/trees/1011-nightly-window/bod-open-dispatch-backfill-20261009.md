@@ -1039,3 +1039,10 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - **裁勘正**：§149 裁范围勘正——「维持不扩册」仅指执行链席（FSD 等·治理/执行链分界不动，该项仍有效）；**m-duty-coo 属治理链补对称，裁改为准入**（08:09 CEO 指出口径一致性问题后）。
 - **实施令已发**：m-cto 变更令（SendMessage 回执 84802524）——白名单系源码硬编码非配置，变更=改码+build+sg 8712 重启=生产变更归 CTO 变更窗排期；仅补此一席；重启窗照 daemon 纪律六步；落位前值席代发制照旧。
 - 落款：2026-10-13T08:09:30+08:00（date 现查原值·双保险写前跑）
+
+## §151 白名单变更接领收账+root 执行位裁（08:15）
+
+- **CTO 接领回执收账**（08:13:57·方案卷 fc9e13636→f1016ded6）：三发对象断言毕——8712=trimc 现役正确（CTO 自勘「TriMMC 8710」过时记忆修正入卷）/L65 缺位实锚对表一致/**sg TriMC=systemd 形态非 watchdog**（我令面重启链系 Windows 模板惯性·CTO 同构映射 systemctl stop→FREE→start→MainPID 对表+healthz 探针——采信·教训记 BOD 侧「跨面令勿带本面模板」）。
+- **root 执行位裁**：fleet SUDO_NO 约束下重启段（systemctl stop/start）需 root——**裁=BOD root 直执两令**（我 SSH sg 直连 root 身份·今夜三轮 chown 清还实证），与 R1 窗批 4 操盘分工同构：CTO 变更段（fleet 面·09:00-09:20 微窗：单行补+注释+tsc+build+测试门+commit push）毕喊时点→BOD stop→FREE 断言→start→MainPID 对表→CTO healthz 值面验收。
+- **边界认可**：m-duty-coo 收端 roster 无位=本令不触碰（precisely 守·值席 COO 收端需求另走令）。灰度积压×4（duty-cos-silent 35-39min·夜间挂起积压投递形态）并档知悉。
+- 落款：2026-10-13T08:15:30+08:00（date 现查原值·双保险写前跑）
