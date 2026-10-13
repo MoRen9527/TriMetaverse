@@ -1,8 +1,8 @@
 # CTO · LG-069 勘修窗勘测定性卷（CEO 特批复工窗 16:0x 段）
 
 - sourceOfTruth: 本卷（trees/bod-tick/cto-l069-scout-verdict-20261013.md）
-- syncMode: work（勘测段毕·施工段候 BOD 会签）
-- lastSyncedAt: 2026-10-13T08:10+08:00（date 现查见速报笔）
+- syncMode: work（勘测段毕·施工段毕·commit 44a0206·重启段候 18:00 黄金窗）
+- lastSyncedAt: 2026-10-13T16:20+08:00（date 现查 08:20:18Z）
 - 窗链：CEO 特批即刻复工令（BOD §170·16:00）→COO 转→本席排程令 16:01→勘测段 16:02-16:1x
 
 ## 议题① hub-silent 贴线根治——勘测反转·降级观察项
@@ -41,6 +41,14 @@ Read 启动器 cmd 文件时 L11/L12/L16/L18 四 token 值面整行进会话链�
 - ①timeoutMs 10s→20s+log 时戳前缀两小改（power-monitor.ts·build+18:00 黄金窗重启生效）——候 BOD 一句会签即施工。
 - ②hub-silent 降级观察（不施工）——候知情。
 - ③8711 消费端接线候 8711 侧窗口——候知情。
+
+## 施工段执行记录（16:0x-16:20 全毕·候 18:00 黄金窗重启）
+
+- **BOD 会签§173 采认**：两小改照施工·防抖不加=克制正确·议题①④知情收账·事故按 10-02 先例口径收账。
+- **两改落位**：src/power-monitor.ts——①L188 `timeoutMs = 20_000`（原 10_000）②L262-265 log 时戳包装（rawLog=log 双函数·`[ISO] ` 前缀·默认 no-op 不受影响·勘修窗注释）。
+- **门禁三项**：`tsc --noEmit` RC=0 ✓；`npm run build` RC=0 ✓（dist 重 build 含两改）；`npm test` **674/125 suites/666 pass/8 fail**——8 fail 经 **stash 对照独立验逐数一致实锚既有**（baseline 同 674/666/8）：fail 族=replay-flow 集成/P0 真实 HTTP 全局门/FADE-ASSESS 派工门×2/ctx.cwd×2/tui components——**环境依赖族·零 power-monitor 族命中**（log 行断言族未因时戳前缀伤·power 14 例全绿在 666 内）。与 10-11 件B 当日基线注记同名单（PID/replay/tui 稳定坏+P0/FADE 环境型）。
+- **落笔**：TriMLC 仓 commit **44a0206**（fix(power)·署名照仓惯例 MoRen+Co-Authored-By）→push——GitHub 443 Connection reset（今日第 4 例同形态）→**sg-server bare 通道绕行成功·ls-remote 验真顶=44a0206ec5a**；GitHub 侧候腿恢复追平（既有候办并档）。
+- **生效面候排**：dist 已重 build 含两改，重启链照昨夜实操序（TriMLC-Watchdog Disable→根路径 POST /shutdown→port FREE→schtasks 冷启→pid/CIM 对表→Enable）——**候 18:00 黄金窗执行**；验收探针=healthz power 八字段在位+channel.log 新 power 行带时戳前缀+uptime 重置。
 
 ## 使用依据
 
