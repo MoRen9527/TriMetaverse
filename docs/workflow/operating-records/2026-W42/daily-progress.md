@@ -324,3 +324,6 @@
   - d4099b4ad Merge remote-tracking branch 'sg-server/dev' into dev
   - 9821c598a docs(cto): LG-069 勘修窗重启段毕——18:00 黄金窗链全绿（pid 7764→24628·uptime 5s·四锚验收含 lastReadAt 活体+dist 两改生效面）·44a0206 生产生效闭环·任务正名 TriMLC Daemon 勘误注记
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @20:50 +08：自上次进度提交 75ee80560 后新增 1 条 commit：
+  - 34f8791b0 docs(bod): §181 Q3.2 部署窗未起勘验+改裁 22:00-22:30 窗令（漏达三证实锤·BOD 认账派工链收口疏漏·防再犯正形=窗行排定必附令达回执·大表行刷改裁态）
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
