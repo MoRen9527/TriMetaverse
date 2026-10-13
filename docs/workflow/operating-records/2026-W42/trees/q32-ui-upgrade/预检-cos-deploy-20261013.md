@@ -35,3 +35,9 @@
 
 - R-HY pull 可能带进 e30ea20..a17deaff 间其他并行笔——pull 后 `git log --oneline -3` 断言顶=a17deaff 或其后代（若含他笔如实注记毕报）。
 - 窗前现势有变（如 R1 窗提前/服务异常）→窗前知会 BOD 不硬起（令文条款）。
+
+## 五、窗前复核段（2026-10-13 21:33 现势·复验毕）
+
+- 双机复核全绿无变：sg 顶 a17deaff ✓+trimodel-config/proxy 双 active ✓+dist Oct 6 旧 ✓；R-HY 顶 e30ea20 ✓+trimodel active ✓——与 §一 预检读数逐项一致，**22:00 照常硬起**。
+- **pull 前瞻（sg 仓预判）**：e30ea20..a17deaff 区间恰 2 笔——e5394a4（本机实例退役标记·纯 docs 无代码影响）+a17deaff（目标施工笔）——R-HY pull 后顶应**恰=a17deaff**，若有出入窗内即停报 BOD。
+- 通道注记：sg SSH 正形=`ssh sg-ecs-server`（config 别名带 IdentityFile ecs-keypairs.pem）——裸 `ssh root@47.245.122.61` 不走该 key 会 publickey 拒（21:32 实测）；R-HY 裸 IP 形可用照旧。
