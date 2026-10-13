@@ -38,3 +38,10 @@ CHO 协同单（902039b2）；本席活体勘验（ls/diff/grep/xxd 六面读数
 3. 本席前勘「不存在」系 .agent.md 形态误勘（.md 形漏检）， CHO 三择①定谳；名称引用面 grep=CLEAN（唯文件本体，删除零悬挂引用）。
 
 **执行规格 v2**：WO-F4-1 标的恢复 4 处全数=gh 2 枚 lower(.agent.md)+claude 2 枚 lower(.md)+BOM strip 三字节（不变）；门=两宿主位 lower 复扫 0（.agent.md 与 .md 双形各扫）+Camel 四面在位（gh 2+claude 2）+spawn 单入口；其余排窗条款（候 CEO 复核窗/本席发布链执行/10 分钟件）不变。
+
+## 五、执行毕报（CEO 13:17 复核批「批，执行」·本席即窗执行·2026-10-13 13:2x）
+
+- 执行 commit=**c45b7af4**（dev 已推）：4 枚删除（gh 2 lower .agent.md+claude 2 lower .md，-289 行全同复本/旧代残留）+BOM strip 三字节（gh TriMetaverseProductRegistry，2919 字节余）。
+- **四门读数全 PASS**：①双宿主双形复扫=gh 0/claude 0 ✓②Camel 四面在位（gh 2 .agent.md+claude 2 .md）✓③BOM 去后首字节=2d2d2d（---）✓④spawn 单入口=双面 governance 计数各 1（唯 Camel）✓。
+- manifest 勘注候办维持（候下次 manifest 触达补清理记录一行）。
+- 候 CHO §三升级验证锚复核（双宿主双形各扫+Camel 四面+spawn 单入口+引用面零悬挂），复核读数随 CHO 毕报回 BOD 收口 LG-073。
