@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件
 - syncMode: static
-- lastSyncedAt: 2026-10-12T12:46:36Z（20:46:36+08·date 现查原值·第五例增量续勘版）
+- lastSyncedAt: 2026-10-13T20:21:36Z（04:21:36+08·date 现查原值·值守候令噪声族续勘版）
 - 勘验位: FSD 小全（m-fsd）；令源链: COO 素材包转呈 13:51（候灰度周评估·非即时令）→FSD 只读实勘（零施工）→COO 四点收编 13:54→BOD 第五例增量 20:42（零施工续勘·当场钉死 title 二选一候选）
 - 状态条: ①date 现查 2026-10-12T05:55:31Z ②水位=低 ③联审证据=本件+log/state 原文引值 ④末次活动=本件落盘
 
@@ -58,9 +58,40 @@ title 为字面量模板，`${}` 仅插 silentMin 数值、**不插条目对象 
 
 「40min vs 实距 53min」差 13min 量级——候选=silentMin 计算基点（信号源 mtime 采样时点）与报文发送时刻的窗差，属计算口径面；候灰度周评估调参一并勘，本节只录素材不展开。
 
+## 值守候令静默态噪声族（BOD 带话 10-14 04:19·FSD 设计面裁量·零指令性收编）
+
+### BOD 观察反馈+本机 log 对表
+
+BOD 带话（第 6 例族）：duty-cos-silent 今夜连报 3 例（43min/73min/103min·30min 冷却节奏精确吻合）——背景=LG-069 电量案 02:27 闭·CEO 明裁「值守全静默·晨见」，值守候令静默系**预期态**非异常，机制在值守候令态会整夜每 30min duty-escalate 直报。
+
+本机 log 对表（勘于 20:20Z）：BOD 三例=**本机实例实锚**——19:15:02.931Z / 19:45:03.237Z / 20:15:03.901Z 三轮 `NOTIFIED duty-escalate duty-cos-silent -> [bod]`，与 43/73/103min 读数逐轮精确对应（m-cos transcript 末活动≈18:32Z=02:32+08，CEO 02:27 闭案后停活动）。
+
+**件②实距读数正面首验**：43/73/103 步进精确 30min——件②（发送时实距重算）生效后首组实测读数，round 基点滞后修正与冷却窗联动正确，无回退。
+
+### 机制全貌（log 勘验新增输入·BOD 面只见 half）
+
+噪声不止 BOD 面：20:15Z 轮 alerts=6——**同轮 5 条 idle-escalate 转报 m-cos**（deployment-runbook-multunit-restart-anchor / ledger-concurrent-write-p2 / lg067-serial-pipeline-dem003 / lg069-battery-gate / lg075-board-contract-revision，owner 均含 COS）+1 条 duty-escalate 转 BOD。值守候令态下**每 30min 6 通知**（m-cos 5 连发+BOD 1 直报）——豁免设计若只做 duty 面，m-cos 面噪声不消，值守回复噪声又会自己打破静默。
+
+### 缺口定性（设计面根因）
+
+值守候令静默（预期态）vs 值守失联（异常态）在现判据（transcript mtime 单源）下**机制上不可分**——缺「候令在案」信号源。与在办件①（低活动/停工豁免·判据源未定位）同根。
+
+### 设计三案+本席裁量
+
+- **A 时段豁免**（duty+idle 两 band 22:00-08:00 降 log-only）：零依赖硬判据，立止今夜型噪声；粗粒度——白天停工/候令漏豁免，夜间真失联也豁（由晨窗首拍补偿，「晨见」裁态下可接受）。
+- **B daemon 拍文判据**（件①正身）：候令在案拍文→豁免——判据源未定位（本机 .fade/seats/ 仅手工拍文件 cmo.session），候窗勘。
+- **C 冷却拉长**（夜间 30→120min）：减噪不除根，不取。
+- **裁量：B 主 A 辅并窗施工**——拍文在→B 豁免；拍文缺→夜间 A 兜底；两案不互斥。施工候窗令（与件①并窗），零指令性收悉不预动。
+
+### 部署面候办（新增）
+
+sg 侧实例副本拾取链先勘清：改脚本后 sg 侧生效路径未验（10-12 夜三件生效锚只验本机 23:00:08 首拍；sg 副本是否 pull 未勘）——豁免施工窗内一并勘定，防「本机修完 sg 照旧噪声」。
+
 ## 使用依据
 
 - .fade/probe-logs/hub-silent-detect.log（05:21-05:45Z 段原文）+.fade/tmp/hub-silent-detect-state.json 现值
+- .fade/probe-logs/hub-silent-detect.log（10-13 19:15-20:15Z 段·值守候令噪声族对表）
 - hub-silent-detect.mjs=`scripts/fade/hub-silent-detect.mjs`（L46 writeState/L159-163 主循环冷却/L199-215 duty hop/L223-226 duty-escalate title 硬编码/L236 aliasToOps/L253 三钉②写入链）
 - 8713 cron store 只读勘（job `cron_muo2mj6s_cco2` command 指向脚本真身路径）
 - COO 素材包转呈 13:51（四件素材+两勘面委托）+BOD 第五例增量信 20:42（素材三条+title 二选一候选）
+- BOD 带话信 2026-10-14 04:19+08（值守候令静默态观察反馈·零指令性·设计面归本席裁）
