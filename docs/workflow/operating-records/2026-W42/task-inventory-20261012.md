@@ -56,7 +56,7 @@
 | duty-lane 流程审计 | duty-lane-process-audit-20261007 | 值席流程审计 | COS（charter 域） | charter-only 静默 5 天 | 10-07 | 在途（候处置裁：清尾或冻结） |
 | R1 席位周期重启窗 | seat-cycle-restart-window | 席位定期重启防退化 | BOD 执行+COO 协调 | 原排 10-12 23:00-00:15；执行态 BOD 席面无记录·候对表核实（deadline 已过仍 active） | 10-12 09:34 | 在途（候核实·今日对表） |
 | LG-072 OP-unresolved 清淤批（候授） | op-unresolved-cleanup-20261013 | 未决事项万年流水账清淤：历史段归档+活跃件归拢现役区+结构定型 | CEO 令→BOD 立书→COS 授号施工 | 施工毕 69d04c72e（正身改形 20 单亲勘定态+销 6 走锚+runbook 铸条·毕报落树）+主仓分叉合流 539184a11 | 10-13 10:39 | 在途（施工毕·尾项双闭=①归档件入库收口 d3aed52a6〔GATE 豁免裁落地·BOD 亲改 exclude〕+②board 链收笔 1f9225392〔§157〕·候 COS 台账销账·毕报=树卷毕报-op-unresolved-cleanup-20261013.md） |
-| LG-073 审核修订批（候授） | duty-audit-remediation-20261013 | 岗位职责审核四件裁准修订：层契约 social 追平+description 格式统一+残影归档+双形 registry 清理 | CEO 裁→BOD 立书→CHO 值席（m-duty-cho·sg 面）承办 | 任务书落树 11:01·误派 m-cho 已撤（11:07 CEO 勘正·零写面）·值席实派 tmux 直派 | 10-13 11:00 | 在途（值席施工中·清尾窗=本周） |
+| LG-073 审核修订批（候授） | duty-audit-remediation-20261013 | 岗位职责审核四件裁准修订：层契约 social 追平+description 格式统一+残影归档+双形 registry 清理 | CEO 裁→BOD 立书→CHO 值席（m-duty-cho·sg 面）承办 | 值席施工毕 902039b25（四件毕+发布批三面 13 席 updated/drift 0+F4-1 协同单→管线 owner/CTO+毕报落树）·BOD 三探针快验绿（description 新式/social 层/毕报在树） | 10-13 11:00 | 在途（施工毕候 BOD 复核移交面·LG-073 授号申请候 COS） |
 | LG-034/035 配置线+走查树族 | lg-035 走查树族 | 配置界面整改 | FSD 修复+STE 回头测 | 波⑤清尾回头测毕（STE 11/11 绿+零漂移+BOD 验讫 10-04） | 09-26 | 毕候验（候 COS 终验·LG-071 改形；CEO 亲测项由 COS 攒批单记账） |
 | LG-053 恢复阶梯地基线 | trimodel-recovery-ladder-01 | TriModel 自愈地基 | CEO→BOD→COS→COO 派 | 波①-④全闭+batch-15 件①毕（STE PASS f37e878e+BOD 复核 ce70115） | 09-25 | 毕候验（候 COS 终验·LG-071 改形·与上行同球） |
 | 快照增强+流水线接通两单 | 28f5d95c/local-svc-pipeline-link-01 | 快照扫本机+两流水线首链 | CEO 令→COO→值席 | 四点①席级映射 v2.2 毕（10-13 收官批 @f68e4ba1）+S3 评估毕+S2 终审销 12b6ebdf | 09-24/10-07 | 已销（10-13 晨 §148 收官销·本周销账留痕） |
