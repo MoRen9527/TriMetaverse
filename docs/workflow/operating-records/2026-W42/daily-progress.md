@@ -406,3 +406,7 @@
   - 1300a15d1 Merge remote-tracking branch 'origin/dev' into dev
   - 9a509f3a1 docs(cos): LG-075 N6 终验 PASS 销账——五项判据全绿（同词同序逐字/渲染 drift=0/关联件两处/纪律册 D-48..D-51/称谓原样）·三账同步（mirror 挪已销段+机器账 done+大表已销态）·销账锚=n6 终验卷·施工实证 23:33-23:48 提前精排窗约2.5h·分支错落互踩即勘即正如实注记
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:10 +08：自上次进度提交 f6f401592 后新增 2 条 commit：
+  - bdbe1cb10 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7d8a38d3e docs(cos): LG-075 销账时点勘正——原载 23:58 系未来时戳瑕（D-47 族·BOD §187 观察项兑现）实证=9a509f3a1 git log 23:52:27/推平 1300a15d1 23:52:48·四面同勘（大表行/机器账 closedAt+closeNote/终验卷 lastSyncedAt/mirror disk 面）·LG-069 CEO 00:00 裁不插电接受硬摔晨起 §五 重走随晨检面入账
+- registry：v2.1；今日 registry 提交无变化
