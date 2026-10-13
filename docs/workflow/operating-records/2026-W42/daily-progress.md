@@ -327,3 +327,7 @@
 - 巡检兜底补写 @20:50 +08：自上次进度提交 75ee80560 后新增 1 条 commit：
   - 34f8791b0 docs(bod): §181 Q3.2 部署窗未起勘验+改裁 22:00-22:30 窗令（漏达三证实锤·BOD 认账派工链收口疏漏·防再犯正形=窗行排定必附令达回执·大表行刷改裁态）
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @21:00 +08：自上次进度提交 cb7ef2d79 后新增 2 条 commit：
+  - 46ab9c4e2 Merge remote-tracking branch 'sg-server/dev' into dev
+  - a37622a71 docs(cos): Q3.2 部署段窗前预检卷落树——双机活体读数（sg 顶 a17deaff 已到位+dist 旧/R-HY 顶旧+活体旧值 8712x4 在役）+窗内施工序+fleet 身份正形注+回滚锚；lastSyncedAt 估值自抓勘正随录
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
