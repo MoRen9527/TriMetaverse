@@ -1261,3 +1261,11 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - ①LG-066 澄清: **主任务已完成且已销账**（铁证=台账 lg066-trirmc-merge-receipt-unit 行 closed 10-13 03:28 COS 终验·LG-071 改形首笔+大表已销态留痕+CTO 终判 PASS+N3 72h 窗闭活体四日零劣化）——节拍「LG-066=v3 生效态候 17:50 窗」系 **daemon 拍状态源陈旧残留**（10-09 排窗时代旧态未随销账刷新）非未完成活。已派 m-duty-fsd 定位拍报状态源清理该行（16:1x tmux 直派·对话流入流实锚·清毕回执）——daemon 状态源卫生件
 - ②FADE-PERF-001 定位: 正身文件=**TriCompany/docs/engineering/fade-registry.md**（FADE 实例登记册）——FADE-PERF-001 席级考核实例=CHO 今日 16:04 笔 18cc0a0 所增（sg 侧 /srv/fleet/TriCompany cat-file 验真在位·标题对）；**本机工作副本尚未含此笔**（本地顶 3785f08 FADE-010·GitHub origin 443 Connection reset 拉不动——TriCompany 仓走 GitHub 单腿）随通道恢复 fetch 可见
 - 落款: 2026-10-13 16:1x（date 现查原值·写前跑）
+
+## §175 LG-069 勘修窗施工段毕报收账（§173 会签面内）
+
+- m-cto 施工段毕报 16:21:42 达·BOD 收账+窗口确认回执（a0d614eb）
+- 三锚读数: ①两改落位 src/power-monitor.ts（timeoutMs 10_000→20_000 L188+log 时戳前缀 L262-265 双函数包装·默认 no-op 不受影响）②门禁三项 tsc 0✓/build 过✓/全量 674 tests·666 pass·8 fail 经 stash 对照独立验逐数一致=既有基线（replay 集成/P0 真实 HTTP 门/FADE-ASSESS×2/ctx.cwd×2/tui 环境依赖族）·**零 power-monitor 族命中·power 14 例全绿=会签改动面零伤实证** ③落笔 TriMLC 44a0206 push sg bare 验真（GitHub 443 reset 今日第 4 例绕行·ls-remote 顶对表）
+- **窗口裁示: 无另裁·18:00 黄金窗照排**——重启链照昨夜实操序（Watchdog Disable→根路径 /shutdown→port FREE→schtasks 冷启→pid/CIM 对表→Enable）·验收探针三项认可（healthz power 八字段+channel.log 新行时戳前缀+uptime 重置）·执行位 CTO 值窗·毕后探针读数回执 BOD
+- 台账面: TriMetaverse 卷笔 041f802ba 推 sg bare 验真（§174 并行笔收编一并）
+- 落款: 2026-10-13 16:21:56（hook 现戳原样）
