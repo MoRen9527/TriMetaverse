@@ -255,3 +255,8 @@
   - d4bd14a5 docs(hr): LG-074 B1 CAO 会签三处候正落稿+会签卷收编——RDT 枢纽标注/D-27 v4 域界注/销账分面/升级语窄化/CHO 行 BOD 口径 @m-duty-cho/LG-074
   - 4badcb60 docs(hr): LG-074 B2 CFO 会签回执并入——三点全同意+细则五条（计价分离/量纲分工/跨席直比警示/触线三原则）+试点影子运行 @m-duty-cho/LG-074
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:40 +08：自上次进度提交 e820680b 后新增 3 条 commit：
+  - ef92b795 docs(bod): §166 LG-072 正式销账回执收账（台账 41f2bf259 closed·中枢 COS 唤醒首办·迁移器兼容知会转 CAO·COS 入停工值守）
+  - 10363273 docs(cfo): 停工令分发回执收讫——11 席全 success 14:29:30 现戳·分发链闭
+  - 8ccc7c14 docs(ledger): LG-072 销账——尾项双闭实锚（①归档件入库 d3aed52a6·GATE 豁免裁落地②board 链收笔 1f9225392 §157）·施工 69d04c72e+毕报卷+合流 539184a11·COS 终验毕即销（LG-071 改形）·CFO 时段停工前锁笔（停工令 14:29:40 现戳·在办毕即锁笔条款）
+- registry：v2.1；今日 registry 提交无变化
