@@ -4,8 +4,9 @@
 - syncMode: static（立书版）
 - lastSyncedAt: 2026-10-13T11:01:24+08:00（date 现查原值·写前跑）
 - 令源: CEO 2026-10-13 11:00「四件我裁了，转 CHO 承办批量」→BOD 立书流转（D-39 域内·事后呈报知情）
+- 派工勘正: 首派本机常驻席 m-cho 系误派——CEO 11:07 勘正「应该是给值席 m-duty-cho」，m-cho 撤令认账（零写面停手·11:08 回执），实派=sg 值席 tmux 直派
 - 审核源卷: audit-report-20261013.md（前树 duty-audit-agent-roles-20261012·da1d06f5c·CHO 主导 172 行）
-- 执行位: CHO（五件套增量更新验收 owner·审核主导席转承办）
+- 执行位: CHO 值席 m-duty-cho（sg 值席面·五件套增量更新验收 owner）
 - 树 id: duty-audit-remediation-20261013
 - 范围注记: 审核报告 22 项建议中**仅 CEO 裁准四件**入本批；其余 18 项维持候办原态（各归口 CHO/CAO/COS 承办面，不因本令激活）。
 
