@@ -169,3 +169,9 @@
   - f1016ded Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
   - fc9e1363 docs(cto): TriMC 白名单补 m-duty-coo 变更方案卷——对象断言实锚(8712=trimc 现役·8710 无监听=记忆条 8710 过时修正+L65 现值逐字一致+systemd 形态非 watchdog=重启链同构映射)+fleet SUDO_NO=重启段需 root 通道+单点最小改方案五步+边界发现(收端 roster 不在令面不私扩)+自排今日 09:00-09:20 微窗(GLM 轨黄金段内 D-23 对轨)+夜间灰度积压直报素材并档
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:40 +08：自上次进度提交 2ec79cf6 后新增 4 条 commit：
+  - 11af5a52 docs(cto): 方案卷假修正勘正——8710→8712 勘正头注 10-06 已在记忆条·过时的是引用非条(未读全条只记旧开头)·教训入 trimmc-mlc-addjob-divergence 条
+  - d593e17a docs(cto): TriMC 白名单变更令全程闭环归档——BOD 采最小集换装·MainPID 3126596·验收三锚全绿(六席白名单 dist 值面/healthz ok/uptime 重置)·监听面勘正(前后均 loopback 零变化·消费连接全源本机零受伤)·观察项=全量线 0.0.0.0 候部署窗复核·m-duty-coo 活体终验候 COO 直发自证
+  - 5d536452 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
+  - dc5d9fba docs(cto): TriMC 白名单变更段全毕落卷——caadfbc+merge 9561273 收编 decba1f power-gate 并行笔六席并集·push 验真 9561273306f·TS2307 实锚合并线自带(启动链零触及)·重启上线面候裁(最小集 dist 备 /tmp/trimc-min-dist 推荐·全量 dist 候选)·候 BOD root 操盘回信即验收
+- registry：v2.1；今日 registry 提交无变化
