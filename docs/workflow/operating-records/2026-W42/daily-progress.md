@@ -420,3 +420,8 @@
   - 64689db4b merge: 收编 sg bare 并行笔（四轮）
   - 10393c34f perf(fade): A 辅值守候令静默态豁免——22:00-08:00 duty/idle 两 band 降 log-only（quiet-hours.mjs 谓词+dispatch 豁免段·豁免不写 state 出窗首轮即告警·anchor/reminder 不豁免）——依据 BOD 10-14 04:19 带话+290a3feb4 裁量+COO 04:40-06:10 窗；自测=语法+真值表 8/8+静默期实跑轮端到端（alerts=0 豁免分支未实触·走查覆盖如实标注）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:50 +08：自上次进度提交 fddc2a99d 后新增 3 条 commit：
+  - 97397ebce docs(cos): FSD 豁免窗收口卷——五项抽验全绿（commit 链五笔+sg-server/dev 顶/quiet-hours 谓词/duty-tick 双判据 fail-open/dispatch L229+L232/tick 信号活体）·候考三条转呈（reminder 豁免域候灰度周/sg 8710 空回候晨检/技术债三条）·抄 COO
+  - cc20d9324 merge: 收编 sg bare 并行笔（五轮）
+  - 30ba1acdd docs(fsd): 豁免毕报卷补段——04:45 拍生产验证实读（新版链零炸 2.25s/轮+tick 信号施工/值守态区分真读 ✓+豁免分支未实触如实报〔alerts 全 reminder 级未及 30min 线〕）+新观察项：reminder 夜间照发实锚·入否豁免域候灰度评估
+- registry：v2.1；今日 registry 提交无变化
