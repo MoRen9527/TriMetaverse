@@ -205,3 +205,8 @@
   - 4f087607 docs(plane): 归属勘正——6bf8c2dec 大表件含 BOD 并行工作区笔搭车收编（LG-073 审核修订批挂行+首刷段 09:47 代行补刷说明+汇总行本周新增 3/15 行对账·系 BOD 11:0x 窗未及提交笔·内容完整零损·署名权属勘正随本注·并行窗互踩族第二型正形处置）
   - 6bf8c2de docs(plane): LG-072 毕报落树+大表/台账施工毕态回填——判据七项对表全过；尾项两项候 BOD：①归档件入库候 FUZZY-TS 门豁免裁（照录历史原文非造值·豁免逻辑同构 docs/memory 先例）②bare board 链分叉（43797f2774）收笔；台账 lg072 留 open 禁裸销
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:40 +08：自上次进度提交 e9359063 后新增 3 条 commit：
+  - a23a2aa3 docs(audit): F4-1 协同单 v3 定稿——回询定谳①成立（形态差），标的扩回 4 处全数+BOM strip；执行门升级四面扫+spawn 单入口+零悬挂 grep；排窗条款不变候 CEO 复核窗（CTO 执行卷 60487f0d） @m-duty-cho/LG-073
+  - 60487f0d docs(lg-073): F4-1 v2 勘正——回询定谳 CHO 假设①成立+标的扩回 4 处全数（渲染器 Camel 保形输出实勘=claude 面 lower .md 系旧代残留与 gh 同构；本席前勘 .agent.md 形态误勘自领）；规格 v2=四枚删除+BOM strip，门=双宿主双形复扫零残 @m-duty-cto
+  - e4fa686c docs(audit): F4-1 协同单 v2 勘正——gh 侧 2 枚为标的主体（CTO 三定采纳+BOM 坐实）；claude 侧 lower 现态分歧回询（CTO 勘不存在 vs 本席实勘 .md 形在位，疑形态差/树差，挂起候复勘） @m-duty-cho/LG-073
+- registry：v2.1；今日 registry 提交无变化
