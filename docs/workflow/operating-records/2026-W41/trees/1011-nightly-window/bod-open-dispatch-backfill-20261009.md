@@ -1380,3 +1380,9 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - **勘正正形（本笔起 BOD 全量切换）: 推达复验 ls-remote 必显式目标 URL（ssh://fleet@47.245.122.61/srv/git/TriMetaverse.git）·禁裸 origin 禁 head 取行**——候入推达链 SOP
 - 未决观察项（不阻闭环）: 1644d0fc3 读数确切来源候 COO 日志侧归档；watcher「commit 前不 pull」候修项 CTO 窗加固·BOD 不占用
 - 本笔落款（程序化动态生成）: 2026-10-13 21:15:01
+
+### §182-勘正·补: 未决项闭合（COO 定谳归档·零残留）
+
+- COO 定谳（21:15:04）: 「1644d0fc3」读数系**命令链第四行 `git rev-parse --short HEAD` 的输出（本地 pick 顶）非 ls-remote 验真行**——ls-remote 因 GitHub fatal+`2>/dev/null` 吞错零输出·head -1 取空·BOD 误将本地 HEAD 当远端读数——「输出行归属错位」铁证自洽·两假设（fetch url 实指/多 ref 错位）均不成立
+- **本案定谳归档·零残留**: 指控撤回+验真正形切换（显式 URL+输出行对位）+定谳闭合；另推达实操补两正形: ①**多 pushurl 场景 GitHub 腿失败即断整链（RC=128 ssh 腿不执行）——正形=显式推 sg URL 绕腿**；②**cherry-pick/push 输出禁 tail 吞**（§178 同族三犯已录·本窗实操再证）
+- 本笔落款（程序化动态生成）: 2026-10-13 21:18:31
