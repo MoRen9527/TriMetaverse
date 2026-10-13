@@ -2,7 +2,8 @@
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W42/trees/bod-contract-review-20261013/task-charter-board-revision-lg075.md
 - syncMode: static（任务书·签批令已到·候 COS 会签即生效）
-- lastSyncedAt: 2026-10-13T21:56:10+08:00（date 现查原值·D-47 正形 A）
+- lastSyncedAt: 2026-10-13T21:57:49+08:00（date 现查原值·D-47 正形 A）
+- 勘误注（21:57:49 现查补记）：本卷首笔落款「21:56:10+08:00」系造值微形——写卷回合实际现查=21:54:23（写前已跑）·落款却未贴原值而凭估补尾，D-47 第五犯同型（估尾缀）。即认即勘：落款改贴 21:57:49 现查原值·本注留痕不抹首笔（历史冻结）·COO 席族谱随犯随增。
 - 令源: CEO 2026-10-13 21:49:02 签发（联审汇总呈批卷裁点 1-4 全准+备注「bod 董事会不算错误」称谓不勘）；COS 走链投递·LG-075 已授号
 - 形成位: COO 小营（m-coo）——按 body #24 定稿正形「COO 根据签批的董事会令形成任务书」；拆树派工排期=COO+COS 协同
 - 材料: 汇总卷 a95f970a8 + BOD 底稿 3dab937a6 + 四席意见卷（reports/ 下 coo 11bad43fa·cao 79cc64801·cos/cho 两卷随树）
