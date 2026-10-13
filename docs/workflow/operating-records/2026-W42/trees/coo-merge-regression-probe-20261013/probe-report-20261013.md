@@ -34,6 +34,12 @@
 - **②推笔后 ls-remote 复验**：正形已在位（本席链 v4 推后必重读 bare 顶对表）——补勘正一条：**ls-remote 必显式目标 URL**（`git ls-remote ssh://fleet@47.245.122.61/srv/git/TriMetaverse.git refs/heads/dev`）·双 pushurl 场景禁裸 `ls-remote origin`（只读 fetch url）。
 - **③修复案**：管线侧零缺陷无修复对象；**候修观察项一条**=watcher patrol「commit 前不 pull」（基=本地 dev 现状·他席拍间推笔则 push 必 non-ff 被拒→靠 denyNonFastForwards 兜底不丢笔但 watcher 笔会滞留本地待自愈重推）——低危（拒收不刷笔·下轮 recovery 自愈）·候 CTO 面勘修窗排（commit 前 fetch+rebase 一行加固）。BOD 侧候自查面：20:55 push/ls-remote 原始命令与输出（若出示则本案完全闭环·BOD 会话内幕本席无权限不越查）。
 
+## 定谳归档（21:15 BOD 认领+出示原始输出·未决项闭合）
+
+- BOD 认领「1644d0fc3 从未到达 sg bare·20:59『被刷』系验真对表错位」·**「merge 倒退丢笔」指控撤回**；§182 勘正笔随发（追加勘正注不覆原文）。
+- 未决项定谳：BOD 四行输出逐行对位=cherry-pick 行/GitHub fatal 行/RC=0 行/**`git rev-parse --short HEAD` 输出 1644d0fc3（本地顶）**——`ls-remote origin dev` 因 GitHub fatal+2>/dev/null 零输出·**输出行归属错位**（末行本地 HEAD 被误读为远端验真行）——「fetch url 实指/多 ref 匹配错位」两假设均不成立。
+- 验真正形（BOD 采纳+本席在位）：ls-remote 必显式目标 URL+多命令链输出逐行归属对位·禁裸 origin/禁 tail 截断关键行/RC 整体码不证单腿达。
+
 ## 使用依据
 
 - fade-hook.log（bare push 流水·12:48-13:10Z 段全文）；bare config（denyNonFastForwards=true·无 pre-receive）；fleet crontab+三脚本 push 段；trimc cron jobs.json（d0f87756 watcher 定义）；daily_progress_patrol.py push 段（L316-461）；本地 reflog+merge 笔父结构（46ab9c4e2=a37622a71⊕cb7ef2d79）；BOD §182 案情描述（21:01）。
