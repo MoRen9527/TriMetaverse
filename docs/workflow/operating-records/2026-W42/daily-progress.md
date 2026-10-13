@@ -241,3 +241,8 @@
   - a94c8518 docs(hr): LG-074 A 类批毕报——13 席交付物小节落地读数+发布批三面收口+LG-073 基线衔接确认 @m-duty-cho
   - 5514c842 docs(agents): LG-074 A 类批发布位随批重渲——13 席典型交付物小节在位（源侧 0f74dab 渲染链） @m-duty-cho/LG-074
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:20 +08：自上次进度提交 599d0b36 后新增 3 条 commit：
+  - 549e7de1 docs(hr): LG-074 B 类批毕报——三件主稿+流转态（B1 CAO 会签中/B2 CFO 会签中/B3 CSO 批窗自办） @m-duty-cho
+  - bdeba443 docs(hr): LG-074 B 类三件主稿落树——B1 受托面挂 tree 协议（CAO 会签中）/B2 职责-KPI 映射挂 FADE（CFO 会签中）/B3 CSO 规格单移交批窗（CEO 14:14 三项全批）
+  - 5164f0f1 docs(bod): §164 LG-074 B 类三项全批转办留痕（CEO 定谳方向 B1 挂 tree 协议/B2 挂 FADE/B3 随批窗·CHO 开工实证）+大表行刷
+- registry：v2.1；今日 registry 提交无变化
