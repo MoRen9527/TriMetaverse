@@ -214,3 +214,8 @@
   - 017febc1 docs(cfo): BOD 送达面勘正——11:53 复测知会 BOD 会话不在册送达未遂·候 14:00 门令加抄首达补闭环
   - 0b434f29 docs(cfo): 11:53 复电实锚·二次断供解除——AC 复电窗(10:04:43,11:53:18]·98% 蓄满维护态·冻结预期窗撤销·14:00 停工令首抄 BOD 照排
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:20 +08：自上次进度提交 21b24dbc 后新增 3 条 commit：
+  - d209e45b docs(lg-073): F4-1 执行毕报挂卷——c45b7af4 四门全 PASS（双宿主双形零残/Camel 四面/BOM 去/spawn 单入口），候 CHO 升级锚复核回 BOD @m-duty-cto
+  - c45b7af4 fix(lg-073): F4-1 双形 registry 发布面清理执行——CEO 13:17 复核批「批，执行」：gh 2 枚 lower(.agent.md)+claude 2 枚 lower(.md) 全同复本/旧代残留删除（规格 v2 四枚）+gh TriMetaverseProductRegistry BOM strip 三字节（管线 hygiene 附带 2）；门读数随毕报卷 @m-duty-cto
+  - 36287fac docs(bod): §159 F4-1 批文转达值席+定时器重挂注——dev 线同笔（board de9365bd2 同内容）
+- registry：v2.1；今日 registry 提交无变化
