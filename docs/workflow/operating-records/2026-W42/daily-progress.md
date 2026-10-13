@@ -381,3 +381,6 @@
   - faca7198a merge: 收编并行笔（值席落盘防覆盖）
   - ade58d5d5 docs(coo): LG-075 任务书 R1 顺移基线勘正——R1 改 22:30-23:45(BOD 裁·原 23:00-00:15)·窗界 00:30 不变缓冲更大·COS 脱窗 23:45 起·防陈旧基线
 - registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
+- 巡检兜底补写 @23:10 +08：自上次进度提交 a55a290a7 后新增 1 条 commit：
+  - e251ad1e8 docs(bod): §186 R1 窗执行流水——批 1-3 毕+批 4 提前亲操+5.1 宿主误用 CEO 令归一 pwsh（正形铸=复活宿主一律 pwsh 7）+电池硬风险直报
+- registry：v2.1；今日 registry 提交 1 条：18cc0a0 docs(engineering): LG-074 B2 实施——FADE-PERF-001 席级考核实例立册（规范登记档·影子运行补齐期：十段载体定稿+CFO 会签细则并卷+补齐项列证据单） @m-duty-cho/LG-074
