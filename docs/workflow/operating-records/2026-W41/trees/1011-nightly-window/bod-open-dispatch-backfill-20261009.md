@@ -1337,3 +1337,19 @@ CEO 23:06:40 直令（M 面 duty 组全员岗位职责审核·CHO 主导·拉 CA
 - **BOD 疏漏认账**: 我排窗令原备选「午后 14:00 后」落停工门禁排区（条款 3 窗形 14:00-18:00 工作日·python 泄漏系本机 VS Code 进程·FSD 本机施工在条款 4 适用面内）——COO 谨慎面避开正确·接令对象断言（时段停工门条款讲解 16:04 刚给 CEO 讲过·排窗时未对表自用=知行脱节实证）·豁免论不动用
 - 两裁采纳回签已达 COO（msg 707b0e18）·大表 python 行窗位已刷排定态·根治窗派工令随合并窗批明晨发 FSD
 - 本笔落款（程序化动态生成）: 2026-10-13 17:33:18
+
+## §180 powerMonitor 重启窗毕报收账（CTO 值窗·全绿闭环）
+
+- 回执源: m-cto 跨席毕报（落款 2026-10-13T10:02:18Z=北京 18:02:18·hook 现戳 18:05:04 对表自洽）·BOD §173 照排窗 18:00-18:30
+- 重启链实操: 18:00:33 窗正点起·全程 90 秒——Watchdog Disable（17:56 预备·赶 17:57 tick 前）→根路径 POST /shutdown（X-Internal-Token·OK）→port FREE 1s✓→schtasks 冷启「TriMLC Daemon」✓→listen back 4s✓→pid/CIM 对表 **7764→24628**✓→Watchdog Enable✓（照昨夜实操序·全程无偏离）
+- 验收四锚全绿: ①healthz ok·uptime=5s 重置+cron 13 job 全挂载；②power 八字段在位（percent/cim=100·acOnline:true·gate:none·read/notify Failures=0）；③/internal/v1/power lastReadAt=10:01:06Z 活体推进（新进程 tick 在跑·进程内生效验证非纸面）；④dist 生效面=44a0206 两改版（timeoutMs=20_000+toISOString×2 时戳包装）
+- 观察窗挂账两条: ①channel.log 新进程 +54 行/1min（stdout 活体·尾行 cron 补跑横幅正常）——power log 稳态零行=正常静默·今夜-明晨观察窗看 power read timeout 锯齿告警收敛（20s 容忍窗生效）；②昨日「新进程 4.5h 零行」块缓冲观察项随本次重启获反证素材（+54 行/1min）——候重新定性
+- 施工段毕报（§175）此前已收账·勘修窗两小改全案落地闭环·窗毕无候裁事项
+- 本笔落款（程序化动态生成）: 2026-10-13 18:06:09
+
+## §180.1 COO 值面勘正知情收账（lastReadAt 域归属·零更正）
+
+- 知情源: m-coo 18:06:12 信（发毕 18:06:31 对表零漂移）——COO 18:05:37 活体探 8713 /healthz（同进程 pid 24628）power 段**无 lastReadAt 字段**·判读系 snapshot/internal 面读数非 healthz 投影（方案稿 §2.2 裁据 3 吻合）·已勘正知会 CTO 对表
+- **与 §180 锚点核验: 零冲突零更正**——§180 ③锚原文即写「/internal/v1/power lastReadAt」（internal 面探针）·未涉 healthz 投影表述·四锚全绿结论不变；CTO 白日报若含投影笔由 COO-Cto 对表勘句·BOD 侧不动
+- 窗序确认: 明晨合并窗前置件（序 0）维持原排不省·明晨两窗令 10:00-10:15 照排（合并窗派工令+python 根治窗令）
+- 本笔落款（程序化动态生成）: 2026-10-13 18:07:29
