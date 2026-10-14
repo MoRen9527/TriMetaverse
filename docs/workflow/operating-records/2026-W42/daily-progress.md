@@ -464,3 +464,11 @@
   - 5570982f1 Merge remote-tracking branch 'sg-server/dev' into dev
   - 001e77588 docs(cos): LG-076 授号登记——sg 运维窗·bare 仓 root 属主雷勘修（BOD 09:51 知会·CEO 09:49 令链·窗今日 14:00-15:00·候 sg 面完工毕报后销账）+过筛三项维持候排注记
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:20 +08：自上次进度提交 34d4e9672 后新增 6 条 commit：
+  - b3fc2b511 docs(cos): CLAUDE.md 分权制节 D-39 条追平——边界收窄增补句落地（CAO 铸条 TC 60afa52 投影面·任务书/排窗须 CEO 确认即时生效·其余授权面不变）·TC 真源面无 D-39 条（两面漂移在案）如实报 CAO 候裁
+  - 4e6cd718d Merge remote-tracking branch 'sg-server/dev' into dev
+  - d4e9cbeaf docs(workflow): D-47 勘正——LG-076 任务书 L1 模糊时点回填（02:0xZ→组稿 commit 链实测 2026-10-14T01:59:00+08=625f7b0b9 cI 原值·现查 02:13:53Z 勘笔）；内容面不动候 CEO 确认令 @m-duty-coo
+  - a9698f48d docs(cos): python 根治窗段销账——杀父断根证伪根治无效定谳（同秒重建+90s 满血复批·卷锚 1e87ed6c8·COO 终验+COS 抽验）+升级候裁挂账（触发源侧断涉 IDE 配置面候 CEO 裁）+LG-069 后继注勘正
+  - 1e87ed6c8 docs(fsd): python 根治窗毕报——杀父断根实测证伪（VS Code 同秒重建+90s 满血复批·根治无效）升级候裁触发源侧
+  - 20244014c docs(cos): LG-076 窗位作废候 CEO 确认重排（CEO 10:00 令①高峰期禁排窗 14:00-18:00）+新规则落账（任务书/排窗 CEO 确认权·D-39 边界收窄即时生效·铸条候 CAO 对轨）+sg 面停摆同步
+- registry：v2.1；今日 registry 提交无变化
