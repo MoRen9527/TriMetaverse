@@ -521,3 +521,8 @@
   - e4e144f52 Merge remote-tracking branch 'sg-server/dev' into dev
   - 4aec04da3 docs(agents): LG-077 步③渲染——board〈上线报到〉节+CAO 信箱巡检第 9 条与路由行平移两宿主位（正身=TC d80f97f/7a01f34·D-52 报到制发布态）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:00 +08：自上次进度提交 028527d2f 后新增 3 条 commit：
+  - 040492523 Merge remote-tracking branch 'sg-server/dev' into dev
+  - be0358e84 docs(cos): LG-078 CLAUDE.md 两面漂移修订挂行（候 CEO 批）——CEO 14:55 元叙事定谳承接（M 面路由节机理句错误+相关节·与 LG-075 残留候考项并卷）·白皮书核对令在 CAO 面
+  - e57b4a41e docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+- registry：v2.1；今日 registry 提交无变化
