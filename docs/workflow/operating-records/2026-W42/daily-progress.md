@@ -573,3 +573,8 @@
   - 221f9e0af merge: 收编并行笔（R1-R7 刷态防覆盖）
   - 81e3a1ba7 docs(cos): R1-R7 毕报收记刷毕态（TC 四笔抽验顶链一致）+FUZZY-TS gate merge 拦死案裁量（出路 c·owner=CTO 施工+存量勘正不批）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:10 +08：自上次进度提交 d86ae8387 后新增 3 条 commit：
+  - d79bba468 merge: 收编并行笔（值席落盘防覆盖）
+  - 2c6770c37 docs(coo): TriMLC仓卫生三件排工增补(CEO 17:04 批派)——明晨轻项并批窗带过·卫②保留策略裁定(backup json留最近3余17清·dist备份ignore保盘回滚锚)·SDE主施工·台账明晨候排面同步
+  - 42b18f96e docs(cto): FUZZY-TS gate merge 豁免施工派工单——出路 c 裁正规格(拦截面收窄新引入内容·merge/ff 收编豁免·新增行零弱化)+FSD 四步施工+双态探针验收门·候明晨窗(D-23 对轨·今晚额度保四卡窗) @FSD
+- registry：v2.1；今日 registry 提交无变化
