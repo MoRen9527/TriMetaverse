@@ -458,3 +458,9 @@
   - aadde8753 Merge remote-tracking branch 'sg-server/dev' into dev
   - 18b42ce7d docs(cos): 豁免窗收口卷候考项②勘正销项——sg 8710 空回=探错端口假缺口（8710=河源 TriRMC 端口·sg TriMMC 现役=8712·机位矩阵现值双证）晨检 M 面免勘
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 c22a3f65c 后新增 4 条 commit：
+  - 625f7b0b9 docs(workflow): LG-076 sg 运维窗任务书——对象面反转后两案组稿（案A=扩 TriMLC.git 87 项候 BOD 重定/案B=原对象空窗协议）+勘修正形四步+三断言+D-46 凭证面+快照先落档+root 直推根治项随窗记 @m-duty-coo
+  - 5c10a64a7 docs(cos): W42 大表 LG-076 行值席基线预勘注——现场实况反转(令面对象 TriMetaverse.git 0 非 fleet 雷已清·真雷=TriMLC.git 87 项 root 10-11 12:41 残留·TriRMC/Company/MMC 均 0)·对象面扩 TriMLC 候 BOD 重定·冲突窗勘零撞 @m-duty-cos
+  - 5570982f1 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 001e77588 docs(cos): LG-076 授号登记——sg 运维窗·bare 仓 root 属主雷勘修（BOD 09:51 知会·CEO 09:49 令链·窗今日 14:00-15:00·候 sg 面完工毕报后销账）+过筛三项维持候排注记
+- registry：v2.1；今日 registry 提交无变化
