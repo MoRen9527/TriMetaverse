@@ -477,3 +477,7 @@
   - 07189ed32 docs(cos): LG-076 大表行刷 CEO 10:21 确认施工中态——窗 10:30-11:20（方案 E 提前）+对象案A TriMLC.git 87 项（D-39 收窄排窗须 CEO 确认新规首件·登记依据链=09:49 令→10:00 令①→10:21 确认）
   - be801361f docs(lg076): 窗位行勘 10:30-11:20(CEO 10:21 确认令·方案 E)+chown 前快照落档(87 项非 fleet 清单·sha256 ea469c0323295008·快照先落档纪律恪守) @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 d7470e3a9 后新增 2 条 commit：
+  - a943263a6 Merge remote-tracking branch 'sg-server/dev' into dev
+  - f83aca2e2 docs(cos): LG-075 N6 漂移收口全记——C 项字节保真发布毕（source_publish_check --project-docs-execute·md5 双件同值 4b46ed84·L45 BOD 定位条款两侧同位）+N6 卷 §五收尾追注（根因注记=直改项目侧须同窗回写真源）——A/B/C 三处全平（A+B=CAO TC 7fc41c4）
+- registry：v2.1；今日 registry 提交无变化
