@@ -31,4 +31,11 @@
 - R6 首例运行：评审会主持席/参与席/大表格式候首例定形回填。
 - contract v4.2 渲染注：contract 本体非 agent 渲染面（source-agents 直读），无宿主渲染项。
 
-—— 落款（date 现查）: 2026-10-14 16:11:03 +0800
+## 五、终态锚补记（推平后回填）
+
+- TC 仓四笔已推平：`b01b872..85d0c16`（13fb5d3/b830367/97f7a97/85d0c16·rev-parse≡ls-remote 双证一致）。
+- TMV 仓两笔=`adf57fa7f`（白皮书 1g）+`07df2516a`（board 渲染对轨）——经 COS 并行窗 merge `af0a9c4ef`（dsh v3 收记）收编入远端 dev，主仓 dev=af0a9c4ef≡ls-remote（并行窗共享仓收编形态，非本席直推）。
+- 毕报卷本体=本卷 wt/board `45597e61d`（本地在卷；BOD/COS 本机读卷先例同）。
+- **基建观察项（随卷呈 COS/CTO 面候收口批对表）**：wt/board 分支↔dev 合流现被 FUZZY-TS gate 拦截——hook 契约=staged 全文拦无 merge 豁免，而 dev 侧既有他席模糊时点行（LG-074 行「13:5x/15:0x」等·已入库存证）使任何 merge commit 暂存必撞；出路过收口批三选一（dev 侧存量勘正/豁免域扩容照 archive 先例/hook 增 merge 形态判）——owner 候 COS 裁，本席不单边改 hook。
+
+—— 落款（date 现查）: 2026-10-14 16:11:03 +0800（补记回填·date 现查 2026-10-14 16:18:13 +0800）
