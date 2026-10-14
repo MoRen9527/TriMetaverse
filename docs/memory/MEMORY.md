@@ -46,6 +46,7 @@
 - [全量读数回报纪律](full-regression-reading-report-discipline.md) — 完工回报必含全量四项读数+既有失败逐族归因；「既有」定性禁转抄须独立验
 - [CEO 大白话汇报规矩](ceo-plain-language-reporting.md) — 上报大白话+摘要段（干了什么→结果→候 CEO 决什么）；指令面=收到即照单执行；席间互报免附
 - [执行令时点交叉核对](exec-order-time-crosscheck-discipline.md) — 执行令必含绝对时点+date 现查与令文比对；任一矛盾即停回询
+- [排程令接收三对表](schedule-order-intake-triple-check.md) — 排程令到时施工在途=先对令源时序/D-23 双段/节奏约束三表再决策；核他面理由漏自家条款=自检链漏步（LG-077 窗差实锚）
 - [会话取证三要点](session-forensics-basics.md) — transcript 时戳是 UTC（本地-8h）；PS 工具每调用留引擎事件；stdout/stderr 分文件=Start-Process 指纹
 - [「已发/已转」主张先查发信记录](forward-claims-verify-send-log.md) — 写「已转 N 件」前逐件回查回执；收口并发会遮蔽漏转（LG-034 实证）；漏发更正声明「非丢信家族」
 - [服务器正名 M-SG-ip / R-HY-ip](m-sg-r-hy-server-naming.md) — sg=M面新加坡机、河源=R面机，两台独立机器；部署副本≠权威位
