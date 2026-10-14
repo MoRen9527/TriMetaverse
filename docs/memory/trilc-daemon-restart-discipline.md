@@ -23,3 +23,7 @@ metadata:
 2026-09-18 修复落地跟进（CTO 接线）：TriRLC `09980b8`（pidFileFor(port) 分文件+verifyPortPidConsistency 一致性门+legacy 兼容）/TriMLC merge `450a286` 已收官，**但现役两 daemon 尚未载新码**——过渡窗口期（`~/.trimetaverse/` 零 pidfile 实勘 02:55）：**禁用 CLI stop**（pidfile 缺失 fallback=port lookup+SIGTERM 兜底，错位风险残留），stop 正身=TriRLC 走 `Start-ScheduledTask` 生态权威路径 / TriMLC 走 token 门 `POST /shutdown`。新码生效后自动写 `trilc-<port>.pid` 窗口闭合。验收集=docs/workflow/operating-records/2026-W38/pidfile-fix-verify-checklist.md（四案回归），窗口评估=并入下次部署窗不专门起停。
 
 **【2026-10-11 栏 B 窗：/end 不可靠实锚+watchdog 形脱钩】**：①`schtasks /end <任务>` 报 SUCCESS 但旧进程存活（**任务实例句柄丢失型**——任务重新注册过/实例句柄失效时 /end 空转）→新实例 EADDRINUSE 静默退出+任务态回 Ready 掩盖——**重启正形链=POST /shutdown（token 门）→验 port FREE→schtasks /run**，「uptime 重置断言」门实弹拦下（栏 B FSD 即停即修案）。②**watchdog revive 形进程与任务计划脱钩**：watchdog 复活走直接跑 channel.cmd（非 schtasks /run——任务 LastRunTime 不推进铁证）→进程活着而任务态 Ready，**/end 对 watchdog 形进程打空**（管理面盲区）——判进程归属先看拉起链（父进程/cmdline），任务态≠进程态。③完工判据三断言（门禁锚A 定稿）：uptime 重置+pid/CIM created 对表+watchdog.log 旁证扫描（复活事件会改 pid，验收必须重对表现势禁引用施工时点读数）。
+
+## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
+
+- [TriLC daemon 重启纪律](trilc-daemon-restart-discipline.md) — trilc stop/start 权威路径，禁裸杀；双 daemon 主机 stop 前必验监听 pid==pidfile pid（09-18 误杀 8711 两次事故+CTO 裁修 pidfile 按 port 分文件）；优雅停=POST /shutdown+TRILC token 门；装后扩展位 ~/.vscode-oss + 版本必须 bump；**/end 不可靠实锚（句柄丢失型·10-11）**：/end 报 SUCCESS 旧进程存活→正形链=POST /shutdown→验 port FREE→/run；watchdog revive 形进程与任务态脱钩 /end 打空；完工判据三断言=uptime 重置+pid/CIM 对表+watchdog.log 旁证

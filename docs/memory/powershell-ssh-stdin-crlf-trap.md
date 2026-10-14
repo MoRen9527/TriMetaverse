@@ -17,3 +17,8 @@ metadata:
 **跨管道行尾族**（同族教训并档）：ps1 中文须 UTF-8 BOM（PowerShell 5.1 ANSI 误读）、嵌套 pwsh -Command $env 转义、本条 CRLF——Windows→跨机/跨进程管道三坑，凡 PowerShell 起头的内容传输先断言行尾/编码/转义三面。
 
 关联 [[ps1-utf8-bom-requirement]]、[[nested-pwsh-command-dollar-escape]]、[[sg-github-pat-push-channel]]。
+
+## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·原行含真实 CR 字符断三行·快照保留原形）
+- [PowerShell→ssh stdin CRLF 行尾坑](powershell-ssh-stdin-crlf-trap.md) — PS 管道经 ssh stdin 落盘物行尾粘 
+ 致精确匹配零命中（09-30 PAT 写入实证 124→123B）；修=sed 剥 
+ 或管道侧统一 LF；跨管道行尾族=PS→跨机三坑（BOM/转义/CRLF）并档

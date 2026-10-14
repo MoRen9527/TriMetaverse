@@ -22,3 +22,7 @@
 ## 双防线实弹（正面）
 
 22min 风暴+bod-tick 600s 悬挂双重压力：零崩溃+crash.log 零行（件A）+timeout→error 落账零 rejection 泄漏（件B）+notify 达阈一次不重复（修复批③）——勘修窗三件实弹兑现。
+
+## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
+
+- [daemon spawn 风暴诊断+8713 端点事实](daemon-spawn-storm-endpoint-facts.md) — 判别式：系统级健康而 daemon 上下文退化（手工同 snippet 快+零僵尸+counter uniq 解码行距≠时距）；陈旧缓存不可信=活体直读对表（healthz 88/ac=false vs 真值 AC=1/85）；/internal/v1/* 鉴权头=X-Internal-Token 非 Bearer；healthz 免鉴权且 power 八字段在位（从闸轮询正身）；crash.log=trilc-channel\ 首写才建——不存在=零 crash 非探错路径（BOD 四候选扑空案）；22min 风暴+600s 悬挂=件A/件B 实弹兑现（2026-10-11 13:39-14:01）

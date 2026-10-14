@@ -11,3 +11,7 @@
 **三犯（2026-10-11 栏 C 指令单·出单者亦犯）**：本席出 R-HY token 勘读指令单写「R-HY TriRMC 8712」——出单前未对 daemon-plane-locality-matrix 权威端口读数（10-06 21:3x 勘正在册：R-HY TriRMC=8710）复核，凭对话语境「8712」顺手落单=踩条实证。值席红线 4（daemon 名逐字断言+多 daemon 全报）拦下并报出现势 8710，防线有效。**教训升级：对象断言不只约束「接令确认」——出指令单/写报备/起草令文这些「发令侧」动作同样要对权威读数条复核，出单者不豁免**（我发的话会成为别人的执行对象，发令侧错位比接收侧更毒）。
 
 **同族**：exec-order-time-crosscheck-discipline（时点维度交叉核对）——本条=对象维度，两条合用=接令确认双查。关联：trirmc-independent-repo-topology/m-sg-r-hy-server-naming/trimmc-mlc-addjob-divergence/dual-controller-ports-m-mlc-r-rlc（正身位真源）。
+
+## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
+
+- [接令确认先做对象断言](object-assertion-before-confirm.md) — 错误框架经我确认获技术背书=传染二传手（BOD 误套裁 A→CTO 未查对象确认「段2 失去前提」→污染扩散至 A5 勘注笔三处连环勘正，2026-10-09 实证）；准入前三问对象断言（daemon 名逐字/机面 M-SG·R-HY·dev/独立仓）；8710/8712 跨机面复用+同向迁移=完美混淆温床；与 exec-order-time-crosscheck-discipline（时点维度）合用=接令双查；**三犯=出单侧亦犯（CTO 指令单 8712 笔误 10-11·发令侧错位比接收侧更毒·出单前必对权威读数条复核）**

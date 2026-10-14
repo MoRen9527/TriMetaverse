@@ -5,3 +5,7 @@ TriRLC app.ts L246 `cronCommandHttpAllowed`：`TRILC_CRON_COMMAND_ALLOWLIST` env
 推论：**job command 任何字符变更（含路径迁移）=新命令串=必 403，须 allowlist env 追加+daemon 重启**——「job 字段走 API patch 非重启」只对 schedule/名称等非 command 字段成立，command 字段不适用。CTO 2026-09-30 凌晨曾错误指引「切路径走 patch 非重启」，被 COS 实弹验证拦下勘正——判断 cron 变更窗时先分清改的是哪个字段。
 
 过渡技巧：路径迁移可先落「转发壳」（旧位一行 import 指针壳，command 不动零重启），command 切换+壳退役候下个 allowlist 重启窗随批。壳=临时垫须有退役时点，不留常驻。
+
+## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
+
+- [TriRLC cron command 白名单精确等值](trilc-cron-command-allowlist-exact-match.md) — TRILC_CRON_COMMAND_ALLOWLIST=精确字符串全串比对（app.ts L246，双入口 fail-closed）——command 字段任何变更含路径迁移=必 403 须 allowlist 追加+重启，「API patch 非重启」只对非 command 字段成立；过渡用转发壳（旧位 import 指针）须有退役时点（2026-09-30 COS 实弹 403 勘正 CTO 错误指引）

@@ -9,3 +9,7 @@
   3. 验证须含「cmd 实跑 set 生效」值面探针——**安全形态=临时探针 cmd（拷 set 区剥启动行）`call` 后 `echo %KEY%` 断言；禁直接 call 生产启动器（会真启 daemon）**；端口生效终验=冷起后 healthz 断言 8713 在听。
 - BOD 已入册教训条（BOD 侧）：cmd 批文件程序化写入必保 CRLF+验证须含 cmd 实跑 set 生效值面探针（2026-10-02 00:5x 转知）。
 - 关联候办：R-HY 401 pull_denied 件（冷起后 daemon 拉取已到达 HTTP 层=NODE_EXTRA_CA_CERTS 信任面 TLS 链路已通，但 R-HY token 门未放行）候明晚窗排程，SDE 候令（BOD 00:5x）。
+
+## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
+
+- [cmd 批文件程序化写入必保 CRLF+实跑探针](cmd-batch-crlf-preservation.md) — LF-only set 区静默失效最毒（TRILC_PORT 不生效→绑默认 8711→EADDRINUSE 冷起崩，2026-10-02 M2 落位件 COS 还原）；写前测行尾写后断 CR 数/反常形态必追源（batch 文件 LF-only+旧进程 uptime 活着=矛盾信号禁放过）/验证含安全形态实跑探针（临时 cmd 剥启动行 call+echo，禁直接 call 生产启动器）；漂移引入时点候勘（我写前快照已无 CRLF，先于我写入可能性留痕）；关联候办=R-HY 401 pull_denied（信任面 TLS 已通，token 门未放行）候明晚窗
