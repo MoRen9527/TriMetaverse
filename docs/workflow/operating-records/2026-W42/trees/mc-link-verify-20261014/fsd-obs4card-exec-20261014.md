@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（docs/workflow/operating-records/2026-W42/trees/mc-link-verify-20261014/fsd-obs4card-exec-20261014.md）
 - syncMode: static（单窗毕报）
-- lastSyncedAt: 2026-10-14T13:18:31Z（date 现查原值·UtcNow 正形）
+- lastSyncedAt: 2026-10-14T13:31:52Z（date 现查原值·UtcNow 正形·毕报终版）
 - 令源: COO 14:00:03 窗令（21:00-22:45·CEO 13:5x 批）·STE 20:56 基线信（HEAD=2e1e594·730/730 fail 0）
 - 施工位: FSD 小全（m-fsd）——序 0 三卡+序 1 卡④·序 4 活体锚施工面
 
@@ -31,23 +31,39 @@
 
 卡③出向 payload `source_seat='trirlc-conn'` 系 TriMLC notify 白名单新面孔——首发可能 403 拒（照 TriMLC 勘修批④先例：先落码·白名单另窗补录）。403 会落 mc.notifyFailures 计数可观测不阻塞。**sg 面 SSH 补录跨机归 BOD**（COO 14:05 收账已认领此路径）——候窗毕毕报带出实际形态。
 
-## 四、执行链读数（候填）
+## 四、执行链读数（全齐）
 
-- SDE 重启回执：候（派工已发 21:18:31·毕锚=healthz mc 段投影在位）。
-- STE 终拍读数：候（毕信号已发 21:18:31·全量预期 749/749 fail 0=既有 730 不增不减+新增 19 全过）。
-- 活体锚终验（序 4）：候 SDE 重启毕后施工——受控失败注入窗设计见 §五。
-- 卡④ 24h 观察窗：候挂账（dim=mc 在列读数并卷候 CTO 复核）。
+- **SDE 重启回执（序 2·21:22:08）**：链全绿——watchdog Disabled→pid 31240 对表→/shutdown 200（token 变量化）→port FREE 21:20:10→schtasks 冷启 UP 21:20:28→watchdog Enabled Ready；三断言全绿（uptime 36876→7 重置+pid 32576==pidfile+CIM 对表+日志旁证）；毕锚=healthz mc 段投影在位 `{"link":"connected","totalFailures":0,...7 字段全零基线}`；停摆 ≈18s。
+- **STE 终拍（序 3·21:22x）PASS**：全量 **749/749 fail 0 EXIT=0**（=基线 730+新增 19 精确合缝）·三新文件定点 19/19·顶三笔 hash 与毕清单逐字吻合·基座 2e1e594 未动·porcelain 0；卷锚 4707390（docs/testing/obs4cards-window-gate-final-20261014.md·主仓 dev）。
+- **活体锚注入窗（序 4·21:24-21:32 我施工）四件全销**：见 §五。
+- 卡④ 24h 观察窗：挂账（dim=mc 在列读数并卷候 CTO 复核——本窗干跑 2 次 OK all-dims 实锚）。
 
-## 五、活体锚终验施工设计（序 4·候 SDE 回执后执行）
+## 五、活体锚注入窗施工实录（序 4·21:24-21:32）
 
-窗令序 4 三件销的施工形态：生产 env 受控注入窗（~10min·双重启链正形）：
+**施工形态（实测修正版）**：原设计 env 文件注入被 launcher 遮蔽（`trirlc-daemon.ps1` L11 硬编码 `TRIMC_BASE_URL='http://8.155.54.79:8710'` 进程 env 优先·env 文件 append 无效——第一轮重启后 totalFailures=0 照 connected 抓获）——修正为 ps1 值面注入（备份 hash D694BF9AC6BA→拒连口 `127.0.0.1:9`→PSParser 0 错）。
 
-1. `trirlc-daemon.env` 备份+hash 记录（D-46：token 变量化零回显）；
-2. TRIMC_BASE_URL→`http://127.0.0.1:9`（拒连口）→重启链→3 拍后 degraded；
-3. 断言：daemon 日志分类行（`heartbeat failed: network-ECONNREFUSED`）+healthz `mc.totalFailures≥1`+`mc.lastFailureClass` 在位+degraded 2 拍后 `mc.degradedFailures≥2`（告警禁用面·mcAlarmSent 停 false 如实——真发链候白名单窗）；
-4. env 备份回写+hash 对表→重启链→恢复 connected+`mc.degradedFailures=0` 重置断言。
+**三轮重启链**（正形全链·watchdog disable→pid 对表→/shutdown token 变量化→port FREE→schtasks 冷启→UP→enable）：
+- R1 21:25:37 UP（pid 31260·env 注入无效轮——读数归零证伪·转化为 launcher 遮蔽发现）
+- R2 21:27:52 UP（pid 31472·ps1 注入态）
+- R3 21:29:57 UP（pid 23780·ps1 还原态·hash 对表 D694BF9AC6BA ✓）
 
-风险对冲：备份+hash 对表+终验 mc_link=connected 对表（防 23h 案重演·令②四步链同款纪律）。
+**四件销项断言读数**：
+1. **分类日志落形 ✓**：`[trilc:conn] 2026-10-14T13:28:31.381Z heartbeat failed: network-ECONNREFUSED`（连发型）+`timeout (5000ms)`（R3 后首拍瞬态·未达 3 拍阈值不转 degraded——阈值语义同窗活体再证）。
+2. **计数投影 ✓**：degraded 峰值 `totalFailures=7`+`lastFailureClass=network-ECONNREFUSED`+`lastFailureAt` ISO 在位；恢复后生命周期重计（重启清零→首拍 timeout 计 1——connected 态失败也计=无条件累计活体再证）。
+3. **degraded 告警链 ✓（带注记）**：`degradedFailures=4` 累计+`alarmSent=false`+`notifyFailures=3`——告警**真发**（TRIMC_NOTIFY_SG_URL 已在 env 非禁用面）但出向**连接级不通**（`degraded alarm notify error (will retry): fetch failed`/`This operation was aborted` 5s 超时）→失败回滚每拍重试形态活体实证（非白名单 403——是更前面的连接失败）；「告警成功一次后静默」语义活体未达（通道不通永不到成功态）·单测已实证该形（mock notify 成功→calls=1 后不重复）。
+4. **恢复重置 ✓**：`[trilc:conn] recovered → connected`+终读 `mc_link=connected`+`degradedFailures=0`（照 TriMLC recovered 重置形）。
+- 卡④ 终态：l1 干跑 OK all-dims（13:31:49·dim=mc 探 8711 connected 在列）。
+
+## 六、新发现与技术债标记（识别即标记）
+
+1. **【TD-obs-1·候 sg 面勘修】卡③告警出向通道不通**：TRIMC_NOTIFY_SG_URL 对端连接级失败（fetch failed/abort——非白名单 403·白名单问题在通道修通后才轮到）。投影面已照亮（mc.notifyFailures 计数可观测=本窗可观测性目标本身达成）。偿还路径：sg 面 SSH 勘 URL 对端活体（跨机归 BOD）→通道修通后白名单补录（source_seat='trirlc-conn'）→24h 观察窗并卷。
+2. **【注记·非债】launcher 硬编码遮蔽面**：TRIMC_BASE_URL 系 ps1 L11 硬编码（非 env 文件键）——env 文件同键不生效。今窗如实记录形态；是否收编进 env 文件（launcher 只留 TRILC_ENV_FILE 指针）候 CTO 裁（涉启动链形态·本席不擅动）。
+3. 注入窗期间 COS/BOD 已知会（合成告警预告·真故障判别=窗后 mc_link 仍 degraded——终态 connected 判据已销）。
+
+## 七、复 STE 问（非门禁项·21:23 来信）
+
+问：卡② mc-projection 4 例与卡③ 8 例是否有依赖 8711 重启后 healthz 才可真验的形态？
+答：**单测面零依赖**——19 例全用真 http server（127.0.0.1 随机口+mock notifyPost），逻辑面自成闭环；活体锚段补验的是「投影面在活体 daemon 生效」（healthz mc 段 7 字段在位+三轮重启链读数·见 §五）——两面互证已齐。
 
 ## 使用依据
 
