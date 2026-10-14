@@ -578,3 +578,8 @@
   - 2c6770c37 docs(coo): TriMLC仓卫生三件排工增补(CEO 17:04 批派)——明晨轻项并批窗带过·卫②保留策略裁定(backup json留最近3余17清·dist备份ignore保盘回滚锚)·SDE主施工·台账明晨候排面同步
   - 42b18f96e docs(cto): FUZZY-TS gate merge 豁免施工派工单——出路 c 裁正规格(拦截面收窄新引入内容·merge/ff 收编豁免·新增行零弱化)+FSD 四步施工+双态探针验收门·候明晨窗(D-23 对轨·今晚额度保四卡窗) @FSD
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:30 +08：自上次进度提交 3cfa27a68 后新增 3 条 commit：
+  - bed3e4dd0 docs(coo): 窗序台账三笔——dsh窗1挂行(免候排窗CEO 19:17令·序1 CTO合同定稿进行/序2前置勘验毕)+明晨并批窗对表至九件(COS patrol卫生两件随窗带)
+  - c88e6233f merge: 收编并行笔
+  - 52f25a62d docs(cos): CEO 19:17 patrol 保留裁两施工件挂行（log 治理+退役判据 N=7·明晨轻项窗）+dsh 窗1 即日开工收记（journal 19:19 段）
+- registry：v2.1；今日 registry 提交无变化
