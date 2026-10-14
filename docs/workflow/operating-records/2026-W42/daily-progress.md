@@ -595,3 +595,8 @@
   - 7326a60de merge: 收编并行笔（daily-progress-watcher 巡检兜底·纯增量）
   - fbf925e93 docs(cos): dsh 序2 装设毕刷态（段1 烟测 5/5 绿·TriRMC 零动实证·段2 候 key sg 箱已投）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 bed1c00bb 后新增 3 条 commit：
+  - bd60f12f6 merge: 收编并行笔（值席落盘防覆盖）
+  - 14b0b4097 docs(coo): 窗序台账五笔——排工形态改制基线挂行(CEO 20:55裁·直跑默认+窗控白名单四类·台账将转白名单登记面·细则候修订稿·在途不溯废)
+  - 37cb084e5 docs(cos): 排窗制度形态改版挂行（CEO 20:55 裁直跑默认+白名单四类·CAO 铸条+COO 形态面候稿）
+- registry：v2.1；今日 registry 提交无变化
