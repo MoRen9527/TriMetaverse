@@ -511,3 +511,8 @@
   - 2ed483064 Merge remote-tracking branch 'sg-server/dev' into dev
   - 54f11f8f0 docs(cos): LG-077 报到制施工大表挂行——CEO 14:24 终审签批（四条全批·CAO 五步·链形照 CTO 澄清型）·三处定向（制度文件面/公司信箱制/机械兜底）·COS 台账催办随链
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:40 +08：自上次进度提交 0d141571b 后新增 3 条 commit：
+  - 1057d9368 docs(cos): LG-077 行刷施工候启（18:30 段）——COO 14:35 排工令下发 CAO（①②③ 18:30-20:30/④ 23:00 后双条件+双签/⑤挂账·变阵条款录）·排窗确认链留痕
+  - 59c6ac507 Merge remote-tracking branch 'sg-server/dev' into dev
+  - afd4e1e0b docs(cos): LG-077 行注候 CEO 确认排工态——COO 方案稿 bf4a8623a（五步定序①②③今晚 18:30-20:30/④候明晨/⑤挂账候窗·与四卡窗零撞）
+- registry：v2.1；今日 registry 提交无变化
