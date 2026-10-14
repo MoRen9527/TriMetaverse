@@ -502,3 +502,7 @@
 - 巡检兜底补写 @12:00 +08：自上次进度提交 6defb2703 后新增 1 条 commit：
   - 7d2c361ed docs(lg076): 毕报箱信入链成卷——lg076-final verbatim+BOD/COS 提请顺手件(箱外面→dev 链消费面可读·不单开窗·链闭=箱↔树双承载) @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:10 +08：自上次进度提交 9e16e3011 后新增 2 条 commit：
+  - b3d1eabd3 Merge remote-tracking branch 'sg-server/dev' into dev
+  - d6980f352 docs(cos): 四卡一族勘修窗大表挂行——CEO 13:5x 批·窗今晚 21:00-22:45（COO 14:00:03 确认起算）·派工 FSD/SDE/STE 已发·授号裁量=一日闭环不授新号照 mc_link 先例·出窗残留再议
+- registry：v2.1；今日 registry 提交无变化
