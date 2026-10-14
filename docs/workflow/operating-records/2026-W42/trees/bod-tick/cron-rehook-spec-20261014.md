@@ -1,5 +1,6 @@
 # BOD 四时点 cron 重挂规格（重启续命存档）
 
+> **【已废止·2026-10-14】** D-52 报到制随 CEO 14:24 终审签批立条（纪律册 4e02402·先立后破同批废止）——本件 §重挂规格表已平移为清单正本 `TriCompany/docs/workflow/onboard-work-registry.md` §五附录（内容不变）；后续重挂一律照清单正本，本件仅存历史（内容冻结不动）。
 > sourceOfTruth: 本文件=BOD 值守连续性存档（非合同非纪律正身）；制度化候 CEO 裁，裁后走 COS→CAO 入册链
 > syncMode: static · lastSyncedAt: 见卷尾落款
 
