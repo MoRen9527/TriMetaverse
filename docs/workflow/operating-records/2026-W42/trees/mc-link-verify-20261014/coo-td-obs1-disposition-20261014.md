@@ -1,10 +1,11 @@
 # COO 裁决 · TD-obs-1 出向通道三案处置 ·2026-10-14
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W42/trees/mc-link-verify-20261014/coo-td-obs1-disposition-20261014.md
-- syncMode: static（COO 运营裁决卷·TD-obs-1 勘毕承接）
-- lastSyncedAt: 2026-10-14T21:53:16+08:00（date 现查原值·D-47 正形 A）
+- syncMode: static（COO 运营裁决卷·TD-obs-1 勘毕承接·**22:0x 勘误改判见文末 §勘误改判节**）
+- lastSyncedAt: 2026-10-14T22:04:42+08:00（date 现查原值·D-47 正形 A·勘误改判笔）
 - 勘报源: BOD 21:52 勘毕报+勘报卷 `mc-link-verify-20261014/reports/bod-notify-sg-endpoint-probe-20261014.md`@e4a62de27（在链）
 - 根因（BOD 钉死·三证）: sg 8712 TriMC daemon 监听面只绑 127.0.0.1 回环独占——本机出向 TCP 层即拒（curl HTTP=000·2ms 瞬拒+sg ss `LISTEN 127.0.0.1:8712`+env.ts 代码语义双仓对表）·与 token/URL 无关；**8713 notifyFailures=3 同因**（非 8711 单点）。
+  - **↑此节主定性已被 BOD 勘误卷撤回**（`reports/bod-notify-sg-endpoint-probe-CORRECTION-20261014.md`@dcad09c98·append-only）——勘错对端：8713 URL 实值=127.0.0.1:18710 本机隧道口（trimlc-daemon-channel.cmd:17）·「sg 8712 绑回环」系 9-30 #140 裁 A 案已知设计前提非病因；真时间线=今晨 09:04-09:21 三连败（隧道半死窗）→09:34 keeper 自愈 alive 至今·fetch failed=历史读数冻结·**通道现役健康**。历史笔留痕不抹（笔序纪律）·以下 §勘误改判节为准。
 
 ## 裁决（两点半批·BOD 倾向形态认）
 
@@ -21,6 +22,20 @@
 - 案 A 窗令要素（明晨）：sg 8712 改绑+安全组限源勘验+token 门保持断言+8712 重启链（BOD sg 侧）→案 B 隧道退役时点宣告（过渡件退役纪律）→8711/8713 notifyFailures 归零复测。
 - **案 A 窗令补两条（CTO 技术注记 21:56 收编）**：①**限源白名单实测**——改绑后非授权源 IP 探 8712 应拒（网络层拒绝独立实证·只验 token 通过不充分）；②**token 值面禁进勘验日志**（D-46 族·tail 前滤 command/runAs 行）。③TRIMC_NOTIFY_SG_URL 配置值面+通知端点形态复核归 CTO 随窗令即核。
 - 终验归因对表（CTO ①认）：notifyFailures=3 按「既有失败·根因已钉」归因 TD-obs-1——不作 FSD/SDE 侧缺陷扣·终验锚=窗令归零复测项。
+
+## 勘误改判（22:04 笔·BOD 勘误卷 dcad09c98 承接·本节为准）
+
+- **改判基座**：BOD 勘误卷三证验真毕（cmd:17 实值 18710/channel.log 三连败时间线/tunnel.log keeper alive 2.5h+ 稳态）——本卷上半事实基座（「sg 8712 回环拒=根因」）作废·通道现役健康。
+- **案 A 撤**：改绑公网=推翻 9-30 #140 裁决（隧道形态正是为免改绑）+公网攻击面扩大——叫停成立·明晨窗**不排**该项；窗令九项要素（含 CTO 两条注记）随撤归档留痕。CTO 两条方法论（限源实测/D-46 日志滤）不作废本身——前者系 sg 面勘验通法·后者纪律册本就在册。
+- **案 B 销**：对象不存在——隧道已在位常驻（keeper·HKCU Run 自启·auto-retry）且现役健康，「今晚起隧道」裁决作废·BOD 零动作。
+- **案 C 维持不采**。
+- **卡③收口正形改写（BOD 请求⑤认）**：非「修通道」——=①定性勘误（本笔+BOD 勘误卷）+②观察项 **keeper 活性巡检挂靠**（keeper 脚本头自记 #140 骑缝①至今未挂·今晨半死窗 30min 无巡检发现=实证盲区）——**并入明晨轻项并批窗**（挂账第件）；今晨事件真实教训=巡检盲区非通道设计。
+- **8711 obs 出向启用件保留候窗**：勘误卷 §三-3 确认 trirlc-daemon.cmd 无 NOTIFY env=8711 告警出向**禁用态**（FSD 施工段 env 临时注入后已还原·hash 双对表）——启用件（补 env+TriRLC 冷起）仍候白名单①勘修窗·系独立候窗项非 TD-obs-1 修复件。
+- **卡③终验销判不变**：告警链机制在位实证（FSD 施工段 degradedFailures=4 达线+真发重试形态+恢复重置）与现役禁用态自洽——销判有效。
+- **卡④ 24h 观察窗不变**（10-15 21:35）。
+- **8713 notifyFailures=3 清零**：代码语义=下次 gate 事件出向成功自动回零·无需人工——候自然验证（BOD 勘误卷 §三-2）。
+- **零执行损失锚**：案 A 窗令未出·案 B BOD 未起任何动作——裁决作废零沉没成本（「前提先行：窗令未出不作确定交付」纪律兑现）。
+- BOD 勘误卷 D-47 落款违例自报（22:07 预估→amend 勘正=dcad09c98）：知悉·家族链归 COS 面·本席不越界裁。
 
 ## 使用依据
 
