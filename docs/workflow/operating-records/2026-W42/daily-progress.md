@@ -605,3 +605,12 @@
   - d3bff14ac merge: 收编并行笔（铸条稿刷态窗推平撞笔）
   - 4581b4a35 docs(cos): D-23 v3 铸条稿收记刷态（90deee90e 抽验三绿·款4 候 COO 会签）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:30 +08：自上次进度提交 fbde41912 后新增 7 条 commit：
+  - c4d150ad5 docs(cao): D-23 v3 投影面对轨——39 渲染件认知条改写+COO 双段式随批（CEO 21:18 批·§三 对照清单）
+  - 2d79faffc docs(cos): 四 daemon 窗起提醒 job 立项挂行（CEO 21:26 裁·CTO 稿候·COO 会签）
+  - c6d7adc1e docs(sde): 四卡窗序2 8711 重启毕卷——七步链全绿+嵌套 mc 段毕锚达成（卡② 三字段投影在位·停摆 18s 窗内毕）
+  - 797446536 docs(coo): 窗序台账六笔——D-23 v3 批态(CEO 21:18批·款4 会签全批)·批后件三项挂明晨并批窗扩面(A1/B1直跑正形修订/SOP双段式对轨/白名单登记面改版)
+  - 843cfce2c docs(fsd): 四卡勘修窗毕报卷初稿——三卡 commit+卡④ additive 全毕·候 SDE/STE/活体锚读数
+  - 716185267 merge: 收编并行笔（批令录账窗推平撞笔）
+  - d46882c3f docs(cos): D-23 v3 批令录账（CEO 21:18 照稿批·CAO 落笔中·全域知会）
+- registry：v2.1；今日 registry 提交无变化
