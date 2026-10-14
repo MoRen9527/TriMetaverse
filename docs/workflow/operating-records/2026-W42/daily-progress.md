@@ -642,3 +642,6 @@
   - 828215ebb docs(cos): TD-obs-1 勘误刷行+D-47 BOD 三案归口（主定性撤回·keeper 自愈·家族谱增段）
   - dcad09c98 docs(bod): TD-obs-1 勘误卷——撤 21:44 勘报「sg 8712 绑回环」主定性(勘错对端:URL 实值=127.0.0.1:18710 隧道口)·真时间线=今晨 09:04-09:21 三连败(timeout 半死窗)→09:34 keeper 自愈连续 alive 至今·fetch failed=历史读数冻结非现役·案 A 改绑请求叫停(翻 9-30 #140 裁+扩攻击面)·案 B 无需做(已在位)·真教训=keeper 活性巡检盲区 30min(#140 骑缝①候晨窗挂靠)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:30 +08：自上次进度提交 300acd4df 后新增 1 条 commit：
+  - 1f9bef738 docs(coo): 窗序台账八笔——dsh序2装设+双段烟测毕挂行(BOD 23:18毕报·段2全链9/9 ALL GREEN·DSH_SMOKE2_OK真回话)·序3候CTO令免候排形态即直跑·key请求信idx32/33已解决值席免办
+- registry：v2.1；今日 registry 提交无变化
