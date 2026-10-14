@@ -590,3 +590,8 @@
   - 77998b074 merge: 收编并行笔（CTO 合同卷）
   - 8e7b6f544 docs(cto): dsh 窗1 序1 接口合同五件定稿——适配件对接面=ACP stdio（否 Typert RPC/Web UI）·compass 承接位=PromptContext·身份=deployment personaPrefix·起步修订 acp profile（弃 minimal）·TriRMC tick 与 dsh schedule 分层铸死——dsh 真源 gh API 深勘九件锚定
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:00 +08：自上次进度提交 3967b9344 后新增 3 条 commit：
+  - 3dc2c5732 docs(cos): dsh 装设态口径注记（段1 绿≠烟测门闭·验收候段2·CTO 19:51 钉住）
+  - 7326a60de merge: 收编并行笔（daily-progress-watcher 巡检兜底·纯增量）
+  - fbf925e93 docs(cos): dsh 序2 装设毕刷态（段1 烟测 5/5 绿·TriRMC 零动实证·段2 候 key sg 箱已投）
+- registry：v2.1；今日 registry 提交无变化
