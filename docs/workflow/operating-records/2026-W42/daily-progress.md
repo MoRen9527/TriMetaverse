@@ -454,3 +454,7 @@
   - 475c827c6 docs(sde): LG-069 序6 锚④停摆链毕卷——following→holding→URGENT→unknown 全路径活体实证+冷启毕锚（pid 3016/uptime 8/停摆 4.5min）
   - 384fcd66d docs(sde): LG-069 序6 锚⑤件C 探针毕卷——POST 缺 enabled 三查门全绿（201+归一 true+删净零残留·55e1305 现役面实证）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 e166659bf 后新增 2 条 commit：
+  - aadde8753 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 18b42ce7d docs(cos): 豁免窗收口卷候考项②勘正销项——sg 8710 空回=探错端口假缺口（8710=河源 TriRMC 端口·sg TriMMC 现役=8712·机位矩阵现值双证）晨检 M 面免勘
+- registry：v2.1；今日 registry 提交无变化
