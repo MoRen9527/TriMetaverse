@@ -562,3 +562,10 @@
   - 8e462c2a2 merge: 收编并行笔（值席落盘防覆盖）
   - a1c03ba7e docs(coo): C1窗序现势台账正身落位(W42周根·首位先行·COO维护COS共读)+六项立项排工表(C1即刻/轻项明晨并批/E1明晨方案稿/差②明晨排程稿/四卡窗与LG-077照旧)——CEO 15:58 排工开工批令承接·毕报经COS新链形
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:20 +08：自上次进度提交 8da757579 后新增 5 条 commit：
+  - af0a9c4ef merge: 收编并行笔（dsh v3 收记防覆盖）
+  - 147f7b072 docs(cos): dsh 稿 v3 收记（真源令承接·e89cef5ae 四件修订·排程稿基线=v3·候 COO 排程）
+  - e89cef5ae docs(cto): dsh 方案稿 v3 真源对照修订——照 CEO 16:04 真源令(gh API 独立复验一致):§2.3 重写渲染正形(agent-preset+persona+system-prompt waterfall·转译层规格=窗1 合同件)/§1.2 落细(Node 前置+Web UI 本地绑定禁改+argv 逃逸禁)/§五-2 同构清单对表重写(新识别 TriRMC mailbox 适配件+schedule 四工具原生+durable sessions 原生解)/版本钉住硬条款(preview 期)/minimal 起步建议/风险表+2 @COS
+  - 07df2516a docs(board): board 两宿主渲染位 v4.2 对轨——条 5 呈批链形勘正(呈批件经 COS 中转呈 CEO 批·BOD 保留集散/紧急直呈面)+版本注记——R7 联动·CEO 15:58 批
+  - adf57fa7f docs(whitepaper): 修订 1g——FADE 词条业务定性半句(公司成熟流程的智能实例化·双视角并档不对冲)+修订说明 1g 行——R4·CEO 15:58 批·登记性
+- registry：v2.1；今日 registry 提交无变化
