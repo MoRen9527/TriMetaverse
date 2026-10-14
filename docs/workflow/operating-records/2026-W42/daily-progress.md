@@ -485,3 +485,11 @@
   - 609398724 Merge remote-tracking branch 'sg-server/dev' into dev
   - b43195339 docs(cos): COS 分工句渲染链补齐——收编笔 881a699（TC dev·认领 BOD 代锁 d4ecaa3+空格微修）经 source_publish_check --publish-agents --host=claude --employees 过滤单席渲染·L19 新口径实锚（草案整理/COO 制定任务书/COS 台账催办·与分权制现行同向·补 10-02 勘正漏网句）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 8fdd92e0d 后新增 6 条 commit：
+  - 5696f5d9c Merge remote-tracking branch 'sg-server/dev' into dev
+  - 58da4e782 docs(cos): 8711 mc_link degraded 勘修销账——BOD 11:09:38 销账令·定性 token 轮换未跟更→跟更+重启→connected 双证（FSD 590337803+COO 复探+COS 11:10 活体抽验 connected/uptime 306s 重置/pollFailures=0）·大表 LG-069 行候项销项改写·并入观察池销项不授新号·残留 443 断旧洞分离在案
+  - 1c59edd01 merge: 收编并行笔（值席落盘防覆盖）
+  - 48bd819c5 docs(coo): 可观测性四卡一族勘修窗方案稿——CTO 裁③三件(分类日志/计数投影/debounce 告警)+l1 扩 dim(候转正条件窗纪律)·窗位两案(今晚 21:00-22:45 黄金段/明晨候排)·mc_link 案根治闭环教训转化·呈 BOD 转 CEO 确认(D-39 收窄新规)
+  - 590337803 docs(fsd): mc_link token 跟更+8711 重启毕报——BOD 令②四步全毕 mc_link=connected 修复实证（启动后11秒恢复·两侧hash一致fd9dd4af617c·令面hash数字14组合未复现候BOD复核取值形态·date假读数自检抓获注记）
+  - 9a7efa305 docs(fsd): 8711 mc_link degraded 本机侧勘验毕报——401 鉴权拒第一候选+23h 零恢复分代实锚+重试策略两档无上限+可观测缺口三条候裁
+- registry：v2.1；今日 registry 提交无变化
