@@ -506,3 +506,8 @@
   - b3d1eabd3 Merge remote-tracking branch 'sg-server/dev' into dev
   - d6980f352 docs(cos): 四卡一族勘修窗大表挂行——CEO 13:5x 批·窗今晚 21:00-22:45（COO 14:00:03 确认起算）·派工 FSD/SDE/STE 已发·授号裁量=一日闭环不授新号照 mc_link 先例·出窗残留再议
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:30 +08：自上次进度提交 a920cd406 后新增 3 条 commit：
+  - bf4a8623a docs(coo): LG-077 报到制施工排工方案稿——五步定序(①②③连作今晚 18:30-20:30 黄金段/④候明晨 BOD 配合窗弹性条款/⑤挂账候窗)·D-23+现役窗序五避对表·备选 23:00-24:00·呈 BOD 转 CEO 确认(新规)
+  - 2ed483064 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 54f11f8f0 docs(cos): LG-077 报到制施工大表挂行——CEO 14:24 终审签批（四条全批·CAO 五步·链形照 CTO 澄清型）·三处定向（制度文件面/公司信箱制/机械兜底）·COS 台账催办随链
+- registry：v2.1；今日 registry 提交无变化
