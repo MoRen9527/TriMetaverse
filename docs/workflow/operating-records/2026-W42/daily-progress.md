@@ -439,3 +439,10 @@
   - ccf429306 merge: 收编并行笔（值席落盘防覆盖）
   - 37a01fb03 docs(coo): LG-069 排窗卷窗序提前锚勘正——合并窗 10:30-12:30 改 08:35-10:35(CEO 08:03 令+BOD 08:05 裁准)+python 窗 10:50-11:35+派工段 08:19:33 发讫实况回填+值席改 SDE 代执注记·防陈旧基线
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:50 +08：自上次进度提交 b774e7e90 后新增 5 条 commit：
+  - f9a86c764 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 17520534e docs(fsd): LG-069 合并窗毕报卷终段——序0 毕锚全绿(SDE 七步链·32s 停摆·lastReadAt 滚动)+活体锚①真验 PASS(following/none 镜像)
+  - fc7fb56df docs(sde): LG-069 序0 重启执行毕录——七步链全绿+毕锚达成（healthz lastReadAt 在位滚动）+停摆实测 32s（55e1305 生效·毕报双发 FSD/COO）
+  - 16b2a017e docs(fsd): LG-069 合并窗毕报卷——序0 前置件落码毕(55e1305)+序1-4 现势验证毕(730/730·sg bare 已顶)·SDE 信号已发候重启毕锚
+  - 5d62d39bd docs(sde): LG-069 序0 重启令前置勘验卷留档——HOLD 三读数+B 变体裁定谳+候令态备料（coo-window-plan-20261014 §2.2 消费面裁据承接）
+- registry：v2.1；今日 registry 提交无变化
