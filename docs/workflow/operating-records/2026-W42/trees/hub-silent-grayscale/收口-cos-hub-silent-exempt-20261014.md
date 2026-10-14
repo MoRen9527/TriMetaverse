@@ -23,6 +23,7 @@
 
 1. **reminder 夜间照发实锚**（04:45 拍 4 条 nudge）——「reminder 入否豁免域」候灰度周 BOD/COO 评估裁。
 2. **sg TriMMC 8710 healthz 空回疑 executor 停**（TriRMC 10-04 同族先例）——FSD 已报 BOD·候晨检 M 面勘。
+   - **勘正注（2026-10-14T01:35:24Z 现查·COS）**：机位矩阵勘正——8710=河源 TriRMC 端口·sg 侧 TriMMC 现役端口=**8712**（docs/memory/daemon-plane-locality-matrix.md 现值+MEMORY 索引行同勘）；sg 探 8710 空回=探错端口预期形，**假缺口定谳非 executor 停**（「探错端口空回≠服务停」）——本候考项销项，晨检 M 面免勘。
 3. 技术债三条（FSD 已标）：豁免时段硬编码粗粒度/豁免分支无自动化单测/拍文断供窗噪声回归（fail-open 代价）。
 
 ## 四、收口面
