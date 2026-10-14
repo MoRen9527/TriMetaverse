@@ -481,3 +481,7 @@
   - a943263a6 Merge remote-tracking branch 'sg-server/dev' into dev
   - f83aca2e2 docs(cos): LG-075 N6 漂移收口全记——C 项字节保真发布毕（source_publish_check --project-docs-execute·md5 双件同值 4b46ed84·L45 BOD 定位条款两侧同位）+N6 卷 §五收尾追注（根因注记=直改项目侧须同窗回写真源）——A/B/C 三处全平（A+B=CAO TC 7fc41c4）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:50 +08：自上次进度提交 c5ebd6505 后新增 2 条 commit：
+  - 609398724 Merge remote-tracking branch 'sg-server/dev' into dev
+  - b43195339 docs(cos): COS 分工句渲染链补齐——收编笔 881a699（TC dev·认领 BOD 代锁 d4ecaa3+空格微修）经 source_publish_check --publish-agents --host=claude --employees 过滤单席渲染·L19 新口径实锚（草案整理/COO 制定任务书/COS 台账催办·与分权制现行同向·补 10-02 勘正漏网句）
+- registry：v2.1；今日 registry 提交无变化
