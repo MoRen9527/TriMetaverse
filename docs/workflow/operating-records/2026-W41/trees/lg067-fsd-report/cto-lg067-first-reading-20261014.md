@@ -1,8 +1,8 @@
 # CTO · LG-067 活性探针影期首读数卷（窗序提前版·读数窗 08:05-08:2x）
 
 - sourceOfTruth: 本卷（docs/workflow/operating-records/2026-W41/trees/lg067-fsd-report/cto-lg067-first-reading-20261014.md）
-- syncMode: work（读数毕·候 BOD 当场裁）
-- lastSyncedAt: 2026-10-14T00:14:45Z（date 现查·写前跑）
+- syncMode: work（转正裁决已入·随转正收口定稿）
+- lastSyncedAt: 2026-10-14T00:19:22Z（date 现查·写前跑）
 - 令源链: CEO 08:03:33 令 → BOD 08:04:05 裁准窗序前移 → COS 施工单（施工单-cos-lg067-reading-window-20261014.md@c580133ac）→ 本席执行
 - 读数对象: tri-liveness-l1 探针 job（id=cron_mv3506jr_xaz7·every 5min）·影期窗=2026-10-11T01:25Z → 2026-10-14T00:10Z（72h 名义窗）
 - 读数源: execution_log（%LOCALAPPDATA%\trilc-channel\cron.db 只读）+ l1.log 判定面（%LOCALAPPDATA%\tri-liveness\l1.log 全量 2373 行）+ channel.log power 面 + healthz 现值 + tri-liveness-l1.ps1 脚本现读
@@ -77,6 +77,15 @@ recovered 6 次，全部与冻结解除/重启完成时点吻合；failcount 现
 转正附带条件（候勘修窗治理，不阻塞）：①pending 重发链盲点补数+残留升级机制；②睡眠冻结盲区的跨宿主补位面评估（LG-064 分层既有线）。
 
 备选理由陈述（若 BOD 倾向继续影期）：完整告警实发（ALERT-SENT 200）影期内 0 次，送达链仅 power 面旁证、L1 线自身未走通一次完整送达——但 18:55 已验证触发-判定-入队半链+失败归因明确为通道层，本席认为不构成继续影期依据。
+
+## 八、转正裁决（BOD 当场裁·已生效）
+
+- **BOD 裁：准转正（有条件）**·D-39 全域授权·裁毕入账即生效——与本席 §七评估建议同向。落款现查原值：2026-10-14 08:18:45 +0800（BOD 信原文粘贴）。
+- 裁据三条：①判定面三面读数达标（触发 0.19%+误报 0%+一致性 4/4·watchdog 敏感度正面实证）②送达链大半走通·power 面 44a0206 端到端闭环旁证足（L1 自身未走通部分不构成否决——影期再守一窗的边际收益低于转正后自然实触窗的补验价值）③执行面 99.4% ok 异常全冻结形态。
+- **条件 2 项随转正挂账候勘修窗**（pending 链盲点治理+跨宿主补位评估·LG-064 既有线接）·不阻塞转正。
+- **转正后首自然实触窗仍补验两 band 豁免读数**（与 FSD hub-silent 灰度同球·免检不免验）——本席候办挂账。
+- 本席转正手续：①本段裁决入卷（本笔）②毕报 COS 收口·台账状态刷新归 COS 面。探针面（job command/参数/脚本）转正零改动——影期→正式系治理状态迁移非代码变更。
+- 收信时点对表注记（中性数据·供密度采样参考）：本侧收信 UserPromptSubmit hook 现戳 08:18:27 +0800 vs BOD 落款 08:18:45 +0800——18 秒倒挂（容差内候选·不定谳·定性归 CAO 面）。
 
 ## 使用依据
 
