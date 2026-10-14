@@ -499,3 +499,6 @@
   - 499e29157 docs(coo): 四卡方案稿窗序依据勘误——BOD 11:40 现势对表(今晚已订窗仅 2 项=18:00-18:30 重启窗+20:30/20:50 CFO 双锚·Q3.2/R1 不在现役)·21:00-22:45 空档结论不变反更宽+20:44 周窗重置后新鲜额度·历史笔不抹勘误注留痕
   - 193488d1a docs(cos): W42 大表 LG-076 行已销——三断言全过(find 0/fsck 无错/throwaway push+清/ls-remote 44a0206 对表)+销锚三件(快照 ea469c03/root 块 11:29:21 RC=0/毕报箱);信息项 TriMLC 工作仓滞后+root 直推根治候 standing @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 6defb2703 后新增 1 条 commit：
+  - 7d2c361ed docs(lg076): 毕报箱信入链成卷——lg076-final verbatim+BOD/COS 提请顺手件(箱外面→dev 链消费面可读·不单开窗·链闭=箱↔树双承载) @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
