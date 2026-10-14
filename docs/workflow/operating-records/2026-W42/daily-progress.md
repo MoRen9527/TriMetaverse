@@ -516,3 +516,8 @@
   - 59c6ac507 Merge remote-tracking branch 'sg-server/dev' into dev
   - afd4e1e0b docs(cos): LG-077 行注候 CEO 确认排工态——COO 方案稿 bf4a8623a（五步定序①②③今晚 18:30-20:30/④候明晨/⑤挂账候窗·与四卡窗零撞）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:50 +08：自上次进度提交 8741333df 后新增 3 条 commit：
+  - fe806c4a9 docs(cos): LG-077 步①②③毕进度刷态——CAO 14:45（D-52=TC 4e02402/清单正本 34c406b/正身指针 7a01f34/board d80f97f/渲染 4aec04da3）·较排窗提前 ~4h·窗差如实报备在案·④候双条件 23:00 后/⑤挂账
+  - e4e144f52 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 4aec04da3 docs(agents): LG-077 步③渲染——board〈上线报到〉节+CAO 信箱巡检第 9 条与路由行平移两宿主位（正身=TC d80f97f/7a01f34·D-52 报到制发布态）
+- registry：v2.1；今日 registry 提交无变化
