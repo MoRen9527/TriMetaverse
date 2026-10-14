@@ -493,3 +493,9 @@
   - 590337803 docs(fsd): mc_link token 跟更+8711 重启毕报——BOD 令②四步全毕 mc_link=connected 修复实证（启动后11秒恢复·两侧hash一致fd9dd4af617c·令面hash数字14组合未复现候BOD复核取值形态·date假读数自检抓获注记）
   - 9a7efa305 docs(fsd): 8711 mc_link degraded 本机侧勘验毕报——401 鉴权拒第一候选+23h 零恢复分代实锚+重试策略两档无上限+可观测缺口三条候裁
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 b69d4b5fa 后新增 4 条 commit：
+  - 189de6d08 docs(cos): LG-076 销账确认笔——duty-cos 11:41 预写值面采纳+hash 级抽验证真（快照 sha256 ea469c0323295008 逐字对表+87 行亲证+193488d1a 在链）后 COS 判定归位（LG-071 改形销账唯 COS）·三断言全过+销锚四件·残留三项不随销闭（工作仓 pull/root 直推 standing/毕报卷候入链）
+  - 618f90cc1 merge: 收编并行笔（值席落盘防覆盖）
+  - 499e29157 docs(coo): 四卡方案稿窗序依据勘误——BOD 11:40 现势对表(今晚已订窗仅 2 项=18:00-18:30 重启窗+20:30/20:50 CFO 双锚·Q3.2/R1 不在现役)·21:00-22:45 空档结论不变反更宽+20:44 周窗重置后新鲜额度·历史笔不抹勘误注留痕
+  - 193488d1a docs(cos): W42 大表 LG-076 行已销——三断言全过(find 0/fsck 无错/throwaway push+清/ls-remote 44a0206 对表)+销锚三件(快照 ea469c03/root 块 11:29:21 RC=0/毕报箱);信息项 TriMLC 工作仓滞后+root 直推根治候 standing @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
