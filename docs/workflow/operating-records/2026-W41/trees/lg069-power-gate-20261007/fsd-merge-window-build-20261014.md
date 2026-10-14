@@ -37,6 +37,13 @@
 2. TriRLC github 腿 5 笔滞后（443 断）——候 GitHub 通道恢复补推（ls-remote 对表后裸 push origin 即可·sg 腿已安全）。
 3. 从闸 staleness 前置件生效窗隙：SDE 重启毕前，8713 healthz 无 lastReadAt——若此窗隙内 8711 侧启用 TRILC_POWER_FOLLOW=1，staleness 判定走「lastReadAt 缺位→unknown 放行」预期形（2e1e594 注记在案的窗令预期形·零返工）——**8711 启用时序候 COO/CTO 排**（本窗令未含 8711 重启）。
 
+## 终段：序0 毕锚+活体锚①真验（08:38 补·全链毕）
+
+- **SDE 重启毕报（08:38:00 落款·七步链全绿）**：55e1305 dist 加载生效（md5 双对表独立验合报值）·watchdog Disable→/shutdown 200→port FREE 08:35:22→schtasks 冷启→healthz UP 08:35:35（新 pid 6456==pidfile）→毕锚终验→watchdog Enable。停摆实测≈32s（预算 5min）。**毕锚=healthz power 段 lastReadAt 在位且滚动更新**（首读 00:35:30.769Z→00:36:28.691Z 非快照）·九字段·cron 13 job 照常·8711 零触碰·mc_link 瞬态自愈。
+- **活体锚①真验 PASS（08:38:24 本席双读）**：8711 follower=`following/none`（staleness 解除·镜像 8713 gate=none·lastPollAt 00:37:51 活推进·pollFailures=0）——非注入自然达成（④现役已启用+序0 毕锚→staleness 解除→following 上线全链）；8713 power 九字段 lastReadAt=00:37:28 滚动·gate=none·AC 100%。
+- **活体锚②③④⑤现势**：②8713 闸置位→8711 skipped／③恢复自解／④断 8713→holding→unknown（注入/破坏性动作·候 COO 终验排程）；⑤三件回流探针（件A/B 活体形+SDE 预置 POST 件C 形·单测面已 730/730 覆盖）候 COO 终验面。
+- **四点定谳已回 COO（08:35:34）**：①序1-4 已在仓四笔溯源②序0 三步链现势③app.ts 五处 L 号实锚（120-122/1476-1484/1502-1503/1790-1792/4940+service L54/L77+timer L59/L266）④TRILC_POWER_FOLLOW 现役已启用活体实锚。
+
 ## 使用依据
 
 - COO 合并窗令 08:19:33+补令 08:27:48（五件清单/四步链/推送纪律/止损砍件序）
