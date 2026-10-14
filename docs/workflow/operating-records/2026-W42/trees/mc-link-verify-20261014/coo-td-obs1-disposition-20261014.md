@@ -19,6 +19,8 @@
 - 卡④ 24h 观察窗：挂台账观察池·时点锚=2026-10-15 21:35（毕报后 24h）·dim=mc 读数并卷候 CTO 复核（COS 催办链跟）。
 - 案 B 起后验证锚：8711 healthz mc.notifyFailures 停涨+新失败拍 alarmSent 出向 200 面（或 sg 侧 TriMC notify 收件面证据）——BOD 隧道毕回报读数·本席终验形态同四卡窗先例。
 - 案 A 窗令要素（明晨）：sg 8712 改绑+安全组限源勘验+token 门保持断言+8712 重启链（BOD sg 侧）→案 B 隧道退役时点宣告（过渡件退役纪律）→8711/8713 notifyFailures 归零复测。
+- **案 A 窗令补两条（CTO 技术注记 21:56 收编）**：①**限源白名单实测**——改绑后非授权源 IP 探 8712 应拒（网络层拒绝独立实证·只验 token 通过不充分）；②**token 值面禁进勘验日志**（D-46 族·tail 前滤 command/runAs 行）。③TRIMC_NOTIFY_SG_URL 配置值面+通知端点形态复核归 CTO 随窗令即核。
+- 终验归因对表（CTO ①认）：notifyFailures=3 按「既有失败·根因已钉」归因 TD-obs-1——不作 FSD/SDE 侧缺陷扣·终验锚=窗令归零复测项。
 
 ## 使用依据
 
