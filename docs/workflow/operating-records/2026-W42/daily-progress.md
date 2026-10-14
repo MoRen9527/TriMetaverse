@@ -425,3 +425,7 @@
   - cc20d9324 merge: 收编 sg bare 并行笔（五轮）
   - 30ba1acdd docs(fsd): 豁免毕报卷补段——04:45 拍生产验证实读（新版链零炸 2.25s/轮+tick 信号施工/值守态区分真读 ✓+豁免分支未实触如实报〔alerts 全 reminder 级未及 30min 线〕）+新观察项：reminder 夜间照发实锚·入否豁免域候灰度评估
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @08:10 +08：自上次进度提交 9f75a32fe 后新增 2 条 commit：
+  - c580133ac Merge remote-tracking branch 'sg-server/dev' into dev
+  - 609036afd docs(cos): LG-067 读数窗施工单（窗序提前版）——CEO 08:03:33 令+BOD 08:04:05 裁准前移·08:05 即起（原 09:30-10:00）·执行位 CTO（scout 卷三面读数+power 并读正形）·读数毕回 BOD 当场裁·窗间隔离不变
+- registry：v2.1；今日 registry 提交无变化
