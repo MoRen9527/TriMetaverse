@@ -583,3 +583,10 @@
   - c88e6233f merge: 收编并行笔
   - 52f25a62d docs(cos): CEO 19:17 patrol 保留裁两施工件挂行（log 治理+退役判据 N=7·明晨轻项窗）+dsh 窗1 即日开工收记（journal 19:19 段）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 9a69da7d9 后新增 5 条 commit：
+  - ea2d02457 docs(coo): 窗序台账四笔——dsh序2装设挂今夜行(主刀BOD·烟测门§2.5·不挤占四卡窗·BOD 19:32裁)+序1态刷验收过
+  - 0f28514d0 docs(cos): BOD 19:32 dsh 裁决录账刷态（序1 验收过·序2 今夜装设 BOD 主刀·D-39 授权面）
+  - d78020230 docs(cos): dsh 窗1 序1 合同定稿呈批态刷表（8e7b6f544·抽验三绿·候 CEO 批两件）
+  - 77998b074 merge: 收编并行笔（CTO 合同卷）
+  - 8e7b6f544 docs(cto): dsh 窗1 序1 接口合同五件定稿——适配件对接面=ACP stdio（否 Typert RPC/Web UI）·compass 承接位=PromptContext·身份=deployment personaPrefix·起步修订 acp profile（弃 minimal）·TriRMC tick 与 dsh schedule 分层铸死——dsh 真源 gh API 深勘九件锚定
+- registry：v2.1；今日 registry 提交无变化
