@@ -18,6 +18,7 @@
 ## 终态读数（21:33:4x 现查）
 
 - mc_link=**connected**·uptime 223s·mc 段 totalFailures=1/lastFailureClass=timeout(5000ms)/degradedFailures=0/alarmSent=false/notifyFailures=0——恢复重置后干净态（④形态互证）。
+- **读数对照附注（21:44 补·COS 抽验附注认收）**：COS 21:41 活体现读 totalFailures=2（5s 复测稳非在涨）——对我 21:33:4x 读数 1·定性=毕报后一次瞬时心跳自愈（单拍失败→次拍恢复·计数累加面正常行为·lastFailureAt 随之滚动）——恰证卡①②可观测性目标本身（瞬断被捕获+分类+计数）·非终态破坏。大表销账行附注 COS 侧在案（8c948e325）。
 - 窗毕总态：**四卡全落+门禁 PASS+活体四锚全销·窗实质毕 21:35**（窗界 21:00-22:45·提前 70min·零回滚）。
 - 卡④ 24h 观察窗挂账：dim=mc 读数并卷候 CTO 复核（观察池⑧）。
 
