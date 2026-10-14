@@ -472,3 +472,8 @@
   - 1e87ed6c8 docs(fsd): python 根治窗毕报——杀父断根实测证伪（VS Code 同秒重建+90s 满血复批·根治无效）升级候裁触发源侧
   - 20244014c docs(cos): LG-076 窗位作废候 CEO 确认重排（CEO 10:00 令①高峰期禁排窗 14:00-18:00）+新规则落账（任务书/排窗 CEO 确认权·D-39 边界收窄即时生效·铸条候 CAO 对轨）+sg 面停摆同步
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:30 +08：自上次进度提交 89f1b1feb 后新增 3 条 commit：
+  - 2e7273df8 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 07189ed32 docs(cos): LG-076 大表行刷 CEO 10:21 确认施工中态——窗 10:30-11:20（方案 E 提前）+对象案A TriMLC.git 87 项（D-39 收窄排窗须 CEO 确认新规首件·登记依据链=09:49 令→10:00 令①→10:21 确认）
+  - be801361f docs(lg076): 窗位行勘 10:30-11:20(CEO 10:21 确认令·方案 E)+chown 前快照落档(87 项非 fleet 清单·sha256 ea469c0323295008·快照先落档纪律恪守) @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
