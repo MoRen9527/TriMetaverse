@@ -44,3 +44,10 @@
 - **C（发布面动作·本席 manifest closeOwner）**：`source_publish_check --project-docs --project-docs-execute` 字节保真发布（10:31 执行·正形开关系 `--project-docs-execute` 非 `--execute`）——`trimetaverse-claude-md-copy` published-copy updated（copied_source_to_target）；三验：md5 双件同值 4b46ed84…（字节级一致）+L45 BOD 定位条款两侧同位命中+变更面仅 CLAUDE.md 一件。
 - **根因注记（CAO 定谳·加固句收编）**：9-30 CEO 四令当时只直改项目侧、未回写真源（单点失守）；N4 时回写纪律是活着的。加固正形=**直改项目侧 CLAUDE.md 须同窗回写真源（或直接改源走管线）**——本卷收编不另立册。
 - 漂移三处至此 A/B/C 全平——§三「候 CGR 面」候考项随之闭。
+
+## 六、勘误段：C 项发布验证假阴性复盘+丢条修复（2026-10-14 15:42 补·COS）
+
+- **事故定性（本席 10:31 笔 f83aca2e2 复盘）**：§五 C 项 DCE 发布（--project-docs-execute）实际以陈旧源（形态=b101a31 9-21 纯版）覆盖 TMV 渲染面——**丢 7 行**（N4 投递执行句 COS 中转括号+跨面交互正形条+D-39 条含 10-14 增补段+咨询前置+任务书纯净性+C-level 即时同步+周平面 SOP 指针行）；当日三验（md5 双件同值+L45 单项命中+变更面单件）=**假阴性**——抽验面只对 C 项目标条，未断言既有条存续，丢条未被拦截。教训：**发布验证须全量关键条断言（目标条在+既有条仍在双向）非单项目标项**。
+- **根因候勘**：DCE project-docs 分支 source 解析链命中陈旧版机理（10:31 时本机 TC 工作区在 fsd 分支=daf5325 版·真源 dev 顶 fetch 时点未定）——候读 source_publish_check.py project-docs 分支源解析代码定性；**勘清前禁再跑 --project-docs-execute**（防二次丢条·本次修复不走 DCE）。
+- **修复（LG-078 施工同批·15:42）**：TMV CLAUDE.md 以 TC 真源（7fc41c4 全量+b01b872 精化句）字节直拷重写——md5 双件同值 1c917fc3·全量 8 条断言（7 恢复条+精化句）全绿；TC 侧精化句=LG-078 施工 b01b872。
+- §五「漂移三处 A/B/C 全平」结论**勘正为：C 项当时形平实含丢条（§五三验假阴性）·15:42 修复后真平**；「候 CGR 面」候考项之关闭随之以本段修复为准。
