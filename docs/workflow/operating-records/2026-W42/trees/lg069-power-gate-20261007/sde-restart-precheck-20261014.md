@@ -26,6 +26,25 @@
 - 重启实操序（10-11 先例两度）：①schtasks Change TriMLC-Watchdog Disable（**PowerShell 跑·Git Bash schtasks 吃 MSYS 路径转换**）→②POST /shutdown 根路径（token shell 变量零回显；401≠路径存在教训在案）→③Get-NetTCPConnection 验 8713 port FREE→④`schtasks /run "TriMLC Daemon"` 冷启→⑤healthz uptime 重置+pid/CIM 对表（listen pid==pidfile）→⑥watchdog Enable。毕锚=healthz power 段 lastReadAt 在位。
 - 回滚锚：重启前现役 pid 24628/起点 18:01:00 已录（本卷读数①）；dist 当前版若需回退=schtasks 冷启加载旧 dist 面（dist-bak-pre-20261011-window 备份族在 TriMLC 仓根）。
 
+## 执行段（信号到→窗内毕·2026-10-14 08:35-08:37）
+
+- **信号验证段四查全绿**（08:29-08:33）：顶笔 55e1305（08:26:45「fix(power): LG-069 二期前置件——healthz power 段补 lastReadAt 投影（一行+双相单测）」·m-fsd 08:28:57 毕信号）；src/dist 工作区净；dist md5 双对表独立算——server/app.js=189700a3b94b934ded9a0246470cf83e、index.js=3a2d86439bd08822fc5614b9d7d80be1 逐字合 FSD 报值；powerHealthz L1139 值面 grep `lastReadAt: p.lastReadAt` 在位（L1137 注记=CTO 二期稿 §2.2 裁据3 承接）。
+- **重启前基线**（08:29:51）：uptime=52129·healthz power 八字段无 lastReadAt（待换形态）·jobCount=13；watchdog 任务名实勘=`TriMLC-Watchdog`（Ready）·冷启任务=`TriMLC Daemon`。
+- **七步链全绿**：
+
+| 步 | 动作 | 读数 | 自检 |
+| --- | --- | --- | --- |
+| 1 | Disable-ScheduledTask TriMLC-Watchdog | 08:35 窗准点 | State=Disabled ✓ |
+| 2 | POST /shutdown 根路径（token 零回显） | 200 {"ok":true,"message":"shutting down"} | ✓ |
+| 3 | port FREE 轮询 | 08:35:22 poll#1 即空 | ✓ |
+| 4 | Start-ScheduledTask TriMLC Daemon | State=Running | ✓ |
+| 5 | healthz 轮询+pid 对表 | UP 08:35:35（poll#1）uptime=7；pidfile=listen=**6456** ✓；mc_link/trimc 冷启瞬态 degraded→8s 后双 connected | ✓ |
+| 6 | **毕锚终验**（62s 防抖窗） | **healthz power.lastReadAt 在位且滚动**：首读 00:35:30.769Z→00:36:28.691Z（60s tick 实证非快照）·九字段 has-anchor=True·cron jobCount=13 degraded=false next_run 正常滚 | **达成 ✓** |
+| 7 | Enable-ScheduledTask TriMLC-Watchdog | State=Ready；watchdog.log 尾条停 10-11（本窗零触发=护栏旁证） | ✓ |
+
+- 停摆实测≈32s（port FREE 08:35:22→healthz UP 08:35:35·预算 5min）；开链 08:35:03→毕锚终验毕 08:37:3x 窗内毕（止损 10:35 富余）；8711 零触碰 ✓。
+- 毕报双发：m-fsd（4915efd9）+COO（c9b78b59）·落款 08:38:00/08:38:12 现查原值·发后对表 08:38:21 通过。
+
 ## 使用依据
 
 - COO 派工令（08:19:33）+HOLD 裁复 B 变体（08:27:48）；窗计划卷 coo-window-plan-20261014.md §2.2（消费面裁据）
