@@ -618,3 +618,13 @@
   - 8353b74e7 merge: 收编并行笔（落笔毕刷态窗推平撞笔）
   - 9c88cca19 docs(cos): D-23 v3 落笔毕刷态（CAO 毕报抽验四绿·39 渲染件对轨·§三 1/2/4 毕）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 a00086de3 后新增 8 条 commit：
+  - 9450db603 docs(coo): 会签卷补CTO确认笔(21:46:51三点全认)——双席签态闭环候CEO终审
+  - 55798e0a1 docs(cos): 提醒 job 稿会签毕呈批中（COO 1db9d27ca·施工窗明晨共生+schema 采内嵌）
+  - 1db9d27ca docs(coo): 提醒job稿会签两点半批(施工窗认明晨并批窗共生·步3/4候BOD dsh排序·schema采纳裁front-matter内嵌)@e1b2ba891+终验卷读数对照附注(COS 21:41 totalFailures=2瞬时自愈定性认)
+  - 8c948e325 docs(cos): 四卡窗终验销账（COO 毕报抽验三绿·活体 connected/0·提前 70min 零回滚）
+  - 740965c65 merge: 收编并行笔（值席落盘防覆盖）
+  - 69e83a458 docs(coo): 四卡窗毕——COO 终验四锚全销(卡①分类日志15笔三型/卡②投影七字段/卡③告警链+恢复重置/卡④dim-4在列OK all-dims)·实毕21:35提前70min零回滚·终态connected干净态·台账七笔挂毕态·随卷呈BOD两件(TD-obs-1出向通道+卡④24h观察窗)
+  - e1b2ba891 docs(cto): 四 daemon 窗起提醒 job 方案稿——单巡检 job 动态读台账主案·提醒卷文件面投递（BOD tick 同构·即时性边界如实标注）·幂等记 job 侧不回写台账·台账 schema 协同提案候 COO 改版稿收编·施工位递推 8713→8711→8712→8710·护栏六条
+  - 96c6ee6f6 docs(fsd): 四卡窗毕报终版——SDE/STE/活体锚读数全齐·四件销+TD-obs-1 出向通道债标记
+- registry：v2.1；今日 registry 提交无变化
