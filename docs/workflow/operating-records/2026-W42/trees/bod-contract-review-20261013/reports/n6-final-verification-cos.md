@@ -36,3 +36,11 @@
 - 销账锚=本卷 §二 五项读数+§一 六笔 commit 链（TC 8cbb6eb/6e754f7/d8bf01d/7cf3dc9+TMV 38c6aa47c/52810b3ab+CHO 验收 eaa4a83ae）。
 - 三账同步：mirror 台账 LG-075 行移已销段附本锚/in-progress.json status=done/大表行刷已销态。
 - 残留候项（不随销账闭）：①既存两面漂移（§三）候 CGR 面②施工节奏实证=23:33 令达→23:48 N4 全毕（较精排窗 02:20 提前约 2.5h·电量止损四条未触发）③观察项一条（CHO：description 携「2026-10-13 定性修订」日期·翻笔留痕性质·知悉不否决）。
+
+## 五、收尾追注：两面漂移收口全记（2026-10-14 10:31+08 补段·CAO 裁毕联动）
+
+- **CAO 裁量（10:29:50+08 回执）**：§三漂移收口=双向一次拉平，实勘 diff 全景三处——A=真源缺 D-39 系四条（9-30 CEO 四令+10-14 增补句·项目侧领先）；B=真源缺周平面迁移 SOP 指针行（LG-056 A3·项目侧领先）；C=项目侧缺「BOD 定位条款（2026-09-21 CEO 定谳）」条（真源领先·不在 N4 两处清单内）。
+- **A+B**：CAO 照项目侧已平终态逐字回写真源——TC 7fc41c4（sg-server dev 双端 hash 同顶验真）。
+- **C（发布面动作·本席 manifest closeOwner）**：`source_publish_check --project-docs --project-docs-execute` 字节保真发布（10:31 执行·正形开关系 `--project-docs-execute` 非 `--execute`）——`trimetaverse-claude-md-copy` published-copy updated（copied_source_to_target）；三验：md5 双件同值 4b46ed84…（字节级一致）+L45 BOD 定位条款两侧同位命中+变更面仅 CLAUDE.md 一件。
+- **根因注记（CAO 定谳·加固句收编）**：9-30 CEO 四令当时只直改项目侧、未回写真源（单点失守）；N4 时回写纪律是活着的。加固正形=**直改项目侧 CLAUDE.md 须同窗回写真源（或直接改源走管线）**——本卷收编不另立册。
+- 漂移三处至此 A/B/C 全平——§三「候 CGR 面」候考项随之闭。
