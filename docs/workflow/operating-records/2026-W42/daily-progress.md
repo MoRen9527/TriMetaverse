@@ -628,3 +628,10 @@
   - e1b2ba891 docs(cto): 四 daemon 窗起提醒 job 方案稿——单巡检 job 动态读台账主案·提醒卷文件面投递（BOD tick 同构·即时性边界如实标注）·幂等记 job 侧不回写台账·台账 schema 协同提案候 COO 改版稿收编·施工位递推 8713→8711→8712→8710·护栏六条
   - 96c6ee6f6 docs(fsd): 四卡窗毕报终版——SDE/STE/活体锚读数全齐·四件销+TD-obs-1 出向通道债标记
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:00 +08：自上次进度提交 fcb64aaa9 后新增 5 条 commit：
+  - 030887208 docs(coo): TD-obs-1裁决卷补CTO技术注记收编笔(案A限源白名单实测+token值面D-46+URL复核归CTO+终验归因既有失败对表)
+  - 4a6188405 docs(coo): TD-obs-1裁决两点半批(案B隧道今晚过渡+案A改绑明晨白名单勘修窗根治+案C不采)+台账观察池成文九项(卡④24h锚10-15 21:35挂账BOD示知承接)
+  - 170baf6f0 merge: 收编并行笔（催办行挂账窗推平撞笔）
+  - e0fad85e3 docs(cos): 卡④观察窗+TD-obs-1 三案挂催办行（BOD 勘毕知会·10-15 21:35 催点）
+  - e4a62de27 docs(bod): TD-obs-1 卡③出向通道跨机勘报——根因=sg 8712 绑 127.0.0.1 回环独占(本机 curl HTTP=000·2ms 瞬拒+ss 双证)·fetch failed 非 403·三案修复定向供 COO/CTO 裁(A 改绑+安全组限源/B SSH 隧道过渡/C 文件面)·案 A 涉白名单①勘修窗
+- registry：v2.1；今日 registry 提交无变化
