@@ -526,3 +526,8 @@
   - be0358e84 docs(cos): LG-078 CLAUDE.md 两面漂移修订挂行（候 CEO 批）——CEO 14:55 元叙事定谳承接（M 面路由节机理句错误+相关节·与 LG-075 残留候考项并卷）·白皮书核对令在 CAO 面
   - e57b4a41e docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:10 +08：自上次进度提交 0bd68c16c 后新增 3 条 commit：
+  - 48c9bc8c1 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 458fa7034 docs(cos): CEO 15:02 精化定谳录令——LG-078 修订方向精化为已分配面适用域句（候批）+工作模型同型定谳+CAO 白皮书互引对账收记
+  - 2025095d2 docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+- registry：v2.1；今日 registry 提交无变化
