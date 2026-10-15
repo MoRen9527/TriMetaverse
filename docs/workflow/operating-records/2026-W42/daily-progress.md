@@ -699,3 +699,11 @@
   - 124843eb1 docs(coo): 8711窗毕终验销+台账十三笔——组合证四件全绿+独立复探双源对平(uptime 510对平CIM·mc段七字段全零基线同形)·停摆10s零回滚·卡③案B落地收口(双daemon出向均18710隧道形)+A1毕态刷(CAO判①换代M2·TC f588561)+观察池⑥激活⑦新段起点⑩FUZZY-TS新条
   - 5810eab09 docs(sde): 8711 obs 出向启用窗毕报卷——env file 改值对齐 8713 形(18710+token md5h 对平·cmd/ps1 零触 D-15)·七步链全绿停摆10s·组合证四件(值面对/载入复演/新段计数面/错token门401)·毕锚进程内生效验证达成
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:00 +08：自上次进度提交 a0ac30f32 后新增 6 条 commit：
+  - b24e7d01b merge: 收编并行笔（值席落盘防覆盖）
+  - b5fdf21ec docs(coo): 台账十五笔——sg8712连败事件观察池⑥补注(build回归因果+修复毕候11:07回零·TS2307定性CTO对表收束42bb1e087·token轮换裁不立即+两护栏·两事独立白名单不受染·D-47自查注)+候考池项4(token顺手窗轮换)
+  - 8925f22d8 docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - 6b3a166ca docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - 42bb1e087 docs(cto): 10-13 白名单方案稿勘误注记——TS2307 破面半径评估随 BOD 勘误卷对表修正（独立 bin 实有 job 消费面·三连败实证·破面评估须查全部运行时消费面）
+  - 35a3045cd docs(bod): sg 8712毕报勘误卷——TS2307不阻销定性撤(config-sync-apply三连败实锚·tricode链接缺)·修复=链接补挂+CLI冒烟过·教训两笔(cli冒烟盲区+token值面泄露自报)
+- registry：v2.1；今日 registry 提交无变化
