@@ -21,6 +21,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
 import { sendNotify } from "./lib/notify-sender.mjs";
 import { collectNodeSignals } from "./lib/tree-signals.mjs";
 import { isQuietHours } from "./lib/quiet-hours.mjs";
@@ -39,6 +40,70 @@ const ESCALATE_MIN = 30;
 const COOLDOWN_MIN = 30;
 
 const DUTY_SEAT = "COS"; // 中枢值守 — duty second-hop target maps to m-cos transcript
+
+// ── keeper probe (keeper-probe-20261015 · CTO dispatch 4e0becc27 · BOD 令文基准) ──
+// 半死窗教训（2026-10-15 09:04-09:34 无人察觉 30min）：端口在+进程在≠服务活——
+// 双探针合取（禁只探 TCP）：
+//   A=GET {KEEPER_URL} → HTTP 200 且 body.ok!==false（隧道全链活体真值；实测健康端点
+//     =/healthz 200 {"ok":true,"service":"trimc",...}——勘验钉定 2026-10-15）
+//   B=keeper 进程在位：ssh.exe cmdline 含 '18710:127.0.0.1:8712'（保活进程本体指纹，
+//     实勘 pid 33780 cmdline 钉定——勘验禁猜）
+// 任一败=failN+1；连续 KEEPER_PROBE_N=2 拍才直报（防单拍网络抖动误报）；恢复清零。
+// 直报复用 duty-escalate 形（targets=[bod]·urgent）零新级别；不走 quiet-hours 豁免
+// （基建故障全时段报警——夜间正是 sg 通知链依赖时段，裁量理由入毕报）；冷却 30min
+// 照 duty-escalate 形重报节奏。
+// 测试钩子（FAIL 态模拟构造·禁真停 keeper）：KEEPER_PROBE_URL 覆盖探针地址（坏口
+// =FAIL 态证据）；KEEPER_PROBE_DRYRUN=1 时告警只落日志不真发（零扰频测试面）。
+const KEEPER_URL = process.env.KEEPER_PROBE_URL?.trim() || "http://127.0.0.1:18710/healthz";
+const KEEPER_FINGERPRINT =
+  (process.env.KEEPER_PROBE_FINGERPRINT?.trim() || "18710:127.0.0.1:8712").replace(/'/g, "");
+const KEEPER_DRYRUN = process.env.KEEPER_PROBE_DRYRUN === "1";
+const KEEPER_PROBE_N = 2;
+const KEEPER_KEY_FAIL = "keeper-tunnel|fail";
+const KEEPER_KEY_ALARM = "keeper-tunnel|alarm";
+
+async function probeKeeper() {
+  // A: HTTP liveness — tunnel full-chain truth (never TCP-only)
+  let httpOk = false;
+  let httpDetail = "";
+  try {
+    const ctl = new AbortController();
+    const t = setTimeout(() => ctl.abort(), 5000);
+    try {
+      const res = await fetch(KEEPER_URL, { signal: ctl.signal });
+      httpOk = res.status === 200;
+      if (!httpOk) {
+        httpDetail = `http-${res.status}`;
+      } else {
+        try {
+          const j = await res.json();
+          if (j && j.ok === false) { httpOk = false; httpDetail = "ok-false"; }
+        } catch { httpOk = false; httpDetail = "bad-body"; }
+      }
+    } finally {
+      clearTimeout(t);
+    }
+  } catch (e) {
+    httpDetail = e.name === "AbortError" ? "timeout(5s)" : String(e.message || e).slice(0, 60);
+  }
+  // B: keeper process presence — ssh forward cmdline fingerprint (勘验钉定识别串)
+  let procOk = false;
+  let procDetail = "";
+  try {
+    const out = execFileSync(
+      "powershell",
+      ["-NoProfile", "-Command",
+        `(Get-CimInstance Win32_Process -Filter "Name='ssh.exe'" | Where-Object { $_.CommandLine -like '*${KEEPER_FINGERPRINT}*' } | Measure-Object).Count`],
+      { encoding: "utf8", timeout: 10000 },
+    );
+    const n = parseInt(String(out).trim(), 10);
+    procOk = Number.isFinite(n) && n > 0;
+    if (!procOk) procDetail = "keeper-process-missing";
+  } catch (e) {
+    procDetail = `proc-probe-fail: ${String(e.message || e).slice(0, 60)}`;
+  }
+  return { httpOk, procOk, httpDetail, procDetail };
+}
 
 function nowIso() {
   return new Date().toISOString();
@@ -214,6 +279,64 @@ async function main() {
     }
   } catch (err) {
     appendLog(`ERROR duty-hop check failed: ${err.message}`); // 三钉③ degrade
+  }
+
+  // ── keeper probe (keeper-probe-20261015 · CTO dispatch 4e0becc27 · BOD 令文基准) ──
+  // 双探针合取：A=http 活体真值（禁只探 TCP）/ B=keeper 进程在位——任一败=连败+1，
+  // 连续 KEEPER_PROBE_N 拍才直报（防单拍网络抖动误报）；恢复清零。
+  // 直报=duty-escalate 形（targets [bod]·urgent）零新级别；不走 quiet-hours/tick 豁免
+  // （基建故障全时段报警——夜间正是 sg 通知链依赖时段；裁量理由入毕报）；冷却 30min
+  // 照 duty-escalate 形重报节奏。三钉同守：段内异常只落日志不崩 job（③）；
+  // notify 失败不写 alarm state 下拍重试（②）。
+  try {
+    const kp = await probeKeeper();
+    const alive = kp.httpOk && kp.procOk;
+    if (alive) {
+      const hadFail =
+        state[KEEPER_KEY_FAIL] !== undefined || state[KEEPER_KEY_ALARM] !== undefined;
+      delete state[KEEPER_KEY_FAIL];
+      delete state[KEEPER_KEY_ALARM];
+      if (hadFail) appendLog("keeper recovered (fail state cleared)");
+      healthy.push("keeper-tunnel ok (http+proc both up)");
+    } else {
+      const n =
+        (typeof state[KEEPER_KEY_FAIL] === "number" ? state[KEEPER_KEY_FAIL] : 0) + 1;
+      state[KEEPER_KEY_FAIL] = n;
+      const failDetail = kp.httpOk ? `proc=${kp.procDetail}` : `http=${kp.httpDetail}`;
+      if (n < KEEPER_PROBE_N) {
+        appendLog(
+          `keeper probe fail x${n}/${KEEPER_PROBE_N} (${failDetail}) — below debounce threshold`,
+        );
+      } else {
+        const lastAlarm = state[KEEPER_KEY_ALARM];
+        if (typeof lastAlarm === "number" && now - lastAlarm < COOLDOWN_MIN * 60000) {
+          appendLog(
+            `keeper probe fail x${n} (${failDetail}) — in cooldown (last alarm ${new Date(lastAlarm).toISOString()})`,
+          );
+        } else {
+          const title = `[silent-detect] keeper 隧道探活异常：18710 隧道连败 ${n} 拍（${failDetail}）`;
+          const body =
+            `失败探针=${kp.httpOk ? "B(keeper 进程)" : "A(HTTP 活体)"} 详情=${failDetail}\n` +
+            `双探针判据: A=GET ${KEEPER_URL} HTTP200+ok · B=ssh keeper 进程识别串(18710:127.0.0.1:8712)在位\n` +
+            `连续 ${KEEPER_PROBE_N} 拍防抖已达·冷却 ${COOLDOWN_MIN}min·来源=hub-silent-detect keeper 段（CTO dispatch 4e0becc27）`;
+          try {
+            if (KEEPER_DRYRUN) {
+              appendLog(`DRYRUN keeper-escalate (not sent, alarm state not written): ${title}`);
+            } else {
+              await notifyOrThrow({ targets: ["bod"], title, body, urgent: "urgent" });
+              state[KEEPER_KEY_ALARM] = now;
+              appendLog(`NOTIFIED keeper-escalate keeper-tunnel -> [bod] (${failDetail})`);
+            }
+          } catch (err) {
+            appendLog(
+              `ERROR keeper notify failed: ${err.message} — alarm state NOT written (三钉②·下拍重试)`,
+            );
+          }
+        }
+      }
+    }
+  } catch (err) {
+    appendLog(`ERROR keeper probe segment failed: ${err.message}`); // 三钉③ degrade
   }
 
   // dispatch alerts
