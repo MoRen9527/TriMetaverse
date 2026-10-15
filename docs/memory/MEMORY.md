@@ -100,3 +100,6 @@
 - [daemon 机位矩阵·服务域/本地域硬规则](daemon-plane-locality-matrix.md) — TriRMC=河源服务域(8710)/TriRLC=本机 8711/TriMMC=sg **8712**/TriMLC=本机 8713：状态叙述先活体现探正身机位禁推定；**探错端口空回≠服务停**（10-14 sg 探 8710 误报 executor 停=假缺口·8710 系河源 TriRMC 端口）；store 位同理——双 daemon 双 store 分立，探库先对 DATA_DIR 禁按路径直觉
 - [版本身份必 hash 级+任务活性必双面](file-identity-hash-and-task-liveness-dual-face.md) — 身份断言必 hash 级（mtime/头注释被 md5 推翻）；活性：log 零行双向不可定谳·单时点缺席≠任务死（调度面 LastRun 才是真值）·uptime 连续≠进程醒着（宿主电源面第三分辨义务·evt42 零命中≠没睡）
 - [daemon spawn 风暴诊断+8713 端点事实](daemon-spawn-storm-endpoint-facts.md) — 判别式=系统级健康而 daemon 上下文退化；陈旧缓存不可信=活体直读对表；/internal/v1/* 鉴权头=X-Internal-Token 非 Bearer；crash.log 首写才建——不存在=零 crash 非探错路径
+- [构建绿≠运行时通·冒烟须到消费面](build-green-not-runtime-green.md) — 活体验证族第三变体（TS2307 三连败实锚）；破面评估禁只查主服务启动链，cron job 独立 bin=最常漏消费面
+- [D-46 嵌套 payload 递归滤盲区](d46-nested-payload-recursive-mask.md) — 掩码正形对嵌套结构失效；正形增补=递归掩码或禁 dump 原始 payload 只投影白名单字段；8712 token 轮换裁=不立即·触发器+顺手窗两护栏
+- [token 轮换三折](token-rotation-consumer-object-and-candidates.md) — 轮换前必勘键消费对象（同名键≠同对端·8711=河源/8713=sg 实锚）+候选载入位清点（env 候选链多副本值一致化）+Git Bash 禁 schtasks 动词系（Start-ScheduledTask 唯一正形·跨 daemon 通用）+D-46 第 8 例注释行裸 key
