@@ -102,3 +102,4 @@
 - [daemon spawn 风暴诊断+8713 端点事实](daemon-spawn-storm-endpoint-facts.md) — 判别式=系统级健康而 daemon 上下文退化；陈旧缓存不可信=活体直读对表；/internal/v1/* 鉴权头=X-Internal-Token 非 Bearer；crash.log 首写才建——不存在=零 crash 非探错路径
 - [构建绿≠运行时通·冒烟须到消费面](build-green-not-runtime-green.md) — 活体验证族第三变体（TS2307 三连败实锚）；破面评估禁只查主服务启动链，cron job 独立 bin=最常漏消费面
 - [D-46 嵌套 payload 递归滤盲区](d46-nested-payload-recursive-mask.md) — 掩码正形对嵌套结构失效；正形增补=递归掩码或禁 dump 原始 payload 只投影白名单字段；8712 token 轮换裁=不立即·触发器+顺手窗两护栏
+- [token 轮换三折](token-rotation-consumer-object-and-candidates.md) — 轮换前必勘键消费对象（同名键≠同对端·8711=河源/8713=sg 实锚）+候选载入位清点（env 候选链多副本值一致化）+Git Bash 禁 schtasks 动词系（Start-ScheduledTask 唯一正形·跨 daemon 通用）+D-46 第 8 例注释行裸 key
