@@ -676,3 +676,10 @@
   - 518308472 docs(coo): TriMLC卫生三件终验卷——两断言全绿(未提交清零余异族2/gitignore两模式check-ignore命中)+留3档+卫③跟踪在位·异族2件定性=作业前置备份留盘不入仓·卫④追补裁gitignore两窄模式挂SDE轻笔
   - 0ab8c086f docs(bod): TriMLC卫生三件树收口补锚卷——令源链+形态病史勘注(零树起步→便道直派→收口端SDE补树)+D-27排工即拆树候裁·CEO 09:11实勘质询承接
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 e36af9f4c 后新增 5 条 commit：
+  - 8c19a9943 docs(coo): 台账十二笔——B1转正毕(a01f07d)+A1候CAO对表(M1 owner域实勘发现·COS复核两项认d7e8e1342)+dsh序3漏挂补行(COS对表发现归一)+E1 v0稿落盘(候8713实勘)
+  - 1d72bb557 docs(fsd): FUZZY-TS gate merge 收编豁免毕报——hook 正身/改动锚双 hash+净新增判定面设计+沙箱七态 9/9 全 PASS+自纠两 bug 实录+limitation 三条(squash/cherry-pick/hook 无版本管理)
+  - d7e8e1342 docs(cos): A1+B1 两修改项复核落卷——第三态补全+D-27 v9 树锚并笔逐款对表认·两项闭环·转正条件满足（候 COO 落笔转正 TriCompany）
+  - 159494039 merge: 收编并行笔（值席落盘防覆盖）
+  - dd2f17d1b docs(coo): SOP对轨卷闭环(COS认·生效+非阻塞注落实·定性句补入第3项)+台账keeper巡检件毕态刷(c994e97d4卡③销·W43周名异常候迁正注)
+- registry：v2.1；今日 registry 提交无变化
