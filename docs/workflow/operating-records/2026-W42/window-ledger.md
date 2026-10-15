@@ -40,7 +40,7 @@ windows:
 | 排程 SOP 双段式必查项对轨（§三第3项） | COO | 直跑在办——候 COS 会签 |
 | TriMLC 卫生三件（卫①gitignore 两模式/卫②备份清理留3清17+dist ignore/卫③digest-inbox.mjs 归位） | SDE 主施工 | **毕（09:20 终验销@trimlc-hygiene-20261015/coo-finalverify@518308472）+卫④追补挂行（gitignore 两窄模式·异族 2 件留盘定性·SDE 轻笔在途）** |
 | patrol 卫生两件（log 治理 137 log 三选或并施+退役判据立条 N=7） | COS | **毕（COS 报 fb894f26c·留样 2+判据 N=7 立条+存量删 137 断言绿+增量并施·大表 8c85c2531 已刷·09:38 run 迁移锚候验注）** |
-| keeper 活性巡检挂靠件（#140 骑缝①·TD-obs-1 遗留） | BOD/COO 对表 | 直跑在办 |
+| keeper 活性巡检挂靠件（#140 骑缝①·TD-obs-1 遗留） | BOD/COO 对表 | **毕（COS 大表 c994e97d4 刷卡③毕销·CTO 验收·锚链全录·W43 周名异常注记候迁正）** |
 | 差②铸条排程方案稿（CAO 主笔·排程权本席） | CAO/COO | 直跑在办 |
 | E1 催办跨会话存续方案稿（TriMLC cron 位） | COO | 直跑在办 |
 
