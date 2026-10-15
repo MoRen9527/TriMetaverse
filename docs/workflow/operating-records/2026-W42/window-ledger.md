@@ -43,7 +43,7 @@ windows:
 | keeper 活性巡检挂靠件（#140 骑缝①·TD-obs-1 遗留） | BOD/COO 对表 | **毕（COS 大表 c994e97d4 刷卡③毕销·CTO 验收·锚链全录·W43 周名异常注记候迁正）** |
 | 差②铸条排程方案稿（CAO 主笔·排程权本席） | CAO/COO | 直跑在办 |
 | dsh 序3（r-duty-cos 上线报到·候 CTO 令） | BOD 施工/CTO 令 | 候令态——改版漏挂补行（COS 对表发现@09:34·候令态无人读行旧发现并此归一） |
-| E1 催办跨会话存续方案稿（TriMLC cron 位） | COO | 直跑在办——v0 稿落盘（coo-e1-escalation-persistence-draft-20261015.md·候 8713 实勘四项+候会签） |
+| E1 催办跨会话存续方案稿（TriMLC cron 位） | COO | **毕（v1 实勘两项+COS 会签认·生效 e951996c8·触发面渐扩序落实——先 endReminder 实存后督办字段渐扩·立项闭环·施工候提醒 job 批后同窗）** |
 
 - 另候（非直跑非窗）：提醒 job 步1（8713·候 CEO 终审·批后施工=addJob 非重启=直跑）。
 

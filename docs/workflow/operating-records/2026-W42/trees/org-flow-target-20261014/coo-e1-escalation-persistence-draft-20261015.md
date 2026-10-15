@@ -1,8 +1,8 @@
 # E1 催办跨会话存续方案稿（v1·实勘毕候会签）·2026-10-15
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W42/trees/org-flow-target-20261014/coo-e1-escalation-persistence-draft-20261015.md
-- syncMode: living（v1 实勘毕·候 COS 会签）
-- lastSyncedAt: 2026-10-15T09:56:02+08:00（date 现查原值·D-47 正形 A）
+- syncMode: static（v1·**COS 会签「认·生效」毕@09:59（e951996c8·独立抽验+边界核对落卷）·渐扩注已落实——E1 立项闭环·施工候提醒 job 批后同窗**）
+- lastSyncedAt: 2026-10-15T09:58:56+08:00（date 现查原值·D-47 正形 A）
 - 令源: CEO 15:58 批六项立项（E1 轻项）·联合盘点卷 §七 COS 补位②（E1 催办跨会话存续方案稿=COO 出稿）
 
 ## 一、问题定性（为什么催办要跨会话存续）
@@ -12,7 +12,7 @@
 
 ## 二、方案骨架（v0）
 
-1. **触发面**：TriMLC 8713 cron job（读台账督办字段/白名单登记面 windows 段 endReminder→比对时点→产出催办事件）——与 CTO 提醒 job 同基座异域（窗提醒域 vs 督办催办域·job 分立不混装）。
+1. **触发面**：TriMLC 8713 cron job（读台账督办字段/白名单登记面 windows 段 endReminder→比对时点→产出催办事件）——与 CTO 提醒 job 同基座异域（窗提醒域 vs 督办催办域·job 分立不混装）。**触发逻辑渐扩序（COS 会签注采纳@10:00）**：施工起按实存数据源起——先 endReminder 字段（现役实存）·台账督办字段随 D1 落地渐进扩入——防读空转空触发。
 2. **投递面**：催办事件落文件面（operating-records 周目录催办箱）+SendMessage 直达受催席（M-004）——双面投递防单通道丢失（「已发≠在链」教训：落卷直达+commit 通知）。
 3. **读数面**：催办触发记录回写催办箱日志（不回写台账——台账督办字段回写权仍在 COS·本席限督办字段建议）。
 4. **权界**：job 只产催办读数/提醒——不握分派权/升级权（⑦ 权界沿续·催办建议单对 COS 无强制力）。
