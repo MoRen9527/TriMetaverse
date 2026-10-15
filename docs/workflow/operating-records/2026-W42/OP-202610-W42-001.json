@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W42 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "CEOChiefOfStaff",
+    "updatedBy": "COS",
     "version": "1.0.0",
-    "lastUpdated": "2026-10-12T18:48:00+08:00",
+    "lastUpdated": "2026-10-15T20:47:00+08:00",
     "workflowTags": [
       "每周维护",
       "CEO 总助维护面",
@@ -19,7 +19,25 @@
     ],
     "latestActiveWeek": true,
     "phase": "ceo-copilot-host-coordination",
-    "previousWeekRef": "docs/workflow/operating-records/2026-W41/OP-202610-W41-001.json"
+    "previousWeekRef": "docs/workflow/operating-records/2026-W41/OP-202610-W41-001.json",
+    "charters": [
+      {
+        "charterId": "charter-2026-W42-001",
+        "title": "R 面班组部署窗",
+        "source": "董事会令",
+        "route": [
+          "TriRMC",
+          "TriRLC",
+          "TriMLC",
+          "TriMMC"
+        ],
+        "status": "drafting",
+        "doc": "docs/workflow/operating-records/2026-W42/trees/r-plane-duty-deploy-20261015/charter-2026-W42-001-r-plane-duty-deploy.md",
+        "ledger": "LG-080",
+        "grantedBy": "COS",
+        "grantedAt": "2026-10-15T20:46:40+08:00"
+      }
+    ]
   },
   "priority": "high",
   "timebox": {
