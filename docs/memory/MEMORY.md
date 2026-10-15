@@ -48,6 +48,7 @@
 - [执行令时点交叉核对](exec-order-time-crosscheck-discipline.md) — 执行令必含绝对时点+date 现查与令文比对；任一矛盾即停回询
 - [排程令接收三对表](schedule-order-intake-triple-check.md) — 排程令到时施工在途=先对令源时序/D-23 双段/节奏约束三表再决策；核他面理由漏自家条款=自检链漏步（LG-077 窗差实锚）
 - [元叙事·M/R 两面定性](meta-narrative-two-planes.md) — CEO 2026-10-14 定谳：两面四副本皆研发环境（M=第三方/R=完全自研·元虚拟/元现实）+仓=元认知螺旋迭代；禁称生产部署；白皮书注与 LG-078 候批
+- [组织流向·1BOD+4COS](org-flow-one-bod-four-cos.md) — CEO 2026-10-14 定谳：四 COS 互备·转发即域定·域内整班组独立闭环（目标态）·R←M 经 BOD 各 COS 流转；制度域对照盘点候窗
 - [会话取证三要点](session-forensics-basics.md) — transcript 时戳是 UTC（本地-8h）；PS 工具每调用留引擎事件；stdout/stderr 分文件=Start-Process 指纹
 - [「已发/已转」主张先查发信记录](forward-claims-verify-send-log.md) — 写「已转 N 件」前逐件回查回执；收口并发会遮蔽漏转（LG-034 实证）；漏发更正声明「非丢信家族」
 - [服务器正名 M-SG-ip / R-HY-ip](m-sg-r-hy-server-naming.md) — sg=M面新加坡机、河源=R面机，两台独立机器；部署副本≠权威位
