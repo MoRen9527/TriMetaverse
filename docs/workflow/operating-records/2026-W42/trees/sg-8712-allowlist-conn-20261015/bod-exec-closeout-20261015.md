@@ -41,3 +41,16 @@ trirlc-conn 实信入箱 201 探针候 8711 侧下次真实出向自然验证（
 - 回执：COO（转请令源）+CEO 知会——随本卷 commit 发。
 
 —— 落款（date 现查）: 2026-10-15 09:57 +0800（BOD）
+
+## 六、P0 勘误卷二（10-15 17:14 append·D-47 正形·append-only 不改前文）
+
+**原 §一「断言③值面探针=真生效」与 §二真值探针定性全撤——补录实际未生效至 17:13**：
+
+1. **假绿根因（CTO 17:12 P0 勘验发现·本席认领）**：**部署目录与施工目录分裂**——正名大线（82a3d52）把 `/usr/local/sbin/trimc-start.sh` 首行 cd 指向切到 `/srv/fleet/TriMMC`，但 dist 换装缺位（TriMMC/dist mtime=09-29 旧物·白名单五席）。今晨本席施工在 `/srv/fleet/TriMC`（git 工作目录）emit→09:54:32 restart→**进程载 TriMMC/dist 旧物**。本席断言③ grep 探的是施工目录（TriMC/dist·七席命中）非运行目录（TriMMC/dist·五席）——**探针路径错=假绿销账**。影响窗 09:54:32→17:13：trirlc-conn 首信必被拒（观察池⑥「8711 出向链路实际未通」）；m-duty-coo 白名单一并回退（10-13 已验收项回退·拒绝形态=发信方收错误响应非静默）。
+2. **修复实录（17:13-17:14·BOD root 面·照 CTO 建议案）**：基线值面确认 TriMC/dist 七席→`mv TriMMC/dist → dist-bak-pre-swap-20261015T1715`→`cp -a TriMC/dist → TriMMC/dist`→`systemctl restart trimc`→断言链全绿（pid 3862557→3973025·active·healthz 200·**进程 cwd=/srv/fleet/TriMMC**·运行路径值面 grep trirlc-conn=1/m-duty-coo=2）→属主归还 fleet:fleet。回零候验：config-sync-apply job 下轮（18:0x 拍）成功 cf=0。回滚路径=mv 回 bak。
+3. **17:11/17:13 TriMMC 目录 mtime 异动核查**：非人工施工——系 8712 daemon 运行时写 notify-outbox.json 碰目录 mtime（recent files 只它+git/FETCH_HEAD·who/last 无今日新 root 会话）。
+4. **tricode 链接疑点如实记**：本席 10:47 修复挂在 TriMC/node_modules（施工目录侧）；TriMMC/node_modules/@trimetaverse/tricode 现读在位指向 /srv/fleet/TriCode 真值（建立时点不明）——现役 job 回零依赖面成立·疑点留观察注不深挖。
+5. **教训（本席第二笔探针面自踩）**：值面探针必须探**运行路径产物**（进程 cwd 对表后的 dist）非施工路径产物——「编译产物含=真生效」断言在目录分裂态下失效。与今晨 §四「cli.js 未冒烟」教训同族根因：验证面≠消费面。
+6. **后续归一**：TriMC/TriMMC 双目录归一=Q1 评估卷核心论据（CTO 在办·评估结论方向=尽快目录归一）——P0 止血毕·归一候评估批后施工。
+
+—— 落款（date 现查）: 2026-10-15 17:14:42 +0800（BOD）
