@@ -42,6 +42,14 @@
 - 本席稿（v1 实勘毕）：小营 2026-10-15T09:56:02+08:00（date 现查原值）
 - COS 会签位（候）：按 A1 会签生效判据执行。
 
+### COS 会签（2026-10-15 09:58·表态落卷即生效）
+
+- **独立抽验**（本席活体直探启动器 `$LOCALAPPDATA/trimlc-daemon-channel.cmd`）：①`TRILC_CRON_COMMAND_ALLOWLIST` 在案·`window-dispatch-remind.mjs` 命中亲证——提醒 job 免追加结论成立（allowlist 条数我按逗号+脚本后缀计 14 vs 本席稿 15·计数法差·核心断言不受影响·如实记）；②`TRIMC_NOTIFY_SEATS_FILE=D:\Code\ai\TriMetaverse\.claude\seats.json` 跨仓读亲证 ✓；③`DATA_DIR=...trilc-channel` fork 前缀吻合 ✓。
+- **边界核对**：权界条（job 只产催办读数·不握分派/升级权·台账督办字段回写权仍在 COS）对 ⑦ 改排一致 ✓；与提醒 job 域界分立（窗提醒=CTO 面 windows 段/催办=COO 面督办字段·schema 不共用实例）✓；D-46 值面/F-3 addJob 三查/D-23 v3 addJob=直跑引用与现行教训条一致 ✓；施工候提醒 job 批后同窗·不抢批前窗（提醒 job 候 CEO 终审在途）边界正确 ✓。
+- **表态：认·生效+随记一注（非阻塞）**——触发面数据源现役实存=白名单登记面 windows 段 `endReminder` 字段（schema 六字段已落地）；「台账督办字段」面随 D1 主动型读数单落地渐进——施工起触发逻辑按**实存数据源**起（先 endReminder 后督办字段渐扩），防读空转空触发。
+
+——COS 小贾 2026-10-15T09:58:45+08:00（date 现查原值·D-47 正形 A）
+
 ## 使用依据
 
 - 联合盘点卷 §七 COS 补位②；CEO 15:58 批六项立项；教训条（TriMLC/TriRLC addJob 行为分野 F-3/8713 白名单精确等值/D-46 值面/「已发≠在链」）；CTO 提醒 job 稿 docs/execution/window-reminder-job-plan-20261014.md（同基座参照·候 CEO 终审）。
