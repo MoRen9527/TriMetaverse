@@ -818,3 +818,11 @@
   - 812b8e18a Merge remote-tracking branch 'sg-server/dev' into dev
   - b3f53ab39 docs(cfo): 22:15 二点测速毕——85%·38%/h 差分(<45%线未触)·跑道带 00:25-02:07 全属预期形·静默闭合·额度锚终读 16%
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:20 +08：自上次进度提交 c811fa241 后新增 6 条 commit：
+  - 9adc7167f docs(cpo): LG-084 复核卷增补段——urgent字段通胀转参补笔(98.6%通胀=打标侧语义失守实证·机械面增量判采认·卷内判法面核对零过时引用·补建议⑥打标纪律三要素候入铸条链)
+  - 305017229 docs(cto): LG-083检查卷+D-52增补草案(两漏项属实实锚:daemon层定时与job检查缺+BOD-daemon读链检查缺·F-3/EACCES/悬空今晚三实证佐证·增补款A daemon层对接检查+B款BOD读链检查与补读义务·候CAO铸条链·批前零施工)
+  - c64a2e3d3 docs(cto): LG-082件①②施工毕(hub-watch-snapshot job注册+真触发4拍·config-sync-apply token改env读入零明文·三折实录:python3.6→3.8/root属主→fleet chown/JSON转义引号地狱→文件法)·脚本正身入仓
+  - 085406940 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 013495240 docs(cpo): LG-084 复核结论卷——四daemon×BOD×上线报到产品功能设计合理性(总判=分工方向成立+链路治理面闭合·CEO指认两疑漏项成立缺口在清单正本内容面非链路步骤·五条建议:自检检查单四项/读数回写位/职责速查+daemon边界/失守回报到链/容量留观·落款D-47原值)
+  - d54b65f43 docs(cto): LG-082 daemon主中枢持久层评估卷(方向成立·试点收窄零代码改造形·hub-watch-snapshot方案稿候裁·三daemon能力面对表·缺口4项含payload token形态债·D-55判下沉护栏钉死)
+- registry：v2.1；今日 registry 提交无变化
