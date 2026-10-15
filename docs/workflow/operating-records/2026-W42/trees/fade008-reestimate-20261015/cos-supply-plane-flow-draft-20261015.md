@@ -1,7 +1,8 @@
 # FADE-008 重估·COS 版——两域两面架构下供料面流程（BOD 派工·独立成稿）·2026-10-15
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W42/trees/fade008-reestimate-20261015/cos-supply-plane-flow-draft-20261015.md
-- syncMode: static（流程设计稿·供 CEO 对比选版·非正身修订）
+- syncMode: static（~~流程设计稿·供 CEO 对比选版~~ **v1 留档·勘误见下·不作现行稿**）
+- **勘误注（2026-10-15 11:35·CEO 九问融稿）**：本 v1 卷四处被 CEO 九问修正——①四域 COS 供料制（Q1：改备料=本地域全体员工半自动·COS 主负责人·流水线仅两条）②供料树+执行树双锚互指（Q2：供料不立树·树=执行域属性）③任务书挂树一对一（Q7：任务书=一等实体·执行域拆 n 树·一对多）④域名口径（Q6：换标准称谓）——**v2 正形=同树 `cos-supply-plane-flow-v2-20261015.md`**；本卷留档对比·供料单合同（Q8 点名保留）与直跑默认等未修正设计在 v2 沿续。
 - lastSyncedAt: 2026-10-15T09:44:00+08:00（date 现查原值·D-47 正形 A）
 - 令源: CEO 09:35「拉着 cos/coo/cao/cpo/cto/cho 一起，根据当前两域两面架构、本地域供料服务域流水线执行的策略，重新评估 FADE-008，出一个更合理的流程，先 cos 和 coo 给我你两想到的最合理的流程」+BOD 09:36 派工（COS 版=供料面主场·独立成稿不与 COO 互通）
 - 树锚: trees/fade008-reestimate-20261015/（收令即立·D-27 v9）
