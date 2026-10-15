@@ -21,9 +21,11 @@
 //   连续 3 节律失败→notify-sender.mjs 链自告警（m-duty-cos 机制席+real-name attribution 守门）
 //   ·30min 冷却；**armed 前（件①未部署期）404=「未开通」静默落 log 不计数**——首次成功拉取
 //   即 armed，此后任何失败（含 404=路由回归）计数。
-// D-46 值面: sg token 只在 sg 侧 $(cat /etc/trimc-internal-token) 管道内展开（零落本机卷面/
-//   零进本机进程参数）；本机 token=process.env.TRILC_INTERNAL_TOKEN（daemon cron 子进程继承，
-//   零硬编码零打印）；log 零 token 值零队列原文全文（只摘要）。
+// D-46 值面: sg token 只在 sg 侧管道内展开（零落本机卷面/零进本机进程参数）；token 源=
+//   /srv/fleet/TriMMC/docker/.env 的 TRIMC_INTERNAL_TOKEN（2026-10-15 token 轮换后 8712 时代
+//   权威位；旧 /etc/trimc-internal-token 为 8710 时代残留·值已陈旧禁再读）；本机 token=
+//   process.env.TRILC_INTERNAL_TOKEN（daemon cron 子进程继承，零硬编码零打印）；log 零 token
+//   值零队列原文全文（只摘要）。
 // 测试钩子（keeper 三 env 先例）: ECHO_PULL_TEST_ITEM='<queue item JSON>' 跳过 sg 腿直测本地
 //   腿；ECHO_PULL_SG_HOST / ECHO_PULL_LOCAL_URL / ECHO_PULL_TARGET_SEAT / ECHO_PULL_DRYRUN=1。
 // log: D:/Code/ai/TriMetaverse/.fade/probe-logs/echo-pull.log（append 一行/轮）
@@ -90,7 +92,7 @@ function splitCurlW(out) {
   return { httpCode: Number.isFinite(code) ? code : 0, body: out.slice(0, idx) };
 }
 function sgQueueGet() {
-  const cmd = `curl -s -m 8 -w '\\n%{http_code}' -H "X-Internal-Token: $(cat /etc/trimc-internal-token 2>/dev/null)" "http://127.0.0.1:8712/internal/v1/echo/queue?consumer=${CONSUMER}"`;
+  const cmd = `curl -s -m 8 -w '\\n%{http_code}' -H "X-Internal-Token: $(grep -E '^TRIMC_INTERNAL_TOKEN=' /srv/fleet/TriMMC/docker/.env 2>/dev/null | tail -1 | cut -d= -f2- | tr -d '\\r\\n')" "http://127.0.0.1:8712/internal/v1/echo/queue?consumer=${CONSUMER}"`;
   const r = sshRemote(cmd);
   if (!r.ok) return { kind: 'ssh_fail', detail: r.err };
   const { httpCode, body } = splitCurlW(r.out);
@@ -103,7 +105,7 @@ function sgQueueGet() {
   } catch (e) { return { kind: 'schema_fail', detail: `JSON 解析败 ${String(e).slice(0, 60)}` }; }
 }
 function sgAck(messageId) {
-  const cmd = `curl -s -m 8 -o /dev/null -w '%{http_code}' -X POST -H "X-Internal-Token: $(cat /etc/trimc-internal-token 2>/dev/null)" -H "Content-Type: application/json" -d '{"message_id":"${messageId}","consumer":"${CONSUMER}"}' "http://127.0.0.1:8712/internal/v1/echo/ack"`;
+  const cmd = `curl -s -m 8 -o /dev/null -w '%{http_code}' -X POST -H "X-Internal-Token: $(grep -E '^TRIMC_INTERNAL_TOKEN=' /srv/fleet/TriMMC/docker/.env 2>/dev/null | tail -1 | cut -d= -f2- | tr -d '\\r\\n')" -H "Content-Type: application/json" -d '{"message_id":"${messageId}","consumer":"${CONSUMER}"}' "http://127.0.0.1:8712/internal/v1/echo/ack"`;
   const r = sshRemote(cmd);
   if (!r.ok) return { ok: false, detail: r.err };
   const code = parseInt(r.out.trim(), 10);
