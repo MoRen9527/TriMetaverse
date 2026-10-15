@@ -51,3 +51,17 @@ rm 后 sweep 发现 fleet crontab 三拍脚本（urge 每 2h/morning 8:05/master
 - 窗毕号=CTO 面（本机段毕后发「窗毕·件①可动」）。
 
 —— 落款: 2026-10-15 19:04:14 +0800（commit 实锚 55af38865·初稿落款推算值已勘正·D-47 自记）
+
+## 七、窗内增补修复二·config-sync-apply job 双害修（19:05 拍首败·19:1x 修毕）
+
+**发现**：19:07 节拍 8712 cf=1 回升——job log 定性双害：①command 硬编码旧路径 `/srv/fleet/TriMC/dist/src/cli.js`（rm 后 MODULE_NOT_FOUND）；②command 内嵌 **export TRIMC_INTERNAL_TOKEN=旧值明文**（token 轮换后必 401）——**§四消费面清点漏项自报**：cron job payload 面未入清点扫描·且 jobs.json payload.command 明文 token 使旧值经本席 walk 读数入读（D-46 自报·值已废·轮换正当性反证）。
+
+**修复实录（API PATCH 通道）**：
+1. 首试 PATCH `{command}` 平铺键→patch_ok 但 persist 三态矛盾（applyJobPatch 键面认 `payload` 整体·平铺 command 静默忽略——源码 applyJobPatch@agent-core dist L156 键面实证）；
+2. 正形 PATCH `{payload:{command:新command,cwd}}`（新值正则替换 TRIMC_INTERNAL_TOKEN=[0-9a-f]+ →docker/.env 新值·路径 TriMC/→TriMMC/）→persist 三绿（新 token 在/TriMMC 路径在/旧值 gone）；
+3. force run 终验：**RESULT: exit code 0**（`bundle … already applied` 幂等形正常）·healthz **cf=0 degraded=False**——19:20 拍免败；
+4. 通道注意：GET 单 job 路由不存在（404）——经列表取 job。
+
+**教训两笔**：①「消费面清点」必须含 cron job payload 面（内嵌 token/路径的 command 是隐性消费方）；②PATCH 类 API 键面语义先读实现（applyJobPatch 静默忽略未知键=假成功形态·persist 断言救场）。
+
+—— 增补段落款（date 现查）: 2026-10-15 19:15:4x +0800（BOD）
