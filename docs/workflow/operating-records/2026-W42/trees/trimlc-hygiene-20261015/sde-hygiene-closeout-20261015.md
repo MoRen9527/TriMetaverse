@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（trees/trimlc-hygiene-20261015/sde-hygiene-closeout-20261015.md）
 - syncMode: static（毕报留档卷·令源=BOD 直跑派工 2026-10-15 09:09（CEO 令·不等窗））
-- lastSyncedAt: 2026-10-15 09:14:23+08:00（date 现查原值）
+- lastSyncedAt: 2026-10-15 09:23:00+08:00（date 现查·卫④追补笔更新）
 - 执行席: SDE 小布（m-sde）；对象=TriMLC 仓（D:\Code\ai\TriMLC·branch=dev）；毕报=COS 链（BOD 令文路由）+COO 终验
 
 ## 三笔 commit（时序）
@@ -12,6 +12,7 @@
 | 卫②A 建锚 | `6c11a9c` | 19 个 notify-mailbox-backup-pre-bod-*.json 先 add 入库建恢复锚（git rm 形态前置） | 64588 insertions |
 | 卫②B 清理 | `ddc4d45` | git rm 16 个（1342…2112 时序族·留最近 3 余档） | 51928 deletions |
 | 卫①+卫③ | `25940ad` | .gitignore 补两条+scripts/digest-inbox.mjs 收编入库 | 89 insertions |
+| 卫④追补 | `d231fe8` | .gitignore 追两窄模式（异族同形挡新增·porcelain 归零） | 2 insertions |
 
 ## 各件读数
 
@@ -23,7 +24,7 @@
 
 1. json 族实数 **19 非令文 20**→按 COO 裁定意图「留最近 3 个余档（mtime 降序）」执行=留 3 清 16（非令文字面清 17）。
 2. **git rm 形态前提不成立**：19 件全部 untracked（git 历史零记录·直删不可恢复）——正形=先 add 入库建锚（6c11a9c）再 git rm（ddc4d45），贴令文「git rm 形态（仓内文件 git 历史可恢复）」意图。
-3. **异族 2 个未动**（不在令文 glob 内）：`notify-mailbox.backup-20261011T140859.json`、`notify-mailbox.json.bak-pre-bod-onboard-ack-20261014`——候权属面裁处。
+3. **异族 2 个未动**（不在令文 glob 内）：`notify-mailbox.backup-20261011T140859.json`、`notify-mailbox.json.bak-pre-bod-onboard-ack-20261014`——候权属面裁处。**【卫④追补·COO 09:20 裁后令已毕】**：定性=作业前置备份·留盘不入仓不删；@d231fe8 追两窄模式（`notify-mailbox.backup-*.json`+`notify-mailbox.json.bak-pre-*`）入 .gitignore，**porcelain 残留归零 ✓**（status 计数=0 实证）。
 4. gitignore 现有尾段 `dist.bak*/` 带点形系历史规则缺口（非本批引入）。
 
 ## 终验读数（供 COO·令文指定两断言）
