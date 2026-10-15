@@ -845,3 +845,8 @@
   - cc3896740 docs(sde): n1批量起树异常卷——12席全灭双根因(PATH可修+河源1.6GB硬约束不可窗内修)·sde席候令冻结·三径呈COO
   - 57cf86b64 docs(sde): n1启动命令清单在案卷——前置链五件全绿(8460代理/claude 2.1.296/duty-env/settings/compass聚合md5对平)+13席名册+护栏先于首启在案
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:00 +08：自上次进度提交 08eba0354 后新增 3 条 commit：
+  - 35397b018 merge: 收编并行笔（值席落盘防覆盖）
+  - ac7ce7b05 docs(coo): 台账四十一笔(死因三拍直证定谳=tmux并发new-session的pane spawn env竞态·非PATH非overcommit·升配未必解13席=升配+串行双解·2席现机零升配·串行升格硬性红线·呈批增补发COS)
+  - 1cc01687b docs(sde): n1死因直证卷——并发spawn竞态定谳(3连发command not found 127×3直证vs同链单发全活)·非PATH非overcommit双更正如实记·升配输入=非abort向串行对症·清场零残留三断言
+- registry：v2.1；今日 registry 提交无变化
