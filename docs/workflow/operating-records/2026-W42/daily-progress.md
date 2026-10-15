@@ -754,3 +754,8 @@
   - 928288dac docs(cto): Q2反向通道技术面卷——一期拉模式出向队列制零新隧道+拓扑四通道落位+白名单/安全机制定形(红线①③④技术形)+两裁决点候CPO会签(回执10min级/急件一期人链)+一期三件半天级
   - c2089c4cc docs(cto): Q1 TriMC旧名残留评估卷——双目录分裂双P0实证(P0-1已BOD修复/P0-2 poller死信箱16天最高急)+三步修正案+service正名两案候裁+D-46 unit cat泄露通道第7例自捕
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @17:40 +08：自上次进度提交 053f3f653 后新增 3 条 commit：
+  - 05f5bfd72 docs(coo): 裁④派发毕收账(BOD fleet tmux直派17:33·毕报径回BOD再转)+通道发现两笔收账(8712收端名册MVP16席duty组缺位·m-duty-coo无信箱通道tmux直派正形·fleet侧socket root不可见·候CTO信箱域评估)
+  - a7ae75171 merge: 收编并行笔（值席落盘防覆盖）
+  - 687c15aff docs(coo): B1增素链全闭收账(CAO四项值面对表核过)+D-47同日二犯自认(17:29落款倒挂76s铁证·虚标现查标签·hook抓获·防发生=落款前现查机械动作化)
+- registry：v2.1；今日 registry 提交无变化
