@@ -707,3 +707,7 @@
   - 42bb1e087 docs(cto): 10-13 白名单方案稿勘误注记——TS2307 破面半径评估随 BOD 勘误卷对表修正（独立 bin 实有 job 消费面·三连败实证·破面评估须查全部运行时消费面）
   - 35a3045cd docs(bod): sg 8712毕报勘误卷——TS2307不阻销定性撤(config-sync-apply三连败实锚·tricode链接缺)·修复=链接补挂+CLI冒烟过·教训两笔(cli冒烟盲区+token值面泄露自报)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 7a61a492d 后新增 2 条 commit：
+  - b79625a07 merge: 收编并行笔（值席落盘防覆盖）
+  - 6c6cd43df docs(coo): 台账十六笔——sg8712连败事件销注(回零毕11:07拍cf=0/degraded=false·全链收口回归→勘误→修复→回零·观察池⑥留真值探针尾锚)
+- registry：v2.1；今日 registry 提交无变化
