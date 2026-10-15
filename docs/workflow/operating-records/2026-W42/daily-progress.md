@@ -781,3 +781,9 @@
 - 巡检兜底补写 @19:50 +08：自上次进度提交 849062462 后新增 1 条 commit：
   - e12765d32 docs(fsd): Q2 件①毕报——TriMMC 回声出向队列全绿毕(三端点+14测试+sg部署链+端到端硬门全链通过+负向三探针)·候CTO验收位
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:00 +08：自上次进度提交 5d77873f3 后新增 4 条 commit：
+  - fadb71167 docs(coo): Q2反向通道一期上线宣告收口(APPROVE·放行链四站读数+活体现势记账·armed观察期首周观察池⑪立·D-23对轨过黄金窗)+测试债两条入候池项6(族A约22例+族B约8例·候CTO技术债排程窗)
+  - 3d09b547a docs(ste): Q2件①门禁复核卷 PASS——零新增败放行锚成立（worktree 对照 60496df vs 65aeae5·现态独有败=空集）+14/14 定点全 pass+30 败逐族归因全测试债族（鉴权门 401/contract 面断言滞·零件①缺陷）——毕报 CTO 采认后放行 COO 排窗
+  - b82d66b8c docs(fsd): Q2 armed 观察期台账立卷——首周每日一拍 failStreak/时效读数(验收 APPROVE 附带义务·首拍已记)
+  - 3e2de9a6d docs(cto): Q2件①验收卷APPROVE——冒烟硬门全链绿+负向三锚全绿+P0-1断言正形+60496df祖先链自验零丢笔+活体抽验五读数(19:46-19:48独立复测)+技术债三项处置(候窗/转STE必办/自愈闭合)·next=STE复核(Co-Authored-By: Claude Code <noreply@anthropic.com>)
+- registry：v2.1；今日 registry 提交无变化
