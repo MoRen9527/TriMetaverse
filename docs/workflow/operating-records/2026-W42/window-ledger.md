@@ -12,7 +12,7 @@ windows:
     end: "2026-10-15T10:10:00+08:00"
     owner: sde
     endReminder: true
-    state: active
+    state: done
     note: 8711 obs 出向启用（trirlc-daemon.cmd 补 NOTIFY env+TriRLC 冷起·窗令 09:12 已发 M-004·止损 10:30）
 ---
 
@@ -26,14 +26,14 @@ windows:
 
 | 窗 | 时段 | 内容 | owner | 态 |
 | --- | --- | --- | --- | --- |
-| 8711 obs 出向启用窗 | 10-15 09:40-10:10（止损 10:30） | trirlc-daemon.cmd 补 NOTIFY env 行（env 名 env.ts:169 勘定·值=18710 隧道口形态·token 值面 D-46 禁进日志）+TriRLC 冷起（停摆预期 18s·重启纪律三断言）·终验锚=**进程内生效验证非 healthz 绿** | SDE 主施工/COO 终验/CTO 知会 | active·窗令已发 09:12（M-004 直达） |
+| 8711 obs 出向启用窗 | 10-15 09:40-10:10（止损 10:30） | trirlc-daemon.cmd 补 NOTIFY env 行（env 名 env.ts:169 勘定·值=18710 隧道口形态·token 值面 D-46 禁进日志）+TriRLC 冷起（停摆预期 18s·重启纪律三断言）·终验锚=**进程内生效验证非 healthz 绿** | SDE 主施工/COO 终验/CTO 知会 | **毕（实开 09:39:59·实毕 09:42·停摆≈10s·组合证四件全绿·终验卷=coo-8711-window-finalverify-20261015@树·卡③案 B 落地收口）** |
 
 ## 直跑件现势（不入 windows 段·候排池准入面已废止·毕报经 COS）
 
 | 件 | owner | 态 |
 | --- | --- | --- |
 | 白名单登记面改版（批后件③·本笔） | COO | **毕（10-15 十笔）** |
-| A1 任务书标准模板（含会签生效判据·直跑正形修订） | COO | 直跑在办——COS 复核两项认（d7e8e1342）·**转正候 CAO 对表**（落笔前实勘 task-charter-template.md M1 版在位=CAO owner·BOD 令指定——换代并入/独立并存候判） |
+| A1 任务书标准模板（含会签生效判据·直跑正形修订） | COO | **毕（CAO 判定①换代并入·M2 已落笔 TC f588561·CAO 主笔吸收本席转正认领·内容面零改写承入+M1 三制度保留·毕报卷=reports/cao-a1-m2-ruling-closeout-20261015.md@dfb25eb7c）** |
 | B1 派工令格式铸条（直跑正形修订） | COO | **毕（转正 TriCompany dispatch-order-format.md a01f07d·CAO 备案随发）** |
 | D1 督办读数出单节奏（含 fan-in 呈报格式） | COO | **毕（COS 认·生效→转正 TriCompany d78ceb6·09:27）** |
 | E2 残留候考池成文 | COO | **毕（同上转正+池正身立档 candidates-pool.md·首批收编两项）** |
@@ -53,7 +53,7 @@ windows:
 
 ## 观察池（2026-10-14 21:53 成文·随事件随挂随销）
 
-- ①锚②真放电窗补验 ②TriRLC github 腿 5 笔候 443 补推 ③reminder 入否豁免域候灰度周评估 ④hub-silent 豁免灰度观察 ⑤python 三选候资源读数 ⑥sg 8713 白名单补录 'trirlc-conn'（候 8711 obs 出向启用件落窗后）⑦dim-4 24h 读数候 CTO 复核——**时点锚=2026-10-15 21:35**（BOD 21:52 示知挂账·COS 催办链跟）⑧跨宿主探针对候立卡（挂 LG-067 转正条件②）⑨**TD-obs-1 已收口（勘误定性毕 10-14 22:0x）**——通道实走本机隧道 18710 现役健康·fetch failed=半死窗历史读数冻结；遗留观察项 keeper 巡检挂靠已转直跑件；8713 notifyFailures=3 候自然回零（下次 gate 出向成功·代码语义）。
+- ①锚②真放电窗补验 ②TriRLC github 腿 5 笔候 443 补推 ③reminder 入否豁免域候灰度周评估 ④hub-silent 豁免灰度观察 ⑤python 三选候资源读数 ⑥**sg 8713 白名单补录 'trirlc-conn'（8711 窗毕 09:42·激活候办——sg 面转 BOD/值席 MMC 执行）** ⑦dim-4 24h 读数候 CTO 复核——**totalFailures 本窗归零重计=新段起点 09:40·24h 锚候 CTO 复核对表（原锚 21:35 与新段起点关系随复核定性）** ⑧跨宿主探针对候立卡（挂 LG-067 转正条件②）⑨**TD-obs-1 已收口（勘误定性毕 10-14 22:0x+案 B 落地毕 10-15 09:42 窗毕）**——通道实走本机隧道 18710 现役健康·fetch failed=半死窗历史读数冻结；keeper 巡检挂靠件毕（c994e97d4）；8713 notifyFailures=3 候自然回零+8711 notifyFailures=0 候真实出向首触发读数（零触发态如实记·不制造不加码）⑩**FUZZY-TS merge 豁免真仓活验锚**（CTO 09:40:55 请托·COS 转）——下次自然合流场景：merge commit hash+gate 行为实录（沙箱毕·真仓活验候自然场景）。
 
 ## 笔序（不抹历史）
 
@@ -68,3 +68,5 @@ windows:
 - 10-15 09:10:49 九笔：晨令承接（BOD 09:09 转 CEO 令「不符合的直接跑不用排窗」）——候排面九件转直跑在办·唯 8711 件留白名单①窗（排 09:40-10:10·窗令 09:12 已发 M-004）。
 - 10-15 09:12:29 十笔：**白名单登记面改版落地（批后件③·本笔）**——front-matter windows 段内嵌（schema 六字段·会签裁形态）+直跑件现势面立+已毕窗留痕段转制+观察池/笔序沿续——本面自十笔起为「白名单登记面」形态。
 - 10-15 09:28:38 十一笔：D1+E2 转正挂行（COS 认·生效→TriCompany d78ceb6·池正身 candidates-pool.md 立档首批收编两项）+patrol 两件毕态销行（COS fb894f26c）+A1/B1 树锚并笔挂注（D-27 v9 对轨·候 COS 复核两项）+A1 第三态补全（COS 修改项落实）。
+- 10-15 09:39:12 十二笔：B1 转正毕（dispatch-order-format.md a01f07d）+A1 候 CAO 对表（M1 owner 域实勘发现·COS 复核两项认 d7e8e1342）+dsh 序3 漏挂补行（COS 对表发现归一）+E1 v0 稿落盘（候 8713 实勘）。
+- 10-15 09:50:36 十三笔：**8711 窗毕挂行（w42-8711-notify-enable·实开 09:39:59 实毕 09:42·停摆≈10s·组合证四件全绿·终验卷落 mc-link-verify 树·卡③案 B 落地收口）**+windows 段 state=done+A1 毕态刷（CAO 判①换代并入 M2·TC f588561）+观察池⑥激活/⑦新段起点注/⑨案 B 落地毕/⑩FUZZY-TS 新条（CTO 请托）。
