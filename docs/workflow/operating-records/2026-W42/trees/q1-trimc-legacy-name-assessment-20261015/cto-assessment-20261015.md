@@ -27,9 +27,9 @@
 | trimc.service | unit 名=trimc（旧）·描述「TriMC Main Controller」·running | systemctl cat 全文勘验 |
 | trimc-start.sh | 首行 `cd /srv/fleet/TriMMC`（**现役指向正确**） | ExecStart 链实锚 |
 | start 备份×2 | bak-20260928T201527Z + tsx-bak——**均含旧 TriMC 路径**（历史备份） | grep -rl 实锚 |
-| notify-poller.sh | `BOX=/srv/fleet/TriMC/notify-outbox.json`——**指旧目录死文件** | root crontab `* * * * *` 现役 |
+| notify-poller.sh | `BOX=/srv/fleet/TriMC/notify-outbox.json`——**指旧目录死文件** | fleet crontab `* * * * *` 现役（【17:26 勘误】原记 root crontab 系误·BOD 步2 毕报 9e6ab7b6e 实锚 root crontab 零 poller 行） |
 | unit env | TRIMC_CONFIG_DIR=/var/lib/trimc·TRIMC_PORT=8712·TRIMC_NOTIFY_DUTY_SEATS=m-duty-cos 等 | **TRIMC_* 前缀+token 行见 §四注** |
-| root crontab | 10 条——唯 notify-poller.sh 引旧路径·其余（disk-hygiene/bare-perm-heal/duty-night-patrol/seat-watchdog/bare-fetch/worktree 系/duty-urge 系）零 TriMC 引用 | crontab -l 全量过 |
+| fleet crontab | 10 条——唯 notify-poller.sh 引旧路径·其余（disk-hygiene/bare-perm-heal/duty-night-patrol/seat-watchdog/bare-fetch/worktree 系/duty-urge 系）零 TriMC 引用 | crontab -l 全量过（【17:26 勘误】poller 调度源=fleet crontab 非 root·root crontab 零 poller 行·BOD 毕报实锚） |
 | 隧道面 | sg 侧零 autossh/ssh 隧道进程——keeper=TriRLC 内嵌段（非独立进程）·本机 URL 结构面无目录依赖 | ps+配置结构面 |
 
 ### 本机面
@@ -50,9 +50,10 @@
 - **处置毕**：BOD 照我快报建议案 root 施工——备份 mv dist-bak-pre-swap-20261015T1715→cp -a 七席换装→restart→断言链全绿（pid 3973025·cwd=TriMMC·运行路径 trirlc-conn=1/m-duty-coo=2）→属主归还 fleet。勘误卷 13f227846。候 18:0x 回零拍终验。
 - **定性**：双目录并存+「改的目录≠跑的目录」无断言门=结构性事故源——归一前任何 sg 施工须先断言现役目录（教训已并 P0 快报）。
 
-### P0-2：notify-poller 读死信箱（**未修·现役最高急项**）
+### P0-2：notify-poller 读死信箱（**已修复·BOD 步2 施工毕 17:2x**）
 
-- **机理**：root crontab 每分钟 `notify-poller.sh`→`BOX=/srv/fleet/TriMC/notify-outbox.json`=9-29 04:15 停更死文件；daemon 活信箱在 TriMMC（17:14:04 活写实锚）。
+- **机理**：fleet crontab 每分钟 `notify-poller.sh`→`BOX=/srv/fleet/TriMC/notify-outbox.json`=9-29 04:15 停更死文件；daemon 活信箱在 TriMMC（17:14:04 活写实锚·时戳字段=enqueued_at）。
+- **修复实录（BOD 毕报 9e6ab7b6e·照本卷步2 护栏执行）**：换源前重放断言发现直接换源将重放 274 封（KNOWN 死文件遗产仅 7 行）→正形=预填 KNOWN 272 封历史 id+留今日 2 封不预填→备份两文件→预填→sed 改 BOX→无重启（fleet crontab 每分钟自然拉起）→活体 17:23/17:24 两拍恰好只 NEW 今日 2 封 liveness 信·零风暴·KNOWN 279→281 poller 自写=写回链活——**16 天来 sg 值席 tmux 新信提示链首次恢复**。回滚=两 .bak-20261015 还原即净。毕报卷=trees/sg-8712-allowlist-conn-20261015/bod-poller-fix-closeout-20261015.md。
 - **影响窗**：**自 2026-09-29 起 16 天**——sg 值席（m-duty-cos）tmux 新信提示链读死文件。实际受损程度候值席自查：duty-urge-patrol 系冗余通道（crontab 三条现役）可能掩盖了提示缺失（值席是否一直有收到 urge 系通知·poller 通道静默无人察觉）。
 - **修正**：一行 sed——`BOX=/srv/fleet/TriMC/...`→`/srv/fleet/TriMMC/...`（文件属主 fleet·crontab 以 root 跑但不影响改 fleet 属主文件）+下分钟自证（观察下次真信 tmux 提示·或 fleet 身份手动跑一轮对照）。
 - **回滚**：sed 反向一行·零风险。
@@ -84,10 +85,10 @@
 
 ## 五·候批清单（呈 CEO 经 BOD）
 
-1. 步2 notify-poller 修正授权（急·5 分钟级·建议即批）。
-2. 步3 归一窗批（合并 token 轮换·候 sg 勘修窗排程·D-23 对轨）。
-3. service 正两案裁定（建议案 A=保留 trimc 名+Description 随窗改）。
-4. P0-2 影响面值席自查令（16 天提示缺失实际受损程度·归 COO/值席面）。
+1. ~~步2 notify-poller 修正授权~~——**已毕**（BOD 17:2x 施工毕·见 §二 P0-2 修复实录·候批①销）。
+2. 步3 归一窗批（合并 token 轮换·候 sg 勘修窗排程·D-23 对轨）——**已并呈 CEO 候批**（BOD 17:27）。
+3. service 正名两案裁定（建议案 A=保留 trimc 名+Description 随窗改）——**已并呈 CEO 候批**（BOD 17:27）。
+4. P0-2 影响面值席自查令（16 天提示缺失实际受损程度·归 COO/值席面）——提示链已恢复·受损回溯面自查仍候 COO 面。
 
 ## 使用依据
 
