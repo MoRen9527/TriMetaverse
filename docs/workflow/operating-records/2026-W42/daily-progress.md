@@ -834,3 +834,7 @@
   - d2416aebd docs(coo): 台账三十六笔简笔(窗开落位03:26盯哨核✓·宿主存活·m-sde busy拾取链在途·windows段state不动note补戳·候SDE终拆树复核)+窗开落位戳
   - dfff4eefa docs(sde): charter-2026-W42-001 拆树束落卷——窗开第0步AC锚+河源重探(D-24对平零漂移)+n1-n4四树拾取卷(候COO总调度复核)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:40 +08：自上次进度提交 3b74ab9f8 后新增 2 条 commit：
+  - 99946a899 docs(coo): 台账三十八笔(SDE认形②开工·同构对表实锚两差异如实记·R面两缺口duty-env/claudeCLI窗内授权·04:30时长监控点·D-46值面纪律保持)
+  - cf4e15056 docs(coo): 台账三十七笔(总调度复核认·附n4护栏前置执行序条件·落位读数全过·CEO接电兑现成立·github断连候补池·COS转SDE执行序n4→n1→n2→n3)
+- registry：v2.1；今日 registry 提交无变化
