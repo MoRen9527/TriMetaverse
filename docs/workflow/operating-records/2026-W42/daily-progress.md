@@ -689,3 +689,13 @@
   - 7a04e75d5 docs(coo): FADE-008重估COO版流程稿v1——票面制(供料端开票拆树·执行端拾取校验)·攒批段废·四面路由矩阵·回声双锚跨面经BOD各COS流转·窗直跑双轨A段分流·CEO点名两版之一·独立成稿
   - 74352b9e4 docs(cos): FADE-008 重估 COS 版供料面流程稿——四域 COS 供料制+供料单跨域流转+双树制（供料树管账·执行树管活）+双锚销账合同·三候裁点呈 CEO（BOD 09:36 派工·独立成稿）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 a0eda9e3b 后新增 8 条 commit：
+  - 8661344d1 docs(coo): E1立项闭环卷+COS会签落实(e951996c8·认·生效·触发面渐扩序落实·防读空转空触发)+台账E1毕态刷+候考池项3(CTO族B小改bod-tick原子形·防丢信·候CTO排程窗)
+  - e951996c8 docs(cos): E1 催办跨会话存续稿会签——认·生效+随记一注（触发面按实存数据源起·endReminder 先行督办字段渐扩防读空转）·两锚亲证（allowlist window-dispatch 命中+跨仓读 seats.json）
+  - 17048a63e docs(coo): 台账十四笔——观察池⑥sg侧毕刷(BOD三证绿·60496df·正名sg 8712)+E1稿v0→v1(实勘毕:白名单15条在案window-dispatch-remind免追加+跨仓读无障碍·施程序毕锚四查·候COS会签)
+  - 09395881b docs(bod): sg 8712白名单补录trirlc-conn毕报——观察池⑥施工卷+毕报卷(断言三证·pid对表·值面探针dist grep=1·sg侧锁笔60496df)·cli.ts既有错如实记
+  - 690c3bccb docs(coo): 观察池⑨实证精化——8713 notifyFailures=6全时间线(channel.log追读·#4-6=勘误卷后夜间新三败22:38-23:48=keeper隧道断窗70min实证·巡检价值再证)+语义精化(闸告警信出向失败累计·recovered重计·健康实锚=SDE 09:42探针)+EPERM rename杂音观察(CTO面)
+  - 71f37b480 merge: 收编并行笔（值席落盘防覆盖）
+  - 124843eb1 docs(coo): 8711窗毕终验销+台账十三笔——组合证四件全绿+独立复探双源对平(uptime 510对平CIM·mc段七字段全零基线同形)·停摆10s零回滚·卡③案B落地收口(双daemon出向均18710隧道形)+A1毕态刷(CAO判①换代M2·TC f588561)+观察池⑥激活⑦新段起点⑩FUZZY-TS新条
+  - 5810eab09 docs(sde): 8711 obs 出向启用窗毕报卷——env file 改值对齐 8713 形(18710+token md5h 对平·cmd/ps1 零触 D-15)·七步链全绿停摆10s·组合证四件(值面对/载入复演/新段计数面/错token门401)·毕锚进程内生效验证达成
+- registry：v2.1；今日 registry 提交无变化
