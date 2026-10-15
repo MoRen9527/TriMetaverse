@@ -787,3 +787,8 @@
   - b82d66b8c docs(fsd): Q2 armed 观察期台账立卷——首周每日一拍 failStreak/时效读数(验收 APPROVE 附带义务·首拍已记)
   - 3e2de9a6d docs(cto): Q2件①验收卷APPROVE——冒烟硬门全链绿+负向三锚全绿+P0-1断言正形+60496df祖先链自验零丢笔+活体抽验五读数(19:46-19:48独立复测)+技术债三项处置(候窗/转STE必办/自愈闭合)·next=STE复核(Co-Authored-By: Claude Code <noreply@anthropic.com>)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 338ad4563 后新增 3 条 commit：
+  - e4b711c20 merge: 收编并行笔（值席落盘防覆盖）
+  - dd9f99cb7 docs(coo): charter-2026-W42-001 G1终裁+会签落卷(认·附修改项1项·窗位22:00-24:30 GLM轨·备选明晨0:30-3:00·窗开首步河源重探·拆树n=4认·呈CEO确认候·确认回前不开窗)+台账二十八笔
+  - f9b8bf5ed docs(cos): R面班组部署窗任务书端立册 charter-2026-W42-001(LG-080建·M2六段+§五schema首实践件·四要素拆树表草案·窗位候COO排+CEO确认链·复活名址坑条款级护栏)·周索引charters登记首条
+- registry：v2.1；今日 registry 提交无变化
