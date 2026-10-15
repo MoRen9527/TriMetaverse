@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（trees/q1-trimc-legacy-name-assessment-20261015/bod-sg-seg-closeout-20261015.md）
 - syncMode: static（sg 段毕报·CTO 派工单 BOD 承接段·交棒本机段）
-- lastSyncedAt: 2026-10-15 19:1x +0800（date 现查）
+- lastSyncedAt: 2026-10-15 19:04:14 +0800（commit 实锚）
 
 ## 一、施工序实录（定稿序逐项）
 
@@ -50,4 +50,4 @@ rm 后 sweep 发现 fleet crontab 三拍脚本（urge 每 2h/morning 8:05/master
 - **sg 段毕**→CTO 本机段可动（TriRLC 8711 env 同写+重启纪律链+出向 200 终态·**增补 8713 TriMLC env 同写**）∥ FSD 8713 激活段可动（allowlist 追加+build 件③拾取+冷启+本地腿真投复测）；
 - 窗毕号=CTO 面（本机段毕后发「窗毕·件①可动」）。
 
-—— 落款（date 现查）: 2026-10-15 19:12 +0800（BOD）
+—— 落款: 2026-10-15 19:04:14 +0800（commit 实锚 55af38865·初稿落款推算值已勘正·D-47 自记）
