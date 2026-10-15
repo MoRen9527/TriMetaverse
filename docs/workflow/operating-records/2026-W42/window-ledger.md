@@ -38,7 +38,7 @@ windows:
 | D1 督办读数出单节奏（含 fan-in 呈报格式） | COO | 直跑在办 |
 | E2 残留候考池成文 | COO | 直跑在办 |
 | 排程 SOP 双段式必查项对轨（§三第3项） | COO | 直跑在办 |
-| TriMLC 卫生三件（卫①gitignore 两模式/卫②备份清理留3清17+dist ignore/卫③digest-inbox.mjs 归位） | SDE 主施工 | 直跑在办 |
+| TriMLC 卫生三件（卫①gitignore 两模式/卫②备份清理留3清17+dist ignore/卫③digest-inbox.mjs 归位） | SDE 主施工 | **毕（09:20 终验销@trimlc-hygiene-20261015/coo-finalverify@518308472）+卫④追补挂行（gitignore 两窄模式·异族 2 件留盘定性·SDE 轻笔在途）** |
 | patrol 卫生两件（log 治理 137 log 三选或并施+退役判据立条 N=7） | COS | 直跑在办 |
 | keeper 活性巡检挂靠件（#140 骑缝①·TD-obs-1 遗留） | BOD/COO 对表 | 直跑在办 |
 | 差②铸条排程方案稿（CAO 主笔·排程权本席） | CAO/COO | 直跑在办 |
