@@ -763,3 +763,18 @@
   - 3a34c9ab0 merge: 收编并行笔（值席落盘防覆盖）
   - 747bf56b2 docs(coo): 候收两读数齐入账(观察池⑥销毕判·回零绿六段全闭+裁④自查零被拒·自然免疫态·P0事件面全链收束)+CEO18:16批令涉本席面挂行(Q2上线窗排窗义务候CTO派工单·token轮换同窗批=候考池项4落点注)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 0355abcf1 后新增 13 条 commit：
+  - 9e73d08c3 merge: 收编并行笔（值席落盘防覆盖）
+  - ba09aafa9 docs(coo): D-46/D-54铸条生效知悉(TC 74403e7)+打包窗8件重排义务挂行(清单勘源七件明形@10-03·D-42出列2件成条·流变至8件·+2并入点候排窗窗前实勘·BOD裁解耦无须对轨前置)
+  - 34ea39eba docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - fa4ad858c docs(fsd): 8713 激活段毕报——七步全绿(冷启pid30624+mc_link connected+cron 201三查+首跑404 armed前不计数)+三增值发现(sed剥CR实证/等c旧值残留token源改位c52bc6690/L18同步)+值面三方同值md5_8对表
+  - 93a04ac9f docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - 0b3d0bebd docs(cto): 归一窗本机段毕报卷——双daemon token轮换毕全绿(8711 connected/8713 FSD冷启拾取)+INTERNAL键消费对象勘正回滚(河源08e0/sg新值各归其主)+cron payload面清空(8711=0/8713=13零内嵌)+D-46四正形实录+自捕第7/8例+族外新条候选两枚(Co-Authored-By: Claude Code <noreply@anthropic.com>)
+  - db924be8b docs(bod): sg段毕报窗内增补——config-sync-apply job双害修(旧路径+内嵌旧token)PATCH payload正形+force run exit0+cf回零+消费面清点漏项自报
+  - c52bc6690 fix(fade): echo-pull sg token source -> sg .env authoritative plane
+  - 2c51714da docs(bod): sg段毕报落款勘正——推算值改commit实锚19:04:14(D-47自记)
+  - 55af38865 docs(bod): 步3归一窗sg段毕报——push保笔+tar归档7/7+断言门三绿+rm毕+patrol路径勘正+token轮换真源勘正(docker/.env cwd链)双探针正位+消费面清点8713同写义务提醒
+  - 152a4d470 feat(fade): Q2 reverse-channel echo-puller script (phase-1 item 2)
+  - bb342213d docs(cto): 两派工单接令回执留痕——BOD sg段时点确认19:00微窗+FSD三件自排18:2x先行/件①候窗毕(D-15闭环)
+  - 046caf7cb docs(cto): CEO18:16执批两派工单——步3归一窗+token顺手轮换单(删前双断言硬门+值面零回显通道+今晚19:00微窗候BOD接令)+Q2一期FSD施工单(三件范围+四红线硬约束+端到端冒烟硬门+GLM轨黄金窗直跑)
+- registry：v2.1；今日 registry 提交无变化
