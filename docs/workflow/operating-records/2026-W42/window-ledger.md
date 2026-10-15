@@ -1,7 +1,7 @@
 ---
 sourceOfTruth: docs/workflow/operating-records/2026-W42/window-ledger.md
 syncMode: living
-lastSyncedAt: 2026-10-15T11:43:22+08:00
+lastSyncedAt: 2026-10-15T11:47:31+08:00
 form: whitelist-registry（白名单登记面·D-23 v3 批后件③改版·原「窗序现势台账」C1 正身）
 schemaRef: docs/execution/window-reminder-job-plan-20261014.md §二（CTO 提案·COO 会签裁 YAML front-matter 内嵌@1db9d27ca）
 maintenance: COO 唯一定笔位·COS 共读对表·BOD 旁证
@@ -76,3 +76,4 @@ windows:
 - 10-15 11:34:40 十七笔：**FADE-008 重估稿 v2 毕（BOD 11:33 融稿令·CEO 九问五点原卷修订·@9f92bcbbb·任务书一等实体+执行域拆 n 树+COO 执行域总调度+时长分流 G1/G2 双闸 30min 试行+树权属执行域+四面标准称谓）**——毕报直呈 CEO 抄 BOD（候终审·与 COS 版对比裁合）·三项候对表注随稿（D-27 v9 修订候 CAO/登记位候 COS/时长预估字段候 B1 铸条窗）。
 - 10-15 11:38:27 十八笔：FADE-008 联席 v3 双卷交汇——本席骨架卷 11:38:27 落（fade-008 树·coo-cos-fade008-flow-unified-v3）·**COS 合稿卷 11:47 信报（fade008 树·85e1f6449·双源互指承我 v2 全基座+必收口六项全落）**——**合卷归一（18 笔定谳）**：正卷=COS 合稿卷；本席 §六终稿权行使毕（n 树粒度四则+n 值边界+拆树时点入卷·收口项③完成）+**「认·附修改项」会签落卷（修改项毕即生效）**；骨架卷退役注记挂；COS 落款 11:47 倒挂随记（收信 hook 11:39:50 铁证·D-47 族如实记）——候 BOD 汇总四席终审（CAO/CPO/CHO/CTO）毕呈 CEO。
 - 10-15 11:43:22 十九笔：**FADE-008 v3 免二修增补笔（BOD 11:41 参考入池两笔）**——§八融 CTO 三层合同形（三层合同统一非代码统一+服务域全自动/本地域值守拾取分野+mc_link 第 0 层）+§十候注⑥ canonical tree-id 规范（CAO ⓵树锚分裂案例入法）+⓶D-27 v9↔Q7 两段式修订 CAO 认领+ⓒM1→M2 引称勘误落退役卷注——会签实质不变·终审输入前置落位·v3 定稿候选完形。
+- 10-15 11:47:31 二十笔：**FADE-008 v3 正卷双签齐（COS 认·生效@1b6dbabb4+COO 认·附修改项·联笔面闭环）**——COS 暗签自纠迁移毕（六处补笔正卷全对应·骨架卷迁移注留痕）+D-47 自勘认领照单——候 BOD 汇总四席终审（CAO/CPO/CHO/CTO）→毕后呈 CEO·本席面毕。
