@@ -61,13 +61,22 @@ def main():
 
     # 结构断言
     assert text.startswith("# " + "=" * 68), "头注形异"
-    assert "transpiler: v1" in text and "dsh: 0.2.0-rc.2" in text, "版本钉住头注缺失"
+    assert "transpiler: v2" in text and "dsh: 0.2.0-rc.2" in text, "版本钉住头注缺失"
     assert text.count("- insert:") == 1, "insert 形异常"
     ids = re.findall(r"^  - id: preset-(r-duty-[a-z]+)\s*$", text, re.M)
     assert sorted(ids) == sorted(SEAT_MAP), "preset id 清单不齐: %s" % (set(SEAT_MAP) ^ set(ids))
     persona_rows = len(re.findall(r"^        - id: persona\s*$", text, re.M))
     assert persona_rows == 13, "persona 行计数=%d≠13" % persona_rows
     print("结构断言: 13 preset id ✓ · persona 行 %d/13 ✓ · insert 形 ✓ · 版本头注 ✓" % persona_rows)
+
+    # compass 挂载行断言（v2 形·CTO b 案件）
+    mount_rows = len(re.findall(r"^        - id: tricompass-context\s*$", text, re.M))
+    assert mount_rows == 13, "tricompass-context 挂载行计数=%d≠13" % mount_rows
+    for seat, d in SEAT_MAP.items():
+        m = re.search(r"^  - id: preset-%s\s*$(.*?)(?=^  - id: preset-|\Z)" % re.escape(seat), text, re.M | re.S)
+        assert m and (".claude/compass/%s.session.md" % d) in m.group(1), "compass file 路径缺 %s" % seat
+        assert "workspaceRoot: /" in (m.group(1) if m else ""), "workspaceRoot 缺 %s" % seat
+    print("compass 挂载行: 13/13 ✓ · 每席 file 路径+workspaceRoot 全在 ✓")
 
     # 逐席内容忠实断言
     bad = 0

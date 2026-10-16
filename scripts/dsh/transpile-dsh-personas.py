@@ -21,7 +21,7 @@ import subprocess
 import sys
 
 DSH_VERSION = "0.2.0-rc.2"
-TRANSPILER_VERSION = "v1"
+TRANSPILER_VERSION = "v2"
 
 # 13 席映射（活体实锚 2026-10-16 河源 ps cmdline: claude --agent <Name> --append-system-prompt-file compass/<dir>.session.md）
 SEAT_MAP = {
@@ -197,6 +197,10 @@ def main():
     ap.add_argument("--source-root", required=True, help="TriCompany/source-agents 目录")
     ap.add_argument("--template", required=True, help="出厂树文件（dsh --dump-default-config 产物）")
     ap.add_argument("--out-dir", required=True, help="产物目录")
+    ap.add_argument("--compass-plugin-path", default="",
+                    help="tricompass-context 插件绝对路径（给=每 preset plugins 尾挂 compass row·v2 形；不给=v1 兼容形）")
+    ap.add_argument("--workspace-root", default="",
+                    help="河源仓 checkout 根（compass 文件直读零复制基点·随 --compass-plugin-path 必给）")
     ap.add_argument("--only", help="单席调试（seat id·如 r-duty-cos）")
     args = ap.parse_args()
 
@@ -207,6 +211,10 @@ def main():
     std_plugins = read_standard_plugins(args.template)
     if not std_plugins:
         sys.exit("FATAL: standard plugins 模板切片为空")
+
+    if bool(args.compass_plugin_path) != bool(args.workspace_root):
+        sys.exit("FATAL: --compass-plugin-path 与 --workspace-root 须同给同缺")
+    compass_mount = bool(args.compass_plugin_path)
 
     os.makedirs(args.out_dir, exist_ok=True)
 
@@ -239,16 +247,25 @@ def main():
         preset.append("          config:")
         preset.append("            prefix: " + yaml_block(pre_txt, 14))
         preset.append("            suffix: " + yaml_block(suf_txt, 14))
+        if compass_mount:
+            preset.append("        - id: tricompass-context")
+            preset.append("          name: '%s'" % args.compass_plugin_path)
+            preset.append("          config:")
+            preset.append("            workspaceRoot: %s" % args.workspace_root)
+            preset.append("            file: .claude/compass/%s.session.md" % d)
         presets.append("\n".join(preset))
         print("OK  %-14s <- %-34s prefix %d 字/ suffix %d 字 / %d 段(prefix)+%d 段(suffix)"
               % (seat, d, len(pre_txt), len(suf_txt), len(pre), len(suf)))
 
+    mount_note = ("每 preset=standard 工具族+scoped persona 行+tricompass-context 挂载行（compass 直读零复制）"
+                  if compass_mount else
+                  "每 preset=standard 工具族+scoped persona 行")
     head = "\n".join([
         "# " + "=" * 68,
         "# dsh 13 席 preset+persona 发布物（转译器生成·禁人工编辑·修订走源侧合同）",
         "# dsh: %s (exact) · transpiler: %s · generated: %s" % (DSH_VERSION, TRANSPILER_VERSION, now),
         "# source: TriCompany/source-agents@%s（13 agent-body·per-seat blob 见对表卷）" % sha,
-        "# 结构: insert 形 preset（registry README 官方正形）·每 preset=standard 工具族+scoped persona 行",
+        "# 结构: insert 形 preset（registry README 官方正形）·%s" % mount_note,
         "# 发布位: 河源 ~/.dsh/profiles/web/cordis.patch.yml · 回滚=恢复原文 []",
         "# " + "=" * 68,
         "",
@@ -271,6 +288,7 @@ def main():
         "# compass 路径映射表（声明形·转译器 %s 顺带产·禁人工编辑）" % TRANSPILER_VERSION,
         "# 依据: CTO 2026-10-16 21:02:21 裁 PromptContext=b 案前置施工件（provider 代码不入清单门·本映射表入）",
         "# 承载位=河源仓现役 compass 文件直读（零复制·真源单源）·路径=仓相对（provider 以 workspace root 解析）",
+        "# provider=scripts/dsh/tricompass-context/index.mjs（preset plugins 挂载·config.file 本表 session_compass 同源）",
         "# session_compass=席位专属开工注入件（claude 形 --append-system-prompt-file 同源）",
         "# workspace_shared=全席共享治理段（dsh agent-instructions 原生 CLAUDE.md 链承接·候选承接面 n3 实测核）",
         "# dsh: %s · generated: %s" % (DSH_VERSION, now),
