@@ -904,3 +904,8 @@
   - 8258b0755 docs(sde): charter-002 n1毕13/13全活——首启异常三连诊断(root PATH 127→root拒skip-permissions exit1→正形su fleet login形)+串行红线严守(30s整×12席·6min17s·零失败)+收口断言(13会话/13进程/env护栏双绿/内存5659MB余/proxy active)+假读数新向在案(root/fleet socket位错位假阴性)+零残留·落款2026-10-16 12:24:30+08:00前后 date现查随commit
   - 09f0e3a37 docs(sde): charter-002 n1毕13/13全活——首启异常三连诊断(root PATH 127→root拒skip-permissions exit1→正形su fleet login形)+串行红线严守(30s整×12席·6min17s·零失败)+收口断言(13会话/13进程/env护栏双绿/内存5659MB余/proxy active)+假读数新向在案(root/fleet socket位错位假阴性)+零残留·落款2026-10-16 12:24:30+08:00前后 date现查随commit
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:10 +08：自上次进度提交 55bcc0c4e 后新增 3 条 commit：
+  - 6a3f0e9a3 docs(sde): charter-002 窗毕毕报总卷（n=7 全毕 13:00·七节点锚+终态快照+发现项五条候裁清单+正形沉淀）
+  - e766fa876 merge: 收编并行笔（值席落盘防覆盖）
+  - e9d09fef2 docs(coo): 台账五十二笔(13:00中途拍n=7全毕提前1h·发现项五件分诊tricompany-pull修复候裁CTO裁+本席排窗·14:00硬边界解除)
+- registry：v2.1；今日 registry 提交无变化
