@@ -1,6 +1,6 @@
 # FSD 施工毕报 · keeper 隧道活性探活段挂靠件 · 2026-10-15
 
-- sourceOfTruth: 本卷（docs/workflow/operating-records/2026-W43/trees/keeper-probe-20261015/fsd-keeper-probe-exec-20261015.md）
+- sourceOfTruth: 本卷（docs/workflow/operating-records/2026-W42/trees/keeper-probe-20261015/fsd-keeper-probe-exec-20261015.md）
 - syncMode: static（单窗毕报）
 - lastSyncedAt: 2026-10-15T01:23:28Z（date 现查原值·UtcNow 形）
 - 令源: CTO 派工单 4e0becc27（本树 dispatch-cto-fsd.md·CEO 09:09 直跑令链）

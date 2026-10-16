@@ -1,6 +1,6 @@
 # CTO 派工单·keeper 活性巡检挂靠件施工（FSD·直跑即起）
 
-- sourceOfTruth: 本单（docs/workflow/operating-records/2026-W43/trees/keeper-probe-20261015/dispatch-cto-fsd.md）
+- sourceOfTruth: 本单（docs/workflow/operating-records/2026-W42/trees/keeper-probe-20261015/dispatch-cto-fsd.md）
 - syncMode: static（单窗派工·直跑形态）
 - lastSyncedAt: 2026-10-15T01:11:50Z（date 现查·写前跑；初稿落款 09:11:20 系预估误写·09:11:50 勘正——D-47 现查原值纪律）
 - 令源: CEO 2026-10-15 09:09 直跑令（BOD 派工转达）——TD-obs-1 勘误后巡检盲区挂靠件（今晨隧道半死窗=真实教训）
