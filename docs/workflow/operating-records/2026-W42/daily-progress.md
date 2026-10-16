@@ -1018,3 +1018,8 @@
   - cbf2e08bd docs(coo): G1 节点1 施工指令单重投落卷 R2——派工链首投未达（TriRMC message 桥 bridge_failed 受害③）改道 pane 直投+跨会话消息双通道同文重投 SDE（12:44:38Z 落键+msg 715bb701）·charter-2026-W42-003 节点1 全文转录·前置门②会签双认锚定（CTO A 部 20:22:31+R 面 B 部 781106dcb）·毕报经 COS 链
   - 781106dcb docs(cos): dsh 窗1 序1 接口合同 R 面会签落卷——r-duty-cos 表态认（三选=认/认+修正/不认）·读件三件逐件核读（转译层映射表/适配件规格/preset 能力矩阵）·R 面可承诺面四钉（烟测人工判读在位/记账台账挂树/KV cache 运营序入运维手册/session-body 纪律面缺位认知）·零修正点·n2 批量开工门放行——charter-2026-W42-003 序1 会签面补毕（CTO A 部认+R 面 B 部认）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:30 +08：自上次进度提交 6e296c54f 后新增 3 条 commit：
+  - dd8b87ef3 docs(coo): 台账六十八笔(n2毕六步全绿清单门过·段A机制面全毕·b件插入施工·n3候两停点)
+  - 21b8da9ae merge origin/dev: heyuan closeout卷 intake (6e296c54f)
+  - 650e45ef3 docs(sde): n2 批量转译发布毕收口卷——六步全绿·发布位boot链验证13 preset全通·出厂段零差异
+- registry：v2.1；今日 registry 提交无变化
