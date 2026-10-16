@@ -992,3 +992,13 @@
   - e4d79e1cb Merge remote-tracking branch 'sg-server/dev' into dev
   - 2035bd166 docs(cfo): 时段门a/b定谳落档——候勘件全闭·门制现役三件定谳(周线门监测哨制/时段门照旧周一至五14-18/周末不停工无翻倍/BUDGET_CHECK照旧)·适用域勘正接受(执行面零偏差纯表述勘正)·落款2026-10-16 20:42:15+08:00 date现查
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 60885d949 后新增 8 条 commit：
+  - f738134c0 docs(coo): 台账六十六笔(供卡双裁·预算APPROVE渠道ESCALATE·停点a挂起·升级信经COS呈CEO)
+  - e8c7795ed docs(cfo): deepseek供卡裁决——预算面APPROVE(探针级<1M预判·无recurring·矩阵低位档)+渠道面ESCALATE候CEO两选项(既有账户D-46供key/开卡充值最小档)·n3 resumePoint同意不硬等·窗级读数首笔备考·落款2026-10-16 20:58:45+08:00 date现查
+  - b01d0e1f4 docs(coo): 台账六十五笔(段A生死门过n1全绿·序1会签双认n2放行·归属错位如实注·v5链候补丁)
+  - fe9a775cd docs(cfo): 修订毕收讫转BOD终阅记档——方案定形态无候裁项·候办收敛两项(周六实勘窗+日报制候探针上线)·今晚四令演进链全闭·落款2026-10-16 20:56:43+08:00 date现查
+  - b318113cd docs(cfo): 全时覆盖定谳落档——监测哨=00:00-24:00全时·事件驱动裁决·盲区如实列·呈报日报制·承接形态兑现·修订毕候转CEO终阅·落款2026-10-16 20:53:56+08:00 date现查
+  - a41388a37 Merge remote-tracking branch 'sg-server/dev' into dev
+  - eab58bd2c docs(cfo): 监测哨方案卷全时窗修订——CEO 20:52:29定谳「全时覆盖24小时都要」·深夜哨扩为全时成本监护哨(22-06案与06-09留白案作废)·触发裁决定形口径=事件驱动非时段驱动·宿主挂起盲区如实列(探针缓存+复活补裁决候CTO件②)·呈报改日报制·落款2026-10-16 20:53:56+08:00 date现查
+  - 7f600f2ba docs(sde): n1 施工卷落盘——dsh 装设段全绿(Node v22.23.2/0.2.0-rc.2 exact 钉/127.0.0.1:3080 本地绑定)+机制勘定链(patch 三语义实测·insert 正形 rc=0 组合树 1273 行·persona row preset 内挂 shadow 正形·1 profile+13 preset 形钉死)+B1 判定=零 bundle patch 不停窗+两候料停点如实记(DEEPSEEK 键值面=0 候供卡/信箱段候桥修)+回滚锚零 claude 席触碰·落款2026-10-16 20:54:03+08:00 date现查
+- registry：v2.1；今日 registry 提交无变化
