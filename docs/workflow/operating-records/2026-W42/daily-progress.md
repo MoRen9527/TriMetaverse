@@ -1023,3 +1023,13 @@
   - 21b8da9ae merge origin/dev: heyuan closeout卷 intake (6e296c54f)
   - 650e45ef3 docs(sde): n2 批量转译发布毕收口卷——六步全绿·发布位boot链验证13 preset全通·出厂段零差异
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:40 +08：自上次进度提交 2e4ca6c08 后新增 8 条 commit：
+  - 7edbca62f docs(sde): n2b 停点期 PromptContext provider 毕卷——契约实勘+探针实证+发布v2链全绿
+  - a4ec9bfd3 docs(cfo): 监测哨方案卷技术定形合流账本行补记——CTO技术卷2f4bca7b4三点全认(映射三级置信形/探针判据测浪费不测贵/kill复用process-supervisor)+两财务补注+分工表定形态·候COO终排·落款2026-10-16 21:3x+08:00 date现查
+  - 885ab4c97 feat(sde): PromptContext provider b案三件——tricompass-context插件+转译器v2挂载行+核验器compass断言
+  - cd4ed459d docs(cto): 监测哨技术卷补 CFO 两补注合流——分布表输出规格增列(unattributed 占比+置信级+副树并行误差源注记)
+  - ed64d1e47 Merge remote-tracking branch 'sg-server/dev' into dev
+  - c393cfd03 docs(cfo): 监测哨方案卷技术定形合流——CTO卷2f4bca7b4三点并入(映射修三级置信形commit链窗主+unattributed桶·探针v1判据两维·kill复用process-supervisor)·分工表状态更新三件已定形·财务面补注两条(commit窗前置偏移漏段入桶占比入分布表/测浪费不测贵判据定性)·落款2026-10-16 21:32:01+08:00 date现查
+  - 2f4bca7b4 docs(cto): 成本监测哨技术协同卷——第一勘点(树卷session锚零在案→commit链窗主锚三级置信)/探针管道(hub-watch同族+offset增量读+事件缓存复活补裁决)/kill接口(agent-core process-supervisor复用+白名单硬边界+审计五要素)
+  - a238c8d2f docs(cto): LG-085②关联追问三问作答卷——插件本体=claude code非自研/agent-core承载可行性成立(TriMC血统+trimodel直连+TriRLC现役消费实锚)/免唤醒=进程常驻+按需推理形态·P3双案勘验裁
+- registry：v2.1；今日 registry 提交无变化
