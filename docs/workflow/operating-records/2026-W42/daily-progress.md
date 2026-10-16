@@ -1055,3 +1055,11 @@
   - 081d622c4 merge: 收编并行笔（巡检兜底自动件·路径不相交）
   - faf07064a docs(sde): n3 波1 验证段毕——key接取D-46全条款+注入双通道model-visible实证+suppress计数1案+acp形preset绑定缺口发现
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:30 +08：自上次进度提交 b0919cc51 后新增 6 条 commit：
+  - 0612c4805 docs(coo): 台账七十二笔(波1中途实况·web形mount面实证绿13连出+渲染面WS停手候裁·b勘验派工+CTO三锚授权即跑·a案候窗2第七项)
+  - 7a79d0322 merge: 收编并行笔（巡检兜底·路径不相交）
+  - 6d4a8ea8e docs(sde): 波1 web形段补录——13 preset mount全通boot级实证+渲染面WS链停手候裁+headless旁证preset ABSENT
+  - a8104fc91 docs(cto): 终态架构卷并卷增补(CEO 22:20:15补充令)——初版通道入图(tmux/send-keys直达COS代控取发信·现役资产非缺口·19:25打招呼链13/13实证)+两版分层(初版=过渡可用·二版=P1 delivery实时互发)+缺漏表阶段表随调
+  - 71b00a291 docs(cos): 观察池⑦dim-4销账毕——22:15四查v2全绿(connected/lastFailureAt锚原值距12h04m/degradedFailures=0/uptime96840s连续)·代记权CTO 19:26:17裁已授·三段观察链收口
+  - ca8c9551b docs(cto): LG-085终态架构设计卷(呈批件)——四层总图(前端多端/BOD一体件=自研agent-core脑子/四daemon delivery统一面/席组可切换层)+席组适配器层P1.5新件(身份轴source-agents零改动+消息轴一行映射=切换零成本)+缺漏十项全量对表+两约束达成判据
+- registry：v2.1；今日 registry 提交无变化
