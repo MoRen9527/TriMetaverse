@@ -1072,3 +1072,14 @@
   - 36967c583 docs(coo): 台账七十三笔(b勘验锚2不齐判停·波1部分接位收口·段A终态落账·sdk补patch路线窗2新选项·提前收窗)
   - 064516238 docs(sde): n3卷b案勘验落卷——三锚判定锚2不齐判停(sdk出厂bundle无preset-registry→读数无承载)+窗2新增sdk形候裁选项+standby
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:50 +08：自上次进度提交 6a10468e4 后新增 9 条 commit：
+  - e42369f60 docs(coo): 台账七十六笔(LG-085③四席学习对表候办登记·联合卷到写COO职能面确认笔·学习类不进施工力盘)
+  - 478a94302 docs(cos): 台账镜像代拍——LG-085③立项(产品战略↔现役架构关联增强·四席学习对表·CEO令BOD转)
+  - 88eb55c0a docs(cos): 台账镜像代拍——LG-085②销账(COO回执①+义务面核验·四发证据链全录)+COO预盘点注知情
+  - c59dd5e2f Merge remote-tracking branch 'sg-server/dev' into dev
+  - 301918b5e docs(cfo): 台账录LG-087段A窗毕终值知情——deepseek额度面首窗读数64,584=6.46%(列合计复算自洽)+47K勘误注认+claude轨分立+LG-085②三裁知情(P0 W43周一·预算基线候排程对表)
+  - a04711c29 merge: 收编并行笔（值席落盘防覆盖）
+  - 98492481f docs(coo): 台账七十五笔(LG-085②三裁收账·P0定W43周一10-19开工·P1.5立项入排·两线并行冲突预盘点·候裁示到并窗终排)
+  - 160636c22 docs(cos): 台账镜像代拍——LG-087 段A窗毕毕报转呈+token终值64584补注+LG-085②三裁毕(P1.5立项认/P0启W43/codex观察位认)流转笔
+  - 52397c079 docs(bod): W43 误建周目录勘正——keeper-probe-20261015 树迁移 W42 正位+卷内 sourceOfTruth 路径同步勘正（10-15 活属 W42·CEO 22:38 勘误令·迁移代删保卷留痕）
+- registry：v2.1；今日 registry 提交无变化
