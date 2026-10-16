@@ -1167,3 +1167,12 @@
   - e61ecad7a docs(coo): 台账九十一笔(P案谓词收窄施工毕·冒烟54→52分流正确·03:08生效窗候断言·E1-2即刻起跑03:30承诺维持)
   - 180228977 docs(cto): P案施工·真源位同步+施工卷——谓词收窄只杀runner留server(BOD 02:54:53裁准·含10-15治理段补齐+P案段·冒烟54→52+排除2·03:08断言基线server=38296/41108·护栏三件随卷)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:20 +08：自上次进度提交 4030cd142 后新增 7 条 commit：
+  - 85228e01c docs(coo): 台账九十六笔(E1-4 b2料包7bc56408b出卷·候勘四项·路由派工sg值席·CTO转窗前值守)
+  - 7bc56408b docs(cto): E1-4 b2 跨机料包卷——sg 8712 心跳超时监测 job spec(阈值60min候值首夜回填·两挂点候sg活体勘钉·判据带分诊提示·门禁五条·禁构造假心跳停生产值守)
+  - d43c82064 docs(cos): 段1递推毕报清点转呈——四毕二候(E1-1/2/3/5-8711毕·跨机8712二件候不阻窗)·抽验3091eece0+c8aebf3绿·ALLOWLIST冷启生效·04:00窗restart摊销三件
+  - 9c0a9ea56 docs(coo): 台账九十五笔(段1清点全绿提前40分钟·窗内清单扩项认一次重启摊销三件·8711独立窗候排·清单余两件03:55互证04:00开窗)
+  - 3091eece0 feat(cto): E1-1 窗起提醒 job 脚本首铸——window-reminder-patrol.mjs(读台账 front-matter windows·窗起/窗毕±5min 判拍·落卷 trees/window-reminders·幂等状态 DATA_DIR·BJ 时区钉死·测试缝三 env 零污染·脚本层门禁四连绿 空转/拍发/幂等/形态·ALLOWLIST 追加随 04:00 冷启生效·方案稿 window-reminder-job-plan-20261014)
+  - 99582a38d merge: 收编并行笔（值席落盘防覆盖）
+  - d56f362cd docs(coo): 台账九十四笔(P案03:08轮断言全绿·server永生runner归零零复批·54进程1.5GB→2进程·窗前清单第一件核收)
+- registry：v2.1；今日 registry 提交无变化
