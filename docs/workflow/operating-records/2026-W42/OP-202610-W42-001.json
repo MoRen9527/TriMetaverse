@@ -36,6 +36,23 @@
         "ledger": "LG-080",
         "grantedBy": "COS",
         "grantedAt": "2026-10-15T20:46:40+08:00"
+      },
+      {
+        "charterId": "charter-2026-W42-002",
+        "title": "R 面班组扩满部署（13 席+代码仓同构复制）",
+        "source": "董事会令",
+        "route": [
+          "TriRMC",
+          "TriRLC",
+          "TriMLC",
+          "TriMMC"
+        ],
+        "status": "granted",
+        "doc": "docs/workflow/operating-records/2026-W42/trees/r-plane-duty-deploy-20261016/charter-2026-W42-002-r-plane-duty-scale-full.md",
+        "ledger": "LG-080",
+        "grantedBy": "COS",
+        "grantedAt": "2026-10-16T10:29:00+08:00",
+        "supersedes": "charter-2026-W42-001 扩满形态承继（原册不覆写·M2 原始态两分离）"
       }
     ]
   },
