@@ -961,3 +961,7 @@
   - 2cfa3f89f docs(coo): 台账六十一笔(LG-087预排窗位草案·段A1019段B1020观察期72h·裁回前不开窗·CFO额度前置门)
   - 886c5a809 docs(cto): dsh 方案稿 v4——LG-087 CEO 19:47 裁对表修订（13席dsh化+claude席退役·M-SG不动）·§2B新增（scoped persona正形/1+6+6接位三验/逐席先接位后退役/值席末退/72h稳态门）·窗1序表扩容·风险+3
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:20 +08：自上次进度提交 8027d81e1 后新增 2 条 commit：
+  - 5ef26c67f Merge remote-tracking branch 'sg-server/dev' into dev
+  - 10388d4ef docs(cfo): LG-087段A开窗知情收悉——CEO权柄顶点覆盖周窗前置门(门未放行·被覆盖·责任面CEO令如实记档)·观察照例行贴线备考·超限报警面保留不阻塞·段B候排时主动出对轨读数·落款2026-10-16 20:19:03+08:00 date现查
+- registry：v2.1；今日 registry 提交无变化
