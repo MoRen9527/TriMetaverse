@@ -1033,3 +1033,13 @@
   - 2f4bca7b4 docs(cto): 成本监测哨技术协同卷——第一勘点(树卷session锚零在案→commit链窗主锚三级置信)/探针管道(hub-watch同族+offset增量读+事件缓存复活补裁决)/kill接口(agent-core process-supervisor复用+白名单硬边界+审计五要素)
   - a238c8d2f docs(cto): LG-085②关联追问三问作答卷——插件本体=claude code非自研/agent-core承载可行性成立(TriMC血统+trimodel直连+TriRLC现役消费实锚)/免唤醒=进程常驻+按需推理形态·P3双案勘验裁
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 2ca7c4f19 后新增 8 条 commit：
+  - 95230a9e7 docs(sde): n2b 卷归档 CTO required 裁示三件照办——候窗项+suppress 观察读数+ScopeKey 认可闭环
+  - c3834da7f docs(cto): 监测哨实勘读数初勘卷+汇总脚本落卷——15树两轮(下界/上界口径对照)·分型量级分离实证·1亿误伤预判获证·cacheR 88-99%全谱系·局限如实标注
+  - 4dcd0a680 docs(coo): 台账六十九笔附记(required裁销接受现状·types增补挂窗2清单·suppress计数入运行读数)
+  - 4085ac41c docs(cto): LG-085②追加五问机制层作答卷——现役双形通路(uds直推+outbox拉取)源码实锚/席位无定时器CEO判断①③正确/跨域实时未实现/最后一跳推送=唯一结构缺口/daemon delivery层补齐天-周级正嵌P1
+  - 13a1c2bd6 docs(sde): D-47 族谱追记 SDE 同窗连犯案——整秒圆整造值自指纹+信面落款挂点缺失+落款写文拆两步正形
+  - a36712095 merge: 收编并行笔（值席落盘防覆盖）
+  - af34fa1af docs(coo): 台账六十九笔(n2b毕段A可施工作业全毕·SDE转standby·required缺失发现·D-47勘正收账)
+  - 529328c62 docs(cfo): 监测哨方案卷补注(c)读数解读纪律——CTO卷cd4ed459d双护栏(占比+置信级)+一席多树副树消耗误差源知悉·降级样本CTO已认一致
+- registry：v2.1；今日 registry 提交无变化
