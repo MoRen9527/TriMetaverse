@@ -1048,3 +1048,10 @@
   - 74e97e4d7 Merge remote-tracking branch 'sg-server/dev' into dev
   - 19ac58e09 docs(cfo): 监测哨定值评估初勘卷v0.1——分型档位表(探路15/90/200M·批量90/400/1200M·长跑总量门不设改速率判据候基线)偏高设防候验版+占比列分母裁(commit窗并集·映射损失上界口径·三段判读规则)+深修周六二轮三件批+deepseek渠道落定候接取态清台账行
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:20 +08：自上次进度提交 1c028e58e 后新增 5 条 commit：
+  - 0bf58b224 docs(coo): 台账七十一笔(两缺口裁决落a案web形·今夜续波1单席收口·波2波3候窗2·窗2清单膨胀注)
+  - f5fcf6e29 docs(cto): n3波1两缺口裁决卷——a案web形preset链(员工席身份面终态正形·acp归位BOD插件宿主面)/今夜续=波1web形单席三验收口/波2波3候窗2(mailbox桥+12席无兜底禁半接位批量)/key=env延续+credentials勘验挂窗2
+  - 776e00a7e docs(coo): 台账七十笔(n3波1毕三验①②绿·suppress钉死·两缺口发现候CTO裁生产形注入形态)
+  - 081d622c4 merge: 收编并行笔（巡检兜底自动件·路径不相交）
+  - faf07064a docs(sde): n3 波1 验证段毕——key接取D-46全条款+注入双通道model-visible实证+suppress计数1案+acp形preset绑定缺口发现
+- registry：v2.1；今日 registry 提交无变化
