@@ -49,6 +49,21 @@
 - key 承载位 `~/.dsh-sega-n3/deepseek.env`（600·fleet）在位——段B 13 席运行前形态（credentials service vs env）候 CTO 裁
 - 施工窗硬边界 24:00 前本段收口 ✓（22:09）
 
+## 波1 续 · web 形段（COO 22:15:55 开工令·CTO 两缺口裁=a 案 web 形）
+
+- lastSyncedAt（本节）: 2026-10-16 22:23:34+08:00（date 现查原值）
+
+| 项 | 读数 | 判 |
+| --- | --- | --- |
+| 探针床复位（护栏①） | suppress 配置零残留·头注弃用标注在·preset 链验证形（registry+cos 单席） | ✓ |
+| web 形 boot | 发布位现役形·127.0.0.1:3080·key env 形·**tricompass register 13 连出**（13 preset 全激活+compass provider 全注册） | ✓ **mount 面 boot 级实证**（对照 acp 形 pending·CTO a 案落锤） |
+| 渲染面通路勘定 | web API=WS 流（typert RPC 自定义 mux 帧）+browser-trust fence+一次性 boot token（43 字）——REST/curl 三形全 401 无门 | ✗ 脚本客户端=协议逆向·今夜窗超限**停手报裁** |
+| headless 载体旁证 | 一次性 headless 实验出厂形+session header preset **ABSENT**（与 acp 同） | web 形=preset 链唯一载体·a 案再添一证 |
+
+- **候裁件**：渲染面三验载体三选——a) 段B 专窗 Python WS typert 客户端（估半日）b) dsh 官方脚本客户端（sdk profile·候勘）c) headless 混挂形（不推荐·非发布位形）
+- **护栏执行**：web 实例关停（3080 释放·token 随进程亡）·headless 一次性 home 已清·现役/发布位零触碰（boot 只读）·探针床复位
+- **观察注（值面纪律族增补）**：web boot log 含一次性 token 字样·tail 未滤入 transcript 一例——一次性形低风险已记档·正形=log tail 前滤 token 形（`grep -v 'token='`）
+
 ## 使用依据
 
 - CEO 21:47:57 直连令（解停点+取径指定）·COS 21:49:42 转办信（D-46 五条纪律）·CTO 21:47:47 required 裁示（suppress 计数入运行观察读数）
