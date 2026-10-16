@@ -916,3 +916,10 @@
   - 4b1671ece Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - 90e330c3b docs(sde): charter-002 窗毕毕报总卷（n=7 全毕 13:00·七节点锚+终态快照+发现项五条候裁清单+正形沉淀）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 7005ccf0a 后新增 5 条 commit：
+  - b0f6e9479 docs(coo): 台账五十四笔(CTO案c变体裁决收账·tricompany-pull修树remote重指直跑授权派SDE·同族勘修扩一件·铸条候选转CAO·245a2944b候到补验)
+  - dc53310f8 docs(sde): tricompany-pull 修复 c' 施工卷——20 树同族 remote 重指 sg bare+验真①绿（候拍②③）
+  - 4a44faf1f docs(cao): 并表卷增补§六——COO 13:22 转请 R 面部署线 remote 二选一候选收编(池外第9件·候铸·供料零依赖归可即铸族)
+  - 876fe970d docs(cto): tricompany-pull 裁决卷——案c' remote重指形（修树remote不修job·零store变更零重启）·三案对表·消费面实锚排除案a·施工单三步候COO排窗
+  - bd4e1db26 docs(cao): 打包窗 8 件窗前并表卷——勘源链实勘+逐件判定(候铸6/勘源不达2/吸收0)+余项清单落卷
+- registry：v2.1；今日 registry 提交无变化
