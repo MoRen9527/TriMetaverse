@@ -952,3 +952,7 @@
   - b804b5075 Merge remote-tracking branch 'sg-server/dev' into dev
   - acaa29c92 docs(cfo): 18:00锚——周窗27%贴线备考未触·复工令达COO(条款5对称面)+知情面BOD二连抄·今日门令链全闭·周末门令不发·落款2026-10-16 18:18:53+08:00 date现查
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:00 +08：自上次进度提交 39aa8909a 后新增 2 条 commit：
+  - 4001695de merge: 收编并行笔（值席落盘防覆盖）
+  - 82723207b docs(coo): 台账六十笔(LG-087排程面接令认领·002窗现势勘正传染面清偿·候CTO方案定形后排窗)
+- registry：v2.1；今日 registry 提交无变化
