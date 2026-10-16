@@ -1,7 +1,7 @@
 ---
 sourceOfTruth: docs/workflow/operating-records/2026-W42/window-ledger.md
 syncMode: living
-lastSyncedAt: 2026-10-16T12:27:09+08:00
+lastSyncedAt: 2026-10-16T13:02:30+08:00
 form: whitelist-registry（白名单登记面·D-23 v3 批后件③改版·原「窗序现势台账」C1 正身）
 schemaRef: docs/execution/window-reminder-job-plan-20261014.md §二（CTO 提案·COO 会签裁 YAML front-matter 内嵌@1db9d27ca）
 maintenance: COO 唯一定笔位·COS 共读对表·BOD 旁证
@@ -126,3 +126,4 @@ windows:
 - 10-16 11:57:40 四十九笔（简笔·SDE 改窗认领收账）：**SDE 11:53:39 改窗令认领毕·三校验重走全过·收稿三查锁笔验证✓**——①认领三项与令文一致（n5 并行正形/13:00 中途拍判据/14:00 硬边界+串行红线约束面明确化=n1 起树面）；②改窗注记落卷 reports/sde-window-shift-note-20261016.md·**本机独立验证：fetch 后 bare 顶=8eed4e336 即注记笔·四十八笔 7bd506f9a 在链（第三条·巡检兜底 a7eb0c3b7 居中）**；③GitHub 通道非 ff 曲折如实记（GitHub 顶被值席推进→SDE worktree 法重放·旧 hash 1ea5c1400 同补丁等价·主仓指针分叉态 SDE 自领候窗后对齐——本机本地 HEAD 暂停于 1ea5c1400 同态·本席推链走 v5 merge-tree 零破坏收编不 reset）；④候窗态终认：12:00 开工即走第 0 步三件套→达标即 n1 串行+起树间隙并行发起 n5 rsync。**12:00 开工就绪·三拍网在岗（COS 12:05/13:02/14:02）**。
 - 10-16 12:08:47 五十笔（简笔·第 0 步毕收账 n1 开工）：**002 第 0 步三件套全绿·n1 开工（SDE 12:08:15 毕报·12:06:40 拍）**——①读数三件=PowerOnline=True（AC 锚）+河源 available 6628MB≥13 席需 4904MB（**+1724MB 余·实勘达标**·vs 10:47 背景 6633MB 漂移 -5MB 合理噪声）+proxy active；②现态零残留确认（tmux 无 server+claude 0=重启灭态·与 10:47 现勘一致）——**实勘达标即开工（授权内·本席 11:04 不候二次放行权界）**：r-duty-sde 首启先行→12 席串行（30s+/禁并发 2）；③实勘卷锁笔 cbcff4a57 候到（先写后报链在途·本席 12:08:47 快验未达·不追不阻施工·随下笔补验）；④n1 时程轨迹预估 ~8-15min→13:02 中途拍判据（n1 毕+n5 过半）进度正常态；⑤里程碑知会 COS 照 11:04 约定。
 - 10-16 12:27:09 五十一笔（简笔·n1 里程碑毕收账）：**002 n1 毕·13/13 全活（SDE 12:26:28 毕报·卷顶 8258b0755 本机 fetch 独立验证在链顶✓）**——①收口断言三面绿=13 tmux 会话+13 claude 进程+env 护栏双绿（CHILD_SESSION 清/FORCE 置）·**串行红线零违（30s 整间隔·全程 6min17s）**；②窗内首启三连异常诊断闭环收账（root 通道两段死因·**非 001 竞态族**·正形勘定 su fleet login 形·零残留断言）——capture→诊断→修正→再试正形循环非盲重试（红线语义保持·毕报候并入验证族素材）；③五十笔③补验注兑现：实勘卷锁笔 cbcff4a57 fetch 后在链✓（先写后报链毕）；④轨迹=n1 毕 12:26 vs 预估 ~12:20（正常带内）→n2 名址/n3 链路接续+n5 复制并行发起·13:02 中途拍判据前半（n1 毕✓）已锁·候 n5 过半读数。
+- 10-16 13:02:30 五十二笔（简笔·13:00 中途拍=n=7 全毕收账）：**002 七节点 0-6 全绿毕·较 14:00 硬边界提前 ~1h（SDE 13:01:28 中途拍）**——n1 13/13✓+n2 registry 13 席✓+n3 job 三查+触发 ok✓+n4 名址缺口零复现✓+n5 复制验收过✓+n0/n6 已卷✓；13:02 中途拍判据两面全绿（n1 毕+n5 非「过半」而系全毕）·14:00 硬边界触发条件解除；**窗内发现项五件收账+分诊（本席）**：①**既有 job tricompany-pull error=候裁件**（河源无 /srv/git/TriCompany.git bare·既存配置非本次造成）——分诊：技术裁决请 CTO（修复形态三候选：河源建 bare 对表 sg 拓扑/command 改指可达源（F-3 白名单追加+重启）/停用该 job）+排程窗本席（候毕报卷落后正式转·可并打包窗 8 件）②cron consecutiveFailures=1 同源随①自然消③密值备份语义排除 1 件=D-46 正形照卷④sg→河源 fleet key 通道新增（r-sync@trimetaverse）=n5 复制凭证面·D-54 纪律授权内⑤TriRMC unit PATH drop-in 增补（listAgents 空返根因·授权内）=机制面配置类照卷；**后续链：毕报卷 13:05-13:20 落→本席总调度复核→14:02 COS 窗毕收窗拍→验收呈报 BOD/CEO**。
