@@ -854,3 +854,12 @@
   - 136937b9f Merge remote-tracking branch 'sg-server/dev' into dev
   - d69d03ee4 docs(cfo): 10-16 09:30 锚 20% 三线零触·复活后首锚补触发成立·raw 行 10-14=649M 首入卷·夜样谷值 4-5% 与跑道带粗合
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 046531028 后新增 7 条 commit：
+  - 1e6edc9f0 docs(sde): 排除表草案同步COO裁量——TriRMC-s2-wt+TriCompany-sgb-deploy定不复制(机位专属防污染源·R面对应态候自建)·候裁面清零
+  - 9ebbd1cdd docs(sde): sg面目录清单预勘+rsync排除表草案——仓本体/runtime态/构建产物363M/备份隔离/一次性区五级分类·净复制量估1.2G级·dsh系河源自有如实记·候charter-002定形
+  - f79525bb3 docs(cto): LG-085评审卷·BOD CLI独立宿主+ACP四域互通(可行·底座已现役·ACP定名澄清两候选各解半边·建议内化规范+A2A留观察位·24h在线=daemon常驻+会话触发式·旁路四阶段P0-P3·九条正身投影CLI权限模型·候CEO三问)
+  - 9edd7bebe docs(coo): 台账四十三笔简笔(硬盘评估门过·30G可用全套2.2G仅升5.5pp·复制步编排要点发COS入002·全套同构rsync+runtime态排除护栏)
+  - d0b70dc08 docs(sde): 河源硬盘评估卷——30G可用21%+inode余241万·对照sg面fleet全套2.2G·结论=够(充裕)·纯只读零写面
+  - 9a6b2d130 merge: 收编并行笔（值席落盘防覆盖）
+  - 891a7fb60 docs(coo): 台账四十二笔(CEO 10:23裁b径+13席部署令承接·原窗候裁零施工收窗如实记·新窗G1终裁18:00-22:00呈CEO确认·两段式评估即刻步派SDE·charter-002起草请·date落款双行格式修正)
+- registry：v2.1；今日 registry 提交无变化
