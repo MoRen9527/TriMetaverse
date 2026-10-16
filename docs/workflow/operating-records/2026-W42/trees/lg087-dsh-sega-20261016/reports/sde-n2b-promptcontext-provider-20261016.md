@@ -48,6 +48,13 @@
 - **acp vs web dump 缩进形差**：同 config 两 profile dump 顶层缩进不同（acp 顶格/web 两空格）——探读禁带缩进锚假设（假读数家族新形态注记）
 - 插件 render 级验证（context 注册+compass 文本组装+13 席身份分流）候 n3 三验①（key 到位）——探针件与测试床留 /home/fleet/dsh-compass-probe-20261016/ 可复用
 
+## CTO required 裁示归档（2026-10-16 21:47:47 裁·COO 转达·本席照办三件）
+
+- **裁**：required=true 半项=**接受现状+suppress 场景运行期监控+上游 dsh types 增补挂候窗项**（理由三段：不挂外部依赖命脉/监控面可覆盖/三验①硬门不降标准）
+- ① 候窗项「dsh 上游 types required 能力增补」入 LG-087 窗2/版本升级窗清单（排程承载=COO 面同记）
+- ② suppress 场景计数进 n3 后运行观察读数（本席 n3 波1 三验①及运行观察段执行）
+- ③ ScopeKey 正形形态 CTO 已认（preset plugins agent-scoped mount）·n2b 全绿收讫——本文「契约实勘」节 required 悬置项自此落定闭环
+
 ## resumePoint
 
 - n2 主线+停点期插件双毕；n3 候两停点（①deepseek key CEO 直供候接取 ②桥修候窗2）
