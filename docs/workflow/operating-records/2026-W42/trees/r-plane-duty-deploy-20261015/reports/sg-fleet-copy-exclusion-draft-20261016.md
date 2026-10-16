@@ -16,7 +16,7 @@
 | 构建产物（排） | TriMetaverse/output/ **363M**（仓内最大头） | gitignore 可再生 | **排除** |
 | 备份/隔离/历史（排） | TriLC.quarantine 84M·TriModel.quarantine 992K·backup 112K·backup-pre-reconcile 908K·incident-20260910 248K | 历史态 | **排除** |
 | 一次性作业区（排） | lg058-upgrade 118M | 升级作业件 | **排除** |
-| worktree/部署副本态（候裁） | TriRMC-s2-wt 72M·TriCompany-sgb-deploy 50M | 派生工作态 | 候 charter（R 面如需自建对应态非复制） |
+| worktree/部署副本态（**COO 已裁：不复制**） | TriRMC-s2-wt 72M·TriCompany-sgb-deploy 50M | 派生工作态·机位专属物 | **排除**（COO 10:34:44 裁：复制过河源反成污染源·R 面对应态候自建·worktree/部署形态按 R 面机位自定） |
 | 河源自有 | dsh 519M 系**河源侧既有**（sg 面无此项）·TriModel.bak 63M 河源自有 | — | 无需复制 |
 
 ## rsync 排除表草案（候 charter-002 护栏定形）
@@ -30,9 +30,8 @@
 --exclude 'backup*'                  # 备份系
 --exclude 'incident-*/'              # 事故存档
 --exclude 'lg058-upgrade/'           # 一次性作业区 118M
-# 候裁两项（charter 定）：
-# TriRMC-s2-wt/          worktree 派生态
-# TriCompany-sgb-deploy/ sg 专用部署副本
+--exclude 'TriRMC-s2-wt/'            # worktree 派生态（COO 10:34:44 裁不复制·机位专属防污染源）
+--exclude 'TriCompany-sgb-deploy/'   # sg 专用部署副本（同上裁）
 ```
 
 - 排除后净复制量估：1008-363-杂项 ≈ **~620M TriMetaverse+其余仓 ~570M ≈ 1.2G 级**（vs 全套 2.2G——省 ~45%）。
