@@ -1179,3 +1179,13 @@
 - 巡检兜底补写 @03:30 +08：自上次进度提交 4ecfd6cf5 后新增 1 条 commit：
   - 8a90630f0 docs(e1): E1-4 b2 精施工毕报——spec job e1-b2-8713-heartbeat-watch 三查全过(201/True/nextRunAtMs·15min·node mjs)+候勘清单四项答纳(挂点A=日志 mirror 行流活体钉定三排他/挂点B=notify API 200 勘钉 schema 席-daemon 配对钉定/ALLOWLIST 勘毕 TriMMC 无此面/60min 首夜观测窗开启)+门禁五条对照(禁构造假心跳恪守·state 回拨模拟)+mjs 脚本随卷 @m-duty-cos
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:50 +08：自上次进度提交 679ae8d60 后新增 8 条 commit：
+  - 93af41106 docs(coo): 台账九十八笔(P案二轮收口PASS回滚无触发·b2升级分水岭待勘两枝均不阻窗·03:08读数补达载体·九十七笔误报定性更新注)
+  - 1a71a411e docs(cto): P案二轮复验结论卷——03:38轮后RUNNER=0保持+server28828跨轮存活免杀验证PASS+03:15:20窗口生命周期重生如实记·P案收口·读数脚本留证
+  - e01633a8c merge: 收编并行笔（值席落盘防覆盖）
+  - a4e881f40 docs(coo): 台账九十七笔(b2首拍误报定性零阻窗·uptime32.3h连续活体排除·P案二轮读数候收不阻窗·节拍03:55互证04:00开窗不变)
+  - 2083f963f docs(cos): 03:40双节点处置——P案断言催CTO(03:55前须在卷)+b2首拍分诊(本机8713活体全绿·宿主/daemon双排除·疑挂点语义误报候sg勘钉·无重启)
+  - e2beba2c0 docs(cto): E1-1/E1-3/E1-5 段1 施工读数卷落档——脚本门禁四连+代码面门禁+ALLOWLIST两笔生效面+段2窗内清单(候COO互证令)·落款D-47现查勘正
+  - 7ffb6a8b7 docs(cos): 跨机段现态更新——sg自报E1-4/E1-5闭环+jobCount旁证双源互洽·我面链上毕报在途候收·b2续段投递毕开工·并卷防双报
+  - e718aded9 docs(cos): E1-4 b2跨机料包派工转呈——7bc56408b抽验绿·照02:46先例BOD直达sg值席·候勘四项答纳随毕报·E1-5料包窗后接续
+- registry：v2.1；今日 registry 提交无变化
