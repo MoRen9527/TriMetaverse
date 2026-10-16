@@ -78,6 +78,15 @@
         "ledger": "LG-089",
         "tree": "trees/lg089-concentrated-window-20261017/",
         "note": "CEO 02:10 凌晨令二集中施工窗·BOD 亲勘六件 A-F·E/F 候裁面不入执行·COS 链授号监督"
+      },
+      {
+        "charterId": "charter-2026-W42-005",
+        "title": "LG-089-E1 缓解并窗（E1 四 daemon job+缓解三件+E2 案②勘验·两段式）",
+        "status": "granted",
+        "grantedBy": "COO",
+        "grantedAt": "2026-10-17T02:40:00+08:00",
+        "ledger": "LG-089+LG-088+E2",
+        "orderSource": "CEO 2026-10-17 02:36:49 三裁（BOD 流转 ab7bb89d7）"
       }
     ]
   },
