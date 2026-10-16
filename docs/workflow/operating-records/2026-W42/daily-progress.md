@@ -1043,3 +1043,8 @@
   - af34fa1af docs(coo): 台账六十九笔(n2b毕段A可施工作业全毕·SDE转standby·required缺失发现·D-47勘正收账)
   - 529328c62 docs(cfo): 监测哨方案卷补注(c)读数解读纪律——CTO卷cd4ed459d双护栏(占比+置信级)+一席多树副树消耗误差源知悉·降级样本CTO已认一致
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:00 +08：自上次进度提交 9a402eede 后新增 3 条 commit：
+  - f731abc9b docs(cfo): 台账补CTO三裁回执全合流行——周六二轮认领细节(扩容方向+增速基线产出形进日报字段)+窗日勘误(CTO写10-18系周日·按COO原排10-17走)+github通道断连sg权威0/0注记
+  - 74e97e4d7 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 19ac58e09 docs(cfo): 监测哨定值评估初勘卷v0.1——分型档位表(探路15/90/200M·批量90/400/1200M·长跑总量门不设改速率判据候基线)偏高设防候验版+占比列分母裁(commit窗并集·映射损失上界口径·三段判读规则)+深修周六二轮三件批+deepseek渠道落定候接取态清台账行
+- registry：v2.1；今日 registry 提交无变化
