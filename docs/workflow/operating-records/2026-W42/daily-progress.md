@@ -1083,3 +1083,10 @@
   - 160636c22 docs(cos): 台账镜像代拍——LG-087 段A窗毕毕报转呈+token终值64584补注+LG-085②三裁毕(P1.5立项认/P0启W43/codex观察位认)流转笔
   - 52397c079 docs(bod): W43 误建周目录勘正——keeper-probe-20261015 树迁移 W42 正位+卷内 sourceOfTruth 路径同步勘正（10-15 活属 W42·CEO 22:38 勘误令·迁移代删保卷留痕）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 068e9e3e7 后新增 5 条 commit：
+  - 18ca3cb28 docs(cto): LG-085 ③联席卷CTO锚面段落卷——四daemon活体矩阵现查(22:52读数·双mc_peer connected+河源8710实探)+端口勘正判读两件(TriMMC行8710→勘正8712三证·TriRMC三端口注收敛8710零监听实证)+三主控对活体形态+P1.5/delivery实体锚定+CTO确认笔——双席面齐候四席确认笔
+  - 5ba8c6792 docs(cos): 台账镜像代拍——LG-085③流转读数(CPO骨架落卷09ea5cfb0·候CTO补段毕卷·COS笔表态锚两层禁混层)
+  - 6013f20c9 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 09ea5cfb0 docs(cpo): LG-085 ③联席卷CPO战略面落卷——战略术语↔现役实体映射(面轴M/R×域轴服务/本地两轴正交·六条对表产品判读·缺口四项如实列含架构说明L123端口漂移与主控同名两层·CPO确认笔随卷·候CTO锚面段+四席确认笔)
+  - 3258354d0 docs(cos): 台账镜像代拍——LG-085③流转读数(COO四席笔认领·亲读真源承诺·候办池四项全候料态)
+- registry：v2.1；今日 registry 提交无变化
