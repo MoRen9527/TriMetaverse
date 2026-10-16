@@ -13,7 +13,7 @@
 | 项 | 正形 |
 | --- | --- |
 | 改动对象 | TriMLC（8713）daemon 启动链——`src/index.ts` `main()` 启动段（L34 起·REQ-018 pidfile 注册同段邻位） |
-| API | `SetThreadExecutionState(ES_CONTINUOUS \| ES_SYSTEM_REQUIRED)`（kernelbase.dll）——**只阻系统睡眠·不阻熄屏**（值守机无 UI 需求·语义正切） |
+| API | `SetThreadExecutionState(ES_CONTINUOUS \| ES_SYSTEM_REQUIRED)`（**kernel32.dll**·勘正 03:0x：本稿原注 kernelbase 系笔误——活体冒烟实证 kernelbase 无此导出「Cannot find function」实锚，正身导出位=kernel32）——**只阻系统睡眠·不阻熄屏**（值守机无 UI 需求·语义正切） |
 | ffi 载体 | **koffi**（npm·预编译零 node-gyp·业界标准 ffi 库）——TriMLC 现役依赖零 ffi 面（package.json 勘过）·唯一新增依赖·版本施工时锁最新稳定（本稿不写死） |
 | 生命周期 | 进程死请求**自动失效**（OS 层保证）——daemon 崩溃→睡眠保护消失→系统照常 idle 入眠（fail-safe 天然·不会「daemon 死了系统永不睡」）·可选 signal-exit（已在依赖）挂显式清除钩子作整洁性补 |
 | 语义边界 | **保护性强制睡眠保留**：极端低电量等 OS 强制睡眠可越过请求（防电池耗尽烧机）——正常 idle 睡眠被阻·保护性睡眠放行——值守不断+电池保护两需求并存 |
