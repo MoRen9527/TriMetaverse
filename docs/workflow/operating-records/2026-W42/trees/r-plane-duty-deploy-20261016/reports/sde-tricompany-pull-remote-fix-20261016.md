@@ -32,8 +32,8 @@
 | # | 查 | 读数 | 判 |
 | --- | --- | --- | --- |
 | ① | 手动 pull 真通（job 同命令·fleet 身份） | 13:26 拍：`* branch dev -> FETCH_HEAD`+**Already up to date**·树顶=7080a0e==sg bare dev 顶**对平现证** | ✓ |
-| ② | healthz consecutiveErrors 归零+degraded=false | 候 13:30:00 下一拍自然触发后读（job state 真值面） | 候拍 |
-| ③ | 拍后仍对平=真触发证据（D-52 款A 同族） | 候 13:30 拍后读 log status=ok+HEAD 对平 | 候拍 |
+| ② | healthz consecutiveErrors 归零+degraded=false | **13:31:24 拍：`{"cron":{"degraded":false,"consecutiveFailures":0}}`**（值面 COO 指定读数·13:30 拍自然触发后归零） | ✓ |
+| ③ | 拍后仍对平=真触发证据（D-52 款A 同族） | **13:31:24 拍：lastRunStatus=ok·consecutiveErrors=0·lastDurationMs=3623（真 pull 耗时非 20ms 速败）·lastError=None·HEAD=7080a0e 对平** | ✓ |
 
 ## 回滚锚
 
