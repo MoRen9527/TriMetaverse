@@ -69,6 +69,15 @@
         "grantedBy": "COO",
         "grantedAt": "2026-10-16T20:19:04+08:00",
         "note": "CEO 20:15:46 裁令即刻开窗·D-39 排窗确认面已过（裁令内）"
+      },
+      {
+        "id": "charter-2026-W42-004",
+        "status": "granted",
+        "grantedBy": "COO",
+        "grantedAt": "2026-10-17T02:17:00+08:00",
+        "ledger": "LG-089",
+        "tree": "trees/lg089-concentrated-window-20261017/",
+        "note": "CEO 02:10 凌晨令二集中施工窗·BOD 亲勘六件 A-F·E/F 候裁面不入执行·COS 链授号监督"
       }
     ]
   },
