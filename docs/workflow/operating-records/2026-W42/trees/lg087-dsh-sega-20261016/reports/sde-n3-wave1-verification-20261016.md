@@ -64,8 +64,20 @@
 - **护栏执行**：web 实例关停（3080 释放·token 随进程亡）·headless 一次性 home 已清·现役/发布位零触碰（boot 只读）·探针床复位
 - **观察注（值面纪律族增补）**：web boot log 含一次性 token 字样·tail 未滤入 transcript 一例——一次性形低风险已记档·正形=log tail 前滤 token 形（`grep -v 'token='`）
 
+## b 案只读勘验（COO 22:27:49 派工·CTO 三锚裁示 22:28:22·22:33 判停）
+
+| 锚 | 判 | 证据（纯 cat/head/ls/grep·零 boot 零发送零施工） |
+| --- | --- | --- |
+| ① 官方件性 | ✓ 成立 | `dsh --profile sdk`=官方 stdio JSON-RPC 服务端（dsh-sdk-jsonrpc-server·握手 identity=deepseek-harness-sdk-runtime·官方协议包 dsh-sdk-protocol 在册·主 README「SDK and ACP are profiles, not separate public bins」+Python wheel 打包同命令） |
+| ② 读数承载 | **✗ 不齐→判停主因** | dsh-sdk-app 出厂 patch 无 agent-preset-registry（仅全局 system-prompt+jsonrpc-server·与 acp-app 同形）→preset 链 pending（轮3 机制同形实证）→三验①②两读数无承载；发布位 13 席 patch 只装 web profile——承载须补挂+装 13 席形=自研包装变形（锚①随破）+新施工（禁） |
+| ③ 红线 | ✓ 不适用即满足 | stdio JSON-RPC initialize 合法握手·不涉 browser-trust fence/boot token |
+
+- **结论（照 CTO 裁「任一锚不齐→停」）**：a 案挂窗2 候窗项清单第七项·渲染面三验①②随段B 专窗·今夜波1 收口=部分接位。
+- **窗2 新增候裁选项（勘验附赠情报）**：官方 jsonrpc-server 明示「persona come from the surrounding composition」——「sdk profile 补 13 席 patch」路线（patch files=官方组合机制）可成 preset 链第二载体兼官方脚本客户端通路。
+- 且回呈链=SDE→COO（msg e8f8b795·22:33:26 落款·对表 +23s 正挂）·本席转 standby 不开新施工面（余窗 87 分钟>30 分钟纪律）。
+
 ## 使用依据
 
-- CEO 21:47:57 直连令（解停点+取径指定）·COS 21:49:42 转办信（D-46 五条纪律）·CTO 21:47:47 required 裁示（suppress 计数入运行观察读数）
+- CEO 21:47:57 直连令（解停点+取径指定）·COS 21:49:42 转办信（D-46 五条纪律）·CTO 21:47:47 required 裁示（suppress 计数入运行观察读数）·COO 22:27:49 派工令+CTO 22:28:22 三锚裁示（COO 22:28:22 转录）
 - dsh 0.2.0-rc.2 源码直读：dsh-agent-preset-registry（definitions 键=config.id·session-log 铁律）／dsh-system-prompt（personaPrefix section 注册·suppress 语义）／dsh-persona（Config 契约·scope-only 注释）／dsh-web-app 出厂 patch（registry 挂载正形）
 - B1 分账卷（8c5f4a094）钥匙双路径·session log model-visible 实物（session.v4.jsonl 解压直读）
