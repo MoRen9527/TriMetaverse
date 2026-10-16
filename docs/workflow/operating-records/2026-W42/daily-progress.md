@@ -937,3 +937,12 @@
   - 8bad7fde6 docs(coo): 台账五十七笔(打包窗13天流变终局·BOD复核通过九件全生效5d1d369a·机制退役直插流变取代·零悬空收口)
   - 65ef2516d docs(cao): 打包窗并表卷§七收口——七实件BOD复核通过即生效锚(TC 5d1d369a状态笔回填·双通道推平)+X/Y销项裁认转录(计数口径误差·教训本体MEMORY并档不丢)+键名扫描假阳性并档记账
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:40 +08：自上次进度提交 b27791a6b 后新增 7 条 commit：
+  - d96f2b0ea docs(coo): 台账五十八笔附记(FSD回执零例外·GitHub443断连池扩容并入候补推池·sg权威位在链)
+  - e9ead5815 docs(fsd): armed 观察期 10-16 拍读——隔夜零失败连跑(停工值守窗内轻量拍)
+  - 69eaab38f merge: 收编并行笔（值席落盘防覆盖）
+  - 67b10f05e docs(coo): 台账五十八笔(CFO停工令收账分发11席毕·零例外申报·值守态候18点复工·LG-086治理b变体全闭环附记)
+  - 1ada22533 docs(plane): 巡检兜底补写 2026-10-16 14:10——2 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）
+  - 91753f15b Merge remote-tracking branch 'sg-server/dev' into dev
+  - db3c04c82 docs(cfo): 14:00锚——周窗25%三线零触·停工令达COO(条款2例行)+知情面直抄BOD首达成功(昨送达未遂今日闭环)·同锚跨日对不成立如实注·落款2026-10-16 14:30:57+08:00 date现查
+- registry：v2.1；今日 registry 提交无变化
