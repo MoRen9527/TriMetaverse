@@ -53,6 +53,22 @@
         "grantedBy": "COS",
         "grantedAt": "2026-10-16T10:29:00+08:00",
         "supersedes": "charter-2026-W42-001 扩满形态承继（原册不覆写·M2 原始态两分离）"
+      },
+      {
+        "charterId": "charter-2026-W42-003",
+        "title": "R面dsh化段A探路段施工窗（LG-087·今晚即刻开窗）",
+        "source": "董事会令",
+        "route": [
+          "TriRMC",
+          "TriCode",
+          "TriModel"
+        ],
+        "status": "granted",
+        "doc": "docs/workflow/operating-records/2026-W42/trees/lg087-dsh-sega-20261016/charter-2026-W42-003-dsh-sega-tonight.md",
+        "ledger": "LG-087",
+        "grantedBy": "COO",
+        "grantedAt": "2026-10-16T20:19:04+08:00",
+        "note": "CEO 20:15:46 裁令即刻开窗·D-39 排窗确认面已过（裁令内）"
       }
     ]
   },
