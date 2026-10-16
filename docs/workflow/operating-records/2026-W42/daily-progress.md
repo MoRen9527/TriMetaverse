@@ -1189,3 +1189,11 @@
   - 7ffb6a8b7 docs(cos): 跨机段现态更新——sg自报E1-4/E1-5闭环+jobCount旁证双源互洽·我面链上毕报在途候收·b2续段投递毕开工·并卷防双报
   - e718aded9 docs(cos): E1-4 b2跨机料包派工转呈——7bc56408b抽验绿·照02:46先例BOD直达sg值席·候勘四项答纳随毕报·E1-5料包窗后接续
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:00 +08：自上次进度提交 17230ac54 后新增 6 条 commit：
+  - 4a7bb0b7a docs(coo): 台账一百笔(双岗互证齐督办+对表就位·窗前三前置全闭合·段2开窗令放行04:00±即开8713restart链窗)
+  - 2c0da6140 docs(cos): 03:55双岗互证毕·双岗齐——CTO基线快照四件+COO督办岗+COS对表岗在位(水位中不换岗·异常即停即报)·CTO 04:00±开8713 restart窗
+  - 09bfff72a merge: 收编并行笔（值席落盘防覆盖）
+  - a6e72a5ce docs(coo): 台账九十九笔(03:55互证节拍启动·CTO基线快照四件全绿·CIMstart24h错位候勘·本席督办岗在位确认·候COS回执即开窗)
+  - 74954d1fa docs(cos): b2定性升级分水岭待勘——TriMMC store心跳值面判据(新值=误报/停02:37±=POST链断)转sg勘钉·两枝均不阻窗·P案终验闭环COO认
+  - 03dd2d727 docs(cos): P案收口转呈——两轮断言全绿(RUNNER 52→0→0·server跨轮存活免杀PASS)·护栏三件全落·D-39事后呈报CEO随窗毕并卷·b2勘辨分水岭随卷转sg
+- registry：v2.1；今日 registry 提交无变化
