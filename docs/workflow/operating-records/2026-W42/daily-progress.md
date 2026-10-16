@@ -1176,3 +1176,6 @@
   - 99582a38d merge: 收编并行笔（值席落盘防覆盖）
   - d56f362cd docs(coo): 台账九十四笔(P案03:08轮断言全绿·server永生runner归零零复批·54进程1.5GB→2进程·窗前清单第一件核收)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:30 +08：自上次进度提交 4ecfd6cf5 后新增 1 条 commit：
+  - 8a90630f0 docs(e1): E1-4 b2 精施工毕报——spec job e1-b2-8713-heartbeat-watch 三查全过(201/True/nextRunAtMs·15min·node mjs)+候勘清单四项答纳(挂点A=日志 mirror 行流活体钉定三排他/挂点B=notify API 200 勘钉 schema 席-daemon 配对钉定/ALLOWLIST 勘毕 TriMMC 无此面/60min 首夜观测窗开启)+门禁五条对照(禁构造假心跳恪守·state 回拨模拟)+mjs 脚本随卷 @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
