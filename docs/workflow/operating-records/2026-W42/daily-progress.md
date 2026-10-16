@@ -923,3 +923,9 @@
   - 876fe970d docs(cto): tricompany-pull 裁决卷——案c' remote重指形（修树remote不修job·零store变更零重启）·三案对表·消费面实锚排除案a·施工单三步候COO排窗
   - bd4e1db26 docs(cao): 打包窗 8 件窗前并表卷——勘源链实勘+逐件判定(候铸6/勘源不达2/吸收0)+余项清单落卷
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:40 +08：自上次进度提交 14465b85d 后新增 4 条 commit：
+  - 378f10915 merge: 收编并行笔（值席落盘防覆盖）
+  - 1ffe0b257 docs(coo): 台账五十五笔(tricompany-pull修复毕三查全绿候裁项销20树勘修·打包窗终裁直跑即铸6实件·供料破案L50·X/Y补勘候认领)
+  - 1f1d43fcb docs(sde): tricompany-pull 修复验真段——三查全绿（13:31:24 拍 consecutiveFailures=0+degraded=false+拍后 status=ok 3623ms 对平）
+  - deebbf6f2 docs(sde): tricompany-pull 修复验真段——三查全绿（13:31:24 拍 consecutiveFailures=0+degraded=false+拍后 status=ok 3623ms 对平）
+- registry：v2.1；今日 registry 提交无变化
