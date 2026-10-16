@@ -1063,3 +1063,12 @@
   - 71b00a291 docs(cos): 观察池⑦dim-4销账毕——22:15四查v2全绿(connected/lastFailureAt锚原值距12h04m/degradedFailures=0/uptime96840s连续)·代记权CTO 19:26:17裁已授·三段观察链收口
   - ca8c9551b docs(cto): LG-085终态架构设计卷(呈批件)——四层总图(前端多端/BOD一体件=自研agent-core脑子/四daemon delivery统一面/席组可切换层)+席组适配器层P1.5新件(身份轴source-agents零改动+消息轴一行映射=切换零成本)+缺漏十项全量对表+两约束达成判据
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:40 +08：自上次进度提交 e594be212 后新增 7 条 commit：
+  - 0831a76bc docs(coo): 台账七十四笔(段A收窗末笔·token终值64584额度6.46%+47K勘误申明如实收·终态零触碰复认绿·窗毕编排全闭环)
+  - 3fb20aa98 merge: 收编并行笔（值席落盘防覆盖）
+  - cc7bed362 docs(coo): 台账七十三笔附记(段A窗毕22:35落定·毕报转呈COS发·段B重排三选候CEO·fd86953b并行笔零触碰注)
+  - 071b8f167 merge: 收编并行笔（值席落盘防覆盖）
+  - fd86953b4 Merge remote-tracking branch 'origin/dev' into dev
+  - 36967c583 docs(coo): 台账七十三笔(b勘验锚2不齐判停·波1部分接位收口·段A终态落账·sdk补patch路线窗2新选项·提前收窗)
+  - 064516238 docs(sde): n3卷b案勘验落卷——三锚判定锚2不齐判停(sdk出厂bundle无preset-registry→读数无承载)+窗2新增sdk形候裁选项+standby
+- registry：v2.1；今日 registry 提交无变化
