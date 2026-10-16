@@ -850,3 +850,7 @@
   - ac7ce7b05 docs(coo): 台账四十一笔(死因三拍直证定谳=tmux并发new-session的pane spawn env竞态·非PATH非overcommit·升配未必解13席=升配+串行双解·2席现机零升配·串行升格硬性红线·呈批增补发COS)
   - 1cc01687b docs(sde): n1死因直证卷——并发spawn竞态定谳(3连发command not found 127×3直证vs同链单发全活)·非PATH非overcommit双更正如实记·升配输入=非abort向串行对症·清场零残留三断言
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 8ce22bd38 后新增 2 条 commit：
+  - 136937b9f Merge remote-tracking branch 'sg-server/dev' into dev
+  - d69d03ee4 docs(cfo): 10-16 09:30 锚 20% 三线零触·复活后首锚补触发成立·raw 行 10-14=649M 首入卷·夜样谷值 4-5% 与跑道带粗合
+- registry：v2.1；今日 registry 提交无变化
