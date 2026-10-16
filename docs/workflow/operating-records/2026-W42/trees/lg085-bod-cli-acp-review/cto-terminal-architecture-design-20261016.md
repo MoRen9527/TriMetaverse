@@ -2,8 +2,8 @@
 
 - sourceOfTruth: 本卷（trees/lg085-bod-cli-acp-review/cto-terminal-architecture-design-20261016.md）
 - syncMode: static（终态架构设计·呈批件·经 COS 呈 CEO）
-- lastSyncedAt: 2026-10-16T22:16:33+08:00（date 现查·写前跑）
-- 令源: CEO 22:12:54 三裁决（LG-085② 终裁落账：P0 维持搁置/双案分阶段认/P1 增补 delivery 层件 A/B）+终态架构思路原话（COS 22:13:53 忠实转录）
+- lastSyncedAt: 2026-10-16T22:23:17+08:00（date 现查·写前跑·并卷增补修订）
+- 令源: CEO 22:12:54 三裁决（LG-085② 终裁落账：P0 维持搁置/双案分阶段认/P1 增补 delivery 层件 A/B）+终态架构思路原话（COS 22:13:53 忠实转录）+**CEO 22:20:15 补充令（初版通道入图并卷·COS 22:21:44 转办）**
 - 设计硬约束（CEO 明示）：a.**席组可切换**=四域随时换 codex/claude code/dsh/其他·source-agents 发布源·切换零成本；b.**脑子=自研 agent-core**（非 claude code 会话承载）
 
 ## 〇·架构总图（终态全景）
@@ -58,6 +58,18 @@ graph TB
 
 **一句话读图**：CEO 只面对层4 多端；层3 BOD 一体件=脑子（自研 agent-core 终态·claude code 过渡）+fat client；层2 四 daemon=状态与消息唯一真源（delivery 层保证「推送到席」语义）；层1 席组=source-agents 正身经适配器层发布到任意 harness——**换席组=换发布目标，BOD 与 daemon 层零改动**。
 
+## 〇+a·初版通道（现役过渡层·CEO 22:20:15 补充令入图）
+
+```mermaid
+graph LR
+    CEO["BOD/CEO"] -->|"$1 Linux: tmux send-keys<br/>$2 Windows: send key<br/>(直达 COS 输入框)"| COS["各域 COS 接令"]
+    COS -->|"$3 代控本域各席<br/>主动去信箱取信/发信"| SEATS["本域席组"]
+    SEATS -.->|"$4 信箱/发信<br/>(daemon 现役面)"| BOX["daemon 信箱+outbox"]
+```
+
+- **定性：最初级四域互动=现役资产非缺口**——零新工程·今晚 19:25 R 面 13 席打招呼链活体实证（BOD tmux send-keys 直投 r-duty-cos→COS 代巡 12 席→13/13 应答·回报卷落 /srv/fleet）。
+- **两版分层**（CEO 定位）：**初版通道**=过渡期可用通路（人 drive 的直达输入框+COS 代控取发信——可靠但非实时非自动）；**二版=delivery 统一面**（P1 已裁件 A/B/C——推送到席+发信 API 统一+到达回执=实时互发自动形）。两版非替代关系：初版通路保留作**降级通道**（daemon 面异常时的人 drive 兜底——活体实证价值延续）。
+
 ## 一·席组可切换性设计（硬约束 a·本卷新增主件）
 
 **原理：身份与消息两轴解耦 harness**——
@@ -92,6 +104,7 @@ graph TB
 | 8 | 跨域实时（urgent 提频通道） | outbox 拉取分钟级 | 候裁项·非主干 |
 | 9 | 前端多端 | CLI 未建/PWA/小程序未建 | P0-P2 已批路径 |
 | 10 | BOD↔本域 COS 互发全通 | uds 活会话直推✓+信箱落箱（无推送） | 件 A 落地即全通 |
+| — | ~~四域互动通路~~ **初版通道=现役资产**（CEO 22:20:15 定性）：tmux/send-keys 直达 COS 输入框→COS 代控各席取发信——19:25 打招呼链 13/13 实证 | **非缺口**·保留作降级通道 | 二版实时互发=P1 delivery 层 |
 
 **现役底盘清点（图中有·不缺）**：四 daemon HTTP+SSE+token 门/outbox 三态+puller/信箱 letter-store/树协议值席/hub-watch 监视/TriRLC agent loop+session-store（agent-core 血统）/FADE 发布管线+转译器/source-agents 正身。
 
@@ -99,6 +112,7 @@ graph TB
 
 | 阶段 | 内容 | 工程量 | 状态 |
 | --- | --- | --- | --- |
+| **初版通道（现役过渡层）** | tmux/send-keys 直达 COS→COS 代控取发信（19:25 打招呼链 13/13 实证）——**零新工程·现已可用**；二版 delivery 层落地后转降级通道保留 | 0 | 现役实证 |
 | P0 只读镜像 CLI | 聚合视图（已批·维持搁置候启动令） | 周级 | 候启动 |
 | **P1 审批写回+delivery 层** | 件 A/B（已裁增补）+件 C | 天-周级 | 已裁·候排程 |
 | **P1.5 席组适配器层** | 适配器映射表+两 harness 壳注册（claude code/dsh）——**席组可切换性主件** | 天级（映射表驱动·agent-core registerTool 形现役先例） | 本卷新提·候裁 |
@@ -126,4 +140,4 @@ graph TB
 - 源码实锚（10-16 现探）：TriMLC notify 面/TriMMC outbox/TriRLC send-message.ts/agent-core 全套；
 - LG-087 v4（dsh 席组现役形）·LG-082 hub-watch·LG-036 outbox 链。
 
-—— CTO 小狄（落款 date 现查原值 2026-10-16 22:16:33 +0800·发毕对表）
+—— CTO 小狄（落款 date 现查原值 2026-10-16 22:23:17 +0800·并卷增补修订版·发毕对表）
