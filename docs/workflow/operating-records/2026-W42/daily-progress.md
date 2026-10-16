@@ -898,3 +898,9 @@
   - a5d62e936 Merge remote-tracking branch 'sg-server/dev' into dev
   - 7c6d07ce4 docs(cfo): LG-085裁②成本读数落卷——BOD单席24h=135M(cacheR 95.8%)≈sg13席活跃日全量·触发式假设框1-10M/日>90%降幅·不折现金·落款2026-10-16 11:59:38+08:00 date现查
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:30 +08：自上次进度提交 67a9702a9 后新增 4 条 commit：
+  - cb1802351 merge: 收编并行笔（值席落盘防覆盖）
+  - 60a5c8ca8 docs(coo): 台账五十一笔(n1毕13/13全活·红线零违6min17s·首启三连异常诊断闭环非竞态族·cbcff4a57补验兑现·13:02拍前半锁)
+  - 8258b0755 docs(sde): charter-002 n1毕13/13全活——首启异常三连诊断(root PATH 127→root拒skip-permissions exit1→正形su fleet login形)+串行红线严守(30s整×12席·6min17s·零失败)+收口断言(13会话/13进程/env护栏双绿/内存5659MB余/proxy active)+假读数新向在案(root/fleet socket位错位假阴性)+零残留·落款2026-10-16 12:24:30+08:00前后 date现查随commit
+  - 09f0e3a37 docs(sde): charter-002 n1毕13/13全活——首启异常三连诊断(root PATH 127→root拒skip-permissions exit1→正形su fleet login形)+串行红线严守(30s整×12席·6min17s·零失败)+收口断言(13会话/13进程/env护栏双绿/内存5659MB余/proxy active)+假读数新向在案(root/fleet socket位错位假阴性)+零残留·落款2026-10-16 12:24:30+08:00前后 date现查随commit
+- registry：v2.1；今日 registry 提交无变化
