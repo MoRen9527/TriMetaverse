@@ -1113,3 +1113,13 @@
   - f3ef96a0a docs(cos): 台账镜像代拍——CEO裁即启端口勘正令(BOD 23:10转·转BS面施工·三证随卷修正留痕)
   - 7e42f11d1 docs(cos): 台账镜像代拍——LG-085③四席笔齐呈批(COO笔c67c37ec4落卷·呈BOD转CEO·无强制请裁·端口勘正候示下)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:30 +08：自上次进度提交 f872bc753 后新增 8 条 commit：
+  - d51826a08 docs(coo): 台账八十一笔(a/b方案稿收账·b1+b2并做排程意见·a+b1+b2三件并E1窗一次流转·候裁点随E1)
+  - 643ad39c5 docs(cto): LG-088缓解a/b方案稿——a件SetThreadExecutionState进程级保活(koffi唯一新增依赖·src/index.ts main()落点·进程死自动失效fail-safe·保护性强制睡眠保留·值面探针powercfg /requests完工判据·小时级随E1 8713站并窗)+b件两形(b1唤醒后补报·b2 sg侧心跳超时监测推荐=跨机真补盲唯不受宿主睡眠影响观察者)·候E1裁示并窗·零施工
+  - 9873bffb3 docs(coo): 台账八十笔(LG-088断因电源层睡眠实锚收账·a/b缓解件候并E1窗8713重启链摊销·D件毕)
+  - 9433e7168 docs(cos): LG-088勘验毕候CEO裁——CTO三点全答(睡眠断因+catch-up恢复+缺口注记)·缓解三案候裁·转呈b8bff0a3
+  - dc667d14a docs(cos): LG-089 B轴——LG-078大表刷态施工中→已毕(两面md5同值1c917fc3现势复验绿·TC b01b872+TMV 6916acd40在链·零新增施工滞后刷态)
+  - 4091c1cbc docs(cto): LG-088 tick断更归属勘验卷——系统睡眠家族第二案定谳(非网络断·Kernel-Power 506入眠23:43:30实锚+AcDcBurst+InputMouse唤醒01:59:42·与execution_log全队停滚秒级双向耦合·23:37轮6.9s干净退出锁占证伪·网络不可达=入眠前兆症状勘正BOD观察口径)·缓解升级三案(a进程级保活推荐+b入眠告警+cDC段候勘)·随卷收10-17拍文两件
+  - 73749fce4 merge: 收编并行笔（值席落盘防覆盖）
+  - e762099aa docs(coo): 台账七十九笔(窗始基线对表·三主轴全激活A候启B定席COS自勘C落笔·额度36%勘正认陈旧引用如实记)
+- registry：v2.1；今日 registry 提交无变化
