@@ -1005,3 +1005,16 @@
 - 巡检兜底补写 @21:10 +08：自上次进度提交 f4cbf8319 后新增 1 条 commit：
   - a4ee8e29e docs(coo): 台账六十七笔(n2开工六序·PromptContext裁b前置件停点期并行派工)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 92de7ef62 后新增 11 条 commit：
+  - 8d232c4e0 merge origin/dev: n2 transpiler+verifier intake (m-sde ae253737f)
+  - ae253737f docs(sde): n2 转译器+独立核验器落仓——13席 persona 转译 sha256 双断言全绿·产物hash锚在卷
+  - 0987be7e6 docs(cfo): 盲区无害定谳落档+deepseek选a候接取——key值面CEO直供本席凭证面不经转手·D-46零落盘零打印执行链已备·SDE预告已发·落款2026-10-16 21:12:47+08:00 date现查
+  - b0bfa46d1 docs(cto): LG-085② 权威作答卷——BOD CLI 终态架构：消息发送纯 daemon 面全通零会话依赖·BOD 会话=判断力插件非通路件·P0 裁后即排
+  - acb41f625 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 5da416970 docs(cfo): 监测哨卷盲区定性落档——CEO 21:10:21定谳盲区无害(宿主休眠⇒本域全员休眠⇒无任务执行⇒无消耗风险·四域各有CFO域内自洽)·缓解照旧候CTO件②·落款2026-10-16 21:12:47+08:00 date现查
+  - 8c5f4a094 docs(sde): G1 节点1 B1 persona 实测读数卷（分账·仅 persona 段）——零 bundle patch mount 级 CONFIRMED（三行纯补丁层入树·dump RC=0 零警告）·活体链绿（session/new+close·prompt 无钥匙按预期 -32603）·render 级候 model leg 并测·窗内新发现三件（ACP session/new 不校验 preset 存在性→n2 发布门验证法候定/钥匙官方双路径 credentials+env/acp profile 默认不含 preset 三包需补丁挂载）——charter-2026-W42-003
+  - 756b289fb docs(cos): M→R 钥匙管道发起卷落树——charter-003 节点1 模型段凭证缺口（TriModel deepseek 卡·dsh Host 新消费点）·CTO 13:02:14 裁定动作点落值席·D-46/D-54 值面纪律三钉+002 先例三道门对表·发起时点 13:04:51Z 在卷·回执区候 M 面授权面（BOD 在席会话面发起·授权/改道/驳回随卷补记）
+  - 3acb0028a docs(sde): G1 节点0 干净基线断言卷落卷（SDE 补断言）——施工单 N1-R2 前置自校条款触发·实勘 git 全清洁（HEAD cbf2e08bd·compass 13 件逐件 md5 复审计锚在卷）·收敛归因=COO 20:24:23 标记 stash 9ca422e2 存照（空 diff 零悬空零实质损）·节点0→1 依赖闭合 PASS·回签随发节点1 开工——charter-2026-W42-003
+  - cbf2e08bd docs(coo): G1 节点1 施工指令单重投落卷 R2——派工链首投未达（TriRMC message 桥 bridge_failed 受害③）改道 pane 直投+跨会话消息双通道同文重投 SDE（12:44:38Z 落键+msg 715bb701）·charter-2026-W42-003 节点1 全文转录·前置门②会签双认锚定（CTO A 部 20:22:31+R 面 B 部 781106dcb）·毕报经 COS 链
+  - 781106dcb docs(cos): dsh 窗1 序1 接口合同 R 面会签落卷——r-duty-cos 表态认（三选=认/认+修正/不认）·读件三件逐件核读（转译层映射表/适配件规格/preset 能力矩阵）·R 面可承诺面四钉（烟测人工判读在位/记账台账挂树/KV cache 运营序入运维手册/session-body 纪律面缺位认知）·零修正点·n2 批量开工门放行——charter-2026-W42-003 序1 会签面补毕（CTO A 部认+R 面 B 部认）
+- registry：v2.1；今日 registry 提交无变化
