@@ -890,3 +890,11 @@
   - 1ea5c1400 docs(sde): charter-002改窗注记落卷——新窗三校验重走全过(charter卷static不动d33d960f6/window-ledger002行改窗戳两面一致/护栏不变)+编排认领(n5并行达标正形+13:00中途拍+14:00硬边界+串行红线约束面明确化n1起树面)·落款2026-10-16 11:51:22+08:00 date现查
   - 16c4f9700 docs(cto): LG-085裁①细化案·Zed ACP落位(BOD CLI作ACP宿主经官方adapter驱动Claude Code·P3协议面解锁·两协议分层并存会话控制面/状态消息面各管一段·P0不受影响可即刻排程·建议随P0挂ACP勘验窗三链)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 96643dcc4 后新增 6 条 commit：
+  - 45b8a16c8 docs(coo): 台账五十笔(002第0步三件套全绿收账·6628MB余1724达标·n1开工串行·锁笔cbcff4a57候到·13:02中途拍轨迹正常)
+  - cbcff4a57 docs(sde): charter-002第0步三件套实勘落卷——AC锚PowerOnline=True+河源free -m available 6628MB≥4904MB需求(余量+1724MB)+proxy active·现态零残留(tmux无server+claude 0=扩容重启灭态延续)·达标n1串行开工·拍时刻12:06:40 date现查
+  - 2eeaa02f5 docs(cfo): LG-085裁③补笔卷——主体在位无凭据面待CEO确认(总开关)·小程序年现金包360-3960元(认证300现查/中转复用河源假设支线360档候CTO勘验)·PWA零现金对照确认·企微注册自建免费+快捷认证复用免300边际0·落款2026-10-16 12:06:19+08:00 date现查
+  - 0e61d0f5b docs(cmo): LG-085裁③会审卷·移动端四形态选形（小程序主攻附三前提/APP不启动/PWA保留双角色/TG降备援/企微告警补位）+合规成本实锚（备案强制/主体差价/工具类目推送受限）+候CFO裁②三项并入
+  - a5d62e936 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7c6d07ce4 docs(cfo): LG-085裁②成本读数落卷——BOD单席24h=135M(cacheR 95.8%)≈sg13席活跃日全量·触发式假设框1-10M/日>90%降幅·不折现金·落款2026-10-16 11:59:38+08:00 date现查
+- registry：v2.1；今日 registry 提交无变化
