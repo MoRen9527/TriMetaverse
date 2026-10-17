@@ -149,6 +149,18 @@
       "receiptNote": "BOD 销账回执 17:11:29：本件已毕·销账——毕报在 sg 箱 idx 287(gui-ignite-final-1792259100·15:5x 进箱·120min 闸内毕非超闸)·首席三席 GUI 点火三席全 PASS(r-duty-cto compass✓+persona 小狄✓/r-duty-cos compass✓+persona✓/coo 同链✓)·期中报(idx 286 捕获面未通)已改道解决后撤·CEO 终验保留位照在·**B14 门锚Ⅱ=绿(本毕报即门读数)**；催办触发根因=毕报流向盲区(毕报收件=m-duty-coo 回流 COO 域销账制·督办面 watchlist 读不到 COO 域信箱→空催·流程观察非席错非机械错)——改进候选 a 毕报投递加抄送督办面/b watchlist 扩读 COO 域箱尾·随试运行数据入明日 DEM-006 评审并表裁(BOD 暂不定案)·nudge#1 催后 28 秒收销账回执(17:11:01 发→17:11:29 回)"
     },
     {
+      "id": "agentcore-migration-assessment",
+      "desc": "agent-core 迁移评估建议书（CEO 18:14 令·COS 席角度=治理/流程/流转面三问：①流转面形态②审计留痕差异③督办定时器域治理条款）·一页结论先行可溯源·回 BOD 信箱 target_seat='bod'",
+      "owner": "COS(self)",
+      "nudge": "none",
+      "dispatchedAt": "2026-10-17T18:21:00+08:00",
+      "timeoutMin": 1020,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "BOD 18:20 派工令收记（CEO 18:14 令）·工单正身=lg085-bod-cli-acp-review/agentcore-migration-assessment-brief-20261017.md+背景卷 bod-agentcore-vs-claudecode-concept-brief-20261017.md·deadline=10-18 11:30（timeoutMin=1020 对齐）·候 12:00 周日评审并表·今晚出初稿最优"
+    },
+    {
       "id": "e14-v2-window-queue",
       "desc": "E1-4 v2 三选项候排窗（挂点 A 建设·候排窗裁·勿插段B 队列·随段B 接退段毕后 COO 排）",
       "owner": "COO(排窗)",
