@@ -117,12 +117,12 @@
       "desc": "CFO 锚复读节拍提醒（15:28 窗重置后+窗毕两读数点·COS 督办提醒 CFO 走面）",
       "owner": "CFO(m-cfo 在册·勘正归位)",
       "nudge": "m-cfo",
-      "dispatchedAt": "2026-10-17T15:28:00+08:00",
+      "dispatchedAt": "2026-10-17T16:20:00+08:00",
       "timeoutMin": 15,
       "mode": "observe",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "勘正 15:44（COO 三犯警）：m-cfo 本机常驻席在册（B 系退的是 r-duty-cfo 河源 duty 形）——self 代守退位·CFO 级读数归 m-cfo 面（COO 已直发读数请求）；我 15:42 代守读数收记作过渡旁证；窗毕复读点对象=m-cfo"
+      "receiptNote": "15:28 点读数毕（m-cfo 15:42:04 实读）：周窗 53%（70% 预警 17pt·线性 ~22:00 到站·段B 18:00 开窗提前）+5h 新窗 20%（高强形·80% 预警 ~16:2x-17:00 带内）零触——复读加密·下读点提前 16:15-16:30（dispatchedAt 刷 16:20）·80% 触=我面挂账+CFO 直报 BOD 双道·70% 触即断即报"
     },
     {
       "id": "handoff-10items-tbd",
