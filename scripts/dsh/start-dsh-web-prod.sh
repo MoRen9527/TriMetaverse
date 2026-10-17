@@ -41,6 +41,9 @@ echo "[health] 版本: ${ver} (基准 0.2.0-rc.2)"
 [ "$ver" = "0.2.0-rc.2" ] || echo "  WARN: 版本偏离 exact pin"
 
 # ---- 段3: 席会话创建指针（GUI 手工正形·窗2 #7 脚本形候） ----
+# [D-46 NOTE] dsh 启动行原语打明文 token URL（boot banner）——凡 capture-pane/读 log 通路都是泄漏面，
+#   前置掩罩后再看: tmux -u capture-pane -t dsh-web-prod -p | sed -E 's/token=[^&" ]+/token=<MASKED>/g'
+#   事故先例 2026-10-17 CTO 席: 未滤 capture 致 token 进 transcript（fleet 级同域·零扩散·B14 实例处置窗顺手轮换护栏在案）
 cat <<'PTR'
 [seat-session] 席会话创建段=GUI 人机正形（P0 层2 实锚: Gateway Remote 非 REST·零 curl 通路）:
   1) 本机: ssh -L 8791:127.0.0.1:8791 <河源机>    # 隧道
