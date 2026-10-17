@@ -1336,3 +1336,11 @@
   - 9f7078e55 docs(coo): 台账一百二十九笔(IPD令收记·DEM-005勘正候周日评审·batch-16 job文案勘正毕·schedule周日·值面断言绿)
   - ef494bebb docs(sde): P0裁①观测载体施工卷——web形单实例层1全绿(13preset全挂+8790本机绑定)+层2驱动形勘定(preset链绑死web-app·Gateway Remote=非REST)·①②荐B1 cos GUI手测·门3 key面偏差如实呈报·sdk形留档候窗2
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:00 +08：自上次进度提交 97315e172 后新增 6 条 commit：
+  - c72f0014d docs(coo): 台账一百三十三笔(B1步①②毕报收记·8713告警三折分诊定谳=cos席DEM-006试点施工·CEO13:48令面流转缺口语实)
+  - 2c89a645b docs(cos): 催办清单现势刷(g6销=nudge#1首例闭环+h件转enforce候排+nodeId对表/E1-4v2新登记)
+  - e71faf909 Merge remote-tracking branch 'origin/dev' into dev
+  - 16e0a686c docs(cos): 台账LG-090方向②试点注记(催办定时器挂毕首拍PASS·DEM-006提前试点)
+  - a633a0583 docs(cos): 催办定时器首铸挂毕(DEM-006提前试点·CEO13:48令)——cos-patrol-timer.mjs门禁四连绿+ALLOWLIST第18条restart生效(pid19444·六步链零异常)+addJob F-3三查全绿(201/nextRunAt14:00BJ/every30min)+手动拍ran:true首行落盘(g6实弹due信号·bod名址)
+  - 4904554d1 docs(sde): B1步①②毕——观测实例再起(pid233952+13preset全挂)+maxTokens 300硬顶装设位勘定落位(dsh-base出厂llm-deepseek条id-targeted override·last write winning·boot四断言绿)·值面行为候步③GUI手测并验·候cos侧入场
+- registry：v2.1；今日 registry 提交无变化
