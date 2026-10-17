@@ -86,4 +86,31 @@ scheduler/supervisor 擅长**短任务**（定时活+子进程托管）；13 席
 - TriCompany/packages/agent-core/src/process-supervisor/{supervisor,registry}.ts；index.ts 导出面
 - TriRLC/src/tools/shell-exec.ts L110-160（spawn 用例）·TriRLC/src/cron/timer.ts 头注+常量
 
-—— BOD 2026-10-17 15:32:25 +0800（date 现查·发毕重跑对表）
+## 七·增补二（16:39 CEO 追问）：血统谱系定谳+scope 概念
+
+### 血统谱系（grep 全分布实证·三档姿势）
+
+| 件 | 血统 | 证据（头注原文） |
+| --- | --- | --- |
+| cron-engine | **openclaw 直接吸收** | 「Absorbed from openclaw cron/schedule.ts, stripped of openclaw-specific delivery/session concepts」+croner 年回滚 workaround 亦吸收 |
+| job-store | **吸收+简化** | 「Absorbed from openclaw cron/store.ts, simplified」 |
+| backoff / stagger | **openclaw 直接吸收** | 「absorbed from openclaw infra/backoff.ts」/「absorbed from openclaw cron/stagger.ts」 |
+| heartbeat-policy | **模式改适（非直接搬）** | 「TriMC-specific (not directly absorbed from openclaw, which ties heartbeat to channel delivery). The openclaw pattern is adapted to TriMC's agent-loop context」 |
+| job-executor | **参考简化重写** | 「Much simpler than openclaw's cron/service/timer.ts」——裁五件（channel 投递/隔离 agent/session reaper/启动补跑/heartbeat-wake 协调）MVP |
+| types.ts | 类型面剥异 | 「Clean types stripped of openclaw channel/delivery concepts」 |
+| **process-supervisor** | **原生自写** | grep 全包 openclaw 零命中·node:child_process+crypto 原生 |
+| **session-store（TriRLC）** | **自写** | grep 零命中·node:sqlite 原生（TriRLC 的 cron/timer.ts 才是「Pattern adapted from vendor/openclaw」） |
+
+一句话：**scheduler 全族=openclaw 血统（吸收/简化/改适三档）·process-supervisor 与 session-store=自写件**。openclaw 血统进agent-core 时统一剥掉 channel/投递概念（openclaw 面向聊天渠道投递，TriMC 语境=agent 循环内消费）。
+
+### scope（scopeKey）概念=进程的「责任域标签」
+
+- spawn 时给子进程挂一个字符串标签（scopeKey，如 'trilc-shell'）；`cancelScope(tag)` 把同标签所有活跃进程一键全取消；`replaceExistingScope: true`=同标签新进程先顶掉旧进程（同类互斥）。
+- 三个用途：①**按域回收**——daemon 关停钩子按标签一把全杀不留孤儿（TriRLC 实例：agent 跑的 shell 全挂 'trilc-shell'，关停 cancelScope 全清）②**同类互斥**——定时 job 每轮触发顶掉上轮没跑完的，防堆积并发③**审计分组**——registry 档案带标签，事后按类查询。
+- 与 runId 的关系：runId=个人身份证（精确杀单个），scopeKey=部门（批量管理）——「谁起的进程划谁的责任域，关停按域回收不误杀别域」。
+
+### 增补二真源
+
+- grep "openclaw" agent-core/src 全分布（10-17 16:3x 现探·scheduler 六件命中/process-supervisor 零命中）；TriRLC session-store 零命中+cron/timer.ts L3 血统注；supervisor.ts imports 面
+
+—— BOD 2026-10-17 16:39:53 +0800（date 现查·发毕重跑对表）
