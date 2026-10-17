@@ -46,9 +46,9 @@
       "dispatchedAt": "2026-10-17T12:26:00+08:00",
       "timeoutMin": 120,
       "mode": "enforce",
-      "status": "pending",
-      "receipt": "pending",
-      "receiptNote": "nudge#1->m-cto 14:40(+0800)实催·候排读数一句话定性即销"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "nudge#1 14:40 催→CTO 14:41 答（催后 11 分钟）·定性=候窗态非在排非并案（TriMLC 8713 notify 独立件·与 E1-4 v2 不同模块不同面）·终判材料候 sg lsof 读数·排窗候 COO 面（过渡窗=dsh coo 接位后）可同 E1-4 v2 排窗族一并裁窗位（同族不同案）"
     },
     {
       "id": "g6-nodeid-local-reconcile",
