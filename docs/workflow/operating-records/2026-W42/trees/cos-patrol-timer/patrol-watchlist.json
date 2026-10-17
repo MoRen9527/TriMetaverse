@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T13:55:00+08:00",
+  "updatedAt": "2026-10-17T14:00:00+08:00",
   "maintainer": "COS(m-cos)",
   "schemaNote": "items[]: id/desc/owner(责任面)/nudge(催办名址)/dispatchedAt(+08:00 ISO)/timeoutMin/mode(enforce=超时催·observe=只记录不催)/status(pending|done)/receipt(pending|received·COS 会话对拍后更新)",
   "items": [
@@ -11,8 +11,9 @@
       "dispatchedAt": "2026-10-17T12:53:00+08:00",
       "timeoutMin": 60,
       "mode": "enforce",
-      "status": "pending",
-      "receipt": "pending"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "nudge#1->bod 受理闭环(BOD 13:5x 直读收口·读出卷 5a4a92adc·定时器首例实证)"
     },
     {
       "id": "segb-b1-readout",
@@ -38,10 +39,33 @@
     },
     {
       "id": "h-notify-retry-verdict",
-      "desc": "H 件修复施工位+候排（终判候 G6 回卷后）",
+      "desc": "H 件修复候排施工位（G6 读出卷 5a4a92adc 终判后 CTO 候排·8713 notify retry 修复）",
       "owner": "CTO",
-      "nudge": "none",
+      "nudge": "m-cto",
       "dispatchedAt": "2026-10-17T12:26:00+08:00",
+      "timeoutMin": 120,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending"
+    },
+    {
+      "id": "g6-nodeid-local-reconcile",
+      "desc": "G6 路5③ nodeId 键错位候选本地对表（sg watch 过滤 nodeId vs 8713 mirror 上报端值面·配置/源码小勘只读）",
+      "owner": "CTO/FSD(小勘只读)",
+      "nudge": "m-cto",
+      "dispatchedAt": "2026-10-17T14:00:00+08:00",
+      "timeoutMin": 60,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending",
+      "treeRef": "G6 读出卷 5a4a92adc"
+    },
+    {
+      "id": "e14-v2-window-queue",
+      "desc": "E1-4 v2 三选项候排窗（挂点 A 建设·候排窗裁·勿插段B 队列·随段B 接退段毕后 COO 排）",
+      "owner": "COO(排窗)",
+      "nudge": "m-coo",
+      "dispatchedAt": "2026-10-17T13:58:00+08:00",
       "timeoutMin": 240,
       "mode": "observe",
       "status": "pending",
