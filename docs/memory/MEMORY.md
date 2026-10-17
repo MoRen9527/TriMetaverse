@@ -12,6 +12,7 @@
 - [验证工作方式（小贾确认）](verification-style-confirmed.md) — 独立重测 + 第二方法交叉验证 + 盲区/错位观察项单列
 - [CEO 常驻授权](ceo-standing-authorization.md) — 非关键决策自裁决不升级；升级仅限不可逆/保留权/硬约束三类
 - [D-39 增补段·排窗面收回](d39-addendum-window-booking-ceo-confirm.md) — 排窗/任务书面 10-14 起改 CEO 确认制；引 D-39 前先查增补段现行版（L654）；CEO「随时可开」令≠具体窗位确认
+- [BOD 候 CEO 错挂防漏纪律](bod-pending-ceo-mislabel-discipline.md) — 挂「候 CEO/候您/候确认」前必过三类判据自检·三类外自裁禁挂候形态；COS 持复核退回权+回执挂账强制（CEO 10-17 13:06 令）
 - [收口 commit 卫生](closeout-commit-hygiene.md) — 落文档后自己 commit，或明说"落盘未提交"由编排层补
 - [历史冻结/真源可修口径](truth-record-amendment-policy.md) — 树文件修正取舍：历史叙事冻结、技术真源可修+修正记录留痕
 - [工具 cwd 基准口径](tool-ctx-cwd-baseline.md) — 新写文件工具必须以 ctx.cwd 为相对路径基准并补两型断言（REQ-014b）
@@ -78,7 +79,7 @@
 - [TriRLC cron command 白名单精确等值](trilc-cron-command-allowlist-exact-match.md) — ALLOWLIST=精确全串比对（双入口 fail-closed）：command 字段任何变更含路径迁移=必 403 须追加+重启；转发壳须有退役时点
 - [Bash 链调 5.1 的 PSModulePath 污染](powershell51-modulepath-bash-chain.md) — Bash→powershell.exe 继承 pwsh7 目录致 5.1 加载错版 Utility；坑随父链 env 走跨入口结论不可互推
 - [git credential approve 隐式写面](git-credential-approve-implicit-write.md) — 认证成功即 approve 重写凭证文件：store 环境网络操作 mtime 面一律视为有写面；不知情未报≠隐瞒
-- [幻觉时点·compaction/挂起窗 后首回合高发](cto-phantom-timestamp-compaction-resume.md) — 家族十二案全闭环零存量（CTO 五犯+COO 五案+BOD 两案+跨席变体）：未现查凭印象/耗时推算/虚标现查/模糊段皆铁证直定谳；正形=落款 date 原值或声明式 hook 现戳锚+双保险（写前跑防发生+发完重跑对表防漏网）；**D-47 信面落款机械合同已入册（TC a54ba43·正形二选一+禁则五条+兜底宁缺勿造）**；CAO 判时点矛盾=收信 hook 现戳铁证直定谳不再软化留面；族谱随犯随增（D-47 最严档四道·R1 后首周密度采样含 BOD 侧·触发面=有压场景）；gate Edit 面盲区候 owner 评估；十二案=BOD 第二案手写推算落款型（10-14 04:22·FSD 席间收信 hook 对表抓·倒挂 70 秒即认「执行面失守非认知缺失」）；全谱细节见主题文件
+- [幻觉时点·compaction/挂起窗 后首回合高发](cto-phantom-timestamp-compaction-resume.md) — 家族十四案全闭环零存量（CTO 七犯+COO 五案+BOD 两案+跨席变体）：未现查凭印象/耗时推算/虚标现查/模糊段/**粘环手写预估（同窗两犯实证：文字条款约束力≈零·机械闸才有效）**皆铁证直定谳；正形=落款 date 原值或声明式 hook 现戳锚+双保险（写前跑防发生+发完重跑对表防漏网·两案全靠发毕半条抓获=兜底闸价值实证）+**粘环零手打（shell 变量注入/Write 后回视对表再 commit）**；**D-47 信面落款机械合同已入册（TC a54ba43·正形二选一+禁则五条+兜底宁缺勿造）**；CAO 判时点矛盾=收信 hook 现戳铁证直定谳不再软化留面；族谱随犯随增（D-47 最严档四道·R1 后首周密度采样含 BOD 侧·触发面=有压场景）；gate Edit 面盲区候 owner 评估；十三/十四案=CTO 粘环手写预估型同窗两犯（10-17 14:52+15:18·发毕对表倒挂 93s/104s 抓获·第 13 例条款立后 30 分钟内立刻再犯=执行滑坡实证）；全谱细节见主题文件
 - [重启窗完工判据=进程内生效验证](restart-window-completion-criteria.md) — healthz 绿≠配置生效；完工锚必含目标变更值面探针；env 遗传族正解=冷起整树+父链断言
 - [TriMMC 与 TriMLC cron addJob 行为分野](trimmc-mlc-addjob-divergence.md) — TriMMC/TriMLC/TriRLC 三 daemon cron 行为分野勿互套；**F-3 家族性**（8711 现役在册）=POST 201≠会触发，新建 job 判定三查=201+next_run 值面+enabled=1；8711 store=$LOCALAPPDATA\trilc\cron.db（探库先对 DATA_DIR）；判读=源码先读后定性；shutdown 正身=根路径 POST /shutdown；勘修窗三件见 [TriMLC 勘修窗 2026-10-11](trimlc-repair-window-20261011.md)
 - [TriMLC 勘修窗 2026-10-11](trimlc-repair-window-20261011.md) — 三件独立 commit+重启链实操序（watchdog Disable→/shutdown→port FREE→schtasks 冷启→pid/CIM 对表→Enable）+Git Bash schtasks 路径转换坑
