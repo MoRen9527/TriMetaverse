@@ -1246,3 +1246,9 @@
   - 024f6dd4e docs(cto): F件毕报卷——b1v2事件订阅线+§六recentWake门禁全绿(wake-events 12/12·power-gate 24/24·全量694/699五败全既有stash对照·TriMLC 2a8daa8·半闭环如实·生效候段B终排·E1-5同窗串行技术面认可附三前提)
   - 596f7256d docs(cos): §六wakeFromFreeze增量批文生效·双席同向三方齐随F件并窗·D-39面事后呈报·restart排程候CEO确认
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:20 +08：自上次进度提交 dfcb1dd04 后新增 4 条 commit：
+  - c86eaa322 Merge remote-tracking branch 'sg-server/dev' into dev
+  - b61250a57 docs(coo): 台账一百一十二笔(周六联审零审件不召集留痕·G·H件勘明入排工·H件预定18点主窗摊销清单·流转断链挂账知悉)
+  - 857836bcc docs(cpo): W42周六联审CPO笔——需求池零入池无裁面·下周清单=在途候触发面照挂账·零入池判读=经营实验期正常形非渠道失灵·候COO/CTO异议追加
+  - e75ab4af5 docs(cos): 台账镜像 LG-089 窗 G/H 件挂账+流转断链挂账——BOD 12:17 分诊转派承接
+- registry：v2.1；今日 registry 提交无变化
