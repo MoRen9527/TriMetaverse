@@ -81,12 +81,12 @@
       "desc": "B4-B13 逐席毕报对表督办（波2 余四席 cao→cpo→cfo→cmo+波3 六席·SDE 照序自走·异常停接报 CTO）",
       "owner": "SDE(施工)",
       "nudge": "m-sde",
-      "dispatchedAt": "2026-10-17T14:53:00+08:00",
+      "dispatchedAt": "2026-10-17T14:55:00+08:00",
       "timeoutMin": 120,
       "mode": "enforce",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "滚动闸·现势=B5 cpo 毕收记 14:53（卷 d0fcb8fee·第 4 席连绿·已退 4/13 cto/coo/cao/cpo·count=9 对表）·现候 B6 cfo·节拍约 4min/席·余 9 席 claude 形现役·窗毕未齐则 B 系暂停于 B13 后（B14 门四锚制）"
+      "receiptNote": "滚动闸·现势=B6 cfo 毕收记 14:55（卷 8f603de21·第 5 席连绿·count=8 对表·已退 5/13）·现候 B7 cmo·节拍约 4min/席·余 8 席 claude 形现役·窗毕未齐则 B 系暂停于 B13 后（B14 门四锚制）"
     },
     {
       "id": "anchor3-pathb-track",
@@ -114,14 +114,14 @@
     {
       "id": "cfo-anchor-reread",
       "desc": "CFO 锚复读节拍提醒（15:28 窗重置后+窗毕两读数点·COS 督办提醒 CFO 走面）",
-      "owner": "COS(提醒节拍)",
-      "nudge": "m-cfo",
+      "owner": "COS(self 代守·过渡窗)",
+      "nudge": "none",
       "dispatchedAt": "2026-10-17T15:28:00+08:00",
       "timeoutMin": 15,
       "mode": "observe",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "observe=提醒节拍不硬催·CFO 读数走 CFO 面惯例届时报"
+      "receiptNote": "对象勘正 14:55：m-cfo 席已退（B6·第 5 席）dsh cfo 未接位——15:28 复读点=我面对拍 self 代守（自查 window-ledger CFO 锚线读数）转 COO/BOD 知会·dsh cfo 接位后归还 CFO 面"
     },
     {
       "id": "handoff-10items-tbd",
