@@ -113,4 +113,31 @@ scheduler/supervisor 擅长**短任务**（定时活+子进程托管）；13 席
 
 - grep "openclaw" agent-core/src 全分布（10-17 16:3x 现探·scheduler 六件命中/process-supervisor 零命中）；TriRLC session-store 零命中+cron/timer.ts L3 血统注；supervisor.ts imports 面
 
-—— BOD 2026-10-17 16:39:53 +0800（date 现查·发毕重跑对表）
+## 八·增补三（17:49 CEO 五连问）：openclaw 五大件详解+四面内核同源勘正+R 面 cos 现势
+
+### 8.1 openclaw 被裁五大件·功能/场景/局限/未来
+
+| 件 | openclaw 功能（源码实锚） | 咱们裁后现状 | 局限 | 未来 |
+| --- | --- | --- | --- | --- |
+| 渠道投递 delivery.ts | job 结果投递聊天渠道（测试名实证=WhatsApp 等多目标） | 无——结果只进信箱/日志 | 到不了手机聊天面，人工开箱看 | **投递器可插拔化**（信箱/localbus/TriPilot/IM adapter）——CEO「BOD 可接通聊天渠道」方向实证：BOD 转报链本质=「目标=CEO 直连会话」的投递实例，加回即催办/告警直达 CEO 手机 |
+| 隔离 agent isolated-agent/ | 每 job 独立 agent 会话跑（独立上下文/模型/auth-profile 传播） | 每 job 单轮 systemPrompt 驱动 runHeartbeatAgent（session-store 各建 session） | 无持久 job 专属 agent 身份/多轮长任务形 | job 需多轮/专属人格时补隔离形 |
+| session reaper session-reaper.ts | sweepCronRunSessions 清扫 cron 僵尸会话 | **agent-core 裁掉，TriRLC 消费侧自持补回**（src/cron/session-reaper.ts 在案） | —— | 分层范式确认：内核薄·运营归消费侧 |
+| 启动补跑 startup catchup | 重启后补跑停机期错过 job | **同上**（TriRLC timer.ts 自持：每次≤5 个·错峰 5s） | —— | 同上 |
+| 唤醒协调 heartbeat-wake | 心跳节拍与 cron 唤醒联动（timer.ts imports 实锚） | 简化——TriRLC 另有 power-follower/power-keepalive 自持电源面 | 无复杂联动策略 | 候电源/心跳联动需求出现再评估 |
+
+裁剪逻辑一句话：openclaw=个人助理形态（渠道+人格+运营全家桶）；agent-core=抽薄内核（算次/存储/执行/退避/错峰），**学形不学耦合**。
+
+### 8.2 四面内核同源勘正（CEO 直觉实证·架构文档旧口径张力）
+
+package.json 实探（10-17 17:5x）：**TriMMC L26/TriMLC L24/TriRLC L26/TriRMC L26 全部 `file:../TriCompany/packages/agent-core` 同源依赖**——四面共享同一内核包。架构文档「MMC 元虚拟不自建会话管理与执行内核」系旧口径（宿主桥定位时代），现势=MMC 亦消费 agent-core（src/agent-loop/ 目录在案）——用途形态分野（MMC=机制面 job 执行消费/RLC=完整 harness 消费含 session-store/tools/tui）未深探候勘。
+LC 对（MLC↔RLC）目录高度同构（姐妹 fork 演化）：RLC 多执行层件（letter-store/session-store/skills/task-runtime/toolbus/tools/tui/tray），MLC 多机制件（notify 等）。「一致」=同内核包+同构骨架，**非同一份代码**——fork 后各自分野（TriMMC/MLC/TriRLC cron 行为分野在案勿互套）。
+
+### 8.3 replaceExistingScope 实例（催办定时器场景）
+
+COS 催办 job 每 30min 一轮，单轮扫描+催办可能超 30min。无顶替：12:00 轮未毕，12:30 轮又起→双扫描并发→同一目标误催两次+patrol-log 双写交错。有顶替：12:30 轮 spawn 带 `replaceExistingScope:true`+`scopeKey:'cos-patrol'`→旧轮被 cancel 只留最新——**适用判据=只要最新一轮结果、旧轮半途已无意义**（扫描/同步/刷新类）。反例=备份类长任务（顶掉=数据缺失），须用跳过不顶替。TriRLC shell-exec 实锚=固定 scope 未开顶替（agent 交互命令条条必完，正确选择）。
+
+### 8.4 R 面 r-duty-cos dsh 现势（17:12 COS 权威读数·非卡住系保底条款）
+
+B 系 12/13 毕（12 席 dsh 接位+claude 形退役全绿）；**r-duty-cos 值席 claude 形刻意压后在役**——「值席最后退」保底条款（dsh 设计 §2B-B3：全 12 席接位毕才退值席·班组零失守）。门序四锚 Ⅰ✓Ⅱ✓（GUI 三席 PASS）Ⅲ✓·唯余锚Ⅳ稳态候 COO 门序令；门序令达→末退复验→cos 席退→dsh cos 顶位→B 系全窗收口→全就位定谳。设计如此（宁后不退），非故障非卡点。
+
+—— BOD 2026-10-17 17:51:18 +0800（date 现查·发毕重跑对表）
