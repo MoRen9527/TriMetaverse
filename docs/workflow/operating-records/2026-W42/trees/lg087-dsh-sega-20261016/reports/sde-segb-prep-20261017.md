@@ -46,15 +46,18 @@
 | 模型侧 | deepseek 卡停用返四级梯常量保底（零新码） | ✓ | 未触发 |
 | 通道侧 | 通道回滚=河源操作临返 BOD 直操（差④暂重开·入账留痕） | ✓ 序6 逆向正形 | 未触发 |
 
-## 三、窗2 候窗项清单（台账可考六项·正身以 COS 22:36 转呈件为准·开窗令到时 COO 面对表核补）
+## 三、窗2 候窗项清单（COS 正身对表单 06ff05ff9 已到·2026-10-17 12:53 对表毕）
 
-1. TriRMC 桥分型超时修订（per-message timeout 覆盖形·=P1 同件）
-2. dsh 上游 types required 能力增补（候 dsh 版本升级窗）
-3. acp 适配件（mailbox 桥+per-session 注入·acp 归位 BOD 判断力插件宿主面）
-4. credentials service 勘验（key 长驻形态·=P2 同件）
-5. 施工力增编方案件
-6. a 案 web API WS 客户端勘写（半日级·=P0 载体候选一）
-7. （待核——sdk 形第二载体候裁选项/镜像 hook Edit 增量/产物 .gitignore/观察注族·以转呈件正身对表）
+1. TriRMC 桥分型超时修订（per-message timeout 覆盖形·=P1 同件·SDE 面·候窗内——**施工序候 R 系毕后**：桥=TriRMC 8710 daemon 机制面代码·动它涉第三轮 restart·R1/R2 在途禁撞）
+2. dsh 上游 types required 能力增补（候 dsh 版本升级窗·本窗不动）
+3. acp 适配件（mailbox 桥+per-session 注入·CTO 面（设计）+SDE（施工）·候设计）
+4. credentials service 勘验（SDE 面·**勘验卷已毕**=sde-p2-credentials-survey-20261017.md·store 形倾向·裁归 CTO）
+5. 施工力增编方案件（COO/CHO 面）
+6. **（待勘·宁缺勿造）**——原 22:36 信面件未落树·候 BOD/COO 面 22:36 信存档补正（候选=镜像 hook Edit 增量/产物 .gitignore/观察注族）
+7. a 案 web API WS 客户端勘写（半日级·SDE 面·=P0 载体候选一·候 CTO 裁启动）
+
+- **序差勘正认**：本席 prep 原稿「a 案=第 6」系序误——journal CTO 原话双锚「a 案挂窗2 第七项」·以正身单序为准（内容两源零出入）。
+- **先行件实绩**（开窗后）：#4 勘验卷毕+retire-claude-seat.sh v1 备料毕（85613eb85·河源 /home/fleet/segb-tools-20261017/ 已装·dry-run 两席验证绿+白名单拒测绿）——#1/#7 候裁不启动·#2/#5 非本窗/非本席。
 
 ## 四、开窗前置核对单（开窗令到时本席即查）
 
