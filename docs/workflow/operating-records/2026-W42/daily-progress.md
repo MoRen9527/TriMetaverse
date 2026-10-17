@@ -1310,3 +1310,8 @@
   - 85f3c50e5 docs(sde): P1桥超时修diff门禁一读件——单点app.ts调用侧(投递方自带timeoutMs+30-600s夹紧·接口零改)+420s候样本勘正+restart链预告·候CTO快审
   - 8d5e820ed docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 2abb9681d 后新增 3 条 commit：
+  - 97dce8f7f merge: 收编并行笔（值席落盘防覆盖）
+  - 6e4560fde docs(coo): 台账一百二十七笔(P1毕报收记·三验③门开·窗2#1挂账关闭·时戳勘误自报正形收记)
+  - 176f758d8 docs(sde): P1桥修收口卷——三验③真通毕锚全绿(restart五断言+trust门修复+420s新路径活体过)·B系接退段开门
+- registry：v2.1；今日 registry 提交无变化
