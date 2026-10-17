@@ -87,22 +87,91 @@ async function probeKeeper() {
     httpDetail = e.name === "AbortError" ? "timeout(5s)" : String(e.message || e).slice(0, 60);
   }
   // B: keeper process presence — ssh forward cmdline fingerprint (勘验钉定识别串)
+  // 2026-10-17 加固（瞬态族实锚：10-17 20:1x 繁忙窗 spawnSync powershell ETIMEDOUT×2 拍
+  // →假告警直报 BOD，实探隧道活·COS 20:16 处置回执）：
+  //   ①一次重试——execFileSync 败后隔 2s 重试一发，仍败才落结论（防 spawn 瞬态）；
+  //   ②探针自身故障与探明缺失分判——probeBroken=true（探针炸）≠ keeper-process-missing
+  //     （探针成功·count=0）：前者在 A 活拍不计 failStreak（主判据 HTTP 真值在·B 缺位
+  //     降级留痕），后者照合取死判——保住「禁只探 TCP」防假活教训原形。
+  const PS_ARGS = ["-NoProfile", "-Command",
+    `(Get-CimInstance Win32_Process -Filter "Name='ssh.exe'" | Where-Object { $_.CommandLine -like '*${KEEPER_FINGERPRINT}*' } | Measure-Object).Count`];
   let procOk = false;
   let procDetail = "";
-  try {
-    const out = execFileSync(
-      "powershell",
-      ["-NoProfile", "-Command",
-        `(Get-CimInstance Win32_Process -Filter "Name='ssh.exe'" | Where-Object { $_.CommandLine -like '*${KEEPER_FINGERPRINT}*' } | Measure-Object).Count`],
-      { encoding: "utf8", timeout: 10000 },
-    );
-    const n = parseInt(String(out).trim(), 10);
-    procOk = Number.isFinite(n) && n > 0;
-    if (!procOk) procDetail = "keeper-process-missing";
-  } catch (e) {
-    procDetail = `proc-probe-fail: ${String(e.message || e).slice(0, 60)}`;
+  let probeBroken = false;
+  let lastErr = "";
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const out = execFileSync("powershell", PS_ARGS, { encoding: "utf8", timeout: 15000 });
+      const n = parseInt(String(out).trim(), 10);
+      if (Number.isFinite(n)) {
+        procOk = n > 0;
+        if (!procOk) procDetail = "keeper-process-missing";
+        probeBroken = false;
+        lastErr = "";
+        break;
+      }
+      lastErr = `unparseable output: ${String(out).trim().slice(0, 40)}`; // 异常输出形态=探针故障
+    } catch (e) {
+      lastErr = String(e.message || e).slice(0, 60);
+    }
+    if (attempt < 2) {
+      await new Promise((r) => setTimeout(r, 2000)); // 繁忙窗瞬态避让：隔 2s 一发重试
+    }
   }
-  return { httpOk, procOk, httpDetail, procDetail };
+  if (lastErr) {
+    procDetail = `proc-probe-fail: ${lastErr}`;
+    probeBroken = true;
+  }
+  return { httpOk, procOk, httpDetail, procDetail, probeBroken };
+}
+
+/** keeper 判定体（双探针合取·防抖·冷却·直报）——probeBroken 降级分判已在调用侧。 */
+async function keeperProbeJudge(kp, state, healthy, now) {
+  const alive = kp.httpOk && kp.procOk;
+  if (alive) {
+    const hadFail =
+      state[KEEPER_KEY_FAIL] !== undefined || state[KEEPER_KEY_ALARM] !== undefined;
+    delete state[KEEPER_KEY_FAIL];
+    delete state[KEEPER_KEY_ALARM];
+    if (hadFail) appendLog("keeper recovered (fail state cleared)");
+    healthy.push("keeper-tunnel ok (http+proc both up)");
+  } else {
+    const n =
+      (typeof state[KEEPER_KEY_FAIL] === "number" ? state[KEEPER_KEY_FAIL] : 0) + 1;
+    state[KEEPER_KEY_FAIL] = n;
+    const failDetail = kp.httpOk ? `proc=${kp.procDetail}` : `http=${kp.httpDetail}`;
+    if (n < KEEPER_PROBE_N) {
+      appendLog(
+        `keeper probe fail x${n}/${KEEPER_PROBE_N} (${failDetail}) — below debounce threshold`,
+      );
+    } else {
+      const lastAlarm = state[KEEPER_KEY_ALARM];
+      if (typeof lastAlarm === "number" && now - lastAlarm < COOLDOWN_MIN * 60000) {
+        appendLog(
+          `keeper probe fail x${n} (${failDetail}) — in cooldown (last alarm ${new Date(lastAlarm).toISOString()})`,
+        );
+      } else {
+        const title = `[silent-detect] keeper 隧道探活异常：18710 隧道连败 ${n} 拍（${failDetail}）`;
+        const body =
+          `失败探针=${kp.httpOk ? "B(keeper 进程)" : "A(HTTP 活体)"} 详情=${failDetail}\n` +
+          `双探针判据: A=GET ${KEEPER_URL} HTTP200+ok · B=ssh keeper 进程识别串(18710:127.0.0.1:8712)在位\n` +
+          `连续 ${KEEPER_PROBE_N} 拍防抖已达·冷却 ${COOLDOWN_MIN}min·来源=hub-silent-detect keeper 段（CTO dispatch 4e0becc27）`;
+        try {
+          if (KEEPER_DRYRUN) {
+            appendLog(`DRYRUN keeper-escalate (not sent, alarm state not written): ${title}`);
+          } else {
+            await notifyOrThrow({ targets: ["bod"], title, body, urgent: "urgent" });
+            state[KEEPER_KEY_ALARM] = now;
+            appendLog(`NOTIFIED keeper-escalate keeper-tunnel -> [bod] (${failDetail})`);
+          }
+        } catch (err) {
+          appendLog(
+            `ERROR keeper notify failed: ${err.message} — alarm state NOT written (三钉②·下拍重试)`,
+          );
+        }
+      }
+    }
+  }
 }
 
 function nowIso() {
@@ -290,50 +359,16 @@ async function main() {
   // notify 失败不写 alarm state 下拍重试（②）。
   try {
     const kp = await probeKeeper();
-    const alive = kp.httpOk && kp.procOk;
-    if (alive) {
-      const hadFail =
-        state[KEEPER_KEY_FAIL] !== undefined || state[KEEPER_KEY_ALARM] !== undefined;
-      delete state[KEEPER_KEY_FAIL];
-      delete state[KEEPER_KEY_ALARM];
-      if (hadFail) appendLog("keeper recovered (fail state cleared)");
-      healthy.push("keeper-tunnel ok (http+proc both up)");
+    // 2026-10-17 加固：探针自身故障降级拍——B 炸（probeBroken）且 A 活（HTTP 真值）→
+    // 本拍不计 failStreak 不告警（防探针瞬态故障放大为基建告警·COS 处置建议采）；
+    // 已有 fail 态不清（前拍若真败仍保留防抖连续性），log 留痕降级。
+    if (kp.probeBroken && kp.httpOk) {
+      appendLog(
+        `keeper probe B degraded (${kp.procDetail}) but A truth alive — probe-self-fail not counted (2026-10-17 加固)`,
+      );
+      healthy.push("keeper-tunnel ok (A truth alive; B probe-self-fail degraded)");
     } else {
-      const n =
-        (typeof state[KEEPER_KEY_FAIL] === "number" ? state[KEEPER_KEY_FAIL] : 0) + 1;
-      state[KEEPER_KEY_FAIL] = n;
-      const failDetail = kp.httpOk ? `proc=${kp.procDetail}` : `http=${kp.httpDetail}`;
-      if (n < KEEPER_PROBE_N) {
-        appendLog(
-          `keeper probe fail x${n}/${KEEPER_PROBE_N} (${failDetail}) — below debounce threshold`,
-        );
-      } else {
-        const lastAlarm = state[KEEPER_KEY_ALARM];
-        if (typeof lastAlarm === "number" && now - lastAlarm < COOLDOWN_MIN * 60000) {
-          appendLog(
-            `keeper probe fail x${n} (${failDetail}) — in cooldown (last alarm ${new Date(lastAlarm).toISOString()})`,
-          );
-        } else {
-          const title = `[silent-detect] keeper 隧道探活异常：18710 隧道连败 ${n} 拍（${failDetail}）`;
-          const body =
-            `失败探针=${kp.httpOk ? "B(keeper 进程)" : "A(HTTP 活体)"} 详情=${failDetail}\n` +
-            `双探针判据: A=GET ${KEEPER_URL} HTTP200+ok · B=ssh keeper 进程识别串(18710:127.0.0.1:8712)在位\n` +
-            `连续 ${KEEPER_PROBE_N} 拍防抖已达·冷却 ${COOLDOWN_MIN}min·来源=hub-silent-detect keeper 段（CTO dispatch 4e0becc27）`;
-          try {
-            if (KEEPER_DRYRUN) {
-              appendLog(`DRYRUN keeper-escalate (not sent, alarm state not written): ${title}`);
-            } else {
-              await notifyOrThrow({ targets: ["bod"], title, body, urgent: "urgent" });
-              state[KEEPER_KEY_ALARM] = now;
-              appendLog(`NOTIFIED keeper-escalate keeper-tunnel -> [bod] (${failDetail})`);
-            }
-          } catch (err) {
-            appendLog(
-              `ERROR keeper notify failed: ${err.message} — alarm state NOT written (三钉②·下拍重试)`,
-            );
-          }
-        }
-      }
+      await keeperProbeJudge(kp, state, healthy, now);
     }
   } catch (err) {
     appendLog(`ERROR keeper probe segment failed: ${err.message}`); // 三钉③ degrade
