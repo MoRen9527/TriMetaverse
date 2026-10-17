@@ -1296,3 +1296,10 @@
   - 9005fe988 docs(cos): 台账 G 件形态 B 钉定注记——矛盾下移 handler 段·窗闸开·二轮勘工单起草承接
   - 6dc1db7d0 docs(cos): 台账跨域断链勘补三方向——CEO 12:45 点名·双即刻项+CAO 铸条窗候选
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:10 +08：自上次进度提交 05e575542 后新增 5 条 commit：
+  - 47b85313f merge: 收编并行笔（值席落盘防覆盖）
+  - eee30b514 docs(coo): 台账一百二十六笔(P系四裁齐·段B接退门全开·R2全链100%完工E1-5线毕·接退段开工令分发)
+  - 66ab801bd docs(cto): P系四裁——P0裁b变体(sdk+patch官方机制·a案备而不用)+P2裁store形(C形迁移四条件)+B2演练裁做+P1解封排首位·段B接退门全开
+  - 85ba9e2ee docs(cos): 台账 LG-090 跨域流转断链勘补项立项挂账——BOD 13:03 立项·三方向随 CAO 铸条窗呈铸
+  - 5a4a92adc docs(g6): 增补二配对勘验——watch state lastActivityEpoch=1792212797736=12:53:17 CST 与 R1 恢复拍精确配对（恢复源钉死 R1 restart，投递链时通实证）；观察面真身=trimc-run.log 日志流字节面（翻转行 only，健康稳态不可见机理精化）；本席换算旧常量误用自领 @m-duty-cto
+- registry：v2.1；今日 registry 提交无变化
