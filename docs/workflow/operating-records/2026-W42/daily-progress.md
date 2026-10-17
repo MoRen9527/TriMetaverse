@@ -1280,3 +1280,19 @@
   - 2a6fe05e9 merge: 收编并行笔（值席落盘防覆盖）
   - 876b1ef7e docs(coo): 台账一百一十九笔(CTO窗前清清单毕·R2序修正认领·候窗三岗就位·开窗闸门=lsof回卷)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:00 +08：自上次进度提交 a70396fe3 后新增 14 条 commit：
+  - b16b2f917 docs(coo): 台账一百二十五笔(R1R2毕报收记·总窗4m12s零回滚·三锚齐·段B双门过一门·b2恢复源第四枝)
+  - b90c1e9c8 docs(g6): 优先第五路勘毕+终版定性——半迁移态排除（unit/start-sh/drop-ins 全 09-29 cutover 正形，10-15 restart=token 轮换+两锚部署非迁移半成品）；观测面分叉收敛两支（日志面健康期恒静默+nodeId 键错位候 dev 对表）；L1 架构挂点A缺位/L2 观测/L3 化妆三层定性 @m-duty-cto
+  - fed74af3b docs(cto): R1/R2双restart窗毕报——8713摊销两件三锚齐(94s)+8711站job全链闭合(92s)·总窗4m12s·回滚零动用
+  - 12de05bee docs(coo): 台账一百二十四笔(SDE先行件两毕·接退弹药备齐·#1桥超时排工注记候R系毕后·H件retry重播旁证)
+  - 9883450b5 docs(sde): 窗2第4项credentials勘验卷毕(store形倾向·零重启轮换+值面出env攻击面+13席单文件·裁归CTO)+prep七项正身对表(序差认+第6项待勘挂账)
+  - 41fac7bd4 docs(cos): 台账 G 件第五路假设+b2 recovered 拍注记
+  - 85613eb85 docs(sde): 段B接退幂等脚本v1备料——retire-claude-seat.sh三步正形(在途清零WAIT门+tmux优雅停逐pid禁裸杀+compass零触碰sha256断言)+白名单/双键确认/幂等门/dry-run默认
+  - fe9cff6e7 docs(coo): 台账一百二十三笔(窗2七项正身落树06ff05ff9·b2恢复拍观测线回归·归因候G二轮勘)
+  - 06ff05ff9 docs(cos): 窗2 七项正身对表单落树——journal 五笔锚+SDE prep 双源拼装·a 案序勘正第7·第6项宁缺勿造待勘
+  - c4e8db973 docs(coo): 台账一百二十二笔(SDE核对单开查·探针床六断言全绿·零可先干件·幂等脚本备料认)
+  - df3883bb3 merge: 收编并行笔（值席落盘防覆盖）
+  - ebdc87bc8 docs(coo): 台账一百二十一笔(开窗令到·charter-006窗正式开window-active·lsof形态B定谳·H件sg形·G件二轮勘独立线)
+  - 9005fe988 docs(cos): 台账 G 件形态 B 钉定注记——矛盾下移 handler 段·窗闸开·二轮勘工单起草承接
+  - 6dc1db7d0 docs(cos): 台账跨域断链勘补三方向——CEO 12:45 点名·双即刻项+CAO 铸条窗候选
+- registry：v2.1；今日 registry 提交无变化
