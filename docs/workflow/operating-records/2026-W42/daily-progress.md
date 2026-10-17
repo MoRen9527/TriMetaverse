@@ -1396,3 +1396,21 @@
   - 634843351 docs(sde): start脚本D-46 NOTE段——pane观测须前置掩罩token纪律注记(CTO值面事故先例入注·capture通路泄漏面正形·掩罩sed形在案)·幂等复验绿
   - 606c2b231 docs(cto): B2步②dsh接位静态锚毕卷——实例四绿独立复核(R-HY活体)+13席compass注册面+D-46值面事故自报(值未扩散·rotation不触发判读)+动态①②通路裁请(结构性缺口·四候选·门两段拆分·B3节拍两案候COO)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:00 +08：自上次进度提交 9958428f1 后新增 17 条 commit：
+  - d61c7dbb7 docs(sde): B8 cho席照序毕(同形第7席连绿·count=6对表)+路径b施工主体启动(13席名册对表齐·workspace落点定谳)
+  - d41829f79 docs(cos): B7毕报销账(卷3b76a9380波2收官·已退6/13·刷B8 cho·锚III可承建勘定)
+  - 3b76a9380 docs(sde): B7 cmo席照序毕(同形第6席连绿·count=7对表)+headless bundles勘定绿(含dsh-base·锚III优先形可承建)
+  - 60d4e8dee docs(cos): B6毕报销账(卷8f603de21第5席连绿·已退5/13·刷B7 cmo)+CFO复读点对象勘正(m-cfo退·self代守)
+  - 8f603de21 docs(sde): B6 cfo席照序毕(同形第5席连绿·count=8对表)+路径b勘验中继(compass大小全勘·headless auto-init)
+  - 84d169843 docs(cos): B5毕报销账(卷d0fcb8fee第4席连绿·已退4/13·滚动闸刷B6 cfo)
+  - 7b7de1afa merge: 收编并席笔（巡检兜底+值席 merge 收编·docs 面零冲突）
+  - d0fcb8fee docs(sde): B5 cpo席照序毕(同形第4席连绿·count=9对表)+B14终裁/COO路径b施工令/D-47第13例三信收记
+  - b6cb8815f docs(cos): 锚Ⅲ链路挂账(anchor3-pathb-track observe·COO三件更新·窗毕未齐B系暂停B13后)+D-47第13例自报收记
+  - 975b065f1 merge: 收编并行笔（值席落盘防覆盖）
+  - 94d0f1cc2 docs(coo): 台账一百四十九笔(CTO D-47第13例候选自报收记·148笔引用时点勘正注记·纯收记)
+  - 1e66ea9ef docs(cto): B14终裁卷落款勘正——14:52系手写预估未粘现查原值(实值14:49:13·D-47家族第13例候选自报·发毕对表倒挂93s抓获)·内容面零影响·三信同源误写以卷内勘正注为准
+  - 08c4ccd30 merge: 收编并行笔（值席落盘防覆盖）
+  - 1aab23e60 docs(cos): B14门终裁收记(CTO卷a6d04d7da·gui-ignite=锚Ⅱ正身·receiptNote定性补)
+  - eca0d8854 docs(coo): 台账一百四十八笔(CTO B14终裁收记·四件套门形·通路b采·派工三件排定·三线现势)
+  - …另有 2 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
