@@ -81,12 +81,12 @@
       "desc": "B4-B13 逐席毕报对表督办（波2 余四席 cao→cpo→cfo→cmo+波3 六席·SDE 照序自走·异常停接报 CTO）",
       "owner": "SDE(施工)",
       "nudge": "m-sde",
-      "dispatchedAt": "2026-10-17T14:59:00+08:00",
+      "dispatchedAt": "2026-10-17T15:01:00+08:00",
       "timeoutMin": 120,
       "mode": "enforce",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "滚动闸·现势=B8 cho 毕收记 14:59（卷 d61c7dbb7·第 7 席连绿·count=6 对表·已退 7/13·波3 进行中）·现候 B9 cso·余 6 席现役=cso/fsd/rdt/sde/ste/cos（cos 席候 B14 值席面定谳——COS radar 入册）·路径 b 施工主体启动（workspace=/home/fleet/.dsh-workspaces/·AGENTS.md 零锚句壳纪律）"
+      "receiptNote": "滚动闸·现势=B9 cso+B10 fsd 联报收记 15:01（卷 8b5b966fd·第 8/9 席连绿·count=5/4·已退 9/13）·现候 B11 rdt·余 4 席现役=rdt/ste/sde/cos（cos 席候 B14 值席面定谳）·路径 b 锚Ⅲ可派状态位到（headless 探针双席绿·候 COO 派非作者席）"
     },
     {
       "id": "anchor3-pathb-track",
@@ -98,7 +98,7 @@
       "mode": "observe",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "observe 跟踪·半日级施工·诚实标注条款在案（B14 毕报如实标注余 10 席动态面=机制抽验推断绿·窗毕汇总转 BOD 照录）"
+      "receiptNote": "observe 跟踪·现势=施工毕 15:01（13 workspace 造物毕·headless 探针双席绿·锚Ⅲ可派状态位到）·候 COO 派非作者席（STE/COS 代跑形）派后锚③毕报回链·诚实标注条款在案"
     },
     {
       "id": "window-closeout-readout",
