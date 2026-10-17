@@ -146,7 +146,7 @@
       "mode": "enforce",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "验收判据=B1 步③两验 web 面版(①compass 渲染对表②persona 自检句)·毕报挂账回链 COS 督办岗销账·CEO 终验保留位(矛盾升亲验)·B14 门定性(CTO 卷 a6d04d7da 14:52)=本件即锚Ⅱ正身·毕报回链即门读数·四锚门=Ⅰweb静态+Ⅱ首席GUI+Ⅲ余10席acp+Ⅳ稳态·闸点勘正(16:13 COS 自勘):超时点=16:42(14:42 派+120min)——前口头表述「15:42 已过闸」系误按 60min 闸推算·16:00 拍零催=机械正确·若毕报未达 17:00 拍产出 nudge#1→bod"
+      "receiptNote": "验收判据=B1 步③两验 web 面版(①compass 渲染对表②persona 自检句)·毕报挂账回链 COS 督办岗销账·CEO 终验保留位(矛盾升亲验)·B14 门定性(CTO 卷 a6d04d7da 14:52)=本件即锚Ⅱ正身·毕报回链即门读数·四锚门=Ⅰweb静态+Ⅱ首席GUI+Ⅲ余10席acp+Ⅳ稳态·闸点勘正(16:13 COS 自勘):超时点=16:42(14:42 派+120min)——前口头表述「15:42 已过闸」系误按 60min 闸推算·16:00 拍零催=机械正确·【nudge#1 已发 17:11】17:00 拍产出信号(overdue 18min)→SendMessage 实催 bod(msg b665e741·名址在册实锚·含对象断言+项 id+验收判据+升级预告)——候值席链回执·nudge#2=实催+升级提示·nudge#3+=升 BOD 派工面"
     },
     {
       "id": "e14-v2-window-queue",
