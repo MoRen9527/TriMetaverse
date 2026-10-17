@@ -47,7 +47,8 @@
       "timeoutMin": 120,
       "mode": "enforce",
       "status": "pending",
-      "receipt": "pending"
+      "receipt": "pending",
+      "receiptNote": "nudge#1->m-cto 14:40(+0800)实催·候排读数一句话定性即销"
     },
     {
       "id": "g6-nodeid-local-reconcile",
