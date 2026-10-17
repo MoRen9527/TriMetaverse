@@ -3706,3 +3706,4 @@ metadata:
   - G 件余项派工注记（12:30）：BOD tmux 直达派 m-duty-cto（工单 workorder-g5-lsof-pin-20261017·办单三步+只取证勿盲动）·毕报链值席→duty-coo→COS→BOD·候收清单换挂
 
 - 【charter-2026-W42-006 候 CEO 窗位 2026-10-17 12:30】段B 主窗任务书立册（COO 12:29·8ee3f97c·granted-pending-ceo-window·周索引 count=6）——正案 A=今日 18:00-24:00 黄金段主窗三线并进（R1 8713 restart 摊销 F+recentWake/R2 8711 串行 E1-5/段B 本体 SDE）·B 案即刻不推荐；**候 CEO 窗位裁决（D-39 排窗面）——已转呈 BOD**；裁后 COO 分发三席 16:45 互证 18:00 开窗
+  - charter-006 窗位态注记（12:32）：BOD 裁正案 A（18:00-24:00）但自定性与 D-39 增补段（排窗须 CEO 确认·L654 现行）张力——本席标注候收敛（CEO 追认/BOD 适用判断二路）·节拍预走不阻塞·开窗闸候 CEO·17:00 未收敛我面催办
