@@ -23,8 +23,9 @@
       "dispatchedAt": "2026-10-17T13:49:00+08:00",
       "timeoutMin": 60,
       "mode": "enforce",
-      "status": "pending",
-      "receipt": "pending"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "B1 毕正形=COO 交接卷§一+台账 141 笔收记(14:31 交接卷达·SDE 汇总卷 90db44c19 为毕锚链)·COS 督办接位后追销 14:32"
     },
     {
       "id": "f-anchor4-recentwake",
@@ -60,6 +61,65 @@
       "receipt": "received",
       "receiptNote": "CTO 毕报卷 3fb42030a 14:16 闸内达·抽验卷在档·收记销账 14:19(定性五条:键错位现役不成立/键轮换=翻转行制造源/14:08拍假警候选/修复候选④列v2首选)",
       "treeRef": "G6 读出卷 5a4a92adc"
+    },
+    {
+      "id": "b3-retire-readout",
+      "desc": "B3 coo 席退役毕报（准退信号已发→退役三步→毕锚·SDE 施工）",
+      "owner": "SDE(施工)",
+      "nudge": "m-sde",
+      "dispatchedAt": "2026-10-17T14:31:00+08:00",
+      "timeoutMin": 60,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending",
+      "treeRef": "交接卷 lg087.../reports/coo-b3-handoff-20261017.md"
+    },
+    {
+      "id": "b4-b13-serial-readouts",
+      "desc": "B4-B13 逐席毕报对表督办（波2 余四席 cao→cpo→cfo→cmo+波3 六席·SDE 照序自走·异常停接报 CTO）",
+      "owner": "SDE(施工)",
+      "nudge": "m-sde",
+      "dispatchedAt": "2026-10-17T14:31:00+08:00",
+      "timeoutMin": 120,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "滚动闸=逐席毕报到达即刷 dispatchedAt·首候 B4 cao 毕"
+    },
+    {
+      "id": "window-closeout-readout",
+      "desc": "charter-006 §六窗毕汇总出卷（COS 正身·材料=R1/R2 完工锚+段B 进度+F 件观测+resumePoint）",
+      "owner": "COS(self)",
+      "nudge": "none",
+      "dispatchedAt": "2026-10-17T14:31:00+08:00",
+      "timeoutMin": 240,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending"
+    },
+    {
+      "id": "cfo-anchor-reread",
+      "desc": "CFO 锚复读节拍提醒（15:28 窗重置后+窗毕两读数点·COS 督办提醒 CFO 走面）",
+      "owner": "COS(提醒节拍)",
+      "nudge": "m-cfo",
+      "dispatchedAt": "2026-10-17T15:28:00+08:00",
+      "timeoutMin": 15,
+      "mode": "observe",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "observe=提醒节拍不硬催·CFO 读数走 CFO 面惯例届时报"
+    },
+    {
+      "id": "handoff-10items-tbd",
+      "desc": "COO 交接候件清单 10 项托底督办（明细=交接卷§四·逐项毕报到达时滚动销）",
+      "owner": "多面(SDE/CTO/BOD/COS)",
+      "nudge": "none",
+      "dispatchedAt": "2026-10-17T14:31:00+08:00",
+      "timeoutMin": 240,
+      "mode": "observe",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "observe 托底·其中 sg 对表两件/E1-4 v2 排窗/流转断链已有在册项对应·1/2 项并入 b3-retire 候收"
     },
     {
       "id": "e14-v2-window-queue",
