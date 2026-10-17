@@ -1344,3 +1344,7 @@
   - a633a0583 docs(cos): 催办定时器首铸挂毕(DEM-006提前试点·CEO13:48令)——cos-patrol-timer.mjs门禁四连绿+ALLOWLIST第18条restart生效(pid19444·六步链零异常)+addJob F-3三查全绿(201/nextRunAt14:00BJ/every30min)+手动拍ran:true首行落盘(g6实弹due信号·bod名址)
   - 4904554d1 docs(sde): B1步①②毕——观测实例再起(pid233952+13preset全挂)+maxTokens 300硬顶装设位勘定落位(dsh-base出厂llm-deepseek条id-targeted override·last write winning·boot四断言绿)·值面行为候步③GUI手测并验·候cos侧入场
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:10 +08：自上次进度提交 684d97106 后新增 2 条 commit：
+  - a39c9176b merge: 收编并行笔（值席落盘防覆盖）
+  - e1a7bf0bd docs(coo): 台账一百三十四笔(COS 8713定性申报并笔·秩序面缺口自领·restart先知会承诺入节拍·B1步③入场)
+- registry：v2.1；今日 registry 提交无变化
