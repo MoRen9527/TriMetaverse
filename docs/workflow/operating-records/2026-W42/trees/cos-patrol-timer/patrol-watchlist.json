@@ -169,9 +169,9 @@
       "dispatchedAt": "2026-10-17T18:21:00+08:00",
       "timeoutMin": 1020,
       "mode": "enforce",
-      "status": "pending",
-      "receipt": "pending",
-      "receiptNote": "BOD 18:20 派工令收记（CEO 18:14 令）·工单正身=lg085-bod-cli-acp-review/agentcore-migration-assessment-brief-20261017.md+背景卷 bod-agentcore-vs-claudecode-concept-brief-20261017.md·deadline=10-18 11:30（timeoutMin=1020 对齐）·候 12:00 周日评审并表·今晚出初稿最优"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "BOD 收稿三查绿回执 18:39（正位/commit 双链 a517b4991/值面 76 行）——**四席 4/4 齐全在链·BOD 并表卷落**（agentcore-consolidated-slate-20261018-review.md·86c7382a6+勘正 7a558ab9e·我卷审计五差异单列 §一 COS 行+治理前提 §二.3+候裁案 4）·义务闭环（派 18:21→初稿 18:33→定稿 18:36→收讫 18:39·全程 18 分钟）·明日 12:00 评审候裁案六条候裁"
     },
     {
       "id": "e14-v2-window-queue",
