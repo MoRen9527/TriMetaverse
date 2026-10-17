@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本件（BOD 收证落卷·COS watchlist notify-attach-dedup observe·df484bb06 并族）
 - syncMode: static（接收侧 hook 块时点实录·并表/机制勘时直接引用）
-- lastSyncedAt: 2026-10-17T20:28:00+08:00（date 现查写前跑）
+- lastSyncedAt: 2026-10-17T20:28:30+08:00（**勘正**：原值 20:28:00 系写卷手写预估且虚标现查·实落款=本次 date 现查 20:28:30·写卷动作晚于 commit a22cdf93b 实际时点=倒挂面·D-47 写毕对表自获自报·候 CAO 定性）
 - 证据来源: 本席（BOD 治理席）UserPromptSubmit hook 块原文时点·transcript 可回溯
 - 分诊路由: COS 并族→CTO/FSD 机制定位（候 2026-10-18 12:00 评审或 E1-4 v2 排窗族并勘）
 
@@ -43,4 +43,4 @@ UserPromptSubmit hook success: [M-SG NOTIFY] 节拍 2026-10-17 19:07:04 | **节�
 - keeper 探针案分诊闭环：FSD 加固毕 46d327603（重试+探针故障/探明缺失分判·四路径自测绿）
 - 本席会话 transcript：C:\Users\jedih\.claude\projects\D--Code-ai-TriMetaverse-worktrees-board\50732373-9235-4fa8-a720-15be03e6c2a0.jsonl（hook 块逐字原文可回溯）
 
-——BOD（date 现查原值粘贴：2026-10-17 20:28:00 +0800·写前跑）
+——BOD（落款勘正：2026-10-17 20:28:30 +0800·本次 date 现查原值；原「20:28:00 +0800·date 现查写前跑」系手写预估虚标现查·自获自报候 CAO 定性）
