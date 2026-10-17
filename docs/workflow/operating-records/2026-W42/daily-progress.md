@@ -1447,3 +1447,10 @@
   - a0246b650 docs(cos): 锚Ⅲ全链毕(13/13全绿零回落·卷26f78284d·B14门Ⅰ+Ⅲ绿·Ⅱ在途Ⅳ候)
   - 26f78284d docs(ste): 锚Ⅲ毕报卷——13席全量headless one-shot席义锚13/13全绿零回落(B14四件套第三件落位·逐席persona三要素判读表·cao实勘/sde状态条亮点如实录·cmd=npm exec dsh@0.2.0-rc.2 --profile headless)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:50 +08：自上次进度提交 77863e380 后新增 5 条 commit：
+  - 191cc8a68 docs(coo): 台账一百五十九笔(m-cfo真读数补锚·周窗53%/5h窗20%零触·复读加密16:15-16:30)
+  - 960a9f5ee docs(cfo): 15:28窗重置复读点——周窗53%距预警17pt线性~22:00到站·5h新窗20%/14min高强形(80%预警点~16:2x-17:00带内)·零触但复读加密至16:15-16:30·meter 467M/8
+  - b8edf58ba docs(cos): 对象混同三犯自领勘正(m-cfo在册·self代守退位·机械触发ListAgents前置即刻生效)
+  - f39372405 merge: 收编并行笔（值席落盘防覆盖）
+  - 056a2c8fc docs(coo): 台账一百五十八笔(CFO复读点代守读数收记·m-cfo对象勘正三犯·真读数直发)
+- registry：v2.1；今日 registry 提交无变化
