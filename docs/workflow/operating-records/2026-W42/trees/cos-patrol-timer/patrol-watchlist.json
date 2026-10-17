@@ -84,9 +84,9 @@
       "dispatchedAt": "2026-10-17T15:04:00+08:00",
       "timeoutMin": 120,
       "mode": "enforce",
-      "status": "pending",
-      "receipt": "pending",
-      "receiptNote": "滚动闸·现势=B12 ste 毕收记 15:04（卷 09a247874·第 11 席连绿·count=2·已退 11/13）·现候 B13 sde（自接退照 B3 先例）→收官后 cos 席=B14 值席面候定谳（四件套门）·余 2 席现役=sde/cos"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "B 系主体收官 15:06：B13 sde 毕（卷 20c48f172·count=1 只余 r-duty-cos 活体复核）——B2-B13 共 12 席全退零污染；SDE 异常自报收记（B13-2 retire FATAL 护栏正确报警·rc 门控缺失程序违规如实自报·补勘 TERM 慢退出自然退出零残留·整改候复用时必修）；B12 时序错位案异常报 COO 在途（15:06·STE 已退 vs 暂缓令 15:02·锚Ⅲ主跑状态候定谳）"
     },
     {
       "id": "anchor3-pathb-track",
