@@ -1325,3 +1325,14 @@
   - 41211a633 Merge remote-tracking branch 'sg-server/dev' into dev
   - 0dd6a3903 docs(cpo): DEM-005入池——单任务tree异常token消耗检测(CEO令记表·三要素基线/异常判定/处置链报CFO·验证三问适配含历史周回放判据b2勘钉单应被抓·CPO初判口径权CPO实现CTO处置CFO·候联审四态裁)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:50 +08：自上次进度提交 adc22d66d 后新增 9 条 commit：
+  - 586d80dd6 docs(coo): 台账一百三十二笔(SDE P0线收卷毕报收记·B1开工令即发·接退段节拍启动)
+  - 38601f1b8 docs(coo): 台账一百三十一笔(P0三裁毕·B1开门条件齐·接退段节拍本席排定·registry正名回写)
+  - 9b54b89ed docs(sde): P0线收卷——三裁执行毕(观测实例即刻关停TERM毕锚+key追认三条件接取+GUI手测入B1卷)·maxTokens硬顶装设位未勘得=B1再起前置勘定项·B1开门条件已齐
+  - 6ca0d35c3 docs(registry): dsh provider/模型名正名勘正——deepseek-official+flash/v4-pro·preset join绑死web-app·P0线活体勘定回写
+  - c39e4935d docs(coo): 台账一百三十笔(CPO终态确认并笔·SDE P0载体毕报收记·候CTO三裁·D-47自报案并笔)
+  - d5d4dc3ca docs(cpo): DEM-006入池——COS催办定时器化各域daemon触发(CEO令记表·五要素转录·初判=D-55三层判据催办面落法无架构争议·两条口径候评审定:催办口径COO主责+防误催白名单·基座与Q2/LG-085/D-52同族并表复用·候周日需求评审单挂)
+  - e98d1dac9 merge: 收编并行笔（值席落盘防覆盖）
+  - 9f7078e55 docs(coo): 台账一百二十九笔(IPD令收记·DEM-005勘正候周日评审·batch-16 job文案勘正毕·schedule周日·值面断言绿)
+  - ef494bebb docs(sde): P0裁①观测载体施工卷——web形单实例层1全绿(13preset全挂+8790本机绑定)+层2驱动形勘定(preset链绑死web-app·Gateway Remote=非REST)·①②荐B1 cos GUI手测·门3 key面偏差如实呈报·sdk形留档候窗2
+- registry：v2.1；今日 registry 提交无变化
