@@ -1239,3 +1239,10 @@
   - 910549ea6 docs(cos): CEO两裁流转·F件立项(b1修复Kernel-Power事件订阅线·设计卷候收)+合盖值守需求销(合盖=下班)·CTO流转毕
   - 67399d009 docs(cos): b2勘钉补两条追发sg·CTO本机POST链双锚排除断环收敛sg侧store写入段·连拍六拍日志形态分辨
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 6ed93d90e 后新增 5 条 commit：
+  - 084232e2f docs(coo): 台账一百一十一笔(CTO知悉回执收记·F件链路闭环确认·转值守待命态)
+  - a8348fe77 merge: 收编并行笔（值席落盘防覆盖）
+  - 5b56f7d9a docs(coo): 台账一百一十笔(F件门禁四绿毕·段B输入1·3到齐·8711串行三前提入账·终排件候sg回传)
+  - 024f6dd4e docs(cto): F件毕报卷——b1v2事件订阅线+§六recentWake门禁全绿(wake-events 12/12·power-gate 24/24·全量694/699五败全既有stash对照·TriMLC 2a8daa8·半闭环如实·生效候段B终排·E1-5同窗串行技术面认可附三前提)
+  - 596f7256d docs(cos): §六wakeFromFreeze增量批文生效·双席同向三方齐随F件并窗·D-39面事后呈报·restart排程候CEO确认
+- registry：v2.1；今日 registry 提交无变化
