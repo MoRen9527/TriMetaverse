@@ -11,6 +11,7 @@
 - [树文件路径规范](tree-file-path-convention.md) — tree-op.json/briefs 必须写 operating-records 周目录，禁止写仓库根
 - [验证工作方式（小贾确认）](verification-style-confirmed.md) — 独立重测 + 第二方法交叉验证 + 盲区/错位观察项单列
 - [CEO 常驻授权](ceo-standing-authorization.md) — 非关键决策自裁决不升级；升级仅限不可逆/保留权/硬约束三类
+- [D-39 增补段·排窗面收回](d39-addendum-window-booking-ceo-confirm.md) — 排窗/任务书面 10-14 起改 CEO 确认制；引 D-39 前先查增补段现行版（L654）；CEO「随时可开」令≠具体窗位确认
 - [收口 commit 卫生](closeout-commit-hygiene.md) — 落文档后自己 commit，或明说"落盘未提交"由编排层补
 - [历史冻结/真源可修口径](truth-record-amendment-policy.md) — 树文件修正取舍：历史叙事冻结、技术真源可修+修正记录留痕
 - [工具 cwd 基准口径](tool-ctx-cwd-baseline.md) — 新写文件工具必须以 ctx.cwd 为相对路径基准并补两型断言（REQ-014b）
