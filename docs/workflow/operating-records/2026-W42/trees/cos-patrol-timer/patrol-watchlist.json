@@ -56,9 +56,9 @@
       "dispatchedAt": "2026-10-17T14:00:00+08:00",
       "timeoutMin": 60,
       "mode": "enforce",
-      "status": "pending",
-      "receipt": "pending",
-      "receiptNote": "工单已发 m-cto 14:08(+0800)·候 CTO/FSD 只读小勘毕报",
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "CTO 毕报卷 3fb42030a 14:16 闸内达·抽验卷在档·收记销账 14:19(定性五条:键错位现役不成立/键轮换=翻转行制造源/14:08拍假警候选/修复候选④列v2首选)",
       "treeRef": "G6 读出卷 5a4a92adc"
     },
     {
