@@ -1303,3 +1303,10 @@
   - 85ba9e2ee docs(cos): 台账 LG-090 跨域流转断链勘补项立项挂账——BOD 13:03 立项·三方向随 CAO 铸条窗呈铸
   - 5a4a92adc docs(g6): 增补二配对勘验——watch state lastActivityEpoch=1792212797736=12:53:17 CST 与 R1 恢复拍精确配对（恢复源钉死 R1 restart，投递链时通实证）；观察面真身=trimc-run.log 日志流字节面（翻转行 only，健康稳态不可见机理精化）；本席换算旧常量误用自领 @m-duty-cto
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:20 +08：自上次进度提交 8dfba542d 后新增 5 条 commit：
+  - 5f2d7e058 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 30a97eb81 docs(cfo): CEO 13:17:33 两限额定则承接——5h窗80%预警/95%停工建议·7天窗70/85只预警·全链留痕·即读基线5h 27%周窗47%双线均远·14:00锚按新则首评
+  - 7b290e545 docs(cos): 台账一百二十七笔(E1-5销账=8711首拍13:00 PASS全链100%·P系四裁收执=段B接退双门全开·纪A/B监督权立并入LG-090呈铸批)
+  - 85f3c50e5 docs(sde): P1桥超时修diff门禁一读件——单点app.ts调用侧(投递方自带timeoutMs+30-600s夹紧·接口零改)+420s候样本勘正+restart链预告·候CTO快审
+  - 8d5e820ed docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+- registry：v2.1；今日 registry 提交无变化
