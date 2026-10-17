@@ -1202,3 +1202,13 @@
   - cfbaac17d docs(coo): 台账一百零一笔(段2窗毕零异常零停链·restart六步全绿pid30624→30340·完工锚四PASS一挂账·摊销三件兑现·E1-1自然拍上线)
   - 2a232a4cc docs(cto): 段2 restart链窗施工卷——六步全绿(pid30624→30340·24h错位自消·uptime重置7s·mc_link回绿)+完工锚四PASS一挂账(powercfg候提升窗·engaged OS返回值级生效三证)+E1-1全链闭合(201/三查/手动拍/04:05自然拍runCount2)·零异常零停链窗毕04:06
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 13e0bb424 后新增 8 条 commit：
+  - 6bda1c6eb docs(coo): 台账一百零四笔(COS件2扫模板采用确认全清认·CFO额度哨四点确认·序列E件涉我三笔全闭环)
+  - 55b2feb0b docs(coo): 台账一百零二笔(序列E件收记·涉我三笔承接·件2扫模板出卷判据五条·dem003池核数0/5不开窗)一百零三笔(CFO触线警告收记·41%越暂停线只报不阻·段B三输入合盘)
+  - 5e0c83a6c Merge remote-tracking branch 'sg-server/dev' into dev
+  - 9e89d4839 docs(cfo): 09:30周六锚——同锚跨日对+21点触发警告线(LG-089计划内burn非失控)+周窗41%越暂停线30(预警制只报不阻)·历史峰值日767M互证·触线报COO+BOD·周末无门令
+  - 1a15ad56a docs(cos): E件毕报——daemon版大表open=4逐件清·对象断言闭合零回询·四件现势对表零可销·dem003大表迁漏勘补·in-progress四note现势刷
+  - e2b5cf140 docs(cos): CEO知情呈报件出卷记账——294e6b95d六节全链D-39事后呈报·BOD段2收稿核可五点·反引号吞路径现查修复
+  - 294e6b95d docs(cos): CEO知情呈报件——LG-088/089集中窗全链D-39事后呈报(LG-088定谳+缓解三件/E2-P案全链/charter-004·005窗链/候办四件挂账/BOD三裁令对表·卷锚索引)·候BOD转CEO·08:00复盘节点面齐
+  - a9c3aba30 docs(cos): 段2窗毕转呈——主机面主线全毕零异常零停链·restart六步全绿·一次重启摊销三件兑现·E1-1值守上线F-3闭合·对表读数核阅补齐·D-39呈报CEO并卷08:00面齐
+- registry：v2.1；今日 registry 提交无变化
