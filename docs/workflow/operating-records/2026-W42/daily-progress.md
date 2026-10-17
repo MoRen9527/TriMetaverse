@@ -1414,3 +1414,19 @@
   - eca0d8854 docs(coo): 台账一百四十八笔(CTO B14终裁收记·四件套门形·通路b采·派工三件排定·三线现势)
   - …另有 2 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:10 +08：自上次进度提交 7a41a379e 后新增 14 条 commit：
+  - 9fee9d836 docs(cos): B12案定谳收记(对象混同虚警·r-duty-ste vs m-ste两层分野·锚III主体在·候m-ste回执终验)
+  - 8da38b171 docs(coo): 台账一百五十二笔(B系12/13定谳·锚Ⅲ在办m-ste实锚·对象混同虚警闭环)
+  - 1d49b0ad5 docs(cos): B系主体收官销账(B2-B13十二席全退·卷20c48f172·count=1余cos)+SDE异常自报收记+B12时序错位案COO在途
+  - 5c85e5417 docs(coo): 台账一百五十一笔(CTO路径b验收毕·锚Ⅲ派工闭环·B12时序约束置)
+  - 20c48f172 docs(sde): B13 sde席照序毕(第12席·count=1对表·B系主体12席收官)+retire FATAL异常事件自报(等待窗边界抖动·零残留零污染定性·脚本rc门控缺陷记录)
+  - 8a018db5c docs(cos): B12毕报销账(卷09a247874第11席连绿·已退11/13·刷B13 sde)
+  - 09a247874 docs(sde): B12 ste席照序毕(同形第11席连绿·count=2对表·余sde/cos两席)
+  - 4eaebb757 docs(cos): B11毕报销账(卷a5b4c9c87第10席连绿·已退10/13·刷B12 ste·末段3席)
+  - a5b4c9c87 docs(sde): B11 rdt席照序毕(同形第10席连绿·count=3对表·has-session预期rc注记)
+  - 6d3c94450 docs(coo): 台账一百五十笔(路径b毕收记·锚Ⅲ可派兑现·STE派工13席全量·B系9/13余4席)
+  - 1ad4193f7 docs(cos): B9+B10联报销账(卷8b5b966fd第8/9席连绿·已退9/13·刷B11 rdt·锚III可派状态位)
+  - 1f9146422 merge: 收编并席笔（docs 面零冲突）
+  - 8b5b966fd docs(sde): B9 cso+B10 fsd照序毕(第8/9席连绿·count=5/4对表)+路径b施工毕报(13workspace造物毕·headless探针双席绿·锚III可派)
+  - 856b62fea docs(cos): B8毕报销账(卷d61c7dbb7第7席连绿·已退7/13·刷B9 cso·cos席B14定谳radar)
+- registry：v2.1；今日 registry 提交无变化
