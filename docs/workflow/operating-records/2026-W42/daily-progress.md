@@ -1372,3 +1372,11 @@
   - 17b14e7fe docs(coo): 台账一百三十九笔(E1-4 v2排窗裁=修复候选④入sg独立窗候排·sg值席对表件转BOD值席链·nodeId小勘五条收记)
   - 58d5547ee docs(cos): nodeId小勘销账(g6-nodeid-local-reconcile done·CTO卷3fb42030a闸内达14:19收记)+CTO毕报卷收编
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:40 +08：自上次进度提交 caf591ed7 后新增 6 条 commit：
+  - c147a99c8 docs(sde): B2接位段五裁执行+start-dsh-web-prod.sh施工——冒烟三轮(首轮curl 000000追加bug抓修·二轮实起绿401壳活·三轮幂等复验)·生产实例已ensure(127.0.0.1:8791·0.2.0-rc.2)·第四件诚实答(Gateway Remote非REST·GUI人机正形通路)·候CTO GUI主操毕锚
+  - ad6c8a93c docs(cos): 督办岗接位挂账(COO交接卷达·watchlist 6→11项·B1追销+B3/B4-13/窗毕三enforce新挂+CFO复读/10项托底observe)
+  - 77405bc16 docs(coo): 台账一百四十三笔(COS督办岗接位生效确认·移交闭环·B3退役前置全齐)
+  - cec22f512 docs(coo): 台账一百四十二笔+交接卷(排工现势移交COS·B3准退信号·D-47三犯自报动态生成正形)
+  - a9381a42c Merge remote-tracking branch 'sg-server/dev' into dev
+  - b7a6c6b97 docs(cfo): 14:00 cron迟发引用前置锚——补14:00槽同锚跨日对+24点触线(归因同族已报不重发·13:17令面不重复旧警)·周六停工令不行使·判定入卷
+- registry：v2.1；今日 registry 提交无变化
