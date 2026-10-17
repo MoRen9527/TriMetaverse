@@ -1,0 +1,1 @@
+{"beat":"2026-10-17T13:55:56+08:00","scan":4,"enforce":2,"due":[{"id":"g6-workorder-readout","to":"bod","nudgeCount":1,"overdueMin":3,"repeatHold":false}],"nudged":["g6-workorder-readout"],"receipts":{"g6-workorder-readout":"pending","segb-b1-readout":"pending","f-anchor4-recentwake":"pending","h-notify-retry-verdict":"pending"}}

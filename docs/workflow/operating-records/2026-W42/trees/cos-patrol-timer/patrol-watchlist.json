@@ -1,0 +1,51 @@
+{
+  "updatedAt": "2026-10-17T13:55:00+08:00",
+  "maintainer": "COS(m-cos)",
+  "schemaNote": "items[]: id/desc/owner(责任面)/nudge(催办名址)/dispatchedAt(+08:00 ISO)/timeoutMin/mode(enforce=超时催·observe=只记录不催)/status(pending|done)/receipt(pending|received·COS 会话对拍后更新)",
+  "items": [
+    {
+      "id": "g6-workorder-readout",
+      "desc": "G6 值席回卷（workorder-g6-handler-round2 两线合勘·b2 形态下移终勘）",
+      "owner": "sg-duty(值席)",
+      "nudge": "bod",
+      "dispatchedAt": "2026-10-17T12:53:00+08:00",
+      "timeoutMin": 60,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending"
+    },
+    {
+      "id": "segb-b1-readout",
+      "desc": "段B 接退段 B1 毕报（观测实例再起+maxTokens 装设位勘定+GUI 手测三验①②+关停·COO 13:49 开工令）",
+      "owner": "SDE(施工)/COO(排工)",
+      "nudge": "m-coo",
+      "dispatchedAt": "2026-10-17T13:49:00+08:00",
+      "timeoutMin": 60,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending"
+    },
+    {
+      "id": "f-anchor4-recentwake",
+      "desc": "F 件锚④ recentWake 生效读数（候自然睡眠段≥5min·观察项非任务项）",
+      "owner": "COS(候收)",
+      "nudge": "none",
+      "dispatchedAt": "2026-10-17T12:55:00+08:00",
+      "timeoutMin": 240,
+      "mode": "observe",
+      "status": "pending",
+      "receipt": "pending"
+    },
+    {
+      "id": "h-notify-retry-verdict",
+      "desc": "H 件修复施工位+候排（终判候 G6 回卷后）",
+      "owner": "CTO",
+      "nudge": "none",
+      "dispatchedAt": "2026-10-17T12:26:00+08:00",
+      "timeoutMin": 240,
+      "mode": "observe",
+      "status": "pending",
+      "receipt": "pending"
+    }
+  ]
+}
