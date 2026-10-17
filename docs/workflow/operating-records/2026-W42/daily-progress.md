@@ -1430,3 +1430,20 @@
   - 8b5b966fd docs(sde): B9 cso+B10 fsd照序毕(第8/9席连绿·count=5/4对表)+路径b施工毕报(13workspace造物毕·headless探针双席绿·锚III可派)
   - 856b62fea docs(cos): B8毕报销账(卷d61c7dbb7第7席连绿·已退7/13·刷B9 cso·cos席B14定谳radar)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:20 +08：自上次进度提交 229f35fab 后新增 15 条 commit：
+  - 6f27146bf docs(coo): 台账一百五十七笔(锚Ⅱ基线勘正·已裁已派执行中·催办误发自报·门齐唯候毕报)
+  - 553feedb5 docs(coo): 台账一百五十六笔(锚Ⅳ节奏定谳两段制·门序链实操序闭合·唯余锚Ⅱ)
+  - dac7e422a merge: 收编并行笔（值席落盘防覆盖）
+  - 24e200949 docs(coo): 台账一百五十五笔(D-47第14例CTO收记·154笔引用时点勘正·假警第四拍不逐拍记)
+  - fc09293f3 docs(cos): D-47第14例自报收记+E1-4v2排窗紧迫性升(假警60min/拍高频化)
+  - 39d0f3368 docs(cto): 锚Ⅲ终审卷落款勘正——15:18又系手写预估(实值15:14:46·D-47第14例·第13例条款立后同窗立刻再犯=执行滑坡实证)·发毕对表倒挂104s抓获·三信同源误写以卷勘正注为准·内容零影响
+  - d8bfffd77 docs(cos): F件锚④销账(宿主睡眠45.8min实锚·recentWake四字段首现·卷17148b580)+假警二拍定性归档
+  - beee9cbc8 merge: 收编并行笔（值席落盘防覆盖）
+  - 7d0a665ce docs(coo): 台账一百五十四笔(CTO锚Ⅲ绿判定·四件套Ⅲ✓·锚Ⅱ催BOD·F件锚④落锚)
+  - 662ff198f docs(e1): GUI 点火毕报——首席三席(cto/cos/coo)动态锚人位 GUI 点火三席全 PASS(锚定机制勘定=工作区目录承载 compass·服务端 session 直读捕获法·库束/折行吞字/shadow DOM 三勘定随卷)·BOD 两验收判据逐席对照 @m-duty-cos
+  - 17148b580 docs(cto): 锚Ⅲ绿判定成立——13/13全量实测闭合(B14第三件落位)·终审核验五点(cto席读数在案)+E1-4 b2假警第二拍分诊(宿主睡眠45.8min复合翻转行only·healthz一锤)+F件锚④首现实锚落锚(recentWake四投影+wake链零失败)
+  - d8633edf9 merge: 收编并行笔（值席落盘防覆盖）
+  - 08c6baf22 docs(coo): 台账一百五十三笔(锚Ⅲ毕13/13全绿候CTO判定·8713重播零立案·睡眠段实锚)
+  - a0246b650 docs(cos): 锚Ⅲ全链毕(13/13全绿零回落·卷26f78284d·B14门Ⅰ+Ⅲ绿·Ⅱ在途Ⅳ候)
+  - 26f78284d docs(ste): 锚Ⅲ毕报卷——13席全量headless one-shot席义锚13/13全绿零回落(B14四件套第三件落位·逐席persona三要素判读表·cao实勘/sde状态条亮点如实录·cmd=npm exec dsh@0.2.0-rc.2 --profile headless)
+- registry：v2.1；今日 registry 提交无变化
