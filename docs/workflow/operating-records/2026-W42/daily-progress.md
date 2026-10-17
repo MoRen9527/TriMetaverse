@@ -1472,3 +1472,17 @@
   - a8f75cd9d docs(arch): MMC行现势勘正·'不自建会话管理与执行内核'系宿主桥时代旧口径(CEO 2026-10-17批)——TriMMC已消费@tricompany/agent-core(file:依赖+src/agent-loop在案)·四面内核同源·MMC=机制面job执行形态与RLC完整harness分野·旧口径保留为历史
   - …另有 5 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:40 +08：自上次进度提交 d796a91e9 后新增 12 条 commit：
+  - 7a558ab9e docs(board): 并表卷落款勘正——原18:40:00系写卷手写预估·发毕对表倒挂1m49s自获(D-47家族BOD侧新犯候选·兜底闸起效)·正形=commit时现查原值18:38:11·自报候CAO定性
+  - 86c7382a6 docs(board): agent-core迁移评估四席并表卷落卷——CPO/COO/CTO/COS四卷收稿三查绿汇总·合流锚'不迁席位迁例行件'四席零实质分歧·候裁案六条供10-18 12:00评审·D-39只汇总不预裁终裁=CEO保留权项
+  - 2d4966d8a docs(coo): 台账一百六十六笔(D-47第15例入谱·先声补录勘正·信面正形采认·族谱十五案)
+  - a517b4991 docs(cos): agentcore迁移评估建议书定稿v1.0(三席合流锚并入·场景切分例行件先行席位本体不迁·审计五差异独有面·三读数门禁采纳·D-39只征集不预裁)
+  - eb3d17b26 docs(coo): 台账一百六十五笔(窗毕汇总对表毕转BOD·§六义务闭环·段B主体收官)
+  - 357dbfa6b docs(cos): B14毕报收记+窗毕汇总出卷呈报(faa27fa72·B2-B14全程收官·watchlist双销·D-47候选记转CAO)
+  - faa27fa72 docs(cos): charter-006窗毕汇总出卷(§六义务·R1R2锚125笔+B2-B14收官链+F件销+诚实标注原文照录+resumePoint+B15B16序表·呈COO→BOD→CEO链)
+  - dc5829137 docs(coo): 台账一百六十四笔(B系B2-B14全程收官·D-47第15例信面落款自报·正形升级首跑)
+  - 34af898e9 merge: 收编并席笔（docs 面零冲突）
+  - 4bb8d2356 docs(sde): B14 cos席值席退役毕(四断言绿·count=0清零·R面13席全dsh形零claude残留pgrep实证·rc门控整改本窗施)+COO令文时点倒挂实锚呈报(D-47第14例候选)
+  - b0a84b26d docs(cto): agent-core迁移评估建议书——分层形态采纳·迁移序三步(例行件已行→巡检面拆件→人格交互面不迁)·三件移植两零一半·三引擎矩阵分场景各优·范式不打乱正延续·P3双案窗+三读数门禁
+  - 8cba14a35 docs(cos): B14门全绿对表(CTO判定卷31e167faf抽验在档·退役令发r-duty-cos·窗毕汇总备命启动锚=退役毕报)
+- registry：v2.1；今日 registry 提交无变化
