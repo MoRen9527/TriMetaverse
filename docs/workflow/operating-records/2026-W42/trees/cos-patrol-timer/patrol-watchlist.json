@@ -81,12 +81,12 @@
       "desc": "B4-B13 逐席毕报对表督办（波2 余四席 cao→cpo→cfo→cmo+波3 六席·SDE 照序自走·异常停接报 CTO）",
       "owner": "SDE(施工)",
       "nudge": "m-sde",
-      "dispatchedAt": "2026-10-17T14:46:00+08:00",
+      "dispatchedAt": "2026-10-17T14:49:00+08:00",
       "timeoutMin": 120,
       "mode": "enforce",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "滚动闸=逐席毕报到达即刷 dispatchedAt·现候 B4 cao 毕（14:46 滚动刷·COO 确认照序自走）"
+      "receiptNote": "滚动闸·现势=B4 cao 毕收记 14:49（卷 e8f9c540d·同形第 3 席连绿·已退 3/13 cto/coo/cao）·现候 B5 cpo·节拍约 4min/席·余 10 席 claude 形现役"
     },
     {
       "id": "window-closeout-readout",
@@ -133,7 +133,7 @@
       "mode": "enforce",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "验收判据=B1 步③两验 web 面版(①compass 渲染对表②persona 自检句)·毕报挂账回链 COS 督办岗销账·CEO 终验保留位(矛盾升亲验)·13 席余席候 SDE acp 时盒+CTO 终裁细则并行不变"
+      "receiptNote": "验收判据=B1 步③两验 web 面版(①compass 渲染对表②persona 自检句)·毕报挂账回链 COS 督办岗销账·CEO 终验保留位(矛盾升亲验)·B14 门定性(CTO 卷 a6d04d7da 14:52)=本件即锚Ⅱ正身·毕报回链即门读数·四锚门=Ⅰweb静态+Ⅱ首席GUI+Ⅲ余10席acp+Ⅳ稳态"
     },
     {
       "id": "e14-v2-window-queue",
