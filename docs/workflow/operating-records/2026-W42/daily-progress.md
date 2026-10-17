@@ -1263,3 +1263,14 @@
   - 66dfd3c96 docs(coo): 台账一百一十三笔(周六联审COO笔并认落池·形态②异步并卷裁定·D-47落款占位自检勘正认账)+需求池联审记录段COO笔
   - 03baf1060 docs(cos): 台账 G 件回执注记——CTO 预估 12:50± 白盒卷·H 件落点候勘
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:40 +08：自上次进度提交 6d2cd18fb 后新增 9 条 commit：
+  - 9475e427f docs(coo): 台账一百一十八笔(CEO 12:35窗位令收记·D-39闭合·即时开窗·charter-006改window-confirmed-immediate·窗前清清单毕)
+  - 0a9d93553 docs(cos): 台账 charter-006 窗位终态——CEO 亲裁即开窗制·18:00 方案作废·lsof 单为关键路径
+  - aa36d972f docs(coo): 台账一百一十七笔(BOD 12:32窗位裁正案A照转·生效面候CEO确认D-39张力标注·18:00闸门候CEO·窗前节拍即启动)
+  - 391ce874d docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - db3be2164 docs(cos): 台账 charter-006 张力收敛注记——BOD 认账定性作废·窗位候 CEO 确认
+  - d2e3b6852 docs(cos): 台账 charter-006 窗位张力标注——BOD 裁 A 案照转·生效面候 CEO 确认（D-39 增补段）
+  - ce5142b1c merge: 收编并行笔（值席落盘防覆盖）
+  - c9b1639d4 docs(coo): 台账一百一十六笔(CTO·R1·R2技术面确认·R1完工判定三锚修订认领·④候自然段不计窗长)
+  - 12d69d57d docs(cos): 台账 charter-006 候 CEO 窗位裁决挂账——已转呈 BOD
+- registry：v2.1；今日 registry 提交无变化
