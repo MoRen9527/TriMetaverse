@@ -1454,3 +1454,21 @@
   - f39372405 merge: 收编并行笔（值席落盘防覆盖）
   - 056a2c8fc docs(coo): 台账一百五十八笔(CFO复读点代守读数收记·m-cfo对象勘正三犯·真读数直发)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:30 +08：自上次进度提交 a3b19f460 后新增 20 条 commit：
+  - 93a6d5f98 docs(coo): 台账一百六十三笔(CTO门判定四件套全绿·B14值席退役令发·claude形末席)
+  - 31e167faf docs(cto): B14门判定卷——四件套全绿判定成立(锚Ⅰ末退复验五面实测+锚Ⅳ两段制盘点零P0两P1挂账有主+诚实标注照守·r-duty-cos退可序)
+  - c5643d64b docs(cos): agentcore迁移评估建议书初稿v0.1(治理流转面三问三答·审计五差异表·治理前提三件·范式不打乱判断·候BOD工单对表)
+  - 59fcc291b docs(coo): 台账一百六十二笔+agent-core运营面建议书(分层成立大半现状·只迁例行件不迁席位·范式守卫条款)
+  - 2a63e6dd0 docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - ca6fa504c docs(cpo): agent-core迁移评估CPO建议书——定位=内部底座→产品内嵌内核件不做独立SKU·位次=不插主线P3候dsh基线与双案实测(DEM-006为供料件)·MVP=非人格常驻管理面人格类不切首版·范式不打乱反升格为准入判据(≥2面消费才进包)·验收判据三条
+  - ca7333cd4 docs(cos): b14-gate-readout观察挂账(COO门序令发m-cto·锚Ⅳ盘点候·改进候选d采纳双保险)
+  - c791af4f2 docs(board): lg085 BOD概念卷(八节+增补四·agent-core全景)+agent-core迁移评估工单补落dev——原commit在wt/board未推分支致CTO对表零命中·分支向错位勘正(CEO 18:14七连问答复底稿+四席评估工单)
+  - 428269f7c docs(coo): 台账一百六十一笔(锚Ⅱ三席PASS补记·B14门序令发出·四件套Ⅳ随令盘点)
+  - ac8c630b6 docs(coo): 台账一百六十笔(CFO锚结案·锚Ⅱ超闸98min问询·agent-core评估令接单)
+  - 26ebba1c8 docs(cos): agentcore迁移评估派工挂账(CEO 18:14令·治理流转面三问·deadline明日11:30·watchlist enforce 1020min)
+  - f8ba4f762 docs(cpo): DEM-006评审素材增补三项入条目(CEO批列入·投递器可插拔化/催办定时器首日数据4催4闭环/毕报流向盲区改进候选ab)
+  - cfb7f2644 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 6b0aef8ec docs(cfo): 18:00周六锚——周窗54%减速形(+1pt/2.6h)·5h窗23%·80%预警未现·+27pt对触线归因同族不重发·16:15复读缺执行如实录+窗内单调性论证零漏警·加速形复读候探针触发器
+  - a8f75cd9d docs(arch): MMC行现势勘正·'不自建会话管理与执行内核'系宿主桥时代旧口径(CEO 2026-10-17批)——TriMMC已消费@tricompany/agent-core(file:依赖+src/agent-loop在案)·四面内核同源·MMC=机制面job执行形态与RLC完整harness分野·旧口径保留为历史
+  - …另有 5 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
