@@ -154,7 +154,7 @@ B 系 12/13 毕（12 席 dsh 接位+claude 形退役全绿）；**r-duty-cos 值
 
 一句话定位：**隔离 agent=值班员/管家形**（轻量常驻+周期任务+渠道触达）；**claude code 席组=工匠形**（重型通用施工+交互导向）。非替代关系，分层互补——正因如此 CEO 问题 4 的「harness 管席组施工+agent-core 管常驻管理」是自然分工而非二选一。
 
-R 面彩蛋注：TriRMC src 实探有 **soul-loader**（人格装载器）目录——R 面自研引擎已在为人格类 agent 预留装载位。
+R 面彩蛋注：TriRMC src 实探有 **soul-loader**（人格装载器）目录——R 面自研引擎已在为人格类 agent 预留装载位。【勘正（19:13 CTO 补充卷 5c476799d 实勘）：soul-loader **双 MC 目录级在案**（TriMMC 亦有）——非 R 面独有，本句「R 面彩蛋」表述有偏照留；§10.5「唯一消费者=TriRMC」同步勘正为「双 MC 已消费·第三消费者（RLC/M 面 MC 对）候现势勘验」】
 
 ### 9.2 问题 1b：每 job 独立持久会话 vs 单轮临时 session
 
