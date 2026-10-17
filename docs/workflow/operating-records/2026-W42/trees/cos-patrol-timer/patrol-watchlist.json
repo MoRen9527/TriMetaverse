@@ -91,14 +91,14 @@
     {
       "id": "anchor3-pathb-track",
       "desc": "锚Ⅲ链路跟踪（SDE 路径 b 席级 workspace 施工毕报抄送候收+锚Ⅲ执行席 STE/COS 代跑形候 b 落成后 COO 派·B14 门锚③余 10 席 acp 席义）",
-      "owner": "SDE(施工)/COO(派工)",
+      "owner": "SDE(施工)/STE(代跑)",
       "nudge": "none",
       "dispatchedAt": "2026-10-17T14:52:00+08:00",
       "timeoutMin": 480,
       "mode": "observe",
-      "status": "pending",
-      "receipt": "pending",
-      "receiptNote": "observe 跟踪·现势=施工毕 15:01（13 workspace 造物毕·headless 探针双席绿·锚Ⅲ可派状态位到）·候 COO 派非作者席（STE/COS 代跑形）派后锚③毕报回链·诚实标注条款在案"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "全链毕 15:14：路径 b 施工毕（13 workspace+AGENTS.md·探针双席绿）→COO 派 m-ste 主跑→**13/13 全绿零回落**（卷 26f78284d·逐席 persona 三要素判读表·B14 四件套第三件落位·CTO 主送终审·B12 时序闸零阻两层分野照守）"
     },
     {
       "id": "window-closeout-readout",
