@@ -1360,3 +1360,15 @@
   - 90db44c19 docs(sde): B1步③④毕——COS手测收记(静态三链全绿+壳认证链200)+动态①②载体错位FAIL不构成否证·执行形态缺口三路候裁(headless/生产会话替代/a案)·步④关停绿+冻结三件在档·root属主残留三件候清(含cookie值面件·已失效)
   - f305a9d24 docs(cos): 催办定时器现势刷(B1步③毕报三发+nodeId工单receiptNote+14:00拍落盘·g6销项后due空形态正)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:30 +08：自上次进度提交 28fa1954e 后新增 10 条 commit：
+  - 3cb134282 docs(coo): 台账一百四十一笔(B2闭环收记全链绿·接退序勘明B3=coo席本席自接退·督办岗交接预告)
+  - fdf2c5691 merge: 收编并行笔（g6 行级终判+B2 双线卷防覆盖）
+  - 64cebd8e6 docs(sde): B2回滚锚实演毕全链绿——模板重开+三断言+④全绿+再退毕(240825复活→二退·8710注销态窗口干净)·判据勘正注记(②载体级正形+retire接口位置参数正形)·模糊时点改声明式序位(GATE修)
+  - 91ebcdfa4 docs(g6): 行级终判两件——件①观测面缺口假警坐实+反向语义误消费定谳（14:08:19 recovered 拍触发行=TABLET-10832 stale 行，watch 把丢心跳宣告当恢复）；件② nodeId=env 注入 hostname-pid 形（10832 与 restart 回执精确互证，逐代换键=flap 对机械投影）；E1-4 v2 权重更新 in-process 升首选 @m-duty-cto
+  - ec3648d30 docs(cto): B2步①毕——r-duty-cto claude席退役RETIRED_OK(三步全绿:清零三面核对+SIGTERM退+pane=0+compass零触碰·双独立断言SESSION_GONE/PID_DEAD)+机位纠偏入卷(河源非sg·本席推定坑自领)+首跑FATAL fail-closed零副作用(脚本位置参数接口勘正)+迁移标注块在案·候SDE模板重开三断言 · Co-Authored-By: Claude Code <noreply@anthropic.com>
+  - 5ae611490 docs(sde): B2备料补节——断言③④探针细案(8710 agents面字段形实锚+判据)+机位D-24定谳(河源非sg·双机活体铁证)+退役前基线在卷
+  - ce3969117 docs(coo): 台账一百四十笔勘正补推(D-47二连犯自报·140笔落款动态生成正形·禁手写字面值升级)
+  - decc472a7 merge: 收编并行笔（值席落盘防覆盖）
+  - 17b14e7fe docs(coo): 台账一百三十九笔(E1-4 v2排窗裁=修复候选④入sg独立窗候排·sg值席对表件转BOD值席链·nodeId小勘五条收记)
+  - 58d5547ee docs(cos): nodeId小勘销账(g6-nodeid-local-reconcile done·CTO卷3fb42030a闸内达14:19收记)+CTO毕报卷收编
+- registry：v2.1；今日 registry 提交无变化
