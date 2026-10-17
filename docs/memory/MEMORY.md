@@ -81,7 +81,7 @@
 - [重启窗完工判据=进程内生效验证](restart-window-completion-criteria.md) — healthz 绿≠配置生效；完工锚必含目标变更值面探针；env 遗传族正解=冷起整树+父链断言
 - [TriMMC 与 TriMLC cron addJob 行为分野](trimmc-mlc-addjob-divergence.md) — TriMMC/TriMLC/TriRLC 三 daemon cron 行为分野勿互套；**F-3 家族性**（8711 现役在册）=POST 201≠会触发，新建 job 判定三查=201+next_run 值面+enabled=1；8711 store=$LOCALAPPDATA\trilc\cron.db（探库先对 DATA_DIR）；判读=源码先读后定性；shutdown 正身=根路径 POST /shutdown；勘修窗三件见 [TriMLC 勘修窗 2026-10-11](trimlc-repair-window-20261011.md)
 - [TriMLC 勘修窗 2026-10-11](trimlc-repair-window-20261011.md) — 三件独立 commit+重启链实操序（watchdog Disable→/shutdown→port FREE→schtasks 冷启→pid/CIM 对表→Enable）+Git Bash schtasks 路径转换坑
-- [值面字段禁进打印路径](value-face-never-print-path.md) — 族 6 例 10 天跨 5 席：含密值面禁进打印路径，正形=脱敏前置取段层+token 变量读入+读含密文件第一动作查在案记录+**先 split 后掩码值不进管道文本+掩码兜底「值段全替」宁过掩不放过**（10-14 FSD 第 6 例=脱敏正则字符集缺口·引号值形漏网——掩码正则追不全值形空间）；回显即自曝三态实锚候定性；**CAO 裁升 D-46 铸窗候选（「含密值面探针四正形」+升级两条条款化）R1 窗 D-23 对轨**
+- [值面字段禁进打印路径](value-face-never-print-path.md) — 族 6 例 10 天跨 5 席（**计数以 D-46 在册版为准：10-15 入册族 8 例·10-16 SDE tail 未滤例=第 9 例·CAO 校正对齐**）：含密值面禁进打印路径，正形=脱敏前置取段层+token 变量读入+读含密文件第一动作查在案记录+**先 split 后掩码值不进管道文本+掩码兜底「值段全替」宁过掩不放过**（10-14 FSD 第 6 例=脱敏正则字符集缺口·引号值形漏网——掩码正则追不全值形空间）；回显即自曝三态实锚候定性；**CAO 裁升 D-46 铸窗候选（「含密值面探针四正形」+升级两条条款化）R1 窗 D-23 对轨**
 - [PS5.1 Remove-Item 穿 junction](ps-removeitem-junction-penetration.md) — Remove-Item -Recurse 穿链接面递归删真实目标；正形=git worktree remove+rmdir 断链；删前断言 REPARSE_POINT 即改道；围栏先于施工+活体保活优先
 - [cmd 批文件程序化写入必保 CRLF+实跑探针](cmd-batch-crlf-preservation.md) — LF-only set 区静默失效最毒（端口不生效→绑默认崩）；写前测行尾写后断 CR 数；验证含安全形态实跑探针；反常形态必追源
 - [append 脚本 open-w 二犯](append-script-openw-double-blow.md) — io.open("w") 先清空、write 参数 join 后炸=0字节；安全版唯一正形=拼好 new_lines 再单次 open-w（模板在条目内禁手写变形）；炸后 git checkout 秒回
@@ -102,4 +102,4 @@
 - [daemon spawn 风暴诊断+8713 端点事实](daemon-spawn-storm-endpoint-facts.md) — 判别式=系统级健康而 daemon 上下文退化；陈旧缓存不可信=活体直读对表；/internal/v1/* 鉴权头=X-Internal-Token 非 Bearer；crash.log 首写才建——不存在=零 crash 非探错路径
 - [构建绿≠运行时通·冒烟须到消费面](build-green-not-runtime-green.md) — 活体验证族第三变体（TS2307 三连败实锚）；破面评估禁只查主服务启动链，cron job 独立 bin=最常漏消费面
 - [D-46 嵌套 payload 递归滤盲区](d46-nested-payload-recursive-mask.md) — 掩码正形对嵌套结构失效；正形增补=递归掩码或禁 dump 原始 payload 只投影白名单字段；8712 token 轮换裁=不立即·触发器+顺手窗两护栏
-- [token 轮换三折](token-rotation-consumer-object-and-candidates.md) — 轮换前必勘键消费对象（同名键≠同对端·8711=河源/8713=sg 实锚）+候选载入位清点（env 候选链多副本值一致化）+Git Bash 禁 schtasks 动词系（Start-ScheduledTask 唯一正形·跨 daemon 通用）+D-46 第 8 例注释行裸 key
+- [token 轮换三折](token-rotation-consumer-object-and-candidates.md) — 轮换前必勘键消费对象（同名键≠同对端·8711=河源/8713=sg 实锚）+候选载入位清点（env 候选链多副本值一致化）+全键清点禁只改锁定行（8713 L18 漏·FSD 兜）+CR 断言唯一正形 tr -cd 字节计数（od -c 假阳性）+Git Bash 禁 schtasks 动词系+D-46 第 8 例注释行裸 key
