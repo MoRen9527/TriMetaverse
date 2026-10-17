@@ -1229,3 +1229,13 @@
   - c3be82966 docs(coo): 台账一百零七笔(CTO本机侧钉死醒后段双锚排除·b2三拍连发形态注记·判据修正认领E1-4料包v2并批)
   - 25f9279b9 docs(cos): b2勘钉并宗单转sg值席·COO判据升级版(心跳值面09:17分水岭)+CTO候勘四项并宗+四拍注记·分诊红线随令
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:10 +08：自上次进度提交 6c6903a08 后新增 8 条 commit：
+  - e025e6030 docs(coo): 台账一百零九笔(§六wakeFromFreeze增量会签生效双席同向·restart生效窗合盘意向·b2勘钉候收)
+  - 86f6e566b docs(cos): F件设计卷毕转呈(353cc4ac3提前36min·门禁序施工中)·§六wakeFromFreeze我面认批候COO会签·三路流转毕
+  - 1539832d5 merge: 收编并行笔（值席落盘防覆盖）
+  - 5ed06f3b3 docs(coo): 台账一百零八笔(F件设计卷收记·§六wakeFromFreeze增量裁同意并窗·生效窗合盘意向·8711串行提案)
+  - 353cc4ac3 docs(cto): F件设计卷——b1唤醒补报修复事件订阅线(506/507拉取式·基线吸收防重放·单文件最小面·门禁序六族单测·活体验收窗如实声明·wakeFromFreeze候批增量单列)
+  - f71a24ffd docs(cos): F件接令回执·设计卷预估11:40±·生效窗预注(门禁毕8713restart候COO排)·催办节点f80da800设
+  - 910549ea6 docs(cos): CEO两裁流转·F件立项(b1修复Kernel-Power事件订阅线·设计卷候收)+合盖值守需求销(合盖=下班)·CTO流转毕
+  - 67399d009 docs(cos): b2勘钉补两条追发sg·CTO本机POST链双锚排除断环收敛sg侧store写入段·连拍六拍日志形态分辨
+- registry：v2.1；今日 registry 提交无变化
