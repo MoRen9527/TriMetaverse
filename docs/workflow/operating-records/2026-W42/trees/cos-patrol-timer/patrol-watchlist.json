@@ -109,8 +109,9 @@
       "dispatchedAt": "2026-10-17T14:31:00+08:00",
       "timeoutMin": 240,
       "mode": "enforce",
-      "status": "pending",
-      "receipt": "pending"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "窗毕汇总出卷毕 faa27fa72（lg087 树 reports/cos-window-closeout-20261017.md·启动锚=B14 退役毕报 4bb8d2356 达 18:32）——四材料+诚实标注原文照录+B15/B16 序表+resumePoint 齐·呈 COO→BOD→CEO 链"
     },
     {
       "id": "cfo-anchor-reread",
@@ -156,9 +157,9 @@
       "dispatchedAt": "2026-10-17T18:25:00+08:00",
       "timeoutMin": 480,
       "mode": "observe",
-      "status": "pending",
-      "receipt": "pending",
-      "receiptNote": "COO 18:25 建议挂观察·我面=B14 cos 退的值席面当事席（四件套门全绿才退·本席不单侧动）·窗毕汇总（§六）候 B14 毕启动·resumePoint 备好（窗毕未齐则 B 系暂停于 B13 后形态）·【18:29 对表】CTO 门判定卷 31e167faf 抽验在档（18:28:23·65 行·四件套全绿=锚Ⅰ末退复验五面实测+锚Ⅳ两段制盘点零P0两P1挂账有主+诚实标注照守·r-duty-cos 退可序）——B14 值席退役令 18:30 已发 m-sde（对象=r-duty-cos 河源 duty 形·断言④ count=0=claude 形 13 席全清·m-cos 本机照旧值守两层分野照守）；**窗毕汇总启动锚=退役毕报达**（毕报三送我面在列）——材料骨架：B14 毕形态+诚实标注条款原文照录（含「余 10 席 web 本体=机制抽验推断绿非逐一实测」禁写条款）+B15 首回流→B16 通道迁移序表入卷"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "COO 18:25 建议挂观察·我面=B14 cos 退的值席面当事席（四件套门全绿才退·本席不单侧动）·【18:29 对表】CTO 门判定卷 31e167faf 抽验在档（四件套全绿）——退役令发 m-sde（对象=r-duty-cos 河源 duty 形·两层分野照守）·【18:32 毕报达】SDE 卷 4bb8d2356（四断言绿·count=0·R 面 13 席全 dsh 形零 claude 残留 pgrep 实证）·**B 系 B2-B14 全程收官·窗毕汇总出卷 faa27fa72**——观察项闭环"
     },
     {
       "id": "agentcore-migration-assessment",
