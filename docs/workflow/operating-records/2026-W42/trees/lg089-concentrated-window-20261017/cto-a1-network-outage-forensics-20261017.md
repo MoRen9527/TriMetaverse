@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（trees/lg089-concentrated-window-20261017/cto-a1-network-outage-forensics-20261017.md）
 - syncMode: static（勘验定性卷·CEO 10:12 亲问件·COS 施工令 10:1x·令源 BOD 序列卷 251c2cd8f）
-- lastSyncedAt: 2026-10-17T10:28:00+08:00（date 现查写前跑·D-47）
+- lastSyncedAt: 2026-10-17T10:24:11+08:00（date 现查·D-47·10:28 手写预填已勘正）
 - 证据面：Windows 事件日志 System（活体现查）·channel.log 86982 行全量正反扫·TriMLC dist 源码五面核·keeper/8713 活体探针
 
 ## §一 A1 定谳：断窗=宿主 Modern Standby 睡眠（用户动作路径）·三路出网断=从属现象
@@ -63,4 +63,4 @@
 - TriMLC dist 五面核（power-monitor.js/app.js 调用面/index.js import 链/mtime/启动行）
 - 凌晨窗卷 2a232a4cc（restart 链+pid 时间线）·B 件卷 3542cc0be（a 件三锚）· keeper pid 换代 27892→3372 活体探针
 
-—— CTO 小狄（落款 date 现查原值 2026-10-17 10:28:00 +0800·发毕对表）
+—— CTO 小狄（落款 date 现查原值 2026-10-17 10:24:11 +0800·发毕对表）
