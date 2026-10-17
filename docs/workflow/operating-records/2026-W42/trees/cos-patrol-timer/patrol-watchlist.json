@@ -123,6 +123,18 @@
       "receiptNote": "observe 托底·其中 sg 对表两件/E1-4 v2 排窗/流转断链已有在册项对应·1/2 项并入 b3-retire 候收"
     },
     {
+      "id": "gui-ignite-chief3",
+      "desc": "首席三席（cto/cos/coo）动态锚人位 GUI 点火=值席代执形（BOD 14:42 裁·ssh -L 隧道+浏览器 GUI 发首句·CTO 卷 606c2b231 候选一）",
+      "owner": "sg duty 值席(BOD 值席链)",
+      "nudge": "bod",
+      "dispatchedAt": "2026-10-17T14:42:00+08:00",
+      "timeoutMin": 120,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "验收判据=B1 步③两验 web 面版(①compass 渲染对表②persona 自检句)·毕报挂账回链 COS 督办岗销账·CEO 终验保留位(矛盾升亲验)·13 席余席候 SDE acp 时盒+CTO 终裁细则并行不变"
+    },
+    {
       "id": "e14-v2-window-queue",
       "desc": "E1-4 v2 三选项候排窗（挂点 A 建设·候排窗裁·勿插段B 队列·随段B 接退段毕后 COO 排）",
       "owner": "COO(排窗)",
