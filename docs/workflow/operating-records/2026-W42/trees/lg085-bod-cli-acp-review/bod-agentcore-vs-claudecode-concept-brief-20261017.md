@@ -140,4 +140,65 @@ COS 催办 job 每 30min 一轮，单轮扫描+催办可能超 30min。无顶替
 
 B 系 12/13 毕（12 席 dsh 接位+claude 形退役全绿）；**r-duty-cos 值席 claude 形刻意压后在役**——「值席最后退」保底条款（dsh 设计 §2B-B3：全 12 席接位毕才退值席·班组零失守）。门序四锚 Ⅰ✓Ⅱ✓（GUI 三席 PASS）Ⅲ✓·唯余锚Ⅳ稳态候 COO 门序令；门序令达→末退复验→cos 席退→dsh cos 顶位→B 系全窗收口→全就位定谳。设计如此（宁后不退），非故障非卡点。
 
-—— BOD 2026-10-17 17:51:18 +0800（date 现查·发毕重跑对表）
+## 九·增补四（18:14 CEO 七连问）：形制优劣+四面补件盘点+维护形态定谳
+
+### 9.1 问题 1a：openclaw 形隔离 agent vs claude code 多 session 员工组
+
+| 维度 | 隔离 agent（daemon 托管·agent-core 路线） | claude code 多 session 员工组（M 面 13 席现役） |
+| --- | --- | --- |
+| 专属持久人格 | **配置级**：每 agent 独立 system prompt+auth-profile+模型选择，配置持久在 daemon 侧——人格与进程彻底解耦，重启即恢复，daemon 死人格配置还在 | **文件级+进程级**：五件套/agents 文件定义人格（持久），但运行上下文在进程内——恢复=新进程从 transcript 重建（尸体复活式），热态（未 compact 的会话流）不可跨进程 |
+| 多轮长任务 | job 触发→接上次会话续跑（跨触发记性），长任务天然形态 | 长会话本身是强项：工具生态全（skills/MCP/插件）、auto-compact、交互式纠偏 |
+| 无人值守周期任务 | **核心强项**：scheduler 触发+会话延续+结果投递（渠道）三件一体 | 需外挂 daemon（TriMLC 拍信+看门狗+tmux）拼装达成 |
+| 施工力/通用任务面 | 薄（agent-core tools 118 行·判断力场景 6-8 件可控） | 全（Bash/Edit/Web/技能生态全家桶） |
+| 成本形态 | idle 零 API·有事才推理 | 同为有事才调 API；idle 占进程内存位 |
+
+一句话定位：**隔离 agent=值班员/管家形**（轻量常驻+周期任务+渠道触达）；**claude code 席组=工匠形**（重型通用施工+交互导向）。非替代关系，分层互补——正因如此 CEO 问题 4 的「harness 管席组施工+agent-core 管常驻管理」是自然分工而非二选一。
+
+R 面彩蛋注：TriRMC src 实探有 **soul-loader**（人格装载器）目录——R 面自研引擎已在为人格类 agent 预留装载位。
+
+### 9.2 问题 1b：每 job 独立持久会话 vs 单轮临时 session
+
+| 维度 | 每 job 独立持久会话（openclaw isolated-agent 形） | 单轮临时 session+外部 state（TriRLC 现役形） |
+| --- | --- | --- |
+| 记性 | 跨触发上下文延续（job 有记性：「昨天巡到哪」） | 零记性——连续性靠外部 state 文件接力 |
+| 上下文成本 | 会话膨胀管理成本（历史越长越贵越钝·需 reaper/压缩配套） | 每轮干净冷启·零膨胀·成本恒定 |
+| 状态污染 | 长会话新旧混杂风险（正是受控压缩教义针对面） | 天然免疫——每轮全新 |
+| 实现复杂度 | 高（会话生命周期管理+reaper+云同步） | 低（session-store 建了即弃） |
+
+TriRLC 实证：**b2 案=单轮+外部 state 全周期闭环成功**（b2-state.json 持久化 lastActivityEpoch，每轮读文件恢复判断）——「无记性」用结构化 state 文件补，还躲开会话污染，且状态可审计可 diff。选择判据：任务需「连续记忆且状态难 JSON 化」→持久会话；状态可结构化外置→单轮+state 文件（简单干净可审计）。
+
+### 9.3 问题 2：session reaper 四面分布（实探 10-17 18:0x）
+
+| daemon | reaper | 依据 |
+| --- | --- | --- |
+| TriRLC | **有**（消费侧自持补回） | src/cron/session-reaper.ts |
+| TriMLC | **有**（姐妹 fork 同补） | src/cron/session-reaper.ts |
+| TriMMC | 无 | src/cron/ 五文件（command-handler/index/routes/service/week-math）无 reaper |
+| TriRMC | 无 | src/cron/ 与 MMC 同构·无 reaper |
+
+缺席合理性：MMC/RMC 的 cron=**机制面 job 执行**（周平面/账本），不托管 agent 会话——无会话即无僵尸可收，reaper 缺席系职责域使然非遗漏。
+
+### 9.4 问题 3：power-follower/keepalive 四面分布
+
+| daemon | 电源/唤醒面 |
+| --- | --- |
+| TriRLC | power-follower/power-keepalive（自持） |
+| TriMLC | **最全**：power-keepalive.ts+power-monitor.ts+heartbeat/heartbeat-wake.ts+heartbeat-active-hours.ts——连 openclaw 被裁的「唤醒协调」件都自持补了 |
+| TriMMC | 无 TS power 系（heartbeat/=Python 遗留面 checker.py 系·另一套） |
+| TriRMC | 无 |
+
+分布规律：**件的分布跟着宿主环境走**——MLC/RLC=本地桌面宿主（睡眠/断电真实存在→需电源面）；MMC/RMC=服务域宿主（sg 机/河源机 7×24→无电源面需求）。环境适配非遗漏。
+
+### 9.5 问题 6：agent-core 维护形态现势——CEO 所述形态即现状
+
+- **共有功能→agent-core 包统一维护**：loop/tools/permissions/scheduler/supervisor/spawn/contracts——真源 `TriCompany/packages/agent-core/`，四面 `file:` 依赖共享（改包四面立受·无版本化灰度；前提=同构布局 `../TriCompany/` 相对路径）。
+- **特有功能→各 daemon 自持**：RLC=执行层全家桶（session-store/tools/tui/tray/task-runtime/skills/toolbus）；MLC=机制面+电源面+notify；MMC=机制面+comm/config-sync/mirror（+Python heartbeat 遗留面）；RMC=服务域全家桶（soul-loader/task-controller/tool-gater/policy-gate/orchestration/pipeline/context-builder 等）。
+- 结论：**CEO 提议形态=现状已如此**，无需改造；候补的是**治理显性化**——哪些功能够格进包（≥2 面消费）/谁审收口，候治理条款随评估工单并表。
+
+### 9.6 问题 4/5/7 执行记录
+
+- **问题 4【派工】**：agent-core 迁移评估工单已立（agentcore-migration-assessment-brief-20261017.md），SendMessage 派四席（m-cto=技术架构+移植路径+harness 对比/m-cpo=产品定位+路线图/m-cos=治理流程+流转面/m-coo=运营面+成本节律），产出挂 10-18 12:00 评审并表。
+- **问题 5【批令·列入】**：DEM-006 素材正式增补列入 10-18 评审——投递器可插拔化（信箱/localbus/TriPilot/IM adapter）+催办定时器试运行首日数据（4 催 4 闭环零误催一空催）+毕报流向盲区改进候选；知会 m-cpo。
+- **问题 7【批令·执行】**：架构文档「MMC 不自建内核」旧口径勘正——主仓 docs/三元宇宙架构与模块说明.md TriMMC 行加现势勘正注（surgical 单文件 commit·留痕不改史）。
+
+—— BOD 2026-10-17 18:15:54 +0800（date 现查·写前跑）
