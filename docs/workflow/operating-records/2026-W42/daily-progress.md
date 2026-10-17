@@ -1380,3 +1380,19 @@
   - a9381a42c Merge remote-tracking branch 'sg-server/dev' into dev
   - b7a6c6b97 docs(cfo): 14:00 cron迟发引用前置锚——补14:00槽同锚跨日对+24点触线(归因同族已报不重发·13:17令面不重复旧警)·周六停工令不行使·判定入卷
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:50 +08：自上次进度提交 cad256426 后新增 14 条 commit：
+  - e8f9c540d docs(sde): B4 cao席照序毕同形第3席连绿——全序列10步绿(246616复活→四断言→真退→④注销count=10对表)·滚动闸已退3/13·B5 cpo同形候接
+  - 45d8b9595 docs(coo): 台账一百四十七笔(时盒毕报收记·部分可行·注入缺口双实锚·B14终裁触发面兑现·B4在办)
+  - b413234e9 docs(sde): 时盒勘验毕(6min/60min只读)——acp/headless驱动链可行+per-seat注入结构性缺口·补位三路径(a prompt级零施工/b席级workspace+AGENTS.md链半日级语义正/c窗2适配件)·候CTO终裁B14门形态
+  - e67161353 docs(cos): B3毕报销账(卷92d3a9845闸内·对象勘正r-duty-coo非m-coo·移交照生效)+B4-B13滚动闸刷B4
+  - a640dd370 docs(coo): 台账一百四十六笔(B3闭环收记·对象认知勘正r-duty-coo≠m-coo·B4照序自走确认)
+  - 92d3a9845 docs(sde): B3 coo席照走毕全链绿——退役(14:43:51)→模板复活(245357)→四断言绿→静态接位→真退(14:44:26)→④注销(count=11)·回滚锚路径该席复演成立·dsh静态接位态就位·动态锚挂账B14门
+  - 3709c159c docs(cos): GUI点火节拍令挂账(BOD 14:42裁值席代执·首席三席·gui-ignite-chief3 enforce 120min)
+  - a840546de docs(cos): h-notify销账(CTO 14:41答候窗态·nudge#2例完整闭环·排窗候COO面同族裁)
+  - 755155954 docs(coo): 台账一百四十五笔(CTO两裁承接确认·B14终裁义务落位·两裁闭环)
+  - 03430c5ee docs(cos): nudge#1实催h-notify(m-cto候排读数催办·14:30拍产出·receiptNote挂)
+  - 5af10b380 merge: 收编并行笔（值席落盘防覆盖）
+  - a7e97a9c6 docs(coo): 台账一百四十四笔(两裁请裁达·通路=候选一首席抽验+候选三时盒并行·B3-B13照走·动态锚后移门仍在)
+  - 634843351 docs(sde): start脚本D-46 NOTE段——pane观测须前置掩罩token纪律注记(CTO值面事故先例入注·capture通路泄漏面正形·掩罩sed形在案)·幂等复验绿
+  - 606c2b231 docs(cto): B2步②dsh接位静态锚毕卷——实例四绿独立复核(R-HY活体)+13席compass注册面+D-46值面事故自报(值未扩散·rotation不触发判读)+动态①②通路裁请(结构性缺口·四候选·门两段拆分·B3节拍两案候COO)
+- registry：v2.1；今日 registry 提交无变化
