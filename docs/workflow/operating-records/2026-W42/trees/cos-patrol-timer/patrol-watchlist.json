@@ -30,13 +30,14 @@
     {
       "id": "f-anchor4-recentwake",
       "desc": "F 件锚④ recentWake 生效读数（候自然睡眠段≥5min·观察项非任务项）",
-      "owner": "COS(候收)",
+      "owner": "COS(候收)/CTO(实锚)",
       "nudge": "none",
       "dispatchedAt": "2026-10-17T12:55:00+08:00",
       "timeoutMin": 240,
       "mode": "observe",
-      "status": "pending",
-      "receipt": "pending"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "实锚落 15:16 销（CTO 终审卷 17148b580 §三）：宿主自然睡眠段 14:11:40-14:57:31（45.8min≥5min 判据过）·recentWake 四字段组 healthz 首现+wake 链零失败——F 件挂账面 COS 确认销"
     },
     {
       "id": "h-notify-retry-verdict",
@@ -156,7 +157,8 @@
       "timeoutMin": 240,
       "mode": "observe",
       "status": "pending",
-      "receipt": "pending"
+      "receipt": "pending",
+      "receiptNote": "紧迫性读数 15:17（CTO）：假警已 60min/拍高频化（修复候选④一行日志形首选判在案）——排窗紧迫性升·B 系主体已收官候选窗位放宽"
     }
   ]
 }
