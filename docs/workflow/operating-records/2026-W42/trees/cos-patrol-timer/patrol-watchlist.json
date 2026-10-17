@@ -86,7 +86,19 @@
       "mode": "enforce",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "滚动闸·现势=B4 cao 毕收记 14:49（卷 e8f9c540d·同形第 3 席连绿·已退 3/13 cto/coo/cao）·现候 B5 cpo·节拍约 4min/席·余 10 席 claude 形现役"
+      "receiptNote": "滚动闸·现势=B4 cao 毕收记 14:49（卷 e8f9c540d·同形第 3 席连绿·已退 3/13 cto/coo/cao）·现候 B5 cpo·节拍约 4min/席·余 10 席 claude 形现役·窗毕未齐则 B 系暂停于 B13 后（B14 门四锚制）"
+    },
+    {
+      "id": "anchor3-pathb-track",
+      "desc": "锚Ⅲ链路跟踪（SDE 路径 b 席级 workspace 施工毕报抄送候收+锚Ⅲ执行席 STE/COS 代跑形候 b 落成后 COO 派·B14 门锚③余 10 席 acp 席义）",
+      "owner": "SDE(施工)/COO(派工)",
+      "nudge": "none",
+      "dispatchedAt": "2026-10-17T14:52:00+08:00",
+      "timeoutMin": 480,
+      "mode": "observe",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "observe 跟踪·半日级施工·诚实标注条款在案（B14 毕报如实标注余 10 席动态面=机制抽验推断绿·窗毕汇总转 BOD 照录）"
     },
     {
       "id": "window-closeout-readout",
