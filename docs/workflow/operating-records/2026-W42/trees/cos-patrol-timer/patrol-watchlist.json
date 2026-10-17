@@ -86,7 +86,7 @@
       "mode": "enforce",
       "status": "done",
       "receipt": "received",
-      "receiptNote": "B 系主体收官 15:06：B13 sde 毕（卷 20c48f172·count=1 只余 r-duty-cos 活体复核）——B2-B13 共 12 席全退零污染；SDE 异常自报收记（B13-2 retire FATAL 护栏正确报警·rc 门控缺失程序违规如实自报·补勘 TERM 慢退出自然退出零残留·整改候复用时必修）；B12 时序错位案异常报 COO 在途（15:06·STE 已退 vs 暂缓令 15:02·锚Ⅲ主跑状态候定谳）"
+      "receiptNote": "B 系主体收官 15:06：B13 sde 毕（卷 20c48f172·count=1 只余 r-duty-cos 活体复核）——B2-B13 共 12 席全退零污染；SDE 异常自报收记（rc 门控整改候复用时必修）；B12 时序错位案 COO 15:08 定谳=对象混同虚警零实际断链（退的是 r-duty-ste 河源 duty 形·派工对象 m-ste 本机席在·候 m-ste 回执终验·若无河源执行面重派 CTO 面代）"
     },
     {
       "id": "anchor3-pathb-track",
