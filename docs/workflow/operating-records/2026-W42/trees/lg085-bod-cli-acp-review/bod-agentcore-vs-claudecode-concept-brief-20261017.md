@@ -201,4 +201,46 @@ TriRLC 实证：**b2 案=单轮+外部 state 全周期闭环成功**（b2-state.
 - **问题 5【批令·列入】**：DEM-006 素材正式增补列入 10-18 评审——投递器可插拔化（信箱/localbus/TriPilot/IM adapter）+催办定时器试运行首日数据（4 催 4 闭环零误催一空催）+毕报流向盲区改进候选；知会 m-cpo。
 - **问题 7【批令·执行】**：架构文档「MMC 不自建内核」旧口径勘正——主仓 docs/三元宇宙架构与模块说明.md TriMMC 行加现势勘正注（surgical 单文件 commit·留痕不改史）。
 
-—— BOD 2026-10-17 18:15:54 +0800（date 现查·写前跑）
+## 十·增补五（19:08 CEO 五连问）：TriRLC 形省去拉起+热态语义+分层记忆+MC/LC 抽层评估+harness 化路标
+
+### 10.1 问 1：TriRLC 形是否省去「daemon+看门狗拉起会话」的麻烦
+
+- **方向对·一处校准**：M 面形（TriMLC 看门狗+claude 进程+transcript 重建）的「麻烦」=每席一个进程常驻（tmux/看门狗/尸体复活式恢复）；TriRLC 形=一个 daemon 托管 N 个会话对象——**恢复成本从「每席重建」变「daemon 单点恢复」**，且 idle 零 API。
+- 代价互换要如实：N 进程=局部故障（一席死不影响他席）·1 daemon=单点故障（daemon 死全会话停）——所以 TriRLC 配 watchdog+session-store 持久化，可靠性模型从「分散冗余」换「集中托管+守护」。
+- 「只需补工具面」精确化：TriRLC 已是四域唯一自带完整（薄版）harness 的 daemon（session-store/tools/skills/toolbus/tui/tray/task-runtime/letter-store 在案）——**补的是厚度不是有无**：工具面 118 行→全家桶、技能生态、MCP 接入、权限引擎成熟度（CTO 口径：判断力场景 6-8 件可控·通用施工缺口大）。
+
+### 10.2 问 2：「热态不可跨进程」语义
+
+- claude code 会话状态两层：**持久层**=transcript 文件（消息档案·落盘·跨进程可读）；**热态层**=进程内存运行时态（当前上下文窗口完整流/prompt cache/工具会话态/token 计量态）——进程死即散。
+- `--resume`/`claude -n` =新进程读 transcript 重建——**恢复的是「档案回放」不是「现场热持」**：历史消息回来，但 prompt cache 全冷重算、运行时态重置。类比：transcript=剧本·热态=正在演出的现场——进程死=舞台拆了，新进程照剧本重排，接不上上一秒现场。
+- agent-core daemon 形：会话=daemon 内存托管对象+session-store 落库——daemon 不死则热态保在；daemon 死同样要重载（无魔法）·但**故障粒度不同**：claude code=每席进程各自死（高频·局部）·agent-core=单 daemon 死才全停（低频·单点+watchdog）。
+
+### 10.3 问 3：单轮+state 文件+长期记忆=长久会话支持
+
+- CEO 所述形态=标准**分层记忆架构**：会话上下文=working memory（RAM）·长期记忆=external store（磁盘）·state 文件=结构化接力锚——方向正确且有先例：b2 案=单轮+state 全周期闭环（§9.2）。
+- TriRLC 补齐清单：①**TriMem 落地**（现占位）——长期记忆 store（可参照 M 面记忆目录治理规约：真源/导航指针/随仓镜像/索引一行一条）②**检索注入链**——会话/job 启动时按任务检索相关记忆片段注入上下文 ③**沉淀写入链**——session-store 全量落库+长期记忆精选沉淀（什么值得记的判据）④**记忆治理**——遗忘/冲突/更新规约。
+- 两条形态可在同一 daemon 并存：机械例行 job=单轮+state 文件（b2 正形）·交互人格席=长会话+分层记忆——非二选一。
+
+### 10.4 问 4：执行层全家桶清单+MC/LC 抽层评估
+
+**TriRLC 执行层全家桶实锚清单**（src/ 在案）：session-store（SQLite 会话历史）·tools/（shell-exec 等 agent 工具面）·skills/·toolbus/（工具总线）·task-runtime/（任务运行时）·letter-store（信箱）·notify·tui/（终端界面）·tray/（托盘）·runtime/daemon.ts（daemon 骨架）——「让 daemon 能跑 agent 会话+被人接入操作」的执行层全部。
+
+**CEO 提议=harness 化进包+MC/LC 抽层**，BOD 评估：
+
+| 项 | 评估 |
+| --- | --- |
+| 工具面/skills/MCP/人格装载器挪进 agent-core | **方向采纳·时序候判据**——「挪入时机=第二消费者出现」（自家「≥2 面消费才进包」判据同构）：soul-loader 现唯一消费者=TriRMC·第二消费者（RLC 切人格席承载）出现时同窗入包·即 P3 双案实测窗裁决后 |
+| MC/LC 各抽单独模块（MC=7×24 服务域共性·LC=电源面本地域共性）·四 daemon 变薄壳 | **方向合理·不急预先抽**——理由：①cron 行为分野在案（TriMMC/MLC/TriRLC addJob 行为分野勿互套）证明「看似同构实有分野」——预先抽层会把分野藏进配置 flag（复杂度转移非消失）②fork 分野=场景快迭代演化产物·先收敛成显式差异再抽层③正形=**用出来的抽象**：agent-core harness 化后各 daemon 消费面变厚·哪些件两 MC 都在用/两 LC 都在用自然浮出=抽 MC-core/LC-core 的实证清单（「≥2 daemon 消费才抽层」）④工程量预估：月级（收敛分野+迁移+双跑验证） |
+| 经验资产共用 | 现在就能做（零成本）：文档面登记 **MC 共性清单**（bridge/config-sync/observability/服务域部署形态）与 **LC 共性清单**（power-keepalive/power-monitor/heartbeat-wake/TUI 托管/桌面集成）为抽层候选清单——随 P3 实测窗一并评估·候裁不施工 |
+
+### 10.5 问 5：人格装载器入包+「coding agent×助手 agent 结合·完全自研」定性
+
+- soul-loader 入包：同 §10.4 判据（第二消费者出现时）——它是自研 harness 的组件正身（人格装载=助手 agent 面·区别于 tools=施工面），入包后 agent-core=「施工力+人格力」双面齐。
+- **CEO 定性对表**：「在 agent-core 上做 coding agent 和助手 agent 的结合·完全自研」=架构文档 §六师徒总纲的产品化落点正体——M=claude code 运行时（师·第三方 harness）→R=agent-core 自研引擎（徒·完全自研 harness）——元认知螺旋的 R 面路线正体。
+- 现势对表（消费矩阵）：TriRLC=唯一全量消费者（daemon+cron+会话管理+job+工具+角色·角色面尚浅=system_prompt 注入级）·MMC/MLC/RMC=daemon+cron 消费（机制面）。未来四域全切自研 harness=愿景在案·路标五步：**P3 双案实测→例行件迁移（并表候裁案 2/3）→工具面/skills/MCP 厚化→人格承载（soul-loader 入包）→四域切换裁剪**——每步门禁=三读数+「≥2 面消费才进包/≥2 daemon 消费才抽层」。
+
+### 增补五真源
+
+- 概念卷 §9 全景（四面分布/形制对照）；TriRLC src 目录清单（10-17 实探）；TriRMC soul-loader（18:0x 实探）；架构文档 §六师徒总纲；cron 行为分野记忆（TriMMC/MLC/TriRLC addJob 分野在册）；CTO 建议书 b0a84b26d 三引擎矩阵
+
+—— BOD 2026-10-17 19:09:25 +0800（date 现查·写前跑）
