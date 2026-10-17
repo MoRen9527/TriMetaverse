@@ -81,12 +81,12 @@
       "desc": "B4-B13 逐席毕报对表督办（波2 余四席 cao→cpo→cfo→cmo+波3 六席·SDE 照序自走·异常停接报 CTO）",
       "owner": "SDE(施工)",
       "nudge": "m-sde",
-      "dispatchedAt": "2026-10-17T15:03:00+08:00",
+      "dispatchedAt": "2026-10-17T15:04:00+08:00",
       "timeoutMin": 120,
       "mode": "enforce",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "滚动闸·现势=B11 rdt 毕收记 15:03（卷 a5b4c9c87·第 10 席连绿·count=3·已退 10/13）·现候 B12 ste→B13 sde→B14 值席面（cos 席末退序候 COO/CTO 定谳）·余 3 席现役=ste/sde/cos"
+      "receiptNote": "滚动闸·现势=B12 ste 毕收记 15:04（卷 09a247874·第 11 席连绿·count=2·已退 11/13）·现候 B13 sde（自接退照 B3 先例）→收官后 cos 席=B14 值席面候定谳（四件套门）·余 2 席现役=sde/cos"
     },
     {
       "id": "anchor3-pathb-track",
