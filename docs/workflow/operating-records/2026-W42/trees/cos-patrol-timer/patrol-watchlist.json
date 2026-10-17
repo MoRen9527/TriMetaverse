@@ -115,14 +115,14 @@
     {
       "id": "cfo-anchor-reread",
       "desc": "CFO 锚复读节拍提醒（15:28 窗重置后+窗毕两读数点·COS 督办提醒 CFO 走面）",
-      "owner": "COS(self 代守·过渡窗)",
-      "nudge": "none",
+      "owner": "CFO(m-cfo 在册·勘正归位)",
+      "nudge": "m-cfo",
       "dispatchedAt": "2026-10-17T15:28:00+08:00",
       "timeoutMin": 15,
       "mode": "observe",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "对象勘正 14:55：m-cfo 席已退（B6·第 5 席）dsh cfo 未接位——15:28 复读点=我面对拍 self 代守（自查 window-ledger CFO 锚线读数）转 COO/BOD 知会·dsh cfo 接位后归还 CFO 面"
+      "receiptNote": "勘正 15:44（COO 三犯警）：m-cfo 本机常驻席在册（B 系退的是 r-duty-cfo 河源 duty 形）——self 代守退位·CFO 级读数归 m-cfo 面（COO 已直发读数请求）；我 15:42 代守读数收记作过渡旁证；窗毕复读点对象=m-cfo"
     },
     {
       "id": "handoff-10items-tbd",
