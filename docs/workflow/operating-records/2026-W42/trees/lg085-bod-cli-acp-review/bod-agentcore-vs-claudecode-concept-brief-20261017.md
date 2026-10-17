@@ -53,4 +53,37 @@ CTO 答卷 10-16 实锚（现探源码）：`@tricompany/agent-core` 0.1.0·4664
 - dsh 关系：docs/execution/dsh-rplane-harness-design-20261014.md §1.1（机制层/执行层分层·TriMLC+agent-core 对称参照）
 - 源码实锚（10-17 15:1x 现探）：TriRLC/src/session-store/store.ts 头注+DDL；TriCompany/packages/agent-core/src/ 目录结构；core-agent/README（归档件·非现役·勿混引）
 
-—— BOD 2026-10-17 15:20:39 +0800（date 现查·发毕重跑对表）
+## 六·增补（15:31 CEO 追问）：scheduler 与 process-supervisor 具体用法（源码现探）
+
+### scheduler 五件（agent-core/src/scheduler/·血统注=cron-engine/backoff/stagger 系 openclaw 吸收剥异）
+
+| 件 | 职责 | 关键语义 |
+| --- | --- | --- |
+| cron-engine.ts | cron 表达式解析+下次运行计算 | croner 库·实例缓存 512·时区解析 |
+| job-executor.ts | 调度循环：找到期 job→setTimeout→执行→重复 | tickMs 1s/maxTimerDelayMs 60s/**staleRunningMs 20min 孤儿检测**（daemon 崩溃重启中道的 job 清 running 态可再触发）·MVP 无启动补跑 |
+| job-store.ts | job 持久化 | loadJobStore/patchJobState/saveJobStore |
+| heartbeat-policy.ts | 判定执行结果投递 or 静默跳过 | shouldSkipDelivery「一切正常免投递」·stale 阈值默认 5min |
+| backoff.ts + stagger.ts | 重试退避（1s 起/60s 顶/2x/±10% jitter）+整点错峰 | stagger 检测 top-of-hour「雷群」表达式→每 job 确定性错峰默认 5min |
+
+### process-supervisor（agent-core/src/process-supervisor/）
+
+- `createProcessSupervisor()`：**spawn({argv, cwd, timeoutMs, captureOutput, scopeKey, replaceExistingScope}) → ManagedRun**；`run.wait()` 返回 {exitCode, stdout, stderr, timedOut, durationMs}；`cancel(runId)`/`cancelScope(scopeKey)` 按 scope 批量取消（daemon 关停钩子用）。
+- `createRunRegistry()`：内存 run 记录表·state 流转·exited 记录上限 2000 自动清。
+- 超时两类：overall-timeout / no-output-timeout。
+
+### TriRLC 现役消费实例（两处真用法）
+
+1. **shell-exec.ts（agent 的 shell 工具）**：`supervisor.spawn({argv:['cmd','/c',command], cwd, timeoutMs, captureOutput:true, scopeKey:'trilc-shell'})`→wait()→截 10k 回；daemon 关停 `cancelAllShellProcesses()` 按 scope 全清——**agent 每次跑 shell 命令都经 supervisor 托管**（超时必杀·零孤儿进程）。
+2. **cron/timer.ts（cron 面自持版·与 agent-core scheduler 同源亲戚）**：MAX_TIMER_DELAY_MS=60s 防 setTimeout 漂移/MIN_REFIRE_GAP_MS=2s 防自旋/resetStaleRunningJobs 开机复位陈旧 running（LG-064）+missed-job catchup（重启补跑·每次≤5 个·错峰 5s）+job timeout 10min+连续 3 败降级；job 触发经 runHeartbeatAgent 起会话跑 systemPrompt·消息落 session-store。
+
+### 与「13 席」的接法注
+
+scheduler/supervisor 擅长**短任务**（定时活+子进程托管）；13 席主力是**长会话**——长会话走 daemon 内 session 托管（session-store 面），scheduler 适合承载「定时唤醒某席干活」的触发层，二者组合而非互替。
+
+### 增补真源
+
+- TriCompany/packages/agent-core/src/scheduler/{cron-engine,job-executor,heartbeat-policy,backoff,stagger,job-store}.ts 头注+选项默认值（10-17 15:3x 现探）
+- TriCompany/packages/agent-core/src/process-supervisor/{supervisor,registry}.ts；index.ts 导出面
+- TriRLC/src/tools/shell-exec.ts L110-160（spawn 用例）·TriRLC/src/cron/timer.ts 头注+常量
+
+—— BOD 2026-10-17 15:32:25 +0800（date 现查·发毕重跑对表）
