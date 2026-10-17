@@ -1,8 +1,8 @@
 # SDE 施工卷 · P1 桥超时修 diff 门禁一读件（CTO 快审·候审后施工）
 
 - sourceOfTruth: docs/workflow/operating-records/2026-W42/trees/lg087-dsh-sega-20261016/orders/sde-p1-bridge-timeout-diff-gate-20261017.md
-- syncMode: static（门禁卷·候审态）
-- lastSyncedAt: 2026-10-17 13:07:28+08:00（date 现查原值·D-47 正形）
+- syncMode: static（门禁卷·CTO 已放行 13:11:38·修正已并入·施工态）
+- lastSyncedAt: 2026-10-17 13:12:30+08:00（date 现查原值·D-47 正形）
 - 施工席: SDE 小布（m-sde）·charter-2026-W42-006 P1（CTO 裁解封列首位·13:04:36 卷）
 - 候审对象: TriRMC 河源装设位 src/server/app.ts（仓基线净·a02d89b 顶·两 dist.bak untracked 历史件不动）
 
@@ -24,16 +24,18 @@
 -          const bridge = await sendMessage(session.sessionId, body.message, bridgeOptions);
 +          // P1·LG-087 段B：per-message timeout 覆盖形（读件回签型投递方自带 timeoutMs·普通收令缺省维持 120s）
 +          // 夹紧 30s-600s 防滥用；读件回签型建议 420_000（300-600 段中值·定值候补投耗时样本勘正）
-+          const perCallTimeout = (() => {
-+            const t = Number((body as { timeoutMs?: unknown }).timeoutMs);
-+            if (!Number.isFinite(t)) return bridgeOptions.messageTimeoutMs;
-+            return Math.min(Math.max(t, 30_000), 600_000);
-+          })();
++          const rawTimeout = (body as { timeoutMs?: unknown }).timeoutMs;
++          const perCallTimeout =
++            typeof rawTimeout === "number" && Number.isFinite(rawTimeout)
++              ? Math.min(Math.max(rawTimeout, 30_000), 600_000)
++              : bridgeOptions.messageTimeoutMs;
 +          const bridge = await sendMessage(session.sessionId, body.message, {
 +            ...bridgeOptions,
 +            messageTimeoutMs: perCallTimeout,
 +          });
 ```
+
+> **CTO 审复修正已并入（13:11:38 放行·不退回重审）**：原稿 `Number(t)` 形对 `null`/布尔/数值串会静默夹到 30s（Number(null)===0 陷阱）——修正=只在显式 finite number 时采用，JSON null/字符串/布尔全走缺省 120s。
 
 ## 修形语义
 
