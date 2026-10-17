@@ -9,9 +9,9 @@
   "status": "active",
   "summary": "W42 周经营维护。任务从上周迁移，新任务待规划。",
   "metadata": {
-    "updatedBy": "COS",
+    "updatedBy": "COO",
     "version": "1.0.0",
-    "lastUpdated": "2026-10-15T20:47:00+08:00",
+    "lastUpdated": "2026-10-17T04:37:31Z",
     "workflowTags": [
       "每周维护",
       "CEO 总助维护面",
@@ -91,13 +91,15 @@
       {
         "charterId": "charter-2026-W42-006",
         "title": "LG-087 段B 主窗（严格全绿启动·8713/8711 restart 摊销并窗）",
-        "status": "granted-pending-ceo-window",
+        "status": "window-confirmed-immediate",
         "grantedBy": "COO",
         "grantedAt": "2026-10-17T12:28:00+08:00",
         "ledger": "LG-087+LG-089(F件摊销)+LG-069二期(8711)",
         "source": "CEO 2026-10-17 02:36:49 三裁③(段B选严格全绿)+BOD 02:56:55 段B终排授权",
         "route": "COO排工→COS授号→SDE/CTO施工+sg值席跨机段",
-        "doc": "trees/lg087-dsh-sega-20261016/charter-2026-W42-006-segb-main-window.md"
+        "doc": "trees/lg087-dsh-sega-20261016/charter-2026-W42-006-segb-main-window.md",
+        "windowConfirmedBy": "CEO 12:35 令（BOD 12:36 转令·D-39 收敛闭合·18:00 节拍作废改即时开窗）",
+        "windowConfirmedAt": "2026-10-17T04:37:31Z"
       }
     ]
   },
@@ -115,7 +117,7 @@
     "TriLC",
     "TriMC"
   ],
-  "updatedAt": "2026-10-12T12:52:30+08:00",
+  "updatedAt": "2026-10-17T04:37:31Z",
   "activeTrees": [
     {
       "treeId": "lg065-duty-seat-bc-20261006",
