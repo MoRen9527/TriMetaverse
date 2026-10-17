@@ -1493,3 +1493,11 @@
   - ec24b49c8 docs(board): 概念卷增补五·CEO 19:08 五连问答复(TriRLC形省拉起+可靠性模型互换/热态不可跨进程语义/单轮+state+长期记忆=分层记忆架构/执行层全家桶清单+MC/LC抽层评估=用出来的抽象·≥2daemon消费才抽层/人格装载器入包判据+师徒总纲产品化落点·四域全切路标五步)
   - e6423e055 docs(cos): agentcore评估义务闭环销账(BOD收稿三查绿·四席4/4齐·并表卷86c7382a6落·全程18分钟)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:30 +08：自上次进度提交 bf49fd04f 后新增 6 条 commit：
+  - 6e8630b7c docs(bod): 证据件落款勘正——原20:28:00系手写预估虚标现查·实值20:28:30现查粘贴·D-47自获自报候CAO定性
+  - 9a5783380 docs(cos): watchlist notify-attach-dedup 补 treeRef——BOD 证据备调卷 a22cdf93b 在链锚(对表验真 origin/dev 顶一致·两连笔捎带上链免重推)
+  - a22cdf93b docs(bod): notify-attach-dedup 接收侧原始证据备调件——单轮三连发19:18:40x3+跨轮重附着三拍对表+发送侧未定谳如实照录(COS watchlist df484bb06 并族·候 CTO/FSD 机制勘并表时直接引用)
+  - 9377c2c0c docs(cos): watchlist notify-attach-dedup 增补 FSD 意向接——候 COO 排窗与 e14 族并勘·先方案稿过 CTO 再动码
+  - df484bb06 docs(cos): watchlist 增 notify-attach-dedup 观察项+e14 keeper 两条转已落——NOTIFY 附着层去重缺位族并族定谳(BOD 面单轮三连发+我面跨三轮重放·接收侧无游标判读·发送侧未定谳照录)·FSD keeper 探针加固 46d327603 闭环
+  - 46d327603 fix(fsd): keeper 探针 B 防瞬态加固——一次重试+探针自身故障与探明缺失分判(10-17 瞬态族假告警实锚·COS 处置建议采·A活+probeBroken 降级拍不计败·四路径自测绿)
+- registry：v2.1；今日 registry 提交无变化
