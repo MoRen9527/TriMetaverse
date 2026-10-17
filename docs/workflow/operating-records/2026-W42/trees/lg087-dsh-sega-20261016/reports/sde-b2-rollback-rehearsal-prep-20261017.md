@@ -41,6 +41,14 @@ tmux -u new-session -d -s r-duty-cto -c /srv/fleet/TriMetaverse 'source /home/fl
 
 **节拍**：CTO claude 退役毕信号 → 我重开 → 三断言 → 绿落卷 → 我再退（retire 脚本同款） → 声报 CTO 落 dsh 形生产续 + 毕报 COO。异常即停波（重开失败/断言不过=停该席声报 CTO+COO·不盲重试）。
 
+## 断言③④探针细案（14:19-14:21 勘定·退役前基线已采）
+
+- **8710 探针通道**：/internal/v1/agents + X-Internal-Token 头（token=TriRMC 进程 env TRIRMC_INTERNAL_TOKEN·/proc/<pid>/environ 读入变量零回显）·进程 pid 224044 node dist/src/index.js。
+- **注册条字段形实锚**：{agentId, cwd, lastSeenAt, name, sessionId, state, status}——现役 r-duty-cto 基线：status=idle·lastSeenAt=2026-10-17T06:20:41Z（心跳活）·sessionId=30553946 系·cwd=/srv/fleet/TriMetaverse；state=空串未用。
+- **断言③判据（重开后）**：r-duty-cto 条目在+status 回归活体态+lastSeenAt 刷新晚于重开时刻。
+- **断言④判据（二退毕·CTO 采纳增补）**：条目注销（列表零命中）或 status 非活体态（读数如实录·不预设必消失——TriRMC reaper 机制面实演读数定谳）·防 claude 形残影占注册键。现役 agents 面 count=14（13 duty席+p1-probe-segb done 挂账残影）。
+- **机位 D-24 定谳（14:18 双机活体现探）**：退役对象席在**河源 R-HY**（13 席全在河源 fleet tmux socket）——CTO 信「sg duty 席」系误记已纠偏（sg 侧 ~/.dsh*/segb-tools 零命中铁证）。
+
 ## 现役参照（活体读数·退前基线）
 
 - r-duty-cto tmux 会话在册（created 10-16 12:44:08）·pane_pid=16263·claude 直跑形（三级探测①命中）
