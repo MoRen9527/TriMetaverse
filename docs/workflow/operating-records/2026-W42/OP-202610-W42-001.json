@@ -11,7 +11,7 @@
   "metadata": {
     "updatedBy": "COO",
     "version": "1.0.0",
-    "lastUpdated": "2026-10-17T04:37:31Z",
+    "lastUpdated": "2026-10-17T04:50:12Z",
     "workflowTags": [
       "每周维护",
       "CEO 总助维护面",
@@ -91,7 +91,7 @@
       {
         "charterId": "charter-2026-W42-006",
         "title": "LG-087 段B 主窗（严格全绿启动·8713/8711 restart 摊销并窗）",
-        "status": "window-confirmed-immediate",
+        "status": "window-active",
         "grantedBy": "COO",
         "grantedAt": "2026-10-17T12:28:00+08:00",
         "ledger": "LG-087+LG-089(F件摊销)+LG-069二期(8711)",
@@ -99,7 +99,8 @@
         "route": "COO排工→COS授号→SDE/CTO施工+sg值席跨机段",
         "doc": "trees/lg087-dsh-sega-20261016/charter-2026-W42-006-segb-main-window.md",
         "windowConfirmedBy": "CEO 12:35 令（BOD 12:36 转令·D-39 收敛闭合·18:00 节拍作废改即时开窗）",
-        "windowConfirmedAt": "2026-10-17T04:37:31Z"
+        "windowConfirmedAt": "2026-10-17T04:37:31Z",
+        "windowOpenedAt": "2026-10-17T04:50:12Z"
       }
     ]
   },
@@ -117,7 +118,7 @@
     "TriLC",
     "TriMC"
   ],
-  "updatedAt": "2026-10-17T04:37:31Z",
+  "updatedAt": "2026-10-17T04:50:12Z",
   "activeTrees": [
     {
       "treeId": "lg065-duty-seat-bc-20261006",
