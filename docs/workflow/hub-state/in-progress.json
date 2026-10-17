@@ -123,7 +123,7 @@
   "owner": "COS",
   "priority": "P2（候排窗并入制度面·与 D-43 后打包窗同批排）",
   "status": "open",
-  "note": "账本并发双写同窗竞争候办（12:16 COS×SDE 310c8561 同窗实证·幸无叠损；9f6b1bd4 吞行断链 3h 同族）。方向=单写者收口：他席插条经 COS 中转 or 原子 append+冲突检测。防坏笔面已落 pre-commit gate（本机仓 .git/hooks/pre-commit·14:12 BOD 裁一·负向实弹过）；sg 面仓 gate 同步候办；对表扫 JSON.parse 兜底判据候 COO 下次设扫模板。 【2026-10-17 09:5x 现势刷（COS·CEO 09:45 四条令 E 件逐件清·明细卷 trees/lg089-concentrated-window-20261017/cos-e4-inventory-detail-20261017.md）】现势对表=本机 gate 在役·残尾两笔（sg 面 gate 同步候 sg 值席窗带/对表扫模板候 COO）·本轮不销。"
+  "note": "账本并发双写同窗竞争候办（12:16 COS×SDE 310c8561 同窗实证·幸无叠损；9f6b1bd4 吞行断链 3h 同族）。方向=单写者收口：他席插条经 COS 中转 or 原子 append+冲突检测。防坏笔面已落 pre-commit gate（本机仓 .git/hooks/pre-commit·14:12 BOD 裁一·负向实弹过）；sg 面仓 gate 同步候办；对表扫 JSON.parse 兜底判据候 COO 下次设扫模板。 【2026-10-17 09:5x 现势刷（COS·CEO 09:45 四条令 E 件逐件清·明细卷 trees/lg089-concentrated-window-20261017/cos-e4-inventory-detail-20261017.md）】现势对表=本机 gate 在役·残尾两笔（sg 面 gate 同步候 sg 值席窗带/对表扫模板候 COO）·本轮不销。 【2026-10-17 10:0x 刷（COS·COO 扫模板 55b2feb0 抽验绿采用确认回执 msg b4a64f56）】件2 本机面全清（扫模板判据五条采用面落地）；残尾余 sg 面 gate 同步候 sg 值席窗带（COS 面）。"
  },
  {
   "id": "lg065-duty-seat-bc-combo",
