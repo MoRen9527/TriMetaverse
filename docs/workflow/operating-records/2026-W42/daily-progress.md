@@ -1501,3 +1501,11 @@
   - df484bb06 docs(cos): watchlist 增 notify-attach-dedup 观察项+e14 keeper 两条转已落——NOTIFY 附着层去重缺位族并族定谳(BOD 面单轮三连发+我面跨三轮重放·接收侧无游标判读·发送侧未定谳照录)·FSD keeper 探针加固 46d327603 闭环
   - 46d327603 fix(fsd): keeper 探针 B 防瞬态加固——一次重试+探针自身故障与探明缺失分判(10-17 瞬态族假告警实锚·COS 处置建议采·A活+probeBroken 降级拍不计败·四路径自测绿)
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-18（周日）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @09:30 +08：自上次进度提交 045fa71e8 后新增 3 条 commit：
+  - 4c26d1dac docs(fsd): q2 台账录 COS 归族回执接单材料锚——NOTIFY去重族5例(f49f39358+内容快照冻结判别式)+候选⑥三件实证齐面·意向接状态不变候排窗不自启
+  - f49f39358 docs(cos): watchlist e14-v2 材料族五件齐面——候选⑥三抑制实证原值三件(BOD 睡眠原值/echo-pull 眠窗形态/豁免双缺位机理 FSD 2b3f6169c)+recentWake 首拍抑制正解位+NOTIFY 去重族+-duty-escalate 活信号核中期候选(候 CTO 裁)·排窗路径 COO+CEO 确认制标注
+  - 2b3f6169c docs(fsd): q2 观察期台账补 10-17夜/10-18晨 两拍——眠窗形态实锚(连败14拍告警同眠发不出·候选⑥材料+1)+双链01:15Z唤醒即愈清零·COS眠窗连带判读采信
+- registry：v2.1；今日 registry 提交无变化
