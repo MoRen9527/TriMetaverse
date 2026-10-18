@@ -1544,3 +1544,9 @@
   - f608bdf3c docs(coo): 台账一百六十七笔(CEO评审节律改12→14随改·batch-16提醒job schedule.expr 14点·三查绿·今日拍正点)
   - f00c7a4df docs(cos): watchlist 挂账 review-sunday-1400——CEO 令评审会改每周日 14:00 固定(今日即改)·三件=制度化转 CAO/知会三席/撞点对表
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:10 +08：自上次进度提交 8cd076e8a 后新增 4 条 commit：
+  - 0c0bfdedd docs(coo): 台账一百七十笔(B15门禁终验绿成立序表第1项完全毕·mailbox端到端验附带裁采纳随B16窗)
+  - 897a240df merge sg-server/dev 巡检兜底补写并入(8cd076e8a)
+  - fd969393f docs(cto): B15序5首回流门判定卷落卷(回灌绿成立·接位三验①②直读全量③旁证采认标注·14:00评审接位就绪·B16mailbox端到端验建议随卷)
+  - 97e6e6ab4 docs(cos): watchlist b15-seq5-readout 销账——13/13 回灌绿反演绿·卷 281b21a46 对表验真·毕锚大余量(2min 施工)
+- registry：v2.1；今日 registry 提交无变化
