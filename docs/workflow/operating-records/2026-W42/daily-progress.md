@@ -1590,3 +1590,6 @@
 - 巡检兜底补写 @22:00 +08：自上次进度提交 2d9109dd1 后新增 1 条 commit：
   - 794e9ec30 docs(bod): r-duty班组13席dsh常驻会话上线卷(CEO 21:06令·GUI人机形preset挂载13/13 UP·token破面与ssh限连如实报·隧道keeper正形在位)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:50 +08：自上次进度提交 d1bd5e0aa 后新增 1 条 commit：
+  - 6b9554871 docs(bod): R面TriRMC周平面迁移前全项检查卷(11项全绿·sg-bare remote 10-16整备删除缺口已修·23:50新时点首拍就绪·候CEO追认)
+- registry：v2.1；今日 registry 提交无变化
