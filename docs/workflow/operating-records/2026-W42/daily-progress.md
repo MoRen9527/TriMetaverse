@@ -1571,3 +1571,7 @@
   - a896af642 merge: 并入远端并行推进（59373242e）后重推——SDE a 级毕报 d322c73c6 收编
   - d322c73c6 docs(sde): a 级施工+影子跑毕报卷——wrapper 五场景冒烟绿(TriCompany dde1937·零覆写现役入口)+影子跑链面全绿(.shift-ade.json status=pass 五步全 pass·现役面零触碰 rc=0 实证·git 链物理隔离)+断言②值面缺口如实报(LG-072 新形头部元信息不适配·现役固有非 wrapper 引入·今晚旧链同缺口·处置候 COS 裁)+树骨架 tree-op.json+b 级候选形草案(落款预填自纠勘正记在案)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:40 +08：自上次进度提交 4d7997e88 后新增 2 条 commit：
+  - 00be6806a Merge remote-tracking branch 'sg-server/dev' into dev
+  - 175e30ab3 docs(cfo): 14:00周日锚——周窗59%慢速(+2pt/4.5h)距预警11pt·同锚对+10pt未触(三连触后首回落·减速第二证)·今117M/10·零触免报
+- registry：v2.1；今日 registry 提交无变化
