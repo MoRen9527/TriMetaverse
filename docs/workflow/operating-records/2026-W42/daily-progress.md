@@ -1513,3 +1513,9 @@
   - 35f437356 Merge remote-tracking branch 'sg-server/dev' into dev
   - 142b7d1ab docs(board): 概念卷增补六·CEO 09:56 六问答复落卷(同wt/board链f36962b42内容)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 e5ea09b0e 后新增 4 条 commit：
+  - b94a23701 docs(board): 并表卷增补六段·CTO会话进程模型评估并表(每会话子进程两段施工+统一模型策略分池+交叉缺位新勘+步5语义改写)
+  - 7ba9dcc15 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 9d92fdf5f docs(cfo): 09:30周日锚——周窗57%夜段慢速(+3pt/15.7h)距预警13pt·同锚对+16pt触线归因同族不重发(13:17令面④)·昨日终值612M/10·周日晨轻19M/5
+  - b281b0546 docs(cto): CEO六问四项技术评估——①每会话子进程形态采认两段施工(段1 job进程化supervisor扩展·段2交互长会话随P3后·骨架周-双周含回归月级)·缺陷定性限可用性面校准 ②统一worker模型策略分池(短命池+长驻池·分席重评判据两条) ③交叉分布新勘(人格装载MC有LC无·会话托管LC有MC无·session-store双LC文件级四同名) ④soul-loader四仓干净HEAD复核MC有LC无定谳 ·步5语义改写随卷(切换可行性就绪+多样性保留)
+- registry：v2.1；今日 registry 提交无变化
