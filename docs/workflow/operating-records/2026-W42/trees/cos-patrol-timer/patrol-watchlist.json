@@ -199,6 +199,18 @@
       "treeRef": "接收侧原始证据备调卷=trees/notify-attach-dedup/notify-attach-dedup-evidence-20261017.md（a22cdf93b·BOD 面落卷·并表/机制勘直接引用免挖 transcript）"
     },
     {
+      "id": "b15-seq5-readout",
+      "desc": "B15 序5 首回流毕报（dsh 形 13 席回灌验证·COO 10:52 开令 m-sde·门禁 CTO·毕报三送 COO/CTO/COS）",
+      "owner": "SDE(施工)/CTO(门禁)",
+      "nudge": "m-sde",
+      "dispatchedAt": "2026-10-18T10:52:00+08:00",
+      "timeoutMin": 160,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "COO 10:52 督办知会挂账（毕锚≥13:30·闸=dispatchedAt+160min≈13:32）——毕报达我面即对表销账·B16 通道迁移入账候收口节点（COS/BOD）不动"
+    },
+    {
       "id": "review-sunday-1400",
       "desc": "CEO 令 10:41:17：评审会改每周日 14:00 固定（今日 10-18 即改 14:00）——三件：①制度化落位（转 CAO 域·我起草转办催办）②知会 CPO/COO/CTO+相关常驻席③周日 14:00 与现役 cron/排程面撞点对表",
       "owner": "COS(记录转发知会)/CAO(制度化落册)/COO(经营节律面)",
@@ -206,9 +218,10 @@
       "dispatchedAt": "2026-10-18T10:44:00+08:00",
       "timeoutMin": 200,
       "mode": "enforce",
-      "status": "pending",
-      "receipt": "pending",
-      "receiptNote": "BOD 转知 10:43（并表卷时点已随令改齐 94069f4eb·各席时限不变仅增余量）——我面动作链：journal 落令笔+watchlist 挂账+三席知会+CAO 转办+BOD 回执挂账——制度化落册=CAO 域（我面起草转办不代决落点）"
+      "status": "done",
+      "receipt": "received",
+      "treeRef": "制度化正身=TriCompany/docs/workflow/weekly-demand-review-workflow.md（e5f37f7）",
+      "receiptNote": "三件全毕销账（10:52）：①制度化落位=CAO 毕（正身件 TriCompany/docs/workflow/weekly-demand-review-workflow.md 三处修订·TC e5f37f7·sg 推平验真绿=销账凭据）②知会四席毕（cto 8e4a779c/coo 90bf83e7/cpo 5ead3573/cao 5f14fc03·CTO 撞点回报 10:48+COO 随改毕 10:50+CPO 无撞免回形态照信约）③撞点对表毕（我面初对+CTO 全量 17 job 值面对表=唯一撞点 batch-16 job·COO PATCH 12:00→14:00 三查绿 f608bdf3c+我面文案随勘 7b39fbbaf）"
     }
   ]
 }
