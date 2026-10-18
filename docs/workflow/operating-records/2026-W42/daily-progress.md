@@ -1523,3 +1523,9 @@
   - 569180710 merge sg-server/dev 并行席推进并入(8779ee6b8)
   - 091a0f2ab docs(board): 并表卷§七·CEO 10:09 追加三问行业对标面落卷(进程模型/daemon+子进程/soul-loader四面·已派CTO候11:30)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:30 +08：自上次进度提交 605c88954 后新增 4 条 commit：
+  - 088c55b2f docs(cos): watchlist e14 增补⑤ CTO 睡眠窗家族第三案定性——候选⑥判定面缺位细化(lastWakeSeenAt 值面在·缺 wake 后 N 分钟对齐窗抑制判定面)
+  - ce39a4dac docs(board): 并表卷§八·CTO行业对标增补卷并卷(三处三选一标注·Erlang/containerd-shim/OpenAI三对象·gate首拦实证)
+  - 8be5ee9d7 merge sg-server/dev 巡检兜底补写并入(605c88954)
+  - 78ffe50f8 docs(cto): 行业对标增补卷三处落卷(统一worker策略分池=OTP正形/daemon+每会话子进程=Chromium+containerd+OpenHands三系/persona装配托管分离=Assistants三对象·三选一标注合同照守)
+- registry：v2.1；今日 registry 提交无变化
