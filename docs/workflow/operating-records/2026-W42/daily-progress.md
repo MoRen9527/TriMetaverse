@@ -1509,3 +1509,7 @@
   - f49f39358 docs(cos): watchlist e14-v2 材料族五件齐面——候选⑥三抑制实证原值三件(BOD 睡眠原值/echo-pull 眠窗形态/豁免双缺位机理 FSD 2b3f6169c)+recentWake 首拍抑制正解位+NOTIFY 去重族+-duty-escalate 活信号核中期候选(候 CTO 裁)·排窗路径 COO+CEO 确认制标注
   - 2b3f6169c docs(fsd): q2 观察期台账补 10-17夜/10-18晨 两拍——眠窗形态实锚(连败14拍告警同眠发不出·候选⑥材料+1)+双链01:15Z唤醒即愈清零·COS眠窗连带判读采信
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 96f28727f 后新增 2 条 commit：
+  - 35f437356 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 142b7d1ab docs(board): 概念卷增补六·CEO 09:56 六问答复落卷(同wt/board链f36962b42内容)
+- registry：v2.1；今日 registry 提交无变化
