@@ -1,0 +1,35 @@
+{
+  "tree-id": "sde-weekly-shift-fade",
+  "face": "R-service",
+  "charter": "charter-2026-W42-006（CEO 11:13 令·周工作平面迁移脚本 FADE 化）",
+  "created": "2026-10-18",
+  "owner": "SDE 小布（m-sde）",
+  "note": "a 级施工树骨架（FADE-008 v3 形态样例·C 段真实接线=b 级候下窗）",
+  "nodes": [
+    {
+      "node-id": "a-level-wrapper",
+      "title": "参数动态化 wrapper（新文件不覆写现役入口·零操作回滚锚）",
+      "status": "smoke-green",
+      "outputs": [
+        "TriCompany:runtime/cognition/weekly_plane_shift_fade.py"
+      ],
+      "evidence": "参数五场景冒烟绿（周日触发/ISO53 周年/真跨年滚动/补偿形/周中）+全链干跑五步串行通+干跑零写盘实证"
+    },
+    {
+      "node-id": "shadow-run",
+      "title": "河源影子跑 W42→W43（影子根 sync 形+断言六条·两一票否决）",
+      "status": "in-progress",
+      "outputs": [
+        "影子根 .shift-ade.json+收口 brief+断言读数表"
+      ]
+    },
+    {
+      "node-id": "b-level-draft",
+      "title": "b 级候选形草案（P/A/C 接线+切窗 runbook 候形·供下周窗）",
+      "status": "drafted",
+      "outputs": [
+        "docs/b-level-candidate-draft-20261018.md（本卷目录内）"
+      ]
+    }
+  ]
+}
