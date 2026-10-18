@@ -183,7 +183,7 @@
       "mode": "observe",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "紧迫性读数 15:17（CTO）：假警已 60min/拍高频化（修复候选④一行日志形首选判在案）——排窗紧迫性升·B 系主体已收官候选窗位放宽·【20:24 增补】材料族 keeper 探针两条已落（FSD 加固 46d327603·重试+proc-probe-fail/missing 分判·四路径自测绿）——由候勘转已落·【10-18 09:21 增补·材料族五件齐面】①候选④收单行日志②候选⑥抑制位=成对翻转信+繁忙窗+眠窗三抑制（实证原值三件：宿主睡眠 22:40:39–03:49:00 5.14h BOD 面 lastWakeReport/echo-pull 眠窗 fetch failed 发不出零假告警 FSD 面/豁免双缺位机理=夜静补报假告警 FSD 面 2b3f6169c）+正解位=recentWake 首拍抑制一轮（CTO 终审卷 17148b580 四字段组可消费）③NOTIFY 附着去重族候并勘（FSD 意向接·证据卷 a22cdf93b）④duty-escalate 活信号核中期候选（判据语义变更=FSD 仅提出·裁决归 CTO 域）——排窗路径=e14 队列候 COO 排+CEO 确认制（D-39 增补段）·抑制方案选择=CTO 域（本席=归族督办面非裁面）"
+      "receiptNote": "紧迫性读数 15:17（CTO）：假警已 60min/拍高频化（修复候选④一行日志形首选判在案）——排窗紧迫性升·B 系主体已收官候选窗位放宽·【20:24 增补】材料族 keeper 探针两条已落（FSD 加固 46d327603·重试+proc-probe-fail/missing 分判·四路径自测绿）——由候勘转已落·【10-18 09:21 增补·材料族五件齐面】①候选④收单行日志②候选⑥抑制位=成对翻转信+繁忙窗+眠窗三抑制（实证原值三件：宿主睡眠 22:40:39–03:49:00 5.14h BOD 面 lastWakeReport/echo-pull 眠窗 fetch failed 发不出零假告警 FSD 面/豁免双缺位机理=夜静补报假告警 FSD 面 2b3f6169c）+正解位=recentWake 首拍抑制一轮（CTO 终审卷 17148b580 四字段组可消费）③NOTIFY 附着去重族候并勘（FSD 意向接·证据卷 a22cdf93b）④duty-escalate 活信号核中期候选（判据语义变更=FSD 仅提出·裁决归 CTO 域）⑤【10-18 10:28 CTO 定性增补】8713 心跳超时=睡眠窗形态家族第三案（10-12/10-16 先例）·候选⑥判定面缺位细化=lastWakeSeenAt 翻转信值面在·缺「wake 后 N 分钟对齐窗抑制超时告警」判定面——排窗路径=e14 队列候 COO 排+CEO 确认制（D-39 增补段）·抑制方案选择=CTO 域（本席=归族督办面非裁面）"
     },
     {
       "id": "notify-attach-dedup",
