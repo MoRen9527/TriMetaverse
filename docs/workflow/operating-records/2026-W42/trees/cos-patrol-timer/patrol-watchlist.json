@@ -195,8 +195,20 @@
       "mode": "observe",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "BOD 20:22 对表回执并族定谳（我面跨轮重放+BOD 面单轮三连发并一宗）——影响面=告警通道可信度（同型 NOTIFY 重放致免重复知会判读反复）·机制定位=TriMMC hook 推送/附着实现（CTO/FSD 域）·候明日 12:00 评审或 E1-4 v2 排窗族并勘·发送侧日志位未定位候 FSD 勘·【20:26 增补】FSD 意向接（候 COO 排窗与 e14 族并勘·不自启不抢窗·届时先出实现方案稿过 CTO 再动码）——候排窗态",
+      "receiptNote": "BOD 20:22 对表回执并族定谳（我面跨轮重放+BOD 面单轮三连发并一宗）——影响面=告警通道可信度（同型 NOTIFY 重放致免重复知会判读反复）·机制定位=TriMMC hook 推送/附着实现（CTO/FSD 域）·候 E1-4 v2 排窗族并勘（评审时点 10-18 起改周日 14:00）·发送侧日志位未定位候 FSD 勘·【20:26 增补】FSD 意向接（候 COO 排窗与 e14 族并勘·不自启不抢窗·届时先出实现方案稿过 CTO 再动码）——候排窗态",
       "treeRef": "接收侧原始证据备调卷=trees/notify-attach-dedup/notify-attach-dedup-evidence-20261017.md（a22cdf93b·BOD 面落卷·并表/机制勘直接引用免挖 transcript）"
+    },
+    {
+      "id": "review-sunday-1400",
+      "desc": "CEO 令 10:41:17：评审会改每周日 14:00 固定（今日 10-18 即改 14:00）——三件：①制度化落位（转 CAO 域·我起草转办催办）②知会 CPO/COO/CTO+相关常驻席③周日 14:00 与现役 cron/排程面撞点对表",
+      "owner": "COS(记录转发知会)/CAO(制度化落册)/COO(经营节律面)",
+      "nudge": "none",
+      "dispatchedAt": "2026-10-18T10:44:00+08:00",
+      "timeoutMin": 200,
+      "mode": "enforce",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "BOD 转知 10:43（并表卷时点已随令改齐 94069f4eb·各席时限不变仅增余量）——我面动作链：journal 落令笔+watchlist 挂账+三席知会+CAO 转办+BOD 回执挂账——制度化落册=CAO 域（我面起草转办不代决落点）"
     }
   ]
 }
