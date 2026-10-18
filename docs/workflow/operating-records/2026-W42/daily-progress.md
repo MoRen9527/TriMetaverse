@@ -1575,3 +1575,7 @@
   - 00be6806a Merge remote-tracking branch 'sg-server/dev' into dev
   - 175e30ab3 docs(cfo): 14:00周日锚——周窗59%慢速(+2pt/4.5h)距预警11pt·同锚对+10pt未触(三连触后首回落·减速第二证)·今117M/10·零触免报
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:30 +08：自上次进度提交 68edd562a 后新增 2 条 commit：
+  - f4c27b080 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 205c13c1c docs(cfo): 18:00周日锚——周窗59%周日零增·同锚对+5pt未触(连续第二回落对·减速确认)·今127M/10·当日无门令·零触免报
+- registry：v2.1；今日 registry 提交无变化
