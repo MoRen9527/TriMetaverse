@@ -1565,3 +1565,9 @@
   - f236b5bf3 merge: 并入远端并行推进后重推预裁落卷
   - 99d7d90c2 docs(board): 议程5b·CEO 11:32预裁落卷(23点旧链+下午影子跑+开工授权·候裁五点仍14:00)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 59373242e 后新增 4 条 commit：
+  - 851f65b59 docs(board): 议程5b新候裁项并COS分诊意见(倾向b清淤窗+过渡缓解)+BOD采认·14:00过目即裁
+  - ceeec7928 docs(board): 议程5b补a级毕报锚(d322c73c6影子跑两断言绿+值面缺口如实报)+新增候裁项a+头部刷新转m-cos
+  - a896af642 merge: 并入远端并行推进（59373242e）后重推——SDE a 级毕报 d322c73c6 收编
+  - d322c73c6 docs(sde): a 级施工+影子跑毕报卷——wrapper 五场景冒烟绿(TriCompany dde1937·零覆写现役入口)+影子跑链面全绿(.shift-ade.json status=pass 五步全 pass·现役面零触碰 rc=0 实证·git 链物理隔离)+断言②值面缺口如实报(LG-072 新形头部元信息不适配·现役固有非 wrapper 引入·今晚旧链同缺口·处置候 COS 裁)+树骨架 tree-op.json+b 级候选形草案(落款预填自纠勘正记在案)
+- registry：v2.1；今日 registry 提交无变化
