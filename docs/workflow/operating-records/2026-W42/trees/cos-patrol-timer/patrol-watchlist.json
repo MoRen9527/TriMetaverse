@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T14:00:00+08:00",
+  "updatedAt": "2026-10-18T21:42:11+08:00",
   "maintainer": "COS(m-cos)",
   "schemaNote": "items[]: id/desc/owner(责任面)/nudge(催办名址)/dispatchedAt(+08:00 ISO)/timeoutMin/mode(enforce=超时催·observe=只记录不催)/status(pending|done)/receipt(pending|received·COS 会话对拍后更新)",
   "items": [
@@ -195,7 +195,7 @@
       "mode": "observe",
       "status": "pending",
       "receipt": "pending",
-      "receiptNote": "BOD 20:22 对表回执并族定谳（我面跨轮重放+BOD 面单轮三连发并一宗）——影响面=告警通道可信度（同型 NOTIFY 重放致免重复知会判读反复）·机制定位=TriMMC hook 推送/附着实现（CTO/FSD 域）·候 E1-4 v2 排窗族并勘（评审时点 10-18 起改周日 14:00）·发送侧日志位未定位候 FSD 勘·【20:26 增补】FSD 意向接（候 COO 排窗与 e14 族并勘·不自启不抢窗·届时先出实现方案稿过 CTO 再动码）——候排窗态",
+      "receiptNote": "BOD 20:22 对表回执并族定谳（我面跨轮重放+BOD 面单轮三连发并一宗）——影响面=告警通道可信度（同型 NOTIFY 重放致免重复知会判读反复）·机制定位=TriMMC hook 推送/附着实现（CTO/FSD 域）·候 E1-4 v2 排窗族并勘（评审时点 10-18 起改周日 14:00）·发送侧日志位未定位候 FSD 勘·【20:26 增补】FSD 意向接（候 COO 排窗与 e14 族并勘·不自启不抢窗·届时先出实现方案稿过 CTO 再动码）——候排窗态\n【10-18 21:40 复读实证·族第7例判读】21:11已核销绿探件于21:40逐字重附（无新时戳「连续3次读取失败」）·21:42:11复探8713仍绿(readFailures=0/notifyFailures=0/gate=none)——附着层重放面再证·判别式「内容快照冻结」应验21:15预挂；置信=高置信判读非铁定谳(瞬态自愈计数清零不可全排·与同窗E1-4心跳恢复21:38:38并观重放占优)。附带新疑点移交CTO链：E1-4 recovered(21:38:38)前置gap告警拍我面缺失(漏发/漏附候勘)。",
       "treeRef": "接收侧原始证据备调卷=trees/notify-attach-dedup/notify-attach-dedup-evidence-20261017.md（a22cdf93b·BOD 面落卷·并表/机制勘直接引用免挖 transcript）"
     },
     {
