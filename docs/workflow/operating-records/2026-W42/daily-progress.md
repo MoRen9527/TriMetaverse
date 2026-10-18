@@ -1519,3 +1519,7 @@
   - 9d92fdf5f docs(cfo): 09:30周日锚——周窗57%夜段慢速(+3pt/15.7h)距预警13pt·同锚对+16pt触线归因同族不重发(13:17令面④)·昨日终值612M/10·周日晨轻19M/5
   - b281b0546 docs(cto): CEO六问四项技术评估——①每会话子进程形态采认两段施工(段1 job进程化supervisor扩展·段2交互长会话随P3后·骨架周-双周含回归月级)·缺陷定性限可用性面校准 ②统一worker模型策略分池(短命池+长驻池·分席重评判据两条) ③交叉分布新勘(人格装载MC有LC无·会话托管LC有MC无·session-store双LC文件级四同名) ④soul-loader四仓干净HEAD复核MC有LC无定谳 ·步5语义改写随卷(切换可行性就绪+多样性保留)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:20 +08：自上次进度提交 8779ee6b8 后新增 2 条 commit：
+  - 569180710 merge sg-server/dev 并行席推进并入(8779ee6b8)
+  - 091a0f2ab docs(board): 并表卷§七·CEO 10:09 追加三问行业对标面落卷(进程模型/daemon+子进程/soul-loader四面·已派CTO候11:30)
+- registry：v2.1；今日 registry 提交无变化
