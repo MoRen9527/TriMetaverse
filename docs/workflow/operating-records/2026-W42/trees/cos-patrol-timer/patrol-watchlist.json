@@ -206,9 +206,10 @@
       "dispatchedAt": "2026-10-18T10:52:00+08:00",
       "timeoutMin": 160,
       "mode": "enforce",
-      "status": "pending",
-      "receipt": "pending",
-      "receiptNote": "COO 10:52 督办知会挂账（毕锚≥13:30·闸=dispatchedAt+160min≈13:32）——毕报达我面即对表销账·B16 通道迁移入账候收口节点（COS/BOD）不动"
+      "status": "done",
+      "receipt": "received",
+      "receiptNote": "毕报 10:56 三送达我面·对表毕销账（10:57）：13/13 回灌绿+反演断言绿·10:52 令 10:54 毕（~2min·毕锚 13:30 前大余量）·卷 sde-b15-first-reflow-closeout-20261018.md+commit 281b21a46 本地链验真在档·锚Ⅲ线勘正销项收记——序表第 1 项候 COO 销账·B16 候节拍不动",
+      "treeRef": "trees/lg087-dsh-sega-20261016/reports/sde-b15-first-reflow-closeout-20261018.md（281b21a46）"
     },
     {
       "id": "review-sunday-1400",
