@@ -48,8 +48,10 @@ if (process.argv.includes('--print-identity')) { console.log(DAEMON_NAME); proce
 | --- | --- | --- | --- | --- |
 | 8713 TriMLC（本机） | 无 | trilc-channel 命中 | TriMLC@8713(win-m-cto-host)=现值 | **否** |
 | 8711 TriRLC（本机） | 无（TRILC_DATA_DIR=trirlc 已在） | trirlc 命中 | TriRLC@8711(win-r-cto-host) | **否** |
-| 8712 TriMMC（sg） | A2 部署稿壳显式 `TRILC_WR_DAEMON_NAME='TriMMC@8712(win-sg-*)'`（机位名 A2 定） | 未命中走 env | 待 A2 定名 | 随 A2 部署自然冷启 |
-| 8710 TriRMC（河源） | 同上 `'TriRMC@8710(r-hy-*)'` | 同上 | 待 A2 定名 | 随 A2 部署自然冷启 |
+| 8712 TriMMC（sg） | A2 部署稿壳显式 `TRILC_WR_DAEMON_NAME='TriMMC@8712(sg-m-duty-host)'`（定名建议见 §四附·COO 归裁 21:30 后本席 21:3x 正式化） | 未命中走 env | 建议=sg-m-duty-host | 随 A2 部署自然冷启 |
+| 8710 TriRMC（河源） | 同上 `'TriRMC@8710(r-hy-r-duty-host)'` | 同上 | 建议=r-hy-r-duty-host | 随 A2 部署自然冷启 |
+
+**§四附·8712/8710 定名建议全串（D-24 机位断言·现役同构外推·推断面标注）**：格式=`daemon@port(宿主-面-消费席-host)` 与现役 `TriMLC@8713(win-m-cto-host)` 四段同构——8712=`sg-m-duty-host`（sg 宿主[M-SG-ip 正名]·M 面·duty 班组消费[M-SG 席组]）；8710=`r-hy-r-duty-host`（河源宿主[R-HY-ip 正名]·R 面·r-duty 席消费）。**推断面标注**：消费席段（duty）系按两机现役消费形外推，非实勘定谳——A2 部署稿定稿时若消费席形有变（如专属席位名）以此为准修正，host 尾缀与四段构形建议保持。
 
 向后兼容硬门自证：映射表 8713 值=旧硬编码字面量同串·未命中回落亦同串——8713 任何路径下身份面零漂移。
 
