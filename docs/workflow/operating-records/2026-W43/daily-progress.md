@@ -89,3 +89,10 @@
   - c754b6f0a merge: 并入 sg 并行推进（eda3ef7d2）
   - acbf44a47 docs(cto): DAEMON_NAME设计稿§四补8712/8710定名建议全串——sg-m-duty-host/r-hy-r-duty-host(D-24同构外推·消费席段推断面标注)·候COO填v2§四预留位
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 04540a28a 后新增 5 条 commit：
+  - 0655adaa8 docs(coo): 台账一百八十笔(DAEMON_NAME施工毕销账·连带批①闭环·四道门绿·8711冒名即修·⑤真窗实证候拍非阻塞)
+  - 54e507af1 docs(cto): DAEMON_NAME施工毕报——方案C落地四道门绿(①diff②四形对拍③双daemon真链路96ms④零差异PASS)·⑤真窗身份实证候窗不阻收口·8711冒名即修毕·8712/8710部署衔接说明·施工笔431d9e754
+  - 431d9e754 fix(ops): DAEMON_NAME per-daemon化施工——方案C(env显式>DATA_DIR映射>旧默认保底)·8711零配置正名(win-r-cto-host)·8713零漂移硬门·零ALLOWLIST变更·--print-identity对拍旗标·A2连带批项①(CEO 21:38裁照准·设计稿acbf44a47前稿)
+  - 2cb475754 merge: 收编并行笔（值席落盘防覆盖）
+  - 333410727 docs(coo): A2转正窗即开+台账一百七十九笔(CEO 21:38:53裁·v2批后勘误段§六·额度条款r-duty轨失效注·笔序勘正179·连带批①同步CTO)
+- registry：v2.1；今日 registry 提交无变化
