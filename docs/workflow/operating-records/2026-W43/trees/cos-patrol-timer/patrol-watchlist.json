@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T09:35:30+08:00",
+  "updatedAt": "2026-10-19T09:45:00+08:00",
   "maintainer": "COS(m-cos)",
   "schemaNote": "items[]: id/desc/owner(责任面)/nudge(催办名址)/dispatchedAt(+08:00 ISO)/timeoutMin/mode(enforce=超时催·observe=只记录不催)/status(pending|done)/receipt(pending|received·COS 会话对拍后更新)｜W42→W43 平移（2026-10-19 本席手动·daemon 拍向已切 W43·watchlist-missing 修复）",
   "items": [
@@ -223,6 +223,19 @@
       "receipt": "received",
       "treeRef": "制度化正身=TriCompany/docs/workflow/weekly-demand-review-workflow.md（e5f37f7）",
       "receiptNote": "三件全毕销账（10:52）：①制度化落位=CAO 毕（正身件 TriCompany/docs/workflow/weekly-demand-review-workflow.md 三处修订·TC e5f37f7·sg 推平验真绿=销账凭据）②知会四席毕（cto 8e4a779c/coo 90bf83e7/cpo 5ead3573/cao 5f14fc03·CTO 撞点回报 10:48+COO 随改毕 10:50+CPO 无撞免回形态照信约）③撞点对表毕（我面初对+CTO 全量 17 job 值面对表=唯一撞点 batch-16 job·COO PATCH 12:00→14:00 三查绿 f608bdf3c+我面文案随勘 7b39fbbaf）"
+    },
+    {
+      "id": "review-minutes-1018-tbd",
+      "desc": "10-18 14:00周日需求评审裁纪要候落卷归档（R6:纪要归operating-records归档·秘书处制度CAO收口；纪要产出面=BOD主持面）",
+      "owner": "CAO(归档收口)+BOD(纪要产出)",
+      "nudge": "m-cao",
+      "dispatchedAt": "2026-10-19T09:45:00+08:00",
+      "timeoutMin": 1440,
+      "mode": "observe",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "CPO 09:44 披露（评审已开·议程总卷44f0f7f97在链·CEO 11:32预裁在卷·BOD意见面齐·裁后纪要卷树上未见落盘git全史扫至本地顶）；池DEM-005/006按事实态写候补录位已留——纪要落卷后CPO补录四态终裁进池",
+      "treeRef": "docs/workflow/operating-records/2026-W42/trees/ 内议程总卷44f0f7f97"
     }
   ]
 }
