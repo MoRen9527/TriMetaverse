@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T09:58:00+08:00",
+  "updatedAt": "2026-10-19T10:04:00+08:00",
   "maintainer": "COS(m-cos)",
   "schemaNote": "items[]: id/desc/owner(责任面)/nudge(催办名址)/dispatchedAt(+08:00 ISO)/timeoutMin/mode(enforce=超时催·observe=只记录不催)/status(pending|done)/receipt(pending|received·COS 会话对拍后更新)｜W42→W43 平移（2026-10-19 本席手动·daemon 拍向已切 W43·watchlist-missing 修复）",
   "items": [
@@ -238,6 +238,19 @@
       "treeRef": "docs/workflow/operating-records/2026-W42/trees/ 内议程总卷44f0f7f97",
       "closedAt": "2026-10-19T09:58:23+08:00",
       "closedBy": "COS 销账——验证锚：产出件aabb19219在链亲验（weekly-demand-review-20261018.md §六+52行·八要件逐条·五组候裁面裁决结果在链无记录双实证+回填位留）+CAO归档收口毕实核+BOD问询已答（本席无会中记录·值守位实证·候CEO补录路径照CAO件）"
+    },
+    {
+      "id": "review-record-role-first-duty",
+      "desc": "周日需求评审记录位首执（2026-10-25 14:00·R6§四定形：主持BOD/记录位COS入会/归档CAO/池录入CPO·TC 9d79ee4）——候CAO排程面届时知会入位",
+      "owner": "COS(入会记录)+CAO(排程知会)",
+      "nudge": "m-cao",
+      "dispatchedAt": "2026-10-19T10:04:00+08:00",
+      "timeoutMin": 10080,
+      "mode": "observe",
+      "status": "pending",
+      "receipt": "pending",
+      "receiptNote": "CAO 10:02 裁量定形（制度§2既定分工落实+首例缺位缺口实证+本席认承在先）——首执10-25 14:00后随评审节律常设",
+      "treeRef": "R6=TriCompany/docs/workflow/weekly-demand-review-workflow.md §四(TC 9d79ee4)"
     }
   ]
 }
