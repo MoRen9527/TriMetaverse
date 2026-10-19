@@ -60,3 +60,8 @@
   - 0aaa23ee6 Merge remote-tracking branch 'sg-server/dev' into dev
   - 816ab0205 docs(cfo): 14:00周一锚+停工令例行——周窗63%距预警7pt·同锚对+4pt未触(第四回落对)·时段停工门条款2例行五要素达COO+BOD抄·复工预告18:00·今晨78M/6轻
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:30 +08：自上次进度提交 edf1a0a93 后新增 3 条 commit：
+  - ad310812d docs(coo): A1任务书草案+A2窗2四件排窗方案落树(候CEO确认·三daemon复制推广四步+周二黄金段主窗·172笔)
+  - 77b3be0d9 Merge remote-tracking branch 'sg-server/dev' into dev
+  - a69a201f6 docs(cfo): 18:00周一锚+复工令——周窗65%距预警点5pt晚间高概率触70%候守·同锚对+6pt未触(第五回落对)·停工窗压低今95M/6·条款5对称面五要素达COO+BOD抄
+- registry：v2.1；今日 registry 提交无变化
