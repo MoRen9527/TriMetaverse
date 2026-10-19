@@ -38,4 +38,16 @@
 | 4 | 班组施工+毕报 | 候 |
 | 5 | BOD 活体验收（§三.3 三门） | 候 |
 
-—— BOD 落款 2026-10-19 22:09:03 +0800（date 现查·shell 注入·发毕对表）
+## 五·勘误段 v1→v2（2026-10-19 22:36·CEO 勘正触发·原文上存照历史冻结惯例不改正文）
+
+- **勘误责任：BOD**。v1 令文 §三.1 误指定「每会话跑 claude CLI」——系旧形（与 r-duty-sde 旧形残留同形·分库·与班组现役 dsh 形态矛盾）。CEO 22:32 勘正：「tmux 挂上去是 dsh，不会挂上去还用 claude code 的 cli」。
+- **dsh 能力活体勘定（4 探针·-J sg 零直连）**：
+  1. dsh CLI 正身=`/srv/fleet/dsh/node_modules/.bin/dsh`（fleet 位·现役 web 即此 bin：`dsh web --port 8791 --no-open`·pid 243543·10-17 起）；
+  2. **`dsh tui` 形在册设计存在**（help 实锚：`dsh tui --resume <session>`·`dsh headless`·`dsh web` 三形并举）——**tui profile 河源现未建**（报错原文：`profile "tui" does not exist; create it with 'dsh plugin --profile tui add <package>'`）；
+  3. tui 包来源未定谳（node_modules/@deepseek-ai/ 前 40 包全 client-ui 族无独立 tui 包；出厂模板有无候班组 `dsh --dump-default-config` 断）；
+  4. 调用注意：`sudo -u fleet` 非 `-H` 会摸 `/root/.env` 报 EACCES（实测）——正形 `sudo -H -u fleet`。
+- **旧形残留重勘（活体在案）**：r-duty-sde 残留**仍在**=pid 16048（10-16 起·tmux 服务·会话名 r-duty-sde·内跑 `/home/fleet/.local/bin/claude --agent SeniorDeploymentEngineer --dangerously-skip-permissions`·cwd=/srv/fleet/TriMetaverse）——但该会话**不在 fleet 默认 socket ls 面**（22:2x 勘 `tmux -S /tmp/tmux-1000/default ls` 仅 dsh-web-prod）——清退按 pid 16048 实体直查，勿凭 socket 名猜。
+- **v2 令要点（信面 307 已就地改 v2）**：tmux 13 席内跑 **dsh tui --resume <该席现役会话>**（同库同会话·web 历史与终端续聊同段）；禁 claude CLI 形；施工第 0 步=tui profile 来源勘定（dump-default-config→模板启或 plugin add）；同席 web/tui 避免同时活跃（并发语义勘明前串行为准）；余护栏/验收门沿 v1 改述。
+- 信面动作：307 就地改 v2（未拾取信就地勘正·原子写）+309 增补知会信（m-duty-cos·v2 替代 v1）。
+
+—— BOD 落款（勘误段）2026-10-19 22:36:58 +0800（date 现查原值粘贴·发毕重跑对表）
