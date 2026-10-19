@@ -108,3 +108,6 @@
 - 巡检兜底补写 @23:30 +08：自上次进度提交 8f1b47f03 后新增 1 条 commit：
   - 54ce39685 docs(bod): r-duty受阻报收执落卷补落dev(同wt/board de6c6d31b·硬阻定谳+16048正名+候裁四选ABCD)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:40 +08：自上次进度提交 df4d2361f 后新增 1 条 commit：
+  - 8c38b9ee5 docs(bod): CEO三裁收执+C实勘定谳补落dev(同wt/board·headless同库续挂实证·D已派·8712收窄)
+- registry：v2.1；今日 registry 提交无变化
