@@ -13,9 +13,21 @@ import { join, dirname } from 'node:path';
 const REPO = 'D:/Code/ai/TriMetaverse';
 const DATA_DIR = process.env.TRILC_DATA_DIR || join(process.env.LOCALAPPDATA || '', 'trilc-channel');
 const STATE_FILE = process.env.TRILC_WR_STATE_PATH || join(DATA_DIR, 'window-reminder-state.json');
-const DAEMON_NAME = 'TriMLC@8713(win-m-cto-host)'; // D-24 机位断言头
+// D-24 机位断言头（per-daemon: env 显式 > DATA_DIR 映射 > 旧默认=8713 向后兼容）
+// 设计稿: docs/workflow/operating-records/2026-W43/trees/e1-daemon-jobs-window/cto-daemon-name-perdaemon-design-20261019.md
+//         （A2 连带批项①·CEO 2026-10-19 21:38 裁照准·方案 C·施工 CTO 席）
+const DAEMON_IDENTITY_MAP = {
+  trirlc: 'TriRLC@8711(win-r-cto-host)', // 本机 R 面本地域（TRILC_DATA_DIR=trirlc·ps1 壳 L10 已设）
+  'trilc-channel': 'TriMLC@8713(win-m-cto-host)', // 本机 M 面本地域（现役默认同值·零漂移硬门）
+};
+const DAEMON_NAME = process.env.TRILC_WR_DAEMON_NAME
+  || DAEMON_IDENTITY_MAP[DATA_DIR.replace(/[\\/]+$/, '').split(/[\\/]/).pop()]
+  || 'TriMLC@8713(win-m-cto-host)';
 const TOLERANCE_MS = 5 * 60 * 1000; // ±5min 容差（§1.2）
 const BJ_OFFSET_MS = 8 * 3600 * 1000; // Asia/Shanghai 恒 +8（无 DST）
+
+// 验证旗标（人工 CLI 对拍用·cron 无参形态不受扰）
+if (process.argv.includes('--print-identity')) { console.log(DAEMON_NAME); process.exit(0); }
 
 // ── 北京时间工具（UTC+8 分量直取·禁本地时区依赖）──
 function bjParts(ts) {
