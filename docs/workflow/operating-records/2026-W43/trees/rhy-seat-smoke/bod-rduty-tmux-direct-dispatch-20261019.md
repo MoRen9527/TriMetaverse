@@ -35,7 +35,7 @@
 | 1 | CEO 裁选 2 收执（本卷） | 毕 |
 | 2 | web 面活体勘定（§一） | 毕 |
 | 3 | 派工令 sg TriMC 箱双信（r-duty-cos 派工+m-duty-cos 转达请托·原子写+回读断言） | 本窗 |
-| 4 | 班组施工+毕报 | 候 |
+| 4 | 班组施工+毕报 | **受阻回报已收执（§六）·候 CEO 裁形** |
 | 5 | BOD 活体验收（§三.3 三门） | 候 |
 
 ## 五·勘误段 v1→v2（2026-10-19 22:36·CEO 勘正触发·原文上存照历史冻结惯例不改正文）
@@ -51,3 +51,19 @@
 - 信面动作：307 就地改 v2（未拾取信就地勘正·原子写）+309 增补知会信（m-duty-cos·v2 替代 v1）。
 
 —— BOD 落款（勘误段）2026-10-19 22:36:58 +0800（date 现查原值粘贴·发毕重跑对表）
+
+## 六·施工受阻回报收执与候裁（2026-10-19 23:2x）
+
+- **受阻报收执**：r-duty-cos 22:48:04 落 `REPORT-rduty-tmux-blocked-20261019.md`（其工作区·9131B）——三送梗阻未达 BOD，23:22 BOD 直读工作区收执；**全文存照=同目录 `rduty-blocked-report-20261019.md`**。硬护栏复核全绿（web 会话/8791 零触碰·token 零回显·daemon/cron 零触碰）。
+- **任务 1 硬阻（定谳）**：dsh tui 应用包不存在——A 路死（出厂 templates 实勘=`acp/web/headless/sdk/sdk-minimal` 五档无 tui·`--from-default-profile tui` 报 unknown）+B 路死（实盘 300+ 包无 tui·npm `@deepseek-ai/dsh-tui` 及 14 候选名全 404·0.2.1-rc.2 依赖表亦无 tui bundle）·README「--profile tui」系假定已装的未发布示例。13 席**一个未硬造** ✓ 按令合规止步。
+- **任务 2 撤销（定谳·本卷 §五再勘正）**：pid 16048 非 claude 残留=**tmux 服务端本体**（argv 系 10-16 new-session 化石回显·10-17 起承载 dsh-web-prod 会话跑现役 web pid 243543=8791）——kill 即断 web·r-duty 正确不执行；**旧形 claude 残留实测已清零**（全量 ps 扫描零命中）。台账正名：`16048=tmux-server(hosting dsh-web-prod)`——v2 令任务 2 标的本身不成立，BOD 勘误责任自领。
+- **附带产出**：13 席会话库键全谱实测表（每席 2-4 会话·最近批次 10-18 10:53/10:54·见存照报告表）；候确认两项=现役段指认（10-18 批 vs 10-17 批）+`session.lock` 同库并发语义（web 在席时同库第二挂载是否锁拒·未验证）。
+- **新缺口入账（独立于本件）**：sg TriMMC notify 消费端（trimlc）未在跑——sg 箱写入面活（BOD ssh 级·今夜 307-309 实证）而消费面死（10-16 起 outbox pending 无人消费=信件拾取滞后根因）·候 8712 域勘修窗（与 A1 余窗 8712/8710 候排合并勘）。
+- **候裁四选（r-duty 呈·BOD 抄呈 CEO）**：
+  - A｜等 tui 正式发布后 `plugin --profile tui add` 一次成型（r-duty 建议·零风险·时间不可控）；
+  - B｜升级整栈 0.2.1-rc.2 再勘（依赖表已勘无 tui·大概率白升+动 web 服务地基·需 CEO 级另令）；
+  - C｜降级 `dsh --profile headless --session-id <席现役会话> "<消息>"` 逐条续聊（同库同历史成立·但一次性问答循环非交互 TUI·形态明显变·须 BOD 明令）；
+  - D｜自建 tui bundle（CTO 域立项·候选路径=TriLC 现成 Ink TUI 接 dsh SDK/或候官方发布）。
+- **BOD 意见**：C 形态不符 CEO「打开就聊」原意·不建议硬上；正解方向=D 立项评估（CTO 线勘接线可行性）+A 被动等官方·可并行。候 CEO 裁。
+
+—— BOD 落款（§六）2026-10-19 23:25:10 +0800（date 现查·shell 注入·发毕对表）
