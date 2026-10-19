@@ -102,3 +102,6 @@
 - 巡检兜底补写 @22:40 +08：自上次进度提交 7480fe24e 后新增 1 条 commit：
   - 2b2728771 docs(bod): r-duty直挂形派工卷勘误段v1→v2(CEO 22:32勘正·claude CLI形禁用改dsh tui同库直挂·dsh能力4探针实锚·残留pid16048正身·信面307就地改v2+309知会)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:20 +08：自上次进度提交 5e1fcafef 后新增 1 条 commit：
+  - 8106e4085 docs(bod): 5b口径增补段落卷补落dev(同wt/board b81d1152b·CEO 23:0x令·整树迁移三面分工+COS顺序单进程拆树周未完树≤1~2容差)
+- registry：v2.1；今日 registry 提交无变化
