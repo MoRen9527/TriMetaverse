@@ -79,3 +79,8 @@
   - 1db7bc0a1 merge: 并入远端并行推进（1f7e68d56）后重推——A3 毕报 4ac9c9103 收编
   - 4ac9c9103 docs(sde): A3 black-formatter 自动触发禁用毕报——settings.json [python] 面触发链全断(formatOnType true→false+Save/Paste 显式 false+codeActionsOnSave 显式空·defaultFormatter 不动=手触发保留)+扩展未卸载+观察窗起点 21:12:55 报+json5 值断言绿+「顶格损坏」疑撤判记录(假缺陷禁写)+VSCodium 侧零痕迹范围断言
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:30 +08：自上次进度提交 4b8c5ab33 后新增 3 条 commit：
+  - 22e469214 docs(coo): A2改派任务书v2+台账一百七十七笔(窗2四件改派r-duty+DAEMON_NAME连带批项①CTO直施裁·候CEO确认·D-39)
+  - 9d3e9bc80 merge: 并入 sg 并行推进（4b8c5ab33 巡检兜底补写）
+  - 4b8897fdb docs(cto): DAEMON_NAME per-daemon化设计稿——方案C混合(env显式>DATA_DIR映射>旧默认保底)·8711零配置零重启正名·8713零漂移硬门自证·零ALLOWLIST变更·--print-identity验证旗标·五道门禁+单commit回滚·候A2改派稿连带批
+- registry：v2.1；今日 registry 提交无变化
