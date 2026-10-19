@@ -96,3 +96,6 @@
   - 2cb475754 merge: 收编并行笔（值席落盘防覆盖）
   - 333410727 docs(coo): A2转正窗即开+台账一百七十九笔(CEO 21:38:53裁·v2批后勘误段§六·额度条款r-duty轨失效注·笔序勘正179·连带批①同步CTO)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:20 +08：自上次进度提交 ba5811f52 后新增 1 条 commit：
+  - 4653e034d docs(bod): r-duty终端直挂形派工卷(CEO选2裁·tmux 13席直挂+r-duty-sde旧形清退·web面活体勘定=无会话级深链侧栏点名即答)
+- registry：v2.1；今日 registry 提交无变化
