@@ -25,3 +25,15 @@
   - 68edd562a docs(plane): 巡检兜底补写 2026-10-18 14:40——2 条 commit 粗粒度增量（daily-progress-watcher 自动；FADE-001 维护项②/LG-011）
   - …另有 485 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:50 +08：自上次进度提交 f7d2da969 后新增 7 条 commit：
+  - 7d0404f18 docs(cpo): 需求池W42→W43补课平移+节律14:00随勘——表正身跨周平移不重建(迁移器carry-over缺口手工补课·COS披露journal 346f3163a)·DEM-005/006全文平移自DEM-007续号·池头裁决权/评审条款两处12:00→14:00(CEO 10-18 10:41令·R6正身CAO落卷)·评审裁候补注如实(10-18 14:00评审已开议程在链·裁后纪要树上未见落盘·候收口流程补录不代裁)·W42件归档指针+static留史
+  - 346f3163a docs(cos): W43对齐施工——unresolved件头部刷正(a+过渡缓解·四字段+续链·现役区承袭未亲勘如实注)+patrol-watchlist平移W43(daemon拍向已切·watchlist-missing修复)
+  - d198ce4f8 Merge remote-tracking branch 'origin/dev' into dev
+  - d82a7e4f3 Merge remote-tracking branch 'origin/dev' into dev
+  - b18d7d19d docs(cos): E1-4 S0ix新分型实证落账——今晚两段Modern Standby原值(506/507/566族)·lastWakeSeenAt与OS 507秒级对齐·recentWake首验真值通过·42/107查询面S0ix盲区教训
+  - 27ca108d9 docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - 8ba699e00 docs(cos): NOTIFY去重族第7例判读落账——21:40 LG-069逐字复读实证(21:42复探绿·判别式内容快照冻结应验)+E1-4 recovered收记并附前置告警拍缺失疑点移交CTO链
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 4fcfadeea 后新增 1 条 commit：
+  - aabb19219 docs(bod): 10-18评审会况纪要§六节落卷(CAO催办件·R6归档链·八要件逐条·五组候裁面裁决结果在链无记录双实证如实记+回填位留·预裁两条+执行毕三件收口)
+- registry：v2.1；今日 registry 提交无变化
