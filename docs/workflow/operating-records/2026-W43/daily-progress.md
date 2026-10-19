@@ -84,3 +84,8 @@
   - 9d3e9bc80 merge: 并入 sg 并行推进（4b8c5ab33 巡检兜底补写）
   - 4b8897fdb docs(cto): DAEMON_NAME per-daemon化设计稿——方案C混合(env显式>DATA_DIR映射>旧默认保底)·8711零配置零重启正名·8713零漂移硬门自证·零ALLOWLIST变更·--print-identity验证旗标·五道门禁+单commit回滚·候A2改派稿连带批
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:40 +08：自上次进度提交 eda3ef7d2 后新增 3 条 commit：
+  - 6778afeb2 docs(coo): 台账一百七十八笔(DAEMON_NAME定名建议达·设计稿§四补全acbf44a47·v2呈批版冻结·BOD审毕转CEO)
+  - c754b6f0a merge: 并入 sg 并行推进（eda3ef7d2）
+  - acbf44a47 docs(cto): DAEMON_NAME设计稿§四补8712/8710定名建议全串——sg-m-duty-host/r-hy-r-duty-host(D-24同构外推·消费席段推断面标注)·候COO填v2§四预留位
+- registry：v2.1；今日 registry 提交无变化
