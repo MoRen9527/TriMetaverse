@@ -67,3 +67,17 @@
 - **BOD 意见**：C 形态不符 CEO「打开就聊」原意·不建议硬上；正解方向=D 立项评估（CTO 线勘接线可行性）+A 被动等官方·可并行。候 CEO 裁。
 
 —— BOD 落款（§六）2026-10-19 23:25:10 +0800（date 现查·shell 注入·发毕对表）
+
+## 七·CEO 三裁收执与 C 实勘定谳（2026-10-19 23:3x）
+
+- 令源：CEO 23:32「按BOD意见办，D立项评估，C的headless不能用么？我们M-SG不是也是claude code的无头模式操作的么？实勘评估下也／8712一并修」。
+- **裁 1｜D 立项评估：照准·已派**——m-cto 直达（msg 41525510·23:3x 回执候）·评估非施工（TriLC Ink TUI 接 dsh 会话库可行性 vs 官方 tui 被动等待·两线对比毕报 BOD）·A 线并行维持。
+- **裁 2｜C 实勘：定谳=可用（§六 BOD「形态不符不建议」判断修正——CEO 疑问有据）**：
+  - 活体实证（r-duty-cos·session-64a715c5·23:35）：`dsh --profile headless --session-id <id> "<问>"` RC=0·答句正确复述该会话前一条用户消息主题=**同库历史续挂成立**；transcript 同文件 26701→35360B·mtime 23:35=写入同一会话库确凿；`session.lock` 0 字节 mtime 被触但**不拒第二挂载**（web 在席并发未锁死·待确认项 2 部分解）。
+  - 形态定性：终端一次性问答循环（`--json` 可机读）·非交互 TUI——「问一嘴」用途完全可用，「长聊」体验无。
+  - 现役段指认规则（待确认项 1 解法）：同席多会话段共存（r-duty-cos 实测两段：339b7b71@10-17=transcript 217KB·mtime 22:48=web 对话现役段；64a715c5@10-18=批次段）——**取 mtime 最新段为现役**；本次实勘挂 64a715c5 段（机制实证·无扰现役段）。
+  - CEO 前提勘正：M-SG 席组实形态=**claude CLI 交互会话形**（`claude --resume m-duty-<席> -n <席> --agent <岗>`·tmux pts 面·13 进程 10-13 起）非 headless——C 的实勘结论不依赖此前提独立成立。
+- **裁 3｜8712 并修：范围勘定收窄（r-duty「消费端死」定性修正）**：①独立 trimlc 消费单元不存在（`Unit trimlc.service could not be found`·sg 只有 trimc.service 在役）；②sg 出站管线**活的**（notify-outbox-ledger 23:30:55/56 `forwarded`+`delivered` m-cao/m-coo 实锚·echo-queue=mc-echo-pull 机制在役）；③真缺口=**R-HY 侧席位入箱拾取**（r-duty 收不到箱信·307 未达实证）+**sg `notify-mailbox.json` 直 append 形态是否在管线取信路径**（307-309 直 append 未被拾取·管线走 outbox/echo 端点嫌疑）——并入 8712 窗（候排·与 A1 部署窗合并）勘 TriMMC notify 路由真身+补 R-HY 拾取通道；过渡期通道口径：r-duty=GUI 直达（已验证）·sg 席=outbox 形态（管线实证活）。
+- 执行链：受阻收执（§六）→CEO 三裁→C 实勘毕·D 派工毕·8712 窗扩围候排。
+
+—— BOD 落款（§七）2026-10-19 23:37:58 +0800（date 现查·shell 注入·发毕对表）
