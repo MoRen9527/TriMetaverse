@@ -65,3 +65,10 @@
   - 77b3be0d9 Merge remote-tracking branch 'sg-server/dev' into dev
   - a69a201f6 docs(cfo): 18:00周一锚+复工令——周窗65%距预警点5pt晚间高概率触70%候守·同锚对+6pt未触(第五回落对)·停工窗压低今95M/6·条款5对称面五要素达COO+BOD抄
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 2b1c96651 后新增 5 条 commit：
+  - 02e723deb docs(bod): 裁执记候办2勘误——8711已现役零重启(CTO 21:04:39实锚·任务书§二陈旧基线5833605fb)·重启备态撤
+  - 5833605fb docs(coo): A1窗内对象断言勘误(8711已现役·任务书§八勘误段)+验收面准行+DAEMON_NAME挂账候并入A2·174笔)
+  - b583eac6c merge: 收编并行笔（值席落盘防覆盖）
+  - 2221ae774 docs(coo): 台账一百七十三笔(CEO21时三裁执行·A3照准派SDE·5b挂账·A1已开工勘正·A2改派候默许)
+  - 764a7cc68 docs(bod): CEO四件裁决裁执记(A1照准窗21:00-22:00已派CTO·A2候默许r-duty直做倾向·A3照准派COO线·5b照准挂W43清淤窗)
+- registry：v2.1；今日 registry 提交无变化
