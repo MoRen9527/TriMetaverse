@@ -37,3 +37,12 @@
 - 巡检兜底补写 @10:00 +08：自上次进度提交 4fcfadeea 后新增 1 条 commit：
   - aabb19219 docs(bod): 10-18评审会况纪要§六节落卷(CAO催办件·R6归档链·八要件逐条·五组候裁面裁决结果在链无记录双实证如实记+回填位留·预裁两条+执行毕三件收口)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 c84708151 后新增 7 条 commit：
+  - 6b9cc276b Merge remote-tracking branch 'sg-server/dev' into dev
+  - 28f29b452 docs(cfo): 09:30周一锚——周窗62%距预警点8pt周一近线开局·同锚对+5pt未触(减速第三证)·夜间离电段49%充电中如实注·meter超时重跑过·前瞻:70%预警周一高概率首触
+  - 1045f341b docs(cos): watchlist挂账review-record-role-first-duty——评审记录位首执10-25 14:00(R6§四定形9d79ee4·候CAO知会入位·此后常设)
+  - 8c4488692 docs(cos): review-minutes-1018-tbd销账——锚=aabb19219纪要§六在链亲验(八要件+回填位)+CAO归档收口毕+问询已答候CEO补录路径·禁裸销照守
+  - 6f57e91af docs(cos): review-minutes-1018-tbd BOD问询答复落账——无会中记录(值守位实证)·销账照CAO件候CEO补录路径
+  - 32c5028dd docs(cos): review-minutes-1018-tbd回执更新——CAO裁量催产出(催办信已发BOD 09:48:38)·R6§三23:50勘正毕e3e66e7·候BOD产出→CAO归档→CPO补录闭环
+  - 60d08202e docs(cos): watchlist挂账review-minutes-1018-tbd——10-18 14:00评审裁纪要候落卷(CPO披露·CAO归档收口+BOD纪要产出·池候补录位已留)
+- registry：v2.1；今日 registry 提交无变化
