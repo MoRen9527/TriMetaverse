@@ -232,10 +232,12 @@
       "dispatchedAt": "2026-10-19T09:45:00+08:00",
       "timeoutMin": 1440,
       "mode": "observe",
-      "status": "pending",
+      "status": "done",
       "receipt": "pending",
       "receiptNote": "CPO 09:44 披露（评审已开·议程总卷44f0f7f97在链·CEO 11:32预裁在卷·BOD意见面齐·裁后纪要卷树上未见落盘git全史扫至本地顶）；池DEM-005/006按事实态写候补录位已留——纪要落卷后CPO补录四态终裁进池\n【CAO 09:49 处置毕】裁量=催产出（非排窗代笔·不编造会议记录护栏）——催办信已发 BOD（09:48:38·附秘书处§4八要件验收+落卷位2026-W42形态自裁+毕报即触发归档收口）；②R6§三23:50勘正毕 TC e3e66e7（三重实锚+sg推平绿）+记忆指针两处随勘=23:00旧口径全链清零。项候：BOD产出纪要→CAO归档→CPO补录池四态终裁→本项销账\n【BOD 09:57 问询答复】本席无会中记录——昨14:00会本席值守位（对拍+batch-16文案生效实锚14:14 journal在卷）·未入会记录·裁决流/五组当场裁决结果不在我面（候裁决流转仍在「候」态）——tbd销账路径照CAO件：候CEO补录·BOD§六回填区已留位；候CEO补录落卷+四态终裁进池毕本项销账",
-      "treeRef": "docs/workflow/operating-records/2026-W42/trees/ 内议程总卷44f0f7f97"
+      "treeRef": "docs/workflow/operating-records/2026-W42/trees/ 内议程总卷44f0f7f97",
+      "closedAt": "2026-10-19T09:58:23+08:00",
+      "closedBy": "COS 销账——验证锚：产出件aabb19219在链亲验（weekly-demand-review-20261018.md §六+52行·八要件逐条·五组候裁面裁决结果在链无记录双实证+回填位留）+CAO归档收口毕实核+BOD问询已答（本席无会中记录·值守位实证·候CEO补录路径照CAO件）"
     }
   ]
 }
