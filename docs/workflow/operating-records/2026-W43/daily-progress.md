@@ -99,3 +99,6 @@
 - 巡检兜底补写 @22:20 +08：自上次进度提交 ba5811f52 后新增 1 条 commit：
   - 4653e034d docs(bod): r-duty终端直挂形派工卷(CEO选2裁·tmux 13席直挂+r-duty-sde旧形清退·web面活体勘定=无会话级深链侧栏点名即答)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:40 +08：自上次进度提交 7480fe24e 后新增 1 条 commit：
+  - 2b2728771 docs(bod): r-duty直挂形派工卷勘误段v1→v2(CEO 22:32勘正·claude CLI形禁用改dsh tui同库直挂·dsh能力4探针实锚·残留pid16048正身·信面307就地改v2+309知会)
+- registry：v2.1；今日 registry 提交无变化
