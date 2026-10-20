@@ -55,6 +55,7 @@
 - 现役 13 席库零触碰（TUI 默认操作用户 cwd·slug 天然隔离；D-46：acp-client debug 日志只记 method+sessionId+update 类型，零内容面零凭据面）。
 - 零模型调用段（段 1）不落 DeepSeek 高峰约束；段 2 真实调用锁空闲段（工作日 12-14/18 后+周末·落高峰过 CFO 质疑报警面）。
 - 观察项随线留痕（BOD 转录在卷）：存量段续聊上游修 findLog（issue 候）·反向可见性（web 看 TUI 段）未验。
+- **存量段通道勘补（2026-10-20 19:2x 遥审·A2 窗2 卷对表）**：除 (a) 上游修 findLog 与 (b) transcript 只读渲染外，**(c) 程序化直投通道=LG-087 #7 gateway 客户端已交付**（TriRMC `scripts/dsh-gateway-client.mjs`·ac5f01a·web session controller 按 sessionId 直投不经 findLog→对 `session-` 前缀存量段可投·隔离 8799 端到端绿·现役活体候单席探针·卷=rduty-a2-window2-closeout-20261020）。(c) 系程序化面非 TUI 交互面——TUI 场景仍 (a)/(b)，公司级「向 web 席投递」能力面由 (c) 覆盖；#3（mailbox 桥）并入 D' 段 1 销账不另起（触发需求复活时在 (c) 上包触发层）。
 
 ## §五 使用依据
 
