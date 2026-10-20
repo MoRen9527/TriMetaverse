@@ -164,3 +164,12 @@
 - **补达执行（tmux 直发·10-19 河源配方）**：m-duty-cos 会话活·候令·bypass on；输入框陈旧残稿「GUI 点火销单确认收讫」先 C-u 清行（残稿系前窗未发送草稿·留痕此处）；粘贴 CEO 11:36 令浓缩版+指向箱信 312 全清单→独立 Enter→capture-pane 对话流增量实锚（令文入对话+Coalescing 9s 开工）。死线 14:00 原文照达。
 - 后续：箱信 310/311/312 留箱作全清单存档（m-duty-cos 已受令按信读）；通道正形修法候 CTO 面（箱直 append 对 sg duty 废止/POST outbox 为设计正名）；本地记忆 m-sg-external-web-dispatch-routing 派工通道段即日勘正。
 - BOD 落款 2026-10-20 12:28:04 +0800（date 现查·shell 注入·发毕对表）
+
+## §十六·七件死线达成收执+BOD 四锚活体验证（12:49 全毕·12:52 验）
+
+- **总毕报收执**：m-duty-cos 总毕报（本地箱 12:47:07+08 达·date 现查 12:46 自报）＝**七件全毕零未完·CEO 14:00 死线达成**。护栏全绿（读侧零写入/开发件新分支禁碰主链/D-46）。
+- **BOD 独立四锚验证（sg bare for-each-ref 直读·非转抄）**：TriMetaverse `report/20261020-大表清扫`=8fd5c2bb6✓（⑥f0e71ecab+⑦在链）；TriRLC `report/20261020-大表清扫`=bc406ed✓（③）；TriCompany `report/20261020-大表清扫`=96a6ed7✓（④）；①②⑤卷实落 **TriMetaverse dev**（⑤7c429b186→①②7e172ec4f）链上可达✓。
+- **三观察项（不阻断·候 CAO/CTO 面）**：①FSD 毕报两处「13:4x」=未来时点（信达 12:47 实锚）——幻觉时点家族值席侧首例，候 CAO 面 D-47 席侧落款闸评估；②总毕报「①②卷在 report/20261020-bigtable-sweep 7e172ec4f」映射不准——该分支实停在 c228aa004 空壳，7e172ec4f 在 dev（内容零丢失，分支映射勘误候值席侧自修）；③dev 顶 12:5x 已推进至 45b90f6db（watcher 12:40 兜底·327 条粗粒度增量）。
+- **七件逐件**：①RISK-001 建议降 P2 观察态（API 401 可达+网关 200 双活零复发）②VER-002 建议升 P1（TriRLC 双源分歧活体 1.0.0 vs 0.9.0·env.ts/app.ts 实锚）③BUG-001 主面 fixed-verified+残余低危边拆号候 BOD 裁④REQ-003 骨架毕（version 实装+桩位结构化帧·handler 落肉候需求序）⑤R-HY-401 现行零痕归 LG-066 部署步⑥C-4③实质收敛候 BS/CTO 认账（TriLC*×3 残留移交②）⑦三条款草案候 BOD 议题窗。
+- **遗留候裁四件（BOD/CEO 面）**：③残余低危边拆号·②VER-002 升 P1·①RISK-001 降 P2·⑦议题窗排期。
+- BOD 落款 2026-10-20 12:52:45 +0800（date 现查·shell 注入·发毕对表）
