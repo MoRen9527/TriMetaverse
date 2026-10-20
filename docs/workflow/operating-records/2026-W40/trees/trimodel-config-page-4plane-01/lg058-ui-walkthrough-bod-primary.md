@@ -1,6 +1,7 @@
 # LG-058 门① BOD 亲测走查读数卷（主位·9-12 窗）
 
 - sourceOfTruth: 本件（BOD 亲测主位走查正身；LG-058/N33 门①非作者手测=BOD 主位）
+- 归位注记：2026-10-20 BOD W40-W43 审计批自 trees/ 根归位入本树（原裸放系路径纪律违例·内容零改动）
 - syncMode: final
 - lastSyncedAt: 2026-10-01 09:2x +0800（date 现查）
 - 走查对象: 本机 TriModel 活体 http://127.0.0.1:3333/ui（HEAD 754fc96；版本注：本机 ahead 6 未推，sg 面=161d0ca 含今晨覆写两测试文件——测试面 diff 不影响 UI 走查面，版本口径入卷）
