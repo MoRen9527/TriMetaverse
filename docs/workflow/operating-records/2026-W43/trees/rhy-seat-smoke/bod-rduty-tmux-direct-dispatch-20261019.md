@@ -128,3 +128,12 @@
 - **BOD 处置（msg dafa72c2）**：P0' 探针照稿准（今 18:00 后空闲段执行·真实调用面时段约束照守·护栏照旧）；**周末 10-24/25 主线窗+下周收口窗位稿=候 CEO 确认（D-39）**；历史显示两案（transcript 只读渲染 vs v1 交 web）留施工稿裁决面随主线稿呈。
 
 —— BOD 落款（§十一）2026-10-20 10:25:59 +0800（date 现查·shell 注入·发毕对表）
+
+## 十二·A2 补转达对象错位勘误+BOD SSH 直办补达毕（2026-10-20 10:2x-10:28）
+
+- **m-cos 停令回询采认（10:25）**：三问全对——①「22:43 转写」非其动作（其昨夜仅 watchlist+journal 记账·该动作属 sg 值班位 m-duty-cos 经 307 令自办）②跨机路由硬规则=sg 任务不经本地 COS 中转（CLAUDE.md 明文·BOD 违之）③m-duty-cos/r-duty-cos 均不在本机名址·本地席无 sg 面写通道。**BOD 发令侧对象错位责任自领**（§十一①处置项改判：对象应=sg 面直办·非本地席转达）；回 m-cos 采认信（msg 6002deea·其停令合规）。
+- **BOD SSH 直办转写毕（D-27 正形·五步链全绿 10:28）**：①ssh sg 读箱 305 body（1032B）②本地拼 `BOD-ORDER-a2-20261020.md`（2259B=A2 令源说明+305 令文照录+补达附注[分件推进建议#1/#4 轻件先行·回报应达面=落工作区 REPORT-*·时段注·护栏]）③`ssh -J M-SG R-HY 'cat > /home/fleet/.dsh-workspaces/r-duty-cos/BOD-ORDER-a2-20261020.md'` 写入毕 ④远端 wc 验证 2259B ✓ ⑤sg 箱 append 知会信 APPEND_OK 310→311（id=bod-a2-backfill-notice-310·to=m-duty-cos·306 请托销办）。
+- **属主勘正**：直写落 root:root（ssh 通道身份）→`chown fleet:fleet` 归位 ✓（root 残留清点纪律·10:28:51 验证 `-rw-r--r-- 1 fleet fleet 2259`）。
+- **现态**：A2 四件+DAEMON_NAME 连带批=令已实达 r-duty 工作区·候开工回报（BOD 直读工作区巡检·经 BOD 转知 COO）；本地 COS 转达通道对 sg 面=永久改判禁用（跨机路由硬规则）。
+
+—— BOD 落款（§十二）2026-10-20 10:32:15 +0800（date 现查·shell 注入·发毕对表）
