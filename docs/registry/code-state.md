@@ -119,6 +119,7 @@
 - 若把 Supermemory SDK seam 验证等同于真实官方 SDK 包接通或真实账号可用，也会高估 production 接入成熟度
 - 若把 live smoke 脚本已存在等同于 live smoke 已执行，也会高估 production 接入成熟度
 - 若把 ten-phase case line 已落地误写成 PRD 分叉并行、多分支 delivery 聚合、完整岗位 adapter 或正式宿主都已完成，会再次高估当前成熟度
+- 若引用 dsh 模型/Provider 名凭旧记忆（deepseek-chat 族）会造成装设面与引用族错误——正名勘定（2026-10-17·dsh 0.2.0-rc.2 河源装设位活体勘·P0 线）：入口正身=`.bin/dsh`·provider 正名=`deepseek-official`·默认模型目录=`deepseek-flash`/`deepseek-v4-pro`；sdk/acp 出厂均无 LLM adapter（SDK 形必补 LLM 条）·preset join 链绑死 web-app（preset registry 在册≠会话自动 join）——13 席引用面与观测载体装设以此为准（CTO 裁示卷 cto-p0p2-verdict / sde-p0-webobs-build-closeout 20261017）
 
 ## Sources
 

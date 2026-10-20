@@ -22,3 +22,8 @@ TriModel 侧我全程只做了 `git commit`（12caab0），rebase/push 等一切
 - hash 在当前仓解析失败（bad revision）= **仓向错的强信号**，立即停推演。
 - reflog 考古结论先做内容面验证（`git show <hash>:<file>` 是否真在链），再讲叙事。
 - 多席共享仓并行时，reflog 是**全席共享序列**——先分清哪几笔是谁的，再谈「我的笔去哪了」。
+
+## 变体增补：branch 断言不带 -C 断的是 cwd 仓（2026-10-14 上午·CAO 三连踩）
+- 案：worktree（tc-wt-boardrev）与 TMV 两仓分支同名 dev；Bash cwd 漂在 TMV 根，`git branch --show-current` 无 -C 返回 dev=假放行（断的 TMV 非 worktree），后续相对路径 add/tail 连环落错仓（exit 128 两次）。
+- 正形：多仓连作期 git 一律 `-C <绝对路径>` 或开头独立行显式 `cd`；branch 断言前先 `pwd` 断仓；`git status --short` 露出陌生未跟踪件=仓向错强信号即停（本例 bod-tick 件暴露 TMV）。
+- 关联：Edit/Write 用绝对路径不受 cwd 漂移伤——落笔面安全，验真/commit 面必踩；两段式（绝对路径写+赌 cwd 验）=坑组合。

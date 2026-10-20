@@ -4,7 +4,7 @@ description: 并行窗提交互踩族——merge 倒退合并丢笔（正向追�
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-10-10T03:53:01.013Z
+  modified: 2026-10-14T02:12:31.712Z
   originSessionId: cdeaa3bc-3f3b-4724-a7d2-2e5da881f2c2
 ---
 
@@ -18,11 +18,19 @@ metadata:
 
 **机理四·共享工作区分支向踩窗（commit 落他人分支）**（2026-10-10 CAO 案同日第三实例）：多席共享工作区 HEAD 停在他人施工分支时，我方 commit 默认落**他人分支线**——对象零丢失，但推线错位：`git push <remote> dev` 推的是本地 dev ref≠当前分支，返回「Everything up-to-date」假象（非谎报，是 refspec 语义），而误笔实际叠在他人分支顶。实例：CAO 2026-10-10 LG-071 铸条 commit 落 fsd-sgb-fix-20261009（FSD 施工线）顶 d634fe4。**处置=不切主工作区**（他人分支+他席在途件，checkout=机理三现场重演）——临时 worktree 重落：`git worktree add ../tmp <目标分支>`→`git cherry-pick <误笔>`→push→`git worktree remove`（正形清理，禁 Remove-Item 穿 junction）；误落他人分支的原笔**不代 drop**（改他人分支指针=越界），留注记由分支主收口 rebase 时自行 drop（patch-id 同自动跳过）。**预防=commit 前必验分支向**：`git branch --show-current` 非预期分支即停；`push <remote> <branch>` 后 rev-parse 本地 branch 与 ls-remote 对表——对不上=分支向断言缺失强信号，勿单信「Everything up-to-date」尾行。
 
-**识别信号**：porcelain 干净但文件内容与 HEAD 预期不符（机理一）；porcelain 无我方 M 行但修改已入库于他人笔 stat（机理二）；文件内容消失/整段回退旧版且 git 全无我方记录痕（无 stat 无 reflog 本笔=机理三，与机理一区分=机理一有 merge 倒退痕可考古）；commit 输出方括号里分支名非预期分支（机理四，`[分支名 hash]` 首字段即分支向铁证）；四案共同点=「修改/笔去哪了」先验文件现势与当前分支再验 git 对象，矛盾证据先 `git show <笔>:<path>` 对表禁臆断。
+**机理五·staged 新文件被并席重置类操作连磁盘吞（2026-10-14 FSD 案·打穿「已暂存＞裸工作区」梯度假设）**：FSD 毕报卷 10:07 Write 毕→`git add` 成功（staged 档）→commit 撞「partial commit during a merge」（他人 merge 在途）→数分钟内并席解 merge 的重置类操作（reset --hard / merge --abort 族——对「index 有而 HEAD 没有」的新文件=移除 index 条目+**删磁盘文件**）→卷从磁盘消失（exists=False）且 index 干净。实证：**staged 新文件在并行重置面前≈裸工作区零保护**（三态梯度对 reset 类操作失效；blob 尚在 objects 但无 ref 指向，捞 dangling 成本＞重放）。同窗还实证并席高频 merge 循环（10:04:42 完成 merge commit→紧接第二个 merge 34d4e9672 在途→又解完）——共享仓 merge 密度高时撞窗概率非小概率。**处置=内容在手立即重写+MERGE 态预检守卫后重提**（`if (Test-Path .git/MERGE_HEAD) { stop } else { add+commit }`——FSD 1e87ed6c8 实锚）；**预防=写后即 commit 锁笔**（机理三预防条款延伸到 staged 档）+共享仓高频 merge 期 add 前先验 MERGE 态、撞「partial commit during a merge」后**立即换窗重试勿滞留 staged 态**（滞留期正是被吞窗）。
+
+**识别信号**：porcelain 干净但文件内容与 HEAD 预期不符（机理一）；porcelain 无我方 M 行但修改已入库于他人笔 stat（机理二）；文件内容消失/整段回退旧版且 git 全无我方记录痕（无 stat 无 reflog 本笔=机理三，与机理一区分=机理一有 merge 倒退痕可考古）；commit 输出方括号里分支名非预期分支（机理四，`[分支名 hash]` 首字段即分支向铁证）；**曾 add 成功的文件随后 pathspec/exists=False=机理五**（staged 态被重置吞·机理三变体但当时挂的是第二档保护）；五案共同点=「修改/笔去哪了」先验文件现势与当前分支再验 git 对象，矛盾证据先 `git show <笔>:<path>` 对表禁臆断。
 
 **机理四二犯注记（2026-10-10 同日二犯）**：CAO 复核补录笔再落 fsd 分支——`git branch --show-current` 跑了、非预期值也读到了，**但没停**。条款要点不是「跑命令」而是「读到非预期值即停」；硬防线=共享工作区常驻他人分支态时（如 TC 仓 HEAD 长停 fsd 施工分支），**落笔直接走临时 worktree**（`git worktree add` 指定分支），不经主工作区 commit。
+
+**机理四三犯注记（2026-10-12 STE 案·三犯新变体=断言根本没跑）**：STE N3 验收卷 commit 落 fsd-sgb-fix-20261009 顶 0a2ba74——前两犯是「跑了断言没停」，本犯是**前置检视只查了 `git status --porcelain` 没查分支向**（`branch --show-current` 压根没进命令），commit 后从输出 `[fsd-sgb-fix-20261009 0a2ba74]` 方括号才发现（机理四识别信号兑现）。三犯谱系：没查→查了没停→硬防线绕过，同一根=「共享工作区常驻他人分支态」时走主工作区 commit。**硬防线升级为唯一正形**：知道仓 HEAD 常驻他人分支（如 TC 仓长停 fsd 分支）→落笔**一律直接 worktree**，不依赖前置断言守门（断言是兜底不是主防）。处置照先例（CAO 33152bd 同分支同案）：误笔留存照+worktree cherry-pick 重落 dev（f05d1ba）+毕报勘正链如实录。
 
 **rebase 中断现场归属判定（2026-10-10 COS 案同族补充）**：共享仓 rebase 中断后，现场可能已被他席接手改道（merge 收编重写 HEAD）——恢复动作前先 `git status`+`git log -1` 判现场归属（与自己命令序比对），禁按自己中断前的计划盲续；rebase 失败后 push 须 RC 守卫（[[chained-command-assert-abort]] 变体）。零丢失判据=账本/大表双向对表一致（COS 11:37-11:41 三方同窗实证·零内容丢失系时序运气非设计）。
 **归属判定补强（COS 11:52 自省并入）**：COS 11:41 将自家 rb4 残留误判为「他席进行中」停手 ~10 分钟，扩大他席阻碍两面（worktree 误拒+fetch 拒）——根因=归属判定只看 todo 内容含他席笔就断他席现场。**共享仓本地链本就含他席笔，判定必须与自己命令序严格比对**（done/todo 序对得上号=自家现场）；内容面含他席笔≠现场是他席的。残留的实际阻碍面比直觉宽：rebase-merge 目录在，连他席 `fetch <remote> dev:dev`、worktree add 同 ref 都会被「already checked out」类误报挡住——中断即申报，勿静默挂现场。
 
 相关：[[git-index-commit-convention]]（path-scoped 例外口径）、[[parallel-design-file-discipline]]、[[closeout-commit-hygiene]]。
+
+## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
+
+- [并行窗提交互踩族](parallel-window-commit-interference.md) — 四向机理四正形：merge 倒退合并丢笔（收编笔旧文本覆盖新版本）=正向追加复原笔+丢笔注记入卷禁 revert；add 后 commit 撞 ref 推进失败暂存件滞留 index 被他人笔顺带收编（署名错位内容零损）=empty commit 归属勘正；未提交工作区态被并行 rebase 窗重置吞（防护最薄档）=盘点重放+写后即 commit 锁笔；共享工作区分支向踩窗（HEAD 停他人分支 commit 落错线·「Everything up-to-date」refspec 假象）=临时 worktree cherry-pick 重落+读到非预期分支即停（二犯注记：跑了命令没停≠防线；常驻他人分支态的仓直接 worktree 落笔）+rebase 中断现场归属先判（他席可能已接手改道 merge）；共同正形=三态保护梯度已 commit＞已暂存＞裸工作区（10-09 STE 双案 6ccfe545/b006ef71+10-10 COS 案 98548743+CAO 双犯 d634fe4/33152bd→b1fcc7a/c8e1443 实证）

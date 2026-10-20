@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-// joint-review-remind.mjs — 公司需求池周六联审定时提醒（TriMLC 8713 cron spawn face）
+// joint-review-remind.mjs — 周日需求评审定时提醒（TriMLC 8713 cron spawn face）
 // Batch: bod-pipeline-batch-16 件②（CEO 令 2026-10-02 20:35/20:39；COO 建制 10-02 晚）
-// 令面: 每周六 12:00 触发三席（CPO/COO/CTO）联审提醒——读需求大表→联审→下周清单裁定
+// 令面: 每周日 14:00 触发三席（CPO/COO/CTO）需求评审提醒——读需求池→评审→下周清单裁定
+// 勘正: 2026-10-17 BOD 令（CEO 13:38 IPD 知会连带·R6 真源=周日 12:00 需求评审）——原「周六 12:00 联审」系双真源漂移旧口径（池头条款 CPO 已同步勘正）
+// 勘正②: 2026-10-18 CEO 令（10:41:17 评审节律改定·BOD 10:43 转知）——评审会改每周日 14:00 固定·job schedule 已由 COO 随令 PATCH（"0 0 14 * * 0"·三查绿）·本件文案随勘 12:00→14:00 全口径
 // 表正身: docs/workflow/operating-records/<当周>/company-demand-pool.md（跨周资产，随 weekly-plane-shift 平移不重建）
 //
 // 三钉 contract（照 hub-silent-detect.mjs 先例，hard）:
@@ -86,11 +88,11 @@ async function main() {
   }
 
   const title = pool
-    ? "【联审提醒】公司需求池周六联审（12:00）— 转 CPO/COO/CTO"
-    : "【联审提醒·异常】需求池文件未定位 — 转 CPO/COO/CTO + BOD";
+    ? "【需求评审提醒】周日需求评审（14:00）— 转 CPO/COO/CTO"
+    : "【需求评审提醒·异常】需求池文件未定位 — 转 CPO/COO/CTO + BOD";
   const body = pool
-    ? `周六 12:00 三席联审（${SEATS_LINE}）：①读需求池（${poolRel}）②逐行四态裁（进方案/进实现/挂起附理由/拒附理由）③定下周清单。裁决留痕入行。本提醒=joint-review-remind.mjs 自动触发（TriMLC 8713 cron，batch-16 件②）。`
-    : `需求池文件未在任何周目录定位到（anchor-miss）——请 ${SEATS_LINE} 人工定位 company-demand-pool.md 现位并照常联审；本异常已记 log（joint-review-remind.log）。`;
+    ? `周日 14:00 需求评审（${SEATS_LINE}）：①读需求池（${poolRel}）②逐行评审裁（进方案/进实现/挂起附理由/拒附理由）③定下周清单。裁决留痕入行。本提醒=joint-review-remind.mjs 自动触发（TriMLC 8713 cron，batch-16 件②·2026-10-18 勘正周日 14:00 口径）。`
+    : `需求池文件未在任何周目录定位到（anchor-miss）——请 ${SEATS_LINE} 人工定位 company-demand-pool.md 现位并照常评审；本异常已记 log（joint-review-remind.log）。`;
 
   try {
     const r = await sendNotify({

@@ -21,8 +21,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
 import { sendNotify } from "./lib/notify-sender.mjs";
 import { collectNodeSignals } from "./lib/tree-signals.mjs";
+import { isQuietHours } from "./lib/quiet-hours.mjs";
+import { readDutyTickSignal } from "./lib/duty-tick-signal.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..", "..");
@@ -37,6 +40,139 @@ const ESCALATE_MIN = 30;
 const COOLDOWN_MIN = 30;
 
 const DUTY_SEAT = "COS"; // 中枢值守 — duty second-hop target maps to m-cos transcript
+
+// ── keeper probe (keeper-probe-20261015 · CTO dispatch 4e0becc27 · BOD 令文基准) ──
+// 半死窗教训（2026-10-15 09:04-09:34 无人察觉 30min）：端口在+进程在≠服务活——
+// 双探针合取（禁只探 TCP）：
+//   A=GET {KEEPER_URL} → HTTP 200 且 body.ok!==false（隧道全链活体真值；实测健康端点
+//     =/healthz 200 {"ok":true,"service":"trimc",...}——勘验钉定 2026-10-15）
+//   B=keeper 进程在位：ssh.exe cmdline 含 '18710:127.0.0.1:8712'（保活进程本体指纹，
+//     实勘 pid 33780 cmdline 钉定——勘验禁猜）
+// 任一败=failN+1；连续 KEEPER_PROBE_N=2 拍才直报（防单拍网络抖动误报）；恢复清零。
+// 直报复用 duty-escalate 形（targets=[bod]·urgent）零新级别；不走 quiet-hours 豁免
+// （基建故障全时段报警——夜间正是 sg 通知链依赖时段，裁量理由入毕报）；冷却 30min
+// 照 duty-escalate 形重报节奏。
+// 测试钩子（FAIL 态模拟构造·禁真停 keeper）：KEEPER_PROBE_URL 覆盖探针地址（坏口
+// =FAIL 态证据）；KEEPER_PROBE_DRYRUN=1 时告警只落日志不真发（零扰频测试面）。
+const KEEPER_URL = process.env.KEEPER_PROBE_URL?.trim() || "http://127.0.0.1:18710/healthz";
+const KEEPER_FINGERPRINT =
+  (process.env.KEEPER_PROBE_FINGERPRINT?.trim() || "18710:127.0.0.1:8712").replace(/'/g, "");
+const KEEPER_DRYRUN = process.env.KEEPER_PROBE_DRYRUN === "1";
+const KEEPER_PROBE_N = 2;
+const KEEPER_KEY_FAIL = "keeper-tunnel|fail";
+const KEEPER_KEY_ALARM = "keeper-tunnel|alarm";
+
+async function probeKeeper() {
+  // A: HTTP liveness — tunnel full-chain truth (never TCP-only)
+  let httpOk = false;
+  let httpDetail = "";
+  try {
+    const ctl = new AbortController();
+    const t = setTimeout(() => ctl.abort(), 5000);
+    try {
+      const res = await fetch(KEEPER_URL, { signal: ctl.signal });
+      httpOk = res.status === 200;
+      if (!httpOk) {
+        httpDetail = `http-${res.status}`;
+      } else {
+        try {
+          const j = await res.json();
+          if (j && j.ok === false) { httpOk = false; httpDetail = "ok-false"; }
+        } catch { httpOk = false; httpDetail = "bad-body"; }
+      }
+    } finally {
+      clearTimeout(t);
+    }
+  } catch (e) {
+    httpDetail = e.name === "AbortError" ? "timeout(5s)" : String(e.message || e).slice(0, 60);
+  }
+  // B: keeper process presence — ssh forward cmdline fingerprint (勘验钉定识别串)
+  // 2026-10-17 加固（瞬态族实锚：10-17 20:1x 繁忙窗 spawnSync powershell ETIMEDOUT×2 拍
+  // →假告警直报 BOD，实探隧道活·COS 20:16 处置回执）：
+  //   ①一次重试——execFileSync 败后隔 2s 重试一发，仍败才落结论（防 spawn 瞬态）；
+  //   ②探针自身故障与探明缺失分判——probeBroken=true（探针炸）≠ keeper-process-missing
+  //     （探针成功·count=0）：前者在 A 活拍不计 failStreak（主判据 HTTP 真值在·B 缺位
+  //     降级留痕），后者照合取死判——保住「禁只探 TCP」防假活教训原形。
+  const PS_ARGS = ["-NoProfile", "-Command",
+    `(Get-CimInstance Win32_Process -Filter "Name='ssh.exe'" | Where-Object { $_.CommandLine -like '*${KEEPER_FINGERPRINT}*' } | Measure-Object).Count`];
+  let procOk = false;
+  let procDetail = "";
+  let probeBroken = false;
+  let lastErr = "";
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const out = execFileSync("powershell", PS_ARGS, { encoding: "utf8", timeout: 15000 });
+      const n = parseInt(String(out).trim(), 10);
+      if (Number.isFinite(n)) {
+        procOk = n > 0;
+        if (!procOk) procDetail = "keeper-process-missing";
+        probeBroken = false;
+        lastErr = "";
+        break;
+      }
+      lastErr = `unparseable output: ${String(out).trim().slice(0, 40)}`; // 异常输出形态=探针故障
+    } catch (e) {
+      lastErr = String(e.message || e).slice(0, 60);
+    }
+    if (attempt < 2) {
+      await new Promise((r) => setTimeout(r, 2000)); // 繁忙窗瞬态避让：隔 2s 一发重试
+    }
+  }
+  if (lastErr) {
+    procDetail = `proc-probe-fail: ${lastErr}`;
+    probeBroken = true;
+  }
+  return { httpOk, procOk, httpDetail, procDetail, probeBroken };
+}
+
+/** keeper 判定体（双探针合取·防抖·冷却·直报）——probeBroken 降级分判已在调用侧。 */
+async function keeperProbeJudge(kp, state, healthy, now) {
+  const alive = kp.httpOk && kp.procOk;
+  if (alive) {
+    const hadFail =
+      state[KEEPER_KEY_FAIL] !== undefined || state[KEEPER_KEY_ALARM] !== undefined;
+    delete state[KEEPER_KEY_FAIL];
+    delete state[KEEPER_KEY_ALARM];
+    if (hadFail) appendLog("keeper recovered (fail state cleared)");
+    healthy.push("keeper-tunnel ok (http+proc both up)");
+  } else {
+    const n =
+      (typeof state[KEEPER_KEY_FAIL] === "number" ? state[KEEPER_KEY_FAIL] : 0) + 1;
+    state[KEEPER_KEY_FAIL] = n;
+    const failDetail = kp.httpOk ? `proc=${kp.procDetail}` : `http=${kp.httpDetail}`;
+    if (n < KEEPER_PROBE_N) {
+      appendLog(
+        `keeper probe fail x${n}/${KEEPER_PROBE_N} (${failDetail}) — below debounce threshold`,
+      );
+    } else {
+      const lastAlarm = state[KEEPER_KEY_ALARM];
+      if (typeof lastAlarm === "number" && now - lastAlarm < COOLDOWN_MIN * 60000) {
+        appendLog(
+          `keeper probe fail x${n} (${failDetail}) — in cooldown (last alarm ${new Date(lastAlarm).toISOString()})`,
+        );
+      } else {
+        const title = `[silent-detect] keeper 隧道探活异常：18710 隧道连败 ${n} 拍（${failDetail}）`;
+        const body =
+          `失败探针=${kp.httpOk ? "B(keeper 进程)" : "A(HTTP 活体)"} 详情=${failDetail}\n` +
+          `双探针判据: A=GET ${KEEPER_URL} HTTP200+ok · B=ssh keeper 进程识别串(18710:127.0.0.1:8712)在位\n` +
+          `连续 ${KEEPER_PROBE_N} 拍防抖已达·冷却 ${COOLDOWN_MIN}min·来源=hub-silent-detect keeper 段（CTO dispatch 4e0becc27）`;
+        try {
+          if (KEEPER_DRYRUN) {
+            appendLog(`DRYRUN keeper-escalate (not sent, alarm state not written): ${title}`);
+          } else {
+            await notifyOrThrow({ targets: ["bod"], title, body, urgent: "urgent" });
+            state[KEEPER_KEY_ALARM] = now;
+            appendLog(`NOTIFIED keeper-escalate keeper-tunnel -> [bod] (${failDetail})`);
+          }
+        } catch (err) {
+          appendLog(
+            `ERROR keeper notify failed: ${err.message} — alarm state NOT written (三钉②·下拍重试)`,
+          );
+        }
+      }
+    }
+  }
+}
 
 function nowIso() {
   return new Date().toISOString();
@@ -214,9 +350,50 @@ async function main() {
     appendLog(`ERROR duty-hop check failed: ${err.message}`); // 三钉③ degrade
   }
 
+  // ── keeper probe (keeper-probe-20261015 · CTO dispatch 4e0becc27 · BOD 令文基准) ──
+  // 双探针合取：A=http 活体真值（禁只探 TCP）/ B=keeper 进程在位——任一败=连败+1，
+  // 连续 KEEPER_PROBE_N 拍才直报（防单拍网络抖动误报）；恢复清零。
+  // 直报=duty-escalate 形（targets [bod]·urgent）零新级别；不走 quiet-hours/tick 豁免
+  // （基建故障全时段报警——夜间正是 sg 通知链依赖时段；裁量理由入毕报）；冷却 30min
+  // 照 duty-escalate 形重报节奏。三钉同守：段内异常只落日志不崩 job（③）；
+  // notify 失败不写 alarm state 下拍重试（②）。
+  try {
+    const kp = await probeKeeper();
+    // 2026-10-17 加固：探针自身故障降级拍——B 炸（probeBroken）且 A 活（HTTP 真值）→
+    // 本拍不计 failStreak 不告警（防探针瞬态故障放大为基建告警·COS 处置建议采）；
+    // 已有 fail 态不清（前拍若真败仍保留防抖连续性），log 留痕降级。
+    if (kp.probeBroken && kp.httpOk) {
+      appendLog(
+        `keeper probe B degraded (${kp.procDetail}) but A truth alive — probe-self-fail not counted (2026-10-17 加固)`,
+      );
+      healthy.push("keeper-tunnel ok (A truth alive; B probe-self-fail degraded)");
+    } else {
+      await keeperProbeJudge(kp, state, healthy, now);
+    }
+  } catch (err) {
+    appendLog(`ERROR keeper probe segment failed: ${err.message}`); // 三钉③ degrade
+  }
+
   // dispatch alerts
   const failCount = { n: 0 };
+  // 件①(10-14 晨窗·B 主拍文判据): bod-tick 拍文值守候令豁免——判据源=BOD 答询 04:33
+  // (tick-latest.md ⓪段·8713 :07/:37 双点·内容节拍时戳判新鲜两机一致)。fail-open:
+  // 拍文缺失/不新鲜→不豁免照发(保守:失联不漏报)。A 辅时段豁免保留为 B 主缺位期兜底层。
+  const tick = readDutyTickSignal(REPO_ROOT, Date.now());
+  if (!tick.fresh) appendLog(`duty-tick signal not fresh (${tick.reason}) — tick-exempt inactive`);
   for (const a of alerts) {
+    // 值守候令静默态豁免(A 辅+B 主): quiet-hours 22:00-08:00 OR 拍文值守候令。
+    // 豁免不写 state——出豁免态首轮即正常告警(无冷却残留); anchor-error/reminder 不豁免。
+    const quiet = isQuietHours();
+    const tickExempt =
+      tick.fresh &&
+      (a.level === "duty-escalate" ? tick.dutyIdle : a.level === "idle-escalate" ? tick.allIdle : false);
+    if ((quiet || tickExempt) && (a.level === "duty-escalate" || a.level === "idle-escalate")) {
+      skipped.push(
+        `${a.id}: ${a.level} suppressed (${quiet ? "quiet-hours 22:00-08:00" : "bod-tick 值守候令拍文"}豁免)`,
+      );
+      continue;
+    }
     let targets;
     let title;
     let urgent = "normal";
