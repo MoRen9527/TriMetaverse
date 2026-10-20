@@ -131,3 +131,9 @@
   - 951d6920e Merge remote-tracking branch 'sg-server/dev' into dev
   - 836fbd4ea docs(cfo): 10-20 09:30 锚——周窗68%(距70%预警2pt贴线最近)·夜段+3pt兑现·同锚对+6未触·meter 241.2M/8+14.2M晨
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:20 +08：自上次进度提交 db40b5c09 后新增 4 条 commit：
+  - dabb46b10 docs(coo): 台账一百八十一笔(CFO计价提示轻记·DS轨高峰9-12/14-18对轨确认·周末全天半价增补·deepseek重活挪空闲段优化)
+  - 621fe402b Merge remote-tracking branch 'sg-server/dev' into dev
+  - 4721c54de docs(cfo): CEO计价时段令承接入卷——deepseek高峰/空闲分档护栏落排工质疑权·首例轻提示COO
+  - 2ddba4a55 docs(bod): CEO双令收执§十补落dev(同wt/board)
+- registry：v2.1；今日 registry 提交无变化
