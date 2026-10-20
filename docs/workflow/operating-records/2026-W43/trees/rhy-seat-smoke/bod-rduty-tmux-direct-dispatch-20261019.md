@@ -146,3 +146,12 @@
 - **③GitHub dev 补推=消解销账（零补推需求）**：本机 443 仍断（https reset+HTTP/1.1 connect fail·11:29 双探）——但 sg 侧验真：**GitHub dev 顶=sg-bare dev 顶=bc6afd475 两边一致**（hook MIRROR 链自动同步在役·09-17 后零败）；bc6afd475=watcher 10:40 机写补写·4669cb6bb=COO 台账 183 笔·0037499aa=merge 收编并行笔；merge-base 断言 8f355ef2a（我 §十二）**是** bc6afd475 祖先=零丢笔全在链。「GitHub dev 落后」挂账前提消失·本件销。
 
 —— BOD 落款（§十三）2026-10-20 11:33:13 +0800（date 现查·shell 注入·发毕对表）
+
+## 十四·CEO 大表清扫令收执：七件排 M-SG 死线14点+A-2 直办销（2026-10-20 11:36-11:41）
+
+- 令源：CEO 11:36「分析任务进度大表，列出进展情况，把未完成的排到M-SG上立即开工，14点前干完 未完成的说明原因」。
+- **大表现态**：W43 activeTrees=0（全收口）·未决事项现役区 20 单；分析呈报已发（11:40:54·进展+不排原因四族=TUI 链 frozen 3 件您 8-24 亲裁/GLM key 轮换候您网页生成/sg 旧名运行目录令面禁动/vscodium 定案维持）。
+- **七件派工（sg 箱 APPEND_OK 312→313·id=bod-bigtable-dispatch-312·死线 14:00 北京·m-duty-cos 值班席分发）**：①RISK-001 DeepSeek classifier 活体复勘（duty-cto）②VER-001~004 版本族复核（duty-cto）③BUG-001 Read tool_result 复勘（duty-fsd）④REQ-003 tricompany CLI 骨架开发（duty-fsd·新分支禁碰主链）⑤R-HY-401 pull_denied 凭据面勘（值席）⑥C-4 残项③④扫描（duty-cao）⑦AGENDA-001 供应链三条款草案（duty-cao·不落正身）。回报=sg 仓 report/ 分支 push+箱信回 bod。护栏=读侧零写入/开发件新分支/D-46/高峰段 CFO 面已过不阻断。
+- **A-2 直办销（顺手）**：TriRLC origin url/pushurl 双值面精准替换（GitHub TriLC.git→TriRLC.git·sg-bare 条保持）·remote -v 三行全新名+双推拓扑保持·sg-bare ls-remote 连通绿（2e1e594fb）——现役区 20→19 单。
+
+—— BOD 落款（§十四）2026-10-20 11:41:38 +0800（date 现查·shell 注入·发毕对表）
