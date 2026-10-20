@@ -155,3 +155,12 @@
 - **A-2 直办销（顺手）**：TriRLC origin url/pushurl 双值面精准替换（GitHub TriLC.git→TriRLC.git·sg-bare 条保持）·remote -v 三行全新名+双推拓扑保持·sg-bare ls-remote 连通绿（2e1e594fb）——现役区 20→19 单。
 
 —— BOD 落款（§十四）2026-10-20 11:41:38 +0800（date 现查·shell 注入·发毕对表）
+
+## §十五·sg 派工通道根因勘定+m-duty-cos tmux 直发补达（313 死信修复）
+
+- 触发：11:40 大表七件派工令（箱信 bod-bigtable-dispatch-312）27 分钟无拾取（12:07 拍 duty 组全候令）——BOD 活体勘查链定谳如下。
+- **根因（源码级实锚）**：sg TriMMC duty-consumer（src/notify/duty-consumer.ts）30s 轮询读的是 **outbox**（`pullPendingForSeats`←src/notify/outbox.ts L320·路径=resolve(cwd,'notify-outbox.json') L73）；**notify-mailbox.json 是消费者输出落箱位**（storeDutyLetter 写入面·落箱带 delivered_at+read=false），**无任何代码路径读它**——箱直 append=死信。今日三信 310/311/312 全 delivered_at=null 未投递实证；10-19 A2 305/306 无人拾取同根因（彼时 BOD SSH 直办补达=兜底正确）。「回读绿」只证写入落盘不证拾取——派工通道验证判据从写面改拾取面。
+- 消费链勘明：设计通道=POST /internal/v1/notify→outbox→消费者 30s 拉→落箱+urgent 走 tmux 弹显（showTmuxMessage·TRIMC_NOTIFY_DUTY_TMUX=m-duty-cos）；服务 stdout→/tmp/trimc-run.log（journalctl 只有 systemd 三行——此前查 journal 方向错）；env 名册 TRIMC_NOTIFY_DUTY_SEATS=m-duty-cos 活体进程 /proc/41261/environ 在册（unit 面+活体面双证）。
+- **补达执行（tmux 直发·10-19 河源配方）**：m-duty-cos 会话活·候令·bypass on；输入框陈旧残稿「GUI 点火销单确认收讫」先 C-u 清行（残稿系前窗未发送草稿·留痕此处）；粘贴 CEO 11:36 令浓缩版+指向箱信 312 全清单→独立 Enter→capture-pane 对话流增量实锚（令文入对话+Coalescing 9s 开工）。死线 14:00 原文照达。
+- 后续：箱信 310/311/312 留箱作全清单存档（m-duty-cos 已受令按信读）；通道正形修法候 CTO 面（箱直 append 对 sg duty 废止/POST outbox 为设计正名）；本地记忆 m-sg-external-web-dispatch-routing 派工通道段即日勘正。
+- BOD 落款 2026-10-20 12:28:04 +0800（date 现查·shell 注入·发毕对表）
