@@ -185,3 +185,7 @@
   - 69ee0b1df Merge remote-tracking branch 'sg-server/dev' into dev
   - bf5d5f7d1 docs(cfo): 70%首触预警入卷——周窗72%越CEO 13:17新则7d线(预警不闸)·停工令14:3x例行·同锚对+9未触
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:20 +08：自上次进度提交 ef40d1529 后新增 2 条 commit：
+  - 5e1967611 Merge remote-tracking branch 'sg-server/dev' into dev
+  - c68891211 docs(cto): P0'毕报——ACP resume机制绿+web存量段红(目录名代际差:session-前缀不可寻址·源码级四实锚)·D'形修正建议
+- registry：v2.1；今日 registry 提交无变化
