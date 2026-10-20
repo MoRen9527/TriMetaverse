@@ -137,3 +137,39 @@
 - **现态**：A2 四件+DAEMON_NAME 连带批=令已实达 r-duty 工作区·候开工回报（BOD 直读工作区巡检·经 BOD 转知 COO）；本地 COS 转达通道对 sg 面=永久改判禁用（跨机路由硬规则）。
 
 —— BOD 落款（§十二）2026-10-20 10:32:15 +0800（date 现查·shell 注入·发毕对表）
+
+## 十三·CEO 三裁收执：A2/D' 今晚窗+GitHub 补推消解（2026-10-20 11:28）
+
+- 令源：CEO 11:28「BOD-ORDER-a2 今晚非高峰期开工 / D' 今晚18点以后，同上顺序开工 / github dev补退不排窗即刻开始，如果没开工的话」
+- **①A2 窗位令达毕**：河源直办件补注窗位段（BOD SSH 直写 append·2705B·属主 fleet 保持·11:32 验证）+sg 箱知会 m-duty-cos（APPEND_OK 311→312·id=bod-a2-window-tonight-311）——A2 四件+DAEMON_NAME 连带批=今晚 18:00 后空闲半价段开工。
+- **②D' 窗位改定**（msg 750bd6c8 达 CTO）：原周末 10-24/25 主力窗稿**作废**——D' 主线施工=今晚 18:00 后开工；序=P0' 探针 18:05 先行（照稿）→毕报即送→主线随探针定谳接续（绿=同段续聊形 v2·红=独立进程形照荐形开）；真实调用面全落空闲半价段。
+- **③GitHub dev 补推=消解销账（零补推需求）**：本机 443 仍断（https reset+HTTP/1.1 connect fail·11:29 双探）——但 sg 侧验真：**GitHub dev 顶=sg-bare dev 顶=bc6afd475 两边一致**（hook MIRROR 链自动同步在役·09-17 后零败）；bc6afd475=watcher 10:40 机写补写·4669cb6bb=COO 台账 183 笔·0037499aa=merge 收编并行笔；merge-base 断言 8f355ef2a（我 §十二）**是** bc6afd475 祖先=零丢笔全在链。「GitHub dev 落后」挂账前提消失·本件销。
+
+—— BOD 落款（§十三）2026-10-20 11:33:13 +0800（date 现查·shell 注入·发毕对表）
+
+## 十四·CEO 大表清扫令收执：七件排 M-SG 死线14点+A-2 直办销（2026-10-20 11:36-11:41）
+
+- 令源：CEO 11:36「分析任务进度大表，列出进展情况，把未完成的排到M-SG上立即开工，14点前干完 未完成的说明原因」。
+- **大表现态**：W43 activeTrees=0（全收口）·未决事项现役区 20 单；分析呈报已发（11:40:54·进展+不排原因四族=TUI 链 frozen 3 件您 8-24 亲裁/GLM key 轮换候您网页生成/sg 旧名运行目录令面禁动/vscodium 定案维持）。
+- **七件派工（sg 箱 APPEND_OK 312→313·id=bod-bigtable-dispatch-312·死线 14:00 北京·m-duty-cos 值班席分发）**：①RISK-001 DeepSeek classifier 活体复勘（duty-cto）②VER-001~004 版本族复核（duty-cto）③BUG-001 Read tool_result 复勘（duty-fsd）④REQ-003 tricompany CLI 骨架开发（duty-fsd·新分支禁碰主链）⑤R-HY-401 pull_denied 凭据面勘（值席）⑥C-4 残项③④扫描（duty-cao）⑦AGENDA-001 供应链三条款草案（duty-cao·不落正身）。回报=sg 仓 report/ 分支 push+箱信回 bod。护栏=读侧零写入/开发件新分支/D-46/高峰段 CFO 面已过不阻断。
+- **A-2 直办销（顺手）**：TriRLC origin url/pushurl 双值面精准替换（GitHub TriLC.git→TriRLC.git·sg-bare 条保持）·remote -v 三行全新名+双推拓扑保持·sg-bare ls-remote 连通绿（2e1e594fb）——现役区 20→19 单。
+
+—— BOD 落款（§十四）2026-10-20 11:41:38 +0800（date 现查·shell 注入·发毕对表）
+
+## §十五·sg 派工通道根因勘定+m-duty-cos tmux 直发补达（313 死信修复）
+
+- 触发：11:40 大表七件派工令（箱信 bod-bigtable-dispatch-312）27 分钟无拾取（12:07 拍 duty 组全候令）——BOD 活体勘查链定谳如下。
+- **根因（源码级实锚）**：sg TriMMC duty-consumer（src/notify/duty-consumer.ts）30s 轮询读的是 **outbox**（`pullPendingForSeats`←src/notify/outbox.ts L320·路径=resolve(cwd,'notify-outbox.json') L73）；**notify-mailbox.json 是消费者输出落箱位**（storeDutyLetter 写入面·落箱带 delivered_at+read=false），**无任何代码路径读它**——箱直 append=死信。今日三信 310/311/312 全 delivered_at=null 未投递实证；10-19 A2 305/306 无人拾取同根因（彼时 BOD SSH 直办补达=兜底正确）。「回读绿」只证写入落盘不证拾取——派工通道验证判据从写面改拾取面。
+- 消费链勘明：设计通道=POST /internal/v1/notify→outbox→消费者 30s 拉→落箱+urgent 走 tmux 弹显（showTmuxMessage·TRIMC_NOTIFY_DUTY_TMUX=m-duty-cos）；服务 stdout→/tmp/trimc-run.log（journalctl 只有 systemd 三行——此前查 journal 方向错）；env 名册 TRIMC_NOTIFY_DUTY_SEATS=m-duty-cos 活体进程 /proc/41261/environ 在册（unit 面+活体面双证）。
+- **补达执行（tmux 直发·10-19 河源配方）**：m-duty-cos 会话活·候令·bypass on；输入框陈旧残稿「GUI 点火销单确认收讫」先 C-u 清行（残稿系前窗未发送草稿·留痕此处）；粘贴 CEO 11:36 令浓缩版+指向箱信 312 全清单→独立 Enter→capture-pane 对话流增量实锚（令文入对话+Coalescing 9s 开工）。死线 14:00 原文照达。
+- 后续：箱信 310/311/312 留箱作全清单存档（m-duty-cos 已受令按信读）；通道正形修法候 CTO 面（箱直 append 对 sg duty 废止/POST outbox 为设计正名）；本地记忆 m-sg-external-web-dispatch-routing 派工通道段即日勘正。
+- BOD 落款 2026-10-20 12:28:04 +0800（date 现查·shell 注入·发毕对表）
+
+## §十六·七件死线达成收执+BOD 四锚活体验证（12:49 全毕·12:52 验）
+
+- **总毕报收执**：m-duty-cos 总毕报（本地箱 12:47:07+08 达·date 现查 12:46 自报）＝**七件全毕零未完·CEO 14:00 死线达成**。护栏全绿（读侧零写入/开发件新分支禁碰主链/D-46）。
+- **BOD 独立四锚验证（sg bare for-each-ref 直读·非转抄）**：TriMetaverse `report/20261020-大表清扫`=8fd5c2bb6✓（⑥f0e71ecab+⑦在链）；TriRLC `report/20261020-大表清扫`=bc406ed✓（③）；TriCompany `report/20261020-大表清扫`=96a6ed7✓（④）；①②⑤卷实落 **TriMetaverse dev**（⑤7c429b186→①②7e172ec4f）链上可达✓。
+- **三观察项（不阻断·候 CAO/CTO 面）**：①FSD 毕报两处「13:4x」=未来时点（信达 12:47 实锚）——幻觉时点家族值席侧首例，候 CAO 面 D-47 席侧落款闸评估；②总毕报「①②卷在 report/20261020-bigtable-sweep 7e172ec4f」映射不准——该分支实停在 c228aa004 空壳，7e172ec4f 在 dev（内容零丢失，分支映射勘误候值席侧自修）；③dev 顶 12:5x 已推进至 45b90f6db（watcher 12:40 兜底·327 条粗粒度增量）。
+- **七件逐件**：①RISK-001 建议降 P2 观察态（API 401 可达+网关 200 双活零复发）②VER-002 建议升 P1（TriRLC 双源分歧活体 1.0.0 vs 0.9.0·env.ts/app.ts 实锚）③BUG-001 主面 fixed-verified+残余低危边拆号候 BOD 裁④REQ-003 骨架毕（version 实装+桩位结构化帧·handler 落肉候需求序）⑤R-HY-401 现行零痕归 LG-066 部署步⑥C-4③实质收敛候 BS/CTO 认账（TriLC*×3 残留移交②）⑦三条款草案候 BOD 议题窗。
+- **遗留候裁四件（BOD/CEO 面）**：③残余低危边拆号·②VER-002 升 P1·①RISK-001 降 P2·⑦议题窗排期。
+- BOD 落款 2026-10-20 12:52:45 +0800（date 现查·shell 注入·发毕对表）
