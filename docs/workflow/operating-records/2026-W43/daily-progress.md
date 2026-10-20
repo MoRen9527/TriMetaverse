@@ -177,3 +177,11 @@
   - 759be30c4 merge: dev 顶七件毕报卷+watcher 并入后重推(§十六)
   - aee11eacb docs(bod): §十六(七件死线达成收执·四锚活体验证绿·三观察项+遗留候裁四件)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:40 +08：自上次进度提交 db6ca3947 后新增 6 条 commit：
+  - 8a35f7832 docs(coo): 台账一百八十六笔(停工窗边定版·段起边14:00照条款零漂移·14:30系令达时·排程禁窗14:00-18:00对轨)
+  - 671f4b958 docs(cfo): 停工段起边定版——14:00照条款零漂移·14:30系令达时非门边·令面行文改进自记
+  - 41b4e13c6 docs(coo): 台账一百八十五笔(BOD定谳r-duty未开工第二分支·停工窗边14:00/14:30读数差向CFO定版问询)
+  - d87fdce6f docs(coo): 台账一百八十四笔(CFO停工令收记·周二例行段·周窗72%越70%首触线不闸·电源100%AC·LG-069解)
+  - 69ee0b1df Merge remote-tracking branch 'sg-server/dev' into dev
+  - bf5d5f7d1 docs(cfo): 70%首触预警入卷——周窗72%越CEO 13:17新则7d线(预警不闸)·停工令14:3x例行·同锚对+9未触
+- registry：v2.1；今日 registry 提交无变化
