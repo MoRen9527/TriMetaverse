@@ -235,3 +235,7 @@
 - 巡检兜底补写 @20:10 +08：自上次进度提交 5d87698fd 后新增 1 条 commit：
   - 0da22667e docs(bod): §二十一 CEO委裁③——BUG-001 fixed-verified销账+残余边拆号REGR-20261020-001立（P3·CTO排窗修）+A-2直办销补齐大表+⑦议题材料呈报
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:20 +08：自上次进度提交 52e176da7 后新增 2 条 commit：
+  - 340c03894 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 3bebafeff docs(bod): §二十二 CEO排窗令执行——AGENDA-001供应链基线转COS立题（三项按草案决议执行·窗位COS锚定）+大表行执行中+D'段2a APPROVE收记
+- registry：v2.1；今日 registry 提交无变化
