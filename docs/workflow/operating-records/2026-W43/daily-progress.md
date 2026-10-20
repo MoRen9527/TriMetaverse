@@ -288,3 +288,11 @@
   - 03d285ed0 merge: 收编并行笔（值席落盘防覆盖）
   - 7886ca53e docs(coo): 台账一百九十九笔(D-47候判定案发现记档·SDE两信落款未来值物理矛盾·三要素并现·内容面照收·转CAO判)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:10 +08：自上次进度提交 811a9816b 后新增 6 条 commit：
+  - ecbdeaf60 docs(coo): 台账二百零四笔(SDE收悉回执·三锚新合同首信合格·hook重放定性·窗前断言清单细化)
+  - 8364b7753 cho(pm): 毕报卷勘误补环段+seats.json 再派生——环④勘误三面实为(claude-session 面 BOD 代补@7348B)+环⑦seats 册第15席派生 drift 消解(15席 consistency=0)·watchdog 硬编码留痕转 CTO 面·TriCompany a177275·22:02 记
+  - 2fddf02e1 docs(cos): 大表 A1 行销账转留痕（三周陈案五转收官·三验证锚·尾巴两缺环分流转 CHO/CTO·22:01 记）
+  - cda3385ba docs(coo): 台账二百零三笔(CAO终判收记·D-47第二十一案定谳闭环·SDE席首例复合形·观察非处罚·流程11min)
+  - 70d9b4a78 merge: 收编并行笔（值席落盘防覆盖）
+  - 993bd9a42 docs(coo): 台账二百零二笔(BOD部署窗收执·排窗链全闭环·防并号注8791≠8712照录·窗前静默期)
+- registry：v2.1；今日 registry 提交无变化
