@@ -117,3 +117,10 @@
   - 6f75dc15b docs(cto): D案立项评估卷——建议有条件立项两段式(P0探针0.5人日先行验SDK resume语义·绿则主线5-6人日1-2周·红则降级)·接线面=dsh --profile sdk官方stdio JSON-RPC(3请求4通知·session.event全runtime流)×TriRLC Ink TUI现役成品(组件80%+复用)·风险五项·与A线并行不互斥·只评估零施工
   - 5419fb759 docs(bod): D评估回执收执补落dev(同wt/board)
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-20（周二）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @09:50 +08：自上次进度提交 b3df4880a 后新增 2 条 commit：
+  - 2058e41d9 merge: 并入 sg-server/dev 并行推进（b3df4880a）
+  - 1bed8fa5d docs(cto): P0探针毕报——SDK resume定谳红(known-existing id一律already exists拒挂·协议无open/resume方法)·段B真实库零写入兑现·降级预案启动(A升正解候选/C过渡/D'半达候选视同段目标权重·D''不荐·主线撤案)·机制增量五点(同构落库/自由命名空间/事件谱富集/provider实锚/headless-sdk分野)
+- registry：v2.1；今日 registry 提交无变化
