@@ -111,3 +111,9 @@
 - 巡检兜底补写 @23:40 +08：自上次进度提交 df4d2361f 后新增 1 条 commit：
   - 8c38b9ee5 docs(bod): CEO三裁收执+C实勘定谳补落dev(同wt/board·headless同库续挂实证·D已派·8712收窄)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:50 +08：自上次进度提交 923f0f489 后新增 4 条 commit：
+  - 965f5035f docs(bod): D评估毕报收执§八补落dev(同wt/board)
+  - 979dce1f8 merge: 并入 sg 并行推进（5419fb759）
+  - 6f75dc15b docs(cto): D案立项评估卷——建议有条件立项两段式(P0探针0.5人日先行验SDK resume语义·绿则主线5-6人日1-2周·红则降级)·接线面=dsh --profile sdk官方stdio JSON-RPC(3请求4通知·session.event全runtime流)×TriRLC Ink TUI现役成品(组件80%+复用)·风险五项·与A线并行不互斥·只评估零施工
+  - 5419fb759 docs(bod): D评估回执收执补落dev(同wt/board)
+- registry：v2.1；今日 registry 提交无变化
