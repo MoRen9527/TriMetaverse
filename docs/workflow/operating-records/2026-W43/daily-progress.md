@@ -225,3 +225,17 @@
   - 50e9a0ef4 merge: 收编并行笔（值席落盘防覆盖）
   - 422f5772a docs(coo): 台账一百九十三笔(CAO判定收记·第20案入谱三合一复合形首例·造值指纹三件套新判据·采样台账闭环)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:50 +08：自上次进度提交 584e35625 后新增 5 条 commit：
+  - 04bc2651a merge: 收编并行笔（值席落盘防覆盖）
+  - 114f91181 docs(coo): 台账一百九十四笔(A2最后尾巴销账·探针全绿收官·零遗留·wrap续接坑+路径代偿两实锚收记)
+  - fe6d8e5cd docs(bod): §二十 #7 探针毕报验收绿+A2 全线收官——四正形兑现·三候裁面 BOD 裁（命名口径/路径代偿/wrap 坑入 SOP）
+  - d7b26e876 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 671cbe765 docs(bod): CEO 大表两件裁执——RISK-001 降 P2 观察态（md+json 双面·复发即升回）+VER-002 升 P1（双源分歧活体勘正②口径）+裁决卷落 bod-rulings
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:10 +08：自上次进度提交 5d87698fd 后新增 1 条 commit：
+  - 0da22667e docs(bod): §二十一 CEO委裁③——BUG-001 fixed-verified销账+残余边拆号REGR-20261020-001立（P3·CTO排窗修）+A-2直办销补齐大表+⑦议题材料呈报
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:20 +08：自上次进度提交 52e176da7 后新增 2 条 commit：
+  - 340c03894 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 3bebafeff docs(bod): §二十二 CEO排窗令执行——AGENDA-001供应链基线转COS立题（三项按草案决议执行·窗位COS锚定）+大表行执行中+D'段2a APPROVE收记
+- registry：v2.1；今日 registry 提交无变化
