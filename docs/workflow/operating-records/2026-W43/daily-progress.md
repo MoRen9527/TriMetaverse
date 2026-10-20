@@ -221,3 +221,7 @@
   - 0f333982f Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 0fd63f845 docs(bod): §十八 A2 窗2 毕报 BOD 验收——四锚活体绿（ac5f01a dev 顶+2c5395e 祖先+e9cf346 三面）·四件收口·裁三件（#3 并入 D' 销账/#7 探针原则批/#4 转 CTO）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 29b0660c1 后新增 2 条 commit：
+  - 50e9a0ef4 merge: 收编并行笔（值席落盘防覆盖）
+  - 422f5772a docs(coo): 台账一百九十三笔(CAO判定收记·第20案入谱三合一复合形首例·造值指纹三件套新判据·采样台账闭环)
+- registry：v2.1；今日 registry 提交无变化
