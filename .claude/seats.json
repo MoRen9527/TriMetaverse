@@ -206,7 +206,7 @@
         ]
       },
       "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
-      "notifyTarget": "bod-addressable: false",
+      "notifyTarget": "coo-addressable: true（FADE-010 候批信 coo 双投路由——fullauto-loop 首落③）",
       "health": {
         "daemonPort": null,
         "watchdogTask": null
@@ -335,6 +335,36 @@
       "claudeAgent": ".claude/agents/full-stack-developer.md"
     },
     {
+      "seat": "product-manager",
+      "opsName": "m-pm",
+      "workName": "小案",
+      "agent": "ProductManager",
+      "hostFace": "local",
+      "sessionPrompt": "TriMetaverse/.claude/compass/product-manager.session.md",
+      "launchCommand": "claude -n M-PM --append-system-prompt-file <TriMetaverse/.claude/compass/product-manager.session.md>",
+      "launchEnvPolicy": {
+        "strip": [
+          "CLAUDE_CODE_CHILD_SESSION",
+          "CLAUDE_CODE_SSE_PORT",
+          "CLAUDE_CODE_SESSION_ID",
+          "CLAUDE_PID",
+          "CLAUDE_CODE_MESSAGING_SOCKET",
+          "CLAUDE_CODE_MESSAGING_TOKEN"
+        ],
+        "require": [
+          "FORCE_SESSION_PERSISTENCE=1"
+        ]
+      },
+      "launchEnvPolicySource": "seats-operations.json launchEnvPolicy（全局统一）",
+      "notifyTarget": "bod-addressable: false",
+      "health": {
+        "daemonPort": null,
+        "watchdogTask": null
+      },
+      "revivalPolicy": "manual",
+      "claudeAgent": ".claude/agents/product-manager.md"
+    },
+    {
       "seat": "rd-trainer",
       "opsName": "m-rdt",
       "workName": "",
@@ -366,12 +396,12 @@
     },
     {
       "seat": "senior-deployment-engineer",
-      "opsName": "m-sde",
+      "opsName": "m-dee",
       "workName": "",
       "agent": "SeniorDeploymentEngineer",
       "hostFace": "local",
       "sessionPrompt": "TriMetaverse/.claude/compass/senior-deployment-engineer.session.md",
-      "launchCommand": "claude -n M-SDE --append-system-prompt-file <TriMetaverse/.claude/compass/senior-deployment-engineer.session.md>",
+      "launchCommand": "claude -n M-DEE --append-system-prompt-file <TriMetaverse/.claude/compass/senior-deployment-engineer.session.md>",
       "launchEnvPolicy": {
         "strip": [
           "CLAUDE_CODE_CHILD_SESSION",

@@ -41,6 +41,14 @@
 - 本批 TriCompany 提交 b012da8 消息内时点占位符未展开（shell 转义滑笔·字面 `$(date)` 非造值）——真时点以 git commit 元数据为准（21:3x），本卷补记；未 amend 因共享仓并行在途笔（hub-ledger-governance.md 非我面在途）。
 - 行为边界重申：本卷所记=current Copilot-host live 启用＋TriCompany 源侧交接，非 TriMC 正式宿主切换、非完整授权矩阵完成；PM 无 MVP 排序/PRD 终裁/验收终签/绩效记分/排工排窗权。
 
+## 勘误与补环段（BOD 代起勘定后·2026-10-20 22:0x 追记）
+
+BOD 代起 m-pm（21:54:41·PID 26000·ListAgents 14 席在册）中勘定本卷六环外缺环两枚，处置如下：
+
+- **环④勘误：宿主面实为三面非两面**——原卷 live discovery 只跑 copilot/claude 两 face，**claude-session face（.claude/compass/*.session.md·会话面组合渲染源）漏跑**。BOD 已代补渲染 `--host claude-session --employees product-manager`（created 1·7348B@21:47 实勘在盘）。施工教训归档：环④三 face 缺一不可，接手席照三面清点。
+- **环⑦增补（CHO 补毕）：seats-operations.json 席级常量册缺 PM 行**（原 14 席含 board 独缺）——已补（第 15 席·opsName=m-pm/workName=小案〔roster v1.1.0+CPO 会签双锚·非编造〕/revivalPolicy=manual），并重跑 `seats_pipeline --execute` 派生 TriMetaverse/.claude/seats.json（PM 行 drift 消解·15 席·consistency_issues=0·launchCommand/claudeAgent 全链在位）。
+- **留痕转 CTO 面**：watchdog `$seats` 硬编码 13 席未含 PM（禁直写产物）——保护网扩展候 CTO，BOD 审计卷 3c10ac6ac 已留痕。
+
 ## 状态条（M-001）
 
 - date 现查：2026-10-20 21:37:07 +0800（写前跑原值）
