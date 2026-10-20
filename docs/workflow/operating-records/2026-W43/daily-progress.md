@@ -173,3 +173,27 @@
   - b81d1152b docs(bod): 5b口径增补段落卷(CEO 23:0x令·整树迁移三面分工:新周未完成标记/记录留发生周/档案树根周收口·原则态=COS顺序单进程拆树下一周最多允许1~2树未完成(23:12勘正)·并入5b成文挂W43清淤窗)
   - …另有 312 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:00 +08：自上次进度提交 45b90f6db 后新增 2 条 commit：
+  - 759be30c4 merge: dev 顶七件毕报卷+watcher 并入后重推(§十六)
+  - aee11eacb docs(bod): §十六(七件死线达成收执·四锚活体验证绿·三观察项+遗留候裁四件)
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:40 +08：自上次进度提交 db6ca3947 后新增 6 条 commit：
+  - 8a35f7832 docs(coo): 台账一百八十六笔(停工窗边定版·段起边14:00照条款零漂移·14:30系令达时·排程禁窗14:00-18:00对轨)
+  - 671f4b958 docs(cfo): 停工段起边定版——14:00照条款零漂移·14:30系令达时非门边·令面行文改进自记
+  - 41b4e13c6 docs(coo): 台账一百八十五笔(BOD定谳r-duty未开工第二分支·停工窗边14:00/14:30读数差向CFO定版问询)
+  - d87fdce6f docs(coo): 台账一百八十四笔(CFO停工令收记·周二例行段·周窗72%越70%首触线不闸·电源100%AC·LG-069解)
+  - 69ee0b1df Merge remote-tracking branch 'sg-server/dev' into dev
+  - bf5d5f7d1 docs(cfo): 70%首触预警入卷——周窗72%越CEO 13:17新则7d线(预警不闸)·停工令14:3x例行·同锚对+9未触
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:20 +08：自上次进度提交 ef40d1529 后新增 2 条 commit：
+  - 5e1967611 Merge remote-tracking branch 'sg-server/dev' into dev
+  - c68891211 docs(cto): P0'毕报——ACP resume机制绿+web存量段红(目录名代际差:session-前缀不可寻址·源码级四实锚)·D'形修正建议
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:30 +08：自上次进度提交 00702f010 后新增 6 条 commit：
+  - 686e489c7 docs(cto): D'主线架构定稿——TriRLC TUI接dsh ACP面(独立进程形)·零sdk依赖自写帧层·--acp flag分支·施工两段划分
+  - 8bfc0294b docs(coo): 台账一百八十八笔(CFO复工令收记·夜段黄金段起接续·周窗73%预警续挂·二档今夜大概率不至候评)
+  - 207fb6322 merge: 收编并行笔（值席落盘防覆盖）
+  - 018caf5a7 Merge remote-tracking branch 'sg-server/dev' into dev
+  - d89a45ffa docs(coo): 台账一百八十七笔(P0'毕报收记·ACP resume半绿定谳·主线候BOD/CEO裁·探针DeepSeek空闲段照守·LG-069/E1-4零动作双注)
+  - 77a6816a0 docs(cfo): 18:00锚——周窗73%停工窗+1pt压低兑现·预警态续挂不重发·复工令18:1x·LG-069闸失效如实录(CIM直读门不失效)
+- registry：v2.1；今日 registry 提交无变化
