@@ -197,3 +197,7 @@
   - d89a45ffa docs(coo): 台账一百八十七笔(P0'毕报收记·ACP resume半绿定谳·主线候BOD/CEO裁·探针DeepSeek空闲段照守·LG-069/E1-4零动作双注)
   - 77a6816a0 docs(cfo): 18:00锚——周窗73%停工窗+1pt压低兑现·预警态续挂不重发·复工令18:1x·LG-069闸失效如实录(CIM直读门不失效)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:00 +08：自上次进度提交 0f6b9ddbb 后新增 2 条 commit：
+  - 5d359172d Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - a4c1f1dd0 docs(bod): §十七 A2 复工 wake 补达——r-duty 无常驻进程=令件无消费者根因·dsh headless 通道三正形（fleet 身份+session- 前缀全 id+nohup）·拾取三证（段 35360→62098B+agent 自述+进程在役）
+- registry：v2.1；今日 registry 提交无变化
