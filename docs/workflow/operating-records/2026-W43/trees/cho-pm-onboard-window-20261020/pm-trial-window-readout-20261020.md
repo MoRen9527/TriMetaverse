@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（trees/cho-pm-onboard-window-20261020/pm-trial-window-readout-20261020.md）
 - syncMode: static（读数与处置卷·B 案试岗批形态执行面）
-- lastSyncedAt: 2026-10-20 21:06:00 +0800（date 现查·写前跑）
+- lastSyncedAt: 2026-10-20 21:01:52 +0800（date 现查·勘正笔写前跑——原落款 21:06:00 系写卷前未现查的手写预估造值·commit 后发毕闸现查 21:01:22 对表抓获倒挂 4m38s·D-47 族第十九案 CHO 席首犯自领·本笔即勘正）
 - 令源: CEO 2026-10-20 令「A1 PM编制三案裁准 按CHO建议案执行，转CHO窗内落地」（BOD 转达·W40-W43 审计卷 §二十三 A1 件首件·rhy-seat-smoke bod-rduty-tmux-direct-dispatch-20261019.md L253）
 - 建议案正身: W41 树 cho-pm-staffing-eval-20261008/（pm-staffing-evaluation.md §六 CEO 裁 B 案追记+pm-jd-trial-20261008.md 试岗批 JD·四轴绿线）
 
@@ -53,10 +53,10 @@
 
 ## 锚清单
 
-- date 现查：2026-10-20 21:06:00+0800（写前跑·发信后另查对表）。
+- date 现查：2026-10-20 21:01:52+0800（勘正笔写前跑·原初稿落款 21:06:00 手写预估造值已勘·D-47 双保险发毕半条抓获·自领见卷头勘正注）。
 - 建议案正身：W41 树 cho-pm-staffing-eval-20261008/ 两卷（评估卷 §六裁断追记+JD 卷 §六四轴·本刻全读）。
 - 令源链：CEO 10-20 令（BOD 转达信·hook 现戳 20:55:19）→本卷；审计卷 §二十三 A1 行（W43 rhy-seat-smoke/bod-rduty-tmux-direct-dispatch-20261019.md L242-253·本刻实读）。
 - 零实证据链：W41-W43 树名单双侧 ls（本地+sg-server/dev）；m-pm 内容级 grep（TriMetaverse 仓）；employee-roster.json 头 50 行实读（13 席 v1.0.0）；TriCompany/docs grep 零命中；LG-058 终验卷 head 40 行实读（整改批闭账锚）。
 - 关联：A1 审计卷附注「评分档位校准候 W42-W43 完整周期读数——周期已满候触发（与 A1 关联批）」——绩效面校准另线，不入本卷。
 
-——CHO 小源 2026-10-20 21:06:00 +0800（date 现查原值·D-47 正形 A）
+——CHO 小源 2026-10-20 21:01:52 +0800（date 现查原值·D-47 正形 A·勘正笔落款；初稿落款造值自领见卷头注）
