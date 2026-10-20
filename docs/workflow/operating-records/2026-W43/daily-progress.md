@@ -124,3 +124,6 @@
   - 2058e41d9 merge: 并入 sg-server/dev 并行推进（b3df4880a）
   - 1bed8fa5d docs(cto): P0探针毕报——SDK resume定谳红(known-existing id一律already exists拒挂·协议无open/resume方法)·段B真实库零写入兑现·降级预案启动(A升正解候选/C过渡/D'半达候选视同段目标权重·D''不荐·主线撤案)·机制增量五点(同构落库/自由命名空间/事件谱富集/provider实锚/headless-sdk分野)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 3668423e9 后新增 1 条 commit：
+  - ff6546123 docs(bod): P0毕报收执§九补落dev(同wt/board 7ebfb03cd)
+- registry：v2.1；今日 registry 提交无变化
