@@ -173,3 +173,21 @@
 - **七件逐件**：①RISK-001 建议降 P2 观察态（API 401 可达+网关 200 双活零复发）②VER-002 建议升 P1（TriRLC 双源分歧活体 1.0.0 vs 0.9.0·env.ts/app.ts 实锚）③BUG-001 主面 fixed-verified+残余低危边拆号候 BOD 裁④REQ-003 骨架毕（version 实装+桩位结构化帧·handler 落肉候需求序）⑤R-HY-401 现行零痕归 LG-066 部署步⑥C-4③实质收敛候 BS/CTO 认账（TriLC*×3 残留移交②）⑦三条款草案候 BOD 议题窗。
 - **遗留候裁四件（BOD/CEO 面）**：③残余低危边拆号·②VER-002 升 P1·①RISK-001 降 P2·⑦议题窗排期。
 - BOD 落款 2026-10-20 12:52:45 +0800（date 现查·shell 注入·发毕对表）
+
+## 十七·A2 复工 wake 补达（dsh headless 通道·18:4x-18:56）
+
+- 触发：18:47 例行巡检旁证探针——河源 r-duty-cos 工作区 **17:59 后零新文件**（复工 47min 未拾取·令件 BOD-ORDER-a2-20261020.md 11:32 原封）。既定盯梢点 19:30 提前触发（勘定只读零成本）。
+- **勘定链**：
+  1. 化石 argv 误读自纠——ps 见 pid 16048 argv 含「new-session -d -s r-duty-sde…claude」险判「r-duty-sde 席在役」，卷 §五既有定谳重申：**16048=tmux-server 本体（hosting dsh-web-prod 跑 8791）·argv 系启动时化石快照非现役进程清单**。
+  2. 根因定谳：r-duty-cos 无任何常驻进程（ps 全扫零命中）——**工作区令件落盘≠wake，r-duty 形态无文件消费者**；10-20 A2 五步链只完成了写面，缺 wake 动作。
+  3. 现役段指认（取 mtime 最新规则）：session-64a715c5（/home/fleet/.dsh/sessions/--home-fleet-.dsh-workspaces-r-duty-cos--/）·session.v4.jsonl.zstd=35360B mtime 10-19 23:35=卷内实验实锚值原封——自昨晚后零会话活动。
+  4. wake 执行三折：
+     - 第一折 root 身份拒：本 ssh 登录河源身份=root，dsh 会话库按身份寻址，root 视角报 session does not exist。**正形=sudo -iu fleet（完整登录环境）**。
+     - 第二折裸 id 拒：--session-id 传裸 UUID 同拒。dsh headless --help 实锚正形=**id 带 session- 前缀全名**（help 例：--session-id session-…·与库目录名同形）——与 D' P0'「目录名代际差」同族（寻址串≠目录名反向变体）。
+     - 第三折成功：fleet 身份+session- 前缀全 id+nohup 后台（防 ssh 断连 SIGHUP 杀施工进程·stdout 落 /tmp 免污染工作区）。
+- **拾取实锚三证（18:56）**：①段 35360→**62098B** mtime 18:56:51 真实写入；②日志尾=agent 自述在读令件+coo-a2-reassign-charter-v2+找 TriMetaverse repo（真拾取非假写入）；③施工进程在役。WAKE_PID=457296（sudo -iu fleet sh -c nohup 链）。
+- **dsh headless wake 通道三正形（入卷备查）**：sudo -iu fleet sh -c 内 cd 工作区→nohup dsh --profile headless --session-id session-全UUID "令文" </dev/null >/tmp/… 2>&1 &；验证=段 mtime+size 增长+日志尾 agent 自述；会话库按登录身份寻址（root 视角=空库）。
+- 后续盯梢：候 r-duty-cos 施工毕报（REPORT-A2-*.md 落工作区·令件规定应达面）；BOD 下拍巡检顺带探工作区。
+- 施工插曲：首写本段 heredoc 未引住，正文反引号被本地 bash 命令替换剥蚀成残卷——git checkout 回滚后 <<'EOF' 重写（残卷零 commit 零外泄）。
+
+—— BOD 落款 2026-10-20 18:58:29 +0800（date 现查·shell 注入·发毕对表）
