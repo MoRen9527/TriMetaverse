@@ -191,3 +191,14 @@
 - 施工插曲：首写本段 heredoc 未引住，正文反引号被本地 bash 命令替换剥蚀成残卷——git checkout 回滚后 <<'EOF' 重写（残卷零 commit 零外泄）。
 
 —— BOD 落款 2026-10-20 18:58:29 +0800（date 现查·shell 注入·发毕对表）
+
+## 十八·A2 窗2 毕报 BOD 验收（19:1x·四锚绿·四件收口）
+
+- 19:16 巡检发现毕报已落：REPORT-A2-window2-closeout-20261020.md（10144B mtime 19:10·r-duty-cos 工作区）——wake（18:56）到毕报（19:10）14 分钟，施工时段 18:57-19:09（模型调用 2 次·隔离探针+selftest）。
+- **BOD 独立活体验收四锚（不转抄）**：①sg TriRMC bare dev 顶=ac5f01a（#7 三件 511 行：scripts/dsh-gateway-client.mjs 319+test 120+docs 72）②merge-base 断言 2c5395e 系 ac5f01a 祖先（#1 桥分型超时推平链闭环·a02d89b..2c5395e）③TriMetaverse bare dev 含 e9cf346（树内毕报副本·105 行）④工作树文件在盘（fleet 10002B 19:09）。
+- **四件收口判定**：#1 桥分型超时=毕验绿（推平+存量 5 fail 父基线复现归因如实）；#4 credentials=勘验毕（现役即 store(B) 形·隔离 DSH_HOME 零 env 注入真模型调用活体证·迁移 C 无对象）；#7 a 案 WS 客户端=勘写双落毕（隔离 8799 端到端绿·真回复「收到」实锚·单测 11/11·现役席未发守护栏）；#3 ACP 适配件=按令改道并入 D' 段1 零重复施工；连带批 DAEMON_NAME=CTO 已毕 r-duty 无动作。
+- **BOD 裁三件（D-39 域内）**：①#3 口径裁=并入 D' 段1 销账（理由：CTO 段 1 18:59 APPROVE 已含 ACP 面+#7 已覆盖 mailbox 投递功能面·另起=双实现冲突）——转 CTO 遥审对表；②#7 现役席活体首句探针原则批准（单席单句·对象低频席 m-duty-rdt/cho·夜段·token 落点 600 文件禁 argv 候 CTO 面定）；③#4 store(B) 现役定谳+env 注入退役时点=CTO 裁面转呈。
+- **三送面实锚**：r-duty 毕报自报无 notify 入箱通道（TriMMC outbox 写面沙箱拒）以树内报告代偿（e9cf346 三面一致实锚）——r-duty 毕报应达面正形=工作区 REPORT-*+树内 commit 双落；BOD 转知 CTO（遥审+三件）/COO（台账指针 e9cf346+wake 通道 §十七）两信已发。
+- A2 窗2 主线状态：**四件全收口·候 CTO 遥审回执**；余观察项=DAEMON_NAME ⑤ 真窗身份实证（候自然提醒窗）+TriRMC R 面本地 checkout 落 ac5f01a（r-duty 注记 fetch+ff-only 自取）。
+
+—— BOD 落款 2026-10-20 19:19:47 +0800（date 现查·shell 注入·发毕对表）
