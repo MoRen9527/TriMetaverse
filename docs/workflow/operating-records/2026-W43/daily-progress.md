@@ -189,3 +189,11 @@
   - 5e1967611 Merge remote-tracking branch 'sg-server/dev' into dev
   - c68891211 docs(cto): P0'毕报——ACP resume机制绿+web存量段红(目录名代际差:session-前缀不可寻址·源码级四实锚)·D'形修正建议
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:30 +08：自上次进度提交 00702f010 后新增 6 条 commit：
+  - 686e489c7 docs(cto): D'主线架构定稿——TriRLC TUI接dsh ACP面(独立进程形)·零sdk依赖自写帧层·--acp flag分支·施工两段划分
+  - 8bfc0294b docs(coo): 台账一百八十八笔(CFO复工令收记·夜段黄金段起接续·周窗73%预警续挂·二档今夜大概率不至候评)
+  - 207fb6322 merge: 收编并行笔（值席落盘防覆盖）
+  - 018caf5a7 Merge remote-tracking branch 'sg-server/dev' into dev
+  - d89a45ffa docs(coo): 台账一百八十七笔(P0'毕报收记·ACP resume半绿定谳·主线候BOD/CEO裁·探针DeepSeek空闲段照守·LG-069/E1-4零动作双注)
+  - 77a6816a0 docs(cfo): 18:00锚——周窗73%停工窗+1pt压低兑现·预警态续挂不重发·复工令18:1x·LG-069闸失效如实录(CIM直读门不失效)
+- registry：v2.1；今日 registry 提交无变化
