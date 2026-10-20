@@ -248,3 +248,8 @@
   - 4db5e945c docs(fsd-workbench): 观察期台账 10-20 拍——armed/failStreak=0/空轮+NOTIFY 已知族注记(段2a 夜段施工窗)
   - 7dc900898 docs(cos): A2 全线收官零遗留刷入大表 LG-087 行——COO 194 笔 114f9118·#7 探针全绿毕销·BOD 三裁落账·A 组实质收官
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:40 +08：自上次进度提交 5452ff623 后新增 3 条 commit：
+  - 3385bb4f7 merge: 收编并行笔（审计卷推前对表）
+  - 974d14a94 docs(coo): 台账一百九十五笔(D'段2完工收记·手测四步全绿·部署候SDE排窗挂账·轻记)
+  - 4f092b347 docs(bod): §二十三 W40-W43全量树审计——151树扫描+台账3723行逐号核实·真遗漏15件三类（A候CEO裁定7·PM编制试岗窗明日10-21到期最急/B漏挂账5转COS/C卫生3直办）+r-duty token破面案D-39直办裁·STRAY-FILE三件归位附注
+- registry：v2.1；今日 registry 提交无变化
