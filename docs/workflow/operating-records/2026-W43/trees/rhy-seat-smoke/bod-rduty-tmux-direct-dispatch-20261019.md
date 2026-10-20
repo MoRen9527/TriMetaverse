@@ -250,7 +250,7 @@
 
 | # | 件 | 现态 | 来源 |
 |---|---|---|---|
-| A1 | **PM 编制三案**（CHO 试岗评估） | **已裁 2026-10-20 两段**（20:51「按CHO建议案执行」→21:12 改裁「直接转正」）——免试岗正式化路径在途（五件套→六环→roster 13→14·CHO 施工中·估一日级） | W41 cho-pm-staffing-eval+cho-pm-onboard-window-20261020 |
+| A1 | **PM 编制三案**（CHO 试岗评估） | **收官毕 2026-10-20**（21:12 CEO 改裁「直接转正」→CHO 六环验收全绿@6bb589e85+roster v1.1.0 13→14+CPO 会签@203cc69b1·B 案试岗批作废；21:54 BOD 代起 m-pm 实例在册 PID 26000——compass 手册 claude-session 面补渲染+首启 -n 注册形；余红=seats-operations.json 缺 PM 席级常量候 CHO 补环·watchdog 保护清单扩展候 CTO 面） | W41 cho-pm-staffing-eval+cho-pm-onboard-window-20261020+trees/pm-formalization/cho-formalization-report-20261020 |
 | A2 | **LG-085 ②** P0 排程+ACP 勘验窗 | **已裁 2026-10-20 21:22（CEO：「A2 裁：LG-085 ② 按CTO答卷执行」）**——按答卷终态（纯 daemon 面全通零会话依赖）入执行面·CTO 施工中 | 台账 L3616 |
 | A3 | **Q1 TriMC→TriMMC 系统面改名** | **已裁 21:31+窗位圈准 21:38（CEO 两窗并裁）**——步3 归一窗 a-d+步4 案 A·窗=10-21 18:00 后独立窗·顺序双窗（部署窗先行→归一窗接续）·CTO 施工单出单中 | W42 q1-trimc-legacy-name-assessment-20261015 |
 | A4 | **BOD onboarding 报告协议** | 候 CEO 终审签批·台账零挂账 | W42 bod-onboard-report-protocol-20261014 |
@@ -283,7 +283,12 @@
 
 LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5 首拍 PASS·L3719）／段B 主体收官（W42 L1480 窗毕）／n1-n4 COO 复核毕推平（L3515）／E2+P 案闭环（L3646-3648）／FADE-008 销锚（L3458）／LG-078 收尾毕（B 轴 dc667d14a）／窗提醒 job 随 E1 窗施工毕／py 泄漏→E2 收编闭环——以上树内信号行均为历史静态记载非遗漏。
 
-**流转**：A 类已裁 3 件（A1 正式化在途/A2 CTO 施工中/A3 CTO 筹备·见下裁语回填段）·余 4 件（A4-A7）候 CEO 逐件裁；B 类 5 件转 COS 补挂台账+分诊 owner（B2 已销项·B5 随 A3 批并入候对表）；C 类已办毕。
+**流转**：A 类已裁 3 件（A1 收官毕@6bb589e85+m-pm 代起在册/A2 CTO 施工中/A3 施工单达 FSD·见下裁语回填段）·余 4 件（A4-A7）候 CEO 逐件裁；B 类 5 件转 COS 补挂台账+分诊 owner（B2 已销项·B5 随 A3 批并入候对表）；C 类已办毕。
+
+### A1 收官毕回填（2026-10-20 21:39→21:54）
+
+- **CHO 毕报**（21:39:28）：六环验收全绿@6bb589e85（source kit c087855／binding+roster b012da8／CPO 会签 203cc69b1）·roster v1.1.0 13→14（PM 行 instanceName 小案）+D-13 名址 PM 行；B 案试岗批重启作废（读数卷 431b5558c 维持在档）。
+- **BOD 代起**（21:47→21:54）：CHO 六环外缺环两枚勘定——①compass 手册缺位（环④只跑 copilot/claude 两 face，claude-session 面未跑）→BOD 补渲染 `source_publish_check --publish-agents --agent-execute --host claude-session --employees product-manager`（created 1·7348B 落盘）；②seats-operations.json 缺 PM 席级常量（不阻启动·候 CHO 补环）。首启照 seats.json launchCommand 注册形（-n 无 --resume·防零历史卡选择器）·launch-seat 清场正形（清 CLAUDE*+FORCE_SESSION_PERSISTENCE=1）·Start-Process 通道（wt alias 通道静默失败实证一次）→21:54:41 claude.exe PID 26000 在位·ListAgents 14 席 m-pm [3a494d] 在册。watchdog $seats 硬编码 13 席未含 PM（禁直写产物·扩展候 CTO 面）。
 
 ### 裁语回填·A1/A2 两件已裁入执行面（2026-10-20 晚·本席随裁随填）
 
