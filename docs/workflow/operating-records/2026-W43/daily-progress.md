@@ -267,3 +267,9 @@
   - 521901084 docs(cos): 大表 A1 行路径改裁态刷（CEO 令直接转正·B 案作废切正式化·CHO 施工候毕报·21:13 记）
   - bfd9b34fe docs(cos): 大表 A1 行态刷（CHO 毕报收编·B 案试岗批重启在途·候 BOD 启动 m-pm 实例·21:05 记）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:40 +08：自上次进度提交 a7ca9f5ce 后新增 4 条 commit：
+  - 667674a76 docs(bod): §二十三 A3 行窗位圈准态刷——CEO 21:38 两窗并裁(归一窗10-21 18后独立窗+部署窗明晚·顺序双窗)
+  - 6bb589e85 cho(pm): PM 席正式化毕报卷+live 双面+support 载荷落 TriMetaverse——六环验收全绿(源侧 kit c087855/支撑载荷/binding/live 双面/三 manifest/governance 回填 roster v1.1.0+D-13·TriCompany b012da8)·CPO 会签全认(203cc69b1)·提需 BOD 代起 m-pm 实例(清环境遗传变量)·21:38 记
+  - 8c3cef48f docs(cos): 大表补挂 A3 改名行+汇总行 37→38（CEO 21:31 裁照评估卷执行·CTO 筹备窗位候呈·B5 案随窗并入·21:35 记）
+  - efb04c46c docs(bod): §二十三裁语回填——A3裁(21:31·Q1系统面改名照评估卷建议执行·步3归一窗+步4案A·窗位候CTO建议稿)+A类表行刷(树锚补-20261015后缀)+流转行更新(已裁3件·B5随批并入注)
+- registry：v2.1；今日 registry 提交无变化
