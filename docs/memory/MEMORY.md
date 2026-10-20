@@ -27,7 +27,7 @@
 - [subagent 落盘纪律+时刻引用纪律](subagent-persist-discipline.md) — 先写后报+路径行数证据；收稿三查；报时必现查 date（UTC Z 后缀 +8，禁推算）；跨域纪律归纪律册
 - [共学周记 ADE 规范](journal-recording-ade-spec.md) — 记周记先走规范（四问/三查/五查），格式基准取最近周，内部台账不入册
 - [模型事实禁凭记忆](llm-limits-never-from-memory.md) — 上下文/价格/发布日期先查 claude-api skill；网搜失败明说无法验证，禁编造来源
-- [周平面迁移执行点](weekly-plane-shift-executor.md) — 唯一执行点=河源 TriRMC cron 周日 23:00 北京；job 禁带 runAs；本机对齐 SOP=weekly-plane-shift-local-align-sop.md（fetch+merge 不推·冲突即停）；sg-bare=origin 权威；HTTP 活≠executor 活（10-04 停摆实证）
+- [周平面迁移执行点](weekly-plane-shift-executor.md) — 唯一执行点=河源 TriRMC cron 周日 23:50 北京（10-18 CEO 令改·原 23:00·f72bdc64e）；job 禁带 runAs；本机对齐 SOP=weekly-plane-shift-local-align-sop.md（fetch+merge 不推·冲突即停）；sg-bare=origin 权威；HTTP 活≠executor 活（10-04 停摆实证）；10-19 口径增补=整树迁移三面分工（新周未完成标记/记录留发生周/档案树根周收口）+COS 顺序单进程拆树周未完树≤1~2（正身=W43 rulings卷 §五）
 - [FADE 管线架构](fade-pipeline-architecture.md) — FADE=框架（非字母缩写）；PACE=路径之一；hook 快通道+cron 慢通道；face 字段面路由；攒批窗周二/周五+周三兜底
 - [GLM 部署点位图](glm-model-deployment-map.md) — glm-5.3 三端配置位置+重启要求；node_modules/trimodel 是符号链接
 - [TriLC 双线分叉待合并](trilc-lineage-divergence.md) — 本地 28 提交 vs sg tc001-canonical；app.ts 必冲突需人工合并
@@ -38,7 +38,7 @@
 - [sg GitHub 直推通道](sg-github-pat-push-channel.md) — 新 PAT 09-30 收官（12-22 前后提请轮换）；推进=本机主推+sg 备援；坑族（sudo HOME/access 面可编辑/认证失败清 store/PS→ssh CRLF 剥 \r/零真值先脱敏）见主题文件
 
 - [工具权限双层探边教训](tool-authz-double-layer-testing.md) — 清单可见≠执行放行，黑盒须断言实际调用非 blocked（LG-026 第五型实证）
-- [命令链断言失败须断整链](chained-command-assert-abort.md) — 校验失败≠流程停止；验证输出禁 head 截断关键行；git push RC 守卫=rebase 失败后禁无守卫连推
+- [命令链断言失败须断整链](chained-command-assert-abort.md) — 校验失败≠流程停止；验证输出禁 head 截断关键行；git push RC 守卫=rebase 失败后禁无守卫连推；**毒化类后续操作（add/commit）必须 && 守卫在前命令 RC·heredoc 脚本独立跑成功再跑 git 面·checkout --ours 救场必 diff 勘对方非冲突增量丢失（10-20 带标记 merge 笔事故三笔链）**
 - [manifest 身份验证](manifest-identity-verification.md) — 「实盘未落」断言前必验文件身份（三 identity·一名多文件）；grep 无命中≠未落盘；矛盾证据先 json 对表
 - [M-004 席位派工口径](m004-seat-dispatch-via-sendmessage.md) — 派工默认 SendMessage 直达常驻席，spawn 仅限三残留场景
 - [M-004 适用域：registry agent 可 spawn](m004-scope-registry-agents-spawn-ok.md) — M-004 只约束 13 员工常驻席；registry 型非常驻 spawn 合规；发纠偏令前先分类核验
@@ -79,7 +79,7 @@
 - [TriRLC cron command 白名单精确等值](trilc-cron-command-allowlist-exact-match.md) — ALLOWLIST=精确全串比对（双入口 fail-closed）：command 字段任何变更含路径迁移=必 403 须追加+重启；转发壳须有退役时点
 - [Bash 链调 5.1 的 PSModulePath 污染](powershell51-modulepath-bash-chain.md) — Bash→powershell.exe 继承 pwsh7 目录致 5.1 加载错版 Utility；坑随父链 env 走跨入口结论不可互推
 - [git credential approve 隐式写面](git-credential-approve-implicit-write.md) — 认证成功即 approve 重写凭证文件：store 环境网络操作 mtime 面一律视为有写面；不知情未报≠隐瞒
-- [幻觉时点·compaction/挂起窗 后首回合高发](cto-phantom-timestamp-compaction-resume.md) — 家族十八案全闭环零存量（分工计数全谱见主题文件·**10-17=单日六案密度峰值日 CTO×2/COO×1/BOD×3·BOD 同窗三连**）：未现查凭印象/耗时推算/虚标现查/模糊段/**粘环手写预估（同窗两犯实证：文字条款约束力≈零·机械闸才有效）**/整分手写（误差<60s hook 不可判=潜伏盲区·习惯型落款无压也犯）皆铁证直定谳；正形=落款 date 原值或声明式 hook 现戳锚+双保险（写前跑防发生+发完重跑对表防漏网·两案全靠发毕半条抓获=兜底闸价值实证）+**粘环零手打（shell 变量注入/Write 后回视对表再 commit）**；**D-47 信面落款机械合同已入册（TC a54ba43·正形二选一+禁则五条+兜底宁缺勿造）**；CAO 判时点矛盾=收信 hook 现戳铁证直定谳不再软化留面；族谱随犯随增（D-47 最严档四道·R1 后首周密度采样含 BOD 侧·触发面=有压场景）；gate Edit 面盲区候 owner 评估；十三/十四案=CTO 粘环手写预估型同窗两犯（10-17 14:52+15:18·发毕对表倒挂 93s/104s 抓获·第 13 例条款立后 30 分钟内立刻再犯=执行滑坡实证）；十五案=COO 信面落款手写整分型（10-17 18:29 SDE hook 抓获·BOD 分钟粒度型同型异席·SendMessage 无落款挂点再证·同日 02:4x 模糊段先声案并入证据链）；十六案=BOD 一窗三笔（卷面手写预估 18:40:00 倒挂 1m49s+转报/自报两模糊段·发毕闸自获·自报信 x 段微瑕记档·BOD 面第 5 例·不采自报序数）；十七案=BOD 承诺后即时重犯（19:11 猜段·机理=落款动作未与现查调用顺序绑定·三锚顺序合同=现查→粘贴→发送相邻不可插入+连发链每信独立三轮+宁缺勿造「落款免造」·「文字承诺约束力≈零」谱系第二例）；十八案=BOD 卷面预估+虚标现查复合形（20:28:00 圆整秒假值·gate 拦不住=自获靠自查回视·写卷面绑定缺口显式化=顺序合同只锚信面·卷面正形=shell 注入·gate 圆整秒指纹拦截候 CTO 面·合同文本零改动裁）；全谱细节见主题文件
+- [幻觉时点·compaction/挂起窗 后首回合高发](cto-phantom-timestamp-compaction-resume.md) — 家族二十一案全闭环零存量（分工计数全谱见主题文件·**10-17=单日六案密度峰值日 CTO×2/COO×1/BOD×3·BOD 同窗三连**；十九案=CTO 粘环预估复发 10-20 18:22 发毕闸倒挂 78s 自获·压缩恢复段连发链末端·勘误信完整顺锚；二十案=BOD 信面倒挂+掩码+虚标标签三合一复合形 10-20 19:26:0x vs COO hook 19:25:05 倒挂 55-114s·**造值指纹三件套判据=倒挂+掩码+虚标标签并现直定造值**·连发链第三信滑入·自勘四要素认领·BOD 面第 8 例；二十一案=SDE 手写预估+虚标现查复合形 10-20 21:4x 两信落款均晚于 COO 收信侧处理时刻（倒挂 3.6/6.5min 递增=写作延迟拉大手写机理·钟面分叉三法交叉实证排除）·掩码段「2□」=date 无掩码形态手写铁证·**三件套判据适用第二案**·SDE 席首例·10-20=单日三案第二高三席并犯）：未现查凭印象/耗时推算/虚标现查/模糊段/**粘环手写预估（同窗两犯实证：文字条款约束力≈零·机械闸才有效）**/整分手写（误差<60s hook 不可判=潜伏盲区·习惯型落款无压也犯）皆铁证直定谳；正形=落款 date 原值或声明式 hook 现戳锚+双保险（写前跑防发生+发完重跑对表防漏网·两案全靠发毕半条抓获=兜底闸价值实证）+**粘环零手打（shell 变量注入/Write 后回视对表再 commit）**；**D-47 信面落款机械合同已入册（TC a54ba43·正形二选一+禁则五条+兜底宁缺勿造）**；CAO 判时点矛盾=收信 hook 现戳铁证直定谳不再软化留面；族谱随犯随增（D-47 最严档四道·R1 后首周密度采样含 BOD 侧·触发面=有压场景）；gate Edit 面盲区候 owner 评估；十三/十四案=CTO 粘环手写预估型同窗两犯（10-17 14:52+15:18·发毕对表倒挂 93s/104s 抓获·第 13 例条款立后 30 分钟内立刻再犯=执行滑坡实证）；十五案=COO 信面落款手写整分型（10-17 18:29 SDE hook 抓获·BOD 分钟粒度型同型异席·SendMessage 无落款挂点再证·同日 02:4x 模糊段先声案并入证据链）；十六案=BOD 一窗三笔（卷面手写预估 18:40:00 倒挂 1m49s+转报/自报两模糊段·发毕闸自获·自报信 x 段微瑕记档·BOD 面第 5 例·不采自报序数）；十七案=BOD 承诺后即时重犯（19:11 猜段·机理=落款动作未与现查调用顺序绑定·三锚顺序合同=现查→粘贴→发送相邻不可插入+连发链每信独立三轮+宁缺勿造「落款免造」·「文字承诺约束力≈零」谱系第二例）；十八案=BOD 卷面预估+虚标现查复合形（20:28:00 圆整秒假值·gate 拦不住=自获靠自查回视·写卷面绑定缺口显式化=顺序合同只锚信面·卷面正形=shell 注入·gate 圆整秒指纹拦截候 CTO 面·合同文本零改动裁）；全谱细节见主题文件
 - [重启窗完工判据=进程内生效验证](restart-window-completion-criteria.md) — healthz 绿≠配置生效；完工锚必含目标变更值面探针；env 遗传族正解=冷起整树+父链断言
 - [TriMMC 与 TriMLC cron addJob 行为分野](trimmc-mlc-addjob-divergence.md) — TriMMC/TriMLC/TriRLC 三 daemon cron 行为分野勿互套；**F-3 家族性**（8711 现役在册）=POST 201≠会触发，新建 job 判定三查=201+next_run 值面+enabled=1；8711 store=$LOCALAPPDATA\trilc\cron.db（探库先对 DATA_DIR）；判读=源码先读后定性；shutdown 正身=根路径 POST /shutdown；勘修窗三件见 [TriMLC 勘修窗 2026-10-11](trimlc-repair-window-20261011.md)
 - [TriMLC 勘修窗 2026-10-11](trimlc-repair-window-20261011.md) — 三件独立 commit+重启链实操序（watchdog Disable→/shutdown→port FREE→schtasks 冷启→pid/CIM 对表→Enable）+Git Bash schtasks 路径转换坑
@@ -90,7 +90,7 @@
 - [trimc cron 日志 token 嵌 header](trimc-cron-log-token-in-header.md) — cron logs header 嵌明文 token，tail 前必 grep -vE "^command:|^runAs" 滤；root git 操作后必清点归还属主；bare 仓 root 残留雷=unable to migrate objects；「归零」断言必全仓扫禁单仓自查
 - [拓扑断言禁由恢复源推定](topology-assertion-from-recovery-source-trap.md) — 机位断言必活体现探禁推定；候 P1 钉死前拓扑断言一律标注
 - [resume-by-title 跨项目目录同名歧义](resume-title-cross-project-ambiguity.md) — title 匹配面=全部项目目录含 worktree，残留同名 customTitle=弹选择器根因；判活用 mtime 勿单信 tail 时戳；修复=备份+归档改名禁删文件
-- [截断伪影=假读数家族](truncation-artifact-false-reading.md) — 假读数家族八向并档（编码毁匹配/转义毁语法/截断毁值面/PS5.1 引号吞噬/pwsh7 DateTime 变形毁时戳/grep 猜名假阴性/ETS 注记毁 payload/**date -uFormat 返本地值贴 Z 尾毁 UTC 落款·UtcNow 权威口径修**）：共同根式=中间层隐式变形+静默失败；识别信号=单点伤/双宿主分叉/读数与旁证矛盾
+- [截断伪影=假读数家族](truncation-artifact-false-reading.md) — 假读数家族九向并档（编码毁匹配/转义毁语法/截断毁值面/PS5.1 引号吞噬/pwsh7 DateTime 变形毁时戳/grep 猜名假阴性/ETS 注记毁 payload/**date -uFormat 返本地值贴 Z 尾毁 UTC 落款·UtcNow 权威口径修·跑法分叉 glob 单层退化毁全量面·npm test 正形化（STE 10-20）**）：共同根式=中间层隐式变形+静默失败；识别信号=单点伤/双宿主分叉/读数与旁证矛盾
 - [硬门签认必落卷直达](hard-gate-signs-land-in-tree.md) — 已发≠在链：门消费面读树不读会话，会话中继签=暗签；正形=签认席自己落卷+commit 直达通知；「已发」后追问「消费面读得到吗」
 - [worktree 落卷≠dev 可达·分支向三对表](worktree-branch-dispatch-positioning.md) — worktree commit≠origin/dev 可达（分支向错位=暗卷）；派工引用产出件前三对表（分支向/push 状态/ls-remote 顶）；正形=surgical 拷贝补落 dev 禁碰 merge 面
 - [跨仓 git hash 混读](cross-repo-git-hash-confusion.md) — 双仓连作后 hash/reflog 断言不带仓向=全错推演；正形=pwd+remote -v 双证仓向，bad revision=仓向错强信号即停
@@ -105,5 +105,6 @@
 - [daemon spawn 风暴诊断+8713 端点事实](daemon-spawn-storm-endpoint-facts.md) — 判别式=系统级健康而 daemon 上下文退化；陈旧缓存不可信=活体直读对表；/internal/v1/* 鉴权头=X-Internal-Token 非 Bearer；crash.log 首写才建——不存在=零 crash 非探错路径
 - [构建绿≠运行时通·冒烟须到消费面](build-green-not-runtime-green.md) — 活体验证族第三变体（TS2307 三连败实锚）；破面评估禁只查主服务启动链，cron job 独立 bin=最常漏消费面
 - [D-46 嵌套 payload 递归滤盲区](d46-nested-payload-recursive-mask.md) — 掩码正形对嵌套结构失效；正形增补=递归掩码或禁 dump 原始 payload 只投影白名单字段；8712 token 轮换裁=不立即·触发器+顺手窗两护栏
-- [token 轮换三折](token-rotation-consumer-object-and-candidates.md) — 轮换前必勘键消费对象（同名键≠同对端·8711=河源/8713=sg 实锚）+候选载入位清点（env 候选链多副本值一致化）+全键清点禁只改锁定行（8713 L18 漏·FSD 兜）+CR 断言唯一正形 tr -cd 字节计数（od -c 假阳性）+Git Bash 禁 schtasks 动词系+D-46 第 8 例注释行裸 key
-- [外网派工路由 M-SG 席组](m-sg-external-web-dispatch-routing.md) — CEO 10-18 令：外网检索类派工扔 sg 席组；通道=TriMMC notify-mailbox.json 直 append letters[]（tmux 无席位窗·UTF-8+tmp+rename 原子写+回读断言）
+- [token 轮换三折](token-rotation-consumer-object-and-candidates.md) — 轮换前必勘键消费对象（同名键≠同对端·8711=河源/8713=sg 实锚）+候选载入位清点（env 候选链多副本值一致化）+全键清点禁只改锁定行（8713 L18 漏·FSD 兜）+CR 断言唯一正形 tr -cd 字节计数（od -c 假阳性）+Git Bash 禁 schtasks 动词系+D-46 第 8 例注释行裸 key+**折5 探针 token 落点=工作区 600 文件（BOD 10-20 裁·与隔离联调 DSH_HOME 形按「是否触碰现役席」分野）+tmux capture 长 token 必查 80 列 wrap 续接行（42→43 字符=401→303·401 先疑截断非值错）**+**探针 token 落点=工作区 600 文件正形（BOD 10-20·沙箱外 .dsh 作罢·与隔离联调 DSH_HOME 两形分野勿互串）+tmux 80 列 wrap 续接提取坑（401 先疑截断非值错）**
+- [外网派工路由 M-SG 席组](m-sg-external-web-dispatch-routing.md) — CEO 10-18 令：外网检索类派工扔 sg 席组；**正形通道=tmux 直发（send-keys+独立 Enter+capture-pane 验拾取）或 POST /internal/v1/notify→outbox**；**notify-mailbox.json 直 append=死信**（10-20 源码级勘定：mailbox=消费者输出位非入箱口·10-19 A2 305/306 无人拾取同根因）；服务日志=/tmp/trimc-run.log 禁走 journal；本地箱=LG-085 形 message_id 字符串+os.replace+真身解释器=python（python3 是 Store 存根）
+- [工具子进程存活+schtasks keeper 正形](bg-process-persistence-schtasks-keeper.md) — 本机工具后台子进程（含 ssh -f）跨调用即死；持久监听=schtasks 宿主 keeper（bod-dsh-tunnel 在役）；R-HY ssh 高频连触阿里云限 IP·绕行=-J sg；dsh 兑换 401 先 hash 对表 token 副本

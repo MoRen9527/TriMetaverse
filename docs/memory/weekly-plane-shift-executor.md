@@ -1,11 +1,11 @@
 ---
 name: weekly-plane-shift-executor
-description: 周平面迁移唯一执行点在河源 TriRMC cron（周日 23:00 北京时间）；job 禁带 runAs；迁移窗冻结 sg watcher；本地 TriLC 旧 job 已删除；回流合并的冲突解法
+description: 周平面迁移唯一执行点在河源 TriRMC cron（周日 23:50 北京时间·2026-10-18 CEO 令改，原 23:00）；job 禁带 runAs；迁移窗冻结 sg watcher；本地 TriLC 旧 job 已删除；回流合并的冲突解法
 metadata: 
   node_type: memory
   type: project
   originSessionId: 3ce184e6-6a9a-42ee-a7a4-8410d4fb6576
-  modified: 2026-10-04T15:46:07.059Z
+  modified: 2026-10-19T15:16:35.097Z
 ---
 
 周工作平面迁移（周度平移）的**唯一正确执行点是 TriMC 服务器 cron**（sg-ecs-server，`/srv/fleet/TriMC`，job `b00b0070-2f82-4e7d-a98c-de73e886834b`，周日 23:59 北京时间——timezone `Asia/Shanghai`，`{fromWeek}/{toWeek}/{startDate}` 模板由 `computeWeekShiftTokens()` 动态注入，runbook：TriMC/docs/ops/trimc-cron-plane-shift-runbook.md）。2026-08-23（北京时间 23:59）首次自然触发成功：W34→W35 / start 2026-08-24 / pass。
@@ -34,6 +34,10 @@ metadata:
 **2026-10-01 晨勘正（BOD 只读实勘，周平面迁移现役执行体回切 sg）**：①现役唯一在役=**sg TriMMC 8712 `weekly-plane-shift`（b00b0070-2f82…，enabled）**——batch-04 token 驻留扫卷（trees/bod-pipeline-batch-04/token-residency-rescan.md）9 job 清单第一位亲列，command 形态=`cd /srv/fleet/TriCompany && python3.8 -m runtime.cognition.weekly_plane_shift…`（河源 --sync 档形态迁回）；W39→W40（09-27 周日）迁移实绩自洽。②**河源 TriRMC cron 面=disabled+0 job**（healthz `cron.enabled:false,jobCount:0`；无 cron 配置键；root/fleet 系统 crontab 双空）——08-26「唯一执行体=河源」段**失效**；河源端口拓扑亦变：今晨实勘 8710=trirmc（0.0.0.0 对外，quad-migration quadmig-2）+8711=TriRLC loopback，**8712 无监听**。③勘证链：值席报 R-HY 8710 空回→BOD 直达河源反转勘（宿主健康绿）→系阿里云安全组 8710 未放行（公网自打不通+iptables 无拦）——sg→R-HY 跨机链路不通，M2 cutover 硬前提缺项候 CEO。回滚口径照旧：两侧 PATCH 翻转（现役若需回河源须先解 cron disabled+补 job）。
 
 **2026-08-30 夜（董事会三修+冻结令，W35→W36 首跑前）**：①调度 23:59→**周日 23:00**（CEO 定：留补救窗，23:08 巡检兜底）；②**job payload 禁带 runAs**——trirmc.service 本身以 fleet 运行，runAs 走 runuser 必炸 "may not be used by non-root users"（rmc-orchestrate-tick 连错 248 实证；无 runAs=进程用户即 fleet，单身份不损）；③payload 前置 `cd /srv/fleet/TriMetaverse && git pull --ff-only sg-bare dev`——heyuan 无 TriMetaverse 拉取 job，clone 陈旧则 push non-FF 必拒；④迁移窗**冻结平面写入**=临时 disable sg daily-progress-watcher（唯一机器写入者），迁移验证通过后 PATCH enabled=true 解冻。⑤PATCH 经 /internal/v1/cron API（x-internal-token 在 systemctl cat 服务单元里）；applyJobPatch 对 payload 是整体替换，PATCH 时必须带完整新 payload。⑥同秒竞态消除（CEO 定）：sg daily-progress-watcher 槽位由 `*/10` 移至 `5,15,25,35,45,55`——22:55 末班先于迁移 23:00，增量被迁移 pull 吸收；周检齿条（LG-016 件 5）增"weekly-plane-shift lastRunStatus=ok"断言，迁移失败周一晨检即曝。
+
+**2026-10-18 迁移时点改定 23:50（CEO 20:45:50 令原文「把每周工作平面迁移定在23:50，不在23:00迁移了」）**：BOD 20:49 河源活体执行毕——TriRMC cron store PATCH weekly-plane-shift schedule `0 23 * * 0`→`50 23 * * 0`（Asia/Shanghai·三查绿=PATCH ok+nextRunAtMs 值面=23:50:00 北京+enabled=true）·command 字段零触碰（旧链物理隔离不变）·每周常设形态（TC 仓锚 f72bdc64e·TMV 仓同锚）；10-18 23:50 新时点首拍已实际跑过（f0de97360 W42→W43 平移毕）。上文历史段「周日 23:00」系落笔时点历史锚照冻结不改（truth-record-amendment-policy），现行时点以本段为准。
+
+**2026-10-19 23:0x CEO 口径增补（并入 5b 成文·W43 清淤窗）**：迁移=过渡机制非常态；原则态=COS 拆树顺序单进程（一树拆出→沿树执行→收口→再拆下一树），**此规则下一周最多允许 1~2 个树未完成**（23:12 勘正措辞）；未完树整树迁移三面分工禁混装=新周只挂未完成标记（unresolved carry-over·追踪指针非树搬家）/完成记录留发生周（不搬不移不复制）/档案树根周收口（树正身留挂账根周·最终收口落根周树位）；反面清单：迁移≠冻结旧周目录/≠完成记录搬新周/≠树目录整体搬家。裁执记正身=W43/trees/bod-rulings/ceo-rulings-a1-a2-a3-5b-20261019.md §五（dev 8106e4085）·与 5b 三小件（④⑤a+）同批成文。
 
 ## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
 
