@@ -232,3 +232,6 @@
   - d7b26e876 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 671cbe765 docs(bod): CEO 大表两件裁执——RISK-001 降 P2 观察态（md+json 双面·复发即升回）+VER-002 升 P1（双源分歧活体勘正②口径）+裁决卷落 bod-rulings
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:10 +08：自上次进度提交 5d87698fd 后新增 1 条 commit：
+  - 0da22667e docs(bod): §二十一 CEO委裁③——BUG-001 fixed-verified销账+残余边拆号REGR-20261020-001立（P3·CTO排窗修）+A-2直办销补齐大表+⑦议题材料呈报
+- registry：v2.1；今日 registry 提交无变化
