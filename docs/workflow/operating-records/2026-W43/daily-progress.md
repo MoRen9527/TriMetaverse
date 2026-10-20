@@ -143,3 +143,9 @@
   - 11b4b7843 merge: 并入 sg-server/dev 并行推进（c2235ad1b）
   - 553bf9a84 docs(cto): D'插件化评估卷——插件化机制可行不荐首选(bundle契约未承诺稳定+人日+1.5)·ACP改道发现(标准ACP v1协议+原生session/resume·P0红只杀SDK形)·P0'探针点=ACP resume挂web段(绿则同段续聊v2全目标复活)·两形四向对比荐独立进程形·窗位稿(P0'今18后空闲段·主线候周末·调用面排空闲段)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 e1a1b431e 后新增 4 条 commit：
+  - 0037499aa merge: 收编并行笔（值席落盘防覆盖）
+  - 4669cb6bb docs(coo): 台账一百八十三笔(A2断链闭合·BOD直办补达实锚·回报路由改判=工作区REPORT→BOD直读转知·306销办)
+  - 25ce73103 docs(cos): A2 窗2 直做窗开现态刷入大表 LG-087 行——CEO 10-19 21:38:53 照准 r-duty 直做窗开·BOD 10-20 SSH 直办转达（停令回询闭环·对象错位 BOD 发令侧自领）·毕报三送候收
+  - 8f355ef2a docs(bod): §十二(A2补转达对象错位勘误自领+BOD SSH直办补达毕·2259B落位属主归位·sg箱知会310→311·306请托销办)
+- registry：v2.1；今日 registry 提交无变化
