@@ -239,3 +239,12 @@
   - 340c03894 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 3bebafeff docs(bod): §二十二 CEO排窗令执行——AGENDA-001供应链基线转COS立题（三项按草案决议执行·窗位COS锚定）+大表行执行中+D'段2a APPROVE收记
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:30 +08：自上次进度提交 8c3d79958 后新增 7 条 commit：
+  - 0f7e2cb53 fix(cto): unresolved-items 补笔2——回填 FETCH 侧三处增量被整文件回退抹失面(19单头部行/BUG-001拆号REGR-20261020-001新立行/销账区两行)·AGENDA行与lastSyncedAt保留择新版
+  - 5dc77f3b8 fix(cto): merge 冲突标记勘误——上笔脚本炸致带标记落盘·整文件取第一亲版(两冲突块机械择新=HEAD 版·内容面 COS 复核候)
+  - c92a99484 merge: 收编并行笔（值席落盘防覆盖·毕报推前对表）
+  - 074d2b1c8 docs(cto): D'段2验收毕报——2a APPROVE四查复验+2b走查全绿四步(tmux非作者手测·resume上下文保持实证)+债册动态+边界合规
+  - 1d16fcd0b docs(cos): AGENDA-20260810-001 立题执行启动——CEO 10-20 20:09 令三项照建议决议执行·决议区回填（裁语=令原文）·排窗 10-25 周会议题段·unresolved 行刷执行中·落地动作表现势重排候任务书正身
+  - 4db5e945c docs(fsd-workbench): 观察期台账 10-20 拍——armed/failStreak=0/空轮+NOTIFY 已知族注记(段2a 夜段施工窗)
+  - 7dc900898 docs(cos): A2 全线收官零遗留刷入大表 LG-087 行——COO 194 笔 114f9118·#7 探针全绿毕销·BOD 三裁落账·A 组实质收官
+- registry：v2.1；今日 registry 提交无变化
