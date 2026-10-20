@@ -296,3 +296,14 @@
   - 70d9b4a78 merge: 收编并行笔（值席落盘防覆盖）
   - 993bd9a42 docs(coo): 台账二百零二笔(BOD部署窗收执·排窗链全闭环·防并号注8791≠8712照录·窗前静默期)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 2427fcdcb 后新增 9 条 commit：
+  - f732dafb5 Merge origin/dev into dev (BOD m-pm crash-fix note push sync)
+  - 6c13808ca docs(bod): A1回填续笔——m-pm上线故障三棒处置毕（pwsh7.6.6零宽窗崩溃定性→--resume零命中盘勘=零历史→v3 -n注册形上线 m-pm[3332c0]）+compass PM session手册锁笔
+  - f261cda17 docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - 3ba039456 docs(fsd): E1-4 假警修复细案——勘验答数(POST body无时戳计数·内存lastSeenAt在而端点缺)+b案三笔改动细目(端点真值面根除假警)+c案不成立如实报·候CTO终裁
+  - 2d93e2582 docs(cos): 大表 A3 v2 出单刷+A1 watchdog 尾巴销净（CTO 三事回执·A1 全链零残面·22:21 记）
+  - 591ac93e8 docs(cos): 大表 A1 尾巴②销注（CHO seats 常量补毕双锚在链·watchdog 候 CTO 仍在途·22:17 记）
+  - 0b6d14afc docs(cos): A-1 TriMC 半边转态已处置+A3 注刷剩余施工面四件（BOD 22:09 CEO 令直查定性·与 COS 考古互证·22:11 记）
+  - b7391ca07 docs(fsd): LG-085 P0 步2毕报——bod-cli v0.1 四域聚合落地(md5 3ecdfe8175af·对平门禁过)+勘验三发现(e1b2观察者假警实锤·D-46值面事故报备·18710 keeper收口)+A3预勘/ACP进度
+  - 1ccf698e5 docs(cos): 大表 A3 行注施工单候按现实改单（TriMC 目录 10-15 已 rm 毕收口卷实锚·BOD 巡检异动核实毕·22:07 记）
+- registry：v2.1；今日 registry 提交无变化
