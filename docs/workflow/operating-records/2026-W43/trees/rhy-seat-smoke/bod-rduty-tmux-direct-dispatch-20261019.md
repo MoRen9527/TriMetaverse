@@ -252,7 +252,7 @@
 |---|---|---|---|
 | A1 | **PM 编制三案**（CHO 试岗评估） | **已裁 2026-10-20 两段**（20:51「按CHO建议案执行」→21:12 改裁「直接转正」）——免试岗正式化路径在途（五件套→六环→roster 13→14·CHO 施工中·估一日级） | W41 cho-pm-staffing-eval+cho-pm-onboard-window-20261020 |
 | A2 | **LG-085 ②** P0 排程+ACP 勘验窗 | **已裁 2026-10-20 21:22（CEO：「A2 裁：LG-085 ② 按CTO答卷执行」）**——按答卷终态（纯 daemon 面全通零会话依赖）入执行面·CTO 施工中 | 台账 L3616 |
-| A3 | **Q1 TriMC→TriMMC 系统面改名** | **已裁 2026-10-20 21:31（CEO：「照审计卷建议执行」）**——步3 归一窗 a-d+步4 案 A（unit 保留 trimc）·CTO 施工筹备中·窗位建议稿候呈 CEO | W42 q1-trimc-legacy-name-assessment-20261015 |
+| A3 | **Q1 TriMC→TriMMC 系统面改名** | **已裁 21:31+窗位圈准 21:38（CEO 两窗并裁）**——步3 归一窗 a-d+步4 案 A·窗=10-21 18:00 后独立窗·顺序双窗（部署窗先行→归一窗接续）·CTO 施工单出单中 | W42 q1-trimc-legacy-name-assessment-20261015 |
 | A4 | **BOD onboarding 报告协议** | 候 CEO 终审签批·台账零挂账 | W42 bod-onboard-report-protocol-20261014 |
 | A5 | **duty-audit-agent-roles 修订** | 只审不改毕·修订候 CEO 复核另下令·台账零挂账 | W42 树 |
 | A6 | **duty-roles-optimize B1/B2** | B1 受托协作面候批+B2 KPI 映射候 CFO 会签+CEO 认可·台账零挂账 | W42 树 |
