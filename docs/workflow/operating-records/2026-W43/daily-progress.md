@@ -137,3 +137,9 @@
   - 4721c54de docs(cfo): CEO计价时段令承接入卷——deepseek高峰/空闲分档护栏落排工质疑权·首例轻提示COO
   - 2ddba4a55 docs(bod): CEO双令收执§十补落dev(同wt/board)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:30 +08：自上次进度提交 c2235ad1b 后新增 4 条 commit：
+  - ac5329d88 docs(bod): §十一补落dev(同wt/board)
+  - e718908b1 docs(coo): 台账一百八十二笔(BOD三问答·A2四件零开工实锚·断链=duty-cos转写环节·索引勘正305/306·毕报三送缺过渡代偿注)
+  - 11b4b7843 merge: 并入 sg-server/dev 并行推进（c2235ad1b）
+  - 553bf9a84 docs(cto): D'插件化评估卷——插件化机制可行不荐首选(bundle契约未承诺稳定+人日+1.5)·ACP改道发现(标准ACP v1协议+原生session/resume·P0红只杀SDK形)·P0'探针点=ACP resume挂web段(绿则同段续聊v2全目标复活)·两形四向对比荐独立进程形·窗位稿(P0'今18后空闲段·主线候周末·调用面排空闲段)
+- registry：v2.1；今日 registry 提交无变化
