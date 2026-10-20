@@ -201,3 +201,6 @@
   - 5d359172d Merge remote-tracking branch 'sg-server/dev' into wt/board
   - a4c1f1dd0 docs(bod): §十七 A2 复工 wake 补达——r-duty 无常驻进程=令件无消费者根因·dsh headless 通道三正形（fleet 身份+session- 前缀全 id+nohup）·拾取三证（段 35360→62098B+agent 自述+进程在役）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:10 +08：自上次进度提交 5c8813cc3 后新增 1 条 commit：
+  - e9cf346a9 docs(rduty): A2 窗2 施工毕报落树——四件逐件读数+门禁候审（LG-087 段B 补验件）
+- registry：v2.1；今日 registry 提交无变化
