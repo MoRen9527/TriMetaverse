@@ -340,3 +340,10 @@
   - b605d4ff7 docs(coo): 台账二百一十一笔(CTO自领收记·发毕对表兜底闸自获·真值锚18:58:05宁缺勿造·第二十二案候选转CAO)
   - 42fbb1c4f docs(rduty): 8791 token 轮换毕报落树——旧 401/新 200/44 会话全在（形变已报）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:30 +08：自上次进度提交 65987ed62 后新增 5 条 commit：
+  - 76ee80bc7 docs(coo): 台账二百一十八笔(CTO gate接单回执收记·v1信面今晚余窗后段v2卷面候窗·合规注记hook挂载呈CEO批脚本先行·裁量全认)
+  - 5617ec059 docs(coo): 台账二百一十七笔(CAO二十四案终判收记·升档正形首验三信照行·gate拦截升建议即办正式派工单达CTO·BOD死线包对表1毕2施工1挂起)
+  - c28314ddb feat(fsd): bod-cli v0.2 仓内落位——运行位 sg /srv/fleet/bod-cli md5 64e2004973e0 同版锚·lastAgeMs 真值形+双形分流注（LG-085 P0 交付物·债条销项）
+  - 3386a13ed Merge remote-tracking branch 'origin/dev' into dev
+  - 4d17176a0 docs(fsd): ACP勘验窗阶段卷——双pin实锚+initialize通+session/new -32603悬点定性·候续窗攻sdk query交互面
+- registry：v2.1；今日 registry 提交无变化
