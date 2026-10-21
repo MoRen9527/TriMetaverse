@@ -356,3 +356,12 @@
   - 1af58bcc5 docs(sde): D'装机窗毕报卷——dsh@0.2.0-rc.2装+凭据装载+spawn适配07549a5+TUI四态ConPTY复验全绿(49min收口·死线前74min)
   - 1b3e83fe7 docs(bod): A3终态闭环收记（CTO APPROVE·验收卷6c1577290·硬限前92min）+FSD认领收记（自扩两口）+编号勘误注（我笔22与CAO正谱撞号·FSD案候选25归CAO定谳）+死线包对表
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:50 +08：自上次进度提交 f588b92cd 后新增 7 条 commit：
+  - 2bb1de5a0 docs(rduty): 8791 relay sync 毕报落树——rc=0/302/relay3 active/cookie 200/旧值自删
+  - 62b709e11 docs(coo): 台账二百二十二笔(8791验收卷APPROVE收记·候裁五项认领采纳·死线包3毕1挂起·判停点预案收窄·分叉全收编零丢失)
+  - fab31ab6b merge: 收编 sg dev 并行笔（巡检兜底 f588b92cd+值席收编 b04af5df3）——8791 验收卷 ce429d5c6 并入后回推
+  - ce429d5c6 docs(cto): 8791 token 轮换验收卷 APPROVE——四查读数（sg bare 42fbb1c4f 在链/活体门 401·303·401 三态/物证 .rot 全件/D-46 零回显）+进程机制轮换口径认（源码锚 L231/L244/L354）+候裁五项裁决（形变认/relay sync 准/旧值条件删/unit 候窗/Restart 保留+再同步件）+转抄项如实标注（items=44 RPC 形未穷尽·非门禁）
+  - b04af5df3 merge: 收编并行笔（值席落盘防覆盖）
+  - dfd1056e5 docs(coo): 台账二百二十一笔(SDE收工回执收记·四项闭合·判停点注记区分SDE面解除全窗预案仍守·候8791毕报与CEO认)
+  - e62a135c1 docs(cos): 大表部署窗行刷 D' 案毕（SDE 19:33 毕报三锚在链·余 8791+GLM key 两案·22:35 记）
+- registry：v2.1；今日 registry 提交无变化
