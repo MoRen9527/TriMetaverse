@@ -307,3 +307,14 @@
   - b7391ca07 docs(fsd): LG-085 P0 步2毕报——bod-cli v0.1 四域聚合落地(md5 3ecdfe8175af·对平门禁过)+勘验三发现(e1b2观察者假警实锤·D-46值面事故报备·18710 keeper收口)+A3预勘/ACP进度
   - 1ccf698e5 docs(cos): 大表 A3 行注施工单候按现实改单（TriMC 目录 10-15 已 rm 毕收口卷实锚·BOD 巡检异动核实毕·22:07 记）
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-21（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @18:50 +08：自上次进度提交 dae41c346 后新增 6 条 commit：
+  - e2f8acdc4 docs(cfo): 10-21三锚积压合并锚——周窗80%(距二档5pt·重置前大概率不至)·CTO窗前对表答80%窗可照排·停复工令面双如实注·meter超时缺读
+  - 30f984346 docs(bod): COO判读回执认+双裁示——duty-cos静默件裁候明窗勘（空闲态误报四理由）+hub-silent-detect灰度判据缺陷转FSD·判停点20:14预案认
+  - c2cbdfb04 docs(bod): CTO接令回执落卷——A3四件全单接手+三项裁量定谳（token3c=轮·8711禁同换）+拆分判据自持·施工转派FSD在途
+  - 500f1beb0 docs(coo): 台账二百零五笔(CEO死线提前令收记·20:44死线重排·三件可全装判读·判停点20:14·duty-cos-silent附报)
+  - 0b33dd362 Merge origin/dev (BOD window dispatch push sync)
+  - f66a375e6 docs(bod): 10-21窗令双派工——CEO死线20:44令执行·A3归一窗四件施工令达CTO+部署窗死线提前令达COO（D'装机装不下即回拆）·BOD盯收口
+- registry：v2.1；今日 registry 提交无变化
