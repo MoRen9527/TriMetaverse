@@ -365,3 +365,9 @@
   - dfd1056e5 docs(coo): 台账二百二十一笔(SDE收工回执收记·四项闭合·判停点注记区分SDE面解除全窗预案仍守·候8791毕报与CEO认)
   - e62a135c1 docs(cos): 大表部署窗行刷 D' 案毕（SDE 19:33 毕报三锚在链·余 8791+GLM key 两案·22:35 记）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:00 +08：自上次进度提交 1c92b4278 后新增 4 条 commit：
+  - 69e7e2dc9 docs(bod): 死线窗终态收记——三件全毕（A3/D'/8791全链）判停点解除+D-47案链全闭环（26案注销·指涉错位改判·跨席指控撤回）+候CEO两件汇总（GLM key后置认+gate hook挂载批）
+  - 1bc6090eb docs(coo): 台账二百二十三笔(relay sync终验收APPROVE·8791线全闭·部署窗三件全毕·死线包3毕1挂起·判停点预案解除·指纹跨卷一致ecd22c34)
+  - b1e09cf70 merge: 收编 sg dev 并行笔（巡检兜底 1c92b4278+relay sync 毕报落树 2bb1de5a0）——终验收卷 c9343b9f8 并入回推
+  - c9343b9f8 docs(cto): 8791 relay sync 终验收卷 APPROVE·部署窗 8791 线全闭——消费面独立复验（relay3 pid 528093 活+18790 注入 302+8791 门 401）+.dsh_tok 指纹 ecd22c34 跨卷全同+零残留+探针双假警报勘销记（bus 视图≠服务态/路径拼错）+裁决五项落实零偏差
+- registry：v2.1；今日 registry 提交无变化
