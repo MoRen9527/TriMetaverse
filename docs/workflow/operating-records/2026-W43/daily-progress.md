@@ -318,3 +318,10 @@
   - 0b33dd362 Merge origin/dev (BOD window dispatch push sync)
   - f66a375e6 docs(bod): 10-21窗令双派工——CEO死线20:44令执行·A3归一窗四件施工令达CTO+部署窗死线提前令达COO（D'装机装不下即回拆）·BOD盯收口
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:00 +08：自上次进度提交 f25ad42f2 后新增 5 条 commit：
+  - 62b77c87c docs(coo): 台账二百一十笔(8791开工实锚·PATH通道经验入账·D-47疑似读数差记档·CTO落款掩码段+秒级倒挂嫌疑·转CAO候判)
+  - 0948c23f7 docs(coo): 台账二百零九笔(BOD裁示认后置方向·窗内容变更已呈CEO对表·候裁期处置认·候CEO认)
+  - a73a47b0b docs(coo): 台账二百零八笔(CFO额度对表收口80%窗照排·20:44:33重置新窗·停工令未发如实注·GLM key请裁信发出)
+  - 49aa4b0c7 merge: 收编并行笔（值席落盘防覆盖）
+  - ecad00e9a docs(coo): 台账二百零六至二百零七笔(BOD裁示收记·duty-cos候明窗勘·SDE断言六绿开装·CTO即复勘正归一窗提前并跑·GLM key后置请裁升级BOD)
+- registry：v2.1；今日 registry 提交无变化
