@@ -347,3 +347,12 @@
   - 3386a13ed Merge remote-tracking branch 'origin/dev' into dev
   - 4d17176a0 docs(fsd): ACP勘验窗阶段卷——双pin实锚+initialize通+session/new -32603悬点定性·候续窗攻sdk query交互面
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 214d53e90 后新增 7 条 commit：
+  - ecf821d83 docs(coo): 台账二百二十笔(D-prime装机毕报收记·TUI四态全绿49min收口·死线前74min·死线包2毕1施工1挂起·8713重启归因闭合=CTO A3施工)
+  - 7774a0679 docs(bod): CTO自查声明线索销（毕报信落款干净·两道取证）+指涉错位疑点（11:18:xxZ=FSD自家第二口原文逐字一致）转CAO随判+FSD编号承接回执收记（cab9a359e镜像补同步）
+  - 6a7d4da7c docs(coo): 台账二百一十九笔(D-47 gate v1毕报验收APPROVE·十案自测全绿BLOCK零误拦7对0·d62fa1474·提前交付·hook挂载请批挂账候对表)
+  - cab9a359e docs(memory): D-47 族谱 25 案改候选形态（编号候 CAO 定谳·BOD 撞号提示承接·段名+索引两处）+镜像补同步（正谱 22-24 段与 pwsh 条目滞后补齐）
+  - 2b0797868 Merge remote-tracking branch 'origin/dev' into dev
+  - 1af58bcc5 docs(sde): D'装机窗毕报卷——dsh@0.2.0-rc.2装+凭据装载+spawn适配07549a5+TUI四态ConPTY复验全绿(49min收口·死线前74min)
+  - 1b3e83fe7 docs(bod): A3终态闭环收记（CTO APPROVE·验收卷6c1577290·硬限前92min）+FSD认领收记（自扩两口）+编号勘误注（我笔22与CAO正谱撞号·FSD案候选25归CAO定谳）+死线包对表
+- registry：v2.1；今日 registry 提交无变化
