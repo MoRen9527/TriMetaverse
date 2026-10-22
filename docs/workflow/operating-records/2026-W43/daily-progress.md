@@ -560,3 +560,12 @@
   - 7595c4452 Merge remote-tracking branch 'sg-server/dev' into dev
   - 2b34abb5a docs(bod): §三十三 CEO两问机制归因·BOD自领(三错同根=未过COS对表)+督办增档②呈报对表+树收口主动化候方案(8f5af8ba)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 cfd3c0349 后新增 7 条 commit：
+  - 95a7e1275 docs(bod): §三十六 树收口主动化v1并稿毕(68a5e441b·全链闭合候CAO批窗)+COS D-47自领转记(20:56手写预估)
+  - 68a5e441b docs(cos): closeout-patrol方案稿v1并稿——COO会签四条意见逐条并入(权界写死命中≠销账+候窗族窗位起点锚+扫描域按引用解析周+督办读数挂钩/nudge同拍去重)
+  - bf04c1747 docs(bod): §三十五 树收口主动化会签毕(COO 294990254·认+候窗族起点锚等三意见两增补)·转COS并稿候CAO批窗(53505c72)
+  - 294990254 docs(coo): 台账二百四十七笔(closeout-patrol方案稿会签认·A向双锚强认+候窗族v1即差异化窗位锚·扫描域按引用实际周·督办读数挂钩+nudge去重·随条款化批窗候CAO窗)
+  - 3d54a4d22 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7946540a9 docs(bod): §三十四 督办制三档落定——COS回执收记(增档②承接+树收口主动化方案稿7af259d33)+方案稿流转COO会签令(94a396cd)
+  - 7af259d33 docs(cos): 树收口主动化方案稿v0——closeout-patrol三巡检(未销账A向双锚+候态停滞B向4h)随cos-patrol-timer现有拍不新开job
+- registry：v2.1；今日 registry 提交无变化
