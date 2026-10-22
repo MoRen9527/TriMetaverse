@@ -255,8 +255,8 @@
 | A3 | **Q1 TriMC→TriMMC 系统面改名** | **已裁 21:31+窗位圈准 21:38（CEO 两窗并裁）**——步3 归一窗 a-d+步4 案 A·窗=10-21 18:00 后独立窗·顺序双窗（部署窗先行→归一窗接续）·CTO 施工单出单中 | W42 q1-trimc-legacy-name-assessment-20261015 |
 | A4 | **BOD onboarding 报告协议** | **勘正销账 2026-10-22（BOD 自裁·D-39 大表审批件全域授权面·事后呈报）**——原行「候 CEO 终审签批」陈旧：CEO 已 10-14 14:24 总批（「报到制四条全批，按CAO五步走，链形照CTO澄清型」·joint-review-summary-bod.md §六 签批录）+施工步④ board 首例报到演练闭环双签毕（cao-step4-closeout.md 10-14 23:3x·LG-077 承接链四步全通）；残候窗两小件不候裁（第三 job 规格扩行 CAO 会同 BOD+真重启补测随 BOD 下自然重启窗） | W42 bod-onboard-report-protocol-20261014 |
 | A5 | **duty-audit-agent-roles 修订** | **已裁 2026-10-22 11:42（CEO：22项照单批+F3-1 定谳「个人社交归social层工作层面归employee层」+退役主件归档留作沿革）**——批令转 COS 立任务书分诊施工（F1-3 格式项候 CEO 顺手裁·不阻塞余 21 项） | W42 duty-audit-agent-roles-20261012 |
-| A6 | **duty-roles-optimize B1/B2** | **勘正 2026-10-22（BOD 呈前核验·原行两处陈旧）**：B1 稿头已载 CEO 10-14 批语「B1 批，但注意与 tree 协议结合」+CAO 会签毕（三处候正落稿）；B2 同批语「B2 批，与 FADE 结合」+CFO 会签毕（三点全同意+影子运行细则并入）——真候裁面=B1 施工启动确认（13 席 agent-body 增受托协作面节·任务书面 CEO 确认制）+B2 最终稿实施启动认可（fade-registry 立 FADE-PERF-001+双席互判+首期影子运行只记不挂奖惩）；**随 A5 队列一并呈中** | W42 duty-roles-optimize-20261013 |
-| A6 | **duty-roles-optimize B1/B2** | **已裁 2026-10-22 11:48（CEO：「批，都开工，跑」）**——B1 施工启动批（13 席 agent-body 增受托协作面节·CHO 五件套批量+D-07 发布收口）+B2 实施启动批（fade-registry 立 FADE-PERF-001+CFO/CHO 双席互判+首期影子运行）·流转 COS 立任务书（随 A5 任务书族） | W42 duty-roles-optimize-20261013 |
+| A6 | **duty-roles-optimize B1/B2** | **已裁 2026-10-22 11:48（CEO：「批，都开工，跑」）**——呈前勘正注：原行「B1 候批+B2 候 CFO 会签」两处陈旧（实况=两件均 10-14 已批+CAO/CFO 会签毕·真候裁面=施工启动）；B1 施工启动批（13 席 agent-body 增受托协作面节·CHO 五件套批量+D-07 发布收口）+B2 实施启动批（fade-registry 立 FADE-PERF-001+CFO/CHO 双席互判+首期影子运行）·流转 COS 立任务书（随 A5 任务书族） | W42 duty-roles-optimize-20261013 |
+| A7 | **board contract 口审后半** | **勘正销账 2026-10-22（BOD 呈前核验·原行「19 条候补充半途」严重陈旧）**：口审实录 25 条（contract 19+frontmatter 1+body 5）→四席联审毕→**CEO 10-13 21:49 签发令**（裁点 1-4 全准）→六步施工毕（N1-N6·D-48..51 铸条/contract v4.0/双宿主重渲/CGR+CLAUDE.md 追平）→CHO 验收 PASS→COS 终验 PASS（10-13 23:52·n6-final-verification-cos.md）→**LG-075 销账**→10-14 丢条假阴性 15:42 修复真平——全链闭合零候办 | W42 bod-contract-review-20261013 |
 
 附：评分档位校准候 W42-W43 完整周期读数——周期已满候触发（与 A1 关联批）。
 
@@ -324,5 +324,7 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 
 - **A6 批令收记+流转（10-22 11:48·hook 现戳锚）**：CEO 裁语「批，都开工，跑」——①B1 施工启动批（13 席 agent-body 增受托协作面节·CHO 五件套批量+D-07 发布收口）②B2 实施启动批（fade-registry 立 FADE-PERF-001+CFO/CHO 双席互判+首期影子运行只记不挂奖惩）——流转信达 COS（msg a095c655·立任务书可并 A5 族·B2 排程归 COO 面树协议现役派工位）。大表 A6 行已转已裁。
 - **A7 呈前勘正销账（10-22 11:5x·hook 现戳锚 11:48 承前）**：呈前核验 contract-review-notes-bod.md 全卷——口审实况=25 条录毕（第二批 frontmatter 1 条+body 5 条 10-13 21:19 已录）→四席联审毕（COO/CAO 回执在卷 21:26/21:32）→**CEO 21:49:02 签发令**（裁点 1-4 全准+「bod 董事会不算错误」备注·称谓勘误撤销）→董事会令发 COS 六步施工→**N1-N6 全毕+CHO 验收 PASS+COS 终验 PASS→LG-075 销账**（n6-final-verification-cos.md 五项判据全绿·10-13 23:52·销账锚六笔 commit 链）→10-14 勘误段 C 项丢条假阴性 15:42 修复真平——**A7 全链闭合·大表行「19 条候补充半途」系未刷陈旧·BOD 自裁勘正销账（D-39 大表审批件全域授权面·事后呈报）**。**A 类七件至此全闭**：A1-A4/A7 五件早已毕·A5/A6 今日裁毕流转在途——候 CEO 队列清零（唯一剩余=F1-3 description 格式小项候 CEO 顺手裁·随 A5 任务书挂候裁注不阻塞）。
+
+- **大表行修复+挂载毕报收记（10-22 11:51·hook 现戳锚）**：①大表 A6 双行并一行（并行窗错位勘正·互踩族形态如实注）+A7 行补入勘正销账版（上轮 Edit 未命中系表行已被并行改写·重取现势后修）。②**CTO 挂载毕报收记**（11:50:37 落款 date 现查原值）：gate hook 自动挂载施工毕——`.claude/settings.json`（项目级 git 面真源）+`hooks/d47-gate-hook.mjs` wrapper·PreToolUse/SendMessage 精确匹配·闸正身 TriCompany d62fa1474 零改（十案回归绿）·commit 9b824315a；**生效机制勘正=hooks 变更 file watcher 热加载·挂载即对现役席生效无需重启窗**（cwd 于 TriMetaverse 全会话覆盖·13 席+BOD 零豁免·sg duty 组 pull 后同效）；双机落定 hash 双对表（settings b68287d6d37b/wrapper 6b4360714127）·github 443 断连挂账候 mirror 链自愈；wrapper 四案自测 ALL PASS；**毕报信本身=闸下首信真实链路 PASS 放行（首验样本）**；三勘销+D-46 自领如实入卷（cat 用户级 settings 未预滤·env 含密值面入本席 transcript·本机面不出仓·候 CAO 记档）；毕报正身=W43 trees/d47-gate-hook-mount-20261022/brief.md@667e96507·**观察窗 24h 误伤回报通道照用**。BOD 回执已发。
 
 （卷面落款：2026-10-20 20:28:35 +0800·BOD）
