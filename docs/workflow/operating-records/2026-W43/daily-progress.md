@@ -398,3 +398,15 @@
   - efbc0185a docs(bod): §二十三续 A5呈批发出——全员岗位职责审核22项修订建议呈CEO复核裁（P1x7/P2x15·零P0）+三亲裁点随文
   - f616a70af docs(bod): §二十三 大表收口令——A4呈前勘正销账（10-14已总批+步④演练闭环双签·挂态陈旧·D-39自裁面）+CTO挂载施工催办信+候CEO队列改A5-A7
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 3bf1becaa 后新增 10 条 commit：
+  - 7c6f1c07d docs(bod): §二十三终 A6批令收记流转+A7呈前勘正销账——LG-075全链闭合实证（签发→N1-N6→验收PASS→终验PASS→销账）·A类七件全闭候CEO队列清零
+  - 6d77f5059 docs(cto): F3-4 毕报落 a5 树——15/14 倒排勘正毕（TC 4415bfd 双通道推平）·CHO 验收门报备·发布拷贝候攒批窗重渲
+  - 4d49180d6 docs(cos): A5任务书F3-1缺口补裁闭合记账——BOD裁CAO主勘定性+CHO批量施工（两分场景改写文案CAO定稿·CHO承办10席落稿）
+  - 937f4947b docs(bod): §二十三续 A5流转启动收记+F3-1归属补裁——任务书4af2432b3七席分发在案·BOD补裁CAO定性+CHO批量施工（D-39分派面·照COS建议案）
+  - 4af2432b3 docs(cos): A5任务书立卷——CEO 22项批令施工路由分诊（CAO主勘7/CHO批量2/COS自办2/席owner5/FSD管线3·F1-3挂候裁·F3-1归属缺口标注）
+  - bcd82cb54 docs(bod): §二十三续 A6呈前勘正+呈批——大表行两处陈旧勘正（B1已批+CAO会签毕/B2已批+CFO会签毕）·真候裁面收敛两件施工启动确认一并呈CEO
+  - 667e96507 docs(cto): D-47 闸挂载毕报——全席 SendMessage 前置生效·双机落定（sg 工作树 hash 全同）·三勘销+D-46 自领·github 443 挂账候自愈
+  - 1044a0b35 docs(bod): §二十三续 A5批令收记+流转——CEO三段裁语（22项照单批+F3-1定谳个人社交social/工作colleagues+退役主件归档留沿革）转COS立任务书·F1-3候顺手裁注
+  - 30107342f Merge remote-tracking branch 'sg-server/dev' into dev
+  - 9b824315a feat(gate): D-47 时刻闸 hook 自动挂载——CEO 10-22 11:18 裁「挂」（锚 08cbcb3c2）·PreToolUse/SendMessage 全席前置生效·wrapper 适配层+项目级 settings 挂载段·正身 TriCompany d62fa1474 零改·自测四案+十案回归全绿·闸缺位 fail-open+留痕
+- registry：v2.1；今日 registry 提交无变化
