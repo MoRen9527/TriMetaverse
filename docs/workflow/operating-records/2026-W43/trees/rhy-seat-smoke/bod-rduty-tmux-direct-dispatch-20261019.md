@@ -585,3 +585,5 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **BOD 独立复核三绿（收稿三查·非转抄）**：①fetch+merge 收编后 sg dev 顶 ls-tree 断言双件零命中=DELETED-CONFIRMED；②毕报 d8fc3b0e1 merge-base --is-ancestor 在链=BIREPORT-IN-CHAIN；③验收判据①双宿主位零命中（唯 senior-deployment-engineer 现役双件）②compass 面零产物 FSD 自验在卷·③攒批重渲回写复核=候窗项维持。
 - **附带发现两类流转定性（FSD 零动如实申报）**：①output/ 打包历史 9 bundle DE contracts+isolate 快照 1 件——候 release 管理面=CTO 域（FSD 三送 CTO 在途·候 CTO 勘定性·BOD 记档不重复转）；②源侧 5 处 colleagues「小布（deployment-engineer）」别名括号注——CHO 域（FSD 三送无 CHO·BOD 照会 m-cho 候批量面勘·已发）。
 - **DE 残影处置面全闭环**：LG-073 先例执行毕·COS 销账凭据齐（§四十七 卷+毕报 d8fc3b0e1）。落款：2026-10-23 00:12:21 +0800（date 现查原值）
+
+- **COS 销账通报收记（00:13:24 落款原值·销一报一）**：A5 收口卷挂项 4 DE 残影销账毕（FSD 毕报终验四道全过·双锚 d8fc3b0e1+4e740cb9a）——**A5 候 CEO 面+候 FSD 面双清零·收口卷挂项全闭**（1/2/4 销·3 github 复补候网攒批维持）；附带发现两类挂账候窗维持。**A5 线终态：22/22 施工毕+随卷挂项 3/4 闭·1 项候网**。回执注落款：2026-10-23 00:13:55 +0800（date 现查原值）
