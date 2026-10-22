@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T10:04:00+08:00",
+  "updatedAt": "2026-10-19T21:40:17+08:00",
   "maintainer": "COS(m-cos)",
   "schemaNote": "items[]: id/desc/owner(责任面)/nudge(催办名址)/dispatchedAt(+08:00 ISO)/timeoutMin/mode(enforce=超时催·observe=只记录不催)/status(pending|done)/receipt(pending|received·COS 会话对拍后更新)｜W42→W43 平移（2026-10-19 本席手动·daemon 拍向已切 W43·watchlist-missing 修复）",
   "items": [
@@ -251,6 +251,48 @@
       "receipt": "pending",
       "receiptNote": "CAO 10:02 裁量定形（制度§2既定分工落实+首例缺位缺口实证+本席认承在先）——首执10-25 14:00后随评审节律常设",
       "treeRef": "R6=TriCompany/docs/workflow/weekly-demand-review-workflow.md §四(TC 9d79ee4)"
+    },
+    {
+      "id": "a1-charter-today-window",
+      "desc": "A1 四 daemon 窗起提醒 job=CEO 终审批已得·候 COO 拆任务书进今日(周一)窗·任务书面=CEO 确认制(D-39 增补段)候书出",
+      "owner": "COO 拆书→CEO 确认",
+      "nudge": "m-coo",
+      "timeoutMin": 240,
+      "mode": "observe",
+      "status": "closed",
+      "dispatchedAt": "2026-10-19T13:36:01+08:00",
+      "treeRef": "W42/weekly-demand-review-20261018.md §六⑦ 93328b2b9",
+      "receiptNote": "CEO 21:00 照准已派 CTO（施工窗 21:00-22:00）——BOD 21:02 知会·闭环·执行毕锚=CTO 验收毕报(21:17:53·431998c33 亲验在链)·零施工+验收实测三件全绿·候 BOD 对表销账(226b9dfa)",
+      "receipt": "2026-10-19T18:24:55+08:00",
+      "closedAt": "2026-10-19T21:02:13+08:00"
+    },
+    {
+      "id": "a2-lg087-segb-window",
+      "desc": "A2 LG-087 段B=有条件重排·补验件=窗2 四件候 COO 排窗",
+      "owner": "COO",
+      "nudge": "m-coo",
+      "timeoutMin": 1440,
+      "mode": "observe",
+      "status": "closed",
+      "dispatchedAt": "2026-10-19T13:36:01+08:00",
+      "treeRef": "同上",
+      "receiptNote": "CEO 21:38:53 裁照准 r-duty 直做窗立即开——BOD sg 箱派工令 306+转达请托 307·COO/CTO 同步·毕报三送候收·BOD 对表销账面就绪·8712/8710 两窗候部署稿定名连带",
+      "receipt": "2026-10-19T18:24:55+08:00",
+      "closedAt": "2026-10-19T21:40:17+08:00"
+    },
+    {
+      "id": "a3-ide-config-check",
+      "desc": "A3 python-leak=禁 black-formatter 扩展自动触发·候 COO 三案原文核对→落本机 IDE 配置面(涉 CEO 机器·落地前 CEO 一句确认)",
+      "owner": "COO 核对→CEO 确认→落配置",
+      "nudge": "m-coo",
+      "timeoutMin": 1440,
+      "mode": "observe",
+      "status": "closed",
+      "dispatchedAt": "2026-10-19T13:36:01+08:00",
+      "treeRef": "同上",
+      "receiptNote": "CEO 21:00 照准确认稿·已派 COO 线执行——BOD 21:02 知会·转呈面闭环·执行毕锚=SDE 施工毕(21:14:32 报·4ac9c9103/1db7bc0a1 亲验在链)·观察窗起点 13:12:55Z·patrol 保持役·退役候零击杀日(BOD 对表 582a8406)",
+      "receipt": "2026-10-19T13:38:09+08:00",
+      "closedAt": "2026-10-19T21:02:13+08:00"
     }
   ]
 }
