@@ -84,3 +84,10 @@
 - A11 铸形件：2026-W40/ceo-review-coo-batch-c3-scan-a11-cast-20261002.md（§A11 铸形基准+CGR ⑤e 裁定）
 - 纪律册现行版：D-13/D-21/D-26/D-29/D-30/D-39/D-47/M-001（TriCompany/docs/workflow/engineering-disciplines.md）
 - COS 样板：COS agent-body L40（M-001 本体段）+L59（F3-1 勘正版句形）
+
+## 七、尾勘注（2026-10-22 CHO 补笔窗·CAO 定性 12:4x）
+
+- **C1-② 终态修正（勘正本卷原「十处」）**：CHO 补毕我 12:30 指认两处（CHO colleagues L11 甲形+COO session-body L28 乙形·TC 0d891df·validator CHO PASS）；全形谱双保险扫（「升级[^。]*CEOChiefOfStaff」）再抓组件面 3 处（CPO agent-body L160「升级回」变体+contract.yaml L48/L140·TC 0692755·CPO validator PASS·live 三面重渲 drift=0）。**组件面（agent-body/soul/colleagues/memory/session-body+contract）旧升级语清零**。根因注：我原锚「升级到 CEOChiefOfStaff」单形，漏「升级」无到变体——锚单形化教训并入假读数家族读法（grep 猜形族同向）。
+- **合成件 11 处残留定性（CAO 裁）**：`<id>.agent.md` 同名合成件旧升级语 11 处（CHO L93/94、CPO L87/100、CTO L98、CFO L88/90、COO L90、CAO L97、CMO L89/91）——**两不取：不入 A5 尾修面、不另立批面，维持裁语③「归档留沿革·零触碰」原判**。依据：①manifest（trimetaverse-live-agent-publish-manifest.json）实勘发布链 source=agent-body 组件、不消费合成件=非现役病灶；②重新合成=追改归档件违裁语③原意——旧语在归档件中系沿革真实性的一部分。附读法纪律：**合成件仅供沿革考古，禁作现行口径引用源**——查升级路由一律读组件面。
+- **validator 疑点路由 CTO 域（本卷不裁工具内部）**：组件-合成同步校验（validator L236-244）在合成件漂移下仍 PASS——校验语义（子命令级/粒度差/或校验对象本非组件↔合成一致）=工具面勘题候 CTO 面。
+- A5 整树收口前置状态：CHO 批量面至此全毕（组件面零残留+C3-1 十二席插行毕+F1-3 随窗落候 CEO 追认）——COS 面可启动整树收口。
