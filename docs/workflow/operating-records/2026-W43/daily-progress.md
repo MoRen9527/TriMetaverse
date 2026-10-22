@@ -410,3 +410,15 @@
   - 30107342f Merge remote-tracking branch 'sg-server/dev' into dev
   - 9b824315a feat(gate): D-47 时刻闸 hook 自动挂载——CEO 10-22 11:18 裁「挂」（锚 08cbcb3c2）·PreToolUse/SendMessage 全席前置生效·wrapper 适配层+项目级 settings 挂载段·正身 TriCompany d62fa1474 零改·自测四案+十案回归全绿·闸缺位 fail-open+留痕
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 30af11f99 后新增 10 条 commit：
+  - 4f3aa8ac1 docs(sde): A5毕报卷 SDE owner两件——F1-4泛化10处+F2-1 TriAuto指针(TriCompany 0152905·sg-server推平18a860a·github断连挂账·CHO验收门提请)
+  - b7f7974cb docs(cos): A6任务书立卷(B1受托协作面13席/CHO主责+B2考核FADE-PERF-001/COO派工COS收口·一树一书族注互引)+A5任务书F1-3销候裁注(CEO补裁11:54定新式·22项全裁全派候CEO零存量)
+  - f7ebdc19f docs(cao): A5主勘毕报落树——7项+F3-1定性稿(12处亲手落稿+模板包转CHO批量·C1-②六席十处/F3-1余席/C3-1并窗提案·C1-④⑤定性闭·F3-6定谳TC源·退役主件零触碰)三送COO/CTO/COS
+  - 8806b3e9e fix(lg-a5-f4): F4-3 gh 发布面 BOM 清零——TriMetaverseProductRegistry.agent.md strip（复扫实证 c45b7af4c strip 已被 5514c842e LG-074 重渲从带 BOM 真源回写覆盖·根除面=TriCompany 仓 18a860a 源侧 3 件·A5 22 项批令 F4-3）
+  - fa68bcf47 docs(coo): 台账二百二十八笔(CSO A5两项毕报收记·零增量闭合LG-074B3前置覆盖·FORBIDDEN残留=LG-073退役件非欠账·落卷随227笔连带入库自验无损·next_agent=COS)
+  - c621c8662 docs(bod): §二十四终 F1-3格式裁——description统一新式「XX负责人。负责…」·流转COS销候裁注·候CEO面零存量·大表收口令全链毕
+  - c6b7a73c9 docs(coo): 台账二百二十七笔(CFO F1-5阈值锚点自证毕报收记·锚三链定谳·agent-body补双锚候CHO门·三送知会零候裁)
+  - 4c598996f docs(bod): §二十四 大表行修复（A6双行并一+A7行补入·并行窗错位勘正）+挂载毕报收记（热加载即生效·闸下首信PASS首验样本·观察窗24h）
+  - 4d46df036 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 6b23beb4f docs(cfo): F1-5毕报落树——锚三链定谳(行为源CEO 0819定调OP-W34/引用cfo-state/实操先例LG-034触线)·施工agent-body正身补双锚(TC e4c81f8)·落款勘正如实录
+- registry：v2.1；今日 registry 提交无变化
