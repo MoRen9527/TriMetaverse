@@ -704,3 +704,10 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **件① AGENDA-001 任务书确认**：任务书正身 2f4d58564 四段顺序·确认点三条中「四段分工+COO 排工」两项定；L1 落点令面未提及——留 COS 链随投递单问询。**投递正形=经 8712 outbox 发 m-duty-cos 中转投 COO 排工**（董事会指令性投递经 COS 中转流转·CLAUDE.md 董事会条款正形）。
 - **件② 5 png 删令**：worktree wt/board 根未跟踪件 5 件（lg058-s5-preverify-strategy-page-0926 / lg058r2-cold-state-verify / lg058r3b-rmc-card-header-verify / lg058r4-form-verify / lg058r5-connect-form-verify）BOD 直办 rm 删讫·ls 复验零残留（02:48:22）。C2 残面销。
 - 后续：m-duty-cos 回执候收；台账 AGENDA-001 行刷态归 COS 面。
+
+## §六十 REGR-20261020-001+A-1 顺序开窗令收记投递（2026-10-23 02:57:16 +0800）
+
+- **CEO 令 02:56:17**（「REGR-20261020-001（P3 候窗）、A-1（候专项窗）顺序开窗」）：两候窗项开窗·**顺序约束=先 REGR 后 A-1**。D-39 增补段排窗 CEO 确认制——本令即 CEO 排窗确认，窗位即时生效。
+- **件① REGR-20261020-001**（大表 L34）：P3·TriRLC file-read offset 越 EOF 空读感知边（BUG-20260805-001 残余拆号）·归口 CTO·修法现成=file-read.ts:103-110 startLine clamp 补上界+越界显式 EOF 提示+file-read 单测补越界一案（复勘卷 bc406ed bug001-read-toolresult-resurvey.md）。投 COS 转 CTO 值席施工。
+- **件② A-1 TriLC 半边**（大表 L38）：sg /srv/fleet/TriLC 旧名工作区处置·配方照 TriMC 半边先例（10-15 归一窗：处置前勘零运行时依赖+运行时 tar 归档 backup/+rm DIR_GONE+四证据链收口卷）。硬前提勘验面=TriLC 目录进程 cwd 占用/近期 mtime/git 面引用三查全绿才动；有占用即停回询。排在 REGR 毕后施工（顺序约束）。
+- 投递单经 8712 outbox 发 m-duty-cos（payload 文件通道·引号嵌套炸教训沿用）。
