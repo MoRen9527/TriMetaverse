@@ -726,3 +726,7 @@
 - 巡检兜底补写 @02:50 +08：自上次进度提交 74beeb757 后新增 1 条 commit：
   - 66c601868 docs(bod): §五十九 AGENDA-001 任务书 CEO 确认收记——投 COO 排工经 COS 中转·png 5 件删令直办销 C2 残面
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @03:00 +08：自上次进度提交 034c585c0 后新增 2 条 commit：
+  - 6573e0d69 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 84949d659 docs(bod): §六十 REGR-20261020-001+A-1 顺序开窗令收记——先 REGR(CTO 面 file-read 越界修)后 A-1(sg TriLC 半边处置·TriMC 先例配方)
+- registry：v2.1；今日 registry 提交无变化
