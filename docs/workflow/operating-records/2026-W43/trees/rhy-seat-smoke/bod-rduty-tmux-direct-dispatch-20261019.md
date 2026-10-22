@@ -649,3 +649,12 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **补读数信入箱**：ntf-mvjsk96719zfff（1906 封·received_at=17:04:54Z 机器值）——LG-084 读数回写形·引前信 id·四项全绿·候 CAO 置 read=true=双签齐闭环。
 - **勘误注**：ssh 首探用别名 sg-server 不存在（Could not resolve hostname）——查 ~/.ssh/config 正名=M-SG-47.245.122.61 二发即通；教训=ssh 别名先对 config 现查禁凭记忆。
 - 落款：2026-10-23 01:05:17 +0800（date 现查原值·shell 注入）
+
+## 五十五 · output/ 磁盘面清理执行毕（CEO 裁令·督办①候销）
+
+- **CEO 裁令**：01:21:18「output/ 就按你说的办，留 v0.4.10 删其余」——即批 BOD 建议（留现役版 v0.4.10-r20·删旧版本+旧日志面）。
+- **CTO 前置两项先办**：①DE contracts 删前留档——9 版包内 trilc/contracts（917K~961K each）全量拷仓外留档位 D:/Code/ai/TriMetaverse-archive/de-contracts-20261023/（8 删除版+全 xiaoke 面共 9 条目/7.6MB/1650 文件/零 FAIL·v0.1~v0.3 无 contracts 面）；②xiaoke-isolate-support 勘定——124K/18 文件/mtime 08-20 隔离联调支撑件·现役无引用·随档留档后原位删（争议面归零）。
+- **防线**：12 删除目录全树扫 ReparsePoint=0（Remove-Item 穿 junction 警戒·D-29 族正形）——零链接面放行。
+- **删刀读数**：12/12 目录删毕+xiaoke 补删——删前 3.9GB/146,843 文件→删后 1.02GB/13,899 文件·回收约 2.9GB/13.3 万文件；余面=v0.4.10-r20（回滚用）+顶层散件 112 条（近期施工 log/json·留勘面）。
+- **留档位注**：D:/Code/ai/TriMetaverse-archive/=仓外 sibling（不进 git 扫描面·TriMetaverse 仓 status 零扰动）。
+- 落款：2026-10-23 01:24:11 +0800（date 现查原值·shell 注入）
