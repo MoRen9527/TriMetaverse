@@ -606,3 +606,7 @@
   - 698f1b4c5 merge: 步3判落卷收编并行笔（值席§二十三全量树审计段+BOD §四十四两段全保留）
   - 84a0e24a0 docs(bod): §四十四 四daemon窗步3(sg 8712)勘罢免装判——E1-5在役承接(1667拍零错+今夜21:32窗起实战落卷)+免装防双发+形态统一候CTO
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:20 +08：自上次进度提交 314b24b6b 后新增 2 条 commit：
+  - 7bd134afa merge: 收编并行笔（脚本缝修复落盘防覆盖）
+  - 22b8303ca fix(ops): window-reminder-patrol 扫面根接 TRILC_WR_REPO env 缝——跨机缝修复（BOD 步4·候 CTO 追认）
+- registry：v2.1；今日 registry 提交无变化
