@@ -668,3 +668,18 @@
   - a66296666 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 41c4b314b docs(bod): §五十 回执1 COS四档改标毕收记——十项逐行落标+②CAO催办已发+③顺序单立+D-47闸拦截实证入档
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @01:00 +08：自上次进度提交 7881a602e 后新增 13 条 commit：
+  - c8972721e docs(bod): §五十三 BOD存量补约四步走通(D-52报到链复活形·报到信+两job重挂+自检三查+已领已验回信)+COS同窗三销收记+督办④报到卷落树7min现势
+  - 490b41976 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - ccf19111b docs(bod): §五十二 CTO毕报三件收记——督办⑨两半全达转COS终验+output/裁决git面采认磁盘面转呈CEO候裁
+  - 061ca4b48 merge: 收编并行笔（值席落盘防覆盖）
+  - 2b09d47c8 docs(coo): 台账二百五十五笔(CTO台账对表两件收记·督办⑨后半P0回执补齐候COS销+output/release裁决毕956件git面卸载·FSD挂池候裁件有主落定)
+  - 491ce1356 docs(rduty): dsh 序3 上线报到补行卷落树（r-duty-cos→CAO）
+  - 262784ddd Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - fd0fb57e0 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 7247ac960 docs(bod): §五十一 CAO第三job规格回值(失活勘正·活体三方探)+CTO备轨令执行(dsh headless直发r-duty-cos拾取成立)——D-47落款虚标当场自获勘正入档
+  - 7ea5f9206 Merge remote-tracking branch 'sg-server/dev' into dev
+  - c09a0e1dc docs(cto): output/ 打包历史面勘定裁决卷——产物不进 git 纪律定性·git 面卸载已执行(c1e1430db)·磁盘面候确认不本窗·DE contracts 18件 tracked 留档实锚
+  - c1e1430db chore(release): output/ 打包产物区卸载 tracked+gitignore 盖面(CTO release 管理面裁·FSD DE 残影勘定附带发现①承接)——产物不进 git 纪律·历史 blob 留 git 史(LG-073 同款自然留档)·磁盘面删除候确认不本 commit
+  - 6d11f5e07 docs(cos): m-cto 催办回执收记——督办④序3 三问逐答（备轨未发自领·卡点收敛 BOD 启备轨单点·链形不变）+CTO 触发器整改挂账知悉
+- registry：v2.1；今日 registry 提交无变化
