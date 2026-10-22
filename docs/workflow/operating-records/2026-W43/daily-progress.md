@@ -713,3 +713,13 @@
   - c5c65f57b Merge remote-tracking branch 'sg-server/dev' into dev
   - 2f4d58564 docs(cos): AGENDA-001 执行链重锚——任务书正身出稿（四段顺序·候 CEO 确认·不等 10-25 周会）+草案卷状态行勘正（实质已批件）+大表 L41 行现势刷新（CEO 01:57 纠正令①③④兑现）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:20 +08：自上次进度提交 ab4118c4b 后新增 8 条 commit：
+  - 64ac1c9a0 docs(coo): 台账二百五十九笔(COS销账裁决收记·督办⑥三站先销+8710残项挂账窗位锚=R面通道恢复·第9报走BOD→CEO·督办单现势销9.5余0.5+残项在盯)
+  - 7a5c83bc2 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 68ef23c77 docs(cto): 销账锚卷勘修——8710 段初判值面缺→BOD 02:14 补验实锚绿(河源卷 015828+fired 键同秒互证·四站四卷齐全实锚销)·修正留痕初判原文保留·通道教训收记(单路不通≠链路死·-J 跳板优先)
+  - 771f5a2bf Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 5a81f2734 docs(bod): §五十八 督办⑥销账——四daemon窗毕拍四站全实锚(01:55:00/01:55:06/01:57:49/01:58:28全落容差带)·BOD跳板通道补验CTO 8710缺口(fired键同秒互证零重拍)·形态两族如实注
+  - 1e40b4191 docs(coo): 台账二百五十八笔(窗毕正拍验证毕收记·三站实锚绿01:55/01:57+8710残项通道断如实挂候窗不虚销·督办⑥=三站达残项挂账候COS销·兜底闸使命解除已删·窗正式毕)
+  - f0f83fdfe Merge remote-tracking branch 'sg-server/dev' into dev
+  - 66f9b17d2 docs(cto): 窗毕催收正拍验证销账锚——四站对表三站实锚绿(8711 01:55:00/8713 01:55:06/sg 8712 01:57:49 全落容差带)+fired 键零重拍+8710 旁证绿值面缺如实挂补验+owner 收口确认毕窗(02:06 cron 锚触发·两正拍卷同树入库)
+- registry：v2.1；今日 registry 提交无变化
