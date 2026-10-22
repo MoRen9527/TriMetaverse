@@ -384,3 +384,7 @@
   - c98ef6196 Merge remote-tracking branch 'origin/dev' into dev
   - 9297dce64 docs(cto): SEC-20260924-001 终裁注记——CEO 10-22 裁不轮换·裁决闭账（风险接受态非消险）·残留面在案低危观察位·CTO 面勘定随批（COO 知情点②·SEC 件 owner=CTO/SEC 流程面）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 bbb0befdc 后新增 2 条 commit：
+  - b81f8f2ce Merge remote-tracking branch 'sg-server/dev' into dev
+  - 28abb7d47 docs(cfo): 10-22 W43新窗首读1%·W42收窗定谳(峰值80%未触二档·预警随重置解除)·同锚对跨窗失效注·meter复通460.9M/153.3M·cron现役在册核验
+- registry：v2.1；今日 registry 提交无变化
