@@ -525,3 +525,7 @@
   - 7bc8aeaf0 docs(bod): §二十九流转毕补录——双令信达m-cos(c50dd067)·候回执
   - a0a1241ad docs(bod): §二十九 CEO双令收记——四daemon窗起提醒job终审批+十项在途督办制立（m-cos盯·销一报一·链形=COS验销→报BOD→即转CEO）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:50 +08：自上次进度提交 410344b37 后新增 2 条 commit：
+  - 10969376d merge: 收编并行笔（值席落盘防覆盖）
+  - 417d8dfaf docs(coo): 台账二百四十四笔(四daemon提醒job授号承接·排工单落树10-23晨08-12共生窗段内细化·递推8713-8711-8712-8710分工CTO本机段值席sg r-duty河源·门禁五查+首窗实测=督办第6项销账判据·台账windows段现势化清理3条陈旧转留痕+w43装设窗条目在册)
+- registry：v2.1；今日 registry 提交无变化
