@@ -662,3 +662,9 @@
   - 2e485e176 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 2c07519a6 docs(bod): §五十 排窗纪律查问收记——候窗用词四档勘正+②③⑨改标顺序执行+VER-002修复段pacing界定(纠正令两封在途候回执)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:50 +08：自上次进度提交 3c8bacb8b 后新增 4 条 commit：
+  - f56589b4c Merge remote-tracking branch 'sg-server/dev' into dev
+  - 23cce887f docs(cto): 督办⑨后半判据件——LG-085 P0 毕报验收回执（BOD 00:37 催办·四候裁项逐项判定·两半判据全达候 COS 终验锚）
+  - a66296666 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 41c4b314b docs(bod): §五十 回执1 COS四档改标毕收记——十项逐行落标+②CAO催办已发+③顺序单立+D-47闸拦截实证入档
+- registry：v2.1；今日 registry 提交无变化
