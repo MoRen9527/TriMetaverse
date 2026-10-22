@@ -697,3 +697,10 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 **形态分野如实注**（三 daemon 免装/承接形）：8713/8711/8710=window-reminder-patrol.mjs 同构形（卷名 end-*·落卷随 isoWeek W43）；8712=E1-5 python 承接形（window-reminder-scan-8712.py·卷名「窗提醒-end-*」·落卷随台账周 W42·周定位反向扫形态）——四站拍发语义一致·落卷形态两族如实并存。
 
 **owner 收口确认**：CTO 02:13:35 锚信=窗正式毕窗（窗内四步装设+跨机两发+P0 验收回执+output/ 卸载+VER-002 全链毕）。督办⑥销·cron 951f55b1 验证锚 job 完役。
+
+## §五十九 AGENDA-001 任务书 CEO 确认收记+png 删令直办（2026-10-23 02:48:34 +0800）
+
+- **CEO 令 02:47:43**（会话令原文「任务书确认，投COO排工。png删」）两件：
+- **件① AGENDA-001 任务书确认**：任务书正身 2f4d58564 四段顺序·确认点三条中「四段分工+COO 排工」两项定；L1 落点令面未提及——留 COS 链随投递单问询。**投递正形=经 8712 outbox 发 m-duty-cos 中转投 COO 排工**（董事会指令性投递经 COS 中转流转·CLAUDE.md 董事会条款正形）。
+- **件② 5 png 删令**：worktree wt/board 根未跟踪件 5 件（lg058-s5-preverify-strategy-page-0926 / lg058r2-cold-state-verify / lg058r3b-rmc-card-header-verify / lg058r4-form-verify / lg058r5-connect-form-verify）BOD 直办 rm 删讫·ls 复验零残留（02:48:22）。C2 残面销。
+- 后续：m-duty-cos 回执候收；台账 AGENDA-001 行刷态归 COS 面。
