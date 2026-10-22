@@ -479,3 +479,6 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **BOD 裁（21:32:08 date 原值·msg_id 645ae719）**：步 3（sg 8712）/步 4（河源 8710）由 BOD SSH 承接——方案稿 §四既有权界内不另开授权；步 3=sg 侧 /srv/fleet/ git 取包→装设→三查（DATA_DIR 先对）；步 4=ssh  跳板避阿里云限 IP·非 dsh 面·TriRMC addJob 先勘后装照旧勘停即报；时点=CTO 步 2 毕+脚本包 sg bare 在链·COO 同步报即起跨机段。sg 值席缺位态（裸 root shell）与河源 tmux 形未存续如实记——不再候值守。
 - 附记：sg watchdog 01:20 告警 trirlc-8711 healthz-unreachable——CTO 开工前活体断言已覆盖，不另行转达。
 - 收记落款=2026-10-22T21:32:46+0800（date 原值·BOD）。
+
+- **§四十一卷面勘正（随即）**：步 4 通道原文因 heredoc 反引号被 shell 命令替换吞字——正形应为：跨河源 SSH 路由=ssh 的 -J sg 跳板（ProxyJump=sg·避 R-HY 高频连触阿里云限 IP）。教训记档：写卷 heredoc 含反引号/美元符必须用引号定界符（quoted heredoc）防中间层隐式变形。
+- 勘正落款=2026-10-22T21:33:27+0800（date 原值·BOD）。
