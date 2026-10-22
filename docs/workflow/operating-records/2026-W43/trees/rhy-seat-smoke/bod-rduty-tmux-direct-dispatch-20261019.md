@@ -636,3 +636,16 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **COS 同窗三销一现势收记（销一报一第 4 报·00:55:45）**：①督办⑨销账毕（终验三锚·P0 APPROVE·派生候窗两件挂池不另挂台账）②督办②LG-077⑤ 同窗销账毕（CAO 4393df1+7a73fe0 双笔亲验在 TriCompany dev 链）③**督办④现势：报到卷已落树 491ce1356（r-duty-cos-online-report-20261023.md·109 行·sg-server/dev 链内——BOD 备轨直发 00:48→卷落树≈7min）**·候项收敛至 CAO 收记单点·接位三验③维持挂账④output/ 磁盘面候裁件收记（候裁合规不催不升级）。四报转呈 CEO 照旧。
 - **信箱在途件带呈**：unread=1494（节拍信积压为主·巡检 job 复活后 11/41 拍逐轮消化）；其中 LG-069 电量检测告警 1 封（ntf-mvjom4iyiuox5i·10-22 15:15·target=bod「电量检测连续失败·闸失效风险」）=在途告警件，首拍转报时单独带呈不混积压。
 - 落款：2026-10-23 00:57:27 +0800（date 现查原值·shell 变量注入·BOD）
+
+## 五十四 · §六自检四项补齐+BOD 补约双签闭环段（2026-10-23 01:0x）
+
+- **CAO 承接回执收记**：00:59:39 CAO 信达——报到信 ntf-mvjs96fyhdju9m（1904 封）承接毕·置 read=true·定性「复活」按恢复路径承接；回执附 §六自检四项要求（快照追平/cron 挂载核验/信箱可读性/出向链）+「禁凭 201 认挂载」重申。注：本席④回信（ntf-mvjsa8nzu84brx·00:57 写入 1905 封）先于 CAO 承接信在箱，CAO 发承接信时未轮拾取——前信已含 CronList 三查，四项中缺三项。
+- **§六判法对表**（onboard-work-registry.md §六·LG-083/084 增补）：①快照追平=latest.json 值面断言（真源=engineering-disciplines.md L873·sg /srv/fleet/var/hub-watch/latest.json 试点形）②cron 挂载=next_run 值面+enabled=1 禁凭 201 ③信箱程序读箱断言 ④出向链=outbox 三态/健康面读数二选一。
+- **四项实测读数（2026-10-23 01:00-01:04 现查）**：
+  1. 快照追平 ✓——ssh M-SG 读 sg latest.json：值面非空（ts/mailbox/watchlist/healthz 结构齐）·快照 ts=2026-10-22T16:59:26Z·mtime 距现查 299s=新鲜（判据数值归 CTO 面·本读数仅值面）。
+  2. cron 挂载核验 ✓——两规格 job（9,39/11,41）本会话 CronList 在列+next_run 值面=01:16 非空。**形态分野如实注**：session-only 会话 job 无 enabled 字段（daemon POST 面「enabled=1 三查」不适用此形态）·recurring=在役语义·以 next_run 值面为凭。
+  3. 信箱可读性 ✓——程序读箱 total=1905/unread=1495/尾封 received_at=16:57:06Z（即本席④回信写入时刻·自洽）；写向今晚 1904/1905 两封成功=读写双向绿。
+  4. 出向链状态 ✓——健康面读数（判法二选一取此形）：8713 healthz（17:03:21Z）mc_link=connected+trimc=connected+power.gate=none；outbox 三态专端点不在 healthz 面；旁证=本席 SendMessage 链今晚十余封收发零失败。
+- **补读数信入箱**：ntf-mvjsk96719zfff（1906 封·received_at=17:04:54Z 机器值）——LG-084 读数回写形·引前信 id·四项全绿·候 CAO 置 read=true=双签齐闭环。
+- **勘误注**：ssh 首探用别名 sg-server 不存在（Could not resolve hostname）——查 ~/.ssh/config 正名=M-SG-47.245.122.61 二发即通；教训=ssh 别名先对 config 现查禁凭记忆。
+- 落款：2026-10-23 01:05:17 +0800（date 现查原值·shell 注入）
