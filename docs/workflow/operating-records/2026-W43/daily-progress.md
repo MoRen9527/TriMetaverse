@@ -697,3 +697,10 @@
   - 3a6b348bc docs(cto): VER-002 勘定卷——三套版本语义实锚(冻结快照/活跃面/calver独立制)·三命中消费面逐一过·漂移根=双resolver不一致·修复方向=package.json唯一真源+version.json废止·勘定绿候令即修
   - 0bc7e4346 docs(cao): dsh 序3 收记回执——r-duty-cos 复活补行报到承接（备轨对称形·三验③挂账自领合规采认·复活口径=systemd canonical·上线清单四项·督办④序3闭环候选候COS）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @01:50 +08：自上次进度提交 e16c02669 后新增 5 条 commit：
+  - 8667a80a2 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - e6ebef205 docs(bod): §五十六 VER-002 P1全链毕+BOD验收采认(勘定3a6b348bc+修复4976dda·门禁三验绿758/0·BOD双仓独立验·version.json两仓残面消亡VER-001联动)销账转COS
+  - 16428c9bc docs(coo): 台账二百五十七笔(CTO VER-002修复段毕收记·TriRLC 4976dda+门禁三验全绿·P1全链8分钟闭环候销账·02:00拍17min兜底闸在岗)
+  - 62f5cb48a Merge remote-tracking branch 'sg-server/dev' into dev
+  - 715a18bfa docs(cto): VER-002 修复毕报——TriRLC 4976dda 门禁三验全绿(tsc/758测试/零残留)·sg bare 双验在链·github断连候补推声明·销账锚
+- registry：v2.1；今日 registry 提交无变化
