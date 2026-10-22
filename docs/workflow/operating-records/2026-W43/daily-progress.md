@@ -388,3 +388,8 @@
   - b81f8f2ce Merge remote-tracking branch 'sg-server/dev' into dev
   - 28abb7d47 docs(cfo): 10-22 W43新窗首读1%·W42收窗定谳(峰值80%未触二档·预警随重置解除)·同锚对跨窗失效注·meter复通460.9M/153.3M·cron现役在册核验
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 e0163840e 后新增 3 条 commit：
+  - 353a2ebfd docs(coo): 台账二百二十六笔(CEO批gate hook自动挂载·候批件销账·裁语锚08cbcb3c2·BOD直达派工CTO·候CEO件全闭·D-47闸由手动转自动形态)
+  - 08cbcb3c2 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 6f9299ac0 docs(bod): CEO批gate hook挂载（裁语「挂」·config写面放行）——派工直达CTO施工+COO销账·候CEO两件全闭
+- registry：v2.1；今日 registry 提交无变化
