@@ -253,7 +253,7 @@
 | A1 | **PM 编制三案**（CHO 试岗评估） | **收官毕 2026-10-20**（21:12 CEO 改裁「直接转正」→CHO 六环验收全绿@6bb589e85+roster v1.1.0 13→14+CPO 会签@203cc69b1·B 案试岗批作废；21:54 BOD 代起 m-pm 实例在册 PID 26000——compass 手册 claude-session 面补渲染+首启 -n 注册形；余红=seats-operations.json 缺 PM 席级常量候 CHO 补环·watchdog 保护清单扩展候 CTO 面） | W41 cho-pm-staffing-eval+cho-pm-onboard-window-20261020+trees/pm-formalization/cho-formalization-report-20261020 |
 | A2 | **LG-085 ②** P0 排程+ACP 勘验窗 | **已裁 2026-10-20 21:22（CEO：「A2 裁：LG-085 ② 按CTO答卷执行」）**——按答卷终态（纯 daemon 面全通零会话依赖）入执行面·CTO 施工中 | 台账 L3616 |
 | A3 | **Q1 TriMC→TriMMC 系统面改名** | **已裁 21:31+窗位圈准 21:38（CEO 两窗并裁）**——步3 归一窗 a-d+步4 案 A·窗=10-21 18:00 后独立窗·顺序双窗（部署窗先行→归一窗接续）·CTO 施工单出单中 | W42 q1-trimc-legacy-name-assessment-20261015 |
-| A4 | **BOD onboarding 报告协议** | 候 CEO 终审签批·台账零挂账 | W42 bod-onboard-report-protocol-20261014 |
+| A4 | **BOD onboarding 报告协议** | **勘正销账 2026-10-22（BOD 自裁·D-39 大表审批件全域授权面·事后呈报）**——原行「候 CEO 终审签批」陈旧：CEO 已 10-14 14:24 总批（「报到制四条全批，按CAO五步走，链形照CTO澄清型」·joint-review-summary-bod.md §六 签批录）+施工步④ board 首例报到演练闭环双签毕（cao-step4-closeout.md 10-14 23:3x·LG-077 承接链四步全通）；残候窗两小件不候裁（第三 job 规格扩行 CAO 会同 BOD+真重启补测随 BOD 下自然重启窗） | W42 bod-onboard-report-protocol-20261014 |
 | A5 | **duty-audit-agent-roles 修订** | 只审不改毕·修订候 CEO 复核另下令·台账零挂账 | W42 树 |
 | A6 | **duty-roles-optimize B1/B2** | B1 受托协作面候批+B2 KPI 映射候 CFO 会签+CEO 认可·台账零挂账 | W42 树 |
 | A7 | **board contract 口审后半** | CEO 逐条口审 19 条已录候后续补充（半途） | W42 bod-contract-review-20261013 |
@@ -311,5 +311,7 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 
 - **CEO 批准 gate hook 挂载（10-22 11:18·hook 现戳锚）**：裁语「挂」——自动挂载批·config 写面放行；派工直达 CTO 施工（D-23 对轨列窗·BOD 席自身在挂载面内一并受闸）·COO 候批件销账。**候 CEO 两件全闭**（GLM key 不轮换+gate hook 挂载批）——18:39 死线令全链条（施工三件+裁决两件）收口。
 - 回填时点：2026-10-20 21:33:36 +0800（date 现查 shell 注入·D-47 卷面正形）
+
+- **CEO 大表收口令两段（10-22 11:32·hook 现戳锚）**：「催在途候毕报」+「A4-A7呈批，一件一件来」。①催办信达 CTO（挂载施工进度对表·msg 9311ef53）。②**A4 呈前勘正=非候裁件**：大表行「候 CEO 终审签批」陈旧——CEO 已 10-14 14:24 总批（报到制四条全批·按 CAO 五步走·链形照 CTO 澄清型·joint-review-summary-bod.md §六 签批录在卷）+施工步④ board 首例报到演练闭环双签毕（cao-step4-closeout.md 10-14 23:3x·LG-077 承接链四步全通·BOD 会签在卷）；残候窗两小件（第三 job 规格扩行+真重启补测）不候裁——**BOD 自裁勘正销账（D-39 大表审批件全域授权面·事后呈报知情）**，候 CEO 队列实=A5-A7 三件·A5 呈批随即发出。
 
 （卷面落款：2026-10-20 20:28:35 +0800·BOD）
