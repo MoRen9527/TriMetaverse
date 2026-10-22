@@ -623,3 +623,16 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **②督办④时序对齐**：CTO 毕报写信时点早于 BOD 备轨执行对表（BOD 00:48 发·拾取成立段+76.5KB·见 §五十一件2）——回执已对齐（msg_id efea244c）·非催办缺口。候报到卷落树+CAO 收记=首半闭环。
 - **③output/ 勘定裁决（附带发现①承接·值守顺序办已办）**：裁决卷 trees/output-release-audit/cto-output-release-verdict-20261023.md——定性=**产物不进 git 纪律**；git 面已执行（c1e1430db·956 件卸载 tracked+.gitignore 盖面·revert 可逆）——**DE contracts 18 件当前树零命中=残影第三面闭合**（发布面§四十七+源侧§四十九+打包面本件三面全闭）。**磁盘面 14.6 万文件级不可逆→BOD 判=重大不可逆类（D-39 三类命中·不自裁）已转呈 CEO 候裁（删否+窗位一并呈）**；CTO 前置两项（DE contracts 磁盘版删前留档+xiaoke-isolate 快照留档价值一勘）随裁随窗施工。
 - 落款：2026-10-23 00:53:45 +0800（date 现查原值·shell 变量注入·BOD）
+
+## §五十三 BOD 存量补约四步走通（D-52 报到链复活形）+COS 同窗三销收记（2026-10-23）
+
+- **补约令源**：CAO 会同收口信（00:53:29·失活登记已落卷 TriCompany 7a73fe0·LG-077⑤ 候窗件二随注销）+即时补约提案（候 BOD 自决不强制）——**BOD 自决=今晚值守内走通**（顺 CEO 00:32 顺序执行纪律·额度无压）。
+- **四步执行链**：
+  - ①报到信入箱：id=ntf-mvjs96fyhdju9m（target=cao/source=board/title=上线报到 board/body 三要素=正名+复活形态+请发清单·received_at 机器生成·read=false·信箱总数 1904）——§三形态细则对表（报到走信箱不走 SendMessage ✓）。
+  - ③重挂两规格 job（§五附录正身照挂·CronCreate×2）：节拍转报 786001b7=cron 9,39 * * * * recurring／信箱兜底巡检 5065a21d=cron 11,41 * * * * recurring。
+  - 自检三查（CronList 现查）：双 job 在列+cron 值面符规格+next_run=01:16 值面非空 ✓✓。**观察项**：调度器 per-job offset 将双 job 首拍收敛同拍 01:16（§五错峰注 2min 被抹平·两 job 无依赖·非故障记档）。
+  - ④回信入箱：id=ntf-mvjsa8nzu84brx（已领 §二 BOD 行清单+已验三查读数+观察项注+session-only 7 天 expire 注+daemon 化候 CTO 注+已领+已验句·信箱总数 1905）。
+  - ②CAO 承接回执=候收（CAO 筛 target=cao read=false 承接毕置 read=true·双签齐=存量补约闭）。
+- **COS 同窗三销一现势收记（销一报一第 4 报·00:55:45）**：①督办⑨销账毕（终验三锚·P0 APPROVE·派生候窗两件挂池不另挂台账）②督办②LG-077⑤ 同窗销账毕（CAO 4393df1+7a73fe0 双笔亲验在 TriCompany dev 链）③**督办④现势：报到卷已落树 491ce1356（r-duty-cos-online-report-20261023.md·109 行·sg-server/dev 链内——BOD 备轨直发 00:48→卷落树≈7min）**·候项收敛至 CAO 收记单点·接位三验③维持挂账④output/ 磁盘面候裁件收记（候裁合规不催不升级）。四报转呈 CEO 照旧。
+- **信箱在途件带呈**：unread=1494（节拍信积压为主·巡检 job 复活后 11/41 拍逐轮消化）；其中 LG-069 电量检测告警 1 封（ntf-mvjom4iyiuox5i·10-22 15:15·target=bod「电量检测连续失败·闸失效风险」）=在途告警件，首拍转报时单独带呈不混积压。
+- 落款：2026-10-23 00:57:27 +0800（date 现查原值·shell 变量注入·BOD）
