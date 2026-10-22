@@ -422,3 +422,13 @@
   - 4d46df036 Merge remote-tracking branch 'sg-server/dev' into dev
   - 6b23beb4f docs(cfo): F1-5毕报落树——锚三链定谳(行为源CEO 0819定调OP-W34/引用cfo-state/实操先例LG-034触线)·施工agent-body正身补双锚(TC e4c81f8)·落款勘正如实录
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 70d3df755 后新增 8 条 commit：
+  - 07923334f docs(fsd): A5毕报卷尾挂账增补——CTO回执三裁落卷(DE残影攒批窗显式清理挂周五窗清单+第十向报CAO c2434bae+F4-3候CHO验收门)
+  - 885d7a5c8 docs(bod): §二十五附二 COS供证读数收记——收信hook现戳12:01:50实证倒挂51-110s微差档
+  - e3a3e64ee docs(bod): §二十五附 D-47自领勘误——席间回执落款虚标现戳锚（手写12:00冒称hook挂点）
+  - 1297a9805 docs(cfo): A6-B2试点CHO考核试卷出卷——窗位10-22 14:00至10-24 14:00不跨重置·四交付物逐项验法·双hash冻结·影子只记不挂
+  - db4b2a714 docs(bod): §二十五 COS回执收记——A6流转毕(b7f7974cb·一树一书)+F1-3销注毕+A5毕报两件收记
+  - af9849576 docs(coo): 台账二百二十九笔(A6-B2试点派工三发CFO·CHO·COS·FADE-PERF-001首考核周期启动·立册补齐项①执行·CAO主勘毕报+SDE两件毕报收记·转CSO毕)
+  - f74c84663 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 207a1793a docs(fsd): A5管线owner三项毕报落树——F4-1复扫零残留定谳(LG-073既有施工c45b7af4c)+F4-2对表定谳零改动(管线gh注入/claude无=设计内·附DE退役残影新发现候裁)+F4-3实质施工毕(根因=真源BOM被5514c842e重渲回写·双仓四件strip·TC 18a860a+TMV 8806b3e9e·sg bare双真值验)·三送COO/CTO/COS
+- registry：v2.1；今日 registry 提交无变化
