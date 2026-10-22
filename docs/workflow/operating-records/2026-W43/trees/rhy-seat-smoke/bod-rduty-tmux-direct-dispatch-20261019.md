@@ -711,3 +711,11 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **件① REGR-20261020-001**（大表 L34）：P3·TriRLC file-read offset 越 EOF 空读感知边（BUG-20260805-001 残余拆号）·归口 CTO·修法现成=file-read.ts:103-110 startLine clamp 补上界+越界显式 EOF 提示+file-read 单测补越界一案（复勘卷 bc406ed bug001-read-toolresult-resurvey.md）。投 COS 转 CTO 值席施工。
 - **件② A-1 TriLC 半边**（大表 L38）：sg /srv/fleet/TriLC 旧名工作区处置·配方照 TriMC 半边先例（10-15 归一窗：处置前勘零运行时依赖+运行时 tar 归档 backup/+rm DIR_GONE+四证据链收口卷）。硬前提勘验面=TriLC 目录进程 cwd 占用/近期 mtime/git 面引用三查全绿才动；有占用即停回询。排在 REGR 毕后施工（顺序约束）。
 - 投递单经 8712 outbox 发 m-duty-cos（payload 文件通道·引号嵌套炸教训沿用）。
+
+## §六十一 投递链断点勘定+tmux 直发催毕（2026-10-23 03:50:14 +0800）
+
+- **巡检零真件后主动勘链**（三单 48-58min 无回执触发·「未发生定性必穷尽事件日志」纪律）：REQ-003 催办（ntf-mvjuqdcotrj06w·02:05 投）/AGENDA-001（ntf-mvjwbn0t8dcg66·02:50）/两窗开窗（ntf-mvjwli4fi86rnf·02:57）——outbox 三单全 delivered（ledger 链 accepted→forwarded 23s→delivered·forwarder 活到 03:01）→**mailbox 三单全 read=false**（02:58 后零拾取）。
+- **活体勘定**：13 个 m-duty session 全在（fleet socket=/tmp/tmux-1001/default· 显式指定才可见）；13 claude 进程全活（COS pts/8·Oct13 起）；COS pane=idle 空 ❯「值席候令中」。
+- **断点定性：notify→outbox 只解决「信落箱」，不解决「唤醒 idle 值席」——信到箱≠信到人**。duty 席无信箱轮询 cron（8712 的 14 个 jobs 零 mailbox 类）；idle 会话无 hook 驱动。02:16 COS 曾动=彼时本就在督办⑥干活窗顺手读箱。
+- **处置：tmux 直发催办送达**（03:5x）：（literal 文本+独立 Enter·Enter 吞噬坑恪守）→capture 验拾取=「✶ Slithering…」工作中，催办生效。
+- **正形沉淀（外网派工路由增补）**：sg duty 席投递=notify 落箱 **+ tmux 直发唤醒** 两段缺一不可（纯 notify=死信变体：信在箱无人读）；tmux 通道=。候 CTO 面评估自动唤醒钩子（outbox delivered 事件→send-keys 联动）。
