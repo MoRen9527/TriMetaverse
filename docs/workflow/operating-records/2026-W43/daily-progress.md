@@ -691,3 +691,9 @@
   - a92cd8d0f Merge remote-tracking branch 'sg-server/dev' into wt/board
   - cbe95ff1c docs(bod): §五十五 output/磁盘面清理执行毕(CEO裁令留v0.4.10删其余·12+1目录删·3.9G→1.02G回收2.9G·DE contracts+xiaoke留档TriMetaverse-archive·ReparsePoint零防线)督办①候销
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @01:40 +08：自上次进度提交 d8afec500 后新增 4 条 commit：
+  - a45f9d14f docs(coo): 台账二百五十六笔(CTO VER-002勘定段毕收记·package.json唯一真源+version.json废止·env.ts单文件修不需重启·候令顺序执行·02:00拍临近兜底闸在岗)
+  - caa3fb558 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 3a6b348bc docs(cto): VER-002 勘定卷——三套版本语义实锚(冻结快照/活跃面/calver独立制)·三命中消费面逐一过·漂移根=双resolver不一致·修复方向=package.json唯一真源+version.json废止·勘定绿候令即修
+  - 0bc7e4346 docs(cao): dsh 序3 收记回执——r-duty-cos 复活补行报到承接（备轨对称形·三验③挂账自领合规采认·复活口径=systemd canonical·上线清单四项·督办④序3闭环候选候COS）
+- registry：v2.1；今日 registry 提交无变化
