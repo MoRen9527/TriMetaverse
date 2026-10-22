@@ -379,3 +379,8 @@
   - 0e50b3bde Merge remote-tracking branch 'origin/dev' into dev
   - a11b93783 docs(bod): CEO裁决——GLM key不轮换（销账流转）+gate hook问询未批（大白话呈答中）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 995e5efdc 后新增 3 条 commit：
+  - 9486fa39e docs(coo): 台账二百二十五笔(SEC-20260924-001勘定毕收记·裁决闭账非消险闭账·残留面在案低危观察位·CTO面全闭环·部署窗全链收束)
+  - c98ef6196 Merge remote-tracking branch 'origin/dev' into dev
+  - 9297dce64 docs(cto): SEC-20260924-001 终裁注记——CEO 10-22 裁不轮换·裁决闭账（风险接受态非消险）·残留面在案低危观察位·CTO 面勘定随批（COO 知情点②·SEC 件 owner=CTO/SEC 流程面）
+- registry：v2.1；今日 registry 提交无变化
