@@ -641,3 +641,14 @@
   - 9eee69e65 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 494ea1bf7 docs(bod): §四十七 DE退役残影处置令收记——CEO 00:03 照LG-073先例批·先例正形勘清(发布面孤儿=删除面与源侧归档分野)·流转FSD施工+COS照会·A5候CEO面清零
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:20 +08：自上次进度提交 403d21b87 后新增 9 条 commit：
+  - f8fe2b3af Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - a175a52c5 docs(bod): §四十八 回执注——COS销账通报收记·A5收口卷挂项全闭(1/2/4销·3候网)
+  - 71eb344a6 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - dad86270b docs(memory): 假读数家族第十一向入谱——git quotepath 八进制转义毁中文路径 literal 匹配(quotepath=off 正形·FSD 10-23 自查同窗闭)+镜像同步
+  - 56eff7f36 merge: 收编并行笔（值席落盘防覆盖）
+  - de919ea23 docs(coo): 台账二百五十四笔(FSD毕报收记·DE退役残影双件清理毕git rm 4e740cb9a·A5半件收口·附带候裁两类挂池·知悉即可)
+  - d952615f6 docs(bod): §四十八 DE残影处置毕收记——FSD施工双件删BOD独立复核三绿·附带发现两类流转定性(output/候CTO·源侧别名注照会CHO)
+  - 9cacfacf5 Merge remote-tracking branch 'sg-server/dev' into dev
+  - d8fc3b0e1 docs(fsd): DE退役残影处置毕报——双件git rm毕·验收零命中·附带发现两类候裁候转
+- registry：v2.1；今日 registry 提交无变化
