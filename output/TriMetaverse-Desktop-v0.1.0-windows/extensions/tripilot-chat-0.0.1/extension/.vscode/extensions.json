@@ -1,9 +1,0 @@
-{
-  "recommendations": [
-    "vitest.explorer",
-    "hbenl.vscode-test-explorer",
-    "ms-vscode.vscode-typescript-next",
-    "eamodio.gitlens",
-    "ms-azuretools.vscode-docker"
-  ]
-}
