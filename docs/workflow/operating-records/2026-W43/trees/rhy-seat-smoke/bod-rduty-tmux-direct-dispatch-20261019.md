@@ -591,7 +591,9 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 ## §四十九 源侧 DE 别名注勘定收记+扩面追认（CHO 施工·2026-10-23 00:2x）
 
 - **CHO 勘定回执收记（00:21:02 落款原值·接 BOD 00:12 照会）**：定性=目录改名换代后失准的沿革残留（**非 A5 漏改**·实锚三件：名址四面一致官方 id 册面/2ce1c31 正名令 colleagues 零触碰/全仓不变式唯 SDE 分叉）；改法取正名目录形「小布（senior-deployment-engineer）」（非缩写形·合全仓全形注惯例）。
-- **施工毕独立抽验三绿（BOD 收稿三查·非转抄·TriCompany 仓 sg 顶 455ade7）**：①colleagues 面旧注「小布（deployment-engineer）」全源树零命中=CLEAN；②diff 面=5 文件 6 处与申报一致（colleagues 4 席 5 处+SDE session-body 1 处）；③SDE session-body L29 现值=源锚路径已追平  悬空消除。链路门 validator 5 席 PASS+双宿主渲染 drift 0+seats 15 identical CHO 自验在卷。毕报=TMV 5783eef1c（sg 顶 36e783f24 在树）。
+- **施工毕独立抽验三绿（BOD 收稿三查·非转抄·TriCompany 仓 sg 顶 455ade7）**：①colleagues 面旧注「小布（deployment-engineer）」全源树零命中=CLEAN；②diff 面=5 文件 6 处与申报一致（colleagues 4 席 5 处+SDE session-body 1 处）；③SDE session-body L29 现值=源锚路径已追平 `senior-deployment-engineer/agent-body.agent.md` 悬空消除。链路门 validator 5 席 PASS+双宿主渲染 drift 0+seats 15 identical CHO 自验在卷。毕报=TMV 5783eef1c（sg 顶 36e783f24 在树）。
 - **扩面追认（D-39 验收面全域授权·BOD 自裁·事后呈报）**：SDE session-body L29 悬空源锚路径随勘 1 处——**追认 PASS**：实病灶（目录已不存在的死链）·最小改动（1 行）·CHO 域内（session-body 五件套 CHO 主责面）·三类判据自检不中任一类（git 可逆/非硬约束/非 CEO 保留权）。
 - **零动清单采认**：CTO contract L60+roster supervises=官方 id 册面零动正确；SDE id 固定声明段零动正确（后半句「用于 manifest」失准注已归 SDE 自办面）。
 - **DE 残影附带线全闭环**：发布面（§四十八）+源侧别名注（本节）双面清零。落款：2026-10-23 00:22:21 +0800（date 现查原值）
+- **【卷面勘修注】本节上两行落卷时 heredoc unquoted 定界符+正文反引号被 bash 命令替换吞段（「源锚路径已追平」后路径文本丢失）——发毕对表自获即勘修补正，勘修=本 commit。教训并入：含变量注入 heredoc 正文反引号面先转义或改写（append 后回视对表闸再获一例）。**
+- **CTO VER-002 排期承诺收记（00:22:10 落款原值·接 BOD 00:17 催办）**：缺口自领（10-20 19:36 认方向未给排期=P1 挂账不闭环·「催得对」）；两段排期=①勘定段（本席自承只读直跑零风险·10-23 上午值守线内：version.json 消费面三命中逐一过+TriMLC 同型同治勘定→勘定卷落 W43 树）+②修复段（随勘定卷出窗位建议：消费面干净→TriRLC 小改+TriMLC 同治挂近期维护窗非独占·断链风险→方案升级候裁改报；走 COO 大表正常排不另立任务书）——**催办档以勘定卷为锚销·修复销账以窗内施工毕报为锚**。BOD 采认=两段形态合规（先勘后修·小面自承权限内省 CEO 确认面），VER-002 催办档转「候勘定卷」态。
