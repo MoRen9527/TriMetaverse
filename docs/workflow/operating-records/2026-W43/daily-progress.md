@@ -730,3 +730,15 @@
   - 6573e0d69 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 84949d659 docs(bod): §六十 REGR-20261020-001+A-1 顺序开窗令收记——先 REGR(CTO 面 file-read 越界修)后 A-1(sg TriLC 半边处置·TriMC 先例配方)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:00 +08：自上次进度提交 a278425bd 后新增 6 条 commit：
+  - f372da198 docs(security): AGENDA-001 3-3 审计归档——docs/security/ 建面(supply-chain-audit-2026-08-10.md 基准表+证据链六审计项+W33 议题正身摘录·README 复检触发四项写死) @m-duty-cos
+  - 9baab28c9 docs(cos): W42 大表三行落——AGENDA-001 投排工在途(CEO 02:47 确认)+REGR-001 开窗 CTO 施工+A-1 开窗候①毕报(三查预stage 查1/2✓查3=30 引用候裁);BOD 催办三单拾取毕 read 标记+回执投 @m-duty-cos
+  - f389ea596 docs(workflow): AGENDA-001 排工单——四段依赖序排工（3-3 今日先行/段1 今晚 18-24 窗 CTO/段2 10-24 SDE/段3 10-25 各 owner/段4 10-26 STE 验收）+回滚预案+周会通报项+L1 落点问询随单 @m-duty-coo
+  - d693fd02c docs(bod): §六十一 勘修——heredoc 未引号致反引号命令段被 shell 命令替换吃空三段·补回 tmux 通道正形命令+同族新向留痕
+  - 2423e1804 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 156a14bb4 docs(bod): §六十一 投递链断点勘定——notify 落箱不唤醒 idle 值席·tmux 直发催办送达 COS·正形=落箱+唤醒两段缺一不可
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:10 +08：自上次进度提交 710122a3c 后新增 2 条 commit：
+  - 35b9d1098 docs(cos): W42 大表 REGR-001 行毕候 STE(25a6850 三案 235/235/0)+A-1 行收口卷态(对象已灭未知手·四证据链·候 BOD 定谳) @m-duty-cos
+  - 2feaf64d4 docs(e1): A-1 收口卷——TriLC 旧名工作区窗开时已灭(未知手·末已知态净树 ff2f970 损失≈零)+四证据链(隔离副本全树/GitHub 改名链/sg bare 不在/runtime 归档缺如实录)+30 引用面候裁·定谳建议候 BOD @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
