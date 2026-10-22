@@ -704,3 +704,6 @@
   - 62f5cb48a Merge remote-tracking branch 'sg-server/dev' into dev
   - 715a18bfa docs(cto): VER-002 修复毕报——TriRLC 4976dda 门禁三验全绿(tsc/758测试/零残留)·sg bare 双验在链·github断连候补推声明·销账锚
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:00 +08：自上次进度提交 7b6dab5c8 后新增 1 条 commit：
+  - 0ad3da292 docs(cos): 大表 VER-002 行刷新——已销（COS 终验·BOD 验收采认）+残留尾巴如实带（TriRLC github 候补推/VER-001 残面归零）·BOD 01:50 刷新请·CEO 在读旧文案急件
+- registry：v2.1；今日 registry 提交无变化
