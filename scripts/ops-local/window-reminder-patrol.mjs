@@ -140,7 +140,7 @@ const ledgerCandidates = process.env.TRILC_WR_LEDGER_PATH
   ? [process.env.TRILC_WR_LEDGER_PATH]
   : (() => {
       const mk = ({ year, week }) =>
-        join(REPO, 'docs', 'workflow', 'operating-records', `${year}-W${String(week).padStart(2, '0')}`, 'window-ledger.md');
+        join(process.env.TRILC_WR_REPO || REPO, 'docs', 'workflow', 'operating-records', `${year}-W${String(week).padStart(2, '0')}`, 'window-ledger.md'); // 跨机缝（2026-10-22 步4 BOD）：扫面根同落卷根随 env 覆盖（原漏接→Linux 机恒扫 Windows 真仓路径恒 idle）
       return [mk(isoWeek(now)), mk(isoWeek(now - 7 * 24 * 3600 * 1000))]; // now 周 + 上周
     })();
 const windows = [];
