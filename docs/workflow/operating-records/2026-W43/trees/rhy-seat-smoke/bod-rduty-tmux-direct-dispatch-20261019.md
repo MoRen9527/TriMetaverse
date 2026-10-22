@@ -489,3 +489,10 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - 正拍预告：今晚 02:00 窗毕催收拍（endReminder=true）=首窗实测销账锚；观察项=容差带错过即永久丢拍（补拍语义候窗会签）——随督办⑥销账判据跟踪。
 - **BOD 通道更新回 CTO（msg_id 626639fb·21:43:04 date 原值）**：步 3/4 已裁 BOD SSH 承接——CTO 步 2 毕推 sg bare 即收工；步 2（8711）即刻承接中。
 - 收记落款=2026-10-22T21:43:31+0800（date 原值·BOD）。
+
+## §四十三 步 2（8711）毕报收记·BOD 接手跨机段（2026-10-22）
+
+- **CTO 毕报（21:48:15·date 原值）收记**：毕报卷 30ee2d3ac 落树推 sg bare 顶（ls-remote 双验）——ALLOWLIST 勘定=已预置（TRILC_CRON_COMMAND_ALLOWLIST 仅含本脚本路径·E1-5 自锚·exact-match）零变更零重启；装设=前窗已在役 e1-window-reminder（cron_mvbxayba_a4sa·931 拍 ok）。**CTO 失误自纠如实记档**：查重后未中止仍 addJob 装出冗余同名件——勘等值后 DELETE 复验单只，「查而必判判后方动」缺口自领候 CAO。修复生效面：8711 同罹 idle 缺陷 931 拍零拍发，修复后首拍 runs=932 lastStatus=ok·8713 runs=1050 ok 同窗双绿。02:00 催收拍双 daemon 各落一卷·CTO 设 02:06 验证锚。
+- **CTO 跨机提示收记**：8712/8710 ALLOWLIST 预置态未勘照 8711 先例先勘后动·8710 独立仓 addJob 行为先勘后装。
+- **BOD 接手跨机段**（承 §四十一裁令·CTO 步 2 毕+脚本包 sg bare 在链两前提满足）：步 3（sg 8712）勘察先行=活跃体断言+ALLOWLIST 预置态勘定+DATA_DIR 对表；步 4（河源 8710）ssh -J sg 跳板·TriRMC addJob 先勘后装。
+- 收记落款=2026-10-22T21:49:19+0800（date 原值·BOD）。
