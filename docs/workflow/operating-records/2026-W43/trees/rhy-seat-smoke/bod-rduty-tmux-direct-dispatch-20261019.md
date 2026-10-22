@@ -236,3 +236,30 @@
 - 并行收记：m-cto 20:09 D' 段 2a 验收 APPROVE（四查全绿·真 DeepSeek 调用四断言实锚·帧层零 diff·D' 主线核心风险解除）；段 2b 渲染走查即开（非作者手测·候毕报三送）。
 
 —— BOD 落款 2026-10-20 20:11:47 +0800（date 现查·shell 注入·发毕对表）
+
+## 四十四·四 daemon 窗·步 3（sg TriMMC 8712）勘罢免装判（2026-10-22 22:03 +0800·date 现查原值 14:03:23Z）
+
+**判定：步 3 免装——8712 窗提醒能力已有在役 job 承接且今夜实战验证通过，不装第二份（BOD 裁·SSH 既有权界承接形态）**。
+
+### 勘察证据链（全程 SSH 只读+活体现探·M-SG-47.245.122.61）
+
+1. **真重查获**（CTO 8711 冗余 addJob 教训·查重先行）：8712 store=/var/lib/trimc/cron/jobs.json（顶层 $schema/version/jobs·jobs=UUID 键 dict·14 job）——既有 **e15-window-reminder-scan-8712**（enabled·every=300000ms·2026-10-17 02:59:26 铸·payload 仅 command/cwd 两字段）
+2. **在役健康**：runCount=1667·lastStatus=ok·consecErr=0·lastDur=78ms·lastRun=2026-10-22 21:57:42+08（5min 节拍在走）
+3. **真身勘明**：command=`python3 /srv/fleet/bin/window-reminder-scan-8712.py`（133 行·头部注释自锚=E1-5·机制锚 e1b2ba891 window-reminder-job-plan-20261014）——机制与 .mjs 同构：读台账 windows 段→±5min 容差→落卷 trees/window-reminders/→幂等 state job 侧（/home/fleet/.trilc/window-reminder-8712-state.json）零回写台账；D-24 机位断言内嵌（DAEMON_TAG="TriMMC@sg M面 M-SG"）；D-47 落款声明内嵌（job 脚本内现查原值·禁推算）
+4. **周定位法分野（勘出即记）**：python 形=反向扫全周目录取**最新存在台账**（isoWeek 缺陷免疫·与 59e649b37 修复后 .mjs 两目录并扫等价）；**sg 现势无 W43/window-ledger.md，台账现居 W42**（w43-4d 窗行记在 W42 台账 8-windows 段）——脚本 emit 落点=台账所在周目录，故今夜提醒卷落 W42/trees/window-reminders/（非 W43）——自洽非缺陷，形态差异记档候 CTO 面
+5. **今夜实战全链验证**：state.fired=`w43-4d-reminder-install:start` @ **2026-10-22 21:32:39+08**（窗起 21:30·±5min 容差内捕获）——提醒卷真身 `窗提醒-start-w43-4d-reminder-install-2026-10-22T213239+0800.md`（407B）落 W42 目录；卷面六字段齐（窗型/时段/owner=cto/拍发落款/动作请示/真源声明）；台账窗行 endReminder=true·state=active·**含改窗戳全链留痕（CEO 21:24:03 令→BOD 21:24:47 流转——与本卷 §四十对表一致）**
+6. **免装理由（双发缺陷推演）**：若加装 .mjs 第二 job——两 job 同读同台账同落卷位，幂等 state 互不共享→窗起/窗毕各发两卷=真双发；8712 提醒能力已在役且经实战，加装零增益全风险
+7. **TriMMC 白名单分野实勘（记录性）**：src/cron/routes.ts 仅校验 payload.command/cwd 为字符串（L54-55），**无 TriRLC 式 ALLOWLIST 精确等值门**——8712 侧本无白名单变更面（与 CTO 提示「8712 ALLOWLIST 预置态未勘先勘后动」闭环：勘毕=无门免动）；API 面=POST /internal/v1/cron/jobs（create）+PATCH /{id}+DELETE /{id}+POST /{id}/run（手动触发）
+
+### 形态统一候选（候 CTO 面·不阻塞本窗）
+
+- 现势：8713/8711=.mjs 形（今夜装）·8712=python E1-5 形（10-17 铸）——**两形态并存**；设计卷 per-daemon 方案 C「8712 部署时壳显式 env 定名」前提已变（站形态先在）
+- 统一收益=单脚本维护面；统一成本=动在役健康站（替换窗+state 迁移+回归）——性价比裁决归 CTO（设计 owner）；BOD 仅呈事实不代裁
+- 派生注：emit 周目录行为两形态对表（python=台账所在周；.mjs=待对 CTO 卷）——若统一时须对齐
+
+### 步 3 销账形态（报 COO 对表）
+
+- 督办⑥销账判据「四 daemon 三查+首窗实测」在 8712 侧的满足形=**E1-5 在役拍（1667 拍零错）+今夜窗起实战捕获落卷**——三查对既有 job 照计（enabled=1✓/next_run 值面✓/201 免·非新增）；02:00 窗毕提醒由 E1-5 endReminder=true 承接拍自然触发
+- BOD 毕报三送：CEO（销项通报）+COO（销账锚形态）+CTO（形态统一候选）
+
+—— BOD（date 现查原值 2026-10-22T14:03:23Z / 22:03:23+08）
