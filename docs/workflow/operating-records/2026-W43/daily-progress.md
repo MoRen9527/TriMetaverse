@@ -513,3 +513,9 @@
   - 4f04433d1 Merge remote-tracking branch 'sg-server/dev' into dev
   - d21593a48 docs(cfo): ③c末环我侧毕——CHO卷值面核回签(hash复算match+四项全绿)落账+我卷§七重冻(4808c4d6双形等值·占位态验法回环自洽)——新hash报CHO值面核·候其回签两卷勘正全生效考窗启
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:00 +08：自上次进度提交 7e30bf8cd 后新增 4 条 commit：
+  - 1e03f173a docs(bod): §二十八附二 B2考窗正式启——③c链全闭合(CHO终核PASS 18:49)·窗包络10-22 18:00→10-24 18:00
+  - 4dff599bb docs(coo): 台账二百四十三笔(考窗正式启定谳收记·③c链全闭合CHO终核回签PASS·双卷勘正全生效·考窗包络10-22-18点至10-24-18点48h·FADE-PERF-001首考核周期开跑)
+  - 6f9c0f670 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 8f66dee0b docs(cfo): ③c链全闭合收执——CHO终核PASS(独立复算4808c4d6 match+覆盖面断言+bf285f19f链锚)·考窗正式启(10-22 18:00→10-24 18:00 48h)·窗启知会COO/COS+BOD闭环线随发
+- registry：v2.1；今日 registry 提交无变化
