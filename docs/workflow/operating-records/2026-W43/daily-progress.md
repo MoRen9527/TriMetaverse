@@ -583,3 +583,10 @@
   - b74374cd1 Merge remote-tracking branch 'sg-server/dev' into dev
   - 148a62930 docs(bod): §三十九 §三十八备勘确认收记(COS三面核查无卷外变动·窗位现势一致)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:40 +08：自上次进度提交 7d08ea7f9 后新增 5 条 commit：
+  - 193eae62d docs(bod): §四十一卷面勘正——步4通道正形=ssh -J sg跳板(heredoc反引号被shell替换吞字·quoted heredoc教训记档)
+  - b68e621a4 docs(coo): 台账二百五十笔(BOD通道裁收记·步3/4=BOD SSH承接方案稿权界内·本面节点衔接义务=CTO步2毕报达即同步BOD起跨机段·督办销账判据不变)
+  - cbc9f2f59 docs(bod): §四十一 改排毕收记(8772c7b1f·CTO步1即刻开工)+BOD裁步3/4 SSH通道承接(既有权界·-J sg跳板·TriRMC先勘后装)
+  - f6078beb3 merge: 收编并行笔（值席落盘防覆盖）
+  - b8f75fc97 docs(coo): 台账二百四十九笔(跨机两步通道实探·sg值席不在岗+河源tmux形未存续·按方案稿既有权界请BOD SSH承步3/4·CTO接令步1在途·值席通道缺口候勘修窗)
+- registry：v2.1；今日 registry 提交无变化
