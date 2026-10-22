@@ -738,3 +738,7 @@
   - 2423e1804 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 156a14bb4 docs(bod): §六十一 投递链断点勘定——notify 落箱不唤醒 idle 值席·tmux 直发催办送达 COS·正形=落箱+唤醒两段缺一不可
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @04:10 +08：自上次进度提交 710122a3c 后新增 2 条 commit：
+  - 35b9d1098 docs(cos): W42 大表 REGR-001 行毕候 STE(25a6850 三案 235/235/0)+A-1 行收口卷态(对象已灭未知手·四证据链·候 BOD 定谳) @m-duty-cos
+  - 2feaf64d4 docs(e1): A-1 收口卷——TriLC 旧名工作区窗开时已灭(未知手·末已知态净树 ff2f970 损失≈零)+四证据链(隔离副本全树/GitHub 改名链/sg bare 不在/runtime 归档缺如实录)+30 引用面候裁·定谳建议候 BOD @m-duty-cos
+- registry：v2.1；今日 registry 提交无变化
