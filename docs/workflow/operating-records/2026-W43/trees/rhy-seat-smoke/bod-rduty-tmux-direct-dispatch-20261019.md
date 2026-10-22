@@ -615,3 +615,46 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **件1·CAO 规格会同回值（00:47 SendMessage·msg_id 7f5f986c）**：对象断言先行=活体三方探（本会话 CronList 仅 1 job=02:12 验证锚／TriMLC 8713 store trilc-channel/cron.db 只读 16 job 全列零命中／TriRLC 8711 store=0 行）——**「sg TriMC 箱巡检 14,44」现役=已失活**（会话内存型随 BOD 会话重启失·onboard brief L9 本载「重启即失非自动挂」）；CAO「现役」断言系取 onboard-log L8 表外注纸面滞后。三条件如实值：cron=14,44 * * * *（唯一残留=onboard-log 表外注）／command 要点=树上零载体（缺口本件·job 名语境推断=巡检 sg TriMMC 通知箱转投 BOD·已标注推断禁当原值）／job id 零（会话内存型无 daemon id）。扩行建议=「历史规格存档+失活登记」形态；替代面=M-SG NOTIFY hook 通道现役在涌——真退役或 daemon 化复活候 CTO/CAO 面·BOD 不单边定。
 - **件2·CTO 备轨令执行（db1e40996 §二2·COS 增档①自动催 249min>4h+CTO 00:43:37 两开催办）**：主轨 mailbox 30min 无回执早已过→启备轨=dsh headless wake 直发 r-duty-cos（10-19 卷三正形通道·非 tmux——令文「tmux 直发」按先例卷实勘=dsh headless wake 形）。执行链：首发裸名 dsh 失败（sudo -iu fleet 非交互 PATH 无 dsh·spawn 前 RC 失败·段零扰动干净）→二发活体真身全路径 /srv/fleet/dsh/node_modules/.bin/dsh（CTO 令卷 §一 pid argv 实锚）→**拾取成立**（现役段 session-64a715c5-052a-4042-8d4f-277034d4cb8d size 1378651→1455174 =+76.5KB·mtime 推进·日志尾 agent 令文四件解析在链）——令面=报到卷四件+落卷位 trees/dsh-seq3-online-report/reports/+树直达 CAO 收记+桥缺陷如实注不硬塞。桥缺陷单随备轨启用开（CTO 勘定面）·接位三验③维持挂账不虚销。候 r-duty-cos 报到卷落树=督办④首半销账候选。
 - 落款：2026-10-23 00:50:34 +0800（date 现查原值·BOD）【勘误注·当场自获】初稿落款手写预填 00:49:30 与写前现查 00:50:34 不符=虚标形态——回视对表闸抓获即勘正；正形本该 shell 变量注入零手打，D-47 族 BOD 面又一例入档
+
+## §五十二 CTO 毕报三件收记——督办⑨两半全达+output/ 裁决（git 面采认·磁盘面转呈 CEO）（2026-10-23）
+
+- **令源**：CTO 毕报（信面 date 原值 2026-10-23T00:51:26+0800·sg bare 顶 7ea5f9206 双验自报）。
+- **①督办⑨后半判据件补齐**：P0 毕报验收回执卷落树（trees/lg-085-bod-cli-p0/cto-p0-acceptance-20261023.md）——四候裁项逐项判定（#4 watchlist=APPROVE v0 现形／3.1 E1-4=已闭销引用锚／3.2 D-46 回显=TRIMC_INTERNAL_TOKEN 随 A3v2 窗轮换暴露面闭环+TRIMODEL_API_TOKEN 候考池维持／3.3 keeper=收记）·P0 整体 APPROVE。**两半判据全达（ACP 勘验毕+P0 回执）→COS 照会终验锚销账**（msg_id 49f6b3b4·禁裸毕链形）。
+- **②督办④时序对齐**：CTO 毕报写信时点早于 BOD 备轨执行对表（BOD 00:48 发·拾取成立段+76.5KB·见 §五十一件2）——回执已对齐（msg_id efea244c）·非催办缺口。候报到卷落树+CAO 收记=首半闭环。
+- **③output/ 勘定裁决（附带发现①承接·值守顺序办已办）**：裁决卷 trees/output-release-audit/cto-output-release-verdict-20261023.md——定性=**产物不进 git 纪律**；git 面已执行（c1e1430db·956 件卸载 tracked+.gitignore 盖面·revert 可逆）——**DE contracts 18 件当前树零命中=残影第三面闭合**（发布面§四十七+源侧§四十九+打包面本件三面全闭）。**磁盘面 14.6 万文件级不可逆→BOD 判=重大不可逆类（D-39 三类命中·不自裁）已转呈 CEO 候裁（删否+窗位一并呈）**；CTO 前置两项（DE contracts 磁盘版删前留档+xiaoke-isolate 快照留档价值一勘）随裁随窗施工。
+- 落款：2026-10-23 00:53:45 +0800（date 现查原值·shell 变量注入·BOD）
+
+## §五十三 BOD 存量补约四步走通（D-52 报到链复活形）+COS 同窗三销收记（2026-10-23）
+
+- **补约令源**：CAO 会同收口信（00:53:29·失活登记已落卷 TriCompany 7a73fe0·LG-077⑤ 候窗件二随注销）+即时补约提案（候 BOD 自决不强制）——**BOD 自决=今晚值守内走通**（顺 CEO 00:32 顺序执行纪律·额度无压）。
+- **四步执行链**：
+  - ①报到信入箱：id=ntf-mvjs96fyhdju9m（target=cao/source=board/title=上线报到 board/body 三要素=正名+复活形态+请发清单·received_at 机器生成·read=false·信箱总数 1904）——§三形态细则对表（报到走信箱不走 SendMessage ✓）。
+  - ③重挂两规格 job（§五附录正身照挂·CronCreate×2）：节拍转报 786001b7=cron 9,39 * * * * recurring／信箱兜底巡检 5065a21d=cron 11,41 * * * * recurring。
+  - 自检三查（CronList 现查）：双 job 在列+cron 值面符规格+next_run=01:16 值面非空 ✓✓。**观察项**：调度器 per-job offset 将双 job 首拍收敛同拍 01:16（§五错峰注 2min 被抹平·两 job 无依赖·非故障记档）。
+  - ④回信入箱：id=ntf-mvjsa8nzu84brx（已领 §二 BOD 行清单+已验三查读数+观察项注+session-only 7 天 expire 注+daemon 化候 CTO 注+已领+已验句·信箱总数 1905）。
+  - ②CAO 承接回执=候收（CAO 筛 target=cao read=false 承接毕置 read=true·双签齐=存量补约闭）。
+- **COS 同窗三销一现势收记（销一报一第 4 报·00:55:45）**：①督办⑨销账毕（终验三锚·P0 APPROVE·派生候窗两件挂池不另挂台账）②督办②LG-077⑤ 同窗销账毕（CAO 4393df1+7a73fe0 双笔亲验在 TriCompany dev 链）③**督办④现势：报到卷已落树 491ce1356（r-duty-cos-online-report-20261023.md·109 行·sg-server/dev 链内——BOD 备轨直发 00:48→卷落树≈7min）**·候项收敛至 CAO 收记单点·接位三验③维持挂账④output/ 磁盘面候裁件收记（候裁合规不催不升级）。四报转呈 CEO 照旧。
+- **信箱在途件带呈**：unread=1494（节拍信积压为主·巡检 job 复活后 11/41 拍逐轮消化）；其中 LG-069 电量检测告警 1 封（ntf-mvjom4iyiuox5i·10-22 15:15·target=bod「电量检测连续失败·闸失效风险」）=在途告警件，首拍转报时单独带呈不混积压。
+- 落款：2026-10-23 00:57:27 +0800（date 现查原值·shell 变量注入·BOD）
+
+## 五十四 · §六自检四项补齐+BOD 补约双签闭环段（2026-10-23 01:0x）
+
+- **CAO 承接回执收记**：00:59:39 CAO 信达——报到信 ntf-mvjs96fyhdju9m（1904 封）承接毕·置 read=true·定性「复活」按恢复路径承接；回执附 §六自检四项要求（快照追平/cron 挂载核验/信箱可读性/出向链）+「禁凭 201 认挂载」重申。注：本席④回信（ntf-mvjsa8nzu84brx·00:57 写入 1905 封）先于 CAO 承接信在箱，CAO 发承接信时未轮拾取——前信已含 CronList 三查，四项中缺三项。
+- **§六判法对表**（onboard-work-registry.md §六·LG-083/084 增补）：①快照追平=latest.json 值面断言（真源=engineering-disciplines.md L873·sg /srv/fleet/var/hub-watch/latest.json 试点形）②cron 挂载=next_run 值面+enabled=1 禁凭 201 ③信箱程序读箱断言 ④出向链=outbox 三态/健康面读数二选一。
+- **四项实测读数（2026-10-23 01:00-01:04 现查）**：
+  1. 快照追平 ✓——ssh M-SG 读 sg latest.json：值面非空（ts/mailbox/watchlist/healthz 结构齐）·快照 ts=2026-10-22T16:59:26Z·mtime 距现查 299s=新鲜（判据数值归 CTO 面·本读数仅值面）。
+  2. cron 挂载核验 ✓——两规格 job（9,39/11,41）本会话 CronList 在列+next_run 值面=01:16 非空。**形态分野如实注**：session-only 会话 job 无 enabled 字段（daemon POST 面「enabled=1 三查」不适用此形态）·recurring=在役语义·以 next_run 值面为凭。
+  3. 信箱可读性 ✓——程序读箱 total=1905/unread=1495/尾封 received_at=16:57:06Z（即本席④回信写入时刻·自洽）；写向今晚 1904/1905 两封成功=读写双向绿。
+  4. 出向链状态 ✓——健康面读数（判法二选一取此形）：8713 healthz（17:03:21Z）mc_link=connected+trimc=connected+power.gate=none；outbox 三态专端点不在 healthz 面；旁证=本席 SendMessage 链今晚十余封收发零失败。
+- **补读数信入箱**：ntf-mvjsk96719zfff（1906 封·received_at=17:04:54Z 机器值）——LG-084 读数回写形·引前信 id·四项全绿·候 CAO 置 read=true=双签齐闭环。
+- **勘误注**：ssh 首探用别名 sg-server 不存在（Could not resolve hostname）——查 ~/.ssh/config 正名=M-SG-47.245.122.61 二发即通；教训=ssh 别名先对 config 现查禁凭记忆。
+- 落款：2026-10-23 01:05:17 +0800（date 现查原值·shell 注入）
+
+## 五十五 · output/ 磁盘面清理执行毕（CEO 裁令·督办①候销）
+
+- **CEO 裁令**：01:21:18「output/ 就按你说的办，留 v0.4.10 删其余」——即批 BOD 建议（留现役版 v0.4.10-r20·删旧版本+旧日志面）。
+- **CTO 前置两项先办**：①DE contracts 删前留档——9 版包内 trilc/contracts（917K~961K each）全量拷仓外留档位 D:/Code/ai/TriMetaverse-archive/de-contracts-20261023/（8 删除版+全 xiaoke 面共 9 条目/7.6MB/1650 文件/零 FAIL·v0.1~v0.3 无 contracts 面）；②xiaoke-isolate-support 勘定——124K/18 文件/mtime 08-20 隔离联调支撑件·现役无引用·随档留档后原位删（争议面归零）。
+- **防线**：12 删除目录全树扫 ReparsePoint=0（Remove-Item 穿 junction 警戒·D-29 族正形）——零链接面放行。
+- **删刀读数**：12/12 目录删毕+xiaoke 补删——删前 3.9GB/146,843 文件→删后 1.02GB/13,899 文件·回收约 2.9GB/13.3 万文件；余面=v0.4.10-r20（回滚用）+顶层散件 112 条（近期施工 log/json·留勘面）。
+- **留档位注**：D:/Code/ai/TriMetaverse-archive/=仓外 sibling（不进 git 扫描面·TriMetaverse 仓 status 零扰动）。
+- 落款：2026-10-23 01:24:11 +0800（date 现查原值·shell 注入）
