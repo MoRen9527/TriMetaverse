@@ -523,3 +523,36 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - BOD 毕报三送：CEO（销项通报）+COO（销账锚形态）+CTO（形态统一候选）
 
 —— BOD（date 现查原值 2026-10-22T14:03:23Z / 22:03:23+08）
+
+## 四十五·四 daemon 窗·步 4（河源 TriRMC 8710）装设毕——四步全通（2026-10-22 22:24 +0800·date 现查原值 14:24:57Z）
+
+**判定：步 4 装设完成·三查全绿——四 daemon 窗四步（8713→8711→8712→8710）全部闭环**。
+
+### 装设证据链（ssh -J sg M-SG-47.245.122.61→R-HY-8.155.54.79 跳板·全程活体现探）
+
+1. **机位/活体**：trirmc.service（User=fleet·node v22.23.2·pid 224044 监听 0.0.0.0:8710）·healthz={"ok":true,"service":"trirmc","cron":{"enabled":true,"jobCount":3,"degraded":false,"consecutiveFailures":0}}
+2. **查重（先勘后装·COO 风险表第 6 条照办）**：GET /internal/v1/cron/jobs——既有 3 job=weekly-plane-shift（周日 23:50·唯一执行点本席）/rmc-orchestrate-tick/tricompany-pull·全 ok——**无 window-reminder 族·真装非重装**
+3. **白名单勘定**：TriRMC src/cron/ routes.ts 校验=name/schedule（kind cron|every|at）+payload.command/cwd 字符串——**无 ALLOWLIST 门**（grep src/ 仅 agent-loop 三文件命中·cron 面无）——零白名单变更零重启
+4. **repo 升版**：河源工作区原停 10-18（f0de97360·脚本旧版 7126B）——sudo -u fleet fetch+merge --ff-only origin/dev 两轮升至 7bd134afa（脚本 8696B 今夜形态）；fleet 身份直拉 sg bare 通
+5. **【装前试跑抓获移植缝·BOD 单行修】**：手动试跑输出扫面路径=D:/Code/ai/TriMetaverse（Windows 硬编码）——源码勘定 59e649b37 修复缝漏接：TRILC_WR_REPO env 只接了 emitReminder 落卷根（L114），**扫面 mk() 仍用 REPO 常量**（L143）——Windows 本机 8713/8711 无害（硬编码恰真仓），Linux 机恒扫 D:/ 恒 idle=「三查全绿但永远零拍发」静默缺陷（比 crash 毒）。**修**：同款测试缝接进扫面 mk（env||REPO·单行·commit 22b8303ca·候 CTO 追认）——双态验证：无 env windows=1 零回归+env 指无台账根 idle 消息印 env 根缝证；8713/8711 不设 env 零影响
+6. **addJob**：POST /internal/v1/cron/jobs——首発 400（payload.command/cwd 需嵌套·TriRMC 造件形=命令嵌 payload 子对象·TriMMC store 同构）→修正嵌套 201；job=e1b2-window-reminder-patrol-8710（名 provisional 候 CTO 认·设计卷 A2 部署稿定名未出）·command 内联 env 三前缀（TRILC_WR_REPO=/srv/fleet/TriMetaverse+TRILC_WR_DAEMON_NAME='TriRMC@河源 R面 R-HY'+TRILC_DATA_DIR=/home/fleet/.trilc）+/usr/bin/node 绝对路径·cwd=/srv/fleet/TriMetaverse·every 300000ms
+7. **三查（F-3 家族性照办·201≠会触发）**：①enabled=True②nextRun=22:23:23 值面在③睡等首拍——**runs=1·lastStatus=ok·lastRun=22:23:23 准点·lastDur=104ms·零错**；job log 落 /var/lib/trirmc/cron/logs/（dbc9229f…22-23-23Z）；复跑手动验证 windows=1（扫 /srv/fleet 真台账）
+8. **TriRMC API 形记档**：GET/POST /internal/v1/cron/jobs·token=TRIRMC_INTERNAL_TOKEN（unit env·X-Internal-Token 头·全程变量读入零打印）·store 挂 /var/lib/trirmc/cron/logs/（job log·store 本体挂 agent-core shared core）
+
+### 02:00 窗毕拍预期（本 daemon）
+
+- 河源 job 22:23 起 5min 节拍——01:55~02:00±5min 容差拍捕获 end 边（endReminder=true）→ 落卷 W43/trees/window-reminders/（**.mjs emit 落 isoWeek(now) 周=W43；8712 python 形落台账所在周=W42——两形态 emit 周目录分野将实锤·§四十四 已记档候 CTO 统一对齐**）
+
+### 四步总装收口（本窗）
+
+| 步 | daemon | 形态 | 状态 |
+|---|---|---|---|
+| 1 | 8713 TriMLC | .mjs·isoWeek 修 | CTO 毕（runs=1050 ok） |
+| 2 | 8711 TriRLC | .mjs·isoWeek 修 | CTO 毕（runs=932 ok·ALLOWLIST 已预置） |
+| 3 | 8712 TriMMC | **python E1-5 在役承接·免装** | BOD 勘罢（1667 拍+今夜窗起实战落卷） |
+| 4 | 8710 TriRMC | **.mjs 新装**（跨机缝修后） | BOD 装（三查全绿·首拍 ok） |
+
+- 02:00 首窗实测：四 daemon 各落一卷=督办⑥销账锚（8713/8711 CTO 02:06 验证锚·8712 E1-5 承接·8710 本 job 承接）
+- 三送：CEO 销项通报+COO 对表+CTO（跨机缝修候追认+形态统一候选+emit 周目录对齐+8710 job 名认）
+
+—— BOD（date 现查原值 2026-10-22T14:24:57Z / 22:24:58+08）
