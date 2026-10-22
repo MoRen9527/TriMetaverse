@@ -550,3 +550,9 @@
   - d50e02881 Merge remote-tracking branch 'sg-server/dev' into dev
   - 67870a6f6 docs(bod): §三十二 催动归因查问答呈(三层+BOD自领43min滞)+督办增候令催办档(4h自动催·02595cbc)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:40 +08：自上次进度提交 8ff2927a2 后新增 4 条 commit：
+  - 323226d22 docs(fsd): ACP续窗毕报§六增补——CTO收记采信+P3 spec上游口径销悬点+债条现势
+  - 12591d50e Merge remote-tracking branch 'sg-server/dev' into dev
+  - 47d717eb2 docs(bod): CTO序3上线报到补行令收记(db1e40996·r-duty-cos施工·mailbox桥双轨·督办④首半候选)
+  - db1e40996 docs(cto): dsh 序3上线报到补行令——上线事实定谳+报到制补行令+mailbox桥兼三验③独立验双轨门禁
+- registry：v2.1；今日 registry 提交无变化
