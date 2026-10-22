@@ -634,3 +634,10 @@
   - 803329c9e Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 52f7deda9 docs(bod): §四十六 回执注——COS 候办环核对零动作+卷锚验证确认·F1-3 流转面闭环
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @00:10 +08：自上次进度提交 5d995d261 后新增 5 条 commit：
+  - 38b5cfa47 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 4e740cb9a chore(agents): DE退役残影发布面双件显式清理(CEO 2026-10-23 00:03:16裁·BOD§四十七·494ea1bf7)——照LG-073先例(c45b7af4c)·源侧2ce1c31正名后发布面孤儿·沿革留git史
+  - 14fb7b237 docs(bod): §四十七 回执注——COS 改挂照录+销账判据对表·DE 残影流转面闭环
+  - 9eee69e65 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 494ea1bf7 docs(bod): §四十七 DE退役残影处置令收记——CEO 00:03 照LG-073先例批·先例正形勘清(发布面孤儿=删除面与源侧归档分野)·流转FSD施工+COS照会·A5候CEO面清零
+- registry：v2.1；今日 registry 提交无变化
