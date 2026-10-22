@@ -715,7 +715,7 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 ## §六十一 投递链断点勘定+tmux 直发催毕（2026-10-23 03:50:14 +0800）
 
 - **巡检零真件后主动勘链**（三单 48-58min 无回执触发·「未发生定性必穷尽事件日志」纪律）：REQ-003 催办（ntf-mvjuqdcotrj06w·02:05 投）/AGENDA-001（ntf-mvjwbn0t8dcg66·02:50）/两窗开窗（ntf-mvjwli4fi86rnf·02:57）——outbox 三单全 delivered（ledger 链 accepted→forwarded 23s→delivered·forwarder 活到 03:01）→**mailbox 三单全 read=false**（02:58 后零拾取）。
-- **活体勘定**：13 个 m-duty session 全在（fleet socket=/tmp/tmux-1001/default· 显式指定才可见）；13 claude 进程全活（COS pts/8·Oct13 起）；COS pane=idle 空 ❯「值席候令中」。
+- **活体勘定**：13 个 m-duty session 全在（fleet socket=/tmp/tmux-1001/default·`tmux -S /tmp/tmux-1001/default` 显式指定才可见（ssh 直进 `tmux ls` 只见 default bash 窗=socket 视角坑））；13 claude 进程全活（COS pts/8·Oct13 起）；COS pane=idle 空 ❯「值席候令中」。
 - **断点定性：notify→outbox 只解决「信落箱」，不解决「唤醒 idle 值席」——信到箱≠信到人**。duty 席无信箱轮询 cron（8712 的 14 个 jobs 零 mailbox 类）；idle 会话无 hook 驱动。02:16 COS 曾动=彼时本就在督办⑥干活窗顺手读箱。
-- **处置：tmux 直发催办送达**（03:5x）：（literal 文本+独立 Enter·Enter 吞噬坑恪守）→capture 验拾取=「✶ Slithering…」工作中，催办生效。
-- **正形沉淀（外网派工路由增补）**：sg duty 席投递=notify 落箱 **+ tmux 直发唤醒** 两段缺一不可（纯 notify=死信变体：信在箱无人读）；tmux 通道=。候 CTO 面评估自动唤醒钩子（outbox delivered 事件→send-keys 联动）。
+- **处置：tmux 直发催办送达**（03:5x）：`tmux -S /tmp/tmux-1001/default send-keys -t m-duty-cos -l "<催办文本>"`+独立 `Enter`（literal 文本+独立 Enter·Enter 吞噬坑恪守）→capture 验拾取=「✶ Slithering…」工作中，催办生效。
+- **正形沉淀（外网派工路由增补）**：sg duty 席投递=notify 落箱 **+ tmux 直发唤醒** 两段缺一不可（纯 notify=死信变体：信在箱无人读）；tmux 通道=`tmux -S /tmp/tmux-1001/default send-keys -t m-duty-<seat>`（heredoc 未引号反引号被命令替换吃空三段·本笔勘修留痕=同族截断伪影新向：卷面生成侧 shell 展开毁文本）。候 CTO 面评估自动唤醒钩子（outbox delivered 事件→send-keys 联动）。
