@@ -432,3 +432,8 @@
   - f74c84663 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - 207a1793a docs(fsd): A5管线owner三项毕报落树——F4-1复扫零残留定谳(LG-073既有施工c45b7af4c)+F4-2对表定谳零改动(管线gh注入/claude无=设计内·附DE退役残影新发现候裁)+F4-3实质施工毕(根因=真源BOM被5514c842e重渲回写·双仓四件strip·TC 18a860a+TMV 8806b3e9e·sg bare双真值验)·三送COO/CTO/COS
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:20 +08：自上次进度提交 10bc15d1b 后新增 3 条 commit：
+  - 1ed7f1f70 docs(coo): 台账二百三十一笔(COS收记回执·B2窗位落定入账跟踪链成型·A5候裁面照列DE残影勘定归CHO下令归CEO分面定谳)
+  - fe1ad1638 merge: 收编并行笔（值席落盘防覆盖）
+  - fed77419f docs(coo): 台账二百三十笔(COS-A6挂账启确认+FSD管线三项毕报收记含DE残影候裁新发现+CSO对表自裁采认+CFO出卷毕窗位冻结·候CHO答卷)
+- registry：v2.1；今日 registry 提交无变化
