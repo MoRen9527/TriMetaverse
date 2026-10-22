@@ -371,3 +371,11 @@
   - b1e09cf70 merge: 收编 sg dev 并行笔（巡检兜底 1c92b4278+relay sync 毕报落树 2bb1de5a0）——终验收卷 c9343b9f8 并入回推
   - c9343b9f8 docs(cto): 8791 relay sync 终验收卷 APPROVE·部署窗 8791 线全闭——消费面独立复验（relay3 pid 528093 活+18790 注入 302+8791 门 401）+.dsh_tok 指纹 ecd22c34 跨卷全同+零残留+探针双假警报勘销记（bus 视图≠服务态/路径拼错）+裁决五项落实零偏差
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-22（周四）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @09:30 +08：自上次进度提交 9b62f6d00 后新增 3 条 commit：
+  - 5e840bef2 docs(coo): 台账二百二十四笔(CEO裁GLM key不轮换·挂起件销账闭环·裁语锚0e50b3bde·sg面维持不动·gate hook候批维持·部署窗四件包全闭)
+  - 0e50b3bde Merge remote-tracking branch 'origin/dev' into dev
+  - a11b93783 docs(bod): CEO裁决——GLM key不轮换（销账流转）+gate hook问询未批（大白话呈答中）
+- registry：v2.1；今日 registry 提交无变化
