@@ -1,35 +1,19 @@
 ---
 sourceOfTruth: docs/workflow/operating-records/2026-W42/window-ledger.md
 syncMode: living
-lastSyncedAt: 2026-10-16T18:21:40+08:00
+lastSyncedAt: 2026-10-22T19:46:33+08:00
 form: whitelist-registry（白名单登记面·D-23 v3 批后件③改版·原「窗序现势台账」C1 正身）
 schemaRef: docs/execution/window-reminder-job-plan-20261014.md §二（CTO 提案·COO 会签裁 YAML front-matter 内嵌@1db9d27ca）
 maintenance: COO 唯一定笔位·COS 共读对表·BOD 旁证
 windows:
-  - id: w42-8711-notify-enable
+  - id: w43-4d-reminder-install
     type: daemon-maintenance
-    start: "2026-10-15T09:40:00+08:00"
-    end: "2026-10-15T10:10:00+08:00"
-    owner: sde
+    start: "2026-10-23T08:00:00+08:00"
+    end: "2026-10-23T12:00:00+08:00"
+    owner: cto
     endReminder: true
-    state: done
-    note: 8711 obs 出向启用（trirlc-daemon.cmd 补 NOTIFY env+TriRLC 冷起·窗令 09:12 已发 M-004·止损 10:30）
-  - id: w42-rplane-duty-deploy
-    type: daemon-maintenance
-    start: "2026-10-16T03:20:00+08:00"
-    end: "2026-10-16T05:50:00+08:00"
-    owner: sde
-    endReminder: true
-    state: scheduled
-    note: charter-2026-W42-001 R 面班组部署窗（LG-080·CEO 20:59 裁示终定 03:20-05:50·宿主电源面理由亲裁·GLM 轨 0-9 接续段·窗开首步=河源活体重探 D-24·窗开时 SDE 在岗·COS 03:26 盯哨·毕报链 COO→COS→CEO）——窗开落位戳：03:26 COS 盯哨核窗位行✓·宿主存活（冻结带未断/接电化解）·m-sde busy 拾取链在途（state 值面候 CTO schema 枚举扩充·窗毕终更）——**窗毕收窗戳：05:50 候裁超时自然收窗（03:44 呈批→10:23 裁示回·窗内未获裁）·零施工·收窗记账形态=COS 裁 10:42（SDE 简短收窗注记挂 001 树 reports/ 归档·本席 note 补戳·state 值面现行不动候 CTO 枚举面）·窗毕段叙事并入 002 令源背景**
-  - id: w42-rplane-duty-scale-full
-    type: daemon-maintenance
-    start: "2026-10-16T12:00:00+08:00"
-    end: "2026-10-16T14:00:00+08:00"
-    owner: sde
-    endReminder: true
-    state: scheduled
-    note: charter-2026-W42-002 R 面班组扩满部署窗（LG-080 续挂·CEO 10:23 裁 b 径+13 席部署令·五要素=13 席全量起树（现态裁量 10:50·sde 席随扩容重启灭转复活）+名址+链路+启动器护栏复用验+代码仓同构复制 1.2G·串行红线逐席 30s+ 禁并发 2·第 0 步内存实勘 D-24·G1 会签生效 10:44·排窗确认环 10:48/10:51 闭环）——**改窗戳：CEO 11:44 改窗 18:00-22:00→12:00-14:00（BOD 11:46:12 流转·CEO 指窗优先·12-14 非 GLM 最优子段对轨注如实记）·2h 窗体风险注=n5 复制与 n1-4 并行编排为达标正形·13:00 中途检查点·14:00 硬边界**
+    state: active
+    note: 四 daemon 窗起提醒 job 装设窗（CEO 10-22 19:34 批令「明晨共生窗」段内细化·排工单=2026-W43/trees/window-reminders/coo-dispatch-20261022.md·递推 8713→8711→8712→8710·门禁五查+首窗实测=督办单第 6 项销账判据·本条即 job 首个真实解析目标）
 ---
 
 # 白名单登记面 · 2026-W42（原窗序现势台账·C1 立项正身）
@@ -42,6 +26,17 @@ windows:
 
 | 窗 | 时段 | 内容 | owner | 态 |
 | --- | --- | --- | --- | --- |
+| 四 daemon 窗起提醒 job 装设窗（w43-4d-reminder-install） | 10-23 08:00-12:00 | 四 daemon 同构装设+门禁五查+首窗实测（督办单第 6 项销账判据·排工单=W43 trees/window-reminders/coo-dispatch-20261022.md·递推 8713→8711→8712→8710） | CTO 主施工（步1/2）·sg 值席（步3）·河源 r-duty（步4）·COO 排窗督办 | **排定（CEO 10-22 19:34 批令·明晨共生窗段内细化·窗令明晨 07:50 发）** |
+
+### windows 段转出留痕（隔日窗清理·10-22 现势化·照改版说明④）
+
+| id | 转出形态 | 指针 |
+| --- | --- | --- |
+| w42-8711-notify-enable | 隔日已毕窗转出 | 人读表「8711 obs 出向启用窗」行·终验卷=coo-8711-window-finalverify-20261015@树 |
+| w42-rplane-duty-deploy | 隔日收窗转出 | 人读表「R 面班组部署窗（001）」行·收窗注记挂 001 树 reports/ |
+| w42-rplane-duty-scale-full | 隔日窗转出（front-matter 值面 scheduled 终更候 CTO 枚举面·历史原值见 git 本笔前版本） | 人读表「R 面班组扩满部署窗（002）」行·charter-2026-W42-002 |
+
+
 | 8711 obs 出向启用窗 | 10-15 09:40-10:10（止损 10:30） | trirlc-daemon.cmd 补 NOTIFY env 行（env 名 env.ts:169 勘定·值=18710 隧道口形态·token 值面 D-46 禁进日志）+TriRLC 冷起（停摆预期 18s·重启纪律三断言）·终验锚=**进程内生效验证非 healthz 绿** | SDE 主施工/COO 终验/CTO 知会 | **毕（实开 09:39:59·实毕 09:42·停摆≈10s·组合证四件全绿·终验卷=coo-8711-window-finalverify-20261015@树·卡③案 B 落地收口）** |
 | R 面班组部署窗（001） | 10-16 03:20-05:50 | charter-2026-W42-001（LG-080·四要素终拆树 n=4·死因三拍直证落卷 1cc01687b·清场三绿） | SDE/COS 盯哨/COO 排窗 | **收窗（05:50 候裁超时自然收窗·零施工·收窗注记候 SDE 挂树 reports/·承继 002）** |
 | R 面班组扩满部署窗（002） | 10-16 **12:00-14:00（CEO 11:44 改窗·原 18:00-22:00）** | charter-2026-W42-002（LG-080 续挂·五要素含代码仓复制 1.2G·串行红线·第 0 步内存实勘） | SDE 施工/COO G1 会签毕/COS 盯哨 | **排窗确认环闭环+改窗生效（CEO 指窗·12-14 对轨注如实记·13:00 中途拍·14:00 硬边界）** |
