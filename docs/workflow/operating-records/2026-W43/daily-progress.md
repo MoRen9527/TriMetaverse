@@ -519,3 +519,9 @@
   - 6f9c0f670 Merge remote-tracking branch 'sg-server/dev' into dev
   - 8f66dee0b docs(cfo): ③c链全闭合收执——CHO终核PASS(独立复算4808c4d6 match+覆盖面断言+bf285f19f链锚)·考窗正式启(10-22 18:00→10-24 18:00 48h)·窗启知会COO/COS+BOD闭环线随发
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:40 +08：自上次进度提交 3b0f37e39 后新增 4 条 commit：
+  - 50a9aef2b docs(bod): §二十九 COS回执收记——令①授号达COO(0527d29f)+令②督办单十项挂账·候首报
+  - 6a3ff6c8a Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7bc8aeaf0 docs(bod): §二十九流转毕补录——双令信达m-cos(c50dd067)·候回执
+  - a0a1241ad docs(bod): §二十九 CEO双令收记——四daemon窗起提醒job终审批+十项在途督办制立（m-cos盯·销一报一·链形=COS验销→报BOD→即转CEO）
+- registry：v2.1；今日 registry 提交无变化
