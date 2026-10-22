@@ -459,3 +459,11 @@
   - b492dc31f Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - d71e28afa docs(cho): A5 compass面13席补卷(896a08b49落盘缺口勘补·F3-1两分场景+C3-1机械合同行的session投影)+CPO补刀渲染投影(TC 0692755)+B2试卷Plan冻结件(FADE-PERF-001 CFO卷·双hash 7eef98b7占位态自洽·窗2026-10-22 14:00→10-24 14:00)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:00 +08：自上次进度提交 f5b2c53ea 后新增 6 条 commit：
+  - 47e9c3507 docs(cfo): 台账-CHO收记回执录(四点对表无异议窗前全就绪·判卷中立性声明在先信面落款不入Score锚记档·窗毕互判候COO排程知会候守项增一)
+  - 2ed48688f docs(cao): A5尾勘注validator段收口——CTO勘定回执锚录(825cdbac3·单向设计无缺陷假绿不成立·与合成件零触碰定性互洽)+消费面教训入册指针
+  - 964133e12 docs(cfo): 台账-D47占位形新变体自记(CHO回执信落款待粘贴串即发链·声明将查未查即发第三向·勘正信12:52:19补值即达·正形再固化=先查粘值后发送无值宁缺勿占位)
+  - 825cdbac3 docs(cto): validator check-sync 校验疑点勘定毕报——单向传导语义+子命令调用面双实锚·无缺陷无假绿·澄清条目三段抄送 CAO 入册（CAO 转呈·CHO 勘呈源·A5 C1-② 触发）
+  - 419c4a4e9 Merge branch 'dev' of ssh://sg-server/srv/git/TriMetaverse into dev
+  - 2cb5db65b docs(cfo): 台账-A6B2双卷冻结对表知悉(CHO卷d71e28afa双hash占位态自洽·被考核席不自阅卷照执·同窗同幅对称确证·窗毕交卷包预告含自席读数单四元键)
+- registry：v2.1；今日 registry 提交无变化
