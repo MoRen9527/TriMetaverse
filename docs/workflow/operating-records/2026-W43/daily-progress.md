@@ -707,3 +707,9 @@
 - 巡检兜底补写 @02:00 +08：自上次进度提交 7b6dab5c8 后新增 1 条 commit：
   - 0ad3da292 docs(cos): 大表 VER-002 行刷新——已销（COS 终验·BOD 验收采认）+残留尾巴如实带（TriRLC github 候补推/VER-001 残面归零）·BOD 01:50 刷新请·CEO 在读旧文案急件
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @02:10 +08：自上次进度提交 80c9967aa 后新增 4 条 commit：
+  - 3b12b57bb Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - c871dc7f4 docs(bod): §五十七 AGENDA-001纠正令回执收记——COS四条兑现(任务书正身2f4d58564四段顺序+周会退订+草案勘正+大表L41刷)·任务书候CEO确认三条件呈批链转呈
+  - c5c65f57b Merge remote-tracking branch 'sg-server/dev' into dev
+  - 2f4d58564 docs(cos): AGENDA-001 执行链重锚——任务书正身出稿（四段顺序·候 CEO 确认·不等 10-25 周会）+草案卷状态行勘正（实质已批件）+大表 L41 行现势刷新（CEO 01:57 纠正令①③④兑现）
+- registry：v2.1；今日 registry 提交无变化
