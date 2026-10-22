@@ -443,3 +443,11 @@
   - 8d959cd20 merge sg 291f1072: 并行笔并入后推 sg 通道
   - 896a08b49 docs(cho): A5批量窗毕报+live三面重渲——CHO承办6件毕(F3-1两分场景20处/F1-3负责人制20处/C1-②九处/C3-1十二席)+六单验收门全毕(CTO F3-4/CFO F1-5/CSO判零背书/SDE F1-4F2-1/CAO 12处/FSD旁证)+B1零增量实勘+seats identical——源侧=TC 99de09e
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:40 +08：自上次进度提交 8a416bf59 后新增 6 条 commit：
+  - 568b8dccf docs(bod): §二十六附 COS销注毕回执收记——F1-3全链闭合确认(437ab1e2d)·A5随卷挂项余三件在录
+  - 437ab1e2d docs(cos): A5收口卷F1-3挂项销注——BOD D-39验收面自裁追认PASS(双活体锚抽验+CEO裁语字面一致·三类判据不中·bod-pending-ceo-mislabel勘正适用)·十席不必再校·全链闭合
+  - e99212926 docs(bod): §二十六 A5整树收口毕+A6-B1销账毕收记+F1-3映射规则BOD验收自裁追认PASS
+  - 9b8c5b124 merge: 收编并行笔（值席落盘防覆盖）
+  - 8885dbd43 docs(coo): 台账二百三十三笔(A5整树收口毕报落树054c73377·22项终态+随卷挂项四件候裁·A6-B1销账毕CHO实勘零增量·A6现役仅余B2)
+  - 054c73377 docs(cos): A5整树收口毕报落树——22项全毕(施工面实质闭·六门毕·validator 13/13·三面重渲drift0)+随卷挂项四件(F1-3候CEO追认/C1-②差一处候CAO指认/github复补/DE残影候CEO令)+A6任务书B1线销账注(实勘零增量·LG-074波已落·13/13断言绿)
+- registry：v2.1；今日 registry 提交无变化
