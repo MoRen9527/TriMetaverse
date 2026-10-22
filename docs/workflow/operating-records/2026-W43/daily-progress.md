@@ -437,3 +437,9 @@
   - fe1ad1638 merge: 收编并行笔（值席落盘防覆盖）
   - fed77419f docs(coo): 台账二百三十笔(COS-A6挂账启确认+FSD管线三项毕报收记含DE残影候裁新发现+CSO对表自裁采认+CFO出卷毕窗位冻结·候CHO答卷)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:30 +08：自上次进度提交 291f1072e 后新增 4 条 commit：
+  - 13930c62b docs(cfo): F1-5验收PASS回填毕报卷——CHO门过(8d959cd20)·全链闭环·B2双向知悉录注
+  - a39946a4f docs(coo): 台账二百三十二笔(CHO-A6-B2接令回执·双席窗位对表完成同窗同幅·出卷窗开前落树·A5-CHO面收口带报TC99de09e·候出卷卷与COS续报)
+  - 8d959cd20 merge sg 291f1072: 并行笔并入后推 sg 通道
+  - 896a08b49 docs(cho): A5批量窗毕报+live三面重渲——CHO承办6件毕(F3-1两分场景20处/F1-3负责人制20处/C1-②九处/C3-1十二席)+六单验收门全毕(CTO F3-4/CFO F1-5/CSO判零背书/SDE F1-4F2-1/CAO 12处/FSD旁证)+B1零增量实勘+seats identical——源侧=TC 99de09e
+- registry：v2.1；今日 registry 提交无变化
