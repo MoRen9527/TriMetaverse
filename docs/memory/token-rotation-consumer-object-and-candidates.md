@@ -25,6 +25,14 @@ TriRLC env.ts 候选链=TRILC_ENV_FILE 显式→`D:/Code/ai/.env`（工作区根
 
 `%LOCALAPPDATA%\trirlc\daemon\trirlc-daemon.env`（TRILC_ENV_FILE 载入·cmd 薄壳→ps1 L12 注入）：TRIMC_INTERNAL_TOKEN=08e0…（河源）/TRIMC_NOTIFY_SG_TOKEN=6ed0…（sg·18710 隧道）/TRILC_INTERNAL_TOKEN=自身门键（/shutdown 用）。备份 `.bak-pre-tokrot-20261015` 三处（daemon env+8713 cmd+工作区根 .env）。
 
+## 折5·探针类活 token 落点正形=工作区 600 文件（BOD 2026-10-20 裁）
+
+LG-087 #7 现役席活体探针 token 落点：CTO 原指定 `/home/fleet/.dsh/web-token` 作罢（**沙箱外路径·r-duty 执行面预期约束不可达**）；BOD 裁定正形=**工作区 600 文件**（600/属主/零回显/毕删·安全属性与 .dsh 内落点一致）。四正形不变（600 文件+禁 argv 禁 env+提取管道零回显+用毕删+find 零残留）。**与隔离联调正形适用域分野勿互串**：现役席探针类=工作区 600 文件；隔离联调类（如 D' 段 2）=隔离 DSH_HOME 家 cp 不 cat——两形按「是否触碰现役席」选，不混用。
+
+## 附·tmux 80 列 wrap 续接提取坑（token 提取面·BOD 2026-10-20 实锚）
+
+8791 web 启动行在 tmux 面恰 80 字符·token 末字符落 wrap 续接行——**capture 单行提取只拿到 42 字符→对表 401；wrap 续接拼接 43 字符→303 绿**。正形=从 tmux capture 提取长 token 必查 wrap 续接行（capture-pane 带换行上下文·断言长度达标再对表·401 先疑截断非值错）。与折3「候选链多副本」/D-46 掩码族同族=token 提取面中间层截断假读数。
+
 ## 纪律落点（CAO 铸条 2026-10-15·TC 74403e7）
 
 本条三折教训已条款化入纪律册：**D-54 凭证轮换施工纪律**（款1 消费对象三段链禁同名键顺手同换/款2 候选载入位全清点/款3 消费面四层含 cron payload/款4 施工正形互引/款5 PATCH 键面语义先读+附注 schtasks 跨 daemon 修法）；姊妹条 **D-46 含密值面打印路径防线**（探针四正形+族 8 例含第 7/8 例+BOD sg 段 payload 案·嵌套 payload 递归滤）。**两条 BOD 复核通过 2026-10-15 19:30:58 即生效**（落册 74403e7·状态笔 416aeb0）。整理注：CAO 曾平行另建 credential-rotation-consumption-chain.md 一件，防双写自查发现即撤并入本条（镜像侧残留候人工清理）。

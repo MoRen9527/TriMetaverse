@@ -1,6 +1,7 @@
 # R-HY TriLC（trilc-headless.service）退役卷
 
 - sourceOfTruth: 本件（CEO 2026-10-01 10:41 令：河源 TriLC 退役，TriRLC 只留本机；BOD 执行）
+- 归位注记：2026-10-20 BOD W40-W43 审计批自 2026-W40/trees/ 根归位入本树（同题续卷·内容零改动·发生周 W40 叙事不变）
 - syncMode: final
 - lastSyncedAt: 2026-10-01 10:4x +0800（date 现查）
 - 执行依据: CEO 现意图「TriRLC 只留本机」裁（2026-10-01 10:41）>08-26 部署记忆（「两套永续系统 R 面生产拓扑」段随本裁失效，本卷即修正留痕）

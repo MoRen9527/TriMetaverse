@@ -1,6 +1,7 @@
 # R-HY trirmc.service（8712 面）退役卷
 
 - sourceOfTruth: 本件（CEO 2026-10-01 10:43 令「河源 8712 无用也退役」；BOD 勘定无用成立后执行）
+- 归位注记：2026-10-20 BOD W40-W43 审计批自 2026-W40/trees/ 根归位入本树（8712 并轨线同题·内容零改动·发生周 W40 叙事不变）
 - syncMode: final
 - lastSyncedAt: 2026-10-01 10:5x +0800（date 现查）
 

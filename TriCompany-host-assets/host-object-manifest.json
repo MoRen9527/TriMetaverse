@@ -1253,6 +1253,101 @@
           }
         }
       ]
+    },
+    {
+      "objectSetId": "product-manager-knowledge-workspace-v0.1",
+      "status": "current-copilot-host-live",
+      "ownerRole": "ProductManager",
+      "generatedAt": "2026-04-29T00:00:00+08:00",
+      "generator": "python -m runtime.cognition.employee_host_object_generation --employee product-manager",
+      "sourceRefs": [
+        "TriCompany/source-agents/product-manager/product-manager.agent.md",
+        "TriCompany/source-agents/product-manager/product-manager.soul.md",
+        "TriCompany/source-agents/product-manager/product-manager.memory.md",
+        "TriCompany/source-agents/product-manager/product-manager.colleagues.md",
+        "TriCompany/source-agents/product-manager/product-manager.social.md",
+        "TriCompany/source-agents/product-manager/product-manager.contract.yaml",
+        "TriCompany/docs/engineering/role-employee-knowledge-workspace.md"
+      ],
+      "bindingProfile": "TriCompany/.github/binding-profiles/product-manager.json",
+      "supportObjects": [
+        {
+          "kind": "role-knowledge-workspace",
+          "workspaceId": "product-manager",
+          "path": "TriCompany-host-assets/knowledge/roles/product-manager",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "employee-knowledge-workspace",
+          "workspaceId": "product-manager",
+          "path": "TriCompany-host-assets/knowledge/employees/product-manager",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "org-shared-knowledge-workspace",
+          "workspaceId": "shared",
+          "path": "TriCompany-host-assets/knowledge/org/shared",
+          "tracking": "tracked"
+        },
+        {
+          "kind": "audit-knowledge-workspace",
+          "workspaceId": "audit",
+          "path": "TriCompany-host-assets/knowledge/audit",
+          "tracking": "tracked"
+        }
+      ],
+      "runtimeNamespaces": [
+        {
+          "kind": "employee-private-runtime-namespace",
+          "namespace": "employee/product-manager",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "created on first cognition write, not by host object generation"
+        },
+        {
+          "kind": "org-shared-runtime-namespace",
+          "namespace": "org/shared",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared across employees when runtime providers write shared memory"
+        },
+        {
+          "kind": "org-audit-runtime-namespace",
+          "namespace": "org/audit",
+          "storage": "TRICOMPANY_COGNITION_HOME or .tricompany-cognition",
+          "tracking": "runtime-state",
+          "creationRule": "shared audit namespace created by runtime providers"
+        }
+      ],
+      "liveEntryStatus": "current-copilot-host-live",
+      "notes": [
+        "ProductManager (小案) is onboarded as a live host agent in the current Copilot-host phase per CEO direct-formalization order 2026-10-20 (A1 PM seat, trial waived).",
+        "The live discovery target is TriMetaverse/.github/agents/product-manager.agent.md.",
+        "ProductManager owns PRD refinement, implementation-grounded UI spec walkthrough, acceptance anchor forging and detail-quality gating; reports to CPO (小乔), peers with FSD (小全) and STE (小柯).",
+        "Current enablement does not imply TriMC formal host switch, PRD final adjudication rights, or a complete product authorization matrix are already implemented.",
+        "Contract YAML is at TriCompany/source-agents/product-manager/product-manager.contract.yaml (contract v3.0).",
+        "Source source-agents/<employee-id>/*.memory.md, *.colleagues.md, and *.social.md files are layer contracts only, not employee consumption records; concrete employee consumption records belong in the employee wiki or runtime cognition state."
+      ],
+      "employeeDisplayName": "小案",
+      "sessionBody": "TriCompany/source-agents/product-manager/session-body.agent.md",
+      "liveEntries": [
+        {
+          "target": "TriMetaverse/.github/agents/product-manager.agent.md",
+          "source": "TriCompany/source-agents/ProductManager/ProductManager.agent.md",
+          "kind": "role-agent",
+          "status": "current-copilot-host-live",
+          "sessionBody": "TriCompany/source-agents/product-manager/session-body.agent.md",
+          "renderTemplate": "host-default",
+          "sourceFiles": {
+            "soul": "TriCompany/source-agents/product-manager/soul.agent.md",
+            "agent_body": "TriCompany/source-agents/product-manager/agent-body.agent.md",
+            "agent_frontmatter": "TriCompany/source-agents/product-manager/agent-frontmatter.agent.md",
+            "memory": "TriCompany/source-agents/product-manager/memory.agent.md",
+            "colleagues": "TriCompany/source-agents/product-manager/colleagues.agent.md",
+            "social": "TriCompany/source-agents/product-manager/social.agent.md"
+          }
+        }
+      ]
     }
   ]
 }

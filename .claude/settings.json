@@ -1,1 +1,16 @@
-{}
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "SendMessage",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/d47-gate-hook.mjs\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

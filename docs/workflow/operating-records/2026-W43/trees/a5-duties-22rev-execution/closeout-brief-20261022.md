@@ -1,0 +1,34 @@
+# A5 整树收口毕报（a5-duties-22rev-execution·COS 树收口）
+
+- sourceOfTruth: 本件（docs/workflow/operating-records/2026-W43/trees/a5-duties-22rev-execution/closeout-brief-20261022.md）
+- syncMode: write-time（COS 写时维护）
+- 收口人: CEOChiefOfStaff（小贾/m-cos）
+- 令源链: CEO 批令 2026-10-22 11:42（1044a0b35）→ 任务书（4af2432b3/4d49180d6）→ 全席施工 → 本收口卷
+- checkpoint: 汇总锚=TC 99de09e（CHO 批量 34 文件·validator 13/13 PASS）+TMV 896a08b49（毕报卷+live 三面重渲 drift0+seats identical）/8d959cd20（sg 通道推平）
+
+## 22 项终态
+
+| 组 | 项 | 终态 | 锚 |
+|----|----|------|----|
+| COS 自办 | F1-1 / C1-① | 毕·验收门 PASS（CHO §四） | 6d77f5059（夹带注）/TC 9617500 |
+| CAO 主勘 | C1-② / F3-2 / F3-5 / C3-1 / C1-④ / C1-⑤ / F3-6 | 毕·验收门 PASS | TC bd17ce8+f7ebdc19f |
+| CHO 批量 | F3-3 / F1-2 / F1-3 / F3-1 落稿 / C1-② 六席九处 / C3-1 十二席 | 毕·validator 13/13 | TC 99de09e+896a08b49 |
+| CTO | F3-4 | 毕·验收门 PASS | TC 4415bfd+6d77f5059 |
+| CSO | F2-2 / F2-3 | 判零增量闭合·CHO 背书 | c6b7a73c9+TC c773129/1511732 |
+| CFO | F1-5 | 毕·验收门 PASS | 6b23beb4f+TC e4c81f8 |
+| SDE | F2-1 / F1-4 | 毕·验收门 PASS | 4f3aa8ac1+TC 0152905/sg 18a860a |
+| FSD（管线） | F4-1 / F4-2 / F4-3 | 毕（F4-1/F4-2 定谳面·F4-3 门 PASS 旁证） | 207a1793a+TC 18a860a+TMV 8806b3e9e |
+
+- 退役主件 13 件：归档留沿革·零清理零删除（裁语③·全施工面核对一致）。
+- 发布面：live 三面重渲 drift0+seats identical（8d959cd20·sg 通道✓）。
+
+## 随收口卷挂项（不阻塞销账·各归其位）
+
+1. ~~F1-3 映射规则候 CEO 追认~~ → **已闭合（10-22 12:34 BOD 按 D-39 验收面自裁追认 PASS·落卷 e99212926）**：CHO 定则经 BOD 抽验双席活体实锚（CPO=「产品负责人。负责…」+CTO=「技术负责人。负责…」·触发词全保留）与 CEO 11:54 裁语字面直接执行一致·三类判据自检不中任一类——CHO「候 CEO 追认」挂态按 bod-pending-ceo-mislabel 纪律勘正为 BOD 验收销项。**十席不必再校·F1-3 全链闭合**（事后呈报 CEO 知情已排）。
+2. ~~C1-② 计数差一处候 CAO 指认~~ → **已闭合（12:44 CHO 收尾补毕·CAO 指认合计十一处实勘落清）**：补单两处（CHO colleagues L11+COO session-body L28·TC 0d891df）+双保险扫 CPO「升级回」变体三处补刀（TC 0692755·validator PASS）——旧升级语组件面清零。附勘补：896a08b49 毕报漏 compass 面 13 席渲染产物——已勘补入卷（TMV d71e28afa·b492dc31f 推平）；合成件 11 处旧升级语残留（非现役·发布链不消费）候 CAO 定性中。
+3. **github 443 复补推**：候网自愈攒批重推（sg bare 备援双真值已验·非丢笔）。
+4. **DE 退役残影（候裁面）**：deployment-engineer 发布面双件·源侧 2ce1c31 已并入 SDE——处置照 LG-073 先例候 CEO 复核另下令（重渲不删退役件）。
+
+## 呈报
+
+三送 BOD/COO/CTO（树收口卷）·台账 A5 笔销账齐（各附锚）·大表 A5 行补挂随窗。

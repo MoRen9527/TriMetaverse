@@ -132,16 +132,28 @@ function emitReminder(kind, win, nowTs) {
 }
 
 // ── 主流程 ──
+// 周定位缺陷修（2026-10-22 装设窗·CTO）：单周(isoWeek(now))定位在「ISO 周已翻、台账未迁移」窗口期
+// （现役实证 10-19 装设→10-22：W43 目录无台账而现役台账挂 W42）全量 idle 零拍发——修=now 周+上周
+// 两目录并扫（现势周优先·同 id 去重），迁移过渡期双向覆盖。判拍/幂等/落卷面零改动。
 const now = Date.now();
-const ledgerPath = process.env.TRILC_WR_LEDGER_PATH || (() => {
-  const { year, week } = isoWeek(now);
-  return join(REPO, 'docs', 'workflow', 'operating-records', `${year}-W${String(week).padStart(2, '0')}`, 'window-ledger.md');
-})();
-if (!existsSync(ledgerPath)) {
-  console.log(`[window-reminder] ledger not found (idle): ${ledgerPath}`);
+const ledgerCandidates = process.env.TRILC_WR_LEDGER_PATH
+  ? [process.env.TRILC_WR_LEDGER_PATH]
+  : (() => {
+      const mk = ({ year, week }) =>
+        join(REPO, 'docs', 'workflow', 'operating-records', `${year}-W${String(week).padStart(2, '0')}`, 'window-ledger.md');
+      return [mk(isoWeek(now)), mk(isoWeek(now - 7 * 24 * 3600 * 1000))]; // now 周 + 上周
+    })();
+const windows = [];
+for (const lp of ledgerCandidates) {
+  if (!existsSync(lp)) continue;
+  for (const w of parseWindows(readFileSync(lp, 'utf-8'))) {
+    if (!windows.some((x) => x.id === w.id)) windows.push(w); // 现势周优先去重
+  }
+}
+if (windows.length === 0) {
+  console.log(`[window-reminder] no ledger/windows found (idle): ${ledgerCandidates.join(' , ')}`);
   process.exit(0);
 }
-const windows = parseWindows(readFileSync(ledgerPath, 'utf-8'));
 const st = loadState();
 const fired = [];
 for (const w of windows) {

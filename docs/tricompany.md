@@ -88,10 +88,10 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 | 员工 | 岗位 | 汇报关系 |
 | --- | --- | --- |
 | 小全 | FullStackDeveloper | CTO |
-| 小柯 | TestEngineer | CTO |
+| 小柯 | STE | CTO |
 | 小吴 | RAndDTrainer | CTO |
 | 小成 | CustomerSuccessOfficer | COO |
-| 小布 | DeploymentEngineer | CTO |
+| 小布 | SeniorDeploymentEngineer（代号 SDE） | CTO |
 
 13 名员工均已有源侧定义与 binding profile，并登记为当前 Copilot-host live。合同当前存在两种位置：早期合同集中在 `../TriCompany/docs/registry/`，V2 新员工合同可位于各自 `../TriCompany/source-agents/<employee-id>/` 目录。物理位置差异不应误判为员工未上岗。
 

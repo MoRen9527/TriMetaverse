@@ -9,6 +9,10 @@
 //   all-silent > 15min                     → reminder-level nudge to the owner seat
 //   all-silent > 30min AND no waiting reason → idle-escalate to COS (mailbox dual-hop)
 //   duty seat (m-cos) transcript silent > 30min → duty-escalate direct to BOD (second hop)
+//     [v2 候改 2026-10-21 BOD 判据反馈·LG-069 灰度首报案]：transcript 单源不能分
+//     「空闲无活」（零来件正常态）与「失联」——二级确认=箱水位不动+注册面在册→定性
+//     空闲非静默（BOD 建议①）。箱位=8713 daemon 数据面（考古候窗）——现役先注记级：
+//     duty-escalate 文体带误报可能注·升级通道处置照 COO 附报形（勿凭单源直升级）。
 // waiting reason = entry.status === 'waiting-window' (structured; note-text heuristics avoided)
 //
 // 三钉 contract (hard):
@@ -338,6 +342,9 @@ async function main() {
           seats: ["m-cos"],
           perSource: { transcript: dutyMs },
           stateKey: dutyKey,
+          // BOD 10-21 判据反馈：transcript 单源=可能空闲误报非失联——接收侧先验
+          // 箱水位/注册面再定性，处置照 COO 附报形勿直升级（v2 二级确认候窗）。
+          note: "transcript 单源读数——可能=空闲态误报（零来件≠失联），先验箱水位+注册面再定性",
         });
       } else {
         skipped.push("duty-cos: escalate in cooldown");
