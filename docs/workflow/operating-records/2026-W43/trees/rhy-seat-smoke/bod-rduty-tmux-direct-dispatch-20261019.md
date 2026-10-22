@@ -327,4 +327,6 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 
 - **大表行修复+挂载毕报收记（10-22 11:51·hook 现戳锚）**：①大表 A6 双行并一行（并行窗错位勘正·互踩族形态如实注）+A7 行补入勘正销账版（上轮 Edit 未命中系表行已被并行改写·重取现势后修）。②**CTO 挂载毕报收记**（11:50:37 落款 date 现查原值）：gate hook 自动挂载施工毕——`.claude/settings.json`（项目级 git 面真源）+`hooks/d47-gate-hook.mjs` wrapper·PreToolUse/SendMessage 精确匹配·闸正身 TriCompany d62fa1474 零改（十案回归绿）·commit 9b824315a；**生效机制勘正=hooks 变更 file watcher 热加载·挂载即对现役席生效无需重启窗**（cwd 于 TriMetaverse 全会话覆盖·13 席+BOD 零豁免·sg duty 组 pull 后同效）；双机落定 hash 双对表（settings b68287d6d37b/wrapper 6b4360714127）·github 443 断连挂账候 mirror 链自愈；wrapper 四案自测 ALL PASS；**毕报信本身=闸下首信真实链路 PASS 放行（首验样本）**；三勘销+D-46 自领如实入卷（cat 用户级 settings 未预滤·env 含密值面入本席 transcript·本机面不出仓·候 CAO 记档）；毕报正身=W43 trees/d47-gate-hook-mount-20261022/brief.md@667e96507·**观察窗 24h 误伤回报通道照用**。BOD 回执已发。
 
+- **F1-3 格式裁+候 CEO 面清零（10-22 11:54·hook 现戳锚）**：CEO 裁语「XX 负责人。负责…，选这个」——description 统一模板定**新式**（「XX 负责人。负责…」·CHO/CAO 现用形·11 席旧式随批改）；流转 COS 转任务书（F1-3 候裁注销·施工归 CHO 批量随 A5 面·五件套门）。**候 CEO 面至此零存量**——今日大表收口令（11:32 催办+A4-A7 呈批一件一件来）全链毕：A4/A7 核验早已毕勘正销账·A5/A6/F1-3 三裁流转在途·挂载毕观察窗 24h 中。
+
 （卷面落款：2026-10-20 20:28:35 +0800·BOD）
