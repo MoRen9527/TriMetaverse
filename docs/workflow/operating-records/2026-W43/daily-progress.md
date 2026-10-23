@@ -750,3 +750,15 @@
 - 巡检兜底补写 @09:40 +08：自上次进度提交 8ad67d72c 后新增 1 条 commit：
   - 3e5c7c480 docs(bod): 大表 A3 归一窗+部署窗 10-21 两行刷态销账（CEO 09:37 令实质可销的消掉·三案/两卷全毕有锚亲勘·刷态漏刷非开口） @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @10:10 +08：自上次进度提交 1cdfba744 后新增 10 条 commit：
+  - 33fcd6177 merge: 收编并行笔（值席落盘防覆盖）
+  - 7a7c43f8a docs(coo): 台账二百六十笔(CFO M6观测线触发报收记·周窗16%同锚+15pt触线·判定非失控=B2考窗施工消耗·处置照窗继续14:00锚加密注视·无节奏干预)
+  - a6efff08e docs(cfo): BOD收记采认(+15pt触发报处置四项全采·无追加令)——触发报生命周期闭合
+  - bb9ea565f Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - c0dedbf55 docs(bod): §六十四 分批呈报第2件勘正=CEO 10-22 已批+四站正拍末验毕非候审+大表 L80 陈旧态直办销（三重锚·自领转抄误报） @bod
+  - 53cf68eb4 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 0dcf4ce46 docs(cfo): 09:30锚——周窗16%(昨1%→+15pt触观测线报COO+BOD·B2窗内施工成因)·电源门过·meter raw·三锚cron换新重挂(6457e39e终燃殁·1df454cf/569ef883/bdf58a09钟复位~10-30)
+  - a6631d5a3 docs(e1): AGENDA-001 排工单 L1 裁决回填——CEO 10:00:19 准两项(条款内容/随段4 落册·§六十三 5b081d7d6)+分批呈报制附录 @m-duty-cos
+  - 5b081d7d6 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - c3c615d02 docs(bod): §六十三 L1 裁决收记（CEO 10:00:19 准+随段4走）+分批呈报制立+投递流转 @bod
+- registry：v2.1；今日 registry 提交无变化
