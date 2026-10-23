@@ -786,3 +786,12 @@
   - 7075442d5 docs(cfo): 14:00锚——周窗17%(09:30 16%→+1pt轻段)·电源门过·M6三线全零(同锚对+12pt未触免报)·停工令达COO+抄BOD(勘正令今日第二窗·门段14:00-18:00令达线14:30:26·B2首禁窗段施工面停)
   - d105c7017 docs(bod): §七十一 停工令第二窗收记（m-cfo 加抄知情·治理监控面例外保留） @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:40 +08：自上次进度提交 081f6fb08 后新增 7 条 commit：
+  - 9dc9220c5 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - be3439b6e docs(bod): §七十三 V3 重审通过收记+派单工作流触发起点讨论令（FADE-001/006 勘定） @bod
+  - 6cc13efa7 docs(coo): 台账二百六十二笔(CFO复工令收记·门段止18:00令达线18:30:25·施工面复+B2考窗同复·明日周六无停工窗·B2窗止10-24 18:00·本面候办在位零堵点)
+  - 227caa721 Merge remote-tracking branch 'sg-server/dev' into dev
+  - b04573e6c docs(cfo): 18:00锚——周窗18%(窗内17%→18%轻耗如实注·昨+0pt对照)·电源门过·M6三线全零(+13pt未触免报)·复工令达COO+抄BOD(施工面+B2考窗同复·明日周六无停工窗)
+  - 5f401c322 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 4e5468ba4 docs(bod): §七十二 复工令第二窗满收记（m-cfo 加抄知情·18:00 复工·明日周六无停工窗） @bod
+- registry：v2.1；今日 registry 提交无变化
