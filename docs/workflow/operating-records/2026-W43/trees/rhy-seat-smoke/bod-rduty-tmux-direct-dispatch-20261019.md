@@ -778,3 +778,8 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **令源**：CEO 2026-10-23 13:45:56：D1 批周形（wp-周.json 定）；D2 助读段回归（CH-YYYYMMDD-NNN-助读段）；D5 命令名 wp 或 weekplane；大表不叫 bigtable 沿用 task-inventory-日期.md 传统名；**留痕之问**（git mv 旧周文件怎么留痕？归档是否影响开始/结束/过程周留痕？）；company-demand-pool/daily-progress 等周级表纳入整体迁移。
 - **BOD 整改（V2→V3）**：①新增 §2.1 **留痕三层**=旧周 inactive 账本快照（一字不改原样保留·那周时刻快照）+plane-shift-log.md 迁移留痕卷（migrate 写·迁出迁入清单+时点+断言读数）+git 历史兜底（--follow+SHA 锚立规）——答：git mv 不删历史，搬的是「现在住哪」；归档同构=archive-meta 起止周+各相关周账本 closed 记录（账本留痕·目录搬家）；②新增 §2.2 迁移物三类清单=任务书整本平移/滚动平移（demand-pool 未消化段+unresolved）/快照新建（daily-progress 旧周留档新周新建）+wp 账本 planeFiles 段程序断言；③ID 助读段回归、命令名 wp（weekplane 别名）、大表 task-inventory-日期.md（名沿用·render 制不变）；④inactive 账本禁改入 schema 硬规则第 5 条；验收门增留痕抽验一条。
 - **候 CEO**：V3 重审——重点 §2.2 周级表三类分类法（daily-progress 系快照新建非平移·防日志跨周混杂）候批。
+
+## §七十一（$TS）·工作日停工令第二窗收记（m-cfo 加抄知情）
+
+- **收信**：m-cfo 加抄（COO 主送同文）·落款 date 现查原值。CEO 停工令（周一至五 14:00-18:00）今日第二窗：门段 14:00-18:00·令达线 14:30:26。例外=治理面监控面保留+B2 考窗首禁窗段（施工面停·互签链零在飞）。复工预告 18:00 锚照排。知情面：周窗 17%·5h 窗 1%·电源 AC 100%·M6 三线全零（同锚对 +12pt<15 未触·正常免报）。
+- **BOD 处置**：收记留痕。本席=治理监控面（例外保留）·双 cron 巡检照跑·设计稿 V3 候审件属治理面不受停工影响·继续候 CEO 重审。纯知情免回执·不升级。
