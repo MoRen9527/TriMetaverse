@@ -30,9 +30,11 @@
   "priority": "high",
   "order": 1,
   "owner": "COS（起链）",
-  "chain": ["cos", "cto", "fsd", "ste", "cos"]
+  "roles": ["cos", "cto", "fsd", "ste"]
 }
 ```
+
+- roles=参与本单的团队成员席别名单（**COO 定组队**·本单 BOD 代拟随批确认）；任务书整体**不走树不走链**——顺序调度在任务树层，由 COS 盯（CEO 2026-10-23 21:01 勘正）。选 roles 不选 employees：任务书排席别角色，具名人员归 staffing 面。
 
 ## 树拆分（串行 seq·任务书内严格串行）
 
@@ -41,14 +43,14 @@
 - python 包骨架（`wp/` 包·入口 `wp` 命令+`weekplane` 别名·解释器正形 `python` 3.12）
 - wp.json schema V2 载荷类：load/validate（五条硬规则校验器）/save（原子写 os.replace+回读断言）
 - 命令：`wp init`（新周账本初始化）、`wp status`（按 active 定位现势周·全库至多一 active 断言）、`wp check`（账实比对·planeFiles 状态断言）
-- 节点链：cto（架构约束下发的骨架评审）→ fsd（实现+白盒自测）→ ste（门禁验证）→ cos（收口）
+- 任务树：cos（开树派工）→ cto（架构约束下发的骨架评审）→ fsd（实现+白盒自测）→ ste（门禁验证）→ cos（收口闭树）
 - 每节点树文件夹留执行报告（node-reports/NN-<席>-<slug>.md）
 
 ### t2 渲染器（seq 2）：大表+平面状态 render（只读·账本 hash 不变证明）
 
 - `wp render`：账本 → task-inventory-日期.md（人看·沿用传统名）+ plane-status.md（机器辅助视图）
 - 只读自证：render 前后账本文件 hash 断言不变
-- 节点链：cto → fsd → ste → cos
+- 任务树：cos（开树派工）→ cto → fsd → ste → cos（收口闭树）
 
 ### t3 迁移引擎（seq 3）：wp migrate（FADE-011 固化流程的程序体）
 
@@ -56,7 +58,7 @@
 - 三类清单执行（§2.2）：整本平移（git mv）/滚动平移/快照新建+周级表
 - 旧周降 inactive（快照一字不改）+ plane-shift-log.md 迁移卷自动写（迁出迁入清单+时点+断言读数）
 - 新周 render 联动+wp check 收口
-- 节点链：cto → fsd → ste → cos
+- 任务树：cos（开树派工）→ cto → fsd → ste → cos（收口闭树）
 
 ## 技术约束（全树适用）
 
@@ -75,9 +77,9 @@
 6. STE 门禁全绿+FSD 白盒自测报告在树文件夹。
 7. 首单闭环自证：本任务书自身收口后，大表 render 出现本单 done 行（吃狗粮第一口）。
 
-## 明早起链序（CEO 晨批后）
+## 起单序（CEO 批后即时）
 
-1. CEO 晨批本稿 → BOD 转达 COS（归因锚②）
+1. CEO 批本稿 → BOD 转达 COS（归因锚②）
 2. COS `wp charter-create`（手工代行·按本稿 charter 对象录入）→ 触发·十段起算
-3. COS 按 chain 起树 t1：点名 cto→fsd→ste→cos，逐节点派工（每节点留报告）
+3. COS 开任务树 t1：cos 开树派工→cto→fsd→ste→cos 收口闭树，逐位派工（每节点留报告）；COS 按树逐位核完成度，断点=故障恢复锚
 4. t1 毕串行开 t2 → t3 → 全树毕 charter done → render 消账

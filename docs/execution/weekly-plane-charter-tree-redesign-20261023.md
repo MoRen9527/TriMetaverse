@@ -4,7 +4,7 @@
 - syncMode: manual
 - lastSyncedAt: 2026-10-23
 - 令源: CEO 2026-10-23 10:34:07 四条令 + 10:48:47 架构勘正·程序先行 + 10:54:50 出稿令 + 11:30:56 D1-D8 批 + 13:45:56 四条修订与留痕之问（本 V3 整改依据）
-- 修订记录: V1=初稿（bc844154b）；V2=D1-D8 整改（d4db35ab）；V3=CEO 13:45:56 修订——D1 周形确认、D2 助读段回归、D5 命令名 wp/weekplane、大表沿用 task-inventory-日期.md 传统名、新增留痕三层设计（§2.1·答「git mv 旧周怎么留痕」）、迁移物清单三类含周级表（company-demand/daily-progress 等）；**V3 定稿通过（CEO 18:36:43）**；V3.1=工作流讨论定谳（CEO 19:09/19:18）——触发起点=wp charter-create 登记成功（§五·甲）、FADE 实例拆立两条独立实例 011/012 零共用耦合（§五·乙·一实例一固化流程·甲案升级沿用因耦合度高被否）
+- 修订记录: V1=初稿（bc844154b）；V2=D1-D8 整改（d4db35ab）；V3=CEO 13:45:56 修订——D1 周形确认、D2 助读段回归、D5 命令名 wp/weekplane、大表沿用 task-inventory-日期.md 传统名、新增留痕三层设计（§2.1·答「git mv 旧周怎么留痕」）、迁移物清单三类含周级表（company-demand/daily-progress 等）；**V3 定稿通过（CEO 18:36:43）**；V3.1=工作流讨论定谳（CEO 19:09/19:18）——触发起点=wp charter-create 登记成功（§五·甲）、FADE 实例拆立两条独立实例 011/012 零共用耦合（§五·乙·一实例一固化流程·甲案升级沿用因耦合度高被否）；**V3.2=树链勘正（CEO 21:01:31）——charter 层 chain 字段改 roles（团队名单·COO 定组队·无序·任务书整体不走树不走链）、树层改任务树 sequence 节点序列（cos 开树 cos 收口·首尾必 cos 程序断言·干活席 ⊆ charter roles）、COS 盯序照树逐位检查完成度/断点故障恢复（§1.3 重构+§四命令面+§五乙+§八同步）**
 - 设计者: BOD（董事会治理席）·把关: CEO 逐条批
 - 实施原则（CEO 定）: 按 FADE 规范以程序和 CLI 形成工作流把控整个进度；执行/检查等固定与规范类操作**程序先行**，程序不可解再升 agent 智能兜底
 - 病灶输入: 四病灶实锚 + 大表刷态滞后族三笔实锚
@@ -19,7 +19,7 @@
 | 实体 | 是什么 | 状态机 | 归属（唯一父） |
 |---|---|---|---|
 | **周平面 WeekPlane** | 一周的经营账本（机器读唯一真源） | active → inactive（D4） | 无（时间轴顶） |
-| **任务书 Charter** | 一件未完成任务的完整单据（叙述+树清单+链+状态） | open → in_progress → done / cancelled / frozen | 恰一个周平面 |
+| **任务书 Charter** | 一件未完成任务的完整单据（叙述+团队名单 roles+树清单+状态） | open → in_progress → done / cancelled / frozen | 恰一个周平面 |
 | **树 Tree** | 任务书下的一步施工单元（一树一文件夹） | pending → in_progress → done / blocked | 恰一个任务书 |
 | **节点 Node** | 树内一个席位的施工步骤 | pending → in_progress → done | 恰一棵树 |
 
@@ -33,11 +33,11 @@
 - 树毕在任务书内记账，不动周账本；**全部树毕 → 任务书毕 → 才从周账本销账**。
 - **周状态机（D4 批）**：全库同时至多一个 `active` 周；已平移的周降 `inactive` 留档只读。**「只查 active 即知现役周工作平面在哪」**。
 
-### 1.3 树链（CEO 令④）
+### 1.3 团队名单与任务树（CEO 令④·2026-10-23 21:01 勘正）
 
-- 任务书立单时**必须写明参与者链**：`chain: [cos, cpo, cto, fsd, ste, sde, cos]`——cos 起 cos 终。
-- 链即派工单：COO 派工照链点名；COS 照链逐点检查执行情况（`wp check` 程序先行）。
-- 树级链可细化，但必须与任务书链兼容（树链 ⊆ 任务书链）。
+- 任务书立单时**必须写明团队名单**：`roles: [cos, cpo, cto, fsd, ste, sde]`（**COO 定组队**——定哪些人参与）。名单无序，**不设整体链**：任务书整体不走树不走链。
+- **任务树才有序**：每棵任务树节点序列 **cos 开树、cos 收口**（`sequence` 首尾必 cos，程序断言）；树内干活席 ⊆ 任务书 roles（断言）。
+- COS 盯参与顺序：照树序列逐位派工、逐位检查完成度（`wp check` 程序先行），断点即故障恢复锚。
 
 ### 1.4 任务书排序与优先级（D8 批）
 
@@ -64,7 +64,7 @@ operating-records/
         reports/                     ← 任务书级卷（毕报/收口卷）
         trees/
           t1-kanjian/                ← 树文件夹（树跟任务书走·D3 批）
-            tree.json                ← 树账（节点/链/状态/串行位）
+            tree.json                ← 树账（节点/序列/状态/串行位）
             node-reports/            ← 节点执行报告
               01-cos-20261023110000.md
               02-cto-20261023143000.md
@@ -136,14 +136,14 @@ migrate 管的完整清单，三类：
   "priority": null,
   "order": 1,
   "owner": "cos",
-  "chain": ["cos","cpo","cto","fsd","ste","sde","cos"],
+  "roles": ["cos","cpo","cto","fsd","ste","sde"],
   "trees": [
     {
       "id": "t1-kanjian",
       "seq": 1,
       "title": "勘验",
       "status": "done",
-      "chain": ["cos","cto","cos"],
+      "sequence": ["cos","cto","cos"],
       "dir": "charters/CH-20261023-001-agenda001/trees/t1-kanjian/",
       "nodes": [
         { "seq": 1, "seat": "cos", "status": "done",
@@ -178,12 +178,12 @@ migrate 管的完整清单，三类：
 | `wp init --week 2026-W44 --from 2026-W43` | 建新周骨架+执行迁移 | 见 migrate |
 | `wp migrate --from W --to W'` | 迁移：§2.2 三类清单全跑（任务书整本 git mv+周级表滚动/快照+carryIn/Out 登记+旧周降 inactive+旧周写 plane-shift-log.md） | **对表断言：上周末毕清单==新周 carryIn 清单，差一件即 FAIL 不落账**；planeFiles 状态断言；原周 status=inactive 落定 |
 | `wp render` | 从账本生成 task-inventory-日期.md（大表）+ plane-status.md | 渲染后账本 hash 不变（只读证明） |
-| `wp charter-create --week W --title T --slug S --chain … [--priority high]` | 立任务书（ID=CH-日期-序号-助读段） | id 唯一断言 |
-| `wp charter-split --id C --tree "seq,title,chain"…` | 拆树（写串行 seq+树链·按 D8 全局顺序） | 树链 ⊆ 任务书链断言；顺序断言 |
+| `wp charter-create --week W --title T --slug S --roles … [--priority high]` | 立任务书（ID=CH-日期-序号-助读段·写团队名单） | id 唯一断言；roles 非空含 cos |
+| `wp charter-split --id C --tree "seq,title,sequence"…` | 拆树（写串行 seq+任务树节点序列·按 D8 全局顺序） | 序列首尾=cos 断言；干活席 ⊆ charter roles 断言；顺序断言 |
 | `wp tree-start --charter C --tree T` | 树开工 | **串行闸：前 seq 树非 done 即拒开**；全局顺序闸 |
 | `wp tree-done --charter C --tree T` | 树毕 | 节点全 done+报告齐全断言 |
 | `wp report-add --charter C --tree T --node N --seat S --file F` | 节点报告登记 | 文件存在+命名规范断言 |
-| `wp check` | 照链点名：每在役树当前节点、报告缺口、账实比对 | 输出检查单（COS 检查工具面） |
+| `wp check` | 照树序点名：每在役树当前节点、报告缺口、账实比对 | 输出检查单（COS 检查工具面） |
 | `wp status` | 一口读数：active 周定位+total/open/carried/预警/在役树 | 按 status=active 定位现役周 |
 
 ### 4.1 agent 兜底位（程序不可解才升）
@@ -192,12 +192,12 @@ migrate 管的完整清单，三类：
 |---|---|
 | 迁移对表 FAIL（数量不符/目录缺） | 升 agent 勘因 → 勘不了升 CEO |
 | 任务书去留（继续/冻结/关闭裁决） | agent 呈 BOD/CEO 裁，裁毕程序执行 |
-| 链要改/树要拆子树 | agent 判 → 程序改账本 |
+| 名单要改/树要拆子树 | agent 判 → 程序改账本 |
 | 历史卷归属判读（存量归位·W40 起逐周整理） | agent 判读 → CLI 执行归位 |
 
 ---
 
-## 五、执行工作流（FADE 实例挂接·全链程序介入点）
+## 五、执行工作流（FADE 实例挂接·全流程程序介入点）
 
 ### 五·甲 FADE 实例挂接（CEO 19:09/19:18 定谳）
 
@@ -205,8 +205,8 @@ migrate 管的完整清单，三类：
 
 | 实例号 | 固化流程 | 骨架 | 与旧实例关系 |
 |---|---|---|---|
-| **FADE-011** | 周平面迁移（wp migrate 链） | 对表断言→物理搬→降 inactive→留痕三层→render | 新立·旧 FADE-001 现役任务跑完自然退役·无继承包袱 |
-| **FADE-012** | 计划任务自动拾取（charter 链） | 铸单登记→拆树注册→挂平面→自动拾取→自治执行→收口回执 | 新立·旧 FADE-006 同上退役 |
+| **FADE-011** | 周平面迁移（wp migrate 流程） | 对表断言→物理搬→降 inactive→留痕三层→render | 新立·旧 FADE-001 现役任务跑完自然退役·无继承包袱 |
+| **FADE-012** | 计划任务自动拾取（charter 流程） | 铸单登记→拆树注册→挂平面→自动拾取→自治执行→收口回执 | 新立·旧 FADE-006 同上退役 |
 
 - 两实例**各自十段工件、各自试卷、各自评分**；共用面仅 wp CLI 工具族（工具级复用，非流程耦合）。
 - 编号裁录：甲案（001/006 升级沿用）因耦合度高被否（CEO 19:18：011 若作共用模块，将来周报相关实例都要对接、通用性未证、历史包袱重）；乙案（拆立两独立实例）定。
@@ -224,7 +224,7 @@ CEO 批令（归因锚①: 批文时点）
     · charter.origin 必录: 令源时点+批文锚+转达卷锚（归因链进账本）
     · 判定机械可验: 账本有此 charter 且 origin 齐=已触发；无=未触发·零争议
  → COS/COO: wp charter-split（拆树·串行 seq·按 D8 全局顺序=高优先级在前）
- → 派工（照链点名·树链写在单上）
+ → 派工（照树序点名·树序列写在单上）
  → 逐树串行:
      wp tree-start → 节点开工 → 干活 → wp report-add（节点执行报告落盘）
      → 节点毕 → 下节点 → … → wp tree-done（报告齐才放行）
@@ -287,8 +287,8 @@ CEO 批正形：**W40→W41→W42 逐周整理，整理完 W42→W43 干跑验�
 | 文件 | 改动 |
 |---|---|
 | weekly-plane-shift-sop.md | V2：人工流程改 wp migrate CLI 流程（含 D6 迁移链+§2.2 三类清单配方） |
-| dynamic-task-tree-protocol.md（TriCompany 真源） | V0.7：两级挂接+树链必填+节点报告程序强制+周状态机 active/inactive+留痕三层 |
-| onboard-work-registry.md | 树链检查节（wp check 为 COS 检查正形） |
+| dynamic-task-tree-protocol.md（TriCompany 真源） | V0.7：两级挂接+树序列必填（首尾 cos）+节点报告程序强制+周状态机 active/inactive+留痕三层 |
+| onboard-work-registry.md | 树序检查节（wp check 为 COS 检查正形） |
 | 大表惯例 | task-inventory 手工刷态废止 → task-inventory-日期.md render 产物制（**名沿用·制更新**） |
 | 窗账本 window-ledger.md | 排窗段制废止随四条令② |
 | **fade-registry.md（TriCompany 真源）** | **新立 FADE-011（周平面迁移）/FADE-012（自动拾取）两条独立实例登记（§五·甲）·旧 FADE-001/006 标注退役路径（现役任务跑完自然退役·评分历史不追改）** |
@@ -297,7 +297,7 @@ CEO 批正形：**W40→W41→W42 逐周整理，整理完 W42→W43 干跑验�
 
 ## 九、实施分段（候 CEO 重审确认）
 
-| 段 | 活 | 参与者链示例 |
+| 段 | 活 | 树序列示例 |
 |---|---|---|
 | S1 | 设计稿重审定稿（本轮 V3 候审） | cos→CEO→cos |
 | S2 | wp-cli 骨架（python·migrate/render/check/status 最小集） | cos→cto→fsd→ste→cos |
