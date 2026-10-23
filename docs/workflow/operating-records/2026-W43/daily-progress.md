@@ -774,3 +774,6 @@
 - 巡检兜底补写 @11:40 +08：自上次进度提交 b5f58e831 后新增 1 条 commit：
   - d4db35abe docs(design): 周平面三级体系设计稿 V2——CEO D1-D8 批复整改（wp 账本名+inactive 周状态机+CH-ID+python CLI+D6 迁移链 M1-M5+D8 排序）候重审 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 1912ce421 后新增 1 条 commit：
+  - f653a7e9e docs(bod): §六十九 D-47 gate 观察窗销项收记（m-cto 四证零误伤·24h 窗满） @bod
+- registry：v2.1；今日 registry 提交无变化
