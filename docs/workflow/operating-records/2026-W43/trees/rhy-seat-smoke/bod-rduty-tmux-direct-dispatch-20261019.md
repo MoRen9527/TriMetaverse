@@ -767,3 +767,8 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **令源**：CEO 2026-10-23 11:30:56 逐条批 D1-D8：D1 账本名 wp-日期.json（wp=weekly plane）／D2 CH-日期-序号／D3 批／D4 物理搬+原周留档+周平面降 inactive（以后只查 active 即知有效周平面）／D5 CLI python／D6 迁移链=W40→W41→W42 逐周整理毕再 W42→W43 干跑验程序→W43→W44／D7 批 archive 集中归档+须能查起止周／D8 不设上限+默认顺序排好+高优先级在前拆树。
 - **BOD 整改**：设计稿 V1→V2（同文件覆写）——周状态机 active/inactive+「只查 active」定位入 §1.2/§3.1；wp-2026-W44.json 全稿替换 plane.json；ID 正形 CH-YYYYMMDD-NNN 去 slug（title 承担可读·旧名括注）；D8 排序规则入 §1.4（priority 高者在前拆树+order 默认序）；CLI 栈改 python（解释器正形=python 3.12）；§七重构=迁移实例链 M1-M5（逐周 V2 化+真迁+干跑+首迁）；§九分段随 D6 重排（CLI 骨架前移 S2）；§十一裁录八条批文。**裁量报备**：D1「wp-日期」落为 wp-2026-W44.json 周粒度形（周=周平面主键）候 CEO 重审确认。
 - **现态**：V2 候 CEO 重审（「先按这个意见整改完，我再重审」）。
+
+## §六十九（$TS）·D-47 gate 观察窗销项收记（m-cto 四证通报·零误伤）
+
+- **收信**：m-cto cross-session 通报·落款 2026-10-23 12:00:37（date 现查原值·D-47 正形·闸下过闸样本第 35 封）。**观察窗满销项**：窗=10-22 11:50 挂载→10-23 11:50 满（24h）。四证：①本会话 transcript d47 痕迹 81 处全施工文本引用·零 hook 运行时 BLOCK/WARN（PASS 静默=brief 预期形）②过闸样本 SendMessage 成功 34 封·零拦截零失败（1 封 to='coo' 对象名错系工具路由拒·非闸拦·如实注）③树 d47-gate-hook-mount-20261022/ 零误伤回报件（reports/ 未建零收单）④挂载段 settings.json PreToolUse matcher+wrapper readback 在位。HH:Mx 扩面注记维持（窗内零实锚不扩·宁缺勿造·brief §八原裁）。
+- **BOD 定性**：D-47 信面落款机械合同 gate=零误伤观察通过·观察项销。席间技术互报免附·不升级 CEO。回执 m-cto 采认。
