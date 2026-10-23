@@ -761,3 +761,9 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 - **依据**：CEO 10:54:50 批「按这个理解出设计稿」。设计稿正身=docs/execution/weekly-plane-charter-tree-redesign-20261023.md（本 worktree 随本笔 push 至 dev）。
 - **稿面**：四大实体（周平面/任务书/树/节点）+两级挂接单链（周→任务书→树·D3 树物理挂 charter 下·D4 迁移物理搬零指针）+plane.json schema V2（杂记禁入+结构化 carry+单一写入口+账实自检）+CLI 命令族 10 条（migrate 对表断言 FAIL 不落账/render 大表只读产物/串行闸/report add 报告强制/check 照链点名）+agent 兜底位四情形+防四类复发映射+存量归位配方+实施分段 S1-S5+验收门五条。
 - **候 CEO 把关**：决策点 D1-D8（账本名/任务书 ID/树物理位/迁移方式/CLI 栈/首迁实例/归档位/并行度·各附推荐）。S1 设计把关段进行中，CEO 逐条批后定稿进 S2 存量归位。
+
+## §六十八（$TS）·CEO D1-D8 逐条批复收记+设计稿 V2 整改毕
+
+- **令源**：CEO 2026-10-23 11:30:56 逐条批 D1-D8：D1 账本名 wp-日期.json（wp=weekly plane）／D2 CH-日期-序号／D3 批／D4 物理搬+原周留档+周平面降 inactive（以后只查 active 即知有效周平面）／D5 CLI python／D6 迁移链=W40→W41→W42 逐周整理毕再 W42→W43 干跑验程序→W43→W44／D7 批 archive 集中归档+须能查起止周／D8 不设上限+默认顺序排好+高优先级在前拆树。
+- **BOD 整改**：设计稿 V1→V2（同文件覆写）——周状态机 active/inactive+「只查 active」定位入 §1.2/§3.1；wp-2026-W44.json 全稿替换 plane.json；ID 正形 CH-YYYYMMDD-NNN 去 slug（title 承担可读·旧名括注）；D8 排序规则入 §1.4（priority 高者在前拆树+order 默认序）；CLI 栈改 python（解释器正形=python 3.12）；§七重构=迁移实例链 M1-M5（逐周 V2 化+真迁+干跑+首迁）；§九分段随 D6 重排（CLI 骨架前移 S2）；§十一裁录八条批文。**裁量报备**：D1「wp-日期」落为 wp-2026-W44.json 周粒度形（周=周平面主键）候 CEO 重审确认。
+- **现态**：V2 候 CEO 重审（「先按这个意见整改完，我再重审」）。
