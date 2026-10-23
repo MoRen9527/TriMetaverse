@@ -771,3 +771,6 @@
 - 巡检兜底补写 @11:00 +08：自上次进度提交 5bed6c822 后新增 1 条 commit：
   - bc844154b docs(design): 周平面三级体系产品设计稿 V1——实体模型+plane.json V2+CLI 命令族+防四类复发+决策点 D1-D8 候 CEO 把关 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:40 +08：自上次进度提交 b5f58e831 后新增 1 条 commit：
+  - d4db35abe docs(design): 周平面三级体系设计稿 V2——CEO D1-D8 批复整改（wp 账本名+inactive 周状态机+CH-ID+python CLI+D6 迁移链 M1-M5+D8 排序）候重审 @bod
+- registry：v2.1；今日 registry 提交无变化
