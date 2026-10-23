@@ -829,3 +829,13 @@ COS 19:36:30 补报：m-cto 19:36:07 接令回执（派信→拾取 71s 全链�
 - **补丁挂设（BOD 自裁·session cron one-shot 三窗·人盯兜底）**：587a126f=段2 10-24 18:02／77dd9b4a=段3 10-25 18:02／fc5fed2b=段4 10-26 10:02——到点先核前段门再催 m-cos 触发派工·毕后落卷。session-only 注：本会话关闭即失效，正式保证候新体系程序化触发。
 - **治理定性**：非 COS 个席失职=现行制「触发无程序载体+义务无文书指派」的必然结果；排工单模板缺触发列缺陷素材已录档（§七十五）随 S5 制度回写。
 - **新体系正解指向**：FADE-012 COS=显式触发者（charter-create 登记=触发·机械可验）+延时窗任务挂 cron 触发 job（程序到点叫人）——窗点触发真空结构性消失。
+
+## §七十七（2026-10-23 19:50:25）AGENDA-001 段1 毕报收记·全绿过门·段2 启动门达
+
+- m-cto 毕报收讫（落款 19:49:09 date 现查原值·BOD 19:49:52 收）：毕报卷 73cbb6c62→树顶 709f46dce 双验，正身=cto-seg1-closeout-20261023.md（agenda001-supply-chain 树）。
+- **①1-1 绿**：npm 12 engines 实锚 ^22.22.2 || ^24.15.0 || >=26.0.0（现役 22.21.1 不满足·差 patch 位）；npm12 不随 node 槽自带，升级载体=npm 层 install -g npm@12（临时 prefix 实装 12.2.1 RC=0）；allowlist 正形=package.json allowScripts 字段（版本 pin）+approve/deny/install-scripts 命令面；**npm12 默认态=install 脚本 default-deny（warn 不 fail）——CI 须加 pending 空判闸（段2 关键输入）**。
+- **②1-2 绿**：esbuild 必测全链（block→approve→重装零 warn→pending 清零→构建 smoke）；@swc/core/electron/node-gyp 三包 lockfile 全谱零存在（TriMetaverse 非 node 工程）——备查项闭，白名单无需收三包。
+- **③坑案三条**：nvm4w symlink UAC 无头静默失败（node 兜底 Program Files 22.21.0 活）——**恢复项=有人值守窗 nvm use 22.21.1 一把 UAC 确认·候窗挂账（BOD 录卷跟踪）**；claude shim 残留已清零损；MSYS2 读数缓存伪影（显式路径正形）。
+- **④段2 启动门达**：1-1+1-2 判据全过——10-24 18-24 窗 SDE CI 施工可启动（段2 关键输入四条在卷 §四）。BOD 三窗补丁 587a126f 在位（明晚 18:02 催办·先核本门已达）。
+- **效率实证（触发真空代价量化素材）**：19:34:56 触发→19:36:07 拾取→19:49:09 毕报=全段实做约 14 分钟；对照 18:00-19:34 空转 1.5h+——「窗开了没人点火」的代价=实做时长的 6 倍+，随 S5 制度回写引用。
+- 施工边界：零现役工程文件变更（勘验段性质）；daemon 双 healthz 绿全程零影响。
