@@ -805,3 +805,9 @@
   - 004551d43 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - e3eaeb8dd docs(bod): §七十五 S2 候批稿拟毕+AGENDA-001 段1 触发催办转 COS（责任人勘定=排工单缺触发列缺陷录档） @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:50 +08：自上次进度提交 a7f60054e 后新增 4 条 commit：
+  - 709f46dce Merge remote-tracking branch 'sg-server/dev' into dev
+  - 73cbb6c62 docs(cto): AGENDA-001 段1 毕报——1-1 npm12×nvm4w 兼容+allowlist 语法实测全绿(engines 实锚 22.21.1 不满足/升级载体 npm 层自升/allowScripts 字段正形/default-deny warn 形)+1-2 esbuild 必测全链绿(approve→重装→pending 清零→构建 smoke)+三包依赖树全零备查闭+坑案三条(symlink UAC 无头静默失败候窗恢复/claude 残留占位/MSYS2 缓存伪影)+段2 启动门达(10-24 窗 SDE)
+  - 9cf0260cc Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 0c1447917 docs(bod): §七十六 段1 触发真空三因定谳（文书/程序/判读）+三窗补丁 cron 挂设 @bod
+- registry：v2.1；今日 registry 提交无变化
