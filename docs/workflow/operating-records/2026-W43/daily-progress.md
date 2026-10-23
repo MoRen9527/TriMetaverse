@@ -795,3 +795,7 @@
   - 5f401c322 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 4e5468ba4 docs(bod): §七十二 复工令第二窗满收记（m-cfo 加抄知情·18:00 复工·明日周六无停工窗） @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @19:20 +08：自上次进度提交 c7d7e26fe 后新增 2 条 commit：
+  - 3e033ca67 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - df857bef2 docs(design): 设计稿 V3.1——工作流讨论定谳落稿（触发=charter-create 登记·FADE-011/012 两独立实例·§五重构三节） @bod
+- registry：v2.1；今日 registry 提交无变化
