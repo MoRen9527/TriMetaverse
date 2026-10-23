@@ -1,13 +1,13 @@
-# 周工作平面·任务书·树 三级体系重设计（产品设计稿 V2·整改版）
+# 周工作平面·任务书·树 三级体系重设计（产品设计稿 V3·整改版）
 
 - sourceOfTruth: 本文件（产品设计段正身；定稿后条款沉淀入 TriCompany 协议真源）
 - syncMode: manual
 - lastSyncedAt: 2026-10-23
-- 令源: CEO 2026-10-23 10:34:07 整顿四条令 + 10:48:47 架构勘正与程序先行原则 + 10:54:50「按这个理解出设计稿」+ 11:30:56 D1-D8 逐条批复（本 V2 整改依据）
-- 修订记录: V1=2026-10-23 初稿（bc844154b）；V2=CEO 11:30:56 批 D1-D8 整改——D1 账本名 wp-日期.json、D2 CH-日期-序号、D3 批、D4 物理搬+原周降 inactive、D5 python、D6 迁移链 W40→W41→W42→W43 干跑→W43→W44、D7 archive 含起止周、D8 无上限+优先级排序拆树
+- 令源: CEO 2026-10-23 10:34:07 四条令 + 10:48:47 架构勘正·程序先行 + 10:54:50 出稿令 + 11:30:56 D1-D8 批 + 13:45:56 四条修订与留痕之问（本 V3 整改依据）
+- 修订记录: V1=初稿（bc844154b）；V2=D1-D8 整改（d4db35ab）；V3=CEO 13:45:56 修订——D1 周形确认、D2 助读段回归、D5 命令名 wp/weekplane、大表沿用 task-inventory-日期.md 传统名、新增留痕三层设计（§2.1·答「git mv 旧周怎么留痕」）、迁移物清单三类含周级表（company-demand/daily-progress 等）
 - 设计者: BOD（董事会治理席）·把关: CEO 逐条批
 - 实施原则（CEO 定）: 按 FADE 规范以程序和 CLI 形成工作流把控整个进度；执行/检查等固定与规范类操作**程序先行**，程序不可解再升 agent 智能兜底
-- 病灶输入: 四病灶实锚（账实脱节 activeTrees=0 vs 实盘 20 棵 / 树散落各周 doneTreesFromPreviousWeek=65 棵堆叠 / 账本当记事本 risks 91 条·carry_over 残留 / 窗段切碎任务）+ 大表刷态滞后族三笔实锚
+- 病灶输入: 四病灶实锚 + 大表刷态滞后族三笔实锚
 - 防四类复发: ①树散落各周 ②周平面迁移不彻底 ③任务不连续 ④每次汇报不准确
 
 ---
@@ -31,19 +31,19 @@
 - 任务书挂周：每周账本自含完整任务书清单 = 本周新开 + 上周平移未毕——**新周账本即完整视图，指针不出周**。
 - 迁移搬运单位 = **任务书整本**（其下树、节点报告、卷全部随任务书走）。
 - 树毕在任务书内记账，不动周账本；**全部树毕 → 任务书毕 → 才从周账本销账**。
-- **周状态机（D4 批）**：全库同时至多一个 `active` 周；已平移的周降 `inactive` 留档只读。**「只查 active 即知现役周工作平面在哪」**——找现役视图=找 status=active 的那份 wp。
+- **周状态机（D4 批）**：全库同时至多一个 `active` 周；已平移的周降 `inactive` 留档只读。**「只查 active 即知现役周工作平面在哪」**。
 
 ### 1.3 树链（CEO 令④）
 
 - 任务书立单时**必须写明参与者链**：`chain: [cos, cpo, cto, fsd, ste, sde, cos]`——cos 起 cos 终。
-- 链即派工单：COO 派工照链点名；COS 照链逐点检查执行情况（`plane check` 程序先行）。
-- 树级链可细化（树内节点序列即链的具体展开），但必须与任务书链兼容（树链 ⊆ 任务书链）。
+- 链即派工单：COO 派工照链点名；COS 照链逐点检查执行情况（`wp check` 程序先行）。
+- 树级链可细化，但必须与任务书链兼容（树链 ⊆ 任务书链）。
 
 ### 1.4 任务书排序与优先级（D8 批）
 
 - 任务书**不设并行上限**。
 - 排序规则：`order` 字段定全局顺序；**高优先级（priority: high）任务书排在低优先级之前被拆树**；未设优先级的按默认顺序（order 递增）排好。
-- 拆树与树开工一律按此全局顺序推进（`charter split` / `tree start` 程序按序校验）。
+- 拆树与树开工一律按此全局顺序推进（`wp charter-split` / `wp tree-start` 程序按序校验）。
 
 ---
 
@@ -52,11 +52,14 @@
 ```
 operating-records/
   2026-W44/                          ← 周目录
-    wp-2026-W44.json                 ← 周账本（机器读·唯一真源·D1 批名）
-    plane-status.md                  ← plane status 渲染（人读快照）
-    bigtable.md                      ← 大表（render 产物·人看只读）
+    wp-2026-W44.json                 ← 周账本（机器读·唯一真源·D1 批周形）
+    plane-status.md                  ← wp status 渲染（人读快照）
+    task-inventory-20261023.md       ← 大表（render 产物·人看只读·沿用传统名）
+    company-demand-pool.md           ← 需求池（滚动平移·§2.2）
+    daily-progress.md                ← 周日志（快照留档+新周新建·§2.2）
+    plane-shift-log.md               ← 迁移留痕卷（migrate 写·§2.1）
     charters/                        ← 本周全部任务书
-      CH-20261023-001/
+      CH-20261023-001-agenda001/     ← ID=CH-日期-序号-助读段（D2 V3 修订）
         charter.md                   ← 任务书叙述面（令源/目标/验收）
         reports/                     ← 任务书级卷（毕报/收口卷）
         trees/
@@ -66,17 +69,36 @@ operating-records/
               01-cos-20261023110000.md
               02-cto-20261023143000.md
           t2-zhenggai/
-      CH-20260929-001/               ← 上周平移来的未毕任务书（整本在位）
+      CH-20260929-001-xxx/           ← 上周平移来的未毕任务书（整本在位）
   archive/
     charters/
-      CH-20260812-003/               ← 已毕任务书归档（D7 批·集中归档位）
-        archive-meta.json            ← originWeek: 2026-W33 / closeWeek: 2026-W38（起止周可查）
+      CH-20260812-003-xxx/           ← 已毕任务书归档（D7 批）
+        archive-meta.json            ← originWeek / closeWeek（起止周可查）
 ```
 
-- **树物理挂接（D3 批）**：树目录挂 `charters/<任务书>/trees/` 下，**不在周的顶层 trees/ 下**——物理挂接与逻辑挂接一致，散落无处发生。
-- **迁移方式（D4 批）**：周迁移 = `git mv` 任务书整本目录到新周 `charters/` 下，原周账本降 `inactive` 留档——**零指针残留**；旧路径引用断链风险以「卷内引用一律带 commit SHA 锚」立规兜住（git log --follow 可溯）。
-- **归档位（D7 批）**：已毕任务书集中 `operating-records/archive/charters/`，archive-meta.json 必含 **originWeek（哪周开始）+ closeWeek（哪周结束）**——起止周可查；原周账本内留一行 closed 记录（含归档路径）。
-- 大表 `bigtable.md` 与 `plane-status.md` 均为**渲染产物**（程序从 wp 生成），人工只读不改——改状态=改账本再 render。
+### 2.1 留痕三层（答 CEO 13:45:56 之问：git mv 旧周文件怎么留痕）
+
+**git mv 不删任何历史**——搬走的只是「文件现在住哪」，历史三层全在：
+
+| 层 | 留什么 | 怎么查 |
+|---|---|---|
+| ①**旧周账本快照**（最重要） | 迁移时旧周 `wp-2026-W40.json` 降 inactive 但**一字不改原样保留**——charter 清单、树状态、节点报告清单全在，=「那周发生了什么」的完整时刻快照 | 直接读旧周 wp |
+| ②**迁移留痕卷** | migrate 执行时在旧周目录写 `plane-shift-log.md`：迁出清单（哪些 charter→迁往哪周）+迁入清单+执行时点+对表断言读数——人开旧周目录一眼看到「本周末毕任务书已迁往 W41」 | 开旧周目录读卷 |
+| ③**git 历史** | git mv 保留全部历史——`git log --follow <新路径>` 可溯文件一生全部提交；卷内引用一律带 commit SHA 锚（立规），SHA 永可达 | git log --follow / SHA 锚 |
+
+**归档同构**（答「归档是否影响开始/结束/过程周留痕」）：已毕任务书搬进 archive/ 时，archive-meta.json 记 originWeek+closeWeek；且**每个相关周（开始周/平移过的中间周/结束周）的 wp 账本里都保留该 charter 的当时状态记录**（账本永不搬改，只有 charter 目录搬家）——**账本留痕、目录搬家**：查任何一周=读那本 inactive wp，当时全部 charter 与状态俱在。
+
+### 2.2 迁移物清单（CEO 13:45:56 增补：周级表纳入迁移管理）
+
+migrate 管的完整清单，三类：
+
+| 类 | 物 | 迁移方式 |
+|---|---|---|
+| **整本平移** | 未毕任务书整本（charters/ 下） | git mv 整本目录 |
+| **滚动平移** | company-demand-pool.md（未消化需求段平移·已消化留原周）；unresolved-items.md（active/frozen 平移·done 关闭留原周——沿旧 SOP carry-over 逻辑） | 程序拆段平移+原周留全量快照 |
+| **快照新建** | daily-progress.md（旧周原样留档=发生周日志快照·新周新建空文件）；scoring-ledger 等结算类周表（留发生周·新周按需新建） | 原周留档+新周新建+wp carryIn 登记 |
+
+- 周级表逐项列入 wp 账本 `planeFiles` 段（各自 status：carried/snapshotted/new）——迁移是否彻底程序可断言。
 
 ---
 
@@ -91,20 +113,21 @@ operating-records/
   "status": "active",
   "timebox": { "startAt": "...", "endAt": "..." },
   "charters": [ "…见 3.2…" ],
+  "planeFiles": { "company-demand-pool": "carried", "daily-progress": "new", "...": "..." },
   "carryIn": { "from": "2026-W43", "count": 3, "ids": ["CH-..."] },
   "carryOut": null,
   "closeout": null,
-  "meta": { "version": 3, "updatedBy": "plane-cli", "lastUpdated": "…" }
+  "meta": { "version": 3, "updatedBy": "wp-cli", "lastUpdated": "…" }
 }
 ```
 
-- `status`: `active`（现役·全库唯一）/ `inactive`（已平移留档·只读）。`plane status` / `plane check` 默认只对 active 周操作。
+- `status`: `active`（现役·全库唯一）/ `inactive`（已平移留档·只读）。`wp status` / `wp check` 默认只对 active 周操作。
 
 ### 3.2 任务书对象
 
 ```json
 {
-  "id": "CH-20261023-001",
+  "id": "CH-20261023-001-agenda001",
   "title": "供应链审计整改（AGENDA-001）",
   "origin": "new",
   "carriedFrom": null,
@@ -121,7 +144,7 @@ operating-records/
       "title": "勘验",
       "status": "done",
       "chain": ["cos","cto","cos"],
-      "dir": "charters/CH-20261023-001/trees/t1-kanjian/",
+      "dir": "charters/CH-20261023-001-agenda001/trees/t1-kanjian/",
       "nodes": [
         { "seq": 1, "seat": "cos", "status": "done",
           "report": "node-reports/01-cos-20261023110000.md" },
@@ -134,33 +157,34 @@ operating-records/
 }
 ```
 
-- **ID 正形（D2 批）**：`CH-YYYYMMDD-NNN`（立单日期+当日序号，全库唯一）；可读性由 `title` 承担（旧名如 AGENDA-001 记入 title 括注）。
+- **ID 正形（D2·V3 修订）**：`CH-YYYYMMDD-NNN-<助读段>`——CEO 13:45:56 批助读段回归；助读段=小写短词（slug），仅助读不改唯一性（唯一性锚=CH-日期-序号）。
 
 ### 3.3 schema 硬规则（防病灶复发）
 
-1. **杂记禁入账本**：risks/回迁登记/会议纪要等一律出账本，归 `plane-notes.md` 或周目录卷文件——账本只存结构化任务面（根治 risks 91 条记事本形）。
-2. **carry 字段结构化**：`carryIn/carryOut` 只存 id 清单+计数；4 周+⚠️ / 8 周+⚠️⚠️ 预警由 `carryCount` 程序判定（沿旧 SOP 预警等级）。
-3. **单一写入口**：wp-*.json 只由 plane-cli（python）写（人/agent 不手编 JSON）；每写必原子替换+回读断言。
-4. **账实一致自检**：`plane check` 比对账本树清单 vs `charters/` 目录实盘，不一致即 FAIL（根治 activeTrees=0 vs 20 棵）。
+1. **杂记禁入账本**：risks/回迁登记/会议纪要等一律出账本，归 `plane-notes.md` 或周目录卷文件。
+2. **carry 字段结构化**：`carryIn/carryOut` 只存 id 清单+计数；4 周+⚠️ / 8 周+⚠️⚠️ 预警由 `carryCount` 程序判定。
+3. **单一写入口**：wp-*.json 只由 wp-cli（python）写；每写必原子替换+回读断言。
+4. **账实一致自检**：`wp check` 比对账本树清单 vs `charters/` 目录实盘，不一致即 FAIL。
+5. **inactive 账本禁改**：已平移周账本只读（留痕三层之①的保证）。
 
 ---
 
 ## 四、CLI 命令族（程序先行主面·D5 批 python 实现）
 
-工具名 `plane`，**python 实现**（本机解释器正形=`python` 3.12；`python3` 是 WindowsApps 存根禁用）。全命令幂等可重跑，写后自检。
+工具栈 **python**（本机解释器正形=`python` 3.12；`python3` 是 WindowsApps 存根禁用）。**命令名=`wp`（weekplane 为全名别名）**——D5 V3 修订。全命令幂等可重跑，写后自检。
 
 | 命令 | 干什么 | 程序自检 |
 |---|---|---|
-| `plane init --week 2026-W44 --from 2026-W43` | 建新周骨架+执行迁移 | 见 migrate |
-| `plane migrate --from W --to W'` | 迁移：扫上周末毕任务书→整本 git mv 到新周→carryIn/Out 登记→**原周降 inactive**（D4） | **对表断言：上周末毕清单 == 新周 carryIn 清单，差一件即 FAIL 不落账**；原周 status=inactive 落定 |
-| `plane render` | 从账本生成 bigtable.md + plane-status.md | 渲染后账本 hash 不变（只读证明） |
-| `charter create --week W --title T --chain … [--priority high]` | 立任务书（ID=CH-日期-序号·账本登记+目录骨架） | id 唯一断言 |
-| `charter split --id C --tree "seq,title,chain"…` | 拆树（写串行 seq+树链·按 D8 全局顺序） | 树链 ⊆ 任务书链断言；顺序断言（高优先级在前） |
-| `tree start --charter C --tree T` | 树开工 | **串行闸：前 seq 树非 done 即拒开**；全局顺序闸：序前有未拆/未开高序任务书按 D8 校验（防任务不连续） |
-| `tree done --charter C --tree T` | 树毕 | 节点全 done+报告齐全断言 |
-| `report add --charter C --tree T --node N --seat S --file F` | 节点报告登记（复制/校验落 node-reports/） | 文件存在+命名规范断言 |
-| `plane check` | 照链点名：每在役树当前节点、报告缺口、账实比对 | 输出检查单；COS 检查执行情况的工具面 |
-| `plane status` | 一口读数：active 周定位+total/open/carried/预警/在役树 | 按 status=active 定位现役周（D4「只查 active」） |
+| `wp init --week 2026-W44 --from 2026-W43` | 建新周骨架+执行迁移 | 见 migrate |
+| `wp migrate --from W --to W'` | 迁移：§2.2 三类清单全跑（任务书整本 git mv+周级表滚动/快照+carryIn/Out 登记+旧周降 inactive+旧周写 plane-shift-log.md） | **对表断言：上周末毕清单==新周 carryIn 清单，差一件即 FAIL 不落账**；planeFiles 状态断言；原周 status=inactive 落定 |
+| `wp render` | 从账本生成 task-inventory-日期.md（大表）+ plane-status.md | 渲染后账本 hash 不变（只读证明） |
+| `wp charter-create --week W --title T --slug S --chain … [--priority high]` | 立任务书（ID=CH-日期-序号-助读段） | id 唯一断言 |
+| `wp charter-split --id C --tree "seq,title,chain"…` | 拆树（写串行 seq+树链·按 D8 全局顺序） | 树链 ⊆ 任务书链断言；顺序断言 |
+| `wp tree-start --charter C --tree T` | 树开工 | **串行闸：前 seq 树非 done 即拒开**；全局顺序闸 |
+| `wp tree-done --charter C --tree T` | 树毕 | 节点全 done+报告齐全断言 |
+| `wp report-add --charter C --tree T --node N --seat S --file F` | 节点报告登记 | 文件存在+命名规范断言 |
+| `wp check` | 照链点名：每在役树当前节点、报告缺口、账实比对 | 输出检查单（COS 检查工具面） |
+| `wp status` | 一口读数：active 周定位+total/open/carried/预警/在役树 | 按 status=active 定位现役周 |
 
 ### 4.1 agent 兜底位（程序不可解才升）
 
@@ -177,20 +201,20 @@ operating-records/
 
 ```
 CEO 令
- → COS: charter create（立单·写链·可标 priority）
- → COS/COO: charter split（拆树·串行 seq·按 D8 全局顺序=高优先级在前）
+ → COS: wp charter-create（立单·写链·可标 priority）
+ → COS/COO: wp charter-split（拆树·串行 seq·按 D8 全局顺序=高优先级在前）
  → 派工（照链点名·树链写在单上）
  → 逐树串行:
-     tree start → 节点开工 → 干活 → report add（节点执行报告落盘）
-     → 节点毕 → 下节点 → … → tree done（报告齐才放行）
+     wp tree-start → 节点开工 → 干活 → wp report-add（节点执行报告落盘）
+     → 节点毕 → 下节点 → … → wp tree-done（报告齐才放行）
  → 下一棵树（串行闸程序强制）→ 全树毕 → charter done
- → plane render（大表自动消账）
- → 周日: plane migrate（未毕任务书整本平移·对表断言·原周降 inactive）
- → plane render（新周大表·自含完整视图）
+ → wp render（大表 task-inventory 自动消账）
+ → 周日: wp migrate（§2.2 三类清单全迁移·对表断言·旧周降 inactive+写 shift log）
+ → wp render（新周大表·自含完整视图）
 ```
 
-- **中断恢复**：任一席/任一窗中断后，读树账 `tree.json` nodes[] 即知断点（哪个节点 done、哪个 in_progress、报告在哪）——协议 V0.6 checkpoint 制度落成程序强制。
-- **排窗与段取消**：无「独占窗/段1段2」编排；唯一序列=任务书全局顺序（D8）内的树串行 seq。任务书间不设上限并行，任务书内树严格串行。
+- **中断恢复**：读树账 `tree.json` nodes[] 即知断点（哪个节点 done、哪个 in_progress、报告在哪）。
+- **排窗与段取消**：唯一序列=任务书全局顺序（D8）内的树串行 seq。任务书间不设上限并行，任务书内树严格串行。
 
 ---
 
@@ -199,27 +223,28 @@ CEO 令
 | 复发问题 | 机制 |
 |---|---|
 | ①树散落各周 | 树物理挂 charter 下（D3）+迁移整本物理搬+原周降 inactive（D4·零指针） |
-| ②迁移不彻底 | migrate 对表断言 FAIL 不落账 + plane check 账实比对 + 原周 inactive 落定 + 「只查 active」定位 |
-| ③任务不连续 | 串行闸 + 节点报告强制（tree done 断言）+ 树账断点可续 |
+| ②迁移不彻底 | migrate 对表断言 FAIL 不落账 + wp check 账实比对 + planeFiles 状态断言 + 「只查 active」定位 + shift log 留痕卷 |
+| ③任务不连续 | 串行闸 + 节点报告强制（tree-done 断言）+ 树账断点可续 |
 | ④汇报不准确 | 账本唯一真源 + 大表/读数全是 render 产物（人人同源）+ check 现勘 |
+| （附）历史留痕 | 留痕三层（§2.1）：inactive 账本快照+shift log+git --follow·归档=archive-meta+各周账本 closed 记录 |
 
 ---
 
 ## 七、迁移实例链（D6 批·存量整顿与程序验证合一）
 
-CEO 批正形：**从 W40 开始逐周整理，W40→W41→W42，整理完再 W42→W43 干跑验程序，最后 W43→W44 真迁**。
+CEO 批正形：**W40→W41→W42 逐周整理，整理完 W42→W43 干跑验程序，最后 W43→W44 真迁**。
 
 | 步 | 活 | 性质 |
 |---|---|---|
-| M1 | W40 账本 V2 化：散树归组 charter（agent 判读映射表→CLI 归位→wp-2026-W40.json 重构） | 存量整顿+程序实战① |
-| M2 | `plane migrate --from W40 --to W41`（W41 同法先 V2 化） | 逐周真迁·对表断言每步验程序 |
-| M3 | `plane migrate --from W41 --to W42`（W42 同法先 V2 化） | 逐周真迁 |
-| M4 | `plane migrate --from W42 --to W43 --dry-run` | **干跑验程序**（对表 vs 人工现勘结果） |
-| M5 | `plane migrate --from W43 --to W44` | **真迁**（新制首迁·大表首 render） |
+| M1 | W40 账本 V2 化：散树归组 charter（agent 判读映射表→CLI 归位→wp-2026-W40.json 重构）+周级表归类（§2.2 三类） | 存量整顿+程序实战① |
+| M2 | `wp migrate --from W40 --to W41`（W41 同法先 V2 化） | 逐周真迁·对表断言每步验程序 |
+| M3 | `wp migrate --from W41 --to W42`（W42 同法先 V2 化） | 逐周真迁 |
+| M4 | `wp migrate --from W42 --to W43 --dry-run` | **干跑验程序**（对表 vs 人工现勘） |
+| M5 | `wp migrate --from W43 --to W44` | **真迁**（新制首迁·大表 task-inventory 首 render） |
 
 - 每步迁移=一次程序验证：对表断言 FAIL 即停，升 agent 勘因。
 - W40-W42 各周 V2 化时的散树归组映射表呈 CEO 抽查后再执行。
-- 干跑（--dry-run）只输出将执行动作不写入；人工比对干跑输出 vs 现勘，一致才放行真迁。
+- 干跑只输出将执行动作不写入；人工比对一致才放行真迁。
 
 ---
 
@@ -227,20 +252,20 @@ CEO 批正形：**从 W40 开始逐周整理，W40→W41→W42，整理完再 W4
 
 | 文件 | 改动 |
 |---|---|
-| weekly-plane-shift-sop.md | V2：人工流程改 plane migrate CLI 流程（含 D6 迁移链配方） |
-| dynamic-task-tree-protocol.md（TriCompany 真源） | V0.7：两级挂接+树链必填+节点报告程序强制+周状态机 active/inactive |
-| onboard-work-registry.md | 树链检查节（plane check 为 COS 检查正形） |
-| 大表惯例 | task-inventory 手工制废止 → bigtable.md render 产物制 |
+| weekly-plane-shift-sop.md | V2：人工流程改 wp migrate CLI 流程（含 D6 迁移链+§2.2 三类清单配方） |
+| dynamic-task-tree-protocol.md（TriCompany 真源） | V0.7：两级挂接+树链必填+节点报告程序强制+周状态机 active/inactive+留痕三层 |
+| onboard-work-registry.md | 树链检查节（wp check 为 COS 检查正形） |
+| 大表惯例 | task-inventory 手工刷态废止 → task-inventory-日期.md render 产物制（**名沿用·制更新**） |
 | 窗账本 window-ledger.md | 排窗段制废止随四条令② |
 
 ---
 
-## 九、实施分段（D6 整改后·候 CEO 重审确认）
+## 九、实施分段（候 CEO 重审确认）
 
 | 段 | 活 | 参与者链示例 |
 |---|---|---|
-| S1 | 设计稿重审定稿（本轮 V2 候审） | cos→CEO→cos |
-| S2 | CLI 骨架（python·命令族先行 migrate/render/check/status 最小集） | cos→cto→fsd→ste→cos |
+| S1 | 设计稿重审定稿（本轮 V3 候审） | cos→CEO→cos |
+| S2 | wp-cli 骨架（python·migrate/render/check/status 最小集） | cos→cto→fsd→ste→cos |
 | S3 | 迁移链 M1-M3（W40→W41→W42 逐周整理+真迁） | cos→agent 判读→fsd/sde→ste 验→cos |
 | S4 | M4 干跑（W42→W43 dry-run 对表）+ M5 真迁（W43→W44） | cos→coo→ste 验→cos |
 | S5 | 制度真源回写（§八）+ 值席培训 | cos→cao→cho→cos |
@@ -252,21 +277,24 @@ CEO 批正形：**从 W40 开始逐周整理，W40→W41→W42，整理完再 W4
 1. M1-M3 逐周迁移对表断言全绿，零人工修账。
 2. M4 干跑输出与人工现勘一致（逐件比对）。
 3. 散树清零：W40-W43 顶层 trees/ 无残留树目录（全归 charter 或 archive）。
-4. 一致性抽验：bigtable.md 渲染内容与 wp-*.json 现读一致（三抽三中）。
-5. 中断恢复实测：任一在役树人为中断→读树账即续。
-6. CEO 走查过关：大表人看体验+账本机器读体验双确认。
+4. 一致性抽验：task-inventory 渲染内容与 wp-*.json 现读一致（三抽三中）。
+5. 留痕抽验：任取一迁移后旧周——inactive wp 快照完整+shift log 在位+git log --follow 可溯（三层齐）。
+6. 中断恢复实测：任一在役树人为中断→读树账即续。
+7. CEO 走查过关：大表人看体验+账本机器读体验双确认。
 
 ---
 
-## 十一、决策点裁录（D1-D8·CEO 2026-10-23 11:30:56 批）
+## 十一、决策点裁录（CEO 批文全录）
 
 | # | 决策点 | CEO 批 |
 |---|---|---|
-| D1 | 账本名 | **wp-日期.json**（wp=weekly plane；本稿取周粒度形 `wp-2026-W44.json`·周为周平面主键——此裁量候重审确认） |
-| D2 | 任务书 ID | **CH-日期-序号**（CH-YYYYMMDD-NNN·无 slug·可读性由 title 承担） |
-| D3 | 树物理位置 | **批**（charters/<任务书>/trees/） |
-| D4 | 迁移方式 | **物理搬+原周留档+周平面降 inactive——以后只查 active 即知有效周平面在哪** |
-| D5 | CLI 栈 | **python**（命令名 plane 保留·栈与名分开） |
-| D6 | 首迁实例 | **W40→W41→W42 逐周整理，整理完 W42→W43 干跑验程序，再 W43→W44**（§七迁移链） |
-| D7 | 已毕归档位 | **批**（archive/charters/ 集中归档·须能查到哪周开始哪周结束=originWeek+closeWeek 必填） |
-| D8 | 并行度与排序 | **不设上限；不排优先级就默认顺序排好任务书；高优先级任务书在低优先级前被拆任务树**（§1.4） |
+| D1 | 账本名 | **wp-周.json**（13:45:56 批「可以用周」·`wp-2026-W44.json` 定形） |
+| D2 | 任务书 ID | CH-日期-序号（11:30:56 批）+**助读段回归**（13:45:56 批）→正形 `CH-YYYYMMDD-NNN-<助读段>` |
+| D3 | 树物理位置 | 批（charters/<任务书>/trees/） |
+| D4 | 迁移方式 | 物理搬+原周留档+周平面降 inactive（只查 active 定位）+**留痕三层补强**（V3 §2.1·答 13:45:56 留痕之问） |
+| D5 | CLI 栈与名 | python（11:30:56）+**命令名 wp 或 weekplane**（13:45:56 批）→命令名 `wp`·weekplane 全名别名 |
+| D6 | 首迁实例 | W40→W41→W42 逐周整理，W42→W43 干跑验程序，再 W43→W44 |
+| D7 | 已毕归档位 | 批 archive/charters/（originWeek+closeWeek 必填）+**归档留痕同构补强**（V3 §2.1） |
+| D8 | 并行度与排序 | 不设上限；默认顺序排好；高优先级在前拆树 |
+| D9 | 大表名 | **沿用传统名 task-inventory-日期.md**（13:45:56 批·不叫 bigtable·render 产物制不变） |
+| D10 | 周级表迁移 | **company-demand-pool/daily-progress 等周级表纳入迁移管理**（13:45:56 批）→§2.2 三类清单（整本平移/滚动平移/快照新建·分类细节候批） |

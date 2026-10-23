@@ -772,3 +772,9 @@ LG-058 六条全 closed（台账 L3265 六卡判定）／LG-069 二期销（E1-5
 
 - **收信**：m-cto cross-session 通报·落款 2026-10-23 12:00:37（date 现查原值·D-47 正形·闸下过闸样本第 35 封）。**观察窗满销项**：窗=10-22 11:50 挂载→10-23 11:50 满（24h）。四证：①本会话 transcript d47 痕迹 81 处全施工文本引用·零 hook 运行时 BLOCK/WARN（PASS 静默=brief 预期形）②过闸样本 SendMessage 成功 34 封·零拦截零失败（1 封 to='coo' 对象名错系工具路由拒·非闸拦·如实注）③树 d47-gate-hook-mount-20261022/ 零误伤回报件（reports/ 未建零收单）④挂载段 settings.json PreToolUse matcher+wrapper readback 在位。HH:Mx 扩面注记维持（窗内零实锚不扩·宁缺勿造·brief §八原裁）。
 - **BOD 定性**：D-47 信面落款机械合同 gate=零误伤观察通过·观察项销。席间技术互报免附·不升级 CEO。回执 m-cto 采认。
+
+## §七十（$TS）·CEO 四条修订收记+设计稿 V3 整改毕（留痕三层立）
+
+- **令源**：CEO 2026-10-23 13:45:56：D1 批周形（wp-周.json 定）；D2 助读段回归（CH-YYYYMMDD-NNN-助读段）；D5 命令名 wp 或 weekplane；大表不叫 bigtable 沿用 task-inventory-日期.md 传统名；**留痕之问**（git mv 旧周文件怎么留痕？归档是否影响开始/结束/过程周留痕？）；company-demand-pool/daily-progress 等周级表纳入整体迁移。
+- **BOD 整改（V2→V3）**：①新增 §2.1 **留痕三层**=旧周 inactive 账本快照（一字不改原样保留·那周时刻快照）+plane-shift-log.md 迁移留痕卷（migrate 写·迁出迁入清单+时点+断言读数）+git 历史兜底（--follow+SHA 锚立规）——答：git mv 不删历史，搬的是「现在住哪」；归档同构=archive-meta 起止周+各相关周账本 closed 记录（账本留痕·目录搬家）；②新增 §2.2 迁移物三类清单=任务书整本平移/滚动平移（demand-pool 未消化段+unresolved）/快照新建（daily-progress 旧周留档新周新建）+wp 账本 planeFiles 段程序断言；③ID 助读段回归、命令名 wp（weekplane 别名）、大表 task-inventory-日期.md（名沿用·render 制不变）；④inactive 账本禁改入 schema 硬规则第 5 条；验收门增留痕抽验一条。
+- **候 CEO**：V3 重审——重点 §2.2 周级表三类分类法（daily-progress 系快照新建非平移·防日志跨周混杂）候批。
