@@ -747,3 +747,6 @@
   - 3a4dc0bad Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 18a4560e6 docs(bod): §六十二 三单回执收记+A-1 三面 BOD 定谳（收口认账/S3 登记/代偿认可/历史卷豁免）+REQ-003 销+L1 转呈
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @09:40 +08：自上次进度提交 8ad67d72c 后新增 1 条 commit：
+  - 3e5c7c480 docs(bod): 大表 A3 归一窗+部署窗 10-21 两行刷态销账（CEO 09:37 令实质可销的消掉·三案/两卷全毕有锚亲勘·刷态漏刷非开口） @bod
+- registry：v2.1；今日 registry 提交无变化
