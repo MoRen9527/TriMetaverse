@@ -22,7 +22,8 @@
       "2026-10-23 19:33:20 同意明早起链·今晚拟任务书候晨批"
     ],
     "bodRelayAnchor": "bod-rduty 卷 §七十三（9dc9220c5）/§七十四（3e033ca67）/§七十五（本稿落卷 commit）",
-    "designDoc": "docs/execution/weekly-plane-charter-tree-redesign-20261023.md（V3.1）"
+    "spawnedFrom": "设计稿 weekly-plane-charter-tree-redesign V3.2 §八 实施段表 S2 行（S1=设计稿定稿毕·本单为 S2 立单·CEO 21:33 段间派生归因显性化）",
+    "designDoc": "docs/execution/weekly-plane-charter-tree-redesign-20261023.md（V3.2）"
   },
   "carriedFrom": null,
   "carryCount": 0,
@@ -35,6 +36,7 @@
 ```
 
 - roles=参与本单的团队成员席别名单（**COO 定组队**·本单 BOD 代拟随批确认）；任务书整体**不走树不走链**——顺序调度在任务树层，由 COS 盯（CEO 2026-10-23 21:01 勘正）。选 roles 不选 employees：任务书排席别角色，具名人员归 staffing 面。
+- 诞生链概念归属（CEO 21:27/21:33 辨析定谳）：**诞生链=origin 字段承载**（令源四锚=催生设计稿两令+触发本单立单两令+spawnedFrom 段间派生锚+bodRelayAnchor 转达锚）；**执行链=各树 sequence 承载**（cos 包头包尾）；**roles 只承载组队边界**——席别序列装不进诞生链（诞生链形态=令锚+文件锚，非席别列表），原 chain 字段改 roles 非错改=正名。
 
 ## 树拆分（串行 seq·任务书内严格串行）
 
