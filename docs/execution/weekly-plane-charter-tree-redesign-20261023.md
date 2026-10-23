@@ -4,7 +4,7 @@
 - syncMode: manual
 - lastSyncedAt: 2026-10-23
 - 令源: CEO 2026-10-23 10:34:07 四条令 + 10:48:47 架构勘正·程序先行 + 10:54:50 出稿令 + 11:30:56 D1-D8 批 + 13:45:56 四条修订与留痕之问（本 V3 整改依据）
-- 修订记录: V1=初稿（bc844154b）；V2=D1-D8 整改（d4db35ab）；V3=CEO 13:45:56 修订——D1 周形确认、D2 助读段回归、D5 命令名 wp/weekplane、大表沿用 task-inventory-日期.md 传统名、新增留痕三层设计（§2.1·答「git mv 旧周怎么留痕」）、迁移物清单三类含周级表（company-demand/daily-progress 等）；**V3 定稿通过（CEO 18:36:43）**；V3.1=工作流讨论定谳（CEO 19:09/19:18）——触发起点=wp charter-create 登记成功（§五·甲）、FADE 实例拆立两条独立实例 011/012 零共用耦合（§五·乙·一实例一固化流程·甲案升级沿用因耦合度高被否）；**V3.2=树链勘正（CEO 21:01:31）——charter 层 chain 字段改 roles（团队名单·COO 定组队·无序·任务书整体不走树不走链）、树层改任务树 sequence 节点序列（cos 开树 cos 收口·首尾必 cos 程序断言·干活席 ⊆ charter roles）、COS 盯序照树逐位检查完成度/断点故障恢复（§1.3 重构+§四命令面+§五乙+§八同步）**；**V3.3=实施分段表列头勘正（CEO 21:40）——「树序列示例」改「参与 roles 示例」（§九 规划层尚未拆树·正式 sequence 拆树时程序断言定形·表下注）**
+- 修订记录: V1=初稿（bc844154b）；V2=D1-D8 整改（d4db35ab）；V3=CEO 13:45:56 修订——D1 周形确认、D2 助读段回归、D5 命令名 wp/weekplane、大表沿用 task-inventory-日期.md 传统名、新增留痕三层设计（§2.1·答「git mv 旧周怎么留痕」）、迁移物清单三类含周级表（company-demand/daily-progress 等）；**V3 定稿通过（CEO 18:36:43）**；V3.1=工作流讨论定谳（CEO 19:09/19:18）——触发起点=wp charter-create 登记成功（§五·甲）、FADE 实例拆立两条独立实例 011/012 零共用耦合（§五·乙·一实例一固化流程·甲案升级沿用因耦合度高被否）；**V3.2=树链勘正（CEO 21:01:31）——charter 层 chain 字段改 roles（团队名单·COO 定组队·无序·任务书整体不走树不走链）、树层改任务树 sequence 节点序列（cos 开树 cos 收口·首尾必 cos 程序断言·干活席 ⊆ charter roles）、COS 盯序照树逐位检查完成度/断点故障恢复（§1.3 重构+§四命令面+§五乙+§八同步）**；**V3.3=实施分段表列勘正（CEO 21:40/21:43 两步）——列名「树序列示例」→「参与 roles 示例」→「roles 组合示例」（§九 规划层尚未拆树）；列值由箭头单向序列改 roles 无序组合（正式名单立单时 COO 定·正式 sequence 拆树时程序断言定形·表下注）**
 - 设计者: BOD（董事会治理席）·把关: CEO 逐条批
 - 实施原则（CEO 定）: 按 FADE 规范以程序和 CLI 形成工作流把控整个进度；执行/检查等固定与规范类操作**程序先行**，程序不可解再升 agent 智能兜底
 - 病灶输入: 四病灶实锚 + 大表刷态滞后族三笔实锚
@@ -297,15 +297,15 @@ CEO 批正形：**W40→W41→W42 逐周整理，整理完 W42→W43 干跑验�
 
 ## 九、实施分段（候 CEO 重审确认）
 
-| 段 | 活 | 参与 roles 示例 |
+| 段 | 活 | roles 组合示例 |
 |---|---|---|
-| S1 | 设计稿重审定稿（本轮 V3 候审） | cos→CEO→cos |
-| S2 | wp-cli 骨架（python·migrate/render/check/status 最小集） | cos→cto→fsd→ste→cos |
-| S3 | 迁移链 M1-M3（W40→W41→W42 逐周整理+真迁） | cos→agent 判读→fsd/sde→ste 验→cos |
-| S4 | M4 干跑（W42→W43 dry-run 对表）+ M5 真迁（W43→W44） | cos→coo→ste 验→cos |
-| S5 | 制度真源回写（§八）+ 值席培训 | cos→cao→cho→cos |
+| S1 | 设计稿重审定稿（本轮 V3 候审） | cos、CEO |
+| S2 | wp-cli 骨架（python·migrate/render/check/status 最小集） | cos、cto、fsd、ste |
+| S3 | 迁移链 M1-M3（W40→W41→W42 逐周整理+真迁） | cos、agent 判读、fsd/sde、ste |
+| S4 | M4 干跑（W42→W43 dry-run 对表）+ M5 真迁（W43→W44） | cos、coo、ste |
+| S5 | 制度真源回写（§八）+ 值席培训 | cos、cao、cho |
 
-> 注（CEO 21:40 勘正）：本表=实施规划层，各段尚未立单拆树——本列为**该段参与 roles 示例**（箭头仅介入序示意，非正式字段）；正式任务树 `sequence` 于 `wp charter-split` 拆树时程序断言定形（首尾必 cos）。
+> 注（CEO 21:40/21:43 勘正）：本表=实施规划层，各段尚未立单拆树——本列为**该段组队 roles 组合**（无序名单·非单向链·非正式字段）；正式名单于立单时 COO 定（charter.roles），正式任务树 `sequence` 于 `wp charter-split` 拆树时程序断言定形（首尾必 cos）。
 
 ---
 
