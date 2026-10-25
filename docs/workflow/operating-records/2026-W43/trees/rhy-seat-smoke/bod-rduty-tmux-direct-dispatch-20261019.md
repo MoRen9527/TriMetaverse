@@ -867,3 +867,13 @@ COS 19:36:30 补报：m-cto 19:36:07 接令回执（派信→拾取 71s 全链�
 - **BOD 三判定**：①段2 未毕→不催段3（照 one-shot 规格门判），重排报 CEO 候裁（建议插电恢复后首窗 10-26 晚 18-24·段3 顺延·段4 相应重排·D-39 增补段 CEO 确认制）②S2 候批稿三项维持候批——**批面未发生**（10-23 19:58 呈批至今零裁·断电窗无批面）③电源面危急期不派工原则（派了做不成）。
 - **m-cos 恢复状态条收记（其落款 2026-10-25T20:18:56+0800）**：31h 断联恢复毕·台账/journal/大表现势全还原·缺席自领（今日 14:00 首執评审会未入位）·patrol 自下拍续·挂账三件（nvm4w 候值守窗/段2 候窗/通报稿候出）与 BOD 卷面对表一致；其问「S2 晨批若已发生请重投」→BOD 答复**未发生·维持候批勿重投**。
 - **挂账（候外力面）**：①插电=CEO 物理面（已推送+口头双报）②电复后 BOD 勘拍产线 ③段2 重排候 CEO 裁 ④S2 候批三项候 CEO 裁。
+
+## §八十一　文档元信息头标准落定+存量清理排窗（2026-10-25 21:2x·CEO 21:23:32 令）
+
+- **令**：①查 TriCompany-host-assets 发布过程/最终件的元信息头先例②重定最标准元信息头（几项/各自作用/版本号形态裁决）③设计稿上见优化效果④存量清理每日一小窗直至清毕。
+- **调研（实勘两源）**：A=TriCompany 发布链规范头形（host-object-publish-flow.md：版本 V0.1 两段式+日期+状态+同步元信息块三基础字段+发布链扩充四字段 publishedFrom/publishTier/supportPublishedCopy/supportSyncRule·lastSyncedAt）；B=host-assets knowledge 对象 frontmatter 族（inbox source 件 sourceId/sourceType/topicHints/trustLevel/capturedAt；wiki 终件 pageId/topicTags/pageStatus/updatedAt/approvalStatus/reviewerRoute/primaryReviewer/approvalSlaHours/sourceRefs——对象级机器消费面，独立于文档头标准）。
+- **标准落定**：§3.4.1 标准文档头正形增补入 `docs/文档治理与真源文件系统.md`（两层六项+变更记录表制；版本号裁决=**统一 x.x 两段式**·三段式不再新用·patch 追溯由锚列承载·既有三段式件不强制降版下一版收敛；syncMode 值域收敛 manual/sync/source-only·旧值 static 归入 source-only；变更记录表列式=版本|时点|锚|摘要一行一版·肥单行=违例形态红线；豁免域=operating-records/机器产物/archive 冻结载荷）。
+- **优化效果展示**：设计稿 weekly-plane-charter-tree-redesign-20261023.md 头部=示范正形件（五件全齐：版本 V3.3 两段式/日期/状态/同步元信息块/变更记录表六行——肥单行修订记录已拆表·四版补真 commit 锚 de6420368/df857bef2/cb56b4326/c4f4146c2+154450b88）。
+- **存量扫描读数（docs/ 除 operating-records/memory）**：total=304·三同步字段在位 260（85%）·**头信息三件（版本/日期/状态）全在仅 52（17%）**·不合规件≈260（主缺口=版本/日期/状态头三件；次缺口=变更记录表）。
+- **清理排窗（CEO 已令节奏=每日一小窗直至清毕·D-39 增补段本令即确认）**：10-26 起每日一窗批 30-40 件（高优先=docs 根治理件+contracts/ 契约件+engineering 核心件；低优=execution 历史稿），**约 7-9 窗清毕**；BOD 本面执行（文档治理域），逐窗落卷本节续行+销账按件数读数。
+- **挂账**：①10-26 首窗清存量批1 ②§3.4.1 条款向 CAO 域（TriCompany 侧同标）通报归 CAO 面（BOD 转知） ③triCompany-host-assets 对象级 frontmatter 族维持独立标准不并入文档头标准（值域对齐）。
