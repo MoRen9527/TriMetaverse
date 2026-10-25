@@ -1,0 +1,2822 @@
+{
+ "_meta": {
+  "files": 333,
+  "generatedBy": "scripts/doc-graph-scan.py",
+  "spec": "docs/文档治理与真源文件系统.md §3.4.1 层四"
+ },
+ "externalRefs": {
+  "AGENTS.md": [
+   "TriCompany/.github/instructions/ceo-chief-of-staff.instructions.md",
+   "TriCompany/docs/workflow/ceo-chief-of-staff-maintenance-rules.md",
+   "TriCompany/docs/workflow/dynamic-task-tree-protocol.md",
+   "TriCompany/docs/workflow/engineering-disciplines.md"
+  ],
+  "CLAUDE.md": [
+   "TriCompany/docs/workflow/engineering-disciplines.md",
+   "TriCompany/docs/workflow/joint-review-orchestration-workflow.md",
+   "TriCompany/source-agents/board/agent-body.agent.md",
+   "TriCompany/source-agents/chief-technology-officer/session-body.agent.md",
+   "TriCompany/tricompany.md"
+  ],
+  "docs/engineering/DESIGN.md": [
+   "TriCompany-host-assets/docs/engineering/DESIGN.md",
+   "TriCompany/docs/engineering/DESIGN.md"
+  ],
+  "docs/engineering/ROADMAP.md": [
+   "TriCompany-host-assets/docs/engineering/ROADMAP.md",
+   "TriCompany/docs/engineering/ROADMAP.md"
+  ],
+  "docs/engineering/STATE.md": [
+   "TriCompany-host-assets/docs/engineering/STATE.md",
+   "TriCompany/docs/engineering/STATE.md"
+  ],
+  "docs/execution/2026-08-24/doc-versioning-governance-rules-draft.md": [
+   "TriCompany/docs/registry/company-governance-state.md"
+  ],
+  "docs/execution/2026-08-24/mmc-host-driver-design-draft.md": [
+   "TriCompany/docs/engineering/claude-code-spawn-resume-context-innovation-record.md",
+   "TriCompany/docs/engineering/fade-protocol-spec.md"
+  ],
+  "docs/execution/candidate-staffing-fade.md": [
+   "TriCompany/docs/engineering/ade-consolidation-proposal.md",
+   "TriCompany/docs/engineering/fade-protocol-spec.md",
+   "TriCompany/docs/engineering/fade-registry.md"
+  ],
+  "docs/execution/clone-dispatch-protocol.md": [
+   "TriCompany/docs/workflow/engineering-disciplines.md",
+   "TriCompany/docs/workflow/handoff-objects.md"
+  ],
+  "docs/execution/compass-rename-plan.md": [
+   "TriCompany-host-assets/host-object-manifest.json"
+  ],
+  "docs/execution/fade-005-roster-gating-spec.md": [
+   "TriCompany/docs/engineering/ade-consolidation-proposal.md",
+   "TriCompany/docs/engineering/ade-pattern-spec.md"
+  ],
+  "docs/execution/fade-006-execution-autopick-spec.md": [
+   "TriCompany/docs/engineering/fade-registry.md"
+  ],
+  "docs/execution/fade-007-incident-sop.md": [
+   "TriCompany/docs/engineering/fade-protocol-spec.md",
+   "TriCompany/docs/engineering/fade-registry.md"
+  ],
+  "docs/execution/knowledge-injection-spec.md": [
+   "TriCompany/docs/engineering/ade-consolidation-proposal.md",
+   "TriCompany/docs/engineering/fade-protocol-spec.md"
+  ],
+  "docs/execution/lg-016-governance-memory-analysis.md": [
+   "TriCompany/docs/engineering/governance-memory-index.md"
+  ],
+  "docs/execution/lg-016-rereview-conclusion.md": [
+   "TriCompany/docs/engineering/governance-memory-index.md"
+  ],
+  "docs/execution/lg-023-bootstrap-unification-evaluation.md": [
+   "TriCompany/docs/workflow/host-object-publish-flow.md"
+  ],
+  "docs/execution/lg026-bl-session-body-draft.md": [
+   "TriCompany/docs/engineering/heartbeat-dualrun-contract.md",
+   "TriCompany/docs/workflow/engineering-disciplines.md"
+  ],
+  "docs/execution/lg026-mface-leader-capability-routes.md": [
+   "TriCompany/docs/registry/code-state.md"
+  ],
+  "docs/execution/lg028-claude-md-reduction-assessment.md": [
+   "TriCompany/docs/project-sources/trimetaverse-claude-md.md",
+   "TriCompany/docs/workflow/engineering-disciplines.md"
+  ],
+  "docs/execution/lg033-cfo-financial-review.md": [
+   "TriCompany/docs/engineering/glm-key-governance.md",
+   "TriCompany/docs/workflow/ceo-chief-of-staff-authorization-matrix.md",
+   "TriCompany/docs/workflow/engineering-disciplines.md"
+  ],
+  "docs/execution/lg033-mface-duty-proposal.md": [
+   "TriCompany/docs/engineering/glm-key-governance.md"
+  ],
+  "docs/execution/naming-alignment-survey-20260831.md": [
+   "TriCompany/docs/registry/company-governance-state.md"
+  ],
+  "docs/execution/production-dualrun-runbook.md": [
+   "TriCompany/docs/engineering/heartbeat-dualrun-contract.md"
+  ],
+  "docs/execution/production-grade-development-plan.md": [
+   "TriCompany/docs/engineering/trilc-trimc-runtime-parity.md"
+  ],
+  "docs/execution/project-workspace-design-v2.md": [
+   "TriCompany/docs/registry/business-state.md",
+   "TriCompany/docs/registry/code-state.md"
+  ],
+  "docs/execution/server-fleet-trilc-parity-plan.md": [
+   "TriCompany/docs/engineering/trilc-trimc-runtime-parity.md"
+  ],
+  "docs/execution/tmv-fade-reading-map.md": [
+   "TriCompany/docs/engineering/agent-core-daemon-contract-design.md",
+   "TriCompany/docs/engineering/fade-protocol-spec.md",
+   "TriCompany/docs/engineering/fade-registry.md",
+   "TriCompany/docs/engineering/session-sync-schema-alignment.md"
+  ],
+  "docs/execution/tricompany-claude-host-chain-gap-archive.md": [
+   "TriCompany-host-assets/host-object-manifest.json",
+   "TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json",
+   "TriCompany/docs/engineering/ade-consolidation-proposal.md",
+   "TriCompany/docs/workflow/host-object-publish-flow.md",
+   "TriCompany/source-agents/registries/trimetaverse-live-agent-publish-manifest.json"
+  ],
+  "docs/execution/trilc-capability-checklist.md": [
+   "TriCompany/docs/engineering/trilc-trimc-runtime-parity.md",
+   "TriCompany/docs/workflow/dynamic-task-tree-protocol.md"
+  ],
+  "docs/execution/v0.9.x-dual-track-tricompany-plan.md": [
+   "TriCompany/docs/engineering/ade-pattern-spec.md"
+  ],
+  "docs/execution/wave0-rename-residue-assessment-20260909.md": [
+   "TriCompany/source-agents/business-strategy/agent-body.agent.md",
+   "TriCompany/source-agents/chief-technology-officer/session-body.agent.md",
+   "TriCompany/source-agents/full-stack-developer/full-stack-developer.agent.md",
+   "TriCompany/source-agents/registries/TrideProductRegistry.agent.md"
+  ],
+  "docs/execution/windows-seat-remote-control-runbook.md": [
+   "TriCompany/docs/engineering/windows-seat-remote-control-runbook.md"
+  ],
+  "docs/execution/worktree-architecture-design.md": [
+   "TriCompany/docs/engineering/DESIGN.md",
+   "TriCompany/docs/registry/business-state.md",
+   "TriCompany/source-agents/registries/business-strategy.agent.md"
+  ],
+  "docs/product/PROJECT.md": [
+   "TriCompany-host-assets/docs/product/PROJECT.md",
+   "TriCompany/docs/product/PROJECT.md"
+  ],
+  "docs/product/REQUIREMENTS.md": [
+   "TriCompany-host-assets/docs/product/REQUIREMENTS.md",
+   "TriCompany/docs/product/REQUIREMENTS.md"
+  ],
+  "docs/product/ROADMAP.md": [
+   "TriCompany-host-assets/docs/product/ROADMAP.md",
+   "TriCompany/docs/product/ROADMAP.md"
+  ],
+  "docs/product/STATE.md": [
+   "TriCompany-host-assets/docs/product/STATE.md",
+   "TriCompany/docs/product/STATE.md"
+  ],
+  "docs/product/m-face-strengths-and-limits.md": [
+   "TriCompany/docs/engineering/windows-seat-remote-control-runbook.md"
+  ],
+  "docs/product/todo/tricompany-pluggable-module-ux.md": [
+   "TriCompany/docs/product/PROJECT.md",
+   "TriCompany/docs/product/REQUIREMENTS.md",
+   "TriCompany/docs/product/STATE.md",
+   "TriCompany/docs/registry/business-state.md",
+   "TriCompany/docs/registry/code-state.md",
+   "TriCompany/docs/registry/company-governance-state.md",
+   "TriCompany/docs/registry/product-state.md"
+  ],
+  "docs/project.md": [
+   "TriCompany/docs/registry/company-governance-state.md"
+  ],
+  "docs/registry/README.md": [
+   "TriCompany/docs/registry/README.md"
+  ],
+  "docs/registry/business-state.md": [
+   "TriCompany/docs/registry/business-state.md"
+  ],
+  "docs/registry/business-strategy-module-map.md": [
+   "TriCompany/AGENTS.md",
+   "TriCompany/README.md"
+  ],
+  "docs/registry/code-state.md": [
+   "TriCompany-host-assets/docs/registry/code-state.md",
+   "TriCompany/docs/registry/code-state.md",
+   "TriCompany/source-agents/registries/trimetaverse-live-agent-publish-manifest.json"
+  ],
+  "docs/registry/company-governance-state.md": [
+   "TriCompany/docs/engineering/governance-memory-index.md",
+   "TriCompany/docs/project-sources/trimetaverse-claude-md.md",
+   "TriCompany/docs/registry/company-governance-state.md",
+   "TriCompany/docs/workflow/dynamic-task-tree-protocol.md",
+   "TriCompany/docs/workflow/engineering-disciplines.md"
+  ],
+  "docs/registry/ipd-freeze-items-registry.md": [
+   "TriCompany/docs/workflow/integrated-product-development-flow.md",
+   "TriCompany/docs/workflow/ipd-first-real-approval-backfill-001.md",
+   "TriCompany/docs/workflow/ipd-long-term-contract-solidification-list.md",
+   "TriCompany/docs/workflow/ipd-product-acceptance-contract-cpo-review.md",
+   "TriCompany/docs/workflow/ipd-runtime-evidence-contract-cto-review.md"
+  ],
+  "docs/registry/product-state.md": [
+   "TriCode/docs/registry/product-state.md",
+   "TriCompany-host-assets/docs/registry/product-state.md",
+   "TriCompany/docs/registry/product-state.md"
+  ],
+  "docs/tmv-whitepaper.md": [
+   "TriCompany/docs/engineering/fade-protocol-spec.md"
+  ],
+  "docs/training/tricompany/04-ceo-chief-of-staff-全链路案例.md": [
+   "TriCompany-host-assets/host-object-manifest.json",
+   "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-specs.json",
+   "TriCompany/.github/binding-profiles/ceo-chief-of-staff.json",
+   "TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md"
+  ],
+  "docs/training/tricompany/README.md": [
+   "TriCompany/docs/training/README.md"
+  ],
+  "docs/training/tricompany/appendix-a-工件清单与引用规则.md": [
+   "TriCompany-host-assets/host-object-manifest.json",
+   "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-specs.json",
+   "TriCompany/.github/binding-profiles/ceo-chief-of-staff.json",
+   "TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md",
+   "TriCompany/docs/workflow/host-object-publish-flow.md"
+  ],
+  "docs/training/trimc-trilc-devrepo-triangle-loop.md": [
+   "TriRLC/README.md"
+  ],
+  "docs/tricompany.md": [
+   "TriCompany/README.md",
+   "TriCompany/docs/engineering/STATE.md",
+   "TriCompany/docs/product/PROJECT.md",
+   "TriCompany/docs/product/REQUIREMENTS.md",
+   "TriCompany/docs/product/STATE.md",
+   "TriCompany/docs/registry/code-state.md",
+   "TriCompany/docs/registry/employee-roster.json",
+   "TriCompany/docs/registry/product-state.md",
+   "TriCompany/tricompany.md"
+  ],
+  "docs/workflow/README.md": [
+   "TriCompany/docs/workflow/README.md"
+  ],
+  "docs/workflow/archive/tricompany-secretariat.md": [
+   "TriCompany/docs/workflow/cyber-company-secretariat.md"
+  ],
+  "docs/workflow/central-registry-closeout-workflow.md": [
+   "TriCompany/.github/manifests/tricompany-published-copy-manifest.json",
+   "TriCompany/docs/registry/code-state.md",
+   "TriCompany/docs/registry/company-governance-state.md",
+   "TriCompany/docs/registry/product-state.md",
+   "TriCompany/docs/workflow/chief-administrative-officer-role.md",
+   "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+   "TriCompany/docs/workflow/published-copy-refresh-sop.md"
+  ],
+  "docs/workflow/ceo-chief-of-staff-authorization-matrix.md": [
+   "TriCompany/docs/workflow/ceo-chief-of-staff-authorization-matrix.md"
+  ],
+  "docs/workflow/chief-administrative-officer-role.md": [
+   "TriCompany/docs/workflow/chief-administrative-officer-role.md",
+   "TriCompany/docs/workflow/cyber-company-secretariat.md",
+   "TriCompany/docs/workflow/host-object-publish-flow.md"
+  ],
+  "docs/workflow/chief-financial-officer-role.md": [
+   "TriCompany/docs/workflow/chief-financial-officer-role.md"
+  ],
+  "docs/workflow/chief-human-resources-officer-handoff-governance.md": [
+   "TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md"
+  ],
+  "docs/workflow/chief-human-resources-officer-role.md": [
+   "TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md",
+   "TriCompany/docs/workflow/chief-human-resources-officer-role.md",
+   "TriCompany/docs/workflow/host-object-publish-flow.md"
+  ],
+  "docs/workflow/chief-marketing-officer-role.md": [
+   "TriCompany/docs/workflow/chief-marketing-officer-role.md"
+  ],
+  "docs/workflow/chief-of-staff-llm-wiki-object-spec.md": [
+   "TriCompany-host-assets/docs/workflow/chief-of-staff-llm-wiki-object-spec.md",
+   "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/audit/record-template.json",
+   "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/inbox/source-template.md",
+   "TriCompany-host-assets/knowledge/employees/ceo-chief-of-staff/wiki/page-template.md",
+   "TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md"
+  ],
+  "docs/workflow/chief-of-staff-rd-orchestration.md": [
+   "TriCompany-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md",
+   "TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md",
+   "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+   "TriCompany/docs/workflow/host-object-publish-flow.md"
+  ],
+  "docs/workflow/chief-operating-officer-role.md": [
+   "TriCompany/docs/workflow/chief-operating-officer-role.md"
+  ],
+  "docs/workflow/dynamic-task-tree-protocol.md": [
+   "TriCompany/docs/workflow/dynamic-task-tree-protocol.md"
+  ],
+  "docs/workflow/github-backport-manifest.md": [
+   "TriCompany-host-assets/docs/workflow/github-backport-manifest.md",
+   "TriCompany/docs/workflow/github-backport-manifest.md"
+  ],
+  "docs/workflow/hermes-copilot-host-migration.md": [
+   "TriCompany-host-assets/docs/workflow/hermes-copilot-host-migration.md",
+   "TriCompany/docs/workflow/hermes-copilot-host-migration.md"
+  ],
+  "docs/workflow/host-object-publish-flow.md": [
+   "TriCompany-host-assets/docs/workflow/host-object-publish-flow.md",
+   "TriCompany-host-assets/host-object-manifest.json",
+   "TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json",
+   "TriCompany/docs/workflow/host-object-publish-flow.md",
+   "TriCompany/source-agents/registries/trimetaverse-live-agent-publish-manifest.json"
+  ],
+  "docs/workflow/ipd-document-system-overview.md": [
+   "TriCompany-host-assets/docs/training/ipd-cli-and-code-workflow-beginner-course.md",
+   "TriCompany-host-assets/docs/training/ipd-usage-guide.md",
+   "TriCompany-host-assets/docs/workflow/ipd-first-real-approval-backfill-001.md",
+   "TriCompany-host-assets/docs/workflow/ipd-first-real-approval-backfill-record-template.md",
+   "TriCompany-host-assets/docs/workflow/ipd-first-real-approval-backfill-runbook.md",
+   "TriCompany-host-assets/docs/workflow/ipd-first-real-approval-merge-candidate-matrix.md",
+   "TriCompany-host-assets/docs/workflow/ipd-first-real-approval-through-pass-checklist.md",
+   "TriCompany-host-assets/docs/workflow/ipd-long-term-contract-solidification-list.md",
+   "TriCompany-host-assets/docs/workflow/ipd-product-acceptance-contract-cpo-review.md",
+   "TriCompany-host-assets/docs/workflow/ipd-runtime-evidence-contract-cto-review.md",
+   "TriCompany/docs/training/ipd-cli-and-code-workflow-beginner-course.md",
+   "TriCompany/docs/training/ipd-usage-guide.md",
+   "TriCompany/docs/workflow/integrated-product-development-flow.md",
+   "TriCompany/docs/workflow/ipd-company-baseline-checklist.md"
+  ],
+  "docs/workflow/project-repo-document-baseline.md": [
+   "TriCompany/docs/workflow/integrated-product-development-flow.md"
+  ],
+  "docs/workflow/published-copy-refresh-sop.md": [
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/SUPERMEMORY-LIVE-VALIDATION.latest.json",
+   "TriCompany/.github/manifests/tricompany-published-copy-manifest.json",
+   "TriCompany/docs/workflow/github-backport-manifest.md",
+   "TriCompany/docs/workflow/published-copy-refresh-sop.md"
+  ],
+  "docs/workflow/responsibility-handoff-intake-template.md": [
+   "TriCompany/docs/workflow/chief-human-resources-officer-handoff-governance.md"
+  ],
+  "docs/workflow/review-release-chain.md": [
+   "TriCompany/docs/workflow/integrated-product-development-flow.md"
+  ],
+  "docs/workflow/tricompany-agent-roles.md": [
+   "TriCompany/docs/registry/code-state.md",
+   "TriCompany/docs/registry/product-state.md",
+   "TriCompany/docs/workflow/chief-administrative-officer-role.md",
+   "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md"
+  ],
+  "docs/workflow/tricompany-copilot-host-assets-governance.md": [
+   "TriCompany-host-assets/README.md",
+   "TriCompany-host-assets/docs/engineering/ROADMAP.md",
+   "TriCompany-host-assets/docs/engineering/STATE.md",
+   "TriCompany-host-assets/docs/engineering/chief-of-staff-llm-wiki-priority-plan.md",
+   "TriCompany-host-assets/docs/engineering/cognition-runtime-module-plan.md",
+   "TriCompany-host-assets/docs/engineering/hermes-memory-subsystem-comparison.md",
+   "TriCompany-host-assets/docs/engineering/tricompany-four-layer-memory-collaboration-system.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/CENTRAL-CEO-CHIEF-OF-STAFF-ABSORPTION-PLAN.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/CHIEF-OF-STAFF-FORMAL-APPOINTMENT-PREREQUISITES.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/CHIEF-OF-STAFF-LLM-WIKI-MVP-VALIDATION.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/CHIEF-OF-STAFF-PHASE-1-TAKEOVER-CHECKLIST.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/CHIEF-OF-STAFF-PHASE-1-TAKEOVER-VALIDATION.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/CHIEF-OF-STAFF-SCHEDULE-STAGING-VALIDATION.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/MEETING-LIFECYCLE-REHEARSAL.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/SUPPORT-ROOT-RENAME-PLAN.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/README.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/ceo-chief-of-staff.agent.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/central-ceo-chief-of-staff-2026-04-18/ceo-chief-of-staff.memory.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/README.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.agent.md",
+   "TriCompany-host-assets/docs/execution/hermes-copilot-host/phase-1/baselines/tricompany-ceo-chief-of-staff-archive-2026-04-26/tricompany-ceo-chief-of-staff.instructions.md",
+   "TriCompany-host-assets/docs/execution/live-agent-discovery-cleanup/2026-05-22-retired-live-agents/retired-live-agents.json",
+   "TriCompany-host-assets/docs/product/PROJECT.md",
+   "TriCompany-host-assets/docs/product/REQUIREMENTS.md",
+   "TriCompany-host-assets/docs/product/ROADMAP.md",
+   "TriCompany-host-assets/docs/product/STATE.md",
+   "TriCompany-host-assets/docs/workflow/chief-of-staff-llm-wiki-object-spec.md",
+   "TriCompany-host-assets/docs/workflow/chief-of-staff-rd-orchestration.md",
+   "TriCompany-host-assets/docs/workflow/github-backport-manifest.md",
+   "TriCompany-host-assets/docs/workflow/hermes-copilot-host-migration.md",
+   "TriCompany-host-assets/docs/workflow/published-copy-refresh-checklist.md",
+   "TriCompany-host-assets/docs/workflow/tricompany-secretariat.md",
+   "TriCompany-host-assets/host-object-manifest.json",
+   "TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json",
+   "TriCompany/.github/manifests/tricompany-published-copy-manifest.json",
+   "TriCompany/README.md",
+   "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+   "TriCompany/docs/workflow/hermes-copilot-host-migration.md",
+   "TriCompany/docs/workflow/published-copy-refresh-sop.md",
+   "TriCompany/docs/workflow/rd-trainer-role.md"
+  ],
+  "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md": [
+   "TriCompany-host-assets/host-object-manifest.json",
+   "TriCompany/.github/manifests/tricompany-host-object-generation-manifest.json",
+   "TriCompany/docs/engineering/chief-of-staff-llm-wiki-priority-plan.md",
+   "TriCompany/docs/engineering/role-employee-knowledge-workspace.md",
+   "TriCompany/docs/workflow/chief-of-staff-legacy-path-deprecation-readiness.md",
+   "TriCompany/docs/workflow/chief-of-staff-llm-wiki-object-spec.md",
+   "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md",
+   "TriCompany/docs/workflow/host-object-publish-flow.md",
+   "TriCompany/docs/workflow/rd-trainer-role.md"
+  ],
+  "docs/workflow/tricompany-operating-workflow.md": [
+   "TriCompany/docs/registry/code-state.md",
+   "TriCompany/docs/registry/product-state.md",
+   "TriCompany/docs/workflow/chief-administrative-officer-role.md",
+   "TriCompany/docs/workflow/chief-of-staff-rd-orchestration.md"
+  ],
+  "docs/workflow/workflow-engine-spec.md": [
+   "TriCompany/docs/workflow/integrated-product-development-flow.md"
+  ],
+  "docs/workflow/定期检查任务规格.md": [
+   "TriCompany/docs/product/STATE.md",
+   "TriCompany/docs/registry/product-state.md"
+  ],
+  "docs/三元宇宙架构与模块说明.md": [
+   "TriCompany/.github/manifests/tricompany-published-copy-manifest.json"
+  ],
+  "docs/文档治理与真源文件系统.md": [
+   "TriCompany/docs/engineering/DESIGN.md",
+   "TriCompany/docs/product/PROJECT.md",
+   "TriCompany/docs/registry/company-governance-state.md",
+   "TriCompany/docs/registry/product-state.md",
+   "TriCompany/tricompany.md"
+  ],
+  "phase-c-pilot-record-2026-02-27.md": [
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-023331.json",
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-140502.json",
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-140748.json",
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json"
+  ],
+  "phase-c-w1-issue-body-2026-02-27.md": [
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json"
+  ],
+  "phase-c-w1-pr-template.md": [
+   "TriPilot/artifacts/acceptance/daily-smoke-YYYYMMDD-HHMMSS.json"
+  ],
+  "phase-c-w1-weekly-summary-2026-02-27.md": [
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json"
+  ]
+ },
+ "nodes": {
+  "90天收入突击计划.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "AGENTS.md": {
+   "citedBy": [
+    "docs/registry/business-state.md"
+   ],
+   "cites": [
+    "docs/github-repo-governance.md",
+    "docs/project.md",
+    "docs/registry/business-state.md",
+    "docs/tmv-whitepaper.md",
+    "docs/tricompany.md",
+    "docs/workflow/dynamic-task-tree-protocol.md",
+    "docs/workflow/tricompany-agent-roles.md"
+   ],
+   "lastCommit": "4bff853f9"
+  },
+  "CLAUDE.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/fade-007-context-reservoir-spec.md",
+    "docs/execution/fade-007-incident-sop.md",
+    "docs/execution/v0.9.x-dual-track-tricompany-plan.md",
+    "docs/github-repo-governance.md",
+    "docs/project.md",
+    "docs/tmv-whitepaper.md",
+    "docs/tricompany.md",
+    "docs/workflow/weekly-plane-shift-local-align-sop.md"
+   ],
+   "lastCommit": "6916acd40"
+  },
+  "README.md": {
+   "citedBy": [
+    "docs/registry/business-state.md",
+    "docs/registry/code-state.md",
+    "docs/registry/product-state.md"
+   ],
+   "cites": [],
+   "lastCommit": "59b3e8b11"
+  },
+  "arch-storage-migration.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/project.md",
+    "docs/tmv-whitepaper.md",
+    "docs/tricompany.md",
+    "docs/workflow/terminology.md"
+   ],
+   "lastCommit": "fd80258c2"
+  },
+  "copilot-cli-deepseek-byok-setup.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "fc38846a1"
+  },
+  "docs/README.md": {
+   "citedBy": [
+    "docs/文档治理与真源文件系统.md"
+   ],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/archive/tricompany-v0.1-design-20260324.md": {
+   "citedBy": [
+    "docs/tricompany.md"
+   ],
+   "cites": [
+    "docs/workflow/tricompany-agent-roles.md"
+   ],
+   "lastCommit": "d0c42b71e"
+  },
+  "docs/contracts/README.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/contracts/observability-event-mapping-v1-alignment-R02.md": {
+   "citedBy": [
+    "docs/runs/run-R02-2026-03-01-1120.md"
+   ],
+   "cites": [
+    "docs/contracts/observability-event-mapping.md"
+   ],
+   "lastCommit": "c82eb75a0"
+  },
+  "docs/contracts/observability-event-mapping.md": {
+   "citedBy": [
+    "docs/contracts/observability-event-mapping-v1-alignment-R02.md",
+    "docs/engineering/vibecraft-integration-3d-agent.md",
+    "docs/runs/run-R02-2026-03-01-1120.md",
+    "docs/workflow/observability-phase2-4-issue-pack.md"
+   ],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/contracts/sql-migration-index-strategy.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/contracts/trimc-service-controller-task-protocol.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/contracts/tristaciss-openai-compatible-api-contract.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/engineering/DESIGN.md": {
+   "citedBy": [
+    "docs/project.md",
+    "docs/workflow/prd-branch-delivery-checklist.md",
+    "docs/workflow/prd-branch-minimal-directory-template.md",
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/engineering/ROADMAP.md": {
+   "citedBy": [
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/engineering/STATE.md": {
+   "citedBy": [
+    "docs/engineering/dev-degradation-plan.md",
+    "docs/workflow/prd-branch-delivery-checklist.md",
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/engineering/agentsims-vibecraft-3d-module-strategy.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/engineering/architecture-socialfi-core-agent-tristaciss.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/engineering/core-agent-repo-layout-decision.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "c82eb75a0"
+  },
+  "docs/engineering/core-agent-to-trimc-migration-checklist.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/engineering/cto-008-M-tri-mc-lc-protocol.md": {
+   "citedBy": [
+    "docs/engineering/cto-008-P-pc-electron-packaging.md"
+   ],
+   "cites": [
+    "docs/workflow/operating-records/2026-W29/cpo-product-routing-package.md"
+   ],
+   "lastCommit": "c9bb19eaa"
+  },
+  "docs/engineering/cto-008-P-pc-electron-packaging.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/engineering/cto-008-M-tri-mc-lc-protocol.md"
+   ],
+   "lastCommit": "e0928db65"
+  },
+  "docs/engineering/dev-degradation-plan.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/engineering/STATE.md"
+   ],
+   "lastCommit": "c82eb75a0"
+  },
+  "docs/engineering/experiment-runbook.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "ee08026f7"
+  },
+  "docs/engineering/openclaw-trimetaverse-dual-domain-integration-plan.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/engineering/refactor-master-plan-socialfi-core-agent-tristaciss.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/engineering/refactor-phase0-1-issue-pack.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/engineering/self-dev-loop-design.md": {
+   "citedBy": [
+    "docs/training/trimc-trilc-devrepo-triangle-loop.md"
+   ],
+   "cites": [],
+   "lastCommit": "4798964dc"
+  },
+  "docs/engineering/socialfi-repo-layout-decision.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "c82eb75a0"
+  },
+  "docs/engineering/todo/triLC-daemon-heartbeat-timer-absorb-design.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "ae3f23df4"
+  },
+  "docs/engineering/tri-dev-test-deploy-cli-interface-spec.md": {
+   "citedBy": [
+    "docs/engineering/tri-dev-test-deploy-decoupling.md"
+   ],
+   "cites": [],
+   "lastCommit": "11e4c9199"
+  },
+  "docs/engineering/tri-dev-test-deploy-decoupling.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/engineering/tri-dev-test-deploy-cli-interface-spec.md"
+   ],
+   "lastCommit": "11e4c9199"
+  },
+  "docs/engineering/trimc-shadow-phase-0-plan.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/engineering/tritraining-platform-architecture.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/training/tricompany/README.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/engineering/vibecraft-integration-3d-agent.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/contracts/observability-event-mapping.md"
+   ],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/execution/2026-08-24/2026-08-24-week-plan.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/2026-08-24/quad-migration-spec.md"
+   ],
+   "lastCommit": "78fd61a37"
+  },
+  "docs/execution/2026-08-24/audit-campaign/README.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "c067a7036"
+  },
+  "docs/execution/2026-08-24/audit-campaign/log.md": {
+   "citedBy": [
+    "docs/execution/2026-08-24/autonomy-audit-campaign-plan.md"
+   ],
+   "cites": [],
+   "lastCommit": "1c31398ce"
+  },
+  "docs/execution/2026-08-24/audit-campaign/reports/TriCode.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/registry/product-state.md"
+   ],
+   "lastCommit": "4b77f801c"
+  },
+  "docs/execution/2026-08-24/audit-campaign/reports/TriLC.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "2f86c01ad"
+  },
+  "docs/execution/2026-08-24/audit-campaign/reports/TriMC.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "acf1ed36a"
+  },
+  "docs/execution/2026-08-24/audit-campaign/reports/TriMetaverse.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/e2e-test-suite.json"
+   ],
+   "lastCommit": "8f77e6cdb"
+  },
+  "docs/execution/2026-08-24/audit-campaign/reports/TriModel.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "acd8a1b69"
+  },
+  "docs/execution/2026-08-24/audit-campaign/reports/TriPilot.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "3e2ac4f89"
+  },
+  "docs/execution/2026-08-24/audit-campaign/reports/exec-20260824-index.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "df3ab9eae"
+  },
+  "docs/execution/2026-08-24/audit-campaign/reports/self-autonomy-test-report.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "d27ae1e78"
+  },
+  "docs/execution/2026-08-24/audit-campaign/roles/cfo-state.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "d7478d8e2"
+  },
+  "docs/execution/2026-08-24/audit-campaign/roles/cho-state.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1f189a6b0"
+  },
+  "docs/execution/2026-08-24/audit-campaign/roles/coo-state.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/2026-08-24/audit-campaign/state.json",
+    "docs/execution/2026-08-24/autonomy-audit-campaign-plan.md"
+   ],
+   "lastCommit": "9397b7756"
+  },
+  "docs/execution/2026-08-24/audit-campaign/roles/cto-state.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "d9420b986"
+  },
+  "docs/execution/2026-08-24/audit-findings-triage.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "c3d588449"
+  },
+  "docs/execution/2026-08-24/autonomy-audit-campaign-plan.md": {
+   "citedBy": [
+    "docs/execution/2026-08-24/audit-campaign/roles/coo-state.md"
+   ],
+   "cites": [
+    "docs/execution/2026-08-24/audit-campaign/log.md",
+    "docs/execution/2026-08-24/audit-campaign/state.json"
+   ],
+   "lastCommit": "9ebf5b3ea"
+  },
+  "docs/execution/2026-08-24/doc-versioning-governance-rules-draft.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "eb581b655"
+  },
+  "docs/execution/2026-08-24/mmc-host-driver-design-draft.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/tmv-whitepaper.md",
+    "docs/workflow/operating-records/2026-W35/trees/quadmig-1-mmc-shell/tree-op.json"
+   ],
+   "lastCommit": "c68ca8466"
+  },
+  "docs/execution/2026-08-24/mr-worktree-collaboration-protocol.md": {
+   "citedBy": [
+    "docs/execution/lg-019-opinion-cto.md"
+   ],
+   "cites": [],
+   "lastCommit": "a994585eb"
+  },
+  "docs/execution/2026-08-24/quad-migration-spec.md": {
+   "citedBy": [
+    "docs/execution/2026-08-24/2026-08-24-week-plan.md"
+   ],
+   "cites": [],
+   "lastCommit": "005f6d230"
+  },
+  "docs/execution/2026-08-24/tc001-execution-plan.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "18d0b6f45"
+  },
+  "docs/execution/2026-08-24/tc001-harness-scaffolding-func-spec.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "29231c1c8"
+  },
+  "docs/execution/2026-08-24/training-campaign-001-charter.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "20d2d9912"
+  },
+  "docs/execution/2026-08-24/trimmc-orchestration-design-review-cpo.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "96a2b9973"
+  },
+  "docs/execution/2026-08-24/trimmc-orchestration-design-review-cto.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/operating-records/README.md"
+   ],
+   "lastCommit": "96a2b9973"
+  },
+  "docs/execution/2026-08-24/trimmc-orchestration-design.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "d5e84ee8e"
+  },
+  "docs/execution/2026-08-24/trimmc-orchestration-m0-report.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "4ea00a42d"
+  },
+  "docs/execution/2026-08-24/trirlc-duty-gap-checklist.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "9b60822b5"
+  },
+  "docs/execution/2026-08-24/w35-remaining-todos-review.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7eda50835"
+  },
+  "docs/execution/2026-08-26/fade-pipeline-design.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "ebb543a4c"
+  },
+  "docs/execution/2026-08-27/glm-model-deployment-map.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "d7e1b97af"
+  },
+  "docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "092ad159d"
+  },
+  "docs/execution/20260910-bigmodel-400-1210-incident-report.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "8b76f360c"
+  },
+  "docs/execution/README.md": {
+   "citedBy": [
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "674082472"
+  },
+  "docs/execution/adr-cc-agent-spawn-tools-allowlist.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "fd40626e8"
+  },
+  "docs/execution/agent-governance-alignment-design.md": {
+   "citedBy": [
+    "docs/execution/tmv-fade-reading-map.md"
+   ],
+   "cites": [],
+   "lastCommit": "97f28627f"
+  },
+  "docs/execution/bod-patrol-cto-position.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "b3d6f5622"
+  },
+  "docs/execution/candidate-staffing-fade.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "74064845b"
+  },
+  "docs/execution/capability-gap-discovery-design.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "6f497bc6f"
+  },
+  "docs/execution/clone-dispatch-protocol.md": {
+   "citedBy": [
+    "docs/execution/tmv-fade-reading-map.md"
+   ],
+   "cites": [],
+   "lastCommit": "25466d096"
+  },
+  "docs/execution/clone-dispatch-technical-plan.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "767c9e904"
+  },
+  "docs/execution/compass-rename-plan.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/lg-023-bootstrap-unification-evaluation.md",
+    "docs/execution/lg-024-session-contract-upgrade-plan.md",
+    "docs/execution/wave0-rename-residue-assessment-20260909.md",
+    "docs/workflow/operating-records/2026-W36/daily-progress.md",
+    "docs/workflow/operating-records/2026-W36/lg-024-session-face-section-matrix-draft.md",
+    "docs/workflow/operating-records/2026-W36/lg-029-cho-registration-review.md",
+    "docs/workflow/operating-records/2026-W37/lg-034-stage1-whitepaper-refcount.md",
+    "docs/workflow/operating-records/2026-W37/trees/b3b4-joint-review-pilot/reports/bb1-cto-opinion.md"
+   ],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/execution/debug-reset-design.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/registry/business-state.md"
+   ],
+   "lastCommit": "bfd5efb92"
+  },
+  "docs/execution/dprime-tui-acp-architecture-20261020.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "88b8813d3"
+  },
+  "docs/execution/dsh-rplane-harness-design-20261014.md": {
+   "citedBy": [
+    "docs/execution/dsh-window1-contract-20261014.md"
+   ],
+   "cites": [],
+   "lastCommit": "886c5a809"
+  },
+  "docs/execution/dsh-window1-contract-20261014.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/dsh-rplane-harness-design-20261014.md"
+   ],
+   "lastCommit": "8e7b6f544"
+  },
+  "docs/execution/dual-domain-fleet-operations-design.md": {
+   "citedBy": [
+    "docs/execution/two-phase-architecture-collaboration.md"
+   ],
+   "cites": [],
+   "lastCommit": "2d5936b7c"
+  },
+  "docs/execution/e2e-deep-test-plan.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/e2e-three-endpoint-collab-model.md",
+    "docs/execution/init-to-collab-design.md",
+    "docs/execution/project-workspace-design-v2.md",
+    "docs/execution/worktree-architecture-design.md",
+    "docs/workflow/operating-records/2026-W33/trees/init-collab-i5-first-collab/verify/manual-e2e-runbook.md",
+    "docs/workflow/operating-records/2026-W33/trees/init-collab-i5-first-collab/verify/verify-l1-l4.md"
+   ],
+   "lastCommit": "e9f98893e"
+  },
+  "docs/execution/e2e-test-suite.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "9111bf19a"
+  },
+  "docs/execution/e2e-three-endpoint-collab-model.md": {
+   "citedBy": [
+    "docs/execution/e2e-deep-test-plan.md"
+   ],
+   "cites": [
+    "docs/registry/init-sync/sync-config.json"
+   ],
+   "lastCommit": "e9f98893e"
+  },
+  "docs/execution/fade-001-upgrade-review.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "b98ea91db"
+  },
+  "docs/execution/fade-003-upgrade-review.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "17649d7d2"
+  },
+  "docs/execution/fade-005-roster-gating-spec.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "b46ef84d4"
+  },
+  "docs/execution/fade-006-execution-autopick-spec.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "cf0e0024a"
+  },
+  "docs/execution/fade-007-assessment-paper.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/fade-007-context-reservoir-spec.md"
+   ],
+   "lastCommit": "67cbdecb7"
+  },
+  "docs/execution/fade-007-context-reservoir-spec.md": {
+   "citedBy": [
+    "CLAUDE.md",
+    "docs/execution/fade-007-assessment-paper.md",
+    "docs/execution/fade-007-incident-sop.md",
+    "docs/execution/fade-007-upgrade-review.md"
+   ],
+   "cites": [
+    "docs/execution/fade-007-upgrade-review.md"
+   ],
+   "lastCommit": "2e96cce73"
+  },
+  "docs/execution/fade-007-incident-sop.md": {
+   "citedBy": [
+    "CLAUDE.md"
+   ],
+   "cites": [
+    "docs/execution/fade-007-context-reservoir-spec.md",
+    "docs/workflow/session-crash-recovery-spec.md"
+   ],
+   "lastCommit": "ddd29fdee"
+  },
+  "docs/execution/fade-007-upgrade-review.md": {
+   "citedBy": [
+    "docs/execution/fade-007-context-reservoir-spec.md"
+   ],
+   "cites": [
+    "docs/execution/fade-007-context-reservoir-spec.md"
+   ],
+   "lastCommit": "07e449628"
+  },
+  "docs/execution/fade-008-governance-loop.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "6a489f7d4"
+  },
+  "docs/execution/fade-doc-drift-candidate-draft.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "e0f1eb3d2"
+  },
+  "docs/execution/fade-instances-retrospective.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "24e0cb741"
+  },
+  "docs/execution/governance-bod-architecture-caoposition.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "0e042d426"
+  },
+  "docs/execution/governance-proposals-20260907.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/execution/hermes-gov-p2-cpo-half.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/hermes-gov-p2-cto-view.md"
+   ],
+   "lastCommit": "40740ab2f"
+  },
+  "docs/execution/hermes-gov-p2-cto-view.md": {
+   "citedBy": [
+    "docs/execution/hermes-gov-p2-cpo-half.md"
+   ],
+   "cites": [
+    "docs/execution/knowledge-injection-spec.md"
+   ],
+   "lastCommit": "9638da454"
+  },
+  "docs/execution/hermes-gov-p2-design.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "40740ab2f"
+  },
+  "docs/execution/heyuan-branch-switch-impact.md": {
+   "citedBy": [
+    "docs/execution/repo-topology-20260831.md"
+   ],
+   "cites": [
+    "docs/execution/repo-topology-20260831.md",
+    "docs/registry/init-sync/sync-config.json"
+   ],
+   "lastCommit": "4ace9825c"
+  },
+  "docs/execution/init-to-collab-design.md": {
+   "citedBy": [
+    "docs/execution/e2e-deep-test-plan.md"
+   ],
+   "cites": [
+    "docs/execution/project-workspace-design-v2.md",
+    "docs/execution/server-fleet-m0.md",
+    "docs/execution/worktree-architecture-design.md",
+    "docs/registry/init-sync/sync-config.json",
+    "docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json",
+    "docs/workflow/operating-records/2026-W33/trees/init-collab-i4-five-dim-sync/briefs/i4-4-20260814.md"
+   ],
+   "lastCommit": "b5c7e0d16"
+  },
+  "docs/execution/knowledge-injection-spec.md": {
+   "citedBy": [
+    "docs/execution/hermes-gov-p2-cto-view.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/execution/lg-016-governance-memory-analysis.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/ceo-chief-of-staff-authorization-matrix.md"
+   ],
+   "lastCommit": "2df44493b"
+  },
+  "docs/execution/lg-016-rereview-conclusion.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "df4209df3"
+  },
+  "docs/execution/lg-019-opinion-cpo.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "0f2418f6f"
+  },
+  "docs/execution/lg-019-opinion-cto.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/2026-08-24/mr-worktree-collaboration-protocol.md"
+   ],
+   "lastCommit": "0f2418f6f"
+  },
+  "docs/execution/lg-019-worktree-retirement-assessment.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "0f2418f6f"
+  },
+  "docs/execution/lg-022-cli-dotenv-fallback-case.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "df4209df3"
+  },
+  "docs/execution/lg-022-wave1-build-pack-survey.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "22a16bb99"
+  },
+  "docs/execution/lg-023-bootstrap-unification-evaluation.md": {
+   "citedBy": [
+    "docs/execution/compass-rename-plan.md"
+   ],
+   "cites": [],
+   "lastCommit": "17de32181"
+  },
+  "docs/execution/lg-024-session-contract-upgrade-plan.md": {
+   "citedBy": [
+    "docs/execution/compass-rename-plan.md"
+   ],
+   "cites": [],
+   "lastCommit": "24376aacc"
+  },
+  "docs/execution/lg-025-m0-reconciliation.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/registry/product-state.md"
+   ],
+   "lastCommit": "df4209df3"
+  },
+  "docs/execution/lg-026-business-lead-daemon-design.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "836923313"
+  },
+  "docs/execution/lg-028-content-routing-review.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "90f28ce74"
+  },
+  "docs/execution/lg-035-schema-v4-terminal.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "3363a7406"
+  },
+  "docs/execution/lg-035-trimlc-channel-watchdog-design.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "f6545af85"
+  },
+  "docs/execution/lg-035-ui-rework-impl-spec.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "cfe9307f6"
+  },
+  "docs/execution/lg-036-fallback-dual-sg-channel-tech-plan.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/operating-records/2026-W38/fallback-dual-cpo-def.md"
+   ],
+   "lastCommit": "0e8475b16"
+  },
+  "docs/execution/lg-heyuan-cron-reregister-runbook.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "3acfca4ac"
+  },
+  "docs/execution/lg006-quota-relay-design-draft.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "f312a6951"
+  },
+  "docs/execution/lg006-trimodel-config-4col.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "b23aae48c"
+  },
+  "docs/execution/lg017-pre-receive-design-draft.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "bb9c602f8"
+  },
+  "docs/execution/lg020-channel-cmd-rebuild-plan.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "071087a0d"
+  },
+  "docs/execution/lg025-m0f-readiness-draft.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "096a6039c"
+  },
+  "docs/execution/lg026-bl-session-body-draft.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/lg026-re-review-report.md",
+    "docs/workflow/operating-records/2026-W36/lg-026-s87-annex-cho-acceptance.md"
+   ],
+   "lastCommit": "91d2c7d1d"
+  },
+  "docs/execution/lg026-cto-joint-review-opinion.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/trimlc-channel-daemon-spec.md"
+   ],
+   "lastCommit": "6852827b9"
+  },
+  "docs/execution/lg026-leader-form-re-review.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "3e5a14e0d"
+  },
+  "docs/execution/lg026-mface-leader-capability-routes.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "5e0447ffa"
+  },
+  "docs/execution/lg026-p4-five-item-runbook.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "16006e219"
+  },
+  "docs/execution/lg026-re-review-report.md": {
+   "citedBy": [
+    "docs/execution/lg026-bl-session-body-draft.md"
+   ],
+   "cites": [],
+   "lastCommit": "55e0e22e3"
+  },
+  "docs/execution/lg028-claude-md-reduction-assessment.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/v0.9.x-dual-track-tricompany-plan.md"
+   ],
+   "lastCommit": "20b78b678"
+  },
+  "docs/execution/lg030-connectivity-survey.md": {
+   "citedBy": [
+    "docs/execution/lg031-mr-matrix.md"
+   ],
+   "cites": [],
+   "lastCommit": "20b78b678"
+  },
+  "docs/execution/lg031-mr-matrix.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/lg030-connectivity-survey.md"
+   ],
+   "lastCommit": "20b78b678"
+  },
+  "docs/execution/lg032-three-channels.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "5059103ae"
+  },
+  "docs/execution/lg033-b-direct-three-question-evidence.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "5e98bd49c"
+  },
+  "docs/execution/lg033-cfo-financial-review.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/lg033-mface-duty-proposal.md"
+   ],
+   "lastCommit": "5abfa2d6e"
+  },
+  "docs/execution/lg033-cfo-mvsi-cost-supplement.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "206cc1a31"
+  },
+  "docs/execution/lg033-duty-launch-mechanism-review.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "a3d1edb8a"
+  },
+  "docs/execution/lg033-evolution-cto-review.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "a91cf6b9c"
+  },
+  "docs/execution/lg033-launch-review-rev2.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "122f40ae5"
+  },
+  "docs/execution/lg033-mface-duty-proposal.md": {
+   "citedBy": [
+    "docs/execution/lg033-cfo-financial-review.md"
+   ],
+   "cites": [],
+   "lastCommit": "3a797c81b"
+  },
+  "docs/execution/lg033-mface-function-mapping-review.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "b00ac3a2c"
+  },
+  "docs/execution/lg033-pool-sync-runbook.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7096507b5"
+  },
+  "docs/execution/lg033-safety-path-model-draft.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "c416522b2"
+  },
+  "docs/execution/lg033-trimlc-oldstring-survey-v2.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "20b78b678"
+  },
+  "docs/execution/lg033-trimlc-oldstring-survey.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "20b78b678"
+  },
+  "docs/execution/model-quota-inventory.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/operating-records/2026-W38/sg-burn-curve-7d-20260915.md"
+   ],
+   "lastCommit": "5a2212b3e"
+  },
+  "docs/execution/module-cooperation-plan.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "b5c7e0d16"
+  },
+  "docs/execution/naming-alignment-survey-20260831.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "a687fe22e"
+  },
+  "docs/execution/production-dualrun-runbook.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "271bd6de5"
+  },
+  "docs/execution/production-grade-development-plan.md": {
+   "citedBy": [
+    "docs/execution/server-fleet-trilc-parity-plan.md",
+    "docs/execution/trilc-capability-checklist.md"
+   ],
+   "cites": [
+    "docs/execution/server-fleet-trilc-parity-plan.md",
+    "docs/execution/trilc-capability-checklist.md",
+    "docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md"
+   ],
+   "lastCommit": "99af52379"
+  },
+  "docs/execution/project-workspace-design-v2.md": {
+   "citedBy": [
+    "docs/execution/e2e-deep-test-plan.md",
+    "docs/execution/init-to-collab-design.md",
+    "docs/execution/worktree-architecture-design.md"
+   ],
+   "cites": [
+    "docs/execution/server-fleet-m0.md",
+    "docs/execution/v0.9.x-dual-track-tricompany-plan.md",
+    "docs/execution/worktree-architecture-design.md",
+    "docs/github-repo-governance.md",
+    "docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json"
+   ],
+   "lastCommit": "aa11887dd"
+  },
+  "docs/execution/repo-rename-migration-plan-20260831.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "504c6ce70"
+  },
+  "docs/execution/repo-topology-20260831.md": {
+   "citedBy": [
+    "docs/execution/heyuan-branch-switch-impact.md"
+   ],
+   "cites": [
+    "docs/execution/heyuan-branch-switch-impact.md",
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "eb581b655"
+  },
+  "docs/execution/selfdev-v1-test-plan.md": {
+   "citedBy": [
+    "docs/training/trimc-trilc-devrepo-triangle-loop.md"
+   ],
+   "cites": [],
+   "lastCommit": "c82eb75a0"
+  },
+  "docs/execution/server-fleet-m0.md": {
+   "citedBy": [
+    "docs/execution/init-to-collab-design.md",
+    "docs/execution/project-workspace-design-v2.md",
+    "docs/execution/worktree-architecture-design.md"
+   ],
+   "cites": [
+    "docs/execution/trilc-capability-checklist.md",
+    "docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md"
+   ],
+   "lastCommit": "cff1b9247"
+  },
+  "docs/execution/server-fleet-trilc-parity-plan.md": {
+   "citedBy": [
+    "docs/execution/production-grade-development-plan.md",
+    "docs/execution/trilc-capability-checklist.md",
+    "docs/training/trimc-trilc-devrepo-triangle-loop.md"
+   ],
+   "cites": [
+    "docs/execution/production-grade-development-plan.md",
+    "docs/execution/v0.9.x-dual-track-tricompany-plan.md",
+    "docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md"
+   ],
+   "lastCommit": "99af52379"
+  },
+  "docs/execution/session-management-design.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "bace12fa8"
+  },
+  "docs/execution/session-sync-implementation-detail.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "b8f13a20d"
+  },
+  "docs/execution/session-sync-questions.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "b8f13a20d"
+  },
+  "docs/execution/tmv-fade-reading-map.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/agent-governance-alignment-design.md",
+    "docs/execution/clone-dispatch-protocol.md",
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "eb581b655"
+  },
+  "docs/execution/tri-domain-collaboration-channels.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "e9f98893e"
+  },
+  "docs/execution/tricade-implementation-playbook.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/v0.9.x-dual-track-tricompany-plan.md",
+    "docs/tmv-whitepaper.md",
+    "docs/workflow/review-release-chain.md",
+    "docs/workflow/weekly-plane-shift-sop.md"
+   ],
+   "lastCommit": "ee08026f7"
+  },
+  "docs/execution/tricompany-claude-host-chain-gap-archive.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/execution/trilc-capability-checklist.md": {
+   "citedBy": [
+    "docs/execution/production-grade-development-plan.md",
+    "docs/execution/server-fleet-m0.md",
+    "docs/training/trimc-trilc-devrepo-triangle-loop.md"
+   ],
+   "cites": [
+    "docs/execution/production-grade-development-plan.md",
+    "docs/execution/server-fleet-trilc-parity-plan.md",
+    "docs/workflow/dynamic-task-tree-protocol.md",
+    "docs/workflow/operating-records/2026-W33/project-ai-community-weekly-2026-W33.md"
+   ],
+   "lastCommit": "83fa150cd"
+  },
+  "docs/execution/trimlc-channel-daemon-spec.md": {
+   "citedBy": [
+    "docs/execution/lg026-cto-joint-review-opinion.md"
+   ],
+   "cites": [],
+   "lastCommit": "6fb9c89e5"
+  },
+  "docs/execution/trimlc-daemon-hardening-plan-20261009.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/operating-records/2026-W41/trees/lg066-window-order-20261009/cto-8713-death-cause-20261009.md"
+   ],
+   "lastCommit": "6141a4591"
+  },
+  "docs/execution/trirlc-8711-revival-plan-20261009.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "c3d88ca0e"
+  },
+  "docs/execution/two-phase-architecture-collaboration.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/dual-domain-fleet-operations-design.md"
+   ],
+   "lastCommit": "ba5352cd9"
+  },
+  "docs/execution/two-phase-architecture-roadmap.md": {
+   "citedBy": [
+    "docs/三元宇宙架构与模块说明.md"
+   ],
+   "cites": [
+    "docs/tmv-whitepaper.md",
+    "docs/training/trimc-trilc-devrepo-triangle-loop.md"
+   ],
+   "lastCommit": "eb581b655"
+  },
+  "docs/execution/v0.9.x-dual-track-tricompany-plan.md": {
+   "citedBy": [
+    "CLAUDE.md",
+    "docs/execution/lg028-claude-md-reduction-assessment.md",
+    "docs/execution/project-workspace-design-v2.md",
+    "docs/execution/server-fleet-trilc-parity-plan.md",
+    "docs/execution/tricade-implementation-playbook.md",
+    "docs/execution/worktree-architecture-design.md",
+    "docs/training/trimc-trilc-devrepo-triangle-loop.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/execution/wave0-rename-residue-assessment-20260909.md": {
+   "citedBy": [
+    "docs/execution/compass-rename-plan.md"
+   ],
+   "cites": [],
+   "lastCommit": "92209296a"
+  },
+  "docs/execution/weekly-plane-charter-tree-redesign-20261023.md": {
+   "citedBy": [
+    "docs/execution/wp-cli-s2-charter-draft-20261023.md",
+    "docs/文档治理与真源文件系统.md"
+   ],
+   "cites": [],
+   "lastCommit": "77ceab532"
+  },
+  "docs/execution/window-reminder-job-plan-20261014.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "e1b2ba891"
+  },
+  "docs/execution/windows-seat-remote-control-runbook.md": {
+   "citedBy": [
+    "docs/product/m-face-strengths-and-limits.md"
+   ],
+   "cites": [
+    "docs/product/m-face-strengths-and-limits.md"
+   ],
+   "lastCommit": "992cb19ec"
+  },
+  "docs/execution/worktree-architecture-design.md": {
+   "citedBy": [
+    "docs/execution/e2e-deep-test-plan.md",
+    "docs/execution/init-to-collab-design.md",
+    "docs/execution/project-workspace-design-v2.md"
+   ],
+   "cites": [
+    "docs/execution/project-workspace-design-v2.md",
+    "docs/execution/server-fleet-m0.md",
+    "docs/execution/v0.9.x-dual-track-tricompany-plan.md",
+    "docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json"
+   ],
+   "lastCommit": "aa11887dd"
+  },
+  "docs/execution/wp-cli-s2-charter-draft-20261023.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/weekly-plane-charter-tree-redesign-20261023.md"
+   ],
+   "lastCommit": "b16e4c1a9"
+  },
+  "docs/execution/执行轮次参考模板.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "docs/github-repo-governance.md": {
+   "citedBy": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/execution/project-workspace-design-v2.md",
+    "docs/training/four-daemon-matrix-guide.md",
+    "docs/三元宇宙架构与模块说明.md",
+    "docs/文档治理与真源文件系统.md"
+   ],
+   "cites": [],
+   "lastCommit": "08a9b8705"
+  },
+  "docs/prd/PRD-template.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "eb581b655"
+  },
+  "docs/prd/PRD001基础平台.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": null
+  },
+  "docs/prd/README.md": {
+   "citedBy": [
+    "docs/workflow/prd-branch-delivery-checklist.md"
+   ],
+   "cites": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "eb581b655"
+  },
+  "docs/product/PROJECT.md": {
+   "citedBy": [
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/product/REQUIREMENTS.md": {
+   "citedBy": [
+    "docs/workflow/prd-branch-delivery-checklist.md",
+    "docs/workflow/prd-branch-minimal-directory-template.md",
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/product/ROADMAP.md": {
+   "citedBy": [
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/product/STATE.md": {
+   "citedBy": [
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/product/m-face-strengths-and-limits.md": {
+   "citedBy": [
+    "docs/execution/windows-seat-remote-control-runbook.md"
+   ],
+   "cites": [
+    "docs/execution/windows-seat-remote-control-runbook.md"
+   ],
+   "lastCommit": "992cb19ec"
+  },
+  "docs/product/todo/triLC-daemon-heartbeat-timer-mvp.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "ae3f23df4"
+  },
+  "docs/product/todo/tricompany-pluggable-module-ux.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/operating-records/2026-W39/trees/ade-legacy-sweep/tricade3-closeout-report.md"
+   ],
+   "lastCommit": "d6b72e19b"
+  },
+  "docs/product/tritraining-platform-concept.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/project.md": {
+   "citedBy": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "arch-storage-migration.md",
+    "docs/tricompany.md",
+    "docs/workflow/workflow-runbook.md",
+    "docs/文档治理与真源文件系统.md"
+   ],
+   "cites": [
+    "docs/engineering/DESIGN.md",
+    "docs/tmv-whitepaper.md",
+    "docs/tricompany.md",
+    "docs/workflow/phase-result.schema.json",
+    "docs/workflow/pr-description-waterfall-alignment.md",
+    "docs/workflow/quality-gates.schema.json",
+    "docs/workflow/terminology.md",
+    "docs/workflow/tricompany-agent-roles.md",
+    "docs/workflow/workflow-engine-spec.md",
+    "docs/workflow/workflow-runbook.md",
+    "docs/workflow/wsdd-v1.md"
+   ],
+   "lastCommit": "2d7f76346"
+  },
+  "docs/registry/README-git-health.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/registry/README.md": {
+   "citedBy": [
+    "docs/workflow/project-repo-document-baseline.md",
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md",
+    "docs/文档治理与真源文件系统.md"
+   ],
+   "cites": [],
+   "lastCommit": "674082472"
+  },
+  "docs/registry/agent-taxonomy.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/registry/business-state.md": {
+   "citedBy": [
+    "AGENTS.md",
+    "docs/execution/debug-reset-design.md",
+    "docs/registry/business-strategy-evolution-log.md",
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [
+    "AGENTS.md",
+    "README.md"
+   ],
+   "lastCommit": "674082472"
+  },
+  "docs/registry/business-strategy-boundaries.md": {
+   "citedBy": [
+    "docs/registry/business-strategy-evolution-log.md",
+    "docs/workflow/module-registry-baseline-rollout-plan.md",
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md"
+   ],
+   "cites": [],
+   "lastCommit": "a2227569e"
+  },
+  "docs/registry/business-strategy-evolution-log.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/registry/business-state.md",
+    "docs/registry/business-strategy-boundaries.md",
+    "docs/registry/business-strategy-state.md",
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "83e203d4d"
+  },
+  "docs/registry/business-strategy-module-map.md": {
+   "citedBy": [
+    "docs/workflow/module-registry-baseline-rollout-plan.md",
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md"
+   ],
+   "cites": [],
+   "lastCommit": "eb581b655"
+  },
+  "docs/registry/business-strategy-state.md": {
+   "citedBy": [
+    "docs/registry/business-strategy-evolution-log.md"
+   ],
+   "cites": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "fd80258c2"
+  },
+  "docs/registry/code-state.md": {
+   "citedBy": [
+    "docs/workflow/prd-branch-delivery-checklist.md",
+    "docs/workflow/project-repo-document-baseline.md",
+    "docs/workflow/session-crash-recovery-spec.md",
+    "docs/workflow/定期检查任务规格.md"
+   ],
+   "cites": [
+    "README.md"
+   ],
+   "lastCommit": "6ca0d35c3"
+  },
+  "docs/registry/company-governance-state.md": {
+   "citedBy": [
+    "docs/workflow/chief-of-staff-rd-orchestration.md",
+    "docs/workflow/github-repo-governance.md",
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md"
+   ],
+   "cites": [
+    "docs/registry/test-state.md"
+   ],
+   "lastCommit": "4491d7987"
+  },
+  "docs/registry/employee-capability-contract.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "11e4c9199"
+  },
+  "docs/registry/ipd-freeze-items-registry.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "11e4c9199"
+  },
+  "docs/registry/product-state.md": {
+   "citedBy": [
+    "docs/execution/2026-08-24/audit-campaign/reports/TriCode.md",
+    "docs/execution/lg-025-m0-reconciliation.md",
+    "docs/workflow/prd-branch-delivery-checklist.md",
+    "docs/workflow/project-repo-document-baseline.md",
+    "docs/workflow/session-crash-recovery-spec.md",
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md"
+   ],
+   "cites": [
+    "README.md"
+   ],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/registry/test-state.md": {
+   "citedBy": [
+    "docs/registry/company-governance-state.md"
+   ],
+   "cites": [],
+   "lastCommit": "acb4f2ea4"
+  },
+  "docs/runs/README.md": {
+   "citedBy": [
+    "docs/runs/run-2026-04-cycle-01/delivery-report.md",
+    "docs/workflow/tride-model-adoption-checklist.md",
+    "docs/workflow/workflow-host-integration.md"
+   ],
+   "cites": [
+    "docs/runs/run-2026-04-cycle-01/INTELLIGENCE.phase-result.json",
+    "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/CODING.phase-result.json",
+    "docs/runs/run-2026-04-cycle-01/workflow-summary.md",
+    "docs/runs/run-R04-2026-03-03-0025.md"
+   ],
+   "lastCommit": "a59926842"
+  },
+  "docs/runs/run-2026-04-cycle-01/delivery-report.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/runs/README.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/runs/run-2026-04-cycle-01/workflow-summary.md": {
+   "citedBy": [
+    "docs/runs/README.md"
+   ],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/runs/run-R01-2026-02-28-1515.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/runs/run-R02-2026-03-01-1120.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/contracts/observability-event-mapping-v1-alignment-R02.md",
+    "docs/contracts/observability-event-mapping.md"
+   ],
+   "lastCommit": "c82eb75a0"
+  },
+  "docs/runs/run-R03-2026-03-02-2024.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/runs/run-R04-2026-03-03-0025.md"
+   ],
+   "lastCommit": "c82eb75a0"
+  },
+  "docs/runs/run-R04-2026-03-03-0025.md": {
+   "citedBy": [
+    "docs/runs/README.md",
+    "docs/runs/run-R03-2026-03-02-2024.md"
+   ],
+   "cites": [
+    "docs/testing/fullstack-testing-framework-R04.md"
+   ],
+   "lastCommit": "c82eb75a0"
+  },
+  "docs/security/README.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "f372da198"
+  },
+  "docs/security/supply-chain-audit-2026-08-10.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "f372da198"
+  },
+  "docs/testing/README.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/testing/fullstack-testing-framework-R04.md": {
+   "citedBy": [
+    "docs/runs/run-R04-2026-03-03-0025.md"
+   ],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/tmv-whitepaper.md": {
+   "citedBy": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "arch-storage-migration.md",
+    "docs/execution/2026-08-24/doc-versioning-governance-rules-draft.md",
+    "docs/execution/2026-08-24/mmc-host-driver-design-draft.md",
+    "docs/execution/repo-topology-20260831.md",
+    "docs/execution/tmv-fade-reading-map.md",
+    "docs/execution/tricade-implementation-playbook.md",
+    "docs/execution/two-phase-architecture-roadmap.md",
+    "docs/prd/PRD-template.md",
+    "docs/prd/PRD001基础平台.md",
+    "docs/prd/README.md",
+    "docs/project.md",
+    "docs/registry/business-strategy-evolution-log.md",
+    "docs/registry/business-strategy-state.md",
+    "docs/training/four-daemon-matrix-guide.md",
+    "docs/training/tricompany/README.md",
+    "docs/training/trimc-trilc-devrepo-triangle-loop.md",
+    "docs/tricompany.md",
+    "docs/workflow/phase-io-matrix.md",
+    "docs/workflow/pr-description-waterfall-alignment.md",
+    "docs/workflow/prd-branch-delivery-checklist.md",
+    "docs/workflow/terminology.md",
+    "docs/workflow/workflow-engine-spec.md",
+    "docs/workflow/workflow-runbook.md",
+    "docs/workflow/版本策略与经营记录分层.md",
+    "docs/三元宇宙架构与模块说明.md",
+    "docs/文档治理与真源文件系统.md",
+    "tmv-phase-1-execution-plan.md"
+   ],
+   "cites": [],
+   "lastCommit": "adf57fa7f"
+  },
+  "docs/training/README.md": {
+   "citedBy": [
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "939671245"
+  },
+  "docs/training/build-tricade-guide.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "83f728858"
+  },
+  "docs/training/employee-host-publish-pipeline-course.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/training/employee-host-publish-pipeline-lab-contract.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/training/employee-host-publish-pipeline-lab-manual.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/training/employee-host-publish-pipeline-lesson-contract.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/training/employee-source-kit-cli-lab-contract.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/training/employee-source-kit-cli-lab-manual.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/training/employee-source-kit-cli-lesson-contract.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/training/four-daemon-matrix-guide.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/github-repo-governance.md",
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "939671245"
+  },
+  "docs/training/training-pack-migration-plan.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/training/tricompany/01-为什么需要-tricompany.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "docs/training/tricompany/02-员工设计与生命周期.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "docs/training/tricompany/03-source-publish-live-链路.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/tricompany-copilot-host-assets-governance.md"
+   ],
+   "lastCommit": null
+  },
+  "docs/training/tricompany/04-ceo-chief-of-staff-全链路案例.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "docs/training/tricompany/05-cto-cpo-review-后的优化方向.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "docs/training/tricompany/README.md": {
+   "citedBy": [
+    "docs/engineering/tritraining-platform-architecture.md"
+   ],
+   "cites": [
+    "docs/tmv-whitepaper.md",
+    "docs/workflow/tricompany-agent-roles.md"
+   ],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/training/tricompany/appendix-a-工件清单与引用规则.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/tricompany-copilot-host-assets-governance.md"
+   ],
+   "lastCommit": null
+  },
+  "docs/training/trimc-trilc-devrepo-triangle-loop.md": {
+   "citedBy": [
+    "docs/execution/two-phase-architecture-roadmap.md"
+   ],
+   "cites": [
+    "docs/engineering/self-dev-loop-design.md",
+    "docs/execution/selfdev-v1-test-plan.md",
+    "docs/execution/server-fleet-trilc-parity-plan.md",
+    "docs/execution/trilc-capability-checklist.md",
+    "docs/execution/v0.9.x-dual-track-tricompany-plan.md",
+    "docs/tmv-whitepaper.md",
+    "docs/workflow/operating-records/2026-W33/OP-202608-W33-001.json"
+   ],
+   "lastCommit": "939671245"
+  },
+  "docs/training/tritraining-ai-course-graph.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "83f728858"
+  },
+  "docs/training/tritraining-lesson-lab-contract-baseline.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "11e4c9199"
+  },
+  "docs/training/tritraining-trimetaverse-curriculum-architecture.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/tricompany.md": {
+   "citedBy": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "arch-storage-migration.md",
+    "docs/project.md",
+    "docs/文档治理与真源文件系统.md"
+   ],
+   "cites": [
+    "docs/archive/tricompany-v0.1-design-20260324.md",
+    "docs/project.md",
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "6d77f5059"
+  },
+  "docs/workflow/ISSUE_WORKFLOW_GUIDE.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/workflow/README.md": {
+   "citedBy": [
+    "docs/workflow/pr-description-waterfall-alignment.md",
+    "docs/workflow/prd-branch-delivery-checklist.md",
+    "docs/workflow/prd-branch-minimal-directory-template.md",
+    "docs/workflow/project-repo-document-baseline.md"
+   ],
+   "cites": [],
+   "lastCommit": "892618f21"
+  },
+  "docs/workflow/agent-taxonomy.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/archive/opentride-cleanup-closeout-2026-04-09.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/archive/tricompany-secretariat.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "0f532c2aa"
+  },
+  "docs/workflow/archive/workflow-host-followups-and-super-dev-reference.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/archive/workflow-vs-super-dev-first-comparison.md",
+    "docs/workflow/terminology.md",
+    "docs/workflow/tride-model-adoption-checklist.md",
+    "docs/workflow/workflow-host-integration.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/archive/workflow-vs-super-dev-first-comparison.md": {
+   "citedBy": [
+    "docs/workflow/archive/workflow-host-followups-and-super-dev-reference.md"
+   ],
+   "cites": [
+    "docs/workflow/terminology.md",
+    "docs/workflow/workflow-host-integration.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/branching-release-policy-8lines.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/workflow/branching-release-policy.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/workflow/central-registry-closeout-workflow.md": {
+   "citedBy": [
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md"
+   ],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/ceo-chief-of-staff-authorization-matrix.md": {
+   "citedBy": [
+    "docs/execution/lg-016-governance-memory-analysis.md"
+   ],
+   "cites": [],
+   "lastCommit": "674082472"
+  },
+  "docs/workflow/chief-administrative-officer-role.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "674082472"
+  },
+  "docs/workflow/chief-financial-officer-role.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "674082472"
+  },
+  "docs/workflow/chief-human-resources-officer-handoff-governance.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "674082472"
+  },
+  "docs/workflow/chief-human-resources-officer-role.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "674082472"
+  },
+  "docs/workflow/chief-marketing-officer-role.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "674082472"
+  },
+  "docs/workflow/chief-of-staff-llm-wiki-object-spec.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/chief-of-staff-rd-orchestration.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/registry/company-governance-state.md"
+   ],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/chief-operating-officer-role.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "674082472"
+  },
+  "docs/workflow/delivery-record/CTO-20260714-001-d3-regression-verification.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "11e4c9199"
+  },
+  "docs/workflow/dynamic-task-tree-protocol.md": {
+   "citedBy": [
+    "AGENTS.md",
+    "docs/execution/trilc-capability-checklist.md"
+   ],
+   "cites": [
+    "docs/workflow/tree-nodes-export.json"
+   ],
+   "lastCommit": "74064845b"
+  },
+  "docs/workflow/github-backport-manifest.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/github-issue-batch-create-commands.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/workflow/github-repo-governance.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/registry/company-governance-state.md",
+    "docs/workflow/pr-description-waterfall-alignment.md",
+    "docs/workflow/project-repo-document-baseline.md",
+    "docs/workflow/tricompany-copilot-host-assets-governance.md"
+   ],
+   "lastCommit": "0bfecf18a"
+  },
+  "docs/workflow/handoff-templates/README.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/hermes-copilot-host-migration.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/host-object-publish-flow.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/ipd-document-system-overview.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/tricompany-phase-bridge.md"
+   ],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/layer-callgraph.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "fd80258c2"
+  },
+  "docs/workflow/module-registry-baseline-rollout-plan.md": {
+   "citedBy": [
+    "docs/三元宇宙架构与模块说明.md"
+   ],
+   "cites": [
+    "docs/registry/business-strategy-boundaries.md",
+    "docs/registry/business-strategy-module-map.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/observability-phase2-4-issue-pack.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/contracts/observability-event-mapping.md"
+   ],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/workflow/observability-weekly-plan-template.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "7d64c5560"
+  },
+  "docs/workflow/operating-cycle-example/README.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/phase-io-matrix.md": {
+   "citedBy": [
+    "docs/workflow/pr-description-waterfall-alignment.md",
+    "docs/workflow/workflow-engine-spec.md",
+    "docs/workflow/workflow-runbook.md"
+   ],
+   "cites": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "eb581b655"
+  },
+  "docs/workflow/pr-description-waterfall-alignment.md": {
+   "citedBy": [
+    "docs/project.md",
+    "docs/workflow/github-repo-governance.md"
+   ],
+   "cites": [
+    "docs/tmv-whitepaper.md",
+    "docs/workflow/README.md",
+    "docs/workflow/phase-io-matrix.md",
+    "docs/workflow/phase-result.schema.json",
+    "docs/workflow/prd-branch-delivery-checklist.md",
+    "docs/workflow/review-release-chain.md",
+    "docs/workflow/terminology.md",
+    "docs/workflow/waterfall-migration-mapping.md",
+    "docs/workflow/workflow-engine-spec.md",
+    "docs/workflow/workflow-runbook.md",
+    "docs/workflow/wsdd-v1.md"
+   ],
+   "lastCommit": "fd80258c2"
+  },
+  "docs/workflow/pr-final-ready.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/prd-branch-delivery-checklist.md": {
+   "citedBy": [
+    "docs/workflow/pr-description-waterfall-alignment.md"
+   ],
+   "cites": [
+    "docs/engineering/DESIGN.md",
+    "docs/engineering/STATE.md",
+    "docs/prd/README.md",
+    "docs/product/REQUIREMENTS.md",
+    "docs/registry/code-state.md",
+    "docs/registry/product-state.md",
+    "docs/tmv-whitepaper.md",
+    "docs/workflow/README.md"
+   ],
+   "lastCommit": "eb581b655"
+  },
+  "docs/workflow/prd-branch-minimal-directory-template.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/engineering/DESIGN.md",
+    "docs/product/REQUIREMENTS.md",
+    "docs/workflow/README.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/prd-ownership-routing-intake-template.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/project-repo-document-baseline.md": {
+   "citedBy": [
+    "docs/workflow/github-repo-governance.md",
+    "docs/workflow/workflow-engine-spec.md",
+    "docs/workflow/workflow-runbook.md"
+   ],
+   "cites": [
+    "docs/engineering/DESIGN.md",
+    "docs/engineering/ROADMAP.md",
+    "docs/engineering/STATE.md",
+    "docs/execution/README.md",
+    "docs/product/PROJECT.md",
+    "docs/product/REQUIREMENTS.md",
+    "docs/product/ROADMAP.md",
+    "docs/product/STATE.md",
+    "docs/registry/README.md",
+    "docs/registry/business-state.md",
+    "docs/registry/code-state.md",
+    "docs/registry/product-state.md",
+    "docs/training/README.md",
+    "docs/workflow/README.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/published-copy-refresh-sop.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/responsibility-handoff-intake-template.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/review-release-chain.md": {
+   "citedBy": [
+    "docs/execution/tricade-implementation-playbook.md",
+    "docs/workflow/pr-description-waterfall-alignment.md",
+    "docs/workflow/workflow-engine-spec.md",
+    "docs/workflow/workflow-runbook.md"
+   ],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/seat-cycle-restart-window.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "82af13f30"
+  },
+  "docs/workflow/session-crash-recovery-spec.md": {
+   "citedBy": [
+    "docs/execution/fade-007-incident-sop.md"
+   ],
+   "cites": [
+    "docs/registry/code-state.md",
+    "docs/registry/product-state.md"
+   ],
+   "lastCommit": "ddd29fdee"
+  },
+  "docs/workflow/sync-topology.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "71cdab14c"
+  },
+  "docs/workflow/terminology.md": {
+   "citedBy": [
+    "arch-storage-migration.md",
+    "docs/project.md",
+    "docs/workflow/archive/workflow-host-followups-and-super-dev-reference.md",
+    "docs/workflow/archive/workflow-vs-super-dev-first-comparison.md",
+    "docs/workflow/pr-description-waterfall-alignment.md",
+    "docs/workflow/waterfall-migration-mapping.md",
+    "docs/workflow/workflow-engine-spec.md",
+    "docs/workflow/workflow-runbook.md",
+    "docs/文档治理与真源文件系统.md"
+   ],
+   "cites": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "fd80258c2"
+  },
+  "docs/workflow/tricompany-agent-roles.md": {
+   "citedBy": [
+    "AGENTS.md",
+    "docs/archive/tricompany-v0.1-design-20260324.md",
+    "docs/project.md",
+    "docs/training/tricompany/README.md"
+   ],
+   "cites": [],
+   "lastCommit": "fd80258c2"
+  },
+  "docs/workflow/tricompany-copilot-host-assets-governance.md": {
+   "citedBy": [
+    "docs/training/tricompany/03-source-publish-live-链路.md",
+    "docs/training/tricompany/appendix-a-工件清单与引用规则.md",
+    "docs/workflow/github-repo-governance.md",
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md",
+    "docs/三元宇宙架构与模块说明.md",
+    "docs/文档治理与真源文件系统.md"
+   ],
+   "cites": [
+    "docs/workflow/tricompany-copilot-host-assets-anchor-index.json",
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md",
+    "docs/workflow/tricompany-operating-workflow.md"
+   ],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md": {
+   "citedBy": [
+    "docs/workflow/tricompany-copilot-host-assets-governance.md"
+   ],
+   "cites": [
+    "docs/registry/README.md",
+    "docs/registry/business-strategy-boundaries.md",
+    "docs/registry/business-strategy-module-map.md",
+    "docs/registry/company-governance-state.md",
+    "docs/registry/product-state.md",
+    "docs/workflow/central-registry-closeout-workflow.md",
+    "docs/workflow/handoff-templates/skill-spec.example.json",
+    "docs/workflow/tricompany-copilot-host-assets-anchor-index.json",
+    "docs/workflow/tricompany-copilot-host-assets-governance.md",
+    "docs/workflow/tricompany-operating-workflow.md"
+   ],
+   "lastCommit": "1f9d505b1"
+  },
+  "docs/workflow/tricompany-handoff-objects.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/tricompany-operating-workflow.md": {
+   "citedBy": [
+    "docs/workflow/tricompany-copilot-host-assets-governance.md",
+    "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md"
+   ],
+   "cites": [],
+   "lastCommit": "fd80258c2"
+  },
+  "docs/workflow/tricompany-phase-bridge.md": {
+   "citedBy": [
+    "docs/workflow/ipd-document-system-overview.md"
+   ],
+   "cites": [
+    "docs/runs/run-2026-04-cycle-01/branch-prd-ai-content-trial/CODING.phase-result.json"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/tride-model-adoption-checklist.md": {
+   "citedBy": [
+    "docs/workflow/archive/workflow-host-followups-and-super-dev-reference.md"
+   ],
+   "cites": [
+    "docs/runs/README.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/trimc-recovery-interface.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/workflow/tree-nodes-export.json"
+   ],
+   "lastCommit": "4e90254cb"
+  },
+  "docs/workflow/waterfall-migration-mapping.md": {
+   "citedBy": [
+    "docs/workflow/pr-description-waterfall-alignment.md"
+   ],
+   "cites": [
+    "docs/workflow/terminology.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/weekly-plane-shift-local-align-sop.md": {
+   "citedBy": [
+    "CLAUDE.md"
+   ],
+   "cites": [],
+   "lastCommit": "1c8505fd7"
+  },
+  "docs/workflow/weekly-plane-shift-sop.md": {
+   "citedBy": [
+    "docs/execution/tricade-implementation-playbook.md"
+   ],
+   "cites": [],
+   "lastCommit": "c68ca8466"
+  },
+  "docs/workflow/workflow-engine-spec.md": {
+   "citedBy": [
+    "docs/project.md",
+    "docs/workflow/pr-description-waterfall-alignment.md",
+    "docs/workflow/workflow-runbook.md"
+   ],
+   "cites": [
+    "docs/tmv-whitepaper.md",
+    "docs/workflow/phase-io-matrix.md",
+    "docs/workflow/project-repo-document-baseline.md",
+    "docs/workflow/review-release-chain.md",
+    "docs/workflow/terminology.md",
+    "docs/workflow/workflow-runbook.md"
+   ],
+   "lastCommit": "fd80258c2"
+  },
+  "docs/workflow/workflow-host-integration.md": {
+   "citedBy": [
+    "docs/workflow/archive/workflow-host-followups-and-super-dev-reference.md",
+    "docs/workflow/archive/workflow-vs-super-dev-first-comparison.md"
+   ],
+   "cites": [
+    "docs/runs/README.md"
+   ],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/workflow-runbook.md": {
+   "citedBy": [
+    "docs/project.md",
+    "docs/workflow/pr-description-waterfall-alignment.md",
+    "docs/workflow/workflow-engine-spec.md"
+   ],
+   "cites": [
+    "docs/project.md",
+    "docs/tmv-whitepaper.md",
+    "docs/workflow/phase-io-matrix.md",
+    "docs/workflow/project-repo-document-baseline.md",
+    "docs/workflow/review-release-chain.md",
+    "docs/workflow/terminology.md",
+    "docs/workflow/workflow-engine-spec.md"
+   ],
+   "lastCommit": "fd80258c2"
+  },
+  "docs/workflow/wsdd-v1.md": {
+   "citedBy": [
+    "docs/project.md",
+    "docs/workflow/pr-description-waterfall-alignment.md"
+   ],
+   "cites": [],
+   "lastCommit": "1258700f3"
+  },
+  "docs/workflow/定期检查任务规格.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/registry/code-state.md",
+    "docs/workflow/operating-records/2026-W28/OP-202607-W28-001.json"
+   ],
+   "lastCommit": null
+  },
+  "docs/workflow/版本策略与经营记录分层.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": null
+  },
+  "docs/三元宇宙架构与模块说明.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/execution/two-phase-architecture-roadmap.md",
+    "docs/github-repo-governance.md",
+    "docs/tmv-whitepaper.md",
+    "docs/workflow/module-registry-baseline-rollout-plan.md",
+    "docs/workflow/tricompany-copilot-host-assets-governance.md"
+   ],
+   "lastCommit": null
+  },
+  "docs/文档治理与真源文件系统.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/README.md",
+    "docs/execution/weekly-plane-charter-tree-redesign-20261023.md",
+    "docs/github-repo-governance.md",
+    "docs/project.md",
+    "docs/registry/README.md",
+    "docs/tmv-whitepaper.md",
+    "docs/tricompany.md",
+    "docs/workflow/terminology.md",
+    "docs/workflow/tricompany-copilot-host-assets-governance.md"
+   ],
+   "lastCommit": null
+  },
+  "github-app-copilot-rollout-v1.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "59b3e8b11"
+  },
+  "meta-reality.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "0a8127819"
+  },
+  "meta-recognition.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "0a8127819"
+  },
+  "meta-virtuality.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "0a8127819"
+  },
+  "opentride-opencode-dev-migration-runbook.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "cd6ef9372"
+  },
+  "phase-a-repo-adjustment-runbook.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "c82eb75a0"
+  },
+  "phase-b-b2-b3-5min-checklist.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "5eb0ccf5e"
+  },
+  "phase-b-github-app-sync-runbook.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "59b3e8b11"
+  },
+  "phase-b-pilot-record-2026-02-26.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "59b3e8b11"
+  },
+  "phase-c-minimal-startup-checklist-2026-02-27.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "59b3e8b11"
+  },
+  "phase-c-pilot-record-2026-02-27.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "c82eb75a0"
+  },
+  "phase-c-w1-issue-body-2026-02-27.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "59b3e8b11"
+  },
+  "phase-c-w1-mobile-8lines-2026-02-27.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "3c38c8643"
+  },
+  "phase-c-w1-pr-template.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "59b3e8b11"
+  },
+  "phase-c-w1-weekly-summary-2026-02-27.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "59b3e8b11"
+  },
+  "tmv-phase-1-execution-plan.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "eb581b655"
+  },
+  "tride-opencode-dev-migration-runbook.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "1709d94a3"
+  },
+  "trimetaverse.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "0a8127819"
+  },
+  "三元宇宙价值流动.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "三元宇宙价值流动_old.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "三元宇宙落地方案.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "灵感记录.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "链基础设施选型.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  }
+ }
+}
