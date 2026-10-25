@@ -1,8 +1,13 @@
 # S2 任务书候批稿：wp-cli python 骨架（FADE-012 首单·最后一次手工立单）
 
-- sourceOfTruth: 本文件（候批稿·CEO 晨批前不入任务书面——D-39 纯净性：候裁件留候裁面）
+## 文档同步元信息
+
+- sourceOfTruth: TriMetaverse/docs/execution/wp-cli-s2-charter-draft-20261023.md（候批稿·CEO 批前不入任务书面——D-39 纯净性：候裁件留候裁面）
 - syncMode: manual
 - lastSyncedAt: 2026-10-23
+
+- 版本: 候批稿 v1.2（10-23 21:33 spawnedFrom 修订后形）
+- 状态: **候批**（候 CEO 三裁：①稿本体 ②窗位 ③批后即转 COS）——批后据实更新（LG-038/D-27 批程纪律：候批禁写成已批）
 - 拟单: BOD 2026-10-23 晚（CEO 19:33:20 令「今晚拟好 S2 任务书候我晨批」）
 - 定稿去向: CEO 晨批后 → COS 于 10-24 首窗执行 wp charter-create 正式立单（CLI 未生前首次手工代行·此后全走新链）
 
