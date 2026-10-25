@@ -849,3 +849,7 @@
   - 379d59de7 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - b16e4c1a9 docs(bod): CAO 元信息头标准示范自愈——设计稿+S2 候批稿头部改正形
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:40 +08：自上次进度提交 09b6a9e09 后新增 2 条 commit：
+  - ea3394c07 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - 77ceab532 docs(bod): §3.4.1 标准文档头正形落定+设计稿示范重排锚补+§八十一存量清理排窗挂账（CEO 10-25 21:23 令） @bod
+- registry：v2.1；今日 registry 提交无变化
