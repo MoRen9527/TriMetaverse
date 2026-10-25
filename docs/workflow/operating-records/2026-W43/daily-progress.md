@@ -830,3 +830,12 @@
   - ce3ca47ce Merge remote-tracking branch 'sg-server/dev' into wt/board
   - c4f4146c2 docs(bod): V3.3 §九实施分段表列头勘正——树序列示例改参与 roles 示例（规划层无树·正式 sequence 拆树时定） @bod
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-25（周日）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @20:30 +08：自上次进度提交 9575e259c 后新增 4 条 commit：
+  - c127a4dd4 docs(cfo): 积压六拍涌达合并锚(10-24/25宿主睡眠窗)——周窗19%电源门过(低蓄态如实注)·M6三线全零跨日对断链n/a·有界日桶替代meter超时第三例·B2窗毕读数单落卷(glm-5.3-flash全口径17,937,218·cacheR 87.8%·席内纵向)候CHO主判核签
+  - 62424e8cf docs(coo): 台账二百六十三笔(AGENDA-001滑窗事实收记+COS增补候裁协同·本机3%电hard硬闸危急期不派工·段2-4重排候CEO裁本面不动·S2候批勿起链)
+  - aed6ce721 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - c0d927dfa docs(bod): §八十 10-24/25 断电事件窗收记——拍线 32h 空窗归因电源事件+段2 窗丢失不催段3+S2 批面未发生判定+m-cos 恢复状态条收记 @bod
+- registry：v2.1；今日 registry 提交无变化
