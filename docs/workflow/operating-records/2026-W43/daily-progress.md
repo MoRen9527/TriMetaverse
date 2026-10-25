@@ -853,3 +853,7 @@
   - ea3394c07 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - 77ceab532 docs(bod): §3.4.1 标准文档头正形落定+设计稿示范重排锚补+§八十一存量清理排窗挂账（CEO 10-25 21:23 令） @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:10 +08：自上次进度提交 e4fdd42e4 后新增 2 条 commit：
+  - 8310e3ee7 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - bb5e5e5fa docs(bod): §3.4.1 层四 relatedRefs+自动知晓三段落定——doc-graph 索引器首版+全仓首扫 333 件 273 内链+设计稿头部 relatedRefs 示范（CEO 10-25 21:57 追问令） @bod
+- registry：v2.1；今日 registry 提交无变化
