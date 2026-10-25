@@ -1,10 +1,10 @@
 {
  "_meta": {
   "files": 333,
-  "generatedAt": "2026-10-25T23:02:51+0800",
+  "generatedAt": "2026-10-25T23:07:36+08:00",
   "generatedBy": "scripts/doc-graph-scan.py",
   "lastCommitSource": "ok",
-  "repoHead": "8310e3ee7",
+  "repoHead": "2ddfa8d6b",
   "spec": "docs/文档治理与真源文件系统.md §3.4.1 层四"
  },
  "externalRefs": {

@@ -10,12 +10,14 @@ _meta 增 generatedAt/repoHead·stdout 强制 UTF-8（GBK 控制台防御）。
   python scripts/doc-graph-scan.py --who-cites X   # 反查谁引用 X（读现有 graph）
 豁免域（不作为扫描主体）：operating-records/、memory/、机器产物目录；被引用则照记。
 """
+import argparse
 import json
 import os
 import re
 import subprocess
 import sys
 from collections import defaultdict
+from datetime import datetime
 
 try:  # GBK 控制台防御（CTO 轻伤①）：中文输出不炸
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -129,9 +131,7 @@ def scan():
         "_meta": {
             "generatedBy": "scripts/doc-graph-scan.py",
             "spec": "docs/文档治理与真源文件系统.md §3.4.1 层四",
-            "generatedAt": subprocess.run(["date", "+%Y-%m-%dT%H:%M:%S%z"], capture_output=True,
-                                          text=True, encoding="utf-8", timeout=10).stdout.strip()
-                          or None,
+            "generatedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
             "repoHead": repo_head(),
             "lastCommitSource": lc_src,
             "files": len(files),
@@ -180,8 +180,19 @@ def who_cites(target):
             print("  ~ basename-match ambiguous, %d candidates not shown (R3 guard)" % len(loose_only))
 
 
-if __name__ == "__main__":
-    if len(sys.argv) >= 3 and sys.argv[1] == "--who-cites":
-        who_cites(sys.argv[2])
+def main():
+    parser = argparse.ArgumentParser(
+        prog="doc-graph-scan.py",
+        description="文档引用图谱索引器（§3.4.1 层四·机械反向索引）",
+    )
+    parser.add_argument("--who-cites", metavar="PATH",
+                        help="反查谁引用 PATH（读现有 docs/doc-graph.json，不重扫）")
+    args = parser.parse_args()
+    if args.who_cites:
+        who_cites(args.who_cites)
     else:
         scan()
+
+
+if __name__ == "__main__":
+    main()
