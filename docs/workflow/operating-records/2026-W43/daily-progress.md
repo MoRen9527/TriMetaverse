@@ -839,3 +839,9 @@
   - aed6ce721 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - c0d927dfa docs(bod): §八十 10-24/25 断电事件窗收记——拍线 32h 空窗归因电源事件+段2 窗丢失不催段3+S2 批面未发生判定+m-cos 恢复状态条收记 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:40 +08：自上次进度提交 bc6acf327 后新增 4 条 commit：
+  - 817bc9797 docs(cfo): CHO复核签PASS收执(读数单§五直落·独立复测四元逐位一致·窗内无触线)——B2读数单生效形我卷义务全闭环
+  - 5151252f4 docs(cho): CFO窗毕读数单复核签PASS——法源独立重测全量重现(150条四元逐位对表)+算术自洽+日桶旁证+无触线判定n/a——读数单生效形供两卷判卷消耗维
+  - 2392aa1fe docs(cfo): COO互判排程口径收执(候插电首窗与段2-4同窗并行)——电源hard闸期三读并陈(16%AC→3%塌落实锚→21%充电中·flap族电面变体)·危急期不派工照守
+  - ffac98d88 docs(coo): 台账二百六十四笔(CFO B2窗毕读数单收记c127a4dd4·互判排程候本面·口径=插电恢复后首窗与AGENDA-001段2-4重排同窗并行·积压六拍合并锚补记)
+- registry：v2.1；今日 registry 提交无变化
