@@ -830,3 +830,18 @@
   - ce3ca47ce Merge remote-tracking branch 'sg-server/dev' into wt/board
   - c4f4146c2 docs(bod): V3.3 §九实施分段表列头勘正——树序列示例改参与 roles 示例（规划层无树·正式 sequence 拆树时定） @bod
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-25（周日）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @20:30 +08：自上次进度提交 9575e259c 后新增 4 条 commit：
+  - c127a4dd4 docs(cfo): 积压六拍涌达合并锚(10-24/25宿主睡眠窗)——周窗19%电源门过(低蓄态如实注)·M6三线全零跨日对断链n/a·有界日桶替代meter超时第三例·B2窗毕读数单落卷(glm-5.3-flash全口径17,937,218·cacheR 87.8%·席内纵向)候CHO主判核签
+  - 62424e8cf docs(coo): 台账二百六十三笔(AGENDA-001滑窗事实收记+COS增补候裁协同·本机3%电hard硬闸危急期不派工·段2-4重排候CEO裁本面不动·S2候批勿起链)
+  - aed6ce721 Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - c0d927dfa docs(bod): §八十 10-24/25 断电事件窗收记——拍线 32h 空窗归因电源事件+段2 窗丢失不催段3+S2 批面未发生判定+m-cos 恢复状态条收记 @bod
+- registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:40 +08：自上次进度提交 bc6acf327 后新增 4 条 commit：
+  - 817bc9797 docs(cfo): CHO复核签PASS收执(读数单§五直落·独立复测四元逐位一致·窗内无触线)——B2读数单生效形我卷义务全闭环
+  - 5151252f4 docs(cho): CFO窗毕读数单复核签PASS——法源独立重测全量重现(150条四元逐位对表)+算术自洽+日桶旁证+无触线判定n/a——读数单生效形供两卷判卷消耗维
+  - 2392aa1fe docs(cfo): COO互判排程口径收执(候插电首窗与段2-4同窗并行)——电源hard闸期三读并陈(16%AC→3%塌落实锚→21%充电中·flap族电面变体)·危急期不派工照守
+  - ffac98d88 docs(coo): 台账二百六十四笔(CFO B2窗毕读数单收记c127a4dd4·互判排程候本面·口径=插电恢复后首窗与AGENDA-001段2-4重排同窗并行·积压六拍合并锚补记)
+- registry：v2.1；今日 registry 提交无变化
