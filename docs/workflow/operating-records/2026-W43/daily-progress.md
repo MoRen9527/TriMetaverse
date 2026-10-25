@@ -857,3 +857,8 @@
   - 8310e3ee7 Merge remote-tracking branch 'sg-server/dev' into wt/board
   - bb5e5e5fa docs(bod): §3.4.1 层四 relatedRefs+自动知晓三段落定——doc-graph 索引器首版+全仓首扫 333 件 273 内链+设计稿头部 relatedRefs 示范（CEO 10-25 21:57 追问令） @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @23:10 +08：自上次进度提交 2011aaabf 后新增 3 条 commit：
+  - ef61ce00c fix(bod): doc-graph-scan v2.1——CEO 点名 L184 修(手搓 argv→argparse)+同族 subprocess date→datetime @bod
+  - 2ddfa8d6b Merge remote-tracking branch 'sg-server/dev' into wt/board
+  - e71640d81 fix(bod): doc-graph-scan v2——CTO 评审三重伤修复+回归三探针绿 @bod
+- registry：v2.1；今日 registry 提交无变化
