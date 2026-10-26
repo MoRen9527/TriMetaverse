@@ -60,3 +60,11 @@
   - 5f9da60e4 docs(bod): §八十四——checklist 真源归位链两席回执齐·落点定谳 B 案(独立正身+D-60 锚定)·workbench 定性入治理档(75bb96d)·撤件留指针·电源预警解除 @bod
   - 33476a754 docs(cto): workbench checklist 撤正文留指针 stub——正身升格企业规范(TriCompany f3e9683)·CAO ④裁防双真源 @cto
 - registry：v2.1；今日 registry 提交无变化
+## 2026-10-27（周二）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @00:10 +08：自上次进度提交 ad50f9993 后新增 3 条 commit：
+  - 28d4e20ab docs(bod): §八十七——故障面全闭·宿主第五睡眠窗自愈定性(CTO 探针+BOD 证实·勘修窗撤销)·五窗时序统稿·fallback 假读数教训入档 @bod
+  - 2a581898f Merge sg-server/dev into wt/board
+  - 93943fafd docs(bod): §八十六——归位链全闭 D-65 授号生效(正身 f3e9683+批程 3a10029+stub 33476a754)+同窗故障面候裁+TriMLC uptime 假读数勘误 @bod
+- registry：v2.1；今日 registry 提交无变化
