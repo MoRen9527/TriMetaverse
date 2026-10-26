@@ -35,3 +35,8 @@
   - 881436cb2 docs(coo): 台账二百六十五笔(CFO停工令收记·周一第三窗14:00-18:00令达线14:54:52迟到如实注·本机离电放电85%AC候核查·施工面停·候裁面不动)
   - c7e2ce818 docs(cto): 评审checklist立档——CLI工程面固定项五查+盲区档首例(doc-graph v2 L184) @cto
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:00 +08：自上次进度提交 aa01727e7 后新增 3 条 commit：
+  - 06c421038 docs(coo): 台账二百六十六笔(复工令收记令达线19:55:26+COS席缺位relay移交BOD·duty-cos-silent 1405min=常驻席随断电眠·本席不代起·轻量起步放电72%)
+  - 672d19653 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - f67f11226 docs(cfo): 10-26 18:00 锚台账——复工令迟到如实注/放电持续 72%/cos 静默 relay @cfo
+- registry：v2.1；今日 registry 提交无变化
