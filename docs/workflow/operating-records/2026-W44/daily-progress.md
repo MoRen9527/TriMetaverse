@@ -44,3 +44,8 @@
   - 910516af8 Merge sg-server/dev into wt/board
   - d5947ec39 docs(bod): §八十三——duty-cos 静默 relay 探活纠偏(候令非缺位·不代起·无代行)+复工令知悉 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:40 +08：自上次进度提交 eb7b135c4 后新增 3 条 commit：
+  - f5615246d docs(coo): 台账二百六十七笔(BOD纠偏答覆收记·duty-cos定性勘正=sg活体在位pid 3369987·silent 1405min=候令空闲非故障·266笔机位混读自领留痕·不代起+无缺位代行)
+  - e1d33f64e Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 730445861 docs(cfo): cos 静默 relay 闭环录——BOD 探活定性候令空闲非卡死 @cfo
+- registry：v2.1；今日 registry 提交无变化
