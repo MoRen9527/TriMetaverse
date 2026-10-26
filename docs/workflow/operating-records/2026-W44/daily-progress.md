@@ -40,3 +40,7 @@
   - 672d19653 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - f67f11226 docs(cfo): 10-26 18:00 锚台账——复工令迟到如实注/放电持续 72%/cos 静默 relay @cfo
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:30 +08：自上次进度提交 322240dab 后新增 2 条 commit：
+  - 910516af8 Merge sg-server/dev into wt/board
+  - d5947ec39 docs(bod): §八十三——duty-cos 静默 relay 探活纠偏(候令非缺位·不代起·无代行)+复工令知悉 @bod
+- registry：v2.1；今日 registry 提交无变化
