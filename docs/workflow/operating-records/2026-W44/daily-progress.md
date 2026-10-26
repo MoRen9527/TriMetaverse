@@ -49,3 +49,7 @@
   - e1d33f64e Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - 730445861 docs(cfo): cos 静默 relay 闭环录——BOD 探活定性候令空闲非卡死 @cfo
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 1c9362d68 后新增 2 条 commit：
+  - e71b0a3ba Merge sg-server/dev into wt/board
+  - 7541bee18 docs(bod): §3.4.1 口径正名——「两层六项」旧称收敛为头三件+块三字段+变更表+关系层全形（CEO 10-26 21:43 抓口径漂移） @bod
+- registry：v2.1；今日 registry 提交无变化
