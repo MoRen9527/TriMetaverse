@@ -53,3 +53,10 @@
   - e71b0a3ba Merge sg-server/dev into wt/board
   - 7541bee18 docs(bod): §3.4.1 口径正名——「两层六项」旧称收敛为头三件+块三字段+变更表+关系层全形（CEO 10-26 21:43 抓口径漂移） @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @22:00 +08：自上次进度提交 2d0d121c9 后新增 5 条 commit：
+  - 541e22407 Merge sg-server/dev (board sync 2026-10-26 21:5x)
+  - d48d940f8 docs(bod): §八十五——CTO 首版稿成知会(正身 f3e9683+stub 33476a754)·D-60 号位被占用勘正候授号·链入候批 CAO 归口 @bod
+  - 5823706cf Merge sg-server/dev into wt/board
+  - 5f9da60e4 docs(bod): §八十四——checklist 真源归位链两席回执齐·落点定谳 B 案(独立正身+D-60 锚定)·workbench 定性入治理档(75bb96d)·撤件留指针·电源预警解除 @bod
+  - 33476a754 docs(cto): workbench checklist 撤正文留指针 stub——正身升格企业规范(TriCompany f3e9683)·CAO ④裁防双真源 @cto
+- registry：v2.1；今日 registry 提交无变化
