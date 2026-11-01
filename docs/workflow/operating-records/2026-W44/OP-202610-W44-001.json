@@ -6,20 +6,21 @@
     "objectId": "OP-202610-W44-001",
     "title": "TriMetaverse W44 周经营维护索引",
     "ownerRole": "CEOChiefOfStaff",
-    "status": "active",
+    "status": "closed",
     "summary": "W44 周经营维护。任务从上周迁移，新任务待规划。",
     "metadata": {
         "updatedBy": "CEOChiefOfStaff",
         "version": "1.0.0",
-        "lastUpdated": "2026-10-25T15:50:05.150216+00:00",
+        "lastUpdated": "2026-11-01T15:50:04.503256+00:00",
         "workflowTags": [
             "每周维护",
             "CEO 总助维护面",
             "经营维护计划单"
         ],
-        "latestActiveWeek": true,
+        "latestActiveWeek": false,
         "phase": "ceo-copilot-host-coordination",
-        "previousWeekRef": "docs/workflow/operating-records/2026-W43/OP-202610-W43-001.json"
+        "previousWeekRef": "docs/workflow/operating-records/2026-W43/OP-202610-W43-001.json",
+        "nextWeekRef": "docs/workflow/operating-records/2026-W45/OP-202611-W45-001.json"
     },
     "priority": "high",
     "timebox": {

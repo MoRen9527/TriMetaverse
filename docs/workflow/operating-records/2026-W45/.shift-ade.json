@@ -1,0 +1,93 @@
+{
+  "objectType": "ADE_SHIFT",
+  "status": "pass",
+  "from_week": "W44",
+  "to_week": "W45",
+  "start_date": "2026-11-02",
+  "dry_run": false,
+  "steps": [
+    {
+      "step": "create",
+      "result": {
+        "status": "pass",
+        "summary": {
+          "created": true,
+          "dry_run": false,
+          "object_id": "OP-202611-W45-001"
+        },
+        "changes": [
+          {
+            "action": "created",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W45/OP-202611-W45-001.json",
+            "object_id": "OP-202611-W45-001"
+          }
+        ],
+        "errors": [],
+        "check_time": "2026-11-01T15:50:04.500101+00:00"
+      }
+    },
+    {
+      "step": "migrate",
+      "result": {
+        "status": "pass",
+        "summary": {
+          "migrated": true,
+          "from_week": "W44",
+          "to_week": "W45",
+          "trees_migrated": 0
+        },
+        "changes": [
+          {
+            "action": "retired",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W44/OP-202610-W44-001.json",
+            "week": "W44"
+          },
+          {
+            "action": "migrated",
+            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W45/OP-202611-W45-001.json",
+            "trees": 0
+          }
+        ],
+        "errors": [],
+        "check_time": "2026-11-01T15:50:04.503256+00:00"
+      }
+    },
+    {
+      "step": "carry_over",
+      "result": {
+        "status": "written",
+        "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W45/OP-202611-W45-001.unresolved-items.md"
+      }
+    },
+    {
+      "step": "validate",
+      "result": {
+        "status": "pass",
+        "summary": {
+          "valid": true,
+          "total_checks": 16,
+          "errors": 0
+        },
+        "changes": [],
+        "errors": [],
+        "check_time": "2026-11-01T15:50:04.514629+00:00"
+      }
+    },
+    {
+      "step": "agent_close",
+      "result": {
+        "status": "pass",
+        "from_week": "W44",
+        "to_week": "W45",
+        "checks": {
+          "new_index_active": true,
+          "unresolved_items_present": true
+        },
+        "escalation_8w": [],
+        "errors": []
+      }
+    }
+  ],
+  "escalation_8w": [],
+  "check_time": "2026-11-01T15:50:04.519443+00:00"
+}
