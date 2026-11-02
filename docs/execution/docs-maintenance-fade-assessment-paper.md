@@ -17,7 +17,7 @@
 
 - 协议正身：`TriCompany/docs/engineering/fade-protocol-spec.md` v2.0.5（3945fd3）＋试卷模板 v1.1.0＋先例卷 `docs/execution/fade-007-assessment-paper.md`
 - 机制资产：`doc-graph-scan.py`＋`docs/doc-graph.json`＋`--who-cites` CLI（基线读数=333 节点/679 边/77 external）
-- 规则面：§3.4.1 标准文档头四层（层三变更记录红线/层四关联面 dependsOn+consumers+反向索引）
+- 规则面：`TriMetaverse/docs/文档治理与真源文件系统.md` §3.4.1 标准文档头四层（层三变更记录红线/层四关联面 dependsOn+consumers+反向索引）
 - 判据面：`TriCompany/docs/workflow/code-review-standards.md`（R1.1/R1.2/R1.3 案源即本机制事故族，D-65 锚）
 - 治理定调：实例复用现役岗、**归口=CAO**（CEO 五决决 1，2026-11-02；专岗再议候运行观察）
 
