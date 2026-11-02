@@ -4,12 +4,13 @@
 
 - sourceOfTruth: 本件（TriMetaverse/docs/execution/docs-maintenance-fade-assessment-paper.md）
 - syncMode: source-only
-- lastSyncedAt: 2026-11-02T21:53:48+08:00（date 现查原值）
+- lastSyncedAt: 2026-11-02T22:28:31+08:00（date 现查原值；修订随行）
 - 状态: **未冻结草稿·候 CEO 审题**——考题经 CEO 审核后方可用于首 run（CEO 五决 2026-11-02 决 2）；冻结时点=首 run 的 Plan 时点（spec §2.6 v2.0.3 立法），冻结程序见 §四
 - 出卷令源: CEO 五决 2026-11-02（决 1 归口 CAO·决 2 CAO 出卷·决 4 阈值自声明），BOD 流转信 2026-11-02 21:47 达本席
 - 出卷准绳: `TriCompany/docs/engineering/fade-protocol-spec.md` **v2.0.5** §2.6「设计思路」段+出卷方法指引（TC 3945fd3）——考题=测试集→答卷=证据集→得分=评分 JSON，三件套同构大模型评测打榜
 - 格式参照: fade-assessment-paper-template.md v1.1.0＋FADE-007 试卷（E-3 卷形）
 - 实例背景: `docs/workflow/operating-records/2026-W45/trees/file-family-maintenance/draft-ceo-bod-session-20261102.md` §八（十段映射正身）
+- 修订记录: 2026-11-02——①§1.1 规则面补全路径（CEO 审题意见·BOD 代勘 7aed547e1）；②本席随勘增补 **Plan 段协同作业口径**（CEO 口审定调同日·见 §1.3/§五，首 run 选型 a 同令定谳）
 
 ## 一、固定部分（冻结对象）
 
@@ -48,7 +49,7 @@
 
 ### 1.3 治理对齐项（Score Skill 必查维度）
 
-- **职责范围**：实例产出与最新治理定调一致——归口 CAO、知会按文档 owner 席路由；触 CEO 保留权域（组织架构/授权矩阵/排窗）升级不代裁。
+- **职责范围**：实例产出与最新治理定调一致——归口 CAO、知会按文档 owner 席路由；触 CEO 保留权域（组织架构/授权矩阵/排窗）升级不代裁。**Plan 段协同作业口径（CEO 口审 2026-11-02）**：发起/负责/收口本 FADE 的 agent=CAO，但任务书与 COS 协同铸、拆树与 COO 协同定（接 FADE-008 现役分工正形：COS 备料铸条主负责·COO 总调度拆树复核）——用公司资源不单打独斗。
 - **无模板误植**：评分证据不含他实例卷形/他域条款混入（防跨角色内容串写）。
 - **绑定事实**：段-实现映射表（§五基稿）与实跑载体一致——防「评分查存在性、不查与治理事实对齐」。
 
@@ -90,7 +91,7 @@
 | ①触发 | doc-graph-scan.py 差异读数（文件修改扫描触发源；定时巡检链候 daemon 挂靠——§八 CEO 四点指示 3，任务书面候批不入本卷） |
 | ②登记 | run 等价聚合键=扫描日期+变更文件集哈希；周平面登记行+TriMLC job 锚 |
 | ③Qualify | 机械门：影响面非空+原材料可读+边界明/验收锚齐/无需 CEO 逐条拍板 |
-| ④Plan | 域 owner agent：树分解（每受影响文件=节点）+三件冻结（原材料卷封/语义作业方案卷封/试卷） |
+| ④Plan | 域 owner agent=CAO（协同口径：任务书 COS 协铸+拆树 COO 协定·CEO 口审 2026-11-02）：树分解（每受影响文件=节点）+三件冻结（原材料卷封/语义作业方案卷封/试卷） |
 | ⑤DCE | CLI 机械更新（relatedRefs/反向索引/元信息头）；agent 会话承载走载体降级合同（细则 4） |
 | ⑥Verify | 图谱校验器（引用存在性/格式/一致性·exit code） |
 | ⑦Score CLI | 本卷覆盖检查（omission） |
