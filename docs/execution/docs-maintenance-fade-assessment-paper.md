@@ -4,13 +4,13 @@
 
 - sourceOfTruth: 本件（TriMetaverse/docs/execution/docs-maintenance-fade-assessment-paper.md）
 - syncMode: source-only
-- lastSyncedAt: 2026-11-02T22:35:24+08:00（date 现查原值；修订随行）
+- lastSyncedAt: 2026-11-02T22:49:12+08:00（date 现查原值；修订随行）
 - 状态: **未冻结草稿·候 CEO 审题**——考题经 CEO 审核后方可用于首 run（CEO 五决 2026-11-02 决 2）；冻结时点=首 run 的 Plan 时点（spec §2.6 v2.0.3 立法），冻结程序见 §四
 - 出卷令源: CEO 五决 2026-11-02（决 1 归口 CAO·决 2 CAO 出卷·决 4 阈值自声明），BOD 流转信 2026-11-02 21:47 达本席
 - 出卷准绳: `TriCompany/docs/engineering/fade-protocol-spec.md` **v2.0.6** 现行——§2.6「设计思路」段+出卷方法指引（3945fd3）＋§2.8 Plan 协同作业规则（c5a392f）——考题=测试集→答卷=证据集→得分=评分 JSON，三件套同构大模型评测打榜
 - 格式参照: fade-assessment-paper-template.md v1.1.0＋FADE-007 试卷（E-3 卷形）
 - 实例背景: `docs/workflow/operating-records/2026-W45/trees/file-family-maintenance/draft-ceo-bod-session-20261102.md` §八（十段映射正身）
-- 修订记录: 2026-11-02——①§1.1 规则面补全路径（CEO 审题意见·BOD 代勘 7aed547e1）；②本席随勘增补 **Plan 段协同作业口径**（CEO 口审定调同日·见 §1.3/§五，首 run 选型 a 同令定谳）；③协议对表 v2.0.5→**v2.0.6**（c5a392f §2.8 Plan 协同作业规则立法·本卷口径通用化正身）＋T14 增补「Plan 协同作业对表」判据（随案增补·尺=v2.0.6）
+- 修订记录: 2026-11-02——①§1.1 规则面补全路径（CEO 审题意见·BOD 代勘 7aed547e1）；②本席随勘增补 **Plan 段协同作业口径**（CEO 口审定调同日·见 §1.3/§五，首 run 选型 a 同令定谳）；③协议对表 v2.0.5→**v2.0.6**（c5a392f §2.8 Plan 协同作业规则立法·本卷口径通用化正身）＋T14 增补「Plan 协同作业对表」判据（随案增补·尺=v2.0.6）；④判据法源迁移随勘（CEO 口审令·域错位勘正）——判据面正身改锚《文档治理与真源文件系统.md》§3.4.2（G1–G3），旧位 R1.1–R1.3 转指针（卷内三处随改）
 
 ## 一、固定部分（冻结对象）
 
@@ -19,7 +19,7 @@
 - 协议正身：`TriCompany/docs/engineering/fade-protocol-spec.md` v2.0.6（3945fd3→c5a392f）＋试卷模板 v1.1.0＋先例卷 `docs/execution/fade-007-assessment-paper.md`
 - 机制资产：`doc-graph-scan.py`＋`docs/doc-graph.json`＋`--who-cites` CLI（基线读数=333 节点/679 边/77 external）
 - 规则面：`TriMetaverse/docs/文档治理与真源文件系统.md` §3.4.1 标准文档头四层（层三变更记录红线/层四关联面 dependsOn+consumers+反向索引）
-- 判据面：`TriCompany/docs/workflow/code-review-standards.md`（R1.1/R1.2/R1.3 案源即本机制事故族，D-65 锚）
+- 判据面（正身）：`TriMetaverse/docs/文档治理与真源文件系统.md` **§3.4.2 文档变更判据**（G1–G3·2026-11-02 自旧位迁入）；旧位=`TriCompany/docs/workflow/code-review-standards.md` R1.1–R1.3（原位指针+代码评审域应用场景）——案源=doc-graph-scan 事故族（2026-10-25），D-65 锚接得上（R1.x 原位在·四族十三条结构不变）
 - 治理定调：实例复用现役岗、**归口=CAO**（CEO 五决决 1，2026-11-02；专岗再议候运行观察）
 
 ### 1.2 检查项与权重（合计 100）
@@ -61,7 +61,7 @@
 
 ### 1.5 实时部分（Plan Skill 实例化·随 Plan 落盘）
 
-- **彩排 run**（首 run 选型 a 若采）：构造变更集须含边界三探针——中文路径件/越界归一（`../` 前缀）件/同名兜底件（R1.1/R1.2/R1.3 案源族回打），否则风险项覆盖停留纸面；写入面隔离（副本仓或 dry-run＋真写小样本），跑毕以真实 re-scan 对冲图谱真身，防彩排残留污染现役。
+- **彩排 run**（首 run 选型 a 若采）：构造变更集须含边界三探针——中文路径件/越界归一（`../` 前缀）件/同名兜底件（§3.4.2 G1–G3 判据回打·案源族=R1.1–R1.3），否则风险项覆盖停留纸面；写入面隔离（副本仓或 dry-run＋真写小样本），跑毕以真实 re-scan 对冲图谱真身，防彩排残留污染现役。
 - **真实变更 run**：T10 知会清单按实际变更集×图谱反查实例化；T4 三件卷封按当次变更内容封存；余项照固定部分执行。
 
 ## 二、证据注记（**非冻结文本**——时变读数只住本节，不入冻结判定）
@@ -103,7 +103,7 @@
 
 - 协议正身：`TriCompany/docs/engineering/fade-protocol-spec.md` v2.0.6（§2.6 设计思路段＋§2.8 Plan 协同作业规则=本卷准绳；§2.4 副作用守卫；§2.5 终态合同；§2.7 节点报告；§2.8 细则 10 接线+实测）
 - 模板与先例：`TriCompany/docs/engineering/fade-assessment-paper-template.md` v1.1.0；`docs/execution/fade-007-assessment-paper.md`（E-3 卷形基准）
-- 机制判据：`TriCompany/docs/workflow/code-review-standards.md` R1.1/R1.2/R1.3（案源=doc-graph-scan 事故族，2026-10-25）
+- 机制判据（正身）：`TriMetaverse/docs/文档治理与真源文件系统.md` §3.4.2 文档变更判据 G1–G3；旧位指针：`TriCompany/docs/workflow/code-review-standards.md` R1.1–R1.3（案源=doc-graph-scan 事故族，2026-10-25）
 - 背景卷：`docs/workflow/operating-records/2026-W45/trees/file-family-maintenance/draft-ceo-bod-session-20261102.md` §八/§九
 
 —— CAO 小行 出卷（2026-11-02·候 CEO 审题）
