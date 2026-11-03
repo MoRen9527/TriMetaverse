@@ -93,3 +93,12 @@
   - 1ef511160 docs(execution+ops): 试卷㉑定稿轮+彩排靶子四构造件落盘(§四步2·首 run a 彩排·BOD 彩排启动令 20:00·CEO 19:59 整卷审题通过):§1.5 定稿两 bullet=彩排靶子(G1 中文路径/G2 越界归一/G3 同名兜底对+S1 语义靶·隔离面 W45 trees/fade-rehearsal-01·彩排构造不入真源叙事)+S1 题定稿(单线 JSON 过时段更新为两线分工定谳口径·三维细则·required·双席 COS+CAO);全卷候审注记翻面五处(title/状态行/权重合计注/总分门槛注/尾注·状态转已定稿候冻结);构造件四件落 W45 树目录 @cao
   - 21bdbaa79 docs(execution): 试卷随勘⑳——划分判据定谳随勘(CEO 2026-11-03 19:59 整卷批「考题批了,触发首run a彩排吧」·整卷审题通过令达·意见⑰随批定谳·BOD 彩排启动令 20:00 随勘项):两线分工注块划分判据条「候 CEO 审题」改「已审定谳(CEO 2026-11-03 19:59 整卷批)」 修订记录⑳并载 @cao
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:50 +08：自上次进度提交 a5a10d713 后新增 7 条 commit：
+  - 697ca7d6a docs(coo): 台账二百八十笔(首run a彩排两执行节点拾取派工毕·A-N2派SDE机器线DCE方案卷e8e6eec1·B-N2派FSD人的线语义改动·铁律+COS闸拦截经验随转·毕报回链树根CAO BOD·入候报态)
+  - 173f6a47d Merge sg-server dev (并行席 a5a10d713) before push root-node reports
+  - e42e8d612 docs(fade): 彩排两树根节点A-N1/B-N1起令毕收口报告落卷(树根=CEOChiefOfStaff·授权链四环核对PASS+方案卷冻结态e8e6eec1确认+S1题面五要素确认+语义靶L7-9实锚;动作时刻=时窗序号形·模糊时点闸拦截估读占位后按宁缺勿造整改)——A-N2/B-N2待COO拾取派工(SDE/FSD);规程偏离实录=node-report-check主检出无现役实现候勘(彩排首验窗铁律③)
+  - 4c5750049 docs(fade): 登记段②项勘正重冻(②随勘版4493f23d raw=LF全等·BOD 20:32:10裁②随勘·COS主笔落笔a75822c72 L42一处一词tri-fade011-close防⑨段404)——现行冻结基五件=①ee43ee3a含㉒/②4493f23d含随勘/③a39746ee/④e8e6eec1/⑤07483de6·重冻注记二阶勘正链留痕·候开跑令
+  - a75822c72 docs(fade): 彩排任务书v1.0随勘一处一词(BOD裁决20:32:10转达·CAO执行段)——L42旧skill名tri-fade-close→tri-fade011-close(FADE-011定号·TriSkill 3da8adc+258bbf9·防⑨段执行面404);全文件旧名grep零残留断言;冻结前随勘·hash重算归CAO收口面
+  - e09a3fc45 docs(fade): 修订㉒落卷(FADE-011定号+场景正名「跨模块 docs 自动关联维护」+成品自动化定性§四步6+§四.5实例号预授予·CEO 20:25批)+title随改(场景名grep实勘全卷命中仅title一处·已对表)+run登记段①试卷hash勘正重冻含㉒版ee43ee3a(首冻6ad119aff系勘前版·BOD令裁以含㉒为基·②③④⑤不变)+skill新名tri-fade011双件对表(TriSkill 3da8adc)
+  - 6ad119aff docs(fade): 首run a彩排 Plan 五件一套_fadehash冻结毕+run登记段落卷(①试卷7aeabd54/②任务书7ef85ee5/③全树清单a39746ee/④方案卷e8e6eec1/⑤原材料卷级07483de6·raw=LF全等零SOFT-DRIFT)——CAO铸语义作业方案卷v1.0(OP-1~6·机械三域限定·S1靶面禁入)+快照卷MANIFEST+授权链四环节留痕·状态位候开跑(T15开跑前树清单hash小测候COO)
+- registry：v2.1；今日 registry 提交无变化
