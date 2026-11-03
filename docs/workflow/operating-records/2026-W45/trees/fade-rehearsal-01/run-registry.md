@@ -10,7 +10,7 @@
 - run 聚合键=变更文件集哈希: `281addc20dc08afc338ebfc9e2efe714f0bc315d75a2b5de4fd4d52275e688fb`（排序路径集 sha256·四构造件——T2 主键·唯一/去重/关联/恢复锚四不变量挂此键·⑦窗补铸）
 - 类型: 首次彩排（首 run a·人为构造变更集）
 - 隔离面: 本树目录（四构造件·不触真源 docs）
-- 状态位: **Plan 冻结毕·候开跑**（T4 五件一套冻结 2026-11-03 20:26+08:00·冻结人=CAO 小行）
+- 状态位: **Run 收口毕·Close APPROVED**（T4 五件一套冻结 2026-11-03 20:26+08:00·冻结人=CAO 小行 → ⑨双席终裁 APPROVED 98.5/100 2026-11-03T14:19:19Z → ⑩终态落账见文末审计段）
 
 ## 授权链
 
@@ -53,3 +53,13 @@
 ## 后续段指针
 
 ⑤DCE→⑥Verify→⑦Score CLI→⑧Score Skill→⑨Close Skill→⑩Close CLI——逐段工件留痕本树目录；节点完成报告照 spec §2.7 十字段（reports/）；跑毕真实 re-scan 对冲残留；Close 按 tri-fade011-close v1.0 四态裁；fade-registry 入册候 §四.5（实例号预授予 FADE-011·入册时正式补录）。
+
+## Run 终态落账（⑩ Close CLI·审计段）
+
+- schema: tri-fade011-close/v1.0 终态落账载体
+- verdict: **APPROVED**（⑨双席终裁·reports/close-decision-skill.md a13b75429）
+- gate_check: score_total=98.5（T6 保守值 6/7·追认通道候勘窗补机跑→99.5）／threshold=90 ✓／required_all_passed=true ✓／hash_match=true（①②③④卷级+⑤单件逐字现算一致·⑤聚合口径候勘窗勘定注记）
+- 审计时序断言（先裁后写·T9）: 裁决时戳=2026-11-03T14:19:19Z（⑨卷 lastSyncedAt）**<** 终态落账时戳=2026-11-03T14:21:26Z（date -u 现查原值·断言成立）
+- before/after: 状态位 before=「Plan 冻结毕·候开跑」→ after=「Run 收口毕·Close APPROVED」（本文件 L13 行·本段即审计凭据）
+- 落账人: CAO 小行（⑩窗执行席·被裁决 run 的⑦⑨段执行参与面由⑨双席结构对冲）
+- 收口毕报: 22:40 呈 bod（全量读数+五件对卷 hash+总分附锚）
