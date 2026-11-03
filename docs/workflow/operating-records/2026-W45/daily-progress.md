@@ -78,3 +78,10 @@
   - bc4a9d945 docs(execution): 试卷随勘⑯——§1.2 加「两线分工」对称表注(CEO 2026-11-03 16:14 批「好,加吧」·审题意见⑬·源=16:04 DCE 机械三域/树干什么问 BOD 对称表答疑+单线方案对比问 BOD 答两线为优):机器线=DCE 机械三域·方案卷清单·验T5+T4/人的线=树 owner 语义改动·树清单·验T6+S1+T15·⑦⑧批卷汇合;划分判据=精确指令可否无损表达·显式候 CEO 审题;扩集段末 blockquote 三条 BOD 拟直取 修订记录⑯并载 @cao
   - 0beedbb59 docs(execution): 试卷随勘⑮——T4 备注五件括注改造(CEO 2026-11-03 15:42 批「行,补上」·审题意见⑫·审题源=方案卷与任务书是否重复疑问·BOD 答疑=不重复·消费面不同):五件一套概念段各件补「是什么+给谁用」——原材料卷=比对基准/方案卷=DCE 施工图·给 CLI/任务书=派工合同·给 COS/COO/执行席·分工=范围级 vs 实施级/全树清单=T15 底册/试卷=评分标准;文案=BOD 拟直取·候追加不扩面(DCE 怎么消费方案卷答疑中) 修订记录⑮并载 @cao
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:10 +08：自上次进度提交 b2606b489 后新增 5 条 commit：
+  - bf0ab203a merge: 收编并行笔（值席落盘防覆盖）
+  - 8e5476ebb docs(coo): 台账二百七十八笔(首run a彩排知会收记·CEO 19:59批·彩排启动令派CAO牵头§四冻结程序·候CAO拉起拆树接令施工·靶子人为构造docs维护变更)
+  - b9a9fde47 docs(execution): 试卷随勘⑲——T9 行补「Close Skill 终裁规程 skill 化」句(CEO 2026-11-03 19:41 批「点头」·审题意见⑯·审题源=Close Skill 也应落 TriSkill 问·BOD 实勘 spec L90 三 Skill 同族/L175 四态/L158 不得覆盖 CLI 证据):检查项列尾补铸 v1.0 句(四态判据+证据引用+不得覆盖 CLI 证据红线+四态 schema·落 TriSkill/skills/·彩排即首验)·落位同⑰轮先例 修订记录⑲并载 @cao
+  - 419a74f1d docs(execution): 试卷随勘⑱——T8 备注补「评分合同」白话解释(CEO 2026-11-03 19:33 批「行,补上」·审题意见⑮·审题源=schema 对照什么意思问·BOD 实勘 spec §2.6 答疑=出分单格式合同·成绩单类比):schema 对照句后紧接补评分合同白话句(每项 item/score/max/evidence_ref/omission+总分·§2.6 定死·打分方被验方都认)·BOD 拟直取 修订记录⑱并载 @cao
+  - ce47828d0 docs(execution): 试卷随勘⑰——T8/S1 行补「评分规程 skill 化」句(CEO 2026-11-03 19:14 批「行,补上」·审题意见⑭·审题源=Score Skill 是否写专门 skill 放 TriSkill 问·BOD 答=要·TriSkill 独立仓 tri- 前缀·三收益=口径一处维护/版本可溯/规程成工件):T8 补 TriSkill 承载正名句·S1 补首 run a 彩排 Plan 时点前铸 v1.0 时点句(落 TriSkill/skills/·彩排即首验);落位=检查项列尾保备注列三段形;铸造归属席候审不写死 修订记录⑰并载 @cao
+- registry：v2.1；今日 registry 提交无变化
