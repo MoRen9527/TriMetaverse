@@ -102,3 +102,7 @@
   - e09a3fc45 docs(fade): 修订㉒落卷(FADE-011定号+场景正名「跨模块 docs 自动关联维护」+成品自动化定性§四步6+§四.5实例号预授予·CEO 20:25批)+title随改(场景名grep实勘全卷命中仅title一处·已对表)+run登记段①试卷hash勘正重冻含㉒版ee43ee3a(首冻6ad119aff系勘前版·BOD令裁以含㉒为基·②③④⑤不变)+skill新名tri-fade011双件对表(TriSkill 3da8adc)
   - 6ad119aff docs(fade): 首run a彩排 Plan 五件一套_fadehash冻结毕+run登记段落卷(①试卷7aeabd54/②任务书7ef85ee5/③全树清单a39746ee/④方案卷e8e6eec1/⑤原材料卷级07483de6·raw=LF全等零SOFT-DRIFT)——CAO铸语义作业方案卷v1.0(OP-1~6·机械三域限定·S1靶面禁入)+快照卷MANIFEST+授权链四环节留痕·状态位候开跑(T15开跑前树清单hash小测候COO)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:00 +08：自上次进度提交 b359431f8 后新增 2 条 commit：
+  - ec7e00fac Merge sg-server dev (并行席 b359431f8 daily-progress-watcher 巡检补写) before push A-N2 closeout
+  - 338938dc6 docs(fade): 彩排A-N2执行节点毕收口报告落卷(DCE六OP机械三域执行毕·四构造件逐字对表expect·自检三断言绿·真实re-scan RC=0 files=334·G1/G2/G3对冲+隔离面残留双断言全绿·⑧⑨段skill双缺位首验实录候勘·S1靶段零触碰·断点交接A-N3+B-N2串行化窗口序注记)
+- registry：v2.1；今日 registry 提交无变化
