@@ -39,4 +39,4 @@
 
 - 试卷定稿卷（TMV 1ef511160）全部检查项（T1–T15＋S1 全过·任一项 0 分即不过；总分 ≥90）。
 - **S1 评分执行面**：评分=COS+CAO **双席**（出卷人 CAO 自证风险由 COS 席结构性对冲）；评分时点=**Close Skill 前**；required=true（未作答 omission=0 分计入全过判定）；三维细则随卷冻结（试卷 §1.5）。
-- 逐段工件留痕本树目录；Close 按 tri-fade-close v1.0 四态裁。
+- 逐段工件留痕本树目录；Close 按 tri-fade011-close v1.0 四态裁。
