@@ -46,4 +46,10 @@ print(hashlib.sha256(canon.encode('utf-8')).hexdigest())
 
 ## 销项
 
-勘窗件⑤毕——本卷+run-registry 勘注落卷即勘定件·候 BOD 裁确认（随令一毕报呈报）。令一四件半**全毕**。
+勘窗件⑤毕——本卷+run-registry 勘注落卷即勘定件·令一四件半**全毕**。
+
+## BOD 裁决注记（2026-11-03 23:05:38·裁毕即生效·事后呈报 CEO 知情）
+
+- 裁决=**准**：卷级聚合口径采认 run-root.py Merkle canonical（`path\0raw\0lf` 串接 sha256·_fadehash 正身同源）·现行基线=`ee88ad34aa4d0ce8fda71592dde42bfda3bc1699fab851cd9a4b0b2a46d54794`（替代佚失值 07483de6·佚失值留档作历史锚注记不变）。
+- 裁决依据锚：①五锚 git 现读全实（0a7fe8a/ff885fe=TriCompany·442ff150f/052c9e5fe/2572c1abd=TMV·时序 22:33→23:01 顺锚）；②佚失定谳证据链读卷（41 处转引零获+250+变体两席交叉+单件五读数集合一致=输入面无争议）；③BOD 本席照存卷原命令（本卷 L19-35·_fadehash.dual_sha256 正身）独立复算=ee88ad34…**逐字 MATCH**。
+- 令一六件至此全毕（CTO ④两件 COS 22:58 汇总·T6 追认 99.5 联动读数在卷）——勘窗收工。
