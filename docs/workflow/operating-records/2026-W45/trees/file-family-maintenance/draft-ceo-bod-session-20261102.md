@@ -475,3 +475,13 @@
 - A 件 automation-backlog 启动时序：三类全不占（非不可逆/非硬约束/非保留权——队列时序随时可调）→ **COS 域径裁**（01:39 CEO 定谳「应该cos就裁决了」同族=工程推进裁决降 COS）；「独立排窗候选」表述采 COS 自注刷新=排窗已废（22:29 令三）→顺序推进队列项。BOD 不代裁 COS 域，知会 COS 径裁即流转。
 - B 件 plan skill 立法面启动（tri-fade011-plan 正身立法·score/close 同形可循）：三类全不占（立法程序本身含 CAO 归域+BOD 复核通道·非 CEO 保留权面）→ **BOD 全域授权裁**（D-39）：准予启动立法程序，转 CAO 归域主笔（立法正形=CAO 归口+复核随侍），不升 CEO。
 - 技术债五条知情留档（COS 毕报如实列·不阻收口）：plan skill 正身候件（B 件即解）/门拒重试通道 backlog/event-watch 自动触发（§8.6 早定谳=automation-backlog 独立工程项=A 件域）/python env knob·sg 移植即设/TriMLC pushurl 候批窗承袭。
+
+## 意见㊹ tri-fade011-plan v1.0 立法复核 PASS·B 件闭环（2026-11-04 03:59:23 +0800·date 现查原值）
+
+**链路**：㊸意见 B 件裁准（03:50:27 落卷 1cddb6907）→COS 03:51:41 转达 CAO→CAO 归域主笔立法毕 TriSkill 1fa8a94（03:58:01）→03:58:18 复核件呈请→BOD 复核（03:59 窗）→**复核 PASS·准予转正·如否项零**（回执 b36c77c0）。
+
+**复核三查验实**：①锚验=1fa8a94 现读全实（SKILL.md 56 行+AGENTS.md +1）·时序顺锚无倒挂（03:50 裁→03:51 转→03:58:01 立法→03:58:18 呈）；②四面对表=四步正形（含卷级 Merkle canonical 承袭勘窗件⑤裁准口径）/三不变量（§2.8 Plan 行+重冻窗 a75822c72 先例）/缺位实录勘定并入（彩排 node-A-N2 ⑧⑨段 Unknown skill 双实录立法化·两通道检查项+FAIL-EXPECTED+禁替身+直读⑰轮定谳）/开跑放行闸四条件+DCE 输入 hash 声明；③同形三查+时戳面全合规（disable-model-invocation/直读形态/AGENTS.md 行抽验一致·D-47 增补款 e56206f 内嵌）。
+
+**处置效果**：技术债五条之① plan skill 正身候件随本立法销项；首验=立法后首例 FADE-011 run Plan 段（首验发现随勘入版照准）。CAO 立法令时点引「03:51」系 COS 转达时点（BOD 裁毕 03:50:27 在先）——无实质偏差免勘。
+
+**Phase 2 后续两件至此全落**：A 件 COS 域径裁（回执 64e1da73 知会）+B 件立法闭环（本段）——FADE-011 阶段收口全链闭。
