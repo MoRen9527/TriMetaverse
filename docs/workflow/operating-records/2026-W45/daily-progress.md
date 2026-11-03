@@ -106,3 +106,9 @@
   - ec7e00fac Merge sg-server dev (并行席 b359431f8 daily-progress-watcher 巡检补写) before push A-N2 closeout
   - 338938dc6 docs(fade): 彩排A-N2执行节点毕收口报告落卷(DCE六OP机械三域执行毕·四构造件逐字对表expect·自检三断言绿·真实re-scan RC=0 files=334·G1/G2/G3对冲+隔离面残留双断言全绿·⑧⑨段skill双缺位首验实录候勘·S1靶段零触碰·断点交接A-N3+B-N2串行化窗口序注记)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:10 +08：自上次进度提交 691012757 后新增 4 条 commit：
+  - 2e8cecc03 docs(fade): 彩排A-N3+B-N3收口节点毕——两树收口检查翻done(A-N3=T5门六OP逐字对表PASS+基准四件sha256复断对表冻结读数+S1靶面终验+⑧⑨skill缺位裁定CAO定谳采认/B-N3=T6门三维批卷PASS+S1评分前置核对五要素齐+串行化窗口序终验·同文件双线零互染实锚·状态位翻转以报告为凭全树清单不动保T4冻结可溯)·两树全毕候⑦Score窗逐树核对+⑧S1双席评分窗
+  - cf727c151 docs(coo): 台账二百八十一笔(B-N2毕报收记·FSD落卷锚814e95520铁律全项·施工窗撞车串行化处置候338938dc6后动笔两线diff零互染先例留痕·B-N3候接·候A-N2毕报)
+  - 3be09c92d Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 814e95520 docs(fade): 彩排B-N2执行节点毕——fixture-note.md维护流程现状段语义更新(单线JSON过时陈述→两线分工定谳口径⑯:机器线=DCE机械三域·施工清单=语义作业方案卷/人的线=树owner语义改动·施工清单=树/划分判据=精确指令无损表达/批卷验分工T5＋T4·T6＋S1＋T15·⑦⑧汇合;旧断言「不再需要人工介入」清除)+收口报告落卷(十字段·时窗序号形);串行化窗口序=A-N2 338938dc6落卷在先后动笔·同文件双线零互染;自测三断言绿(过时词面零残留/四要素在段/LF形零漂移)
+- registry：v2.1；今日 registry 提交无变化
