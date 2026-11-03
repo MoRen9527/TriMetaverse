@@ -25,13 +25,13 @@
 | 件 | 路径（仓相对） | raw sha256 | LF sha256 |
 | --- | --- | --- | --- |
 | ① 试卷（定稿卷·含㉒版） | `docs/execution/docs-maintenance-fade-assessment-paper.md` | `ee43ee3ab4c5058b30799fce4632f1739e25e4c4b95198b808e09da5d6642d28` | 同 raw |
-| ② 任务书 v1.0 | `…/fade-rehearsal-01/task-charter-v1.0.md` | `7ef85ee58c944ec2e2eea4d8df877e645079e267e98f67597896df981328d9e7` | 同 raw |
+| ② 任务书 v1.0（含随勘） | `…/fade-rehearsal-01/task-charter-v1.0.md` | `4493f23d51e0f20e25489d09c8f4f03ec7f2e75ecb2e633f42e5d8bb58375887` | 同 raw |
 | ③ 全树清单 v1.0 | `…/fade-rehearsal-01/full-tree-list-v1.0.md` | `a39746eea697c546e879d19faeb234c35322a60f7bbeeaa547d360685d0284bb` | 同 raw |
 | ④ 语义作业方案卷 v1.0 | `…/fade-rehearsal-01/semantic-work-plan-v1.0.json` | `e8e6eec1c03b6af6d8bfcd725c434e66d9e7678c7d61a5fb08204adafcada5cd` | 同 raw |
 | ⑤ 原材料卷（快照·卷级） | `…/fade-rehearsal-01/raw-materials-snapshot/` | `07483de645f7a3d542abeab0c05fd323a7b4714454fe4164cfb006e7fb093b6f`（卷级=卷内五文件按路径序 LF 拼接） | — |
 
 - ⑤ 卷内单件读数（备 Verify 逐件对表）：构造件-中文路径探针.md `71043255093954beb4d3781b65b25fad04ae6d515881733c69b94b78849f22fb` / fixture-outbound-probe.md `b8c98f0f0d9d349ba1f8266a8b1d55113b7d33aecbdb832df3721205e3838053` / fixture-note.md `92fc4bd369506f00ee525adb3269e2e20eaa373a916ac7b4be73aedc95c05374` / nested/fixture-note.md `a0ef5f5c9ec0955ac5bdf5e83d90628da85056ca9c872541bcf163061395ef9c` / MANIFEST.md `f57e6fd8fc508822a56b84aea68abeb2898c4039345b20db6ed173fc16e1685c`（均 raw=LF）。
-- **重冻注记**：20:26 首冻（TMV 6ad119aff）①试卷 hash `7aeabd54…` 系勘前版——BOD 补勘令⑱裁「㉒落卷后五件 hash 冻结以含㉒版本为基」，㉒（FADE-011 定号＋skill 改名＋成品自动化定性＋场景正名）落卷后①勘正为 `ee43ee3a…`（本行即现行冻结基）；②③④⑤不载试卷内容不变。冻结语义（spec v2.0.6-verified）：DCE 期间五件不可变；行尾漂移按 SOFT-DRIFT 留痕不按污染裁决；收口对卷=实际用卷 hash=本段冻结 hash。
+- **重冻注记**：20:26 首冻（TMV 6ad119aff）①试卷 hash `7aeabd54…` 系勘前版——BOD 补勘令⑱裁「㉒落卷后五件 hash 冻结以含㉒版本为基」，㉒（FADE-011 定号＋skill 改名＋成品自动化定性＋场景正名）落卷后①勘正为 `ee43ee3a…`（本行即现行冻结基）；③④⑤不载试卷内容不变；**②二次勘正**（BOD 2026-11-03 20:32:10 裁②随勘·COS 主笔落笔 a75822c72——L42 一处一词旧 skill 名 tri-fade-close→tri-fade011-close 防⑨段 404·DCE 未开跑重冻窗正当）：② `7ef85ee5…`→`4493f23d…`（含随勘版·现行冻结基）。冻结语义（spec v2.0.6-verified）：DCE 期间五件不可变；行尾漂移按 SOFT-DRIFT 留痕不按污染裁决；收口对卷=实际用卷 hash=本段冻结 hash。
 
 ## 两规程 skill（彩排即首验）
 
