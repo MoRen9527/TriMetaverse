@@ -11,4 +11,5 @@
 ## 引用面
 
 - 同名对：[上级 fixture-note.md](../fixture-note.md)（S1 语义靶·勿混淆）
+- 反向索引：构造件-中文路径探针.md
 - 归属：彩排树 fade-rehearsal-01（隔离面=W45 树目录·nested 子目录）

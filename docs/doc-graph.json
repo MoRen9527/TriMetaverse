@@ -1,10 +1,10 @@
 {
  "_meta": {
-  "files": 333,
-  "generatedAt": "2026-10-25T23:07:36+08:00",
+  "files": 334,
+  "generatedAt": "2026-11-03T20:49:34+08:00",
   "generatedBy": "scripts/doc-graph-scan.py",
   "lastCommitSource": "ok",
-  "repoHead": "2ddfa8d6b",
+  "repoHead": "697ca7d6a",
   "spec": "docs/文档治理与真源文件系统.md §3.4.1 层四"
  },
  "externalRefs": {
@@ -44,6 +44,12 @@
   ],
   "docs/execution/compass-rename-plan.md": [
    "TriCompany-host-assets/host-object-manifest.json"
+  ],
+  "docs/execution/docs-maintenance-fade-assessment-paper.md": [
+   "TriCompany/docs/engineering/fade-assessment-paper-template.md",
+   "TriCompany/docs/engineering/fade-protocol-spec.md",
+   "TriCompany/docs/workflow/code-review-standards.md",
+   "TriCompany/docs/workflow/dynamic-task-tree-protocol.md"
   ],
   "docs/execution/fade-007-incident-sop.md": [
    "TriCompany/docs/engineering/fade-protocol-spec.md",
@@ -369,6 +375,7 @@
    "TriCompany/docs/product/PROJECT.md",
    "TriCompany/docs/registry/company-governance-state.md",
    "TriCompany/docs/registry/product-state.md",
+   "TriCompany/docs/workflow/code-review-standards.md",
    "TriCompany/tricompany.md"
   ],
   "phase-c-pilot-record-2026-02-27.md": [
@@ -499,7 +506,8 @@
     "docs/workflow/prd-branch-minimal-directory-template.md",
     "docs/workflow/project-repo-document-baseline.md",
     "docs/workflow/tricompany-copilot-host-assets-migration-matrix.md",
-    "docs/三元宇宙架构与模块说明.md"
+    "docs/三元宇宙架构与模块说明.md",
+    "docs/文档治理与真源文件系统.md"
    ],
    "cites": [],
    "lastCommit": "59b3e8b11"
@@ -1119,6 +1127,17 @@
    ],
    "lastCommit": "bfd5efb92"
   },
+  "docs/execution/docs-maintenance-fade-assessment-paper.md": {
+   "citedBy": [
+    "docs/文档治理与真源文件系统.md"
+   ],
+   "cites": [
+    "docs/doc-graph.json",
+    "docs/execution/fade-007-assessment-paper.md",
+    "docs/workflow/operating-records/2026-W45/trees/file-family-maintenance/draft-ceo-bod-session-20261102.md"
+   ],
+   "lastCommit": "e09a3fc45"
+  },
   "docs/execution/dprime-tui-acp-architecture-20261020.md": {
    "citedBy": [],
    "cites": [],
@@ -1203,6 +1222,7 @@
   },
   "docs/execution/fade-007-assessment-paper.md": {
    "citedBy": [
+    "docs/execution/docs-maintenance-fade-assessment-paper.md",
     "docs/execution/fade-007-context-reservoir-spec.md"
    ],
    "cites": [
@@ -1220,6 +1240,8 @@
    ],
    "cites": [
     ".claude/agents/ceo-chief-of-staff.md",
+    ".fade/hub-snapshots/board-journal.md",
+    ".fade/hub-snapshots/ledger-mirror.md",
     "CLAUDE.md",
     "docs/execution/fade-007-assessment-paper.md",
     "docs/execution/fade-007-incident-sop.md",
@@ -1233,6 +1255,7 @@
     "docs/execution/fade-007-context-reservoir-spec.md"
    ],
    "cites": [
+    ".fade/hub-snapshots/board-journal.md",
     "CLAUDE.md",
     "docs/execution/fade-007-context-reservoir-spec.md",
     "docs/workflow/session-crash-recovery-spec.md"
@@ -1292,7 +1315,8 @@
     "docs/execution/hermes-gov-p2-cpo-half.md"
    ],
    "cites": [
-    "docs/execution/knowledge-injection-spec.md"
+    "docs/execution/knowledge-injection-spec.md",
+    "reference/hermes-agent/docs/honcho-integration-spec.md"
    ],
    "lastCommit": "9638da454"
   },
@@ -1397,6 +1421,7 @@
    ],
    "cites": [
     ".claude/agents/ceo-chief-of-staff.md",
+    ".fade/hub/analysis/bootstrap-unification/xiaoqiao-content.md",
     "CLAUDE.md"
    ],
    "lastCommit": "17de32181"
@@ -1600,7 +1625,9 @@
    "citedBy": [
     "docs/execution/lg033-cfo-financial-review.md"
    ],
-   "cites": [],
+   "cites": [
+    ".fade/hub/lg033-proposal-source-material.md"
+   ],
    "lastCommit": "3a797c81b"
   },
   "docs/execution/lg033-mface-function-mapping-review.md": {
@@ -1870,6 +1897,8 @@
    ],
    "cites": [
     ".claude/plans/trilc-ime-fix.md",
+    ".claude/settings.local.json",
+    ".fade/hub/wave0-plan.md",
     "CLAUDE.md"
    ],
    "lastCommit": "92209296a"
@@ -3379,8 +3408,10 @@
     "docs/workflow/github-repo-governance.md"
    ],
    "cites": [
+    "README.md",
     "docs/README.md",
     "docs/doc-graph.json",
+    "docs/execution/docs-maintenance-fade-assessment-paper.md",
     "docs/execution/weekly-plane-charter-tree-redesign-20261023.md",
     "docs/github-repo-governance.md",
     "docs/project.md",

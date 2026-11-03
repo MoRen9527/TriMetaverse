@@ -10,6 +10,6 @@
 
 ## 引用面
 
-- 越界引用（探针用）：[上一周树目录](../file-family-maintenance/draft-ceo-bod-session-20261102.md)
+- 越界引用（探针用）：[上一周树目录](docs/workflow/operating-records/2026-W44/trees/file-family-maintenance/draft-ceo-bod-session-20261102.md)（越界探针引用·归一化登记·不挂图谱真身）
 - 域内引用：[fixture-note.md](fixture-note.md)
 - 归属：彩排树 fade-rehearsal-01（隔离面=W45 树目录）

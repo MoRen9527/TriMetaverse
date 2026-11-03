@@ -14,4 +14,5 @@
 
 ## 引用面
 
+- 反向索引：nested/fixture-note.md（同名件·G3 消歧·各自独立登记）
 - 归属：彩排树 fade-rehearsal-01（隔离面=W45 树目录）
