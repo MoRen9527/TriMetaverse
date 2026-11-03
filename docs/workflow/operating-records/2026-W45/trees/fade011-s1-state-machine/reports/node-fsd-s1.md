@@ -58,7 +58,7 @@
 ## 技术债务标记
 
 1. **恢复策略=候批草案非正身**（TriCompany 7ea31f3 候批注在案）：批认前不具正身法条效力·S2 实现以草案为唯一依据——偿还计划=候 CTO spec 修订批程批认（S2 动工前催办一次）。
-2. **TriMLC 推链未落**（本报告时点）：7e41d01 本地 dev 已锁笔·sg-server 备援推与 github 双 pushurl 候窗（本窗 github 通道已知不稳·非 gate 面）——推毕补读数。
+2. **TriMLC github pushurl 未推**（已收窄）：sg-server 备援推已落并验真（`4be06b3..7e41d01 dev -> dev`·ls-remote 顶=`7e41d010203a`·RC=0）·github 双 pushurl 候批窗（本窗 github 通道已知不稳·非 gate 面·双通道验真纪律候推时执行）。
 3. **store 无内存缓存**（有意设计非债）：读放大换取 mtime 守卫族免疫——S5 联调若读频成为瓶颈再议（预判不成立：run 频率远低于 cron tick）。
 4. **advanceRun 逐调用 prepare**（微债）：语句柄未复用（除固定三条）——Phase 2 单 run 通量下零影响·Phase 6 生产加固候勘（蓝图出窗面·不入本窗）。
 
