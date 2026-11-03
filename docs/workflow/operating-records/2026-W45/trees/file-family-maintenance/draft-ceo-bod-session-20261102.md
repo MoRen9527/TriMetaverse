@@ -487,3 +487,5 @@
 **Phase 2 后续两件至此全落**：A 件 COS 域径裁（回执 64e1da73 知会）+B 件立法闭环（本段）——FADE-011 阶段收口全链闭。
 
 **追记（04:0x）**：CAO 03:59:44 收工回执——复核裁语留痕毕（TriSkill a9e6852·零条款变更纯事实笔·时点勘定 03:50:27=1cddb6907 并注），B 件程序线（BOD 授权裁→COS 派工→CAO 主笔→BOD 复核转正）全链闭环确认，收工。
+
+**追记（04:0x·BOD 内务）**：BOD 卷 §八十八 落卷（163bf6001·窗级纪要+底稿指针）；session-only cron 双 job 重挂毕（compaction 分裂后 CronList 空=掉挂发现·照 onboard-work-registry §五规格表重挂：节拍转报 e4c5f9a5 `9,39 * * * *`+信箱兜底巡检 d2562ddd `11,41 * * * *`·CronList 值面三查过 next_run=04:22/04:23·首触发证据候首拍）；daemon 版 tick 节律独立健康（03:37 拍·30min 节·与 session-only 分野不混判）。
