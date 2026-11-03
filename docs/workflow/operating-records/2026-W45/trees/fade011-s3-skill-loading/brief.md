@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本 brief（树内派工正身·施工读数归节点报告 node-fsd-s3.md）
 - syncMode: write-time（D-15 分派面·FSD 接令回执后施工）
-- lastSyncedAt: 2026-11-04T02:52:00+0800（date 现查原值·02:52 轮）
+- lastSyncedAt: 卷面时点锚=git commit 时戳（**458a302e6**=2026-11-04T02:47:54+08:00·零手打·D-47 卷面正形）——勘正注：原手写「02:52:00」系写盘时粘环预估误填（真值倒挂铁证=commit 时戳 02:47:54 早于卷面值 4 分钟·FSD 回执侧 D-47 闸拦截实录见 dispatch-intake.jsonl 02:49:05 行）·2026-11-04T02:50 轮 CTO 自领勘正·自领后本席立铁则：**卷面时戳禁手写·一律 commit 时戳代**（信面闸抓不住 Edit/Write 卷面时戳=gate 盲区·条款化候 CAO 面 D-47 增补·owner 评估=CTO 自任）
 - 派工席: CTO 小狄（D-15 分派枢纽）
 - 施工席: FSD（S1+S2 交付件为基座·接令回执→施工→节点收口）
 - 令源: 排期单 cd1a13f6c 生效（COS 裁②·S1-S5 工序序顺序推进）+ S2 gate 过本席验收 APPROVE（抽验三绿·fade011-s2-recovery/dispatch-intake.jsonl 02:52:00 行）
