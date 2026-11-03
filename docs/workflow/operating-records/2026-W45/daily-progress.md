@@ -85,3 +85,11 @@
   - 419a74f1d docs(execution): 试卷随勘⑱——T8 备注补「评分合同」白话解释(CEO 2026-11-03 19:33 批「行,补上」·审题意见⑮·审题源=schema 对照什么意思问·BOD 实勘 spec §2.6 答疑=出分单格式合同·成绩单类比):schema 对照句后紧接补评分合同白话句(每项 item/score/max/evidence_ref/omission+总分·§2.6 定死·打分方被验方都认)·BOD 拟直取 修订记录⑱并载 @cao
   - ce47828d0 docs(execution): 试卷随勘⑰——T8/S1 行补「评分规程 skill 化」句(CEO 2026-11-03 19:14 批「行,补上」·审题意见⑭·审题源=Score Skill 是否写专门 skill 放 TriSkill 问·BOD 答=要·TriSkill 独立仓 tri- 前缀·三收益=口径一处维护/版本可溯/规程成工件):T8 补 TriSkill 承载正名句·S1 补首 run a 彩排 Plan 时点前铸 v1.0 时点句(落 TriSkill/skills/·彩排即首验);落位=检查项列尾保备注列三段形;铸造归属席候审不写死 修订记录⑰并载 @cao
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @20:20 +08：自上次进度提交 f3f7d520f 后新增 6 条 commit：
+  - 87e0deda1 docs(coo): 首run a彩排全树清单v1.0铸毕+台账二百七十九笔(两棵树·机器线owner=SDE人的线owner=FSD避评分席·节点链COS根起owner执行COS收尾·状态位pending·候CAO五件hash冻结)
+  - be3690f52 Merge sg-server dev (并行席 f3f7d520f) into dev before push task-charter-v1.0
+  - 043cd1e0a docs(fade): 首run a彩排任务书v1.0 COS协铸定稿(spec§2.8协同正形·CAO拉起令20:09:30)——v0.9→v1.0协铸增量四点(①十段枚举自含②授权锚行=CEO 19:59批令+BOD 20:00启动令流转链③S1评分执行面=COS+CAO双席·Close Skill前·required④T15两时点=开跑前hash断言小测+⑦收口核对);对表试卷定稿卷1ef511160零漂移承袭+版本留痕行;候CAO收口随Plan同窗_fadehash双hash冻结(T4门五件一套)
+  - 60d6d654f docs(ops): 彩排始链三前置件落盘(首 run a·§四步2 定稿随件·隔离面 W45 trees/fade-rehearsal-01):pre-task-brief(触发源=BOD 彩排启动令 20:00·目标=十段全流程·验收=试卷定稿卷 1ef511160)+qualify-impact-list(四构造件影响面表·三探针 G1-G3+S1 语义靶·Qualify 过门结论)+task-charter-draft-v0.9(候 COS 协铸转正·始链上游两件回指·两线分工范围·拆树要求给 COO·冻结五件一套)·均彩排构造随身 @cao
+  - 1ef511160 docs(execution+ops): 试卷㉑定稿轮+彩排靶子四构造件落盘(§四步2·首 run a 彩排·BOD 彩排启动令 20:00·CEO 19:59 整卷审题通过):§1.5 定稿两 bullet=彩排靶子(G1 中文路径/G2 越界归一/G3 同名兜底对+S1 语义靶·隔离面 W45 trees/fade-rehearsal-01·彩排构造不入真源叙事)+S1 题定稿(单线 JSON 过时段更新为两线分工定谳口径·三维细则·required·双席 COS+CAO);全卷候审注记翻面五处(title/状态行/权重合计注/总分门槛注/尾注·状态转已定稿候冻结);构造件四件落 W45 树目录 @cao
+  - 21bdbaa79 docs(execution): 试卷随勘⑳——划分判据定谳随勘(CEO 2026-11-03 19:59 整卷批「考题批了,触发首run a彩排吧」·整卷审题通过令达·意见⑰随批定谳·BOD 彩排启动令 20:00 随勘项):两线分工注块划分判据条「候 CEO 审题」改「已审定谳(CEO 2026-11-03 19:59 整卷批)」 修订记录⑳并载 @cao
+- registry：v2.1；今日 registry 提交无变化
