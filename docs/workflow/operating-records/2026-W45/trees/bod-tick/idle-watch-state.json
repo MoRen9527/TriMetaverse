@@ -2,5 +2,5 @@
   "sg_idle_streak": 0,
   "local_idle_streak": 0,
   "last_ts": "2026-11-04T15:37:05 (拍·初始态)",
-  "note": "BOD 班组空闲兜底判据状态·单写者=job1 v2 c8d3ddce"
+  "note": "BOD 班组空闲兜底判据状态·单写者=job1 v3 2562ab45·判据=streak>=1 一拍即报（CEO 16:20 调灵敏）"
 }
