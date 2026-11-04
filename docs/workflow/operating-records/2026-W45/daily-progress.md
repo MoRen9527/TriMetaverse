@@ -282,3 +282,6 @@
   - 1dcc239b9 docs(cao): 四名统称术语定义句落地——CLAUDE.md（TriRLC 统称化+TriMMC 概览条补缺+树两行统称形）/tricompany.md（四名统称式+四端口+TriMC 消歧+正身指针）/三元宇宙架构说明 §5（统称条目+语源统称两层面并注）——定义句改·指涉句兼容（CEO 13:25 概念审核令·迁移判据⑤）
   - 7dbdee769 docs(cao): registry 字节级副本同步——四控制器统称术语节+对照表现役端口勘正注（源=TriCompany 6a1dc4e·CAO 铸册·hash 对表在案）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:20 +08：自上次进度提交 69cad3727 后新增 1 条 commit：
+  - 207e1d8de docs(coo): 台账三百一十八笔勘注(行归属CTO批量收编876021262·在途笔被并行批量add卷走互踩族新向·内容零丢失·failsafe零破坏兑现·行尾瑕疵随注修除)
+- registry：v2.1；今日 registry 提交无变化
