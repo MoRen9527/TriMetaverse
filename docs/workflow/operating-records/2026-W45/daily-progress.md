@@ -589,3 +589,9 @@
   - f20095a9f docs(bod): 意见㊿+107——job1 00:21·硬闸后续拍·tick停更实锚·pwr14% @bod
   - …另有 1 条略（全量见 git log）
 - registry：未知版本；今日 registry 提交 1 条：d8a0bb2 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @04:10 +08：自上次进度提交 06ae7d08f 后新增 4 条 commit：
+  - f6e8d56cd docs(coo): 台账三百五十四笔(SDE修复毕报采认死线内达成·副本.local入仓+ALLOWLIST追加+真验证APPROVED score100·督办读数零升级·候复核拍)
+  - 40959fa6a Merge remote-tracking branch 'sg-server/dev' into dev
+  - 121cddaee docs(sde): 8713首触发修复毕报——案②三件全落(副本入仓+PATCH改指+sg形零触碰)·ALLOWLIST勘定追加+护航自拉重启·手动触发真验证APPROVED 100·教训随单 @m-sde
+  - 870ebeb74 fix(sde): fade-daily-sweep 本机形副本入仓(.local 机位区隔·bf414156d 源形恢复+头注防呆)——CTO裁案②件1·sg形兄弟文件零触碰 @m-sde
+- registry：未知版本；今日 registry 提交 1 条：d8a0bb2 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
