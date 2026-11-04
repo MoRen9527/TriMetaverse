@@ -158,3 +158,10 @@
   - 91170de16 fix(ops): bod-tick 件1 写信箱段摘除(bodtick-mailbox-cease 小单)——notify-mailbox.json 投递逻辑全段停投(消费方谱三面实证:CAO 仅筛 cao 箱/hub-watch 系 sg 机/BOD 业务消费=tick-latest.md 文件渠道·副本零消费 320 封纯堆积)·摘除位双锚注记(历史裁决锚 BOD 2026-10-11 派工裁决甲+停投裁语锚 CTO 11:00:29 勘定谳+COS 11:02:05 采认)·拍报落盘段/probes/cron job 零改动·存量清理随迁移窗不入本单·node --check 过·mailbox 代码引用零残留(唯一残留=双锚注记内历史文件名)·止增目标 11:37 拍 @fsd
   - 89df959de docs(ops): bod-tick 信箱副本停投派工 brief 落树(件1 段摘除+双锚注记·止增目标 11:37 拍·消费方谱三面实证·存量清理随迁移窗) @fsd
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 461016b38 后新增 5 条 commit：
+  - 19d83c7fd docs(coo): 台账二八七至二八九笔三笔连推(撞车止争撤单线+SDE撤单回执双线互证+侦察毕99b4b58d7裁量料+互踩实录SDE自领+FSD P1锁笔实证·候窗连推正形)
+  - 285e86abb Merge sg-server dev (并行席 461016b38 巡检补写) before push recon
+  - 99b4b58d7 docs(coo): P3候触发期侦察读数卷落卷(watch.ts c52f5bc三键fail-closed复核绿+第四键NAME可选发现·噪音面三重防线读数·archive 24件/execution 150件·execution日均4-8run量级实勘·方案甲乙+折衷甲'裁量建议供CTO会裁·倾向甲)——零写面候触发态维持·FUZZY-TS占位两处现查勘正后锁笔
+  - 37aa2aadd docs(publish): board 两宿主 live 面随源重渲（D-66 同窗·前置核查清单正身化+咨询路由正名表·claude/copilot 双面渲染管线执行 19+14 同构零误伤） @cao
+  - 6730bfd85 docs(archive): P1 根目录治理迁移 25 件(file-family-maintenance·任务书 CEO 11:09 生效·排期单 v1.1)——A 组 23 件 git mv→docs/archive/(phase 系 10+runbook 2+github-app+90天+arch-storage-migration+价值流动新旧+tmv-phase-1+trimetaverse+落地方案+链基础选型+灵感记录+元宇宙学院)·B 组 2 件→docs/execution/(以太坊私链部署+copilot-cli)·git mv 保历史平铺不改名(先例 tricompany-v0.1-design)·注记三处随迁落卷(链基础=结论时点 2026-02 候重估/以太坊=场景休眠方法有效/copilot-cli=07-19 验证候复验)·meta-recognition/ 清空删除·根残留=6(3 留根+3 销项候 P2)·R 断言 25 条 staged @fsd
+- registry：v2.1；今日 registry 提交无变化
