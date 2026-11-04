@@ -924,3 +924,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **拍面**（18:37 拍·拍龄 4m22s 正常）：sg duty 组仍 13/13 全体候令·本地 m-cfo/m-coo 在干活·四口 ok·8712 jobCount=16·大表 24 总 4 开。
 - **判据升级**：段1 CTO GO（18:00 在案·值席上轮定性「开工窗前正常待派」）后 37min 未现开工读数=**超 30min 拾取窗·命中「已派工未拾取超窗」判据**（COS 建议判据核心场景首命中）——增量跟进通报已发 m-duty-cos（tmux 直发验拾取✓·文带「复核 ramp-up 延迟窗口 or 催办 or CTO 实际已开工拍面未反映三择」）。
 - **预期**：值席复核回执 notify API；下拍 19:07 若 CTO 开工读数现=实锚闭环，若仍候令则断链嫌疑升级催办。状态文件 last_notice 已记。
+## 意见㊿+58（2026-11-04 18:47:02 +0800·shell 注入现查落款）：job2 收值席复核回执——CTO 实际已开工且段1 已毕+拍面盲区实锚
+
+- **复核定性**：18:37 超窗嫌疑通报回执=**CTO 实际已开工且段1 已毕**（收口卷 trees/agenda001-supply-chain/cto-seg1-closeout-20261023.md·窗内毕零现役工程文件变更）——超窗嫌疑撤销归档。
+- **段1 读数要旨**：1-1=npm 12.2.1 实装 RC=0（engines 22.22.2 起·升级载体=npm 层装非 node 槽）+allowlist 正形=package.json allowScripts 字段+default-deny（warn 不 fail）；1-2=esbuild 必测全链绿（blocked→approve-scripts→allowScripts 落件）+依赖树备查三工程零存在（白名单收敛=esbuild 单条三工程通用）；nvm4w 坑案三条随卷。**段2 启动门已达**（1-1+1-2 全绿·SDE 10-24 窗可启）。
+- **拍面盲区实锚+判据参数反馈**：拍计 pane-idle 不映席位会话内工作（CTO 自席会话作业拍面恒显候令=误报根因）——值席参数反馈=拍警前交叉 trees/ 最新卷 mtime（工件面旁证）可免此类误报。BOD 动作：记档+转知 m-cos（判据改版裁量归 COS 链）；下拍起本席通报前先自查 mtime 旁证。
+- read=true 已标。知情件免回执。
