@@ -310,3 +310,16 @@
   - 87699629f docs(cao): D 系候选队列账本立册——七件候项挂号（旧五件会话链压缩前段+新二件 ew 合流案 COS 15:14 知会·批处理自修改陷阱/谱系验证判据）·铸册窗规则与销账口径随立
   - 951b58a9f docs(bod): 意见㊿+21——ew合流案全链闭环APPROVE·每日0330+手动触发落地·观察窗两日 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:00 +08：自上次进度提交 30450d672 后新增 11 条 commit：
+  - b74a40819 merge: 收编并行笔（值席落盘防覆盖）
+  - d01893655 docs(coo): 台账三百二十三笔(COS督办线快照五点·docs三项梳理施工令开工SDE批1勘探·ew迁TriMMC候裁零改动·命名清理候CEO批·dsh换栈在轨·eval认领不变)
+  - 101c48d0a docs(bod): 意见㊿+30——COS两节收讫·ew迁位三档候裁+命名清理联审毕呈批 @bod
+  - 2a04a6a63 docs(bod): 意见㊿+29——CEO治理问询·日常裁决令归口缺口定性+三类分流建议 @bod
+  - 8804605b7 docs(cto): 三案台账补链——ew回询发信+dsh派工发信+节一稿发信report行 @cto
+  - 43cd92e54 docs(cto): 三卷落卷——ew-cron改挂TriMMC回询卷(候裁)+dsh换栈实施单(派工SDE)+trilc/trimc命名主审稿 @cto
+  - adcab1bd1 docs(bod): 意见㊿+28——CEO施工令·docs规范头+引用关系+版本号三段式梳理+手动cli验证 @bod
+  - b32a20265 docs(bod): 意见㊿+27——答询·fade011TriTraining成果定性·探针非成果+实质产出零 @bod
+  - 67a48d881 docs(bod): 意见㊿+26——CEO裁dsh复用河源现役GLM key·B路径生效 @bod
+  - de9c28800 docs(bod): 意见㊿+25——拍面信箱COS回执并录·命名联审已组+迁位令发CTO @bod
+  - 8586538f0 docs(bod): 意见㊿+24——CFO撤令回执收讫·报处两分·零动作 @bod
+- registry：v2.1；今日 registry 提交无变化
