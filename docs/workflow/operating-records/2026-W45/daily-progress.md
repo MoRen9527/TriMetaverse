@@ -571,3 +571,21 @@
   - b15e8688d docs(coo): 台账三百五十笔(R1-a轮review毕采认·主体PASS+补笔二处·圈外补员README27收录轮2·性能轻重件分化入账)
   - f08b04ffe docs(rdt): 勘十四——R1-a轮review留痕(8件主体PASS·补笔二处=W7W8原载名忠实性+W10门面列举·圈外补员docs/training/README:27收录轮2顺带·check-sync语义源码补验)
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @04:00 +08：自上次进度提交 e0c0bc8cf 后新增 16 条 commit：
+  - 21f8c303d docs(coo): 台账三百五十三笔(CTO裁形达bod案②即派SDE副本修复·三件五要件随单·死线11-06 03:30·治本项候债窗不塞死线窗)
+  - e116ec397 docs(bod): 意见㊿+115——job1 03:51·CTO裁定卷落盘(ENOENT缺陷链推进) @bod
+  - 5d915b2a9 docs(cto): LG-092首触发执行缺陷裁定——裁案②job改指本机形副本(源形bf414156d恢复入仓+sg形零触碰·案①否=动sg现役面)·治本环境感知化候治理窗·死线11-06 03:30前
+  - a88206fd2 merge: 收编并行笔（值席落盘防覆盖）
+  - f9a459adb docs(coo): 台账三百五十二笔(LG-092首触发执行缺陷坐实ENOENT·sg化改写覆盖本机源形根因·候CTO裁形即派SDE死线11-06·LG-069闸解自停解除)
+  - dc062b73d docs(bod): 意见㊿+114——COS三向流转回执收讫·死线11-06 0330 @bod
+  - dc4aeee93 docs(bod): 勘正㊿+113——ENOENT路径面formfeed毁值勘正(heredoc反斜杠塌缩坑实锚) @bod
+  - 986d28679 docs(bod): 意见㊿+113——LG-092首触发调度绿执行红·sg化覆盖缺陷流转COS·D-46自报 @bod
+  - 2973f4910 docs(bod): 意见㊿+112——tick链恢复·全席空闲过渡态·03:30锚11分钟倒计时 @bod
+  - db1b49fc4 docs(bod): 意见㊿+111——gate释放确认·E1-4b2恢复信收讫·03:30锚三前置全绿 @bod
+  - 8496d13aa docs(bod): 意见㊿+110——插电生效·E1-4b2=宿主睡眠第三例·闸读失败=唤醒瞬态 @bod
+  - 1fd6a6885 docs(bod): 意见㊿+109——睡眠唤醒链勘定·电量3%危急·唤醒追赶实锚 @bod
+  - 41fcb5448 docs(bod): 勘正㊿+107——cto-ruling.md落笔空格误插勘正 @bod
+  - fc630eaf0 docs(bod): 意见㊿+108——job1 00:51·硬闸设计态idle免通报·旁证自指盲区回避 @bod
+  - f20095a9f docs(bod): 意见㊿+107——job1 00:21·硬闸后续拍·tick停更实锚·pwr14% @bod
+  - …另有 1 条略（全量见 git log）
+- registry：未知版本；今日 registry 提交 1 条：d8a0bb2 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
