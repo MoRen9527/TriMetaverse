@@ -4,7 +4,7 @@
 
 - sourceOfTruth: 本件（trees/r-plane-eval-01/claims.md）
 - syncMode: static（认领表·值席汇写）
-- lastSyncedAt: 2026-11-04T05:41:30Z（date 现查·写前跑·京时 13:41:30 +0800）
+- lastSyncedAt: 2026-11-04T05:44:00Z（date 现查·写前跑·京时 13:44 +0800）
 
 ## 评估要旨（动员令转录）
 
@@ -55,13 +55,14 @@
 - cto（reports/ 2 件·毕报 ✓·现名保持·总汇按现名对账）
 - fsd（reports/ 2 件·毕报 ✓·implementation-improvement 第二件候并卷）
 - sde（reports/ 2 件·毕报 ✓）
+- cho（reports/ 2 件·毕报 ✓·附断言①独立终检佐证 05:43:07Z 读数 13/13 与值席互证）
 
-**在途 2 席**：cho / ste（均已认领·产出候交）。
+**在途 1 席**：ste（已认领·产出候交）。
 
 **产出文件名约定（在途席参照·已落盘件不强制改名）**：reports/<seat>-maturity-<域>.md + reports/<seat>-improvement-<域>.md；分席料亦可树根 <seat>-assessment.md/<seat>-improvement.md 形（照 cao/rdt 先例）。
 
 ## 收口进度
 
 - [x] 三断言①：13 席认领表全量（**13/13 ✓·STE 行 13:41 补齐**）
-- [ ] 三断言②：两卷产出齐（分席料 10/13 毕报·候 cho/ste；两卷总汇=值席汇总段候 2 席到齐后开铸）
+- [ ] 三断言②：两卷产出齐（分席料 **11/13 毕报**·候 ste；两卷总汇=值席汇总段候 STE 到齐后开铸）
 - [ ] 三断言③：树 id 落位毕报（r-plane-eval-01 毕报经 M 面通道回 COO→COS 汇总呈 BOD）
