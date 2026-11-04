@@ -83,6 +83,51 @@
 - **候后续批登记（非 PASS 阻塞）**：①beginners-guide §10 三规划项现势对表=批三——§10 item 1「当前仍是拷贝式」疑部分过时（旁证：本席 session-body footer 即由统一发布管线 `--host=claude`/`--host=claude-session` 渲染生成；ade-consolidation-proposal.md :68 已载 --host 规格；**:5 状态行仍书「CEO 已采纳（2026-08-19）待分阶段执行」=proposal 自身账面滞后观察注·非培训域修面**）·确权候发布管线现勘后 rewrite；②ai-course-graph §8 图节点物态刷新=批二可选（勘误头注记形态首跑已成立·§8 正文只述挂接无存在性断言）；③03/04 批二主件照勘二 named-drift 表
 - **首跑机制验证读数（裁③主判据）**：首过零 rework·零范围越界·零引文损·判据四条全过——自动更新机制首跑验证达成面成立
 
+## 勘七 · 续跑批二勘定（COO 协同令 2026-11-04T22:14:52Z·勘定 owner·扩批 N 值供数）
+
+**范围重定基（22:2x 实勘）**：TriTraining 仓现顶已非 8b3e4ec——SDE docs-maintenance 批 2/3/4b 并行施工毕（08cdb1f 规范头 6 件/7fffb25 版本行迁移 14 件 v0.x→1.0.0 四档规则/070f4de 跨仓索引改写 2 处）。本卷勘三中 docs/training 面三件候勘项已被 SDE 消化：断链已修（beginners-guide L44 改 `../../../TriMetaverse/...` 三级跨仓路径+「在 TriMetaverse 仓」注）、版本行已迁（1.0.0 起算·与备料卷建议一致）、索引已改写（README 挂 beginners-guide+D-47 形头）。**批二收敛=cc-tutorial 03/04 主件**（README 勘误记录顺延条款「四件套正文行为面增量批二细勘消化」的正身）＋ai-course-graph §8 图节点刷新（轻·可选）。
+
+**扩批 N 值提案（候 FSD 施工勘定·报备入账）**：**N=3**（04+03+course-graph §8）。04 为重件——改写须 section-scoped（按下列工单逐节，禁全文重生成）。
+
+### 04-代码复刻版 named-drift 工单（L 号=现卷行号）
+
+| # | 位置 | 漂移点 | 现役真值（源码 diff 实锚） |
+| --- | --- | --- | --- |
+| 1 | L64 引文块 | `options.maxTurns ?? 25` | 70c0e9a（08-26）默认 25→100 |
+| 2 | L84 | 「loop.ts:295 默认最多 25 轮」+默认权限模式句 | 锚顺移+25→100+缺省模式 `default` 化 |
+| 3 | L278/L589 | 「缺省 bypassPermissions（loop.ts:340）」+已知缺口①「缺省权限面过宽」 | **14499e5 已修**（fail-open→fail-closed）——已知缺口项须改「已修复 as-of」态，锚 ：340 复勘 |
+| 4 | L376/L402 引文区 | spawn config `?? 10`+contract schema `family: z.enum(['Role','Registry'])` 引文段 | 2fb1292（+44/−6）：PathsSchema Registry family 可缺+superRefine Role 分支强约束（io_contract Role 形 Required）——引文逐段对新 HEAD 复抄 |
+| 5 | L389-430 §9 合同 v3 节 | 合同 v3→**v3.1**（dae657c valid-v31 fixture）+L426 引文串对新源复核 | 版本面更新 |
+| 6 | L498 | executeJob `:127-169` 纪律叙述（跑完重 load freshJob 再写） | 1d52c20（+65）：stale 守卫+settle 兜底——叙述增补+锚复勘 |
+| 7 | L533/L542/L545 | API 表锚（loop.ts:99-148 等）+AgentLoopOptions 字段清单 | bdb3a6a TC-1 `continueMaxRounds` 新增（04 现零命中=清单缺项）+锚族复勘 |
+| 8 | L43 | TriMC→TriMMC 叙述（宿主枚举） | 四 daemon 矩阵正名 |
+| 9 | L45 | MIGRATION.md:14 蓝图引文 | **引文除外不动**（同首跑档案化原则·可加演进档案括注） |
+
+### 03-代码引导版 named-drift 工单
+
+| # | 位置 | 漂移点 | 处置 |
+| --- | --- | --- | --- |
+| 1 | L52/L54/L55 | 锚 `loop.ts:292`/`job-executor.ts:32`/`agent-contract.ts:71`+`resolver.ts:48` | 三源文件 +38/+65/+55 行——锚族全量复勘 |
+| 2 | L157 | 「裸调 agentLoop 默认 bypassPermissions（loop.ts:340）」 | 14499e5 已改 fail-closed——叙述反转+锚复勘 |
+| 3 | L145 | `TRILC_PERMISSION_MODE`（缺省 bypassPermissions）+app.ts:1014-1053 锚 | TriRLC 仓侧行为——候勘 TriRLC 现源再定性（agent-core 改缺省≠app env 缺省必改·禁推定） |
+| 4 | L100 | 「TriMC 连接正常时代理转发」+app.ts:2062 锚 | TriMC→TriMMC 正名+锚复勘 |
+| 5 | L20/L48 | TriMC 残余两处（长行截断外待逐条定位） | 逐条定位：叙述正名/引文除外 |
+| 6 | L139 | app.ts:1117-1153 healthz 锚 | TriRLC 仓侧锚候勘 |
+| 7 | L128 | `maxTurns: 5` 示例调用值 | 用户设定值非默认值断言——验上下文后大概率不动 |
+
+### review 关卡判据（批二承袭+增补）
+
+首跑四条承袭（refram 非裸替换/勘误 as-of 头/引文除外/落工作区不提交）＋批二增补：**⑤行为面改写须逐条对应本工单系锚**——每处改动可指认「工单 #N」；**⑥引文块复抄须对新 HEAD 逐字**（agent-contract.ts/loop.ts/job-executor.ts 三文件现 HEAD 版本为准），禁凭记忆补代码；**⑦04 已知缺口清单项「缺省权限面过宽」改「已修复」态须附 commit 锚**（14499e5）。
+
+## 勘八 · 批三池（候批二毕勘定·本卷界内预告）
+
+1. host-publish 系 4 件（course/lab-contract/lab-manual/lesson-contract·06-14）——内容级重勘：09-04 后管线演进（session-body 面/D 系合同/双宿主渲染落地）逐件对表；SDE 已迁版本行+规范头，内容面未动。
+2. source-kit 系 4 件（06-14）——CLI 命令面对表现役 source-kit CLI。
+3. beginners-guide §10 三规划项现势对表（勘六登记·ADE proposal :5 状态行账面滞后旁证在卷）。
+4. lesson-lab-contract-baseline——TriTraining AGENTS.md 对表（现役观察升格判定）。
+5. training-pack-migration-plan——迁移落地态定性（历史档 vs 在役计划）。
+6. cc-tutorial 01-小白版——勘三「现役（观察）」维持，批三顺带复核全景图与四 daemon 正名面（TriMC×0 面扫·预期零改动）。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
