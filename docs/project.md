@@ -1,6 +1,6 @@
 # TriMetaverse Project Workflow
 
-版本：v1.0
+版本：1.0.0
 
 日期：2026-09-11
 

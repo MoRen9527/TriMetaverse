@@ -6,7 +6,7 @@
 - syncMode: published-copy
 - lastSyncedAt: 2026-06-14
 
-版本：V0.2
+版本：1.0.0
 日期：2026-06-14
 状态：TriTraining 中央聚合 contract 基线副本
 

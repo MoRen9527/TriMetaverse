@@ -1,4 +1,8 @@
 # Session 同步问题 - 待澄清项
+- sourceOfTruth: 本文件（执行域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > 为小乔和小狄准备的补充信息，加速分析收口
 

@@ -1,6 +1,10 @@
 # CTO-008-M: TriMC ↔ TriLC 通信协议设计
+- sourceOfTruth: 本文件（工程域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
 
-> 版本：v1.0
+
+> 版本：1.0.0
 > 日期：2026-07-17
 > 作者：CTO（小狄）
 > 依据：CPO 产品路由包裁决 #9-11、`docs/architecture-overall-unified.mmd`、TriMC `src/server/app.ts`

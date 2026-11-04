@@ -5,7 +5,7 @@
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/trimmc-orchestration-design-review-cpo.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-25
-- 版本: v1.0（CPO 产品面一轮评审）
+- 版本: 1.0.0（CPO 产品面一轮评审）
 - 评审对象: `trimmc-orchestration-design.md` v0.1-draft（同目录，本次未改动原文）
 - 并行评审: `trimmc-orchestration-design-review-cto.md` v1.0（小狄技术面；本稿承接其 B4/Q-D/Q-E 移交项与 S 系列）
 - 评审人: 小乔（CPO，TriCompany 产品真源与 ProductRegistry 经营 owner）

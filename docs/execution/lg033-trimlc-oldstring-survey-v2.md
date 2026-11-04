@@ -1,4 +1,8 @@
 # TriMLC 输出面旧串清查清单（2026-09-08 深夜勘，LG-033 ①件附属·424 处分级）
+- sourceOfTruth: 本文件（执行域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 ## 分布概览
 

@@ -1,6 +1,6 @@
 # TMV Workflow 术语表（Terminology）
 
-版本：v1  
+版本：1.0.0  
 日期：2026-03-04  
 适用范围：TriMetaverse workflow 文档与执行记录
 

@@ -1,6 +1,10 @@
+- sourceOfTruth: 本文件（培训域索引）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 ﻿# TriCompany Training
 
-版本：V0.1
+版本：1.0.0
 日期：2026-04-29
 状态：项目培训目录初版
 

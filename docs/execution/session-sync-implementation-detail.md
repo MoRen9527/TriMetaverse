@@ -1,4 +1,8 @@
 # Session 同步实现细节草案
+- sourceOfTruth: 本文件（执行域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > 为小狄准备的实现参考，加速技术方案收口
 

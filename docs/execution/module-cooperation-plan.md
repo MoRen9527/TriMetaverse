@@ -1,4 +1,8 @@
 # TriMetaverse 模块配合方案（V2 · 扩展层级）
+- sourceOfTruth: 本文件（执行域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > **制定**：小贾（CEO Chief of Staff）综合小狄（CTO）+ 小乔（CPO）重审
 > **日期**：2026-08-06

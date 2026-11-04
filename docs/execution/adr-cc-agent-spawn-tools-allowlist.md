@@ -1,5 +1,8 @@
 # ADR: CC Agent(type) spawn 不消费 frontmatter tools allowlist
 
+- sourceOfTruth: 本文件（ADR 裁决记录正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
 - date: 2026-09-14
 - status: accepted
 - deciders: CTO（技术裁定）/BOD（方向批复）

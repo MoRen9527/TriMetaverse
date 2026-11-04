@@ -1,4 +1,8 @@
 # TriCade 实施手册（Implementation Playbook）V0.2
+- sourceOfTruth: 本文件（执行域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 <!-- markdownlint-disable MD040 -->
 

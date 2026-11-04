@@ -1,4 +1,8 @@
 # Copilot CLI 配置 DeepSeek BYOK 操作指南
+- sourceOfTruth: 本文件（执行域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 
 > 【现役参考注记 2026-11-04】本件随根目录治理迁入 docs/execution/。2026-07-19 验证——配置值面候复验。

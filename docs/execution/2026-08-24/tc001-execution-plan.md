@@ -5,7 +5,7 @@
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/tc001-execution-plan.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-26（S1-d 完成态更新）
-- 文档版本: v1.0
+- 文档版本: 1.0.0
 - 功能规格: [tc001-harness-scaffolding-func-spec.md](tc001-harness-scaffolding-func-spec.md) v1.0
 
 ## 一、任务概述

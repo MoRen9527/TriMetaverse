@@ -1,6 +1,10 @@
+- sourceOfTruth: 本文件（商业模式白皮书真源）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 ﻿# 三元宇宙白皮书（TriMetaverse Whitepaper）
 
-版本：v1.0（修订 1+1a，CEO 2026-08-22 签发）  
+版本：1.0.0（修订 1+1a，CEO 2026-08-22 签发）  
 日期：2026-08-22  
 状态：**已签发**（CEO 2026-08-22；基于基线源重构完善版 + TMV-P1-1 波 1 修订）
 
