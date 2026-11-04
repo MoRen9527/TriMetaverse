@@ -13,6 +13,10 @@
 
 **梳理圈定谳：588+5=593 件（TMV 333+TC 234+TT 21+cc-tutorial 5）**·出圈两项维持。
 
+## 增补段：批 2 预扫漏圈候选裁定（2026-11-04·SDE 批 2 模板例信附注）
+
+**execution/2026-08-24/audit-campaign/ 子树 14 件（log/README/reports×7/roles×4）出圈=裁**——历史审计战役档案·记录面语义同类 operating-records（历史+审计面·无版本语义无引用网语义）·与裁定 1 同理由；补头=历史档案面翻动·违历史冻结精神。**批 2 批量圈定谳=579 件**（593−14）。
+
 ## 批次节奏裁定
 
 - **批 2 开工=准**：模板 1 例先呈核（对齐 doc-metadata-header §3.4 三键：sourceOfTruth/syncMode/lastSyncedAt）——核过即批量·缺头 163-168 为施工对象。
