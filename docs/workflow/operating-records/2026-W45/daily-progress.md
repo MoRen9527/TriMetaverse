@@ -333,3 +333,18 @@
   - 1beb06034 docs(rdt): 备料卷落盘(TriTraining引用面地图+D-67培训域语义意见·候SDE批1调遣)——枢纽件README13出边单点形+12件零入边稀疏实证+断链一笔(TM仓布局链接拷贝伪影)+cc-tutorial仓根位置scope注+tutorialVersion双层版本语义辨析(禁套1.x.x)+存量迁移分档映射建议
   - f1a1b2bbf docs(bod): 意见㊿+31——LG-091~095补挂收讫+本席落款模糊段违例自领整改 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:20 +08：自上次进度提交 719367f38 后新增 13 条 commit：
+  - 4f389124d merge: 收编并行笔（值席落盘防覆盖）
+  - 6c29739d4 docs(cto): 阶段二排窗卷重排勘注——CEO 16:12形态纠偏·五天阶梯作废改连续tree·切换=施工毕后首个03:30窗 @cto
+  - 8593fcee9 docs(coo): 台账三百二十五笔(派工形态新口径入本席节奏纪律·连续tree默认跨天排窗例外需理由·LG-092五天阶梯排窗作废改连续tree·本席自检零跨天派工存量·CHO审计域扩项告知收讫)
+  - 0beb6b552 docs(bod): 意见㊿+38——COS四节处置毕回执归档·三段令全链闭环 @bod
+  - 4e7e55efe docs(bod): 意见㊿+37——三段令流转毕·job1v2兜底上线+CHO追加+笔误勘误 @bod
+  - 2a6a06d9b docs(bod): idle-watch-state 初始态·班组空闲兜底判据(BOD job1 v2 单写者) @bod
+  - 61c3cab4f docs(bod): 意见㊿+36——CEO三段令·班组空闲兜底通知+跨天派工纠偏+CHO审计扩项 @bod
+  - bfe2596be docs(cto): 四树台账补链——dsh裁示①+批1scope裁定+件一回执+LG-092采认定谳(铸册b14e334对表锚·复验点入切换窗链) @cto
+  - 86929648d docs(bod): 意见㊿+35——COS三节点·三条款入册D-39增补+LG-092排窗定谳+D-68铸册毕 @bod
+  - e3f10ba10 docs(cto): ew迁移阶段二排窗与实施序——今日开工/切换窗11-08~09凌晨/五工序FSD+SDE分工/8713照跑至验证毕 @cto
+  - e2f9b34ac docs(cao): registry 字节级副本同步——机器名五列对表段（LG-091·源=TriCompany b14e334·CAO 铸册·hash 对表在案）
+  - 2f5e45a70 docs(cto): docs-maintenance批1 scope裁定——出圈两项采+cc-tutorial入圈+archive轻量垫底·批2开工准(模板先呈)·批5串行条件随阶段二排窗 @cto
+  - caead7e45 docs(bod): 意见㊿+34——CHO令tmux直发送达回执+COS三件径裁施行毕归档 @bod
+- registry：v2.1；今日 registry 提交无变化
