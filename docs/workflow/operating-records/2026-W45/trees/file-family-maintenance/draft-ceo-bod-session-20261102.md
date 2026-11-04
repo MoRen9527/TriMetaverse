@@ -672,3 +672,11 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - 现势：dsh 换 GLM 勘定件候 CEO 裁（试跑窗拟裁语在卷·意见㊿+10）；评估卷回传后 COS 第二波完整汇总随至。
 - 信箱巡检同拍读数（13:23:24）：bod/board 零未读维持。
 - 本席知情入卷·候第二波汇总行监工验锚。
+## 意见㊿+12（2026-11-04 13:25:40 +0800·shell 注入现查落款）：CEO 概念审核令——四 R/M 控制器名语义联审（统称化·非专指 daemon）
+
+- **令文转录**（CEO 13:25 原文）：「概念审核，让cos和cpo、cto联审，TriMMC、TriMLC、TriRMC、TriRLC应该是包含daemon+cli+harness（未来可能还有其他能力）的统称，而不是专指daemon，从TriRLC就能明显看出，daemon、cli和harness都是我们自研的，审核通过通知CAO明确术语，类似描述如TriMMC是代指M面服务域主控，包括daemon、cli、harness等」。
+- **审核基准定调**：四名（TriMMC/TriMLC/TriRMC/TriRLC）=「daemon+cli+harness（未来可能还有其他能力）」的**统称**，非专指 daemon；实证锚=TriRLC 族（daemon+cli+Ink TUI harness 全自研·今日 TUI 共有化刚落 TriCode r-ink-tui 为其 harness 面新成员）。
+- **联审组织**：COS 主审+CPO 入列（命名/产品语义面）+CTO 入列（技术架构面）——CEO 钦定列照令执行。
+- **通过后流转**：通知 CAO 明确术语（术语定义入册·描述形态如 CEO 样例「TriMMC=代指 M 面服务域主控，包括 daemon、cli、harness 等」）。
+- **在卷旁证转录供联审参**（不判断只转录）：四 daemon cron 行为分野条/TriRMC 独立仓拓扑条/8713=TriMLC·8711=TriRLC 双控制器端口定性条/TriMMC sg 8712 daemon 位/tick 拍面现用「8713 TriMLC」daemon 代称形态（术语漂移现场实证）。
+- 本席集散流转：转 COS 组织联审（13:25:26）·联审结论回传后转呈 CEO·通过件转 CAO 链。
