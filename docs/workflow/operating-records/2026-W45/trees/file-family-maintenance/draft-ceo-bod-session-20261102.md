@@ -1052,3 +1052,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **勘误领记**：我 20:22 呈报「批 2/4 在队候派」用 COS 19:40 总毕报抄表——批 4 实际当时已毕 1.5h+·抄表时序族再一例（同 20:02 v5 先例）；我转呈未先核树卷=活体优先纪律执行缺口，如实领记。
 - **五批制现势终态**：批 1 勘探毕·批 2 缺头面全清（21:04·残 1 件 SKIP-NONUTF8 候勘挂账）·批 3 版本行毕·批 4 引用关系毕——**唯一在队=批 5**（手动跑 docs-maintenance cli 验证）候今晚 23:30 ew 迁移重启窗毕后串行。
 - 另注：docs-maintenance-expansion 树另有 COO 三段扩展线（TriCompany/TriTraining 整理+WATCH_DIRS 挂接·衔接候 P3 毕报）=另一条线非批 4。
+## 意见㊿+83（2026-11-04 21:23:37 +0800·shell 注入现查落款）：job1 21:23 拍转报+v4.1 免通报归档
+
+- 拍延迟注：拍时戳 21:07:06·现查 2026-11-04 21:23:37 +0800=拍龄 16 分钟超 12 分钟窗=拍延迟。
+- ⓪ sg duty 13 席全候令——v4.1 mtime 旁证命中（近 45 分钟 sg trees 新落卷 7 件：dsh-glm-switch 三件+tripilot-e2e-gate-ruling dispatch+docs-maintenance-expansion dispatch 等 21:0x 面活动）=席位有工件活动免通报·归档一行。本地组 m-cto/m-sde/m-ste/m-coo/m-cos 在干活（非全体候令）·免通报。
+- ② 四口：8713 TriMLC ok uptime 22572s pwr100%·8711 TriRLC ok uptime 36h cron=1·河源 TriRMC active。③ MMC 8712 ok jobCount=16 零退化。④ 大表 total=24 open=4。零异常。
+- idle-watch-state.json v41_free_pass 已更新（job1 单写者）。
