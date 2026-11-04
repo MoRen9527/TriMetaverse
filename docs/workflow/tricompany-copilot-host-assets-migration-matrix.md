@@ -1,6 +1,6 @@
 # TriCompany Copilot Host 资产迁移矩阵
 
-版本：V0.2
+版本：1.0.0
 日期：2026-07-08
 状态：published-copy 层已于 2026-07-08 移除；矩阵中 published-copy 标签的资产已删除，其余标签维持
 

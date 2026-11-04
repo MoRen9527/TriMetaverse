@@ -1,6 +1,6 @@
 # TriDev ↔ TriTest ↔ TriDeployment 解耦架构设计
 
-版本：V1.0
+版本：1.0.0
 日期：2026-07-13
 状态：联审通过（CPO+CTO+CEO），已落档
 

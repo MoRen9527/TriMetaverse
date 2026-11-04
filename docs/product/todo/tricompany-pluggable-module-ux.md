@@ -4,7 +4,7 @@
 - lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
 
 
-版本：V0.1
+版本：1.0.0
 日期：2026-08-01
 状态：CPO APPROVE · 已收口（收口记录见文末附卷）
 决策节点：tricade-3

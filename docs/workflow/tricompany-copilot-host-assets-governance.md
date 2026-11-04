@@ -1,6 +1,6 @@
 # TriCompany Copilot Host 资产治理方案
 
-版本：V0.2
+版本：1.0.0
 日期：2026-07-08
 状态：简化后治理基线（published-copy 层已于 2026-07-08 按 CPO/CTO 批准正式移除；文档真源统一在 TriCompany 源侧维护，支撑包只承载 runtime/knowledge/manifest）
 

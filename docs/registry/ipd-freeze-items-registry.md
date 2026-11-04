@@ -4,7 +4,7 @@
 - lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
 
 
-版本：V1.0
+版本：1.0.0
 日期：2026-07-10
 状态：active
 维护者：ChiefTechnologyOfficer（小狄）

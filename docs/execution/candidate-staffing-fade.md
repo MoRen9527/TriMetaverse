@@ -6,7 +6,7 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-18
 
-版本：v1.1（2026-08-18 立册；2026-08-19 补三层语义分离口径）
+版本：1.1.0（2026-08-18 立册；2026-08-19 补三层语义分离口径）
 
 登记：[TriCompany fade-registry.md](../../TriCompany/docs/engineering/fade-registry.md) **FADE-004**
 

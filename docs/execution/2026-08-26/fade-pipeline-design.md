@@ -5,7 +5,7 @@
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-26/fade-pipeline-design.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-26（v1.1：按 fade-rehearsal-001 审查报告修订）
-- 文档版本: v1.1（CEO 需求："我们需要一个 fade 式的标准执行，自动可靠的跑这个流程"）
+- 文档版本: 1.1.0（CEO 需求："我们需要一个 fade 式的标准执行，自动可靠的跑这个流程"）
 - 首轮演练审查: [fade-rehearsal-001 报告](../../workflow/operating-records/2026-W35/trees/fade-rehearsal-001/reports/design-review.md)（CONDITIONAL_PASS·P0=1/P1=6/P2=5）
 
 ## 一、FADE 是什么

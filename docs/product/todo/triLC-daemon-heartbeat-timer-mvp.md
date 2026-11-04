@@ -4,7 +4,7 @@
 - lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
 
 
-版本：V0.1-DRAFT
+版本：1.0.0-DRAFT
 日期：2026-07-31
 作者：CPO 小乔（ChiefProductOfficer）
 任务来源：小贾交办 ET-20260731-001，tree 节点 daemon-hb-1

@@ -1,6 +1,6 @@
 # TriDev ↔ TriTest ↔ TriDeployment CLI Interface Spec
 
-版本：V1.0
+版本：1.0.0
 日期：2026-07-13
 状态：CTO 签发
 所有者：CTO（小狄）

@@ -5,7 +5,7 @@
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/trimmc-orchestration-design.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-25
-- 版本: v0.2-draft（v0.1 + 小狄技术面/小乔产品面双审合流；两份评审文件为本案规范性附录）
+- 版本: 1.0.0-draft（v0.1 + 小狄技术面/小乔产品面双审合流；两份评审文件为本案规范性附录）
 - 附录: trimmc-orchestration-design-review-cto.md（B1-B4 阻断处置+Q-A/Q-B 裁定+M0 清单）/ trimmc-orchestration-design-review-cpo.md（P1-P4+V1-V8 指标+R 面移植判据）
 - 关联: `mmc-host-driver-design-draft.md`（壳基础设计，本文是其运行态扩展）；quad-migration-spec v1.0 §八（分身生命周期）
 
