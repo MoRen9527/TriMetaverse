@@ -578,3 +578,12 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **令 1·任务书批**：CEO 11:09「迁移任务书批，继续推进」——task-charter-draft-v0.9 生效裁准（D-39 CEO 确认域闭环）。11:10:00 转 m-cos（msg 23303d94）按呈批件链即派 P1-P3（FSD 迁移+引用面→SDE+CTO 接入+8713 重启窗·bod-tick 处置并窗）。本席转监工验锚（验收四锚：根残留恰 3/断链 28 旧路径零命中/图谱新鲜/首验真 run 证据）。
 - **令 2·纪律立法**：CEO 令将意见㊽「发现即提」整改铸入公司纪律（BOD 非人格无记忆·行为约束靠纪律承载）+BOD 前置核查增补治理制度/纪律册+咨询路由正名（治理=COS/CAO·职责=CHO·派工=COO·财务=CFO·技术=CTO·产品=CPO·市场=CMO·客户成功=CSO）+勘 TriCompany/source-agents/board/ 真源随条款更新并走发布管线（发布毕通知 CEO 重启本席加载）。11:10:00 转 m-cos（msg b5199cb5）路由 CAO 铸册+真源勘+发布。
 - **笔误勘正声明**：CEO 令文「财务问coo」按席位职责正名勘正为 CFO（同令文派工问coo 正确·CFO=财务负责人在列席名单），勘正点已随转达信呈 CEO 知情。
+## 意见㊿（2026-11-04 11:31 +0800·date 现查）：TriRMC 班组三问勘毕+claude code 卸载毕报（含宿主形态误判自纠）
+
+- **宿主形态自纠**：11:1x 首勘误按 claude code 宿主判「班组席全死」——CEO 11:18 勘正「R 面班组不是 claude code 宿主，是 dsh（deepseek harness）」；按 dsh 形态重勘：13 席工作区全在（r-duty-{cao…ste} 与 sg 同构）+运行时完好+TriRMC 8710 ok（cron 4 jobs 零降级）+r-duty-cos dsh web 8791 挂着（Oct21 起）；实态=**停运待复**（全席工作区 24h 零写入+9-25 CEO 停工令仍在 /srv/fleet/ 原位未撤）。复工裁候 CEO。
+- **令①卸载毕（CEO 11:26）**：卸前依赖断言（crontab fleet/root 零引用·scripts 命中 3 处均历史文档卷字符串非运行依赖）→执行删除（fleet npm global bin symlink+@anthropic-ai/claude-code 包 246M·npm uninstall 因 fleet npm 路径改直删）→**四验全绿**（bin No such file/@anthropic-ai 目录空/command -v GONE/dsh 栈无损：dsh bin 在+web 8791 401 活+TriRMC ok）。`.claude` 配置目录双份（fleet+root）留档未删+UNINSTALLED-NOTICE-20261104.md 在位（fleet 可读·防未来误判宿主）。
+- **三问答案（CEO 11:26）**：
+  1. **BOD 发信 13 席=能**：正形通道=①headless 直投 `dsh --profile headless --session-id session-<id> "<消息>"`（10-20 活体实锚「探针收到」·同库续挂·#7 四正形两判据在卷）②web 8791 relay 隧道（本机 18790→河源 relay3 注 token→18791 dsh web·cookie/token 双通道 200·bod-dsh-tunnel 在役）。
+  2. **tmux 直发=当前不可**：10-19 卷 v1 令曾建 13 席 tmux 跑 claude CLI——CEO 22:32 勘正禁 claude CLI 形改 dsh tui 直挂；dsh tui 应用包不存在（A/B 路双死·README 假定已装）施工合规止步，tmux 13 席面从未建成；今日活体现勘 tmux 双用户面 server 均不在（socket=陈旧残留）。
+  3. **cli 壳决议（=D' 线）现势**：CEO 10-20 10:12 双令 D' 立项照准（dsh 插件化·TriRLC Ink TUI 做插件/独立进程两向）→段 1 TUI 交互面 APPROVE（10-20 18:59）→段 2a 验收 APPROVE（真 DeepSeek 调用四断言实锚·ACP 适配件并入）→**Windows 本机 TUI 装机毕四态全绿**（10-21 19:33·49min·顺手修 TriRLC 适配缺口 07549a5·回归 758/758 零红）→R 面 headless 直投通道实锚成立。**R 侧（河源）TUI 部署段未见于卷**（本机 Windows 已装·河源现役仍 web+headless 形）——候 CEO 定是否补 R 侧部署或维持 headless 形。
+- 锚：本卷（bod-rduty-tmux-direct-dispatch-20261019.md）§五/§七/§十/§十三/rhy-a2 段；卸载四验本节；活体探针 ssh -J sg-ecs-server R-HY-8.155.54.79（sg 别名勘正：config 正名 sg-ecs-server/R-HY-8.155.54.79）。
