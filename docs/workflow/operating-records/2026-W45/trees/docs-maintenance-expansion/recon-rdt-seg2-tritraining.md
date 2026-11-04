@@ -27,7 +27,7 @@
 | e64aa4c | 09-02 | register() minTier | 03/04 registry 论断 |
 | dae657c | 09-04 | **contract v3.1 fixture（valid-v31.contract.yaml）** | 04 合同版本面；README 真源节「合同 v3 规格」指针 |
 | 2fb1292 | 10-02 21:25 | 合同 v3 Registry family 分支（+44/−6 agent-contract.ts） | 03/04 合同校验论断（FSD 已锚） |
-| 1d52c20 | **10-09 10:35**（git 直读；FSD 卷书 10-14 系误读·勘正） | scheduler cron stale 守卫+settle 兜底 | 04 scheduler 论断（sched 讨论面 35 处命中最高暴露） |
+| 1d52c20 | **author 10-09 10:35:15 / committed 10-14 10:49:01**（%ad/%cI 双日期字段分野·两读数皆机真值·12:43 对表定谳；本卷初勘指 FSD「误读」系己方误判·一并勘正） | scheduler cron stale 守卫+settle 兜底 | 04 scheduler 论断（sched 讨论面 35 处命中最高暴露） |
 
 **关键定性**：漂移非首跑窗内新发生——10-02 勘误批（8b3e4ec）落笔时点前 6 笔已在，该批只修正名/图/外锚**未消化内容漂移**，且当时指纹表「最近实质提交 2026-08-25」已失真。cc-tutorial 判定=**部分漂（原地修正档）**，per README 自身「小漂移」规则。
 
@@ -35,7 +35,7 @@
 
 | 件 | 判定 | 实锚 |
 | --- | --- | --- |
-| README.md | 部分漂·**批一** | 指纹表重锚（目标：绑定提交→`1d52c20`，树哈希→`dbd8d620`，最近实质提交→2026-10-09，版本 0.1.0 不变；已验 `rev-parse 1d52c20:packages/agent-core`=`dbd8d620`）＋勘误执行记录续条 |
+| README.md | 部分漂·**批一** | 指纹表重锚（目标：绑定提交→`1d52c20`，树哈希→`dbd8d620`，最近实质提交→2026-10-14T10:49:01+08:00（%cI 落地口径·勘误记录内附 author 10-09 10:35 分野注记一行防再撞），版本 0.1.0 不变；已验 `rev-parse 1d52c20:packages/agent-core`=`dbd8d620`）＋勘误执行记录续条 |
 | 01-小白版 | 现役（观察） | TriMC×0·无行锚·概念面；全景图 10-02 已修 |
 | 02-产品版 | 部分漂·**批一** | TriMC×5 全叙述（无源码引文，上下文逐条验过）；**语义级**：图节点「TriMC 现役主控→TriRMC 迁移中」系旧迁移弧线叙事，现役=四 daemon 矩阵并行（TriMMC/TriMLC/TriRMC/TriRLC），review 判据见勘四 |
 | 03-代码引导版 | 部分漂偏重·批二 | TriMC×4·loop.ts 引文语境·scheduler×14·行锚族待复勘 |
@@ -77,7 +77,7 @@
 
 ## 使用依据
 
-- FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收+两处勘正：1d52c20 日期/族计数）
+- FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
 - git 现勘：TriCompany HEAD agent-core 树哈希 dbd8d620/9 笔提交清单/1d52c20 重锚验证（12:33-12:36 三轮命令读数）
 - 全量清点面扫读数（12:31-12:33 两轮 python 扫描·TriMC/TriLC 上下文逐条人工判读）
 - COO 派工令 12:27:38·排期单 62241d6044 §段二·COS 四裁点 11:55:13
