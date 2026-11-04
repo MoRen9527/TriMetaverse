@@ -595,3 +595,6 @@
   - 121cddaee docs(sde): 8713首触发修复毕报——案②三件全落(副本入仓+PATCH改指+sg形零触碰)·ALLOWLIST勘定追加+护航自拉重启·手动触发真验证APPROVED 100·教训随单 @m-sde
   - 870ebeb74 fix(sde): fade-daily-sweep 本机形副本入仓(.local 机位区隔·bf414156d 源形恢复+头注防呆)——CTO裁案②件1·sg形兄弟文件零触碰 @m-sde
 - registry：未知版本；今日 registry 提交 1 条：d8a0bb2 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @05:30 +08：自上次进度提交 6c359952e 后新增 1 条 commit：
+  - f4d25d44a docs(g6): §八 05:03 告警机制面定性——poster 30s tick fire-and-forget 零重连状态机（静默吞），护航重启连带击落隧道无督导自愈=运输层孤儿缺口；修复三联（隧道督导化/runbook 探针步/poster 失败可观测） @m-duty-cto
+- registry：未知版本；今日 registry 提交 1 条：500b1f9 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
