@@ -740,3 +740,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **令2（trilc/trimc 命名清理）**：CEO 问「trilc cron run 是 TriRLC 还是 TriMLC 的？」并令清理明确 trilc/trimc 表意。本席活体勘定（package.json 两仓实读）：**TriMLC 仓 name=`trilc`·bin 双注册 {trimlc, trilc}→同一 cli.js；TriRLC 仓 name=`trilc`·bin 双注册 {trirlc, trilc}→同一 cli.js**——ew 凌晨窗 cron 挂 8713 TriMLC daemon·「trilc cron run」实调 **TriMLC 的 cli**（trilc bin=旧名兼容别名·trimlc=新正名）·但两仓 package name 同名 trilc+共享 bin 别名=跨 daemon 同名歧义（按安装仓决定行为）=CEO 指出的混乱源实锚。流转：转 COS 路由 CTO+CAO 联审立项清理（对齐上午统称术语入册 6a1dc4e 语义基础）。
 - **令3（TriModel 供 glm key）**：CEO 问自配路径或提供 key 由本席代配 dsh。本席勘定 TriModel 钥面真源（TriCode src/trimodel-cli/env.ts 实读）：钥文件解析序=①env 钉位 TRIMODEL_DEPLOY_KEY→②per-provider 正位 `~/.claude/settings.presets/.deploy-key.<provider>`（glm 即 .deploy-key.glm）→③legacy `.deploy-key`·fail-closed 缺失拒写。**并行事实**：CTO 已勘定河源现役 GLM key（13 席 settings.json ANTHROPIC_AUTH_TOKEN）双形态 200——dsh 试跑窗零新 key 亦可先跑。两路径呈 CEO 择一：A=CEO 贴 key 本席转 CTO/SDE 代配（dsh 配置+8460 baseURL·值面不回显）；B=零新 key 复用河源现役凭据先跑。
 - 流转：令1 知会 CFO+COO；令2/令3 转 COS 路由；三令落卷毕呈堂 CEO。
+## 意见㊿+23（2026-11-04 15:23:23 +0800·shell 注入现查落款）：CEO 追加令——凌晨 3:30 docs-maintenance 改安排在 TriMMC
+
+- **令文转录**（CEO 15:22）：「凌晨3:30的docs-maintenance应该安排在TriMMC上」。
+- **口径**：ew 合流案刚验收 APPROVE 的凌晨 cron 现挂 8713 TriMLC（本机·M 面本地域）——CEO 裁定部署位改 **TriMMC（sg 8712·M 面服务域）**。实施面=8713 job 退役+8712 新建（TriMMC cron payload=嵌套 {command,cwd} 形·与 TriMLC 平铺形态有差异·迁移非纯复制·CTO/SDE 实施勘定）·观察窗随迁移位顺延（首触发以 8712 新 job next_run 为准）。
+- 流转：并入 COS 转达包路由 CTO/SDE 实施；实施毕报走门禁。
