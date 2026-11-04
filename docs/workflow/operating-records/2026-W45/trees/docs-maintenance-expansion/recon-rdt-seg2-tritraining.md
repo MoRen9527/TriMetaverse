@@ -251,6 +251,22 @@
 
 **轮拆计数口径（候 COO 裁·本席意见）**：池件计合理（占位件占池位保 review 完整性）；W14 顺带面不计池件与 CEO 上限原意（review 负载控制）一致。裁定齐，候 COO 锁值后开施工轮。
 
+## 勘十四 · R1-a 轮（轮 1·W1-W10）review 留痕（FSD 8 件 17 处 diff 实读·独立复测七探）
+
+**实勘面**：圈定断言独立验（M×8 全目标件+HEAD=e40c069 ✓）·8 件 diff 逐件全读·残留/补载/新路径四组 grep 独立复测·check-sync 功能语义源码补验（L1105-1125：`check_component_synthetic_sync`+`sync_drift` 输出面=W1 功能句「组件-合成件同步检查/未跟即报」源码直译准确 ✓）。
+
+**逐件判定**：W1 ✓（勘误头 append+命令族全景段活体锚）·W2 ✓（A9 复核读数入头形）·W3 ✓·W5 ✓（双宿主叙事 refram 括注形·判据①）·W9 ✓（c 案措辞照裁定①逐字）·W7/W8 **补笔一**·W10 **补笔二**·W4/W6 零改动占位（不在 diff ✓）。**主体形全 PASS·判据①②③⑤⑦⑧兑现**（演进保留注记形/as-of 头随改写/勘误头引述形残留/工单锚系/活体读数入头）。
+
+**补笔一（必要·判据⑥忠实性）**：W7 L144+W8 L127 演进保留注记「原载 TriTraining-copilot-host-assets 旧宿主资产根」——原文字面两处均为 `TriCompany-copilot-host-assets/docs/workflow/host-object-publish-flow.md`（diff −行实锚）。演进保留形的全部价值在忠实，注记凭 A6① 名字写了原载=历史指涉失真。**改法**：两处注记「TriTraining-copilot-host-assets」→「TriCompany-copilot-host-assets」字面替换（其余不动）。
+
+**补笔二（门面列举补全·零新事实）**：W10 README L6「training 真源已在 docs/training/ 在册（两系课程四件套 + 图谱 / 基线 / 架构 + cc-tutorial 四件）」漏列 beginners-guide（入门第一站·门面缺它最伤新人索骥）+training-pack-migration-plan（在册历史档）。**改法**：括注改「（两系课程件 + 图谱 / 基线 / 架构 / 迁移规划档 + 入门指南 + cc-tutorial 四件）」——FSD 勘一 14 md 清点在案为据。
+
+**圈外补员（登记·裁定收录轮 2 顺带）**：docs/training/README.md **:27** 旧宿主根活引用（「宿主侧如需 published copy，应按真源发布链进入 `TriTraining-copilot-host-assets`」）——我全目录复测多出（FSD 断言 3 命中集 4 处=8 目标件口径·全目录口径 7 处）。系 FSD 勘定卷同形族第 1 族漏员+枢纽件（13 出边）。**裁定：收录轮 2 顺带**（一行改写现役描述形·与 W9 同款；改前现勘该件有无元信息头定勘误头形）。
+
+**两点裁定记录（非缺陷）**：①W9/W10 根件无元信息头结构——判据②勘误头 append 不适用，留痕转移 commit 锚+勘定卷，认可此形；②FSD 自报断言 3 未注 grep 口径（勘九承袭纪律）——提醒：自报命中集必注范围（8 目标件 vs 全目录读数不同）。
+
+**review 结论**：主体 PASS+补笔二处→**照批二形：FSD 补笔落笔毕呈快验，快验 PASS 后 commit 锁笔**（回滚锚承 e40c069）。性能读数入账：施工 ≈7min（八件轻件面·批二 42min 基线对表·轮 1 分列在册）。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
