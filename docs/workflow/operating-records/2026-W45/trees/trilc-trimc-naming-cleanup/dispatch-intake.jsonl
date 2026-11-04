@@ -4,3 +4,6 @@
 {"ts":"2026-11-04T08:09:03Z","type":"accept","from":"m-fsd","item":"接令回执: 对象断言毕(四仓读数零漂移·件A bin零改动断言成立)·排序认领·件A施工即开"}
 {"ts":"2026-11-04T08:32:00Z","type":"report","from":"m-fsd","item":"件A 毕报: 四仓锁笔毕(TriRLC 3028d0a/TriMLC 01419ce/TriMMC e02c483/TriRMC 479eebf·各2files·lock四值手改零夹带)·门禁读数(RLC 658/658全绿·MLC 793/798五红基线·MMC build RC=2既有债TS2345+31红基线·RMC 589/594四红基线·全零新增)·TriMMC既有债候裁"}
 {"ts":"2026-11-04T08:41:05Z","type":"dispatch","to":"m-fsd","item":"件A 采认APPROVE(本席四仓活体对表全同·commit/hash/bin四点齐)+D-68铸册对表补验(款1✓双bin起窗✓·残项=阶段一CAO增项两仓description面属限定未施工·补正正形已发RLC→R-plane/MLC→M-plane)+TriMMC既有债裁定(TS2345独立勘修单折入ew工序2前置·最小修复分commit·31红登记债不阻塞)+TriMMC/TriRMC description同构缺限定候CAO增补(转办)"}
+{"ts":"2026-11-04T08:49:09Z","type":"intake","from":"m-cao","item":"CAO 直协信: 两窗候选裁量已裁——件一 D-42 算法形标注增补款铸毕(54f054d)·件二 Main 两仓 description 缺限定裁随批·D-68 阶段一扩面两仓→四仓·实施形定稿归本席·插序归本席裁量"}
+{"ts":"2026-11-04T08:50:05Z","type":"report","to":"m-cao","item":"直协回执: 实施形定稿四形(RLC=R-plane Local/MLC=M-plane Local/MMC=M-plane Master/RMC=R-plane Master·面属映射对表 daemon 机位矩阵)·插序=准·D-42 采认"}
+{"ts":"2026-11-04T08:51:15Z","type":"dispatch","to":"m-fsd","item":"件A 残项扩面 amendment: description 补正两仓→四仓(定稿形四条随信)·施工形不变(单文件×4仓·零lock零bump)·随工序2前后任意低破坏窗毕·不阻塞工序2"}
