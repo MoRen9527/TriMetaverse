@@ -65,7 +65,20 @@
 4. root 直下过渡副本已自清（skill 三件退役毕·零漂移种子）——engineering 分类层为唯一权威位
 5. FSD 工序 3 环境缺口知情件：skill 族部署+AGENTS.md 映射行+drop-in 三键=工序 3「env 就位」面漏件族——已修运行面·FSD 下次工序单勘补清单
 
-## §六 · 使用依据
+## §六 · LG-092 拓扑改勘定增补（COO 派令 2026-11-04T14:39:47Z·CEO 22:37 裁）
+
+**令面**：取消明晨 8712 首触发（待 8713 完全成熟再上服务域）·工序一勘定 8712 cron 16 jobs·工序二取消命中 job（死线 11-05 03:30 前）。
+
+**工序一勘定读数（store 活体现探·DATA_DIR=/var/lib/trimc environ 实锚）**：
+
+- **fade011 daily 触发 job=零命中**·03:30 时刻=零命中（16 jobs schedule/payload 全谱扫）
+- 16 jobs 全列（id 前八字+name+频次）：weekly-plane-shift(禁用)/config-sync-apply(90s)/clock-skew-check(1h)/orchestrate-tick(13,43 分)/daily-progress-watcher(5,15,25 分)/github-reconcile(9:07 日)/sg-watchlist-patrol(5m·FADE 标签·台账巡检非触发)/sg-8460-probe(6h·FADE·proxy 探针非触发)/bod-progress-report(5h)/n2-watchdog-sg(1m)/hub-watch-snapshot(1m)/e14-heartbeat-timeout-observer(禁用)/e15-window-reminder-scan-8712(30s)/e1-b2-8713-heartbeat-watch(90s)/cos-decision-audit-0001(0:01 日·FADE 标签·决策审计非触发)/oprec-sync-fade011(1h·FADE·**产出树 git 同步面非触发面**)
+- 四条 FADE 标签 job 勘定：全非 fade run 触发面（巡检/探针/审计/同步四族）——oprec-sync-fade011=已产出树收进 OPREC 的同步 job（`git add docs/...` 1h 频）·不在 CEO 裁令取消范围（边界②部署面保留同理）
+- **互证锚**：与今晚早前 dsh 树「03:30 cron 八面勘定无此 job」（CTO 采认·对象断言正例）互证——8712 从无 03:30 fade011 排产（「首触发」计划表述被上层读为 cron booking 的销账锚同源）
+
+**工序二定谳：零动作**——裁令目标（取消 8712 首触发）**天然达成**（排产从未落 store·明晨零自动触发）·零命中回执形（令文明示同样有效）。边界三件确认：8713 零触碰（cron_mw1rdhym_7pwt 照跑）·8712 fade 部署面保留（端点/脚本/dist/修正 env 全在跑）·23:30 重启窗已删无撞窗。
+
+## §七 · 使用依据
 
 - COS 转办令 2026-11-04T21:49:28+0800（八步要件+自裁条款+批 5 残段联动）
 - 8713 勘修窗 SOP（trimlc-repair-window-20261011 同构 sg 形映射）
