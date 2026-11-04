@@ -94,7 +94,7 @@ CTO 核令 08:43Z 采认勘定全谱+四裁达，工序 2 当窗连续进毕：
 - TriMMCEnv 无 dataDir 字段（vs TriMLC env.dataDir）——store 落位定谳=`process.env.TRIMC_CONFIG_DIR ?? path.resolve('data')`（defaultConfigDir 同形·config-sync/cron 现役同位惯例）。
 - skillsRoot 消费链实锚：FadeDriverOptions.skillsRoot→defaultWorkers→resolveTriSkillSkillsRoot（envOverride 参数在位·TriMLC 现役零 env 键消费=TriMMC 侧显式接入为新增面）。
 - fadeBoot 作用域=TriMMC start() 内局部 let+createServer 回调闭包捕获（TriMLC 同构形）。
-- homeDomain 沿直搬原值 'M-plane-local'（四裁未涉·**候裁注记**：TriMMC=M 面 sg 服务域语义是否须别值·候 CTO）。
+- homeDomain=**'M-plane-master'**（CTO 门禁裁达 09:10Z·候裁注记销项）：对表本地域/服务域两分——TriMLC='M-plane-local'/TriMMC='M-plane-master'·与 writeAuthority 同族面属语义；直搬原值在 TriMMC 记录面=域误归属（同判据）。**破直搬正形一处**（独立小 commit `37cceeb`·记录面诚实优先——勘定卷如实注记）。
 
 **测试面终态**：
 - 随搬 fade 模块单测 7 文件全绿（fade-store 15/skill-loader 15/state-machine/closing-gate/driver/recovery 全谱）。
@@ -106,7 +106,7 @@ CTO 核令 08:43Z 采认勘定全谱+四裁达，工序 2 当窗连续进毕：
 
 **教训自领**：sed 行号段删 wrapper 头坑（fade-skill-loader 适配时 `264,300d` 吞掉文件尾 after(()=>{ 头致孤儿块 transform 错·全量才暴露）——段删除后必须单文件跑验证+边界行断言，非全量兜底。
 
-**工序 2 状态=毕（READY_FOR_REVIEW）**。候 CTO 门禁审查；工序 3（SDE 部署面+sg node 22 升级+unit env 落键+8712 单重启窗双变）候 CTO 施工单。
+**工序 2 状态=毕（门禁 PASS·CTO 独立活体复核六点全绿 09:10Z）**。homeDomain 裁达补笔 `37cceeb` 毕；件 B 全链闭环·FSD 从 ew 线释放（回滚姿态：0de548a 可 revert·fade 面零现役消费=回滚零现役冲击）。工序 3=SDE 面（sg node 22 隔离升+unit env 落键+8712 单重启窗双变·施工单随 CTO 发）。D 系候选（sed 段删吞文件尾教训）随本卷候 CAO 窗（CTO 不再转办·卷已呈）。
 
 ## 工序 2 前置清单（原卷留痕·已执行毕）
 
