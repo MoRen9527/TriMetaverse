@@ -1,8 +1,8 @@
 {
   "sg_idle_streak": 0,
   "local_idle_streak": 0,
-  "last_ts": "2026-11-04 20:20:19 +0800",
+  "last_ts": "2026-11-04 20:50:39 +0800",
   "note": "BOD 班组空闲兜底判据状态·单写者=job1 v4.1 b70059f8·判据(CEO 17:23 裁+COS 18:48 裁落版):14:00-18:00=GLM模型不派工设计窗(窗内全体候令idle=设计态不通报)·窗外全体候令先mtime旁证自查(sg trees/-mmin -45有新落卷=有工件活动免通报)·旁证后仍候令才通报(COS自判待派/断链/零活动)",
   "last_notice": null,
-  "v41_free_pass": "20:07拍 sg duty 13/13候令·mtime旁证=3文件(tripilot-e2e-gate-ruling/dispatch-intake.jsonl sg新树调度活动+draft底稿镜像+idle-watch-state自写剔除)→免通报"
+  "v41_free_pass": "20:37拍 sg duty 13/13候令·mtime旁证=5文件(dsh-glm-switch收口卷+dispatch/e2e树dispatch·工件活动实锚)→免通报"
 }
