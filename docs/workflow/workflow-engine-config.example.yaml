@@ -107,7 +107,7 @@ artifacts:
       - docs/prd/README.md
   DESIGNING:
     required:
-      - arch-storage-migration.md
+      - docs/archive/arch-storage-migration.md
   CODING:
     required:
       - src

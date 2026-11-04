@@ -20,4 +20,4 @@
 - 每份 PRD 必须标注白皮书章节来源。
 - 每份 PRD 必须定义验收指标与测试口径。
 - Discovery / Intelligence 只传导内容变化；是否新增 PRD 仅由 Intelligence 决策。
-- PRD 变更后，需要同步影响到 `arch-storage-migration.md` 与 `tmv-phase-1-execution-plan.md`。
+- PRD 变更后，需要同步影响到 `docs/archive/arch-storage-migration.md` 与 `docs/archive/tmv-phase-1-execution-plan.md`（两件 2026-11-04 迁入历史卷）。
