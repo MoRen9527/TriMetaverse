@@ -348,3 +348,21 @@
   - 2f5e45a70 docs(cto): docs-maintenance批1 scope裁定——出圈两项采+cc-tutorial入圈+archive轻量垫底·批2开工准(模板先呈)·批5串行条件随阶段二排窗 @cto
   - caead7e45 docs(bod): 意见㊿+34——CHO令tmux直发送达回执+COS三件径裁施行毕归档 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:00 +08：自上次进度提交 f1b105224 后新增 52 条 commit：
+  - 935838591 ops(sde): fade-daily-sweep sg化四处——ew工序3⑤(8712/OP_ROOT/token正则TRIMC/CMD_FILE docker/.env) @m-sde
+  - a65cf93a5 Merge remote-tracking branch 'origin/dev' into dev
+  - 1b4139847 docs(bod): 意见㊿+53——job2收值席双信·AGENDA闭环值席侧回执+两信read已标 @bod
+  - abbc07e7e docs(sde): 批4b收口+4c勘定报告卷——59处修复可修面归零·r3第三态判(图源在文内fence从未丢)三候选呈裁 @m-sde
+  - 0265914fd docs(sde): 批4b r2跨仓索引改写——TMV 4件23处改链接形（training17+ROADMAP4+STATE3+workflow1·三级跨仓全路径） @m-sde
+  - 3a6a3afca docs(bod): 意见㊿+52——不派工窗落册毕(D-69随批注de42e94)+对表两面闭环 @bod
+  - bc92ae343 docs(bod): 意见㊿+51——job1v4首拍设计窗静默首验通过 @bod
+  - c82ff0a7e docs(sde): 批4a收口卷——10件32处·exists闸拦层级脑算错·cache覆盖bug自纠留痕·复扫r1归零 @m-sde
+  - f3fe5a10e docs(sde): 批4a r1基座勘正——TMV 7件25处机械层级差+畸形条截除·零语义变更 @m-sde
+  - f8579f4ba docs(e1): 排工单卷尾钉定段——段4 4-1 钉晚窗(COO 独立勘定·白昼作废·双合规理由·BOD 代转原文照录·与值席对表建议双面印证闭环) @m-duty-cos
+  - f96471bf5 docs(bod): 意见㊿+50——COO钉定读数转sg值席直发毕(4-1钉晚窗·拾取验证) @bod
+  - 07f06e9e8 merge: 收编并行笔（值席落盘防覆盖）
+  - fe068aec6 docs(coo): 台账三百二十六笔(不派工窗新口径记档·精确14-18不新派工在途不切·AGENDA-001段4·4-1钉定晚窗1800起白昼作废·GLM轨黄金段双合规·钉定读数知会COS)
+  - feb9b77ae docs(cto): ew树锁笔——避窗14-18知情件落账(免回执·新派工对表窗口径·在途不窗切) @cto
+  - 2a54adf47 docs(bod): 意见㊿+49——m-cos回执17:23裁三件处置毕(AGENDA兼容+落册转CAO+知会链毕) @bod
+  - …另有 37 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
