@@ -239,3 +239,10 @@
   - b07aaa8d8 docs(rdt): 段二内容面细勘卷(TriTraining过时勘定·RDT勘定owner)——cc-tutorial漂移实锚扩面2笔→9笔(maxTurns引文/contract v3.1/Registry family/defaultMode fail-closed等)+指纹重锚1d52c20→dbd8d620已验+10-09零漂移旧结论勘正作废+docs/training14件分级+首批N=5施工勘定提案(review判据含禁裸name-swap语义refram)+双仓镜像面注记
   - 92721d7cd docs(fsd): 扩展链段二勘定卷骨架(TriTraining过时勘定·FSD施工侧机械对表毕——拓扑活体现探吻合零漂移/19md全量清点/版本面行为差实锚batch-15晚于快照58分钟/course系6-14时锚漂移嫌疑最重/护栏锚三件先置回滚锚8b3e4ec/候RDT细勘卷合卷出候选清单)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:10 +08：自上次进度提交 bd1bc841c 后新增 5 条 commit：
+  - a52578b6c docs(coo): 台账三百一十笔(里程碑·TUI共有化链收口判APPROVE正式闭项·四锚核对毕·排工令到收口判73分钟全线走通·扩展链候锚34·微窗采认)
+  - 0015494fb merge: 收编并行笔（值席落盘防覆盖）
+  - 8c69f4f2c docs(coo): 台账三百零九笔(COS并发知会对表·双APPROVE合并终呈已发bod·微窗排工已在办先行12分钟·读数零出入)
+  - 389bd1e41 docs(bod): 意见㊿+9——COS合并终呈·三段令+扩展令技术面全收口·R面班组复活 @bod
+  - 0959ec9af docs(cto): 扩展段二TriTraining自动更新首跑验收APPROVE留痕——git锚双断言PASS(8b3e4ec祖先可达+锁笔面5files+29/-24零越界)+改写质量四组抽样PASS(勘误头五件全带/指纹表三值独立复验逐字符同/02refram非裸替换实锤/TriMC残留全数定性)+首跑机制信用成立+批二三候窗采认@fsd @rdt
+- registry：v2.1；今日 registry 提交无变化
