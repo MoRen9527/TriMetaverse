@@ -755,3 +755,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **信箱**：15:26:12 现查零未读（总量 2688）。
 - **COS 回执**（15:25:32）：四件路由状态——①不停工知情录入②trilc/trimc 命名清理**联审已组**（CTO 征稿=bin/包名方案+影响面+退役时点·ew 白名单 403 风险列入；CAO 征稿=命名规范条+退役制度化+registry 对表 6a1dc4e；两稿回 COS 裁合后**呈 CEO 立项批**）③dsh key 源候 CEO 择录账④ew 迁位 TriMMC **实施令已发 CTO**（8713 退役+8712 新建·payload 嵌套异构勘定·观察窗随迁位顺延）。
 - 候件更新：②联审两稿→COS 裁合呈批；④CTO 实施毕报→门禁转呈；③CEO 择 key 源。
+## 意见㊿+26（2026-11-04 15:29:46 +0800·shell 注入现查落款）：CEO 问询+裁定——dsh key 源复用河源现役 GLM key
+
+- **CEO 问询**（15:29）：「dsh key 源，河源现役的是deepseek key吧，有现役的glm key么？有就复用」。
+- **事实答**：河源现役两族 key 并存——dsh 自带的 DeepSeek key（dsh=DeepSeek Harness 现役跑深栈）+**13 席 Claude 席位的 GLM key**（settings.json env ANTHROPIC_AUTH_TOKEN·经 8460 代理调 bigmodel api/paas/v4 端点）。CTO 勘定实测通的就是后者（双形态 HTTP 200）——**现役 GLM key 存在且已实测可用**。注（CTO 勘误①在案）：duty-env 的 GLM_API_KEY 是失同步旧副本，13 席实际不吃它——复用源=settings.json 文件面真凭据。
+- **CEO 裁**：有就复用=**B 路径生效**——dsh 换栈复用河源现役 GLM key，试跑窗即刻可启动。流转：转 COS 启动实施单（CTO/SDE·baseURL=http://127.0.0.1:8460/api/paas/v4·试跑 gate 前置·现役 8791 零触碰·值面不回显）。
