@@ -36,7 +36,79 @@ permissions:
   contents: write
 
 jobs:
+  # ── AGENDA-001 段2（2-2）：npm audit signatures——registry 签名验证·构建面前置闸 ──
+  supply-chain-audit:
+    name: Audit signatures (supply chain)
+    runs-on: windows-latest
+    steps:
+      - name: Checkout TriMetaverse
+        uses: actions/checkout@v4
+        with:
+          path: TriMetaverse
+          ref: ${{ github.ref }}
+
+      - name: Checkout TriRLC
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriRLC
+          path: TriRLC
+          ref: ${{ github.ref }}
+
+      - name: Checkout TriPilot
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriPilot
+          path: TriPilot
+          ref: ${{ github.ref }}
+
+      - name: Checkout TriCode
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriCode
+          path: TriCode
+          ref: ${{ github.ref }}
+
+      - name: Checkout TriModel
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriModel
+          path: TriModel
+          ref: ${{ github.ref }}
+
+      - name: Checkout TriCompany (agent-core)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/TriCompany
+          path: TriCompany
+          ref: ${{ github.ref }}
+
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Upgrade npm to 12
+        run: |
+          npm install -g npm@12
+          $v = (npm --version)
+          Write-Host "npm=$v"
+          if (-not ($v -match '^12\.')) { Write-Error "npm 12 expected, got $v"; exit 1 }
+
+      - name: Audit signatures (5 build projects)
+        run: |
+          $dirs = 'TriModel', 'TriCompany/packages/agent-core', 'TriCode', 'TriRLC', 'TriPilot'
+          foreach ($d in $dirs) {
+            Write-Host "== audit signatures: $d =="
+            Push-Location $d
+            npm audit signatures
+            $rc = $LASTEXITCODE
+            Pop-Location
+            if ($rc -ne 0) { Write-Error "audit signatures FAILED: $d"; exit 1 }
+          }
+          Write-Host "audit signatures: 5/5 PASS"
+
   build:
+    needs: supply-chain-audit
     name: Build TriCade (${{ github.ref_name }})
     runs-on: windows-latest
 
@@ -129,10 +201,11 @@ jobs:
           ref: ${{ github.ref }}
 
       # ── Node.js setup ──
+      # AGENDA-001 段2（2-1）：node 20→24——npm 12 engines 硬前置（^24.15.0/+26·段1 实测锚 cto-seg1-closeout-20261023）
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
           cache-dependency-path: |
             TriRLC/package-lock.json
@@ -141,11 +214,24 @@ jobs:
             TriMMC/package-lock.json
             TriModel/package-lock.json
 
+      # AGENDA-001 段2（2-1）：npm 12 自升（npm12 不随任何 node 槽自带·升级载体=全局自升·段1 实锚）
+      - name: Upgrade npm to 12
+        run: |
+          npm install -g npm@12
+          $v = (npm --version)
+          Write-Host "npm=$v"
+          if (-not ($v -match '^12\.')) { Write-Error "npm 12 expected, got $v"; exit 1 }
+
       # ── Build TriModel (no deps; needed by TriMMC + TriRLC) ──
+      # 段2 闸形：npm ci 后 install-scripts ls 文本空判（npm12 default-deny=warn 形态·不闸会假绿·实测锚 approve-scripts 是放行动词非检查动词）
       - name: Build TriModel
         working-directory: TriModel
         run: |
           npm ci
+          $ls = npm install-scripts ls 2>&1 | Out-String
+          if ($ls -notmatch 'No packages with unreviewed install scripts') {
+            Write-Error "PENDING INSTALL SCRIPTS (supply-chain gate):`n$ls"; exit 1
+          }
           npx tsc -p tsconfig.json --outDir dist
 
       # ── Build agent-core（canonical：TriCompany/packages/agent-core；TMV-P1-3 断链修复 2026-08-22）──
@@ -153,6 +239,10 @@ jobs:
         working-directory: TriCompany/packages/agent-core
         run: |
           npm ci
+          $ls = npm install-scripts ls 2>&1 | Out-String
+          if ($ls -notmatch 'No packages with unreviewed install scripts') {
+            Write-Error "PENDING INSTALL SCRIPTS (supply-chain gate):`n$ls"; exit 1
+          }
           npx tsc -p tsconfig.json --outDir dist
 
       # ── Build TriCode ──
@@ -160,6 +250,10 @@ jobs:
         working-directory: TriCode
         run: |
           npm ci
+          $ls = npm install-scripts ls 2>&1 | Out-String
+          if ($ls -notmatch 'No packages with unreviewed install scripts') {
+            Write-Error "PENDING INSTALL SCRIPTS (supply-chain gate):`n$ls"; exit 1
+          }
           npx tsc -p tsconfig.json --outDir dist
 
       # ── Build TriRLC ──
@@ -167,6 +261,10 @@ jobs:
         working-directory: TriRLC
         run: |
           npm ci
+          $ls = npm install-scripts ls 2>&1 | Out-String
+          if ($ls -notmatch 'No packages with unreviewed install scripts') {
+            Write-Error "PENDING INSTALL SCRIPTS (supply-chain gate):`n$ls"; exit 1
+          }
           npx tsc -p tsconfig.json --outDir dist
           npx tsc -p tsconfig.json --noEmit
 
@@ -175,6 +273,10 @@ jobs:
         working-directory: TriPilot
         run: |
           npm ci
+          $ls = npm install-scripts ls 2>&1 | Out-String
+          if ($ls -notmatch 'No packages with unreviewed install scripts') {
+            Write-Error "PENDING INSTALL SCRIPTS (supply-chain gate):`n$ls"; exit 1
+          }
           npx tsc -p tsconfig.json --outDir out
 
       # ── Package TriPilot extension ──
@@ -348,7 +450,7 @@ jobs:
             ### Build Information
             - Build SHA: ${{ github.sha }}
             - Runner: windows-latest
-            - Node.js: 20.x
+            - Node.js: 24.x (npm 12 + allowScripts supply-chain gate)
 
             ---
             Generated with TriCade CI/CD Pipeline
