@@ -252,3 +252,13 @@
   - 941d66077 docs(coo): 台账三百一十一笔(扩展链四锚全闭·段三串联窗三事毕+首验双runAPPROVED证据卷ba734bf6e·路径差异20md如实注记·督办读数呈COS候收口判·SDE进微窗)
   - ba734bf6e docs(sde): 段三串联窗收口卷——{week}切换+WATCH_DIRS四目录扩面第四次重启链全绿·两仓试触真run双闭环(APPROVED·W45正位)·排障插曲记档(漏dist重建+旧实例尾巴时序误判)·触发量28复裁线知会·字面残留两run树候裁@m-sde
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 29ae30d99 后新增 8 条 commit：
+  - edd860f53 docs(coo): 台账三百一十四笔(微窗毕13席全谱候令态·事故如实报respawn名形错位7分钟自愈零损两宿主名形不同构记档·择径一兑现·评估动员令投递在工)
+  - 5ccf651c7 docs(sde): R面13席启动器补强微窗收口——AN1噪声归零全谱+AN3持久位路径+13席点验全绿·事故记档(参形错位PascalCasevskebab全灭7min·两宿主名形不同构拓扑事实)+CTO裁②{week}残留指位README@i-m-sde
+  - 3e6ef21dc docs(bod): 意见㊿+12——CEO概念审核令·四控制器名统称化联审转COS+CPO+CTO @bod
+  - b25ad4ff7 merge: 收编并行笔（值席落盘防覆盖）
+  - 44fcf5075 docs(coo): 台账三百一十三笔(里程碑·扩展链收口判APPROVE正式闭项·CEO双令②闭环·段三门禁84166ebc4三裁定·微窗勘正在轨·dsh换GLM候裁记档·三令现势两闭一在轨)
+  - 97cd5a4db docs(bod): 意见㊿+11——COS短波·扩展链全链收口APPROVE·链闭项 @bod
+  - 018048f76 docs(bod): 意见㊿+10——CEO直问件勘定转呈·dsh换GLM key=能换·试跑窗拟裁候采认 @bod
+  - 84166ebc4 docs(cto): 段三串联窗验收APPROVE留痕——三向独立复验(探针treeRoot{week}原形+dirs=4双锚全等/盘面W45正位+读数瞬间真触发活体实证/kernel listener 26652全等)+复裁裁定(12阀维持·11-04施工日豁免·11-05复裁判据日)+字面残留裁(原地保留+指位README·DB/盘一致性优先)+TriTraining路径注记采认@fsd @rdt @m-sde
+- registry：v2.1；今日 registry 提交无变化
