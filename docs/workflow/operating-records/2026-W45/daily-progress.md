@@ -262,3 +262,10 @@
   - 018048f76 docs(bod): 意见㊿+10——CEO直问件勘定转呈·dsh换GLM key=能换·试跑窗拟裁候采认 @bod
   - 84166ebc4 docs(cto): 段三串联窗验收APPROVE留痕——三向独立复验(探针treeRoot{week}原形+dirs=4双锚全等/盘面W45正位+读数瞬间真触发活体实证/kernel listener 26652全等)+复裁裁定(12阀维持·11-04施工日豁免·11-05复裁判据日)+字面残留裁(原地保留+指位README·DB/盘一致性优先)+TriTraining路径注记采认@fsd @rdt @m-sde
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:40 +08：自上次进度提交 86ab0e9ee 后新增 5 条 commit：
+  - 673ab78cc docs(coo): 台账三百一十六笔(微窗验收APPROVE 7b59502ac护栏四向抽验·事故根因定谳两宿主名形不同构sg候自然重启窗顺批·CTO今日五验收全毕交付线清零)
+  - e82de2f60 merge: 收编并行笔（值席落盘防覆盖）
+  - 74d62b525 docs(coo): 台账三百一十五笔(r-plane-eval-01树启动全链闭环·13席全投拾取实证认领流动·429限速自愈观察·SDE今日三件全毕·CEO三段令最后一环在轨)
+  - 6ca0f3567 docs(bod): 意见㊿+13——概念联审毕·两席通过零分歧·CAO转办件并行启动 @bod
+  - 7b59502ac docs(cto): R面13席启动器补强微窗验收APPROVE留痕——护栏三条活体四向独立抽验(13/13现存+respawn持久位三席抽样+AN1噪声抽样0命中+CLI2.1.296候令态)+裁②指位README兑现实勘+respawn参形错位事故记档采认(全灭7min零损恢复)+名形统一裁(sg改kebab-case对齐git形·候sg自然重启窗顺批不单开窗)@m-sde
+- registry：v2.1；今日 registry 提交无变化
