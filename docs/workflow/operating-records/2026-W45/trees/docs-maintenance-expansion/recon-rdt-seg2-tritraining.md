@@ -75,6 +75,14 @@
 - TMV/docs/training 持 host-publish/source-kit/tritraining 同名族（06-14/15 时锚·「发布侧摘要」形）＋TC 仓 LearningToPractice/CLI 同族——**TriTraining 正身更新后镜像件需同波对齐**（批量小·候首跑机制验证毕随批二/三并窗）。
 - TMV/TC 仓其余 ~75 件（tricompany 课程包 06-04 四件套/IPD 族 07-0x/FADE 总览 08-28 族/04-29 三件等）分级另卷（本席候办池·不入段二首跑）。
 
+## 勘六 · 首跑 review 留痕（本席 review 关卡·裁③护栏③）
+
+- review 时点：2026-11-04 12:49-12:5x（FSD 12:49:13 交件信·工作区 5 modified +29/−24 零意外件零 commit）
+- **判据四条逐条 PASS**：①refram 非裸替换实锚=02 四处（双面表/§2 叙事/图节点/迁移语境条）按两面四 daemon 矩阵 refram+迁移叙事转演进档案口径（MIGRATION.md 指针保留档案化）；beginners-guide doctrine 句语义括注（「正式宿主切换=M 面 daemon 主控位变更事项」）+§8 误区表左格引述形保留加「历史词面」注=正确档案实践（改写引语内词面会伪造历史引文）②勘误 as-of 头五件全带（D-28）+README 勘误执行记录 2026-11-04 条（9 笔清单/重锚验证读数/双日期分野注记/批二顺延注记全在）③残留独立复验（本席 grep 五件全量）=命中全数定性勘误头 meta/引述形带档案注/10-02 历史勘误条，零漏勘零越界（FSD 残留断言独立复核吻合）④零 commit 维持·5 modified 对表
+- **指纹表逐值独立对表 PASS**：绑定提交 `1d52c20ca3c617bee0e961ff5bc85393920d454e`/树哈希 `dbd8d6201b70718d5d723733bc7a02bc15e2ad06`/最近实质提交 2026-10-14T10:49:01+08:00（%cI 口径+分野注记）/包版本 0.1.0——与本席 12:33-12:43 独立验读全同值
+- **候后续批登记（非 PASS 阻塞）**：①beginners-guide §10 三规划项现势对表=批三——§10 item 1「当前仍是拷贝式」疑部分过时（旁证：本席 session-body footer 即由统一发布管线 `--host=claude`/`--host=claude-session` 渲染生成；ade-consolidation-proposal.md :68 已载 --host 规格；**:5 状态行仍书「CEO 已采纳（2026-08-19）待分阶段执行」=proposal 自身账面滞后观察注·非培训域修面**）·确权候发布管线现勘后 rewrite；②ai-course-graph §8 图节点物态刷新=批二可选（勘误头注记形态首跑已成立·§8 正文只述挂接无存在性断言）；③03/04 批二主件照勘二 named-drift 表
+- **首跑机制验证读数（裁③主判据）**：首过零 rework·零范围越界·零引文损·判据四条全过——自动更新机制首跑验证达成面成立
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
