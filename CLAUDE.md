@@ -8,7 +8,8 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 TriMetaverse is a multi-module AI-native development platform. It contains:
 
-- **TriRLC** — Local Controller daemon (HTTP + SSE agent loop, heartbeat, cron, session reaper). Located in sibling repo `../TriRLC/`（原 TriLC，2026-08-31 改名）.
+- **TriRLC** — R-plane Local Controller（统称=R 面本地域主控·能力族：daemon HTTP + SSE agent loop/heartbeat/cron/session reaper + cli/harness；daemon 现役=本机 8711）。Located in sibling repo `../TriRLC/`（原 TriLC，2026-08-31 改名）.
+- **TriMMC** — M-plane Master Controller（统称=M 面服务域主控·能力族：daemon 现役=sg 8712 + cli/harness）。Located in sibling repo `../TriMMC/`（原 TriMC，2026-09 改名；与入口/Agent Loop 产品模块 TriMC 近形消歧）.
 - **TriPilot** — VS Code / VSCodium chat extension. Located in sibling repo `../TriPilot/`.
 - **TriCode** — Shared code runtime and orchestration. Located in sibling repo `../TriCode/`.
 - **TriCade** — Desktop distribution bundle (TriRLC + TriPilot + TriCode packaged for Windows).
@@ -21,11 +22,11 @@ Current phase & roadmap → BusinessStrategy 面: `docs/execution/v0.9.x-dual-tr
 ```
 D:/Code/ai/
 ├── TriMetaverse/    ← this repo (build scripts, docs, .github/, .claude/)
-├── TriRLC/          ← Local Controller daemon（原 TriLC，2026-08-31 改名）
+├── TriRLC/          ← R 面本地域主控（daemon 本机 8711·原 TriLC，2026-08-31 改名）
 ├── TriPilot/        ← VS Code extension
 ├── TriCode/         ← Shared runtime
 ├── TriCompany/      ← Cyber-company source
-└── TriMMC/         ← Meta Controller（原 TriMC，2026-09 改名；兼容面沿用旧名过渡）
+└── TriMMC/         ← M 面服务域主控（daemon sg 8712·原 TriMC，2026-09 改名；兼容面沿用旧名过渡）
 ```
 
 All modules are sibling directories. Use `../<module>/` for cross-repo references.

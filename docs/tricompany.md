@@ -44,7 +44,7 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 必须保持以下边界：
 
 - TriCompany 不是中央战略仓，不替代 `BusinessStrategy` 做总体商业裁决。
-- TriCompany 不是服务域主控；现行运行面为 M/R 双面（服务域=`TriMMC`+`TriRMC`，本地域=`TriMLC`+`TriRLC`；M面=claude code runtime 实然·现役，R面=agent-core 应然·主开发中）。
+- TriCompany 不是服务域主控；现行运行面为 M/R 双面（服务域=`TriMMC`+`TriRMC`，本地域=`TriMLC`+`TriRLC`；M面=claude code runtime 实然·现役，R面=agent-core 应然·主开发中）。四名统称（2026-11-04 CEO 概念审核令·联审零分歧）：TriMMC=M 面服务域主控（daemon sg 8712）·TriMLC=M 面本地域主控（本机 8713）·TriRMC=R 面服务域主控（河源 8710）·TriRLC=R 面本地域主控（本机 8711）——统称=面域控制器族（daemon+cli+harness）；`TriMC`≠本族（入口/Agent Loop 产品模块）；术语正身=`TriCompany/docs/registry/company-governance-state.md`〈四控制器统称术语〉节。
 - 【历史】原「Copilot-host live/本地正式接管/TriMC 正式宿主切换」叙事已退役（2026-09-11 LG-034⑤e）；宿主切换仅 M面经 fade 渲染链。
 - Hermes 已形成分层设计、原型和多层验证，但不能写成生产级 Hermes 已完成接入。
 - TriCompany 公司宪章已生效，不等于 TriCompany 的正式中央模块地位已经由中央战略完成裁决。
