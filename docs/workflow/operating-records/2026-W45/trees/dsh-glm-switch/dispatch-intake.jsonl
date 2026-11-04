@@ -1,0 +1,3 @@
+{"ts":"2026-11-04T07:45:05Z","local_ts":"2026-11-04 15:45:05 +0800 (date 现查原值·写前粘贴·勘正：初稿 ts 系手写预估违例·本案认领)","type":"intake","from":"m-cos","item":"dsh 换栈实施启动令 15:30:25+0800（CEO 15:29 裁 B 路径生效·锚意见㊿+26）","action":"实施单落卷+派工 SDE·本席门禁"}
+{"ts":"2026-11-04T07:45:57Z","type":"dispatch","to":"m-sde","item":"实施单 cto-dispatch-order.md 派工(commit 43cd92e54·五要件五工序·工序 1 勘定回执制·试跑 gate PASS 后方切现役)","gate":"CTO"}
+{"ts":"2026-11-04T07:46:17Z","type":"report","to":"m-cos","item":"派工回执(无需回执·候毕报·毕报走门禁经 COS 转呈)"}
