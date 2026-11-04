@@ -1,4 +1,8 @@
 # Phase C W1（移动端 8 行版）
+- sourceOfTruth: 本文件（archive 归档件·历史冻结面）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 1) 结论：W1 已完成并达到 DoD，Phase C 进入持续执行。
 2) W1-1：`tsc` + `daily-smoke` 通过。

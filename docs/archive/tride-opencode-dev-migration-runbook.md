@@ -1,4 +1,8 @@
 # Tride → opencode-dev 迁移执行手册（可回滚）
+- sourceOfTruth: 本文件（archive 归档件·历史冻结面）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 更新时间：2026-02-27
 

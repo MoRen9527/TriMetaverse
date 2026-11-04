@@ -1,4 +1,8 @@
 # TMV Phase 1 Execution Plan（6 个月执行与商业计划）
+- sourceOfTruth: 本文件（archive 归档件·历史冻结面）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 ## 文档定位与上游依赖
 

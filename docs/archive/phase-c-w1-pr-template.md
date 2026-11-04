@@ -1,4 +1,8 @@
 ﻿# Phase C W1-4 最小 PR 描述模板
+- sourceOfTruth: 本文件（archive 归档件·历史冻结面）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > 用途：满足 W1-4“架构调整提交附带四重回归证据”。
 

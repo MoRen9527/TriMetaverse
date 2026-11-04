@@ -1,4 +1,8 @@
 # 三元宇宙（TriMetaverse, TMV）
+- sourceOfTruth: 本文件（archive 归档件·历史冻结面）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 ## 三元宇宙的定义
 

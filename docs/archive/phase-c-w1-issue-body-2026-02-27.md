@@ -1,4 +1,8 @@
 ﻿# [Phase C] W1 完成回报（可直接贴 Issue）
+- sourceOfTruth: 本文件（archive 归档件·历史冻结面）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 ## 结论
 
