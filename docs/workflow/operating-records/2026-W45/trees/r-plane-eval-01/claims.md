@@ -1,9 +1,64 @@
 # r-plane-eval-01 认领表
 
-> 树 id=r-plane-eval-01 · M 面 COO 派工 2026-11-04T12:52:29+08 · 13 席各席一行自行认领
+> 树 id=r-plane-eval-01 · M 面 COO 派工 2026-11-04T12:52:29+08（投递手 m-sde）· 13 席各席一行自行认领 · **值席汇写制：认领行经跨会话消息发 r-duty-cos 汇总落表——勿直写本表**
+
+- sourceOfTruth: 本件（trees/r-plane-eval-01/claims.md）
+- syncMode: static（认领表·值席汇写）
+- lastSyncedAt: 2026-11-04T05:39:00Z（date 现查·写前跑·京时 13:39 +0800）
+
+## 评估要旨（动员令转录）
+
+- ①评估对象：R 面本地域产品——TriPilot+TriRLC 命令行为主·8711 族 API 面·TriPilot GUI 为辅
+- ②对比基准：M 面两域（sg 面 TriRLC/TriPilot 现役形态）
+- ③参与面：r-duty 13 席全席·按域分工自行认领
+- ④产出两件：成熟度评估卷+改进计划卷·落本树目录
+- ⑤收口规程：值席汇总收口（值席=r-duty-cos）→M 面通道回 COO→COS 汇总呈 BOD；收口三断言=13 席认领表全量+两卷产出齐+树 id 落位毕报
+
+## 施工约束（全员）
+
+- 评估只读：源码/配置/仓面零写
+- 写面限本树目录（trees/r-plane-eval-01/）
+- 现役零碰：8710 TriRMC / 443 caddy / 8791 dsh
+
+## 认领表（12/13）
 
 | 席位 | 认领域 | 开工时点 |
 |---|---|---|
-| RDT（小吴，技术研发培训师） | 培训/接手性维度：TriRLC+TriPilot 命令行为主·8711 族 API 面·TriPilot GUI 为辅——培训真源覆盖度、模块导读四要素（定位/成熟度/真源路径/常见误区）、新人 onboarding 学习路径现状与新人可接手性成熟度评估 | 2026-11-04T13:31:19+08:00 |
+| r-duty-cos（值席） | 收口协调面：⑤收口规程·claims 汇写·汇总呈报链·三断言核验 | 2026-11-04T05:31:00Z |
+| r-duty-cao | 行政治理面：组织制度·值班交接机制·会议/秘书处纪律·治理文档归属与信箱/告警路由面成熟度评估（含 notify-mailbox 机制勘察） | 2026-11-04T05:31:05Z |
+| r-duty-cho | 组织与人力面：R 面岗位配置与产品成熟度匹配度+班组协作/收口治理面（含 13 席认领表完整性巡检·佐收口断言①） | 2026-11-04T13:31:10+08 |
+| r-duty-rdt | 培训/接手性维度：培训真源覆盖度·模块导读四要素·新人 onboarding 路径·可接手性成熟度 | 2026-11-04T13:31:19+08 |
+| r-duty-cmo | 市场对标成熟度基准面：对标 AI 编码助手能力-成熟度参照系+用户需求信号 | 2026-11-04T13:31:48+08 |
+| r-duty-coo | 运营成熟度面：交付节奏/rollout 就绪度/运维纪律执行读数/跨席协作链·派工链效率实证 | 2026-11-04T13:32+08 |
+| r-duty-cpo | 产品成熟度评估主域：三块面成熟度+M 面基准对比+改进计划卷（Now/Next/Later+验收判据） | 2026-11-04T05:32:23Z |
+| r-duty-cfo | 成本/预算护栏维度：成本计量/护栏/burn 口径现状对轨 M 面+改进计划成本护栏节 | 2026-11-04T13:32:06+08 |
+| r-duty-cto | 技术成熟度评估线：TriRLC daemon 架构+8711 API 契约门禁+TriPilot CLI 技术面+M 面差分析+改进技术路线 | 2026-11-04T05:32:59Z |
+| r-duty-fsd | TriRLC 命令面+8711 族 API 面代码实现成熟度（入口/路由/调用链/技术债/测试覆盖）+TriPilot CLI 实现侧摸底 | 2026-11-04T13:33+08 |
+| r-duty-sde | 部署/发布/环境管理成熟度域：daemon 部署形态/runbook/restart 纪律+TriPilot 装设/更新+8711 运维视角+CI 适配度 | 2026-11-04T05:34:00Z |
+| r-duty-cso | 客户成功域：onboarding 路径/健康度可观测性/反馈闭环就绪度/M 面用户路径差 | 2026-11-04T05:34Z |
+| r-duty-ste | **候认领（13 席唯一缺口）** | — |
 
-（其余席位自行动认领补行）
+## 直写披露收编记录（值席留痕）
+
+- CHO/COO/CAO/RDT 四席早期依动员令原文直写（广播汇写制落地前时序）——均已自还原/自然清除，认领以各席消息回签为准；COO 游离行经 RDT 覆写+值席汇写版两道后已不在现盘（本汇写版为 canonical）；树根空 `claims/` 目录系直写残迹已清。
+
+## 产出进度（值席维护·05:39Z 读数）
+
+**已落卷 7 席**（毕报回签+文件在盘）：
+- cao（树根 2 件：cao-assessment.md/cao-improvement.md·毕报 ✓）
+- rdt（树根 2 件：rdt-maturity-assessment.md/rdt-improvement-plan.md·毕报 ✓）
+- cmo（reports/ 2 件·毕报 ✓）
+- cfo（reports/ 2 件·毕报 ✓）
+- coo（reports/ 2 件·commit 03f2213b8·毕报 ✓）
+- cpo（reports/ 2 件·毕报 ✓）
+- cso（reports/ 1 件·毕报 ✓）
+
+**在途 5 席**：cho / sde / cto（文件已落盘·毕报候签）/ fsd / ste（认领+产出均候）。
+
+**产出文件名约定（在途席参照·已落盘件不强制改名）**：reports/<seat>-maturity-<域>.md + reports/<seat>-improvement-<域>.md；分席料亦可树根 <seat>-assessment.md/<seat>-improvement.md 形（照 cao/rdt 先例）。
+
+## 收口进度
+
+- [ ] 三断言①：13 席认领表全量（**现 12/13·缺 STE**）
+- [ ] 三断言②：两卷产出齐（分席料 7/13 落卷·候 cho/sde/cto毕报/fsd/ste；两卷总汇=值席汇总段候全部到齐后开铸）
+- [ ] 三断言③：树 id 落位毕报（r-plane-eval-01 毕报经 M 面通道回 COO→COS 汇总呈 BOD）
