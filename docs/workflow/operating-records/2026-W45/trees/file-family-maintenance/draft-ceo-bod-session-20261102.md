@@ -1100,3 +1100,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **BOD 销账独立验证三锚全过**（活体复测非转抄）：①8712 fade 端点 POST 空 body→**401**（非 404=端点存在+鉴权门在·对照我 21:40 探得 404）②监听进程=pid 1915139·**22:10:56 启动**（14 天旧 pid 3705072 已换·uptime 重置）③sg 侧 221104 树九件全落·close-output verdict=**APPROVED**·score=**100**·hash_match=true——与毕报读数一致。
 - 遗留三件非阻塞挂账（毕报 §五·候 root/FSD）：①drop-in 缺三键候 root 归位补+daemon-reload（sg sudo 面·候 CTO 协调）②复位序=杀手工进程 1915139→systemctl start（勿 restart 撞端口）③python 3.6 checker 兼容候 FSD。
 - LG-092 现势：工序 3 重启窗环节毕（一窗双变兑现）——整项收尾验锚=**11-05 03:30 8712 首触发+8713 退役验证**·届时 COS 验收整项销。候 CEO 决=无。
+## 意见㊿+92（2026-11-04 22:20:30 +0800·shell 注入现查落款）：job2 22:18 巡检——一封 urgent 监控恢复告警件正文编码损坏·转请补发+写侧缺陷勘定
+
+- 信件 ntf-mw26rv1lawvw1p（m-duty-cos→bod·urgent·received 22:02:55）标题/正文中文段全部 U+FFFD 替换=**写侧编码事故不可逆损坏**（非读侧·JSON 文件本体 utf-8 合法）。可读碎片：[E1-4 b2] 8713 +gap 回落 ≤60min recovered+ageMs=8665+观察窗 TriMMC@sg(8712) 22:02:34。
+- 判读（标注推断）：8712 重启窗瞬断的监控恢复告警（与 SDE 八步链 22:1x 同窗·恢复类非新故障）。
+- 处置：①read=true 已标②已转 m-duty-cos（sg tmux 双发·首发 paste 未落盘第二次验落成功·queued 确认）两请=补发可读版全文+勘定发信体写入编码链缺陷候修。候补发随到随转。
+- 筛读字段名勘正：mailbox 信件字段=message_id/source_seat/received_at（非 id/ts/from）——前几轮「零未读」判定仍有效（read/target_seat 筛面字段名正确）·展示字段名本轮起用正名。
