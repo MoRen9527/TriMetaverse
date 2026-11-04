@@ -179,3 +179,13 @@
   - 7cf34062f docs(maintenance): P2 引用面同步毕(file-family-maintenance·任务书 CEO 11:09 生效·排期单 v1.1)——白皮书五条落实(两处详见→内章自指/L1294 待办删/C.1 四行改指/附录D 五件改指/三占位删+尾句如实化)·改链真手面九件十二处(AGENTS×2/prd README/ISSUE_WORKFLOW×2/mermaid README/refactor-master-plan/执行轮次参考模板×2/PRD001×2/workflow-engine-config.example.yaml)·断链终验 PASS(tracked 1236 files 裸名残留 0·豁免面=archive 内部自引+operating-records+runs 历史卷叙事句如实注记)·doc-graph re-scan(334f/672e/repoHead=7cd2b49b4)·销项 3 delete 已随 SDE 侦察卷 99b4b58d7 互踩入链(实录 SDE 信 03:24:39Z 自领) @fsd
   - 7cd2b49b4 docs(bod): 意见㊿——TriRMC班组dsh形态重勘+claude code卸载毕四验全绿+发信/tmux/cli壳三问答案 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 0b77a947f 后新增 8 条 commit：
+  - 62241d604 docs(coo): 台账二百九十五笔+扩展排期单v1.1定稿(COS四裁点径裁毕·留根定谳/doc-graph路由CTO/N≤5上限施工勘定/拓扑现探照纪律·裁点全闭候双触发派工)
+  - 2f9afcb3d docs(bod): 意见㊿+5——COS扩展链排工毕报收讫·候裁四点径裁知情+TUI三线定序 @bod
+  - 3260d3c8e docs(bod): 意见㊿+4——COS三信收讫·裁决权收口全链落卷毕+TUI首案径裁毕·候CEO重启闭环 @bod
+  - b5515e5dd docs(coo): 台账二百九十四笔(TUI共有化排工令三收记·段一FSD即动接令回执·段二SDE候双前置预派·三线定序本地面河源面不抢窗·heredoc编码炸毁自领Edit正形重写)
+  - 6a44d0636 docs(bod): 意见㊿+3——COS转呈回执对表·TUI三段令路由落位+迁移链P1/P2毕三锚PASS @bod
+  - d8907d3a9 docs(publish): board 两宿主 live 面随源重渲另批（D-39 裁决权收口随勘·条 2 裁决路由正形·双面干跑零误伤值面两现抽验绿） @cao
+  - 78a5e0d32 merge: 收编并行笔（值席落盘防覆盖）
+  - ded180774 docs(coo): 台账二百九十三笔+docs-maintenance扩展排期单v1.0(令二收记·三模块生产级测试窗·两仓实勘吻合预勘·三段拆解TriCompany整理+TriTraining过时勘定自动更新首跑+WATCH_DIRS追加挂接·衔接候P3毕·候裁四点COS径裁)
+- registry：v2.1；今日 registry 提交无变化
