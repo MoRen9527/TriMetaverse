@@ -198,6 +198,42 @@
 
 **锁笔终态**：TriTraining **e40c069**（e40c0692a94487b01ae7bce301e0736f7ed84533·dev·070f4de..e40c069 双通道 push 双验吻合·message 带工单 16 条+补笔 3+review 双信链·SDE 探针件未入 add）。性能读数（COO 扩批令要件·FSD 侧）：开工锚 14:20:26Z→毕 42min 三件全谱含终扫+补笔；review 侧：主体实勘+补笔快验两阶段·独立命令面四轮。首跑零 rework 纪录批二延续（判据⑤⑥⑦自检+FSD 收口自获补笔 1·review 面零勘改单·三补笔系留置裁定非缺陷返工）。
 
+## 勘十二 · R1（TriTraining 批三收尾）对表要点单（COO 派令 b3079982 承接·RDT 勘定供数·FSD 施工勘定对表用）
+
+**R1 性质辨析**：批二=源码漂移锚级 named-drift（引文逐字复抄）；**R1=内容级对表**（课程内容 vs 管线/CLI 现役演进）——工单形态=对表要点+判定判据+真源指引，非逐行 named-drift；**FSD 施工含活体现勘**（禁推定照行）。两轮拆（10+3）·新回滚锚 **e40c069**（070f4de 禁再用·COO 344 笔定谳）·自报必注 grep 模式口径（勘九承袭）。
+
+### 件组 1：host-publish 系 4 件（course/lab-manual/lesson-contract/lab-contract·内容时锚 2026-06-14）
+
+- 对表基准：`TriMetaverse/docs/training/tricompany/03-source-publish-live-链路.md`（同主题后出课程件·现役链路口径）＋01/02/04 邻件。
+- 已知演进点清单（教程 6-14 时锚早于全部）：13 席 session-body 面（--host 渲染管线）·宿主双位发布拷贝（.claude/agents+.github/agents·真源=TriCompany/source-agents/）·D 系合同（D-47 信面落款/D-26 简介形）·binding profile 单点双宿主（宿主绑定层不入源侧五件套）。
+- 判定判据：教程步骤 vs 现役 source-publish-live 链路逐段对表——**叙述形漂移改写/引文与历史蓝图档案化**（批二判据承袭）；lesson/lab contract 两件重点验「验收锚」与现役工件清单对表（appendix-a-工件清单与引用规则.md 可作对照）。
+
+### 件组 2：source-kit 系 4 件（同构四件套）
+
+- 对表对象：employee-source-kit CLI **现役命令面活体现勘**（CLI 真入口候 FSD 勘定——TC 根 package.json 无 bin 命中·禁按路径直觉推定入口·探到后在要点单回执补锚）。
+- 判定判据：教程每条命令逐条跑 `--help` 对表（活体优先诊断法）——参数/子命令/输出形态漂移逐条列；跑不通的命令直接定性过时并给现役替形。
+
+### 件组 3：beginners-guide §10 三规划项现势确权
+
+- item1「当前仍是拷贝式发布」疑部分过时（勘六登记）：旁证=员工 session-body footer 系 `--host` 统一渲染管线活体+ade-consolidation-proposal :68 已载 --host 规格——**候 FSD 发布管线现勘后定性 rewrite**（部分过时=确权后改写非全翻）。
+- item2/item3 同法确权：各规划项逐条判「已落地/部分落地/仍规划」三态+as-of 头记确权结论。
+
+### 件组 4：lesson-lab-contract-baseline
+
+- 对表对象：TriTraining 根 `AGENTS.md`（合同基线件的真源面）——判「现役观察」升格 or 维持：基线内容 vs 现役 lesson/lab contract 实件（R1 件组 1/2 的 contract 两件就是活体样本）对表。
+
+### 件组 5：training-pack-migration-plan
+
+- 定性判据：迁移落地态——training-pack 实际落位形态（TriTraining/docs/training/ 现目录即落地结果）vs 计划件叙述——定性「历史档（迁移已毕）」or「在役计划」·定性后归档注 or 保留现役。
+
+### 件组 6：01-小白版复核（轻·预期零改动）
+
+- 全景图+四 daemon 正名面（TriMC×0 预期·面扫 grep 裸名口径自报）；勘三「现役（观察）」维持或按复核读数调级。
+
+### review 关卡承袭+R1 增补
+
+批二七条承袭＋R1 增补：⑧活体现勘读数随件留痕（命令跑不通=如实记·禁「应该能跑」）；⑨两轮拆（10+3）每轮毕报独立 review·性能读数分轮累计（COO 344 笔③要件）。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
