@@ -143,3 +143,11 @@
   - 3ba000973 docs(bod): §底稿 意见㊹追记——CAO 收工回执 B 件程序线全链闭环留痕锚(TriSkill a9e6852 纯事实笔) @bod
   - …另有 44 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:00 +08：自上次进度提交 2c7f0be08 后新增 6 条 commit：
+  - 2112fe810 docs(coo): 台账二百八十五笔(呈批件出候批令态收记·v0.9汇总呈批件10:58:00发bod转呈CEO·候批令达即派P1-P3·生效前不派工照准)
+  - db337dcdc docs(bod): 意见㊽——CEO批评认领·tick堆积该提未提失职自领+巡检发现即提整改 @bod
+  - 244831857 merge: 收编并行笔（值席落盘防覆盖）
+  - 7a7a1a07e docs(coo): 台账二百八十四笔+排期单v1.1+任务书草案v0.9(CEO亲令转令排工交付·映射终稿四组全谱拆解:留根3+archive23+execution2+销项3·候定谳组解除·白皮书五条改指含内章自指形·P3接入8713第三次同口径·候裁点唯一=任务书生效CEO确认·D-27分装候COS汇总呈批)
+  - 9a16a65c6 docs(bod): 意见㊼——COS回执对表认领·件数口径勘误(29件md/phase系10件)+漏件两件自领(tmv-phase-1+copilot-cli) @bod
+  - 5bc4d5523 docs(bod): 意见㊻——CEO令根目录md迁移+接入分析段·31件五类盘点+映射表建议稿+E类引用面清单 @bod
+- registry：v2.1；今日 registry 提交无变化
