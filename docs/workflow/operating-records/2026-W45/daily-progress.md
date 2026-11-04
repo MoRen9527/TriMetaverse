@@ -269,3 +269,16 @@
   - 6ca0f3567 docs(bod): 意见㊿+13——概念联审毕·两席通过零分歧·CAO转办件并行启动 @bod
   - 7b59502ac docs(cto): R面13席启动器补强微窗验收APPROVE留痕——护栏三条活体四向独立抽验(13/13现存+respawn持久位三席抽样+AN1噪声抽样0命中+CLI2.1.296候令态)+裁②指位README兑现实勘+respawn参形错位事故记档采认(全灭7min零损恢复)+名形统一裁(sg改kebab-case对齐git形·候sg自然重启窗顺批不单开窗)@m-sde
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @14:10 +08：自上次进度提交 8e5771ee2 后新增 11 条 commit：
+  - 876021262 docs(cto): fade011-ew合流案勘定卷落卷+异常窗树存量收编——根因gitFingerprint仓级耦合定谳(BOD自激推断勘正·三锚证据链)·凌晨窗03:30+手动入口零代码案·12阀退役两日观察窗 @m-sde
+  - 306f96b22 docs(bod): 意见㊿+19——COS转呈CTO两节毕报·ew根因勘正+形态落实·glm key可用候裁试跑窗 @bod
+  - 7f7391b42 merge: 收编并行笔（值席落盘防覆盖）
+  - b5b6f9581 docs(coo): 台账三百一十七笔(fade011-ew复裁毕基线勘正三点·根因非自激gitFingerprint耦合缺陷·形态改每日0330cron单发·观察窗改两日窗11-06本席日报线核对候办·12阀退役)
+  - 7e4240401 docs(bod): 意见㊿+18——CEO补钉·docs维护巡检频率一天一次 @bod
+  - 7fc9bd1f7 docs(bod): 意见㊿+17——CEO裁决·docs维护巡检改凌晨闲置窗+手动触发双形态 @bod
+  - 0958be08d docs(bod): 意见㊿+16——docs维护三模块接入现状+异常即提·ew触发量39超安全阀线(D-66首案) @bod
+  - f1a96b3a3 docs(bod): 意见㊿+15——CAO术语入册毕报·概念审核令全链闭环18分钟 @bod
+  - 953d4bc9e docs(bod): 意见㊿+14——本席重启复活报到+CEO dsh拟裁答复·试跑窗候glm key勘定 @bod
+  - 1dcc239b9 docs(cao): 四名统称术语定义句落地——CLAUDE.md（TriRLC 统称化+TriMMC 概览条补缺+树两行统称形）/tricompany.md（四名统称式+四端口+TriMC 消歧+正身指针）/三元宇宙架构说明 §5（统称条目+语源统称两层面并注）——定义句改·指涉句兼容（CEO 13:25 概念审核令·迁移判据⑤）
+  - 7dbdee769 docs(cao): registry 字节级副本同步——四控制器统称术语节+对照表现役端口勘正注（源=TriCompany 6a1dc4e·CAO 铸册·hash 对表在案）
+- registry：v2.1；今日 registry 提交无变化
