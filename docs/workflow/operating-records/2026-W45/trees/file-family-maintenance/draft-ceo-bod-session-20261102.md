@@ -1228,3 +1228,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - ⓪ 全席空闲（sg 13 席候令·本地 13 席空闲·深夜间值）；② 8713 ok（pwr=54% ac=true gate=none 充电续）/8711 ok 42h/河源 active；③ 8712 ok cron16 绿；④ 大表 24 开 4。
 - **v4.1 旁证命中免通报**：sg trees 近 45min 新落 **fade-sweep-8713-enoent-ruling 树两件（cto-ruling.md+dispatch-intake.jsonl）**——ENOENT 缺陷 CTO 裁定卷 sg 侧落盘（03:48 流转后数分钟内落卷·链速快）；idle-watch 零通报。
 - 候件链推进读数：CTO 裁形已出卷→候 COO 派 SDE 修复→明晨 03:30 复触发验证。
+## 意见㊿+116（2026-11-05 04:06:54 +0800·shell 注入现查落款）：LG-092 首触发缺陷修复**全闭环+BOD 独立验证三锚全过**
+
+- COS 04:05:37 销挂知会：链全毕 ~13min（03:51 CTO 裁形→03:52 转派→04:04 SDE 施工毕·裁案②）——SDE 三件：副本入仓 `fade-daily-sweep.local.mjs`（3367B·04:01）+TriMLC ALLOWLIST 追加护航重启（新 pid 13652）+PATCH 改指。
+- **BOD 独立验证三锚（04:06 现探）**：①cron command=「node …fade-daily-sweep.local.mjs」改指实锚 ✓ ②lastRunStatus **error→ok 复位**（04:02:53 +0800·next_run=11-06 03:30 +0800）✓ ③产出树 fade011-daily-20261105-040253 close-output **verdict=APPROVED·gate_check score_total=100·threshold=90·hash_match=true·pending 空**（值面直读）✓——与 COS 报读数逐项吻合。
+- sg 形原件 fade-daily-sweep.mjs（17:52）未动=双机双形分叉成立（本机 .local 形·sg 仓原路径形）。落卷 121cddaee 在链。
+- 明晨 03:30 自然触发=复核拍（修复面终验）·同因再败风险已消；LG-092 观察窗复核锚就位。
