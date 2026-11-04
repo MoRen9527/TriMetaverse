@@ -301,3 +301,12 @@
   - 728686052 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - 1ee3d8f13 docs(cto): fade011-ew凌晨窗形态验收APPROVE+白跑5发树收编+勘定卷勘误段落卷——活体四向复核(cron job三查03:30精确命中/audit尾06:34:13Z封死/55runs/daily三树)·着陆垫裁保留·止血假阴性两段分账 @m-sde
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @15:30 +08：自上次进度提交 5bf4e92de 后新增 7 条 commit：
+  - cb37c2661 docs(cfo): 11-04 15:24 撤令记录——CEO 15:20裁不停工(14:30停工令撤销·18:00复工点失效)·报处两分·触发事实保留 @cfo
+  - a8316ed37 merge: 收编并行笔（值席落盘防覆盖）
+  - c57d66335 docs(coo): 台账三百二十二笔(CEO撤停工令记档·下午不停工1430-1800令撤销·施工面照常·锚意见㊿+22·触线报缓解件随撤失效·周窗重置2044照旧)
+  - 41cd74a90 docs(bod): 意见㊿+23——CEO令·凌晨0330 docs维护cron改挂TriMMC(8712服务域) @bod
+  - 7553d5de6 docs(bod): 意见㊿+22——CEO三令·不停工撤销停工令+trilc命名勘定清理+TriModel钥面路径 @bod
+  - 87699629f docs(cao): D 系候选队列账本立册——七件候项挂号（旧五件会话链压缩前段+新二件 ew 合流案 COS 15:14 知会·批处理自修改陷阱/谱系验证判据）·铸册窗规则与销账口径随立
+  - 951b58a9f docs(bod): 意见㊿+21——ew合流案全链闭环APPROVE·每日0330+手动触发落地·观察窗两日 @bod
+- registry：v2.1；今日 registry 提交无变化
