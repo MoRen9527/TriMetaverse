@@ -1,10 +1,10 @@
 {
  "_meta": {
   "files": 334,
-  "generatedAt": "2026-11-03T20:49:34+08:00",
+  "generatedAt": "2026-11-04T11:32:06+08:00",
   "generatedBy": "scripts/doc-graph-scan.py",
   "lastCommitSource": "ok",
-  "repoHead": "697ca7d6a",
+  "repoHead": "7cd2b49b4",
   "spec": "docs/文档治理与真源文件系统.md §3.4.1 层四"
  },
  "externalRefs": {
@@ -18,6 +18,21 @@
    "TriCompany/source-agents/board/agent-body.agent.md",
    "TriCompany/source-agents/chief-technology-officer/session-body.agent.md",
    "TriCompany/tricompany.md"
+  ],
+  "docs/archive/phase-c-pilot-record-2026-02-27.md": [
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-023331.json",
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-140502.json",
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-140748.json",
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json"
+  ],
+  "docs/archive/phase-c-w1-issue-body-2026-02-27.md": [
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json"
+  ],
+  "docs/archive/phase-c-w1-pr-template.md": [
+   "TriPilot/artifacts/acceptance/daily-smoke-YYYYMMDD-HHMMSS.json"
+  ],
+  "docs/archive/phase-c-w1-weekly-summary-2026-02-27.md": [
+   "TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json"
   ],
   "docs/engineering/DESIGN.md": [
    "TriCompany-host-assets/docs/engineering/DESIGN.md",
@@ -54,6 +69,10 @@
   "docs/execution/fade-007-incident-sop.md": [
    "TriCompany/docs/engineering/fade-protocol-spec.md",
    "TriCompany/docs/engineering/fade-registry.md"
+  ],
+  "docs/execution/fade-011-automation-phase2-plan-20261103.md": [
+   "TriCompany/docs/engineering/ade-full-lifecycle-implementation-plan.md",
+   "TriCompany/docs/engineering/fade-protocol-spec.md"
   ],
   "docs/execution/lg-016-governance-memory-analysis.md": [
    "TriCompany/docs/engineering/governance-memory-index.md"
@@ -377,29 +396,9 @@
    "TriCompany/docs/registry/product-state.md",
    "TriCompany/docs/workflow/code-review-standards.md",
    "TriCompany/tricompany.md"
-  ],
-  "phase-c-pilot-record-2026-02-27.md": [
-   "TriPilot/artifacts/acceptance/daily-smoke-20260227-023331.json",
-   "TriPilot/artifacts/acceptance/daily-smoke-20260227-140502.json",
-   "TriPilot/artifacts/acceptance/daily-smoke-20260227-140748.json",
-   "TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json"
-  ],
-  "phase-c-w1-issue-body-2026-02-27.md": [
-   "TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json"
-  ],
-  "phase-c-w1-pr-template.md": [
-   "TriPilot/artifacts/acceptance/daily-smoke-YYYYMMDD-HHMMSS.json"
-  ],
-  "phase-c-w1-weekly-summary-2026-02-27.md": [
-   "TriPilot/artifacts/acceptance/daily-smoke-20260227-155936.json"
   ]
  },
  "nodes": {
-  "90天收入突击计划.md": {
-   "citedBy": [],
-   "cites": [],
-   "lastCommit": null
-  },
   "AGENTS.md": {
    "citedBy": [
     "docs/execution/agent-governance-alignment-design.md",
@@ -424,7 +423,8 @@
    "cites": [
     "CLAUDE.md",
     "README.md",
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
+    "docs/archive/github-app-copilot-rollout-v1.md",
     "docs/github-repo-governance.md",
     "docs/project.md",
     "docs/registry/business-state.md",
@@ -432,8 +432,7 @@
     "docs/tricompany.md",
     "docs/workflow/dynamic-task-tree-protocol.md",
     "docs/workflow/tricompany-agent-roles.md",
-    "docs/三元宇宙架构与模块说明.md",
-    "github-app-copilot-rollout-v1.md"
+    "docs/三元宇宙架构与模块说明.md"
    ],
    "lastCommit": "4bff853f9"
   },
@@ -512,52 +511,170 @@
    "cites": [],
    "lastCommit": "59b3e8b11"
   },
-  "arch-storage-migration.md": {
-   "citedBy": [
-    "AGENTS.md",
-    "docs/engineering/refactor-master-plan-socialfi-core-agent-tristaciss.md",
-    "docs/execution/执行轮次参考模板.md",
-    "docs/prd/PRD001基础平台.md",
-    "docs/prd/README.md",
-    "docs/runs/run-R01-2026-02-28-1515.md",
-    "docs/runs/run-R02-2026-03-01-1120.md",
-    "docs/runs/run-R03-2026-03-02-2024.md",
-    "docs/runs/run-R04-2026-03-03-0025.md",
-    "opentride-opencode-dev-migration-runbook.md",
-    "phase-c-w1-issue-body-2026-02-27.md",
-    "phase-c-w1-weekly-summary-2026-02-27.md",
-    "tmv-phase-1-execution-plan.md",
-    "tride-opencode-dev-migration-runbook.md"
-   ],
-   "cites": [
-    "docs/prd/PRD001基础平台.md",
-    "docs/project.md",
-    "docs/tmv-whitepaper.md",
-    "docs/tricompany.md",
-    "docs/workflow/terminology.md",
-    "docs/三元宇宙架构与模块说明.md",
-    "opentride-opencode-dev-migration-runbook.md",
-    "phase-a-repo-adjustment-runbook.md",
-    "phase-b-b2-b3-5min-checklist.md",
-    "phase-b-github-app-sync-runbook.md",
-    "phase-b-pilot-record-2026-02-26.md",
-    "phase-c-minimal-startup-checklist-2026-02-27.md",
-    "phase-c-pilot-record-2026-02-27.md",
-    "tmv-phase-1-execution-plan.md"
-   ],
-   "lastCommit": "fd80258c2"
-  },
-  "copilot-cli-deepseek-byok-setup.md": {
-   "citedBy": [],
-   "cites": [],
-   "lastCommit": "fc38846a1"
-  },
   "docs/README.md": {
    "citedBy": [
     "docs/文档治理与真源文件系统.md"
    ],
    "cites": [],
    "lastCommit": "1258700f3"
+  },
+  "docs/archive/90天收入突击计划.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "docs/archive/arch-storage-migration.md": {
+   "citedBy": [
+    "AGENTS.md",
+    "docs/archive/opentride-opencode-dev-migration-runbook.md",
+    "docs/archive/phase-c-w1-issue-body-2026-02-27.md",
+    "docs/archive/phase-c-w1-weekly-summary-2026-02-27.md",
+    "docs/archive/tmv-phase-1-execution-plan.md",
+    "docs/archive/tride-opencode-dev-migration-runbook.md",
+    "docs/engineering/refactor-master-plan-socialfi-core-agent-tristaciss.md",
+    "docs/execution/执行轮次参考模板.md",
+    "docs/prd/PRD001基础平台.md",
+    "docs/prd/README.md"
+   ],
+   "cites": [
+    "docs/archive/opentride-opencode-dev-migration-runbook.md",
+    "docs/archive/phase-a-repo-adjustment-runbook.md",
+    "docs/archive/phase-b-b2-b3-5min-checklist.md",
+    "docs/archive/phase-b-github-app-sync-runbook.md",
+    "docs/archive/phase-b-pilot-record-2026-02-26.md",
+    "docs/archive/phase-c-minimal-startup-checklist-2026-02-27.md",
+    "docs/archive/phase-c-pilot-record-2026-02-27.md",
+    "docs/archive/tmv-phase-1-execution-plan.md",
+    "docs/prd/PRD001基础平台.md",
+    "docs/project.md",
+    "docs/tmv-whitepaper.md",
+    "docs/tricompany.md",
+    "docs/workflow/terminology.md",
+    "docs/三元宇宙架构与模块说明.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/github-app-copilot-rollout-v1.md": {
+   "citedBy": [
+    "AGENTS.md"
+   ],
+   "cites": [],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/opentride-opencode-dev-migration-runbook.md": {
+   "citedBy": [
+    "docs/archive/arch-storage-migration.md"
+   ],
+   "cites": [
+    "docs/archive/arch-storage-migration.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-a-repo-adjustment-runbook.md": {
+   "citedBy": [
+    "docs/archive/arch-storage-migration.md"
+   ],
+   "cites": [],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-b-b2-b3-5min-checklist.md": {
+   "citedBy": [
+    "docs/archive/arch-storage-migration.md",
+    "docs/archive/phase-b-pilot-record-2026-02-26.md"
+   ],
+   "cites": [
+    "docs/archive/phase-b-pilot-record-2026-02-26.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-b-github-app-sync-runbook.md": {
+   "citedBy": [
+    "docs/archive/arch-storage-migration.md"
+   ],
+   "cites": [],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-b-pilot-record-2026-02-26.md": {
+   "citedBy": [
+    "docs/archive/arch-storage-migration.md",
+    "docs/archive/phase-b-b2-b3-5min-checklist.md"
+   ],
+   "cites": [
+    "docs/archive/phase-b-b2-b3-5min-checklist.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-c-minimal-startup-checklist-2026-02-27.md": {
+   "citedBy": [
+    "docs/archive/arch-storage-migration.md",
+    "docs/archive/phase-c-pilot-record-2026-02-27.md",
+    "docs/archive/phase-c-w1-issue-body-2026-02-27.md",
+    "docs/archive/phase-c-w1-weekly-summary-2026-02-27.md"
+   ],
+   "cites": [
+    "docs/archive/phase-c-pilot-record-2026-02-27.md",
+    "docs/archive/phase-c-w1-pr-template.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-c-pilot-record-2026-02-27.md": {
+   "citedBy": [
+    "docs/archive/arch-storage-migration.md",
+    "docs/archive/phase-c-minimal-startup-checklist-2026-02-27.md",
+    "docs/archive/phase-c-w1-issue-body-2026-02-27.md",
+    "docs/archive/phase-c-w1-mobile-8lines-2026-02-27.md",
+    "docs/archive/phase-c-w1-weekly-summary-2026-02-27.md"
+   ],
+   "cites": [
+    "docs/archive/phase-c-minimal-startup-checklist-2026-02-27.md",
+    "docs/archive/phase-c-w1-pr-template.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-c-w1-issue-body-2026-02-27.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/archive/arch-storage-migration.md",
+    "docs/archive/phase-c-minimal-startup-checklist-2026-02-27.md",
+    "docs/archive/phase-c-pilot-record-2026-02-27.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-c-w1-mobile-8lines-2026-02-27.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/archive/phase-c-pilot-record-2026-02-27.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-c-w1-pr-template.md": {
+   "citedBy": [
+    "docs/archive/phase-c-minimal-startup-checklist-2026-02-27.md",
+    "docs/archive/phase-c-pilot-record-2026-02-27.md"
+   ],
+   "cites": [],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/phase-c-w1-weekly-summary-2026-02-27.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/archive/arch-storage-migration.md",
+    "docs/archive/phase-c-minimal-startup-checklist-2026-02-27.md",
+    "docs/archive/phase-c-pilot-record-2026-02-27.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/tmv-phase-1-execution-plan.md": {
+   "citedBy": [
+    "docs/archive/arch-storage-migration.md",
+    "docs/prd/README.md",
+    "docs/workflow/ISSUE_WORKFLOW_GUIDE.md"
+   ],
+   "cites": [
+    "docs/archive/arch-storage-migration.md",
+    "docs/tmv-whitepaper.md"
+   ],
+   "lastCommit": "6730bfd85"
   },
   "docs/archive/tricompany-v0.1-design-20260324.md": {
    "citedBy": [
@@ -567,6 +684,69 @@
     "docs/workflow/tricompany-agent-roles.md"
    ],
    "lastCommit": "d0c42b71e"
+  },
+  "docs/archive/tride-opencode-dev-migration-runbook.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/archive/arch-storage-migration.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/trimetaverse.md": {
+   "citedBy": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "cites": [
+    "docs/archive/三元宇宙落地方案.md",
+    "docs/archive/链基础设施选型.md"
+   ],
+   "lastCommit": "6730bfd85"
+  },
+  "docs/archive/三元宇宙价值流动.md": {
+   "citedBy": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "cites": [],
+   "lastCommit": null
+  },
+  "docs/archive/三元宇宙价值流动_old.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
+  "docs/archive/三元宇宙落地方案.md": {
+   "citedBy": [
+    "docs/archive/trimetaverse.md",
+    "docs/tmv-whitepaper.md"
+   ],
+   "cites": [
+    "docs/archive/链基础设施选型.md"
+   ],
+   "lastCommit": null
+  },
+  "docs/archive/元宇宙学院.md": {
+   "citedBy": [],
+   "cites": [
+    "docs/archive/链基础设施选型.md"
+   ],
+   "lastCommit": null
+  },
+  "docs/archive/灵感记录.md": {
+   "citedBy": [
+    "docs/tmv-whitepaper.md"
+   ],
+   "cites": [],
+   "lastCommit": null
+  },
+  "docs/archive/链基础设施选型.md": {
+   "citedBy": [
+    "docs/archive/trimetaverse.md",
+    "docs/archive/三元宇宙落地方案.md",
+    "docs/archive/元宇宙学院.md",
+    "docs/tmv-whitepaper.md"
+   ],
+   "cites": [],
+   "lastCommit": null
   },
   "docs/contracts/README.md": {
    "citedBy": [],
@@ -697,7 +877,7 @@
   "docs/engineering/refactor-master-plan-socialfi-core-agent-tristaciss.md": {
    "citedBy": [],
    "cites": [
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
     "docs/engineering/architecture-socialfi-core-agent-tristaciss.md"
    ],
    "lastCommit": "7d64c5560"
@@ -864,7 +1044,6 @@
   "docs/execution/2026-08-24/audit-campaign/roles/coo-state.md": {
    "citedBy": [],
    "cites": [
-    "TriMetaverse.md",
     "docs/execution/2026-08-24/audit-campaign/roles/cfo-state.md",
     "docs/execution/2026-08-24/audit-campaign/roles/cho-state.md",
     "docs/execution/2026-08-24/audit-campaign/state.json",
@@ -874,9 +1053,7 @@
   },
   "docs/execution/2026-08-24/audit-campaign/roles/cto-state.md": {
    "citedBy": [],
-   "cites": [
-    "TriMetaverse.md"
-   ],
+   "cites": [],
    "lastCommit": "d9420b986"
   },
   "docs/execution/2026-08-24/audit-findings-triage.md": {
@@ -1119,6 +1296,11 @@
    ],
    "lastCommit": "1f9d505b1"
   },
+  "docs/execution/copilot-cli-deepseek-byok-setup.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "6730bfd85"
+  },
   "docs/execution/debug-reset-design.md": {
    "citedBy": [],
    "cites": [
@@ -1276,6 +1458,11 @@
    "citedBy": [],
    "cites": [],
    "lastCommit": "6a489f7d4"
+  },
+  "docs/execution/fade-011-automation-phase2-plan-20261103.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": "cd1a13f6c"
   },
   "docs/execution/fade-doc-drift-candidate-draft.md": {
    "citedBy": [
@@ -1951,10 +2138,15 @@
    ],
    "lastCommit": "b16e4c1a9"
   },
+  "docs/execution/以太坊私链部署.md": {
+   "citedBy": [],
+   "cites": [],
+   "lastCommit": null
+  },
   "docs/execution/执行轮次参考模板.md": {
    "citedBy": [],
    "cites": [
-    "arch-storage-migration.md"
+    "docs/archive/arch-storage-migration.md"
    ],
    "lastCommit": null
   },
@@ -1979,11 +2171,11 @@
   },
   "docs/prd/PRD001基础平台.md": {
    "citedBy": [
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
     "docs/prd/README.md"
    ],
    "cites": [
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
     "docs/tmv-whitepaper.md"
    ],
    "lastCommit": null
@@ -1993,10 +2185,10 @@
     "docs/workflow/prd-branch-delivery-checklist.md"
    ],
    "cites": [
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
+    "docs/archive/tmv-phase-1-execution-plan.md",
     "docs/prd/PRD001基础平台.md",
-    "docs/tmv-whitepaper.md",
-    "tmv-phase-1-execution-plan.md"
+    "docs/tmv-whitepaper.md"
    ],
    "lastCommit": "eb581b655"
   },
@@ -2065,7 +2257,7 @@
    "citedBy": [
     "AGENTS.md",
     "CLAUDE.md",
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
     "docs/registry/business-strategy-evolution-log.md",
     "docs/tricompany.md",
     "docs/workflow/layer-callgraph.md",
@@ -2313,7 +2505,6 @@
   "docs/runs/run-R01-2026-02-28-1515.md": {
    "citedBy": [],
    "cites": [
-    "arch-storage-migration.md",
     "docs/runs/run-R02-2026-03-01-1120.md"
    ],
    "lastCommit": "1258700f3"
@@ -2324,7 +2515,6 @@
    ],
    "cites": [
     "README.md",
-    "arch-storage-migration.md",
     "docs/contracts/observability-event-mapping-v1-alignment-R02.md",
     "docs/contracts/observability-event-mapping.md"
    ],
@@ -2333,7 +2523,6 @@
   "docs/runs/run-R03-2026-03-02-2024.md": {
    "citedBy": [],
    "cites": [
-    "arch-storage-migration.md",
     "docs/runs/run-R04-2026-03-03-0025.md"
    ],
    "lastCommit": "c82eb75a0"
@@ -2344,7 +2533,6 @@
     "docs/runs/run-R03-2026-03-02-2024.md"
    ],
    "cites": [
-    "arch-storage-migration.md",
     "docs/testing/fullstack-testing-framework-R04.md"
    ],
    "lastCommit": "c82eb75a0"
@@ -2382,7 +2570,8 @@
    "citedBy": [
     "AGENTS.md",
     "CLAUDE.md",
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
+    "docs/archive/tmv-phase-1-execution-plan.md",
     "docs/execution/2026-08-24/doc-versioning-governance-rules-draft.md",
     "docs/execution/2026-08-24/mmc-host-driver-design-draft.md",
     "docs/execution/repo-topology-20260831.md",
@@ -2408,18 +2597,14 @@
     "docs/workflow/workflow-runbook.md",
     "docs/workflow/版本策略与经营记录分层.md",
     "docs/三元宇宙架构与模块说明.md",
-    "docs/文档治理与真源文件系统.md",
-    "tmv-phase-1-execution-plan.md"
+    "docs/文档治理与真源文件系统.md"
    ],
    "cites": [
-    "meta-reality.md",
-    "meta-recognition.md",
-    "meta-virtuality.md",
-    "trimetaverse.md",
-    "三元宇宙价值流动.md",
-    "三元宇宙落地方案.md",
-    "灵感记录.md",
-    "链基础设施选型.md"
+    "docs/archive/trimetaverse.md",
+    "docs/archive/三元宇宙价值流动.md",
+    "docs/archive/三元宇宙落地方案.md",
+    "docs/archive/灵感记录.md",
+    "docs/archive/链基础设施选型.md"
    ],
    "lastCommit": "adf57fa7f"
   },
@@ -2584,7 +2769,7 @@
    "citedBy": [
     "AGENTS.md",
     "CLAUDE.md",
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
     "docs/project.md",
     "docs/registry/business-strategy-evolution-log.md",
     "docs/registry/business-strategy-state.md",
@@ -2607,7 +2792,7 @@
   "docs/workflow/ISSUE_WORKFLOW_GUIDE.md": {
    "citedBy": [],
    "cites": [
-    "tmv-phase-1-execution-plan.md"
+    "docs/archive/tmv-phase-1-execution-plan.md"
    ],
    "lastCommit": "7d64c5560"
   },
@@ -3061,7 +3246,7 @@
   },
   "docs/workflow/terminology.md": {
    "citedBy": [
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
     "docs/project.md",
     "docs/registry/business-strategy-evolution-log.md",
     "docs/workflow/archive/workflow-host-followups-and-super-dev-reference.md",
@@ -3372,7 +3557,7 @@
    "citedBy": [
     "AGENTS.md",
     "CLAUDE.md",
-    "arch-storage-migration.md",
+    "docs/archive/arch-storage-migration.md",
     "docs/engineering/tri-dev-test-deploy-decoupling.md",
     "docs/execution/tmv-fade-reading-map.md",
     "docs/project.md",
@@ -3421,209 +3606,6 @@
     "docs/workflow/terminology.md",
     "docs/workflow/tricompany-copilot-host-assets-governance.md",
     "docs/三元宇宙架构与模块说明.md"
-   ],
-   "lastCommit": null
-  },
-  "github-app-copilot-rollout-v1.md": {
-   "citedBy": [
-    "AGENTS.md"
-   ],
-   "cites": [],
-   "lastCommit": "59b3e8b11"
-  },
-  "meta-reality.md": {
-   "citedBy": [
-    "docs/tmv-whitepaper.md"
-   ],
-   "cites": [],
-   "lastCommit": "0a8127819"
-  },
-  "meta-recognition.md": {
-   "citedBy": [
-    "docs/tmv-whitepaper.md"
-   ],
-   "cites": [],
-   "lastCommit": "0a8127819"
-  },
-  "meta-virtuality.md": {
-   "citedBy": [
-    "docs/tmv-whitepaper.md"
-   ],
-   "cites": [],
-   "lastCommit": "0a8127819"
-  },
-  "opentride-opencode-dev-migration-runbook.md": {
-   "citedBy": [
-    "arch-storage-migration.md"
-   ],
-   "cites": [
-    "arch-storage-migration.md"
-   ],
-   "lastCommit": "cd6ef9372"
-  },
-  "phase-a-repo-adjustment-runbook.md": {
-   "citedBy": [
-    "arch-storage-migration.md"
-   ],
-   "cites": [],
-   "lastCommit": "c82eb75a0"
-  },
-  "phase-b-b2-b3-5min-checklist.md": {
-   "citedBy": [
-    "arch-storage-migration.md",
-    "phase-b-pilot-record-2026-02-26.md"
-   ],
-   "cites": [
-    "phase-b-pilot-record-2026-02-26.md"
-   ],
-   "lastCommit": "5eb0ccf5e"
-  },
-  "phase-b-github-app-sync-runbook.md": {
-   "citedBy": [
-    "arch-storage-migration.md"
-   ],
-   "cites": [],
-   "lastCommit": "59b3e8b11"
-  },
-  "phase-b-pilot-record-2026-02-26.md": {
-   "citedBy": [
-    "arch-storage-migration.md",
-    "phase-b-b2-b3-5min-checklist.md"
-   ],
-   "cites": [
-    "phase-b-b2-b3-5min-checklist.md"
-   ],
-   "lastCommit": "59b3e8b11"
-  },
-  "phase-c-minimal-startup-checklist-2026-02-27.md": {
-   "citedBy": [
-    "arch-storage-migration.md",
-    "phase-c-pilot-record-2026-02-27.md",
-    "phase-c-w1-issue-body-2026-02-27.md",
-    "phase-c-w1-weekly-summary-2026-02-27.md"
-   ],
-   "cites": [
-    "phase-c-pilot-record-2026-02-27.md",
-    "phase-c-w1-pr-template.md"
-   ],
-   "lastCommit": "59b3e8b11"
-  },
-  "phase-c-pilot-record-2026-02-27.md": {
-   "citedBy": [
-    "arch-storage-migration.md",
-    "phase-c-minimal-startup-checklist-2026-02-27.md",
-    "phase-c-w1-issue-body-2026-02-27.md",
-    "phase-c-w1-mobile-8lines-2026-02-27.md",
-    "phase-c-w1-weekly-summary-2026-02-27.md"
-   ],
-   "cites": [
-    "phase-c-minimal-startup-checklist-2026-02-27.md",
-    "phase-c-w1-pr-template.md"
-   ],
-   "lastCommit": "c82eb75a0"
-  },
-  "phase-c-w1-issue-body-2026-02-27.md": {
-   "citedBy": [],
-   "cites": [
-    "arch-storage-migration.md",
-    "phase-c-minimal-startup-checklist-2026-02-27.md",
-    "phase-c-pilot-record-2026-02-27.md"
-   ],
-   "lastCommit": "59b3e8b11"
-  },
-  "phase-c-w1-mobile-8lines-2026-02-27.md": {
-   "citedBy": [],
-   "cites": [
-    "phase-c-pilot-record-2026-02-27.md"
-   ],
-   "lastCommit": "3c38c8643"
-  },
-  "phase-c-w1-pr-template.md": {
-   "citedBy": [
-    "phase-c-minimal-startup-checklist-2026-02-27.md",
-    "phase-c-pilot-record-2026-02-27.md"
-   ],
-   "cites": [],
-   "lastCommit": "59b3e8b11"
-  },
-  "phase-c-w1-weekly-summary-2026-02-27.md": {
-   "citedBy": [],
-   "cites": [
-    "arch-storage-migration.md",
-    "phase-c-minimal-startup-checklist-2026-02-27.md",
-    "phase-c-pilot-record-2026-02-27.md"
-   ],
-   "lastCommit": "59b3e8b11"
-  },
-  "tmv-phase-1-execution-plan.md": {
-   "citedBy": [
-    "arch-storage-migration.md",
-    "docs/prd/README.md",
-    "docs/workflow/ISSUE_WORKFLOW_GUIDE.md"
-   ],
-   "cites": [
-    "arch-storage-migration.md",
-    "docs/tmv-whitepaper.md"
-   ],
-   "lastCommit": "eb581b655"
-  },
-  "tride-opencode-dev-migration-runbook.md": {
-   "citedBy": [],
-   "cites": [
-    "arch-storage-migration.md"
-   ],
-   "lastCommit": "1709d94a3"
-  },
-  "trimetaverse.md": {
-   "citedBy": [
-    "docs/tmv-whitepaper.md"
-   ],
-   "cites": [
-    "meta-recognition/以太坊私链部署.md",
-    "meta-recognition/元宇宙学院.md",
-    "三元宇宙落地方案.md",
-    "链基础设施选型.md"
-   ],
-   "lastCommit": "0a8127819"
-  },
-  "三元宇宙价值流动.md": {
-   "citedBy": [
-    "docs/tmv-whitepaper.md"
-   ],
-   "cites": [],
-   "lastCommit": null
-  },
-  "三元宇宙价值流动_old.md": {
-   "citedBy": [],
-   "cites": [],
-   "lastCommit": null
-  },
-  "三元宇宙落地方案.md": {
-   "citedBy": [
-    "docs/tmv-whitepaper.md",
-    "trimetaverse.md"
-   ],
-   "cites": [
-    "meta-recognition/以太坊私链部署.md",
-    "链基础设施选型.md"
-   ],
-   "lastCommit": null
-  },
-  "灵感记录.md": {
-   "citedBy": [
-    "docs/tmv-whitepaper.md"
-   ],
-   "cites": [],
-   "lastCommit": null
-  },
-  "链基础设施选型.md": {
-   "citedBy": [
-    "docs/tmv-whitepaper.md",
-    "trimetaverse.md",
-    "三元宇宙落地方案.md"
-   ],
-   "cites": [
-    "meta-recognition/以太坊私链部署.md"
    ],
    "lastCommit": null
   }
