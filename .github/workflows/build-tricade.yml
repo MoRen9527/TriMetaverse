@@ -8,6 +8,15 @@
 #   6. Creates GitHub Release with artifacts
 #
 # CTO-008-P compatible. Output mirrors build-desktop.ps1 structure.
+#
+# ── 发布前 gate：extension-host-e2e（CTO 裁 2026-11-04T12:16:52Z·拆链定谳·CEO 20:41 双裁提前落）──
+# e2e 已从 TriPilot quality-gate 阻塞链摘出（独立 workflow=TriPilot .github/workflows/extension-host-e2e.yml·
+# workflow_dispatch 形·不做 continue-on-error）——e2e 依赖活体 8711 daemon，CI 无头 runner 本质不匹配，
+# 故本 release 流程不内联 e2e job；发布 readiness 前须 e2e 通过，两条执行入口：
+#   1. dev 机手动跑（活体 daemon 在位·正形入口）：TriPilot 仓 `npm run test:e2e:extension`
+#   2. TriPilot 独立 workflow 手动触发（GitHub Actions workflow_dispatch·CI 面红=既有环境性失败
+#      「8711 daemon should be running/healthz 200/uptime present」断言族·定性采认 CTO 裁令 3·历史红不追责）
+# 发布前 gate 判据=入口 1 dev 机手动跑真绿（与 CTO 毕报门禁同源）——tag 构建前 dev 机跑一发留读数入卷。
 
 name: Build TriCade
 
