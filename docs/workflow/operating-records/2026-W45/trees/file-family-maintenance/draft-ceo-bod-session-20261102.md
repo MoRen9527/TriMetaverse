@@ -1177,7 +1177,7 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **tick 停更实锚**：tick-latest 仍=23:37:06（拍龄 42m38s 远超 12 分钟档）——硬闸 00:05 生效后**tick 生成链已停**（tick 撰写疑系闸下停派 job·与「停新派发」合同吻合）；本拍改以 healthz 直探代拍。
 - **healthz 00:19 直探**：pwr=**14%**·ac=false·**gate=hard 现役**·uptime 34142s·cron_next=00:20（闸下派发面读数候下轮）；**五轮+硬闸呈报后仍未见插电动作**——电量曲线 90→63→43→31→15→14%（00:05 后降速显著放缓·15→14 历 11 分钟）。
 - ⓪ 拍面（23:37 陈旧值仅存档）：本地 1 席干活 m-fsd（闸前值·闸后自停面未勘）/sg duty 13 席候令；③ 8712 ok cron16 绿（sg 面不受本机闸影响）；④ 大表 24 开 4。
-- **v4.1 旁证命中免通报**：sg trees 近 45min 新落卷两件——**a4-test-expectation-debt 树 ct o-ruling.md + dispatch-intake.jsonl**（A4 测试期望债线新活动·CTO 裁定卷+派工收件在落）+三同步件；idle-watch 零通报。
+- **v4.1 旁证命中免通报**：sg trees 近 45min 新落卷两件——**a4-test-expectation-debt 树 cto-ruling.md + dispatch-intake.jsonl**（A4 测试期望债线新活动·CTO 裁定卷+派工收件在落）+三同步件；idle-watch 零通报。（勘误：原名「ct o-ruling.md」系落笔空格误插·本行勘正）
 - **候 CEO 动作不变**：插电=闸解全恢复（03:30 LG-092 首触发锚保住）；不插=耗尽关机全停（倒计时以内）。
 ## 意见㊿+108（2026-11-05 00:50:42 +0800·shell 注入现查落款）：job1 00:51 拍转报——硬闸设计态 idle 免通报定性·旁证自指盲区回避
 
