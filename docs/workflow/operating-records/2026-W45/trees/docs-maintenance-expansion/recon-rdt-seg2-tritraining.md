@@ -181,6 +181,23 @@
 3. **TC testing evidence 21 件+TMV execution 历史档 33 件**=两类「证据/档案形」候选排除件（与四类排除判据第四类同形）——候 FSD 施工勘定归类对表，归类前留在圈内不预排。
 4. **脚本伪影教训自领**：首轮 bash 逐件 spawn 超时（进程开销）→Python 单进程过；rel 拼接漏 `/` 致域串桶（TSV path 列坏·读数列完好）→重扫修复。两轮均为脚本面伪影非数据面，聚合以修复后轮为准。
 
+## 勘九 · 批二 review 关卡全程留痕（N=3 三件·2026-11-04 23:0x-23:1x·终态）
+
+**施工面**：FSD 三件落笔（04 +120/−73·03 +12/−11·course-graph §8.3 +8——后含补笔 +148/−88）·工作区态零 commit 呈 review；护栏 070f4de 在位；SDE 探针件未触碰。
+
+**主体实勘（判据七条·独立验证非凭自报·23:0x 四轮命令面）**：
+1. 残留终扫自跑（裸名 `grep TriMC|TriLC`）：course-graph 唯一命中=L10 meta ✓；03 命中=L8/L9 meta+L16 live（FSD 留置项 a）+L21 引文档案注（合法）；04 命中=L8/L9 meta+L46 MIGRATION 档案括注（合法）——TriMC live 残余仅 L16 一处。
+2. 引文逐字七处抽验零差（判据⑥）：§2 agentLoop L301-307（含行尾 TC-001 注释）/§8 spawn L31-47 PA-2 注释块/§9 常量 :10-14+PathsSchema :27-34+resolver :61-68+主 schema :78-104 骨架标注形。
+3. 锚族十五处吻合：agent-core 六锚（loop :304 `?? 100`·:355-361 `'default'`·AgentEvent 12 种 L160-172 含 continue_round·contract :78·resolver :49·job-executor :41）+TriRLC 四锚（HEAD 44b8a59·:1765-1791 env 旋钮·:5277-5279 backward-compat 原话·:2949 端点+:2978 `Proxy to TriMMC` 注释·:1875 healthz）+微锚五处（:384-388/:390-394/:532/:506-510 TC-1 起/contract L27-34）。行数之争采认 FSD（awk NR=719·wc 末行无 \n 假象定性）。
+4. 判据⑤⑦③对表：每处系工单 #N 锚 ✓；§15 缺口①「已修复 as-of」附 14499e5+旧缺口存档括注 ✓；MIGRATION 蓝图引文除外+演进档案括注 ✓；§11.4 三层纪律+1d52c20 备码不部署诚实注 ✓；§17 基准行 2026-10-02 历史存档+批二复勘并注=演进档案形 ✓。
+5. 工单 #3 两层面定性特别采认：daemon env 缺省 bypassPermissions vs 内核 'default' fail-closed——禁推定现勘执行到位（勘七工单预警点实锚）。
+
+**三留置裁定=三补笔（review 裁定·零新事实全对齐文内既有口径）**：①03 L16 叙述正名 TriMMC ②course-graph §6.1 补两行成四件套 8 行口径（承引 §8.3 已现勘八件）③04 L606 mermaid 宿主标签补 TriMMC 成三家（L44 依赖方向段原文即三家枚举）。六处快验 PASS（23:1x·含 L20→L21 行号顺移披露并验自洽·diff stat +148/−88 对表吻合）。
+
+**读数口径勘正两点（非质量缺陷）+FSD 自领闭环**：终扫模式口径披露义务（裸名 vs 复合 named-drift 模式——L670「命中」系 FSD 复合模式含 `687` 行数锚非 TriMC 字样·模式不同非读数矛盾·实质零漏网两侧一致）；「唯一命中」表述以实际命中集+grep 口径为准。下批自报必注模式。
+
+**锁笔终态**：TriTraining **e40c069**（e40c0692a94487b01ae7bce301e0736f7ed84533·dev·070f4de..e40c069 双通道 push 双验吻合·message 带工单 16 条+补笔 3+review 双信链·SDE 探针件未入 add）。性能读数（COO 扩批令要件·FSD 侧）：开工锚 14:20:26Z→毕 42min 三件全谱含终扫+补笔；review 侧：主体实勘+补笔快验两阶段·独立命令面四轮。首跑零 rework 纪录批二延续（判据⑤⑥⑦自检+FSD 收口自获补笔 1·review 面零勘改单·三补笔系留置裁定非缺陷返工）。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
