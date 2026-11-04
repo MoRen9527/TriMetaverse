@@ -196,3 +196,17 @@
   - c3e1c59c0 docs(sde): P3 event-watch 接入窗施工落卷(首验探针件+首触发 run 树 fade-w-fade011-ew-b19c4b115623 全链五节点·daemon 自动建档)——env 四键 .cmd 装载(CTO 甲裁+四条件·WATCH_DIRS=archive+execution 并集/TREE_ROOT=fade011-ew-runs/INTERVAL=30s/NAME=fade011-ew)·dist 重建·受控重启链全步绿(值面探针 enabled=true·fp=a6a658d1 基线)·315 封 board 子集标 read PASS·首验 APPROVED gated=true 证据在卷·28008 竞态旧 env 实例实录自愈
   - d0cb28ff5 docs(fsd): TUI 共有化段一前置勘定卷落盘(tui-shared-move·COS 排工令 11:51:14·施工前置先行)——react 19 peer 两仓对表(TriRLC 19.2.8 在役/TriCode 承接缺口三件)·vendored ink 随迁清单(212f=171js+26ts+12tsx·裸包全集含 js 面重扫修正首轮盲区)·bun:bundle×12+src/×26 异面定性=import 链不可达残件(dist 实证零拉入·随树平移不进编译)·消费单点 cli.ts L615·跨仓 git mv 不可行实锚差异=SHA 双锚替代如实注记·TriRLC 基线回归 758/758 全绿实证锁定 @fsd
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:20 +08：自上次进度提交 2e47eae76 后新增 12 条 commit：
+  - 2cb73b86d docs(coo): 台账二百九十九笔(TUI段一验收APPROVE976983bd5三gate全过·技术债四条勘定毕TD1转正TD4免勘·registry入册面三要素转CPO·增量知会COS)
+  - f483039ab docs(sde): P3 验收随附两件顺手勘定卷(audit id6 根因=非首见跳变不落行设计留白·末态正确+usage/token 三向全谱不存在=run 链零 LLM API 成本字段)——CTO 16abd9615 随附项·纯读面零触碰
+  - 976983bd5 docs(cto): TUI 共有化段一验收 APPROVE 留痕(tui-shared-move)——三 gate 全过:①对账线 758=654+103+1 零消失(基线实锚 31.8s→迁后 655+103 新家全绿+1 拆件)②react 19 peer 对表(recon 先行 12:00:20<施工 12:08:40)③vendored ink 212f 整迁+19 包机器读锁定+dist 结构同构·技术债四条勘定:TD1 reconciler peer 形确认(宿主单实例机械延伸成立)TD2 ink 族 17 包冗余低优候版本窗 TD3 dist stale 归 clean-build 语义候 SDE 部署窗 TD4 SHA 双锚=方法注记非债·self-caught 三件记实
+  - 0e5395046 docs(coo): 台账二百九十八笔(触发器到线三动作并出·CTO门禁APPROVE16abd9615+FSD段一毕对账线零消失·扩展段一派工+SDE段二触发令+{week}小单并窗·五线并跑转进)
+  - e775e9b7b docs(cto): TREE_ROOT 模板化小单 D-15 链留痕(fade011-ew-week-template)——dispatch 12:13:41+FSD ack 12:14:05 两笔(令序零倒挂自验·三要素锁定·范围划线确认·本窗开工)
+  - e3d8114ae docs(bod): 意见㊿+8——COS合并补呈·CTO门禁毕报闭环(迁移链全闭)+TUI段一毕零红 @bod
+  - 012e9e109 docs(cto): event-watch TREE_ROOT 跨周模板化派工 brief(fade011-ew-week-template)——{week} 占位符 run 创建时展开 ISO 周(根治 env 静态值跨周错落)·向后兼容+fail-closed 两守·gate 四条(展开/兼容/fail-closed 单测+95+回归)·时效赶周日 11-08 换周前·部署面 env 值切换验收毕后重启窗随批不入本单
+  - dbe22f3f8 docs(fsd): TUI共有化段一节点收口报告(node-fsd-tui-move·三锚9dc5355+b0ad344+d0cb28ff5·TriRLC 655/655+TriCode 161/161零红·对账线758=654+103+1零消失·双门PASS)
+  - 16abd9615 docs(cto): P3 event-watch 接入验收 APPROVE 留痕(file-family-maintenance)——三笔链 dispatch/ruling/accept:探针独立复验四键值面全对(enabled/dirs甲裁并集/30s/fade011-ew/独立子树锚)+首验真 run audit 全谱 4 triggered 全 APPROVED gated=true·4 树九键落位(超 SDE 报面 1·报毕施工落卷再触 2·护栏 0.8/min<MAX=2 正常)+315 封 unread=0 独立验+重启链 23644 CIM 对表+28008 已退自愈实证+c3e1c59c0 TMV 锚勘毕·观察项三条(防抖审计缺口 id6/报面快照 vs 探针现势读数纪律/竞态采认)·锚 4 毕四锚齐 COS 收口线就绪
+  - c66e513bf merge: 收编并行笔（值席落盘防覆盖）
+  - e381d11aa docs(coo): 台账二百九十七笔(迁移链收口判毕销账闭合·扩展链接线令到手·候FSD段一毕报单触发器·到线即派扩展段一二+SDE段二)
+  - f21e0522c docs(bod): 意见㊿+7——COS收口终呈收讫·本席终验对表PASS·验讫转呈CEO @bod
+- registry：v2.1；今日 registry 提交无变化
