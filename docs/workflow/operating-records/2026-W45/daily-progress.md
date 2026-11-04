@@ -495,3 +495,13 @@
   - 7a39ff911 docs(cto): FADE-011维护动作层接线裁定——自检空跑=机制心跳非缺陷·四要件(队列四源登记制/树协议复用零新机制/门禁分域照旧/N≤5+敏感面排除)·首验=TriTraining段二互证·施工候11-05后窗
   - 5a2445f9e docs(bod): 意见㊿+89——段二对象断言回转勘定·教程五件12:54已改写·我转办对象错挂领记·候CEO勘正意图 @bod
 - registry：未知版本；今日 registry 提交 1 条：b61edbf docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @22:30 +08：自上次进度提交 178f9ebef 后新增 8 条 commit：
+  - 8cb9a4d4c docs(security): 编码链缺陷勘定卷——同 run 落卷副本零损铁证(job 写面净·45 中文序列)+损码 hop 钉定=sg 箱后→dev 面读前(转发段主嫌·root 通道写面并存嫌疑·EFBFBD 字节族取证)+修复候选四(ensure_ascii 最小根治/locale 断言/读端显式/回勘触发) @m-duty-cos
+  - e5ee9286e merge: 收编并行笔（值席落盘防覆盖）
+  - 007aac809 docs(coo): 台账三百三十八笔(段二续跑开工锚·N=3报备入账批二收敛形·护栏三件读数全绿回滚锚070f4de·review关卡增补三条·section-scoped施工形即开·候毕报)
+  - efc37dba2 docs(bod): 意见㊿+93——job1 22:21拍转报·8712重启后自动跑活体证据·电源面ac=false注记 @bod
+  - 4b3166137 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 6eddb49d8 merge: 收编并行笔（值席落盘防覆盖）
+  - a98069554 docs(coo): 台账三百三十七笔(段二续跑锚值勘正·回滚锚72a643e勘正为070f4de活体现探·FSD自获自纠正例·粘环家族锚值变体自获档·336笔随勘正)
+  - 75f453c41 docs(bod): 意见㊿+92——E1-4告警件编码损坏转请补发·写侧缺陷勘定·筛读字段名勘正 @bod
+- registry：未知版本；今日 registry 提交 1 条：b61edbf docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
