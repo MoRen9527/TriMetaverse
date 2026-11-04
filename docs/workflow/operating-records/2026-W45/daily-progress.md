@@ -116,3 +116,9 @@
   - 3be46479f merge: 收编并行笔（值席落盘防覆盖）
   - c5894a8a0 docs(coo): 台账二百八十二笔(彩排两树收口毕知会收记·A-N2毕报338938dc6销候态·T5/T6门全过双树done收口报告2e8cecc03·run级后段⑦⑧⑨⑩排窗候CEO确认CAO拟窗案·本席候窗令随动)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @21:30 +08：自上次进度提交 91924aa15 后新增 4 条 commit：
+  - 5649b9d54 merge: 收编并行笔（值席落盘防覆盖）
+  - 783253692 docs(coo): 台账二百八十三笔(BOD名址固定化知会收记·固定名址bod旧board-NN作废·附落款勘正注：原误用上笔载体值粘环违例自领·写前独立现查正形重申)
+  - 0f97a51ec docs(fade): ⑧Score Skill毕落卷——S1双席独立分COS/CAO各1.0/1.0/0.9零分差(复核轮不启·divergence=false)·逐维均值1.0/1.0/0.9合成0.97·S1=14.5/15·CAO席判据独立取自题细则文本对照(COS先交程序时间线如实披露·防锚定条款注记候勘窗规程化)·T6双席裁=人工对表实质合规给分不归零+校验器缺位如实留证候补机跑·score JSON schema tri-fade011-score/v1.0双签在卷
+  - fd222e896 docs(fade): ⑦Score CLI覆盖检查毕落卷(CEO 21:13批窗案原案照走·⑦窗21:20执行席CAO)——T15第二时点两树逐树核对PASS真分数打点(T15=7/7×2)·T1-T14覆盖读数逐项对表·omission三件(T5配料表⑦窗补铸消解·T2聚合键281addc2补铸入登记段消解·T6 node-report-check缺位如实保留候勘窗)·required_all_passed✓·评分证据集reports/score-evidence-cli.md
+- registry：v2.1；今日 registry 提交无变化
