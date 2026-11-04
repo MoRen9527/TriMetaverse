@@ -32,11 +32,14 @@
 2. **试跑范围圈定**：写面仅限 TriTraining 仓 docs/training/ 与 cc-tutorial/ 两目录（教程面）——根 AGENTS/README/.gitignore+docs 其他子目录 README 零触碰
 3. **人工 review 关卡**：自动改写≠自动提交——改写产物落工作区（不 add 不 commit）·diff 呈 RDT review·review PASS 后人工提交锁笔（首跑机制验证为主·裁③）
 
-## 段二现势与接续
+## 段二首跑执行与 review 收口（终态）
 
-- 机械对表骨架毕（本卷）·内容面细勘=**候 RDT 细勘卷**（重点：course 系 10 件管线落差+cc-tutorial 合同行为差）
-- 候 RDT 卷到→合卷出候选分级清单（过时/部分漂/现役）→N 值与试跑件施工勘定（上限 N≤5·报备入账）→首跑改写→RDT review→人工提交→毕报（勘定卷全量+首跑证据=更新前后 diff+review 留痕）
-- 挂接面（WATCH_DIRS 追加）候段三 SDE（不入本席）
+- **RDT 细勘卷并卷毕**（b07aaa8d8·勘二漂移 2→9 笔实锚+勘三 14 件分级+勘四 N=5 提案+review 判据四条）→ **N=5 确认**回信（裁③报备入账·上限不破）→ 首跑改写毕（工作区五件·残留断言 grep 两目录全量 PASS：首跑件正文零漏勘·命中全定性=勘误头 meta/refram 历史指涉带档案指向/批二候勘件在册）
+- **RDT review PASS**（12:49-12:53 独立实勘·判据四条逐条 PASS·留痕=其卷勘六节 TriMetaverse 5f326a8eb）——首跑机制验证读数（裁③主判据）=**首过零 rework/零范围越界/零引文损**
+- **勘正②终谳消化**：1d52c20 双日期字段分野定谳（author %ad=10-09 10:35:15／committer %cI=10-14 10:49:01·authored 10-09 landed 10-14 隔 5 天落分支·两皆 git 机真值）——指纹表取 %cI 入库口径完整形+分野注记入 README 勘误执行记录条；FSD「语境错位/TriTraining 无此 hash」诊断作废认领（RDT 命令系 TriCompany 同仓直读 %ad·差异本因=字段非仓向）——假读数家族第十二向两席同领
+- **人工 commit 锁笔**：TriTraining **72a643e**（5 files +29/−24·dev 分支·回滚锚 8b3e4ec 在册）
+- **候后续批登记三条**（RDT 勘六·非阻塞·owner=RDT 排程候窗）：①批二=03/04 named-drift 表消化（maxTurns ?? 25 引文/contract v3.1/Registry family/defaultMode fail-closed/cron stale 守卫）+docs/training README 轻勘+ai-course-graph §8 图节点可选；②批三=beginners-guide §10 三规划项现势确权（item1「当前仍是拷贝式」疑部分过时——旁证=session-body footer 系统一发布管线 --host 渲染活体+ade-consolidation-proposal :68 已载 --host 规格·proposal :5 状态行账面滞后=proposal 域修面非培训域·候发布管线现勘后 rewrite）+course 系重勘+双仓镜像对齐；③挂接面 WATCH_DIRS 追加=段三 SDE
+- **毕报双发**：m-cos 收口+抄 m-coo（锚=72a643e+5f326a8eb 勘六节+本卷）——段二节点闭项
 
 ## 使用依据
 
