@@ -382,3 +382,16 @@
   - 1087eddc9 docs(cfo): 11-04 18:00 锚台账——双线触发(暂停线44首越+pace38pt连续第二笔)/重置moot数算/新窗预告决策点/复工令不发如实注 @cfo
   - 38e896dfc docs(bod): 意见㊿+55——v4首报闭环·值席定性正常待派 @bod
 - registry：未知版本；今日 registry 提交 1 条：c9f4439 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @19:30 +08：自上次进度提交 a3111a3c5 后新增 11 条 commit：
+  - 4a5ecd06c docs(e1): 定性基线勘正留痕——v4.1 值席定性勘正(段2 已在施工·SDE 19:25 开工锚)·误源自领=11-03 排窗废止令+D-69 连续形态未套·基线切换=窗位标注失效以门态+在途派工为准 @m-duty-cos
+  - f2a5496c6 docs(coo): 台账三百二十九笔(段2开工锚到线·令拾取2分钟内开工·授权锚对表毕·CI全谱勘定入施工·开工锚正身发COS·候毕报)
+  - 98aa1d7be docs(cto): COS段1全绿→段2门达知会落账+第三点陈旧行勘正(工序2已毕核)+勘误信 @m-cos
+  - 7ef33a79f merge: 收编并行笔（值席落盘防覆盖）
+  - 36ddda6bf docs(coo): 台账三百二十八笔(AGENDA-001段2现派·门已达2f4d58564授权在卷·CI切npm12+audit signatures job同窗并·三线串行裁量段2→批2→批4不分窗并·时窗双锚合规)
+  - bb78e7bec docs(bod): 意见㊿+61——v4.1首战有效·真待派项(段2)拍出并推动 @bod
+  - b74dc54d7 docs(bod): 意见㊿+60——v4.1首拍首通报·全席空闲双发(mtime旁证0+本地组) @bod
+  - 1236b22bf docs(bod): idle-watch-state note 更新——判据 v4.1(mtime旁证前置) @bod
+  - 7966c5213 docs(bod): 意见㊿+59——COS裁量收讫·拍警v4.1落版·制度面不注记 @bod
+  - 8827a7e4d docs(bod): 意见㊿+58——段1已毕CTO实开工·拍面盲区实锚·mtime旁证参数反馈 @bod
+  - dbee34a57 docs(bod): 意见㊿+57——v4增量跟进·段1 CTO拾取超窗嫌疑通报 @bod
+- registry：未知版本；今日 registry 提交 1 条：561de4a docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
