@@ -96,10 +96,14 @@ jobs:
 
       - name: Audit signatures (5 build projects)
         run: |
+          # npm audit signatures 验「已安装」依赖面——各工程须先 npm ci（CI 首跑实证：无 install 面时报 no dependencies）
           $dirs = 'TriModel', 'TriCompany/packages/agent-core', 'TriCode', 'TriRLC', 'TriPilot'
           foreach ($d in $dirs) {
-            Write-Host "== audit signatures: $d =="
+            Write-Host "== ci + audit signatures: $d =="
             Push-Location $d
+            npm ci --no-audit
+            $ciRc = $LASTEXITCODE
+            if ($ciRc -ne 0) { Write-Error "npm ci FAILED: $d"; Pop-Location; exit 1 }
             npm audit signatures
             $rc = $LASTEXITCODE
             Pop-Location
