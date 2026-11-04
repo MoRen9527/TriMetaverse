@@ -267,6 +267,8 @@
 
 **review 结论**：主体 PASS+补笔二处→**照批二形：FSD 补笔落笔毕呈快验，快验 PASS 后 commit 锁笔**（回滚锚承 e40c069）。性能读数入账：施工 ≈7min（八件轻件面·批二 42min 基线对表·轮 1 分列在册）。
 
+**勘十四追记 · 补笔快验（K1-K12 十二探·条件 PASS）**：FSD 补笔毕呈快验（落款 16:01:21Z）含扩面披露（W7/W8 勘误头 L10 同步勘正·同件两名矛盾消除·方向采认）。K1 补笔一 diff 实读 ✓·K2 README L6 照裁定措辞 ✓·K3 零残留八件口径复测 RC=1 ✓·K4 净面 24+/15- 不变 ✓。**K5-K12 抓获退回面一处**：L10 扩面措辞「TriCompany-copilot-host-assets 已不存在」系假断言——K5 ls -d 三探该对象在 TMV 根存在·K7/K9 带尾斜杠 Not a directory·K10 git log --full-history 揭 LG-046 历史（1f9d505b1 物理正名+junction 别名→c4930f728 裁①旧名出册）·K12 PowerShell Get-Item 定形=22 字节普通文件（LinkType/Target 空·非链接非目录·出册残留物）；断链本身成立（K12 Test-Path 原文引用路径=False·K11 现役支撑根 TriCompany-host-assets 无 docs/ 子树=与 A6④ published copy 未生成自洽）。**定性：断链真·断因=LG-046 正名出册非根消失；「出册≠不存在」——积极断言须对新对象活体现勘，模板复用（「已不存在」消失类模板）越过事实边界=缺席断言未现勘变体**。退回改法（两件 L10 各一措辞）：「已不存在」→「系宿主资产根旧名（LG-046 正名出册·现役=TriCompany-host-assets）」，其余不动。教训由 FSD 自领入档；轮 2 顺带件（docs/training/README.md:27）两旧名并存史以 LG-046 正名口径落笔。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
