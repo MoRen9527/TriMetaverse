@@ -793,3 +793,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **三条款定性**：CEO 裁决原则三条款——①原则合理就认②能立即做的不拖延（额度充足甚至过剩·不得以额度为由拖）③该做的直接做。=D-39 全域授权的口径强化+扩面确认（非 CEO 三类外裁决 COS 全裁·升级面收窄到「原则本身存疑」才升级）。
 - **三件放权落地**：件一归口分流规则→按①认可生效·CAO 制度面立条（三条款一并入册）；件二 ew 迁位→按①②档 Z' 合理（CTO 推荐+COS 拟裁一致）·阶段一今日照跑+阶段二全迁排窗按②尽早不拖；件三命名清理→按③立项批直接做·CAO 铸册+CTO 三阶段实施。
 - 流转：转达 COS（三条款+三件裁意）·LG-091/092/093/094 状态随裁更新。
+## 意见㊿+33（2026-11-04 16:02:16 +0800·shell 注入现查落款）：CEO 令——m-duty-cho 每日 00:01 TriMMC 审计 M 面两 COS 裁决
+
+- **令文转录**（CEO 16:01）：「通知m-duty-cho，每天00点01分，在TriMMC上审计M面m-cos和m-duty-cos的所有裁决，错误升级和错误裁决的通知CEO并在绩效上扣分」。
+- **拆解**：①对象=m-duty-cho（sg duty CHO 席·绩效面+审计判定面归位合理）②频率=每日 00:01·载体=TriMMC（sg 8712·cron 现役 14 jobs·payload 嵌套 {command,cwd} 形）③审计域=M 面 m-cos+m-duty-cos 全部裁决④判定双错误：错误升级（该 COS 径裁的升级 CEO——对表 CEO 15:57 三条款新口径：原则合理就认不升级·升级面=原则存疑）+错误裁决（违 D-39 收口/三条款/现行纪律）⑤处置=通知 CEO+绩效扣分（对表 performance-scoring-workflow 现役制度）。
+- **送达通道勘定**：m-duty-cho=sg 席非本机 peer——正形=ssh sg-server tmux 直发（send-keys+独立 Enter+capture-pane 验拾取）或 notify+唤醒；SendMessage 本地名址先行试发。
+- 流转：送达毕回执呈 CEO·CHO 建 job 毕 next_run 值面核验（F-3 家族判据：201+next_run+enabled 三查）。
