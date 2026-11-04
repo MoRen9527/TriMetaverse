@@ -1120,3 +1120,6 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 
 - **令一**：CEO 原话「续跑N值直接扩到全模块所有docs，正好看下性能压力」——段二续跑范围=全模块所有 docs（不限首跑 N≤5·首跑机制已毕·本扩批=CEO 直接授权全量）·含性能压力观测意图（施工单带性能读数：耗时/件数/资源面）·护栏同形照置（回滚锚+范围圈定+RDT review 关卡·review 节奏面施工勘定）。CPO 审核批 1-4=可靠基座·扩批前提已具备。已转 COS→COO 速派。
 - **令二**：CEO 原话「跑完让cos、cpo、cto、cho联审fade011的实例质量」——四席联审（COS 流转面+CPO 产品/需求面+CTO 技术/门禁面+CHO 交接/治理面）·对象=fade011 全量实例质量·联审工作流正形照 joint-review-orchestration-workflow.md·毕报经 COS 转 BOD 呈。已转。
+## 意见㊿+96（2026-11-04 22:33:46 +0800·shell 注入现查落款）：CEO 22:33 令面勘正——扩批范围=TMV/TC/TT 三仓（非全工作区模块）
+
+- CEO 勘正：「不是全模块，是TriMetaverse、TriCompany、TriTraining」——续跑扩批范围=三仓所有 docs（docs-maintenance 三模块线原圈）·不含 TriRLC/TriPilot/TriCode/TriMMC 等其他仓。其余令面不变（性能读数+护栏同形+跑毕四席联审）。已勘正转 COS（msg 3cf438d6）。
