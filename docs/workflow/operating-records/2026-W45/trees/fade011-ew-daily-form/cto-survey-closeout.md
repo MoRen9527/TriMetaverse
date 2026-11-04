@@ -23,7 +23,7 @@
 - **触发通道**：`POST /internal/v1/fade/runs`（TriMLC app.ts L1975 现役端点·payload={runId, treeDir, idempotencyKey?}·鉴权 X-Internal-Token 同族）——cron job command=固定脚本路径，脚本内部动态 runId+POST。
 - **凌晨时点勘定：每日 03:30（本机 +0800）**——D-23 v3 对轨：GLM 轨黄金段 18:00→次日 14:00 ✓·DS 轨 18:00→次日 9:00 ✓ 双轨交集内；错开整点与 bod-tick/patrol/cos-patrol 频率带；错开周日 23:50 weekly-plane-shift。勘定语义=勘定截至昨夜的全部四目录变更（「一天一次」CEO 原义）。
 - **手动触发入口：`trilc cron run <job>` 现成机制**（零新代码）——按需补跑语义=同日幂等/重跑行为由脚本 runId 粒度定（实施单勘定：默认同日重跑=新 runId 带时分秒各成一树，保手动补跑真勘定语义）。
-- **白名单语义实锚**（app.ts L260-272）：TRILC_CRON_COMMAND_ALLOWLIST 精确等值**只查 HTTP 提交 job**——cli 本地创建（trilc cron add）走执行层原行为=白名单不涉=**零重启链零白名单改动**（启动器 cmd 18 条现值不动·设计内路径非绕洞）。
+- **白名单语义实锚**（app.ts L260-272）：TRILC_CRON_COMMAND_ALLOWLIST 精确等值查 HTTP 提交 job——**〔勘误 2026-11-04T06:14:10Z〕本卷初稿判「cli 本地创建白名单不涉=零重启链」系实锚偏差，SDE 工序 2 实跑 403 抓获+源码实勘勘正（app.ts L4384/L4439=POST/PATCH /internal/v1/cron/jobs 两入口共拦 cronCommandHttpAllowed·cli.ts L946 cronRequest 走该端点→cli add=HTTP 形态必过门）——注释「本地原生创建、不经 HTTP」语义=daemon 进程内部自建，非 cli。裁定修正：白名单 18→19 条扩窄式追加（`node D:/Code/ai/TriMetaverse/scripts/fade/fade-daily-sweep.mjs` 精确等值·零通配·fail-closed 不破）+第六次重启链生效；旁路方案（直写 cron.db/schtasks 旁路面/蹭既有条目路径）安全卫生面全更差·不裁。护栏「18 条不动」随实锚勘正一并修正**。
 - 脚本落点：`TriMetaverse/scripts/fade/fade-daily-sweep.mjs`（与 scripts/fade 族同构）——内部：runId=`fade011-daily-<YYYYMMDD-HHMMSS>`·treeDir=现行 ISO 周 operating-records 树（{week} 同构展开·js 侧 isoWeek 三行）·token 启动器 sed 提取先例形（值面零回显·D-46）。
 - watch.ts gitFingerprint 缺陷随 30s watch 退役自然闲置——**不另开修复单**（配置面退役=缺陷面失活）； TriMLC 仓侧注记候 TriMLC 版本窗（防未来复用 watch 形态者重蹈——候治理批窗登记）。
 - 回滚姿态：watch 三键原值在卷（启动器 cmd·SDE 止换单留值）——形态回退=恢复三键+重启链（10 分钟可逆）；凌晨窗 job 回退=cli cron remove。
