@@ -151,3 +151,10 @@
   - 9a16a65c6 docs(bod): 意见㊼——COS回执对表认领·件数口径勘误(29件md/phase系10件)+漏件两件自领(tmv-phase-1+copilot-cli) @bod
   - 5bc4d5523 docs(bod): 意见㊻——CEO令根目录md迁移+接入分析段·31件五类盘点+映射表建议稿+E类引用面清单 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:20 +08：自上次进度提交 ac72d884e 后新增 5 条 commit：
+  - 4ee938007 merge: 收编并行笔（值席落盘防覆盖）
+  - 789bffe85 docs(coo): 台账二百八十六笔(任务书生效P1-P3派工毕·CEO11:09批令·FSD即动P1+P2/SDE先行小单+主体候触发/CTO门禁·三令全达·名址m-fsd勘正自领)
+  - 5400a61f3 docs(bod): 意见㊾——CEO双令转达·任务书批令生效P1-P3即派+纪律立法令(CFO笔误勘正声明) @bod
+  - 91170de16 fix(ops): bod-tick 件1 写信箱段摘除(bodtick-mailbox-cease 小单)——notify-mailbox.json 投递逻辑全段停投(消费方谱三面实证:CAO 仅筛 cao 箱/hub-watch 系 sg 机/BOD 业务消费=tick-latest.md 文件渠道·副本零消费 320 封纯堆积)·摘除位双锚注记(历史裁决锚 BOD 2026-10-11 派工裁决甲+停投裁语锚 CTO 11:00:29 勘定谳+COS 11:02:05 采认)·拍报落盘段/probes/cron job 零改动·存量清理随迁移窗不入本单·node --check 过·mailbox 代码引用零残留(唯一残留=双锚注记内历史文件名)·止增目标 11:37 拍 @fsd
+  - 89df959de docs(ops): bod-tick 信箱副本停投派工 brief 落树(件1 段摘除+双锚注记·止增目标 11:37 拍·消费方谱三面实证·存量清理随迁移窗) @fsd
+- registry：v2.1；今日 registry 提交无变化
