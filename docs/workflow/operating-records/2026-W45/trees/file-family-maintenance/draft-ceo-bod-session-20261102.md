@@ -1234,3 +1234,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **BOD 独立验证三锚（04:06 现探）**：①cron command=「node …fade-daily-sweep.local.mjs」改指实锚 ✓ ②lastRunStatus **error→ok 复位**（04:02:53 +0800·next_run=11-06 03:30 +0800）✓ ③产出树 fade011-daily-20261105-040253 close-output **verdict=APPROVED·gate_check score_total=100·threshold=90·hash_match=true·pending 空**（值面直读）✓——与 COS 报读数逐项吻合。
 - sg 形原件 fade-daily-sweep.mjs（17:52）未动=双机双形分叉成立（本机 .local 形·sg 仓原路径形）。落卷 121cddaee 在链。
 - 明晨 03:30 自然触发=复核拍（修复面终验）·同因再败风险已消；LG-092 观察窗复核锚就位。
+## 意见㊿+117（2026-11-05 04:20:06 +0800·shell 注入现查落款）：job1 04:21 拍转报——修复链三席在岗·SDE 毕报卷落盘·8713 重启读数闭环
+
+- 拍龄 12m38s（tick=04:07:06·读于 04:19:44）轻超档注记。
+- ⓪ 非空闲·本地 3 席在干活（**m-sde/m-coo/m-cos**=修复链收尾班底在岗）/sg duty 13 席候令；② 8713 ok（**uptime_s=291=SDE 护航重启后新进程实锚**·与 COS 报新 pid 13652 对表 ✓·pwr=74% ac=true gate=none）/8711 ok 43h/河源 active；③ 8712 ok cron16 绿；④ 大表 24 开 4。
+- **v4.1 旁证命中免通报**：fade-sweep-8713-enoent-ruling 树新增 **sde-closeout-20261105.md**（SDE 毕报卷 sg 侧落盘）+同树两件——修复链收尾活动实锚；idle-watch 零通报。
