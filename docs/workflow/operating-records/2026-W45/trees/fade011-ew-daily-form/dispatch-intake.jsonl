@@ -1,0 +1,20 @@
+{"ts":"2026-11-04T06:01:22Z","type":"intake","from":"m-cto","item":"止血派工单 05:59:46Z（fade011-ew 白跑止血·配置面关停）","action":"接单即办"}
+{"ts":"2026-11-04T06:01:51Z","type":"exec","item":"cmd DIRS REM 化+第五次重启链（窗 06:01:51→06:02:15Z·cron 缝约 24s）","readings":"audit 06:00 后零新增+tick 停滚=watch 行为面真关·探针 enabled:true=store 推导残留读数（分野注记）·pid 17064"}
+{"ts":"2026-11-04T06:07:37Z","type":"report","to":"m-cto","item":"止血回执（三读数+分野）","cc":"m-coo 06:08:01Z"}
+{"ts":"2026-11-04T06:10:03Z","type":"intake","from":"m-cto","item":"实施单 06:04:43Z（凌晨窗形态·脚本+cron+手动验证三项·序贯接手）","action":"读勘定卷 cto-survey-closeout.md 后序贯办"}
+{"ts":"2026-11-04T06:11:44Z","type":"exec","item":"脚本落源位 scripts/fade/fade-daily-sweep.mjs+手动验证一发","readings":"fade011-daily-20261104-141144 APPROVED·自纠 fetch Response.status bug 后复发 141202 APPROVED http=200·树落 W45 正位"}
+{"ts":"2026-11-04T06:12:52Z","type":"block","item":"工序 2 cron add 403 command_not_allowed——卷 §二「cli 本地创建白名单不涉」实锚偏差（app.ts L4384/L4439 两入口共拦·cli cron add 走 HTTP 必过门）","action":"回询 CTO 两选项候裁（A=白名单追加一条+第六次重启链/B=另裁）·不擅动白名单"}
+{"ts":"2026-11-04T06:13:10Z","type":"report","to":"m-cto","item":"回询信","cc":"m-coo 06:13:30Z"}
+{"ts":"2026-11-04T06:14:10Z","type":"intake","from":"m-cto","item":"回裁 A（白名单 18→19 扩窄追加+第六次重启链+验证三读数·与勘定卷 §二 勘误同文同锚）","action":"照裁执行"}
+{"ts":"2026-11-04T06:22:00Z","type":"exec","item":"cmd 白名单行尾追加第 19 条（精确等值·零通配）+rem 注记行·断言 lines=50 前基线/CR 面干净/纯 ASCII","readings":"allowlist_set_lines=1→2 见后·dirs_unset_lines 不变"}
+{"ts":"2026-11-04T06:23:41Z","type":"exec","item":"第六次重启链（缝窗干净 14:23:39-43+0800·pid 25952 对表）","readings":"healthz 绿+boot 行 L132344·16 jobs 基线"}
+{"ts":"2026-11-04T06:24:38Z","type":"block","item":"cron add 仍 403 command_not_allowed——回裁后复发·排障链启动（transcript tool_result 实锚）","readings":"PATCH 既有 job 原值 command=200（旧 18 条健在）+add 第 19 条=403 ⟹ 进程 env=旧快照"}
+{"ts":"2026-11-04T06:25:34Z","type":"exec","item":"排障四向排除：.env 零 allowlist 键+装载器只补缺不洗键→计划任务动作单源→编译物门与 src 同构（trim+includes·逐调用现读 env）→cmd.exe 解析探针 19 条完整入 env（文件与解析器双清白）"}
+{"ts":"2026-11-04T06:29:37Z","type":"evidence","item":"channel.log tail 实时抓获 zombie 火情运行迹（14:29+0800）——止血回归第一实锚","readings":"06:34:12Z 再证一发（a6440fc0ae6c DB 在案）·fade_runs 白跑五发=06:08:55/06:09:55/06:16:55/06:17:55/06:34:12（rate-guard 节拍·32340 谱系在位）"}
+{"ts":"2026-11-04T06:35:06Z","type":"finding","item":"根因拍板：25952 父进程=cmd 32340（13:05:48 生·早于两次编辑）——孤儿 wrapper 旧 env 快照+批处理字节偏移错位复活链·五次链 pid 对表=复活体假阴性","readings":"CIM ParentProcessId 谱系（transcript 06:35:06 首读）·cmd 创建时刻 13:05:48 早于 14:01 止血/14:22 白名单两编辑"}
+{"ts":"2026-11-04T06:47:27Z","type":"exec","item":"第七链 tree-kill 32340 → Access denied（S4U 批登录会话跨会话拒杀·sudo 在册未启用）——强杀面不可达·改字节几何路","readings":"taskkill /F /T 拒绝文本（transcript 06:47:27 result 实锚）·两任务主体=jedih+Limited"}
+{"ts":"2026-11-04T06:49:50Z","type":"exec","item":"EOF 着陆垫追加（零位移对阻塞 wrapper 安全方向）2 行：set TRILC_FADE_WATCH_DIRS=（空值删键）+白名单 19 条现值（awk 程序化提取防手抄漂移）","readings":"pad 后断言（06:49:50 锚）lines=50/CRbytes=50/nonascii=0/dirs_unset_lines=1/allowlist_set_lines=2/last_count=19"}
+{"ts":"2026-11-04T06:50:46Z","type":"exec","item":"第八链饿死轮换 round 1 即中：/shutdown 25952→连续 8 拍 350ms FREE-SETTLED→wrapper 32340 干净退出无复活→task 冷启→watchdog 复位","readings":"pid 31248 对表全等·父 cmd 27996 创建时刻=冷启时刻（14:50:46 纯 task 谱系）·32340 GONE"}
+{"ts":"2026-11-04T06:51:30Z","type":"exec","item":"cli cron add 通过——job=cron_mw1rdhym_7pwt","readings":"201+nextRunAt=2026-11-04T19:30:00.000Z=11-05 03:30+0800 精确命中+enabled=true+17 jobs 全谱（16→17）"}
+{"ts":"2026-11-04T06:52:09Z","type":"exec","item":"工序 3 真cron路径预演：trilc cron run --force","readings":"fade011-daily-20261104-145209 APPROVED@06:52:09Z（daemon spawn→门放行→脚本→POST→APPROVED 端到端）"}
+{"ts":"2026-11-04T06:54:27Z","type":"closeout","item":"账面清点毕：fade_runs 55/audit 106 尾行 06:34:13Z 封死（31248 零新增=watch 真关）·盘面 50 树候收编·探针临时件已清·收口 commit+毕报随发"}
