@@ -1,7 +1,7 @@
 {
   "sg_idle_streak": 0,
   "local_idle_streak": 0,
-  "last_ts": "2026-11-04 18:12:34 +0800",
-  "note": "BOD 班组空闲兜底判据状态·单写者=job1 v4·判据(CEO 17:23 裁·采认 COS 改造建议):14:00-18:00=GLM模型不派工设计窗(窗内全体候令idle=设计态不通报·CEO特批派工除外)·窗外全体候令立即通报(COS自判待派/断链/零活动)",
-  "last_notice": "18:07拍 sg duty组13/13全体候令·窗外首报已发m-duty-cos(tmux直发已验拾取)·附AGENDA-001段1旁证+大表open=4·候值席定性回执(notify API)"
+  "last_ts": "2026-11-04 19:21:09 +0800",
+  "note": "BOD 班组空闲兜底判据状态·单写者=job1 v4.1 b70059f8·判据(CEO 17:23 裁+COS 18:48 裁落版):14:00-18:00=GLM模型不派工设计窗(窗内全体候令idle=设计态不通报)·窗外全体候令先mtime旁证自查(sg trees/-mmin -45有新落卷=有工件活动免通报)·旁证后仍候令才通报(COS自判待派/断链/零活动)",
+  "last_notice": "19:07拍 全席空闲(sg duty 13/13+本地13席)·拍龄12m48s延迟注·v4.1首通报:sg侧mtime旁证=0(45min零落卷)→通报m-duty-cos(tmux验拾取);本地组→通报m-cos(SendMessage)·双定性回执候"
 }
