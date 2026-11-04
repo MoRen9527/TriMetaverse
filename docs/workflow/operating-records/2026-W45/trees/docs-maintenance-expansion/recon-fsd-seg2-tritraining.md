@@ -15,14 +15,14 @@
 ## 勘一 · 教程面全量清点（工序②前半）
 
 - **cc-tutorial/agent-core-v0.1.0/**：5 md（01-小白版/02-产品版/03-代码引导版/04-代码复刻版/README）——lastSyncedAt 全 2026-10-02·syncMode=source-derived（派生自 agent-core v0.1.0 源码快照·代码论断真源=TriCompany/packages/agent-core/src/）
-- **docs/training/**：14 md+4 example json（employee-host-publish 系 6 件/employee-source-kit 系 5 件/tritraining 架构系 3 件/training-pack-migration-plan/README）——12 件带 lastSyncedAt·course 两件内容时锚=2026-06-14
+- **docs/training/**：14 md+4 example json（employee-host-publish 系 5 md/employee-source-kit 系 4 md/tritraining 架构系 3 件/training-pack-migration-plan/README——族计数 5/4 系 RDT 勘正采认 2026-11-04·原卷 6/5 系 json 计入误·12 件带 lastSyncedAt·course 两件内容时锚=2026-06-14）
 - 候勘定总量：**19 md**
 
 ## 勘二 · 机械对表三读数（版本面/命令面·链路面骨架）
 
 1. **版本面**：agent-core 包版本现役仍 0.1.0（TriCompany/packages/agent-core/package.json version="0.1.0"）——cc-tutorial 版本号面未过时；**行为面两笔后动晚于教程快照**：
    - 2fb1292（2026-10-02T21:25+08·batch-15 合同 v3 Registry family 分支）：contracts/agent-contract.ts +44/−6（PathsSchema 四件套 Registry 豁免+superRefine Role 分支强约束）——晚于教程快照 commit（20:27）58 分钟·**不在快照内=漂移实锚**·受影响面集中 03-代码引导版/04-代码复刻版（合同校验行为论断面）
-   - 1d52c20（2026-10-14·cron stale 守卫+settle 兜底·commit msg 注「备码不部署」）——cron 面教程论断概率低（agent-core 教程聚焦 loop/contract/permissions）·候 RDT 细勘定性
+   - 1d52c20（**2026-10-14T10:49:01+08:00·TriCompany 仓 %cI 机真值双证**·cron stale 守卫+settle 兜底·commit msg 注「备码不部署」）——cron 面教程论断概率低（agent-core 教程聚焦 loop/contract/permissions）·RDT 细勘定性：实质结论成立（最后一笔触 agent-core·重锚目标 dbd8d620 与 HEAD 树同值独立验同）；RDT 细勘卷勘正「10-09 10:35:15」系误读（TriTraining 仓无此 revision fatal 实锚·语境错位）·其卷该行候 RDT 自勘
 2. **时序面**：cc-tutorial 快照 8b3e4ec=10-02 20:27 vs agent-core 后动 10-02 21:25/10-14 10:49——时序差实锚（58 分钟+12 天）
 3. **链路面**：docs/training course 系内容时锚 2026-06-14——TriCompany 发布管线 2026-09-04 后多轮演进（batch-03 件2 V3 裁条/D-47 信面落款/D-26 简介形/session 面扩形等）·6-14 时锚早于全部演进=**漂移嫌疑最重族**·受影响面=employee-host-publish 系 6 件+employee-source-kit 系 5 件候 RDT 逐件勘
 
