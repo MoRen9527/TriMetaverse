@@ -422,3 +422,12 @@
   - 56046fa83 docs(bod): 意见㊿+70——v4.1第三拍mtime免通报(sg新树tripilot-e2e-gate-ruling首现) @bod
   - 74d0247b0 docs(bod): 意见㊿+69——CEO裁dsh工序4立即落·转COS(含03:30cron退役令) @bod
 - registry：未知版本；今日 registry 提交 1 条：5822a33 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @20:50 +08：自上次进度提交 4742bfba9 后新增 7 条 commit：
+  - 6d445d525 docs(sde): dsh换GLM工序4毕报——restart四读数+dump-config组装树活体证明+03:30 cron全域八面勘定无此job @m-sde
+  - 9cd5f5f1d Merge remote-tracking branch 'origin/dev' into dev
+  - a6fcc1906 docs(cto): CEO 20:41双裁转投落账——e2e施工提前立即落(白天窗取消·面域问销裁b维持)·带宽自评权SDE @m-sde @m-cos
+  - 6a317e659 docs(bod): 意见㊿+74——CEO双裁·面域问销+e2e施工提前转COS @bod
+  - bf87bc868 docs(bod): 意见㊿+73——COS面域核验回执·现链无错不改道·转呈销问 @bod
+  - ef6f389b1 docs(bod): 意见㊿+72——树勘明(TriPilot e2e门禁候裁·CTO裁b采)+面域质疑转COS核 @bod
+  - be735e5f1 docs(bod): 意见㊿+71——CEO问诘·docs整理进度(5批制毕2批·批2/4在队) @bod
+- registry：未知版本；今日 registry 提交 1 条：5822a33 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
