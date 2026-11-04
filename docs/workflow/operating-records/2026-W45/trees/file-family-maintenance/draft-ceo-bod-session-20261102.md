@@ -1071,3 +1071,14 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - 拍延迟注：拍时戳 21:37:05·现查 2026-11-04 21:51:07 +0800=拍龄 13.6 分钟超 12 分钟窗=拍延迟。
 - ⓪ sg duty 13 席全候令——v4.1 mtime 旁证命中（近 45 分钟新落卷 7 件·含**新树 tricade-build-ci-red-ruling dispatch 面出现**=COS 转办 8712 重启件在流转）免通报。本地 m-cto/m-sde/m-cos 在干活免通报。
 - ② 8713 ok uptime 24372s pwr100%｜8711 ok uptime 36h cron=1 零 pollFail｜河源 TriRMC active。③ 8712 ok jobCount=16 零退化 logs 新鲜（21:36:16）。④ 大表 total=24 open=4。零异常。
+## 意见㊿+87（2026-11-04 22:00:24 +0800·shell 注入现查落款）：CEO 问「批5有啥更新·TriTraining 仍旧没更新」——三层勘定呈报
+
+- **批 5 这一跑=管线自测非内容维护**：fade011 daily sweep 跑的是管线链路健康验证（plan→score→close 全链 APPROVED·100 分·零挂起）——产出=评分报告树·对 docs 内容零触碰。批 5 原定义「手动 docs-maintenance cli 看 fade011 实际效果」语义=看管线效果·非看内容更新。
+- **TriTraining 今日有更新但都是治理面**（git log 活体）：批 2 规范头 TT 面 6 件（08cdb1f·16:48）+批 3 版本行 TT 面 14 件（7fffb25·17:08）+批 4b 跨仓索引 2 处（070f4de·17:43）——三笔均**已推 origin/dev**（status -sb 同步顶）。动的=文件头/版本号/链接·**教程内容本体零触碰**。
+- **教程自动更新（CEO 原令「过时教程试试自动更新」）=COO 排期单段二首跑——未开工·现势正确零变化**：勘定 owner=RDT+施工 FSD·首批 N≤5·衔接条件=P3 毕报（锚 4）。且 TriTraining/docs 尚未挂进巡检目录（段三 WATCH_DIRS 追加·候段一/段二毕+重启窗毕）——挂接前 daily sweep 巡不到 TriTraining。TriTraining 工作区有今日未跟踪件 p3-watch-probe-tritraining-20261104.md=P3 线今日探针活动在。
+- 候选动作（不裁）：转 COS 请 COO 核 P3 衔接窗·段二首跑派工提级——CEO 示意即办。
+## 意见㊿+88（2026-11-04 22:04:44 +0800·shell 注入现查落款）：CEO 双令——段二派工提级转 COS+「衔接候 P3」排窗变体质疑勘定+㊿+87 勘误
+
+- **CEO 令「转吧，把段二派工提级」**：已转 COS 请 COO 段二（TriTraining 过时面勘定 RDT+自动更新首跑 FSD·首批 N≤5·护栏锚先置）现刻派工。
+- **CEO 问「这是不是又一个不该排窗被排的案例」——质疑成立**：排期单把段一/段二串在「启动候 P3 毕报」下=过度串行（排窗的变体=排队）。勘定：段二勘定+首跑护栏（git 回滚锚+范围圈定+人工 review 关卡）与 P3 无技术依赖——按 11-03 令可现刻派。
+- **㊿+87 勘误领记**：「TriTraining/docs 尚未挂进巡检目录」系陈旧口径（信息源=排期单 11:56 版）——活体再探坐实**段三 13:0x 已施工到试触验证轮**：TriTraining/docs 探针件在（13:09:07+08·COO 段三串联窗令 12:56:07+08）·第 1 轮 TriCompany 试触 run b6845dc36935 APPROVED 13:08·8713 已过第四次重启链。**但** fade-w 真跑=管线自检空跑（plan.md 系程序化壳 4 行·close APPROVED 100 分零 pending·零内容产出）——**内容维护层（plan 真任务→拆树派工→席位改件）未接**·故 TriTraining 教程内容仍零变化=CEO 观察本质坐实·正解=段二首跑+FADE-011 维护动作层接线（候 CTO 面）。
