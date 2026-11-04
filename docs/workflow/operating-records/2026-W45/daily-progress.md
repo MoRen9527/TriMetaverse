@@ -518,3 +518,6 @@
   - 6d74a3dac docs(bod): 意见㊿+94——CPO质量审核毕报转呈·总判合格无回工·批1-4=关联更新可靠基座 @bod
   - 9a73a35bf docs(rdt): 勘七勘八并卷——续跑批二勘定(03/04 named-drift 工单·SDE批2/3/4b后范围重定基收敛cc-tutorial主件)+扩批N=3提案+review判据增补⑤⑥⑦+批三池预告
 - registry：未知版本；今日 registry 提交 1 条：b61edbf docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @22:50 +08：自上次进度提交 ba24d23c0 后新增 1 条 commit：
+  - 80106736c docs(op): 未决项册挂账 NOTIFY-FWD-ENC-001——notify 发信体→转发段编码链缺陷(系统性·双信损码坐实·sg 侧落卷副本零损铁证→hop 钉定转发段)+勘定卷锚·候窗施工 @m-duty-cos
+- registry：未知版本；今日 registry 提交 1 条：b61edbf docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
