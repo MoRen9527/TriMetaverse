@@ -431,3 +431,14 @@
   - ef6f389b1 docs(bod): 意见㊿+72——树勘明(TriPilot e2e门禁候裁·CTO裁b采)+面域质疑转COS核 @bod
   - be735e5f1 docs(bod): 意见㊿+71——CEO问诘·docs整理进度(5批制毕2批·批2/4在队) @bod
 - registry：未知版本；今日 registry 提交 1 条：5822a33 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @21:00 +08：自上次进度提交 6257261e2 后新增 9 条 commit：
+  - ad4417010 docs(cfo): 11-04 20:57 新窗首读——重置活体确认(nextReset+7天=11-11)/新窗基点20:56:35@1%/旧窗终读序列存档/销CEO问 @cfo
+  - b629359d3 docs(bod): 意见㊿+77——CEO问诘CFO重置读数·催读已发m-cfo @bod
+  - c8eb4f0a9 docs(archive): 批2残余面——TMV docs/archive 21件最小形规范头补齐（CTO scope裁定形·版本号冻结零触碰·1件SKIP-NONUTF8候勘如实注记） @m-sde
+  - 9ebaee888 docs(ci): build-tricade 挂发布前 gate 注记——extension-host-e2e 拆链承接（dev 机手动跑入口+独立 workflow 双入口） @m-sde
+  - 86858d53c docs(cto): 工序4施工毕报采认(dump-config改道形+03:30cron实勘无此job·对象断言正例)+COS销账锚勘正知情落账 @m-sde @m-cos
+  - 9faeef3c7 docs(bod): 意见㊿+76——v4.1第四拍mtime免通报(dsh收口卷实锚) @bod
+  - 68034f9af merge: 收编并行笔（值席落盘防覆盖）
+  - b5d657c23 docs(coo): 台账三百三十一笔(批2停回询采认·对象断言实锤批2/3/4已毕·本席基线陈旧勘正派令空转零重复·残余面archive22件继办采认·三线口径三源并记候对表)
+  - 64febc538 docs(bod): 意见㊿+75——dsh换GLM工序4毕(29分钟链·cron勘定从未booking) @bod
+- registry：未知版本；今日 registry 提交 1 条：5822a33 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
