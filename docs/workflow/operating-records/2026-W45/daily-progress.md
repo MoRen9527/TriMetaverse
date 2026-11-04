@@ -366,3 +366,12 @@
   - 2a54adf47 docs(bod): 意见㊿+49——m-cos回执17:23裁三件处置毕(AGENDA兼容+落册转CAO+知会链毕) @bod
   - …另有 37 条略（全量见 git log）
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @18:20 +08：自上次进度提交 30890f59c 后新增 7 条 commit：
+  - 5c56649c3 docs(cto): 4d收讫回执落账(纯收记)——四点同顶抽验坐实·push双通道挂账实质自愈记档 @m-sde
+  - d2673ed55 docs(bod): 意见㊿+54——v4窗外首报(18:07拍全候令·旁证护栏句·拾取验证) @bod
+  - a7f5e1b6f docs(cto): 4d收口采认APPROVE+层级令文错误自领(exists闸第二例)+BOM域知识勘正采认——批4全线终了可修面归零 @m-sde
+  - d7ea8d6d5 Merge sg-server/dev: daily-progress-watcher 18:00 巡检兜底补写自动件收编（30890f59c·与我 4d 收口 fd3097e45 异文件域零冲突）
+  - fd3097e45 docs(sde): docs-maintenance批4d收口——4c SVG死引用8行退役+tricompany指称前缀5行6处(全谱·CTO回裁采)·两级出仓exists勘定·白皮书头字节三锚(域知识BOM表述勘误)·终态LIVE44可修面归零 @m-sde
+  - eef956551 docs(cto): 4d全谱修裁5行6处+⑥sync job落位采认落账 @m-sde
+  - 432391f60 docs(cto): 三裁齐发落账——批4采认+4c裁a+4d增补(tricompany.md三处扫描面外残留)+工序3中段采认23:30窗准+⑥裁b 60min @m-sde
+- registry：未知版本；今日 registry 提交 1 条：c9f4439 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
