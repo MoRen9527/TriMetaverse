@@ -548,3 +548,7 @@
   - 8070dcb4a docs(bod): 意见㊿+104——job1 23:21拍·电源面轨迹升级(90→63→43%)·旁证免通报 @bod
   - 5d9de6479 docs(bod): 意见㊿+103——RDT段二批二毕报转呈(N=3闭环·42min·零rework) @bod
 - registry：未知版本；今日 registry 提交 1 条：d644ca3 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @23:50 +08：自上次进度提交 370818471 后新增 2 条 commit：
+  - da9eb3519 docs(coo): 台账三百四十七笔(R1勘定段毕报采认8f67c5209·锁值两项定谳轮拆10+3+池件计口径·RDT复核齐开轮1·候裁2件随复核并裁)
+  - 8f67c5209 docs(fsd): R1 勘定卷落盘——TriTraining 批三收尾 13 件逐件判定+工单草案 W1-W14+轮拆 10+3 提案（勘十二承接·活体读数 A1-A10 随卷留痕·旧宿主根断链族/check-sync 缺载族/迁移态叙述族/中央路径断链族四族归类·候 RDT 对表+COO 锁值）
+- registry：未知版本；今日 registry 提交 1 条：d644ca3 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
