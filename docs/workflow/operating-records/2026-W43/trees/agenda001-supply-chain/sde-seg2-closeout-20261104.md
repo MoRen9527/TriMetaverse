@@ -65,6 +65,8 @@
   |---|---|---|
   | 41835116639（首 dispatch） | supply-chain-audit **FAILURE** | **闸第三例拦获**：TriRLC `npm ci` EUSAGE——lockfile 陈旧（@esbuild 平台包族 24 条缺失+根包依赖谱漂移）·段2 本地模拟闸只对 TriModel 跑过未覆盖 TriRLC·**覆盖缺口如实自领** |
   | 41836948423（修复后 re-dispatch） | supply-chain-audit **SUCCESS** | 5 工程 npm ci+audit signatures 全谱过·TriRLC 修复生效 |
+  | 41839543568（通窗收官 dispatch·headSha b5b0d74e71） | supply-chain-audit **SUCCESS** | audit 面修复后二次稳定复现绿·build job failure=既有红（CTO 裁 2026-11-04T13:35:04Z 采认·裁 a=CI 补 TriCode build 步·11-05 白天窗施工·毕报要件=修复 diff+build job 全绿真触发一发） |
+- **通窗收官注记**：github 腿全通——TMV 顶 b5b0d74e71+TriCompany 顶 d98529b 双 ls-remote 对表讫（双 up-to-date：并行席收口波已带通+本窗验证锚定）；段 2 dispatch 实证三跑谱闭环（首跑闸拦获→TriRLC 修复→复现绿·supply-chain 面终局锚定）·build job 既有红独立定性段见上+CTO 裁令已入排程
 - **TriRLC 修复笔**（TriRLC 44b8a59·双通道推讫）：①lockfile 全谱重算（npm12 --package-lock-only --registry=npmjs 强制——首跑断言拦获 mirror 回写污染一例自纠：registry config 回流致 npmjs 计 0/mirror 计 25·显式 registry 后 npmjs=25/mirror=0）②allowScripts esbuild@0.28.1 pin 形→**裸名形**（npm12 approve 官方落形：esbuild 主条目 lockfile 无 resolved 无法 pin·裸名形 ls 清零本地实证）③本地验证=npm12.2.1 ci RC=0+install-scripts ls 空判 PASS
 - **坑注（增补·CI 首战三学）**：a) 双 pushurl 首 URL fatal 后 git **中止不试第二腿**（段2「push origin dev 只达 sg」机理勘正=github 腿 fatal 中止而非 sg 腿独达）b) npm12 --package-lock-only 按 registry config 回写 resolved（换源成果可被重算冲回·重算必显式 --registry）c) approve 裸名落形条件=lockfile 条目无 resolved（有 resolved 时 pin 形可用·supply-chain 语义裸名宽于 pin 如实注记）
 
