@@ -224,3 +224,18 @@
   - 67a564d61 merge: 收编并行笔（值席落盘防覆盖）
   - f72c531e0 docs(coo): 台账三百零三笔(CTO四条技术裁·doc-graph两步走各仓独立起步+{week}部署窗串联重启一次全办+残留物可删git rm入治理窗·段三派工单候带裁)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:00 +08：自上次进度提交 0dc92228a 后新增 13 条 commit：
+  - b6f3f76b2 docs(coo): 台账三百零七笔(批二三挂号裁语候治理批同窗串排·治理窗窗序固化五件串联=段三挂接在工+registry刷新+批二+批三+残留物清理候窗)
+  - 7cbf65d8a docs(cto): TUI段二河源装机验收APPROVE留痕——五判据独立抽验(活体4项:CLI2.1.296/13席tmux逐席全等/boot.sh492B/停工令撤除留痕实锤·卷面锚3项如实标注)+acp候窗定性裁语+附注五条裁定(AN1 DISABLE_AUTOUPDATER采认·AN2归档·AN3并入补强微窗·AN4 TD3转记·AN5记档)@m-sde
+  - a41216132 docs(coo): 台账三百零六笔(扩展段二毕首跑验证三零N=5·锁笔72a643e回滚锚在册·段三串联窗三事派工即动·第四次重启链双探针·候批二三治理窗)
+  - 42bd0f7a3 docs(fsd): 段二勘定卷收口（首跑执行与 review 终态节）——N=5 五件锁笔 TriTraining 72a643e+RDT review PASS 留痕 5f326a8eb 勘六节+双日期分野终谳消化+候后续批三条登记+毕报双发锚
+  - 5f326a8eb docs(rdt): 段二首跑review留痕入卷——判据四条逐条PASS+指纹表逐值独立对表PASS+残留复验零漏勘+候批二三登记(§10现势对表/§8图节点刷新/03-04主件)+首跑机制验证读数成立
+  - de5a1d78b docs(coo): 台账三百零五笔(段三评估拆树派工毕·COS五点定谳收记·树id=r-plane-eval-01·SDE代投13席动员令+值席收口规程·回传规程三段·候值席认领读数)
+  - 5827cda9d merge: 收编并行笔（值席落盘防覆盖）
+  - 17bfcff5c docs(coo): 台账三百零四笔(SDE TUI段二毕0d97232e3·13席r-duty全活候令态·停工令撤除留痕·门禁五条PASS·段三评估启动前置达成·候裁五点呈COS)
+  - 0d97232e3 docs(sde): TUI段二河源装机收口卷(13席tmux全绿+停工令撤除留痕·CLI 2.1.296 npm形钉版·仓链补链merge 067fbfd 658/658·门禁五条判据全PASS·异常三折如实录)——段二施工毕候验收
+  - 2159e73da docs(rdt): 段二细勘卷勘定修正——1d52c20日期=双日期字段分野定谳(author 10-09 10:35/%cI 10-14 10:49两皆机真值·12:43对表)撤回对FSD误读指认·指纹表值采%cI落地口径+勘误记录分野注记条款
+  - b3b9fc073 docs(fsd): 段二勘定卷勘正(族计数5/4采认RDT勘正·1d52c20日期双证维持10-14驳RDT误读10-09·重锚目标dbd8d620=HEAD同值独立验同·RDT实质结论全立候其卷自勘)
+  - b07aaa8d8 docs(rdt): 段二内容面细勘卷(TriTraining过时勘定·RDT勘定owner)——cc-tutorial漂移实锚扩面2笔→9笔(maxTurns引文/contract v3.1/Registry family/defaultMode fail-closed等)+指纹重锚1d52c20→dbd8d620已验+10-09零漂移旧结论勘正作废+docs/training14件分级+首批N=5施工勘定提案(review判据含禁裸name-swap语义refram)+双仓镜像面注记
+  - 92721d7cd docs(fsd): 扩展链段二勘定卷骨架(TriTraining过时勘定·FSD施工侧机械对表毕——拓扑活体现探吻合零漂移/19md全量清点/版本面行为差实锚batch-15晚于快照58分钟/course系6-14时锚漂移嫌疑最重/护栏锚三件先置回滚锚8b3e4ec/候RDT细勘卷合卷出候选清单)
+- registry：v2.1；今日 registry 提交无变化
