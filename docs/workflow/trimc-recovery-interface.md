@@ -1,4 +1,8 @@
 # TriMC 恢复接口契约（方案 B）
+- sourceOfTruth: 本文件（工作流域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 # TWF-001 §B | CTO 小狄 | 2026-07-17
 # 本文件定义 TriMC（Claude Code 吸收链）端的恢复接口契约。
 # 这是 CTO 对 TriMC 开发方的输入：TriMC 团队据此实现前置拦截 + 自动恢复。

@@ -1,5 +1,8 @@
 # docs/security/ · 安全基准与审计归档面
 
+- sourceOfTruth: 本文件（安全域索引）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
 - 现役卷: supply-chain-audit-2026-08-10.md（ChainDrop 复盘审计基准·2026-10-20 归档·AGENDA-001 3-3）
 
 ## 复检触发条件（四项·写死·AGENDA-001 决议③）

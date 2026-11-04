@@ -1,4 +1,8 @@
 # Session Crash Recovery Spec
+- sourceOfTruth: 本文件（工作流域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > 版本：v0.2 | 建立：2026-07-17 | Owner：CPO（小乔） | 下游实现：CTO（小狄）
 > 关联树：TWF-001 — 任务动态树工作流与故障恢复机制（与 dynamic-task-tree-protocol.md 合并交付）

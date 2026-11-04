@@ -1,4 +1,8 @@
 # TriCompany 可插拔模块产品决策
+- sourceOfTruth: 本文件（待办面正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 版本：V0.1
 日期：2026-08-01

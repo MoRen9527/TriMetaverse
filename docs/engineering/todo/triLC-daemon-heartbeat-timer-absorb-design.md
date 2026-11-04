@@ -1,4 +1,8 @@
 # TriLC Daemon / Heartbeat / Timer 从 openclaw 吸收技术方案
+- sourceOfTruth: 本文件（待办面正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > CTO 小狄 | 2026-07-31 | tree: daemon-hb-2 | ET-20260731-002
 >

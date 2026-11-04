@@ -1,4 +1,8 @@
 # 实验环境降级计划：dev → 纯规则提炼场
+- sourceOfTruth: 本文件（工程域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 版本：V0.1
 日期：2026-08-02
