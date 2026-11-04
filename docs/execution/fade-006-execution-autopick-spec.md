@@ -6,7 +6,7 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-27
 - 状态: 已实战验证（首个完整运行=2026-08-26/27 P0 审计修复战役，八实例）
-- 登记: [TriCompany fade-registry.md FADE-006](../../TriCompany/docs/engineering/fade-registry.md)（编号跳 005 沿用 08-21 勘误口径）
+- 登记: [TriCompany fade-registry.md FADE-006](../../../TriCompany/docs/engineering/fade-registry.md)（编号跳 005 沿用 08-21 勘误口径）
 - 上位管线真源: [fade-pipeline-design.md v1.1](2026-08-26/fade-pipeline-design.md)（§六 AC/§八 运行语义/§九 卷封制）
 
 ## 一、这个实例解决什么

@@ -13,7 +13,7 @@
 - lastSyncedAt: 2026-08-20
 
 来源：CEO 2026-08-19 定调（FADE-ASSESS-005）+ 2026-08-20 实现/验证/终审全链
-上位规范：[TriCompany ADE 模式规范 §1.1](../../TriCompany/docs/engineering/ade-pattern-spec.md) + [ade-consolidation-proposal.md](../../TriCompany/docs/engineering/ade-consolidation-proposal.md)（ADE-B 员工域）
+上位规范：[TriCompany ADE 模式规范 §1.1](../../../TriCompany/docs/engineering/ade-pattern-spec.md) + [ade-consolidation-proposal.md](../../../TriCompany/docs/engineering/ade-consolidation-proposal.md)（ADE-B 员工域）
 
 ## 一、语义
 

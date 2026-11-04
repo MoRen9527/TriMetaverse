@@ -6,7 +6,7 @@
 
 ## 文档同步元信息（双重身份）
 
-- 身份 1（宪章指针）：公司宪章真源=[../TriCompany/tricompany.md](../TriCompany/tricompany.md)（V1.0，2026-08-01 生效）；宪章本体修订不在本文件进行。
+- 身份 1（宪章指针）：公司宪章真源=[../TriCompany/tricompany.md](../../TriCompany/tricompany.md)（V1.0，2026-08-01 生效）；宪章本体修订不在本文件进行。
 - 身份 2（摘要同步面）：本文件是宪章与公司现状态的中央摘要，published-summary 纪律同步。
 - sourceOfTruth: TriCompany/tricompany.md（宪章）；公司实现状态以 `../TriCompany/` 源仓为准
 - syncMode: published-summary
@@ -21,11 +21,11 @@
 
 当前真源分工如下：
 
-1. 总商业模式、模块边界：[docs/tmv-whitepaper.md](docs/tmv-whitepaper.md)、[docs/三元宇宙架构与模块说明.md](docs/三元宇宙架构与模块说明.md) 与中央 `BusinessStrategy`。
-2. TriCompany 公司宪章：[../TriCompany/tricompany.md](../TriCompany/tricompany.md)。
-3. 产品事实：[../TriCompany/docs/product/](../TriCompany/docs/product/) 与 [../TriCompany/docs/registry/product-state.md](../TriCompany/docs/registry/product-state.md)，经营 owner 为 CPO 小乔。
-4. 技术事实：[../TriCompany/docs/engineering/](../TriCompany/docs/engineering/) 与 [../TriCompany/docs/registry/code-state.md](../TriCompany/docs/registry/code-state.md)，经营 owner 为 CTO 小狄。
-5. 员工、合同与治理事实：[../TriCompany/docs/registry/employee-roster.json](../TriCompany/docs/registry/employee-roster.json)、岗位 contract、binding profile 和 workflow 文档。
+1. 总商业模式、模块边界：[docs/tmv-whitepaper.md](tmv-whitepaper.md)、[docs/三元宇宙架构与模块说明.md](三元宇宙架构与模块说明.md) 与中央 `BusinessStrategy`。
+2. TriCompany 公司宪章：[../TriCompany/tricompany.md](../../TriCompany/tricompany.md)。
+3. 产品事实：[../TriCompany/docs/product/](../../TriCompany/docs/product/) 与 [../TriCompany/docs/registry/product-state.md](../../TriCompany/docs/registry/product-state.md)，经营 owner 为 CPO 小乔。
+4. 技术事实：[../TriCompany/docs/engineering/](../../TriCompany/docs/engineering/) 与 [../TriCompany/docs/registry/code-state.md](../../TriCompany/docs/registry/code-state.md)，经营 owner 为 CTO 小狄。
+5. 员工、合同与治理事实：[../TriCompany/docs/registry/employee-roster.json](../../TriCompany/docs/registry/employee-roster.json)、岗位 contract、binding profile 和 workflow 文档。
 
 本文件对上游真源不重述、只指针；项目流程口径见 [docs/project.md](project.md)（不重述）。历史附录已外移至 [docs/archive/tricompany-v0.1-design-20260324.md](archive/tricompany-v0.1-design-20260324.md)（2026-09-14 批文④；引用按历史冻结件纪律，不得当现行口径）。动态经营事实真源=operating-records 周面+registry state，本件不承载周度进度。
 
@@ -200,13 +200,13 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 
 ### CPO 小乔
 
-- 追平 [../TriCompany/docs/product/PROJECT.md](../TriCompany/docs/product/PROJECT.md)、[REQUIREMENTS.md](../TriCompany/docs/product/REQUIREMENTS.md)、[STATE.md](../TriCompany/docs/product/STATE.md) 与 [README.md](../TriCompany/README.md) 的版本元数据和阶段描述。
+- 追平 [../TriCompany/docs/product/PROJECT.md](../../TriCompany/docs/product/PROJECT.md)、[REQUIREMENTS.md](../../TriCompany/docs/product/REQUIREMENTS.md)、[STATE.md](../../TriCompany/docs/product/STATE.md) 与 [README.md](../../TriCompany/README.md) 的版本元数据和阶段描述。
 - 把 13 人组织、当前 MVP 支撑定位和对外产品化缺口纳入产品真源的下一次正式版本。
 - 继续收口 PRD 分叉、phase package 和产品验收契约。
 
 ### CTO 小狄
 
-- 追平 [../TriCompany/docs/engineering/STATE.md](../TriCompany/docs/engineering/STATE.md) 与 Code Registry 中已经过时的岗位、发布和验证表述。
+- 追平 [../TriCompany/docs/engineering/STATE.md](../../TriCompany/docs/engineering/STATE.md) 与 Code Registry 中已经过时的岗位、发布和验证表述。
 - 继续补齐多宿主发布、完整岗位 adapter、长期稳定性和 R面 agent-core 主控适配 gates 证据。
 - 保持 source、support、live 三层发布纪律和 CodeGraph / Git Health 基线。
 
