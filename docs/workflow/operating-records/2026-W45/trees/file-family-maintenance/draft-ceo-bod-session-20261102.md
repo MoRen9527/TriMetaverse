@@ -499,3 +499,71 @@
 **拍面观察项定谳联动**：04:37 拍 TriMLC uptime 168→1968 精确连续+本呈报施工窗（02:00-04:52 现役部署）——**04:04 重启归因定谳=计划内部署重启**（非故障·上轮「候勘」转「已定谳」，节拍转报随下轮更新口径）。
 
 **session-only cron 双 job 首两轮实跑**：job1 04:22/04:52 两轮转报毕（真触发证据成立·04:22 拍读距 15min=调度器偏移照旧注明）；job2 04:23/04:53 两轮（04:23 轮处理真信四封落 read+312 tick 副本堆积观察项入档·04:53 轮零未读）——D-52 周期自检义务兑现。
+
+## 意见㊻（2026-11-04 10:35:54 +0800·date 现查原值）：CEO 令·根目录 md 迁移+docs-maintenance 接入——BOD 分析段+映射表建议稿
+
+### 令源（verbatim）
+
+「先分析下TriMetaverse根目录下的相关md文档及其关联文档，将这些迁移到TriMetaverse/docs下的合适目录里，然后把目录接入docs-maintenance场景。」（CEO 2026-11-04 10:30:13）
+
+此令=COS 径裁「全关待真实需求」所等待的真实需求触发点——CEO 亲自触发接入。三段式：①分析 ②迁移 ③接入。
+
+### 一、分析段（BOD 事实面盘点·2026-11-04 10:3x 勘毕）
+
+根目录现存 **31 件 md + meta-recognition/ 子目录（2 件）**，分五类：
+
+**A 类·留根件（3 件·宿主约定/入口）**：
+- `README.md`（仓入口）；`CLAUDE.md`、`AGENTS.md`（宿主约定·真源=TriCompany/docs/project-sources/·FADE-002 管线字节发布件，禁直接改）——**一律留根不迁**。
+
+**B 类·历史执行卷（16 件·建议落 docs/archive/）**：
+- `arch-storage-migration.md`（46KB 总体架构 V0.2·2026-06-06·**全根引用面最大件：被引用 20 处**，tmv-phase-1-execution-plan 声明其为 upstream）
+- phase-a/b/c 系 12 件（2026-02 月历史执行手册/记录/周报：phase-a-repo-adjustment-runbook、phase-b-b2-b3-5min-checklist、phase-b-github-app-sync-runbook、phase-b-pilot-record、phase-c-minimal-startup-checklist、phase-c-pilot-record、phase-c-w1-issue-body、phase-c-w1-mobile-8lines、phase-c-w1-pr-template、phase-c-w1-weekly-summary、opentride-opencode-dev-migration-runbook、tride-opencode-dev-migration-runbook）
+- `github-app-copilot-rollout-v1.md`（2026-02-26 落地清单）
+- `90天收入突击计划.md`（个人商业计划·时间窗 2026.05.19-08.16 已收窗=历史件）
+- `三元宇宙价值流动_old.md`（旧版·带 puppeteer 打印 frontmatter）
+
+**C 类·理念/方案草案卷（5 件+2 子目录件·落点候 COS 核查定谳）**：
+- `trimetaverse.md`（三元模型理念总述 10.9KB——白皮书 L1379 引用为「三元模型、系统理念与治理思想总述」；**LG-034 W37 卷 CPO 既有意见：产品叙事唯一真源应收敛到白皮书，此件与 README/tmv-whitepaper/project.md 四件并存讲项目故事易漂移**）
+- `三元宇宙价值流动.md`（v2.0 商业模式整合草案 2026-07-15）
+- `三元宇宙落地方案.md`（落地方案草案·引链基础设施选型）
+- `链基础设施选型.md`（阶段0/1 选型结论 2026-02-11）
+- `灵感记录.md`（**CEO 个人灵感簿·特殊件**：默认随卷归档但候 CEO 意向确认，BOD 不代裁）
+- 子目录 `meta-recognition/元宇宙学院.md`、`meta-recognition/以太坊私链部署.md`（2 件·trimetaverse.md/落地方案/选型三件均内链引用）
+
+**D 类·0 字节空占位件（3 件·W40 候勘旧悬项撞本次令）**：
+- `meta-reality.md`、`meta-recognition.md`、`meta-virtuality.md` 全部 **0 字节**；白皮书 L1294 自认「补齐 meta-三件」待办；W40 批次卫生 readout（batch-c-hygiene-sde-20261003）已记「仓库根三文件 0 字节——是否预期空件候 content owner 勘定」悬至今。**处置候 COS 真源核查定谳**（迁占位 vs 销项并改白皮书引用），BOD 不裁真源。
+
+**E 类·引用面同步清单（迁移必改·断链风险面）**：
+- `docs/doc-graph.json`：引用 trimetaverse.md（L2418/3577/3604/3622）
+- `docs/tmv-whitepaper.md`：L1294/1379/1440-1443 引 meta-三件+trimetaverse.md
+- 根文件互链族：arch-storage-migration→6 件互链（L815/835/843-845/854-855）；phase-c 族互链 9 处；trimetaverse→meta-recognition/ 子目录 2 链；三元宇宙落地方案→链基础设施选型+meta-recognition/ 2 链
+- 全仓被引读数（git grep docs+根）：arch-storage-migration 20 件、三元宇宙价值流动 6 件、tmv-phase-1-execution-plan 5 件、链基础设施选型 5 件、github-app-copilot-rollout 5 件、meta-recognition 5 件、trimetaverse.md 2 件、灵感记录 2 件、三元宇宙落地方案 2 件、meta-reality/meta-virtuality 各 2 件、90天/copilot-cli 各 0 件
+
+### 二、映射表建议稿（BOD 规范表述面·落点定谳归 COS 核查后可修）
+
+| 类 | 件 | 建议落点 | 理由 |
+| --- | --- | --- | --- |
+| A | README/CLAUDE/AGENTS | **留根** | 宿主约定/入口件 |
+| B | 16 件历史执行卷 | `docs/archive/`（沿用现惯例·平铺带日期名） | 历史卷归档·docs/archive 现有先例 tricompany-v0.1-design-20260324.md |
+| C | trimetaverse/三元宇宙价值流动/三元宇宙落地方案/链基础设施选型 | `docs/archive/`（候 COS 核：若判现役真源与 docs/ 下白皮书/tricompany.md 有承继关系，可改落 docs/product/ 或 docs/execution/ 并加旧版注记） | 理念草案·时效性存疑 |
+| C 特 | 灵感记录.md | 候 CEO 意向（默认随 archive） | 个人灵感簿 |
+| D | meta-三件 0 字节 | 候 COS 定谳（迁 or 销项+改白皮书引用） | W40 悬项 |
+| C 子 | meta-recognition/ 两件 | 随 C 类同落点（保持与 trimetaverse.md 同目录防内链断裂） | 内链耦合 |
+
+### 三、接入面（docs-maintenance event-watch·env 三键）
+
+迁移毕接入目录（建议）：`TRILC_FADE_WATCH_DIRS=D:/Code/ai/TriMetaverse/docs/archive`（若 C 类落别目录则并集）；`TRILC_FADE_WATCH_TREE_ROOT`+`TRILC_FADE_WATCH_INTERVAL_MS` 按现役部署面惯例配。**fail-closed 三键缺一不可**（TriMLC watch.ts c52f5bc）；配置=8713 现役 daemon 部署面 env 变更+重启链生效——今晚 8713 已两次计划内部署重启（04:04/04:48），本次若重启为第三次，同口径对施工窗对表。接入后首验=event-watch 对该目录变更触发真 run 证据留档。
+
+### 四、流转（BOD 规范表述毕→COS 链）
+
+- 真源核查+落点定谳+C 类时效判定=D COS 职责面；施工（迁移+引用同步+doc-graph/白皮书改链）=CTO/FSD 面；env 三键部署+重启=TriMLC 域 SDE/CTO 面；本席持监工验锚。
+
+## 意见㊼（2026-11-04 10:43:00 +0800·date 现查原值）：COS 回执对表认领——令文两处勘误+映射表漏件两件自领
+
+COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认领成立：
+
+1. **件数口径勘误**：意见㊻「根目录现存 31 件 md」表述不准——实为**根目录 md 29 件**+meta-recognition/ 子目录 2 件=31 件总量；「phase 系 12 件」同样不准——phase 系实为 **10 件**（opentride/tride 两 runbook 在㊻括号清单中有列但归类表述混入 phase 系口头，独立件）。
+2. **映射表漏件两件自领**：①`tmv-phase-1-execution-plan.md`（L4 执行层计划·upstream=arch-storage-migration+docs/tmv-whitepaper.md·被引 5 处）——㊻映射表漏列，归 B 类历史卷（2026 年初计划·upstream 均已迁件）候 COS/CPO 终稿定落点；②`copilot-cli-deepseek-byok-setup.md`（2026-07-19 验证的工具配置指南·被引 0 处）——㊻全节漏列，候选 CPO 意见征询一并定（工具指南类·时效性 2026-07）。COS「施工拆解前以底稿全清单+实存对表定稿映射终稿」正确照准，令文主干不动。
+3. **0 字节 3 件**：COS 径定销项+白皮书引用改指——BOD 无异议（引用面修复+W40 旧悬项一并清·施工归 CTO/FSD 面）。
+4. **灵感记录.md**：COS 方案=默认随归档+随任务书呈批件注记候 CEO 意向（不单独问）——BOD 照准；本席 10:37 已向 CEO 单独呈报过意向问询（会话直呈），双通道不冲突，CEO 任一侧表态均有效。
+5. COS 路由落位四信（COO 三段排工/CPO 落点意见征询/CTO 接入预告）10:40-10:42 全发回执在卷；真任务书=D-39 CEO 确认呈批链边界双方确认一致。本席转监工位，候 COO 任务书草案+CPO 落点意见→COS 汇总定谳→呈批链。
