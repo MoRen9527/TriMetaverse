@@ -726,3 +726,22 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **①停工令已达 COO**：14:30 起停工-18:00 复工（周三工作日窗照排）·施工面停/治理面照旧·AC 稳态第四日电面无异常·五要素全文在 COO 面（msg 4aa68182）。
 - **②M6 日 pace 线触发**：14:00 同锚跨日对 +21pt/24h（昨 5%→今 26%）≥15pt 线；周窗 26% 距暂停线 4pt 未触·5h 窗 38% 未触；缓解=停工窗即时回落+今 20:44:33 周窗重置序列重开；meter 旁证 11-03=485.9M tokens/9 席（10-22 以来最重日）。CFO 处置建议已随报 COO（停工照排/18:00 复工照发/新窗基点重建 pace 序列再判）。
 - BOD 定性：知情面收讫·经营裁决面不裁（处置归 COO/COS 链）·随 14:22 拍旁证对表（本地四席在干活与停工令 14:30 生效前窗吻合·ew 实施单属治理面照旧与否候实施毕报面核）。转呈 CEO 知情。
+## 意见㊿+21（2026-11-04 15:14:33 +0800·shell 注入现查落款）：COS 转呈补笔·ew 合流案全链闭环 APPROVE
+
+- **验收 APPROVE**（07:09:33Z 活体四向独立复核零复用卷面读数）：cron=每日 03:30（next_run=11-05 03:30+0800 精确命中·17 jobs 谱）·audit 尾 06:34:13Z 封死=30s watch 真关·daily 三树语义兑现。锚链：SDE bf414156d→验收 1ee3d8f13→bare 顶 728686052 全链收敛（github 单通道候自愈挂账·非阻塞）。
+- **过程 saga 两笔如实**：①403 复发 saga=孤儿 wrapper cmd 旧 env 快照击穿五次重启链（批处理自修改陷阱·CIM 谱系勘定·着陆垫换血第八链成）②止血勘误=第五链读数静默窗假阴性·回归窗白跑 5 发——**白跑合计 44 发全链成本如实呈报候 CFO 按需核算**。
+- **勘定卷勘误**：§二白名单语义勘正（cli=HTTP 形态必过门·SDE 实勘·CTO 认领·as-of 头形入卷）。
+- **D 系候选转办 CAO 铸册窗**：批处理自修改陷阱+谱系验证判据（父 cmd 创建时刻≈冷启时刻）两件挂号。
+- **观察窗**：11-05 03:30 首触发读数+11-06 SDE 日报核对——两日窗毕闭案。
+- BOD 定性：CEO 13:54+「一天一次」令实施面**全链闭环 APPROVE**·知情呈报；候裁面现仅剩 dsh 试跑窗一项。
+## 意见㊿+22（2026-11-04 15:22:58 +0800·shell 注入现查落款）：CEO 三令——不停工撤销停工令+trilc/trimc 命名清理+TriModel 供 glm key 路径
+
+- **令1（不停工）**：CEO 裁——「今天20:44就会周额度重置，我们还有大量未用，所以下午不停工。知会CFO」→14:30-18:00 停工令撤销（M6 触线缓解以本裁为准）·知会 CFO+执行位 COO 同步。
+- **令2（trilc/trimc 命名清理）**：CEO 问「trilc cron run 是 TriRLC 还是 TriMLC 的？」并令清理明确 trilc/trimc 表意。本席活体勘定（package.json 两仓实读）：**TriMLC 仓 name=`trilc`·bin 双注册 {trimlc, trilc}→同一 cli.js；TriRLC 仓 name=`trilc`·bin 双注册 {trirlc, trilc}→同一 cli.js**——ew 凌晨窗 cron 挂 8713 TriMLC daemon·「trilc cron run」实调 **TriMLC 的 cli**（trilc bin=旧名兼容别名·trimlc=新正名）·但两仓 package name 同名 trilc+共享 bin 别名=跨 daemon 同名歧义（按安装仓决定行为）=CEO 指出的混乱源实锚。流转：转 COS 路由 CTO+CAO 联审立项清理（对齐上午统称术语入册 6a1dc4e 语义基础）。
+- **令3（TriModel 供 glm key）**：CEO 问自配路径或提供 key 由本席代配 dsh。本席勘定 TriModel 钥面真源（TriCode src/trimodel-cli/env.ts 实读）：钥文件解析序=①env 钉位 TRIMODEL_DEPLOY_KEY→②per-provider 正位 `~/.claude/settings.presets/.deploy-key.<provider>`（glm 即 .deploy-key.glm）→③legacy `.deploy-key`·fail-closed 缺失拒写。**并行事实**：CTO 已勘定河源现役 GLM key（13 席 settings.json ANTHROPIC_AUTH_TOKEN）双形态 200——dsh 试跑窗零新 key 亦可先跑。两路径呈 CEO 择一：A=CEO 贴 key 本席转 CTO/SDE 代配（dsh 配置+8460 baseURL·值面不回显）；B=零新 key 复用河源现役凭据先跑。
+- 流转：令1 知会 CFO+COO；令2/令3 转 COS 路由；三令落卷毕呈堂 CEO。
+## 意见㊿+23（2026-11-04 15:23:23 +0800·shell 注入现查落款）：CEO 追加令——凌晨 3:30 docs-maintenance 改安排在 TriMMC
+
+- **令文转录**（CEO 15:22）：「凌晨3:30的docs-maintenance应该安排在TriMMC上」。
+- **口径**：ew 合流案刚验收 APPROVE 的凌晨 cron 现挂 8713 TriMLC（本机·M 面本地域）——CEO 裁定部署位改 **TriMMC（sg 8712·M 面服务域）**。实施面=8713 job 退役+8712 新建（TriMMC cron payload=嵌套 {command,cwd} 形·与 TriMLC 平铺形态有差异·迁移非纯复制·CTO/SDE 实施勘定）·观察窗随迁移位顺延（首触发以 8712 新 job next_run 为准）。
+- 流转：并入 COS 转达包路由 CTO/SDE 实施；实施毕报走门禁。
