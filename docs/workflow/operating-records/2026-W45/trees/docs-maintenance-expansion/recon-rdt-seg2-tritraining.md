@@ -234,6 +234,23 @@
 
 批二七条承袭＋R1 增补：⑧活体现勘读数随件留痕（命令跑不通=如实记·禁「应该能跑」）；⑨两轮拆（10+3）每轮毕报独立 review·性能读数分轮累计（COO 344 笔③要件）。
 
+## 勘十三 · R1 勘定卷对表裁定（FSD recon-fsd-r1-tritraining-batch3.md 8f67c5209 五项候裁·RDT 裁定正身）
+
+**抽验读数（裁定前独立实勘六探·不凭信裁）**：V1 TMV docs/training/ 顶层平铺+tricompany/ 子目录=A6③ 坐实；V2 支撑根顶层=README/_archive/host-object-manifest.json/knowledge/runtime（无 TriTraining/）=A6④ 坐实；V3 `TriCompany/docs/workflow/host-object-publish-flow.md` 在位（22954B）=W7/W8 改写目标有效；V4 check-sync 子命令 employee_source_kit.py L1069/1105 在役=A1 坐实；V5 claude-session host 值 binding 生成校验面在役=A5 坐实；V6 source_kit_paths L143=A9 坐实。**六探零漂，勘定卷采认。**
+
+**五项裁定**：
+1. **W9=c 案**（禁写语义保留+路径改现役描述）：L32 原文实读=禁写纪律行挂两旧路径（`TriMetaverse/docs/training/tritraining/`+`TriTraining-copilot-host-assets`）——纪径件指涉对象必须活体可达（与 W11 同理：留死链=读者按图索骥踩坑）；c 案禁写语义原样保留、对象升为现役两真位（中央聚合面 `TriMetaverse/docs/training/`+宿主支撑根 `TriMetaverse/TriCompany-host-assets`），与 L31 三分辨行精确对齐（L31 说三分·L32 说禁把后两者写成前者）。b 注记形留死链弱；a 直接改写现役名亦可但不如 c 描述形稳（防现役位形态再演进重蹈断链）。措辞权=本席 content owner 域裁定；CAO 面如有异见走勘误头 revision 流程。
+2. **W11=正文形优先+勘误头记一笔**（与 FSD 倾向相反）：baseline 系合同基线件——读者照件执行，L32 引用面属合同活体引用（非历史叙事），死链留正文=合同缺陷+补丁；正文形改写（与 W9 同款现役描述形）+批二判据②勘误头随改写已覆盖留痕。**判据式授权**：施工时若 L32 原文语境实为历史沿革叙述段（非引用句），退档案化括注形（判据③引文/蓝图除外）——以原文语境为准。
+3. **W12=a 封存形**（采 FSD 倾向）：L5 三批完结+L35 回链已修=迁移叙事已终结；历史规划档路径/宿主名叙述=当时形态，改写反毁档案证据值（历史叙事冻结纪律）；A6④ 宿主侧零 published copy+L36 悬置项=「计划中未发生」的历史事实正是档案价值所在。施工要领：补元信息头三件套（syncMode 标 archived 形）+头注记一行（「本件系 training-pack 三批迁移已完结的历史规划档，路径与宿主名叙述系当时形态；宿主资产位现役=`TriMetaverse/TriCompany-host-assets`·中央聚合面现势=`TriMetaverse/docs/training/` 顶层平铺」）+正文零改写。与 W9/W11 不矛盾——分野=件性质（活体规则件修指涉 vs 已完结规划档冻结）。
+4. **W13=零改动维持×2**：观察项1（消费者两家 vs 04 补笔③ 三家）——原文实勘 L108 消费者=package.json 硬锚面（TriRLC :24/TriRMC :26 两仓行锚）vs 04 mermaid=依赖方向宿主叙事（含 TriMMC），两口径各有所指非矛盾，FSD 定性采认，**不改**（硬锚面是事实真源、叙事面是全景图，小白版保简单是本职）。观察项2（L22 TriRMC「主控中心」）——FSD 风险定性采认成立（无面限定词·易与 sg M 面 TriMMC 混淆），但修复需引入部署面事实（河源 R 面服务域/与 TriMMC 分野）=内容补写非词面勘正，超出勘正/补笔判据（补笔=零新事实）；**本轮维持零改动**，留置候 01 后续复勘窗（R 域序或 cc-tutorial 专项），裁定记录在案。
+5. **W14=确认 rewrite**（三项「已落地」确权 V2/V4/V5 独立验成立）：施工要领=「原规划 X → 现势已落地 Y（活体锚 Z）」演进保留形——§10 原规划段不抹除（规划→落地演进有档案价值·历史叙事冻结），逐项现势化+锚落笔，随轮 2。
+
+**两笔升报（候 COO 排程·圈外）**：
+- **中央副本同步债+缺件坐实**：V1 实勘 TMV docs/training/ 平铺面 employee-source-kit 仅 3 件（缺 cli-course.md·TriTraining 侧 4+4 vs 中央 4+3）+lastSyncedAt=2026-06-14 滞后——属 TMV training 域（≈R4 圈），候排后续轮或专窗。
+- **A4 测试债升 CTO 域采认**：54/55 过·failure=测试期望硬编码 13 席 vs DECLARED 已含 product-manager 第 14 席=测试滞后债非课程命令坏——同意不入正文、升 CTO 域候窗。
+
+**轮拆计数口径（候 COO 裁·本席意见）**：池件计合理（占位件占池位保 review 完整性）；W14 顺带面不计池件与 CEO 上限原意（review 负载控制）一致。裁定齐，候 COO 锁值后开施工轮。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
