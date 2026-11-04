@@ -1,7 +1,7 @@
 {
   "sg_idle_streak": 0,
   "local_idle_streak": 0,
-  "last_ts": "2026-11-04 18:42:24 +0800",
+  "last_ts": "2026-11-04 19:21:09 +0800",
   "note": "BOD 班组空闲兜底判据状态·单写者=job1 v4.1 b70059f8·判据(CEO 17:23 裁+COS 18:48 裁落版):14:00-18:00=GLM模型不派工设计窗(窗内全体候令idle=设计态不通报)·窗外全体候令先mtime旁证自查(sg trees/-mmin -45有新落卷=有工件活动免通报)·旁证后仍候令才通报(COS自判待派/断链/零活动)",
-  "last_notice": "18:37拍 sg duty组仍13/13全候令·段1 CTO GO后37min未现开工读数=超30min拾取窗·增量跟进通报已发m-duty-cos(tmux验拾取)·候复核回执"
+  "last_notice": "19:07拍 全席空闲(sg duty 13/13+本地13席)·拍龄12m48s延迟注·v4.1首通报:sg侧mtime旁证=0(45min零落卷)→通报m-duty-cos(tmux验拾取);本地组→通报m-cos(SendMessage)·双定性回执候"
 }
