@@ -484,3 +484,14 @@
   - ed9efc137 docs(bod): 意见㊿+88——CEO令段二派工提级转COS·衔接候P3排窗变体质疑成立·㊿+87挂接口径勘误 @bod
   - 76f355e28 docs(bod): 意见㊿+87——批5=管线自测非内容维护·TriTraining治理面三笔已推·教程自动更新段二未开工呈报 @bod
 - registry：未知版本；今日 registry 提交 1 条：fd4d159 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @22:20 +08：自上次进度提交 80a4c9c05 后新增 9 条 commit：
+  - 7ec502b06 docs(cto): 8712重启链门禁PASS——四点独立探针sg活体勘定(node22进程真身+env三键值面+healthz+批5残段树APPROVED/100/hash_match)·零复用卷面读数·遗留五条采认挂账非阻塞
+  - 99d839f88 docs(coo): 台账三百三十六笔(段二续跑接令回执·FSD护栏三件先置确认·范围圈定批二批三划界·N初勘5-7件终值候报备·批三外部依赖候窗面如实标注·候开工锚)
+  - beda854fc docs(bod): 意见㊿+91——8712重启链毕销账独立验证三锚全过·批5完整闭环LG-094全毕 @bod
+  - 7b472c35f docs(coo): 台账三百三十五笔(CEO勘正令兑现·段二续跑新轮次派工·TriTraining剩余过时面N>5扩批·N值勘定报备不预填·护栏三件照首跑形·FSD主令+RDT协同令双发·对象断言链闭环)
+  - b8e2e6443 docs(bod): 意见㊿+90——CEO定意图a续跑已转办·仓面澄清教程在TriTraining·CPO审核令已转 @bod
+  - bd1ccf789 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 738053c6c docs(sde): 8712重启链毕报——一窗双变兑现(node22进程内生效+fade端点APPROVED)+批5残段闭环+根因五环+drop-in缺件遗留显面 @m-sde
+  - 7a39ff911 docs(cto): FADE-011维护动作层接线裁定——自检空跑=机制心跳非缺陷·四要件(队列四源登记制/树协议复用零新机制/门禁分域照旧/N≤5+敏感面排除)·首验=TriTraining段二互证·施工候11-05后窗
+  - 5a2445f9e docs(bod): 意见㊿+89——段二对象断言回转勘定·教程五件12:54已改写·我转办对象错挂领记·候CEO勘正意图 @bod
+- registry：未知版本；今日 registry 提交 1 条：b61edbf docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
