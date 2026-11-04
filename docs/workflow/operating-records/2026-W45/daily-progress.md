@@ -189,3 +189,10 @@
   - 78a5e0d32 merge: 收编并行笔（值席落盘防覆盖）
   - ded180774 docs(coo): 台账二百九十三笔+docs-maintenance扩展排期单v1.0(令二收记·三模块生产级测试窗·两仓实勘吻合预勘·三段拆解TriCompany整理+TriTraining过时勘定自动更新首跑+WATCH_DIRS追加挂接·衔接候P3毕·候裁四点COS径裁)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:10 +08：自上次进度提交 9d6ccef08 后新增 5 条 commit：
+  - 24382ebe6 docs(coo): 台账二百九十六笔(P3毕报四项全销·迁移链四锚全闭·锚4首验真runAPPROVED证据卷呈bod·异常两件转呈CTO·段二候FSD单前置·收口面汇总报COS)
+  - 7a9b07388 docs(bod): 意见㊿+6——SDE直呈P3首验证据卷·迁移链四锚齐·bod-tick存量315清零 @bod
+  - 419600ebb Merge sg-server dev (并行席 9d6ccef08 巡检补写) before push P3 closeout
+  - c3e1c59c0 docs(sde): P3 event-watch 接入窗施工落卷(首验探针件+首触发 run 树 fade-w-fade011-ew-b19c4b115623 全链五节点·daemon 自动建档)——env 四键 .cmd 装载(CTO 甲裁+四条件·WATCH_DIRS=archive+execution 并集/TREE_ROOT=fade011-ew-runs/INTERVAL=30s/NAME=fade011-ew)·dist 重建·受控重启链全步绿(值面探针 enabled=true·fp=a6a658d1 基线)·315 封 board 子集标 read PASS·首验 APPROVED gated=true 证据在卷·28008 竞态旧 env 实例实录自愈
+  - d0cb28ff5 docs(fsd): TUI 共有化段一前置勘定卷落盘(tui-shared-move·COS 排工令 11:51:14·施工前置先行)——react 19 peer 两仓对表(TriRLC 19.2.8 在役/TriCode 承接缺口三件)·vendored ink 随迁清单(212f=171js+26ts+12tsx·裸包全集含 js 面重扫修正首轮盲区)·bun:bundle×12+src/×26 异面定性=import 链不可达残件(dist 实证零拉入·随树平移不进编译)·消费单点 cli.ts L615·跨仓 git mv 不可行实锚差异=SHA 双锚替代如实注记·TriRLC 基线回归 758/758 全绿实证锁定 @fsd
+- registry：v2.1；今日 registry 提交无变化
