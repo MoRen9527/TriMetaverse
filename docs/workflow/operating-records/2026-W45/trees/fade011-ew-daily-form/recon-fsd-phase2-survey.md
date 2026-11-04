@@ -74,7 +74,41 @@
 - 8713 照跑不中断（观察窗 11-05/06 两发）——迁移窗内零动作（裁 Z' 语义）。
 - env 面注记：TRILC_FADE_WATCH_TREE_ROOT 现值已为 {week} 模板形（段二件1 部署面 env 已切·watch DIRS 空值 fail-closed off 维持）。
 
-## 工序 2 前置清单（候 CTO 核后连续进）
+## 工序 2 执行终态（2026-11-04·CTO 四裁达落笔毕）
+
+CTO 核令 08:43Z 采认勘定全谱+四裁达，工序 2 当窗连续进毕：
+
+**四裁落笔**：
+- 裁① 勘⑤=sg node ≥22.5 隔离升形（双版本共存·单 unit 定向切换硬约束）——工序 3 SDE 面执行，代码面零阻塞。
+- 裁② writeAuthority=`'daemon:trimmc'` 端点落笔（TriMLC 旧值禁直搬成立）。
+- 裁③ watch 两表随搬零改动正形（store.ts DDL 直搬·死表注记在卷）。
+- 裁④ env 键=`TRIMMC_TRI_SKILL_ROOT` 端点+boot resume 双接入（未设=缺省 scriptDir 解析 dev 布局·sg dist 形由工序 3 SDE 落 unit env）。
+- 裁⑤ 门禁基线「新增零红+既有不扩散」采认执行。
+
+**三 commit 链（TriMMC dev·与移植分 commit 达成）**：
+- `838cc23` TS2345 勘修单（前置消解·session-initializer.ts paths.soul optional 三元收窄一行——PathsSchema soul optional（agent-core batch-15 件③ Registry 无四件套）+L96 filter(Boolean) 组装天然容忍=语义正形最小 diff；stash 双态证据链：BASE_BUILD_RC=2→FIX RC=0·test 642/610/31/1 双态全同+not ok 名单 diff 全同）。
+- `634902f` 件 A 残项四仓扩面 TriMMC description（amendment 08:51Z·CAO 裁 54f054d；TriRMC 3a39751 同形另仓——D-68 阶段一 naming 残项全闭环）。
+- `0de548a` 工序 2 移植正身（16 files·+3777：src/fade 7 文件 cmp IDENTICAL 直搬+app.ts 三挂接+测试随搬+wiring 案+.gitignore data/ 行）。
+
+**挂接面实施要点（勘定卷外新增勘定）**：
+- TriMMCEnv 无 dataDir 字段（vs TriMLC env.dataDir）——store 落位定谳=`process.env.TRIMC_CONFIG_DIR ?? path.resolve('data')`（defaultConfigDir 同形·config-sync/cron 现役同位惯例）。
+- skillsRoot 消费链实锚：FadeDriverOptions.skillsRoot→defaultWorkers→resolveTriSkillSkillsRoot（envOverride 参数在位·TriMLC 现役零 env 键消费=TriMMC 侧显式接入为新增面）。
+- fadeBoot 作用域=TriMMC start() 内局部 let+createServer 回调闭包捕获（TriMLC 同构形）。
+- homeDomain 沿直搬原值 'M-plane-local'（四裁未涉·**候裁注记**：TriMMC=M 面 sg 服务域语义是否须别值·候 CTO）。
+
+**测试面终态**：
+- 随搬 fade 模块单测 7 文件全绿（fade-store 15/skill-loader 15/state-machine/closing-gate/driver/recovery 全谱）。
+- 不随迁三件（TriMLC 仓原样零动）：fade-watch.test（watch 同族）·fade-kill-drive/kill-restart（**TriMLC daemon 级 E2E 实锚**：TRILC_* env 全谱+`[trilc] ready` 启动序+TriMLC index 入口耦合——非 fade 模块单测·勘定卷门禁「fade 模块单测随搬」边界外）·fade-boot-wiring（createTriLCApp 面）。
+- fade-skill-loader 尾部「env dataDir guard」suite=TriMLC config/env.ts 层测试（TRILC_DATA_DIR 断言）非 fade 面——不随迁+适配注记入件。
+- 新增 fade-runs-endpoint.test.ts 端点 wiring 案 4 tests 全绿（401 统一门/400 形×2/200 envelope 壳契约——真驱动深度归 TriMLC 在役 E2E+工序 3 sg 活体验证）。
+
+**门禁读数**：build RC=0·test 723/691/31/1——红集合与工序 2 前基线（642/610/31/1）逐名相同仅序号平移（剥序号归一 diff 零差=零新增红零扩散铁证）·fade 面零红。
+
+**教训自领**：sed 行号段删 wrapper 头坑（fade-skill-loader 适配时 `264,300d` 吞掉文件尾 after(()=>{ 头致孤儿块 transform 错·全量才暴露）——段删除后必须单文件跑验证+边界行断言，非全量兜底。
+
+**工序 2 状态=毕（READY_FOR_REVIEW）**。候 CTO 门禁审查；工序 3（SDE 部署面+sg node 22 升级+unit env 落键+8712 单重启窗双变）候 CTO 施工单。
+
+## 工序 2 前置清单（原卷留痕·已执行毕）
 
 1. 移植面=7 文件直搬（src/fade/ 零改动）+app.ts 三挂接（import/boot 链/端点）+boot 链 watch 段剥离。
 2. 候裁三点：writeAuthority 语义值（'daemon:trmmc' 形？）/watch 两表保留剥离/env 键名（TRIMC_TRI_SKILL_ROOT 形？）。
