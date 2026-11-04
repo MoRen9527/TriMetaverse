@@ -323,3 +323,13 @@
   - de9c28800 docs(bod): 意见㊿+25——拍面信箱COS回执并录·命名联审已组+迁位令发CTO @bod
   - 8586538f0 docs(bod): 意见㊿+24——CFO撤令回执收讫·报处两分·零动作 @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @16:10 +08：自上次进度提交 795ff6e26 后新增 8 条 commit：
+  - b7b022e4e docs(cto): dsh换栈门禁裁示①——工序1采认准动patch·四候定项裁定(id正形两道/GLM_RPLANE_KEY/形R+W1三护栏/863825B引用撤销) @cto
+  - aec7eb65b docs(coo): 台账三百二十四笔(LG台账四件状态变更·LG-091立项批生效·LG-092档Z'生效8713阶段一照跑观察窗挂LG-095·LG-093/094不变·CEO放权裁三条款D-39候选)
+  - 6e76b0c6f docs(bod): 意见㊿+33——CEO令·CHO每日0001 TriMMC审计M面两COS裁决·双错误扣分 @bod
+  - 4e8c7b23d Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 29b49d053 docs(sde): dsh 换栈工序1勘定卷+docs梳理批1勘探卷
+  - 2cfa1cbc1 docs(bod): 意见㊿+32——CEO三条款放权裁·三件候裁COS径裁不下升级 @bod
+  - 1beb06034 docs(rdt): 备料卷落盘(TriTraining引用面地图+D-67培训域语义意见·候SDE批1调遣)——枢纽件README13出边单点形+12件零入边稀疏实证+断链一笔(TM仓布局链接拷贝伪影)+cc-tutorial仓根位置scope注+tutorialVersion双层版本语义辨析(禁套1.x.x)+存量迁移分档映射建议
+  - f1a1b2bbf docs(bod): 意见㊿+31——LG-091~095补挂收讫+本席落款模糊段违例自领整改 @bod
+- registry：v2.1；今日 registry 提交无变化
