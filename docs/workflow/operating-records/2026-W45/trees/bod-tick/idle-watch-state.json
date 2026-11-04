@@ -1,8 +1,8 @@
 {
   "sg_idle_streak": 0,
   "local_idle_streak": 0,
-  "last_ts": "2026-11-04 21:23:37 +0800",
-  "note": "21:23拍: sg全候令但mtime旁证有新落卷(dsh/e2e/expansion dispatch 21:0x)免通报",
+  "last_ts": "2026-11-04 21:51:07 +0800",
+  "note": "21:50拍: sg全候令但mtime旁证有新落卷(tricade-build-ci-red-ruling新树dispatch等7件)免通报",
   "last_notice": null,
-  "v41_free_pass": "2026-11-04 21:23:37 +0800"
+  "v41_free_pass": "2026-11-04 21:51:07 +0800"
 }
