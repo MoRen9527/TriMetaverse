@@ -154,6 +154,33 @@
 2. TriCompany workflow 制度件与 TMV workflow 制度件含纪律册/D 系/工作流 SOP——**规范头/版本号梳理与制度真源面交叉**：纪律册等件是否挂 D-67 版本行属制度域裁量，勘定卷只出读数·裁决面候 CAO/CTO 域（本席不出制度裁决）。
 3. execution 151 件含 fade-spec 系与执行计划件——其中已被后续演进取代的旧 spec 是「过时」高发域，但历史执行件与活规范分界候域内逐件定性（R8 前置细分级）。
 
+## 勘十一 · 机械层全扫描读数（勘十确认后开跑·22:3x-22:4x 两轮脚本·516 件零错误）
+
+**扫描口径**：勘定圈 516 件（TMV 297/TC 195/TriTraining 24——cc-tutorial 03/04 在途改写态跳过·TriTraining docs 根 SDE 探针件 1 件标注排除不入圈）；每件读头 8 行判 sourceOfTruth/syncMode/lastSyncedAt 三件套＋全文前 4000 字符判版本行形态。TSV 全量=`/tmp/docs-scan.tsv`（会话临时面·读数要义落本节）。
+
+### 域级读数表（full=三件套齐/partial=有部分/none=无头；v1xx=D-67 三段式/vold=旧两段式）
+
+| 域 | n | full | partial | none | v1xx | vold | 分级供数要点 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| TC workflow（制度件） | 51 | 10 | 2 | 39 | 35 | 4 | none 大头·但 v1xx 35=版本行普及率高——补头为主 |
+| TC training | 47 | 20 | 18 | 9 | 15 | 6 | R2 主域·vold 6 件待迁 D-67 |
+| TC engineering | 37 | 11 | 2 | 24 | 15 | 5 | R3 半域·补头+vold 迁移 |
+| TC testing | 37 | 26 | 0 | 11 | 0 | 0 | evidence 件为主（版本行全无·候「证据卷是否入圈」定性——与排除判据第四类同形） |
+| TC execution/registry/product/project-sources | 23 | 5 | 9 | 9 | 4 | 0 | 量小随 R3 顺带 |
+| TMV execution | 151 | 127 | 3 | 21 | 3 | 17 | R8 大域·full 率 84% 已高；2026-08-2x 历史执行档 ~33 件（vold 17 集中）候「活规范 vs 执行档」逐件定性 |
+| TMV workflow（制度件） | 60 | 35 | 4 | 21 | 22 | 0 | R5 域·none 21 补头 |
+| TMV training | 22 | 22 | 0 | 0 | 3 | 0 | full 率 100%·量轻 |
+| TMV engineering/registry/contracts/prd/product/testing/security/root | 57 | 41 | 8 | 8 | 25 | 2 | R4/R7 域·零散补头 |
+| TriTraining docs+cc-tutorial | 24 | 10 | 12 | 2 | 14 | 0 | v1xx 14 全（SDE 批 3 迁移毕）·partial 12=批 2 规范头只挂部分字段——补齐三件套归 SDE 梳理域 |
+| **TOTAL** | **516** | **307** | **59** | **150** | **133** | **34** | vold 34 件=旧两段式待迁 D-67（SDE 梳理域供数） |
+
+### 读数判读（供轮形分级）
+
+1. **机械层缺口画像**：none 150 件=补规范头主工作面（TC workflow 制度件 39+TC engineering 24+TMV workflow 21 为主）；partial 59=补齐字段面。规范头补挂属 SDE 梳理域施工面，轮形勘定只出供数不越域施工。
+2. **内容级勘定高危域不变**：机械层只测「形式面」，过时判定仍靠内容三读数——域序 R1-R9 维持，R2（TC training 47）起每轮 ≤10 件逐件走。
+3. **TC testing evidence 21 件+TMV execution 历史档 33 件**=两类「证据/档案形」候选排除件（与四类排除判据第四类同形）——候 FSD 施工勘定归类对表，归类前留在圈内不预排。
+4. **脚本伪影教训自领**：首轮 bash 逐件 spawn 超时（进程开销）→Python 单进程过；rel 拼接漏 `/` 致域串桶（TSV path 列坏·读数列完好）→重扫修复。两轮均为脚本面伪影非数据面，聚合以修复后轮为准。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
