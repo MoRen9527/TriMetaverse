@@ -765,3 +765,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **CEO 问**（15:36）：「fade011在TriTraining的同步维护成果仅限于p3-watch-probe-tritraining-20261104.md？」
 - **答（活体勘定·三层）**：①该文件**不是成果是探针**——SDE 段三扩面后为验证 TriTraining/docs 接入写的受控试触件（文件头自标「候撤·观察窗毕由 SDE 撤除」·13:09:07 写入）；②接入验证本身已达成：探针写入 14 秒后自动触发真 run c156e5de713b（五节点全链·APPROVED 05:29:21Z·时间链 13:09:07→13:09:21 干净）——TriTraining/docs 在监听域内写入即触发全链成立；③**实质维护产出迄今=零**（如实）：今天 TriTraining/docs 在监听窗内的落卷活动只有探针件本身·ew 是变化触发机制无变化即无维护动作（今 47 个 ew run 绝大多数=gitFingerprint 缺陷每 commit 白跑·CTO 已勘定——非 TriTraining 面实质维护）。
 - **形态转向后预期**：迁 TriMMC 凌晨 03:30 定时窗生效后，TriTraining/docs（WATCH_DIRS 在册）随日窗巡检——届时维护成果形态=巡检报告+同步动作，不再限于探针。探针件候撤（SDE 观察窗毕执行）。
+## 意见㊿+28（2026-11-04 15:44:23 +0800·shell 注入现查落款）：CEO 施工令——docs 规范头+引用关系+版本号三段式梳理·毕跑手动 cli 验证 fade011
+
+- **令文转录**（CEO 15:43）：「把docs-maintenance接入范围内的文档规范头、重新梳理引用关系（这是没有触发TriTraining更新的重要原因）、把版本号统一成类似1.x.x三端，每段0-99最大，类似linux的版本规则，重大改版对应的版本号+1。以前是1.x，我感觉不好，还是1.x.x吧 / 梳理完成，跑一次手动docs-maintenance的cli命令，看看fade011的实际效果」。
+- **拆解**：①范围=docs-maintenance 接入范围内文档（TriMetaverse/docs+TriCompany/docs+TriTraining/docs 三模块）②工作面三项：规范头梳理+**引用关系重新梳理**（CEO 点因：引用关系未梳理=TriTraining 未被触发联动更新的重要原因）+**版本号统一三段式 1.x.x**（每段 0-99 最大·类 Linux 规则·重大改版=major+1——旧 1.x 两段式废止改三段）③验证令：梳理毕跑一次手动 docs-maintenance cli（手动触发形态——迁 TriMMC 后命令面以实施毕报为准）看 fade011 实际效果（run 触发+五节点+维护成果落地）。
+- **性质**：实质施工任务（三模块 docs 全量梳理）——投递 COS 拆解派工；版本号三段式为新规范令（建议随梳理入规范册·CAO 面登记）。
+- 流转：转 COS 投递施工+验证候实施毕报。
