@@ -122,3 +122,24 @@
   - 0f97a51ec docs(fade): ⑧Score Skill毕落卷——S1双席独立分COS/CAO各1.0/1.0/0.9零分差(复核轮不启·divergence=false)·逐维均值1.0/1.0/0.9合成0.97·S1=14.5/15·CAO席判据独立取自题细则文本对照(COS先交程序时间线如实披露·防锚定条款注记候勘窗规程化)·T6双席裁=人工对表实质合规给分不归零+校验器缺位如实留证候补机跑·score JSON schema tri-fade011-score/v1.0双签在卷
   - fd222e896 docs(fade): ⑦Score CLI覆盖检查毕落卷(CEO 21:13批窗案原案照走·⑦窗21:20执行席CAO)——T15第二时点两树逐树核对PASS真分数打点(T15=7/7×2)·T1-T14覆盖读数逐项对表·omission三件(T5配料表⑦窗补铸消解·T2聚合键281addc2补铸入登记段消解·T6 node-report-check缺位如实保留候勘窗)·required_all_passed✓·评分证据集reports/score-evidence-cli.md
 - registry：v2.1；今日 registry 提交无变化
+## 2026-11-04（周三）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @10:10 +08：自上次进度提交 8ad4a8c2f 后新增 59 条 commit：
+  - 90410b67d Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 07ceab338 docs(cfo): 11-04 09:30 锚台账——周窗15%+9pt/15.5h夜耗/今20:44重置倒计时/meter 11-03最重日485.9M @cfo
+  - dd0b7814f docs(bod): §底稿 意见㊺——COS 收官呈报收记(自动化全谱收官 APPROVE×8·三锚抽验全实)·TriMLC 重启归因定谳=计划内部署·cron 双 job 首两轮实跑兑现 @bod
+  - af240529a docs(fade): event-watch 立窗验收 APPROVE 留痕(gate 六条+独立抽验七绿 95/95·fail-closed 探针佐证·watch 业务映射候裁=暂维持全关)——FADE-011 全谱收官线达成 @fsd
+  - 854a72314 docs(fade): event-watch 立窗节点收口——TriMLC c52f5bc(4 files +745)·门禁六条全过(端到端 APPROVED/防抖恰一/失败显面零重试/护栏滚动窗/fade全家95/95+stash对照5既有复现+1时敏三证归因/UAT三树RC=0×3)·受控重启SOP全链绿(S5.1+立窗件一次进dist·pid 32928·探针fail-closed全对表零真run)·双门RC=0×2 @fsd
+  - 1eec3a414 docs(fade): event-watch 自动触发立窗派工 brief 落树(径定通道兑现·防抖去重+失败语义对齐③裁语+速率护栏+真环境加载面 gate=SOP 重启一并加载 S5.1) @fsd
+  - ccced6b2a docs(fade): S5.1 验收 APPROVE 留痕(门禁四条+独立抽验五绿 87/87·UAT 三树回归·立法条款全落实·重启决策=候立窗毕一并)——event-watch 立窗触发点达成 @fsd
+  - 9b18564f9 docs(fade): S5.1 节点收口——plan skill 真身接线毕报落树(TriMLC 79c011f·门禁四条全过·负路径三例含加码·stash 基线 84vs87 零新增·UAT 三树门 RC=0×3·零触现役·技术债①销项)·node-fsd-s51.md 九键+双门 RC=0×2 @fsd
+  - e438a4b6d docs(fade): fade.db 物理位盲区勘定落卷——不立 D 系候选(存量纪律已覆盖:store 位活体现探+第二方法交叉验证正形·树面证据链独立闭合=活体演示)·观察项=物理位候探边窗定谳入 daemon 机位矩阵 @cao
+  - 0e03387e7 docs(fade): S5.1 plan skill 接线派工 brief 落树(B 件转正承接·同形接法+可达性确认项·Unknown skill=FAIL-EXPECTED·门禁含 UAT 三树回归) @fsd
+  - 7cb454715 docs(fade): UAT 验收 APPROVE 留痕(完工判据五断言+独立抽验四绿·实战两锚 fail-closed+resume·fade.db 物理位盲区如实注记·D-46 自报收录候 CAO)——实用化验证锚达成 @fsd
+  - ad7d5687c docs(fade): UAT 实用化验证收口——现役 8713 真 run 三条全 APPROVED(完工判据五断言全过·两遍受控重启链 SOP 全绿·run01 门拒→env 修复→boot resume 恢复实战·S4 防线+S5 挂点真环境实证·cron 三对照零漂移·现役栈零副作用·watchdog Enable 收尾)·node-fsd-uat.md 九键落树+runs/ 三树产物 @fsd
+  - 8a7174e09 docs(bod): §底稿 追记——BOD 卷§八十八落卷(163bf6001)+session-only cron 双 job 掉挂发现重挂(e4c5f9a5+d2562ddd·值面三查过) @bod
+  - 163bf6001 docs(bod): §八十八——FADE-011 三段全链闭环窗纪要(首彩排 APPROVED 98.5→追认99.5·勘窗六件排窗废止·Phase2 五工序自动化管线达成·B件立法闭环·错挂三闸记档)·详卷指针 @bod
+  - 3ba000973 docs(bod): §底稿 意见㊹追记——CAO 收工回执 B 件程序线全链闭环留痕锚(TriSkill a9e6852 纯事实笔) @bod
+  - …另有 44 条略（全量见 git log）
+- registry：v2.1；今日 registry 提交无变化
