@@ -6,7 +6,7 @@
 - publishedFrom: 当前文件（source）
 - syncMode: source-only
 - publishTier: source-only
-- lastSyncedAt: 2026-10-09（公司级文档规则节增「制度件归域规则」指针条=CEO 令归域裁决回写；前账 2026-09-11=⑤e 叙事裁定登记节+模块标配节八件套修订，LG-034 阶段 1）
+- lastSyncedAt: 2026-11-02（公司级文档规则节增 docs 维护 FADE 实例归口登记行=CEO 五决 BOD 流转 21:47 达·试卷出卷稿同日落盘；前账 2026-10-26 workbench 面定性）
 
 ## Registry 职责
 
@@ -45,6 +45,9 @@
   4. 需要与第三方工具、协议、SDK、模型平台或文档规范保持英文一致的技术材料。
 - 若同一文档同时面向内部治理和外部英文读者，应至少保证中文主说明完整，英文内容作为对照、引用或附录存在。
 - **制度件归域规则（CEO 令 2026-10-09 00:28，归属裁决回写指针）**：凡纪律正身/流程规范/治理规则类文档，正身位统一归 CAO 纪律册域；脚本/代码可住施工仓，其纪律面正身归 CAO 域，施工仓只留执行实例与指针。规则正身=`TriCompany/docs/workflow/engineering-disciplines.md` 附录·制度件归域规则节（判据+归属边界+首例适用全在该节），本行系指针防双写。
+- **workbench 面定性（CEO 令意 2026-10-26 21:43·BOD 转派 21:46 归档·远景归 CAO/CHO 域规划）**：员工知识工作区 workbench 定性=展示员工工作情况的面（网页/元宇宙 3D 形态候规划），**非文档堆积位**——存量文档件按各自正形归位（企业级规范类→TriCompany 治理/纪律域正身；条款解读/案例学习类留学习腿）。首例适用=CTO 评审 checklist 升格企业级代码审查规范——**已落位（2026-10-26 批程）**：正身=`TriCompany/docs/workflow/code-review-standards.md`（CTO f3e9683·四族十三条）+纪律册 D-65 锚定（同窗落）；knowledge 侧原件已撤正文留指针 stub（TMV 33476a754）。本行系定性登记非施工令。
+- **docs 维护 FADE 实例归口（CEO 五决 2026-11-02·BOD 流转同日 21:47 达本席）**：docs 维护 FADE 实例复用现役岗，**归口=CAO**（运行观察后再议新设专岗——岗位面归 CHO 候运行结论）。随行试卷起草令已办：试卷=`TriMetaverse/docs/execution/docs-maintenance-fade-assessment-paper.md`（出卷准绳=fade-protocol-spec v2.0.5 §2.6 设计思路段·TC 3945fd3·本席已协议变更记录会签留痕；阈值自声明 ≥85·双门槛结构；候 CEO 审题，审过方用于首 run）。**执行口径随勘（CEO 口审 2026-11-02）**：发起/负责/收口=CAO，Plan 段协同作业——任务书 COS 协铸+拆树 COO 协定（接 FADE-008 现役分工正形），不单打独斗；首 run 选型 **a 彩排**已定谳。审题随勘=§1.1 规则面补全路径（BOD 代勘 7aed547e1）。本行系归域登记非施工令。
+- **文档变更判据法源迁移（CEO 口审 2026-11-02 22:3x·域错位勘正·CAO 执笔）**：code-review-standards.md R1.1–R1.3 通用规则正身迁《TriMetaverse/docs/文档治理与真源文件系统.md》**§3.4.2「文档变更判据」**（G1–G3·动作+判定方法可判定形态）；旧位=原位指针＋代码评审域应用场景原文保留——D-65 锚与四族十三条结构不变、历史引用接得上；三件全迁无弃条（纯代码评审语境内容以「应用场景」形留在原位）。本行系归域登记非施工令。
 
 ## 公司级状态术语
 
@@ -210,6 +213,23 @@
 | TriRLC | Tri-R-L-C | 元现实落地队的本地控制器（原 TriLC daemon） | D:/Code/ai/TriLC 目录名、trilc bin/npm 名 |
 
 - 维护 owner：CAO（本表）；变更须 CEO 或 quad-migration-spec 升版联动
+- **现役端口勘正注（2026-11-04 术语入册随批·CAO）**：本表 MMC 行「healthz 8710」与 RMC 行「未来部署面 :8712」系 quad-migration 时代快照（as-of 2026-08-31）——**现役机位端口=MMC daemon sg 8712／RMC daemon 河源 8710**（daemon 机位矩阵在案·2026-10-14 CEO 面授定性），以下方「四控制器统称术语」节现值绑定为准；本表兼容面载体列（物理旧名冻结面）不受影响。
+
+## 四控制器统称术语（2026-11-04 CEO 概念审核令入册·联审两席零分歧）
+
+- 生效：2026-11-04，CEO 13:25 概念审核令（「审核通过通知CAO明确术语」）·CPO 产品语义面＋CTO 技术架构面联审零分歧·COS 13:31:03 转办·CAO 铸册（本节=术语制度化正身）。
+- **①四名统称定义（形态照 CEO 样例·机位端口现值绑定）**：
+  - **TriMMC** = 代指 M 面服务域主控（M-plane Master Controller），包括 daemon（现役 sg 8712）、cli、harness 等。
+  - **TriMLC** = 代指 M 面本地域主控（M-plane Local Controller），包括 daemon（现役本机 8713）、cli、harness 等。
+  - **TriRMC** = 代指 R 面服务域主控（R-plane Master Controller），包括 daemon（现役河源 8710）、cli、harness 等。
+  - **TriRLC** = 代指 R 面本地域主控（R-plane Local Controller），包括 daemon（现役本机 8711）、cli、harness 等。
+- **命名学统一式**：`Tri<M|R><MC|LC>` = 面属＋控制器层级；daemon=常驻核心形态·cli/harness=伴生能力面·未来能力随族扩。
+- **②TriMC 消歧行（CPO 风险勘定）**：TriMC≠TriMLC/TriMMC 族——前者=入口/Agent Loop 产品模块，后者=面域控制器族；近形勿混。
+- **③术语分层句式（CTO 技术供词）**：TriX=面域控制器（统称·能力族）⊇ daemon 进程形态 ＋ cli 入口（bin 双代名：trilc/trimc 旧名双仓并存）＋ harness 装配壳（本地域=TUI 壳·服务域=pipeline 装配族）＋ 未来能力。
+- **⑤迁移判据（CTO）**：**定义句改·指涉句兼容**——术语表/白皮书/模块说明定义句统一改（量小一次性）；监控/配置/操作面指涉句零改动。
+- **监控语境知情注**：tick 拍面「8713 TriMLC ok」类=监控语境零歧义可保留（加知情注记随勘——CTO 判据一致）。
+- **语源/统称两层面并注**：英语 gloss Master Controller 系本节统称层用形；2026-09-18 CEO 字母语源定谳（M=Meta-Virtual/R=meta-Reality·MMC 第二 M=Main/LC=Local Controller）不废——语源层与统称层各司其职，并注防误读。
+- 与模块命名权威对照表关系：本节=术语统称定义正身（2026-11-04 起）；上方对照表=quad-migration 叙事名↔物理冻结面对照（as-of 2026-08-31·现役端口勘正注随批）；引用优先级=术语定义查本节·叙事名↔物理名映射查对照表。
 
 ## 通信名址与命名宪法（席位正名指针节，2026-09-01）
 
@@ -220,7 +240,7 @@
 - 通信纪律配套：发件前 ListAgents 对名址+双向纪律（呈报方核通道/转呈方核结论），随 D-13。
 - BL 席（业务组长，daemon 常驻信件督办岗，挂 COS 麾下）2026-09-02 增设：格式 `BL-<项目代号>` 冻结、首任=BL 无后缀（CAO 裁）、扩展评估触发线随 D-13 注记；实际岗位启用走 CHO 侧 handoff 流程。
 - 会话面实例名前缀律（2026-09-09，CEO 亲定）：M 面=m- 前缀／R 面=r- 前缀（面归属机器可读路由标记）；双位已注册 m-cos（交互位中枢·本机）/m-duty-cos（值班位·sg）——席位正名不变，宪法表照旧；细则随 D-13 命名前缀律段。
-- **Board 非人格席位件发布链落位（2026-09-17 知会登记；2026-09-21 定位重塑同步）**：源侧三件（D2 批准线）+manifest 注册+两面渲染（`.claude/agents/board.md` 等全套）——Board 系可 spawn 非人格席位类型；roster 未登记（无 staffing 换代语义）；契约面归 CGR 治理域（本行即登记）。**定位重塑（2026-09-21 CEO 定谳，b101a31）**：BOD=CEO 与董事意见的集散地（规范表述流转经 COS 链；不做判断——审批权在 CEO；不追真源；非人格组织机构不具员工能力；旧「审批权唯一持有面/权柄四表」口径废止）——九条正身=`source-agents/board/agent-body.agent.md` 定位节；claude-md 分权制节 BOD 定位条款随批（FADE-002 渲染候窗）。COS 定谳入册批（CHO 696d93a）与 Board 立章知会已在本 registry 与秘书处制度现势，索引归档随 GID 下一次触碰顺办。
+- **Board 非人格席位件发布链落位（2026-09-17 知会登记；2026-09-21 定位重塑同步）**：源侧三件（D2 批准线）+manifest 注册+两面渲染（`.claude/agents/board.md` 等全套）——Board 系可 spawn 非人格席位类型；roster 未登记（无 staffing 换代语义）；契约面归 CGR 治理域（本行即登记）。**定位重塑（2026-09-21 CEO 定谳，b101a31）**：BOD=CEO 与董事意见的集散地（规范表述流转经 COS 链；不做判断——审批权在 CEO；不追真源；非人格组织机构不具员工能力；旧「审批权唯一持有面/权柄四表」口径废止）——九条正身=`source-agents/board/agent-body.agent.md` 定位节；claude-md 分权制节 BOD 定位条款随批（FADE-002 渲染候窗）。COS 定谳入册批（CHO 696d93a）与 Board 立章知会已在本 registry 与秘书处制度现势，索引归档随 GID 下一次触碰顺办。**定性第三次变更（2026-10-13 LG-075·CEO 口审 25 条+四席联审汇总卷 a95f970a8·签发令 21:49:02；三件修订 TC 6e754f7）**：「董事会治理席」→「虚拟董事会·会议/会议室机制」（body 条 8 组织性质随批改会议机制表述+board 无记忆层·连续性载体=树卷与 transcript 显式句）；contract v3.1→v4.0（19 条：面域交互规则句正形「任何两域交互不经 BOD↔该域 COS 中转不得发起」/验收销账记录归 COS（BOD 自身发令回执记账 D-01 不豁免）/前置审核门 precheck_gate 节（涉人员 CHO／涉财务 CFO 先审·前置=门意见非终批·涉人员事项不入 D-39 全域授权）/R-HY 等具体物名数字教训全出合同）；纪律册承接先立同批=D-48 合同条文纯度纪律+D-49 TriModel 切换免批+D-50 跨面生产数据保护+D-51 BOD 发信分诊 R 表（TC 8cbb6eb）；两面渲染追平=TMV 38c6aa47c；claude-md 分权制节两处追平随批（COS 面·「投递执行」句补 COS 中转正形+跨面交互正形句）。
 - **双控制器对照登记（2026-09-17，CEO 面授定性）**：**8713=TriMLC=M 面 daemon**（TriMLC-Watchdog 保活，只认 8713）／**8711=TriRLC=R 面 daemon**（R 面保活机制候建，建成届时只认 8711）——两套并行控制器各守各面，属机制设计非冗余，位不同面；「8711 退役」一说不存在（BOD 前误已勘正）。白皮书侧=附录 B TriMLC/TriRLC 词条修订 1c 补端口与保活句（同日）。
 
 ## 约束面发布控制（指针节，2026-09-04）
