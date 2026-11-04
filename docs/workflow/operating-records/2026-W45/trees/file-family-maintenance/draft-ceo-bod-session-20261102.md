@@ -799,3 +799,7 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **拆解**：①对象=m-duty-cho（sg duty CHO 席·绩效面+审计判定面归位合理）②频率=每日 00:01·载体=TriMMC（sg 8712·cron 现役 14 jobs·payload 嵌套 {command,cwd} 形）③审计域=M 面 m-cos+m-duty-cos 全部裁决④判定双错误：错误升级（该 COS 径裁的升级 CEO——对表 CEO 15:57 三条款新口径：原则合理就认不升级·升级面=原则存疑）+错误裁决（违 D-39 收口/三条款/现行纪律）⑤处置=通知 CEO+绩效扣分（对表 performance-scoring-workflow 现役制度）。
 - **送达通道勘定**：m-duty-cho=sg 席非本机 peer——正形=ssh sg-server tmux 直发（send-keys+独立 Enter+capture-pane 验拾取）或 notify+唤醒；SendMessage 本地名址先行试发。
 - 流转：送达毕回执呈 CEO·CHO 建 job 毕 next_run 值面核验（F-3 家族判据：201+next_run+enabled 三查）。
+## 意见㊿+34（2026-11-04 16:04:43 +0800·shell 注入现查落款）：CHO 令送达回执+COS 三件径裁施行毕归档
+
+- **CHO 令送达毕（三步验）**：①scp 令文至 sg /tmp/duty-cho-order-20261104.txt②tmux fleet socket（/tmp/tmux-1001/default·root 身份直连）paste-buffer 进 m-duty-cho session③独立 Enter+capture-pane 验拾取——令文完整上屏·CHO 已拾取进处理态（16:04:09 落款·Flibbertigibbeting 处理中·输入框已清空）。通道勘定：sg 13 席=各席独立 tmux session（fleet 用户 socket）·ssh M-SG-47.245.122.61 root 直连。回执候：CHO 建 job 三查毕（201+next_run+enabled）回报 job id+next_run。
+- **COS 三件径裁施行毕归档**（16:02:08 回执·免转）：件一归口分流规则生效+三条款转 CAO 立条（D-39 增补候选）；件二 LG-092 档 Z' 生效（阶段一照跑+阶段二尽早排窗转 CTO）；件三 LG-091 立项批生效（CAO 铸册+CTO 三阶段即启）；LG-093/094 在途不动；台账 16:01 笔落毕 4579/4519 绿。
