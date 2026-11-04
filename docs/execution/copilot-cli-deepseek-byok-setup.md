@@ -1,5 +1,8 @@
 # Copilot CLI 配置 DeepSeek BYOK 操作指南
 
+
+> 【现役参考注记 2026-11-04】本件随根目录治理迁入 docs/execution/。2026-07-19 验证——配置值面候复验。
+
 > 适用版本：GitHub Copilot CLI ≥ 1.0.68  
 > 适用系统：Windows / PowerShell 5.1+  
 > 最后验证：2026-07-19
