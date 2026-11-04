@@ -1210,3 +1210,10 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **cron 面读数**：jobCount=17·next_run_at=**03:20**（+0800·读时 40 秒后）——03:20 那拍属何 job 未勘（17th job 来历续候）；**03:30 fade011 首触发锚** 11 分钟后落点·下一拍（03:39）验触发读数。
 - **v4.1 定性**：sg trees 近 45min 零新落卷=真旁证零命中；sg/本地全席 idle 现值=**闸+睡眠全链文档化过渡态**（闸 00:05-03:0x 停派发·睡眠 01:05-02:40 冻结·闸解仅 12 分钟·复派自然滞后）——免通报（非静默断链·不发定性询）；下一拍起恢复正常判据。
 - **候件影响如实注记**：扩批施工链被闸+睡眠中断——恢复候 COS 复派（BOD 不代派）；CEO 22:35 性能读数锚顺延。
+## 意见㊿+113（2026-11-05 03:48:30 +0800·shell 注入现查落款）：**LG-092 首触发勘定=调度绿执行红**——脚本 sg 化覆盖缺陷·已流转 COS
+
+- 03:30 fade011-daily-sweep（cron_mw1rdhym_7pwt·「30 3 * * *」enabled=LG-092 8713 留守触发件·即 jobCount 17th 来历）**03:30:22 +0800 准点触发**（last_run_at 实锚·调度面✓），81ms error（execution_log 71604）：**ENOENT `D:\srvleet\TriMMC\docker\.env`**（fade-daily-sweep.mjs:42）。
+- **根因**：本机 cron 命令指向仓路径 `scripts/fade/fade-daily-sweep.mjs`——该文件 11-04 17:51 被 sg 化（935838591·CMD_FILE=/srv/fleet/…）就地覆盖本机 8713 源形（bf414156d）→本地 job 跑 sg 形脚本读 sg 环境文件必 ENOENT。旁证：本 job 唯一 ok=11-04 14:52:09 +0800（343ms·源形时期）。**明晨 03:30 将同因再败候修**。
+- 顺勘两件：①healthz next_run_at 每分钟跳=tree-node-patrol 60s 高频件（非神秘 job）②脚本双形分野=同仓同路径双机共用点·修复候选=仓内恢复本机源形+sg 独立副本分叉（或 job 改指本机形副本）——裁量归 COS 路由 CTO/SDE。
+- 已流转 m-cos（SendMessage 0f132b02 排工候裁+回执）；LG-092 观察窗首触发=**半达成**（调度机制绿·执行链红）·11-06 日报核对锚候修复后再计。
+- **D-46 自报（第 12 例·启动器类自报正例）**：本轮 DATA_DIR 勘查 grep 模式过宽（`set TRILC`）致 TRILC_INTERNAL_TOKEN 值面入转写回显——模式应为仅 DATA_DIR；教训=启动器文件 grep 模式禁宽匹配（与前 CTO 例同族·登记不升条）。
