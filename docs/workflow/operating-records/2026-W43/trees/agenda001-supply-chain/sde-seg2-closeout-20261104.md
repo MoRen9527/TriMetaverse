@@ -58,6 +58,16 @@
 
 **TMV build-tricade**：本地 dev 顶 8f4cc9874（含段2 全部施工+merge）已推 sg-server ✓；github 通道间歇断连（本机直连 github 443 闪断族·TriPilot 同窗推讫可证非仓库问题）——dispatch 实证候 github 通窗补跑（TMV yml 与 TriPilot 同构面已由 TriPilot 三跑实证背书）。
 
+**【21:05-21:2x 通窗补办讫·2026-11-04 增补】**：
+- **github 腿补推收官**：TMV 顶推讫（真更新行 80905a6a1..0712b9193）+TriCompany 补推讫（de42e94..d98529b）——**段2 五仓 github 通道全通**（TriModel/TriCode/TriRLC/TriPilot 段2 已推+TMV/TriCompany 本轮补齐）
+- **dispatch 实证双跑实录**：
+  | run | 结果 | 勘定 |
+  |---|---|---|
+  | 41835116639（首 dispatch） | supply-chain-audit **FAILURE** | **闸第三例拦获**：TriRLC `npm ci` EUSAGE——lockfile 陈旧（@esbuild 平台包族 24 条缺失+根包依赖谱漂移）·段2 本地模拟闸只对 TriModel 跑过未覆盖 TriRLC·**覆盖缺口如实自领** |
+  | 41836948423（修复后 re-dispatch） | supply-chain-audit **SUCCESS** | 5 工程 npm ci+audit signatures 全谱过·TriRLC 修复生效 |
+- **TriRLC 修复笔**（TriRLC 44b8a59·双通道推讫）：①lockfile 全谱重算（npm12 --package-lock-only --registry=npmjs 强制——首跑断言拦获 mirror 回写污染一例自纠：registry config 回流致 npmjs 计 0/mirror 计 25·显式 registry 后 npmjs=25/mirror=0）②allowScripts esbuild@0.28.1 pin 形→**裸名形**（npm12 approve 官方落形：esbuild 主条目 lockfile 无 resolved 无法 pin·裸名形 ls 清零本地实证）③本地验证=npm12.2.1 ci RC=0+install-scripts ls 空判 PASS
+- **坑注（增补·CI 首战三学）**：a) 双 pushurl 首 URL fatal 后 git **中止不试第二腿**（段2「push origin dev 只达 sg」机理勘正=github 腿 fatal 中止而非 sg 腿独达）b) npm12 --package-lock-only 按 registry config 回写 resolved（换源成果可被重算冲回·重算必显式 --registry）c) approve 裸名落形条件=lockfile 条目无 resolved（有 resolved 时 pin 形可用·supply-chain 语义裸名宽于 pin 如实注记）
+
 **commit 锚谱**：TriModel c1381bc/TriCode 597fe7d/TriRLC 0c3d343/TriPilot f0cc49d（lockfile）+fd547f3（allowScripts 补全）+e9ad99b（yml audit 修形）/TriCompany d98529b（agent-core lockfile）/TMV 07782bc3c（yml+施工卷）+258b9d930（yml audit 修形）——四仓 github 顶=本地顶（TriPilot/TriRLC/TriModel/TriCode 显式推+对表验讫）；TriCompany github 通道候通窗补推（sg 侧已在链）。
 
 ## §六 · 使用依据
