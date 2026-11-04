@@ -8,7 +8,7 @@
 
 - 身份 1（宪章指针）：公司宪章真源=[../TriCompany/tricompany.md](../../TriCompany/tricompany.md)（V1.0，2026-08-01 生效）；宪章本体修订不在本文件进行。
 - 身份 2（摘要同步面）：本文件是宪章与公司现状态的中央摘要，published-summary 纪律同步。
-- sourceOfTruth: TriCompany/tricompany.md（宪章）；公司实现状态以 `../TriCompany/` 源仓为准
+- sourceOfTruth: TriCompany/tricompany.md（宪章）；公司实现状态以 `../../TriCompany/` 源仓为准
 - syncMode: published-summary
 - sourceRevision: sha256:8d8967448a49c825c2079755ff3ede0b00f9822d87f6df487d33c1516b1fa1f8（2026-09-11 重算与 2026-08-07 基准同值：源侧宪章零变更，revision 基准不变）
 - lastSyncedAt: 2026-09-14（批文④：历史附录外移，本件自此纯现役摘要）
@@ -29,7 +29,7 @@
 
 本文件对上游真源不重述、只指针；项目流程口径见 [docs/project.md](project.md)（不重述）。历史附录已外移至 [docs/archive/tricompany-v0.1-design-20260324.md](archive/tricompany-v0.1-design-20260324.md)（2026-09-14 批文④；引用按历史冻结件纪律，不得当现行口径）。动态经营事实真源=operating-records 周面+registry state，本件不承载周度进度。
 
-出现冲突时，中央战略边界以上游中央真源为准；TriCompany 的实现状态以同级 `../TriCompany/` 源仓为准。本文件只做中央追平，不替代源侧持续维护。
+出现冲突时，中央战略边界以上游中央真源为准；TriCompany 的实现状态以同级 `../../TriCompany/` 源仓为准。本文件只做中央追平，不替代源侧持续维护。
 
 ## 2. 当前定位
 
@@ -37,7 +37,7 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 
 | 维度 | 物理承载 | 当前职责 |
 | --- | --- | --- |
-| 公司维度 | `../TriCompany/` | 员工源侧资产、岗位合同、经营记录、组织制度、治理文档、Hermes 融合与公司级编排 |
+| 公司维度 | `../../TriCompany/` | 员工源侧资产、岗位合同、经营记录、组织制度、治理文档、Hermes 融合与公司级编排 |
 | 项目维度 | TriMetaverse 及各模块仓 | 产品与工程真源、代码、模块 registry、阶段产物 |
 | 桥接层 | TriCompany IPD + TriDev | TriCompany 组织员工参与、资料和书面核签；TriDev 承接十阶段 phase engine、gate、版本和执行证据 |
 
@@ -60,7 +60,7 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 
 宿主资产按三层管理：
 
-1. `../TriCompany/`：公司定义、源侧员工资产、合同、runtime 和发布真源。
+1. `../../TriCompany/`：公司定义、源侧员工资产、合同、runtime 和发布真源。
 2. `TriCompany-host-assets/`：当前 Copilot-host 支撑包、知识对象、runtime 副本与验证材料。
 3. `.github/`：当前实际生效的 Copilot-host live 入口。
 
@@ -93,7 +93,7 @@ TriCompany 是赛博公司的研发仓与经营编排孵化仓，也是赛博公
 | 小成 | CustomerSuccessOfficer | COO |
 | 小布 | SeniorDeploymentEngineer（代号 SDE） | CTO |
 
-13 名员工均已有源侧定义与 binding profile，并登记为当前 Copilot-host live。合同当前存在两种位置：早期合同集中在 `../TriCompany/docs/registry/`，V2 新员工合同可位于各自 `../TriCompany/source-agents/<employee-id>/` 目录。物理位置差异不应误判为员工未上岗。
+13 名员工均已有源侧定义与 binding profile，并登记为当前 Copilot-host live。合同当前存在两种位置：早期合同集中在 `../../TriCompany/docs/registry/`，V2 新员工合同可位于各自 `../../TriCompany/source-agents/<employee-id>/` 目录。物理位置差异不应误判为员工未上岗。
 
 上述 live 状态只说明当前阶段已完成岗位入口与绑定，不代表完整授权矩阵、真实业务数据管道或自动化经营已经生产化。
 

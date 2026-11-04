@@ -134,7 +134,6 @@ TriPilot/TriRLC 的本地域入口，由TriCade 承接更强的本地执行、�
 
 图 3-8：TriMetaverse 三节点部署拓扑
 
-[查看图 3-8 原图（SVG 静态版）](mermaid/tmv-wp-deploy-topology-3-8.svg)
 
 ```mermaid
 %%{init: {
@@ -196,7 +195,6 @@ flowchart LR
 
 图 3-7：三层的最小实现与螺旋迭代链
 
-[查看图 3-7 原图（SVG 静态版）](mermaid/tmv-wp-three-layer-3-7.svg)
 
 ```mermaid
 %%{init: {
@@ -323,7 +321,6 @@ TriMetaverse 的“三元模块”用于表达系统的核心作用分工。具�
 
 图 3-1：TriMetaverse 三元模块与能力域映射
 
-[查看图 3-1 原图（SVG 静态版）](mermaid/tmv-wp-cap-map-3-1.svg)
 
 ```mermaid
 flowchart LR
@@ -388,7 +385,6 @@ TriMetaverse端到端系统框架是以“AI+区块链”贡献评价体系为�
 
 图 3-2：TriMetaverse 端到端价值流转与架构核心
 
-[查看图 3-2 原图（SVG 静态版）](mermaid/tmv-wp-value-flow-3-2.svg)
 
 ```mermaid
 %%{init: {
@@ -507,7 +503,6 @@ flowchart TB
 
 图 3-3：TriMetaverse AI调度核心高可用控制平面与双域执行架构
 
-[查看图 3-3 原图（SVG 静态版）](mermaid/tmv-wp-ai-core-e2e-3-3.svg)
 
 ```mermaid
 flowchart LR
@@ -708,7 +703,6 @@ flowchart LR
 
 图 3-4：AI调度核心五层结构抽象
 
-[查看图 3-4 原图（SVG 静态版）](mermaid/tmv-wp-five-layer-3-4.svg)
 
 ```mermaid
 flowchart TD
@@ -756,7 +750,6 @@ flowchart TD
 
 图 3-5：任务自动化 Worker 最小内部循环
 
-[查看图 3-5 原图（SVG 静态版）](mermaid/tmv-wp-worker-loop-3-5.svg)
 
 本地域任务自动化 Worker 的最小内部循环如下：
 
@@ -819,7 +812,6 @@ flowchart TD
 
 图 3-6：任务发布到链上结算的最小时序（服务域任务 / 本地域任务）
 
-[查看图 3-6 原图（SVG 静态版）](mermaid/tmv-wp-settlement-seq-3-6.svg)
 
 任务从发布到链上结算的最小时序需要区分服务域任务与本地域任务两条路径：
 
