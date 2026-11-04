@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（trees/r-plane-eval-01/reports/sde-improvement-plan-20261104.md）
 - syncMode: static（改进计划卷 SDE 域章节·候排程裁·非即行令）
-- lastSyncedAt: 2026-11-04T05:39:30Z（date 现查 05:38:05Z·写前跑）
+- lastSyncedAt: 2026-11-04T05:39:46Z（date 现查原值·写前跑）
 - 承接: 姊妹卷 `sde-maturity-assessment-20261104.md` §五总判——本卷逐项给改进路径·每项带依赖/窗建议/回滚面
 - 施工约束沿袭: 评估只读照旧·本卷系建议面（执行候 COO 排程+CTO 门禁面核）
 
@@ -48,4 +48,4 @@
 | 3 | 候排 | P2 TriPilot 装机窗 | 依赖 1 |
 | 4 | 候排 | P2 钥匙面+P3 一致性台账 | 随 1/3 顺手窗 |
 
-—— 落款（date 现查原值）: 2026-11-04 13:39:30 +0800（SDE 小布·r-duty-sde）
+—— 落款（date 现查原值）: 2026-11-04 13:39:46 +0800（SDE 小布·r-duty-sde）

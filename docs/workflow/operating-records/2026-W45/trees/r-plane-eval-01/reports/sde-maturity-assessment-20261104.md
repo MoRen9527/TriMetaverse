@@ -2,7 +2,7 @@
 
 - sourceOfTruth: 本卷（trees/r-plane-eval-01/reports/sde-maturity-assessment-20261104.md）
 - syncMode: static（评估卷 SDE 域章节·只读勘验产出）
-- lastSyncedAt: 2026-11-04T05:38:05Z（date 现查原值·写前跑）
+- lastSyncedAt: 2026-11-04T05:39:45Z（date 现查原值·写前跑）
 - 勘验方法: 全程只读活体现探（D-24）——ss/ps/systemctl cat/仓面 git+文件面·零写源码零写配置·8710 TriRMC/443 caddy/8791 dsh 零触碰
 - 分级标尺: L3=生产成熟（服务化+护栏+runbook+回滚面齐）／L2=可靠运行（服务化+护栏·文档散）／L1=装机前段（源料在位未部署）／L0=缺位
 

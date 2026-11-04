@@ -4,7 +4,7 @@
 
 - sourceOfTruth: 本件（trees/r-plane-eval-01/claims.md）
 - syncMode: static（认领表·值席汇写）
-- lastSyncedAt: 2026-11-04T05:39:00Z（date 现查·写前跑·京时 13:39 +0800）
+- lastSyncedAt: 2026-11-04T05:41:30Z（date 现查·写前跑·京时 13:41:30 +0800）
 
 ## 评估要旨（动员令转录）
 
@@ -20,7 +20,7 @@
 - 写面限本树目录（trees/r-plane-eval-01/）
 - 现役零碰：8710 TriRMC / 443 caddy / 8791 dsh
 
-## 认领表（12/13）
+## 认领表（13/13 全量 ✓·断言① 达成）
 
 | 席位 | 认领域 | 开工时点 |
 |---|---|---|
@@ -36,7 +36,7 @@
 | r-duty-fsd | TriRLC 命令面+8711 族 API 面代码实现成熟度（入口/路由/调用链/技术债/测试覆盖）+TriPilot CLI 实现侧摸底 | 2026-11-04T13:33+08 |
 | r-duty-sde | 部署/发布/环境管理成熟度域：daemon 部署形态/runbook/restart 纪律+TriPilot 装设/更新+8711 运维视角+CI 适配度 | 2026-11-04T05:34:00Z |
 | r-duty-cso | 客户成功域：onboarding 路径/健康度可观测性/反馈闭环就绪度/M 面用户路径差 | 2026-11-04T05:34Z |
-| r-duty-ste | **候认领（13 席唯一缺口）** | — |
+| r-duty-ste | 测试与质量门禁域：TriRLC/TriPilot 测试套件盘点（用例数/框架/CI 门禁/覆盖读数）+R 本地 vs sg 基准测试姿态对比+质量风险区域盘点（阻塞/非阻塞分类） | 2026-11-04T05:41:00Z |
 
 ## 直写披露收编记录（值席留痕）
 
@@ -44,21 +44,24 @@
 
 ## 产出进度（值席维护·05:39Z 读数）
 
-**已落卷 7 席**（毕报回签+文件在盘）：
-- cao（树根 2 件：cao-assessment.md/cao-improvement.md·毕报 ✓）
-- rdt（树根 2 件：rdt-maturity-assessment.md/rdt-improvement-plan.md·毕报 ✓）
+**已落卷 10 席**（毕报回签+文件在盘）：
+- cao（树根 2 件·毕报 ✓）
+- rdt（树根 2 件·毕报 ✓）
 - cmo（reports/ 2 件·毕报 ✓）
 - cfo（reports/ 2 件·毕报 ✓）
 - coo（reports/ 2 件·commit 03f2213b8·毕报 ✓）
 - cpo（reports/ 2 件·毕报 ✓）
 - cso（reports/ 1 件·毕报 ✓）
+- cto（reports/ 2 件·毕报 ✓·现名保持·总汇按现名对账）
+- fsd（reports/ 2 件·毕报 ✓·implementation-improvement 第二件候并卷）
+- sde（reports/ 2 件·毕报 ✓）
 
-**在途 5 席**：cho / sde / cto（文件已落盘·毕报候签）/ fsd / ste（认领+产出均候）。
+**在途 2 席**：cho / ste（均已认领·产出候交）。
 
 **产出文件名约定（在途席参照·已落盘件不强制改名）**：reports/<seat>-maturity-<域>.md + reports/<seat>-improvement-<域>.md；分席料亦可树根 <seat>-assessment.md/<seat>-improvement.md 形（照 cao/rdt 先例）。
 
 ## 收口进度
 
-- [ ] 三断言①：13 席认领表全量（**现 12/13·缺 STE**）
-- [ ] 三断言②：两卷产出齐（分席料 7/13 落卷·候 cho/sde/cto毕报/fsd/ste；两卷总汇=值席汇总段候全部到齐后开铸）
+- [x] 三断言①：13 席认领表全量（**13/13 ✓·STE 行 13:41 补齐**）
+- [ ] 三断言②：两卷产出齐（分席料 10/13 毕报·候 cho/ste；两卷总汇=值席汇总段候 2 席到齐后开铸）
 - [ ] 三断言③：树 id 落位毕报（r-plane-eval-01 毕报经 M 面通道回 COO→COS 汇总呈 BOD）
