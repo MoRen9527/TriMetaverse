@@ -587,3 +587,10 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
   2. **tmux 直发=当前不可**：10-19 卷 v1 令曾建 13 席 tmux 跑 claude CLI——CEO 22:32 勘正禁 claude CLI 形改 dsh tui 直挂；dsh tui 应用包不存在（A/B 路双死·README 假定已装）施工合规止步，tmux 13 席面从未建成；今日活体现勘 tmux 双用户面 server 均不在（socket=陈旧残留）。
   3. **cli 壳决议（=D' 线）现势**：CEO 10-20 10:12 双令 D' 立项照准（dsh 插件化·TriRLC Ink TUI 做插件/独立进程两向）→段 1 TUI 交互面 APPROVE（10-20 18:59）→段 2a 验收 APPROVE（真 DeepSeek 调用四断言实锚·ACP 适配件并入）→**Windows 本机 TUI 装机毕四态全绿**（10-21 19:33·49min·顺手修 TriRLC 适配缺口 07549a5·回归 758/758 零红）→R 面 headless 直投通道实锚成立。**R 侧（河源）TUI 部署段未见于卷**（本机 Windows 已装·河源现役仍 web+headless 形）——候 CEO 定是否补 R 侧部署或维持 headless 形。
 - 锚：本卷（bod-rduty-tmux-direct-dispatch-20261019.md）§五/§七/§十/§十三/rhy-a2 段；卸载四验本节；活体探针 ssh -J sg-ecs-server R-HY-8.155.54.79（sg 别名勘正：config 正名 sg-ecs-server/R-HY-8.155.54.79）。
+## 意见㊿+1（2026-11-04 11:44:09 +0800·date 现查原值）：CEO 三段令——TUI 共有化定谳+R 侧部署+R 面班组复工评估（含停工令撤除语义确认）
+
+- **令 1·TUI 归属定谳**：CEO 定谳 TUI 代码两选项（复制 TriRMC / 共有模块）+「便于维护」倾向共有模块+**命名=R 面 Ink TUI**（两域共用·防 TriRLC 专属误会）——转 COS（msg a1b78a01·11:44）路由 CTO 勘方案。
+- **令 2·R 侧部署**：R 面 Ink TUI 装机河源+13 席 tmux 化（接 dsh acp/sdk 面·同库同会话·10-19 卷护栏沿袭：同席 web/tui 并发语义勘明前串行）。
+- **令 3·毕后评估**：R 面 13 席首任务=评估 R 面本地域产品成熟度+改进计划（对比 M 面两域·以 TriPilot+TriRLC 命令行为主）。
+- **复工语义确认（BOD 显式注）**：令 3「让 R 面服务域 13 席开始评估」=**R 面班组复工令**——9-25 停工令（STOP-NOTICE-20260925-1400.md）按件原文「复工后本件由值席撤除」撤除动作随部署窗一并，已随转达信注记。
+- 双链现势：迁移任务链 P1-P3（m-cto/m-cao/m-cos/m-fsd 在跑）+本施工链并行不阻塞。
