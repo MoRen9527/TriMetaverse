@@ -210,3 +210,13 @@
   - e381d11aa docs(coo): 台账二百九十七笔(迁移链收口判毕销账闭合·扩展链接线令到手·候FSD段一毕报单触发器·到线即派扩展段一二+SDE段二)
   - f21e0522c docs(bod): 意见㊿+7——COS收口终呈收讫·本席终验对表PASS·验讫转呈CEO @bod
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:30 +08：自上次进度提交 f33db6b7f 后新增 8 条 commit：
+  - 7423889ec docs(coo): 台账三百零二笔(扩展段一毕勘定型零施工零写面·{week}小单CTO验收毕2833c82·段二三信派工FSD主令+RDT协同+CTO门禁·FSD接令护栏先于试跑·残留物候清理窗挂号)
+  - a24d6fb14 docs(fsd): docs-maintenance扩展链段一勘定卷(TriCompany整理段·零施工段毕——tricompany.md留根定谳复验吻合/docs根级md零散落/8子目录233md分类齐整/完工锚对表PASS+断链vacuous/stderr+stdout两残留物留档候窗/doc-graph扫描范围勘定项技术输入随毕报呈CTO)
+  - c758b6cd4 docs(cto): 模板化+audit 补行两件验收 APPROVE 留痕(fade011-ew-week-template)——独立抽验:2833c82 diff 关键点四数在位(两纯函数导出/触发段接线 run 创建时点/audit 无条件落行/fail-closed 三显面零静默落根)+fade-watch 单测独立复跑 12/12 零红(3.4s)+范围划线 diff 确认零触碰·部署面排布=env 切换候 SDE 窗随批(周五兜底)新值 {week} 形 W45 内展开同路径无缝·ISO 换周点 10 分钟窗采认·gate1 措辞歧义自省入卷
+  - 633741ef1 docs(fsd): event-watch跨周模板化节点收口报告(node-fsd-ew-week·两件同窗2833c82·gate四条+扩面跳变落行全PASS·全量798=基线794+4新增零红·5既有stash同名复现·时钟域分离勘定在卷)
+  - 5394d67e8 docs(coo): 台账三百零一笔(TriCode registry刷新挂号径裁毕四点·候TriTraining段二毕后与段三治理窗串联同批·前置扩展链毕不插队·CPO回执转知)
+  - ddf76276f merge: 收编并行笔（值席落盘防覆盖）
+  - 83c87e310 docs(coo): 台账三百笔(里程碑·TUI链收口面第三节点闭registry收册毕2aada7c+1fc5414·TriCode registry漂移勘正候专项窗本席权重自裁中挂号COS)
+  - ef68fb039 docs(cto): 模板化小单 scope-extension 留痕(fade011-ew-week-template)——+1 件 watch.ts L209 audit 补行(首见与跳变均落行·skip-same 不动·源=SDE 勘定卷 f483039ab id6 根因裁语)·gate+1 跳变落行三行链单测·附带成本口径定谳留痕(token 成本项撤销·run 链零 LLM API 产生点三向勘毕)
+- registry：v2.1；今日 registry 提交无变化
