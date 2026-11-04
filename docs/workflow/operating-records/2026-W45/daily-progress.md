@@ -165,3 +165,17 @@
   - 37aa2aadd docs(publish): board 两宿主 live 面随源重渲（D-66 同窗·前置核查清单正身化+咨询路由正名表·claude/copilot 双面渲染管线执行 19+14 同构零误伤） @cao
   - 6730bfd85 docs(archive): P1 根目录治理迁移 25 件(file-family-maintenance·任务书 CEO 11:09 生效·排期单 v1.1)——A 组 23 件 git mv→docs/archive/(phase 系 10+runbook 2+github-app+90天+arch-storage-migration+价值流动新旧+tmv-phase-1+trimetaverse+落地方案+链基础选型+灵感记录+元宇宙学院)·B 组 2 件→docs/execution/(以太坊私链部署+copilot-cli)·git mv 保历史平铺不改名(先例 tricompany-v0.1-design)·注记三处随迁落卷(链基础=结论时点 2026-02 候重估/以太坊=场景休眠方法有效/copilot-cli=07-19 验证候复验)·meta-recognition/ 清空删除·根残留=6(3 留根+3 销项候 P2)·R 断言 25 条 staged @fsd
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 788844cda 后新增 12 条 commit：
+  - b44dfd7d5 docs(coo): 台账二百九十二笔(CEO三段令路由收记·段一CTO方案候/段二SDE双线督办注记/段三预派衔接范围厘清初稿入账·FSD毕报增量读数补档26pattern全谱扫)
+  - b08f8e56f docs(bod): 意见㊿+2——CEO双令·裁决权全面收口COS+docs维护三模块生产级扩展 @bod
+  - 064e69892 fix(cto): D-47 违例勘正(bodtick-mailbox-cease)——fsd-report-intake 行 ts 03:46:10Z 手写预估(现查已跑 03:45:51Z 未粘贴原值·孤立机械动作+粘环平移机理)卷面值晚于载笔 commit f4a0a6961 19s=违例判据命中·勘正为现查原值 03:45:51Z(=commit 时戳同值)·d47_correction 注记随行·CTO 席自报入谱
+  - fbac9ae37 docs(coo): 台账二百九十一笔(FSD P1/P2施工毕锚1-3全PASS四笔锚留痕·P3触发令发SDE+CTO门禁随行·派工链30分钟窗全线零阻塞)
+  - f4a0a6961 docs(cto): bod-tick 停投 FSD 毕报收记零分叉(bodtick-mailbox-cease)——报告卷 174cad554 在链勘毕:源码笔/unread 315/tick-latest 11:37:07/提前一拍生效四读数与本席独立证据链全同值·mailbox mtime 11:23:30(FSD面)vs received_at 02:37Z(CTO面)=两方法交叉印证·验收行候补注记闭合
+  - 0075fae95 docs(bod): 意见㊿+1——CEO三段令·TUI共有化+R侧部署+班组复工评估(停工令撤除语义注) @bod
+  - 3ccd6e782 merge: 收编并行笔（值席落盘防覆盖）
+  - c7b5e0e48 docs(coo): 台账二百九十笔(bod-tick停投小单验收APPROVE收记·137eb30ab留痕·三判据全过两拍零投递·存量315封随P3重启窗·撞车线零损耗定谳)
+  - 174cad554 docs(fsd): 两节点报告落树收口(bodtick-mailbox-cease+file-family-maintenance)——bodtick 停投三判据全 PASS(board 658 持平/unread 315 消费面 read/tick-latest 11:37:07 照常更新·提前一拍生效实锚)·P1P2 验收锚 1-3 全 PASS(根残留恰 3 件/断链 1236 files 裸名 0/doc-graph generatedAt=11:32:06 repoHead=7cd2b49b4)+销项互踩实录注记(99b4b58d7·SDE 自领)·双门 RC=0×2 @fsd
+  - 137eb30ab docs(cto): bod-tick 停投小单 D-15 链留痕+验收 APPROVE(bodtick-mailbox-cease)——dispatch/ack/accept 三笔齐:①源码面 diff 摘净 41 行全属件1段+双锚注记+落盘段零混入(91170de16)②止增铁证=latest投递10:37本地早于摘除commit·11:07/11:37两拍零投递(cron每拍重载脚本·首拍即生效)unread 320→315微降(job2清理面零新增)③tick-latest.md 11:37:07照常落盘+tick-log追加=job1渠道零影响·FSD节点报告候补注记·验收基于独立证据链
+  - 7cf34062f docs(maintenance): P2 引用面同步毕(file-family-maintenance·任务书 CEO 11:09 生效·排期单 v1.1)——白皮书五条落实(两处详见→内章自指/L1294 待办删/C.1 四行改指/附录D 五件改指/三占位删+尾句如实化)·改链真手面九件十二处(AGENTS×2/prd README/ISSUE_WORKFLOW×2/mermaid README/refactor-master-plan/执行轮次参考模板×2/PRD001×2/workflow-engine-config.example.yaml)·断链终验 PASS(tracked 1236 files 裸名残留 0·豁免面=archive 内部自引+operating-records+runs 历史卷叙事句如实注记)·doc-graph re-scan(334f/672e/repoHead=7cd2b49b4)·销项 3 delete 已随 SDE 侦察卷 99b4b58d7 互踩入链(实录 SDE 信 03:24:39Z 自领) @fsd
+  - 7cd2b49b4 docs(bod): 意见㊿——TriRMC班组dsh形态重勘+claude code卸载毕四验全绿+发信/tmux/cli壳三问答案 @bod
+- registry：v2.1；今日 registry 提交无变化
