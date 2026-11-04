@@ -1,0 +1,25 @@
+{
+  "schema": "tri-fade011-plan/v1.0",
+  "run_id": "fade-w-fade011-ew-624cd32d93be",
+  "freeze": {
+    "items": [],
+    "volume_hash": "",
+    "frozen_by": "fade-driver (programmatic; five-item freeze is outside daemon scope)",
+    "frozen_at": "2026-11-04T05:26:21.819Z"
+  },
+  "collab": {
+    "charter_with": "daemon-automated (no inter-seat charter co-cast)",
+    "tree_with": "daemon-automated (no inter-seat tree协定)",
+    "owner_avoid": "daemon-automated (no reviewer seats in daemon chain)"
+  },
+  "skill_reachability": {
+    "run_registry_pointer": true,
+    "agents_md_mapping": true,
+    "unknown_skill_log": []
+  },
+  "release": {
+    "released_by": "fade-driver",
+    "released_at": "2026-11-04T05:26:21.819Z",
+    "dce_input": "9862175fa8d5162fead6e7db5815ba40c8ba65fa7ed183cb369205b023d43b7b"
+  }
+}

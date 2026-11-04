@@ -1,0 +1,38 @@
+{
+  "schema": "tri-fade011-score/v1.0",
+  "run_id": "fade-w-fade011-ew-7979b36f7e54",
+  "question_id": "auto",
+  "required": true,
+  "answered": true,
+  "scores": [
+    {
+      "item": "auto",
+      "dim": "准确性",
+      "score": 1,
+      "reason": "程序化段工作全过",
+      "evidence_ref": "reports/node-verify.md"
+    }
+  ],
+  "aggregated": {
+    "准确性": 1,
+    "完备性": 1,
+    "文风口径一致": 1,
+    "合成": 1
+  },
+  "divergence": false,
+  "reviewers": {
+    "cos": {
+      "scores": {
+        "合成": 1
+      },
+      "reason_first": "程序化评分（MVP）"
+    },
+    "cao": {
+      "scores": {
+        "合成": 1
+      },
+      "reason_first": "程序化评分（MVP）"
+    }
+  },
+  "scored_at": "2026-11-04T05:42:51.798Z"
+}
