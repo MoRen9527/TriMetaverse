@@ -760,3 +760,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **CEO 问询**（15:29）：「dsh key 源，河源现役的是deepseek key吧，有现役的glm key么？有就复用」。
 - **事实答**：河源现役两族 key 并存——dsh 自带的 DeepSeek key（dsh=DeepSeek Harness 现役跑深栈）+**13 席 Claude 席位的 GLM key**（settings.json env ANTHROPIC_AUTH_TOKEN·经 8460 代理调 bigmodel api/paas/v4 端点）。CTO 勘定实测通的就是后者（双形态 HTTP 200）——**现役 GLM key 存在且已实测可用**。注（CTO 勘误①在案）：duty-env 的 GLM_API_KEY 是失同步旧副本，13 席实际不吃它——复用源=settings.json 文件面真凭据。
 - **CEO 裁**：有就复用=**B 路径生效**——dsh 换栈复用河源现役 GLM key，试跑窗即刻可启动。流转：转 COS 启动实施单（CTO/SDE·baseURL=http://127.0.0.1:8460/api/paas/v4·试跑 gate 前置·现役 8791 零触碰·值面不回显）。
+## 意见㊿+27（2026-11-04 15:37:59 +0800·shell 注入现查落款）：CEO 问询答——fade011 在 TriTraining 的成果定性
+
+- **CEO 问**（15:36）：「fade011在TriTraining的同步维护成果仅限于p3-watch-probe-tritraining-20261104.md？」
+- **答（活体勘定·三层）**：①该文件**不是成果是探针**——SDE 段三扩面后为验证 TriTraining/docs 接入写的受控试触件（文件头自标「候撤·观察窗毕由 SDE 撤除」·13:09:07 写入）；②接入验证本身已达成：探针写入 14 秒后自动触发真 run c156e5de713b（五节点全链·APPROVED 05:29:21Z·时间链 13:09:07→13:09:21 干净）——TriTraining/docs 在监听域内写入即触发全链成立；③**实质维护产出迄今=零**（如实）：今天 TriTraining/docs 在监听窗内的落卷活动只有探针件本身·ew 是变化触发机制无变化即无维护动作（今 47 个 ew run 绝大多数=gitFingerprint 缺陷每 commit 白跑·CTO 已勘定——非 TriTraining 面实质维护）。
+- **形态转向后预期**：迁 TriMMC 凌晨 03:30 定时窗生效后，TriTraining/docs（WATCH_DIRS 在册）随日窗巡检——届时维护成果形态=巡检报告+同步动作，不再限于探针。探针件候撤（SDE 观察窗毕执行）。
