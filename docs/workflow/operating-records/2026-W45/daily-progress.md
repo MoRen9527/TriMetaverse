@@ -220,3 +220,7 @@
   - 83c87e310 docs(coo): 台账三百笔(里程碑·TUI链收口面第三节点闭registry收册毕2aada7c+1fc5414·TriCode registry漂移勘正候专项窗本席权重自裁中挂号COS)
   - ef68fb039 docs(cto): 模板化小单 scope-extension 留痕(fade011-ew-week-template)——+1 件 watch.ts L209 audit 补行(首见与跳变均落行·skip-same 不动·源=SDE 勘定卷 f483039ab id6 根因裁语)·gate+1 跳变落行三行链单测·附带成本口径定谳留痕(token 成本项撤销·run 链零 LLM API 产生点三向勘毕)
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @12:40 +08：自上次进度提交 eaf92100b 后新增 2 条 commit：
+  - 67a564d61 merge: 收编并行笔（值席落盘防覆盖）
+  - f72c531e0 docs(coo): 台账三百零三笔(CTO四条技术裁·doc-graph两步走各仓独立起步+{week}部署窗串联重启一次全办+残留物可删git rm入治理窗·段三派工单候带裁)
+- registry：v2.1；今日 registry 提交无变化
