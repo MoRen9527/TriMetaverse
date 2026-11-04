@@ -128,6 +128,32 @@
 5. training-pack-migration-plan——迁移落地态定性（历史档 vs 在役计划）。
 6. cc-tutorial 01-小白版——勘三「现役（观察）」维持，批三顺带复核全景图与四 daemon 正名面（TriMC×0 面扫·预期零改动）。
 
+## 勘十 · 扩批全量划界报备（CEO 2230 扩批令·COO 知会 2026-11-04T14:32:13Z 承接·22:3x 清点）
+
+**令承接**：段二续跑扩批全量（全模块所有 docs·CPO 基座已判可启）。COO 节奏两条采认：①review 关卡不降档（逐件 review PASS 方 commit·不设抽样率·轮间 CTO 门禁抽验候其另裁）②每轮件数施工勘定建议上限 10 件/轮（候 FSD 共同确认报备）。
+
+### 全量清点读数（22:33 一轮脚本·md 件数分桶）
+
+| 仓/域 | 总数 | 排除面 | 活文档勘定圈 |
+| --- | --- | --- | --- |
+| TriMetaverse/docs | 2380 | operating-records 2052＋memory 镜像 117＋archive 24＋runs 7＝2200 | **~180**（execution 151·training 22·engineering 22·registry 14·product 8·contracts 6·prd 3·testing 2·security 2·root 7）＋workflow 制度件 ~62（非OR 66−archive 4） |
+| TriCompany/docs | 241 | operating-records 3＋archive 4＋agile-improvement 20＋IPD stage-packages 10（历史件候选排除·候 FSD 勘定） | training 47·testing 37·engineering 37·execution 11·registry 6·product 4·project-sources 2·workflow 制度件 ~53（非OR 90−排除面 37）＝**~197** |
+| TriTraining | 26 | — | 21＋cc-tutorial 5：首跑 5 已闭＋批二 3 在途＋**余 ~13**（勘八批三池 11＋根 AGENTS/README） |
+
+勘定圈合计 **~490 件**（排除面 ~2240·历史叙事冻结/镜像/归档语义不入过时勘定圈——判据：operating-records=运行痕迹按发生周冻结；memory=随仓镜像只增面；archive=冻结即其存在意义；runs=运行证据卷）。
+
+### 分层勘定形（防 490 件逐件细勘不可行）
+
+- **机械层全扫（脚本·不算轮）**：元信息头三件套（sourceOfTruth/syncMode/lastSyncedAt）有/无＋版本行形态（D-67 三段式 vs 旧两段式/无）＋markdown 链接断链扫——一轮出全量读数供分级供数。SDE 批 2/3 已动 TriTraining/TriCompany 部分件，机械层扫面顺带出「已带新规范头件数」对表。
+- **内容级勘定（分域轮形）**：承袭首跑判据三读数（版本面/命令面/链路面 vs 现役）——只对高风险件逐件（特征=有时锚早于相关模块演进/含 CLI·API 命令面/含跨仓链接）；低风险件（纯叙述·近期时锚）域内批量快勘。每轮 ≤10 件·逐件 review PASS 方 commit。
+- **域序提案（候 FSD 施工勘定共同报备）**：R1=TriTraining 批三收尾（~13 件·勘八池）；R2=TC training 47；R3=TC engineering+testing 74；R4=TMV training+engineering 44；R5=TMV workflow 制度件 62；R6=TC workflow 制度件 53；R7=TMV registry+product+contracts+prd+testing+security+root 42；R8=TMV execution 151（最大域·候 R1-R7 节奏读数再分轮）；R9=registry 系 6+product 4+project-sources 2。interleaved：CTO 门禁抽验轮间位。
+
+### 划界报备要点（候 COO/FSD 对表）
+
+1. 「全模块所有 docs」按本表勘定圈口径执行——operating-records/memory/archive/runs 四类排除面不入圈（过时勘定语义不适用·若 CEO 令意含运行痕迹整理另立案）。
+2. TriCompany workflow 制度件与 TMV workflow 制度件含纪律册/D 系/工作流 SOP——**规范头/版本号梳理与制度真源面交叉**：纪律册等件是否挂 D-67 版本行属制度域裁量，勘定卷只出读数·裁决面候 CAO/CTO 域（本席不出制度裁决）。
+3. execution 151 件含 fade-spec 系与执行计划件——其中已被后续演进取代的旧 spec 是「过时」高发域，但历史执行件与活规范分界候域内逐件定性（R8 前置细分级）。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
