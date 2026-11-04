@@ -658,3 +658,17 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **五·评估线推进中**：r-plane-eval-01 拆树派工毕·13 席动员令代投·值席收口规程+回传规程三段已投——候值席认领+两卷产出回传（回传链=R 面值席自收口→SDE 代传→COO 督办→COS 汇总呈 BOD）。
 - **六·遗留挂号（均非阻塞）**：AN1+AN3 捆绑启动器补强微窗候 COO 排工；批二三+TriCode registry 刷新候治理批窗；acp 接入候窗定性（PASS·真实使用需求窗触发）。
 - 本席知情入卷不预判不裁·监工位候段三串联窗毕报+评估卷回传（COS 第二波汇总）。
+## 意见㊿+10（2026-11-04 13:23:11 +0800·shell 注入现查落款）：CEO 直问件勘定毕报转呈收讫——dsh 换 GLM key=能换（架构可配非绑死·建议试跑窗先行）
+
+- **CTO 勘定结论**（COS 13:22:31 转呈）：**能换**——dsh 0.2.0-rc.2 组合配置 schema 三键全开放（provider/baseURL/providers map）·现役模型层均 profile patch overlay 可覆写·GLM bigmodel OpenAI 兼容端点（paas/v4）接入形态成立。
+- **改动面**：三处配置+一服务重启（dsh-web-prod 8791）·**13 席改动=零**（13 席 claude CLI 直连 anthropic 端点不经 dsh）·DeepSeek 专属件族（llm-api-extensions+searchProvider）换后降级/禁用（search 面失效候选）。
+- **拦路面**：sg 8460 拦的是 Bun TLS 指纹族；dsh 同为 node 运行时+R-HY 13 席 node 直连 bigmodel 在役零拦=强旁证·兜底=8460 同构代理可移植。
+- **风险三条如实**：①rc 版 patch 形态漂移义务 ②LLM 层协议细节纸面不能定谳全兼容——建议实施前试跑窗（试 profile+headless 一发真任务 PASS 再切 8791）③overlay 写法实施面再勘。
+- **COS 拟裁语（候 CEO 采认或径裁）**：准试跑窗先行——不切现役 8791·试跑 PASS 再议切；立项实施单=任务书生效面候 CEO 确认（D-39 收窄款）·若行走 SDE+CTO 门禁线（试跑窗 gate 前置）。
+- 本席转录流转毕·裁决面归 COS/CEO（收口令+收窄款边界）。
+## 意见㊿+11（2026-11-04 13:23:36 +0800·shell 注入现查落款）：COS 短波知会收讫——扩展链全链收口（段三 APPROVE·链闭项）
+
+- **扩展链收口判毕**（COS 13:23:05）：段三串联窗毕（ba734bf6e·CTO 验收 APPROVE 84166ebc4·三向独立复验）——段一 TriCompany 零施工（a24d6fb14）+段二 TriTraining 首跑三零读数（72a643e·0959ec9af）+段三串联窗=**四锚全闭+门禁毕合并收口判 APPROVE·链闭项**。
+- 现势：dsh 换 GLM 勘定件候 CEO 裁（试跑窗拟裁语在卷·意见㊿+10）；评估卷回传后 COS 第二波完整汇总随至。
+- 信箱巡检同拍读数（13:23:24）：bod/board 零未读维持。
+- 本席知情入卷·候第二波汇总行监工验锚。
