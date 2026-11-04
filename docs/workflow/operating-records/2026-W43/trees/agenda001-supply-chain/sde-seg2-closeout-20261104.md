@@ -16,11 +16,14 @@
 | 严格闸 | 每工程 npm ci 后 `npm install-scripts ls` **文本空判**（判据行=`No packages with unreviewed install scripts`） |
 | allowScripts | 四工程 package.json 顶层字段·按各 lockfile 实值 pin（见下谱） |
 
-**allowScripts 落点谱（修前 lockfile 逐仓实勘·版本分谱勿互串）**：
-- TriRLC `esbuild@0.28.1` / TriPilot `esbuild@0.27.3` / TriCode `esbuild@0.28.1` / TriModel `esbuild@0.28.1`
-- agent-core：lockfile 零 esbuild 零脚本包=**不加字段**（闸空判天然绿）
+**allowScripts 落点谱（终形·CI 首战勘定后修正）**：
+- TriRLC `esbuild@0.28.1` / TriCode `esbuild@0.28.1` / TriModel `esbuild@0.28.1`（各仓单脚本包·CI 绿实证）
+- TriPilot **四项**：`esbuild@0.27.3`（顶层）+`esbuild@0.28.1`（tsx 嵌套 node_modules/tsx/node_modules/esbuild）+`keytar@7.9.0`（install: prebuild-install）+`@vscode/vsce-sign@2.0.9`（postinstall）——commit fd547f3
+- agent-core：lockfile 零脚本包=**不加字段**（闸空判天然绿）
 - TriMMC：不在 build-tricade 构建面（无 npm ci 步）=本批不动（段3 各模块面再落）
-- 其余脚本包勘定：fsevents=optional 平台跳过（win/ubuntu runner 不装）·playwright-core 无 postinstall·node-gyp/@swc/electron 五工程 lockfile 零存在（段1 同勘互证）
+- fsevents@2.3.3=optional 平台包（win/ubuntu runner 不装·CI 实证 pending 三包不含它）不入 allowScripts；macOS 本地开发者若触发可按 npm12 提示 approve
+
+**【方法勘定注】初版 survey 按固定名单 grep（esbuild/fsevents/playwright-core/node-gyp/@swc/electron）→keytar/vsce-sign/嵌套 esbuild 漏网——CI 闸首战拦获（41823996223 run）后改权威枚举法=lockfile `hasInstallScript:true` 字段全量枚举（五仓复扫：TriRLC 1/TriPilot 5/TriCode 2/TriModel 2/agent-core 0）·闸设计价值实证**
 
 **【段1 判据面勘定修正·如实注记】**：段1 卷写「`install-scripts ls` 输出空 + `approve-scripts --allow-scripts-pending` 空判」两道闸——**实测 `approve-scripts` 是放行动词非检查动词**（Usage 实锚：`approve-scripts <pkg>|--all|--allow-scripts-pending`=approve 动作·pending 非空时跑=approve 全部=CI 用之会假绿放行）——**CI 闸唯一正形=`install-scripts ls` 文本空判一道**（pending 非空时该命令也 RC=0·必须文本判非 RC 判——空判据行=`No packages with unreviewed install scripts`）。npm12=12.2.1 全链本地实证（probe 工程：install→warn blocked→approve→package.json 落 allowScripts 同形→ls 清零）。
 
@@ -41,11 +44,21 @@
 
 任一模块构建异常→①该模块 `.npmrc` 临时 `ignore-scripts=false`（闸旁路）→②node 槽回切（CI yaml node-version '24'→'20'+npm12 步删）→③allowScripts 字段回滚（无副作用可保留）——CI 面=各仓 workflow 单 commit revert。五仓 commit 独立可逐仓回。
 
-## §五 · CI 实证面
+## §五 · CI 实证面（TriPilot quality-gate 三跑实录·终态）
 
-- TriPilot quality-gate：push dev 自动触发——实证读数随毕报（候 Actions 绿）
-- TMV build-tricade：workflow_dispatch 触发一发实证（inputs 默认·build_msi false）——候读数
-- 段3 门「2-1 CI 实证绿」锚=本节读数（COO 派段3 前对表）
+**run 谱**（push 触发·github MoRen9527/Tripilot）：
+
+| run | 触发 commit | 结果 | 勘定 |
+|---|---|---|---|
+| 41822578832 | 54d4505（首推） | FAILURE 15s | **EALLOWREMOTE**——npm12 默认禁 remote fetch，lockfile 884 条 tencent/npmmirror 直链全撞→**五仓文本级前缀换源 npmjs**（integrity 不变·同 tarball 同构 path）·闸首战暴露 mirror 污染=段2 要防的缺陷实证 |
+| 41823996223 | e9ad99b（audit 补 ci+换源后） | FAILURE 29s | audit job ✓ 绿（npm ci+signatures）；test/e2e 败于**闸拦获 allowScripts 漏网**（keytar/vsce-sign/嵌套 esbuild@0.28.1）→fd547f3 补全 |
+| 41825613883 | fd547f3 | 终态 | **✓ supply-chain-audit 23s + ✓ test 29s**（npm ci+闸+compile+coverage 全过·node24+npm12 实证）·X extension-host-e2e 3m34s·− lockfile-guard（push 面 PR-only 正确跳过） |
+
+**段3 门「2-1 CI 实证绿」对表**：supply-chain 面（npm12 闸+audit signatures+allowScripts）=**实证绿**（test+supply-chain-audit 两 job 全绿）；e2e job 红为**既有环境性失败**（独立验证：08-25 run 32817437091/08-28 run 33144564147 node20 期同断言族「daemon should be running on 8711/healthz 200/uptime present」——e2e 套件依赖活体 TriRLC daemon，ephemeral runner 无 8711 监听=2+月既有红·非本段改形引入·候 CTO/STE 裁后续（runner 内 daemon bootstrap 步或 e2e 出 CI 门）·段2 scope 不含）。
+
+**TMV build-tricade**：本地 dev 顶 8f4cc9874（含段2 全部施工+merge）已推 sg-server ✓；github 通道间歇断连（本机直连 github 443 闪断族·TriPilot 同窗推讫可证非仓库问题）——dispatch 实证候 github 通窗补跑（TMV yml 与 TriPilot 同构面已由 TriPilot 三跑实证背书）。
+
+**commit 锚谱**：TriModel c1381bc/TriCode 597fe7d/TriRLC 0c3d343/TriPilot f0cc49d（lockfile）+fd547f3（allowScripts 补全）+e9ad99b（yml audit 修形）/TriCompany d98529b（agent-core lockfile）/TMV 07782bc3c（yml+施工卷）+258b9d930（yml audit 修形）——四仓 github 顶=本地顶（TriPilot/TriRLC/TriModel/TriCode 显式推+对表验讫）；TriCompany github 通道候通窗补推（sg 侧已在链）。
 
 ## §六 · 使用依据
 
