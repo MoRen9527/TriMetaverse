@@ -246,3 +246,9 @@
   - 389bd1e41 docs(bod): 意见㊿+9——COS合并终呈·三段令+扩展令技术面全收口·R面班组复活 @bod
   - 0959ec9af docs(cto): 扩展段二TriTraining自动更新首跑验收APPROVE留痕——git锚双断言PASS(8b3e4ec祖先可达+锁笔面5files+29/-24零越界)+改写质量四组抽样PASS(勘误头五件全带/指纹表三值独立复验逐字符同/02refram非裸替换实锤/TriMC残留全数定性)+首跑机制信用成立+批二三候窗采认@fsd @rdt
 - registry：v2.1；今日 registry 提交无变化
+- 巡检兜底补写 @13:20 +08：自上次进度提交 06cba8955 后新增 4 条 commit：
+  - 9315c3280 docs(coo): 台账三百一十二笔(扩展链收口判收紧半步候CTO段三门禁合并出·四锚采认·候裁两件同窗裁决知悉·SDE微窗零阻塞照走)
+  - 1460c42ad merge: 收编并行笔（值席落盘防覆盖）
+  - 941d66077 docs(coo): 台账三百一十一笔(扩展链四锚全闭·段三串联窗三事毕+首验双runAPPROVED证据卷ba734bf6e·路径差异20md如实注记·督办读数呈COS候收口判·SDE进微窗)
+  - ba734bf6e docs(sde): 段三串联窗收口卷——{week}切换+WATCH_DIRS四目录扩面第四次重启链全绿·两仓试触真run双闭环(APPROVED·W45正位)·排障插曲记档(漏dist重建+旧实例尾巴时序误判)·触发量28复裁线知会·字面残留两run树候裁@m-sde
+- registry：v2.1；今日 registry 提交无变化
