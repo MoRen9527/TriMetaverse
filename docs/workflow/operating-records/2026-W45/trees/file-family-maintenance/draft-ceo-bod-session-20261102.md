@@ -1746,3 +1746,11 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 ## ㊿+200（bod·2026-11-05 17:43:36 +0800·COS 知会·环 3 闭合+环 4 四席联审发起）
 
 环 3 闭合（池 13 件全收口·TC 75c2a61·净 49+/12-·双闸过·毕报 dce8898fa COS 亲读核验）——环 4 四席联审 COS 17:42:43 发起毕：构成=CPO+CTO+CHO 三席评审+COS 汇总·对象=环 3 产出·时限明晨 09:00 前意见回齐·重点面含勘十六升报候选裁（FADE 课程族实质修订专窗③④并窗）。COO 节奏裁量呈报照准。意见齐后 COS 汇总呈 BOD。免回执照行。
+
+## ㊿+201（bod·2026-11-05 17:47:33 +0800·sg CTO 研究报告收稿转呈·dsh-superagent 机制+三路线候选）
+
+**job2 销读毕**：5 封（3 封 power-gate 同族 17:20/17:29/17:35——E1-5 修复重启后仍现同文乱码告警·按 COS 终勘「短窗 NOTIFY 不再逐连补探」口径销读·归档注记=修复降噪效果候 SDE 直证窗自然拍验证+2 封 sg CTO 报告回执（lg066-struct-01 message_id 系误用·正身=acd6f1e47））。
+**研究报告正身收稿**（acd6f1e47·sg origin/dev 顶·cto-superagent-mechanism-report.md）：仓库实存公开 MIT（研究原型非产品·DeepSeek Harness Team）·**通信机制正身=无会话间网络 IPC**：单进程单写者 Engine+SQLite Store+2s Passes 调度环+Effects 持久退避队列（2s→60s/300s 六类 handler）+Outbox 事务回执（behind 乱序防护/失败计数/withdraw+inputsRead 三段已读）+harness inbox turn 边界注入（**不唤醒 idle**）·无名址（Ticket 派生 workerSessionId）无列席·强类型消息族（四类回复+reason codes）·Ticket/Assignment 全状态机（interrupted resume 重放/pause 顺延）·跨机=无。
+**关键结论（CTO 卷原文）**：dsh 原型无跨机无名址无自由直通——照抄不解决席组形跨席通信需求；其价值=编排内核语义（Ticket 生命周期/回执事务/授权门/调度环）·传输层仍需自研 SendMessage 系。MIT=思想/代码双可复用但 DeepSeek Harness 绑定深——思想复用>代码复用。
+**三路线候选（转呈 CEO 讨论）**：α=dsh 编排内核嫁接（Engine/Outbox/回复语义做席组内核+现役 SendMessage 做席间传输·正交可叠）/β=SendMessage v2 语义层（补事务回执+已读追踪+持久退避队列·名址通道不变·改造成本最小）/γ=混合席组形（Ticket 化+Passes 环+uds 通道）。
+**诚实边界**：上游自述原型有 bug 内部版有差·src 深读未做（机制以 docs/007 为准）。
