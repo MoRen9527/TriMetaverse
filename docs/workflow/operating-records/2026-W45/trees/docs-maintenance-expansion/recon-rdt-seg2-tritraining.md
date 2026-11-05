@@ -287,6 +287,24 @@
 
 **勘十五追记 · L 系快验（L1-L6 六探·PASS 放行锁笔）**：FSD 条件三件落笔毕呈快验（落款 08:33:53Z）·快验独立复测全绿——L1 README 补笔 diff 实读 ✓（L26 照裁措辞逐字「不代替 `TriMetaverse/docs/training/` 中央聚合面（顶层平铺）（勘误 as-of 2026-11-05·A6③ 同款——原 `tritraining/` 子目录形态已消亡）」+L27 勘十四形不动·两行替换形）·L2 勘定卷读数勘正实读 ✓（分件照改四组+净面 20+/7- 两值链并录〔19+/6- 补笔前+20+/7- 终值·「RDT 交叉验证」注记〕+--stat 数字列误读机理留痕入卷·FSD 同认领第十五向候选）·L3 组 4 两口径分列 ✓（README 宿主根=1·baseline 中央平铺形=1+混计机理注记）·L4 numstat 独立复验 ✓（README 2/2·beginners 8/3·migration 7/0·baseline 3/2=总计 20+/7- 自洽）·L5 残留复跑 FSD 侧零非法（L26/L27 括注引述=勘误行合法形·与 L1 diff 互证）·L6 圈定零触碰 ✓（M×4 不变+01-小白版零 diff+p3-watch-probe 他面物不动）。**快验 PASS→放行 TriTraining commit 锁笔**（回滚锚 c88f16f）→毕报直达 BOD+抄 COO。第十六向候选实锚随 FSD 卷锁笔一并定谳（教训两席同认领）。
 
+## 勘十六 · 环 3 轮 3（R2 域首批切片·池 13 件）review 留痕（FSD 申报单 220ba36eb §五终态+TC 工作区 diff 实读·独立复测）
+
+**入关实勘**：申报单终态表全读·TC 工作区 M×12 逐件 diff 全读（HEAD=a4b7894 回滚锚 ✓）·存在性断言独立复核（TriMMC runbook 在位 ✓——RDT 首探误探 TriCompany 仓内路径系探径错误自领·正确路径=独立仓 TriMMC）·组 2 残留独立扫描·numstat 加总对表（45+/10-=docs/training 10 件精确 ✓）。
+
+**圈外在途三件对表（FSD §5.2 已申报+精确 pathspec 承诺 ✓）**：hub-ledger-governance.md 3+/1-（=LG-086 回填·CAO 裁 COS 施工在途笔）+package-lock.json 5+/1-（=agent-core 依赖面他席在途笔）+p3-watch-probe untracked——均非 FSD 施工物·**放行条件含逐路径精确 add·三件零触碰留原态（并行窗互踩族「在途未 commit 修改被批量 add 卷走」防线·显式立规）**。
+
+**施工面逐件判定（12 件全 PASS）**：A 组封存形三件 ✓（fade-002/003/006 各 9+/0- 纯插入·W12 同形·archived+版本差注记自声明引用+现行版指针·裁定①照落）·fade-001 直笔 ✓（TriMC→TriMMC 两处+勘误行·TriMMC/docs/ops/runbook 存在性 RDT 独立验 ✓）·fade-007 ✓（spec 09-04 修订差异声明+CLAUDE.md 新教义上位口径+零改写）·fade-beginner-course/product-guide/code-deep-dive 勘误头形三件 ✓（基线 v2.0.0-3 vs 现势 v2.0.6 滞后声明+联动修订候排程·三件同构）·ipd 正文形+勘误头 ✓（「Copilot-host live 阶段」删+三宿主位现势）·ceo-demand ✓（L14 meta 勘误括注 LG-046·勘十四口径；**L22/L39 旧宿主根名系 §0 联审卷宗历史原文=判据③引文合法保留**·L14 全件声明已覆盖·零退回）·占位两件 fade-004/005 零 diff ✓·dir-allocation 零动笔候裁 ✓。
+
+**组 2 口径提醒（记档非退回）**：FSD 组 2 自报零非法——ceo-demand L22/L39 两处命中未列定性清单（勘九口径未注复发形态·轻）——本次 RDT 代定性=合法保留；后续组 2 命中集必逐处列定性。
+
+**裁定请托两笔**：
+1. **dir-allocation=演进头注记形（a 案·强化版）**：实勘补关键事实——头部系**活件形**（sourceOfTruth=培训域正身·syncMode=write-time·元信息头三件套在位）且本件系**培训域路由指针正身现役制度件**（「两侧 training 目录分工以该件为准·冲突时回件」）——封存形不适用（域路由在指）·逐节改写超池面。施工形：头部**追加演进注记行**（件已有头不新造头）五要素——①tritraining/ 子目录形态消亡（中央聚合面现势=顶层平铺）②旧宿主根名 LG-046 正名声明（勘十四 K5-K12 措辞）③「候 CPO/CTO 评估」已决事实（TriTraining 真源产生面已成+CPO 定位完成 2026-07-17+宿主侧 published copy 未生成实勘在档）④现行分工指针确认（过时叙述以注记为准）⑤正文零改写。**升报一笔**：正文逐节现势化（3.6/3.7/5/6 节）候实质修订专窗——域路由指针件内容过时实质影响新人索骥·列排程面。
+2. **fade-001-maintenance 圈外补员=收录**：L44/L352 两处 TriMC 旧路径断链实勘坐实（与 fade-001-deep-dive 同族同形）——同款两行改+勘误行（fade-001-deep-dive 行形直接复用·TriMMC runbook 存在性已独立验）。
+
+**排程请托两笔回应（候 COO 对表）**：③课程三件 follow-spec 联动修订（v2.0.4-6 三版增量·实质更新面）→**列勘十六/复勘窗候选·建议环 4 联审后排实质修订专窗**（逐版对表非一行笔）；④ipd/ceo-course 命令面复勘→同窗候选·与③可并窗（同属 FADE 课程族修订窗·一次复勘两件）。
+
+**review 结论：PASS+裁定两笔+放行条件显式**——FSD 落笔毕（dir-allocation 演进注记+fade-001-maintenance 补员改两笔）呈快验（L 系续编号）·快验 PASS 后**逐路径精确 add**（十二件+两补笔=14 路径·禁批量 add）锁笔→毕报直达 BOD+抄 COO。性能读数（⑨分轮累计）：FSD 勘定+施工面读数随其毕报；RDT review ≈12min（17:04 入关→17:16 判定毕·12 件+圈外定性+两裁定勘定面·如实注）。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
