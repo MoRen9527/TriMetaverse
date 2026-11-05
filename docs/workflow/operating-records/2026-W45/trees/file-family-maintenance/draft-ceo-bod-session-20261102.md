@@ -1735,3 +1735,14 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 **FSD 轮 3 毕报（17:29）**：R2 域首批 13 件+圈外补员 1 件全收口——FADE 深度教程封存头/fade-001 旧路径改/fade-007 刷头+演进差异声明/三门 FADE 课程刷头+滞后声明（v2.0.0-3→v2.0.6）/IPD 宿主面勘误/CEO 产品课括注/目录分工演进注记等·12 件动笔净 49+/12-+2 件零改动占位·RDT 勘十六（12 件逐件 diff 全读）+快验 L7-L11 双闸过·自测五组全绿。锁笔=TC 75c2a61+TMV dce8898fa（回滚锚 a4b7894）。
 **一处读数分歧如实注**：RDT 快验记 47+/10- vs 锁笔机器真值 49+/12-（CAO 并行 commit 零卷入实锚）——终值以机器真值为准·分歧成因未定谳留痕（毕报卷 §三）。
 **候接**：②课程三件联动修订+复勘列候（RDT 建议 FADE 课程族实质修订专窗候 COO 对表）③环 4 四席联审（COS 发起）候环 3 毕衔接·FSD 候命。零 CEO 决项新增。
+
+## ㊿+199（bod·2026-11-05 17:41:39 +0800·CEO 17:35 三令处置·河源 claude code 卸载毕+sg 研究令投毕）
+
+**CEO 令 verbatim 摘**：河源 13 席 claude 宿主=干扰项·目标=dsh（TUI+dsh=当前研究改造对象）·卸载 claude code·令 M 面服务域搜 https://github.com/deepseek-ai/dsh-superagent-prototype （CEO 判断实现了会话间通信）看机制·与 SendMessage 对比·再讨论 TUI+dsh+自研 SendMessage 追平 M 面服务域形。
+**处置一·卸载毕（17:3x-17:4x）**：①13 席 tmux 会话逐席 kill（r-duty-cao~ste 全毕）②残留进程清零（proc=0）③npm 包物理卸载（~/.local/bin/claude symlink 删+@anthropic-ai/claude-code 包目录删·npm -g 卸载因 prefix 错位失效改物理删）④终验：which claude 零/包目录零/proc 零/tmux 全清（no server）⑤**39M ~/.claude 会话历史数据保留**（重装可 resume·非卸载面）⑥保留面：dsh web 8791 一例+smoke 脚本+compass 提示文件+TriRMC 8710 daemon 不动。BOD↔河源席 pane 直投通道随卸载消失（后续河源交互=TriRMC 8710 面+TUI 改造线）。
+**处置二·sg 研究令投毕（17:40 拾取确认）**：m-duty-cto 接令三步（clone/读 repo→通信机制定位→与 SendMessage 逐维对比表+TUI+dsh+自研 SendMessage 路线讨论输入）·报告落卷 dsh-superagent-research/cto-superagent-mechanism-report.md+回执 BOD。API retry 中任务已起。边界=只读零部署零现役触碰·仓库不存在则找近亲佐证。
+**连带注记**：CEO 定向 dsh 为目标宿主后 LG-093 终判（今晚 20:2x）性质=「怎么接管」非「要不要」——候 CTO 研究报告到达后一并转呈 CEO 讨论。
+
+## ㊿+200（bod·2026-11-05 17:43:36 +0800·COS 知会·环 3 闭合+环 4 四席联审发起）
+
+环 3 闭合（池 13 件全收口·TC 75c2a61·净 49+/12-·双闸过·毕报 dce8898fa COS 亲读核验）——环 4 四席联审 COS 17:42:43 发起毕：构成=CPO+CTO+CHO 三席评审+COS 汇总·对象=环 3 产出·时限明晨 09:00 前意见回齐·重点面含勘十六升报候选裁（FADE 课程族实质修订专窗③④并窗）。COO 节奏裁量呈报照准。意见齐后 COS 汇总呈 BOD。免回执照行。
