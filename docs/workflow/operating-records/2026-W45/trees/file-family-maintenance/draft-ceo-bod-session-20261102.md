@@ -1687,3 +1687,7 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 **CTO 勘量毕（822c688f9·勘量卷 cto-port-survey.md·双机五向活体探）**——与令文前提三反转：①编排件=TriCompany 仓件族非 TriMMC 独有（orchestrate_tick.py+tree_op.py+dispatch/ 六件·双侧 md5 逐字节一致）——**代码面河源不缺·零移植需求**；BOD 前勘「scripts/ 零编排件」在 scripts/ 面成立但编排件不在 scripts/（BOD 勘面窄化如实留痕）。②R 面编排循环现役已在跑：河源 cron 含 rmc-orchestrate-tick enabled·rmc_tick.py 442 行同构三重门/指纹/锁/台账·fingerprint 今日 16:22 刚写=扫描活。③**真缺口=spawn 后端死链「能扫不能干」**：rmc_tick spawn 投 127.0.0.1:8711（08-28 铸时 TriLC 旧名位）·河源 8711 零监听+TriRLC 未编译未部署→cost-ledger 10-01 后停更旁证。机理=**断链修复非整件移植**。
 **修复路线（候 COO 排工·SDE 主刀+STE 复验）**：rmc_tick spawn 改投同机现役 TriRMC 8710 /internal/v1/agent——单文件 40-60 行·零新部署·机位矩阵不破·git 单 commit 可 revert；顺手件=orchestration/ 库补 10-02 family 过滤 5 行追裁；第二序候裁=notify 值席信箱族 1082 行移植（spawn 走 8710 自执不需要）。验收锚五门在卷 §五（BOD 附测点全链实测判据照立）。
 **候令面**：CEO「班组派工」两形取舍——第一序 spawn 自执（修复即得）vs 第二序拆树派 13 席席组形态（需第二窗）——随卷 §三 候 CEO 令。
+
+## ㊿+191（bod·2026-11-05 16:49:29 +0800·cron job1 巡检轮·设计窗零通报）
+
+拍 16:37:04（读时 16:49:03·差 12min 边界注明）。16:49 在 14:00-18:00 GLM 设计窗内=v4.3 零通报轮。本地组 6 席在干活（m-rdt/m-cto/m-sde/m-coo/m-cos/m-fsd=线 1/线 2/环 2/修复线正常施工）。**归档差异一面候窗**：MMC 8712 degraded=true consecutiveFailures 2→4 连涨（16:07 拍=2→16:37 拍=4·cron job 面连续失败累计）——设计窗不扰 CEO·候 18:00 后窗首拍仍 degraded 即转报 sg duty-cos 交叉定性。
