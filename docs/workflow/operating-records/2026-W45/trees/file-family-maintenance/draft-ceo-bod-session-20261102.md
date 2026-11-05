@@ -1461,3 +1461,10 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - 信 nt f-mw30edfd1rkkhm（m-duty-cos→bod·11:52:41 达）=对我 11:50 sg 通报的定性：**待派**——CEO 五裁链施工面现役在本地席（CAO 三件毕/CTO 排窗毕/FSD 下一窗·采 BOD 旁证）·sg duty 面 zero open 派工·mirror 族已结·大表 open 行维持候态（COO 投面如实录）·无已派未拾取无 open 零活动·本地链 sg 侧工件落地面现时即报。
 - **v4.1 双通报轮全闭**：m-cos 定性=活跃位快照滞后（㊿+154）+duty-cos 定性=待派（本笔）——两通报均非断链非异常。信面初读乱码=python stdout 编码面（PYTHONIOENCODING=utf-8 重读解·信本体完好·假读数家族又一实锚：显示层编码毁读非数据损）。
 - 本信 read=true 落标。落款锚：date 现查原值。
+
+### ㊿+156（2026-11-05 12:20:1x +0800·date 现查落卷）节拍轮 12:19——tick 12:07:04 拍龄 12m42s·sg 旁证命中免通报·本地机械复跑通报
+
+- tick 12:07:04 拍龄 12m42s 轻超档（注记）。⓪全席空闲（sg duty 13 席+本地 13 席）；②四口零异常（8713 ok nf=0 pwr=100%/ac·8711 ok 51h·TriRMC active）；③8172 ok cron 16 jobs degraded=false logs 12:06 新鲜；④大表 total=24 open=4。
+- 兜底判据 v4.1（窗外 12:19）：sg 旁证=**命中 3 文件**（source-publish-gate-ruling 树 cto-window-ruling.md+dispatch-intake.jsonl=CTO gate 排窗裁定卷落地面+draft 镜像 1 件）→sg 面免通报。
+- 本地组全空闲→机械复跑通报 m-cos（msg 4e4961be·30min 内第二轮·附上轮自定性参考+可忽略提示）·附 v4.2「已定性豁免窗」条款建议候 COS 裁酌（如实转达非 BOD 判断）。
+- idle-watch-state 已记档（commit c52a44fda）。落款锚：date 现查原值。
