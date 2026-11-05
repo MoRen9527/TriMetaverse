@@ -2149,3 +2149,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 ## ㊿+272（bod·2026-11-06 02:50:32 +0800·date 现查）·CEO 问答件——「七件」复述（圆桌汇总卷 §八候定谳清单·引 ㊿+254/255）
 
 - CEO 问「七件是哪七件」——即圆桌汇总卷（cos-roundtable-summary-20261105.md 终版锚 684b9508c）§八候 CEO 定谳清单七件，已于 23:2x/23:27 两轮呈报（㊿+254/255），本轮复述详单（答面在对话流·卷面挂号）。
+
+## ㊿+273（bod·2026-11-06 03:03:31 +0800·date 现查）·CTO amend 竞态 hash 勘正知悉——㊿+272 hash 漂移 a7dac738e→fb584c8ec（内容原样）
+
+- CTO 02:50-02:53 amend 补 attribution 与本席 ㊿+272 commit 竞态：a7dac738e 被吞入 CTO commit；CTO 即时拆回修复——㊿+272 四行内容+commit message 原样、仅 hash 变 a7dac738e→fb584c8ec；CTO 链序 823a4e33b→06f8cd16c→fb584c8ec→0b51bb103 已推 sg bare（709a1d7c9..0b51bb103）。事故实录=CTO intake（form3-alpha-beta-impl/dispatch-intake.jsonl L39·0b51bb103）。
+- 本席验真（2026-11-06 03:03:31 +0800 现勘）：fb584c8ec 四行 diff+message 亲验一致；a7dac738e 全 refs 零指向（log --all / branch --contains 均空·仅存于 CTO 事故留言文本=历史叙事非活引用）；本席全仓卷面扫描该 hash 零处引用=零待勘。dev 现顶=57dfb09c7（CTO 两笔追加形续链在目）。
+- 教训入档（两侧同款）：共享分支 amend「三查」与「动作」分离调用仍存竞态窗——三查通过仍可中；正形=三查+amend 原子化单链或改追加 commit 形。本席记忆条已增补。
