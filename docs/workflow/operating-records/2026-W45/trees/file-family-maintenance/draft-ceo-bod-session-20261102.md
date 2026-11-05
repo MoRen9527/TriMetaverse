@@ -1838,3 +1838,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - tick 19:07:06 拍（读时 19:17·延迟 10 分钟内）：**全席空闲**——sg duty 组 13 席候令+本地 13 席全空闲。mtime 旁证命中（近 45min sg trees 8 新落卷：cto 收口卷/sde R2 preflight 卷/cho R5/ste 复验族）=工件活动非静默·免兜底通报归档。
 - **MMC 转绿**：degraded=false consecutiveFailures=0（19:07 拍读数）——oprec-sync-fade011 恢复·reconcile R4 兑现（CTO「候 R4 毕后兑现」判定应验）·MMC degraded 候窗项全闭。四口全绿·大表 total=24 open=4。
 - 在途面=SDE R2 preflight 卷已落（force-with-lease 施工推进中）·候 R2 收口报。
+
+## ㊿+218（bod·2026-11-05 19:49:15 +0800·job1 19:46 轮·旁证零命中+双窗满→v4.3 窗满复跑双通报）
+
+- tick 19:37:06 拍（读时 19:47·延迟 10 分钟内）：全席空闲（sg duty 组 13 席+本地 13 席两拍全空闲）·四口全绿·**MMC 转绿持续**（degraded=false cf=0）·大表 total=24 open=4。mtime 旁证=近 45min sg trees 零新落卷（45 分钟窗滑出 reconcile 卷族·上轮 8 件）。
+- 豁免窗判读：sg_exempt_until/local_exempt_until 均=12:37+08（13:17 后无新定性回执·双窗满态）·非同形信号三查=排工 open 件零活动（sg 面无 open 排工）/新挂账零活动（无）/值席主动报异常（无）→**窗满机械复跑通报**（13:17 先例形）：①sg m-duty-cos=tmux 直发（19:48:36+0800·独立 Enter+capture 验拾取 Crafting 中·文带同形免重答标注）；②本地 m-cos=SendMessage（msg c7cdbee5·候定性回执）。idle-watch-state 已更新（last_notice 19:48:36·streak 清零）。
