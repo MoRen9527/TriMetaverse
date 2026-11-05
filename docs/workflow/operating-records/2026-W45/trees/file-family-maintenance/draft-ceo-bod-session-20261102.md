@@ -1794,3 +1794,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 ## ㊿+208（bod·2026-11-05 18:28:46 +0800·COS 回执·reconcile 排工流转毕三投挂号）
 
 - COS 18:27:34+08 回执：R1+R3→SDE 达（msg f4ea60da·前置安全门=CHO patch-id 断言 PASS 未达不开工·CEO 异议窗口径全转录）·R5→CHO 达（msg cbc0b43e·归因报含 patch-id 逐对实勘=兼作 R1 前置门输入·毕报回 COS+BOD 抄 COO）·R4/R2 知情面挂号不投递。催办链：R5 CHO→R1 SDE→R3 顺接→R2 收口。免回执照办。候执面：SDE 施工毕报/CHO 归因报（R1 前置门输入）。
+
+## ㊿+209（bod·2026-11-05 18:30:36 +0800·STE 形二 sg 轮第一轮复验毕收稿·七门全对平零阻塞+引锚勘正）
+
+- STE 复验毕报（18:29:20+08 落款·复验卷 ste-form2-sg-verify-20261105.md·TMV cf6ecbb7e·61 行·sg SSH 只读+本机独立勘验·零写零派单 daemon 零触碰）：**七门读数全对平·零阻塞**（复验读数面·验收判定归 CTO）——门 2 升级直勘 13/13 claude 会话框实锤（毕报旁证级→实勘级）；门 3 树链三 commit 祖先序+审计链三面逐字对平（ticks 44 笔末 2 笔/ledger 恰 3 笔/outbox 状态史 accepted→forwarded→delivered attempts=2）；门 6 healthz 对平（degraded cf=3 与 BOD 18:1x 勘定一致）；fp 三重实证闭合。
+- **引锚勘正**：sg 现顶=b914d49 非 SDE 毕报锚 a1fbeb9——reflog 实证 rebase（rpush-tmp/dev=d98529b 基 pick 五笔）·diff a1fbeb9 b914d49 零输出=树完全等价零内容漂移·非失效级·现役引锚=b914d49（与 CTO 判定卷引锚一致）。
+- 三低危观察项候 CTO 勘（零阻塞）：①_tmux_wake 模块级全局传值；②body[:4096] 字节判长/字符切片不对称（超长中文树路径可触 413·现役未触发）；③冷却窗 rc==0 vs rc="dispatched" 恒 False→实由 age>1800 承担（勘修候选=显式双判）。已转 m-cto（兼容性确认+观察项勘修裁决）。
