@@ -1393,3 +1393,14 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - COS 回执（11:00:50 写前现查）：件一笔误勘正已路由 CAO（候回执销）。
 - **COS 席意见全文收稿（呈 CEO 用·总立场=方向采认）**：①落位=TriCompany 新立 source-host-files/ 与 source-agents/ 平行（发布管线两宿主先例现成）·不落 docs/ 治理域（发布物源件性质）；存量 project-sources/trimetaverse-claude-md.md 投影件转正并入防双真源。②分界规则（最关键）=**分节收归非全文收归**——治理投影节（分权制/D 系引用/裁决分级）真源归 TriCompany·项目运维节（模块布局/命令/Registry Routing/记录落点）留 TMV 本仓；判据=「内容真源在哪仓就归哪仓」。③机制=source-agents 发布管线扩展宿主形态参数+攒批惯例（治理急令走急件道）；**另建议纳入投影对表闸**（勘正时投影面清单同步检查·checklist 或 hook·候 FSD/CAO 机械闸窗）=比收归更根本的防再发件。④覆盖面盘点=根 CLAUDE.md/AGENTS.md/.github/copilot-instructions.md/.github/prompts/.claude/compass·例外注记=compass 系会话灵活层（八件套契约明定）建议不收归或标注豁免候 CAO/CEO 勘；.claude/agents 已在管无重复动作；用户级 CLAUDE.md 不涉。
 - 候件：CAO 席意见（已路由·随链回）→两席意见齐呈 CEO。
+
+### ㊿+147（2026-11-05 11:11:44 +0800·date 现查）收稿 m-cos 11:07:43 转呈两件——件一勘正毕销账+件二 CAO 席意见全量·两席意见齐候呈 CEO
+
+- **件一（销）**：TriCompany a997a32——D-39 引文笔误勘正「都有cos裁」→「由cos裁」，勘正注记形实质不变，COS 本地 IN-CHAIN 现验毕。候件清。
+- **件二·CAO 席意见全量到**（11:06:33 落款·CAO 三笔勘正 commit a997a32/f1cdbec/739a015 本地 IN-CHAIN 现验）：
+  - **实勘新事实（CAO 供·改变提案重心）**：manifest v2.0.2 发布域扩容已兑现提案主体——project-source-doc-sync-manifest.json 双 entry 在册（trimetaverse-claude-md-copy + trimetaverse-agents-md-copy·published-copy 模式·真源已在 TriCompany/docs/project-sources/）；今晨事故根因=**勘正对表闸缺失**（执行面绕闸直改发布面）非机制缺位；AGENTS.md 反向漂移第二例实证（739a015 顺手勘平·副本改未回写真源）——对表闸必要性再 +1。现两件真源↔发布面字节对表一致。
+  - **两席共识面**：方向采认 / 投影对表闸必要 / 真源为正·发布面滞后=攒批窗常态非漂移 / compass 豁免+理由标注 / 存量件转正防双真源。
+  - **差异两点实为时序非方向**（COS 附议 CAO）：①分节收归——COS 原议关键项·CAO 主分阶段（阶段一=维持整文件收归+节级 owner 标注「真源侧: TriCompany|TriMetaverse」机器可查喂闸·阶段二=候 published-summary 模式成熟再议切换·理由=闸未立先上分节双源对表面翻倍）——终态方向两席一致·时序论据成立 COS 附议；②落位——COS 原议新立 source-host-files/·CAO 主**先闸后迁**（迁址命名 source-host-files/<host>/<FILE> 自描述可扩多宿主·随 manifest 下一扩容窗顺手办）·目录 owner=CAO。
+  - **候 CEO 裁点（五项）**：①提案定性——已由 manifest v2.0.2 兑现，从「新立机制」转「补闸+扩容收尾」是否采认；②勘正双对表条款（改发布面必同步勘真源·改真源必核发布面滞后态·纪律册轻款 CAO 候批落笔）；③source_publish_check 由 dry-run 升 gate 形（候 CTO 窗·与②双保险）；④迁址时序（先闸后迁·随扩容窗）；⑤分节切换时序（阶段二候 published-summary 成熟）。附：子仓入口面 CAO 意见=暂不入域免管线过早跨仓扩容（候裁一并）。
+- **两席意见全量已在链**（COS 11:00:50 呈报+CAO 本转呈）·BOD 集散毕即呈 CEO。**BOD 不裁**——五裁点全归 CEO（含②纪律册轻款落笔候批面）。
+- 落款锚：date 现查 2026-11-05 11:11:44 +0800；收稿源=m-cos cross-session 11:07:43 转呈（落款 11:07:43 写前现查原值）。
