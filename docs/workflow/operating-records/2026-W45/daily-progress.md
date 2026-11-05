@@ -616,3 +616,21 @@
   - 6e0c25fd5 docs(bod): 意见㊿+118——job1 04:51·电量回满90%·全席空闲静默态 @bod
   - …另有 2 条略（全量见 git log）
 - registry：未知版本；今日 registry 提交 1 条：1e0dd76 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
+- 巡检兜底补写 @18:10 +08：自上次进度提交 0ab82bf40 后新增 188 条 commit：
+  - 2aca86477 docs(n-d1): FADE-001 十段升档五环节分辨结论正身（CTO 侧）——换实例测试法立尺+五环节两态矩阵（Plan 存在性门+模板 schema/出题卷 schema+冻结仪式/Score 引擎+评审形/Verify runner/Close 时序法条+三态框架+载体 schema=通用骨架一套协议层；plan 正文/题目集/判据集/断言集/语义判定+择型=实例个性化件）+归属治理+N-D2/D3 施工序建议；候 CPO 对审双署 @m-duty-cto
+  - 3c031c620 docs(coo): 台账三百九十八笔(FSD专窗接单确认·明晨0900后接单即开零空窗·今晚零施工零预勘·挂账闭合候触发)
+  - a2e20e9f8 docs(coo): 台账三百九十七笔+课程族专窗派工单(CPO差异清单达线37b3ae60e开窗前提齐·四段并窗明晨FSD接单即开·今晚不开窗裁量重件质量优先·三信发)
+  - add637c67 Merge remote-tracking branch 'origin/dev' into dev
+  - 37b3ae60e docs(cpo): FADE 课程族滞后差异清单落卷(环4联审承诺交付·专窗施工输入)——基线v2.0.3→现势v2.0.6三版教学化映射+registry双真源差异+各课修订落点+版本号两写法解歧 @m-cpo
+  - 4911c7048 docs(form2): form2-live-test-01 树态 done（N1 全链实测报告落卷·形二闭环） @m-duty-cos
+  - 4101cf190 docs(form2): 形二全链实测报告 N1——接令时刻/双通道读数/参与席/落盘时刻四要素齐·红线恪守 @m-duty-cos
+  - d00713da1 docs(sde): 形二全链实测测试树挂平面——form2-live-test-01(单节点 N1·限写树目录·m-face+server-executable·验收锚3链节1) @m-sde
+  - 59bad3ea5 docs(plane): W45 任务书挂平面——W40-W44 盘点挪移+标准件补齐+翻周标准立制+FADE-001 十段升档·一气呵成单任务书（CEO 11-05 15:02 四令·BOD 立书）@bod
+  - 636fa6c56 docs(coo): 台账三百九十六笔(环4联审毕四环序列全毕·三席零实质异议·追认笔即办13+1采认无异议·课程族专窗候CPO输入开窗·CPO请托+FSD预告两信发)
+  - 73bd6a0f2 docs(bod): §㊿+204——环 4 联审汇总收稿·环 3 产出采认共识成立·零 CEO 裁决事项 @bod
+  - 28d1dfa6f docs(cos): 环4四席联审汇总卷——三席均判环3产出零实质异议可采认(修注五笔+微瑕一笔随窗清单·FADE课程族专窗三席共识+新人传导路径面优先级+差异清单输入·候COO对表三件) @m-cos
+  - 98c9f5cd2 docs(cto): 环4评审节点闭环台账行——意见卷3534ff100+COS回执09:54:16Z对表合规
+  - 3534ff100 docs(cto): 环4联审CTO评审意见落卷——11件PASS+3件PASS带修注(勘误行TriMC表述歧义+课程基线v2.0.0-3记法)+0候裁·占位判据活体复测(三锚三中+FADE-ASSESS-005六处在役)·numstat49+/12-独立复sum成立·新增fade-005行号锚联动复勘观察项
+  - d3c87e73d docs(coo): 台账三百九十五笔(STE挂账锁定一轮确认·连四改定收敛无旧触发面残留·sg轮照常在候)
+  - …另有 173 条略（全量见 git log）
+- registry：未知版本；今日 registry 提交 1 条：d30a699 docs(sde): docs-maintenance批3版本行迁移TC面81件——四档规则(CTO核准2026-11-04信)·v0.x归1.0.0/V>=1保数字补段·箭头演进形V0.1→V1.0取后token·注记全保留·D-47 commit时戳锚零手打 @m-sde
