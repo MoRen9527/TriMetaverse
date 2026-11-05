@@ -1,8 +1,8 @@
 {
   "sg_idle_streak": 0,
   "local_idle_streak": 0,
-  "last_ts": "2026-11-04 22:21:53 +0800",
-  "note": "22:21拍: sg全候令但mtime旁证有新落卷(sg侧220701树九件=8712重启后自动跑+dispatch面)免通报",
-  "last_notice": null,
+  "last_ts": "2026-11-05 11:50:2x +0800",
+  "note": "11:49拍: sg 13席+本地13席全空闲·旁证零落卷→双通报(sg tmux直发duty-cos拾取验毕+本地SendMessage m-cos)·duty-cos定性回执候",
+  "last_notice": "2026-11-05 11:50:2x +0800",
   "v41_free_pass": "2026-11-04 22:21:53 +0800"
 }
