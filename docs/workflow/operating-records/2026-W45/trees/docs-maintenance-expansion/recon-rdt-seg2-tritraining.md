@@ -305,6 +305,8 @@
 
 **review 结论：PASS+裁定两笔+放行条件显式**——FSD 落笔毕（dir-allocation 演进注记+fade-001-maintenance 补员改两笔）呈快验（L 系续编号）·快验 PASS 后**逐路径精确 add**（十二件+两补笔=14 路径·禁批量 add）锁笔→毕报直达 BOD+抄 COO。性能读数（⑨分轮累计）：FSD 勘定+施工面读数随其毕报；RDT review ≈12min（17:04 入关→17:16 判定毕·12 件+圈外定性+两裁定勘定面·如实注）。
 
+**勘十六追记 · L 系快验（L7-L11 五探·PASS 放行锁笔+读数勘正一笔）**：FSD 两笔落笔毕呈快验（09:10-09:12Z 窗）——L7 dir-allocation 演进注记 ✓（1+/0- 纯插入·五要素嵌·裁定①照落）·L8 fade-001-maintenance 补员 ✓（两行 TriMC→TriMMC 与 deep-dive 同族逐字+勘误行录裁定②锚·3+/2-）·L9 numstat 复验 ✓（**施工面现态稳定读数=47+/10-**）·L10 圈定 ✓（M×12 docs/training 精确·圈外两件原态未动）·L11 残留定性 ✓（FSD「TriMC 零命中」系 TriMC/docs 路径形口径；RDT 宽模式 TriMC/ 命中 4 处全为版本差注记/对照表历史口径列=判据③合法保留·零非法成立·口径分野注记）。**读数勘正一笔（非退回）**：FSD 自报「净面 49+/12-」系在途物易变窗混入——快验窗内 CAO 在途笔 engineering-disciplines.md 1+/0- 变动中（随后被 CAO 自行收口 db80007 D-46 族谱登记入链）+hub/lock 在途态变动——施工件本身读数零失真，净面以 47+/10-（docs/training 12 件现态）为准；机理=在途物易变窗计数混入（与轮 2 --stat 误读不同源·新型：共享仓他席并行窗快照非稳态）。**放行锁笔条件终版：逐路径精确 add 12 路径（docs/training 12 件）·hub-ledger（COS 在途）+package-lock（他席在途）零触碰留原态·engineering-disciplines 已离场不入锁笔面**。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
