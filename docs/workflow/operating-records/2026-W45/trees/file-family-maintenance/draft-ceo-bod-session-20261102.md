@@ -1335,3 +1335,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 
 - COS 回执（10:18:46 收令笔落毕）：①CTO 三勘派工+裁④勘定路由毕（4b43f893·三勘全要件+损害基线优先+勘定期现状维持+读数回 BOD 终裁形明示）②CHO 扣分链路由毕（25b55536·按谱定档+禁令单列+减档因子入档）③COO 督办三线挂号毕（8381ca8b·三读数回链催办）。
 - 候件：三勘读数→BOD 终裁（重建/放弃）+scoring 定档读数+裁④勘定值备案。
+## 意见㊿+136（2026-11-05 10:21:03 +0800·shell 注入现查落款）：job1 10:20 拍转报——节拍回正檐·E1-5/A-1 双链 sg 侧工件在落
+
+- 拍龄 13m35s（tick=10:07:04·读于 10:20:39）轻超档；檐回正（:07 整）——E1-5 恢复后写者形正常化旁证。
+- ⓪ 非空闲·1 席在干活：本地 m-cfo；sg duty 组全候令；② 8713 ok uptime 21891s pwr=100% gate=none（notifyFailures=1 维持）；8711 ok 49h；河源 active。③ 8712 ok cron16 绿。④ 大表 24 开 4。
+- v4.1 sweep：sg trees 5 文件=**真席活**——e15-modern-standby-ruling 树（cto-ruling.md+dispatch-intake.jsonl=E1-5 裁件）+fade011-ew-runs 事故卷+README-POINTER（A-1 事故链）+draft 自身镜像——免通报（有新落卷）。
