@@ -2062,3 +2062,10 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **8713 自愈解挂**（01:21:51 healthz ok=true）：readFailures 15→**0**·powerMonitor 读环工作（lastReadAt 17:21:04Z=读前 47s）·uptime 10258s 未重启=僵死解除系阻塞调用自解非进程重启——时序对表=01:18:14 我探 healthz 零响应（其时 CIM 已可读·我 01:18 CIM 探 36pc 秒回）→35 秒后 daemon 即响应——**WMI 读层恢复（wmiprvse 复位）先于 daemon 解挂·CIM 不挂→powerMonitor 不拖→daemon 恢复·与 STE 根因链全吻合**。
 - **WMI 两命令改候命**：wmiprvse 已自愈复位·现役健康面（CIM 秒回+readFailures=0）——重启 Winmgmt 现下无必要；若复发（readFailures 再爬/gate 再 none 持续）即跑 CEO 两命令正形。根因未除注记如实：wmiprvse 为何缺位未勘定·复发监控交由 tick 拍面 readFailures/gate 字段+LG-069 前置档告警。
 - 动作②WMI 命令=CEO 不用跑了（候命形态转知 STE 复测门照跑验全绿）。
+
+## ㊿+258（bod·2026-11-06 01:26:03 +0800·date 现查）·STE 复测门毕报收稿——四探针全绿·WMI-8713 故障链正式闭环
+
+- STE 复测门毕报（落款锚 17:25:10Z 系·与 CTO 信共锚轮·CTO 直达 msg d4cdebe5 抄 BOD）：**四探针全绿自愈确认**——wmiprvse 2 进程在位/CIM 746ms 秒回（41pc 充电中）/8713 percent 40→41 非 null+readFailures 0→0 停增/gate=none 系**源码级勘定正常态**（power-monitor.ts L155 zone ok→none=电量健康区正常放行·非降级）——此前「gate=none=降级」读法勘正：闸正常时本来就是 none。双通道互证（STE 独立读数与 BOD 01:21 探数一致·acOnline 双实证）。
+- **故障链全闭**：wmiprvse 缺位→CIM 挂死→8713 僵死→电量闸失效告警误报+真放电→wmiprvse 自复位→daemon 解挂→CEO 插电→复测门全绿。候命命令维持（复发即跑）·复发监控双信号源入毕报。
+- gate 语义勘正注记收录（呼应 ㊿+249）：none=健康区正常放行态非故障态——后续 tick 拍面判读按此口径（gate 非 none 才需警觉=zone 降档）。
+- 自勘知悉注：STE 按二十六案先例记档本席 01:23:45 信面落款倒挂微差档（晚 hook 62s·单件·无掩码无虚标·非实质）——知悉收录·SendMessage 落款=发送前现查原值照旧·微差档悬置不展开。
