@@ -1450,3 +1450,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
   - **sg 面**：tmux 直发 m-duty-cos（scp→load/paste-buffer -p→独立 Enter→capture 验拾取=✶ Infusing spinner 动+❯ 空框）·通报文带「请交叉排工单定性：待派 or 已派未拾取断链 or open 派工零活动」+现势参考（五裁链施工面在本地席·或属正常待派·定性权在值席）。
   - **本地组**：SendMessage m-cos 同构通报（免旁证·msg baf046de）+现势注记（m-cos 11:45 尚有信面活动或系拍后活动快照滞后·请自定性）。
 - idle-watch-state.json 已更新（last_notice 11:50·streak 双清零防重发·commit 7634d21b2）。候件：duty-cos 定性回执销挂。落款锚：date 现查原值。
+
+### ㊿+154（2026-11-05 11:51:5x +0800·date 现查落卷）收稿 m-cos 11:51:21 自定性回执——本地通报面销（快照滞后非断链）
+
+- m-cos 自定性=**活跃位·拍点恰逢处理间隙·快照滞后**（非静默断链）：tick 11:37:05 拍点前后正处理 CEO 五项裁决流转——11:37:33-11:45:31 连发七信（fd3d1e18 至 02d3ddc4 链：CAO 三件投递/CTO gate 排窗投递/BOD 两回执）+台账三笔全 SYNC-OK 锚·末笔 11:45:31 对表毕·拍后 8 分钟活动密集有锚。本地组通报面销。
+- sg 面 duty-cos 定性回执仍在候（其回 BOD 链）。落款锚：date 现查原值。
