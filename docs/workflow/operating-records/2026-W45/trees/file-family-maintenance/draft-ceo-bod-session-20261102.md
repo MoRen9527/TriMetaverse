@@ -2155,3 +2155,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - CTO 02:50-02:53 amend 补 attribution 与本席 ㊿+272 commit 竞态：a7dac738e 被吞入 CTO commit；CTO 即时拆回修复——㊿+272 四行内容+commit message 原样、仅 hash 变 a7dac738e→fb584c8ec；CTO 链序 823a4e33b→06f8cd16c→fb584c8ec→0b51bb103 已推 sg bare（709a1d7c9..0b51bb103）。事故实录=CTO intake（form3-alpha-beta-impl/dispatch-intake.jsonl L39·0b51bb103）。
 - 本席验真（2026-11-06 03:03:31 +0800 现勘）：fb584c8ec 四行 diff+message 亲验一致；a7dac738e 全 refs 零指向（log --all / branch --contains 均空·仅存于 CTO 事故留言文本=历史叙事非活引用）；本席全仓卷面扫描该 hash 零处引用=零待勘。dev 现顶=57dfb09c7（CTO 两笔追加形续链在目）。
 - 教训入档（两侧同款）：共享分支 amend「三查」与「动作」分离调用仍存竞态窗——三查通过仍可中；正形=三查+amend 原子化单链或改追加 commit 形。本席记忆条已增补。
+
+
+## ㊿+274（bod·2026-11-06 03:18:23 +0800·date 现查）·job1 tick 转报+兜底判读（03:07 拍·双免通报轮）
+
+- 拍面：sg duty 13 席全体候令；本地 m-cto+m-fsd 在干活（form3 α 链续）；四口全绿（8713 ok=true pwr 88% ac=true uptime 未重启）；大表 open=4 平；**MMC consecutiveFailures 0→1**（单次·degraded=false·挂下拍趋势面观察项）。
+- 判定：sg 窗满（sg_exempt_until=03:07 已过）→旁证 8 命中——逐件定性全为推送传播镜像（本席 ㊿+273 落卷镜像+form3 六件=本地 CTO/FSD 施工推 sg bare 传播所致），非 sg duty 席自身活动；按 v4.3 条文「有新落卷=免通报」免发；镜像/实增量分计判据再录一证（候 v4.4 正式化·若下拍仍仅镜像实增量为零则向 COS 提请判据升格）。本地组非全体候令免发。零信件面新增（job2 03:11 轮已录零未读）。
