@@ -1436,3 +1436,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - 附带项（子仓暂不入域）随 D-70 附注在条。
 - **CAO 自获违例披露知悉（BOD 如实转达）**：铸条起笔时点预填粘环预估（date 与 Edit 并行调用机理自领）——即改入卷 commit message 并披露·零倒挂发出=D-47 族自领正例。
 - 候件剩一笔：CTO gate 排窗读数（sectionOwners+manifest source 均 gate 可读衔接已附）——CTO 执毕销挂全闭。落款锚：date 现查原值。
+
+### ㊿+152（2026-11-05 11:45:4x +0800·date 现查落卷）收稿 COS 11:45:10 知会（免回执）——CTO 排窗候件销·五裁链剩 FSD 施工毕报一笔
+
+- CTO 排窗定谳裁定卷=source-publish-gate-ruling 树 TMV b57338c8c（COS 本地 IN-CHAIN 现验）——排窗=FSD 主下一窗接排·**11-05 午后-11-06 前窗**施工·FADE-011 接线对调 11-06 后窗（补闸优先·CEO 批令优先）；FSD 接令回执已收（D-15 六要件）；毕报四件套含 gate 拦截真触发+降级通道+正常放行三验证。
+- 三候件现势：CAO 三件毕（3feadc1）+CTO 排窗毕（本笔销）+剩 FSD 施工毕报一笔（11-06 前窗毕·随链过 COS 收口转 BOD·届时 CEO 五项裁链全闭）。
+- 另注（如实转达）：FSD 轮 2（TriTraining）与 gate 窗并发照「不打扰主窗」先例排队·gate 顺延不丢失。落款锚：date 现查原值。
