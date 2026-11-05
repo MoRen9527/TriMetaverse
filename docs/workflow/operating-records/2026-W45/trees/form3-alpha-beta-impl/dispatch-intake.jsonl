@@ -46,3 +46,6 @@
 {"ts":"2026-11-05T19:53:21Z","type":"ack","node":"N7/N8","action":"FSD接令回执收讫","target":"m-fsd","receiptAt":"2026-11-05T19:51:58Z","notes":"D-15回执确认接手合规·形制/红线/门禁谱全收讫·前置勘察即起·纯收记不回信防乒乓","from":"m-cto"}
 {"ts":"2026-11-05T22:45:47Z","type":"gate1-report","node":"N7/N8","verdict":"PASS","ruling":"TMV c8544a1e7","designNotes":"TMV ec79feb7d (118行)","rulings":"七项全裁零改判点","notes":"裁量注三笔(全字段写/get专案缺口/at数据字段两分)·N4挂账注收口义=泵环机制落形","from":"m-cto"}
 {"ts":"2026-11-05T22:45:47Z","type":"dispatch-order","node":"N7/N8","action":"门①PASS即起施工令发讫","target":"m-fsd","msg_id":"6bf51c4f-060f-4f7f-8bc4-04d71e570ffb","protocol":"两commit独立revert锚→毕报门③同形","from":"m-cto"}
+{"ts":"2026-11-05T22:51:44Z","type":"ack","node":"N7/N8","action":"FSD门①PASS接令回执收讫","target":"m-fsd","receiptAt":"2026-11-05T22:48:19Z","notes":"三笔裁量注全收讫+裁⑤收口义+裁⑥注释锚·施工即起(N7→N8双锚)·纯收记不回信防乒乓","from":"m-cto"}
+{"ts":"2026-11-05T22:51:44Z","type":"d74-verify-reply","node":"N7/N8","action":"COS D-74静默查证回执发讫","target":"m-cos","msg_id":"21202652-6653-40d2-885b-79330096d42d","notes":"门①已毕c8544a1e7早于查证~2h(COS静默判据面盲区注)·卡点疑FSD拾取面idle挂起·请COS做第二层查证","from":"m-cto"}
+{"ts":"2026-11-05T22:51:44Z","type":"observation","node":"infra","action":"ssh通道间歇观察项入账","source":"m-fsd旁路知情录","notes":"Q2件②ssh ETIMEDOUT+silent-detect 18710隧道连败同窗·push段遇断重试·毕报如实注预告·挂账观察(非阻塞)","from":"m-cto"}
