@@ -2,10 +2,10 @@
  "sg_idle_streak": 0,
  "local_idle_streak": 0,
  "last_ts": "2026-11-05 19:48:4x +0800",
- "note": "19:37拍: sg 13席+本地13席全空闲·旁证零命中(45min窗滑出reconcile卷族)·双窗均满(12:37过期·13:17后无新定性回执)→v4.3窗满复跑双通报: sg m-duty-cos(tmux直发19:48:36+0800·capture验拾取Crafting中)+本地m-cos(SendMessage c7cdbee5·候定性回执启新窗)",
+ "note": "19:37拍: sg 13席+本地13席全空闲·旁证零命中(45min窗滑出reconcile卷族)·双窗均满(12:37过期·13:17后无新定性回执)→v4.3窗满复跑双通报: sg m-duty-cos(tmux直发19:48:36+0800·capture验拾取Crafting中)+本地m-cos(SendMessage c7cdbee5·候定性回执启新窗) | 20:21轮: 旁证5命中(dsh-superagent-research 树+cto-form3 方案卷+sde observation closeout)免通报·本地 m-cos 通报信在途未拾取免重发防双投递",
  "last_notice": "2026-11-05 19:48:36 +0800",
  "v41_free_pass": "2026-11-04 22:21:53 +0800",
  "local_exempt_until": "2026-11-05 12:37:05 +0800",
- "exempt_note": "v4.3 sg 豁免窗启动锚=duty-cos 定性回执 11:52:41(待派)·min(12:52:41, 第2tick=12:37:04)取先到=12:37:04——落笔时已过=窗满态(下轮机械复跑·duty-cos 下次定性回执再启新窗)·失效信号精化=排工单 open 件零活动叠加旁证零命中/新挂账零活动/值席主动报异常(COS 12:42 ③)",
- "sg_exempt_until": "2026-11-05 12:37:04 +0800"
+ "exempt_note": "20:21 轮启动锚=duty-cos 定性回执 ntf-mw3hh4w94td0hv(19:50:20Z=19:50+08 非同形活跃位定性·AGENDA-001 段1 毕+包D N-D2 进行中·活动锚 cto-seg1-closeout 卷)·min(20:50, 第2tick=20:37)取先到=20:37——窗满机械复跑自动恢复",
+ "sg_exempt_until": "2026-11-05 20:37:00 +0800"
 }
