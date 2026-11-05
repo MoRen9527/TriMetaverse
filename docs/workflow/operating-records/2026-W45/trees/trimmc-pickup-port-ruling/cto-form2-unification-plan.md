@@ -83,7 +83,15 @@ STE 复验格局不变·串行 sg→河源（形二形态在 sg 先验证）·�
 - **R5** 席组形成本可视性变化（headless usage 解析退役）→CFO 既有 token 实测协议口径承接+tick 派单审计行保底
 - **R6** duty-cos 接令能力面（拆树派工质量依赖值席会话纪律）→D-27 树协议+值班席现行纪律已在·验收锚 3/4 实测背书
 
-## §八 · 使用依据锚谱
+## §八 · 增补段（BOD 实勘勘正采纳+席间协作通道升级·复勘双证后补）
+
+**勘正采纳（BOD 17:09-17:12 两轮活体 vs 本席 17:08 瞬态读数·本席复勘 09:15:53Z 第三证）**：r-duty-cos 现役=**claude 框实锤**（❯+bypass permissions+221058 tokens·「Brewed 35s done 5:14 PM」=BOD 直投 turn 痕迹）·13 席全扫 **12/13=claude 框**+r-duty-sde=new task 界面——本卷 §三/§四「13 席 boot 现态=bash」表述**撤销**，正形=席组现役 claude 在跑·本席勘定时点系瞬态读数（时序与 BOD 直投窗吻合·双向三证）。**唤醒前置闸保留**（价值恰在防瞬态 bash 误投——瞬态可能性已双向实证）·判据微调=capture-pane 验 ❯ 框形态·`new task?` 等中间界面形态候 SDE 施工段归因。
+
+**席间协作通道升级（BOD 附赠实勘采纳）**：河源 13 席=claude CLI 2.1.296 直跑（ps 实锚）·SendMessage/ListAgents 工具面全通·r-duty-cos→r-duty-coo SendMessage 全链实证（COO-RECV-OK·35s turn）。**两通道分层定谳**：起手段=notify+tmux 唤醒（BOD/tick→duty-cos·§二/§三 不变）；**席间协作段=duty-cos↔duty-coo↔班组=SendMessage 结构化通道**（带收执回执链·比 tmux 粗投可靠）——§一 四步链第 3 步「协作拆树派工」通道正形升级。跨机边界（uds pipe 不跨机·河源席不见本机席位）与方案 §四 一致。
+
+**LG-093 终判权衡输入收档（今晚 20:2x 本席门禁终判用）**：dsh=单会话 ACP agent（inter-session 面 grep 零命中）·自研 TUI（TriRLC fork ink）=单会话终端（ACP 架构卷 20261020 正身）——两宿主均**无席间互通机制**。若终判 dsh/TUI 接管班组席→席间 SendMessage 面消失（协作退 tmux+信箱粗投形·形二席组协作降级）——「席位宿主保持 claude CLI」=形二席组协作能力的技术前提·纳入终判权衡。
+
+## §九 · 使用依据锚谱
 
 - CEO 17:04:22 直令（BOD 17:05 流转·COS 17:05:53 转投）·前卷 cto-port-survey.md 822c688f9（勘定事实面全继续有效）
 - 活体勘定（本卷时戳窗）：sg tmux 13×m-duty-* 会话清单+duty-cos.service unit（会话名消歧）·河源 tmux 13×r-duty-* 会话清单+r-duty-cos pane=bash 读数+default socket 位
