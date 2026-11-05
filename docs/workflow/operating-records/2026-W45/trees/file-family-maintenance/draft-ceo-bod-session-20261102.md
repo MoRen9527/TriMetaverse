@@ -2024,3 +2024,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - 断链预注挂号：若电池耗尽硬下→本地域全暗（10-28 先例同型·10-28~11-01 四日全暗在案）——CFO 锚停发·复机后 merged-anchor 补记+cron 重挂；BOD 面 session-only cron 双 job 同灭·复机后需重挂（BOD 自预注：复机首务=核对 cron 双 job 重挂+底稿续笔）。
 - CFO 观察注收录：本地域在途活可切服务域长跑——今晚双班组架构提案恰逢实战场（提案价值实证窗）。
 - 呈 CEO 面动作不变：①管理员终端跑 net stop winmgmt /y + net start winmgmt（修 8713）②插电（第三源实证后紧迫性再升·临界维持 00:4x-00:5x 估）。
+
+## ㊿+252（bod·2026-11-05 23:17:11 +0800·date 现查）·信箱巡检收稿——hub-silent-detect 18710 告警核实=瞬态已自愈
+
+- FSD hub-silent-detect 900s job 信（18710 隧道 healthz 超时·连续 2 拍防抖·冷却 30min）——BOD 活体现探：**A 探针现绿**（GET 18710/healthz=ok true·consecutiveFailures=0）+**B 探针在位**（keeper ssh pid 7128·18710:127.0.0.1:8712）——告警所述故障为瞬态已自愈（keeper 正形在役）。
+- 旁证红利：经 18710 读 8712 MMC consecutiveFailures=**0**——21:4x 起 cf=1 观察项**已回落清零**（R6 施工扰动定性成立·候 tick 拍面恢复后交叉核）。
+- 信已标 read=true（本轮转报毕）。多重故障窗小结：18710 隧道瞬断自愈✓/8713 候 WMI 修复（CEO 动作①）/电池候插电（CEO 动作②）。
