@@ -2166,6 +2166,6 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 ## ㊿+275（bod·2026-11-06 03:51:19 +0800·date 现查）·job1 tick 判读+fade011 首触发提前闭案+假零自纠（03:37 拍）
 
 - 拍面：sg duty 13 席全体候令；本地 m-fsd 在干活（m-cto 转 idle）；四口全绿（8713 pwr 98% 充满）；MMC consecFail 维持 1 未升；大表 open=4 平。
-- **fade011 首触发观察点提前闭案**：库真位勘正=（17 jobs·启动器 trimlc-daemon-channel.cmd 直读；直觉位 trilc/cron.db 零行=TriRLC 8711 旧空库——「探库先对 DATA_DIR 禁按路径直觉」再证，8711 真库位另勘候窗）。fade011-daily-sweep：**fired 2026-11-06 03:31:25 北京（19:31:25Z）·last_run_status=ok·next=11-07 03:30·run_count=4·enabled=1**——CEO 11-05 令「fade011 保自动·手动运行=CEO 通道」修复态依赖成立，晨核观察点现闭。
+- **fade011 首触发观察点提前闭案**：库真位勘正=「TRILC_DATA_DIR=trilc-channel/cron.db」（17 jobs·启动器 trimlc-daemon-channel.cmd 直读；直觉位 trilc/cron.db 零行=TriRLC 8711 旧空库——「探库先对 DATA_DIR 禁按路径直觉」再证，8711 真库位另勘候窗）。fade011-daily-sweep：**fired 2026-11-06 03:31:25 北京（19:31:25Z）·last_run_status=ok·next=11-07 03:30·run_count=4·enabled=1**——CEO 11-05 令「fade011 保自动·手动运行=CEO 通道」修复态依赖成立，晨核观察点现闭。
 - 兜底判读：sg 窗满（03:07 过期·无新定性回执）→旁证 45min 6 命中全数定性=本地席推送传播镜像（form3 卷族含 CTO 新 gate1 ruling+本席落卷镜像），duty 席自身零活动=实增量零→**窗满机械复跑通报 m-duty-cos**（tmux 直发+独立 Enter·capture 验拾取 Wrangling 中·例行非异常升级标注·候「待派维持」简复启新窗）。
-- 假零自纠（本席操作事故·如实入卷）：首轮 sg 旁证误写相对路径丢  段（find 报错被 2>/dev/null 吞成干净零）→10h 对照探针零命中破假零→绝对路径重测得 6 命中实锚。教训=远端 find 零值必带长窗对照探针（[截断伪影家族]同根：中间层静默吞错）。
+- 假零自纠（本席操作事故·如实入卷）：首轮 sg 旁证误写相对路径丢「TriMetaverse/」路径段（find 报错被 2>/dev/null 吞成干净零）→10h 对照探针零命中破假零→绝对路径重测得 6 命中实锚。教训=远端 find 零值必带长窗对照探针（[截断伪影家族]同根：中间层静默吞错）。
