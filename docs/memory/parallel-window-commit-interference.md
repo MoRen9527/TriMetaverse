@@ -4,7 +4,7 @@ description: 并行窗提交互踩族——merge 倒退合并丢笔（正向追�
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-11-04T06:18:06.167Z
+  modified: 2026-11-05T10:45:32.038Z
   originSessionId: cdeaa3bc-3f3b-4724-a7d2-2e5da881f2c2
 ---
 
@@ -30,6 +30,8 @@ metadata:
 
 **rebase 中断现场归属判定（2026-10-10 COS 案同族补充）**：共享仓 rebase 中断后，现场可能已被他席接手改道（merge 收编重写 HEAD）——恢复动作前先 `git status`+`git log -1` 判现场归属（与自己命令序比对），禁按自己中断前的计划盲续；rebase 失败后 push 须 RC 守卫（[[chained-command-assert-abort]] 变体）。零丢失判据=账本/大表双向对表一致（COS 11:37-11:41 三方同窗实证·零内容丢失系时序运气非设计）。
 **归属判定补强（COS 11:52 自省并入）**：COS 11:41 将自家 rb4 残留误判为「他席进行中」停手 ~10 分钟，扩大他席阻碍两面（worktree 误拒+fetch 拒）——根因=归属判定只看 todo 内容含他席笔就断他席现场。**共享仓本地链本就含他席笔，判定必须与自己命令序严格比对**（done/todo 序对得上号=自家现场）；内容面含他席笔≠现场是他席的。残留的实际阻碍面比直觉宽：rebase-merge 目录在，连他席 `fetch <remote> dev:dev`、worktree add 同 ref 都会被「already checked out」类误报挡住——中断即申报，勿静默挂现场。
+
+**机理七·rebase 基底轮换致已销账同内容重放复活（2026-11-05 reconcile 双写事件·CHO 四笔实证）**：sg 检出 rebase 基底在 bare/rpush-tmp/github 多通道间轮换——patch-id 全等的同内容 commit 在他基底视角下计为新笔，已销账内容静默重放复活（CHO 归因卷 24c958261·CTO patch-id fb5ca43d 复现全等采认·收口卷 ae07b80ca §五）。正形=**D-71 三款**（rebase 基底固定单一权威源禁多通道轮换/rpush-tmp 类一次性通道用毕即删/重放前后 drop/pick 计数对表防静默复活）——与前六机理分野：前六丢/错归属**现有笔**，本机理复活**已销账旧笔**，判定锚=patch-id 全等+计数差。
 
 相关：[[git-index-commit-convention]]（path-scoped 例外口径）、[[parallel-design-file-discipline]]、[[closeout-commit-hygiene]]。
 
