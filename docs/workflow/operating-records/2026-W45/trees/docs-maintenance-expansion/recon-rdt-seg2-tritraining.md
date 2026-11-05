@@ -269,6 +269,22 @@
 
 **勘十四追记 · 补笔快验（K1-K12 十二探·条件 PASS）**：FSD 补笔毕呈快验（落款 16:01:21Z）含扩面披露（W7/W8 勘误头 L10 同步勘正·同件两名矛盾消除·方向采认）。K1 补笔一 diff 实读 ✓·K2 README L6 照裁定措辞 ✓·K3 零残留八件口径复测 RC=1 ✓·K4 净面 24+/15- 不变 ✓。**K5-K12 抓获退回面一处**：L10 扩面措辞「TriCompany-copilot-host-assets 已不存在」系假断言——K5 ls -d 三探该对象在 TMV 根存在·K7/K9 带尾斜杠 Not a directory·K10 git log --full-history 揭 LG-046 历史（1f9d505b1 物理正名+junction 别名→c4930f728 裁①旧名出册）·K12 PowerShell Get-Item 定形=22 字节普通文件（LinkType/Target 空·非链接非目录·出册残留物）；断链本身成立（K12 Test-Path 原文引用路径=False·K11 现役支撑根 TriCompany-host-assets 无 docs/ 子树=与 A6④ published copy 未生成自洽）。**定性：断链真·断因=LG-046 正名出册非根消失；「出册≠不存在」——积极断言须对新对象活体现勘，模板复用（「已不存在」消失类模板）越过事实边界=缺席断言未现勘变体**。退回改法（两件 L10 各一措辞）：「已不存在」→「系宿主资产根旧名（LG-046 正名出册·现役=TriCompany-host-assets）」，其余不动。教训由 FSD 自领入档；轮 2 顺带件（docs/training/README.md:27）两旧名并存史以 LG-046 正名口径落笔。
 
+## 勘十五 · R1-b 轮（轮 2·池 6 件）review 留痕（FSD 勘定卷 f357cb120+工作区 diff 实读·独立复测）
+
+**入关实勘**：勘定卷 recon-fsd-r2-round2.md 全读（TMV f357cb120）·TriTraining 工作区 diff 逐件全读（M×4+HEAD=c88f16f 回滚锚 ✓·p3-watch-probe untracked 他面物不动 ✓）·残留 grep 独立复测·新路径计数复测·01-小白版零 diff+L8 勘误头合法引述实锚。
+
+**逐件判定（判据九条过·施工面全 PASS）**：W11 ✓ 正文形（P1 判据实锚「当前边界」引用句·勘误头 append+L32 现役描述改写 W9 同款·判据①②⑧兑现）·W12 ✓ 封存形（7 行纯头部插入·syncMode=archived·裁定③措辞逐字·正文零触碰实锚=判据③历史冻结）·W13 ✓ 零改动占位（零 diff 实锚）·W14 ✓ 演进保留形（节头如实化+引导句演进注记+items 1/2/3 各追加「【已落地·as-of 2026-11-05】」段带活体锚 A5/A6④/A8+「原文…系 2026-08-19 规划时点形态，现势以本注记为准」时点收尾·**items 4-6 零触碰+禁令对 4-6 全效保留原文**=判据①③⑧兑现·裁定⑤锁值面不越）·README:27 ✓（LG-046 正名口径+K5-K12「出册≠不存在」措辞照录·L26 零触碰纪律到位=P5 升报不擅动）。
+
+**卷面读数勘正退回两笔（非施工缺陷·卷面誊写面·照轮 1 先例条件 PASS 形）**：
+1. **diff 读数誊写失真（假读数家族新变体候选：git diff --stat 数字列语义误读）**：FSD 卷自报净面「25+/5-」+分件「W11 5+/2-·W14 11+/3-·README 2+/2-」vs 我实测 `git diff --stat` 总计行=**19+/6-**（分件：W11 3+/2-·W12 7+/0- ✓·W14 8+/3-·README 1+/1-）。根因=--stat 每行数字列系**变更行总数（insertions+deletions 之和）非 insertions 数**，graph 尾段系 deletions 形——FSD 把总数列抄作 insertions。施工本体零失真（19+/6- 全验合格），失真面=卷面读数誊写；COO 知会信转述同读数一并勘正。**改法**：卷 §二 diff 读数列与净面行照实测勘正（19+/6-·分件 3/7/8/1 四组）。教训候 D 系窗：git --stat 数字列语义误读=假读数家族第十五向候选（识别信号=分件加总≠总计行·正形=读 --stat 以总计行 insertions/deletions 括注值为准·分件行数字=变更总数另注）。
+2. **自测组 4 口径失真（勘九教训复发·轻）**：「baseline/README 新现役写法计数正常」——baseline 计 `TriCompany-host-assets`=**0**（W11 改写面系 `docs/training/` 顶层平铺形，不含宿主根名；两现役名并存形系轮 1 W9 AGENTS.md 面）——grep 口径未注+断言面与改写面错位。改写本身无误（L33 实锚在位）。改法：组 4 断言分列两口径（README 计宿主根=1 ✓·baseline 计中央平铺形=1 ✓）。
+
+**升报裁定两笔**：
+1. **README L26 同族断链：收录·并入本轮补笔面**——A6③ 同族同根因（tritraining/ 子目录形态消亡），改法现成=W11 同款现役描述形：「不代替 `TriMetaverse/docs/training/` 中央聚合面（顶层平铺）」，勘误括注可依 W11 行内简形（「勘误 as-of 2026-11-05·A6③ 同款」一句即可·不必展开）。收录理由：勘十四已立圈外补员先例（L27 同件同行区块）·同族集中处理防三扫·一行笔零新事实。施工归 FSD 本轮补笔。
+2. **W14 §10 item6 事实面过时：留置候后续窗·不扩本轮圈**——本轮池 6 件已封圈（护栏②）；item6 系裁定⑤锁值面外新事实面，且 gate 形升级后支撑面处半升级态（`source_publish_check --publish-agents` 已升 gate 形·`employee_host_publish` --execute 显式形未动）——改写前须活体重勘 --dry-run/--execute 现值域+gate 联动面，非一行笔可安全落。列勘十六/复勘窗候选（FSD 登记处置采认）。
+
+**review 结论：条件 PASS**——施工面 4 件+README 全合格放行向；FSD 两笔卷面勘正+L26 补笔落笔毕呈快验（轮 1 K 系先例），快验 PASS 后 commit 锁笔（回滚锚 c88f16f）。性能读数入账（⑨分轮累计）：FSD 勘定 ≈6min+施工 ≈4min；RDT review ≈6min（16:27 入关→16:33 裁定毕·轮 1 基线 3min+L26 升报裁+读数失真勘验增量——如实注）。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
