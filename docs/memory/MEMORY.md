@@ -6,6 +6,7 @@
 > 索引行文准则（2026-10-13 16:0x CAO 压缩施工立）：本表=一行一条导航指针，只留「教训一句+正形一句+锚」；细节与案例全量权威位=各主题文件（15 条肥行原行快照已存档于主题文件尾部快照段）。
 
 - [ChainDrop 供应链审计 2026-08-10](chaindrop-supply-chain-audit-20260810.md) — 全工作区审计未受影响，证据链 + 后续观察项
+- [BOD 不做裁决·代裁只有 COS](bod-no-ruling-cos-only-substitute.md) — CEO 11-05 10:33 令勘正 D-39 旧读；BOD 裁决形来件一律流转 COS 径裁或候 CEO
 - [多 agent 共享仓库 git index 卫生](multi-agent-git-index-hygiene.md) — 提交前三查（status/cached diff/log），commit -- <path> 与 checkout 暂存陷阱
 - [文档元信息头约定](doc-metadata-header.md) — 所有文档必须带 sourceOfTruth/syncMode/lastSyncedAt 元信息头（§3.4 规范）
 - [树文件路径规范](tree-file-path-convention.md) — tree-op.json/briefs 必须写 operating-records 周目录，禁止写仓库根
@@ -109,3 +110,4 @@
 - [外网派工路由 M-SG 席组](m-sg-external-web-dispatch-routing.md) — CEO 10-18 令：外网检索类派工扔 sg 席组；**正形通道=tmux 直发（send-keys+独立 Enter+capture-pane 验拾取）或 POST /internal/v1/notify→outbox**；**notify-mailbox.json 直 append=死信**（10-20 源码级勘定：mailbox=消费者输出位非入箱口·10-19 A2 305/306 无人拾取同根因）；**normal notify 只落箱不唤醒 idle 值席（10-23 值夜三单 50-100min 零拾取实证）——正形=notify 后必跟 tmux 直发唤醒或 urgent 形·信到箱≠信到人**；服务日志=/tmp/trimc-run.log 禁走 journal；本地箱=LG-085 形 message_id 字符串+os.replace+真身解释器=python（python3 是 Store 存根）
 - [工具子进程存活+schtasks keeper 正形](bg-process-persistence-schtasks-keeper.md) — 本机工具后台子进程（含 ssh -f）跨调用即死；持久监听=schtasks 宿主 keeper（bod-dsh-tunnel 在役）；R-HY ssh 高频连触阿里云限 IP·绕行=-J sg；dsh 兑换 401 先 hash 对表 token 副本
 - [pwsh 零宽窗崩溃+席启动通道正形](pwsh-zero-width-window-crash-seat-launch.md) — Minimized 零宽窗起 pwsh=更新通知 PadRight(-17) FailFast 宿主死；正形=真宽窗+父环境 POWERSHELL_UPDATECHECK=Off（启动器内设太晚）；宿主崩后 claude detached 幸存须杀旧再起；--resume 零命中先盘勘 jsonl——空会话零内容=零写盘，零历史正形=-n 注册形禁 --resume
+- [fade011 手动运行=CEO 通道](fade011-manual-run-ceo-channel-only.md) — CEO 11-05 13:19 裁：8713 fade011 保自动（job 现役修复态不动）·**手动运行=CEO/人工通道·席位勿代办**（除 CEO 明示外席位不手动跑 fade011·POST /run 亦属手动面）；共享脚本机位区隔教训=.local 副本+改前双机消费面三查（fade-sweep-8713-enoent-ruling·案②止损形）
