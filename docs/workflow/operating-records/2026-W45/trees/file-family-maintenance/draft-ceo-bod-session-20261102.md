@@ -1388,3 +1388,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **笔误勘正**：CEO 原话正形=「所有非CEO裁决的都**由**cos裁」（纪律册 :672 转写「都有」系笔误）——勘正流转 CAO 勘引文字面（件一·随提案同发）。
 - **治理提案流转（CEO 直令「问问cos和cao的意见」）**：提案要点=TriMetaverse 项目维度 CLAUDE.md/AGENTS.md/未来其他宿主类 xx.md 真源收归 TriCompany 统一管理·源到发布方式更新。BOD 规范表述毕（背景关联=今晨投影漏平误裁根因面）SendMessage m-cos（52e37478·10:58 发）征 COS+CAO 两席意见·候勘定项参考面五项（真源落位/覆盖面盘点/同步机制/存量投影处置/内容分界）——回执随链呈 CEO。BOD 不判断。
 - 记忆面 bod-no-ruling 沿革正形随勘（09-21 本体+11-04 收口层两层分立）。
+## 意见㊿+146（2026-11-05 11:02:11 +0800·shell 注入现查落款）：宿主文件真源收归提案——COS 席意见收稿·候 CAO 意见随链
+
+- COS 回执（11:00:50 写前现查）：件一笔误勘正已路由 CAO（候回执销）。
+- **COS 席意见全文收稿（呈 CEO 用·总立场=方向采认）**：①落位=TriCompany 新立 source-host-files/ 与 source-agents/ 平行（发布管线两宿主先例现成）·不落 docs/ 治理域（发布物源件性质）；存量 project-sources/trimetaverse-claude-md.md 投影件转正并入防双真源。②分界规则（最关键）=**分节收归非全文收归**——治理投影节（分权制/D 系引用/裁决分级）真源归 TriCompany·项目运维节（模块布局/命令/Registry Routing/记录落点）留 TMV 本仓；判据=「内容真源在哪仓就归哪仓」。③机制=source-agents 发布管线扩展宿主形态参数+攒批惯例（治理急令走急件道）；**另建议纳入投影对表闸**（勘正时投影面清单同步检查·checklist 或 hook·候 FSD/CAO 机械闸窗）=比收归更根本的防再发件。④覆盖面盘点=根 CLAUDE.md/AGENTS.md/.github/copilot-instructions.md/.github/prompts/.claude/compass·例外注记=compass 系会话灵活层（八件套契约明定）建议不收归或标注豁免候 CAO/CEO 勘；.claude/agents 已在管无重复动作；用户级 CLAUDE.md 不涉。
+- 候件：CAO 席意见（已路由·随链回）→两席意见齐呈 CEO。
