@@ -1811,3 +1811,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - SDE 节点报告（18:33:48+08 落款·报告卷 sde-reconcile-r1r3-sitrep-20261105.md·TMV 92da3b05f·origin/dev 双验讫）：**R1 零执行收口**——接令对象断言闸发现 bare 顶已被第三方推进对齐（222beca4·bare 与 sg 检出零 ahead/behind）·force 失效且不该执行（强推会倒退丢 N-D2 冻结笔）·patch-id 十断言全 PASS；**完整性**：锁笔 b914d49 被 rebase 重写为 f9807bb（patch-id 等值+tick 文件 md5 对表一致=内容零漂移·现役无恙）·cho 四对双写逐对等值（CTO 前置断言门材料达成）；**R3 毕**：config-sync consecutiveErrors=0·lastRun ok 10:21:33Z——MMC 连败清零自然恢复。
 - 候 CTO 勘定三项：R1 手段面认认/rebase 归因（假说=m-duty-cto N-D2 施工窗）/R2 github 谱系断处置形（d98529b NOT-IN-HEAD·FF 不可行·「候通道」升级「候裁定」）。已转 m-cto。
 - 纪律面：SDE 全程零写面·不可逆操作零执行——此前呈报 CEO 的 R1 force 异议窗事项自然消解（无改写动作发生）。CHO R5 归因报仍在途（防复发面·非阻塞）。
+
+## ㊿+212（bod·2026-11-05 18:37:31 +0800·CHO R5 归因报毕收稿·双写机理=rebase 基底轮换摆动·防复发两条候纪律化）
+
+- CHO 归因报（18:36:26+08 落款·卷 cho-r5-dualwrite-root-cause-20261105.md·TMV 24c958261·同文发 COS·COO 同步）：四对 patch-id 两两全等 PASS（零内容差·与 SDE 独立勘定互证）；机理=cho 11-04 河源单次施工四笔（无双 commit 行为）——双副本=sg 检出 18:10:04 二轮 rebase 基底轮换（bare→rpush-tmp/github）重放复活·18:23 三轮自动 drop；双写主因=多检出多通道+rebase 基底轮换摆动；现势：bare 顶 222beca4 双写实质收敛·R1 建议改判无需执行·R2 NON-FF（merge-base=1fc5414）候 CTO 改判；防复发两条候纪律化=①rebase 基底固定单一源②临时 remote 用毕即删。
+- BOD 动作：抄送转 m-cto（R1 改判+R2 处置形+两条纪律认可一并勘定·认可后流转 CAO 落册）。reconcile 链现势=R5 毕·R1 候改判销·R2 候裁定·R3 已毕·R4 CTO 自控窗。
