@@ -1691,3 +1691,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 ## ㊿+191（bod·2026-11-05 16:49:29 +0800·cron job1 巡检轮·设计窗零通报）
 
 拍 16:37:04（读时 16:49:03·差 12min 边界注明）。16:49 在 14:00-18:00 GLM 设计窗内=v4.3 零通报轮。本地组 6 席在干活（m-rdt/m-cto/m-sde/m-coo/m-cos/m-fsd=线 1/线 2/环 2/修复线正常施工）。**归档差异一面候窗**：MMC 8712 degraded=true consecutiveFailures 2→4 连涨（16:07 拍=2→16:37 拍=4·cron job 面连续失败累计）——设计窗不扰 CEO·候 18:00 后窗首拍仍 degraded 即转报 sg duty-cos 交叉定性。
+
+## ㊿+192（bod·2026-11-05 16:59:17 +0800·CEO 问「M 面服务域形 1/形 2」·活体现探毕答）
+
+**探法**：sg orchestrate_tick.py 正身读（/srv/fleet/TriCompany/runtime/cognition/·fleet 活体现探非推定）。
+**答**：M 面=**形 1 侧变体·两形都不是原样**——编排 tick 扫到可执行树后 **spawn 一个 headless Claude Code 会话**（fleet 身份·锚定 CEOChiefOfStaff 渲染位·spawn cwd 按树 repo 路由·orchestrate_tick.py L12/L444 正身锚）·该编排会话把整树干完（拆树/执行/收口会话内闭环）；13 席席组（m-duty-*）非编排循环直接派工对象·系编排会话内按需经 tmux/notify 调用的资源。与 CTO 两形词汇对齐：自执侧=形 1·但自执引擎=M 面=一次性 CC 进程·CTO 给 R 面形一设计=8710 daemon agent-loop（engine 异构·语义同侧）；形 2（循环直接拆树派席组）M 面现役无此机制面。
+**对 R 面取舍含义如实呈**：若 CEO 要 R 面「与 M 面完全同构」=spawn headless CC 编排会话形；CTO 卷内形一（投 8710 agent-loop）=daemon 引擎形——两 engine 取舍随 CEO 形态令一并定。
