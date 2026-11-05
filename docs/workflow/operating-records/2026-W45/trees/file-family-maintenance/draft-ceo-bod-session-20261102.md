@@ -1979,3 +1979,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **①已落成（今晚双线实锚）**：任务书拆树派工链全流水在走——fade011 联审树（本地 m-cos 20:44 发任务书 intake→sg duty CTO 拾取施工→20:44 短评落卷 report→D-47 违例 erratum 自领）+r6 树（21:21 intake from=m-cos+m-coo+m-sde→CTO R6 裁定卷→21:24 dispatch to=m-sde 步 0=22:10 tick 前硬窗·gate CTO 施工权 SDE）+dsh-glm-switch 树（同形态·dispatch 带 gate）——intake/dispatch/report/erratum 四型流水机械在用；班组会话协作=sg duty 13 席 tmux 常驻+今晚 nd1/nd2/R6/β 门禁卷产出；双面协作=本地席组与 sg duty 组经 sg bare 仓共享树卷+台账链闭环（形三任务书本地拆树落 sg bare 树·fade011 本地发单 sg duty 施工）。
 - **②自动拾取=半自动（如实缺口）**：树挂平面+intake 机械在；**idle 值席唤醒靠 tmux 直发/urgent 形补**——10-23 实证 normal notify 只落箱不唤醒（值夜三单 50-100min 零拾取）=「信到箱不等于信到人」——最后一公里（唤醒自动化）未全自动，现靠派单方 tmux 直发+值席面兜底。**缺口补法在途=形三 N6/N8（seat-registry 名址+send 定向唤醒+事务回执）**——CEO 确认施工的形三正是补此件。
 - **③MMC 新信号如实报**：8712 cf=0→**1 连败**（21:4x 起·degraded 阈未触·低烈度）——旁证=sg 检出 R6a/R6b 施工在途（git 操作扰 config-sync 可能）+R6 步 0=22:10 tick 前硬窗；标注观察项·下拍（22:07/22:16）核 cf 回落，不回落再升级通报 sg duty 面。
+
+## ㊿+244（bod·2026-11-05 22:18:27 +0800·date 现查）·22:17 轮拍报——MMC cf=1 有主（R6 收口在途）+8713 电源面变化报
+
+- 22:07 拍（10m20s 内·未延迟）：sg duty 13 席全体候令·本地 m-cao/m-cos/m-fsd 在岗（CAO 收口复审制铸条施工中+FSD 树内施工）；大表 24/4；信箱零未读。窗外旁证 9 文件命中免通报。
+- **MMC cf=1 维持有主**：旁证=sde-r6-reconcile-closeout+cto-r6-gate-acceptance 两卷 45min 内刚落——R6 reconcile 施工在途扰 config-sync 实锚成立（R6 步 0=22:10 tick 前硬窗·收口卷已落=近毕）——观察项维持·下拍（22:37）核 cf 回 0；不回 0 或升 2 再通报 sg duty 面。
+- **8713 电源面变化（报 CEO）**：TriMLC 拍面 pwr=100%/ac=true→**88%/ac=false**——本机宿主转电池运行（22:07 拍读数·掉电 12pc 点内）。daemon 现态 ok 不受影响；若持续用电池+低电量阈值将影响 8713 值守——CEO 知情面（若系笔记本拔电移动则自然态·插回即复）。
