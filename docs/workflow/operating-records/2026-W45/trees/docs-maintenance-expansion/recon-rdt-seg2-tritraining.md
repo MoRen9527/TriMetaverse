@@ -285,6 +285,8 @@
 
 **review 结论：条件 PASS**——施工面 4 件+README 全合格放行向；FSD 两笔卷面勘正+L26 补笔落笔毕呈快验（轮 1 K 系先例），快验 PASS 后 commit 锁笔（回滚锚 c88f16f）。性能读数入账（⑨分轮累计）：FSD 勘定 ≈6min+施工 ≈4min；RDT review ≈6min（16:27 入关→16:33 裁定毕·轮 1 基线 3min+L26 升报裁+读数失真勘验增量——如实注）。
 
+**勘十五追记 · L 系快验（L1-L6 六探·PASS 放行锁笔）**：FSD 条件三件落笔毕呈快验（落款 08:33:53Z）·快验独立复测全绿——L1 README 补笔 diff 实读 ✓（L26 照裁措辞逐字「不代替 `TriMetaverse/docs/training/` 中央聚合面（顶层平铺）（勘误 as-of 2026-11-05·A6③ 同款——原 `tritraining/` 子目录形态已消亡）」+L27 勘十四形不动·两行替换形）·L2 勘定卷读数勘正实读 ✓（分件照改四组+净面 20+/7- 两值链并录〔19+/6- 补笔前+20+/7- 终值·「RDT 交叉验证」注记〕+--stat 数字列误读机理留痕入卷·FSD 同认领第十五向候选）·L3 组 4 两口径分列 ✓（README 宿主根=1·baseline 中央平铺形=1+混计机理注记）·L4 numstat 独立复验 ✓（README 2/2·beginners 8/3·migration 7/0·baseline 3/2=总计 20+/7- 自洽）·L5 残留复跑 FSD 侧零非法（L26/L27 括注引述=勘误行合法形·与 L1 diff 互证）·L6 圈定零触碰 ✓（M×4 不变+01-小白版零 diff+p3-watch-probe 他面物不动）。**快验 PASS→放行 TriTraining commit 锁笔**（回滚锚 c88f16f）→毕报直达 BOD+抄 COO。第十六向候选实锚随 FSD 卷锁笔一并定谳（教训两席同认领）。
+
 ## 使用依据
 
 - FSD 机械对表卷 recon-fsd-seg2-tritraining.md（同树目录·三读数吸收；族计数勘正=FSD 采认（b3b9fc073）；1d52c20 日期初勘互指对方误读·终谳=%ad/%cI 双日期字段分野两皆机真值（FSD 驳回附双证促成本勘定））
