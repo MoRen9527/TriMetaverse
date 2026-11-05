@@ -2011,3 +2011,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - 22:47 轮拍探异常链：①tick 拍面停 22:07:17（22:37 拍缺失·40min 未更新）②curl 8713/healthz 零响应（-m 8 超时）③进程面：8713 端口 Listen=pid 29488·**起 22:29:06=今晚新起**（老 daemon 16:2x 系不在列表=死过被换·22:29 疑似 watchdog 自动拉起）——新 daemon 起 18min 仍不响应=**疑似卡死在 powerMonitor 初始化**（与 LG-069 读取失败告警注入时点吻合）④电池 CIM 现读 **64%%**（22:33 为 72%%=14min 掉 8 点·掉速加快·BatteryStatus=1 放电中）——按现速续航约 110min（临界约 00:4x·与 COS 预估 00:5x 吻合）。
 - **影响面**：8713 节拍拍面+fade011 明晨 03:30 首触发+本机全部会话（全员讨论在途·形三 FSD β-2 施工在途）——**本机掉电=本地全员会话同灭**。
 - **处置**：①物理动作（插电）急候操作者 CEO——保机器保全员 ②daemon 僵死勘修=技术面处置登记（转 COS 登记·候电源稳定后按 TriMLC 重启纪律处置——不裸杀·POST /shutdown 现对僵死 daemon 不可达·候勘）③BOD 持续盯：下拍+8713 直读复测·守护自愈则撤观。
+
+## ㊿+250（bod·2026-11-05 23:00:20 +0800·date 现查）·STE 转呈挂号——WMI 故障链根因+CTO 裁 a 路径升用户面（两件请求呈 CEO）
+
+- STE 转呈（落款锚 14:59:12Z=22:59:12+08）：**根因勘定**=本机 WMI provider host（wmiprvse）缺位→CIM 查询挂死→8713 电量闸降级（gate=none·readFailures=15）——真故障非电源面无电（与 COS 22:33 CIM 双源判读互证）。**CTO 已裁 a 路径=重启 Winmgmt 先行**——STE admin 不可达（net session 拒）升用户面执行。
+- **两件请求呈 CEO（用户面动作）**：①管理员权限终端执行「net stop winmgmt /y + net start winmgmt」（或等价 PowerShell Restart-Service Winmgmt -Force）——影响面如实=CIM 消费者瞬断秒级（8713 读环本在失败态零增量伤害）·依赖服务连带停后未随起的 STE 复测清单逐起；②接外电（PM 旁证 69%% 放电中·今夜长跑+明晨开窗断电风险）。执行毕告知→STE 即跑复测门（CTO 定=value 面探针：wmiprvse 在位+独立 CIM 查询秒回+8713 healthz percent 非 null/readFailures 停增/gate 恢复可信）毕报回 CTO。
+- 与 ㊿+249 互证补全：8713 daemon 22:29 新起僵死疑因=CIM 挂死拖 powerMonitor 初始化阻塞——WMI 修复（动作①）+插电（动作②）后 daemon 应随 Watchdog/守护链自愈或技术面按重启纪律处置。
