@@ -2191,3 +2191,20 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **隧道处置（活体不动）**：直探 18710 curl 即通（MMC healthz ok）=FSD 探针捕瞬态窗已复活·免重启；keeper 任务=bod-dsh-tunnel 单发形（schtasks Status Ready·Next Run N/A·Last Result=0xC000013A kill 码）=真死时无自愈面——与 duty-cos 修复三联「18710 隧道督导化」同件·晨窗范围候决内。
 - **8713 读层趋势转差（如实升档）**：04:17→04:47 readFailures 4→**33**·lastReadAt 停 04:13 无新成功读=扑动型转**全卡型**中段（daemon 仍 alive·healthz 即时·uptime 连续·5min 族 cron 正常拍）；**tick 拍连缺 04:07+04:37 两拍**（bod-tick-30min next_run 卡过去时·疑读卡拖调度）。**候命 WMI 两命令到触发面**（触发源=readFailures 再爬·01:2x CEO 面既定候命）——呈 CEO 决：即时跑（本席执行需授权确认）or 候自愈+晨窗勘修双轨（现 AC 98% 健康·电量闸盲态无即时危机）。
 - MMC（sg 8712）consecFail=0→1→2 爬升·失败 job 勘定中（同轮 ssh 探 logs·候下轮报）。
+
+
+## ㊿+279（2026-11-06 05:50:14 +0800·job1 05:47 轮·tick 链法医+WMI 外溢定性）
+
+**tick 停滞复发性勘定（execution_log 完成时写入·started_at=启动时刻·库真位=trilc-channel cron.db）**：bod-tick-30min 拍链实况=04:07 拍 timeout（600s 顶格被杀·277 轮「单次失败」定性实为 timeout 在案）→04:37 拍调度未派（execution_log 零条目）→04:56 拍 ok（即 tick 文 04:57:08 拍出处·非 7,37 槽点=积压补派形）→05:07 拍未派→05:37 拍 state=running 在途（05:49 仍无完成条目·疑再挂待 600s 处置）。05:16 轮报告的「04:57 拍恢复出拍」修正为「积压补派单拍成功·拍链未复原」。
+
+**统一根因假说闭合（三面同源）**：WMI 基础设施挂起（04:13 起）→①powerMonitor 读败循环（readFailures 33→63→93 续爬）②bod-tick runner 电源读阻塞（04:07 timeout·05:37 卡挂同形）③n2-watchdog-dev d3 维度 TaskScheduler/CIM 枚举挂起（04:45 起 4 连 timeout·state=failed·tri-watchdog-n2.ps1 头注明 unit inventory 取自 TaskScheduler 枚举）。其余 5-15min 族 job（不触 WMI 面）全程正常出跑=旁证反向锚。
+
+**n2 看门狗盲区新立**：n2 自身瘫→其职责面的 hop2 告警链（daemon liveness 异常应报 m-cos+bod）失效——看门狗看门狗盲，本轮靠 BOD 亲勘 execution_log 代偿捕获。
+
+**WMI 三选一候决触发面实质加重**：从「读层盲态」升级为「已外溢 cron 执行面」——tick 拍链残废+n2 看门狗瘫。AC 98 pct 无即时危机维持，但执行面受损随时间扩面，候 CEO 批①（本席代跑两命令）为当前推荐项不变。
+
+**网络抖动窗独立面闭案**：04:45-05:0x 窗（04:57 拍内 sg ssh/MMC ssh/8711 探针三路超时+04:46/05:46 两封 FSD 18710 告警信同族）——05:17/05:46 活体双探全恢复（18710 HTTP 200 0.69s+keeper pid 27964 识别串在位）免动作。FSD hub-silent-detect 探针 A 的抖动窗假阳性面=晨窗候勘注（探测超时 5s 或需容差调宽·候排）。
+
+**MMC consecFail 复位 0**：oprec-sync-fade011（id 6f58fb10·duty-cos 04:50 通报回执勘定=push diverged 共享树 co-tenancy 竞速·修复候选前置 pull --rebase 或 retry 退避候排不急）上轮已自愈成功一轮。
+
+**值守流转面**：duty-cos 04:50 通报回执（待派维持+MMC 勘定+nd1 悬卷旁录）归档 8a1e1d51f·新窗 05:37；05:18 本地窗满机械通报 m-cos（6338baf0·FSD n7n8 收口转 idle+抖动窗注）候定性回执。
