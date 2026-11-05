@@ -1713,3 +1713,14 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 ## ㊿+195（bod·2026-11-05 17:06:43 +0800·COS 形态令流转回执）
 
 三投达（17:05:53）：①SDE 形一令停达（停工留痕勿续·候 COO 重排）②CTO 改造方案勘定令转投达（四要点+信箱族转正+验收锚全转录·接 822c688f9 修）③COO 排工知会达（席组形重排·SDE 主刀+STE 复验格局不变）。COS 挂号催办两节点（CTO 方案→COO 重排）。零裁决需董事会决。免回执照行。
+
+## ㊿+196（bod·2026-11-05 17:15:41 +0800·CEO 17:08 问「SendMessage 限制规划?」实勘毕答+CTO 形二方案收稿）
+
+**实勘题分解+读数**（活体·非推定）：
+1. **R 面 13 席现役宿主=claude CLI 2.1.296 直跑**（ps 实锚·非 dsh 非 TUI·dsh 仅 web 8791 一例）——SendMessage/ListAgents 工具面全通。
+2. **席间 SendMessage 全链活体实证通**（BOD 两轮 pane 直投测试令驱动）：r-duty-cos ListAgents 列 12 兄弟席→SendMessage→r-duty-coo→coo 收讫回显 COO-RECV-OK（09:14:23Z·35s turn）——cos→coo 协作链钉死。
+3. **dsh=单会话 ACP agent**（schema peer/inter-session grep 零命中）·**自研 TUI（TriRLC fork ink·ACP 接 dsh 子进程·架构卷 dprime-tui-acp-architecture-20261020）=单会话终端**——两宿主均无席间互通机制；若席位换宿主 dsh/TUI 则席间 SendMessage 消失·协作退 tmux+信箱粗投形。
+4. **跨机边界**：河源席 ListAgents 不见本机 BOD（uds pipe 不跨机）——BOD↔服务域=pane 直投/信箱/tick notify（现役+方案一致）。
+**答 CEO**：席组形规划**不受限**——前提=席位宿主保持 claude CLI（现役即）；分层通道=起手段 notify+tmux 唤醒·席间协作段 SendMessage 结构化。风险面一处=LG-093（dsh 接管班组·今晚 20:2x CTO 终判）若判接管则席间 SendMessage 消失——实勘读数已转 CTO 纳入终判权衡。
+**CTO 形二方案收稿**（2427a0f3f）：sg 单文件 ~100-150 行（spawn 段删→notify+tmux）先行·河源复刻（信箱族 1082 行移植+rmc_tick 同构改+部署勘修窗·2-4h 级）·验收锚七门·⚠️ 方案卷「r-duty-cos pane=bash」读数与 BOD 17:09-17:12 活体矛盾已勘正回 CTO（BOD 两轮直发均 claude 框拾取执行毕·bash 系疑瞬态）·唤醒前置闸（capture-pane 验形态再直发）采纳入验收锚。
+**两轮实勘令投递记录**：r-duty-cos 第一轮 ListAgents+工具清单（49s turn 17:12 毕）·第二轮 cos→coo SendMessage ping（coo 35s turn 17:14 毕回显）——只读零副作用·两席 token 消耗 glm 代理免费面。
