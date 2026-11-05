@@ -1637,3 +1637,13 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - ③ 席位派工响应实测 ✓：r-duty-fsd 投递→拾取→date 现查→回执「在岗·测试令收讫 16:08」全程 27s 零副作用。
 - ④ 任务书拾取/拆树=R 面**不具备**：TriRMC 8710 活体健康（cron 4 jobs 零降级·internal 401 fail-closed ✓）但 scripts 五件（mc-probe/rface-system-prompt/rmc-audit-tree/rmc_tick/validate）零拾取编排件——自动拾取拆树=M 面 TriMMC 8712 独有机制；R 面班组现役形态=tmux 手工派工。若要 R 面具备需移植 TriMMC 编排件或 TriRMC 新长该功能（候 CTO 面勘量）。
 - ⑤ dsh 现役角色：仅 web 实例 1 个（8791·Nov04 起）+smoke×2；13 席宿主=claude 非 dsh——dsh 接管班组=LG-093 观察窗评测中（今日 20:2x CTO 门禁终判）。
+
+## ㊿+183（bod·2026-11-05 16:22:22 +0800·CEO 16:15 四令收尾+三席毕报收稿）
+
+**CEO 16:15:02 四令逐件**：
+1. **TriMMC 编排拾取件移植河源**：16:2x 流转 m-cos（msg 21c48630）→CTO 勘量+排施工。附测点建议=任务书挂平面→自动拾取→拆树→席组执行→收口全链实测。BOD 前勘已锚：TriRMC 8710 scripts/ 零编排件（healthz ok·cron 4 jobs 正常）·TriMMC 8712 独有拾取机制。候 CTO 回执。
+2. **R-HY alias 修复毕**：fleet ssh config → 双名一行（sed '8,9c' 合并修复·首版两行 Host 块 bug 已勘）·双验证 R-HY-ALIAS-OK（host=iZf8ziw57ydktu77fsld9yZ）+heyuan-COMPAT-OK·备份 config.bak-20261105-bod。heyuan 旧名保留兼容。
+3. **dsh key 面勘定（CEO 判断证实）**：（apiKeyEnv 机制）+（本地 GLM 代理·api/paas/v4=智谱 bigmodel 路径形状）——R 面 dsh 实走 GLM key 非 deepseek key。配置唯一落位=（8791 web 例在用）。BOD 上轮「deepseek key」表述系错采认勘正； 字样命中系包名 @deepseek-ai/dsh 非 key。
+4. **dsh 自动压缩机制证实（CEO 猜对）**：web profile cordis.patch.yml 两处挂载 compaction cordis:group（L109/L495），三插件=（自动压缩）+（/compact 命令）+（工具结果修剪）。sessions 15 工作区目录在档。**另更正（CEO 勘正采认）**：上轮「r-duty-cos 218k/r-duty-sde 179k token 已满」表述系误——glm 1M 上下文 218k 仅占 ~20% 不可能满；/clear 系 Claude Code 配额节省建议非容量满信号。
+**三席毕报收稿（线 1/线 2 毕报流·转呈随呈报信）**：①STE 线 2 ①复跑毕报——fade 全家 99/99 RC=0 零失败（预勘 84→99 差 +15 三笔施工增量归因闭合 79c011f→c52f5bc→2833c82）+798 tests 792/6 fail 零 fade 域交集（6 红⊂基线 9 红·基线独有 3 红现势全绿=间歇族实锤）+SDE 技术债五项对表毕（销项候选 4+维持 1·裁决候 CTO）+剩余面零挂账·卷锚 TMV f9ab881fd。②COS 三面呈报——COO v1.1 改派对表毕五项全采+A 包毕报落卷 0472f7149（齐性矩阵：索引件族五周零断档/journal W36-W44 九周连断最深/trees 237→283→291→67→W44 归零·三分类 F2/C10/Q9 候裁禁丢弃）+LG-069 电量三连定性=读环冻结形非真实电量事件（物理零险·E1-5 修复升急两席同向候 CTO）。③FSD B 包毕报——W45 周根 8/8 标准件齐性全绿（需求池 66 行/journal 骨架/runbook 入口/盘点大表 33 行四新建+unresolved 头部 W43→W44→W45 两跳残留刷正·锁笔 287b3737b）·**本毕报即环 2 扩批轮 2 起跑令**（FSD 已顺接起跑勘定段）。
+**线下在途**：CTO Phase 2 总毕报四输入齐（STE 复跑+SDE 技术债对表+SDE ②④毕+COS 轻催）候出卷；环 2 轮 2 FSD 起跑；C 包规则面 COS 主笔候 A 包毕接。
