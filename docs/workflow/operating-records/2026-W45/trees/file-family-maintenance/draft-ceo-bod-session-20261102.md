@@ -2055,3 +2055,10 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **电池紧迫升档**：23:37 拍 39pc ac=false→现 CIM 探 36pc 放电中（BatteryStatus=2）——掉速约 27pc/h·**硬下临界前移至约 02:3x-02:4x**。信箱新收 LG-069 前置档告警（power-gate·ntf-mw3pdhniiqbjg9·23:32 注入·E1-5 前置告警档非闸不动派发）=电量 42pc 未接电·Adaptive Standby 待机冻结风险·值守机接电=角色要求（E1-5 定谳卷 dcfbbb142）——已转报 CEO（插电=第一优先）。
 - sg 窗满复跑：旁证近 45min 零落卷+sg duty 组候令（23:37 拍）·sg_exempt_until 20:37 窗满→tmux 直发 m-duty-cos 通报（01:19:13·capture 验拾取✓ Simmering 处理中·带排工单定性三选一问）·state last_notice 已记。本地组 23:37 拍 3 席在干活=非全体候令免通报。
 - 信箱销读 1 封（本轮已转报）·盲标改进项落实：本轮仅标首扫已存在信。
+
+## ㊿+257（bod·2026-11-06 01:22:32 +0800·date 现查）·CEO 插电✓+8713 自愈解挂——WMI 命令改候命（故障链闭环呈）
+
+- CEO 01:21 动作①插电✓：现探 acOnline=true·percent=38 充电起步——硬下临界解除·今夜长跑+明晨 03:30 fade011 触发的宿主保障恢复。
+- **8713 自愈解挂**（01:21:51 healthz ok=true）：readFailures 15→**0**·powerMonitor 读环工作（lastReadAt 17:21:04Z=读前 47s）·uptime 10258s 未重启=僵死解除系阻塞调用自解非进程重启——时序对表=01:18:14 我探 healthz 零响应（其时 CIM 已可读·我 01:18 CIM 探 36pc 秒回）→35 秒后 daemon 即响应——**WMI 读层恢复（wmiprvse 复位）先于 daemon 解挂·CIM 不挂→powerMonitor 不拖→daemon 恢复·与 STE 根因链全吻合**。
+- **WMI 两命令改候命**：wmiprvse 已自愈复位·现役健康面（CIM 秒回+readFailures=0）——重启 Winmgmt 现下无必要；若复发（readFailures 再爬/gate 再 none 持续）即跑 CEO 两命令正形。根因未除注记如实：wmiprvse 为何缺位未勘定·复发监控交由 tick 拍面 readFailures/gate 字段+LG-069 前置档告警。
+- 动作②WMI 命令=CEO 不用跑了（候命形态转知 STE 复测门照跑验全绿）。
