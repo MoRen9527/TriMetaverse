@@ -1681,3 +1681,9 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 **FSD 轮 2 毕报（16:37 落款）**：扩批第二批 6 件全收口——4 件动笔净 20+/7-+W13 零改动占位·自测五组全绿·RDT 勘十五 PASS→条件三件落笔→L 系快验六探全绿·**review+快验双闸过**。锁笔=TriTraining 465bc1c+TMV 48094a9b6（回滚锚 c88f16f 承接）·全链 18min（对表轮 1 基线 25min 提速）。毕报卷=docs-maintenance-expansion/fsd-r2-round2-closeout-20261105.md。
 **升报两条**：①新手课 §10 item6 安全默认规划项与今晨 gate 施工有交叠——RDT 勘十五裁留置候勘十六/复勘窗·本轮零触碰；②review 抓获 FSD 卷面读数误读一处已勘正留痕（--stat 数字列语义）——假读数家族第十五向候选两席认领候 D 系窗。
 **候接**：环 3（批三余件 ~13 件+R2-R9 域序）候 COO 衔接排程（域内径裁面）·FSD 候命。BOD 面零新增 CEO 决项。
+
+## ㊿+190（bod·2026-11-05 16:47:45 +0800·CTO 移植勘量回执·三反转·转呈 CEO）
+
+**CTO 勘量毕（822c688f9·勘量卷 cto-port-survey.md·双机五向活体探）**——与令文前提三反转：①编排件=TriCompany 仓件族非 TriMMC 独有（orchestrate_tick.py+tree_op.py+dispatch/ 六件·双侧 md5 逐字节一致）——**代码面河源不缺·零移植需求**；BOD 前勘「scripts/ 零编排件」在 scripts/ 面成立但编排件不在 scripts/（BOD 勘面窄化如实留痕）。②R 面编排循环现役已在跑：河源 cron 含 rmc-orchestrate-tick enabled·rmc_tick.py 442 行同构三重门/指纹/锁/台账·fingerprint 今日 16:22 刚写=扫描活。③**真缺口=spawn 后端死链「能扫不能干」**：rmc_tick spawn 投 127.0.0.1:8711（08-28 铸时 TriLC 旧名位）·河源 8711 零监听+TriRLC 未编译未部署→cost-ledger 10-01 后停更旁证。机理=**断链修复非整件移植**。
+**修复路线（候 COO 排工·SDE 主刀+STE 复验）**：rmc_tick spawn 改投同机现役 TriRMC 8710 /internal/v1/agent——单文件 40-60 行·零新部署·机位矩阵不破·git 单 commit 可 revert；顺手件=orchestration/ 库补 10-02 family 过滤 5 行追裁；第二序候裁=notify 值席信箱族 1082 行移植（spawn 走 8710 自执不需要）。验收锚五门在卷 §五（BOD 附测点全链实测判据照立）。
+**候令面**：CEO「班组派工」两形取舍——第一序 spawn 自执（修复即得）vs 第二序拆树派 13 席席组形态（需第二窗）——随卷 §三 候 CEO 令。
