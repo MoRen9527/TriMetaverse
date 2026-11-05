@@ -1724,3 +1724,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 **答 CEO**：席组形规划**不受限**——前提=席位宿主保持 claude CLI（现役即）；分层通道=起手段 notify+tmux 唤醒·席间协作段 SendMessage 结构化。风险面一处=LG-093（dsh 接管班组·今晚 20:2x CTO 终判）若判接管则席间 SendMessage 消失——实勘读数已转 CTO 纳入终判权衡。
 **CTO 形二方案收稿**（2427a0f3f）：sg 单文件 ~100-150 行（spawn 段删→notify+tmux）先行·河源复刻（信箱族 1082 行移植+rmc_tick 同构改+部署勘修窗·2-4h 级）·验收锚七门·⚠️ 方案卷「r-duty-cos pane=bash」读数与 BOD 17:09-17:12 活体矛盾已勘正回 CTO（BOD 两轮直发均 claude 框拾取执行毕·bash 系疑瞬态）·唤醒前置闸（capture-pane 验形态再直发）采纳入验收锚。
 **两轮实勘令投递记录**：r-duty-cos 第一轮 ListAgents+工具清单（49s turn 17:12 毕）·第二轮 cos→coo SendMessage ping（coo 35s turn 17:14 毕回显）——只读零副作用·两席 token 消耗 glm 代理免费面。
+
+## ㊿+197（bod·2026-11-05 17:17:16 +0800·cron 双 job 巡检轮·设计窗零通报）
+
+**job2**：信箱零未读。
+**job1**：拍 17:07:05（读时 17:16:44·差 9.6min 未超 12）。17:16 在 14:00-18:00 设计窗内=零通报轮。本地组 6 席在干活（线 1/线 2/环 2/形二改造链正常）。**差异面续归档**：MMC 8712 degraded=true consecutiveFailures 三拍连涨 2→4→6（16:07/16:37/17:07）——维持 ㊿+191 候窗口径：18:00 窗外首拍仍 degraded 即通报 duty-cos 交叉定性。另 8713 TriMLC uptime_s=883=E1-5 修复后新进程（pid 35404）15 分钟在跑·notifyFailures=0·pwr=100 0x0p+0c=true——重启链读数健康旁证。
