@@ -38,6 +38,27 @@
 
 **改仓内共享脚本前先勘双机消费面**——全域 grep job command 引用（TriMLC/TriRLC 本机双 store+sg TriMMC/TriRMC 面）+codegraph callers——本缺陷=sg 化改写（935838591·ew 工序3⑤）时未勘本机 8713 job 指向同仓路径=并行窗互踩族变体（写入面纪律缺口）。候入册条目名（候选）：`shared-script-cross-plane-consumer-sweep`——正形=共享面脚本改动前三查（哪机消费/哪 daemon job 引用/哪 cwd 语义）。
 
+## §六 · LG-092 首触发自然拍复核终验（COS 收口件指定·2026-11-06 03:43+08 执行）
+
+**② job 读数（8713 API GET 只读·token=启动器文件读入变量零回显·shell env 副本系旧值 401 实证=候选载入位不同步教训再锚）**：
+
+| 项 | 期待 | 实测 | 判定 |
+|---|---|---|---|
+| lastRunStatus | ok | **ok** | PASS |
+| runCount | 4 | **4**（手动拍 3+自然拍 1） | PASS |
+| nextRunAt | 北京 11-07 03:30 | **2026-11-06T19:30:00Z=北京 11-07 03:30** | PASS |
+| command | .local.mjs 形 | `node D:/Code/ai/TriMetaverse/scripts/fade/fade-daily-sweep.local.mjs` | PASS |
+
+- schedule=`30 3 * * *` cron 形·enabled=true·state=idle·lastRunAt=2026-11-05T19:31:25Z=北京今晨 03:31:25（03:30 触发后 85s 完成）——自然拍时点与 schedule 精确对表
+- 字段名勘定注：API 字段=nextRunAt（非 nextRunAtMs——首查字段名打错致 None 假象·全 keys 补勘校正·值面真值在案）
+- jobs 总数 API 形实测 17（指令面「其他 17 jobs」差 1 候 COS 面勘·不阻塞——本复核 GET 只读零写面·其余 jobs 零触碰事实成立）
+
+**③产出树勘定**：`fade011-daily-20261106-033125`（03:31:25 与 lastRunAt 秒级对表）·reports 全谱在位（plan/qualify/dce/verify/score/close 七件族）·**close-output.json verdict=APPROVED · gate_check.score_total=100（阈值 90）· node-verify PASS**——与 040253/214104 正态同构。
+
+**④异常分支**：不触发（五读数零异常·errorCount 历史面 1 留痕不清零照旧）。
+
+**判定：LG-092 案②修复=自然拍终验 PASS**——ENOENT 缺陷闭环（源形副本入仓+command 改指+白名单追加+手动拍验证+自然拍复核五件全谱）。
+
 ## §六 · 使用依据
 
 - CTO 裁定卷（本树 cto-ruling.md·TMV 5d915b2a9）·COO 派令（落款锚 2026-11-04T19:52:39Z·COS 转投 03:52:06+08）
