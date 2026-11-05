@@ -2183,3 +2183,11 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **信箱 4 封销读毕**（指定 message_id 形）：①duty-cos 03:50 主动报=**待派维持✓（无新挂账无断链）→sg 豁免新窗启（锚=该回执·sg_exempt_until=min(04:50·第2tick)=04:37）**；附**mirror 静默累计 23.8h 升急建议**（b2 alerting=true 持续·末真事件 11-05 04:01:40·修复三联候排窗或随今日 dev 面窗并勘）→已转呈 CEO 候决面。②powerMonitor 同族 3 封=04:05 再注连败注入（COS 04:07 CIM 已探明电源健康 98%AC·已知读层盲态·无新增动作）。
 - **8713 活体直探定性（04:17:30 healthz）**：daemon alive（uptime 20798s 连续·activeTasks=0·即时应答）；power.readFailures=4 但 **lastReadAt=04:13:24 成功读（98%·AC true）**——读层=**扑动型**（败 4 次与成功读交错）非僵死型（与 01:0x 阻塞型分野如实注）；**tick 04:07 拍缺=cron 单次失败**（consecutiveFailures=1·撞扑动窗）非 daemon 阻塞；next 拍 04:37 观察点。CEO 即时动作面=无；CTO 勘修窗候裁面维持（读层分野+晨窗范围候决）。
 - **COS 勘正回自领（本席失误两笔）**：COO 落款正身=「20:03:20Z」（=北京 04:03:20·收稿 hook 04:04:14 后 54s 送达·自洽零倒挂零误标）。失误链：COS 首信转写误「04:03:20Z」→本席未核 COO 原件即据转写值断言「+0800 误标倒挂推定」=**[接令确认先做对象断言] 族新例（时点值二手转写未核原件）**。「候 COO 晨核自勘」项撤销（不上呈不排队）；㊿+276 该观察笔以此勘正。COS 转写笔其侧已自领——两笔分立各认各账。
+
+
+## ㊿+278（bod·2026-11-06 04:48:34 +0800·date 现查）·FSD 隧道告警处置+8713 读层转全卡+候命 WMI 触发面呈决
+
+- **信箱 2 封销读**：powerMonitor 第 4 注（同族）；FSD hub-silent-detect 告警（18710 探针 A HTTP timeout 5s·2 拍防抖·30min 冷却）。
+- **隧道处置（活体不动）**：直探 18710 curl 即通（MMC healthz ok）=FSD 探针捕瞬态窗已复活·免重启；keeper 任务=bod-dsh-tunnel 单发形（schtasks Status Ready·Next Run N/A·Last Result=0xC000013A kill 码）=真死时无自愈面——与 duty-cos 修复三联「18710 隧道督导化」同件·晨窗范围候决内。
+- **8713 读层趋势转差（如实升档）**：04:17→04:47 readFailures 4→**33**·lastReadAt 停 04:13 无新成功读=扑动型转**全卡型**中段（daemon 仍 alive·healthz 即时·uptime 连续·5min 族 cron 正常拍）；**tick 拍连缺 04:07+04:37 两拍**（bod-tick-30min next_run 卡过去时·疑读卡拖调度）。**候命 WMI 两命令到触发面**（触发源=readFailures 再爬·01:2x CEO 面既定候命）——呈 CEO 决：即时跑（本席执行需授权确认）or 候自愈+晨窗勘修双轨（现 AC 98% 健康·电量闸盲态无即时危机）。
+- MMC（sg 8712）consecFail=0→1→2 爬升·失败 job 勘定中（同轮 ssh 探 logs·候下轮报）。
