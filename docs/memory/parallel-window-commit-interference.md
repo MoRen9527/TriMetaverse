@@ -4,7 +4,7 @@ description: 并行窗提交互踩族——merge 倒退合并丢笔（正向追�
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-10-14T02:12:31.712Z
+  modified: 2026-11-04T06:18:06.167Z
   originSessionId: cdeaa3bc-3f3b-4724-a7d2-2e5da881f2c2
 ---
 
@@ -20,7 +20,9 @@ metadata:
 
 **机理五·staged 新文件被并席重置类操作连磁盘吞（2026-10-14 FSD 案·打穿「已暂存＞裸工作区」梯度假设）**：FSD 毕报卷 10:07 Write 毕→`git add` 成功（staged 档）→commit 撞「partial commit during a merge」（他人 merge 在途）→数分钟内并席解 merge 的重置类操作（reset --hard / merge --abort 族——对「index 有而 HEAD 没有」的新文件=移除 index 条目+**删磁盘文件**）→卷从磁盘消失（exists=False）且 index 干净。实证：**staged 新文件在并行重置面前≈裸工作区零保护**（三态梯度对 reset 类操作失效；blob 尚在 objects 但无 ref 指向，捞 dangling 成本＞重放）。同窗还实证并席高频 merge 循环（10:04:42 完成 merge commit→紧接第二个 merge 34d4e9672 在途→又解完）——共享仓 merge 密度高时撞窗概率非小概率。**处置=内容在手立即重写+MERGE 态预检守卫后重提**（`if (Test-Path .git/MERGE_HEAD) { stop } else { add+commit }`——FSD 1e87ed6c8 实锚）；**预防=写后即 commit 锁笔**（机理三预防条款延伸到 staged 档）+共享仓高频 merge 期 add 前先验 MERGE 态、撞「partial commit during a merge」后**立即换窗重试勿滞留 staged 态**（滞留期正是被吞窗）。
 
-**识别信号**：porcelain 干净但文件内容与 HEAD 预期不符（机理一）；porcelain 无我方 M 行但修改已入库于他人笔 stat（机理二）；文件内容消失/整段回退旧版且 git 全无我方记录痕（无 stat 无 reflog 本笔=机理三，与机理一区分=机理一有 merge 倒退痕可考古）；commit 输出方括号里分支名非预期分支（机理四，`[分支名 hash]` 首字段即分支向铁证）；**曾 add 成功的文件随后 pathspec/exists=False=机理五**（staged 态被重置吞·机理三变体但当时挂的是第二档保护）；五案共同点=「修改/笔去哪了」先验文件现势与当前分支再验 git 对象，矛盾证据先 `git show <笔>:<path>` 对表禁臆断。
+**识别信号**：porcelain 干净但文件内容与 HEAD 预期不符（机理一）；porcelain 无我方 M 行但修改已入库于他人笔 stat（机理二）；文件内容消失/整段回退旧版且 git 全无我方记录痕（无 stat 无 reflog 本笔=机理三，与机理一区分=机理一有 merge 倒退痕可考古）；commit 输出方括号里分支名非预期分支（机理四，`[分支名 hash]` 首字段即分支向铁证）；**曾 add 成功的文件随后 pathspec/exists=False=机理五**（staged 态被重置吞·机理三变体但当时挂的是第二档保护）；六案共同点=「修改/笔去哪了」先验文件现势与当前分支再验 git 对象，矛盾证据先 `git show <笔>:<path>` 对表禁臆断。
+
+**机理六·在途未 commit 修改被并行批量 add 卷走入库（2026-11-04 COO 案·机理二反向变体）**：本席台账 Edit 落盘（裸工作区态）后约 6 分钟才推链，恰逢 CTO 39 存量树批量收编窗——CTO 批量 `git add` 把我工作区在途修改一并暂存并 commit 入其笔（876021262）推链达 bare——内容零丢失但 MSG 归属断层（台账行挂 CTO MSG commit 内）。事发后推链连续五次 STAGED_SET_MISMATCH 拒停（failsafe 零破坏兑现·正形）——**前四犯误诊为「共享 index 竞态窗清空暂存区」，终诊=修改已在 HEAD、staged 本应为空**（手动 add 后查询返回空不是竞态，是文件已无 diff 可暂存）。处置=勘注笔并修（归属断层如实记档+行尾字面 `\n` 落笔瑕疵随注修除·207e1d8dea·已推 bare 不可逆不 rewrite·308/309 先例同族）。**识别信号升级：推链 mismatch 空列表时第一动作=查该文件是否已在 HEAD（`git diff HEAD --stat -- <path>`+`git show <他席笔> --stat -- <path>`）再疑竞态窗**——「staged 空」两义（被并行清空 vs 本应空），先排除后者再定竞态定性。预防=机理三「写后即 commit 锁笔」再证+新条件：他人批量收编窗预告在途时（毕报已列收编计划）本席在途笔尤须即落即推，暴露窗压到分钟级以下。
 
 **机理四二犯注记（2026-10-10 同日二犯）**：CAO 复核补录笔再落 fsd 分支——`git branch --show-current` 跑了、非预期值也读到了，**但没停**。条款要点不是「跑命令」而是「读到非预期值即停」；硬防线=共享工作区常驻他人分支态时（如 TC 仓 HEAD 长停 fsd 施工分支），**落笔直接走临时 worktree**（`git worktree add` 指定分支），不经主工作区 commit。
 
