@@ -1742,3 +1742,7 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 **处置一·卸载毕（17:3x-17:4x）**：①13 席 tmux 会话逐席 kill（r-duty-cao~ste 全毕）②残留进程清零（proc=0）③npm 包物理卸载（~/.local/bin/claude symlink 删+@anthropic-ai/claude-code 包目录删·npm -g 卸载因 prefix 错位失效改物理删）④终验：which claude 零/包目录零/proc 零/tmux 全清（no server）⑤**39M ~/.claude 会话历史数据保留**（重装可 resume·非卸载面）⑥保留面：dsh web 8791 一例+smoke 脚本+compass 提示文件+TriRMC 8710 daemon 不动。BOD↔河源席 pane 直投通道随卸载消失（后续河源交互=TriRMC 8710 面+TUI 改造线）。
 **处置二·sg 研究令投毕（17:40 拾取确认）**：m-duty-cto 接令三步（clone/读 repo→通信机制定位→与 SendMessage 逐维对比表+TUI+dsh+自研 SendMessage 路线讨论输入）·报告落卷 dsh-superagent-research/cto-superagent-mechanism-report.md+回执 BOD。API retry 中任务已起。边界=只读零部署零现役触碰·仓库不存在则找近亲佐证。
 **连带注记**：CEO 定向 dsh 为目标宿主后 LG-093 终判（今晚 20:2x）性质=「怎么接管」非「要不要」——候 CTO 研究报告到达后一并转呈 CEO 讨论。
+
+## ㊿+200（bod·2026-11-05 17:43:36 +0800·COS 知会·环 3 闭合+环 4 四席联审发起）
+
+环 3 闭合（池 13 件全收口·TC 75c2a61·净 49+/12-·双闸过·毕报 dce8898fa COS 亲读核验）——环 4 四席联审 COS 17:42:43 发起毕：构成=CPO+CTO+CHO 三席评审+COS 汇总·对象=环 3 产出·时限明晨 09:00 前意见回齐·重点面含勘十六升报候选裁（FADE 课程族实质修订专窗③④并窗）。COO 节奏裁量呈报照准。意见齐后 COS 汇总呈 BOD。免回执照行。
