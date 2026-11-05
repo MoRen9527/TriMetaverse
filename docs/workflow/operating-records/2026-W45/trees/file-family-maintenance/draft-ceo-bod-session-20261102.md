@@ -1911,3 +1911,10 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 
 - 21:07 拍（9m47s 内·未延迟）：sg duty 组 13 席全体候令·本地 m-cto/m-cos/m-fsd 在干活（FSD=形三 β 前置两件施工信号）；四口全绿（8713 ok 15283s/8711 ok 60h/河源 active）·MMC 转绿持续 degraded=false cf=0·大表 24/4。窗外 sg duty 全候令→mtime 旁证 14 文件命中（-mmin -45）=席位有工件活动免通报归档。
 - 新落卷亮点：**form3-alpha-beta-impl/dispatch-intake.jsonl 已落**（COO 派工链在走·候接令回执）+dsh-glm-switch/cto-gate-ruling-3.md+sde-microbatch-r4-closeout（微批 R4 收口卷）。
+
+## ㊿+231（bod·2026-11-05 21:23:27 +0800·date 现查）·CEO 拆树职责问答件——fade-001 拆树归属实勘+制度条款在册
+
+- CEO 21:21 问「fade-001 在 M-SG 的施工拆树是 m-duty-cto 拆的？谁负责拆树没有规定么」：
+- **①fade-001 拆树=COO 面（非 m-duty-cto）**：链=charter 任务书先行（charter-w45-carryover-fade001-upgrade.md·sg commit 9f49b2d6c）→**COO 拆派**（12:27:10Z 拆派件二·SDE 主责认领在卷；本地 A/B/C 包=COO 派工单 v1.1）→执行域施工（m-duty-cto 系拆后施工席：N-D2 考卷冻结施工+CTO 技术面答件，非拆树者）。
+- **②制度有成文规定（D-27 v9 增补·2026-10-15 CEO 09:21 批·CAO 主笔入册）**：engineering-disciplines.md 三锚——L432「排工即拆树（树形态落点前移到排工端）」·L445「执行域拾取任务书后拆 n 树（charter-id:tree-id=1:n）——**拆树权=执行域·复核权=总调度（COO）**」·L919「现行链=COS 交单→COO 拆树派工（D-27 现行版）」+组稿权界（值席不组稿任务书本体·歧义走勘正路径上报）。
+- **③今日形三实例即按此链走**：CTO 技术方案卷+拆树件（cto-worktree-charter.md b76dce4e）→移交 COO 派工（施工窗排程裁量归 COO·D-15 回执制）——技术域拆自己域的树（拆树权=执行域）+COO 复核派工，与 D-27 条款吻合。
