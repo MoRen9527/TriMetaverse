@@ -1,11 +1,11 @@
 {
  "sg_idle_streak": 0,
  "local_idle_streak": 0,
- "last_ts": "2026-11-06 02:18:37 +0800",
+ "last_ts": "2026-11-06 02:46:30 +0800",
  "note": "19:37拍: sg 13席+本地13席全空闲·旁证零命中(45min窗滑出reconcile卷族)·双窗均满(12:37过期·13:17后无新定性回执)→v4.3窗满复跑双通报: sg m-duty-cos(tmux直发19:48:36+0800·capture验拾取Crafting中)+本地m-cos(SendMessage c7cdbee5·候定性回执启新窗) | 20:21轮: 旁证5命中(dsh-superagent-research 树+cto-form3 方案卷+sde observation closeout)免通报·本地 m-cos 通报信在途未拾取免重发防双投递 | 23:20轮: tick停22:07拍缺失(8713僵死)·sg旁证5命中(fsd-beta3收口+cto门禁+圆桌汇总+intake)免通报·本地3席在干活免通报·圆桌汇总卷23:01落卷已收稿呈CEO | 01:18轮: 8713再僵死(23:37拍后01:07缺·现healthz零响应)·电池36pc硬下临界02:3x-02:4x·sg窗满复跑通报m-duty-cos(tmux直发01:19:13拾取✓)·本地3席在干活免通报 | 01:47轮: 拍面全恢复(8713自愈+充电52pc)·sg旁证3命中+豁免窗内免通报·本地全空闲窗满通报m-cos(6d7bd68b·候定性回执启新窗) | 02:17轮: sg窗满复跑通报m-duty-cos(01:21待派定性在案·例行非异常)·本地m-fsd在干活=α链恢复施工实锚免通报·旁证镜像伪命中注（镜像与实增量分计候v4.4）",
  "last_notice": "2026-11-06 02:17:4x +0800",
  "v41_free_pass": "2026-11-04 22:21:53 +0800",
  "local_exempt_until": "2026-11-05 12:37:05 +0800",
- "exempt_note": "01:46轮启动锚=duty-cos 定性回执 ntf-mw3tagmg4skk6i(01:21:07+08·待派 zero open 活跃位定性)·min(02:21·第2tick=02:07)取先到=02:07",
- "sg_exempt_until": "2026-11-06 02:07:00 +0800"
+ "exempt_note": "02:46轮启动锚=duty-cos 复跑确认 ntf-mw3vdoir9kxd4o(02:20+08·待派维持活跃位定性)·min(03:20·第2tick=03:07)取先到=03:07",
+ "sg_exempt_until": "2026-11-06 03:07:00 +0800"
 }

@@ -2132,3 +2132,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - **BOD 亲验锚过**（监工验锚职能）：git -C TriCompany log dev 顶=d398a10cabb0184892534e2f5c78e0d5850caf0d 时戳 02:18:27+08 --stat=纪律册 16 行插入——与 COS 三件锚+三查独立复测全对平。
 - 超预期两笔收录（CAO 毕报 COS 复核同向）：①TriCompany github 欠账销（停 d98529b 实际早已达线·推程报错但通道已达·当时 ls-remote 连不通误判存续——「尾行 fatal≠失败」记忆条再证）②TriMetaverse github 欠账亦闭（origin dev=eea70d9c6=本机顶 02:19:44 对表）——**两仓 github 欠账线全清**（候网络窗批补项销）。
 - 呈 CEO 销令件已行：CEO 02:14:25 令「信达链缺口那条，让 COS 铸条落册」施工毕·D-72/D-74 两铸条链全闭环·候 CEO 销令。
+
+## ㊿+269（bod·2026-11-06 02:46:30 +0800·date 现查）·job2 轮——duty-cos 复跑确认回执收稿（待派维持·sg 豁免窗至 03:07）
+
+- duty-cos 复跑确认（ntf-mw3vdoir9kxd4o·received 18:20:02Z=02:20+08·对我 02:17 例行复跑）：**待派 zero open 维持**（01:21 定性无变化）·旁证 3 命中勘释=b2 观察者告警卷（10-17 部署的 b2 watch 落卷面·静态历史卷非新活动——8713 心跳静默期 alerting=true 候心跳恢复自清）·无新挂账无异常。
+- 豁免窗启动：sg_exempt_until=min(02:20+60=03:20·第 2 tick=03:07)=**03:07**。信销读。
