@@ -3,7 +3,7 @@
 - sourceOfTruth: 本件（N4 施工设计·双门形门①终审物·PASS 后动笔）
 - syncMode: write-time
 - lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
-- 上游: 补读小门判定 cto-n4-preread-gate1-ruling.md（40b1b2411·六点裁面全裁）+补读笔记（9f37e4e75·行号锚直引原型）+门③判定 7178f409d（两点裁量）+迁移表裁定 14:18:10Z
+- 上游: 门①终审判定 cto-n4-design-gate1-ruling.md（4175a5897·有条件 PASS·条件毕即动笔）+补读小门判定 cto-n4-preread-gate1-ruling.md（40b1b2411·六点裁面全裁）+补读笔记（9f37e4e75·行号锚直引原型）+门③判定 7178f409d（两点裁量）+迁移表裁定 14:18:10Z
 - 原型思想源: dsh-superagent src/core/{tickets,assignments}.ts+src/policy.ts（805 行全读在案）
 
 ## §一 · 范围锁定与表形（判定书裁面①②落形）
@@ -80,11 +80,27 @@
 
 1. **ticket_input 拆表形**（本卷 §一）vs 单表 value JSON（O(n) 留锚）——本席建议拆表（判定书①「PK 索引/JOIN 消解」忠实落形+ReadTracker 单一真源注）
 2. **首版 handler 链落形**（§二 executor port 映射：effects.enqueue('deliver')+Engine 注册 handler→deliverAndTrack 移植）vs 票域直调 receipts.send——本席建议 enqueue 形（照 committed 分野+β-2 退避/死信面天然继承）
-3. **retriable 态判定裁减**（原型 stage.ts canRetry 未深读——本席按 report 态谱 retried=report∈{failed,blocked} 判·设计注如实标注原型差）——候认或令补读 stage.ts
+3. **retriable 态判定**——判定书③裁=令补读 stage.ts（唯一改判点）→**已补读对表毕：不一致两点·按原型修正落 §七A**（负向面+delivery 面·retry 谱结构不动摇→备案即起施工）
 4. **replies 依赖划出确认**（attention withdraw=嫁接位注释锚·首版不落 withdraw 面）
+
+## §七A · 条件执行注（stage.ts+model.ts 补读对表·判定书③条件件毕·2026-11-06）
+
+- **补读**：`src/core/stage.ts`（26 行全读）+`src/core/model.ts`（353 行全读·waitsForPerson/readUntil 正形在 model.ts）——SSH 只读通道同前——canRetry 正形锚定毕
+- **canRetry 原型正形**（stage.ts L24-26）：`return !ticket.ended && (waitsForPerson(ticket) || !!ticket.delivery)`——docstring：「open ticket stalled on a blocked/failed report **without a newer human follow-up**, or has a failed input delivery」
+- **waitsForPerson 正形**（model.ts L349-353）：最新 assignment report∈{blocked,failed} **且此后无** kind=trigger∧human∧!context∧at>report.at 的 input——lifts 条件（docstring L346-348）：更晚的非 blocked/failed report·人的消息·retry（起新 assignment）
+- **对表结果：自拟谱两处偏差·按原型修正**（判定书③「不一致→按原型修正」执行）：
+  1. **负向面缺**：自拟「retried=report∈{failed,blocked} 判」漏「此后无人类跟进」条件——blocked/failed 后人已跟进（human trigger input 在 report.at 后）→**非** retriable（票应继续工作非 retry）
+  2. **delivery 面缺**：`!!ticket.delivery`（model.ts L306-307「latest failed delivery of an Input to its worker, until a delivery succeeds」）→retriable——自拟谱全未覆盖
+- **修正后 v2 retry 门落形**：`canRetry(ticket) = !ended && (waitsForPerson(ticket) || !!delivery)`（谓词照原型移植·waitsForPerson 照 model.ts L349-353 落）——retry 谱结构（canRetry 门+requeueUntaken 重排队首）**不变**→语义差不动摇谱结构·照判定书「条件毕即动笔·备案不再候审」**即起 N4 施工**
+- **附带正形锚补全**（model.ts 新读·施工对表用）：
+  1. **readUntil 正形**（L341-344）：`max(latest report.at, max(各 assignment idleAt))`（progress=false 变体=latest 非 progress report.at 入 max）——**settleTicket 真信源落定**（补读笔记 §二映射「随 report API 落形定」→本锚收口）：end/settle 时点照此计已读截止线；idleAt=「turn ended with nothing left to run/waiting」（L228-232 注）·deliveredAt≥report.at=worker 忙于 inputs（L226-227·interrupted busy 判定锚·嫁接域）
+  2. **TicketInput 六 variant 值域**（L235-257）：trigger（readAt?: string|null 哨兵+deliveredTo+context+human）/policy-changed/reopen/resumed/text/note——ticket_input.kind 列值域照此
+  3. **ReportState 六态**（L216）：progress/waiting/ready/blocked/failed/dropped；**TicketEnd 值域**（L271-285）：by∈{executor,human}·outcome∈{completed,merged,closed,dropped,stopped}
+  4. **Mandate 正形对照**（L126-133）：原型 Mandate={strength, policyVersion, basis(MandateBasis L116-123·via 五形 addressed/followup/admission/listed/bot), actor, scope}——v2 §三 mandate 最小形=其 revalidate 消费面投影（strength 直取+via/cell/rules/observation=basis 投影+actor 直取）；policyVersion/scope 原型有·v2 首版裁减不持久（如实注·候嫁接域补全）
+  5. **范围划出补注**：interrupted/restart（host 恢复面·assignments L83-92+tickets L318-327）=嫁接域（host 恢复链 N5/N6）——首版不落（判定书②范围对齐面）
 
 ## §八 · 使用依据
 
-- 补读小门判定（40b1b2411·六点裁面）+补读笔记（9f37e4e75·原型行号锚直引）+门③判定（7178f409d）+迁移表裁定（14:18:10Z）
+- 门①终审判定（4175a5897·有条件 PASS+条件件+语义注 replies 槽位）+补读小门判定（40b1b2411·六点裁面）+补读笔记（9f37e4e75·原型行号锚直引）+门③判定（7178f409d）+迁移表裁定（14:18:10Z）
 - 原型分件：tickets.ts/assignments.ts/policy.ts（805 行全读在案）+任务书 b76dce4e §三 α 表+方案卷 7ecd788f5 §三 N4 段
 - β 先例：receipts value JSON 形+effects 拆列形+read_state 单一真源+V2Store atomic/committed（222726c 在役）
