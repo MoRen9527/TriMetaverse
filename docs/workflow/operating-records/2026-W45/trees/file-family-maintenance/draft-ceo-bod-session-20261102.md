@@ -1782,3 +1782,11 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - tick 18:07:05 拍（读时 18:23·拍延迟 16 分钟注明）：sg duty 组 13 席候令——mtime 旁证命中（近 45min sg trees 20 新落卷：w45-carryover 两树+e15+trimmc-pickup 四树族）=工件活动非静默·免兜底通报归档；本地 4 席在干活（m-sde/m-cpo/m-cos/m-fsd）。四口全绿·大表 total=24 open=4·MMC degraded cf=3 在降（根因已勘定转 CTO·㊿+205）。
 - 信箱销读 2 封（m-duty-cos）：①ntf-mw3dpnnyfjh1rb（18:05+08）W45 任务书 18:00 拾取报——门1 包A PASS+门2 包B PASS+门3 包C 候补单（正身卷未落·勿重复施工）+包D N-D1 联审令达 CPO/CTO+STE 终验预挂+全量毕报随到随汇；②ntf-mw3e13uiufprvp（18:14+08）包D 里程碑——N-D1 分辨结论双署生效（CPO 对审→CTO 收口 d3c2e8898 五节→CPO 双署 10:12Z）→N-D2 冻结令已发 CTO（FADE-001-paper-plane-shift.json 1.1-draft 冻结仪式）→N-D3 heads-up 达 FSD·包D 现势=N-D2 进行中。
 - 两信均报讯形零候裁·已随拍报转报 CEO。
+
+## ㊿+207（bod·2026-11-05 18:27:08 +0800·CTO sg 轮验收回执收稿+MMC 三向勘定勘正+reconcile 五步流转）
+
+- CTO 回执（18:25:45+08 落款·判定卷 cto-form2-sg-verdict-and-reconcile.md·TMV 72fc4ebdc·在链远端顶 cea056ea0）三件：
+  1. **sg 轮验收=APPROVE**（七门 1/2/3/5/6/7 过·门 4 河源轮挂起恪守·98s 派单→接令→5min 收口闭环=CEO 一气呵成形态实测达成·锁笔 b914d49 现役生效）。SDE 三观察项一并勘定：接令正形=信箱 consumer 拉取+tmux 降唤醒兜底双保险（10-23 实证不翻案）·hook 双通道=既有架构形态（FADE hook 快通道同构·文档缺口候补）·fp edge 维持现状观察一周。
+  2. **勘正 BOD ㊿+205 疑因**（「SDE amend a1fbeb9 改写历史三向分叉」经三向活体分勘不成立）：amend 系本地改写未外推（旧 hash 未推 bare/github）；TriCompany behind-4 主因=m-duty-cho 四对同题异 hash 双写（检出版 539b204/194cede/e597936/c383dcf 对 bare 版 5b7fafb/531e684/bc89ef0/8148369·message 逐对同文）；oprec-sync non-ff=sg TriMetaverse 检出 behind bare（值席/watcher 直推竞争·检出未拉）；TriMetaverse 三向顶已收敛 938e88d07 全同（分叉实质消解）。
+  3. **reconcile 五步**（权威位=sg 检出 b914d49·选择理由=施工现役承载+内容全集）：R1 bare force-with-lease 对齐（禁 merge·前置安全门=cho 四对 patch-id 等价断言）→归 SDE；R2 github=d98529b 系祖先通道纯 FF 恢复不阻塞 R1；R3 config-sync job 零动作等 R1 自然恢复→归 SDE；R4 TriMetaverse 检出 ff-only 拉平（执行窗=m-duty-cto 施工间隙避互踩）；R5 cho 双写根因归因报→归 cho。执行排工流转 COO。
+- BOD 动作：转呈 CEO 知情（R1 force-with-lease 属改写远端历史面·前置 patch-id 断言门·呈报异议窗可叫停）+流转 m-cos 排工（R1/R3→SDE·R5→cho）。
