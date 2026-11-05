@@ -1642,8 +1642,15 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 
 **CEO 16:15:02 四令逐件**：
 1. **TriMMC 编排拾取件移植河源**：16:2x 流转 m-cos（msg 21c48630）→CTO 勘量+排施工。附测点建议=任务书挂平面→自动拾取→拆树→席组执行→收口全链实测。BOD 前勘已锚：TriRMC 8710 scripts/ 零编排件（healthz ok·cron 4 jobs 正常）·TriMMC 8712 独有拾取机制。候 CTO 回执。
-2. **R-HY alias 修复毕**：fleet ssh config → 双名一行（sed '8,9c' 合并修复·首版两行 Host 块 bug 已勘）·双验证 R-HY-ALIAS-OK（host=iZf8ziw57ydktu77fsld9yZ）+heyuan-COMPAT-OK·备份 config.bak-20261105-bod。heyuan 旧名保留兼容。
-3. **dsh key 面勘定（CEO 判断证实）**：（apiKeyEnv 机制）+（本地 GLM 代理·api/paas/v4=智谱 bigmodel 路径形状）——R 面 dsh 实走 GLM key 非 deepseek key。配置唯一落位=（8791 web 例在用）。BOD 上轮「deepseek key」表述系错采认勘正； 字样命中系包名 @deepseek-ai/dsh 非 key。
-4. **dsh 自动压缩机制证实（CEO 猜对）**：web profile cordis.patch.yml 两处挂载 compaction cordis:group（L109/L495），三插件=（自动压缩）+（/compact 命令）+（工具结果修剪）。sessions 15 工作区目录在档。**另更正（CEO 勘正采认）**：上轮「r-duty-cos 218k/r-duty-sde 179k token 已满」表述系误——glm 1M 上下文 218k 仅占 ~20% 不可能满；/clear 系 Claude Code 配额节省建议非容量满信号。
+2. **R-HY alias 修复毕**：fleet ssh config `Host heyuan`→`Host R-HY heyuan` 双名一行（sed '8,9c' 合并修复·首版两行 Host 块 bug 已勘）·双验证 R-HY-ALIAS-OK（host=iZf8ziw57ydktu77fsld9yZ）+heyuan-COMPAT-OK·备份 config.bak-20261105-bod。heyuan 旧名保留兼容。
+3. **dsh key 面勘定（CEO 判断证实）**：GLM_RPLANE_KEY env（apiKeyEnv 机制）+ baseURL `http://127.0.0.1:8460/api/paas/v4`（本地 GLM 代理·api/paas/v4=智谱 bigmodel 路径形状）——R 面 dsh 实走 GLM key 非 deepseek key。配置唯一落位=`~/.dsh/profiles/web/cordis.patch.yml`（8791 web 例在用）。BOD 上轮「deepseek key」表述系错采认勘正；deepseek-ai 字样命中系包名 @deepseek-ai/dsh 非 key。
+4. **dsh 自动压缩机制证实（CEO 猜对）**：web profile cordis.patch.yml 两处挂载 compaction cordis:group（L109/L495），三插件=compaction-basic（自动压缩）+ command-compact（/compact 命令）+ tool-result-pruner（工具结果修剪）。sessions 15 工作区目录在档。**另更正（CEO 勘正采认）**：上轮「r-duty-cos 218k/r-duty-sde 179k token 已满」表述系误——glm 1M 上下文 218k 仅占 ~20% 不可能满；/clear 系 Claude Code 配额节省建议非容量满信号。
 **三席毕报收稿（线 1/线 2 毕报流·转呈随呈报信）**：①STE 线 2 ①复跑毕报——fade 全家 99/99 RC=0 零失败（预勘 84→99 差 +15 三笔施工增量归因闭合 79c011f→c52f5bc→2833c82）+798 tests 792/6 fail 零 fade 域交集（6 红⊂基线 9 红·基线独有 3 红现势全绿=间歇族实锤）+SDE 技术债五项对表毕（销项候选 4+维持 1·裁决候 CTO）+剩余面零挂账·卷锚 TMV f9ab881fd。②COS 三面呈报——COO v1.1 改派对表毕五项全采+A 包毕报落卷 0472f7149（齐性矩阵：索引件族五周零断档/journal W36-W44 九周连断最深/trees 237→283→291→67→W44 归零·三分类 F2/C10/Q9 候裁禁丢弃）+LG-069 电量三连定性=读环冻结形非真实电量事件（物理零险·E1-5 修复升急两席同向候 CTO）。③FSD B 包毕报——W45 周根 8/8 标准件齐性全绿（需求池 66 行/journal 骨架/runbook 入口/盘点大表 33 行四新建+unresolved 头部 W43→W44→W45 两跳残留刷正·锁笔 287b3737b）·**本毕报即环 2 扩批轮 2 起跑令**（FSD 已顺接起跑勘定段）。
 **线下在途**：CTO Phase 2 总毕报四输入齐（STE 复跑+SDE 技术债对表+SDE ②④毕+COS 轻催）候出卷；环 2 轮 2 FSD 起跑；C 包规则面 COS 主笔候 A 包毕接。
+**勘正注（16:23）**：本段落笔经 heredoc 未加引号 delimiter，反引号段被 shell 命令替换吞损五处——Edit 工具字面量修复毕（正形后令=落卷 heredoc 一律 <<'EOF' 或改用 Edit 直写）。commit 3670d9fe0 损坏形态已勘正随 ㊿+184 同笔入库。
+
+## ㊿+184（bod·2026-11-05 16:23:11 +0800·date 现查·CTO Phase 2 总毕报收稿+转呈）
+
+**CTO 线 2 总毕报（16:21:56Z·卷锚 TMV 21ba569c4）——fade011 Phase 2 全链收口**：判定=五件全兑现·验收门四判据连续两轮全 PASS·验收双闸齐（CTO 汇总闸+STE 独立复跑闸 f9ab881fd）。①工序谱七工序+UAT 全毕（交付链 7e41d01→…→3df8615）②终读数=十段全自动 APPROVED 2.7s+kill 硬杀恢复 4.0s+收口双门 RC=0×2+绕闸防御三重实锚 ③STE 复跑 99/99 零 fade 红零新增 ④技术债五项终裁=**四销一维持**（T1 plan skill 销结案/T2 重试通道定谳不建/T3 event-watch 立窗毕转现役/T4 python 运行面销·T5 pushurl 维持候窗+积压 13 笔注记）⑤wiring 部署面设计毕·接线端到端候依赖序（如实注记非阻塞）。Phase 2 验收框架内零挂账。
+**随卷呈裁两件（候令面·BOD 不代裁转呈 CEO）**：A=event-watch 待配置运营面（现役 fail-closed 零配置态·配置启用=运营决策候 COO/COS 链令·技术面就绪）；B=E1-5 A/C 修复窗升急（本日 LG-069 告警三连+人工供数链=告警过敏实锚·CTO 勘定=瞬时抖动自愈形非持续形·healthz 探针 lastReadAt 推进+failures=0·通知面三连系滞后投递——COS「持续形」定性经 CTO 勘正；A 面降噪+C 面 wake 补跑估 1-2h·建议 FSD 轮 2 前插一小窗·插队 vs 照序候 CEO 裁优先级）。
+**线 2 状态收束**：SDE ②④毕+STE 复跑毕+技术债五项终裁毕+CTO 总毕报出卷=四输入全齐全消化——fade011「剩余工作搞完」令达成，候 CEO 验收采认。现势=环 2 轮 2 FSD 施工中+E1-5 插窗裁决候+明晨 03:30 fade011 自动触发天然测试点。
