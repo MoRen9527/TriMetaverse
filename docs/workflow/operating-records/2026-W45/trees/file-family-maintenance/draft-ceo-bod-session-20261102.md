@@ -1321,3 +1321,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - ⓪ 非空闲·1 席在干活：本地 m-cos（E1-5 分诊链在途·与 ㊿+130 回执时窗吻合）；sg duty 组仍全候令——duty-cos 刚被 COO 请托唤醒单唤醒（㊿+131·拾取验证过）。
 - ② 8713 ok uptime 20496s pwr=100% gate=none·**notifyFailures=0→1**（=power-gate 信 09:41:52 到信面·E1-5 冻结环组成件）；8711 ok 48h；河源 active。③ 8712 ok cron16 绿。④ 大表 24 开 4。
 - v4.1 sweep：sg trees 1 文件=file-family-maintenance/draft 本席自家 morning commits 镜像同步至 sg 工作区=**自指伪证（定性③）不计席活**；sg duty 静默已在 COO 督办链处置中（355 笔）——免通报（重复噪声规避）。
+## 意见㊿+133（2026-11-05 09:56:35 +0800·shell 注入现查落款）：E1-5 机理定谳转呈——Modern Standby 冻结族·B 面用户知情呈 CEO
+
+- COS 转呈 CTO 机理裁（正身卷=e15-modern-standby-ruling 树 TMV dcfbbb142·独立勘定五组零复用）：**定谳=Windows Modern Standby（Adaptive Connected Standby）DAM 定时器冻结族——非 daemon 缺陷·非 keep-awake 失效**。铁证链：08:59 系统入待机（Kernel-Power 506）→冻结 68min（LG-069 skipped 记账都无=真冻结）→09:35 接电→09:37 退出待机（与 TriMLC lastWakeSeenAt 逐秒同）→恢复首拍 87s 膨胀→09:38+ 补跑正常化。keep-awake engaged 实锤——ES_SYSTEM_REQUIRED 挡空闲睡眠挡不住 Adaptive 自适应进入。
+- 调度面已自恢复（09:38+ 正常化）——明晨 03:30 fade011 复核锚前置条件（调度面恢复）**已满足**。附：LG-092 案②施工顺带全验 PASS（死线提前 ~23h）。值席静默窗与待机冻结窗重叠（候令无件·bod 已证活体·如有异读再勘）。
+- 修复形三面：A 面=LG-069 前置告警档（<50% 未接电升级告警·候 FSD 窗）；**B 面=用户知情（本段呈 CEO）**：根治=宿主电源策略 DC 态睡眠禁用（用户配置域·CTO 不单边改）·二选一：①电池态睡眠设「从不」②值守段接电运行；C 面=wake 事件→due 检查+stale reclaim 补跑（候 FSD 窗与 A 同窗批处理）。
