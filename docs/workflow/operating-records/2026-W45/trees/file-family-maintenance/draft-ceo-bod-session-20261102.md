@@ -1626,3 +1626,14 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - ④ ew 四树勘定收口毕：ew-auto-trigger 已毕现役化（watch.ts 六门禁 PASS 95/95·现役 fail-closed 待配置·配置面候令禁自行发明）；ew-week-template 已毕（{week} 占位 2833c82·赶 11-08 换周窗 ✓）；ew-daily-form 形态现役（拓扑改后 8712 零排产·根治候治理窗）；ew-runs 在役（47 fade-w+daily 群 11·两 run 候裁保留）。
 - ③ 技术债五项复核毕：销项候选四（plan skill=S51 毕/门拒重试=裁语定谳不建/event-watch=立窗现役/python 环境=双机已解）+维持候窗一（pushurl）——销项裁决候 CTO·STE 对表读数候回填。
 - 纪律五条对表全 ✓（既有失败面零新增·S5 基线六族维持）。候接三口=STE/FSD 注入器+CTO 施工单/明晨 03:30 天然复核拍（cron 052b084a 在挂）。
+
+### ㊿+182（2026-11-05 16:09:54 +0800·date 现查）
+
+**CEO 令 16:03:14「检查 TriRMC(R-HY) dsh cli 接通·测试席位/任务书拾取/拆树功能」·BOD 活体测试毕**
+
+- 通道勘定：heyuan alias（fleet@8.155.54.79·经 M-SG fleet 用户跳转·R-HY 旧名不在现役 config）。
+- ① dsh CLI 接通 ✓：/srv/fleet/dsh（@deepseek-ai/dsh 0.2.0-rc.2）smoke1 五步全绿 RC=0（spawn --profile acp→initialize→authenticate→session/new→session/close）；smoke2 全链 SKIP（DEEPSEEK_API_KEY 不在 fleet env——key 面=LG-093 观察窗内容候 CTO 终判）。
+- ② 13 席全活 ✓：r-duty-cao~ste 全在（11-04 13:24-13:26 建·claude --resume --agent compass 系统提示·bypass on）·逐席 capture 现态正常·token 53k~218k（r-duty-cos 218k/r-duty-sde 179k 两条 /clear 建议显面）。
+- ③ 席位派工响应实测 ✓：r-duty-fsd 投递→拾取→date 现查→回执「在岗·测试令收讫 16:08」全程 27s 零副作用。
+- ④ 任务书拾取/拆树=R 面**不具备**：TriRMC 8710 活体健康（cron 4 jobs 零降级·internal 401 fail-closed ✓）但 scripts 五件（mc-probe/rface-system-prompt/rmc-audit-tree/rmc_tick/validate）零拾取编排件——自动拾取拆树=M 面 TriMMC 8712 独有机制；R 面班组现役形态=tmux 手工派工。若要 R 面具备需移植 TriMMC 编排件或 TriRMC 新长该功能（候 CTO 面勘量）。
+- ⑤ dsh 现役角色：仅 web 实例 1 个（8791·Nov04 起）+smoke×2；13 席宿主=claude 非 dsh——dsh 接管班组=LG-093 观察窗评测中（今日 20:2x CTO 门禁终判）。
