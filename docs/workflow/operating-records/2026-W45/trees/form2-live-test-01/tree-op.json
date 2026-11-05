@@ -1,0 +1,16 @@
+{
+  "treeId": "form2-live-test-01",
+  "status": "active",
+  "domainRouting": "server-executable",
+  "face": "m-face",
+  "trigger": "sde-form2-acceptance",
+  "createdAt": "2026-11-05T09:54:20Z",
+  "nodes": [
+    {
+      "nodeId": "N1",
+      "agent": "m-duty-cos",
+      "status": "pending",
+      "action": "形二全链实测产出：在本树目录内落 live-test-report.md（必含：接令时刻 UTC Z 现查原值、接令通道读数=notify 信箱+tmux 唤醒两通道、参与席清单、本报告落盘时刻）。红线：只写本树目录内文件；git 仅限 add 本树目录路径/commit/push origin dev；完成后本节点 status=done、树顶层 status=done、一并 commit push。"
+    }
+  ]
+}
