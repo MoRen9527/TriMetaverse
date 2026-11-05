@@ -1411,3 +1411,11 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - 转报 CEO 压缩单行：⓪sg duty 13 席全体候令·本地在干活 m-cao/m-cos；②8173 ok uptime 25491s nf=1 pwr=100%/ac·8711 ok uptime 50h cron=1 mc_link=connected·河源 TriRMC active；③8172 ok cron 16 jobs degraded=false logs 11:06:28 新鲜；④大表 total=24 open=4。
 - 兜底判据 v4.1（窗外 11:19）：sg duty 全体候令→mtime 旁证=sudo find trees -mmin -45 命中 4 文件（a1-run-tree-loss-triage 树 cto-triage.md/dispatch-intake.jsonl/fade-db-archive-20261105.json + file-family-maintenance 树 draft 副本）→**有工件活动免通报**（sudo cwd 告警=噪声已滤·零异常）。
 - 无通报发生·idle-watch-state.json 不动。落款锚：date 现查原值。
+
+### ㊿+149（2026-11-05 11:36:46 +0800·date 现查）收裁 CEO 五项直令（11:36:25）·规范表述流转 m-cos 毕
+
+- CEO 手打直令原文：「五项裁点我裁：①采认②③批④⑤照两席附议办」。
+- 规范化：①采认「manifest v2.0.2 已兑现主体→转补闸+扩容收尾」定性；②批勘正双对表条款（纪律册轻款 CAO 落笔放行）；③批 source_publish_check 升 gate 形（候 CTO 窗·与②双保险）；④先闸后迁·source-host-files/<host>/<FILE>·随扩容窗·owner=CAO；⑤分节切换放阶段二候 published-summary 成熟。
+- 附注如实转达（非 BOD 判断）：子仓入口面（暂不入域）系附带候裁项·CEO 本次未单列触及——留 COS/CAO 域内处置或候 CEO 下次明示。
+- 流转：SendMessage m-cos 11:36:46（msg dd7a61d7）——请按令投递：②落笔归 CAO·③投递 CTO 排窗·④⑤归 CAO/CTO 对应窗·执毕回执销挂。
+- 宿主文件真源收归提案治理链至此：CEO 立案（10:57）→两席意见（COS 11:00/CAO 11:06）→BOD 集散呈报（11:11）→CEO 裁（11:36）→COS 执行（在途）。落款锚：date 现查原值。
