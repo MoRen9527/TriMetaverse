@@ -1296,3 +1296,10 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - 拍龄 12m44s（tick=08:37:06·读于 08:49:50）轻超档。
 - ⓪ 全席空闲（两域 13+13）；② 8713 ok（pwr=100% gate=none uptime 16491s）/8711 ok 47h/河源 active；③ 8712 ok cron16 绿；④ 大表 24 开 4（候裁/候窗件）。
 - v4.1：sg trees 零新落卷；无 open 派工=无件可拾非断链——免通报（定性沿前序轮）。
+## 意见㊿+129（2026-11-05 09:40:08 +0800·shell 注入现查落款）：job1 09:37 拍——发现 8713 cron 调度面停摆·已流转 COS（E1-5 型）
+
+- 本轮双 job 并入：job2 信箱零未读（总 2748）。job1 拍龄 60m12s（tick=08:37:06·读于 09:37:18）——**非轻超档，实停摆两拍**（09:07/09:37 缺写，mtime 实测确认）。
+- 活体现探三锚：①healthz 直探 09:37:48+0800 ok=true uptime 20140s pwr=100% gate=none——daemon 活体；cron 块全绿（jobCount=17 degraded=false consecutiveFailures=0）但 next_run_at=01:00Z 已过去 37 分钟。②cron.db 只读直查：17 jobs 全部 last_run≤00:59:15Z（08:59:15+0800）·next 全=01:00Z 零触发；09:30 件（cron_mv3505vw_jev6）已漏。③wake 环活（lastWakeSeenAt=09:37:02+0800 新鲜）而 cron 环+电量读环冻结于 08:59——分域并存。
+- 定性：静默停摆（绿面与停摆并存）；daemon≈04:02 启动（护航重启形），停摆起点 ~09:00 非启动即停。机理不追（BOD 边界），候 CTO 面。
+- 影响：8713 全部本地 cron 停（含 tick 件本体=本 job1 信源）；明晨 03:30 fade011 复触发（LG-092 复核锚）现不受影响（next=19:30Z=明日 03:30+0800），调度面不恢复则同挂。
+- 流转：SendMessage m-cos E1-5 型缺陷流转（msg_id 9079dcb8·候分诊回执·沿 E1-4 三向先例）。
