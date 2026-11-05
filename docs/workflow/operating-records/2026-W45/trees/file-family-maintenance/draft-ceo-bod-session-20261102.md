@@ -2017,3 +2017,10 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - STE 转呈（落款锚 14:59:12Z=22:59:12+08）：**根因勘定**=本机 WMI provider host（wmiprvse）缺位→CIM 查询挂死→8713 电量闸降级（gate=none·readFailures=15）——真故障非电源面无电（与 COS 22:33 CIM 双源判读互证）。**CTO 已裁 a 路径=重启 Winmgmt 先行**——STE admin 不可达（net session 拒）升用户面执行。
 - **两件请求呈 CEO（用户面动作）**：①管理员权限终端执行「net stop winmgmt /y + net start winmgmt」（或等价 PowerShell Restart-Service Winmgmt -Force）——影响面如实=CIM 消费者瞬断秒级（8713 读环本在失败态零增量伤害）·依赖服务连带停后未随起的 STE 复测清单逐起；②接外电（PM 旁证 69%% 放电中·今夜长跑+明晨开窗断电风险）。执行毕告知→STE 即跑复测门（CTO 定=value 面探针：wmiprvse 在位+独立 CIM 查询秒回+8713 healthz percent 非 null/readFailures 停增/gate 恢复可信）毕报回 CTO。
 - 与 ㊿+249 互证补全：8713 daemon 22:29 新起僵死疑因=CIM 挂死拖 powerMonitor 初始化阻塞——WMI 修复（动作①）+插电（动作②）后 daemon 应随 Watchdog/守护链自愈或技术面按重启纪律处置。
+
+## ㊿+251（bod·2026-11-05 23:15:10 +0800·date 现查）·CFO 电面告急知情收稿——AC 断供双源实证+断链预注挂号
+
+- CFO 转知（落款 23:14:07+08·触面即报惯例）：AC 供电丢失属实——22:39 人工核查 CIM 双源=Est=69pc·Status=1 放电·PowerOnline=False（与 BOD 22:47 PowerShell 探 64pc 放电、STE PM 旁证 69pc 三源互证一致）。已报 COO（msg b7ac81a9）。
+- 断链预注挂号：若电池耗尽硬下→本地域全暗（10-28 先例同型·10-28~11-01 四日全暗在案）——CFO 锚停发·复机后 merged-anchor 补记+cron 重挂；BOD 面 session-only cron 双 job 同灭·复机后需重挂（BOD 自预注：复机首务=核对 cron 双 job 重挂+底稿续笔）。
+- CFO 观察注收录：本地域在途活可切服务域长跑——今晚双班组架构提案恰逢实战场（提案价值实证窗）。
+- 呈 CEO 面动作不变：①管理员终端跑 net stop winmgmt /y + net start winmgmt（修 8713）②插电（第三源实证后紧迫性再升·临界维持 00:4x-00:5x 估）。
