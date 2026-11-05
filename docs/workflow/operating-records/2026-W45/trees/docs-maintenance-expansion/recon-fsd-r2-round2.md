@@ -22,26 +22,30 @@
 
 | 单号 | 件 | 处置形（裁定锚） | diff 读数 |
 |---|---|---|---|
-| W11 | tritraining-lesson-lab-contract-baseline.md | 裁定②正文形：L32 边界第 4 项改现役描述形「`TriMetaverse/docs/training/`（中央聚合面·顶层平铺）」+勘误头 append（P1 判据实锚） | 5+/2- |
+| W11 | tritraining-lesson-lab-contract-baseline.md | 裁定②正文形：L32 边界第 4 项改现役描述形「`TriMetaverse/docs/training/`（中央聚合面·顶层平铺）」+勘误头 append（P1 判据实锚） | 3+/2- |
 | W12 | training-pack-migration-plan.md | 裁定③ a 案封存形：补元信息头三件套（syncMode=archived）+头注记一行（裁定③措辞逐字）+**正文零改写**（L15/L20/L21/L27/L28/L36/L43 历史叙述全保留） | 7+/0-（纯头部插入） |
 | W13 | cc-tutorial/agent-core-v0.1.0/01-小白版.md | 裁定④零改动维持×2（两留置观察项均不改——记录即毕） | 零 diff（占位达成） |
-| W14 | employee-host-publish-chain-beginners-guide.md | 裁定⑤演进保留形：§10 节头如实化（items 1-3 已落地·4-6 尚未实现）+引导句演进注记行+items 1/2/3 各追加「【已落地·as-of 2026-11-05 现势化】」段（原规划叙述全量保留+活体锚落笔 A5/A6④/A8）；勘误头 append 轮 2 行 | 11+/3- |
-| README:27 | README.md（真源侧） | 勘十四圈外补员裁定：一行改写现役描述形（W9 同款）+行内勘误括注（LG-046 正名口径·K5-K12 教训措辞「出册≠不存在」照录） | 2+/2-（1 行替换） |
+| W14 | employee-host-publish-chain-beginners-guide.md | 裁定⑤演进保留形：§10 节头如实化（items 1-3 已落地·4-6 尚未实现）+引导句演进注记行+items 1/2/3 各追加「【已落地·as-of 2026-11-05 现势化】」段（原规划叙述全量保留+活体锚落笔 A5/A6④/A8）；勘误头 append 轮 2 行 | 8+/3- |
+| README:27 | README.md（真源侧） | 勘十四圈外补员裁定：一行改写现役描述形（W9 同款）+行内勘误括注（LG-046 正名口径·K5-K12 教训措辞「出册≠不存在」照录） | 1+/1-（一行替换） |
+| L26 补笔 | README.md（同件） | 勘十五 review 升报裁定收录：一行改 W11 同款现役描述形+行内简形勘误括注 | 并入上格（README 净 2+/2-） |
 
-净面：**25 insertions / 5 deletions · 4 件**（git diff --stat 实测）。
+净面：**20 insertions / 7 deletions · 4 件**（`git diff --numstat` 分列实测·L26 补笔落笔后终值；勘十五时点读数 19+/6- 系补笔前·两值链如实并录·RDT 交叉验证）。
+**读数勘正留痕（勘十五①退回·FSD 自领入档）**：本卷初稿「25+/5-」系 `git diff --stat` **数字列语义误读**——stat 每行数字列=变更行总数（insertions+deletions 之和）非 insertions；真值分列唯 `--numstat`。识别信号=分件加总≠总计行括注值。候选假读数家族第十五向（RDT 勘十五同判）·教训候 D 系窗。
 
 ## 三 · 自测读数（照轮 1 五组形·同窗实跑·读数先于本卷写前现查 2026-11-05T08:25:09Z）
 
 1. **圈定断言** ✓：`git status --short`=M×4 精确=施工圈；零意外卷入（untracked p3-watch-probe=轮 1 期间已在册他面物·非本席不动）。
 2. **正文零残留** ✓：4 施工件 grep 断链路径 8 处命中逐处定性——baseline L10（勘误头引述·合法）+migration-plan L22/27/28/43（封存件历史叙述·裁定③合法保留=档案价值本体）+README L26（圈外新发现未裁·合法保留升报）+README L27（勘误行内引述·合法）——**零非法残留**。
 3. **封存形 diff 验** ✓：migration-plan 7+/0- 纯头部·正文零触碰实锚。
-4. **新路径前缀** ✓：baseline/README 新现役写法（`TriMetaverse/docs/training/`+`TriMetaverse/TriCompany-host-assets`）在役计数正常。
+4. **新路径前缀** ✓（勘十五②口径分列修正）：两口径分列——README 计宿主根 `TriMetaverse/TriCompany-host-assets`=1 行在役（L27）；baseline 计中央平铺形 `TriMetaverse/docs/training/`（顶层）=1 行在役（L33）——baseline 改写面系中央平铺形不含宿主根名（初稿混计=断言面与 grep 口径错位·改写本身无误）。
 5. **零触碰面** ✓：01-小白版 零 diff；其余 9 件零 diff（圈定外零触碰）。
 
-## 四 · 升报面（2 件·候裁不擅动）
+## 四 · 升报面（2 件·裁定回执态·勘十五 371878d9d）
 
-1. **README L26 同族断链（P5 新发现）**：勘十四圈外补员圈=L27 一行；L26 系本席施工前现勘新发现同族（A6③ 同款）——照勘十二④不越裁定面零触碰，**候 RDT review 裁**（同族改法现成=W11 同款现役描述形一行改·候裁一笔即落）。
-2. **W14 §10 item6 事实面过时（超出本轮裁定圈）**：item6「`employee_host_publish` 当前无 --dry-run/--execute 时默认执行写入」——gate 施工（TC 7f55fe4·2026-11-05 死线提前 ~19h 达成）后 `source_publish_check --publish-agents` 裸调已升 gate 形（默认拦截发布面漂移·dry-run 降级 flag/env 双道）；employee_host_publish 支撑面 --execute 显式形未动。item6 原文与现势出现偏差面——**属裁定⑤锁值面（items 1-3）外**，零触碰；登记候后续轮/复勘窗对表（RDT 域裁定面）。
+1. **README L26 同族断链（P5 新发现）→ 已裁定收录·补笔落笔毕**：勘十五裁定=收录（一行改 W11 同款现役描述形「不代替 `TriMetaverse/docs/training/` 中央聚合面（顶层平铺）」+行内简形勘误括注「勘误 as-of 2026-11-05·A6③ 同款」）——FSD 落笔毕（工作区），随快验后锁笔。
+2. **W14 §10 item6 事实面过时 → 留置候后续窗·采认登记**：勘十五裁定「留置候后续窗·不扩本轮圈」——半升级态须先活体重勘 --dry-run/--execute 现值域+gate 联动面，非一行笔可安全落；列勘十六/复勘窗候选，FSD 处置采认。
+
+**review 锚**：勘十五=RDT 轮 2 review 判定卷（TMV 371878d9d·条件 PASS·判据九条过·施工面 4 件+README 全合格）——条件三件：①卷面读数勘正（§二已照改）②组 4 口径分列（§三.4 已照改）③L26 补笔（上格·落笔毕）。快验候呈（轮 1 K 系先例）。
 
 ## 五 · 性能读数（派工单§四·对表轮 1 基线勘定 ~15min+施工 ~7min+review ~3min）
 

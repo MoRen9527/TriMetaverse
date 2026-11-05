@@ -13,8 +13,8 @@
 | 任务书（LG号+名） | 树 id | 大白话简述 | 树任务链 | 当前进度节点 | 派发时间 | 是否完成 |
 |---|---|---|---|---|---|---|
 | source_publish_check 升 gate 形（CEO 裁③·六要件） | source-publish-gate-ruling（W45） | 发布闸门施工：默认拦截发布面漂移防丢稿 | CEO 裁③→CTO 施工令→FSD 施工→CTO 审查→STE 复跑 | 三道验证闭环：TC 7f55fe4+TMV 65e675fde 锁笔（11-05 14:05）→CTO APPROVE（f29e7d855 裁定卷）→STE PASS（TC a4b7894 验证卷） | 11-05 03:39（CTO 施工令） | 毕（已验：CTO 审查+STE 独立复跑双闸过·死线提前 ~19h） |
-| W45 双线派工（线 1 A/B/C 包+线 2 fade011 剩余） | w45-carryover-local-execution（W45）+sg 侧 w45-carryover-fade001-upgrade | 周平面整理到 W45+fade011 收尾，本地与 sg 两线并行 | CEO 15:42 直令→COO 双线派工单 v1.0→A=RDT/B=FSD/C=RDT+FSD·线 2=SDE/STE/CTO | B 包（本席）在建齐批；A 包 RDT 在办；线 2 SDE wiring/ew 勘定在办·STE 复跑在办 | 11-05 15:42（CEO 直令） | 在途（清尾窗=B 包毕报即环 2 起跑令·死线面=charter 施工窗 18:00 起一次跑完——停工令被 CEO 15:42 覆盖行使即刻开工） |
-| 环 2 扩批轮 2（docs-maintenance 扩批链·轮 2 池 6 件） | docs-maintenance-expansion（W45） | 文档维护扩批第二批：W11/W12/W13/W14+README:27 等 6 件 | CEO 13:09 令二序列→COO 派工单 r2-round2-v1.0→FSD 施工→RDT review 关卡 | 候起跑（起跑条件=B 包毕顺接·派工单+护栏四条+性能读数义务已备妥） | 11-04 13:09（CEO 令） | 在途（候起跑·非卡死——B 包毕报即起跑令） |
+| W45 双线派工（线 1 A/B/C 包+线 2 fade011 剩余） | w45-carryover-local-execution（W45）+sg 侧 w45-carryover-fade001-upgrade | 周平面整理到 W45+fade011 收尾，本地与 sg 两线并行 | CEO 15:42 直令→COO 双线派工单 v1.0→A=COS/B=FSD/C=COS+CAO 主笔·RDT+FSD 实练·线 2=SDE/STE/CTO | **B 包毕（16:16 TMV 287b3737b·8/8 齐性全绿·毕报直达 BOD）**；A 包 COS 在办；C 包候 A/B 毕；线 2 STE 复跑毕（f9ab881fd 99/99）·CTO 总毕报候四输入 | 11-05 15:42（CEO 直令） | 在途（B 包段毕·线 1 余 A/C 包面） |
+| 环 2 扩批轮 2（docs-maintenance 扩批链·轮 2 池 6 件） | docs-maintenance-expansion（W45） | 文档维护扩批第二批：W11/W12/W13/W14+README:27 等 6 件 | CEO 13:09 令二序列→COO 派工单 r2-round2-v1.0→FSD 施工→RDT review 关卡 | **施工毕（16:26 勘定卷 TMV f357cb120·4 件动笔 25+/5-·W13 零改动占位·自测五组全绿）→呈 RDT review 候回**（升报两件候裁：README L26 新发现+§10 item6 事实面）·review PASS 后 TriTraining 锁笔+毕报 | 11-04 13:09（CEO 令） | 在途（候 review·非卡死——RDT review 关卡护栏①照走） |
 | LG-092 铂 8713 fade011 自动 job 勘修 | （候裁挂号面·无施工树） | 8713 fade011 保自动·手动运行=CEO/人工通道 | CEO 候裁挂号→COS 台账 L 系挂账 | 候裁在挂（席位勿代办·POST /run 亦属手动面——FSD 施工中未触碰该 job 照守） | 11-05 前候裁挂号 | 在途（候裁面·候 CEO 裁） |
 
 ## 二、行锚与纪律注
