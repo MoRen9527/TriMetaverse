@@ -1340,3 +1340,8 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - 拍龄 13m35s（tick=10:07:04·读于 10:20:39）轻超档；檐回正（:07 整）——E1-5 恢复后写者形正常化旁证。
 - ⓪ 非空闲·1 席在干活：本地 m-cfo；sg duty 组全候令；② 8713 ok uptime 21891s pwr=100% gate=none（notifyFailures=1 维持）；8711 ok 49h；河源 active。③ 8712 ok cron16 绿。④ 大表 24 开 4。
 - v4.1 sweep：sg trees 5 文件=**真席活**——e15-modern-standby-ruling 树（cto-ruling.md+dispatch-intake.jsonl=E1-5 裁件）+fade011-ew-runs 事故卷+README-POINTER（A-1 事故链）+draft 自身镜像——免通报（有新落卷）。
+## 意见㊿+137（2026-11-05 10:24:26 +0800·shell 注入现查落款）：BOD 终裁落——A-1 事故放弃重建·主链收口
+
+- 三勘读数（CTO 10:22 裁达·正身卷 948ee2474）：(a) fade.db 记录面零损失全字段完整（57 runs 五表全勘·两 run APPROVED+checkpoint+570 transitions 在册）——**损害重定性：删损仅盘面 artifacts** (b) 已取代成立（程序化壳增量≈零·活性被新形 run 覆盖·今晨 sg 侧续落盘）(c) 无需专项重建（FINALIZING 终态不可续跑·fade-w 双侧活·高频可再生）。
+- BOD 终裁（SendMessage m-cos 5a79f2fa）：**放弃重建**（依据三勘·与 CTO 倾向一致）；附带采认 fade.db 记录面导出归档一份（W45 快照形·CTO 随手窗办·办毕销候件）；裁④备案收认（条款化+机械闸三理由成立·条款正形落 CAO 纪律册·机械闸候 FSD 窗·两件挂账候窗）。
+- 事故主链收口：裁①+裁②终裁+裁④均入账；裁③ scoring 链 CHO 面独立续行不随收口销。请 COO 销主链挂账保留 scoring 线。
