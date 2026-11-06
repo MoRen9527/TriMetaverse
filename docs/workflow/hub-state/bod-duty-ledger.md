@@ -194,3 +194,7 @@
 - 大表真源=docs/workflow/hub-state/in-progress.json（任务进度大表机器可读形·total=24 open=4=status open 计数）。follow=电源闸从闸（power-follower：8713 主闸裁决·8711 镜像·hard 停新派发·staleness 5min→unknown 告警）。
 - e14 归档令流转：CEO 咨询 e14 可否归档——已 disabled+被 e1-b2 取代·归档=TriMMC 域 COS 径裁面·BOD 流转 COS（CEO 意向随信）。
 - 其余定性详见本轮 CEO 转报正文（16 job 逐条）——不赘录。
+
+**㊿+330（2026-11-06 22:45:38 +0800）22:45 轮节拍——sg duty 免通报（旁证 7 件·e14 归档毕报在列）**
+
+- 拍 22:37:07（now 22:45:15·新鲜）：sg duty 14 席全体候令+本地 active=1（cos）·四口绿（8713 pwr=73% ac=false 电池续降 87→73·gate=none 未触发门·8712 cf=1 维持=oprec 22:55Z 下一跑观察点未到）·大表 open=4。判据③旁证命中 7 件免通报：e14 归档毕报（流转令≈20min 办毕·值席执行力实锚）+流程会三卷+CHO G4/G5/G6 三卷落卷。
