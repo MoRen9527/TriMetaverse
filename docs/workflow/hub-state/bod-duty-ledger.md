@@ -60,3 +60,10 @@
 - power-gate 系统警报（mailbox 11:28:16Z=19:28:16+08 送达·TriMLC powerMonitor 连续 3 次读取失败·闸不可信）——销读毕（零未读）。
 - **BOD 独立第二方法核查**（CIM BatteryStatus·非转抄 daemon 读数）：PowerOnline=True·93%·BatteryStatus=2=**物理电源正常**——警报定性=TriMLC powerMonitor 读数链故障（healthz readFailures=21 累积旁证）·非电源本体·Watchdog 兜底无停机近忧。
 - TriMLC 异常族并录（与 ㊿+306 tick 停更同窗两笔）：①tick 生成 job 停更 ②powerMonitor 读数链故障——已流转 COS 并入勘修单（msg 9f3a5f1a·CTO/SDE 面 job/monitor 面一次勘定·照勘修窗纪律）。
+
+**㊿+308（2026-11-06 19:51:30 +0800）CEO 直连大令（19:50:59+08）——派工盯进度流程设计会+联审发起·七原则全文入卷**
+
+- CEO 令原文：「派工这条链发生太多这类问题了，我们需要设计一个严谨派工盯进度的流程，把cpo和pm、cto叫出来，与cos、coo一起讨论，定流程」——今日三连质询（形三陈旧呈报/候形态误挂/COS 盯树断链 11h）为令源背景。
+- **七原则全文**：①BOD 收到 COS 已挂出的任务书和树记 md·COS 自己负责的也记 md·台账同理（双面记账对账基座）②daemon 挂定时任务查未完成任务书/树进度→通知 COS→COS 推进（机械盯进）③COS 完成的树/任务书与 BOD 销账（销账闭环）④能做程序脚本的固定执行·不靠员工自觉（机械优先）⑤任务书和树放周平面任务进度大表（全联动）⑥BOD 底稿（=bod-duty-ledger.md 制度位）记录需求·与周工作平面需求大表对应（PM 维护）·两表对账·daemon 定时查需求提醒 CEO 审核·或周日集中审核进下周平面——**CEO 附发现：周工作平面 plan skill 未考虑需求审核+已审核需求进下周任务书化的迁移规划（缺口补）**⑦定时任务脚本跨平台·少用 Windows PowerShell（只能本地域跑不跨平台）·本次集中整治。
+- **会议召集（已流转 COS）**：圆桌讨论会+联审双轨——参会五席=COS（主理·派工链 owner）+COO（节奏排工）+CTO（daemon 定时任务/脚本工程面）+CPO（产品面·联审 CPO 默认入列）+PM（plan skill/需求迁移规划）·19 点后=会议/交互讨论/设计带正窗。
+- **产出三件**：①派工盯进度流程制度卷（双面记账+daemon 机械盯进+销账闭环+大表联动）②plan skill 迁移规划缺口补丁方案③跨平台脚本整治方案（去 PowerShell 化·今日复发的 schtasks/ps1 BOM/嵌套转义族教训入题）。定稿后照联审工作流审签。
