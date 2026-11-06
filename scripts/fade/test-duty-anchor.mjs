@@ -9,7 +9,7 @@ import assert from "node:assert";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { readMailboxDoc, dutyPickupAnchor } from "./lib/duty-anchor.mjs";
+import { readMailboxDoc, dutyPickupAnchor, readNoticeAnchor, dutyNoticeInFlight, NOTICE_PENDING_MIN } from "./lib/duty-anchor.mjs";
 
 let passed = 0;
 function ok(name, fn) {
@@ -102,4 +102,75 @@ ok("案9 readMailboxDoc 错路径/坏 JSON → null fail-open", () => {
   assert.equal(readMailboxDoc("D:/no/such/file.json"), null);
 });
 
-console.log(`\n# duty-anchor 自测门 ${passed}/9 绿`);
+// ── 通报锚判六态（BOD ㊿+288 批准·v4.3 增量锚笔消费面）──
+const NOW_MS = Date.parse("2026-11-06T03:00:00.000Z");
+
+ok("案10 通报在途成立: 通报晚于静默起点且 15min 窗内 → notice-in-flight", () => {
+  const r = dutyNoticeInFlight(
+    "notice @2026-11-06T02:50:00Z 第1轮 tmux直发\n",
+    Date.parse("2026-11-06T01:00:00.000Z"),
+    NOW_MS,
+  );
+  assert.equal(r.inFlight, true);
+  assert.equal(r.reason, "notice-in-flight");
+  assert.equal(r.newestNoticeMs, Date.parse("2026-11-06T02:50:00Z"));
+});
+
+ok("案11 响应窗过期照报: 通报晚于起点但超 15min → notice-expired（真死防漏报闭合）", () => {
+  const r = dutyNoticeInFlight(
+    "notice @2026-11-06T01:10:00Z 第1轮\n",
+    Date.parse("2026-11-06T01:00:00.000Z"),
+    NOW_MS,
+  );
+  assert.equal(r.inFlight, false);
+  assert.equal(r.reason, "notice-expired");
+});
+
+ok("案12 通报旧于静默起点照报: → notice-older-than-silence（旧通报与本窗无关）", () => {
+  const r = dutyNoticeInFlight(
+    "notice @2026-11-06T00:30:00Z 第0轮\n",
+    Date.parse("2026-11-06T01:00:00.000Z"),
+    NOW_MS,
+  );
+  assert.equal(r.inFlight, false);
+  assert.equal(r.reason, "notice-older-than-silence");
+});
+
+ok("案13 空/缺行族: null/空白 → no-anchor-log；无合法时戳 → no-valid-notice", () => {
+  assert.equal(dutyNoticeInFlight(null, 1, NOW_MS).reason, "no-anchor-log");
+  assert.equal(dutyNoticeInFlight("  \n", 1, NOW_MS).reason, "no-anchor-log");
+  assert.equal(dutyNoticeInFlight("notice @bogus 第1轮\n", 1, NOW_MS).reason, "no-valid-notice");
+  assert.equal(dutyNoticeInFlight("无关行\n", 1, NOW_MS).reason, "no-valid-notice");
+});
+
+ok("案14 dutyMs 缺席 → no-duty-ms fail-open", () => {
+  assert.equal(dutyNoticeInFlight("notice @2026-11-06T02:50:00Z\n", null, NOW_MS).reason, "no-duty-ms");
+});
+
+ok("案15 多行取最新+pendingMin 可注入+常量值面", () => {
+  const r = dutyNoticeInFlight(
+    "notice @2026-11-06T01:10:00Z 第1轮\nnotice @2026-11-06T02:50:00Z 第2轮 tmux直发\nnotice @2026-11-06T01:30:00Z 第1.5轮\n",
+    Date.parse("2026-11-06T01:00:00.000Z"),
+    NOW_MS,
+  );
+  assert.equal(r.inFlight, true, "最新行（第2轮 02:50）在窗");
+  assert.equal(r.newestNoticeMs, Date.parse("2026-11-06T02:50:00Z"));
+  assert.equal(NOTICE_PENDING_MIN, 15, "PENDING_MIN=15（BOD 批令值）");
+  const r2 = dutyNoticeInFlight(
+    "notice @2026-11-06T02:50:00Z\n",
+    Date.parse("2026-11-06T01:00:00.000Z"),
+    NOW_MS,
+    1,
+  );
+  assert.equal(r2.inFlight, false, "pendingMin=1 注入→窗过照报（可注入面）");
+});
+
+ok("案16 readNoticeAnchor 真 IO 链: 临时档读回+错路径 null（fail-open 面）", () => {
+  const tmp = path.join(os.tmpdir(), `notice-anchor-test-${process.pid}-${Date.now()}.log`);
+  fs.writeFileSync(tmp, "notice @2026-11-06T02:50:00Z 第1轮 tmux直发\n");
+  assert.match(readNoticeAnchor(tmp), /notice @2026-11-06T02:50:00Z/);
+  fs.rmSync(tmp, { force: true });
+  assert.equal(readNoticeAnchor("D:/no/such/anchor.log"), null);
+});
+
+console.log(`\n# duty-anchor 自测门 ${passed}/16 绿`);

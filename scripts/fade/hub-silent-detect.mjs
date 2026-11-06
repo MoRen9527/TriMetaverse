@@ -34,7 +34,7 @@ import { readDutyTickSignal } from "./lib/duty-tick-signal.mjs";
 // bod 信箱档拾取锚判（self-clear 降级面）——纯函数抽 lib/duty-anchor.mjs 可测。
 // 范围划界（BOD 令原文）：keeper 探针 A（18710 隧道）瞬态告警调优不并入本施工——
 // 本段零触碰；ledger/idle-escalate/reminder 段零触碰；灰度基线读数不动。
-import { readMailboxDoc, dutyPickupAnchor } from "./lib/duty-anchor.mjs";
+import { readMailboxDoc, dutyPickupAnchor, readNoticeAnchor, dutyNoticeInFlight, NOTICE_PENDING_MIN } from "./lib/duty-anchor.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..", "..");
@@ -55,6 +55,13 @@ const DUTY_SEAT = "COS"; // 中枢值守 — duty second-hop target maps to m-co
 // （dev 机·机位断言 D-24 在案）；env 覆盖口留测面/他机部署。
 const MAILBOX_OBSERVER =
   process.env.TRILC_NOTIFY_MAILBOX_OBSERVER?.trim() || "D:/Code/ai/TriMLC/notify-mailbox.json";
+
+// 通报锚文件（BOD ㊿+288 批准·锚笔规格 FSD 供·落笔归 BOD tick v4.3 增量）：BOD 每轮
+// duty 通报后落一行 `notice @<ISO 时戳> 第<N>轮 <通道注记>`。非周平面固定位（判据读面
+// 零跨周解析）+git 追踪留痕；零行/缺档=fail-open 照报（保守不漏报）。
+const NOTICE_ANCHOR_FILE =
+  process.env.TRILC_NOTICE_ANCHOR_FILE?.trim() ||
+  path.join(REPO_ROOT, "docs", "workflow", "hub-state", "duty-notice-anchor.log");
 
 // ── keeper probe (keeper-probe-20261015 · CTO dispatch 4e0becc27 · BOD 令文基准) ──
 // 半死窗教训（2026-10-15 09:04-09:34 无人察觉 30min）：端口在+进程在≠服务活——
@@ -346,21 +353,26 @@ async function main() {
     if (dutySilentMin > ESCALATE_MIN) {
       const last = state[dutyKey];
       if (!(last && now - last < COOLDOWN_MIN * 60000)) {
-        // b 项落形（双批齐 2026-11-06）：escalate 前读 bod 信箱档——duty 源信
-        // received_at 晚于 transcript 静默起点=拾取实证→self-clear 记档不报
-        // （不写 state·信箱清空后下拍照常复核零残留）。信箱不可读/无锚/锚旧=
-        // fail-open 照报（保守不漏报·三钉③读炸由本段 try/catch 兜）。
-        // 如实注：通报方向（BOD→duty SendMessage 直发）零文件锚·PENDING_MIN
-        // 通报在途判物理不可达——候锚面提案批后落（毕报呈 BOD/COS）；今晨型
-        // 通报在途窗（回执未投期间）本锚救不了=物理天花板。
+        // b 项落形（双批齐 2026-11-06）+通报锚增量（BOD ㊿+288 定谳同意·批准）：
+        // 三链判=①通报锚（锚笔落位后生效·零行/缺档 fail-open）→②回执锚（信箱档
+        // 拾取实证·消费后清=瞬态）→③照报（保守不漏报·三钉③读炸由本段 try/catch 兜）。
+        // 两锚 self-clear 均不写 state（零残留·下拍照常复核）。
+        // 如实注：通报方向 SendMessage 直发零文件锚（勘定在案）——通报锚笔=v4.3
+        // 增量补的锚面，锚笔未落位前①恒 fail-open 照报（零行为差·灰度基线不动）。
+        const noticeText = readNoticeAnchor(NOTICE_ANCHOR_FILE);
+        const notice = dutyNoticeInFlight(noticeText, dutyMs, Date.now());
         const mbox = readMailboxDoc(MAILBOX_OBSERVER);
         const anchor = dutyPickupAnchor(mbox, dutyMs);
-        const anchorLine = mbox
-          ? anchor.count
-            ? `duty 源信 ${anchor.count} 条·最新 received_at=${new Date(anchor.newestMs).toISOString()}`
-            : "无 duty 源信在档"
-          : "信箱档不可读";
-        if (anchor.anchored) {
+        const noticeFace = notice.newestNoticeMs
+          ? `通报锚=${notice.reason}(最新 ${new Date(notice.newestNoticeMs).toISOString()})`
+          : `通报锚=${notice.reason}`;
+        const anchorLine = `${noticeFace} · ${mbox ? (anchor.count ? `duty 源信 ${anchor.count} 条·最新 received_at=${new Date(anchor.newestMs).toISOString()}` : "无 duty 源信在档") : "信箱档不可读"}`;
+        if (notice.inFlight) {
+          skipped.push(
+            `duty-cos: escalate self-clear (notice in-flight: 最新通报 ${new Date(notice.newestNoticeMs).toISOString()} 在 ${NOTICE_PENDING_MIN}min 响应窗内)`,
+          );
+          appendLog(`duty-cos escalate self-clear — notice-in-flight (newest notice ${new Date(notice.newestNoticeMs).toISOString()})`);
+        } else if (anchor.anchored) {
           skipped.push(`duty-cos: escalate self-clear (pickup anchor: ${anchorLine})`);
           appendLog(`duty-cos escalate self-clear — pickup anchor hit (${anchorLine})`);
         } else {
@@ -469,11 +481,11 @@ async function main() {
     const realMin = srcVals.length
       ? Math.floor((sendMs - Math.max(...srcVals)) / 60000)
       : a.silentMin;
-    // b 项落形：duty-escalate 报文自带复核锚面现状行——BOD 收告警一眼定性
-    // （duty 源信在档且晚于静默起点=拾取在途·照此定性假警报；无信=真静默高概率）。
+    // b 项落形+通报锚增量：duty-escalate 报文自带复核锚面现状行——BOD 收告警一眼
+    // 定性（通报锚/回执锚任一在窗=假警报高概率；双锚皆空=真静默高概率）。
     const anchorBody =
       a.level === "duty-escalate" && a.anchorLine
-        ? `复核锚面（拾取锚判 b 项落形）: ${a.anchorLine}\n`
+        ? `复核锚面: ${a.anchorLine}\n`
         : "";
     const body =
       `条目=${a.id} 状态=${a.status || "-"} 级别=${a.level} 静默=${realMin === Infinity ? "∞(无信号)" : realMin + "min"}` +

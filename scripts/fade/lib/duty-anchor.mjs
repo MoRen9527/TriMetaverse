@@ -46,3 +46,50 @@ export function dutyPickupAnchor(mailboxDoc, dutyMs) {
   if (newest > dutyMs) return { anchored: true, reason: "pickup-verified", newestMs: newest, count: hits.length };
   return { anchored: false, reason: "anchor-older-than-silence", newestMs: newest, count: hits.length };
 }
+
+// ── 通报锚判（BOD ㊿+288 批准·2026-11-06）─────────────────────────────────
+// 锚文件=docs/workflow/hub-state/duty-notice-anchor.log（非周平面固定位·git 追踪
+// 留痕）·BOD 侧每轮 duty 通报后落一行：`notice @<ISO 时戳> 第<N>轮 <通道注记>`。
+// 判据（PENDING_MIN=15min·BOD 批令主判据正形落位）：最新通报时戳晚于 transcript
+// 静默起点（通报是对本次静默的响应）且距检出拍 <15min（响应窗内·duty 可能还没回）
+// →通报在途→调用方 self-clear。通报晚于起点但已超 15min=响应窗已过照报（真死防
+// 漏报闭合·BOD 漏报边例条件）；通报早于起点=旧通报与本窗无关照报。零行/文件不存在
+// =fail-open 照报（保守不漏报）。
+
+export const NOTICE_PENDING_MIN = 15;
+
+/**
+ * 通报在途判（纯函数·六态可测）。
+ * @param anchorLogText 锚文件全文（string|null）
+ * @param dutyMs        duty transcript mtime（静默起点·null=无读数）
+ * @param nowMs         检出拍时刻
+ * @param pendingMin    响应窗（缺省 15）
+ * @returns {inFlight:boolean, reason:string, newestNoticeMs?:number}
+ */
+export function dutyNoticeInFlight(anchorLogText, dutyMs, nowMs, pendingMin = NOTICE_PENDING_MIN) {
+  if (dutyMs === null || !Number.isFinite(dutyMs)) return { inFlight: false, reason: "no-duty-ms" };
+  if (!anchorLogText || !anchorLogText.trim()) return { inFlight: false, reason: "no-anchor-log" };
+  const stamps = [...anchorLogText.matchAll(/notice @(\S+)/g)]
+    .map((m) => Date.parse(m[1]))
+    .filter((t) => Number.isFinite(t))
+    .sort((a, b) => b - a);
+  if (stamps.length === 0) return { inFlight: false, reason: "no-valid-notice" };
+  const newest = stamps[0];
+  if (newest > dutyMs && nowMs - newest < pendingMin * 60000) {
+    return { inFlight: true, reason: "notice-in-flight", newestNoticeMs: newest };
+  }
+  return {
+    inFlight: false,
+    reason: newest > dutyMs ? "notice-expired" : "notice-older-than-silence",
+    newestNoticeMs: newest,
+  };
+}
+
+/** 读通报锚文件全文（零副作用·读炸/不存在返 null=fail-open 照报）。 */
+export function readNoticeAnchor(path) {
+  try {
+    return fs.readFileSync(path, "utf-8");
+  } catch {
+    return null;
+  }
+}
