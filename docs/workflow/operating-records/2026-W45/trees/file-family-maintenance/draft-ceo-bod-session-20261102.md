@@ -2289,3 +2289,11 @@ COS 回执（10:41:59·msg de9a716e 链）两处候对表呈报，BOD 对表认�
 - ④CHO 排程施工域=M 面本地域治理面（TriCompany 仓真源层 source-agents/ 各席自改自家五件套·A 批 C-level 先行·三席已落笔 486f880/005fe66/ee5f887）·监督推进 owner=CHO（G1 指引+G3 验收签收 2/7）·COS 派工链协同+G6 收口呈 BOD 采认·B 批候验收过半经 COS 派工链（D-27）。已呈达。
 - ⑤PM 启用态三面实勘：**已转正**（roster v1.1.0 product-manager 小案·onboardedAt 2026-10-20·status live·reportsTo CPO）；M 面本地域**已启用**（.claude/agents/product-manager.md 实勘在位）；M 面服务域**未启用**（sg duty 班组 13 席 tmux 活体实勘无 m-duty-pm·duty 拓扑 10-13 建 13 席·PM 入册在后未挂 duty 位）；R 面服务域**本轮无活体读数**——探针三变体（R-HY/r-hy×两跳板形）均 Name or service not known=sg 侧 R-HY 跳板别名未配置·通道面候勘（[m-sg-r-hy-server-naming] 河源=R-HY 独立机定性不变）·不编造读数。已呈达。
 - 值守面注：双窗 19:07 内·零异常。
+
+**㊿+298（2026-11-06 19:10:47 +0800）job1 19:09 轮——双窗满·全席空闲·第 12 轮双通报闭**
+
+- 拍 19:07:05（龄 2 分 13 秒准点）：**全席空闲**（sg duty 组 13 席全候令+本地 13 席全空闲——18:37 拍 m-cfo/m-coo 在干活已转空闲）。四口全绿：8713 ok uptime_s=74167 notifyFailures=0 pwr=93%·8711 ok uptime_h=82 pollFail=0·河源 trirmc:active·MMC consecutiveFailures=0 稳定·大表 24/4。
+- 双窗判读：sg_exempt_until=local_exempt_until=19:07:00·now=19:09:18 **双窗满→恢复正常通报面**（v4.3 窗满机械复跑）。
+- sg 旁证自查：45min 窗 2 命中均=BOD 自身镜像（idle-watch-state+底稿·本席 19:08 commit 62016acbe push 同步面）·**零席位工件活动**（10h 对照 9 文活与前轮同值）。
+- **第 12 轮通报双通道**：①sg tmux 直发 m-duty-cos（19:09:5x）——capture-pane 验拾取 ✓（Deliberating 2s·对话流消费确认·独立 Enter 正形）；②锚笔随即落 duty-notice-anchor.log：notice @2026-11-06T11:10:08Z 第12轮 tmux直发（第 9/10/11/12 轮四笔连续）；③本地 SendMessage m-cos 同构通报（信箱 msg 0768a11b·本地组无锚笔面）。通报文均带「请交叉排工单定性：待派 or 已派未拾取断链 or open 派工零活动」。
+- state 已更（round=12·streak 清零防重发）·候双定性回执（回执达即重算双窗=min(定性+60min, 第2拍 19:37)）·PENDING_MIN=15min 窗内无回执则 hub-silent-detect 链降级面。
