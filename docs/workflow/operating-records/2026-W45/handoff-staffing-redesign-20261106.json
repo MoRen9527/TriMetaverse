@@ -12,12 +12,36 @@
   "stateMachine": {
     "current": "closed（全链销账）",
     "history": [
-      {"stage": "G1-施工指引", "status": "done", "anchor": "TMV@0f9abd98e（G1a）+TMV@aea094686（G1b）"},
-      {"stage": "G2-逐席自改", "status": "done", "anchor": "TC 486f880（CHO 首例）+13 席笔（TC e9ef08f..f908e4e 全链）"},
-      {"stage": "G3-逐席验收", "status": "done", "anchor": "验收单累积卷 TMV@183aebae3（13/13 全批毕 APPROVE·零 FREEZE 零退回·签收附五锚验证锚）"},
-      {"stage": "G4-攒批换代", "status": "done", "anchor": "TMV@77aa32a73（G4 记录卷·两面 20 件 live discovery 全绿·TC 顶 97e754b 对平·TMV 锁笔 e31dec1a5）+勘正注（吞笔误判勘正）"},
-      {"stage": "G5-治理回填", "status": "done", "anchor": "roster v1.2.0 crewTopology 段（TC@53e97fe）+gov-state 双班组节+本 handoff 对象新立+manifest 对表读数（TMV@73259b680）"},
-      {"stage": "G6-收口呈 BOD", "status": "done", "anchor": "收口毕报 TMV@f259f0abe·COS 转呈回执 22:17:32"}
+      {
+        "stage": "G1-施工指引",
+        "status": "done",
+        "anchor": "TMV@0f9abd98e（G1a）+TMV@aea094686（G1b）"
+      },
+      {
+        "stage": "G2-逐席自改",
+        "status": "done",
+        "anchor": "TC 486f880（CHO 首例）+13 席笔（TC e9ef08f..f908e4e 全链）"
+      },
+      {
+        "stage": "G3-逐席验收",
+        "status": "done",
+        "anchor": "验收单累积卷 TMV@183aebae3（13/13 全批毕 APPROVE·零 FREEZE 零退回·签收附五锚验证锚）"
+      },
+      {
+        "stage": "G4-攒批换代",
+        "status": "done",
+        "anchor": "TMV@77aa32a73（G4 记录卷·两面 20 件 live discovery 全绿·TC 顶 97e754b 对平·TMV 锁笔 e31dec1a5）+勘正注（吞笔误判勘正）"
+      },
+      {
+        "stage": "G5-治理回填",
+        "status": "done",
+        "anchor": "roster v1.2.0 crewTopology 段（TC@53e97fe）+gov-state 双班组节+本 handoff 对象新立+manifest 对表读数（TMV@73259b680）"
+      },
+      {
+        "stage": "G6-收口呈 BOD",
+        "status": "done",
+        "anchor": "收口毕报 TMV@f259f0abe·COS 转呈回执 22:17:32"
+      }
     ],
     "closedAt": "2026-11-06T22:19:00+08:00",
     "closeAnchor": "BOD 采认回执（2026-11-06 22:18·㊿+328 落卷·f259f0abe+53e97fe 双锚在链实勘·§四随批四件记收）——CHO 销账执行·COS 台账终销随本销账回执"
@@ -29,7 +53,7 @@
     "governanceBackfill": "roster v1.2.0+gov-state 双班组节+handoff 本对象三处回填读数（G5 记录卷承载）"
   },
   "pendingItems": [
-    "铸册窗 D-73 对 CAO 同窗对表（crewTopology 字段名式定谳+铸条·知会已发 22:15:59·候窗随批）",
+    "（已毕·post-close 销项 2026-11-06T22:28:05+0800）铸册窗对 CAO 同窗对表——CAO 定谳回执：crewTopology 字段名采正 G5 草案名+双班组铸条 D-76 席位双班组拓扑制（TC@18e32f8·22:19:15+08·CHO 验锚 SG-CHAIN-OK/G5-BASE-IN）→roster v1.2.1 摘 fieldNamingPending 注（TC@d0a7bea·sg 顶验真）；stateMachine closed 态不动·纯 pending 明细销项",
     "W45 结算窗 11-08：结算表 13 vs roster 14 席位差（PM）对表定谳（排程单 §五.1 在案）",
     "试岗观察期一周级运转（BOD 采认随批件·试岗毕 roster 换版注记）"
   ],
