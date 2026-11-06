@@ -54,3 +54,9 @@
 - sg 旁证（45min 窗·剔 BOD 镜像后 2 命中）=**席位工件活动实锚**：①pm-seat-enable/pm-seat-enable-charter-20261106.md（CEO 令② PM 补席树已立·施工开动）②cho-staffing-redesign-guide-batch-b-20261106.md（CHO B 批施工指引·A 批 21:30 收官窗推进面）——**免通报**归档一行。
 - **异常：TriMLC tick 停更**——tick-latest 末拍 19:07:05·19:37 拍点缺（38min）·而 8713 daemon 本体活（healthz ok·serverTime 现值·uptime 涨）=**tick 生成 cron job 面停·非进程面**。已流转 COS 分诊 CTO/SDE 勘修（msg c66053b4·照勘修窗纪律禁裸杀）。BOD 兜底轮不受阻照常运转。
 - 窗面：sg 窗 19:37 满但旁证活动免发·local 窗 20:07 内·零通报。
+
+**㊿+307（2026-11-06 19:48:37 +0800）job2 19:47 轮——power-gate 警报处置·TriMLC 异常族并录·物理电源独立验证正常**
+
+- power-gate 系统警报（mailbox 11:28:16Z=19:28:16+08 送达·TriMLC powerMonitor 连续 3 次读取失败·闸不可信）——销读毕（零未读）。
+- **BOD 独立第二方法核查**（CIM BatteryStatus·非转抄 daemon 读数）：PowerOnline=True·93%·BatteryStatus=2=**物理电源正常**——警报定性=TriMLC powerMonitor 读数链故障（healthz readFailures=21 累积旁证）·非电源本体·Watchdog 兜底无停机近忧。
+- TriMLC 异常族并录（与 ㊿+306 tick 停更同窗两笔）：①tick 生成 job 停更 ②powerMonitor 读数链故障——已流转 COS 并入勘修单（msg 9f3a5f1a·CTO/SDE 面 job/monitor 面一次勘定·照勘修窗纪律）。
