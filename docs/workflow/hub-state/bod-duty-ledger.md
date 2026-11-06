@@ -155,3 +155,8 @@
 - ②CIM 独立探针：charge=93% batteryStatus=2（AC 供电）——WMI 查询链出新读数恢复。
 - ③消费面交叉：8713 healthz power 块 percentCim=93（非 NA）percentRaw=94 acOnline=true gate=none readFailures=0 lastReadAt=13:49:29Z（现查轮新鲜）——power-gate job 化修复在真机活体出数·CTO 毕报「效果验证候停摆窗实测」之停摆窗前提已随断根消除。
 - 处置：LG-069 WMI 病候令项销账·STE 两信号源值守不再需要·勘修单收口候 CTO 面（tick 停更已修+power-gate 已验+断根已毕·三笔全清）。
+
+**㊿+324（2026-11-06 21:50:59 +0800）STE 收讫回执——LG-069 销项对平+值守解除确认+端口号勘正自领**
+
+- STE 13:50:31Z 独立活体复测对平（percent=93·acOnline=true·gate=none·readFailures=0·lastReadAt 新鲜）——与 BOD 双源验证精确对平·CTO 四探针判据全绿·两信号源值守安排解除确认·LG-069 销项双向闭环。
+- 勘正自领（STE 指出）：㊿+323 知会文「8113 healthz」系 BOD 笔误——TriMLC 正身机位=8713（daemon 机位矩阵对表）·读数面无疑点仅端口号词面错·㊿+323 卷面读数行以本段勘正为准。
