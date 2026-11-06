@@ -30,6 +30,11 @@ import { sendNotify } from "./lib/notify-sender.mjs";
 import { collectNodeSignals } from "./lib/tree-signals.mjs";
 import { isQuietHours } from "./lib/quiet-hours.mjs";
 import { readDutyTickSignal } from "./lib/duty-tick-signal.mjs";
+// b 项落形（BOD 闭窗宣告 ㊿+287=4ced0ae9c·双批齐 2026-11-06）：duty-escalate 前
+// bod 信箱档拾取锚判（self-clear 降级面）——纯函数抽 lib/duty-anchor.mjs 可测。
+// 范围划界（BOD 令原文）：keeper 探针 A（18710 隧道）瞬态告警调优不并入本施工——
+// 本段零触碰；ledger/idle-escalate/reminder 段零触碰；灰度基线读数不动。
+import { readMailboxDoc, dutyPickupAnchor } from "./lib/duty-anchor.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..", "..");
@@ -44,6 +49,12 @@ const ESCALATE_MIN = 30;
 const COOLDOWN_MIN = 30;
 
 const DUTY_SEAT = "COS"; // 中枢值守 — duty second-hop target maps to m-cos transcript
+
+// b 项落形：bod 信箱档观察位（TriMLC letter-store 落盘面·daemon cwd=D:\Code\ai\TriMLC
+// ·启动器未设 TRIMC_NOTIFY_MAILBOX→daemon 缺省 cwd 面）。跨仓绝对路径=本机部署事实
+// （dev 机·机位断言 D-24 在案）；env 覆盖口留测面/他机部署。
+const MAILBOX_OBSERVER =
+  process.env.TRILC_NOTIFY_MAILBOX_OBSERVER?.trim() || "D:/Code/ai/TriMLC/notify-mailbox.json";
 
 // ── keeper probe (keeper-probe-20261015 · CTO dispatch 4e0becc27 · BOD 令文基准) ──
 // 半死窗教训（2026-10-15 09:04-09:34 无人察觉 30min）：端口在+进程在≠服务活——
@@ -335,17 +346,37 @@ async function main() {
     if (dutySilentMin > ESCALATE_MIN) {
       const last = state[dutyKey];
       if (!(last && now - last < COOLDOWN_MIN * 60000)) {
-        alerts.push({
-          id: dutyKey,
-          level: "duty-escalate",
-          silentMin: dutySilentMin,
-          seats: ["m-cos"],
-          perSource: { transcript: dutyMs },
-          stateKey: dutyKey,
-          // BOD 10-21 判据反馈：transcript 单源=可能空闲误报非失联——接收侧先验
-          // 箱水位/注册面再定性，处置照 COO 附报形勿直升级（v2 二级确认候窗）。
-          note: "transcript 单源读数——可能=空闲态误报（零来件≠失联），先验箱水位+注册面再定性",
-        });
+        // b 项落形（双批齐 2026-11-06）：escalate 前读 bod 信箱档——duty 源信
+        // received_at 晚于 transcript 静默起点=拾取实证→self-clear 记档不报
+        // （不写 state·信箱清空后下拍照常复核零残留）。信箱不可读/无锚/锚旧=
+        // fail-open 照报（保守不漏报·三钉③读炸由本段 try/catch 兜）。
+        // 如实注：通报方向（BOD→duty SendMessage 直发）零文件锚·PENDING_MIN
+        // 通报在途判物理不可达——候锚面提案批后落（毕报呈 BOD/COS）；今晨型
+        // 通报在途窗（回执未投期间）本锚救不了=物理天花板。
+        const mbox = readMailboxDoc(MAILBOX_OBSERVER);
+        const anchor = dutyPickupAnchor(mbox, dutyMs);
+        const anchorLine = mbox
+          ? anchor.count
+            ? `duty 源信 ${anchor.count} 条·最新 received_at=${new Date(anchor.newestMs).toISOString()}`
+            : "无 duty 源信在档"
+          : "信箱档不可读";
+        if (anchor.anchored) {
+          skipped.push(`duty-cos: escalate self-clear (pickup anchor: ${anchorLine})`);
+          appendLog(`duty-cos escalate self-clear — pickup anchor hit (${anchorLine})`);
+        } else {
+          alerts.push({
+            id: dutyKey,
+            level: "duty-escalate",
+            silentMin: dutySilentMin,
+            seats: ["m-cos"],
+            perSource: { transcript: dutyMs },
+            stateKey: dutyKey,
+            anchorLine,
+            // BOD 10-21 判据反馈：transcript 单源=可能空闲误报非失联——接收侧先验
+            // 箱水位/注册面再定性，处置照 COO 附报形勿直升级（v2 二级确认候窗）。
+            note: "transcript 单源读数——可能=空闲态误报（零来件≠失联），先验箱水位+注册面再定性",
+          });
+        }
       } else {
         skipped.push("duty-cos: escalate in cooldown");
       }
@@ -438,10 +469,17 @@ async function main() {
     const realMin = srcVals.length
       ? Math.floor((sendMs - Math.max(...srcVals)) / 60000)
       : a.silentMin;
+    // b 项落形：duty-escalate 报文自带复核锚面现状行——BOD 收告警一眼定性
+    // （duty 源信在档且晚于静默起点=拾取在途·照此定性假警报；无信=真静默高概率）。
+    const anchorBody =
+      a.level === "duty-escalate" && a.anchorLine
+        ? `复核锚面（拾取锚判 b 项落形）: ${a.anchorLine}\n`
+        : "";
     const body =
       `条目=${a.id} 状态=${a.status || "-"} 级别=${a.level} 静默=${realMin === Infinity ? "∞(无信号)" : realMin + "min"}` +
       (realMin !== a.silentMin ? `（round 基点读数 ${a.silentMin}min）\n` : "\n") +
       `信号源: ${src}\n` +
+      anchorBody +
       `来源=hub-silent-detect 900s job（灰度第 1 周；三源 OR 豁免；冷却 ${COOLDOWN_MIN}min/节点/级）`;
     // title 同步用实距
     title = title.replace(`${a.silentMin}min`, `${realMin === Infinity ? "∞" : realMin + "min"}`);
