@@ -119,3 +119,17 @@
 - B 类 3 件终态：环 4 三件（COO 台账 442 笔补立销）/fade011 M2（SDE 勘定·调度链 03:30 准点零滞后·昨晨「滞后」定性勘正系手动补拍语义·销）/r6a+tui（CTO 勘现势·均系已闭环非漏转·销）。
 - 终态：A 类 2 树在办推进（form3 切流执行窗已开+fade011 M1/M5/M6 原线维持）/B 类全闭/C 类 ~24 无缺口——**CEO 质询树巡清点项闭环**。
 - 判据盲区自领（条款化素材+1）：「树尾无 closeout 卷」≠「毕报未落」（intake 线核对=第二查）；R6 候项已按余面认领挂账=树级收口双查纪律正形首案——素材汇入 19:50 流程设计会。
+
+**㊿+319（2026-11-06 21:44:36 +0800）CEO 三问实探——sg TriMMC 16 jobs 名单首录入卷+调度子系统机理**
+
+- CEO 21:40 三问（心跳/fade 攒批/静默探针是啥·调度子系统是啥·检查过程细节）→BOD 活体现探 sg 侧真源：daemon pid=1915139·TRIMC_CONFIG_DIR=/var/lib/trimc·job store=/var/lib/trimc/cron/jobs.json（16 jobs dict 形）。
+- 16 jobs 名单（name·节奏·enabled）：weekly-plane-shift（周日 23:59·停用=执行点已改河源 TriRMC）/config-sync-apply（15min）/clock-skew-check（1h）/orchestrate-tick（:13/:43）/daily-progress-watcher（10min 拍点 :x5）/github-reconcile（日 09:07）/sg-watchlist-patrol（5min）/sg-8460-probe（6h·bigmodel 代理探针）/bod-progress-report（30min）/n2-watchdog-sg（10min）/hub-watch-snapshot（10min）/e14-heartbeat-observer（停用·被 e1b2 spec 取代）/e15-window-reminder-scan-8712（5min）/e1-b2-8713-heartbeat-watch（15min·心跳双跑=对 8713 心跳监视）/cos-decision-audit-0001（日 00:01）/oprec-sync-fade011（1h·operating-records 同步）。
+- 泛称对表勘定：心跳=e1-b2-8713-heartbeat-watch；fade 攒批=oprec-sync-fade011+FADE 攒批窗（周二/五+周三兜底）慢通道；静默探针族=hub-watch-snapshot+n2-watchdog-sg——静默探针正形（hub-silent-detect 900s）在本机 schtasks keeper 不在 MMC 单上。
+- 调度子系统机理（读 TriMMC src/cron 真源）：daemon 进程内 cron 模块=调度循环+job store（JSON 持久化原子写）+执行器（spawn 子进程·超时上界）+状态聚合；启动时 stale-run 恢复（崩进程遗留 runningAtMs 复位）；consecutiveFailures=max(各 job)·连败≥3（DEGRADED_THRESHOLD）置 degraded=true——healthz cron 块四读数即此模块自报窗。
+
+**㊿+320（2026-11-06 21:44:36 +0800）COS β 切流毕报转呈（21:42+08 信）——形三余两笔径裁链全闭环·CEO 19:31 令③兑现**
+
+- β 三件切流毕·候选 A 全绿收口：交付锚 TriRLC@cafe1b42f50（sg bare 双验平）·最小 diff 两文件 5+/1- 零 src 改动·daemon 8711 零触碰零重启；活体七步全绿（15 席建库/send 落行/跨 reload 持久/全量 733/733 零回归）·CTO 红线三条随行全过·回滚单锚即净（revert 锚经 CTO 判定书 TMV@20ee14aa5 前置验证）。
+- 链程：COS 径裁 19:57→CTO 验收门 PASS→COO 21:23 派工→语义缺口裁量候选 A（COO 域径裁）→CTO CONCUR 双确认→21:41 毕（施工 18 分钟）——毕报卷 TMV@7faf45204+preflight e21703096。
+- 债单七项终态：债1 flake 族毕（75f2e29a25）/债3 18710 隧道候 TriMLC 勘修窗（勘修两笔施工毕候拍验证）/债5-7 嫁接域议程开（嫁接令权 CTO+FSD 设计卷先行·COO 候令排工）/债2·4 零行动候窗维持。
+- 形三余两笔径裁链全闭环（切流毕·债单排程毕）——事后呈报知情即本信·已转呈 CEO。
