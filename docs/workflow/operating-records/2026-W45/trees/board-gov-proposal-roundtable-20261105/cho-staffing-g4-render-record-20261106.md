@@ -24,12 +24,16 @@
 
 ## §四 · 锚清单
 
-- 解卡笔：TC acedc3504（2026-11-06T21:59:57+08·CTO·CHO 验 sg 在链+stat 实锚）
-- 全批 execute 读数：status pass/check_time 2026-11-06T14:02:19Z/errors 0
+- 解卡笔：TC acedc3504（2026-11-06T21:59:57+08·CTO·CHO 验 sg 在链+stat 实锚）+二推笔 TC 97e754b（2026-11-06T22:09:25+08·+5/-1 纯注释·CTO 前瞻注应验后终批锚）
+- 全批 execute 终读数：status pass/check_time 2026-11-06T14:09:58Z/errors 0/published 14
 - claude 面笔读数：gate_blocked=0·derived_drift=0
 - live discovery：两面 20 件 grep 计数谱（§二）
-- TC 仓变更：14 binding profiles（本卷随 commit 链）
-- TMV 仓变更：`.claude/agents/`+`.github/agents/`+`TriCompany-host-assets/` 三面 31 件
+- TC 仓变更：14 binding profiles（终跑过闸验证毕·内容恒定无欠账——见 §五 勘正注）
+- TMV 仓变更：`.claude/agents/`+`.github/agents/`+`TriCompany-host-assets/` 三面（TMV@e31dec1a5 锁笔·sg 验真）
 - 结构性债项（CTO 登记·CHO 排程裁量）：gate 判据 content-face 演进（render(source) hash 比对替代时戳代理·结构性假阳性根治）——**裁量=不排今晚**（全批 execute 后改闸违小步纪律·CTO 同理由在案）·候独立验证谱窗·随 G6 收口毕报一并呈 BOD 登记面。
+
+## §五 · 勘正注（CHO 自领·2026-11-06T22:11:42+0800 现查）
+
+**「并行窗吞笔」系误判，勘正**：锁笔链中 binding「M 14→0 diff」初判为并行席工作区恢复吞笔——终跑后 hash 三方对表实锚：磁盘 binding sha256=终跑④ published 读数逐字同（CSO 3dda32f79886）·HEAD 版=c2952ca2（B 批时代）·而 `git diff` 判 0——根因=**行尾归一化假象**（管线 LF 写入/检出 CRLF·git autocrlf 归一化后 binding 内容自 B 批起实质恒定——binding 系模板生成件不载岗位语义·14 席改版不动其内容面）。即：**无吞笔·TC binding 零欠账**（终跑 pass+内容恒定+sg 顶 97e754b 对平三锚闭环）。CHO 前勘违反「矛盾证据先 json/hash 对表」教训即定性——自领入卷；本族归档=行尾伪 diff 家族（与 PowerShell→ssh stdin CRLF 族同源·候纪律化窗并档）。G4 六环终态：source✓/support✓/binding✓（终态验证）/live✓（两面全量实核）/manifest→G5 正式对表/治理回填→G5。
 
 —— CHO 小源 · G4 渲染记录落卷（写前现查 2026-11-06T22:05:00+0800·G5 治理回填续推）
