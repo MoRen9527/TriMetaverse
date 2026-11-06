@@ -147,3 +147,11 @@
 - 拍 21:37:06（now 21:46:23·新鲜）：sg duty 14 席全体候令+本地 3 席干活（sde/coo/cos）·四口全绿（8713 ok uptime_s=1175≈20min=CTO 勘修重启链实证旁证·8711 following·河源 active·8712 16 jobs 零连败）·大表 open=4。
 - 判据③旁证命中（近 45min sg trees 4 件席位落卷）：form3 sde-cutover-preflight（切流执行窗开动实锚）+cto-beta-cutover-verdict（β 切流判定卷）+ste-flake-debt-closeout（债1 flake 族毕对应卷）+cho A 批验收单——席位有工件活动免通报·归档一行。
 - 信箱零未读（3071 封全读）。
+
+**㊿+323（2026-11-06 21:49:53 +0800）LG-069 断根验证毕——CEO 手动执行 winmgmt 重启·双源探针全绿·候令项销**
+
+- CEO 21:48:46 告知已手动执行 winmgmt 重启（net stop/start）→BOD 21:49 双源验证：
+- ①服务面：winmgmt Status=Running（StartType=Automatic·服务 pid=33272）。
+- ②CIM 独立探针：charge=93% batteryStatus=2（AC 供电）——WMI 查询链出新读数恢复。
+- ③消费面交叉：8713 healthz power 块 percentCim=93（非 NA）percentRaw=94 acOnline=true gate=none readFailures=0 lastReadAt=13:49:29Z（现查轮新鲜）——power-gate job 化修复在真机活体出数·CTO 毕报「效果验证候停摆窗实测」之停摆窗前提已随断根消除。
+- 处置：LG-069 WMI 病候令项销账·STE 两信号源值守不再需要·勘修单收口候 CTO 面（tick 停更已修+power-gate 已验+断根已毕·三笔全清）。
