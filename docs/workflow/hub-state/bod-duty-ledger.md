@@ -180,3 +180,9 @@
 - 产出三件定稿底框：①派工盯进度七环工序制度卷（COO 七环+CTO watcher 四要素+红线三条）②plan skill 迁移规划补丁（PM P0-P7+CPO 三段判据）③跨平台脚本整治（CTO 主笔·新增硬规则+存量三分类渐进）。候整五项归并定谳（候门 N=3 拍径裁·COO N=6 异见如实留卷·起点值挂观察窗运行校准）。
 - 候 CEO 三项：①产出三件定稿认可/批改②落册窗授权（制度正身独立件铸册+D 系两条候铸·CAO 唯一入册通道一笔三收口）③watcher 施工排工授权（CTO 工程主笔·COO 排工·执行位 TriMLC 8713·上线前与在役巡检族防双跑对表·CAO 附条 b）。
 - 卷面可阅：docs/workflow/operating-records/2026-W45/trees/dispatch-progress-design-roundtable-20261106/（汇总卷+签毕卷+CTO 意见稿+CTO 签认卷四件全）。台账现势 5502 行·联审发起线已销。
+
+**㊿+328（2026-11-06 22:18:37 +0800）22:15 轮节拍——oprec job 偶发败定性+CHO G6 采认毕**
+
+- 拍 22:07:06（now 22:15:17·新鲜）：sg duty 14 席全体候令+本地 3 席干活（cho/cto/cos）·8713 ok（uptime 2975s 连续增长·pwr=87% ac=false 系电池供电态·gate=none 未触发门）·8711/河源绿·大表 open=4。判据③旁证命中（近 45min 两树 10 卷新落卷·流程会四卷+form3 五卷）——sg duty 免通报。
+- 8712 consecutiveFailures 0→1 定性：.UUID 6f58fb10=oprec-sync-fade011（1h 节奏）13:55Z（21:55+08）跑败·lastError=git push「To /srv/git/TriMetaverse.git !」exit 1（输出截断·形态符合 non-fast-forward/并发 push 撞窗——今晚 CHO/CTO/COS 大量并发落卷推同 bare 仓）·degraded 仍 false（1<3 阈值·健康带内）·下一跑 14:55Z（22:55+08）观察自愈清零即闭·不自愈则流转 COS 分诊。store 持久化面 consecutiveFailures 多数 job=None 值缺省（内存聚合与 store 数据面小瑕疵·候 TriMLC/TriMMC 域顺手项）。
+- CHO G6 采认毕：COS 22:17 呈转请采认→BOD 验锚（TMV@f259f0abe sg bare 在链·TC@53e97fe 在链）→22:18 采认回执发 COS（转 CHO+状态机 G6→closed 销账）——staffing 件4 全链收官。
