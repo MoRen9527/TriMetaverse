@@ -18,3 +18,8 @@
 - ⑥**形三（TUI+dsh+自研 SendMessage 追平 M 面服务域席组形）进度呈答（活体现探毕）**：三件语义=河源 dsh 宿主 TUI 面+dsh 编排内核嫁接（α）+自研 SendMessage v2 语义层（β）。**任务书=有**——α 拆树八节点 N1-N8 依赖序（CTO 11-05 形三方案卷 7ecd788f5 §四·CEO 20:15 三路线定谳 α+β 合并）。**施工=CTO 小狄方案+验收·FSD 小全施工·COO 派工链**·施工树=form3-alpha-beta-impl（69 行 intake）。**进度=α 链 N1-N8 全毕**（N1 深读门 PASS→N1N2N3/N4/N5N6/N7N8 四组 closeout+门③全 PASS·N7N8 门③ 11-06 08:1x 判「形三 α 链收口」含 N8=TUI seats/send 命令=ListAgents/SendMessage 等价面）；**β 链三件施工毕候终门**（β-1 事务回执/β-2 Effects 退避队列/β-3 三段已读 read-tracker 全毕报·TriRLC 046a1b2 等·自测 7/7+回归 682/685·β-3 READY_FOR_REVIEW 候门③ CTO 放行）。旁证=R 面 dsh web 8791 在役（r-duty-cos·Nov04 起）·TriRMC 8710 ok consecFailures=0·R 面 13 席 dsh workspace 无 PM（与⑤呼应）。
 
 —— 以上六点处置 19:18:10+08 前全落（job1 v4.4 696ea2e8·COS 流转令 3e4e2007·本稿制度位）·候 COS 流转回执+PM 补席施工毕报。
+
+**㊿+301（2026-11-06 19:19:51 +0800）job2 19:19 轮——duty-cos 第 12 轮定性回执·双窗重满**
+
+- m-duty-cos 第 12 轮定性回执（mailbox 11:11:41Z=19:11:41+08 送达·tmux 直发后 89 秒）：定性=**待派维持（zero open）**——第 11 轮定性无变化·CEO 五裁链施工面在本地席·AGENDA-001 四段毕·sg 面 zero open·无已派未拾取·无 open 零活动·旁证零席位活动自洽✓。销读毕（marked read=1·零未读）。
+- 豁免窗重算：sg_exempt_until=min(定性 19:11:41+60min, 第 2 拍 19:37)=**19:37:00+08**·local 窗=20:07（m-cos 19:10:31 回执锚不变）——**双窗均满·免发免答态**。第 12 轮双通报→双回执全程闭（sg 89s/本地 63s 拾取·锚链四笔 11:10:08Z 在卷）。
