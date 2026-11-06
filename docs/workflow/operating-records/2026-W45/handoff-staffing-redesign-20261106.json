@@ -1,0 +1,40 @@
+{
+  "handoffId": "handoff-staffing-redesign-20261106",
+  "week": "2026-W45",
+  "createdAt": "2026-11-06T22:14:18+08:00",
+  "owner": "CHO",
+  "orderSource": "CEO 圆桌定谳意见㊿+280（2026-11-06T09:43:21+08）件4 随动·CHO 排程启动",
+  "scope": {
+    "item": "件4 席别新定位随动·源侧五件套逐席改版全工序（G1-G6）",
+    "headcountChange": "零（班次拓扑重定义·14 席编制恒定）",
+    "batchStructure": "A 批 C-level 8 席（含 CHO 自改自验首例）+B 批执行职能 6 席"
+  },
+  "stateMachine": {
+    "current": "G5-治理回填中",
+    "history": [
+      {"stage": "G1-施工指引", "status": "done", "anchor": "TMV@0f9abd98e（G1a）+TMV@aea094686（G1b）"},
+      {"stage": "G2-逐席自改", "status": "done", "anchor": "TC 486f880（CHO 首例）+13 席笔（TC e9ef08f..f908e4e 全链）"},
+      {"stage": "G3-逐席验收", "status": "done", "anchor": "验收单累积卷 TMV@183aebae3（13/13 全批毕 APPROVE·零 FREEZE 零退回·签收附五锚验证锚）"},
+      {"stage": "G4-攒批换代", "status": "done", "anchor": "TMV@77aa32a73（G4 记录卷·两面 20 件 live discovery 全绿·TC 顶 97e754b 对平·TMV 锁笔 e31dec1a5）+勘正注（吞笔误判勘正）"},
+      {"stage": "G5-治理回填", "status": "in-progress", "anchor": "roster v1.2.0 crewTopology 段（TC 本卷）+gov-state 双班组节（TMV 本轮）+本 handoff 对象新立+manifest 对表读数（G5 记录卷）"},
+      {"stage": "G6-收口呈 BOD", "status": "pending", "anchor": "候 G5 落卷毕随铸册窗 D-73 同窗对表呈 BOD"}
+    ]
+  },
+  "acceptanceFields": {
+    "validatorGates": "14 席 validate PASS（CHO 亲跑逐席）",
+    "liveDiscovery": "两面 20 件 grep 双班组语义·员工 14 全 1 命中·非员工 6 全 0",
+    "bindingVerify": "TC 终跑 status=pass published 14 errors=0·内容恒定（行尾归一化勘正注在卷）",
+    "governanceBackfill": "roster v1.2.0+gov-state 双班组节+handoff 本对象三处回填读数（G5 记录卷承载）"
+  },
+  "pendingItems": [
+    "G5 落卷 commit+双仓 push 验真",
+    "铸册窗 D-73 对 CAO 同窗对表（crewTopology 字段名式定谳+铸条）",
+    "G6 收口毕报呈 BOD（含 gate content-face 结构性债项登记面）",
+    "W45 结算窗 11-08：结算表 13 vs roster 14 席位差（PM）对表定谳（排程单 §五.1 在案）"
+  ],
+  "lessonsBank": [
+    "同工序跨仓时序伪 drift（gate 时戳判据边界形态·结构性假阳性循环）→content-face 判据债项候窗",
+    "行尾归一化假象（吞笔误判勘正自领）→矛盾证据先 hash 对表·候纪律化窗并档",
+    "跨仓 git 操作错域（B6 签收笔误对 TC bare push·三闸拦零损伤）→操作前 pwd+remote 断仓向"
+  ]
+}

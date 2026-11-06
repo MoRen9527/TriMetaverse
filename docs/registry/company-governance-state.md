@@ -276,3 +276,12 @@
   3. `TriMetaverse/docs/文档治理与真源文件系统.md` §2.1 布局块：命中 9 行（L51/56/57/58/59/64/66/67/69，系 TriMC/TriLC/TriModel/TriSkill/TriGateway/TriDeployment/TriTraining/Tride/Tripilot 旧名行；该件 lastSyncedAt=2026-07-03）。
 - 实勘偏差注记（待确认）：2026-09-11 实勘工作区同级目录 `TriLC/` 不存在、`TriRLC/` 存在，与对照表 TriRLC 行兼容面载体「TriLC 目录名」记载偏离；live entry 现势=TriRLC 仓 `.github/agents/` 仍系 TriLC* 死名 3 件、TriMMC 仓系 TriMC* 死名 3 件、Tride 仓系 Tride* 死名 3 件（TriCode 仓无 `.github/agents/`）。偏差成因与对照表是否需注记更新候 CEO/相关 owner 裁，本登记不作定谳。
 - **B2-EXEC 宿主随附登记提醒（2026-09-11，B1-⑥ 通道）**：project.md/tricompany.md 已迁 `docs/`（LG-034-B2 趋同项执行）；`TriCompany/docs/project-sources/trimetaverse-claude-md.md`（CLAUDE.md 真源，Registry Routing「Key documents」节引用 tricompany.md）与根 `AGENTS.md` 对两件的引用路径须随迁更新——修复走 FADE-002 真源改+管线发布与 D-07 通道，禁直改发布面，追平候发布/渲染窗（本行系 CGR 登记提醒，非执行令）。
+
+## 双班组形态席别拓扑（件2 定谳·G5 治理回填·2026-11-06）
+
+- 定义锚：CEO 圆桌定谳意见㊿+280（2026-11-06 09:43:21）件2 席别新定位——**headcount 零变更·班次拓扑重定义**（14 席编制不动·席内职责面重构）。
+- 拓扑形：本地域席（roster 14 席编制面）=设计+审核测试发布+会议协商三段职能；服务域 sg 值班位实例（m-duty-*）=任务书执行班语义——其行为归源侧席 scorable 但执行班职能不混入本席编制正文；duty 位系实例非编制。
+- 改版链锚：排程单 TMV@38bfaff8a（G1-G6 六工序）→G2 源侧逐席自改 14 席（TC 486f880 CHO 首例..f908e4e）→G3 CHO 验收 13/13 全批毕 APPROVE（TMV@183aebae3·零 FREEZE 零退回）→G4 攒批换代两宿主位 20 件×2 面 live 换代毕+live discovery 全量实核绿（TMV@77aa32a73 G4 记录卷·TC 解卡笔 acedc3504/97e754b）→G5 本节回填。
+- roster 承载：`TriCompany/docs/registry/employee-roster.json` v1.2.0（crewTopology 段·字段名式候铸册窗 D-73 对 CAO 定谳）。
+- 试岗窗：双班组形态试岗观察期一周级（班次拓扑实战运转验证）→试岗毕 roster 换版注记·随铸册窗收口。
+- 登记面：本节系 G5 回填登记（owner=CHO）·铸册窗 D-73 铸条对 CAO 同窗对表；headcount/架构变更面零（件2 定谳语境·无升级项）。
