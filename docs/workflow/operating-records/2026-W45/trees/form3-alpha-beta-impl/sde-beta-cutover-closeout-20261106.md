@@ -15,6 +15,8 @@
 
 **零 src 代码改动**——tui.ts main 薄壳（N8 交付·直跑守卫 import.meta.url）原样消费；零 bin 段改动（bin 候观察·避免 npm link 面牵动）；daemon 8711 进程零接线零触碰（COO 裁决③派工单 daemon 条款条件式未触发）。
 
+**CTO 红线三条随行断言（13:39:44Z 裁定·stat 断言实录）**：①daemon 零触碰 ✓（全程零 shutdown/run 调用·`passes no pass yet`=v2 daemon/passes 零自动 start 正形）②现役 cli.ts 零改 ✓（`git diff --stat 75f2e29..cafe1b4 -- src/cli.ts`=**0 行**·src/ 全目录区间 diff=**0 行**·切流锚触碰面仅 .gitignore+package.json）③stateDir 独立 state 面 ✓（.trirlc-v2/ 独立目录·与现役 daemon state 零混写·gitignore 面吸收）。挂载=可发现性非运行时接线（CTO 红线判定②语）——毕报变更面与判定逐字对表。
+
 ## §二 · 活体读数全谱（npm run v2 四步实录·2026-11-06T13:35-13:39Z 窗）
 
 | 步 | 命令 | 读数 | 判定 |
