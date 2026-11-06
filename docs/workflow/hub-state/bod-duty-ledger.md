@@ -186,3 +186,11 @@
 - 拍 22:07:06（now 22:15:17·新鲜）：sg duty 14 席全体候令+本地 3 席干活（cho/cto/cos）·8713 ok（uptime 2975s 连续增长·pwr=87% ac=false 系电池供电态·gate=none 未触发门）·8711/河源绿·大表 open=4。判据③旁证命中（近 45min 两树 10 卷新落卷·流程会四卷+form3 五卷）——sg duty 免通报。
 - 8712 consecutiveFailures 0→1 定性：.UUID 6f58fb10=oprec-sync-fade011（1h 节奏）13:55Z（21:55+08）跑败·lastError=git push「To /srv/git/TriMetaverse.git !」exit 1（输出截断·形态符合 non-fast-forward/并发 push 撞窗——今晚 CHO/CTO/COS 大量并发落卷推同 bare 仓）·degraded 仍 false（1<3 阈值·健康带内）·下一跑 14:55Z（22:55+08）观察自愈清零即闭·不自愈则流转 COS 分诊。store 持久化面 consecutiveFailures 多数 job=None 值缺省（内存聚合与 store 数据面小瑕疵·候 TriMLC/TriMMC 域顺手项）。
 - CHO G6 采认毕：COS 22:17 呈转请采认→BOD 验锚（TMV@f259f0abe sg bare 在链·TC@53e97fe 在链）→22:18 采认回执发 COS（转 CHO+状态机 G6→closed 销账）——staffing 件4 全链收官。
+
+**㊿+329（2026-11-06 22:26:39 +0800）CEO 十四问+四问实勘录——16 job 真身全定性+勘正两条**
+
+- CEO 22:20 连问（14 job 逐条+检查过程四问）→BOD 全源实勘：jobs.json payload 全量（token 掩码投影）+8 脚本头部+watchlist.json+clock/orchestrate 模块 docstring+config-sync apply 源+bod-tick-runner.mjs 源码+TriRLC power-follower 源码。
+- 勘正两条：①「全 19 席」系口误——正形=全席 27 席（sg duty 14+本地 13·tick runner 自动发现非硬编码：sg 侧 tmux ls 逐席判态+本地 scanLocalSeats·active 动态列出）；②sg-watchlist-patrol 非查席位在位——真身=ledger-watchlist-patrol.mjs 盯 hub-state/watchlist.json（挂账看板名单·超时未收口催报）；席位在位检查=tick tmux 判态+n2 watchdog d1。
+- 大表真源=docs/workflow/hub-state/in-progress.json（任务进度大表机器可读形·total=24 open=4=status open 计数）。follow=电源闸从闸（power-follower：8713 主闸裁决·8711 镜像·hard 停新派发·staleness 5min→unknown 告警）。
+- e14 归档令流转：CEO 咨询 e14 可否归档——已 disabled+被 e1-b2 取代·归档=TriMMC 域 COS 径裁面·BOD 流转 COS（CEO 意向随信）。
+- 其余定性详见本轮 CEO 转报正文（16 job 逐条）——不赘录。
