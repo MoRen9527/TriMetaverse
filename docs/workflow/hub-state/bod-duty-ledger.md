@@ -205,3 +205,8 @@
 - 活体定性：8713 uptime 连续（21:17 起未重启）但 lastReadAt 停 22:49Z 前后+lastWakeSeenAt=09:31:23Z 刚刚=宿主夜间睡眠签名（8713/8711/18710 keeper 全随宿主同眠冻结·e14 观察量所指形态）·河源独立机器全程 active（up 3w）——tick 停更系宿主睡眠所致·勘修病未复发。
 - 醒后 90s 复探三笔自愈：①CIM 探针出数 69+winmgmt Running（昨晚断根维持）②18710 隧道恢复响应③8113 power readFailures 清零·lastReadAt=01:33Z 新鲜·percentCim=68·acOnline=True（已插电）。附：8712 cf 0→清零——oprec-sync-fade011 22:55Z 跑成·昨晚 push 撞窗偶发败闭环。
 - 停机门观察注：昨夜电池放电 93→87→73→68（ac=false 放电约 6h）·gate=none 全程未触发 hard 门——门阈值与放电曲线关系候后续窗实测数据。
+
+**㊿+332（2026-11-07 09:37:10 +0800）09:36 轮节拍——tick 恢复补拍·sg duty 通报第 13 轮（窗满+零落卷）**
+
+- 拍 09:33:03（醒后首拍·睡眠定性闭环实证）：全席空闲（sg duty 14 席+本地 13 席全候令）·8713 ok pwr=67% ac=true（充电中）·8711 follow=unknown（从闸如实反映主闸睡眠期读数陈旧·poll 新鲜后自然回 following·非故障）·8712 cf=0·大表 open=4。信箱零未读。
+- 判据③旁证零命中（近 45min+昨夜 23:00-08:00 sg trees 零落卷）+豁免窗满（昨晚 19:37）→恢复正常通报 m-duty-cos：tmux 直发拾取验证过（Honking 处理中）·锚笔第 13 轮（@2026-11-07T01:37:00Z）·idle-watch-state last_notice+streak 清零·commit b8be8c32a。通报文=请交叉排工单定性（待派/断链/零活动三选一）。
