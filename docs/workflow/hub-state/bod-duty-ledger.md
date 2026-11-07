@@ -248,3 +248,9 @@
 
 - 回执（BOD 收讫处理时 date 现查 2026-11-07 11:49:14 +0800）：定性确认维持=**待派**（09:37 定性无变化·zero open 无断链·周六晨窗如实形）·活动锚=回执本身（活跃位实锚）·大表 open=4 维持候态。
 - 收稿面：sg_exempt_until=min(定性+60min, 定性后第 2 tick)=12:07 写入·信销读——BOD 与值席双向确认闭环（周六上午 sg duty 待派形态两侧判读一致）。
+
+**㊿+339（2026-11-07 11:59:18 +0800）CEO 十三问二轮实勘全录+tick 名册勘修 m-pm+盯守覆盖度缺口四项**
+
+- 实勘（活体+源码+网搜）：watchlist.json 仅 1 条 F-2-cron-auth-fix(closed 9-29)=特设验收盯梢位非全量台账；window-ledger.md 仅 W42 有（W43 起排窗废止断写·e15 每 5min 扫 max-week 读不到=合法空转·退役候裁）；d1-d4=N2 方案四侦测项（d1 席位静默如实降级放 dev 侧/d2 ACK 超时 hop2/d3 systemctl 枚举+d4 transcript 尾模型调用连 2 轮去抖）——脚本头注释原文明载；hub-watch-snapshot 四步=信箱元数据投影+healthz+双仓 git 顶+jsonl 追加（判据=unread 10min 增量≥5 基线比对）；config-sync bundle=随仓配置包 applied.json 版本门 15min pull 轻量；orchestrate-tick 五步流程+防重三道（指纹边沿/O_EXCL 锁/30min 冷却）+1000 元月护栏确认；ew-runs 命名义档案无定义（如实标注·跨平台脚本整治对象）；sg-8460 官方无公开解释（JA3/JA4 TLS 指纹 WAF 拦截=行业机制+实测缓解）；github-reconcile=sg bare vs GitHub dev 单 ref 日比对只报不修。
+- 勘修：tick runner 本地名册补 m-pm（CEO 指谓名册缺漏实锚·13 席勘正 14 席·commit 41f3ab307 主检出 dev·下拍 12:09 生效）；ssh 别名勘正=sg-ecs-server（sg-server 不可解析）。
+- 盯守覆盖度缺口四项呈报：①本地域树无 orchestrate-tick 同款自动派工引擎（只收 server-executable·本地靠人工链）②bod-progress STALL 停滞旗标无消费面（10-07 实证 lg060 停滞 107 轮长期挂·发现与处置断链）③e15+watchlist-patrol 两空转巡逻未退役④命名散装（ew/b2/d 系无集中规则册）——印证流程会三件（watcher 施工+脚本整治）必要性·随候批件呈 CEO。
