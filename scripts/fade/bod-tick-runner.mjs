@@ -8,8 +8,8 @@ import { readFileSync, writeFileSync, appendFileSync, mkdirSync, readdirSync, st
 const SG = 'M-SG-47.245.122.61';
 const RHY = 'R-HY-8.155.54.79';
 const REPO = 'D:/Code/ai/TriMetaverse';
-// 13 席名册（CEO 10:34 令：节拍须报全席在岗态，一席在干活=非空闲；m-fsd 补漏 2026-10-11 BOD 派工件3——名册缺漏实锚=拍报「12 席」而本注释写 13 席）
-const LOCAL_SEATS = ['m-cho', 'm-cfo', 'm-rdt', 'm-cto', 'm-sde', 'm-ste', 'm-cpo', 'm-cmo', 'm-coo', 'm-cao', 'm-cos', 'm-cso', 'm-fsd'];
+// 14 席名册（CEO 10:34 令：节拍须报全席在岗态，一席在干活=非空闲；m-fsd 补漏 2026-10-11 BOD 派工件3；m-pm 补漏 2026-11-07 BOD——CEO 指谓名册缺 m-pm 实锚，本地名册与 sg duty 14 席对齐）
+const LOCAL_SEATS = ['m-cho', 'm-cfo', 'm-rdt', 'm-cto', 'm-sde', 'm-ste', 'm-cpo', 'm-cmo', 'm-coo', 'm-cao', 'm-cos', 'm-cso', 'm-fsd', 'm-pm'];
 const ACTIVE_MS = 120_000; // transcript mtime 120s 内有写=会话在干活
 
 // 本机 13 席探针：扫 transcript jsonl，活跃者读头 4KB 提 customTitle 归席位
@@ -172,8 +172,8 @@ const dutyBusy = probes.dutyBusy === true;
 const totalBusy = activeLocal.length + (dutyBusy ? 1 : 0);
 const dutyLine = `**sg duty 组（重点）**：${probes.duty}`;
 const localLine = seats.err
-  ? `本地 13 席扫描失败（${seats.err}）`
-  : activeLocal.length ? `本地在干活：${activeLocal.join('、')}` : '本地 13 席全空闲';
+  ? `本地 14 席扫描失败（${seats.err}）`
+  : activeLocal.length ? `本地在干活：${activeLocal.join('、')}` : '本地 14 席全空闲';
 const L = [];
 L.push(`**节拍（daemon 版）${ts}**`);
 L.push('');
