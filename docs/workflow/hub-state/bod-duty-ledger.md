@@ -254,3 +254,8 @@
 - 实勘（活体+源码+网搜）：watchlist.json 仅 1 条 F-2-cron-auth-fix(closed 9-29)=特设验收盯梢位非全量台账；window-ledger.md 仅 W42 有（W43 起排窗废止断写·e15 每 5min 扫 max-week 读不到=合法空转·退役候裁）；d1-d4=N2 方案四侦测项（d1 席位静默如实降级放 dev 侧/d2 ACK 超时 hop2/d3 systemctl 枚举+d4 transcript 尾模型调用连 2 轮去抖）——脚本头注释原文明载；hub-watch-snapshot 四步=信箱元数据投影+healthz+双仓 git 顶+jsonl 追加（判据=unread 10min 增量≥5 基线比对）；config-sync bundle=随仓配置包 applied.json 版本门 15min pull 轻量；orchestrate-tick 五步流程+防重三道（指纹边沿/O_EXCL 锁/30min 冷却）+1000 元月护栏确认；ew-runs 命名义档案无定义（如实标注·跨平台脚本整治对象）；sg-8460 官方无公开解释（JA3/JA4 TLS 指纹 WAF 拦截=行业机制+实测缓解）；github-reconcile=sg bare vs GitHub dev 单 ref 日比对只报不修。
 - 勘修：tick runner 本地名册补 m-pm（CEO 指谓名册缺漏实锚·13 席勘正 14 席·commit 41f3ab307 主检出 dev·下拍 12:09 生效）；ssh 别名勘正=sg-ecs-server（sg-server 不可解析）。
 - 盯守覆盖度缺口四项呈报：①本地域树无 orchestrate-tick 同款自动派工引擎（只收 server-executable·本地靠人工链）②bod-progress STALL 停滞旗标无消费面（10-07 实证 lg060 停滞 107 轮长期挂·发现与处置断链）③e15+watchlist-patrol 两空转巡逻未退役④命名散装（ew/b2/d 系无集中规则册）——印证流程会三件（watcher 施工+脚本整治）必要性·随候批件呈 CEO。
+
+**㊿+340（2026-11-07 12:16:07 +0800）12:15 轮·第 15 轮通报（窗满复跑）+名册勘修生效**
+
+- 判据链：旁证 45min 零落卷（bod-tick 除外）→sg 豁免窗 12:07 已满→恢复通报 m-duty-cos 第 15 轮（tmux 直发·capture-pane 验拾取成功·文本入对话流+处理中）。通报文带交叉排工单定性三选一。锚笔 2026-11-07T04:16:07Z 落 duty-notice-anchor.log·state last_notice=15/streak=0。
+- 拍面：tick 12:07（8min 新）全席空闲·四口全绿（8713 pwr100 gate=none/8711 following pollFail=0/河源 active/8712 16job 零降级 cf=0）·大表 open=4。**本地名册勘修生效**——本拍「本地 14 席全空闲」（m-pm 已入册·41f3ab307 下拍生效实证）。
