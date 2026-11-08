@@ -443,3 +443,11 @@
 
 - tick 11:37:05 拍新鲜——全席空闲·四口全绿·大表 total=24 open=4。旁证 45min 零落卷。
 - 双窗满（sg 10:39·local 11:37）→第 22 轮双通报：sg duty-cos tmux 直发 11:45（Seasoning 拾取已验）+锚笔 notice @2026-11-08T03:45:46Z 第 22 轮 tmux直发；local m-cos SendMessage（msg 47cc2a74）。候双定性回执写新窗。
+
+**㊿+378（2026-11-08 11:47:52 ）m-cos 第 22 轮本地面定性·N-D3 施工毕收口·local 窗 12:37**
+
+- m-cos 第 22 轮本地面定性回执（写前现查 11:47:16+08）=**N-D3 线=施工毕收口（11:46 实勘）**·其余本地 13 席待派态·无 open 派工零活动。
+- 收口三证：①fsd 毕报卷双通道（对话流+卷面 nd3-wiring-exec-readout.md·信面未达如实注）——四骨架落位+换实例测试法验收锚过（域词 0 命中+py3.8 冒烟全过）+接线逐数一致对表+自 bug 实证修（plan_gate 两门分层）+spec/registry 升版登记 ②交付锚三证全平=TriCompany dev 顶=commit 实体=origin ls-remote 顶 3e0994b（8 文件+289 行）sg 面直验 ③fade011-quality-review 树 M1/M5/M6 下游解锁。
+- 毕报候办两件候令态（知情转呈）：引擎完整抽取批（envelope+T1-T8 判据集迁移）候排窗·骨架单元测试族候 STE 验段补充——排窗废止制下顺序推进候令不阻塞。
+- 旁注如实录：fsd 框悬一行「CORE_VERSION b14-core-bump 双签并批进 dev 了吗」（新悬未提交·COS 判 9min 不急·下轮勘处）。
+- local 豁免窗=min(定性+60min, 第 2 tick)=12:37。纯定性免回。
