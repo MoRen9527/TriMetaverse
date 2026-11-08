@@ -1,0 +1,526 @@
+{
+ "run_at": "2026-11-07T16:01:02.449993+00:00",
+ "candidates": 37,
+ "items": [
+  {
+   "source": "m-cos-transcript",
+   "file": "456df4a4-d920-4c05-bf60-ec814ed25e2b.jsonl",
+   "line": 639,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"queue-operation\",\"operation\":\"enqueue\",\"timestamp\":\"2026-09-24T02:36:41.179Z\",\"sessionId\":\"456df4a4-d920-4c05-bf60-ec814ed25e2b\",\"content\":\"<cross-session-message from=\\\"uds:/run/user/1001/cc-socks/3665776.sock\\\" from-name=\\\"m-duty-cos\\\" from-mode=\\\"bypass\\\">\\n〔总表 30min 催办轮 09-24 10:5x〕①LG-040 T-O4 代码批窗进度一读（TC runtime/cognition 133 处注释旧名+1 脚本，validation 全绿为门，候你席批窗开闸）；②LG-041 3333 事故尾项（根因定"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "456df4a4-d920-4c05-bf60-ec814ed25e2b.jsonl",
+   "line": 647,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"4138ce37-9ef5-4bd9-9388-8fcb5b116ff8\",\"isSidechain\":false,\"promptId\":\"dceb1d1a-54bf-4803-a50d-4d24a90a5c7c\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":\"Another Claude session sent a message:\\n<cross-session-message from=\\\"uds:/run/user/1001/cc-socks/3665776.sock\\\" from-name=\\\"m-duty-cos\\\" from-mode=\\\"bypass\\\">\\n〔总表 30min 催办轮 09-24 10:5x〕①LG-040 T-O4 代码批窗进度一读（TC runtime/cogniti"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1962,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"8a435e8c-3868-4dc7-834c-e87a899b11fd\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_b851ce20de41477884296808\",\"type\":\"tool_result\",\"content\":\"| LG-072 OP-unresolved 清淤批（候授） | op-unresolved-cleanup-20261013 | 未决事项万年流水账清淤：历史段归档+活跃件归拢现役区+结构定型 | CEO 令→BOD 立书→COS 授号施工 | 施工毕 69d04c72e（正身改形 20 单亲"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1967,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"a15ca8f8-55f4-4d13-a8ee-a2a612e9fdcc\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_b3cdd1f331c848fe900514db\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md has been updated successfully. (file state is c"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1969,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"b822d7c9-eb0f-4a81-828c-6fcdbcd28183\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_548c1fb5ca874dbaa120d3e7\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md has been updated successfully. (file state is c"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1970,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"227a9e7a-ff93-4384-8c24-3f9d551c9fc3\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013135055ac44aea3cba74b9c\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_e1917f6add4e4719947733ab\",\"name\":\"Edit\",\"input\":{\"replace_all\":false,\"file_path\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1971,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"02eb391d-203a-404b-a676-9a16e4abbc3b\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_e1917f6add4e4719947733ab\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md has been updated successfully. (file state is c"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1979,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"82c715e3-191a-4c0b-b20b-944539c34e08\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_cb30bc375da946d392f1f51d\",\"type\":\"tool_result\",\"content\":\" 1 file changed, 3 insertions(+), 3 deletions(-)\\n * branch              dev        -> FETCH_HEAD\\nCould not apply 15cb5223... docs(cos): W42 大表台账三件"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1980,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"3269bbf7-c3e0-4cd9-9561-0c0e18192f7f\",\"isSidechain\":false,\"attachment\":{\"type\":\"edited_text_file\",\"filename\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md\",\"snippet\":\"1\\t# W42 任务大表（2026-10-12 立表）\\n2\\t\\n3\\t- sourceOfTruth: 本件（docs/workflow/operating-records/2026-W42/task-inventory-20261012.md）\\n4\\t- syncMode: rolling（当周现役真身·原地滚动刷新）\\n5\\t-"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1981,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"4a4faccd-dd5e-475e-89b1-090363b14f14\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013135204be8b47e1eeef466c\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"The rebase hit a CONFLICT and left conflict markers in the file (lines 58-66: <<<<<<< HEAD ======= >>>>>>> 15cb5223). The remote had a NEWER version of these three rows (BO"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1983,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"85cc8dd7-ccc3-4c8e-a14f-9a9915ca0cfa\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013135204be8b47e1eeef466c\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_e40edc341d334cc0b003c6fa\",\"name\":\"Edit\",\"input\":{\"replace_all\":false,\"file_path\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1984,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"228d69be-6ab9-4e90-a563-86902ac35725\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_e40edc341d334cc0b003c6fa\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md has been updated successfully. (file state is c"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 2282,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"87f4284a-425c-4bf1-ba66-484e3908b4f1\",\"isSidechain\":false,\"promptId\":\"d729cded-0d49-4a05-9523-dba3c84212f2\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_e890ebbaaab141c79dd5404d\",\"type\":\"tool_result\",\"content\":\"docs(cto): LG-088缓解a/b方案稿——a件SetThreadExecutionState进程级保活(koffi唯一新增依赖·src/index.ts main()落点·进程死自动失效fail-safe·保护性强制睡眠保留·值面探针powercfg /requests完工判据·小时"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 17,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"fe54443b-e0d8-4e5f-a7ba-149d266d0393\",\"isSidechain\":false,\"attachment\":{\"type\":\"prompt_snapshot\",\"systemPrompt\":[\"## 当前角色定位\\n\\n\\n- 你负责把人力资源制度、组织设计、岗位启用、岗位职责变动、源侧五件套增量更新验收和 staffing governance 收敛成可执行的治理规则。\\n- 你负责设计跨岗位职责交接、handoff checklist、completion tracking、员工生命周期变更与岗位启用 / 移交流程。\\n- CAO 另行负责行政管理、秘书处机制、会议制度和公司治理资料归属；相关事实由 `CompanyGovernanceRegistry` 管理。\\n- 你不替代 BusinessStrategy 做中央战略"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 507,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"bdb0cb4b-5b72-4088-89a6-34d5f3d20376\",\"isSidechain\":false,\"message\":{\"id\":\"msg_202610122332355307c7b389814d62\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"CTO/CMO/CFO 读完。C-suite 8 席全部在握。新线索：\\n\\n**CTO**：\\n- description 新格式扩展版 ✓（「技术战略与趋势判断、全公司技术选型与架构演进治理…」——非「适用场景」开头？看 :4「\\\"适用场景：CTO、技术战略与趋势判断、全公司技术选型与架构演进治理、技术方案…\\\"」——还是「适用场景：」开"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 538,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"1b863d0a-fcf1-4295-b782-15ee301e2a92\",\"isSidechain\":false,\"promptId\":\"a5c0f8ef-666e-4cfd-85a4-18ba3d9ac2ae\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_accffe859f8e450195f35c24\",\"type\":\"tool_result\",\"content\":\"File created successfully at: /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-audit-agent-roles-20261012/audit-report-20"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 555,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"335d5821-319b-4b5d-9b19-215ced24567a\",\"isSidechain\":false,\"promptId\":\"a5c0f8ef-666e-4cfd-85a4-18ba3d9ac2ae\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_58e78440d7b14dd7b11bcd21\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-audit-agent-roles-20261012/audit-report-20261013.md has been up"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 949,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"a0792744-88a7-409b-8a54-402d44d34197\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013133640479f3a7433e74ddb\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_428883f8e70d473692cb5b67\",\"name\":\"Write\",\"input\":{\"file_path\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-opti"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 950,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"20fae5e7-c4d5-42f0-ab5b-da97025611fd\",\"isSidechain\":false,\"promptId\":\"863ad8f3-0cce-4125-8b8d-607d6735be2c\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_428883f8e70d473692cb5b67\",\"type\":\"tool_result\",\"content\":\"File created successfully at: /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-optimization"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 982,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"ff68f0fe-fd24-4d15-b30c-01930150b39a\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013134339c7626f9d25b44e5e\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_1f7106b30411470bad9df3c9\",\"name\":\"Edit\",\"input\":{\"replace_all\":false,\"file_path\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 983,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"171e1891-e5e9-463d-9b5a-3f0c71761d17\",\"isSidechain\":false,\"promptId\":\"de24006a-44f7-4dbf-948e-09d95aa3cfa7\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_1f7106b30411470bad9df3c9\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-optimization-proposal.md has been"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 992,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"66056c9a-2e55-41a9-b3ec-1391e87e9c5e\",\"isSidechain\":false,\"promptId\":\"de24006a-44f7-4dbf-948e-09d95aa3cfa7\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_44381ed0a31a4c2088fc24ac\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-optimization-proposal.md has been"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 994,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"b35fe588-833b-43e7-baae-dcb9c7df6eff\",\"isSidechain\":false,\"promptId\":\"de24006a-44f7-4dbf-948e-09d95aa3cfa7\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_1784e53e867349e5ba83cadf\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-optimization-proposal.md has been"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1007,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"2e99679b-495e-416a-bd43-6d424a529b43\",\"isSidechain\":false,\"message\":{\"id\":\"msg_2026101313451676cf7d364bef43c3\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"text\",\"text\":\"〔LG-074 方案稿 v2·毕报〕\\n\\n### 主线调研（真实科技公司 AI 员工实践·13:41 细化面，五源留痕）\\n1. **AI employee 行业定义共识**（Vida Global/cellcog/Medium）：「AI employee owns a role」——持岗位语境+标准+端到端完成；JD 载体面（AGENTS.md/岗位文件"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1070,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"7d0f7459-20f3-4f77-9122-3c141c3420d8\",\"isSidechain\":false,\"message\":{\"id\":\"msg_2026101314175504d280b8436d4c44\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_162a0d59977b4330983d7d0a\",\"name\":\"SendMessage\",\"input\":{\"message\":\"〔B1 会签单·LG-074〕CAO：CEO 14:14 批 B1（逐席受托面·挂 tree 协议），主稿落树=duty-roles-optimize-20261013/b1-entrust-interface-"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1237,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"e63cb3ac-e91d-4006-98f1-a37ddcbad048\",\"isSidechain\":false,\"attachment\":{\"type\":\"edited_text_file\",\"filename\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-audit-agent-roles-20261012/audit-report-20261013.md\",\"snippet\":\"1\\t# 全员岗位职责审核报告（audit-report-20261013）\\n2\\t\\n3\\t- **任务源**：CEO 直令 2026-10-12 23:06+08（信箱 duty-audit-cho-1791789421）；CHO 主导，CAO/COS 协同组队\\"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1242,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"d318aebc-513b-4a43-86cc-1d36acd47c50\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1267,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"bc162be6-9b37-43ef-8c8b-ad66d9f73b68\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1288,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"1a0e9cac-15b3-4f4f-a334-93265526ec40\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1313,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"8051c3e3-8b0a-4163-b58f-50b903e049e0\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1335,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"57335b4a-4850-418d-b0ca-738bbbc1d679\",\"isSidechain\":false,\"message\":{\"id\":\"msg_202611041613304b04f642e9e14805\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_81ee31dcb0f54d5b805a510f\",\"name\":\"SendMessage\",\"input\":{\"message\":\"〔建毕回报·CEO 16:01 令〕TriMMC（本机 8712）审计 cron 已建：**job id=4d6ef075-42f2-4b4b-add3-66fc248f38a0**（cos-decision-a"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1344,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"085e1e95-90ba-4ea7-ba2b-ab4adfff4f2c\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1371,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"df683670-1058-43be-bad7-addb49c5ad58\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1381,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"72b35a2c-0683-44d8-a35d-bd04fa19a8d0\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "25d51ae2-f9ce-4341-ac6c-8fea3d6b7ab4.jsonl",
+   "line": 17,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"782a555d-a860-4b9b-897f-d73e50c647e6\",\"isSidechain\":false,\"attachment\":{\"type\":\"prompt_snapshot\",\"systemPrompt\":[\"## 当前角色定位\\n\\n\\n- 你负责把 CEO、CEOChiefOfStaff、CMO、CPO、CFO 和 CTO 的输入编排成可执行运营计划、上线窗口、跨部门节奏、rollout 路径和复盘闭环。\\n- 你是 TriDev 公司级研发流程中\\\"产品 PRD / 市场证据 / 财务护栏 -> 运营计划 -> 技术执行窗口\\\"的运营 owner。\\n- 你负责把 TriDev 和相关模块 registry 的 readiness 约束纳入节奏计划；若需要追历史测试 / 部署资料，再补看 TriTest、TriDeployment 的兼"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "25d51ae2-f9ce-4341-ac6c-8fea3d6b7ab4.jsonl",
+   "line": 368,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"73e7a5dd-8c6d-4641-bd48-942615ff76fe\",\"isSidechain\":false,\"promptId\":\"7f5e2325-f1dc-4898-85fc-98fe788b1a1b\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_240d69b934fd475c98afbd0c\",\"type\":\"tool_result\",\"content\":\"b33abb47 10-02 05:15 docs(workflow): 总表 LG-040 随更——双锚已闭勘正（batch-12 件② CTO 定谳行文直摘）@m-duty-cos\\nd4fed2d7 10-02 05:14 docs(bod-pipeline-12): 件② ed4babe"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "456df4a4-d920-4c05-bf60-ec814ed25e2b.jsonl",
+   "line": 1759,
+   "ctx": "CROSS_DAY",
+   "snippet": "{\"parentUuid\":\"7ec08a86-b0db-4f6e-b2b5-21a1530347b2\",\"isSidechain\":false,\"promptId\":\"b65bc492-fa61-48d8-86e5-ab05c7d68fa8\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_781f2a6250364b3d81b66e0d\",\"type\":\"tool_result\",\"content\":\"   54 docs/workflow/operating-records/2026-W41/trees/lg066-window-order-20261009/seg1-exec-readout-20261009.md\\n   66 docs/workflow/operating-record"
+  }
+ ],
+ "prev_items": [
+  {
+   "source": "m-cos-transcript",
+   "file": "456df4a4-d920-4c05-bf60-ec814ed25e2b.jsonl",
+   "line": 639,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"queue-operation\",\"operation\":\"enqueue\",\"timestamp\":\"2026-09-24T02:36:41.179Z\",\"sessionId\":\"456df4a4-d920-4c05-bf60-ec814ed25e2b\",\"content\":\"<cross-session-message from=\\\"uds:/run/user/1001/cc-socks/3665776.sock\\\" from-name=\\\"m-duty-cos\\\" from-mode=\\\"bypass\\\">\\n〔总表 30min 催办轮 09-24 10:5x〕①LG-040 T-O4 代码批窗进度一读（TC runtime/cognition 133 处注释旧名+1 脚本，validation 全绿为门，候你席批窗开闸）；②LG-041 3333 事故尾项（根因定"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "456df4a4-d920-4c05-bf60-ec814ed25e2b.jsonl",
+   "line": 647,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"4138ce37-9ef5-4bd9-9388-8fcb5b116ff8\",\"isSidechain\":false,\"promptId\":\"dceb1d1a-54bf-4803-a50d-4d24a90a5c7c\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":\"Another Claude session sent a message:\\n<cross-session-message from=\\\"uds:/run/user/1001/cc-socks/3665776.sock\\\" from-name=\\\"m-duty-cos\\\" from-mode=\\\"bypass\\\">\\n〔总表 30min 催办轮 09-24 10:5x〕①LG-040 T-O4 代码批窗进度一读（TC runtime/cogniti"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1962,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"8a435e8c-3868-4dc7-834c-e87a899b11fd\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_b851ce20de41477884296808\",\"type\":\"tool_result\",\"content\":\"| LG-072 OP-unresolved 清淤批（候授） | op-unresolved-cleanup-20261013 | 未决事项万年流水账清淤：历史段归档+活跃件归拢现役区+结构定型 | CEO 令→BOD 立书→COS 授号施工 | 施工毕 69d04c72e（正身改形 20 单亲"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1967,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"a15ca8f8-55f4-4d13-a8ee-a2a612e9fdcc\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_b3cdd1f331c848fe900514db\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md has been updated successfully. (file state is c"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1969,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"b822d7c9-eb0f-4a81-828c-6fcdbcd28183\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_548c1fb5ca874dbaa120d3e7\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md has been updated successfully. (file state is c"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1970,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"227a9e7a-ff93-4384-8c24-3f9d551c9fc3\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013135055ac44aea3cba74b9c\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_e1917f6add4e4719947733ab\",\"name\":\"Edit\",\"input\":{\"replace_all\":false,\"file_path\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1971,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"02eb391d-203a-404b-a676-9a16e4abbc3b\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_e1917f6add4e4719947733ab\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md has been updated successfully. (file state is c"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1979,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"82c715e3-191a-4c0b-b20b-944539c34e08\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_cb30bc375da946d392f1f51d\",\"type\":\"tool_result\",\"content\":\" 1 file changed, 3 insertions(+), 3 deletions(-)\\n * branch              dev        -> FETCH_HEAD\\nCould not apply 15cb5223... docs(cos): W42 大表台账三件"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1980,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"3269bbf7-c3e0-4cd9-9561-0c0e18192f7f\",\"isSidechain\":false,\"attachment\":{\"type\":\"edited_text_file\",\"filename\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md\",\"snippet\":\"1\\t# W42 任务大表（2026-10-12 立表）\\n2\\t\\n3\\t- sourceOfTruth: 本件（docs/workflow/operating-records/2026-W42/task-inventory-20261012.md）\\n4\\t- syncMode: rolling（当周现役真身·原地滚动刷新）\\n5\\t-"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1981,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"4a4faccd-dd5e-475e-89b1-090363b14f14\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013135204be8b47e1eeef466c\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"The rebase hit a CONFLICT and left conflict markers in the file (lines 58-66: <<<<<<< HEAD ======= >>>>>>> 15cb5223). The remote had a NEWER version of these three rows (BO"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1983,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"85cc8dd7-ccc3-4c8e-a14f-9a9915ca0cfa\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013135204be8b47e1eeef466c\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_e40edc341d334cc0b003c6fa\",\"name\":\"Edit\",\"input\":{\"replace_all\":false,\"file_path\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 1984,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"228d69be-6ab9-4e90-a563-86902ac35725\",\"isSidechain\":false,\"promptId\":\"1e38c1a4-741f-41b2-8986-8f329affc226\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_e40edc341d334cc0b003c6fa\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/task-inventory-20261012.md has been updated successfully. (file state is c"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "e7dbd5fd-fadc-41e7-880c-50bda566c5b0.jsonl",
+   "line": 2282,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"87f4284a-425c-4bf1-ba66-484e3908b4f1\",\"isSidechain\":false,\"promptId\":\"d729cded-0d49-4a05-9523-dba3c84212f2\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_e890ebbaaab141c79dd5404d\",\"type\":\"tool_result\",\"content\":\"docs(cto): LG-088缓解a/b方案稿——a件SetThreadExecutionState进程级保活(koffi唯一新增依赖·src/index.ts main()落点·进程死自动失效fail-safe·保护性强制睡眠保留·值面探针powercfg /requests完工判据·小时"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 17,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"fe54443b-e0d8-4e5f-a7ba-149d266d0393\",\"isSidechain\":false,\"attachment\":{\"type\":\"prompt_snapshot\",\"systemPrompt\":[\"## 当前角色定位\\n\\n\\n- 你负责把人力资源制度、组织设计、岗位启用、岗位职责变动、源侧五件套增量更新验收和 staffing governance 收敛成可执行的治理规则。\\n- 你负责设计跨岗位职责交接、handoff checklist、completion tracking、员工生命周期变更与岗位启用 / 移交流程。\\n- CAO 另行负责行政管理、秘书处机制、会议制度和公司治理资料归属；相关事实由 `CompanyGovernanceRegistry` 管理。\\n- 你不替代 BusinessStrategy 做中央战略"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 507,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"bdb0cb4b-5b72-4088-89a6-34d5f3d20376\",\"isSidechain\":false,\"message\":{\"id\":\"msg_202610122332355307c7b389814d62\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"CTO/CMO/CFO 读完。C-suite 8 席全部在握。新线索：\\n\\n**CTO**：\\n- description 新格式扩展版 ✓（「技术战略与趋势判断、全公司技术选型与架构演进治理…」——非「适用场景」开头？看 :4「\\\"适用场景：CTO、技术战略与趋势判断、全公司技术选型与架构演进治理、技术方案…\\\"」——还是「适用场景：」开"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 538,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"1b863d0a-fcf1-4295-b782-15ee301e2a92\",\"isSidechain\":false,\"promptId\":\"a5c0f8ef-666e-4cfd-85a4-18ba3d9ac2ae\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_accffe859f8e450195f35c24\",\"type\":\"tool_result\",\"content\":\"File created successfully at: /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-audit-agent-roles-20261012/audit-report-20"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 555,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"335d5821-319b-4b5d-9b19-215ced24567a\",\"isSidechain\":false,\"promptId\":\"a5c0f8ef-666e-4cfd-85a4-18ba3d9ac2ae\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_58e78440d7b14dd7b11bcd21\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-audit-agent-roles-20261012/audit-report-20261013.md has been up"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 949,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"a0792744-88a7-409b-8a54-402d44d34197\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013133640479f3a7433e74ddb\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_428883f8e70d473692cb5b67\",\"name\":\"Write\",\"input\":{\"file_path\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-opti"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 950,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"20fae5e7-c4d5-42f0-ab5b-da97025611fd\",\"isSidechain\":false,\"promptId\":\"863ad8f3-0cce-4125-8b8d-607d6735be2c\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_428883f8e70d473692cb5b67\",\"type\":\"tool_result\",\"content\":\"File created successfully at: /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-optimization"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 982,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"ff68f0fe-fd24-4d15-b30c-01930150b39a\",\"isSidechain\":false,\"message\":{\"id\":\"msg_20261013134339c7626f9d25b44e5e\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_1f7106b30411470bad9df3c9\",\"name\":\"Edit\",\"input\":{\"replace_all\":false,\"file_path\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 983,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"171e1891-e5e9-463d-9b5a-3f0c71761d17\",\"isSidechain\":false,\"promptId\":\"de24006a-44f7-4dbf-948e-09d95aa3cfa7\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_1f7106b30411470bad9df3c9\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-optimization-proposal.md has been"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 992,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"66056c9a-2e55-41a9-b3ec-1391e87e9c5e\",\"isSidechain\":false,\"promptId\":\"de24006a-44f7-4dbf-948e-09d95aa3cfa7\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_44381ed0a31a4c2088fc24ac\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-optimization-proposal.md has been"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 994,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"b35fe588-833b-43e7-baae-dcb9c7df6eff\",\"isSidechain\":false,\"promptId\":\"de24006a-44f7-4dbf-948e-09d95aa3cfa7\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_1784e53e867349e5ba83cadf\",\"type\":\"tool_result\",\"content\":\"The file /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-roles-optimize-20261013/roles-optimization-proposal.md has been"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1007,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"2e99679b-495e-416a-bd43-6d424a529b43\",\"isSidechain\":false,\"message\":{\"id\":\"msg_2026101313451676cf7d364bef43c3\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"text\",\"text\":\"〔LG-074 方案稿 v2·毕报〕\\n\\n### 主线调研（真实科技公司 AI 员工实践·13:41 细化面，五源留痕）\\n1. **AI employee 行业定义共识**（Vida Global/cellcog/Medium）：「AI employee owns a role」——持岗位语境+标准+端到端完成；JD 载体面（AGENTS.md/岗位文件"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1070,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"7d0f7459-20f3-4f77-9122-3c141c3420d8\",\"isSidechain\":false,\"message\":{\"id\":\"msg_2026101314175504d280b8436d4c44\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_162a0d59977b4330983d7d0a\",\"name\":\"SendMessage\",\"input\":{\"message\":\"〔B1 会签单·LG-074〕CAO：CEO 14:14 批 B1（逐席受托面·挂 tree 协议），主稿落树=duty-roles-optimize-20261013/b1-entrust-interface-"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1237,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"e63cb3ac-e91d-4006-98f1-a37ddcbad048\",\"isSidechain\":false,\"attachment\":{\"type\":\"edited_text_file\",\"filename\":\"/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W42/trees/duty-audit-agent-roles-20261012/audit-report-20261013.md\",\"snippet\":\"1\\t# 全员岗位职责审核报告（audit-report-20261013）\\n2\\t\\n3\\t- **任务源**：CEO 直令 2026-10-12 23:06+08（信箱 duty-audit-cho-1791789421）；CHO 主导，CAO/COS 协同组队\\"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1242,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"d318aebc-513b-4a43-86cc-1d36acd47c50\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1267,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"bc162be6-9b37-43ef-8c8b-ad66d9f73b68\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1288,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"1a0e9cac-15b3-4f4f-a334-93265526ec40\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1313,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"8051c3e3-8b0a-4163-b58f-50b903e049e0\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1335,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"57335b4a-4850-418d-b0ca-738bbbc1d679\",\"isSidechain\":false,\"message\":{\"id\":\"msg_202611041613304b04f642e9e14805\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"GLM-5.3-Flash\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_81ee31dcb0f54d5b805a510f\",\"name\":\"SendMessage\",\"input\":{\"message\":\"〔建毕回报·CEO 16:01 令〕TriMMC（本机 8712）审计 cron 已建：**job id=4d6ef075-42f2-4b4b-add3-66fc248f38a0**（cos-decision-a"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1344,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"085e1e95-90ba-4ea7-ba2b-ab4adfff4f2c\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1371,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"df683670-1058-43be-bad7-addb49c5ad58\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1381,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"type\":\"last-prompt\",\"lastPrompt\":\"【CEO 令转达·board 2026-11-04 16:04:09 +0800 落款】CEO 16:01 令（经 board 转达）：请在 TriMMC（本机 8712）建 cron job——每日 00:01 审计 M 面 m-cos 与 m-duty-cos 过去 24h 全部裁决。判定双错误：①错误升级=该径裁的升级 CEO（对表 CEO 15:57 三条款：原则合理就认不升级·升级面=原…\",\"leafUuid\":\"72b35a2c-0683-44d8-a35d-bd04fa19a8d0\",\"sessionId\":\"abd18f80-ac51-48d7-bbf0-b340a8bbb562\"}"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "25d51ae2-f9ce-4341-ac6c-8fea3d6b7ab4.jsonl",
+   "line": 17,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"782a555d-a860-4b9b-897f-d73e50c647e6\",\"isSidechain\":false,\"attachment\":{\"type\":\"prompt_snapshot\",\"systemPrompt\":[\"## 当前角色定位\\n\\n\\n- 你负责把 CEO、CEOChiefOfStaff、CMO、CPO、CFO 和 CTO 的输入编排成可执行运营计划、上线窗口、跨部门节奏、rollout 路径和复盘闭环。\\n- 你是 TriDev 公司级研发流程中\\\"产品 PRD / 市场证据 / 财务护栏 -> 运营计划 -> 技术执行窗口\\\"的运营 owner。\\n- 你负责把 TriDev 和相关模块 registry 的 readiness 约束纳入节奏计划；若需要追历史测试 / 部署资料，再补看 TriTest、TriDeployment 的兼"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "25d51ae2-f9ce-4341-ac6c-8fea3d6b7ab4.jsonl",
+   "line": 368,
+   "ctx": "CANDIDATE",
+   "snippet": "{\"parentUuid\":\"73e7a5dd-8c6d-4641-bd48-942615ff76fe\",\"isSidechain\":false,\"promptId\":\"7f5e2325-f1dc-4898-85fc-98fe788b1a1b\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_240d69b934fd475c98afbd0c\",\"type\":\"tool_result\",\"content\":\"b33abb47 10-02 05:15 docs(workflow): 总表 LG-040 随更——双锚已闭勘正（batch-12 件② CTO 定谳行文直摘）@m-duty-cos\\nd4fed2d7 10-02 05:14 docs(bod-pipeline-12): 件② ed4babe"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "456df4a4-d920-4c05-bf60-ec814ed25e2b.jsonl",
+   "line": 1759,
+   "ctx": "CROSS_DAY",
+   "snippet": "{\"parentUuid\":\"7ec08a86-b0db-4f6e-b2b5-21a1530347b2\",\"isSidechain\":false,\"promptId\":\"b65bc492-fa61-48d8-86e5-ab05c7d68fa8\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_781f2a6250364b3d81b66e0d\",\"type\":\"tool_result\",\"content\":\"   54 docs/workflow/operating-records/2026-W41/trees/lg066-window-order-20261009/seg1-exec-readout-20261009.md\\n   66 docs/workflow/operating-record"
+  }
+ ]
+}
