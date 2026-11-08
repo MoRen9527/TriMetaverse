@@ -655,3 +655,6 @@
   - 67115c078 docs(bod): §㊿+401 CEO全批令(12项)收转COS执行·下周复盘注记 @bod
   - …另有 440 条略（全量见 git log）
 - registry：未知版本；今日 registry 提交 1 条：3e0994b feat(n-d3): FADE 协议层四骨架接线落位——verify_runner/score_engine/close_framework/plan_gate 四件通用骨架+patrol 首绑接线（拆分不破现役自测对表实证）+spec/registry 升版登记（N-D3 派工令 COS 11-08 径裁）
+- 巡检兜底补写 @21:20 +08：自上次进度提交 0b828d704 后新增 1 条 commit：
+  - b0e7463ba docs(scoring): W45 结算毕报收尾——§三骨架占位勘正为已汇总引注（三源已在 §二·1 完成汇引·防占位误导） @m-duty-cho/LG-068
+- registry：未知版本；今日 registry 提交 1 条：3e0994b feat(n-d3): FADE 协议层四骨架接线落位——verify_runner/score_engine/close_framework/plan_gate 四件通用骨架+patrol 首绑接线（拆分不破现役自测对表实证）+spec/registry 升版登记（N-D3 派工令 COS 11-08 径裁）
