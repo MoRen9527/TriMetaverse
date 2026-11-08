@@ -431,3 +431,10 @@
 
 - tick 11:07:06 拍新鲜——全席空闲·四口全绿·大表 total=24 open=4。
 - sg 旁证 45min 1 命中：w45-carryover-fade001-upgrade/nd3-wiring-exec-readout.md 新落卷=N-D3 接线执行读数卷（fsd 段施工推进实锚·m-duty-fsd 候令=段间态非断链旁证佐证）→sg 免发；local 窗内（11:37 前）免发。归档轮。
+
+**㊿+376（2026-11-08 11:16:41 ）包 D 双里程碑采录（m-duty-cos 督办 fan-in·2 封销读）**
+
+- **N-D3 四骨架接线毕**（FSD 径裁令 11-08T10:47 施工·毕报 fan-in）：TriCompany dev 3e0994b（runtime/fade_protocol 五件=verify_runner/score_engine/close_framework/plan_gate+__init__ 归属治理正形）+spec/registry 升版+读数卷 TMV@b12e63e21（nd3-wiring-exec-readout.md·本席 11:15 旁证已见在链）。验收锚：四骨架换实例测试法自验过（零实例域词残留+中性实例冒烟 py3.8 全过）+patrol 首绑接线拆分不破现役实证+施工自 bug 修如实录（plan_gate truthy 两门分层修）。
+- **N-D2 考卷冻结毕**（CTO 11-05 18:1x 执仪式）：FADE-001-paper-plane-shift.json 1.1-draft→1.1-frozen·双 hash 纯 LF 零漂移（raw=lf=bf8ba0e06a…5205）·锚=冻结卷 TMV@037d26ad7+TC registry ② 行同步（222beca）·T1-T9 题组权重合计 145。
+- 包 D 链现势：N-D1 双署✓→N-D2✓→N-D3 接线✓→余 N-D4 齿条清（registry owner 落条·齿条① 49 天警告线随包清）+N-D5 试跑预(告)。值席督办线活跃=上午「唯一活跃盯守线」闭环兑现。
+- 采录毕转呈 CEO；验收核读以 COS 供给验证锚为准（BOD 不独立溯源）。
