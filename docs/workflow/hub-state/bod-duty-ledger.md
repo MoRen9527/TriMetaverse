@@ -552,3 +552,12 @@
 - 四稿要点（如实转·候圆桌评审·BOD 不裁）：①命名规则 R1-R9（ew 中缀语义候 CTO 勘定·本稿只录形）②FADE 跑后记录规范（标准槽 trees/fade-runs/<instance-id>/ 通用化+迁移预留位+run-close 收口摘要卷唯一增量件·%cI 代引）③周平面标准化选型=单一制度正身件 weekly-plane-file-standard.md 不选每周 README（防 52 份/年漂移垃圾·根/树两域分野+入册门三条款）④名址同步工序=roster 正身 CHO+同步三查+机械断言+机制候选 A 直读根治（推荐）/B 断言拒跑过渡（归 CTO 勘估）·确权分层四段。
 - 台账视角三点（一主多从候裁/销账权唯 COS 不另开口/时限条目挂观察窗属性）随稿。
 - 候稿进度：CPO✓ CAO✓——CTO 两稿+COS 稿候，20:30 前齐→整合呈 CEO。
+
+**㊿+398（2026-11-08 17:11:16 +0800）圆桌收稿③·COS 产出卷+CTO 议程 1 主答卷（17:10:22 达·限内）**
+
+- 双锚：COS 卷 ebd1aae1f（quad-roundtable-20261108/cos-quad-roundtable-20261108.md·266 行·§零~§十+四附表）+CTO 主答卷 e4656a151 同链落卷。fetch 对表在链（见上读数）。
+- 议程 1 初判=**今晚能实弹**（带 5 值席勾前置；两态分层：push 段确定能跑/agent 承接层带条件；O1 plan 升版+O2 双卷勘正即刻施工已毕；T-0 清单七项=原五+O3 河源检出≥3e0994b+O4 承接窗排班）。时点真值 23:50 三处陈旧面全列（N-D5 已勘/N-D2 反转勘回随 O2/SOP 升版候批）。
+- §六 定时任务首轮盘点读数在卷：8713 17 jobs 17/17 enabled+本机 schtasks 10 条+sg 16+河源 4·体检机制设计（月度 job+健康四读数+drift 告警+台账正身件候批）。
+- 候裁面 9 条（§十·不入任务书候 CEO 裁）：SOP 升版/root 残留退役/d3 授权面维持/台账 D 系候批/tree-op 立项编号/在途 run 指针形/watcher 扩围立案/台账正身件+月度体检立项/N-D2 勘回销读。
+- 附注三条如实录：N-D5 早勘被 CTO O2 联合勘正覆盖（同目的零损失·采 CTO 版）；FUZZY-TS 闸首案双席自历（拦 COS 一次+CTO 三件后现查回填自 commit·加本席两笔=今日实拦记录在卷）；两层分立新实证（TriLiveness-L1 schtasks Disabled vs 8713 enabled True·体检四读数必查项）+河源 jobs.json id-only 形态候 TriRMC 域勘（不阻塞今晚）。
+- 候稿进度：CPO✓ CAO✓ COS✓ CTO（议程1✓·全景图技术稿候）——齐后整合呈 CEO。
