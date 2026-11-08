@@ -414,3 +414,8 @@
 - 事故：10:16 job2 销读循环漏 target_seat 硬过滤——预期翻 1 封（bod 面 power-gate 警报·合法）实翻 83 封，误翻他席 82 封（m-cos 75+m-coo 7·power-gate LG-069 族·翻前全未读·83=1+75+7 计数吻合定性）。
 - 勘损回滚（10:17:56·JSON.parse→改→write）：他席 82 封 read 复 false 精确回滚·复核分布 m-coo 7/m-cos 75 全 false·bod 面 70 全 true（1 本轮+69 历史合法）=回滚毕。TriMLC 仓未跟踪信箱文件无 git 回滚面，按计数吻合+分组复核双证定谳。
 - 实质影响评估：误翻信全属 LG-069 power-gate 警报族=已知态（㊿+370 卡死推送定性·瞬态自愈四源对表平），他席重扫免重复派勘噪声有限；但他席消费态被越权改写本身=纪律违例如实入档。教训固化：**销读循环必带 target_seat∈{bod,board} 硬过滤——与本注入令文筛句同形，禁凭 source/title 匹配扩面**。知会 m-cos+CEO。
+
+**㊿+373（2026-11-08 10:45:51 ）10:45 轮·sg 旁证免发+本地窗满机械通报**
+
+- tick 10:37:06 拍新鲜——全席空闲（sg 14 席+本地 14 席·10:07 拍 5 席在干活的结算定性链已收束转 idle）；四口全绿·大表 total=24 open=4。
+- sg 旁证 45min 5 命中（前 4+新增 trimlc-repair-20261106/cto-lg069-standby-wave-verdict.md=CTO LG-069 standby wave 定性卷新落卷）→免通报；本地窗满（10:39 过）→m-cos 机械通报（msg 4c69aa17·候定性回执写新窗）。
