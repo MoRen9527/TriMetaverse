@@ -1,0 +1,56 @@
+# N-D5 试跑预案卷·11-09（周日）23:00 周迁移首轮=冻结考卷首次实弹评分（CTO 依 N-D1 正身自裁量定）
+
+- date 现查: 2026-11-08 13:4x CST（写前现查=D-47；停工带 14:00 起卷面落盘不停笔恪守）
+- 令链: N-D5 派工（COS 勘处补发 13:47:11·N-D3 断链同族 Enter 吞噬勘处清离+同义补发，如实入账）；裁据=N-D1 正身（d3c2e8898+收口节）+N-D2 冻结卷（nd2-paper-freeze-20261105）+w45 树现势（N-D3 四骨架 3e0994b+读数卷 b12e63e21 已 fan-in）
+- 勘正随卷: 本席 N-D2 冻结卷 §四「11-08 23:00」系笔误——周迁移=周日 23:00=**11-09 23:00**（本卷正形时点）
+
+## §一 试跑对象与时点（试跑对象自裁声明）
+
+- **对象**: 11-09（周日）23:00 CST W45→W46 周平面迁移实弹轮（执行体=heyuan TriRMC cron job 9c81c7ec 线，LG-016 齿条③ 周一晨检镜像前置）
+- **性质**: 冻结考卷（FADE-001-paper-plane-shift.json **1.1-frozen**，双 hash raw=lf=`bf8ba0e0ed275546…`）**首次实弹评分轮**=N-D1 分辨结论四骨架（Verify runner/Score 引擎/Close 双段骨架/Plan 门）+N-D3 接线后的首次全链实弹
+- scoreable_run 正形（冻结卷原文）: 一次完整周迁移触发轮含 agent 核验读数落盘；异常轮按 T6 免评规则记
+
+## §二 试跑前置清单（T-0 前核查，周日 22:3x 值席面逐项勾）
+
+| # | 前置项 | 判据 | 锚 |
+|---|---|---|---|
+| 1 | N-D3 四骨架在位 | FSD 3e0994b 提交面+读数卷 b12e63e21 复核（Verify runner/Score 引擎/Close 双段/Plan 门四件装齐） | w45 树 N-D3 读数卷 |
+| 2 | 冻结态未再动 | paper sha256=`bf8ba0e0ed275546…` 复算一致（1.1-frozen 态保持） | 冻结卷 nd2 |
+| 3 | VER-002 双源修复在位 | TriRLC dev=4976dda 系（package.json 唯一真源裁定落地）+TriMLC version.json 同步核 | 大表清扫②卷+origin/dev |
+| 4 | heyuan cron 值班态 | job 9c81c7ec lastRunStatus=ok（LG-016 齿条③ 周一晨检判据的前置同款） | GET /internal/v1/cron/jobs（token 门内，值席持） |
+| 5 | R-HY 面健康 | 8710 healthz ok+cron enabled+neg 401 门在岗 | 栏 C/S2 卷探针形 |
+
+## §三 in-run 观测点（迁移执行中五看）
+
+1. **agent plan 前置**：迁移执行读 fade-001-plane-shift-agent-plan.md 且按段序走（ADE-only antidote 首要验证点——在办树逐一点名+台账随迁核验两必答落不落地）；**无 plan 动手=T1 直接失败实证**（冻结考卷首题即验此）
+2. **段序时序**：DCE(push)→Verify→Score→Close Skill→Close CLI 硬序（N-D1 Close 骨架时序法条首次实弹——违序即段位降档如实记）
+3. **Verify runner 双集**：迁移线 T7/T8/T9 机械化断言+维护线两断言（当日节非空+锚点格式）——runner 首实弹
+4. **T7 在办树随迁**：在办树逐一点名随迁+台账随迁核验（W45 在办树现势清单随本卷 §六）
+5. **8713→8712 心跳链**：b2 watch（ageMs 面）在岗——迁移窗若遇宿主睡眠/重启窗，告警链按 05:03 真阳性先例工作（分诊提示随告警文）
+
+## §四 post-run 评分执行（首评序，两态预案内置）
+
+- **主态（N-D3 引擎）**：冻结考卷 T1-T9 对照评分=Score 引擎首个实弹实例化（判据集=FADE-001 五约束+冻结题权重）；引擎输出三态（通过/RETRY/ESCALATED）+证据引用格式（N-D1 Close 骨架接口形）
+- **fallback 态**：引擎运行受阻→现役 patrol --score 旧形评分+fallback 触发原因如实注（预案两态内置——不因新引擎故障而免评）
+- **禁放水**：评分不过=RETRY/ESCALATED 照三态走（禁删断言凑绿/降阈值/语义放宽——期望校正双件套教义沿用）
+- 评分产物=首评分卷落本树（T1-T9 逐题读数+引擎输出+证据链），候 CTO 面复核→registry 收口登记
+
+## §五 风险与回滚位
+
+| 险 | 处置位 |
+|---|---|
+| heyuan cron 空载/失联（E-0007/E-0011 族） | R-2 候 BOD（值席判 P2 链） |
+| 新 Score 引擎异常 | fallback patrol 旧形（§四内置）+异常如实注 |
+| 迁移冲突 | 对齐 SOP 冲突即停（不改判据） |
+| 停摆家族复发（10-12/10-16 案同形） | b2 watch 告警链在岗+05:03 机制定性（运输层孤儿缺口）修复三联候排窗 |
+| 轮空/部分跑（T6 免评规则） | 按冻结卷 scoreable_run 异常轮条款记免评，不算 FAIL |
+
+## §六 W45 在办树现势清单（T7 随迁核对基线，值席随迁时逐树点名）
+
+（起草时点清单=起草刻 trees/ 目录现势快照，随迁核验以执行刻实勘为准）
+
+## §七 报告链
+
+毕报 fan-in 值席→CTO 面终判输入（首评分卷复核）→registry 收口登记（Close CLI 载体=shift-ade.json 升 run 收口文件写四态词，charter 口径）→大表 LG-055/LG-016 行随更。
+
+—— CTO 小狄（N-D5 依正身自裁起草），2026-11-08 13:5x CST
