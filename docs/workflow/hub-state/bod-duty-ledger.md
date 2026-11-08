@@ -679,3 +679,19 @@
   5. 18710 隧道**机位勘清**：本机 127.0.0.1:18710 healthz 绿且响应体=trimc 特征（jobCount=16）——18710=本机→sg 隧道端口（BOD/巡检链路依赖），非 R-HY 面；R-HY/sg 本地探空回属正常形态（此前探错端口空回教训同族）。
   6. 冻结考卷：TriCompany 检出内 frozen 文件名零命中（考卷命名/路径细节不追——bf8ba0e0 对表系 CTO 今晚已验·22:30 值席勾复勾项）。
 - **答 CEO：现值探读无阻塞项**——迁移 job 在挂排今晚 23:50+O3 检出超线+拉平链活+daemon 绿。CTO readiness 判定照旧：push 段（迁移器五步）确定能跑（成熟链）；FADE-001 十段首评=agent 承接层带条件。剩余程序面=22:30 值席勾七项（CHO 已在 pane 预备「T-0 值席勾到点开工」输入·21:45 探）+O4 承接窗排班 23:50-00:20。本席续盯 22:30 勾与 23:50 链。
+
+**㊿+418（2026-11-08 22:05:49 +0800）CEO 勘正令实勘·R-HY FADE-001 十阶段部署面+评分链可跑性（21:47-21:58 六发探针）**
+
+- CEO 勘正收悉：weekly-plane-shift 原=单一脚本（push/DCE 环节），FADE-001 完整实例需实勘十阶段部署+试卷评分真跑·分不够不能过。实勘结果：
+- **逐段部署面（R-HY 检出+TriRMC）**：
+  1. push 段（迁移器 DCE）：TriRMC job 9c81c7ec 在挂 enabled（cron 50 23 周日北京）·payload=git ff 拉平链（GIT_SSH_COMMAND+cd /srv/f...）·per-run 日志路径活·last 11-01 正常。
+  2. verify 段：verify_runner.py 在位 import OK（N-D3 件①断言集：新周索引三件+carry-over+迁移 commit 身份=TriRMC Scheduler fleet 形）。
+  3. score 段：score_engine.py 在位 import OK（build_envelope 评分信封+DEFAULT_MODE_LABELS）。
+  4. close-skill/close-cli 段：close_framework.py 在位 import OK（CloseSkillOutcome+close_carrier_row+**STAGE_ORDER 判序原语在件内**——违序=段位降档机制真实承载·分不够不能过的引擎面实锚）。
+  5. plan_gate：REQUIRED_SECTIONS+plan_existence_gate+review_ritual 在位（O1 升版后 plan 必答 4/4）。
+  6. **考卷实锚**：FADE-001-paper-plane-shift.json（1.1-frozen）**sha256=bf8ba0e0 对表 MATCH**（CTO 四绿同源复现·md5=b97e943f）·可加载·结构完整（checks+scoreable_run+protocol+instance+domain+version 六键）。
+  7. plan 正身：docs/engineering/fade-001-plane-shift-agent-plan.md（77ecdbd O1 升版在检）——STAGE_ORDER 承载节+前置断言四项（hostname R-HY/工作树 ff bare 顶/无进行中 git 操作/8710 healthz+cron+neg 401 门）+agent 四段步骤全在文。
+- **段数口径如实转录**：plan 承载节列段名五载=push→verify→score→close-skill→close-cli（push=迁移器五步承载·四段=agent 承接面）；STAGE_ORDER 对表正形=N-D1/N-D3 卷（plan 引用之）——本席不代判段数口径，十段谱以 N-D3 卷为准。
+- **评分门真实性**：四骨架 import 冒烟 OK+考卷可载+判序降档原语在件=门机制在位；真评分=23:50 push 后 agent 承接窗（23:50-00:20）按考卷 checks 跑——骨架中性冒烟 28/28（3e0994b 在检）+本次 import 冒烟=可跑实证。
+- **差异标注一处（候值席勾勘·不阻塞）**：18710 隧道本机实测终点=sg trimc（jobCount=16 响应体）；plan 前置断言④记载 18710 探针形=R-HY 8710 形（11-08 08 时段实证在卷）——两读数不一致；R-HY 8710 面本席已直探绿（healthz ok cron 4 jobs cf=0），隧道记载差异候 22:30 值席勾勘定。
+- 结论：**部署齐+评分链机制真实在位+无阻塞项**——候 22:30 值席勾七项+23:50 链跑实际试卷评分。
