@@ -704,3 +704,13 @@
 - **【拍报停摆】**：tick-latest.md 最后拍=昨晚 22:23:50——8713 侧 bod-tick 产出停摆约 19 小时（22:37 起无拍·8713 healthz ok+cron enabled 但 tick job 产出面停）——8713 侧 job 状态勘验候办（列流转项）。本席空窗期拍报盲已由本段活体探补。
 - 【其他现值读数】8711 mc totalFailures=2588（累计·lastFailure 今 17:14 timeout 5s·degradedFailures=0 alarmSent=false=未到告警门）；R-HY 8710 healthz ok 但 cf=1 首现（轻号·候下拍观察）；8712 sg 正常（昨晚 22:23 拍 cf=0）。
 - 【处置流转】迁移失败=COS 挂账+CTO 域处置（修复面候 CTO 裁：分叉合流策略/迁移器前置兜底）；tick 停拍+8713 job 面=COS/CTO 勘验项。本席不代裁——流转即发。
+
+**㊿+420（2026-11-09 17:29:33 +0800）CTO 裁决①③ BOD 应急直派执行闭·迁移链修复毕（D-27 事后补档）**
+
+- 【CTO 裁决采认（17 时段回执）】①合流=merge 形（eval 四笔 hash 零改写·冲突即停）③补跑=合流毕即刻（手动形·补跑轮=FADE-001 首次实弹评分轮照评）②迁移器兜底三件=R 面排窗（候 COO）。旁报定性：8710 cf=1 观察；8711 累计知悉；8713 本席即刻勘。
+- 【①合流执行毕（BOD 代执实录·R-HY 无 tmux 交互席=R 面信箱/dsh 形拓扑·CTO 操作序本席应急直派通道代执·逐段 RC 断言）】：a) fetch sg-bare ✓ b) merge --no-edit sg-bare/dev **MERGE_OK 零冲突**（eval 四笔+M 面产出合流·merge commit **ed712e3f8**）c) push sg-bare dev **PUSH_OK**（ac1e2380e..ed712e3f8）d) pull --ff-only **FF_FLAT_OK**（Already up to date·本地=bare 顶）——工作树 clean。旁实锚：bare post-receive 主检出对齐面报脏文件 warning（sg 侧主检出候观察·hook 对表族）。
+- 【③补跑执行毕】：照 per-run command 原形手动跑 weekly_plane_shift（W45→W46·start 2026-11-09）——**.shift-ade.json status=pass**（OP-202611-W46-001 建周）·迁移 commit **6860bf87b**（TriRMC-Scheduler 身份）推达 **bare 顶对表一致**（ls-remote 实锚）·W46 权威结构在 R-HY 建成（OP json+unresolved-items 两件在案）。**W45→W46 周平面迁移补毕**（失败约 19.5 小时后修复）。
+- 【CTO 二报采认（8713 勘定）】非故障=宿主睡眠窗 daemon 冻结自然恢复（lastWake 今日 16:18 CST·wake 后 49 分钟首拍 17:07:24·tick 按 ISO 周自动落 W46/bod-tick——本机 W46 由 tick 先行入位·两树面分立不矛盾·迁移补跑仍必要=权威结构）·healthz 全绿零勘修。**架构级实锚采认**：宿主睡眠=全拍源同停·跨宿主冗余=真需求（候选形=河源 8710 隔宿心跳拍探本机 8713 经 18710 反向·候探针插件化窗并入设计）——昨夜双盲根因图景：R-HY 静默 exit 128（迁移线）+本机全拍源同睡（盯守线）互不兜底。
+- 【COS 回执采认】挂账② tick 停摆=销（宿主休眠冻结·与 BOD 会话挂起/COS 值守中断同根·COS 自领 T-0 22:30+23:50 实弹监督未发生如实入账）；挂账① 迁移失败已落 LG 台账（修复案毕 fan-in 对表销）；知情三项入账毕。
+- 【残留候办四件】① verify 段三件断言缺 daily-progress.md（W46 ls 两件·候 watcher/承接段补）② 本地对齐 fetch github 通道断（Connection reset 连发·本地 origin/dev 停 84044b457 vs bare 顶 6860bf87b——候 sg-bare ssh 通道或网络恢复·今晨人工对齐兜底窗内办）③ agent 四段首评承接面候派工（COS 拆树·sg duty 值席组承接候选）④ bare 主检出脏文件 warning 候 sg 侧对表。
+- 回执发出：m-cto（执行毕实锚全链）+m-cos（①③毕报 fan-in+四段首评候派工）。
