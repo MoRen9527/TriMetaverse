@@ -695,3 +695,12 @@
 - **评分门真实性**：四骨架 import 冒烟 OK+考卷可载+判序降档原语在件=门机制在位；真评分=23:50 push 后 agent 承接窗（23:50-00:20）按考卷 checks 跑——骨架中性冒烟 28/28（3e0994b 在检）+本次 import 冒烟=可跑实证。
 - **差异标注一处（候值席勾勘·不阻塞）**：18710 隧道本机实测终点=sg trimc（jobCount=16 响应体）；plan 前置断言④记载 18710 探针形=R-HY 8710 形（11-08 08 时段实证在卷）——两读数不一致；R-HY 8710 面本席已直探绿（healthz ok cron 4 jobs cf=0），隧道记载差异候 22:30 值席勾勘定。
 - 结论：**部署齐+评分链机制真实在位+无阻塞项**——候 22:30 值席勾七项+23:50 链跑实际试卷评分。
+
+**㊿+419（2026-11-09 17:18:55 +0800）空窗恢复补账·迁移失败实锚+电源事件+拍报停摆（2026-11-08 23:23→11-09 17:16 约 18 小时会话挂起·cron 注入堆积未即时处理·本段如实注记）**
+
+- **【迁移失败实锚·CEO 昨晚亲令盯的链】**：FADE-001 push 段昨晚 23:50（9c81c7ec run 日志 2026-11-08T15-50Z）**exit 128**——第一步 git pull --ff-only sg-bare dev 被拒（fatal: Not possible to fast-forward·sg-bare/dev 0cc423283..ac1e2380e 有 M 面新提交+R-HY 本地 dev 有分叉笔=R 面 r-plane-eval-01 系列四笔（7dd0b15c8 顶·13 席成熟度评估两卷总汇收官）未推 sg bare）——&& 链断：weekly_plane_shift 脚本未跑·W46 未建（R-HY ls 空）·shift-ade 审计件未产（仅历史周 W34/35/37 旧迹）·agent 承接四段无对象可接。**W45→W46 周平面迁移未发生**。根因面（BOD 转录不代裁）：R 面工作树直 commit 与 M 面 sg bare 主线双线并行，迁移器仅支持 ff 形——并行窗互踩族的迁移器版。
+- 本地侧面：本地 origin/dev fetch 失败（Connection reset·网络抖动）——本地主检出 W46 目录存在但来源未勘（fetch 断未对上链·禁推定）。
+- **【电源事件】**：昨晚 22:23 拍 8713 pwr=72% ac=false（本机掉电转电池）+power-gate 警报信（LG-069·连续 3 次读失败·闸状态不可信·请人工核查电源）——今 17:16 活体核 8713 **pwr=100% ac=true gate=none 已恢复**（uptime 244724s 连续=daemon 未重启）。掉电起止时长未勘（readFailures 值面未展开）。警报信已核毕销读（marked=1）。
+- **【拍报停摆】**：tick-latest.md 最后拍=昨晚 22:23:50——8713 侧 bod-tick 产出停摆约 19 小时（22:37 起无拍·8713 healthz ok+cron enabled 但 tick job 产出面停）——8713 侧 job 状态勘验候办（列流转项）。本席空窗期拍报盲已由本段活体探补。
+- 【其他现值读数】8711 mc totalFailures=2588（累计·lastFailure 今 17:14 timeout 5s·degradedFailures=0 alarmSent=false=未到告警门）；R-HY 8710 healthz ok 但 cf=1 首现（轻号·候下拍观察）；8712 sg 正常（昨晚 22:23 拍 cf=0）。
+- 【处置流转】迁移失败=COS 挂账+CTO 域处置（修复面候 CTO 裁：分叉合流策略/迁移器前置兜底）；tick 停拍+8713 job 面=COS/CTO 勘验项。本席不代裁——流转即发。
