@@ -6,13 +6,13 @@
 - syncMode: source-only
 - lastSyncedAt: 2026-08-18
 
-版本：v1.1（2026-08-18 立册；2026-08-19 补三层语义分离口径）
+版本：1.1.0（2026-08-18 立册；2026-08-19 补三层语义分离口径）
 
-登记：[TriCompany fade-registry.md](../../TriCompany/docs/engineering/fade-registry.md) **FADE-004**
+登记：[TriCompany fade-registry.md](../../../TriCompany/docs/engineering/fade-registry.md) **FADE-004**
 
-上位规范：[TriCompany FADE 协议 §1.1](../../TriCompany/docs/engineering/fade-protocol-spec.md)（FADE = Full-cycle Agentic Deterministic Execution）
+上位规范：[TriCompany FADE 协议 §1.1](../../../TriCompany/docs/engineering/fade-protocol-spec.md)（FADE = Full-cycle Agentic Deterministic Execution）
 
-整合归属（2026-08-19）：本规范即 **ADE-B 员工域**（[ade-consolidation-proposal.md](../../TriCompany/docs/engineering/ade-consolidation-proposal.md) §三 ADE-B）——上岗链 + 员工对象发布链同一生命周期域
+整合归属（2026-08-19）：本规范即 **ADE-B 员工域**（[ade-consolidation-proposal.md](../../../TriCompany/docs/engineering/ade-consolidation-proposal.md) §三 ADE-B）——上岗链 + 员工对象发布链同一生命周期域
 
 组织依据：[clone-dispatch-protocol.md](clone-dispatch-protocol.md)（岗位-员工分离：md 岗位说明 = JD 组织结构；上岗 = JD 进在岗名册；分身 spawn = 另一层 HC 流程，按 JD 可创建多个分身并行执行——防单 agent context 耗尽的原始设计目标）
 

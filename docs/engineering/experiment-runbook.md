@@ -1,6 +1,10 @@
 # TriCade 实验→生产管线运行手册
+- sourceOfTruth: 本文件（工程域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
 
-版本：V0.1
+
+版本：1.0.0
 日期：2026-08-01
 状态：ACT1 — 实验标记与规则结晶规范
 

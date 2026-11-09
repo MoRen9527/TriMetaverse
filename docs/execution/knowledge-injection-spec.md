@@ -1,6 +1,6 @@
 # 知识注入规范（FADE-ASSESS-003，runtime 侧知识形态与注入链路）
 
-版本：v2.0（2026-08-21 升版）
+版本：2.0.0（2026-08-21 升版）
 日期：2026-08-21
 状态：当前工程规范（CEO 2026-08-20 启动，MVP APPROVED；2026-08-20 批次 3-2 内容层落地，2026-08-21 升版对齐）
 
@@ -11,7 +11,7 @@
 - lastSyncedAt: 2026-08-21
 
 来源：CEO 2026-08-19 定调（FADE-ASSESS-003）+ 2026-08-20 设计定案（CTO 小狄 APPROVE + CPO 小乔语义）
-上位规范：[TriCompany FADE 协议（v2.0.0 前称 ADE）](../../TriCompany/docs/engineering/fade-protocol-spec.md) + [ade-consolidation-proposal.md](../../TriCompany/docs/engineering/ade-consolidation-proposal.md)（双部署模型：runtime 侧知识形态）
+上位规范：[TriCompany FADE 协议（v2.0.0 前称 ADE）](../../../TriCompany/docs/engineering/fade-protocol-spec.md) + [ade-consolidation-proposal.md](../../../TriCompany/docs/engineering/ade-consolidation-proposal.md)（双部署模型：runtime 侧知识形态）
 
 变更记录：
 

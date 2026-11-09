@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/mmc-host-driver-design-draft.md
 - syncMode: source-only
-- 文档版本: **v0.1-draft**
+- 文档版本: **1.0.0-draft**
 - lastSyncedAt: 2026-08-24
 - 状态: `draft —— quadmig-1 树 Q1-1 节点产出（CTO 小狄设计线）；待评审升版，未经 APPROVE 不得作为实施依据`
 - 树挂接: `docs/workflow/operating-records/2026-W35/trees/quadmig-1-mmc-shell/tree-op.json` 节点 Q1-1

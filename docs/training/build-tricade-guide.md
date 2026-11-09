@@ -1,4 +1,8 @@
 # TriCade Build Pipeline 教程
+- sourceOfTruth: 本文件（培训域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > 对应文件：`build-tricade.yml`  
 > 讲解方式：总分总（总览 → 分段详解 → 总结）

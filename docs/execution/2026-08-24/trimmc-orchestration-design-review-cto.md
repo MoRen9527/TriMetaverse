@@ -5,7 +5,7 @@
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/trimmc-orchestration-design-review-cto.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-25
-- 版本: v1.0（CTO 技术面一轮评审 + 定向补写）
+- 版本: 1.0.0（CTO 技术面一轮评审 + 定向补写）
 - 评审对象: `trimmc-orchestration-design.md` v0.1-draft（同目录，本次未改动原文）
 - 评审人: 小狄（CTO，TriCompany 技术真源 owner）
 - 关联输入: `mmc-host-driver-design-draft.md` v0.1、quad-migration-spec v1.0 §八/§九、server-fleet-m0.md v2026.W33.1、TriMC 现役源码（本日实读，清单见 §六）

@@ -4,7 +4,7 @@
 
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/quad-migration-spec.md
 - syncMode: source-only
-- 文档版本: **v1.0**（v0.1 草案 → v0.2 三审吸收 → v0.3 追加 §八/§九 → v1.0 CEO 终批签发）
+- 文档版本: **1.0.0**（v0.1 草案 → v0.2 三审吸收 → v0.3 追加 §八/§九 → v1.0 CEO 终批签发）
 - lastSyncedAt: 2026-08-24
 - 状态: `released —— 已签发（CEO 2026-08-24 14:36 北京批准），进入拆树执行；修订走新版本+留痕`
 

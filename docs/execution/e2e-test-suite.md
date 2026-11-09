@@ -1,4 +1,8 @@
 # E2E 回归测试集（勾选视图）
+- sourceOfTruth: 本文件（执行域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > 真源: e2e-test-suite.json（本视图由其生成——勾选后请同步 JSON status 字段）
 > 分层: basic/boundary/exception 每轮必跑 · performance/security 可选 | A 全自动 S 半自动 M CEO 手测

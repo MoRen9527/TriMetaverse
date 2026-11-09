@@ -92,7 +92,7 @@
 
 ## 5. 与 Phase 1 计划的映射（示例）
 
-参考 `tmv-phase-1-execution-plan.md`：
+参考 `docs/archive/tmv-phase-1-execution-plan.md`（历史卷）：
 
 - Epic: M1 国际站+广告
   - Task: 站点信息架构与导航（stage: plan/design）
@@ -160,6 +160,6 @@
 
 ## 9. 参考
 
-- 本仓库 Phase 1 计划：`tmv-phase-1-execution-plan.md`
+- 本仓库 Phase 1 计划：`docs/archive/tmv-phase-1-execution-plan.md`（历史卷）
 - 模板目录：`.github/ISSUE_TEMPLATE/`
 - GitHub Projects（看板）：建议创建一个“TMV Phase 1”项目并将 Issues 加入。

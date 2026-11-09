@@ -1,0 +1,26 @@
+{
+ "run_at": "2026-11-07T16:01:02.532436+00:00",
+ "trigger_volume": 0,
+ "watch_state_note": "fade011 开跑前 watch 全关（彩排收官候开跑令）",
+ "verdict_dist": {
+  "APPROVED": 5,
+  "FROZEN": 0,
+  "ESCALATED": 0,
+  "RETRY": 0
+ },
+ "chain_events_mentions": 1,
+ "blank_runs": 3,
+ "anomalies": 1,
+ "optimization_process_events": [
+  "  - 338938dc6 docs(fade): 彩排A-N2执行节点毕收口报告落卷(DCE六OP机械三域执行毕·四构造件逐字对表expect·自检三断言绿·真实re-scan RC=0 files=334·G1/G2/G3对冲+隔离面残留双断言全绿·⑧⑨段skill双缺位首验实录候勘·S1靶段零触碰·断点交接A-N3+B-N2串行化窗口序注记)",
+  "  - 2e8cecc03 docs(fade): 彩排A-N3+B-N3收口节点毕——两树收口检查翻done(A-N3=T5门六OP逐字对表PASS+基准四件sha256复断对表冻结读数+S1靶面终验+⑧⑨skill缺位裁定CAO定谳采认/B-N3=T6门三维批卷PASS+S1评分前置核对五要素齐+串行化窗口序终验·同文件双线零互染实锚·状态位翻转以报告为凭全树清单不动保T4冻结可溯)·两树全毕",
+  "  - 814e95520 docs(fade): 彩排B-N2执行节点毕——fixture-note.md维护流程现状段语义更新(单线JSON过时陈述→两线分工定谳口径⑯:机器线=DCE机械三域·施工清单=语义作业方案卷/人的线=树owner语义改动·施工清单=树/划分判据=精确指令无损表达/批卷验分工T5＋T4·T6＋S1＋T15·⑦⑧汇合;旧断言「不再需要人工介入」清除)+收口报告落卷(十字",
+  "  - af240529a docs(fade): event-watch 立窗验收 APPROVE 留痕(gate 六条+独立抽验七绿 95/95·fail-closed 探针佐证·watch 业务映射候裁=暂维持全关)——FADE-011 全谱收官线达成 @fsd",
+  "  - 163bf6001 docs(bod): §八十八——FADE-011 三段全链闭环窗纪要(首彩排 APPROVED 98.5→追认99.5·勘窗六件排窗废止·Phase2 五工序自动化管线达成·B件立法闭环·错挂三闸记档)·详卷指针 @bod"
+ ],
+ "registry": {
+  "mtime": 1793874182.6737602,
+  "instances": 9,
+  "sha": "3adb5cc"
+ }
+}

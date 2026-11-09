@@ -19,6 +19,8 @@
 
 **关联**：object-assertion-before-confirm（对象三问）/dual-controller-ports-m-mlc-r-rlc（端口定性）/m-sg-r-hy-server-naming（机位正名）/trirmc-independent-repo-topology（TriRMC 独立仓）。
 
+**统称术语对表（2026-11-04 术语入册随批·CAO）**：四名统称正身=治理 registry〈四控制器统称术语〉节（`TriCompany/docs/registry/company-governance-state.md`·CEO 13:25 概念审核令·TriCompany 6a1dc4e）——TriMMC=M 面服务域主控／TriMLC=M 面本地域主控／TriRMC=R 面服务域主控／TriRLC=R 面本地域主控；统称=面域控制器族 ⊇ daemon+cli+harness+未来能力；**本矩阵=daemon 进程形态机位（族内单形）**，语源层（M=Meta-Virtual/R=meta-Reality）见 dual-controller-ports 条——语源/统称两层面并注勿混；TriMC≠族（入口/Agent Loop 产品模块·registry 消歧行）。
+
 ## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
 
 - [daemon 机位矩阵·服务域/本地域硬规则](daemon-plane-locality-matrix.md) — TriRMC=河源(服务域)/TriRLC=**本机**(R面本地域·8711)/TriMMC=sg(loopback)/TriMLC=本机(8713)；2026-10-09 四连混淆实证（trirmc/trimmc 缝合→v4 作废、「8711 复活」伪命题——正身本机 64h 活着、探针探错机报假缺口、CTO 稿对象错位）；daemon 状态叙述先活体现探正身机位禁推定；**store 位同理（10-11）**：双 daemon 双 store 分立（trilc\=8711 代码默认/trilc-channel\=8713 启动链显式 DATA_DIR）探库先对 DATA_DIR 禁按路径直觉（探错库 jobCount=0 假矛盾实证）

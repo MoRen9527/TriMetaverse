@@ -1,4 +1,8 @@
 # CTO-008-P：PC 端 Electron 打包技术方案
+- sourceOfTruth: 本文件（工程域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > 设计人：ChiefTechnologyOfficer（小狄）
 > 状态：设计完成，已实现（ConnectionManager + Phase P0 打包脚本）

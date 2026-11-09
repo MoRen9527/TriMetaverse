@@ -16,6 +16,15 @@ TriRLC 8711（R 面）：cronCommandHttpAllowed=TRILC_CRON_COMMAND_ALLOWLIST 精
 
 **推论**：三 daemon cron 行为两两不同（即生效/缺列缺陷/白名单拦截）——判 daemon cron 变更窗先分清 TriMMC/TriMLC/TriRLC 三形态，勿互套。修 TriMLC F-3 时对表 TriMMC 正形（tick 即时入调度）作旁证。
 
+**【2026-10-22 22:2x 四 daemon 装设窗 BOD 实勘增补（TriRMC 行+造件形统一）】**：
+- **TriRMC 8710（河源 R-HY·trirmc.service User=fleet·node v22）**：routes.ts 校验 name/schedule（kind cron|every|at）+**payload.command/cwd 嵌套必填（平铺 command 报 400「payload.command and payload.cwd required」）**·**无 ALLOWLIST 门**（cron 面零命中·grep 仅 agent-loop 三文件）零重启；三查照 F-3 三查（201+next_run 值面+enabled·首拍 runs/lastStatus 真值兜底）。store/挂 /var/lib/trirmc（TRIRMC_CONFIG_DIR·job log=cron/logs/）·token=TRIRMC_INTERNAL_TOKEN（unit env·X-Internal-Token 头）。
+- **TriMMC 8712 造件形同族**：store job=payload{command,cwd} 嵌套（平铺同错风险）·routes 仅校验 command/cwd 字符串·无 ALLOWLIST——**TriMMC/TriRMC 造件=嵌套 payload 形·TriRLC=平铺+ALLOWLIST 精确等值**。
+- **跨机通道实锚**：河源=`ssh -J M-SG-47.245.122.61 R-HY-8.155.54.79`（跳板免阿里云限 IP）·repo /srv/fleet/TriMetaverse 同构在位（remote origin=sg bare·**git 操作必 sudo -u fleet**（root 触 dubious ownership+root 物件残留雷）·fetch/merge --ff-only 实证通）。
+- **window-reminder-patrol.mjs 跨机缝（22b8303ca·候 CTO 追认）**：59e649b37 修复中扫面 mk() 漏接 TRILC_WR_REPO env（只接了 emitReminder 落卷根）——Windows 机无害（REPO 硬编码恰真仓）·**Linux 机恒扫 D:/ 恒 idle=三查全绿但零拍发静默缺陷**；教训=**env 测试缝接一处不等于接全处·跨机部署前必在目标机手动试跑看扫面实际路径**（试跑输出印路径=idle 消息自带判别力）。
+- **8712 在役 E1-5 形**：e15-window-reminder-scan-8712（python·10-17 铸·/srv/fleet/bin/·周定位=反向扫全周取最新台账=isoWeek 缺陷免疫）——8712 提醒面由它承接非 .mjs；emit 周目录分野：python 形落台账所在周（W42）/.mjs 落 isoWeek(now)（W43）——统一时对齐。
+
+**【2026-11-04 术语精度注（四名统称入册随批·CAO）】**：①本条各 daemon 行 cron API 语义**系属 daemon 进程形态**（TriMMC daemon=sg 8712 进程·TriRMC daemon=河源 8710 进程等）——「TriMMC 的 cron API」读法=daemon 面特指，非仓/模块名泛指（统称族内 cli/harness 不背 cron API 语义·统称正身=registry〈四控制器统称术语〉节 6a1dc4e）；②L3 头注 10-06 读数「R-HY TriRMC 8712」系当时点实测（LG-066 合并后 8710 消失窗），**现役=TriRMC 河源 8710**（10-22 实勘见下方增补·机位矩阵正身）——L3 四 daemon 权威读数仅 TriRMC 一格随迁移过时，引用先读全条（10-13 教训①同族）；③TriMC≠本条任何 daemon（入口/Agent Loop 产品模块·近形消歧=registry TriMC 消歧行）。
+
 **degraded 语义分野（LG-064 2026-10-05 实勘增补，同族勿互套）**：TriMMC/TriRMC degraded=**per-job max(consecutiveErrors)≥3**（单 job 连败可见，掩蔽面零）；TriMLC=**全局单计数器，任一 job ok 即清零**（单 job 连败被健康 job 掩蔽，8 连败实验实证 degraded 恒 false，真源=TriMetaverse liveness-rules-20261005.md §二.4）——TriMLC 降级面仅可捕全 job 连败态，单 job 故障靠 store 精判补偿。修 TriMLC degraded 对表 TriMMC per-job max 正形作旁证（候办 P2 维护窗）。
 
 **TriMMC executor「调度活执行停」家族性缺陷（2026-10-05 立）**：nextRunAtMs 持续滚动+零新日志+延迟自愈（10-01 TriRMC R-HY 停摆/10-02 TriMMC sg job ae02593a 停 68.8h，两形态同签名=家族性强信号）——nextRun 滚动不可单独作活信号，心跳判据以 lastRun 执行事实为主。根因静态勘=CTO 车道候窗，修复走独立变更窗。

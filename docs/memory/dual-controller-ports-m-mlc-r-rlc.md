@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: e11343a2-e97e-4a90-8c4a-5ac637545af8
-  modified: 2026-09-18T15:56:42.244Z
+  modified: 2026-11-04T05:41:43.659Z
 ---
 
 2026-09-17 CEO 面授定性（勘正 BOD"过渡期双跑/旧名退役"误判）：
@@ -16,3 +16,5 @@ metadata:
 - **命名语源（CEO 2026-09-18 00:0x 定谳，勘正 CAO"Machine"误读）**：Tri=TriMetaverse 前缀；**第一位字母 M=Meta-Virtual（元虚拟）、R=meta-Reality（现实）**——即 M 面=元虚拟面、R 面=现实面；**MMC 第二个 M=Main**（服务域主控）、**LC=Local Controller**（本地控制器）。四名全解：TriMMC=元虚拟面主控（服务域 sg）、TriMLC=元虚拟面本地控制器、TriRMC=现实面主控（服务域河源）、TriRLC=现实面本地控制器。CAO 白皮书 1d 曾误写"第二字母 M=Machine"，已入重审纠正。
 
 **How to apply:** 涉 daemon 通道先分面——M 面作业走 8713（有看门狗）；R 面协同（河源 TriRMC/周平面）走 8711 侧（无保活，异常人工兜底）；给席位的派工单不写 8711 隐式可用性断言。**⚠ 运维风险实锚（2026-09-18 DE 部署夜）**：trilc stop/start 与 8713 共享 pidfile 无端口命名空间——M 面 daemon 操作**误停 8711 两次实证**（均 schtasks 权威路径恢复）；R 面保活机制设计须一并修 pidfile 隔离，M 面 daemon 重启前先核 8711 存活。关联 [[m-sg-r-hy-server-naming]]（M/R 面命名体系）。
+
+**统称层并注（2026-11-04 四名统称入册·CAO）**：CEO 13:25 概念审核令立四名统称正身（治理 registry〈四控制器统称术语〉节·TriCompany 6a1dc4e）——统称层 gloss 用 Master/Local Controller（TriMMC=M-plane Master Controller 等，能力族 ⊇ daemon+cli+harness）；本条 09-18 字母语源定谳（M=Meta-Virtual/R=meta-Reality·MMC 第二 M=Main）=语源层不废——**语源层与统称层并注各司其职**（联审稿 Master gloss 曾与语源定谳疑似冲突，勘定=两层各表同真·防误读）。

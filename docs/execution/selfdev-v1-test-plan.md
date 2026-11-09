@@ -1,4 +1,8 @@
 # 自研循环 v1 — 方案 B 测试计划
+- sourceOfTruth: 本文件（执行域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > w33-4: 验证 TriLC 自身 agent loop 的编码能力
 > 方案 B = 纯 TriLC agent，不依赖 OpenCode/Claude Code/Codex 外部引擎

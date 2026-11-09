@@ -2,7 +2,7 @@
 
 > **编号勘误（2026-08-21，FADE-LEFTOVER 批 2）**：本规范是 FADE-ASSESS-20260819-005 工作包产物，编号已并入 **FADE-004（员工域 ADE-B）**——登记册（fade-registry.md）无独立 FADE-005 条目，整合提案明确"避免另立 FADE-005"。文件名保留以兼容历史引用（周平面 / commit 记录）。
 
-版本：v1.0（2026-08-20 立册）
+版本：1.0.0（2026-08-20 立册）
 日期：2026-08-20
 状态：当前工程规范（CEO 2026-08-20 启动，全链 APPROVED）
 
@@ -13,7 +13,7 @@
 - lastSyncedAt: 2026-08-20
 
 来源：CEO 2026-08-19 定调（FADE-ASSESS-005）+ 2026-08-20 实现/验证/终审全链
-上位规范：[TriCompany ADE 模式规范 §1.1](../../TriCompany/docs/engineering/ade-pattern-spec.md) + [ade-consolidation-proposal.md](../../TriCompany/docs/engineering/ade-consolidation-proposal.md)（ADE-B 员工域）
+上位规范：[TriCompany ADE 模式规范 §1.1](../../../TriCompany/docs/engineering/ade-pattern-spec.md) + [ade-consolidation-proposal.md](../../../TriCompany/docs/engineering/ade-consolidation-proposal.md)（ADE-B 员工域）
 
 ## 一、语义
 

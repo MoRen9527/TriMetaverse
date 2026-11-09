@@ -9,3 +9,5 @@
 2. 任一不满足→改用追加勘正提交（JSONL/账本类文件 append-only 更天然）。
 3. ts 类勘正优先在**提交前**用动态生成杜绝：heredoc 里 ts 用 `$(date -u +%H:%M)` 生成，禁手写预填（D-04 同族根因：预写值必然漂移）。
 4. 动态生成正形=`TS=$(date ...)` **独立赋值行**在前、heredoc 在后。变体坑（2026-09-30 实证）：`TS=$(date ...) cat >> f <<EOF` 环境前缀形式只把 TS 送进 cat 的 env，heredoc 展开读的是 shell 变量（未赋值）→ ts 落成空串，比漂移更隐蔽。落完 `grep '"ts":""'` 自证一次。
+
+**实证补（2026-11-06 02:50-02:53，主检出 dev·CTO 席）**：**三查全过仍中招**——三查与 amend 动作**分离调用**存在竞态窗：三查时 HEAD 还是自己的，落手 amend 前并行席（BOD ㊿+272 a7dac738e）提交错入 HEAD，amend 把 BOD 提交吞入己 commit。CTO 即时拆回恢复（hash→fb584c8ec·内容+message 原样·零内容损失·BOD 方验讫零待勘）。教训升级：①三查+amend 必须**原子化**——单链 `test "$(git log -1 --format=%H)" = <自己hash> && git commit --amend ...` 一体完成，查与做之间不留窗；②共享分支高频并行时干脆**改追加 commit 形**（append-only 天然免 amend·CTO 事后自律走向）。③被吞方处置流程=验旧 hash 全 refs 零指向+卷面扫描引用（零待勘则仅需知悉）+知悉注落卷+与肇事席互验回执。

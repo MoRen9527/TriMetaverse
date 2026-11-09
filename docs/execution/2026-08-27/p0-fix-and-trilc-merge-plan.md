@@ -5,7 +5,7 @@
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-27/p0-fix-and-trilc-merge-plan.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-27
-- 文档版本: v1.0（2026-08-27 凌晨战役收口后补立，供白班排期）
+- 文档版本: 1.0.0（2026-08-27 凌晨战役收口后补立，供白班排期）
 - 事实来源：四份审计报告（file:line 均经编排侧抽验属实）
 
 ## 一、九项 P0 清单（核准自原始报告）

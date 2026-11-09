@@ -1,0 +1,80 @@
+{
+  "schema": "fade-semantic-work-plan/v1.0",
+  "version": "v1.0",
+  "run_id": "fade-rehearsal-01#R1",
+  "cast_by": "CAO 小行（§四冻结程序牵头席·Plan 时点铸造·执行体=SeniorDeploymentEngineer）",
+  "cast_at": "2026-11-03T20:20:08+08:00",
+  "upstream": {
+    "pre_task_brief": "pre-task-brief.md",
+    "qualify_impact_list": "qualify-impact-list.md",
+    "task_charter": "task-charter-v1.0.md",
+    "tree": "树 A fade-rehearsal-01-machine-line（全树清单 full-tree-list-v1.0.md）"
+  },
+  "scope_note": "机械三域限定：relatedRefs/反向索引/元信息头——正文语义面零触碰（件3「维护流程现状」段=人的线树 B 对象·禁入本卷·越界即违 T5 并触发 S1 靶面污染）",
+  "ops": [
+    {
+      "id": "OP-1",
+      "file": "构造件-中文路径探针.md",
+      "domain": "反向索引",
+      "action": "域内反向索引行补记",
+      "target": "「引用面」节",
+      "expect": "节内新增一行：`- 反向索引：nested/fixture-note.md（G3 同名对·各自独立登记）`——中文文件名与既有行形一致不转义不失真",
+      "verify": "T5 改的=方案说的＋G1 中文路径全链不失真"
+    },
+    {
+      "id": "OP-2",
+      "file": "fixture-outbound-probe.md",
+      "domain": "relatedRefs",
+      "action": "G2 越界引用归一化",
+      "target": "「引用面」节·越界引用行",
+      "expect": "行内链接目标由 `../file-family-maintenance/draft-ceo-bod-session-20261102.md` 归一为仓相对路径 `docs/workflow/operating-records/2026-W44/trees/file-family-maintenance/draft-ceo-bod-session-20261102.md`，行尾括注扩为「（越界探针引用·归一化登记·不挂图谱真身）」",
+      "verify": "G2 判据：归一后不越隔离面挂接·显式标注保留"
+    },
+    {
+      "id": "OP-3",
+      "file": "fixture-note.md",
+      "domain": "反向索引",
+      "action": "同名消歧反向索引行补记",
+      "target": "「引用面」节",
+      "expect": "节内新增一行：`- 反向索引：nested/fixture-note.md（同名件·G3 消歧·各自独立登记）`；「维护流程现状」段零触碰",
+      "verify": "G3 判据＋S1 靶面保护"
+    },
+    {
+      "id": "OP-4",
+      "file": "nested/fixture-note.md",
+      "domain": "反向索引",
+      "action": "域内回指行补记",
+      "target": "「引用面」节",
+      "expect": "节内新增一行：`- 反向索引：构造件-中文路径探针.md`",
+      "verify": "T5"
+    },
+    {
+      "id": "OP-5",
+      "file": "构造件-中文路径探针.md",
+      "domain": "元信息头",
+      "action": "三要素核查（verify-only·零改动即过）",
+      "target": "元信息头 sourceOfTruth/syncMode/lastSyncedAt",
+      "expect": "三要素在位且 syncMode=rehearsal-fixture——只查不改，收口报告记核查结论",
+      "verify": "文档元信息头约定（doc-metadata-header）"
+    },
+    {
+      "id": "OP-6",
+      "file": "nested/fixture-note.md",
+      "domain": "元信息头",
+      "action": "三要素核查（verify-only·零改动即过）",
+      "target": "元信息头 sourceOfTruth/syncMode/lastSyncedAt",
+      "expect": "同 OP-5——只查不改",
+      "verify": "同上"
+    }
+  ],
+  "out_of_scope": [
+    "fixture-note.md「维护流程现状」段（人的线·树 B·owner=FSD·S1 语义靶）",
+    "各件正文其余段落（语义面）",
+    "试卷/任务书/全树清单/原材料卷/本卷（基准件·DCE 期间不可变）"
+  ],
+  "execution": {
+    "owner_agent": "SeniorDeploymentEngineer",
+    "tree": "fade-rehearsal-01-machine-line",
+    "mode": "CLI 逐条解析执行（JSON 经参数传入）·每 op 收口报告照 spec §2.7 十字段落 reports/·DCE 毕 Verify 对照本卷逐 op 断言"
+  }
+}

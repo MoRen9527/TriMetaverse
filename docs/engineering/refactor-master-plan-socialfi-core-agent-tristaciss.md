@@ -11,7 +11,7 @@
 更新时间：2026-02-27
 
 基于：
-- `arch-storage-migration.md`（双域执行、ToolBus 强制、审批与审计、存储生命周期）
+- `docs/archive/arch-storage-migration.md`（历史卷·双域执行、ToolBus 强制、审批与审计、存储生命周期）
 - `architecture-overall-unified.mmd`（整体框架唯一真源）
 - `architecture-socialfi-core-agent-tristaciss.md`（目标模块映射）
 

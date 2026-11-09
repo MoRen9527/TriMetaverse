@@ -5,7 +5,7 @@
 - sourceOfTruth: TriMetaverse/docs/execution/2026-08-24/tc001-harness-scaffolding-func-spec.md
 - syncMode: source-only
 - lastSyncedAt: 2026-08-26
-- 文档版本: v1.0-draft（TC-001 拆树输入）
+- 文档版本: 1.0.0-draft（TC-001 拆树输入）
 - 授权: CEO 2026-08-26 指令「现在就写成正式功能需求文档」
 
 ## 一、背景与实证

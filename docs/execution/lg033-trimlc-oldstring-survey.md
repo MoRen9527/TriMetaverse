@@ -1,4 +1,8 @@
 # TriMLC 输出面旧串清查清单（2026-09-08，LG-033 ①件附属）
+- sourceOfTruth: 本文件（执行域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 ## 源码面（grep src/*.ts 排除 trimlc/注释命中）
 - src/cli.ts:29:Usage: trilc <command> [options]

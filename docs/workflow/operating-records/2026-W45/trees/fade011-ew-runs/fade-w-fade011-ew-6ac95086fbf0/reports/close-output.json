@@ -1,0 +1,22 @@
+{
+  "schema": "tri-fade011-close/v1.0",
+  "run_id": "fade-w-fade011-ew-6ac95086fbf0",
+  "verdict": "APPROVED",
+  "gate_check": {
+    "score_total": 100,
+    "threshold": 90,
+    "required_all_passed": true,
+    "hash_match": true
+  },
+  "evidence_refs": [
+    "reports/score-output.json",
+    "reports/node-verify.md"
+  ],
+  "pending_list": {
+    "items": [],
+    "owner": "",
+    "backfill_at": ""
+  },
+  "decided_by": "fade-driver",
+  "decided_at": "2026-11-04T05:02:50.126Z"
+}

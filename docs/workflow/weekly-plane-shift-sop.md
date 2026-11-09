@@ -1,4 +1,8 @@
 # 周度平移 SOP（标准操作流程）
+- sourceOfTruth: 本文件（工作流域正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 
 > w33-6: W32 手动流程提炼 → 可复用模板 → 未来 cron 自动化基础
 > 确定性执行规程（FADE DCE 段）：Agent plans → Deterministic CLI executes → Agent closes

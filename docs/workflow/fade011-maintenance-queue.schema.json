@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tmv/workflow/fade011-maintenance-queue.schema.json",
+  "title": "FADE011MaintenanceQueueItem",
+  "description": "FADE-011 维护动作层接线·维护任务队列条目（登记制四源·裁定正身=2026-W45/trees/fade011-maintenance- wiring/cto-wiring-ruling.md §二①）。队列载体=同目录 fade011-maintenance-queue.jsonl（一行一条目·JSON Lines）。护栏：单波消费 N≤5（cto-wiring-ruling §二④·消费面取 min(5, pending)）；敏感面排除清单=白皮书/纪律册/制度面/权限配置类禁自动入队——sensitiveArea=true 时 source 必须为 manual-dispatch 且必须携带 explicitOrderRef（显式派工令锚）。队列空=空跑自检照旧（机制心跳语义·裁定 §一）。",
+  "type": "object",
+  "required": ["objectType", "id", "source", "title", "targets", "status", "registeredAt", "registeredBy"],
+  "properties": {
+    "objectType": { "const": "FADE011_MAINTENANCE_QUEUE_ITEM" },
+    "id": { "type": "string", "pattern": "^mq-[0-9]{8}-[0-9]{4}$", "description": "条目 id= mq-YYYYMMDD-NNNN（登记日+当日序号）" },
+    "source": {
+      "type": "string",
+      "enum": ["batch-order", "patrol-finding", "rdt-content", "survey-output", "manual-dispatch"],
+      "description": "登记制四源（裁定 §二① a-d）+ manual-dispatch=显式派工令入口（高敏面唯一合法通道·裁定 §二④）"
+    },
+    "title": { "type": "string", "minLength": 4, "maxLength": 200 },
+    "targets": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "目标工件路径（仓内相对路径·拆树派工的 scope 输入）"
+    },
+    "sensitiveArea": { "type": "boolean", "default": false, "description": "命中敏感面排除清单（白皮书/纪律册/制度面/权限配置类）=true·须 manual-dispatch+explicitOrderRef" },
+    "explicitOrderRef": { "type": "string", "description": "显式派工令锚（派工单路径或信面 msg id·sensitiveArea=true 时必填）" },
+    "status": { "type": "string", "enum": ["pending", "claimed", "done", "rejected"], "description": "pending=待消费；claimed=已被 run 认领（carriedBy/runId 记档）；done/rejected=终态（note 记档）" },
+    "registeredAt": { "type": "string", "format": "date-time", "description": "登记时刻（ISO 8601·进程内生成零 spawn date·R4.3 同族）" },
+    "registeredBy": { "type": "string", "description": "登记席正名（SDE/FSD/COO 等）" },
+    "claimedByRunId": { "type": "string", "description": "认领 run 的 runId（消费面写回）" },
+    "claimedAt": { "type": "string", "format": "date-time" },
+    "note": { "type": "string", "description": "终态注记/上下文补充" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "sensitiveArea": { "const": true } } },
+      "then": { "properties": { "source": { "const": "manual-dispatch" }, "explicitOrderRef": { "type": "string", "minLength": 4 } }, "required": ["explicitOrderRef"] }
+    }
+  ]
+}

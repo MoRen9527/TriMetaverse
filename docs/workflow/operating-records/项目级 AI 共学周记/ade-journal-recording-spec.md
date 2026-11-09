@@ -8,9 +8,9 @@
 
 > **消歧注（2026-09-21，P4 甄别线 CHO 授权 RDT 径办）**：ADE=立册时协议名（v1.0 立册 2026-08-18）；2026-08-28 起协议更名 FADE（fade-protocol-spec v2.0.0，ADE 概念退役）——本规范沿用原名系同名同源的历史合法沿用（立册早于退役），非同名不同物，兼容历史引用不改名。
 
-版本：v1.0（2026-08-18 立册；触发事件：W34 周记首次写入违规——跳过规范查找、按任意旧周模板自创结构）
+版本：1.0.0（2026-08-18 立册；触发事件：W34 周记首次写入违规——跳过规范查找、按任意旧周模板自创结构）
 
-版本：v1.1（2026-08-29，FADE-003 升档联审修后放行落地——新增 §2.5 Score 段（score --run：S1-S7 确定性覆盖+语义四维 W1-W4）/RETRY 状态机（两义合并=退回重做+stage 字段 qualify|score；RETRY→APPROVED 前置=retry 行后同 runId score PASS 行）/裁决词表升三态（APPROVED/ESCALATED/RETRY；FROZEN 留口正名后扩值）/W4 双判问/P3 评分修订豁免；映射声明：静态固化域 Plan 时点=载体定版时点——FADE-001 扩维卷/FADE-003 升格卷两先例同一原则两投影）
+版本：1.1.0（2026-08-29，FADE-003 升档联审修后放行落地——新增 §2.5 Score 段（score --run：S1-S7 确定性覆盖+语义四维 W1-W4）/RETRY 状态机（两义合并=退回重做+stage 字段 qualify|score；RETRY→APPROVED 前置=retry 行后同 runId score PASS 行）/裁决词表升三态（APPROVED/ESCALATED/RETRY；FROZEN 留口正名后扩值）/W4 双判问/P3 评分修订豁免；映射声明：静态固化域 Plan 时点=载体定版时点——FADE-001 扩维卷/FADE-003 升格卷两先例同一原则两投影）
 
 维护：秘书处（当前由 `CEOChiefOfStaff` 代管）
 

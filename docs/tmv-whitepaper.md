@@ -1,6 +1,10 @@
+- sourceOfTruth: 本文件（商业模式白皮书真源）
+- syncMode: write-time
+- lastSyncedAt: 卷面时点锚=git commit 时戳（零手打·D-47 增补款正形）
+
 ﻿# 三元宇宙白皮书（TriMetaverse Whitepaper）
 
-版本：v1.0（修订 1+1a，CEO 2026-08-22 签发）  
+版本：1.0.0（修订 1+1a，CEO 2026-08-22 签发）  
 日期：2026-08-22  
 状态：**已签发**（CEO 2026-08-22；基于基线源重构完善版 + TMV-P1-1 波 1 修订）
 
@@ -130,7 +134,6 @@ TriPilot/TriRLC 的本地域入口，由TriCade 承接更强的本地执行、�
 
 图 3-8：TriMetaverse 三节点部署拓扑
 
-[查看图 3-8 原图（SVG 静态版）](mermaid/tmv-wp-deploy-topology-3-8.svg)
 
 ```mermaid
 %%{init: {
@@ -192,7 +195,6 @@ flowchart LR
 
 图 3-7：三层的最小实现与螺旋迭代链
 
-[查看图 3-7 原图（SVG 静态版）](mermaid/tmv-wp-three-layer-3-7.svg)
 
 ```mermaid
 %%{init: {
@@ -319,7 +321,6 @@ TriMetaverse 的“三元模块”用于表达系统的核心作用分工。具�
 
 图 3-1：TriMetaverse 三元模块与能力域映射
 
-[查看图 3-1 原图（SVG 静态版）](mermaid/tmv-wp-cap-map-3-1.svg)
 
 ```mermaid
 flowchart LR
@@ -384,7 +385,6 @@ TriMetaverse端到端系统框架是以“AI+区块链”贡献评价体系为�
 
 图 3-2：TriMetaverse 端到端价值流转与架构核心
 
-[查看图 3-2 原图（SVG 静态版）](mermaid/tmv-wp-value-flow-3-2.svg)
 
 ```mermaid
 %%{init: {
@@ -503,7 +503,6 @@ flowchart TB
 
 图 3-3：TriMetaverse AI调度核心高可用控制平面与双域执行架构
 
-[查看图 3-3 原图（SVG 静态版）](mermaid/tmv-wp-ai-core-e2e-3-3.svg)
 
 ```mermaid
 flowchart LR
@@ -704,7 +703,6 @@ flowchart LR
 
 图 3-4：AI调度核心五层结构抽象
 
-[查看图 3-4 原图（SVG 静态版）](mermaid/tmv-wp-five-layer-3-4.svg)
 
 ```mermaid
 flowchart TD
@@ -752,7 +750,6 @@ flowchart TD
 
 图 3-5：任务自动化 Worker 最小内部循环
 
-[查看图 3-5 原图（SVG 静态版）](mermaid/tmv-wp-worker-loop-3-5.svg)
 
 本地域任务自动化 Worker 的最小内部循环如下：
 
@@ -815,7 +812,6 @@ flowchart TD
 
 图 3-6：任务发布到链上结算的最小时序（服务域任务 / 本地域任务）
 
-[查看图 3-6 原图（SVG 静态版）](mermaid/tmv-wp-settlement-seq-3-6.svg)
 
 任务从发布到链上结算的最小时序需要区分服务域任务与本地域任务两条路径：
 
@@ -1033,7 +1029,7 @@ TriMetaverse 的激励不再把“任务发起者、执行节点、平台调度�
 
 ### 5.3 三阶段商业升级策略
 
-> 详见 `三元宇宙价值流动.md` 二～四章。
+> 详见本白皮书「价值流动」章相应节（原基线件内容已收编·历史卷见 docs/archive/）。
 
 **Phase 1：AI 商业（当前阶段）**
 
@@ -1161,7 +1157,7 @@ TriMetaverse 以“内容入口 -> 参与转化 -> 服务变现 -> 生态回流�
 
 ### 7.3 OPC（一人公司）服务场景
 
-> 详见 `三元宇宙价值流动.md` 第三章"用户三重身份"。
+> 详见本白皮书「价值流动」章用户三重身份节（原基线件内容已收编·历史卷见 docs/archive/）。
 
 OPC（One Person Company）是 TriMetaverse 商业层的核心载体，为每个注册用户提供独立经营能力：
 
@@ -1291,7 +1287,6 @@ TriMetaverse 当前以“三元宇宙魔法商学院 + 《派客帝国》与《�
 
 当前待补清单：
 
-1. 补齐 `meta-reality.md`、`meta-recognition.md`、`meta-virtuality.md`。
 2. 落地 Spec 模板与首版设计资产。
 3. 完成 `PRD001基础平台` 首分支全链路报告。
 4. 形成标准化实施/测试/部署/Assurance/验收目录。
@@ -1376,10 +1371,10 @@ TriMetaverse 与 Triauto 为两个独立项目：
 
 ### C.1 项目文档索引
 
-- `trimetaverse.md`：三元模型、系统理念与治理思想总述。
-- `三元宇宙落地方案.md`：MVP、阶段落地与启动方案。
-- `链基础设施选型.md`：链选型结论与升级触发条件。
-- `三元宇宙价值流动.md`：价值流动图谱与关系说明。
+- `docs/archive/trimetaverse.md`：三元模型、系统理念与治理思想总述（历史卷）。
+- `docs/archive/三元宇宙落地方案.md`：MVP、阶段落地与启动方案（历史卷）。
+- `docs/archive/链基础设施选型.md`：链选型结论与升级触发条件（历史卷·结论时点 2026-02 现役链面候重估）。
+- `docs/archive/三元宇宙价值流动.md`：价值流动图谱与关系说明（历史卷·内容已收编本白皮书）。
 
 ### C.2 API 与接口参考入口（最小清单）
 
@@ -1433,15 +1428,12 @@ TriMetaverse 与 Triauto 为两个独立项目：
 
 本白皮书基于以下 TriMetaverse 相关基线整理：
 
-- `三元宇宙价值流动.md`
-- `灵感记录.md`
-- `链基础设施选型.md`
-- `三元宇宙落地方案.md`
-- `meta-reality.md`
-- `meta-recognition.md`
-- `meta-virtuality.md`
-- `trimetaverse.md`
-- 本版白皮书按现有基线完成重构，后续补齐后触发增量修订。
+- `docs/archive/三元宇宙价值流动.md`
+- `docs/archive/灵感记录.md`
+- `docs/archive/链基础设施选型.md`
+- `docs/archive/三元宇宙落地方案.md`
+- `docs/archive/trimetaverse.md`
+- 本版白皮书按现有基线完成重构（meta-三篇占位件 2026-11-04 随根目录治理销项）。
 
 ## 附录E：常见问题解答（FAQ）
 
