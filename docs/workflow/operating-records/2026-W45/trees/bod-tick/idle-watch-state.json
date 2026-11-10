@@ -18,10 +18,10 @@
   "exempt_note_local": "锚=m-cos排工单定性(待派·open=0·证据链git落卷全景对表)·local窗=min(18:46+60,19:07)=19:07双窗齐",
   "last_receipt": 36,
   "last_notice_local": {
-    "at": "2026-11-10T18:17:30+08:00",
+    "at": "2026-11-10T19:15:45+08:00",
     "channel": "sendmessage",
-    "msgid": "b000b7a6-cdc4-4b5d-9f35-2e993eb89925",
-    "reason": "双窗满(14:37过)+停工带解除·第36轮本地半"
+    "msgid": "c6d1a851-c948-43e3-8402-6557e515f049",
+    "reason": "双窗19:07满·本地全空闲·第37轮本地半(sg旁证命中免发)"
   },
   "last_receipt_local": {
     "from": "m-cos",
