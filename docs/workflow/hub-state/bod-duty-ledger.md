@@ -1079,3 +1079,10 @@
 
 - 收稿三查全绿：304 行（原 244+60）✓·锁笔 TriCompany dev 86d11fc（21:02:28+08）✓·commit 文对令三条✓（七层内容零丢失只挪位+九骨架占位不预写+稿头同步机制注+十阶段总览表）。
 - 速闭注：20:59 派工→21:02:28 锁笔=3 分钟完工（内容挪位型任务·零新取证令面遵守）。RDT 候接第二段「Agent qualify」拆解通知——三方完善制同步面就位。
+
+**㊿+480（2026-11-10 21:11:16 +0800）CEO 21:11 双令转办——fade-001 培训稿落位+fade-011 开跑令
+
+- 令①转办 RDT（76861596·件 A1-A3）：培训草稿 git mv 落位 `docs/training/fade-001/`（定形=更新修正 01-04 四文档的临时依据和记录·README 索引同步）；新建 `docs/training/fade-011/` 四文档（01-04 形制对齐·由浅入深讲 fade-011）+第五文档 improvement-draft（十阶段骨架占位不预写·随 fade-011 拆解丰富）。
+- 令②转办 COS 路由技术执行席（d0c4955f）：**fade011 开跑令成立**（CEO 21:11 明示=audit 卷面「彩排收官候开跑令」到位·纪律册 CEO 明示例外条款适用）——watch 对象扩 training/fade-001+fade-011 两族·EW 树建立+自动更新能力检查读数回报·边界=自动 job 现役态不动+token 脱敏。
+- 对象断言留痕：fade-001/ 四文档在位（01-beginner/02-product/03-code-map/04-deep-research+README）；fade011=event-watch 实例·EW 树=本职产出（runtime/cognition/fade_instance_audit.py 行 76 现态注在卷）。
+- 待勘注：RDT 移位毕报后——改进文档 §二同步机制注中草稿路径引用随勘。
