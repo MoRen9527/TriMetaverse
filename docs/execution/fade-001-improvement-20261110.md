@@ -25,6 +25,7 @@
 
 - 坐标系沿革：11:27 令曾以候选 A（FADE-001 周迁移十段=cron 触发＋迁移器五步＋FADE 四段 agent 承接面）为推荐坐标系供选——20:53 令定谳以 FADE 规范段全集为准，候选 A/B/C 三套取证留档（候选 A 内容：cron 触发（周日 23:50·job 9c81c7ec）＋迁移器五步（OP index→unresolved→trees→carry-over→通知·=push 段承载）＋FADE 四段 agent 承接面（verify→score→close-skill→close-cli）·STAGE_ORDER 正身=close_framework.py 五段常量；候选 B·IPD 十阶段；候选 C·FADE lifecycle 状态机段集——细节见 git 史 03ebcbd19 前版）。
 - 段映射注（BOD 集散面如实注·不代裁）：「触发执行」段现材料=本档第一段（cron 拍·触发全链七层导读）——十阶段其余九段现状取证随逐段推进补齐；段间与候选 A 迁移十段的包含/交叠关系候 CEO 逐段裁定。
+- **培训草稿同步机制（CEO 2026-11-10 20:59 令）**：RDT 培训草稿（`TriCompany/docs/training/fade-001-trigger-chain-seven-layers-draft.md`）大纲同步重组为十阶段制——现七层内容落位「触发执行」段·其余九段骨架占位不预写；**BOD 每完成一段拆解（CEO OK 后）→通知 RDT 丰富对应段**（三方完善制·也是拆解进度记录面）。派工锚=RDT 信 92a8e098·COS 台账挂锚 b5017543。
 
 ## §三 拆解记录（逐段·经 CEO 同意的优化点才入此节）
 
