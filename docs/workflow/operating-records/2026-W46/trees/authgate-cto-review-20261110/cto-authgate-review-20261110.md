@@ -96,6 +96,17 @@
 
 **落地排程**：P1=授权件规格+L2 条款+L3 消费面（先立·零基建）→P2=B hook ask 档+每席 settings 分流（~1-2 天工程+两周误拦观察）→P3=A 权限白名单收权+L1 pre-commit hook（观察读数后收 deny 档）→考卷断言项随观察读数定——每步独立可回滚。
 
+## 十、前置断言答（CPO 卷问·PreToolUse hook 取会话身份可行性）
+
+**断言：可行·主路径=env 继承+辅路径=session 对表·伪造面=低（宿主 permission 罩住）**：
+
+1. **主路径（env 继承）**：hook 进程由 Claude 宿主主进程 spawn·**env 继承自主进程**——席位启动器注入席位名 env（SEAT_NAME=<席名>·现役座位 env 注入先例同形：POWERSHELL_UPDATECHECK=Off/座位变量族）→hook 读 env 即得当前席名→对表授权件 authorized_by/co_signer/scope 判「授权链内放行」。工程前提=13 席启动器统一补席位名注入（启动器一处改·一次性低成本）；
+2. **辅路径（session 对表）**：hook stdin 输入含 session_id+transcript_path——对表 `.claude/seats.json`（席位注册表现役）动态映射·作 env 缺失时的第二判定；
+3. **伪造面如实**：agent 在 Bash 子进程内 export 冒名=**无效**（hook env 继承自宿主主进程·Bash 子进程污染不回传主进程）；真伪造需改宿主进程 env 或启动器=改权限面文件→被宿主 permission 系统挡（permission laundering 防范域）——伪造门槛=宿主级·非会话级可绕；
+4. **fail-closed 兜底**：临时形会话（claude -p 无启动器 env）取不到席名=按无权态处理（deny/ask）——**取不到身份不放行**（门不豁免哲学投影·宁可 ask 多一次不漏门一次）。
+
+**判**：豁免设计（授权链内席位放行+自动件清单）的会话身份取面可行——前置断言过门·候选 B 全设计点成立。
+
 ## 使用依据
 
 CEO 22:34 大裁五段（BOD 22:35 集散·COS 转办 22:36:12 原文）+CEO 22:38 追令两候选（COS 22:41:06 转达原样入联审）/「硬门签认必落卷直达」家族纪律（门消费面读树不读会话）/「已发≠在链」纪律（msg_id 锚投影）/FUZZY-TS GATE pre-commit 现役基座（同款扩展可行性）/值面三查纪律（键在≠值对）/FADE-002 ADE 机器可读形（authorization.json 同形）/门不豁免哲学（紧急通道不设弱化入口·豁免须白名单明文）/PreToolUse permissionDecision 机制注（BOD 集散·技术底座事实）/席位 env 注入先例（per-seat settings 工程同形）/permission laundering 防范约束（权限文件写入面收权域）。
