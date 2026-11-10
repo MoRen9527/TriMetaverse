@@ -1036,3 +1036,12 @@
 - 拍时戳 20:07:05（拍龄 8 分·新鲜）。⓪ sg duty 14 席候令；本地 m-cto 在干活（P1 承接·免通报基）。②四口全绿（8713 uptime 341375·8711 lastPoll 12:07:02Z·TriRMC active）。③MMC cf=44（43→44·无害竞速定性维持）。④大表 24/4 无变。
 - 判读：r37 sg 半（19:45 发）收稿窗满（20:15 现查过 19:45）·信箱零回执·pane -S 500 无回复增量（buffer 翻毕值席候令态）·旁证 45min 零命中（10h 对照 4 件通路活）→**简复式复跑第 38 轮**（20:16:05·拾取✓ flow-hit「Nesting 4s」·锚笔 notice @2026-11-10T12:16:05Z 第 38 轮）·收稿窗=min(20:16+60·21:07 拍)=20:16 候回执。
 - 知情注：m-fsd 20:00-24:00 勘修窗（P1）已进窗时段——值席候令与 fsd 施工并行非矛盾（fsd 帧面本拍候令=探勘步候启动态·下拍观察）。
+
+**㊿+473（2026-11-10 20:23:54 +0800）F1-F3 判定入档+触发流程导读取证全闭（CEO 20:16 令）
+
+- CEO 20:16 判定：F1-F3 全部同意入档转正+随令「写出触发流程+相关代码一起读一遍」→改进文档 §三第一段判定栏已填+「触发流程导读」节已回填（七层全链表 L1-L7·代码锚全列）。
+- 取证路径：plan（TriCompany/docs/engineering）→runbook（TriMMC/docs/ops）→河源活体（jobs.json·TriRMC=data/cron/jobs.json 非 /var/lib/trirmc——agent-core job-store 读 TRIMC_CONFIG_DIR vs 服务注入 TRIRMC_CONFIG_DIR 键错位=F5 新候选）→command-handler/week-math/job-executor 源码→weekly_plane_shift.py 328 行全读。
+- **活体新定性三笔**：①11-08 23:50 轮准点触发 15 秒死于①前置 ff（code 128 diverging·五步全未跑）②W46 .shift-ade.json=11-09 17:24+08 应急补跑产物（pass 六步·6860bf87b）非 cron 轮③本席旧记「11-09 23:50 轮正常触发」假读数自纠入档（11-09 周一无 cron·真值=11-08 周日轮）。
+- 新挖候选（候 CEO 同意）：F4 前置 ff 无 fallback（push 段有自愈 pull 段裸奔）·F5 store/logs 双目录分裂（env 键错位）·F6 失败轮无闸（cf=1<3 不 degraded·无告警无补跑·悬空 18h 靠值席 patrol）——F6 候选并入 F1 判据形。
+- 下轮风险注：nextRun=11-15 23:50·F4 未修前 diverging 再现即再挂。
+- 自察一笔：河源 systemctl cat 探针曾回显 TRIRMC_INTERNAL_TOKEN 全值（我 grep Environment 全打所致·D-46 回显即自曝三态）——已停手不复打·不入信面转报·候值面卫生归口勘（族=探针命令设计漏脱敏·非传输面泄漏）。

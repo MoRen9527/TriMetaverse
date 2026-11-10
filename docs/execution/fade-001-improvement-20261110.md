@@ -69,7 +69,35 @@ CEO 令「按 FADE 规范设计的 10 个阶段」逐段过审。本席取证候
 - F2 到岗窗无断言：T1 只判 cron 触发不判「agent 30 分钟到岗」——到岗窗设计存在但考卷无对应检查项。候选：T1 判据扩为「触发+到岗」双断言。
 - F3 免评分母规则缺：T1 N/A 时权重 20 仍计入分母（首评分卷 20/145·若剔除 T1 应为 20/125=16% vs 13.8%）——scoreable_run 只注「异常轮按 T6 免评规则记」而 T6 免评规则未定义分母处理。**分数口径第三层疑点**（145 非标+归一化未落+免评分母规则缺）。
 
-**CEO 判定**：（候 OK/意见）
+**CEO 判定（2026-11-10 20:16 令）**：F1-F3 全部同意入档转正。随令追加任务：写出触发流程+相关代码，CEO×BOD 一起读一遍，把触发段彻底搞清楚——代码导读呈报见下节「触发流程导读」。
+
+### 第一段补强·触发流程导读（CEO×BOD 共读·2026-11-10 20:16 令取证）
+
+**触发全链七层**（cron 拍→迁移器六步→推裸仓；代码锚全列）：
+
+| 层 | 做什么 | 代码正身 |
+|---|---|---|
+| L1 调度判定 | cron `50 23 * * 0` Asia/Shanghai 每秒粒度判定到期 | agent-core `scheduler/cron-engine.ts`（解析）+`job-store.ts` L32-39（store 路径=`$TRIMC_CONFIG_DIR/cron/jobs.json`·缺省 `./data/cron/jobs.json`） |
+| L2 执行循环 | find next-due→setTimeout→execute→repeat（DEFAULT_TICK_MS=1000ms） | agent-core `scheduler/job-executor.ts` L37/L157-160 |
+| L3 服务适配 | stale-run 恢复（启动时 runningAtMs≠null 复位）+degraded 聚合（consecutiveFailures=max over jobs·阈值 3） | TriRMC `src/cron/service.ts` L1-20 |
+| L4 周算术 | `{fromWeek}/{toWeek}/{startDate}` 占位符展开：toWeek=明天所在 ISO 周·startDate=下个周一·fromWeek=toWeek−1 | TriRMC `src/cron/command-handler.ts` L70-75+`week-math.ts` L58-75 |
+| L5 进程执行 | `/bin/bash -e -c <command>`（runAs unset=进程用户 fleet）·detached 进程组·超时 10min（DEFAULT_JOB_TIMEOUT_MS）·stdio→per-run log | TriRMC `src/cron/command-handler.ts` L77-107 |
+| L6 迁移链四段 | ①前置 ff `git pull --ff-only sg-bare dev` →②迁移器 `python3 -m runtime.cognition.weekly_plane_shift --from {fromWeek} --to {toWeek} --start-date {startDate} --operating-root … --sync` →③`git add+commit`（TriRMC-Scheduler 身份）→④`git push sg-bare HEAD:dev ‖ (fetch+merge+push 重试)` | 河源 `/srv/fleet/TriRMC/data/cron/jobs.json` job 9c81c7ec payload.command |
+| L7 迁移器六步 | 1 create（幂等）→2 migrate（旧周→新周内含 retire）→3 carry_over（unresolved §1 平移·周计数+1·4w/8w 升级标重算）→4 validate（新周 index active）→5 agent_close/review_shift（复核+8w 升级清单提取）→6 聚合 `.shift-ade.json`+notify（SMTP+TriLC 8711 POST） | `TriCompany/runtime/cognition/weekly_plane_shift.py` L216-285（main 全序） |
+
+**活体读数（2026-11-10 20:1x 河源直探 jobs.json state·调度面 LastRun 真值）**：
+
+- job 9c81c7ec：runCount=11·**lastRun=11-08 23:50+08（周日轮准点触发）→status=error**·`lastError=git pull --ff-only` code 128 diverging（sg-bare/dev `0cc423283..ac1e2380e` 分叉）·lastDurationMs=15259（**15 秒死在第①段**）·consecutiveErrors=1·nextRun=11-15 23:50+08
+- **W45→W46 迁移实态**：11-08 轮五步全未跑（死在迁移器之前）；W46 `.shift-ade.json`（pass·六步全绿）check_time=**11-09 17:24+08=应急/人工补跑产物**（runbook §5 兜底路径·迁移 commit 6860bf87b）——非 cron 轮产物。11-09 首评分卷（13.8%·T1 N/A 应急链承接）评的正是这个应急态。
+- **勘误入档**：本席前记「11-09 23:50 轮 cron 正常触发（push 段才失败）」与活体读数不符——11-09 为周一无 cron 触发·真值=11-08 周日轮 15 秒死于前置 ff 段。假读数自纠照档（活性必双面纪律适用案）。
+
+**导读中新挖发现候选（候 CEO 同意转正·F 系续编）**：
+
+- **F4 前置 ff 段无 fallback**：④push 段带 `‖(fetch+merge+push)` 自愈而①pull 段裸奔——pull diverging（co-tenancy 竞速族·8712 oprec-sync 同族机理）无自愈路径·11-08 轮 15 秒死即实证。候选：①段补自愈（fetch+merge/重试退避）或改幂等 pull 形。
+- **F5 store 路径双形分裂**：agent-core job-store 读 `$TRIMC_CONFIG_DIR/cron/jobs.json`（env 键 TRIMC_CONFIG_DIR）·TriRMC 服务注入的是 `TRIRMC_CONFIG_DIR=/var/lib/trirmc`→键错位·store 实落 TriRMC 仓内 `./data/cron/jobs.json` 而 per-run logs 落 `/var/lib/trirmc/cron/logs`（TRIRMC_CONFIG_DIR）——**store 与 logs 分家两目录**·运维按 CONFIG_DIR 找 store 扑空（本席取证现场实证一次）。候选：env 键对齐或 store 路径显式配置化。
+- **F6 失败轮无闸**：11-08 轮 error 后 consecutiveErrors=1<阈值 3 不 degraded·无告警外发·无自动补跑·nextRun 照排下周——迁移悬空整 18 小时（11-08 23:50→11-09 17:24）靠值席 patrol 兜底。与已入档 F1 同族互证（F1=漏跑无监测·F6=败跑无监测——F1 判据扩为「漏拍或败跑 N 分钟无 per-run 成功日志即告警」可合并）。候选：并入 F1 判据或单列失败轮告警。
+
+**下轮现势风险注**：nextRun=11-15 23:50——若 sg-bare/dev 与 TriRMC 工作树再现 diverging·①段将再挂（F4 未修前）·候改造批统筹。
 
 ### 拆解记录格式
 
