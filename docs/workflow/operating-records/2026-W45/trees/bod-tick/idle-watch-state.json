@@ -11,12 +11,12 @@
     "form": "标准句"
   },
   "v41_free_pass": "2026-11-04 22:21:53 +0800",
-  "local_exempt_until": "2026-11-10T14:37:00+08:00",
-  "exempt_note": "第36轮通报18:16发(停工带解除后首轮·旁证零·双窗满)·候duty-cos定性回执写窗=min(18:16+60,20:07拍)",
-  "sg_exempt_until": "2026-11-10T14:37:00+08:00",
+  "local_exempt_until": "2026-11-10T19:07:00+08:00",
+  "exempt_note": "第36轮sg回执达(值席·信面date误植11-07照录不直引)·待派维持zero open·sg窗=min(定性+60,19:07拍)=19:07",
+  "sg_exempt_until": "2026-11-10T19:07:00+08:00",
   "streak": 0,
-  "exempt_note_local": "锚=m-cos第24轮本地面定性回执(13:47:57+08·N-D5断链勘处修复毕cto施工中)·local窗=min(定性+60min,第2tick)=14:07→停工带接管",
-  "last_receipt": 34,
+  "exempt_note_local": "锚=m-cos排工单定性(待派·open=0·证据链git落卷全景对表)·local窗=min(18:46+60,19:07)=19:07双窗齐",
+  "last_receipt": 36,
   "last_notice_local": {
     "at": "2026-11-10T18:17:30+08:00",
     "channel": "sendmessage",
@@ -25,7 +25,7 @@
   },
   "last_receipt_local": {
     "from": "m-cos",
-    "at": "2026-11-08T13:48:31+08:00",
-    "verdict": "N-D5线已派未拾取断链(已勘处修复13:48实锚·cto施工中)·其余待派态"
+    "at": "2026-11-10T18:46:11+08:00",
+    "verdict": "待派·open=0·无断链·停工带内静默正常态(昨联审首评闭环·候裁五件候CEO批)"
   }
 }
