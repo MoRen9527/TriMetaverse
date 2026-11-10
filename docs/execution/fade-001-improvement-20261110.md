@@ -91,11 +91,11 @@ CEO 令「按 FADE 规范设计的 10 个阶段」逐段过审。本席取证候
 - **W45→W46 迁移实态**：11-08 轮五步全未跑（死在迁移器之前）；W46 `.shift-ade.json`（pass·六步全绿）check_time=**11-09 17:24+08=应急/人工补跑产物**（runbook §5 兜底路径·迁移 commit 6860bf87b）——非 cron 轮产物。11-09 首评分卷（13.8%·T1 N/A 应急链承接）评的正是这个应急态。
 - **勘误入档**：本席前记「11-09 23:50 轮 cron 正常触发（push 段才失败）」与活体读数不符——11-09 为周一无 cron 触发·真值=11-08 周日轮 15 秒死于前置 ff 段。假读数自纠照档（活性必双面纪律适用案）。
 
-**导读中新挖发现候选（候 CEO 同意转正·F 系续编）**：
+**导读中新挖发现（CEO 2026-11-10 20:38 令全部入档·F 系续编）**：
 
-- **F4 前置 ff 段无 fallback**：④push 段带 `‖(fetch+merge+push)` 自愈而①pull 段裸奔——pull diverging（co-tenancy 竞速族·8712 oprec-sync 同族机理）无自愈路径·11-08 轮 15 秒死即实证。候选：①段补自愈（fetch+merge/重试退避）或改幂等 pull 形。
-- **F5 store 路径双形分裂**：agent-core job-store 读 `$TRIMC_CONFIG_DIR/cron/jobs.json`（env 键 TRIMC_CONFIG_DIR）·TriRMC 服务注入的是 `TRIRMC_CONFIG_DIR=/var/lib/trirmc`→键错位·store 实落 TriRMC 仓内 `./data/cron/jobs.json` 而 per-run logs 落 `/var/lib/trirmc/cron/logs`（TRIRMC_CONFIG_DIR）——**store 与 logs 分家两目录**·运维按 CONFIG_DIR 找 store 扑空（本席取证现场实证一次）。候选：env 键对齐或 store 路径显式配置化。
-- **F6 失败轮无闸**：11-08 轮 error 后 consecutiveErrors=1<阈值 3 不 degraded·无告警外发·无自动补跑·nextRun 照排下周——迁移悬空整 18 小时（11-08 23:50→11-09 17:24）靠值席 patrol 兜底。与已入档 F1 同族互证（F1=漏跑无监测·F6=败跑无监测——F1 判据扩为「漏拍或败跑 N 分钟无 per-run 成功日志即告警」可合并）。候选：并入 F1 判据或单列失败轮告警。
+- **F4 前置 ff 段无 fallback**：④push 段带 `‖(fetch+merge+push)` 自愈而①pull 段裸奔——pull diverging（co-tenancy 竞速族·8712 oprec-sync 同族机理）无自愈路径·11-08 轮 15 秒死即实证。改造候选：①段补自愈（fetch+merge/重试退避）或改幂等 pull 形（候施工批）。
+- **F5 store 路径双形分裂**：agent-core job-store 读 `$TRIMC_CONFIG_DIR/cron/jobs.json`（env 键 TRIMC_CONFIG_DIR）·TriRMC 服务注入的是 `TRIRMC_CONFIG_DIR=/var/lib/trirmc`→键错位·store 实落 TriRMC 仓内 `./data/cron/jobs.json` 而 per-run logs 落 `/var/lib/trirmc/cron/logs`（TRIRMC_CONFIG_DIR）——**store 与 logs 分家两目录**·运维按 CONFIG_DIR 找 store 扑空（本席取证现场实证一次）。改造候选：env 键对齐或 store 路径显式配置化（候施工批）。
+- **F6 失败轮无闸（并入 F1 判据·CEO 20:38 令）**：11-08 轮 error 后 consecutiveErrors=1<阈值 3 不 degraded·无告警外发·无自动补跑·nextRun 照排下周——迁移悬空整 18 小时（11-08 23:50→11-09 17:24）靠值席 patrol 兜底。与已入档 F1 同族互证（F1=漏拍无监测·F6=败跑无监测）——**F1 判据扩形定谳：「漏拍或败跑 N 分钟无 per-run 成功日志即告警」**（候改造批落）。
 
 **下轮现势风险注**：nextRun=11-15 23:50——若 sg-bare/dev 与 TriRMC 工作树再现 diverging·①段将再挂（F4 未修前）·候改造批统筹。
 
