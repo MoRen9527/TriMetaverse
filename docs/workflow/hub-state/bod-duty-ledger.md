@@ -850,3 +850,9 @@
 - tick 恢复实锚：W46 tick-latest 停 11-09 21:37:05→11-10 09:49:20 新拍（停拍全程=宿主睡眠停拍非 daemon 死——uptime 连续旁证）·唤醒后约 3 分钟自恢复。
 - r30 回执收稿销读（m-duty-cos：待派维持+cf 观察态闭盯知悉+候批即接·信面 date 误植 11-07 实为 11-09 晚——D-47 族照录不直引）：state 落 last_receipt=30·sg_exempt_until=11-10 10:37 拍。
 - 观察项异动知悉：8712 cron consecutiveFailures 21→33（hourly oprec-sync 睡眠窗内逐轮计败约 12 轮·量级吻合·无害竞速定性维持·仍观察项不逐拍盯）·notifyFailures=2（微幅·不追）；大表 total=24 open=4 持平·本地 m-cto 在干活（daily-progress a+b 承接）·sg duty 14 席候令。
+
+**㊿+440（2026-11-10 09:57:10 +0800）09:56 注入轮·双 job 窗内归档**
+
+- job2 信箱巡检：筛=零未读（r30 回执 09:54 已销读·无新信）。
+- job1 tick 判读：W46 拍 09:49:20 新鲜（拍龄约 7.5 分钟<12）；窗语义 09:56<14:00=审核/测试/发布带；sg duty 14 席候令但 sg_exempt_until=10:37 窗内（now<窗·无非同形信号）→免发免答归档一行；本地 m-cto 在干活非全体候令→本地面免动。
+- 转报 CEO 压缩单行已出（全席候令+8713 绿 uptime 连续+8712 degraded cf33 观察项+8711 绿+河源 active+大表 total=24 open=4）。
