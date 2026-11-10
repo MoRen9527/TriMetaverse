@@ -19,15 +19,12 @@
 | ⑥ | FADE-001 出卷规范化 | 100 分制+客观题+主观题+通过阈值；证据=N-D2 自注 145 挂账未落+同实例三卷形态分裂（主卷 threshold=80/maintenance 100 分/plane-shift 145 分零主观零阈值） | 候批 |
 | ⑦ | 联审五席维度标准化 | 纳入 FADE 考题大纲；应用于 FADE-001 第一轮进化改进 | 候批 |
 
-## §二 拆解坐标系（CEO 已点选）
+## §二 拆解坐标系（CEO 定谳）
 
-**CEO 点选：候选 A（2026-11-10 11:27 直连令）**——FADE-001 周迁移十段逐段过审。
+**CEO 定谳（2026-11-10 20:53 直连令）**：按 FADE 规范**十阶段**逐段检查 fade-001 合规程度——**触发执行 → Agent qualify → plan skill → DCE → verify cli → score cli → score skill → close skill → close cli → 结论与动作**。现位=第一段「触发执行」（过审中·材料已呈候 OK）。
 
-CEO 令「按 FADE 规范设计的 10 个阶段」逐段过审。本席取证候选三套（正身并列供选）：
-
-- **候选 A·FADE-001 周迁移十段**（推荐·最贴 FADE-001 现役实现）: cron 触发（周日 23:50·job 9c81c7ec）＋迁移器五步（OP index→unresolved→trees→carry-over→通知·=push 段承载）＋FADE 四段 agent 承接面（verify→score→close-skill→close-cli）——合计十段。STAGE_ORDER 正身=close_framework.py 五段常量，plan 行 26「FADE 十段序」即此合称。
-- **候选 B·IPD 十阶段**: DISCOVERY→INTELLIGENCE→DESIGNING→CODING→VERIFY-INTEGRATION→REDTEAM→QA→DEPLOYMENT→ASSURANCE→DELIVERY（fade-protocol-spec §6.3 同构分析对象·TriDev/IPD 线非 FADE-001 本体）。
-- **候选 C·FADE lifecycle 状态机段集**: PLANNING/EXECUTING/CLOSING+终态族（APPROVED/FROZEN/ESCALATED/RETRY·spec §2.5）。
+- 坐标系沿革：11:27 令曾以候选 A（FADE-001 周迁移十段=cron 触发＋迁移器五步＋FADE 四段 agent 承接面）为推荐坐标系供选——20:53 令定谳以 FADE 规范段全集为准，候选 A/B/C 三套取证留档（候选 A 内容：cron 触发（周日 23:50·job 9c81c7ec）＋迁移器五步（OP index→unresolved→trees→carry-over→通知·=push 段承载）＋FADE 四段 agent 承接面（verify→score→close-skill→close-cli）·STAGE_ORDER 正身=close_framework.py 五段常量；候选 B·IPD 十阶段；候选 C·FADE lifecycle 状态机段集——细节见 git 史 03ebcbd19 前版）。
+- 段映射注（BOD 集散面如实注·不代裁）：「触发执行」段现材料=本档第一段（cron 拍·触发全链七层导读）——十阶段其余九段现状取证随逐段推进补齐；段间与候选 A 迁移十段的包含/交叠关系候 CEO 逐段裁定。
 
 ## §三 拆解记录（逐段·经 CEO 同意的优化点才入此节）
 
