@@ -11,12 +11,12 @@
     "form": "简复式(维持确认 or 有变)"
   },
   "v41_free_pass": "2026-11-04 22:21:53 +0800",
-  "local_exempt_until": "2026-11-10T12:37:00+08:00",
+  "local_exempt_until": "2026-11-10T13:37:00+08:00",
   "exempt_note": "第24轮通报已发13:45·候duty-cos定性回执写窗14:07→停工带(14:00-18:00)零通报接管",
-  "sg_exempt_until": "2026-11-10T12:37:00+08:00",
+  "sg_exempt_until": "2026-11-10T13:37:00+08:00",
   "streak": 0,
   "exempt_note_local": "锚=m-cos第24轮本地面定性回执(13:47:57+08·N-D5断链勘处修复毕cto施工中)·local窗=min(定性+60min,第2tick)=14:07→停工带接管",
-  "last_receipt": 32,
+  "last_receipt": 33,
   "last_notice_local": {
     "at": "2026-11-08T13:46:22+08:00",
     "channel": "sendmessage",
