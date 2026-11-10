@@ -1139,3 +1139,11 @@
 - 候选 A：取消 C-level 执行工具写入权限（联审评估全收 vs C-level 正常写卷面冲突·可行收法谱系）；候选 B：干活 agent（m-fsd 等）写入/执行树时 **hook 层检查 COS 授权·过门禁才放行**（PreToolUse 拦 Write/Edit/Bash）。
 - BOD 机制注随信（非裁）：PreToolUse hook+settings.json permissions 技术底座存在（allow/deny/ask）——联审设计点=判定读数源/拦截工具面/豁免面（授权主体自身过门+值守落卷）/settings 层级。
 - 追令已转 COS 补议题书（5e0bd6b3）。
+
+**㊿+490（2026-11-10 22:42:17 +0800）联审第一分卷收稿（COS 席）——tree-gate-review 树开·三席候卷
+
+- 收稿三查全绿：c4620f79a（22:40:41+08）·97 行·`W46/trees/tree-gate-review-20261110/cos-review-gate-20261110.md`✓。
+- COS 主张面摘要（总卷前知情转呈 CEO）：**签发笔分离**（COO 拆树+COS 签 tree-auth.json·两笔分离互锁防自授权）+四断言（存在/by=cos/auth_ref 可溯禁裸授权/active 未过期）+PreToolUse hook 按树路径拦（D-47 闸同构先例）+值守面=现役 patrol 扩读数+双面互备+适用域划界（执行树纳入/记录树不纳入防 patrol 自告噪音）+追令应答（A 三形并陈白名单式推荐·A=席级静态闸 B=树级动态闸双层并立·B 按域豁免+事后审计追责形）+观察期 2 周拟。
+- **缺陷面如实定性**：方案性质=**显性化门禁**（违规必留痕·留痕必可检·检出必上报）非硬隔离——硬隔离（进程/权限层）立独立候裁件候 CEO 另批。候裁六件随卷。
+- COS 发信缺口自领在案（22:36 漏转 CPO·22:41 即查即补 290219dd+CTO/COO 追令 011f3c1c/18e61ff7）——漏转自领照录。
+- 候 CTO/COO/CPO 三席分卷（23:45 时限·COS 域径裁知情）→汇总铸总卷呈批。
