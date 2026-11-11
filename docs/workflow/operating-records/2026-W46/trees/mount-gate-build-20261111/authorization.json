@@ -1,0 +1,19 @@
+{
+  "schema": "tree-auth/v1",
+  "tree": "mount-gate-build-20261111",
+  "charter_ref": "docs/workflow/operating-records/2026-W46/trees/mount-gate-build-20261111/dispatch-order-coo-20261111.md",
+  "tree_hash": "blob-sha1:c43edfdd83af6cc5a9bd1fdfa46cdad8230188d3",
+  "tree_hash_note": "git hash-object --path=<charter_ref> <file> 输出·§八增补款 b2e9f85b9 定谳形（blob 身份=入库 LF 规范化恒定防漂）·首版 sha256 工作区形作废",
+  "authorized_by": "cos",
+  "co_signer": "coo",
+  "authorized_at": "2026-11-11T02:40:11Z",
+  "expiry": "2026-11-14T02:40:11Z",
+  "expiry_note": "+72h from authorized_at（tree-auth/v1 规格·机械运算·签发时点起算超时重签不设续期）",
+  "scope": ["sg-duty-crew"],
+  "scope_note": "席名清单数组形（§八勘定·∈ 判定用）·sg duty 席组语义·成员正形候 CTO 终稿席名勘定（技术字段勘改 COO 面随勘）·「做什么」细节移 charter_ref",
+  "status": "authorized",
+  "order_msg_id": "ad368e6c-b006-4c2f-abd4-84ee1a3afe99",
+  "order_msg_id_note": "COS 交单信 msg_id 原值整串（10:41）·COS 签发笔补正定谳·管道 id 代锚作废；签发笔锚=COS 签发信 msg_id（收信面不可见·以 pipe cc-msg-c11966e2015010e33899852aa05a43eb+落款 10:43:54+08 hook 现戳代识·COS 侧留痕为准）",
+  "basis": "D-78 域性分工定调与树执行授权门禁制（TC 5acae50·10:42 铸条入册）·任务书/授权件引用条款号对 D-78 正身",
+  "self_boot_note": "首例自举：闸未建前按 tree-auth/v1 先行落·闸建毕真链试跑+红蓝两态补测自验·首版技术字段勘改（§八勘定表全列）=COO 面 2026-11-11 执行·签发笔面复核=COS 签发序照走"
+}

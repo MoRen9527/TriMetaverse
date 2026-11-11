@@ -3,8 +3,8 @@
 - sourceOfTruth: 本件（docs/workflow/operating-records/2026-W46/trees/mount-gate-build-20261111/dispatch-order-coo-20261111.md）
 - syncMode: write-time（COO 派工单·D-27 交单→派工第三环·双签首例）
 - lastSyncedAt: 2026-11-11T02:40:11Z（=10:40:11+08 写前现查原值）
-- 令链: CEO 2026-11-11 10:30 八件全裁（批注定谳卷 TMV@f8c977051 §八）→COS 交单 10:39:37+08（D-27 交单形）→CTO 规格终稿 v1.0 TMV@dccca15b2（施工序五步随卷·本单不重写规格）→本席派工
-- 授权件: 同目录 tree-auth.json（tree-auth/v1 双签首例·tree_hash 绑定本单 sha256）
+- 令链: CEO 2026-11-11 10:30 八件全裁（批注定谳卷 TMV@f8c977051 §八）→COS 交单 10:39:37+08（D-27 交单形）→CTO 规格终稿 v1.0 TMV@dccca15b2+§八增补款 TMV@b2e9f85b9（**勘定优先**·字段勘定表/tree_hash blob 形定谳）→本席派工
+- 授权件: 同目录 authorization.json（tree-auth/v1 双签首例·tree_hash 绑定本单 blob-sha1·per §八勘定形）
 
 ## 派工
 
