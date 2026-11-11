@@ -1278,3 +1278,9 @@
 - 旁证自查（mmin -45 双周 trees）8 件命中但**逐件定性全为流转 push 镜像**：mount-gate 树输入件 2（authorization.json+COO 派工单·10:53 落 sg）+tree-gate-review 联审卷 6（四分卷+总卷 v2+CTO 终稿）——非席位自产施工产物·**树内仍无 gate 脚本/试跑日志**=施工未拾取形态。
 - **通报 m-duty-cos 第 41 轮 tmux 直发**（03:21:27Z 锚笔）：文=窗满+镜像定性+请交叉排工单定性三选一（待派 or 已派未拾取断链 or open 派工零活动）·拆步=send-keys -l→capture 判读（首 capture 空为时序·复 capture 三行全入）→独立 Enter→14s capture 验拾取（✢ Working 19s spinner=文本入对话流）。**一犯即勘**：首发送漏 `-S /tmp/tmux-1001/default` 报 can't find pane→list-panes 活体现探正名（m-duty-cos:0.0 %51）带 socket 重发即成——fleet socket 参数回补入第 41 轮实录。
 - idle-watch-state 更新（last_notice r41+note 追加+streak/sg_idle_streak 清零）。本地零异常单行：8713 ok uptime 46366 pwr98 ac=true / 8711 ok 194h mc_link connected / TriRMC active / MMC degraded=true cf=59（58→59 观察族照录） / 大表 24/4。
+
+**㊿+508（2026-11-11 11:45-11:47 +0800）11:45 轮·sg 定谳收稿+本地窗满同构通报
+
+- 11:37 拍新鲜（8min20s）。读数单行零异常：8713 ok uptime 48166 pwr100 ac=true / 8711 ok 194h mc_link connected / TriRMC active / MMC degraded=true cf=59 照录 / 大表 24/4。
+- **duty-cos 回执收稿（信箱·received 11:26:25·msg ntf-mwbk3imvt25b51）→第 41 轮通报闭环**：定谳=mount-gate 树**已拾取非断链**（26min ramp-up 正常形）·施工启动序六步（CTO 规格对表→基线勘→七步 fail-closed 改造→授权件模板【首例已铸=authorization.json 在树·任务②自举完成】→真链试跑→红蓝两态验收）·「读数随到随报」。回执确认码面 tree_hash blob-sha1 c43edfdd 与派工单一致。**sg 豁免窗按收稿面重挂 12:07**（min(11:26+60min, 第 2 拍 12:07)）——11:37 拍 sg 14 席候令在窗内=免发免答（施工 ramp-up 读/勘段不落卷·与拍面候令不矛盾）。
+- **本地组 14 席全体候令**（11:37 拍·m-cos 11:17 扩圈毕报发完=活干完自然态）+本地豁免窗（昨日 21:07）窗满→**SendMessage m-cos 同构通报**（11:46·msg f1b50181·排工单定性三选一·参考面附现势三候）·候回执挂 local 窗·本地无锚笔面照例。last_receipt=41+local_idle_streak 清零。
