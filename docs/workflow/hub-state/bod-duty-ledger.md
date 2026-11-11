@@ -1249,3 +1249,4 @@
 - **P2 任务书=暂时不激活**（维持候态·候 CEO 后令）。
 - **business-strategy 扩圈=呈内容候裁**（CEO 要看扩圈预计内容）——BOD 取材料呈报。
 - **FADE-001 第一段未完不进第二段**（第一段继续·不通知 RDT 丰富第二段·候 CEO 对第一段续拆指示）。
+- 流转毕（10:32）：批令全文转 COS（八件+三建议+批后链启动+P2 暂缓勿催+重渲窗候扩圈联动注+FADE-001 RDT 通知暂停）——COS 按令流转执行监督催办。扩圈材料实勘：门禁原则文写入面 14/14 席（件三正身=TriCompany 7055431·记忆条 705431 少抄位 5 勘正）·business-strategy 零命中（编制外三件：agent-body/frontmatter/contract.yaml）·cao 抽读原文两行（不建树不执行+COS 授权 fail-closed）在档。
