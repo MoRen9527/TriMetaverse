@@ -10,6 +10,8 @@
   "expiry_note": "+72h from authorized_at（tree-auth/v1 规格·机械运算）",
   "scope": "挂载闸施工树：服务域挂载脚本改造+授权件模板+真链试跑+红蓝两态（AUTH_MISSING/AUTH_EXPIRED）·CTO 规格终稿 dccca15b2 施工序五步",
   "status": "authorized",
-  "order_msg_id_note": "COS 交单信收信面 msg_id 不可得·以管道 id cc-msg-c11966e2015010e33899852aa05a43eb+落款 2026-11-11T10:39:37+08 代之·候 COS 签发笔补正",
+  "order_msg_id": "ad368e6c-b006-4c2f-abd4-84ee1a3afe99",
+  "order_msg_id_note": "COS 交单信 msg_id 原值整串（10:41）·COS 签发笔补正定谳·管道 id 代锚作废；签发笔锚=COS 签发信 msg_id（收信面不可见·以 pipe cc-msg-c11966e2015010e33899852aa05a43eb+落款 10:43:54+08 hook 现戳代识·COS 侧留痕为准）",
+  "basis": "D-78 域性分工定调与树执行授权门禁制（TC 5acae50·10:42 铸条入册）·任务书/授权件引用条款号对 D-78 正身",
   "self_boot_note": "首例自举：闸未建前按 tree-auth/v1 先行落·闸建毕真链试跑+红蓝两态补测自验"
 }
