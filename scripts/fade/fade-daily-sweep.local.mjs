@@ -8,9 +8,10 @@
 // treeDir: 现行 ISO 周 operating-records 树（与 operating-records 周目录命名同构·ISO 周一为首日）
 // D-46: token 从启动器 cmd 提取→变量→请求头直灌·值面零回显（stdout 只落状态码面）
 // R4.3: 全部时刻进程内计算（零 spawn date）
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, statSync } from 'node:fs';
 
 const CMD_FILE = 'C:/Users/jedih/AppData/Local/trimlc-daemon-channel.cmd';
+const CHECK_CONFIG = 'D:/Code/ai/TriMetaverse/scripts/fade/fade-watch-config.local.json';
 const OP_ROOT = 'D:/Code/ai/TriMetaverse/docs/workflow/operating-records';
 const PORT = 8713;
 
@@ -62,4 +63,21 @@ try {
 
 // stdout 读数行（HTTP 码+created+finalState·D-46 值面零回显）
 console.log(`runId=${runId} http=${res.status} created=${body.created} finalState=${body.finalState} gated=${body.gated} error=${body.error ?? '-'}`);
+
+// fade011 B 形态升维·培训文档族检查段（.local 配置消费方=本脚本·CTO 勘修窗 2026-11-11）
+// 缺省/解析败=现役行为零变化（B 设计单 §二向后兼容·读败不炸拍）；检查读数落产出树 reports/
+try {
+  const cfg = JSON.parse(readFileSync(CHECK_CONFIG, 'utf-8'));
+  const families = cfg.families.map((f) => {
+    const files = f.files.map((name) => {
+      let st = null;
+      try { st = statSync(`${f.root}/${name}`); } catch {}
+      return { file: name, exists: st !== null, bytes: st ? st.size : 0, mtime: st ? st.mtime.toISOString() : '' };
+    });
+    return { name: f.name, all_present: files.every((x) => x.exists), missing: files.filter((x) => !x.exists).map((x) => x.file), files };
+  });
+  const reading = { schema: 'fade-training-check-read/v1', run_id: runId, families };
+  writeFileSync(`${treeDir}/reports/training-check.json`, JSON.stringify(reading, null, 2), 'utf-8');
+  console.log(`training-check: families=${families.length} all_present=${families.every((f) => f.all_present)}`);
+} catch {} // 配置缺省/解析败=零变化（不炸拍·如实静默）
 process.exit(res.status === 200 ? 0 : 1);

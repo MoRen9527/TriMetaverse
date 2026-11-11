@@ -1,0 +1,30 @@
+{
+  "schema": "fade-training-check/v1",
+  "note": "fade011 B 形态升维·培训文档族每日检查清单（.local=本机形·禁 sg 化覆盖；消费方=fade-daily-sweep.local.mjs 检查段·缺省/解析败=现役行为零变化）",
+  "families": [
+    {
+      "name": "fade-001",
+      "root": "D:/Code/ai/TriCompany/docs/training/fade-001",
+      "files": [
+        "01-beginner-guide.md",
+        "02-product-guide.md",
+        "03-code-map.md",
+        "04-deep-research.md",
+        "05-trigger-chain-draft.md",
+        "README.md"
+      ]
+    },
+    {
+      "name": "fade-011",
+      "root": "D:/Code/ai/TriCompany/docs/training/fade-011",
+      "files": [
+        "01-beginner-guide.md",
+        "02-product-guide.md",
+        "03-code-map.md",
+        "04-deep-research.md",
+        "fade-011-improvement-draft.md",
+        "README.md"
+      ]
+    }
+  ]
+}
