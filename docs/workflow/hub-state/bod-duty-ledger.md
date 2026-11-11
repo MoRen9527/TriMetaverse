@@ -1292,3 +1292,10 @@
 - 通报文升级：不只排工单三选一，加**施工现势定性问询**（六步序行至哪步/有无阻塞）——11:26「值席开始施工·读数随到随报」承诺后 49min 双零=施工活性存疑需值席正面定性。拆步链全过（send-keys→capture 三行入→独立 Enter→14s Working 15s 验拾取）·fleet socket -S 本轮首键即带（41 轮教训回补生效）。
 - 观察注如实录：m-duty-cos pane 显示「1% until auto-compact」——duty-cos 上下文临近自动压缩·值守回执链依赖其台账恢复力（树卷+transcript 连续性载体）·压缩后首回执若失锚即按值席异常升级。
 - 本地 14 席候令·local 豁免窗（12:37）窗内=免发免答归档。读数单行：8713 ok uptime 49966 pwr100 ac=true / 8711 ok 195h mc_link connected / TriRMC active / MMC degraded=true cf=60（59→60 照录） / 大表 24/4。
+
+**㊿+510（2026-11-11 12:45-12:47 +0800）12:45 轮·第 42 轮回执收稿+施工对象定谳流转
+
+- **duty-cos 第 42 轮回执收稿**（received 12:18:26·通报 2 分钟回·销读毕）：**施工活性解**——六步序行至② survey/spec-discovery 段在途（①CTO 规格 dccca15b2 全卷 108 行读毕✓·七步 fail-closed 检查序+六退因枚举+execution-result.json schema 全录；49min 无落卷=survey 段正常形非卡死）。
+- **新发现=真矛盾候裁**：值席勘出 sg face 现役树执行=**值席手动拾取形·无现役自动 mount script**——与 CTO 规格终稿「改造现役脚本」预设不符→施工对象二选一（**新建 mount script 加闸 vs 改造**）候 CTO 面定谳·值席不代裁·②步悬·③-⑥候接续。BOD 集散不代裁→**流转 m-cos 路由 CTO**（12:46·msg 62cb2fda·一信两用=本地窗满同构通报+定谳流转）。
+- **sg 豁免窗挂 13:07**（min(12:18+60min·第 2 拍 13:07)）+last_receipt=42+streak 清零。12:37 拍 sg 全体候令在旧窗满后但回执已在途=通报闭环中·不再重复发（第 42 轮通报未复用）。本地窗（12:37）窗满→同构通报面并入流转信（m-cos 11:50 静默候定性延续中·回执一行确认即挂新窗）。
+- 候面更新：①CTO 施工对象定谳（新建 vs 改造）→回传值席接续施工 ②真链试跑毕报=闸上线锚。读数单行（12:37 拍）：8713 ok uptime 51767 pwr100 ac=true / 8711 ok 195h / TriRMC active / MMC degraded=true cf=60 稳（首拍未涨·候复位） / 大表 24/4。
