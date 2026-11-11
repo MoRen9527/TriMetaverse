@@ -1,7 +1,7 @@
 # 编制外席位扩圈联审总卷（CEO 10:49 裁·四席联审·COS 汇总）
 
-- sourceOfTruth: 本卷（COS 汇总席·四席分卷异见并陈·候批件呈 CEO）
-- syncMode: draft（呈批后归档·分卷原件各自为真源）
+- sourceOfTruth: 本卷（COS 汇总席·四席分卷异见并陈·**CEO 11:09 五件全裁=批准生效**）
+- syncMode: approved（批注定谳归档卷·分卷原件各自为真源）
 - lastSyncedAt: 卷面时戳锚=git commit 时戳（零手打·D-47 增补款正形）
 - 令链: CEO 10:49 扩圈裁两件（BOD 10:50 流转·㊿+505）→COS 10:52 转召（时限 12:00）→四席分卷限内收齐（10:53-11:00）→本总卷
 - 议题: 「编制外席位（business-strategy role+registries 族）是否写入树执行门禁原则文」·CEO 倾向性=不需要扩（联审裁·非既定）
