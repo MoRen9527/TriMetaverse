@@ -15,11 +15,11 @@
   "exempt_note_local": "锚=m-cos r38通报(20:45:53发出·da2dca9e)·local窗=min(20:45+60,21:07拍)=21:07候回执 → r38回执20:51收(待派维持)·通报-回执链闭合",
   "last_receipt": 42,
   "last_notice_local": {
-    "round": "r55-local",
-    "at": "2026-11-13T04:43:15Z (UTC=12:43:15+08 现查原值)",
+    "round": "r56-local",
+    "at": "2026-11-13T05:44:50Z (UTC=13:44:50+08 现查原值)",
     "channel": "sendmessage",
-    "msg_id": "9c40189b-5091-4eef-975d-e17b076d2f5e",
-    "note": "local 14 idle first time + exempt expired; drill dispatch vol on sg tree pending pickup query"
+    "msg_id": "9111d5c5-4e1d-467c-917b-f270335ee5e1",
+    "note": "routine re-probe after exempt expiry (13:37); same-shape context attached (r55-local + r55 sg both waiting-window legit); last probe before 14:00 downtime band"
   },
   "last_receipt_local": {
     "at": "2026-11-13T12:44:11+08",
@@ -33,12 +33,11 @@
   ],
   "notice_streak": 0,
   "local_exempt_until": "2026-11-13T13:37+08",
-  "sg_exempt_until": "2026-11-13T10:07+08",
+  "sg_exempt_until": "2026-11-13T14:07+08",
   "last_receipt_sg": {
-    "at": "2026-11-13T09:29:53+08",
-    "round": "r54",
-    "verdict": "pending-dispatch-standby",
-    "anchor": "receipt in tree trees/bod-tick/回执-r54-定性-20261113.md + night chain 4 commits 36bf14a1d..a975c4c88",
-    "flag": "r52-legacy note: ledger weekly-plane order text pending re-dispatch per sg duty COS light-mention"
+    "at": "2026-11-13T13:14:21+08 (tree receipt)",
+    "round": "r55",
+    "verdict": "waiting-window-standby same-shape as local (legit)",
+    "anchor": "receipt trees/bod-tick/回执-r55-定性-20261113.md; last seats e0f65341a->3e0980607 10:52-54; COO 513 12:22; watcher 12:30"
   }
 }
