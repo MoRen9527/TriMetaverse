@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-07T16:01:02.532436+00:00",
+ "run_at": "2026-11-08T16:01:03.035366+00:00",
  "trigger_volume": 0,
  "watch_state_note": "fade011 开跑前 watch 全关（彩排收官候开跑令）",
  "verdict_dist": {
@@ -19,8 +19,8 @@
   "  - 163bf6001 docs(bod): §八十八——FADE-011 三段全链闭环窗纪要(首彩排 APPROVED 98.5→追认99.5·勘窗六件排窗废止·Phase2 五工序自动化管线达成·B件立法闭环·错挂三闸记档)·详卷指针 @bod"
  ],
  "registry": {
-  "mtime": 1793874182.6737602,
-  "instances": 9,
-  "sha": "3adb5cc"
+  "mtime": 1794106508.0947897,
+  "instances": 10,
+  "sha": "3e0994b"
  }
 }

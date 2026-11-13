@@ -1,6 +1,6 @@
 {
- "run_at": "2026-11-07T16:01:02.449993+00:00",
- "candidates": 37,
+ "run_at": "2026-11-08T16:01:02.925549+00:00",
+ "candidates": 39,
  "items": [
   {
    "source": "m-cos-transcript",
@@ -260,6 +260,20 @@
    "line": 1759,
    "ctx": "CROSS_DAY",
    "snippet": "{\"parentUuid\":\"7ec08a86-b0db-4f6e-b2b5-21a1530347b2\",\"isSidechain\":false,\"promptId\":\"b65bc492-fa61-48d8-86e5-ab05c7d68fa8\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_781f2a6250364b3d81b66e0d\",\"type\":\"tool_result\",\"content\":\"   54 docs/workflow/operating-records/2026-W41/trees/lg066-window-order-20261009/seg1-exec-readout-20261009.md\\n   66 docs/workflow/operating-record"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1505,
+   "ctx": "CROSS_DAY",
+   "snippet": "{\"parentUuid\":\"42fc42a3-9398-44d5-baed-1cc9760ecde3\",\"isSidechain\":false,\"promptId\":\"ca7763d7-dedc-43ce-8744-deaab671f51e\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_9dfdf7201e2d44a4ae831b8c\",\"type\":\"tool_result\",\"content\":\"# W45 绩效记分账面（2026-W45 scoring ledger·周初立账骨架）\\n\\n- sourceOfTruth: 本件（当周经营记录记分账面件；口径正身=`TriCompany/docs/workflow/performance-scoring-workflow.md`）\\n- "
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1515,
+   "ctx": "CROSS_DAY",
+   "snippet": "{\"parentUuid\":\"0de7b3a6-ea1e-4291-8964-d766aa7fe0ad\",\"isSidechain\":false,\"promptId\":\"ca7763d7-dedc-43ce-8744-deaab671f51e\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_96e4180186bc4408ac2e9f5f\",\"type\":\"tool_result\",\"content\":\"2026-11-08T13:18Z\\n21:18 CST\\n## 二、W45 周期结算读数（候 11-08 结算窗铸账）\\n\\n（结算窗 CHO 铸账段——公式：100 基−有效扣分+验证加分；扣分封顶 −20/加分封顶 +10。）\\n\\n### 二·0 结算窗开工与 PM 席位差裁量定谳（CH"
   }
  ],
  "prev_items": [
@@ -521,6 +535,20 @@
    "line": 1759,
    "ctx": "CROSS_DAY",
    "snippet": "{\"parentUuid\":\"7ec08a86-b0db-4f6e-b2b5-21a1530347b2\",\"isSidechain\":false,\"promptId\":\"b65bc492-fa61-48d8-86e5-ab05c7d68fa8\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_781f2a6250364b3d81b66e0d\",\"type\":\"tool_result\",\"content\":\"   54 docs/workflow/operating-records/2026-W41/trees/lg066-window-order-20261009/seg1-exec-readout-20261009.md\\n   66 docs/workflow/operating-record"
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1505,
+   "ctx": "CROSS_DAY",
+   "snippet": "{\"parentUuid\":\"42fc42a3-9398-44d5-baed-1cc9760ecde3\",\"isSidechain\":false,\"promptId\":\"ca7763d7-dedc-43ce-8744-deaab671f51e\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_9dfdf7201e2d44a4ae831b8c\",\"type\":\"tool_result\",\"content\":\"# W45 绩效记分账面（2026-W45 scoring ledger·周初立账骨架）\\n\\n- sourceOfTruth: 本件（当周经营记录记分账面件；口径正身=`TriCompany/docs/workflow/performance-scoring-workflow.md`）\\n- "
+  },
+  {
+   "source": "m-cos-transcript",
+   "file": "abd18f80-ac51-48d7-bbf0-b340a8bbb562.jsonl",
+   "line": 1515,
+   "ctx": "CROSS_DAY",
+   "snippet": "{\"parentUuid\":\"0de7b3a6-ea1e-4291-8964-d766aa7fe0ad\",\"isSidechain\":false,\"promptId\":\"ca7763d7-dedc-43ce-8744-deaab671f51e\",\"type\":\"user\",\"message\":{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"call_96e4180186bc4408ac2e9f5f\",\"type\":\"tool_result\",\"content\":\"2026-11-08T13:18Z\\n21:18 CST\\n## 二、W45 周期结算读数（候 11-08 结算窗铸账）\\n\\n（结算窗 CHO 铸账段——公式：100 基−有效扣分+验证加分；扣分封顶 −20/加分封顶 +10。）\\n\\n### 二·0 结算窗开工与 PM 席位差裁量定谳（CH"
   }
  ]
 }
