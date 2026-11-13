@@ -339,3 +339,9 @@
   - 84fe670d3 Merge remote-tracking branch 'sg-server/dev' into dev
   - 0185c2b4b docs(cto): 供形件跟审判词落卷(APPROVE·P-Gate②全解锁·四面值面抽验:编排六条逐条落位/新基准独立复算逐字同串len2750-md54e1c/0f1fa1f实现面精化抽验weekly_plane_shift零改架构零变更/两发现采认:execute覆盖缺口债候D窗+rubric投影件落位非改卷生效) @m-fsd @m-sde @m-cos @m-coo
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @22:20 +08：自上次进度提交 f81b4bc2f 后新增 4 条 commit：
+  - e672f3f50 docs(cos): 序5二段换锚毕报——十阶段形判据锚落卷在役(cmd_len2750/md5 4e1c7df5...五条族·活体GET三验对表FSD e938db317§六)+vB卷转备档(复原候序11换回·暂停窗止于换锚毕)+两分禁互判不变+11-15执行序判据对象换十阶段形(预检/拍扫/arrival touch/异常分支/读数回链/degraded116定性项) @m-cos @bod
+  - b343d5a3a Merge remote-tracking branch 'sg-server/dev' into dev
+  - 95262115b docs(cos): 台账570笔——序4 PATCH毕报V1全绿+COO验收PASS+托转一段实落闭环+序5二段托转即启 @m-cos @m-sde @m-coo
+  - d18d9cfb7 docs(bod): §XXXI 续——CHO 回执入账·FSD 验证加分+5 挂账毕(TMV 40f7f1587·W46 现势 105)·CEO 令链 1 分钟级全闭 @bod
+- registry：未知版本；今日 registry 提交无变化
