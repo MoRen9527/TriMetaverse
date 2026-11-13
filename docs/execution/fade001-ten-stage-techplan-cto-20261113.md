@@ -40,6 +40,7 @@
 - **段语义**（映射稿）：L4 扩展=迁移范围分析——哪些周迁/哪些不迁/carry_over 清单预审（上周手动迁移的准备工作归此段）·产出迁移清单候审。
 - **形态裁（APPROVE·FSD 协作稿 §二.1 采纳）**：独立薄模块 `plan_scope.py`（TriCompany `runtime/cognition/`·照 preflight/qualify 先例形同族：stdlib only/退出码 0/2 族/JSON 单份落卷）——三段业务面切片零重叠（preflight=该不该跑·qualify=有没有资格·plan_scope=迁什么不迁什么·单点探针纪律）；γ 二道闸 verify 归位接口预留（阶段 5 verify.py 以 plan.json 为对表基准）。不并入迁移器（现 weekly_plane_shift 的「迁什么」隐式逻辑升格为显式清单）。
 - **产物**：`$RUN_DIR/plan.json`——全链下游（DCE/verify/close）以此为准入与对表锚。
+- **段产物命名契约对表（PM 供稿 17:50·CPO 授权 17:49:19·本席收讫采认）**：run id 正形 `shift-W{fromWeek}-{YYYYMMDD}T{HHMMSS}Z`（fromWeek 显标·定死不再改名）/段产物文件族=arrival/preflight/qualify（三件在役）+plan/verify/score/close/manifest（全 JSON 机械可解析·段名→文件名一一映射）/job 正名 `weekly-plane-shift`（连字符形·勘偏①正名）/告警文案必带 run id/「取最新」判定禁字典序 mtime 序正形——与本稿 §二.4+§三表产物列一致零漂移。**范围钉子采认**：本契约只载机械契约名+run id 形制；迁移语义判据走档面正身（08f135f16 §五 CPO 语义锚+STE §三锚草案五条）不随本契约——施工引语义判据时引档面锚。
 
 ### 设计要点
 
@@ -115,5 +116,6 @@
 | 1 | plan_scope.py 独立薄模块形（FSD §二.1） | **APPROVE**（名采纳：本稿原 plan.py→plan_scope.py） | 防段名/模块名歧义+scope 语义贴切；stdlib only/0-2 族/JSON 单份落卷同族纪律 ✓；三段业务面切片零重叠 ✓；词面判据误分类残余（FSD §二.2 如实注）可接受——verify 对表可捕+carry_over 兜底·漏报毒于误报方向下正确取舍 |
 | 2 | score/close RC2=非阻塞告警·COS 单址·不拦终态（FSD §三） | **APPROVE 附两精化** | ①score RC2（跑了但败）与引擎缺席（J7 升级面）两路径分立勿混——映射表行 6 升级语义保留；②close RC2 非阻塞但漏报方向护栏：close.json 必须显式载 `upgrade_list_state:"not_extracted"`（升级清单提取缺=禁静默缺省）+COS 告警知情可人工补提取 |
 | 3 | 妆容 run dir 双 W 债 DCE 段顺手窗清理=FSD 承接 | **APPROVE·窗位定谳=首拍验收毕后的授权窗** | 清理=河源生产面触点（runs 数据删除）——今晚实现窗零生产触（裁决 A）+历史 run dir=演练/首拍证据链首拍验收前保留；执行须新授权件白名单载明删除触点+删除前 mtime 序清单留痕（防审计断链） |
+| 4 | CARRY 日期形正则漏匹配现役缺陷候选（FSD §二.8 发现③·候裁） | **定性不成立·驳回修复（本席实勘裁定）** | 实勘 `TriCompany/runtime/cognition/weekly_plane_shift.py` L103-123：①`_CARRY_ID_RE=r"CARRY-\d+"` 用途=**行识别**（L107 `.search()` 子串匹配）非 id 全串提取——日期形 `CARRY-20260728-NNN` 被 `CARRY-20260728` 前缀命中·识别零漏（FSD 按全串匹配心智读取=引用面误读）；②bump 本体=`_WEEK_CELL_RE` 周计数 token（`Nw+`→`(N+1)w+`）与 CARRY id 形态正交·id 不参与 bump 判定；③8w 升级面 L189=substring 检查（`"CARRY" in line`）形态无关；④实盘 blast path 实锚：dated 形（CARRY-20260728-* 六笔+CARRY-20260629-* 一笔）就在迁移对象 W46 `OP-*.unresolved-items.md` 内——首拍 W46→W47 bump 面两形态全覆盖零漏行；⑤引用勘正：正则真身=weekly_plane_shift.py L103（FSD 引名 shift_carry_over.py 系误记）。**次级知情注**：识别正则宽松形（CARRY-数字前缀即认）方向=误报面非漏报面·现势零实害（实盘无第三形态）不修·verify γ 二道闸（P5）可捕未来污染形态；**plan_scope 采纳面**：carry_over 清单计数自带显式双形态正则 `CARRY-(?:\d{8}-)?\d+`（清单计数精度面·非缺陷修复面——plan.json carry_over_count 须两家族数得准）。另发现①②④（全集落实盘/index 元数据域/tree-op 非普适 degrade keep）=知情采纳·入 plan_scope 设计约束（§二.2 输入面落文件系统实盘扫描不从 index 读） |
 
 —— CTO 小狄（m-cto·十阶段技术方案主笔稿 v1），写前现查 〔commit 时戳锚·D-47 增补款正形〕
