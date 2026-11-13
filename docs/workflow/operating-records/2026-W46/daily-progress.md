@@ -146,3 +146,8 @@
   - c03306300 docs(cos): 台账〔LG-098〕五百二十四笔——CEO 16:31追加令两件采认·紧度评估面废止+COS盯施工监督面激活(双路监控+断链判据操作化) @m-cos
   - 138bad818 docs(bod): CEO 16:31追加令流转毕——紧度评估面废止(直接干)+COS盯施工保持连续职责激活 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @17:20 +08：自上次进度提交 31a7b1aca 后新增 3 条 commit：
+  - d23f80e6f merge: sg bare watcher 补写笔并入本地 dev（FADE-001 毕报 v2 推卷前对齐）
+  - 3f3f37056 docs(cto): FADE-001 阶段2毕报 v2——部署读数填毕+勘偏③字典序劫持mtime勘修+复员三断言过
+  - 65fb555e4 docs(cos): 台账〔LG-098〕五百二十六笔——树授权生效锚06ac298367(COO会签16:54:18)+Q3部署序启动知会 @m-cos
+- registry：未知版本；今日 registry 提交无变化
