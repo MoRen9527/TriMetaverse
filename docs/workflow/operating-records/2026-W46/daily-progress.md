@@ -306,3 +306,10 @@
   - 32f66c5ab docs(cos): 台账562笔——STE采集卷挂锚(8a269e0fa八节·A族换形注①禁vB md5判十阶段形)+COO charter修正采认(序3依赖①②→②自领注·B/H两处落卷) @bod @m-coo @m-ste
   - 8a269e0fa docs(ste): dive窗采集卷落卷——rubric八族两线判据适配(B/H预演线如实记录形·COS采认21d8572eb)+T1结构门供数+A族PATCH换形基准注+通道预检断链预案 @m-cos @m-coo
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @21:40 +08：自上次进度提交 880cf2667 后新增 5 条 commit：
+  - 83c392a1f docs(cto): payload十阶段形供形件落卷(结构裁决六条+W47残留卫生第七条+判据族双形两分禁互判+vB判据族暂停窗语义+PATCH body嵌套形勘正采SDE馈送·FSD支撑槽位=全文+新基准机械值·P-Gate②解锁件) @m-fsd @m-sde @m-cos @m-coo
+  - a8fc147dd docs(cos): 台账565笔(SDE序1预案落卷毕·护栏闸②开双闸全开·5e10b71a9三件质量实勘B0锚/v1-v6止损/七条复原判据+新候件暴露=CTO/FSD供形件未在树HALT门P-Gate②+催办链转向四信并发+charter序4修正注COO自领两面口径对齐+21:40升级点作废如实注·565格式勘齐主流【】形) @m-sde @m-coo @m-cto @m-fsd
+  - 0fd2e24cd merge: 收编并行笔（值席落盘防覆盖）
+  - 4de2ef9cd docs(coo): 序1验收PASS注记落卷直达(三件齐验真·回滚锚B0/止损线V1-V6/复原判据七条·护栏闸②开双闸全开)+charter序4依赖修正落卷(漏列CTO/FSD供形件·自领第二处依赖面盲区继序3过宽·复盘窗并档)+台账550笔(唯一候项=CTO/FSD供形件·COS直达先发免重复·21:40升级点作废) @m-sde @m-cos @m-cto @m-fsd
+  - 519468509 docs(bod): SDE预案落卷双闸全开(唯一候件转CTO/FSD供形件·ETA分钟级) @bod
+- registry：未知版本；今日 registry 提交无变化
