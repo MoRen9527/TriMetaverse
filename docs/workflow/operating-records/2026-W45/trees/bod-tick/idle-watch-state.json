@@ -12,32 +12,34 @@
   "v41_free_pass": "2026-11-04 22:21:53 +0800",
   "exempt_note": "r40回执达(10:15销读·待派维持·睡眠族确认·信面date模板误植11-08照录不直引)·新窗=min(10:15+60,10:37拍)=10:37",
   "streak": 0,
-  "exempt_note_local": "锚=m-cos r38通报(20:45:53发出·da2dca9e)·local窗=min(20:45+60,21:07拍)=21:07候回执 → r38回执20:51收(待派维持)·通报-回执链闭合",
+  "exempt_note_local": "r57 m-cos 定性15:51:17 完结态自然空闲(三活动锚:联审径批8fb036b35/知会件闭环5cc4657b6/大表候CEO形) local窗=min(15:51+60,16:37拍)=16:37",
   "last_receipt": 42,
   "last_notice_local": {
-    "round": "r56-local",
-    "at": "2026-11-13T05:44:50Z (UTC=13:44:50+08 现查原值)",
+    "round": "r57-local",
+    "at": "2026-11-13T07:43:12Z (UTC=15:43:12+08 hook现查)",
     "channel": "sendmessage",
-    "msg_id": "9111d5c5-4e1d-467c-917b-f270335ee5e1",
-    "note": "routine re-probe after exempt expiry (13:37); same-shape context attached (r55-local + r55 sg both waiting-window legit); last probe before 14:00 downtime band"
+    "msg_id": "8328c796-31d5-4623-90db-f4d136c4ab90",
+    "note": "local 14席全空闲窗满通报(豁免14:37满·LG-097停工带豁免日正常判读)·sg侧旁证7件命中免通报"
   },
   "last_receipt_local": {
-    "at": "2026-11-13T13:44:27+08",
-    "round": "r56-local",
-    "verdict": "waiting-window-standby maintained (zero-change, same-shape as r55, legit)",
-    "anchor": "exhaustive git log sweep 12:44+: only BOD duty line 3 commits; COS ledger 517 last; tree last build 12:08:22"
+    "at": "2026-11-13T15:51:17+08 (COS r57 回执·写前现查原值)",
+    "round": "r57-local",
+    "verdict": "completed-idle-natural (完结态自然空闲·非断链非零活动)",
+    "anchors": "phase2联审四卷全齐+合成径批生效8fb036b35/值席知会件闭环5cc4657b6/大表open=4全候CEO形"
   },
   "note_tail": [
     "23:18 m-cos r46 定性回执=待派候窗态设计使然(锚21:11:13/a4f6eb232)→local窗=00:07(第2拍先到);sg窗待duty-cos直接回执",
     "10:15 duty-cos r47 定性回执=待派候令态(卷锚09:42:26/晨窗令未落=正常候面)→sg窗=10:37(第2拍先到)"
   ],
   "notice_streak": 0,
-  "local_exempt_until": "2026-11-13T14:37+08",
+  "local_exempt_until": "2026-11-13T16:37+08",
   "sg_exempt_until": "2026-11-13T14:07+08",
   "last_receipt_sg": {
     "at": "2026-11-13T13:14:21+08 (tree receipt)",
     "round": "r55",
     "verdict": "waiting-window-standby same-shape as local (legit)",
     "anchor": "receipt trees/bod-tick/回执-r55-定性-20261113.md; last seats e0f65341a->3e0980607 10:52-54; COO 513 12:22; watcher 12:30"
-  }
+  },
+  "last_notice_sg": "r57-fade001-vb-pause-relay",
+  "last_notice_utc": "2026-11-13T14:02:22Z"
 }
