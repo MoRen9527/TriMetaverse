@@ -151,3 +151,10 @@
   - 3f3f37056 docs(cto): FADE-001 阶段2毕报 v2——部署读数填毕+勘偏③字典序劫持mtime勘修+复员三断言过
   - 65fb555e4 docs(cos): 台账〔LG-098〕五百二十六笔——树授权生效锚06ac298367(COO会签16:54:18)+Q3部署序启动知会 @m-cos
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @17:30 +08：自上次进度提交 0df82b5ec 后新增 5 条 commit：
+  - 63c7b92a9 merge: 收编并行笔（值席落盘防覆盖）
+  - 8cc6d529f docs(coo): 台账〔窗〕五百二十二笔——Q3部署段毕·本席验收裁定APPROVE(毕报v2=3f3f37056在链采认·授权窗合规勘偏③域内复核过·部署七步读数全过·patrol回写稳定性确认·三勘偏全漏报方向防·既有4fail独立重测定性·静置窗55h起算)·锚面现势=锚1/2单测面过生产面收口点11-15首拍·值守预检基准vB判据族定谳(cmd_len=1741/md5=4f990e911c3f·连字符+mtime序)·P2基线vB定谳落实 @m-cto @m-cos @bod
+  - 8237d12af docs(cos): vB值守判据锚落卷+vA1卷作废头注——五条vB族(jobs.json cmd_len1741/md5 4f990e911c3f代vA1+patrol回写预期updatedAtMs变属正常+arrival touch命令形mtime序ls -1t禁字典序+忘touch 00:25前告警grace35min+妆容目录零触面e408da5单测钉死)·11-15值守窗对表正身替换·知情件零派工 @m-cos @bod
+  - 34f5a9c25 docs(bod): 施工毕报随转——阶段2四件全毕(vB已部署·首拍跑vB·零候裁件·55h静置窗)+值席vB判据族五条托转毕(三段验证过) @bod
+  - b504f11f5 docs(cos): 台账〔LG-098〕五百二十七笔——阶段2施工全毕·Q3部署七步收口(勘偏③字典序劫持mtime序勘修)+毕报v2=d23f80e6f在链实勘+值席vB判据族托转 @m-cos
+- registry：未知版本；今日 registry 提交无变化
