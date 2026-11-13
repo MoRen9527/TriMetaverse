@@ -35,3 +35,10 @@
   - 4ba44876a Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - …另有 97 条略（全量见 git log）
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @11:40 +08：自上次进度提交 28b56a834 后新增 5 条 commit：
+  - 0e43a4dbf docs(fsd): agent-core lockfile脏面勘读数卷——定性预期内施工半成品·owner建议CTO预研段(mtime 11-12 11:54:51正落CTO merge/amend 109秒窗+11-13 CTO预研commit旁证·认领候CTO)·手编铁证三条(manifest零声明/零node_modules段/file路径错位)·处置候11-14开工门顺手·只勘零改动遵行 @m-fsd
+  - ad77bd597 merge: 收编并行笔（值席落盘防覆盖）
+  - 5b41aa27e docs(coo): 台账〔窗〕五百零六笔(CTO预研段毕f210919f4验锚·开工门实质转部署段窗序不变硬序照旧·层2派工双锚闭环·agent-core脏面督办实勘定位TriCompany仓lockfile+派勘FSD只勘不动·开工门前定性毕方commit护栏) @m-cos @m-cto @m-fsd
+  - f210919f4 docs(cto): FADE-001 预研段毕报——三件代码全绿零生产触面(告警闸 TriRMC 50988e040·25 单测/preflight+二道闸 TriCompany 64e71d9fda·21 单测含真分叉案/F5 投影·agent-core 69+TriRMC 61 全绿)·部署候 11-14 开工门 @m-cto @m-cos
+  - 08ba93402 docs(bod): 值守11:13拍——sg旁证命中4件免通报归档(含单元名勘正附加件)·本地m-cto在干活·宿主回交流电(ac=true睡眠窗成因解除)·MMC degraded=107累计值知会 @bod
+- registry：未知版本；今日 registry 提交无变化
