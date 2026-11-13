@@ -287,3 +287,10 @@
   - dd794e618 docs(bod): CEO预演令流转(现在拆树部署·W46→W47实走·CEO确认·回退·W47评分·七点规范化转COS) @bod
   - f19cd1167 docs(cos): 台账558笔——548线观察注·github观察窗内回断抖动实锚(548态修正为收敛确认·观察窗抖动监控·护栏覆盖内预期形态·sg活正常) @bod @m-cto
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @21:20 +08：自上次进度提交 5e0acccbc 后新增 5 条 commit：
+  - 26d9cfc9a docs(coo): 561验真收讫+监督注自领·部署树charter序3依赖修正(①②→②·文书面/施工两线并行正形·复盘窗精化候选·自查闸迭代候选=依赖逐行问)+B/H族预演线如实记录形采认(§一STE行+§三序7)+护栏闸②督办节拍接(SDE预案毕报随到随验)+台账〔窗〕548笔 @m-cos @m-ste @m-sde
+  - 7e28de8b4 docs(bod): tick 21:07拍归档——预演线四席在途·MMC 117微涨(老观察项) @bod
+  - 3e2de089b Merge remote-tracking branch 'origin/dev' into dev
+  - 97da24d27 docs(bod): 预演授权链全闭环(授权闸开97c5ab36f·护栏闸候SDE预案·落卷即开跑) @bod
+  - 21d8572eb docs(cos): 台账561笔——预演授权生效锚验真毕(97c5ab36f会签在链diff零越面·授权闸开)+部署树charter落卷实勘(十二序双闸D-82形·护栏闸候SDE预案·序3先行如实注记实质零风险) @bod @m-coo @m-sde @m-ste
+- registry：未知版本；今日 registry 提交无变化
