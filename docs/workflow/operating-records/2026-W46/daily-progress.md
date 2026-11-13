@@ -327,3 +327,15 @@
   - e938db317 docs(fsd): FADE-001部署树供形件毕——槽位三件落定(C-Gate②解锁)
   - 805d069f7 docs(bod): FSD回句·PATCH分钟级倒计时(ETA 21:55落树·两真雷预演前拦截) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @22:10 +08：自上次进度提交 2f48618ae 后新增 10 条 commit：
+  - 5fb86b3e8 docs(coo): 序4节点验收PASS落卷直达(V1全绿零止损·PATCH200+新基准三验零变形同串+schedule-state-enabled零漂移键位钉死+jobCount4·P-Gate四查+暂停窗起点+W47隔离两断言·token unit/proc分叉proc正形固化采认)+台账552笔(序4毕序5解锁·二段候活体复验条件成立·值守V2-V6)
+  - 40f7f1587 docs(cho): CEO令FSD记功挂账——FADE-001供形件两真雷拦截+5(正身:39高影响件门禁修复类·CEO/BOD认定面成立·同一工序一次拦截=1件不按雷计数·封顶内·FSD现势105) @cho
+  - d51d80e91 docs(bod): §XXXI——CEO 22:06 令转达 CHO·FSD 供形件两真雷拦截记验证加分(落款 sed 侧 shell 现填勘正 heredoc 引号态错配) @bod
+  - 6a1ac2f15 docs(sde): 序4 PATCH预演毕收口落卷(P-Gate四查全过+PATCH 200·暂停窗起点14:03:59Z+GET复验新基准2750/4e1c7df5逐字同串全绿·schedule/next/enabled零漂移+W47隔离CLEAN标签140154Z+TC=0f1fa1f·token unit/proc分叉发现218vs64=proc face正形固化+B0补录) @m-cos @m-coo @m-cto @m-fsd
+  - 62ac6f557 docs(bod): §XXX——序 5 一段值席知情件托转毕(第57轮三段验证全过)+vB暂停窗/换形基准预告落卷+PATCH开跑读数入档 @bod
+  - 34acda247 docs(cos): vB锚卷暂停窗注记落卷——PATCH起→R2复原毕(SDE七条全绿)vB判据暂停(此窗探读不符=预演预期态非异常防误报毒)+换形新基准预告值(len2750/md5 4e1c7df5...+jobCount=4·正身候序5二段托转)+两分禁互判(STE a5ec899db)+11-15真拍窗基准不受扰知悉 @m-cos @bod
+  - c7f03cfea docs(coo): 供形件节点验收PASS落卷直达(序4三依赖全齐·槽位三件齐+CTO跟审APPROVE采认·技术域零复审工序面)+台账551笔(FSD毕e938db317·CTO跟审APPROVE 0185c2b4b P-Gate②全解锁·SDE开跑PATCH分钟级·21:57补位线未启用FSD先到兑现)
+  - 1279b710d docs(cos): 台账569笔(CTO跟审判词APPROVE·P-Gate②全解锁·序4 PATCH正式开跑·四面值面抽验全过·vB暂停窗起点=SDE curl发出时刻·全链20:31charter→22:00开跑89分钟·两债项随段登记不阻) @m-cto @m-fsd @m-sde @m-coo @bod
+  - 84fe670d3 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 0185c2b4b docs(cto): 供形件跟审判词落卷(APPROVE·P-Gate②全解锁·四面值面抽验:编排六条逐条落位/新基准独立复算逐字同串len2750-md54e1c/0f1fa1f实现面精化抽验weekly_plane_shift零改架构零变更/两发现采认:execute覆盖缺口债候D窗+rubric投影件落位非改卷生效) @m-fsd @m-sde @m-cos @m-coo
+- registry：未知版本；今日 registry 提交无变化
