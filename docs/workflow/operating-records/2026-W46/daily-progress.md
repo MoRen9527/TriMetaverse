@@ -14,3 +14,24 @@
 
 - FADE-001 拆分联审收口：四席一致同意拆（4/4·SLA 内·COO/COS/CPO/CTO 四段稿）·BOD 汇总卷 d7e176ca7+执行五方下发 ddb475290·编号裁 FADE-012（COS 径裁采认·registry 实勘 008-010 在册+011 ew-run 占号→下一空号）·验收锚五条候执行轮对表（LG-096 挂账·COO 收口轨+COS 台账轨双轨）·催办归口分设（域①COO/域②COS）
 - 同窗事实：CTO 勘修窗开窗（设计单 2f0d58d58 三件·8713 重启链今午窗内）·晨检 B 态首拍验收 PASS（fade011 两族 all_present·close APPROVED）·电量 98% 充电中（45% 前置档自愈·双证）——写前现查 2026-11-12T11:37:07+0800
+## 2026-11-13（周五）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @11:00 +08：自上次进度提交 9ed2e30e2 后新增 112 条 commit：
+  - a1b614d7e merge: 收编并行笔（值席落盘防覆盖）
+  - 12caa4cf4 docs(coo): 台账〔窗〕五百零五笔(树权双签生效锚c25073fde对表采认·四字段值面+tree_hash零触碰活体复验毕·sg钩子unstaged旁注知情候值席顺手窗·树权门禁全链闭环·开工门候明日午后§九三查) @m-cos @m-cto
+  - 3e0980607 docs(cos): 顺手窗工作区卫生勘修——W45两audit终态件入册(cos-decision-audit+fade-audit latest·11-09静止终态快照·审计面已迁W46活体新件·M态清零解post-receive钩子rebase未行挡·59未跟踪件不挡rebase共位不动留归属面收口)·值席受托顺手窗(sg bare post-receive报勘修项)
+  - 8935e51cd docs(bod): 层2派工信托转sg值席毕(tmux直发三段验证全过·拾取指纹Tinkering)·tmux -S参位置勘误入档(server全局参须置子命令前·首发零副作用fail-closed) @bod @m-cos
+  - ebbf85282 docs(memory): 项目记忆镜像同步（自动·sync-memory-mirror）
+  - ee2fd2479 docs(bod): 值守 10:46 拍——旁证命中三件新卷免通报归档(α窗毕报收口/拆树authorization候签读数/COO拆树方案排期)·三节点前两节点兑现·树权双签生效c25073fde(10:45:44 COS签发·签发前1分钟sg快照勘时差) @bod
+  - c25073fde docs(fade001): 树权双签生效——COS授权字段签发毕(authorized_at=2026-11-13T10:45:44+0800现查原值+expiry=2026-11-16T10:45:44+0800机械+72h+order_msg_id=签发信bd908950原值整串+status→authorized)·tree_hash活体验证一致(7ae1a537)·α窗毕报知情随台账轨·开工门=11-14午后§九前置验真三查 @m-coo @m-cto
+  - c9215c481 docs(coo): 台账〔窗〕五百零四笔(树权双签生效COS签发令采认·α窗毕报知情9df9873c5·单元名勘正附加件f0a210e4零hash漂·实勘三新消化·层2派工BOD托转知情) @bod @m-cos @m-cto
+  - f0a210e4c docs(coo): fade001-phase1-build树附加件勘正注(河源现役单元名trirmc.service活体对表·charter本体零改动tree_hash零漂·P2工序以活体名为准·版A原串保真+shift_notify_fail实勘并入) @m-cos @m-cto
+  - 9df9873c5 docs(fade001): α窗施工毕报——缓解形α落地(pull||true括号形解析式改形+trirmc重启6s瞬断+三查毕nextRunAtMs未抹runCount14)+前提验真P1A版b67a19a在位+实勘三新(pull对象=TriMetaverse仓/shift_notify_fail已在链F6时点注/单元名trirmc非deploy文件名) @cto
+  - 3a6cad530 docs(coo): 台账〔窗〕五百零三笔(批后链三请办毕·拆树方案fade001-phase1-build-20261114落卷cddade62一树三工序段·版A基座版B候拆分批窗·层2排班单正式形·授权件双签骨架COS字段候签) @bod @m-cos @m-cto
+  - cddade625 docs(coo): FADE-001第一阶段施工拆树方案落卷(fade001-phase1-build-20261114·一树三工序段·版A基座版B候拆分批设计窗三理由·工序排期照技术卷§五基座·护栏三回滚锚+停段止损线·层2值守排班单正式形·authorization.json树权双签骨架COS授权字段候签) @m-cos @m-cto
+  - 81664ab9d docs(fade001): CEO10:29批令生效——第一阶段施工方案稿批准+推进法维持一步一步入真源留痕 @bod
+  - 58c6469d7 docs(cfo): W42台账 三锚cron重挂毕——新三锚(09:30翻面件/14:00 LG-097增补件/18:00件)旧三锚删·CronList验毕·立W46日报件(LG-097生效注header)·日报面自14:00拍翻W46
+  - 4ba44876a Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - …另有 97 条略（全量见 git log）
+- registry：未知版本；今日 registry 提交无变化
