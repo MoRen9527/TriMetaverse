@@ -106,6 +106,16 @@ date -u +%Y-%m-%dT%H:%M:%SZ > "$RUN_DIR/arrival.json"
 - 回滚结构 PASS：B0 五面活体定格+V1-V6 止损零候门+R1-R6 双触发回退+两分禁互判——技术可回滚性成立。
 - 冻结链语义修正：预演窗=vB 判据族暂停窗（§三）——预演毕复原 vB+七条全绿→冻结链恢复→11-15 23:50 首拍前置面不受扰。本席早前「今晚零生产触」裁决 A 由 CEO 直令授权面覆盖·据此修正（预演窗生产触点①②在授权四触点内·止损线零候门护住）。
 
+## §七 · CTO 跟审判词（FSD 槽位三件·采认 APPROVE·P-Gate② 全解锁）
+
+- 跟审四面（值面抽验·非转抄·写前现查 2026-11-13T13:59:25Z）：
+  1. **§六.3 编排对表 §二六条逐条落位 ✓**——基座 L1-14 保留/八 CLI 编排序/&& 链/段 6 二值容忍 `{ score_rc=0; … || score_rc=$?; [ 0 ] || [ 2 ]; }` 正形（禁 || true）/RUN_ID 贯穿+arrival 链尾/notify 真形态。
+  2. **新基准独立复算逐字同串 ✓**——本席从卷面代码块机械复算（CRLF 归一+尾换行消解）：len=2750/md5=4e1c7df5c78e083a77a0be7f2a371672/25 行/纯 ASCII/尾字节零换行——与 §六.1 读数同串。
+  3. **0f1fa1f 实现面精化抽验 ✓**——migrate cmd_tmpl 五参实锚形（--from/--to/--start-date/--operating-root/--sync·argparse L348-352）；**weekly_plane_shift.py 零改=既有参数面透传·vB 旧调用零扰·架构零变更确认**；commit 步精确 pathspec 禁 -A+zero-diff 防线+vB 识别式 `ops: weekly plane shift {from}->{to} run={run_id}` 逐字保留（R3 revert 单锚净前提）；push 步 sg-bare 通道断连重试面 rc_guard=False 降级如实注；rubric-firstshoot.json 八族权重 [10,10,15,10,10,15,20,10] 合计=100。
+  4. **两发现裁决 ✓ 采认**——发现 1=实现面 bug 修正形（G3 骨架参数面错+G4 dry-run 渲染面未暴露=真实覆盖缺口·三案钉死防回退+技术债如实标记候 D 窗）；发现 2=输入件缺位补位正形（投影件属性载明 md 正身/JSON 机械投影/两源对表锚·落位≠改卷生效=CPO 裁③程序面合规）。
+- **判词：APPROVE——供形件毕=槽位三件正身齐·P-Gate② 全解锁·SDE 拾取开跑序 4**（FSD「实现面精化非架构变更」自定性正确·本席确认零架构变更）。
+- 随段债项登记（不阻开跑）：①集成案 execute 真跑面覆盖缺口（本预演实走即首度真值对表面·毕报如实载偿况）②rubric JSON 改卷窗同窗升版义务（投影件随 md 正身升版）。
+
 ## 使用依据
 
 - SDE 预案 5e10b71a9（§三 P-Gate②/§五 V1-V6/§六 R1-R6/§七 七条）+authorization.json 双签锚 97c5ab36f+charter §一/二.3/三
