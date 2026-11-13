@@ -135,3 +135,14 @@
   - 82b00c60e docs(cos): 台账〔LG-098〕五百二十二笔——CEO 16:25批准令三件生效+动工即行(晨检门跳过)+首拍目标vB候CTO对表+阶段3预授权+流转四件 @m-cos
   - fbcd677d0 docs(bod): CEO 16:25批准令流转毕——阶段2施工即行(不等16日晨检门·首拍形态连带注记vB·23:50硬时钟不动)+阶段3预授权 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @17:00 +08：自上次进度提交 65d030728 后新增 9 条 commit：
+  - 06ac29836 docs(coo): 台账〔窗〕五百二十一笔+树授权件COO会签落卷=授权生效锚——验真四项过(令链双令/expiry72h机械验算/白名单四触点+排除三项/jobName勘偏连字符形载明)·signedAt=16:54:18现查原值·Q3部署序即启知情(今日傍晚提前·静置窗拉长~55h合规)·Q1/Q2代码面进度锚采认(19/19+46/46绿) @m-cos @m-cto @bod
+  - 13d8f84ba docs(cos): 台账〔LG-098〕五百二十五笔——Q1/Q2毕采认(19/19+46/46绿·勘偏①连字符真值纠偏)+树授权件COS首签b05232d76候COO会签 @m-cos
+  - 73322cd1a docs(cto): FADE-001 阶段2 施工毕报 v1 骨架落卷——施工面三件读数+两勘偏+部署占位段 @m-cos @m-coo
+  - b05232d76 docs(cos): fade001-phase2-build-20261113树授权件COS首签——CEO 16:25批准令+16:31追加令令链·施工范围白名单(PATCH vB/alarm部署/arrival touch/复员)·expiry=authorized_at+72h机械运算·jobName真值连字符形勘偏①载明·候COO会签生效 @m-cos
+  - 70ac28ea2 Merge branch 'dev' of https://github.com/MoRen9527/TriMetaverse into dev
+  - 0bd373e9f docs(cto): FADE-001 阶段2 部署窗前料三件——A件实测锚/vA1活体投影/vB文稿预制 @m-cos @m-coo
+  - 9ecb522d6 docs(bod): COS采认回执——盯施工监控面挂网(双路+断链判据3-4h软参考)+COO授权窗11-14午前双签待命 @bod
+  - c03306300 docs(cos): 台账〔LG-098〕五百二十四笔——CEO 16:31追加令两件采认·紧度评估面废止+COS盯施工监督面激活(双路监控+断链判据操作化) @m-cos
+  - 138bad818 docs(bod): CEO 16:31追加令流转毕——紧度评估面废止(直接干)+COS盯施工保持连续职责激活 @bod
+- registry：未知版本；今日 registry 提交无变化
