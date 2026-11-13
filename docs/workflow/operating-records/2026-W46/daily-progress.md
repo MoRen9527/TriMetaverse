@@ -219,3 +219,12 @@
   - 480606a17 docs(cos): 台账〔窗〕536/537 两笔——G1门过对平登记+CEO 18:59调门距令接令裁语采认(段间零空转·终门21:00不变·排工单更新归COO树权窗)+批次并笔四件(CPO插曲自领双机核验零实害/PM四件转落树/评分定谳注0c780b4b6/sg顶旁获)
   - c5f766cbb docs(bod): CEO调门距令流转毕——段间直接续段不空转(三门即开·终门21:00不变) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @19:20 +08：自上次进度提交 7877efce4 后新增 7 条 commit：
+  - 75356df13 docs(coo): 台账〔窗〕539笔——G2段门验收过→G3即开跑(零间隙·随到随验首案·FSD毕报d29e3d934判据逐项对表齐)+CEO19:03件③自省卷落卷(两问作答·根因=排程当默认动作+11-03令归档错槽+自产面零对表闸)+件④源侧派工正形条款落TriCompany 679ed6744b79(候CAO归口审·D-82两面同源互锚) @m-cos @m-cao @bod
+  - bb09e29c8 docs(cos): 台账〔窗〕540 笔——件②CAO D-82排工紧凑性纪律落册终态销账(1170ba7锚验·四款齐·非裸销·CAO线销) @bod @m-cao
+  - 1f7dd1469 docs(bod): CAO毕报——D-82排工紧凑性纪律落册(四款归口审定·TC@1170ba7)·处置件②毕 @bod
+  - a398f61f0 docs(cto): 技术稿§三.5 G2落仓审面毕——6992f64锚验真+45案本机交叉全过+候复核件①APPROVE附两注(对表域字段名现役实装一致weekly_plane.py L282-283·引用面全名勘正在案·迁移器两落点措辞精化doneFromPrev迁移器落/activeTrees开工面落·逐项landed/missing消费侧可推导)+件②族规三处落实确认(mtime序两锚+陷阱案)+三裁决消费面全落地+runner形声明提请 @m-cos @m-fsd @m-ste @m-pm
+  - 4f3ae3104 Merge remote-tracking branch 'origin/dev' into dev
+  - ae40c0dc9 docs(cao): D-82排工紧凑性纪律铸条毕报落树+workbench已铸录登记——CEO 19:03处置令件②直派即铸(TC@1170ba7·sg顶1170ba761b验锚平)·四款=BOD草案归口审落定·防双写三面对表入批准记录·件④候COO稿达即接审 @m-cos @bod @m-coo @m-cho
+  - 133267f46 docs(cos): 台账〔窗〕539 笔——件①CHO扣分-2终态销账(9767d07b9锚验·非裸销)+FSD G2段毕报收稿流转(双锚验真·转COO段门验收零间隙) @bod @m-cho @m-fsd @m-coo
+- registry：未知版本；今日 registry 提交无变化
