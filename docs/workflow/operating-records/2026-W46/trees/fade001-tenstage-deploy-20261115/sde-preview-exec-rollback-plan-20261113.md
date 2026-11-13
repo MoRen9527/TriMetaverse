@@ -126,3 +126,48 @@
 —— SDE 小布（毕报=COS 主送+COO 知会·卷面时戳=commit %cI）
 
 —— COO 验收：**PASS**·三件齐验真毕（回滚锚 B0 五面活体实采·vB 1741/4f990e911c3f 逐字对上／止损线 V1-V6 零候门·charter §二.3 逐字遵行／复原判据七条·本席减负最小三断言全覆盖+两分禁互判采 STE 注②正确形）·P-Gate② 候件（CTO/FSD 供形件）如实 declaring 采认·不越域代拟正形确认——**护栏闸②开·双闸全开**·序 1 节点验收毕·2026-11-13T21:31:15+0800（date 现查原值·本行=落卷自签·节点验收落卷直达正形）
+
+## §十 · B0 补录+序 4 PATCH 执行实录（毕报并笔·现查 2026-11-13T14:04:39Z）
+
+### B0 补录（§二 PATCH 前执行项四件读数·落卷前窗采集毕）
+
+1. jobs.json 只读备份件=`/srv/fleet/TriRMC/data/cron/preview-bak-jobs-20261113T133142Z.json`（chmod 600·5211B）。
+2. repo 三面 HEAD 定格：本机 dev+sg bare dev 顶平（序 1 窗）；河源 TMV 检出 6860bf87b（11-09 旧 ops commit·谱系内严格落后非分叉·ff 可达）；河源 TC 检出 c458a17（G4 锚）。
+3. runs 目录现势：妆容目录 shift-W{fromWeek}-20261113T064514Z 真最新（mtime 序·arrival present·vB 判据⑤在位）。
+4. healthz=200 全绿。
+
+### P-Gate 四查实录（PATCH 门·全过开跑）
+
+| 查 | 读数 | 判 |
+|---|---|---|
+| 1 vB 基线复跑 | payload.command len=1741·md5=4f990e911c3f7147052229ebe85c16d3+healthz 200 | ✓ |
+| 2 供形件毕在卷 | c7adc3725 §六三件齐（25 行全文/新基准机械值/body 嵌套终形）+CTO 跟审判词 APPROVE | ✓ |
+| 3 排除项基数 | jobCount=4（weekly-plane-shift/rmc-orchestrate-tick/tricompany-pull/e1b2-window-reminder-patrol-8710） | ✓ |
+| 4 TC pull（FSD 增查） | HEAD=0f1fa1f6a5a4…（=0f1fa1f 本体·Already up to date·tricompany-pull job 已先行到位）+rubric-firstshoot.json 在位+porcelain=2 既有零新增 | ✓ |
+
+### 技术发现两笔（如实挂账）
+
+- **token unit/proc 分叉**：systemctl show Environment 面 token=218 字符 vs daemon `/proc/<MainPID>/environ` 面=64 字符——unit 版试打 401·proc 版试打 200。**PATCH 正形固化=proc env 直读**（daemon 实际鉴权值面）——B0「token systemd 取径」表述勘正为 proc face。unit 面滞留旧值=unit 文件与运行态漂移·候值席顺手窗勘修（非本预演阻塞项·零触面）。
+- TMV sg bare 顶并行前进：preflight pull 得 1279b710d（>c7adc3725·祖先链断言两发 OK=含供形件 e938db317 在谱系）——payload run 时 L16 幂等重拉对齐当时顶=设计内零阻塞。
+
+### preflight 实录（本卷 §四+供形件 §二.7 遵行）
+
+- TC pull --ff-only origin dev：Already up to date·HEAD=0f1fa1f6a5a4…·rubric 在位（P-Gate 4）。
+- TMV pull --ff-only sg-bare dev：HEAD=1279b710d·**porcelain=0**（W47 隔离后全清·强于断言②tracked clean）。
+- W47 隔离（CTO §二.7 命令形逐字）：mv rc=0→`/srv/fleet/preview-quarantine/2026-W47-20261113T140154Z`；断言① operating-records 下 W47=CLEAN ✓；断言② tracked clean（porcelain=0）✓。
+
+### PATCH 实录（生产触点①·V1 节点全绿）
+
+- 传输链：`git show c7adc3725` 抽 §六.3 代码块（25 行）→本机归一复算 **len=2750·md5=4e1c7df5c78e083a77a0be7f2a371672 与 §六.1 新基准同串**→scp（-o ProxyJump 路由）传河源 `/tmp/cmd-tenstage.txt`→河源 md5sum 终验**同串**（零变形通道）。
+- 构造（FSD §六.1 正形·禁直贴）：python assert fail-closed（len/md5 对表不符即 abort 零 PATCH）→json.dumps body（`{"payload":{"command":…,"cwd":"/srv/fleet"}}`·2936B）。
+- **PATCH 发出时刻=vB 判据族暂停窗起点：2026-11-13T14:03:59Z**（date 现查原值·curl 前现打）。
+- **PATCH_http=200·resp ok=true**（applyJobPatch payload 整换语义）。
+- GET 复验（V1）：**norm_len=2750·norm_md5=4e1c7df5c78e083a77a0be7f2a371672 逐字同串**（raw_len=norm_len=2750+河源 md5sum 三验零变形）+cwd=/srv/fleet+schedule dict 原样（cron `50 23 * * 0`·tz `Asia/Shanghai`）+state.next=1794757800000 原样+runCount=14·ce=0·last=ok+**顶层 enabled=True 零漂移**（键位钉死：enabled=job 顶层键非 state 内·B0 true 同源）+updatedAtMs=1794578639550 刷新属预期（applyJobPatch 语义·patrol 回写族同理）+jobCount=4。
+- 止损线：V1 过·零触发。
+
+### 暂停窗与下序
+
+- vB 判据族暂停窗：起点=2026-11-13T14:03:59Z（PATCH curl 发出）——「不符即报」暂停中（COS vB 锚卷暂停窗注记 34acda247 对表）；终点=R2 复原毕+本卷 §七 七条全绿毕报。
+- 下序：序 5（COS 判据族换形托转·输入=本实录新基准读数 len=2750/md5=4e1c7df5…/jobCount=4/enabled=true/next=1794757800000）→序 6 W46→W47 迁移实走（V2-V6 值守·本卷 §四）。
+
+—— SDE 小布（序 4 PATCH 收口·毕报 COS 主送+COO 知会·卷面时戳=commit %cI）
