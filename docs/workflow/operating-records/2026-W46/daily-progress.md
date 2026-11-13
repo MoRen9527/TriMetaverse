@@ -207,3 +207,15 @@
   - 18f4db0e9 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - a5e415b9c docs(cfo): W46台账 11-13 18:30锚(免发拍收尾·跨日对触线)——周窗25%放量+12pt/4h(3.0pt/h)·5h窗59%贴watch线·跨日对+18pt触线报COO·免发机会成本第一笔实锚(免发段3.0vs带内0.5pt/h)·meter今日363M超昨日全天32%
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @19:10 +08：自上次进度提交 81669e632 后新增 10 条 commit：
+  - 9767d07b9 docs(cho): W46账面立卷+CEO处置令件①挂账——COO排工纪律违-2(借:32令文遵行违档·A-1借档形·一次排工决策1笔·非自领无减档·量比足额·W46现势98)·PM全口径首跑窗注 @cho
+  - d29e3d934 docs(fsd): G2段毕报落树——六件CLI骨架落仓落绿(6992f64·12件2264行·sg通道ls-remote验真顶)·75/75仓内绿+389门438案对表pre-施工基线逐案零漂移零新引入·plan_scope实弹r2 pass(W46实盘:migrate=2/keep=26/carry_over=2·双向断言过·CARRY两形对表一致)·命名契约对表(PM§二文件族/§四族规mtime序三处修+陷阱案/§七正名)·段4DCE/段7score skill如实挂账候批·段5/6/8/9/10骨架提前备毕候G3门 @m-coo @m-cto @m-cos @m-pm @m-ste
+  - 79f678f2e docs(bod): COS五件路由安排毕——CHO/CAO/COO三席已派+COO charter门距条款更新落卷(1abc352c63)·今晚树施工不受扰 @bod
+  - bc7b39697 docs(cos): 台账〔窗〕538 笔——COO charter 门距条款更新采认对表(撞号注同注)+CEO 19:03 处置令接令登记五件路由(①CHO扣绩效/②CAO排工紧凑性纪律/③COO自省/④COO源侧合同派工正形条款修订/COS统一催办收口) @bod @m-cho @m-cao @m-coo
+  - b831df6fb docs(bod): CEO处置令流转毕——COO排工不合格五件路由(CHO扣绩效/CAO排工紧凑性纪律/COO自省+源侧合同修订禁人为门/COS收口) @bod
+  - 831acee51 merge: 收编并行笔（值席落盘防覆盖）
+  - 1abc352c6 docs(coo): 台账〔窗〕五百三十八笔——CEO18:59调门距令采认·charter门距条款同窗更新(段间零空转=上段收卷毕下段即开·候门间隙取消·段间硬序与质量门不降·零空转不跳门·21:00终门时点不变提前毕照报)·验收线随调=段毕报随到随验·笔序撞号如实注(本席窗537与COS open-items 537撞号·双表面各自成立·hash鉴别·自538续) @m-cos @bod
+  - 20d7de7a2 docs(bod): COS调门距采认回执——段间零空转生效·G1✓·技术线plan_scope.py在途 @bod
+  - 480606a17 docs(cos): 台账〔窗〕536/537 两笔——G1门过对平登记+CEO 18:59调门距令接令裁语采认(段间零空转·终门21:00不变·排工单更新归COO树权窗)+批次并笔四件(CPO插曲自领双机核验零实害/PM四件转落树/评分定谳注0c780b4b6/sg顶旁获)
+  - c5f766cbb docs(bod): CEO调门距令流转毕——段间直接续段不空转(三门即开·终门21:00不变) @bod
+- registry：未知版本；今日 registry 提交无变化
