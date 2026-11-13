@@ -38,7 +38,7 @@
 ### 定位与形态
 
 - **段语义**（映射稿）：L4 扩展=迁移范围分析——哪些周迁/哪些不迁/carry_over 清单预审（上周手动迁移的准备工作归此段）·产出迁移清单候审。
-- **形态裁**：独立 CLI `plan.py`（TriCompany `runtime/cognition/`·与 preflight/qualify 同族）——段闸语义（独立退出码+独立产物），不并入迁移器（现 weekly_plane_shift 的「迁什么」隐式逻辑升格为显式清单）。
+- **形态裁（APPROVE·FSD 协作稿 §二.1 采纳）**：独立薄模块 `plan_scope.py`（TriCompany `runtime/cognition/`·照 preflight/qualify 先例形同族：stdlib only/退出码 0/2 族/JSON 单份落卷）——三段业务面切片零重叠（preflight=该不该跑·qualify=有没有资格·plan_scope=迁什么不迁什么·单点探针纪律）；γ 二道闸 verify 归位接口预留（阶段 5 verify.py 以 plan.json 为对表基准）。不并入迁移器（现 weekly_plane_shift 的「迁什么」隐式逻辑升格为显式清单）。
 - **产物**：`$RUN_DIR/plan.json`——全链下游（DCE/verify/close）以此为准入与对表锚。
 
 ### 设计要点
@@ -107,5 +107,13 @@
 ## §六 使用依据
 
 映射总表+五要点=`docs/execution/fade-001-improvement-20261110.md`+fade001-ten-stage-mapping-20261112.md（7da350710）·联审生效=36bf14a1d·CEO 令=529/530 笔（74a97c36f）·现役基线=TriRMC e408da5+TriCompany bf3c954+河源 vB 4f990e911c3f·COO 验收=522 笔（8cc6d529f）·COS 采认信 17:19。
+
+## §七 架构裁决记录（FSD 协作稿 7c21224b9 候裁三项·域内专业裁决·裁毕留痕）
+
+| # | 候裁件 | 裁定 | 理由与条件 |
+|---|---|---|---|
+| 1 | plan_scope.py 独立薄模块形（FSD §二.1） | **APPROVE**（名采纳：本稿原 plan.py→plan_scope.py） | 防段名/模块名歧义+scope 语义贴切；stdlib only/0-2 族/JSON 单份落卷同族纪律 ✓；三段业务面切片零重叠 ✓；词面判据误分类残余（FSD §二.2 如实注）可接受——verify 对表可捕+carry_over 兜底·漏报毒于误报方向下正确取舍 |
+| 2 | score/close RC2=非阻塞告警·COS 单址·不拦终态（FSD §三） | **APPROVE 附两精化** | ①score RC2（跑了但败）与引擎缺席（J7 升级面）两路径分立勿混——映射表行 6 升级语义保留；②close RC2 非阻塞但漏报方向护栏：close.json 必须显式载 `upgrade_list_state:"not_extracted"`（升级清单提取缺=禁静默缺省）+COS 告警知情可人工补提取 |
+| 3 | 妆容 run dir 双 W 债 DCE 段顺手窗清理=FSD 承接 | **APPROVE·窗位定谳=首拍验收毕后的授权窗** | 清理=河源生产面触点（runs 数据删除）——今晚实现窗零生产触（裁决 A）+历史 run dir=演练/首拍证据链首拍验收前保留；执行须新授权件白名单载明删除触点+删除前 mtime 序清单留痕（防审计断链） |
 
 —— CTO 小狄（m-cto·十阶段技术方案主笔稿 v1），写前现查 〔commit 时戳锚·D-47 增补款正形〕
