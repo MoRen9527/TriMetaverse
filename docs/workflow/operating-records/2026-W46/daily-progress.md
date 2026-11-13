@@ -178,3 +178,16 @@
   - cfe70c958 docs(cos): 台账〔LG-098〕五百三十一/三十二笔——CPO主稿落卷+COS裁决A/B(实现≠部署两层窗·首拍前置授权窗定谳·预演形最小判据验收锚)+STE回审卷零阻塞(锚草案五条+首拍判据八族) @m-cos @m-cpo @m-ste @bod
   - d14f3f527 docs(ste): FADE-001前两阶段测试角度回审卷(零阻塞·五项发现·验收锚族六原则+阶段3锚草案五条+首拍判据框架八族) @ste
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @18:00 +08：自上次进度提交 aa305d129 后新增 11 条 commit：
+  - c5f951f4f docs(fsd): §二.8③勘正注——CARRY正则缺陷候选定性不成立(CTO裁决④9ab8419fc实勘驳回·.search()子串匹配识别零漏·本席初判误因=只读正则字面未读使用面·方法论教训入档) @m-cto @m-cos
+  - 763a5e1e5 docs(pm): fade001-tenstage-impl-20261113 件二/件三转卷落树——①首拍读数采集清单正式卷（八族×八列格式·CPO权重裁76c9fa287/STE判据卷d14f3f527三方零冲突并卷·md5=command值面校准·免评分母/红灯定性/三档阈值·dive窗活体验真升版注·vB判据族有效至周日换形时点注）②十段产物定名对表正式卷（run id shift-W{fromWeek}正形定死/段产物文件族八名全JSON/job weekly-plane-shift连字符正名+下划线历史引用面清单/妆容劫持防族规两层合拢/直引范围钉子CPO 17:49:19采认防双真源/告警文案必带run id条款·定名三筛过表）@m-cos @m-coo @m-cpo @m-ste @m-cto
+  - 9ab8419fc docs(cto): 十阶段技术稿§七裁决4·CARRY日期形正则缺陷候选定性不成立——实勘weekly_plane_shift L103-123三面证(识别面search子串匹配零漏/bump本体周计数token形态正交/8w升级面substring无关)+实盘blast path锚(dated形在W46 OP-*.unresolved-items.md首拍bump两形态全覆盖)+引用勘正(真身weekly_plane_shift非shift_carry_over)+次级知情注(宽松形=误报面零实害·plan_scope自带双形态计数正则)+§二PM段产物命名契约收讫采认(CPO授权17:49·范围钉子采认语义判据走档面锚) @m-cos @m-fsd @m-pm
+  - 670e8116b merge: 并入远端并行笔（并环二）
+  - 6a2a57ce0 merge: 并入 watcher 巡检兜底笔 aa305d129（W46 daily-progress 粗粒度增量·与 fade001 注记笔零交集）
+  - a017ed9f3 merge: 收编并行笔（值席落盘防覆盖）
+  - fec5e6ecb docs(coo): 台账〔窗〕五百三十六笔——G1段门验收裁定=过(合成卷42d19aca2七源齐在链验真·排工对表全并入·较排期窗提前达成)·裁决C评分三档80/60采认入基线(STE rubric消费判据)·裁决D阶段3推进序勘正采认(先行批今晚走+首拍后增量补充窗·与G2/G3施工序一致)·FSD plan_scope.py提前启动知悉·终门21:00收面分工对表(COS呈批面+本席段门验收面) @m-cos @m-cto @bod
+  - 0c780b4b6 docs(cpo): 首拍评分权重裁·裁决C定谳注落卷——三档80/60建议形转定谳形(COS合成卷42d19aca2§三.3采认·无裁量偏移·权重100分制+口径四条全采)·本裁自注起=首拍评分执行正身(分工维持CPO权重面/STE收判据/首拍毕CPO-PM共评) @m-cos @m-ste @m-coo
+  - b8405922f docs(bod): COS合成卷呈报(代裁第二笔)——七席16分钟双方案齐零阻塞·四裁决定谳(评分三档80/60·PM阶段3勘正)+今晚树四段门17:45-21:00 @bod
+  - 081fb3b42 docs(cos): 台账〔窗〕534/535 两笔——合成卷落卷(七源四裁决A-D·42d19aca2)+大会令增量知情四件(COO排工533采认/PM对表报备/FSD稿落卷+增量修正注/CTO三裁闭环/CPO勘正自领知情)·判据族过渡期托转承接
+  - 42d19aca2 docs(cos): FADE-001十阶段双方案合成卷落卷——七源合成(CPO fe792b616+76c9fa287/CTO 9de8b461b/STE d14f3f527/FSD 7c21224b9/PM信面三件/裁决A·B 531笔)+裁决C评分三档80/60定谳+裁决D阶段3推进序勘正(PM建议部分采认修正=先行批今晚走+实弹增补两段式)+COO四段门排工对表(533笔c1eb5c2b3) @m-cos @m-cpo @m-cto @m-ste @m-fsd @m-pm @bod
+- registry：未知版本；今日 registry 提交无变化
