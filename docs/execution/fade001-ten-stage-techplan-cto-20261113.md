@@ -96,6 +96,16 @@
 - **score.json**（row 6 产物列细化）：元信息三件=总分制/阈值/卷版本（J3）+引擎缺席=升级路径字段（非静默 fallback·J7·与映射表 row 6 升级语义对表）。
 - **close skill 升级清单五字段 spec**（e544bcba3 §二表·第三批 close 拆扩消费）：run_id/段位+触发源枚举/分级二值（D-39）/证据指针（路径存在性·禁零锚升级）/open-routed——**schema 类型面=本席锚面（P1 同族）·语义枚举与必填=PM 面锁**；防蠕变划线采认：清单零裁决语义字段（禁自动降级/自动销项）——裁决=COS 域（D-39 分级同构·清单只提取不裁）。
 
+## §三.5 G2 落仓审面（FSD 6992f64·本席抽验毕）
+
+- **落仓锚验真**：TriCompany sg-server 顶 1170ba761b 含 6992f64（六件 CLI 骨架+六 test·12 件 2264 行清单对表 ✓）·TMV 毕报 d29e3d934 在链 ✓。
+- **读数第二方法交叉**：本机抽验 test_plan_scope+test_verify **45 案全过**（glob 文件形·0.22s）——与毕报 75/75 读数一致方向 ✓。
+- **候复核件①裁定=APPROVE 附两注**：verify --strict 对表域字段名与现役实装一致（`weekly_plane.py` migrate_weekly_plane L282-283 doneTreesFromPreviousWeek 落点写实装+L208 activeTrees key·引用成立——**引用面勘正在案：weekly_plane.py≠weekly_plane_shift.py 两文件近形·今后引用带全名**）。注一（措辞精化）：docstring「迁移器两落点」实装=doneFromPrev 迁移器落点写+activeTrees 周内开工面落点（迁移器不写 to 周值）——并集=保守宽域语义成立·migrate 清单混入 CARRY 型项会被对表拦（fail-closed 正方向·W46 实弹 migrate=2/carry_over=2 分立实证分类面干净）；注二（PM 对表位 1 精化）：逐项 landed/missing=消费侧机械可推导（verify 产物=deficit 显式 missing 集·landed=全集−deficit 等价）——per-item status 列 nice-to-have 候 G3 顺手面非门。
+- **候复核件②族规三处落实确认**：verify.py L133+plan_scope.py L212-213 mtime 序正形+test_verify.py L199 字典序劫持陷阱案常备 ✓——三处锚点实证。
+- **架构形抽验**：裁① plan_scope 独立薄模块形遵行（stdlib only/年段名实锚修复+glob fallback fail-closed 在）·精化一三态路径分立（score_cli）·精化二 upgrade_list_state 显式二值结构门拦（close_skill）——三裁决消费面全落地 ✓；单向赤字（plan⊆index）+plan_scope P2 双向枚举两层闭环 ✓。
+- **缺口小注**：毕报 runner 形声明行缺（STE 族规=读数必声明 glob 文件形）——提请补声明·非阻塞（本席已交叉验证）。
+- **挂账确认**：段 4 DCE 候部署树（今晚零生产触铁律遵行）·段 7 候件⑥改卷制窗——如实挂账正形。
+
 ## §四 施工拆段与依赖序（候 COS 代裁+COO 拆树·排工单候 COO）
 
 1. **先行批（即启·文档与代码面·零生产触点）**：第 3 格 plan.py 骨架+单测（CEO 令点名 plan skill）→第 5 格 verify.py 骨架+对表逻辑→第 9 格 close 收口形骨架——三 CLI 骨架与 vB 生产面零触·单测面推进。
