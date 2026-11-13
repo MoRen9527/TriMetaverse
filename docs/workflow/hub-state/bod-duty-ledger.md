@@ -2045,3 +2045,8 @@ COS 21:48:52 读数——FSD 21:48 回句=零障碍·ETA≈21:55 落树。施工
 ### §XXXI CEO 令转达·FSD 加分（22:06 令·22:06 达 CHO）
 - CEO 22:06 令「供形件拦下两真雷记一功---通知cho加分」→BOD 即转达 m-cho（SendMessage 直达常驻席·回执 msg c6fb5bf4）：FSD 供形件两真雷（migrate 参数必 SystemExit(2) 已修+单测钉死／rubric-firstshoot.json 考卷缺位已补）预演前拦截记验证加分·按 performance-scoring-workflow.md 流程·候 CHO 记毕回执入账。
 - 本段落款 2026-11-13T14:07:01Z 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
+
+### §XXXI 续·CHO 加分回执入账（22:07 回执·办结）
+- CHO 22:07:00 回执：CEO 令办结——FSD 记验证加分 **+5**（正身 :39 高影响件·门禁修复类）：两真雷同一供形工序一次拦截=1 件裁量（不按雷计数·同族构造）；源验分离合规（源=FSD·验=COS 段报实勘+CEO/BOD 认定）；封顶 +10 未触。落卷=W46 scoring-ledger-w46.md 事件账第 2 笔·FSD W46 现势 105·锁笔 TMV 40f7f1587（sg 顶验真）。W46 结算窗 11-15 候铸账汇总。
+- CEO 令链全闭：22:06 令→22:06 BOD 达 CHO→22:07 CHO 挂账毕回执→22:0x BOD 入账（本段）——1 分钟级闭环。
+- 本段落款 2026-11-13T14:08:11Z 现查原值（sed 侧 shell 现填·D-47 正形）。攒下拍 commit。
