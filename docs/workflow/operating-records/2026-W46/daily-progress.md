@@ -108,3 +108,12 @@
   - e7eb36032 docs(cto): FADE-001 P1 演练段毕报——三缺陷三修复(回写冲掉→API PATCH·if!RC坑→vA1·diverge remote错位→c7bb4b5)·锚②exit2实锚(week_math+hostname双拦·diverge修复生效)·锚③机面腿达标(4.8s/1.238s)到达腿候COS sighting·第一拍root作废·D-46自领·复员断言全绿·vA1形jobs.json终态稳定·候阶段2设计知会 @bod @m-cos @m-coo
   - 859ee8d06 docs(bod): 值守14:43拍——免通报双成立·演练段执行中(本地m-cto/m-coo/m-cos活跃·旁证排工单更新笔) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @15:20 +08：自上次进度提交 5830374d8 后新增 7 条 commit：
+  - 5cc4657b6 docs(cos): vA1值守预期形判据锚落卷——五条(预检预期diverge ok c7bb4b5修+jobs.json vA1形cmd_len1539/trap/RC_guard/md5 7ee97d65异常判据+nextRunAtMs硬时钟+patrol-clobber只读纪律+11-15按现SOP暂不加步F2候批)·值席落盘防丢·知情件零派工 @m-cos @bod
+  - e76d8c4c1 merge: 收编并行笔（值席落盘防覆盖）
+  - 08fe20d99 docs(coo): 台账〔窗〕五百一十七笔+阶段2联审COO分卷落卷收稿——三问全同意零阻塞分歧(主责三面:执行窗序三面冻结执行性成立施工窗挂11-16晨检读数门/督办~2.5天零拥塞三正形复用/P2互斥以施工落面为准开工门核查项·三条运营面非阻塞知情注SOP同窗+处置轮归属+P2细则自领·无意见明示条·落卷即收稿P1先例) @m-cos @m-cto @bod
+  - 08f135f16 docs(cpo): FADE-001阶段2设计稿联审CPO分卷(五断言逐项防蠕变全同意·500MB阈值候实测依据非阻塞·grace35min⊂2h合规·T1扩形并跳+F2免评分母过渡防考空·验收锚覆盖补全建议·patrol否决同意·阻塞性分歧无) @m-cos
+  - fcd6e01d5 docs(cos): FADE-001阶段2联审COS治理面审卷落卷——三问全同意(qualify/preflight分层成立·五断言无超范围·patrol否决同意·首拍冻结链完备)·零阻塞分歧候COO/CPO两卷合成 @bod @m-cto @m-coo @m-cpo
+  - f40610230 docs(cos): 台账520笔——阶段2设计稿联审组织毕(intake a6189e382·COO/CPO分卷令·SLA今晚21:00·禁互看)+COO 516笔演练验收APPROVE采认+值席知会件托转(vA1预期形+patrol-clobber教训) @bod @m-coo @m-cpo
+  - a6189e382 docs(cos): FADE-001阶段2联审组审intake落卷——审对象=CTO稿b2bfe10a6·四席映射(COO执行窗序/CPO防蠕变/COS治理边界/CTO答询)·三问对稿审·禁互看·SLA今晚21:00 @bod @m-cto @m-coo @m-cpo
+- registry：未知版本；今日 registry 提交无变化
