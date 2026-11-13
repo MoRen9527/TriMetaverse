@@ -1631,3 +1631,9 @@ COS 12:10:07 呈报（CEO 即日开工令执行毕·毕报落卷 7e81a8b80 12:08
 前呈报尾句「P1 验收段候（11-17±锚）」系旧排期读法·随 COO 512 笔对表勘正——现读法：**验收分段两线并行**=演练段（锚②注入式拦截+锚③告警时效读数）即行可排（COO 排期面）·首拍段（F1/F6 实锚）挂 11-15 23:50 硬时钟·后续=P2/P3 验收对表。其余呈报内容不变。已随 12:13 回复面补报 CEO。
 
 本段落款 2026-11-13T12:13:06+0800 现查原值（写前跑·D-47 闸拦模糊段回填正形）。攒下拍 commit。
+
+## 12:14 拍·sg 旁证 5 件免通报·SDE 探针撤除卷定性·notifyFailures 归零
+
+tick 12:07:04 拍（现查 2026-11-13T12:14:06+0800）：sg duty 14 席全体候令+旁证近 45 分钟命中 5 件→免通报归档；本地 m-cto 在干活→免通报。旁证 5 件=CTO 部署毕报正身落卷（cto-deploy-closeout·12:10 呈报源卷）+CTO 预研毕报+COO 排期更新附加件正身+FSD lockfile 取证+SDE p3-watch-probe 探针撤除收口卷。**SDE 探针撤除卷定性**（11-04 派工的 WATCH_DIRS 扩面受控试触探针收口）：候验三件全齐（run id fade-w-fade011-ew-b6845dc36935+verdict APPROVED+树落位 W45 fade011-ew-runs·时序链 52 秒窗归因干净）→撤除毕（03:52-03:53Z·untracked 态 rm 即净）·TriCompany 仓工作区卫生归零（探针系唯一 untracked 件）——与 MMC degraded 无关（非 8712 cron 面）。四口：8713 ok·uptime 87677s·**notifyFailures=2→0 归零（好转信号·此前多拍持平 2）**·ac=true；8711 ok·lastPoll 12:06 健康链；河源 active。MMC degraded=true consecutiveFailures=107→108 微涨（同一聚合 job 续败·候 sg 值席侧定性·不影响指令链）。大表 open=4 持平。
+
+本段落款 2026-11-13T12:14:06+0800 现查原值（写前跑）。攒下拍 commit。
