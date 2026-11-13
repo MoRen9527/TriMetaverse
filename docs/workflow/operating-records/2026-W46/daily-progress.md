@@ -191,3 +191,13 @@
   - 081fb3b42 docs(cos): 台账〔窗〕534/535 两笔——合成卷落卷(七源四裁决A-D·42d19aca2)+大会令增量知情四件(COO排工533采认/PM对表报备/FSD稿落卷+增量修正注/CTO三裁闭环/CPO勘正自领知情)·判据族过渡期托转承接
   - 42d19aca2 docs(cos): FADE-001十阶段双方案合成卷落卷——七源合成(CPO fe792b616+76c9fa287/CTO 9de8b461b/STE d14f3f527/FSD 7c21224b9/PM信面三件/裁决A·B 531笔)+裁决C评分三档80/60定谳+裁决D阶段3推进序勘正(PM建议部分采认修正=先行批今晚走+实弹增补两段式)+COO四段门排工对表(533笔c1eb5c2b3) @m-cos @m-cpo @m-cto @m-ste @m-fsd @m-pm @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @18:10 +08：自上次进度提交 dfcf77bda 后新增 8 条 commit：
+  - 3de965adf docs(pm): 定名对表勘引注机理措辞随CPO自领案精化——L58定性由「手写勘误」勘正为「diff流内计行误读(git show流内grep计行误当文件行号·截断伪影/假读数家族新变体·CPO 18:08:23自领案·原位勘正7c41185f4)」·三方定读统一L44登记 @m-cos @m-cto
+  - 7c41185f4 docs(cpo): 主稿勘引注行号勘误自领——L58系diff视图行号误当文件行号(假读数家族新变体)·定读=L44三方一致(PM双法+CTO改稿行+本席文件本体复验)·锚hash主位不动行号次要 @m-pm @m-cto
+  - 55601460d docs(pm): 定名对表勘注两件——①CLI模块名定谳=plan_scope.py(CTO§七裁决1·9ab8419fc·采纳FSD形防段名歧义·plan.py消名·§二段产物文件族零影响)②定谳位行号定读L44(CTO 18:05提请两读对表·双法验=git show 36bf14a1d冻结版grep44+现行工作区grep44·7a8841305内CPO卷面注L58系手写勘误·同commit内CTO改稿L44与双法验一致·主锚=hash不断链行号次要) @m-cos @m-cpo @m-cto @m-fsd
+  - 1b6d83189 docs(cto): 技术稿§三表对表注三件(PM阶段4-10段稿e544bcba3 G3备料)——verify.json逐项status=landed|missing对表读数+score.json元信息三件J3引擎缺席升级字段J7+close升级清单五字段spec(schema类型面本席/语义枚举必填PM面/防蠕变零裁决语义字段采认裁=COS域) @m-cos @m-pm @m-fsd
+  - e544bcba3 docs(pm): 阶段4-10产品方案段vA落树(G3备料)——段产物字段语义必填表七段(verify逐项对表读数+P5两层锚显标/score元信息三件J3+引擎缺席升级字段/close.json三态+终态四件齐/notify双证+文案必带run id条款全段适用/零外溢对表三处aca95877c原样)·阶段8升级清单字段spec五字段(run_id/段位触发源/分级D-39二值/证据指针禁零锚升级/状态open-routed·防蠕变划线=提取承载不做裁决零裁决语义字段)·告警文案任务语言基线建议形·两栏划线重申零突破·G3窗备料先落不抢技术线节拍 @m-cos @m-coo @m-cpo @m-cto @m-fsd @m-ste
+  - 23d25736e Merge remote-tracking branch 'sg-server/dev' into dev
+  - 7a8841305 docs(cto): 技术稿§二.5候审面产品侧采认落定(PM件一8df0c999f§三·首拍形零新机制plan.json即候审记录·互动形划出今晚域)+实现面时序读数回PM(段3→段4串行零新约束·DCE无plan.json不执行fail-closed)+语义必填三件schema对表(零冲突入P1锚定义约束)+勘引改稿(L49卷号错挂08f135f16§五→正形36bf14a1d L44档面经aca95877c·锚文本零漂移纯指针勘正·契约注同步) @m-cos @m-pm @m-fsd
+  - 8df0c999f docs(pm): 件一阶段3 plan skill 产品方案段vA落树+定名对表勘引注——①PRD段(语义锚档面正身直引·定位=预审清单非自动决策器/plan.json语义必填三件·豁免理由+carry_over去向非空+migrate_count显式/候审面定谳=首拍形留痕可审零新机制·生产形互动形候后窗·防蠕变划线/预演形最小判据四条全机械复算·生产面收口点P5=首拍两层锚显标/负路径替身禁令+漏报方向三侧fail-closed/增量补充窗§八回填位预留/CTO-FSD对接点三件含CLI命名族对表)②勘引注(语义锚正形指针=aca95877c §五→36bf14a1d合成卷定谳位·原引08f135f16 §五系卷号错挂·08f135f16=阶段2联审分卷§五=无意见明示条非锚载体·锚文本零漂移纯指针漂移·CPO主稿L59/CTO技术稿L49同款错挂随报知悉) @m-cos @m-coo @m-cpo @m-cto @m-fsd @m-ste
+- registry：未知版本；今日 registry 提交无变化
