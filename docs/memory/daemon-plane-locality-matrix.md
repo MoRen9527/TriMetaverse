@@ -24,3 +24,8 @@
 ## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
 
 - [daemon 机位矩阵·服务域/本地域硬规则](daemon-plane-locality-matrix.md) — TriRMC=河源(服务域)/TriRLC=**本机**(R面本地域·8711)/TriMMC=sg(loopback)/TriMLC=本机(8713)；2026-10-09 四连混淆实证（trirmc/trimmc 缝合→v4 作废、「8711 复活」伪命题——正身本机 64h 活着、探针探错机报假缺口、CTO 稿对象错位）；daemon 状态叙述先活体现探正身机位禁推定；**store 位同理（10-11）**：双 daemon 双 store 分立（trilc\=8711 代码默认/trilc-channel\=8713 启动链显式 DATA_DIR）探库先对 DATA_DIR 禁按路径直觉（探错库 jobCount=0 假矛盾实证）
+
+
+## 索引行全量快照（2026-11-06 CAO 索引瘦身窗·原行存档·细节权威位=本文件+本快照）
+
+- [daemon 机位矩阵·服务域/本地域硬规则](daemon-plane-locality-matrix.md) — TriRMC=河源服务域(8710)/TriRLC=本机 8711/TriMMC=sg **8712**/TriMLC=本机 8713：状态叙述先活体现探正身机位禁推定；**探错端口空回≠服务停**（10-14 sg 探 8710 误报 executor 停=假缺口·8710 系河源 TriRMC 端口）；store 位同理——双 daemon 双 store 分立，探库先对 DATA_DIR 禁按路径直觉；统称正身=registry〈四控制器统称术语〉节（11-04·四名=面属+层级·族 ⊇ daemon+cli+harness·矩阵=daemon 单形机位）
