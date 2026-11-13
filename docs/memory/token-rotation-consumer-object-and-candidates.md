@@ -36,3 +36,8 @@ LG-087 #7 现役席活体探针 token 落点：CTO 原指定 `/home/fleet/.dsh/w
 ## 纪律落点（CAO 铸条 2026-10-15·TC 74403e7）
 
 本条三折教训已条款化入纪律册：**D-54 凭证轮换施工纪律**（款1 消费对象三段链禁同名键顺手同换/款2 候选载入位全清点/款3 消费面四层含 cron payload/款4 施工正形互引/款5 PATCH 键面语义先读+附注 schtasks 跨 daemon 修法）；姊妹条 **D-46 含密值面打印路径防线**（探针四正形+族 8 例含第 7/8 例+BOD sg 段 payload 案·嵌套 payload 递归滤）。**两条 BOD 复核通过 2026-10-15 19:30:58 即生效**（落册 74403e7·状态笔 416aeb0）。整理注：CAO 曾平行另建 credential-rotation-consumption-chain.md 一件，防双写自查发现即撤并入本条（镜像侧残留候人工清理）。
+
+
+## 索引行全量快照（2026-11-06 CAO 索引瘦身窗·原行存档·细节权威位=本文件+本快照）
+
+- [token 轮换三折](token-rotation-consumer-object-and-candidates.md) — 轮换前必勘键消费对象（同名键≠同对端·8711=河源/8713=sg 实锚）+候选载入位清点（env 候选链多副本值一致化）+全键清点禁只改锁定行（8713 L18 漏·FSD 兜）+CR 断言唯一正形 tr -cd 字节计数（od -c 假阳性）+Git Bash 禁 schtasks 动词系+D-46 第 8 例注释行裸 key+**折5 探针 token 落点=工作区 600 文件（BOD 10-20 裁·与隔离联调 DSH_HOME 形按「是否触碰现役席」分野）+tmux capture 长 token 必查 80 列 wrap 续接行（42→43 字符=401→303·401 先疑截断非值错）**+**探针 token 落点=工作区 600 文件正形（BOD 10-20·沙箱外 .dsh 作罢·与隔离联调 DSH_HOME 两形分野勿互串）+tmux 80 列 wrap 续接提取坑（401 先疑截断非值错）**

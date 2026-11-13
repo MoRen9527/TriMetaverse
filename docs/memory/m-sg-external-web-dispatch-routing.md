@@ -22,3 +22,8 @@ metadata:
 首用实锚：LG-085 行业对标三题检索派 m-duty-cto（lg085-industry-scan-1792290086·288→289 回读绿）。
 
 关联 [[m-plane-duty-workspace-design]] [[daemon-plane-locality-matrix]] [[bigmodel-h1-proxy-mitigation]]。
+
+
+## 索引行全量快照（2026-11-06 CAO 索引瘦身窗·原行存档·细节权威位=本文件+本快照）
+
+- [外网派工路由 M-SG 席组](m-sg-external-web-dispatch-routing.md) — CEO 10-18 令：外网检索类派工扔 sg 席组；**正形通道=tmux 直发（send-keys+独立 Enter+capture-pane 验拾取）或 POST /internal/v1/notify→outbox**；**notify-mailbox.json 直 append=死信**（10-20 源码级勘定：mailbox=消费者输出位非入箱口·10-19 A2 305/306 无人拾取同根因）；**normal notify 只落箱不唤醒 idle 值席（10-23 值夜三单 50-100min 零拾取实证）——正形=notify 后必跟 tmux 直发唤醒或 urgent 形·信到箱≠信到人**；服务日志=/tmp/trimc-run.log 禁走 journal；本地箱=LG-085 形 message_id 字符串+os.replace+真身解释器=python（python3 是 Store 存根）

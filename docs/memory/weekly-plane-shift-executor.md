@@ -42,3 +42,8 @@ metadata:
 ## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
 
 - [周平面迁移执行点](weekly-plane-shift-executor.md) — 唯一执行点=河源 TriRMC cron（周日 23:00 北京时间，08-30 自 23:59 提前留补救窗）；job 禁带 runAs（trirmc=fleet 身份，runuser 必炸）；迁移窗冻结 sg watcher；回流冲突解法+README 指针必查；本机对齐 SOP=docs/workflow/weekly-plane-shift-local-align-sop.md（LG-056，消费端 fetch+merge 不推，冲突即停+值班席通知；执行体=TriMLC 8713 cron 已落位现役，10-04 夜生产实跑实证机写 ff 至 bare 顶）；迁移链实勘：R-HY job 9c81c7ec ff-only 拉 sg-bare→push 回，sg-bare=origin 权威；10-04 夜该 job 未跑=TriRMC executor 停摆（trirmc.service 人工 stop+disabled 三日，BOD 补跑修复，HTTP 活≠executor 活）
+
+
+## 索引行全量快照（2026-11-06 CAO 索引瘦身窗·原行存档·细节权威位=本文件+本快照）
+
+- [周平面迁移执行点](weekly-plane-shift-executor.md) — 唯一执行点=河源 TriRMC cron 周日 23:50 北京（10-18 CEO 令改·原 23:00·f72bdc64e）；job 禁带 runAs；本机对齐 SOP=weekly-plane-shift-local-align-sop.md（fetch+merge 不推·冲突即停）；sg-bare=origin 权威；HTTP 活≠executor 活（10-04 停摆实证）；10-19 口径增补=整树迁移三面分工（新周未完成标记/记录留发生周/档案树根周收口）+COS 顺序单进程拆树周未完树≤1~2（正身=W43 rulings卷 §五）

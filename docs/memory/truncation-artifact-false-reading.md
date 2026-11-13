@@ -26,3 +26,8 @@
 ## 索引行全量快照（2026-10-13 16:0x CAO 压缩施工·MEMORY.md 裁短前存档·细节权威位=本文件历史段+本快照）
 
 - [截断伪影=假读数家族](truncation-artifact-false-reading.md) — 定长截断显示双向造假：泄值向（10-02 值头带出案）+缺失向（substr 40 字符丢行尾 NEL→trilc-channel 显成假名 TRILC-CHAN→误报切空面观察点，CTO 勘定销案 b4bf42b8）；键名面用 -F= 取段不定长、值片段只取尾指纹、显示长≠全行长=伪影信号；家族五向并档（10-05 LG-064 扩）：编码毁匹配/转义毁语法/截断毁值面/**PS5.1 引号吞噬毁远程命令**/**pwsh7 JSON DateTime 类型变形毁时戳（+8h 幻影，'o' 回环+Invariant+AssumeUniversal 修）**；共同根式=中间层隐式变形+静默失败，识别信号=单点伤/双宿主分叉/读数与旁证矛盾
+
+
+## 索引行全量快照（2026-11-06 CAO 索引瘦身窗·原行存档·细节权威位=本文件+本快照）
+
+- [截断伪影=假读数家族](truncation-artifact-false-reading.md) — 假读数家族十三向并档（编码毁匹配/转义毁语法/截断毁值面/PS5.1 引号吞噬/pwsh7 DateTime 变形毁时戳/grep 猜名假阴性/ETS 注记毁 payload/**date -uFormat 返本地值贴 Z 尾毁 UTC 落款·UtcNow 权威口径修·跑法分叉 glob 单层退化毁全量面·npm test 正形化（STE 10-20）·git log 路径过滤默认历史简化漏显触碰面·--full-history 正形（CTO 复测 10-22）·git quotepath 八进制转义毁中文路径 literal 匹配·quotepath=off 正形（FSD 10-23 自查同窗闭）·git 双日期字段分野 %ad/%cI 同 commit 两机真值·同 hash 异日期先对字段再定性·指纹锚用 %cI（RDT/FSD 对表 11-04）·投影算法歧义毁指纹判读（hash12 双算法实案 11-04·算法形标注 sha256_12:/prefix12: 正形=D-42 增补款）**）：共同根式=中间层隐式变形+静默失败；识别信号=单点伤/双宿主分叉/读数与旁证矛盾
