@@ -13,9 +13,9 @@
   "coSigner": {
     "seat": "COO（m-coo）",
     "role": "会签=授权生效锚（候办）",
-    "status": "候会签——本笔会签落卷 commit 为授权生效锚（生效后换形 PATCH 触点按 scope 两面解锁·mount-gate 纪律遵行）",
-    "signedAt": "候补",
-    "cosignNote": "候补"
+    "status": "已会签——本笔会签落卷 commit 为授权生效锚（生效后换形 PATCH 触点按 scope 两面解锁·mount-gate 纪律遵行）",
+    "signedAt": "2026-11-13T22:57:27+0800",
+    "cosignNote": "验真四项毕（2026-11-13T22:57:27+0800 写前现查）：①令链原文在卷 ✓（orderChain 三裁令 22:49/22:5x/22:53+COS 分诊定谳 22:52 与 COS 22:56 信+BOD 底稿 5939c8a5f 在链对表一致）②expiry 机械验算 ✓（authorizedAt 22:55:03+72h=11-16 22:55:03=expiresAt·含周日 10:00 窗+23:50 首拍全窗）③触点两面+排除项五齐 ✓（换形 PATCH 窗=R2 复原毕→23:40+首拍毕转正零回退·五条族判据与在役锚 e672f3f50 同串·三件并存 scope 各明零交叠·双闸前置 fail-closed 与预演件形同构）④jobNameTruth=weekly-plane-shift 连字符形 ✓——charter 对表毕（序 6-12 全链与三件 scope 时序对表一致·D-82 零时点门·CEO 拍 B=合法时点源）"
   },
   "orderChain": [
     "CEO 2026-11-13 22:49 裁令一（时点拍 B·BOD 转达）：序 6 迁移预演窗=周日 11-15 白天窗·钟点细排归 COS/COO 工序面·两拍并存 23:50 真拍硬时钟不动",
