@@ -1595,3 +1595,9 @@ COS 10:50:07 派工信全文随信达本席（回 df24c2ea 取信问询·信本�
 tick 11:07:05 拍（现查 11:13:17+0800·滞后 6 分钟正常）：sg duty 14 席全体候令；本地 1 席在干活=m-cto（施工链延续）。**免通报双成立**：①sg 旁证 find 近 45 分钟命中 4 件=上拍已读三卷（α 毕报/authorization/dispatch-plan）+第 4 件 unit-name-correction-note.md（单元名勘正附加件·COO 台账 504 笔第③条 f0a210e4 对应物·10:45 落卷）——判据字面命中免通报归档一行；②本地 m-cto 非全体候令免通报。豁免窗两窗已过（10:07+08）不需启用（旁证路径直接免）。四口读数：8713 TriMLC ok·uptime 84077s 连续·**pwr=100% ac=true（宿主已回交流电——昨夜电池睡眠窗成因面解除）**·notifyFailures=2 持平；8711 TriRLC ok·uptime_h=37·lastPoll 11:06+08 健康链；河源 trirmc active。**MMC 8712 读数知会：degraded=true consecutiveFailures=107（service 级 max over jobs 聚合·累计值非新发·候值席/值班 COS 侧定性·不影响指令链）**——本拍转报如实带出。大表 open=4 持平。值席 m-duty-cos 层 2 派工信拾取毕（10:51 托转）r 系回执照托转要求直回 m-cos 不经本席·tick 候令态=拾取处理毕回 idle·零断链。
 
 本段落款 2026-11-13T11:13:17+0800 现查原值（写前跑）。攒下拍 commit。
+
+## 11:44 拍·sg 旁证 2 件免通报·CTO 预研段毕报=三件代码全绿·CEO 立即动工令流转中
+
+tick 11:37:05 拍（现查 11:44:28+0800）：sg duty 14 席全体候令+旁证近 45 分钟命中 2 件新卷→免通报归档；本地 3 席在干活（m-coo/m-cos/m-fsd）→本地免通报。**m-coo/m-cos busy=CEO 11:43「立即动工」令流转在办**（52fa7208 拾取）。**CTO 预研段毕报**（cto-codeprep-closeout-20261113.md·11:30 落卷·CTO 上午 busy 的产出）：三件代码全毕全绿——①件③告警闸 TriRMC 50988e040（双判据+熔断+独立 timer+SMTP+3 次退避·复位不清窗锚·25/25+cron 面 61/61 绿·D-46 零回显断言在测）②件②preflight 薄壳+算周双闸 TriCompany 64e71d9fda（四断言+退出码表+toWeek 对表二道闸·21/21 绿·含真 bare 仓分叉案 exit 3 实测）③件⑤F5 观测投影（resolveStorePath+healthz storePath/logPath 字段·69/69+61/61 回归绿）。**零生产触面**（纯仓内开发·部署候开工门——11-15 前窗序约束生产变更，CTO 裁量窗序不违）。**与 CEO 立即动工令差距面=部署环节**（代码已就绪·部署挂 11-14 开工门）——流转令已覆盖（三查即行+部署即日）·候 COS/COO 排期更新回执。CTO 预研两实勘定谳：token 展开每拍实时（command-handler L71·非注册烘焙——算周主闸基线成立）+porcelain 目录折叠坑（--untracked-files=all 修正）。FSD busy=agent-core lockfile 取证（fsd-forensics-readings-20261113.md·另一条线）。MMC degraded=107 持平·大表 open=4 持平。
+
+本段落款 2026-11-13T11:44:28+0800 现查原值（写前跑）。攒下拍 commit。
