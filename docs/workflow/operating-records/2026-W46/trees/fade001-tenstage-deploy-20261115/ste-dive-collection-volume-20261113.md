@@ -15,7 +15,7 @@
 
 | family_id | family_name | reading_point | collection_cmd 形 | verdict_rule（两线形） | weight | close_layer | special_clause |
 |---|---|---|---|---|---|---|---|
-| A | 拍前冻结 | jobs.json 值面：md5 基准+nextRunAtMs+qualify/trap/RCguard 在位 | 活体探读+md5sum+json 值面值读（值面必读非仅存在性） | 首拍/预演同形=与基准 md5 对表全中（换形基准见注①） | 10 | 单测值面案+生产面=dive 23:45 复探 | **换形注①**：vB 基准 4f990e911c3f 有效至 PATCH 落；**十阶段形基准=PATCH 落后 dive/消费窗活体探读新值落卷替换**——禁以 vB md5 判十阶段形 jobs.json（=全红假读数·判据错配族）；nextRunAtMs=1794757800000（11-15 23:50 硬时钟·换形不动） |
+| A | 拍前冻结 | jobs.json 值面：md5 基准+nextRunAtMs+qualify/trap/RCguard 在位 | 活体探读+md5sum+json 值面值读（值面必读非仅存在性） | 首拍/预演同形=与基准 md5 对表全中（换形基准见注①） | 10 | 单测值面案+生产面=dive 23:45 复探 | **换形注①**：vB 基准 4f990e911c3f 有效至 PATCH 落；**十阶段形基准=PATCH 落后 dive/消费窗活体探读新值落卷替换**——禁以 vB md5 判十阶段形 jobs.json（=全红假读数·判据错配族）；nextRunAtMs=1794757800000（11-15 23:50 硬时钟·换形不动）；**两用途两基准对表注②**（COS 562 笔 32f66c5ab 对表注采认转载）：回退复原验证面基准=vB md5 4f990e911c3f（复原目标态=vB 形·charter §四锚有效）——与预演/首拍线 A 族十阶段形新基准**两分各按各面·禁互判**（以十阶段形 md5 判复原态=反向判据错配同族假读数） |
 | B | 拍点形态 | 拍点时戳∈23:50-23:59 窗 | run 记录/目录名时戳段读 | 首拍=窗断言；**预演=如实记录形**（手动拍点时戳 date 现查原值粘贴+操作序实录） | 10 | 生产面首拍 | 周界漂移观察（回审卷 §一发现 2·迟拍跨 00:00 γ 拦=fail-closed 形态非错周静默） |
 | C | run id | run id 三处同串（per-run log 目录/聚合文件/close 记录）+正则 | `ls runs \| grep '^shift-W'`→RUN_ID→三处 grep 同串计数=3+正则匹配=3 | T1-1 定谳（a2c246908 原样）；两线同形 | 15 | 单测金值案+生产面首拍 | 红灯上限 79（_REDLINE_CAPS·G3 验读）；验收锚①同源 |
 | D | preflight | preflight.json 落位+四断言过+退出码 0（或拦截态=文案带 run id 告警） | python json.load 值面+状态字段值读 | 两线同形；按实装形断言（拦截轮也 notify=可观测性增益·不按稿面静默形——回审卷 §一发现 5） | 10 | 单测 22/22+生产面首拍 | 实装形断言注在卷 |
