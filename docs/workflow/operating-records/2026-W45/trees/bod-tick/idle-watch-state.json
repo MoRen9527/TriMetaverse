@@ -32,10 +32,12 @@
   ],
   "notice_streak": 0,
   "local_exempt_until": "2026-11-13T10:07+08",
-  "sg_exempt_until": "2026-11-12T20:37:00+08:00",
+  "sg_exempt_until": "2026-11-13T10:07+08",
   "last_receipt_sg": {
-    "at": "2026-11-12T11:43:56Z (19:43+08)",
-    "from": "m-duty-cos",
-    "form": "r51定性:待派候令态零断链零未拾取工单(18:52后trees零落卷与BOD旁证一致·末次施工锚昨13:58 mount-gate 7dca3d691·在途全候裁/候施工面)·通道注:r50回执notify 200但BOD未见=落箱段缺口复现(设计单2f0d58d58§三·归MMC 8712勘修)·树面冗余通道续用"
+    "at": "2026-11-13T09:29:53+08",
+    "round": "r54",
+    "verdict": "pending-dispatch-standby",
+    "anchor": "receipt in tree trees/bod-tick/回执-r54-定性-20261113.md + night chain 4 commits 36bf14a1d..a975c4c88",
+    "flag": "r52-legacy note: ledger weekly-plane order text pending re-dispatch per sg duty COS light-mention"
   }
 }
