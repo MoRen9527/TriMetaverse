@@ -313,3 +313,11 @@
   - 4de2ef9cd docs(coo): 序1验收PASS注记落卷直达(三件齐验真·回滚锚B0/止损线V1-V6/复原判据七条·护栏闸②开双闸全开)+charter序4依赖修正落卷(漏列CTO/FSD供形件·自领第二处依赖面盲区继序3过宽·复盘窗并档)+台账550笔(唯一候项=CTO/FSD供形件·COS直达先发免重复·21:40升级点作废) @m-sde @m-cos @m-cto @m-fsd
   - 519468509 docs(bod): SDE预案落卷双闸全开(唯一候件转CTO/FSD供形件·ETA分钟级) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @21:50 +08：自上次进度提交 a8d214c13 后新增 6 条 commit：
+  - d8c69ea3e docs(cos): 台账567笔(CEO二次转催传导FSD直达·ETA回句21:55零障碍·payload新基准len=2750/md5=4e1c7df5·FSD两发现如实记入=migrate参数面勘正防SystemExit2拦停+考卷JSON缺位补位rubric-firstshoot权重100·COO补位点顺延防误催) @m-fsd @m-cto @m-coo @bod
+  - 12f0be9b0 docs(bod): PATCH未开跑如实报(卡点=FSD槽位三件·催办链两跳在役) @bod
+  - 9acf3998c docs(bod): CEO催供形件·实勘已在卷(83c392a1f)转催开跑读数 @bod
+  - fd6b73702 docs(bod): tick 21:37拍归档——预演链料齐(供形件落树·五席施工中) @bod
+  - cfe3f7cfc Merge remote-tracking branch 'sg-server/dev' into dev
+  - e5695e030 docs(cos): 台账566笔(CTO供形件结构裁决面落卷83c392a1f催办链闭环·判据族双形两分禁互判+vB判据族暂停窗语义防误报毒+§五裁决修正=今晚零生产触被CEO直令授权面覆盖据实修正·候FSD槽位三件落树即SDE拾取PATCH·序5托转候FSD随形出) @m-cto @m-fsd @m-coo
+- registry：未知版本；今日 registry 提交无变化
