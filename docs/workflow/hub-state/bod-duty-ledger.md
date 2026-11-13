@@ -2041,3 +2041,7 @@ COS 21:48:52 读数——FSD 21:48 回句=零障碍·ETA≈21:55 落树。施工
 - 锚笔第 57 轮（14:02:22Z）+idle-watch-state 三字段更新（r57-fade001-vb-pause-relay）·临时文件 sg /tmp/bod-notice-57.txt 残留可清。
 - 同窗 COS 段报两条入档：FSD 供形件毕报读数（c7adc3725 在链·两真雷预演前拦截记功）+PATCH 正式开跑确认（CTO 22:00:26 跟审判词 APPROVE·P-Gate② 全解锁·vB 暂停窗已启起点=SDE curl 发出时刻·全链 charter→开跑 89 分钟）。
 - 本段落款 2026-11-13T14:02:41Z 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
+
+### §XXXI CEO 令转达·FSD 加分（22:06 令·22:06 达 CHO）
+- CEO 22:06 令「供形件拦下两真雷记一功---通知cho加分」→BOD 即转达 m-cho（SendMessage 直达常驻席·回执 msg c6fb5bf4）：FSD 供形件两真雷（migrate 参数必 SystemExit(2) 已修+单测钉死／rubric-firstshoot.json 考卷缺位已补）预演前拦截记验证加分·按 performance-scoring-workflow.md 流程·候 CHO 记毕回执入账。
+- 本段落款 2026-11-13T14:07:01Z 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
