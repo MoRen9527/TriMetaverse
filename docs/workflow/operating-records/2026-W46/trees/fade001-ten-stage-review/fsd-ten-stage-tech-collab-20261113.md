@@ -121,6 +121,17 @@
 - 阶段 5 verify 对表锚=**plan.migrate[] vs 实迁 diff**：清单内树未迁=漏（exit 非零）/清单外新增迁入=幽灵（exit 非零）——γ 二道闸（toWeek 对表）+清单对表双闸并行
 - 接口预留：verify 模块读 `$RUN_DIR/plan.json` 为对表基准——**今晚实现面只落 plan 侧·verify 侧接口预留签名**（阶段 5 施工对象·不抢段）
 
+### §二.8 实盘勘定修正注（17:48 只读实勘·编码前必修面·修正 §二.2 初版）
+
+实勘对象：W46/W45 trees/ 目录+OP index+unresolved-items 实形（全部只读）——**四发现修正判据**：
+
+1. **全集必须落文件系统实盘·index 只作旁证层**：W46 OP index 实值=activeTrees **0**/doneTreesThisWeek **0**/doneTreesFromPreviousWeek 65——vs 实盘 trees/ 20+ 在途目录（fade001-ten-stage-review 等本日在途树）——**index 与实盘脱节是现势常态**。plan_scope 若只读 index 清单=假全集·双向断言空转。修正：全集 S=`{from_week}/trees/` 全条目（目录+散文件两类——W46 trees/ 实盘 20+ 目录+5 散文件 .md 混装）；OP index 差异读数进 plan.json `index_drift` 字段（如实注记非分类基准）。
+2. **迁移动作域澄清（对表现役迁移器）**：`migrate_weekly_plane`（weekly_plane.py L231-311 白盒读毕）动作域=**OP index 元数据层**（doneTreesThisWeek→to 周 doneTreesFromPreviousWeek 清单并入+源周 retire status=closed）——**文件系统树本体零移动**（原地封存=「记录随周封存」现役语义承载）。plan_scope「migrate」判定=清单候选面：预演形只产清单候审零动手；生产形=清单驱动 index 元数据层搬家（域不变·防 plan_scope 设计越域去动文件目录）。
+3. **CARRY id 两形**：实盘 unresolved-items §1 现役区行=`CARRY-20260728-004` **日期形**——现役 shift_carry_over L103 `_CARRY_ID_RE=r"CARRY-\d+"` 纯数字形对日期形**漏匹配**（carry-over 计数 bump 漏行候选·现役迁移器缺陷候选如实登记候 CTO 裁·本席不越席修现役）——plan_scope 判据面兼容两形（`CARRY-\d{8}-\d+|CARRY-\d+`）。
+4. **tree-op.json 非普适**：bod-tick/fade001-ten-stage-review 实勘=树内零 tree-op.json（纯卷文件族）——分类判据 degrade 链：tree-op.json status（若有）→树内标记面（authorization.json expiry/open 工单残留/卷名 in-flight 词面）→**默认 keep（保守方向·漏迁毒于误封存——verify 对表+carry_over 面双兜底）**；散文件（.md 单件）默认 keep 原地封存。
+
+**修正后 §二.2 判据表以本节为准**（初版「扫 trees/ 全目录做迁移判定」词面作废——动作域与全集定义以本节实锚为准）。
+
 ### §二.7 调用形与 payload 接入点（候部署窗·今晚零生产触）
 
 ```bash
