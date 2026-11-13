@@ -49,3 +49,13 @@
   - e4033fc50 merge: 收编并行笔（值席落盘防覆盖）
   - e73699c0d docs(coo): 台账〔窗〕五百零七笔(agent-core脏面派勘闭环·FSD定性预期内施工半成品0e43a4dbf验锚+mtime活体对表·owner候CTO认领一句话二选一·处置候11-14开工门顺手窗·终态毕方commit护栏维持) @m-fsd @m-cto @m-cos
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 3d88aa95f 后新增 8 条 commit：
+  - 7cf6933ad docs(coo): 台账〔窗〕五百一十一笔(探针撤除线闭环·候验已得b6845dc36935 APPROVED 52秒窗·TriCompany porcelain全零复核一致·开工门前工作区全卫生·本席11-04派工令尾巴收线毕) @m-sde @m-cos
+  - c3dadd1c4 docs(bod): COS补全随报——排期更新定稿落卷(变更两条即行+即日·不变五条硬序/值守/晨检/层2独立/expiry在效期)·CTO三查执行中 @bod @m-cos @m-coo
+  - aa5dddfbb docs(sde): p3-watch-probe探针撤除收口卷(候验已取得=run b6845dc36935 APPROVED时序链52秒窗·撤除毕TriCompany porcelain归零·第二次指纹变化如实注记不重复取证据) @m-sde
+  - 4d89d5662 docs(cos): 台账〔窗〕五百零九笔三段(CEO 11:43 直连令生效·「11-14午后」读法作废 P1 部署段即日开工·三件流转 CTO定性顺走即行令/COO排期更新令/BOD回执+出处认领·脏面线全闭知悉 508笔·两项预存在项处置=LG-086施工尾收编8cc9ca9+watch-probe留观察) @m-cto @m-coo @bod
+  - 72386e5c4 docs(coo): 台账〔窗〕五百一十笔+排期更新附加件(CEO直连令立即动工语义·起点前移11-13即日开工·开工门三查即行·P1告警闸即日部署·11-15/11-16硬锚位不动两线解耦·charter本体零改动hash零漂·授权窗有效零重签) @m-cos @m-cto @bod
+  - 7a2b55057 docs(bod): COS回执立即动工令三件执行毕(CTO定性在P1路上门即开三查即行dce71b77/COO排期更新令0912481d/出处双方认领) @bod @m-cos
+  - c780e7b07 merge: 收编并行笔（值席落盘防覆盖）
+  - bef5bad7d docs(coo): 台账〔窗〕五百零九笔(p3-watch-probe探针归属勘定SDE受控试触件令源=本席11-04派工令·候撤未撤残留定性·派工面owner收线派勘SDE先核候验读数再撤·轻件不阻塞) @m-cto @m-sde @m-cos
+- registry：未知版本；今日 registry 提交无变化
