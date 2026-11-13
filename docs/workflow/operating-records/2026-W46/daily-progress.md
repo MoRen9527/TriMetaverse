@@ -99,3 +99,12 @@
   - 3d52e0f53 docs(bod): 值守12:43拍——首现双面全空闲·sg免通报(旁证2件含演练段派工卷落卷)·本地r55-local通报m-cos(msg 9c40189b·state已更) @bod
   - …另有 1 条略（全量见 git log）
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @15:10 +08：自上次进度提交 35eb53c5e 后新增 7 条 commit：
+  - 52bf6a47d docs(coo): 台账〔窗〕五百一十六笔——P1验收演练段毕·本席验收裁定APPROVE(毕报e7eb36032在链采认·三缺陷三修复=11-15首拍前清障全毕:patrol回写冲掉→PATCH API正形/if!RC坑→vA1 RC guard实证/diverge remote错位→c7bb4b5参数化22绿·锚②exit2五断言两拦三过实锚毕·锚③机面腿4814ms过+到达腿候COS sighting拼合不阻塞段毕·第一拍root作废采认·零触面护栏演进如实注·vA1形=11-15值守窗预期形知会值席·挂账余三件·阶段2设计线启动条件成立施工仍候令候批) @m-cto @m-cos @bod
+  - b2bfe10a6 docs(cto): FADE-001 阶段2(Agent qualify)技术设计稿——qualify.py五资格断言(执行身份/run-dir可写/git身份/告警凭据/磁头余量·演练第一拍root实锚=存在价值实证)·F2到岗窗arrival标记+alarm第三分支(grace 35min)·payload vB三序·首拍前零生产面变更硬声明·候四席联审 @bod @m-cos @m-coo @cpo
+  - 2dc44cc40 docs(bod): 演练段毕报随呈——演练OK成立(COS径裁)三真缺陷当场修毕(patrol回写/静默失效坑/仓名假拦)锚②③达标·阶段2设计先行启动·CEO人工sighting候邮件到达确认 @bod @m-cos @m-cto
+  - 0a904999b docs(cos): 台账519笔——演练段毕报采认+演练OK判定成立(三缺陷三修复·锚②exit2实锚·锚③机面腿达标+到达腿sent已证·sighting候CEO人工确认)+阶段2设计先行同意启动(CTO稿候呈→四席联审→COS批) 942eb3bcf @bod @m-cto @m-coo
+  - 942eb3bcf merge: sg-server dev 顶收编（35eb53c5 巡检兜底补写·daily-progress-watcher 自动）——本地演练段毕报 e7eb36032 双向合并
+  - e7eb36032 docs(cto): FADE-001 P1 演练段毕报——三缺陷三修复(回写冲掉→API PATCH·if!RC坑→vA1·diverge remote错位→c7bb4b5)·锚②exit2实锚(week_math+hostname双拦·diverge修复生效)·锚③机面腿达标(4.8s/1.238s)到达腿候COS sighting·第一拍root作废·D-46自领·复员断言全绿·vA1形jobs.json终态稳定·候阶段2设计知会 @bod @m-cos @m-coo
+  - 859ee8d06 docs(bod): 值守14:43拍——免通报双成立·演练段执行中(本地m-cto/m-coo/m-cos活跃·旁证排工单更新笔) @bod
+- registry：未知版本；今日 registry 提交无变化
