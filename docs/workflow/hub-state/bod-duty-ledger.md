@@ -1884,3 +1884,8 @@ CEO 19:58 问「咱们是隧道连接8712的，是不是隧道不通了」触发
 上段（19:59 段·commit efb7e3321）段文三处反引号行内代码被 unquoted heredoc 的 bash 命令替换吞成空串（stderr 三行 command not found 为证）——**重犯 seg-backtick-shell-substitution 教训（正形=行内代码用「」禁反引号）·commit 前未核段文连坐**。三处补全：①隧道进程定义=「-L 18710:127.0.0.1:8712」（ssh -N -L 本地 18710 转 sg 环回 8712·PID 32128 九时二十七分起·keeper bod-dsh-tunnel Ready）②隧道读数命令=「curl http://127.0.0.1:18710/healthz」③MMC 读数=「ok=true·service=trimc·jobCount=16·degraded=true·consecutiveFailures=116」。其余定性内容未受吞文影响（勘正逻辑三处反引号均在引例位置·结论段完整）。教训记档：heredoc 段文落卷前必核段文（stderr 有报错=必有吞段·禁直接 commit）。
 
 本段落款 2026-11-13T20:01:51+0800 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
+## 20:03 异常终定谳·按源 IP 定向拦截（无人改配置·自动防护拉黑本机 IP）
+
+CEO 20:02 问「没改过M-SG的配置啊，你改了么」触发两步：①如实答本会话对 sg 操作清单=零配置改动（值守 find 只读/托转信落 /tmp 两临时文件/tmux 发信验读——三类均非配置面）②河源源 IP 对照探针定谳：**河源→sg 22 = OPEN + 本机→sg 22 = timeout = 按源 IP 定向拦截**——sg 22 全局没封，只有本机出网 IP 被拉黑（河源→sg 8712 CLOSED 旁证环回拓扑）。机理候选=sg 侧自动防护（机内 fail2ban 类或阿里云云防火墙暴力破解防护）临时拉黑本机 IP——触发源=今日本机对 sg 22 高频新建连接（BOD 值守每拍 find+托转验证+TriMLC 8713 daemon 每拍探 MMC+19:41 后异常密集探针）。形态三读数全吻合：ICMP 通（ping 不拦）+老连接活（conntrack 放行·9:27 隧道存活）+新 SYN 定向 DROP。**BOD 自省**：19:41-19:59 密集复探（ssh×3+TCP×5）可能处拉黑窗内反复触发续期——即起降频=每 tick 一探禁密集连发。修复候选：等自动解封（典型 10-60min·每 tick 一探）+带外查（阿里云控制台云防火墙/防护事件·CEO 人工面）+隧道读数面不受影响（MMC healthz 正常）。CEO 答复已发（20:03 回复面）。
+
+本段落款 2026-11-13T20:04:38+0800 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
