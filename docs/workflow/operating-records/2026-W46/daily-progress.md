@@ -166,3 +166,15 @@
   - 21c852d57 docs(bod): CEO大会令+追加令流转毕——七席进项目产品角度重审十阶段(21点前争取实现·周日首拍全链实走·静置窗随令变更)+COS代裁全域激活(D-39收窄两项并入) @bod
   - 1e5c34745 docs(cos): 台账〔LG-098〕五百二十八笔——COO部署段验收APPROVE(毕报v2读毕)+值席vB判据族收讫闭环(判据锚替换8237d12af·vA1锚退役) @m-cos
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @17:50 +08：自上次进度提交 8181a3fee 后新增 10 条 commit：
+  - 17c81720d docs(fsd): 技术协作稿§二.8实盘勘定修正注——全集落文件系统实盘(index脱节实锚 activeTrees=0 vs 实盘20+)+迁移动作域=index元数据层澄清+CARRY日期形正则漏匹配现役缺陷候选登记+tree-op.json非普适degrade链 @m-cos @m-cto
+  - c5d6e636d docs(cto): 十阶段架构裁决三项入稿留痕——①plan_scope.py形态APPROVE(名采纳FSD·三段业务面切片零重叠)②score/close RC2非阻塞APPROVE附两精化(引擎缺席J7升级面分立+close漏报护栏upgrade_list_state显式)③双W妆容债清理APPROVE窗位定谳=首拍验收毕后授权窗(生产面触点·审计链保留·删除前留痕) @m-fsd @m-cos
+  - 7c21224b9 docs(fsd): FADE-001技术协作稿——前两阶段白盒回审(零阻塞·观察项三项如实注)+阶段3 plan_scope.py技术方案主笔(三分类判据+plan.json schema+双向枚举断言+替身禁令)+4-10实现路线框架+段×退出码→告警级→收件人映射表(CPO对接点③) @m-cos @m-cto
+  - c1eb5c2b3 docs(coo): 台账〔窗〕五百三十三笔——CEO大会组织令接令·两树分立拆树落卷(今晚树tenstage-impl零生产触无授权件·四段门17:45起段间串行+段内双并行·21:00终门如实declaring三列全量读数·周日部署树deploy-20261115名预谳候G4拆+授权窗承载)·COS裁决A/B采认·基线勘正三件(静置窗收窄=实现面零触·生产面静置至周日授权窗/首拍=十阶段完整形·vB降为已毕段/值守基准vB有效至payload换形)·七席分工落单G1前位输入已落 @m-cos @m-cpo @m-cto @bod
+  - 76c9fa287 docs(cpo): FADE-001首拍评分权重裁(八族A-H权重表100分制·口径四条=首拍生产拍零注入+免评分母+两层锚显标+CG红灯定性·三档阈值建议80/60·主稿裁决A勘正注=首拍前置授权窗留史不改形) @m-cos @m-ste @m-coo
+  - 9de8b461b merge: sg 并行笔并入（十阶段主笔稿推卷对齐·二度）
+  - 13a6e6452 docs(cto): FADE-001十阶段技术方案主笔稿v1——前两段回审通过(带残余清单:第1格3/5达成+bash一杆未拆归第4格+F5分家顺手窗)+第3格plan skill先行稿(独立CLI plan.py+plan.json契约+P1-P6锚族·CPO语义锚直引照档施工+STE五条锚草案全纳)+4-10框架(七格改造件/验收锚/依赖序)+段×退出码→告警级→收件人映射表(CPO对接点3)+裁决A两层窗对表(实现面今晚零生产触·部署窗=首拍前置授权窗) @m-cos @m-coo @cpo @m-fsd @m-ste
+  - c1b620656 docs(bod): COS代裁第一笔事后呈报——实现≠部署两层窗定谳(今晚零生产触·周日首拍前置授权窗)+赶工测试门·CPO/STE两卷在链 @bod
+  - cfe70c958 docs(cos): 台账〔LG-098〕五百三十一/三十二笔——CPO主稿落卷+COS裁决A/B(实现≠部署两层窗·首拍前置授权窗定谳·预演形最小判据验收锚)+STE回审卷零阻塞(锚草案五条+首拍判据八族) @m-cos @m-cpo @m-ste @bod
+  - d14f3f527 docs(ste): FADE-001前两阶段测试角度回审卷(零阻塞·五项发现·验收锚族六原则+阶段3锚草案五条+首拍判据框架八族) @ste
+- registry：未知版本；今日 registry 提交无变化
