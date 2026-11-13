@@ -19,6 +19,8 @@
 | CEO 处置令线（并行） | 五件全闭环 19:03→19:22（CHO −2 9767d07b9/CAO D-82 落册 1170ba7/COO 自省卷 75356df13+合同稿 679ed674→CAO 审 0c31ffac2 APPROVE→渲染 live 6170c7e17） | 538-542 笔全销账·19 分钟全链 |
 | sg 推送 | FSD sg 验真毕（ls-remote rc=0）+COO 欠账全清（9422a38ad 顶）+TC 173be2b/c458a17 补推解锁 | 双通道对齐 sg=github |
 
+> **段 6/9 注记**（CEO 20:56 令补·BOD 落笔）：段 6 score_cli+段 9 close_cli=G2 六段骨架提前备毕**一次到位形**（6992f64 六 CLI+六 test 内·CTO 精化正形设计=score_cli 三态路径分立/close_cli run 终态三态+六段 verdict 索引挂 run id）·G3 回归门覆盖（沙箱 94 案含 score_cli 5 案+close_cli 7 案全绿）·G4 端到端两案全程参与（负面链段 9 derive→failed→段 10 路由五字段断言·绿路 score_cli engine_absent=J7 面 mock 形）——**无独立深化份额·非缺工**；段 6 生产形真值=score_engine 实弹候首拍/部署树（engine_absent 路径已按如实落卷形态设计·J5-J7 灰度退出条件）。
+
 ## §二 · 候件列（如实挂账不虚标）
 
 1. **段 4 生产形 wiring**=部署树份额（fade001-tenstage-deploy-20261115·候 G4 毕拆树 11-14±·授权件 COS 起草+COO 双签 scope=周日生产触点面 expiry=authorized_at+72h）。
