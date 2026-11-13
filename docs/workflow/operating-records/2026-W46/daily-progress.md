@@ -239,3 +239,21 @@
   - 0c31ffac2 docs(cao): 件④归口审签认卷——COO派工正形条款679ed674对表D-82四款APPROVE零勘改·款④唯二限定域=时点门对表读法注(语义等价覆盖非冲突)·互锚实文在稿+段门补充面采认·批后渲染放行 @m-coo @m-cos @bod
   - 00f357642 docs(cos): 台账〔窗〕541 笔——G2段门验收过对平(G3即开零间隙首案)+件③自省卷收账(75356df13)+件④源侧合同落仓(679ed674候CAO审) @bod @m-coo @m-cao @m-fsd
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @20:40 +08：自上次进度提交 87b6b4dae 后新增 42 条 commit：
+  - 6d92720da merge: 收编并行笔（值席落盘防覆盖）
+  - 48a419290 docs(coo): 台账〔窗〕545笔——终门会签签讫·今晚树本席验收线收口(declaring卷dbcfa4058全文实勘三列逐项一致·无修正项·号面双表面差如实并存·四段门全过+STE PASS·零返工零停段)·21:00守门呈报候·下节点=明日周日部署树拆树+授权双签 @m-cos @bod
+  - 96883cb26 docs(bod): 终门declaring提前毕转报CEO(四段门全通·17:26令达成·首拍风险降级) @bod
+  - 3468298b2 docs(cos): 台账551笔——COO G4裁定过终门最后门收四段全通·declaring卷收卷落树·通道欠账全清对齐9422a38ad·542歧义注·呈CEO面托转 @bod @m-coo
+  - dbcfa4058 docs(cos): FADE-001十阶段实现树终门declaring收卷——完成列八行全量读数(G1-G4四段全通+T1线+处置令线+137案全绿+389门零漂移)·候件列五项如实挂账(部署树wiring/段7改卷生效/sg补推/RDT份额/实弹增补窗)·缺口列零阻塞项·提前毕注(材料20:34齐裁定20:33收·21:00时点守门呈报) @bod @m-coo @m-cto @m-ste @m-fsd @m-cpo @m-pm
+  - 1ed34e8bf docs(cos): 值守窗附加定性项落卷——TriMMC degraded=116(BOD r56补发挂账·值守窗定性)+顺手只读探针读数(11-13 20:36:55+08现查:cf=116与通报值持平未续涨·jobCount=16零丢job)·定性动作预置(11-15复读+失败job识别+归因入毕报) @bod
+  - 28533b047 docs(bod): sg恢复确认+值席通报义务补履行(第56轮三段验证全过)·出口面事件定谳收敛 @bod
+  - ba30c1f05 docs(cos): 台账550笔——CTO勘修读数回sg已恢复(ls-remote rc=0一分钟窗翻转实锚)github仍断·周日首拍风险降级(护栏三道dive预检/零外部依赖/滞后补采)·548线转候收敛态 @bod @m-cto @m-coo
+  - 9422a38ad docs(bod): G4毕报落树终门材料全齐转报CEO(四段全通收官·只差COO末门) @bod
+  - 040f3941d docs(coo): 台账〔窗〕544笔——G4段门验收过→终门前最后门收(7b9cd50f2+c458a17双锚独立复核·绿路八段全链+run_id贯穿·负面拦截链对照·137全绿+389门零漂移·债四项含自曝如实)·终门declaring三列材料全齐·21:00终门收卷候·本席验收线G1-G4全过待终门会签 @m-cos @m-fsd @m-ste
+  - f096d2277 docs(bod): 终定谳勘正——sg零拉黑(CEO四步查证)坐实本机国际出口面·拉黑定性作废·单侧探针定谳教训入档 @bod
+  - 5d19ee037 docs(cos): 台账549笔——FSD G4集成毕报验真(c458a17 219行2案+7b9cd50f2)·终门三列材料全齐(STE已回澄清FSD未及知悉)·候COO终门前最后门裁定 @bod @m-fsd @m-coo
+  - 2e1e2ff86 docs(bod): COO海外路由面定性并报CEO(拉黑vs出口面两候选并存·github000稀释拉黑说·河源直连绕行降一档) @bod
+  - 7b9cd50f2 docs(fsd): FADE-001 G4集成段毕报落树——十段管线端到端集成案·交付锚TriCompany c458a17(2案+219行)·仓内137案全绿+389门post对表pre基线@679ed67同名零漂移零新引入·判据落定三处(done∈KEEP_STATUS/derive absent=stale优先/engine_absent=J7rc2正形两分支联合覆盖)·技术债四项(含sg通道断LSRC124实锚挂账+head管道假读数自曝如实落账)·候批与STE读数并行必达如实挂账 @m-cto @m-cos @m-ste
+  - b8687bcc6 docs(cos): 台账548笔——COO海外路由事件三探针定性+周日首拍部署链风险前置(-J sg跳板连带断)·分诊路由CTO域内自裁·今晚终门零sg依赖不受扰 @bod @m-coo @m-cto
+  - …另有 27 条略（全量见 git log）
+- registry：未知版本；今日 registry 提交无变化
