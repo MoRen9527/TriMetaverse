@@ -1,0 +1,50 @@
+{
+  "treeId": "fade001-tenstage-deploy-20261115",
+  "week": "2026-W46",
+  "task": "FADE-001 十阶段部署预演——vB→十阶段形 PATCH 预演+W46→W47 迁移十阶段全链手动实走+预演读数呈 CEO+回退复原 W46 态（CEO 21:02 直连令七点·两拍并存预演不替代真拍）",
+  "authorizedAt": "2026-11-13T21:04:46+0800",
+  "expiresAt": "2026-11-16T21:04:46+0800",
+  "expiryRule": "authorized_at+72h 机械运算（原值见本件 authorizedAt/expiresAt 值面）",
+  "issuer": {
+    "seat": "COS（m-cos）",
+    "role": "起草+首签",
+    "signCommit": "本件首签 commit（见 git log 本文件首笔）"
+  },
+  "coSigner": {
+    "seat": "COO（m-coo）",
+    "role": "会签",
+    "status": "候会签——COO 会签落卷 commit 为授权生效锚（生效前生产触点操作零动·mount-gate 纪律）",
+    "signedAt": null,
+    "cosignNote": "候 COO 验真四项+charter 对表后自补本段（照 phase2 先例形：令链原文在卷/expiry authorized_at+72h 机械验算/白名单触点+排除项齐/jobName 真值对表）"
+  },
+  "orderChain": [
+    "CEO 2026-11-13 21:02 直连令七点（BOD 21:03 规范流转·COS 台账 559 笔 9bfdb9556）：①现在就拆树②部署好 payload vB→十阶段形 PATCH（授权件双签链即走）③走一遍 W46→W47 迁移十阶段全链实走（迁移预演·不等周日 23:50 cron·现在手动实走）④OK 之后 CEO 确认⑤回退回 W46（回退预案先备）⑥相当于预演一次（不替代周日 23:50 真拍·硬时钟不动·裁决 A 维持）⑦W47 迁移产物各席评一次分数（STE rubric 八族 A-H+100 分制+三档 80/60·预演读数即评分输入）",
+    "CEO 2026-11-13 21:04:38 直连明示确认「对，周日真拍照走」（BOD 补锚·令⑥理解点确认定谳）：今晚预演（W46→W47 实走→CEO 确认→回退 W46）+周日 23:50 真拍硬时钟照走（裁决 A 维持）·两拍并存·预演不替代真拍——回退后 W46 态保持至周日真拍"
+  ],
+  "executor": {
+    "seat": "候 COO charter 派工落卷后补本段（预演执行=SDE 份额含回退预案·技术裁决=CTO·编码支撑=FSD·评分=STE rubric 消费）",
+    "progressAnchors": "候施工段随动补"
+  },
+  "scope": {
+    "productionTouchPoints": [
+      "TriRMC 河源（8710）weekly-plane-shift job：PATCH /internal/v1/cron/jobs/{id} payload vB→十阶段形预演触（禁 jobs.json 文件直改——patrol-clobber 教训①固化·照 phase2 先例）",
+      "W46→W47 周平面迁移十阶段全链手动实走（迁移预演·手动触发零 cron 改形）",
+      "W47 迁移预演产物落盘（operating-records/2026-W47/ 预演产物·评分输入面）",
+      "回退复原链：迁移产物回滚+payload 回 vB 形（PATCH）+W46 态恢复断言+预演毕报落卷（回退预案=COO charter 载明·SDE 份额）"
+    ],
+    "exclusions": [
+      "零其他 job 触面",
+      "11-15 23:50 真拍窗不含本件——真拍 PATCH 承载=phase2 件（fade001-phase2-build-20261113/authorization.json·expiry 2026-11-16T16:53:11+0800 有效）·本件预演毕回退后 W46 态保持至周日真拍（两拍并存·CEO 21:04:38 确认定谳）",
+      "周平面真态零残留（预演产物全数回退·W46 现役周平面态不受扰·W47 预演产物留档不进现役周平面）",
+      "零非授权生产面变更（静置冻结语义照 phase2）"
+    ]
+  },
+  "jobNameTruth": "weekly-plane-shift（连字符形·河源 job store 活体现勘真值·phase2 件 927c0a7 勘偏已固化）",
+  "references": [
+    "CEO 令锚=COS 台账 559 笔 9bfdb9556（七点全文）+BOD 补锚（21:04:38 确认）",
+    "先例形=fade001-phase2-build-20261113/authorization.json（mount-gate 双签链正形）",
+    "终门 declaring=trees/fade001-tenstage-impl-20261113/declaring-20261113.md @ a4e1ed1cc（实现面全量读数·预演的施工基座）",
+    "评分框架=STE rubric 八族 A-H+100 分制+三档 80/60（score_rubric.py 191 行·TriCompany 173be2b）",
+    "值守窗排班=fade001-tenstage-impl-20261113/dispatch-plan-coo-20261113.md charter §五（11-15 值席排班不变·23:45 dive 预检含通道探）"
+  ]
+}
