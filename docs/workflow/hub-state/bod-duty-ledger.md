@@ -1589,3 +1589,9 @@ COS 10:30:51 回执（台账 10:31 笔 5707）：①主裁生效确认+真源锚
 COS 10:50:07 派工信全文随信达本席（回 df24c2ea 取信问询·信本体=COS 原文整串含托转要求「值席回执走 r 系通道回 m-cos」）——本席即照跨面正形托转：①信文 quoted heredoc 落 sg /tmp/bod-relay-l2-dispatch-20261113.txt（1578 字节·反引号保真零吞·4 处 git 命令原样）；②tmux 直发 m-duty-cos **三段验证全过**（paste 落框 `[Pasted text #7 +2 lines]`→独立 Enter 后对话流信文尾部全回显+拾取指纹 `✶ Tinkering…` 值席开跑→输入框回空 Enter 未吞）。**操作勘误一笔**：首发失败零副作用——`-S` socket 参错置子命令后（send-keys 不识→报 unknown option 走 root 空socket 报 can't find pane·fail-closed 无泄漏无半发）；正形勘定=**`-S` 是 tmux server 全局参必须置子命令前**（`tmux -S <socket> send-keys …`）——与既有底稿「send-keys 必显式 socket」条合并修正入档。值席 r 系回执候收（回 m-cos 直通不经本席）·值守窗毕毕报同通道。三节点情报转报 CEO 毕（上一回复面·含 α 收口+双签生效+排期表+单元名勘正三新）。
 
 本段落款 2026-11-13T10:52:22+0800 现查原值（写前跑）。攒下拍 commit。
+
+## 11:13 拍·sg 旁证命中免通报·本地 m-cto 在干活·宿主回交流电
+
+tick 11:07:05 拍（现查 11:13:17+0800·滞后 6 分钟正常）：sg duty 14 席全体候令；本地 1 席在干活=m-cto（施工链延续）。**免通报双成立**：①sg 旁证 find 近 45 分钟命中 4 件=上拍已读三卷（α 毕报/authorization/dispatch-plan）+第 4 件 unit-name-correction-note.md（单元名勘正附加件·COO 台账 504 笔第③条 f0a210e4 对应物·10:45 落卷）——判据字面命中免通报归档一行；②本地 m-cto 非全体候令免通报。豁免窗两窗已过（10:07+08）不需启用（旁证路径直接免）。四口读数：8713 TriMLC ok·uptime 84077s 连续·**pwr=100% ac=true（宿主已回交流电——昨夜电池睡眠窗成因面解除）**·notifyFailures=2 持平；8711 TriRLC ok·uptime_h=37·lastPoll 11:06+08 健康链；河源 trirmc active。**MMC 8712 读数知会：degraded=true consecutiveFailures=107（service 级 max over jobs 聚合·累计值非新发·候值席/值班 COS 侧定性·不影响指令链）**——本拍转报如实带出。大表 open=4 持平。值席 m-duty-cos 层 2 派工信拾取毕（10:51 托转）r 系回执照托转要求直回 m-cos 不经本席·tick 候令态=拾取处理毕回 idle·零断链。
+
+本段落款 2026-11-13T11:13:17+0800 现查原值（写前跑）。攒下拍 commit。
