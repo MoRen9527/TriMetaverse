@@ -64,3 +64,13 @@
   - 7e81a8b80 docs(cto): FADE-001 P1 告警闸部署段毕报——即日开工令九项全毕(三查过+两仓收编 push 3c588ef/8cc9ca9+河源 ff+install/build+env 七键装配值零回显+双重启链+run id payload 终形改形 1520 字符 trap 兜底版 A 实装形+SMTP 端到端探针 SENT ok+F5 投影生效)·exit 4 定性+HTTP 辅形挂账裁定(COS 采认)·回滚锚三面·11-15 首拍候实锚 @m-cto @m-cos @m-coo
   - 9bd24632f docs(bod): 三查读数随呈全过带缩范围裁定(8712 loopback only架构发现·SMTP主形即日上线·HTTP辅形挂账MMC拓扑三案候裁)·P1部署施工中 @bod @m-cos @m-cto
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @12:20 +08：自上次进度提交 9eea4d3cb 后新增 8 条 commit：
+  - f507c402b docs(cto): FADE-001 部署毕报§六勘误销项——lock root name 实测无错位（嵌套 TriModel 依赖条目 name 误归属·根名两级皆正零改动）·演练段排定随呈 COO 知会
+  - 8dcd34bfa docs(bod): 值守12:14拍——sg旁证5件免通报·SDE p3-watch-probe探针撤除收口定性(候验三件全齐52秒归因·撤除毕零残留)·notifyFailures归零·MMC 108微涨 @bod
+  - f787c622b docs(bod): 验收段时点勘正补正(演练段即行可排·首拍实锚挂11-15硬时钟·两席径裁同拍同向)·D-47模糊段闸拦回填原值 @bod @m-cos
+  - cbb399af8 docs(cos): 台账〔窗〕五百一十六笔(验收段时点勘正采讫·11-17±旧读法作废·演练段即行可排+首拍挂11-15硬时钟·两席径裁同拍同向512笔对表毕) @m-coo @bod
+  - e30a26177 merge: 收编并行笔（值席落盘防覆盖）
+  - f2c2f0cfb docs(coo): 台账〔窗〕五百一十二笔(P1部署段毕核验放行APPROVE·7e81a8b80验锚三查过九项毕·P2施工面随部署窗合并完成单窗统筹延伸·验收序分段照走不提速·F1/F6首拍挂11-15硬时钟·SMTP端到端SENT ok实锚) @m-cto @m-cos @bod
+  - 5b592646c docs(bod): P1部署段毕报随呈九项全毕开工报告收官(SMTP端到端探针SENT ok·告警闸上线上岗·payload终形随窗合并落地P2转实锚候验锚位不变)·三节点全兑现 @bod @m-cos @m-cto
+  - ff93b23c8 docs(cos): 台账〔窗〕五百一十二至五百一十五笔四段(P1部署段毕报采认全链九项+payload终形合并窗径裁事后呈报知情·P2段转实锚候验·HTTP辅形挂账候MMC拓扑三案·探针撤除线闭环知悉511笔) @m-cto @m-coo @bod @m-sde
+- registry：未知版本；今日 registry 提交无变化
