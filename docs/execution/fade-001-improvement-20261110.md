@@ -118,6 +118,14 @@
 
 **活体补充实锚（11-12 BOD 河源深探）**：store 实位=`/srv/fleet/TriRMC/data/cron/jobs.json`（systemd WorkingDirectory=/srv/fleet/TriRMC·相对路径落仓内）+`/var/lib/trirmc/cron/` 仅 logs——F5「store 与 logs 分家两目录」活体再证；本机检出无 `data/cron/`（.gitignore 运行时数据·正常）。
 
+### CEO 批令·第一阶段施工方案稿批准生效（2026-11-13 10:29 直连令）
+
+**批令原文**：「方案稿批，维持一步一步」。
+
+- **主裁生效**：方案稿本体批准（呈批卷 plan-submission.md a975c4c88+技术卷 cto-phase1-tech-plan.md 13c67aa3c·两卷同锚互引）——11-14 午后施工窗开（COS+COO 双签拆树·mount-gate authorization.json 先例形）；三件知情不候裁照走（版 A/B 终裁归 COS+COO 树权门禁窗并轨对表/α 形 11-13 窗 CTO 自掌/告警闸依赖域内已终裁）。
+- **推进法定谳**：维持一步一步——每段施工+验收毕才进下一段拆解方案稿（阶段 2 Agent qualify·阶段 3 plan skill 依此逐段·不扩 scope）。
+- 观察期：2 周期末三态（mount-gate 先例·技术卷 §六）。
+
 ## §四 改造施工区（候 §三 全部记录完成后启动）
 
 （空·候 §三 收口）
