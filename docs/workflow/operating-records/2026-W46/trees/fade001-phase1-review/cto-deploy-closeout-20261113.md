@@ -45,6 +45,7 @@
 - **11-15 23:50 首拍**=版 A 实装形端到端首次实锚（run id 铸形/preflight 四断言/manifest 落卷/pipefail tee 链全首验）——值守窗值席 23:45 前置 diverging 预检在轨·晨检三读数首数据点
 - 告警闸自然触发首轮=SMTP 实发二次实锚（探针已实锚通道·自然轮验证判定面）
 - 挂账：HTTP 辅形跨机通道（COS 台账）·TRIMC/TRIRMC 键名残留债（DCE 段）·lock root name=trimodel 旧态（11-14 顺手窗实测——本机侧·未入本段）
+  - 〔勘误销项 2026-11-13 12:15+08 实测〕直读在链 lock（d98529b 换源后现役版）：root name 两级（顶层+`packages.""`）皆=`@tricompany/agent-core` 与 manifest 一致·**无错位可勘**——「trimodel」=嵌套依赖条目 `../../../TriModel` 自身 package name（file: 依赖正常形态）·先前「root name=trimodel」读数系误归属（嵌套条目 name 误记为根名）·**项销零改动**
 - 观察：批后 2 周+期末三态（本席=技术面裁决 owner）
 
 ## 使用依据
