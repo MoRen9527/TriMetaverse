@@ -321,3 +321,9 @@
   - cfe3f7cfc Merge remote-tracking branch 'sg-server/dev' into dev
   - e5695e030 docs(cos): 台账566笔(CTO供形件结构裁决面落卷83c392a1f催办链闭环·判据族双形两分禁互判+vB判据族暂停窗语义防误报毒+§五裁决修正=今晚零生产触被CEO直令授权面覆盖据实修正·候FSD槽位三件落树即SDE拾取PATCH·序5托转候FSD随形出) @m-cto @m-fsd @m-coo
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @22:00 +08：自上次进度提交 f6758657e 后新增 4 条 commit：
+  - bbca17a70 docs(cos): 台账568笔(FSD供形件毕报=全链唯一候件销项·c7adc3725在链§四三件打勾·序4三依赖全齐PATCH分钟级·序5一段托转已发vB暂停窗预告+换形基准预告防误报毒·二段候PATCH毕随形出·FSD两发现落卷锚TC0f1fa1f) @m-fsd @m-cto @m-coo @bod
+  - c7adc3725 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - e938db317 docs(fsd): FADE-001部署树供形件毕——槽位三件落定(C-Gate②解锁)
+  - 805d069f7 docs(bod): FSD回句·PATCH分钟级倒计时(ETA 21:55落树·两真雷预演前拦截) @bod
+- registry：未知版本；今日 registry 提交无变化
