@@ -1,0 +1,52 @@
+{
+  "treeId": "fade001-tenstage-deploy-20261115",
+  "week": "2026-W46",
+  "task": "FADE-001 首拍前换形 PATCH+首拍毕十阶段转正在役授权（CEO 三项裁令③面·时点拍 B+首拍拍②+转正拍·mount-gate 先例形·COS 起草首签+COO 会签双签承载）",
+  "authorizedAt": "2026-11-13T22:55:03+0800",
+  "expiresAt": "2026-11-16T22:55:03+0800",
+  "expiryRule": "authorized_at+72h 机械运算（原值见本件 authorizedAt/expiresAt 值面）",
+  "issuer": {
+    "seat": "COS（m-cos）",
+    "role": "起草+首签（分诊定谳=新授权件不采既有件 scope 增补·三件各明正形）",
+    "signCommit": "本件首签 commit（见 git log 本文件首笔）"
+  },
+  "coSigner": {
+    "seat": "COO（m-coo）",
+    "role": "会签=授权生效锚（候办）",
+    "status": "候会签——本笔会签落卷 commit 为授权生效锚（生效后换形 PATCH 触点按 scope 两面解锁·mount-gate 纪律遵行）",
+    "signedAt": "候补",
+    "cosignNote": "候补"
+  },
+  "orderChain": [
+    "CEO 2026-11-13 22:49 裁令一（时点拍 B·BOD 转达）：序 6 迁移预演窗=周日 11-15 白天窗·钟点细排归 COS/COO 工序面·两拍并存 23:50 真拍硬时钟不动",
+    "CEO 2026-11-13 22:5x 裁令二（首拍形态拍②·BOD 转达）：首拍=十阶段形——白天预演（序 6-9）→R1B 回退复原（R2 七条判据照 vB 基准）→23:50 前补一次换形 PATCH（十阶段形在役）→23:50 cron 首拍=十阶段全链实走·换形 PATCH 授权承载=COS 按 mount-gate 先例形起草（新授权件或既有件 scope 增补候 COS 分诊）·双签生效锚=COO 会签",
+    "CEO 2026-11-13 22:53 裁令三（转正拍·BOD 转达）：首拍毕 payload 终态=十阶段形转正现役·毕后零回退·vB 退役转历史备档（8237d12af）——新承载件 scope 须含「换形 PATCH+首拍毕转正在役」两面（裁令③款明示）",
+    "COS 分诊定谳（2026-11-13 22:52 回执 BOD 在卷）：新授权件（不采既有件 scope 增补——已双签生效件 scope 变更=审计链搅动+实质新授权重签争议面；新件与预演件/phase2 件三件 scope 各明·mount-gate 先例形=独立授权件双签链）"
+  ],
+  "executor": {
+    "seat": "换形 PATCH 执行=SDE（PATCH+GET 复验）·技术护航=CTO（异常处置）·值席锚卷衔接=m-duty-cos（R2 复原毕换锚回 vB→换形 PATCH 毕换锚回十阶段·COS 经 BOD 托转）·授权链=COS 首签（本件）+COO 会签（生效锚）",
+    "progressAnchors": "候施工段随动补"
+  },
+  "scope": {
+    "productionTouchPoints": [
+      "面一·换形 PATCH：TriRMC 河源（8710）weekly-plane-shift job payload vB→十阶段形手动 PATCH（时点窗=周日 11-15 R2 复原验收毕（七条 vB 基准全绿）→23:40·禁 jobs.json 文件直改——patrol-clobber 教训①固化·照 phase2/预演件先例）+PATCH 后 GET /internal/v1/cron/jobs 复验（十阶段五条族判据对表：cmd_len=2750/md5=4e1c7df5c78e083a77a0be7f2a371672/jobCount=4/enabled=true/schedule 50 23 * * 0 Asia/Shanghai）",
+      "面二·首拍毕转正在役：周日 23:50 cron 首拍（真拍触点承载=phase2 件）毕——**零回退·十阶段形即转正现役**（payload 终态定谳·CEO 22:53 裁令三）·vB 形退役（8237d12af 判据锚卷转历史备档）·值席判据族终态=十阶段形长期在役（首拍毕无第四次换锚·COS 托转值席预告）"
+    ],
+    "exclusions": [
+      "零其他 job 触面",
+      "预演段（序 6-9）与回退复原段（序 10-11）生产触点承载=预演授权件（9657bb3e5 双签生效·expiry 11-16 21:04:46）——本件不含，三件并存 scope 各明",
+      "换形 PATCH 双闸前置=R2 复原验收毕+本件双签生效锚——两闸未齐零动（fail-closed·mount-gate 纪律）",
+      "23:40 后零手动触面（23:45 dive 预检+23:50 cron 首拍=phase2 件承载窗·真拍触点不在本件 scope）",
+      "零非授权生产面变更（静置冻结语义照 phase2）"
+    ]
+  },
+  "jobNameTruth": "weekly-plane-shift（连字符形·河源 job store 活体现勘真值·phase2 件 927c0a7 勘偏已固化）",
+  "references": [
+    "CEO 三裁令=BOD 三封转达（22:49 时点拍 B/22:5x 首拍拍②/22:53 转正拍）+BOD 底稿在链",
+    "先例形=trees/fade001-tenstage-deploy-20261115/authorization.json（预演件·9657bb3e5 双签）+fade001-phase2-build-20261113/authorization.json（真拍件）",
+    "十阶段判据族在役锚=值守预期形-十阶段形判据锚-20261113.md（e672f3f50·值席落卷）",
+    "vB 基准（回退复原判据+退役备档对象）=8237d12af（len 1741/md5 4f990e911c3f）",
+    "实现树终门=trees/fade001-tenstage-impl-20261113/declaring-20261113.md（a4e1ed1cc·§四周日 23:50 首拍=十阶段全链实走定谳）",
+    "值席托转序列细排=COS 22:52 回执 BOD（三次托转·首拍毕零第四次·BOD 22:54 补充转达对表确认）"
+  ]
+}
