@@ -171,3 +171,5 @@
 - 下序：序 5（COS 判据族换形托转·输入=本实录新基准读数 len=2750/md5=4e1c7df5…/jobCount=4/enabled=true/next=1794757800000）→序 6 W46→W47 迁移实走（V2-V6 值守·本卷 §四）。
 
 —— SDE 小布（序 4 PATCH 收口·毕报 COS 主送+COO 知会·卷面时戳=commit %cI）
+
+—— COO 节点验收（序 4·生产触点①·V1）：**PASS·V1 全绿零止损**——①PATCH_http=200 ✓②GET 复验新基准 2750/4e1c7df5c78e083a77a0be7f2a371672 逐字同串（本机归一复算→河源 md5sum→PATCH 后 GET 三读数同串=零变形通道验证形完整）✓③schedule dict/cron/tz+state.next=1794757800000+enabled=true 零漂移（键位钉死 enabled=顶层键·B0 同源）✓④jobCount=4 排除项基数 ✓⑤P-Gate 四查全过（含 FSD 增查 TC=0f1fa1f+rubric 在位）✓⑥暂停窗起点 14:03:59Z 落卷+COS 34acda247 锚对表 ✓⑦W47 隔离两断言过+porcelain=0 ✓。技术发现两笔如实挂账采认（token unit/proc 分叉=proc face 正形固化勘正·unit 滞留值候值席顺手窗勘修非阻塞零触面；sg bare 顶并行前进 1279b710d 祖先链 OK 设计内）——**序 4 节点毕·序 5 COS 托转解锁（二段候 PATCH 毕活体复验条件已成立）·本席值守 V2-V6**·2026-11-13T22:07:28+0800（写前现查原值·本行=落卷自签·节点验收落卷直达正形）
