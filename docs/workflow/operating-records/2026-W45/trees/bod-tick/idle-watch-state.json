@@ -22,17 +22,17 @@
     "note": "routine re-probe after exempt expiry (13:37); same-shape context attached (r55-local + r55 sg both waiting-window legit); last probe before 14:00 downtime band"
   },
   "last_receipt_local": {
-    "at": "2026-11-13T12:44:11+08",
-    "round": "r55-local",
-    "verdict": "waiting-window-standby (legit)",
-    "anchor": "last build 12:08:22 (7e81a8b80) + COS ledger 5360e14c5 12:23:18; drill dispatch = schedule-registered (513) window 11-14 afternoon CTO self-run, ledger track 517 open"
+    "at": "2026-11-13T13:44:27+08",
+    "round": "r56-local",
+    "verdict": "waiting-window-standby maintained (zero-change, same-shape as r55, legit)",
+    "anchor": "exhaustive git log sweep 12:44+: only BOD duty line 3 commits; COS ledger 517 last; tree last build 12:08:22"
   },
   "note_tail": [
     "23:18 m-cos r46 定性回执=待派候窗态设计使然(锚21:11:13/a4f6eb232)→local窗=00:07(第2拍先到);sg窗待duty-cos直接回执",
     "10:15 duty-cos r47 定性回执=待派候令态(卷锚09:42:26/晨窗令未落=正常候面)→sg窗=10:37(第2拍先到)"
   ],
   "notice_streak": 0,
-  "local_exempt_until": "2026-11-13T13:37+08",
+  "local_exempt_until": "2026-11-13T14:37+08",
   "sg_exempt_until": "2026-11-13T14:07+08",
   "last_receipt_sg": {
     "at": "2026-11-13T13:14:21+08 (tree receipt)",
