@@ -12,17 +12,17 @@
   },
   "coSigner": {
     "seat": "COO（m-coo）",
-    "role": "会签",
-    "status": "候会签——COO 会签落卷 commit 为授权生效锚（生效前生产触点操作零动·mount-gate 纪律）",
-    "signedAt": null,
-    "cosignNote": "候 COO 验真四项+charter 对表后自补本段（照 phase2 先例形：令链原文在卷/expiry authorized_at+72h 机械验算/白名单触点+排除项齐/jobName 真值对表）"
+    "role": "会签=授权生效锚",
+    "status": "已会签——本笔会签落卷 commit 为授权生效锚（生效后生产触点按 scope 四触点解锁·mount-gate 纪律遵行）",
+    "signedAt": "2026-11-13T21:09:00+0800",
+    "cosignNote": "验真四项毕（2026-11-13T21:09:00+0800 写前现查）：令链原文在卷✓（orderChain 两条与 COS 台账 559 笔投递+CEO 21:04:38 补锚逐字对表）/expiry 机械验算✓（authorizedAt 21:04:46+72h=11-16 21:04:46=expiresAt）/白名单触点四+排除项四齐✓（真拍窗不含本件·phase2 件并存 scope 各明）/jobNameTruth=weekly-plane-shift 连字符形✓——charter 对表毕（dispatch-plan-coo-20261113.md §三工序依赖表 SDE 执行序+§四回退预案锚与本件触点四逐项对表一致·零时点门合规 D-82）"
   },
   "orderChain": [
     "CEO 2026-11-13 21:02 直连令七点（BOD 21:03 规范流转·COS 台账 559 笔 9bfdb9556）：①现在就拆树②部署好 payload vB→十阶段形 PATCH（授权件双签链即走）③走一遍 W46→W47 迁移十阶段全链实走（迁移预演·不等周日 23:50 cron·现在手动实走）④OK 之后 CEO 确认⑤回退回 W46（回退预案先备）⑥相当于预演一次（不替代周日 23:50 真拍·硬时钟不动·裁决 A 维持）⑦W47 迁移产物各席评一次分数（STE rubric 八族 A-H+100 分制+三档 80/60·预演读数即评分输入）",
     "CEO 2026-11-13 21:04:38 直连明示确认「对，周日真拍照走」（BOD 补锚·令⑥理解点确认定谳）：今晚预演（W46→W47 实走→CEO 确认→回退 W46）+周日 23:50 真拍硬时钟照走（裁决 A 维持）·两拍并存·预演不替代真拍——回退后 W46 态保持至周日真拍"
   ],
   "executor": {
-    "seat": "候 COO charter 派工落卷后补本段（预演执行=SDE 份额含回退预案·技术裁决=CTO·编码支撑=FSD·评分=STE rubric 消费）",
+    "seat": "预演执行=SDE（预案+PATCH+迁移实走+回退复原+复原验证·charter §三序 1/4/6/10/11）·技术裁决=CTO（判据族供形换形/复原双形+异常处置）·编码支撑=FSD（护航）·评分=STE rubric 消费（各席评·STE 供数）·产品面核=CPO/PM·链路沉淀=RDT·授权链=COS 首签+COO 会签（本件）",
     "progressAnchors": "候施工段随动补"
   },
   "scope": {
