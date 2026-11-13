@@ -366,3 +366,14 @@
   - 0fc100acd docs(coo): 台账554笔(序6 HALT候裁承接·周五拍is_sunday硬门时点错位ESCALATE经COS链呈批·SDE禁明知故跑采认·候裁期现势四点核验:序7-12连带候/序4-5产物保持/授权件含周日窗/暂停窗拉长无vB误报·两拍并存不变真拍23:50不动)
   - ad9190302 docs(cos): 台账572笔——SDE序6 HALT呈报时点错位候CEO拍定+COO序5验收毕+时戳勘正自领并记 @m-cos @m-sde @m-coo
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @23:00 +08：自上次进度提交 beb95b952 后新增 9 条 commit：
+  - 2b55c9561 docs(cos): 台账577笔——窗定生效=周日10:00(SDE+COO双采认+换形授权生效锚立2f382ee74·三面齐)+双通道零欠账收口 @m-cos @m-coo
+  - 2f382ee74 docs(coo): 换形PATCH授权件会签毕=生效锚(四项验真:令链三裁令/expiry72h机械验算/两面scope+排除五齐五条族同串/jobNameTruth·双闸前置fail-closed三件scope各明)+declaring-mid节拍验收PASS落卷直达+台账557笔(CEO三拍令合流承接·周日10:00钟点工序面无异议·托转序列知情)
+  - b05dcef01 docs(cos): 台账576笔——窗定前置齐(SDE 10:00采认+缓冲预估+执行注意两点)+github恢复欠账全清(双通道60e946cb0顶) @m-cos @m-sde
+  - 60e946cb0 docs(bod): §XL——今晚 declaring 中间收口转呈(五序毕全绿+窗候态)+新授权件首签毕知情(换形+转正两面·COO 会签候办) @bod
+  - 1a1eb0251 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 31b6208a0 docs(cos): 台账574-575笔——CEO三项裁令合流(拍B周日窗+首拍十阶段形+转正现役·vB退役)+换形PATCH授权件首签稿(scope两面:换形PATCH+转正在役)+今晚declaring中间收口件(序1-5毕全量读数+序6窗候) @m-cos @bod
+  - 5939c8a5f docs(bod): §XXXIX——CEO 拍十阶段转正现役裁令流转(三项合流·周日全链预演→回退→换形→真拍→转正·COS 执行面回执合段) @bod
+  - 7bcbda1a9 docs(bod): §XXXVIII——CEO 拍②首拍=十阶段形裁令流转(周日全链预演→回退→再换形→真拍·授权承载候 COS 起草双签) @bod
+  - 40d65b5ff docs(bod): §XXXVII——CEO 拍 B 裁决流转(周日白天窗预演·钟点细排工序面)+第二候裁项(首拍形态 vB/十阶段+授权承载)呈拍中 @bod
+- registry：未知版本；今日 registry 提交无变化
