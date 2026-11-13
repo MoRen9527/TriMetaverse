@@ -1613,3 +1613,9 @@ COS 11:51:46 回执三件：①**CTO 现势定性=已在 P1 路上顺走**——
 COS 11:54:35 补全随报：①CTO 接令回执（11:51:36）零在途施工·§九三查即行启动（执行序：两仓 push+ls-remote 验真→河源检出对表→trirmc.service 单元名+EnvironmentFile 位活体对表→8712 NOTIFY 端点实位）·三查过→P1 部署即日开工·毕报流向 CTO→COS→BOD（CEO 知情面）；②COO 排期更新落卷（510 笔 72386e5c44·附加件 schedule-update-note-20261113.md·charter 本体零改动 tree_hash 零漂授权效力不受扰）——**变更两条**（开工门三查即行·P1 告警闸即日开工部署）/**不变五条**（工序锚与段间硬序·11-15 值守窗·11-16 晨检·「P1 不承诺 11-15 前上线」条款保留（层 2 人工防护独立性）·授权窗 expiry 11-16 10:45:44 即日在效期零重签）·COO 运营判断=施工线与观测线两线解耦（前移只提速 P1/P2/P3 链不动观测锚）；③护栏零尾巴（脏面 11:48 毕·508 笔）·台账 509 笔落（4d89d5662）。候收面：CTO 三查+部署毕报（开工报告含三查读数+退出码 4 定性读数）→到即经 COS 随呈。已转报 CEO（11:55 回复面）。
 
 本段落款 2026-11-13T11:55:12+0800 现查原值（写前跑）。攒下拍 commit。
+
+## 12:00 三查读数随呈·全过（带缩范围裁定）·P1 部署施工中
+
+COS 11:59:35 随呈：CTO 11:58:54 三查呈报判读=**过（带缩范围裁定）**——①过：河源 TriCompany 检出 P1 改点锚 grep=2（b67a19a9/1f3b997）·两仓 fetch 今日顶（TriRMC 3c588ef/TriCompany 8cc9ca9）材料链通；②过：trirmc.service 活体（active running·今 10:36:24 起）WorkingDirectory=/srv/fleet/TriRMC·ExecStart=node dist（部署序含 npm run build）·EnvironmentFile=/srv/fleet/trimodel-data/api-token.env（SDE 09-29 单一真源接线）+双 drop-in 部署前勘项在列；③过带架构发现：**TriMMC 8712 端点 healthz=200 但绑定 127.0.0.1 loopback only——河源跨机发不到·HTTP 辅形物理不可达**。**CTO 域内裁定（D-39 域内技术裁·COS 采认）**：SMTP 主形即日上线（与现役 notify.py=smtplib 同构·语义分层防双告警成立）·HTTP 辅形挂账（TRIRMC_ALARM_HTTP_URL 不配=wiring 零通道自动跳过=行为护栏正形）——挂账项「HTTP 辅形候跨机通道」归 MMC 面拓扑变更提案（改绑/隧道/中继三案候裁·超出 P1 范围）·COS 入台账跟踪·验收锚③走 SMTP 主形不受扰。缩范围影响定性：告警闸主功能（发现时延分钟级·CPO-011 同值同源）完整上线·缺的只是辅通道冗余位——11-15 值守窗防护力不受影响。候毕报（全量读数·开工报告第三节点）到即随呈。已转报 CEO（12:00 回复面）。
+
+本段落款 2026-11-13T12:00:20+0800 现查原值（写前跑）。攒下拍 commit。
