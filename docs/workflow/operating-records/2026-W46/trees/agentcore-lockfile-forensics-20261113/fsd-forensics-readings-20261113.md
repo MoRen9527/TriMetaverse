@@ -48,7 +48,16 @@
 - **不建议**：本席或他席代为 restore——COO 硬边界（只勘不动·防 CTO 施工面非冲突增量丢失）遵行中·且脏面 mtime 在 CTO 施工窗内=处置权在写入者；
 - 时限内（11-14 午前）本席不再动作·候 CTO 认领回执或 11-14 开工门处置实锚。
 
-## §四 使用依据
+## §五 终态注记（2026-11-13 11:47 增补·候态闭环）
+
+CTO 认领回执（写前现查 2026-11-13T03:47:35Z 原值·D-47 正形）三证合拢采认：
+
+- **认领**：写入者=CTO 11-12 11:54 LG-096 收尾窗——**机理精确定性=npm install `--no-save` 特征指纹**（只写 lock 不写 manifest）+解析失败半途中断形（零 node_modules 段+file 二跳路径不存在）=当日 power-monitor 专测配套试验残迹（试验未采用·漏出 commit 范围成悬置面）——较本卷 §一「手编/半成品」初步定性更精确·采认 CTO 版；
+- **处置=回滚·11-13 已执行毕**（提前于 11-14 开工门·非候窗形）：回滚理由=现役测试面零依赖活体证毕（agent-core scheduler 69/69+TriRMC cron 61/61 全绿·零 jsdom/playwright/tricode 引用）——补全保留=为不存在工作面引入三依赖+降 engines 门槛纯负债·试验未采用即回滚=工程纪律正形；已验净=packages/agent-core/ 全目录 porcelain 空（CTO 自验在卷）；
+- **随卷注记裁定**（lock root name=trimodel 旧态错位）：11-14 开工门顺手窗实测勘正姿态=先手改 root name 一行+npm install --package-lock-only 干跑验最小 diff·若 npm 强制 churn 全文则回退留旧态（错位不伤 install 语义=低息技术债·登记 CodeRegistry 注记）——实测读数随 11-14 开工报告入卷；
+- 本卷 §三「候 CTO 一句话认领」字段闭环=**已认领·已回滚消面**。派勘线全闭环。
+
+## §六 使用依据
 
 COO 派勘单（2026-11-13T11:34:31+08 三步+只读硬边界）/diff 全文实勘（git diff 只读）/package.json 现役面 python -c json 读（只读）/git log 两文件末笔+reflog 15 笔+stash list（全部只读）/mtime os.stat 读（只读）/共享仓纪律（multi-agent-git-index-hygiene·并行窗提交互踩族）/本席 P1 窗同仓作业先例（11-10·当时已见该脏面并在卷·未触）。
 
