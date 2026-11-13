@@ -1716,3 +1716,21 @@ m-cos 15:10:20 托转件（D-81 形·显式收件方=sg 值席 m-duty-cos·知�
 **中转执行+通道勘误**：首发误走 ssh -J M-SG R-HY 双跳链——信文 1579 字节落河源 /tmp（-J 链终点=河源非 sg）+河源侧 tmux socket 不存在 fail-closed 零发送零泄漏·河源残留已 rm 清；**修正=直连 sg**（ssh M-SG-47.245.122.61）重落 /tmp/bod-relay-vA1-20261113.txt（1579 字节验证）+socket 确认在（fleet:fleet·Sep 16 建）·tmux 三段验证全过：框内落文（Pasted text #8 +12 lines 折叠形态）→独立 Enter→对话流全文回显+Nebulizing 拾取指纹+框空。托转闭环 15:14 前后毕。侧注：值席上下文 154.7k 临近满仓（不阻塞本次收信·观察项）。教训入档：托转 sg 值席=直连 sg 单跳·-J 双跳链终点是河源——机位先断言再发信（daemon 机位矩阵族同款）。
 
 本段落款 2026-11-13T15:15:59+0800 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
+## 15:16 拍·免通报双成立·阶段 2 联审树已开（旁证 8 件命中）
+
+tick 15:07:05 拍（现查 2026-11-13T15:16:38+0800·滞后 9.5min<12min 阈）：sg duty 14 席全体候令→旁证命中 8 件（45min 窗）免通报——**亮点：fade001-phase2-review/ 联审树已开**（intake.md+cos-segment.md+cpo-segment.md+coo-segment.md 四件落卷=阶段 2 四席联审进行中）+CTO 阶段 2 设计稿落卷（cto-phase2-qualify-tech-plan.md）+值守预期形-vA1判据锚-20261113.md 树面在档（值席知会件内容锚形）；本地 m-cto/m-coo/m-cos 3 席在干活免通报。双免成立零发送。四口全绿（8713 uptime 98477s·notifyFailures=0·ac=true gate=none；8711 lastPoll 07:06Z 新鲜 pollFail=0；河源 active）·MMC degraded=111（上拍 110→+1 持续微涨·候 sg 值席侧定性观察项不变）logs 最新 15:05 新鲜·大表 open=4 持平。候收：phase2 联审批→呈批卷转 CEO；CEO 邮件 sighting 确认。
+
+本段落款 2026-11-13T15:17:20+0800 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
+## 15:43 拍·r57-local 本地组通报发出·sg 侧旁证免通报
+
+tick 15:37:05 拍（现查 2026-11-13T15:43:12+0800·滞后 6min）：**全席空闲**（sg duty 14 席候令+本地 14 席全空闲）——本地组豁免窗满（14:37+08<15:43）→**r57-local 通报 m-cos 发出**（SendMessage msg 8328c796·15:43:12·请交叉定性：完结态自然空闲 or 已派未拾取断链 or open 派工零活动）·state 已 python 全程解析更新（last_notice_local=r57-local·notice_streak=0 防重发）；sg 侧旁证命中 7 件（phase2-review 联审 intake+三席段稿+CTO 阶段2设计稿 15:0x 落卷 45min 窗内）免通报。四口全绿（8713 uptime 100277s notifyFailures=0 ac=true；8711 lastPoll 07:36Z pollFail=0；河源 active）·MMC degraded=111 持平·大表 open=4 持平。候收：m-cos r57-local 定性回执→续窗。
+
+本段落款 2026-11-13T15:45:35+0800 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
+
+## 15:44 CEO sighting 确认成立·锚③两腿拼合闭环+154.7k 误读勘误（本席）
+
+**CEO 15:44 对话面 sighting**：转述两封 FADE-001 演练告警邮件主题+时点+exit 码——①14:49:24「周迁移链非零退出（||兜底分支·P1 改点C）链exit码: 3」带阶段探读数 ②14:53:05 同主题形「链exit码: 2」带阶段探读数。**到达腿实锚成立→锚③两腿拼合闭环**（发侧腿 SMTP SENT ok 机面时延 4.8s+到达腿 CEO sighting 两封）——告警闸验收锚③闭环·CEO 无需再做任何动作。两封 exit 码 3/2 形态对应演练毕报「两拦」两拍注入形态（细节在 CTO 演练卷 942eb3bcf·不追真源）。附带价值：告警主题形 CEO 已预览=首拍真失败时实际形态（主题可读带定位）。挂账面：锚③闭环销账（候收清单减一）。
+
+**154.7k 误读勘误（CEO 15:44 纠错·本席认账）**：15:13 托转段侧注「值席上下文 154.7k 临近满仓」系误读——tmux 框面「new task? /clear to save 154.7k tokens」为 UI 省 token 提示行（/clear 可省量）非占用水位读数；席位上下文=1M·154.7k 用量零头非临近满仓。该侧注作废勘正。教训：UI 提示行勿当读数转报（读数面与提示面分辨）。
+
+本段落款 2026-11-13T15:45:35+0800 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
