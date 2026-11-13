@@ -1,0 +1,47 @@
+{
+  "treeId": "fade001-phase2-build-20261113",
+  "week": "2026-W46",
+  "task": "FADE-001 第二阶段（Agent qualify）施工——vB 形部署至 11-15 首拍",
+  "authorizedAt": "2026-11-13T16:53:11+0800",
+  "expiresAt": "2026-11-16T16:53:11+0800",
+  "expiryRule": "authorized_at+72h 机械运算（原值见本件 authorizedAt/expiresAt 值面）",
+  "issuer": {
+    "seat": "COS（m-cos）",
+    "role": "起草+首签",
+    "signCommit": "本件首签 commit（见 git log 本文件首笔）"
+  },
+  "coSigner": {
+    "seat": "COO（m-coo）",
+    "role": "会签",
+    "status": "候会签——COO 会签落卷 commit 为授权生效锚"
+  },
+  "orderChain": [
+    "CEO 2026-11-13 16:25:49+0800 直连批准令「批准阶段2施工，不等16日，现在动工开干，干完验证，我们进入第三阶段plan skill」（BOD 集散 16:26:28+0800）",
+    "CEO 2026-11-13 16:31:50+0800 直连追加令「不用评估时间，直接干·COS 盯施工保持连续」（BOD 集散 16:32:00+0800）"
+  ],
+  "executor": {
+    "seat": "CTO（m-cto）",
+    "progressAnchors": "Q1/Q2 代码面毕（qualify.py 19/19 绿+alarm.ts 第三分支 46/46 绿+build 绿·TriRMC fd866ca+927c0a7 推成）·部署前料三件落卷（TriMetaverse 0bd373e9f·顶 70ac28ea2）"
+  },
+  "scope": {
+    "productionTouchPoints": [
+      "TriRMC 河源（8710）weekly-plane-shift job：PATCH /internal/v1/cron/jobs/{id} payload vB 内存态改形（禁 jobs.json 文件直改——patrol-clobber 教训①固化）",
+      "TriRMC alarm build+河源部署（第三分支到岗超窗判定）",
+      "最新演练 run dir arrival.json touch（防部署即误报关键步）",
+      "复员三断言+毕报落卷"
+    ],
+    "exclusions": [
+      "零其他 job 触面",
+      "零非授权生产面变更（静置冻结观察窗 ≥24h 零改动）",
+      "11-15 23:50 首拍硬时钟锚位不动"
+    ]
+  },
+  "jobNameTruth": "weekly-plane-shift（连字符形·河源 job store 活体现勘真值·CTO 勘偏① 927c0a7 固化）——产物面凡引用下划线形（weekly_plane_shift）落位时一律对齐连字符形（含 COO charter 值守窗预检基准/COS 值席 SOP arrival touch 指引）",
+  "references": [
+    "技术稿 cto-phase2-qualify-tech-plan.md @ b2bfe10a6",
+    "联审径批 synthesis.md @ 8fb036b35（六件处置全采纳）",
+    "呈批卷 plan-submission.md @ 8fb036b35（批准面）",
+    "台账 LG-098 线 522/523/524 笔（c1d046bb5/c03306300）",
+    "mount-gate 先例=fade001-phase1-build-20261111/authorization.json @ c25073fde"
+  ]
+}
