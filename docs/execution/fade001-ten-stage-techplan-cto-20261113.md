@@ -40,15 +40,16 @@
 - **段语义**（映射稿）：L4 扩展=迁移范围分析——哪些周迁/哪些不迁/carry_over 清单预审（上周手动迁移的准备工作归此段）·产出迁移清单候审。
 - **形态裁（APPROVE·FSD 协作稿 §二.1 采纳）**：独立薄模块 `plan_scope.py`（TriCompany `runtime/cognition/`·照 preflight/qualify 先例形同族：stdlib only/退出码 0/2 族/JSON 单份落卷）——三段业务面切片零重叠（preflight=该不该跑·qualify=有没有资格·plan_scope=迁什么不迁什么·单点探针纪律）；γ 二道闸 verify 归位接口预留（阶段 5 verify.py 以 plan.json 为对表基准）。不并入迁移器（现 weekly_plane_shift 的「迁什么」隐式逻辑升格为显式清单）。
 - **产物**：`$RUN_DIR/plan.json`——全链下游（DCE/verify/close）以此为准入与对表锚。
-- **段产物命名契约对表（PM 供稿 17:50·CPO 授权 17:49:19·本席收讫采认）**：run id 正形 `shift-W{fromWeek}-{YYYYMMDD}T{HHMMSS}Z`（fromWeek 显标·定死不再改名）/段产物文件族=arrival/preflight/qualify（三件在役）+plan/verify/score/close/manifest（全 JSON 机械可解析·段名→文件名一一映射）/job 正名 `weekly-plane-shift`（连字符形·勘偏①正名）/告警文案必带 run id/「取最新」判定禁字典序 mtime 序正形——与本稿 §二.4+§三表产物列一致零漂移。**范围钉子采认**：本契约只载机械契约名+run id 形制；迁移语义判据走档面正身（08f135f16 §五 CPO 语义锚+STE §三锚草案五条）不随本契约——施工引语义判据时引档面锚。
+- **段产物命名契约对表（PM 供稿 17:50·CPO 授权 17:49:19·本席收讫采认）**：run id 正形 `shift-W{fromWeek}-{YYYYMMDD}T{HHMMSS}Z`（fromWeek 显标·定死不再改名）/段产物文件族=arrival/preflight/qualify（三件在役）+plan/verify/score/close/manifest（全 JSON 机械可解析·段名→文件名一一映射）/job 正名 `weekly-plane-shift`（连字符形·勘偏①正名）/告警文案必带 run id/「取最新」判定禁字典序 mtime 序正形——与本稿 §二.4+§三表产物列一致零漂移。**范围钉子采认**：本契约只载机械契约名+run id 形制；迁移语义判据走档面正身（语义锚定谳位 36bf14a1d L44·档面经 aca95877c §五+STE §三锚草案五条·勘引见 §二.3）不随本契约——施工引语义判据时引档面锚。
 
 ### 设计要点
 
 1. **周算术归位**（L4）：`--from {fromWeek} --to {toWeek} --start-date {startDate}` 与 vA1/vB 模板变量同族——plan 段内做周值合法性断言（from<to·连续性·γ 防错周静默消解的第一道）。
 2. **输入面**：`--operating-root` 扫描 fromWeek 树面——trees 开放项归集+unresolved-items 存量+carry-over 清单源三输入。
-3. **判定面（迁/不迁）**：语义锚直引（CPO 产品稿对接点 5·08f135f16 §五照档施工）——「这是一周的记录还是这一周的活——**记录随周封存·活随人带走**」；树面开放项按 face 路由归位出迁移清单；不迁项=显式豁免清单（带豁免理由字段——非静默丢弃）；carry_over 预审=跨周挂账项核（挂账带主检查·J2 同构·非空必带状态去向字段——STE 锚③）。
+3. **判定面（迁/不迁）**：语义锚直引（CPO 产品稿对接点 5·语义锚定谳位=36bf14a1d L44·档面经 aca95877c §五——勘引注：原引 08f135f16 §五系卷号错挂·08f135f16=阶段 2 分卷非锚载体·锚文本零漂移纯指针勘正·PM 件一④ 18:01）——「这是一周的记录还是这一周的活——**记录随周封存·活随人带走**」；树面开放项按 face 路由归位出迁移清单；不迁项=显式豁免清单（带豁免理由字段——非静默丢弃）；carry_over 预审=跨周挂账项核（挂账带主检查·J2 同构·非空必带状态去向字段——STE 锚③）。
 4. **预期周断言**（γ 缝隙主解）：plan.json 载 `{from, to, tree_counts, carry_over_count, exempt_count}`——verify 段对表同值（二道闸）。
-5. **候审面**（产品语义接口·CPO 会签前置点）：plan.json 落 run dir 后+DCE 段执行前——迁移清单取舍属经营/产品语义（哪些周平面内容进新周）·十阶段完整形下此候审=agent 承接面读取点；首拍全链形=清单随 run 卷面留痕候审（自动链止于清单产出+留痕·不引入人工卡点阻塞 23:50 拍——**候审语义=留痕可审**·非阻塞闸，边界如实注候 CPO 产品方案对齐）。
+5. **候审面**（产品语义接口·CPO 会签前置点）：plan.json 落 run dir 后+DCE 段执行前——迁移清单取舍属经营/产品语义（哪些周平面内容进新周）·十阶段完整形下此候审=agent 承接面读取点；首拍全链形=清单随 run 卷面留痕候审（自动链止于清单产出+留痕·不引入人工卡点阻塞 23:50 拍——**候审语义=留痕可审**·非阻塞闸）。**产品侧采认落定（PM 件一 8df0c999f §三·18:01 对表）**：「留痕可审·非阻塞闸」产品侧采认成立——首拍形零新机制：plan.json 即候审记录·DCE 直接消费·零人工卡点防 23:50 阻塞；互动形升格=生产形候项划出今晚域。**实现面时序读数（PM 问·DCE 消费时序约束对表回）**：段 3→段 4 串行链零新时序约束——DCE 无 plan.json 不执行=fail-closed 正形（P6 同族·无清单即无准入）。
+   **plan.json 语义必填三件对表（PM 件一 §二·schema 定义面归本席 P1 锚·PM 只锁语义非空判读）**：exempt 条目豁免理由一句必填/carry_over 条目状态+去向必填（STE 锚③同源）/零迁移周显式 `migrate_count: 0`+理由（P4 同源）——三件与 P1/P4/锚③对表零冲突·入 schema 定义约束（字段级细化=PM PRD ≤G2 段门前增量对表）。
 
 ### 验收锚（第 3 格·两层锚形显标+失败方向标注·STE 六原则对表）
 
