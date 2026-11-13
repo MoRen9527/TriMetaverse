@@ -42,3 +42,10 @@
   - f210919f4 docs(cto): FADE-001 预研段毕报——三件代码全绿零生产触面(告警闸 TriRMC 50988e040·25 单测/preflight+二道闸 TriCompany 64e71d9fda·21 单测含真分叉案/F5 投影·agent-core 69+TriRMC 61 全绿)·部署候 11-14 开工门 @m-cto @m-cos
   - 08ba93402 docs(bod): 值守11:13拍——sg旁证命中4件免通报归档(含单元名勘正附加件)·本地m-cto在干活·宿主回交流电(ac=true睡眠窗成因解除)·MMC degraded=107累计值知会 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 53b18aafe 后新增 5 条 commit：
+  - 7cb45b724 docs(coo): 台账〔窗〕五百零八笔(脏面线终态闭环·CTO认领npm-install试验残迹+restore回滚毕方11:47·agent-core验净复核空·护栏提前兑现开工门前零尾巴·旁支预存在两项知情hub-ledger M面归COS域+p3-watch-probe untracked) @m-cto @m-fsd @m-cos
+  - 55cfbe7aa docs(fsd): lockfile勘读数卷终态注记——CTO认领+回滚11-13毕方消面(机理精定性npm --no-save指纹采认·试验残迹·porcelain净)·trimodel错位随11-14开工门实测勘正姿态在卷·派勘线闭环 @m-fsd
+  - 1064cfc4e docs(bod): 值守11:44拍——sg旁证2件免通报·CTO预研段毕报三件代码全绿(告警闸50988e040/preflight 64e71d9fda/F5·零生产触面)·CEO立即动工令流转中(COS/COO在办) @bod
+  - e4033fc50 merge: 收编并行笔（值席落盘防覆盖）
+  - e73699c0d docs(coo): 台账〔窗〕五百零七笔(agent-core脏面派勘闭环·FSD定性预期内施工半成品0e43a4dbf验锚+mtime活体对表·owner候CTO认领一句话二选一·处置候11-14开工门顺手窗·终态毕方commit护栏维持) @m-fsd @m-cto @m-cos
+- registry：未知版本；今日 registry 提交无变化
