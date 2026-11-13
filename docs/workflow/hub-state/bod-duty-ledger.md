@@ -1709,3 +1709,10 @@ tick 14:37:05 拍（现查 2026-11-13T14:43:28+0800）：sg duty 14 席全体候
 COS 15:05:19 呈报（CTO 演练毕报 15:00:31 落卷 942eb3bcf sg/dev 在链·正身=trees/fade001-phase1-build-20261114/cto-drill-closeout-20261113.md）：**演练 OK 判定成立（COS 裁语·D-39 域内径裁事后呈报）**。核心读数：①三真缺陷当场修毕——ⓐjobs.json 改形被 patrol 回写冲掉（不修首拍必跑旧形）→daemon API 改内存态固化 vA1 形 ⓑpayload 取值坑致「拦截时告警静默失效」（最毒形态）→修正+实拍验证 ⓒ分叉预检写错远程仓名（不修首拍必假拦）→参数化修复+单测 22/22 绿；②锚② exit 2 拦截实锚（五断言两拦三过与设计预期一致）+锚③ 机面时延 4.8s 远低于 30min 阈+到达腿 SMTP 两封实发；③复员终态全绿（vA1 稳定·nextRunAtMs=11-15 23:50 锚位不动·healthz 绿零重启·零现役扰动）；④如实注两条：第一拍 root 身份作废 fleet 重跑读数不入锚·D-46 自领（token 值面进会话一次未落卷未外发·轮换评估归 DCE 段顺手窗）。**阶段 2 设计先行启动**（CEO 令③）——CTO 设计稿候呈→四席联审→COS 批→呈批卷转 CEO。**CEO 人工 sighting 请求**：14:49:24/14:53:05+0800 两封 FADE-001 演练告警邮件（双地址 blocking·主题含 shift-WW46 run id）候 CEO 查收件箱确认到达——COS 无邮箱直读通道·人工确认=设计内 sighting 形·到达后锚③两腿拼合闭环（挂账跟踪不阻塞阶段 2）。COO 515 笔并读注如实并载（CFO 免发豁免与 CEO 特批两令并读=即行零障碍双保险并存）。519 笔落账中。已转 CEO（15:06 回复面）。
 
 本段落款 2026-11-13T15:06:16+0800 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
+## 15:13 COS 值席知会件托转毕（vA1 预期形更新五条·D-81 知情件）+通道勘误一笔
+
+m-cos 15:10:20 托转件（D-81 形·显式收件方=sg 值席 m-duty-cos·知情件零派工）：FADE-001 vA1 值守窗预期形更新五条——①河源 preflight remote 名缺陷已修（c7bb4b5 参数化·--diverge-remote 默认 origin=TriCompany 检出实名）假拦风险已清·前置预检预期 diverge ok；②现役 jobs.json 终态=vA1 形（cmd_len=1539·has_trap=True·has_RC_guard=True·md5 7ee97d65）值席探得与形不符即异常信号；③nextRunAtMs=1794757800000（11-15 23:50 硬时钟）不动；④patrol-clobber 教训值席知悉（jobs.json 观察只读·改形必走 daemon PATCH API）；⑤首拍窗排班不变（23:45 前置预检+23:50-00:20 到岗窗+晨检三读数）·阶段 2 设计稿含 F2 到岗标记形（arrival.json）候联审批才生效本轮不加步。信源=COO 516 笔（52bf6a47d7）请知会条款+COS 采认打包。
+
+**中转执行+通道勘误**：首发误走 ssh -J M-SG R-HY 双跳链——信文 1579 字节落河源 /tmp（-J 链终点=河源非 sg）+河源侧 tmux socket 不存在 fail-closed 零发送零泄漏·河源残留已 rm 清；**修正=直连 sg**（ssh M-SG-47.245.122.61）重落 /tmp/bod-relay-vA1-20261113.txt（1579 字节验证）+socket 确认在（fleet:fleet·Sep 16 建）·tmux 三段验证全过：框内落文（Pasted text #8 +12 lines 折叠形态）→独立 Enter→对话流全文回显+Nebulizing 拾取指纹+框空。托转闭环 15:14 前后毕。侧注：值席上下文 154.7k 临近满仓（不阻塞本次收信·观察项）。教训入档：托转 sg 值席=直连 sg 单跳·-J 双跳链终点是河源——机位先断言再发信（daemon 机位矩阵族同款）。
+
+本段落款 2026-11-13T15:15:59+0800 现查原值（heredoc 内嵌 date·D-47 正形）。攒下拍 commit。
