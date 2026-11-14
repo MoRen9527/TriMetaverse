@@ -96,7 +96,7 @@ cd /d/Code/ai/TriCompany && python -m pytest runtime/cognition/test_tenstage_pip
 ### 段 1 触发执行（触发器面·周日部署树承载·今日零触形态预览）
 
 - **职责**：定时触发+算清本轮参数（fromWeek/toWeek/startDate=周算术+算周断言 γ 主闸）+铸 run id+preflight 前置检查（含分叉预检=F4 主解）。
-- **代码落点**：河源 TriRMC bash payload 改形（生产触点面·周日部署树份额）——payload 从「pull+迁移器+commit+push 一杆」改为「preflight→铸 run id→交棒 FADE 流水线」。run id 形制正则 `^shift-W\d+-\d{8}T\d{6}Z$`（T1-1 断言·集成效验值 `shift-W47-20261116T000000Z` 同形）。
+- **代码落点（现役形·2026-11-14 16:2x 勘正——十阶段形 payload 已换锚在役 2026-11-13 22:12）**：河源 TriRMC bash payload 十阶段形（cmd_len=2750/md5=4e1c7df5·判据锚卷 e672f3f50）——骨架段=trap/RUN_ID 头/段 1 preflight/manifest 主行/段 2 qualify（vB 基座原形保留）+段 3-10 八 CLI && 链；**preflight 已实装为独立 CLI** `runtime/cognition/preflight.py`（is_sunday 周门+tokens 参数齐·D 族读它）。vB 形=复原判定面专用（托转一换回）·两分禁互判（STE 定谳）。run id 形制正则 `^shift-W\d+-\d{8}T\d{6}Z$`（T1-1 断言·集成效验值 `shift-W47-20261116T000000Z` 同形）。
 - **preflight 上移语义**：现 plan 前置断言四条（hostname/ff 断言/无进行中 git 操作/8710 healthz）住在迁移器 python 内部——跑不到就永远检不了；上移到触发段=bash 先跑 preflight 脚本，不过=这拍不执行+告警。
 - **告警闸**（F1/F6 合并判据）：漏拍或败跑 N 分钟无 per-run 成功日志即告警；挂 job 级非 service 级（degraded 阈值 3 对周任务=3 周窗）。
 - **误区**：把 bash 当全链执行器（旧形态根因）；算周用手算（集成案 L49 注「动态周锚禁手算」——ISO 周自洽用 isocalendar 推算）。
@@ -104,7 +104,7 @@ cd /d/Code/ai/TriCompany && python -m pytest runtime/cognition/test_tenstage_pip
 ### 段 2 Agent qualify（触发器面·周日部署树承载）
 
 - **职责**：进程执行环境资格断言（bash 载体形态/8710 healthz 探针上移）+agent 到岗窗断言（F2 补缺）。
-- **产物**：qualify.json（五断言全过态字段·T1-2 断言对象——值面字段必读非仅存在性）。
+- **产物**：qualify.json（五断言全过态字段·T1-2 断言对象——值面字段必读非仅存在性）。**现役形**：qualify 已实装为独立 CLI `runtime/cognition/qualify.py`（E 族读它·与段 1 preflight 两段分立=score 考卷 D/E 族各读各的产物·CTO 14:01:39 认证实锚）。
 - **接棒关系**：与 preflight「该不该跑」零重叠探针零复检；与 plan「迁什么」零重叠——各段探针零复检是映射卷定谳的分段原则。
 - **误区**：以为 qualify 是 agent 人格审查——它审的是**执行载体资格**（进程环境），不是 AI agent 的判断力。
 
@@ -140,8 +140,8 @@ cd /d/Code/ai/TriCompany && python -m pytest runtime/cognition/test_tenstage_pip
   - A plan_baseline（check_plan_baseline L50-64）：plan verdict=pass+counts 与清单实长一致——**毒化 plan 不接棒**（轻量复验）。
   - B γ 归位（check_gamma L67-83）：start_date isocalendar 周号推算==to_week——数学面二道闸（现役 γ 闸 weekly_plane_shift L424-434 独立成段）；start_date 缺省=skip 不拦（如实注记）。
   - C 新周 index active（check_new_week_index L86-118）：to 周 OP index 可得+可解析+activeTrees 键在（结构面）——年段推算+glob fallback 与 plan_scope 同形。
-  - D migrate_vs_index（check_migrate_against_index L121-159·**--strict 生产形**）：plan.migrate entries vs to 周 index 两落点并集（doneTreesFromPreviousWeek∪activeTrees·CTO 注一措辞精化·锚 weekly_plane.py L282-283/L208）逐项对表——items=[{entry,status:landed|missing}] 逐项读数，deficit 非空=exit 2。
-- **strict 短路设计**（L194）：strict 对表只在前面全绿时才跑（`not errors` 门）——fail-fast；预演形默认 off（迁移器未真跑时对表必炸·--strict 留首拍实走路径）。
+  - D 对表断言（**γ 终态形·2026-11-14 CTO 验收 PASS 定谳**——本条 16:2x 勘正替换旧"to 周 index 两落点并集对表"形）：plan.migrate entries vs **旧周 trees/ 目录存在性**（原地封存语义·weekly_plane.py L282-293 白盒实锚·from_week 目录多命中 ambiguity 拦截加宽）——items=[{entry,status:landed|missing}] 逐项读数，deficit 非空=exit 2 fail-closed（判据本体零删改）；run_verify 触发条件 `strict and not errors`（对表前置解除·to 周 index 断言独立拦）。**δ 分叉消除·首拍 γ 过闸形态生效**（历史演进面：迁移器只搬 index 层 doneTreesThisWeek·首拍实迁=0 时旧判据全 missing 必炸=发现 28·已定谳勘修）。
+- **strict 短路设计**（L194）：strict 对表只在前面全绿时才跑（`strict and not errors` 门）——fail-fast；预演形默认 off（迁移器未真跑时对表必炸·--strict 留首拍实走路径）。**γ 终态后首拍/预演 --strict 过闸形态生效**（对表面=旧周 trees/ 目录存在性·与迁移执行域解耦）。
 - **验证**：`python -m pytest runtime/cognition/test_verify.py -v`（319 行·含毒化 plan 拦/γ 不符/strict 对表赤字段）。
 - **误区**：预演形跑 --strict（必炸·迁移器未真跑）；把 landed/missing 当三值（二值——landed=全集−missing 消费侧可推导）。
 
@@ -153,7 +153,7 @@ cd /d/Code/ai/TriCompany && python -m pytest runtime/cognition/test_tenstage_pip
   - engine_absent：score_engine 模块不存在→exit 2·**J7 升级面仅限此路径**（部署面缺件≠引擎坏了——升级路由判据面分立防误升）。
   - （engine_broken_import：import 期非缺席异常→归入 executed_failed 非缺席路径。）
 - **探测点**（probe_score_engine L31-39）：importlib 探测·缺席≠跑败——升级路由看 engine_state 分立。
-- **生产形真值**：score_engine 实弹候首拍/部署树（J5-J7 灰度退出条件）——首拍默认态=engine_absent（如实落卷·不伪造分数）。
+- **生产形真值（v2 判读族·2026-11-14 16:2x 勘正替换旧"首拍默认态=engine_absent"形）**：**引擎已实弹装配毕**（生效锚=装配毕 12:25+CTO 验收毕·afb98d2b8）——executed_ok=正常形（score.json 载逐族评分读数 families 明细+score+verdict）；**run_state ok≠评分 pass**（verdict 卷面独立判读）；**engine_absent 装配毕不应出现·出现=缺件异常即报**（J7 语义收窄缺件态专用·旧"设计内预期态"判读废止）；探针正形=TC 仓根 cwd `python3 -m runtime.cognition.score_cli`（直跑 script 形误报 engine_absent·sys.path 缺仓根）。
 - **验证**：`python -m pytest runtime/cognition/test_score_cli.py -v`（81 行·三态路径各一案）。
 - **误区**：把 engine_absent 当引擎故障升级（J7 仅缺席路径）；给骨架形编分数（如实落卷纪律——没有 engine 就没有 score 字段）。
 
@@ -215,7 +215,7 @@ cd /d/Code/ai/TriCompany && python -m pytest runtime/cognition/test_tenstage_pip
 - **两层窗（裁决 A·主线定谳）**：11-13 今晚树=实现面零生产触全链闭环（预演形全真）；周日 11-15 23:50 首拍=部署+十阶段全链实走（生产形真值收口点·vB 判据族 8237d12af 有效至 payload 换形）。读代码时每段都有"预演形 vs 生产形"两条线——预演形全真指**链路形态**全真，不是生产数据真跑。
 - **段 4 --execute 生产 wiring 保留位**：默认 dry-run 渲染面零触；真跑面（subprocess+shell）代码在、测试有、生产调用=部署树授权窗（payload vB→十阶段形 PATCH 授权·expiry=authorized_at+72h）。新人纪律：**非部署窗禁传 --execute**。
 - **段 4 OVERFLOW_CHECKS 三判据**（aca95877c 原样）：week_dir_structure/carry_over_semantics/commit_message_shape——骨架态=口径位声明（checked=False 落卷），生产形真值对表候部署树授权窗实走。这是"如实落卷纪律"的典型：**没跑的检查声明没跑，不伪造 checked=True**。
-- **段 6 生产形真值**：score_engine 实弹候首拍/部署树——首拍默认态=engine_absent（如实落卷）；J5-J7 灰度退出条件=部署树窗份额。
+- **段 6 生产形真值（v2 现役·16:2x 勘正）**：score_engine **已实弹装配毕**（生效锚=装配毕 12:25+CTO 验收毕）——首拍/executed_ok=正常形·engine_absent=缺件异常即报（J7 收窄缺件态专用·旧灰度预期态废止）；预演拍时段窗族红=读数保真非缺陷（门不豁免）。
 - **段 7 改卷生效**：T1 三断言候选注记落位≠改卷生效（CPO 裁③钉子·生效动作锚施工验收毕时点）——"填位"与"生效"两时点分开，是考卷治理的关键纪律。
 - **段 1/2 触发器面周日部署**：payload vB→十阶段形换形（铸 run id 形制/preflight 上移/告警闸挂 job 级）+现役判据族换锚链——今日零触，形态预览见 §四段 1/2。
 - **run id 身份贯穿**：`shift-W{week}-{YYYYMMDD}T{HHMMSS}Z` 正则形制（T1-1）——七段产物 JSON 各带 run_id 键，任何一段产物脱离 run id=哑卷。
@@ -272,8 +272,9 @@ python -m pytest runtime/cognition/test_notify_done.py -v         # 段 10
 | 把 bash 当全链执行器 | bash 只干段 1（触发+参数+run id） |
 | 把 dce_steps 当迁移器 | 它是编排壳；迁移器=weekly_plane_shift CLI（域①五步链在迁移器内部） |
 | weekly_plane_shift 与 weekly_plane 混引 | 前者 CLI 入口·后者库函数面——引用带全名 |
-| 预演形跑 --strict verify | 必炸（迁移器未真跑）——--strict 留首拍实走 |
-| engine_absent 当引擎故障升级 | J7 升级面仅限缺席路径；跑败=executed_failed 非阻塞告警面 |
+| 预演形跑 --strict verify | 必炸（迁移器未真跑）——--strict 留首拍实走；γ 终态后首拍/预演 --strict 过闸形态生效 |
+| engine_absent 当引擎故障升级 | **v2 现役：装配毕不应出现·出现=缺件异常即报**（J7 收窄缺件态专用）；跑败=executed_failed 非阻塞告警面 |
+| run_state ok 当评分 pass | v2 判读族：run ok≠评分 pass——verdict 在 score.json 卷面独立判读 |
 | close rc=0 当零问题 | 升级清单非空是合法态；漏报（缺 upgrade_list_state 键）才是毒 |
 | 缺件 run 判 failed | 缺件/不可读=stale（六段产物齐才得 ok/failed 真值） |
 | 把 manifest 当闸 | manifest=终点记录非闸（告警面在段 10） |
