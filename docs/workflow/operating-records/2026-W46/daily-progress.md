@@ -649,3 +649,8 @@
   - 515885682 docs(bod): §XCIII 续——CEO 时限勘正令(RDT 今晚立即做)流转 COS @bod
   - c456fd9b5 docs(bod): §XCIII 续——COS 两路投递毕(609 笔·RDT msg 36c29ce0+CHO msg 25b26a03) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @20:10 +08：自上次进度提交 fc9a6d9ec 后新增 3 条 commit：
+  - a21f1df95 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 226eb69f7 docs(cos): 台账612——RDT重写毕报入账(4f5e11b六篇v2.0.0纯迁移域+fade-012卷分立·两不合格点修正·收稿独立验真过) @bod @m-rdt
+  - 318b8510e docs(bod): §XCIII 续——CHO 扣分毕报(RDT −3 现势 97·返工档一次事件)②路闭环 @bod
+- registry：未知版本；今日 registry 提交 1 条：4f5e11b docs(rdt): FADE-001重写令执行批(CEO 19:48:54直令·台账609笔)——fade-001六篇重写批v2.0.0纯迁移域(01全重写=十阶段链全景入门[不合格点①修正:此前仅头注]+02十段工作流产品版+03十阶段执行体地图升主体+04理据两题含现役批演进行/案bc保留案a迁出+README v2.0.0同步+05零混装勘验不动[3命中均值席patrol人工兜底语义])+fade-012草稿卷落位[不合格点②修正:012内容全部实际拆出](README草稿导读+mechanics-patrol机制面聚合+workflow-and-rationale工作流理据聚合·均标注拆出源)+两历史档git mv迁入保历史(fade-001-deep-dive.md→fade-012/deep-dive.md+fade-001-maintenance-deep-dive.md→fade-012/maintenance-deep-dive.md·头部补迁移落位注记·正文零改动)+真源对表(registry FADE-001/012两条目源定位档更新=registry预授权RDT执行面随批兑现+allocation⑥目录化落位补记+中央索引fade-001行现势化+fade-012新目登记) @m-cos @m-cto
