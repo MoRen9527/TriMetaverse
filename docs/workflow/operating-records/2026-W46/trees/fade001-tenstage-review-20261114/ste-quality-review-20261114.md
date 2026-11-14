@@ -70,6 +70,15 @@
 - **全量复验**：144/144 OK·11.890s（140+4 对表自洽·v2 log 落盘 `.fade/ste-review-20261114/ste-glob-v2-20261114.log`）。
 - **案数差异定谳**（拾取段尾挂疑销项）：现役 test_dce_steps.py=**13 案**=8（G3 173be2b·机械定谳）+3（0f1fa1f·diff grep 定谳）+2（24365ac·diff 定谳）——总账 144=103（cognition 十文件清点）+41（preflight/qualify 既有族）逐仓自洽 ✓。
 
+### §五补充 B · γ 施工验收（verify.py d 施工+test_verify.py 增补五案·COO 14:03:39 派工令·CEO 13:59:49 裁令·验收 14:2x 段）
+
+- **在链两笔**（本席 14:0x 初勘「未在链」读数已勘正回 COO——落链 14:11:48/14:12:30 晚于初勘 8 分钟）：**337c546** verify.py 判据面勘修（check_migrate_against_index→check_migrate_against_from_week_trees 函数名随域勘正+对表域 to周 OP index 并集→旧周 trees/ 存在性+run_verify 触发条件解耦勘正+check 键名 migrate_vs_index 保持=score_engine._judge_g 消费面契约）+test_verify 既有 strict 三案同窗改形（坏 index 案拦截源归位=断言 C+strict 段零触 assertNotIn 回归钉）；**b350f9c** 增补五案（发现 28 核心回归钉案 empty_to_index_but_trees_present_passes=空壳 index+trees 全在→strict exit 0 首拍不炸机理直证+from_week_dir_missing/trees_dir_missing/ambiguous 三拦面+file_entry_tolerated 散文件容忍）。
+- **判据语义对表 ✓**（发现 28 d 方案定谳 563 笔词面逐面落实现）：原地封存语义白盒锚**值面亲验**——weekly_plane.py L284/L292=`from_data["activeTrees"]=[]` 清空+doneTreesFromPreviousWeek 元数据写·整段零物理 move=「旧周树不搬家」属实 ✓；旧名 `check_migrate_against_index` 全仓 grep 零命中（「零外部消费面」断言独立验真 ✓）；check 键名消费面与 score_engine L249 实勘一致 ✓。
+- **门禁读数（先跑后毕报·独立重跑）**：cognition 全量 **181 OK 全绿**（b350f9c 面=176+增补五案精确自洽·v4 log 落盘）——时序勘正注：本席 v3 log 176 OK（mtime 14:11:37）系 ddda8dcd 面（落链前 11 秒）；validation 族 **438/5/1 五案名与基线逐一同名零漂移**（第三轮独立验）。
+- **增补案复核 ✓**：覆盖矩阵完整（新函数五分支面=hits==0/hits>1/trees 缺/全 landed/deficit 逐面有案+散文件容忍案+核心回归钉案）·值面断言纪律遵行（reasons 文本关键词断言非仅 rc）·fixture 负形态构造（with_trees=False）·ambiguous 与 to_week 同族案对表。
+- **注记两条（非阻塞）**：①337c546 docstring「done 条目对表域维持 to 周 index（断言 C 承载）」词面过强——断言 C 现役=纯结构面（dir+OP-*.json 可解析+activeTrees 键在）零 done 内容对表·退役域后 done 内容对表无独立判据（链上承载=迁移器自写+G 族 items 消费·闭环够·词面精度候勘）②空串 entry 过滤（`if e`）/空 migrate 列表两边界无专案（行为面合理·plan_scope 替身禁令域·低危）。
+- **判：γ 质量门 PASS 候 CTO 确认链**——零阻塞零新引入·发现 28 机理消除直证·「全量门禁176案全绿(自测门先跑后commit)」FSD 读数=时点真值（176 案时代）自洽非笔误。
+
 ## §六 · G 门判据对照总表（四段门 vs 现势读数）
 
 | 门 | COO 判据（dispatch-plan §三） | 现势读数 | 判 |

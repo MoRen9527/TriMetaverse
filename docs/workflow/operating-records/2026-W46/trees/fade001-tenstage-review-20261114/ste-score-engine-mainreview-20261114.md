@@ -34,17 +34,24 @@
 - 仓内全量：候读（基线=144·FSD 四笔后=157+新增——**基线读数独立重跑**·双 pattern 形+log 落盘）
 - validation 族：候读（基线=438 案 failures=5 skipped=1·五案名 frontmatter parity/lg024 test_6/lg025 test_1/seats pipeline 双案族——逐案对表零新引入）
 
-## §四 · 主审读数（候 FSD 毕报填·零预写）
+## §四 · 主审读数（四笔实勘毕·2026-11-14 14:2x 段·非候毕报——四笔+registry 毕形已在链 12:08-12:15·CTO 验收 PASS 04:14:53Z 在 registry 回写 ddda8dcd）
 
-（候填——FSD 毕报到后逐条填·读数证据落盘 `.fade/ste-review-20261114/`）
+- **四笔实勘**（diff 全读）：2905840 engine 361 行（契约/机判 manual 两分/归一化/保险丝 cap/链序裁决锚全在卷）+6171d3d 别名 +3 行（零删私有名·is 身份案钉）+18dca2e cli 案修 43 行（absent 案 mock 显式构造 ImportError 分支覆盖+真 engine 集成案 skipUnless 落仓自动激活·两层 verdict 分明断言）+004695b test 375 行 18 案。
+- **18 案机械清点**=5（JudgePerFamily）+4（RedlineCap）+1（F2Manual）+3（T1）+3（Degradation）+1（GbkSafe）+1（NoHardcode）=18 与笔文一致；`def test_` grep 真值=18 双域一致。
+- **判据框架八案型逐案对表**（§二逐条判）：逐族案 B 三断言形（窗内 pass/预演白天拍如实出红+reasons 载「预演」/正则破 fail）✓；红灯 cap：C79 用 mock 权重放大构造触发（真权重 C 红天花板 50/65=76.9<79 触发不到）+真权重边界另案 assertAlmostEqual(76.9)+caps_applied=[] 如实钉「cap 形备未触发非缺陷」+G59 真权重直触发（45/65=69.2→压 59.0）✓✓——**数学独立重算四点全过**（84.2→79.0/76.9/69.2→59.0/全绿 100.0/空 run_dir B 独立 10/65=15.4）；F2 案=F 族 manual score=null+collection_cmd 锚随行（F2 免评本体=考卷 special_clause 承载·engine 零改写=案面合理）✓；T1 三断言案全链面 ✓；降级三案（空 run_dir 结构化缺件/坏 json 坏卷载明/rubric 缺席全族 fail+rubric_loaded=False）✓；GBK payload 防回归三+1 场景全 encode("gbk") 不炸（实测坑钉·∈/∉ 禁入字符面）✓；REDLINE_CAPS `assertIs` 身份断言+值面 {C:79,G:59} 双层 ✓。
+- **门禁读数（独立重跑·禁转抄）**：cognition 全量两轮——v3 176 OK（14:11:37 log mtime=ddda8dcd 面·落链前 11 秒）+v4 **181 OK 全绿**（14:1x·b350f9c 面真值=176+verify 增补五案精确自洽）——log 落盘 `.fade/ste-review-20261114/ste-cognition-gate-v3/v4-20261114.log`；validation 族 **438 案 failures=5 skipped=1 五案名与基线逐一同名零漂移**（ste-gate389-v3 log）。
+- **读数差定谳**：registry ddda8dcd 笔文「179全绿」vs 机械真值 176（ddda8dcd 快照 grep+活体 discover 两域一致）——**179=数字面笔误**（差 3·毕报案数声明笔误家族第三例实锚·非判据影响如实注记）；FSD 337c546 笔文「176 全绿」=时点真值（176 案时代）自洽非笔误。
 
-## §五 · 缺陷清单（两栏分拣·候填）
+## §五 · 缺陷清单（两栏分拣·零阻塞·三条注记候 CTO 参考）
 
-（候填——发现如实挂账零遮掩·阻塞/非阻塞分类）
+- **N1（非阻塞）**：engine run_dir=None 入口分支（L273→C/D/E/G 判据 AttributeError 降级）reasons=异常类名非缺件语义+测试零覆盖（GbkSafePayloadTest `rd or "D:/x"` 将 None 替换未真走 None 入口）——生产面不可达（CLI argparse 守+直跑探针 required）·纯防御分支·行为面 fail 正确不外抛。候裁：后补 None 入口案或 reasons 口径勘正。
+- **N2（非阻塞·判读面知情项）**：真考卷权重下 C cap=79 为数学死保险丝（C 红天花板 76.9<79 恒不触发·测试已如实钉案）——值守判读表若引「C 红→79」语义需知情此边界；G cap=59 真权重有效（69.2>59 触发）。非缺陷（保险丝=上限防未来权重改语义）。
+- **N3（非阻塞·观察项）**：E 五键（identity/run_dir/git_identity/alert_credentials/disk_free）双源机械对表案缺——test 消费 engine._QUALIFY_ASSERTION_KEYS 自构卷（engine 内自洽）·qualify.py 实装键漂移时 engine 不随=假红假绿风险——docstring L86 注「qualify.py L184-196 实锚」=人工锚非机械案——候选「双源对表断言」案型补位（本席 workbench 模式一适用场景）。
+- 判据实装值对表正面确认：B 窗 23:50-23:59/C 正则 T1-1 原样/E 五键=与考卷定谳值一致（判据逻辑实装硬编码=机判必然形态·「零文案复制」承诺范围=族元数据文本运行时引用——manual reasons collection_cmd 原文引用在卷 ✓）。
 
 ## §六 · 门禁判定（三分法·候 CTO 确认链）
 
-（候填——PASS/CONDITIONAL_PASS/FAIL·本席不独立放行）
+**CONDITIONAL_PASS**（候 CTO 确认）：契约面/裁词四条/归一化数学/cap 语义/链序裁决/降级面全对表零阻塞·18 案判据框架覆盖完整且数学边界如实钉·门禁 181 全绿+438 基线零漂移——CTO 已在 registry 回写验收 PASS（04:14:53Z），本席主审=独立复核读数供给面：**复核结论与 CTO 验收同向**，三条非阻塞注记（N1/N2/N3）供参考候裁量，零回退建议。
 
 ## §七 · 使用依据
 
