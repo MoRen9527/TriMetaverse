@@ -40,6 +40,6 @@
     "verdict": "waiting-window-standby same-shape as local (legit)",
     "anchor": "receipt trees/bod-tick/回执-r55-定性-20261113.md; last seats e0f65341a->3e0980607 10:52-54; COO 513 12:22; watcher 12:30"
   },
-  "last_notice_sg": "r64-window-resemantics",
-  "last_notice_utc": "2026-11-14T06:02:40Z"
+  "last_notice_sg": "r65-liveness-confirm",
+  "last_notice_utc": "2026-11-14T10:14:15Z"
 }
