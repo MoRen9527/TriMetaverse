@@ -24,6 +24,7 @@
 3. **换形 PATCH 授权承载**：CEO 拍②③定谳=首拍十阶段形+毕后转正现役（vB 退役）——COS 分诊=新授权件（三件各明·不采既有件 scope 增补），首签稿已落盘（authorization-switchpatch-20261113.json·authorizedAt 22:55:03/expiry 11-16 22:55:03·scope 两面=换形 PATCH+首拍毕转正在役），**COO 会签生效锚候办**。
 4. **值席托转序列**（细排毕）：①R2 复原毕换锚回 vB（复原验收判定面）→②换形 PATCH 毕换锚回十阶段→首拍毕零第四次（十阶段长期在役终态）——预告经 BOD 托转值席。
 5. **RDT 知识沉淀并行份额**候验。
+6. **review 日（11-14）栏二增量项并入**（COO 分拣收口卷指针=trees/fade001-tenstage-review-20261114/coo-col-sortation-closeout-20261114.md §三·分拣窗落卷）：STE 注记两条（verify.py docstring 词面精度+空串/空列表边界专案·勘正归栏二·周日窗顺手族或候后续窗·非阻塞低危）+RDT 栏二-5 CARRY 正则缺陷候选（候 CTO 实勘）+FSD ⑥ LG-069 dedup 源实现位勘定（候 CTO 实勘）+OVERFLOW_CHECKS 三判据骨架态真值对表（G3 债 2 沿承既有偿还计划不变）——四件均非阻塞·勿挤今晚关键路径。—— COO 小营（m-coo·charter §五授权追入）·落款勘正 2026-11-14T18:37:47+0800（初稿误预写「18:40:30」估算值·写后现查原值回填·D-47 自察即修）
 
 ## §三 · 缺口列
 
