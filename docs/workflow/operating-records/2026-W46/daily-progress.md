@@ -477,3 +477,9 @@
   - 556d2f58f Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
   - 25e437832 docs(cto): 主卷勘正随CEO 11:16令——候排程挂法废止·栏二八项改直接开工批(21/22裁词定谳:rc=3特判立停段不变零豁免/rc=4维持拦·发现28 d施工+qualify注记两项保留面=关键路径序位非候排程·依赖面注明)·派工单f28acfeb已发FSD接令毕
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @11:40 +08：自上次进度提交 cc4cce7a0 后新增 4 条 commit：
+  - fdbf97847 docs(cto): 发现7裁词定谳随FSD活体实证——锚位笔误勘正(tm_root→tc_root自锚parents[2])·裁A三裁据(锚位随操作对象/生产cwd现实一致/零新参数)·B/C案否决·FSD停笔候裁采认
+  - 5fe90e01a Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - cfe66147a docs(cos): 台账589销账——LG-097语义条款册挂账线销·两条件独立验真锚四条全YES @m-cao @m-cfo
+  - f53254835 docs(bod): §LXI——CEO 三问大白话释(管线壳vs评分机/修缮批定性/rc3=停等裁决·d 施工=首拍过闸前提) @bod
+- registry：未知版本；今日 registry 提交无变化
