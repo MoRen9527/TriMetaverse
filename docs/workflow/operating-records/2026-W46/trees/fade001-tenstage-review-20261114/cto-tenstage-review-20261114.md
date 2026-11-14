@@ -76,6 +76,7 @@
 ## §三 · 横切发现（段间衔接/架构面）
 
 - **发现 33（STE 会商并入·锚定面维度·10:4x 定谳）**：RDT 栏一两项（dce_steps.py L37 `import shlex` 死 import+plan_scope.py L24 docstring 三集形）经 STE 复核+本席实勘定谳——**两文件均在部署树 payload 供形件链内**：dce_steps.py=0f1fa1f 槽位①关联（commit message 明文「部署树窗 payload 供形件槽位①关联」·88 行变更实锚）；plan_scope.py/qualify.py=G 系供形链（G2 六件 CLI 骨架锚卷）。技术实质三层精度（STE 论证精度勘正）：①**payload md5 锚（4e1c7df5）锚对象=payload 文本串**（§六.3 25 行）——py 文件改动零漂该 md5（payload 按模块名调用不含文件 hash）——运行链面零影响成立；②真漂移面=**供形卷版本锚**（0f1fa1f/G 系记录的 py 形 vs dev 顶形）=卷面对表歧义源；③**河源 L15 pull 前置生效面**（payload L15 `git pull --ff-only origin dev`）——今日改 py 周日拍自动到河源=对周日实拍运行面的前置变更（哪怕零行为）。**裁定=改判栏二「顺手清族」**：周日窗与新会签小件同 commit+同窗升锚一次完成·今日树授权语义（review 记录面·phase1 树权 scope=席位面）不含 TriCompany 仓施工面·C1/C3 初裁栏一随之改判（口径自洽修正——charter §四「现役判据面一律栏二」宽读口径归一）。零行为影响定性两席一致（STE 复核+本席精读互证）。
+- **【追认定谳 10:5x·STE 供数+本席亲验】**：780730b 已在链（FSD 施工 10:36:55+08·先于 COO 暂停令 f931e471 约 10 秒=**合法竞态已开工即停笔留档**·非违令施工）——本席亲验 diff 零行为成立（案 A 纯删 `import shlex` 一行·案 B 纯 docstring 发现 32 勘正形照录·接口/行为/参数面零触）+STE 独立验采认（dce+plan_scope 40 案全 OK+validation 438/5/1 基线零漂移）——**裁=追认 780730b 为顺手清族既成部分**；回退向否决（为两个零行为注释级改动做 revert 施工=动作比问题重·且回退本身同为 TriCompany 仓施工同样破今日授权语义·零行为既成无风险·追认成本最低）。周日树候件列顺手清族更新为：**qualify.py 注记一件（未施工·挪周日）+verify.py d 施工+供形卷升锚义务**（0f1fa1f→780730b 版本锚漂移面·并入新会签小件 scope·周日窗施工毕统一升锚——P-Gate 4 hash 锚过时面由 7b13699 先例在先·非 780730b 新增·同窗一并处理 SDE 知悉）。FSD 今日剩余施工边界重申：栏一原定义「只动文档/测试/非现役代码面」——py 本体改动今日起停（既成追认·增量零容）。
 
 - **发现 25（双 close 域·预期态）**：ADE 面（.shift-ade.json·迁移器产物·_notify_shift 双址 blocking）+FADE 段产物域（close.json+manifest.json+notify_done）——首拍双通知并存=预期态。知情面·候首拍预期态知情件一并预对齐（与发现 9 同件）。
 - **发现 24（死变量·小）**：weekly_plane_shift.py L67 `from_md = operating_root / f"{from_week}" and None` 死变量残留行——零行为影响（赋值后未用）·**栏一候选**：删行·但涉 TriCompany 现役代码=**栏二**（与发现 4 同面）。
@@ -84,7 +85,7 @@
 ## §四 · test 面覆盖盘点（债视角·STE 质量主审的旁席对照）
 
 - 十一件 test 在位：十段各一件（test_preflight/qualify/plan_scope/dce_steps/verify/score_cli/score_rubric/close_skill/close_cli/notify_done）+集成面一件（test_tenstage_pipeline.py）——**覆盖结构无缺段** ✓。
-- 缺口面=**execute 真跑链零覆盖**（债 1·declaring 既有）：G4 集成案全走 dry-run 渲染面·--execute 分支（subprocess 真跑+rc_guard 实拦+超时路径）零单测覆盖——周日预演实走即首度真值对表面（维持挂账·预演读数回填后评估补测面）。
+- 缺口面=**execute 真跑链零覆盖**（债 1·declaring 既有）：G4 集成案全走 dry-run 渲染面·--execute 分支（subprocess 真跑+rc_guard 实拦+超时路径）零单测覆盖——周日预演实走即首度真值对表面（维持挂账·预演读数回填后评估补测面）。——【更新注记 10:5x】TC 24365ac（review 日栏一施工在链）已闭合**单测半边**（渲染 cmd 与 argparse 真源双源对表+execute 传递同源案）；**实走半边不变**（周日预演实走=首度真值对表面）。另 7b13699 考卷实件锚定双案（结构门+权重快照）在链——债②改卷窗升版义务不变·快照案=升版提醒机械锚。
 - 缺陷面随修随补原则：发现 4/12/21-22/27/28/30 若立施工案·测试案随施工窗同窗补（各施工 owner 义务）。
 
 ## §五 · 两栏分拣稿（初稿·候 20:00 COO 收口会商定谳）
