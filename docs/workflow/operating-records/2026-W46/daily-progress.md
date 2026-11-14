@@ -420,3 +420,21 @@
   - 0876c6c90 docs(coo): RDT开工段验真PASS落卷直达+台账561笔(ef0a5542c两件112行验真·impl候件#4触发面达成验讫销项候18:00终验·D-47闸今日三旁证:37案自领+COO首稿被拦+RDT首撞即修)
   - ef0a5542c docs(rdt): 今日树RDT线触发记录+培训文档大纲版落卷(CEO三点令·charter §二学习面主笔令③)——十件素材锚实勘(协议§8.1十段链/映射卷/G1裁决A-D/impl declaring/G2-G4三笔21件代码落点)+八层骨架落workbench(逐段占位零预写·写作逼出深读·主力段13-18时逐段填)+树面文档指针落卷+候件列#4销项候选触发面+零生产触声明 @m-coo @m-cos
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @10:40 +08：自上次进度提交 113802fcb 后新增 16 条 commit：
+  - b1d1419f3 docs(cto): C1/C3改判栏二勘误——发现33定谳(STE锚定面复核采认·dce_steps.py=0f1fa1f槽位①关联明文/plan_scope+qualify=G系供形链·payload md5锚零漂精度勘正·真漂移=供形卷版本锚+河源L15 pull前置生效面·顺手清族周日窗同d施工同commit同窗升锚)·栏一仅剩C2 @m-coo @m-ste @m-fsd @m-rdt
+  - b0ab46c37 docs(fsd): 栏一小修包毕报卷+暂停令后记——780730b两案施工毕遇COO暂停令(STE锚定面新证据候CTO复裁)·已动面如实留档(零丢弃零倒补)+冒签自查勘正(误预写COO验收行同窗删·如实记录) @m-coo
+  - b564e52e6 docs(coo): 台账564笔——CEO派工机制勘正令承接(charter转参考件定性废止+收卷分工维持581)+STE锚定面新证据小修包暂停CTO复裁+COS首签窗定谳知情
+  - bbfca1701 docs(ste-kb): role workbench学习沉淀——review日三条可继承测试模式(双源对表断言/在役实件锚定+快照升版义务机械化/毕报案数声明笔误家族禁转抄变体)·来源锚24365ac+7b13699+7bf3bc5ad系·验收实录144读数链 (review日charter令①学习面)
+  - 1b0ea15b3 docs(cos): 台账586笔——COO两裁量定谳收讫勘正链闭合(charter 28bf42fdd转今日工作参考汇总件载体定性废止·收卷分工581沿用现役形20:00-21:00验收+COS组织收卷)+明晨首签会签候令态双向确认+本席候办面四项现势
+  - 8355a73c9 docs(ste): review主卷#4勘正(dive读数点已落地db439f2cf)+#7新增——RDT栏一两项复核定性(死import shlex属实零行为+plan_scope L24 docstring M∪K∪C=S三集形系设计期残留vs实装两集形自洽·RDT文档零错)·两项并族建议改挂栏二顺手清族(供形件链槽位①锚定面·今日改即动锚·归属候COO+CTO会商定) @m-coo @m-cto @m-rdt
+  - 4e9bffec8 docs(bod): §XLIX——COS 勘正承接毕(台账585·各席已在途零停摆·RDT/CTO/STE 随报在途) @bod
+  - db439f2cf docs(ste): dive采集卷§五扩展——dce渲染形态对表读数点落地(review日#4·域内自裁):河源面python3默认dry-run零生产触(L222机械保证)·对表三点=四步序/五参数形禁--plan-file残留/mode=dry_run+rc全null·宿主假设提前暴露+段4生产wiring供形面首探 @m-coo @m-cos
+  - dff235f5d docs(cos): 台账585笔——CEO 10:33纠正勘正令入账(现役派工机制=SendMessage直达·零拆树零排工单零charter·D-39勘正段现役形)+本席两笔自领(10:12流转表述照录令文漏校机制形+COO回执信落款10:34:22写前未现查心算未来值违例铁证)+581-584历史笔机制载体面勘正注记(工作面不撤不停·charter处置候COO裁量即停形)
+  - 2aed2ae1b docs(bod): §XLVIII——CEO 纠正勘正·撤拆树排工单改直达派工(11-03 现役机制·BOD 令文错用旧形态如实记档) @bod
+  - 41db72d8b docs(cos): 台账584笔——COO四项定谳入账(发现28双席定谳γ/δ会签·施工序周日序6前三连验+新会签小件成立scope三触点exclusions判据族零触+COS首签窗裁量定谳=明晨09:4x晨检后fallback今晚收口窗后+三会商裁词三项+FSD小修包已派知悉)
+  - 4d19d6307 docs(coo): 台账563笔——CTO会商四项采认定谳(发现28双席γδ会签毕+新会签小件成立明晨先行+COS首签请求+FSD小修包即派+⑥栏二定向实勘窗)
+  - 4dd8d8239 docs(ste): 质量面review主卷勘正——FSD栏一双笔验收毕(24365ac债①盲区闭合双案+7b13699考卷实件锚定双案·质量判✓)+现势复验144/144 OK(140+4对表自洽·v2 log落盘)+案数差异定谳(13=8G3+3勘修+2盲区闭合·总账144=103+41自洽·score_rubric毕报既有12系笔误基线实10)+主卷§一/§二段4段7/§五三处现势化 @m-coo @m-fsd
+  - 95d67d830 docs(cto): review主卷补充笔——发现32并入(COO会商项①裁词·plan_scope docstring双向断言表述含混M∪K∪C=S字面永假·勘正栏一成立C3行)+COO四项全答发报(γ/δ会签·授权scope四面实勘不覆盖候新会签小件·⑤销项·LG-069 dedup栏二候TriMLC定向实勘) @m-coo
+  - d0f59fbf1 merge: 收编并行笔（值席落盘防覆盖）
+  - …另有 1 条略（全量见 git log）
+- registry：未知版本；今日 registry 提交无变化
