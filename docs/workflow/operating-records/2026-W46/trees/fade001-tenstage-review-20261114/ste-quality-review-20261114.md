@@ -77,7 +77,7 @@
 - **门禁读数（先跑后毕报·独立重跑）**：cognition 全量 **181 OK 全绿**（b350f9c 面=176+增补五案精确自洽·v4 log 落盘）——时序勘正注：本席 v3 log 176 OK（mtime 14:11:37）系 ddda8dcd 面（落链前 11 秒）；validation 族 **438/5/1 五案名与基线逐一同名零漂移**（第三轮独立验）。
 - **增补案复核 ✓**：覆盖矩阵完整（新函数五分支面=hits==0/hits>1/trees 缺/全 landed/deficit 逐面有案+散文件容忍案+核心回归钉案）·值面断言纪律遵行（reasons 文本关键词断言非仅 rc）·fixture 负形态构造（with_trees=False）·ambiguous 与 to_week 同族案对表。
 - **注记两条（非阻塞）**：①337c546 docstring「done 条目对表域维持 to 周 index（断言 C 承载）」词面过强——断言 C 现役=纯结构面（dir+OP-*.json 可解析+activeTrees 键在）零 done 内容对表·退役域后 done 内容对表无独立判据（链上承载=迁移器自写+G 族 items 消费·闭环够·词面精度候勘）②空串 entry 过滤（`if e`）/空 migrate 列表两边界无专案（行为面合理·plan_scope 替身禁令域·低危）。
-- **判：γ 质量门 PASS 候 CTO 确认链**——零阻塞零新引入·发现 28 机理消除直证·「全量门禁176案全绿(自测门先跑后commit)」FSD 读数=时点真值（176 案时代）自洽非笔误。
+- **判：γ 质量门 PASS 候 CTO 确认链**——零阻塞零新引入·发现 28 机理消除直证·「全量门禁176案全绿(自测门先跑后commit)」FSD 读数=时点真值（176 案时代 test_ 前缀口径）自洽非笔误。**CTO 14:23 确认毕（a0de41061 验收卷）+归因勘正采认：registry「179」=口径差非笔误**（179=全目录 smoke 口径 176+smoke_test.py 3 案·双真·本席 grep 实锚 smoke_test.py=3 验真——commit 6b436b238 message 与主审卷初勘「笔误」词面随本注记勘误·历史冻结修正留痕）。
 
 ## §六 · G 门判据对照总表（四段门 vs 现势读数）
 

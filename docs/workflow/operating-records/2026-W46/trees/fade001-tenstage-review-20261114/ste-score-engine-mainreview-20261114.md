@@ -40,7 +40,7 @@
 - **18 案机械清点**=5（JudgePerFamily）+4（RedlineCap）+1（F2Manual）+3（T1）+3（Degradation）+1（GbkSafe）+1（NoHardcode）=18 与笔文一致；`def test_` grep 真值=18 双域一致。
 - **判据框架八案型逐案对表**（§二逐条判）：逐族案 B 三断言形（窗内 pass/预演白天拍如实出红+reasons 载「预演」/正则破 fail）✓；红灯 cap：C79 用 mock 权重放大构造触发（真权重 C 红天花板 50/65=76.9<79 触发不到）+真权重边界另案 assertAlmostEqual(76.9)+caps_applied=[] 如实钉「cap 形备未触发非缺陷」+G59 真权重直触发（45/65=69.2→压 59.0）✓✓——**数学独立重算四点全过**（84.2→79.0/76.9/69.2→59.0/全绿 100.0/空 run_dir B 独立 10/65=15.4）；F2 案=F 族 manual score=null+collection_cmd 锚随行（F2 免评本体=考卷 special_clause 承载·engine 零改写=案面合理）✓；T1 三断言案全链面 ✓；降级三案（空 run_dir 结构化缺件/坏 json 坏卷载明/rubric 缺席全族 fail+rubric_loaded=False）✓；GBK payload 防回归三+1 场景全 encode("gbk") 不炸（实测坑钉·∈/∉ 禁入字符面）✓；REDLINE_CAPS `assertIs` 身份断言+值面 {C:79,G:59} 双层 ✓。
 - **门禁读数（独立重跑·禁转抄）**：cognition 全量两轮——v3 176 OK（14:11:37 log mtime=ddda8dcd 面·落链前 11 秒）+v4 **181 OK 全绿**（14:1x·b350f9c 面真值=176+verify 增补五案精确自洽）——log 落盘 `.fade/ste-review-20261114/ste-cognition-gate-v3/v4-20261114.log`；validation 族 **438 案 failures=5 skipped=1 五案名与基线逐一同名零漂移**（ste-gate389-v3 log）。
-- **读数差定谳**：registry ddda8dcd 笔文「179全绿」vs 机械真值 176（ddda8dcd 快照 grep+活体 discover 两域一致）——**179=数字面笔误**（差 3·毕报案数声明笔误家族第三例实锚·非判据影响如实注记）；FSD 337c546 笔文「176 全绿」=时点真值（176 案时代）自洽非笔误。
+- **读数差定谳（CTO 14:23 回执归因勘正·本席采认吸收）**：registry ddda8dcd 笔文「179全绿」vs 机械真值 176——**口径差非笔误**：179=全目录 smoke 口径（discover test_ 前缀 176+smoke_test.py 3 案=179·本席 grep 实锚 smoke_test.py=3 案验真·双真）——本席初勘「笔误」定性系 test_ 前缀 pathspec 单口径局限·勘误在案（CTO 验收卷 §九注记在卷闭合·registry 锚行已双口径并载）；FSD 337c546 笔文「176 全绿」=时点真值（176 案时代 test_ 前缀口径）自洽。案数声明家族定性维持（毕报用词不精确非数学错误）。
 
 ## §五 · 缺陷清单（两栏分拣·零阻塞·三条注记候 CTO 参考）
 
