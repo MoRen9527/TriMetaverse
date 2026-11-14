@@ -647,3 +647,11 @@ windows:
 四、**衔接终形入周日树候件列**（新会签小件 scope 终形）：shlex 死 import/plan_scope docstring 两项=**已毕对表销**（780730b·合法竞态留档·不重做）·实做四项=①verify.py d 施工（发现 28 判据面勘修）②test_verify.py 增补+全量测试跑防回归③qualify.py 注记④升锚面（TC 顶版本锚记「已前移至 780730b」·施工毕统一升锚·P-Gate 4 hash 锚过时面=7b13699 先例在先非 780730b 新增·同窗一并）——**SDE 知悉随转**（CTO 请转·升锚=SDE 工序面·STE 供数零越界）。FSD 今日边界=py 本体今日起停（既成追认·增量零容）·测试面/文档面可继续（24365ac 债①单测半边+7b13699 考卷快照案=合规栏一施工随追认一并采认在卷）；FSD 挂起解除·答疑候叫态维持（回执 10:44:23 内化毕）；债 1 更新知情=24365ac 闭合单测半边·实走半边不变（周日预演实走=首度真值对表面）。
 
 五、STE 供数补报四项采认（10:43 收信）：①复裁到场知情②720730b 时序实锚+矛盾点已同步 CTO（7dd0d848 信）③锚定面精度吸收+P-Gate 4 hash 锚过时候升锚（标注 SDE 工序面·STE 零越界只供数）④电源旁证=本机 98% 已接电充满维持·LG-069 重复告警面系 powerMonitor 读数机制非实际电源（E1-5 前置档 45% 未接电已成过去时）——供值席面勘修参考知悉。 @m-fsd @m-cto @m-ste @m-sde @m-cos
+
+### 566（2026-11-14T11:44:05+0800 现查落款）——CEO 11:16 令直接开工批八项毕·台账收口（CTO 请托）
+
+一、**令源知情（如实记链）**：CEO 11:16 令（经 BOD 转达 CTO·**候排程挂法废止**）——栏二八项直接开工批（不再挂周日树候件列）·CTO 组 FSD 施工毕+CTO 验收 PASS·毕报经 BOD 转 CEO；本席知情源=CTO 知情信（收信现查 11:43:25）——CEO 直令面闭环在先·本席台账收口在后·知会链如实录。
+
+二、**本席独立验真毕**：TC 仓九笔全在链逐笔对表——发现 27=babe7de（CEO 点名项·notify_done --notify-to 缺省链对齐迁移器 env 双址谱·14 案）·12=bcce338（close 扫描域扩 dce.json·五件→七件形·21 案）·21/22=88418b6（migrate rc=3 候裁态特判 verdict=halt_pending_ruling·停段行为不变零豁免·15 案）·4=c36760d（run_plan kind is_dir 实值·27 案）·30=5a40048（classify_dir reason 码拆两态 authorization_active/unparsable·28 案）·7=5eefc00（migrate cmd cd 前缀锚位换真源 tc_root·CTO 裁 A·16 案）·24=2d71448（shift_carry_over L67 死变量删·29 案）·29=4b66ce6（commit pathspec 抽单一真源 MIGRATION_FACE·dce16+preflight22 案）·连带 fixture=e4fea56（发现 12 七段齐 fixture·补后全量 157 案全 OK）；CTO 验收注记主卷 **62bdafa5c TMV 仓在链验真**（八/八+连带全收 PASS·重点三笔 diff 亲验过·十一件 157 案独立重跑逐件对表零差+smoke 既有 3 案口径差闭合+validation 基线零漂）。CAO 承领笔旁证在链（76dcaa3·CEO 11:16 令定性承领→lg-ruling-terms.md 条款册立册）。
+
+三、**台账收口落笔**：栏二八项+连带 fixture=**今日毕销项**·周日树候件列**减八项**；保留面两项维持周日 γ 序位不变（发现 28 d 施工+qualify 注记·候新会签小件授权面·关键路径）。**P-Gate 4 hash 锚过时面再前移**：TC 顶现=e4fea56（0f1fa1f→780730b→八项九笔→e4fea56·共前移 12 笔）——周日新会签小件升锚面记录值随之更新（SDE 知悉更正随发·统一升锚口径不变）。18:00 分拣窗对表周日树候件列新形（原候件列−8+保留两项+impl 树既有候件）。 @m-cto @m-fsd @m-cos @m-sde
