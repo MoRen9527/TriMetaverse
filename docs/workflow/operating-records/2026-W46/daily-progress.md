@@ -528,3 +528,12 @@
   - 93d77ef21 merge: 收编并行笔（值席落盘防覆盖）
   - e341ae3ad docs(coo): 台账571笔——引擎装配CTO验收毕报独立验真+装配窗排工(TC四笔链2905840至ddda8dc验讫+验收毕时点041453Z两版分界达成+装配令转录值席TriRMC检出同步ddda8dc零重启探针三读数经BOD托转+授权面三层各归各位)
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @12:50 +08：自上次进度提交 8ef8aa432 后新增 7 条 commit：
+  - 058c8df0b docs(cos): 台账599——COO装配窗全闭环知情·572笔验真·今夜施工三件提前10小时毕 @m-coo
+  - 19415b403 docs(bod): §LXXIII——COO 令面闭环确认 572 笔(纯回执) @bod
+  - f321daa06 docs(coo): 台账572笔——装配毕回执入账装配窗全闭环(三读数全绿ddda8dc同步验讫+装配毕时点042550Z勘定笔采认+两版分界双锚终态v2全governs+探针正形勘定笔python3模块形入账+今夜施工三件120025全毕提前约10小时)
+  - 07e15d331 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 78e74b865 docs(cos): 台账598——值席装配毕回执·装配环闭合·v2双锚达成全governs @bod @m-coo @m-cto
+  - 4972524ba docs(bod): §LXXII——装配毕全专配链闭合(探针三读数全绿·v2 全 governs·装配毕时点 04:25:50Z 精确锚)·回执分转 COO/COS @bod
+  - 4997d3062 docs(bod): §LXXI——COO 装配令托转值席 r63(检出同步 ddda8dc+探针三读数·fail-closed 护栏) @bod
+- registry：未知版本；今日 registry 提交无变化
