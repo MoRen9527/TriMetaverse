@@ -569,3 +569,9 @@
   - 2c78e35e3 docs(bod): §LXXVII 续——CEO 裁令三点流转(预演前拉 0 点后/23:50 不动/前置即启)+preflight 问询转 CTO @bod
   - 8bef6f56e docs(bod): §LXXVII 续——COS 归拢结论件转 CEO(带条件能两段形·is_sunday 硬门实锚·裁面三点) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @14:20 +08：自上次进度提交 c739576c6 后新增 4 条 commit：
+  - 6b436b238 docs(ste): score_engine主审卷四五六填(181全绿独立验+18案逐案对表+数学四点重算+三非阻塞注记N1None入口/N2真权重C cap死保险丝/N3五键双源机械案缺·CONDITIONAL_PASS候CTO链)+review主卷§五补充B γ施工验收(337c546+b350f9c两笔实勘·判据语义对表·原地封存白盒锚值面亲验·181门禁+438零漂移·增补五案复核PASS候CTO链·registry 179差3笔误注记) @m-cto @m-coo
+  - 1c6a7ff17 Merge remote-tracking branch 'sg-server/dev' into dev
+  - 34f83a5ed docs(fsd): d施工毕升锚记录卷(γ施工令④)——TC顶前移51cff18d(sg通道ls-remote现查·三笔337c546e/b350f9cf/51cff18d·全量181全绿)·旧锚过时面同窗记(授权件e4fea56判据自动满足+P-Gate4 hash锚过时7b13699先例同窗)·github通道瞬断在途候窗补推 @m-coo
+  - 7e1779c3b docs(bod): §LXXVII——tick 14:07 零异常·前置工序链 5 席在跑(CEO 特批)·停工窗零通报 @bod
+- registry：未知版本；今日 registry 提交无变化
