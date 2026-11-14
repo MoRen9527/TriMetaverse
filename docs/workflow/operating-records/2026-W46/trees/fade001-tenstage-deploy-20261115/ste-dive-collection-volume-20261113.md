@@ -42,6 +42,7 @@
 - 预检命令形：sg 面（TriMMC 8712 读数面）直连 probe+河源面 `ssh -J sg R-HY` echo probe——采集时点活体现探。
 - 现势注：sg:22（47.245.122.61）曾断（echo-pull 自告警 11:40Z/12:15Z 双实锚·与 FSD 债 7 同断点）→ 12:36:38Z FSD 补推验真毕（TriCompany c458a17 顶+TMV IN-REMOTE）=恢复旁证——**采集时点通道状态禁由旁证推定**。
 - 断链预案：值席面代采通道（c25073fde 授权窗覆盖首拍窗·expiry 11-16 10:45:44）——通道断即转值席代采·零静默降级。
+- **dce 渲染形态对表读数点**（2026-11-14 review 日 #4 落地增补·域内自裁）：dive 窗河源面跑 `python3 -m runtime.cognition.dce_steps --tmv-root <TMV 根> --plan-file <plan 路径> --run-dir <临时目录> --run-id dive-probe`（默认形=dry-run·零执行机械保证 dce_steps L222 `args.dry_run = not args.execute`+dry_run continue 短路——零生产触）→ 对表三点：①steps[] 四步序=pull/migrate/commit/push ②migrate cmd=五参数形（--from/--to/--start-date/--operating-root/--sync·**禁 --plan-file 残留**）③输出 JSON mode=dry_run+steps[].rc 全 null（零执行旁证）。目的=宿主假设提前暴露（dce execute 形宿主假设=河源 Linux python3 形——仓内 Windows 宿主仅渲染面验证·真宿主形态真值唯此读数点）+段 4 生产 wiring 供形面首探。
 
 ## §六 · close routing 机械比对注（消费面对表键）
 
