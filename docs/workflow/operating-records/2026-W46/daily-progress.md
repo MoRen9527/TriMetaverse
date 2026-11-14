@@ -498,3 +498,19 @@
   - 0b9f207de docs(fsd): 栏二八项毕报卷落树——CTO派工单八/八全毕(逐项SHA台账+全量十一件157案全绿+validation族438/5/1五案名独立验零漂移)·发现7候裁裁A收口在卷·发现12连带fixture捉获修复如实报·推送面e4fea56双通道双验 @m-cto @m-coo @bod
   - 7ef84079e docs(bod): §LXII——条款册必要性释(与纪律册/台账/治理文档分工·窄门收录判据防膨胀) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @12:00 +08：自上次进度提交 7869c35fa 后新增 14 条 commit：
+  - 8b426759b docs(coo): 台账570笔——生效锚闭环COS独立验真同读(595笔726367cce知情)+两版分界锚内化(今夜验收毕报时点=v2governs切换触发点毕报面带验收毕时点一句供值席注记对齐)+593双hash口径一致确认
+  - 726367cce Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - ac17e3c7b docs(cos): 台账595——并件授权件生效锚达成f14465808独立验真+BOD两版分界锚增并入账 @m-coo @bod @m-cto
+  - dfc8a495e docs(cos): v2勘正二次对表毕——两版分界注记落锚卷(v1装配毕前governs engine_absent=预期态零误报/v2装配毕+CTO验收毕后governs段6三态executed_ok/executed_failed/engine_absent缺件态专用+run_state ok≠评分pass verdict独立判读)+其余四行不变r61条款照旧 @m-cos @bod
+  - f4f6a5dfe docs(bod): §LXVIII——知情件 v2 勘正毕·托转62值席二次对表(两版分界锚防今夜误判·三源请求合流) @bod
+  - f14465808 docs(coo): 台账569笔——并件授权件COO会签落卷=生效锚(验真四项全过令链对表+expiry机械验算11145321+72h+触点排除五条齐+升锚e4fea56对表+scope两组触点解锁d施工组加引擎装配组开工·mount-gate双签链正形fail-closed生效)
+  - 67bae2737 docs(cos): 台账594——并件授权件首签+CTO知情件v2勘正毕+派工链现势并记 @m-cto @m-coo
+  - 97b3878f1 docs(ste): score_engine主审卷骨架落卷——CEO直令链承接(§一边界遵行+裁词四条内化)+候审基座侦察(§一现役三文件锚点:engine入口契约硬锚run_score全kw四参/连带案修必然面=test_score_cli案5沙箱前提崩塌须保absent防回退案/考卷运行时读零复制)+§二七族案型主审判据框架+§三四五读数区零预写候FSD毕报 @m-cto @m-fsd
+  - 9e310f5f0 docs(cto): 首拍知情件 v2 勘正——引擎实弹形态改写（§二#1+判读表段6两行+§五候批面·CEO 11:45:54 主令·候BOD托转值席二次对表）@m-cos @m-ste
+  - 0093c2e99 docs(cos): 全专配并件授权件首签——d施工组+引擎装配组两组scope·expiry 11-17T11:53:21·COO会签=生效锚候 @m-coo @m-cto @m-fsd @m-ste
+  - 3dd34a8e1 docs(coo): 台账568笔——并件scope终形定谳+今夜排工定谳入账(覆盖两组d施工组加引擎装配组+排除四条零生产触+旧停令解除注记+payload两态分支预登记判读权CTO+定谳信97188d3b回执c7256ae4双发讫COS593回执在链)
+  - 0de20fe57 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 21a5dbc4e docs(cos): 台账593——COO并件scope终形定谳+今夜排工+payload分支预登记·底本改形即启 @m-coo
+  - 80268f235 docs(bod): §LXVII——COO scope 终形定谳(两覆盖组+排除四条+停令解除注记+payload 两态预登记)·会签候 COS 底本毕 @bod
+- registry：未知版本；今日 registry 提交无变化
