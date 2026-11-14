@@ -1,0 +1,55 @@
+{
+  "treeId": "fade001-tenstage-deploy-20261115",
+  "week": "2026-W46",
+  "task": "FADE-001 全专配完整形并件授权——d 施工组+引擎装配组并件施工（CEO 11:45:54 直令·预演升级全专配完整形·COO 并件 scope 终形定谳 2026-11-14T11:51:33·COS 台账 591/593 笔）",
+  "authorizedAt": "2026-11-14T11:53:21+0800",
+  "expiresAt": "2026-11-17T11:53:21+0800",
+  "expiryRule": "authorized_at+72h 机械运算（原值见本件 authorizedAt/expiresAt 值面）",
+  "issuer": {
+    "seat": "COS（m-cos）",
+    "role": "起草+首签",
+    "signCommit": "本件首签 commit（见 git log 本文件首笔）"
+  },
+  "coSigner": {
+    "seat": "COO（m-coo）",
+    "role": "会签=授权生效锚",
+    "status": "候会签——本笔会签落卷 commit 即生效锚（生效后 scope 两组触点按本件解锁·mount-gate 纪律遵行）",
+    "signedAt": null,
+    "cosignNote": "候 COO 会签自补（验真四项：令链原文对表/expiry 机械验算/触点排除项齐/升锚面记录值对表）"
+  },
+  "orderChain": [
+    "CEO 2026-11-14 11:45:54 直令（BOD 11:47 规范表述五点流转·COS 台账 591 笔 e5413b692）：明天 10:00 预演升级全专配完整形——fade-001 专配完成+试卷+评分都要有+score 引擎装上；预演目的三重=a 完整迁移整体效果评估/b FADE 规范实现完整度验证/c 完全按规范实现的 FADE 能否靠谱完整一件工作；今夜施工面=score_engine 装配+试卷在位+段 6 实弹接线+测试门禁；d 施工 γ 序位不变=预演窗头部；授权面=新会签授权件（d 施工+引擎装配并件）COS 起草+COO 会签候落",
+    "COO 2026-11-14 11:51:33 并件 scope 终形定谳（COS 台账 593 笔 0de20fe57·567 笔 b68738dd0 升级定谳）：scope 两组覆盖+触点面+排除四条+expiry 形+旧停令解除注记——本件 §scope 照录"
+  ],
+  "executor": {
+    "seat": "d 施工组=FSD+STE（CTO 直发令面施工·565 笔停令对并件 scope 面解除·scope 外维持停令增量零容）·引擎装配组=CTO 面施工（今夜 score_engine 装配+试卷在位锚定+段 6 实弹接线+测试门禁）·验收=COO（今晚 20:00-21:00 窗+毕报即到即验双轨）·质量门=STE（测试门禁）",
+    "progressAnchors": "候施工段随动补"
+  },
+  "scope": {
+    "productionTouchPoints": [
+      "d 施工组（TriCompany 仓）：verify.py 判据面勘修（发现 28 判据面——对表域改旧周 trees/ 目录存在性·原地封存语义）+test_verify.py 测试案增补+全量测试跑+qualify.py 注记+升锚面",
+      "引擎装配组（TriCompany 仓）：score_engine 装配+试卷在位锚定（rubric 7b13699 锚定形态直接用）+段 6 实弹接线（dce_steps 段 6 调用链真调用非 mock）+测试门禁（STE 面）",
+      "升锚面记录值=TC 顶≥e4fea56（COO 590 笔定谳现顶形·0f1fa1f→780730b→八项九笔共前移 12 笔）",
+      "全量测试门禁跑+TriCompany 仓 commit/push 通道"
+    ],
+    "exclusions": [
+      "payload/jobs.json 现役面零触（若需换形 PATCH 归预演窗工序·分支 B 候 CTO 装配毕对表定谳·COO 分支预登记）",
+      "daemon 面零触（8713 不动）",
+      "段 6 接线限 TriCompany 仓内调用链·其余段编排面零触",
+      "rubric 考卷实件零改卷（7b13699 锚定形态直接用）",
+      "scope 外维持 FSD 停令增量零容（停令对并件 scope 面解除·565 笔注记）"
+    ]
+  },
+  "pretriageGoals": [
+    "完整迁移整体效果评估",
+    "FADE 规范实现完整度验证",
+    "完全按规范实现的 FADE 能否靠谱完整一件工作"
+  ],
+  "references": [
+    "CEO 令锚=COS 台账 591 笔 e5413b692（CEO 原话+BOD 五点全录）",
+    "COO 终形定谳=COS 台账 593 笔 0de20fe57（567 笔 b68738dd0·scope 两组+排除四条+停令解除注记）",
+    "payload 两态分支预登记=COS 台账 592/593 笔（判读权=CTO 装配毕对表定谳）",
+    "先例形=fade001-phase2-build-20261113/authorization.json（mount-gate 双签链正形）+本树 authorization.json@9657bb3e5（预演授权件·并存 scope 各明）",
+    "首拍预期态勘正链=trees/fade001-tenstage-deploy-20261115/cto-firstshot-expected-state-brief-20261114.md a1afad0ca（候 CTO 勘正版·engine_absent 预期态废止）"
+  ]
+}
