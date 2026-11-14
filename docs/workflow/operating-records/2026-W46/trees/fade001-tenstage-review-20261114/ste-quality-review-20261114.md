@@ -61,7 +61,7 @@
 | 4 | 栏二注 | 非阻塞·宿主面 | dce execute 形宿主假设=河源 Linux（python3 形/sg-bare remote 均河源面）——仓内 Windows 宿主仅渲染面验证 | **已落地（db439f2cf）**：dive 窗预检加「dce 渲染形态对表」读数点（采集卷 §五 增补·河源面默认 dry-run 零生产触·对表三点=四步序/五参数形/mode= dry_run 旁证） |
 | 5 | 知情 | — | 段 1/2 集成=模拟卷（G4 债 3）+段 6 生产真值候实弹（declaring 段 6/9 注记）——既有项如实维持 | 首拍收口点不变 |
 | 6 | 知情 | 非阻塞·毕报笔误 | FSD 17c71ea86 毕报文字「既有12案全fixture自构」——7b13699 前基线机械定谳=`git show 7b13699^:…test_score_rubric.py \| grep -c`=**10**（毕报把加后总数当既有数）·现役 12=10+2 自洽·零判据影响 | 本卷 §二 段 7 行按机械清点 12 案落卷（毕报笔误如实注·测试真值以本席独立清点为锚） |
-| 7 | 栏二 | 非阻塞·描述面（RDT 栏一两项复核定性·本席测试面复核） | ①dce_steps.py L37 `import shlex` 全文零使用=死 import 属实（grep 定谳·零行为影响）②plan_scope.py L24 模块 docstring「M∪K∪C=S」三集形=设计期口径残留 vs 实装 L185 bidirectional_check+断言逻辑=M∪K=S 两集形自洽（RDT 文档 L116 写两集形与实装一致·零错）——两项均零行为影响·**但文件面=dce_steps/plan_scope 系部署树 payload 供形件链（0f1fa1f 槽位①锚定面）·今日改即动槽位锚定面** | 两项并族挂周日 deploy 树候件列「顺手清族」（同窗改+同窗升锚·RDT 原记栏一→本席复核建议改挂栏二·归属按 charter §四 候 COO+CTO 会商定） |
+| 7 | 栏二 | 非阻塞·描述面（RDT 栏一两项复核定性·本席测试面复核·**CTO 复裁定谳 10:40 信采认**） | ①dce_steps.py L37 `import shlex` 全文零使用=死 import 属实（grep 定谳·零行为影响）②plan_scope.py L24 模块 docstring「M∪K∪C=S」三集形=设计期口径残留 vs 实装 L185 bidirectional_check+断言逻辑=M∪K=S 两集形自洽（RDT 文档 L116 零错）——两项零行为影响·锚定面维度=供形件链（CTO 精度勘正吸收：payload md5 4e1c7df5 锚对象=payload 文本串不含 py hash·py 改动零漂该 md5——**真漂移面=TC 顶版本锚+河源 L15 `git pull --ff-only origin dev` 周日拍自动生效面**）·裁栏二实质=今日树授权语义（review 面非施工面）+锚定卫生 | **CTO 复裁=栏二采认**（qualify.py 连带改判·三件并入周日树新会签小件 scope 与 verify.py d 施工同 commit+同窗升锚·b1d1419f3 发现 33）——**780730b 既成事实注记**：FSD 小修包两案（案A+案B）已施工在链（10:36:55·先于 COO 暂停信约 10 秒=合法竞态留档·本席独立验 40 案 OK+validation 438/5/1 零漂移）——处置（追认既成/回退全挪）候 COO+CTO 对表·本席零裁随判随验 |
 
 ### §五补充 A · FSD 栏一施工双笔验收（STE 测试面·验收毕 11-14）
 
