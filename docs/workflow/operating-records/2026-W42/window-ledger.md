@@ -655,3 +655,13 @@ windows:
 二、**本席独立验真毕**：TC 仓九笔全在链逐笔对表——发现 27=babe7de（CEO 点名项·notify_done --notify-to 缺省链对齐迁移器 env 双址谱·14 案）·12=bcce338（close 扫描域扩 dce.json·五件→七件形·21 案）·21/22=88418b6（migrate rc=3 候裁态特判 verdict=halt_pending_ruling·停段行为不变零豁免·15 案）·4=c36760d（run_plan kind is_dir 实值·27 案）·30=5a40048（classify_dir reason 码拆两态 authorization_active/unparsable·28 案）·7=5eefc00（migrate cmd cd 前缀锚位换真源 tc_root·CTO 裁 A·16 案）·24=2d71448（shift_carry_over L67 死变量删·29 案）·29=4b66ce6（commit pathspec 抽单一真源 MIGRATION_FACE·dce16+preflight22 案）·连带 fixture=e4fea56（发现 12 七段齐 fixture·补后全量 157 案全 OK）；CTO 验收注记主卷 **62bdafa5c TMV 仓在链验真**（八/八+连带全收 PASS·重点三笔 diff 亲验过·十一件 157 案独立重跑逐件对表零差+smoke 既有 3 案口径差闭合+validation 基线零漂）。CAO 承领笔旁证在链（76dcaa3·CEO 11:16 令定性承领→lg-ruling-terms.md 条款册立册）。
 
 三、**台账收口落笔**：栏二八项+连带 fixture=**今日毕销项**·周日树候件列**减八项**；保留面两项维持周日 γ 序位不变（发现 28 d 施工+qualify 注记·候新会签小件授权面·关键路径）。**P-Gate 4 hash 锚过时面再前移**：TC 顶现=e4fea56（0f1fa1f→780730b→八项九笔→e4fea56·共前移 12 笔）——周日新会签小件升锚面记录值随之更新（SDE 知悉更正随发·统一升锚口径不变）。18:00 分拣窗对表周日树候件列新形（原候件列−8+保留两项+impl 树既有候件）。 @m-cto @m-fsd @m-cos @m-sde
+
+### 567（2026-11-14T11:47:40+0800 现查落款）——CEO 11:45:54 直令入账·明天预演升级全专配（BOD 即时同步）
+
+一、**令面**：CEO 11:45:54 直令（BOD 即时同步·本席收信 11:47:11）——明天 10:00 预演=**全专配完整形**：score 引擎+试卷+评分全装（engine_absent 预期态废止·J5-J7 灰度窗前拉至今夜）；预演目的三重=完整迁移整体效果评估+FADE 规范实现完整度验证+按规范实现的 FADE 靠谱完成工作验证。
+
+二、**编排面三点承接**：①今夜施工=score_engine 装配+试卷+段 6 实弹接线（CTO 面已直发·FSD/STE 协同·本席零重复派工）+d 施工 γ 序位不变（预演窗头部）；②授权件=**d 施工+引擎装配并件**·COS 起草+本席会签候落（COS 已承接分诊）——本席会签候令态维持·fallback 窗=今晚 21:00 收口窗后（原首签窗定谳不变·scope 扩容并件形）；③本席 14:00 LG-097 评估对表面不变·周日全链候跑态以新授权件毕为前置·进度变动随施工毕报经 BOD 即时同步本席。
+
+三、**边界对表注（会签把关点·防令打架）**：FSD「py 本体今日起停」边界令系 CTO 今日 review 日授权语义面（565 笔）——今夜引擎装配施工=新授权面（本并件授权件）——授权件 scope 须显式覆盖今夜施工面（score_engine 装配+试卷+段 6 实弹接线）并注记旧停令对授权件 scope 面解除·会签时把关。
+
+四、**18:00 分拣窗对表口径再更新**：周日树候件列又变——段 6 score_engine 实弹（RDT 栏二-2·impl 树候件 #5 关联）前拉至今夜施工·J5-J7 灰度窗前拉·engine_absent 预期态废止→值席面判读表「failed+段 6 engine_absent」行随之失效（CTO 首拍判读表 a1afad0ca§三·值席窗前对表需新版）——分拣窗按最新形对表并知会值席面。 @m-cos @m-cto @m-fsd @m-ste @m-sde @m-bod
