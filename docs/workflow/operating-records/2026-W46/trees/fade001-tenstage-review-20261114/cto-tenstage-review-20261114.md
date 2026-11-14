@@ -38,7 +38,7 @@
 
 - 骨架面：四步表+rc_guard 拦停+每步读数落卷+zero-diff 防线+vB 识别式消息——部署树窗生产形精化（--plan-file 勘正）已并入。
 - **发现 7（健壮性·中）**：migrate 步 cmd_tmpl 无 `cd`/`-C` 前缀——`python3 -m runtime.cognition.weekly_plane_shift` 依赖隐式 cwd 继承（payload 前段 cd /srv/fleet/TriCompany）。pull/commit/push 三步均带 `-C {tmv_root}` 显式锚·独 migrate 步裸依赖 cwd——风格不一致+隐式依赖。set -e 下 cd 败会拦·但若未来 payload 重排（cd 段移位）即断。**栏二候选**：cmd_tmpl 改 `cd {tmv_root} && python3 -m ...`。
-- **发现 21/22（语义面·合并粒度粗化）**：rc_guard 只判非 0——迁移器 weekly_plane_shift 实际 rc 族={0,1,3,4}（3=分叉候裁·4=notify 面失败）全被合并为「段 4 失败」——rc 3（分叉候裁·本应路由 COS 面）与真迁移失败在 dce.json 读数面不可分·stderr_tail 唯一辨析面。**栏二候选**：rc 3/4 特判分支（rc=3 → dce verdict=halt_pending_ruling+读数标注路由面）。
+- **发现 21/22（语义面·合并粒度粗化）**：rc_guard 只判非 0——迁移器 weekly_plane_shift 实际 rc 族={0,1,3,4}（3=分叉候裁·4=notify 面失败）全被合并为「段 4 失败」——rc 3（分叉候裁·本应路由 COS 面）与真迁移失败在 dce.json 读数面不可分·stderr_tail 唯一辨析面。**栏二候选**：rc 3/4 特判分支（rc=3 → dce verdict=halt_pending_ruling+读数标注路由面）。——【裁词定谳·CEO 11:16 直接开工令随】rc=3 特判**立**（verdict=halt_pending_ruling·读数定性保真：失败→修复链/候裁→COS 裁决链·合并=处置路由丢失；**停段行为不变**零豁免零 escape·门不豁免哲学不破）·rc=4 维持布尔拦不特判（特判稀释读数）——归直接开工批③派 FSD 施工。
 
 ### 段 5 verify（verify.py 258 行·test_verify.py）
 
@@ -104,16 +104,18 @@
 
 | 项 | 内容 | 施工窗 |
 |---|---|---|
-| P0 | 发现 28：verify 判据面勘修（d 方向·候会商定谳）+测试案 | 周日窗序 6 前·SDE+STE+CTO 验收 |
-| P1 | 发现 21/22：dce_steps migrate rc 3/4 特判（分叉候裁读数面） | 周日树候件·候排程 |
-| P1 | 发现 12：close_skill 清单扩 dce.json+close_cli _STAGE_ORDER 同步 | 周日树候件·候排程 |
-| P2 | 发现 4：plan_scope kind 恒 dir 散文件错标 | 候排程 |
-| P2 | 发现 27：notify_done 收件面 precedence 统一 | 候排程 |
-| P2 | 发现 30：classify_dir reason 码拆两态 | 候排程 |
-| P2 | 发现 7：dce_steps migrate cmd cd 前缀显式化 | 候排程 |
-| P3 | 发现 24：weekly_plane_shift L67 死变量删行 | 候排程 |
-| P3 | 发现 33「顺手清族」（STE 会商并入·C1/C3 改判归此）：dce_steps.py L37 死 import shlex 删行+plan_scope.py L24 docstring 勘正（发现 32 勘正形）+qualify.py git identity 断言语义注记（发现 6）——**周日窗与 d 施工同 commit+同窗升锚**（供形卷版本锚补录·一次施工一次升锚） | 周日树候件·并入新会签小件 scope |
-| P2 | 发现 29：git hygiene 路径清单单一真源锚 | 候排程 |
+| P0 | 发现 28：verify 判据面勘修（d 方向·候会商定谳）+测试案 | 周日窗序 6 前·SDE+STE+CTO 验收（**γ 序定谳序位·关键路径非候排程**·候新会签小件授权面落件） |
+| P1 | 发现 21/22：dce_steps migrate rc 3/4 特判——裁词已定（rc=3 立判·rc=4 维持拦·见 §二段 4 注） | **直接开工批③** |
+| P1 | 发现 12：close_skill 清单扩 dce.json+close_cli _STAGE_ORDER 同步 | **直接开工批②** |
+| P2 | 发现 4：plan_scope kind 恒 dir 散文件错标 | **直接开工批④** |
+| P2 | 发现 27：notify_done 收件面 precedence 统一 | **直接开工批①（CEO 点名）** |
+| P2 | 发现 30：classify_dir reason 码拆两态 | **直接开工批⑤** |
+| P2 | 发现 7：dce_steps migrate cmd cd 前缀显式化 | **直接开工批⑥** |
+| P3 | 发现 24：weekly_plane_shift L67 死变量删行 | **直接开工批⑦** |
+| P3 | 发现 33「顺手清族」（STE 会商并入·C1/C3 改判归此）：dce_steps.py L37 死 import shlex 删行+plan_scope.py L24 docstring 勘正（发现 32 勘正形）+qualify.py git identity 断言语义注记（发现 6）——**周日窗与 d 施工同 commit+同窗升锚**（供形卷版本锚补录·一次施工一次升锚） | 周日窗与 d 施工同窗（**并窗工序定谳·非候排程**·依赖=d 施工同 commit 同窗升锚） |
+| P2 | 发现 29：git hygiene 路径清单单一真源锚 | **直接开工批⑧** |
+
+> 【勘正注记·CEO 11:16 令·BOD 转达·本席 11:1x 收令】「候排程」挂法废止（11-03 令三现行口径=有活就干顺序推进·完成即报）——栏二除两项保留面外全改**直接开工批**（八项·派工单已发 FSD msg f28acfeb·每项独立 commit·全量十一件 test 绿为毕报锚·本席验收后毕报经 COO/BOD 转 CEO）。保留面两项（P0 发现 28 d 施工+P3 顺手清族 qualify 注记）=γ 序关键路径序位/并窗工序定谳·依赖面已注明·非候排程形态。发现 21/22 分叉本席裁词随勘（§二段 4 注·rc=3 特判立/rc=4 维持拦）。
 
 ### 既有候件列并入盘点（charter §四「如实挂账零遮掩」）
 
