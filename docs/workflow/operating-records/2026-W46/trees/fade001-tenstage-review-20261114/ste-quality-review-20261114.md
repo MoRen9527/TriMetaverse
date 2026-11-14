@@ -58,9 +58,10 @@
 | 1 | 栏二 | 非阻塞·覆盖缺口 | **execute 形端到端真跑链仓内零覆盖**——集成绿路案段 4 走 dry-run 渲染面（G4 债 2 同族）·真跑四步（pull/migrate/commit/push）全链无仓内案；0f1fa1f 参数面错位即此缺口的实证（--execute 必 exit 2·G4 案未暴露）。**落卷后演进（10:21 FSD 24365ac 栏一施工）**：mock 级缺口已闭合双案（flags_subset 双源对表+execute 传递同源·本席验收 ✓ 见 §五补充 A）——残余=真 subprocess 端到端（mock 全零 rc 不触真 git/python3） | 部署树窗实走偿还（段 4 生产 wiring 份额·已属周日树候件列既有项·性质注更新：渲染面↔execute 链同源已机械钉死·真跑链唯一真值面=部署树窗实走） |
 | 2 | 栏二 | 非阻塞·描述面 | rubric-firstshoot.json G 族 close_layer「单测 135 案」时点漂移（现役 140） | 候考卷维护窗（CPO/PM 面改卷制·本席零越界）——deploy 树候件列注记 |
 | 3 | 栏一候选 | 非阻塞·增强 | OVERFLOW_CHECKS 三判据 checked=False 骨架态（G3 债 2 沿承） | 部署树窗真值对表（既有偿还计划不变） |
-| 4 | 栏二注 | 非阻塞·宿主面 | dce execute 形宿主假设=河源 Linux（python3 形/sg-bare remote 均河源面）——仓内 Windows 宿主仅渲染面验证 | dive 窗预检可加「dce 渲染形态对表」读数点（本席采集卷 §五 命令形扩展候选·域内自裁候下午段定） |
+| 4 | 栏二注 | 非阻塞·宿主面 | dce execute 形宿主假设=河源 Linux（python3 形/sg-bare remote 均河源面）——仓内 Windows 宿主仅渲染面验证 | **已落地（db439f2cf）**：dive 窗预检加「dce 渲染形态对表」读数点（采集卷 §五 增补·河源面默认 dry-run 零生产触·对表三点=四步序/五参数形/mode= dry_run 旁证） |
 | 5 | 知情 | — | 段 1/2 集成=模拟卷（G4 债 3）+段 6 生产真值候实弹（declaring 段 6/9 注记）——既有项如实维持 | 首拍收口点不变 |
 | 6 | 知情 | 非阻塞·毕报笔误 | FSD 17c71ea86 毕报文字「既有12案全fixture自构」——7b13699 前基线机械定谳=`git show 7b13699^:…test_score_rubric.py \| grep -c`=**10**（毕报把加后总数当既有数）·现役 12=10+2 自洽·零判据影响 | 本卷 §二 段 7 行按机械清点 12 案落卷（毕报笔误如实注·测试真值以本席独立清点为锚） |
+| 7 | 栏二 | 非阻塞·描述面（RDT 栏一两项复核定性·本席测试面复核） | ①dce_steps.py L37 `import shlex` 全文零使用=死 import 属实（grep 定谳·零行为影响）②plan_scope.py L24 模块 docstring「M∪K∪C=S」三集形=设计期口径残留 vs 实装 L185 bidirectional_check+断言逻辑=M∪K=S 两集形自洽（RDT 文档 L116 写两集形与实装一致·零错）——两项均零行为影响·**但文件面=dce_steps/plan_scope 系部署树 payload 供形件链（0f1fa1f 槽位①锚定面）·今日改即动槽位锚定面** | 两项并族挂周日 deploy 树候件列「顺手清族」（同窗改+同窗升锚·RDT 原记栏一→本席复核建议改挂栏二·归属按 charter §四 候 COO+CTO 会商定） |
 
 ### §五补充 A · FSD 栏一施工双笔验收（STE 测试面·验收毕 11-14）
 
