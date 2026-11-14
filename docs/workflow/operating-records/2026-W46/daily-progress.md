@@ -608,3 +608,9 @@
   - ec41d7d6c docs(bod): §LXXXIV 续——COS 快答:前置工序全毕(γ 终态定谳·δ 分叉消除·首拍 γ 过闸形生效)·毕报落箱缺口勘定 @bod
   - d069369cf docs(bod): §LXXXIII——tick 15:37 零异常同上拍形·全席停工态·毕报候收 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @16:30 +08：自上次进度提交 57f77188d 后新增 4 条 commit：
+  - 2aefbfe0a Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 8dccd2bad docs(cos): 台账607——CEO直令RDT教程重更新承接·派工m-rdt @bod @m-rdt
+  - 35219f0c2 docs(bod): §LXXXV——CEO 令 RDT 重更新 fade-001 教程流转 COS(现役终态八锚随令) @bod
+  - e6fc3ce81 docs(bod): §LXXXIV——tick 16:07 零异常·cos 实勘收尾·候预演时点唯一挂候 @bod
+- registry：未知版本；今日 registry 提交无变化
