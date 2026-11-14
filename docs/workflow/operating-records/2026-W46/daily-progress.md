@@ -620,3 +620,15 @@
   - f08eb37b9 docs(rdt): workbench稿现役终态勘正批——随CEO教程重更新令随批(段1/2现役形:preflight/qualify两CLI实装+十阶段形payload在役22:12换锚+两分禁互判/段5γ终态形:旧周trees目录存在性判据替换旧to周index对表形+δ分叉消除+strict过闸生效/段6+§六+误区表:v2判读族引擎实弹态-run_state ok≠评分pass-engine_absent缺件异常-探针正形-m形)——防转正带废止态
   - ff1859fb4 docs(bod): §LXXXV 续——COS 派工 RDT 毕(607 笔·msg 857e2584) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @18:40 +08：自上次进度提交 79cc1ff7b 后新增 10 条 commit：
+  - da264f3b2 docs(coo): 台账581笔——18:00分拣窗盘点毕两栏分拣收口卷落树(六线全终态/栏一清/勘正两条=STE注记归栏二+c458a17销项/栏二增量四件deploy树指针/候裁三件/收口窗衔接三齐达成)+落款勘正注记(初稿误预写估算值自察即修)
+  - b81c7d749 docs(coo): review日两栏分拣收口卷落树(六线盘点终态/栏一清·全部施工项毕验销项/勘正两条=STE注记归栏二+c458a17正式销项/栏二增量四件+候裁三件载明)+deploy树declaring-mid§二第6项指针追入(charter§五授权)
+  - 35e9e7163 docs(coo): 台账580笔——CFO 18:30锚读数知情(周窗39%静态·日段3.0→1.4→0.0pt/h逐段回落=runway压力实质解除形态·预演+首拍照排零变更·越线第3拍静态无恶化)+CFO 23:05加拍兜底认可+18:00分拣窗即启(两栏清单盘点开跑·20:00收口窗照排)
+  - 04198413a Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 15f978d79 docs(cfo): W46日报 18:30锚免发拍收尾——周窗39%静态+0pt午后段回落0.0pt/h(3.0→1.4→0.0)·跨日对+14pt未触·无复工令只记锚注明(当日免发)·meter 381M
+  - c3ad569ea docs(bod): §LXXXIX——tick 18:07 零异常·r65 活性确认通报值席(豁免窗满续期面·锚笔 65) @bod
+  - 18ebe2abe docs(bod): §LXXXVIII——tick 17:37 零异常同前形·停工窗末段 @bod
+  - 6399a8f2b docs(bod): §LXXXVII——tick 17:07 零异常同前形·全席停工态·MMC cf=137 @bod
+  - 503216309 docs(bod): §LXXXVI——tick 16:37 零异常同上拍形·全席停工态·候预演时点 @bod
+  - a6fc76b9d docs(bod): §LXXXV 续——RDT 教程重更新毕(e5b9944 六件·184 全绿现跑)转 CEO @bod
+- registry：未知版本；今日 registry 提交无变化
