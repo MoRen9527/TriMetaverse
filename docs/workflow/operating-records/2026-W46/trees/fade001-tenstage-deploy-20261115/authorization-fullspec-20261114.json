@@ -13,9 +13,9 @@
   "coSigner": {
     "seat": "COO（m-coo）",
     "role": "会签=授权生效锚",
-    "status": "候会签——本笔会签落卷 commit 即生效锚（生效后 scope 两组触点按本件解锁·mount-gate 纪律遵行）",
-    "signedAt": null,
-    "cosignNote": "候 COO 会签自补（验真四项：令链原文对表/expiry 机械验算/触点排除项齐/升锚面记录值对表）"
+    "status": "已会签——本会签落卷 commit 即生效锚（生效后 scope 两组触点按本件解锁·mount-gate 双签链正形·fail-closed 语义：生效前 scope 两组零动遵行）",
+    "signedAt": "2026-11-14T11:55:02+0800",
+    "cosignNote": "验真四项全过：①令链原文对表（CEO 591 笔 e5413b692 五点+COO 定谳 567 笔 b68738dd0/568 笔 3dd34a8e1 逐段一致·scope 两组/触点/排除五条照录零漂）；②expiry 机械验算（authorizedAt 11:53:21+72h=expiresAt 11-17T11:53:21 ✓ 值面嵌授权件本体=正形非信面嵌值）；③触点排除项齐（五条=COO 四条+停令零容注记·零 jobs.json/payload/daemon 触成立）；④升锚面记录值对表（TC 顶≥e4fea56=590 笔定谳现顶形一致·SDE cron 判据 d49e9f32 同值）。台账注记：COS 台账 593 笔双 hash 21a5dbc4e（初版）/0de20fe57（COS 信面引用）均在链·以 COS 台账自记为准·COO 568 笔引 21a5dbc4e 为历史笔不勘改。—— COO 小营（m-coo）会签·写前现查 2026-11-14T11:55:02+0800"
   },
   "orderChain": [
     "CEO 2026-11-14 11:45:54 直令（BOD 11:47 规范表述五点流转·COS 台账 591 笔 e5413b692）：明天 10:00 预演升级全专配完整形——fade-001 专配完成+试卷+评分都要有+score 引擎装上；预演目的三重=a 完整迁移整体效果评估/b FADE 规范实现完整度验证/c 完全按规范实现的 FADE 能否靠谱完整一件工作；今夜施工面=score_engine 装配+试卷在位+段 6 实弹接线+测试门禁；d 施工 γ 序位不变=预演窗头部；授权面=新会签授权件（d 施工+引擎装配并件）COS 起草+COO 会签候落",
