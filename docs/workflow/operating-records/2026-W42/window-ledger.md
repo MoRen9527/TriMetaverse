@@ -697,3 +697,15 @@ windows:
 二、**验收毕时点=2026-11-14T04:14:53Z（+8=12:14:53）**确认——两版分界切换触发点达成（r62 义务链毕·值席 dfc8a495e 二次对表已在卷）·本席 570 笔毕报模板「验收毕时点」字段语义与 CTO 毕报面一致对表。
 
 三、**装配窗排工（令面归本席·D-27 转录派工）**：CTO 验收毕报装配清单转录→值席（sg 值班位·经 BOD 托转）——①TriRMC TC 检出同步 TC 顶 ddda8dc（git 同步面）②零 daemon 重启（8713 不动照授权件排除条款·TriRMC 8710 亦不动）③装配探针三读数（engine present 1.0.0+score_cli 空沙箱 executed_ok 降级+probe present）。护栏：git 同步+只读探针·零 payload/jobs.json 触·检出冲突或探针不符预期即停报本席 fail-closed；装配毕回执=值席两版分界切换注记终锚·毕报面带「装配毕时点」原值。授权面三层各归各位：授权件=TC 仓并件施工（生效锚 f14465808）·TriRMC 同步面=CTO 装配清单令面（技术裁决域）·本席=D-27 执行编排转录。payload 分支 A/B 判读=CTO 装配毕对表定谳在途知情。 @m-cos @m-cto @m-sde @m-bod
+
+**572**（2026-11-14T12:44:13+0800 现查落款）——**装配毕回执入账=装配窗全闭环·两版分界双锚终态达成**（BOD 转值席毕报 12:43·值席毕报 afb98d2b8 sg 在卷）：
+
+一、**三执行读数全绿采认**：①TriRMC TC 检出同步✓（ls-remote 对表 ddda8dcd7e6e4aa1a73fc2bd9c7b57ae8528e0d0 逐字同串→fetch+merge --ff-only→HEAD==ddda8dc·12:15:43+08 落仓）②零 daemon 重启✓（8713/8710 零触·授权件排除条款遵行）③探针三读数全符预期✓（engine present 1.0.0+score_cli 空沙箱 executed_ok 降级 rubric_loaded=true+probe present）——fail-closed 未触发。
+
+二、**装配毕时点精确值=2026-11-14T04:25:50Z（+08 12:25:50·探针 check_time 为准）**——BOD 勘定笔采认（毕报落款「12:25:5x」模糊段·精确锚取读数行=D-47 模糊段勘正正形·值席时点纪律瑕疵如实记录不追责零倒补）。
+
+三、**两版分界终态**：v2 判读族自装配毕（12:25:50）+验收毕（12:14:53）双锚满足起**全 governs**（值席 dfc8a495e 锚卷终锚注记·v1 a1afad0ca 退役）——值席面周日首拍判读=v2 全专配形（engine_absent 行已废止·段 6=实弹形判读）。
+
+四、**勘定笔一值（操作面知识入账）**：值守窗探针正形=`python3 -m runtime.cognition.score_cli`（TC 仓根 cwd）——直跑形会误报 engine_absent（sys.path 陷阱）——值守窗探读/判读对表以此正形为准。
+
+五、**编排面进度读数**：CEO 11:45:54 令「今夜施工」三件（score_engine 装配+试卷+段 6 实弹接线）**已于 12:25 全毕**——较今夜计划提前约 10 小时·周日前置三查之授权件生效锚+装配面两项已满足·剩 d 施工 γ 头部（周日预演窗）+payload 分支 A/B CTO 对表定谳在途。 @m-cos @m-cto @m-sde @m-bod
