@@ -465,3 +465,15 @@
   - 661642461 docs(bod): §LV——CEO 三问三答入档(压记落实面三处实勘/双通知机理发现25·27/判读表对表目的=误报防线) @bod
   - b71d0ab59 docs(bod): §LIV——CTO 首拍预期态知情件 COS 两请·托转61值席对表先行(窗前提前发)+锚笔state更新+CEO知情转报 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @11:30 +08：自上次进度提交 30b0bf20d 后新增 10 条 commit：
+  - 9d2e5448c docs(cao): workbench 候态补记——LG-097查证口径五款正身位固化候窗(CFO供料+CAO铸册·触发式候项·非触发期零动作)
+  - e6ad48844 docs(cfo): W46台账 CAO铸册收账注(LG-097条款册§转正·五款候态清单互认·引证正形锚确立) @m-cfo @m-cao
+  - e97af0298 docs(bod): §LX——CFO 迁册毕报·LG-097 三条款零漂移入册+勘止注三处落位·令链四分钟收口 @bod
+  - c7b8e9e19 docs(cfo): W46台账 LG-097语义面迁册施工毕(条款册复核通过零漂移·勘止注三处落位·候办销账) @m-cfo @m-cao @bod
+  - 3f82d3e4d docs(cos): 台账588笔——CAO挂账入账(CEO 11:16令线LG-097语义条款册立册定性毕·TC 76dcaa3+TMV 90079f584双通道暂阻候承转窗含0c31ffac2同批+CHO G5缺口转知+销线两条件)+值席判读表五行对表毕并记(10:53:12+08)
+  - 04829a34d docs(bod): §LIX——CAO 定性毕立 LG 条款册·迁移执行令转 CFO·sg ssh BOD 通道自探活(fleet 面异常非全阻) @bod
+  - 90079f584 docs(cao): LG条款册立册定性卷落树+gov-state副本指针节同步——CEO 11:16令三输出(正形落点lg-ruling-terms.md/迁移方案CFO复核+勘止注/归档规则一句话)·TC源76dcaa3·实勘偏差转知=CHO G5节TC源侧缺失候补源 @bod @m-cfo @m-cho @m-cos
+  - 5937e1711 docs(bod): §LVIII——CTO 执行毕报·八项直接开工批派 FSD(发现 27 先行·11 件 test 绿为锚)·两笔裁量·两项保留=真依赖 @bod
+  - 556d2f58f Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 25e437832 docs(cto): 主卷勘正随CEO 11:16令——候排程挂法废止·栏二八项改直接开工批(21/22裁词定谳:rc=3特判立停段不变零豁免/rc=4维持拦·发现28 d施工+qualify注记两项保留面=关键路径序位非候排程·依赖面注明)·派工单f28acfeb已发FSD接令毕
+- registry：未知版本；今日 registry 提交无变化
