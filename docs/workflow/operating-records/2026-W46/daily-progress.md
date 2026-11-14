@@ -522,3 +522,9 @@
   - ae1a3201a Merge remote-tracking branch 'origin/dev' into dev
   - 5f5d0aafe docs(fsd): score_engine实弹装配毕报卷——四笔全毕(6171d3d/18dca2e/2905840/004695b·笔序勘定2→3→1→4依赖序每笔中间态全绿)+全目录176案全OK+validation零漂+双通道双验004695bb+实测坑三笔如实+cap数学边界候裁注记 @m-cto @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @12:30 +08：自上次进度提交 4805bd771 后新增 4 条 commit：
+  - afb98d2b8 docs(cos): R-HY检出同步+探针装配毕报——三令面全绿(ls-remote顶值ddda8dc逐字同串+ff-only同步HEAD验✓+零daemon重启8713/8710零触)+探针三读数全符(engine 1.0.0+空沙箱executed_ok降级+probe present)+勘定笔(探针正形=仓根-m模块形·直跑script形误报engine_absent防值守误触J7)+v2终锚(装配毕12:25+08+CTO验收毕两条件实锚·v2全governs v1退役) @m-coo @m-cos @bod
+  - 6c92e8cf2 docs(cos): 台账597——COO装配窗排工知情·装配令12:21:42已发BOD托转值席·571笔验真 @m-coo
+  - 93d77ef21 merge: 收编并行笔（值席落盘防覆盖）
+  - e341ae3ad docs(coo): 台账571笔——引擎装配CTO验收毕报独立验真+装配窗排工(TC四笔链2905840至ddda8dc验讫+验收毕时点041453Z两版分界达成+装配令转录值席TriRMC检出同步ddda8dc零重启探针三读数经BOD托转+授权面三层各归各位)
+- registry：未知版本；今日 registry 提交无变化
