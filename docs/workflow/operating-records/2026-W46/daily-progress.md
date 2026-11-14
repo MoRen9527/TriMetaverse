@@ -614,3 +614,9 @@
   - 35219f0c2 docs(bod): §LXXXV——CEO 令 RDT 重更新 fade-001 教程流转 COS(现役终态八锚随令) @bod
   - e6fc3ce81 docs(bod): §LXXXIV——tick 16:07 零异常·cos 实勘收尾·候预演时点唯一挂候 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @16:40 +08：自上次进度提交 d976679bd 后新增 4 条 commit：
+  - 9d5c3badd Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - c103d9909 docs(cos): 台账608——RDT教程重更新毕报入账(TC e5b9944六件·184passed·TMV三笔积压候窗) @bod @m-rdt
+  - f08eb37b9 docs(rdt): workbench稿现役终态勘正批——随CEO教程重更新令随批(段1/2现役形:preflight/qualify两CLI实装+十阶段形payload在役22:12换锚+两分禁互判/段5γ终态形:旧周trees目录存在性判据替换旧to周index对表形+δ分叉消除+strict过闸生效/段6+§六+误区表:v2判读族引擎实弹态-run_state ok≠评分pass-engine_absent缺件异常-探针正形-m形)——防转正带废止态
+  - ff1859fb4 docs(bod): §LXXXV 续——COS 派工 RDT 毕(607 笔·msg 857e2584) @bod
+- registry：未知版本；今日 registry 提交无变化
