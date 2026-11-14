@@ -32,7 +32,7 @@
 - **发现 30（新·判读歧义源）**：classify_dir L106-108 `exp > now → migrate` 分支的 reason 码=`authorization_active_or_unparsable`——该码语义覆盖「未过期（active）」+「解析败（unparsable）」两态·判读歧义源（本席今日 mount-gate 判读亲历误判：凭 reason 码误推「解析败」·实际=未过期·时点敏感）。**栏一候选**：reason 码拆两态（authorization_active / authorization_unparsable）·纯读数面改动·但涉 TriCompany 现役代码=**栏二**。
 - **发现 31（新·时点敏感实证）**：migrate 构成随实拍时点漂移——mount-gate-build-20261111 authorization expiry=2026-11-14T10:47:00+08，过期前后推演读数翻转（migrate→keep）。周日实拍形态推演≈1（仅 phase1-build-20261114·auth 至 11-16T10:45+08）——**plan.migrate 非静态清单·预演读数对表须以实拍时点现值为准**。知情面·零改动项。
 
-- **发现 32（COO 会商项①并入·判据面口径差）**：plan_scope.py docstring L24 承诺「双向枚举断言：M∪K∪C=S（零遗漏）∧ 两两交=∅」·实现 bidirectional_check L182-199 只断言 migrate/keep 两集（M∪K=S ∧ M∩K=∅）·carry 集未进断言。语义面裁定：S 定义=L15「全集={from_week}/trees/ 全条目」·CARRY 行域=unresolved-items 文件（不同域·不在 S 内）→docstring「∪C=S」字面永假=表述含混非实现欠账。**裁词=docstring 勘正栏一**（勘正形：「M∪K=S（trees 域双向断言）∧ C 独立解析（unresolved-items 域·带状态去向·不进 S 断言）」·纯注释面零行为变更·FSD 可施工）。
+- **发现 32（COO 会商项①并入·判据面口径差）**：plan_scope.py docstring L24 承诺「双向枚举断言：M∪K∪C=S（零遗漏）∧ 两两交=∅」·实现 bidirectional_check L182-199 只断言 migrate/keep 两集（M∪K=S ∧ M∩K=∅）·carry 集未进断言。语义面裁定：S 定义=L15「全集={from_week}/trees/ 全条目」·CARRY 行域=unresolved-items 文件（不同域·不在 S 内）→docstring「∪C=S」字面永假=表述含混非实现欠账。勘正形：「M∪K=S（trees 域双向断言）∧ C 独立解析（unresolved-items 域·带状态去向·不进 S 断言）」。**【勘正 10:4x·STE 锚定面复核后改判】**初裁栏一（纯注释零行为）——STE 复核实锚两文件系部署树 payload 供形件链（dce_steps.py=0f1fa1f 槽位①关联明文·plan_scope.py=G 系供形链）·**改判栏二「顺手清族」**（周日 deploy 树同窗改+同窗升锚）——与发现 33 勘误一并成立。
 
 ### 段 4 dce_steps（dce_steps.py 241 行·test_dce_steps.py）
 
@@ -75,6 +75,8 @@
 
 ## §三 · 横切发现（段间衔接/架构面）
 
+- **发现 33（STE 会商并入·锚定面维度·10:4x 定谳）**：RDT 栏一两项（dce_steps.py L37 `import shlex` 死 import+plan_scope.py L24 docstring 三集形）经 STE 复核+本席实勘定谳——**两文件均在部署树 payload 供形件链内**：dce_steps.py=0f1fa1f 槽位①关联（commit message 明文「部署树窗 payload 供形件槽位①关联」·88 行变更实锚）；plan_scope.py/qualify.py=G 系供形链（G2 六件 CLI 骨架锚卷）。技术实质三层精度（STE 论证精度勘正）：①**payload md5 锚（4e1c7df5）锚对象=payload 文本串**（§六.3 25 行）——py 文件改动零漂该 md5（payload 按模块名调用不含文件 hash）——运行链面零影响成立；②真漂移面=**供形卷版本锚**（0f1fa1f/G 系记录的 py 形 vs dev 顶形）=卷面对表歧义源；③**河源 L15 pull 前置生效面**（payload L15 `git pull --ff-only origin dev`）——今日改 py 周日拍自动到河源=对周日实拍运行面的前置变更（哪怕零行为）。**裁定=改判栏二「顺手清族」**：周日窗与新会签小件同 commit+同窗升锚一次完成·今日树授权语义（review 记录面·phase1 树权 scope=席位面）不含 TriCompany 仓施工面·C1/C3 初裁栏一随之改判（口径自洽修正——charter §四「现役判据面一律栏二」宽读口径归一）。零行为影响定性两席一致（STE 复核+本席精读互证）。
+
 - **发现 25（双 close 域·预期态）**：ADE 面（.shift-ade.json·迁移器产物·_notify_shift 双址 blocking）+FADE 段产物域（close.json+manifest.json+notify_done）——首拍双通知并存=预期态。知情面·候首拍预期态知情件一并预对齐（与发现 9 同件）。
 - **发现 24（死变量·小）**：weekly_plane_shift.py L67 `from_md = operating_root / f"{from_week}" and None` 死变量残留行——零行为影响（赋值后未用）·**栏一候选**：删行·但涉 TriCompany 现役代码=**栏二**（与发现 4 同面）。
 - **发现 28 主条**（§二段 5 载·快报已发）——架构级唯一 P0 面。
@@ -91,9 +93,9 @@
 
 | 项 | 内容 | owner 候 |
 |---|---|---|
-| C1 | 发现 6：qualify git identity 断言语义注记（双保险说明·零行为） | FSD |
 | C2 | 发现 31/25/9/13 知情面：首拍预期态知情件起草（engine_absent+J7+双通知+run_state=failed 预对齐·交 COS/CEO 面） | CTO 本席起草 |
-| C3 | 发现 32：plan_scope docstring 双向断言表述勘正（M∪K∪C=S→M∪K=S（trees 域）∧C 独立解析·纯注释零行为·COO 会商项①裁词栏一成立） | FSD |
+
+（勘正注：初稿 C1（qualify 断言语义注记）/C3（plan_scope docstring 勘正）经 STE 锚定面复核**改判栏二顺手清族（发现 33）**——两文件均在部署树 payload 供形件链内（qualify.py/plan_scope.py=G 系链·dce_steps.py=0f1fa1f 槽位①关联明文）·今日改即动供形卷版本锚+河源 L15 pull 前置生效面·归栏二。栏一现仅 C2 一项（纯 TriMetaverse 卷面产出·零仓代码面）。）
 
 （注：本席审出的其余改动项全涉 TriCompany 现役 runtime/cognition 代码面——按 charter §四「payload/现役判据/daemon 面一律栏二」铁律·全数栏二·栏一仅收非现役面。）
 
@@ -109,6 +111,7 @@
 | P2 | 发现 30：classify_dir reason 码拆两态 | 候排程 |
 | P2 | 发现 7：dce_steps migrate cmd cd 前缀显式化 | 候排程 |
 | P3 | 发现 24：weekly_plane_shift L67 死变量删行 | 候排程 |
+| P3 | 发现 33「顺手清族」（STE 会商并入·C1/C3 改判归此）：dce_steps.py L37 死 import shlex 删行+plan_scope.py L24 docstring 勘正（发现 32 勘正形）+qualify.py git identity 断言语义注记（发现 6）——**周日窗与 d 施工同 commit+同窗升锚**（供形卷版本锚补录·一次施工一次升锚） | 周日树候件·并入新会签小件 scope |
 | P2 | 发现 29：git hygiene 路径清单单一真源锚 | 候排程 |
 
 ### 既有候件列并入盘点（charter §四「如实挂账零遮掩」）
