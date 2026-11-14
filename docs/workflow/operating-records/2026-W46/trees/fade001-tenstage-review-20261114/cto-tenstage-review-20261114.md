@@ -32,6 +32,8 @@
 - **发现 30（新·判读歧义源）**：classify_dir L106-108 `exp > now → migrate` 分支的 reason 码=`authorization_active_or_unparsable`——该码语义覆盖「未过期（active）」+「解析败（unparsable）」两态·判读歧义源（本席今日 mount-gate 判读亲历误判：凭 reason 码误推「解析败」·实际=未过期·时点敏感）。**栏一候选**：reason 码拆两态（authorization_active / authorization_unparsable）·纯读数面改动·但涉 TriCompany 现役代码=**栏二**。
 - **发现 31（新·时点敏感实证）**：migrate 构成随实拍时点漂移——mount-gate-build-20261111 authorization expiry=2026-11-14T10:47:00+08，过期前后推演读数翻转（migrate→keep）。周日实拍形态推演≈1（仅 phase1-build-20261114·auth 至 11-16T10:45+08）——**plan.migrate 非静态清单·预演读数对表须以实拍时点现值为准**。知情面·零改动项。
 
+- **发现 32（COO 会商项①并入·判据面口径差）**：plan_scope.py docstring L24 承诺「双向枚举断言：M∪K∪C=S（零遗漏）∧ 两两交=∅」·实现 bidirectional_check L182-199 只断言 migrate/keep 两集（M∪K=S ∧ M∩K=∅）·carry 集未进断言。语义面裁定：S 定义=L15「全集={from_week}/trees/ 全条目」·CARRY 行域=unresolved-items 文件（不同域·不在 S 内）→docstring「∪C=S」字面永假=表述含混非实现欠账。**裁词=docstring 勘正栏一**（勘正形：「M∪K=S（trees 域双向断言）∧ C 独立解析（unresolved-items 域·带状态去向·不进 S 断言）」·纯注释面零行为变更·FSD 可施工）。
+
 ### 段 4 dce_steps（dce_steps.py 241 行·test_dce_steps.py）
 
 - 骨架面：四步表+rc_guard 拦停+每步读数落卷+zero-diff 防线+vB 识别式消息——部署树窗生产形精化（--plan-file 勘正）已并入。
@@ -91,6 +93,7 @@
 |---|---|---|
 | C1 | 发现 6：qualify git identity 断言语义注记（双保险说明·零行为） | FSD |
 | C2 | 发现 31/25/9/13 知情面：首拍预期态知情件起草（engine_absent+J7+双通知+run_state=failed 预对齐·交 COS/CEO 面） | CTO 本席起草 |
+| C3 | 发现 32：plan_scope docstring 双向断言表述勘正（M∪K∪C=S→M∪K=S（trees 域）∧C 独立解析·纯注释零行为·COO 会商项①裁词栏一成立） | FSD |
 
 （注：本席审出的其余改动项全涉 TriCompany 现役 runtime/cognition 代码面——按 charter §四「payload/现役判据/daemon 面一律栏二」铁律·全数栏二·栏一仅收非现役面。）
 
