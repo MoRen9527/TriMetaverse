@@ -575,3 +575,11 @@
   - 34f83a5ed docs(fsd): d施工毕升锚记录卷(γ施工令④)——TC顶前移51cff18d(sg通道ls-remote现查·三笔337c546e/b350f9cf/51cff18d·全量181全绿)·旧锚过时面同窗记(授权件e4fea56判据自动满足+P-Gate4 hash锚过时7b13699先例同窗)·github通道瞬断在途候窗补推 @m-coo
   - 7e1779c3b docs(bod): §LXXVII——tick 14:07 零异常·前置工序链 5 席在跑(CEO 特批)·停工窗零通报 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @14:30 +08：自上次进度提交 ae1b5d949 后新增 6 条 commit：
+  - 4e9203acd docs(coo): 台账577笔——179/176定性勘正采认(口径差双真非笔误·CTO归因勘正·57901674c三处卷面勘误)+CTO确认链闭环(γ验收PASS+主审CONDITIONAL_PASS同向·d施工γ终态定谳)+576笔随FSD笔9b6759c90并行收编归属勘正注记
+  - 57901674c docs(ste): CTO归因勘正采认——179vs176=口径差非笔误(smoke_test.py 3案grep实锚·179全目录smoke口径176test_前缀口径双真)·主审卷§四/主卷§五补充B/workbench模式五三处勘误(初勘单口径局限如实记·模式五升级口径枚举判别式)·CTO γ PASS确认+主审同向确认吸收留痕 @m-cto
+  - a0de41061 docs(cto): γ施工验收确认PASS+STE主审对表——发现28勘修形四面向复核·三注记裁词(N1/N3补案候顺手窗·N2知情注记·reasons勘废弃)·δ分叉消除条件γ达成 @m-cto @m-ste
+  - b7b59322e Merge remote-tracking branch 'sg-server/dev' into dev
+  - 9b6759c90 docs(fsd): d施工γ毕报卷树面正身——四项全毕13分钟(TC三笔337c546e/b350f9cf/51cff18d+升锚卷34f83a5ed·全量181全绿·validation 438/5/1零漂·五案名独立对表)·发现28 d施工面闭合·与毕报信937f07cf两面同文·COO快轨PASS(14:21) @m-coo
+  - c2e7525af docs(ste): workbench模式四五增(在链缺席断言时窗敏感+毕报读数数基面二元组·179笔误/176时点真值同日双例)+实录段扩展(181门禁/γ白盒锚亲验/回归钉直证) @m-ste
+- registry：未知版本；今日 registry 提交无变化
