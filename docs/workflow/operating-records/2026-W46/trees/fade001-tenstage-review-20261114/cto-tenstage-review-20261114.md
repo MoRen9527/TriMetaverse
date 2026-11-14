@@ -131,6 +131,15 @@
 3. 若发现 28 不施工：段 5 verify 拦停=预期读数之一（快报已载）
 4. migrate 构成以实拍时点现值为准（发现 31·非静态清单）
 
+## §七 · 直接开工批验收注记（CTO 验收毕·毕报转呈锚）
+
+- **验收结论=PASS（八/八+连带一笔全收）**：TC 仓九笔在链核验 ✓（babe7de/bcce338/88418b6/c36760d/5a40048/5eefc00/2d71448/4b66ce6/e4fea56·时序 11:21-11:37·夹 CAO 76dcaa3 并行窗合流正常）。
+- **diff 亲验（重点三笔）**：发现 21/22（88418b6）rc=3 特判**停段行为不变核验过**（rc=3 仍 break+exit 2·零豁免零 escape·verdict 路由 halt_pending_ruling 面独立）·rc=4 无特判分支 ✓；发现 27（babe7de）`_notify_to_chain` import 复用迁移器 `_resolve_notify_to` 单一真源（非复制逻辑）✓；发现 7（5eefc00）TC_ROOT=parents[2] 自锚+ctx 增键+`cd {tc_root} &&` 前缀+负案断言 ✓。
+- **全量独立重跑（第二方法）**：十一件管线面 **157 案全绿**——per-file 逐件对表（close_cli 8/close_skill 13/dce 16/notify 14/plan_scope 28/preflight 22/qualify 19/score_cli 5/score_rubric 12/tenstage_pipeline 2/verify 18·合计 157）**与 FSD 毕报逐件一致零差**；全目录含 smoke_test.py 既有 3 案=160 全绿（差值 3 案归因=smoke 既有面非管线件非今日触面·口径差闭合非缺陷）。
+- **validation 族 438/5/1 基线零漂**（FSD 五案名独立提取逐字对表既有基线族·采信其独立验）。
+- **连带 e4fea56 采认**：发现 12 七件形后 pipeline fixture 未同步（dce 缺件=absent→stale 盖过 failed）——全量门禁捉获→fixture 补 dce.json 模拟卷——发现 12 测试同步义务连带非清单外新增·如实报形态正形。
+- **护栏对表过**：零触运行面/清单外零新增/升锚未动/保留面未触（FSD 自报+本席未见超触）。
+
 ## 使用依据
 
 - 十段源码现读：TriCompany/runtime/cognition/（preflight 291 行/qualify 239/plan_scope 405/dce_steps 241/verify 258/score_cli 116/score_rubric 191/close_skill 170/close_cli 98/notify_done 116/weekly_plane_shift 507/weekly_plane.py migrate 段 L225-339）
