@@ -514,3 +514,11 @@
   - 21a5dbc4e docs(cos): 台账593——COO并件scope终形定谳+今夜排工+payload分支预登记·底本改形即启 @m-coo
   - 80268f235 docs(bod): §LXVII——COO scope 终形定谳(两覆盖组+排除四条+停令解除注记+payload 两态预登记)·会签候 COS 底本毕 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @12:20 +08：自上次进度提交 dad413521 后新增 6 条 commit：
+  - 8abb14f75 docs(cos): 台账596——CTO验收毕报·v2切换触发点12:14:53达成·装配窗候令 @m-cto @m-coo
+  - cde7abe0d docs(bod): §LXX——CTO 验收毕报 score_engine PASS(179 案全绿·基线零漂)·装配授权 f14465808 生效·候 R-HY 装配动作 @bod
+  - d546c0020 docs(cto): FSD毕报卷§九验收注记——score_engine实弹装配验收PASS四/四·三裁决点裁词(cap保险丝采认/两层verdict采认/G链序采认)+179案独立重跑+五案名基线全中零漂·验收毕时点04:14:53Z(两版分界锚对齐用)@m-fsd @m-ste @m-cos
+  - bd1072889 docs(bod): §LXIX——tick 12:07 零异常·FSD 引擎装配施工中 @bod
+  - ae1a3201a Merge remote-tracking branch 'origin/dev' into dev
+  - 5f5d0aafe docs(fsd): score_engine实弹装配毕报卷——四笔全毕(6171d3d/18dca2e/2905840/004695b·笔序勘定2→3→1→4依赖序每笔中间态全绿)+全目录176案全OK+validation零漂+双通道双验004695bb+实测坑三笔如实+cap数学边界候裁注记 @m-cto @bod
+- registry：未知版本；今日 registry 提交无变化
