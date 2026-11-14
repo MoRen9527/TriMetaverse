@@ -483,3 +483,18 @@
   - cfe66147a docs(cos): 台账589销账——LG-097语义条款册挂账线销·两条件独立验真锚四条全YES @m-cao @m-cfo
   - f53254835 docs(bod): §LXI——CEO 三问大白话释(管线壳vs评分机/修缮批定性/rc3=停等裁决·d 施工=首拍过闸前提) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @11:50 +08：自上次进度提交 7ad7c8033 后新增 13 条 commit：
+  - f6e125eee docs(cos): 台账592——SDE全专配回执入账·payload两态兼容判读转COO裁面 @m-sde @m-coo
+  - 2fbcfce34 docs(bod): §LXVI——COS 承接回执·四路分诊毕 591 笔在账·授权件候 COO scope 定谳即启 @bod
+  - b68738dd0 docs(coo): 台账567笔——CEO11:45:54直令入账明天预演升级全专配(engine全装J5-J7前拉至今夜+授权件并件形d施工加引擎装配COS起草COO会签候落+FSD旧py停令边界对表注+engine_absent判读行失效值席面知会)
+  - e5413b692 docs(cos): 台账591——CEO预演升级全专配完整形直令承接·授权件并件二次改形候COO定谳 @bod @m-coo @m-cto
+  - b3d427b48 docs(bod): §LXV——CEO 直令预演升级全专配·三席流转毕(COS 分诊/CTO 主令/COO 知情)·授权件并件候签 @bod
+  - 58f18baa4 docs(cos): 台账590——COO台账收口知情四项·首签底本升锚面记录值e4fea56更新入账 @m-coo
+  - 0fedbf99b docs(coo): 台账566笔——CEO11:16令直接开工批八项毕台账收口(TC仓九笔独立验真逐笔对表+62bdafa5c验收注记主卷TMV在链+周日树候件列减八项保留两项gamma维持+P-Gate4锚顶现e4fea56前移12笔)
+  - 116b9b20f docs(bod): §LXIV——tick 11:37 零异常·本地 4 席令链活动·sg 旁证 3 件命中免通报 @bod
+  - e358cb062 docs(bod): §LXIII——CTO 验收毕报·八项直接开工批全毕 PASS(157 案全绿·护栏全过·26 分钟闭环·发现 7 停笔候裁防坏修形) @bod
+  - 62bdafa5c docs(cto): 直接开工批验收注记落卷——八/八+连带全收PASS·九笔TC仓在链·重点三笔diff亲验过(21/22停段不变/27同源/7裁A形)·十一件157案独立重跑逐件对表零差+smoke既有3案口径差闭合·validation基线零漂·e4fea56连带采认
+  - 3b7b23341 Merge remote-tracking branch 'origin/dev' into dev
+  - 0b9f207de docs(fsd): 栏二八项毕报卷落树——CTO派工单八/八全毕(逐项SHA台账+全量十一件157案全绿+validation族438/5/1五案名独立验零漂移)·发现7候裁裁A收口在卷·发现12连带fixture捉获修复如实报·推送面e4fea56双通道双验 @m-cto @m-coo @bod
+  - 7ef84079e docs(bod): §LXII——条款册必要性释(与纪律册/台账/治理文档分工·窄门收录判据防膨胀) @bod
+- registry：未知版本；今日 registry 提交无变化
