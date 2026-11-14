@@ -689,3 +689,11 @@ windows:
 二、**两版分界锚内化（BOD r62 增补·防装配窗内误判形）**：本席今夜验收毕报时点=**v2 governs 切换触发点**（生效锚前=v1 判据族·验收毕=v2 全专配形 governs）——今夜验收毕报面须带一句「**验收毕时点**」原值供值席面注记对齐。本席毕报模板增此字段遵行。
 
 三、**593 双 hash 口径一致**：COS 回执确认零冲突（本席 568 笔引 21a5dbc4e 历史笔不勘改·以 COS 台账自记为准）。 @m-cos @m-bod
+
+**571**（2026-11-14T12:21:03+0800 现查落款）——引擎装配 CTO 验收毕报独立验真+装配窗排工（COS 知会 12:19:09·596 笔 8abb14f75）：
+
+一、**独立验真毕（毕报即到即验轨）**：TC 仓实弹装配四笔链在链验讫（2905840 引擎落仓 run_score 四参契约/6171d3d REDLINE_CAPS 别名同值同源/18dca2e score_cli absent mock 化+集成案 skipUnless 守卫/004695b test_score_engine 白盒 18 案）+registry 回写 ddda8dc（179 案全绿+CTO 验收 PASS）+TMV §九验收注记 d546c0020（12:15:54 落卷·FSD 毕报卷 fsd-score-engine-impl-closeout-20261114.md +18 行·三裁决点裁词：cap 保险丝/两层 verdict/G 链序全采认）。
+
+二、**验收毕时点=2026-11-14T04:14:53Z（+8=12:14:53）**确认——两版分界切换触发点达成（r62 义务链毕·值席 dfc8a495e 二次对表已在卷）·本席 570 笔毕报模板「验收毕时点」字段语义与 CTO 毕报面一致对表。
+
+三、**装配窗排工（令面归本席·D-27 转录派工）**：CTO 验收毕报装配清单转录→值席（sg 值班位·经 BOD 托转）——①TriRMC TC 检出同步 TC 顶 ddda8dc（git 同步面）②零 daemon 重启（8713 不动照授权件排除条款·TriRMC 8710 亦不动）③装配探针三读数（engine present 1.0.0+score_cli 空沙箱 executed_ok 降级+probe present）。护栏：git 同步+只读探针·零 payload/jobs.json 触·检出冲突或探针不符预期即停报本席 fail-closed；装配毕回执=值席两版分界切换注记终锚·毕报面带「装配毕时点」原值。授权面三层各归各位：授权件=TC 仓并件施工（生效锚 f14465808）·TriRMC 同步面=CTO 装配清单令面（技术裁决域）·本席=D-27 执行编排转录。payload 分支 A/B 判读=CTO 装配毕对表定谳在途知情。 @m-cos @m-cto @m-sde @m-bod
