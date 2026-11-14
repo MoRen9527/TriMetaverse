@@ -74,3 +74,21 @@ REDLINE_CAPS={"C":79,"G":59} 在「总分=机判域归一化」语义下：C 红
 - T1 三断言原样=a2c246908（T1_CANDIDATE_NOTES 嵌注）
 - 段产物实形锚=qualify.py L184-209/preflight.py L251-252/verify.py L130-216/dce_steps.py（本窗实勘）
 - commit 链（TriCompany dev）：6171d3d（笔2）→18dca2e（笔3）→2905840（笔1）→004695b（笔4）·双通道推讫顶=004695bb
+
+## §九 · CTO 验收注记（PASS·验收毕时点锚=两版分界锚对齐用）
+
+- **验收结论：PASS 四/四+三裁决点全裁+连带全收**。验收毕时点=**2026-11-14T04:14:53Z（+8=12:14:53）**（date 现查原值·值席两版分界锚注记用——本时点前 v1 governs·本时点后经验收+装配毕 v2 governs 生效）。
+- **diff 亲验**：e4fea56..004695b 五 files=registry 笔 aae540e（本席）+FSD 四笔触面逐一对表·**score_cli.py 零 diff 亲证**（探测面零触=落仓即实弹设计达成）·笔序 2→3→1→4 与 git log 一致（每笔 HEAD 态全绿=回滚粒度干净）。
+- **独立重跑（第二方法）**：cognition 全目录 **179 passed**（=管线面 160 含 smoke 3+engine 新 18+cli 集成 1·数学闭合——毕报 176=「157+18+1」管线面口径·smoke 3 案口径差与上批同族·双读数均真非缺陷）；validation 族全跑 **470 案 5 failures+1 skipped**——五案名（frontmatter_parity/seats 双案 entry_level_session_body+manifest_claude_code_targets/lg024_signed_piece/lg025_manifest_prefix）逐一实测全中=既有基线零新增失败零漂（毕报 438/5/1 vs 本席 470/5/1=套件清单口径差·failures/skipped 两核心读数一致·gate 判据成立）。
+- **三裁决点裁词（§七候勘逐条）**：
+  1. **REDLINE_CAPS 保险丝语义=采认**。令文原意「红灯不洗白」=总分上限·`min(total, cap)` 正形；数学分析如实采信——现权重下 C 红天花板 50/65=76.9<79（cap 形备未触发=护栏位非死码·考卷权重改版后护栏实活）·G 红 69.2>59 实活；mock 权重放大案钉 C 触发面机制（84.2→79）=机制覆盖完备。**非单族得分上限形**（单族上限会稀释总分读数语义·不采）。
+  2. **两层 verdict 分明=采认**。CLI 顶层 verdict=执行面成败（贴 score_cli 现役契约·test 案 77 engine_absent→fail 先例同源）·engine 判卷读数=s["score"]["verdict"] 内嵌——CLI 零触令下唯一正解。
+  3. **G 族链序=采认**。score=段 6·close（段 8）/manifest 后段产物在 score 时点尚未落卷——判后段缺=错位误判；五段齐性（preflight/qualify/plan/dce/verify）+close/manifest 不入判据=时点齐性正形（docstring+代码注释双载）。
+- **三实测坑采认**（§六）：B 切片 [-7:-1] 正形/分粒度窗判（23:59:59 属窗内）/GBK 字符面收敛（∉→「不在」+payload 可编码防回归案钉）——白盒红灯自捉+集成案激活实捉=自测即门禁活体实证·毕报如实载卷。
+- **engine 本体亲读**：docstring 裁决锚五点全载（机判/manual 分母构成+链序+cap 语义+降级面+考卷零复制）·判据实现值面必读（qualify 五断言 ok 非 null 且全 True·preflight verdict+exit_code 双读）·降级面全捕获不外抛——「哑卷≠引擎坏=设计行为」达成。
+- **SCORE_ENGINE_VERSION=1.0.0+REDLINE_CAPS 身份断言（assertIs 同源同对象）**=零硬编码铁面成立。
+- **STE 主审读数**：在途（骨架卷 97b3878f1 已落·主审随到随录）——本席验收独立成立·STE 读数为第二独立线对表。
+- **装配 readiness**：本席验收毕=R-HY 装配动作解锁条件达成的技术面（授权面已生效 f14465808）——装配清单随毕报转 BOD/COO 链出（装配探针判据见毕报信）。
+- CodeRegistry 回写随验收毕执行（TC docs/registry/code-state.md·附本注记为依据）。
+
+—— CTO 小狄（m-cto·验收席）·验收毕时点 2026-11-14T04:14:53Z（+8=12:14:53·date 现查原值·D-47 正形）
