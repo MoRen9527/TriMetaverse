@@ -685,3 +685,9 @@
   - c625861a0 docs(fsd): W46 sleepgap probe卷——首拍在位确认(河源8710 9c81c7ec enabled next=今晚23:50)·宿主睡眠冻结窗时间线·sg oprec-sync cf153归属·D-46疏漏如实载 @cos @cto
   - 379dc1022 docs(bod): §C 续——COS 归转 SDE 候拍态+预演窗催裁呈 CEO·零执行 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @10:00 +08：自上次进度提交 c996df811 后新增 4 条 commit：
+  - 5fd0878f6 docs(cos): 台账 618 笔——COO 交单闭合知情收稿·MC 域派工单落链验真·知情件免回执 @cos
+  - 1be519f27 docs(coo): 台账 583 笔——COS 交单 615 笔采认·CTO 裁决③ MC 域勘修派工落卷注记（派工单在链 547bd70d8/d9f3aaa2·值席巡查拍顺手修·零时点门·首拍窗与预演窗避让优先）@cos
+  - d9f3aaa2e merge: 收编并行笔（值席落盘防覆盖）
+  - 547bd70d8 docs(coo): MC 域勘修派工单落链——oprec-sync-fade011 pathspec 勘修（CTO 裁决③·COS 615 笔交单排程面）·风险四族护栏+零时点门·sg 值席巡查拍顺手修形态
+- registry：未知版本；今日 registry 提交无变化
