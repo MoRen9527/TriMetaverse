@@ -11,19 +11,17 @@
       "result": {
         "status": "pass",
         "summary": {
-          "created": true,
-          "dry_run": false,
-          "object_id": "OP-202611-W47-001"
+          "created": false,
+          "errors": 1
         },
-        "changes": [
+        "changes": [],
+        "errors": [
           {
-            "action": "created",
-            "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W47/OP-202611-W47-001.json",
-            "object_id": "OP-202611-W47-001"
+            "item": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W47/OP-202611-W47-001.json",
+            "reason": "already_exists"
           }
         ],
-        "errors": [],
-        "check_time": "2026-11-15T02:50:38.507507+00:00"
+        "check_time": "2026-11-15T07:37:41.738927+00:00"
       }
     },
     {
@@ -49,14 +47,14 @@
           }
         ],
         "errors": [],
-        "check_time": "2026-11-15T02:50:38.511557+00:00"
+        "check_time": "2026-11-15T07:37:41.739632+00:00"
       }
     },
     {
       "step": "carry_over",
       "result": {
-        "status": "written",
-        "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W47/OP-202611-W47-001.unresolved-items.md"
+        "status": "skip",
+        "reason": "target unresolved-items already exists"
       }
     },
     {
@@ -70,7 +68,7 @@
         },
         "changes": [],
         "errors": [],
-        "check_time": "2026-11-15T02:50:38.524429+00:00"
+        "check_time": "2026-11-15T07:37:41.758968+00:00"
       }
     },
     {
@@ -89,6 +87,6 @@
     }
   ],
   "escalation_8w": [],
-  "check_time": "2026-11-15T02:50:38.529146+00:00",
+  "check_time": "2026-11-15T07:37:41.764150+00:00",
   "notify_failures": []
 }
