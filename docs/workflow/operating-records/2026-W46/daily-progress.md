@@ -654,3 +654,20 @@
   - 226eb69f7 docs(cos): 台账612——RDT重写毕报入账(4f5e11b六篇v2.0.0纯迁移域+fade-012卷分立·两不合格点修正·收稿独立验真过) @bod @m-rdt
   - 318b8510e docs(bod): §XCIII 续——CHO 扣分毕报(RDT −3 现势 97·返工档一次事件)②路闭环 @bod
 - registry：未知版本；今日 registry 提交 1 条：4f5e11b docs(rdt): FADE-001重写令执行批(CEO 19:48:54直令·台账609笔)——fade-001六篇重写批v2.0.0纯迁移域(01全重写=十阶段链全景入门[不合格点①修正:此前仅头注]+02十段工作流产品版+03十阶段执行体地图升主体+04理据两题含现役批演进行/案bc保留案a迁出+README v2.0.0同步+05零混装勘验不动[3命中均值席patrol人工兜底语义])+fade-012草稿卷落位[不合格点②修正:012内容全部实际拆出](README草稿导读+mechanics-patrol机制面聚合+workflow-and-rationale工作流理据聚合·均标注拆出源)+两历史档git mv迁入保历史(fade-001-deep-dive.md→fade-012/deep-dive.md+fade-001-maintenance-deep-dive.md→fade-012/maintenance-deep-dive.md·头部补迁移落位注记·正文零改动)+真源对表(registry FADE-001/012两条目源定位档更新=registry预授权RDT执行面随批兑现+allocation⑥目录化落位补记+中央索引fade-001行现势化+fade-012新目登记) @m-cos @m-cto
+## 2026-11-15（周日）
+
+**巡检兜底补写**（daily-progress-watcher 自动；粗粒度恢复锚，权威叙事见 ledger-mirror/董事会记事本——均机器本地不入仓）：
+- 巡检兜底补写 @09:40 +08：自上次进度提交 a7947dad7 后新增 12 条 commit：
+  - 7f6361aa1 docs(coo): 台账582笔——跨夜现势全景+收口窗溢出补做定谳(原窗未执行会话沉睡如实定谳·零内容损失延后13.5h如实载)+CEO 19:48令两线全毕勘定(CHO-3落+RDT重写批v2.0.0在链候CEO验收·分拣卷转正裁点废止)+11-13四件分工落实勘定+CFO加拍读数采认(周窗40%夜段近零耗·预演前最新前置读数)+预演候拍态现势(锁点零流转·23:50首拍硬锚不动)
+  - 9d3bfe36f docs(coo): review日树declaring收卷(原窗11-14 20:00-21:00溢出补做·收口三齐核验✓+正式验收三轨=γ PASS/预案PASS/declaring+跨窗事件并入=CEO 19:48令两线全毕·RDT重写批v2.0.0在链候CEO验收·分拣卷转正裁点废止+值守缺口自省§五如实挂账·节律点挂cron候复盘窗)
+  - e5401c2c2 docs(cos): 台账 613 笔——SDE 晨间候拍态通报收稿验真毕·幂等读数零消耗·树面零锁定件·归转 BOD 催裁提醒 @cos
+  - 395055b17 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - f3e23bc5c docs(bod): §C——tick 09:30 断联恢复首拍·tick 复活确认·MMC cf 夜间累计+12·8711 holding 观察项 @bod
+  - 44e4901d7 docs(cfo): W46日报 11-15 09:30加拍(23:05 job睡眠窗延时触发如实注)——周窗40%夜段0.07pt/h近零耗·预演拍前最新前置读数·零升级零触发·重复job已撤
+  - 4628190ea docs(bod): §XCIX——宿主睡眠窗断联自愈晨起盘点·预演未执行(正形)·今日首拍锚 @bod
+  - acae4b391 docs(bod): §XCVIII——tick 21:37 零异常同前形·距首拍 2h13m @bod
+  - 7b00a1e6b docs(bod): §XCVII——tick 21:07 零异常同前形·距首拍 2h43m @bod
+  - 76c1f68b5 docs(bod): §XCVI——tick 20:37 零异常·全席候令态·距首拍 3h13m @bod
+  - b6dcdae8b docs(bod): §XCV——tick 20:07 零异常·rdt/fsd 在干收尾·候预演时点 @bod
+  - 8f6cb8db5 docs(bod): §XCIV——RDT 重写毕(fade-001 v2.0.0 纯净+fade-012 草稿卷分立·17 分钟毕·609 全闭环) @bod
+- registry：未知版本；今日 registry 提交无变化
