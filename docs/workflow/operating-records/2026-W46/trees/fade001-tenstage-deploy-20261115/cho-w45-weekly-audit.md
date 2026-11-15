@@ -10,11 +10,13 @@
 | ① | OP json | `OP-202611-W45-001.json` 在卷（98,715B·dependsOn/objectType/title/ownerRole/status/summary/metadata 结构健康·status=**closed**·「W45 周经营维护·任务从上周迁移」） | ✓ 在卷闭卷态 |
 | ② | unresolved 任务书 | `OP-202611-W45-001.unresolved-items.md` 在卷（71 行·LG-072 三节结构：现役区+归档指针+平移说明·40 条目线） | ✓ 在卷 |
 | ③ | 树目录 | `trees/` **50 树**（簇：fade011 系 4〔ew-runs/auto-trigger/daily-form/deploy〕+A-1 事故族〔a1-run-tree-loss-triage〕+roundtable 族 5+审计线〔coo-supervision-w45〕+治理改版〔board-gov-proposal-roundtable〕+e1/e15 daemon 窗等） | ✓ 在卷·簇分布如实列 |
-| ④ | 大表族 | daily-progress **660 行** ✓｜cfo-quota-daily-w45 **56 行** ✓｜scoring-ledger-w45 **92 行** ✓（LG-068 结算定卷 10:00:16·14 席 97~102）｜**company-demand-pool.md 缺** | 3/4 在·1 缺（见二） |
+| ④ | 大表族 | daily-progress **660 行** ✓｜cfo-quota-daily-w45 **56 行** ✓｜scoring-ledger-w45 **92 行** ✓（LG-068 结算定卷 10:00:16·14 席 97~102）｜**company-demand-pool.md 缺**｜**task-inventory-20261105.md 在卷**（r78 勘正第五件：B 包补课新立 11-05·七列大表现役真身 33 行·原地滚动刷新制） | 4/5 在·1 缺（见二）+1 断档史注（见二·L2） |
 
 ## 二、漏项列示（只列不裁·候 CEO 裁补课范围）
 
 - **L1：W45 company-demand-pool.md 缺席（W44 同缺·W42/W43/W46 三周在卷）**——双因并存如实列：①迁移器首版白名单预期态（W46 卷 54b4c301f CTO 裁决「demand-pool/daily-progress 候首拍后窗」+349fa91ff G5 预演「demand-pool 缺席=首版预期态零升级」在卷——**设计内缺席证据链在**）；②周立账面断档（W45 周内 daily-progress 660 行 demand-pool 零操作记录=零更新需求未立或漏立不可辨）。裁向候 CEO：补课范围是否含 W44/W45 两周 demand-pool 追立（或定性为白名单预期态免补）。
+
+- **L2：task-inventory 翻周断档族（r78 勘正补核）**：W43/W44 双缺系立表注自载史实（「盘点件族 W42 后断档·翻周迁移器缺口同族」——B 包补课批已定性补立 W45 件）；**W46 现缺**（task-inventory-20261109 形未立）——同族翻周缺口候裁面：W46 件补立 vs 现役真身跨周滚动制辨析（本件自载「文件名周内不动」系周内约束·跨周形态候定谳），只列不裁。
 
 ## 三、漏任务双向核（操作记录周卷 vs 迁移产物）
 
