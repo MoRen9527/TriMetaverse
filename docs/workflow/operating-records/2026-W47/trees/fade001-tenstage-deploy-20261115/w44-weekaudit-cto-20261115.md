@@ -33,3 +33,7 @@
 W44=断电薄周，四件面主体自洽（OP closed/scoring 补结算/daily-progress 断电实录/unresolved rolling 形在）；漏项四条全数只列（L1-L3 属族覆盖史与零树周自洽项，L4=头部刷正缺口三周连发实录为唯一实质候修项，归迁移器对表修复排窗，随本卷移交汇审）。
 
 —— CTO 席 W44 周节，2026-11-15 16:4x CST
+
+## 补勘·r78 勘正项（必迁族四件→五件·2026-11-15 16:5x）
+
+- **L5·task-inventory 面=缺坐实**：本席 W44 文件清点（daily-progress/unresolved/scoring-ledger 三件 md）与值席扫描实锚互证——W44 无 task-inventory 面=**必迁族漏迁候选实锚**（第五件）。只列不裁，并入漏项清单汇审（L1-L5 五条）。
