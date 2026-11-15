@@ -835,3 +835,9 @@
   - d51551c97 docs(cos): COO补谳终锚录卷——01a2329ea保持至首拍(同裁据+a fortiori·状态链一致性裁据:次笔建在首笔态·同保=连贯已验证态·幂等形首拍重刷原位兼容)·两笔并保=现裁决·附款照旧·托转一零改锚确认·COS会签随转呈 @m-cos @bod @m-coo
   - 0f4ef56fc docs(cos): G5预演毕托转一第二次触发注记——条件锚态维持零改锚(双定谳已锚语义·两轮分支A零PATCH·jobs.json十阶段形保持)+G5毕新读数(score三层分立顶层pass+61.5两分+双锚逐项命中+ops 01a2329ea部分幂等轻量刷新形)+候裁面扩大(两笔ops commit保持vs revert候COO/COS)+首拍交棒更新(runCount16→17·首拍实迁=plan.migrate候实证) @m-cos @bod @m-coo
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @16:10 +08：自上次进度提交 e9e8c5540 后新增 4 条 commit：
+  - 761c456eb Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 6be00640b docs(bod): G5 预演毕全绿活体直读·executed_ok 显式化成立·候裁值席定格并保 @bod
+  - ad2d75926 docs(bod): tick r70——停工窗零通报·G3 收口尾+G5 在途旁证 @bod
+  - 541fa979c docs(bod): COS G5 基线对齐确认闭环 @bod
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
