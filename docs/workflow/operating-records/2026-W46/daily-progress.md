@@ -771,3 +771,20 @@
   - c691cf007 docs(cto): plan agent 化设计定稿卷——快慢道分诊施工级+回滚三梯度+payload 零触 dive 锚零换锚 @cto
   - …另有 8 条略（全量见 git log）
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @14:50 +08：自上次进度提交 bb4cacba8 后新增 15 条 commit：
+  - fe9202be4 docs(cos): 台账 631 笔——CEO 批令开闸施工收稿（三栏 19 项全量施工·G2 前移）·三栏派工路由 @cos
+  - af86f74e6 docs(cto): e 锚幂等性裁决卷——10:50 预演实写×23:50 二写语义全链实勘(create already_exists 幂等/migrate 覆盖恒同/carry_over skip/ade rotating 零丢失)·裁决=零新增施工笔 G2 零影响·预演产物三面处置定谳(OP json 零手触/unresolved 冻结形拍前 diff 对表/closed 周零新 OP 登记)·dive 检查单增补第四行 @m-cos @bod @m-ste
+  - d3ac66d3e docs(bod): §F 续——CEO 批令·施工开闸 G2 前移 14:47·19 项全量 @bod
+  - fad33f193 docs(bod): §F——七席联审总结卷呈 CEO 候阅(19 项三栏+e 锚 dry_run=False 幂等候裁) @bod
+  - 25f333e12 docs(bod): §C 勘正——14:37 拍旁证实为 3 命中(CTO 设计冻结+裁定卷·CAO 对表件)·假读数笔误勘正 @bod
+  - 458184d1c docs(ste): workbench模式七沉淀——版本交界窗两域键名混写(reasons≠reason_codes·判据底座三查+分拆断言组)·键名错位假红比无覆盖更毒
+  - 2fa5c3930 docs(bod): §C 续——14:37 拍·联审 8 席在干兑现·零异常 @bod
+  - 1db8365b9 docs(cos): 七席联审总结卷落卷呈批（e 锚单列候 CTO 裁·缺失三栏归集·开闸候 CEO 阅批）+台账 630 笔（CEO 催办令收稿·卷面已全齐答） @cos
+  - 76cdf64e8 docs(ste): rubric设计卷门3勘正——两域键名分拆断言组(plan agent化域=reasons五态串fail-closed·rubric判卷域=reason_codes消费面链接)防键名错位假红·CTO勘正采认 @m-cto
+  - ed795f5d4 docs(bod): §E 续——CEO 催办令三点转录·缺即催·不卡死线·COS 盯盘 @bod
+  - 020073f68 docs(cos): 台账 629 笔——CTO 两卷交付收稿·七席联审卷面齐·误退事件通报收稿留痕 @cos
+  - 295d244d5 docs(cos): 台账 626-628 笔——STE 终稿收稿·联审五席卷到（CAO e 锚 dry_run=False 实锚）·清单卷落卷两职之一交付 @cos
+  - bbe8e578a Merge remote-tracking branch 'sg-server/dev' into dev
+  - c398d7b0b docs(cto): 七席联审意见卷·技术/链架构面——波及面第六触点盘点(T-a close schema 实勘令/T-b 慢道上界保险丝/T-e 笔4 R-HY 机位注记)+反向面误迁移补勘(migrate_closeout_conflict 机械门+W46 35树快分)+carry_over 三标注采认+回滚/dive 锚落树确认+并行窗 git 卫生实录 @m-cos @bod
+  - f13880a08 docs(cos): 搬移全量分析清单卷落卷（迁移器白名单两件实锚·补课家族缺口定性·处置族五分类）+台账 626-628 笔（STE 终稿/联审四席卷到·CAO e 锚 dry_run=False 实锚/两职之一交付） @cos
+- registry：未知版本；今日 registry 提交无变化
