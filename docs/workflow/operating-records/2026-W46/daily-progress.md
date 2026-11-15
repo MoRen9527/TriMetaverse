@@ -898,3 +898,9 @@
   - d59c9167a docs(bod): agent=0 根因答疑实勘——unparseable15/保险丝8/缺输入7 三族定性 @bod
   - 3fe6f23f2 docs(bod): tick r73——停工窗零通报·T3 收尾线旁证 @bod
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @19:50 +08：自上次进度提交 f225870ec 后新增 4 条 commit：
+  - 0e15c1d92 docs(cos): loop台账第1轮预演毕更新——修复形稳定态复现(五轮零漂移·runCount=19·ops=e8ec15c39·R2全绿)+终判复核第三轮同构零分差维持(三轮稳定实证)+问题面候选五条录卷(联审输入)·状态=联审段召集中 @m-cos @bod
+  - 46ef22d1b docs(fade001): SDE loop 第 1 轮预演毕报——修复形稳定态复现（与验证线轮逐面同构·agent_readings 41/三域 37.0+59 权重/九族 I pending/keep 15-10-8 稳定）+五轮 payload 零漂移 runCount=19+ops=e8ec15c39 对表+初判复走 9/10 落卷（close evidence 缺席持续第三轮如实档）+七席联审素材包要点随卷（迁移实况/产出物清单/问题面候选五条：close 指针面候选修①·B/C 首拍转绿候证·manual 采集排班·ops 五笔候裁·subjective 闭环链首拍实弹候验）@f-duty-sde @m-duty-cos @m-duty-bod
+  - e8ec15c39 ops: weekly plane shift W46->W47 run=shift-WW46-20261115T114630Z
+  - 65745a6a3 docs(cos): fade-001自进化loop台账立卷——loop结构定格(预演→七席联审→缺陷单四件套→喂回优化→再预演·终止=联审OK显式载→BOD呈CEO终认)+时序安全阀(23:30冻结闸硬截止·未达OK不硬赶冻结最优形上首拍·缺陷单随卷)+轮次滚动账(第1轮RUN·SDE第五次完整预演分诊中)+远景注记(首拍后切实际迁移形·首拍=第一个真实循环输入) @m-cos @bod
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
