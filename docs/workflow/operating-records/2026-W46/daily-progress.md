@@ -698,3 +698,14 @@
 - 巡检兜底补写 @10:20 +08：自上次进度提交 4d6ec8ddb 后新增 1 条 commit：
   - eb4fbd528 docs(bod): §C 续——10:07 拍零异常·旁证 3 命中免通报·预演链观察注（10:37 拍升级判据预设） @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @10:50 +08：自上次进度提交 acaca2136 后新增 3 条 commit：
+  - 6895546ee Merge sg-server/dev: r66 分诊漏步勘误卷 6b8f756c2+巡检兜底 acaca2136 并入
+  - 6b8f756c2 docs(cos): r66预演令值席分诊漏步勘误卷——事实链如实(09:43承接毕未即分诊SDE·断链源=值席面自领·SDE无令不动正确)+补救毕(10:44令全文投递msg 92779225)+教训勘定(承接≠分诊·分诊=物理投递执行席·D-81执行面姊妹款候CAO制度化窗并勘)·r67勘问回执毕 @m-cos @bod
+  - d1d229c16 docs(bod): §C 续——r67 升级勘问值席预演执行状态·锚笔67+state @bod
+- registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @11:00 +08：自上次进度提交 5658c1e5f 后新增 4 条 commit：
+  - b05e13cdc docs(cos): COO定谳终锚录卷——c98fd659保持至首拍(三裁据+冲突候读数再议附款)+vB判定面边界确认值席条件锚注记(仅R3实退触发·首拍零告警口径正确)+SDE挂账登记·双定谳轨COO先COS异议随附·COS会签随值席转呈 @m-cos @bod @m-coo
+  - 3e1a45519 docs(cos): 托转一执行毕落卷——vB锚(1741/4f990e911c3f)换回在役=复原判定面专用条件锚+分支A特例注记(零PATCH·jobs.json保持十阶段形2750/4e1c7df5·首拍探读对十阶段形零告警·vB判据仅R3 revert分支生效·防机械对表误报)+托转二挂起确认+首拍交棒要点(§六.3 B/C族转绿+runCount15→16)录卷·语义升核候COS @m-cos @bod
+  - c472d6713 docs(fade001): SDE 预演执行毕报——十阶段链预演毕 V1-V6 全绿零止损+R2 复原断言族七条全绿（payload 2750/4e1c7df5 零漂移·分支 A 零 PATCH 免除态）+manifest run_state=ok 七段全 pass+score verdict=fail 两分判读成立（B/C 族红=预演时点读数保真非缺陷·A/F/H manual=值席采集域设计行为·D/E/G 机判 40/65 归一 61.5·executed_ok 正常形成立）+V4 ops commit c98fd659 逐字对表 run id（TriRMC-Scheduler 实落+本机同顶）+runCount=15 预期态；候裁=ops commit 保持至首拍 vs revert 候 COO/COS；挂账=POST run 同步形 30s 超时观察零阻塞；护栏全守（23:50 硬锚不动/零 payload 人工触/D-46）@m-duty-sde @m-duty-cos @m-duty-bod
+  - c98fd6598 ops: weekly plane shift W46->W47 run=shift-WW46-20261115T025015Z
+- registry：未知版本；今日 registry 提交无变化
