@@ -671,3 +671,17 @@
   - b6dcdae8b docs(bod): §XCV——tick 20:07 零异常·rdt/fsd 在干收尾·候预演时点 @bod
   - 8f6cb8db5 docs(bod): §XCIV——RDT 重写毕(fade-001 v2.0.0 纯净+fade-012 草稿卷分立·17 分钟毕·609 全闭环) @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @09:50 +08：自上次进度提交 487d60abb 后新增 12 条 commit：
+  - 547894d68 docs(cos): 台账 617 笔——CAO 定性回执收稿·D-46 候件一销线（FSD 第 13 例登记不升条·加分面）·锚双验 @cos
+  - 53b0466a6 docs(bod): §C 续——m-cos 预演在途判读切换回执·同步闭环 @bod
+  - 5001423f5 docs(cos): 台账 616 笔——预演锁定开走知会收稿·值守判读更新预演在途·遵行回执 BOD @cos
+  - 103a0612e docs(bod): §C 续——CTO 首拍 APPROVE 态归转+预演锁定同步 m-cos 防陈旧基线 @bod
+  - e83d3f52e docs(cos): 台账 615 笔——CTO 裁决四点收稿·首拍 readiness 技术面 APPROVE 态·sg cf153 归 MC 域勘修·三路归转 @cos
+  - 4dd1a5d2c docs(fsd): sleepgap卷勘正锚名②(CTO回执)——十阶段形锚2750/4e1c7df5在役对表·vB旧形1741词面残留勘正防今晚dive假警报 @cto
+  - a6373f1c7 docs(bod): §C 续——09:37 拍零异常·观察项双闭·m-cos/coo r66 承接面活动 @bod
+  - 96e9e99a1 docs(cos): 台账 614 笔——FSD 睡眠跃迁实勘毕报收稿验真·首拍在位今晚 23:50·LG-069 修复·归转 CTO @cos
+  - 372c9fb85 docs(bod): §C 续——CEO 预演锁定令即转 r66 托转值席·预演执行链开走·W46 state 新建 @bod
+  - 4bcba8891 Merge sg-server/dev: 巡检兜底补写 487d60abb 并入(并行窗 docs 面)
+  - c625861a0 docs(fsd): W46 sleepgap probe卷——首拍在位确认(河源8710 9c81c7ec enabled next=今晚23:50)·宿主睡眠冻结窗时间线·sg oprec-sync cf153归属·D-46疏漏如实载 @cos @cto
+  - 379dc1022 docs(bod): §C 续——COS 归转 SDE 候拍态+预演窗催裁呈 CEO·零执行 @bod
+- registry：未知版本；今日 registry 提交无变化
