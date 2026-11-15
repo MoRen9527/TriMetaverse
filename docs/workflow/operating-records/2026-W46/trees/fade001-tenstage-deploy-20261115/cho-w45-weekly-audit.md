@@ -29,3 +29,42 @@
 **W45 周节健康**：四件 3 全 1 列（demand-pool 断档列示候裁）；平移链零漏任务；OP/树/大表三面在卷完好；结算账面定卷（LG-068）与审计线 JSON 双件在卷为本周新增健康面。零链面改动恪守 ✓。
 
 —— CHO 值席 m-duty-cho · W45 周节卷
+
+---
+
+## 五、r79 加深查增补节：三向对照（2026-11-15T12:1xZ 实勘）
+
+### 5.1 树簇收口态抽核（10 树代表·簇覆盖 fade011 系/事故族/治理改版/审计线/carryover）
+
+| 树 | 收口/判定类卷 | 总件数 | 判 |
+|---|---|---|---|
+| fade011-ew-runs | 0 | 651 | run 产物大簇·收口态在卷面外（fade.db/登记段冻结基五件在卷）——形态如实注非缺 |
+| a1-run-tree-loss-triage | 0 | 3 | 勘定期树（BOD 裁②先勘后裁在途·CTO 三勘派工）——收口候终裁 ✓ 与 scoring 账面注一致 |
+| board-gov-proposal-roundtable-20261105 | 2 | 9 | ✓ 收口在 |
+| coo-supervision-w45 | 0 | 1 | 监督读数卷本身非收口件·形态正常 |
+| e1-daemon-jobs-window | 1 | 1 | ✓ |
+| e15-modern-standby-ruling | 1 | 3 | ✓ |
+| dsh-glm-switch | 3 | 12 | ✓ |
+| w45-carryover-fade001-upgrade | 2 | 9 | ✓ |
+| w45-carryover-local-execution | 1 | 8 | ✓ |
+| **fade011-ew-deploy** | — | **0（空树）** | **候选异常：树立名零落件·daily/卷面零溯源引用——列漏项 L3** |
+
+### 5.2 unresolved 现役区逐条现势
+
+- 现役区 1 条：`A-2` TriRLC origin 字面指旧名仓（GitHub TriLC.git）——open 候专项窗（LG-072 清淤后精简形态·2026-10-13 亲勘定态）；代码面亲勘刷新注在卷。**现势=open 维持·无新进展无新逾期**——如实注。
+
+### 5.3 周内任务三向对照（daily-progress vs 树卷 vs unresolved/inventory）
+
+- 抽验三线：台账 303 笔（CTO 技术裁·doc-graph 两步走）→卷面段三串联窗在案 ✓；台账 310 笔（TUI 收口判 APPROVE 正式闭项·四锚核对）→闭项 ✓；台账 397 笔（课程族专窗派工·四段并窗）→派工单在卷 ✓。
+- 主任务载体形态注：LG-072 清淤后 unresolved 现役区精简（1 条），周内任务主载体=树卷+task-inventory 大表（七列）——三向对照以树/inventory 为主轴成立，unresolved 作残役项承载面。
+- **断档任务新增实锚：零**（L1/L2/L3 之外无新断档）。
+
+### 5.4 漏项扩容汇总（随节扩容·只列不裁）
+
+| # | 项 | 形态 | 裁向 |
+|---|---|---|---|
+| L1 | demand-pool W44/W45 双缺 | 白名单预期态+周立断档双因 | 候 CEO 裁补课 |
+| L2 | task-inventory 翻周断档（W43/W44 史+W46 现缺） | 迁移器缺口同族 | 候裁补立/滚动制辨析 |
+| **L3** | **fade011-ew-deploy 空树零溯源** | 树立名零落件零记录 | 候裁：删空树/补落件二择·归 fade011 部署窗 owner 面 |
+
+—— r79 增补节毕·CHO 值席
