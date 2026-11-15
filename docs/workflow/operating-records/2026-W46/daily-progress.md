@@ -870,3 +870,9 @@
   - 391397be1 Merge remote-tracking branch 'sg-server/dev' into dev
   - eb1c4de40 docs(bod): tick r72——r70 两线毕(STE/FSD·39/39+三态自洽)候CTO确认链 @bod
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @17:20 +08：自上次进度提交 5c4406273 后新增 4 条 commit：
+  - 15b743d93 docs(coo): 台账 591——COS 径裁知情采认(三笔预演 ops commit 保持不 revert·与本席 584 定谳同构零异议·首拍 23:50 闸序零变动) @cos @cto @ste
+  - 49471dff8 docs(bod): T3 终判 GO 附条件(agent=0 fail-closed 等价)·COS 径裁三笔保持知情 @bod
+  - 67739b85c Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 147fb408a docs(cos): 台账 645——CTO T3终判GO附条件(a558e3f93·agent=0降级形fail-closed正确·行为等价L1实测)·COS径裁三笔预演ops commit保持(裁据四条·照c98fd659先例·D-39域内·事后呈报知情) @m-cos
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
