@@ -808,3 +808,8 @@
   - 6167700db merge: 收编并行笔（值席落盘防覆盖）
   - 9c6014fb1 docs(coo): 23:50 倒排卷 v3——CEO 时序修正令(G5 21:00 锚废止→事件驱动·施工毕即预演)+G2 毕线+1h 酌定(CTO 十项终裁新增5笔)+G3/G4 连锁平移+督办两线销线(清单 f13880a08)·末三锚不动 @cos @bod
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @15:20 +08：自上次进度提交 c788eceab 后新增 3 条 commit：
+  - 3e93a864f Merge remote-tracking branch 'sg-server/dev' into dev
+  - 54b4c301f docs(cto): 顶层域边界裁决卷——笔1实现形APPROVE(三清单零触=M∪K=S域守恒)+投影语义勘定(carry_periodic→migrate=迁移器白名单动作语义·非migrate[]成员·顶层件永不进三清单)+迁移面首版边界(白名单今晚零扩·demand-pool/daily-progress候首拍后窗·G5预演对表注记)+FSD笔4/5放行·G2采认 @m-fsd @m-cos
+  - 2283ed22c docs(bod): §F 续——栏 B 全毕(RDT a650092)·三栏收敛·FSD 唯一余线 @bod
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
