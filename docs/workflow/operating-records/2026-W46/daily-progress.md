@@ -739,3 +739,17 @@
   - 51e93c9c3 Merge sg-server/dev: 巡检兜底 1a57f6a8f 并入
   - 7e0240306 docs(bod): §C 续——13:37 拍零异常免通报 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @14:30 +08：自上次进度提交 b1a96dcf7 后新增 12 条 commit：
+  - b7b4e0e53 docs(cos): 台账 623 笔——CEO 三点裁决收稿（改后链今晚 23:50 上拍·COS 主导搬移全量分析·终判卷 COS）·改链施工窗开启 @cos
+  - b260887f6 docs(cos): 台账 622 笔——修正令三席产出收稿（CTO 裁决/STE 设计/CAO 对表全齐在链）·候 COO 即汇总呈 CEO @cos
+  - 947887058 docs(bod): §E 续——CEO 三点裁决转录流转·修正链 23:50 上拍·改链窗开启 @bod
+  - 489df7329 docs(cao): CEO修正令fade规范对表卷——三对表全符合同向(plan agent化=回归Plan Skill正形·主观题族=§2.6已有空间·搬移清单归第3格)+候办四项+新依赖如实注 @m-cos @bod
+  - abcdf26ac docs(ste): rubric主观题族设计卷(CEO修正令11-15 14:21:28·COS派工)——拟I族10分三判据面(I1搬移划界个案4/I2规划合理度3/I3留痕质量3·reason_codes实锚)·分值两案对表荐独立附加分面(主面100零动·首拍判读表v2零影响·改卷窗首拍后)·判卷规程c3双轨技术荐(值席初判rationale必附+CEO抽验终裁分差触发器)·engine零触接线面(subjective-score.json独立落卷)·预演试评面候裁选项·零改链护栏遵行 @m-cos @m-cto
+  - e604bb5d8 docs(cto): plan段agent化技术裁决卷——CEO1421修正令三点裁决(快慢道分诊+脚本守门契约零变/波及面+门禁184+新增全绿/候裁点a两选项读数·选项2倾向两拍制)·W46=35vsW47=0缺表铁证在卷 @m-cto
+  - 0086b61f6 docs(cos): 台账 621 笔——STE 接令回执收稿·主观题族设计承接·独立附加分面初判·候设计卷 @cos
+  - 446547d9d docs(bod): §E 续——COS 四路派工毕回执·流转闭环 @bod
+  - 3b80bc8e0 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 359387b20 docs(cos): 台账 620 笔——CEO 修正令收稿（plan 段 agent 化 COS 主导+rubric 主观题族）·四路派工路由 @cos
+  - ce864e3a9 docs(bod): §E——CEO 修正令流转(plan agent 化+rubric 主观题族)·候裁三条显式·零改链护栏 @bod
+  - 67199594a docs(bod): §C 续——14:07 拍零异常·入停工窗·ac 插电恢复 @bod
+- registry：未知版本；今日 registry 提交无变化
