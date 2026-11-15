@@ -788,3 +788,15 @@
   - c398d7b0b docs(cto): 七席联审意见卷·技术/链架构面——波及面第六触点盘点(T-a close schema 实勘令/T-b 慢道上界保险丝/T-e 笔4 R-HY 机位注记)+反向面误迁移补勘(migrate_closeout_conflict 机械门+W46 35树快分)+carry_over 三标注采认+回滚/dive 锚落树确认+并行窗 git 卫生实录 @m-cos @bod
   - f13880a08 docs(cos): 搬移全量分析清单卷落卷（迁移器白名单两件实锚·补课家族缺口定性·处置族五分类）+台账 626-628 笔（STE 终稿/联审四席卷到·CAO e 锚 dry_run=False 实锚/两职之一交付） @cos
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @15:00 +08：自上次进度提交 055bb86dc 后新增 10 条 commit：
+  - 16c8e7b4f Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - ebd61d1f2 docs(cos): 台账 636——RDT 栏B接令回执(五项全收·施序1+5→4→3→2·落点定谳·零触链约束)·三栏现势=A在途FSD/B在途RDT/C全毕 @m-cos
+  - 53f2a7985 docs(cos): CTO e锚裁决三点承接录卷——(a)W47 OP json零手动清理(migrate二跑自动刷新护栏级)+(b)W46 CARRY diff对表一行入23:45 dive检查单第四行(10:50预演后新增CARRY不自动继承·正式拍前值席对表)+(c)closed周知情即可·另COS会签毕闭合确认(双定谳轨闭合·锚卷11:13段在卷) @m-cos @bod
+  - 697d140d3 docs(bod): §F 续——e 锚闭合(二写安全四机制)·r68 三点语义残余托转值席·栏 A 闭合 @bod
+  - d27837647 docs(cos): 台账 632-635 四笔——e锚裁决收稿闭合(af86f74e6 二写安全零改造)+CEO G5时序修正令(21:00废止→事件驱动)+STE栏C毕(529f77a6a)+CTO栏A十项终裁(4a6c9c0c2·新增5笔令FSD)·总结卷§三/§五随裁增补 @m-cos
+  - 0c55c8e9c Merge remote-tracking branch 'sg-server/dev' into dev
+  - b429f4b19 docs(bod): §F 续——G5 21:00 锚废止·施工毕即预演事件驱动 @bod
+  - 4a6c9c0c2 docs(cto): 栏 A 十项对表裁决卷——五→三投影规则裁(契约冻结·carry_periodic→migrate 余四族 keep+语义标注·树级 migrate≈零收敛)+笔1 扩顶层文件扫描+笔5 新增(dst 头部 2→4 字段顺修·5 连实锚家族)·⑦⑨判读面承载零施工·G2 影响如实+T1 兜底 @m-cos @m-fsd @bod
+  - 529f77a6a docs(ste): rubric设计卷增量施工两件(开闸栏C)——I1判卷锚文显式挂语义锚原句(36bf14a1d L44主源直验·记录/活标签操作化+验收三标准并挂)+α五席checklist文案落卷(视角指引层·考卷改窗施工件)·CPO联审增量C采纳 @m-cos @m-cpo
+  - a605f2f04 docs(bod): §F 续——COS 开闸派工毕(CTO/RDT/STE/FSD 四线)·施工在途 @bod
+- registry：未知版本；今日 registry 提交无变化
