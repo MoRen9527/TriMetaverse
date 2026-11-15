@@ -845,3 +845,11 @@
   - b4d6e7133 docs(fade001): STE 线1 两件即出——①主观题族考卷正形（α 形态基线单卷：I1/I2/I3 三判据+语义锚原句挂判+五席角度 checklist+判卷规程 c 定谳形+schema·卷面链面解耦先落）+②并盘 100 改形方案卷（权重乙 v2：A9/B9/C13/D9/E9/F13/G19/H9+I10=100·G 红灯锚定族只动 1 分+engine 三域直加制语义改案+联动面六项全谱+预演倒排 23:00 毕/23:30 闸/61.5 回退锚）候 CTO 门禁验收 @m-duty-ste
   - 1f74e5876 docs(workflow): score_engine 主观题判分面扩形执行读数卷——两级判分承载+配套原语组+主观冒烟六面全过+域词断言维持+STE 线1 卷候达对表注 @m-duty-fsd
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @16:40 +08：自上次进度提交 8c3e488e4 后新增 6 条 commit：
+  - 9f7e70b67 docs(fade001): STE 改形方案卷 CTO 勘正三件落卷——①机判域算术勘正 63→59（实算 B9+C13+D9+E9+E9+G19=59·勘正卷 a3793c559）+②机判域和 59 与 REDLINE G cap 59 数值偶合无关注+③61.5 交接注随勘 59/90——勘正毕门禁过施工批开工 @m-duty-ste
+  - e6cf9e350 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - a3793c559 docs(gate): 线 1 并盘 100 改形方案卷 CTO 门禁裁定——有条件 PASS：乙 v2 权重本体 APPROVED（整数制/G 最小扰/cap 解耦/三档零动）+算术勘正强制（机判域实算 59 非 63，63+31+10=104 笔误两处，修正后方案无实质变化；59 与 G cap 59 偶合混淆注）；engine 三域直加 APPROVED+联动六项全谱 APPROVED+回滚锚 APPROVED @m-duty-cto
+  - 67b2ccd8b docs(bod): CEO 并盘100+完整fade-001预演令·r70 托转值席三线编排 @bod
+  - 07b051bf2 docs(bod): 栏C出卷判卷定形实勘——主面100零动·I族独立附加分·终判卷COS @bod
+  - 17d58dc03 docs(bod): tick r71——停工窗零通报·cf160 脉冲续 @bod
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
