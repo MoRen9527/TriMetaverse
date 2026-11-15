@@ -34,7 +34,9 @@
 
 ## §五 · 勘正注记（COS 台账 656·r112② 勘正·01:48）
 
-§四「第 10 轮触发前提=目录面解先落（root mkdir+chown）」**勘正为 env 形实况验证**（r112② 优先免 root 形 TRIMC_CONFIG_DIR env 路径勘正·root 形降候补仅 CEO 显式令+卷面凭据）——值席线 env 形已施工毕（d13c3e3ff 01:26:45·四步全过）。技术面兼容确认：env 形=575396e 接缝形原生通道（preflight TRIMC_CONFIG_DIR 覆盖+接缝三态 sandbox 同形实测）·preflight 判读面零影响（只改 marker 物理路径）——放行条件随勘正更新·验收判定 APPROVE 不变。
+§四「第 10 轮触发前提=目录面解先落（root mkdir+chown）」**勘正为 env 形实况验证**（r112② 优先免 root 形 TRIMC_CONFIG_DIR env 路径勘正·root 形降候补仅 CEO 显式令+卷面凭据）。技术面兼容确认：env 形=575396e 接缝形原生通道（preflight TRIMC_CONFIG_DIR 覆盖+接缝三态 sandbox 同形实测）·preflight 判读面零影响（只改 marker 物理路径）——放行条件随勘正更新·验收判定 APPROVE 不变。
+
+**二勘（台账 657 连带·01:57）**：本注记原引「值席线 env 形已施工毕（d13c3e3ff 四步全过）」实锚**勘销**（657 对象错认勘正——d13c3e3ff 四步实勘=r114① duty-urge-patrol 停源案权限面改造·卷面 TRIMC_CONFIG_DIR/env/preflight 零命中·非 env 修件施工毕证明）——**候触发读数源修正=FSD env 修件毕报三面实锚承载**（preflight marker env 化+daemon unit 面+河源检出同步·gate 序=FSD 毕报→STE 复验→SDE 三跑不再候令）·候件方向不变（候 env 形实况验证读数）。
 
 ## 使用依据
 
