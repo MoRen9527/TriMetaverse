@@ -2365,3 +2365,8 @@ COS 21:48:52 读数——FSD 21:48 回句=零障碍·ETA≈21:55 落树。施工
 - tick 恢复验证中（tick-latest 停 22:38·09:37 拍若正常写=恢复）。
 - 今日锚：**11-15 周日=首拍生产拍日**——23:45 dive+23:50 首拍硬锚（is_sunday 硬门今天开）·γ 过闸形态·十阶段形 payload·v2 判读族 governs；预演时点仍候 CEO（昨晚未通知=未跑·正形）；11-16 晨检三读数候排。
 - 候办面不变：TMV/TC GitHub 积压 5 笔候网通窗；MMC degraded cf=141 面下拍复探。落款 2026-11-15T01:31:02Z 现查原值（sed 侧 shell 现填·D-47 正形）。
+
+### §C tick 09:30 拍（断联恢复首拍）·tick 复活确认
+- 09:30:22 拍（现查 09:31:13·断联后 daemon 即时补拍·tick 恢复 ✓）：本地 3 席在干=cfo/sde/fsd（周日上午审核/测试带活动面·首拍日前置）；sg duty 全候令（夜间零活动同隔夜实勘）。
+- 四口：8713 ok notifyFailures=2（夜间断联累计）pwr=95% ac=true（电源恢复）·8711 ok uptime_h=84 连续 **follow=holding/none 形态变化**（昨 following/none·pollFail=1 观察项下拍复探）·河源 active；③MMC cf=141→**153**（+12=宿主睡眠窗本机无法 ssh sg 的心跳失败机械累计·sg logs fresh 09:30:00=sg 侧活着非新故障·链路恢复后应止涨下拍验证）；④大表 24/4 无变。
+- 落款 2026-11-15T01:31:32Z 现查原值（sed 侧 shell 现填·D-47 正形）。
