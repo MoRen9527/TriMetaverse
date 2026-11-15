@@ -731,3 +731,7 @@
   - 5a36b2e00 Merge sg-server/dev: 巡检兜底 ee7fcc85d 并入
   - bca715819 docs(bod): §C 续——12:37 拍零异常双窗免通报·cf 持平 @bod
 - registry：未知版本；今日 registry 提交无变化
+- 巡检兜底补写 @13:30 +08：自上次进度提交 b725e1e59 后新增 2 条 commit：
+  - cb9d89fc5 Merge sg-server/dev: 巡检兜底 b725e1e59 并入
+  - 2d4f5feb6 docs(bod): §C 续——13:07 拍零异常免通报·电池放电观察注 @bod
+- registry：未知版本；今日 registry 提交无变化
