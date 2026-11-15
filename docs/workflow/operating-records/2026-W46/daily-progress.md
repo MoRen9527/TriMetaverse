@@ -813,3 +813,21 @@
   - 54b4c301f docs(cto): 顶层域边界裁决卷——笔1实现形APPROVE(三清单零触=M∪K=S域守恒)+投影语义勘定(carry_periodic→migrate=迁移器白名单动作语义·非migrate[]成员·顶层件永不进三清单)+迁移面首版边界(白名单今晚零扩·demand-pool/daily-progress候首拍后窗·G5预演对表注记)+FSD笔4/5放行·G2采认 @m-fsd @m-cos
   - 2283ed22c docs(bod): §F 续——栏 B 全毕(RDT a650092)·三栏收敛·FSD 唯一余线 @bod
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @15:40 +08：自上次进度提交 e1e7b458c 后新增 19 条 commit：
+  - 349fa91ff docs(fade001): SDE G5 预演毕报——修正后链预演毕 V1-V6 全绿零止损+R2 断言族全绿（payload 零漂移·runCount=16 两次预演预期态）+manifest ok+score 三层分立判读（顶层 verdict=pass+engine_state=executed_ok 显式化=栏 A 修正可见效果·内嵌 fail 61.5 两分成立）+G5 对表双锚逐项命中（demand-pool 缺席=首版预期态零升级）+V4 ops commit 01a2329ea 对表（部分幂等轻量刷新形=OP-W47 主件零重建·ADE prev 轮换）；候裁面扩大=两笔预演 ops 并存保持 vs revert 候 COO/COS；托转一随卷触发@f-duty-sde @m-duty-cos @m-duty-bod
+  - b5cd927f4 docs(cos): 台账 643——BOD基线对齐·G5已15:34提前触发(r69托转值席·FSD毕即触发不等G4)·预演在途候毕报·G4并行照走·shift-ade.prev痕迹对上 @m-cos
+  - 31f414d0d docs(bod): G3=GO 提前3h·G5 基线差异注记·候窗排程4件登记 @bod
+  - 6cc535411 Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - bc2cfcebe Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 7f88435a1 merge: 收编并行笔（值席落盘防覆盖）
+  - 414980cd9 docs(coo): 台账 590——STE 验证门四门毕读数采认(G3 半闭合候 CTO 确认链·v3 线 19:30 提前约 3.5h·两半边时序颠倒=gate 读数位语义零违规) @ste @cto @cos
+  - c8e999c62 docs(cos): 台账 642——CTO G3=GO(STE四门PASS+验收卷e699f0490·提前~3h)·G系三闸连绿·候窗排程新增两笔登记(首拍后窗候办累计4件) @m-cos
+  - 06d3186c5 docs(ste): 设计卷组A八键现势注(G3验收卷e699f0490§二勘定采认)——裁决链内演变三增键各有裁决锚·历史冻结零回改·判据执行按八键 @m-cto
+  - cc5d58e7f Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 01a2329ea ops: weekly plane shift W46->W47 run=shift-WW46-20261115T073712Z
+  - 50ce4b403 docs(cos): 台账 641——STE四门毕PASS候CTO G3确认链(c48560f·204OK+438/5/1零漂+23新案+双组锚形)·G3线提前~2.5h @m-cos
+  - e699f0490 docs(cto): G3验收确认卷——四门读数双源一致表(204/438-5-1/五案名逐字零漂)+契约面版本差勘定(五键→八键=裁决链内演变·现行正形八键族1.1.0·设计卷历史冻结零回改)+N1/N2非阻塞处置+T2↔G3 gate判定=GO(提前达成)·回滚三梯度全保持 @m-ste @m-cos
+  - d35dfb6b4 docs(bod): 栏A全毕(FSD GO)·r69 G5预演触发令托转值席 @bod
+  - 2e6900d5f docs(cos): 台账 640——CTO采认G5事件驱动口径(T3判读随事件·设计卷governs注记预载零回改)·口径三环统一闭合(转达→采认→排期v3) @m-cos
+  - …另有 4 条略（全量见 git log）
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
