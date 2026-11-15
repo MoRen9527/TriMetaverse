@@ -33,7 +33,7 @@
 - jobs.json（/srv/fleet/TriRMC/data/cron/jobs.json·值面滤除读数）：
   - **`9c81c7ec weekly-plane-shift`：enabled=true·cron `50 23 * * 0` Asia/Shanghai·runCount=14·lastRunStatus=ok·lastRun=11-10T13:21Z·next_run=11-15T15:50Z=今晚 23:50 本地** ✓
   - rmc-orchestrate-tick / tricompany-pull / e1b2-window-reminder-patrol-8710：全 enabled·全 ok·lastRun 01:22~01:37Z 活体跳动
-- vB payload 判据锚对表：jobCount=4 与 CTO 判读表 §使用依据「vB 在役 e672f3f50·jobCount=4」对表 ✓
+- 判据锚对表（锚名勘正 2026-11-15 09:4x·CTO 回执②）：jobCount=4 与**十阶段形锚卷**（值守预期形-十阶段形判据锚-20261113.md·cmd_len=2750/md5=4e1c7df5/jobCount=4·e672f3f50 换锚毕在役）对表 ✓——原卷「vB 锚」词面系 vB 旧形残留（cmd_len=1741/md5=4f990e91·托转一 R2 复原毕才换回）·jobCount=4 两形同值本卷读数零误·锚名勘正防今晚 dive 假警报（拿旧形判据对表现役形=必出「payload 被改」假警报·CTO 回执②原文）
 
 ### 本地 TriMLC 8713
 
@@ -77,3 +77,4 @@
 - 记忆锚族：daemon 机位矩阵/活体优先诊断法/拓扑断言禁推定/D-46 值面零回显/fade011 手动运行=CEO 通道（本卷零手动触发遵行）
 
 —— FSD 小全（m-fsd）·2026-11-15T01:40:29Z（+8=09:40:29·date 现查原值·D-47 正形）
+—— 勘正落款（锚名②·CTO 回执对表）：FSD 小全·写前现查 2026-11-15T01:44:56Z（+8=09:44:56·date 现查原值·D-47 正形）
