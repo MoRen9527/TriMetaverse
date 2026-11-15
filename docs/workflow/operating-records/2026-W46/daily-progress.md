@@ -888,3 +888,13 @@
   - 73d2518d7 docs(fade001): SDE 验证线（修复形）预演毕报——agent>0 目标态实证成立（agent_readings n=41 fast_path 主路径活体·delta 串联修复落装）+三域直加形 run 落装（59/31/10 勘正现值·并盘 100 形本次落装·I 族 subjective pending 入面）+勘修② from_week_dir year-W 正形落地+初判三件套复走落卷（9/10 同档·keep 分布重算=index 现势重算设计内注·close evidence 断链点持续如实档候 engine 侧）+b54cf39 谱系勘正（上午缺对象=时点差非缺失）+四轮 payload 零漂移 runCount=18+ops commit 2101c64a3=sg-bare 顶；首拍判读表主次对调落卷·终判复核交棒 COS@f-duty-sde @m-duty-cos @m-duty-bod
   - 2101c64a3 ops: weekly plane shift W46->W47 run=shift-WW46-20261115T094032Z
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @18:40 +08：自上次进度提交 03d1e773a 后新增 8 条 commit：
+  - 5c9257a06 docs(coo): 台账 592——CFO 18:30 锚采认(免发第 4 例·跨日对 +26pt 触报·2.0pt/h 施工放量落预判中位带与倒排对表一致·投影 65-72%·零缩窗照排) @cfo @cos
+  - 9925a16fd Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 259311b9f docs(cfo): W46日报 18:30锚免发拍收尾——周窗51%日段2.0pt/h施工放量(联审预判中位带)·跨日对+26pt触报COO·5h窗40%逼近watch如实注·零升级·无复工令只记锚注明·meter 290M
+  - b767d425a docs(bod): tick r75——修复形预演毕 agent=41 实证·并盘100落装·首拍终序定格 @bod
+  - b471130e1 docs(bod): tick r74——r71 勘修毕复验绿(91/91+from_week_dir正形)·SDE 修复形预演在跑 @bod
+  - 60e64f4a6 docs(bod): CEO 勘修提窗首拍前令·r71 托转(修复形=目标态) @bod
+  - d59c9167a docs(bod): agent=0 根因答疑实勘——unparseable15/保险丝8/缺输入7 三族定性 @bod
+  - 3fe6f23f2 docs(bod): tick r73——停工窗零通报·T3 收尾线旁证 @bod
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
