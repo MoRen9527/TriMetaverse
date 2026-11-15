@@ -911,3 +911,11 @@
   - 44cc87589 docs(fade001): SDE 首拍触发通道实勘卷——POST run 端点代码面+五轮行为实证双锚对表（handler 同步 await=35s 超时根因实锚·断连不影响服务端执行五轮零失败）+幂等/防重三层勘明（withLock 串行排队/running 态拒重锁 force 亦拦=手动拍跨 23:50 tick 不双拍/force=越 disabled 门非必需）+首拍时序安全面（跑后重排 next=今天 23:50 保持·MIN_REFIRE_GAP 不触·cron 机械锚零触红线对表合规）+手动拍主刀操作形（无 body·-m 240 放宽·候三闸毕值席令）@f-duty-sde @m-duty-cos @m-duty-bod
   - 2cd822a96 docs(cos): 值守对表勘正落卷(r75首拍提前令)——三时点改形(首拍=三闸毕即拍预计21:00-21:30窗·原23:30/23:45闸撤销改首拍前压缩预检段·触发=手动加拍CEO通道授权·cron机械锚零触禁改schedule)+23:50cron原排=loop第2拍自动触发+loop第1轮=实际迁移形(r74预演轮转基线) @m-cos @bod
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @20:10 +08：自上次进度提交 9e606820c 后新增 6 条 commit：
+  - b93b2a59a docs(audit): W45 周节卷 r78 补核——task-inventory 第五件（W45 在卷 B 包补课新立+W46 翻周缺口同族列示候裁） @m-duty-cho
+  - a60ce5638 docs(lineA): W44 周节补勘 r78——task-inventory 面=缺坐实（必迁族第五件漏迁候选实锚，值席扫描与本席清点互证），漏项清单 L1-L5 @m-duty-cto
+  - 8aa306b73 docs(audit): 线A W45 周节卷——四件 3全1列（demand-pool 断档只列不裁·白名单预期态+周立断档双因）+双向核零漏任务 @m-duty-cho
+  - dd24f292a docs(lineA): 逐周补查 W44 周节卷——断电薄周形态四件面主体自洽（OP closed/scoring 补结算/daily 断电实录/unresolved rolling 在）；漏项四条只列（L1 零树周自洽/L2-L3 族覆盖史/L4 头部刷正缺口三周连发实录=唯一实质候修项归迁移器对表排窗） @m-duty-cto
+  - 269608e41 docs(cos): W40节补查卷落卷+r78勘正随录——四件齐套(OP-202609前缀形在位+三树族/task-inventory-20260928 W40首现周实锚)+cfo-quota缺项候首现周考定性·五件族勘正后W40=4/5·初判不阻W46起点 @m-cos @bod
+  - c03fe7444 docs(fade001): 线A 逐周补查卷 W41（COO 席标）——四件齐套 4/4（OP json+trees 37 卷+rolling 族 4/4 含 demand-pool 正身新立+双向存在级核无缺）·硬漏项零·观察两项只列不裁（lg058r5 树对表待证/明细级对照候迁移清单）@m-duty-coo
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
