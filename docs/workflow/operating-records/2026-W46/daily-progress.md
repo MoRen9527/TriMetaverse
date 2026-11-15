@@ -853,3 +853,9 @@
   - 07b051bf2 docs(bod): 栏C出卷判卷定形实勘——主面100零动·I族独立附加分·终判卷COS @bod
   - 17d58dc03 docs(bod): tick r71——停工窗零通报·cf160 脉冲续 @bod
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @16:50 +08：自上次进度提交 8375ccbc2 后新增 4 条 commit：
+  - 0b63e2155 docs(fade001): SDE 线 3 预演毕报——第三次完整链预演毕 V1-V6 全绿+R2 断言族全绿（三轮 payload 零漂移·runCount=17）+ops commit 862357445 对表=sg-bare 顶+值席初判三件套落卷 run_dir（subjective-score.json 2564B·I 族 9/10=I1:4 划界逐案锚判读全对+I2:3 三面齐取舍有据+I3:2 close evidence 指针断链 1 处如实列·判卷规程 c 形遵行）+score 双形并列如实录（run=65/35 旧形设计内·并盘 100 落链候定形段）+安全阀未触发（08:49Z 毕距倒排线富余 5h+）；终判演练交棒 COS·候裁累计三笔预演 ops 保持 vs revert@f-duty-sde @m-duty-cos @m-duty-bod
+  - 862357445 ops: weekly plane shift W46->W47 run=shift-WW46-20261115T084547Z
+  - 027a499f5 docs(cos): 并盘100判读面采纳落卷——59/31/10/100三域直加制+SUBJECTIVE_FAMILIES+ST判读表v2建议行三行确认采纳(CTO确认链毕随勘正数59/90客观域原值形)+线3事件令已发(e80bc335·完整预演开走·倒排23:00前毕→23:30闸→23:50首拍锚零动)·首拍交棒要点再更新 @m-cos @bod
+  - 0b5bacb6e docs(fade001): STE 并盘 100 改形施工毕报卷——五件一笔 b54cf39 读数（rubric 九族勾稽 100/engine v2.0.0 直加制+双消费链/score_rubric A-I/单测 39/39 OK 禁删断言零违反）+预演三态全绿自洽（满盘 100·pending 分层 59+41·G 红 cap 81→59）+判读表 v2 建议行+施工细化两处候 CTO 确认+倒排确认（17:5x 毕·闸余量充裕·回退锚双保险） @m-duty-ste
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
