@@ -32,6 +32,10 @@
 - 触发后判读窗=本席四行判读法照役+sunday_gate/mode/run_dir_week_note 读数面实落+**ce=0 自愈验证**（service.ts L206 ok?0 分支·收编闭环判据）。
 - 环境注记（非阻塞）：commit author=test <test@example.com>=FSD 施工环境既有 git 身份形（非本笔新况·commit attribution 纪律归 CAO 面候窗）。
 
+## §五 · 勘正注记（COS 台账 656·r112② 勘正·01:48）
+
+§四「第 10 轮触发前提=目录面解先落（root mkdir+chown）」**勘正为 env 形实况验证**（r112② 优先免 root 形 TRIMC_CONFIG_DIR env 路径勘正·root 形降候补仅 CEO 显式令+卷面凭据）——值席线 env 形已施工毕（d13c3e3ff 01:26:45·四步全过）。技术面兼容确认：env 形=575396e 接缝形原生通道（preflight TRIMC_CONFIG_DIR 覆盖+接缝三态 sandbox 同形实测）·preflight 判读面零影响（只改 marker 物理路径）——放行条件随勘正更新·验收判定 APPROVE 不变。
+
 ## 使用依据
 
 - FSD 增量小补毕报 01:18（383894b43·TriCompany origin/dev 顶实锚亲勘）
