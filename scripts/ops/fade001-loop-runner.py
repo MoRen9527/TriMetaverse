@@ -51,9 +51,13 @@ def log(msg):
 
 def ssh(cmd, timeout=280):
     # python3.6 兼容（sg 系统 python=3.6·capture_output 参数 3.7+ 才有）
-    return subprocess.run(["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=10", RHY, cmd],
-                          stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                          timeout=timeout)
+    # 根修（崩溃修令①）：PIPE 返回 bytes——统一 decode 为 str 返回（bytes/str 类型错根因消灭）
+    r = subprocess.run(["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=10", RHY, cmd],
+                       stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                       timeout=timeout)
+    return subprocess.CompletedProcess(r.args, r.returncode,
+                                       r.stdout.decode("utf-8", "replace"),
+                                       r.stderr.decode("utf-8", "replace"))
 
 def remote_json(py_src, curl_cmd, timeout=90):
     # base64 干净传码+远端临时件零残留（三层引号嵌套规避）
@@ -191,8 +195,13 @@ def main():
         ts, resp, rc = trigger()
         rec["trigger_at"] = ts; rec["trigger_resp"] = resp[:120]
         log("触发 %s resp=%s" % (ts, resp[:80]))
-        if '"ran":true' not in resp:
-            log("STOP：触发未受理（ran!=true）"); state["status"] = "trigger-fail"; rec["stop"] = "trigger"; break
+        # 崩溃修令①：dict 判定形（原字串查形 bytes/str TypeError 根因点·同族全勘根修覆盖）
+        try:
+            data = json.loads(resp)
+        except Exception:
+            log("STOP：触发响应非 JSON（%s）" % resp[:80]); state["status"] = "trigger-badresp"; rec["stop"] = "badresp"; break
+        if not (isinstance(data, dict) and data.get("ran") is True):
+            log("STOP：触发未受理（ran!=true·reason=%s）" % data.get("reason")); state["status"] = "trigger-fail"; rec["stop"] = "trigger"; break
 
         d = wait_run_dir(prev_dir)
         if not d:
