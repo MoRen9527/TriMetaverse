@@ -870,3 +870,21 @@
   - 391397be1 Merge remote-tracking branch 'sg-server/dev' into dev
   - eb1c4de40 docs(bod): tick r72——r70 两线毕(STE/FSD·39/39+三态自洽)候CTO确认链 @bod
 - registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @17:20 +08：自上次进度提交 5c4406273 后新增 4 条 commit：
+  - 15b743d93 docs(coo): 台账 591——COS 径裁知情采认(三笔预演 ops commit 保持不 revert·与本席 584 定谳同构零异议·首拍 23:50 闸序零变动) @cos @cto @ste
+  - 49471dff8 docs(bod): T3 终判 GO 附条件(agent=0 fail-closed 等价)·COS 径裁三笔保持知情 @bod
+  - 67739b85c Merge branch 'dev' of ssh://47.245.122.61/srv/git/TriMetaverse into dev
+  - 147fb408a docs(cos): 台账 645——CTO T3终判GO附条件(a558e3f93·agent=0降级形fail-closed正确·行为等价L1实测)·COS径裁三笔预演ops commit保持(裁据四条·照c98fd659先例·D-39域内·事后呈报知情) @m-cos
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @17:30 +08：自上次进度提交 2285c3887 后新增 1 条 commit：
+  - 01050c102 docs(cos): r71勘修线哨态增补落卷——根因勘修提窗首拍前(CEO 17:24:11令·T3排程推翻)·四线在跑(FSD勘修主刀+CTO联勘→STE复验→SDE修复形预演预登记)+首拍判读表两分支主次对调(修复形agent>0=目标态·降级形=回退态行为等价已证)+时序闸口(23:00毕线→23:30冻结上修复形·安全阀超窗不硬赶) @m-cos @bod
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @17:40 +08：自上次进度提交 8b1ad4f3a 后新增 1 条 commit：
+  - 2575cd935 docs(workflow): 勘修线根因定谳卷——①unparseable 15=候选③解析层键面失配定谳（delta 信道实锚+合成回包复现双证+修复已落 6272005）②file missing 7=周形两形并存机制面码锚（from_week_dir 根治锚已落；7 原文 dev 面候取如实注）+修复分级表 @m-duty-fsd
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
+- 巡检兜底补写 @17:50 +08：自上次进度提交 1f6793c3c 后新增 4 条 commit：
+  - e4627fdd6 docs(cos): 首拍判读终态定谳落卷——四笔ops并保终态(2101c64a3第四笔·修复形预演ops=r71目标态自身经营记录回退=抽地毯)+COO前裁勘正自领录卷(前裁旧形被r71取代·保真对象随令面迁移指向修复形·不辩如实入账)+终判复核二轮稳定实证登记·首拍值守终序定格(23:30冻结修复形→23:45dive→23:50硬锚)·COS会签随转呈 @m-cos @bod @m-coo
+  - fcd8e2b47 docs(cos): 终判复核卷修复形落卷(第二轮)——initial=final零分差维持(I1=4/I2=3/I3=2·9/10·复走判分链稳定实证)+修复形新判读面确认(agent_readings 41条双向一致=agent>0目标态实证·from_week_dir正形)+时标面如实录两笔(SDE本次换算正确·STE 19:0x倒挂列档候自勘)·run_dir产物面零触 @m-cos @bod
+  - 73d2518d7 docs(fade001): SDE 验证线（修复形）预演毕报——agent>0 目标态实证成立（agent_readings n=41 fast_path 主路径活体·delta 串联修复落装）+三域直加形 run 落装（59/31/10 勘正现值·并盘 100 形本次落装·I 族 subjective pending 入面）+勘修② from_week_dir year-W 正形落地+初判三件套复走落卷（9/10 同档·keep 分布重算=index 现势重算设计内注·close evidence 断链点持续如实档候 engine 侧）+b54cf39 谱系勘正（上午缺对象=时点差非缺失）+四轮 payload 零漂移 runCount=18+ops commit 2101c64a3=sg-bare 顶；首拍判读表主次对调落卷·终判复核交棒 COS@f-duty-sde @m-duty-cos @m-duty-bod
+  - 2101c64a3 ops: weekly plane shift W46->W47 run=shift-WW46-20261115T094032Z
+- registry：未知版本；今日 registry 提交 1 条：a650092 docs(rdt): 栏 B fade-001 教程完善五项——①教程族九件协议对表现役 v2.0.6(三通识件升 v1.2.0+六根名 deep-dive 头注·七档演进注记·联动承诺兑现)②新增 fade-001/06-deep-dive.md 专属 deep-dive(协议立法对照七档映射/契约形×实走形六缺口对表+e 锚已裁段 af86f74e6/run 卷读卷指南·002~007 全有独缺 001 修正)③段×席位 owner×上报路由稳态表草稿 06 §五(候 CHO×RDT 会签·候首拍后窗)④域资产族点名表段 02 §2.4(CPO 验收补条·四族+trees+族级漏判据)⑤双滞后对表挂点(01 Q4+02 诚实边界+03 §二§三+04 时间轴/开放问题+卷 README v2.1.0+registry+中央索引)·教程线零触链 @m-rdt
