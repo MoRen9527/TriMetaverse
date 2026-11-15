@@ -83,7 +83,10 @@
 - **触发**：CTO 链修正设计+FSD 施工毕落链后（本席候触发·零预跑——现役链零改护栏下无验证对象）
 - **门 1 · 门禁独立重跑**：cognition 全量（现役 181·施工后读数以落链面为准·落链前后双跑对序+log 落盘——COS 令面预期 184=181+新增案面·实际以机械读数为锚禁转抄）+validation 族基线（438/5/1 五案名零漂移对表）
 - **门 2 · 新增案逐案复核**：判据语义对表 c 定谳形态+值面断言纪律（禁键存在性抽验）+覆盖完整性（正常/边界/异常三路径）
-- **门 3 · plan 段 agent 判断面行为测试面**：plan_scope reason_codes 产出行为断言（agent 化后 reason 码族完备性+两态码覆盖+留痕落卷面）+subjective-score.json 判卷消费面与 reason_codes 链接验证（I3 机械锚活体对表）
+- **门 3 · plan 段 agent 判断面行为测试面（两域两形分拆·CTO 勘正采认 14:44 段·防键名错位假红）**：
+  - **断言组 A（plan agent 化域·c691cf007+附款 c398d7b0b 形）**：`agent_readings.reasons` 产出行为断言——[{tree, family, confidence, reasons, source}] 结构值面+fail-closed 五态 reason 串覆盖（agent_call_failed/agent_output_malformed/agent_low_confidence/migrate_closeout_conflict/skipped_over_limit）+留痕落卷 plan.json
+  - **断言组 B（rubric 判卷域·abcdf26ac 形）**：`reason_codes`（plan_scope entries 分类码·L138-141/L326 实锚）与 subjective-score.json 判卷消费面链接验证（I3 机械锚活体对表）
+  - 两域键名勿混：**reasons≠reason_codes**（施工笔 diff 实勘按域对形·组 A 对 plan.json 面组 B 对 rubric/subjective-score 消费面）
 - **门 4 · 判定回执链**：STE 三分法判定→CTO 确认链（不独立放行）→毕报 COS——验证门读数随 FSD 毕报链回 COO
 
 ## §七 · 风险面如实
