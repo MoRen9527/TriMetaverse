@@ -104,6 +104,7 @@
   - **断言组 A（plan agent 化域·c691cf007+附款 c398d7b0b 形）**：`agent_readings.reasons` 产出行为断言——[{tree, family, confidence, reasons, source}] 结构值面+fail-closed 五态 reason 串覆盖（agent_call_failed/agent_output_malformed/agent_low_confidence/migrate_closeout_conflict/skipped_over_limit）+留痕落卷 plan.json
   - **断言组 B（rubric 判卷域·abcdf26ac 形）**：`reason_codes`（plan_scope entries 分类码·L138-141/L326 实锚）与 subjective-score.json 判卷消费面链接验证（I3 机械锚活体对表）
   - 两域键名勿混：**reasons≠reason_codes**（施工笔 diff 实勘按域对形·组 A 对 plan.json 面组 B 对 rubric/subjective-score 消费面）
+  - **组 A 键族现势注（G3 验收卷 e699f0490 §二勘定采认·历史冻结零回改）**：五键勘正面→现役契约正形=**八键族 1.1.0**（增 domain/plan_family/annotation 三键·各有裁决卷锚 54b4c301f/4a6c9c0c2——裁决链内演变非实现漂移）——判据执行按八键·本组五键文案=历史写作面冻结不改
 - **门 4 · 判定回执链**：STE 三分法判定→CTO 确认链（不独立放行）→毕报 COS——验证门读数随 FSD 毕报链回 COO
 
 ## §七 · 风险面如实
