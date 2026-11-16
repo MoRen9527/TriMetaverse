@@ -3131,3 +3131,4 @@ CEO 16:47:05 直令（verbatim 归档）：「让m-duty-cos盯着跑完 V2-2 验
 - CTO 正式回执已直达值席（061fadc46 落卷双通道并达·nd5-trialrun-plan 补录节=落卷锚·148B 纠偏生效——教训遵行双通道 standing）
 - notice-149 勘正发值席（18:2x 提交毕）——值席即执：ssh R-HY 验 preflight marker 路径 env-first→mkdir /srv/fleet/.trimc-marker/convene-trigger→写 convene_mode=auto→cat 验（Cultivating 34s 实勘）
 - Monitor v3 重挂（加 runJob/写入毕/轮毕关键词）；下一步=POST runJob→首跑启动→读数回链
+- 本段 commit 155207f66
