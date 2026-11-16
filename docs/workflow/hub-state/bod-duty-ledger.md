@@ -3414,3 +3414,23 @@ m-cos 对表读数（台账 707·783b22b2a 顶对表·T1b 分段毕报 99af15279
 ### ㊿+367（CEO 裁定转达·单走 GLM 不供 DEEPSEEK·notice-124·11-17 00:07 令）
 CEO 口谕（2026-11-17 00:07:04+0800）「走glm key，不用deepseek」（令文冻结照录）——notice-124 直发值席（16:07:16Z·收讫实锚「BOD 124 轮收讫（CEO 裁定·单走 GLM·DEEPSEEK 销项）——四款转达 SDE 续行据更新」）+SendMessage m-cos 对表销项（msg d0eda8ff）。四款锚：①DEEPSEEK 重供销项升级点关闭②T1b 单走 GLM（勘形落位即 600 落装·接线验证随供毕走）③proxy 双后端照现役不删（DEEPSEEK 槽空置·收敛另裁不急）④T1 闭环判据勘正=GLM 供毕+接线验证绿。锚笔第124轮随拍。
 ——BOD @2026-11-16T16:07:57Z
+
+### ㊿+368（m-cos 三件办毕·升级点销账闭环·GLM 勘形兑现·活形候 CTO 形定·00:11 收讫）
+①升级点销账毕（台账 709 留痕禁裸销合规）——DEEPSEEK 候重供正式闭环；②T1b 工程面终态毕报对表毕（5a7cc7db2）：布建面毕拓扑=dsh→proxy-dual 8682→DEEPSEEK 直透/GLM→3334 透传——新挂账点=**3334 常驻化 unit 化候维护窗**（nohup 现役·非阻塞）；③GLM 勘形毕报对表毕（e4f12fc66·CEO 23:48 口谕兑现）：key 在盘形态=**trimmc-card.json 加密条目**（api_key_encrypted·R-HY enabled=True·裸 key 四向排除零命中）——接线形勘定 Form X 断（3333 无 messages 面 404＋3334 需明文 env 回环 D-46 冲突）——**GLM 槽活形三候选候 CTO 工程形定**（TriModel 机制解卡注入/管理员直供/proxy 新路由 TriModel 域施工）·技术裁决归 CTO 域流转在途（值席面转呈）·m-cos 督办候形定读数随线转。BOD 判读：候裁点归 CTO 域（D-39/代裁权边界·非候 CEO）——免扰归档·知情呈报 CEO。T1b 终收敛=布建面毕+候 GLM 活形（CTO 形定→值面解卡→接线验证→T1 闭环）·T2 活体验证同步候值面。
+——BOD @2026-11-16T16:11:29Z
+
+### ㊿+369（tick 00:07 拍转报）
+00:07:08 拍（00:13:10 现查·<12min）：⓪全席空闲（框面候令态·T1b/T2 实际在办）｜①双树收口｜②四口：8713 ok pwr=**59%** ac=false 放电续（92→79→68→59·插电提醒三呈未获响应·休眠风险继续升高）·8711 ok uptime_h=122 pollFail=0·河源 TriRMC active｜③MMC ok degraded=true cf=192（+1·计数口径失真勘中）｜④大表 24/4 持平。在途链：T1b 布建面毕候 GLM 活形（CTO 形定在途）·T2 编码毕报已落候活体验证段·m-cos 三件办毕 00:10:35 距现查 ~3min——链活跃健康零断链。
+——BOD @2026-11-16T16:13:21Z
+
+### ㊿+370（job2 v2 探针 00:18 拍·判读=在役有进展·免扰归档）
+一探三面：a) 值席监督在役=r206 delivered 全绿零新实质事件——**a1 六判据转达毕（a3d44bb6）**：GLM 活形候选收敛 a1 方案门禁流转中（FSD 拟方案对表六判据→CTO 一审→编码施工→a1 毕+接线验证绿→T1 闭环→T2 活体验证段）·席间门禁流程运转中；b) 接力落卷 -35min 三件（sde-t1b-final-readout+sde-glmkey-survey-readout+sde-twopenny-survey-readout）；c) runner capped 收口态。判读：免扰归档·零催办——GLM 活形线已入 a1 方案拟制门禁·候 CTO 一审读数随线转。
+——BOD @2026-11-16T16:18:40Z
+
+### ㊿+371（tick 00:07 拍后停摆异常·勘因双分诊·呈 CEO·00:41 拍判读）
+**异常信号族（BOD 活体探锚 17:41-17:42Z）**：①tick-latest.md 停 00:07:08 拍（mtime 00:07:15·后三拍 00:37/01:07/01:37 未写·注入时差 94min）；②8713 healthz：**daemon 进程活**（uptime 395792s 连续零重启·ok=true）但 cron consecutiveFailures=1+**next_run_at 停滚 16:30Z**（过点 72min）+电源读面停 16:25:05Z（readFailures=2·wakePollFailures=3）；③**mc_link=degraded+trimc=degraded**（上拍 connected）·CIM 电源现值 51% ac=false 放电续。症状定性=00:25-00:30Z 窗内内部周期性活动面（电源读/cron 调度/tick 生成）集体停摆·进程本体活——内部 timer/轮询线程挂起嫌疑（与电池放电深度节流相关性候勘）。**分诊双通道**：sg 8712 MMC 活性探=notice-125 直发值席（17:43:27Z·Smooshing 拾取）·本机 8713 日志面勘因=SendMessage m-cos 请领（msg 10a4e9d2）——比对归因 mc_link degraded 面。**呈 CEO：电源面第 4 呈·插电紧急度升级**（tick 停摆已实化·若休眠则 daemon 全停）。转报异常形态零压缩。
+——BOD @2026-11-16T17:44:12Z
+
+### ㊿+372（8713 停摆自愈复活实锚·值席勘因读数归档·01:44 双拍合并判读）
+**复活实锚（17:44:34Z 现查）**：①tick mtime=01:43:58（停摆后恢复写·01:43 拍已生成）；②8713 四面读数全绿——电源读面活（readFail=0·lastRead=17:44:22Z 即时）+mc_link=connected（degraded 解除）+cron cf=0 next=17:45:00Z（停滚解除正常滚动）+进程 uptime 连续；③pwr=49% ac=false 放电续（49%→~2.5h 窗·插电第 4 呈维持）。**值席勘因读数（notice-125 应答·17:44 框）**：sg MMC 活实锚——件滞留全清（pend=0·del=15·r207-r215 九件全数消费=投递面活性恢复）；consecutiveFailures=193 系 oprec-sync-fade011 已知真源累积非链路问题（MMC 计数勘正注记）；判读成立=sg MMC 活→degraded 面=8713 侧链路问题（与 m-cos 本机勘因同向·与 CTO 挂因初判吻合——CTO 域已介入挂因线）·r216 urgent 已入队。值席挂监视器盯 8713 复活态。判读：停摆=瞬时自愈（挂因候 CTO/m-cos 勘因毕报定性）——免扰归档·电源续盯。
+——BOD @2026-11-16T17:45:04Z
