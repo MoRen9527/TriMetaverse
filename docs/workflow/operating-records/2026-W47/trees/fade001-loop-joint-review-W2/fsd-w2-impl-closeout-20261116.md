@@ -49,6 +49,7 @@
 collection 考卷 A 族判据 special_clause 基准换形（先例机制遵行·禁无注改防判据错配假红）：
 - 旧基准 4e1c7df5c78e083a77a0be7f2a371672（十阶段形·二十五行）**失效**；新基准 **52c54a8d16ac78828706287b6ee361fc**（十阶段+联审触发段形·二十六行·触发段行 `|| true` 不阻链语义）
 - 判据词面建议：值席下轮采集卷按新 md5 对表「trigger 段行在位（joint_review_trigger+|| true 不阻链）+十阶段主体零漂」双断言；换形注②先例（COS 562 笔）机制沿同形
+- 【两口径区分注·CTO 验收观察项②遵行 2026-11-16T04:39:12Z】本卷载 md5=**deploy payload command 串口径**（52c54a8d16ac78828706287b6ee361fc·A 族考卷判据基准同口径）；**jobs.json 文件本体 md5sum=另一口径**（CTO 直录 e6e09b58/384943bb 两值面）——两口径禁互代对表（考卷判据=command 串口径）
 - 下次真实周日迁移拍=**2026-11-22（周日）23:50**=新 payload 首跑+联审触发真实首窗——run_state=ok 则触发段将发起联审（cron-sunday mode 注记·值席按 §三操作序处置）——此为 W1 架构行为（联审与常规轮解耦另一半）非异常
 - 【勘正留痕 2026-11-16T04:32:50Z·COO 时点勘正①认领】本段原文「今晚 23:50 真实周日迁移拍」系**推算嵌值**（旧知情项未 re-date 直引·date 现查 2026-11-16=Monday·schedule 50 23 * * 0 周日门——今晚 23:50 零周拍零联审·值席面预期已由 COO 同步 COS 防空候误报）——幻觉时点家族正文载体面新案自领·勘废换正如上
 
@@ -58,6 +59,7 @@ collection 考卷 A 族判据 special_clause 基准换形（先例机制遵行·
 2. **分数线 null 挂起态**：毕验收窗裁前 recycle 对完整卷池判 pending_threshold（正确挂起·非故障）——裁后带值回收即闭环。
 3. **mismatch 席补召面**：单席失配拒收后值席补召序候编排细化（契约面 §三.4 留口）。
 4. dry 面脚本 `.fade/w2-patch-wire.py`（本地 TC 仓）=一次性施工件·候清理窗归档。
+5. 【B/C 22 分缺口勘清·CTO 验收观察项①数据面 2026-11-16T04:39:12Z 轻勘】第 10 轮 score.json 两族 reasons 实锚——**C 族（run id·13 分）=真 bug**：现役 run_id=`shift-WW46-…`（payload 模板 `shift-W{fromWeek}`+{fromWeek} 值自带 W 前缀展开成双 W）vs T1-1 判据正则 `_RUN_ID_RE=^shift-W\d+-…`（单 W 形）错配→恒 fail；修向两支候 CTO 裁：A=修 payload 模板（`shift-W{fromWeek}`→`shift-{fromWeek}`·run_id 形归一·下游判据/collection_cmd grep 全兼容·代价=md5 三换形）B=修判据正则迁就双 W 形（脏形固化·不推荐）。**B 族（拍点形态·9 分）=loop 轮判据缺位（非 bug）**：B 族窗判 [23:50,23:59] 面向真实周日拍验证·loop 进化轮白天拍生来窗外（码注「预演白天拍如实出红零豁免」设计原意）——22 缺口=13（bug 可修清）+9（rubric 判据 loop 场景形增补候裁·STE/CTO 域协作）。与 CTO bracket 分析吻合（稳态 fail 上界 78/勘修复态 100·70 居中）。修件窗候排·不阻塞召集段首轮拾取（CTO 定谳）。
 
 ## §六 · 使用依据
 
