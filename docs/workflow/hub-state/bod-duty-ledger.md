@@ -2714,4 +2714,4 @@ CEO 11:11:42 问值席谁在干活→BOD 11:12:00 **14 席逐席扫**：真在�
 
 CEO 11:23:40 问「①a/②联评该是 TriRMC 上 cos 干的吧·M-SG 是触发？loop 部署在哪里」→BOD 河源活体现探（ssh -J M-SG R-HY·别名实勘：R-HY-8.155.54.79+M-SG-47.245.122.61 为本机 config 正名）：**8710 TriRMC ok（cron 4 job·degraded=false）·/var/lib/trirmc 在·河源 W47 双树**（fade001-tenstage 树含 **ste-subjective-exam-paper+ste-subjective-rubric-design+fsd-score-engine-subjective-ext** 河源 11-15 施工卷+sde-loop10-readout 双机在；r1122-loop-marker-env 树含 fsd-bimpl-closeout-20261116）——**评分面工程本体=河源**·第 10 轮三跑+引擎=河源执行域·sg runner（1-8 轮驱动器）capped 非现役。**错位定谳**：notice-119 派 sg cos 会话内自办 ①a/②=席位产物≠loop 产物·核验门第 3/4 项会假完成——CEO 拷问直指要害·BOD 认领。**notice-127 托转毕**（03:27:10Z 落框·回显验绿）：①①a 段落二+②联评自办即停（已毕段落一+r119c 留对表）②④备召照备（sg 监督组织面·位不误）③回正位方案（河源承接·loop 内闭环→sg 铸轮报 v2）=**任务书级候 CEO 批**·批前 sg 面零评分施工④监督照常。河源 R 面 cos 席位存在性未活探·组织面对表候 COS 供给。
 
-——本段 commit 后补 hash 锚。
+——hash 锚=423410b3260bccc2ffec776bb9f79c88fb01743c（notice-127 @03:27:10Z）。
