@@ -2709,3 +2709,9 @@ CEO 11:11:42 问值席谁在干活→BOD 11:12:00 **14 席逐席扫**：真在�
 **CEO 三问五席对表（11:12/11:18 逐席扫+树面实锚）**：cos=①a 段落一毕（10:49）段落二停着 30min+②零开工+④零备召——有活停着·notice-126④ 已催（责任=duty-cos 自办+全链值守）；fsd=③重采毕（r119c 10:12）候令态正常无活；ste=候件正常无活（r119c 未令复验）；sde=三跑毕+今夜 23:50 cron 候正常无活；cto=裁决卷毕候令态正常无活。五席中唯 cos 有活停着（已催）·余四席无活=岗位实况正常。
 
 ——hash 锚=f70c2e849de4a86181d73bf7a9588dc8957e7571（notice-126 @03:20:29Z）。
+
+## 11:28 CEO 拓扑拷问+河源活体现探定谳+notice-127 错位止损（落款 2026-11-16T03:27:56Z 现查）
+
+CEO 11:23:40 问「①a/②联评该是 TriRMC 上 cos 干的吧·M-SG 是触发？loop 部署在哪里」→BOD 河源活体现探（ssh -J M-SG R-HY·别名实勘：R-HY-8.155.54.79+M-SG-47.245.122.61 为本机 config 正名）：**8710 TriRMC ok（cron 4 job·degraded=false）·/var/lib/trirmc 在·河源 W47 双树**（fade001-tenstage 树含 **ste-subjective-exam-paper+ste-subjective-rubric-design+fsd-score-engine-subjective-ext** 河源 11-15 施工卷+sde-loop10-readout 双机在；r1122-loop-marker-env 树含 fsd-bimpl-closeout-20261116）——**评分面工程本体=河源**·第 10 轮三跑+引擎=河源执行域·sg runner（1-8 轮驱动器）capped 非现役。**错位定谳**：notice-119 派 sg cos 会话内自办 ①a/②=席位产物≠loop 产物·核验门第 3/4 项会假完成——CEO 拷问直指要害·BOD 认领。**notice-127 托转毕**（03:27:10Z 落框·回显验绿）：①①a 段落二+②联评自办即停（已毕段落一+r119c 留对表）②④备召照备（sg 监督组织面·位不误）③回正位方案（河源承接·loop 内闭环→sg 铸轮报 v2）=**任务书级候 CEO 批**·批前 sg 面零评分施工④监督照常。河源 R 面 cos 席位存在性未活探·组织面对表候 COS 供给。
+
+——本段 commit 后补 hash 锚。
