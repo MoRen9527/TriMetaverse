@@ -3124,3 +3124,10 @@ CEO 16:47:05 直令（verbatim 归档）：「让m-duty-cos盯着跑完 V2-2 验
 - CTO 侧纠偏（notice-148B）：回执发信正形（落卷+直达通知·已发≠在链）——同拍提交毕 CTO 处理中
 - 后续执行序=值席②写入河源 convene_mode=auto→POST runJob→首跑启动→读数回链（CTO 复核位待命）·出分+四句门=r86 硬序直报 CEO
 - 本段 commit 7cbd89ee8
+
+### 18:23 死锁勘正（notice-149）+值席②写入执行中
+- 落款 2026-11-16T10:25:08Z（date 现查原值）
+- 死锁结构确认：值席「候首跑毕读数」+❯行问 SDE·SDE「候 COS 定谳回执」（18:03 起）——互候无第三者；而 CTO 三裁③④ verbatim=执行者值席亲执·SDE 零触发——执行主体认知错位
+- CTO 正式回执已直达值席（061fadc46 落卷双通道并达·nd5-trialrun-plan 补录节=落卷锚·148B 纠偏生效——教训遵行双通道 standing）
+- notice-149 勘正发值席（18:2x 提交毕）——值席即执：ssh R-HY 验 preflight marker 路径 env-first→mkdir /srv/fleet/.trimc-marker/convene-trigger→写 convene_mode=auto→cat 验（Cultivating 34s 实勘）
+- Monitor v3 重挂（加 runJob/写入毕/轮毕关键词）；下一步=POST runJob→首跑启动→读数回链
