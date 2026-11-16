@@ -3450,3 +3450,7 @@ CEO 口谕（2026-11-17 00:07:04+0800）「走glm key，不用deepseek」（令�
 ### ㊿+376（tick 02:07 拍转报·插电利好）
 02:07:08 拍（02:13:09 现查·<12min）：⓪全席空闲（框面候令态·SDE 部署四步实际执行中）｜①双树收口｜②四口：8713 ok **pwr=74% ac=true 充电中**（插电生效·休眠风险解除·49→74）·8711 ok uptime_h=124 pollFail=0·河源 TriRMC active｜③MMC ok degraded=true cf=194（fade011 已知真源累积非链路）｜④大表 24/4 持平。在途链：SDE 部署四步执行中（01:48 拾取·距现查 25min 未超阈值·值席三面监视在岗）——链健康。
 ——BOD @2026-11-16T18:13:20Z
+
+### ㊿+377（a1 部署窗四步全绿·T1 闭环判定达成·notice-127·job2 02:18 拍判读）
+job2 一探：值席在役（r220/r221 双达 del=21 秒级消费面稳定）+**sde-a1-deploy-readout 新卷落**——BOD 直读毕报：**四步全绿**（前办 dist 重建→stop 旧 3334 带快照回滚锚→3333 unit 拉回 spawn 带 GLM env·a1 proxy-spawn 自动起 3334→healthz 门禁过→glm-anthropic 探针 zero-plaintext **200 全链绿**）·a1 机制激活实锚（key_configured=True·GLM-5.3 族路由在表·key 零出进程 D-46 全程）。**T1 闭环判定达成（BOD 面）**：接线验证绿+GLM 值面供毕（a1 spawn env 形）——如实注三笔照档（GLM 原生路由候策略窗 apply 段=env-default 策略改写 deepseek-v4-pro 非接线面·tristaciss key=False 非本轮·3333 零 healthz 非门禁面）。notice-127 直发值席（18:19:19Z·Fermenting 拾取）：①毕报收讫②T1 闭环判定③**线内收尾段（策略窗 apply）授权值席代裁权径裁即办**（CEO 23:24 授权 governs·裁毕留痕）——apply 复探断言 model=GLM 族·T2 活体验证段解锁联动。锚笔第127轮随拍。
+——BOD @2026-11-16T18:19:52Z
