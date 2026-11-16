@@ -52,3 +52,30 @@
 ## 使用依据
 
 clone 实读（/tmp/dsh-superagent-proto：README/docs 000-007/LICENSE/src 树）；CEO 令原文；BOD 本机 SendMessage 实勘对照面（令文所载）。
+
+## 六、勘形令附节·河源 dsh 通道能力勘（CEO 20:39 直令·CTO 技术裁）
+
+### 1. dsh 运行时本体正身（源码级钉死）
+
+dsh-superagent 的会话后端=**`@deepseek-ai/dsh-agent`/`dsh-session`/`dsh-llm` 包族=DSH Agent 原生运行时**（DeepSeek 模型族经 dsh-llm；非 claude CLI 会话）。Sessions 类（src/app/sessions.ts:93+）：ctx.sessionController.resolveAgent 建会话+role-models 初始化+danger-full-access 权限+prompt/skill 装饰+受限工具集（工具族含 **send_message/list_agents/subagent/interrupt_agent 四件**=dsh 运行时**内建会话间通信面**——名录+直发+子代理+中断，正是 CEO 判断「应实现了会话间通信」的实锚）。
+
+### 2. 四面部署现势勘（本席可达面）
+
+- **sg 面**：零 dsh 包/进程/凭据痕迹（本席可达面扫）；
+- **河源面**：BOD SSH 通道可勘（本席不可达——如实注；据既有拓扑河源=TriRMC 8710 自研链，dsh 部署无记录面）；
+- **本机/dev 面**：未勘（BOD/dev 通道）；
+- **结论（可达面内）**：四面均无 dsh 运行时部署记录——评分会话经 dsh 跑=**需新部署面**（架构增项非现役复用）。
+
+### 3. 能否分派 claude 会话（CEO 问正答）
+
+**不能原生分派**——dsh Sessions 后端=DSH Agent 原生会话（DeepSeek 模型族），与 claude CLI 会话为**平行运行时**非包含关系；dsh Executor 的 CLI 探测面（probing CLIs）系 workspace prepare 语义非 claude 会话派生。**凭据面跟部署面走**：dsh-llm 用 DeepSeek 凭据——部署面自持 key（新驻留面）。
+
+### 4. CTO 技术裁（执行面两选供 CEO 定谳）
+
+- **选 A（本席推荐）=现役 claude 会话链×dsh 思想嫁接**：评分会话走 TriRLC 8711 面 headless 会话族（自研 SendMessage 通道已实证）+dsh 三件思想（Engine 单写者/Outbox 回执/Effects 退避）参考重写——**零新增运行时零新增凭据面**；
+- **选 B=新部署 dsh 运行时**（heyuan 或 dev 择面装 dsh+DeepSeek key→评分会话原生 dsh 形）——新运行时引入=架构增项+新凭据驻留面（治理成本），且 dsh 会话间通信四件与现役 SendMessage 功能重叠——**双运行时并存治理成本为本裁主要反对理由**；
+- 技术判：**A 优先**（自研链已实证+dsh 核心价值=思想已嫁接 N-D1 线）；B 候 CEO 长期裁（若 DeepSeek 原生会话族有战略面需求另议）。
+
+### 5. 勘不到如实注
+
+河源 SSH 面（dsh 位/version/进程）本席不可达；dev 面（dsh 位）未勘——两处如实报勘不到，候 BOD SSH/dev 通道补勘（补勘面=which dsh/version/env DEEPSEEK_API_KEY 在否三读数）。
