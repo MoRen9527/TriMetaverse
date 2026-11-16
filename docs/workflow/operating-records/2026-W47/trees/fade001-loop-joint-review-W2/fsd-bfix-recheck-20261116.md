@@ -26,6 +26,7 @@
 ## §三 · 观察项如实附注（非本席域·两笔）
 
 1. **TC origin/dev forced update 观察项**：fetch 时 `d7e7831...fe7544f (forced update)`——远端顶现值=fe7544f·CTO N5 两分面 commit d7e7831 暂不在远端链（本机 dev 在链 d7e7831 顶·含 fe7544f 父位·本席复验对象 fe7544f 内容面不受扰）——线系轮换/改写动向归 CTO/STE code-state 域·如实附注候勘。
+   - 【勘正留痕 2026-11-16·CTO 勘正回执采认+本席第二方法自验】上项定性勘正=**通道混淆观感·非实体回退**：实况=GitHub 通道当时欠账（fe7544f 顶·d7e7831 未上 GitHub——CTO 13:13 push 时 GitHub 443 段 fatal·sg 段成功·双通道主从互补）·sg bare 顶全程=d7e7831 在链零回退；CTO 05:21Z 趁窗口补推 GitHub（fe7544f..d7e7831 讫+ls-remote 验真）。本席自验（ls-remote 第二方法）：TMV GitHub 顶=c939d9e23 ✓+TC GitHub 顶=d7e7831 ✓+TC fetch 零 forced ✓——**两仓 GitHub 欠账清零**·观察项销。判读同族锚：「push 尾行 fatal≠失败·验真须 ls-remote 对表顶」。
 2. 门③输出夹带行（`[weekly_shift] notify: FAILED after retry`）系测试场景内打印面非判读行——真判读行 grep 提取（438/5/1）·截断伪影族「输出禁 head 截断关键行」纪律对表。
 
 ## §四 · 修件窗收口定性
