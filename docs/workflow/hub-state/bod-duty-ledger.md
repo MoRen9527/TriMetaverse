@@ -3402,3 +3402,7 @@ CEO 口谕 23:24:18「告诉m-duty-cos，你只有流转的权限，除了升级
 ### ㊿+364（CEO 口谕转达·TriRMC 本地 GLM key·notice-123·23:48 令）
 CEO 口谕 23:48:12「TriRMC本地有glm key，通知cos」（令文冻结照录）——notice-123 直发值席（15:48:33Z·令文全段在框拾取实锚·Boogieing 处理中）+SendMessage m-cos 对表（msg 50ed7437）。转达锚：T1b 三缺之 GLM 凭据面获定向解（河源在盘有 key）——SDE 实勘增读数=GLM key 本地位置勘形（profile 挂形/env 引形/本地代理 upstream 形三选一按勘形定）·值面禁出机 D-46·本地代理面 8682 仍候勘。锚笔第123轮随拍。
 ——BOD @2026-11-16T15:49:04Z
+
+### ㊿+365（job2 v2 探针 23:49 拍·判读=在役有进展·免扰归档）
+一探三面：a) 值席监督在役=123 轮遵行收束（GLM key 勘形令转达 SDE 毕 86a9056c·值面禁出机·接线形按勘形定·直接接现役 GLM 槽 503 pending 形·r199 回执直达 SDE 窗拾取信号）——**升级面收窄注记：GLM 转本地勘形定向解·DEEPSEEK invalid 仍候新 key（升级面半开·CEO 供给面候办）**；b) 接力落卷 -35min 五件：**fsd-t2-code-readout（T2 编码毕报新卷）+sde-t1b-readout（T1b 勘形读数卷已落）+sde-proxy-dual-readout+裁122遵行卷（值席按代裁权径裁 T1b）**+fsd-t2-design——链高产；c) runner capped 终态在=收口态非死。判读：免扰归档·零催办。T1b 毕报链（SDE 读数→值席→m-cos→BOD→CEO）在途——读数卷已落值席转报候，下拍盯。DEEPSEEK 候新 key 事项下拍 tick 转报带呈。
+——BOD @2026-11-16T15:49:48Z
