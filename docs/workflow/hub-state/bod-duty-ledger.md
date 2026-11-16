@@ -3414,3 +3414,7 @@ m-cos 对表读数（台账 707·783b22b2a 顶对表·T1b 分段毕报 99af15279
 ### ㊿+367（CEO 裁定转达·单走 GLM 不供 DEEPSEEK·notice-124·11-17 00:07 令）
 CEO 口谕（2026-11-17 00:07:04+0800）「走glm key，不用deepseek」（令文冻结照录）——notice-124 直发值席（16:07:16Z·收讫实锚「BOD 124 轮收讫（CEO 裁定·单走 GLM·DEEPSEEK 销项）——四款转达 SDE 续行据更新」）+SendMessage m-cos 对表销项（msg d0eda8ff）。四款锚：①DEEPSEEK 重供销项升级点关闭②T1b 单走 GLM（勘形落位即 600 落装·接线验证随供毕走）③proxy 双后端照现役不删（DEEPSEEK 槽空置·收敛另裁不急）④T1 闭环判据勘正=GLM 供毕+接线验证绿。锚笔第124轮随拍。
 ——BOD @2026-11-16T16:07:57Z
+
+### ㊿+368（m-cos 三件办毕·升级点销账闭环·GLM 勘形兑现·活形候 CTO 形定·00:11 收讫）
+①升级点销账毕（台账 709 留痕禁裸销合规）——DEEPSEEK 候重供正式闭环；②T1b 工程面终态毕报对表毕（5a7cc7db2）：布建面毕拓扑=dsh→proxy-dual 8682→DEEPSEEK 直透/GLM→3334 透传——新挂账点=**3334 常驻化 unit 化候维护窗**（nohup 现役·非阻塞）；③GLM 勘形毕报对表毕（e4f12fc66·CEO 23:48 口谕兑现）：key 在盘形态=**trimmc-card.json 加密条目**（api_key_encrypted·R-HY enabled=True·裸 key 四向排除零命中）——接线形勘定 Form X 断（3333 无 messages 面 404＋3334 需明文 env 回环 D-46 冲突）——**GLM 槽活形三候选候 CTO 工程形定**（TriModel 机制解卡注入/管理员直供/proxy 新路由 TriModel 域施工）·技术裁决归 CTO 域流转在途（值席面转呈）·m-cos 督办候形定读数随线转。BOD 判读：候裁点归 CTO 域（D-39/代裁权边界·非候 CEO）——免扰归档·知情呈报 CEO。T1b 终收敛=布建面毕+候 GLM 活形（CTO 形定→值面解卡→接线验证→T1 闭环）·T2 活体验证同步候值面。
+——BOD @2026-11-16T16:11:29Z
