@@ -1,0 +1,28 @@
+{
+  "score_version": "1.0-exam-form-resample",
+  "run_id": "shift-WW46-20261115T185801Z",
+  "resample_note": "r119①c 重采（CEO 令面：客观题试卷出卷评分形替 CAO roster-assessment 采集形——两形实质不同勘定：CAO 形=迁移质量证据采集、试卷形=fade-001 内部客观题试卷判分）；判据真源=rubric-firstshoot.json 九族 verdict_rule 原文（STE 考卷判据真源）",
+  "entries": [
+    {
+      "family_id": "A",
+      "verdict": "pass",
+      "rationale": "verdict_rule 对表：jobs.json 活体探读 md5=7accfca1f953c7a329a627652977748a（十阶段形基准落卷值=本读数·「新值落卷替换」原义）；nextRunAtMs 全 job 非空滚动；qualify（qualify.json 段）/trap（trap 预案）/RC_guard（回滚守卫）在位面=十阶段形 run 工件与预案卷实证",
+      "evidence_ref": "/var/lib/trimc/cron/jobs.json + fade001-tenstage-deploy-20261115/cto-dive-final-ruling-loop-form-20261115.md"
+    },
+    {
+      "family_id": "F",
+      "verdict": "pass",
+      "rationale": "verdict_rule 对表：成跑零触发=满分（F2_ZERO_TRIGGER_FULL_SCORE 形）——第 10 轮 run status=ok 零 alarm 触发行（SDE loop10 读数：ce 2→0 双线归零·consecutiveFailures 聚合归零）；触发分支不适用（零触发行=RUN_ID/时延面空集非缺失）",
+      "evidence_ref": "sde-loop10-readout-20261116.md（status=ok+ce 归零读数）+ healthz cron 面 consecutiveFailures=0"
+    },
+    {
+      "family_id": "H",
+      "verdict": "pass",
+      "rationale": "verdict_rule 对表：首拍断言形——dive 预检 diverging 读数在卷（CTO dive final ruling loop form）+patrol 拍频滚动（cron logs 逐日档实证）+到岗窗拍频覆盖（23:50 锚窗形）",
+      "evidence_ref": "cto-dive-final-ruling-loop-form-20261115.md（dive 预检读数）+ /var/lib/trimc/cron/logs 拍频档"
+    }
+  ],
+  "judge": "m-duty-fsd（值席采集·sg 面）",
+  "check_time": "2026-11-16T00:00:00Z+08面",
+  "cao_form_archive_note": "CAO roster-assessment 采集形转「迁移质量证据面」另轨留用（cao-manual-collection-roster-assessment-20261116.md 原卷即档·不废不删）——r119①c 勘定：两形实质不同（证据采集 vs 客观题试卷判分）"
+}
