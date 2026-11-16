@@ -3406,3 +3406,7 @@ CEO 口谕 23:48:12「TriRMC本地有glm key，通知cos」（令文冻结照录
 ### ㊿+365（job2 v2 探针 23:49 拍·判读=在役有进展·免扰归档）
 一探三面：a) 值席监督在役=123 轮遵行收束（GLM key 勘形令转达 SDE 毕 86a9056c·值面禁出机·接线形按勘形定·直接接现役 GLM 槽 503 pending 形·r199 回执直达 SDE 窗拾取信号）——**升级面收窄注记：GLM 转本地勘形定向解·DEEPSEEK invalid 仍候新 key（升级面半开·CEO 供给面候办）**；b) 接力落卷 -35min 五件：**fsd-t2-code-readout（T2 编码毕报新卷）+sde-t1b-readout（T1b 勘形读数卷已落）+sde-proxy-dual-readout+裁122遵行卷（值席按代裁权径裁 T1b）**+fsd-t2-design——链高产；c) runner capped 终态在=收口态非死。判读：免扰归档·零催办。T1b 毕报链（SDE 读数→值席→m-cos→BOD→CEO）在途——读数卷已落值席转报候，下拍盯。DEEPSEEK 候新 key 事项下拍 tick 转报带呈。
 ——BOD @2026-11-16T15:49:48Z
+
+### ㊿+366（m-cos T1b 两卷对表毕·proxy 落装通道面全绿·DEEPSEEK 重供升级点呈 CEO）
+m-cos 对表读数（台账 707·783b22b2a 顶对表·T1b 分段毕报 99af15279+proxy-dual 落装毕报 e320348fc）：①**通道面全绿**——proxy-dual 落装毕（127.0.0.1:8682 listen 实锚·双后端路由·GLM 503 pending-key fail-visible 显式形·84 行 fleet 域零 root）——**本地代理面解除**（勘正：23:48 notice-123「8682 未监听」系 T1 分性毕报旧读数·落装在其后入链）；②**值面两 key 候供（T1b 剩余面收敛为值面）**——GLM：sg 双侧 len=0 全空实锚·CEO 23:48 定向解在途（勘形落位即 glm.key 600 落装启用）；**DEEPSEEK：注入毕但活探 401=上游判 TriMMC/docker/.env 35 值 invalid——值面源问题非通道问题（m-cos 升级点呈报·候 CEO 裁供值渠道：控制台新 key 经 CEO/管理员终端管道·key 文件换装免重启形照 h1 先例）**；③工程面候续：dsh cordis patch 接线候活 key（base_url=8682 形）——值面供毕即 T1 闭环→T2 活体验证段解锁；④护栏全遵行读数在卷。BOD 随即呈报 CEO（DEEPSEEK 重供候裁）。
+——BOD @2026-11-16T15:51:36Z
