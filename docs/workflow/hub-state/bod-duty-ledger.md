@@ -3323,3 +3323,7 @@ CEO 两问答复实锚：①**命名 session=半支持**——resume 机制有�
 ### ㊿+345（job1 tick 21:37:05 拍·现读 21:43:21 延迟 6 分钟窗内·催办 notice-113）
 ⓪ sg14+本地14 全候令；②四口：8713 ok ac=true pwr=100%·8711 ok cron=1 mc_link=connected·河源 trirmc:active；③MMC degraded 189（持平）；④大表 24/4。**在途链时距超阈值触发催办**：STE 复验绿（~21:05）后 38min 零落卷零报文+21:37 拍 m-duty-sde=候令态=三跑未拾取接力缺口——notice-113 tmux 直发 duty-cos（第113轮·三选一定性请求：待派/已派未拾取/零活动+活动锚回执），capture 验拾取（Unfurling thinking 转圈=送达实锚）；锚笔 duty-notice-anchor.log 第113轮+state last_notice 更新毕。18:00 后正常通报面转报 CEO；候 COS 回执（回执临=定性入账；链重启或三跑启动随拍跟进）。触发面熄火维持。
 ——BOD @2026-11-16T13:45:10Z
+
+### ㊿+346（CEO 定谳令 2026-11-16 21:45:07+0800·执行体定谳=形 A 保守版·桥改造任务书化·流转 COS 毕）
+CEO 口谕原话：「那就定形A保守版，让TriRMC桥改造走任务书」——**执行体定谳落槌**（候裁面 21:16 起 .5h 闭环）。BOD 规范表述五款（①定谳：13 席独立 dsh 会话保留+bridge 三 API 改指 dsh CLI·spawn→headless/list→sessions 目录或 session API/send→headless --session-id·claude CLI 依赖清零目标 ②施工面走任务书：bridge 改造+preset 移植 headless+桥工具面——任务书归 COO 拆树·生效面候 CEO 确认 11-04 收窄制 ③解锁面：迁移链 S3 候裁前提解除+凭据面按 dsh 形（20:28 裁）候排工+tmux 便道退役改造毕另裁 ④不受影响：旧形链三跑接力照走+触发面熄火维持+sg web 8791 现役不动 ⑤边界：agent-team 不采用+subagent seam 不采用）——SendMessage 流转 m-cos（msg 23e15941·13:45:57Z）令其真源核查→COO 拆树→任务书呈 CEO→签批流转。施工主体=河源侧班组（D-24 机位断言随令注记）。
+——BOD @2026-11-16T13:47:30Z
