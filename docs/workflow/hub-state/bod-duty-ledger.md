@@ -3454,3 +3454,7 @@ CEO 口谕（2026-11-17 00:07:04+0800）「走glm key，不用deepseek」（令�
 ### ㊿+377（a1 部署窗四步全绿·T1 闭环判定达成·notice-127·job2 02:18 拍判读）
 job2 一探：值席在役（r220/r221 双达 del=21 秒级消费面稳定）+**sde-a1-deploy-readout 新卷落**——BOD 直读毕报：**四步全绿**（前办 dist 重建→stop 旧 3334 带快照回滚锚→3333 unit 拉回 spawn 带 GLM env·a1 proxy-spawn 自动起 3334→healthz 门禁过→glm-anthropic 探针 zero-plaintext **200 全链绿**）·a1 机制激活实锚（key_configured=True·GLM-5.3 族路由在表·key 零出进程 D-46 全程）。**T1 闭环判定达成（BOD 面）**：接线验证绿+GLM 值面供毕（a1 spawn env 形）——如实注三笔照档（GLM 原生路由候策略窗 apply 段=env-default 策略改写 deepseek-v4-pro 非接线面·tristaciss key=False 非本轮·3333 零 healthz 非门禁面）。notice-127 直发值席（18:19:19Z·Fermenting 拾取）：①毕报收讫②T1 闭环判定③**线内收尾段（策略窗 apply）授权值席代裁权径裁即办**（CEO 23:24 授权 governs·裁毕留痕）——apply 复探断言 model=GLM 族·T2 活体验证段解锁联动。锚笔第127轮随拍。
 ——BOD @2026-11-16T18:19:52Z
+
+### ㊿+378（apply 复探读数呈 CEO·T1 闭环维持·GLM 窗内活证候窗实测·02:34 令响应）
+**CEO 令 02:34:01「apply 复探读数到了报我」→读数已到即报**（sde-apply-seg-readout 02:22:36 落卷·BOD 18:34Z 直读）：①**apply 200 实锚**——strategy st_mujth2j65nch「测试时段切换」3 schedules 落装（GLM-5.3-Flash 深窗 20:55-21:05+08 策略在档·LG-035 时段调度制）；诊断面=token 指纹差勘正（.env vs daemon env 静态注入时点差·值零接触掩码形·解法=daemon env 现值管道形照 runbook 先例）；②**复探三点全过窗外正形**：matched=None（窗外正形）+source=env-default（兜底正形）+model=deepseek-v4-pro（env-default 维持）——即 apply 落装成功但现时点非 GLM 策略窗·兜底走 deepseek=设计面正形；③**GLM 窗内活证候窗时点实测**（明晚 20:55-21:05+08 窗内 matched 命中→glm-anthropic 直走 GLM 活证——候明窗实测或临时窗测试形候 TriModel 域裁）；④护栏全遵行（值零接触·D-46 全程）。**链态：T1 闭环维持（接线绿+apply 落装）·GLM 窗内活证=观察项非阻塞·T2 活体验证段解锁联动候开令**（值席框「候 T2 开令面」·03:00 档实拍 02:31 收束）。
+——BOD @2026-11-16T18:34:38Z
