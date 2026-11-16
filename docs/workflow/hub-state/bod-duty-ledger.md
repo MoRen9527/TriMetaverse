@@ -3319,3 +3319,7 @@ CEO 两问答复实锚：①**命名 session=半支持**——resume 机制有�
 ### ㊿+344（job2 v2 21:25:59Z 拍·免扰）
 值席框尾 30 行空（30min 节律产报窗未到·距 STE 复验绿 ~20min）；W47 树 -35min 零新落卷；runner.log 尾=capped 第 8 轮封顶停机终态行在（收口态）·ps fade001=1（旁系引用非 runner 死信）如实注。接力链状态：STE 复验绿毕→SDE 第 10 轮三跑候拾取·链时距 ~20min<30min 阈值——免扰；出分必报 CEO（r86）。
 ——BOD @2026-11-16T13:26:20Z
+
+### ㊿+345（job1 tick 21:37:05 拍·现读 21:43:21 延迟 6 分钟窗内·催办 notice-113）
+⓪ sg14+本地14 全候令；②四口：8713 ok ac=true pwr=100%·8711 ok cron=1 mc_link=connected·河源 trirmc:active；③MMC degraded 189（持平）；④大表 24/4。**在途链时距超阈值触发催办**：STE 复验绿（~21:05）后 38min 零落卷零报文+21:37 拍 m-duty-sde=候令态=三跑未拾取接力缺口——notice-113 tmux 直发 duty-cos（第113轮·三选一定性请求：待派/已派未拾取/零活动+活动锚回执），capture 验拾取（Unfurling thinking 转圈=送达实锚）；锚笔 duty-notice-anchor.log 第113轮+state last_notice 更新毕。18:00 后正常通报面转报 CEO；候 COS 回执（回执临=定性入账；链重启或三跑启动随拍跟进）。触发面熄火维持。
+——BOD @2026-11-16T13:45:10Z
