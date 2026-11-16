@@ -3422,3 +3422,7 @@ CEO 口谕（2026-11-17 00:07:04+0800）「走glm key，不用deepseek」（令�
 ### ㊿+369（tick 00:07 拍转报）
 00:07:08 拍（00:13:10 现查·<12min）：⓪全席空闲（框面候令态·T1b/T2 实际在办）｜①双树收口｜②四口：8713 ok pwr=**59%** ac=false 放电续（92→79→68→59·插电提醒三呈未获响应·休眠风险继续升高）·8711 ok uptime_h=122 pollFail=0·河源 TriRMC active｜③MMC ok degraded=true cf=192（+1·计数口径失真勘中）｜④大表 24/4 持平。在途链：T1b 布建面毕候 GLM 活形（CTO 形定在途）·T2 编码毕报已落候活体验证段·m-cos 三件办毕 00:10:35 距现查 ~3min——链活跃健康零断链。
 ——BOD @2026-11-16T16:13:21Z
+
+### ㊿+370（job2 v2 探针 00:18 拍·判读=在役有进展·免扰归档）
+一探三面：a) 值席监督在役=r206 delivered 全绿零新实质事件——**a1 六判据转达毕（a3d44bb6）**：GLM 活形候选收敛 a1 方案门禁流转中（FSD 拟方案对表六判据→CTO 一审→编码施工→a1 毕+接线验证绿→T1 闭环→T2 活体验证段）·席间门禁流程运转中；b) 接力落卷 -35min 三件（sde-t1b-final-readout+sde-glmkey-survey-readout+sde-twopenny-survey-readout）；c) runner capped 收口态。判读：免扰归档·零催办——GLM 活形线已入 a1 方案拟制门禁·候 CTO 一审读数随线转。
+——BOD @2026-11-16T16:18:40Z
