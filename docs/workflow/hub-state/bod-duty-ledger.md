@@ -3410,3 +3410,7 @@ CEO 口谕 23:48:12「TriRMC本地有glm key，通知cos」（令文冻结照录
 ### ㊿+366（m-cos T1b 两卷对表毕·proxy 落装通道面全绿·DEEPSEEK 重供升级点呈 CEO）
 m-cos 对表读数（台账 707·783b22b2a 顶对表·T1b 分段毕报 99af15279+proxy-dual 落装毕报 e320348fc）：①**通道面全绿**——proxy-dual 落装毕（127.0.0.1:8682 listen 实锚·双后端路由·GLM 503 pending-key fail-visible 显式形·84 行 fleet 域零 root）——**本地代理面解除**（勘正：23:48 notice-123「8682 未监听」系 T1 分性毕报旧读数·落装在其后入链）；②**值面两 key 候供（T1b 剩余面收敛为值面）**——GLM：sg 双侧 len=0 全空实锚·CEO 23:48 定向解在途（勘形落位即 glm.key 600 落装启用）；**DEEPSEEK：注入毕但活探 401=上游判 TriMMC/docker/.env 35 值 invalid——值面源问题非通道问题（m-cos 升级点呈报·候 CEO 裁供值渠道：控制台新 key 经 CEO/管理员终端管道·key 文件换装免重启形照 h1 先例）**；③工程面候续：dsh cordis patch 接线候活 key（base_url=8682 形）——值面供毕即 T1 闭环→T2 活体验证段解锁；④护栏全遵行读数在卷。BOD 随即呈报 CEO（DEEPSEEK 重供候裁）。
 ——BOD @2026-11-16T15:51:36Z
+
+### ㊿+367（CEO 裁定转达·单走 GLM 不供 DEEPSEEK·notice-124·11-17 00:07 令）
+CEO 口谕（2026-11-17 00:07:04+0800）「走glm key，不用deepseek」（令文冻结照录）——notice-124 直发值席（16:07:16Z·收讫实锚「BOD 124 轮收讫（CEO 裁定·单走 GLM·DEEPSEEK 销项）——四款转达 SDE 续行据更新」）+SendMessage m-cos 对表销项（msg d0eda8ff）。四款锚：①DEEPSEEK 重供销项升级点关闭②T1b 单走 GLM（勘形落位即 600 落装·接线验证随供毕走）③proxy 双后端照现役不删（DEEPSEEK 槽空置·收敛另裁不急）④T1 闭环判据勘正=GLM 供毕+接线验证绿。锚笔第124轮随拍。
+——BOD @2026-11-16T16:07:57Z
