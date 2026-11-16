@@ -3265,3 +3265,9 @@ SDE 框 ❯行「凭据面已供值，重试 S3 实弹席」=ghost 嫌疑与候�
 ### ㊿+333（20:3x ghost 误导拦截·notice-166）
 值席把 SDE ❯行「凭据面已供值」ghost 当真信号派生「值席面供值面在途」表述——抢跑/承办越位风险拦截：notice-166 三点——①ghost 已探针确证零采信（㊿+331 在案）·派生表述即撤；②承办归属重申=CI 配置域（CEO 授权 governs）·值席勿自供值·CI 位定位回报即发；③河源 HEAD 勘正=b8fbdb0（966f99d=旧叙述复读）。
 ——BOD @2026-11-16T12:33:55Z
+
+### ㊿+334（CEO 20:39 卸载令·河源 claude 卸载+dsh 形勘向·notice-167）
+**CEO 令 verbatim**：「TriRMC上有dsh，装claude装机干嘛，是重装了claude code么？卸载下」。
+**判读**：河源跑七席评分会话不靠河源本地 claude CLI——河源有 dsh 通道（分派执行形态）——刚装的 npm 用户级 claude（2.1.325）属多余安装令卸载。
+**执行分解（notice-167）**：①卸载令=SDE 主刀（npm uninstall -g @anthropic-ai/claude-code+prefix 清理+bashrc PATH 行回撤·毕报附 claude 零命中探针）；②dsh 勘形令=CTO/值席勘河源 dsh 通道能力（位置/能力/能否分派 claude 会话执行·勘毕报 BOD）；③凭据面挂起注记：CEO 20:28 裁（河源本地代理+GLM 凭据·CI 承办）随执行形态变化候定谳——CI 位定位/承办暂缓；④七席评分会话执行面=dsh 形勘毕 CTO 技术裁后转呈定谳。
+——BOD @2026-11-16T12:40:21Z
