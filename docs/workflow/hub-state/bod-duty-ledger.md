@@ -3295,3 +3295,11 @@ SDE 卸载毕报落卷（sde-rhy-claude-uninstall-readout-20261116.md）：三�
 ### ㊿+339（job2 v2 探针 20:55:22Z）
 值席监督在役 ✓（notice-168 四段全收处理毕·框回 idle）；W47 树 35min 零落卷=候定谳期合理非断链；旧 runner.log 末行 11-15T14:57Z capped·ps 零活体=收口态非死（旧形退役·现役=河源 loop 形迁移中）；零新轮分数。在途链：S4 STE 复验盯链 30min 节律·触发面熄火维持·执行面候 CEO 定谳（20:54 呈报）。免扰。
 ——BOD @2026-11-16T12:55:39Z
+
+### ㊿+340（CEO 勘形令 2026-11-16 20:56+0800 毕·dsh 六轮亲勘总判读·归档 ）
+**dsh 本体**=DeepSeek Harness CLI 0.2.0-rc.2（/srv/fleet/dsh/·类 claude code 架构：tui/web/headless/acp/sdk 五 profile+cordis 插件框架+~/.dsh sessions 存储·web 现役 8791 systemd 形 run-web-masked.py D-46 包装）。
+**13 席发布物**（CEO「自研 TUI」语境实锚）：TriCompany source-agents@ce38ece2 → 转译器 v2 → ~/.dsh/profiles/web/cordis.patch.yml（10-16 21:36 生成·11-04 改版·13 preset 全：standard 工具族+scoped persona+tricompass-context compass 直读挂载）；LG-087 路径 b 施工卷史（10-17 AGENTS.md 链+10-19 rduty-tmux-v2 BOD 令+tmux blocked+10-21 8791 rotation CTO 令+10-23 dsh seq3 online REPORT）。**现役仅 r-duty-cos 一席**（2 sessions）·13 席工作区/AGENTS.md/会话存储全备待激活。
+**自研 SendMessage**（CEO 第二件实锚）=TriRMC src/orchestration/：session-bridge.ts（spawn/list/sendMessage 三 API·SendMessage=--fork-session 副本语义）+dispatch-proxy.ts（classify→estimate→route→budget→schedule→dispatch 六步管线）+employee-registry/capability-router/cost-controller——TriRMC 自带完整编排栈（M1 Phase-2 卷史）。
+**关键矛盾点（呈 CEO/CTO 裁）**：session-bridge 桥接执行体=claude CLI 语义（claude --bg -n spawn·claude -p --resume <sessionId> --fork-session send）——与 dsh（10-16 后席组执行体）=**两代执行体并存**；headless/acp profile patch=空 []（13 席 preset 仅挂 web profile）——七席评分会话执行体定谳=形 A（dsh headless/acp 原生·preset 移植施工小）vs 形 B（TriRMC 编排栈·需 claude CLI 或改造 session-bridge 指 dsh）；模型 provider 端点面未定位（cordis.yml 无 model 段·.credentials.yaml records 结构在值面未触）——CTO 域勘。
+**纪律面**：全程只读零触·凭据值面零取（键面 version/records/refs）·D-46 过滤面贯穿。
+——BOD @2026-11-16T13:00:46Z
