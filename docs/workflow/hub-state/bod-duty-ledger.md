@@ -3132,3 +3132,10 @@ CEO 16:47:05 直令（verbatim 归档）：「让m-duty-cos盯着跑完 V2-2 验
 - notice-149 勘正发值席（18:2x 提交毕）——值席即执：ssh R-HY 验 preflight marker 路径 env-first→mkdir /srv/fleet/.trimc-marker/convene-trigger→写 convene_mode=auto→cat 验（Cultivating 34s 实勘）
 - Monitor v3 重挂（加 runJob/写入毕/轮毕关键词）；下一步=POST runJob→首跑启动→读数回链
 - 本段 commit 155207f66
+
+### 18:27 r149 勘误自领+首跑 POST 执行中
+- 落款 2026-11-16T10:28:29Z（date 现查原值）
+- **r149 勘误自领**：BOD 对 CTO 三裁③域读错——③自动段=联审召集段（值守拾取发送）非 runJob；④SDE 候定谳触发=定谳毕 SDE 即发 runJob（SDE 历任触发职责·第 10 轮实锚）——值席未盲从（写入毕走信 SDE「即可 POST」msg ff34d29·分工正确·域上下文真源在值席面又一证）；notice-150 勘误自领发值席毕
+- **首跑 POST 执行中**：SDE Symbioting 1m52s——ssh 河源立 loop-window marker（注入序①授权面）+双件齐形（marker+convene_mode=auto）→POST 8710 /internal/v1/cron/jobs/9c81c7ec.../run {force:true}（X-Internal-Token·-m 240）
+- 值席面写入毕（TRICO 备路面·两面权限墙并读毕·fleet 可写）
+- Monitor v3 盯读数回链；出分+四句门=r86 硬序直报 CEO
