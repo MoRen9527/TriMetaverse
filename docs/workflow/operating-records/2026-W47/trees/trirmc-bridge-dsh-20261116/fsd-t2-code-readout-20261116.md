@@ -1,5 +1,7 @@
 # T2 编码段执行读数卷·session-bridge 三 API 改指 dsh CLI 形（BOD 裁119②·FD 主刀）
 
+> **收口刷态（2026-11-16T20:20Z 收讫）**：T2 活体验证段收口定谳=**b 形（单轮评分形）收口**（cos-t2-closeout-verdict-20261117.md 同树·值席径裁 BOD 130 附注授权）——断言 2 三 API 实弹=b 形语义下达成（spawn 案①绿/list 案②绿/send=案①应答回执按 b 形语义）；adopt 语义面缺口=rc.2 CLI 上游接线缺如实档（非本方修·v3 形 in-process 库形=TriModel 域独立候排窗线·cordis patch 接线位随排窗并勘）；fade-001 实弹段解锁链随定谳启动。本卷编码面读数不变（8252d9f 交付锚），FSD 候召面维持。
+
 - 执行: m-duty-fsd；施工位=sg TriRMC 仓 dev（双机 HEAD 同锚 e408da5 实勘·净树零漂）
 - 交付锚: TriRMC dev **8252d9f**（session-bridge.ts 改形+test/session-bridge-dsh.test.ts 白盒族·单笔 commit revert 一键形）
 - CTO 一审绿承录（五判据+两基线全过）+ coding per 方案卷 fsd-t2-design-20261116.md
