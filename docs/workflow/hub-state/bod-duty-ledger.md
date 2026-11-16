@@ -3091,3 +3091,9 @@ CEO 16:47:05 直令（verbatim 归档）：「让m-duty-cos盯着跑完 V2-2 验
 - 发送通道勘正在案：多行文本 send-keys -l 经 ssh 命令串换行断裂零落文（首试失败）→正形=b64+scp+load-buffer+paste-buffer -p+独立 Enter（三验全过）——后续 notice 通道照此
 - 出分+四句门=r86 硬序直报 CEO；Monitor bgkdonr4i 续盯
 - 本段 commit 1658ae367
+
+### 17:52 Monitor 误报核证+监视器 v2 重挂
+- 落款 2026-11-16T09:53:16Z（date 现查原值）
+- [树新落卷] 事件核证=误报：树面 10min 窗零落卷·T 段解析错位（FRAME 分隔 CRLF 失灵·框面内容串段）——根除=T 段 grep '^/' 只取 find 路径行
+- 值席框新行「SDE 那边第 11 轮跑起来了吗？跑毕读数出了就转」=notice-147 生效旁证（值席从候确认转盯触发链·第 11 轮=V2-3 首跑在 loop 轮次）——在役推进中
+- Monitor v2 重挂（关键词集收窄去宽词·30min 窗）
