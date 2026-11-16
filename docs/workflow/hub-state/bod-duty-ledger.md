@@ -3285,3 +3285,9 @@ SDE 卸载毕报落卷（sde-rhy-claude-uninstall-readout-20261116.md）：三�
 **dsh 实锚（BOD SSH R-HY 只读勘·零触碰）**：①dsh CLI 零命中（bin 位全空）——**但进程面在役**：node /srv/fleet/dsh/node_modules/.bin/dsh web --port 8791（pid 1437363·Nov04 起·180MB）+run-web-masked.py（.dsh-workspaces/r-duty-cos/.rot/）——**dsh=河源侧 web 会话/工作台承载服务（8791）·自带 workspaces 形态（r-duty-cos=R 面值守 COS 工作区实锚）**；②**河源 8460 代理位现役**（node pid 2180011 监听 *:8460）——CEO 20:28「河源本地代理」实锚=现成 8460（与 sg 同款端口）；③TriRMC 8710 原样。
 **执行面初判**：河源跑评分会话不用装 CLI——dsh 基座（web 8791+workspaces）或 8460 代理形候选——技术裁归 CTO 域（勘 dsh 服务面能力后裁·转呈 CEO 定谳）。
 ——BOD @2026-11-16T12:46:19Z
+
+### ㊿+338（notice-168·触发面熄火实锚确认+ghost 第三例拦截）
+**触发面判读（BOD 活体直探·锚=trigger json stat 原值）**：joint-review-trigger.json mtime=2026-11-16 19:41:27.325457737+0800（113937Z aftermath 归档件·102656Z run trigger 记录落卷）非新触发；W47 树 120min 内 score/联审卷零产出+全席候令（20:37 tick）——**旧形召集面零复燃·熄火维持成立**；框面「补召六笔 success」残行=历史 scrollback。
+**ghost 第三例**：SDE 框 ❯ 行「凭据面已供值，重试 S3 实弹席」——双重失真（凭据面=CEO 授权面挂起中；S3 前提 claude CLI 已卸载回归缺位态）——notice-168 拦截（零采信零动作·第三犯在案）。
+**notice-168**（ghost 三拦+熄火实锚+dsh 勘形转达+S4 盯链照旧）送达 ✓（值席框 idle→Crunching 对话流增量）。
+——BOD @2026-11-16T12:53:07Z
