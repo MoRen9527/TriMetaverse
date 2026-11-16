@@ -3458,3 +3458,7 @@ job2 一探：值席在役（r220/r221 双达 del=21 秒级消费面稳定）+**
 ### ㊿+378（apply 复探读数呈 CEO·T1 闭环维持·GLM 窗内活证候窗实测·02:34 令响应）
 **CEO 令 02:34:01「apply 复探读数到了报我」→读数已到即报**（sde-apply-seg-readout 02:22:36 落卷·BOD 18:34Z 直读）：①**apply 200 实锚**——strategy st_mujth2j65nch「测试时段切换」3 schedules 落装（GLM-5.3-Flash 深窗 20:55-21:05+08 策略在档·LG-035 时段调度制）；诊断面=token 指纹差勘正（.env vs daemon env 静态注入时点差·值零接触掩码形·解法=daemon env 现值管道形照 runbook 先例）；②**复探三点全过窗外正形**：matched=None（窗外正形）+source=env-default（兜底正形）+model=deepseek-v4-pro（env-default 维持）——即 apply 落装成功但现时点非 GLM 策略窗·兜底走 deepseek=设计面正形；③**GLM 窗内活证候窗时点实测**（明晚 20:55-21:05+08 窗内 matched 命中→glm-anthropic 直走 GLM 活证——候明窗实测或临时窗测试形候 TriModel 域裁）；④护栏全遵行（值零接触·D-46 全程）。**链态：T1 闭环维持（接线绿+apply 落装）·GLM 窗内活证=观察项非阻塞·T2 活体验证段解锁联动候开令**（值席框「候 T2 开令面」·03:00 档实拍 02:31 收束）。
 ——BOD @2026-11-16T18:34:38Z
+
+### ㊿+379（tick 02:37 拍转报）
+02:37:07 拍（02:43:09 现查·<12min）：⓪全席空闲（框面候令态）｜①双树收口｜②四口：8713 ok **pwr=94% ac=true 充电中**（插电恢复良好 49→74→94·休眠风险解除维持）·8711 ok uptime_h=125 pollFail=0·河源 TriRMC active｜③MMC ok degraded=true cf=194 持平（fade011 已知累积）｜④大表 24/4 持平。在途链：T1 闭环维持·apply 段毕（02:22 毕报·02:34 呈 CEO 毕）·T2 活体验证段候开令（值席代裁权面自办·03:00 档候令）·GLM 窗内活证候明窗 20:55-21:05 实测——链健康（最后活动 02:31·距现查 12min）。
+——BOD @2026-11-16T18:43:24Z
