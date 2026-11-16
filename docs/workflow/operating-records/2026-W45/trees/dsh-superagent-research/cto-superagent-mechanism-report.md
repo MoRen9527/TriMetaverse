@@ -79,3 +79,24 @@ dsh-superagent 的会话后端=**`@deepseek-ai/dsh-agent`/`dsh-session`/`dsh-llm
 ### 5. 勘不到如实注
 
 河源 SSH 面（dsh 位/version/进程）本席不可达；dev 面（dsh 位）未勘——两处如实报勘不到，候 BOD SSH/dev 通道补勘（补勘面=which dsh/version/env DEEPSEEK_API_KEY 在否三读数）。
+
+## 七、T2 案③勘形附节·dsh 0.2.0-rc.2 adopt 语义面（源码级勘定·CTO）
+
+- 勘验面: /tmp/dsh-superagent-proto 源读（sessions.ts ensure/prompt/resolveAgent 三函数+CLI 入口）
+
+### 1. adopt 语义面正身（runtime 层原生存在）
+
+- `Sessions.ensure(id, cwd, title, role)`（:140-147）：`resolveAgent(id)` → `session/not-found` → create（**resolve-or-create 两段=adopt-by-id 能力在库**）；cwd-face 存储（--srv-fleet-dsh--/session-*/session.v4.jsonl.zstd+lock）=该 runtime 持久层（workspace 编码目录形）；
+- `prompt(sessionId, requestId, text, mode)`（:162-167）：**三模式注入面=queue（下 turn）/steer（当前 turn 转向）/{inject}（注入不唤醒）**——dsh 会话间通信正身件（与现役 SendMessage idle 注入同构不同载体）。
+
+### 2. rc.2 CLI headless 面=adopt 接线缺（SDE smoke 实测与源读互证）
+
+--session-id 在 rc.2 CLI headless 面**未接 runtime adopt 语义**（CLI 入口无该接线；或 --session-id 语义=新建 id 指定非 adopt）——**上游原型缺口（非本方修）**；adopt 能力在库但 CLI 通道未暴露。
+
+### 3. T2 判读修正（b 形正名）
+
+**b 形=「单轮评分形」非「降级形」**——评分会话=单轮任务材料全量投喂，会话连续性非评分刚需：rc.2 CLI 通道下 b 形对评分 run=**自然形**（重定义建议随 BOD/CEO 裁）；adopt 真通道=**in-process 库形态**（V2-2 同构延一跳：loop_convene_auto 直用 runtime 库 resolveAgent/prompt 非 CLI 子进程——候选 v3 形候 BOD/CEO）。
+
+### 4. cordis.patch.yml 空数组旁证采信
+
+patch 空数组=零 patch 应用=dsh 缺省上游自持形在役（与 T1b 接线面未落一致）。
