@@ -3303,3 +3303,7 @@ SDE 卸载毕报落卷（sde-rhy-claude-uninstall-readout-20261116.md）：三�
 **关键矛盾点（呈 CEO/CTO 裁）**：session-bridge 桥接执行体=claude CLI 语义（claude --bg -n spawn·claude -p --resume <sessionId> --fork-session send）——与 dsh（10-16 后席组执行体）=**两代执行体并存**；headless/acp profile patch=空 []（13 席 preset 仅挂 web profile）——七席评分会话执行体定谳=形 A（dsh headless/acp 原生·preset 移植施工小）vs 形 B（TriRMC 编排栈·需 claude CLI 或改造 session-bridge 指 dsh）；模型 provider 端点面未定位（cordis.yml 无 model 段·.credentials.yaml records 结构在值面未触）——CTO 域勘。
 **纪律面**：全程只读零触·凭据值面零取（键面 version/records/refs）·D-46 过滤面贯穿。
 ——BOD @2026-11-16T13:00:46Z
+
+### ㊿+341（STE 复验绿判读·双链并行澄清）
+**旧形候修链（notice-112 五步）里程碑**：STE 复验绿（msg 1193a4f2 呈值席）=dry 面板活体实测核+prompt 零密钥核双绿+如实注（206 行机制零 unittest=测试卫生面欠账候选·非阻塞候 CTO 定性）→ SDE 复触发解锁（marker env 形·第 10 轮三跑）候令。**与迁移链 S4 别混序**：本复验=旧形链（marker env 修件验证）·迁移链 S3 实弹面=候执行体定谳（形 A/B 呈报中 20:54）——两链并行在册。第 10 轮三跑=评分跑非召集面（不触 convene·不违熄火令）；三跑若出分=r86 硬序必报 CEO（并盘 100 三域 breakdown）。ghost「凭据面已供值」残行仍在 SDE 框=notice-168 拦截令覆盖零采信维持。值席接力照旧·免催。
+——BOD @2026-11-16T13:03:38Z
