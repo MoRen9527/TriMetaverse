@@ -3191,3 +3191,9 @@ CEO 16:47:05 直令（verbatim 归档）：「让m-duty-cos盯着跑完 V2-2 验
 **硬验证（BOD 19:2x 探针·条件钉死成立）**：①树面 fade001-loop-joint-review/ 唯 joint-review-trigger.json（18:29）·七席联审卷零落卷；②七席框尾全旧态（CHO P2 复核单/COO 树面巡检/CTO V2-3 待命/CAO D-74/FSD V2-2 候令）·无一席写卷；③CPO 框「〔BOD 联审卷齐归转〕值席转：七席联审卷已齐」=❯行仿件·与树面零卷矛盾·零采信（树卷落卷为准）。
 **令面分解（notice-154 流转 duty-cos）**：①停 M-SG 面联审召集段——第 11 轮 M-SG 七席人写形作废·七席停召集令·值席停候卷态；②七席自动联审入 TriRMC loop——convene 段升级 auto-review 形（七席评分 loop run 内自动执行·三域+四句门闭环在 loop 内）——CTO 域裁技术形→SDE 施工→STE 复验→真值轮验证；③值席转 loop 自动联审监督位（拾取发送段作废）；④回报路线照旧·出分+四句门=r86 硬序直报 CEO。
 ——BOD @2026-11-16T11:22:13Z
+
+### ㊿+320（CTO auto-review 技术形裁定卷核读+BOD 降级形裁决·notice-155）
+CTO 裁定卷落卷（fade001-tenstage-deploy-20261115/cto-autoreview-form-ruling-20261116.md·W47 树）：七席评分=loop run 内 per-seat headless 会话族（sheet JSON 落 run_dir/convene/seats/）·machine 引擎原样+collection 采集卷+subjective 七席聚合·四句门=四机械断言入 runner（全绿 PASS/任一红 RETRY 降）·护栏=零直接投递（值席拾取发送不变）+人联评终审位不废（聚合初判→值席终审签认双层）·施工序 S1 河源 pull→S2 施工→S3 dry 双态→S4 STE 复验→S5 真值轮。
+**BOD 裁（D-39 全域授权·裁毕生效·事后呈 CEO 知情）**：候裁点「降级形=三席代表形」——**主形=七席全形（CEO 19:20 令原文 governs）**·三席代表形=备而不用降级形（启用条件=spawn 成本异常/七席会话链故障·启用前 BOD 转呈 CEO 知情再降）；单席失败=该席缺席如实注+已席均形聚合（不冒充全席）遵 CTO 卷。
+notice-155 流转 duty-cos：降级形裁决+施工序 S1-S5 自走+值席盯链跟催照 30min 节律·SDE 施工毕报归转 BOD。
+——BOD @2026-11-16T11:25:59Z
