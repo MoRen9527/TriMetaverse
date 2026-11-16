@@ -2825,4 +2825,4 @@ m-cos 呈报知情（写前现查一致·无 D-47 异常）：**W2 评分面正�
 **治理面注**：台账 676 定谳位=分数线 CTO 主裁 COO 会签·不挂候 CEO（COS 径裁面）——本席 12:37 呈 CEO「候您定值」=保守多呈不漏（CEO 阅示异议即停·否则 676 定谳走）——转报随带请 CEO 阅示。
 **B/C fail 观察项**：河源第 10 轮 score.json 直读 total_score=37.0（D/E/G pass·B=fail 0/9+C=fail 0/13 两族 22 分缺口）——首轮 recycle 前置观察项挂 W2 验收观察清单非阻塞（机判 37/59 实锚·两态上界 78-100 bracket·九族 weight 合计 100 断言 ✓）。
 
-——本段 commit 后补 hash 锚。
+——hash 锚=f023683bcdfddf364e4cf63fb5645133788cbe3a。
