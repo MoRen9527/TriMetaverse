@@ -3280,3 +3280,8 @@ SDE 框 ❯行「凭据面已供值，重试 S3 实弹席」=ghost 嫌疑与候�
 ### ㊿+336（河源 claude 卸载毕确认）
 SDE 卸载毕报落卷（sde-rhy-claude-uninstall-readout-20261116.md）：三步全清+零命中探针全绿+装前态回撤断言成立+notify 200——CEO 20:39 卸载令闭环 ✓。S3 实弹席环境面前提回归缺位态（§五 降级面候裁维持·spawn 形裁面候 CTO/BOD·dsh 勘形在途）。SDE ❯行「凭据面已供值」ghost 持续（零采信在案·㊿+331 探针锚）。
 ——BOD @2026-11-16T12:44:09Z
+
+### ㊿+337（BOD 亲勘河源 dsh 面·只读实锚·执行面实锚三锚）
+**dsh 实锚（BOD SSH R-HY 只读勘·零触碰）**：①dsh CLI 零命中（bin 位全空）——**但进程面在役**：node /srv/fleet/dsh/node_modules/.bin/dsh web --port 8791（pid 1437363·Nov04 起·180MB）+run-web-masked.py（.dsh-workspaces/r-duty-cos/.rot/）——**dsh=河源侧 web 会话/工作台承载服务（8791）·自带 workspaces 形态（r-duty-cos=R 面值守 COS 工作区实锚）**；②**河源 8460 代理位现役**（node pid 2180011 监听 *:8460）——CEO 20:28「河源本地代理」实锚=现成 8460（与 sg 同款端口）；③TriRMC 8710 原样。
+**执行面初判**：河源跑评分会话不用装 CLI——dsh 基座（web 8791+workspaces）或 8460 代理形候选——技术裁归 CTO 域（勘 dsh 服务面能力后裁·转呈 CEO 定谳）。
+——BOD @2026-11-16T12:46:19Z
