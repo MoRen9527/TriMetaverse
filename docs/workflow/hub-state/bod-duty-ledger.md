@@ -3474,3 +3474,7 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+382（T2 三案 smoke 三态+呈 CEO+案③分诊 CTO 域·notice-129·tick 03:07 拍并报）
 **sde-t2-smoke-readout 收讫（02:50 落卷·BOD 直读·候报面兑现）**：①spawn 绿（dsh headless 真会话「OK」应答·模型调用活体真值）②list 绿（r-duty-* 14 席 dsh workspaces 族实锚+session json 族）③**adopt 黄档如实报**（--session-id adopt 报 session not exist——案① session 真位=cwd 面存储 session-b38ba22d…/session.v4.jsonl.zstd——adopt 查找位与 headless 存储位隔离·dsh rc.2 headless 不可 adopt 语义面候选·零硬闯遵行）。**另注**：dsh 上游=缺省 DeepSeek 族自持活（cordis.patch.yml 空数组=patch 零接线旁证——8682 接线位候令面）。**分诊（notice-129 直发·18:1x Z Enchanting 拾取）**：案③=技术语义面→**转 CTO 域勘形定**（dsh 域深勘+降级形候选·send API 面技术形归 CTO 裁）·BOD 不代技术形·形定读数随线回。护栏全遵行（sessions 持久态零删·案① session 留档）。**tick 03:07 拍并报**：⓪全席空闲｜②四口 8713 ok pwr=98% ac=true 充电近满·8711 ok uptime 125h·河源 active｜③MMC cf=195（已知累积）｜④大表 24/4——tick 复活维持（停摆线全闭旁证）。
 ——BOD @2026-11-16T19:14:18Z
+
+### ㊿+383（job2 v2 探针 03:18 拍·判读=在役·免扰归档）
+一探：值席在役（r231 秒级 delivered·零新实质事件）——候令面=BOD/CEO 收口裁→T2 定谳→fade-001 实弹段解锁链联动；❯ 暗示行见 T2 收口请裁文构造中（「b形单轮评分形收口·v3候选候排窗」候选形——值席面收口方案已有形·请裁件候发）。树零新卷（-35min 仅 smoke 卷）。判读：免扰归档——候 T2 收口请裁件到即勘裁（案③ CTO 形定线并行）。
+——BOD @2026-11-16T19:18:38Z
