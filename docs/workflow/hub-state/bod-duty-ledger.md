@@ -3430,3 +3430,7 @@ CEO 口谕（2026-11-17 00:07:04+0800）「走glm key，不用deepseek」（令�
 ### ㊿+371（tick 00:07 拍后停摆异常·勘因双分诊·呈 CEO·00:41 拍判读）
 **异常信号族（BOD 活体探锚 17:41-17:42Z）**：①tick-latest.md 停 00:07:08 拍（mtime 00:07:15·后三拍 00:37/01:07/01:37 未写·注入时差 94min）；②8713 healthz：**daemon 进程活**（uptime 395792s 连续零重启·ok=true）但 cron consecutiveFailures=1+**next_run_at 停滚 16:30Z**（过点 72min）+电源读面停 16:25:05Z（readFailures=2·wakePollFailures=3）；③**mc_link=degraded+trimc=degraded**（上拍 connected）·CIM 电源现值 51% ac=false 放电续。症状定性=00:25-00:30Z 窗内内部周期性活动面（电源读/cron 调度/tick 生成）集体停摆·进程本体活——内部 timer/轮询线程挂起嫌疑（与电池放电深度节流相关性候勘）。**分诊双通道**：sg 8712 MMC 活性探=notice-125 直发值席（17:43:27Z·Smooshing 拾取）·本机 8713 日志面勘因=SendMessage m-cos 请领（msg 10a4e9d2）——比对归因 mc_link degraded 面。**呈 CEO：电源面第 4 呈·插电紧急度升级**（tick 停摆已实化·若休眠则 daemon 全停）。转报异常形态零压缩。
 ——BOD @2026-11-16T17:44:12Z
+
+### ㊿+372（8713 停摆自愈复活实锚·值席勘因读数归档·01:44 双拍合并判读）
+**复活实锚（17:44:34Z 现查）**：①tick mtime=01:43:58（停摆后恢复写·01:43 拍已生成）；②8713 四面读数全绿——电源读面活（readFail=0·lastRead=17:44:22Z 即时）+mc_link=connected（degraded 解除）+cron cf=0 next=17:45:00Z（停滚解除正常滚动）+进程 uptime 连续；③pwr=49% ac=false 放电续（49%→~2.5h 窗·插电第 4 呈维持）。**值席勘因读数（notice-125 应答·17:44 框）**：sg MMC 活实锚——件滞留全清（pend=0·del=15·r207-r215 九件全数消费=投递面活性恢复）；consecutiveFailures=193 系 oprec-sync-fade011 已知真源累积非链路问题（MMC 计数勘正注记）；判读成立=sg MMC 活→degraded 面=8713 侧链路问题（与 m-cos 本机勘因同向·与 CTO 挂因初判吻合——CTO 域已介入挂因线）·r216 urgent 已入队。值席挂监视器盯 8713 复活态。判读：停摆=瞬时自愈（挂因候 CTO/m-cos 勘因毕报定性）——免扰归档·电源续盯。
+——BOD @2026-11-16T17:45:04Z
