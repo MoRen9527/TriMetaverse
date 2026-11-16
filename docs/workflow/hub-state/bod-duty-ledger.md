@@ -3082,3 +3082,11 @@ CEO 16:47:05 直令（verbatim 归档）：「让m-duty-cos盯着跑完 V2-2 验
 - 四口全绿（8713 ok/河源 trirmc:active/8712 ok·MMC degraded 185 持平未涨）·大表 24/4 持平
 - 在途链=V2-3 首跑：Monitor bgkdonr4i（17:38 挂设·90s 轮询）至今零事件=树零新落卷+值席框关键词行零变化·值席 17:20 产出距 17:43 约 23min<30min 断链线·非断链
 - 停工带内零通报；出分+四句门=r86 硬序直报 CEO
+
+### job2 17:48 探判读+notice-147 解卡（V2-2 确认通报）
+- 落款 2026-11-16T09:51:00Z（date 现查原值）
+- 值席监督在役✓（节律报更新·V2-3 派工令收悉注记·COO 督办线 D 面/CTO PASS 承）·树 35min 零落卷·runner capped 静态
+- 卡点定性：值席框「V2-2 验收裁定确认了没」——CTO 裁定卷 16:4x 已落树（裁定=过·BOD 16:48 核读收讫）·值席候报文形未收到确认=树卷落卷 vs 报文候收错位家族再现·V2-3 触发被卡约 30min
+- 解卡：notice-147 确认通报（V2-2 过确认+即推进 V2-3+r146 授权面重申）·17:50 提交毕值席 Propagating 处理中
+- 发送通道勘正在案：多行文本 send-keys -l 经 ssh 命令串换行断裂零落文（首试失败）→正形=b64+scp+load-buffer+paste-buffer -p+独立 Enter（三验全过）——后续 notice 通道照此
+- 出分+四句门=r86 硬序直报 CEO；Monitor bgkdonr4i 续盯
