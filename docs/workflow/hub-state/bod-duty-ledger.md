@@ -2792,4 +2792,4 @@ m-cos 呈报知情件（12:02:16 现查·无 D-47 异常）：CTO 两卷交付�
 
 拍 12:07:05（daemon 版）：sg duty 14 席全候令+本地在干活 m-cos/m-fsd——旁证自查 45min 命中 6 件新落卷（cto-w1-arch-design/cto-w4-runner-decommission/r129认领卷/职责重定谳卷/charter/COO 工单）=席位有工件活动免通报归档一行。**在途链状态=健康**：COO 排工单 12:09:46:49 落树（晚于拍 2.7min·m-duty-fsd 候令=落卷前读数非断链）——五窗排工生效：并行组 A（W4 已停态伴随勘废/W5 在途/W3 轻量即启）+串行链 B（W1 定谳卷落树→**W2 开工条件已满足**候 sg FSD 拾取下拍验证）+衔接面 W3 全链实链验证候 W2 毕；零时点门=依赖驱动非时钟驱动（CEO「不排期直接干」同构·CFO LG-097 护栏照走）。四口全绿（8713 uptime 346877s/8711 ok/河源 trirmc:active）；MMC degraded consecFail=180（+1 观察项在案）；大表 24/4 持平。观察项续：tick 09:07 单拍缺失/8712 degraded/W46 tick 注册旧径。
 
-——本段 commit 后补 hash 锚。
+——hash 锚=7fb7cc6a75c2aeebf9020d52fe890ae05ff856c7。
