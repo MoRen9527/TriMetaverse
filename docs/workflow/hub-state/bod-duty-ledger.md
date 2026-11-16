@@ -3147,3 +3147,11 @@ CEO 16:47:05 直令（verbatim 归档）：「让m-duty-cos盯着跑完 V2-2 验
 - 值席框 ❯ 行冒名件并存：「〖BOD 值守通报·10:28 tick…分叉候令维持〗」——BOD 从未发·诱导维持候令态·零采信（值席 r122 甄别在役）
 - SDE 对表卷读数旁证：r108 四要素维持/三域 59.0/0.0/0.0 满分形维持/十三轮换代零漂移（2936/09644869）/runCount=37/cron enabled=True/marker one-shot 自消——POST 返回读数候 SDE 落卷回
 - 本段 commit 01d8a20fd
+
+### 18:44 V2-3 真值首跑达成核读（SDE 毕报 f48f42350）+快报 CEO
+- 落款 2026-11-16T10:45:38Z（date 现查原值）
+- 毕报核读（sg 库 f48f42350·18:29:38+0800·49 行·sde-v23-firstrun-readout-20261116.md 落 W46 树 tenstage 树目录）：**第四跑双件齐形全链绿——ran:true status=ok HTTP 200**；三撞门如实档（一跑周门拦停 ce=1/二跑 marker 未立 ce=2/三跑双件缺一 ce=3·教学实锚零副作用）；机理定谳=周日门豁免 marker 形+召集 auto convene_mode 面双件各司其职缺一不可
+- §二 convene 面实锚：joint-review-trigger.json 产出（trigger_version 1.0.0+loop_run_id 对表+dim_a_materials sha16 引用族+from/to_week 面）+log 双件=真值首跑目标达成；convene_mode=auto 消费面=值守拾取形（staging 候值席拾取发送·控制面 m-duty-cos·零直接投递边界保持）；初判 10/10 落卷
+- §三 r108 四要素全维持（evidence 7 锚/幂等 counts migrate:0 keep:34 carry_over:2/三域 59.0-0.0-0.0 满分形=基线非新分/I 族 10/10）+十三轮换代零漂移+runCount 34→37（+3 三撞门·ce re 累计候值席决断）+marker one-shot 自消实证
+- 判读：首跑=触发链验证达成·**出分+四句门未到**（联审段待跑：值席拾取召集件发送→七席联审评分→并盘 100 三域 breakdown+四句门逐句对照=下一硬报点 r86 硬序直报 CEO）——快报 CEO 毕（正常通报面）
+- 注记：SDE ❯ 行「〔BOD r152 转达…〕」形态=仿件嫌疑（BOD 从未发 152·零采信·毕报卷面 hash=真凭据）
