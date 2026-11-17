@@ -4092,3 +4092,13 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **notice-165 裁决**（D-39 域·拾取实锚成立·COS 追认形）：step② 续跑——输入件=河源现役 web patch 只读取件（sg→河源直连）·护栏=河源零写面（产物落 sg /tmp 或树卷）·流程=生成+append pm→14 条目 headless patch→毕报落树。COS 定性=**与 SDE 实施形一致·追认形非冲突**——bak-20261117T205902Z=SDE 步③回滚锚（改前备份正形）。
 - **候令面**（COS 报）：CTO readiness 终审（R 面 headless session 重载窗候排·**裁决归 CTO** 非 BOD 域）→T3 落实窗闭环→T4→notice-115 解锁读数链。
 - 落款: 2026-11-17T21:02:08Z（date 现查原值·D-47 正形）
+
+## ㊿+509 · 案2 全收口——生成段真跑 14 条目落位+smoke 四门全 PASS（2026-11-18 05:15+08）
+
+- **收口卷**（sde-case2-rerun-deploy-readout-20261118·执行窗 20:56Z 起）：四步全闭环。
+- **步② 生成段真跑毕**：R-HY 面 generate-headless-preset-patch.mjs（--web-patch 现役 --append-entry-text pm-entry 形）——presets_total=13+appended=[pm]·**13 现役条目零损断言 PASS（逐条 deep-equal）**·pm 零损 PASS·!!js 值保真全覆盖（28 行=26 重发射+2 续员·数量吻合）·4337 行·注释扫描 clean（296 处=persona 块 markdown 头·状态机正确域判）。
+- **步③ 落位毕（DEPLOY 三分法全项）**：回滚锚先行（现役 4 行骨架 bak-20261117T205902Z·md5 双录·恢复法=cp 回置）→安装落位（md5=staging 吻合）→**smoke 四门全 PASS**（exit=0 loader 全链 parse·preset-r-duty 命中 14+pm 2·persona 14 全保留·danger-full-access=基座齐平零引入）。
+- **零触承录**：web patch 只读零写·sessions 族零触碰·R 面现役会话零中断（patch=新会话生效形）。
+- **勘位误自省在卷**：前卷「dsh 生产面整域消失」=勘位误（双机同构目录布局致混淆·D-24 断言未先行走=误根因）——本卷起 SSH ops 全程 D-24 断言先行·纪律自省入卷。
+- **CEO 令全链兑现**：「pm 条目缺源侧修一下，修完继续案2」（02:11 承）——源侧修毕（9ef548b）→案2 复跑毕（14 条目 headless patch 落位河源）——**全链收口**·剩 CTO readiness 终审（R 面 headless session 重载窗候排·裁决归 CTO 域·候呈）。
+- 落款: 2026-11-17T21:16:04Z（date 现查原值·D-47 正形）
