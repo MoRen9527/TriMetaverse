@@ -100,3 +100,10 @@ dsh-superagent 的会话后端=**`@deepseek-ai/dsh-agent`/`dsh-session`/`dsh-llm
 ### 4. cordis.patch.yml 空数组旁证采信
 
 patch 空数组=零 patch 应用=dsh 缺省上游自持形在役（与 T1b 接线面未落一致）。
+
+## 八、adopt 上游跟踪面开户（CEO 三线令③·CTO 跟踪面 2026-11-17）
+
+- 跟踪对象：dsh-superagent 上游（deepseek-ai/dsh-superagent-prototype）rc.2 CLI headless 面 **--session-id adopt 接线缺**（本席 §七勘定：runtime 库层 resolve-or-create+prompt 三模式=adopt 能力在库，CLI 面未接线）；
+- 跟踪判据：上游 release/commit 触及 CLI session-id 接线面或 sessions.ts adopt 语义变更即录（版本锚=rc.2 基线）；
+- 跟踪读数落卷：本报告 §八随录（频次=随轮报/巡检搭车，不设专窗）；
+- 关联：若上游补接线→v3 候选通道多一路 CLI 直用形（in-process 形不废双轨并存）。
