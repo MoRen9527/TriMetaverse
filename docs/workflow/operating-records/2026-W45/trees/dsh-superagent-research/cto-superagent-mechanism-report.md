@@ -111,3 +111,13 @@ patch 空数组=零 patch 应用=dsh 缺省上游自持形在役（与 T1b 接�
 ### 5. §七.2 勘正（FSD A 勘正采信·CTO 自领·2026-11-17）
 
 **勘正**：rc.2 CLI headless 面 `--session-id` = **adopt persisted Session 语义已接线**（工件 README+码读双证：run()两腿 adopt/create+resolveAgent+assertAdoptable 守卫全形——FSD 沙箱 dsh-headless@0.2.0-rc.2 河源同版原码读）；本席 §七.2「CLI adopt 接线缺」判定**撤回勘正**——SDE 案③ "session does not exist" 实锚=**查找/组合面问题**（候选根因：sessionQuery :memory:+openAt:never 跨进程 reconcile 面缺 OR DSH_HOME 分歧），非接线缺。修正不阻 v3（v3 runner 走 persistence 直载绕该面+create 腿=缺口补通正形）。教训：勘形卷判定与实测冲突时=双证对勘（码读 vs 活体）再定谳，本席 §七.2 系单源（smoke 实测）先入定谳——双证纪律自领。
+
+## 九、勘形补条·dsh 交互 TUI 形（CEO 10:49:49 令·轻件不阻施工线）
+
+- **profile 四形实锚**（T2 设计卷 §3.2 T1a 实勘承录）：dsh 0.2.0-rc.2 profiles=**acp/headless/sdk/web 四形**——终端 TUI 形=**无**；headless=answer-exit 轻形（单问单答零服务面·b2/G6 勘定谳族）；sdk=程序面；acp=通信协议面；**web=面板交互面**（DSH web server→浏览器面板·README「A web panel shows what needs a person」实锚）。
+- **交互面正答**：dsh 交互形=**web panel 浏览器形**（非终端 TUI）——web profile boot→web server→面板=人类 attention 面（dsh-superagent 设计原意「shows what needs a person」）。
+- **案③根因维度增补**：r-duty-* 会话族若系 **web 面建**（浏览器开会话）而 headless CLI 查找=跨面 reconcile 缺口维度增补（查找面候选细化两维：DSH_HOME 对齐+**web 面/headless 面际 reconcile**）——SDE 案③复勘时按此两维排查。
+
+## 使用依据
+
+T2 设计卷 §3.2（四 profile 实勘）；dsh-superagent README panel 语；本报告 §七 adopt 语义面（源码级）。
