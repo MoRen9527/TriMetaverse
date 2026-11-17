@@ -62,3 +62,11 @@
 ## 七、使用依据
 
 BOD 裁124 续 a1 派工令（值席径裁）；CTO 六判据门禁令面；TriModel src 现势实读（server/proxy-server/secure-keys/key-source/anthropic-proxy/config 六面）；T1b 三缺 COS 分性毕报卷；D-46/裁决 C 三档
+
+## 八、编码期勘正与实装形（2026-11-16 编码毕·随施工卷承录）
+
+1. **源面勘正（§2.1 修订）**：条目活源=**trimmc-card.json provider_entries**（key-source.ts 裁定：keys.enc 自迁移毕退役不再进读链——R-HY 迁移后 keys.enc 已改名 .migrated，readSecureKeys 恒 null·原 §2.1「keys.enc providers 面」系设计期近似表述）。decrypt 形=key-source.ts:53 同形（`decrypt(Buffer.from(api_key_encrypted,'base64'))`）。
+2. **启动形双态解析（§2.3 补充）**：dist .js 直启（生产形·start:server）为主；src .ts+`--import tsx`（tsx dev 形·serve）为备；两形俱缺席=fail-safe 不 spawn 现状维持。
+3. **机制正身落位**：src/proxy-spawn.ts 独立模块（decryptGlmEntry/buildGlmChildEnv/spawnProxyWithKeys+resolveProxyLaunch 四件导出·白盒面）——server.ts 仅挂钩点（listen 后 spawnProxyWithKeys()·§2.3 挂钩点承诺保持）。
+4. **白盒族实装 11 件**（§五.3 三件+附面）：双条目 mock 形×2（双键全形+未知条目零触）/零明文断言×3（patch 面最小性+at-rest 无明文真链 roundtrip+读数面计数形结构）/fail-safe 形×5（缺主·缺档单键·空串·坏卡·无卡零回落）/启动形解析×1。
+5. **门禁读数**：tsc --noEmit 绿；套件 328/305/6/17（6 fail stash 双跑实证预存 sg 环境面：build:verify 链+5 UI E2E playwright 面·零因果）；post-a1 明文扫=0（src 零明文字面量·console 计数形零值面）。交付锚=TriModel dev **3efc4df**（单笔·已 push sg bare c1381bc..3efc4df）。
