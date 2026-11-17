@@ -3941,3 +3941,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - CEO 令（15:49Z 口谕承）：「通知他们已经重置，额度恢复够用」——指令面收到即办
 - notice-155 直发 m-duty-cos（第155轮·paste 落文 ✓+Enter 拾取实锚 ✓ Elucidating thinking）：SDE 429 配额墙已重置·额度恢复够用→T3 落实窗四步即复跑（notice-153 令面照走：四步+验收门四项+护栏不变·正身卷路径勘正随行 trirmc-bridge-dsh 树 fsd-t3-code-readout-20261117.md）；notice-154 a 项转顺手观察不停工·b/c 项随复跑毕报并线；催办锚=树落卷（dump 留档卷+四步毕报卷）——v4.5 盯守续
 - 落款锚：paste 落文时戳 15:49:54Z（date 现查原值）
+
+### ㊿+487 · job2 15:59Z 拍+裸仓告急面核销+择形裁案2（notice-156） ·2026-11-17T16:02:44Z
+- job2 判读：runner capped 非死 ✓；树面 35min 窗新落 3 件=154处置定案卷（换席施工·a 勘实=**SDE 独墙非通道共享**（fsd/cto/coo 零命中）+b 径裁换席 FSD msg ce90099f+c 落卷锚达成）+fsd-t3-window-handoff-readout（CEO 收回令 15:49Z 卸挂交棒·零写面确认 ✓·三笔修笔 4f17e75/20423b5/3dada21 在库河源已 pull·**残阻勘形=裸 !!js tag（js-yaml 4 无此形·tool-bash/pwsh 条件行）**·两案建议）+sde-t3-firstrun-hold-readout（复跑三进段反复受阻实锚：全文件→!!js 滤除→preset 精截 112 行保留形皆炸·**FSD 荐形受阻实锚**·止损线照走挂账候裁）
+- **裸仓 push 告急面核销**（BOD 直勘 sg·跨机操作路由 sg 面=BOD 直操域）：push 复现 Everything up-to-date·三卷 6316fe737/4f3a2b8ac/fa21a41a3 均在 origin/dev·磁盘 /dev/vda3 50% 零容量压力——两连拒系暂态已自愈·告急面销·余件可重推
+- **择形裁=BOD 裁定案2 自定义 yaml Type 形**（D-39 全域授权面·非三类外收回面·裁毕入账即生效·事后呈报）：裁据四条——①荐形三进段实证受阻止损线照走 ②案2 保全 doc 全解析路径（parse 一次通吃 !!js 26 行域+interleave 尾段·零文本手术面）③dump 留档回滚锚在+护栏零写面维持 ④FSD 白盒补 fixture（!!js 三形族样本）+断言（全 doc parse→preset 13 块+!!js 行原样保留）——notice-156 直发值席（第156轮·paste ✓+Enter 拾取实锚 ✓ Brewing）·令 SDE 案2 施工+FSD 白盒补齐·四步③④照走
+- 本地 m-cos 同步毕（C-level 即时同步·msg 250f9be9：裁讯+裸仓核销+三卷认收+轻注定案卷落款 23:4x 模糊段形 D-47 随窗修）
+- v4.5 盯守续：notice-156 催办锚=树落卷（生成段毕报卷+四步毕报卷）
