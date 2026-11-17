@@ -107,3 +107,7 @@ patch 空数组=零 patch 应用=dsh 缺省上游自持形在役（与 T1b 接�
 - 跟踪判据：上游 release/commit 触及 CLI session-id 接线面或 sessions.ts adopt 语义变更即录（版本锚=rc.2 基线）；
 - 跟踪读数落卷：本报告 §八随录（频次=随轮报/巡检搭车，不设专窗）；
 - 关联：若上游补接线→v3 候选通道多一路 CLI 直用形（in-process 形不废双轨并存）。
+
+### 5. §七.2 勘正（FSD A 勘正采信·CTO 自领·2026-11-17）
+
+**勘正**：rc.2 CLI headless 面 `--session-id` = **adopt persisted Session 语义已接线**（工件 README+码读双证：run()两腿 adopt/create+resolveAgent+assertAdoptable 守卫全形——FSD 沙箱 dsh-headless@0.2.0-rc.2 河源同版原码读）；本席 §七.2「CLI adopt 接线缺」判定**撤回勘正**——SDE 案③ "session does not exist" 实锚=**查找/组合面问题**（候选根因：sessionQuery :memory:+openAt:never 跨进程 reconcile 面缺 OR DSH_HOME 分歧），非接线缺。修正不阻 v3（v3 runner 走 persistence 直载绕该面+create 腿=缺口补通正形）。教训：勘形卷判定与实测冲突时=双证对勘（码读 vs 活体）再定谳，本席 §七.2 系单源（smoke 实测）先入定谳——双证纪律自领。
