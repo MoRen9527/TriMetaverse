@@ -4159,3 +4159,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - mtime 旁证 45min 窗命中 4 件（trirmc-bridge-dsh 树）：fsd-t4-design（07:05:05+08）→**fsd-t4-code-readout（07:12:01+08·T4 编码毕·白盒 9/9）**+cos-t3-reload-window-readout+cto-readiness-final-verdict 承录——notice-168 发出（07:00:30+08）后 13min T4 编码全链毕·值席面高速推进中。
 - COS 框对话流：CTO T4 完工门禁二审裁定=PASS（TriRMC origin/dev=4d290e1 在推·工具插件四件码面核过·白盒 9/9 独立复跑）——**对话流形态候树落卷正形锚**（hard-gate-signs-land-in-tree 同族·毕报归转链在途）。「活体互发案河源窗候排（runbook 随卷）→T5 断言照任务书」面候毕报卷落树勘读后 BOD 裁定（预计 notice-169 放行·本拍不打断在途归转）。
 - 在途链状态：T4 归转在途（COS Whatchamacalliting 活体）·notice-168 拾取成立（T4 产出链即回应）·下一观测面=T4 毕报卷+CTO 二审卷落树→活体互发案放行裁定→T5 验收门。
+
+
+## ㊿+518（2026-11-17T23:31:19Z 落卷·livefire 毕报勘读+notice-169 daemon restart 放行）
+
+- **SDE T4 活体互发窗毕报勘读**（sde-t4-livefire-window-readout-20261118.md·执行窗 2026-11-17T23:14:19Z-23:26:34Z 精确值·令源=值席径裁排窗已废承——卷面令源行「BOD 148」系笔误应为 notice-168·轻注记）：①生成毕=14 条目桥工具全挂（T4 修笔发现面：pm append 条目零桥工具违「每席」语义→TriCompany 4065c32 修笔 injectBridgeIntoAppended 幂等补挂·白盒 15/15）②落实毕=headless patch 更新落位（回滚锚先行 bak-20261117T231937Z→新 md5 b0ddaeb834c48245ea75d61e11ee7333·剥桥 deep-equal PASS 14 席各恰+1 零改·值面勘四门绿）③**真值互发=阻塞 pre-fire（fail-visible 零侧效）**——spawn_failed「spawn claude ENOENT」根因三面钉死：源面 T2 dsh 形改指 ✓/**运行 dist=2026-11-13 build（claude 13 命中 dsh 0=T2 前旧形）**/daemon 起时 2026-11-16 02:10 用旧 dist 起→运行面 spawn 仍 exec claude（已卸载）→ENOENT。伴生勘定：桥工具 token 门已 active（TRIRMC_INTERNAL_TOKEN 已设·curl 401 实证）→SDE 补装 token 面（TriRMC d5f2196·白盒 11/11）·daemon agents registry=0（T3 reload 直 CLI 形不入表）。
+- **notice-169 daemon restart 放行裁定**（托转 m-duty-cos·paste+Enter 提交成立 ❯ 清空·拾取待首拍验）：依据四条——①任务书护栏文本自携许可路径（「零 daemon 重启**除非照 TriRMC 重启纪律正形链**」·runbook=正形通道）②D-39 三类判据核过：可逆（旧 dist 留档一键回装）/非硬约束/非 CEO 保留权（SDE 引 TriRMC cron 生命周期 CEO 门先例不同族——systemd restart 零触 cron job 状态面·restart 后触发面熄火维持不变断言附）③零会话损失（agents registry=0 前后对表）④staging 探针 exit=0 全绿（session-bridge dsh 28/claude 3=注释形零 exec 面）复验链 ready。执行照 runbook §四：tsc rebuild→systemctl restart trirmc（systemd 正形）→复验五步（healthz→spawn B→list→③真值互发→T5 复勘）。附加护栏四条：完工三断言（healthz 复绿+pid 对表+watchdog/cron 状态零变化）·回滚姿态（旧 dist 留档）·registry 对表（0→0→spawn 后 1 预期）·D-46 token 面照走。
+- T5 断言现势对表（承录）：断言 1 源面 ✓ 运行面候 rebuild/断言 2 spawn 阻塞 list ✓ send 候/断言 3 候 restart/断言 4 ✓（②毕）/断言 5 ✓。**下一观测面=restart 毕报+T5 复勘卷落树→任务书闭环毕报→notice-115 解锁读数回转（COS 呈批链）**。
+- 锚笔第170轮落+watch-state last_notice=169。
