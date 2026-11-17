@@ -4012,3 +4012,13 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **候收件线**：①T-a 勘形毕报（值席线）②T-c/T-d 毕报=「源侧补 pm 毕报卷」（COS 候收改列）③案2 复跑毕报——锚=树落卷事件（v4.5）。
 - **旁注在档**：本轮 push 双通道受阻后经 sg-server 显式直推成功·fleet 勾子 unstaged 跳过工作区同步（值席面自状态·notice-161 带转顺手勘）。
 - 落款: 2026-11-17T18:20:41Z（date 现查原值·D-47 正形）
+
+## ㊿+498 · job2 拍 18:29Z——T-a 勘形毕（5 卷落树）·revert 承接毕·免扰归档（2026-11-18 02:30+08）
+
+- **v4.5 锚验**：notice-161（18:20Z）拾取毕→30min 内树面落卷 5 件（trirmc-bridge-dsh 树 mmin-35 实锚）——接单锚满足·免催。
+- **T-a 单点定谳（CTO 主勘卷 cto-ta-rootcause-verdict-20261118）**：web patch 缺 pm=**时点差非缺陷**——生成时点（10-16 21:36·source@ce38ece2）pm 尚未正式化（10-23 962d149 才入席·晚 7 天）·转译器 13 条目=正确输出。**修面（T-b 形）**：生成器 input 清单加 pm 一行（product-manager 五件套 sg 侧全在实锚）→transplant 生成器（T3-b 已交付 da59e59）跑一把出 14 条目 headless patch——生成器本体零改·转译器本体未定位降考古项候窗。
+- **fsd 协勘（fsd-ta-survey-readout）**：② pm 输入面在位排除（source-agents/product-manager 九件实勘）；① 席册配置+transpiler 本体=河源 face 资产族三候选承录——T-b=发布面增量件形承载。
+- **案外两笔承录（链干净）**：①roster-fix（529b750·notice-159 撤换前施工·白盒 9/10）→②revert（bef2c00·notice-160 方向变更承接·单笔互逆·SEATS_13 恢复含 pm·白盒 9/10 复跑）——两笔均已 push sg bare·卷面如实载。
+- **值席监督在役**：capture 尾段=r508b/r509b delivered 盯链报+「基线稳定零新实质事件」——30min 节律在役 ✓；runner=capped 收口态（11-15 终态行在案）非死 ✓。
+- **判读**：链推进正常（T-a 毕→T-b 条件成熟）·零阻塞零异常——免扰归档·候 T-b 修面毕报（14 条目 patch）。❯ 行「r114 节律报」字样=ghost 暗示层嫌疑（模板句式·未作证据）。
+- 落款: 2026-11-17T18:30:11Z（date 现查原值·D-47 正形）
