@@ -4167,3 +4167,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **notice-169 daemon restart 放行裁定**（托转 m-duty-cos·paste+Enter 提交成立 ❯ 清空·拾取待首拍验）：依据四条——①任务书护栏文本自携许可路径（「零 daemon 重启**除非照 TriRMC 重启纪律正形链**」·runbook=正形通道）②D-39 三类判据核过：可逆（旧 dist 留档一键回装）/非硬约束/非 CEO 保留权（SDE 引 TriRMC cron 生命周期 CEO 门先例不同族——systemd restart 零触 cron job 状态面·restart 后触发面熄火维持不变断言附）③零会话损失（agents registry=0 前后对表）④staging 探针 exit=0 全绿（session-bridge dsh 28/claude 3=注释形零 exec 面）复验链 ready。执行照 runbook §四：tsc rebuild→systemctl restart trirmc（systemd 正形）→复验五步（healthz→spawn B→list→③真值互发→T5 复勘）。附加护栏四条：完工三断言（healthz 复绿+pid 对表+watchdog/cron 状态零变化）·回滚姿态（旧 dist 留档）·registry 对表（0→0→spawn 后 1 预期）·D-46 token 面照走。
 - T5 断言现势对表（承录）：断言 1 源面 ✓ 运行面候 rebuild/断言 2 spawn 阻塞 list ✓ send 候/断言 3 候 restart/断言 4 ✓（②毕）/断言 5 ✓。**下一观测面=restart 毕报+T5 复勘卷落树→任务书闭环毕报→notice-115 解锁读数回转（COS 呈批链）**。
 - 锚笔第170轮落+watch-state last_notice=169。
+
+
+## ㊿+519（2026-11-17T23:44:20Z 落卷·tick 07:37 拍归档——notice-169 拾取成立+SDE 直投形探针在途+COS 压缩逼近预案）
+
+- tick 07:37:06 拍（现查 23:43:10Z·6min 新鲜）：系统面零异常单行——四口全绿·MMC cf=223 平·大表 24/4·全席空闲（拍快照）。45min 旁证窗三件均已知（livefire/code/design）零新卷。
+- **notice-169 拾取实锚成立**（23:31:22Z ❯ 清空+对话流运转）。COS 框 ❯ 行「restart 完成后SDE毕报随线回转，tri-check心跳照守」经 capture -e 勘定=**ghost 暗示层**（^[[2m dim 包裹指纹·非真实输入）——佐证值：ghost 基于会话上下文生成=上下文含 notice-169 处置意向·拾取面不受影响。
+- **SDE 在途活跃**：③真值互发探针**直投形**在跑（Propagating 12m35s·降 22.1k tokens——A 席 cos 工作区直 dsh CLI boot+send_message→r-duty-sde·此形不依赖 daemon dist·零风险 fail-visible 面）——restart 尚未执行·施工序=SDE 自主勘定（先试零依赖面）非断链·notice-169 restart 放行令在途候执行。毕报零落卷（12min 在途·未超 30min 阈值）。
+- **COS auto-compact 逼近预案**（框显「1% until auto-compact」）：压缩毕零续动风险（SDE 前例）——下拍观测点：若 COS 压缩毕静止+restart 零进展+树零落卷→催 COS 注入 notice-169 续动令（v4.5 锚语义·原令新窗重挂·毕报窗随注入时点重起）。
