@@ -4083,3 +4083,12 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **链现势**：notice-164 续动令已注入拾取——SDE 框实锚「Manifesting 12m57s·45.3k tokens」+cordis/web-patch/dump 探查命令在跑——**案2 实装施工在途**（树落卷零=施工未毕·正常形态）。
 - 候收件不变：SDE 案2 实装毕报卷（白盒 12/12+生成段 14 条目 patch）。
 - 落款: 2026-11-17T20:43:28Z（date 现查原值·D-47 正形）
+
+## ㊿+508 · job2 拍 20:59Z——案2 步①毕+步② HOLD 候裁·BOD 河源实勘定谳·notice-165 裁决（2026-11-18 05:03+08）
+
+- **步①毕收讫**（sde-case2-step1-done-genhold-readout·TriCompany dev e7befe7 顶对表 ✓）：!!js Type 实装毕——**白盒 12/12 全绿**（红基线转绿·notice-156 要件④闭）+CLI 干跑 14 条目全链验（!!js 3 行重发射·round-trip 保真·/tmp 独立路径零触 canonical）——**SDE 勘正 FSD 参考形缺陷**（裸 resolve 形=dump 零重发射·js-yaml 4 dumper L776-780 实勘·胜形=Set 侧信道+predicate 精确匹配）+零注释自检改 block scalar 状态机（includes('#') 过宽会误伤 persona 块内 markdown 头·干跑实锚）——施工质量认可。
+- **步② HOLD 候裁**：真跑输入件（现役 web patch 4700 行）sg 盘零在——SDE 勘 sg ~/.dsh//srv/fleet/dsh//var/lib/trirmc 三面零在·fail-visible 照走候 BOD/COS 面核。
+- **BOD 一手实勘定谳**（ssh -J R-HY 直读）：**输入件缺=机位错勘非真丢失**——web patch 真身+13 条目全在河源 /home/fleet/.dsh/profiles/headless/cordis.patch.yml·dsh sessions 13 席册+河源 /srv/fleet/dsh 生产面均健在——sg 盘零在=机位分工面自然形态。
+- **notice-165 裁决**（D-39 域·拾取实锚成立·COS 追认形）：step② 续跑——输入件=河源现役 web patch 只读取件（sg→河源直连）·护栏=河源零写面（产物落 sg /tmp 或树卷）·流程=生成+append pm→14 条目 headless patch→毕报落树。COS 定性=**与 SDE 实施形一致·追认形非冲突**——bak-20261117T205902Z=SDE 步③回滚锚（改前备份正形）。
+- **候令面**（COS 报）：CTO readiness 终审（R 面 headless session 重载窗候排·**裁决归 CTO** 非 BOD 域）→T3 落实窗闭环→T4→notice-115 解锁读数链。
+- 落款: 2026-11-17T21:02:08Z（date 现查原值·D-47 正形）
