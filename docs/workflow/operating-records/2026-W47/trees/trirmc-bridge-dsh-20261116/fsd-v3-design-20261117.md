@@ -78,8 +78,41 @@
 
 - R-HY 活体实证三例=部署窗候令（§五）；dsh bin 启动形=node22 face（rc.2 需 node:util.parseEnv≥20.12——河源现役启动形实勘对表=部署窗项）
 - cordis patch 8682 接线=schema 勘定+落位时点候同窗（§三）；DEEPSEEK 值面源=候令面非本席域
-- sg 面零触: 沙箱=/srv/fleet/.dsh-sandbox{,2} 隔离域（零真 home 零真存储·毕后清理候令）
+- sg 面零触: 沙箱=/srv/fleet/.dsh-sandbox{,2}+升级探针 /srv/fleet/.dsh-upgrade-probe 隔离域（零真 home 零真存储·毕后清理候令）
 
 ## §八 · 使用依据
 
 BOD 托转 133（CEO 令）；CTO v3 门禁六判据（COS 转达）；CTO 勘形卷 9d5f3663e §七；npm registry 勘定（dsh 0.2.0-rc.2 在案+rc.2 依赖族下架实锚）；dsh-headless@0.2.0-rc.2 工件原码读（run()/resolveAgent/assertAdoptable/插件契约）；cordis-plugin-loader :214-223 name 解析；profile-boot.d.ts（homePatchPath/runProfile/prepareProfile）；headless 组合 dump-config 实读（sessionQuery :memory:+openAt:never 面）；T2 收口定谳卷+SDE smoke 卷+proxy-dual 卷；D-46/D-47/V2-2 现役形
+
+## §九 · dsh 升级维护预案（BOD 134·CEO 可维护性判据增补段·2026-11-17T00:23Z 写前现查）
+
+### §9.1 升级成本面（紧耦合清单化·实证承录）
+
+**紧耦合面清单=两文件内收口**（TriModel `src/dsh-adopt/runner.mjs` 全部 ctx 触点+overlay 模板件——业务面 loop_convene_auto/召集件模板零触 dsh API）：
+
+| 触点 | API 面 | rc.2 锚（工件码） | 漂移风险评级 |
+| --- | --- | --- | --- |
+| 服务获取 | ctx.get('agents'/'sessions'/'fs'/'appExit'/'agentDefaultModel'/'sessionPersistence') | headless run() 同款 | 低（cordis 服务注册面稳定） |
+| create 腿 | agents.create({sessionId, meta:{cwd}, agentOptions, setup}) | run():316 | 中（签名形漂移） |
+| adopt 腿 | agents.resume({resumeSessionId,...}) | resolveAgent():259 | 中 |
+| 注入三模式 | agent.followup/steer/inject | run():361+原语族 | 低 |
+| quiescence/持久化 | agent.whenIdle()+sessions.flush(agent.session) | run():342/377 | 低 |
+| 守卫 | assertAdoptable 同款（header.origin/cwd/preset 三查） | :221-226 | 中（adopt 守卫语义演进） |
+| 消息构造 | createUserMessage/freezeMessage 形（dsh-llm） | run():361 | 中（消息 schema 演进） |
+| 挂载契约 | 插件四件套 {name,apply,inject,Config}+patch overlay YAML 条目形 | dsh-headless 样板+loader :214 | 低-中（patch schema 演进） |
+| launcher | profile-boot runProfile/DSH_HOME/bin 面 | profile-boot.d.ts | 低 |
+
+**跨版本实证（本席 0.2.2-rc.3 直测·升级成本硬数据）**: 沙箱装 `@deepseek-ai/dsh-headless@0.2.2-rc.3`（=latest 线·领先河源现役两个 minor 版本）——**服务触点面 diff=EMPTY**（agents./sessionPersistence/sessionQuery/appExit/agentDefaultModel 触点计数逐项一致）+插件契约导出逐字一致（`export {Config, apply, inject, name}`）+create/resume/followup/whenIdle/flush 调用位等价在案——**紧耦合面跨 rc.2→0.2.2-rc.3 实际上游演进零变动（维护成本实证面成立）**。
+
+### §9.2 适配层（版本升级只改适配层零改业务面）
+
+- **runner 自身即适配层**：dsh API 触点全收敛于 runner.mjs 单文件+overlay 模板件——dsh 版本升级触面=两文件，loop_convene_auto/召集件模板/convene_mode 门控/staging 双件族=业务面零触
+- **runner 内部再分层**（编码时落形）: `dsh-gateway` 段（ctx 触点收口段·§9.1 清单逐项）+`deliver-core` 段（seat 解析/letter 成形/读数面/exit 面——纯业务零 dsh 依赖）——版本升级只改 dsh-gateway 段
+- **双兜底通道**（降级面非空）: ①`deliver_via=cli-adopt` 第三形=rc.2 原生 CLI `--session-id` adopt 直用（上游公共 CLI 面稳定度高于内部 ctx API·§一.5 勘形修正候选承面——插件契约若在未来版本断裂，CLI adopt 通道=零自定义码兜底）②`deliver_via=legacy-staging`（V2-2 现役形·与 dsh 版本完全解耦的终极回滚锚）——**库直用優势论证：紧耦合面实测零漂移（§9.1）+适配层两文件收口+双兜底通道在案=升级预案兜底成立**
+
+### §9.3 版本 pin＋升级窗口流程（回归门=白盒族＋四句门复用面）
+
+- **版本 pin 面**: runner 启动读安装面版本号（INSTALL_ANCHOR package.json version·profile-boot 正身）与兼容矩阵（TriModel src/dsh-adopt/versions.json 声明·初版=`['0.2.0-rc.2','0.2.2-rc.3']`——两版触点面已实证同构）比对，不匹配=**fail-visible 拒跑（禁静默跨版本运行）**
+- **升级窗口流程五步**: ①上游新版勘形卷（新版工件码读 diff §9.1 清单逐项——沙箱装新版即可码读·registry 公共面）②sg 沙箱白盒族全跑（mock ctx 形零真 boot·零河源触）③版本矩阵行增补+（若触点漂移）dsh-gateway 段适配补丁——同笔单 commit revert 一键形 ④河源部署窗活体回归门=**四句门复用**（CEO V2-3 验收四句：不漏任务不漏树/不多任务不多树/必迁文件不漏/该收口收口该迁移适配）+§五活体三例（adopt 一例/overlay 挂载一例/端到端）⑤矩阵更新毕报双通道
+- **回归门复用清单**: TriModel runner 白盒族（Config 形/两腿选择/三模式映射/读数零值断言）+loop_convene_auto 白盒族（deliver_via 三形/dry 零落位/mode 门控）+四句门（河源活体窗）
+- **上游可及性注**: npm 公共面=升级通道物理在案（dsh 0.2.2-rc.1..3 全线可装·rc.2 依赖族下架=旧版不可复装但升级方向畅通——升级=向前单向·回滚=河源盘面现役 node_modules 留档形）
