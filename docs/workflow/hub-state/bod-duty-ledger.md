@@ -3994,3 +3994,13 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **L130 勘定三跳**（BOD 直勘·先勘后裁防发令侧错位）：①L130 卷读=web patch 13 条目零 pm+SDE 按 SEATS_13 断言 fail-visible——初判疑假阳性（runbook 零 pm 字样旁证）；②**生成器代码勘定推翻初判**：TriCompany sg 侧 generate-headless-preset-patch.mjs L20 SEATS_13 含 pm 无 cmo=断言正确触发非假阳性；③**河源现役册定谳**：R-HY /home/fleet/.dsh/sessions 13 席={cao,cfo,cho,cmo,coo,cos,cpo,cso,cto,fsd,rdt,sde,ste}——含 cmo 无 pm·与 web patch 13 条目完全一致=13 席齐实 PASS
 - **裁定（D-39 全域授权面·三面实锚）**：真根因=生成器 SEATS_13 名册写错（pm 误入册·cmo 误漏——一席互置）·L130 挂账定性=名册勘误致假阳性 fail-visible（web patch 册=R 面现役正形册）——notice-159 直发值席（第159轮·paste ✓+Enter 拾取实锚 ✓ Scampering）：令生成器一行修（SEATS_13 去 pm 换 cmo·TriCompany 仓 sg 侧）+白盒 fixture 同步勘正+复跑断言（预期 13/13 零 warn）——案2 线继续；R 面 pm 席未来 m/R 同构扩编=另立增量件候裁不阻主线
 - 教训注：本拍先初判假阳性→代码勘定推翻→现役册定谳——三跳勘全再裁（发令侧错位比接收侧更毒·对象断言前三问遵行）
+
+## ㊿+496 · CEO 直令：L130 方向变更——源侧补 pm 条目（notice-159 勘正·2026-11-18 02:11+08）
+
+- **CEO 令原文**（02:11:43+08 承）：「pm 条目缺源侧修一下，修完继续案2」。
+- **方向改判定谳**：CEO 裁>席裁——notice-159 本席裁定（生成器 SEATS_13 去 pm 换 cmo·pm 另立增量件候裁不阻主线）与 CEO 令冲突，**撤换不作**。CEO 方向=pm 应在册：修面=**源侧补 pm 条目**（TriCompany 转译器/发布管线生成面）——修后 web patch 14 条目（现役 13+pm）→SEATS_13 保持含 pm 不动（断言过·cmo=额外席 warn 可容）→案2 生成段复跑。
+- **新证据并入**：tick 02:07 拍 ⓪ 全席现态 sg duty 组=14 席名含 **m-duty-pm**（候令）——sg duty 组现役含 pm，河源 dsh 13 席册（含 cmo 无 pm）与之不同构——CEO「源侧补 pm」=河源面向 sg duty 组形态对齐，席册终形以源侧修施工勘定为准如实回转。
+- **双通道动作**（notice-160 落款 2026-11-17T18:12:26Z·锚笔机械原值在案）：①notice-160 直发 m-duty-cos（tmux 三段验证法全过——落文+Enter+拾取实锚成立：全文入对话流+spinner「Topsy-turvying 15s」+❯ 清空）；②SendMessage m-cos 派工令（源侧修勘形→CTO/FSD 域施工→web patch 刷新 14 条目→commit 推 sg→知会值席 COS→案2 复跑；工序拆树 COS 域径裁）。
+- **候收件线更新**：①源侧修毕报（web patch 刷新卷·m-cos 线）②刷新件落 sg 后案2 复跑毕报（值席线）③T3/四步毕报照挂——锚=树落卷事件（v4.5）。
+- **L130 案卷随注**：挂账卷修面注记=源侧（非生成器）——值席 COS 面已随 notice-160④ 款知会。
+- 落款: 2026-11-17T18:15:42Z（date 现查原值·D-47 正形）
