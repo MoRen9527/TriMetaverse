@@ -3960,3 +3960,8 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - tick 00:07:07（延迟 6min<12min 正常）：非空闲=本地 m-cos 在干活（复推链·知情活动）·sg duty 组 14 席候令（拍时点快照）——四口全绿（8713 uptime 4699s·8711 uptime 146h·河源 trirmc:active）·MMC cf=216（+1 微涨族续观察）·大表 24/4·**pwr=50% ac=false**（61→50·30min 掉 11 点·掉速约 22%/h 撑约 2.3h——电源催办续挂候 ac=true）
 - m-cos 复推 merge 收口实锚：eb3561b74（Merge dev of ssh://47.245.122.61/srv/git/TriMetaverse·815af0378 入父链）——**㊿+488 补挂毕 7c929af4c**（MERGE 态撞窗 partial commit 拒→候收口补挂·笔备份在 Temp·零吞笔）
 - 裸仓链修复后 push 面恢复确认随 m-cos 复推回执（fetch upload-pack 复活=链修复目的达成候验）；树面 sg 值席线两卷（c57247a78/815af0378）已见=工件活动在·免 sg 通报
+
+### ㊿+490 · job2 16:29Z 拍·免扰归档（案2 链在途·值席盯守在岗） ·2026-11-17T16:29:55Z
+- 值席监督在役：00:00 档收束·观察窗在岗至 00:30 节律拍（「盯 SDE 案2 毕报直达核+送达态·变化即报」）——r472b/r473b delivered 零新实质事件
+- 树面 35min 窗：fsd-t3-jsfix-whitebox-readout-20261118（FSD 白盒毕报·c57247a78 同卷）+sde-t2-t1b-rerun-hold-readout（SDE T2 段续挂）+ste/sde-t3 两卷 mtime 刷新——**SDE 案2 施工毕报未落**（notice-156 拾取 16:01+30min=16:31 阈值·本拍 16:29 窗内差 2min·且值席处置自述在岗盯守=「零处置自述」条件不成立）——下拍 job1 16:37Z 复验：若生成段毕报仍未落且值席零跟催动作→催
+- runner capped 非死 ✓——免扰归档
