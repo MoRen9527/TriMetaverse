@@ -3988,3 +3988,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **notice-158 闭环实锚（派工链复活）**：SDE 框新活动（Crunched 9m9s·表格输出「条目面=发布面缺面修域·零硬闯」+「候源侧发布面域面修毕→13 席齐断言复跑面」哨态）+**新树卷 sde-l130-pm-missing-hold-readout-20261118.md 落**——SDE 在案2 线「13 席齐断言复跑」环节勘出 **pm 席条目缺**（preset 面缺 pm=源侧发布面缺）——挂账 L130 候源侧修（TriCompany 发布管线域·零硬闯）
 - 新卡点勘定：案2 施工线推进至 13 席齐断言被 pm 缺席卡——候修面=源侧（TriCompany source-agents/转译器输入面——PM 定义本机在册·缺在转译器输出/发布面）——COS 观察窗盯守中（「盯 pm 修面回执+案2 毕报」在岗至 02:00）；L130 详情候值席 30min 节律报——候裁面（修面派工归源侧域）随报再裁
 - runner capped 非死 ✓·v4.5 盯守续（案2 毕报+L130 修毕双候收）
+
+### ㊿+495 · job2 17:59Z 拍+L130 三面实锚勘定+裁定 notice-159（SEATS_13 名册勘误） ·2026-11-17T18:03:40Z
+- job2 判读：值席监督在役（01:30 档毕 r492b/r493b 直达·pm 缺席转呈线况在报·观察窗在岗至 02:00 盯 pm 修面回执+案2 毕报）·树面唯 L130 卷·runner capped 非死 ✓
+- **L130 勘定三跳**（BOD 直勘·先勘后裁防发令侧错位）：①L130 卷读=web patch 13 条目零 pm+SDE 按 SEATS_13 断言 fail-visible——初判疑假阳性（runbook 零 pm 字样旁证）；②**生成器代码勘定推翻初判**：TriCompany sg 侧 generate-headless-preset-patch.mjs L20 SEATS_13 含 pm 无 cmo=断言正确触发非假阳性；③**河源现役册定谳**：R-HY /home/fleet/.dsh/sessions 13 席={cao,cfo,cho,cmo,coo,cos,cpo,cso,cto,fsd,rdt,sde,ste}——含 cmo 无 pm·与 web patch 13 条目完全一致=13 席齐实 PASS
+- **裁定（D-39 全域授权面·三面实锚）**：真根因=生成器 SEATS_13 名册写错（pm 误入册·cmo 误漏——一席互置）·L130 挂账定性=名册勘误致假阳性 fail-visible（web patch 册=R 面现役正形册）——notice-159 直发值席（第159轮·paste ✓+Enter 拾取实锚 ✓ Scampering）：令生成器一行修（SEATS_13 去 pm 换 cmo·TriCompany 仓 sg 侧）+白盒 fixture 同步勘正+复跑断言（预期 13/13 零 warn）——案2 线继续；R 面 pm 席未来 m/R 同构扩编=另立增量件候裁不阻主线
+- 教训注：本拍先初判假阳性→代码勘定推翻→现役册定谳——三跳勘全再裁（发令侧错位比接收侧更毒·对象断言前三问遵行）
