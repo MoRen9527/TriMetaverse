@@ -3875,3 +3875,8 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - 免通报定性：sg 全席候令但旁证在窗=E 段自述卷 22:28 落卷（45min 窗内）+在途链活跃三条（m-cos PATCH 链 22:49 毕报收稿·tri-check 23:00 拍盯守·E 段候 CEO 分叉判定）——非空转形态免通报
 - PATCH 链收稿（m-cos 八步毕报 22:49:37）：三清正形照行（shutdown 200→port FREE→冷启 pid4120 双证对表·零 EADDRINUSE）·channel.cmd L32+L50 双位追加 20261117 条目（旧 20261130 条目按令保留·候窗随手清理）·PATCH /internal/v1/cron/jobs/cron_mwks0klq_t9ow RC=200=ALLOWLIST 过门实证·值面铁锚 job.command=20261117/20261130=False/enabled=true/nextRun=15:00:00Z(23:00 拍)/runCount=2 errorCount=0·watchdog 双保险先行毕撤净
 - 23:00 首拍 gate 预判（m-cos 如实预告）：预计 DIFF 1 项（树指针缺失·tri-check parse 推导形局限非真断链）——如实报读数不硬凑·解析面加固（latest-file/树 id 列读取）与裁③候窗项同族一并留痕候窗
+
+### ㊿+475 · job2 22:59 拍判读（免扰）+notice-151 发出拾取实锚 ✓·2026-11-17T15:01:44Z
+- job2 判读：值席监督在役（m-duty-cos「基线稳定·零新实质事件」+2 monitors 盯链态）+接力落卷两件在 35min 窗（E段接单自述卷 22:28/cos-lg099-deploy-readout 22:25）+runner.log capped 收口态（11-15 round=8 封顶保险丝·ps 零活体=非死）——免扰归档
+- notice-151 发出（15:00:44Z paste 落文 [Pasted text #90 +7 lines]✓→独立 Enter→拾取实锚 Gusting/❯清空/esc to interrupt ✓）：大表定名规则候窗件——①铸日名（现行系 W45=20261105/W46=20261115/W47=20261117）/周一名/翻周日名 三案对比拟+推荐案候 CAO 归口审 ②W44 缺件三周断档补课线（补铸/标注豁免）拟案同卷·落卷位建议 trirmc-bridge-dsh-20261116 树·轻件零打断值守
+- tri-check 23:00 PATCH 后首拍：nextRun=23:00:00+08·本拍探针时 22:59:46 未触发——首拍产出下拍/随复查盯守
