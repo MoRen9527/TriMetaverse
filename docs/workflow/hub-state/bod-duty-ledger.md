@@ -3948,3 +3948,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **择形裁=BOD 裁定案2 自定义 yaml Type 形**（D-39 全域授权面·非三类外收回面·裁毕入账即生效·事后呈报）：裁据四条——①荐形三进段实证受阻止损线照走 ②案2 保全 doc 全解析路径（parse 一次通吃 !!js 26 行域+interleave 尾段·零文本手术面）③dump 留档回滚锚在+护栏零写面维持 ④FSD 白盒补 fixture（!!js 三形族样本）+断言（全 doc parse→preset 13 块+!!js 行原样保留）——notice-156 直发值席（第156轮·paste ✓+Enter 拾取实锚 ✓ Brewing）·令 SDE 案2 施工+FSD 白盒补齐·四步③④照走
 - 本地 m-cos 同步毕（C-level 即时同步·msg 250f9be9：裁讯+裸仓核销+三卷认收+轻注定案卷落款 23:4x 模糊段形 D-47 随窗修）
 - v4.5 盯守续：notice-156 催办锚=树落卷（生成段毕报卷+四步毕报卷）
+
+### ㊿+488 · sg 裸仓链修复闭环（m-cos 反证收勘·blob 写回+root 残留归正） ·2026-11-17T16:12:16Z
+- m-cos 复推实测反证收讫（00:06:38 报·00:07 到）：我面「暂态自愈」判读勘浅——push 面绿≠对象存储面绿（监控绿≠任务活同族二犯·自领）；其实锚=fetch sg-server upload-pack died at cfd72978e59f0b514e316e69747ec452c654ceb9（possible repository corruption）·non-ff rejected 禁 force 姿态正确
+- BOD 直勘三跳勘定：①fsck 全谱=唯一 missing blob cfd72978...ceb9（tree b1bd638f 断链·其余 dangling 正常形）②blob=LG-099拆树任务书正身-coo-20261117.md 的 b21fb1cd 时点版本（push 中断残雷·github 侧亦无=sg 独有）③sg 工作区现版文件 hash-object 对表=**与 missing blob 完全相等**（文件自 b21fb1cd 后零改动）
+- 修面三步全绿：工作区仓 hash-object -w 写 blob（1926B·hash 命中）→cp 入 bare objects/cf/+chown fleet+444→**objects 全域 root 残留清点归正（7+ 处→0·23:14 root git 操作未归还属主残雷——「root git 操作后必清点归还属主」同族二犯实锚）**——fsck 复勘 missing/broken=零·dev 顶 815af0378（6316fe737 后值席线又推两笔：FSD 白盒补齐毕报 c57247a78（!!js 三形 fixture+转绿判据 10/10 候案2=与 notice-156 裁对表吻合）+SDE T2 段续面挂账卷 815af0378）
+- 根因注：sudo -u fleet 首写拒（objects/cf=drwxrwsr-x root:root 组写不在 fleet）→两步修（工作区仓写+cp 入）——正形=cron/daemon git 面全走 fleet·root 面操作后必 chown 归还清点
+- m-cos 复推令回转毕（msg 50a3112d：fetch→merge→push·滞留件 f1725465d+HEAD 4ec3c09e7 安全在库·如实回转零硬凑）——push 面恢复读数候其复推回执
