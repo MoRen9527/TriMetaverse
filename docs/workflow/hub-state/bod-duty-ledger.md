@@ -3658,3 +3658,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - 拍延迟注：daemon 拍 10:37:05·hook 到 10:43:06（+6min）。零异常压缩单行转报毕：全席空闲（daemon 视角）·8713 ok=true uptime_s=427877 notifyFailures=1 pwr=98% ac=true（插电持续充电）·8711 ok=true uptime_h=133 mc_link=connected pollFail=0·河源 trirmc:active·MMC ok=true degraded consecutiveFailures=202（已知常置）·大表 total=24 open=4。
 - 在途链状态：FSD 方案卷（10:17 分工裁起在途 26min·30min 断链阈值未到·候 duty-cos 观察窗 bmrw78067 11:00 节律报）·SDE 河源复验 b3934e6 候毕报（对照 c7340cb66 fail 基线·预期七席拒面翻转）·notifyFailures=1 候归零全闭。
 
+### ㊿+417（CEO 定谳令收讫转达·notice-137 送达·2026-11-17 10:45+08 归档）
+
+- CEO 定谳令收讫（hook 时戳 2026-11-17 10:43:33+08）：「①②都补送方案线：准实时列验收指标·TUI不采用」——㊿+415 两候决点双定谳。
+- notice-137 构建（CEO 令文照录+定谳面两款：①互发准实时=方案验收硬指标·实测口径随方案定·④staging 慢通道不计入；②TUI 对无头席不采用·③留守交互席面·无头席收发只走①④⑤⑥族）——发送窗=值席处理中排队形（❯ 空·Improvising 29s 中粘贴=#77 落框）·Turn 毕净贴（框内独占）·独立 Enter 提交·thinking 拾取实锚·❯ 清空。锚笔第137轮在案（@2026-11-17T02:44:33Z）。
+- 值席侧现势：观察窗 bi07tairb 在岗至 11:30 拍「盯 CEO 回看裁＋送达态＋树落卷」；FSD 方案卷在途（分工裁 10:17 起·两项定谳=验收门与形态边界输入随补送入卷）。
+- job1 10:37 拍转报随本段并档（㊿+416 已记·压缩单行已呈）。
+
