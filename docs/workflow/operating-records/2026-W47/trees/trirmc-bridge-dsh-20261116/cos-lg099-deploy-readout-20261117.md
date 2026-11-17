@@ -62,3 +62,21 @@ BOD 托转令五项请领工+补充定稿四查（14:02Z）；deploy/ 三件族�
 —— COS 小贾（毕报=落卷树+SendMessage 直达 BOD·落款时戳=date 现查原值粘贴：2026-11-17T22:18:02+0800 拍前现查）
 
 > **调度面终验锚（补注·2026-11-17T22:32:41+0800 date 现查）**：22:30 首个调度拍自动实跑全绿——runCount=2·lastRunAt=2026-11-17T14:30:48.690Z（22:30:48+08）·lastRunStatus=ok·errorCount=0·nextRunAt=15:00Z（23:00+08 滚动）·首拍自动卷=tri-check-20261117T143049Z.json 落位——job 由 cron 引擎自动拉起+跑毕+落卷全链实证=部署段终验毕·断链判据盯守自下拍起算。
+
+## §七 · BOD 150 裁② PATCH 链（大表名错位定谳执行·2026-11-17T23:01:49+0800 date 现查补注）
+
+BOD 第 150 轮裁②（对表对象=task-inventory-20261117.md 现役惯例名·铸日名惯例实锚 W45=20261105/W46=20261115/W47=20261117·SDE 铸件名 20261130 经 BOD 直勘正身卷=无据臆造）执行毕全绿（**三清教训照行·batch 偏移错位家族首用即防**）：
+
+1. **三清**：/shutdown RC=200（daemon 21880 停）→wrapper 23188 随 daemon 死先自退（未及强杀=更干净）→node/wrapper 残留清点双零→port 8713=0 FREE
+2. **channel.cmd L32+L50 双位追加 20261117 条目**（replace_all 一次同步·追加非替换·20261130 条目按令保留候窗清理）——写后断言全过：20261117 计数=2·20261130 计数=2·CR=LF=50 CRLF 完好·行数不变
+3. **冷启**：watchdog Disable RC=0+stop-flag 置（链毕 Enable RC=0+flag 撤净）→schtasks /run RC=0→healthz=200·**pidfile=4120==listen_pid=4120 双证对表**·零 EADDRINUSE（三清正形成效实证）
+4. **PATCH /internal/v1/cron/jobs/cron_mwks0klq_t9ow RC=200** ok=true——cmd_len=523 逐字等值——**PATCH 200 本身=新 ALLOWLIST 条目过门实证**（daemon env 未载新条目必 403·本轮零 403 一次过）；读回值面铁锚：command=20261117 串·20261130=False·enabled=true·updatedAt=14:49:24.542Z·nextRunAt=15:00:00Z
+
+## §八 · 23:00 首拍读数（PATCH 后首拍·卷 tri-check-20261117T150040Z.json·mtime 23:00:40+08·check_time=15:00:40Z）
+
+- gate=DIFF·diffs_n=1——余差口=「①open→树指针」：LG-099 行树指针缺失——**parse 推导形局限非真断链**（parse_ledger_open 命中 LG-099 行 1 行→stem=LG 号后中文段「三账对表机械化-周迁移机械闸-BOD-145-CEO-立」vs 树名 trirmc-bridge-dsh-20261116 零交集；LG-099 树实活 trirmc-bridge-dsh-20261116 在位）——与致 BOD 预告逐字一致·BOD 150 认收照单（「照实报即可·照单认读数不追问硬凑零差」）
+- **ledger-present 缺位差口已消失**——20261117 对表对象生效实证=裁② PATCH 链生效铁锚·**「大表断档差口常驻」解**
+- ③计数差口：inv_n=1 vs ledger_n=1 delta=0 无差
+- job 执行层：lastRunAt=2026-11-17T15:00:39.577Z（23:00:39+08）·status=ok·runCount=3·errorCount=0（status=ok=job 执行层·gate=DIFF=脚本判读语义·两层不矛盾）
+- **余项与裁③加固项同族**（tri-check.py latest-file 解析+树 id 列读取——parse 推导局限随加固落位即转零差心跳）——候窗批并（勿单独多启重启遵行·BOD 150 裁③）·定名规则系统定谳归值席线（notice-150 直发 m-duty-cos·我面不代办）
+- 下拍=15:30Z（23:30+08）滚动照守·异常即报；值守读数已报 BOD（途中 D-47 闸拦 1 次=落款模糊段指纹·date 现查原值回填重发过闸·闸有效实证+1）
