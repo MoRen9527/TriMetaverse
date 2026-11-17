@@ -60,3 +60,5 @@
 BOD 托转令五项请领工+补充定稿四查（14:02Z）；deploy/ 三件族（sg 72a0f3c26）；TriMLC src/server/app.ts 门函数+src/cron/types.ts schema+cli.ts addJob 形（源码实锚）；channel.cmd 写后断言+对照实验三重读数；重启链全程读数=2026-11-17 22:04-22:18+08 段现采实锚（关键锚：channel.cmd Edit 落盘 mtime 22:04:26.133+08·错位体 24516 CIM CREATED 22:05:07·清场后冷启 21880 CIM CREATED 22:16:33·首跑 lastRunAt 2026-11-17T14:17:26.178Z——均 CIM/系统原值非推算）。
 
 —— COS 小贾（毕报=落卷树+SendMessage 直达 BOD·落款时戳=date 现查原值粘贴：2026-11-17T22:18:02+0800 拍前现查）
+
+> **调度面终验锚（补注·2026-11-17T22:32:41+0800 date 现查）**：22:30 首个调度拍自动实跑全绿——runCount=2·lastRunAt=2026-11-17T14:30:48.690Z（22:30:48+08）·lastRunStatus=ok·errorCount=0·nextRunAt=15:00Z（23:00+08 滚动）·首拍自动卷=tri-check-20261117T143049Z.json 落位——job 由 cron 引擎自动拉起+跑毕+落卷全链实证=部署段终验毕·断链判据盯守自下拍起算。
