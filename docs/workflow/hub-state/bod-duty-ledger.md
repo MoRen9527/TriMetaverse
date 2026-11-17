@@ -3677,3 +3677,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - 值席候令面现势：❯ 草稿「BOD 裁定·增补卷收讫·P0 开工准·第138轮」构造中（免污染纪律不贴·notice-138 候净窗）——答面已备：增补卷收讫认账·P0 开工准=候 CEO 回看裁双门·另 CEO 令「补吧」（hook 2026-11-17 10:49:49+08）=CTO 勘形线补一条 dsh 有无交互 TUI 形实勘随 notice-138 并达。
 - runner capped 终态照持；观察窗 bi07tairb 在岗至 11:30 拍。
 
+### ㊿+420（CEO 概念六问答·2026-11-17 11:07+08 归档·方案回看对照材料）
+
+- CEO 问链（hook 时戳 2026-11-17 11:05:55+08）：preset/tmux babysit/resume vs adopt/persistence 归属/①④区别/沙箱隔离域工作原理+无头跑 fade-001 loop 方向定调。
+- 答面要点：preset=转译器产岗位设定包（人设+职责+工具面·spawn/--patch 挂载·T3 移植 headless）；babysit=大白话保姆式伺候（TUI 框喂养+坑族+救活·无头免伺候）；resume vs adopt=同族两层（底层=agents.resume 持久化直载 API·编排语义=adopt 按 UUID 收养+喂信+fail-visible·adopt-or-create=收养/自举两腿；CC --resume=人操作形）；persistence=CLI agent 标配非 dsh 独有（CC=~/.claude/projects jsonl·dsh=~/.dsh/sessions UUID·状态在盘两家同构）；①=邮局（组织级信件·五键 payload+唤醒链）vs ④=取件柜（施工工件队列·run_dir/convene 双件+自节奏轮询）；沙箱=DSH_HOME 重定向隔离家（.dsh-sandbox{,2}+.dsh-upgrade-probe 探测域与 pin rc.2 分离·跑完即弃零触现役——pin 管版本沙箱管落点·锚名随施工卷·随窗毕清理）。
+- 方向定调认账（CEO：桥任务书毕→fade-001 loop 的 cos plan/cos+coo 评分/7 席联审用无头更合适=工作流最好方式）：同向+实锚——fade-001 评分段已是无头先例（三席对抗评分·JSON 读数在卷）；桥线+插件族落地后全链可迁无头编排（信到即触发/状态在盘/可并行/读数面直供评分审计）——归档为方向锚·方案回看对照。
+
