@@ -1,0 +1,25 @@
+{
+ "dim": "A",
+ "seat": "cho",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 2,
+   "rationale": "锚文判读：10 件毕报、评分卷和对表散件（scatter_file_archive）属『记录』，随 W46 封存并 keep 是正确的；多数已收官的评审或构建树（含授权已到期的 phase1-build）也属『记录』，方向成立。但『活』面没有逐案判读：34 件 keep 中有 24 件是机械兜底（15 件 agent_output_malformed、9 件 skipped_over_limit，annotation 全为 null），并非个案语义判断；fade001-tenstage-deploy-20261115 在拍点 10:26:56Z 时 authorization expiresAt=2026-11-16T21:04:46+08（即 13:04:46Z）尚未到期，仍属『活』，却仅以 malformed 归入 keep，未体现『活随人带走』的 handover 语义；company-demand-pool、daily-progress、task-inventory、scoring-ledger-w46 等 8 个顶层件在 agent_readings 中 plan_family=keep，却不在 keep 清单内（counts.keep=34，readings=42），只记『file entry missing（零动作候人工）』，活产品面的去向未判；carry_over 2 条 frozen 的 status、dest、pending_reason 标注齐全，可认。主体记录方向正确，migrate=0 没有误迁，但边界活件判读缺失，因此判 2/4（非裸分，依据 evidence_ref）。",
+   "evidence_ref": "plan.json#/counts, plan.json#/keep, plan.json#/agent_readings, plan.json#/carry_over, subjective-score.json#/entries[0].rationale"
+  },
+  {
+   "criterion": "I2",
+   "score": 1,
+   "rationale": "锚文判读：本拍把『活』的批次风险整体压成单批全 keep（0 migrate、34 keep、2 carry_over 只列终态），没有按『记录』与『活』划界做批次与时序取舍。慢道 24 棵树只有前 15 棵进入 agent 处理，且全部 unparsable；后 9 棵 skipped_over_limit 直接 fail-closed keep，没有失败重试、候裁或升级分支，也没有汇总缺面影响；dce.overflow_checks 三项 checked=false（仅注『骨架态=口径位声明』），风险预案没有实际演练；push 段先报 cannot rebase: You have unstaged changes，后靠 fallback merge 收口，plan/close 未记异常处置与责任席；loop-window 豁免与 23:50 硬时钟偏差未写入取舍说明，index_drift 自认 activeTrees=0 与实盘脱节，却只注释不校正。主链 preflight/qualify/verify 全 pass，push 2824b74e 终态落地，全 keep 的 fail-closed 无数据丢失，因此不落 0 分；三面有缺且取舍无据，因此判 1/3（非裸分，依据 evidence_ref）。",
+   "evidence_ref": "plan.json#/counts, plan.json#/keep, plan.json#/index_drift, dce.json#/overflow_checks, dce.json#/steps[3].stderr_tail, preflight.json#/assertions/week_math, verify.json#/checks"
+  },
+  {
+   "criterion": "I3",
+   "score": 1,
+   "rationale": "锚文判读：留痕骨架是『记录』，但未封好：指针大多可达（joint-review-trigger 三件 sha16 与实算一致，close.evidence 7 条路径均存在），但值面、时戳、复核三处断链：①subjective-score 顶层与 judge_faces.initial 的 check_time 均为『2026-11-16T10:3xZ（date 现查原值）』占位，不是 UTC ISO 判卷时点戳；②entries[0] 引 plan.json#/counts 却写 1/33/2，与实测 0/34/2 相反，entries 内容多为『维持』『三标准全过』『维持 3 分档』等套话；③entries[1] 称 convene_mode=auto，但 joint-review-trigger.json 无该字段，trigger.log 的 notify_result.trigger_mode 为 manual，证据错配；④close.json 自记 close.json: absent、run_state=stale，evidence[6].verdict=unknown，与 manifest.run_state=ok、stages.close=pass 在同一时点读法不一致；⑤judge_faces 仅 initial 4/3/3，没有 joint/final 复核面。指针在，给基础分；值面、时戳、复核面断链，因此判 1/3（非裸分，依据 evidence_ref）。",
+   "evidence_ref": "subjective-score.json#/check_time, subjective-score.json#/entries[0:2], subjective-score.json#/judge_faces, close.json#/run_state, close.json#/stage_artifact_notes[6], close.json#/evidence[6], manifest.json#/run_state, manifest.json#/stages, joint-review-trigger.log#/notify_result.trigger_mode"
+  }
+ ],
+ "check_time": "2026-11-18T03:48:25Z"
+}

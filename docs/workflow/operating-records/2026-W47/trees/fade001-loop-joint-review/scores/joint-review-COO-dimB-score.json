@@ -1,0 +1,28 @@
+{
+ "dim": "B",
+ "seat": "coo",
+ "entries": [
+  {
+   "family_id": "A",
+   "verdict": "fail",
+   "weight": 9,
+   "rationale": "A 族 verdict_rule=jobs.json 活体 md5 对表全中+nextRunAtMs+qualify/trap/RC 在位。复核：10:26:56Z 日志 command 是模板展开形（W46/W47/2026-11-16 已代入），实算 md5=9941c61a8151fb17b3bf2b88a87fc806，不是 C 族修形基准 09644869a812ed16579624cb3287a4f0（096448 仅为 26 行模板 md5），以展开 command 冒充 jobs.json md5 不成立。run_dir 内无 jobs.json 活体 md5 值读，score.json A 族只静态引 vB 4f990e 与 nextRunAtMs=1794757800000（11-15 23:50，拍点已过期）；滚动值 1795362600000（11-22 23:50）未落卷。plan 仅终态 counts 0/34/2、check_time 10:27:10Z，单批全 keep，无按硬时钟的批次/时序取舍。值面未采+判据错配，A fail。",
+   "evidence_ref": "../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-56-272Z.log; score.json#/score.families[0].reasons; plan.json#/counts; plan.json#/check_time"
+  },
+  {
+   "family_id": "F",
+   "verdict": "pass",
+   "weight": 13,
+   "rationale": "F 族 verdict_rule=F2 免评分母（成跑零触发=满分）。本跑日志 RESULT: exit code 0；shift_notify_fail 实际触发零行（唯一出现是 trap 命令文本，非触发行）；notify_done run_state=ok、status=sent；push 段先报 cannot rebase: You have unstaged changes，随即 fallback merge 收口、2824b74e5 落地且 rc=0，trap/回滚分支可执行。零触发行使 RUN_ID/时延面为空集非缺失，F pass。",
+   "evidence_ref": "notify_done.json#/run_state; notify_done.json#/notify_result.status; close.json#/verdict; dce.json#/steps[3].stderr_tail; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-56-272Z.log"
+  },
+  {
+   "family_id": "H",
+   "verdict": "fail",
+   "weight": 9,
+   "rationale": "H 族 verdict_rule 对表（loop/预演=值守窗如实记录形）。三拍 patrol 日志 10:23:34/10:28:35/10:33:35 虽 exit 0，但 stdout 均为「no ledger/windows found (idle)」，W46/W47 window-ledger.md 缺位，拍频是空转非到岗窗覆盖；preflight.diverge 仅 git left=0/right=0 同步读数，非 23:45 dive；arrival.json=2026-11-16T10:27:37Z 仅到岗时戳，无 00:25 告警窗。窗口资源冲突（慢道 15 上界 vs 24 棵待判、9 棵 skipped_over_limit）虽逐条 reason 如实写，但无缺面汇总/升级到席，dce.overflow_checks 三项 checked 全 false（仅注骨架态）。H fail。",
+   "evidence_ref": "plan.json#/keep; plan.json#/counts; dce.json#/overflow_checks; preflight.json#/assertions.diverge; arrival.json; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-23-34-895Z.log; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-28-35-059Z.log"
+  }
+ ],
+ "check_time": "2026-11-18T03:29:12Z"
+}

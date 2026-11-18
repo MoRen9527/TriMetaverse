@@ -1,0 +1,25 @@
+{
+ "dim": "A",
+ "seat": "cto",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 2,
+   "rationale": "锚文判读：10 件毕报、评分卷、对表散件（d39、d82 毕报、首评分卷、fade规范对表-ceo修正令、lg语义条款册、ten-stage mapping/product-plan 等）是这一周的「记录」，记录随周封存，keep 方向成立；CARRY-20260728-004/006 两行 frozen 案的状态、目标位置、待处理原因三项标注齐全，属于「记录挂账」，方向也正确。但「活」的个案未通过锚文判读：34 件 keep 中 24 件是机械兜底（15 件 agent_output_malformed + 9 件 skipped_over_limit），42 条 agent_readings 的 annotation 全为 null，没有任何一件标注为「活随人带走」所需的 handover，也没有 ongoing 语义；fade001-tenstage-deploy-20261115、tenstage-impl-20261113、phase1/phase2-build、mount-gate-build 等 11-13 至 11-15 的 deploy/impl/build 树，在 fade-001 loop 仍在推进的现势下应判为「活」，但 plan 无收官证据，却按 malformed/skipped 直接封存，活件有被留在 W46 的风险；另有 8 个顶层活件（daily-progress、company-demand-pool、task-inventory-20261115、scoring-ledger-w46、cfo-quota-daily-w46 等）在 agent_readings 标为 plan_family=keep，却不在 keep 清单（counts.keep=34，readings=42）中，去向未判。正向：migrate=0 无误迁、violations=[]、verify 4/4 pass。记录侧判对、活侧缺位，4 分不成立，判 2。",
+   "evidence_ref": "plan.json#/counts; plan.json#/keep; plan.json#/agent_readings; plan.json#/carry_over; verify.json#/checks"
+  },
+  {
+   "criterion": "I2",
+   "score": 1,
+   "rationale": "锚文判读：本拍把「活」的批次风险整体压成单批全 keep（0 migrate、34 keep、2 carry_over），只留下终态，没有按「记录封存、活件随人带走」做批次划分与时序安排。CTO 三查如下：①批次技术风险面：deploy/impl/build 活树与已收官评审记录混在同一 keep 批中，没有「先迁活件、再封存记录」的分层，也没有回滚点和迁移前后对表清单；②trap·RC_guard 预案闭合：24 棵树走机械兜底，没有重试、候裁、升级分支，dce.overflow_checks 三项（week_dir_structure、carry_over_semantics、commit_message_shape）全为 checked=false，仅注明「骨架态=口径位声明」，push 段先报 cannot rebase: You have unstaged changes，后靠 fallback merge 收口，close 未记异常处置与责任席，index_drift 自认 index_activeTrees=0，与实盘 20+ 脱节却只注不校；③降级链终态安全：零迁零删、verify 4/4 pass、push 2824b74e5 最终以 rc=0 落地，无数据丢失。终态安全不等于规划合理，三面有缺且取舍无据，判 1。",
+   "evidence_ref": "plan.json#/migrate; plan.json#/counts; plan.json#/index_drift; dce.json#/overflow_checks; dce.json#/steps[3].stderr_tail; verify.json#/checks"
+  },
+  {
+   "criterion": "I3",
+   "score": 1,
+   "rationale": "锚文判读：plan 的留痕把各件一律当「记录」封存，没有为「活」件留下判读句，因此只能算骨架可追、值面不可复核。正面：plan.check_time 为实值戳，counts 0/34/2 与数组自洽，carry_over 带 source/dest/pending_reason，joint-review-trigger 三个 sha16（b09f2818/be7e114d/51b9931c）与实算一致，close evidence 路径可达。断点：42 条 agent_readings 的 annotation 全为 null，reasons 只写 agent_output_malformed、skipped_over_limit 这类机械码，不是逐案实判断；8 个顶层件只记「file entry missing（零动作候人工）」，没有处置指针；entries 无 per-case evidence；判卷面 subjective-score.json 的 check_time 仍写「2026-11-16T10:3xZ（date 现查原值）」占位，且 I1 引 plan.json#/counts 写 1/33/2，与实测 0/34/2 相悖。指针部分可达、实判断与判卷戳缺位，判 1。",
+   "evidence_ref": "plan.json#/agent_readings; plan.json#/carry_over; plan.json#/check_time; subjective-score.json#/check_time; subjective-score.json#/entries[0]; joint-review-trigger.json#/dim_a_materials"
+  }
+ ],
+ "check_time": "2026-11-18T03:43:40Z"
+}

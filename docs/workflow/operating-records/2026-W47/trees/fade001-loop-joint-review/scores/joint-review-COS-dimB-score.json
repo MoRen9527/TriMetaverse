@@ -1,0 +1,28 @@
+{
+ "dim": "B",
+ "seat": "cos",
+ "entries": [
+  {
+   "family_id": "A",
+   "verdict": "pass",
+   "weight": 9,
+   "rationale": "verdict_rule 对表（首拍/预演同形=与基准 md5 全中）：本跑 10:26:56Z 实际执行的 command 串共 26 行，与现役 C 族修形基准 md5=09644869a812ed16579624cb3287a4f0 逐字一致（模板展开后的命令与日志命令相同）；qualify/trap/RC_guard 三项防呆机制在位；nextRunAtMs 非空并保持滚动；healthz 的 cron_enabled=true。机判初判为 A=manual/null（属值席采集域，不冒充机判）；值席按 r119c 重采卷判 pass，本席终判复核也判 pass，初判与联审之间的分歧面已收敛；二值制不存在 ≥2 档分差，因此没有分差触发面；rationale 已附实际读数锚。",
+   "evidence_ref": "../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-56-272Z.log; qualify.json#/assertions; preflight.json#/assertions.healthz"
+  },
+  {
+   "family_id": "F",
+   "verdict": "pass",
+   "weight": 13,
+   "rationale": "verdict_rule 对表（T1-3/F2 免评分母）：成跑零触发即为满分——本跑 cron 日志记录 RESULT exit code 0，notify_done 的 run_state=ok、status=sent，全部日志中 shift_notify_fail 的触发行数为零；触发分支不适用（零触发行使 RUN_ID/时延面为空集，并非缺失，空集不判红）。机判初判为 F=manual/null，值席按 r119c 重采卷判 pass，本席复核也判 pass，初判与联审之间的分歧面已收敛；二值制不存在分差触发面，alarm 面没有应触发却漏报的迹象。",
+   "evidence_ref": "notify_done.json#/run_state; close.json#/verdict; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-56-272Z.log"
+  },
+  {
+   "family_id": "H",
+   "verdict": "pass",
+   "weight": 9,
+   "rationale": "verdict_rule 对表（首拍=值守窗断言形；loop 轮判读对象随轮次迁移）：dive 面 preflight.assertions.diverge 为 ok=true、verdict=synced（left=0，right=0）；patrol 的 5min 拍频在拍点前后覆盖 10:23:34、10:28:35、10:33:35 三拍，均 exit 0；arrival 记录 10:27:37Z 在窗；preflight 的 week_math 记录 mode=loop-window、loop_source=marker，由管线自证。机判初判为 H=manual/null，值席按 r119c 重采卷判 pass，本席复核也判 pass，初判与联审之间的分歧面已收敛；二值制不存在 ≥2 档分差触发面。",
+   "evidence_ref": "preflight.json#/assertions.diverge; arrival.json; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-23-34-895Z.log; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-28-35-059Z.log"
+  }
+ ],
+ "check_time": "2026-11-18T03:21:26Z"
+}

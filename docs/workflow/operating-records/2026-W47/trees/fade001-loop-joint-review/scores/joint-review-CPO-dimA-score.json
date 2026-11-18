@@ -1,0 +1,25 @@
+{
+ "dim": "A",
+ "seat": "cpo",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 2,
+   "rationale": "锚文判读：10 件毕报/评分卷/对表散件（d39、d82、首评分卷、规范对表令等）属「记录」，随周封存 keep 成立；CARRY-20260728-004/006 属冻结「记录」挂账，status/dest/pending_reason 三标注齐、W47 unresolved-items 同文在卷，产品承诺未丢。但 34 件 keep 中 24 件（15 件 agent_output_malformed、9 件 skipped_over_limit）为机械兜底、annotation 全 null，未逐案过锚文判读；尤其 keep[20] fade001-tenstage-deploy-20261115 授权 expiresAt=2026-11-16T21:04:46+0800（=13:04:46Z）在本拍 10:27Z 仍在窗、拍后同日续产 sde-loop11/loop11-s1 读数、W47 已现同树，属「活」应随人带走，却仅以 malformed 兜底封存 W46；daily-progress、company-demand-pool、task-inventory 等 8 个顶层活件记 failed_fallback「file entry missing（零动作候人工）」而不同时列入 migrate 与 keep，去向未判。主体方向安全（migrate=0 未误迁、violations=[] 无幽灵/重叠），但关键活件与 24 件机械兜底使名单不成立 4 分，取 2 分。外部锚：2026-W46/trees/fade001-tenstage-deploy-20261115/authorization.json#/expiresAt。",
+   "evidence_ref": "plan.json#/keep; plan.json#/counts; plan.json#/agent_readings[34:42]; plan.json#/carry_over"
+  },
+  {
+   "criterion": "I2",
+   "score": 1,
+   "rationale": "锚文判读：本拍把「活」的批次风险整体压成单批全 keep（0 migrate/34 keep/2 carry_over），只有记录式终态、无按记录/活划界的批次与时序取舍。慢道 24 件仅前 15 件入 agent 且全 unparsable，后 9 件 skipped_over_limit 直接 fail-closed keep，无重试/候裁/升级分支；dce.overflow_checks 三项 checked=false 仅注「骨架态=口径位声明」，push 段先报 cannot rebase: You have unstaged changes 后靠 fallback merge 收口，plan/close 未记异常处置与责任席；index_drift 自认 activeTrees=0 与实盘 20+ 脱节只注不校，loop-window 豁免与 23:50 硬时钟偏差亦未写入取舍说明。主链 preflight/qualify/verify 全 pass、commit 2824b74e 最终落地，故不落 0；但批次/预案/降级链三面均缺且取舍无据，判 1。",
+   "evidence_ref": "plan.json#/keep; plan.json#/index_drift; dce.json#/overflow_checks; dce.json#/steps[3].stderr_tail; preflight.json#/assertions/week_math"
+  },
+  {
+   "criterion": "I3",
+   "score": 1,
+   "rationale": "锚文判读：留痕骨架是「记录」但未封好——指针多可达（joint-review-trigger 三件 sha16 与实算一致、close.evidence 7 条路径均在），给基础分；值面/时戳/复核断链：subjective-score 两处 check_time 为「2026-11-16T10:3xZ（date 现查原值）」占位、I1 引 plan#/counts 写 1/33/2 与实测 0/34/2 相悖、I2 称 convene_mode=auto 但 trigger.json 无该字段且 trigger.log trigger_mode=manual；close.run_state=stale、stage_artifact_notes「close.json: absent」、evidence[6]=unknown 与 manifest.run_state=ok/stages.close=pass 同拍两读；judge_faces 仅 initial 4/3/3、无 joint/final 复核面，reasons 多「三标准全过/维持 3 分档」套话；plan 34 件 keep 仅机械 reason_codes、无逐案 evidence 指针。指针在而实判断、打戳与复核不足，判 1。",
+   "evidence_ref": "subjective-score.json#/check_time; subjective-score.json#/entries; subjective-score.json#/judge_faces; close.json#/run_state; close.json#/stage_artifact_notes; close.json#/evidence[6]; manifest.json#/stages; plan.json#/keep"
+  }
+ ],
+ "check_time": "2026-11-18T03:38:28Z"
+}

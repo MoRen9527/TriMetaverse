@@ -1,0 +1,25 @@
+{
+ "dim": "A",
+ "seat": "cfo",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 2,
+   "rationale": "锚文判读：10 件散件（毕报/评分卷/产品计划/对表令/条款册等）属「记录」——随周封存，放入 keep 的归类方向成立；CARRY-20260728-004/006 两条 frozen 案 status/dest/pending_reason 三标注齐，属「记录挂账」，方向亦对；migrate=0、violations=[]，无误迁。但边界个案多于 1-2 处：34 件 keep 中 24 件（15 件 agent_output_malformed+9 件 skipped_over_limit）为机械兜底、annotation 全 null，未逐案落「记录/活」标签；fade001-tenstage-deploy-20261115 以 malformed 兜底 keep，树面 authorization.json 有效至 2026-11-16T13:04:46Z（拍点 10:26:56Z 未到期）且拍后仍续写，属「活」而非「记录」，未落「活随人带走」的 handover 语义；8 个顶层活文档（company-demand-pool/daily-progress/cfo-quota-daily-w46/scoring-ledger-w46/task-inventory 等）在 agent_readings 标 plan_family=keep，却写「file entry missing（零动作候人工）」，未入 keep 清单（34 vs 42），去向未判。主体方向安全，故不落入 0-1 档；但「不迁清单带判据」未逐案成立、边界存疑远超 1-2 处，4 分不成立，按 2-3 档取下沿 2 分（禁裸分，依据见 evidence_ref）。",
+   "evidence_ref": "plan.json#/counts; plan.json#/keep; plan.json#/agent_readings; plan.json#/carry_over; plan.json#/violations"
+  },
+  {
+   "criterion": "I2",
+   "score": 1,
+   "rationale": "锚文判读：本拍把「活」的批次风险压成单批全 keep（0 migrate/34 keep/2 carry_over），只有终态，无按「记录随周封存·活随人带走」划界的批次与时序取舍。①批次面：慢道 24 树仅 15 入 agent，另 9 树以「慢道树数上界 15·fail-closed keep」一封了之，无分批/重试/候裁；②预案面：dce.overflow_checks 三项 checked=false，仅注「骨架态=口径位声明」，push 段先报 cannot rebase 后靠 fallback merge 收口，异常处置未入 plan/close；③降级链面：15 树 unparsable+9 树 skipped 均为终态 keep，无升级/复核分支；index_drift 自认 index activeTrees=0 与实盘 20+ 脱节却只注不校。CFO 成本面：score.json 仅 total_score=59/total_pending_weight=41，无轮级资源/成本读数，投入产出对照不成立。主链 preflight/qualify/plan/dce/verify 全 pass、push 2824b74e 成功，故不落入 0 档；三面均有缺且取舍无据，按 1-2 档取下沿 1 分（禁裸分，依据见 evidence_ref）。",
+   "evidence_ref": "plan.json#/counts; plan.json#/keep; plan.json#/index_drift; dce.json#/overflow_checks; dce.json#/steps/3/stderr_tail; verify.json#/checks; score.json#/score/total_score; score.json#/score/total_pending_weight"
+  },
+  {
+   "criterion": "I3",
+   "score": 1,
+   "rationale": "锚文判读：留痕骨架是「记录」，但未按「记录随周封存·活随人带走」封好——指针多可达（joint-review-trigger 三件 dim_a sha16 b09f2818/be7e114d/51b9931c 与实算一致，close.evidence 7 条路径均在）；但值面/时戳/套话多点断链：①plan.json 34 条 keep 仅 reason_codes，无逐案 reason 文本/evidence 指针，agent_readings 的 42 条 reasons 为 32 条机械兜底句（15 unparsable+9 上界说明+8 file entry missing）+10 条分类码，annotation 全 null；②8 个顶层件在 agent_readings 标 plan_family=keep 却写「file entry missing（零动作候人工）」，不入 keep 清单（34 vs 42）；③subjective-score.json 顶层与 judge_faces.initial 两处 check_time 均写「2026-11-16T10:3xZ（date 现查原值）」为占位非 ISO，entries[0] 引 counts 1/33/2 与卷面 0/34/2 相反；④close.json 自记「close.json: absent」、run_state=stale、evidence[6].verdict=unknown，与 manifest.run_state=ok/stages.close=pass 同拍两读；score.json G 族称「verify items 对表」而 verify.json 只有 checks 无 items。指针未批量断（可达面在），故不落入 0 档；套话/值面矛盾成面，按 1-2 档取下沿 1 分（禁裸分，依据见 evidence_ref）。",
+   "evidence_ref": "plan.json#/keep; plan.json#/agent_readings; subjective-score.json#/check_time; subjective-score.json#/judge_faces/initial/check_time; subjective-score.json#/entries/0; close.json#/stage_artifact_notes; close.json#/run_state; close.json#/evidence/6/verdict; manifest.json#/run_state; manifest.json#/stages/close.json; verify.json#/checks; score.json#/score/families/6/reasons; joint-review-trigger.json#/dim_a_materials"
+  }
+ ],
+ "check_time": "2026-11-18T03:53:35Z"
+}

@@ -1,0 +1,28 @@
+{
+ "dim": "B",
+ "seat": "cao",
+ "entries": [
+  {
+   "family_id": "A",
+   "verdict": "pass",
+   "weight": 9,
+   "rationale": "verdict_rule 对表（与基准 md5 全中·command 字段口径）：按换形注①，十阶段形基准以 PATCH 后活体探读新值落卷替换。现役 /srv/fleet/TriRMC/data/cron/jobs.json 的 weekly-plane-shift payload command 为 26 行/2936 字符，md5=09644869a812ed16579624cb3287a4f0，与 C 族修形现役基准同值；文件本体 md5 随 patrol 5min 回写 updatedAtMs 漂移（现 eed3b7e99cfe42e70971051442976612），按考卷「md5 判定面=command 字段值面非文件级」不取文件级。本跑 10:26:56Z 日志 command 是该模板展开形（W46/W47/2026-11-16 代入）md5=9941c61a8151fb17b3bf2b88a87fc806，二者为同一 command 串的模板/展开两态，非判据错配。nextRunAtMs=1795362600000（11-22 23:50，非空滚动）；qualify 五断言全过、trap EXIT 兜底行与 RC=0 guard 在位。r119c 卷载 7accfca1… 与 command 实算不符（属文件级/旧值口径残面），不采，A 判 pass，残面候勘。",
+   "evidence_ref": "score.json#/score.families[0].reasons; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-56-272Z.log; /srv/fleet/TriRMC/data/cron/jobs.json; /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W46/trees/fade001-tenstage-impl-20261113/pm-firstshoot-reading-checklist-20261113.md; /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W47/trees/fade001-tenstage-deploy-20261115/ste-verification-gate-8items-20261116.md"
+  },
+  {
+   "family_id": "F",
+   "verdict": "pass",
+   "weight": 13,
+   "rationale": "verdict_rule 对表（T1-3/F2 免评分母）：本跑 102656Z 成跑零触发——日志 RESULT exit code 0，shift_notify_fail 仅出现在 trap 命令文本，无实际触发行；notify_done run_state=ok/status=sent，arrival.json 10:27:37Z 距拍点 10:26:56Z 仅 41s≤2h；close verdict=pass。另一 10:26:23Z cron-sunday 拦停轮为别 run（102623Z，preflight week_math fail），其 trap 告警 subject 未含 RUN_ID，属 F 触发分支留痕残面候勘，不改变本跑成跑零触发 F2 满分形，F 判 pass。",
+   "evidence_ref": "notify_done.json#/run_state; notify_done.json#/notify_result.status; close.json#/verdict; arrival.json; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-56-272Z.log; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-23-473Z.log"
+  },
+  {
+   "family_id": "H",
+   "verdict": "fail",
+   "weight": 9,
+   "rationale": "verdict_rule 对表（首拍=值守窗断言形）：H 族 special_clause 无 loop 增补注（对比 B 族注③），考卷未授权把首拍断言形改成 loop 记录形；CTO dive 终判仅迁移 dive 判读对象，不及 H 族拍频覆盖与 00:25 告警窗。本跑三要素均无实锚：①无 23:45 dive 本跑读数，cto-dive-final-ruling-loop-form 系 11-15 通用 loop 形卷，非本跑 10:26Z 读数；②到岗窗拍频三拍 10:23:34/10:28:35/10:33:35 均报 no ledger/windows found (idle)，W46/W47 window-ledger.md 缺位，拍频为空转非覆盖；③无 00:25 告警窗，arrival.json 仅到岗时戳。plan counts 0/34/2 与 verify 4/4 pass 仅证迁移面，verify 无 unresolved diff 明细，不能补值守窗空场。按首拍断言形判 fail；若按预演如实记录形亦无值守窗起讫实录，仍不成立。",
+   "evidence_ref": "preflight.json#/assertions.week_math; plan.json#/counts; verify.json#/checks; arrival.json; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-23-34-895Z.log; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-28-35-059Z.log; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-33-35-141Z.log; /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W47/trees/fade001-tenstage-deploy-20261115/cto-dive-final-ruling-loop-form-20261115.md"
+  }
+ ],
+ "check_time": "2026-11-18T03:37:17Z"
+}
