@@ -1,0 +1,34 @@
+{
+ "seat": "coo",
+ "run_id": "shift-W46-20261118T124206Z",
+ "scores": {
+  "I1": 2,
+  "I2": 2,
+  "I3": 2
+ },
+ "rationale": {
+  "I1": "锚文判读先行（逐案过『记录/活』）：『这是一周的记录，还是这一周的活——记录随周封存·活随人带走』。10 件散件 d39勘止/d82排工/fade001-firstshoot/fade001-phase1-trigger/fade001-ten-stage-mapping/fade001-ten-stage-product-plan/fade规范对表/lg语义条款/mc-oprec-fade011/首评分卷 均判记录→封 W46，正确；carry_over 2 件 frozen 只归位不解冻，正确。但 24 个目录全以 failed_fallback:agent_output_malformed 降级 keep（未过判读），8 个顶层件全 pending_ledger：其中 company-demand-pool、daily-progress、task-inventory-20261115、OP-202611-W46-001.unresolved-items、.shift-ade 属活，应随人带走；OP-202611-W46-001.json、cfo-quota-daily-w46、scoring-ledger-w46 属记录，封 W46 可认；plan.migrate=0，活件无 W47 去向，且 index_activeTrees=0 vs 实盘 20+ 只注不判。实质只对 10 记录件+2 frozen 作了判断，32/42 未过记录/活判读，0 迁移把活件封在 W46，故只到半程（结构齐、方向保守安全、实质未完成）——2/4。判卷时点 2026-11-18T13:57:14Z。",
+  "I2": "批次面：24 慢道拆 15+9 两批，batches_run=2≤batch_max=3，beyond_limit_skipped=[]，无漏批；止损面：降级带型 fallback_keep_unjudged+alert 阈值 0.2/实测 1.0 已 triggered 且 notified=true+pending_review 32，分支可执行且已实发；窗口冲突如实列面（index_drift、other_unresolved_count=15、fast_path_failure_rate=1.0）。扣分：①schedule/cron 面零动只有 preflight『real cron Sunday gate unchanged』与 healthz cron_enabled=true 间接承载，卷内无逐项零动断言，硬时钟守约不可复核；②retry.max=1 但 retry_enabled_trees=0，止损只记账未收敛；③dce overflow_checks 三项全 checked=false，零外溢未实检——2/3。判卷时点 2026-11-18T13:57:14Z。",
+  "I3": "42/42 agent_readings 均带 annotation/rationale/evidence_ref，close evidence 7/7 带 sha256_16，run_state_source=manifest 单值源、self_artifact 自指消除，形式可复核；但 32 条 rationale 为同一模板（『解析败降级保守 keep』/『顶层件缺条目』），无逐件记录/活一句理由，属留痕未留判断；close.json check_time=13:33:56Z 晚于 score/verify 的 12:42:48Z，正卷无 replay 理由/责任人；dce 三项 overflow 检查 checked=false 未进 verify 红闸——2/3。判卷时点 2026-11-18T13:57:14Z。"
+ },
+ "evidence_ref": {
+  "I1": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/plan.json#/counts；同目录 plan.json#/agent_readings、plan.json#/index_drift、plan.json#/carry_over；verify.json#/checks[reconciliation]",
+  "I2": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/plan.json#/fallback_governance（batching/retry/alert/pending_review）；同目录 plan.json#/counts、plan.json#/index_drift；dce.json#/overflow_checks；preflight.json#/assertions/week_math、preflight.json#/assertions/healthz",
+  "I3": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/plan.json#/agent_readings；同目录 close.json#/evidence、close.json#/check_time、close.json#/stage_artifact_notes；dce.json#/overflow_checks；verify.json#/checks"
+ },
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "本轮 0 migrate、34 keep、8 顶层 pending：10 件散件记录封 W46 可认，但 24 个 malformed 目录未过记录/活判读，8 个顶层件中 company-demand-pool/daily-progress/task-inventory/OP-unresolved-items/.shift-ade 属活却无 W47 去向；plan.migrate=0 不得再以 pending_ledger 过 pass，32 件 pending 须清零或逐件给不迁判据；index_drift 自载 activeTrees=0 vs 实盘 20+ 的张力须在卷内解掉。节奏面补两项：批次起止时点与 schedule/cron 零动断言（现仅 preflight『real cron Sunday gate unchanged』间接承载），并按 score 卷 nextRunAtMs=1794757800000 的硬时钟锚对表，防迁移窗与 cron 窗相撞。",
+   "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/plan.json#/counts、plan.json#/agent_readings、plan.json#/index_drift；same-run preflight.json#/assertions/week_math；score.json#/score/families（A 族 reasons 内 nextRunAtMs=1794757800000）",
+   "check_time": "2026-11-18T13:57:14Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "v1.2.0 把 24/24 malformed 显式化进 fallback_governance（batch 15/3、retry=1、alert 0.2/1.0 已触发通知、pending_review 32），较静默兜底有进步；但 fast_path_failure_rate=1.0、retry_enabled_trees=0 表明只记账未修复，32/42 仍无个案判读。建议 malformed 样本入 parser/prompt 修复队列并重跑慢道，下轮 retry_enabled_trees>0；dce overflow_checks 三项从 checked=false 升为实检并接入 verify 红闸；close 增 replay 字段（理由/责任人/时点）解释 13:33:56Z 重放，并消除 manifest unknown 残项；顶层件补逐件记录/活判读模板，禁 pending_ledger 过 pass。",
+   "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/plan.json#/fallback_governance、plan.json#/agent_readings；same-run dce.json#/overflow_checks；close.json#/check_time、close.json#/stage_artifact_notes；verify.json#/checks",
+   "check_time": "2026-11-18T13:57:14Z"
+  }
+ ],
+ "check_time": "2026-11-18T13:57:14Z"
+}

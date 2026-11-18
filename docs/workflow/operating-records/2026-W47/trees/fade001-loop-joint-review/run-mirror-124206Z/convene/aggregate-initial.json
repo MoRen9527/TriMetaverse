@@ -1,22 +1,4 @@
 {
- "convene_mode": "auto",
- "seats": [
-  "cos",
-  "coo",
-  "cao",
-  "cpo",
-  "cto",
-  "cho",
-  "cfo"
- ],
- "sheets_n": 3,
- "missing_seats": [
-  "coo",
-  "cto",
-  "cho",
-  "cfo"
- ],
- "incomplete_faces": [],
  "aggregate_initial": {
   "per_criterion": {
    "I1": 2.0,
@@ -24,9 +6,8 @@
    "I3": 2.0
   },
   "total": 6.0,
-  "seats_counted": 3,
+  "seats_counted": 4,
   "seats_missing": [
-   "coo",
    "cto",
    "cho",
    "cfo"
@@ -42,6 +23,12 @@
      "rationale": "本轮 0 migrate、34 keep、8 顶层件 pending，迁移清单的『活』边界未收：company-demand-pool/daily-progress/task-inventory/OP-unresolved-items 属活却无去向；24 目录 malformed 兜底未过记录/活判读；index_drift 明载实盘 20+ active 与 migrate=0 的张力未解。建议下一轮先逐案过锚文判读并留标签，活件迁 W47、记录封 W46，8 顶层件清零后再出 pass；若判不迁须逐件给判据。",
      "evidence_ref": "plan.json#/counts + plan.json#/agent_readings + plan.json#/index_drift",
      "check_time": "2026-11-18T13:36:52Z"
+    },
+    {
+     "seat": "coo",
+     "rationale": "本轮 0 migrate、34 keep、8 顶层 pending：10 件散件记录封 W46 可认，但 24 个 malformed 目录未过记录/活判读，8 个顶层件中 company-demand-pool/daily-progress/task-inventory/OP-unresolved-items/.shift-ade 属活却无 W47 去向；plan.migrate=0 不得再以 pending_ledger 过 pass，32 件 pending 须清零或逐件给不迁判据；index_drift 自载 activeTrees=0 vs 实盘 20+ 的张力须在卷内解掉。节奏面补两项：批次起止时点与 schedule/cron 零动断言（现仅 preflight『real cron Sunday gate unchanged』间接承载），并按 score 卷 nextRunAtMs=1794757800000 的硬时钟锚对表，防迁移窗与 cron 窗相撞。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/plan.json#/counts、plan.json#/agent_readings、plan.json#/index_drift；same-run preflight.json#/assertions/week_math；score.json#/score/families（A 族 reasons 内 nextRunAtMs=1794757800000）",
+     "check_time": "2026-11-18T13:57:14Z"
     },
     {
      "seat": "cao",
@@ -64,6 +51,12 @@
      "check_time": "2026-11-18T13:36:52Z"
     },
     {
+     "seat": "coo",
+     "rationale": "v1.2.0 把 24/24 malformed 显式化进 fallback_governance（batch 15/3、retry=1、alert 0.2/1.0 已触发通知、pending_review 32），较静默兜底有进步；但 fast_path_failure_rate=1.0、retry_enabled_trees=0 表明只记账未修复，32/42 仍无个案判读。建议 malformed 样本入 parser/prompt 修复队列并重跑慢道，下轮 retry_enabled_trees>0；dce overflow_checks 三项从 checked=false 升为实检并接入 verify 红闸；close 增 replay 字段（理由/责任人/时点）解释 13:33:56Z 重放，并消除 manifest unknown 残项；顶层件补逐件记录/活判读模板，禁 pending_ledger 过 pass。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/plan.json#/fallback_governance、plan.json#/agent_readings；same-run dce.json#/overflow_checks；close.json#/check_time、close.json#/stage_artifact_notes；verify.json#/checks",
+     "check_time": "2026-11-18T13:57:14Z"
+    },
+    {
      "seat": "cao",
      "rationale": "v1.2.0 把 24/24 malformed 显式化为 fallback_governance（batch 15/3、retry=1、alert 0.2/1.0 已触发通知、pending_review 32），较静默兜底有进步；但 fast_path_failure_rate=1.0、retry_enabled_trees=0 表明只记账未修复，32/42 仍无个案判读。治理缝：同轮 score-skill ns2 初判 30/35 与 convene/seats/cos-score 21/35 两套初判并存，与『同值同源禁两套』相抵；close 13:33:56Z 重放未在正卷留 replay 理由。建议 malformed 样本入 parser/prompt 修复队列并重跑慢道，retry_enabled_trees>0；两套初判收敛为一卷并留复核记录；close 增 replay 字段/理由。",
      "evidence_ref": "plan.json#/fallback_governance + plan.json#/agent_readings + close.json#/check_time + close.json.bak-replay-133356Z#/check_time + convene/seats/cos-score.json#/scores + score-skill.json#/judge_faces",
@@ -77,8 +70,8 @@
     }
    ]
   },
-  "opinions_n": 6,
-  "sheets_consumed": 3,
+  "opinions_n": 8,
+  "sheets_consumed": 4,
   "incomplete_faces_excluded": [],
   "不冒充标注": "聚合=完整 sheet 形（不完整面 fail-closed 不消费）",
   "用途": "loop 进化方向输入面（改进意见卷随触发件流转·notice-179②）"
@@ -86,6 +79,7 @@
  "new_structure_verdict_face": {
   "objective_machine": 65,
   "per_seat_totals": [
+   86.0,
    86.0,
    86.0,
    86.0
@@ -116,104 +110,5 @@
  },
  "gate_pass": true,
  "verdict_adjust": "PASS",
- "report_four_elements": {
-  "notice": "notice-179 B 款·新结构下一轮毕报四要素承载面（O3④）",
-  "cos_plan_record": "run_dir/plan.json + Plan Skill 卷（COS plan 实录指针面）",
-  "judging_record": "run_dir/subjective-score.json + judge_faces 三段（COS+COO 评卷实录指针面）",
-  "per_seat_scores": [
-   {
-    "seat": "cos",
-    "scores": {
-     "I1": 2,
-     "I2": 2,
-     "I3": 2
-    }
-   },
-   {
-    "seat": "cao",
-    "scores": {
-     "I1": 2,
-     "I2": 2,
-     "I3": 2
-    }
-   },
-   {
-    "seat": "cpo",
-    "scores": {
-     "I1": 2,
-     "I2": 2,
-     "I3": 2
-    }
-   }
-  ],
-  "per_seat_improvements": [
-   {
-    "seat": "cos",
-    "improvement_opinions": [
-     {
-      "topic": "周迁移质量",
-      "rationale": "本轮 0 migrate、34 keep、8 顶层件 pending，迁移清单的『活』边界未收：company-demand-pool/daily-progress/task-inventory/OP-unresolved-items 属活却无去向；24 目录 malformed 兜底未过记录/活判读；index_drift 明载实盘 20+ active 与 migrate=0 的张力未解。建议下一轮先逐案过锚文判读并留标签，活件迁 W47、记录封 W46，8 顶层件清零后再出 pass；若判不迁须逐件给判据。",
-      "evidence_ref": "plan.json#/counts + plan.json#/agent_readings + plan.json#/index_drift",
-      "check_time": "2026-11-18T13:36:52Z"
-     },
-     {
-      "topic": "fade-001 自身完善度",
-      "rationale": "v1.2.0 把 24/24 malformed 显式化为 fallback_governance（batch 15/3、retry=1、alert 0.2/1.0 已触发通知、pending_review 32），较静默兜底有进步；但 fast_path_failure_rate=1.0、retry_enabled_trees=0 表明只记账未修复，24 条 keep 与 8 顶层件仍无个案判读。建议把 malformed 样本入 parser/prompt 修复队列并重跑慢道，retry_enabled_trees>0，失败面从『可审计』推进到『可收敛』。",
-      "evidence_ref": "plan.json#/fallback_governance + plan.json#/agent_readings",
-      "check_time": "2026-11-18T13:36:52Z"
-     }
-    ]
-   },
-   {
-    "seat": "cao",
-    "improvement_opinions": [
-     {
-      "topic": "周迁移质量",
-      "rationale": "本轮 0 migrate、34 keep、8 顶层件 pending：8 个顶层活件（需求池/daily-progress/task-inventory/OP-unresolved/scoring-ledger/cfo-quota/.shift-ade/OP-json）应随人带走却零去向；24 个目录以 malformed 兜底 keep，未逐案过『记录/活』锚判读；index_drift 自载 activeTrees=0 vs 实盘 20+，migrate=0 的张力未解。建议下一轮先逐案过锚文判读并留标签，活件迁 W47、记录封 W46，8 顶层件清零后再出 pass；判不迁须逐件给判据。",
-      "evidence_ref": "plan.json#/counts + plan.json#/agent_readings + plan.json#/index_drift + plan.json#/keep",
-      "check_time": "2026-11-18T13:43:17Z"
-     },
-     {
-      "topic": "fade-001 自身完善度",
-      "rationale": "v1.2.0 把 24/24 malformed 显式化为 fallback_governance（batch 15/3、retry=1、alert 0.2/1.0 已触发通知、pending_review 32），较静默兜底有进步；但 fast_path_failure_rate=1.0、retry_enabled_trees=0 表明只记账未修复，32/42 仍无个案判读。治理缝：同轮 score-skill ns2 初判 30/35 与 convene/seats/cos-score 21/35 两套初判并存，与『同值同源禁两套』相抵；close 13:33:56Z 重放未在正卷留 replay 理由。建议 malformed 样本入 parser/prompt 修复队列并重跑慢道，retry_enabled_trees>0；两套初判收敛为一卷并留复核记录；close 增 replay 字段/理由。",
-      "evidence_ref": "plan.json#/fallback_governance + plan.json#/agent_readings + close.json#/check_time + close.json.bak-replay-133356Z#/check_time + convene/seats/cos-score.json#/scores + score-skill.json#/judge_faces",
-      "check_time": "2026-11-18T13:43:17Z"
-     }
-    ]
-   },
-   {
-    "seat": "cpo",
-    "improvement_opinions": [
-     {
-      "topic": "周迁移质量",
-      "rationale": "下一轮应先逐案过锚文判读并落『记录/活』标签+一句理由：10件散件记录封W46并写归档位，24个目录按在研/完成态分流（完成态评审入W46），8个顶层活件（需求池、daily-progress、task-inventory、OP-unresolved-items、scoring-ledger、cfo-quota、.shift-ade、OP-json）随人迁W47并标owner/dest；carry_over补死信风险标注。plan.migrate=0不得再以pending_ledger过pass，32件pending须清零或逐件给判据。",
-      "evidence_ref": "plan.json#/counts + plan.json#/keep + plan.json#/agent_readings + plan.json#/carry_over + plan.json#/index_drift",
-      "check_time": "2026-11-18T13:45:02Z"
-     },
-     {
-      "topic": "fade-001 自身完善度",
-      "rationale": "v1.2.0已将24/24 malformed显式化入fallback_governance（batch 15/3、retry=1、alert 0.2/1.0已触发通知、pending_review 32），较静默兜底有进步；但fast_path_failure_rate=1.0、retry_enabled_trees=0表明只记账未修复，32/42仍无个案判读。建议把malformed样本入parser/prompt修复队列并重跑慢道、retry_enabled_trees>0；close增replay字段（理由/责任人/时点）与manifest变更说明，消除829f…→c3667…无痕；carry_over增加dead_letter_risk字段。",
-      "evidence_ref": "plan.json#/fallback_governance + plan.json#/agent_readings + close.json.bak-replay-133356Z#/run_state + close.json#/run_state_source",
-      "check_time": "2026-11-18T13:45:02Z"
-     }
-    ]
-   }
-  ]
- },
- "new_structure_semantics": {
-  "threshold": 95,
-  "weight": {
-   "objective_machine": 65,
-   "subjective_i_family": {
-    "I1": 14,
-    "I2": 11,
-    "I3": 10
-   },
-   "total_basis": 100,
-   "threshold_semantics": "7席联审平均分面·每席总分100独立打分·≥95(含95.0)跳出loop",
-   "improvement_face": "必付合格gate形·不计分内（notice-180 裁③）"
-  },
-  "note": "notice-180 两裁勘改：100 制（客观 65 machine+主观 35 I 族 14/11/10）·threshold=95 挂 7 席联审平均分面（≥95 含 95.0 跳出 loop）·改善意见面 gate 形不计分内——120 归一制废止（r1 存档 85/87 零回改）"
- },
- "check_time": "2026-11-18T13:52:20Z"
+ "reaggregate_note": "补面段终形重算（seats 目录全量聚合·单席重试拍覆写残面勘正·2026-11-18 SDE）"
 }
