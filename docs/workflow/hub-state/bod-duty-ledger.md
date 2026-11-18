@@ -4175,3 +4175,14 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **notice-169 拾取实锚成立**（23:31:22Z ❯ 清空+对话流运转）。COS 框 ❯ 行「restart 完成后SDE毕报随线回转，tri-check心跳照守」经 capture -e 勘定=**ghost 暗示层**（^[[2m dim 包裹指纹·非真实输入）——佐证值：ghost 基于会话上下文生成=上下文含 notice-169 处置意向·拾取面不受影响。
 - **SDE 在途活跃**：③真值互发探针**直投形**在跑（Propagating 12m35s·降 22.1k tokens——A 席 cos 工作区直 dsh CLI boot+send_message→r-duty-sde·此形不依赖 daemon dist·零风险 fail-visible 面）——restart 尚未执行·施工序=SDE 自主勘定（先试零依赖面）非断链·notice-169 restart 放行令在途候执行。毕报零落卷（12min 在途·未超 30min 阈值）。
 - **COS auto-compact 逼近预案**（框显「1% until auto-compact」）：压缩毕零续动风险（SDE 前例）——下拍观测点：若 COS 压缩毕静止+restart 零进展+树零落卷→催 COS 注入 notice-169 续动令（v4.5 锚语义·原令新窗重挂·毕报窗随注入时点重起）。
+
+
+## ㊿+520（2026-11-18T00:00:24Z 落卷·**TriRMC 桥改造任务书闭环——T5 五断言全绿**）
+
+- **SDE livefire 闭环毕报勘读**（sde-t4-livefire-close-readout-20261118.md·07:49:32+08 落树·notice-169 restart 放行承录执行毕·令源勘正「BOD 148」笔误已自纠为 notice-168）：**T5 验收门五断言全绿——任务书 T0-T5 全闭环**。
+- **restart 执行读数**（notice-169 四附加护栏全录）：旧 dist 留档 dist.bak-pre-t4-restart-20261117T233209Z（592K 全拷贝回装一键）→tsc rebuild in place exit=0（session-bridge dsh 28/claude 3=注释形零调用点）→restart 正形=kill 主 pid（属主 fleet 权限）+systemd Restart=always 自动拉起（unit 正形生命周期·**零 root 需求**——避开 root 面的巧妙形）→完工三断言 ✓（healthz 复绿·pid 2319222→2518936 对表·cron/watchdog 零变化 enabled=true/jobCount=6/degraded=false/cf=0 全等=**触发面熄火维持不变**）→token 门无凭 401 保持 ✓。
+- **③真值互发全链闭环实锚**（断言 3·通道锚定语义保持·非充验形）：A=r-duty-cos headless boot→curl POST 桥 API（token=0600 文件形零回显）→daemon registry 命中 r-duty-sde→sendMessage→B 真实 resume turn（--session-id 前缀形 exit=0）→B 回执原文（回执时点 2026-11-18T07:48:27+0800 date 现查形）→200→A 收执转述 ✓。D-46 全程·token 文件用毕 shred -u 销毁 ✓。
+- **五断言对表**：①claude 清零=which 复跑零命中+运行 dist 新形零调用点+spawn dsh 实证（agentId 返回）②三 API smoke=spawn ok+list 200 registry 对表+send resume ACK+桥面 message 全链③回执链=上述全链④14 席 preset=②四门+剥桥 deep-equal 14/14+UUID 面⑤零回归=cron 零变化+sg 零触+registry 0→0→1 对表（零会话损失）。
+- **四残面旗标承录**（候 FSD/CTO 面核·非阻闭环）：①headless lite 固定工具集（插件栈不实例化·rc.2 lite 限制·真值形=A bash→桥 API 直调通道锚定保持·候裁 dsh 插件面支持 or R 席运行面切换）②T2 send 面 id 形（裸 uuid vs session- 前缀·session-bridge.ts 码面候修）③listAgents 扫描形 vs dsh 实盘形结构性失配（registry 永零根因·码面候正形化）④胶合件正形化（registry 自动铸造面）。修笔三单笔 revert 一键形：TriCompany 4065c32+TriRMC d5f2196+TriRMC 7126ddd（更名遮蔽冲突消解）。
+- **回转链自走**：任务书闭环毕报→notice-115 解锁读数链（S3 实弹+旧形三跑接力）随线回转照走 COS 呈批链（next_agent=COS→FSD/CTO 四残面面核）——SDE 毕报 SendMessage 直达值席在途（COS 框 message accepted JSON 实锚·23:59:23Z enqueued）。COS auto-compact 0% 临界——压缩毕续动观测点保留（呈批链启动面下拍验）。
+- 本席动作面：零新 notice 必要（回转链自走+BOD 不代裁 S3 候裁面）——CEO 转报任务书闭环大节点。
