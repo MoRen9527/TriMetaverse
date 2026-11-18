@@ -4693,3 +4693,15 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **CEO 裁**（20:38:32）：TriRMC tmux 看窗路线拍板装 tui 插件，包名 CTO 勘——notice-190 流转 duty-cos（20:39+0800·拾取三验齐）：①CTO 面追加任务（并入 189 款一 web 勘形在工面）——tui profile 缺装勘补三步=包名与安装源勘定（含河源 npm 可达性）→`dsh plugin list` 验 tui 在→`dsh tui --resume <uuid>` 冒烟；②ns2 哨态维持并行不扰。
 - 锚笔第 194 轮+idle-watch-state last_notice=190 落讫。
 - 归档锚 2026-11-18T12:39:10Z。
+
+### ㊿+597 · CTO 勘形三面卷落树·tui 装插件令前提勘死·三定谳面候 CEO（2026-11-18T20:44:05+0800·回填=段落卷时真实现查值·FUZZY-TS GATE 拦后勘正）
+
+- **CTO 卷**（cto-notice189-webview-threeface-survey-20261118.md·20:29 落树·源码级实勘 npm rc.2 tarball 五件解包+零触河源运行面）：**面 b 定谳=tui 非缺装是没这货**——rc.2 出厂 PROFILE_TEMPLATES 五名零 tui（help 的 tui --resume=示例误导）·无独立 TUI app 包可加·自建空壳不荐·终端交互真形=web 面板内置终端。**面 a 全绿**：认证=token 兑取+signed cookie 双段（query 泄漏面=一次性兑取型已收口·残面=浏览器历史+经手纪律运营闭）·SSH -L 形成立（loopback+wildcard 拒绝+Host fence 原生纳受）。**面 a⑥/c 关键架构事实：web face=单 workspace 单实例可见域**——单 face 只见单席·14 会话七席全景=「每席一 face 七端口」或「联审会话单 workspace 汇聚」二形候 CEO。桥改造共存零争用（web=读视图/桥三 API=控制面）。npm 五件 20:23 实测可 pack（下架域窄于前记）。
+- 三定谳面候 CEO：①tui 改道（无可装对象→改 web 内置终端或候新版）②可见域二形择一（七 face vs 单 workspace 汇聚）③token 传递/轮换纪律定谳（CTO 建议形在卷 a④）。
+
+### ㊿+598 · CEO 三裁定谳·notice-191 流转（2026-11-18T20:51:07+0800）
+
+- **CEO 三裁**（20:50:56）：①tui=先装 dsh market 勘市场清单有无 tui 包（有则装验冒烟·无则改道 web 内置终端）②七席全景=定谳 A 每席一 web face 七实例七端口（施工 COO 拆树·CTO 技术支持·wrapper 形复用 run-web-masked）③token 纪律=a④ 建议形定谳生效（传递=SSH 读 new-token 带外交付禁落卷落屏·轮换=face 重启即换+联审窗毕照 restart discipline）。
+- notice-191 流转 duty-cos（20:51+0800·拾取三验齐）·三款分诊：款一→CTO 面执行·款二→COO 拆树排期·款三→照录生效。
+- 锚笔第 195 轮+idle-watch-state last_notice=191 落讫。
+- 归档锚 2026-11-18T20:51:07+0800。
