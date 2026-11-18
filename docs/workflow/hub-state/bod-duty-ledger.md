@@ -4772,3 +4772,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+609 · tick 22:07 拍归档一行（2026-11-18T22:14+0800）
 
 - ns2 run-mirror-124206Z 推进深（arrival.json/notify_done.json/convene 目录/十阶段件全族在·verdict 候）+树面 45min 窗 11 件=判卷段+两策施工+webface 三线在飞·免通报归档。四口全绿·MMC ok cf=237·大表 24/4·零异常。全席候令=拍快照滞后。
+
+### ㊿+610 · 追勘三 skill 发起机制·策一精确化备案（2026-11-18T22:17:30+0800）
+
+- **CEO 追勘**（22:15:05）：plan/score/close skill 是否按阶段程序发起——BOD 实勘 run 管道（124206Z run 目录+convene-spawn.log+score-skill.json）答：**CLI 七段（preflight/qualify/plan/dce/verify/score/close）=程序发起 ✓**（管道自动推进·verdict 全程序化）；**Skill 段（规划卷/评卷/终判）=agent 发起+agent 执行**——score skill 的 convene spawn 本体已 auto 脚本化（convene_mode=auto·spawn log 逐席 spawn+rc 记录+缺席如实注），**断点=「启动装配」系 SDE agent 动作**（材料路由+脚本启动——今晚缺口实证断点所在）。
+- **策一施工目标精确化**（notice-197 备案·拾取 Levitating 三验齐）：程序化对象=skill 段启动装配（runner 管道驱动三 skill 段启动）·agent 只做判读不做发起。
+- **附带勘注**：本次 convene 缺席注四席（coo/cto/cho/cfo·rc=0）形态与 ns1 全席 14 卷不同——缺席注语义候值席判卷位定性随 verdict 呈报。
+- 锚笔第 201 轮+state last_notice=197 落讫。归档锚 2026-11-18T22:17:30+0800。
