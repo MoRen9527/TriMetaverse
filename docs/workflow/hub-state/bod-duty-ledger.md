@@ -4752,3 +4752,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **处置**：路由令已即派（aef2e99e·唤醒毕）——convene spawn（O3 形+对象域手工管理形照 187）+score-skill 材料路由+尾段 verdict→debug 停点呈批链。**时点预期=convene spawn 窗约 10-15min·判卷段随 spawn 窗**（下 r59x 报点载 spawn 实锚）。
 - ns2 看窗 shelf 候 CEO 示下承录（第二临时 face 槽建后可起）。job2 21:29 拍：ns2 槽仍 0（spawn 窗内正常）·树面 6 件 35min 窗=webface 施工线在途·值席监督在役。
 - 归档锚 2026-11-18T21:30+0800。
+
+### ㊿+606 · ns2 判卷段 spawn 实锚·tick 21:37 拍归档（2026-11-18T21:44:30+0800）
+
+- **ns2 convene spawn 实锚**（notice-195 路由令 aef2e99e 后 ~15min 兑现）：run 槽 124206Z 已建+**4 席会话已 spawn**（0c447c79/a9e67c54/d8d20b0a/f8999734·陆续出中）+树面 run-mirror-124206Z 落卷在飞（convene/seats/cos-score.json+coo-score.absent.json+score-skill.json+close.json 15min 窗 4 件）。**7 席评分进行中→verdict 停点呈批链候 CEO 融合裁**。
+- 自领勘误：tick 旁证一拍漏 -J 双跳（sg 机 ls /home/fleet/.dsh/ 虚报不存在）——sessions 目录=河源机位（daemon-plane-locality 同族·machine 位断言必带跳形）——双跳正形复勘 zero 实异（sessions 在·8792/8791 双 face 活体 ✓）。
+- 四口 8713 ok/8711 ok 167h/TriRMC active·MMC ok cf=237·大表 24/4·零异常免通报（旁证 run-mirror 4 件+spawn 实锚）。
