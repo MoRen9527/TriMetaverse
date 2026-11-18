@@ -4779,3 +4779,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **策一施工目标精确化**（notice-197 备案·拾取 Levitating 三验齐）：程序化对象=skill 段启动装配（runner 管道驱动三 skill 段启动）·agent 只做判读不做发起。
 - **附带勘注**：本次 convene 缺席注四席（coo/cto/cho/cfo·rc=0）形态与 ns1 全席 14 卷不同——缺席注语义候值席判卷位定性随 verdict 呈报。
 - 锚笔第 201 轮+state last_notice=197 落讫。归档锚 2026-11-18T22:17:30+0800。
+
+### ㊿+611 · 三 skill 段程序化工作流定谳·notice-198 流转（2026-11-18T22:21:32+0800）
+
+- **CEO 定谳细化**（22:21:13）：plan-skill/score-skill/close-skill 三段**启动本体一律脚本化 spawn**（同 convene 现役形）·**顺序严格按 fade 规范顺序**·程序化工作流式执行——十阶段全程（CLI+Skill 段）runner 管道串联自动推进·段间发起零 agent 参与·agent 只做段内判读。
+- notice-198 流转 duty-cos（22:21+0800·拾取 Boondoggling·三验齐）·施工要点四项落 WP9 增量：①三段 spawn 脚本化（复用 convene 形）②fade 顺序硬串行（段 N+1 前置断言=段 N 落卷真值·禁跳段乱序）③启动装配面全程序化（SDE 装配动作退役·195/196/197 链缺口根修）④skill 判读产出回管道落卷衔接（段间交接真值校验）。
+- ns2 在飞照走不扰。锚笔第 202 轮+state last_notice=198 落讫。归档锚 2026-11-18T22:21:32+0800。
