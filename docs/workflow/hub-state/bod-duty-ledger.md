@@ -4658,3 +4658,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **收口判定**：施程序「WP4∥统改∥授权链∥flag 统排→COO 复核→WP9→触发下一轮」中 WP4/统改/授权链/复核/WP9 全毕——**差「触发下一轮 loop」最后一步**（WP8 flag 统排判读面随 COS 消化确认）。
 - tick 19:37 拍全席候令=拍粗粒度滞后（落卷实锚为准·活体优先）；BOD 大白话总表卷 4dcefda95 已呈 CEO。
 - 归档锚 2026-11-18T11:46:35Z。
+
+### ㊿+591 · dsh 会话查看形态实勘·tui --resume+web profile 两现成件（2026-11-18T11:59:00Z）
+
+- **CEO 问**（19:57）：dsh 持久档能通过 tmux 看么？BOD 实勘答：headless 联审会话无 tmux 窗格（跑完即收）——tmux 直切不可；但 **`dsh tui --resume <session>`**（交互 TUI adopt 形·dsh help 现勘 0.2.0-rc.2 河源 /srv/fleet/dsh）跑在 tmux 窗格里=界面化回放+续聊，现成可行。
+- **附带发现**：dsh 自带 **web profile**（`dsh web`）——sg 面 web 8791 即此件；河源起 web profile=浏览器看会话的现成路（访问路径/安全面候勘形·若 CEO 要即流转 CTO 面）。
+- 勘检锚：dsh --help 现读（tui --resume/web 两例在 Examples 节）·/srv/fleet/dsh 包位=node_modules/.bin/dsh（fleet PATH 无 dsh·包内 bin 可用）。
+- 归档锚 2026-11-18T11:59:00Z。
