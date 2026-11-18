@@ -1,0 +1,39 @@
+{
+ "dim": "A",
+ "seat": "coo",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 2,
+   "rationale": "锚文判读「这一周的记录，还是这一周的活——记录随周封存·活随人带走」逐案过：记录（32 案，keep 封存判对）=10 散件[d39勘止标注毕报-20261112.md、d82-排工紧凑性纪律毕报-20261113.md、fade001-firstshoot-scoring-weights-cpo-20261113.md、fade001-phase1-trigger-study-bod-20261112.md、fade001-ten-stage-mapping-20261112.md、fade001-ten-stage-product-plan-cpo-20261113.md、fade规范对表-ceo修正令-20261115.md、lg语义条款册立册定性-20261114.md、mc-oprec-fade011-pathspec-dispatch-20261115.md、首评分卷-20261109.md，均成卷毕报/评分卷/映射→随 W46 封存]+22 树[agentcore-lockfile-forensics-20261113、authgate-cto-review-20261110、cao-gate-review-20261110、fade001-cto-review-20261109、fade001-migration-review-20261109、fade001-phase1-build-20261114、fade001-phase1-review、fade001-phase2-build-20261113、fade001-phase2-review、fade001-plane-shift-review-20261109、fade001-split-review、fade001-ten-stage-review、fade001-tenstage-impl-20261113、fade001-tenstage-review-20261114、fade001-weekly-shift-review、fade011-openrun-20261110、fsd-sleepgap-probe-20261115、mount-gate-build-20261111、mount-log、p3-watch-probe-removal、tree-gate-review-20261110、fade001-failsafe-window-p1，均评审/毕报/日志→记录封存判对]；活（判错/漏判 4 类）=①bod-tick（idle-watch-state.json 滚动值守态）与②fade001-tenstage-deploy-20261115（授权部署在办树）被 failed_fallback 机械兜底封存、未按活携带；③8 件顶层活件（.shift-ade.json、OP-202611-W46-001.json、OP-202611-W46-001.unresolved-items.md、cfo-quota-daily-w46.md、company-demand-pool.md、daily-progress.md、scoring-ledger-w46.md、task-inventory-20261115.md）plan_family=keep 却不在 keep 清单、不入 counts，仅注 file entry missing（零动作候人工），去向未判；④15 件现役未决项（other_unresolved_count=15）未入 carry_over，仅 2 件 frozen 归位（该 2 案=活-冻结、只归位不解冻，判对）。合计 counts.keep=34 对 agent_readings=42 差 8 件、annotation 全 null，个案语义判读未发生——记录主体面判对但活面系统性未随人带走，2 分档成立；4/3 档因语义锚未逐案落地不成立。",
+   "evidence_ref": "plan.json#/keep + plan.json#/agent_readings + plan.json#/carry_over + plan.json#/counts + plan.json#/other_unresolved_count"
+  },
+  {
+   "criterion": "I2",
+   "score": 2,
+   "rationale": "三面并判：批次面=无时序划分，仅 fast_path 10 件/慢道 24 件二分，慢道上界 15 致 9 树 skipped_over_limit，无按 11-15 23:50 硬时钟窗排序、无单批优先级，本拍 check_time=2026-11-18T05:53:37Z 距该硬时钟约 3 日而换形/授权链未在 plan 落（COO 守时面缺）；风险预案=无风险清单、止损阈值、回报窗，dce push 失败重试属执行层不在 plan；降级链=fast_path→慢道 cap→fail-closed keep→候人工链存在且保守零丢失可执行、frozen 只归位有据、index_drift 对 index 脱节（activeTrees=0 vs 实盘 20+）自我设界如实注——但 32/42 落兜底使降级成默认路径而非例外分支。三面有缺、主链保守合理，1-2 档取顶 2。",
+   "evidence_ref": "plan.json#/keep（reason_codes=skipped_over_limit×9）+ plan.json#/index_drift + plan.json#/carry_over + plan.json#/check_time"
+  },
+  {
+   "criterion": "I3",
+   "score": 2,
+   "rationale": "两面并记：指针可达面真——close.json evidence 七段全载 path/present/verdict+stage_artifact_notes 七条，manifest/score/preflight 三时点戳可复核；判读留痕面缺——plan.agent_readings 42/42 annotation=null、32/42 source=failed_fallback，仅枚举码（unparsable/skipped_over_limit/file entry missing），无一条内容证据指针或个案记录/活锚判读句；counts.keep=34 对 readings=42 差 8 无对账说明，op 索引与未决件指针仅到文件名非行锚。实判断面 score/close reasons 非套话、carry_over cells 载原裁引用。按「个别指针断链或套话面」1-2 档取 2。",
+   "evidence_ref": "close.json#/evidence + close.json#/stage_artifact_notes + plan.json#/agent_readings + plan.json#/counts"
+  }
+ ],
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "迁移清单未做记录/活分栏：8 件顶层活件（含 .shift-ade.json 控制态、OP-202611-W46-001.json 周索引、unresolved-items.md 未决件、task-inventory-20261115.md 任务盘点）plan_family=keep 却不入 keep/migrate/counts（counts.keep=34 对 agent_readings=42 差 8），15 件现役未决项 other_unresolved_count=15 未入 carry_over（仅 2 件 frozen 归位），且 plan 内无 W47 dst/pending_reason 指针，活件随人带走面不可复核。建议：迁移器出「记录/活」双栏对账表，活件逐件写 dst 指针或 pending_reason（冻结件同列），并加 counts 四项（keep/migrate/carry/limbo）平账闸后方可 verdict=pass。",
+   "evidence_ref": "plan.json#/counts + plan.json#/agent_readings + plan.json#/carry_over + plan.json#/other_unresolved_count",
+   "check_time": "2026-11-18T06:06:54Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "分类器面：fast_path 仅 10/42，failed_fallback 32/42（15 unparsable+9 skipped_over_limit+8 顶层 file entry missing），annotation 42/42=null 即逐案判读零留痕；慢道上界 15 无优先级/硬时钟排序，24 树中 9 树直接弃判；plan 无 evidence_ref 字段，主观卷无法逐案复核。建议 fade-001：①设 fast-path 失败率阈值（>20% 告警并转人工，禁把兜底当常态）②慢道按硬时钟窗口排序、每树最小产出「记录/活标签+一句理由+内容指针」③agent_readings 增 rationale/evidence_ref 字段④counts 与 readings 自动对账（差额>0 即红）。",
+   "evidence_ref": "plan.json#/agent_readings + plan.json#/keep + plan.json#/counts + plan.json#/index_drift",
+   "check_time": "2026-11-18T06:06:54Z"
+  }
+ ],
+ "check_time": "2026-11-18T06:06:54Z"
+}

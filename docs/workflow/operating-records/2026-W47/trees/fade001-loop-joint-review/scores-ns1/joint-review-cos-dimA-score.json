@@ -1,0 +1,39 @@
+{
+ "dim": "A",
+ "seat": "cos",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 2,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存，活随人带走。10 件散件（d39、d82 毕报，首评分卷，规范对表令，lg 条款册，mc-oprec 派发件，ten-stage 映射与产品计划）与多数已收官的评审/构建树判为「记录」，随周封存、keep 方向成立；CARRY-20260728-004/006 判为「记录挂账」，status_to=frozen、dest=frozen、pending_reason 三标注齐；migrate=0 未误迁记录。但活面划界未逐案落地：①34 件 keep 中 24 件为机械兜底（15 件 agent_output_malformed、9 件 skipped_over_limit），42 条 agent_readings 的 annotation 全 null，reason_codes 只有机械码，未过「记录/活」判读；②daily-progress、company-demand-pool、task-inventory-20261115、scoring-ledger-w46、cfo-quota-daily-w46、OP 两件、.shift-ade 等 8 个顶层活文档在 agent_readings 标 plan_family=keep，却不在 keep 清单（counts.keep=34 对 readings=42），仅记「file entry missing（零动作候人工）」，活件去向未判；③fade001-tenstage-deploy-20261115 仅以 malformed 兜底 keep、annotation=null，plan 未落其收官或 handover 的「活随人带走」判读。主体方向安全、零丢失，但边界与活件缺判多于 1-2 处，4 分不成立、3 分亦不成立，取 2 分（与联审六席 2 分收敛；禁裸分）。",
+   "evidence_ref": "plan.json#/counts;plan.json#/keep;plan.json#/agent_readings;plan.json#/carry_over;plan.json#/index_drift;manifest.json#/stages;score.json#/score.families"
+  },
+  {
+   "criterion": "I2",
+   "score": 1,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存，活随人带走。本拍把「活」面风险压成单批全 keep（0 migrate、34 keep、2 carry_over 仅终态），无按记录/活划界的批次划分与时序取舍。①批次面：慢道 24 树仅前 15 入 agent 且全 unparsable，另 9 树以「慢道树数上界 15·fail-closed keep」一封了之，无缺面影响汇总；②预案面：dce.overflow_checks 三项 week_dir_structure、carry_over_semantics、commit_message_shape 全 checked=false，仅注「骨架态=口径位声明」，预检未实演；③降级链：15 树 malformed 加 9 树 skipped 后无重试、候裁、升级分支；push 段先报 cannot rebase: You have unstaged changes，靠 fallback merge 收口（979463099），plan 与 close 未记异常处置与责任席；index_drift 自认 index activeTrees=0 与实盘 20+ 脱节只注不校。主链 preflight、qualify、verify 全 pass、push 落位、零丢失，故不落 0；三面有缺且取舍无据，取 1 分（与联审六席 1 分收敛；禁裸分）。",
+   "evidence_ref": "plan.json#/counts;plan.json#/keep;plan.json#/index_drift;dce.json#/overflow_checks;dce.json#/steps[3].stderr_tail;preflight.json#/assertions.week_math;verify.json#/checks"
+  },
+  {
+   "criterion": "I3",
+   "score": 1,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存，活随人带走。留痕骨架属「记录」但未封好：正面——manifest、score、plan 三件 sha16（f596051b1b0b8fe8、1be15ca9790f92fc、093a2985c2156017）与实算一致，三件 check_time 均为可读 ISO 戳，counts 0/34/2 与数组自洽，carry_over 带 source/dest/pending_reason，joint-review-trigger 指针可达。断面——①plan 34 条 keep 仅有 reason_codes，无逐案 reason 文本或 evidence 指针，42 条 agent_readings 的 annotation/confidence 全 null，其中 24 条为机械兜底，机械码不能替代语义留痕；②8 个顶层件只记「file entry missing（零动作候人工）」而不同时列入 keep/migrate，去向不可复核；③close.json run_state=stale、stage_artifact_notes 自记「close.json: absent」、evidence[6].verdict=unknown，与 manifest.run_state=ok/stages.close=pass 同拍两读；score.json G 族称「verify items 对表」而 verify.json 只有 checks 无 items；close evidence 7 条无 hash。指针大体可达、值面与复核断链，3 分不成立，1-2 档取下沿 1 分（与联审六席 1 分收敛；禁裸分）。",
+   "evidence_ref": "plan.json#/keep;plan.json#/agent_readings;manifest.json#/run_state;manifest.json#/stages;score.json#/score.families[6].reasons;close.json#/run_state;close.json#/stage_artifact_notes;close.json#/evidence;verify.json#/checks"
+  }
+ ],
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "补逐案锚文判读：24 件机械兜底（15 malformed 加 9 skipped_over_limit）须逐案落「记录/活」标签与一句理由，annotation 不得全 null；8 个顶层活文档（daily-progress、company-demand-pool、task-inventory、scoring-ledger、cfo-quota、OP 两件、.shift-ade）须在 migrate 或 keep 清单落去向，不得只记 file entry missing；慢道 15 树上界须补批次与缺面影响汇总、重试/候裁/升级分支；push 的 cannot rebase 异常须入 plan/close 处置记录与责任席。",
+   "evidence_ref": "plan.json#/agent_readings;plan.json#/counts;plan.json#/keep;dce.json#/overflow_checks;dce.json#/steps[3].stderr_tail",
+   "check_time": "2026-11-18T05:59:41Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "实现度留痕须同拍闭环：close.run_state=stale 与 manifest.run_state=ok、close.json absent 与 stages.close=pass 不得两读；close evidence 7 条须补 hash 与四元组；score G 族「verify items 对表」须与 verify.json 字段同名同值；plan 34 条 keep 须带逐案 evidence 指针，使 I1/I2/I3 的判读可从 run_dir 内相对路径复核，避免机械 reason_codes 充当实判断。",
+   "evidence_ref": "manifest.json#/stages;score.json#/score.families[6].reasons;close.json#/run_state;close.json#/stage_artifact_notes;close.json#/evidence;verify.json#/checks",
+   "check_time": "2026-11-18T05:59:41Z"
+  }
+ ],
+ "check_time": "2026-11-18T05:59:41Z"
+}

@@ -1,0 +1,42 @@
+{
+ "dim": "B",
+ "seat": "cos",
+ "entries": [
+  {
+   "family_id": "A",
+   "verdict": "pass",
+   "weight": 9,
+   "rationale": "verdict_rule 对表（首拍/预演同形=与基准 md5 对表全中；换形注①取 PATCH 后活体 command 值面）：活体复读 /srv/fleet/TriRMC/data/cron/jobs.json 的 weekly-plane-shift payload.command=26 行/2936 字符/md5=09644869a812ed16579624cb3287a4f0，与 C 族修形现役基准（STE 核验门河源抽验同值）逐字全中；state.nextRunAtMs=1795362600000（2026-11-22T15:50Z=11-22 23:50 CST）非空滚动，enabled=true、lastRunStatus=ok、consecutiveErrors=0；qualify 五断言全 ok，trap 的 shift_notify_fail 兜底行与 RC=0/||RC=$? guard 均在 payload 内，healthz cron_enabled=true。score.json A 族 special_clause 所引 1794757800000 系 11-15 硬时钟旧引文，非本跑滚动读数，按换形注①以活体新值为准；文件级 md5 随 patrol 回写 updatedAtMs 漂移不取。r119c 重采初判 A=pass，本席终判复核 pass，初判与联审分歧面收敛；二值制无 ≥2 档分差触发面。",
+   "evidence_ref": "score.json#/score.families[0].reasons; preflight.json#/assertions.healthz; qualify.json#/assertions; plan.json#/counts; verify.json#/checks"
+  },
+  {
+   "family_id": "F",
+   "verdict": "pass",
+   "weight": 13,
+   "rationale": "verdict_rule 对表（T1-3/F2 免评分母·成跑零触发=满分）：本跑 055326 主日志 RESULT: exit code 0，notify_done.run_state=ok、notify_result.status=sent，close.verdict=pass；全链仅 trap 命令文本含 shift_notify_fail，无实际触发行；触发分支不适用（零触发行使 RUN_ID/时延面为空集而非缺失）。前一跑 054826 因 pull untracked overwrite 失败触发过 shift_notify_fail 告警，属另一 run 的触发分支留痕，不计入本跑；本跑 F2 零触发满分形成立，F 判 pass。r119c 初判 pass 与联审七席 pass 一致，分歧面收敛；二值制无 ≥2 档分差触发面。",
+   "evidence_ref": "notify_done.json#/run_state; notify_done.json#/notify_result.status; close.json#/verdict; dce.json#/verdict; verify.json#/checks"
+  },
+  {
+   "family_id": "H",
+   "verdict": "fail",
+   "weight": 9,
+   "rationale": "verdict_rule 对表（首拍=值守窗断言形；预演=如实记录形）：H 族无 loop 增补注（对比 B 族注③），考卷未授权把首拍断言形改成 loop 记录形。本跑为 2026-11-18T05:53:26Z 的 loop-window 轮（非 23:50 首拍、非预演），run_dir 内无 23:45 前置 dive 读数卷、无 00:25 告警窗、无值守窗起讫实录；preflight.assertions.diverge 的 left=0/right=0 仅为同步面读数，不等于 23:45 dive 预检；arrival.json 只有 05:54:08Z 到岗时戳；W46/W47 window-ledger.md 缺位，patrol 05:49:41/05:54:41 两拍均报 no ledger/windows found (idle)，属空转非拍频覆盖；verify 仅 4 项结构检查，无 H 面实锚。故首拍断言形 fail；若按预演如实记录形亦无值守窗起讫实录，仍 fail。r119c 初判 H=pass（以 loop 轮判读对象迁移为由）与联审六席 fail 分歧，经复核该迁移无 H 族判据授权，终判收敛为 fail；二值制无 ≥2 档分差触发面。",
+   "evidence_ref": "preflight.json#/assertions.week_math; preflight.json#/assertions.diverge; arrival.json; verify.json#/checks; plan.json#/counts; score.json#/score.families[7].reasons"
+  }
+ ],
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "补逐案锚文判读与活件去向：plan counts 0/34/2 与 agent_readings 42 条错位，8 个顶层活件（daily-progress、company-demand-pool、task-inventory-20261115、scoring-ledger-w46、cfo-quota-daily-w46、OP 两件、.shift-ade）仅记 failed_fallback「file entry missing（零动作候人工）」而未入 migrate/keep/carry；34 keep 中 24 件为机械兜底（15 agent_output_malformed+9 skipped_over_limit），annotation 全 null；verify 仅 4 项结构检查、无 items[]/unresolved diff 明细；dce.overflow_checks 三项 checked=false；push 段先报 cannot rebase: You have unstaged changes 后靠 fallback merge 收口，plan/close 未记异常处置与责任席。建议下一轮补逐案「记录/活」标签+一句理由、8 活件去向、慢道缺面影响汇总与重试/候裁/升级分支，并把 verify items 与 plan counts 对表落卷。",
+   "evidence_ref": "plan.json#/counts; plan.json#/keep; plan.json#/agent_readings; verify.json#/checks; dce.json#/overflow_checks; dce.json#/steps[3].stderr_tail; close.json#/run_state",
+   "check_time": "2026-11-18T06:03:27Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "H 族与采集/收口面需补形：①H 族 rubric 只有首拍断言形/预演如实记录形，无 loop-window 增补注，导致 05:53Z loop 轮无 23:45 dive、无 00:25 告警窗、window-ledger 缺位时 patrol 空转，H 面无法实锚；②run_dir 无 collection-score.json，joint-review-trigger.domain_readings.duty_collection=pending，A/F/H 值席采集面未随跑落卷，trigger 的 dim_b 材料只有 counts/ar/verify/commit 指针，缺 collection 卷；③close.run_state=stale、stage_artifact_notes 自记「close.json: absent」、evidence[6].verdict=unknown，与 manifest.run_state=ok/stages.close=pass 同拍两读；score G 族称「verify items 对表」而 verify.json 只有 checks；建议补 H 族 loop 判据与值守窗实录、collection-score 落卷及 trigger 消费对表、close/manifest 单值收口与 verify items 字段对齐。",
+   "evidence_ref": "preflight.json#/assertions.week_math; arrival.json; verify.json#/checks; close.json#/run_state; close.json#/stage_artifact_notes; close.json#/evidence; manifest.json#/run_state; manifest.json#/stages; score.json#/score.families[6].reasons; joint-review-trigger.json#/domain_readings",
+   "check_time": "2026-11-18T06:03:27Z"
+  }
+ ],
+ "check_time": "2026-11-18T06:03:27Z"
+}
