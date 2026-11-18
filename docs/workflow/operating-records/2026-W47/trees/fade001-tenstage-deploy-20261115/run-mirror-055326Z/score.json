@@ -1,0 +1,127 @@
+{
+  "score_version": "1.0.0",
+  "run_id": "shift-W46-20261118T055326Z",
+  "from_week": "W46",
+  "to_week": "W47",
+  "engine_state": "executed_ok",
+  "check_time": "2026-11-18T05:54:06.108947+00:00",
+  "score": {
+    "score_engine_version": "2.0.0",
+    "run_id": "shift-W46-20261118T055326Z",
+    "from_week": "W46",
+    "to_week": "W47",
+    "rubric_file": "rubric-firstshoot.json",
+    "rubric_loaded": true,
+    "families": [
+      {
+        "family_id": "A",
+        "family_name": "拍前冻结",
+        "state": "manual",
+        "score": null,
+        "weight": 9,
+        "reasons": [
+          "值席采集域（run_dir 不可得·不冒充机判）·采集锚（考卷 collection_cmd 原文引用）: 活体探读+md5sum+json 值面值读（值面必读非仅存在性）",
+          "考卷 special_clause 引用: 换形注①：vB 基准 4f990e911c3f 有效至 PATCH 落；十阶段形基准=PATCH 落后 dive/消费窗活体探读新值落卷替换——禁以 vB md5 判十阶段形 jobs.json（=全红假读数·判据错配族）；nextRunAtMs=1794757800000（11-15 23:50 硬时钟·换形不动）；两用途两基准对表注②（COS 562 笔 32f66c5ab 采认转载）：回退复原验证面基准=vB md5 4f990e911c3f（复原目标态=vB 形·charter §四锚有效）——与预演/首拍线 A 族十阶段形新基准两分各按各面·禁互判"
+        ]
+      },
+      {
+        "family_id": "B",
+        "family_name": "拍点形态",
+        "state": "pass",
+        "score": 9,
+        "weight": 9,
+        "reasons": [
+          "loop 进化轮形态·拍点 055326（管线自证 week_math.mode=loop-window·loop_source=marker·窗判不适用于控制面即时触发轮——46afd9bc3 §三/STE 判据裁 2026-11-16）"
+        ]
+      },
+      {
+        "family_id": "C",
+        "family_name": "run id",
+        "state": "pass",
+        "score": 13,
+        "weight": 13,
+        "reasons": [
+          "T1-1 正则过+段产物同串 4 件（生产面三处同串 grep=值守读数位如实注）"
+        ]
+      },
+      {
+        "family_id": "D",
+        "family_name": "preflight",
+        "state": "pass",
+        "score": 9,
+        "weight": 9,
+        "reasons": [
+          "preflight verdict=pass exit_code=0（T1-2 后半过）"
+        ]
+      },
+      {
+        "family_id": "E",
+        "family_name": "qualify",
+        "state": "pass",
+        "score": 9,
+        "weight": 9,
+        "reasons": [
+          "qualify 五断言 ok 全 True（T1-2 前半过）"
+        ]
+      },
+      {
+        "family_id": "F",
+        "family_name": "告警面",
+        "state": "manual",
+        "score": null,
+        "weight": 13,
+        "reasons": [
+          "值席采集域（run_dir 不可得·不冒充机判）·采集锚（考卷 collection_cmd 原文引用）: alarm log（healthz logPath 投影）触发行计数+RUN_ID grep+时戳差值（收件箱到达读数=值席面采集）",
+          "考卷 special_clause 引用: F2 免评分母（F2_ZERO_TRIGGER_FULL_SCORE=True·成跑零触发=满分）；锚 2 收口=告警时延读数·非静默即过（回审卷 §二发现 1）"
+        ]
+      },
+      {
+        "family_id": "G",
+        "family_name": "迁移链",
+        "state": "pass",
+        "score": 19,
+        "weight": 19,
+        "reasons": [
+          "五段产物齐性+值面全 pass（5 件）+verify items 对表零 missing"
+        ]
+      },
+      {
+        "family_id": "H",
+        "family_name": "值守窗",
+        "state": "manual",
+        "score": null,
+        "weight": 9,
+        "reasons": [
+          "值席采集域（run_dir 不可得·不冒充机判）·采集锚（考卷 collection_cmd 原文引用）: dive 预检读数卷+值席 patrol 拍频读数（值席面采集）",
+          "考卷 special_clause 引用: 值守排班=charter §五（值席执行·STE dive 备料供数面）；预演线 H 族禁按首拍断言形判红（采集卷 §四细则）"
+        ]
+      },
+      {
+        "family_id": "I",
+        "family_name": "主观题族·判断与规划质量（并盘 100 形·CEO 直令 2026-11-15 16:23:35）",
+        "state": "subjective",
+        "score": null,
+        "weight": 10,
+        "reasons": [
+          "主观判卷域（判卷面 subjective-score.json 供·卷缺席=pending）·判卷锚（考卷 verdict_rule 原文引用）: 三判据 I1=4/I2=3/I3=3 判卷锚=语义锚原句挂判「这是一周的记录，还是这一周的活——记录随周封存·活随人带走」（36bf14a1d L44）·每案判分前先过锚文判读（记录/活 标签+一句理由·rationale 必含）",
+          "考卷 special_clause 引用: 判卷锚操作化：防判卷人自造口径·与「同值同源禁两套」纪律同构；域归属=并盘总盘 100 制（独立附加分面定形被 CEO 16:23:35 令推翻）·机判域和 59 与 REDLINE G cap 59 数值偶合无关（CTO 勘正②）"
+        ]
+      }
+    ],
+    "machine_domain_weight": 59,
+    "manual_domain_weight": 31,
+    "subjective_domain_weight": 10,
+    "total_score": 59.0,
+    "total_pending_weight": 41,
+    "total_projection": 100.0,
+    "domain_breakdown": {
+      "machine": 59.0,
+      "collection": 0.0,
+      "subjective": 0.0
+    },
+    "redline_caps_applied": [],
+    "verdict": "pass",
+    "check_time": "2026-11-18T05:54:06.108915+00:00"
+  },
+  "verdict": "pass"
+}

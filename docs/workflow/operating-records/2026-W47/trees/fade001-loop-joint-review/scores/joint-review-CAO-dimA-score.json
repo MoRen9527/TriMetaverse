@@ -1,0 +1,25 @@
+{
+ "dim": "A",
+ "seat": "cao",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 2,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存·活随人带走。10 件散件（d39/d82 毕报、首评分卷、规范对表令、lg 条款册、mc-oprec 派发件、ten-stage 映射/产品计划）与已收官的评审/构建树判为「记录」，keep 随周封存方向成立，migrate=0 未误迁记录；CARRY-20260728-004/006 判为「记录挂账」，status_to=frozen/dest=frozen/pending_reason 三标注齐。但活面划界有实质缺口：①fade001-tenstage-deploy-20261115 在 plan 拍点 2026-11-16T10:27:10Z 时 authorization.json 的 expiresAt=2026-11-16T21:04:46+08（=13:04:46Z）仍在窗，且拍后 10:29Z/11:41Z 同树续落 sde-v23-firstrun、sde-loop11-s1 读数，属「活」，plan 仅以 agent_output_malformed 兜底 keep、annotation=null，未落「活随人带走」的交接标注；②34 件 keep 中 24 件为机械兜底（15 件 agent_output_malformed+9 件 skipped_over_limit），未过个案语义判读，reason_codes 只有机械码；③daily-progress、company-demand-pool、task-inventory、OP 两件等 8 个顶层件在 agent_readings 记 failed_fallback「file entry missing（零动作候人工）」、plan_family=keep，却不在 keep/migrate/carry_over 清单内（counts.keep=34 vs readings=42），去向未判。主体方向安全、不丢件，但边界存疑超过 1-2 处，4 分不成立、3 分亦不成立，取 2 分。禁裸分。",
+   "evidence_ref": "plan.json#/check_time;plan.json#/counts;plan.json#/keep;plan.json#/carry_over;plan.json#/agent_readings;plan.json#/violations"
+  },
+  {
+   "criterion": "I2",
+   "score": 1,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存·活随人带走。本拍把「活」面风险整体压成单批全 keep（0 migrate/34 keep/2 carry_over），只有终态，没有按记录/活划界的批次与时序取舍。①批次面：34 树一次判完，24 树走失败兜底；慢道上界 15 下 9 树被 skipped_over_limit 直接 fail-closed keep，逐条 reason 虽如实写「慢道树数上界 15」，但无缺面影响汇总，也未交代 15 树 agent 全 unparsable 的队列取舍；②预案面：dce.overflow_checks 三项 week_dir_structure/carry_over_semantics/commit_message_shape 全 checked=false，仅注「骨架态=口径位声明」，预检未实际执行；③降级链：malformed/skipped 后无重试、候裁、升级到席分支，push 首段报 cannot rebase: You have unstaged changes，靠 fallback merge 收口（2824b74e5），plan/close 未记异常处置与责任席；loop-window 豁免与 23:50 硬时钟并存也未落取舍说明。主链 preflight/qualify/verify 全 pass、verify 4/4、无数据丢失，故不落 0；三面均缺且取舍无据，取 1 分。禁裸分。",
+   "evidence_ref": "plan.json#/counts;plan.json#/keep;plan.json#/agent_readings;dce.json#/overflow_checks;dce.json#/steps[3].stderr_tail;preflight.json#/assertions.week_math;verify.json#/checks"
+  },
+  {
+   "criterion": "I3",
+   "score": 1,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存·活随人带走。留痕面本身属「记录」，但这份记录未封好、活判读不可复核。可达面：plan/score/manifest 三件 sha16 与实算一致（b09f2818/be7e114d/51b9931c），close.evidence 7 条路径均在；给基础分。断链：①plan.json entries 只有 reason_codes，42 条 agent_readings 的 annotation/confidence 全 null，无逐案 evidence 指针或 hash，机械码不能替代语义留痕；②subjective-score.json 顶层与 judge_faces.initial 的 check_time 均写「2026-11-16T10:3xZ（date 现查原值）」占位，违 D-47 时刻制；entries[0] 引 plan.json#/counts 却写 1/33/2（实测 0/34/2），entries[1] 称 convene_mode=auto 而 trigger 件无该字段（仅 convene/aggregate-initial.json 有），entries[2] 以「维持 3 分档」套话承继；③close.json 自记 run_state=stale、stage_artifact_notes[6]「close.json: absent」、evidence[6].verdict=unknown，与 manifest.run_state=ok/stages.close=pass 同拍两读；聚合记 missing=[cos,cpo,cho] 而三席卷实存、sheets_n=4 与 7 卷不符，初判 4/3/3 与联审 2/1/1 差≥2 档亦无 joint/final 复核面。考卷改窗/门禁面未见越权（score.json I 族仍 subjective/pending、权重 10 未擅并盘，改形链面候 CTO 验收），但判卷操作与留痕纪律未闭环。指针大体可达但值面/时戳/复核断链，3 分不成立，1-2 档取下沿 1 分。禁裸分。",
+   "evidence_ref": "plan.json#/agent_readings;subjective-score.json#/check_time;subjective-score.json#/entries;subjective-score.json#/judge_faces;close.json#/run_state;close.json#/stage_artifact_notes;close.json#/evidence;manifest.json#/run_state;manifest.json#/stages;score.json#/score.families[8];convene/aggregate-initial.json#/aggregate_initial"
+  }
+ ],
+ "check_time": "2026-11-18T03:31:20Z"
+}

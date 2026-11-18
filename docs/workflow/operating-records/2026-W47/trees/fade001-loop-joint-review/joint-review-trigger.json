@@ -1,42 +1,42 @@
 {
   "trigger_version": "1.0.0",
-  "loop_run_id": "shift-W46-20261116T102656Z",
-  "run_dir": "/var/lib/trirmc/cron/runs/shift-W46-20261116T102656Z",
+  "loop_run_id": "shift-W46-20261116T113937Z",
+  "run_dir": "/var/lib/trirmc/cron/runs/shift-W46-20261116T113937Z",
   "from_week": "W46",
   "to_week": "W47",
   "dim_a_materials": [
     {
       "ref": "manifest.json",
-      "sha16": "b09f28184d2fb549"
+      "sha16": "bc587bcdc143d82b"
     },
     {
       "ref": "score.json",
-      "sha16": "be7e114dbff53d24"
+      "sha16": "99fab55ac269b60c"
     },
     {
       "ref": "plan.json",
-      "sha16": "51b9931c3530d5b7"
+      "sha16": "c8a08b277c37e2d0"
     }
   ],
   "dim_b_materials": [
     {
       "kind": "counts",
       "ref": "plan.json#/counts",
-      "sha16": "51b9931c3530d5b7"
+      "sha16": "c8a08b277c37e2d0"
     },
     {
       "kind": "ar",
       "ref": "plan.json#/agent_readings",
-      "sha16": "51b9931c3530d5b7"
+      "sha16": "c8a08b277c37e2d0"
     },
     {
       "kind": "unresolved_diff",
       "ref": "verify.json",
-      "sha16": "aef6039d310fcd41"
+      "sha16": "8dc833b8612b9b60"
     },
     {
       "kind": "ops_commit",
-      "hash": "2824b74e5a16d789a7354ab68b479dbb78670378"
+      "hash": "400f958b96027dde8eb668fc10883fb0487a252d"
     }
   ],
   "domain_readings": {
@@ -55,5 +55,5 @@
   },
   "score_threshold": null,
   "mode": "loop-window",
-  "trigger_time": "2026-11-16T10:27:37.204989+00:00"
+  "trigger_time": "2026-11-16T11:40:17.110195+00:00"
 }

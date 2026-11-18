@@ -1,0 +1,65 @@
+{
+  "close_version": "1.0.0",
+  "run_id": "shift-W46-20261118T055326Z",
+  "from_week": "W46",
+  "to_week": "W47",
+  "upgrade_list_state": "extracted",
+  "upgrade_list": [],
+  "stage_artifact_notes": [
+    "preflight.json: pass",
+    "qualify.json: pass",
+    "plan.json: pass",
+    "dce.json: pass",
+    "verify.json: pass",
+    "score.json: pass",
+    "close.json: absent"
+  ],
+  "evidence": [
+    {
+      "stage_artifact": "preflight.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T055326Z/preflight.json",
+      "present": true,
+      "verdict": "pass"
+    },
+    {
+      "stage_artifact": "qualify.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T055326Z/qualify.json",
+      "present": true,
+      "verdict": "pass"
+    },
+    {
+      "stage_artifact": "plan.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T055326Z/plan.json",
+      "present": true,
+      "verdict": "pass"
+    },
+    {
+      "stage_artifact": "dce.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T055326Z/dce.json",
+      "present": true,
+      "verdict": "pass"
+    },
+    {
+      "stage_artifact": "verify.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T055326Z/verify.json",
+      "present": true,
+      "verdict": "pass"
+    },
+    {
+      "stage_artifact": "score.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T055326Z/score.json",
+      "present": true,
+      "verdict": "pass"
+    },
+    {
+      "stage_artifact": "manifest.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T055326Z/manifest.json",
+      "present": true,
+      "verdict": "unknown"
+    }
+  ],
+  "run_state": "stale",
+  "notify_target": "COS",
+  "verdict": "pass",
+  "check_time": "2026-11-18T05:54:06.307298+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "recycle_version": "1.0.0",
+  "run_id": "shift-W46-20261116T102656Z",
+  "round": 1,
+  "max_rounds": 3,
+  "quorum_required": 5,
+  "verdict": "converge",
+  "valid_seats": [
+    "COS",
+    "COO",
+    "CAO",
+    "CPO",
+    "CTO",
+    "CHO",
+    "CFO"
+  ],
+  "absent_seats": [],
+  "mismatch": [],
+  "domains": {
+    "machine": 59,
+    "duty_collection_dimB": 22.0,
+    "subjective_dimA": 4.0
+  },
+  "machine_families": {
+    "B": 9,
+    "C": 13,
+    "D": 9,
+    "E": 9,
+    "G": 19
+  },
+  "total": 85.0,
+  "threshold": 70.0,
+  "action_directive": "收敛段：关 loop 候 CEO 终认（控制面执行·r101 形）",
+  "check_time": "2026-11-18T03:58:41.027610+00:00"
+}

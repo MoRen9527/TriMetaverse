@@ -1,0 +1,28 @@
+{
+ "dim": "B",
+ "seat": "cfo",
+ "entries": [
+  {
+   "family_id": "A",
+   "verdict": "pass",
+   "weight": 9,
+   "rationale": "A 族 verdict_rule=首拍/预演同形·与基准 md5 对表全中（换形注①取 PATCH 后活体 command 值面）。河源活体复读 jobs.json 的 weekly-plane-shift payload.command：26 行/2936 字符/md5=09644869a812ed16579624cb3287a4f0，与 C 族修形现役基准（12:46:03+08 PATCH 后 STE 核验门河源抽验同值）逐字全中；state.nextRunAtMs=1795362600000（11-22 23:50 CST 非空滚动）、enabled=true、consecutiveErrors=0；本跑 10:26:56Z 实际执行 command 为同串 W46/W47/2026-11-16 展开形（26 行/2804 字符/md5=9941c61a8151fb17b3bf2b88a87fc806），属模板/展开两态，非另一 job 或判据错配。qualify 五断言全 ok、trap EXIT shift_notify_fail 兜底行与 RC=0/||RC=$? guard 均在 payload 内、healthz cron_enabled=true。r119c 卷载 7accfca1 系 PATCH 前旧值/文件级口径残面，按注①不采。r106 分列：plan counts 0/34/2、agent_readings 42 与 A 族值面不矛盾；34 keep 中 24 件机械兜底（15 malformed+9 skipped_over_limit）属维度 A/I1 语义判读面，不并入 A 族。A 判 pass。",
+   "evidence_ref": "score.json#/score.families[0].reasons; qualify.json#/assertions; preflight.json#/assertions.healthz; plan.json#/counts; plan.json#/agent_readings; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-56-272Z.log; ../../../../../../srv/fleet/TriRMC/data/cron/jobs.json#/jobs/9c81c7ec-ed76-4489-98c0-81c6601f541b/payload/command"
+  },
+  {
+   "family_id": "F",
+   "verdict": "pass",
+   "weight": 13,
+   "rationale": "F 族 verdict_rule=T1-3/F2 免评分母（F2_ZERO_TRIGGER_FULL_SCORE=true·成跑零触发=满分）。本跑 10:26:56Z 成跑，cron 日志 RESULT: exit code 0；全日志 shift_notify_fail 仅出现于 trap 命令文本、无实际触发行，notify_done.run_state=ok/status=sent、close.verdict=pass、manifest.run_state=ok、rubric_report f2_zero_trigger_full_score=true；arrival.json=2026-11-16T10:27:37Z 距拍点 41s≤2h（CPO-011 N=2h·grace 35min⊂2h）。零触发行使 RUN_ID/时延面为空集而非缺失。dce push 段先报 cannot rebase: You have unstaged changes，随即 fallback merge 收口、ops commit 2824b74e5 rc=0 落地，trap/回滚分支可执行。另 10:26:23Z cron-sunday 拦停轮为另一 run（preflight week_math=not Sunday·exit 2），其 trap 告警 subject 未带 RUN_ID 属别 run 触发分支留痕残面候勘，不改变本跑成跑零触发 F2 满分形。F 判 pass。",
+   "evidence_ref": "notify_done.json#/run_state; notify_done.json#/notify_result.status; close.json#/verdict; manifest.json#/run_state; arrival.json; rubric_report.json#/f2_zero_trigger_full_score; dce.json#/steps[3].stderr_tail; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-56-272Z.log; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-16T10-26-23-473Z.log"
+  },
+  {
+   "family_id": "H",
+   "verdict": "fail",
+   "weight": 9,
+   "rationale": "H 族 verdict_rule=首拍=值守窗断言形（23:45 前置 dive diverging 读数+到岗窗拍频覆盖+00:25 告警窗）；预演=如实记录形（预演值守窗起讫实录）。本跑为 loop-window 轮，H 族无 loop 增补注（对照 B 族注③），考卷未授权把首拍断言形改判为 loop 记录形；即便按预演如实记录形，亦无值守窗起讫实录。三要素均无本跑实锚：①preflight.assertions.diverge 仅 git left=0/right=0/verdict=synced 同步面，非 23:45 dive 读数，run_dir 无 dive 卷；②patrol 三拍 10:23:34/10:28:35/10:33:35 虽 exit 0，但 stdout 均为 no ledger/windows found (idle)，W46/W47 window-ledger.md 缺位，拍频空转非到岗窗覆盖；③arrival.json 仅 2026-11-16T10:27:37Z 到岗时戳，无 00:25 告警窗。plan counts 0/34/2 与 verify 4/4 pass 仅证迁移面，verify.json 仅 4 项结构检查、无 ar/unresolved diff 明细，dce.overflow_checks 三项 checked=false 仅骨架声明，不能补值守窗空场。r119c 重采卷 H 判 pass 所引「dive 卷+拍频档」在本跑日志无对应非 idle 读数、不可复核，不采。H 判 fail。",
+   "evidence_ref": "preflight.json#/assertions.diverge; preflight.json#/assertions.week_math; plan.json#/counts; plan.json#/agent_readings; verify.json#/checks; arrival.json; dce.json#/overflow_checks; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-23-34-895Z.log; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-28-35-059Z.log; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-16T10-33-35-141Z.log"
+  }
+ ],
+ "check_time": "2026-11-18T03:56:52Z"
+}
