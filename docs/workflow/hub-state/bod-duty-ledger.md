@@ -4705,3 +4705,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - notice-191 流转 duty-cos（20:51+0800·拾取三验齐）·三款分诊：款一→CTO 面执行·款二→COO 拆树排期·款三→照录生效。
 - 锚笔第 195 轮+idle-watch-state last_notice=191 落讫。
 - 归档锚 2026-11-18T20:51:07+0800。
+
+### ㊿+599 · ns2 直跑毕全链 PASS·market 空集反转荐·形态张力候 CEO 复核（2026-11-18T21:02+0800）
+
+- **ns2（第 13 轮）提前直跑毕·全链 PASS**（r591d 里程碑拍·notice-189 款二 CEO 裁兑现）：run=shift-W46-20261118T124206Z·13 件族全落·七段 verdict 全 pass（preflight/qualify/plan/dce/verify/score/close）。**WP 新形活体首实锚**：plan 1.2.0（42 readings 零 null｜reconciliation 零差额 34+8=42 平｜两批全进+失败率告警 live）+verify 1.1.0 红闸+close 1.1.0（self_artifact 消除+hash 全载）——ns1 揪出三短板（机械兜底充数/单批无取舍/留痕无肉）修复面活体实证。触发车道五拍实录（幽灵绿陷阱 D-52 防线拦→WP4 PATCH 笔丢 cwd→缓存面拒→全量形过→L15 死线炸 D-61 款2 实证→untracked 冲突修→12:42Z 第五拍 PASS）。残面三件如实（WP7 时点语义候笔/幽灵绿新形态 EXIT trap rc 覆盖·daemon lastRunStatus 失真候 CTO/CAO/SMTP 告警本职非误报）。**next=判卷段（Score/Close Skill·7 席联审）→verdict 停点呈批链候 CEO 融合裁**。
+- **market 勘形毕=机制级空集**（CTO 卷 827baac8f）：dsh market 机制=用户自配索引阅读器（零默认源·官方零内建索引·装内零 market 组件）——tui 包「市场内有无」机制内无解；擅配第三方索引=供应链面新增不裁。ZERO 装行动达成·tui 骨架回滚毕（profiles 复原四现役·190 副作用全清）。
+- **改道澄清+节 1 反转荐**：改道真形=web 面板 session history 视图（现役原生能力·零挂件零重启零装）——「内置终端」系交互件非查看件。**实勘勘正：ns1 14/14 会话单槽位（r-duty-cos workspace 单槽·联审 7 席会话全记 COS 名下）→单实例 web face 根置 run 目录即可见全部 14 会话**——CTO 卷 a⑥「散布七席 workspace」源读推断被 ns1 实况推翻。**形态张力候 CEO 复核**：维持定谳 A（七实例·未来每席 workspace 各有会话时全景价值）or 改单实例形（一端口看全 14·零施工）。附勘：CAO#1 uuid 转达笔误勘正采认（2de2ff74→实锚 2de7ff74·notice-189 原文正确）。
+- **七席全景 A 拆树流转毕**（r592d）：COO 拆树 ffd45f3a6 三节排面（节1 CTO 勘定已转 6cd19ad2/节2 河源直办链施工先例 146 形/节3 回执+token 带外交付）·COS 核读 PASS·**候 BOD 面=直办链在场快核（146 先例形机制面在档确认·实操随节 2 deploy 件落位）**·断链判据 24h/24h/12h。形随 CEO 复核裁走。
+- 归档锚 2026-11-18T21:02+0800。
