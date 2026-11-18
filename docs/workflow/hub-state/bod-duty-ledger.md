@@ -4849,3 +4849,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+627 · job1 03:13 拍归档一行（2026-11-19T03:13+0800）
 
 - 03:07 拍：四口稳（8713 pwr 70% ac=true 充电中·notifyFailures=1 持平单次·8711 follow 恢复 following/none·MMC 243 微涨）；SDE 门仍挂（态不明同形 3h+·值席忙聚合处置候）；全席余候令·值席 aggregate 直跑 02:49 勘形后 turn 在途（r610d 报点候）。免勘免通报。
+
+### ㊿+628 · job2 03:29 拍·ns3 终形+notice-204（2026-11-19T03:32+0800·r86 硬序必报）
+
+- **ns3 终形（r86 硬序必报）**：per_seat=[94,94,92,88,86,61,82.5]·seven_seat_average=85.36<95·verdict=loop_next·improvement 7 席 14 条零排除·②路授权聚合毕落位验真（值席直跑·脚本 dry 形不读已落 sheet 缺口=A2 自揪新增实证）——呈批件落树候 CEO 融合裁（进 ns4 带等待点首用/关 loop terminate 首用候选/融合形）。
+
+- SDE 门根因勘定=git commit approval 门（ns3 镜像 dump commit 步）——/clear 重置清 allowlist 记忆（满容窗序副作用）·挂 3.5h+。notice-204 裁：不直答（peer 代答权限=permission laundering 禁忌）·准照席启动纪律重启 SDE 清门+镜像 commit 补跑（r208 轮·拾取验 Crafting 在跑）。
+
+- 本机睡眠窗告警：02:57-03:14Z+8=北京 02:57~03:14 睡 18min（Kernel-Power 506/507·TriMLC 事件订阅捕获）——tick 缺拍段登记（02:37 拍缺实锚·03:07 拍时戳落在窗内=daemon 补写形疑·观察项）·盲区如实注；值守机接电后 Adaptive Standby 仍触发窗=观察项呈 CEO（接电面已解·睡眠窗机制候勘）。FSD hub-silent-detect 信（lg075 条目 anchor-error·git log ETIMEDOUT）单条观察项。
