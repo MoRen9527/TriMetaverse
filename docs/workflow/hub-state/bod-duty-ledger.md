@@ -4785,3 +4785,7 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **CEO 定谳细化**（22:21:13）：plan-skill/score-skill/close-skill 三段**启动本体一律脚本化 spawn**（同 convene 现役形）·**顺序严格按 fade 规范顺序**·程序化工作流式执行——十阶段全程（CLI+Skill 段）runner 管道串联自动推进·段间发起零 agent 参与·agent 只做段内判读。
 - notice-198 流转 duty-cos（22:21+0800·拾取 Boondoggling·三验齐）·施工要点四项落 WP9 增量：①三段 spawn 脚本化（复用 convene 形）②fade 顺序硬串行（段 N+1 前置断言=段 N 落卷真值·禁跳段乱序）③启动装配面全程序化（SDE 装配动作退役·195/196/197 链缺口根修）④skill 判读产出回管道落卷衔接（段间交接真值校验）。
 - ns2 在飞照走不扰。锚笔第 202 轮+state last_notice=198 落讫。归档锚 2026-11-18T22:21:32+0800。
+
+### ㊿+612 · job2 22:31 拍归档一行（2026-11-18T22:32+0800）
+
+- ns2 判卷 seats 8 件齐：4 席评分卷出（cao/cos/coo/cpo）+3 席 absent 注记（cfo/cho/cto·缺席注语义候值席定性随 verdict）——聚合段候·verdict 未出（现档仅 ns1 旧卷）。值席监督在役免扰。22:57 醒验 verdict 已排。
