@@ -1,0 +1,22 @@
+{
+ "new_structure_verdict_face": {
+  "objective_machine": 65,
+  "per_seat_totals": [
+   79.0,
+   86.17,
+   79.0,
+   86.0,
+   79.0,
+   79.0,
+   79.0
+  ],
+  "seven_seat_average": 81.02,
+  "threshold": 95,
+  "verdict": "loop_next",
+  "语义": "≥95（含 95.0）跳出 loop·否则进下一轮（notice-180 裁二·两面分立零互折）",
+  "勘定映射注": "旧 caps 席评→新 caps 百分比位映射（COS initial 先例形承）",
+  "run_id": "shift-W46-20261118T055326Z",
+  "round_label": "新结构首轮（r1 存档收口后继轮·loop 未关闭承启）",
+  "check_time": "2026-11-18T06:5xZ（D-47 现查）"
+ }
+}

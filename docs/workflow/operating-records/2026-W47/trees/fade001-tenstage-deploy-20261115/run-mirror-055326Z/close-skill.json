@@ -1,0 +1,30 @@
+{
+ "close_skill_version": "1.0.0-ns1",
+ "run_id": "shift-W46-20261118T055326Z",
+ "stage_face": "close-skill",
+ "score_skill_ref": "run_dir/score-skill.json（final 21/35·主观面 60%）",
+ "divergence_review": {
+  "triggered": true,
+  "review": "I3 三档复核毕（score-skill.json divergence_review·COO 三发现亲验全载）"
+ },
+ "final_verdict": {
+  "I1": 8,
+  "I2": 8,
+  "I3": 5,
+  "basis": "复核收敛面（COO joint 采信＋矛盾面扣＋正面承·终值 21/35=60%）"
+ },
+ "close_face": {
+  "evidence_quads_check": "7/7 全 present·路径可复核 ✓（正面）",
+  "upgrade_list_judgment": "upgrade_list=[]＋upgrade_list_state=extracted（实判态在卷=正面）；实判面终勘：空判成立但实判宇宙不全——keep 34 vs readings 42 八活件差额未入实判域（r1 缺陷②持续·实判对残缺清单执行=形式成立实质受限）",
+  "hard_clock_chain": "未落卷（r1 缺陷④持续）——拍点 05:53:26Z 相对 11-15 23:50 硬时钟换形授权链仍缺·改善意见面载入",
+  "readings_vs_list": "34 vs 42·24 件族属轨迹差额＋32 三无裸件（COO 勘·持续面）"
+ },
+ "state_word": "APPROVED",
+ "state_word_note": "APPROVED 附缺陷清单随改善意见面流转——machine 链七段 pass 真值承·矛盾面/裸件面/授权链缺=loop 下一轮改进输入·非本轮 RETRY 触发面（95=判定线非质量目标线·主观低分不单独触发 RETRY 承录）",
+ "loop_handoff": {
+  "seven_seat_review": "尾段 convene 在飞（改善意见必付 gate 形 O3/9bb3acc 承）",
+  "threshold": 95,
+  "semantics": "判进/出=7 席联审平均分≥95 跳出 loop 否则下一轮（notice-180 裁②·两面分立：fade-001 卷面 100 制/联审平均分制）"
+ },
+ "check_time": "2026-11-18T06:13:31Z"
+}

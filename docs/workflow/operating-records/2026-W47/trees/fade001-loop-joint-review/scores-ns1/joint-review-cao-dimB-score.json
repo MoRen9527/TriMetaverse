@@ -1,0 +1,42 @@
+{
+ "dim": "B",
+ "seat": "cao",
+ "entries": [
+  {
+   "family_id": "A",
+   "verdict": "pass",
+   "weight": 9,
+   "rationale": "verdict_rule 对表（首拍/预演同形=与基准 md5 对表全中；换形注①取 PATCH 后活体 command 字段值面，禁文件级/旧 vB 基准互判）。CAO 留痕面：本跑 score.json A 族 reasons 保留换形注与旧引文（vB 4f990e/1794757800000），按注①以 PATCH 后活体值为准——活体 jobs.json 的 weekly-plane-shift payload.command=26 行/2936 字符/md5=09644869a812ed16579624cb3287a4f0，与 C 族修形现役基准逐字全中；state.nextRunAtMs=1795362600000（2026-11-22T15:50Z=11-22 23:50 CST）非空滚动，enabled=true、lastRunStatus=ok、consecutiveErrors=0、runCount=41；qualify 五断言全 ok、trap 的 shift_notify_fail 兜底行与 RC=0/||RC=$? guard 均在 payload 内、healthz cron_enabled=true。r119c 卷载 7accfca1 与当前文件级 md5 8172c76b 亦不符，属旧/文件级口径残面，按注①不采；判卷操作按 D-47 时点与 run_dir 相对指针落卷。按 r106 分立形，本卷只判 A/F/H 三族二值，不折入 dim A 的 I1/I2/I3 判分（两维禁混打）。A 判 pass。",
+   "evidence_ref": "score.json#/score.families[0].reasons; qualify.json#/assertions; preflight.json#/assertions.healthz; plan.json#/counts; ../../../../../../srv/fleet/TriRMC/data/cron/jobs.json#/jobs/9c81c7ec-ed76-4489-98c0-81c6601f541b/payload/command; ../../../../../../srv/fleet/TriRMC/data/cron/jobs.json#/jobs/9c81c7ec-ed76-4489-98c0-81c6601f541b/state"
+  },
+  {
+   "family_id": "F",
+   "verdict": "pass",
+   "weight": 13,
+   "rationale": "verdict_rule 对表（T1-3/F2 免评分母·成跑零触发=满分）：本跑 05:53:26Z 成跑，主日志 RESULT exit code 0；全日志 shift_notify_fail 仅出现于 trap 命令文本、无实际触发行；notify_done run_state=ok/status=sent、close.verdict=pass、manifest.run_state=ok、rubric_report f2_zero_trigger_full_score=true；arrival.json=2026-11-18T05:54:08Z 距拍点约 41s≤2h（CPO-011 N=2h·grace 35min⊂2h）。CAO 留痕面：告警链失败分支未在本跑触发，但 054826 败跑轮 dce pull rc=1/verdict=fail 却以 RESULT exit code 0 收尾、未触发 shift_notify_fail，属另一 run 的触发分支静默残面，已入改善意见；按 F2 免评分母，本跑成跑零触发形态判 pass，不以此改判。",
+   "evidence_ref": "notify_done.json#/run_state; notify_done.json#/notify_result.status; close.json#/verdict; manifest.json#/run_state; arrival.json; rubric_report.json#/f2_zero_trigger_full_score; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-18T05-53-26-918Z.log; ../shift-W46-20261118T054826Z/dce.json#/verdict; ../shift-W46-20261118T054826Z/dce.json#/failed_step"
+  },
+  {
+   "family_id": "H",
+   "verdict": "fail",
+   "weight": 9,
+   "rationale": "verdict_rule 对表（H=首拍值守窗断言形：23:45 前置 dive diverging 读数+到岗窗拍频覆盖+00:25 告警窗；预演=如实记录形）。CAO 门禁面：本跑为 2026-11-18T05:53:26Z loop-window 轮（preflight week_math mode=loop-window/loop_source=marker），非 23:50 首拍、非预演；H 族 special_clause 无 loop 增补注（对比 B 族注③），考卷未授权把首拍断言形改判为 loop 记录形；r119c 重采卷以『dive 卷+拍频档』判 H=pass，但其为另跑/旧读数，不能替代本跑值面，且 CTO dive 终判只迁移 dive 判读对象、不及 H 的到岗窗拍频覆盖与 00:25 告警窗——该改窗无 H 族判据授权，按门禁 fail-closed 不采。三要素本跑均无实锚：①preflight.assertions.diverge 仅 git left=0/right=0/verdict=synced，非 23:45 dive 读数，run_dir 无本跑 dive 卷；②到岗窗拍频 05:44:41/05:49:41/05:54:41 三拍虽 exit 0，但 stdout 均为 no ledger/windows found (idle)，W46/W47 window-ledger.md 缺位，拍频空转非覆盖；③无 00:25 告警窗，arrival.json 仅 05:54:08Z 到岗时戳。本席另对 W46/W47 unresolved-items 实 diff=0（IDENTICAL；plan.other_unresolved_count=15），该面仅对应 CTO dive 检查单④；但 verify.json 未落 items[]/diff 明细（migrate=0 使对表项为空），且 plan counts 0/34/2 与 verify 4/4 pass 仅证迁移面，不能补 H 的①23:45 dive 读数、②拍频覆盖、③00:25 告警窗。H 判 fail。",
+   "evidence_ref": "preflight.json#/assertions.week_math; preflight.json#/assertions.diverge; arrival.json; verify.json#/checks; plan.json#/counts; plan.json#/other_unresolved_count; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-18T05-44-41-301Z.log; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-18T05-49-41-397Z.log; ../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-18T05-54-41-492Z.log; ../../../../../../srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W46/OP-202611-W46-001.unresolved-items.md; ../../../../../../srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W47/OP-202611-W47-001.unresolved-items.md"
+  }
+ ],
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "CAO 审计面：本拍迁移判断留痕不可复核，未达『记录随周封存/活随人带走』的可审计形。①plan counts 0 migrate/34 keep/2 carry 与 agent_readings 42 条错位，8 个顶层活件（.shift-ade.json、OP-202611-W46-001.json、OP-202611-W46-001.unresolved-items.md、cfo-quota-daily-w46.md、company-demand-pool.md、daily-progress.md、scoring-ledger-w46.md、task-inventory-20261115.md）仅记 failed_fallback『file entry missing（零动作候人工）』，既未入 keep/migrate/carry，也无逐件去向与判据；②34 keep 中 24 件为机械兜底（15 agent_output_malformed+9 skipped_over_limit），10 件 scatter_file_archive；annotation/confidence 42/42=null，无逐案『记录/活』标签与 evidence 指针；③verify.json 仅 4 项 checks，无 items[]/unresolved diff 明细，migrate=0 使对表项为空；本席另核 W46/W47 unresolved-items 实 diff=0（IDENTICAL），但该核对未随卷落 items[]/diff 明细，留痕仍不可由 run_dir 单独复核；④dce.overflow_checks 三项 checked=false，仅骨架声明；push 段先报 cannot rebase 后 fallback merge 收口，plan/close 未落异常处置与责任席。建议下一轮出逐案对账表（记录/活标签+一句理由+evidence hash）、8 活件逐件落 dst 或 pending_reason、慢道 15 上界对 24 待判的缺面影响/重试/候裁/升级分支、verify items 与 plan counts 对表、overflow 三检实演后落卷，并把 push 异常处置写入 close。",
+   "evidence_ref": "plan.json#/counts; plan.json#/keep; plan.json#/agent_readings; plan.json#/carry_over; verify.json#/checks; dce.json#/overflow_checks; dce.json#/steps[3].stderr_tail; close.json#/run_state; manifest.json#/stages",
+   "check_time": "2026-11-18T06:18:30Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "CAO 门禁面：①H 族考卷只有首拍断言形/预演如实记录形，无 loop-window 增补注（B 族有注③），导致 05:53Z loop 轮无 23:45 dive、无 00:25 告警窗、W46/W47 window-ledger.md 缺位时 patrol 只能空转；r119c 重采卷以另跑 dive/拍频档判 H=pass，属未经 H 族判据授权的改窗，按门禁纪律不可采——应补 STE/CTO 授权的 H 族 loop 判据与值守窗起讫实录后再改窗。②run_dir 无 collection-score.json，joint-review-trigger.domain_readings.duty_collection=pending，A/F/H 值席采集面未随跑落卷；trigger 的 dim_b 材料只有 counts/ar/verify/commit 指针，collection 试卷二值制的消费链断。③close.run_state=stale、stage_artifact_notes 自记『close.json: absent』、evidence[6].verdict=unknown，与 manifest.run_state=ok/stages.close=pass 同拍两读；score G 族称 verify items 对表而 verify.json 只有 checks。④告警链：054826 败跑轮 dce pull rc=1/verdict=fail 却以 RESULT exit code 0 收尾、shift_notify_fail 应触发未触发，证明止损分支对中段失败不可执行；本跑 notify_result.to/cc=[] 使收件箱到达读数不可复核。建议：补 H loop 判据与值守窗实录；collection-score 按试卷二值制随跑落卷并与 trigger 消费对表；close/manifest 单值收口；修链尾使 dce/verify/score/close 任一失败传播到 EXIT trap，告警文案带 RUN_ID、时延≤2h。",
+   "evidence_ref": "preflight.json#/assertions.week_math; joint-review-trigger.json#/domain_readings; close.json#/run_state; close.json#/stage_artifact_notes; close.json#/evidence[6]; manifest.json#/run_state; manifest.json#/stages; verify.json#/checks; score.json#/score.families[6].reasons; notify_done.json#/notify_result; ../shift-W46-20261118T054826Z/dce.json#/verdict; ../shift-W46-20261118T054826Z/dce.json#/failed_step; ../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-18T05-48-26-204Z.log",
+   "check_time": "2026-11-18T06:18:30Z"
+  }
+ ],
+ "check_time": "2026-11-18T06:18:30Z"
+}

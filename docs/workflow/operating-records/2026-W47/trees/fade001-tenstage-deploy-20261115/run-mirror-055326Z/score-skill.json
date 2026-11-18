@@ -1,0 +1,72 @@
+{
+ "score_version": "2.0.0-ns1",
+ "run_id": "shift-W46-20261118T055326Z",
+ "stage_face": "score-skill",
+ "entries": [
+  {
+   "criterion": "I1 搬移清单判断正确性",
+   "score": 8,
+   "rationale": "终判=8（初 7→采 COO joint 8）：counts/幂等机器面（bidirectional_ok=True·counts 0/34/2 自洽）正面承＋划界锚判读主体对（记录/活）＋断链面（readings↔清单 24 件差额）如实扣归 I3 深勘——收敛取 8。",
+   "evidence_ref": "plan.json#/counts + #/bidirectional_ok + run-mirror-055326Z/plan.json#agent_readings"
+  },
+  {
+   "criterion": "I2 规划合理度",
+   "score": 8,
+   "rationale": "终判=8（初 7→采 COO joint 8）：结构/自检/batch 面（dce execute 序 rc=0·preflight 门·carry_over 预案）过面＋对表缺口属自洽性扣（归 I3）——收敛取 8。",
+   "evidence_ref": "dce.json#/steps + preflight.json + #/carry_over"
+  },
+  {
+   "criterion": "I3 判断留痕质量",
+   "score": 5,
+   "rationale": "终判=5（初 7→复核 5·COO 4→5）：COO 矛盾面亲验成立为扣（run_state 双面矛盾＋notes 自指＋32 裸件批量留痕缺——留痕质量核心失败）；正面面承（evidence 7 四元组全 present＋双时点戳＋upgrade_list_state=extracted 实判态）——两面平衡取 5/10（50%）。",
+   "evidence_ref": "manifest.json#/run_state(ok) vs close.json#/run_state(stale) + close.json#/stage_artifact_notes + run-mirror-055326Z/close.json"
+  }
+ ],
+ "judge_faces": {
+  "initial": {
+   "seat": "m-duty-cos",
+   "scores": {
+    "I1": 7,
+    "I2": 7,
+    "I3": 7
+   },
+   "note": "21/35（新 100 制·check_time 06:04:04Z）"
+  },
+  "joint": [
+   {
+    "seat": "m-duty-coo",
+    "scores": {
+     "I1": 8,
+     "I2": 8,
+     "I3": 4
+    },
+    "note": "20/35·镜像判卷 06:11:24Z（净形勘正件承）"
+   }
+  ],
+  "final": {
+   "seat": "m-duty-cos",
+   "scores": {
+    "I1": 8,
+    "I2": 8,
+    "I3": 5
+   },
+   "divergence_review": {
+    "triggered": true,
+    "basis": "I3 初判 7 vs COO joint 4=3 档≥2 强制复核（I1/I2 各 1 档零触发）",
+    "review": "COO 两新发现亲验全成立：①close run_state=stale vs manifest run_state=ok 同 run 双面矛盾（manifest 05:54:06Z ok/close stale 两面在卷）②stage_artifact_notes「close.json: absent」自指矛盾（卷在而 notes 自载 absent——r1 同形面重现确认）③failed_fallback 32 件三无裸件（family/annotation/confidence 全空——与本席 annotation=0×42 勘验一致）。初判 7 分证据面亦 real：evidence 7 四元组全 present 路径可复核＋双时点戳＋upgrade_list_state=extracted 实判态在卷。复核结论=COO 矛盾面为 I3 核心扣项（重于个别断链）·初判指针正面面为承——终值取两面平衡 5/10。",
+    "final_scores_basis": "I1=8（采 COO：counts/幂等机器面 real·断链面归 I3 扣——一档收敛取高有据）；I2=8（采 COO：结构/自检/batch 面过·对表缺口属自洽性扣归 I3）；I3=5（复核改判·矛盾面扣＋正面面承两面平衡）"
+   }
+  }
+ },
+ "weight_face": {
+  "objective_machine": 65,
+  "subjective_i_family": {
+   "I1": 14,
+   "I2": 11,
+   "I3": 10
+  },
+  "total_basis": 100,
+  "anchor": "notice-180 裁①＋COS 勘定卷 §一"
+ },
+ "check_time": "2026-11-18T06:13:31Z"
+}

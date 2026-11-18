@@ -1,0 +1,42 @@
+{
+ "dim": "B",
+ "seat": "cto",
+ "entries": [
+  {
+   "family_id": "A",
+   "verdict": "pass",
+   "weight": 9,
+   "rationale": "A 族 verdict_rule 对表（与基准 md5 全中·换形注①取 PATCH 后活体 command 值面）：活体复读 jobs.json 的 weekly-plane-shift payload.command=26 行/2936 字符/md5=09644869a812ed16579624cb3287a4f0，与 C 族修形现役基准（STE 核验门 12:46:03+08 PATCH 后河源抽验同值）逐字全中；state.nextRunAtMs=1795362600000（2026-11-22T15:50Z=11-22 23:50 CST）非空滚动，enabled=true、lastRunStatus=ok、consecutiveErrors=0、runCount=41；qualify 五断言全 ok、trap 的 shift_notify_fail 兜底行与 RC=0/||RC=$? guard 均在 payload 内、healthz cron_enabled=true。score.json A reasons 内 vB 4f990e/1794757800000 系换形注旧引文/旧硬时钟，非本跑活体读数，按注①不采；r119c 卷载 7accfca1 属旧/文件级口径残面不采。CTO 技术面：payload 零手工漂移、nextRunAtMs 硬时钟未被本拍改写；但链尾 || true 使中段失败不触发 EXIT trap（054826 实锚：dce pull rc=1/verdict=fail 而 RESULT exit 0、无告警），属链级 fail-open，不属 A 族 md5+next+在位判据，列入改善意见。34 keep 中 24 件机械兜底+8 顶层件差额属维度 A/I1，按 r106 分立不混打。A 判 pass。",
+   "evidence_ref": "score.json#/score.families[0].reasons;qualify.json#/assertions;preflight.json#/assertions.healthz;plan.json#/counts;plan.json#/keep;plan.json#/carry_over;../../../../../../srv/fleet/TriRMC/data/cron/jobs.json#/jobs/9c81c7ec-ed76-4489-98c0-81c6601f541b/payload/command;../../../../../../srv/fleet/TriRMC/data/cron/jobs.json#/jobs/9c81c7ec-ed76-4489-98c0-81c6601f541b/state;../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-18T05-53-26-918Z.log"
+  },
+  {
+   "family_id": "F",
+   "verdict": "pass",
+   "weight": 13,
+   "rationale": "F 族 verdict_rule 对表（T1-3/F2 免评分母·成跑零触发=满分）：本跑 2026-11-18T05:53:26Z 成跑，主日志 RESULT exit code 0；本跑主日志无 shift_notify_fail 实触发行（仅 trap 命令文本）；notify_done.run_state=ok/status=sent、close.verdict=pass、manifest.run_state=ok/stages.close=pass、rubric_report.f2_zero_trigger_full_score=true；arrival.json=2026-11-18T05:54:08Z 距拍点约 41s≤2h（CPO-011 N=2h·grace 35min⊂2h），零触发行使 RUN_ID/时延面为空集非缺失。CTO 降级链面残面如实：①054656 前置 preflight fail exit=2 时 trap 实弹发送成功，证明告警入口可执行，但 shift_notify_fail 文案固定 exit 码+日期、未带 RUN_ID，T1-3 traceable 面未闭合；②054826 dce pull rc=1/verdict=fail 被链尾 || true 吞成 RESULT exit 0、无告警（fail-open）；③本跑 notify_result.to/cc=[] 使收件箱到达读数不可复核。上述属本跑零触发以外的触发分支/链级缺陷，按 F2 免评分母不改判本跑。F 判 pass。",
+   "evidence_ref": "notify_done.json#/run_state;notify_done.json#/notify_result.status;close.json#/verdict;manifest.json#/run_state;manifest.json#/stages;rubric_report.json#/f2_zero_trigger_full_score;arrival.json;../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-18T05-53-26-918Z.log;../shift-W46-20261118T054826Z/dce.json#/verdict;../shift-W46-20261118T054826Z/dce.json#/failed_step;../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-18T05-48-26-204Z.log;../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-18T05-46-56-059Z.log;../../../../../../srv/fleet/TriCompany/runtime/cognition/shift_notify_fail.py"
+  },
+  {
+   "family_id": "H",
+   "verdict": "fail",
+   "weight": 9,
+   "rationale": "H 族 verdict_rule 对表（首拍=值守窗断言形；预演=如实记录形）：本跑为 2026-11-18T05:53:26Z loop-window 轮（preflight week_math.mode=loop-window/loop_source=marker），非 23:50 首拍、非预演；H 族 special_clause 无 loop 增补注（对比 B 族注③），考卷未授权把首拍断言形改判为记录形；r119c 重采卷以另跑/旧读数判 H=pass，不能替代本跑值面，且 CTO dive 终判仅迁移 dive 判读对象（四行检查单），不及 H 的拍频覆盖与 00:25 告警窗。三要素本跑均无实锚：①preflight.assertions.diverge 仅 git left=0/right=0/verdict=synced 同步面，非 23:45 前置 dive 读数，run_dir 无本跑 dive 卷；②到岗窗拍频 05:44:41/05:49:41/05:54:41 三拍虽 exit 0，但 stdout 均为 no ledger/windows found (idle)，W46/W47 window-ledger.md 缺位，拍频空转非覆盖；③无 00:25 告警窗，arrival.json 仅 05:54:08Z 到岗时戳。verify.json 仅 4 项结构 checks、无 items[]/unresolved diff 明细，plan counts 0/34/2 仅证迁移面，不能补 H 空场。按首拍断言形 H 判 fail；按预演如实记录形亦无值守窗起讫实录，仍 fail。",
+   "evidence_ref": "preflight.json#/assertions.week_math;preflight.json#/assertions.diverge;arrival.json;verify.json#/checks;plan.json#/counts;plan.json#/other_unresolved_count;score.json#/score.families[7].reasons;../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-18T05-44-41-301Z.log;../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-18T05-49-41-397Z.log;../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-18T05-54-41-492Z.log"
+  }
+ ],
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "CTO 技术风险面三查：①链级 fail-open 必须修——payload 末尾 joint_review_trigger ... || true && date 因 &&/|| 左结合把整条链的失败吞成 0，054826 实锚 dce pull rc=1/verdict=fail 仍 RESULT exit 0、无 shift_notify_fail、无 verify.json 却写 arrival.json；建议把 || true 收窄到 joint_review_trigger 单命令，链尾加显式 RC 检查与 exit，并对 dce.verdict=fail 强制停段+告警。②批次清账——34 keep 中 24 件机械兜底（15 malformed+9 skipped_over_limit）、annotation 42/42=null，8 个顶层活件（company-demand-pool/daily-progress/task-inventory-20261115/scoring-ledger-w46/cfo-quota-daily-w46/OP 两件/.shift-ade）plan_family=keep 却不在 keep 清单，counts 34 对 readings 42；建议逐案补记录/活标签+理由+指针，加 keep/migrate/carry/limbo 四项平账闸与 11-15 23:50 硬时钟排序、重试/候裁/升级分支。③预案与终态——dce.overflow_checks 3/3 checked=false 仍 verdict=pass，push 段 cannot rebase 靠 fallback merge 收口但 close 未记异常处置；建议三项实测回填、push 异常入 close 并载责任席+回滚验证，H 值守窗补 dive 卷、patrol ledger 与 00:25 告警窗。",
+   "evidence_ref": "dce.json#/steps[3].stderr_tail;dce.json#/overflow_checks;plan.json#/counts;plan.json#/agent_readings;plan.json#/keep;plan.json#/other_unresolved_count;../shift-W46-20261118T054826Z/dce.json#/verdict;../shift-W46-20261118T054826Z/dce.json#/failed_step;../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-18T05-48-26-204Z.log;preflight.json#/assertions.week_math;../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-18T05-44-41-301Z.log;../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-18T05-49-41-397Z.log;../../logs/dbc9229f-be7f-4d57-bcd8-6f042e59a712__2026-11-18T05-54-41-492Z.log",
+   "check_time": "2026-11-18T06:33:00Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "loop 卷面/采集面五项：①H 族 rubric 只有首拍断言形/预演如实记录形，无 loop-window 增补注（B 族有注③），05:53Z loop 轮 H 无判据可裁；建议补 H loop 判据或明确 N/A/defer 语义，并把值守窗起讫实录列必填。②collection 证据未随跑落卷——joint-review-trigger.domain_readings.duty_collection=pending，run_dir 无 collection-score.json，dim_b 材料仅 counts/ar/verify/commit 指针，A/F/H 全靠值席外部活体探读，易跨跑误引（r119c 旧卷 H=pass 即例）；建议 run_dir 落 collection-score.json（A/F/H 逐条 verdict/rationale/evidence+材料 sha16+check_time），并把 jobs.json 活体 md5、alarm 触发行计数、dive/patrol 读数快照一并入卷。③verify 面名实不符——verify.json 仅 4 项结构 checks，无 items[]/unresolved diff 明细，score G 却称 verify items 对表零 missing，trigger 的 unresolved_diff 也指向 verify.json；建议增 items[]/landed/missing 与 ar/unresolved diff 摘要，字段同名同值。④告警链 traceable 未闭合——shift_notify_fail subject 固定 exit 码+日期、无 RUN_ID，054826 中段失败被链尾 || true 吞掉；建议文案带 run id/stage、失败传播到 EXIT trap、到达时延≤2h 入卷。⑤close/manifest 单值收口——close.run_state=stale、stage_artifact_notes 自记 close.json: absent、evidence[6].verdict=unknown 与 manifest.run_state=ok/stages.close=pass 同拍两读；建议同源生成+一致性断言，不一致即 fail-closed。",
+   "evidence_ref": "joint-review-trigger.json#/domain_readings;verify.json#/checks;score.json#/score.families[6].reasons;close.json#/run_state;close.json#/stage_artifact_notes;close.json#/evidence;manifest.json#/run_state;manifest.json#/stages;notify_done.json#/notify_result;../shift-W46-20261118T054826Z/dce.json#/verdict;../shift-W46-20261118T054826Z/dce.json#/failed_step;../../logs/9c81c7ec-ed76-4489-98c0-81c6601f541b__2026-11-18T05-48-26-204Z.log;../../../../../../srv/fleet/TriCompany/runtime/cognition/shift_notify_fail.py;../../../../../../srv/fleet/TriCompany/runtime/cognition/rubric-firstshoot.json",
+   "check_time": "2026-11-18T06:33:00Z"
+  }
+ ],
+ "check_time": "2026-11-18T06:33:00Z"
+}

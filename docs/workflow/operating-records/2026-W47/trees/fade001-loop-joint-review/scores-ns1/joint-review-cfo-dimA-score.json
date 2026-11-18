@@ -1,0 +1,39 @@
+{
+ "dim": "A",
+ "seat": "cfo",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 3,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存（keep 原地留档），活随人带走（migrate 跨周）。34 件全判 keep：10 个散件（毕报/定性/对表/派单/首评分卷 .md，scatter_file_archive）属于周记录，原地封存判对；24 个目录中复核、取证、impl、mount-log 等完成面按记录向 keep 可立，但 15 件 agent_output_malformed 加 9 件 skipped_over_limit 只有失效兜底码，无一件载 tree-op/authorization/closeout 的实判；bod-tick（周期活）与 fade001-tenstage-deploy-20261115（72 文件·最新 11-16 续写）显系活向，按锚应 migrate 却实判 keep，migrate=0 使「活随人带走」半边未落实。结构面 counts 0/34/2 自洽、bidirectional_ok=true、34 件与 W46 树集全等，记录向判断大体成立；个案语义与活向遗漏扣一档。",
+   "evidence_ref": "plan.json#/keep + plan.json#/agent_readings + plan.json#/counts"
+  },
+  {
+   "criterion": "I2",
+   "score": 2,
+   "rationale": "锚文判读：记录随周封存、活随人带走——本判看计划是否把「活」分批搬净。执行序 pull→migrate→commit→push 合理，push 远端 rebase 失败后以 fetch+merge 回退成功（rc=0）；carry_over 两件 CARRY 冻结维持且 source/dest/pending_reason 齐；verify strict 4/4 过；默认 keep 的 fail-closed 取舍（误迁移不可逆）方向正确。但批次划分失当：慢道上界 15 对 24 个目录，9 件直接 skipped_over_limit 且无第二批补判；dce 三项 overflow_checks 全 checked=false 仅口径声明；index_drift 明载 activeTrees=0 与实盘 20+ 脱节仍作批清单旁证。风险链虽有降级，但缺批次回补与二次判卷预案，扣一档。",
+   "evidence_ref": "dce.json#/steps + plan.json#/keep + plan.json#/index_drift + verify.json#/checks"
+  },
+  {
+   "criterion": "I3",
+   "score": 1,
+   "rationale": "锚文判读：记录随周封存·活随人带走——留痕须让每个 keep/migrate 追到记录/活之实判与指针。plan.json 34 件仅有 reason_codes，无 per-entry evidence 指针；24 个目录（15 malformed+9 over_limit）与 8 个顶层件 family/annotation/confidence 全空=32 件三无裸件，8 顶层件 reason 为「file entry missing（零动作候人工）」；agent_readings 42 与清单 34 差 8 且 confidence 全 null；close.json stage_artifact_notes 第 7 条自载「close.json: absent」而 close.json 在卷，close run_state=stale 与 manifest run_state=ok 同 run 双面矛盾。正面仅 close evidence 7 四元组 present 与 upgrade_list_state=extracted，实判与指针两面均弱，取低档。",
+   "evidence_ref": "plan.json#/agent_readings + close.json#/stage_artifact_notes + close.json#/run_state + manifest.json#/run_state"
+  }
+ ],
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "把 24 个目录按 15 件/批拆两批补判（第二批 9 件不再 skipped_over_limit），批次前先跑 tree-op status→authorization expiry→closeout 的确定性预读再交 agent；对 bod-tick、fade001-tenstage-deploy-20261115 按活向改 migrate（或载明跨周承接台账），每个 entry 强制附记录/活标签与证据指针，使 migrate 非零且双向断言仍成立。",
+   "evidence_ref": "plan.json#/keep + plan.json#/agent_readings",
+   "check_time": "2026-11-18T06:42:19Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "修 close.json 自指矛盾（notes 载 close.json: absent 而件在卷）与 run_state 双面（close=stale vs manifest=ok）——统一取同一时点源；收敛 readings 42 与清单 34 的 8 件顶层差额（零动作候人工需显式挂账），给每个 keep/migrate 补 evidence_ref 与实判 reasons，禁 failure code 充当语义结论；保留 evidence 7 四元组与 upgrade_list_state=extracted 的正面形。",
+   "evidence_ref": "close.json#/stage_artifact_notes + close.json#/run_state + manifest.json#/run_state",
+   "check_time": "2026-11-18T06:42:19Z"
+  }
+ ],
+ "check_time": "2026-11-18T06:42:19Z"
+}

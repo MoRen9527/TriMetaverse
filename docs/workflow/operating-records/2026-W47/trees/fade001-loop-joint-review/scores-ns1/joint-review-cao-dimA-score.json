@@ -1,0 +1,39 @@
+{
+ "dim": "A",
+ "seat": "cao",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 2,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存·活随人带走。逐类过案：①10 件散件（d39/d82 毕报、首评分卷、fade规范对表-ceo修正令、lg语义条款册、mc-oprec 派发件、ten-stage 映射/产品计划等）判『记录』，keep 随周封存正确；②15 件 agent_output_malformed 树与 9 件 skipped_over_limit 树多为评审/构建/探测留痕，倾向判『记录』，keep 方向大体成立；但 42 条 agent_readings 的 annotation/confidence 全 null，其中 fade001-tenstage-deploy-20261115 的授权 expiresAt=2026-11-16T21:04:46+08（=13:04:46Z）虽已早于本拍 plan.check_time=2026-11-18T05:53:37Z、本拍应转『记录』，plan 仍未留到期判读，仅机械兜底，无法证明无在途『活』件被误封；③CARRY-20260728-004/006 判『活（frozen 挂账）』，status_to=frozen/dest=frozen/pending_reason 三标注齐，carry_over 正确；④8 个顶层件中 6 件（daily-progress、company-demand-pool、task-inventory-20261115、OP-202611-W46-001 两件、.shift-ade）判『活』，scoring-ledger-w46、cfo-quota-daily-w46 两件周账册判『记录』，agent_readings 标 plan_family=keep 却不在 keep/migrate/carry_over 清单，counts.keep=34 vs readings=42，去向未判。正向：migrate=0 未误迁记录、violations=[]、bidirectional_ok=true；但边界存疑超过 1-2 处，4 分不成立、3 分亦不成立，取 2 分。禁裸分。",
+   "evidence_ref": "plan.json#/check_time;plan.json#/counts;plan.json#/migrate;plan.json#/keep;plan.json#/carry_over;plan.json#/agent_readings"
+  },
+  {
+   "criterion": "I2",
+   "score": 1,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存·活随人带走。本拍把『活』面风险压成单批全 keep（0 migrate/34 keep/2 carry_over），只有终态，无按记录/活划界的批次与时序取舍：①批次面——34 树一次判完，15 树 unparsable、慢道上界 15 下 9 树 skipped_over_limit 直接 fail-closed keep，未汇总缺面影响；②预案面——dce.overflow_checks 三项 week_dir_structure/carry_over_semantics/commit_message_shape 全 checked=false，仅注『骨架态=口径位声明』，预检未实测；preflight 以 loop-window/sunday_gate=exempted(loop) 自证，plan/close 未落 23:50 硬时钟与 loop 豁免取舍；③降级链——malformed/skipped 后无重试/候裁/升级分支，push 首段报 cannot rebase: You have unstaged changes，靠 fallback merge 收口，plan/close 未记异常处置与责任席。主链 preflight/qualify/verify 全 pass、dce 四步 rc=0、无数据丢失，故不落 0；三面均缺且取舍无据，取 1 分。禁裸分。",
+   "evidence_ref": "plan.json#/counts;plan.json#/keep;plan.json#/agent_readings;dce.json#/overflow_checks;dce.json#/steps[3].stderr_tail;preflight.json#/assertions.week_math;verify.json#/checks"
+  },
+  {
+   "criterion": "I3",
+   "score": 1,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存·活随人带走。留痕面属『记录』，但未封好、活判读不可复核。可达面：joint-review-trigger 的 dim_a 三件 sha16 与实算一致（manifest f596051b1b0b8fe8、score 1be15ca9790f92fc、plan 093a2985c2156017），close.evidence 7 条路径均在，plan.index_drift 注『index activeTrees=0 vs 实盘 20+·旁证读数非分类基准』为实判断，score.json 将 I 族置 state=subjective/score=null/weight=10，未越权机判或擅并盘，考卷改窗与门禁面被尊重。断链：①42/42 agent_readings 的 annotation/confidence 全 null，34 keep 仅 reason_codes 机械码，无逐案 evidence 指针或 hash；②8 个顶层件仅记『file entry missing（零动作候人工）』，零动作未转可复核处置；③close.json 自记 run_state=stale、stage_artifact_notes[6]『close.json: absent』、evidence[6].verdict=unknown，与 manifest.run_state=ok/stages.close=pass 同拍两读；④dce.overflow_checks 三项 checked=false，未在 close 记缺面。指针大体可达但值面/逐案判读/终态读数断，3 分不成立；非批量断链，0 不成立，取 1 分。禁裸分。",
+   "evidence_ref": "joint-review-trigger.json#/dim_a_materials;close.json#/evidence;plan.json#/agent_readings;plan.json#/index_drift;close.json#/run_state;close.json#/stage_artifact_notes;close.json#/evidence[6];manifest.json#/run_state;manifest.json#/stages;score.json#/score.families[8];dce.json#/overflow_checks"
+  }
+ ],
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "本拍 34 keep/0 migrate 的 fail-closed 方向可保不丢件，但迁移质量未闭环：先在 plan 落逐案『记录/活』标注与 evidence 指针（现 annotation 42/42 null、24/34 机械兜底）；把 8 个顶层活件纳入 keep/migrate/carry 或明确交 W47 同名件；对 15 malformed+9 skipped 建重试/候裁/升级分支并汇总缺面影响；dce.overflow_checks 实测后回填；close 与 manifest 统一 run_state、close.json、manifest verdict 读数。否则锚文判读只有终态没有个案。",
+   "evidence_ref": "plan.json#/agent_readings;plan.json#/counts;plan.json#/keep;plan.json#/carry_over;dce.json#/overflow_checks;close.json#/run_state;manifest.json#/run_state",
+   "check_time": "2026-11-18T06:14:24Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "本拍 plan 的缺面（annotation 全 null、24 件机械兜底、8 顶层件去向留白、overflow_checks 全 false）与上一轮（102656Z，除 run_id/check_time 外无差异）同形，连续多轮未修，说明 fade-001 的自检未把判卷缺陷转成施工项。建议加 fail-closed 自检：任 agent_readings annotation=null、counts.keep 与在卷读数不一致、close/manifest 状态不一致、overflow_checks 未实测即阻断 pass 并出修复单；每轮评分前先对表上一轮缺面清单，避免同形空转。",
+   "evidence_ref": "plan.json#/agent_readings;plan.json#/counts;plan.json#/keep;score.json#/score.families[8].reasons;close.json#/run_state",
+   "check_time": "2026-11-18T06:14:24Z"
+  }
+ ],
+ "check_time": "2026-11-18T06:14:24Z"
+}

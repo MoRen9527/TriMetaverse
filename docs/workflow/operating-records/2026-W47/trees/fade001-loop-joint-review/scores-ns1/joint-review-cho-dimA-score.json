@@ -1,0 +1,39 @@
+{
+ "dim": "A",
+ "seat": "cho",
+ "entries": [
+  {
+   "criterion": "I1",
+   "score": 2,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存·活随人带走。逐案过锚：10 件散件（d39勘止标注毕报-20261112.md、d82-排工紧凑性纪律毕报-20261113.md、首评分卷-20261109.md、fade规范对表-ceo修正令-20261115.md、lg语义条款册立册定性-20261114.md、mc-oprec-fade011-pathspec-dispatch-20261115.md、fade001-ten-stage-mapping-20261112.md、fade001-ten-stage-product-plan-cpo-20261113.md、fade001-firstshoot-scoring-weights-cpo-20261113.md、fade001-phase1-trigger-study-bod-20261112.md）均为成卷毕报/评分卷/映射件，判『记录』，keep 随 W46 封存正确；CARRY-20260728-004/006 判『记录挂账』，status_to=dest=frozen、pending_reason 三标注齐全，只冻结挂账、不解除冻结，处置正确；24 棵目录中的评审/构建/探测/日志类多数为已收官的『记录』，keep 方向成立，migrate=0 未误迁。但『活』面未逐案判读：34 件 keep 中 24 件为机械兜底（15 件 agent_output_malformed+9 件 skipped_over_limit），42 条 agent_readings 的 annotation/confidence 全 null，reason_codes 只有机械码；fade001-tenstage-deploy-20261115 授权 expiresAt=2026-11-16T13:04:46Z 早于本轮 check_time=2026-11-18T05:53:37Z，本轮可归『记录』，但 plan 未写到期判读，仅以 malformed 兜底，不能证明未误封在途活件；bod-tick（idle-watch-state 滚动值）等周期活面亦未标预期自建；8 个顶层活件（company-demand-pool/daily-progress/task-inventory/scoring-ledger-w46/cfo-quota-daily-w46/OP json/OP unresolved/.shift-ade）plan_family=keep 却只记『file entry missing（零动作候人工）』，不入 keep/migrate/counts（34 vs 42），活件去向未判。4 分档要求个案语义全对且锚判读在卷，不成立；主体记录方向对且零误迁，故不落 0-1，按 2-3 档取下沿 2/4。",
+   "evidence_ref": "plan.json#/counts, plan.json#/keep, plan.json#/agent_readings, plan.json#/carry_over"
+  },
+  {
+   "criterion": "I2",
+   "score": 1,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存·活随人带走。本轮把『活』面风险压成单批全 keep（0 migrate/34 keep/2 carry_over），只有终态，无按记录/活划界的批次与时序取舍。①批次面：34 件一次判完，慢道 24 树仅前 15 进入 agent 且全 unparsable，另 9 树以『慢道树数上界 15·fail-closed keep』直接弃判，无分批优先级、无 23:50 硬时钟排序、无缺面影响汇总；②预案面：dce.overflow_checks 的 week_dir_structure/carry_over_semantics/commit_message_shape 三项 checked=false（仅注骨架态口径位声明），preflight 以 loop-window/sunday_gate=exempted(loop) 自证，但换形授权链与相对 11-15 23:50 硬时钟的偏差未在 plan/close 落取舍；push 先报 cannot rebase: You have unstaged changes 后靠 fallback merge 收口，异常处置与责任席未留痕；③降级链：fast_path→慢道上界→fail-closed keep 链存在且保守零丢失，但 32/42 落兜底使降级成默认路径，无重试/候裁/升级分支，index_drift 自认 index activeTrees=0 与实盘 20+ 脱节却只注不校正。主链 preflight/qualify/verify 全 pass，故不落 0；批次/预案/降级三面均有缺且取舍无据，按 1-2 档取下沿 1/3。",
+   "evidence_ref": "dce.json#/overflow_checks, dce.json#/steps[3].stderr_tail, plan.json#/counts, plan.json#/index_drift, preflight.json#/assertions/week_math"
+  },
+  {
+   "criterion": "I3",
+   "score": 1,
+   "rationale": "锚文判读：这是一周的记录，还是这一周的活——记录随周封存·活随人带走。留痕骨架属『记录』但未封好，且『活』面判读不可复核。可达面：close.json evidence 7 条路径均在（preflight/qualify/plan/dce/verify/score/manifest），carry_over 带 source/dest/pending_reason，plan.index_drift 注 index activeTrees=0 与实盘 20+ 脱节为实判断，score.json 将 I 族置 state=subjective/score=null/weight=10，未越权机判。断面：①plan 34 条 keep 仅有 reason_codes，无逐案 reason 文本与 evidence 指针；42 条 agent_readings 的 annotation/confidence 全 null，其中 32 条 failed_fallback（15 unparsable+9 skipped_over_limit+8 file entry missing），机械码充作留痕；②8 个顶层件只记 file entry missing（零动作候人工）、不入清单，34 vs 42 差额无对账；③close.json 自记『close.json: absent』、run_state=stale、evidence[6].verdict=unknown，与 manifest.run_state=ok/stages.close=pass 同拍两读；④score G 族称『verify items 对表零 missing』，verify.json 只有 checks 无 items，名实不副。指针未批量断链，故不落 0；套话/值面矛盾成面，按 1-2 档取下沿 1/3。",
+   "evidence_ref": "plan.json#/agent_readings, plan.json#/keep, plan.json#/counts, close.json#/evidence, close.json#/run_state, close.json#/stage_artifact_notes, manifest.json#/run_state, manifest.json#/stages, score.json#/score.families[6].reasons, verify.json#/checks"
+  }
+ ],
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "建立『记录/活』双栏对账表：34 条 keep 逐条件补记录/活标签、一句理由与树内 evidence 指针；15 件 malformed/9 件 skipped 不得以机械兜底直接封存，须重判或列候人工。8 个顶层活件（company-demand-pool/daily-progress/task-inventory/scoring-ledger-w46/cfo-quota-daily-w46/OP-202611-W46-001.json/OP-202611-W46-001.unresolved-items.md/.shift-ade.json）纳入 keep/migrate/carry/limbo 四项平账（现 counts.keep=34 对 readings=42 差 8），活件逐件写 dst 或 pending_reason，15 件 other_unresolved 也须逐行说明留原周或续记。批次与硬时钟：按 23:50 窗/依赖链分批，慢道上界 15 前设优先级与候裁分支，skipped 9 树汇总缺面影响；风险预案：dce.overflow_checks 三项实演，push cannot rebase 异常写处置/责任席，index_drift 从旁注升级为校正项。",
+   "evidence_ref": "plan.json#/counts, plan.json#/keep, plan.json#/agent_readings, plan.json#/carry_over, plan.json#/other_unresolved_count, dce.json#/overflow_checks, dce.json#/steps[3].stderr_tail",
+   "check_time": "2026-11-18T06:35:38Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "plan/close/manifest 三卷自洽与留痕机件待补：①agent_readings 增 rationale/evidence_ref 字段，annotation 不得 42/42 全 null；fast_path 仅 10/42、failed_fallback 32/42，应设失败率阈值（如 >20% 告警转人工），禁把 fail-closed 当常态；②counts 与 readings 自动对账（差额>0 即红），top_level 8 件单独计数并平账；③close.json 去掉『close.json: absent』自指、run_state 与 manifest 统一（现 stale vs ok），evidence[6] verdict 不得 unknown 仍判 pass；④score G 族『verify items』与 verify.json 的 checks 键名对齐，防名实不符；⑤把相对 11-15 23:50 硬时钟的换形授权链（loop-window/marker）落卷，补审批、时点、责任人，避免 loop 轮绕过窗判无据。",
+   "evidence_ref": "plan.json#/agent_readings, plan.json#/counts, close.json#/run_state, close.json#/stage_artifact_notes, close.json#/evidence, manifest.json#/run_state, manifest.json#/stages, score.json#/score.families[6].reasons, verify.json#/checks",
+   "check_time": "2026-11-18T06:35:38Z"
+  }
+ ],
+ "check_time": "2026-11-18T06:35:38Z"
+}
