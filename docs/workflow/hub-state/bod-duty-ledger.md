@@ -4841,3 +4841,7 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+625 · job2 02:46 拍·r609d 升级处置（2026-11-19T02:50+0800）
 
 - 案：ns3 spawn 5 席缺席→值席 pre-ruled fallback 手工补面毕面板 7/7→aggregate 段被 SDE 门滞留卡死（00:07 拍 tick「m-duty-sde 态不明·Esc to cancel」实锚起·滞留 2.7h+）→值席 r609d urgent 升级两路候 BOD 急裁。BOD 裁 notice-203（D-39 分派面）：②路准=授权值席直跑 aggregate；SDE 门留 SDE 面处置（值席勘门形态·可自解自解·否则照席启动纪律·根因入异常卷）。拾取面：值席处置在飞（02:48 已在读新落 aggregate 卷·check_time 18:48Z·直跑疑已在发）。升级链走满认收。r609d 信箱未达候对表。值守机电量告警三连（49% 未接电）随拍报呈 CEO。
+
+### ㊿+626 · job1+job2 02:49 双拍归档一行（2026-11-19T02:50+0800）
+
+- 02:48 拍：**值守机 ac=true 接电恢复 ✓**（pwr=46%·响应 02:46 拍报）；notifyFailures=1+8711 follow=unknown 单拍波动观察项（非链）；MMC 242 微涨；SDE 门仍挂（值席忙聚合·门处置候腾手）。值席 aggregate 直跑在飞勘形：聚合 engine 契约=I 族 scores 键形·手工补面 dimA 形不被识别（coo 12/9/8 stated·cao 无 I split）——值席正勘 sheet 解析代码精确契约（loop_autoreview.py）——notice-203 ②路执行推进中。免扰归档。
