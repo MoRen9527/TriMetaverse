@@ -4865,3 +4865,7 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+630 · job2 03:59 拍归档一行（2026-11-19T04:00+0800）
 
 - **SDE 门滞留异常全闭**（续接回执：镜像 commit 零待办=已入仓全推平零 divergence·approval 门未再现·fresh context 候令·根因备案→重启处置→续接就绪三段全链闭）；链面现势归一：ns3 debug 停点候 CEO 融合裁=唯一候裁面+ns4 前置全齐（runbook/等待语义 gate/spawn 根治）。免扰归档。
+
+### ㊿+631 · CEO 融合裁令流转 notice-205（2026-11-19T04:07+0800·r209）
+
+- CEO 04:05:41 融合裁：裁进，启 ns4——notice-205 流转（三执行面：等待语义 gate 首用+spawn 根治续用+ceo-ruling.json 真值源运行位启用）。拾取验 ✓：值席 Unravelling 处理中——正验 ns4 run 目录（shift-W46-20261118T152339Z）ceo-ruling.json（decision/ruling_ref/sha256sum 对表）——**真值源 runbook 首用执行在发实锚**（ceo-ruling 落卷→gate 首用读卷链在走）。机械 verdict=loop_next 两面并行照录。
