@@ -1,0 +1,57 @@
+{
+  "preflight_version": "1.0.0",
+  "verdict": "pass",
+  "exit_code": 0,
+  "reasons": [],
+  "assertions": {
+    "week_math": {
+      "ok": true,
+      "mode": "loop-window",
+      "sunday_gate": "exempted(loop)",
+      "sunday_gate_note": "real cron Sunday gate unchanged",
+      "run_dir_week_note": "loop-run 实际时点 2026-11-18（归属周按此时点注记防混）",
+      "trigger_day_is_sunday": false,
+      "computed": {
+        "from_week": "W46",
+        "to_week": "W47",
+        "start_date": "2026-11-16"
+      },
+      "expected": {
+        "from_week": "W46",
+        "to_week": "W47",
+        "start_date": "2026-11-16"
+      },
+      "loop_source": "marker"
+    },
+    "hostname": {
+      "ok": true,
+      "actual": "iZf8ziw57ydktu77fsld9yZ",
+      "expected": "iZf8ziw57ydktu77fsld9yZ"
+    },
+    "git_hygiene": {
+      "ok": true,
+      "in_progress_ops": [],
+      "migration_face_dirty": []
+    },
+    "healthz": {
+      "ok": true,
+      "url": "http://127.0.0.1:8710/healthz",
+      "service": "trirmc",
+      "cron_enabled": true
+    },
+    "diverge": {
+      "ok": true,
+      "detail": "preflight ok (left=0 right=0 verdict=synced)",
+      "readback": {
+        "remote": "origin",
+        "branch": "dev",
+        "left": 0,
+        "right": 0,
+        "verdict": "synced",
+        "local_top": "42175496f62f7d8fb737e4e419ed7a00cb8a35fd",
+        "bare_top": "42175496f62f7d8fb737e4e419ed7a00cb8a35fd"
+      }
+    }
+  },
+  "check_time": "2026-11-18T15:23:43.023191+00:00"
+}
