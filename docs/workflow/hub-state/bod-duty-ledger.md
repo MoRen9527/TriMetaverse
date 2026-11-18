@@ -4487,3 +4487,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **notice-180 接单实锚（v4.5 双锚全绿）**：①拾取 ✓（13:58Z 发送时验证）②树落卷 ~1min——`notice180入账+COS勘定卷-分数结构两裁-20261118.md` 落树（远快于 30min 判据）。
 - COS 勘定要点（框面读数·备案形）：**边界语义定谳=平均分 ≥95**（挂联审平均分面）＋改善意见 gate 形注（机制不变）＋在飞轮 aggregate 适用；派工三面=SDE 勘改令已发（O3 码面 100 制+threshold 挂联审平均分）/STE 规程 v2 §四勘改（120→100 制 65/35+两制标记）/本席 Score/Close 双模板勘改（weight_face/threshold 语义/gate 注）。备案归转链=COS→BOD→CEO（随本拍转报）。
 - 免扰归档。
+
+### ㊿+562 · notice-181 CEO 补充令流转·无头勘检（2026-11-18T14:01:25+0800）
+
+- CEO 口谕 13:59:24+0800 补充令（承接 notice-180 同窗）：无头 dsh 会话好处=可编程对象——勘检① fade-001 loop agent 是否全无头调用②7 席联审是否无头走；目标=用程序控制整个 loop 行进方向。
+- 流转形：notice-181（勘检面=河源 loop 十阶段 agent 通道逐点位+loop_autoreview 联审 spawn 通道·read-only·差距清单并入 notice-180 勘改施工线统筹防返工·桥线/fade 线防混装照旧）。
+- 流转实锚：发送 2026-11-18T06:01:25Z·paste 框验 [Pasted text #101 +30 lines]·独立 Enter·capture 验拾取（对话流回显+❯ 清空·duty-cos Puttering 队列处理 180+181）。锚笔第 182 轮 @2026-11-18T06:01:25Z 已落 anchor.log。
