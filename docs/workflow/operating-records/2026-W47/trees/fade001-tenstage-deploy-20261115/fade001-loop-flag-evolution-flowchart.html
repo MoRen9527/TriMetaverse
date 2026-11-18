@@ -1,0 +1,250 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>fade-001 进化流程图</title>
+<style>
+/* 布局概念：工程图纸单页——双 mermaid 图纸卡（固定浅底）+ 参数卡行，令源锚收尾 */
+:root {
+  --bg: #eef1f5;
+  --ink: #1b2430;
+  --ink-2: #4d5a6b;
+  --ink-3: #7b8796;
+  --line: #d4dae2;
+  --card: #ffffff;
+  --sheet: #f7f9fb;          /* 图纸卡固定浅底（双主题同值·图纸隐喻） */
+  --sheet-ink: #1e2933;
+  --accent: #0d6e8c;         /* 工程青蓝 */
+  --accent-soft: #e3f0f4;
+  --flag-amber: #b45309;     /* debug 强调 */
+  --flag-green: #1a7f4b;     /* test */
+  --flag-slate: #475569;     /* prod */
+  --mono: "SFMono-Regular", "Cascadia Mono", Consolas, "Microsoft YaHei", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161c;
+    --ink: #e6ebf1;
+    --ink-2: #a7b3c1;
+    --ink-3: #6f7d8d;
+    --line: #2a3340;
+    --card: #1a212b;
+    --accent: #4db3d1;
+    --accent-soft: #14323d;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161c;
+  --ink: #e6ebf1;
+  --ink-2: #a7b3c1;
+  --ink-3: #6f7d8d;
+  --line: #2a3340;
+  --card: #1a212b;
+  --accent: #4db3d1;
+  --accent-soft: #14323d;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme: dark; }
+}
+
+html { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.75 "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 980px; margin: 0 auto; }
+
+header { margin-bottom: 26px; }
+.kicker {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+h1 {
+  font-size: 26px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+  text-wrap: balance;
+  letter-spacing: .01em;
+}
+.lede { color: var(--ink-2); margin: 0; max-width: 65ch; }
+.lede b { color: var(--ink); }
+
+.sheet {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 18px 10px;
+  margin-bottom: 22px;
+  overflow-x: auto;
+}
+.sheet-title {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--sheet-ink);
+  letter-spacing: .08em;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sheet-title::before {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+  flex: none;
+}
+.mermaid { display: flex; justify-content: center; }
+.mermaid svg { max-width: 100%; height: auto; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.card h3 {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .1em;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+.card p { margin: 0; font-size: 13.5px; color: var(--ink-2); }
+.card p b { color: var(--ink); font-weight: 600; }
+.chip {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  border-radius: 4px;
+  padding: 1px 7px;
+  margin-right: 4px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.chip.amber { background: rgba(180,83,9,.14); color: var(--flag-amber); }
+.chip.green { background: rgba(26,127,75,.14); color: var(--flag-green); }
+.chip.slate { background: rgba(71,85,105,.16); color: var(--flag-slate); }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  font-size: 12.5px;
+  color: var(--ink-3);
+  font-family: var(--mono);
+  line-height: 1.9;
+}
+
+@media (max-width: 720px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 430px) {
+  .cards { grid-template-columns: 1fr; }
+  h1 { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="kicker">loop · fade-001 · 7席联审 · flag</p>
+  <h1>fade-001 进化流程图</h1>
+  <p class="lede">「loop 包 fade＋进化 flag」三态状态机：进化模式下每轮跑 <b>fade-001 十阶段 → 7 席联审</b>，按 flag 决定谁裁进/出；生产模式停外部 loop，单轮直走周迁移。flag 切换权始终在 CEO。</p>
+</header>
+
+<div class="sheet">
+  <p class="sheet-title">图一 · 进化 loop 主流程（debug / test / prod 三路）</p>
+<pre class="mermaid">
+flowchart TD
+  T(["周平面迁移触发"]) --> M{"进化 flag"}
+  M -->|prod 生产模式| SHIP["prod 生产轮：十阶段单轮直走<br/>（无进化 loop）→ 周迁移交付"]
+  M -->|"debug / test 进化模式"| R["登记 run_id · run_dir"]
+
+  subgraph TEN["fade-001 十阶段"]
+    direction TB
+    Q["Qualify 预检"] --> P["Plan Skill · 规划卷"]
+    P --> D["DCE · 确定性执行周迁移"]
+    D --> V["Verify 验证"]
+    V --> S1["Score CLI · 机判"]
+    S1 --> S2["Score Skill · 评卷"]
+    S2 --> S3["Close Skill · 终判"]
+    S3 --> S4["Close CLI 收口"]
+  end
+  R --> Q
+
+  subgraph JR["loop 尾段 · 7席联审（无头 · 程序闭环）"]
+    direction TB
+    JV["convene 召集 7 席<br/>dsh headless spawn"] --> AG["aggregate 聚合<br/>每席 100 制打分 → 均分＋改善意见"]
+  end
+  S4 --> JV
+
+  AG --> DEC{"联审均分 > 95 ?"}
+  DEC -->|"是"| EXIT(["跳出进化 loop"])
+  DEC -->|"否"| F{"flag"}
+  F -->|debug| CEO["联审停 · 上送 CEO 呈批<br/>CEO 批意见融合 7 席改善意见"]
+  CEO --> CD{"CEO 裁"}
+  CD -->|"退出"| EXIT
+  CD -->|"进下一轮"| NX["loop 下一轮<br/>（8 轮上限熔断）"]
+  F -->|test| NX
+  NX -.->|"未达上限"| R
+  NX -.->|"达 8 轮上限"| FUSE(["熔断停 · 候 CEO"])
+  EXIT --> FIN["进化 ok · flag→prod · 关进化"]
+  FIN -.-> T
+</pre>
+</div>
+
+<div class="sheet">
+  <p class="sheet-title">图二 · flag 生命周期（切换权 = CEO 令）</p>
+<pre class="mermaid">
+stateDiagram-v2
+  [*] --> debug: fade 不成熟 · 人工辅助开发（联审停 · CEO 呈批）
+  debug --> test: fade-001 成熟 · CEO 令切换（无 CEO 自进化 · 8 轮上限）
+  test --> prod: 进化 ok · 分数 > 95 关进化
+  prod --> test: 非重大变更需进化（适配毕 > 95 关进化回 prod）
+  prod --> debug: 重大变更（CEO 参与把控进化）
+  prod --> [*]: 用于生产 · 周工作平面迁移
+</pre>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <h3>卷面分数</h3>
+    <p><b>100 制</b>＝客观题 65＋主观题 35；比例不合理由 COS 代裁改定呈报。</p>
+  </div>
+  <div class="card">
+    <h3>联审判据</h3>
+    <p>7 席各以 <b>100 制</b>打分取均分，<b>&gt;95</b> 跳出 loop（边界 ≥95 由 COS 勘定备案）。</p>
+  </div>
+  <div class="card">
+    <h3>改善意见</h3>
+    <p>双 topic 必付＋三件套（说理 / 实证锚 / 时戳），缺＝fail-closed 不消费；CEO 批意见融合面在 debug 态。</p>
+  </div>
+  <div class="card">
+    <h3>保险丝 · 权属</h3>
+    <p>test 态 <b>8 轮上限</b>熔断候 CEO；flag 三态切换权＝<b>CEO 令</b>（权属不变）。</p>
+  </div>
+</div>
+
+<footer>
+  令源：CEO 口谕 2026-11-18（分数结构两裁 / 无头勘检 / 概念勘正 / flag 三态定谳）·流转 notice-180/181/182/183<br>
+  机制·十阶段通道勘定：notice-181 勘检卷（程序段全程序化 · 7席联审 dsh headless 程序闭环）· BOD 锚笔落卷
+</footer>
+</div>
+</body>
