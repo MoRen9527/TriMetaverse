@@ -4805,3 +4805,7 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+616 · job2 22:59 拍归档一行（2026-11-18T23:00+0800）
 
 - 值席监督在役：notice-200 勘问处置在途（Propagating·缺席补面动作实证=cho-score.json 手工补面已 commit 90b1b0b07@22:22·I 族 2/2/2·dimA 61/dimB 65）；notice-199 树落卷 ✓（cto-flag-debug-wait-semantics-survey-20261118.md 落 fade001-loop-joint-review 树·拾取后 21min·v4.5 接单锚闭环）；接力树近 35min 三件（+trirmc-bridge 两件 SDE closeout/CTO reverify 并行线）；runner capped 终态在（11-15 封顶停机·非死）。免扰归档·23:14 醒点候勘问定性。
+
+### ㊿+617 · ns2 聚合终形落卷读呈（2026-11-18T23:15+0800·debug 态停点呈批链）
+
+- aggregate-final.json 23:01 落（notice-200 勘修终形重算·值席落位修毕 SDE 承令·reaggregate_note 在卷）：7/7 全席聚合（缺席三席 cho 22:22/cto+cfo 22:59 手工补面毕）·opinions_n=15·sheets_consumed=7。数字面：per_seat_totals=[86×5,65×2]·seven_seat_average=80.0·threshold=95·verdict=loop_next（80<95 进下一轮）·四门全绿 gate_pass=PASS·终审签认位=人联评终审签认保留（r119④ 聚合初判=自动前段）。改善意见两大主题：①周迁移质量 7 席全提（migrate=0·8 顶层活件无去向·24 malformed 未逐案判读·pending 32 清零/逐件判据·index_drift 张力未解）②fade-001 自身完善度 9 条（malformed 只记账未修复 retry=0→修复队列；CTO 自揪两漏环节=preset 服务竞态缺席根因 63938e61e+collection 采集窗调度漏；两套初判并存违同值同源；close 重放无 replay 字段；cfo 双条 keep 抽样复勘+spawn fail-closed 降级）。已读呈 CEO 融合裁（终审签认位）。
