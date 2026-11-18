@@ -4455,3 +4455,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - notice-179（真）直发 m-duty-cos：paste [Pasted text #99] 替换框内 ghost 假 179→独立 Enter→拾取实锚（对话流回显+Thundering thinking+❯ 清空）✓；锚笔第 180 轮+state last_notice=179。
 - 七席证据提取毕（14 件卷逐席全文·河源树）：dimB 席分谱=CAO/CFO/CHO/CPO/CTO 各 22（H fail）·COO 13（A+H 双 fail）·COS 31（全 pass）——合 154/7=22.0 与 verdict 一致；dimA 七席齐 2/1/1=4。关键发现面四族：H 族考卷 loop 形授权缺口（6:1 分歧实锚）·COO A 族 md5 口径疑点（展开 command 实算 9941c61a 对不上模板基准 09644869·六席对 COO 错）·主观域共性四缺陷（annotation null 42/42·活树授权在窗被兜底 keep·单批全 keep 无批次取舍·留痕断链 check_time 模糊占位+counts 1/33/2 vs 实测 0/34/2+convene_mode 幽灵字段）。CEO 呈报要素已按提取证据终端交付。
 - dimB 席分核算：9+13+9 权重下 H 族 fail 扣 9/席（六席）+COO A 族再扣 9——丢分主源清晰可归因。
+
+### ㊿+557 · job2 探针——O1 即办毕（COS Plan Skill 卷落树）+ghost 瞬现自清消歧（2026-11-18 13:31-13:34 +0800）
+
+- notice-179 处置极快（拾取 13:29 前后→入账卷 13:30→O1 Plan Skill 卷 13:31 落树 cos-plan-skill-卷-新结构首轮-20261118.md）→O3 联审码面派工随卷即发（M-SG 席组）→duty-cos 框 Thundering 作业中。
+- Plan 卷要点：十阶段严格映射（Plan Skill=本卷/Score Skill=COS+COO/Close Skill=COS 终判/loop 尾段=7 席联审改善意见必付→threshold=95）；r1 五缺陷=首轮改进目标五项（annotation 实值/readings 清单全对表/兜底补语义注/硬时钟授权链落卷/upgrade_list 实判）；试卷声明十段各 10 分+改善意见面 20 分=total 120 基准——**语义点候勘：threshold=95 对 120 基准的语义（归一后 95% 还是裸 95/120=79.2%）卷面未明示，BOD 转 CEO 面知悉候一句勘定**；毕报四要素合同=CEO 呈报令机械载 ✓。
+- ghost 消歧：13:31 探针 -e 末 6 行 count=1（dim 包裹 notice-1xx 形）→13:33 复勘末 10 行零命中——判读=空闲态暗示偶现·COS 作业态自清（输入行被其自身动作顶掉）·零采纳零执行；驻防态势（notice-178 令面+拍面复勘）维持。
+- 旧 runner capped 收口态；免扰支成立（树面接力落卷在案）。
