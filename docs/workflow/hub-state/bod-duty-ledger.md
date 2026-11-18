@@ -4857,3 +4857,7 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - SDE 门根因勘定=git commit approval 门（ns3 镜像 dump commit 步）——/clear 重置清 allowlist 记忆（满容窗序副作用）·挂 3.5h+。notice-204 裁：不直答（peer 代答权限=permission laundering 禁忌）·准照席启动纪律重启 SDE 清门+镜像 commit 补跑（r208 轮·拾取验 Crafting 在跑）。
 
 - 本机睡眠窗告警：02:57-03:14Z+8=北京 02:57~03:14 睡 18min（Kernel-Power 506/507·TriMLC 事件订阅捕获）——tick 缺拍段登记（02:37 拍缺实锚·03:07 拍时戳落在窗内=daemon 补写形疑·观察项）·盲区如实注；值守机接电后 Adaptive Standby 仍触发窗=观察项呈 CEO（接电面已解·睡眠窗机制候勘）。FSD hub-silent-detect 信（lg075 条目 anchor-error·git log ETIMEDOUT）单条观察项。
+
+### ㊿+629 · job1 03:43 拍归档一行（2026-11-19T03:43+0800）
+
+- 03:37 拍：**m-duty-sde=候令（态不明消失=门挂起解除 ✓ notice-204 处置生效实锚）**；8713 pwr 94% ac=true·notifyFailures=0 恢复零；余面全稳（8711/河源/MMC 243 持平/大表 open4）。SDE 门异常收口·值席候 CEO 融合裁维持。免勘免通报。
