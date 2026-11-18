@@ -1,0 +1,74 @@
+{
+  "close_version": "1.1.0",
+  "run_id": "shift-W46-20261118T124206Z",
+  "from_week": "W46",
+  "to_week": "W47",
+  "upgrade_list_state": "extracted",
+  "upgrade_list": [],
+  "stage_artifact_notes": [
+    "preflight.json: pass",
+    "qualify.json: pass",
+    "plan.json: pass",
+    "dce.json: pass",
+    "verify.json: pass",
+    "score.json: pass",
+    "close.json: self_artifact（本段产物·落卷即在·WP7 自指消除实查形）",
+    "manifest.json: unknown"
+  ],
+  "evidence": [
+    {
+      "stage_artifact": "preflight.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/preflight.json",
+      "present": true,
+      "verdict": "pass",
+      "hash": "sha256_16:7efdca74ac9a7ebc"
+    },
+    {
+      "stage_artifact": "qualify.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/qualify.json",
+      "present": true,
+      "verdict": "pass",
+      "hash": "sha256_16:f4ac9d84bb16f217"
+    },
+    {
+      "stage_artifact": "plan.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/plan.json",
+      "present": true,
+      "verdict": "pass",
+      "hash": "sha256_16:1dc9d027f02eb682"
+    },
+    {
+      "stage_artifact": "dce.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/dce.json",
+      "present": true,
+      "verdict": "pass",
+      "hash": "sha256_16:3e992b6a1c91ffc4"
+    },
+    {
+      "stage_artifact": "verify.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/verify.json",
+      "present": true,
+      "verdict": "pass",
+      "hash": "sha256_16:984cc77636daa83e"
+    },
+    {
+      "stage_artifact": "score.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/score.json",
+      "present": true,
+      "verdict": "pass",
+      "hash": "sha256_16:87478da3c4233006"
+    },
+    {
+      "stage_artifact": "manifest.json",
+      "path": "/var/lib/trirmc/cron/runs/shift-W46-20261118T124206Z/manifest.json",
+      "present": true,
+      "verdict": "unknown",
+      "hash": "sha256_16:c3667429820625b3"
+    }
+  ],
+  "run_state": "ok",
+  "run_state_source": "manifest",
+  "notify_target": "COS",
+  "verdict": "pass",
+  "check_time": "2026-11-18T13:33:56.504361+00:00"
+}

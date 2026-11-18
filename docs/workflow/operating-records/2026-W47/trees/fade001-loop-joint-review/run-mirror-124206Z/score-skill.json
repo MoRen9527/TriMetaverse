@@ -1,0 +1,13 @@
+{
+ "score_version": "2.0.0-ns2",
+ "run_id": "shift-W46-20261118T124206Z",
+ "stage_face": "score-skill",
+ "entries": [
+  {"criterion": "I1 搬移清单判断正确性", "score": 12, "rationale": "锚文判读（必经步）：keep 34=「记录」面逐案成立（agent_output_malformed 24＋scatter_file_archive 10——24 含原 9 skipped 树重判入·两批全进 WP3 面实证·逐案 annotation/rationale/evidence 三件套 42/42 全载＝判读留痕在卷非兜底裸件）；carry_over 2=「活」面（frozen 只归位·裁决链 reasoning 载）✓；八顶层活件入 counts（top_level:8）＋reconciliation 零差额（34+8=42 平·WP2 面 live）✓；bidirectional True violations [] ✓。划界个案语义＋锚判读个案落地＝主体全对（r1 缺陷①②④三面本跑闭合）。保留 2 分位：failed_fallback 占比 32/42 仍高（带型标注已非裸件·但机辅判读占比面如实扣）＋八顶层件 disposition 逐案值本勘未逐条抽验（对账面真值已证·抽验面留 joint 位）。", "evidence_ref": "plan.json#/counts(top_level:8) + #/agent_readings(annotation 42/42) + #/keep(reason_codes) + verify.json#/checks[reconciliation:True]"},
+  {"criterion": "I2 规划合理度", "score": 9, "rationale": "三面齐且取舍有据（WP3 面 live）：批次面=24 慢道树 15+9 两批全进（原界会 skip 9 件·本跑零 skip）✓；预案面=carry_over frozen 只归位裁决链＋重试/候裁分支码面白盒钉＋失败率告警 live 实发 ✓；降级链面=带型 fallback_keep_unjudged 注（降级产物留痕归档）✓。保留 2 分位：硬时钟授权链落卷面本勘未逐项勘（r1 缺陷④持续面候 joint 位补勘·dce.json 拍点授权链读数候）。", "evidence_ref": "plan.json#/keep + #/carry_over + dce.json#/steps + 白盒 WP3 钉面（sde-wp17 卷）"},
+  {"criterion": "I3 判断留痕质量", "score": 9, "rationale": "留痕面全面闭合（WP1/WP7 面 live）：①判读留痕=annotation/rationale/evidence_ref 42/42 全载（r1 批量裸件面消除）②自洽面=close run_state=ok·run_state_source=manifest（单值源·r1 双面矛盾消除）＋self_artifact 自指消除（零 absent 自指形）③指针面=evidence 7/7 带 sha256_16 hash（可复算载体升位）④verify reconciliation 红闸在列 True（对账留痕机件面）。保留 1 分位：hash 抽验复算面本勘未跑（算法形在卷·复算候 joint 位）。", "evidence_ref": "close.json#/run_state_source(manifest) + #/evidence(hash 7/7) + plan.json#/agent_readings + verify.json#/checks"}
+ ],
+ "judge_faces": {"initial": {"seat": "m-duty-cos（COS 初判·ns2·主观小计 30/35·86%）"}},
+ "weight_face": {"objective_machine": 65, "subjective_i_family": {"I1": 14, "I2": 11, "I3": 10}, "total_basis": 100, "anchor": "notice-180 裁①＋COS 勘定卷 §一"},
+ "check_time": "2026-11-18T13:36:37Z（D-47 现查原值）"
+}
