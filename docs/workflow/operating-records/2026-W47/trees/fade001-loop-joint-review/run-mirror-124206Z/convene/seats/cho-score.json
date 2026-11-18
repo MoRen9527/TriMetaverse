@@ -1,0 +1,36 @@
+{
+ "seat": "cho",
+ "run_id": "shift-W46-20261118T124206Z",
+ "scores": {
+  "I1": 2,
+  "I2": 2,
+  "I3": 2
+ },
+ "dimA_total": 61,
+ "dimB": 65,
+ "rationale": {
+  "I1": "独立判读认同 COO 主体锚（mirror 实核：counts 0/34/2+top_level 8 ✓·index_drift activeTrees=0 张力在卷 ✓·24 目录 malformed 未过记录/活判读·8 顶层 pending 含活件·migrate=0 活件无 W47 去向=半程成立）。CHO 域增锚：scoring-ledger-w46 与 unresolved 现役区系活件面（LG-068 W45 结算已铸 W46 账面骨架在卷）——零迁移致结算账面跨周断链风险=绩效制度连续性缺口，COO 判读未载此锚，本席补强后同档 2/4。判卷时点 2026-11-18T14:3xZ。",
+  "I2": "独立判读认同（fallback_governance 显式化进步 vs schedule/cron 零动断言不可复核+retry_enabled_trees=0 只记账未收敛+overflow checked=false 零实检）。CHO 域增锚：32 件 pending_review 的后续人工判读负荷未入值席排班评估（P1 评估单 25-30min/轮系采集域·pending 清判系另一负荷面）——负荷账未计全，同档 2/3。判卷时点 2026-11-18T14:3xZ。",
+  "I3": "独立判读认同（42/42 annotation 在=留痕 ✓ 但 32 条 rationale 同模板无个案判读=留痕未留判断；close check_time 13:33:56Z 晚于 score/verify 12:42:48Z 无 replay 理由·mirror 实核 ✓；dce 未进红闸）。CHO 域增锚：模板化 rationale 系裁决审计线不可审形态（D-18 族「留痕未留判断」同型——审计判据=逐件一句理由可检），同档 2/3。判卷时点 2026-11-18T14:3xZ。"
+ },
+ "evidence_ref": {
+  "I1": "run-mirror-124206Z/plan.json#/counts、#/index_drift、#/agent_readings；CHO 域锚=2026-W46/scoring-ledger-w46.md（账面骨架活件面）+2026-W45/scoring-ledger-w45.md（结算已铸连续性参照）",
+  "I2": "run-mirror-124206Z/plan.json#/fallback_governance、dce.json#/overflow_checks、preflight.json#/assertions；CHO 域锚=2026-W46/trees/fade001-tenstage-deploy-20261115/cho-manual-collection-staffing-estimate.md（负荷评估面）",
+  "I3": "run-mirror-124206Z/close.json#/check_time、plan.json#/agent_readings；CHO 域锚=纪律册 D-18 族（检索形态/留痕可检性判据）"
+ },
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "①pending 32 件清零或逐件不迁判据（沿 COO·禁 pending_ledger 过 pass）；②CHO 域加锚：活件清单必含 scoring-ledger/unresolved 现役区等绩效制度连续性件——零迁移即结算窗断链，建议迁移判据增「绩效制度连续性件优先迁移」条款；③schedule/cron 零动补逐项断言+与 score nextRunAtMs 硬时钟锚对表（沿 COO）。",
+   "evidence_ref": "plan.json#/counts、#/index_drift、#/fallback_governance/pending_review；2026-W46/scoring-ledger-w46.md 账面骨架行",
+   "check_time": "2026-11-18T14:3xZ"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "①malformed 样本入 parser/prompt 修复队列·下轮 retry_enabled_trees>0（沿 COO）；②overflow 三项实检接入 verify 红闸+close 增 replay 字段（沿 COO）；③CHO 域加锚：agent_readings rationale 禁模板化——逐件一句记录/活理由（审计可检性=D-18 族判据），且 32 件 pending 清判的人工负荷入排班评估（P1 评估单扩面·采集域之外加清判域负荷读数）。",
+   "evidence_ref": "plan.json#/agent_readings（32 条同模板 rationale 实锚）；cho-manual-collection-staffing-estimate.md（负荷评估面·扩面候注）",
+   "check_time": "2026-11-18T14:3xZ"
+  }
+ ],
+ "check_time": "2026-11-18T22:3x+0800（D-47 现查窗内·判卷时点 2026-11-18T14:3xZ）"
+}
