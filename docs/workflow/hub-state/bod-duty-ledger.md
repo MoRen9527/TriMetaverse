@@ -4672,3 +4672,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **ns2 规划（COS §二）**：触发窗=**11-22 首拍实锚窗**（真值 cron 面·四模块活体就绪·LG-099 子项 B 同窗）·评卷对象域=手工管理形（187 遵行）·flag=debug 停点呈批链照走（**ns2 verdict 后停点上送 CEO 呈批**）·threshold 95 两面分立·毕报四要素不变。
 - BOD 转呈 CEO：里程碑毕报+候知会点（ns2 debug 停点呈批时点）。固账 18ea0c8df·哨态维持候 11-22。
 - 归档锚 2026-11-18T12:00:04Z。
+
+### ㊿+593 · 河源 dsh web 勘形闭环·notice-189 三连令流转（2026-11-18T12:16:13Z）
+
+- **web 勘形全闭环（BOD 实勘）**：河源现役 web profile=**8791 端口**（pid 1437363·11-04 起·COS 域 `run-web-masked.py` wrapper 经 systemd --user 托管）——wrapper 安全设计=自动捕获 token 落 `.rot/new-token` 文件 0600·stdout 面掩码防泄漏；裸访问 127.0.0.1:8791=401 门·loopback only。现役 profiles=acp/headless/sdk/web 四个（**tui 缺装**——`dsh tui --resume` help 有 profile 无·报 profile "tui" does not exist·插件包名候 CTO 勘）。BOD 冒烟实例（3080·dsh-review 窗）验毕已清·现役归一 8791。18790=relay3.js 中继（非 dsh 面·无关）。
+- **notice-189 三款流转 duty-cos**（20:16+0800·tmux 直发·拾取三验齐）：①web 勘形流转 CTO 面（访问路径安全面+token 传递/轮换纪律+tui 缺装勘补+桥改造共存面）②**ns2 提前直跑 CEO 裁**（原话「ns2能不能直接跑，或者我们跑第13轮？我们debug和test就是为了尽快让fade-001进化成熟，而不是等自然周」——触发窗改 CEO 裁不等 11-22·debug 态停点呈批链照旧·WP9 v2 为基线·请 COO 拆树派工）③ns1 14 会话 uuid 清单随转（7 席×2·CEO 进场按 uuid 对座）。
+- 锚笔第 193 轮+idle-watch-state last_notice=189 落讫。
+- 归档锚 2026-11-18T12:16:13Z。
