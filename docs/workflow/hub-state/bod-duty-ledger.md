@@ -4687,3 +4687,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+595 · notice-189 接单实锚三款齐·ns2 直跑序已启（2026-11-18T12:30Z）
 
 - **v4.5 接单锚**：notice-189（20:16 发）→ 13 分钟内三款全消化——①web 勘形已流转 CTO「在工」②ns2 提前直跑 CEO 裁生效：**SDE 触发令已发**（COO 排面就绪）+ns2 前置备齐=187 排除清单落树（评分对象域界定清单-notice187管理面-20261118.md·排除六树族+run_dir 事务域·35min 窗内新落卷）③uuid 清单随转收讫。值席监督在役（monitor b7tt1bmcg 23:00 拍窗在守·窗 brdlz3rww 归档轮换）——runner.log=11-15 试水 capped 旧态非异常。❯ 面模板句式疑 ghost 零采纳自守。免扰归档·ns2 跑窗候盯（verdict 停点呈批链照旧）。
+
+### ㊿+596 · CEO 裁装 tui 插件·notice-190 流转（2026-11-18T12:39:10Z）
+
+- **CEO 裁**（20:38:32）：TriRMC tmux 看窗路线拍板装 tui 插件，包名 CTO 勘——notice-190 流转 duty-cos（20:39+0800·拾取三验齐）：①CTO 面追加任务（并入 189 款一 web 勘形在工面）——tui profile 缺装勘补三步=包名与安装源勘定（含河源 npm 可达性）→`dsh plugin list` 验 tui 在→`dsh tui --resume <uuid>` 冒烟；②ns2 哨态维持并行不扰。
+- 锚笔第 194 轮+idle-watch-state last_notice=190 落讫。
+- 归档锚 2026-11-18T12:39:10Z。
