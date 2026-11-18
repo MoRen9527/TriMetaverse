@@ -1,0 +1,719 @@
+{
+  "plan_version": "1.1.0",
+  "run_id": "shift-W46-20261118T055326Z",
+  "from_week": "W46",
+  "to_week": "W47",
+  "migrate": [],
+  "keep": [
+    {
+      "entry": "agentcore-lockfile-forensics-20261113",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "authgate-cto-review-20261110",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "bod-tick",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "cao-gate-review-20261110",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "d39勘止标注毕报-20261112.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "d82-排工紧凑性纪律毕报-20261113.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-cto-review-20261109",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-failsafe-window-p1",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-firstshoot-scoring-weights-cpo-20261113.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-migration-review-20261109",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-phase1-build-20261114",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-phase1-review",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-phase1-trigger-study-bod-20261112.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-phase2-build-20261113",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-phase2-review",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-plane-shift-review-20261109",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-split-review",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-ten-stage-mapping-20261112.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-ten-stage-product-plan-cpo-20261113.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-ten-stage-review",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-tenstage-deploy-20261115",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_output_malformed"
+      ]
+    },
+    {
+      "entry": "fade001-tenstage-impl-20261113",
+      "kind": "dir",
+      "reason_codes": [
+        "skipped_over_limit"
+      ]
+    },
+    {
+      "entry": "fade001-tenstage-review-20261114",
+      "kind": "dir",
+      "reason_codes": [
+        "skipped_over_limit"
+      ]
+    },
+    {
+      "entry": "fade001-weekly-shift-review",
+      "kind": "dir",
+      "reason_codes": [
+        "skipped_over_limit"
+      ]
+    },
+    {
+      "entry": "fade011-openrun-20261110",
+      "kind": "dir",
+      "reason_codes": [
+        "skipped_over_limit"
+      ]
+    },
+    {
+      "entry": "fade规范对表-ceo修正令-20261115.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fsd-sleepgap-probe-20261115",
+      "kind": "dir",
+      "reason_codes": [
+        "skipped_over_limit"
+      ]
+    },
+    {
+      "entry": "lg语义条款册立册定性-20261114.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "mc-oprec-fade011-pathspec-dispatch-20261115.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "mount-gate-build-20261111",
+      "kind": "dir",
+      "reason_codes": [
+        "skipped_over_limit"
+      ]
+    },
+    {
+      "entry": "mount-log",
+      "kind": "dir",
+      "reason_codes": [
+        "skipped_over_limit"
+      ]
+    },
+    {
+      "entry": "p3-watch-probe-removal",
+      "kind": "dir",
+      "reason_codes": [
+        "skipped_over_limit"
+      ]
+    },
+    {
+      "entry": "tree-gate-review-20261110",
+      "kind": "dir",
+      "reason_codes": [
+        "skipped_over_limit"
+      ]
+    },
+    {
+      "entry": "首评分卷-20261109.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    }
+  ],
+  "carry_over": [
+    {
+      "carry_id": "CARRY-20260728-004",
+      "cells": [
+        "`CARRY-20260728-004`",
+        "P1",
+        "trilc TUI 对齐 CC — P1 输入完整性",
+        "CTO→FSD→STE",
+        "**frozen——冻结维持**（W35 8/24 CEO 裁）·只归位不解冻",
+        "原裁在卷+后续零解冻令对表（本批）；解冻=CEO 裁决链非本批范围"
+      ],
+      "status_to": "frozen",
+      "source": "unresolved-items §1 现役区",
+      "dest": "frozen",
+      "pending_reason": "冻结挂账（行内 frozen/冻结 词面）"
+    },
+    {
+      "carry_id": "CARRY-20260728-006",
+      "cells": [
+        "`CARRY-20260728-006`",
+        "P2",
+        "trilc TUI 对齐 CC — P2 安全+长会话+打磨",
+        "CTO→FSD→STE",
+        "**frozen——冻结维持**（W35 8/24 CEO 裁）·只归位不解冻",
+        "同上（本批对表）"
+      ],
+      "status_to": "frozen",
+      "source": "unresolved-items §1 现役区",
+      "dest": "frozen",
+      "pending_reason": "冻结挂账（行内 frozen/冻结 词面）"
+    }
+  ],
+  "counts": {
+    "migrate": 0,
+    "keep": 34,
+    "carry_over": 2
+  },
+  "bidirectional_ok": true,
+  "violations": [],
+  "other_unresolved_count": 15,
+  "index_drift": {
+    "index_file": "OP-202611-W46-001.json",
+    "index_activeTrees": 0,
+    "index_doneTreesThisWeek": 0,
+    "plan_migrate": 0,
+    "note": "index 与实盘脱节为现势常态（W46 实锚 activeTrees=0 vs 实盘 20+）——旁证读数非分类基准"
+  },
+  "agent_readings": [
+    {
+      "tree": "d39勘止标注毕报-20261112.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "d82-排工紧凑性纪律毕报-20261113.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "fade001-firstshoot-scoring-weights-cpo-20261113.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "fade001-phase1-trigger-study-bod-20261112.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "fade001-ten-stage-mapping-20261112.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "fade001-ten-stage-product-plan-cpo-20261113.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "fade规范对表-ceo修正令-20261115.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "lg语义条款册立册定性-20261114.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "mc-oprec-fade011-pathspec-dispatch-20261115.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "首评分卷-20261109.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "agentcore-lockfile-forensics-20261113",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "authgate-cto-review-20261110",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "bod-tick",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "cao-gate-review-20261110",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-cto-review-20261109",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-failsafe-window-p1",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-migration-review-20261109",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-phase1-build-20261114",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-phase1-review",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-phase2-build-20261113",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-phase2-review",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-plane-shift-review-20261109",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-split-review",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-ten-stage-review",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-tenstage-deploy-20261115",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null,
+      "reasons": "agent_output_malformed: unparsable"
+    },
+    {
+      "tree": "fade001-tenstage-impl-20261113",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "reasons": "skipped_over_limit（慢道树数上界 15·fail-closed keep）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "fade001-tenstage-review-20261114",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "reasons": "skipped_over_limit（慢道树数上界 15·fail-closed keep）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "fade001-weekly-shift-review",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "reasons": "skipped_over_limit（慢道树数上界 15·fail-closed keep）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "fade011-openrun-20261110",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "reasons": "skipped_over_limit（慢道树数上界 15·fail-closed keep）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "fsd-sleepgap-probe-20261115",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "reasons": "skipped_over_limit（慢道树数上界 15·fail-closed keep）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "mount-gate-build-20261111",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "reasons": "skipped_over_limit（慢道树数上界 15·fail-closed keep）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "mount-log",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "reasons": "skipped_over_limit（慢道树数上界 15·fail-closed keep）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "p3-watch-probe-removal",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "reasons": "skipped_over_limit（慢道树数上界 15·fail-closed keep）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "tree-gate-review-20261110",
+      "domain": "tree",
+      "family": null,
+      "confidence": null,
+      "reasons": "skipped_over_limit（慢道树数上界 15·fail-closed keep）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": ".shift-ade.json",
+      "domain": "top_level",
+      "family": null,
+      "confidence": null,
+      "reasons": "agent_output_malformed: file entry missing（零动作候人工）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "OP-202611-W46-001.json",
+      "domain": "top_level",
+      "family": null,
+      "confidence": null,
+      "reasons": "agent_output_malformed: file entry missing（零动作候人工）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "OP-202611-W46-001.unresolved-items.md",
+      "domain": "top_level",
+      "family": null,
+      "confidence": null,
+      "reasons": "agent_output_malformed: file entry missing（零动作候人工）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "cfo-quota-daily-w46.md",
+      "domain": "top_level",
+      "family": null,
+      "confidence": null,
+      "reasons": "agent_output_malformed: file entry missing（零动作候人工）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "company-demand-pool.md",
+      "domain": "top_level",
+      "family": null,
+      "confidence": null,
+      "reasons": "agent_output_malformed: file entry missing（零动作候人工）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "daily-progress.md",
+      "domain": "top_level",
+      "family": null,
+      "confidence": null,
+      "reasons": "agent_output_malformed: file entry missing（零动作候人工）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "scoring-ledger-w46.md",
+      "domain": "top_level",
+      "family": null,
+      "confidence": null,
+      "reasons": "agent_output_malformed: file entry missing（零动作候人工）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    },
+    {
+      "tree": "task-inventory-20261115.md",
+      "domain": "top_level",
+      "family": null,
+      "confidence": null,
+      "reasons": "agent_output_malformed: file entry missing（零动作候人工）",
+      "source": "failed_fallback",
+      "plan_family": "keep",
+      "annotation": null
+    }
+  ],
+  "from_week_dir": "2026-W46",
+  "check_time": "2026-11-18T05:53:37.282191+00:00",
+  "verdict": "pass"
+}
