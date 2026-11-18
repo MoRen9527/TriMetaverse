@@ -4467,3 +4467,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 
 - tick 13:37:06（延迟 6min 窗内）系统面全绿（四口/MMC 旧态 229/大表 24-4）；树面旁证=施工链四节点 12 分钟内全落：13:30 notice179 入账→13:31 O1 Plan 卷→13:38 **O3 convene 码面毕报（sde-o3-convene-code-readout）**→13:39 **Score/Close Skill 卷模板双落**→13:41 **STE 判卷规程 v2（threshold=95+改善意见面增补）**——施工序四前项毕·仅剩河源执行切换（触发面候前项毕·Plan 卷 §六 对表）。免通报支成立·免扰归档。
 - 120 基准语义点候 CEO A/B 勘定（㊿+557 已呈·未答·随链不催）。
+
+### ㊿+559 · 快勘 O3/STE v2 要点补注（2026-11-18 13:47 +0800）
+
+- O3 码面（SDE 12eef86·双推 sg bare+github+河源 ff 同步）：loop_autoreview 四项扩展毕=①改善意见必付 schema（双 topic+三件套 rationale/evidence_ref/check_time·缺=fail-closed 不消费）②aggregate 意见聚合 14 面汇出③NEW_STRUCTURE_THRESHOLD=95（CLI --threshold 带值位·零硬编码）+权重 120 归一常量④毕报四要素承载面——单测四态全过·**新结构轮码面 ready**。
+- STE v2：95=判定线非质量目标线；改善意见必付面入规程（spawn 即教）；**120 归一（新结构轮）/100 直加（现行轮）两制并行·跑用面标记·禁混折**；判卷席操作清单三步。
+- ⚠秩序注：120 基准 A/B 形 CEO 未批字，施工面已按 A 形（120 归一）落码落规程——CLI 带值位可承载 B 形改判读语义（改动面小）·候 CEO 一句勘定即定线。
