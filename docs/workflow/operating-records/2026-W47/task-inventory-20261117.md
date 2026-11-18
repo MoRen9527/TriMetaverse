@@ -12,7 +12,7 @@
 
 | 任务书（LG号+名） | 树 id | 大白话简述 | 树任务链 | 当前进度节点 | 派发时间 | 是否完成 |
 |---|---|---|---|---|---|---|
-| FADE-001 实弹段+第 12 轮（fade-001 自进化 loop） | fade001-tenstage-deploy-20261115 | fade-001 自进化 loop（**flag=debug·融合毕·ns2 候 11-22 首拍**） | ns1 毕（verdict=loop_next 81.02）→notice-184 融合裁进下一轮→拆解任务书获批（notice-185）→**WP 施工序全毕**（WP4/WP1-7/WP6·rubric 冲突勘定链全闭 ab959c5 推平＋河源 sync·python3 3.12.3 兼容）→COO 复核过（350dd0d56·八锚七实判 PASS·r1 缺陷正向闭环实证）→**WP9 规划卷 v2 落树＝融合毕（21:50·r588d）** | **ns2 触发窗=11-22 首拍实锚窗**（真值 cron·四模块活体·LG-099 子项B 同窗）——flag=debug 停点呈批链照走；WP8 候 flag 设计核统排（非阻塞）；评卷对象域=手工管理形；30min 必报制续役 | 11-16 | 在途（融合毕·ns2 候首拍窗） |
+| FADE-001 实弹段+第 12 轮（fade-001 自进化 loop） | fade001-tenstage-deploy-20261115 | fade-001 自进化 loop（**flag=debug·融合毕·ns2 提前直跑（CEO 裁不等自然周）**） | ns1 毕（verdict=loop_next 81.02）→notice-184/185 融合裁+批→WP 施程序全毕（冲突链全闭 ab959c5＋河源 sync）→COO 复核过→WP9 规划卷 v2＝融合毕→**notice-189 三连令（20:06）：web 勘形流转 CTO 三面＋ns2 提前直跑 COO 拆树排期（第 13 轮·双席派工毕 2017）＋uuid 清单随转** | ns2 直跑工序排面（COO 拆树在工）→SDE force-run→值席判卷位＋尾段 7 席＋debug 停点呈批链；web 勘形三面（CTO 在工）→CEO 浏览器进场按 uuid 对座；30min 必报制续役 | 11-16 | 在途（ns2 提前直跑段） |
 | TriRMC bridge 改造（任务书 96f3b41b5·形 A 保守版） | trirmc-bridge-dsh-20261116 | dsh 桥改造+凭据接线+preset 移植+桥工具面 | T1 闭环（GLM 槽活形）→T2 收口（b 形）→T3 验收成立（二审绿·双仓 9d9dfde+da59e59）→落实窗候令→T4 候令 | T3 毕·落实窗候令＋T4 依序接候令 | 11-16 | 在途（落实窗+T4 候令） |
 | 投递语义面插件形式化（方案卷 fd2fd57f0+§八增补 86337fb0c） | trirmc-bridge-dsh-20261116（方案卷同树） | 投递机制族插件化（六机制地图·两世界边界） | 方案卷→CEO 回看三项裁（整体认+P0 准+P2 纳）→P0 registry 化闭环（862ec1f 二审绿） | P0 闭环·P1 t4-bridge 候令·P2 mailbox 候排 | 11-17 | 在途（P1/P2 候令） |
 | a1 GLM key env-spawn（TriModel 进程内解卡） | a1-glm-key-env-spawn-20261117 | TriModel 解卡 spawn 3334 带 GLM env | 拟形绿→编码（3efc4df）→二审绿→R-HY 部署窗四步全绿→T1 闭环 | 验收成立·T1 闭环达成 | 11-17 | 毕（验收成立·r218/r228 在卷） |
