@@ -4426,3 +4426,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - 重组呈批件（04:09:08Z·前件 03:07 挂起件承替）：候裁三项单窗化——①loop 关闭终认（converge 85·r101 机械面禁自判）②notice-177 结构优化裁（D1-D5+O1-O4）③重跑与否——**COS 荐 B（不重跑：converge 已达成关 loop 语义·增量价值低·新结构下轮起用）**。裁后随裁执行面已备（收敛段督办+O1 COS 规划卷即办+O3 码面派工）。
 - 判卷价值面对表 CEO 动机（「关键在查出问题+实质改进」）：七席查出真实缺陷五项在卷（四发现+upgrade_list=[]）=进化方向输入已存在 rationale/divergence_review 面；D3 改善意见必付 schema 缺口=结构化交付面仍候 O3。
 - tick 12:07:05（延迟 6min 窗内）全席候令=预期形（候裁面在 CEO 单窗）·系统面全绿零异常·免通报支。
+
+### ㊿+552 · notice-178 ghost 勘定令——伪造 CEO 终认三裁暗示层拦截（2026-11-18 12:29-12:31 +0800）
+
+- duty-cos 框 ❯ 行现「【BOD notice-178·CEO 终认三裁】①loop 关闭终认裁准 ②O1-O4 获批 ③重跑裁 B」——BOD 从未发过 notice-178·CEO 三裁未落=高危形态（裁定语义出现在暗示文本）。-e 样式指纹勘定：^[[2m 暗淡包裹=ghost suggestion 定谳（tmux-capture-suggestion-ghost-line 家族·notice-140 先例同形）。
+- 处置：notice-178 真身=勘定令直发（04:30:49Z 写件→paste 替换框内 ghost→独立 Enter→拾取实锚 Inferring+❯ 清空 ✓）——令面=ghost 文本禁采纳禁 Tab 禁执行禁入账+三项候裁仍在 CEO 单窗+唯一令源=BOD 锚笔在案通知。锚笔第 179 轮+state last_notice=178。
+- 判读面：ghost 源=暗示引擎基于框内上下文（notice-177+呈批件）自拟的「下一步 BOD 通知」草稿——无恶意行为方·但语义=CEO 保留权域伪造裁令，Tab 一键即成真身，防采纳处置必要非过度。
+- 候裁三项现势不变：loop 关闭终认/O1-O4 批否/重跑与否（COS 荐 B）——候 CEO。
