@@ -3,7 +3,7 @@
 - **seat**：STE（小柯）·契约测试套件设计席（P1 契约先行·FSD 实现门前置门——契约绿=实现依据）
 - **输入**：CTO 设计主卷 97c8c70a3（两包形荐/P1 编排九件/判据四条）+分歧深化三层全谱（notice-236 两包形终裁·cpo-orchestration-divergence-deepening §一-§五共认承录）
 - **九件实锚**（sg 双仓 orchestration/ 面现勘·名集零差）：capability-router/cost-controller/dispatch-proxy/employee-registry/employee-scheduler/index/session-bridge/trilc-executor/types（.ts）
-- **契约基准形**：MMC/RMC 双侧现役语义**交集为契约正形**·双侧差异面=「orchestration-kit 语义正形候选」显式标注（候 CTO 裁·契约面不擅裁语义归一）
+- **契约基准形**：**断言基准=现役实形**（CTO 断言基准裁 cto-suite-baseline-ruling-20261120·TC 9db66c084——原「交集为契约正形」形随裁勘正·C4-C7 设计形词面已对表现役签名·沿革与挂账见 §五）；C2 前置两裁已落（cto-c2-dualruling-20261120：候裁①=含 family 过滤段 MMC 形为正形·候裁②=独立 sibling 新仓 TriOrchKit）
 - lastSyncedAt: 2026-11-20（commit 时戳锚）
 
 ## §一 套件总形（TDD 门·契约测试形）
@@ -28,27 +28,31 @@
 ### C3·employee-registry.ts（席位注册契约）
 
 - **契约面**：loadEmployeeRegistry(source) → {employees: EmployeeRecord[], errors: []}；13 席真源形（TriMMC 面 LOADED=13 承）；坏 contract 优雅跳过零抛（fail-closed 降级面）。
-- **断言**：`合法 v3 contracts 装载零错+席位 id 唯一`+`单件坏 contract→errors 记录+零抛`+`空目录→零席空 errors 非抛`+`幂等：同源两次装载逐字段等值`。
+- **断言**：`合法 v3 contracts 装载零错+席位 id 唯一`+`单件坏 contract→errors 记录+零抛`+`空目录→零席空 errors 非抛`+`幂等：同源两次装载逐字段等值`+`**family 过滤双侧同值案（C2 候裁①裁落·施工门禁新增）**：board/business-strategy 两 Registry 席被过滤且**零入 errors**·roster=Role-only（MMC/RMC 同断言值面——若 RMC 侧真有隐藏全量装载消费方，该案活体对表显性失败 fail-visible 回勘面在）。
 
-### C4·employee-scheduler.ts（调度契约）
+### C4·employee-scheduler.ts（任务状态机契约·现役实形勘正版）
 
-- **契约面**：调度选取形（next(profile) → EmployeeRecord | null）；循环轮转语义；空池→null 零抛。
-- **断言**：`空池 next→null`+`单席池恒返该席`+`多席池循环轮转序稳定（两次全轮序等值）`+`并发调 next（Promise.all×50）零重入破坏`。
+- **契约面（现役实形）**：任务生命周期状态机形——`transition(task, to, reason?) → {success, task, error?}`（VALID_TRANSITIONS 表校验·返回不可变新对象）+`assign(task, employee, activeTasks, config?) → {success, task, error?}`（queued 态守卫+maxConcurrentTasks 容量守卫 hasCapacity）+`escalate(task, reason)`（→escalated+清 assignee）+`isTimedOut(task, timeoutMs?)`/`getConfig()` 族。
+- **断言**：`合法迁移→success:true+返回新对象（原 task 对象零变·immutable 断言）`+`非法迁移→success:false+error 列出该态合法迁移表（VALID_TRANSITIONS 值面对表）`+`assign 非 queued 态拒（error 值面）`+`assign 超容量拒（activeTasks≥maxConcurrentTasks·error 值面）`+`isTimedOut 边界（窗内 false/超窗 true）`。
+- **设计意图挂账（原卷词面·不灭失）**：池选取轮转形（next(profile)→EmployeeRecord|null·循环轮转/空池 null）——→ §五 演进清单。
 
-### C5·dispatch-proxy.ts（分发代理契约）
+### C5·dispatch-proxy.ts（同步编排管道契约·现役实形勘正版）
 
-- **契约面**：dispatch(task) → {routed_to, latency_ms}；路由失败→OrchestrationError（routed_to=null）零裸抛；超时形（timeout opt→TIMEOUT error code）。
-- **断言**：`正常路由回执形断言（routed_to+latency 非负）`+`目标不可达→OrchestrationError.code=DISPATCH_FAIL 零裸抛`+`timeout 触发形`+`幂等：同 task id 重复 dispatch 不双重派发（幂等守卫面·双侧差异面=候裁标注 MMC 形/RMC 形）`。
+- **契约面（现役实形）**：`dispatch(request, deps) → DispatchResult` 同步六步编排管道（classify→load→estimate→route→budget→schedule[assign+transition]→dispatch）——成功形 `{success:true, assignedTo, costEstimate{estimatedTokens, estimatedCostUSD, modelTier}, trace[]}`·失败形 `{success:false, rejectionReason, trace[]}`（预算拒/调度穷尽/迁移失败三面·**结构化回执零裸抛**）；`dispatchAsync(request, deps)`=同管道+executor.execute 真执行回写 `output`/`executionError`。
+- **断言**：`六步管道 trace 步序断言（classify/load/estimate/route/budget/schedule 步名齐序）`+`正常路由成功回执形（assignedTo+costEstimate 三字段+trace 完整）`+`预算拒→success:false+rejectionReason 值面（budget 段·零裸抛）`+`route 不匹配→success:false 回执（rejectionReason 值面）`+`dispatchAsync executor 失败→success:false+executionError 回写形`。
+- **设计意图挂账（原卷词面·不灭失）**：routed_to/latency_ms 回执形·timeout opt→TIMEOUT 码·OrchestrationError 类型化·幂等守卫（同 task id 不双重派发·原「双侧差异面候裁标注」位随之归档）——→ §五 演进清单。
 
-### C6·capability-router.ts（能力路由契约）
+### C6·capability-router.ts（路由判定契约·现役实形勘正版）
 
-- **契约面**：route(capability, payload) → handler 执行结果；未注册 capability→CAPability_NOT_FOUND；handler 异常→隔离零传染（单 handler 崩不拖全局）。
-- **断言**：`注册→路由命中→结果透传`+`未注册→NOT_FOUND 人话码`+`handler throw→错误封装回执·其余 capability 路由不受影响`。
+- **契约面（现役实形）**：`route(employees, routingRequest) → RoutingDecision` **纯判定打分形**——matched/primary/score/matchDetails（含 ioCoverage）/alternatives 回退序；判定=选择·零执行零 side-effect（真执行在 dispatch/executor 面）。
+- **断言**：`matched=true 形（primary 非空+score 数值+matchDetails.ioCoverage 值面）`+`不匹配→matched=false 回执形（dispatch 面按拒收走·零抛）`+`纯函数幂等判定（同输入双调 RoutingDecision 等值）`+`alternatives 序稳定（主选不可用时回退序可复现）`。
+- **设计意图挂账（原卷词面·不灭失）**：capability handler 注册表执行形（route(capability, payload)→handler 执行结果）·CAPABILITY_NOT_FOUND 码·handler 异常隔离零传染——→ §五 演进清单。
 
-### C7·cost-controller.ts（成本控制契约）
+### C7·cost-controller.ts（预算契约·现役实形勘正版）
 
-- **契约面**：budget 检查形（can_spend(cost) → bool+reason）+记账形（record(spend)）；预算超限→拒绝+reason=BUDGET_EXCEEDED；记账幂等（同 spend id 双记=单计）。
-- **断言**：`预算内 can_spend=true`+`超限 false+reason 值面`+`record 幂等（同 id 双记余额单扣）`+`并发 record×100 余额守恒（竞态面）`。
+- **契约面（现役实形）**：`estimateCost(employee, expectedOutputs) → {estimatedTokens, estimatedCostUSD, modelTier}`+`checkBudget(employee, estTokens, estCost) → {approved: boolean, reason?: string}`（reason=**人话字符串**·三 cap 面：company daily/employee daily/per-task）+`recordCost/getBudgetState/getModelTierPolicy/resetBudget` 族。
+- **断言**：`estimateCost 回执三字段形（modelTier 合法枚举值面）`+`预算内 checkBudget→approved:true+reason 缺省（undefined 面断言）`+`三 cap 逐面超限→approved:false+reason 非空人话字符串（值面含对应 cap 名·逐面对表）`+`recordCost→getBudgetState 读数对表（记账可见性）`。
+- **设计意图挂账（原卷词面·不灭失）**：can_spend 形·BUDGET_EXCEEDED 错误码·记账幂等（同 spend id 双记单计）·并发 record×100 余额守恒——→ §五 演进清单。
 
 ### C8·session-bridge.ts（会话桥契约·八阶段面）
 
@@ -70,6 +74,14 @@
 - 本卷落树即达 FSD（契约绿=实现依据·FSD 按 §二逐件实现使契约绿）；
 - 节点短报制：每件契约绿/红随跑短报值席（不候全量汇总）；
 - 双侧差异面标注汇总（§二内「候裁标注」位）：dispatch 幂等形/session-bridge 现役承形/trilc-executor 跨面件归属——三标注候 CTO 裁·裁前契约面按交集保守形跑。
+
+## §五 勘正注记（CTO 断言基准裁随动·2026-11-20）
+
+- **裁锚**：CTO 契约套件断言基准裁决（cto-suite-baseline-ruling-20261120.md·TC 9db66c084·COS 767 落账 30cf4e68c）——**断言基准=现役实形**（锁设计形=C3 必炸信号淹没·自反收敛目的）；fsd 四实锚勘定（fsd-c2-dualside-survey dc9c9d42a+中段短报转·COS 分诊）触发本席勘正（裁后随动·CTO 知会 2026-11-19T23:03:26Z）。
+- **勘正沿革（四实锚+C4 同族一并）**：C4 `next(profile)` 轮转形→任务状态机形（transition/assign/escalate·isTimedOut）；C5 `routed_to/latency_ms`/OrchestrationError/timeout/幂等守卫→DispatchResult 六步管道结构化回执形；C6 handler 执行/CAPABILITY_NOT_FOUND→RoutingDecision 纯判定形；C7 `can_spend`/BUDGET_EXCEEDED→checkBudget `{approved, reason 人话字符串}`+recordCost 族。C3 增双侧同值 family 过滤断言案（CTO 裁卷 §一·施工门禁新增）。
+- **设计意图挂账（不灭失·C2 P1 演进清单·sprint 后窗评估）**：C4 池选取轮转形·C5 timeout 形/幂等守卫/OrchestrationError 类型化·C6 capability handler 执行形/异常隔离·C7 记账幂等/并发守恒——kit 收敛毕后演进候选·裁前不铸不删。
+- **独立验注**：本席勘正词形以 **TriMMC src/orchestration/ 现役源码直读为锚**（transition/assign 签名+dispatch 六步+RoutingDecision/checkBudget 返回形逐一实勘）·非转抄 fsd 转述；双侧八件零语义差（fsd strip-cr 谱·真差=registry family 段一处·候裁①已裁含段=正形）——fsd 方法论采认：后续契约断言体铸形以运行时探针打印键面 JSON 为唯一抄写源+编译器值面 diff 回路（防手打词族拼形漂移·c7 两稿三词族全错实证教训）。
+- **落位随注**：kit 仓=独立 sibling 新仓 TriOrchKit（npm 包名 @tricompany/orchestration-kit 保持）·新仓 .gitattributes 钉 `* text=auto eol=lf`（strip-cr 假漂移家族仓级根除）·九件落装=MMC 形为基直拷+executor 新名投影+family 过滤段并入。
 
 ## 使用依据
 
