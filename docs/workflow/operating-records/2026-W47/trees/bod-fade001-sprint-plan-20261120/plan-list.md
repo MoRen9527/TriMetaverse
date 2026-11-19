@@ -25,9 +25,9 @@
 - [x] ~~B2 修B：fallback 链改（env 逃生门·default 链 GLM 活体面）~~ ——11-19 毕（final-synthesis 全谱六件合一）
 - [x] ~~B3 修C：preflight 供给断言 5/5~~ ——11-19 毕（防线三梯成型）
 - [x] ~~B4 修D-2：dsh 切 GLM 值面探针复验~~——**02:06 毕**（值席 cos-snb4 毕报：GLM 链活体通·独立探针读数留证·落卷锚 cto-fixD2-closeout-20261119.md）
-- [ ] **B6 B线收口终卷全谱合一**（env 终探①+fallback 终验拍②并轨）← **当前最近未毕项**——CTO 收口段在工（02:07 值席报）→ **毕=ns8 重开触发面**
+- [x] ~~B6 B线收口终卷全谱合一~~（env 终探①+fallback 终验拍②并轨）——**05:04 毕**（b7a4227bb+cto-b6-closeout-20261120.md·env 终探①=bcf1cb283 判据①兑现+fallback 终验拍②=活体三重绿已证挂账态如实铸面（判据②载体=ns8 首拍 failed=0 随首拍自然兑付）+B1-B4 四修终态并轨——**ns8 重开触发面兑现**·催 2h49min 因果 m-cto 自领属实）
 - [ ] B5 修D-1：dsh/trimodel 余额充值或键换发——候 CEO 裁（加急直呈在候·**不催不 block**：B 线其余项不依赖 B5）
-- [ ] B7 ns8 排面重开（WP9v3 基线+等待语义 gate 首用+spawn 七席·notice-221 起跑授权在）——候 B6
+- [ ] **B7 ns8 排面重开**（WP9v3 基线+等待语义 gate 首用+spawn 七席·notice-221 起跑授权在）← **当前最近未毕项**——候 B6 ✅毕=**解锁·排程令候 COO/COS 派发链**（05:04 触发面兑现）
 
 ## C 线 · 两包形收敛施工（notice-236 款一定谳·P1-P3 分批强制·契约测试先行）
 
