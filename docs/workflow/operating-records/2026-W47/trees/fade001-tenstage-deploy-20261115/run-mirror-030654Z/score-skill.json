@@ -1,0 +1,61 @@
+{
+ "score_version": "2.0.0-ns6",
+ "run_id": "shift-W46-20261119T030654Z",
+ "stage_face": "score-skill",
+ "spawn_form": "notice-207 件①程序化 spawn（硬序承·禁并行禁倒置）",
+ "entries": [],
+ "judge_faces": {
+  "initial": {
+   "seat": "cos",
+   "scores": {
+    "I1": 7,
+    "I2": 6,
+    "I3": 4
+   },
+   "rationale": {
+    "I1": "锚文判读：34 件 keep（24 目录+10 散件）多属「记录」面，保守封存主体可立；但 42 条 readings 中仅 10 条 fast_path 有实质分类，24 条 failed_fallback（annotation=fallback_keep_unjudged:malformed、family=null、root_cause=模型服务供给面耗尽）与 8 条 top_level pending_ledger（company-demand-pool/daily-progress/task-inventory/scoring-ledger 等活件）均未逐案判「记录/活」，活件未随人带走；migrate=0、carry_over 仅 2 条 W35 frozen 旧账。机械面可认：counts 0/34/2/top_level 8、bidirectional_ok=true、violations=[]、reconciliation 零差额、verify 5/5。按主体偏记录面、32/42 未终判取 7/14，非满分。",
+    "I2": "锚文判读偏「记录」：批次面有 15/3、2 批、零 skip 与 24 树 slow_order；降级链有 fallback_keep_unjudged/pending_ledger、root_cause 供给面与 alert（阈值 0.2、triggered/notified）；但预案未闭：retry.max=1 而 retry_enabled_trees=0，pending_review=32 无 owner/时限/T+n，other_unresolved=15 未排期，dce#/overflow_checks 三项 checked=false 仅口径声明，index_drift 自认 activeTrees=0 对实盘 20+ 脱节却无归零动作；top_expansion.task_inventory done/todo=0/0 与表内「毕/在途」形不符（无 [x]/[ ] 词面）而读数未注失真；硬时钟授权链仅 preflight week_math 注记。三面有缺、主链保守合理，取 6/11。",
+    "I3": "锚文判读偏「记录」：plan.json check_time 实戳、42/42 annotation 非 null、24 条带 root_cause 与 disposition 四选一，较 r1 的 null 面有改善；但逐案留痕仍批量套话：10 条 fast_path、24 条 malformed、8 条 pending 各同一模板，evidence_ref 全为 classify_dir:…/evidence:none_markers/top_level_file_list 非 run_dir 文件路径，无逐件 check_time，8 条活件无 owner/去向/死信风险；本段先于 close skill，run_dir 尚无 close evidence 可复核（不额外扣，但也不能据此记满分）。指针个别断链+套话面，取 4/10。COS 席角：本卷为初判面，联审与终判及分差≥2 档复核候 COO joint 与值席终判窗，rationale/evidence_ref/check_time 三件套已齐。"
+   },
+   "evidence_ref": {
+    "I1": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings, #/counts, #/keep, #/carry_over, #/fallback_governance, #/reconciliation, #/index_drift; /var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/verify.json#/checks",
+    "I2": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/batching, #/fallback_governance/retry, #/fallback_governance/pending_review, #/fallback_governance/alert, #/index_drift, #/other_unresolved_count, #/top_expansion; /var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks, #/steps; /var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/preflight.json#/assertions; /var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight, #/score/domain_breakdown",
+    "I3": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings, #/check_time; /var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/manifest.json#/check_time; /var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/check_time, #/score/families; /var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/rubric_report.json#/check_time"
+   },
+   "check_time": "2026-11-19T03:10:39Z"
+  },
+  "joint": [
+   {
+    "seat": "coo",
+    "scores": {
+     "I1": 12,
+     "I2": 9,
+     "I3": 8
+    },
+    "rationale": {
+     "I1": "锚文判读先行：「这是一周的记录，还是这一周的活——记录随周封存·活随人带走」。搬移面：migrate=0，无错搬、无丢失；keep=34 中，10 件散件按 scatter_file_archive 判为记录、方向可认，24 个目录以 agent_output_malformed 兜底 keep、未逐案过记录/活判读；carry_over=2 均 frozen、只归位不解冻、方向对；8 个顶层件 disposition=pending_ledger、无逐件去向，top_expansion 仅给 company-demand-pool 机械读数 reviewed_mark=true/migrate_candidate=false，未覆盖其余 7 件。机械面 counts 0/34/2/8、bidirectional_ok=true、violations=[]、reconciliation ok 零差额、verify reconciliation pass，清单结构闭合。扣 2：32/42 为 failed_fallback（24 malformed＋8 pending_ledger）、未形成逐案记录/活判断，顶层 8 件去向未逐条落卷，正确性靠保守兜底而非实证（判卷时点 2026-11-19T03:12:44Z）。",
+     "I2": "经营/节奏三面评读：批次面 batching 15/3、batches_run=2≤batch_max=3、beyond_limit_skipped=[]、slow_order 24 条齐，但 migrate=0 使迁移批次无实件，批次实为 fallback 判读兜底；止损面 retry.max=1 而 retry_enabled_trees=0（只记账未收敛）、alert 阈值 0.2/实测 rate=1.0 已 triggered+notified、pending_review=32 在卷；dce push 首跳失败后走 fetch+merge+push 兜底成功且 stderr_tail 留痕，止损分支可执行；硬时钟面仅 preflight week_math（loop-window/sunday_gate exempted/real cron Sunday gate unchanged）与 healthz cron_enabled=true 间接承载，卷内无 schedule/cron 逐项零动断言，且 dce overflow_checks 三项全 checked=false 未实检；窗口冲突 index_drift（activeTrees=0 vs 实盘 20+）、other_unresolved_count=15、fast_path_failure_rate=1.0 已如实列面。规划主链可跑但硬时钟与止损收敛两面有缺，扣 2（判卷时点 2026-11-19T03:12:44Z）。",
+     "I3": "留痕面：42/42 agent_readings 均载 annotation/rationale/evidence_ref；24 条 malformed 带 fallback_keep_unjudged:malformed＋root_cause（模型供给面 errors/agent_loop_calls=0，本跑新增），8 条 pending_ledger 与 10 条 fast_path 亦逐条落卷；fallback_governance 全量列明 slow_total=24/failed_total=24/rate=1.0/alert triggered+notified/pending_review=32，失败不静默；dce 四步 cmd/rc/stderr_tail 齐、verify 5 项 strict_mode=true 零 reasons、preflight 带 diverge/ceo_ruling 读回、top_expansion 增 notice-207 机械读数、score.json I 族锚与权重在卷。扣 2：32/42 rationale 为同一模板句（malformed/pending_ledger 兜底），无逐件记录/活一句判断；evidence_ref 多为 token（classify_dir:/evidence:none_markers/top_level_file_list），仅 2 件带 expiry 原始时戳，路径级可复核锚不足；dce overflow_checks 3 项 checked=false 未进 verify 红闸；top_expansion 为读数无处置结论（判卷时点 2026-11-19T03:12:44Z）。"
+    },
+    "evidence_ref": {
+     "I1": "plan.json#/counts + plan.json#/keep + plan.json#/carry_over + plan.json#/agent_readings + plan.json#/top_expansion + plan.json#/reconciliation + verify.json#/checks",
+     "I2": "plan.json#/fallback_governance/batching + plan.json#/fallback_governance/retry + plan.json#/fallback_governance/alert + plan.json#/index_drift + plan.json#/top_expansion + dce.json#/steps + dce.json#/overflow_checks + preflight.json#/assertions/week_math + preflight.json#/assertions/healthz + verify.json#/checks",
+     "I3": "plan.json#/agent_readings + plan.json#/fallback_governance + plan.json#/top_expansion + plan.json#/reconciliation + dce.json#/steps + dce.json#/overflow_checks + verify.json#/checks + preflight.json#/assertions + rubric_report.json#/t1_candidate_notes + score.json#/score/families"
+    },
+    "check_time": "2026-11-19T03:12:44Z"
+   }
+  ],
+  "final": "候 COS 值席域（final_scores_basis/divergence_review 面值席工序）"
+ },
+ "weight_face": {
+  "objective_machine": 65,
+  "subjective_i_family": {
+   "I1": 14,
+   "I2": 11,
+   "I3": 10
+  },
+  "total_basis": 100,
+  "anchor": "notice-180 裁①"
+ },
+ "check_time": "2026-11-19T03:07:36Z"
+}
