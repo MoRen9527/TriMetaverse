@@ -6,7 +6,7 @@
 - 席位: FSD 小全（m-fsd·W2-b 主刀）
 - 落款: 2026-11-19T17:54:09Z（+8=2026-11-20 01:54:09·date 现查原值粘贴）
 - 法源链: BOD W2 托转令（2026-11-20 01:40+08）→CEO 01:28 批准线（notice-237 款二）→COS 拆树派工卷（§二 W2-b）→COS deadline 确认知会（09:00 全 Plan 含 A 线·快毕节律）
-- 施工锚: **TriMLC d7eabb3**（2 files +392·src/server/app.ts+test/server/wake-endpoint.test.ts·零卷入）
+- 施工锚: **TriMLC d7eabb3**（2 files +392·src/server/app.ts+test/server/wake-endpoint.test.ts·零卷入）+**改名件 f0f22c6**（§五·COS D-39 径裁随件·端点终名 seat-wake）
 
 ## §〇 · 实现方案（先勘后抄禁自造形遵行）
 
@@ -42,10 +42,23 @@
 2. 既有 5 fail（基线族）非本件域——如实转报不修（候 CTO 域勘修窗裁量）。
 3. `TRILC_INTERNAL_TOKEN` 键名=TriLC 遗留形（实勘照抄·与 TriMMC TRIMC_INTERNAL_TOKEN 键族分立）——改名属破坏性变更候远期面（现役读侧写侧同键自洽非债务）。
 
+## §五 · 改名令遵行段（wake→seat-wake·COS D-39 径裁随件·TriMLC f0f22c6）
+
+- 法源链: W2-a 勘定卷（cto-w2a-channel-survey-20261120.md·52ce83db6）§二②重大消歧→CTO 建议 seat-wake→COS 径裁采纳改名令→随件补注（reason 字面值形态由施工席自裁·唯一硬要求=本卷未接线态 reason 终态字面值面如实载明）。COS 定性=平行施工时差落了裸名·非缺陷非返工——本席首勘只勘到 heartbeat-wake 模块撞词（已码注）·漏 healthz/power 面 wake 字段族（lastWakeSeenAt/lastHandledWakeAt/wakePollFailures/lastWakeReport=电源面睡眠唤醒语义在役）真撞名——CTO 勘得更全·采认。
+- 施工三件（改名令①②③全毕）：
+  1. **端点路由改名**：`POST /internal/v1/wake`→`POST /internal/v1/seat-wake`——app.ts 3 处+测试件 13 处·全引用面同步·**裸名端点引用零残留断言 ✓**（grep `/internal/v1/wake`（非 seat 前缀）TriMLC 源码域零命中）；消歧注增补双族（heartbeat-wake 模块+healthz/power 字段族·W2-a 卷锚）。
+  2. **白盒 15 案更新+复跑**：测试件 git mv→`seat-wake-endpoint.test.ts`（91% 相似 RM 形）·13 处路径+案名中文全同步（案名残留零）——**复跑 15/15 全绿 ✓**。
+  3. **build 复验+commit**：tsc check RC=0+build RC=0（dist/server/app.js 286142 bytes 01:58 产物·W2-d 加载面就绪）+**TriMLC f0f22c6**（2 files +24/-20·git mv 零卷入）。
+- **★未接线态 reason 终态字面值面（W2-c 门禁+W2-d 值面探针对表锚·m-cos 补注硬要求载明）**：
+  - **reason 终态字面=`wake_action_not_wired` 照旧不改**——自裁依据=改名令原文「其余零变……accepted:false wake_action_not_wired 未接线值面照旧」明文遵行；接线状态语义（wired/reason=handler 在位面）与端点路径名不同层·路径改名不牵引值面字面。
+  - 终态探针样例（改名后·供 W2-d 探针防硬编码漂移假失败）：
+    `POST /internal/v1/seat-wake`（头 X-Internal-Token 合法）body `{}` → `200 {object:'wake', accepted:false, wired:false, reason:'wake_action_not_wired'}`——码面（app.ts 未接线分支）与测试面（e1/e2 deepEqual 断言）字面逐字一致已 grep 断言 ✓。
+- 复验补录：server 套件快验 141 pass/3 fail——3 fail 逐案归因=auth-gate e1-healthz 端到端族 1+FADE-ASSESS-005 派工门禁 2——**全为基线既有族同谱**（§二全量 5 fail 基线的 server 目录子集·族名实读非转抄）·零新增零漂。
+
 ## 使用依据
 
 - COS 拆树派工卷（§二 W2-b/§三护栏）+BOD 托转令四点+COS deadline 确认知会
 - 现役形实勘四段：app.ts L1884-1921（全局门顺序契约+fail-closed 形）/L1928-1975（config 族路由例）/L1975-2020（fade/runs body 读取例）/test/server/auth-gate-rejection.test.ts（15 案鉴权门套件+起服配方参照）
 - 基线读数：TriMLC 8fa3b97 提交信息（801 pass/5 fail 基线载录）
 
-—— FSD 小全（m-fsd）·2026-11-19T17:54:09Z（+8=2026-11-20 01:54:09·date 现查原值·D-47 正形）
+—— FSD 小全（m-fsd）·2026-11-19T17:54:09Z（+8=2026-11-20 01:54:09·date 现查原值·D-47 正形）·§五增补 2026-11-19T18:02Z（+8=2026-11-20 02:02·date 现查原值·D-47 正形）
