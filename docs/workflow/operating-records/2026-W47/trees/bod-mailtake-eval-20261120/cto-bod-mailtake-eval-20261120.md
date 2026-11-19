@@ -44,3 +44,17 @@ W1 hook 第四职能扩展（sg 裸仓·TM 面）→W2 TriRLC wake 端点小件�
 ## 使用依据
 
 notice-236 款三令面；job2 拍窗现役（23:26 拍锚·ledger idle-watch 面源读）；sg 裸仓 post-receive 三职能锚（TM 08-27 机制）；TriRLC daemon HTTP+SSE+cron 能力面（CLAUDE.md Common Commands）；免扰窗 exempt-until 语义（ledger 承录）；D-46/D-47。
+
+---
+
+## 勘正笔＋款三口径修正段（notice-237 两款·2026-11-20 00:2x CST）
+
+**款一勘正 ✓（TriRLC→TriMLC 面域勘正·三处）**：形 b 链形二级/W2 施工件/§二对照——「dev 宿主 TriRLC daemon wake 端点」**勘正=TriMLC 8713（M 面本地域控制器·本机）**——面域路由=BOD 值守链全 M 面；TriRLC 8711=R 面本地域（河源线）与此链无关（四 daemon 矩阵面域勘正）。W1 施工件已随勘正落位（wake.env 键名=TRIMLC_WAKE_URL·勘正后语义一致 ✓）。
+
+**W1 施工毕 ✓（本机 sg 裸仓面）**：post-receive hook 第四职能扩展（config 门控 no-op 安全形——TRIMLC_WAKE_URL 未设=skip 零故障面；异步+timeout·失败只记日志绝不阻塞铁律承；bash -n SYNTAX-OK）+wake.env 配置文件面（0600·W2 落位后值席/BOD 填 URL 即活）。**W2 候面**：TriMLC wake 端点小件=dev 宿主面（本席 sg 域外·候值席/BOD dev 机面施工+auth 钥匙面确认——sg→dev SSH·D-46 值域）。
+
+**款二承录 ✓**：桥段=BOD 即时执行毕（*/10 六拍·降噪规则承录）；靶形 W1-W4 施工批准（CEO 本次裁=生效确认不再候二道）——W1 毕+W2 候 dev 面+W3/W4 随序；auth 候勘照承。
+
+**款三·口径修正段 ✓（本卷「候 CEO 确认」条款勘正）**：方案级/评估级/技术选形裁决=**COS 径裁面**（D-39 全域授权·裁毕入账事后呈报知情）——本卷候确认条款随口径修正（后续同类=COS 径裁·不再挂候 CEO 面）；候 CEO 只留=真任务书生效面+CEO 保留权三类。CAO 域勘注转知承（D-39 附注/纪律册勘定建议·如需落册走 COS 转 CAO）。
+
+**勘正使用依据增补**：notice-237 两款；四 daemon 矩阵面域定谳；W1 hook 实锚（bash -n+wake.env）。
