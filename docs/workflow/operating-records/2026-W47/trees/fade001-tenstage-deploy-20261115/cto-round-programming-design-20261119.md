@@ -93,3 +93,17 @@ while True:
 ## 使用依据
 
 notice-226 四款架构级令面（款一勘正承录/款二 flag 并入/款三队列归位不废/款四排面不变）；notice-223/225 谱系（git 历史 14e92de70/9ea24bf26/e83cf39db）；393bdfe35 图三照修版；notice-198/202/222 谱系卷；weekly-plane-shift payload 全读；D-46/D-47。
+
+---
+
+## §一A 升降级算术与漏斗定谳段（notice-230 款二四前置件批立并入·2026-11-19 22:0x CST）
+
+| 前置件 | 定谳 | loop 体并入位 |
+|---|---|---|
+| ①分制基准 | 升降级算术**唯一挂并盘 100 制** | §一 verdict 计算域=并盘 100 制单值源（零双制混挂） |
+| ②95 线算术域 | **只挂机判+采集两域加和**·7 席主观=**否决权**（不算入加和·否决即挡 EXIT） | EXIT 门=（机判+采集≥95）∧（主观否决未触发）——否决权承载=score 线席位卷判定域（实现锚=score_engine/aggregate 面·否决值域细则候 score 线白盒） |
+| ③prod→test 判据 | prod 单轮直走交付面 fail（断言红/回归红）→自动降 test 重开进化 loop | prod 直走形后置门（authority_ref=notice-230·sanctioned 边登记） |
+| ④转化漏斗+FUSE 计数域 | 转化漏斗制度立（debug/test/prod 三态转化链留痕面）＋**FUSE 计数域=同根缺陷连续计数＋test/prod 两计数不混** | round_count 分域形=state.count[test]/state.count[prod] 两计数独立（零混挂）·同根缺陷=连续+1（异根=重置·判读锚=根因卷引用） |
+
+- **款三承录**：ns9 不走——优化毕下轮直接 TriRMC runner（loop 本体程序）跑；值席手动循环形态 ns8 收官——S1-S5+修 E 随 COO b 案直切形态拆树（eb3ac427·施工排面更新承）；
+- **款一承录**：b 案直切（P1/P2 前提=降级候补观察面不作门槛——观察义务保留：GLM 供给盯守 standing 照卷）。
