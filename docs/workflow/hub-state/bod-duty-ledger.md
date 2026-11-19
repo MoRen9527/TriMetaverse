@@ -5254,3 +5254,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 
 - **资产归档毕（CEO 令「交 cao 审核·归档到 TriCompany 的 bod 下统一管理资产」）**：真源=`TriCompany/source-agents/board/bod-tick-probe-template.md`（board 席位资产目录·元信息头齐·TriCompany 仓 commit）；TriMetaverse hub-state 副本 git rm 撤除（防双源）·本台账+模板文件头=指针。CAO 审核信已发（SendMessage 直达）。
 - **loop 机制质询（CEO 19:43 问「难道还是 agent 在控制 loop，而不是程序自己在控制流程？」）呈报候裁**：CEO 质疑成立面——notice-198 定谳=评卷段（ScoreSkill）程序化 spawn 形·段卡应 spawn 程序报错（fail-closed）候修复重跑；ns8 实际=spawn rc1 后值席域裁转手工补面轨（引 ns2 先例）=人肉接管段内工作·错误被兜底遮蔽+段面假通过+与定谳张力。现 GLM 额度已恢复+修 D-2 spawn 活体 rc=0=**评卷段程序化重跑条件已具备**。三选项候裁：a) 停手工·程序化重跑评卷段（正形）；b) 手工跑完本次+立规下轮起 spawn 失败=段报错停禁人肉接管；c) 另裁。轮间推进面（轮与轮起跑动作）现势=值席手动触发（runner 11-15 capped 后）——agent 控制面如实呈（段内 spawn=程序在跑·段间推进=agent 在控）。
+
+### ㊿+708 · CAO 审核通过·三件照改毕转正（2026-11-19T19:49+0800）
+
+- **CAO 审核意见**（m-cao 19:47:17 现查落笔·直读 TriCompany 真源）：**总裁通过**（归属✓命名✓元信息✓内容✓·零含密值面 ✓·机位硬编码不建议参数化=本模板唯一消费方 BOD 本机重挂照抄·参数化反增易错面）·附一勘一注一微建三件照改。
+- **三件照改毕**（TriCompany 仓 commit）：①syncMode 随动注「审核在途」→「审核通过 2026-11-19」+lastSyncedAt 现查更新（19:48:16+08）；②版本号勘正：正文「v4.5 增补」系 11-17 裁对 v2 形增补的版本号误标→**v2.5**（时序为准·头部勘正注留痕）；③头部补环境绑定声明一行（ssh 别名//srv/fleet//tmux 会话名三处·换环境复用须改）。
+- **运行态注**：本会话 cron 24290e7a prompt 仍带旧「v4.5」字样——session-only 不改（判读语义不受版本号影响）；下会话重挂照新模板抄=自然更正。回执 CAO 已发。转正·无再审。
