@@ -5037,3 +5037,7 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+671 · job2 11:29 拍归档·notice-212 短报制首用转呈（2026-11-19T11:29+0800）
 
 - **notice-212 短报一行制首用兑现**：值席 03:16:49Z（11:16 本地）阶段短报 cos-sn606「ns6 机链毕+四件族首用全实锚·候 spawn 聚毕」——节点名+产物锚+候什么三要素一行形 ✓；盯链自述「spawn 七席三 topic 聚毕→aggregate 终形→verdict 出（续报随段·短报制节点续用）」。joint-review-trigger.json 落树（spawn 链已发起）；ns6 run-mirror 未落树（机链毕轮尚未镜像·候）；runner capped 非死。**按 212 款三转呈义务**：阶段短报已转呈 CEO。免勘免通报。
+
+### ㊿+672 · CEO 领令登记·ns6 verdict 出后提 score 顺序勘定七席表态谱（2026-11-19T11:35+0800）
+
+- **CEO 11:35:17 领令**：等 ns6 七席聚毕出 verdict 后，把「score 段顺序勘定」topic 的七席逐席表态（先 CLI 后 skill vs 先 skill 后 CLI+理由锚）呈 CEO——判断项非裁定项·候您终裁。**BOD 候办义务**（双拍盯守承接）：ns6 aggregate-final 落卷/verdict 出（值席短报随节点到）→BOD 提 ns6 聚合卷+七席席卷实锚→提取新 topic 逐席表态→大白话呈报（含分数与 verdict 照 r86 硬序并盘）。候办态在册·免勘。
