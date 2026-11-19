@@ -31,8 +31,8 @@
 
 ## C 线 · 两包形收敛施工（notice-236 款一定谳·P1-P3 分批强制·契约测试先行）
 
-- [ ] **C1 P1 拆树派工**（编排九件收进 @tricompany/orchestration-kit 独立包·CTO 域排面·经 COO 拆树·与 S1-S5+修E 并行不混）
-- [ ] C2 P1 施工（九件迁移+契约测试先行+准入断言族）
+- [x] ~~C1 P1 拆树派工~~（编排九件收进 @tricompany/orchestration-kit 独立包）——**01:50 毕**（值席 cos-snp1 短报：FSD 主刀+STE 契约先行排面双发毕·STE 契约测试套件卷落树 ste-contract-test-suite-nine-20261120.md）
+- [ ] **C2 P1 施工**（九件迁移+契约测试先行+准入断言族）← FSD 主刀在工（STE 契约卷已落树）
 - [ ] C3 P1 验收（四仓活体对表+漂移归一+md5 复验）
 - [ ] C4 P2 配套/infra 收敛（候 C3）
 - [ ] C5 P3 local 族收敛（候 C4）
@@ -48,8 +48,8 @@
 > 5. **收口恒等式**：有无联审收口都是对 fade-001 自检与总结·七席联审=进化面与收口两义分立（notice-210 正形）。
 > 6. **护栏常位**：8 轮封顶保险丝+GLM 速率护栏+token 值面禁进转报+D-47 时刻制——四护栏改造后原样保留。
 
-- [ ] **D1 改造方案卷定稿**（round_runner 程序编排+spawn 七席+等待语义③轮间分离主形+①轮询探测 fail-closed+retry 闸漏补立入设计卷——CTO 域·候定稿落卷）
-- [ ] D2 评分两轨落地（ScoreCLI 机械面先+ScoreSkill 主观面后·两段锁勿互套·score 顺序 7/7 维持）
+- [x] ~~D1 改造方案卷定稿~~（round_runner 程序编排+spawn 七席+等待语义+retry 闸漏补立）——**01:50 毕**（CTO round 编程设计卷落树 fade001-tenstage-deploy-20261115/cto-round-programming-design-20261119.md·值席划项回传认收）
+- [ ] **D2 评分两轨落地**（ScoreCLI 机械面先+ScoreSkill 主观面后·两段锁勿互套·score 顺序 7/7 维持）——候 CTO 按 D1 设计卷排工
 - [ ] D3 进化判据接线（95 线+四前置件批立兑现·含 95 线定谳件）
 - [ ] D4 进化判决形落地（COS 综合裁判接口+轮间意见窗）
 - [ ] D5 close 恒等式接线（自检总结面·closeCLI+closeskill 双面分工）
