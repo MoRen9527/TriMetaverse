@@ -3,23 +3,35 @@
  "run_id": "shift-W46-20261119T090551Z",
  "stage_face": "score-skill",
  "spawn_form": "notice-207 件①程序化 spawn（硬序承·禁并行禁倒置）",
- "entries": [],
+ "entries": [
+  {
+   "criterion": "I1 搬移清单判断正确性",
+   "score": 13,
+   "rationale": "锚文判读（必经步）：keep 39＋migrate 3 分布——八件 top_level 三态 sanction 全载（A 线①活体：.shift-ade.json→migrate_carry_periodic conf 0.6 逐件 rationale/evidence 载·OP 双件→keep expected_absent/one_shot_frozen·cfo-quota→keep selfbuild_expected）——r1 缺陷②（八活件去向未判）本跑闭合；annotation/rationale/evidence_ref 42/42 全载（r1 缺陷①闭合维持）；migrate 件 sanction 齐（零漏）✓。保留 1 分位：migrate 3 件中 1 件 conf 0.6 中带（周期滚动判读语义合理但低置信如实扣）。",
+   "evidence_ref": "run-mirror-090551Z/plan.json#/agent_readings(sanction 8/8) + #/counts(top_level:8) + verify.json#/checks[reconciliation:True]"
+  },
+  {
+   "criterion": "I2 规划合理度",
+   "score": 10,
+   "rationale": "三面齐且取舍有据（WP3 活体＋修 B/C 活体）：批次面=2 batches run·beyond_limit_skipped=[]（原界 skip 9 件面·零 skip 维持）✓；预案面=fallback_governance 区块在卷＋slow_order 排序载＋pending_review=0（r1 32 件挂账面清零——WP3 治理闭环）✓；降级链面=dce 四步 rc=0（pull/migrate/commit/push·修 B/C 后 migrate 链零阻活体双证）＋供给探针 supply_ok ✓。保留 1 分位：slow_order 首 tree 勘读抽验面候 joint 位。",
+   "evidence_ref": "run-mirror-090551Z/plan.json#/fallback_governance + dce.json#/steps(rc=0×4) + verify.json#/checks"
+  },
+  {
+   "criterion": "I3 判断留痕质量",
+   "score": 9,
+   "rationale": "留痕面（plan 域全载＋close 域候链毕）：①annotation/rationale/evidence_ref 42/42 全载（WP1 面）②三态 sanction 逐件 rationale 载（WP ①面）③verify 五检全 True 含 reconciliation 红闸④close.json 候链毕（spawn 段链停设计面·close 域留痕候段毕补勘如实注——非缺陷面·链序 pending_manifest 语义承）。保留 1 分位：close 域 evidence hash 面候链毕补勘。",
+   "evidence_ref": "plan.json#/agent_readings(三件套 42/42) + verify.json#/checks(五检) + mirror 清单（close 候链毕如实注）"
+  }
+ ],
  "judge_faces": {
   "initial": {
-   "absent": true,
-   "rc": 1,
-   "raw_out": "\n",
-   "err": "[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/ceo-chief-of-staff.session.md\n[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/chief-operating-officer.session.md\n[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/chief-technology-officer.session.md\n[tricompass-context] co"
-  },
-  "joint": [
-   {
-    "absent": true,
-    "rc": 1,
-    "raw_out": "\n",
-    "err": "[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/ceo-chief-of-staff.session.md\n[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/chief-operating-officer.session.md\n[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/chief-technology-officer.session.md\n[tricompass-context] co"
+   "seat": "m-duty-cos（COS 初判·ns8·主观小计 32/35·91%）",
+   "scores": {
+    "I1": 13,
+    "I2": 10,
+    "I3": 9
    }
-  ],
-  "final": "候 COS 值席域（final_scores_basis/divergence_review 面值席工序）"
+  }
  },
  "weight_face": {
   "objective_machine": 65,
@@ -29,7 +41,7 @@
    "I3": 10
   },
   "total_basis": 100,
-  "anchor": "notice-180 裁①"
+  "anchor": "notice-180 裁①＋COS 勘定卷 §一"
  },
- "check_time": "2026-11-19T09:11:23Z"
+ "check_time": "2026-11-19T09:1xZ+8（D-47 现查原值·落卷时点随信时戳）"
 }
