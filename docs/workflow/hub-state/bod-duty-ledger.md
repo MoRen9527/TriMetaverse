@@ -5498,3 +5498,12 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - fsd 施工（修复三件+换形六条）在途 8min 未到 12min 阈——零催（下拍无落卷则轻催带现态）；cto 裁面毕/触发令在册（b6bb8edfe）。
 - sg 侧 r660d 入队毕（在途无新·R-HY 链 50min 2h 判据内）；❯「ns7 停点裁决候 CEO」建议残留零立案（非我发信史·旧 loop 线状态句·无行动指向）。
 - 本拍零划项（10✅/24）·dev 顶 00b08c5aa。下拍盯 fsd 施工卷+R-HY 载报。
+
+## ㊿+761 · 03:38 拍——fsd 修复+换形毕报卷落树认收（A5 链实质节点）·R-HY 探嵌套别名二犯自纠
+
+- **03:38:00** date 现查。
+- **fsd 修复毕报卷落树推毕**（903d976cb·mmin-8 命中 fsd-w3fix-impl-20261120.md）——W3-WAKE 修复三件（A：waitReply settled 拆分）+二轮换形六条（B）+参数化（C）铸毕，五门全绿（白盒 38/38·全量 839/5 零漂·活体 dry-run 四断言）·TriMLC 侧 3b357d8 在候 sde 三次重启窗部署。**判读：A5 链实质节点毕·非零进展零催**——下一环=cto 门禁复验→sde 三次重启窗→勘毕回执拍 m-cos 请窗→我复开在场窗→sde 自证校形→真发终验。
+- **R-HY 链探零果（嵌套别名二犯·自纠入档）**：`ssh -J sg R-HY` 嵌进外层 ssh sg-ecs-server 内在 sg 机上跑——sg 机解析不了 `sg` 主机名（Could not resolve hostname）。**正形勘正=从本机直跑 `ssh -J sg-ecs-server R-HY`**（本机跳板别名）或 sg 机内直 `ssh R-HY`；R-HY 直办链 56min 在 2h 断链判据内零催·本探零果不阻。
+- **sg 值席面**：m-duty-cos 候令态（屏面「ns7 停点裁决＋自进化方案均候 CEO——30min 节律兜底维持」节律行）·sg 树 mmin-10 零命中=sg 侧安静窗。
+- **系统面**（tick 03:37）：8713 uptime 2072s 同实例持续在役（03:02 起·无再重启）notifyFailures=0·大表 total=24 open=4·MMC consecutiveFailures 267 旧账照挂。
+- 现势 10✅/24·当前项 A5 W4（候勘毕回执拍请窗链）·dev/sg 顶=903d976cb。
