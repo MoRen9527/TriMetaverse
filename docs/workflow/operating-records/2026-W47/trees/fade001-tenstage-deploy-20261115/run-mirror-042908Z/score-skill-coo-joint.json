@@ -1,0 +1,16 @@
+{
+ "seat": "COO",
+ "dim": "joint-face",
+ "scores": {
+  "I1": 12,
+  "I2": 9,
+  "I3": 8
+ },
+ "rationale": {
+  "I1": "搬移清单判断正确性良（12/14）——四轮同档稳态（ns2→ns5→ns7 判读连续）。锚文判读：annotation 42/42 全载（带型族维持）+counts 含 top_level:8 分解（对表闭合·42=keep34+carry2）+bidirectional_ok=true+violations=[]。扣 2 沿前：fallback 32 件 family 字段语义 None（族面未回填·带型轨迹承载）。",
+  "I2": "规划合理度良（9/11）。锚文判读：verify verdict=pass·5 checks·strict_mode=true；gate 四拍消费锚闭合（ns6 sha16 e925221c 对表·gate continue 照跑）=规划输入链四轮连续闭合；幂等组成稳定（keep/carry 同前）。扣 2 同前（counts 分解键复现候证已四轮达标·升级空间=族面回填联动）。",
+  "I3": "判断留痕质量良（8/10）。锚文判读：close run_state=pending_manifest（WP7 精化形诚实 pending·连续三轮）+verdict=pass+self_artifact 自指消除形维持+upgrade_list extracted 实判面已走+evidence 7 件在卷。扣 2：manifest.json: unknown 段注残差沿前（三轮未见改善·候机制线排窗优先级建议提升）+pending→finalized 翻转读数行候装（本席意见已入分流基线）。"
+ },
+ "evidence_base": "run-mirror-042908Z",
+ "check_time": "2026-11-19T05:08:57Z"
+}

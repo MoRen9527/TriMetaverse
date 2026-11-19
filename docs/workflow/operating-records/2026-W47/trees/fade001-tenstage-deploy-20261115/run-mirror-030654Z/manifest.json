@@ -1,0 +1,41 @@
+{
+  "manifest_version": "1.0.0",
+  "run_id": "shift-W46-20261119T030654Z",
+  "from_week": "W46",
+  "to_week": "W47",
+  "stages": {
+    "preflight.json": "pass",
+    "qualify.json": "pass",
+    "plan.json": "pass",
+    "dce.json": "pass",
+    "verify.json": "pass",
+    "score.json": "pass",
+    "close.json": "pass"
+  },
+  "run_state": "ok",
+  "close_contract": {
+    "checks": [
+      {
+        "check": "time_order",
+        "ok": true,
+        "close_check_time": "2026-11-19T03:13:27.563538+00:00",
+        "manifest_check_time": "2026-11-19T03:13:27.690409+00:00",
+        "note": "写序产物 vs 定稿态口径分立承认（pending_manifest 形=合法序）"
+      },
+      {
+        "check": "evidence_hash_algo",
+        "ok": true,
+        "naked_hash_items": [],
+        "note": "sha256_16 算法形全载（裸 hash 拒钉维持·r1 缺陷③防复发核）"
+      },
+      {
+        "check": "run_state_source",
+        "ok": true,
+        "run_state_source": "pending",
+        "manifest_late_enum": "候 CAO 值面随批（候勘接入位）"
+      }
+    ],
+    "ok": true
+  },
+  "check_time": "2026-11-19T03:13:27.690409+00:00"
+}

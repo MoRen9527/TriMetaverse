@@ -1,0 +1,193 @@
+{
+ "aggregate_initial": {
+  "per_criterion": {
+   "I1": 2.0,
+   "I2": 2.0,
+   "I3": 2.0
+  },
+  "total": 6.0,
+  "seats_counted": 7,
+  "seats_missing": [],
+  "缺席标注": "全席形"
+ },
+ "终审签认位": "人联评终审签认保留（r119④ 防线双层——聚合初判=自动前段）",
+ "improvement_aggregation": {
+  "topics": {
+   "周迁移质量": [
+    {
+     "seat": "cos",
+     "rationale": "锚文判读：本轮仍是『记录随周封存』多于『活随人带走』。counts migrate=0/keep=34/carry_over=2/top_level=8；24 个目录 malformed 兜底 keep 未逐案判读，8 个顶层活件（company-demand-pool/daily-progress/task-inventory/OP-202611-W46-001 双件/scoring-ledger-w46/cfo-quota-daily-w46/.shift-ade）仅 pending_ledger、零 W47 去向/owner；pending_review=32 无 owner/时限/T+n，other_unresolved=15 未排期，index_drift activeTrees=0 对实盘 20+ 张力未解。建议下轮 plan 段逐件落『迁/留/封』三态+锚文标签+一句理由+dest/owner，活件随人迁 W47，pending 清零或逐件给不迁判据；缺三态词由 verify 红闸拒 pass，index_drift 归零或注失效面后再放行。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/counts；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/top_expansion；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/index_drift；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/pending_review；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/other_unresolved_count；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/verify.json#/checks",
+     "check_time": "2026-11-19T03:16:43Z"
+    },
+    {
+     "seat": "coo",
+     "rationale": "锚文判读：本轮仍是『记录随周封存』多于『活随人带走』。counts migrate=0/keep=34/carry_over=2/top_level=8；42 条 readings 中 32 条未终判（24 malformed 兜底 keep+8 top_level pending_ledger），仅 10 条 fast_path 有实质分类；8 个顶层活件（company-demand-pool/daily-progress/task-inventory/scoring-ledger-w46/cfo-quota-daily-w46/OP-202611-W46-001 双件/.shift-ade）仅 pending_ledger、零 W47 去向/owner/时限；pending_review=32 无 owner/时限/T+n，other_unresolved=15 未排期，index_drift activeTrees=0 对实盘 20+ 张力未解，retry_enabled_trees=0 使重判空转。建议下轮 plan 段逐件落『迁/留/封』三态+锚文标签+一句理由+dest/owner+逐件 check_time，活件随人迁 W47，pending 清零或逐件给不迁判据；缺三态词由 verify 红闸拒 pass；index_drift 先归零或注失效面后再放行；dce overflow_checks 三项并入 verify 实检。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/counts；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/keep；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/carry_over；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/top_expansion；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/pending_review；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/index_drift；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/other_unresolved_count；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/verify.json#/checks；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks",
+     "check_time": "2026-11-19T03:19:21Z"
+    },
+    {
+     "seat": "cao",
+     "rationale": "锚文判读：本轮仍是「记录随周封存」多于「活随人带走」。counts migrate=0/keep=34/carry_over=2/top_level=8；42 条 readings 中 32 条未终判（24 malformed 兜底 keep + 8 top_level pending_ledger），仅 10 条 fast_path 有实质分类；8 个顶层活件（company-demand-pool、daily-progress、task-inventory、scoring-ledger-w46、cfo-quota-daily-w46、OP-202611-W46-001 双件、.shift-ade）仅 pending_ledger、零 W47 dest/owner/时限；pending_review=32 无 owner/时限/T+n；other_unresolved=15 未排期；index_drift activeTrees=0 对实盘 20+ 张力未解；retry_enabled_trees=0 使重判空转。建议下轮 plan 段逐件落「迁/留/封」三态+锚文标签+一句理由+dest/owner+逐件 check_time，活件随人迁 W47，pending 清零或逐件给不迁判据；缺三态词由 verify 红闸拒 pass；index_drift 归零或注失效面后再放行；dce overflow_checks 三项并入 verify 实检。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/counts；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/keep；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/carry_over；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/top_expansion；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/pending_review；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/index_drift；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/other_unresolved_count；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/verify.json#/checks；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks",
+     "check_time": "2026-11-19T03:22:03Z"
+    },
+    {
+     "seat": "cpo",
+     "rationale": "锚文判读：「这是一周的记录，还是这一周的活——记录随周封存·活随人带走」。本轮仍是『记录随周封存』多于『活随人带走』：counts 0/34/2/8；42 条 readings 中 32 条未终判（24 malformed 兜底 keep+8 top_level pending_ledger），仅 10 条 fast_path 有实质分类；8 个顶层活件（company-demand-pool/daily-progress/task-inventory/scoring-ledger-w46/cfo-quota-daily-w46/OP-202611-W46-001 双件/.shift-ade）仅 pending_ledger、零 W47 去向/owner/时限；carry_over=2 有 status/dest/pending_reason 但死信风险未标注；pending_review=32 无 owner/时限/T+n；other_unresolved_count=15 仅计数未列明；index_drift activeTrees=0 对实盘 20+ 张力未解；retry_enabled_trees=0 使重判空转。建议下轮 plan 段逐件落『迁/留/封』三态+锚文标签+一句理由+dest/owner/时限+逐件 check_time，活件随人迁 W47，pending 清零或逐件给不迁判据；carry_over 补死信风险标注；缺三态词由 verify 红闸拒 pass；index_drift 归零或注失效面后再放行；dce overflow_checks 三项并入 verify 实检（判卷时点 2026-11-19T03:23:43Z）。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/counts；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/keep；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/carry_over；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/top_expansion；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/pending_review；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/other_unresolved_count；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/index_drift；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/verify.json#/checks；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks",
+     "check_time": "2026-11-19T03:23:43Z"
+    },
+    {
+     "seat": "cto",
+     "rationale": "锚文判读：本轮仍是『记录随周封存』多于『活随人带走』。counts 0/34/2/8；42 条 readings 中 32 条未终判（24 malformed 兜底 keep＋8 top_level pending_ledger），仅 10 条 fast_path 有实质分类；8 个顶层活件（company-demand-pool/daily-progress/task-inventory/scoring-ledger-w46/cfo-quota-daily-w46/OP-202611-W46-001 双件/.shift-ade）仅 pending_ledger、零 W47 去向/owner/时限；carry_over=2 有 status/dest/pending_reason 但死信风险未标注；pending_review=32 无 owner/时限/T+n；other_unresolved_count=15 仅计数未列明；index_drift activeTrees=0 对实盘 20+ 张力未解；retry_enabled_trees=0 使重判空转；0 migrate 终态无数据丢失=安全，但活件封存非交付。建议下轮 plan 段逐件落『迁/留/封』三态＋锚文标签＋一句理由＋dest/owner/时限＋逐件 check_time，活件随人迁 W47，pending 清零或逐件给不迁判据；carry_over 补死信风险标注；缺三态词由 verify 红闸拒 pass；index_drift 归零或注失效面后再放行；dce overflow_checks 三项并入 verify 实检（判卷时点 2026-11-19T03:26:41Z）。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/counts；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/keep；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/carry_over；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/top_expansion；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/pending_review；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/retry；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/index_drift；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/other_unresolved_count；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/verify.json#/checks；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks",
+     "check_time": "2026-11-19T03:26:41Z"
+    },
+    {
+     "seat": "cho",
+     "rationale": "锚文判读：本轮仍是『记录随周封存』多于『活随人带走』。counts migrate=0/keep=34/carry_over=2/top_level=8；42 条 readings 中 32 条 failed_fallback（24 malformed 兜底 keep＋8 top_level pending_ledger），仅 10 条 fast_path 有实质分类；8 个顶层活件（company-demand-pool/daily-progress/task-inventory/scoring-ledger-w46/cfo-quota-daily-w46/OP-202611-W46-001 双件/.shift-ade）仅 pending_ledger、零 W47 dest/owner/时限；carry_over=2 有 status/dest/pending_reason 但死信风险未标注；pending_review=32 无 owner/时限/T+n；other_unresolved_count=15 未排期；index_drift activeTrees=0 对实盘 20+ 张力未解；retry_enabled_trees=0 使重判空转。建议下轮 plan 段逐件落『迁/留/封』三态＋锚文标签＋一句理由＋dest/owner/时限＋逐件 check_time；活件随人迁 W47，pending 清零或逐件给不迁判据；carry_over 补死信风险；缺三态词由 verify 红闸拒 pass；index_drift 归零或注失效面后再放行；dce overflow_checks 三项并入 verify 实检。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/counts；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/keep；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/carry_over；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/top_expansion；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/pending_review；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/retry；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/index_drift；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/other_unresolved_count；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/verify.json#/checks；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks",
+     "check_time": "2026-11-19T03:29:00Z"
+    },
+    {
+     "seat": "cfo",
+     "rationale": "锚文判读：本轮仍『记录随周封存』多于『活随人带走』。counts 0/34/2/8；42 条 readings 中 32 条 failed_fallback（24 malformed 兜底 keep+8 top_level pending_ledger），仅 10 条 fast_path 有实质分类；8 个顶层活件（company-demand-pool/daily-progress/task-inventory/scoring-ledger-w46/cfo-quota-daily-w46/OP-202611-W46-001 双件/.shift-ade）仅 pending_ledger、零 W47 dest/owner/时限，其中 cfo-quota-daily-w46.md、scoring-ledger-w46.md 两件财务/记分活件尤须先定 owner 与到期日；carry_over=2 有 status/dest/pending_reason 但死信风险未标注；pending_review=32 无 owner/时限/T+n；other_unresolved_count=15 仅计数；index_drift activeTrees=0 对实盘 20+ 未归零；retry_enabled_trees=0 使重判空转。建议下轮 plan 段逐件落『迁/留/封』三态+锚文标签+一句理由+dest/owner/时限+逐件 check_time；活件随人迁 W47，pending 清零或逐件给不迁判据；cfo-quota-daily-w46/scoring-ledger-w46 优先指定 CFO/值席 owner 与到期日；carry_over 补死信风险；缺三态词由 verify 红闸拒 pass；index_drift 归零或注失效面后再放行；dce overflow_checks 三项并入 verify 实检。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/counts；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/keep；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/carry_over；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/top_expansion；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/pending_review；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance/retry；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/index_drift；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/other_unresolved_count；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/verify.json#/checks；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks",
+     "check_time": "2026-11-19T03:31:37Z"
+    }
+   ],
+   "fade-001 自身完善度": [
+    {
+     "seat": "cos",
+     "rationale": "自揪三处机制漏环节（dimA-A2 实锚，严重度：路由防护缺位>调度漏>断言缺位）：①A2-1 判卷路由面：convene-spawn.log 至 check 仅『spawn cos…』1/7 行、convene/seats 空，属硬序串行在途非缺席；但机制面无全席 roster/逐席 status/缺席 root-cause 落件与失败重发/补位/再聚合，ns2 根因 63938e61e 未在本 run_dir 落 root-cause 件，路由面防复发未闭环；②A2-2 服务供给面：preflight 仅 week_math/hostname/git_hygiene/healthz/diverge/ceo_ruling 六断言，agentPresets 提供行/环境/令牌通道零值面断言，供给缺位未入断言族防复发；③A2-3 触发调度面：joint-review-trigger 仅 dim_a/dim_b/domain_readings，无 T+10min 自动采集窗形，duty_collection/subjective=pending、total_pending_weight=41、collection=0.0，首采仍候值席人手。修法：①convene 全量 raw 落盘+逐席 status/root-cause 件+失败自动重发/补位/再聚合+七席 roster 断言 fail-closed；②preflight 增 composition/env/token 值面断言 fail-closed；③trigger 链排 T+10min 自动采集窗并回写 collection/subjective 读数；④三漏正式登记 WP9 v3，下轮 preflight 设防复发核，形成自揪→登记→修复→核闭环。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene-spawn.log；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/preflight.json#/assertions；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/domain_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/domain_breakdown；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance",
+     "check_time": "2026-11-19T03:16:43Z"
+    },
+    {
+     "seat": "coo",
+     "rationale": "自揪三处 A2 机制漏环节（dimA 实锚，严重度：路由防护缺位>调度漏>断言缺位）。①A2-1 判卷路由面：check 时 convene-spawn.log 仅 3 行（spawn cos/落卷/spawn coo）、convene/seats 仅 cos 一卷，余 5 席未发起，属硬序串行在途非实缺席；但机制面无七席 roster/逐席 status/缺席 root-cause 落件与失败自动重发/补位/再聚合，ns2 根因 63938e61e 未落本 run_dir，路由防护未闭。②A2-2 服务供给面：preflight 仅六断言，agentPresets/composition/环境/令牌通道零值面断言；24 条 malformed 根因=模型服务供给面 fallback 耗尽（errors: All fallback models exhausted，agent_loop_calls=0），供给缺位未入断言族防复发。③A2-3 触发调度面：joint-review-trigger 无 T+10min 自动采集窗形，duty_collection/subjective=pending、total_pending_weight=41、collection=0.0，首采仍候值席人手；joint-review-trigger.log 亦记 trigger_mode=manual。修法：①convene 全量 raw 落盘+七席 roster/逐席 status/root-cause 件+失败自动重发/补位/再聚合+roster 断言 fail-closed；②preflight 增 composition/env/token 值面断言与 8710 模型路由健康探针，缺即红；③trigger 链排 T+10/T+20/T+30 自动采集/评分/复盘窗并回写 collection/subjective 读数，首采禁靠人手；④三漏正式登记 WP9 v3，下轮 preflight 设防复发核，闭『自揪→登记→修复→下轮核』环。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene-spawn.log；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene/seats/cos-score.json；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/preflight.json#/assertions；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/domain_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.log#/notify_result；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/domain_breakdown",
+     "check_time": "2026-11-19T03:19:21Z"
+    },
+    {
+     "seat": "cao",
+     "rationale": "自揪三处 A2 机制漏环节（dimA 实锚，严重度：路由防护缺位>调度漏>断言缺位）。①A2-1 判卷路由面：至本席判卷时点，convene-spawn.log 仅 5 行（spawn cos/落卷/spawn coo/落卷/spawn cao）、convene/seats 仅 cos/coo 两卷，七席未全到位；缺席或未发起席无 root-cause 件，路由面缺七席 roster、逐席 status、失败自动重发/补位/再聚合，ns2 根因 63938e61e 未在本 run_dir 落承接件，防复发未闭。②A2-2 服务供给面：preflight 仅 week_math/hostname/git_hygiene/healthz/diverge/ceo_ruling 六断言，agentPresets/composition/环境/令牌通道零值面断言；24 条 malformed 的 root_cause 明载 All fallback models exhausted、agent_loop_calls=0，供给缺位未入断言族防复发。③A2-3 触发调度面：joint-review-trigger 无 T+10min 自动采集窗形，duty_collection/subjective 双 pending、total_pending_weight=41、collection=0.0，首采仍候值席人手；joint-review-trigger.log 亦记 trigger_mode=manual。修法：①convene 全量 raw 落盘+七席 roster/逐席 status/root-cause 件+失败自动重发/补位/再聚合+roster 断言 fail-closed；②preflight 增 composition/env/token 值面断言与模型路由健康探针，缺即红；③trigger 链排 T+10/T+20/T+30 自动采集/评分/复盘窗并回写 collection/subjective 读数，首采禁靠人手；④三漏正式登记 WP9 v3，下轮 preflight 设防复发核，闭「自揪→登记→修复→下轮核」环。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene-spawn.log；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene/seats/cos-score.json；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene/seats/coo-score.json；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/preflight.json#/assertions；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/domain_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.log#/notify_result；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/domain_breakdown；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/entries",
+     "check_time": "2026-11-19T03:22:03Z"
+    },
+    {
+     "seat": "cpo",
+     "rationale": "自揪三处 A2 机制漏环节（dimA 实锚，严重度：路由防护缺位>调度漏>断言缺位）。①A2-1 判卷路由面：至判卷时点 convene-spawn.log 仅 4 条 spawn 行（cos/coo/cao/cpo）、convene/seats 仅 3 席卷落，七席全到位不可证；缺席或未发起席无 root-cause 件，路由面缺七席 roster、逐席 status、失败自动重发/补位/再聚合，ns2 根因 63938e61e 未在本 run_dir 落承接件，阻断级风险未实发但防复发未闭。②A2-2 服务供给面：preflight 仅 week_math/hostname/git_hygiene/healthz/diverge/ceo_ruling 六断言，agentPresets/composition/环境/令牌通道零值面断言；24 条 malformed 的 root_cause 明载 All fallback models exhausted、agent_loop_calls=0，供给缺位未入断言族防复发。③A2-3 触发调度面：joint-review-trigger 无 T+10min 自动采集窗形，duty_collection/subjective 双 pending、total_pending_weight=41、collection=0.0，首采仍候值席人手；joint-review-trigger.log 亦记 trigger_mode=manual。修法：①convene 全量 raw 落盘+七席 roster/逐席 status/root-cause 件+失败自动重发/补位/再聚合+roster 断言 fail-closed；②preflight 增 composition/env/token 值面断言与模型路由健康探针，缺即红；③trigger 链排 T+10/T+20/T+30 自动采集/评分/复盘窗并回写 collection/subjective 读数，首采禁靠人手；④三漏正式登记 WP9 v3，下轮 preflight 设防复发核，闭『自揪→登记→修复→下轮核』环（判卷时点 2026-11-19T03:23:43Z）。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene-spawn.log；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene/seats/cos-score.json；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene/seats/coo-score.json；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/preflight.json#/assertions；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/domain_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.log#/notify_result；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/domain_breakdown；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/judge_faces",
+     "check_time": "2026-11-19T03:23:43Z"
+    },
+    {
+     "seat": "cto",
+     "rationale": "自揪三处 A2 机制漏环节（dimA-A2 实锚，严重度：路由防护缺位>调度漏>断言缺位）：①A2-1 判卷路由面：至判卷时点 convene-spawn.log 5 条 spawn（cos/coo/cao/cpo/cto）、4 席卷落、本席在跑，CHO/CFO 未发起，属串行硬序在途非实缺席；但路由面无七席 roster/逐席 status/缺席 root-cause/失败自动重发·补位·再聚合件，ns2 根因 63938e61e 未在本 run_dir 落承接件，防复发未闭。②A2-2 服务供给面：preflight 仅六断言，agentPresets/composition/env/令牌通道零值面断言；24 条 malformed 的 root_cause 明载 All fallback models exhausted、agent_loop_calls=0，供给缺位未入断言族防复发。③A2-3 触发调度面：joint-review-trigger 无 T+10min 自动采集窗形，duty_collection/subjective 双 pending、collection=0.0、total_pending_weight=41，首采仍候值席人手；joint-review-trigger.log 亦记 trigger_mode=manual。CTO 补两处降级链缺：dce#/overflow_checks 三项 checked=false 未实检，trap/RC_guard 预案未闭；retry_enabled_trees=0 使失败仅记账无收敛。修法：①convene 落七席 roster＋逐席 status＋缺席 root-cause＋失败自动重发/补位/再聚合，roster 缺=红；②preflight 增 agentPresets/composition/env/令牌通道值面断言与模型路由健康探针，缺=红；③trigger 链排 T+10min 自动采集窗并回写 collection/subjective 读数，禁候人手；④dce overflow_checks 并入 verify 红闸，retry 失败树实际重跑或显式降级记账；⑤三漏正式登记 WP9 v3，下轮 preflight 设防复发核，闭『自揪→登记→修复→下轮核』环（判卷时点 2026-11-19T03:26:41Z）。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene-spawn.log；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/preflight.json#/assertions；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/domain_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.log#/notify_result；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/domain_breakdown；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks",
+     "check_time": "2026-11-19T03:26:41Z"
+    },
+    {
+     "seat": "cho",
+     "rationale": "自揪三处 A2 机制漏环节（dimA 实锚，严重度：路由防护>调度漏>断言缺位）。①A2-1 判卷路由面：至判卷时点 convene-spawn.log 6/7 spawn（cos/coo/cao/cpo/cto/cho）、5/7 席卷落，CHO 本席在办、CFO 未发起；无七席 roster/逐席 status/缺席 root-cause/失败自动重发/补位/再聚合件，ns2 根因 63938e61e 未在本 run_dir 落承接件，在途与缺席不可区分，路由防护未闭。②A2-2 服务供给面：preflight 仅 week_math/hostname/git_hygiene/healthz/diverge/ceo_ruling 六断言，agentPresets/composition/环境/令牌通道零值面断言；24 条 malformed 的 root_cause 明载 All fallback models exhausted、agent_loop_calls=0，供给缺位未入断言族防复发。③A2-3 触发调度面：joint-review-trigger 无 T+10min 自动采集窗形，duty_collection/subjective 双 pending、total_pending_weight=41、collection=0.0，采集/评分/复盘窗未排入 trigger 链，首采仍候值席人手；joint-review-trigger.log#/notify_result.trigger_mode=manual 与 notify_done=cron 相抵。席角补漏：24 树判读全败于供给面且 retry_enabled_trees=0，负载未重分配，41 分 pending 压回值席人手；建议补轮级重试/人工兜底排班与交接签认。修法：①convene 全量 raw 落盘＋七席 roster/逐席 status/root-cause 件＋失败自动重发/补位/再聚合＋roster 断言 fail-closed；②preflight 增 composition/env/token 值面断言与 8710 模型路由健康探针，缺即红；③trigger 链排 T+10/T+20/T+30 自动采集/评分/复盘窗并回写 collection/subjective 读数，首采禁靠人手；④三漏正式登记 WP9 v3，下轮 preflight 设防复发核，闭『自揪→登记→修复→下轮核』环（本自揪条=dimA 加分证据，不抵机制漏扣分）。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene-spawn.log；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/preflight.json#/assertions；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/domain_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.log#/notify_result；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/notify_done.json#/notify_result；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/domain_breakdown；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks",
+     "check_time": "2026-11-19T03:29:00Z"
+    },
+    {
+     "seat": "cfo",
+     "rationale": "自揪 A2 三漏+CFO 成本面缺位（dimA 实锚，严重度：路由防护>调度漏>断言缺位）。①A2-1 路由面：本席判卷时点 convene-spawn.log 7/7 spawn 已发起（cfo 本席在建）、6/7 席卷落，无确认缺席席；但 convene/ 仅 seats/，无七席 roster/逐席 status/缺席 root-cause/失败自动重发/补位/再聚合件，ns2 根因 63938e61e 未落本 run_dir，在途与缺席不可区分，防复发未闭。②A2-2 供给面：preflight 仅六断言，agentPresets/composition/env/令牌通道零值面断言；24 条 malformed root_cause=All fallback models exhausted、agent_loop_calls=0，供给缺位未入断言族。③A2-3 调度面：joint-review-trigger 无 T+10min 自动采集窗形；duty_collection/subjective 双 pending、collection=0.0、pending_weight=41，首采仍候值席人手；trigger_mode=manual 与 notify_done=cron 相抵。④CFO 席角：轮级成本读数面缺位（无 token/模型调用/资源消耗读数，agent_loop_calls=0 仅失败注记）；成本红线未入 preflight/verify；投入产出不可对照（24 判读全败、migrate=0、41 分 pending）。修法：①convene 全量 raw 落盘+七席 roster/逐席 status/root-cause 件+失败自动重发/补位/再聚合+roster 断言 fail-closed；②preflight 增 agentPresets/composition/env/token 值面断言+模型路由健康探针+轮级成本读数（token/调用/耗时）与成本红线断言，缺即红；③trigger 链排 T+10/T+20/T+30 自动采集/评分/复盘窗并回写 collection/subjective 读数，首采禁靠人手；④三漏+成本面正式登记 WP9 v3，下轮 preflight 设防复发核，闭『自揪→登记→修复→下轮核』环（本自揪条=dimA 加分证据，不抵机制漏扣分）。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene-spawn.log；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/convene/seats/（目录清单：无 roster/root-cause/aggregate 件）；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/preflight.json#/assertions；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/agent_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/plan.json#/fallback_governance；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/domain_readings；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.log#/notify_result；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/notify_done.json#/notify_result；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/domain_breakdown；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/dce.json#/overflow_checks",
+     "check_time": "2026-11-19T03:31:37Z"
+    }
+   ],
+   "score 段顺序勘定": [
+    {
+     "seat": "cos",
+     "rationale": "表态：score 段先 CLI 后 skill。理由锚=产物依赖+判卷输入完备性+因果序：score CLI 先落 score.json（本 run check_time=2026-11-19T03:07:36.604557Z），其 machine=59/65 与 total_pending_weight=41 是 skill 两席 I 族判分及 65/35 映射的客观基座；score-skill.json#/weight_face 载 objective_machine=65、I1=14/I2=11/I3=10，initial check_time=03:10:39Z、joint=03:12:44Z 均晚于 CLI；joint-review-trigger.json#/dim_b_materials 亦引 score.json 为判卷输入。若先 skill 后 CLI，主观分在客观分未落时先出，违 score-skill 硬序门（score.json 缺=exit 2 拒 spawn）与因果序。注：close 段相反=先 skill 后 CLI（notice-210 勘正），两段不可互套。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/judge_faces；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/weight_face；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/dim_b_materials",
+     "check_time": "2026-11-19T03:16:43Z"
+    },
+    {
+     "seat": "coo",
+     "rationale": "表态：score 段先 CLI 后 skill。理由锚三面：①产物依赖——score CLI 先落 score.json（check_time=2026-11-19T03:07:36.604557Z），其 machine=59/65 与 total_pending_weight=41 是 skill 两席 I 族判分及 65/35 映射的客观基座；②判卷输入完备性——score-skill#/weight_face 载 objective_machine=65、I1=14/I2=11/I3=10，judge_faces initial check_time=03:10:39Z、joint=03:12:44Z 均晚于 CLI，joint-review-trigger#/dim_b_materials 亦引 score.json 为判卷输入，skill 先出则输入未备；③因果序——若先 skill 后 CLI，主观分在客观分未落时先出，违 score-skill 硬序门（score.json 缺=exit 2 拒 spawn）与因果序。注：close 段相反=先 skill 后 CLI，两段不可互套。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/judge_faces；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/weight_face；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/dim_b_materials",
+     "check_time": "2026-11-19T03:19:21Z"
+    },
+    {
+     "seat": "cao",
+     "rationale": "表态：score 段先 CLI 后 skill。理由锚三面：①产物依赖——score CLI 先落 score.json（check_time=2026-11-19T03:07:36.604557Z），其 machine=59/65 与 total_pending_weight=41 是 skill 判分及 65/35 映射的客观基座；score-skill#/weight_face 载 objective_machine=65、I1=14/I2=11/I3=10。②判卷输入完备性——score-skill#/judge_faces initial=03:10:39Z、joint=03:12:44Z 均晚于 CLI，joint-review-trigger#/dim_b_materials 亦引 score.json 为判卷输入，skill 先出则输入未备。③因果序——若先 skill 后 CLI，主观分在客观分未落时先出，违 skill 以 score.json 为输入的硬序。附勘：score-skill top check_time=03:07:36Z 早于其内容戳 03:10:39Z/03:12:44Z，与 D-47 时刻制不合，应改为内容定稿时点；close 段顺序相反（先 skill 后 CLI），两段不可互套。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/judge_faces；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/weight_face；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/dim_b_materials",
+     "check_time": "2026-11-19T03:22:03Z"
+    },
+    {
+     "seat": "cpo",
+     "rationale": "表态：score 段先 CLI 后 skill。理由锚三面：①产物依赖——score CLI 先落 score.json（check_time=2026-11-19T03:07:36.604557Z），其 machine=59/65 与 total_pending_weight=41 是 skill 两席 I 族判分及 65/35 映射的客观基座；②判卷输入完备性——score-skill#/judge_faces initial=03:10:39Z、joint=03:12:44Z 均晚于 CLI，score-skill#/weight_face 载 objective_machine=65、I1=14/I2=11/I3=10，joint-review-trigger#/dim_b_materials 亦引 score.json 为判卷输入，skill 先出则输入未备；③因果序——若先 skill 后 CLI，主观分在客观分未落时先出，违 score-skill 硬序门（score.json 缺=exit 2 拒 spawn）与因果序。附注：close 段相反=先 skill 后 CLI（notice-210 勘正），两段不可互套；score-skill top check_time=03:07:36Z 早于内容戳，建议改为内容定稿时点（判卷时点 2026-11-19T03:23:43Z）。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/judge_faces；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/weight_face；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/dim_b_materials",
+     "check_time": "2026-11-19T03:23:43Z"
+    },
+    {
+     "seat": "cto",
+     "rationale": "表态：score 段先 CLI 后 skill。理由锚三面：①产物依赖——score CLI 先落 score.json（check_time=2026-11-19T03:07:36.604557Z），machine=59.0/total_pending_weight=41 是 skill 判分与 65/35 映射的客观基座；②判卷输入完备性——score-skill#/weight_face 载 objective_machine=65、I1=14/I2=11/I3=10，judge_faces initial=2026-11-19T03:10:39Z、joint=03:12:44Z 均晚于 CLI，joint-review-trigger#/dim_b_materials 亦引 score.json 为输入，skill 先出则输入未备；③因果序——先 skill 后 CLI 则主观分在客观分未落时先出，违 score-skill#/spawn_form『硬序承·禁并行禁倒置』与因果序。附勘：score-skill 顶层 check_time=03:07:36Z 早于其内容戳，建议改为内容定稿时点；close 段顺序相反（先 skill 后 CLI），两段不可互套（判卷时点 2026-11-19T03:26:41Z）。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score/total_pending_weight；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/spawn_form；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/judge_faces；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/weight_face；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/dim_b_materials",
+     "check_time": "2026-11-19T03:26:41Z"
+    },
+    {
+     "seat": "cho",
+     "rationale": "表态：score 段先 CLI 后 skill。理由锚三面：①产物依赖——score.json check_time=2026-11-19T03:07:36.604557+00:00 先落，machine=59.0/65、total_pending_weight=41 是 skill 判分与 65/35 映射的客观基座；score-skill#/weight_face 载 objective_machine=65、I1=14/I2=11/I3=10。②判卷输入完备性——score-skill#/judge_faces initial=03:10:39Z、joint=03:12:44Z 均晚于 CLI；joint-review-trigger#/dim_b_materials 亦引 score.json 为判卷输入，skill 先出则输入未备。③因果序——若先 skill 后 CLI，主观分在客观分未落时先出，违 score-skill#/spawn_form『硬序承·禁并行禁倒置』与因果序。附勘：score-skill 顶层 check_time=03:07:36Z 早于其内容戳 03:10:39Z/03:12:44Z，与判卷时点打戳纪律不合，建议改为内容定稿时点；close 段另序，不可互套。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/judge_faces；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/weight_face；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/spawn_form；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/dim_b_materials",
+     "check_time": "2026-11-19T03:29:00Z"
+    },
+    {
+     "seat": "cfo",
+     "rationale": "表态：score 段先 CLI 后 skill（终局 CLI 收口填 I 族），非先 skill 后 CLI。理由锚三面：①产物依赖——score.json check_time=2026-11-19T03:07:36.604557+00:00 先落，machine=59.0、total_pending_weight=41 是 skill 判分与 65/35 权重面的客观侧读数；score-skill#/weight_face 载 objective_machine=65、I1=14/I2=11/I3=10。②判卷输入完备性——score-skill#/judge_faces initial=03:10:39Z、joint=03:12:44Z 均晚于 CLI；joint-review-trigger#/dim_b_materials 亦引 score.json 为判卷输入，skill 先出则输入未备。③因果序——先 skill 后 CLI 则主观分在客观分未落时先出，违 score-skill#/spawn_form『硬序承·禁并行禁倒置』。附勘：score-skill 顶层 check_time=03:07:36Z 早于其内容戳 03:10:39Z/03:12:44Z，应改为内容定稿时点；score-skill 14/11/10 与 convene 4/3/3 分母不同，分差须归一化后再入 divergence_review（cos initial 7/14=0.50 与 convene 2/4=0.50 同值，不构成≥2 档分差）；score-skill 65/35 与 score.json 59/31/10 两套权重面须对表归一。",
+     "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score.json#/score；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/judge_faces；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/weight_face；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/spawn_form；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/score-skill.json#/check_time；/var/lib/trirmc/cron/runs/shift-W46-20261119T030654Z/joint-review-trigger.json#/dim_b_materials",
+     "check_time": "2026-11-19T03:31:37Z"
+    }
+   ]
+  },
+  "opinions_n": 21,
+  "sheets_consumed": 7,
+  "incomplete_faces_excluded": [],
+  "不冒充标注": "聚合=完整 sheet 形（不完整面 fail-closed 不消费）",
+  "用途": "loop 进化方向输入面（改进意见卷随触发件流转·notice-179②）"
+ },
+ "new_structure_verdict_face": {
+  "objective_machine": 65,
+  "per_seat_totals": [
+   86.0,
+   86.0,
+   86.0,
+   86.0,
+   86.0,
+   86.0,
+   86.0
+  ],
+  "seven_seat_average": 86.0,
+  "threshold": 95,
+  "verdict": "loop_next",
+  "语义": "≥95（含 95.0）跳出 loop·否则进下一轮（notice-180 裁二·两面分立零互折）",
+  "勘定映射注": "旧 caps 席评→新 caps 百分比位映射（COS initial 先例形承）"
+ },
+ "four_gate": {
+  "1_no_miss": {
+   "ok": true,
+   "detail": "plan.migrate 实迁清单 n=0 vs counts.migrate=0"
+  },
+  "2_no_extra": {
+   "ok": true,
+   "detail": "W47 面=/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W47（树 n=3·多轮共面现值形）"
+  },
+  "3_must_migrate": {
+   "ok": true,
+   "detail": "必迁族缺件=无（whitelist 族=必迁清单卷面·现势缺件如实红=RETRY 降设计语义）"
+  },
+  "4_closeout": {
+   "ok": true,
+   "detail": "close verdict=pass run_state=pending_manifest 值域对表（F5 词表勘正·close_skill 单值源值域全显）"
+  }
+ },
+ "gate_pass": true,
+ "verdict_adjust": "PASS",
+ "reaggregate_note": "ns6 终形（F4 七席完备+三 topic 议题首用·seats 全量·2026-11-19 SDE）"
+}
