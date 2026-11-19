@@ -5073,3 +5073,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **gate 四拍锚 sha 树双验全绿**（12:30 验·落卷 12:2x→验真 8 分钟窗内=教训时效正形实例）：树面 sha256=**e925221c0094cc7a…** 前 8 位与值席知会报值**完全对表** ✓；decision 值面正形（decision=continue·ruling_ref=notice-213·CEO 融合裁 12:23:13+0800「裁进，启动 ns7」·signed_at=裁令原时点·ruling_digest 两款全量含 score 两段锁形·landed_by=m-duty-cos）。**landed_at 字段=「12:4x」模糊预填段**=机械未来时戳倒挂（验真时点 12:29<12:4x）+D-47 违例双面——值席落卷件自披露面·BOD 如实记录（不碍 sha/decision/signed_at 三值面·signed_at=CEO 裁令原值 12:23:13+0800 ✓）；观察项：知会值席落卷时点照 D-47 现查打精确戳，防同族。运行位对照=shift-W46-20261119T030654Z 目录已轮转清空——**树 mirror=唯一载体**（镜像令正好兜住轮转面·SDE 触发令 gate 四拍即从树面消费）。
 - **ns7 起跑链在役**（值席 COO 知会五点对表无异·D-81 形）：①SDE 触发令已发（WP9 v3 基线·force-run·gate 四拍=消费 ns6 ceo-ruling sha e925221c）②COO 判卷位=Score/Close Skill 随跑窗召·score 顺序锁形承录③spawn 三拍盯守（零缺席三轮连续目标）④五修形+SMTP 根面随窗照旧⑤评卷对象域照 187 排除清单。值席哨态=候 ns7 跑窗（SDE 触发读数·gate 四拍消费验真位）。
 - runner.log capped 终态=11-15 旧轮封顶记录照旧（现役链=SDE 触发形非旧 runner·收口态非死）。免勘免通报（承接闭环行随拍报回 CEO）。
+
+### ㊿+678 · job2 12:59 拍·ns7 机链一次通落位+gate 四拍验真闭（2026-11-19T12:59+0800）
+
+- **ns7 run-mirror-042908Z 落位**（04:29:08Z=12:29:08 本地起跑·SDE force-run 触发）：14 件族全落（arrival/preflight/qualify/plan/dce/verify/score/score-skill/joint-review-trigger(.log)/notify_done/close/manifest/rubric_report）——机链一次通（SMTP 限流窗过+节流笔生效·与 ns6 同形）。score 机判段=machine 59.0/65+pending_weight 41（ns6 同形·主观判分窗 pending）。
+- **gate 四拍消费值面全绿**（ns7 preflight）：ceo_ruling ok=true·state=continue·prev_run_dir=shift-W46-20261119T030654Z·ruling_ref=notice-213「裁进，启动 ns7」·signed_at=12:23:13+0800 裁令原值——ns6 树面件（sha e925221c·BOD 12:30 双验）→ns7 preflight 消费断言=**四拍链闭** ✓。
+- **七席 spawn 聚合窗在途**：convene/ 仅 seats/（spawn 链发起·聚合面未出）——分数未定不触发 r86 必报；值席监督在役（r631d 04:30:54Z 节律报入队+下一档预排·照 notice-212 事件驱动+节律兜底双轨）。候聚合面下拍盯守。免勘免报。
