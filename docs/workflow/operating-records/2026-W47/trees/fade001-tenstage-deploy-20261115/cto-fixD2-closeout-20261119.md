@@ -30,3 +30,11 @@
 ## 使用依据
 
 TC 3bdae1f（白盒 6/6）+heyuan sync 实锚；overlay 三行族+dump compose 实锚；dsh-llm-deepseek lib 源锚（:336-339 方言/:21 256e3/:1706 max_tokens 链）；smoke 三段（QUOTA→1210→rc=0）；manual rc=0 out="ok" 活体；notice-219/221 令面；D-46/D-47。
+
+---
+
+## B4 探针勘定附段（值席勘问回应·2026-11-20 0:3x CST）
+
+**勘定①：8710=TriRMC daemon app face·零 /v1/messages 路由**（app.ts grep 实锚：路由面=/internal/v1/agents 系+/hello 系，零 messages 路由）——B4 探针 POST 8710/v1/messages=**未知路由→app 级 not_found**（GLM 路由无关面）。改写 proxy=**3334**（trimodel anthropic-proxy·listener 活体 ✓）——其 GLM 路由 matchModels=['GLM-5.3-Flash','GLM-5.3']（**大小写敏感大写形**）→open.bigmodel.cn（pre-existing 正确·fix A 零触 proxy 路由面）；探针 model=glm-5.3-flash 小写形→3334 亦 route miss（大小写面）。
+
+**勘定②：proxy 直打≠施工面路径 ✓（值席判断采认）**——fix A 范围=dsh 应用面（model.json/bundle/env 三键）+TriRMC 解析链+trimodel registry 防漏斗——**proxy 路由面零涉**；验证正形=dsh spawn 面（zero-override /internal/v1/agent→glm-5.3-flash·done·delta=2 活体在卷）。**B4 复验=dsh spawn 面独立复验 ✓**（探针形=本卷 §二 zero-override 形·token 面经 systemctl show 零回显）。
