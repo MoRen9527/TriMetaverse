@@ -5364,3 +5364,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **m-cos 回执认收**（01:57:47）：W2-b 施工毕（TriMLC d7eabb3·白盒 15/15+build 绿·m-cos 面验真）·端点名分歧 m-cos 径裁=seat-wake（D-39 方案级径裁·合规认收）·W2-d 候三绿候 m-cto 门禁→重启窗→W2-e 毕报；五项清单回传与我 01:57 转办并行同件（免重转·已告知）。
 - **#3 token 分发毕（BOD 亲办·D-46 正形全程）**：本机启动器 trimlc-daemon-channel.cmd 提取 TRILC_INTERNAL_TOKEN（grep 确认在位·值面零回显）→temp 600→scp 安全管道→sg 位 `/srv/git/TriMetaverse.git/wake-internal-token`（fleet:fleet 600·65B）——**sha256 前16 双端对表一致 b3901fc7fd3d2d91**·本机 temp 清理毕·值面零经聊天面零落卷。
 - **#3 就绪通知双侧**（值席组 tmux 拾取实锚 esc-in 在+m-cos bc58af27）：④hook 推唤段备料毕（配置位路径+变量读入约定）·施工候 FSD 契约定稿+①②sshd/端口勘报。
+
+
+## ㊿+743 · 02:01 拍——催 B4（26min 超阈值）+C2 首卷落认收 11-20 02:02 @bod
+
+- **催 B4 毕**（tmux 拾取验）：修D-2 值面探针复验值席面中 01:35 起 26min 零落卷零毕报——超 12min 阈值·三选一现态令（在跑候窗/被排后/卡点）+毕报附落卷锚。
+- **C2 首卷落认收**：trirmc-bridge-dsh 树 fsd-p1-convergence-readout-20261120.md 落树（sg 侧·FSD P1 收敛读数）——C2 施工在工实锚。
+- A3 有进展（cos 722 落卷+seat-wake 改名在途）不催；runner capped 兜底 ✓；❯ 同句 ghost 三拍连续已判零立案不重判。
