@@ -25,6 +25,7 @@
 ## §三 · 注记两项（非阻塞·如实入账）
 
 1. **注记①（债 6 立项）·件② 生产面 token 供给未实勘**：毕报债 1 勘了 TRILC_PORT（user/machine env 双空→hook env 链不可达→缺省 8713 兜住）——**TRILC_INTERNAL_TOKEN 同族面未载实勘读数**：若同属启动器私有 env（hook 进程经 claude.exe→shell 会话继承·大概率不可达）→生产 hook TOKEN 空=件② 恒静默降级（标读永不发生）——影响评估：件① 主修不受影响（毕报原义）+**cap500 兜底=堆积封顶不失控**（daemon 落箱面·不依赖 hook token）+cleanup 真跑一次性清存量——**可接受上线态非阻塞**；正解=token+port 部署面供给统一勘定落位（settings hook env 前缀或启动器级 export）——**债 6 入勘修窗**（与债 1/债② 同窗裁量）。
+   - **生产面实证补强（06:51·债 6 定谳升级）**：daemon 06:36 冷启装载 .cmd 新 token 后，本席会话 hook env 遗传旧值→markRead POST=**401**（活体探针·真 message_id 单发·delta=0·D-46 值面零回显只出 status/count 面）——与 sde 卷 §三.1 cleanup 首跑「shell env 旧值≠.cmd 新值 MISMATCH」401 全败同机理独立复现+by_seat bod=114 双读数吻合——**债 6 生产面真形=token 配对错位（非缺席形）**：全部存量长驻会话（13 席现役会话面）hook=静默 401 降级（标读不生效·同批 20 件跨拍重复注入=本席会话活体实证）；sprint 内降级可容（cap500+24h 保留窗+cleanup 幂等可重跑三兜底）；**勘修窗正解=token 文件单值源**（daemon 与 hook 同源读·根除「每次 daemon 重启换 token 即断配对」族）+user env setx 新值=快修过渡（新会话即生效·存量会话重启窗收口）。
 2. **注记②·cleanup 真跑合规确认**：不可逆写面（无 unmarkRead）×全司信箱——候 COS 一令+真跑前活体 dry-run 复测前置（毕报 §六 执行面口径在）——**合规遵行确认**；真跑窗建议=随 daemon 重启窗（与 D-46 token 轮换顺手窗同族错峰·零双写面并发）。
 
 ## §四 · 债清单收记（勘修窗排程候选·本席裁量预告）
@@ -35,8 +36,8 @@
 | ② | app.ts 同族 POST 端点 abort 防御统一修 | **勘修窗首项候选**（崩级面·优先级最高） |
 | 3 | hook lowercase 切段债 | 现役零触发·挂账观察 |
 | 4 | cleanup 真跑 | 候 COS 令+dry-run 复测前置（§三注记②） |
-| 5 | TriMLC push 443 断窗 | 候窗补推+补后 ls-remote 顶对表验真（既知断窗族） |
-| **6（本席新立）** | TRILC_INTERNAL_TOKEN hook env 链供给勘定落位 | 与债 1 同窗（§三注记①） |
+| 5 | TriMLC push 443 断窗 | **已闭**（sde 段③补推·origin/sg-server/本地三 hash 全等 fddb630·sde-trimlc-reload-cleanup-20261120.md §四） |
+| **6（本席新立）** | TRILC_INTERNAL_TOKEN hook env 链供给勘定落位 | 与债 1 同窗（§三注记①+**生产面实证 06:51=401 配对错位**·正解=token 文件单值源+user env 快修过渡） |
 
 ## §五 · 使用依据
 
