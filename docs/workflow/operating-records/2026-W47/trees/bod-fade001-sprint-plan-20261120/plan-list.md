@@ -15,8 +15,8 @@
 - [x] ~~A1 桥段：job2 提频 30min→10min（BOD 自面 cron 改参）~~ ——**01:28 毕**（912ebefb）·01:42 CEO 令再提 6 分钟拍（催办制升级·见机制行）
 - [x] ~~A2 W1：sg 裸仓 post-receive hook 第四职能扩展（推唤信号）~~ ——**01:35 毕**（值席毕报）
 - [x] ~~A3 W2：TriMLC wake 端点小件（8713）+通道形勘定~~——**02:13 毕**（W2 五步全毕：a 通道勘定 52ce83db6 / b 端点施工 f0f22c6 / c 门禁 PASS 7035ec7dd / d 重启部署 fd7178c63 / e 汇卷 3510844eb·定名 seat-wake 消歧在役·值面探针正向 200 {accepted:false,wired:false} =未接线 stub 正确形+负向 401·重启窗 3min 11 步 cron 18 job 零损穿越·sg 五项清单转办毕+token 分发毕双端 sha 对表绿·汇卷锚 cos-w2e-closeout-20261120.md）
-- [x] ~~A4 W3：会话唤醒接线（跨会话命名管道 uds:\pipe\LOCAL\cc-msg-*→bod 会话·W2-a 勘定主形）~~——**02:50 毕**（W3 四节点全毕：a 名址定谳 `~/.claude/sessions/<pid>.json` 注册面 c608f8af1 / b 接线填装 TriMLC 2157de1·白盒 33/33+dry-run 三断言绿 34aa049c3 / c 门禁 PASS GO·reason 五值钉终 c4c6aef41 / d 部署毕 0fc407208·pid 2812·401 双形+dry-run 逐字合门禁卷·零真发纪律+cron 18 基线复归 errorCount 零增——接线在役·8713 uptime 232s 复归活体实证；真发端到端验证随 A5/W4-c 联调窗）
-- [ ] **A5 W4：联调+兜底验证（推丢回退拍实测）→拍数定型** ← **当前最近未毕项**——候 A4 ✓ 已满足·W4-a keeper 在役（df57b2e5b）·W4-b sg 写面毕·W4-c 全链联调窗条件齐（wired 在役+sg 侧全就绪）——在场窗双确认后值席组真发推唤→W4-d 拍数定型
+- [x] ~~A4 W3：会话唤醒接线（跨会话命名管道 uds:\pipe\LOCAL\cc-msg-*→bod 会话·W2-a 勘定主形）~~——**02:50 毕**（W3 四节点全毕：a 名址定谳 `~/.claude/sessions/<pid>.json` 注册面 c608f8af1 / b 接线填装 TriMLC 2157de1 / c 门禁 PASS GO·reason 五值钉终 c4c6aef41 / d 部署毕 0fc407208）·**真发端到端验证达成 04:24:07**（[W3-D PROBE] 到件实锚·直投 accept 全通·五轮根因链修毕·交付锚链 TriMLC 2157de1→d62976e 六轮终态·收口汇卷 cos-w3-closeout-20261120.md 747）
+- [ ] **A5 W4：联调+兜底验证（推丢回退拍实测）→拍数定型** ← **当前最近未毕项**——W4-a keeper 在役（df57b2e5b）·W4-b sg 写面毕·**W4-c 全链联调核心实锚达成 04:24:07**（到件·直投 accept 全通）——余推丢回退拍实测（断隧道→ECONNREFUSED 计数→恢复→job2 兜底补送·sde 主测+值席组联动·开工令 04:25 裁即开·断窗内推丢=预期内测试数据）→W4-d 拍数定型（job2 降回 30min 兜底 BOD 自办+快照四件归档随裁）；mojibake 编码小修=W4 后并批（04:25 裁）
 - [ ] A6 auth/通道勘定结卷（隧道形落卷+sg 侧许可确认）——随 A3 并行·毕于 A5 前
 
 ## B 线 · ns8 前置修缮（顺序锁：B6 全谱合一=ns8 重开触发面）
