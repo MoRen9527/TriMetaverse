@@ -24,9 +24,9 @@
 - [x] ~~B1 修A：registry 防漏斗 7 处~~ ——11-19 毕
 - [x] ~~B2 修B：fallback 链改（env 逃生门·default 链 GLM 活体面）~~ ——11-19 毕（final-synthesis 全谱六件合一）
 - [x] ~~B3 修C：preflight 供给断言 5/5~~ ——11-19 毕（防线三梯成型）
-- [ ] **B4 修D-2：dsh 切 GLM 值面探针复验**——域裁放行在工（6fc8e803）·验毕划掉（判据=目标变更值面非 healthz）
+- [x] ~~B4 修D-2：dsh 切 GLM 值面探针复验~~——**02:06 毕**（值席 cos-snb4 毕报：GLM 链活体通·独立探针读数留证·落卷锚 cto-fixD2-closeout-20261119.md）
+- [ ] **B6 B线收口终卷全谱合一**（env 终探①+fallback 终验拍②并轨）——CTO 收口段在工（02:07 值席报）→ **毕=ns8 重开触发面**
 - [ ] B5 修D-1：dsh/trimodel 余额充值或键换发——候 CEO 裁（加急直呈在候·**不催不 block**：B 线其余项不依赖 B5）
-- [ ] B6 B线收口终卷全谱合一（env 终探①+fallback 终验拍②并轨）——候 B4 → **毕=ns8 重开触发面**
 - [ ] B7 ns8 排面重开（WP9v3 基线+等待语义 gate 首用+spawn 七席·notice-221 起跑授权在）——候 B6
 
 ## C 线 · 两包形收敛施工（notice-236 款一定谳·P1-P3 分批强制·契约测试先行）
