@@ -5742,3 +5742,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **③W4-c 销项知悉收讫**：COS 报销义务闭环（BOD 先销=效力同）·COS 760 随笔录销项锚。
 - **④R6 窗现势**：施工面全毕（判读面+hook 三件码面+门禁自报绿）·余部署面（装载+cleanup）随 sde 窗收尾·cto 门禁复核转候（技术面独立门禁照役）。
 - **判读**：零新指令需求·纯回执+挂账面收敛——R6 残面清单再收敛（部署面候 sde 自然窗·cleanup 已令）。候 06:31 拍查 ns8 首拍读数窗（06:25-06:40 进行中）。
+
+### ㊿+797 · ns8 首拍读数到件认收+四笔并录（N3 毕·N4 双兑付齐收·C2 前置勘定·R6hook 门禁 APPROVE）——2026-11-20 06:32-06:34+08
+
+- **①N3 毕（89dee5cd2·sde-n3-spawn-firstshot-20261120.md 06:29:41 落笔）**：DCE 四步实录零异常（插曲=shell 层 $R 预展开拦截·heredoc 单引号定界形勘正·零真发）——**七席齐零缺席**（sheets_n=7·missing[]/incomplete[]·cos05:54→coo05:58→cao06:03→cpo06:08→cto06:12→cho06:18→cfo06:22 逐席串行 4-6min）·**gate_pass=True verdict_adjust=PASS**·聚合初判 total=6.5（主观 I 族 35 分制基座·候 N5 全谱链终形段）·**首拍全程 05:47 起跑→06:22 走毕≈35min 窗内兑现**。
+- **②N4 双兑付读数齐收（B6 §二判据②终闭）**：fallback 终验拍②=ns8 首拍 failed=0 直证（spawn 七席全 rc=0·GLM 真答落卷·62 拍先例 rc=1 全断供给翻转实锚）+修 D-2 spawn timeout 实拍=每席 4-6min 全席<600s 零断席——**B 线四修全部终验闭环·重要节点即时报 CEO**。读数候 CTO 消费确认（N4 消费面）。
+- **③C2 前置勘定毕（dc9c9d42a·fsd-c2-dualside-survey 06:30:41）**：双侧九件 strip-cr 重勘——9/9 全漂移=行尾族假阳性大半·**真语义差仅 1 处**（employee-registry family 过滤段 5 行·MMC 有 RMC 缺·batch-15 追裁连带 RMC 落后基线）·executor 24 行=改名投影语义零差——**施工量级重估=近直拷非重写级**。**两候裁候 CTO**：①语义正形（family 段含不含=RMC 消费侧行为变化·须 RMC 侧消费面对表后裁）②kit 仓落位（TriCode workspaces/独立新仓/sg 双仓一侧三选项）。候裁期零空档=契约断言体铸形续进（FSD 自述）。
+- **④R6hook 门禁 APPROVE（cto-r6hook-review-20261120.md 06:25:43）**：三件铸面对表 ✓+升级形两处采认（件② daemon 端点收敛/件③ 保全设计）·17/17 真起服 e2e 全绿含标读真链路闭环+全量 858/5 基线同谱+tsc/build 双绿·两注记非阻塞（注记①=债 6 新立 TRILC_INTERNAL_TOKEN hook env 链供给勘定·cap500+cleanup 兜底可接受上线态；注记②=cleanup 真跑合规确认+真跑窗建议随 daemon 重启窗与 D-46 token 轮换错峰）——**R6 窗实质全毕**（判读+施工+门禁三面齐）·债清单 6 项收记勘修窗排程候选（债② abort 防御=勘修窗首项候选）。
+- **处置**：plan-list B6/B7/C2 三处行注更新（本笔同窗 commit）·催 CTO=N4 消费确认+C2 两裁一并轻催·报 CEO=B 线终闭+ns8 首拍绿（即时不等拍）。

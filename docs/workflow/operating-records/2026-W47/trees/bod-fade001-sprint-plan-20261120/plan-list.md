@@ -25,10 +25,10 @@
 - [x] ~~B2 修B：fallback 链改（env 逃生门·default 链 GLM 活体面）~~ ——11-19 毕（final-synthesis 全谱六件合一）
 - [x] ~~B3 修C：preflight 供给断言 5/5~~ ——11-19 毕（防线三梯成型）
 - [x] ~~B4 修D-2：dsh 切 GLM 值面探针复验~~——**02:06 毕**（值席 cos-snb4 毕报：GLM 链活体通·独立探针读数留证·落卷锚 cto-fixD2-closeout-20261119.md）
-- [x] ~~B6 B线收口终卷全谱合一~~（env 终探①+fallback 终验拍②并轨）——**05:04 毕**（b7a4227bb+cto-b6-closeout-20261120.md·env 终探①=bcf1cb283 判据①兑现+fallback 终验拍②=活体三重绿已证挂账态如实铸面（判据②载体=ns8 首拍 failed=0 随首拍自然兑付）+B1-B4 四修终态并轨——**ns8 重开触发面兑现**·催 2h49min 因果 m-cto 自领属实）
+- [x] ~~B6 B线收口终卷全谱合一~~（env 终探①+fallback 终验拍②并轨）——**05:04 毕**（b7a4227bb+cto-b6-closeout-20261120.md·env 终探①=bcf1cb283 判据①兑现+fallback 终验拍②=活体三重绿已证挂账态如实铸面+**判据② 06:29 终闭兑付=N4 双兑付读数齐收（sde-n3-spawn-firstshot 89dee5cd2：ns8 首拍 failed=0 直证 spawn 七席全 rc=0·修 D-2 timeout 实拍每席 4-6min 全席<600s 零断席）**+B1-B4 四修终态并轨——**B 线四修全部终验闭环**·催 2h49min 因果 m-cto 自领属实）
 - [ ] B5 修D-1：dsh/trimodel 余额充值或键换发——候 CEO 裁（加急直呈在候·**不催不 block**：B 线其余项不依赖 B5）
-- [x] ~~B7 ns8 排面重开~~（WP9v3 基线+等待语义 gate 首用+spawn 七席·notice-221 起跑授权在）——**05:51 毕**（三要素齐：N1 基线五项全绿 9bc1fea0c+N2 gate 首用装配确认+N3 spawn 七席起跑实锚 nohup PID=2738440 gate_pass=true dry 核形 four_gate 全绿·回滚锚三件 /tmp 在位·链 91bb061bb——排程链：COS 排期单 cos-b7-ns8-dispatch→COO 派工单 WO-B7-NS8-20261120（4837052995）→通道缺口补发（落树≠知会到位一课）→CTO N1/N2 门禁裁 682ae060b→sde N1/N2 装配读数毕→spawn 起跑；两挂账 COO 督办（plan-skill 补铸 ns8+1 前/round_state+AND 门 ns9 前置零 block）；**ns8 首拍读数窗估 06:25-06:40**（62 拍先例 35-50min）·N4 双兑付回卷 B6 面=首拍读数到时办·链售后转常规值守）
-- [ ] **C2 P1 施工**（九件迁移+契约测试先行+准入断言族）← **当前最近未毕项**——FSD 主刀排队态（hook 三件 R6 窗施工毕后回·05:41 链现势）
+- [x] ~~B7 ns8 排面重开~~（WP9v3 基线+等待语义 gate 首用+spawn 七席·notice-221 起跑授权在）——**05:51 毕**（三要素齐：N1 基线五项全绿 9bc1fea0c+N2 gate 首用装配确认+N3 spawn 七席起跑实锚 nohup PID=2738440 gate_pass=true dry 核形 four_gate 全绿·回滚锚三件 /tmp 在位·链 91bb061bb——排程链：COS 排期单 cos-b7-ns8-dispatch→COO 派工单 WO-B7-NS8-20261120（4837052995）→通道缺口补发（落树≠知会到位一课）→CTO N1/N2 门禁裁 682ae060b→sde N1/N2 装配读数毕→spawn 起跑；两挂账 COO 督办（plan-skill 补铸 ns8+1 前/round_state+AND 门 ns9 前置零 block）；**ns8 首拍 06:22 走毕（05:47 起跑≈35min·窗内兑现）：N3=毕——七席齐零缺席 gate_pass=True verdict_adjust=PASS·聚合初判 total=6.5（主观 I 族 35 分制基座·候 N5 全谱链终形段）·N4 双兑付读数齐收（failed=0 直证+timeout 实拍 4-6min/席<600s·候 CTO 消费确认）·链售后转常规值守**
+- [ ] **C2 P1 施工**（九件迁移+契约测试先行+准入断言族）← **当前最近未毕项**——FSD 主刀在工：**前置勘定毕 06:30**（fsd-c2-dualside-survey dc9c9d42a：9/9 全漂移=行尾族假阳性大半·真语义差仅 1 处 registry family 过滤段 5 行·executor 24 行=改名投影——施工量级重估=近直拷非重写级·**两候裁候 CTO：①语义正形（family 段含不含=RMC 消费侧行为变化）②kit 仓落位（a/b/c 三选项）**·候裁期零空档=契约断言体铸形续进）
 
 ## C 线 · 两包形收敛施工（notice-236 款一定谳·P1-P3 分批强制·契约测试先行）
 
