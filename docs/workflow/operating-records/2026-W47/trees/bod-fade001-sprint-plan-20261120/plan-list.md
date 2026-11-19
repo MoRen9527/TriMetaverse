@@ -50,7 +50,7 @@
 > 6. **护栏常位**：8 轮封顶保险丝+GLM 速率护栏+token 值面禁进转报+D-47 时刻制——四护栏改造后原样保留。
 
 - [x] ~~D1 改造方案卷定稿~~（round_runner 程序编排+spawn 七席+等待语义+retry 闸漏补立）——**01:50 毕**（CTO round 编程设计卷落树 fade001-tenstage-deploy-20261115/cto-round-programming-design-20261119.md·值席划项回传认收）
-- [ ] **D2 评分两轨落地**（ScoreCLI 机械面先+ScoreSkill 主观面后·两段锁勿互套·score 顺序 7/7 维持）——候 CTO 按 D1 设计卷排工
+- [ ] **D2 评分两轨落地**（ScoreCLI 机械面先+ScoreSkill 主观面后·两段锁勿互套·score 顺序 7/7 维持）——**排工令落卷 07:52 在工**（cto-d2-dispatch 16db059a3·D-15 令已达 fsd：令 1=ScoreCLI 机械面 sprint 内立即起（deadline 09:00 硬门·毕不完如实带出零硬塞）+令 2=ScoreSkill 主观面令 1 毕后接（白盒 mock 零真实 GLM 跑）+令 3=两轨联调候窗候 COO 统排——两段锁=顺序锁硬串行断言为验收硬锚·score_engine/aggregate 输出面零改·95 线判读位=D4 非本令）← 候 fsd 令 1 回执
 - [ ] D3 进化判据接线（95 线+四前置件批立兑现·含 95 线定谳件）
 - [ ] D4 进化判决形落地（COS 综合裁判接口+轮间意见窗）
 - [ ] D5 close 恒等式接线（自检总结面·closeCLI+closeskill 双面分工）
