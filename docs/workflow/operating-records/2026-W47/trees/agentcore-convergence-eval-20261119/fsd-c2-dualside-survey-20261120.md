@@ -45,6 +45,19 @@ if (contract.identity.family !== 'Role') continue;
 - 契约测试 9 套件=STE 断言面照铸（C1-C9 逐件）——落位裁下后一段铸形；
 - C3 验收四仓活体对表+md5 复验——双侧勘定读数本卷先行供锚（md5 基面=C3 时点重取）。
 
+## §四 增补段：候裁① RMC 侧消费面读数（cos 分诊注记提速面·2026-11-19T22:36:23Z 现勘）
+
+**勘法**：TriRMC/TriMMC 双仓 src+test 全谱 grep（loadEmployeeRegistry 调用面→dispatch 上溯→fixtures family 值面三段）。
+
+| 读数面 | 结果 |
+|---|---|
+| loadEmployeeRegistry 唯一消费 | 双侧同构=dispatch-proxy L120（`deps.employees ?? loadEmployeeRegistry(deps.registryDir).employees` 路由候选池） |
+| dispatch/dispatchAsync 外部活体调用 | **双侧 src 面零命中**（唯一引用=trilc-executor type import+注释）——**编排九件双侧皆「已铸未接线」态** |
+| RMC 测试面 family 值面 | employee-registry.test 内联 fixtures 三案（CTO_YAML/CPO_YAML/BROKEN_YAML）**全 `family: Role`**·其余 4 套件 fixtures 同形全 Role——零 Registry 席案 |
+| MMC 对照组 | family 段现役已跑（2026-10-02 裁达起 49 天）·MMC 测试面同构全 Role fixtures——活体对照实证 |
+
+**供裁结论**：kit 收敛正形含 family 过滤段（MMC 形）→RMC 侧**活体行为差=零**（dispatch 链未接线无消费）+**现役测试零破坏**（fixtures 全 Role·`employees.length===2` 断言不受过滤影响）——**候裁①可直裁含段**·RMC 消费面对表义务由本读数代偿（CTO 裁时勘阅本段即可·无候令依赖）。
+
 ## 使用依据
 
 - STE ste-contract-test-suite-nine-20261120.md（九件实锚+契约基准形「交集为正形·差异面候裁标注」）
