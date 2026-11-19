@@ -5640,3 +5640,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **候勘观察项随报**（不阻毕锚）：值席读数信（cos-w4c-20261120-0206·pending）自动补送至 04:44 未到件+trimc-run.log 零派发痕迹——trimc NOTIFY 派发通道形与节律=候勘小件（建议挂 mojibake R6 并批窗同批）。
 - 判读依据：8713 healthz wake 字段族=电源面语义（16:36Z 旧值·非席位唤醒面·W2-a 定谳照证）·wakePollFailures=0。
 - plan-list A5 行内注更新毕（W4-c 毕 04:44 锚）——A5 余 W4-d 拍数定型（BOD 自办项候 COS 拍齐条件）。现势 10✅/24·dev 顶=d4a8b4aed。
+
+## ㊿+781 · 04:47-04:52 ——W4-d 自办②毕：快照二进制 16 件 index 退场（共享检出 index 收编一例实录）·①job2 降回裁 09:00 后
+
+- **自办②快照归档毕**：二进制 16 件（snapshot-w3d/w3d2/w3e/w3f/w3g 各×3+w2d-preflight cron.db.shutdown-snapshot 本体）index 全退·json 文本 7 件留 track·磁盘本地保留·树 .gitignore（cron.db/cron.db-*）防回流——**终验=树内 cron.db 族 track 名单纯 json·二进制零残留**·终态已进链（远端顶 8d0598007·本地远端同步）。
+- **过程实录（共享检出 index 收编一例·互踩家族第一向如实记）**：三轮 rm 分批生效（管道 xargs 一版+显式一版+漏网补一版）——rm 与 commit 间隙两次被并发操作清 staged（commit no changes/add 复活）+终态删除效果随 m-cos 8d0598007 收编进链（我 commit 消失·效果在链·不追责）——**教训行=共享检出 rm --cached 类操作须 rm+commit 紧连零间隙+终态以 ls-files 名单验证非 commit 回执**。
+- **自办①裁定**：job2 降回 30min=**09:00 终态报后办**（CEO 01:42 令 6min 拍催办职能在役至 deadline·B/C/D 线 11 项未毕——降回属拍数定型终态形态）。
+- 回执已发（a64d26c2→m-cos）·候 W4-e 汇总+A5 划项终报·mojibake R6 并批窗候 m-cos 排。
+- 现势 10✅/24·当前项 A5 W4（余 W4-e 汇总划项）·dev/sg 顶=8d0598007。
