@@ -5396,3 +5396,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **A 线 A4 W3**：02:13 示下 m-cos 拆树（SendMessage 69cbc135 in inbox）3min 未回执——未到 12min 阈值不催，下拍验。
 - B6（CTO 收口段在工 9min）/C2（FSD 主刀·fsd-p1-convergence-readout 落树=有进展）——均未到阈值零催。MMC degraded cf=266 持平·n2-watchdog 等四 cron job 02:12 正常拍跑。
 - **教训行**：探针命令跨账号面必带属主前缀断言（fleet vs root 双 server 族·与 daemon 机位矩阵同构——探错面空回≠服务死）。
+
+## ㊿+747 · 02:20 拍——W3/W4 拆树卷落（A4 在工实锚）+sg 五项全项回执+④开工令 11-20 02:21 @bod
+
+- **A4 在工实锚成立零催**：m-cos 拆树毕 cos-w3w4-dispatch-20261120.md 落树（02:15:56 写·卷代回执）——W3 四步（a 管道名址勘定 m-cto→b wired 填装 m-fsd→c 门禁 m-cto→d 重启部署 m-sde）+W4 四步（a keeper m-sde 并行先行 / b sg 配合 BOD 链 / c 全链联调 / d 拍数定型+快照归档随裁）·依赖时序清+增量护栏三件（真唤醒探针安全面 W3-c 裁决 / keeper D-29 无窗形 / **W4-c 真推唤前知会 BOD 一拍**）。
+- **sg 五项全项回执毕认收**（cos-w2a5·02:18:32）：①② **勘毕零改形双通**（sshd AllowTcpForwarding 已许可+端口无需改——最优形）/ ③ sha 对表一致 / ⑤ 随推唤段。
+- **sg④开工令催发**（候态歧义澄清）：值席回执「④候 FSD 契约定稿（f0f22c6 已在卷）」——f0f22c6=定稿毕非在途，轻催解除候态即施工（POST 18713→seat-wake 形+token 配置位读法）——拾取 ✓（❯清空+esc-in）。
+- 本拍零划项零毕项（9✅/24 维持）·当前序列：A4 W3 在工（m-cto 勘定+ m-sde keeper 先行）→B6→C2→D2。dev 顶 45f1a1379。
