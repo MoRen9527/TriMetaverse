@@ -7,6 +7,7 @@
 - 问源原文: 「TriRMC 那边都是无头的 agent，不像 M-SG 可以常驻会话，他的团队协作是不是需要一个额外的，比如我们 bod 或者他的 cos 来做编排才能形成 team 协作？还有我记得我们拿 claude code 2.1.88 改的 TriRMC 的 agent-core 本身就是有编排功能的吧，能用来领导无头团队么」
 - 证据基座: 本地 TriRMC 克隆（`D:/Code/ai/TriRMC`·顶 e408da5·跟 R 侧线）＋`TriCompany/packages/agent-core@0.1.0` 源码静态面
 - 性质注: 事实卷只录源码锚与读数；「是否采信/如何并入评估」归三席与 CEO
+- 挪域勘正（CEO 2026-11-19 22:35:42 令）：本卷原落 fade001 树（随 notice-227 评估树），CEO 勘正=平台编排事实≠fade-001 进化实例·两域分开——挪独立树 trirmc-orchestration-fact-20261119/，挪域随 notice-230 知会值席转 CTO/CPO
 
 ## §一 · 问一答：无头团队协作需要编排面吗？
 
