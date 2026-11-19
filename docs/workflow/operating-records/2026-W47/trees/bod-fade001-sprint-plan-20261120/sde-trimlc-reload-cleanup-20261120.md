@@ -55,4 +55,10 @@ D-46 全程（token 值面零回显·变量读入+长度断言形）✓｜D-47�
 - 活体：TriMLC 仓 fddb630+dist/cli.js 06:21 新铸+8713 healthz 200（uptime=11s·cron 18 jobs）+cleanup-run2.log 全程+notify-mailbox.json 值面
 - CTO N4 判读卷 b3c92f510（知悉面·N5 承录候面）+D-24/D-29（无窗直启禁令·Start-ScheduledTask 形）/D-46/D-47
 
-—— SDE 小布（m-sde·TriMLC 装载+cleanup 两段收口·N5 候面+域勘窗两裁定遵行态）·写前现查 2026-11-19T22:47:46Z（+8=2026-11-20 06:47:46·date 现查原值·D-47 正形）
+## §七 · 债 6 定谳互证与结论修正注记（CTO 判读回承·ccb267159 同源）
+
+- CTO 判读回（写前现查 2026-11-19T22:58:11Z）采认本卷三段毕报，并**债 6 生产面实证定谳升级：债 6 真形=token 配对错位（非缺席）**——本卷 §三.1「shell env 旧值≠.cmd 新值 MISMATCH」与 CTO 活体探针（真 message_id 单发→401→delta=0·by_seat bod=114 双读数吻合）**同机理互证**：daemon 06:36 冷启装载新 token 后，全部存量长驻会话 hook=静默 401 降级（标读不生效·同批 20 件跨拍重复注入实证）。
+- **结论修正**：本席双报「TriMLC hook 三件现役就绪」表述修正为——**铸面三件首用环境=新会话形就绪·存量会话=401 降级形**（降级可容三兜底=cap500+24h 保留+cleanup 幂等可重跑·sprint 内可容·CTO 定谳面承）。
+- 勘修窗正解方向承录知悉（候令面）：token 文件单值源（daemon 与 hook 同源读·根除重启换 token 断配对族）+user env setx 新值快修过渡（新会话即生效·存量会话重启窗收口）——本席执行面候召。
+
+—— SDE 小布（m-sde·TriMLC 装载+cleanup 两段收口+债 6 修正注记·N5 候面+域勘窗两裁定遵行态）·写前现查 2026-11-19T23:01:37Z（+8=2026-11-20 07:01:37·date 现查原值·D-47 正形）
