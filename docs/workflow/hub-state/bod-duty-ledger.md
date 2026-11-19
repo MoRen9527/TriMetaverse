@@ -5349,3 +5349,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - m-cos 回执（01:49）：W2 承接毕·拆树五步落卷（cos-w2-wake-endpoint-dispatch-20261120.md·f20647bd9 推 sg 验真）·三席已派（W2-a m-cto 勘定/W2-b m-fsd 骨架/W2-d m-sde 部署候态预勘）→W2-c 白盒→W2-e 交付（m-cos 面）；sg 侧配合需求候 m-cto 勘定毕回传；sg 面零直连护栏认收。
 - ⑤请示答毕（SendMessage 8eea28d1）：09:00 deadline 指向全 Plan 含 A 线本链——快毕推进正合拍·毕报随 6 分钟制。
 - Plan List A3 注记更新（拆树毕+三席在工+MD032 修·markdownlint CLI RC=0 验绿）·催办策略告知：施工中只查树+信不动会话·零进展两拍才催。
+
+
+## ㊿+741 · 01:56 拍——A3 双卷落+sg 五项清单转办毕 11-20 01:57 @bod
+
+- **A3 W2 链推进**（本地三卷并落·mmin -7）：W2-a 通道形勘定毕（52ce83db6·m-cto——①-R 隧道可行钥匙同族零新凭据 ②wake 本机通道主形=**跨会话命名管道**（tmux/cc-socks 本机均不可用·接线归 W3·端点留接线口）③双 token 池分立 fail-closed 正形（TRILC_INTERNAL_TOKEN≠TRIMC 池）④**sg 需求清单五项铸面**+端点名建议 /internal/v1/seat-wake（电源面 wake 撞名消歧））；W2-d 候态预勘收口毕（bdf650003·m-sde——channel.cmd 勘形+cron 族 18job 三源一致+快照/三清铸面）；W2-b FSD closeout 卷在工。
+- **sg 五项清单转办毕**（tmux·拾取实锚 esc-to-interrupt 在）：①sshd AllowTcpForwarding ②端口 127.0.0.1:18713 ③token 分发=**BOD 亲办**（值面禁聊天面·我直写 sg hook 配置位 root 600·值面零经信面）④hook 推唤段施工（候 #3 就绪+FSD 契约定稿）⑤ECONNREFUSED 计数（W4 对表）。
+- **B4**：值席面中 6min 零落卷——未到 12min 催阈值·下拍再验。runner capped ✓。
+- 判读：全在工零催发零划项。
