@@ -4945,3 +4945,7 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+650 · job1 08:13 拍归档一行（2026-11-19T08:13+0800）
 
 - 08:07 拍（拍延迟 0min·tick 新鲜·快照先于 notice-206 拾取 4min 故全席候令为拾取前态）：全席候令（值席 notice-206 处理中=在役实锚 08:11）；四口稳（8713 满电·8711 lastPoll 00:06Z/河源 active·MMC 248 微涨+1 既有面）；大表 open=4。免勘免通报。
+
+### ㊿+651 · CEO 追问答复：ns4 周迁移真执行与 migrate=0 不矛盾的机理（2026-11-19T08:23+0800）
+
+- CEO 08:21:45 问「ns4 没真执行周迁移？」——run-mirror-205352Z 实锚（plan/dce）答复：**dce migrate 段真实执行 rc=0**（weekly_plane_shift --from W46 --to W47 --sync·pull/commit/push 全链 rc=0）——执行器跑了且成功；**迁 0 件=迁移决策面产出**：迁移前逐树判卷「死件/活件」环节 34 件 reason_codes=agent_output_malformed（判卷输出解析失败·与 F4 截断同族缺陷）——判不出死活 fail-closed 安全降级 default_keep 封存不迁→migrate=[]（carry_over 仅 2 条 W35 frozen 照裁只归位不解冻）。「迁移的手真跑了·判卷的眼睛坏了——看不出哪些该迁全按安全档封存」；ns1-ns3 观察窗 debug 停点没跑到 dce 段·ns4 首跑完十阶段跑出真实缺陷结果=79 分最大扣分面之一=ns5 WP9 v3 基线第一修法面（判卷解析修复+retry 真启用+32 件逐件补正判）。答复已呈。
