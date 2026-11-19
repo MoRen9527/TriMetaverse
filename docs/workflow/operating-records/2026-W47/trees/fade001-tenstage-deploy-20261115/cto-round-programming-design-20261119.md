@@ -74,3 +74,43 @@ notice-223 款二 CEO 批令面；notice-198 四要点（三 Skill 段脚本化/
 **对图判定=设计成立（五面主形零冲突）＋两增补并入 S1/S2/S4 拆面（零结构重排）**——候 COO 排面按增补后拆面。
 
 **对图使用依据增补**：393bdfe35 图三照修版（mermaid 控制权图+对照表七行）；fetch 自取形零触检出实锚（he席 unstaged 面零动）。
+
+---
+
+## §九 flag 段设计增补段（notice-225 CEO 批增补令·S1 排面并入·2026-11-19 20:0x CST）
+
+### 款一·flag 三态机制化（debug/test/prod）
+
+- **状态存取**：`round-queue/state/flag.json` = `{flag: debug|test|prod, switched_at, authority_ref(CEO令/notice ref), run_verdict_ref?}`——read_flag/set_flag 双助手（round_runner 程序面）；
+- **切换权=CEO 令（图二定谳承）**：set_flag 手动形（debug↔test 互转·prod 回切）**必载 authority_ref**（无 ref=拒绝 fail-closed——程序零自切换）；**唯一程序自动边=EXIT≥95→prod**（图三 EXIT2 面 sanctioned 规则边·run verdict ref 为锚）；
+- **判别分支路由**：chain_runner/round_runner 读 flag 决定链形（prod=直走／debug+test=loop 形）与推进面（§三A/款二四支）。
+
+### 款二·四分支设计
+
+| 支 | 条件 | 程序处置 |
+|---|---|---|
+| ①test 态自动续轮 | verdict=loop_next 且 flag=test | 程序自动入队下轮 start_round（**不候裁决**·轮计数+1·carry_over 承接） |
+| ②prod 分支 | flag=prod | **十阶段单轮直走·无进化 loop 直交付**——chain_runner prod 形=CLI 段照跑·Skill 尾段（convene/score-skill/close-skill 联审尾）跳过·周迁移交付即收 |
+| ③FUSE 熔断 | 轮计数≥8（runner state 面 count 程序驱动） | **自动熔断停候 CEO**——queue 停用态（fuse.marker 落位+pending 冻结·零再起跑·候 CEO 令解） |
+| ④EXIT≥95 关进化 | verdict=loop_exit（联审均分≥95） | **flag→prod 程序处置**（set_flag prod·run_verdict_ref 锚·出队停+prod 交付注记） |
+
+- 四支与 §三 ceo-ruling 门互联面：debug 态=候裁驱动形（现役承）；test 态=①③④程序面；prod 态=②直走形——**flag 分派在 runner 消费端单点**（零双路判别）。
+
+### 款三·S4 断言族扩面（白盒同族）
+
+| 断言案 | 面 |
+|---|---|
+| F-1 flag 存取 | read/set 往返+坏值拒绝+authority_ref 缺失拒绝（手动切换面） |
+| F-2 四支路由 | test+loop_next→入队不候裁／prod→直走形 Skill 尾跳过／FUSE 7→8 边界（8=熔断停）／loop_exit→flag=prod+出队停 |
+| F-3 权属门 | 程序自动边仅 EXIT≥95 一条（其余切换无 ref=零执行） |
+| F-4 prod 直走形 | CLI 段序列完整+Skill 尾段零 spawn 实锚 |
+
+- 白盒同族归 S4（spawn env/queue/gate 断言族并列）——**增补毕随本卷落树 ✓（本段即落卷）·施工排面仍候 COO 拆树不变**。
+
+### GLM 单跑护栏承录
+
+notice-222 双面盯守同窗同守（GLM 消耗速率知情盯守+QUOTA 再现即刻报 BOD·CTO standing 在卷）——flag 段施工面同守（prod 直走形=联审尾跳过=GLM 消耗降面如实注）。
+
+### 使用依据增补
+
+notice-225 CEO 批增补令三款；图二 flag 生命周期（切换权=CEO 令）；图三 DEC2/FUSE/EXIT2 面；§三A/§五A 增补谱系；D-46/D-47。
