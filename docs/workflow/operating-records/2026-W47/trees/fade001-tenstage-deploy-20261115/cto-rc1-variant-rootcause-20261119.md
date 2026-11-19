@@ -40,3 +40,27 @@ dsh: QUOTA: Insufficient Balance (request_id: bbcf975f-…)
 ## 使用依据
 
 复现探针全错文（/tmp/fixb-repro rc=1+QUOTA 行）；score-skill 时间线 sweep（042908 健康/075254 首 rc=1/090551 全断）；修 B/C 交集三面源勘（trimodel dist=trimodel 生态/preflight.py/env 键域）；tricompass-context/index.mjs 源读（注册成功语义）；notice-214/218/219 谱系；D-46/D-47。
+
+---
+
+## 勘正段（notice-222 款二·CEO 账户面定谳承·修正记录留痕形·2026-11-19 18:0x CST）
+
+**归因勘正**：§一「dsh 键=QUOTA 余额面（DeepSeek 账户域）」定性——**CEO 定谳勘正=GLM 周额度耗尽面（非 DeepSeek dsh 键）**；CEO 已用最后一张周重置卡恢复周额度。原文段落保留不删（修正留痕形·本段为勘正记录）。
+
+**修 D-2 活体通（rc=0）×重置卡恢复·两面贡献序对表**（入卷如实事勘定）：
+
+| 面 | 贡献者 | 时点序 | 解除面 |
+|---|---|---|---|
+| QUOTA 面解除 | **CEO 重置卡**（GLM 周额度恢复） | ~17:00 前后·先 | 额度面（必要条件——无额度任何路由皆 QUOTA） |
+| 1210 面解除 | **修 D-2 overlay**（llm-deepseek 适配器行 maxTokens=16384 配对·dsh 默认 256e3>GLM 上限） | 17:33 后·后 | 参数面（独立于额度·我面） |
+| 路由显式化面 | 修 D-2 env 注入（DEEPSEEK_BASE_URL→GLM 端点） | 随 3bdae1f | 路由一致面——**若存量路由本已 GLM 同面=冗余一致形·若存量=DeepSeek 端点=切换面**（候勘注） |
+
+**rc=0=三面叠加时点联合结果**（额度卡 CEO 面·预算 overlay 我面·路由注入一致性面）——非单因归功形。
+
+**款一承录**：修 D-1 候裁面关闭（DeepSeek 暂不充值不换 key）；GLM 单供给=唯一活体面；fallback 链 deepseek 节点=死节点保留不改（链形兜底保留）。
+
+**款三盯守义务登记（CTO 面）**：8710 链+spawn 链 GLM 消耗速率知情盯守（读数源=spawn/score-skill 产出卷+preflight 供给探针断言读数·与 CFO runway 盯守联动）；**QUOTA 类异常再现=即刻报 BOD（不等 30min 节律）**——standing 承。
+
+**留勘面（如实·非阻塞运营面）**：rc=1 复现 shell 零 DEEPSEEK env 仍过认证=认证键供给存储面在（位置未勘获·dsh home 无 settings 存储实锚）——候勘注（键账户面=CEO 权威定谳承·存储位置面不阻运营）。
+
+**勘正使用依据增补**：notice-222 款二 CEO 定谳；周重置卡恢复事实；本卷 §一~§四原勘证据（证据面全部保留有效——错误体/request_id/时间线/交集三面=不变事实；变的=账户归属标签）。
