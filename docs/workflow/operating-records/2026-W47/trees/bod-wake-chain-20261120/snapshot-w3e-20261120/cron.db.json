@@ -1,0 +1,350 @@
+[
+  {
+    "id": "cron_muh6shv0_korw",
+    "name": "trimodel-l2-scan",
+    "schedule": {
+      "kind": "every",
+      "everyMs": 120000
+    },
+    "systemPrompt": "",
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File D:/Code/ai/TriMetaverse/.fade/trimodel-l2-stub.ps1",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-09-25T16:40:12.396Z",
+    "updatedAt": "2026-11-19T19:38:00.360Z",
+    "lastRunAt": "2026-11-19T19:38:00.026Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T19:40:00.000Z",
+    "runCount": 23965,
+    "errorCount": 29
+  },
+  {
+    "id": "cron_muh6vt2l_kkyo",
+    "name": "trimodel-l3-remind",
+    "schedule": {
+      "kind": "every",
+      "everyMs": 1800000
+    },
+    "systemPrompt": "",
+    "command": "wscript.exe D:\\Code\\ai\\TriMetaverse\\.fade\\trimodel-l3-toast.vbs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-09-25T16:42:46.893Z",
+    "updatedAt": "2026-11-19T19:30:00.682Z",
+    "lastRunAt": "2026-11-19T19:30:00.349Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T20:00:00.000Z",
+    "runCount": 1877,
+    "errorCount": 13
+  },
+  {
+    "id": "cron_muk382is_6tr3",
+    "name": "plane-shift-local-align",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 10 23 * * 0",
+      "tz": "Asia/Shanghai"
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/.fade/plane-shift-local-align.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-09-27T17:23:39.076Z",
+    "updatedAt": "2026-11-15T15:10:22.222Z",
+    "lastRunAt": "2026-11-15T15:10:01.648Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-22T15:10:00.000Z",
+    "runCount": 13,
+    "errorCount": 7
+  },
+  {
+    "id": "cron_muk3951d_b8ah",
+    "name": "tree-node-patrol",
+    "schedule": {
+      "kind": "every",
+      "everyMs": 60000
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/fade/tree-node-patrol.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-09-27T17:24:28.993Z",
+    "updatedAt": "2026-11-19T19:38:00.495Z",
+    "lastRunAt": "2026-11-19T19:38:00.365Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T19:39:00.000Z",
+    "runCount": 46078,
+    "errorCount": 9
+  },
+  {
+    "id": "cron_mumsuxup_pu0y",
+    "name": "ledger-watchlist-patrol",
+    "schedule": {
+      "kind": "every",
+      "everyMs": 300000
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/fade/ledger-watchlist-patrol.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-09-29T14:56:48.865Z",
+    "updatedAt": "2026-11-19T19:35:00.251Z",
+    "lastRunAt": "2026-11-19T19:35:00.164Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T19:40:00.000Z",
+    "runCount": 9489,
+    "errorCount": 2
+  },
+  {
+    "id": "cron_muo2mj6s_cco2",
+    "name": "hub-silent-detect",
+    "schedule": {
+      "kind": "cron",
+      "expr": "*/15 * * * *"
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/fade/hub-silent-detect.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-09-30T12:17:58.948Z",
+    "updatedAt": "2026-11-19T19:30:02.842Z",
+    "lastRunAt": "2026-11-19T19:30:00.881Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T19:45:00.000Z",
+    "runCount": 3160,
+    "errorCount": 246
+  },
+  {
+    "id": "cron_muqyqy4g_ippm",
+    "name": "joint-review-demand-pool",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 0 14 * * 0",
+      "tz": "Asia/Shanghai"
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/fade/joint-review-remind.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-02T12:52:44.992Z",
+    "updatedAt": "2026-11-15T06:00:04.535Z",
+    "lastRunAt": "2026-11-15T06:00:04.002Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-22T06:00:00.000Z",
+    "runCount": 9,
+    "errorCount": 0
+  },
+  {
+    "id": "cron_muxxy5w7_wbb7",
+    "name": "n2-watchdog-dev",
+    "schedule": {
+      "kind": "every",
+      "everyMs": 600000
+    },
+    "systemPrompt": "",
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File C:/Users/jedih/AppData/Local/tri-watchdog-n2.ps1",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-07T10:04:45.271Z",
+    "updatedAt": "2026-11-19T19:30:16.488Z",
+    "lastRunAt": "2026-11-19T19:30:02.848Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T19:40:00.000Z",
+    "runCount": 3879,
+    "errorCount": 15
+  },
+  {
+    "id": "cron_mv0bq1v2_zgw8",
+    "name": "performance-sunday-settle",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 0 21 * * 0",
+      "tz": "Asia/Shanghai"
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/fade/performance-sunday-settle.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-09T02:05:53.774Z",
+    "updatedAt": "2026-11-15T13:00:12.659Z",
+    "lastRunAt": "2026-11-15T13:00:12.248Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-22T13:00:00.000Z",
+    "runCount": 6,
+    "errorCount": 0
+  },
+  {
+    "id": "cron_mv0bvbzc_ir5r",
+    "name": "bod-tick-30min",
+    "schedule": {
+      "kind": "cron",
+      "expr": "7,37 * * * *",
+      "tz": "Asia/Shanghai"
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/fade/bod-tick-runner.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-09T02:10:00.168Z",
+    "updatedAt": "2026-11-19T19:37:21.058Z",
+    "lastRunAt": "2026-11-19T19:37:00.117Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T20:07:00.000Z",
+    "runCount": 1301,
+    "errorCount": 15
+  },
+  {
+    "id": "cron_mv3505vw_jev6",
+    "name": "glm-quota-obs",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 30 9 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/ops-local/glm-quota-obs.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-11T01:21:06.764Z",
+    "updatedAt": "2026-11-19T01:36:56.802Z",
+    "lastRunAt": "2026-11-19T01:36:56.069Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-20T01:30:00.000Z",
+    "runCount": 38,
+    "errorCount": 3
+  },
+  {
+    "id": "cron_mv3506hp_nh7t",
+    "name": "window-dispatch-remind",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 0 9,18 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/ops-local/window-dispatch-remind.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-11T01:21:07.549Z",
+    "updatedAt": "2026-11-19T10:00:12.003Z",
+    "lastRunAt": "2026-11-19T10:00:11.846Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-20T01:00:00.000Z",
+    "runCount": 70,
+    "errorCount": 0
+  },
+  {
+    "id": "cron_mv3506jr_xaz7",
+    "name": "tri-liveness-l1",
+    "schedule": {
+      "kind": "every",
+      "everyMs": 300000
+    },
+    "systemPrompt": "",
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File C:/Users/jedih/AppData/Local/tri-liveness-l1.ps1",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-11T01:21:07.623Z",
+    "updatedAt": "2026-11-19T19:35:03.807Z",
+    "lastRunAt": "2026-11-19T19:35:00.257Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T19:40:00.000Z",
+    "runCount": 6850,
+    "errorCount": 264
+  },
+  {
+    "id": "cron_mv9g96zl_e7mo",
+    "name": "echo-pull",
+    "schedule": {
+      "kind": "every",
+      "everyMs": 300000
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/fade/echo-pull.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-15T11:22:40.929Z",
+    "updatedAt": "2026-11-19T19:35:06.973Z",
+    "lastRunAt": "2026-11-19T19:35:03.812Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T19:40:00.000Z",
+    "runCount": 6010,
+    "errorCount": 3
+  },
+  {
+    "id": "cron_mvbe9tp6_ba1i",
+    "name": "e1-window-reminder",
+    "schedule": {
+      "kind": "every",
+      "everyMs": 300000
+    },
+    "systemPrompt": "E1-1 window reminder patrol job: read window-ledger.md front-matter windows section, emit start/end reminder rolls at ��5min tolerance to trees/window-reminders/. Read-only to ledger (COO sole pen). Idempotent via job-side state file.",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/ops-local/window-reminder-patrol.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-16T20:02:43.482Z",
+    "updatedAt": "2026-11-19T19:35:07.053Z",
+    "lastRunAt": "2026-11-19T19:35:06.978Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T19:40:00.000Z",
+    "runCount": 5665,
+    "errorCount": 0
+  },
+  {
+    "id": "cron_mvbzgj3p_0c57",
+    "name": "cos-patrol-timer",
+    "schedule": {
+      "kind": "every",
+      "everyMs": 1800000
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/ops-local/cos-patrol-timer.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-10-17T05:55:48.277Z",
+    "updatedAt": "2026-11-19T19:30:22.494Z",
+    "lastRunAt": "2026-11-19T19:30:22.333Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T20:00:00.000Z",
+    "runCount": 977,
+    "errorCount": 1
+  },
+  {
+    "id": "cron_mw1rdhym_7pwt",
+    "name": "fade011-daily-sweep",
+    "schedule": {
+      "kind": "cron",
+      "expr": "30 3 * * *"
+    },
+    "systemPrompt": "",
+    "command": "node D:/Code/ai/TriMetaverse/scripts/fade/fade-daily-sweep.local.mjs",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-11-04T06:51:30.478Z",
+    "updatedAt": "2026-11-19T19:30:22.851Z",
+    "lastRunAt": "2026-11-19T19:30:22.500Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-20T19:30:00.000Z",
+    "runCount": 19,
+    "errorCount": 1
+  },
+  {
+    "id": "cron_mwks0klq_t9ow",
+    "name": "lg099-tri-check",
+    "schedule": {
+      "kind": "cron",
+      "expr": "*/30 * * * *"
+    },
+    "systemPrompt": "",
+    "command": "C:/Python312/python.exe D:/Code/ai/TriMetaverse/docs/workflow/operating-records/2026-W47/trees/trirmc-bridge-dsh-20261116/deploy/tri-check.py --ledger D:/Code/ai/TriMetaverse/docs/workflow/operating-records/2026-W47/task-inventory-20261117.md --inventory D:/Code/ai/TriMetaverse/docs/workflow/operating-records/2026-W47/task-inventory-20261117.md --trees-root D:/Code/ai/TriMetaverse/docs/workflow/operating-records/2026-W47/trees --out-dir D:/Code/ai/TriMetaverse/docs/workflow/operating-records/2026-W47/convene/tri-check",
+    "enabled": true,
+    "state": "idle",
+    "createdAt": "2026-11-17T14:17:04.334Z",
+    "updatedAt": "2026-11-19T19:30:22.990Z",
+    "lastRunAt": "2026-11-19T19:30:22.857Z",
+    "lastRunStatus": "ok",
+    "nextRunAt": "2026-11-19T20:00:00.000Z",
+    "runCount": 104,
+    "errorCount": 0
+  }
+]
