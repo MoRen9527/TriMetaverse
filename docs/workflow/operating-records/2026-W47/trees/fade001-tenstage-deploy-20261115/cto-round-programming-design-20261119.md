@@ -1,116 +1,95 @@
-# 轮间编排收归程序面·施工方案卷（notice-223 款二 CEO 批·CTO 设计·值席配合面）
+# 轮间编排收归程序面·施工方案卷（v2 章节重构版·notice-226 四款架构级增补并入）
 
-- date 现查: 2026-11-19 18:3x CST（D-47）
-- 设计人: CTO 小狄（方案毕排施工·施工候 COO 拆树排面）
-- 方向定谳承录: agent 不再手动起跑轮——过渡期起跑动作走**控制指令入队→程序消费**
+- date 现查: 2026-11-19 20:3x CST（D-47）
+- 设计人: CTO 小狄（notice-223 款二方案→223 增补图复核→225 flag 段→**226 架构级章节重构**·版本谱系=git 历史在卷 14e92de70/9ea24bf26/e83cf39db）
+- 主形定谳（款一勘正承录）: **loop 本体=runner 内单程序内聚循环控制流（while＋状态机）**——包住「十段链→联审→判分→flag 分路→轮间推进」全链——loop 点火后循环体内**自主迭代推进**；前版「每轮一指令·队列接力」形=**单轮开工指示器非 loop（勘正承·前版归位见 §九映射表）**
 
-## §一 目标与不变面
+## §一 loop 本体段（主形·前置·while＋状态机）
 
-- **目标**：轮推进权收归程序面（runner/脚本化承载）——起跑=入队形唯一通道·程序消费执行·轮推进判定=程序（裁决落卷驱动）；
-- **不变面**：十段链本体零改（已验收现役）；notice-202 等待语义轮间门零改（三态门现役·单 gate 双源收敛）；weekly cron 周日窗保留（时钟驱动推进源）；ns 系轮次纪律全适用。
+```text
+state = load_state()                      # flag(debug/test/prod)·round_count·fuse·resume
+ignite = await_ignition()                 # 点火钥匙面（§三）：cron 周日窗／queue 点火指令／裁决续轮指令
+while True:
+    run = run_chain(ignite.params, resume_stage=state.resume)   # 十段链+Skill 段程序化 spawn（§四·断点续段 §六A）
+    if run.failed:                        # 款三纪律（notice-223）：段报错停 fail-closed
+        report_bubble(run.err)            # 错误冒泡（failed/ 落卷+exit≠0+段错误行）
+        break                             # 候修复→重跑指令再点火（零人肉接管零人工判卷）
+    verdict = run.aggregate.verdict
+    if verdict == "loop_exit":            # 联审均分 ≥95（≥95 含边界）
+        set_flag(prod, ref=run)           # 唯一程序自动边（图三 EXIT2·sanctioned）
+        break                             # 关进化·prod 交付注记
+    if state.round_count >= 8:            # FUSE 熔断（轮计数程序驱动）
+        fuse_break()                      # 熔断停候 CEO（fuse.marker+pending 冻结）
+        break
+    if state.flag == "debug":             # 体内候裁决事件（notice-202 门=事件源单值）
+        ruling = await_ceo_ruling(run_dir)     # continue/terminate/absent 三态·>72h 升级催办挂起保持
+        if ruling == "terminate": break
+        if ruling == "absent": continue_waiting  # 挂起（不迭代·fail-closed）
+        # continue → 落下迭代
+    elif state.flag == "test":
+        pass                              # 直进下轮迭代（不候裁决）
+    # prod = 不入本循环（点火面拦截→单轮直走形 §二 prod 分支）
+    state.round_count += 1
+    ignite = next_round_params(state)     # 自主迭代推进（非外部队列接力——款一勘正主形）
+```
 
-## §二 控制指令队列面（新件设计）
+- **状态机四支**（225 款二并入 loop 体内实现）：debug=体内候裁决（continue 迭代／terminate=break）；test=直进下轮迭代；均分≥95=break+flag→prod；8 轮 FUSE=break 熔断候 CEO；
+- **prod 分支**：flag=prod→点火面拦截→十阶段单轮直走形（CLI 段照跑·Skill 联审尾跳过·直交付）——不进 while 体。
 
-- **队列位**：`/var/lib/trirmc/round-queue/`（pending/ done/ failed/ 三态目录）——原子写（tmp+rename 同族）·消费单锁（running.lock fcntl 面·零并行轮）；
-- **指令形**：`round-instruct.json` = `{op: "start_round", from_week, to_week, start_date, ns_label, issued_by, issued_at, ruling_ref?, sha256}`——字段校验 fail-closed（缺/坏=转 done-error 记录面零执行）；
-- **入队**：pending/ 原子写即入队（值席拟稿入队·程序入队同形——**零直跑通道**：agent/人起跑动作全部收敛为入队）；
-- **消费端**：`round_runner.py`（TC runtime/cognition 新件）——tick 宿尾挂（rmc-orchestrate-tick probe 同款 best-effort 位·候排面可定独立 job）：pending 队首取一→校验→构造 run_id（现役同形 run_id 族）→调 chain_runner（十段链参数化执行=weekly-plane-shift payload 的脚本化抽身·同链同形同 run_dir 族）→毕=done/（结果摘要行）·败=failed/（**错误冒泡落卷·款三纪律**）。
+## §二 flag 分支变量（notice-225 三款并入 loop 本体段实现）
 
-## §三 轮推进程序链（notice-202 门互联）
+- 状态存取 `round-queue/state/flag.json`（read_flag/set_flag·切换权=CEO 令承图二：手动切换必载 authority_ref·无 ref=拒绝 fail-closed；**唯一程序自动边=EXIT≥95→prod**）；
+- 判别分支路由=loop 体内单点（零双路判别）；debug=候裁事件形／test=直进形／prod=直走形（点火面拦截）。
 
-- 轮 N 毕（close/notify→trigger round_state=pending-ceo-ruling）→**推进源=裁决落卷事件**：
-  - `ceo-ruling.json` continue 落卷→probe/tick 检得→**程序自动入队下轮 start_round 指令**（from/to/start_date 递推·carry_over 承接）——轮推进=程序非人；
-  - absent→pending 指令保持（等待语义 fail-closed·轮间门照守）；
-  - terminate→队列停用态（terminated.marker 落位·pending 转 done-terminated·程序零再起跑）；
-- weekly cron 窗与 queue=**双源单 gate**（两源过同一 preflight 轮间门——notice-202 语义零重复实现）。
+## §三 点火钥匙与 IO 面（前版队列面/round_runner 归位重定义·款三不废）
 
-## §四 notice-198 同族衔接（段序程序化）
+- **队列面归位**：round-queue/（pending/done/failed）只管两件事——①「**何时点火**」（start_loop 点火指令·cron 周日窗=时钟点火源并存）②「**裁决投递**」（ceo-ruling.json 落卷=体内 await 事件源·IO 转递面）——**零逐轮接力指令**（勘正主形）；
+- **round_runner 归位**=loop **引擎宿主**（while 体运行位·单进程长驻点火后自主迭代）——tick=点火触发器（probe 同款尾挂形）；失败冒泡/段错误行=引擎 IO 出面；
+- 双源单 gate 不变（cron+queue 过同一 preflight 轮间门·notice-202 语义零重复）。
 
-- 链内 Skill 段（plan-skill/score-skill/close-skill）=脚本化 spawn 现役形延展（score-skill=loop_autoreview 现役形承）；**段 N+1 spawn 前置断言=段 N 落卷真值**（硬串行·禁跳段禁乱序）；
-- 启动装配=程序（runner 面）·agent 只做段内判读（198 四要点同族归一）；
-- 段产出回管道落卷衔接（score-skill.json 现役形延展族）。
+## §四 段序程序化与断言族（不废归位）
 
-## §五 款三纪律固化（施工面同守·即时生效含 ns 系全轮）
+- 198 四要点同族：Skill 段脚本化 spawn＋段 N+1 前置断言=段 N 落卷真值（硬串行禁跳段）＋装配=程序面 agent 只判读＋产出回管道落卷；
+- S4 断言族=flag 断言四案（F-1 存取权属门/F-2 四支路由含 FUSE 7→8 边界/F-3 程序自动边唯一性/F-4 prod 直走形 Skill 尾零 spawn）＋段级重跑前置真值断言＋款三 fail-closed 断言＋点火/裁决 IO 断言（白盒同族）。
 
-- spawn 失败=**段报错停 fail-closed（错误冒泡）**——runner 面零人肉接管段内入口·零人工判卷路径（缺席席=absent 注如实非冒充·补面=修复后重跑指令形）；
-- failed/ 落卷+exit≠0+段错误行=候修复重跑（重跑=新指令入队·非原地续跑）。
+## §六A 段级重跑承载（§五A 归位）
 
-## §六 施工拆面（候 COO 排）
+- chain_runner `--resume-stage N`（段 N 前置真值断言复用·同 run_dir 断点续段）——图三「修复毕·重跑指令→RN」=**重跑指令=点火指令族**（repair-restart op·断点参数携带）——非外部队列逐段接力。
+
+## §五 施工拆面（候 COO 排·重构映射后）
 
 | 段 | 面 | 件 |
 |---|---|---|
-| S1 | 队列面+消费端 | TC round_runner.py 新件+队列目录形+白盒 |
-| S2 | 链参数化抽身 | weekly-plane-shift payload 脚本化=chain_runner 参数化形（同链同形·最小改面） |
-| S3 | tick 宿接线 | 消费端挂 tick（probe 同款尾挂形） |
-| S4 | 段序断言族 | 198 硬串行断言+款三 fail-closed 断言（白盒） |
-| S5 | 试运行 | 入队一发→程序消费→run 全链活体（shadow/低风险轮形）→切换宣告（候 COO） |
-| 回滚 | 单笔族 | 队列目录回滚+runner revert 一键 |
+| S1 | **loop 引擎+状态面** | round_runner=引擎宿主（while 体·flag/round_count/fuse/resume 状态机）+白盒 |
+| S2 | 链参数化+断点续段 | chain_runner 参数化形+--resume-stage（同链同形最小改面） |
+| S3 | 点火钥匙+IO 接线 | 队列点火/cron 点火/ruling 投递三源接线（tick 宿） |
+| S4 | 断言族扩面 | §四A 全族（白盒） |
+| S5 | 试运行 | 点火一发→loop 自主迭代活体（debug 候裁面+test 续轮面双态）→切换宣告 |
+| 回滚 | 单笔族 | 引擎 revert+队列目录回滚 |
 
-## §七 对图面如实注
+## §七 对图复核段（393bdfe35 照修版真身对表·承录）
 
-**60a565cee 图三版未达 origin/dev 可见域**（fetch 后副本=7573B 无图三/程序控制面面）——方案按令面文字五面锚先行（入队→消费+198 四要点+202 门互联+款三纪律）；**图到达后对图复核段补**（候值席 relay 图面·非阻塞设计面）。
+五面主形对齐 ✓＋两增补（段级重跑/flag 分路熔断）——**v2 重构后对图关系增强**：图三 RN=「Runner 程序·轮间编排驱动」=loop 引擎本体 ✓；ERR→FIX→RN 环=重跑指令点火形 ✓；DEC2/FUSE/EXIT2=while 体分支 ✓——图三与本主形**逐节点对齐**（对照表七行全含于 §一~§三）。
 
-## §八 过渡期形
+## §八 过渡期形（不变）
 
-- 现役手动起跑通道=过渡废止（agent 零直跑·人零直跑）——起跑=入队形唯一；
-- 值席=控制指令拟稿+入队执行者（配合面·notice-223 原载）；程序=消费+推进判定；
-- 生效=施工毕+S5 试运行毕→切换宣告（候 COO 排）。
+- 起跑=入队点火唯一通道（agent/人零直跑）·值席=指令拟稿+入队执行者·程序=引擎消费+迭代推进；
+- 生效=施工毕+S5 试运行毕→切换宣告（候 COO）。
+
+## §九 前版章节归位映射表（勘正承录·git 谱系在卷）
+
+| 前版章 | 内容 | v2 归位 |
+|---|---|---|
+| §二 队列面（每轮一指令） | 单轮开工指示器 | **勘正**→§三 点火钥匙+IO 面（零逐轮接力） |
+| §三 裁决落卷驱动推进 | 门外驱动 | §一 体内 await 事件（debug 支） |
+| §三A flag 分路熔断 | 支路设计 | §一/§二 loop 体内实现 |
+| §五A 段级重跑 | resume 形 | §六A（重跑指令=点火族） |
+| §九 flag 段（225 三款） | 存取/四支/断言 | §一/§二/§四A 并入 |
+
+## §十 增补承录线
+
+223 款三纪律固化（含 ns 系全轮·施工面同守）✓／225 GLM 单跑护栏双面盯守同窗同守 ✓（prod 直走形=联审尾跳过=GLM 消耗降面）／notice-222 QUOTA 再现即刻报 BOD standing ✓。
 
 ## 使用依据
 
-notice-223 款二 CEO 批令面；notice-198 四要点（三 Skill 段脚本化/硬串行/装配程序化/产出回管道）；notice-202 轮间门卷（8bd01a7ef/bd1786e2d/5ae2460d9 谱系）；weekly-plane-shift jobs payload 全读（9c81c7ec）；款三纪律固化令面；D-46/D-47。
-
----
-
-## §七对图复核段（60a565cee＋393bdfe35 照修版真身对表·2026-11-19 19:5x CST·fetch 自取形零触检出）
-
-**五面主形对齐 ✓**：①轮间推进=程序面 runner 驱动（§二/§三）②spawn 失败=段报错停 fail-closed 错误冒泡（§五）③人工判卷废止 ✕（§五零入口）④agent=纯监督面执行零触（§二入队唯一通道+§八）⑤CEO 裁令消费=notice→控制指令入队→程序消费（§二/§八值席拟稿面=图三 V2 监督面写指令形）。
-
-**对表增补两处（设计修订·施工拆面映射）**：
-
-1. **§五A·段级重跑承载增补**：图三 FIX→「修复毕·重跑指令→RN」=段级重跑粒度——S2 chain_runner 增**断点续段参数形**（--resume-stage N·段 N 前置真值断言复用=同 run_dir 断点续段·非全链重跑）——S4 断言族增段级重跑前置真值断言案；
-2. **§三A·flag 分路与熔断计数承载增补**：图三 DEC2 否后两支+对照表⑥⑦——**test 态=Runner 自动续轮不候 CEO**（程序入队驱动·轮计数 runner state 面+1）＋**8 轮上限熔断**（达限自动熔断停候 CEO=FUSE 程序面表达）＋**debug 态=融合改善意见候 CEO 裁**（=现役 §三 ceo-ruling 驱动形对）；verdict 驱动源扩两态（loop_next=续轮入队／loop_exit=出队停+flag→prod 注记）——S1 runner state 面增 flag/轮计数/熔断三承载。
-
-**对图判定=设计成立（五面主形零冲突）＋两增补并入 S1/S2/S4 拆面（零结构重排）**——候 COO 排面按增补后拆面。
-
-**对图使用依据增补**：393bdfe35 图三照修版（mermaid 控制权图+对照表七行）；fetch 自取形零触检出实锚（he席 unstaged 面零动）。
-
----
-
-## §九 flag 段设计增补段（notice-225 CEO 批增补令·S1 排面并入·2026-11-19 20:0x CST）
-
-### 款一·flag 三态机制化（debug/test/prod）
-
-- **状态存取**：`round-queue/state/flag.json` = `{flag: debug|test|prod, switched_at, authority_ref(CEO令/notice ref), run_verdict_ref?}`——read_flag/set_flag 双助手（round_runner 程序面）；
-- **切换权=CEO 令（图二定谳承）**：set_flag 手动形（debug↔test 互转·prod 回切）**必载 authority_ref**（无 ref=拒绝 fail-closed——程序零自切换）；**唯一程序自动边=EXIT≥95→prod**（图三 EXIT2 面 sanctioned 规则边·run verdict ref 为锚）；
-- **判别分支路由**：chain_runner/round_runner 读 flag 决定链形（prod=直走／debug+test=loop 形）与推进面（§三A/款二四支）。
-
-### 款二·四分支设计
-
-| 支 | 条件 | 程序处置 |
-|---|---|---|
-| ①test 态自动续轮 | verdict=loop_next 且 flag=test | 程序自动入队下轮 start_round（**不候裁决**·轮计数+1·carry_over 承接） |
-| ②prod 分支 | flag=prod | **十阶段单轮直走·无进化 loop 直交付**——chain_runner prod 形=CLI 段照跑·Skill 尾段（convene/score-skill/close-skill 联审尾）跳过·周迁移交付即收 |
-| ③FUSE 熔断 | 轮计数≥8（runner state 面 count 程序驱动） | **自动熔断停候 CEO**——queue 停用态（fuse.marker 落位+pending 冻结·零再起跑·候 CEO 令解） |
-| ④EXIT≥95 关进化 | verdict=loop_exit（联审均分≥95） | **flag→prod 程序处置**（set_flag prod·run_verdict_ref 锚·出队停+prod 交付注记） |
-
-- 四支与 §三 ceo-ruling 门互联面：debug 态=候裁驱动形（现役承）；test 态=①③④程序面；prod 态=②直走形——**flag 分派在 runner 消费端单点**（零双路判别）。
-
-### 款三·S4 断言族扩面（白盒同族）
-
-| 断言案 | 面 |
-|---|---|
-| F-1 flag 存取 | read/set 往返+坏值拒绝+authority_ref 缺失拒绝（手动切换面） |
-| F-2 四支路由 | test+loop_next→入队不候裁／prod→直走形 Skill 尾跳过／FUSE 7→8 边界（8=熔断停）／loop_exit→flag=prod+出队停 |
-| F-3 权属门 | 程序自动边仅 EXIT≥95 一条（其余切换无 ref=零执行） |
-| F-4 prod 直走形 | CLI 段序列完整+Skill 尾段零 spawn 实锚 |
-
-- 白盒同族归 S4（spawn env/queue/gate 断言族并列）——**增补毕随本卷落树 ✓（本段即落卷）·施工排面仍候 COO 拆树不变**。
-
-### GLM 单跑护栏承录
-
-notice-222 双面盯守同窗同守（GLM 消耗速率知情盯守+QUOTA 再现即刻报 BOD·CTO standing 在卷）——flag 段施工面同守（prod 直走形=联审尾跳过=GLM 消耗降面如实注）。
-
-### 使用依据增补
-
-notice-225 CEO 批增补令三款；图二 flag 生命周期（切换权=CEO 令）；图三 DEC2/FUSE/EXIT2 面；§三A/§五A 增补谱系；D-46/D-47。
+notice-226 四款架构级令面（款一勘正承录/款二 flag 并入/款三队列归位不废/款四排面不变）；notice-223/225 谱系（git 历史 14e92de70/9ea24bf26/e83cf39db）；393bdfe35 图三照修版；notice-198/202/222 谱系卷；weekly-plane-shift payload 全读；D-46/D-47。
