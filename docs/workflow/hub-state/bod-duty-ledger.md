@@ -5403,3 +5403,13 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **sg 五项全项回执毕认收**（cos-w2a5·02:18:32）：①② **勘毕零改形双通**（sshd AllowTcpForwarding 已许可+端口无需改——最优形）/ ③ sha 对表一致 / ⑤ 随推唤段。
 - **sg④开工令催发**（候态歧义澄清）：值席回执「④候 FSD 契约定稿（f0f22c6 已在卷）」——f0f22c6=定稿毕非在途，轻催解除候态即施工（POST 18713→seat-wake 形+token 配置位读法）——拾取 ✓（❯清空+esc-in）。
 - 本拍零划项零毕项（9✅/24 维持）·当前序列：A4 W3 在工（m-cto 勘定+ m-sde keeper 先行）→B6→C2→D2。dev 顶 45f1a1379。
+
+## ㊿+748 · 02:26 拍——W3-a 勘定毕+W4-a keeper 在役+隧道复验定谳+在场窗认 11-20 02:28 @bod
+
+- **W3-a 接线形勘定毕**（c608f8af1·m-cto）：名址发现单点定谳=`~/.claude/sessions/<pid>.json` 注册件（name+agent+messagingSocketPath 全字段·15 件↔15 管道计数闭合·bod 实锚 24572.json 双断言 name=="bod"&&agent=="Board" 双向互证）+wake 动作五步实现形+探针安全面裁决（dry-run 先行/真发六护栏/BOD 在场窗）。
+- **W4-a keeper 立项毕在役**（df57b2e5b·m-sde）：trilc-wake-tunnel-keeper schtasks Ready+VBS 包装 D-29 合规+alive 拍 60s 节律——**BOD 亲复验定谳**：sg 侧 `ss -tlnp`=127.0.0.1:18713+[::1]:18713 双栈 LISTEN（sshd 185027）·本机 schtasks State=Ready——**-R 隧道已在役**，值席 02:23「隧道未激活」=竞速窗旧读数。
+- **W3-b 触发在工**（fabc2f5ed 候态预勘毕→fsd 开工·dry-run 先行照 cto 形定卷）；cos 727 台账同步毕。
+- **sg④毕报认收**（cos-w4·02:23:40）：wake.env+hook token 头改造毕+W1 主体（01:35）已在役=**sg 侧④全毕·唯缺 dev wired**；⑤ECONNREFUSED 留证如预兑现。**竞速双信纠偏**：m-cos 02:27「转办值席组开工」过时（被④毕报越过）——回纠偏免重派（dd90f570）。
+- **真发探针 BOD 在场窗认**（3e1fbfb5 复 m-cos）：03:00 前后窗接受——届时一拍确认再发·[W3-D PROBE] 零动作仅回执形·W4-c 真推唤同机制。
+- **值席越面输入处置**：❯「发 dev 机面三件施工令」文本（非 BOD 发出·疑建议层残留·无 ^[[2m 指纹但非我发信史）——未采纳+同步令覆盖语境（现态刷新+面域路由重申 dev 面令不经值席面）——拾取 ✓。
+- 本拍零划项（9✅/24 维持）·A4 节点 2/8 毕（W3-a+W4-a）·序列：W3-b（fsd 在工）→W3-c→W3-d（部署窗≈03:00）→W4-c→A5。dev 顶 df57b2e5b。
