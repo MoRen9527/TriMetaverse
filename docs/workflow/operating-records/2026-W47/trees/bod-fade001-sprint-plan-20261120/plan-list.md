@@ -27,7 +27,8 @@
 - [x] ~~B4 修D-2：dsh 切 GLM 值面探针复验~~——**02:06 毕**（值席 cos-snb4 毕报：GLM 链活体通·独立探针读数留证·落卷锚 cto-fixD2-closeout-20261119.md）
 - [x] ~~B6 B线收口终卷全谱合一~~（env 终探①+fallback 终验拍②并轨）——**05:04 毕**（b7a4227bb+cto-b6-closeout-20261120.md·env 终探①=bcf1cb283 判据①兑现+fallback 终验拍②=活体三重绿已证挂账态如实铸面（判据②载体=ns8 首拍 failed=0 随首拍自然兑付）+B1-B4 四修终态并轨——**ns8 重开触发面兑现**·催 2h49min 因果 m-cto 自领属实）
 - [ ] B5 修D-1：dsh/trimodel 余额充值或键换发——候 CEO 裁（加急直呈在候·**不催不 block**：B 线其余项不依赖 B5）
-- [ ] **B7 ns8 排面重开**（WP9v3 基线+等待语义 gate 首用+spawn 七席·notice-221 起跑授权在）← **当前最近未毕项**——候 B6 ✅毕=**解锁·排程令候 COO/COS 派发链**（05:04 触发面兑现）
+- [x] ~~B7 ns8 排面重开~~（WP9v3 基线+等待语义 gate 首用+spawn 七席·notice-221 起跑授权在）——**05:51 毕**（三要素齐：N1 基线五项全绿 9bc1fea0c+N2 gate 首用装配确认+N3 spawn 七席起跑实锚 nohup PID=2738440 gate_pass=true dry 核形 four_gate 全绿·回滚锚三件 /tmp 在位·链 91bb061bb——排程链：COS 排期单 cos-b7-ns8-dispatch→COO 派工单 WO-B7-NS8-20261120（4837052995）→通道缺口补发（落树≠知会到位一课）→CTO N1/N2 门禁裁 682ae060b→sde N1/N2 装配读数毕→spawn 起跑；两挂账 COO 督办（plan-skill 补铸 ns8+1 前/round_state+AND 门 ns9 前置零 block）；**ns8 首拍读数窗估 06:25-06:40**（62 拍先例 35-50min）·N4 双兑付回卷 B6 面=首拍读数到时办·链售后转常规值守）
+- [ ] **C2 P1 施工**（九件迁移+契约测试先行+准入断言族）← **当前最近未毕项**——FSD 主刀排队态（hook 三件 R6 窗施工毕后回·05:41 链现势）
 
 ## C 线 · 两包形收敛施工（notice-236 款一定谳·P1-P3 分批强制·契约测试先行）
 
