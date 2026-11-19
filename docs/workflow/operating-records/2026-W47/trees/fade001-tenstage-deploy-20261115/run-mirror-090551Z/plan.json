@@ -1,0 +1,1164 @@
+{
+  "plan_version": "1.2.0",
+  "run_id": "shift-W46-20261119T090551Z",
+  "from_week": "W46",
+  "to_week": "W47",
+  "migrate": [],
+  "keep": [
+    {
+      "entry": "agentcore-lockfile-forensics-20261113",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.90"
+      ]
+    },
+    {
+      "entry": "authgate-cto-review-20261110",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.88"
+      ]
+    },
+    {
+      "entry": "bod-tick",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_weekly_selfbuild",
+        "selfbuild_expected",
+        "agent_confidence:0.87"
+      ]
+    },
+    {
+      "entry": "cao-gate-review-20261110",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.92"
+      ]
+    },
+    {
+      "entry": "d39勘止标注毕报-20261112.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "d82-排工紧凑性纪律毕报-20261113.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-cto-review-20261109",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.82"
+      ]
+    },
+    {
+      "entry": "fade001-failsafe-window-p1",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.88"
+      ]
+    },
+    {
+      "entry": "fade001-firstshoot-scoring-weights-cpo-20261113.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-migration-review-20261109",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.82"
+      ]
+    },
+    {
+      "entry": "fade001-phase1-build-20261114",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.86"
+      ]
+    },
+    {
+      "entry": "fade001-phase1-review",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.88"
+      ]
+    },
+    {
+      "entry": "fade001-phase1-trigger-study-bod-20261112.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-phase2-build-20261113",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.75"
+      ]
+    },
+    {
+      "entry": "fade001-phase2-review",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.78"
+      ]
+    },
+    {
+      "entry": "fade001-plane-shift-review-20261109",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.80"
+      ]
+    },
+    {
+      "entry": "fade001-split-review",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.86"
+      ]
+    },
+    {
+      "entry": "fade001-ten-stage-mapping-20261112.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-ten-stage-product-plan-cpo-20261113.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fade001-ten-stage-review",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.80"
+      ]
+    },
+    {
+      "entry": "fade001-tenstage-deploy-20261115",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.82"
+      ]
+    },
+    {
+      "entry": "fade001-tenstage-impl-20261113",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_active_tree_ongoing",
+        "ongoing_ledger_handover",
+        "agent_confidence:0.78"
+      ]
+    },
+    {
+      "entry": "fade001-tenstage-review-20261114",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.93"
+      ]
+    },
+    {
+      "entry": "fade001-weekly-shift-review",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.72"
+      ]
+    },
+    {
+      "entry": "fade011-openrun-20261110",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.72"
+      ]
+    },
+    {
+      "entry": "fade规范对表-ceo修正令-20261115.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "fsd-sleepgap-probe-20261115",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.62"
+      ]
+    },
+    {
+      "entry": "lg语义条款册立册定性-20261114.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "mc-oprec-fade011-pathspec-dispatch-20261115.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    },
+    {
+      "entry": "mount-gate-build-20261111",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.93"
+      ]
+    },
+    {
+      "entry": "mount-log",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_weekly_selfbuild",
+        "selfbuild_expected",
+        "agent_confidence:0.72"
+      ]
+    },
+    {
+      "entry": "p3-watch-probe-removal",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.72"
+      ]
+    },
+    {
+      "entry": "tree-gate-review-20261110",
+      "kind": "dir",
+      "reason_codes": [
+        "agent_family_one_shot",
+        "one_shot_frozen",
+        "agent_confidence:0.88"
+      ]
+    },
+    {
+      "entry": "首评分卷-20261109.md",
+      "kind": "file",
+      "reason_codes": [
+        "scatter_file_archive"
+      ]
+    }
+  ],
+  "carry_over": [
+    {
+      "carry_id": "CARRY-20260728-004",
+      "cells": [
+        "`CARRY-20260728-004`",
+        "P1",
+        "trilc TUI 对齐 CC — P1 输入完整性",
+        "CTO→FSD→STE",
+        "**frozen——冻结维持**（W35 8/24 CEO 裁）·只归位不解冻",
+        "原裁在卷+后续零解冻令对表（本批）；解冻=CEO 裁决链非本批范围"
+      ],
+      "status_to": "frozen",
+      "source": "unresolved-items §1 现役区",
+      "dest": "frozen",
+      "pending_reason": "冻结挂账（行内 frozen/冻结 词面）"
+    },
+    {
+      "carry_id": "CARRY-20260728-006",
+      "cells": [
+        "`CARRY-20260728-006`",
+        "P2",
+        "trilc TUI 对齐 CC — P2 安全+长会话+打磨",
+        "CTO→FSD→STE",
+        "**frozen——冻结维持**（W35 8/24 CEO 裁）·只归位不解冻",
+        "同上（本批对表）"
+      ],
+      "status_to": "frozen",
+      "source": "unresolved-items §1 现役区",
+      "dest": "frozen",
+      "pending_reason": "冻结挂账（行内 frozen/冻结 词面）"
+    }
+  ],
+  "counts": {
+    "migrate": 0,
+    "keep": 34,
+    "carry_over": 2,
+    "top_level": 8
+  },
+  "bidirectional_ok": true,
+  "violations": [],
+  "other_unresolved_count": 15,
+  "index_drift": {
+    "index_file": "OP-202611-W46-001.json",
+    "index_activeTrees": 0,
+    "index_doneTreesThisWeek": 0,
+    "plan_migrate": 0,
+    "note": "index 与实盘脱节为现势常态（W46 实锚 activeTrees=0 vs 实盘 20+）——旁证读数非分类基准"
+  },
+  "agent_readings": [
+    {
+      "tree": "d39勘止标注毕报-20261112.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "d82-排工紧凑性纪律毕报-20261113.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "fade001-firstshoot-scoring-weights-cpo-20261113.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "fade001-phase1-trigger-study-bod-20261112.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "fade001-ten-stage-mapping-20261112.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "fade001-ten-stage-product-plan-cpo-20261113.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "fade规范对表-ceo修正令-20261115.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "lg语义条款册立册定性-20261114.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "mc-oprec-fade011-pathspec-dispatch-20261115.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "首评分卷-20261109.md",
+      "domain": "tree",
+      "family": "keep",
+      "confidence": null,
+      "reasons": "scatter_file_archive",
+      "source": "fast_path",
+      "plan_family": "keep",
+      "annotation": "fast_path_rule_based",
+      "rationale": "快道机械判读（classify_dir degrade 链直出）→keep：scatter_file_archive",
+      "evidence_ref": [
+        "classify_dir:scatter_file_archive"
+      ],
+      "disposition": "keep"
+    },
+    {
+      "tree": "agentcore-lockfile-forensics-20261113",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.9,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "tree名含forensics法证语义且后缀为具体日期20261113而非周参数，单一取证读取件属一次性法证卷，历史冻结可git溯",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "tree名含forensics法证语义且后缀为具体日期20261113而非周参数，单一取证读取件属一次性法证卷，历史冻结可git溯"
+    },
+    {
+      "tree": "authgate-cto-review-20261110",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.88,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "单文件 cto-authgate-review-20261110 为特定日期的一次性 CTO 评审卷，'review/评审'属 one_shot 历史冻结类，且无状态、到期、滚动续作等周期迁移信号。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "单文件 cto-authgate-review-20261110 为特定日期的一次性 CTO 评审卷，'review/评审'属 one_shot 历史冻结类，且无状态、到期、滚动续作等周期迁移信号。"
+    },
+    {
+      "tree": "bod-tick",
+      "domain": "tree",
+      "family": "weekly_selfbuild",
+      "confidence": 0.87,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "selfbuild_expected",
+      "rationale": "树名 bod-tick 及文件均为 tick 日志与定性回执等运行面产物，属周期自建巡查树，新周自建预期态而非迁移缺口。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "树名 bod-tick 及文件均为 tick 日志与定性回执等运行面产物，属周期自建巡查树，新周自建预期态而非迁移缺口。"
+    },
+    {
+      "tree": "cao-gate-review-20261110",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.92,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "名为 gate-review 的评审定稿卷，一次性评审性质，历史冻结 git 可溯，非周期滚动亦非跨周活树。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "名为 gate-review 的评审定稿卷，一次性评审性质，历史冻结 git 可溯，非周期滚动亦非跨周活树。"
+    },
+    {
+      "tree": "fade001-cto-review-20261109",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.82,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "单文件 cto-review-20261109 为带固定日期的一次性 CTO 评审卷，无 status/expiry 续作或滚动证据，符合历史冻结·git 可溯的一次性定稿件特征。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "单文件 cto-review-20261109 为带固定日期的一次性 CTO 评审卷，无 status/expiry 续作或滚动证据，符合历史冻结·git 可溯的一次性定稿件特征。"
+    },
+    {
+      "tree": "fade001-failsafe-window-p1",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.88,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "清单含 final-acceptance 与 completion-report 等毕报验收件且五文件全部定格同日 20261110，属一次性定稿冻结的历史卷而非随人跨周的活",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "清单含 final-acceptance 与 completion-report 等毕报验收件且五文件全部定格同日 20261110，属一次性定稿冻结的历史卷而非随人跨周的活"
+    },
+    {
+      "tree": "fade001-migration-review-20261109",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.82,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "migration-review 及 cos-reviewer-draft/review-integration 均带单日日期后缀，无 status/expiry 周续行面，属一次性评审定稿卷，评审毕即历史冻结、git 可溯，无需跨周迁移。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "migration-review 及 cos-reviewer-draft/review-integration 均带单日日期后缀，无 status/expiry 周续行面，属一次性评审定稿卷，评审毕即历史冻结、git 可溯，无需跨周迁移。"
+    },
+    {
+      "tree": "fade001-phase1-build-20261114",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.86,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "文件集中单日(20261113)毕报/评审性质（drill-closeout/acceptance/dispatch/authorization），且带到期时间(2026-11-16后弃留)属历史冻结一次性卷，无周期续作或跨周承接迹象。",
+      "evidence_ref": [
+        "expiry_dir=keep",
+        "expiry_raw=2026-11-16T10:45:44+0800"
+      ],
+      "disposition": "keep",
+      "reasons": "文件集中单日(20261113)毕报/评审性质（drill-closeout/acceptance/dispatch/authorization），且带到期时间(2026-11-16后弃留)属历史冻结一次性卷，无周期续作或跨周承接迹象。"
+    },
+    {
+      "tree": "fade001-phase1-review",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.88,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "评审毕报树：各角色segment汇入synthesis，三份closeout文件带定日期20261113冻结后缀，属一次性phase1评审闭环、历史冻结git可溯，不随周迁移。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "评审毕报树：各角色segment汇入synthesis，三份closeout文件带定日期20261113冻结后缀，属一次性phase1评审闭环、历史冻结git可溯，不随周迁移。"
+    },
+    {
+      "tree": "fade001-phase2-build-20261113",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.75,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "文件含 cto-phase2-build-closeout.md（毕报复盘）与一次性 dispatch-plan/authorization 件，phase2-build 为阶段定案卷非周期件，且无周期滚动或续作挂账证据，判定为一次性毕报卷随周冻结",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "文件含 cto-phase2-build-closeout.md（毕报复盘）与一次性 dispatch-plan/authorization 件，phase2-build 为阶段定案卷非周期件，且无周期滚动或续作挂账证据，判定为一次性毕报卷随周冻结"
+    },
+    {
+      "tree": "fade001-phase2-review",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.78,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "树名 phase2-review 且由 coo/cos/cpo 分段报告加 synthesis 综合定稿构成，属一次性阶段评审毕报卷，历史冻结随 git 可溯，非周期滚动或跨周续作活树",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "树名 phase2-review 且由 coo/cos/cpo 分段报告加 synthesis 综合定稿构成，属一次性阶段评审毕报卷，历史冻结随 git 可溯，非周期滚动或跨周续作活树"
+    },
+    {
+      "tree": "fade001-plane-shift-review-20261109",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.8,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "树名为带具体日期后缀的一次性评审卷（plane-shift-review-20261109·单件 cao-review-fade001.md·针对特定 fade001 案），且无任何周期续作/参数化模板/在途活树证据面，属一次性评审冻结件",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "树名为带具体日期后缀的一次性评审卷（plane-shift-review-20261109·单件 cao-review-fade001.md·针对特定 fade001 案），且无任何周期续作/参数化模板/在途活树证据面，属一次性评审冻结件"
+    },
+    {
+      "tree": "fade001-split-review",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.86,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "清单全为带具体日期(20261112)的一次性评审/评估件并收敛于 joint-review-summary-bod.md，是历史冻结的评审卷而非周期滚动或跨周续作面。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "清单全为带具体日期(20261112)的一次性评审/评估件并收敛于 joint-review-summary-bod.md，是历史冻结的评审卷而非周期滚动或跨周续作面。"
+    },
+    {
+      "tree": "fade001-ten-stage-review",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.8,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "全部文件均为同日(20261113)的评审/断言草稿/综述类定稿件，无 status/expiry 目录证据、无周后缀模板或周期滚动族签名，属一次性评审卷历史冻结。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "全部文件均为同日(20261113)的评审/断言草稿/综述类定稿件，无 status/expiry 目录证据、无周后缀模板或周期滚动族签名，属一次性评审卷历史冻结。"
+    },
+    {
+      "tree": "fade001-tenstage-deploy-20261115",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.82,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "文件为带具体日期的一次性事件记录（八轮收官·loop收口卷·design-freeze·ruling·readout·毕报意见），指向ten-stage部署这一特定历史事件已冻结收口，无周滚动/周后缀参数化/续作结构，git可溯不迁移。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "文件为带具体日期的一次性事件记录（八轮收官·loop收口卷·design-freeze·ruling·readout·毕报意见），指向ten-stage部署这一特定历史事件已冻结收口，无周滚动/周后缀参数化/续作结构，git可溯不迁移。"
+    },
+    {
+      "tree": "fade001-tenstage-impl-20261113",
+      "domain": "tree",
+      "family": "active_tree_ongoing",
+      "confidence": 0.78,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "ongoing_ledger_handover",
+      "rationale": "树名 fade001-tenstage-impl 及清单显示十阶段实施仅推进至 G2/G3/G4 closeout 与 G3 门审，stages4-10 规划、调度计划与 PRD 仍在，属跨周续作的活树，而非周内毕报冻结的一次性卷或周期滚动件。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "carry",
+      "reasons": "树名 fade001-tenstage-impl 及清单显示十阶段实施仅推进至 G2/G3/G4 closeout 与 G3 门审，stages4-10 规划、调度计划与 PRD 仍在，属跨周续作的活树，而非周内毕报冻结的一次性卷或周期滚动件。"
+    },
+    {
+      "tree": "fade001-tenstage-review-20261114",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.93,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "全部文件为 20261114/15 单日评审、验收、closeout 与定稿类报告（review-day/impl-acceptance/closeout/mainreview），属一次性毕报卷，历史冻结不随周迁移。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "全部文件为 20261114/15 单日评审、验收、closeout 与定稿类报告（review-day/impl-acceptance/closeout/mainreview），属一次性毕报卷，历史冻结不随周迁移。"
+    },
+    {
+      "tree": "fade001-weekly-shift-review",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.72,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "树内仅有单份带日期后缀的评审报告 cpo-review-20261109.md，属一次性周评审记录，随 W46 封存、git 可溯，W47 自立新卷而非迁移本件",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "树内仅有单份带日期后缀的评审报告 cpo-review-20261109.md，属一次性周评审记录，随 W46 封存、git 可溯，W47 自立新卷而非迁移本件"
+    },
+    {
+      "tree": "fade011-openrun-20261110",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.72,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "树内为 B 方案设计→构建→验收收尾（closeout）的一次性 repair 工作弧，含冻结的探针/晨读记录与知悉件，无周期滚动或新周模板件特征。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "树内为 B 方案设计→构建→验收收尾（closeout）的一次性 repair 工作弧，含冻结的探针/晨读记录与知悉件，无周期滚动或新周模板件特征。"
+    },
+    {
+      "tree": "fsd-sleepgap-probe-20261115",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.62,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "单文件探测（probe）件且名称含固定日期戳 20261115 而非周参数模板，无 status/expiry 挂账证据，符合一次性探查卷历史冻结特征。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "单文件探测（probe）件且名称含固定日期戳 20261115 而非周参数模板，无 status/expiry 挂账证据，符合一次性探查卷历史冻结特征。"
+    },
+    {
+      "tree": "mount-gate-build-20261111",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.93,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "毕报-验收-停工通知等一次性事件卷，全部文件锚定 20261111 单日并随 expiry keep 封存，属历史冻结的毕报/验收定稿卷而非周期滚动或跨周活树。",
+      "evidence_ref": [
+        "expiry_dir=keep",
+        "expiry_raw=2026-11-14T02:40:11Z"
+      ],
+      "disposition": "keep",
+      "reasons": "毕报-验收-停工通知等一次性事件卷，全部文件锚定 20261111 单日并随 expiry keep 封存，属历史冻结的毕报/验收定稿卷而非周期滚动或跨周活树。"
+    },
+    {
+      "tree": "mount-log",
+      "domain": "tree",
+      "family": "weekly_selfbuild",
+      "confidence": 0.72,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "selfbuild_expected",
+      "rationale": "单一运行日志文件 mount-log.log 属运行面自生产产物，新周随系统运行自建预期态而非迁移记录，证据面无状态/过期信号亦排除滚动件与一次性卷。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "单一运行日志文件 mount-log.log 属运行面自生产产物，新周随系统运行自建预期态而非迁移记录，证据面无状态/过期信号亦排除滚动件与一次性卷。"
+    },
+    {
+      "tree": "p3-watch-probe-removal",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.72,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "单文件 sde-probe-removal-20261113.md 带具体日期后缀、无 status/expiry 任何证据面，符合一次性探针移除报告/定稿卷的历史冻结特征，不属周期滚动、周后缀参数化或跨周活树。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "单文件 sde-probe-removal-20261113.md 带具体日期后缀、无 status/expiry 任何证据面，符合一次性探针移除报告/定稿卷的历史冻结特征，不属周期滚动、周后缀参数化或跨周活树。"
+    },
+    {
+      "tree": "tree-gate-review-20261110",
+      "domain": "tree",
+      "family": "one_shot",
+      "confidence": 0.88,
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "评审/定稿卷：cos-review-gate、cto-auth-spec-final、gate-ext-wording-final 等终稿与 v2 补遗同周内毕结冻结，属一次性评审定稿（历史冻结·git 可溯），非周期滚动件或跨周活树。",
+      "evidence_ref": [
+        "evidence:none_markers（无 tree-op/authorization 证据面）"
+      ],
+      "disposition": "keep",
+      "reasons": "评审/定稿卷：cos-review-gate、cto-auth-spec-final、gate-ext-wording-final 等终稿与 v2 补遗同周内毕结冻结，属一次性评审定稿（历史冻结·git 可溯），非周期滚动件或跨周活树。"
+    },
+    {
+      "tree": ".shift-ade.json",
+      "domain": "top_level",
+      "family": "carry_periodic",
+      "confidence": 0.6,
+      "reasons": "点前缀无周标签的迁移状态文件，属周期滚动机制自身状态，随每周迁移滚动延续。",
+      "source": "agent",
+      "plan_family": "migrate",
+      "annotation": "migrate_carry_periodic",
+      "rationale": "点前缀无周标签的迁移状态文件，属周期滚动机制自身状态，随每周迁移滚动延续。",
+      "evidence_ref": [
+        "top_level_file:.shift-ade.json",
+        "size_bytes=2349"
+      ],
+      "disposition": "migrate",
+      "sanction": "迁"
+    },
+    {
+      "tree": "OP-202611-W46-001.json",
+      "domain": "top_level",
+      "family": "new_week_templated",
+      "confidence": 0.85,
+      "reasons": "OP编号带W46周实例标签，为每周由模板新起的周计划件，W47将另起新件而非迁移本件。",
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "expected_absent@W47",
+      "rationale": "OP编号带W46周实例标签，为每周由模板新起的周计划件，W47将另起新件而非迁移本件。",
+      "evidence_ref": [
+        "top_level_file:OP-202611-W46-001.json",
+        "size_bytes=98715"
+      ],
+      "disposition": "keep",
+      "sanction": "留"
+    },
+    {
+      "tree": "OP-202611-W46-001.unresolved-items.md",
+      "domain": "top_level",
+      "family": "one_shot",
+      "confidence": 0.7,
+      "reasons": "随W46 OP派生的一次性未决项清单，其内容并入新周计划后文件本身不再延续。",
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "one_shot_frozen",
+      "rationale": "随W46 OP派生的一次性未决项清单，其内容并入新周计划后文件本身不再延续。",
+      "evidence_ref": [
+        "top_level_file:OP-202611-W46-001.unresolved-items.md",
+        "size_bytes=16157"
+      ],
+      "disposition": "keep",
+      "sanction": "留"
+    },
+    {
+      "tree": "cfo-quota-daily-w46.md",
+      "domain": "top_level",
+      "family": "weekly_selfbuild",
+      "confidence": 0.7,
+      "reasons": "带W46周标签的限额数据为当周内日常累积自建件，W47将另建w47版本。",
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "selfbuild_expected",
+      "rationale": "带W46周标签的限额数据为当周内日常累积自建件，W47将另建w47版本。",
+      "evidence_ref": [
+        "top_level_file:cfo-quota-daily-w46.md",
+        "size_bytes=30334"
+      ],
+      "disposition": "keep",
+      "sanction": "留"
+    },
+    {
+      "tree": "company-demand-pool.md",
+      "domain": "top_level",
+      "family": "carry_periodic",
+      "confidence": 0.8,
+      "reasons": "无周标签的需求池为跨周滚动池件，需随迁移滚动更新至W47。",
+      "source": "agent",
+      "plan_family": "migrate",
+      "annotation": "migrate_carry_periodic",
+      "rationale": "无周标签的需求池为跨周滚动池件，需随迁移滚动更新至W47。",
+      "evidence_ref": [
+        "top_level_file:company-demand-pool.md",
+        "size_bytes=20637"
+      ],
+      "disposition": "migrate",
+      "sanction": "迁"
+    },
+    {
+      "tree": "daily-progress.md",
+      "domain": "top_level",
+      "family": "carry_periodic",
+      "confidence": 0.65,
+      "reasons": "无周标签的大体量进度日志跨周累积追加，随周期滚动延续。",
+      "source": "agent",
+      "plan_family": "migrate",
+      "annotation": "migrate_carry_periodic",
+      "rationale": "无周标签的大体量进度日志跨周累积追加，随周期滚动延续。",
+      "evidence_ref": [
+        "top_level_file:daily-progress.md",
+        "size_bytes=174645"
+      ],
+      "disposition": "migrate",
+      "sanction": "迁"
+    },
+    {
+      "tree": "scoring-ledger-w46.md",
+      "domain": "top_level",
+      "family": "weekly_selfbuild",
+      "confidence": 0.75,
+      "reasons": "带W46周标签的评分台账按周自建并结转，W47将另立新账。",
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "selfbuild_expected",
+      "rationale": "带W46周标签的评分台账按周自建并结转，W47将另立新账。",
+      "evidence_ref": [
+        "top_level_file:scoring-ledger-w46.md",
+        "size_bytes=6560"
+      ],
+      "disposition": "keep",
+      "sanction": "留"
+    },
+    {
+      "tree": "task-inventory-20261115.md",
+      "domain": "top_level",
+      "family": "weekly_selfbuild",
+      "confidence": 0.6,
+      "reasons": "周末日期戳的任务盘点为周期性自建快照，W47将另建新份。",
+      "source": "agent",
+      "plan_family": "keep",
+      "annotation": "selfbuild_expected",
+      "rationale": "周末日期戳的任务盘点为周期性自建快照，W47将另建新份。",
+      "evidence_ref": [
+        "top_level_file:task-inventory-20261115.md",
+        "size_bytes=7246"
+      ],
+      "disposition": "keep",
+      "sanction": "留"
+    }
+  ],
+  "reconciliation": {
+    "ok": true,
+    "diffs": []
+  },
+  "fallback_governance": {
+    "wp": "WP3 兜底治理（2026-11-18·拆解任务书获批面）",
+    "batching": {
+      "batch_size": 15,
+      "batch_max": 3,
+      "batches_run": 2,
+      "beyond_limit_skipped": []
+    },
+    "slow_order": [
+      {
+        "tree": "agentcore-lockfile-forensics-20261113",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "authgate-cto-review-20261110",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "bod-tick",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "cao-gate-review-20261110",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-cto-review-20261109",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-failsafe-window-p1",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-migration-review-20261109",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-phase1-build-20261114",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-phase1-review",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-phase2-build-20261113",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-phase2-review",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-plane-shift-review-20261109",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-split-review",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-ten-stage-review",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-tenstage-deploy-20261115",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-tenstage-impl-20261113",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-tenstage-review-20261114",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade001-weekly-shift-review",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fade011-openrun-20261110",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "fsd-sleepgap-probe-20261115",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "mount-gate-build-20261111",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "mount-log",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "p3-watch-probe-removal",
+        "priority": 2,
+        "tier": "default_keep"
+      },
+      {
+        "tree": "tree-gate-review-20261110",
+        "priority": 2,
+        "tier": "default_keep"
+      }
+    ],
+    "retry": {
+      "max": 1,
+      "retry_enabled_trees": 0
+    },
+    "pending_review": [],
+    "fast_path_failure_rate": 0.0,
+    "alert": {
+      "threshold": 0.2,
+      "slow_total": 24,
+      "failed_total": 0,
+      "rate": 0.0,
+      "triggered": false
+    }
+  },
+  "top_expansion": {
+    "notice": "notice-207 ②一款扩围读数（纯机械面·零清单触）",
+    "demand_pool": [
+      {
+        "file": "company-demand-pool.md",
+        "reviewed_mark": true,
+        "migrate_candidate": false
+      }
+    ],
+    "task_inventory": {
+      "file": "task-inventory-20261115.md",
+      "done_marks": 0,
+      "todo_marks": 0,
+      "recon_note": "完成/未完成对账读数（词面计数面）"
+    },
+    "co_learning": {
+      "suggest_dir": "W47 周共学目录（co-learning）",
+      "in_place": false
+    }
+  },
+  "from_week_dir": "2026-W46",
+  "check_time": "2026-11-19T09:06:00.911922+00:00",
+  "verdict": "pass"
+}

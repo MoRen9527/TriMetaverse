@@ -1,0 +1,35 @@
+{
+ "score_version": "2.0.0-ns6",
+ "run_id": "shift-W46-20261119T090551Z",
+ "stage_face": "score-skill",
+ "spawn_form": "notice-207 件①程序化 spawn（硬序承·禁并行禁倒置）",
+ "entries": [],
+ "judge_faces": {
+  "initial": {
+   "absent": true,
+   "rc": 1,
+   "raw_out": "\n",
+   "err": "[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/ceo-chief-of-staff.session.md\n[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/chief-operating-officer.session.md\n[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/chief-technology-officer.session.md\n[tricompass-context] co"
+  },
+  "joint": [
+   {
+    "absent": true,
+    "rc": 1,
+    "raw_out": "\n",
+    "err": "[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/ceo-chief-of-staff.session.md\n[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/chief-operating-officer.session.md\n[tricompass-context] context registered: compass <- /srv/fleet/TriMetaverse/.claude/compass/chief-technology-officer.session.md\n[tricompass-context] co"
+   }
+  ],
+  "final": "候 COS 值席域（final_scores_basis/divergence_review 面值席工序）"
+ },
+ "weight_face": {
+  "objective_machine": 65,
+  "subjective_i_family": {
+   "I1": 14,
+   "I2": 11,
+   "I3": 10
+  },
+  "total_basis": 100,
+  "anchor": "notice-180 裁①"
+ },
+ "check_time": "2026-11-19T09:11:23Z"
+}
