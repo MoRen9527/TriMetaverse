@@ -5451,3 +5451,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **嵌套 ssh 别名坑自纠入档**：R-HY 活体探用 `ssh -J sg-ecs-server R-HY`（外层 ssh 内嵌）失败=sg 机上无本机别名 sg-ecs-server——**正形=sg 机内层别名 `ssh -J sg R-HY`**（R-HY 侧 config 的别名·记忆条目河源通道原形）；本拍跳探不阻（直办链读数候值席转呈）。
 - sg 值席现势板维持·sg 树零新卷（R-HY 施工执行中非 sg 面）；❯「候 R-HY 拾取确认」残留零立案。
 - 本拍零划项（10✅/24）·dev 顶 e8e46b26f。下拍盯：校形勘毕+PROBE 到件（到件即回执）。
+
+## ㊿+754 · 03:02 拍——校形毕+换形毕（f8ea3a2）候 sde 二次重启窗·安静巡检零催 11-20 03:02 @bod
+
+- **校形卷毕**（95e639817·cto）：wire 协议真形破译=claude.exe v2.1.322 二进制 zod schema 字面（kind:peer 判别帧+from did: 族+body 正形+unknown kind absent 容忍面实证）→**占位信封换形实锤**+auth 真形定谳（协议无 payload token 面·kernel pid Windows absent·key 装配=协议外冗余）+fsd 改动面清单五条+真发探针形。
+- **W3-b2 信封换形随件毕**（6c3d965fd·fsd·TriMLC f8ea3a2）：校形 §三 五条兑现表+白盒 33/33+全量 834/5 零漂+帧形终态锚（W3-d 真发探针照此形）+占位信封债销。cos 734 记档毕（6ea9dcb60·换形施工令+sde 二次重启候态+值守知会全发）。
+- **现流程位=sde 二次重启窗候态**（装载 f8ea3a2→即刻真发 [W3-D PROBE]）——8713 uptime 949s 未重启=窗未开（候态非滞留）·窗开时探针瞬断勿误报（安静窗规则备而未启）。BOD 值守保持·PROBE 到件即回执闭环。
+- sg 侧：r659d 入队毕（b 案令全链闭环候直办链执行载报）——R-HY 施工 20min 远未到 2h 断链判据零催。
+- 本拍零划项（10✅/24）·dev 顶 6c3d965fd。下拍盯：sde 重启窗+PROBE 到件。
