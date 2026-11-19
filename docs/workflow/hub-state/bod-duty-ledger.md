@@ -5249,3 +5249,8 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **Q1 指纹判别落点**：会话级 cron prompt（24290e7a·session-only in-memory）+持久层=记忆文件 ghost-line 条机械闸段+台账㊿+705；**持久正形模板新落 `hub-state/bod-tick-probe-template.md`**（v1→v2→v3 演进史+重挂照抄源）——跨会话重启不丢闸。
 - **Q2 08:10 纠偏令原文呈验**（ledger 2596 行·2026-11-16 早窗）：CEO 令「**不是让你6分钟一问cos·让duty-cos盯整个任务**」——job2 执行形态走偏认领（6 分钟机械探框=监督职责未下沉·接力断 4h 根因）·落实两件=notice-114 职责令托转值席+job2 改 :18/:48 低频查产出形（218c7695 删 052f3ca9 挂）；落款 2026-11-16T00:12:28Z（北京 08:12）。cron 模板首行=对该令的摘要转述。同窗背景=CEO 08:26 问责断链 4h（ledger 2600 行）。
 - **ns8 现势手动探拍（19:32·v3 纪律 -e+cat -v 已用·框内 ❯ 文本带 ^[[2m=ghost 零立案 ✓）**：值席 r645d 定报入队（11:30:55Z·「GLM 余额恢复·在途无新」）；**cto-rc1-variant-rootcause mmin-25 新命中=CTO 正在执行 notice-222 款二勘正**（归因改 GLM 周额度面·修正留痕中）；aggregate 终分未出（手工判卷在途 2.5h+）；sg 无 /var/lib/trirmc/cron/runs 该目录=run_dir 在河源 TriRMC 侧（qualify 镜像为凭·探 sg=拓扑错位假阴性·如实记）。
+
+### ㊿+707 · CEO 19:43 双令·探针模板归档 TriCompany+loop 机制质询呈报（2026-11-19T19:47+0800）
+
+- **资产归档毕（CEO 令「交 cao 审核·归档到 TriCompany 的 bod 下统一管理资产」）**：真源=`TriCompany/source-agents/board/bod-tick-probe-template.md`（board 席位资产目录·元信息头齐·TriCompany 仓 commit）；TriMetaverse hub-state 副本 git rm 撤除（防双源）·本台账+模板文件头=指针。CAO 审核信已发（SendMessage 直达）。
+- **loop 机制质询（CEO 19:43 问「难道还是 agent 在控制 loop，而不是程序自己在控制流程？」）呈报候裁**：CEO 质疑成立面——notice-198 定谳=评卷段（ScoreSkill）程序化 spawn 形·段卡应 spawn 程序报错（fail-closed）候修复重跑；ns8 实际=spawn rc1 后值席域裁转手工补面轨（引 ns2 先例）=人肉接管段内工作·错误被兜底遮蔽+段面假通过+与定谳张力。现 GLM 额度已恢复+修 D-2 spawn 活体 rc=0=**评卷段程序化重跑条件已具备**。三选项候裁：a) 停手工·程序化重跑评卷段（正形）；b) 手工跑完本次+立规下轮起 spawn 失败=段报错停禁人肉接管；c) 另裁。轮间推进面（轮与轮起跑动作）现势=值席手动触发（runner 11-15 capped 后）——agent 控制面如实呈（段内 spawn=程序在跑·段间推进=agent 在控）。
