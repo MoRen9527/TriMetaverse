@@ -5201,3 +5201,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **rc1 新变体根因钉死**（cto-rc1-variant-rootcause）：rc=1=dsh 键 **QUOTA Insufficient Balance 余额零**——与 trimodel 键 404 权益零=**同一 DeepSeek 账户族两个死面**（键不同死法不同）；与修 B/C 零因果三实锚勘正（假关联排掉·余额 04:29-07:52 间耗尽 spawn 自耗加速）。
 - **修 D 族**：修 D-2=值席域裁放行在工（6fc8e803·dsh 供给切 GLM·spawn 可靠性根修·与修 A 同向互补）；**修 D-1=外部面加急直呈 CEO（cos-bl9·urgent）：DeepSeek 账户族两死面（404 权益+QUOTA 余额）·充值/键换发候裁不催**——不充=GLM 单供给+链兜底+三梯防线照跑；充=双供给冗余恢复。
 - joint-review-trigger.json 落树（联审窗动作面）。runner capped 维持。②终验拍=ns8 首拍闭环挂账中。免勘。
+
+### ㊿+699 · job2 17:59 拍·修D-2毕+补面轨在工+值席pane现未提交「notice-222」幽灵标题候CEO定谳（2026-11-19T18:00+0800）
+
+- **修 D-2 毕 ✓**（cto-fixD2-closeout-20261119.md mmin-35 落树+值席阶段短报 cos-snb10 09:46:01Z 转呈）：spawn 根修活体通——GLM 真答 rc=0·回滚三面独立；CTO 自验毕，ns8+1 首拍终验候自然兑付。
+- **ns8 补面轨在工**：COO joint 候镜判·cos initial 已出——aggregate 终形/新轮终分仍未出（r86 出必报维持）。
+- **异常面候定谳**：capture 尾段 m-duty-cos **输入框躺一行未提交标题「【BOD→COS·notice-222·CEO 融合裁·ns8 终形收口】」**——BOD 锚笔台账止于 221，**222 非 BOD 所发**。BOD 未动 pane（禁代提交未知令文·permission-laundering 族）；若 CEO 直发=补锚笔台账并按令推进，若非=仿写/污染面清查。已呈 CEO 问询。
+- 值席监督在役 ✓（阶段短报转呈+哨态维持）；runner.log capped 旧尾=收口态正常。免勘。
