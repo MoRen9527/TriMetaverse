@@ -107,3 +107,33 @@ notice-226 四款架构级令面（款一勘正承录/款二 flag 并入/款三�
 
 - **款三承录**：ns9 不走——优化毕下轮直接 TriRMC runner（loop 本体程序）跑；值席手动循环形态 ns8 收官——S1-S5+修 E 随 COO b 案直切形态拆树（eb3ac427·施工排面更新承）；
 - **款一承录**：b 案直切（P1/P2 前提=降级候补观察面不作门槛——观察义务保留：GLM 供给盯守 standing 照卷）。
+
+---
+
+## §一B 双分数分立与 retry 机制段（notice-231 款一·勘正 230 款二部分并入·2026-11-19 22:5x CST）
+
+### ①当周迁移质量分（fade-001 内部分·客观+主观=100）与 retry 机制（漏设计新立）
+
+- **判据**：≥90（暂定线·CEO 定）=当周免 retry；<90=当周 retry；
+- **retry 机制设计**（四件）：
+  - 触发判据：close 段读 fade-001 内部分 <90 → retry_flag=当周 pending-retry（run_dir 落卷）；
+  - 重试范围：**Skill 尾段重跑形（非全链十段）**——retry=resume-stage 面复用（§六A·从 score 段起重跑至 close·CLI 段产物零重跑——迁移本体已交付·重试=判卷/收口面复核）；
+  - 次数上限：**2 次/当周**（retry_count state 面·两retry后仍<90=如实落卷+通知值席（非熔断——迁移质量面无熔断语义·escalate 呈报面））；
+  - 十段链衔接位：close_cli 后置分叉点（close 毕→内部分判读→retry 分支回 score 段 resume·零段间新链形）。
+
+### ②进化判据重定义（7 席联审均分·勘正 230 款二②撤销承录）
+
+- **7 席联审均分（每席 100·均分过 95 线）=进化判据**——评估面=fade 协议遵循实现度+周迁移质量双面；
+- **CEO 定谳承录：分数抖动=多角度挖缺陷的进化优势**——notice-230 款二②「主观只否决不计分」定谳**撤销**（230 款二其余三件+维持批立：①并盘 100 制基准/④转化漏斗/prod→test 判据/FUSE 计数域）；
+- **牵连面候勘如实注**：与 COS 综合判决牵连面（款三③改形联动）——95 线判读位从 aggregate 机械面移至 COS 综合评估输入面（§一C 勘定）——score_engine/aggregate 输出面零改（均分照算·消费位变）。
+
+### §一C 进化判决机制改形（COS 综合评估判决制·勘定呈报）
+
+- **新判决链**：COS 收集 7 席意见综合评估＋看双分数（7 席联审均分+fade-001 内部分）→**COS 给进化/不进化判决**（不投票制）；
+- **程序面承载**：判决=cos-score.json 扩展形（cos 终判行+eviction_decision: evolve|hold+rationale+双分数引用）——round_runner 读判决文件驱动（体内候裁事件源=cos 判决卷替代/并列 ceo-ruling 面——**事件源双轨并读形**：debug=CEO 候批（202 门）/evolution decision=COS 判决卷·两卷齐=迭代放行）；
+- **衔接面勘定呈报（款一③候勘项回应）**：COS 判决×图二 flag 切换权=CEO 令两态衔接——**权属大面不破**：COS 判决=进化迭代放行权（evolve/hold·轮次推进域）≠flag 三态切换权（debug/test/prod 域=CEO 令专权不变）——两权分立注记：COS=「本轮判卷后进不进」·CEO=「态切不切」——test 态自动续轮支=①支不改（notice-230 ④ FUSE 计数域照立）；
+- 程序化表达：§一 while 体 debug 支候裁事件=ceo-ruling ∧ cos-evolution-decision 双事件 AND 门（debug 态）/test 态=单迭代直进（零候）——白盒增补案（S4 扩）。
+
+### 使用依据增补
+
+notice-231 款一三条（两套分数分立/retry 漏设计新立/判决机制改形+权属大面不破）；230 款二②撤销承录·其余三件+FUSE 维持批立；§一 while 体谱系；D-47。
