@@ -51,3 +51,18 @@
 ## 使用依据
 
 notice-227 原文语义令面；notice-226 v2（57117e85d）；ns5-ns8 四轮活体（ns6 七席完备/ns8 rc=1 手工补面实录）；11-19 勘修链全纪录（e781d6cef/12732cf45/f8256fd5b/3bdae1f/4147bb8/d0f2dc4）；notice-222/223/225/226 谱系；图二/图三定谳面；D-46/D-47。
+
+---
+
+## 采认增补段（notice-229 BOD 编排层事实卷·2ae2472b1·2026-11-19 21:3x CST·采认形=本席源读复 correlates）
+
+**源读复核实锚（本席 heyuan 本地源勘）**：src/orchestration=九模块在库（capability-router/cost-controller/dispatch-proxy/employee-registry/employee-scheduler/session-bridge/trilc-executor/types/index·ls 实锚）；session-bridge 三原语（spawnSession/listAgents/sendMessage）=app.ts 活面 import+调用实锚（L23-25/L192/L235）——BOD 事实卷①②面与本席源读互证 ✓ 采认。
+
+**对③选案荐的影响面（增量吸收）**：
+
+1. **b 案实施成本下修**：编排骨架现成「缺激活不缺骨架」——session-bridge 四端点活面=无头团队领导原语现役接线（spawnSession 命名后台会话=spawn 面可承载形·sendMessage=送信面·listAgents=注册表读面）；employee-scheduler 五态机等五库件=候激活面（工程量=接线非新建）；
+2. **②稳定性判定不变**：骨架≠稳定——P1 守望期前提（全席零干预 spawn+供给绿+零非计划重启）与 P2 供给冗余=原判维持（骨架激活不除单点依赖）；
+3. **分层互补注（设计级）**：编排层=session 生命周期/无头团队领导面 × notice-226 loop 本体=轮间推进语义面——**互补非替代同构**；S2 候勘注=chain_runner spawn 面可候选经 session-bridge 原语路由（命名后台会话=可观测可管理形·vs 现役裸 dsh CLI 形）——**候勘非本次施工面改动**（S2 排面时 COO/我席对勘定）；
+4. **agent-core 定界采认**：本体=同步 Tier 1 无 background/team（vendor 按模块吸收形）——领导面=daemon 编排层（LG-040 历史限定语兼容承：core-agent=TriMC observability 迁移历史来源引用形照守）。
+
+**采认判定=增量吸收（③选案荐主判不变·b 案成本面下修+分层互补注新增）**。
