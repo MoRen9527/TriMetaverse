@@ -22,6 +22,7 @@
 
 - **判据①（env 终探·供给面环境正形）=已兑现 ✓**：bcf1cb283 §二 实锚——notice-218 值席 EnvironmentFile 变体+属主 kill 重启四验毕；零 override 下 default 链走 glm-5.3-flash 流 done——供给面环境=GLM 活体面定谳（DeepSeek 双键死账户族依赖解除）。
 - **判据②（fallback 终验拍·下拍 failed=0）=活体先行已证+终验挂账（如实·非完结虚报）**：活体先行三重绿在卷——(a) /hello 活体通·(b) 零 override default 链 glm-5.3-flash 流 done·(c) chain-path 强制链 deepseek-chat 入链→recovery→content_delta→done+journal「fallback chain active: 3 nodes」（链逻辑活体实证）。终验判据「下拍 failed=0」的执行载体=**ns8 首拍**（全谱链路真实负载拍）——ns8 后首拍读数回卷即②闭，**随 ns8 自身首拍自然兑付·零额外窗**。挂账性质=活体先行已满足·全量负载读数候首拍，风险位已由三梯防线（供给断言→fallback 链→bundle/env 配置面）覆盖。
+- **②终态回卷（N4 判读回卷·2026-11-20 06:35）**：ns8 首拍 failed=0 直证兑付——七席全 rc=0+GLM 真答落卷+gate_pass=True·verdict_adjust=PASS（sde-n3-spawn-firstshot-20261120.md·89dee5cd2）——**判据②终闭 ✓**（修 D-2 spawn timeout 实拍终验同拍兑付·判读正身=cto-n4-verdict-20261120.md·本席读数）——判据①②并轨终局·B6 挂账清零。
 
 ## §三 · ns8 重开触发面兑现（B7 排面交棒）
 
