@@ -1,0 +1,65 @@
+{
+  "preflight_version": "1.0.0",
+  "verdict": "pass",
+  "exit_code": 0,
+  "reasons": [],
+  "assertions": {
+    "week_math": {
+      "ok": true,
+      "mode": "loop-window",
+      "sunday_gate": "exempted(loop)",
+      "sunday_gate_note": "real cron Sunday gate unchanged",
+      "run_dir_week_note": "loop-run 实际时点 2026-11-19（归属周按此时点注记防混）",
+      "trigger_day_is_sunday": false,
+      "computed": {
+        "from_week": "W46",
+        "to_week": "W47",
+        "start_date": "2026-11-16"
+      },
+      "expected": {
+        "from_week": "W46",
+        "to_week": "W47",
+        "start_date": "2026-11-16"
+      },
+      "loop_source": "marker"
+    },
+    "hostname": {
+      "ok": true,
+      "actual": "iZf8ziw57ydktu77fsld9yZ",
+      "expected": "iZf8ziw57ydktu77fsld9yZ"
+    },
+    "git_hygiene": {
+      "ok": true,
+      "in_progress_ops": [],
+      "migration_face_dirty": []
+    },
+    "healthz": {
+      "ok": true,
+      "url": "http://127.0.0.1:8710/healthz",
+      "service": "trirmc",
+      "cron_enabled": true
+    },
+    "diverge": {
+      "ok": true,
+      "detail": "preflight ok (left=0 right=0 verdict=synced)",
+      "readback": {
+        "remote": "origin",
+        "branch": "dev",
+        "left": 0,
+        "right": 0,
+        "verdict": "synced",
+        "local_top": "555211a5c3ad8bf36fa2c87883aaf102ef13dea5",
+        "bare_top": "555211a5c3ad8bf36fa2c87883aaf102ef13dea5"
+      }
+    },
+    "ceo_ruling": {
+      "ok": true,
+      "state": "continue",
+      "detail": "ruling=continue（shift-W46-20261118T205352Z·本轮照跑 carry_over 承接）",
+      "prev_run_dir": "shift-W46-20261118T205352Z",
+      "ruling_ref": "notice-206（BOD 锚笔第 210 轮·CEO 融合裁 08:09:52+08「裁进，启 ns5」）",
+      "signed_at": "2026-11-19T08:09:52+0800"
+    }
+  },
+  "check_time": "2026-11-19T00:14:41.759483+00:00"
+}

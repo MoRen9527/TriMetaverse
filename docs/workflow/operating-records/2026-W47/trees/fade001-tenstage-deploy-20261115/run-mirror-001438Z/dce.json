@@ -1,0 +1,57 @@
+{
+  "dce_version": "1.0.0",
+  "run_id": "shift-W46-20261119T001438Z",
+  "mode": "execute",
+  "steps": [
+    {
+      "step": "pull",
+      "cmd": "git -C /srv/fleet/TriMetaverse pull --ff-only",
+      "rc": 0,
+      "mode": "execute",
+      "stderr_tail": "From ssh://47.245.122.61/srv/git/TriMetaverse\n   c8ffed7e5..a019d47a0  dev        -> origin/dev\n"
+    },
+    {
+      "step": "migrate",
+      "cmd": "cd /srv/fleet/TriCompany && python3 -m runtime.cognition.weekly_plane_shift --from W46 --to W47 --start-date 2026-11-16 --operating-root /srv/fleet/TriMetaverse/docs/workflow/operating-records --sync",
+      "rc": 0,
+      "mode": "execute",
+      "stderr_tail": ""
+    },
+    {
+      "step": "commit",
+      "cmd": "git -C /srv/fleet/TriMetaverse add docs/workflow/operating-records && (git -C /srv/fleet/TriMetaverse diff --cached --quiet || git -C /srv/fleet/TriMetaverse -c user.name=TriRMC-Scheduler -c user.email=trirmc@tri.company commit -m 'ops: weekly plane shift W46->W47 run=shift-W46-20261119T001438Z')",
+      "rc": 0,
+      "mode": "execute",
+      "stderr_tail": ""
+    },
+    {
+      "step": "push",
+      "cmd": "git -C /srv/fleet/TriMetaverse push sg-bare HEAD:dev || (git -C /srv/fleet/TriMetaverse fetch sg-bare dev && git -C /srv/fleet/TriMetaverse merge --no-edit FETCH_HEAD && git -C /srv/fleet/TriMetaverse push sg-bare HEAD:dev)",
+      "rc": 0,
+      "mode": "execute",
+      "stderr_tail": "remote: error: cannot rebase: You have unstaged changes.        \nremote: error: Please commit or stash them.        \nTo ssh://47.245.122.61/srv/git/TriMetaverse.git\n   a019d47a0..cb32a71f6  HEAD -> dev\n"
+    }
+  ],
+  "overflow_checks": [
+    {
+      "check": "week_dir_structure",
+      "basis": "W 目录结构与改造前同形（aca95877c 零外溢判据①）",
+      "checked": false,
+      "note": "骨架态=口径位声明·生产形真值对表候部署树授权窗"
+    },
+    {
+      "check": "carry_over_semantics",
+      "basis": "carry-over 语义与改造前同形（aca95877c 零外溢判据②）",
+      "checked": false,
+      "note": "骨架态=口径位声明·生产形真值对表候部署树授权窗"
+    },
+    {
+      "check": "commit_message_shape",
+      "basis": "commit 消息形与改造前同形（aca95877c 零外溢判据③）",
+      "checked": false,
+      "note": "骨架态=口径位声明·生产形真值对表候部署树授权窗"
+    }
+  ],
+  "check_time": "2026-11-19T00:15:20.283367+00:00",
+  "verdict": "pass"
+}

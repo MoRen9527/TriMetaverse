@@ -1,0 +1,34 @@
+{
+ "seat": "cos",
+ "run_id": "shift-W46-20261118T124206Z",
+ "scores": {
+  "I1": 2,
+  "I2": 2,
+  "I3": 2
+ },
+ "rationale": {
+  "I1": "锚文判读（记录/活）：10 个散件卷宗（d39/d82 毕报、ten-stage mapping、首评分卷等）属『记录』，随 W46 封存，keep 方向对；2 条 carry_over（CARRY-20260728-004/006）为冻结挂账，status_to=frozen、dest=frozen、pending_reason 齐备，只归位不解冻，方向对。但 24 个目录全部以 agent_output_malformed 兜底 keep（fallback_keep_unjudged:malformed），未逐案做『记录/活』判读，probe/build 类对象究竟属记录还是活，尚未证实；8 个顶层件（company-demand-pool/daily-progress/task-inventory/OP-…unresolved-items 等）属『活』，却只标 pending_ledger、零去向，未随人带走；plan.migrate=0 与 index_drift 明载实盘 20+ active 的张力未解。主体面（散件记录+carry 冻结）保真、机械完备，但活件边界与 24 目录判读缺口使 4/3 档不成立，落 2 档。",
+  "I2": "批次面：fallback 治理有 batch_size=15/batch_max=3/batches_run=2/beyond_limit_skipped=[] 与 slow_order 24 条；但迁移批次实际 migrate=[]（0 件），无迁移时序/依赖链。降级链面：malformed→保守 keep、retry_max=1、alert 阈值 0.2 实测 rate=1.0 已触发并通知、pending_review 32，失败不静默，主链 fail-closed 零破坏；dce 四步 rc=0、verify 五项全过、close verdict=pass。风险预案面缺：无 trap/RC_guard 在卷，dce overflow_checks 三项 checked=false（待部署树授权窗），plan/close 未落 23:50 硬时钟换形授权链。三面有缺、主链合理，取 1-2 档上限 2。",
+  "I3": "指针面：close.json evidence 七段 path 均在 run_dir、present=true，hash 与实件对表一致（preflight 7efd…、plan 1dc9…、score 8747…），close check_time 13:33:56Z 有戳；失败面在 plan.fallback_governance 全量列明（slow_total=24/failed_total=24、rate=1.0、alert triggered+notified、pending_review 32），不静默。语义面：42 条 agent_readings 的 rationale 为模板句（24 malformed 兜底/10 fast_path 机械/8 pending_ledger），无逐案实判断；close 的 manifest 段 verdict=unknown 与 run_state=ok 并存，且 close 落卷晚于 manifest 约 51 分钟，自报面有缝。汇总裁面：joint-review-trigger.domain_readings.subjective=pending、score.json I 族 state=subjective/score=null，本 run convene/seats 空，无初判/联审席卷可对照；分差≥2 档复核触发器当前无对象（不冒充收敛），终判卷以本独立席评为基，后续若汇入席评差≥2 档须强制复核。指针可达+透明记账支撑 1-2 档上限 2，reasons 机械与自报缝阻止 3 档。"
+ },
+ "evidence_ref": {
+  "I1": "plan.json#/counts(migrate=0,keep=34,top_level=8) + plan.json#/agent_readings(24 failed_fallback/10 fast_path/8 pending_ledger) + plan.json#/carry_over(2 frozen) + plan.json#/index_drift",
+  "I2": "plan.json#/fallback_governance/batching + plan.json#/fallback_governance/slow_order + plan.json#/fallback_governance/retry + plan.json#/fallback_governance/alert + plan.json#/migrate + dce.json#/overflow_checks + verify.json#/checks + close.json#/verdict",
+  "I3": "close.json#/evidence + close.json#/check_time + plan.json#/agent_readings + plan.json#/fallback_governance/pending_review + score.json#/score/families[8] + joint-review-trigger.json#/domain_readings/subjective + manifest.json#/check_time"
+ },
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "本轮 0 migrate、34 keep、8 顶层件 pending，迁移清单的『活』边界未收：company-demand-pool/daily-progress/task-inventory/OP-unresolved-items 属活却无去向；24 目录 malformed 兜底未过记录/活判读；index_drift 明载实盘 20+ active 与 migrate=0 的张力未解。建议下一轮先逐案过锚文判读并留标签，活件迁 W47、记录封 W46，8 顶层件清零后再出 pass；若判不迁须逐件给判据。",
+   "evidence_ref": "plan.json#/counts + plan.json#/agent_readings + plan.json#/index_drift",
+   "check_time": "2026-11-18T13:36:52Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "v1.2.0 把 24/24 malformed 显式化为 fallback_governance（batch 15/3、retry=1、alert 0.2/1.0 已触发通知、pending_review 32），较静默兜底有进步；但 fast_path_failure_rate=1.0、retry_enabled_trees=0 表明只记账未修复，24 条 keep 与 8 顶层件仍无个案判读。建议把 malformed 样本入 parser/prompt 修复队列并重跑慢道，retry_enabled_trees>0，失败面从『可审计』推进到『可收敛』。",
+   "evidence_ref": "plan.json#/fallback_governance + plan.json#/agent_readings",
+   "check_time": "2026-11-18T13:36:52Z"
+  }
+ ],
+ "check_time": "2026-11-18T13:36:52Z"
+}

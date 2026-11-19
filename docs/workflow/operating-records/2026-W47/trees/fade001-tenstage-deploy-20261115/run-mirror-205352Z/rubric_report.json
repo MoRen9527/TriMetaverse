@@ -1,0 +1,55 @@
+{
+  "rubric_version": "1.0.0",
+  "verdict": "pass",
+  "reasons": [],
+  "redline_caps": {
+    "C": 79,
+    "G": 59
+  },
+  "f2_zero_trigger_full_score": true,
+  "t1_candidate_notes": {
+    "status": "定谳已落（CTO 19:43 填位指令·3d5b7dc3f·CPO 追裁裁(b) STE 形维持）·a2c246908 原样零修订落位·【候施工验收毕生效】（CPO 裁③：落位≠改卷生效·生效动作锚施工验收毕时点）",
+    "direction_note": "评分对象=产物非过程（过程判据在八族采集清单·两面对表不重叠·STE §二原样）",
+    "coverage_note": "T1-2 与 T1-3=两断言联合覆盖两形态（CTO 19:44 补注·PM 卷 §六候采件采认）：首拍若拦截态则 T1-2 红（preflight 退出码非 0）+T1-3 触发分支接管（告警文案带 run id=可观测性增益得分面·非静默拦截零分形）——防把 T1-2 读成「任何形态都必须退出码 0」的误读（拦截态有 T1-3 承载）。T1=结构门通过态形（非分值形）。",
+    "zero_weight_clause": "零权重零分值维持——断言级权重不入卷（违同值同源）·红=族红走红灯定性条款",
+    "pointers": [
+      "ste-t1-assertion-draft-20261113.md（a2c246908·定谳正身）",
+      "CTO 技术稿 §三.6（3d5b7dc3f·定谳笔）",
+      "pm-stages4-10-product-segment-20261113.md §一段 7 行",
+      "08f135f16（F2 子项免评分母过渡·建议 C）",
+      "pm-firstshoot-reading-checklist-20261113.md §判据换形注"
+    ],
+    "assertions": [
+      {
+        "id": "T1-1",
+        "family": "C 族倒排（验收锚①同源）",
+        "name": "run 身份结构断言",
+        "assertion": "首拍 run id 三处同串（per-run log 目录名/聚合文件名/close 记录引用）+格式正则 ^shift-W\\d+-\\d{8}T\\d{6}Z$（照 STE §四 C 族已对表正形原样继承·零新增收紧）全过",
+        "mechanical_check": "ls /var/lib/trirmc/cron/runs | grep '^shift-W' 取首拍 RUN_ID→三处 grep 同串计数=3+正则匹配计数=3",
+        "two_layer_anchor": "单测面=格式正则金值案（已有谱可扩）·生产面收口点=首拍",
+        "fail_direction": "三处不同串=溯源断链（漏报方向毒·traceability 丢失）——fail-closed 显红",
+        "ruling_note": "CTO 定谳前置定位注：无三处同串则产物落位无从定位=验收锚①正身"
+      },
+      {
+        "id": "T1-2",
+        "family": "D+E 族倒排（阶段 2 锚 1 生产面收口同件）",
+        "name": "qualify 资格面结构断言",
+        "assertion": "runs/<RUN_ID>/qualify.json 存在+五断言全过态字段（零误拦）+runs/<RUN_ID>/preflight.json 存在+退出码 0——双 json 落位=到岗资格面结构完整",
+        "mechanical_check": "两 json 存在性断言（python json.load 成功+状态字段值读）+qualify 五断言过态字段逐一非 null",
+        "two_layer_anchor": "单测面=五断言五案 19/19 已实锚·生产面收口点=首拍（生产面 qualify 首读数）",
+        "fail_direction": "误拦=首拍炸（fail-closed 安全方向如实显红）；假绿（json 在但状态字段空）=漏报——值面字段必读非仅存在性（键存在性抽验≠值面验证纪律正形承载）",
+        "ruling_note": "CTO 定谳精化：D+E 族双 json 落位+值面字段必读非仅存在性+退出码 0"
+      },
+      {
+        "id": "T1-3",
+        "family": "F 族倒排（锚②③收口同窗）",
+        "name": "告警链结构断言",
+        "assertion": "首拍成跑形态下 alarm 零触发（满分免评分母形·CPO 口径 2）+若触发分支（漏拍/败跑窗）告警文案含 RUN_ID（traceable·trap 兜底语义实装形）+到达时延≤N（N 对表 CPO-011 ≤2h 同值同源·grace 35min⊂2h 合规在卷）",
+        "mechanical_check": "alarm 日志（healthz logPath 投影）触发行计数+文案 RUN_ID grep+到达时戳差值计算（COS/CEO 收件箱到达读数=值席面采集）",
+        "two_layer_anchor": "单测面=alarm 25/25+47/47 判定矩阵已实锚（不含生产链）·生产面收口点=首拍+00:25 窗",
+        "fail_direction": "零触发+应触发未触发=漏报（毒）；误触发=误报（方向安全如实显红）",
+        "ruling_note": "CTO 定谳精化：N=2h·35min=alarm 触发窗岗位不跨界"
+      }
+    ]
+  }
+}

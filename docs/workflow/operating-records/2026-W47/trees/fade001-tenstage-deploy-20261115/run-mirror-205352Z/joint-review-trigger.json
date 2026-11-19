@@ -1,0 +1,60 @@
+{
+  "trigger_version": "1.0.0",
+  "loop_run_id": "shift-W46-20261118T205352Z",
+  "run_dir": "/var/lib/trirmc/cron/runs/shift-W46-20261118T205352Z",
+  "from_week": "W46",
+  "to_week": "W47",
+  "dim_a_materials": [
+    {
+      "ref": "manifest.json",
+      "sha16": "b2d78a5223ad92d8"
+    },
+    {
+      "ref": "score.json",
+      "sha16": "2dc3029136b951d8"
+    },
+    {
+      "ref": "plan.json",
+      "sha16": "125db916ea85bff3"
+    }
+  ],
+  "dim_b_materials": [
+    {
+      "kind": "counts",
+      "ref": "plan.json#/counts",
+      "sha16": "125db916ea85bff3"
+    },
+    {
+      "kind": "ar",
+      "ref": "plan.json#/agent_readings",
+      "sha16": "125db916ea85bff3"
+    },
+    {
+      "kind": "unresolved_diff",
+      "ref": "verify.json",
+      "sha16": "0ebb4a04e87dd6dd"
+    },
+    {
+      "kind": "ops_commit",
+      "hash": "a5c1d68a8603397474c9c82edc673667e8961a9a"
+    }
+  ],
+  "domain_readings": {
+    "machine": {
+      "score": 59,
+      "families": {
+        "B": 9,
+        "C": 13,
+        "D": 9,
+        "E": 9,
+        "G": 19
+      }
+    },
+    "duty_collection": "pending",
+    "subjective": "pending"
+  },
+  "score_threshold": null,
+  "mode": "loop-window",
+  "round_state": "pending-ceo-ruling",
+  "trigger_time": "2026-11-18T20:54:32.001567+00:00"
+}

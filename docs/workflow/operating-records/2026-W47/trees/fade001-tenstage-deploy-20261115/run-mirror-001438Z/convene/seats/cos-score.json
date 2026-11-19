@@ -1,0 +1,34 @@
+{
+ "seat": "cos",
+ "run_id": "shift-W46-20261119T001438Z",
+ "scores": {
+  "I1": 2,
+  "I2": 1,
+  "I3": 1
+ },
+ "rationale": {
+  "I1": "锚文判读＝偏「记录」：plan.json#/counts 报 migrate=0/keep=34/carry_over=2/top_level=8，42 件 agent_readings 中仅 10 件 fast_path 有实质分类，24 件 dir 为 failed_fallback（family=null）、8 件 top_level 为 pending_ledger，32/42 未终判即以 default_keep 封存；carry_over 仅 2 条 W35 frozen 旧账，W47 无活件去向或 owner/时限承诺；fast_path_failure_rate=1.0 且 retry_enabled_trees=0 与「重判 1 次」自述相抵；index_drift 以「现势常态/旁证读数非分类基准」了结 activeTrees=0 对实盘 20+ 的脱节。机械盘点与 verify 5/5 pass 可认，但「活随人带走」交接面不成立，搬移清单正确性仅部分成立，故取 2/4（判卷时点 2026-11-19T00:17:38Z）。",
+  "I2": "锚文判读＝偏「记录」：规划只到树的处置与兜底，未到活件交接与机制防复发。pending_review=32 无 owner/时限/复核窗，other_unresolved_count=15 未排期；retry max=1 但 retry_enabled_trees=0，alert 只通知不处置；index_drift 无归零动作；dce.json#/overflow_checks 三项 checked=false 仅口径声明；preflight.json#/assertions 仅 week_math/hostname/git_hygiene/healthz/diverge/ceo_ruling 六项，A2-2 供给面（agentPresets/环境/令牌通道）值面零断言；A2-3 trigger#/domain_readings 仍 duty_collection=pending/subjective=pending，score#/total_pending_weight=41、collection=0.0，trigger 链无 T+10min 自动采集窗；A2-1 路由面本轮仅 spawn cos（1/7 席），无全席 roster/补位/再聚合规划。规划完整度不足，故取 1/3（判卷时点 2026-11-19T00:17:38Z）。",
+  "I3": "锚文判读＝偏「记录」：留痕多为模板句或读数，缺可复核判断链。plan.json#/agent_readings 逐件 evidence_ref 仅 classify_dir:…、top_level_file_list、evidence:none_markers 等虚指（不是 run_dir 内具体文件路径），无逐件 check_time；convene-spawn.log 仅「spawn cos…」一行、convene/seats/ 空、无 aggregate、无 root-cause 件（ns2 63938e61e 未落本 run_dir），六席缺席不可复核；A2-3 joint-review-trigger.json#/domain_readings 与 score.json 均记 collection/subjective pending；close.json#/run_state=pending_manifest 与 manifest.json#/run_state=ok 相抵，close 记 manifest hash deb4545f8e9a3448 与实际 75a480543b6ba2f0 不符且 close 早于 manifest 落盘；joint-review-trigger.log#/notify_result.trigger_mode=manual 与 notify_done.json#/notify_result.trigger_mode=cron 相抵、to/cc 为空而 status=sent；无七席聚合/主观终判卷，分差≥2 档复核面零样本。故取 1/3（判卷时点 2026-11-19T00:17:38Z）。"
+ },
+ "evidence_ref": {
+  "I1": "/var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/plan.json#/counts, #/agent_readings, #/carry_over, #/fallback_governance/fast_path_failure_rate, #/fallback_governance/retry, #/fallback_governance/pending_review, #/index_drift; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/verify.json#/checks",
+  "I2": "/var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/plan.json#/fallback_governance, #/other_unresolved_count, #/index_drift; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/dce.json#/overflow_checks; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/preflight.json#/assertions; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/joint-review-trigger.json#/domain_readings, #/trigger_time; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/score.json#/score/total_pending_weight, #/score/domain_breakdown",
+  "I3": "/var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/convene-spawn.log; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/convene/seats/; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/plan.json#/agent_readings; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/close.json#/run_state, #/evidence; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/manifest.json#/run_state, #/check_time; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/joint-review-trigger.log#/notify_result; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/notify_done.json#/notify_result"
+ },
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "锚文判读＝偏「记录」：32/42 件未终判即 default_keep/pending_ledger 封存，migrate=0、carry_over 仅 2 条 W35 frozen 旧账，W47 无活件去向；逐件 evidence_ref 仍为 classify_dir:…/top_level_file_list 虚指，无逐件 check_time；retry_enabled_trees=0 与「重判 1 次」相抵，index activeTrees=0 对实盘 20+ 脱节。修法：①逐件补「记录/活」正判并落 run_dir 可复核件（禁 classify_dir 虚指），逐件附 evidence_ref+check_time；②24 件 malformed 真启用 retry 或升级人工终判，8 件 top_level 全部分类；③pending_review=32 排 owner/时限/T+n 复核窗，15 件 other_unresolved 排期；④活件列 carry_over 带状态/去向/死信风险，记录件标封存锚；⑤index_drift 先归零对表再定分类。",
+   "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/plan.json#/counts, #/agent_readings, #/carry_over, #/fallback_governance, #/index_drift, #/other_unresolved_count; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/verify.json#/checks",
+   "check_time": "2026-11-19T00:17:38Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "锚文判读＝偏「记录」：本轮 loop 自身「记录」多、「机制闭环」少。A2-1 阻断级：convene-spawn.log 仅「spawn cos…」一行且 convene/seats/ 空，1/7 席到位，六席缺席无逐席 status/root-cause 件、ns2 63938e61e 未落卷，无自动重发/补位/再聚合，路由面漏发起环节。A2-2 断言缺位：preflight 仅六断言，agentPresets 提供行/环境/令牌通道供给值面零断言、未入断言族防复发。A2-3 调度漏：duty_collection/subjective=pending、total_pending_weight=41、collection=0.0，trigger 链无 T+10min 自动采集窗，首采仍靠值席人手。另 close/manifest run_state 与 manifest hash、trigger_mode 留痕相抵。修法：①convene 全量 raw 落盘禁硬截断，absent 判定前解析 rc/raw_out，逐席 status/root-cause 件+失败自动重发/补位/重聚合，并加七席 roster 断言；②preflight 增供给断言族（agentPresets/env/token 值面必读）fail-closed；③trigger 链排 T+10min 自动采集窗并回写 collection/subjective 读数；④统一 close/manifest/notify 时刻、hash 与 run_state 口径；⑤本轮自揪条登记 WP9 v3，下轮 preflight 设防复发核，形成「自揪→登记→修复→下轮防复发核」闭环。",
+   "evidence_ref": "/var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/convene-spawn.log; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/convene/seats/; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/preflight.json#/assertions; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/joint-review-trigger.json#/domain_readings, #/trigger_time; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/score.json#/score/total_pending_weight, #/score/domain_breakdown; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/close.json#/run_state, #/evidence; /var/lib/trirmc/cron/runs/shift-W46-20261119T001438Z/manifest.json#/run_state, #/stages",
+   "check_time": "2026-11-19T00:17:38Z"
+  }
+ ],
+ "check_time": "2026-11-19T00:17:38Z"
+}

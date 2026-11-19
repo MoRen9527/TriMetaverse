@@ -1,0 +1,16 @@
+{
+ "seat": "COO",
+ "dim": "joint-face",
+ "scores": {
+  "I1": 12,
+  "I2": 9,
+  "I3": 8
+ },
+ "rationale": {
+  "I1": "搬移清单判断正确性良（12/14）——与 ns2/ns3 同档稳态。锚文判读：annotation 42/42 全载（fallback_keep_unjudged 带型族·WP1 修形连续第三轮维持）+counts 含 top_level:8 分解（readings↔清单对表闭合·42=keep34+carry2 面平）+bidirectional_ok=true+violations=[]。扣 2 沿前轮：fallback 32 件 family 字段语义 None（轨迹靠带型 annotation 承载·族面未回填）。",
+  "I2": "规划合理度良（9/11）——幂等三跑稳态（keep/carry 组成与前轮一致·结果面稳定）。锚文判读：verify verdict=pass·5 checks·strict_mode=true·bidirectional 内建+violations=[]；gate 第二拍消费实锚（prev ceo-ruling sha 1f08ad03 对表·notice-206 承）=规划输入链闭合。扣 2 同前（counts 分解键轮次复现候证+批次面无新增）。",
+  "I3": "判断留痕质量良（8/10）——与 ns3 同形稳态。锚文判读：close run_state=pending_manifest（WP7 精化形诚实 pending·malformed 误判已消除沿用判）+verdict=pass+stage_notes 自指消除形维持（close.json: self_artifact 原句在）+upgrade_list extracted 实判面已走+evidence 在卷。扣 2：manifest.json: unknown 段注残差沿前轮+pending→finalized 翻转读数行候装（本席 ns3 改善意见·候机制线排窗）。"
+ },
+ "evidence_base": "run-mirror-001438Z",
+ "check_time": "2026-11-19T00:38:27Z"
+}

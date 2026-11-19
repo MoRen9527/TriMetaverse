@@ -1,0 +1,17 @@
+{
+  "manifest_version": "1.0.0",
+  "run_id": "shift-W46-20261119T001438Z",
+  "from_week": "W46",
+  "to_week": "W47",
+  "stages": {
+    "preflight.json": "pass",
+    "qualify.json": "pass",
+    "plan.json": "pass",
+    "dce.json": "pass",
+    "verify.json": "pass",
+    "score.json": "pass",
+    "close.json": "pass"
+  },
+  "run_state": "ok",
+  "check_time": "2026-11-19T00:15:20.996136+00:00"
+}

@@ -1,0 +1,34 @@
+{
+ "seat": "cpo",
+ "run_id": "shift-W46-20261118T124206Z",
+ "scores": {
+  "I1": 2,
+  "I2": 2,
+  "I3": 2
+ },
+ "rationale": {
+  "I1": "锚文判读（先立锚）：『这是一周的记录，还是这一周的活——记录随周封存·活随人带走』。记录面：d39勘止标注毕报、d82-排工紧凑性纪律毕报、fade001-firstshoot-scoring-weights-cpo、fade001-phase1-trigger-study-bod、fade001-ten-stage-mapping、fade001-ten-stage-product-plan-cpo、fade规范对表-ceo修正令、lg语义条款册立册定性、mc-oprec-fade011-pathspec-dispatch、首评分卷共10件＝【记录】→应随W46封存，keep方向可认，但无path/去向字段，无法复核封存位。活面：24个目录中build/impl/deploy系＝【活】（在研产品面）→keep守住活产品面；但2026-11-09/11-10完成态cto/migration/tree-gate评审类目录＝【记录】→应封存，却与活件同以agent_output_malformed兜底keep（fallback_keep_unjudged:malformed，pending_review=true），24/24未过锚文判读、无『记录/活』标签与一句理由，无法证明清单正确。carry_over：CARRY-20260728-004/006＝【活·冻结挂账】，status_to=frozen、dest=frozen、pending_reason齐＝产品承诺未丢，但缺『死信风险』第三标注。8个顶层件（company-demand-pool、daily-progress、task-inventory-20261115、OP-202611-W46-001.unresolved-items、scoring-ledger-w46、cfo-quota-daily-w46、.shift-ade.json、OP-202611-W46-001.json）＝【活】→应随人带走，却仅pending_ledger、零去向；plan.migrate=0与index_drift自载实盘20+ active的张力未解。主体方向保守（零错搬、零丢失），但32/44件未作个案判断、8活件无承诺去向，4档不成立，判2/4。",
+  "I2": "规划三面：批次面batch_size=15/batch_max=3/batches_run=2/beyond_limit_skipped=[]、slow_order 24条齐；预案面retry.max=1、alert阈值0.2/实测rate=1.0已triggered+notified、carry_over frozen只归位；降级链面malformed→保守keep、pending_review 32、dce四步rc=0、verify 5/5、close pass。缺面：migrate=[]使『活随人带走』无迁移时序、依赖与责任人，retry_enabled_trees=0使retry仅名义，dce overflow_checks三项checked=false、23:50硬时钟换形授权链未在plan/close落卷，32件pending无收口时点。三面有据、主链可跑，但迁移规划实为空转，判2/3。",
+  "I3": "正面：close.evidence 7/7 path均在run_dir、present=true且sha256_16经复算7/7一致（preflight 7efd…、plan 1dc9…、score 8747…），check_time有戳；fallback_governance全量列明24/24失败、rate=1.0、alert triggered+notified、pending_review 32，不静默；score.json载锚文与权重。负面：42条agent_readings中32/42为fallback模板句、10/42仅classify_dir token，均无个案『记录/活』标签，plan的evidence_ref多为reason-code token而非run_dir可复核路径；subjective-score.json未落卷（score.json自载pending）；close现卷check_time=13:33:56Z较manifest=12:42:48Z晚约51分钟，close.json.bak-replay-133356Z载旧态run_state=manifest_malformed/source=manifest_polluted、manifest hash 829f…，与现卷ok/manifest、c3667…不一致，正卷未留replay理由/责任人字段。留痕机件面强、判读语义面弱，判2/3。"
+ },
+ "evidence_ref": {
+  "I1": "plan.json#/keep + plan.json#/agent_readings + plan.json#/carry_over + plan.json#/counts + plan.json#/index_drift + verify.json#/checks",
+  "I2": "plan.json#/fallback_governance/batching + plan.json#/fallback_governance/slow_order + plan.json#/fallback_governance/retry + plan.json#/fallback_governance/alert + plan.json#/migrate + dce.json#/steps + dce.json#/overflow_checks + verify.json#/checks",
+  "I3": "close.json#/evidence + close.json#/check_time + close.json.bak-replay-133356Z#/run_state + close.json.bak-replay-133356Z#/evidence[6] + plan.json#/agent_readings + score.json#/score/families[8] + manifest.json#/check_time"
+ },
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "下一轮应先逐案过锚文判读并落『记录/活』标签+一句理由：10件散件记录封W46并写归档位，24个目录按在研/完成态分流（完成态评审入W46），8个顶层活件（需求池、daily-progress、task-inventory、OP-unresolved-items、scoring-ledger、cfo-quota、.shift-ade、OP-json）随人迁W47并标owner/dest；carry_over补死信风险标注。plan.migrate=0不得再以pending_ledger过pass，32件pending须清零或逐件给判据。",
+   "evidence_ref": "plan.json#/counts + plan.json#/keep + plan.json#/agent_readings + plan.json#/carry_over + plan.json#/index_drift",
+   "check_time": "2026-11-18T13:45:02Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "v1.2.0已将24/24 malformed显式化入fallback_governance（batch 15/3、retry=1、alert 0.2/1.0已触发通知、pending_review 32），较静默兜底有进步；但fast_path_failure_rate=1.0、retry_enabled_trees=0表明只记账未修复，32/42仍无个案判读。建议把malformed样本入parser/prompt修复队列并重跑慢道、retry_enabled_trees>0；close增replay字段（理由/责任人/时点）与manifest变更说明，消除829f…→c3667…无痕；carry_over增加dead_letter_risk字段。",
+   "evidence_ref": "plan.json#/fallback_governance + plan.json#/agent_readings + close.json.bak-replay-133356Z#/run_state + close.json#/run_state_source",
+   "check_time": "2026-11-18T13:45:02Z"
+  }
+ ],
+ "check_time": "2026-11-18T13:45:02Z"
+}

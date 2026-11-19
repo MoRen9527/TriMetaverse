@@ -1,0 +1,34 @@
+{
+  "qualify_version": "1.0.0",
+  "verdict": "pass",
+  "exit_code": 0,
+  "reasons": [],
+  "assertions": {
+    "identity": {
+      "ok": true,
+      "actual": "fleet",
+      "expected": "fleet"
+    },
+    "run_dir": {
+      "ok": true,
+      "run_dir": "/var/lib/trirmc/cron/runs/shift-W46-20261118T205352Z"
+    },
+    "git_identity": {
+      "ok": true,
+      "has_name": true,
+      "has_email": true
+    },
+    "alert_credentials": {
+      "ok": true,
+      "has_host": true,
+      "has_pass": true,
+      "config_found": true
+    },
+    "disk_free": {
+      "ok": true,
+      "free_mb": 28757,
+      "min_free_mb": 500
+    }
+  },
+  "check_time": "2026-11-18T20:53:55.619020+00:00"
+}
