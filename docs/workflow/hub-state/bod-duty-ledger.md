@@ -5479,3 +5479,9 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **修复前真发禁复拍纪律认**（sde 护栏如实呈：每真发恒泄 promise+socket·timer.unref 零感）——复拍候 fsd 修复+cto 裁面+sde 三次重启窗全绿+**我复开在场窗**（触发=勘毕回执拍）。
 - **排雷时序纠偏**（b5da996a）：sg bare 仓 root 残留雷 03:09 已排（chown 归还+重推绿）——m-cos 转勘笔（sde 呈 sg 顶 21787a07）时序在排雷前——sg 顶现况 7ccb0096a→db77fb601·sde 541386205 已在链·备援通道修复窗可销。
 - 10✅/24·dev/sg 顶 db77fb601。下拍盯：cto 四向勘定卷+fsd 修复卷。
+
+## ㊿+758 · 03:20 拍——fsd 修复预勘毕（三件草案候 cto 裁面）·安静巡检零催 11-20 03:20 @bod
+
+- **fsd 修复窗预勘毕落树**（4499301f2+f695cb412 cos 738）：三件草案=①settled 拆分形定（connected 竞争 guard+waitReply 局部 done 零共享）/②真值单测 named pipe 临时 server 内存对拍 s1-s4（s1 修复前必红=回归钉·mock connector 掩盖教训钉补）/③泄漏收口 destroy 入 finally——**bug 机理自领确认**（settled 共享闭包=W3-b fsd 本席手笔自领·sde 实锚采认）——候 cto 裁改动面。
+- cto 双线在工（四向消费语义主勘+fsd 改动面裁）零催；sg 侧维持（R-HY 直办链 38min·2h 判据内）。
+- 本拍零划项（10✅/24）·dev 顶 f695cb412。下拍盯：cto 勘定卷/裁面卷→fsd 施工→sde 三次重启窗→复拍链。
