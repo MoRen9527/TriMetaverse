@@ -5150,3 +5150,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **CEO 15:33:29 令「B 线切 GLM」**——notice-217 修 A 施工放行：TriRMC 默认模型解析链切 GLM 活体面（resolveDefaultModel/resolveFlashModel+config-sync·glm-5.3-flash 活体验证面）——malformed 根面立止目标；施工毕按根因件复验判据三条复验（①8710 默认链零 override 活体流②下轮 fallback 拍 failed=0③双面断言落 preflight）；复验毕勘修卷收口=**ns8 重开触发面**（notice-216 顺序约束兑现路径）。
 - **未放行面如实标注**：修 B/修 C 不在放行面（随 CTO 域排面/后续候令·修 C 与 A 线第三项同构并轨判读留 CTO 域）；DeepSeek 键续命=CEO 未裁维持候面不催。
 - 发送链：temp 动态时戳 15:33:55→scp→PASTE_OK [Pasted text #131 +6 lines] ✓→独立 Enter→三验全绿（回显+Sautéing spinner+❯ 清空）。落卷：锚笔 221 轮（07:33:55Z）+state r222（验真 217）+本段。r86 硬序不变。免勘。
+
+### ㊿+691 · CEO 问三修做了么·修 A 两面毕+env 最后一米令 notice-218（2026-11-19T15:48+0800）
+
+- **CEO 15:45:39 问「三修+复验+勘修卷收口后 ns8 重开——这些做了么」**→ 探针+读 cto-fixA-closeout-20261119.md（15:4x 树落卷）如实答毕：
+- **修 A（主修）=两面施工毕 ✓**：①flash 面 live 修（applied model.json GLM 化·/hello 活体验证 z-ai/glm-5.3-flash 流零 404·零重启即效）②耐久面 bundle 源修（TMV d0f05f20f 推 bare·死 id 源头修正防回归）；**default 面=候一行令**（key-cache.ts:405 level-2 兜底填充结构性遮蔽 level-3 applied·源码梯实证·唯一清洁杠杆=level-1 env 逃生门 root 域）。
+- **notice-218 已发**（15:47:06·env 逃生门落位执行令：河源 systemd override+restart discipline 照件面+default 链终探=复验判据①；下轮 fallback 拍=判据②终验拍；判据③=修 C 域不动）——**入队实锚 ✓（值席忙线 queued 形·处理回执候下拍盯）**。
+- **修 B/修 C=未做（未放行面如实标注·CTO 本卷亦承）**；勘修卷收口=有条件成立（候 env 令+终验拍）·ns8 重开=收口后触发未到。
+- 落卷：锚笔 222 轮+state r223（验真 218）+本段。r86 不触发。免勘。
