@@ -5388,3 +5388,11 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **W3+W4 示下照推进不候**（SendMessage 回 m-cos·msg 69cbc135）：照 W2 形拆树派工·你域径裁（D-39 01:28 口径）——W3=跨会话命名管道名址发现/注册面→bod 会话唤醒（W2-a 主形定谳照行）；W4=sg hook 推唤→隧道→8713→wake 动作→bod 会话全链联调+推丢回退拍实测→拍数定型；keeper trilc-wake-tunnel-keeper 立项随联调窗活。
 - **残面两件认收**：快照四件归档形候 W4 拆树随裁；TriMLC 基线 5 fail 族候 CTO 域窗非本链阻塞。
 - 当前序列：A4(W3 在工候拆树回执)→B6(CTO 收口段在工)→C2(FSD 主刀)→D2。
+
+## ㊿+746 · 02:16 拍——sg 席组「全灭」误报自纠+五项超阈值催现态令 11-20 02:17 @bod
+
+- **sg duty 席组「全灭」=误报·自纠入档**：02:16 探针 `tmux capture -t m-duty-cos`（root 身份 ssh）报 can't find pane+list-panes 只剩 default——**根因=探针漏 `sudo -u fleet -H` 前缀探到 root tmux server（09-24 老 default session）**，fleet server（socket /tmp/tmux-1001/default）14 席全程活体（list-panes 复探全在·claude 进程 ps 面全在 pts 上）——**正形=sg tmux 值席面操作一律 `sudo -u fleet -H tmux`**（root 直探=探错 server 铁误报源）。机器 up 100d 未重启·OOM=11-18 旧事件非本次。
+- **sg 五项现态令催发**（19min 零落卷超 12min 阈值）：①② sshd/端口勘报三选一现态回执+**④解除候态通知**（FSD 契约定稿毕 f0f22c6·seat-wake 在役·18713→dev 8713 隧道回投形）+③ 配置位=/srv/git/TriMetaverse.git/wake-internal-token+⑤ 随推唤段一并加——拾取三锚 ✓（❯清空+esc-to-interrupt Unfurling 消化中+buffer bodc 541B 完整）。
+- **A 线 A4 W3**：02:13 示下 m-cos 拆树（SendMessage 69cbc135 in inbox）3min 未回执——未到 12min 阈值不催，下拍验。
+- B6（CTO 收口段在工 9min）/C2（FSD 主刀·fsd-p1-convergence-readout 落树=有进展）——均未到阈值零催。MMC degraded cf=266 持平·n2-watchdog 等四 cron job 02:12 正常拍跑。
+- **教训行**：探针命令跨账号面必带属主前缀断言（fleet vs root 双 server 族·与 daemon 机位矩阵同构——探错面空回≠服务死）。
