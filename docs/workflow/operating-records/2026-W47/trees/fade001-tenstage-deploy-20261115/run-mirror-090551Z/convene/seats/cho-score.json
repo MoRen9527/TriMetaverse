@@ -1,0 +1,40 @@
+{
+ "seat": "cho",
+ "run_id": "shift-W46-20261119T090551Z",
+ "scores": {
+  "I1": 3,
+  "I2": 2,
+  "I3": 1
+ },
+ "rationale": {
+  "I1": "锚文判读（每案先过）：本卷判读面基本成立——plan.json agent_readings 42/42 三件套（annotation/rationale/evidence_ref）全载，方向语义按「记录随周封存·活随人带走」贯彻：38 件 keep（one_shot_frozen/scatter_file_archive=记录封存）+3 件 top_level migrate（.shift-ade.json/company-demand-pool.md/daily-progress.md·migrate_carry_periodic 带 conf 与 rationale）+1 件 carry（tenstage-impl=活）；counts 与清单一表（migrate 0/keep 34/carry_over 2/top_level 8）、reconciliation 红闸过、migrate 实迁清单 n=0 自洽（四句门 1/2/3 绿）。扣 1 分位（组织/staffing 席角）：①fade001-tenstage-impl-20261113 disposition=carry（活树 ongoing_ledger_handover）却落位 plan_family=keep 且入 keep 清单——「活未随人带走」·与自身 disposition 字段矛盾零自释，锚文违背实锚 1 件；②index_drift 自证 index_activeTrees=0 vs 实盘 20+ 账实脱节，仅自注「旁证读数」而无对账断言承载——判读正确性留缺口。判读主体正确、单件锚文违背+账实对账缺位，取 3/4。",
+  "I2": "规划合理度两面读：正位=fallback_governance 活体在卷（batches_run=2≤batch_max=3·beyond_limit_skipped=[]·slow_order 载·alert threshold 0.2 未触·fast_path_failure_rate=0.0）+dce 四步降级链 rc=0（push 败面有 fallback merge 形）——批次/降级/告警三面规划成立。扣 1 分位（A2 机制完备性·按阻断级漏>调度漏>断言缺位序）：①服务供给断言缺位（A2-2 实锚）——preflight.json 七断言（week_math/hostname/git_hygiene/healthz/diverge/ceo_ruling/model_supply）无 agentPresets/令牌通道断言=供给缺位未入断言族防复发；②触发调度漏（A2-3 实锚）——score.json total_pending_weight=41、domain_breakdown.collection=0.0、families A/F/H 全 manual，采集窗未排入 trigger 链而倚值席人手，且 joint-review-trigger.json 本轮 run_dir 缺位=复盘触发件未落；③staffing 规划缺口——低置信 10 件（conf 0.60–0.72）而 fallback_governance.pending_review=[] 零抽验排班=复核岗负载未入计划。三处机制规划缺口实锚，取 2/3。",
+  "I3": "留痕质量正位：plan 域 42/42 三件套+verify 五检全 True 含 reconciliation+manifest/qualify/preflight/dce/rubric_report 时戳链齐。扣 2 分位（交接面留痕完整性·席角主责面）：①收口/交接终面零留痕——close.json、subjective-score.json、joint-review-trigger.json 三件 run_dir 全域 find 缺位（四句门 4_closeout 红「close verdict=None run_state=None」·RETRY 降已如实标注，但交接终件未落=留痕链断尾）；②判卷路由留痕失真双实锚——aggregate-initial.json 仅 cos/coo 两席 sheets_n=2 却标 missing_seats=[]+「缺席标注：全席形」（缺席席冒充全席形·初件失真在卷，aggregate-final 已勘为 cao/cpo/cto/cho/cfo 五席缺席但初件零勘误注），且 rescore-spawn-f5.log 止于「spawn cho…」半行（cho 无落卷行·cfo 零发起），root-cause 63938e61e 仅以引文散在 sheet/日志内、run_dir 无独立 root-cause 登记件落卷；③score-skill.json check_time=「2026-11-19T09:1xZ+8」占位假戳+evidence_ref 指 run-mirror-090551Z（run_dir 外·按 fail-closed 判读无效卷）。留痕主链在而终面/路由/戳纪律三断点，取 1/3。"
+ },
+ "evidence_ref": {
+  "I1": "plan.json#/agent_readings（42 件·disposition keep38/migrate3/carry1）+plan.json#/counts(migrate:0,keep:34,carry_over:2,top_level:8)+plan.json#/agent_readings[fade001-tenstage-impl-20261113]（disposition=carry vs plan_family=keep 矛盾件）+plan.json#/index_drift(index_activeTrees=0)+verify.json#/checks[reconciliation:True]+convene/aggregate-final.json#/four_gate.1_no_miss",
+  "I2": "preflight.json#/assertions（七断言含 model_supply·无 agentPresets/令牌通道断言）+score.json#/score.total_pending_weight=41+score.json#/score.domain_breakdown.collection=0.0+score.json#/score.families[A/F/H](state=manual)+plan.json#/fallback_governance.pending_review=[]+plan.json#/fallback_governance(batches_run=2·beyond_limit_skipped=[])+dce.json#/steps(rc=0×4)",
+  "I3": "run_dir 全域清单（close.json/subjective-score.json/joint-review-trigger.json 缺位·find 实证）+convene/aggregate-final.json#/four_gate.4_closeout(ok:false·close verdict=None)+convene/aggregate-initial.json#/(sheets_n:2,missing_seats:[],缺席标注:全席形)+rescore-spawn-f5.log（止于「spawn cho…」半行·cfo 零发起）+score-skill.json#/check_time(占位 09:1xZ+8)+score-skill.json#/entries[*].evidence_ref(run-mirror-090551Z 出域引用)"
+ },
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "动作面 rc 全绿（dce 四步 pull/migrate/commit/push）但 loop 闭环三漏环节实锚：①阻断级漏=判卷路由面——本轮 convene 初 spawn 仅 cos/coo 两席落卷（七席缺五·aggregate-final 实锚），重 spawn 链（rescore-spawn-f5.log）又止于「spawn cho…」半行且 cfo 零发起，root-cause 63938e61e 载向正确但 run_dir 无独立 root-cause 登记件落地；②断言缺位=服务供给面——preflight 七断言有 model_supply 无 agentPresets/令牌通道断言（供给缺位未入断言族防复发）；③调度漏=触发调度面——collection 首采连续轮未落（total_pending_weight=41 未动·domain_breakdown.collection=0.0）、joint-review-trigger.json 缺位。修法（自揪+防复发闭环）：spawn 失败 fail-closed 显红+缺席席 root-cause 件强制落 run_dir+spawn 完成度断言（七席计数与 run_dir/seats 目录对表入聚合前置）；agentPresets/令牌通道断言与 model_supply 同构入 preflight 断言族；T+10min 采集/评分/复盘三窗各排 trigger 链自动形——下轮三核点=pending_weight 应降、七席应齐、断言族应扩。",
+   "evidence_ref": "preflight.json#/assertions（无 agentPresets 面）+score.json#/score.total_pending_weight=41+score.json#/score.domain_breakdown.collection=0.0+convene/aggregate-final.json#/aggregate_initial.seats_missing(cao/cpo/cto/cho/cfo)+rescore-spawn-f5.log(止于 spawn cho 半行)+run_dir 清单(joint-review-trigger.json 缺位)",
+   "check_time": "2026-11-19T12:28:29Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "本域读数限 plan.json 卷内域（notice-187 周树面施工/执行自产树=排除面零评分零引证·只对 run_dir 判读件表态）：fade001 系判读 18 件中 17 件 one_shot_frozen（conf 0.72–0.93·记录随周封存锚贯彻）+1 件 fade001-tenstage-impl-20261113=active_tree_ongoing/ongoing_ledger_handover（conf 0.78·活）。完善度缺口三处：①活树去向字段矛盾——tenstage-impl disposition=carry 却 plan_family=keep 且落 keep 清单，「活未随人带走」锚文违背且零自释（组织角度=交接对象未定·承接岗悬空）；②活树承接台账账实脱节——index_drift 自证 index_activeTrees=0 vs 实盘 20+，差额无对账断言承载=ledger 闭环未落；③低置信件零抽验排班——10 件 conf<0.75（0.60–0.72）而 pending_review=[]，复核岗负载零规划。修法：去向字段单值化（carry/keep 二选一并强制自释）+active-tree ledger 差额入 verify 对账断言+低置信件按 conf 升序排入 pending_review 抽验位（ staffing：复核轮值排班面）。",
+   "evidence_ref": "plan.json#/agent_readings[fade001-tenstage-impl-20261113]（disposition=carry vs plan_family=keep）+plan.json#/index_drift(index_activeTrees=0 vs 实盘 20+ 自注)+plan.json#/fallback_governance.pending_review=[]+plan.json#/agent_readings(conf<0.75 计 10 件)",
+   "check_time": "2026-11-19T12:28:29Z"
+  },
+  {
+   "topic": "score 段顺序勘定",
+   "rationale": "表态：先 CLI 后 skill。理由锚三面：①产物依赖——skill 段判卷输入全由 CLI 段产物定基（score.json 机判 59 基座+pending 41 口径+verify 五检红闸+plan 42 件三件套，考卷 verdict_rule I=4/3/3 亦由 score.json#/families[I] 承载），基座缺位则 skill 段无从对表判卷；②判卷输入完备性——先 CLI 方可立「判卷输入完备性」前置断言拦 skill 段空转（本轮反面实证：score-skill.json check_time=占位假戳 09:1xZ+8+evidence_ref 出域指 run-mirror+close.json 缺位，正是判卷输入未定基/链停语境下 skill 段失稳形态）；③因果序——CLI 机判 09:11:23Z 真戳先行在卷，close/joint-review 汇总段必居两段产物齐后（本轮 close 缺=汇总段未启实证），若倒置则汇总段永失红闸。结论：严守先 CLI 后 skill，并在 skill 段前置「输入完备性断言」（score.json+verify.json 真戳在卷方可启 skill 判卷），防本轮假戳/出域引用形态复发。",
+   "evidence_ref": "score.json#/check_time=2026-11-19T09:11:23Z（机判基座先行真戳）+score.json#/score.families[I]（verdict_rule I1=4/I2=3/I3=3·skill 段判卷输入锚）+score-skill.json#/check_time（占位 09:1xZ+8 假戳）+score-skill.json#/entries[*].evidence_ref（run-mirror 出域）+convene/aggregate-final.json#/four_gate.4_closeout(close verdict=None·汇总段未启实证)",
+   "check_time": "2026-11-19T12:28:29Z"
+  }
+ ],
+ "check_time": "2026-11-19T12:28:29Z"
+}

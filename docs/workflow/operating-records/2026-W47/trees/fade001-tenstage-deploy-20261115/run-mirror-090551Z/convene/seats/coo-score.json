@@ -1,0 +1,40 @@
+{
+ "seat": "coo",
+ "run_id": "shift-W46-20261119T090551Z",
+ "scores": {
+  "I1": 3,
+  "I2": 2,
+  "I3": 1
+ },
+ "rationale": {
+  "I1": "锚文判读（必经步·「这是一周的记录，还是这一周的活——记录随周封存·活随人带走」）：记录面贯彻——10 件散件 scatter_file_archive→keep 封存、13 件 fade001 系 one_shot_frozen（单日期毕报/评审/closeout·记录随周封存·git 可溯）、OP 双件 expected_absent/one_shot、CARRY 两件 frozen 只归位不解冻；活面判读成立——3 件 top_level 周期滚动件（.shift-ade/company-demand-pool/daily-progress）sanction 迁·conf 0.60-0.80、tenstage-impl 活树 ledger 承接、bod-tick/mount-log 等自建件新周自建预期态。42/42 三件套（annotation/rationale/evidence_ref）全载、八件 top_level 三态 sanction 全载、verify 五检（含 reconciliation/migrate_vs_index·strict_mode）全 True+dce migrate rc=0 旁证。扣分实锚两处账面张力无内卷自释：①counts.migrate=0/migrate=[] vs agent_readings disposition=migrate×3——正确性赖 verify+dce 旁证非卷内直证；②tenstage-impl family=active_tree_ongoing+disposition=carry vs plan_family=keep 字段自相矛盾，且 index_drift 自证 index_activeTrees=0 vs 实盘 20+——「活随人带走」分支 run_dir 内零落卷直证。判 3/4。",
+  "I2": "经营/节奏取舍面：①批次守硬时钟✓——preflight week_math sunday_gate=exempted(loop)+note「real cron Sunday gate unchanged」（schedule/cron 面零动断言在场）+batch_size 15/max 3×batches_run 2=⌈slow_total 24/15⌉ 相洽·beyond_limit_skipped=[]；②止损分支可执行性✓——dce push 首路 unstaged-changes→fetch/merge 兜底链接管 rc=0（stderr_tail 留痕·活体非声明）+retry(max1)/alert(rate 0.0 未触发)/pending_review=[] 面齐；③窗口资源冲突如实零列（本轮零冲突）。扣分两处：①dce overflow_checks 三判据 checked=false 悬置声明位（零外溢未实核·如实注但闭环缺）；②loop 窗调度规划缺位——采集/评分/复盘三窗未排 trigger 链（joint-review-trigger.json 缺席·collection 首采未落 pending_weight 41），应自动形倚值席人手=节奏面调度漏；slow_order 24 件全 priority=2/default_keep 同质化零辨析位。判 2/3。",
+  "I3": "plan 域留痕强（42/42 三件套+verify 五检+逐件 check_time ISO 真戳）；判卷/闭卷域留痕断裂按 dimA 三档实锚：阻断级——convene spawn 三席缺席（rescore-spawn.log 仅 spawn cos/coo 半行无时戳·root-cause 63938e61e 与 agentPresets 词面仅见 convene/seats/cos-score.json 席卷·run_dir 内零机制登记件落卷）；调度漏——材料清单 close.json/subjective-score.json/joint-review-trigger.json 三件全缺+score.json total_pending_weight=41（manual 31+subjective 10）连续轮未动；断言缺位——preflight 七断言有 model_supply 无 agentPresets/令牌通道面（供给面未入断言族·未防复发）。另 score-skill.json check_time=「2026-11-19T09:1xZ+8」占位假戳违判卷时点打戳纪律+evidence_ref 指 run-mirror-090551Z/（run_dir 外=无效卷 fail-closed）+其权重面（objective 65/I 族 14/11/10·35 分制）与 score.json 并盘口径（机 59/值 31/主 10·I=4/3/3）双轨不同源。机制自揪登记件 run_dir 内未见=自揪加分面未落·本席改善意见三条承自揪激励面。判 1/3。"
+ },
+ "evidence_ref": {
+  "I1": "plan.json#/agent_readings(42 件·三件套 42/42·disposition keep38/migrate3/carry1)+plan.json#/counts(migrate:0·keep:34·top_level:8)+plan.json#/index_drift(index_activeTrees=0·note 实盘 20+)+verify.json#/checks[reconciliation,migrate_vs_index]+dce.json#/steps[migrate rc=0]",
+  "I2": "preflight.json#/assertions.week_math(sunday_gate_note)+plan.json#/fallback_governance(batch_size 15·batch_max 3·batches_run 2·beyond_limit_skipped=[]·pending_review=[]·alert.rate=0.0)+dce.json#/steps[push stderr_tail 兜底链 rc=0]+dce.json#/overflow_checks(checked=false×3)",
+  "I3": "rescore-spawn.log(仅 spawn cos/coo 半行)+convene/seats/cos-score.json(63938e61e/agentPresets 词面唯一在卷位)+score.json#/score.total_pending_weight=41+score.json#/score.domain_breakdown(collection=0.0·subjective=0.0)+preflight.json#/assertions(七断言无 agentPresets 面)+score-skill.json#/check_time(占位 09:1x)+score-skill.json#/entries[*].evidence_ref(run-mirror-090551Z/ 出域)+run_dir 件族存在性清点（close.json/subjective-score.json/joint-review-trigger.json 缺席）"
+ },
+ "improvement_opinions": [
+  {
+   "topic": "周迁移质量",
+   "rationale": "动作面 rc 全绿（dce 四步 pull/migrate/commit/push）但 loop 闭环三漏环节实锚：①阻断级漏=判卷路由 convene spawn 三席缺席且 root-cause（63938e61e）零 run_dir 登记件落卷；②断言缺位=agentPresets/令牌通道供给面未入 preflight 断言族（七断言仅 model_supply·防复发缺位）；③调度漏=collection 首采连续轮未落（total_pending_weight=41 未动）·T+10min 自动采集窗形未排 trigger 链而倚值席人手。修法：spawn 失败 fail-closed 显红+缺席席 root-cause 件强制落 run_dir；agentPresets/令牌通道断言与 model_supply 同构入 preflight 断言族；采集/评分/复盘三窗各排 trigger 链自动形——下轮三闭环核点=pending_weight 应降·convene 席位应齐·断言族应扩。",
+   "evidence_ref": "preflight.json#/assertions+score.json#/score.total_pending_weight+score.json#/score.domain_breakdown.collection+rescore-spawn.log+convene/seats/",
+   "check_time": "2026-11-19T12:05:40Z"
+  },
+  {
+   "topic": "fade-001 自身完善度",
+   "rationale": "本域读数（plan.json 域·notice-187 周树面排除不引证）：fade001 系 18 件=13 件 one_shot_frozen（conf 0.72–0.93 判读一致·记录封存锚贯彻）+4 件快道 scatter_file_archive+1 件 ongoing_ledger_handover（tenstage-impl conf 0.78）。完善度缺口三处：①tenstage-impl disposition=carry 与 plan_family=keep 字段矛盾零自释·活树承接 ledger 差额无对账断言（index_drift 自证 index_activeTrees=0 vs 实盘 20+账实脱节）；②低置信件 10 件 <0.75（0.60–0.72·含 .shift-ade 0.6/task-inventory 0.6/fsd-sleepgap 0.62）而 pending_review=[] 零抽验承载；③低置信 migrate 件实迁落位仅 verify/dce 旁证非卷内直证。修法：carry/keep 去向字段单值化+active-tree ledger 差额入 verify 对账断言+<0.75 件排 pending_review 抽验位。",
+   "evidence_ref": "plan.json#/agent_readings+plan.json#/index_drift+plan.json#/fallback_governance.pending_review=[]",
+   "check_time": "2026-11-19T12:05:40Z"
+  },
+  {
+   "topic": "score 段顺序勘定",
+   "rationale": "表态：先 CLI 后 skill。理由锚三面：①产物依赖——skill 段判卷输入全由 CLI 段产物定基（score.json 机判 59 基座+pending 41 口径+verify 五检红闸+plan 42 件三件套·考卷 verdict_rule I=4/3/3 亦由 score.json family I 承载），基座缺位则 skill 段无从对表判卷；②判卷输入完备性——CLI 先行可立「判卷输入完备性」前置断言拦 skill 段空转，本轮 skill 卷占位假戳+出域引用+close 段未启即断基失稳形态的实证反面教材；③因果序——CLI 机判 09:11:23Z 真戳先行在卷·skill 卷随后落卷而 close/joint-review 汇总段必居两段产物齐后（本轮 close.json 缺=链停未启实证），倒置将令汇总段永失红闸。严守先 CLI 后 skill+输入完备性断言前置。",
+   "evidence_ref": "score.json#/check_time=2026-11-19T09:11:23Z(机判基座先行真戳)+score.json#/families[I](verdict_rule I1=4/I2=3/I3=3)+score-skill.json#/check_time(占位 09:1x·断基失稳形态)+rescore-spawn.log(close/joint-review 段未启实证)",
+   "check_time": "2026-11-19T12:05:40Z"
+  }
+ ],
+ "check_time": "2026-11-19T12:05:40Z"
+}
