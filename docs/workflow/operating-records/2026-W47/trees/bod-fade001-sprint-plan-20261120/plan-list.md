@@ -14,8 +14,8 @@
 
 - [x] ~~A1 桥段：job2 提频 30min→10min（BOD 自面 cron 改参）~~ ——**01:28 毕**（912ebefb）·01:42 CEO 令再提 6 分钟拍（催办制升级·见机制行）
 - [x] ~~A2 W1：sg 裸仓 post-receive hook 第四职能扩展（推唤信号）~~ ——**01:35 毕**（值席毕报）
-- [ ] **A3 W2：TriMLC wake 端点小件（8713）+通道形勘定** ← **当前最近未毕项**——m-cos 承接毕（01:49 回执）：拆树五步落卷（cos-w2-wake-endpoint-dispatch-20261120.md·commit f20647bd9）·三席已派=W2-a 通道勘定 m-cto / W2-b 端点骨架 m-fsd / W2-d 部署重启链 m-sde（候态预勘已启）→W2-c 白盒门禁→W2-e 交付落卷（m-cos 面）；sg 侧配合需求清单候 m-cto 勘定毕回传 BOD→转值席组
-- [ ] A4 W3：会话唤醒接线（tmux/cc-socks 面→bod 会话）——候 A3
+- [x] ~~A3 W2：TriMLC wake 端点小件（8713）+通道形勘定~~——**02:13 毕**（W2 五步全毕：a 通道勘定 52ce83db6 / b 端点施工 f0f22c6 / c 门禁 PASS 7035ec7dd / d 重启部署 fd7178c63 / e 汇卷 3510844eb·定名 seat-wake 消歧在役·值面探针正向 200 {accepted:false,wired:false} =未接线 stub 正确形+负向 401·重启窗 3min 11 步 cron 18 job 零损穿越·sg 五项清单转办毕+token 分发毕双端 sha 对表绿·汇卷锚 cos-w2e-closeout-20261120.md）
+- [ ] **A4 W3：会话唤醒接线（跨会话命名管道 uds:\pipe\LOCAL\cc-msg-*→bod 会话·W2-a 勘定主形·tmux/cc-socks 本机勘否）** ← **当前最近未毕项**——候 A3 ✓ 已满足·02:13 BOD 示下照 W2 形拆树推进（管道名址发现/注册面勘定+keeper trilc-wake-tunnel-keeper 立项随 W3/W4）
 - [ ] A5 W4：联调+兜底验证（推丢回退拍实测）→拍数定型——候 A4
 - [ ] A6 auth/通道勘定结卷（隧道形落卷+sg 侧许可确认）——随 A3 并行·毕于 A5 前
 
