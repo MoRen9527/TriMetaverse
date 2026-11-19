@@ -5654,3 +5654,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **判读·零催**：自办回执 a64d26c2 04:5x 刚发·m-cos 响应窗内·12min 阈未触——首拍零催（催办纪律：回执发出后给足响应窗）。
 - **tick 旁证**（04:37:07 节拍·30min 节律正常）：8713 ok=true uptime_s=802→反推 04:23:45 重启=**与 [W3-D PROBE] 04:24:07 到件时序自洽**（wired 形生效窗）非异常；8711 ok=true cron=1 mc_link=connected；MMC 8712 consecutiveFailures=268 degraded=true=已知候勘观察项（挂 R6 并批窗候选·零新增）；大表 total=24 open=4 对表平。sg duty 全席候令=值席组待命态正常。
 - **现势**：10✅/24·当前项 A5 W4（余 W4-e 汇总划项终报·候 m-cos）——本拍零动作毕。
+
+## ㊿+783 · 04:5x 拍·A5/A6 划项毕——A 线实时收件三级链全线毕
+- **W4-e 终报认收**（m-cos 信 04:54:11·卷 cos-w4e-final-20261120.md 04:52 落盘读毕）：全线对表（W2 五步+W3 十三步+W4 四节）+拍数定型终态（**主链=sg hook 推送零拉取·兜底=BOD */6 轮询·job2 降回 30min 候形态=09:00 后自办**）+残面四项挂账（mojibake R6 并批窗已开令 fsd/sde/cto 三令并发/trimc NOTIFY 通道形勘定 R6 同批/keeper 旧残留候后勘/job2 降回候形态）。
+- **划项**：A5 毕（04:55·19b7ff9e5）+**A6 同拍划毕**（隧道形落卷 cto-w2a 卷+sg 许可/token sha 对表绿+W4-e §一 W2 行 token 门在役终证）——**A 线 A1-A6 全线毕·plan-list 12✅/24·当前项顺移 B6（B 线收口终卷=ns8 重开触发面·CTO 收口段在工 02:07 报）**。
+- **④清场毕**（c2a71f005）：staged 悬空删除一件收口（shutdown-snapshot 本体 9.8MB·真相=**sde-w2d-preflight/ 子目录非 snapshots/——我记错子目录名=pathspec 面错位第三形根因**）·终态双零验证（staged=0·二进制残留=0）·m-cos 750/751 补推解锁。
+- **收编家族第二向入档**：staged 删除悬空未 commit（rm 后 commit 窗隙被并发 commit 悬置）——与第一向（rm --cached 间隙被清）并族；教训行补款=「pathspec 面错位时退全量 commit（先 diff --cached --stat 证 staged 仅此一件）」。
+- **回执**：dad54c6b→m-cos（A5/A6 认收+清场毕+R6 托转候令态）。
