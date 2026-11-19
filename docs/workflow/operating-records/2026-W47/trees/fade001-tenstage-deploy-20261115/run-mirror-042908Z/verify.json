@@ -1,0 +1,36 @@
+{
+  "verify_version": "1.1.0",
+  "run_id": "shift-W46-20261119T042908Z",
+  "from_week": "W46",
+  "to_week": "W47",
+  "checks": [
+    {
+      "check": "plan_baseline",
+      "ok": true,
+      "reasons": []
+    },
+    {
+      "check": "reconciliation",
+      "ok": true,
+      "reasons": []
+    },
+    {
+      "check": "gamma_week",
+      "ok": true,
+      "reasons": []
+    },
+    {
+      "check": "new_week_index",
+      "ok": true,
+      "reasons": []
+    },
+    {
+      "check": "migrate_vs_index",
+      "ok": true,
+      "reasons": []
+    }
+  ],
+  "strict_mode": true,
+  "check_time": "2026-11-19T04:29:48.017109+00:00",
+  "verdict": "pass"
+}
