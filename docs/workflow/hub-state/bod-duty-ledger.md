@@ -5041,3 +5041,7 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 ### ㊿+672 · CEO 领令登记·ns6 verdict 出后提 score 顺序勘定七席表态谱（2026-11-19T11:35+0800）
 
 - **CEO 11:35:17 领令**：等 ns6 七席聚毕出 verdict 后，把「score 段顺序勘定」topic 的七席逐席表态（先 CLI 后 skill vs 先 skill 后 CLI+理由锚）呈 CEO——判断项非裁定项·候您终裁。**BOD 候办义务**（双拍盯守承接）：ns6 aggregate-final 落卷/verdict 出（值席短报随节点到）→BOD 提 ns6 聚合卷+七席席卷实锚→提取新 topic 逐席表态→大白话呈报（含分数与 verdict 照 r86 硬序并盘）。候办态在册·免勘。
+
+### ㊿+673 · job1 11:43 拍归档一行（2026-11-19T11:43+0800）
+
+- 11:37 拍（拍延迟 0min·tick 新鲜 6min04s）：全席候令（ns6 spawn 聚合在途·值席盯链中·拍面瞬时值）；四口稳（8713 满电 ac=true·8711 lastPoll 03:36:42Z pollFail=0·河源 active）；MMC cf=251 持平（logs 11:36:48 新鲜）；大表 total=24 open=4。候办面：ns6 verdict 出后提 score 顺序勘定七席表态谱（㊿+672 在册）。免勘免通报。
