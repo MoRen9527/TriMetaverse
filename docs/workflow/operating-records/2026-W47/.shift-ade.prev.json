@@ -21,7 +21,7 @@
             "reason": "already_exists"
           }
         ],
-        "check_time": "2026-11-19T02:42:55.982175+00:00"
+        "check_time": "2026-11-19T03:07:26.663676+00:00"
       }
     },
     {
@@ -47,7 +47,7 @@
           }
         ],
         "errors": [],
-        "check_time": "2026-11-19T02:42:55.983865+00:00"
+        "check_time": "2026-11-19T03:07:26.664805+00:00"
       }
     },
     {
@@ -68,7 +68,7 @@
         },
         "changes": [],
         "errors": [],
-        "check_time": "2026-11-19T02:42:56.002186+00:00"
+        "check_time": "2026-11-19T03:07:26.680357+00:00"
       }
     },
     {
@@ -87,17 +87,6 @@
     }
   ],
   "escalation_8w": [],
-  "check_time": "2026-11-19T02:42:56.007819+00:00",
-  "notify_failures": [
-    {
-      "attempt": 1,
-      "status": "email_failed",
-      "error": "Connection unexpectedly closed"
-    },
-    {
-      "attempt": 2,
-      "status": "email_failed",
-      "error": "Connection unexpectedly closed"
-    }
-  ]
+  "check_time": "2026-11-19T03:07:26.685669+00:00",
+  "notify_failures": []
 }
