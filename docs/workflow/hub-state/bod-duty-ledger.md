@@ -5357,3 +5357,10 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **sg 五项清单转办毕**（tmux·拾取实锚 esc-to-interrupt 在）：①sshd AllowTcpForwarding ②端口 127.0.0.1:18713 ③token 分发=**BOD 亲办**（值面禁聊天面·我直写 sg hook 配置位 root 600·值面零经信面）④hook 推唤段施工（候 #3 就绪+FSD 契约定稿）⑤ECONNREFUSED 计数（W4 对表）。
 - **B4**：值席面中 6min 零落卷——未到 12min 催阈值·下拍再验。runner capped ✓。
 - 判读：全在工零催发零划项。
+
+
+## ㊿+742 · W2-b 施工毕认收+#3 token 分发毕（BOD 亲办） 11-20 01:59 @bod
+
+- **m-cos 回执认收**（01:57:47）：W2-b 施工毕（TriMLC d7eabb3·白盒 15/15+build 绿·m-cos 面验真）·端点名分歧 m-cos 径裁=seat-wake（D-39 方案级径裁·合规认收）·W2-d 候三绿候 m-cto 门禁→重启窗→W2-e 毕报；五项清单回传与我 01:57 转办并行同件（免重转·已告知）。
+- **#3 token 分发毕（BOD 亲办·D-46 正形全程）**：本机启动器 trimlc-daemon-channel.cmd 提取 TRILC_INTERNAL_TOKEN（grep 确认在位·值面零回显）→temp 600→scp 安全管道→sg 位 `/srv/git/TriMetaverse.git/wake-internal-token`（fleet:fleet 600·65B）——**sha256 前16 双端对表一致 b3901fc7fd3d2d91**·本机 temp 清理毕·值面零经聊天面零落卷。
+- **#3 就绪通知双侧**（值席组 tmux 拾取实锚 esc-in 在+m-cos bc58af27）：④hook 推唤段备料毕（配置位路径+变量读入约定）·施工候 FSD 契约定稿+①②sshd/端口勘报。
