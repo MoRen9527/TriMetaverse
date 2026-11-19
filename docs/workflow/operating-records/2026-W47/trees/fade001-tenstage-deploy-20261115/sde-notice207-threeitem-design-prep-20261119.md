@@ -32,13 +32,14 @@
 - **勘定探针预备**：8710 agent call 一发样树（原始输出形态实录——三面定位实证面）
 - 白盒随卷（root-cause 落卷逻辑案+三面定位结构案）
 
-## 件④ · close CLI 断言族（notice-208·七席 I3 相抵面口径统一）
+## 件④ · close CLI 断言族（notice-208＋notice-210 勘正·七席 I3 相抵面口径统一）
 
-- **断言族三面**（close_cli 断言面新增·自动可验收口）：
+- **收口顺序勘正承录（notice-210）**：**先 skill 后 CLI**——close skill 智能面先行（COS 自检总结）→毕后 close CLI 机械验正面（收口断言）——notice-208「先机械后智能硬序」误文废止（score 段才是先 CLI 后 skill·两段相反勿互套）。断言族 placement=**收口末段（skill 毕后 close_cli 终位）**＝现役链序零改。
+- **收口恒等式承录（notice-209 勘正·双模语义作废）**：有无七席联审·收口都是 fade-001 自身自检与总结（close skill＋CLI 承载）——七席联审≠收口（联审=进化面·与收口两义分立勿混装）。
+- **断言族三面**（close_cli 断言面新增·自动可验收口·内容全保留）：
   ①时点断言——close/manifest/notify 三面 check_time 写序统一断言（写序产物 vs 定稿态口径分立承认：close 时点=段 8·manifest=段 9 定稿态——pending_manifest 形=合法序·终值回填审计行位=close 增 audit 行载 manifest 终值引用面）
   ②hash 断言——evidence sha256_16 全载＋裸 hash 拒钉维持（r1 缺陷③防复发核·WP7 结构门现役面核对表）
   ③run_state 口径断言——单值源 source 字段强制（run_state_source ∈ {manifest, pending} 值域断言·manifest_polluted/manifest_malformed=毒化面如实）＋CAO 案 manifest_late 枚举形候勘接入（候 CAO 值面定谳随批）
-- **④先机械验后智能判硬序**（与款二同构）：close CLI 机械断言族毕→close skill 智能判（COS 域）接续——禁跳序禁并行（链序断言·close_cli 在 close_skill 后=现役序核——机械断言族=close_cli 段内新增·智能判=close_skill 段——序面=close_skill 先（产卷）→close_cli 验（断言族）——「先机械验后智能判」语义=验收序：机械面先验毕→智能判面接续读——链内=close_skill→close_cli（现役）——断言族挂 close_cli 段（机械验终位）✓零链序改）
 - 白盒随卷（时点序案/hash 全载案/run_state 值域案/manifest_late 候位案）
 
 ## 施工序候（接入后排面）
