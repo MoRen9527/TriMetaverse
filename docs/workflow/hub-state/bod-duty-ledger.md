@@ -6184,4 +6184,4 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 15:16 **探 B′ 直投值席窗毕**（特征串「BOD直投·669探B′」grep count=1 消费实证）——四步=linger 态/user manager 态/user unit 目录/crontab 现状·零 root 纯只读·读数回 CTO 定形卷→窗 B 解冻候 COO 统排。
 - 窗链现势：窗 A=定谳毕候周日终验 / 窗 B=FREEZE 维持·探 B′ 值席在途·解冻判据=定形卷出 / 窗 C=补位在途 / 候裁面=支 1+node 22 呈 CEO 中（支 2 双席同向零需求知情面）。
 
-——BOD·2026-11-20T15:16:00+0800 前后链·落款现查 15:14:34+0800（date 现查原值·卷毕时戳=commit 时戳·D-47 正形）
+——BOD·2026-11-20T15:15:45+0800（date 现查原值·卷毕时戳=commit 2b8573e3b 时戳·初稿落款旧值嵌入已勘正·D-47 正形）
