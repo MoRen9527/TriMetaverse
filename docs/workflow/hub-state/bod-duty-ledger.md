@@ -7115,3 +7115,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候读数=探 1/2 毕报（cos- 前缀落树）→fsd 归档毕报→CTO 终审→COO 定谳链。
 
 ——BOD·2026-11-21T01:08:42+0800（date 现查原值·D-47 正形）
+
+### ㊿+975 · 探 1 读数采认·401 升商业面·技术线停（现查 2026-11-21T01:10:04+0800）
+
+- merge 采认 cos-upstream-probe1-读数卷-20261121.md（值席 17:06:25Z 时戳·四零触恪守零复探）：**探 1 rc=401**（chat 端点 api.deepseek.com/chat/completions·R-HY 充值 key·Bearer 形·max_tokens 8 参数差如实注）——**rc=401 分支命中=key 无效/渠道不符→升商业面·充值渠道勘定归 CFO·技术线停**（探 2 零跑·rc=200 条件未兑现）。
+- **双面双端点同 401=key 面系统性 401**（chat 面+anthropic-compat 面 P3 前卷同 key 同 401——渠道/账户面候选升主位）·对照面：R-HY 面同 key 在役史（fallback chain 配置在役）但 R-HY 真发 rc=200 活体证未见（互证免探条件未兑现·探 1 照跑正形）。
+- 商业面问询呈 CEO（对话面）：key 与充值账户对表（key=充值后新发 or 旧 key？）——CFO 充值渠道勘定链并行。
+- 错误体线索缺位如实档（一发即停零复探恪守·body 线索未留存非静默）。
+
+——BOD·2026-11-21T01:10:04+0800（date 现查原值·D-47 正形）
