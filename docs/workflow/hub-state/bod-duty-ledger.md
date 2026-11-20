@@ -6291,7 +6291,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ### ㊿+865 · S1 红即停·visudo 防呆硬门首用拦截·v2 勘修链开（现查 2026-11-20T17:45:07+0800）
 
 - 17:4x CEO 粘贴 v1 → visudo -cf 红（防呆硬门首用拦截成功·CEO 恪守零硬闯：未 chmod 未跑 at·止损线如实兑现）→ BOD 即令跑步 3 兜底删件+visudo 复验原态（sudoers.d 坏件=sudo 全局拒面·止损第一优先）。
-- 三族特殊字符爆（visudo 读数原样转 CTO）：① 逗号=列表分隔符未转义（RW2_USERMOD systemd-journal,adm）② 被读成 netgroup 符号（RW2_CHOWN_FLEET/TRIMC 尾部 ）③ 被读成组引用语法（RW2_SNAP_TRIMC printf 串）——sudoers 对 Cmnd_Alias 参数内特殊字符全敏感。
+- 三族特殊字符爆（visudo 读数原样转 CTO）：①「,」逗号=列表分隔符未转义（RW2_USERMOD：systemd-journal,adm）②「+」被读成 netgroup 符号（RW2_CHOWN_FLEET/TRIMC 尾部「{} +」）③「%p|%u|%m」被读成组引用语法（RW2_SNAP_TRIMC printf 串）——sudoers 对 Cmnd_Alias 参数内特殊字符全敏感。
+- 865 勘正（同段自领）：原笔经未引号 heredoc 落卷——反引号被 bash 命令替换吞空（seg-backtick-shell-substitution 家族自犯·stderr 六报实锚）②③两行字符面受损即勘——落卷正文行内代码一律「」形禁反引号（275 教训再领）。
 - **勘修 v2 请已发 m-cto**（建议脚本封装纯净形=逻辑封 /usr/local/sbin/rw2-*.sh+白名单四行零参数——ALLOWLIST 精确等值族教训同构）；m-coo 窗冻结态知会（S1 红即停·S2-S7 零触·at 未落地零窗约束在计）。
 - 开窗条件①回退=v2 在铸态·铸件 v2 经 COO 采认转 BOD 即呈 CEO 二次粘贴。
 
