@@ -7155,3 +7155,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候「已传」回音即转值席灌卡令。
 
 ——BOD·2026-11-21T02:35:57+0800（date 现查原值·D-47 正形）
+
+### ㊿+980 · CEO「已传」·新 key 灌卡令直投毕（现查 2026-11-21T02:46:12+0800）
+
+- 02:45 CEO「已传」回音（新 key 落 sg /tmp/ds-key-new-20261121·600·CEO 面安全形三步走毕·KEY_TRANSFERRED_OK 回执）——**BOD 灌卡令直投值席毕**（capture count=1 实证）：读文件（读毕即删 D-46 清理面）→本域 AES-GCM 加密→card PUT upsert e-deepseek 条目（model=deepseek-flash 策略节不动·GLM 零触）→P1 新 key sha16 对表（异值=新 key 实锚）→P3 复发一发真探（rc=200=定谳绿·仍 401 如实报零硬试）→P4 mtime 新时戳→毕报 cos- 前缀+回执 fsd（总成→STE→CTO→COO 定谳→ns9 点火链）。
+- 候 P3 读数=换 key 定谳位（200=供给轨绿·复跑链启；401=新 key 亦拒=平台账户面升 CFO/CEO 再勘）。
+
+——BOD·2026-11-21T02:46:12+0800（date 现查原值·D-47 正形）
