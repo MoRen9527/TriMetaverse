@@ -32,3 +32,23 @@ B 形 keeper 族九条（duty-night-patrol/sg-seat-watchdog/bare-fetch-all/workt
 ## 使用依据
 
 探 B′ 四步读数卷 d3d6893ab（Linger/manager/洁净面/crontab 九条·零 root 纯只读）；TriMMC app.js token 门源读（TRIMC_INTERNAL_TOKEN 请求期读取·运行中注入注）；11-19 双死键日实录（nohup 零自愈反证）；restart discipline 谱系；D-46/D-47。
+
+---
+
+## 复验位裁定段（窗 B 迁移毕报 d97470dae 对表·CTO 独立复测·2026-11-20 14:0x CST）
+
+**复验裁定=PASS（迁移毕·A 形托管代生效）**——独立复测全绿：
+
+| 条款（定形裁决卷） | 值席毕报 | 本席独立复测 | 判 |
+|---|---|---|---|
+| unit 落装形 | EnvironmentFile+Restart=always | 现读全文 ✓：WorkingDirectory/ExecStart=dist/src/index.js/Environment TRIMC_PORT+HOST/EnvironmentFile=.env/Restart=always RestartSec=5/WantedBy=default.target——定形锚逐项吻合 | ✓ |
+| boot 常驻 | enable rc0 | **is-enabled=enabled ✓** | ✓ |
+| 迁移序零裸停 | old 1491977 验对→owner-kill→1s FREE→start rc0→新 pid 1816473 | LISTEN pid=1816473 ✓+is-active=active ✓ | ✓ |
+| healthz 三验 | 200 业务绿 | **复测 {"ok":true,"cron":{enabled,jobCount:0,degraded:false,consecutiveFailures:0}} ✓**——真端点=/healthz（/internal/v1/healthz=not_found 端点名勘正如实注①采认·对表按 /healthz ✓） | ✓ |
+| fail-closed 门 | 无 token=401 ✓ | 值席三验③采认（门面工作形） | ✓ |
+| token 续役 | environ 在位 | **复测 environ TRIMC_INTERNAL_TOKEN 计 1+TRIMC_PORT=8712 计 1 ✓**（EnvironmentFile 注入续役·值零回显） | ✓ |
+| keeper 族 | 九条零触 | crontab 非注释行计 9 ✓ | ✓ |
+
+**承录面更新三项**：①jobCount=0 再录面候令（现值实锚随卷照档）②mc_link degraded=候 TriMLC 侧重试自愈或方案一探 0 落判（值席注采认）③**root unit 核验候窗项=被 A 形 user unit 超越解除**（托管面归位——root unit face 零需求）。
+
+**复验使用依据增补**：unit 现读全文+is-enabled/is-active/LISTEN pid/healthz/environ 双计数/crontab 计数七实锚（本席现跑）；值席毕报 d97470dae；定形裁决卷 7093209b0 条款面。
