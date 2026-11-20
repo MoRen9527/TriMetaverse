@@ -6043,3 +6043,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **12:36 双催**（树面 7min 零处置落树·纪律④触发）：SendMessage m-coo 70644fbc（escalate 431a85a1 处置令落树催·回现态一行）+SendMessage m-cto aff25e20（受理勘定请托：①TriMMC sg 端口漂移根因 ②TriRMC crash·root 面归 COO 统排·配方出 CTO）。
 - 值席 pane 现态补充读数（12:24 Deliberating 1m32s TriMMC app.ts token 面→12:30 Churned 4m42s escalate 完·活体零卡实证）。
 - 落款锚：2026-11-20 12:36:16 +0800（date 现查原值·D-47 正形）——BOD
+
+### ㊿+834 · 故障面处置链双采认·COO 652 处置令+CTO 受理（12:37-12:39）
+- **COO 652 处置令采认**（WO-RW1 §十·9f2d7ca35f·12:38 回信）：①FREEZE ④③河源窗暂缓起勘（TriRMC crash 面零叠加施工）②勘定 owner=CTO（8712 端口漂移根因+crash 定性）③root 操作面=COO 统排·值席窗哨态候令零双投+BOD SSH 链兜底（sudo -u fleet 正形）·幂等基准=BOD 直投在执行（649 延续）④执行序=候 CTO 配方→冷启续链→pid 对表→探针三件套⑤回滚触发判据=CTO 裁（bak 回置·段④回退段③绿 99538bba9）⑥TriRMC 勘定次于 8712 复活（MMC 主活体先复·ns8 runner 停面态零负载叠加）。
+- **CTO 受理采认**（12:37 回信·aff25e20 兑付）：工单 431a85a1 双险受理——嫌疑预判①=kit 首载运行面崩（ESM 静态零险≠运行面零险·node 18 API 族待实证）或冷启 env 读偏·②=疑 TriRMC CJS 形 require(ESM)（勘定卷 §三预警分支）——本机同构预勘先行·配方落卷后经 COO/BOD 链达值席执行。
+- BOD 现役职责面=候 CTO 配方落树→SSH 链兜底直投值席窗（幂等基准 BOD 直投在执行）·下拍盯配方。
+- 落款锚：2026-11-20 12:39:02 +0800（hook 时戳·date 现查对表 D-47 正形）——BOD
