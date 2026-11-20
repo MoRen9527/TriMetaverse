@@ -6279,3 +6279,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 现役候件唯一=CTO 铸件三件（sudoers 白名单粘贴串/at 自撤形/验撤断言·在途勘铸）——铸件串达（经 COO 采认转）即呈 CEO 粘贴=开窗条件②兑现。
 
 ——BOD·2026-11-20T17:22:59+0800（date 现查原值·D-47 正形）
+
+### ㊿+864 · 铸件三件采认·呈 CEO 粘贴面（开窗条件①兑现）（现查 2026-11-20T17:29:46+0800）
+
+- fetch 采认 a4ba32390（COO 684）+铸件卷 c92ae9c8f（cto-rw2-sudoers-cast-20261120.md 顶全等）：①sudoers.d 白名单粘贴串（四 Cmnd_Alias 配方单逐字镜像+visudo -cf 防呆硬门+0440）②at 自撤 +45min（主撤+人工核撤双保险·窗拖长被提前撤=窗冻结候二次授权 fail-closed）③S1 生效三探+窗毕撤销双读数。
+- CTO 技术勘定两注采认：读面=组授权通道零 sudoers 面（S2 usermod 后 fleet 直接读 auth.log/journalctl）+fleet 试写=身份动作零 sudo——白名单最小化只列 root 必需写面+trimc 受限读面。
+- **BOD 即呈 CEO 粘贴**（S1·对话面逐字镜像零改一字）：粘贴串两段=sudoers.d 落地（步1-4 含 visudo 硬门·红即兜底删件）+at 自撤安排。CEO 粘贴毕回音→BOD 转 COO→fleet S1 三探→三探全过=七步开跑（S2-S7 照 WO-RW2 §二）。
+
+——BOD·2026-11-20T17:29:46+0800（date 现查原值·D-47 正形）
