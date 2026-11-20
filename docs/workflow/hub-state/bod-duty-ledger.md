@@ -6099,3 +6099,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **残面七件挂账承录**：bak 实体删除候窗/跨机分叉对齐窗/github 443 族/node:sqlite 根治/EADDRINUSE 占用源勘/auth 探针复验——随窗并批。
 - **WO-RW1 主线定性**：三批族全毕+段①-⑤全毕+④③故障面双险定谳全闭（431a85a1）——批 2 接线窗收官。C3 起=验收面段。
 - 落款锚：2026-11-20 13:52:36 +0800（hook 时戳·D-47 正形）——BOD
+
+### ㊿+843 · C3 双侧读数令直投毕·COO 660 对表闭环（13:57-13:59）
+- **COO 660 C3 双侧读数派工令采认**（83048edcdb·CTO 配方卷 11d031a31 §三正身）：sg 面（8712 pid 1491977 基准+kit md5 对表 2bb4d65+20 exports+TRIMC_PORT env 核顺手【R】）+河源面（8710 pid 2687790 基准+kit 装载形 5c993fc 基+import 值面+健康端点真勘）——执行窗=14:00 硬门后随窗（依赖驱动零钟点门）·读数毕回 CTO 三源合卷毕报（APPROVE/FREEZE 裁）→即报 CEO 链。
+- **BOD 直投毕+对表闭环**（13:59）：值席窗直投特征串 count=1 消费实证+COO 对表回执 6085e01f——幂等基准=BOD 直投在执行（649/654/656 第五次兑现·660=令面归档零重投）。
+- TriMLC mc_link=degraded 观察面承录（候选=sg TriMMC internal auth token 未注入族·候 token 窗勘定·服务本体绿不阻 C3 主判据）。
+- 落款锚：2026-11-20 13:59 +0800（date 现查对表·D-47 正形）——BOD
