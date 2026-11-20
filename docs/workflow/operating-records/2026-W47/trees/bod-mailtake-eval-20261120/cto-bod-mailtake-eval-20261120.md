@@ -58,3 +58,15 @@ notice-236 款三令面；job2 拍窗现役（23:26 拍锚·ledger idle-watch �
 **款三·口径修正段 ✓（本卷「候 CEO 确认」条款勘正）**：方案级/评估级/技术选形裁决=**COS 径裁面**（D-39 全域授权·裁毕入账事后呈报知情）——本卷候确认条款随口径修正（后续同类=COS 径裁·不再挂候 CEO 面）；候 CEO 只留=真任务书生效面+CEO 保留权三类。CAO 域勘注转知承（D-39 附注/纪律册勘定建议·如需落册走 COS 转 CAO）。
 
 **勘正使用依据增补**：notice-237 两款；四 daemon 矩阵面域定谳；W1 hook 实锚（bash -n+wake.env）。
+
+---
+
+## 附卷·② polyfill 施工毕报（TriMMC 8712 恢复读数·2026-11-20 12:2x CST）
+
+**施工三件**：①better-sqlite3 vendor 安装（npm arborist 错误→/tmp vendor merge 形·node v18.20.8 兼容 ✓）②shim v2 换装（node_sqlite_shim/index.js=better-sqlite3-backed DatabaseSync API 映射·bak-shim-20261120 回滚锚·roundtrip+reopen 持久化单测 ✓）③TriMMC 重启（nohup TRIMC_PORT=8712·new-pid 1413225·healthz {"ok":true,"cron":{"enabled":true,"degraded":false}}）。
+
+**持久化实证**：data/fade.db 真层写→关→重开→读=**PERSIST-PROOF-OK**（六表在库 fade_runs/transitions/gate_rejections/watch_state/watch_audit·daemon 日志零 no-op 警告·-shm 12:22 活体触写）。探针表已清（DROP 干净退出）。
+
+**如实开放项**：①cron jobCount=0（job state=shim 期易失·**再录面候补**——易失清单②件恢复待令）②TRIMC_INTERNAL_TOKEN 不可复原（前进程 env 随停丢失·duty-env/值守会话双缺）→/internal/*=**internal_auth_disabled fail-closed**（401 安全门内置·token 轮换=候值席/BOD 通道协调——dev 宿主调用面 per W40 记录）③notify 降级态=notify 面 self-recover 候复核（mailbox/outbox 文件在库根）。
+
+回滚锚=index.js.bak-shim-20261120（no-op stub 回退）。
