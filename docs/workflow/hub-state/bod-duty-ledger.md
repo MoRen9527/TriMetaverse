@@ -6915,3 +6915,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 技术形勘铸毕·候 COO 派窗——链自转中承录。
 
 ——BOD·2026-11-20T22:48:34+0800（date 现查原值·D-47 正形）
+
+### ㊿+948 · CEO 22:50 DeepSeek 模型型号定谳采认（现查 2026-11-20T22:50:21+0800）
+
+- **CEO 令**：「DeepSeek 模型选择统一用 **deepseek-flash**，不要用 v4-pro」——TriRMC 切换 DeepSeek key 的 model 型号定谳=deepseek-flash 统一（非 v4-pro）。
+- BOD 即转 CTO（勘铸卷模型行对表：若卷面已写 v4-pro=勘正注追·切换小窗执行面 model=deepseek-flash）+COO 知会（统排令随附）。
+
+——BOD·2026-11-20T22:50:21+0800（date 现查原值·D-47 正形）
