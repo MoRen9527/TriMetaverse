@@ -6262,3 +6262,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 增补件⑧并至即完备（配方单 bf4dd8df5 现役）·定谳一达 COO 即排窗令。
 
 ——BOD·2026-11-20T16:39:20+0800（date 现查原值·卷毕时戳=commit 时戳·D-47 正形）
+
+### ㊿+862 · CEO 通道定谳=B fleet 临时 sudo 授权窗·转 COO 排窗令（现查 2026-11-20T17:20:09+0800）
+
+- CEO AskUserQuestion 面定谳答 **B**：fleet 临时 sudo 授权窗（限命令白名单+窗毕即撤）——root 窗七步序列走值席链执行·CEO 免逐条在场操作。
+- BOD 即转 COO（窗 C 主线解阻令兑现·COO 681「定谳一达即排窗令」）：排窗令出件+sudo 授权形态铸件请——①sudoers.d 白名单条目**现成可粘贴串**（usermod/chown/fleet 试写/journalctl 或 auth.log 读面——审计权限照 CEO 16:28 批「给 fleet 权限方便审计」承）②at 定时自撤形（root 一次安排·窗毕自动删条目=撤权不候二次人工）③窗毕验撤读数断言④条目生效后值席链七步照配方单 bf4dd8df5 现役+增补件⑧。
+- CEO 最小动作面=SSH root@sg 一次粘贴铸件串（BOD 对话面转达·铸件成串后即报）。
+- auth.log 溯源读数回 BOD 终判位不变；sudoers 行技术形=CTO/COO 域勘铸·BOD 集散转办不代铸（条 2）。
+
+——BOD·2026-11-20T17:20:09+0800（date 现查原值·机械嵌入·D-47 正形）
