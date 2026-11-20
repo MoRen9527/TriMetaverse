@@ -1,0 +1,82 @@
+# CTO root 窗技术配方单（组授予+journal 验证+chown 批量·CEO 16:28 批令承·候 COO 统排选点）
+
+- sourceOfTruth: 本卷（trees/bod-fade001-sprint-plan-20261120/·root 窗技术配方正身）
+- syncMode: write-time
+- lastSyncedAt: 卷面时戳锚=git commit 时戳（零手打·D-47 正形）
+- 令源: BOD 转令（CEO 16:28 批·chown 196 件+/var/lib/trimc 清点+审计权限批给 fleet）——175f1b384「组授予不开」裁定语境=为一次勘定不成比例·现 CEO 亲裁=授权源升级·**语境已变采认无矛盾**
+- 配方性质: 技术面配方单（本席域）——施工=root 窗（COO 统排选点·root 操作者面）
+
+## §一 · ①组选择配方（systemd-journal+adm 双组合授）
+
+| 组 | 读域 | 对表需求面 |
+|---|---|---|
+| `adm` | **文件面日志**（/var/log/ 下 auth.log/syslog 族·logrotate 按adm置权限） | auth.log 复盘（11-19 时窗+11-04 FADE 装载 root 操作者溯源）✓ |
+| `systemd-journal` | **journal 面**（/run/log/journal+/var/log/journal·journalctl 系统级门面） | 窗 A ③族受限面解除（BOD ③探「系统级 journal 不可达」实锚）+值席会话 log 复盘+【R】修正后形态读域 ✓ |
+
+**配方：`usermod -aG systemd-journal,adm fleet`（双组合授）**——用途双面各需其组·零互斥零冗余；若 sg 机无 systemd-journal 组（老发行版·journalctl 在役旁证下预期在）→单授 adm+journal 读受限如实注。
+
+**生效面注（如实框定）**：组变更仅对**新会话**生效——fleet 现役活跃会话须重新登录或 `newgrp`；fleet 名下 daemon/user unit（trimmc.service）**零重启需求**（服务进程组身份不因 usermod 变更·unit 重启后才载新组——TriMMC 现役零涉·不重启）。
+
+## §二 · ②组授予后 fleet journal 读验证探针（root 窗毕后 fleet 侧新会话执行）
+
+1. `id`——组清单含 `systemd-journal`+`adm`（生效实锚）；
+2. `journalctl --since "2026-11-19 00:00" --until "2026-11-20 00:00" | head -5`——**系统级 journal 读通**（窗 A ③族受限面解除实证）；
+3. `head -3 /var/log/auth.log`——文件面读通；
+4. **11-19 时窗复盘**：`journalctl --since "2026-11-19 14:00" --until "2026-11-19 18:00" | grep -iE "trimc|sshd|sudo|session" | head -40`+`grep -nE "sudo|COMMAND" /var/log/auth.log | grep "2026-11-19" | head -40`；
+5. **11-04 溯源**：`grep -nE "sudo|useradd|chown|COMMAND" /var/log/auth.log | grep "2026-11-04" | head -40`（FADE 装载 root 操作者溯源——若 auth.log 已 logrotate 轮转缺失如实注·journalctl 同窗补探）。
+
+**值面护栏（D-46）**：复盘输出回卷**非全量 dump**——grep 选择性带回·`grep -vE "token|TOKEN|secret|key="` 滤前置+行选择性呈报（auth.log 含 sudo 命令行或嵌 token 值面可能·滤后可回）。
+
+## §三 · ③chown 批量配方（清单先行纪律·四步）
+
+```bash
+# 步1 清单先行（root 窗内·先出清单候采认再动——196 件对表）
+find /srv/fleet -user root -not -path "*/node_modules/*" -printf "%u:%g %m %p\n" | sort > /tmp/chown-plan-$(date -u +%Y%m%dT%H%M%SZ).list
+wc -l /tmp/chown-plan-*.list   # 预期≈196 对表（数字差如实注）
+# 步2 批量执行（清单采认后·-h 防 symlink 解引用）
+find /srv/fleet -user root -exec chown -h fleet:fleet {} +
+# 步3 /var/lib/trimc 清点+处置（清点先行）
+find /var/lib/trimc -user root -printf "%p\n" | head -50
+find /var/lib/trimc -user root -exec chown -h fleet:fleet {} +
+# 步4 验证（归零断言）
+find /srv/fleet -user root | wc -l      # 预期 0
+find /var/lib/trimc -user root | wc -l  # 预期 0
+```
+
+**护栏四条**：
+1. **-h 面**：`chown -h`=改 symlink 自身属主不解引用（GNU chown 默认解引用——跨链接改目标属主面防）；
+2. **白名单面**：清单若现非预期路径（/etc 类/系统级配置）→**停候裁不批量**（清单先行正是为对表）；预期域=/srv/fleet 各模块检出工作区+data 面；
+3. **与值席窗时序协调（COO 选点注）**：C-1 值席窗（sg install+build）在途——**chown 窗建议排值席 build 毕后**（build/npm install 新落件若在 chown 前则新 root 件复积·毕后一次清干净最优）；chown 改属主不改内容·对 build 产物零实质——次序影响=干净度非正确性；
+4. **归零断言须全树扫**（「未发生」定性纪律——单目录自查不豁免）。
+
+## §四 · 非 root 运行基线入册面（并行登记·候排窗）
+
+BOD 请托注采认——**四 daemon 运行属主对照排查+非 root 运行基线纪律候选**（TriRMC 河源/TriRLC 本机/TriMMC sg/TriMLC 本机——daemon 进程属主≠root 为基线形·root 运行=违例面）=**本席域候排窗**（残面清单挂账·非现窗·与 RDT/值席窗协调）。本卷=登记面·排查配方随排窗卷。
+
+## §五 · chown 清单生成配方（COO 承铸件 1·fleet 可行面+受限面框定）
+
+**清单先行=双段**：
+1. **fleet 可行段（root 窗前即可出）**：`/srv/fleet` 树=fleet 自有工作区读权限在——`find /srv/fleet -user root -not -path "*/node_modules/*" -printf "%p|%u:%g|%m\n" | sort > /tmp/chown-plan-fleet-view.list`（逐件路径+现属主+权限位三列·196 预期对表）——**本清单=配方单附件形·COO 采认后随 root 窗令下达**；
+2. **root 窗内复核段**：root 窗内重跑同款 find（含 /var/lib/trimc——fleet 对其读权限未勘·若 root:root 700 则 fleet 段读不了=受限面如实注）——root 窗清单与 fleet 段清单 diff 零漂移断言后再动 chown；
+3. **node_modules 排除注**：排除面=FSD 毕报 §五.3 sg node_modules@11.10.0 已 fleet 可用在位——root 件若藏 node_modules 内（native build 中间件）→照 chown 不排除面另议（清单先行对表时如实现形）。
+
+## §六 · C1 解阻断言形（COO 承铸件 4·主解读+候补全）
+
+**主解读（时间线+语境强关联）**：C1=C-1 值席窗（sg install+build）施工阻解除——196 root 件中若含 /srv/fleet/TriMMC 面件（node_modules 子面/检出面），npm install 或 build 写面遇 root 属主阻→chown 毕=解阻。**解阻断言形=C-1 值席窗四要素毕报全绿**（install rc=0/build rc=0/dist 值面断言 node:sqlite==0+活体三读数 pid/healthz/版本面——FSD §五任务书四要素承录）——若 C-1 值席窗已遇阻点→chown 窗毕后阻点命令重跑 rc=0=解阻补拍实证。
+
+**候补全注**：若 COO 语境 C1=挂账台账 852 系某项编号（非 C-1 值席窗）→请 COO 补 C1 定义+验收锚指明——本席配方单按主解读承带·定义面到卷随勘。
+
+## §七 · 护栏四族（COO 承铸件 5·总括正形）
+
+1. **触面限定**：本窗触面=文件属主/组（chown+usermod）与 journal 读面——**零触面=TriMMC 进程（pid 1816473 零触）/检出面内容（git 状态零变）/8710-8713 四 daemon/8712 user unit 托管态**（chown 不重启不杀进程·unit 服务面零涉）；
+2. **回滚锚（chown 前属主快照）**：快照先行=`find /srv/fleet /var/lib/trimc -user root -printf "%p|%u:%g|%m\n" | sort > /tmp/ownership-snapshot-$(date -u +%Y%m%dT%H%M%SZ).list`（root 窗内 chown 前必拍）——回滚命令形=`awk -F'|' '$2=="root:root"{print $1}' <快照> | xargs -d '\n' chown -h root:root`+权限位快照面同法 restore（`chmod` 按快照 %m 列）——可逆性在锚；
+3. **止损线**：任意步红（清单 diff 漂移/chown rc≠0/验证探针红）→**即停如实报零二次硬试**——毕报带红点原文+现势快照·候再勘令面；
+4. **值守位**：root 窗执行者自守（人工通道=CEO/BOD 指定操作者照单执行·临时 sudo 通道=授权窗内值守）——毕报回 COO 台账+本席复验位照窗 B 形（五探独立复验）。
+
+**通道选择注（COO 令文承录）**：人工照配方单 OR 临时 sudo 授权两支并排呈 CEO/BOD——**通道选择非技术面裁决·本席零代**（fleet 非 sudoers 852 实锚=鸡生蛋点如实注在卷）。
+
+## §八 · 使用依据
+
+BOD 转令信面（CEO 16:28 批·三件配方请托+196 件清点承录）+175f1b384 组授予裁定（语境变更采认段）+BOD ③探受限实锚（fleet 非 sudoers 非 adm·系统级 journal 不可达）+窗 B 复验卷（4683aa9b6·user unit 托管现势=TriMMC 零重启面）+PS Remove-Item junction 教训同族（symlink 穿面防·-h 面）+值面护栏 D-46+D-15/D-24/D-47。
+
+——CTO 小狄（m-cto）·写前现查 2026-11-20T08:30:01Z（+8=2026-11-20 16:30:01·date 现查原值·D-47 正形）
