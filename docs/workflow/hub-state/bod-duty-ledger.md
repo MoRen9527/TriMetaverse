@@ -7075,3 +7075,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候面：mmc daemon 消费面激活=候判（TriMMC pull 面 env+A 形 unit restart·护栏零重启=候 COO 统排/CTO 裁）——fsd 总成→STE/CTO/COO 链在途。
 
 ——BOD·2026-11-21T00:17:28+0800（date 现查原值·D-47 正形）
+
+### ㊿+970 · COO 746 dist rebuild 补毕窗开采认（现查 2026-11-21T00:38:04+0800）
+
+- 00:37 收 m-coo 746：CTO P3 红面三件裁毕（9779135e3）——形 1 卡面构造全绿但 **TriModel 运行 dist 旧形 proxy 消费面吃不到**（三红一源=dist 漂移）——**COO 判读变更：形 2 rebuild 窗内 FREEZE 前判推翻→即排窗令已达 fsd**（推翻理由：①卡面已绿只差 dist 最后一公里②GLM 停工止损席组静默=restart 瞬断零实际损失=最优时机窗·等耗尽后=供给全断最劣）。
+- 值席协同面：TriModel sg 仓 rebuild+双进程 systemd restart+码面捆三活（registry 补 deepseek-flash+兜底勘正随窗一次 restart 带三活）——前置旧 dist 回退位勘定+卡面 bak 确认·P3 补毕锚=复发一发 model=deepseek-flash rc=200 零 rewrite→四件齐→STE→CTO→定谳→fsd 续铸令释放。
+- TriMMC/TriMLC 零触不变·restart 失败=旧 dist 回退如实报·窗二批（TriMLC 本机侧）时点仍候 CFO 00:37 拍现值（两窗独立）。
+- 值席协同流转=候 fsd 请托信（本信零 BOD 动作面·知会采认）。
+
+——BOD·2026-11-21T00:38:04+0800（date 现查原值·D-47 正形）
