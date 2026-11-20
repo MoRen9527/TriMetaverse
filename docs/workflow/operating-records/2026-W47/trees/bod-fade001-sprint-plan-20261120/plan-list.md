@@ -51,7 +51,7 @@
 
 - [x] ~~D1 改造方案卷定稿~~（round_runner 程序编排+spawn 七席+等待语义+retry 闸漏补立）——**01:50 毕**（CTO round 编程设计卷落树 fade001-tenstage-deploy-20261115/cto-round-programming-design-20261119.md·值席划项回传认收）
 - [x] ~~**D2 评分两轨落地**（ScoreCLI 机械面先+ScoreSkill 主观面后·两段锁勿互套·score 顺序 7/7 维持）~~——**排工令落卷 07:52 在工**（cto-d2-dispatch 16db059a3·D-15 令已达 fsd：令 1=ScoreCLI 机械面 sprint 内立即起（deadline 09:00 硬门·毕不完如实带出零硬塞）+令 2=ScoreSkill 主观面令 1 毕后接（白盒 mock 零真实 GLM 跑）+令 3=两轨联调候窗候 COO 统排——两段锁=顺序锁硬串行断言为验收硬锚·score_engine/aggregate 输出面零改·95 线判读位=D4 非本令）+**令 1 ScoreCLI 毕 08:01**（fsd-d2-scorecli-closeout：score_cli v2.0.0 四面新铸[extract_internal_score+retry_state 落卷+eval_retry_gate 四态+run_score 集成]+零改面自证·白盒 26/26+drafts 全树 pytest 115 passed 零新增红+TriOrchKit 回归 58/58+tsc/py_compile 双 RC=0·retry 四态+RETRY_MAX_PER_WEEK=2 当周封顶跨周重置+escalate exit 0 零熔断+=90 免 retry 勘正语义实锚案·deadline 内毕余 59min）+令 2 ScoreSkill 接力候验（时窗足按令·全 mock 零真实 GLM）+STE 白盒 review 并行候收稿（令 §五·next_agent=STE）——**08:19 毕·D2 划项·sprint 面毕判据全兑现**（令 1 毕 725ddae99 08:01+STE 令 1 review 过 967476225+令 2 毕 3e067aef8 08:15 31/31+146 全树绿 deadline 内零硬塞+STE 令 2 review 过 b59de0eda+CTO 合并终审 APPROVE c74b4b1f3 sg-server 同顶+COS 774/775 落账——**定性=骨架形（sprint 交付=两轨结构+门禁语义+白盒谱·非 production-ready）**：生产接线面出窗候 COO 统排（令 3+部署窗族）·**gate 现役件接口定谳=真件接入硬前置门（勘毕才接线·零勘直接线 FREEZE·CTO 裁）**·四债如实档=部署窗前置勘）
-- [ ] D3 进化判据接线（95 线+四前置件批立兑现·含 95 线定谳件）
+- [ ] D3 进化判据接线（95 线+四前置件批立兑现·含 95 线定谳件）——**gate 勘定毕 30fcdcc81 10:19·FREEZE 解除**（现役件定位=TC runtime/cognition CEO 裁决门族三 hash 全谱+接线三层结构定谳+校准五件·D3-D8 解冻总开关开）·接线施工候 COO 统排批 2 ③窗（双条件=勘毕 ✓+批 1 重启窗·候批 1 毕报）
 - [ ] D4 进化判决形落地（COS 综合裁判接口+轮间意见窗）
 - [ ] D5 close 恒等式接线（自检总结面·closeCLI+closeskill 双面分工）
 - [ ] D6 自动挡激活判据件（插头辨清单+首轮知情停点）
