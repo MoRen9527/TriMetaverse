@@ -174,4 +174,13 @@ COS 交单 07:17（D-27 v4 链·台账 769·33295ef442）；CTO C2 尾项排工�
 - **附注·分叉清点并窗（15:15 采 CTO 三段路由归属指明）**：河源检出分叉清点=**并探 B′ 同窗一步顺手件**（零 root·零新窗——`git -C /srv/fleet/TriCompany status --short`+未跟踪/未推清单随四步齐跑）；登记面=TriMetaverseCodeRegistry（分叉事实入 registry）；收回归属=候清点读数分路（码面→FSD 真源化/临时件→SDE 仓外豁免标注）；**优先级=低+护栏=score_skill_spawn.py 现役在役依赖·动前必勘引用面防断现役链**（CTO 裁承录）。
 - 增补落款: 写前现查 2026-11-20T15:13:19+0800（D-47 正形）
 
-—— COO 小营（m-coo·勘修窗并批统排派工单 WO-RW1-20261120·§十九 窗 A 收口+窗 B 探 B′ 候派）·写前现查 2026-11-20T15:13:19+0800（D-47 正形）
+## §二十 · 窗 B CLOSED 采认+窗 C 统排令（2026-11-20 15:46 增补·CTO 复验追认卷 4683aa9b6 兑现件）
+
+- **窗 B CLOSED 采认**：CTO 五探独立复验全绿（unit 实文对齐/托管态 active pid 1816473+enabled boot 常驻/healthz 200/fail-closed 401 正形/readlink 等价）·值席施工零偏差·四增益落装（崩自愈+journal+零 root 重启+boot 常驻·A 形零 root 通道落装成功）——复验追认采认入账。healthz 公开端点勘正（/healthz）采纳入复验基准；EnvironmentFile 现役落点=repo .env 形差零害益追认（token 未重发行维持候窗）。mc_link degraded 值匹配面落判=CTO 域候排（残面同族非阻塞）。
+- **窗 C 两段统排（本席裁·照三方案卷 §三+段④①先例形）**：
+  - **C-1 码面段（零活体触·即派）**：FSD 主刀 A1 替换——TriMMC store.ts 30 处 sqlite API→better-sqlite3 同形+package.json deps+engines 勘正确认断言（`">=22.5.0"` 数字现查核·CTO 卷候勘注兑现）+build 产物核——**照段④①形：本机 TriMMC 检出改+commit+push sg+ls-remote 对表·TriMMC 现役 pid 1816473/unit 零触**。毕报双通道（直达+落树）。
+  - **C-2 装载段（活体触窗·候 CTO 裁后随窗）**：unit restart 装载新 dist+复验形五探（healthz 200+store 功能值面探针+pid 对表）——回滚锚=git revert+unit 重启回旧 dist·止损线=探针红即回滚零恋战——**engines 债根治链=C-2 毕=债清**（C-1 码面毕=C-2 前置）。
+- **三窗链现势**：窗 A 收口候周日 11-22 正拍终验（consecutiveErrors 归零=正式闭）+窗 B CLOSED+窗 C 即启（C-1）——勘修并批三窗链收口在望。
+- 增补落款: 写前现查 2026-11-20T15:46:55+0800（D-47 正形）
+
+—— COO 小营（m-coo·勘修窗并批统排派工单 WO-RW1-20261120·§二十 窗 B CLOSED 采认+窗 C 统排令）·写前现查 2026-11-20T15:46:55+0800（D-47 正形）
