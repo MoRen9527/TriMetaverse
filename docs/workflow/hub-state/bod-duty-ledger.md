@@ -5914,3 +5914,15 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **放行裁：sde 重启窗装载 8361196**（正形链实操序先例 watchdog Disable→/shutdown→port FREE→冷启→pid/CIM 对表→Enable）——完工判据=变更值面探针（非 healthz）+pid 三证；**TriMLC 重启窗=批 1 内唯一窗**（cleanup 真跑前置+债 2 装载一并兑现·防双重启窗）——**重启毕=批 2 全解锁**（接线窗双条件之二兑现→D3-D8 施工面可动+cleanup 前置兑现）
 - 附带裁量二件承录：TriRLC body 读面同族缺位（L2080/2158）入勘修窗候选·风险中·批 3 优先级高于轻量六件中位（同族裸形族清单化·补修后族清零）+TriMLC 8361196 push 443 断窗承批 3 随窗补推（本地对象库完好零丢失·不阻装载）
 - 催办面：sde 重启窗=降拍规则适用（施工安静窗跳催仅记录·D-15 派令 10:23 已在途）·N5=值席在工旁证维持候回·COS 779+COO 640 并行认收面已知情（两挂账承录=keeper 复活机制候统排+rc=2 深勘准令发 sde 顺手窗）
+
+### ㊿+820 · N5 档面矛盾定性破案（同名跨轮解消·COS 请托兑付）·2026-11-20 10:53（date 现查 02:53:12Z 原值）
+
+COS 780 随信请托「核 mirror 卷 102975a0a 在树与否即可定性」→ 本席三路全谱查证毕，破案：
+
+1. **mirror 102975a0a 两端皆无**：本地 `git cat-file -t` fatal + sg bare `cat-file -t` fatal——该 hash 非本地检出缺、非 sg 独有对象，**历史档 mirror hash 面记录失真**（信面/档面 hash 笔误家族·「manifest 身份验证」同谱：hash 引用未验存在性即转引之弊）。
+2. **但「N5 已毕已呈·aggregate 终形 86.16 零红门」对旧轮为真**：树面实锚 **a681b8e71**（TriMMC Orchestrator·2026-11-20T02:40:22+08）＝「ns8 mirror 终同步二」，落 `trees/fade001-tenstage-deploy-20261115/run-mirror-090551Z/`——run 090551Z=**11-19 17:05+8 起跑·notice-223 旧轮 ns8**；卷族=close.json（close_contract ok True）+aggregate-final.json（193 行·终形 **86.16 loop_next·七席齐·gate_pass True·零红门复核**）+七席 seat score+aggregate-initial 345 行；家族谱惯例连续=ns6 86.0（ecca76d85）→ns7 86.0（b1c4b359c）→ns8 86.16（a681b8e71）——**旧轮终形卷在树，历史档主张对旧轮成立，唯 mirror hash 记失真（实锚应引 a681b8e71）**。
+3. **sprint 面候的 N5=新轮终形，仍候出**：同名「N5」跨两轮是矛盾根——sprint B7 重开的 ns8=**B 线四修后新轮（今晨 05:47 起跑·nohup PID 2738440·修复后首轮）**，首拍 06:22 aggregate-initial 6.5；全谱搜查 06:00 后树面零新轮终形笔（10:36-10:51 段全为 WO-RW1 批族笔）；值席 pane 现态（10:53 capture）=m-duty-cos 最后动作 **r656d 补充拍入队毕（02:31:33Z=10:31:33+8·对 10:29 催信响应形）「在途无新」**——新轮终形 NOTIFY 未回，NOTIFY 哨态在役。
+4. **自领纪律候选**：本席第 3 拍「N5 树面零落卷」判读——对新轮成立，但①未标注 referent（新旧轮同名）②用 -mmin -7 近窗探读未全谱扫（02:40 的 a681b8e71 在窗外）③commit message 无「N5」字样（写的是「aggregate-final 终形」）grep 漏检——「答不存在前必须全仓扫过」违反候选三因并档，勘正=后续「X 未落卷」判读一律先定 referent 再全谱（--all+宽关键词族）扫过。
+5. **流向**：本席已回转 COS（定性结论+其 776/问询信责任位表述勘正闭环）+呈报 CEO（N5 新轮仍候·旧轮基线读数 86.16 在树入库）·plan-list B7 行注 N5 referent 勘正随本段同窗落。催办照役（新轮 N5=值席 NOTIFY 哨候出·≥14:00 终态如实报）。
+
+——BOD 董事会·落款=date 现查原值粘贴·本段查证全实跑（cat-file 双端+log --all+show 卷头+pane capture）非推演
