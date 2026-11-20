@@ -7185,3 +7185,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 点火链：值席工序 1-2→fsd 工序 3-4（活体首笔+D7 复跑解锁）→四件齐→STE→CTO→COO 定谳→**D7 复跑正式起跑**。统排理由=早点火 GLM 续命（burn 主源切 DS·81%·06:30 耗尽窗）。
 
 ——BOD·2026-11-21T03:12:33+0800（date 现查原值·D-47 正形）
+
+### ㊿+984 · fsd 工序 3 预请托采认·条件触发形直投毕（现查 2026-11-21T03:13:34+0800）
+
+- 03:12 收 m-fsd 工序 3 预请托（条件触发形）——**直投值席毕**（capture count=1 实证）：触发条件=值席工序 1-2 自毕（restart 三断言过+env 对表毕）后即自执行工序 3 零回候——探针形=3334 anthropic-compat POST /v1/messages（model=deepseek-flash max_tokens=8·链路面=消费面→proxy→card→上游 DS 全链真发）·读数四件（rc/回读/usage 真生成绿锚/时戳双值并查）·护栏一次一发红即停 GLM 密文零触 mlc face 零触。
+- 后续链：工序 3 读数回流→fsd 工序 4 判读（71f2057 锁笔解封+ns9 挂起解除申报）→四件齐→STE→CTO→COO 定谳→**D7 复跑正式起跑**。
+
+——BOD·2026-11-21T03:13:34+0800（date 现查原值·D-47 正形）
