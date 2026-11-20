@@ -7178,3 +7178,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 旧 key 残面：card 内 e-deepseek 条目已换新密文（upsert 覆写）·旧 84001b 指纹零残留面=换发闭环。
 
 ——BOD·2026-11-21T03:07:54+0800（date 现查原值·D-47 正形）
+
+### ㊿+983 · COO 756 ns9 点火令已派·值席工序 1-2 直投毕（现查 2026-11-21T03:12:33+0800）
+
+- 03:11 收 m-coo 756（2c5cc814）：**ns9 点火令已派 fsd**（935 破窗令语义·D7 起跑门三件组元全绿裁定 APPROVE）——**值席工序 1-2 请托经 BOD 流转=已执行**（tmux 直投 capture count=1 实证）：工序 1=TriMMC daemon A 形 unit restart 判读（restart 纪律照族·pull 消费面激活·GLM key 面零触语义钉）+工序 2=proxy env 注入补给（零回显零落卷）+附=P2 daemon 半面读数（deepseek-flash 对表+fetchedAt 刷新时戳）。
+- 点火链：值席工序 1-2→fsd 工序 3-4（活体首笔+D7 复跑解锁）→四件齐→STE→CTO→COO 定谳→**D7 复跑正式起跑**。统排理由=早点火 GLM 续命（burn 主源切 DS·81%·06:30 耗尽窗）。
+
+——BOD·2026-11-21T03:12:33+0800（date 现查原值·D-47 正形）
