@@ -37,7 +37,7 @@
 | ① | shim 包清理（node_sqlite_shim·新 dist 零引用） | 候 sg 窗并批（下任一 sg 触面窗顺手） | 值席 |
 | ② | fade.db 定谳（旧 store 件·新 store 读写面候 G3 已绿——清理/归档定谳候 CTO 判） | CTO 域候排（并入 C4 链或独立轻件） | CTO |
 | ③ | 值席线裁定权限面治理勘定（门序偏差·CTO 请托） | **本席勘定件另行落树**（涉 CAO 治理面部分标注路由） | COO（本席） |
-| ④ | rw2 四脚本清窗（/usr/local/sbin/rw2-*.sh·root 面件 fleet 零权限删） | 候 root 面（下任一 root 触面窗顺手删·或 CEO 云账号面操作时并批） | BOD/root 面 |
+| ④ | rw2 四脚本清窗（/usr/local/sbin/rw2-*.sh·root 面件 fleet 零权限删） | **CEO 人工位**（BOD 转呈·已呈 CEO 顺手窗备行=root 面一条 rm -f /usr/local/sbin/rw2-*.sh+ls 验撤读数·两读数一窗·㊿+882 勘正） | CEO 人工位（BOD 转呈） |
 | ⑤ | TriMMC npm run build 正式重跑（CTO 残①·窗后顺手件） | 候 sg 窗并批（与①同窗顺手） | 值席 |
 
 ## §五 · 窗位与预算护栏对表（CFO 触报 692 承录约束）
