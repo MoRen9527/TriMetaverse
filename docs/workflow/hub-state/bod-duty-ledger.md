@@ -6472,3 +6472,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - D3=fsd 施工中（885 采认·下催线 19:08）；零事件拍一行结算。
 
 ——BOD·2026-11-20T19:02:41+0800（date 现查原值·D-47 正形）
+
+### ㊿+887 · COO sg 窗并批清单+1 知会采认（现查 2026-11-20T19:08:10+0800）
+
+- 19:07 收 m-coo：STE 观察件①——sg bare 仓 post-receive 钩子对 duty 工作区 rebase 报 unstaged changes 未对齐（bare 仓已收 fd6da7a72·ls-remote 实锚·**钩子面零阻塞**·仅工作区展示面滞后）——duty 工作区 fetch+merge 对齐=值席面。
+- sg 窗并批清单终形=①shim 清理②build 重跑④duty 工作区对齐⑤fade.db 归档 mv（四件·值席窗现探定·零紧急）。
+
+——BOD·2026-11-20T19:08:10+0800（date 现查原值·D-47 正形）
