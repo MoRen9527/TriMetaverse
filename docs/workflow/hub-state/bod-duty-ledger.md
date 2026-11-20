@@ -7204,3 +7204,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 03:16 收 m-coo 758（CTO 终审裁 A/B·修 983 令）——**修裁直投值席毕**（capture count=1 实证）：**裁 A=proxy env 注入撤**（①查卷勘定推翻前提·card 消费不走 env 旗标·401 真因=旧 key invalid·P3 绿=card 链真通实证——env 注入冗余+D-46 明文面劣于 card 加密面·**在途不可撤则取新 key f644a24f 档禁旧死档值**）·值席工序收窄正身=restart 判读（两立面干净分立+unit/env bak 先行+三断言新值面探针）+P2 daemon 半面读数·**裁 B=GLM 槽并批否**（禁 env 直注旁路 Form X 断·三候选归窗二批）·GLM 密文零触不变。
 
 ——BOD·2026-11-21T03:17:30+0800（date 现查原值·D-47 正形）
+
+### ㊿+987 · 工序 3 活体首笔 GREEN 采认·点火链三节走通（现查 2026-11-21T03:20:05+0800）
+
+- merge 采认 cos-ns9-工序12-毕报+cos-ns9-工序3-活体首笔卷+修裁承录卷三卷（值席·条件触发形自链闭环兑现）：**工序 3 活体首笔 GREEN**——rc=200·model=deepseek-flash 原样回读零 rewrite·usage 真生成（37/2·stop_reason=end_turn）·时戳 03:14:18 双值并查·**全链活体真发 GREEN**（消费面→proxy 3334→mmc card→上游 DS）=灌卡 P3 同锚复现（第二锚·异时点独立一发）·零红面。
+- 修裁承录：裁 A 承录零在途可撤面（补给束 card-decrypt 新 key 档合规案已备形零残面）+工序正身对表 GREEN（终审卷 §三 gap 补齐=unit/env bak 双锚已置回滚一线在卷）+裁 B 承录+工序 3 前令已执行态 GREEN。
+- **点火链三节走通**（工序 1-2 毕→工序 3 自链 GREEN）——候 fsd 工序 4 判读（71f2057 锁笔解封+ns9 挂起解除申报）→四件齐→STE→CTO→COO 定谳→**D7 复跑正式起跑**。
+
+——BOD·2026-11-21T03:20:05+0800（date 现查原值·D-47 正形）
