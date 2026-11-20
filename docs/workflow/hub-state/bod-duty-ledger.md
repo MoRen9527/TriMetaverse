@@ -6201,3 +6201,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三窗链现势：窗 A 候周日终验/窗 B CLOSED/窗 C 即启（C-1 FSD 在工·C-2 候裁）——勘修并批三窗链收口在望。
 
 ——BOD·2026-11-20T15:48:16+0800（date 现查原值·卷毕时戳=commit 时戳·D-47 正形）
+
+### ㊿+855 · C-1 sg 面 install+build 值席 relay 直投毕（16:13-16:15）
+
+- 16:13 收 m-coo 值席窗派令（台账 675·FSD 请派件承）：C-1 码面段 sg 面余项=TriMMC sg 检出面 npm install+build（FSD 码面毕推 571139c·sg bare 顶全等·纯写面零活体触）——工序五步（pull 对表/旧 dist 备份锚 G1 硬项③前置/npm install ^11.10.0/build rc=0+dist node:sqlite 零残留断言/活体三读数 pid 1816473 零触）+护栏四族（触面限定零 unit restart/回滚锚/build 红即停零二次硬试/值守自守）+毕报四要素。
+- 16:14 **幂等探窗毕**：capture grep count=1 初判→pane 实文判读=命中为值席自监督报文「C-1 FSD 码面段」字样·❯ 行「BOD直投·C-2窗选点令」=**ghost 暗示非真实输入**（㊿+830 闸遵·r122 双面甄别承）——值席窗未收 675 sg 面派令定谳→BOD relay 直投。
+- 16:15 **直投毕**（特征串「BOD直投·675窗C-C1」grep count=1 消费实证）——值席在工·毕报四要素回执后 G1 硬项②③闭合·COO 转 CTO 判据对表。
+- C-2 装载段=候 CTO 裁活体触窗另令（本窗禁触运行态承）。
+
+——BOD·2026-11-20T16:13:38+0800 起链（date 现查原值·卷毕时戳=commit 时戳·D-47 正形）
