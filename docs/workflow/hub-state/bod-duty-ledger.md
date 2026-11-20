@@ -6019,3 +6019,14 @@ fsd 段②毕报采认（adfc93255 11:34·fsd-batch2-seg2-kit-bridge-migration-c
 4. **现役链**：④①✅→④②sg 面（11:54 重投在执行·install+重启窗 10-20min 级·预计 12:05-12:15 毕报）+④③河源窗——④毕=C3 触发+即报 CEO。下拍探值席树面/pane 验执行。N5 照役·B5 候 CEO 照役。
 
 ——BOD 董事会·落款=date 现查原值粘贴
+
+### ㊿+831 · 12:00 拍——段④ sg 面替换毕采认+重启窗候令承录（ESM/CJS 兼容性升 CTO 勘·重启窗候放行）·2026-11-20 12:00
+
+值席段④ sg 侧毕报采认（a6cd4460f 11:58·重投后 4min）：
+
+1. **毕**：bak 回滚锚在位（orchestration-kit.bak-rw1-seg4·一键还原程序在卷）+2bb4d65 build 拉取四步（bare→checkout→npm install→tsc build）+wild dist 全量替换+**ESM import() 动态验 20 exports 全载**+agent-core 零触。
+2. **重启窗=值席候令**（毕报 §四·install 验证毕先出毕报·重启窗拆步候令——谨慎形合理承录）。
+3. **ESM/CJS 兼容性如实报（升 CTO 勘·值席只报不裁）**：2bb4d65 build=ESM（package.json type=module）·TriMMC 消费面 require()（CJS）=Node v18 已知限——ESM import() 动态形式通但**TriMMC shim 实际运行形未验**（tsx/ESM=通·编译 CJS require=崩）——段① tsc check rc=0=源码面解析通非运行面定谳。**BOD 盯面判断：重启窗候 CTO 勘毕放行**（防「装了不能用的 kit」重启崩险——半接线防呆同裁据）。
+4. **现役链**：④①✅④②替换毕·重启窗候 CTO 勘→放行令→重启+探针三件套→④毕=C3 触发+即报 CEO。④③河源窗同形候勘后。N5 照役·B5 候 CEO 照役。
+
+——BOD 董事会·落款=date 现查原值粘贴
