@@ -6079,3 +6079,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **段⑤退役令激活采认**：野生面退役注记（值席/SSH 链窗·注记先行 bak 实体候窗·13:32 直投已嘱）+TC 包候退役标注（fsd/sde·收口窗部署项）——段⑤毕=批 2 全链收口·C3 触发条件齐·排窗另落（owner=CTO 域）。
 - BOD 现役候面=值席两件毕报（unit 核验+探针端点真勘）落树→**BOD SSH 链河源 symlink 装载**（ssh -J sg R-HY·sudo -u fleet 正形）→文件面探针毕报。
 - 落款锚：2026-11-20 13:34:46 +0800（hook 时戳·D-47 正形）——BOD
+
+### ㊿+840 · ④③河源装载面实证·值席线先到·BOD 验证面毕（13:36-13:39）
+- **解冻两件毕报落树采认**（cb5bdf40c·13:36）：行 3 停执行恪守（零冷启 21h uptime 无扰动）+行 1/2 核验承录+探针端点真勘（app.ts 26 处路由链全景·internal/v1/healthz 不在注册面实锚）+段⑤退役注记先行件（bak 实体 260K 勘定·物理删除候窗零删面）——解冻判据两件齐·④③解冻条件满足。**fsd TC 包候退役标注毕采认**（fsd-tc-kit-retire-annotation-closeout-20261120.md）——段⑤两件毕报齐（正式毕判定候 COO/CTO 采认）。
+- **BOD SSH 链河源装载面走读实录**（657 拆面②激活）：①探读=TriRMC 检出 ✓（/srv/fleet/TriRMC）·TriOrchKit 缺检出→clone 补前置（sg 裸仓→R-HY·顶=2bb4d65 段②交付锚正确·属主 fleet·13:37）②**symlink 实锚=值席线先到**（orchestration-kit→../../../TriOrchKit·13:38 建·649/654/657 二形态幂等正形——BOD 零动作免双投撞）③kit package.json 值面实证（name=@tricompany/orchestration-kit v0.1.0·「双侧消费（TriRMC heyuan + TriMMC sg）」设计意图明注）。
+- **④③残面**：TriRMC/package.json orchestration-kit 声明行=fsd 主刀面（8270a35 同形 file:../TriOrchKit·COO 直发已发）——毕报落树→河源 git pull 同步→④③毕（文件面双验第二件补齐）→段④毕→C3 触发。BOD 候 fsd 毕报即走河源 pull。
+- 河源通道实锚增补：Host R-HY heyuan=8.155.54.79（sg ~/.ssh/config·User fleet·github-mirror-ed25519）·河源 fleet 非 sudoers（sudo -u fleet 正形河源不适用——fleet 直接身份 git/文件面操作可行·属主即 fleet）。
+- 落款锚：2026-11-20 13:39 +0800（date 现查对表·D-47 正形）——BOD
