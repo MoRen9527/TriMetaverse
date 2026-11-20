@@ -180,6 +180,7 @@ COS 交单 07:17（D-27 v4 链·台账 769·33295ef442）；CTO C2 尾项排工�
 - **窗 C 两段统排（本席裁·照三方案卷 §三+段④①先例形）**：
   - **C-1 码面段（零活体触·即派）**：FSD 主刀 A1 替换——TriMMC store.ts 30 处 sqlite API→better-sqlite3 同形+package.json deps+engines 勘正确认断言（`">=22.5.0"` 数字现查核·CTO 卷候勘注兑现）+build 产物核——**照段④①形：本机 TriMMC 检出改+commit+push sg+ls-remote 对表·TriMMC 现役 pid 1816473/unit 零触**。毕报双通道（直达+落树）。
   - **C-2 装载段（活体触窗·候 CTO 裁后随窗）**：unit restart 装载新 dist+复验形五探（healthz 200+store 功能值面探针+pid 对表）——回滚锚=git revert+unit 重启回旧 dist·止损线=探针红即回滚零恋战——**engines 债根治链=C-2 毕=债清**（C-1 码面毕=C-2 前置）。
+  - **附注·C-2 开窗判据卷锚（15:50 采认·575720b06）**：G1 五硬项（A1 对表零残留/better-sqlite3 双实锚含 sg native module/sg 面 build 全绿/engines 现查核+A1 形勘定/旧 dist 备份锚硬前置）+G2 时点三锚（cron 0 ✓·**值席窗选点=本席统排义务**·TriRMC 零触 ✓）+G3 六探（端点基准=/healthz 勘正形·探⑤ store 值面=硬项·探⑥ mc_link 非硬项）+G4 铁门（回滚毕=窗 C 冻结候再勘零二次硬试）——C-1 毕报回→CTO 逐项对表→全绿+时点锚=放行令→本席统排派值席窗。engines 终形两分支裁定框架随卷承录（18 兼容全绿=回落 ≥18 债真清/尚存 22 系=维持 22.5 债半清·node 22 回位候排）。
 - **三窗链现势**：窗 A 收口候周日 11-22 正拍终验（consecutiveErrors 归零=正式闭）+窗 B CLOSED+窗 C 即启（C-1）——勘修并批三窗链收口在望。
 - 增补落款: 写前现查 2026-11-20T15:46:55+0800（D-47 正形）
 
