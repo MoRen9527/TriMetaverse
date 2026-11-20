@@ -6036,3 +6036,10 @@ fsd 段②毕报采认（adfc93255 11:34·fsd-batch2-seg2-kit-bridge-migration-c
 CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认：①**TriMMC 运行形=ESM 原生 node 直跑·零 CJS require(ESM) 崩险**（五环判据实物验：type=module+NodeNext+dist 头 import 形+shim 静态 ESM import 六符号+sg daemon node 直跑）②修法零需要（「require 消费面」疑=kit exports require 条目字面·现役零 CJS 消费者；engines 差=声明面·运行兼容探针终值）③**sg 面 TriMMC 重启窗放行**（正形链+探针三件套·运行面读数为终值）·TriRMC 河源面=值席照 §三五环模板勘后同判放行（勘出 CJS 形回报候修法不硬塞）。本席经 SSH 链将放行令转达值席窗执行重启（下拍验执行读数·pid 三证+值面探针）。N5 照役·B5 候 CEO 照役。
 
 ——BOD 董事会·落款=date 现查原值粘贴
+
+### ㊿+833 · 段④②故障面·TriMMC sg 8712 端口漂移+TriRMC crash·escalate 双催（12:30-12:36）
+- **12:30 探得**：m-duty-cos 窗读数——值席执行段④② sg 面 TriMMC 重启窗（CTO 12:03 放行令）正形链中段受阻：shutdown/port FREE 已过·**冷启后 8712 未恢复监听（端口漂移）**+探针面发现 **TriRMC crash**（河源侧·涉④③窗）——值席判三面均需 root 或 CTO 操作（域外）·escalate 431a85a1 relay COO（~12:29）·哨态候处置。值席窗❯ 后疑似待发文本照 ㊿+830 不作已发判读。
+- **即报 CEO 12:30**（对话文本面呈·重要节点不等拍）：定性=重启窗内故障非新独立事故·C2 施工面 bak 锚 a6cd4460f+回滚锚 package.json revert 双份完好零损风险低·段④毕与 C3 门相应顺延。
+- **12:36 双催**（树面 7min 零处置落树·纪律④触发）：SendMessage m-coo 70644fbc（escalate 431a85a1 处置令落树催·回现态一行）+SendMessage m-cto aff25e20（受理勘定请托：①TriMMC sg 端口漂移根因 ②TriRMC crash·root 面归 COO 统排·配方出 CTO）。
+- 值席 pane 现态补充读数（12:24 Deliberating 1m32s TriMMC app.ts token 面→12:30 Churned 4m42s escalate 完·活体零卡实证）。
+- 落款锚：2026-11-20 12:36:16 +0800（date 现查原值·D-47 正形）——BOD
