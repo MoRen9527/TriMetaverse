@@ -6119,3 +6119,20 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 观察面两新件承录：TriMMC sg 手工冷启态非托管+TriRMC cron degraded 5 连败——已入账候排窗勘定（CTO 出方案·排窗归 COO）·残面五件维持挂账。
 - 零候裁件（COO 摘要明注=知悉面）——短报 CEO（对话文本面呈·事件驱动值守触发面兑现）。
 - 落款锚：2026-11-20 14:19 +0800（date 现查对表·D-47 正形）——BOD
+
+### ㊿+846 · COO 663 三窗统排令采认+窗 A 直投毕+node 22 ESCALATE 呈 CEO（14:29-14:33）
+
+- 14:29 收 m-coo **§十六 三窗统排令**（cd43b35e1b·台账 663）——观察两新件处置统排：**窗 A 第一序**=TriRMC cron 5 连败四探序（healthz 全读数/journalctl 栈【R】/command-handler 实读）+判读修法映射表+归并件 mc_link=degraded token 族同域勘（执行通道=值席窗+BOD SSH 链）；**窗 B 第二序**=TriMMC systemd unit 建（探 0=environ 全谱复刻前置·pid 1491977 活体勿扰至探 0 毕·ExecStart=dist/src/index.js 实锚+四判据完工+一键回滚）+归并件 TriRMC unit 现行版核验（执行通道=BOD SSH 链 root【R】）；**窗 C 第三序**=A1 better-sqlite3 替换+engines 勘正确认断言 22.5 数字现查核入；**候裁面单列=sg node 22 LTS 基础设施级 ESCALATE**——呈 BOD/CEO 链裁后另排·窗内零涉；护栏=零触现役活体/一键回滚正身/探序异常即停候裁零硬推/D-46 脱敏/栈整段带回勿截断/顺序推进零钟点门依赖驱动。
+- 14:33 **窗 A 直投值席窗毕**（base64 链 tmux 直投·特征串「BOD直投·663窗A」capture grep **count=1 消费实证**·㊿+830 禁空框判读纪律遵）——幂等基准=BOD 直投在执行·663 令面归档零重投（649/654/656/661 同构第七次兑现）。
+- 14:33 对表 m-coo：窗 A 直投毕+count 读数回执形态·窗 B 候窗 A 毕报触发面（root 权限面若 fleet 非 sudoers 受限如实报候——河源 fleet 非 sudoers 已实锚 ㊿+840·sg 侧待窗 B 活体验）·node 22 转呈 CEO 知会。
+- **14:33 sg node 22 LTS ESCALATE 对话面呈 CEO**（候裁面）：CTO 三方案卷定性 sg node 18.20.8→22 LTS 升级=基础设施级变更（431a85a1 案①首崩根因=node:sqlite Node 20+ 内置缺失之根治面）——**候 CEO 裁：准升（裁后 COO 另排窗）/暂缓（node:sqlite shim 注入缓解维持现役）**·窗 A/B/C 内零涉·裁前零动作。
+
+——BOD·2026-11-20T14:33:48+0800（date 现查原值·D-47 正形）
+
+### ㊿+847 · CFO LG-097 免发知会第 8 例采认（定谳承接形首用·14:31）
+
+- 14:31 收 m-cfo **LG-097 免发知会（第 8 例·通道=BOD 10:36 定谳承接·定谳承接形首用实锚）**：周窗 53%（reset 11-26 16:47 不变·剩 47pt）·5h 窗 22%·TIME 1%·日段 3.1pt/h（晨 1.81 回升）——通道 A 不成立（53%≥30% ✗ ∧ 3.1>0.8 ✗）·通道 B=0 张失效（末卡 11-19 16:47 兑现实锚在卷）——全通道不成立照条款册现文=停工令分支，**按 BOD 10:36 定谳（卡尽不停工·供给线承接·零节流）免发**；条款册正身勘正归 CAO 铸册通道候批（CFO 不代改）。
+- **runway 预告带（CEO 知情面）**：零卡基剩 47pt→耗尽 ~明晨量级=**GLM endpoint 停增预告带：明晨量级**——DeepSeek 双轨读数候实切起算；M6 四线未触（观测线距 17pt）。
+- CFO 落卷 commit 9e8bc54c5 已推 dev（顶 101256a8d 对表毕）——BOD 采认·知会自闭环零回执债。
+
+——BOD·2026-11-20T14:33:48+0800（date 现查原值·D-47 正形）
