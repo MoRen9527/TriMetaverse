@@ -28,3 +28,19 @@
 ## 使用依据
 
 值席读数卷 b404e6b8e（探1/探2 栈原文·五拍时点/hard_order_gate/trap 双址活体）；cto-rc1 卷勘正段（周额度窗谱系）；修 D-2 收口卷（活体 rc=0）；notice-222 周重置卡事实；D-46/D-47。
+
+---
+
+## 二次探序定谳段（666 三探读数卷 0e3ca9c7e 对表·2026-11-20 13:5x CST）
+
+**定谳=零修法落定（二探死点证据定谳确认）**：
+
+1. **探④死点双 request_id 实锚采认**（dc57302c/bce5a4fb·双席 transcript zstd 解尾段·Insufficient Balance+QUOTA 双证）——本卷 §一「已修面历史窗口+零新修法」候选**实证 CONFIRMED**（bootstrap 后首模型调死=QUOTA 唯一死因·修 D-2+周重置卡双修前置已闭根面）；
+2. **三候选对表终判**：②模型 API 通道缺=实锚 ✓／①env/依赖缺=排除（dsh 链注册行在）／③tricompass 注册段缺=排除（注册毕死于模型调）；**本席配方「TriMMC 停机窗」候选=降级承录**（spawn 零 sg 面·QUOTA 独立成立——二探死点证据降级正确）；
+3. **修法令=零修法**：环境修/码修均不触发（根面已闭·现役 spawn 链=修 D-2 形在役）；**终验锚=周日正拍**（spawn 全席活体+consecutiveErrors 归零双读数）；补拍零预跑照令承录 ✓；
+4. **探② rc 语义采认**：rc=2=双席全 absent（部分缺席返 0 语义注）/rc=-1=timeout 形（本案 rc=1=真实败非超时）——absent 判定=解析败/缺 scores 键 rc 原样存（脚本面语义入卷）；
+5. **分叉面注勘正（如实）**：score_skill_spawn.py=**sg 侧在位**（origin/dev 6ceffa6·notice-207 件①硬序 spawn 段·双侧同 commit）——值席「君本机 grep 零命中=分叉面」注=**我前勘 grep 漏命中勘正**（分叉面不成立·四仓 sync 面健康）；heyuan git=origin/dev 同顶零未推 ✓。
+
+### 使用依据增补
+
+666 读数卷 0e3ca9c7e（探①②④三探+死点双 request_id）；sg origin/dev 6ceffa6 双侧同 commit 实锚；heyuan git 同顶实锚；D-47。
