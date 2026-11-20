@@ -60,11 +60,17 @@ BOD 请托注采认——**四 daemon 运行属主对照排查+非 root 运行�
 2. **root 窗内复核段**：root 窗内重跑同款 find（含 /var/lib/trimc——fleet 对其读权限未勘·若 root:root 700 则 fleet 段读不了=受限面如实注）——root 窗清单与 fleet 段清单 diff 零漂移断言后再动 chown；
 3. **node_modules 排除注**：排除面=FSD 毕报 §五.3 sg node_modules@11.10.0 已 fleet 可用在位——root 件若藏 node_modules 内（native build 中间件）→照 chown 不排除面另议（清单先行对表时如实现形）。
 
-## §六 · C1 解阻断言形（COO 承铸件 4·主解读+候补全）
+## §六 · C1 解阻断言形（COO 承铸件 4·勘定毕·值席阻断卷实锚勘正）
 
-**主解读（时间线+语境强关联）**：C1=C-1 值席窗（sg install+build）施工阻解除——196 root 件中若含 /srv/fleet/TriMMC 面件（node_modules 子面/检出面），npm install 或 build 写面遇 root 属主阻→chown 毕=解阻。**解阻断言形=C-1 值席窗四要素毕报全绿**（install rc=0/build rc=0/dist 值面断言 node:sqlite==0+活体三读数 pid/healthz/版本面——FSD §五任务书四要素承录）——若 C-1 值席窗已遇阻点→chown 窗毕后阻点命令重跑 rc=0=解阻补拍实证。
+**C1 定义勘定（实锚非推断·勘正原主解读）**：C1=**窗 C-1 值席窗工序① git pull（遇 root 件阻断）**——值席阻断读数卷实锚（cos-winc-c1-pull-block-readout·a975e9be1·16:14+8 工序窗）：
+- 阻断形态：`error: unable to unlink old 'src/fade/store.ts'/'types.ts': Permission denied`——**src/fade 族+test/ 族 root:root 属主（mtime 11-04 17:23=root 链操作产物·正是 A1 替换对象=主阻断）**；node_modules/dist fleet 畅通；
+- HEAD 未动零半套（ff-only 中止·reset 清扫毕）·③红即停零二次硬试恪守 ✓；
+- **值席已成件两件**：②备份锚 `dist-bak-pre-c1-20261120T081540Z/`（716K·G1 硬项⑤**已闭合**）+⑤前活体三读数（pid 1816473 零触实证）；
+- 对表偏差良形：pull 目标=origin/dev 顶 e8124857b（571139c 直系后代=本席 engines 回落笔已自然入序 ✓）。
 
-**候补全注**：若 COO 语境 C1=挂账台账 852 系某项编号（非 C-1 值席窗）→请 COO 补 C1 定义+验收锚指明——本席配方单按主解读承带·定义面到卷随勘。
+**解阻断言形（三段锚）**：①chown src/fade+test 族毕（fleet:fleet 断言 `find /srv/fleet/TriMMC/src /srv/fleet/TriMMC/test -user root | wc -l`=0）→②pull 快进 rc=0（HEAD 前移=e8124857b·src/fade 新文件 fleet 可写）→③续工序 install rc=0+build rc=0+dist 值面断言+活体三读数=**四要素毕报全绿**——三段锚全过=C1 解阻毕证。
+
+**两形关系裁定（技术面零阻）**：值席候选最小触面形（`chown -R fleet:fleet /srv/fleet/TriMMC/src /srv/fleet/TriMMC/test`）与 CEO 批令全树 196 件清点形——**全树形自然含最小触面子集**；时序裁量候 COO：若窗 C 时敏→最小触面形先行解阻续窗 C·root 窗全树清照排（chown 窗=两次小操作·回滚锚两份）；若统排不急→root 窗一次全树清+值席窗随后续跑（一次清干净）——两形均合规·通道与选点=COO 统排面。
 
 ## §七 · 护栏四族（COO 承铸件 5·总括正形）
 
