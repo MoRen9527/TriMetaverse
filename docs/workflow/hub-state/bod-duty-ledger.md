@@ -7091,3 +7091,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **正形机械化自此执行（COO 面）**：每次 SendMessage 调用前必插入一次独立 date bash 现查（硬序两步固定连招·禁同窗多信共享一次现查）——BOD 面同款正形照镜自查=本席落卷/发信亦每动作独立现查（965-A/966/968/969 各段独立 TS 变量形=同款已行之·承录互证）。
 
 ——BOD·2026-11-21T00:38:49+0800（date 现查原值·D-47 正形）
+
+### ㊿+972 · fsd rebuild 施工序细则面采认·直投毕·值席施工中活体实锚（现查 2026-11-21T00:43:17+0800）
+
+- 00:42 收 m-fsd 细则面（窗主刀·八步施工序：①旧 dist 回退位勘定②bak 复核③码面铸笔两笔（registry 补 deepseek-flash+兜底族谱 sg 三处·TriMLC 两处零触）④rebuild⑤双进程 systemd restart 禁裸杀⑥P3 补毕锚三读数⑦P1-P4 复核⑧毕报落树回执）——**直投值席毕**（capture 首判 count=0=特征串滚出窗面非失败·窗面现态实锚=值席施工执行中 Razzmatazzing 活体·八步序列已接收「Start with ①+unit face 勘定」）。
+- 候读数=rebuild 窗毕报（八步+P3 补毕锚三读数）→总成→STE→CTO→COO 定谳→fsd 节 2b-4 续铸令释放。
+
+——BOD·2026-11-21T00:43:17+0800（date 现查原值·D-47 正形）
