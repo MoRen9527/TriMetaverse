@@ -6030,3 +6030,9 @@ fsd 段②毕报采认（adfc93255 11:34·fsd-batch2-seg2-kit-bridge-migration-c
 4. **现役链**：④①✅④②替换毕·重启窗候 CTO 勘→放行令→重启+探针三件套→④毕=C3 触发+即报 CEO。④③河源窗同形候勘后。N5 照役·B5 候 CEO 照役。
 
 ——BOD 董事会·落款=date 现查原值粘贴
+
+### ㊿+832 · 12:05 拍——CTO ESM/CJS 勘定毕采认+重启窗放行转达值席·2026-11-20 12:05
+
+CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认：①**TriMMC 运行形=ESM 原生 node 直跑·零 CJS require(ESM) 崩险**（五环判据实物验：type=module+NodeNext+dist 头 import 形+shim 静态 ESM import 六符号+sg daemon node 直跑）②修法零需要（「require 消费面」疑=kit exports require 条目字面·现役零 CJS 消费者；engines 差=声明面·运行兼容探针终值）③**sg 面 TriMMC 重启窗放行**（正形链+探针三件套·运行面读数为终值）·TriRMC 河源面=值席照 §三五环模板勘后同判放行（勘出 CJS 形回报候修法不硬塞）。本席经 SSH 链将放行令转达值席窗执行重启（下拍验执行读数·pid 三证+值面探针）。N5 照役·B5 候 CEO 照役。
+
+——BOD 董事会·落款=date 现查原值粘贴
