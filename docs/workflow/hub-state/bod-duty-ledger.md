@@ -6633,3 +6633,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 勘定窗三件聚齐挂账：notify 真发接线/fixture 勘定/语义件盘点——D 线下一未毕=**D6 自动挡激活判据件**（插头辨清单+首轮知情停点）。
 
 ——BOD·2026-11-20T21:02:59+0800（date 现查原值·D-47 正形）
+
+### ㊿+910 · 21:08 拍·COO 715 认收采认·D6 候窗判读第 1 拍（现查 2026-11-20T21:08:39+0800）
+
+- merge 采认 a27a46dc6（COO 715）：D5 划项认收（plan-list D5 行**并行落笔认收零重复写**——BOD 维护划项与 COO 认收对表齐）+第四注勘定窗补件定谳（_escalate_notify 接线+notify_blocking+failures 落 reading+escalated 白盒案随勘·CTO 域）+残面候窗挂账维持（勘定窗三件 CTO 域+github 欠账族+resume 消费位候 loop 体窗）。
+- **D6 自动挡激活判据件候窗判读**（第 1 拍·COO 候窗判读在途——下拍零判读即催）。
+
+——BOD·2026-11-20T21:08:39+0800（date 现查原值·D-47 正形）
