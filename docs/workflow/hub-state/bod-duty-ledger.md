@@ -6235,3 +6235,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **三支呈裁（CEO 对话面已呈）**：①一次性 root 窗 chown 196 件归 fleet+/var/lib/trimc root 件顺手清（C1 解阻+存量清零）②纪律面=sg 施工身份断言+root 操作后必归还属主入册（CAO 铸条）③基线面=CEO「所有程序非 root 运行」定性入册+其余 daemon 对照排查候排窗。零批准零动作（C1 红即停维持）。
 
 ——BOD·2026-11-20T16:22:33+0800（date 现查原值·卷毕时戳=commit 时戳·D-47 正形）
+
+### ㊿+859 · CEO 四支批令流转+溯源终判链（root SSH 直连手动实锤·auth.log 终钉候）16:28-16:35
+
+- 16:28 **CEO 四支批全生效**：①chown root 窗（196 件归 fleet+/var/lib/trimc 件清·C-1 pull 解阻）②纪律入册③非 root 运行基线④**auth log/值席会话 log 复盘权限给 fleet（审计面·CEO 亲批=授权源到位·CTO 175f1b384「组授予不开」语境已被亲裁升级覆盖）**+补令「给完权限查下谁干的」。
+- 16:29 流转：COO（5a660ee6·chown 窗统排+通道候定）·CTO（00f6ae40·组授予+chown 技术配方承+组授予语境升级知会）。
+- 16:29 **root 通道勘实**：本机 root@sg key=denied+fleet sudo 需密码——BOD 面零 root 通道（root 窗=CEO 人工面照配方单 OR 临时 sudo 授权·两支并排呈中）。
+- 16:30-16:34 **fleet 权限内溯源四线毕**：①TriMMC reflog 钉死 **11-04 17:23:02 `git merge origin/dev: Fast-forward`**（拉 17:05-17:10 FSD 工序 2 两笔 fade 移植 commit 0de548a/37cceeb·13 天上游静默后首笔到达）——施工序列=17:23 merge→17:25:07 dist-bak-pre-fade 备份→17:25:12 trimc-start.sh 切形（SDE 毕报 L18「FSD 工序 3 切毕实证」）=**LG-092 工序 3 装载步人手顺序操作**；②sg 值席 claude 会话 11-04 零 jsonl 写盘；③fleet bash_history 零 git merge 痕（仅 sudo systemctl restart trimc 一条+claude 启动命令）；④daemon cron job 全谱点位排除（config-sync-apply=xx:18/48 点·clock-skew=xx:27 点·均不落 09:23:02Z；TriMetaverse 检出 11-04 痕=rebase 序列 23:5x 另一线）——**四路排除→root SSH 直连手动操作实锤·操作者手待 auth.log 终钉**（fleet journal 组授予后查 sshd 11-04 17:2x root 会话来源+sudo 痕——查证步已入配方单链·COO 19ff3d9e 对表）。
+- 16:34 COO 678 采认+**C1 补勘定谳**：C1=窗 C-1 的 pull 拉取步（非 P1 排面链段）·「C1 解阻」=chown 归还属主后 fleet 可写→pull 步可重跑·配方单⑥解阻断言=chown 毕 fleet 试写 src/fade 实证锚。
+- 候面：root 窗通道 CEO 定谳→COO 排窗令→配方单执行（usermod 组授予→chown 196→auth.log 溯源回 BOD）→C-1 pull 解阻续链→纪律入册（CAO 铸条）→非 root 基线排查。
+
+——BOD·2026-11-20T16:34:35+0800（date 现查原值·卷毕时戳=commit 时戳·D-47 正形）
