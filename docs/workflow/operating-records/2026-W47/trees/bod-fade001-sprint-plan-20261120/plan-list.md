@@ -4,7 +4,7 @@
 - syncMode: write-time
 - lastSyncedAt: 卷面时戳锚=git commit 时戳（零手打·D-47）
 - 令源原文: 「把正在施工和将要施工的，以及我们对fade-001的runner套loop套fade-001的终极改造，写一个plan list，一条一条的列出来，毕一项划掉一项，runner的CEO意见部分你可代我给出，推动fade-001的进化。文档落成md，每6分钟按最近任务项去催cos，到明早九点争取全毕。」
-- 机制: BOD 每 6 分钟拍按「最近未毕项」催对应 COS（sg 值席 tmux/本地 m-cos SendMessage 双通道）·毕一项划一项（[x]+删除线）·deadline=09:00（毕后终态报 CEO·停催转值守）
+- 机制: BOD 每 6 分钟拍按「最近未毕项」催对应 COS（sg 值席 tmux/本地 m-cos SendMessage 双通道）·毕一项划一项（[x]+删除线）·~~deadline=09:00（毕后终态报 CEO·停催转值守）~~→**deadline 延至 14:00（CEO 10:10 令催办制恢复·job 11018512）——催办对象=出窗项解锁动作面：C3=催 COO 统排窗（WO-RW1 三批族）/D3-D8 解冻总开关=催 CTO gate 接口定谳勘修/N5=候出催报；09:00 终态报已发毕项 16✅ 不变·余 10 项照此推进**
 - 催办序: 每拍取最上方第一个未毕项→查其责任席现态→有进展即划掉并顺移下一项·零进展两拍（12min）=催
 - 代笔注: runner CEO 意见段=BOD 代笔（D 线卷首·按 CEO 已裁定口径延伸+补口处标「代笔补口」）
 
