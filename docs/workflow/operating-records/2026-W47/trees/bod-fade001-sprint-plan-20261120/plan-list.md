@@ -33,7 +33,7 @@
 ## C 线 · 两包形收敛施工（notice-236 款一定谳·P1-P3 分批强制·契约测试先行）
 
 - [x] ~~C1 P1 拆树派工~~（编排九件收进 @tricompany/orchestration-kit 独立包）——**01:50 毕**（值席 cos-snp1 短报：FSD 主刀+STE 契约先行排面双发毕·STE 契约测试套件卷落树 ste-contract-test-suite-nine-20261120.md）
-- [ ] **C2 P1 施工**（九件迁移+契约测试先行+准入断言族）← FSD 主刀在工（STE 契约卷已落树）
+- [x] ~~**C2 P1 施工**（九件迁移+契约测试先行+准入断言族）~~——**07:46 毕·四面齐**（毕锚详注=B 线区 C2 行·接线+C3 门=sprint 后窗候 COO 统排·本行=07:52 划项漏划勘正）
 - [ ] C3 P1 验收（四仓活体对表+漂移归一+md5 复验）
 - [ ] C4 P2 配套/infra 收敛（候 C3）
 - [ ] C5 P3 local 族收敛（候 C4）
@@ -50,7 +50,7 @@
 > 6. **护栏常位**：8 轮封顶保险丝+GLM 速率护栏+token 值面禁进转报+D-47 时刻制——四护栏改造后原样保留。
 
 - [x] ~~D1 改造方案卷定稿~~（round_runner 程序编排+spawn 七席+等待语义+retry 闸漏补立）——**01:50 毕**（CTO round 编程设计卷落树 fade001-tenstage-deploy-20261115/cto-round-programming-design-20261119.md·值席划项回传认收）
-- [ ] **D2 评分两轨落地**（ScoreCLI 机械面先+ScoreSkill 主观面后·两段锁勿互套·score 顺序 7/7 维持）——**排工令落卷 07:52 在工**（cto-d2-dispatch 16db059a3·D-15 令已达 fsd：令 1=ScoreCLI 机械面 sprint 内立即起（deadline 09:00 硬门·毕不完如实带出零硬塞）+令 2=ScoreSkill 主观面令 1 毕后接（白盒 mock 零真实 GLM 跑）+令 3=两轨联调候窗候 COO 统排——两段锁=顺序锁硬串行断言为验收硬锚·score_engine/aggregate 输出面零改·95 线判读位=D4 非本令）← 候 fsd 令 1 回执
+- [ ] **D2 评分两轨落地**（ScoreCLI 机械面先+ScoreSkill 主观面后·两段锁勿互套·score 顺序 7/7 维持）——**排工令落卷 07:52 在工**（cto-d2-dispatch 16db059a3·D-15 令已达 fsd：令 1=ScoreCLI 机械面 sprint 内立即起（deadline 09:00 硬门·毕不完如实带出零硬塞）+令 2=ScoreSkill 主观面令 1 毕后接（白盒 mock 零真实 GLM 跑）+令 3=两轨联调候窗候 COO 统排——两段锁=顺序锁硬串行断言为验收硬锚·score_engine/aggregate 输出面零改·95 线判读位=D4 非本令）+**令 1 ScoreCLI 毕 08:01**（fsd-d2-scorecli-closeout：score_cli v2.0.0 四面新铸[extract_internal_score+retry_state 落卷+eval_retry_gate 四态+run_score 集成]+零改面自证·白盒 26/26+drafts 全树 pytest 115 passed 零新增红+TriOrchKit 回归 58/58+tsc/py_compile 双 RC=0·retry 四态+RETRY_MAX_PER_WEEK=2 当周封顶跨周重置+escalate exit 0 零熔断+=90 免 retry 勘正语义实锚案·deadline 内毕余 59min）+令 2 ScoreSkill 接力候验（时窗足按令·全 mock 零真实 GLM）+STE 白盒 review 并行候收稿（令 §五·next_agent=STE）——sprint 面毕判据=令 2 毕+STE review 过 ← 候令 2 回执+STE review
 - [ ] D3 进化判据接线（95 线+四前置件批立兑现·含 95 线定谳件）
 - [ ] D4 进化判决形落地（COS 综合裁判接口+轮间意见窗）
 - [ ] D5 close 恒等式接线（自检总结面·closeCLI+closeskill 双面分工）

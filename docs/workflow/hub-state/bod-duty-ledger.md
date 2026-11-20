@@ -5819,3 +5819,13 @@ CEO 令 02:45:15「T2 开令面候的什么，你裁了吧」——勘现：值�
 - **①C2 技术收口承录卷（cto-c2-sprint-closeout 16db059a3·sg-server 同顶验真）**：令 2 落锚本席独立验真（fetch 步进+毕卷树面在+hash 级双证采认）——**三方独立验真齐**（fsd 活体/COS 40 位对表/CTO fetch）·划项达成承录（441a5cb03 认收在卷）·接线+C3 出窗承录（WO-RW1 批 2）。
 - **②D2 排工令落卷（cto-d2-dispatch 同 commit·D-15 令已达 fsd 候回执）**：令 1=ScoreCLI 机械面 sprint 内立即起（deadline 09:00 硬门·毕不完如实带出零硬塞）·令 2=ScoreSkill 主观面令 1 毕后接（白盒 mock 零真实 GLM 跑）·令 3=两轨联调候窗候 COO 统排——护栏面：两段锁=顺序锁硬串行断言为验收硬锚·score_engine/aggregate 输出面零改·95 线判读位=COS 综合输入面=D4 非本令。
 - **处置**：plan-list D2 行注更新（排工令落·←候 fsd 令 1 回执）·CTO 回执·D2 转在工跟踪面（07:49 催令接单闭环≈5min）。
+
+### ㊿+808 · 08:02 · D2 令 1 ScoreCLI 毕认收+令 2/STE review 双线候验+C 线重复行勘正
+
+- fsd-d2-scorecli-closeout-20261120.md 落卷认收（08:01+8·令 1 毕·deadline 内毕余 59min）：score_cli v2.0.0 四面新铸（extract_internal_score+load/save_retry_state 当周域键+eval_retry_gate 四态纯函数+run_score 集成）+零改面自证（engine 回执投影/三态路径分立/退出码族 0/2 维持）
+- 门禁五项读数齐（令 §三全项对表）：白盒 26/26（5 现役零改+21 新铸五族）+drafts 全树 pytest 115 passed 零新增红+TriOrchKit 回归 58/58+tsc rc=0+py_compile RC=0+顺序锁 CLI 半面（落卷即交棒·写败 exit 2 零交棒）
+- retry 语义锚：RETRY_MAX_PER_WEEK=2 当周封顶跨周重置+escalate 呈报非熔断（exit 0 零阻断交棒实案）+=90 免 retry 勘正语义实锚案（90e06cddd·test_eq_threshold_passes）
+- scope 分立如实注三项承录：全链顺序锁断言=令 2 编排面/95 线均分断言=令 2+D4 面/真实 retry 活体=令 3 联调窗——零 scope 蔓越
+- next 双线：令 2 ScoreSkill 接力（fsd 时窗足按令·全 mock 零真实 GLM）+STE 白盒 review 候收稿（令 §五·next_agent=STE）——D2 sprint 面毕判据=令 2 毕+STE review 过；令 3 联调候 COO 统排出窗
+- plan-list 维护：D2 行注更新（令 1 毕锚+双线候验）+C 线节重复 C2 行勘正划掉（07:52 划项漏划·B 线区行为毕锚主行）——现势 15✅/24 口径不变（D2 半程在途）
+- 卷面观察：fsd 卷落盘未 commit（本拍 git log 顶仍 f50fce8bb）——候 fsd 自收口（催办信已带提醒·若在途忽略）
