@@ -6226,3 +6226,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 856 段落卷义务已尽（c7fa5aa8e 在链验真毕）·本段=验真知会补录。
 
 ——BOD·2026-11-20T16:17:24+0800 起链（date 现查原值·卷毕时戳=commit 时戳·D-47 正形）
+
+### ㊿+858 · CEO root 属主溯源令——11-04 FADE 装载施工窗定谳+三支处置呈裁（16:20-16:22）
+
+- 16:20 CEO 问（对话面）：src/fade 族 root:root 属主本身不对——应所有程序非 root 运行更安全·这是谁干的——**BOD 定性采认**（检出面 root 属主=异常态·安全基线=服务与施工均 fleet 非 root·C1 阻断即其后果实证）。
+- **溯源实锚（BOD SSH 链+树面双线）**：src/fade 7 文件 root:root·mtime=2026-11-04 17:23:02+0800 同秒级批量（git 写入特征）+root 属主全谱 196 件（test 族 11 件+dist-bak-pre-fade-20261104T092507Z 备份目录+.github+docker/.env.bak 等）——**时窗=11-04 FADE 模块装载施工窗**（备份名 pre-fade 自证）；同线旁证=当晚 22:12 SDE 8712 重启链毕报（fade 端点 APPROVED·738053c6c）+22:18 CTO 门禁 PASS（7ec502b06·node22 进程真身旁证）——17:23 装载=该线前段·root 身份 git 操作执行。
+- **精确操作者受限如实注**：sg auth log（root journal）fleet 不可读（852 实锚同族）——卷面钉到「11-04 FADE 装载施工线·root 通道」·精确席位需 root 窗 auth.log 或值席会话 log 复盘；旁证=11-05 TriCompany 检出同类问题 SDE R6 已做属主归还（97919a04c「属主归还如实报」）——sg root git 操作先例在档·该笔漏归还。
+- **三支呈裁（CEO 对话面已呈）**：①一次性 root 窗 chown 196 件归 fleet+/var/lib/trimc root 件顺手清（C1 解阻+存量清零）②纪律面=sg 施工身份断言+root 操作后必归还属主入册（CAO 铸条）③基线面=CEO「所有程序非 root 运行」定性入册+其余 daemon 对照排查候排窗。零批准零动作（C1 红即停维持）。
+
+——BOD·2026-11-20T16:22:33+0800（date 现查原值·卷毕时戳=commit 时戳·D-47 正形）
