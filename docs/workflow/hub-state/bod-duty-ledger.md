@@ -6967,3 +6967,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 在途维持：fsd 施工段（round_runner 大件）·轮值名单候（值席施工毕后补）。
 
 ——BOD·2026-11-20T23:21:20+0800（date 现查原值·D-47 正形）
+
+### ㊿+956 · 值席勘定=unit env 钉位 root 链两行·呈 CEO 定谳（现查 2026-11-20T23:27:37+0800）
+
+- 值席窗中段读数（23:26 直读探）：TriRMC DEFAULT_MODEL 钉位=/etc/systemd/system/trirmc.service 环境钉（TRIRMC_DEFAULT_MODEL=glm-5.3-flash·三级解析①env 钉定在钉·settings/config-sync/cache 三面均不可越）——**切换正形=root 链两行**（sed -i unit+systemctl restart）·值席面 sudo 窗已按 18:41 自撤闭环=值席零执行面。
+- 值席面已备齐：bak 锚两位（unit=/tmp/trirmc.service.bak-ds-20261120T145346Z+config-cache bak·回滚=cp 回+restart 一行族）+P1 基线指纹 DEEPSEEK_API_KEY sha16:84001b4942e6af15（len 35·chmod 600 零明文）+deepseek-flash 注册面实证（anthropic-proxy matchModels 在册·v4-pro 禁恪守）+P1-P3 探针束就绪——**贵面两行毕=段毕零延迟连发三探针**。
+- 实位判读=河源 root 面（/etc/systemd/=root 写·TriRMC=system unit 非 user unit 零 fleet 权）——**呈 CEO 两支定谳**：A=人工 SSH 河源 root 粘两行（ssh -J fleet@sg root@R-HY）·B=河源 fleet sudo 状态勘定后授权窗（河源 sudo 态未探）。
+- GLM 触线即停照役·量级照令。
+
+——BOD·2026-11-20T23:27:37+0800（date 现查原值·D-47 正形）
