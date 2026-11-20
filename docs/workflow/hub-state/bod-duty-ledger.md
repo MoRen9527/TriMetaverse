@@ -7198,3 +7198,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 新卷 cto-newkey-cardfill-final-review-20261121.md 落树（CTO 灌卡六步毕报终审·链条快进）——读数采认态·候 COO 定谳→ns9 点火链续（值席工序 1-2 在跑·工序 3 条件触发形已预下达）。
 
 ——BOD·2026-11-21T03:14:10+0800（date 现查原值·D-47 正形）
+
+### ㊿+986 · COO 758 值席工序面修裁采认·直投毕（现查 2026-11-21T03:17:30+0800）
+
+- 03:16 收 m-coo 758（CTO 终审裁 A/B·修 983 令）——**修裁直投值席毕**（capture count=1 实证）：**裁 A=proxy env 注入撤**（①查卷勘定推翻前提·card 消费不走 env 旗标·401 真因=旧 key invalid·P3 绿=card 链真通实证——env 注入冗余+D-46 明文面劣于 card 加密面·**在途不可撤则取新 key f644a24f 档禁旧死档值**）·值席工序收窄正身=restart 判读（两立面干净分立+unit/env bak 先行+三断言新值面探针）+P2 daemon 半面读数·**裁 B=GLM 槽并批否**（禁 env 直注旁路 Form X 断·三候选归窗二批）·GLM 密文零触不变。
+
+——BOD·2026-11-21T03:17:30+0800（date 现查原值·D-47 正形）
