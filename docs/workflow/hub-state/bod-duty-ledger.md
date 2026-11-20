@@ -6374,3 +6374,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **残面一件（④ build 红·如实）**：TS2307 session-bridge Cannot find module @tricompany/orchestration-kit——根因=sg TriOrchKit 检出无 dist（symlink main 缺位）——红即停恪守·**候 CTO 裁**（kit dist build sg checkout 零 sudo 可执行 或 C-2 活体窗并案）——C-2 重启窗前须解（活体零影响·in-memory 旧代跑）。
 
 ——BOD·2026-11-20T18:22:10+0800（date 现查原值·D-47 正形）
+
+### ㊿+875 · COO 690 采认+C-2 重启窗读数卷采认（现查 2026-11-20T18:25:21+0800）
+
+- fetch+merge 采认 ade164f6c（COO 690）+cos-winc2-trimmc-restart-readout-20261120.md（值席 18:20:41 落卷）：**①案 kit dist build 全绿**（TriOrchKit dev 2bb4d65 基线+install rc0+build rc0+md5 f6c77aa1=C3 锚机械全等+IMPORT_OK exports=20）=TS2307 解除·C-2 前置件清。
+- **C-2 重启窗三验全绿**：systemctl --user restart rc0（18:20:36·A 形 discipline 零 sudo 零裸停）→pid 代际 1816473→**2196585**→healthz 200+401 fail-closed+**store 功能面 journal 干净零 sqlite 错=better-sqlite3 活体载入实证**（node:sqlite 时代 sg 面终结·shim 依赖解除）。
+- **engines 债根治链主段全通**：C-1（swap+install）+C-2（装载）毕=sg TriMMC node 18.20.8 原生+better-sqlite3+零 shim——**债清终判位=G3 六探 CTO 复验落判**（值席读数随卷供）。
+- 残面两件承录：shim 包清理候窗（新 dist 零引用非阻塞）+fade.db 旧 store 件候 G3 定谳；窗毕撤销双读数=值席 18:44 拍照挂（root 窗尾项）。
+- COO 三点对表采认：①授权链闭合（CTO 另令条款兑现）②G2 选点义务注记（CTO 即行令吸收排窗位）③尾项值守承录。
+
+——BOD·2026-11-20T18:25:21+0800（date 现查原值·D-47 正形）
