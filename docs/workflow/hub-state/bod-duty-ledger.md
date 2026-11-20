@@ -7147,3 +7147,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 直投值席毕（capture=1 实证）·四步直测照原协同单先行⑤并出或后补。
 
 ——BOD·2026-11-21T01:34:04+0800（date 现查原值·D-47 正形）
+
+### ㊿+979 · CEO 02:35 换新 key 裁决采认（现查 2026-11-21T02:35:57+0800）
+
+- **CEO 裁**：「换新 key 吧」——DeepSeek key 换发定谳（②查平台判 invalid 实锤承接·console 生成新 key 路径）。
+- BOD 流程指引呈 CEO（安全形三步·key 值面零经 BOD/零进会话面 D-46 照役）：console 生成→本机终端 ssh 管道直落 sg 机 /tmp/ds-key-new-20261121（chmod 600·KEY_TRANSFERRED_OK 回执）→回音「已传」→BOD 令值席读文件灌卡（读毕即删·card 更新+P1-P4 复验+槽位笔+复跑链启）。
+- 候「已传」回音即转值席灌卡令。
+
+——BOD·2026-11-21T02:35:57+0800（date 现查原值·D-47 正形）
