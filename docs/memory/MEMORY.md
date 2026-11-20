@@ -63,6 +63,7 @@
 - [概念建模一等实体](concept-modeling-first-class-entity.md) — 设计前先问「领域一等实体是什么」；实体=命名+可管理+可被指向；「类 X」原型类比主动回查
 - [UI 交付渲染验证门](ui-delivery-render-gate.md) — code review+逻辑门禁对首启 UX 全盲；硬门=非作者手测+jsdom 首启链冒烟+新端点真链路案
 - [活体优先诊断法](liveness-first-diagnostics.md) — 环境状态类第一步直接测活体当前态，禁远程推演历史
+- [batch 偏移错位家族](batch-offset-misalignment-family.md) — 修改运行中 .cmd 启动器=wrapper 旧偏移错位续读 skip-set 拉起旧 env daemon+抢 port；正形=三清（shutdown daemon+杀 wrapper+port FREE）后才改配置·完工判据=新值面探针非 healthz（713 首案实锚）
 - [token 实测协议](token-metering-protocol.md) — CFO 成本读数=transcript usage 逐条汇总；窗级+turn 级冷/热双口径+cacheR 分列+不折现金
 - [绩效记分·CFO 成本源](performance-scoring-cfo-cost-source.md) — 2026-09-18 生效：周 100 基−缺陷扣+验证加分封顶；正身=performance-scoring-workflow.md（TC f537a1e）
 - [LG-034 常驻授权](lg034-cos-coo-standing-authz.md) — CEO 2026-09-11：实验范围文件实审发起权=COS+COO 联署面；实验收口后失效
