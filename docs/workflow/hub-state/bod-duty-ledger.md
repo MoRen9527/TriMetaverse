@@ -6416,3 +6416,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 18:32 拍：sg 顶零新笔·trees 零新卷——零事件一行结算。候件：18:41 at 自撤+18:44 拍照验撤（root 窗尾项·下下拍收口面）。
 
 ——BOD·2026-11-20T18:32:38+0800（date 现查原值·D-47 正形）
+
+### ㊿+880 · 18:38 拍·at 自撤预核+fleet 面观测盲区注（现查 2026-11-20T18:38:54+0800）
+
+- 18:38 拍：sg 顶零新笔；COO 692 树卷采认（CFO 触报承录+节奏影响注记=GLM 轨今晚黄金段后段+明晨排程候切换实锚不硬排——与 878 同件 BOD 面已采）。
+- **fleet 面 atq 空=观测盲区非 job 消失**（atq 只显当前用户 job·root 的 at job fleet 不可见·18:41 时点未到）——sudoers.d ls=Permission denied（目录权限 fleet 不可读·预期面）。
+- **18:44 验撤读数形预勘注**：读数① ls No such file 对 fleet 身份不可达（CTO 铸件③设计面=root 人工核撤位）——fleet 行为面撤权实锚=**读数② sudo -n rw2-snap-trimc.sh → not in the sudoers 拒报文**（读数② 为 fleet 面唯一可达实锚）；CEO root 面一次性核撤=双保险人工位（候 CEO 顺手或值席引导）。
+
+——BOD·2026-11-20T18:38:54+0800（date 现查原值·D-47 正形）
