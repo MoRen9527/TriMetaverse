@@ -6858,3 +6858,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 即直投值席线台账查询令（m-duty-cos·capture count=1 实证）：查 11-04 当班值席席名+员工对应——用途=云面审计对表内部定位；若值席面亦缺=如实回零记录+补录路径另勘。
 
 ——BOD·2026-11-20T22:34:58+0800（date 现查原值·D-47 正形）
+
+### ㊿+941 · 值席段毕报采认·四探针全绿·四锚基线现采（现查 2026-11-20T22:39:03+0800）
+
+- merge 采认 cos-d7-tonight-duty-segment-毕报-20261120.md（值席 m-duty-cos·ssh heyuan 只读探针）：**四探针全绿**（①TriRMC 8710 pid=2687790 活体+监听一致②仓位双仓 hash 级=TriRMC dev@5c993fc+TriCompany dev@07135217（runner 族宿主）③护栏位现读④改造基线现采=activation_gate（D6 件）在位·**round_runner=未铸**（D7 随铸面如实档）·cron jobCount 6 degraded true consecutiveFailures 5 周日终验前照档）。
+- **四护栏锚值面**：⑷ D-47 时刻制**全绿**（三载体现查形）·⑴ 8 轮 FUSE 机制✓+8 值位=round_runner 随铸面定值·⑵ GLM 成本护栏双门✓+限频位=施工窗定项·⑶ token 禁进转报声明+config 形✓+递归滤补验=施工窗定项——**锚齐判定归 COO（值席零判·D-83 三层恪守）**——候铸/窗定项与 fsd 施工段（round_runner 随铸+起跑接线）同窗族验位关系如实档。
+- 零红面·只读零现役件触·GLM 贴线零估读恪守。
+- D7 链现势=值席段毕✓+**fsd 施工段在途**（round_runner 随铸+起跑接线·CEO 问询 busy 实锚）——候 fsd 毕报+COO 四锚齐判定→验过即 ns9 起跑（935 破窗令）。
+
+——BOD·2026-11-20T22:39:03+0800（date 现查原值·D-47 正形）
