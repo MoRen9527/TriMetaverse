@@ -6885,3 +6885,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CFO 74% vs CEO 快 80% 差异面=时点/口径差·如实并载候实切毕报对表（BOD 零代裁口径·两读数并录）。
 
 ——BOD·2026-11-20T22:44:35+0800（date 现查原值·D-47 正形）
+
+### ㊿+944 · CEO 22:44 切换范围修正采认（现查 2026-11-20T22:45:05+0800）
+
+- **CEO mid-turn 令**：「**TriMMC 和 TriMLC 可以不切，继续用 glm**」——切换范围修正：**TriRMC（河源）切 DeepSeek key**·**TriMMC（8712）/TriMLC（8713）不切继续 GLM 轨**。
+- 读数面影响承录（转 CFO）：GLM 轨继续=MMC/MLC 消耗持续——GLM pct **不冻结**（前「实切毕=GLM pct 冻结终值」语义修正为 TriRMC 单面冻结·M 面两 daemon GLM 消耗照走）——GLM 耗尽后承接形照 LG-097（卡尽不停工）·触线预测照 CFO 22:44 读数（~22:55 量级）。
+- BOD 即转 CFO（读数面修正）+CTO（切换令范围=仅 TriRMC·MMC/MLC 零动）。
+
+——BOD·2026-11-20T22:45:05+0800（date 现查原值·D-47 正形）
