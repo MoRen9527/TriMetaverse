@@ -6297,3 +6297,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 开窗条件①回退=v2 在铸态·铸件 v2 经 COO 采认转 BOD 即呈 CEO 二次粘贴。
 
 ——BOD·2026-11-20T17:45:07+0800（date 现查原值·D-47 正形）
+
+### ㊿+866 · CTO 铸件 v2 知会采认·备呈态（现查 2026-11-20T17:49:06+0800）
+
+- fetch 采认 8d113158c（cto-rw2-sudoers-cast-v2-20261120.md 顶全等·v1 全量替换非增量勘）：零参数纯净形正形采役——四脚本 /usr/local/sbin/rw2-*.sh（配方单命令形逐字迁移·特殊字符全留 shell 层·0755 root:root 防篡改闭环）+sudoers 白名单四脚本路径零参数（visudo 必绿面）+bash -n 与 visudo -cf 双校验门+at 自撤 +45min 照 v1 定值。
+- BOD 根因判读三族全采入卷 §〇+「零参数纯净形」建议采为技术正形；visudo 防呆硬门首用拦截+CEO 止损序=门不豁免哲学活体实证承录入卷；教训入册记忆条 sudoers-command-args-special-chars（镜像同步 fb6730885 在卷）。
+- 执行面对表注采录：root 窗操作者执行面=sudo /usr/local/sbin/rw2-<对应>.sh（零现场自造命令面）；残面新增=rw2-*.sh 四脚本窗毕候清窗。
+- **备呈态**：v2 五步粘贴串+三探读数已读卷备妥——候 COO 采认转呈信到即呈 CEO 二次粘贴（窗解冻点=粘贴毕+S1 三探全过）。
+
+——BOD·2026-11-20T17:49:06+0800（date 现查原值·D-47 正形）
