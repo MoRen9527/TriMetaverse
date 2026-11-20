@@ -7004,3 +7004,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 23:38 拍：CFO 23:35 收编树卷采认（判停定谳回执·触线报面→判停闭环兑现留痕·检查拍 2 照役）——零新事件一行结算。候件=CEO root 两行 A/B（关键路径）·值席段毕报正身·轮值名单·D7 候切复跑。
 
 ——BOD·2026-11-20T23:38:42+0800（date 现查原值·D-47 正形）
+
+### ㊿+961 · 23:44 拍·CTO 承接形勘定段一+COO carryover P2 派工单采认（现查 2026-11-20T23:44:59+0800）
+
+- merge 采认三卷：①cto-mmcmlc-deepseek-carryover-survey-20261120.md（CTO MMC/MLC GLM 承接形勘定段一静态勘）：切换单点=TriModel 配置面两 card（mlc/mmc face）·daemon 侧**热载 15min 零重启**（vs TriRMC 冷载另立形）·两 daemon 零 GLM 硬编码·deepseek-flash 承载位三实锚·四探锚形（P4 热载刷新特有）——段二活体现探六项候 COO 派窗；②coo-d7-carryover-p2-workorder-20261120.md（COO D7 节 2b carryover P2 派工单落树——GLM 停手候切复跑段派工）；③值席窗 idle 候态正确（切换两行候 CEO 零越权）。
+- D7 候切复跑面成型：runner 本体在链+节界锚+carryover 派工单就绪——切毕（root 两行）即复跑。
+
+——BOD·2026-11-20T23:44:59+0800（date 现查原值·D-47 正形）
