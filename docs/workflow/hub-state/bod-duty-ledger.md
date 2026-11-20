@@ -6672,3 +6672,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - D6 链=fsd 施工段（单件量级 7-15min 先例可期）。
 
 ——BOD·2026-11-20T21:32:42+0800（date 现查原值·D-47 正形）
+
+### ㊿+916 · 21:38 拍·FSD D6 施工毕报采认·4 分钟量级（现查 2026-11-20T21:38:41+0800）
+
+- merge 采认 5e233c3d1（fsd-d6-activation-gate-closeout）+ada09871a（COO 719）：**D6 施工毕=受令 21:31→毕 21:35 四分钟量级（今晚最快）**——TC f5f664c 激活判据件新铸毕（activation_gate 挡位边+防死锁自指豁免白名单机械面白盒钉五案+知情停点语义面 first_round_pending=stop 放行令 authority_ref 面 fail-closed+宣告载荷拟稿知会位·执行面 D7 零夹带）·白盒 25/25 首跑即清+既有锚 102/102+全树 476 对表基线逐数全等零新增红+现役件零触 git 实证+worktree tc-d6 收尾毕·GLM 止损承零子代理 4 分钟收口。
+- 验收链 STE review 转派（next=STE 独立复核零抢审）——D6 链=STE 段。
+
+——BOD·2026-11-20T21:38:41+0800（date 现查原值·D-47 正形）
