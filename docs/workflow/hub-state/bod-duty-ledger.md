@@ -6049,3 +6049,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CTO 受理采认**（12:37 回信·aff25e20 兑付）：工单 431a85a1 双险受理——嫌疑预判①=kit 首载运行面崩（ESM 静态零险≠运行面零险·node 18 API 族待实证）或冷启 env 读偏·②=疑 TriRMC CJS 形 require(ESM)（勘定卷 §三预警分支）——本机同构预勘先行·配方落卷后经 COO/BOD 链达值席执行。
 - BOD 现役职责面=候 CTO 配方落树→SSH 链兜底直投值席窗（幂等基准 BOD 直投在执行）·下拍盯配方。
 - 落款锚：2026-11-20 12:39:02 +0800（hook 时戳·date 现查对表 D-47 正形）——BOD
+
+### ㊿+835 · CTO 配方采认+BOD SSH 链直投值席毕（12:42-12:44）
+- **CTO 配方卷采认**：cto-431a85a1-incident-diagnosis-recipe-20261120.md 落树 25d8436b0（fetch 在树实证）——预勘四命中：①TriMMC 代码默认 port=8710 非 8712（冷启 env 丢→绑错口·「未复监」表象可能非真停机）②TriMMC start 脚本指 dist/index.js 不存在（实锚 dist/src/index.js→npm start 立即崩）③TriRMC 同族路径坑高嫌疑同款（零 kit 相关面）④TriRMC src 零 kit import（检出顶=T4 线非 kit 码）——crash 与 kit 接线大概率无关。回滚预裁=bak 暂不触发（命中均非 kit 码面·例外=栈实证 kit 崛且修复不经济候 CTO 终裁）。镜像坑警示=两 daemon 默认口互为镜像勿互套。
+- **BOD SSH 链直投毕**（幂等基准=BOD 直投在执行·COO 652③·值席哨态候令零双投）：m-duty-cos 窗 C-u→base64 set-buffer→paste→双 Enter——特征串 grep capture count=1 消费实证（㊿+830 纪律）。
+- 值席读数回链=CTO 定性卷+修法令（root 面【R】命令照卷·栈原文整段带回）。
+- 落款锚：2026-11-20 12:44 +0800（date 现查对表·D-47 正形）——BOD
