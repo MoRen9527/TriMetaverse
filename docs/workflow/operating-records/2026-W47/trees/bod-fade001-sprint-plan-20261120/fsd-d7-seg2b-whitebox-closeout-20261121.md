@@ -19,7 +19,7 @@
 | 套件 | 案数 | 承载断言面 |
 |---|---|---|
 | F-1 flag 存取权属门 | 5 | a=null ref throw /b=空白 ref throw /c=合法 ref 落卷+switched_at=nowIso 原值粘贴（D-47 断言并案）/d=零文件缺省 test /e=值出三态域 throw |
-| F-2 四支路由 | 6 | a=test 直进（rounds_run=2·calls=3·EXIT 轮 count 零增）/b=debug continue 续轮 /c=terminate break（rounds_run=0·count 零增）/d=absent 挂起（exit=null·零推进）/e=FUSE 7→8 边界钉（7→8 不熔·8≥8 熔+fuse_marker 落卷）/e2=初值 8 即熔（rounds_run=0）/f=EXIT→flag→prod（authority_ref=run:rd-exit sanctioned 可溯） |
+| F-2 四支路由 | 7 | a=test 直进（rounds_run=2·calls=3·EXIT 轮 count 零增）/b=debug continue 续轮 /c=terminate break（rounds_run=0·count 零增）/d=absent 挂起（exit=null·零推进）/e=FUSE 7→8 边界钉（7→8 不熔·8≥8 熔+fuse_marker 落卷）/e2=初值 8 即熔（rounds_run=0）/f=EXIT→flag→prod（authority_ref=run:rd-exit sanctioned 可溯） |
 | F-3 程序自动边唯一性 | 2 | a=全程唯一 flag 写=EXIT 轮一笔 /b=EXIT_GATE===95∧FUSE_MAX_ROUNDS===8 值面同验 |
 | F-4 prod 直走形 | 1 | a=flag=prod runLoop throw+chainRunner 零调用（Skill 尾零 spawn 本层语义） |
 | R resume 续跑边 | 3 | resume_stage=7 恒定传递/null/零文件缺省——循环外取一次恒定传入照铸形 |
