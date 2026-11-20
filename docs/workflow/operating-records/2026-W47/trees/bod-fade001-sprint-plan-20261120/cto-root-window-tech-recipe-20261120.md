@@ -81,8 +81,33 @@ BOD 请托注采认——**四 daemon 运行属主对照排查+非 root 运行�
 
 **通道选择注（COO 令文承录）**：人工照配方单 OR 临时 sudo 授权两支并排呈 CEO/BOD——**通道选择非技术面裁决·本席零代**（fleet 非 sudoers 852 实锚=鸡生蛋点如实注在卷）。
 
-## §八 · 使用依据
+## §八 · 增补件⑧·auth.log 溯源查询命令形（CEO「给完权限查下谁干的」批令承·台账 679·只出命令形·读数回 BOD 终判本席零判）
 
-BOD 转令信面（CEO 16:28 批·三件配方请托+196 件清点承录）+175f1b384 组授予裁定（语境变更采认段）+BOD ③探受限实锚（fleet 非 sudoers 非 adm·系统级 journal 不可达）+窗 B 复验卷（4683aa9b6·user unit 托管现势=TriMMC 零重启面）+PS Remove-Item junction 教训同族（symlink 穿面防·-h 面）+值面护栏 D-46+D-15/D-24/D-47。
+**root 窗三件顺手序列（定谳承录）**：usermod 组授予→chown 196 件→auth.log 溯源读数回 BOD——序列内 auth.log 溯源=组授予生效后 fleet 身份执行（§二组授予五探毕后）。
 
-——CTO 小狄（m-cto）·写前现查 2026-11-20T08:30:01Z（+8=2026-11-20 16:30:01·date 现查原值·D-47 正形）
+**查询命令形（fleet 新会话·组生效后）**：
+```bash
+# ① 11-04 17:2x 窗 root 会话来源（sshd 面·IP/端口/认证形——RFC3164 传统时戳形与 ISO 形双 grep·发行版格式自适配如实注）
+grep -E "sshd.*(Accepted|session opened|Failed|Invalid|Disconnected)" /var/log/auth.log | grep -E "Nov  4 17:2|2026-11-04T17:2|2026-11-04 17:2" | head -60
+# ② sudo 痕扫描（11-04 全日）
+grep -E "sudo" /var/log/auth.log | grep -E "Nov  4|2026-11-04" | head -80
+# ③ journal 同窗补探（auth.log 若 logrotate 缺 11-04 面·如实注+此探补）
+journalctl --since "2026-11-04 17:15" --until "2026-11-04 17:45" | grep -iE "sshd|sudo|session" | head -60
+# ④ root 链操作旁证（git/chown/useradd 类 COMMAND 行·11-04 全日）
+grep -E "(sudo|su).*(COMMAND|session)" /var/log/auth.log | grep -E "Nov  4|2026-11-04" | head -80
+```
+
+**读数回执形（D-46 护栏）**：IP/端口/认证形/时戳/操作者名=审计断言面可回；行嵌 token/key/secret 字串→`grep -vEi "token|secret|key="` 滤前置+选择性带回非全量 dump——**读数回 BOD 终判（CEO 批令责任位）·本席零判**。
+
+## §九 · 增补件⑥对齐（C1 解阻断言 COO 增补形采认+关键路径标注·台账 680）
+
+1. **C1 定义对齐**：COO/BOD 补勘定谳=本席勘正卷（bf4dd8df5）同向——C1=窗 C-1 pull 拉取步·非 P1 排面链段（plan-list L35 C1=同名异实·消歧注维持）；
+2. **解阻断言增补形采认**：§六三段锚①增强=chown 毕 **fleet 试写 src/fade 族实证**（`touch /srv/fleet/TriMMC/src/fade/.write-probe && rm` 干跑或 pull 干跑成功）——归零断言+试写行为面双证（比单归零更强）·②③两锚不变；
+3. **关键路径标注（COO 请托承）**：**chown root 窗=窗 C 主线实质前置**——C-1 值席线 pull 步现被 src/fade 族 root 件阻断停·G1 硬项 3（sg build）依赖 pull 后代码→chown 链毕+续跑毕报回=窗 C-2 放行令输入齐——**通道定谳一达即选点派窗（COO 统排）**；
+4. **时序裁量定谳承录（COO 台账 681·f10fb0312）**：**一次 root 窗全树清形**定谳（§六两形候裁面收口）——理由三件：①通道定谳=两形共同前置·拆窗省不了等待只多一次选点+一次护栏检查②拆窗=两次 root 介入+窗负膨胀+两次毕报链=负收益③窗 C 提速正解=催通道定谳（已升级呈 CEO/BOD）非拆窗·pull 重跑后 install+build 分钟级节省≈零——root 窗序列一次跑：usermod 组授予→chown 196 件（自然含 src/fade+test 子集）→fleet 试写 src/fade 实证解阻锚→auth.log 溯源读数回 BOD→值席 pull 重跑（对表 e812485）→四要素毕报→G1 全绿→C-2 放行链。
+
+## §十 · 使用依据
+
+BOD 转令信面（CEO 16:28 批·三件配方请托+196 件清点承录）+COO 配方单承铸派令（台账 677·承铸件五件）+COO 两件增补令（台账 679/680·dd6c1cb7+e4e534ac——增补件⑧ auth.log 溯源步+增补件⑥ C1 对齐定谳+关键路径标注）+COO 时序裁量定谳信（台账 681·f10fb0312·一次 root 窗全树清形承录）+175f1b384 组授予裁定（语境变更采认段）+BOD ③探受限实锚（fleet 非 sudoers 非 adm·系统级 journal 不可达）+窗 B 复验卷（4683aa9b6·user unit 托管现势=TriMMC 零重启面）+值席阻断读数卷（a975e9be1·C1 实锚勘正源）+PS Remove-Item junction 教训同族（symlink 穿面防·-h 面）+值面护栏 D-46+D-15/D-24/D-47。
+
+——CTO 小狄（m-cto）·写前现查 2026-11-20T08:41:16Z（+8=2026-11-20 16:41:16·date 现查原值·D-47 正形·增补笔=台账 679/680 承+COO 681 时序定谳承录）
