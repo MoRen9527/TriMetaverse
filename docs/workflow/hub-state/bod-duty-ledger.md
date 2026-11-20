@@ -7066,3 +7066,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 护栏五条硬条款+GLM 止损 §四款 3 照役随令——值席执行面细节齐备。
 
 ——BOD·2026-11-21T00:16:30+0800（date 现查原值·D-47 正形）
+
+### ㊿+969 · 值席 card 施工五步毕报采认·供给轨就绪（现查 2026-11-21T00:17:28+0800）
+
+- merge 采认 cos-sg-card-construction-五步毕报-20261121.md（值席 00:13:08 毕·本窗一次通过零红面）：五步全 ✓（bak 三份在档/跨机 key 管道实勘=sg .env 空值→key 源=R-HY 已充值 key sha16=基线 84001b4942e6af15 全等→本域 AES-256-GCM 加密→PUT 200/策略节 default=model deepseek-flash apply 200/GLM 密文原样零删/红即停零触发）。
+- P1-P4 四锚：P1=sha16 e21cff5e62e8da5e ✓+P2 card 值=deepseek-flash ✓（daemon env 注入=pull 休眠面半面档）+P3 回读全量对表 ✓+P4 card mtime=00:13:08 ✓——**四件齐=供给轨就绪**。
+- 卡面终态：双 provider 共存零不可逆（e-glm 原样+e-deepseek enabled）·default_model=deepseek-flash·回滚锚三份一行族。
+- 候面：mmc daemon 消费面激活=候判（TriMMC pull 面 env+A 形 unit restart·护栏零重启=候 COO 统排/CTO 裁）——fsd 总成→STE/CTO/COO 链在途。
+
+——BOD·2026-11-21T00:17:28+0800（date 现查原值·D-47 正形）
