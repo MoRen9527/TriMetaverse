@@ -6055,3 +6055,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD SSH 链直投毕**（幂等基准=BOD 直投在执行·COO 652③·值席哨态候令零双投）：m-duty-cos 窗 C-u→base64 set-buffer→paste→双 Enter——特征串 grep capture count=1 消费实证（㊿+830 纪律）。
 - 值席读数回链=CTO 定性卷+修法令（root 面【R】命令照卷·栈原文整段带回）。
 - 落款锚：2026-11-20 12:44 +0800（date 现查对表·D-47 正形）——BOD
+
+### ㊿+836 · TriMMC 复活实证+TriRMC 修法令直投毕（12:50-13:08）
+- **8712 复活实证**（值席 12:50:03 活体读数·cos-r678b 短报入队=通知通道复活首证）：TriMMC 8712 恢复（token 注入活体·分支 B 修）——故障主面收敛·20 分钟闭环（12:30 发现→12:50 复活）·kit 接线清白（预勘④·回滚 bak 暂不触发兑现）——**即报 CEO 12:54（对话文本面呈）**。
+- **CTO 轻催回执两件采认**（13:08 回信·5bcaa994 兑付）：①TriRMC 修法令落树 d18f52964——同族路径坑定性（预勘③+值席摘要双源吻合）·修法三行（unit ExecStart 勘正 node dist/src/index.js【R】+EnvironmentFile TRIRMC_PORT=8710 核验【R】+正形链冷启）·完工三件（8710 LISTEN+pid/CIM+值面探针）·毕报达→④③ FREEZE 解冻候 COO 统排·unit revert 回滚一键②431a85a1 定性卷在工候值席读数卷正身（栈原文+pid 三证+探针三件套·CTO 不凭转述摘要落 gate 判）。
+- **BOD 直投毕**（13:08·幂等基准 649/654 正形续）：m-duty-cos 窗直投修法令执行+读数卷正身双嘱——特征串 grep count=1 消费实证。
+- 落款锚：2026-11-20 13:08:36 +0800（hook 时戳·D-47 正形）——BOD
