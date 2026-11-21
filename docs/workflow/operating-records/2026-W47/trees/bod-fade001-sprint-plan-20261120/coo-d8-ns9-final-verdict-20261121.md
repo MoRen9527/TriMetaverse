@@ -27,7 +27,10 @@
 - 顶层：`score_version=1.0.0 · verdict=pass · engine_state=executed_ok`
 - 内层 score（`score_engine_version=2.0.0`）九族：A 拍前冻结/manual/None/9 · **B 拍点形态/fail/0/9** · **C run id/fail/0/13** · D preflight/pass/9/9 · E qualify/pass/9/9 · F 告警面/manual/None/13 · G 迁移链/pass/19/19 · H 值守窗/manual/None/9 · I 主观题族/subjective/None/10
 - **total_score=37.0 · total_pending_weight=41 · total_projection=78.0 · domain_breakdown={"machine":37.0,"collection":0.0,"subjective":0.0}** · 内层 verdict=fail · redline_caps_applied=[]
-- **B/C 两族 fail 根因（原文照录）**：「run_id 不符 T1-1 正则: 'shift-W46-loop-20261120T215857Z'」=**run_id 形态差（rubric T1-1 正则按周迁移 job 形设计·loop 窗 run-id 段不匹配）非真失败**——如实注供判读。
+- **B/C 两族 fail 归因原文（两族分别照录·fsd 取卷 02:35:00Z）**：
+  - **C 族**（run id·13 分权）：`"run_id 不符 T1-1 正则: 'shift-W46-loop-20261120T215857Z'"`
+  - **B 族**（拍点形态·9 分权）：`{"family_id":"B","family_name":"拍点形态","state":"fail","score":0,"weight":9,"reasons":["run_id 不符 T1-1 正则（B 族时戳段不可得）: 'shift-W46-loop-20261120T215857Z'"]}`
+  - **同因判定（两族同源）**：B 与 C 同一条 T1-1 正则拒绝·仅 B 措辞多括注「B 族时戳段不可得」——**同源=run_id 形不符 T1-1 正则（rubric 按周迁移 job 形设计·loop 窗 run-id 段不匹配）=判据面缺陷非链失败**·reasons 全文各仅一条零其他引用。
 - **二值并存如实注**：顶层 verdict=pass 与内层 score.verdict=fail 并存（每族 state 谱=manual 3/fail 2/pass 3/subjective 1）。
 - **折算判读（本席建议·候 CTO 技术裁定）**：若 B/C fail 按非真失败折算（B 9+C 13=22 分应计）→机器域=59/59 满档·total=59+41=projection 100（与前轮 090551Z 满档形同构）——**折算口径归 CTO 裁（rubric 判据面技术域）·CTO 终审定谳后本卷随载**。
 
@@ -74,9 +77,10 @@
 ## §五 · 终判建议（呈 CEO）
 
 - **D7 承接形主线=功能面全验证+供给面 P2 达成+三防线闭链+四护栏常位锚齐**——建议 D 线 D7 相关**收口**（残面八件全部非阻塞·各候窗·无隐藏风险面）。
-- **待 CTO 技术裁一件（前置本席终判生效）**：B/C 两族 fail 的折算口径（rubric T1-1 正则未覆盖 loop 窗 run_id 形态=判据面缺陷·非链失败）——CTO 裁后本卷随载并生效。
+- **折算口径裁（CTO 终审=APPROVE·随卷载）**：**B 9+C 13=22 分应计→机器域 59/59 满档·projection 100**（附三条件已全处置：①B 族归因已补=同因确认〔见 §一〕②**双值并存**=折算档与原值 `total_score=37.0` 全保留·score.json 零覆盖零改写·审计链完整 ③**rubric T1-1 正则修形=债**入铸件族窗〔`shift-W\d+(-loop)?-\d{8}T\d{6}Z` 形·与 C 批或 rubric 维护窗同排〕）。
+- **反滥用定性（CTO 随卷载）**：本折算=**判据面缺陷豁免特例**（两条件已实证：根因=run_id 形不匹配单一项+链本体全绿）——**将来其它 fail 不援引此例·逐案技术核**。
 - **待 CEO 裁项=无**（D7 划项已由 BOD 制划项·本卷=终判呈报面）——如 CEO 另有指示按链回。
-- **后续链**：铸件族 C 批（周日拍后 11-23）→灾备卡/域勘序 2（切换窗毕后层）→TriRMC 本体切换（CEO root 执行中·读数回即收口）。
+- **后续链**：铸件族 C 批（周日拍后 11-23·含 rubric 正则修形债同排评估）→灾备卡/域勘序 2（切换窗毕后层）→TriRMC 本体切换（CEO root 执行中·读数回即收口）。
 
 ## §六 · 使用依据
 
