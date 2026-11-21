@@ -58,4 +58,20 @@
 - 交叉件：sde-wpshift-rc2-diagnosis-20261120.md（62 拍深勘定性·score_skill_spawn 段+GLM 供给波）+sde-rhy-trirmc-trimodel-consumer-survey-20261121.md（8710 degraded 交叉锚）
 - D-24/D-46/D-47
 
-—— SDE 小布（m-sde·周日拍前置核两件读数齐·连败定址=weekly-plane-shift 本体·executor 活核通过·候 CTO 判读前置动作）·写前现查 2026-11-21T00:59:23Z（+8=2026-11-21 08:59:23·date 现查原值·D-47 正形）
+## §八 · 换轨连带收益核实（CTO 防护 1）+ 轻防护 grep 核读数（COO 定谳件）
+
+**CTO 防护 1 答（一句）**：**走同一 headless profile overlay**——`score_skill_spawn._spawn_seat` L43-47：`dsh --profile headless --patch ${DSH_PRESET_OVERLAY:-/home/fleet/.dsh/patches/headless-agentpresets-overlay.yml}`，与 loop_autoreview L165-174 同源同缺省路径；daemon env `DSH_` 键数=**0**（无覆盖）→ 缺省路径生効。该 overlay 今日已换轨 deepseek-flash → **11-19 型 GLM 配额窗失败对 weekly-plane-shift spawn 阶段结构性消除（配置面成立）**。
+
+**轻防护 grep 核（COO 定谳二·只读·实测 2026-11-21T01:04:21Z）**：
+- overlay 三处：`deepseek-flash` 命中=**3**（L16 agent-default-model 行 / L23 llm models id / L33 llm-deepseek models id）·`glm-5.3` 残留=**0**·mtime=**2026-11-21 08:49:00 +0800**·1466B fleet:fleet。
+- 换轨 diff 实锚（bak-fixglm→current）：`model: glm-5.3-flash → deepseek-flash` ×3 行（provider 行恒 deepseek-official）。
+- **防回滚锚两件在位**：`.bak-fixd2-20261119`（672B·11-19 17:30=overlay 初落版）+`.bak-fixglm-20261121`（1453B·11-19 17:39=换轨前 GLM 版）。
+- env 覆盖判据：`DSH_PRESET_OVERLAY` 未设（DSH_ 键 0）→ 防「env 覆盖静默回归」面 ✓。
+
+**机理差记录（供判读）**：score_skill_spawn 的 `subprocess.run`（L51）**无 env= 传参**→不走 `read_glm_spawn_env`（仅 loop_autoreview L90-116 有：三键注入 DEEPSEEK_API_KEY/BASE_URL=GLM 端点/ANTHROPIC_MODEL=glm-5.3-flash 缺省）——11-19 期 spawn 后端=GLM（overlay 当时 glm-5.3-flash+dsh 自有 credentials 换装配对）→配额窗失败机理吻合；今 overlay=deepseek-flash → DS 轨。
+
+**残面如实注**：①换轨落笔=今日 08:49（拍前 2 日余·非长期稳态观测）；②运行面首证=Sunday 首拍或候裁预验 spawn（预验有会话副作用·本席零副作用边界内不做）；③loop_autoreview 路径 env 注入面独立（TRICO_SPAWN_GLM=off 可关·第十发轨面另案不混）。
+
+**防护 2 承录**：11-22 23:40 前 fallback 行密度基线核（4 行/时）+无 GLM 窗征兆 → 报 CTO/COO 判；拍后读数（成功/失败+consecutiveErrors 清零与否）达 COO+CTO（COO 定谳三）。
+
+—— SDE 小布（m-sde·周日拍前置核+换轨连带核实+轻防护核收口·拍照跑定谳承录·拍前监视/拍后读数两承）·写前现查 2026-11-21T01:04:00Z（+8=2026-11-21 09:04:00·date 现查原值·D-47 正形）
