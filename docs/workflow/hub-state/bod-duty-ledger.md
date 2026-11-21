@@ -7861,3 +7861,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 分层口径定谳：**fade001 dsh spawn 面=DeepSeek（overlay 已换轨）｜TriRMC 8710 daemon 本体=GLM（未切·C 批周日拍后或 CEO 另令）**。
 
 ——BOD·2026-11-21T09:37:44+0800（date 现查原值·D-47 正形）
+
+### ㊿+1088 · **CEO 令「现在切 TriRMC」采认转达**（现查 2026-11-21T09:42:03+0800）
+
+- CEO 09:4x 令：「如果 TriRMC 没在跑 D8 和其他剩余工作，现在切 TriRMC」——BOD 判读面核对：D8=报告候 D7 划项非在跑·fade001 runner FUSE 熔断 run-dir 封存零在跑·B 批 8713 已毕·周日迁移拍 11-22 23:50 未到 → **条件成立=可以切**。
+- BOD 即转 COO 三件：①切前四项现探（R-HY TriModel 在册含 deepseek-flash 否=切了断否的关键/TriRMC cron 在跑否/活跃 run/healthz）②执行配方铸件（主 unit 无该行→**drop-in 新增形**：override.conf 写 Environment=TRIRMC_DEFAULT_MODEL=deepseek-flash+daemon-reload+restart+完工三断言·bak 先行回滚一行）③root 通道呈 CEO（BOD/值席均无 R-HY root·成串供 CEO 一次粘贴）。
+- 口径：TriRMC 本体=GLM 已实锤·切换=CEO 22:41 旧授权令现执行。
+
+——BOD·2026-11-21T09:42:03+0800（date 现查原值·D-47 正形）
