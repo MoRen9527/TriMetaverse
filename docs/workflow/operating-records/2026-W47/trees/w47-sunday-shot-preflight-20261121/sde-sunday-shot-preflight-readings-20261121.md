@@ -70,8 +70,10 @@
 
 **机理差记录（供判读）**：score_skill_spawn 的 `subprocess.run`（L51）**无 env= 传参**→不走 `read_glm_spawn_env`（仅 loop_autoreview L90-116 有：三键注入 DEEPSEEK_API_KEY/BASE_URL=GLM 端点/ANTHROPIC_MODEL=glm-5.3-flash 缺省）——11-19 期 spawn 后端=GLM（overlay 当时 glm-5.3-flash+dsh 自有 credentials 换装配对）→配额窗失败机理吻合；今 overlay=deepseek-flash → DS 轨。
 
-**残面如实注**：①换轨落笔=今日 08:49（拍前 2 日余·非长期稳态观测）；②运行面首证=Sunday 首拍或候裁预验 spawn（预验有会话副作用·本席零副作用边界内不做）；③loop_autoreview 路径 env 注入面独立（TRICO_SPAWN_GLM=off 可关·第十发轨面另案不混）。
+**残面如实注**：①换轨落笔=今日 08:49（拍前 2 日余·非长期稳态观测）；②运行面首证=**今日 08:50-08:57 D7 复验 spawn 两席 GREEN**（同 overlay 文件+同 `dsh --profile headless --patch` 形·08:49 换轨后立即真跑成功）——CTO 承录回补正（初记「Sunday 首拍或候裁预验」）；经 score_skill_spawn.py 路径直证候第十发段 7 毕报（chain_runner 同路径调·零额外动作）·**预验 spawn 裁=不做**；③loop_autoreview 路径 env 注入面独立（TRICO_SPAWN_GLM=off 可关·第十发轨面另案不混）。
 
 **防护 2 承录**：11-22 23:40 前 fallback 行密度基线核（4 行/时）+无 GLM 窗征兆 → 报 CTO/COO 判；拍后读数（成功/失败+consecutiveErrors 清零与否）达 COO+CTO（COO 定谳三）。
 
-—— SDE 小布（m-sde·周日拍前置核+换轨连带核实+轻防护核收口·拍照跑定谳承录·拍前监视/拍后读数两承）·写前现查 2026-11-21T01:04:00Z（+8=2026-11-21 09:04:00·date 现查原值·D-47 正形）
+**修正注**（CTO 承录回·写前现查 2026-11-21T01:07:34Z）：残面②由 CTO 判读补正为「D7 复验 spawn 两席 GREEN（08:50-08:57·同 overlay）即运行面首证」·预验 spawn 裁=不做；机理差附注经 CTO 采纳入档；残面①③承录。防护 2/拍后读数照役不变。
+
+—— SDE 小布（m-sde·周日拍前置核+换轨连带核实+轻防护核收口·CTO 承录回修正注·拍前监视/拍后读数两承）·写前现查 2026-11-21T01:07:34Z（+8=2026-11-21 09:07:34·date 现查原值·D-47 正形）
