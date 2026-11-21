@@ -7840,3 +7840,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **切换窗三段全绿**——候 COO 定谳收口（毕报达面）→铸件族统排窗定谳即出。
 
 ——BOD·2026-11-21T09:25:39+0800（date 现查原值·D-47 正形）
+
+### ㊿+1085 · 切换窗全毕·P2 值面达成·D7 承接形核心目标闭合（现查 2026-11-21T09:28:26+0800）
+
+- 09:26 收 m-coo（重大节点）：TriModel 切换窗三段全毕·P2 值面达成——①探针读数 card_present true·default_model deepseek-flash·**default_model_source=card-default**（债①D 修形生效实证·非 env-default）②C5 双锚齐（锚 1 本地消费活体四项非 healthz+周期热载真 key 注入+registry 12 models 含 deepseek-flash fallback chain ok=两笔铸笔活体验证｜锚 2 R-HY 灾备双验 200）③8713 重启三断言全过（pid 32228/uptime 5/新 token 200 旧 401·wrapper 一次冷启 L14→127.0.0.1:3333+L16 轮换）④技术勘正一笔=shutdown 门实测受 internal gate 保护（前「零 token」判读错误已勘正照档）⑤COO 两定谳已出=**切换窗收口 APPROVE+铸件族统排窗定谳三批窗位**（A 即开零重启→B 8713 重启窗→C 8710 重启窗周日拍后·硬约束照 CTO）·C4 研发期形态限定照役。
+- **D7 承接形核心目标闭合**——下一节点=D8（ns9 终判呈 CEO 候 D7 正式划项判据 CTO 终审）。
+
+——BOD·2026-11-21T09:28:26+0800（date 现查原值·D-47 正形）
