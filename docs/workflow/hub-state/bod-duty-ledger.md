@@ -7708,3 +7708,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 现势零阻塞：本窗施工已收窄纯本机域三件（拓扑裁定前后均不阻塞）。
 
 ——BOD·2026-11-21T08:41:22+0800（date 现查原值·D-47 正形）
+
+### ㊿+1067 · 08:43 拍·窗二批保全卷+CTO timer 工程勘误终裁卷落树采认（现查 2026-11-21T08:43:41+0800）
+
+- merge 采认 4f2c374b0（fsd-window2-batch-preserve 保全卷）：TriMLC 裸区清零（commit 4dd1934 六处兜底+tsc rc=0）+TriModel 三文件 hash 清单挂账+副产物归档挂账+债①裁承录（主案 D+备案 B·捆(a)窗）+P3 语义修正+兜底分类判据执行表（2896/3225/3335/5339 改·5344 tmv 专属保不动·TriMMC 挂账）+CTO 补验双绿承录。
+- +cto-timer-project-corr-verdict-20261121.md（CTO timer 工程勘误终裁卷）+fsd-window2-batch-closeout 卷落树——窗二批本窗作业在收口段。
+
+——BOD·2026-11-21T08:43:41+0800（date 现查原值·D-47 正形）
