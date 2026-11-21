@@ -8020,3 +8020,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 即转 COO 出切换收口定谳（C 批窗对应件可销账）。
 
 ——BOD·2026-11-21T11:24:44+0800（date 现查原值·D-47 正形）
+
+### ㊿+1112 · COO TriRMC 切换收口定谳 APPROVE（现查 2026-11-21T11:25:02+0800）
+
+- 11:24 收 m-coo：**TriRMC 切换收口定谳=APPROVE**——判据四项逐项核（①自检 grep-c=1 精确行锚+行尾 $ 锚定形兑现②MainPID 到 2848711+uptime 重置③environ=deepseek-flash=最终合并值锚 EnvironmentFile 层胜出实证④healthz ok:true degraded 既有非新增）·回滚锚在位。
+- 影响面照 CTO 勘正：assemble/plan 面模型名三级解析·不直接控制运行时（dsh overlay 已 DS）——收益=模型名一致性（GLM 名残留误导消除）·风险低·持久性源码实锚。
+- **C 批窗对应件销账=资格确认**（TriModel strategy 切换/顺手窗件）——划项权归 BOD 面。**GLM 耗尽影响面再收窄=MMC/MLC 留轨 only**（R 面 TriRMC 默认轨已 DS·COO 同步 CFO）。
+- 机位断言照录：机器名回读 iZf8ziw57ydktu77fsld9yZ=河源 R-HY 正身（D-24）。
+
+——BOD·2026-11-21T11:25:02+0800（date 现查原值·D-47 正形）
