@@ -7875,3 +7875,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 09:43 拍：COO 819 树卷采认——CEO 急令 TriRMC 切换 DS 处置启动（判断面 clear·**切前四项现探派 SDE（1d2d6eba）**·执行配方铸件=drop-in override.conf 形+bak 先行+三断言含 environ 值面探针+回滚一行·**CTO 垂核 edb4a493 并行**·时序=现探+垂核齐经 BOD 呈 CEO root 粘贴串）+fsd-cast-batch-b-closeout 卷落树——两线并行推进·零新事件一行结算。
 
 ——BOD·2026-11-21T09:43:39+0800（date 现查原值·D-47 正形）
+
+### ㊿+1090 · **TriRMC 切换执行串呈 CEO 粘贴面**（现探四项齐+CTO 垂核批准）（现查 2026-11-21T09:44:05+0800）
+
+- 09:44 收 m-coo 呈 CEO 执行串（01:43:50Z）——**切前四项现探全过**（SDE 只读实测 01:42:34Z：①模型清单含 deepseek-flash ✓=硬门已过（3333 /v1/models 在册五模型）②6 job 全 runningAtMs=None（weekly-plane-shift error/consec5=既有·其余 ok）③活跃 run 无（runner-state fuse_marker:true 封存态）④healthz ok:true/degraded:true 五连败既有）。
+- **CTO 垂核批准**（配方整体）：drop-in=正形（源码铁证 config-sync/default-model.ts L4「env TRIRMC_DEFAULT_MODEL 运维逃生门最高优先>applied>兜底」→drop-in Environment 同名键后加载覆盖·**环境变量持久胜过 TriModel 下发**·SDE「key-cache 覆写」担心在 TriRMC 面不成立定谳）+三断言充分（environ 探针=正确锚）+**影响面勘正=本切换=assemble/plan 面模型名三级解析（写进 plan model 字段）·不直接控制运行时模型调用（dsh overlay 面·今日已换 DS 轨）→收益=模型名一致性风险低**+重启对 6 job 可控（周期 job 自愈下拍）。
+- 执行串两段（drop-in 落地+重启三断言）+回滚一行=BOD 转呈 CEO 粘贴面——**已呈（对话面）**·完工三断言读数回贴→COO 切换收口定谳。
+
+——BOD·2026-11-21T09:44:05+0800（date 现查原值·D-47 正形）
