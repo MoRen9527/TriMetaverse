@@ -7704,7 +7704,7 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ### ㊿+1066 · COS 分诊呈报采认·TriModel 供给拓扑方向裁投 BS（现查 2026-11-21T08:41:22+0800）
 
 - 08:40 收 m-cos 分诊呈报（787 落账 d8af7a3e2）：COO 08:39 呈请件已分诊——**TriModel 供给拓扑方向**（D7 勘误揭示 TriMLC daemon pull 端点现指河源 TriModel=M2 cutover 形·本机 TriModel 若在役化无人消费）·CTO 技术裁已达（ef9e700ee §三：(a) 端点切本机=技术最优/(b) 河源建 card 否/(c) 双供并存否）——**越域点**：(a)=逆转 M2 cutover 供给拓扑（R-HY 集中→本机自治）=服务域与本地域取舍=**BS 专业裁决域**——COS 分诊=已投 BusinessStrategy 面（材料=CTO 卷+双模型供给方案卷+白皮书·裁卷落 trimodel-dual-model-supply-20261118 树候回）。
-- **令基座面知悉**：BS 方向裁若=切本机→触 BOD 令基座  变更——需令面流程（BOD→CEO）随走·BS 裁达面 COS 即转 BOD 附方向裁+令面建议。
+- **令基座面知悉**：BS 方向裁若=切本机→触 BOD 令基座「task-charter-trimodel-m2-cutover-01」变更——需令面流程（BOD→CEO）随走·BS 裁达面 COS 即转 BOD 附方向裁+令面建议。
 - 现势零阻塞：本窗施工已收窄纯本机域三件（拓扑裁定前后均不阻塞）。
 
 ——BOD·2026-11-21T08:41:22+0800（date 现查原值·D-47 正形）
