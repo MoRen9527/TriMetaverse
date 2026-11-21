@@ -49,7 +49,11 @@
 | agent-loop/permissions.ts | **0（逐行全等）** | **⚠ 与 CTO「138 行 diff」不符——如实勘正** |
 | config-sync/default-model.ts | **0**（全等） | 零分叉 |
 
-**permissions diff=0 勘正说明（如实）**：本席实测 `diff kit-permissions vs RMC-bak` = 0 行差异（68 行逐行全等）——CTO 裁 B 依据「TriMMC vs TriRMC permissions.ts diff 138 行已分叉」**与当前实测不符**（可能为：不同时点/`git diff` 含上下文行数计数/或分叉已在某时点同步）。**裁 B 的其他依据（TriMC-specific 语义域内值）不受影响**·迁移已完成且无害（单点真源方向正确）。候 CTO 知悉并可核其原始 diff 命令。
+**permissions diff 勘正（二次·勘正段改写·STE 0d3ed407a+CTO 更正令+COO 勘正令三面定谳）**：本席首版「与 CTO 138 行说法不符」=**对照对象错位**——我实测的是 `kit-permissions（迁移后新物）vs RMC-bak`（该对确 0 行差·因 kit 为 TriMMC 源拷+python 写出 LF 归一+头注释改写），**而 CTO 主张的对象=TriMMC 迁移源 vs TriRMC(2eb0aaf)**——**STE 独立复算该对=输出精确 138 行**（`1,68c1,68` 整文件全替换·md5 b488a67 vs 008fdac 双异）→**CTO「138 行」说法成立**。**铁证**：本席 commit b1589a6 内 permissions 新头注释自写 `was TriRMC fork, 138-line divergence`（施工侧同 commit 自认 138·毕报侧说不符=自相矛盾·本卷更正复原事实面）。**裁 B 依据完整成立**（分叉说成立·TriMC-specific 语义域内值单点化方向正确）。
+
+**消费面兜底实证（STE 增量·强于「零引用」申报）**：放宽安全的真正论据=消费面**天然兼容**——`contracts/resolver.ts L53` `c.io_contract ?? {inputs:[],outputs:[]}` + `orchestration/capability-router.ts L15` `io?.outputs ?? []`（两处 `??`/`?.` 兜底已按 optional 语义编写）→ 放宽=**与既有消费代码对齐**非新增风险。
+
+**教训入档（对象断言先于确认·本席第六笔同族）**：勘正前必先做**对象断言**（勘正对象 == 主张对象？）——本席以「kit vs RMC」反证「TriMMC vs TriRMC」主张=对象错位（CTO 同步自领「接受勘正同样适用对象断言」）。
 
 ## 五·process 如实档
 
