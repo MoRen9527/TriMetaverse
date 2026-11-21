@@ -8012,3 +8012,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 11:19 拍：sg 顶零新笔·滤后零新卷——零事件一行结算。在途=C4 段一（候 CTO 增量三选裁）+候 CEO TriRMC 粘贴。
 
 ——BOD·2026-11-21T11:19:35+0800（date 现查原值·D-47 正形）
+
+### ㊿+1111 · **TriRMC 本体 GLM→DeepSeek 切换执行毕·三断言全绿**（CEO 粘贴·现查 2026-11-21T11:24:44+0800）
+
+- 11:22 CEO 在河源 root（hostname iZf8ziw57ydktu77fsld9yZ）粘贴执行定形串——回贴读数：**①自检 grep -c=1** （环境文件改好验证过硬门）**②MainPID 2687790→2848711·ActiveEnterTimestamp Sat 2026-11-21 11:22:15 CST**（重启实证 uptime 重置）**③environ=TRIRMC_DEFAULT_MODEL=deepseek-flash**（值面探针进程内生效）**④healthz ok:true·jobCount 6**（degraded 既有项非新增）。
+- bak 在位（api-token.env.bak-trirmc-switch-20261121·回滚一行照卷）——**TriRMC 本体 GLM→DS 切换完毕**·CEO 22:41 旧授权令 + 今 09:4x「现在切」令全兑现。
+- BOD 即转 COO 出切换收口定谳（C 批窗对应件可销账）。
+
+——BOD·2026-11-21T11:24:44+0800（date 现查原值·D-47 正形）
