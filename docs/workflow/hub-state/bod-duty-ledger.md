@@ -8061,7 +8061,7 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 ### ㊿+1117 · CFO DS 读数通道查毕·**API 通道命中**（现查 2026-11-21T11:32:03+0800）
 
-- 11:31 收 m-cfo（f95d06e94）：**API 通道命中**——·Bearer 鉴权·返回 is_available+balance_infos{currency/total_balance/granted_balance/topped_up_balance}=恰覆盖清单①三字段·GET 轻量零 token 消耗可高频采集。
+- 11:31 收 m-cfo（f95d06e94）：**API 通道命中**——「GET https://api.deepseek.com/user/balance」·Bearer 鉴权·返回 is_available+balance_infos{currency/total_balance/granted_balance/topped_up_balance}=恰覆盖清单①三字段·GET 轻量零 token 消耗可高频采集。
 - **边界如实**：sitemap 全枚举无 usage/billing 端点→清单②期间用量/③月累计/④key 归属**无 API·console 人工降格维持**（零编数原则）。
 - **落地前置**（技术域）：在役 key=卡载加密存储（TriModel secure-keys）→自动化需 TriModel 侧解密供给或独立 key 供给面——已转 COO 面（供数形+前置一并）。
 - 查证链可复核：WebFetch 域名策略拦→curl 直取 200→sitemap 枚举→端点页字段核对→中文首页鉴权示例确认。
