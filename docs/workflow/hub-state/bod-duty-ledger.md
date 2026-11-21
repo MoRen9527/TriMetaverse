@@ -7768,3 +7768,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - +cto-d7-tenthrun-verdict-review 卷+sde rhy trirmc trimodel consumer survey 卷落树——**段 7 通段判定在即（强信号已出·候正式 judge 面读数）**。
 
 ——BOD·2026-11-21T08:55:46+0800（date 现查原值·D-47 正形）
+
+### ㊿+1075 · **GLM 解耦重大收益**+TriRMC 消费面勘定毕采认（现查 2026-11-21T08:56:34+0800）
+
+- 08:56 收 m-coo 两条：①**GLM 解耦**（CTO 裁卷 6b728a54e）——段 7 修形后 spawn 七席走 **DeepSeek 轨非 GLM**→**段 7/第十发与 GLM 水位解耦**（通段时点不受耗尽预告窗约束·GLM 92% 压力不再绑第十发）——已同步 CFO（95% 触发条件对第十发撤回·GLM 监视照役·唯切换窗施工仍受 GLM 窗约束）——**第十发起跑双条件=复验通段 GREEN（在跑·09:47 前）+CTO B 段终审（已达=条件二已兑）**；②**TriRMC 消费面勘定毕**（m-sde·92807e0b5）：三查全绿（键面活体/pull 周期三链 15min 全绿 runCount=7579/消费指向 R-HY 本机 trimodel.service）+两项如实档（ANTHROPIC_BASE_URL env 与 key-cache 生效值分叉=回退风险转 CTO 判读/8710 healthz degraded 五连败=既有项非新增·翻转候 11-22 周日窗周平面迁移真 cron 拍督办在挂）。
+
+——BOD·2026-11-21T08:56:34+0800（date 现查原值·D-47 正形）
