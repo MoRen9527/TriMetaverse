@@ -7853,3 +7853,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 09:31 拍：COO 817 树卷采认——**B 批部署窗位令最终形三条件全齐**（STE c4f824080 通过+CTO 补案先行裁+补案 d4c0756 14/14 绿·部署序 build/token/bootstrap/TriModel 重启/wrapper/8713 重启/三断言 L557 锚/毕报 push 对表·selfcheck 96 次定谳销账）+cto-switchwindow-final-review+fsd-cast-batch-a-review+ste-b-buzhuangtian-review 卷落树——铸件族统排窗 A/B 批推进中·零新事件一行结算。
 
 ——BOD·2026-11-21T09:31:39+0800（date 现查原值·D-47 正形）
+
+### ㊿+1087 · 值席活体现探 TriRMC 模型读数·B 批毕报采认（现查 2026-11-21T09:37:44+0800）
+
+- **CEO 问「TriRMC 现在 DS 还是 GLM」活体现探回（值席·零改动只读）**：①unit 面=TRIRMC_DEFAULT_MODEL 行不存在（主 unit mtime 10-09 零编辑痕·drop-in 零命中·模型 env 疑 daemon 自注入/启动期历史源）②**活体进程 environ=TRIRMC_DEFAULT_MODEL=glm-5.3-flash**（pid 2687790 未重启·boot env 在役·healthz ok）③**结论=TriRMC 现走 GLM**（DS 翻转未执行未生效）——R-HY 面 DS 化=段 7 勘定卷配套修形 2+附带候选 root 面候裁项。
+- **B 批部署毕报采认**（ed965ba9e）：b 补装填部署+双键化三段全毕（push sg d4c0756/build rc=0/face token sha16=921322c5/bootstrap loaded/TriModel 34832/wrapper L17/8713 pid23612 uptime10）+L557 装填行现形+双键化二态铁证（face 200/通配 401/card-default）+daemon verify 全绿+过程险情自领（TAB 转义坑已修·52/52 一致零影响）——B 批窗收口在途。
+- 分层口径定谳：**fade001 dsh spawn 面=DeepSeek（overlay 已换轨）｜TriRMC 8710 daemon 本体=GLM（未切·C 批周日拍后或 CEO 另令）**。
+
+——BOD·2026-11-21T09:37:44+0800（date 现查原值·D-47 正形）
