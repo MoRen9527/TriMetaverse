@@ -8596,3 +8596,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 转呈 CEO 批**（含 auto_dispatch 显式赋予提示：CEO 先说「自动拾取直接启用」·批准时可显式授予本件 auto_dispatch=true）。
 
 ——BOD·2026-11-21T17:48:49+0800（date 现查原值·D-47 正形）
+
+### ㊿+1196 · **CEO 批准任务书 r9-task-20261121·auto_dispatch=true·修完直接点火**（现查 2026-11-21T17:52:45+0800）
+
+- **CEO 批**（原话）：「**批，auto_dispatch: false 也可以置 true，直接开始动工，修完直接点火跑下**」——①任务书 r9-task-20261121 批准（approver=CEO·批语照录·批准时刻现查填）②**auto_dispatch=true 授予**（本件=自动拾取首件真用）③**直接开始动工**④**修完直接点火跑下**（不候窗口不候排期）。
+- BOD 双转：COS（任务书状态更新 approved+auto_dispatch 置 true+施工面知会+点火跟踪）/COO（施工面立即推进 P5/P6 余件即刻收口+修毕即点火=灰度步 A 四判据+首件真用端到端一并验+周日拍 11-22 23:50 零改动承诺照守）。
+- 至此：自进化线=**制度（D-86）+ 代码（P1-P6 回归全毕）+ 自动拾取（四件齐）+ 任务书（CEO 批·auto_dispatch 开）四全**——候点火读数。
+
+——BOD·2026-11-21T17:52:45+0800（date 现查原值·D-47 正形）
