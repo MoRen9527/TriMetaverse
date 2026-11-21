@@ -8589,3 +8589,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 出卷回执到即呈 CEO。
 
 ——BOD·2026-11-21T17:48:06+0800（date 现查原值·D-47 正形）
+
+### ㊿+1195 · **正式任务书 final 落卷·呈 CEO 批**（2ca2e10ed·charter_id=r9-task-20261121）（现查 2026-11-21T17:48:49+0800）
+
+- 17:48 收 m-cos：**正式任务书 final 落卷**（cos-fade001-selfevo-taskcharter-final-20261121.md·commit 2ca2e10ed·双通道顶全等）——①头段机械可读：charter_id=**r9-task-20261121**·来源=评审卷锚+归档卷锚+九点令链·**审批面 approver=CEO·批语/时刻待填·status=pending_approval**·TriRMC 拾取路由  按红线二默认不置（CEO 批面显式才赋予）②正文五段+一列（范围/施工面现状含 P5-P6 如实双注/分工七位/验收灰度步 A 四判据/D-86 护栏五组/待处理三笔/状态列 pending_approval）③评批分离照守（COS 主笔不自批·呈批路径=回执→BOD 转呈 CEO·批语时刻 CEO 填后 state 转已批态即生效）④CEO 批准后 COS 动作：charter 状态更新+施工面知会+首件真用端到端跟踪。
+- **BOD 转呈 CEO 批**（含 auto_dispatch 显式赋予提示：CEO 先说「自动拾取直接启用」·批准时可显式授予本件 auto_dispatch=true）。
+
+——BOD·2026-11-21T17:48:49+0800（date 现查原值·D-47 正形）
