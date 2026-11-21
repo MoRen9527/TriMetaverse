@@ -11,12 +11,12 @@ source:
   order: CEO 2026-11-21 15:4x 九点令 → CEO 六项全批准 → CEO 令「出正式任务书呈我批」
 approval:
   approver: CEO          # debug 态→CEO 批（本批·评批分离照守·COS 不自批）
-  approval_comment: ""   # 批语待填
-  approval_time: ""      # 批准时刻待填
-  status: pending_approval
+  approval_comment: "批准；auto_dispatch=true 授予；直接开始动工；修完直接点火跑下"   # CEO 原话
+  approval_time: "2026-11-21T17:52:43+0800"   # 批准时刻 date 现查原值
+  status: approved
 pickup:
   route: trees/<week>/trees/fade001-evolve-<ts>/   # TriRMC cron executor 现役拾取面
-  auto_dispatch: false   # 红线二：默认 false·CEO 批面显式赋予才 true（本件不自默）
+  auto_dispatch: true    # CEO 批面显式授予（红线二：显式赋予形·本件=自动拾取首件真用）
 target: TriRMC/src/fade001/ + TriMLC 消费面 + TriOrchKit 关联件
 change: P1-P6 已毕回归面收编+运行面双窗口验收（详见正文 §二）
 verify: 灰度步 A 四判据（详见正文 §四）
@@ -91,7 +91,7 @@ rollback: 四开关（spawn/CLI 双形·两席/七席·意见注入·flag 切换
 
 ## §七 · 状态列
 
-`pending_approval`（候 CEO 批）——批准后按 §二/§四 施工与验收；驳回则回 COS 修订重呈。
+`approved`（**CEO 批讫 2026-11-21T17:52:43+0800**·批语「批准；auto_dispatch=true 授予；直接开始动工；修完直接点火跑下」）——**直接开始动工·修完直接点火跑下**（不候窗口·灰度步 A+首件真用端到端一并验）；点火时刻/轮次记录随跟。
 
 ---
 —— COS 小贾（m-cos·任务书主笔）·写前现查 2026-11-21T17:48:10+0800（D-47 原值·D-84 绝对时点）·评批分离照守（批权=CEO）
