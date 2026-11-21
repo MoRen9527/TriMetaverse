@@ -7883,3 +7883,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 执行串两段（drop-in 落地+重启三断言）+回滚一行=BOD 转呈 CEO 粘贴面——**已呈（对话面）**·完工三断言读数回贴→COO 切换收口定谳。
 
 ——BOD·2026-11-21T09:44:05+0800（date 现查原值·D-47 正形）
+
+### ㊿+1091 · TriRMC 切换配方定形版勘正（A 核→环境文件直改形·前 drop-in 形作废）（现查 2026-11-21T09:46:05+0800）
+
+- 09:45 收 m-coo 定形版（9d5b161e 勘正）：**A 核发现 R-HY 环境文件 api-token.env 已有该键**（unit Environment 无该键+EnvironmentFiles=api-token.env+键清单 13 键含 TRIRMC_DEFAULT_MODEL 命中=1·裸 DEFAULT_MODEL=0）——systemd 规则**环境文件优先于 drop-in**→**前 drop-in 形作废**·改环境文件那一行=正形。
+- 持久性源码实锚：resolveDefaultModelDetailed 优先级=env>卡面 cache>applied>兜底（default-model.js L63-65·source=env-escape）→模型选择面 env 不被 key-cache pull 覆写（覆写面仅 ANTHROPIC_BASE_URL 等 key 面）。
+- 顺核：dsh 面对该文件零引用·裸键零消费方。执行串两段（环境文件直改+bak 固定名+自检应输出 1 非 1 即停｜重启三断言）+回滚一行=呈 CEO 粘贴面（已呈对话面）。
+
+——BOD·2026-11-21T09:46:05+0800（date 现查原值·D-47 正形）
