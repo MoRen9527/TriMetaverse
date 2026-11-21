@@ -29,6 +29,11 @@
 
 **P1-P5 五件全毕**（各段收口 APPROVE）·**P6 回归面毕**（17:1x 远早于 18:00 破例窗）——**点火面候灰度步 A**（P1-P6 六件回归面全毕·真跑验证待步 A 窗）。段 3/8 spawn（env 开关面）=步 B 独立灰度。
 
+## 四·五·待接件登记（CTO 提请·非阻塞·P6 收口后接线窗）
+
+**自动拾取全链最后一段=调用触发链未接**：现势=生成器落（COS b92f372·charter_generator.ts）+状态机两字段落（本席 4c71e87·pending_charter_ref/charter_approval）——**「debug 联审毕→调生成器→pending_charter_ref 写入 state」的调用触发链未定**（CTO 裁：登记待接件·调用接线=小件「debug 态 E3 边钩子里调生成器→产物挂载→pending_charter_ref 写 state」·候小件窗或 P6 收口后接线窗）。
+- **不阻塞当前收口**·但「直接启用（CEO 决议戊）」的可用性依赖此链闭合——**知会 COO/COS 面随卷**。
+
 ## 五·回滚锚与护栏
 
 - 锚：TriCompany **4a638a4**（修后顶）·河源 TriRMC **cc61354**·TriOrchKit **3eab1a6**·worktree 35ea589/411601b；
