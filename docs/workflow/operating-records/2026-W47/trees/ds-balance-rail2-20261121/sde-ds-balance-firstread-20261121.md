@@ -32,4 +32,11 @@
 - 活体：D:/Code/ai/.env 指纹对表+api.deepseek.com 首读响应
 - D-46/D-47
 
-—— SDE 小布（m-sde·DS 余额首读通过+CTO 两裁承录·实施候 COO 派工）·写前现查 2026-11-21T03:34:14Z（+8=2026-11-21 11:34:14·date 现查原值·D-47 正形）
+## §五 · 账户同异判定（CFO 关键注②静态解·哈希+余额双证）
+
+- **问题**（CFO 注）：.env 基线 key 账户 与 DS 轨实际消费账户（TriModel 卡载 key）同异未见证。
+- **静态勘定（零值面·只出指纹）**：卡面 provider_entries 三条 key 均**加密态**（api_key_encrypted·len 84/104）→ key-cache 走 `GET /v1/config/cards/rmc?view=pull`（Bearer TRIMODEL_API_TOKEN）解明文。三 key 指纹：e-glm-anthropic/e-glm-flash-anthropic sha16=**817845d517233499**（len 49）·e-deepseek-anthropic sha16=**fadbdaf2de323f23**（len 35）·.env DEEPSEEK_API_KEY sha16=**7c310041469d7d76**（len 35）——**异 key 确认**。
+- **账户判定（余额=账户级属性·双 key 交叉）**：.env key 首读 03:33:39Z=**83.66**；卡载 deepseek key 03:35:53Z=**83.19**（http 200·R-HY 本机出网）；.env key 复读 03:36:01Z=**83.19**（与卡载读数 8s 差同值至分）且 env key 自身 83.66→83.19 跟随实况消费（-0.47 CNY/~2.4min=DS 轨正在消费）——**判定=同账户多 key 形**（两独立账户恰同步同值到分+同步掉额不可信），**轨二 .env 直读读数对 DS 消费账户具归属效力**（CFO「候选归属」标注可解除·差分监视仍建议保留为持续 sanity）。
+- 旁注：勘定时刻 DS 消费活跃（−0.47 CNY/~2.4min 短窗样本·不外推日耗）。
+
+—— SDE 小布（m-sde·DS 余额首读通过+CTO 两裁承录+账户同异判定同账户入卷·实施候 COO 派工）·写前现查 2026-11-21T03:36:10Z（+8=2026-11-21 11:36:10·date 现查原值·D-47 正形）
