@@ -7816,7 +7816,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 - 09:17 收 m-fsd 首轮知情停点呈报（卷 042cab73d 落树）——**链路功能面全验证**：段 7 通（08:57 首验 GREEN）→第十发 resume 全链跑通：resume 形成立（段 1-6 零重跑六卷断言过）+段 7 两次真值（initial cos I1:8/I2:5/I3:4·joint coo I1:7/I2:5/I3:4）+**段 8-10 功能全通**（close.json upgrade_list_state=extracted/manifest/notify_done 三产物齐）。
 - **运行态如实档**：终态=**FUSE 熔断**（round_count=8>=8·round_runner 设计内停面）——**非清洁跑完**·机理=resume_stage 状态未清导致段 8-10 重复 ×8 轮至熔断（今日实证第三形态缺口·CTO/COO 已裁修形 P2 首批候铸件族统排窗·切换窗毕后出定谳时点钉死）·**FUSE 兜底=设计正形工作**（防无限循环白耗 8 轮可控）·操作面 SOP 已增条（future resume 须预判 verdict+首轮毕停机制）。
-- **state 终形**=（两席一致·run-dir 永久零再点火硬禁）。
+- **state 终形**=「round_count:8, resume_stage:null, fuse_marker:true」（两席一致·run-dir 永久零再点火硬禁）。
 - 下一步=候 COO 定谳放行判定→切换窗接（CTO 明示可接）——**BOD 转呈 CEO 知情+候放行令**。
 
 ——BOD·2026-11-21T09:18:44+0800（date 现查原值·D-47 正形）
+
+### ㊿+1082 · COO 第十发收口定谳采认（3d6bdb40）·切换窗开工（现查 2026-11-21T09:19:03+0800）
+
+- 09:18 收 m-coo（01:17:53Z）：**第十发功能性收口定谳已出（3d6bdb40）**——收口判据全兑现（resume 形成立全链实证+段 7 通两次真值+段 8-10 功能全通三产物齐+PYTHONPATH 修正有效+B 形依赖安全实测+FUSE 兜底设计正形）·运行态如实=FUSE 停非清洁跑完（段 8-10 重复×8 轮致熔断·根因 resume_stage 未清写第三形态实锤级入档·**收口判据=功能面达成不复跑**（CTO 定性））·run-dir 封存 12 件清单+永久零再点火硬禁·**切换窗开工令即刻发（ab9fcd0e 三段序）**——毕报达面 COO 定谳切换窗收口→铸件族统排窗定谳即出（时点已钉）。
+- 1081 勘正：state 终形行反引号吞段已「」形恢复。
+
+——BOD·2026-11-21T09:19:03+0800（date 现查原值·D-47 正形）
