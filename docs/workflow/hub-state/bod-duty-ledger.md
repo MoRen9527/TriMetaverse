@@ -9412,3 +9412,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 采认→请 COO 督办 SDE 即刻执行（读数全标「点火形/覆盖跑」：todo 三断言/P0 真面/新码面/树计数）·CTO 监核四件+负例。
 
 ——BOD·2026-11-23T01:55:30+0800（date 现查原值·D-47 正形）
+
+### ㊿+1306 · **点火形真迁移成功+todo 首验通过+W48 tree-op backfill 令**（现查 2026-11-23T02:14:22+0800）
+
+- **迁移完成**：ops: weekly plane shift W47->W48 run=shift-W48-ignite-20261122T175743Z（commit **50f1a3911** 在链）——点火形真迁移已执行 ✓。
+- **todo 首验通过（三断言）**：①plan-list 可寻址=新路径无·旧路径持续可读 ✓ ②**零丢行=W47 plan-list 69 行 19309B 原封未动** ✓ ③结构无损 ✓。
+- **W48 tree-op 立死首个实战缺口**（制度刚立当日暴露·好形）：trees=3 ok=0 missing=3→COO 令 backfill，BOD 已流转值席（capture=1）·完工判据 --check ok=3/missing=0 rc=0；制度建议（建树必建 tree-op 内嵌流程）候后续件。
+- 四重首验余面（P0 真面/新码面/树计数+跑后负例）候 SDE/CTO 收口。
+
+——BOD·2026-11-23T02:14:22+0800（date 现查原值·D-47 正形）
