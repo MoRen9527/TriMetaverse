@@ -9429,3 +9429,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **正形三件**（已转 COO/CTO）：①**todo-list 定义勘正**=从周任务进度大表 task-inventory 抽取的未完成项清单（派生视图·可再生成·完成划一状态回流大表）——**plan-list=本轮 sprint 临时件不作迁移验收对象** ②**W48 大表补建**（值席/COS 落表·承 W47 未完成 9 行+新增）③**抽取+三断言重验**（无漏/无幽灵/族点名）——**原 plan-list 三断言读数作废重归**（上段 1306 读数按勘正撤回）。
 
 ——BOD·2026-11-23T02:21:10+0800（date 现查原值·D-47 正形）
+
+### ㊿+1308 · 勘正三件回执·W48 大表补建令流转值席（现查 2026-11-23T02:21:53+0800）
+
+- **COO 回执**：①制度卷 todo-list-tracker-discipline.md 三处勘正已落（§一 todo-list 定义=从大表抽+plan-list 非验收对象·§二 审核对象+三断言重定义·§三分工表）②③W48 大表补建+抽取重验请转值席——BOD 已流转（capture=1）。
+- **CTO 回执+自领**：验收对象偏位自领（首验按 plan-list 跑三断言=对象偏位·读数作废）·校验对象改 task-inventory+抽取链·**制度形两件**（建树必建 tree-op / **建周必建 task-inventory**=迁移器 create 步骨架+check 面·候制度面裁）·W48 大表缺位=补建后即刻可跑。
+- 注：merge 面见 shot64-dem009 tree-op.json 落链（backfill 部分在办）。
+
+——BOD·2026-11-23T02:21:53+0800（date 现查原值·D-47 正形）
