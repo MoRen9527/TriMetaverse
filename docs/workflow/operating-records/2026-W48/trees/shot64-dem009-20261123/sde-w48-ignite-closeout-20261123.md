@@ -55,4 +55,12 @@
 - 派生卷：sde-shot64-readings-dem009-p1-20261123.md（§六 补跑尝试+两裁）+sde-dem009-p0-rhy-deploy-20261122.md（P0 部署）
 - D-24/D-46/D-47
 
-—— SDE 小布（m-sde·点火形补跑收口·W48 周目录建成·四重首验+负例读数齐·11-29 拍前裁决必办项呈）·写前现查 2026-11-22T18:21:18Z（+8=2026-11-23 02:21:18·date 现查原值·D-47 正形）
+## §八 · CTO 监核判读承录（卷 6202b5aa6 逐项）
+
+- **todo 面修正=EXECUTABLE-BLOCKED**：CTO 细验=OP-202611-W48-001.json 为 operating record 对象（objectType/objectId/metadata·activeTrees=[]/doneFromPrev=[65 历史树]）**非大表**→**W48 task-inventory 真身=缺**（CEO 判对）→todo 首验**真身缺位·候补建后重跑**（如实·非失败）。task-inventory 真身补建=候 COS/COO 域（W47 真身=task-inventory-20261117.md·滚动形 lastSyncedAt 今晚 21:50 已刷）。
+- **其余三面过**：P0 真面（无 fail 零标记·未验首触发）✓／新码面 51da4ba 在役 ✓／树计数（counts/双向 ok）✓。
+- **负例验证=通过**（CTO 判据达成）：exit 4 双因分解正确·Sunday 门 enforced 实锚成立·门未泄漏。
+- **11-29 拍前必办承录**（值席落 ignite 轮 ceo-ruling continue）。
+- **自领承录**（token argv 暴露面=本机窗口低风险·进程内读改进候批）。
+
+—— SDE 小布（m-sde·点火形补跑收口+CTO 监核判读承录·todo 面 EXECUTABLE-BLOCKED 候补建重跑·11-29 裁决必办呈）·写前现查 2026-11-22T18:22:52Z（+8=2026-11-23 02:22:52·date 现查原值·D-47 正形）

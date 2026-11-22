@@ -9437,3 +9437,15 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 注：merge 面见 shot64-dem009 tree-op.json 落链（backfill 部分在办）。
 
 ——BOD·2026-11-23T02:21:53+0800（date 现查原值·D-47 正形）
+
+### ㊿+1309 · **点火形补跑全读数（COO 6202b5aa6）+ignite 轮门件落件令+COS SOP 建议采认**（现查 2026-11-23T02:23:05+0800）
+
+- **跑程**：run shift-W48-ignite-20261122T175743Z·17:57:43Z→18:17:54Z **DONE（exit 0·20min11s）**·preflight pass（week_math=exempted(loop)·ceo_ruling=continue 消费·supply-green）·dce 四步 rc 全 0·push sg-bare 顶 50f1a3911·verify/dce 双 pass。
+- **四重首验（点火形）**：①todo 面=W48 三件计划产物（OP json 98.6KB/unresolved 16.2KB/.shift-ade.json）②**P0 真面=无 fail**（shift-fail=0/urgent=0·fail 首触发仍未验如实注）③新码面 51da4ba 全程在役 ④**树计数 counts{migrate:0, keep:26, carry_over:2, top_level:8}·bidirectional_ok=true**——语义实锚=**记录随周封存（26 树留 W47）·活随人带走（8 top+2 carry→W48）**。
+- **收口**：close verdict=pass·notify_done ok·两席评分齐（cos 74.29/coo 65.71）·joint-review-trigger pending-ceo-ruling·dsh 零残留·daemon 3025030 零扰。
+- **负例（CTO 判据）**：无旗试拍=**exit 4**——①Sunday 门仍 enforced ✓ ②门把 ignite 轮当 prev→**需其 ceo-ruling.json**——BOD 已转值席落件（continue·**ruling_ref=6202b5aa6 照 COS 定值补正**·note 形照 COS）·**11-29 拍前复核**。
+- **三读数**：成功率=点火形首周点**成功**／发现时延 N/A／修复时延 00:06→01:57:43≈**111min**（含 terminate 返工+防线讨论段）。
+- **COS SOP 建议采认**：**每轮点火/补跑毕即落 ceo-ruling.json（continue）·不等拍前**——门件生命周期正形=「轮毕即落·拍前复核」·纳入 BOD 轮间门督办 SOP。
+- SDE 自领：起跑 token 经 sudo env argv 可见窗口→后续改进程内读（如实入档）。
+
+——BOD·2026-11-23T02:23:05+0800（date 现查原值·D-47 正形）
