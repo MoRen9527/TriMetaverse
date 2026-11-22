@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "r12-task-20261123",
+  "title": "W48 迁移联审五缺陷修形（七席意见→任务书·M2 未过 95 产生制）",
+  "source": {
+    "run_id": "shift-W48-ignite-20261122T175743Z",
+    "round": 12,
+    "opinion_ids": [
+      "R12-CAO-01",
+      "R12-CAO-02",
+      "R12-CPO-01",
+      "R12-CPO-02",
+      "R12-CTO-01",
+      "R12-CTO-02",
+      "R12-COO-01",
+      "R12-CFO-01",
+      "R12-CHO-01",
+      "R12-COS-01"
+    ],
+    "review_aggregate": "docs/workflow/operating-records/2026-W48/trees/w48-migration-joint-review-20261123/cos-w48-migration-review-aggregate-20261123.md"
+  },
+  "approver_pending": "COS",
+  "approval_note": "COS 代批（七席均分 73.49<95·M2 任务书产生制自证）",
+  "status": "approved_deputy",
+  "auto_dispatch": true,
+  "items": [
+    {
+      "opinion_id": "R12-CAO-01",
+      "title": "四类活件族去向固化（防四连）",
+      "target": "迁移器 carry-over 族清单 + validate 断言",
+      "change": "活件族四件（daily-progress/cfo-quota/demand-pool/convene）纳入 must_migrate 族清单；迁移器 validate 增「活件族四件新周全在」机械断言；CTO 独立 --check 脚本只读复核（双面）",
+      "verify": "下一轮迁移 run 后 .shift-ade/validate 读数含活件族四件全在断言；缺一即红",
+      "rollback": "族清单 revert（卷 docs/workflow/migration-must-migrate-families.md 基线）+断言开关"
+    },
+    {
+      "opinion_id": "R12-CAO-02",
+      "title": "B4 可审性三缺回补（hash/runId/段独立件）",
+      "target": ".shift-ade.json 扩展件",
+      "change": "增 carry_over 逐项清单（treeId/来源周/原因/tree-op hash）+runId 字段+段独立产物清单（段级证据指针）——一扩展件收三缺",
+      "verify": "下一轮 .shift-ade 含三字段；carry_over 逐项 hash 可复算对表",
+      "rollback": "扩展字段删除（向后兼容读取）"
+    },
+    {
+      "opinion_id": "R12-CPO-01",
+      "title": "B1 whitelist 族逐族对表",
+      "target": "迁移器 must_migrate 判据（B1 判据 A1）",
+      "change": "四族（记录/活件/树/元数据）逐族对表入判据；plan 卷附逐案清单+族点名表",
+      "verify": "下一轮 plan 卷含族点名表+逐案清单；validate 四族逐族读数",
+      "rollback": "判据回单族形"
+    },
+    {
+      "opinion_id": "R12-CTO-01",
+      "title": "门件固化（ignite ceo-ruling 落件+轮毕即落 SOP）",
+      "target": "轮间门 SOP + 值席落件流程",
+      "change": "①ignite 轮 ceo-ruling.json 值席落件（continue 形·11-29 前）②SOP 条款化=每轮点火/补跑毕即落 ceo-ruling（不等拍前）",
+      "verify": "11-29 正式拍 preflight 不 exit 4（阻流解除实证）；下轮点火后件在位",
+      "rollback": "SOP 条款撤回（门保持现状）"
+    },
+    {
+      "opinion_id": "R12-CTO-02",
+      "title": "token 不进 sudo argv 修形",
+      "target": "SDE 执行面脚本argv",
+      "change": "token 改环境变量/文件读取，禁进 sudo 命令行参数（值面纪律 D-46 族）",
+      "verify": "下一轮 run 日志/argv 零 token 值（grep 断言）",
+      "rollback": "脚本回退（旧形）"
+    },
+    {
+      "opinion_id": "R12-CPO-02",
+      "title": "出题改善三项（plan 必附件）",
+      "target": "段3 plan_skill 出题面",
+      "change": "①plan 逐案清单+族点名表列卷内必附件 ②顶层活件族逐族点名 ③设计内态 N/A 与缺读数分开判法",
+      "verify": "下一轮 plan 卷含三件；段7 判读可核性提升",
+      "rollback": "出题模板回退"
+    },
+    {
+      "opinion_id": "R12-COO-01",
+      "title": "carry_over 逐项清单入 .shift-ade",
+      "target": "迁移器输出面",
+      "change": "carry_over 逐项（treeId/来源周/原因）输出入 .shift-ade.json（解目录层不可分辨）",
+      "verify": "下一轮 .shift-ade carry_over 逐项可读；counts 与清单条数对表",
+      "rollback": "输出字段关闭"
+    },
+    {
+      "opinion_id": "R12-CFO-01",
+      "title": "成本读数框架落地（返工/轮级两轴）",
+      "target": "cost-log",
+      "change": "返工段成本化读数（余额差分形）+轮级成本（搬运类 vs 改造类分列）+成本不入质量分",
+      "verify": "下一轮 cost-log 含两轴分列行",
+      "rollback": "读数框架回退"
+    },
+    {
+      "opinion_id": "R12-CHO-01",
+      "title": "accountability 归属固化",
+      "target": "轮面责任矩阵",
+      "change": "B1/B2=段3 判断面（CPO/CTO/FSD spawn 席）·B3=收口域 COS/COO·B4=执行席 SDE+CTO 门禁·B5=SDE 卷+COS 收口——入轮卷责任矩阵",
+      "verify": "下一轮轮卷含责任矩阵；缺=卷不合格",
+      "rollback": "矩阵撤回"
+    },
+    {
+      "opinion_id": "R12-COS-01",
+      "title": "门件生命周期 SOP 条款化（COS 流程面）",
+      "target": "loop 规范（M2 配套）",
+      "change": "轮毕即落 ceo-ruling（continue）·拍前复核·轮间门 72h 催办标的=COS 裁决面——条款入 loop 规范",
+      "verify": "下轮流程面条款在卷；W46 阻流类事故零复现",
+      "rollback": "条款撤回"
+    }
+  ]
+}
