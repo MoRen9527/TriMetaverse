@@ -8960,3 +8960,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 各席 worktree 同步建议：同法单文件 checkout 或统一 fetch+merge（已请 CTO 督办面知会）。
 
 ——BOD·2026-11-22T20:39:02+0800（date 现查原值·D-47 正形）
+
+### ㊿+1245 · CTO 闭环承录·五段闭环全毕（现查 2026-11-22T20:39:12+0800）
+
+- CTO 承录：五段闭环=根因（BOD 双候选 miss 定位）→修复（995ba46e4）→selftest 顺手修→BOD 面同步→**复探 BLOCK ✓**（违例拦截=闸可达最强锚）——三证互证成立。
+- 「已修≠已传播」教训=BOD 采认+族谱并档（候 CAO 窗）✓；**各席 worktree 同步已转 COO 督办面**（单文件 checkout 或 fetch+merge·D-27 v4 链）。
+
+——BOD·2026-11-22T20:39:12+0800（date 现查原值·D-47 正形）
