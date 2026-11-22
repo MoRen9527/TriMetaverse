@@ -9619,3 +9619,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 判定：**A 60.22<95+缺陷 7 件→「不出全分不进 prod」量化实证确认**；分歧档差以 run_id 直读面席位锚交叉校验不简单平均。
 
 ——BOD·2026-11-23T03:16:52+0800（date 现查原值·D-47 正形）
+
+### ㊿+1330 · CEO 问 D2（flag 没 flip）大白话解释+改法（现查 2026-11-23T03:24:10+0800）
+
+- **啥意思**：flag=环境变量开关（FADE_PLAN_SPAWN=1 / FADE_CLOSE_SPAWN=1）——**开**=段3/段8 由 spawn 席位跑 skill（含出题）；**关（默认）**=走老 CLI 程序（只规划不出题）——运行 daemon（8710）environ 两键缺 → 实跑 CLI → **出题职能等于没开**（exam.json 全零根因）。
+- **哪里不足**：①配置面=两键没写进 daemon 启动面/wrapper ②验证面=无「轮毕必验 exam.json」硬断言→攒多轮才被发现 ③设计面=spawn 形靠 env 门控默认关·重启/换机即回 CLI 无告警。
+- **怎么改**：flip 窗（03:10-03:50）=①两键入启动面（bak 先行）②重启 8710 ③三断言（uptime/pid/**活体 environ 两键在**）④事后锚=下轮必产 exam.json（obj/sub 齐）。**追加施工建议（已转 CTO）**：⑤默认化或 startup 自检（缺键=告警拒静默降级）⑥轮毕 exam 断言硬接线（缺失=fail）。
+
+——BOD·2026-11-23T03:24:10+0800（date 现查原值·D-47 正形）
