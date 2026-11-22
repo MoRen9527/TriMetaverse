@@ -8764,3 +8764,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 处置：评分段已回两席（7452140 默认正形）·charter 挂起建议照 c7d38208·七席移联审段=future 批候 CTO 设计稿。
 
 ——BOD·2026-11-22T19:43:10+0800（date 现查原值·D-47 正形）
+
+### ㊿+1219 · CEO 问·TriRMC runner 启动后 loop 时序·作答（现查 2026-11-22T19:44:54+0800）
+
+- CEO 问「TriRMC 启动 runner 之后的 loop 中各个时序」——BOD 据实测卷（r9 test 轮 17:56:24→18:25≈29min·debug 轮 charter 091742Z 量级）作答（对话面）：点火→preflight 轮间门→round_runner 读 flag/state→chain_runner 十段硬串行（段1 preflight/段2 qualify/段3 plan_scope/段4 dce_steps/段5 verify/段6 score_cli 机判/段7 score_skill spawn 判席/段8 close_skill/段9 close_cli/段10 notify_done）→轮末判定（debug 停候 CEO·test continue 至 8 轮 FUSE·prod 单轮）——单轮≈25-30min（七席判卷占 ~29min·两席约 20min 量级）。
+
+——BOD·2026-11-22T19:44:54+0800（date 现查原值·D-47 正形）
