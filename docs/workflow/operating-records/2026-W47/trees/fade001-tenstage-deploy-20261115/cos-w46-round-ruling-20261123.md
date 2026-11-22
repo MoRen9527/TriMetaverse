@@ -38,6 +38,12 @@
 2. 若不补跑→11-29 下窗照常进 W48（24h 容期已给出判面）；
 3. 本裁决=该轮定态 close——state 转 closed·阻流解除（preflight 可进 W48）。
 
+## §四之二 · 门工件映射勘正注（SDE 实码拦截·COS 自领）
+
+- **勘正记录**（2026-11-23 01:46·SDE 01:45:58 实读 preflight.py check_ceo_ruling 三态分支发现）：本裁「close（收口）」的**门枚举映射=continue**（continue→ok=True·本轮照跑/carry_over 承接=W48 迁移执行）；**非 terminate**（terminate→ok=False·state=terminated·exit 5=job 停用面·W48 不执行+停用知会——与补跑令相悖）。
+- **COS 自领**：我首拟工件写 terminate=语义错位（按「收口=终止」直觉映射·未读门实现分支——docstring 只列枚举未列语义·语义在代码）——**教训=拟机器工件前必读消费端实现代码非仅规格文**（规格↔实现↔消费面三面对表）。SDE 落件前拦截=零损害。
+- 门工件正确形：`{"decision":"continue","ruling_ref":"043b76bb8","signed_at":"<值席落件时点>","note":"COS close W46 round"}`。
+
 ## §五 · D-39 三类自检（径裁合规）
 
 - 重大不可逆：否（轮状态标记+建议·可撤销归续）；
