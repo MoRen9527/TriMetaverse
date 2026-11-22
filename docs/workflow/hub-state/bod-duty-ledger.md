@@ -8943,3 +8943,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 转 CTO 修复**（三候选：walk-up 上溯/env TRI_COMPANY_ROOT/增 worktree 深度候选·修毕 selftest+SendMessage 实测验真）——D-85 形式请其定。
 
 ——BOD·2026-11-22T20:37:31+0800（date 现查原值·D-47 正形）
+
+### ㊿+1243 · **d47-gate 修复毕·BOD worktree 面活体验真通过**（995ba46e4）（现查 2026-11-22T20:38:21+0800）
+
+- CTO 修复毕（995ba46e4）：**组合形**（① env 显式锚最高优先·治本 ②worktree 深度候选修正）——活体验证主检出 true/worktree 旧形 false（bug 实证）→新形 true（修复生效）·顺手修 selftest 案值过期（动态 now+1h·4/4 ALL PASS）。
+- **BOD worktree 面验真一发**：本段 SendMessage 已真发（msg 83a8760d）——**无「闸正身不可达」留痕=修复生效实证**。
+- 教训采认（CTO 提出·候族谱）：**fail-open 面「留痕」需定期有人读 / 加「首犯告警」形**——留痕散落不成工单=债可见性差。
+
+——BOD·2026-11-22T20:38:21+0800（date 现查原值·D-47 正形）
