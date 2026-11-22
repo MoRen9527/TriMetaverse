@@ -9594,3 +9594,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 持三锚**：exam.json 产出／七席 A+B 全维分／>95 门槛。
 
 ——BOD·2026-11-23T03:14:48+0800（date 现查原值·D-47 正形）
+
+### ㊿+1327 · CTO 施工拆解表（items=10→五批）（现查 2026-11-23T03:15:14+0800）
+
+- **十项拆解**（改面/执行/自测/验收锚齐）：#1 迁移器活件族 validate（SDE·活件四件全在断言+四连负例）｜#2 B4 三缺（.shift-ade 扩展·四新字段+hash 对表）｜#3 B1 族清单（must_migrate 判据）｜#4 门件+ignite ruling 补｜#5 token 不进 sudo argv（进程表探空）｜#6 **plan_skill 出题段3**（spawn+flip+prompt·验收=下轮产 exam.json obj/sub 齐）｜#7 carry_over 逐项（并入 #2）｜#8 成本读数｜#9 accountability 机制化｜#10 门 SOP 细化。
+- **五批**：批1=迁移器族 #1/2/3/7（SDE·python 即效面）｜批2=#6 出题（SDE+CTO·依赖 flip）｜批3=门件 #4+#10（值席+COS）｜批4=#5 安全（SDE）｜批5=#8+#9（CFO/COS）。
+- 验收：批1-5 毕+自测绿→**点火跑一轮验 exam.json**→七席 A+B 全维再审→>95→prod。BOD 已转 COO 排窗督办。
+
+——BOD·2026-11-23T03:15:14+0800（date 现查原值·D-47 正形）
