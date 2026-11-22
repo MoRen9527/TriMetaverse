@@ -8639,3 +8639,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CEO 令**：「先走 debug 态跑一轮看看，**不用管 deepseek 余额，没了我在充值就行**」——BOD 双转：COO（组织：flag 切 debug（切换权=CEO 令照 D-86）+点火一轮·十段+七席联审→**联审毕停面呈 CEO**（意见融合裁进/出·不自续轮）+**首件真用机会**（debug 联审→钩子→任务书生成→呈 CEO 批面首用=端到端首验）+监护单轮受控读数随报+余额不设限 CFO 读数照报不拦）/CTO（技术面：flag 切换落痕+debug 分支行为确认+首件真用链验含 auto_dispatch 字段面）。
 
 ——BOD·2026-11-22T14:43:48+0800（date 现查原值·D-47 正形）
+
+### ㊿+1202 · CTO debug 态技术面接令·四件确认+观测点（现查 2026-11-22T14:44:01+0800）
+
+- CTO 回执：①**flag=debug 切换**照 D-86（runner-state flag_state 写·P4 179feb8/4c71e87 已实装 nextFlagEdge+readFlag 四态校验·源码面就绪零障碍）②**debug 分支行为确认=不自续轮**（联审毕→awaitCeoRuling 停候→CEO 裁决→批准分支挂载·与 test 自续区分）——**请 fsd 一句确认 awaitCeoRuling 实现形态**（真阻塞 or 停面态返回）·技术判据=debug 轮毕 state 留 charter_approval pending+round_count 停 ③首件真用观测判据四项（生成器五字段完整性缺即整卷退回 fail-closed/auto_dispatch 默认不置 true 需 CEO 批面显式/任务书落 run_dir+pending_charter_ref 写 state/CEO 批后挂载 trees 拾取可见）④读数随报五项（stages_run/opinions 与 total_100/debug 停面态/生成器任务书/挂载面）。
+- 成本提示：debug 一轮七席 spawn≈29min·DS ≈1.5-2 CNY/轮·余额自管·<20 CNY 门保底。
+
+——BOD·2026-11-22T14:44:01+0800（date 现查原值·D-47 正形）
