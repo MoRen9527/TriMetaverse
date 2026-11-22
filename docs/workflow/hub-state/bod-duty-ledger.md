@@ -8718,3 +8718,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 结构性教训候选：**产出物落 run_dir 而 CEO 阅读位在主检出=可见性缺口**（生成器/挂载设计面须补 CEO 阅读位副本或挂载前置可见化）——候转 CTO/CAO。
 
 ——BOD·2026-11-22T19:33:12+0800（date 现查原值·D-47 正形）
+
+### ㊿+1213 · 两件读数转呈·客观题首次满分 59/59·任务书副本落 CEO 阅读位（现查 2026-11-22T19:34:08+0800）
+
+- 19:33 收 m-coo 转呈：①**任务书副本已落 CEO 阅读位**（trees/fade001-evolve-20261122/charter-20261122T091742Z.json·主检出 8175B·json-ok·items=7·status pending_approval·approver_pending=CEO·七席各 -1 五字段全·target=plan.json·rollback 含基线 sha16 73b22ca8fb4a777d·展示副本非挂载）②**score 读数（本轮 debug 原样）**：**total_score=59.0**/pending 41/**total_projection=100.0**/verdict=pass/**rubric_defect=[]**·三域 breakdown=**{machine 59.0, collection 0.0, subjective 0.0}**·权 59/31/10——**客观题=machine 域 59/59 满分（P1 正则修后 B/C 族首次全过·D8 时 37/59 对照=真提升 +22）**·**主观题=subjective 域 0.0（score.json 面如实·七席 100 制分在 opinions/trend 未回填 subjective 域）**·七席均分=**39.18**（fsd 复算对表一致）。
+- 待修点候选：**主观域未回填**（七席均分 39.18 应写入 score.json subjective 域·P5 100 制接线面补口）——转 CTO 后续批。
+
+——BOD·2026-11-22T19:34:08+0800（date 现查原值·D-47 正形）
