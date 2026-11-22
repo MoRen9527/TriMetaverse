@@ -9473,3 +9473,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 路径（照 CEO 四态机）：debug 联审+CEO 融合→test（COS 代裁任务书·自动改进跑 8 轮）→分数过 95→prod（23:50 正式跑不问 CEO）。
 
 ——BOD·2026-11-23T02:35:32+0800（date 现查原值·D-47 正形）
+
+### ㊿+1313 · CEO 问·真迁移三口径分 vs r11 对比（现查 2026-11-23T02:39:13+0800）
+
+- **真迁移（shift-W48-ignite-20261122T175743Z）**：主观 **cos 74.29 / coo 65.71 → 均分 70.00**（trend.jsonl·17822B）·**客观分=未评**（迁移轮无客观题面·质量=门族 verdict：preflight/dce/verify/close 全 pass）·**七席评审分=未出**（joint-review-trigger mode=loop-window·round_state=pending-ceo-ruling·dim_a 3/dim_b 4）。
+- **r11 进化轮**：客观 **59/59**·主观 cos **77.14**/coo **71.43** → 均分 **74.29**·七席联审 **72 维**（a37/b35）。
+- 对比：进化轮三口径齐；真迁移轮仅主观两席有分（比 r11 低 4.29 均分）·客观/七席=缺位（口径不同：迁移轮验门族非考题）。
+
+——BOD·2026-11-23T02:39:13+0800（date 现查原值·D-47 正形）
