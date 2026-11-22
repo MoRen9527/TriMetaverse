@@ -9531,3 +9531,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 已转 COO 排 flip 窗（env 两键+重启 8710·新窗统排·flip 后下次轮必验 exam.json）·CTO 监核。
 
 ——BOD·2026-11-23T03:02:34+0800（date 现查原值·D-47 正形）
+
+### ㊿+1320 · flip 窗裁定=今晚即刻窗 03:10-03:50（COO 统排）（现查 2026-11-23T03:03:00+0800）
+
+- COO 裁定：**flip 窗=即刻 03:10-03:50（40min）**——窗位判据=D-23 v3 白名单「daemon 勘修重启类」（独占+护栏齐）·理由=迁移已毕本周无拍/P1 首跑 09:00 尚有 6h/团队在线/只加 env+wrapper 不改码。
+- 护栏：回滚锚=bak wrapper/env 先行（A 部署 bak 双面形）·止损线=任一键写失败或 restart 三断言红=立即回退+如实报·值守=SDE 自守+CTO 监核+COO 督办。
+- 执行形三件（SDE）：①两键入启动面/wrapper（FADE_PLAN_SPAWN/FADE_CLOSE_SPAWN·值面零打印）②重启 8710（shutdown→port FREE→起→三断言 uptime/pid/**活体 environ 两键在**）③毕报。
+- 达标锚：**下一次轮（进化或迁移）必验 exam.json 产出**——BOD 持锚。
+
+——BOD·2026-11-23T03:03:00+0800（date 现查原值·D-47 正形）
