@@ -17,7 +17,8 @@
       "R12-CHO-01",
       "R12-COS-01"
     ],
-    "review_aggregate": "docs/workflow/operating-records/2026-W48/trees/w48-migration-joint-review-20261123/cos-w48-migration-review-aggregate-20261123.md"
+    "review_aggregate": "docs/workflow/operating-records/2026-W48/trees/w48-migration-joint-review-20261123/cos-w48-migration-review-aggregate-20261123.md",
+    "objectA_aggregate": "docs/workflow/operating-records/2026-W48/trees/w48-migration-joint-review-20261123/cos-w48-objectA-review-aggregate-20261123.md"
   },
   "approver_pending": "COS",
   "approval_note": "COS 代批（七席均分 73.49<95·M2 任务书产生制自证）",
@@ -103,6 +104,63 @@
       "change": "轮毕即落 ceo-ruling（continue）·拍前复核·轮间门 72h 催办标的=COS 裁决面——条款入 loop 规范",
       "verify": "下轮流程面条款在卷；W46 阻流类事故零复现",
       "rollback": "条款撤回"
+    },
+    {
+      "opinion_id": "R12-AGG-A1",
+      "title": "flip 执行（段3/8 双键启·D2）",
+      "target": "daemon environ FADE_PLAN_SPAWN/FADE_CLOSE_SPAWN",
+      "change": "两键置 1 启 spawn 形（段3 plan_skill_spawn/段8 close_skill_spawn）·flip 窗 03:10-03:50 在跑",
+      "verify": "下一轮段 3/8 spawn 实跑读数（非 CLI）；exam.json 非零产出",
+      "rollback": "两键置 0 回 CLI 形"
+    },
+    {
+      "opinion_id": "R12-AGG-A3",
+      "title": "exam 出题接线（D1·试卷冻结件）",
+      "target": "段3 出题面→exam.json",
+      "change": "plan_skill_spawn 产 exam.json（objective→段6/subjective→段7·§2.6 试卷冻结三件齐）",
+      "verify": "下一轮 exam.json 在位+冻结件三件齐",
+      "rollback": "出题面回退"
+    },
+    {
+      "opinion_id": "R12-AGG-A4a",
+      "title": "七席恢复（D3·judge_faces 2→7）",
+      "target": "score_skill_spawn SEATS",
+      "change": "judge_faces=cos/coo/cao/cpo/cto/cho/cfo 七席（CEO 明示两席=错）",
+      "verify": "下一轮 judging 七席齐读数",
+      "rollback": "env SCORE_SKILL_SEATS 回两席"
+    },
+    {
+      "opinion_id": "R12-AGG-A4b",
+      "title": "兜底计分禁用（D4·拒判禁折算实装）",
+      "target": "评分实现（I 族 fallback 路径）",
+      "change": "reason_codes=agent_output_malformed 时禁给 fallback 分（拒判按最不利/显式标 rejected）——24/34=70.6% 兜底给分案即首案",
+      "verify": "下一轮 reason_codes 分布+fallback 给分零例",
+      "rollback": "评分实现回退"
+    },
+    {
+      "opinion_id": "R12-AGG-A5",
+      "title": "回填表机制实装（D5·应答矩阵）",
+      "target": "评审卷模板+joint-review-trigger",
+      "change": "应答矩阵含「不采纳+理由」形；条数守恒机械判；自动触发环接线（生成器桥·joint-review-trigger 本体化）",
+      "verify": "下一轮回填表在位+条数守恒断言过+自动触发实证",
+      "rollback": "人工形回退"
+    },
+    {
+      "opinion_id": "R12-AGG-A1b",
+      "title": "runId 贯穿+段文件族（D6）",
+      "target": ".shift-ade+段产物",
+      "change": ".shift-ade 增 runId 字段；段产物件族化（段名→文件名映射·§2.8 关联性）",
+      "verify": "下一轮 .shift-ade 含 runId+段件族在位",
+      "rollback": "单文件形回退"
+    },
+    {
+      "opinion_id": "R12-AGG-MECH",
+      "title": "评审 catch+召集三要素模板（D7）",
+      "target": "loop 规范/召集模板",
+      "change": "召集信模板硬门（对象 A/B 双列+七席名单+回执时限）；catch 义务条款（评审席对两对象齐提示自查）",
+      "verify": "下一轮召集信三要素齐+评审卷 catch 段在位",
+      "rollback": "模板回退"
     }
-  ]
+  ],
+  "charter_revision": "v2（对象 A 补审追加 7 items·COS 代批补件 2026-11-23T03:18）"
 }
