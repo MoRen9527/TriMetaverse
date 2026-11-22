@@ -9627,3 +9627,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **怎么改**：flip 窗（03:10-03:50）=①两键入启动面（bak 先行）②重启 8710 ③三断言（uptime/pid/**活体 environ 两键在**）④事后锚=下轮必产 exam.json（obj/sub 齐）。**追加施工建议（已转 CTO）**：⑤默认化或 startup 自检（缺键=告警拒静默降级）⑥轮毕 exam 断言硬接线（缺失=fail）。
 
 ——BOD·2026-11-23T03:24:10+0800（date 现查原值·D-47 正形）
+
+### ㊿+1331 · CTO 裁 D2 处置=代码默认化+startup 告警+每轮 exam 断言入 #6（现查 2026-11-23T03:24:32+0800）
+
+- **裁 a 主形**：chain_runner 两处  → ****（默认真=spawn·CLI 需 FADE_*_SPAWN=0 显式回退）——根因分野：**配置（env·重启/换机丢）vs 代码（git 面持久）**——五款①「spawn cos 主导」=默认必须 spawn。
+- **b 兜底**：startup 自检（spawn 生效但依赖缺→显式告警/fail·防次生静默降级）。
+- **②每轮验锚并入 #6**：段3 STAGES def 增 secondary output 断言 or 段3 后置断言——**轮毕自动断言 exam.json 存在+obj/sub 两段齐·缺失=fail**（D1 攒多轮教训正面承接）。
+- ③flip 窗三断言读数照役。两项均归 #6 不另立 item。BOD 采认。
+
+——BOD·2026-11-23T03:24:32+0800（date 现查原值·D-47 正形）
