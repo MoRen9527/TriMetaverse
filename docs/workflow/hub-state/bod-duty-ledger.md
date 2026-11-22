@@ -9346,3 +9346,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 挂二拍 one-shot 705ca5cc（00:08 触发·SDE 首读后收全量读数·未完成则 30min 续探）。
 
 ——BOD·2026-11-22T23:56:32+0800（date 现查原值·D-47 正形）
+
+### ㊿+1298 · **23:50 收官拍终态=exit 4 候裁阻流（设计内态非故障）·读数呈 CEO**（现查 2026-11-23T00:07:27+0800）
+
+- **终态**：23:50:00 起跑→13s 止→exit 4（awaiting-ruling 设计内态）·nextRun=11-29（下周日）·consec 5→6——**根因=上一轮（shift-W46-20261119T090551Z）处 awaiting-ruling 候裁态 78.7h>72h**→preflight 升级催办已发（escalated=true）→**fail-closed=无裁决不进 W48 轮**（设计语义：候裁不超时·cron 下窗再探）。
+- **四重首验分解**：①P0 兜底面符合设计（exit 4 静默·shift-fail=0/cos-urgent-mailbox=0=未触发合理）②**供给面 supply-green ✓**（model=deepseek-flash·TriRMC 切 DS 后首验通过=A 部署 restart 后仍持久）③新码面 daemon 在役（3025030·C4 薄壳+清写修形）④**todo 首验=未进轮**（候裁阻流·W48 树未建）⑤pregate 23:40 首跑成。
+- **解除阻流=W46 轮裁决落定**（COS 综合裁判域）——BOD 已催 COS 径裁（附读数供判）。计数语义注（awaiting-ruling 仍计 error/degraded/consec=6 未翻转）=CTO 判读面。
+- 呈 CEO：拍未跑完=**候裁阻流非链条失败**·今日全链成果（进化可重复/A 部署/供给首验）不受影响。
+
+——BOD·2026-11-23T00:07:27+0800（date 现查原值·D-47 正形）
