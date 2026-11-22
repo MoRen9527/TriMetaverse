@@ -41,4 +41,13 @@
 - 派生卷：sde-wpshift-rc2-diagnosis-20261120.md（62 拍深勘谱）+sde-dem009-p0-rhy-deploy-20261122.md（P0 部署）
 - D-24/D-46/D-47
 
-—— SDE 小布（m-sde·64 拍终态读数+exit 4 定谳承录+P1 cron 造件三查全绿）·写前现查 2026-11-22T16:06:47Z（+8=2026-11-23 00:06:47·date 现查原值·D-47 正形）
+## §六 · W48 补跑尝试与两裁留档（Sunday 门阻·裁=b 候 11-29）
+
+- **补跑尝试（COO GO 后即刻·17:50Z）**：手工触发 POST .../run body force → ran=true·**exit 2 止于 preflight week_math 门**（`trigger day 2026-11-23 is not Sunday·时点挪动错周防线`·sunday_gate=enforced）·run_dir=shift-W47-20261122T175025Z·consec 6→7。
+- **六项绿**：hostname/git_hygiene/healthz/diverge/**ceo_ruling=continue ✓**（件 sha=3a63befc 被门正确消费·carry_over 承接态）/model_supply=supply-green（deepseek-flash）。
+- **旁路勘定**：`--loop-window`=周日门豁免旗（法源=CEO 23:55 令·进化循环轮），**help 明文「真实 cron 迁移禁带此旗」**→真迁移周一补跑**无合规旁路**·本席未擅带旗（边界纪律）。
+- **两裁（同面）**：**COO 裁=b**（候 11-29 正式窗·sunday_gate 防线不破·赶首日窗不值破防线·ruling 件常驻 11-29 拍直接消费）；**CTO 裁=b+c·a 否**（a 技术驳三点=旗语义污染/门存在理由/需 CEO 改设计禁区成本高；c=gate 增 **manual-补跑 mode** 候后续批·设计要件=CEO 授权形+审计留痕+门语义分层）。
+- **留档**：ruling 件 continue 在位（文件常驻·未消耗式读取）·job enabled·nextRun=11-29T15:50Z；W48 树本周不建（工作照做·todo 首验延 11-29 如实呈 CEO）。
+- **教训（自领·CTO 承录入族谱）**：门类校验必取 `verdict`+`exit_code` 字段，**禁 tail 截断**（本拍初验只 tail 未见 verdict 行=假判；「截断伪影族」新面·与「监控绿≠任务活」「已修≠已传播」同深层读数面失真族）。
+
+—— SDE 小布（m-sde·64 拍终态读数+exit 4 定谳承录+P1 cron 造件三查全绿+W48 补跑尝试/两裁留档）·写前现查 2026-11-22T17:52:12Z（+8=2026-11-23 01:52:12·date 现查原值·D-47 正形）
