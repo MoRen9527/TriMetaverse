@@ -11,9 +11,9 @@ source:
   prev_charter: cos-fade001-selfevo-taskcharter-final-20261121.md（r9-task·approved·auto_dispatch=true 已授予）
 approval:
   approver: CEO
-  approval_comment: ""      # 待 CEO 批
-  approval_time: ""
-  status: draft             # 草案（CEO 明令：先不改码·批后按本任务书修改进化）
+  approval_comment: "批，按任务书修改，完成直接点火跑一轮，看进化效果"   # CEO 原话
+  approval_time: "2026-11-22T20:28:44+0800"   # 批准时刻 date 现查原值
+  status: approved          # CEO 批讫·按任务书修改（定稿 7d2749b52）·完成直接点火
 pickup:
   route: trees/<week>/trees/fade001-evolve-<ts>/
   auto_dispatch: false      # 草案面不置·批后按 CEO 明示
