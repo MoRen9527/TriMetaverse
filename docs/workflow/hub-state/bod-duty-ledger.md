@@ -9558,3 +9558,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 附带勘根因：joint-review-trigger 本应自动产 charter 而未产=自动链路缺口（一并回）。
 
 ——BOD·2026-11-23T03:07:41+0800（date 现查原值·D-47 正形）
+
+### ㊿+1323 · **任务书 r12-task-20261123 成件+COS 代批讫（fbbcbd933·items=10）**（现查 2026-11-23T03:08:27+0800）
+
+- **成件**：trees/2026-W48/trees/fade001-evolve-20261123/charter-r12-task-20261123.json（schema 1.0.0·**items=10 条五字段全齐**·json 校验过）+代批注卷。
+- **items 十条**：①四类活件族去向固化（防四连·迁移器 validate+CTO check 双面）②B4 三缺回补（.shift-ade 扩 carry_over+runId+段独立产物·一扩展收三缺）③B1 whitelist 族逐族对表 ④门件固化（ignite 落件+轮毕即落 SOP）⑤token 不进 sudo argv ⑤+出题改善三项/carry_over 清单/成本框架/accountability 矩阵/门件 SOP 条款化——各席意见可执行项全收（R12-席-序编号）。
+- **代批**：五要件在卷（批件落卷+三类零命中声明+「COS 代批」字样+时点 03:07:55+入台账）+M2 自证（73.49<95→任务书产生制）。
+- **挂载**：evolve 树在位·auto_dispatch=true·**flip 后首轮执行**（逐条落码→跑轮→七席再审→>95 判进化）。
+- **根因勘（自动链缺口）**：本轮联审=COS 人工发起（非自动触发）——自动环「联审毕→调生成器」**无桥**（P4 E3 钩子在 runner 轮末·人工联排面不入链）→修=joint-review-trigger 本体化 or 生成器 CLI 直调·CTO 下轮前定形。
+
+——BOD·2026-11-23T03:08:27+0800（date 现查原值·D-47 正形）
