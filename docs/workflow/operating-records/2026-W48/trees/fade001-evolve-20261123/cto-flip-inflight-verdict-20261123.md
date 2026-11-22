@@ -51,3 +51,31 @@
 r12 任务书 v3（167baf327·#11 D2 裁）+SDE 实测回执（20:49:17Z）+本席本机/GitHub 面复核（origin/dev a57d096）+COO 台账 976（窗排语）+D-15/D-24/D-27 v4/D-46/D-47/D-84+记忆族（监控绿≠任务活/并行窗提交互踩/重启窗完工判据）。
 
 ——CTO 小狄（m-cto）·写前现查 2026-11-22T20:49:50Z（+0800=11-23 04:49）〔commit 时戳锚·D-47 正形〕
+
+---
+
+## §六 · 判据状态更新与追认裁（6220331 后·本席独立复核·2026-11-23 追记）
+
+**事件**：04:51:54 CST 并行席提交 **6220331**（msg=v7 flip+joint-review 轮末钩+resume_stage clear-write·A 部署可追溯性修）·push sg bare 达（顶拍=6220331）·河源工作区 clean。
+
+**本席独立复核读数（本机 fetch 6220331 后·第二方法交叉）**：
+- `git show --stat` 642+/612- 系 **CRLF 全文件 churn**（工作副本 CRLF vs 仓内 LF）；`git diff -w --numstat a57d096..6220331` 实质=**chain 10+/5-·round 30+/5-**（SDE CR 归一读 15/35 同质）——**行尾归一伪 diff 族实锚**（diff 行数≠差异行数·记忆族照役）。
+- 实质内容三面：①chain=flip 两行 `=== '1'`→`!== '0'`+v7 注释；②round=joint-review 轮末钩（runJointReviewHook/spawnSync import）+resume_stage clear-write（A 部署修形）+P4 tie 位移（tryCharterHook→runJointReviewHook 内）；③**三面均属已批施工面**（flip=D2·联审钩=本席定形卷 ce26401a9 §一·clear-write=fsd A 面）——**无内容越界**。
+
+**裁（本席·提交卫生面）**：
+1. **追认该 commit（不要求拆分重做）**：内容面全已批+重做将产生二次 CRLF 反打 churn 且零内容收益+工作区 clean=丢笔风险已消+已推 bare（amend/rebase 风险大于利）；
+2. **三类债挂账**：①粒度债（三面一 commit·回滚粒度粗——future 训：一面一 commit）②CRLF 债（技术标准建议·TriRMC 仓加 `.gitattributes`（`*.ts text eol=lf`）根治伪 diff 族·施工归 FSD/SDE 候排）③blame 面（6220331 后审 diff 用 `-w`/`--ignore-cr-at-eol`·追责审读标注）。
+
+**四判据状态（6220331 后）**：
+- ①提交判据 = **成立**（6220331·commit+push bare 顶对表）——附混批追认裁+三类债；
+- ②同源判据 = **成立**（mtime 链 chain 20:30:30 < round 22:20:34 < dist 22:21:17 CST·dist 编译晚源 47s=含新形机械实证·mtime 未再变=提交内容=编译态）；
+- ③运行面判据 = **成立（值面推理链）**——daemon 3025030 ActiveEnter 23:19:01 CST 晚于 dist 22:21:17⇒进程载入含新形 dist；**无需为 flip 再重启**（影子生效已含新码·COO 三断言重定形同向）；加固读数=environ 两键**三态布尔**（键不在／键在且非 0／键在且为 0——D-46 零值面下可表达回滚键态）；
+- ④首验判据 = **待轮跑**（exam.json 未发生）。
+
+**#11 状态定谳：施工完成·待首验——首验前不得报完成/验收**（判据④未达）。
+
+**批编排面附注（转 COO）**：round_runner 实含 joint-review 轮末钩+resume_stage clear-write——原排批 5（#15 联审装载）已提前施工，批编排表请核更新；新代码**测试读数缺**（本次实勘面未含·门禁缺项候补）。
+
+**附记（D-47 样本）**：fsd 落款「00:54:30Z（+8=00:54:30）」算术疑误（D-47 双值形应为 UTC 原值+8h 换算）——D-47 落款算术核样本候校（非关键面）。
+
+—— 追记：CTO 小狄（m-cto）·写前现查 2026-11-22T20:53:11Z（+0800=11-23 04:53）〔commit 时戳锚·D-47 正形〕
