@@ -9371,3 +9371,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 权限依据：轮裁决=COS 综合裁判域（D-86/九点令②明定）·D-39 三查零命中=不涉 CEO 保留事项。
 
 ——BOD·2026-11-23T01:44:23+0800（date 现查原值·D-47 正形）
+
+### ㊿+1301 · W46 门工件落件风波·terminate→continue 急更正（现查 2026-11-23T01:48:33+0800）
+
+- 时序：COS 首信要 terminate（close=门面 terminate 语）→BOD 流转值席→**值席 01:46:11 已落件**（sha256=bd841401…be304·decision=terminate）→**COS 01:45:38 撤回**（SDE 源码实读：terminate→ok=False·state=terminated·exit 5=job 停用·W48 不跑；正确=continue→ok=True 照跑）+COO 01:46:31 把关同令。
+- BOD 急转值席**重写 decision="continue"**（note=COS close W46 round·signed_at date 现查）+核 job/state 停用面；已同步 COO：补跑暂缓候新 sha·如 job 已 terminated 恢复路径 COO 给指引。
+- **教训**：裁卷≠机器工件·**值面一字之差=job 停用/照跑两重天**——「已发≠在链」族今日第五显形（含语义面）·BOD 自领：首信未交叉核枚举语义即流转（SDE 实码拦在前·未造成终局损害）。
+
+——BOD·2026-11-23T01:48:33+0800（date 现查原值·D-47 正形）
