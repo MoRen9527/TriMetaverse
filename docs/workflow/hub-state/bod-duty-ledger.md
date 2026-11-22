@@ -8967,3 +8967,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 「已修≠已传播」教训=BOD 采认+族谱并档（候 CAO 窗）✓；**各席 worktree 同步已转 COO 督办面**（单文件 checkout 或 fetch+merge·D-27 v4 链）。
 
 ——BOD·2026-11-22T20:39:12+0800（date 现查原值·D-47 正形）
+
+### ㊿+1246 · 21:13 探·改造施工现势（r10 首跑红停已修重跑·hook 传播 14/14 毕）（现查 2026-11-22T21:13:53+0800）
+
+- **改造施工**：**r10 首跑红停已修重跑**（COO 922）——v7 契约缺口实锚（plan schema 缺 verdict/counts/三数组·毒化 plan 不接棒·prompt schema 补齐双侧同步）+**旁证段3 spawn 真跑 exam.json 落=出题职能实锚**——重跑 ~80min→22:05 完成（23:50 前充裕·红即停非同参照役）。
+- **hook 传播闭环 14/14**（COO 921/SDE 回执）：清点 13 树无 hook 实锚→单文件 checkout 14/14 rc=0→md5=cb602d93 全等+node check 双 OK+selftest 4/4 活体——**消费检出面清单 board+13 席全落零异常**（教训形兑现）。
+- 新卷：cto-loop-jointreview-and-exam-tech-form（技术形）+v7 任务书+sde hook sync 卷。
+- **现势：r10 重跑中·预计 22:05 完成→点火下一轮看进化效果**。
+
+——BOD·2026-11-22T21:13:53+0800（date 现查原值·D-47 正形）
