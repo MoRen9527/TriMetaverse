@@ -9465,3 +9465,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **要点**：门件防「上轮没结账就开下一轮」（问题叠加）·W46 事故=纸条漏贴 78.7h 把 prod 的 23:50 拍也堵了→修法=轮毕即落+拍前只复核·**与 CEO 批不批无关**·与四态机不冲突。
 
 ——BOD·2026-11-23T02:32:51+0800（date 现查原值·D-47 正形）
+
+### ㊿+1312 · CEO 问「刚才点火跑的是 debug 态么」·作答（现查 2026-11-23T02:35:32+0800）
+
+- **答：进化线是 debug 态（是）；但今晚点火含两段·只有一段属 debug 进化轮**——①**r11 进化轮**=debug 态轮（您「先走debug态跑一轮」起未升 test）·任务书=r11-task 经**您明示授权 COS 代批**（特例非常态·debug 常态须 CEO 批）②**W48 真迁移补跑**=**不是 debug 进化轮**——是周迁移本体（prod 业务动作）·用 --loop-window 点火旗+**您的覆盖令**强制跑（regular 23:50 拍此前被门阻流）。
+- 现状：flag 仍 debug·任务书候批存量（charter-20261122T091742Z/131251Z/150812Z 均 pending_approval 面）·ignite 轮 joint-review round_state=pending-ceo-ruling。
+- 路径（照 CEO 四态机）：debug 联审+CEO 融合→test（COS 代裁任务书·自动改进跑 8 轮）→分数过 95→prod（23:50 正式跑不问 CEO）。
+
+——BOD·2026-11-23T02:35:32+0800（date 现查原值·D-47 正形）
