@@ -122,14 +122,6 @@
       "rollback": "出题面回退"
     },
     {
-      "opinion_id": "R12-AGG-A4a",
-      "title": "七席恢复（D3·judge_faces 2→7）",
-      "target": "score_skill_spawn SEATS",
-      "change": "judge_faces=cos/coo/cao/cpo/cto/cho/cfo 七席（CEO 明示两席=错）",
-      "verify": "下一轮 judging 七席齐读数",
-      "rollback": "env SCORE_SKILL_SEATS 回两席"
-    },
-    {
       "opinion_id": "R12-AGG-A4b",
       "title": "兜底计分禁用（D4·拒判禁折算实装）",
       "target": "评分实现（I 族 fallback 路径）",
@@ -160,7 +152,15 @@
       "change": "召集信模板硬门（对象 A/B 双列+七席名单+回执时限）；catch 义务条款（评审席对两对象齐提示自查）",
       "verify": "下一轮召集信三要素齐+评审卷 catch 段在位",
       "rollback": "模板回退"
+    },
+    {
+      "opinion_id": "R12-AGG-REF",
+      "title": "评审引据纪律（引 CEO 令须核最新勘正版·防旧令判新形）",
+      "target": "评审卷模板+标尺卷§二",
+      "change": "评审席引 CEO 令作判据前必核该令最新勘正（如九点令②「七席」被 11-22 勘正②推翻：段7=两席正确·七席=loop尾段联审——CAO/CPO/CFO 对象A补审 A4/D3 引旧令即本例）；评审卷引令处标令文版本/勘正锚",
+      "verify": "下一轮评审卷引令处含勘正核对注；旧令判新形零例",
+      "rollback": "条款撤回"
     }
   ],
-  "charter_revision": "v2（对象 A 补审追加 7 items·COS 代批补件 2026-11-23T03:18）"
+  "charter_revision": "v3（#13 七席恢复作废——段7两席=CEO11-22勘正②正确形；D3 缺陷定性勘正=评审引旧令判新形；新增 R12-AGG-REF 引据纪律 2026-11-23T03:40）"
 }
