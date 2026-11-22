@@ -8934,3 +8934,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 双轨日报照役（轨二新基线 135.46@20:35:57·轨一 GLM 92% 八拍零增长）·附带实证=零施工下会话面基线 2.89 CNY/h（spawn 面零在跑）。
 
 ——BOD·2026-11-22T20:36:24+0800（date 现查原值·D-47 正形）
+
+### ㊿+1242 · CEO 问·d47-gate 反复报「闸正身不可达」·BOD 定位根因（worktree 路径解析 bug）（现查 2026-11-22T20:37:31+0800）
+
+- **CEO 问**：为什么各席总出这类错误（[d47-gate] 闸正身不可达·放行+留痕·请报 CTO 修复）·说报 CTO 修复也没见修复。
+- **BOD 勘定（读 .claude/hooks/d47-gate-hook.mjs L17-27）**：根因=**locateGate() worktree 路径解析 bug**——只试 ①here/../../../TriCompany（主检出形可命中）②CLAUDE_PROJECT_DIR/../TriCompany——**worktree 会话（各席 worktree）两候选都指向 D:/Code/ai/TriMetaverse-worktrees/TriCompany（不存在）→missing→fail-open**。**闸文件本身在主检出在位**（D:/Code/ai/TriCompany/scripts/ops/gate/d47-timestamp-gate.mjs·8061B）——**非缺失·是解析不覆盖 worktree**。
+- **为什么没修**：①设计 fail-open 不阻塞（噪声不冒烟）②stderr 留痕散落未成工单。
+- **BOD 转 CTO 修复**（三候选：walk-up 上溯/env TRI_COMPANY_ROOT/增 worktree 深度候选·修毕 selftest+SendMessage 实测验真）——D-85 形式请其定。
+
+——BOD·2026-11-22T20:37:31+0800（date 现查原值·D-47 正形）
