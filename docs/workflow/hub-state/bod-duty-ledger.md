@@ -9286,3 +9286,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - tree-op：CTO 写工具（30min）→批量执行=值席/COO 面（值席窗 idle 需唤醒·BOD 与 COO 同步）。
 
 ——BOD·2026-11-22T22:19:35+0800（date 现查原值·D-47 正形）
+
+### ㊿+1290 · tree-op 工具落位（8c80a0c7d·28 树全缺实证）+值席唤醒+催办转下周（现查 2026-11-22T22:21:19+0800）
+
+- CTO：**tree-op 工具落位**（scripts/ops/tree-op-init.mjs·三模式 check/backfill/单树·自测 W47 trees=28 ok=0 missing=28=CEO 判断精确实证）·批量执行=值席/COO 面（backfill 命令现成）。
+- **催办定时器=如实转下周**（时间不允许安全落·不做半套照令）——技术形要点备下周（树节点时限判据=tree-op 同源复用/15min TriMLC cron E1 先例/白名单配置形）。
+- **BOD 唤醒值席窗**（tmux 直投·capture=1 实证·待命通知+预期批量生成令）——COO 已回：值席唤醒=BOD 面执行（通道在 BOD）·批量生成令=COO 出经 BOD 流转。
+- BOD 转 COO：工具已落链+值席待命→请出批量生成令。
+
+——BOD·2026-11-22T22:21:19+0800（date 现查原值·D-47 正形）
