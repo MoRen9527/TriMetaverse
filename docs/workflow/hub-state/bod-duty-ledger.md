@@ -9316,3 +9316,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 前置全齐：A 准备三件（双 bak+清写修形+主 dist 预构建）·P0 告警已生效·r11 效果 OK 可重复。
 
 ——BOD·2026-11-22T23:18:07+0800（date 现查原值·D-47 正形）
+
+### ㊿+1294 · CTO 监核清单（部署 A 在跑·23:45）（现查 2026-11-22T23:18:29+0800）
+
+- CTO 监核清单：前置三项（旧 dist bak 在位/pid+uptime 基线快照/新 dist 清写 symbol grep 值面锚）→重启序（/shutdown 零 token→port FREE→schtasks 起→三断言）→完工三断言（uptime 重置/pid 换/新值面探针 dist symbol+版本行·**动态生效面=候下轮 resume 验证不虚报**）→失败回滚锚一条命令·23:45 硬边界。
+- 部署执行中（COO 执行·CTO 监核）·候读数。
+
+——BOD·2026-11-22T23:18:29+0800（date 现查原值·D-47 正形）
