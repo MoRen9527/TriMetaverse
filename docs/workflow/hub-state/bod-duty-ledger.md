@@ -9177,7 +9177,7 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 ### ㊿+1275 · DEM-014 制度卷落卷+COO 两问问答（大表实锚/todo-list 抽取形）（现查 2026-11-22T21:47:21+0800）
 
-- COO 已办 DEM-014：①制度卷  落卷（三件+fade-001 检验面+两账分立+分工表）②CTO 检验面落位承录（三断言双层面+独立后置检查+todo-migration-check-<week>.json 读数面）③今晚 23:50 首验窗（人工形三断言）。
-- **BOD 答两问**：①任务进度大表实锚=（七列大表·现役真身·滚动刷新）·**plan-list=派生 sprint todo-list**非大表本体 ②抽取形=**从 task-inventory 抽·不独立维护**（大表唯一真身·完成划一状态回流·新增先回大表·防双真源）③今晚首验对象=task-inventory（该表 lastSyncedAt 11-17 滞后·迁移前列位更新属应有动作）。
+- COO 已办 DEM-014：①制度卷「todo-list-tracker-discipline.md」落卷（三件+fade-001 检验面+两账分立+分工表）②CTO 检验面落位承录（三断言双层面+独立后置检查+todo-migration-check-<week>.json 读数面）③今晚 23:50 首验窗（人工形三断言）。
+- **BOD 答两问**：①任务进度大表实锚=「2026-W47/task-inventory-20261117.md」（七列大表·现役真身·滚动刷新）·**plan-list=派生 sprint todo-list**非大表本体 ②抽取形=**从 task-inventory 抽·不独立维护**（大表唯一真身·完成划一状态回流·新增先回大表·防双真源）③今晚首验对象=task-inventory（该表 lastSyncedAt 11-17 滞后·迁移前列位更新属应有动作）。
 
 ——BOD·2026-11-22T21:47:21+0800（date 现查原值·D-47 正形）
