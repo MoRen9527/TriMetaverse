@@ -8770,3 +8770,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CEO 问「TriRMC 启动 runner 之后的 loop 中各个时序」——BOD 据实测卷（r9 test 轮 17:56:24→18:25≈29min·debug 轮 charter 091742Z 量级）作答（对话面）：点火→preflight 轮间门→round_runner 读 flag/state→chain_runner 十段硬串行（段1 preflight/段2 qualify/段3 plan_scope/段4 dce_steps/段5 verify/段6 score_cli 机判/段7 score_skill spawn 判席/段8 close_skill/段9 close_cli/段10 notify_done）→轮末判定（debug 停候 CEO·test continue 至 8 轮 FUSE·prod 单轮）——单轮≈25-30min（七席判卷占 ~29min·两席约 20min 量级）。
 
 ——BOD·2026-11-22T19:44:54+0800（date 现查原值·D-47 正形）
+
+### ㊿+1220 · **CEO 全模型勘正（五款）·先不改码并任务书候批**（现查 2026-11-22T19:58:10+0800）
+
+- **CEO 完整澄清五款**：①**段3 plan skill = spawn cos 主导**——cos 做任务书调动团队完成周迁移·**并出主观题和客观题**（考卷）②**段7 score skill = spawn 两席（cos initial+coo joint）= 评判主观题考分**（语义改写类程序无法判需 agent）·客观题由段6 score_cli 判 ③**段8 close skill = spawn cos 收口** ④**段10 结束后才是七席联审**=两维度综合评价（**周工作平面迁移质量 + fade-001 本身工作质量**）→改进意见→**入下一轮 fade-001 代码和 skill 优化=自进化** ⑤**段7 两席与七席联审不是一个阶段·严禁搞混**。
+- **执行方式（CEO 明令）**：**先不要着急改**——全部意见**合并进任务书**（新任务书=进化改造件）·一会 CEO 批任务书·**批后直接按任务书修改进化**·完成后**点火下一轮验**：**时序节点是否全正确 + 分数是否有提高 = 这叫进化**。
+- BOD 双转：COS 主笔任务书草案（五款+时序节点表+验收判据=时序正确+分数提升）/CTO 技术面对表（现实现 vs 目标形五款差距+段3/8 spawn 化落点+七席联审段新建面）·charter-20261122T091742Z 挂起不动。
+
+——BOD·2026-11-22T19:58:10+0800（date 现查原值·D-47 正形）
