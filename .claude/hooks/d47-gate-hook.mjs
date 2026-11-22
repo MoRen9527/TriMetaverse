@@ -19,10 +19,17 @@ const GATE_REL = ['..', 'TriCompany', 'scripts', 'ops', 'gate', 'd47-timestamp-g
 function locateGate() {
   const candidates = [];
   const here = dirname(fileURLToPath(import.meta.url)); // <repo>/.claude/hooks
-  candidates.push(resolve(here, '..', '..', ...GATE_REL)); // repo 根起推（主形）
+  if (process.env.TRI_COMPANY_ROOT) {
+    // worktree/异位部署显式锚（最高优先·CEO 问「为什么没修」的治本形·2026-11-22 CTO 修复）
+    candidates.push(resolve(process.env.TRI_COMPANY_ROOT, 'scripts', 'ops', 'gate', 'd47-timestamp-gate.mjs'));
+  }
+  candidates.push(resolve(here, '..', '..', ...GATE_REL)); // repo 根起推（主形·主检出）
   if (process.env.CLAUDE_PROJECT_DIR) {
     candidates.push(resolve(process.env.CLAUDE_PROJECT_DIR, ...GATE_REL)); // env 形（备）
   }
+  // worktree 深度形（hooks→.claude→<wt>→worktrees·再跳 ai/TriCompany——修 2026-11-22：
+  // worktree 会话下主形/env 形均解析到 worktrees/TriCompany 不存在→missing fail-open 静默）
+  candidates.push(resolve(here, '..', '..', '..', ...GATE_REL));
   for (const c of candidates) if (existsSync(c)) return c;
   return null;
 }
@@ -35,12 +42,16 @@ function runGate(message, nowArg) {
   return { status: r.status, stderr: (r.stderr || '').trim(), missing: false };
 }
 
-// ---------- 自测（挂载面全链：envelope 形+退出码转发+fail-open） ----------
-// 案值与 now 无关设计：违例案（掩码/未来时刻）任意当下皆命中；真值案取固定过去秒
+// ---------- 自测（挂载面全链：envelope 形+退出码转发+fail-open+路径解析） ----------
+// 案值设计：掩码案=任意当下皆命中（字符串形）；未来案=动态构造 now+1h（+0800 时表示·修 2026-11-22：
+// 原固定「2026-10-22 23:59:59」设计时是未来·跨月后成过去→案值过期误红·动态化根治）；真值案=固定过去秒
 function selftest() {
+  const pad = (n) => String(n).padStart(2, '0');
+  const f = new Date(Date.now() + 3600 * 1000 + 8 * 3600 * 1000); // now+1h 的 +0800 时表示
+  const futureTs = `${f.getUTCFullYear()}-${pad(f.getUTCMonth() + 1)}-${pad(f.getUTCDate())} ${pad(f.getUTCHours())}:${pad(f.getUTCMinutes())}:${pad(f.getUTCSeconds())}`;
   const cases = [
     ['违例掩码(落款 11:37:3x 秒位·家族实锚形)', '落款 date 现查原值 2026-10-22 11:37:3x +0800', 2],
-    ['违例倒挂(落款 23:59:59 未来)', '落款 date 现查原值 2026-10-22 23:59:59 +0800', 2],
+    ['违例倒挂(动态 now+1h 未来)', `落款 date 现查原值 ${futureTs} +0800`, 2],
     ['真值(固定过去秒 10:00:07)', '落款 date 现查原值 2026-10-22 10:00:07 +0800', 0],
     ['envelope 无 message 字段(放行)', null, 0],
   ];
