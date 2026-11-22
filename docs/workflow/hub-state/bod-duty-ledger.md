@@ -9515,3 +9515,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 双转：CTO（迁移轮 plan_skill 出题技术形+迁移质量题库/schema+prod 门=七席>95 含迁移轮+三口径齐备）+COS（迁移轮补出题入 loop 规范+**对 ignite 真迁移跑七席联审**（对象=迁移质量·CAO 标尺四锚·round_state=pending-ceo-ruling 推进）+进化至 >95 路线图）。
 
 ——BOD·2026-11-23T03:00:38+0800（date 现查原值·D-47 正形）
+
+### ㊿+1318 · CTO 三件技术形回执+flip 状态实测口径（现查 2026-11-23T03:01:41+0800）
+
+- CTO：a) 迁移轮出题技术形=沿用 exam.json schema（ce26401a9）·差异仅题面语境（迁移轮 cos 出题 prompt 按「考迁移质量」：objective=迁移检查项断言〔周树完整/记录一致/迁移语义〕·subjective=迁移质量题〔规划合理性/执行严谨性/搬运保真度〕）·前提=段3 spawn flip 状态待实测；b) **prod 门=七席评审分>95（含迁移轮）**·迁移轮三口径齐备·本次强制点火未过 95=特例照档；c) 进化推进技术面支持（r12+→>95→prod→代码原样用于正式迁移·与 COS 对表）。附修形提醒：本次特例轮七席口径缺·不混入进化判据（轮类型+口径双标注）。
+- **BOD 答 flip 实测口径**：代码事实 chain_runner.ts L74-75=**env 门控·缺省 CLI**（FADE_PLAN_SPAWN=1/FADE_CLOSE_SPAWN=1 才 spawn）→真值=运行中 daemon（pid 3025030）environ——已转值席探（只报键在否·D-46 值面零回显）。
+
+——BOD·2026-11-23T03:01:41+0800（date 现查原值·D-47 正形）
