@@ -9387,3 +9387,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **W48 补跑门面=就绪（continue+enabled 两面齐）**——已转 COO/SDE 即刻补跑+四重首验。
 
 ——BOD·2026-11-23T01:49:26+0800（date 现查原值·D-47 正形）
+
+### ㊿+1303 · W48 补跑止于 sunday_gate 防线（设计正形）·裁定候 11-29（现查 2026-11-23T01:52:35+0800）
+
+- SDE 补跑回执：手工触发→**exit 2 止于 preflight sunday_gate**（「trigger day 2026-11-23 is not Sunday·时点挪动错周防线 enforced」）——**六项绿+一拒**（hostname/git_hygiene/healthz/diverge/**ceo_ruling=continue ✓ 被门正确消费**/supply-green DS 轨 ✓·唯周日门拒）·SDE 不擅带 --loop-window 旗=正形（help 明示真迁移禁带）。
+- **COO 裁=b（候 11-29 正式窗）**：sunday_gate=设计防线不为赶首日窗破语义·W48 首日无树非阻塞·ruling 件 continue 常驻+job enabled=11-29 拍直接消费。
+- **四重首验现势**：✅P0 判据分野正验｜✅DS 轨首验绿｜✅新码面在役｜⏸todo+真迁移候 11-29。**门族完整工作实证**（六项绿+周日门真拒=防线全活）+ruling 件消费链验证。
+- 留档候选：a=loop-window 形补跑候 CEO 明示覆盖语义（须 CTO 技术裁+CEO 覆盖令）·c=gate manual-mode 码面件后续批。
+
+——BOD·2026-11-23T01:52:35+0800（date 现查原值·D-47 正形）
