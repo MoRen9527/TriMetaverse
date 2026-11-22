@@ -7,7 +7,7 @@ title: fade-001 自进化改造（CEO 全模型勘正五款落地·时序+节点
 source:
   order: CEO 2026-11-22 全模型勘正（五款·照录精神一字不差并入本任务书）
   base_volume: docs/workflow/operating-records/2026-W47/trees/fade001-selfevo-repair-20261121/cos-consolidation-round2-charter-amendment-20261121.md
-  cto_parity_table: docs/workflow/operating-records/2026-W47/trees/bod-fade001-sprint-plan-20261120/cto-five-clause-parity-table-20261122.md（bab1010e5·已并入 §二/§三/§六）
+  cto_parity_table: docs/workflow/operating-records/2026-W47/trees/bod-fade001-sprint-plan-20261120/cto-five-clause-parity-table-20261122.md（勘正版 12289ee51·原版 bab1010e5 沿革·已并入 §二/§三/§六）
   prev_charter: cos-fade001-selfevo-taskcharter-final-20261121.md（r9-task·approved·auto_dispatch=true 已授予）
 approval:
   approver: CEO
@@ -102,7 +102,7 @@ CEO 原话（勘正）：「因文件语义改写类程序无法做/无法评需
 
 ## §三 · 改动面（现势 → 目标态·批后按序改）
 
-| 面 | 现势 | 目标态 | 备注（CTO 对表 bab1010e5 承录） |
+| 面 | 现势 | 目标态 | 备注（CTO 对表勘正版 12289ee51 承录·原版 bab1010e5 沿革） |
 |---|---|---|---|
 | 段 7 score_skill | SEATS 七席（P2 已改·7f08864） | **两席（cos initial + coo joint）** | **P2 回滚=SEATS 恢复 ("cos","coo")**——env `SCORE_SKILL_SEATS` 一键·**零码面·可即行**（CTO 勘定卷 43a6dfa08 已裁） |
 | 段 3 plan_scope | spawn cos（bb4f049 灰度·产物 plan.json） | spawn cos **主导+产出任务书+考卷（主观题+客观题·依 §一之二 12 类清单出题）** | 存量 `plan_skill_spawn.py` 已有（P3·灰度 env `FADE_PLAN_SPAWN`）→**默认 flip**+**出题职能扩=新设计**（主观题供段 7/客观题供段 6·题面内容设计新件·**12 类清单=出题语义依据**；CPO 卷 c875431b5 §八 A① 考卷基准：既有 rubric 轮次实例化·出卷≠改卷·轮内锁卷） |
@@ -121,9 +121,9 @@ CEO 原话（勘正）：「因文件语义改写类程序无法做/无法评需
 - 分工：主笔 COS（本卷）｜技术面随卷 CTO（改动面定形+接口终审）｜主刀 fsd（码面）｜统排 COO（施工序）｜测试 STE（门禁）｜部署 SDE（如需）｜预算 CFO（成本读数）。
 - **执行序（CEO 明令）**：先不改码 → 本草案呈 BOD 转 CEO 批 → 批后按任务书修改进化 → 完成后再点火下一轮验证（时序+分数）。
 
-## §六 · CTO 技术面随卷（对表 bab1010e5 已并入·cto-five-clause-parity-table-20261122.md）
+## §六 · CTO 技术面随卷（对表勘正版 12289ee51 已并入·原版 bab1010e5 沿革·cto-five-clause-parity-table-20261122.md）
 
-CTO 五款对表（卷锚 bab1010e5）要点已并入本卷 §二/§三，技术面定形摘要：
+CTO 五款对表（卷锚勘正版 12289ee51）要点已并入本卷 §二/§三/§六，技术面定形摘要：
 1. **段 3**：CLI→spawn cos（P3 存量 `plan_skill_spawn.py`·灰度 env `FADE_PLAN_SPAWN`→默认 flip）+**出题职能扩=新设计**（cos 出任务书+主观题+客观题·题面内容新件）；
 2. **段 7**：**P2 回滚=SEATS 恢复 ("cos","coo")**——env `SCORE_SKILL_SEATS` 一键·零码面·**可即行**（勘定卷 43a6dfa08 已裁）；段 7 只判主观题 ✓；
 3. **段 8**：close spawn 默认 flip（`close_skill_spawn.py` 存量·env `FADE_CLOSE_SPAWN`→默认·小件）；
