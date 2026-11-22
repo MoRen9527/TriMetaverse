@@ -9262,3 +9262,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CPO 供料：转办件机械面判据可出（模板必填字段=源件到达现查原值+无原值段=退回两条）·CAO/CTO 需要回一句出对表件；11-29 评审正式化候程。
 
 ——BOD·2026-11-22T21:55:46+0800（date 现查原值·D-47 正形）
+
+### ㊿+1287 · CEO 问·审批 DEM 结合 fade-001 待修清单·作答（现查 2026-11-22T22:10:37+0800）
+
+- **实测发现（BOD 面实勘）**：W47 28 棵树 **tree-op.json 在位=0**（含今天全部 fade-001 树：selfevo-repair/sprint-plan/evolve-20261122/tenstage-deploy 全缺）——**五周断档延续至今日**=DEM-008 复盘实锚更新（非历史问题·现役仍在发生）。
+- **待修清单三组**：A 未生效候窗（resume_stage 清写修形/C4 部署段 dist rebuild+8710 重启·11-23）；B 今晚在办（DEM-009 P0 告警+三读数·DEM-014 todo-list 首验·DEM-016 根修 timestamp-append+闸扩围候批·大表列位更新）；C **新建空洞**（①tree-op.json 落卷全城缺=DEM-008 现役实锚 ②采集域 31 分未采集 score.json collection:0.0·A/F/H 族 manual 待补 ③r10' 新任务书 charter-20261122T131251Z 候 CEO 批=批了才启动下一轮自动环首件真用 ④DEM-005 单任务 token 检测未建=七席 spawn 成本无任务粒度 ⑤DEM-006 催办定时器未建=轮间/挂起靠人工）。
+
+——BOD·2026-11-22T22:10:37+0800（date 现查原值·D-47 正形）
