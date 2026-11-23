@@ -103,6 +103,40 @@ def summarize(paths, json_out=False, turn_level=False, ts_from=None, ts_to=None)
     return agg
 
 
+def health_scan(paths, ts_from=None, ts_to=None):
+    """provider 健康度读数（429/500/502/503/retry 计数·COO 建议入拍报面三读数之一）。
+
+    识别锚：transcript 行内 isApiErrorMessage=true 或内容含 'API Error'/'429'等（限错误消息对象）。
+    """
+    import re
+    codes = {"429": 0, "500": 0, "502": 0, "503": 0, "other_err": 0, "retry_mentions": 0}
+    day_pref = None
+    if ts_from and len(ts_from) >= 10 and ts_from[4] == "-" and ts_from[7] == "-":
+        day_pref = ts_from[:10].encode()
+    for p in paths:
+        try:
+            fh = open(p, "rb")
+        except OSError:
+            continue
+        with fh:
+            for raw in fh:
+                if b"API Error" not in raw and b"isApiErrorMessage" not in raw:
+                    continue
+                if day_pref is not None and day_pref not in raw:
+                    continue
+                hit = False
+                for c in ("429", "500", "502", "503"):
+                    if c.encode() in raw:
+                        codes[c] += 1
+                        hit = True
+                        break
+                if not hit:
+                    codes["other_err"] += 1
+                if b"retry" in raw.lower():
+                    codes["retry_mentions"] += 1
+    return codes
+
+
 def selftest():
     """机械判锚：空数据零值 exit 0。"""
     import tempfile
@@ -130,6 +164,7 @@ def main():
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--turns", action="store_true", help="含 turn 级明细")
     ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--health", action="store_true", help="provider 健康度读数（429/500/502/503/retry 计数）")
     a = ap.parse_args()
 
     if a.selftest:
@@ -157,6 +192,15 @@ def main():
                 continue
         paths = hits
         print(f"runid={a.runid} matched_sessions={len(paths)}")
+
+    if a.health:
+        h = health_scan(sorted(paths), ts_from=a.ts_from, ts_to=a.ts_to)
+        if a.json:
+            print(json.dumps({"health": h}, ensure_ascii=False, indent=2))
+        else:
+            print("provider-health: " + " ".join(f"{k}={v}" for k, v in h.items()))
+            print("NOTE: 429=concurrency-limit (official semantics, decoupled from balance) / 500-503=server-class / retry=retry mentions")
+        return 0
 
     summarize(sorted(paths), json_out=a.json, turn_level=a.turns,
               ts_from=a.ts_from, ts_to=a.ts_to)
