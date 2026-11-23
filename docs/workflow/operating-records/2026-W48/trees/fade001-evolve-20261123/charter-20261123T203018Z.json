@@ -13,7 +13,7 @@
     ]
   },
   "approver_pending": "CEO",
-  "status": "pending_approval",
+  "status": "approved",
   "items": [
     {
       "opinion_id": "cos-1",
@@ -67,5 +67,9 @@
     "dropped": [
       "close.json 13 条缺陷逐条绑定主责席与责任面"
     ]
-  }
+  },
+  "approval_time": "2026-11-24T04:39+0800",
+  "approval_comment": "CEO 批（BOD 转达·「批锚表接线，charter 也批」）",
+  "auto_dispatch": true,
+  "dispatch_ref": "DP-20261123-043"
 }
