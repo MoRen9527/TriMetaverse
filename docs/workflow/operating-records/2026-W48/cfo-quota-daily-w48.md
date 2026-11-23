@@ -161,3 +161,18 @@
 - **登记形**：本笔=「未批轮消耗」首条样本（栏位：轮号/启动方式/未批标记/窗口 token 四分列/¥ 估值带/余额面锚）——后续同类照此形单列。
 
 〔落款 2026-11-23 21:29:37 +0800 现查〕
+
+## 2026-11-23（周一）21:39 下沉实证（CEO 定调「联审下沉义务」·本席首份带代码锚的成本维读法）
+- **令源**：COS 转 CEO 21:38 明示——「7 席不专业、不下沉，才是联审流于形式的根因」；本席域归口=**成本异常-CFO／重复消费-CFO+COO**；下轮联审成本维须**真读 code 与 usage**（非只读卷）·带「文件:行+片段」形。
+- **【下沉首读·真读代码锚】** `TriCompany/runtime/cognition/close_skill_spawn.py`：
+  - **`L41-43` 三护栏常量与本席 P2 裁决精确一致**：`_ROUND_CAP_CNY = 1.0`（本席 ⓐ 轮级≤1 元）／`_TOTAL_CAP_CNY = 10.0`（ⓑ 累计≤10 元）／`_BALANCE_FLOOR_CNY = 20.0`（ⓒ 余额<20 暂停）——**四件护栏落地实证**（非卷面声称）。
+  - `L150-153`：余额门 `if b0 is not None and b0 < _BALANCE_FLOOR_CNY: ... return 3`（paused+reason 结构化）。
+  - `L155-158`：累计门 `if spent >= _TOTAL_CAP_CNY: ... return 3`。
+  - `L182-192`：cost 行写 `balance_before/after/delta` + **`delta_scope: "period_total_all_ds_consumption (CFO note: upper-bound only, NOT pure review cost)"`**——**本席 16:09「上界不纯」勘注已被实现吸收**（文本级）。
+  - `L195-198`：`_consecutive_null_balance(run_dir) >= 3` → ESCALATE CFO+COO——**本席 16:10「连续 3 次升级」加固已实现**。
+  - `L199-201`：轮级 `delta > _ROUND_CAP_CNY` 告警（ⓐ）。
+  - **`L46-48` delta null 真因定位**：`key = os.environ.get("DEEPSEEK_API_KEY", "")` → 空则 `return None`——**非实现缺失·是 env 传递缺口**（本席可从 `/d/Code/ai/.env` 读到同 key·说明 key 在盘上、只是 spawn env 未传）。修复候选=加 .env fallback 或 spawn 侧注入（fsd 已挂账候裁·本笔给代码级依据）。
+- **下沉结论（与卷面读法的差异）**：卷面只能看到「护栏四件内建（COO 16:09 报）」；**真读代码才知三常量值精确吻合、delta_scope 文本已吸收口径勘注、null 升级已实现、剩余唯一缺口=env key 传递**——此即「下沉」带来的增量。
+- **形式承诺**：本席后续成本维（成本异常/重复消费）一律带「文件:行+片段」锚·无锚判废照模板 v2（8fb552af4）执行。
+
+〔落款 2026-11-23 21:39:35 +0800 现查〕
