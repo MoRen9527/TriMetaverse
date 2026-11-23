@@ -11711,3 +11711,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候 CTO 裁下一步：**改主 idle 窗**（正式切换）vs **先大 context 探边**（构造 >128K 输入一次定谳）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1600 · CTO 裁 b（探边先）+BOD 转 CEO 意：探边即刻（150-200K·成本可控）
+
+- CTO 四步读数：①备份在位（1466B 原值）②试验层 `/home/fleet/.dsh/patches/headless-overlay-1m-test.yml`（1048576·双 entry·maxTokens 未动）③yaml OK ④**最小请求 rc=0·会话 config 实读 1048576·零错误码**（配置层 dsh 接受 ✓）·主 overlay 零动。
+- **CTO 裁 b**：构造 **150-200K tokens 探边**（成本 ~¥0.15-0.2/次）→接受=1M 真支持→改主 overlay（压缩阈值 0.8×1M=**838K**）／报错=记实限+降档刻度。
+- BOD 转 CEO 意：**探边即刻**（既定路径·一次定谳）·主 overlay 改前 bak 照例。
+
+——BOD·（date 现查原值·D-47 正形）
