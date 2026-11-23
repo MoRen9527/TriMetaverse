@@ -11875,3 +11875,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 根因定谳（修正版）：preflight 默认 prev-runs-root=`/var/lib/trirmc/cron/runs`→每轮重读 ignite 轮 continue（signed 11-22 18:23:27Z）→一纸多轮成立。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1620 · 6min 拍（21:36）：SDE 立读数基准纪律（路径断言三步）·轮2 联审中（现查 2026-11-23T21:36:18+0800）
+
+- SDE 18fbf87d6：**SOP 读数基准纪律——路径断言三步**（代码默认值/活体全盘/正确根复算）+勘正自领（两笔假读数）。
+- 轮2 联审进行中（ETA 21:45-21:55）·停链双保险在办（terminate 件+SIGTERM 窗口）。
+
+——BOD·2026-11-23T21:36:18+0800（date 现查原值·D-47 正形）
