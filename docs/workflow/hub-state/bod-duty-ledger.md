@@ -10029,3 +10029,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **🎯四重首验彻底闭环**：P0✅／新码面✅／树计数✅／负例✅／**todo✅（机检精确版）**——点火形迁移质量验收全齐。轮2 照跑 ETA 11:35。
 
 ——BOD·2026-11-23T10:58:44+0800（date 现查原值·D-47 正形）
+
+### ㊿+1379 · **🔥轮1 全成（主观 60.0 vs 基线 38.57=+21.43·exam 100%·runId 生产首验）+轮2 段5 红停（v7 契约缺口第三例）**（现查 2026-11-23T11:00:20+0800）
+
+- **轮1 全成**（10:05→10:49 联审毕→10:57 段全过）：①**客观 59.0=59/59 持平**+**exam_objective 8/8 全 pass（可判率 100%·DP-010 生产首效）**②**主观 cos 62.86（I1 10/I2 7/I3 5）·coo 57.14（I1 9/I2 6/I3 5）→均分 60.0 vs 基线 38.57=+21.43**③联审 a37/b38=**75 维·7 席全跑**·charter 7 items·**run_id 已入轮态（DP-009 生产首验 ✓）**。
+- **⚠轮2（10:57）段5 红停**：readings[N].disposition='pending_review'/'seal' 非四选一（WP2 对账差额）——根因=**plan_skill_spawn plan prompt 未规定 agent_readings[].disposition 四值枚举**（verify 定义=migrate/keep/carry/pending_ledger）→LLM 自创值→verify 毒化拦——**v7 契约缺口同族第三例**（verdict/counts→disposition）·修法=一行 prompt 补枚举（CTO 裁·COO 派）。
+- **DP-012=毕**（轮停后落窗·进程 0 窗照守）：cwd+env PYTHONPATH append 去重·**chain 18/18+round 42/42 全绿**·附修 latent red 两处（6220331 只提 src 未带 test）·入库 **7a125ab**（sg bare+R-HY pull+dist emit 验 3 处）。
+- 判级：A/B 暂判双不达（49.49/52.38·轮2 红停候修后下轮）·**轮1 主观 +21.43 vs 基线=方向正向**（新题面校正后仍增）。
+
+——BOD·2026-11-23T11:00:20+0800（date 现查原值·D-47 正形）
