@@ -11742,3 +11742,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **意义**：**压缩风暴根解候选达成**（阈值 0.8×1M=838K·联审席 compaction 13 次级降档）——与 DP-028 并行化互补。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1604 · **主 overlay 改毕（1048576×2/131072×0·YAML OK·原子替换）·下 spawn 席即载 1M**
+
+- SDE：**原子替换**（temp+mv 防半写）·值面 **131072×0 / 1048576×2**·YAML OK 4 entries·maxTokens 未动。
+- 生效面=**五文件同源→下 spawn 起五席全 1M**·**压缩阈值 0.8×1M=838K**·下一 spawn 席即载（混合轮无破坏性·聚合不受影响）·回退锚 bak-pre1m-20261123T131550Z 在位。
+- 运行面实证（席 session contextWindow=1048576）随下一席报。
+
+——BOD·（date 现查原值·D-47 正形）
