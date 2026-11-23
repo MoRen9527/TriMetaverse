@@ -12477,3 +12477,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 待 SDE 铁证→呈 CEO：若 flag=test→真 bug=flag 误推进（并入任务书）；若 flag=debug→须回查 CTO 推理盲区（另案）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1696 · **DP-038 真因定论（SDE 铁证）：flag 缺省=test·M3-v2 双达标门从未生效——「debug 每轮停候批」从未生效**
+
+- **SDE 铁证（02:21:51）**：①**flag.json 全仓不存在**·代码 L173 缺省 `return {flag:'test'}` ⇒ FUSE=L287 test 态语义**正确执行**（代码无缺陷）；②**flag 从未被推进/创建**（setFlag 无记录·无 debug→test 事件）——**起点即缺省 test**；③round_count 起值=7→终值=8·fuse_marker=true；④**M3-v2「A/B 双达标才→test」门从未生效**（resume9/10/11 全部轮次均 test 态语义）。
+- **重定性**：CEO 质询「debug 应该每轮停候批」成立——实现面从未进 debug；且**这正解释 CEO 早前质疑的「debug 态下一轮没 CEO 批就自动进第二轮」：不是 debug 漏批放行·是缺省 test 自动连跑**（DP-030 ruling 重读修复仍是有效防线·但本层真因=缺省 test）。
+- **修法三候选（候 CEO 批·并入任务书）**：a) 缺省改 debug（一行最小改）b) 点火前置显式 set_flag c) preflight 增 flag 门（防御纵深·建议 a+c）。
+- 已发 COS 任务书口径更新（msg 865a2190）：charter 7 items+DP-038（重定性）+DP-037 并为一件任务书呈 CEO·禁点火零施工照执。
+
+——BOD·（date 现查原值·D-47 正形）
