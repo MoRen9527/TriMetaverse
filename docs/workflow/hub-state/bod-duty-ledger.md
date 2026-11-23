@@ -12240,3 +12240,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候 COS：新 charter（23:09·7 items）呈批件；owner_seat 缺口取号。
 
 ——BOD·2026-11-23T23:12:26+0800（date 现查原值·D-47 正形）
+
+### ㊿+1665 · COS：DP-035 取号（owner_seat improvement 级补）+缺口根因如实（DP-024 部分达成误报为全达）
+
+- ①新 charter 呈批件候全文（charter-150927Z 河源侧·SDE 代取中·到手即按 M4-v2 出件呈 CEO）。
+- ②**DP-035 取号**：owner_seat 六字段（improvement 级·loop_joint_review_spawn :32/:100-103）·FSD 落码·验收=improvements owner_seat 非空枚举七席/卷面可读/测试绿。
+- ③**为何上轮未生效（如实·重要）**：R10-CHO-01「owner_seat 六字段」——**DP-024 实际只落 opinion 级（spawn:394·已有）·improvement 级未扩**——**当时 CTO 报「owner_seat×7=达成」=部分达成误报为全达**；**CHO 21:40 真核抓出**（下沉义务首功）——故 resume11 仍缺=**缺口从未闭合·非回退**。
+- ④建议：DP-024 台账加勘正注（COS 已落 1003+可回填）。
+
+——BOD·（date 现查原值·D-47 正形）
