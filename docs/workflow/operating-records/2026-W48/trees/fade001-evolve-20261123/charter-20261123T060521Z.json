@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "rN-task-20261123",
+  "source": {
+    "run_id": "shift-W48-resume4-20261123T053031Z",
+    "round": null,
+    "opinion_ids": [
+      "cos-1",
+      "coo-1",
+      "cao-1",
+      "cpo-1",
+      "cto-1",
+      "cho-1",
+      "cfo-1"
+    ]
+  },
+  "approver_pending": "CEO",
+  "status": "pending_approval",
+  "items": [
+    {
+      "opinion_id": "cos-1",
+      "title": "26 棵树逐条补 observed 并落独立证据件",
+      "target": "plan.json#/keep/0..24",
+      "change": "对 25 条 keep 逐条补 observed（path、file_count、total_bytes、tree-op size、sha256_16、mtime）与 confidence；新增 run-dir 内 tree-facts.json 承载 26 棵树读数；34 条 agent_readings 的 evidence_ref 至少一条改指 tree-facts.json#/trees/<tree_id>；families/D1 删除以 plan.json 自证的文案。生成侧同步改 runtime/cognition/plan_skill_spawn.py 的 observed 采集，不接受空 observed 落卷。",
+      "verify": "26/26 条 observed 六字段非空，且 file_count/total_bytes/sha256_16 与磁盘重算逐一相等；34/34 evidence_ref 至少一条不以 plan.json 开头；tree-facts.json 独立解析出 26 条。",
+      "rollback": "只新增文件与字段，不改 W47 树字节；失败时删 tree-facts.json、plan.json 回本轮快照，重跑 plan 段确认 R1-R4 与 counts 不变。"
+    },
+    {
+      "opinion_id": "coo-1",
+      "title": "W48 索引回填 id 与散件逐项落卷",
+      "target": "plan.json",
+      "change": "在 index_assertions 增 w48_backfill_ids（9 个 W48 trees/ 目录名，按字典序）、w48_loose_files（round-gate-sop-施工读数卷-20261123.md）、w48_expected_active_count=9；backfill_count=9 保留为计数，families 的 F2 acceptance 引该数组，禁再用 W47 的 9 条 active 代替 W48 回填 id。",
+      "verify": "用 os.listdir 比对 W48 trees/ 9 个目录与 w48_backfill_ids 集合完全相等（当前 plan active 与 W48 实盘仅 bod-tick 交集）；散件不入 activeTrees；回填后 W48 索引 activeTrees 长度=9 且 doneTreesThisWeek=[]。",
+      "rollback": "先落 plan.pre-backfill.json；若索引未确认，删除 w48_backfill_ids/w48_loose_files/w48_expected_active_count 三键，恢复 backfill_count=9 纯计数与原 F2 文案。"
+    },
+    {
+      "opinion_id": "cao-1",
+      "title": "【a·责任落位】families 14 项补 owner/due/acceptance/depends_on，并把回填 9 id 与散件明细落成机判",
+      "target": "plan.json",
+      "change": "families 14 项逐项补 owner/timebox/acceptance/depends_on：A1/A2、E1/E2 归 COS，B1/B2 归 COO，C1/C2 归 CPO，D1/D2 归 CAO/CTO，F1/F3 归 CAO，F2 owner=CPO、due=2026-11-23；index_assertions 增 w48_backfill_ids（9 个，与 W48 trees/ 下 9 棵一一对应）、w48_loose_files（文件名/字节/不入 activeTrees 原因）、f2_owner=CPO；保留 backfill_count=9 与 backfill_target 原文。",
+      "verify": "14/14 项四字段非空；len(w48_backfill_ids)=9 且集合与 W48 trees/ 实盘 9 棵逐字相等；w48_loose_files 不进入 activeTrees；F2 owner=CPO 且 due=2026-11-23；backfill_count==len(w48_backfill_ids)。",
+      "rollback": "先落 plan.pre-families-owner.json；若实盘 id 对不上，删除新增四字段与 w48_backfill_ids/w48_loose_files/f2_owner，恢复 families 仅 desc/status、index_assertions 仅 backfill_count 的形态。"
+    },
+    {
+      "opinion_id": "cpo-1",
+      "title": "把 W48 实盘 9 个回填 id 与 1 个散件逐项锚定到索引断言",
+      "target": "plan.json",
+      "change": "在 index_assertions 增 w48_backfill_ids（长度 9，逐项写 treeId/treePath/source=W48 trees/ 实盘）与 w48_loose_files（name/size/不入 activeTrees），保留 backfill_count=9 并令其等于数组长度；若 split.active 仍保留 W47 续跟 id，则增 w48_tree_map 把每个 active id 映射到 W48 树路径/OP 卷号，禁止用 W47 树名直接回填 W48 索引。",
+      "verify": "jq 取 w48_backfill_ids 与 ls -d /srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W48/trees/*/ 的 9 个 basename 集合相等；w48_loose_files 只含 round-gate-sop-施工读数卷-20261123.md 且不出现在 activeTrees；backfill_count==length(w48_backfill_ids)==9；回填后 W48 OP activeTrees 长度=9。",
+      "rollback": "先存 plan.pre-backfill.json；若 id/映射与实盘不符，删除 w48_backfill_ids、w48_loose_files、w48_tree_map，恢复 backfill_count=9 原数字形。"
+    },
+    {
+      "opinion_id": "cto-1",
+      "title": "修正 T1-1 run_id 正则，合法接纳 resume 轮并补单测",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/score_engine.py",
+      "change": "把第 72 行 _RUN_ID_RE 从 r\"^shift-W\\d+(-loop)?-\\d{8}T\\d{6}Z$\" 改为 r\"^shift-W\\d+(-(?:loop|resume\\d*))?-\\d{8}T\\d{6}Z$\"；同步在 runtime/cognition/test_score_engine.py 增 resume 正形用例（shift-W48-resume4-20261123T053031Z 应过）与反形用例（shift-WW46-… 仍拒），并在 score_rubric.py T1-1 assertion 文案保持与代码同源，不另立第二套正则。",
+      "verify": "python3 -m pytest runtime/cognition/test_score_engine.py 全绿；新增 resume4 用例 _judge_b 返回 pass 且 C 族同串检查不再因正则拒判；shift-WW46-20261116T002143Z 仍返回 fail 且 reasons 含 T1-1；对 shift-W48-resume4 重跑 score 后 B/C 两族不再因正则记 0。",
+      "rollback": "git checkout -- runtime/cognition/score_engine.py runtime/cognition/test_score_engine.py 回退正则与新增用例，重跑旧 test_score_engine 全案确认无行为漂移。"
+    },
+    {
+      "opinion_id": "cho-1",
+      "title": "plan.json 增 RACI 责任矩阵并补齐 families 14 项人力字段",
+      "target": "plan.json",
+      "change": "新增 staffing.raci：为 migrate/keep 26 项与 8 个顶层件逐项写 accountable（单席）/responsible/due；families 14 项补 owner/timebox/acceptance/depends_on，F2 owner=CPO、due=2026-11-23；carry_over 的 owner 拆为 accountable 单席+consulted 数组，禁三角色并写；agent_readings 34 条增 owner_seat 与 effort_h。",
+      "verify": "26/26 与 8/8 顶层件 accountable 为单席非空；14/14 families 四字段非空且 F2 owner=CPO/due=2026-11-23；2/2 carry_over 有 accountable 单席；34/34 readings 有 owner_seat；机器计数与数组长度全等。",
+      "rollback": "先落 plan.pre-raci.json 快照；校验失败则回滚 staffing 与 families/carry_over 新增字段，保留原 owner/timebox 与全部条目，不删不覆盖正文。"
+    },
+    {
+      "opinion_id": "cfo-1",
+      "title": "把迁移与评审成本落成可结算的 cost_settlement 块",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/close_skill_spawn.py",
+      "change": "在写完 cost-log 行后向 close.json 增写 cost_settlement：stages[{stage,duration_s,seats,delta_cny,status}]、total_duration_s、total_delta_cny、unavailable_reason、guard_hits[a/b/c]、settled_by='CFO'、settled_at；delta_cny 为 null 时强制写 unavailable_reason 与 owner，禁静默留 null；cost-log 每行补 stage_budget_cny 与 cost_basis。",
+      "verify": "下一轮 close.json#/cost_settlement 存在且 total_duration_s 与三段 stages.duration_s 之和误差≤0.2s；3/3 cost-log 行有非空 unavailable_reason 或数值 delta_cny；guard_hits 与 _ROUND_CAP_CNY/_TOTAL_CAP_CNY/_BALANCE_FLOOR_CNY 三项判定逐项对应。",
+      "rollback": "回滚 close_skill_spawn.py 至本拍字节（保留 .bak-pre-cfo-cost），删除 close.json#/cost_settlement 与 cost-log 新增字段，不改原三行。"
+    }
+  ]
+}
