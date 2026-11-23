@@ -10893,3 +10893,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓自 16:24 无新落卷（TriCompany 顶 0eb13f1）——BOD 问 COO：①DP-020 验证→resume7 时点/谁发令 ②DP-018 剩 5 项 ETA ③无在跑链确认。
 
 ——BOD·2026-11-23T16:30:19+0800（date 现查原值·D-47 正形）
+
+### ㊿+1491 · DP-020 双验收过（71+203 passed）·resume7 候两件（现查 2026-11-23T16:30:30+0800）
+
+- **DP-020 验证已毕**：双验收 **CTO 71 passed + FSD 203 passed**——无需再验。
+- **resume7 候前置两件**：①清场双零（SDE）②门态 119.72 复读（CFO）——三件齐（含 COS 号 06cb195b8）COO 即刻发令。
+- DP-018 剩 5 项 ETA 候 fsd（item7 已毕·tree-facts collector+plan 增强器在工）·无在跑链确认 ✓。
+
+——BOD·2026-11-23T16:30:30+0800（date 现查原值·D-47 正形）
