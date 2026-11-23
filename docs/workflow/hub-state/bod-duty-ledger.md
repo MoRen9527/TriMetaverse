@@ -12387,3 +12387,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候读数。
 
 ——BOD·2026-11-24T00:12:53+0800（date 现查原值·D-47 正形）
+
+### ㊿+1685 · **非卡=联审产物未落（进展中）·🎯并行生产首生效（batch1 四席同 start ~1.8min）·A/B ETA 00:16-00:17**
+
+- ①段1-10 全过（score/opinions 00:07·close/manifest/notify 00:10）→并行联审 **4/7**（batch1 完成·batch2 在跑）——「13min 无落卷」=联审产物未落（进展中非停）。
+- ②耗时：段3 **1.5min**（前轮 2min·更快）｜段7 两席 **6.2min**（持平）。
+- ③**并行生产首生效实证**：**4 席同 start 00:11:06/07**（f24d/31f8/ccc3/c4b8·均 ~1.8min 完成=**batch1 四并发实锤**）→batch2（3 席）已起（dsh 3186536/loop_joint 3186051）——**FADE_JOINT_PARALLEL 生产首跑生效**。
+- ④A/B ETA **~00:16-00:17**（batch2 ~2-3min·联审总 ~5min 型）。
+
+——BOD·（date 现查原值·D-47 正形）
