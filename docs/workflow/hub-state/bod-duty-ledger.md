@@ -10597,3 +10597,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓无异常。
 
 ——BOD·2026-11-23T14:24:17+0800（date 现查原值·D-47 正形）
+
+### ㊿+1453 · **📊DP-017 v1 验收通过（七席 31 维·度量稳定性根解落地·comparability=1.0）**（现查 2026-11-23T14:25:33+0800）
+
+- **DP-017 v1 验收通过**（CTO·COS 905 ea724b2d8）：**七席 31 维全齐**（cos4/coo5/cao4/cpo4/cto5/cho5/cfo4·fsd 勘正 35→31）+flip 追认（flipped_by=COS）+**度量稳定性根解落地（comparability=1.0 vs Jaccard 0.0 根治）**。
+- **实现件 8ab3795 在产**（prompt 约束/越表 fail-closed/版本化/同表 comparability=1.0）。
+- **下一轮联审即走冻结表**（只打分禁自创·越表 fail-closed）——产出核：维度名∈31 维/violations 空/comparability=1.0（附卷自动落）。
+- 意义：A/B 三读数漂移的**度量稳定性长治项落地**（尺子冻结·跨轮可比地基修正）=CEO「维度冻结已收」兑现。
+
+——BOD·2026-11-23T14:25:33+0800（date 现查原值·D-47 正形）
