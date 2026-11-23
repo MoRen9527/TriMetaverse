@@ -102,6 +102,9 @@
 
 **DP-030 取号**（21:32·ceo-ruling 一纸多轮急修·CEO 裁 21:31）：**裁面勘正**=实际消费面主因=preflight check_ceo_ruling（非 awaitCeoRuling·SDE 两查实读）→两处同修+七件（三绑/消费标记/absent fail-closed/防浪费护栏/向后兼容/测试六案/bak 锚）+prev 自指同修（轮 3 exit 4 面）·执行体 FSD·急修形轮 3 前须达·**已毕销账**（TC **2f4ccc1** py 56 passed+6 案/RMC **8509a65** round 52/52+chain 18/18·双产线 pull+冒烟·bak 先行〔preflight.py.bak-pre-dp030/round_runner.ts.bak-pre-dp030〕·**轮 3=双保险停**〔terminate 件已落新码旧码均停〕——销账锚=2f4ccc1+8509a65）。
 
+
+**DP-031 取号**（21:45·门禁两补强·CPO 联合面·下沉产出转化）：①R2 残拍裁决状态继承（L287-289：残拍不作完整 prev 但裁决状态继承·未裁 awaiting 不放行/已裁按其裁）②点火形显式传 --prev-runs-root（chain argv·防空根静默 skip）·执行体 FSD·验收五件·依据=CPO 真读+CTO 裁 8e041553+SDE 核 044f501c·状态=取号候发令。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
