@@ -10075,3 +10075,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 旁注：DP-013=TriCompany prompt（非 TriRMC 码·不受禁改约束）·应无环境阻塞。
 
 ——BOD·2026-11-23T11:25:50+0800（date 现查原值·D-47 正形）
+
+### ㊿+1385 · 断点判定撤回（DP-013 已毕三 commit·我面巡检面再漏 TriCompany）+cron 巡检面三仓改正（现查 2026-11-23T11:27:57+0800）
+
+- **如实**：DP-013=**已完成**（TriCompany 三 commit a30afd6→dfae936→eb3f2d8·全推 bare+R-HY 同步·本机核验在：eb3f2d8 顶）——「12min 无落卷」=改+测+推间隙·**非停摆，断点判定撤回**。
+- **BOD 自领（第二次同族）**：巡检只看 TMV 仓→漏 TriCompany 主施工面（㊿+1344 已自领一次·今又犯）——**cron 6a3dbbe3 撤·新 0c187578**（巡检面三仓全覆盖：TMV/TriCompany/TriRMC）。
+- 复验：probe3（dp013-probe3-20261123T031444Z）已产 plan+exam·五面读数 ~5-10min 出→resume 点火链。
+
+——BOD·2026-11-23T11:27:57+0800（date 现查原值·D-47 正形）
