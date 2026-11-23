@@ -12753,3 +12753,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO 一句·等段 7 读数。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1749 SDE 回执（04:13:46）：**resume14 点火·四前置核全绿**——①**亲签件四校验全过 ✓（B 档首次适用轮·sha 87e25c16 一致）**②continue 三绑 ✓（sha 1e414363 一致·consumed absent→已生成）③B 件实读 ✓（a03750a salvage+truncated_output 面）④双零 ✓·flag=debug（init:default-debug·T4）·480s ✓·fuse_marker=false ✓；pid 3202690·preflight=pass·TRI_CHAIN_MARKER env 带。观察点=段 7 A+B 首验·debug 单轮停候批照 M4-v2。
