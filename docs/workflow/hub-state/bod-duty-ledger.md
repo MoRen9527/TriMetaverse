@@ -10435,3 +10435,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **建议**：FUSE 收窄为**仅 test 态生效**（debug 靠审批步自然停）；若同意即落条款。
 
 ——BOD·2026-11-23T13:27:59+0800（date 现查原值·D-47 正形）
+
+### ㊿+1432 · **CEO 裁：FUSE 仅 test 态生效·落 M9 条款**（现查 2026-11-23T13:29:09+0800）
+
+- **CEO 明示**：「FUSE 仅 test 态生效，落条款」。
+- 承录：①FUSE（round_count≥8 熔断）**仅 test 态生效** ②**debug 态=FUSE 不适用**——debug 每轮停在「出稿→候 CEO 批」审批步自然不烧（M4-v2/M7-v2）③prod 周日拍不受影响 ④M1-M9 全景更新。
+- BOD 已转 COS 落 M9+回执。
+
+——BOD·2026-11-23T13:29:09+0800（date 现查原值·D-47 正形）
