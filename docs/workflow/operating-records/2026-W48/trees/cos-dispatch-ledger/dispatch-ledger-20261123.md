@@ -74,7 +74,7 @@
 
 
 **DP-021/022/023 取号**（17:05·CEO 追问三件·BOD 核查三件均未修）：
-- **DP-20261123-021**=判级/charter 顺序修正（round_runner.ts 实证：await runJointReviewHook 在 verdict==='loop_exit' 判级**之前**→双达标仍生成无用 charter；改法=钩子拆两步：联审先行产 A/B→判级→仅未达标才生成/挂 charter）·**机制本体项**（回呈 CEO 已由本问触发·COO 督办·CTO 定形+FSD 落码）
+- **DP-20261123-021**=判级/charter 顺序修正（round_runner.ts 实证：await runJointReviewHook 在 verdict==='loop_exit' 判级**之前**→双达标仍生成无用 charter；改法=钩子拆两步：联审先行产 A/B→判级→仅未达标才生成/挂 charter）·**机制本体项**（回呈 CEO 已由本问触发·COO 督办·CTO 定形+FSD 落码）·**已毕销账**（a08c0a5·JointGrade+computeJointGrade 单一源+two-phase skip留痕/attempted+守卫不动·round 47/47 0 fail——销账锚=a08c0a5·**resume10=首生效轮观察点：达标轮 charter-skip 留痕**）
 - **DP-20261123-022**=段编号对齐勘正（协议段1=触发 vs 链实现 preflight=段1→CTO/CAO 出对表卷：协议段号↔实现段号映射+改注释/文档/规范·**不动行为只正名**）
 - **DP-20261123-023**=R1/R2/R3 定名（源码 verify.py 无此命名·疑 reasons 编号→CTO 给定名入卷·防口头编号无定义）
 
