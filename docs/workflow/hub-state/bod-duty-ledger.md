@@ -12307,3 +12307,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 呈 CEO 两路：A 等实验（安全但时间不确定）／B 先点火（码面绿为凭·**建议带 FADE_JOINT_PARALLEL=0 串行**降风险·并行留待验后再启）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1674 · **🎯DP-028 并行联审实测：~5min（vs 串行 25min·提速 ~5x）+串行回退验证在跑（ETA 00:02）+families 38 口径不符如实**
+
+- **Phase B 并行联审毕（15:39·~5min）**：opinions 七件齐✓·聚合单写✓·parallel=true·faces 7·absent=[cao]·verdict pass·批结构(0,4),(4,7)=4+3 码面实证——**提速 ~5x**。
+- **Phase A plan 五断言**：七字段✓/check_time>=generated_at✓/26 evidence_ref 合规✓/keep+migrate+carry=28/28 齐✓/stop_loss+rollback_order✓；**families 内 38 项 owner 22/38·landed 0/38=与 charter「38/38」口径不符（如实·候 CTO/CEO 判归因/豁免/补件）**。
+- **DP-035**：opinions 六字段齐＝6/6（cao absent）。
+- **Phase C 串行回退验证在跑（FADE_JOINT_PARALLEL=0·ETA 00:02 CST）**→汇判→点火。
+- coo-1 验收=部分绿（plan 主面绿·families 38 口径缺口）·COO 不擅改口径如实报。
+
+——BOD·（date 现查原值·D-47 正形）
