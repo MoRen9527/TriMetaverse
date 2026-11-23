@@ -11029,3 +11029,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓无新变化·resume9 联审七席 24min·SDE 17:41 巡检在排（A/B 应随报）·在途。
 
 ——BOD·2026-11-23T17:36:16+0800（date 现查原值·D-47 正形）
+
+### ㊿+1509 · **📊resume9 终报：冻结表首验达成（31 维齐）·A41.04/B50.25（跨表不可比）·round2 已起**（现查 2026-11-23T17:41:56+0800）
+
+- **联审七席毕**（17:39·joint-review 9466B·opinions 7）。
+- **A/B=41.04／50.25**（dims a27/b26）——对照 resume4（旧表 37/38 维）A51.88/B50.39=**跨表不可比**（口径照录·新表维度面不同）。
+- **🎯冻结表首验达成**：**unique dim names=31 ✓**·comparability={prev_run:resume4·jaccard 0.0/0.0·analysis only 不入分}——跨表 0.0 预期·**同表 1.0 实证要件=round1↔round2**（round2 已自动起 17:39·候补）。
+- 三口径：score pass／exam_objective **8/8**／trend cos 71.43/coo 54.29。
+- 阶段耗时：plan 216.9s／score 664.6s／close 237.2s／**loop_joint_review 1651.2s（27.5min·7 席）**。
+- **DP-020 终销建议**（段3绿+联审31维齐+compaction3<5 三要件全达·候 CTO 终审）。
+
+——BOD·2026-11-23T17:41:56+0800（date 现查原值·D-47 正形）
