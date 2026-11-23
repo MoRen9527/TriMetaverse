@@ -62,6 +62,10 @@
 **DP-015 取号**（12:23·D-88）：DP-20261123-015=verify 全量质量门升级（verify.py 段 5 增调 plan_scope._structure_gate 全量校验·现轻量断言 36 项全量门无人跑·FSD 架构发现）·执行体 FSD·面=TriCompany verify.py（与 DP-014 TriRMC 面不同仓不并单）·依据 CTO 裁 04:22。**已毕销账**（commit d7c2c08·TriCompany sg bare+R-HY 同步·负例红/正例绿双验·test_verify 33 passed·族 195 passed·VERIFY_VERSION 1.2.0——销账锚=d7c2c08）。
 **DP-014 状态更新**：FSD 已落 1a0da7a（43/43·dist emit 候轮间守纪律）——归并确认（含 CTO 双修规格）·**落码毕候验收**（CTO 验→销账）。
 
+
+**resume3 红停记**（CTO 13:30:17）：resume3 轮 1 红停=**段 3 900s ETIMEDOUT**（rounds_run=0·FUSE 未消耗）——根因候选①**外部验证并发干扰**（铁证在案·未清）；**点火前置硬条件=清场确认**（dsh/py/ignite 三零+瞬态 3115950 身份白·FSD 自证加急中）。**resume4 已签发**（shift-W48-resume4-20261123T053031Z·9377f25a4）候清场绿+COO 点火令。
+**DP-016 候选入账**：段 3 spawn 900s 超时面评估（若下轮复现=升正式 DP·CTO 提请）。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
