@@ -9899,3 +9899,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 不代填立场全程保持**（attestation 红线）=未污染签值链。
 
 ——BOD·2026-11-23T10:04:15+0800（date 现查原值·D-47 正形）
+
+### ㊿+1364 · **🔥点火已起跑（10:05:37·pid 3084066·段1/2 过）**（现查 2026-11-23T10:07:53+0800）
+
+- 起跑读数：**02:05:37Z=10:05:37 CST**·**pid=3084066**（node tsx fade001-ignite·存活断言过）·run_dir=/srv/fleet/TriRMC/fade001-runs/shift-W48-loop-20261123T005158Z（preflight.json+qualify.json 已落=**段1/2 过**）·run-id=COS 签发·queue-root=round-queue-r12·**checks 四布尔（签卷 cf436059f 原文）已注入**。
+- 预计完成≈**02:50Z=10:50 CST**（~45min 照 r11）→三口径（客观/主观两席/联审七席+**exam_objective 新段**）随报。
+- **前置两败如实档**：首/二试段1 preflight rc=1=**ModuleNotFoundError 'runtime'**——根因=**chain_runner spawn 段子进程裸形（无 cwd/env/PYTHONPATH）**+前周日拍 runs 依赖操作面环境未入件→**三试补环境后起跑成功**（token 仍零 argv 经 token-run.sh）·整改建议候 CTO=chain_runner spawn 面加 env/cwd 防隐式依赖。
+
+——BOD·2026-11-23T10:07:53+0800（date 现查原值·D-47 正形）
