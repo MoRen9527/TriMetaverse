@@ -100,7 +100,7 @@
 **DP-029 取号**（21:16·dsh overlay 试 1M·CEO 裁 B）：patch 层隔离试验（dsh --patch repeatable·不动主 overlay）→contextWindow 1048576 双 entry→headless 短 prompt 验→成功改主 overlay/失败 524288 再测→再败删零动·执行体 SDE·状态=取号候确认。
 
 
-**DP-030 取号**（21:32·ceo-ruling 一纸多轮急修·CEO 裁 21:31）：**裁面勘正**=实际消费面主因=preflight check_ceo_ruling（非 awaitCeoRuling·SDE 两查实读）→两处同修+七件（三绑/消费标记/absent fail-closed/防浪费护栏/向后兼容/测试六案/bak 锚）+prev 自指同修（轮 3 exit 4 面）·执行体 FSD·急修形轮 3 前须达·状态=取号候发令。
+**DP-030 取号**（21:32·ceo-ruling 一纸多轮急修·CEO 裁 21:31）：**裁面勘正**=实际消费面主因=preflight check_ceo_ruling（非 awaitCeoRuling·SDE 两查实读）→两处同修+七件（三绑/消费标记/absent fail-closed/防浪费护栏/向后兼容/测试六案/bak 锚）+prev 自指同修（轮 3 exit 4 面）·执行体 FSD·急修形轮 3 前须达·**已毕销账**（TC **2f4ccc1** py 56 passed+6 案/RMC **8509a65** round 52/52+chain 18/18·双产线 pull+冒烟·bak 先行〔preflight.py.bak-pre-dp030/round_runner.ts.bak-pre-dp030〕·**轮 3=双保险停**〔terminate 件已落新码旧码均停〕——销账锚=2f4ccc1+8509a65）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
