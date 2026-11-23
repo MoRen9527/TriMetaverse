@@ -70,7 +70,7 @@
 **DP-019 取号**（16:00·最高优先）：seat 工具面治理（DP-016 定谳根治件）——根因链=**席自造产物→上下文爆涨→compaction 风暴(13-17次)→900s 截杀**（resume3/4/5 段3超时三实证）；规格三件（①产物只由 stage 写·席禁写 run_dir ②压缩上限>5 提前中断 ③spawn 超时预算评估）·执行体 FSD/SDE·**已毕销账**（TriCompany 16aeb93+TriRMC 5271eb5·sandbox cwd+prompt 四注禁写+**段3超时 900→300s**·②压缩上限 dsh 面无参改以①③防线·测试+5案18passed·chain18/18——销账锚=16aeb93+5271eb5·关键实证候=下次 resume 段3应2.5min级+compaction<5）。
 
 
-**DP-020 毕销账**（16:20:10·FSD 抄送）：段 3 截断治理两件落——①拆分生成（plan-only/exam-only 两次 spawn·各半预算·exam 失败=空卷兜底非致命·回滚锚 FADE_PLAN_EXAM_SPLIT=0）②输出精简（两 prompt 注·单 JSON 直出禁长推理）·commit **7410866**（TC·双机同步）·plan 套 12 passed·族 203 passed——销账锚=7410866。**关键实证候=resume7 段 3 应绿**（对照 resume6 截断红）。
+**DP-020 毕销账**（16:20:10·FSD 抄送）：段 3 截断治理两件落——①拆分生成（plan-only/exam-only 两次 spawn·各半预算·exam 失败=空卷兜底非致命·回滚锚 FADE_PLAN_EXAM_SPLIT=0）②输出精简（两 prompt 注·单 JSON 直出禁长推理）·commit **7410866**（TC·双机同步）·plan 套 12 passed·族 203 passed**状态勘正（16:40 CTO）**：**实现通过（a+b 对 plan 面实证）·关键实证（段 3 绿）未达·追补中**——resume7 实测：spawn1 plan-only=**57.5s ✓（拆分大胜）**·spawn2 exam 挂死>240s→300s 帽杀（exam 席工具探索 63 calls/读源码·非截断·**exam 面新因**）。**追补两件（DP-020 内不新号·FSD 已接）**：a) exam prompt 限定读取面（≤5件禁源码禁跑码限次）b) **结构缺陷修=子超时>父超时（exam spawn 900>stage 帽 300→改 min(spawn, stage_remaining)）**。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
