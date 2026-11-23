@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "rN-task-20261124",
+  "source": {
+    "run_id": "shift-W48-resume14-20261123T200152Z",
+    "round": null,
+    "opinion_ids": [
+      "cos-1",
+      "coo-1",
+      "cao-1",
+      "cpo-1",
+      "cto-1"
+    ]
+  },
+  "approver_pending": "CEO",
+  "status": "pending_approval",
+  "items": [
+    {
+      "opinion_id": "cos-1",
+      "title": "chain_runner 段4/5 fail-closed：dce 非 pass 即止链、verify 强制 run-id/strict",
+      "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+      "change": "段4 argv 在 FADE_DCE_EXECUTE=1 时追加 --execute，并补 --start-date p.startDate 与非空 --operating-root；段5 argv 追加 --run-id p.runId --strict；每段落卷后读产物：dce.verdict!='pass'（含 dry_run_not_executed）即 ok=false 止于 dce；verify.run_id!=p.runId 或 strict_mode!=true 或 reasons 空即 fail；禁止非 pass 穿门进 score/close/notify。",
+      "verify": "node --import tsx --test test/fade001/chain_runner.test.ts；stub dce verdict=dry_run_not_executed → stagesRun 止于 dce 且 ok=false；实跑断言 dce.mode=='execute'、steps[].rc 全整数、overflow_checks 3/3 checked；verify.run_id==p.runId 且 strict_mode=true。",
+      "rollback": "改前记录 git -C /srv/fleet/TriRMC rev-parse HEAD 并复制 dce.json/verify.json 为 .pre-failclosed；断言红即 git restore 源文件并恢复副本，manifest 标 blocked，禁发 notify_done。",
+      "owner_seat": "cos"
+    },
+    {
+      "opinion_id": "coo-1",
+      "title": "dce 非 pass 红即停，禁穿门到 verify/score/close/notify",
+      "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+      "change": "段 4 增加生产窗 --execute（仅 FADE_DCE_EXECUTE=1 时传，避免默认 dry-run 冒充迁移）；段 4 完成即读 dce.json，verdict!='pass' 或任一步 rc 非整数/overflow_checks 未 3/3 checked 时返回 ok=false，写 blocked 原因到 verify/manifest，禁止继续段 5-10，notify_done 仅在 close.run_state!='partial' 时发送。",
+      "verify": "node --import tsx --test test/fade001/chain_runner.test.ts；新增 stub：dce.verdict=dry_run_not_executed 时 stagesRun 止于 dce 且 run.ok=false、无 notify_done.json；实跑断言 dce.steps[*].rc 为整数、overflow_checks 3/3 checked。",
+      "rollback": "改前记录 git rev-parse HEAD 并 cp dce.json dce.pre-failclosed.json；断言红即 git revert 该提交并恢复 dce.json，manifest 置 blocked，不重跑评分、不投递。",
+      "owner_seat": "coo"
+    },
+    {
+      "opinion_id": "cao-1",
+      "title": "把 2 条意见铸成条款并入册生效",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume14-20261123T200152Z/opinions.json",
+      "change": "为 cos-1/coo-1 各赋条款号（如 CAO-W48-R14-01/02），写入册 commit 锚与 effective_at；close.json 将 disposition 由 deferred 改 consumed，items_consumed=2、digest_rate=1.0，并附上轮 2→本轮 2 回填表。",
+      "verify": "jq 断言 opinions 2/2 有 clause_id/commit/effective_at；close.items_consumed==2 且 digest_rate==1.0；回填表行数==2 且 opinion_id 一一对应。",
+      "rollback": "改前复制 opinions.json/close.json 为 *.pre-cao-fix 并记 sha256；任一断言失败即恢复副本，不改评分、不投递。",
+      "owner_seat": "cao"
+    },
+    {
+      "opinion_id": "cpo-1",
+      "title": "拆开 keep/carry 两本账并补齐 5 棵承接树与顶层 8 件去向",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume14-20261123T200152Z/plan.json",
+      "change": "counts 增 tree_keep_inplace=20、tree_carry=5；keep[] 只留 20 条 sealed_in_place=true，另设 tree_carry[] 5 条（agentcore-convergence-eval-20261119/bod-fade001-sprint-plan-20261120/bod-wake-chain-20261120/fade001-evolve-20261122/trirmc-orchestration-fact-20261119），逐条补 dest/owner/first_review/exit_criteria/dead_letter_risk/backfill_id，4 棵无 W48 承接写 no_landing+decision_date；顶层 8 件逐件补 dest+observed{path,sha256_16}；34 条 agent_readings 的 evidence_ref 改指 tree-facts.json#/trees/<id> 或顶层 observed；38/38 status 不得全 planned；staffing.raci 删 3 个 W48-only 名、补 reconcile-r1/r2 并对齐 38 件。",
+      "verify": "python3 断言：20+5=25 且两集合无交集；5/5 六字段非空；counts.migrate+keep=26==len(tree-facts.trees)；34/34 evidence_ref 可解析且非 plan.json 自指；8/8 顶层 dest 非空；set(raci)==38 件 family item_id 且 accountable 去重≥3、A=R 占比<80%。",
+      "rollback": "改前复制 plan.json 为 plan.pre-r14-cpo.json 并记 sha256；任一断言失败即恢复副本，不重跑评分、不投递。",
+      "owner_seat": "cpo"
+    },
+    {
+      "opinion_id": "cto-1",
+      "title": "段门语义化：非 pass 即停链并禁 notify",
+      "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+      "change": "每段 rc==0 后读取落卷 JSON：dce.verdict 必须为 executed/pass（dry_run_not_executed/blocked/fail 即停）；verify.run_id 必须等于 runId 且 strict_mode=true；score 内层 verdict 必须 pass；close 生成的 manifest.close_contract.ok 必须 true。任一不满足写 failed_stage，禁入 close/notify_done。",
+      "verify": "node --import tsx --test test/fade001/chain_runner.test.ts；新增四负例：dce=dry_run_not_executed、verify.run_id=''、score 内层 fail、close_contract.ok=false，四者均 ok=false 且 stagesRun 止于对应段，notify_done 不落卷。",
+      "rollback": "改前记录 chain_runner.ts 的 git SHA，并复制当前 run_dir 的 dce/verify/score/close 四件；断言失败即 git checkout 该文件并恢复四件，保留原链产物，不重跑、不投递。",
+      "owner_seat": "cto"
+    }
+  ],
+  "aggregation": {
+    "items_before": 6,
+    "items_included": 5,
+    "dropped": [
+      "close.json 13 条缺陷逐条绑定主责席与责任面"
+    ]
+  }
+}
