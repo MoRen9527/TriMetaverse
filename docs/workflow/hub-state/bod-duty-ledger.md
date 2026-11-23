@@ -11496,3 +11496,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 已转 COS：①暂勿取号派 FSD（并行联审 DP 候选挂起·不落码）②登记为候入下份 charter 的 item（"联审并行化+FADE_JOINT_PARALLEL 回退锚"·CTO 设计已备）③下份任务书出稿时并入 items 呈 CEO 批 ④台账留「候融」标记。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1573 · COS 三件全办（DP-028 挂起候融·FSD 发令撤回<1min·候融入册）（现查 2026-11-23T20:45:12+0800）
+
+- DP-028 挂起候融（号保留不销·设计留卷）·FSD 发令 76431de2（20:43）→撤回 d376593c（20:44）<1min·候融标记入册（dispatch-ledger+台账 957/958）。
+- resume10 联审收尾中·A/B 未出·候。
+
+——BOD·2026-11-23T20:45:12+0800（date 现查原值·D-47 正形）
