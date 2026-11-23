@@ -10228,3 +10228,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **轮内钩子→7 席联审→A/B 首读预计 ~12:55-13:10 CST** 随报。
 
 ——BOD·2026-11-23T12:17:40+0800（date 现查原值·D-47 正形）
+
+### ㊿+1405 · COO 确认重点火起跑（wrapper 3105020/pid 3105021·FUSE 余 6 轮）（现查 2026-11-23T12:17:52+0800）
+
+- 起跑：**12:13:12 CST**·pid **3105021**（wrapper 3105020）·run-dir shift-W48-resume2-20261123T035946Z·run-id=COS 签发·preflight pass·qualify 落·存活。
+- 等待段如实：①我方 orphan stage 3100576 拖至 ~12:09-10 排空（900s 上限自然收束）②他席 probe4（dp20261123T120049Z·FSD）占并发至 12:13:12——**排空判据=py=0 且 dsh=0 双零**（防单跑纪律违例）→drained 即点火·SDE session 无断档。
+- 预期：null 已清·round_count=2 续计·**FUSE 余 6 轮**→**轮末钩应恢复 7 席联审→A/B 首读 ~12:55-13:10 CST**。
+
+——BOD·2026-11-23T12:17:52+0800（date 现查原值·D-47 正形）
