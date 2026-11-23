@@ -13,6 +13,10 @@
 
 > **fade001 点火链经 `tsx` 直跑 `scripts/fade001-ignite.ts`（TS 源）→运行面直接载 src 全量代码；`dist/` 供 daemon/打包消费面与四证留档。** 故「改 TriRMC src」的生效判据分两径：①tsx 直跑面=src 在位即生效（无需 dist）②daemon/打包面=必重建 dist。毕报检查仍按三证（build+grep+check）执行=双面齐；但不得以「dist 未重建」推断 tsx 面未生效（反之亦然）。
 
+## 产物所有权纪律（CTO 裁·2026-11-23·同族=硬门签认必落卷的产品面）
+
+> **链产物（run_dir/*.json：preflight/qualify/plan/dce/verify/score/close…）=链执行证据，任何独立验证禁覆写**；独立验证一律落**独立文件**（命名 `verify-strict-check.json` / `*-check.json` 类·带验证方标识）。理由=审计锚唯一性（覆盖后链证据失真）。**注**：verify.py 的 `strict_mode=bool(args.strict)`（CLI 旗唯一可达·源 L270）——`--strict` 独立验证与链段 5（无旗）产出形态不同（6 vs 5 checks），可按形态区分归属。
+
 ## 依据（DP-012 首验实例）
 
 - 实例：7a125ab（spawn env/cwd 自足）在 HEAD，但 R-HY dist 停留 22:21 旧件（PYTHONPATH 0 命中）→ 若直接点火必复现 ModuleNotFoundError；SDE 面补建（build rc=0·dist 11:32:43·注入×4·node --check OK）后点火 11:32:52 通过（9s 差「侥幸合」——**正形=毕报即验 dist·非点火前补**）。
