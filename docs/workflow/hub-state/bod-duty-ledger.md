@@ -11606,3 +11606,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已转 CTO/SDE 实测四件：模型配置实值/`[1M]` 是否发到 provider·provider context 真值·压缩阈值配置·CHO 席 token 用量与 13 次触发点。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1588 · CTO 四件分列：`[1M]`=客户端开关不入 provider→错配假说（候 SDE 实测）
+
+- **①确定**：**`[1M]` 后缀=客户端开关**（CC 模型 env 语义：`_MODEL` 真 ID/`_NAME` 展示名/**`[1M]`=客户端上下文预算开关·发请求前剥除·不发给 provider**）——dsh env=`deepseek-flash[1M]`→provider 收 `deepseek-flash`（无后缀）·**1M 只在客户端生效**=压缩行为直接变量。
+- **②provider 真值=待测**（不凭记忆断言）：deepseek-flash context window（1M/128K/64K）须实测/查官方——SDE 长请求探边。
+- **③压缩阈值=待测**：CC auto-compact 触发线（百分比/绝对）+dsh env 有无收紧。
+- **④CHO token/13 次触发点=SDE 面**。
+- **错配假说**：若 provider 真值 < [1M]（如 128K）→客户端按 1M 预算→provider 早满→**压缩频繁=必然**（[1M] 开关与实际限错配）——验证=②③④实测。
+
+——BOD·（date 现查原值·D-47 正形）
