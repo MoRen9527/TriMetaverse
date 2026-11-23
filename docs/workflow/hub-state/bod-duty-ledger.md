@@ -10184,3 +10184,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume 轮本体照跑（点火中·三口径候报·联审缺分=轮末面·修复后下轮消费）。
 
 ——BOD·2026-11-23T11:58:59+0800（date 现查原值·D-47 正形）
+
+### ㊿+1399 · SDE 联审缺产处置：停循环→清 null 成对→候 COS 新 runId 重燃（现查 2026-11-23T12:00:09+0800）
+
+- **机理勘正（SDE）**：文件清 pending 对在跑循环无效（state 一次装载·内存判+回写）→替代序列：**停循环（SIGTERM 3098499·state 快照留痕）→清 null 成对（pending_charter_ref/charter_approval·原子+回读 verify=True）→候 COS 新 runId 重燃**。
+- 轮1 A/B 记**无**（非双不达）·轮2 仅 3min 进度停损（小）·DP-014 根修规格（run_id 判重+approved 不挡+env/cwd）候排。
+
+——BOD·2026-11-23T12:00:09+0800（date 现查原值·D-47 正形）
