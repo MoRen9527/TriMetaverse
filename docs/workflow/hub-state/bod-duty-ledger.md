@@ -12695,3 +12695,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 呈 CEO 批（批后热修+重跑 resume14）·零施工照执。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1737 · **终归因闭合（SDE 三向+CTO 排序）：reasoning 与正文共享 maxTokens=16384 预算→末步撞顶截断——修法 A+B 热修候 CEO 批**
+
+- **SDE 三向**：采集无截断（[-60000:] 上限 60K·6832 远小·非任何 buffer 常量）/传输完好（无 SIGPIPE·stderr 纯 compass）/真源=**模型单步输出预算**：overlay maxTokens=16384·**reasoning 与正文共享**·session afcb30 reasoning_chars=98,673（20 步≈62K tokens）→末步写 JSON 撞顶→turn/end=max-tokens（两席同）→正文截断→parse fail·dsh rc=1 同源；零残留无半态 ✓。
+- **CTO 修法排序**：A 层 prompt（热修 ~10min：只输出 JSON·rationale≤30 字·禁尾注·先内部定稿后一次输出）／B 层 parse fail-loud+salvage（热修 ~30min：truncated 显式错类+完整 scores 段抢救+尾部配平）／C 层 maxTokens↑（调查·须验 DS provider 32K 支持）／D 层二段式 spawn（结构解 ~1h·下次窗口）。**推荐 A+B 热修·C 并查·D 缓**。
+- BOD 呈 CEO 批（批后 FSD 施工→重跑 resume14）·零施工照执。CTO 自领 banner 假说+尾部配平两判错（推演未核实况族）。
+
+——BOD·（date 现查原值·D-47 正形）
