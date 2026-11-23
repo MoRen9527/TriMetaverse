@@ -10869,3 +10869,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - DP-018 施工 6 项并行。
 
 ——BOD·2026-11-23T16:12:18+0800（date 现查原值·D-47 正形）
+
+### ㊿+1488 · **resume6 红=新形（席位空输出）·DP-019 实现 bug·已回退 f011db9**（现查 2026-11-23T16:18:19+0800）
+
+- **resume6 红（新形）**：**席空输出·席位没起来**（非段3 超时）——**300s 超时生效✓**（治理另一面有效）。
+- **CTO 定谳**：**实现 bug（第三解）**——DP-019-b 的 sandbox cwd 把席位 cwd 改了导致 spawn 失败。
+- **已回退**：**f011db9 revert(dp-019-b)：seat cwd back to run_dir**（保留 read-path 硬化 d196de8）。
+- 下步：修形后在跑（CTO/COS 在办）。
+
+——BOD·2026-11-23T16:18:19+0800（date 现查原值·D-47 正形）
