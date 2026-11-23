@@ -12718,3 +12718,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 派工取号照 D-88。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1742 CTO 开工回执（04:01:35）：B→FSD（fce389b3·详规四步：全串 parse→尾部反向配平→scores salvage[partial=true 不洗白]→truncated_output fail-loud·run 判定改+5 测试）／A→SDE（a4ec8417·spec 五条+补「scores 键序前置」显式化·同文件协调=建议 A 先 B 后）／CTO 验收（白盒+实读抽样三形）／点火前置承 B 档（不越序·BOD 呈 CEO 请签后点火 resume14）。施工在途。
