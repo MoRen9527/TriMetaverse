@@ -12345,3 +12345,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **三件实验全读数**：plan 五断言（26 项合规·28/28·families 38 面未达）｜**DP-028 B/C 双验**（max=4 ✓／回退 max=1 ✓·**B 5.0min vs C 15.7min**·对生产基线提速 **5.5x** 超 →10min 目标）｜DP-035 6/6。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1679 · CEO 令「落完件就点火」·催 SDE 秒回 round_count（现查 2026-11-23T23:58:01+0800）
+
+- CEO 明示：「落完件就点火」。
+- 现状：值席已发 SDE 请核 round_count（ad6b6a2d）·值到即落件——BOD 转 COO 保 SDE 秒回该值→件落→点火（不再请示）。
+
+——BOD·2026-11-23T23:58:01+0800（date 现查原值·D-47 正形）
