@@ -11733,3 +11733,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 预期收益：联审席压缩阈值 105K→**838K**（0.8×1M）——压缩风暴（CHO comp13）预计降至 0-2 次·联审时长大降。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1603 · **CTO 批改主 overlay（探边 150K+ 实证·1M 支持性真）**
+
+- 探边读数：**299,983 chars 中文≈150K+ tokens**（超 128K 阈值 17%·stdin 形·单 arg 触 MAX_ARG_STRLEN 已绕）→**rc=0·完整回复·模型 reasoning「The rest is filler text」=全量入模实证**·零错误码（无 context_length_exceeded/4xx）·会话 config contextWindow=1048576 ✓。
+- **判定**：provider 实测接受 >128K 实量（至少 150K+）=**1M 配置支持性真**·成本 ~¥0.15-0.3（一次性）。
+- **CTO 裁=批改主 overlay**（空闲窗=轮2 毕或非 spawn 段·python 逐段生效避开正在 spawn 段）·改后校验+五席同源自生效+四席通知·回退 bak 在位（撤=128K）。
+- **意义**：**压缩风暴根解候选达成**（阈值 0.8×1M=838K·联审席 compaction 13 次级降档）——与 DP-028 并行化互补。
+
+——BOD·（date 现查原值·D-47 正形）
