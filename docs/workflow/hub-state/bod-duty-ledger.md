@@ -10835,3 +10835,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - DP-018（charter 施工 6 items）在工·resume5 在跑（第 12 分钟）。
 
 ——BOD·2026-11-23T16:00:18+0800（date 现查原值·D-47 正形）
+
+### ㊿+1484 · **resume5 终态=段3 ETIMEDOUT（第三例·DP-016 定谳坐实）·续跑停止候治理落码**（现查 2026-11-23T16:06:08+0800）
+
+- **段3 ETIMEDOUT**：{kind:failed, detail:段3(plan_scope) spawnSync python3 ETIMEDOUT}·round_count=4/**rounds_run=0**·stages=[preflight,qualify,plan_scope]。
+- **过程**：段3 起 15:49→**席造件 15:59**（plan/exam/tree-facts）→verify/score 16:01→**compaction=13（>10 预警阈值实证）**→16:04 超时截杀——**与 resume4 同模式第三复现**（席自造产物→压缩风暴→超时）。
+- **按 CTO 裁**：①**停止续跑·不再清场重燃**（DP-019 seat 工具面治理三件落码前不跑 resume6）②清场零残留（瞬态 3130915 自退·身份未定记录审计）③轮次口径双字段照行。
+- **续跑条件=DP-019 治理落码**（产物只由 stage 写/压缩上限/超时预算）→再启 resume6。
+- **今日轮全景**：resume3（段3 15min 超时·外部干扰排除后）→resume4（轮1 全过 A/B 51.88/50.39·轮2 钩子设计内拦·轮3 超时）→resume5（段3 超时第三例）——**seat 行为面=根因·治理=下一关键路径**。
+- 注：**resume5 无 A/B 分**（段3 即死）——有效基线仍=resume4（51.88/50.39）。
+
+——BOD·2026-11-23T16:06:08+0800（date 现查原值·D-47 正形）
