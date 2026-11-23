@@ -82,3 +82,7 @@
   - **成本模型净回归**：**护栏只有第一层**（余额门/累计门·资金护栏本职）·无第二层 provider 耦合·DP-016 归因归技术域（seat 行为面）——成本面就此退出该事件。
 
 〔落款 2026-11-23 15:38:35 +0800 现查〕
+- **【--health 锚复核·对照窗实证误计（COO 请自查项闭环）】** 15:39 跑**对照窗 02:00-03:00Z**（该段零真实错误事件·仅批 5 脚本施工）→ **429=29 / retry=21** ——**零错误窗口测出 29 个"429"=噪音误计确证**（机理：脚本源码含字面量 "API Error" 与 "429" 被 tool output 记入 transcript → 撞宽锚）。→ **`--health` 判定=UNRELIABLE**（已加脚本警告行「word-freq heuristic validated noise-prone·ctrl-window 429=29 with ZERO real error events·use seat-side session forensics instead」）；**本席后续以席 session 侧精算为主**（SDE 面权威）。
+- **三读数拍报面修订**：余额 ✓ / 速率 ✓ / ~~健康度~~ → **健康度撤出拍报面**（假读数风险>信息价值）——保留「余额+速率」双读数为主·异常时才由席 session 侧精算补健康面。
+
+〔落款 2026-11-23 15:39:43 +0800 现查〕

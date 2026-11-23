@@ -198,6 +198,7 @@ def main():
         if a.json:
             print(json.dumps({"health": h}, ensure_ascii=False, indent=2))
         else:
+            print("UNRELIABLE(word-freq heuristic): validated noise-prone 2026-11-23 — ctrl-window 429=29 with ZERO real error events; use seat-side session forensics instead")
             print("provider-health: " + " ".join(f"{k}={v}" for k, v in h.items()))
             print("NOTE: 429=concurrency-limit (official semantics, decoupled from balance) / 500-503=server-class / retry=retry mentions")
         return 0
