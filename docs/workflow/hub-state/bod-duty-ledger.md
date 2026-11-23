@@ -11697,3 +11697,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 待裁：①调 512K（文档已知值·低风险）②试 1M（1048576·须 provider 接受度实测·可能 CLIENT_UPGRADE_REQUIRED/拒绝）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1598 · **CEO 裁 B：试 1M（overlay contextWindow→1048576·实测接受度·失败回落）**
+
+- **CEO 明示**：选 **B（直接试 1M）**。
+- BOD 已转 CTO/SDE 六步：①bak 先行 ②**两处同改**（llm 与 llm-deepseek 的 contextWindow 131072→**1048576**·maxTokens 暂不动）③yaml 校验 ④改后下一次请求即生效（无需重启）⑤**最小 dsh headless 请求实测接受度**（成功=1M 生效；报错记错误码→回落 512K 再测→再败回 128K）⑥读数回 BOD（改前后/校验/实测/回退档位）。COS 按 D-88 取号。
+
+——BOD·（date 现查原值·D-47 正形）
