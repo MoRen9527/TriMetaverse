@@ -10574,3 +10574,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **请 CEO 裁「维度冻结」方向**（技术实现=CTO 出形：固定维度表 plugin 化·LLM 只填分·可后续 DP）。
 
 ——BOD·2026-11-23T14:15:27+0800（date 现查原值·D-47 正形）
+
+### ㊿+1450 · CEO 十五问+两决定（答复·零改动）（date 现查见下）
+
+- **两决定**：①**维度冻结+每席加1-2自选**（已收·候施工形）②**run_id 形=a/b 问**（答：a=COS 签发改允许形零码改／b=扩评分正则；**CTO 已裁 b 并落码 a7e40af 14:16·四形含 -resumeN**——已解决）。
+- **十五问全答**（正文）：runId 形变化/四布尔/COO 窗/三零核；token-run.sh 选 shell 理由+跨平台分析+checks-json+queue-root；preflight vs qualify 五项与串行关系；段3 题面（已请值席只读取样）；段4 未做=零外溢三判据仅声明未执行；段5 verify 内容+RSI 视角缺口；段6 与段3 客观题对应（同 exam·skipped 计可判率·rubric_defect）；段7 逐题对表缺（整卷评分·列任务书候选）；段9 close_cli（manifest run_state 三态）；段10 notify（ok/failed/stale 路由）；item 五字段=run_id/stage+trigger/routing/evidence/state；**段11 charter 应在判级后**（CEO 指正成立·列待改）；试出卷 vs 段3 出卷（同源不同 run）；段1/2 命名与协议段1=触发错位（待勘）；R1/R2/R3 未在源码定位（疑 reasons 编号·待 CTO 证）；规则层=治理条款决定审批/停走/升降/口径（人工执行+台账·建议机读化）。
+- **零改动照守**：本轮仅答复+只读取样·未改任何件。
+
+——BOD·（date 现查原值·D-47 正形）
