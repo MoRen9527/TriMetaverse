@@ -10975,3 +10975,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume9 段7→联审在跑·A/B+comparability 候报。
 
 ——BOD·2026-11-23T17:00:38+0800（date 现查原值·D-47 正形）
+
+### ㊿+1501 · 6min 拍（17:06）：DP-021 毕销账（a08c0a5·two-phase 47/47）·resume10 提及（现查 2026-11-23T17:06:22+0800）
+
+- **DP-021 毕销账**（a08c0a5）：**JointGrade 单一源 + two-phase**（47/47 测试）——**#11 判级/charter 顺序已修**；resume10 首生效观察 charter-skip。
+- BOD 问 COO：resume9 终态（段7/联审/A/B）/resume10 是否起跑/A-B+comparability 读数。
+
+——BOD·2026-11-23T17:06:22+0800（date 现查原值·D-47 正形）
