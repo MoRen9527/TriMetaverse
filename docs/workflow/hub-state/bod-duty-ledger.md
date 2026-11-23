@@ -12686,3 +12686,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 SDE（80bb62cb·三向查截断源：采集方式/pipe·SIGPIPE·max-output/6832 常量）+CTO（bad86e93·修法方向=首选堵截断源+parse 加固 fail-loud「truncated」错类+可能 spawn 参数调）。修法稿候报呈 CEO 批。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1736 · **归因定谳（三方证据闭合）：turn/end=max-tokens 输出截断→parse 静默失败→absent→exit 2——修法三层稿候 CEO 批**
+
+- **三方证据链**：SDE 层=cos 席 session `turn/end reason={"kind":"max-tokens"}`（afcb30/00d076 两席实证）+raw 结束于 rationale 中段；BOD 层=len6832/first_brace0/last_brace4574/最后 } 后 2258 字符仍在字符串内（实锤截断）；代码层=CTO 实读 L233-240 parse 失败→sheet=None→L280-287 absent→L373-375 全席 absent exit2→段 7 rc=2。
+- **真因链=输出截断（max-tokens 上限）→parse 静默失败→absent→exit 2**；CTO banner 假说错自领（今日第四笔）·1aebe15/区间法无关。
+- **修法三层（CTO 稿）**：层 1 堵截断源（查 overlay maxTokens=16384 是否真传到 provider——6832 字符≈4-5K tokens 远小于 16384⇒疑 provider 默认上限更小/dsh 未传）30min；层 2 parse 加固+fail-loud（truncated 显式错类+salvage 降级 scores 头部完整可取）30-40min；层 3 prompt 精简（rationale≤30 字/只输出 JSON）10min。推荐序=层 3+层 2 先热修·层 1 并跑查。
+- BOD 呈 CEO 批（批后热修+重跑 resume14）·零施工照执。
+
+——BOD·（date 现查原值·D-47 正形）
