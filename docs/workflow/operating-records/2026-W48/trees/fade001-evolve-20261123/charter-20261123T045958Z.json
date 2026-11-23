@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "rN-task-20261123",
+  "source": {
+    "run_id": "shift-W48-resume2-20261123T035946Z",
+    "round": null,
+    "opinion_ids": [
+      "cos-1",
+      "coo-1",
+      "cao-1",
+      "cpo-1",
+      "cto-1",
+      "cho-1",
+      "cfo-1"
+    ]
+  },
+  "approver_pending": "CEO",
+  "status": "pending_approval",
+  "items": [
+    {
+      "opinion_id": "cos-1",
+      "title": "顶层件单列 top_level_keep，counts 与 r2 改由两数组派生",
+      "target": "plan.json",
+      "change": "新增 top_level_keep 数组收纳 .shift-ade.json、.shift-ade.prev.json、OP-202611-W47-001.json、cfo-quota-daily-w47.md、daily-progress.md 五件；counts.top_level=len(top_level_moves)+len(top_level_keep)；reconciliation.r2 改为按两数组重算；OP-202611-W47-001.unresolved-items.md 二选一（移出 moves 改 keep/封，或保留 moves 并在 carry_over 注明条目级不并入顶层 8 件），并同步 counts 为 2+6 或 3+5 留痕。",
+      "verify": "机判 len(top_level_moves)+len(top_level_keep)==8==counts.top_level；五件 keep 的 item_id 逐件在 top_level_keep；同一 item_id 不同时出现在 top_level_moves 与 carry_over 目标面；r2 不再读取 agent_readings 计数。",
+      "rollback": "以本拍 plan.json 原件覆盖，恢复 top_level_moves 3 条、无 top_level_keep、counts 1/25/2/8。"
+    },
+    {
+      "opinion_id": "coo-1",
+      "title": "三棵边界树重分类并同步 S1/B2 计数",
+      "target": "plan.json#/keep",
+      "change": "把 fade001-evolve-20261122、cao-d47-rootcause-20261122、fade001-loop-joint-review-W3 三条 keep 的 family 改 one_shot、reason/annotation 改 one_shot_frozen，并同步 agent_readings[3,7,9] 的 disposition/sanction/annotation/rationale；B2 的 desc 与 acceptance 改 9 活跃加 16 一次性，exam.json S1 rubric 的「12 活跃续跟、13 一次性封存」改「9 活跃续跟、16 一次性封存」。",
+      "verify": "jq '[.keep[]|select(.family==\"active\")]|length' plan.json 得 9、one_shot 得 16；三 id 的 annotation 均为 one_shot_frozen；grep -c '9 活跃' exam.json 得 1 且无 '12 活跃'。",
+      "rollback": "以本拍 plan.json、exam.json 原件覆盖；agent_readings 三行同步回滚。"
+    },
+    {
+      "opinion_id": "cao-1",
+      "title": "dce 真跑并回填四步 rc 与 overflow 观测",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume2-20261123T035946Z/dce.json",
+      "change": "以 --start-date 2026-11-23、--operating-root /srv/fleet/TriMetaverse/docs/workflow/operating-records 重跑 pull、migrate、commit、push（真跑 --sync），把四步整数 rc、migrated/skipped 计数与 trees_migrated 实值写回；3 项 overflow 逐项 checked=true+observed，不适用者写 false+not_applicable_reason；rc 非 0 或缺项时 verdict=fail，不再以骨架态记录 pass。",
+      "verify": "读 dce.json 断言 steps[*].rc 全为整数且为 0、overflow_checks 全 checked=true、trees_migrated>=1，并与 W48 索引 .shift-ade.json 的 trees_migrated 对表一致。",
+      "rollback": "以本拍 dce.json 副本还原；W48 索引回 .shift-ade.prev.json，W47 树体不删不动。"
+    },
+    {
+      "opinion_id": "cpo-1",
+      "title": "W48 索引按 plan 活跃树回填 activeTrees（禁止空平面交付）",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/weekly_plane_shift.py",
+      "change": "在 migrate_weekly_plane 之后新增 backfill_index_refs(plan_path, to_week)：读取 plan.json#/keep[family=active] 和 plan.json#/migrate[family=active] 中的条目（按 close 第 1 条重分类后共 9 条），向 2026-W48/OP-202611-W48-001.json#/activeTrees 写入 {treeId, treePath, stateRef, owner, timebox}，one_shot 只写归档引用；默认开启 --index-backfill，--no-index-backfill 可关闭；W47 索引保持只读、不修改。",
+      "verify": "在临时 operating-root 副本运行 python3 -m runtime.cognition.weekly_plane_shift --from W47 --to W48 --start-date 2026-11-23 --operating-root <tmp> --index-backfill --sync；执行 jq -e '.activeTrees|length==9'，确认 9 个 treeId 与 plan.json 中的 active 集合逐字相等，且 treePath 均存在；连跑两次 git diff 为空。",
+      "rollback": "关闭 --no-index-backfill，并用 git -C /srv/fleet/TriMetaverse checkout -- docs/workflow/operating-records/2026-W48/OP-202611-W48-001.json 复原索引原字节；树目录不删除，plan 不改，保留本次回填日志与失败 rc。"
+    },
+    {
+      "opinion_id": "cto-1",
+      "title": "把 resume 轮 run_id 纳入 T1-1 形态，并补正反例测试",
+      "target": "runtime/cognition/score_engine.py",
+      "change": "将 _RUN_ID_RE 的 (-loop)? 段扩为 (-loop|-resume[0-9]*)?，只放行显式 resume 轮次，双 W、任意后缀等形仍拒；同步 rubric-firstshoot.json 的 T1-1 verdict_rule 文案，并在 test_score_engine.py 增 resume 正例与 shift-W48-resumeX-20261123T035946Z、shift-WW48-… 反例，确保 B/C 不因合法轮形而记 0。",
+      "verify": "cd /srv/fleet/TriCompany && python3 -m unittest runtime.cognition.test_score_engine -v 全绿（当前基线 26 tests OK）；再以 python3 -m runtime.cognition.score_cli --run-dir <run_dir> --run-id <run_id> --from-week W47 --to-week W48 重跑，B/C 不再以 T1-1 形态为由记 0，rubric_defect 仅在真实形态错误时出现。",
+      "rollback": "还原 _RUN_ID_RE 单行与 rubric-firstshoot.json 文案，删除新增测试；重跑 score_cli 校验 B/C 恢复原判。"
+    },
+    {
+      "opinion_id": "cho-1",
+      "title": "三棵边界树改判 9/16 并给活跃树补 owner/timebox/w48_ref",
+      "target": "plan.json",
+      "change": "把 fade001-evolve-20261122、cao-d47-rootcause-20261122、fade001-loop-joint-review-W3 的 keep.family 由 active 改 one_shot、reason/annotation 由 ongoing_ledger_handover 改 one_shot_frozen，并同步 agent_readings 对应 annotation/rationale；对改判后 9 条 family=active 逐条补非空 owner（具名席位）、timebox（W48 内日期）、w48_ref=「2026-W48/OP-202611-W48-001.json」；16 条 one_shot 补 seal 锚；B2 desc/acceptance 由 12+13 改 9+16，status 由 planned 改 landed。",
+      "verify": "jq 断言 keep 中 family=active=9、one_shot=16 且 9+16=25；9/9 active 的 owner/timebox/w48_ref 非空；16/16 one_shot 带 seal 锚；三棵 rationale 不再出现「承接/留作证据/待承接」自证；B2.status=landed。",
+      "rollback": "改前 cp plan.json plan.pre-reclass.json；若 owner 未确认，保留 one_shot 改判但将 active 条目标 pending_ledger 并记缺 owner，不伪造三字段。"
+    },
+    {
+      "opinion_id": "cfo-1",
+      "title": "cost-log 增补可归集字段与空值理由",
+      "target": "cost-log.jsonl",
+      "change": "每条记录补 run_id、stage（缺省记 review）、cost_kind（actual|upper_bound）、delta_cny 或 null_reason、token_usage 或 unknown_reason、seat_count；保留 duration_s 与 balance_* 原始值，不改历史三行数值。",
+      "verify": "jq -c 校验全行含 run_id/stage/cost_kind，且 delta_cny 为数值或 null_reason 非空；三阶段 duration_s 合计=1660.2；全部 run_id=shift-W48-resume2-20261123T035946Z。",
+      "rollback": "以改动前 cost-log.jsonl 快照覆盖；不触碰 close.json 与 score.json。"
+    }
+  ]
+}
