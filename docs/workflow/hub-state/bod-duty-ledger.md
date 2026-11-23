@@ -11055,3 +11055,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **resume9 三口径**：客观=score pass·exam_objective **8/8**（机器域数值本轮未单报·待 COO 补）｜主观=**cos 71.43／coo 54.29**（均分 62.86）｜七席联审=**A 41.04／B 50.25**（mean-of-seat-means·31 维·dims a27/b26）·comparability 跨表 0.0（预期·同表 1.0 候 round2）。
 
 ——BOD·2026-11-23T17:43:42+0800（date 现查原值·D-47 正形）
+
+### ㊿+1512 · CEO 令·resume9 联审改进→任务书草稿呈批（现查 2026-11-23T17:46:53+0800）
+
+- BOD 核查：**W48 树面未见 resume9 新 charter**（仅旧 060521Z/024923Z）——无呈批件。
+- 已转 COS：取 resume9 联审产出（9466B·opinions 7·17:39）→生成 charter 草稿（items 五字段·A41.04/B50.25<90 应生成）→出呈批件（批时点位空待 CEO 填）→**呈 CEO 批**（M4-v2 不代批）+确认 generator 是否已自动产。
+
+——BOD·2026-11-23T17:46:53+0800（date 现查原值·D-47 正形）
