@@ -10909,3 +10909,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - fsd ETA 回执：DP-018 余 5 项 **1.5-2h**（resume7 优先）。
 
 ——BOD·2026-11-23T16:36:20+0800（date 现查原值·D-47 正形）
+
+### ㊿+1493 · resume7 未成（exam 面新因 63 calls）·DP-020-supp 补丁落·resume8 编排（480s）（现查 2026-11-23T16:42:22+0800）
+
+- **DP-020 状态勘正**（COS 922）：**plan 面 57.5s 大胜 16 倍**（拆分生效）·但 **exam 面新因（63 calls）**——追补 a 限定读取/b 子父超时层级 bug。
+- **DP-020-supp 落码**（8240dc0）：exam read-scope limit（a）+child-timeout≤stage-remaining（b）。
+- **resume8 编排中**：超时预算第三调 **900→300→480s**；四实证点=段3 绿/token<16384/compaction<5/联审 comparability=1.0。
+- **CTO 两疑云全清**：并行席/违纪疑云=设计内（DP-013 自纠重试·单跑纪律未破）非纪律事件。
+
+——BOD·2026-11-23T16:42:22+0800（date 现查原值·D-47 正形）
