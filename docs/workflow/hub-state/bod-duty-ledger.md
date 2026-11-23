@@ -10199,3 +10199,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候 **resume2 重燃起跑读数**。
 
 ——BOD·2026-11-23T12:00:30+0800（date 现查原值·D-47 正形）
+
+### ㊿+1401 · 6min 拍⑧（12:06）：TriCompany 新增 DP-013-09（gate 扩全集）·COS 映射表通过（现查 2026-11-23T12:06:15+0800）
+
+- **TriCompany 新落卷 2959db2**（fix dp-20261123-013-09：prompt+gate 扩至全 _structure_gate 集）——FSD 前置加固。
+- COS 885 落账（6dc32ec2c）：**CTO 复核映射表通过**（5+2+0 逐条核）+#6 表述采纳（3e77f77ae）。
+- 仍候 **resume2 重燃起跑读数**。
+
+——BOD·2026-11-23T12:06:15+0800（date 现查原值·D-47 正形）
