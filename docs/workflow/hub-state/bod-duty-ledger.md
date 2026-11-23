@@ -11047,3 +11047,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓无新施工。
 
 ——BOD·2026-11-23T17:42:17+0800（date 现查原值·D-47 正形）
+
+### ㊿+1511 · CEO 问「这轮跑了多少 resume·各出什么问题·resume9 三口径分」·作答（现查 2026-11-23T17:43:42+0800）
+
+- **resume 形共 8 个**（resume2~resume9）+首轮点火（10:05·非 resume 名），今日共 9 次点火。
+- 问题链：resume2（联审钩子幂等拦→A/B 43.25/47.56）｜resume3 段3 超时 15min｜resume4 轮1 全过（A51.88/B50.39 旧表 37/38 维）·轮3 段3 超时｜resume5 段3 ETIMEDOUT（compaction 13·rounds_run 0）｜resume6 席空输出（max-tokens 16384）｜resume7 exam 新因 63 calls｜resume8 失败（待补报·7b3db65 parser 修）｜**resume9 全过**。
+- **resume9 三口径**：客观=score pass·exam_objective **8/8**（机器域数值本轮未单报·待 COO 补）｜主观=**cos 71.43／coo 54.29**（均分 62.86）｜七席联审=**A 41.04／B 50.25**（mean-of-seat-means·31 维·dims a27/b26）·comparability 跨表 0.0（预期·同表 1.0 候 round2）。
+
+——BOD·2026-11-23T17:43:42+0800（date 现查原值·D-47 正形）
