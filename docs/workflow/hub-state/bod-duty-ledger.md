@@ -11080,3 +11080,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - "pending 指 resume4 旧卷"=旧卷残留指针如实（生成器拒后无新写·门件语义常驻有效）。
 
 ——BOD·2026-11-23T17:47:31+0800（date 现查原值·D-47 正形）
+
+### ㊿+1515 · 6min 拍（17:48）：DP-017 追补毕（1da5242·11 passed）+joint-review 到手（现查 2026-11-23T17:48:17+0800）
+
+- **DP-017 追补毕销账**（1da5242）：五字段+no-improvement·**11 passed**——round2/3 起 improvements 可正常产。
+- **joint-review 9466B 代取交付**（795e8b1e1·7 席·A41.04/B50.25·dims 31 表 v1）→COS 出草稿。
+- round2 在跑。
+
+——BOD·2026-11-23T17:48:17+0800（date 现查原值·D-47 正形）
