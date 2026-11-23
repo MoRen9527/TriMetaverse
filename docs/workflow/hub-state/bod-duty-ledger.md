@@ -10544,3 +10544,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓无新施工·联审在跑·A/B ETA 14:25-14:30·在途。
 
 ——BOD·2026-11-23T14:12:18+0800（date 现查原值·D-47 正形）
+
+### ㊿+1447 · **🎯resume4 一轮全成（主观 72.86=+34.29 新高）+客观 37=run_id 形缺陷（非质量）**（现查 2026-11-23T14:13:12+0800）
+
+- **一轮全成**：联审 **68 维·7 席**·charter 7 items pending（14:05·**charter-20261123T060521Z**）·exam **12/12=100%**·**守卫锚实证 ✓**（state.charter_run_id=本 run·新守卫首跑成功）。
+- **客观 37.0=run_id 形缺陷（非迁移质量回归）**：run_id  不符评分 rubric 正则（·score_engine L72）→rubric_defect=T1-1_run_id_form·B 族 fail；**plan 全量门 0 错/reconcile pass=迁移质量本身无损**。
+- **主观 cos 71.43/coo 74.29→均分 72.86（+34.29 vs 基线 38.57）=大幅上升（今日最高）**。
+- **候 CEO 裁**：run_id 形口径 a) **COS 签发统一允许形**（resume 亦用 -loop 前缀·零码改·下轮恢复客观 59·COO 推荐）／b) rubric 扩形（评分域变更·CTO+CPO 双裁）。影响：继续 -resumeN 形→客观恒 37 不可比。
+- A/B 聚合值候（68 维已落·mean-of-seat-means 候报）·charter-060521Z 按 M4-v2 呈 CEO 批。
+
+——BOD·2026-11-23T14:13:12+0800（date 现查原值·D-47 正形）
