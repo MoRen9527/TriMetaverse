@@ -11088,3 +11088,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - round2 在跑。
 
 ——BOD·2026-11-23T17:48:17+0800（date 现查原值·D-47 正形）
+
+### ㊿+1516 · **COS 呈批·R9 任务书草稿（354dd486e·反推形）·关键前注：本轮联审无 improvements 字段**（现查 2026-11-23T17:48:56+0800）
+
+- **关键如实前注**：**resume9 联审无 improvements 字段**（joint-review 9466B 实测：7 席仅 dimensions 打分·无改进意见段）——根因=DP-017 constrained prompt 只要求打分（**追补 1da5242 已落·候轮生效**）→**生成器拒=正形非 bug**·无自动产（run-dir 零 charter）。
+- **草稿=反推形**：由**低分维 47 条（<60）反推 top10**→charter-draft-R9-task-20261123.json（**10 items·五字段齐**·批时点位空）·呈批件 cos-batch-submission-R9-draft。
+- items 摘要：coo 节奏保真 20/coo 恢复闭环 22/cao 评审机制 26/cao 制度闭环 30/cfo 成本分解 30/cfo 护栏 30/cpo 评审形 33/cto 攻击面 34/cho 意见消化 35/coo 经营记录 38。
+- **呈 CEO 二选**：①批反推稿=采用施工 ②不批=候轮正式稿（追补生效后联审自动产 improvements→自动产 charter）。
+- BOD 已转呈 CEO（正文）。
+
+——BOD·2026-11-23T17:48:56+0800（date 现查原值·D-47 正形）
