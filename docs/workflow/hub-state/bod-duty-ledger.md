@@ -10852,3 +10852,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - SDE：resume5 段3 ETIMEDOUT 16:04·rounds_run=0·按 CTO 裁停止续跑不再重燃（候 DP-019 三件落码）·compaction=13+席造件=resume4 同模式第三复现·零残留——与 COO 读数一致。
 
 ——BOD·2026-11-23T16:06:21+0800（date 现查原值·D-47 正形）
+
+### ㊿+1486 · 6min 拍㊽（16:06）：DP-019 治理落码中（sandbox cwd+read-path 硬化）（现查 2026-11-23T16:06:35+0800）
+
+- TriCompany：**16aeb93**（DP-019 seat-tool governance·sandbox cwd for all seat spawns）+**d196de8**（019-r2·sandbox read-path hardening·prompts 绝对路径）——**治理三件落码进行中**。
+- COS 913 落账（resume5 止+时序勘）。
+- 续跑条件仍=DP-019 落码毕（→resume6）·DP-018 施工并行。
+
+——BOD·2026-11-23T16:06:35+0800（date 现查原值·D-47 正形）
