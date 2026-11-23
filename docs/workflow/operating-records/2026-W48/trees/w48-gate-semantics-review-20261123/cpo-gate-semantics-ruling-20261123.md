@@ -19,9 +19,11 @@
   3. **多残拍**：以 pf mtime 最新者为「最近状态」；最新 absent=阻断（更早残拍的 continue 不复活）。
 - 实现归 CTO（DP 取号派 FSD·与 DP-030 同文件面）——本卷=语义判据供实现对表。
 
-## §二 · R1 缺省放行（采认 CTO 处置）
+## §二 · R1 缺省放行（采认 CTO 处置·SDE 核报随录）
 
-- 向后兼容形（`not runs_root→skip ok=True`·L271-277）可留；**生产面须核恒传 runs_root**（SDE 核 R-HY cron payload·CTO 另信）——若不恒传=改 fail-closed。本席采认。
+- 向后兼容形（`not runs_root→skip ok=True`·L271-277）可留；**生产面须核恒传 runs_root**（SDE 核·CTO 另信）——若不恒传=改 fail-closed。本席采认。
+- **SDE 核报随录（21:40:42·读数 1d76829f 已报 CTO）**：①**cron 生产迁移面=门恒在**——脚本 `RUN_DIR=/var/lib/trirmc/cron/runs/$RUN_ID && mkdir -p` 先于 preflight → 默认根必存在 → 「root 缺→skip」生产不可达（等效①）；②**fade001 点火形=残余风险**——未传 argv/env 时依赖外部默认根存在性，根缺→静默 skip 放行（现役根在=门在）；SDE 建议=点火形 chain preflight argv 显式 `--prev-runs-root`（TriRMC 小改·候 CTO 裁/DP 取号）。
+- **本席语义补条**：点火形（loop 链·非 cron 自然建根面）**门禁输入须显式**——argv/env 显式传入且根缺→**fail-closed（exit 4）**，不得走 skip；未传形（向后兼容面）skip 保留但须留卷注记（现 preflight.json detail 已有「no runs_root…skip」注——留痕面达标）。建议与 R2 同 DP 束实现（一次施工面）。
 
 ## §三 · R3 自领勘正（轮末钩落差=我读错仓）
 
