@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "rN-task-20261123",
+  "source": {
+    "run_id": "shift-W48-resume11-20261123T142455Z",
+    "round": null,
+    "opinion_ids": [
+      "cos-1",
+      "coo-1",
+      "cao-1",
+      "cpo-1",
+      "cto-1",
+      "cho-1",
+      "cfo-1"
+    ]
+  },
+  "approver_pending": "CEO",
+  "status": "pending_approval",
+  "items": [
+    {
+      "opinion_id": "cos-1",
+      "title": "verify 门禁回填 run_id 与 fail-closed 时序断言",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume11-20261123T142455Z/verify.json",
+      "change": "回填 run_id=shift-W48-resume11-20261123T142455Z，strict_mode=true；5 项 checks 逐项写非空 reasons 与实测值；新增 run_id_consistency（plan/verify/score/dce 同串）与 check_time_order（plan<=dce<=verify<=score），任一失败 verdict 不得 pass；同步在 verify.py 落硬断言。",
+      "verify": "jq -e '.run_id==\"shift-W48-resume11-20261123T142455Z\" and .strict_mode==true' verify.json；all(.checks[]; (.reasons|length)>0)==true；checks 含 run_id_consistency/check_time_order 且 ok==true；verify.check_time>=dce.check_time；故意置一条 ok=false 时 verdict!=pass。",
+      "rollback": "改前复制 verify.json 为 verify.pre-dp033.json 并记 sha256；任一断言失败恢复副本，不改 checks 项原值、不重跑评分、不投递。",
+      "owner_seat": "cos"
+    },
+    {
+      "opinion_id": "coo-1",
+      "title": "补硬时钟/批次表/停机线与逐件落卷时点，修 plan 时标倒挂",
+      "target": "plan.json",
+      "change": "在 plan.json 顶层新增 hard_clock（取本轮迁移拍原值时点，禁占位）、batch_timetable（逐批 planned_at/actual_at/threshold_s）、window_conflicts、stop_loss、rollback_order、self_checks、resume_dedup；plan.check_time 改为不早于 tree-facts.json#/generated_at 的实测定稿时点；migrate/keep/carry_over 逐件补 actual_landed_at 与 evidence_ref（指 tree-facts.json#/trees/<item_id> 或 plan.json#/keep/<n>/observed），删除 preflight/qualify 通用门禁锚。",
+      "verify": "断言 plan.json 七键均存在且非空；plan.check_time >= tree-facts.json.generated_at；26 条树 reading 的 evidence_ref 逐条指向 tree-facts.json#/trees/<item_id>；38/38 项有 owner/actual_landed_at；stop_loss 与 rollback_order 给出触发条件、停手动作、责任人、回退序。",
+      "rollback": "改动前复制 plan.json 为 plan.pre-timingfix.json 并记 sha256；任一断言失败即恢复该副本，保留原 counts/keep/readings，不重跑评分、不投递。",
+      "owner_seat": "coo"
+    },
+    {
+      "opinion_id": "cao-1",
+      "title": "把两条意见铸条入册并回填 close 闭环三锚",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume11-20261123T142455Z/close.json",
+      "change": "为 cos-1/coo-1 各分配条款号（如 CAO-W48-01/02），在 close.json 增 charter_ref、opinion_dispositions[].clause_id/register_commit/effective_at，state 由 deferred 改 adopted 或 rejected（rejected 须写理由）；在 opinions.json 写入条款正文与入册锚；不得以『五字段缺口』回退已具五字段的意见。",
+      "verify": "python3 -c 断言 close.json#/charter_ref 非空；opinion_dispositions 每条 clause_id/register_commit/effective_at 非空；git cat-file -e <register_commit> 成功；opinions.json 每条意见有对应条款正文。",
+      "rollback": "改前 cp close.json close.pre-clause.json 并记 sha256；任一断言失败即恢复原卷，保持 deferred，不投递。",
+      "owner_seat": "cao"
+    },
+    {
+      "opinion_id": "cpo-1",
+      "title": "补齐 W48 需求承载两行并锁 34 键 RACI",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume11-20261123T142455Z/plan.json",
+      "change": "把 OP-202611-W48-001.json、OP-202611-W48-001.unresolved-items.md 补入 families/D 与 index_assertions.w48_loose_files（7→9 项）；5 棵 carry 树逐棵补 dest_state_ref/owner/first_review/exit_criteria；staffing.raci 删 3 个 W48-only 键、补 4 个 W47 键，键集对齐 34 条 agent_readings；16 个空 owner 按族补席，禁全 COS/COS。",
+      "verify": "python3 -c \"import json; p=json.load(open('/srv/fleet/TriRMC/fade001-runs/shift-W48-resume11-20261123T142455Z/plan.json')); assert len(p['index_assertions']['w48_loose_files'])==9; assert {'OP-202611-W48-001.json','OP-202611-W48-001.unresolved-items.md'} <= set(p['index_assertions']['w48_loose_files']); assert len(p.get('carry',[]))==5; assert all(all(x.get(k) for k in ('dest_state_ref','owner','first_review','exit_criteria')) for x in p['carry']); assert len(p['staffing']['raci'])==34; assert set(p['staffing']['raci'])=={r['item_id'] for r in p['agent_readings']}\"",
+      "rollback": "改前复制 plan.json 为 plan.pre-cpo.json 并记 sha256；任一断言失败即恢复该副本，保留原 counts/keep/families/readings，不重跑评分、不投递。",
+      "owner_seat": "cpo"
+    },
+    {
+      "opinion_id": "cto-1",
+      "title": "dce 段执行门闭合：dry_run/空参不得进 verify",
+      "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+      "change": "段 4 argv 补 --start-date p.startDate 与 --operating-root path.join(p.tmvRoot,'docs/workflow/operating-records')；新增 FADE_DCE_EXECUTE=1 显式追加 --execute（缺省 dry_run 只允许 preview 轮）；run() 在段 4 后读 dce.json，verdict != pass（含 dry_run_not_executed/blocked）即 ok=false 返回，禁入 verify/score/close/notify。",
+      "verify": "node --import tsx --test test/fade001/chain_runner.test.ts；新增 stub 案 dce 写 {'verdict':'dry_run_not_executed'} 且 rc=0 → out.ok=false 且 stagesRun 止于 dce；实跑断言 dce.json.mode=='execute' 且 steps[].rc 全为整数、migrate.cmd 无空参。",
+      "rollback": "改前保存 chain_runner.ts 的 git SHA 与 dce.json 副本；断言失败即 git checkout 该文件并恢复 dce.json，manifest 标 blocked，禁发 notify_done。",
+      "owner_seat": "cto"
+    },
+    {
+      "opinion_id": "cho-1",
+      "title": "RACI 34 件单主责对齐并解除单席并载",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume11-20261123T142455Z/plan.json",
+      "change": "staffing.raci 改为与 agent_readings 34 个 item_id 全等：删 cfo-quota-daily-w48.md、task-inventory-20261123.md、todo-list-20261123.md，补 OP-202611-W47-001.json、OP-202611-W47-001.unresolved-items.md、task-inventory-20261117.md、cfo-quota-daily-w47.md；逐件写唯一 accountable（按域 COS/COO/CPO/CAO）与显式 responsible；补 families 16 个空 owner；close.upgrade_list 9 条缺陷逐条加 owner_seat。单席 accountable 占比≤50%。",
+      "verify": "python3 断言：len(staffing.raci)==34 且 set(raci)==set(agent_readings.item_id)；每件 accountable 非空，accountable 去重≥3 席且最大单席占比≤50%；38/38 families item owner 非空；close.upgrade_list 9/9 owner_seat 非空且每件恰一席。",
+      "rollback": "改前复制 plan.json 为 plan.pre-raci-cho.json 并记 sha256；任一断言失败恢复该副本，保留原 readings/families，不重跑评分、不投递。",
+      "owner_seat": "cho"
+    },
+    {
+      "opinion_id": "cfo-1",
+      "title": "护栏触发语义分立：auto null-balance fail-safe·manual fail-open·guard_hits 四键",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/close_skill_spawn.py",
+      "change": "在 plan/score/close/loop_joint_review 四 spawn 脚本接入 FADE_TRIGGER：b0 连续≥3 次不可得时 auto 返回 rc=3 暂停（fail-safe），manual 保持 rc=0 仅写 cost_guard_warning_balance；余额门<20/累计门≥10 两模式均 rc=3；_total_spent_cny 遇 delta null 不再按 0 求和，改为返回 unavailable 并触发 d_null_escalation；guard_hits 拆为 a_round_over/b_total_cap/c_balance_floor/d_null_escalation 四键并与 pause reason 一一对应。",
+      "verify": "四案单测：b0=None 连续3轮（auto rc=3、manual rc=0+warning）、b0=10（两模式 rc=3）、spent=10（两模式 rc=3）、b0=100/spent=0（rc=0）；断言 close.cost_settlement.guard_hits 四键均存在且可独立为 1，reason 含对应键名。",
+      "rollback": "改动前将四脚本复制为 *.pre-guardfix-r11 并记 sha256；任一单测红即恢复四副本与旧 a/b/c 三键，不重跑生产链。",
+      "owner_seat": "cfo"
+    }
+  ]
+}
