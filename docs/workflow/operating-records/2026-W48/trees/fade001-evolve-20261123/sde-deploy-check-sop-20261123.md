@@ -16,6 +16,7 @@
 ## 产物所有权纪律（CTO 裁·2026-11-23·同族=硬门签认必落卷的产品面）
 
 > **链产物（run_dir/*.json：preflight/qualify/plan/dce/verify/score/close…）=链执行证据，任何独立验证禁覆写**；独立验证一律落**独立文件**（命名 `verify-strict-check.json` / `*-check.json` 类·带验证方标识）。理由=审计锚唯一性（覆盖后链证据失真）。**注**：verify.py 的 `strict_mode=bool(args.strict)`（CLI 旗唯一可达·源 L270）——`--strict` 独立验证与链段 5（无旗）产出形态不同（6 vs 5 checks），可按形态区分归属。
+> **强化（CTO 裁 2026-11-23·resume3 段 3 红实锚后升级）**：**禁写活链 run_dir**（超出「禁覆盖 verify.json」）——链在跑期间任何外部进程/验证禁在该 run_dir 读写；外部验证一律**独立临时 run_dir/独立文件**。live 链被并发写入曾致段 3 ETIMEDOUT（13:24 外部件早于链段毕=时序互斥铁证）——干扰面=资源竞争+证据污染。
 
 ## 依据（DP-012 首验实例）
 
