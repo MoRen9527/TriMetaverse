@@ -108,7 +108,7 @@
 **DP-032 取号**（22:05·D-91 链跑期禁推施工·补记注：取号时漏写本条·22:21 补记·自领 D-88 违反）：①链跑 marker（ref 形：R-HY `git push <commit>:refs/runtime/chain-running`·链毕删·commit date=启动时点·bare=两机唯一共享面）②pre-receive 硬闸（sg bare·v4：fresh≤2h 拒〔stderr 引 D-91+清单〕/stale>2h warn 放/ref 无放/hotfix 例外）·执行体 FSD（marker 写删）+SDE（hook 装机）·**已毕销账**（四验收全过含**跨机实测 T13**：R-HY push ref→sg hook 实读实拒=机械闸跨机正形证据·三边界〔fail-open 兜底/finally 双撤/refs/runtime 不扰 fetch〕·机位勘正 R-HY→sg〔CAO 已勘 D-91 a5c7466〕·判断勘正留痕〔FSD ssh 探针部分错·主结论对·R 形仍优·裁不变〕——销账锚=6d92b4c7+611bae964+T13·**D-91 首道真机械闸建成**）。
 
 
-**DP-033 取号**（22:30·charter v2 施工批·CEO 批 22:21:43）：6 items 逐席分派（**cos-1/COS**·coo-1/COO·cpo-1/CPO·cto-1/CTO·cho-1/CHO·cfo-1/CFO）·逐条验收形照 items verify 列·D-88 三步·施工完+自测绿→点火跑一轮（前置：新轮专属 continue 件三绑〔run_id/round_count〕·清场双零·门态·号·480s）·状态=派发→在途。
+**DP-033 取号**（22:30·charter v2 施工批·CEO 批 22:21:43）：6 items 逐席分派（**cos-1/COS**·coo-1/COO·cpo-1/CPO·cto-1/CTO·cho-1/CHO·cfo-1/CFO）·逐条验收形照 items verify 列·D-88 三步·施工完+自测绿→点火跑一轮（前置：新轮专属 continue 件三绑〔run_id/round_count〕·清场双零·门态·号·480s）·**已毕销账**（六 items 全达：cos-1〔R-HY 三 ref VERIFY OK〕/cpo-1〔c77ed4a59 漂移按实盘〕/cfo-1〔1356d45 35 passed〕/cho-1 代码面〔1e36a35a0 6+37 passed·sg 三步候〕/cto-1+coo-1=DP-033-01〔c926646 19 passed·**SDE scratch 双绿**：execute+pull rc=0/migrate rc=3 设计内→verdict=halt_pending_ruling 非 pass 正确+overflow 3/3 checked+verify GREEN·原产物 sha256 616ee4b8 未触〕——销账锚=c926646+1356d45+1e36a35a0+c77ed4a59+SDE-scratch-142)。
 
 **DP-034 取号**（22:47·DP-030 键名 drift 修·先发后补认领）：awaitCeoRuling 改读 `decision ?? ruling`（decision 主·ruling 兼容）·round 53/53·commit **ed1e59a**·FSD 已毕（drift 随 DP-033-01 同窗发现主动修·号补挂）·状态=已毕销账（销账锚=ed1e59a）。
 
