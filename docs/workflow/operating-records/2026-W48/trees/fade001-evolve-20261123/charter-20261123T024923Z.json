@@ -15,7 +15,7 @@
     ]
   },
   "approver_pending": "CEO",
-  "status": "pending_approval",
+  "status": "approved_deputy",
   "items": [
     {
       "opinion_id": "cos-1",
@@ -73,5 +73,8 @@
       "verify": "jq 校验 steps[1].cmd 经 shlex 拆分后 --start-date=2026-11-23 且 --operating-root 非空；steps[*].rc 全为整数；3/3 overflow 项含 checked 且含 observed 或 reason 加 recheck_at；verdict=pass 时无 rc 非 0、无 checked=false 无理由项。",
       "rollback": "改前 cp dce.json dce.pre-run.json；若真跑任一步失败，恢复 dce.pre-run.json 并把 verdict 改 blocked、在 overflow_checks 写失败读数，禁以 dry_run 冒充通过。"
     }
-  ]
+  ],
+  "approver": "COS",
+  "approval_comment": "COS 代批（CEO M4 多轮授权·五要件：批件落卷〔本文件+cos-m4-deputy-approval-20261123.md〕+三类零命中〔items=执行面修复/文档字段面·可回滚·非重大不可逆/非硬约束/非保留权〕+「COS 代批」显式+时点 2026-11-23T10:57+0800+入台账〔873〕）；形式三件审齐：opinions 7/7 全席/FUSE 融合完整（items 7 条各源席意见）/五字段齐 True/域定谳齐（各条各席域）；边界核=cto-1 spawn 环境修复属执行面（flag 状态机/评分口径/阈值不动）→不触 D-86 必回呈六项",
+  "approval_time": "2026-11-23T10:57:00+0800"
 }
