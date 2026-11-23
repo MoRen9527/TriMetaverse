@@ -12668,3 +12668,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **另**：CAO 回执 DP-041 铸条候选稿（85f81b926·D-95 候选六款·呈 BOD 转呈 CEO 批）。**教训：修复后首跑即抓回归=正是「全毕自测绿」之外必须的活体验证。**
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1734 · **BOD 补证四件（段 7 诊断）：raw_out 完整/19a3023 非嫌疑/1aebe15 定位 TCO/真因下移 score_skill_spawn**
+
+- ①raw_out 全文定性：cos 席输出=完整正常 JSON（scores I1:10/I2:6/I3:6+improvements 全字段·6832B 无截断）→非 parse 形态·支持 rc=1 进程层论断。
+- ②19a3023 实核=只改 loop_joint_review_spawn.py（+5/-2）→非嫌疑 ✓（CTO 初判对）。
+- ③**1aebe15 定位=TriCompany 仓**（CTO 本机 TriRMC 查空原因）——纯新增 runtime/cognition/chain_runner.py（180 行）+test（77 行）·257 insertions 全新增零现有改动·与 ignite 无引用关系。
+- ④**修正**：ignite 链执行器=TriRMC/src/fade001/chain_runner.ts L22（import makeChainRunner）·L124 段 7=score_skill_spawn.py·L244 err 模板「段 N(name) rc=${r.status}」⇒ **「段 7 rc=2」=score_skill_spawn.py 进程退出码 2**·cos 席 dsh rc=1 是内层判官面（absent=true 结果）——真因层下移=score_skill_spawn 内部（cos 席 dsh rc=1→进程 exit 2）。
+- 已发 SDE（b1cc028d·取 dsh stderr/rc=2 退出行/T4 相关性）+CTO（1fed4d9d·双面归因+修法候批）。
+
+——BOD·（date 现查原值·D-47 正形）
