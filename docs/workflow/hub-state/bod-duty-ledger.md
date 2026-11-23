@@ -11616,3 +11616,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **错配假说**：若 provider 真值 < [1M]（如 128K）→客户端按 1M 预算→provider 早满→**压缩频繁=必然**（[1M] 开关与实际限错配）——验证=②③④实测。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1589 · SDE 实测四件：**系统 contextWindow=128K（非1M）**·阈值 0.8×128K≈105K·CHO 13 次压缩同 turn 47s/次
+
+- ①席 env 全无 model/AUTO_COMPACT/MAX_TOKENS 键·**零 `[1M]` 标记**（model 走 overlay：deepseek-official/deepseek-flash·maxTokens 16384）②**系统内 contextWindow=131072（128K）**（overlay 双处）③**压缩阈值=0.8×128K≈105K**（min(104857,pressureBudget)）④**CHO 13 次压缩全在 12:41:30→12:51:45（≈47s/次·同一 turn）**·压缩前 token 不可得。
+- **判读**：「1M/低 provider 错配」假说**证据不足**——实际=**128K 预算×0.8 阈值+重循环触顶**；CHO 683s/comp13=压缩风暴型（DP-028 素材）。官方 deepseek-flash context 真值=离线不可证须外网。
+- **BOD 自领**：我此前向 CEO 表述"应 1M"系据客户端标记推定，实测配置=128K——勘正。
+
+——BOD·（date 现查原值·D-47 正形）
