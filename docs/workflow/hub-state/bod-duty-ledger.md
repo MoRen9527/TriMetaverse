@@ -10473,3 +10473,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 实现分野：程序=preflight/qualify/dce/verify/score_cli/close_cli/notify_done/生成器/聚合｜spawn=段3（COS 出题）·段7（两席判主观）·段8（COS 收口）·联审（七席两对象）｜席面手续=COS 签发 runId·值席签 checks 四布尔·点火前三零核。
 
 ——BOD·2026-11-23T13:35:08+0800（date 现查原值·D-47 正形）
+
+### ㊿+1437 · resume4 起跑（13:32:19·pid 3116389）+值席自查令流转（现查 2026-11-23T13:35:30+0800）
+
+- resume4：**13:32:19 CST**·pid **3116389**·run-dir shift-W48-resume4-20261123T053031Z·**三零核绿**·preflight pass·qualify 落·盯点=段3（~13:47 超时窗·因果验证点）。
+- **值席自查令已流转**（capture=1）：12:46/13:18/13:21/13:23/13:24 活动自查（会话/执行痕/脚本）→回 CTO 审计闭环；CTO 口径=定形态不追责；自查不得触碰活动链 run_dir。
+- 指纹三方分离：外部产线 fleet:fleet／FSD root:root／COO jedih→指向 fleet 用户会话。
+
+——BOD·2026-11-23T13:35:30+0800（date 现查原值·D-47 正形）
