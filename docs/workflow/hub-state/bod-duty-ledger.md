@@ -11333,3 +11333,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 注：教程「触发」章段号表述以 DP-022（段号对表卷）达面后为准·先如实注错位。
 
 ——BOD·2026-11-23T20:00:57+0800（date 现查原值·D-47 正形）
+
+### ㊿+1551 · **🔥resume10 起跑（19:57:46 CST·pid 3150304·前置四件全绿·R10 首验轮）**（现查 2026-11-23T20:01:12+0800）
+
+- **前置四件实测**：①门态绿（DS **62.72**·http 200）②号 ✓ ③三仓 pull=up-to-date（TriCompany 8e6d067/TriRMC 0411c05/TMV 435f88a39）④四件码面全在（8e6d067/0411c05/87a56cc63+480s b130217）。
+- **起跑**：11:57:46Z（19:57:46 CST）·pid **3150304**·run-dir shift-W48-resume10-20261123T115623Z·双零核过·preflight pass·qualify 落。
+- **R10 四件首验**：①failure_class（verify.json）②close 双字段（runid_origin+charter_ref）③owner_seat+消化率 ④todo-list 族断言（--check）；段3 绿/compaction<5 照盯。
+
+——BOD·2026-11-23T20:01:12+0800（date 现查原值·D-47 正形）
