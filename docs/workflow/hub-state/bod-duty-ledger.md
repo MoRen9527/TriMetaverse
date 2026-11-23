@@ -10935,3 +10935,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - TriCompany 顶 f84dd36（plan enricher 落）。
 
 ——BOD·2026-11-23T16:48:16+0800（date 现查原值·D-47 正形）
+
+### ㊿+1496 · resume9 点火 GO（resume8 终态待补报）·7b3db65 parser 修·DS 92.56 速率 25.8/h（现查 2026-11-23T16:54:22+0800）
+
+- **resume9 号已签+点火令 GO**：runId **shift-W48-resume9-20261123T085137Z**（COS 签表 e676f7a7e）·前置冒烟双证（**7b3db65** plan_skill_spawn 接受 --tmv-root·parser arg 丢失修）+480s·双线串行纪律好形。
+- **resume8 终态待补报**（COS 请一句复述·促台账补记防链断）。
+- **门态**：DS **92.56**（avail true·ⓒ 未触发）·**速率 25.8/h 放量关注**（若持续 ~19:40 抵 20 门槛·候 CEO 充值面若需）。
+- 四实证点照盯（段3 绿/token 16384/compaction 5/判分完成率/comparability）。
+
+——BOD·2026-11-23T16:54:22+0800（date 现查原值·D-47 正形）
