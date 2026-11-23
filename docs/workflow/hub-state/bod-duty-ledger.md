@@ -11799,3 +11799,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 停/许仍候 CEO 裁。
 
 ——BOD·2026-11-23T21:24:28+0800（date 现查原值·D-47 正形）
+
+### ㊿+1611 · **CEO 裁 B：放过轮2·查根因（debug 无批自动进下轮）·坚决卡死·知会 CFO**
+
+- **CEO 明示**（21:27:52）：「B，这次就先放过，**查根因，为什么 debug 态下一轮没 CEO 批就自动进第二轮，以后坚决卡死这类浪费 token 的行为，同时知会 CFO**」。
+- BOD 已转 CTO 查根因（初疑·供参考勿冒认）：①**ceo-ruling.json 多轮重复消费**（resume4 落的 continue 若长期驻留→每轮 awaitCeoRuling 读 continue→轮轮放行=一纸多轮设计洞）②或 auto_dispatch/charter mount 另触发③卡死方案：ruling 与 run/round 三绑（run_id+round_count+signed_at）·消费即标已用·下轮无新件=fail-closed absent④防浪费护栏：debug 新轮启动前必核本轮专属 ruling 件。
+- COO：轮2 放行跑完（不 kill）督办；CFO：知会（轮2=未批轮·成本单列浪费面读数）。
+
+——BOD·（date 现查原值·D-47 正形）
