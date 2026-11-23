@@ -44,3 +44,15 @@
 ## §五 · 附注（CEO 质询·2026-11-24T02:2x）
 
 **CEO 质询「debug 态不该有 FUSE」**（BOD 转）：resume12（debug）报 exit=fuse（round_count=8）与 **M9「FUSE 仅 test 态生效」** 不符候选——CTO 四问核查中（纪律真源 M6/M9 原文及关系／round_runner fuse 判定是否读 flag／round_count 累计来源／判+修法+DP 取号）。**COS 初判**：M9 后铸收窄 M6 适用域→debug exit=fuse=**跑偏候选**（实现面候 CTO 查）。**本批件不受阻**；若 CEO 批，**续跑形待修法明确后再定**（候选修法=COS 判出后 DP-038 取号修 fuse flag 短路）。
+
+## §六 · 任务书主体（CEO 令 2026-11-24T02:2x「不准点火，等我批任务书」）
+
+**本呈批件=本次任务书主体**（CEO 令口径调整）：
+- **主体 items**：charter-161903Z 7 条（rN-task-20261124）。
+- **并入修项 2 条**：**DP-037**（rounds_run=0 上报小 bug·非急）+**DP-038**（debug 态 FUSE 判定读 flag·CTO 四问核查中·修法摘要附后）。
+- **禁点火**：任何形式 fade001 点火（resume13/ignite/手动/POST /run）冻结至 CEO 批本任务书。
+- **零施工**：DP-037/DP-038 修码候批同步开工——批前零施工零点火。
+- **一次呈批一次点火**：批到后 DP 取号分派（含两修项）→施工→单次点火。
+
+---
+—— COS 小贾·附注 写前现查 2026-11-24T02:25+0800（D-47 原值）
