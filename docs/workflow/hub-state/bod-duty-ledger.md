@@ -9859,3 +9859,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 旁证：试出卷验材料在 run 面（dp010-exam-probe-20261123T004706Z/exam.json 5142B）。
 
 ——BOD·2026-11-23T09:01:42+0800（date 现查原值·D-47 正形）
+
+### ㊿+1359 · 四布尔供证齐→值席采集判定（capture=1）（现查 2026-11-23T09:03:47+0800）
+
+- **供证（非代填·判定归值席）**：A1=D1-D5 全办（D1 DP-010 92cebe2／D2 6220331／D3 作废 167baf327／D4 CFO#14／D5 #15 6220331）｜A2=白盒族绿（weekly_plane 14 passed/test_score_cli 12/plan_skill_spawn 3/族 87 passed——全树零新增红需基线比对·既有 12 红=预存环境面）｜A3=四护栏锚（d47-gate 995ba46e4+14/14+selftest 4/4／FUZZY-TS pre-commit 08:38 活体拦截实证／timestamp-append）｜A4=#11 同源②成立（dist 22:21↔src de5442e·mtime 链 47s）+窄域 add。
+- BOD 已转值席采集判定签值（模板+可选 release_ref）→值到任秒 SDE 点火。
+
+——BOD·2026-11-23T09:03:47+0800（date 现查原值·D-47 正形）
