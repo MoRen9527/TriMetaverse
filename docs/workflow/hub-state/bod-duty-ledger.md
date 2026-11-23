@@ -10466,3 +10466,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 盯点：resume4 段3 通过（外部并发因果验证点）→十段→联审钩子新守卫（f 步）→A/B 首读。
 
 ——BOD·2026-11-23T13:32:26+0800（date 现查原值·D-47 正形）
+
+### ㊿+1436 · CEO 令·画点火→loop 尾段流程图+阶段实现/门禁表（现查 2026-11-23T13:35:08+0800）
+
+- 依 CTO 五款对表卷（cto-five-clause-parity-table）+今日实锚，BOD 出流程图+十段+尾段门禁表（正文呈）。
+- 实现分野：程序=preflight/qualify/dce/verify/score_cli/close_cli/notify_done/生成器/聚合｜spawn=段3（COS 出题）·段7（两席判主观）·段8（COS 收口）·联审（七席两对象）｜席面手续=COS 签发 runId·值席签 checks 四布尔·点火前三零核。
+
+——BOD·2026-11-23T13:35:08+0800（date 现查原值·D-47 正形）
