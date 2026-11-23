@@ -179,3 +179,12 @@
 - **【下沉维度自报（COS 令·CEO 勘正「下沉≠人人读代码」）】** 自报五行：cfo-guardrail-presence=**下沉**（读实现+门态·证据=文件:行+常量值）／cfo-cost-decomposability=**下沉**（读 cost-log 写入实现+样本·证据=代码行+样本行脱敏）／**成本异常·重复消费（归口）=成本核**（usage/读数面·不读代码·照 COS 建议·证据=余额时序+transcript 四分列+**对照窗**）／cfo-unit-econ-computability=**卷面核**（判据=读数通道有无）／cfo-two-axis-separation=**卷面核**（判据=评分 JSON 字段）。**自报原则**：「能改变判读结论的才下沉」+**下沉本身有成本**（今日首读约 6 次工具调用/5min·应花在该花处）。
 
 〔落款 2026-11-23 21:42:34 +0800 现查〕
+
+## 2026-11-23（周一）22:29 DP-033 cfo-1 施工完毕（cost-log 关联字段补齐·我面交付）
+- **令源**：COS·DP-20261123-033 charter v2 施工批（CEO 22:21:43 批「施工完点火跑一轮」）·cfo-1=本席面·title=cost-log 增 run_id/trigger/task_id 关联会话级 transcript 通道。
+- **交付**：**commit `1356d45`（TriCompany dev·4 files +200/-7）·入 sg 裸仓链 ✓**（ls-remote sg-server 顶 9757890 含本笔·ancestry 验证；GitHub 直连受阻但 sg 通道已收=排面面可 pull）。
+- **改动五件**：①-④ 四 spawn 脚本 `_write_cost_line` 统一改（close L93/plan L121/score L105/loop L211）——自动补齐 5 字段：run_id（env FADE_RUN_ID∨run_dir.name）/trigger（env FADE_TRIGGER∨FADE_AUTO_DISPATCH→auto·默认 manual）/task_id（env∨manifest 读∨run_id 兜底）/seat_count（len(seats)）/cost_channel（key 缺失→unavailable）·**调用点零改**（meta.update(rec) 显式值优先）⑤ close `_build_cost_settlement` 增 `transcript_readout`（channel/query/status=deferred/note 本机可采面≠账户全量）——**诚实指针非虚数**。
+- **自测锚**：pytest 四套 **35 passed in 57.55s** ✓；合成 verify **七断言 ALL-PASS**（run_id 非空/trigger∈{auto,manual}/trigger=auto 生效/task_id 非空/seat_count≥1/cost_channel=unavailable（无 key 态）/ts 存在）；py_compile 五件 OK；**rollback 就绪**=四脚本 `*.pre-costattr` 备份在位（未提交）。
+- **施工效率实锚**：ETA 报 30-40min·实际 22:24→22:26 核心完（~4min 含测试）——**快于 ETA 一个量级**（因四脚本 `_write_cost_line` 完全一致=模式化改动+我此前已下沉读过 close 实现）。工具面教训一次：heredoc 层吃反斜杠致首版补丁 MISS 全四（同族教训再现）→ **改 Write 落地 .py 再执行=零转义**——此形宜固化。
+
+〔落款 2026-11-23 22:29:06 +0800 现查〕
