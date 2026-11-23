@@ -11598,3 +11598,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓其余无新·resume10 已终（不再跑）。
 
 ——BOD·2026-11-23T21:00:18+0800（date 现查原值·D-47 正形）
+
+### ㊿+1587 · CEO 问「deepseek-flash 应 1M 为何压缩频繁」·转 CTO/SDE 实测四件
+
+- **CEO 质疑**：dsh 的 deepseek flash 上下文应 1M·为何 CHO 席 comp13 频繁压缩。
+- BOD 如实：不能凭"应 1M"推定——三候选：①dsh 模型配置/`[1M]` 开关未生效 ②provider 实际 context（deepseek-flash 可能 128K/64K）③auto-compact 阈值被 env 收紧 ④材料过大。
+- 已转 CTO/SDE 实测四件：模型配置实值/`[1M]` 是否发到 provider·provider context 真值·压缩阈值配置·CHO 席 token 用量与 13 次触发点。
+
+——BOD·（date 现查原值·D-47 正形）
