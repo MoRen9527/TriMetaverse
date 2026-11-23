@@ -10846,3 +10846,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 注：**resume5 无 A/B 分**（段3 即死）——有效基线仍=resume4（51.88/50.39）。
 
 ——BOD·2026-11-23T16:06:08+0800（date 现查原值·D-47 正形）
+
+### ㊿+1485 · SDE 抄送复核一致（resume5 止·零残留）（现查 2026-11-23T16:06:21+0800）
+
+- SDE：resume5 段3 ETIMEDOUT 16:04·rounds_run=0·按 CTO 裁停止续跑不再重燃（候 DP-019 三件落码）·compaction=13+席造件=resume4 同模式第三复现·零残留——与 COO 读数一致。
+
+——BOD·2026-11-23T16:06:21+0800（date 现查原值·D-47 正形）
