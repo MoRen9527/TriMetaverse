@@ -12468,3 +12468,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 待 CTO 回报后：呈 CEO 判（若实现跑偏→修后点火；若纪律歧义→CEO 定谳）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1695 · **CEO 令「不准点火，等我批任务书」回执 + CTO 四问四答（代码已符 M9·真疑点=flag 疑为 test）**
+
+- **CEO 令（02:2x）**：「不准点火，等我批任务书」——已回执 COS（msg 3a4a15d8）：①禁点火（resume13/ignite/手动一律冻结）②charter-161903Z 呈批件=任务书主体·**DP-038+DP-037 两修项并入一次呈批、一次点火**、批前零施工零点火。
+- **CTO 四问四答（02:20:50·msg 实锚）**：①M9 原文=教程 08-loop §2.3 L115-122·CEO 所述与 M9 一字不差；M6=计数域（c2d0652ac）·M9=触发域——两条款本意即「累计自由但仅 test 熔断」。②实现已符纪律：round_runner.ts **L287 `if (flagVol.flag === 'test' && st.round_count >= FUSE_MAX_ROUNDS)`**（DP-027 5ade74f 落·全仓唯一 FUSE 点·ignite grep 零）。③**关键待证点**：debug 态却 fuse→唯一解释=**state flag 实际=test**（候选 A）·候选 B（flag=debug 且 fuse）已排除；round_count=8=M6 跨点火累计（非异常）。④本轮行为无实质影响（两态均停·仅 exit kind 语义面）。⑤修法（若 A 成立）=**flag 推进面审计**（M3-v2 双达标门是否卡严·DP-038）·M9 无需改。
+- **已催 SDE**（msg 6ee20da8）：读 resume12 run_dir state 的 flag 值+round_count 起值+flag 推进来源证据链（只读零施工）。
+- 待 SDE 铁证→呈 CEO：若 flag=test→真 bug=flag 误推进（并入任务书）；若 flag=debug→须回查 CTO 推理盲区（另案）。
+
+——BOD·（date 现查原值·D-47 正形）
