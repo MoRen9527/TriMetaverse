@@ -11850,3 +11850,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 轮2 在跑不影响（tsx 下轮载新码）·COS 按 D-88 取号。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1617 · **裁面勘正（CTO 请转 CEO 知）：主消费面=preflight.check_ceo_ruling（非 awaitCeoRuling）·修形扩两处**
+
+- CTO 定形件（21:31:39）裁面勘正：CEO 裁七件指向 awaitCeoRuling——**SDE 两查实读：实际消费面（主因）=preflight 的 `check_ceo_ruling`**（逐轮重读 prev_run_dir 件·轮1/轮2 同件放行实证）·awaitCeoRuling 仅 debug 旗分支且 queue-state 无文件。
+- ⇒ **修形须覆盖两处**（check_ceo_ruling 主修 + awaitCeoRuling 防御性同修·七件全应用+主因面补修）——**DP-20261123-030 已取号**（FSD·急修形·**轮3 前须达**）·七件+prev 自指同修（轮3 exit 4 停链面）在令。
+- 定性：**执行面实读纠偏·非裁意变更**（七件目标不变·修面从单点扩两处）。
+
+——BOD·（date 现查原值·D-47 正形）
