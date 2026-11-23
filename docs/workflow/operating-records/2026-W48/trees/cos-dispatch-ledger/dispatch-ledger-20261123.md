@@ -55,6 +55,9 @@
 
 **DP-013 取号**（11:01·D-88）：DP-20261123-013=plan prompt 契约镜像件（CTO 裁三层：①disposition 四值枚举+反例 ②自纠层重试一次 ③根治=校验器反向提取全枚举列清单补 prompt）·执行体 FSD·新单号（一单一号）·**轮 3 起生效**（轮 2 段 5 rc=2）。背景=契约缺口同族三例（verdict/counts/disposition）·治族思路。**发令毕 11:01:14→FSD（04d23350）·面=TriCompany prompt 面（非 TriRMC 码·禁改约束不涉）·验收锚=轮 3 实跑段 5 过·**已毕销账**（复验五面全绿：structure_gate errors=0/reconcile ok/check_plan_baseline ok/自纠门 viol=0/exam 6/6=100%+首轮即合规·三 commit a30afd6/dfae936/eb3f2d8·167 passed——销账锚=复验卷）。
 
+
+**resume 点火起跑**（SDE 11:35:03）：起跑=03:32:52Z（11:32:52 CST）·pid **3098499**·run-dir=`fade001-runs/shift-W48-resume-20261123T033142Z`·**run-id=签发件 ✓**（d80633b38）·preflight pass（exempted(loop)）·qualify 落·**ETA≈04:20Z（12:20 CST）**。**DP-012 净测通过**（不带 PYTHONPATH rc=0=根治兑现）；两发现=dist 未重建（SDE 补建）/LOOP_WINDOW 仍须 env（已带）。三口径+联审 A/B（新基线）随报。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
