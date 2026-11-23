@@ -10990,3 +10990,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - A/B+comparability 候读数。DP-021 承录（他面件·台账注记）。
 
 ——BOD·2026-11-23T17:06:36+0800（date 现查原值·D-47 正形）
+
+### ㊿+1503 · resume9 在跑段7（9min+）·resume10 不存在（误读）·flash 疑云清（现查 2026-11-23T17:07:06+0800）
+
+- resume9：段7 score_skill_spawn 进行中（16:57 起·9min+·两席串行）·联审未起·**A/B 预计 17:15-17:45**（SDE 17:41 巡检在排）。
+- **resume10 不存在**（R-HY 无目录/无进程/无 session）——「resume10 首生效观察」来源待核（疑计划名/误读）。
+- **flash 疑云已清**：瞬态 flash=ignition 3 进程（wrapper/node tsx/preflight loader）或上轮孤儿残影——**非他席并行**。
+
+——BOD·2026-11-23T17:07:06+0800（date 现查原值·D-47 正形）
