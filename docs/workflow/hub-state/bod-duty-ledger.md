@@ -12082,3 +12082,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 其余 items 施工中（coo-1 委托 SDE 代跑·cos-1/cto-1/cho-1/cfo-1 候报）·点火前置备。
 
 ——BOD·${TS}（date 现查原值·D-47 正形）
+
+### ㊿+1645 · 点火前置·新 continue 件令流转值席（三绑·capture=1）
+
+- COS 请·落件位（SDE 判定）：`/srv/fleet/TriRMC/fade001-runs/shift-W48-resume10-20261123T115623Z/ceo-ruling.json`（prev 正身目录·非新 run_dir·非 cron/runs 根·旧 terminate 留原地双不读）。
+- 格式（DP-030 后硬性三绑）：`{decision:continue, ruling_ref:"DP-033-instruction-20261123T142455Z", signed_at:<现查>, run_id:"shift-W48-resume10-...", round_count:<与 SDE 核对勿猜>}`。
+- **一纸一轮告警**：continue 消费即写 .ceo-ruling-consumed.json → **本次点火仅 1 轮**（第2轮 preflight awaiting 停·符合 CEO「跑一轮」令意）；多轮连续=设计面候裁。
+- 新 runId=**shift-W48-resume11-20261123T142455Z**。
+- BOD 已流转值席（tmux capture=1）。
+
+——BOD·（date 现查原值·D-47 正形）
