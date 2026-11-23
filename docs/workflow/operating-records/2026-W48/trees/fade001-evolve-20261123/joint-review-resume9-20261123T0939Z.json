@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "shift-W48-resume9-20261123T085137Z",
+  "objects": {
+    "a": "周工作平面迁移质量",
+    "b": "fade-001 本身工作质量"
+  },
+  "dims_count": {
+    "a": 27,
+    "b": 26
+  },
+  "faces": {
+    "cos": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "flow integrity",
+          "score": 45.0,
+          "dimension_id": "cos-flow-integrity"
+        },
+        {
+          "object": "b",
+          "dimension": "flow integrity",
+          "score": 63.0,
+          "dimension_id": "cos-flow-integrity"
+        },
+        {
+          "object": "a",
+          "dimension": "ledger sync",
+          "score": 43.0,
+          "dimension_id": "cos-ledger-sync"
+        },
+        {
+          "object": "b",
+          "dimension": "ledger sync",
+          "score": 56.0,
+          "dimension_id": "cos-ledger-sync"
+        },
+        {
+          "object": "a",
+          "dimension": "review discipline",
+          "score": 48.0,
+          "dimension_id": "cos-review-discipline"
+        },
+        {
+          "object": "b",
+          "dimension": "review discipline",
+          "score": 52.0,
+          "dimension_id": "cos-review-discipline"
+        },
+        {
+          "object": "a",
+          "dimension": "gate & escalation compliance",
+          "score": 45.0,
+          "dimension_id": "cos-gate-compliance"
+        },
+        {
+          "object": "b",
+          "dimension": "gate & escalation compliance",
+          "score": 55.0,
+          "dimension_id": "cos-gate-compliance"
+        }
+      ],
+      "violations": []
+    },
+    "coo": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "节奏保真度",
+          "score": 35.0,
+          "dimension_id": "coo-a1"
+        },
+        {
+          "object": "a",
+          "dimension": "门禁卫生",
+          "score": 20.0,
+          "dimension_id": "coo-a2"
+        },
+        {
+          "object": "a",
+          "dimension": "恢复闭环率",
+          "score": 22.0,
+          "dimension_id": "coo-a3"
+        },
+        {
+          "object": "b",
+          "dimension": "迁移停机窗",
+          "score": 40.0,
+          "dimension_id": "coo-b1"
+        },
+        {
+          "object": "a",
+          "dimension": "经营记录完整性",
+          "score": 38.0,
+          "dimension_id": "coo-b2"
+        },
+        {
+          "object": "b",
+          "dimension": "经营记录完整性",
+          "score": 48.0,
+          "dimension_id": "coo-b2"
+        }
+      ],
+      "violations": []
+    },
+    "cao": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "制度闭环度",
+          "score": 30.0,
+          "dimension_id": "cao-1"
+        },
+        {
+          "object": "b",
+          "dimension": "制度闭环度",
+          "score": 36.0,
+          "dimension_id": "cao-1"
+        },
+        {
+          "object": "a",
+          "dimension": "留痕可审性",
+          "score": 60.0,
+          "dimension_id": "cao-2"
+        },
+        {
+          "object": "b",
+          "dimension": "留痕可审性",
+          "score": 56.0,
+          "dimension_id": "cao-2"
+        },
+        {
+          "object": "a",
+          "dimension": "评审机制完整性",
+          "score": 26.0,
+          "dimension_id": "cao-3"
+        },
+        {
+          "object": "b",
+          "dimension": "评审机制完整性",
+          "score": 33.0,
+          "dimension_id": "cao-3"
+        },
+        {
+          "object": "a",
+          "dimension": "效力边界诚实度",
+          "score": 40.0,
+          "dimension_id": "cao-4"
+        },
+        {
+          "object": "b",
+          "dimension": "效力边界诚实度",
+          "score": 58.0,
+          "dimension_id": "cao-4"
+        }
+      ],
+      "violations": []
+    },
+    "cpo": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "需求-实现对齐度",
+          "score": 38.0,
+          "dimension_id": "cpo-1"
+        },
+        {
+          "object": "b",
+          "dimension": "需求-实现对齐度",
+          "score": 58.0,
+          "dimension_id": "cpo-1"
+        },
+        {
+          "object": "b",
+          "dimension": "需求承载完整性",
+          "score": 52.0,
+          "dimension_id": "cpo-2"
+        },
+        {
+          "object": "a",
+          "dimension": "评审形有效性",
+          "score": 33.0,
+          "dimension_id": "cpo-3"
+        },
+        {
+          "object": "a",
+          "dimension": "产品语义可判性",
+          "score": 38.0,
+          "dimension_id": "cpo-4"
+        },
+        {
+          "object": "b",
+          "dimension": "产品语义可判性",
+          "score": 61.0,
+          "dimension_id": "cpo-4"
+        }
+      ],
+      "violations": []
+    },
+    "cto": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "架构约束与实现一致性",
+          "score": 58.0,
+          "dimension_id": "cto-1"
+        },
+        {
+          "object": "b",
+          "dimension": "架构约束与实现一致性",
+          "score": 62.0,
+          "dimension_id": "cto-1"
+        },
+        {
+          "object": "a",
+          "dimension": "交付路径与门禁完整性",
+          "score": 34.0,
+          "dimension_id": "cto-2"
+        },
+        {
+          "object": "b",
+          "dimension": "交付路径与门禁完整性",
+          "score": 48.0,
+          "dimension_id": "cto-2"
+        },
+        {
+          "object": "a",
+          "dimension": "质量门与可追溯性",
+          "score": 44.0,
+          "dimension_id": "cto-3"
+        },
+        {
+          "object": "b",
+          "dimension": "质量门与可追溯性",
+          "score": 50.0,
+          "dimension_id": "cto-3"
+        },
+        {
+          "object": "a",
+          "dimension": "技术风险与可回滚性",
+          "score": 38.0,
+          "dimension_id": "cto-4"
+        },
+        {
+          "object": "b",
+          "dimension": "技术风险与可回滚性",
+          "score": 42.0,
+          "dimension_id": "cto-4"
+        },
+        {
+          "object": "b",
+          "dimension": "双形/切换行为等值",
+          "score": 36.0,
+          "dimension_id": "cto-5"
+        }
+      ],
+      "violations": []
+    },
+    "cho": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "岗位责任归属清晰度",
+          "score": 42.0,
+          "dimension_id": "cho-1"
+        },
+        {
+          "object": "b",
+          "dimension": "岗位责任归属清晰度",
+          "score": 56.0,
+          "dimension_id": "cho-1"
+        },
+        {
+          "object": "a",
+          "dimension": "交接与留痕链完整性",
+          "score": 46.0,
+          "dimension_id": "cho-2"
+        },
+        {
+          "object": "b",
+          "dimension": "交接与留痕链完整性",
+          "score": 59.0,
+          "dimension_id": "cho-2"
+        },
+        {
+          "object": "a",
+          "dimension": "评审闭环与意见消化率",
+          "score": 35.0,
+          "dimension_id": "cho-3"
+        },
+        {
+          "object": "b",
+          "dimension": "评审闭环与意见消化率",
+          "score": 58.0,
+          "dimension_id": "cho-3"
+        },
+        {
+          "object": "a",
+          "dimension": "授权与批权合规",
+          "score": 52.0,
+          "dimension_id": "cho-4"
+        },
+        {
+          "object": "b",
+          "dimension": "授权与批权合规",
+          "score": 70.0,
+          "dimension_id": "cho-4"
+        },
+        {
+          "object": "a",
+          "dimension": "岗位覆盖与负载合理性",
+          "score": 39.0,
+          "dimension_id": "cho-5"
+        },
+        {
+          "object": "b",
+          "dimension": "岗位覆盖与负载合理性",
+          "score": 53.0,
+          "dimension_id": "cho-5"
+        }
+      ],
+      "violations": []
+    },
+    "cfo": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "成本读数可分解性",
+          "score": 30.0,
+          "dimension_id": "cfo-cost-decomposability"
+        },
+        {
+          "object": "b",
+          "dimension": "成本读数可分解性",
+          "score": 40.0,
+          "dimension_id": "cfo-cost-decomposability"
+        },
+        {
+          "object": "a",
+          "dimension": "预算护栏在位率",
+          "score": 30.0,
+          "dimension_id": "cfo-guardrail-presence"
+        },
+        {
+          "object": "b",
+          "dimension": "预算护栏在位率",
+          "score": 50.0,
+          "dimension_id": "cfo-guardrail-presence"
+        },
+        {
+          "object": "b",
+          "dimension": "单位经济可算性",
+          "score": 35.0,
+          "dimension_id": "cfo-unit-econ-computability"
+        },
+        {
+          "object": "a",
+          "dimension": "两轴分立合规",
+          "score": 95.0,
+          "dimension_id": "cfo-two-axis-separation"
+        }
+      ],
+      "violations": []
+    }
+  },
+  "dimension_table_version": "v1",
+  "seat_means": {
+    "a": 41.04,
+    "b": 50.25,
+    "seats_a": 7,
+    "seats_b": 7
+  },
+  "comparability": {
+    "prev_run": "shift-W48-resume4-20261123T053031Z",
+    "jaccard_a": 0.0,
+    "jaccard_b": 0.0,
+    "note": "dimension-name Jaccard vs previous round; analysis only, not in scoring"
+  }
+}
