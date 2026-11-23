@@ -10691,3 +10691,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候 CEO 两裁不变。
 
 ——BOD·2026-11-23T15:12:21+0800（date 现查原值·D-47 正形）
+
+### ㊿+1466 · **「无在跑链」根因=debug 轮间裁决门 absent 挂起（设计内停点·非故障）**（现查 2026-11-23T15:13:49+0800）
+
+- **CTO 代码实证**（round_runner.ts bba27a0）：flag===debug → awaitCeoRuling → **ruling==='absent' → return {exit:null}（挂起·fail-closed 候裁决）**——resume4 轮1 毕（debug 态）→候 ceo-ruling absent→进程挂起→**轮2 不自动起**（与 BOD 观察吻合·设计内停点非故障）。
+- **续轮需两件**：①**落 ceo-ruling.json（continue）**（值席经 BOD 通道·同 11-29 族）②**重新点火**（挂起=进程已退非等待）。
+- **成本门 ⓒ ETA 15:18 在即**。
+- **两裁合并呈 CEO**：A 成本面（充值续跑／接受截断·轮1 读数已档可复用）；B 轮面（若续=ceo-ruling 落件+重新点火·COO 督办）。
+
+——BOD·2026-11-23T15:13:49+0800（date 现查原值·D-47 正形）
