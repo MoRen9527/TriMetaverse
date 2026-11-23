@@ -12656,3 +12656,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 通知面：COS/SDE/CAO（判据更新+铸条候选）·CTO 知会。链续跑不受影响（SDE 盯段 7→联审·约 04:12 终判）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1732 SDE 判据 v2 入 SOP（sde-deploy-check-sop-20261123.md·「点火放行判据 v2」段·commit **b0946288c**·亲签件四校验+批件核证正形 git show <commit>:<path> 一步+落款禁手写）——CEO 裁 B 已闭入 SOP 面；补签归档件候 CEO 签署动作（BOD 落件→SDE 四校验核）。链续跑（04:12 终判核在位）。
