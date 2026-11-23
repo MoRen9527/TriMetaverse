@@ -11570,3 +11570,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三口径：score pass／exam **6/6**／trend cos 62.86/coo 42.86。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1583 · CEO 问联审卡哪席·已请 COO 报逐席明细（现查 2026-11-23T20:58:19+0800）
+
+- 联审已毕（39.4min·非卡席）——BOD 请 COO/SDE 报：**逐席耗时/compaction/最长席名**+是否有单席超 spawn_timeout（900s）。
+
+——BOD·2026-11-23T20:58:19+0800（date 现查原值·D-47 正形）
