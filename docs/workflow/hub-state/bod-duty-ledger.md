@@ -11378,3 +11378,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓：TriCompany 526fbc0（RDT 教程顶）·resume10 在跑（19:57 起·第 21 分钟）。
 
 ——BOD·2026-11-23T20:18:20+0800（date 现查原值·D-47 正形）
+
+### ㊿+1557 · 6min 拍（20:24）：R10 四件实证 1✓3 部分·④todo-list 绿 15/15（现查 2026-11-23T20:24:17+0800）
+
+- COO 1148/1149：R10 四件实证——**④todo-list 族断言绿（unittest 15/15）**·①✓·②③部分核+预期判（SDE 核 failure_class/close 字段）。
+- resume10 在跑（27 分钟）·TriCompany 顶 526fbc0。
+
+——BOD·2026-11-23T20:24:17+0800（date 现查原值·D-47 正形）
