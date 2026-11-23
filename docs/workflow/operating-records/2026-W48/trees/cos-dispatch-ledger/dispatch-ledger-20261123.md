@@ -124,6 +124,8 @@
 
 **DP-040/T4（DP-038 前置）已毕销账**（03:10:31·FSD）：TC **15d0d64**+RMC **6552655**·双产线 pull+冒烟全绿·五件落实（缺省改 debug/D1 §二勘正+历史 test 语义冻结/ensureFlagInit 初始化断言〔authority_ref=init:default-debug〕/遗留迁移兼容/preflight check_flag_gate 恒在〔strict fail-closed·lenient warn 放行·queue-root skip〕）·测试 round **56/56**+chain **19/19**+preflight **64/64**——销账锚=15d0d64+6552655·**前置门开**（六件可发序）。
 
+**DP-042 取号**（04:04·A+B 热修·CEO 批「批 A+B 热修」）：A=prompt spec 热修（SDE 落·CTO 统筹）·B=parse 加固施工（FSD）·验收=CTO·呈批=BOD 呈 CEO 报告+请签→点火 resume14·状态=派发→在途。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |

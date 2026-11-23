@@ -1,0 +1,92 @@
+{
+  "schema": "fade-training-check-read/v1",
+  "run_id": "fade011-daily-20261124-033022",
+  "families": [
+    {
+      "name": "fade-001",
+      "all_present": true,
+      "missing": [],
+      "files": [
+        {
+          "file": "01-beginner-guide.md",
+          "exists": true,
+          "bytes": 13311,
+          "mtime": "2026-11-23T12:04:36.256Z"
+        },
+        {
+          "file": "02-product-guide.md",
+          "exists": true,
+          "bytes": 13899,
+          "mtime": "2026-11-15T06:58:17.348Z"
+        },
+        {
+          "file": "03-code-map.md",
+          "exists": true,
+          "bytes": 12849,
+          "mtime": "2026-11-15T06:58:23.943Z"
+        },
+        {
+          "file": "04-deep-research.md",
+          "exists": true,
+          "bytes": 11303,
+          "mtime": "2026-11-15T07:00:47.998Z"
+        },
+        {
+          "file": "05-trigger-chain-draft.md",
+          "exists": true,
+          "bytes": 37039,
+          "mtime": "2026-11-14T08:26:05.050Z"
+        },
+        {
+          "file": "README.md",
+          "exists": true,
+          "bytes": 12843,
+          "mtime": "2026-11-23T12:29:42.956Z"
+        }
+      ]
+    },
+    {
+      "name": "fade-011",
+      "all_present": true,
+      "missing": [],
+      "files": [
+        {
+          "file": "01-beginner-guide.md",
+          "exists": true,
+          "bytes": 6122,
+          "mtime": "2026-11-10T13:17:45.820Z"
+        },
+        {
+          "file": "02-product-guide.md",
+          "exists": true,
+          "bytes": 5099,
+          "mtime": "2026-11-10T13:18:24.148Z"
+        },
+        {
+          "file": "03-code-map.md",
+          "exists": true,
+          "bytes": 6728,
+          "mtime": "2026-11-10T13:19:05.483Z"
+        },
+        {
+          "file": "04-deep-research.md",
+          "exists": true,
+          "bytes": 7678,
+          "mtime": "2026-11-10T13:23:25.622Z"
+        },
+        {
+          "file": "fade-011-improvement-draft.md",
+          "exists": true,
+          "bytes": 2933,
+          "mtime": "2026-11-10T13:23:38.882Z"
+        },
+        {
+          "file": "README.md",
+          "exists": true,
+          "bytes": 4441,
+          "mtime": "2026-11-10T13:16:47.732Z"
+        }
+      ]
+    }
+  ]
+}
