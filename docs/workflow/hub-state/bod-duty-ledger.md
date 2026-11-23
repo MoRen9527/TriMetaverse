@@ -11070,3 +11070,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 若 generator 未自动产=手工补+根因勘记（「人工联审→生成器无桥」同族再现候勘）。
 
 ——BOD·2026-11-23T17:47:15+0800（date 现查原值·D-47 正形）
+
+### ㊿+1514 · **COS/CTO 勘正 charter 未生成真因=DP-017 prompt 五字段缺口→生成器 fail-closed 拒**（现查 2026-11-23T17:47:31+0800）
+
+- **真因**：DP-017 constrained prompt 未要求五字段（title/target/change/verify/rollback）→improvements 不合 schema→**生成器 fail-closed 拒**——**非"round 未触发"·非"人工联审无桥"**（DP-021 两阶段已生效=该生成·缺口在 DP-017 面）。
+- 追补已接：prompt 增「improvements ≥1 条·五字段齐」段（FSD 95913144·不新号）。
+- COS 手工补草稿计划：items 五字段全齐（照 generator 判据同标防二拒）候件到手即出稿→呈批件→BOD 转 CEO。
+- resume9 四顺面：段3 绿/compaction 3/violations0 absent0/**cost_settlement 首效**（DP-018 item7）。
+- "pending 指 resume4 旧卷"=旧卷残留指针如实（生成器拒后无新写·门件语义常驻有效）。
+
+——BOD·2026-11-23T17:47:31+0800（date 现查原值·D-47 正形）
