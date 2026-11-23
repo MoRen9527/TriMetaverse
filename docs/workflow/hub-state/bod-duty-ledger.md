@@ -12809,3 +12809,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 序列：全毕→CTO 验收→BOD 呈 CEO 报告+请签（B 档）→点火 resume15（号候签发）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1762 COS 回执（04:37）：charter-203018Z 批件填讫（status=approved·approval_time=2026-11-24T04:36:58+0800·dispatch_ref=DP-043）+**DP-043 子号表**（01 锚表接线 CTO+SDE/FSD／02 charter1/2/5 CTO／03 charter3 CAO／04 charter4 COS/COO）+**resume15 备号=shift-W48-resume15-20261123T203658Z**（自领第 15 笔：初写 203920Z 预填+2m22s 已勘·ts 预填族今日 5 犯正形固化=date -u 原样粘贴+写完复核）。施工在途。
