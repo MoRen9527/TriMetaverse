@@ -7,10 +7,10 @@
     "direction": "CEO 2026-11-23T18:01:49 方向定调照录（程序严谨固定工作/ skill 智能主观工作/三不原则/智能应对变化/自动进化≥95/不要过度设计）",
     "object_note": "⚠对象字母反差：召集 A=迁移/B=协议 vs 标尺卷 A=实现/B=迁移（两相反·本稿按名称口径+召集字母映射·防聚合错位）"
   },
-  "status": "draft_submission",
+  "status": "approved",
   "approver_pending": "CEO",
-  "approval_comment": "______",
-  "approval_time": "______",
+  "approval_comment": "CEO 批（BOD 转达·施工完点火跑一轮）",
+  "approval_time": "2026-11-23T19:51:38+0800",
   "items": [
     {
       "opinion_id": "R10-CTO-01",
@@ -90,5 +90,6 @@
     "max_per_seat": 5,
     "mainline_mapping": "逐条映射主线五要素",
     "no_new_mechanism": "零新机制设计（照 CAO/CEO 克制令）"
-  }
+  },
+  "auto_dispatch": true
 }
