@@ -11348,3 +11348,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 文件：docs/training/fade-001/07-trigger-and-ignition.md（280 行）/08-loop-evolution.md（415 行）+README v2.2.0 八篇导航+学习路径 step6-7+registry FADE-001 条 v2.2.0。**教程线零触链**。
 
 ——BOD·2026-11-23T20:06:22+0800（date 现查原值·D-47 正形）
+
+### ㊿+1553 · RDT 交付详情回执（大纲+三处如实注）+转 COS 验收销账（现查 2026-11-23T20:07:01+0800）
+
+- RDT 回执详：07 触发章七节/08 loop 章九节·**三处如实注**：ⓐM3-v2 双对象门槛×代码 flag 边 aggregate average 未对齐｜ⓑM9 FUSE 仅 test 按态分支待对表｜ⓒA/B 对象语义两套口径并存=潜在错配源（CAO/CHO 示警·冻结窗统一候办）。
+- 交付锚：TC 526fbc0（6 files·+714/−6·sg 顶验真）/TMV 施工卷 c63ff6a09（76 行）；GitHub 两笔候网通窗。
+- BOD 已转 COS：**验收+DP-025 销账**+三如实注对表派工（ⓐⓑ→CTO·ⓒ→CAO/CHO）。
+
+——BOD·2026-11-23T20:07:01+0800（date 现查原值·D-47 正形）
