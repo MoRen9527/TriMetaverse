@@ -87,6 +87,9 @@
 
 **DP-025 补号**（19:59·D-88·BOD 直转补登记）：DP-20261123-025=fade-001 教程更新（CEO 直令 BOD 转 RDT）——新增「触发」章（段 1 触发面+DP-022 段号错位如实注）+「loop」章（M1-M9+DP-016/019/020/021 实现对齐）·执行体 RDT·**已毕销账**（TC **526fbc0**〔6 files +714/−6·sg 顶验真〕+TMV 施工卷 c63ff6a09〔76 行·sg 顶〕——07-trigger-and-ignition.md 280 行+08-loop-evolution.md 415 行+README v2.2.0——销账锚=526fbc0+c63ff6a09·三如实注转 CTO 对表·GitHub 两笔候网通窗）。
 
+
+**DP-026 取号**（20:09·三如实注对表·DP-025 派生）：ⓐM3-v2 双对象门槛×代码 flag 边 aggregate average 未对齐→**CTO**｜ⓑM9 FUSE 仅 test 按态分支→**CTO**｜ⓒA/B 对象语义两套口径并存→**CAO/CHO 冻结窗统一**——CTO 主责 ⓐⓑ·CAO/CHO 协 ⓒ·状态=取号候各席对表卷。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
