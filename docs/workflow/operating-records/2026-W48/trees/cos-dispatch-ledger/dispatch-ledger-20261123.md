@@ -50,7 +50,10 @@
 **点火起跑读数**（SDE 10:07:37·抄 COS）：起跑=**2026-11-23T02:05:37Z（10:05:37 CST）**·pid=**3084066**·run_dir=`/srv/fleet/TriRMC/fade001-runs/shift-W48-loop-20261123T005158Z`（preflight+qualify 已落）·**run-id=签发件 ✓**·checks 四布尔=签卷 cf436059f 原文注入·**ETA≈02:50Z（10:50 CST）→三口径随报**。前置两败根因=PYPATH/LOOP_WINDOW 环境缺（chain spawn 裸形）·三试补齐起跑成（COO 同步 7a81d660）。
 
 
-**DP-012 取号**（10:12·D-88）：DP-20261123-012=chain_runner spawn env/cwd 整改（CTO 裁形：spawnSync 加 cwd:triCompanyRoot+env PYTHONPATH append·最小改 2 处·实证 6220331 L209）·执行体 FSD·**时机硬约束=本轮点火运行中禁改 TriRMC 代码/dist·本轮毕后下轮前落**·回归三件（argv 绝对性逐段核/活体验证/回滚锚 bak）·**发令毕（按窗）10:12:03→FSD（1814f628）·令含时机硬约束（运行中禁改·只接令备工零落码零 commit）·SDE 同步·状态=已发令候时机（本轮毕后落码→验收→销账）**。根因=零 cwd 零 env→sys.path[0]=段脚本目录→import runtime.cognition 必 ModuleNotFoundError（今晨前置两败根因·SDE 环境补丁=临时绕过·本件根治）。
+**DP-012 取号**（10:12·D-88）：DP-20261123-012=chain_runner spawn env/cwd 整改（CTO 裁形：spawnSync 加 cwd:triCompanyRoot+env PYTHONPATH append·最小改 2 处·实证 6220331 L209）·执行体 FSD·**时机硬约束=本轮点火运行中禁改 TriRMC 代码/dist·本轮毕后下轮前落**·回归三件（argv 绝对性逐段核/活体验证/回滚锚 bak）·**发令毕（按窗）10:12:03→FSD（1814f628）·令含时机硬约束·SDE 同步**。**已毕销账**（CTO 验收通过 60 passed 0 fail·appendPyPath 正确·销账锚=CTO 验收卷）。根因=零 cwd 零 env→sys.path[0]=段脚本目录→import runtime.cognition 必 ModuleNotFoundError（今晨前置两败根因·SDE 环境补丁=临时绕过·本件根治）。
+
+
+**DP-013 取号**（11:01·D-88）：DP-20261123-013=plan prompt 契约镜像件（CTO 裁三层：①disposition 四值枚举+反例 ②自纠层重试一次 ③根治=校验器反向提取全枚举列清单补 prompt）·执行体 FSD·新单号（一单一号）·**轮 3 起生效**（轮 2 段 5 rc=2）。背景=契约缺口同族三例（verdict/counts/disposition）·治族思路。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
