@@ -10090,3 +10090,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 判：**在途**（FSD 复验中·非断点）。
 
 ——BOD·2026-11-23T11:30:19+0800（date 现查原值·D-47 正形）
+
+### ㊿+1387 · **🔥resume 点火起跑（11:32:52·pid 3098499·runId=shift-W48-resume-20261123T033142Z）**（现查 2026-11-23T11:35:20+0800）
+
+- 起跑=03:32:52Z（11:32:52 CST）·**pid=3098499**·**runId=shift-W48-resume-20261123T033142Z（COS 签发·resume 型首用）**·**preflight pass**·**DP-012 净测通过**（spawn env/cwd 根修生效）·ETA≈04:20Z（**12:20 CST**）。
+- 两发现已报 COO/CTO（dist 重建缺口补建 + LOOP_WINDOW 更正）。
+- 本轮=修复轮（disposition 枚举+自纠门+零 null 门入 prompt）·读数随报。
+
+——BOD·2026-11-23T11:35:20+0800（date 现查原值·D-47 正形）
