@@ -9,6 +9,7 @@
 - **表症**：resume13 链 failed·turn/end=max-tokens
 - **真因**：max-tokens 终止（与 D-91 时代的 16384 截断同族——**但本轮 1M contextWindow 已生效（comp 0）·故非 context 截断·是 turn 级 max-tokens 上限**）
 - **三方证据**：
+  - **BOD 实锤（已在 ㊿+1735 卷面·COS 引录）**：`len=6832 / first_brace=0 / last_brace=4574`——**末 } 后尚有 2258 字节多余内容**（6832-4574-1）——**JSON 解析面铁证**：不是「没有 JSON」，是「JSON 已闭合但尾部有多余字节」——**B 件 parse 加固的根因数据**（parse 应容忍尾部或多段拼接检测）
   - **SDE 三向**（待补具体读数：链日志 turn/end / stage 读数 / 产物缺失面）
   - **BOD 实锤**（待补：实锤形）
   - **CTO 终稿**（待补：终稿结论）
