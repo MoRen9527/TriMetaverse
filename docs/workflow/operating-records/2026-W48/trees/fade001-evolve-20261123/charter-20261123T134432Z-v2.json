@@ -14,7 +14,7 @@
     ]
   },
   "approver_pending": "CEO",
-  "status": "pending_approval",
+  "status": "approved",
   "items": [
     {
       "opinion_id": "cos-1",
@@ -81,6 +81,8 @@
     "selection": "选维三步：①业务目标=本轮改进落实 ②相关席维=cos(gate/ledger)/coo(编排)/cpo(产品面)/cto(技术面)/cho(岗位)/cfo(成本)——6 席 ≥4 席✓ ③治理四维恒查（门禁/审批/成本/重复消费=检查项·非 items）",
     "result": "6 items 逐条对表全过（五字段全·跨 6 席·无改/删/增）——原 6 条全保留"
   },
-  "approval_comment": "______",
-  "approval_time": "______"
+  "approval_comment": "CEO 批（BOD 转达·施工完点火跑一轮）",
+  "approval_time": "2026-11-23T22:21:43+0800",
+  "auto_dispatch": true,
+  "dispatch_ref": "DP-20261123-033"
 }
