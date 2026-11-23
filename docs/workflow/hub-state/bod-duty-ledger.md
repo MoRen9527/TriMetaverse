@@ -12226,3 +12226,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **⑥charter 新生成**（23:09·**7 items**·pending_approval）——生成器连续两轮稳。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1663 · CTO 复核一致（两裁全价值兑现）+两件派办（新 charter 呈批/owner_seat 缺口）
+
+- CTO：①裁 D 闭环实证（rounds_run=1·轮2 rc=4 awaiting·消费戳生效·零残留·marker 删）②**裁 B（1M）大胜**（compaction 全席 0·联审 25.0min −36%·段7 6.1min）③A/B 35.81/43.65（表 v1.2 首读·跨表 0.85 符合预期·同表 1.0 已由 resume10 实证）④charter 连两轮稳 ⑤owner_seat 仍缺（R10-CHO-01 候 FSD）。
+- **BOD 两件派办**：①COS 出 23:09 charter（7 items）呈批件呈 CEO ②owner_seat 缺口取号补（FSD·说明上轮未生效因故）。
+
+——BOD·（date 现查原值·D-47 正形）
