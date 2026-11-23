@@ -10918,3 +10918,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CTO 两疑云全清**：并行席/违纪疑云=设计内（DP-013 自纠重试·单跑纪律未破）非纪律事件。
 
 ——BOD·2026-11-23T16:42:22+0800（date 现查原值·D-47 正形）
+
+### ㊿+1494 · **🎯DP-018 六项全毕（charter-060521Z 施工批完整兑现·M4-v2 全链首次闭环）+resume8 已 GO（480s）**（现查 2026-11-23T16:44:51+0800）
+
+- **item 完成表**：item7=0eb13f1（CFO cost_settlement）｜item5=DP-016 a7e40af（对表）｜**item1-4/6=f84dd36**（plan 生成面增强）。
+- **新 plan_enricher.py（CTO 认可泛化形·六面）**：①tree-facts collector（六字段含 sha256_16→run_dir/tree-facts.json·空形兜底）②observed/confidence 注入 ③index_assertions 动态周键 ④families owner 映射镜像 charter（A/E→COS·B→COO·C→CPO·D/F→CAO·F2→CPO due 11-23）+timebox/acceptance/depends_on ⑤staffing.raci ⑥carry_over owner 拆 accountable+consulted——接入=plan 落盘前 enrich（fail-open 零阻断）·chain 段3 argv 增 --tmv-root。
+- 测试：enricher 3 passed／plan 套 15 passed／chain 18/18。
+- **480s 三调已落 b130217**·**resume8 点火已 GO**。
+- **里程碑**：**charter-060521Z 施工批完整兑现——M4-v2 全链走通**（pending→CEO 批 c28a9642d→DP-018 施工→六项全毕）=**charter 生命周期首次完整闭环**。
+
+——BOD·2026-11-23T16:44:51+0800（date 现查原值·D-47 正形）
