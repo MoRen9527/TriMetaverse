@@ -12745,3 +12745,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO 一句·等点火读数。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1748 · **resume14 已点火（04:10:48·preflight 全绿）——A+B 修复首跑**
+
+- resume14 目录已建：ignite.log 04:10:48·preflight.json 04:10:58 **全绿**：healthz ok（trirmc 8710）/diverge synced（local=bare=a03750a）/ceo_ruling ok=continue·prev_run_dir=resume13·**prev_partial=true**（正确识别 failed 轮）·ruling_ref=DP-042-instruction-20261124T040959Z·signed_at=04:10:11（BOD continue 件被正确消费）/**flag_gate ok=strict·flag=debug**/model_supply green（deepseek-flash）。
+- 进程：ignite pid 3202690（etime 01:42·04:10:48 起）。段 7 联审=关键验证点（A+B 修复首验）。
+- 呈 CEO 一句·等段 7 读数。
+
+——BOD·（date 现查原值·D-47 正形）
