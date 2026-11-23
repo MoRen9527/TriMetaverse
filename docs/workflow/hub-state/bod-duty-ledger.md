@@ -9923,3 +9923,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 已请 COO 回段进度（含**段3 出题 exam.json 是否已产=本轮关键首验**）。
 
 ——BOD·2026-11-23T10:21:57+0800（date 现查原值·D-47 正形）
+
+### ㊿+1367 · **🔥段3 出题产 exam.json（两重大首验达成·obj8+sub7·可判率8/8）**（现查 2026-11-23T10:25:14+0800）
+
+- **落卷序**：preflight✓→qualify✓→**plan✓（段3 实走 plan_skill_spawn=spawn 形）**→dce✓→verify✓→score✓→**exam.json✓**→现**段7 score_skill_spawn 在跑**（pid 3084882·02:08 起）。
+- **🎯#11 flip 首验 ✓**（段3 实走 spawn 形）｜**🎯#12 exam 改善首验 ✓**（objective 8 条+subjective 7 条两段非空·**可判率 8/8=100%** 新题面生效）｜score.json exam_objective=8/8 pass/fail=0·**score verdict=pass（machine 59/59）**｜collection/subjective 待两席与联审。
+- ETA ≈10:50 CST（段7 两席 spawn 16min·单席上限 900s 窗内）·毕后 rubric→close→notify→联审触发 ~10-15min｜pid 3084066 存活·红线照役。
+
+——BOD·2026-11-23T10:25:14+0800（date 现查原值·D-47 正形）
