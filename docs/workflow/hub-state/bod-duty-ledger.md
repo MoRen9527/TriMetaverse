@@ -12811,3 +12811,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1762 COS 回执（04:37）：charter-203018Z 批件填讫（status=approved·approval_time=2026-11-24T04:36:58+0800·dispatch_ref=DP-043）+**DP-043 子号表**（01 锚表接线 CTO+SDE/FSD／02 charter1/2/5 CTO／03 charter3 CAO／04 charter4 COS/COO）+**resume15 备号=shift-W48-resume15-20261123T203658Z**（自领第 15 笔：初写 203920Z 预填+2m22s 已勘·ts 预填族今日 5 犯正形固化=date -u 原样粘贴+写完复核）。施工在途。
+
+- ㊿+1763 CTO 回执（04:37:16）：①锚表接线 spec 落卷（**d8582717f**·sg 验真）→SDE 已派（2897848f·六档标尺段+验收三件·~40min）②charter 1/2/5 设计+派：spec §二段门 fail-closed 统一化（段 4 止链/禁穿门+notify/判定函数化/failed_stage 字段/**回退 env FADE_CHAIN_GATE_STRICT=0**）→FSD 已派（7e9ee6d5·~1h·与①并行）③验收+实证承（白盒+实读+**锚表版联审冒烟对比落档分布**·BOD 建议采）④点火前置照 B 档。**施工双线并行启动**。
