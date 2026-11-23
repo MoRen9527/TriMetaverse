@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "rN-task-20261123",
+  "source": {
+    "run_id": "shift-W48-loop-20261123T005158Z",
+    "round": null,
+    "opinion_ids": [
+      "cos-1",
+      "coo-1",
+      "cao-1",
+      "cpo-1",
+      "cto-1",
+      "cho-1",
+      "cfo-1"
+    ]
+  },
+  "approver_pending": "CEO",
+  "status": "pending_approval",
+  "items": [
+    {
+      "opinion_id": "cos-1",
+      "title": "34 条 agent_readings 逐案下沉 item_id、记录/活锚与可复核 evidence_ref",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-loop-20261123T005158Z/plan.json",
+      "change": "在 plan.json#/agent_readings 为 34 条逐条补 item_id（树用树名、顶层用文件名）、anchor_label∈{记录,活}、observed（卷名清单+路径+mtime 或 sha256，活件追加 state 三值）和 confidence；evidence_ref 由统一 preflight.json 改指新增 run_dir/readings-evidence.json#/<item_id>，preflight/qualify 只保留 week_math/hostname/gate 断言。删除 19 条逐字复用的『W47 扫描（锚 preflight）：one_shot 毕报/裁决卷…』模板句，逐案写一句记录/活理由。",
+      "verify": "jq -e '.agent_readings|length==34 and all(.[]; (.item_id|length>0) and (.anchor_label==\"记录\" or .anchor_label==\"活\") and (.observed|length>0) and (.confidence!=null) and (.evidence_ref|test(\"readings-evidence.json\")))' plan.json；抽 task-inventory、bod-tick、fade001-tenstage 三条，observed 卷名/mtime 与 rationale 对齐；readings-evidence.json 的每个 JSON Pointer 均可解析。",
+      "rollback": "改前 cp plan.json plan.pre-evidence.json；若下游 schema 不识别新字段，回退原数组与 preflight 引用，不动 disposition，并在 close.json 记未执行原因与 owner。"
+    },
+    {
+      "opinion_id": "coo-1",
+      "title": "补齐 top_level_moves 与逐件 dest，消解 migrate/carry 三向冲突",
+      "target": "plan.json#/top_level_moves",
+      "change": "新增 top_level_moves[8]：逐件 filename/action/disposition/sanction/owner/dest；company-demand-pool.md 补 dest=W48 同名件并把 migrate 数组与 counts.migrate 置 1；unresolved-items 二选一，迁则 dest=W48 同名未决件，封则删『W48 同名件已平移承接』并补封存位置；task-inventory 落 keep（W48 新日期戳件）或迁的明确 dest；agentcore-convergence-eval/bod-fade001-sprint-plan/fade001-loop-joint-review/fade001-tenstage-deploy 四棵逐棵复核，仍判 one_shot 须补毕报/裁决卷证据，否则改 active_tree_ongoing 或 pending_review{owner,due}；pending_review 非空时 verdict 改 conditional。",
+      "verify": "jq -e '(.top_level_moves|length)==8 and all(.top_level_moves[]; (.dest//\"\")!=\"\")' plan.json 全真；jq -e '.counts.migrate==(.migrate|length) and ([.agent_readings[]|select(.action==\"migrate\")]|length)==.counts.migrate'；四棵各有 one_shot_justification 或非 one_shot family；keep 树名集合仍 26 且集合不变。",
+      "rollback": "cp plan.json plan.pre-coo-20261123.json；只增 top_level_moves/pending_review 并改 migrate/counts，keep 原数组不删；任一件回读不明即回退该件为原 action 并在卷内记 unresolved。"
+    },
+    {
+      "opinion_id": "cao-1",
+      "title": "plan_skill_spawn 增补 readings 身份/证据/候裁必填字段",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/plan_skill_spawn.py",
+      "change": "把 _PLAN_PROMPT_HEAD 的 agent_readings schema 由 {agent,action,rationale,evidence_ref} 扩为 {item_id 或 tree, domain, family, anchor_label∈{记录,活}, observed, confidence, rationale, evidence_ref[], disposition, pending_review?}；顶层 8 件必须写真实文件名；evidence_ref 禁统一挂 preflight.json，须指承载 observed 的 run-dir 件；schema_ok 增字段非空校验，缺字段即 fail-closed 不落 plan。",
+      "verify": "下一轮 plan.json 的 34/34 条有 item_id/tree，且与 keep 的 26 棵树加 8 件顶层件集合逐字相等；34/34 的 evidence_ref 解析件含 observed 对应字段；任意 reading 缺 item_id/observed 时 plan 落 verdict=fail 且 exit 2；新增 pytest 覆盖缺字段拒产。",
+      "rollback": "把旧 schema 保留为 PLAN_SCHEMA_V1 常量，用 env PLAN_SKILL_SCHEMA=v1 回切；git revert 单提交；不删已落 plan 原件。"
+    },
+    {
+      "opinion_id": "cpo-1",
+      "title": "plan 契约补逐件身份与记录/活锚，未决项强制 pending_review",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/plan_skill_spawn.py",
+      "change": "把 agent_readings 的强制 schema 从 agent/action/rationale/evidence_ref 扩为 item_id|tree、anchor_label∈{记录,活}、observed（卷名+mtime 或 state 三值）、confidence、pending_review；malformed/低置信/family 复核项必须 pending_review=true 并带 owner/timebox；evidence_ref 只许指 run-dir 内承载 observed 的件，禁统一挂 preflight.json；families 每项补 owner/deadline/acceptance/depends_on，E2 的『12 类』改 7 类。",
+      "verify": "下一轮 jq 断言：34/34 readings 有 item_id 且与 keep 26 树+顶层 8 件一一对应；anchor_label 与 disposition 同向；pending_review 非空时 verdict≠pass；17 项 families 四字段非空；E2 数字=exam.subjective 长度 7；无 reading 的 evidence_ref 只指 preflight/qualify。",
+      "rollback": "保留 plan.schema-legacy.json 与 readings_legacy；schema 版本升 1.1.0，若 plan_scope/score_engine 不识别新键则回滚 schema 与新增字段，不删原数组、不改 disposition。"
+    },
+    {
+      "opinion_id": "cto-1",
+      "title": "修复 TC 子进程启动环境，消除 preflight ModuleNotFoundError",
+      "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+      "change": "在 makeChainRunner 的 spawnSync 调用中注入 cwd: paths.triCompanyRoot，并传 env: {...process.env, PYTHONPATH: [paths.triCompanyRoot, process.env.PYTHONPATH].filter(Boolean).join(path.delimiter)}；保留 pythonBin 与十段段序不变，新增 FADE_SPAWN_CWD=0 时回退旧行为。",
+      "verify": "在 test/fade001/chain_runner.test.ts 增加临时脚本用例：脚本仅 import runtime.cognition 即退出 0，且运行时清空外部 PYTHONPATH；npm test -- test/fade001/chain_runner.test.ts 应通过；再以空 PYTHONPATH 跑 ignite 到临时 run-dir，断言第 1 段 rc=0 且 preflight.json 落卷。",
+      "rollback": "FADE_SPAWN_CWD=0 恢复旧 spawn 形；若仍异常，git revert 该提交，preflight.py 与 TC 检出零改动。"
+    },
+    {
+      "opinion_id": "cho-1",
+      "title": "17 项 families 与 8 件顶层件补 owner/due/acceptance 与 dest，先签后迁",
+      "target": "plan.json",
+      "change": "为 families 的 A1–E3 共 17 项逐项增 owner（席位）、due（W48 内日期）、acceptance（可机判断言）、depends_on；新增 top_level_moves[]，company-demand-pool.md 与 unresolved-items 各写 dest/owner/signoff_ref，未签 dest 的迁移项落 pending_review；counts 与 action/disposition/sanction 三字段同向。",
+      "verify": "jq：17/17 的 owner/due/acceptance/depends_on 非空；top_level_moves 每条 dest/owner/signoff_ref 非空且与 action 同向；存在 pending_review 时 plan.verdict≠pass；counts.migrate 与顶层 action=migrate 条数一致。",
+      "rollback": "改前 cp plan.json plan.pre-signoff.json；若席位或 dest 未确认，回滚新增字段但保留 pending_review 原因，不删原 keep/carry 条目。"
+    },
+    {
+      "opinion_id": "cfo-1",
+      "title": "dce 填实参并真跑四步，禁 dry_run 空参判 pass",
+      "target": "dce.json",
+      "change": "steps[1].cmd 补 --start-date 2026-11-23 与 --operating-root /srv/fleet/TriCompany（与 preflight 同源运行根）；pull/migrate/commit/push 按序真跑并把 rc 写为整数；overflow_checks 三项逐项落 checked=true 加 observed，未授权项写 checked=false 加 not_applicable_reason 加 recheck_at；仅当四步 rc=0 且 overflow 全有结论时 verdict=pass，否则 blocked。",
+      "verify": "jq 校验 steps[1].cmd 经 shlex 拆分后 --start-date=2026-11-23 且 --operating-root 非空；steps[*].rc 全为整数；3/3 overflow 项含 checked 且含 observed 或 reason 加 recheck_at；verdict=pass 时无 rc 非 0、无 checked=false 无理由项。",
+      "rollback": "改前 cp dce.json dce.pre-run.json；若真跑任一步失败，恢复 dce.pre-run.json 并把 verdict 改 blocked、在 overflow_checks 写失败读数，禁以 dry_run 冒充通过。"
+    }
+  ]
+}
