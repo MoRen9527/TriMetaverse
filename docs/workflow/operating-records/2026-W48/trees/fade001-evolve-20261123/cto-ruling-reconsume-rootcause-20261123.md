@@ -45,6 +45,16 @@ debug 态**新轮启动前**核「本轮专属 ruling 件」：`vol.run_id === p
 - 观察点：修复后 resume 轮=每轮需新 ruling 件（值席落件形照 11-29 SOP 变每轮一次）；
 - **本卷=根因正身**（CEO 面裁急修时直接引）。
 
+## §六 · 勘正与新发现（SDE 两查读数·2026-11-23 21:31）
+
+**①消费面勘正（本席自领）**：本卷 §一 指向 `awaitCeoRuling`（round_runner·queue-state 面）——**SDE 实读修正：实际消费面=preflight 的 `check_ceo_ruling`**（逐轮重读 **prev_run_dir** 的裁决件·**轮 1/轮 2 同件放行实证** preflight.json 断言 `{state:continue, prev_run_dir:shift-W48-ignite-...175743Z, ruling_ref:6202b5aa6, signed_at:2026-11-22T18:23:27Z}`·mtime 轮 1=19:57/轮 2=20:55:20）——awaitCeoRuling 仅 debug 旗分支且 queue-state **无该文件**。⇒ **根因组件=preflight·修形须两处**（check_ceo_ruling 主修+awaitCeoRuling 防御性同修·件 schema 增字段两处同认）。
+
+**②新发现 A·自指解析缺陷**：check_ceo_ruling 现时只读复算→**prev 解析到自身 run dir**→awaiting-ruling ok=false（自排除仅靠「自身 preflight.json 空壳瞬间」·轮 1 毕后 close+pf 均存→**轮 3 若起将 exit 4 停链**）——修形加项：**prev 排除自身 run 的显式判据**。
+
+**③新发现 B·ignite 目录消失**：`shift-W48-ignite-20261122T175743Z` 整目录不在盘（其 ceo-ruling.json 曾签 18:23:27Z 且被消费）——**须查 20:55-21:30 间何操作移除**（SDE 面读取期无损·本席面 m-cto 无删目录操作）——**候 COO 面查各席操作记录**（并发写面审计项）。
+
+**④两件历史 continue 并存**：resume4 件（83B·signed 07:32:37Z）仍驻留——修形后历史件应标 consumed/归档（防误读）。
+
 ## §五 · 使用依据
 
 CEO 明示（21:27 BOD 转）+BOD 初疑+round_runner bba27a0 实读+SDE 报（resume5「prev=ignite·continue 件常驻=多次有效」实证）+D-15/D-24/D-27 v4/D-46/D-47。
