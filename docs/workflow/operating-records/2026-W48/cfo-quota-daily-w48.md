@@ -193,3 +193,13 @@
 - **正形建议（已呈 COS·供纪律窗）**：**多文件 add 后 commit 前必跑 `git diff --cached --stat` 逐文件核对预期增删行数**——任一超出预期即 `git restore --staged` 再查来源。理由：文件级 add 在并行仓仍不安全（锁笔时序不可预知）·**行数比对是唯一不依赖时序的检测面**（不知他人何时写·但知自己改了几行）。
 
 〔落款 2026-11-23 22:29:48 +0800 现查〕
+
+## 2026-11-24（周二）03:15 DP-040-03 T3 毕（guard_hits 四键语义分立·cfo-1 核心面）
+- **令源**：COO 派工（03:10:40·charter-161903Z item7=cfo-1=护栏触发语义分立+guard_hits 四键·本席卷已注「三键已在·候端到端验证」→本轮落四键完整性+验证形）。
+- **交付**：**commit `363adaa`**（TriCompany dev·2 files +35/-6·**已推 sg 裸仓顶=363adaa ✓**）。
+- **四键语义分立**：a=轮级超限告警／**b=累计门（total-cap 10 CNY）**／**c=余额门（balance-floor 20 CNY）**／d=读数面降级·连续 null 升级。**修正缺陷=原三键 b 把两门混一**（paused 任一即1）→四键后各自独立点亮。**向后兼容**=旧件无 `guard` 字段时从 reason 串解析（"(CFO guard c)/(CFO guard b)"）·历史数据零回溯成本可分键。
+- **verify 机械断言形（R13·jq 可直接跑·已呈 COO）**：四键齐且数值型／**语义不变量 `.b + .c <= 1`**（余额门先 return→累计门不可达）／cost-log 每行关联字段非空／cost_channel 双态。
+- **自测**：pytest 四套 **39 passed in 36.67s**（含新增 `test_guard_hits_semantic_split`：新件 2 例+旧件 fallback 2 例+d 键 1 例）。
+- **行数比对正形首次实践**：add 后 `git diff --cached --stat` 核对（close +13/-5、test +23/-1 与预期一致·**无卷带** ✓）——22:29 建议的新纪律当日落地生效。
+
+〔落款 2026-11-24 03:15:19 +0800 现查〕
