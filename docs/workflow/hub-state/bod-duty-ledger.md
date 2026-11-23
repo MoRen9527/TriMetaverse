@@ -12623,3 +12623,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **DP-041 候选登记**（挂载前核批据件机械闭环·候 CEO 批入任务书）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1726 COS 备批据件形（03:46）：落位=resume12 run_dir/ceo-charter-approval.json·模板七字段（charter_ref+charter_commit 056086364+approved_by:CEO+approved_at+order_ref+quote+signature_slot）·校验四件（approved_by==CEO/approved_at 非空非模糊/charter_ref+commit 非空/signature_slot 非空=批据可用）·**三角分立：COS 备形·BOD 凭 CEO 明示落件·CEO 本体签署**——三件其二齐（continue+runId）·差批据一件。BOD 呈 CEO 请求签署令。
