@@ -82,7 +82,7 @@
 **DP-017 追补毕销账**（17:47:26·CTO 验收）：1da5242（五字段+no-improvement 显式条·dimensions 不变）·本机 loop **11 passed** ✓·未动运行中进程照纪律——销账锚=1da5242。**轮面预期**：round2 联审若部署后起=本轮见 improvements·否则 round3 生效（如实档）。
 
 
-**DP-024 取号**（19:52·R10 施工批·CEO 批讫 19:51:38）：9 items 分派——①先契约后施工→CTO ②exam 接线→CPO+FSD ③todo-list 族→CPO+FSD ④链稳定+failure_class→COO+FSD ⑤owner_seat 六字段→CHO+FSD ⑥消化率读数→CHO+FSD ⑦close 双字段→COS 自办 ⑧ceo_ruling 补→CFO/值席（11-29 前）⑨95 路线图→COO——**施工完+自测绿→直接点火**（CEO 令不需再呈报）·点火前四件照例·ETA 2-3h 各席并行。
+**DP-024 取号**（19:52·R10 施工批·CEO 批讫 19:51:38）：9 items 分派——①先契约后施工→CTO ②exam 接线→CPO+FSD ③todo-list 族→CPO+FSD ④链稳定+failure_class→COO+FSD ⑤owner_seat 六字段→CHO+FSD ⑥消化率读数→CHO+FSD ⑦close 双字段→COS 自办 ⑧ceo_ruling 补→CFO/值席（11-29 前）⑨95 路线图→COO——**施工完+自测绿→直接点火**（CEO 令不需再呈报）·点火前四件照例·ETA 2-3h 各席并行。**FSD 回执（19:55:50）**：码面四件毕（todo-list 族 CPO-02/failure_class COO-01/owner_seat+消化率 CHO-01·02/close 双字段 COS-01）·三仓 commit TC 8e6d067+TriRMC 0411c05+TMV 87a56cc63·四套件 72 passed+charter TS 11 passed·CFO-01 经勘=值席流程非码面（转 COO SOP 执行面）。**待三非码面件**：CTO-01 契约卷/CPO-01 exam 接线/COO-02 95 路线图——候 COO 点火令（施工完点火·CEO 已批）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
