@@ -10582,3 +10582,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **零改动照守**：本轮仅答复+只读取样·未改任何件。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1451 · 6min 拍㉚（14:20）：DP-016 落码（run_id 四形）+joint-review 上轮选取修（现查 2026-11-23T14:20:06+0800）
+
+- TriCompany 新落卷：**a7e40af**（DP-016·rubric run_id 正则四形 -loop|-ignite|-official|-resumeN）+**6189036**（joint-review 上轮选取=runId 名时间戳优先·mtime 仅兜底）——COS 901 落账（CTO 验收 62 passed 双记）。
+- TMV 顶 26c7f8b36（BOD 1450 答复）。
+- **r12 待批 charter-060521Z**（M4-v2 首用·呈 CEO）。
+
+——BOD·2026-11-23T14:20:06+0800（date 现查原值·D-47 正形）
