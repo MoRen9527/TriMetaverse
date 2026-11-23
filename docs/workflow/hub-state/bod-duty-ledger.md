@@ -9850,3 +9850,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **质量观察（如实·不阻点火）**：3/6 断言引用 plan.json 内 LLM 自写扩展字段（自指成分）——题面质量核一轮（CTO 条件 b·接分前置非点火前置）候收紧。
 
 ——BOD·2026-11-23T08:58:49+0800（date 现查原值·D-47 正形）
+
+### ㊿+1358 · 点火最后一步：值席 checks-json 四布尔（急转·capture=1）（现查 2026-11-23T09:01:42+0800）
+
+- **缺口**：--checks-json 必载（activation_gate.py _REQUIRED_KEYS）四布尔=A1_d1_d5_done/A2_whitebox_zero_new_red/A3_guard_anchors_ok/A4_equivalence_and_zero_touch（+可选 release_ref）。
+- **为何卡**：collect 位=值席面职责·件内零缓存零缺省→他席代填=attestation 伪造（SDE 拒绝=正形）。
+- BOD 急转值席（tmux capture=1·附模板+参照依据「你核后签非抄」）·**值到任秒 SDE 即点火**（点火令 08:58:25·九参备齐：run-dir/run-id shift-W48-loop-20261123T005158Z/from-to W47→W48/start-date 2026-11-23/roots/queue-root=round-queue-r12 新世代 fresh state round_count=0）。
+- 旁证：试出卷验材料在 run 面（dp010-exam-probe-20261123T004706Z/exam.json 5142B）。
+
+——BOD·2026-11-23T09:01:42+0800（date 现查原值·D-47 正形）
