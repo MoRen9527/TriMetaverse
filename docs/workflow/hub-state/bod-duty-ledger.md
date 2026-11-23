@@ -12337,3 +12337,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓无新·C 在跑（ETA ~00:02 CST）·点火令预置在 SDE。
 
 ——BOD·2026-11-23T23:54:24+0800（date 现查原值·D-47 正形）
+
+### ㊿+1678 · **点火阻塞：resume11 run_dir 无 ceo-ruling 件→急转值席落件（三绑）+三件实验全读数**
+
+- **阻塞**（SDE 23:55:40 实测）：resume11 run_dir 无 ceo-ruling.json（consumed-marker 亦无）→resume12 prev=resume11→continue 三绑件未落=preflight 必 awaiting exit 4。
+- BOD 已急转值席（capture=1）：落 `/srv/fleet/TriRMC/fade001-runs/shift-W48-resume11-20261123T142455Z/ceo-ruling.json`·形 `{decision:continue, ruling_ref:"shift-W48-resume12-20261123T151900Z", signed_at:<现查>, run_id:"shift-W48-resume11-20261123T142455Z", round_count:<与SDE核对>}`——件到即点火（C 已毕·前置余三件齐）。
+- **三件实验全读数**：plan 五断言（26 项合规·28/28·families 38 面未达）｜**DP-028 B/C 双验**（max=4 ✓／回退 max=1 ✓·**B 5.0min vs C 15.7min**·对生产基线提速 **5.5x** 超 →10min 目标）｜DP-035 6/6。
+
+——BOD·（date 现查原值·D-47 正形）
