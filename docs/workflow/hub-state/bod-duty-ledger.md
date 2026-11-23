@@ -11656,3 +11656,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **③候 SDE 补三件**（R-HY 面）：dsh 版本（/srv/fleet/dsh/package.json）/官方 context 能力（能否 1M·provider 接受度）/可调清单（--max-context 类 or overlay 键）→CTO 整合供下份任务书。
 
 ——BOD·2026-11-23T21:07:11+0800（date 现查原值·D-47 正形）
+
+### ㊿+1594 · SDE 补核 dsh 三件：无 1M 旋钮·唯一可调=overlay contextWindow（双处·五文件引用）
+
+- ①dsh=**本地包装 v1.0.0**（底层 @deepseek-ai/dsh 0.2.0-rc.2·非 CC）②**1M 无现成旋钮**（CLI/docs/schema 均无 context 参）·能力上限=provider 真值候外网核 ③**唯一可调面=overlay model def contextWindow**（llm+llm-deepseek 双处同改）·**引用=5 文件**（含 score_skill_spawn·非 4）→改一处五席生效。
+- **风险**：调大→压缩少但**单请求 token↑（成本/延迟）**·provider 接受度须实测。
+- ⇒ 供下份任务书候选：overlay contextWindow 上调试验（含 provider 接受度实测+成本对照）。
+
+——BOD·（date 现查原值·D-47 正形）
