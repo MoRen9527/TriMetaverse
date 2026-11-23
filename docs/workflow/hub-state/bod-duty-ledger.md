@@ -12613,3 +12613,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 呈 CEO 快报：点火在即。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1725 · **点火闸三件：continue 件已落（BOD 代值席·三绑+sha）·CEO 亲签批据件=唯一余缺（呈 CEO）**
+
+- **SDE 抗核（03:43:27）**：continue 三绑件缺·号未到 SDE·**真闸=charter_approval="CEO" 待批态（未到 APPROVED_CEO）**·队列面无 CEO 批件痕迹——SDE 拒点火「除 CEO 明示外我不执」=正确纪律。
+- **COS 代码核实**：round_runner L128 charter_approval 枚举／L371/L421 门判据=APPROVED_CEO||APPROVED_COS／L434 hook 生成后设 'CEO'／**L446-462 tryCharterMount L457 推进=挂载副产品·代码无批据校验（人信缺口）**——「peer 转达≠可证 CEO 批」成立；COS 不代填 APPROVED_CEO（填批面=代批）正确；建议批据件 ceo-charter-approval.json+DP-041 候选（挂载前核批据件）。
+- **BOD 已落 continue 件**（值席不可达·14 会话无 m-duty-cos·sg 直通道正形）：resume12 面 ceo-ruling.json `{"decision":"continue","ruling_ref":"DP-040-instruction-20261124T031100Z","signed_at":"2026-11-24T03:45:16+0800","run_id":"shift-W48-resume12-20261123T151900Z","round_count":8}`·JSON_VALID·sha256=12e9d279…9023·属主归 fleet:fleet ✓。
+- 已回报 SDE（5ab33e74）/COS（8c361b9f）。**唯一余缺=CEO 亲签批据件**——呈 CEO 请求签署令。
+- **DP-041 候选登记**（挂载前核批据件机械闭环·候 CEO 批入任务书）。
+
+——BOD·（date 现查原值·D-47 正形）
