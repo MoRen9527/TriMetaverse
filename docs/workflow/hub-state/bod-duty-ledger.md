@@ -12065,3 +12065,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - COS 四件：①批件填（approval_time 22:21:43·status=approved·挂载 auto_dispatch）②**取号 DP-033 施工批**（6 items 分派 COS/COO/CPO/CTO/CHO/CFO·逐条验收照 verify 列·D-88 三步）③**施工完+自测绿→点火跑一轮**——点火前置：**terminate 件仍在**→须为新轮落**本轮专属 continue 件**（新 schema 含 run_id/round_count·三绑）+清场双零+门态+号+480s ④回执含批件路径/分派表/施工 ETA。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1643 · charter v2 批件填讫+DP-033 分派表（六席·ETA 半至一小时）+点火前置
+
+- 批件：trees/fade001-evolve-20261123/charter-20261123T134432Z-v2.json（d543442e7·**approved**·approval_time 22:21:43·auto_dispatch·dispatch_ref=DP-033·断言过）。
+- **DP-033 分派**：cos-1 COS（close.json 三 ref+manifest·target=R-HY run 产物·15min）｜coo-1 COO（dce 实参四步·禁 dry_run pass·委托 SDE 20f4a4b6·半小时内）｜**cto-1 CTO（判据已出=真读代码 dce_steps.py 三锚·现态缺陷确证 verdict=pass 无检也 pass·施工归 COO 面落·即达）**｜cpo-1 CPO（OP/plan 键面·候报）｜cho-1 CHO（评分口径/FUSE 默认面·候报）｜cfo-1 CFO（cost-log 四字段·**其 delta null 真因修复**·候报）。
+- **点火前置**：新 continue 件三绑（旧 terminate/旧 continue 作废）+清场双零+新 runId 候 SDE 签发+480s+点火令 COO→SDE。
+- ETA：各席半至一小时·全毕+自测绿→点火。
+
+——BOD·（date 现查原值·D-47 正形）
