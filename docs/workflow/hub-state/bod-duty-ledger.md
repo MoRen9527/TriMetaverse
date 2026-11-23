@@ -12249,3 +12249,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ④建议：DP-024 台账加勘正注（COS 已落 1003+可回填）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1666 · 呈批·charter-20261123T150927Z（32cd25760·7 items 五字段全·M4-v2 形）
+
+- 呈批件：trees/fade001-evolve-20261123/cos-batch-submission-charter-150927Z-20261123.md（**32cd25760**）+原文 charter-20261123T150927Z.json（**5078dad5a**·8466B 逐字节·SDE 交付）。
+- **7 items**（六席视角·五字段全·7/7 True）：cos-1（verify 断言链 run_id fail-closed 时序）｜coo-1（链硬时点轮次标签时序）｜cao-1（三链归口并档 close 闭环）｜cpo-1（W48 产出清单↔34 项 RACI）｜cto-1（dce 单执行脚本闭合）｜cho-1（RACI 34 项并入七席维度）｜cfo-1（成本异常 auto fail-safe/manual fail-open）。
+- 出稿注记：v1.2 对表过（六席≥4✓）·comparability 0.85（待原文核·异表不混判 D-89）·owner_seat 已 DP-035 补（与 cho-1 非同一项）·**DP-028 候融未入本 charter（候 CEO 示意是否并入）**。
+- 批时点位空·COS 只出稿不代批（M4-v2）·**呈 CEO 批**。
+
+——BOD·（date 现查原值·D-47 正形）
