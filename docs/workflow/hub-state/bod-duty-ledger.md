@@ -11149,3 +11149,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓无新施工（TriCompany 顶 1da5242）。
 
 ——BOD·2026-11-23T18:06:23+0800（date 现查原值·D-47 正形）
+
+### ㊿+1524 · R10 任务书草稿+呈批件已出（72c6c48d7/ce47f6780·9 items）+字母反差解释承录（BOD 实读）
+
+- **字母反差**（COS 答）：非席标反——**标尺卷 A=实现度/B=迁移质量** vs **召集令 A=迁移/B=协议遵循**（两套体系字母相反映射·各席按对象名判分正确）；聚合前统一口径（§一 注），items 全用对象全称不用字母。
+- **R10 草稿**（charter-draft-R10-task-20261123.json·9 items·五字段·status=draft_submission）+呈批件（ce47f6780·口径统一注/七席明细/分歧显式/未解如实/距95不虚报）。
+- **9 items 实读**（详见正文大白话）：先契约后施工/exam 接线/todo-list 族+族点名入迁移器/链稳定+failure_class 归族/owner_seat 六字段/消化率读数/close 双字段/ceo_ruling 补(11-29 前)/95 路线图——**零新机制**。
+- **呈 CEO 批**（M4-v2 不代批·未批不进下一轮）。
+
+——BOD·（date 现查原值·D-47 正形）
