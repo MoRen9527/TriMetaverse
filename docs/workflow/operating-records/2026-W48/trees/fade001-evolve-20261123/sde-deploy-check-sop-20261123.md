@@ -15,6 +15,11 @@
 > **②TriCompany python 面 = 逐段/逐钩新进程载**（chain 每段 spawnSync python3·联审钩每轮新 python）→ **改 python 在跑链的后续段/后续钩即刻生效**——若改动有 bug 即在跑链后续段即崩（无隔离）。
 > ⇒ **改码面链空闲窗 = 双面硬要求**（TriCompany 改动同样适用）；链跑中改 python 须改后即时冒烟（防未验改动被在跑链吃到）。实证：resume10 轮 2 钩吃到 3a4e592（pull 带入）。
 
+## 读数基准纪律（2026-11-23 自领两笔假读数教训·CTO 同族自领）
+
+> **断言「目录/文件不存在」「解析异常」前，必先核工具默认参数真源**（代码 argparse default/env 可覆面）——实锚：误以 fade001-runs 为 preflight prev-runs-root（真默认=`/var/lib/trirmc/cron/runs`·L537），产出「ignite 目录消失」「自指解析缺陷」两笔假读数。**同族（CTO 自领）：消费他人读数须核源**——转引读数前独立验源，非直录。
+> **正形**：路径类断言三步=①读代码默认值（argparse default/env）②活体 glob/find 全盘 ③根因结论前复算（用正确根实跑只读复算）。
+
 ## 执行面精度注（2026-11-23 FSD 路径厘清承录）
 
 > **fade001 点火链经 `tsx` 直跑 `scripts/fade001-ignite.ts`（TS 源）→运行面直接载 src 全量代码；`dist/` 供 daemon/打包消费面与四证留档。** 故「改 TriRMC src」的生效判据分两径：①tsx 直跑面=src 在位即生效（无需 dist）②daemon/打包面=必重建 dist。毕报检查仍按三证（build+grep+check）执行=双面齐；但不得以「dist 未重建」推断 tsx 面未生效（反之亦然）。
