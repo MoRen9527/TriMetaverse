@@ -1,0 +1,82 @@
+{
+  "schema_version": "2.0.0",
+  "seat": "cfo",
+  "face": {
+    "dimensions": [
+      {
+        "object": "a",
+        "dimension": "成本读数可分解性",
+        "score": 32.0,
+        "dimension_id": "cfo-cost-decomposability"
+      },
+      {
+        "object": "b",
+        "dimension": "成本读数可分解性",
+        "score": 48.0,
+        "dimension_id": "cfo-cost-decomposability"
+      },
+      {
+        "object": "a",
+        "dimension": "预算护栏在位率",
+        "score": 30.0,
+        "dimension_id": "cfo-guardrail-presence"
+      },
+      {
+        "object": "b",
+        "dimension": "预算护栏在位率",
+        "score": 50.0,
+        "dimension_id": "cfo-guardrail-presence"
+      },
+      {
+        "object": "b",
+        "dimension": "单位经济可算性",
+        "score": 35.0,
+        "dimension_id": "cfo-unit-econ-computability"
+      },
+      {
+        "object": "a",
+        "dimension": "两轴分立合规",
+        "score": 95.0,
+        "dimension_id": "cfo-two-axis-separation"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "护栏触发语义分立并拆 guard_hits 四键",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/close_skill_spawn.py",
+        "change": "在 close/plan/score/loop_joint_review 四个 spawn 脚本中统一接入 FADE_TRIGGER：b0 不可得且 trigger=auto 时返回 rc=3 暂停（fail-safe），manual 保持 rc=0，仅写 cost_guard_warning_balance；_total_spent_cny 遇到 delta null 时不再按 0 求和，改为返回 None 并触发 d_null_escalation；把 guard_hits 由 a/b/c 拆为 a_round_over/b_total_cap/c_balance_floor/d_null_escalation，每个键与 pause reason 一一映射。",
+        "verify": "四案单测：b0=None 连续 3 轮时，auto rc=3、manual rc=0 且带 warning；b0=10 两种模式 rc=3；spent=10 两种模式 rc=3；b0=100/spent=0 rc=0。断言 close.cost_settlement.guard_hits 四个键都存在且可独立置 1，pause reason 含对应键名。",
+        "rollback": "改动前将四个脚本复制为 *.pre-guardfix-r12 并记录 sha256；任一单测失败即恢复四个副本与旧 a/b/c 三键，不重跑生产链。"
+      },
+      {
+        "title": "score 段读数行补 stage 并实采会话面、识别订阅面",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/score_skill_spawn.py",
+        "change": "score_skill_spawn 的 _write_cost_line 调用增加 stage=\"score_skill\"，使 cost-log 全行 stage 非空；close_skill_spawn 将 cost_settlement.transcript_readout 由 deferred 改为实际运行 cfo-token-meter.py --from/--to --runid 后回填 usage_events/tokens_in/tokens_out 与 status∈{collected,unavailable}；cost_settlement 增加 faces 三行（spawn/session/subscription），subscription 给 identified:false/owner/next_review。",
+        "verify": "用 jq 断言：cost-log 3 行 stage 全非空；transcript_readout.status∈{collected,unavailable}，且 collected 时 usage_events>0；cost_settlement.faces 含 spawn/session/subscription 三行且各有 status，subscription 有 owner/next_review。",
+        "rollback": "改动前复制 score/close 两个脚本为 *.pre-costface-r12，并保留 close.json 原 deferred 块；断言失败即恢复，不伪造 usage 数。"
+      },
+      {
+        "title": "余额探针密钥注入或整轮 blocked，禁 null 冒 0",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/chain_runner.py",
+        "change": "chain_runner 在每段 spawn 前从受控 env/密钥文件解析 DEEPSEEK_API_KEY 并注入子进程；缺失时整轮标 blocked，不进入 spawn；spawn 前后余额探读回填 balance_before_cny/balance_after_cny/delta_cny，delta 不可得写 probe_error 并保留不可得原因，禁止以 null 冒充 0 或宣称成本已核算。",
+        "verify": "在临时 run_dir 实际跑一段：cost-log 行 balance_before/after/delta 非 null，且 delta≈before-after；unset key 时 chain_runner rc!=0、close.verdict=blocked、unavailable_reason 非空。",
+        "rollback": "保留 chain_runner.py pre-cashreadout-r12 副本与当前 cost-log/close 原卷 sha256；失败即恢复，保留 unavailable 声明，禁用 0/估值补空。"
+      },
+      {
+        "title": "迁移四步接入预算门并落阶段成本行",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/dce_steps.py",
+        "change": "pull/migrate/commit/push 每步前都复用余额门（<20 暂停）与累计门（≥10 暂停），命中时 rc=3 且不写 git；四步各写 cost-log stage=dce_pull/dce_migrate/dce_commit/dce_push 与 started/finished/seat_count/delta；dry_run 时 cost_settlement 对 dce 四段显式 status=not_executed，不由空值冒充。",
+        "verify": "dry_run 案断言 cost_settlement.stages 含 dce_* 四行且 status=not_executed；execute 案 4 行 delta 非空；b0<20 时 pull 前 rc=3，且 git 零写操作。",
+        "rollback": "保留 dce_steps.py pre-dceguard-r12 副本；失败即恢复，dce 保持 dry_run 骨架，不执行 pull/migrate/commit/push。"
+      },
+      {
+        "title": "消 close 成本陈注并纳 7 席联审读数",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/close.json",
+        "change": "把 close.json#/upgrade_list 成本条『cost-log.jsonl 仅 2 行』改为按实际行数动态生成（当前 3 行，联审后 4 行）；cost_settlement.stages 增 loop_joint_review 段（7 席/started/finished/duration/delta 或 unavailable_reason）；在 settled_at 后增 reconcile 记录，说明 close 时点与联审时点差异，禁陈注覆盖新行。",
+        "verify": "python3 断言 close.upgrade_list 成本条引用的行数 == wc -l cost-log.jsonl；cost_settlement.stages 含 loop_joint_review 且 seats 长度==7；reconcile 记录非空，且 settled_at 不早于 cost-log 末行 ts。",
+        "rollback": "改动前复制 close.json 为 close.pre-costnote-r12 并记录 sha256；断言失败即恢复，保留原 cost_settlement 与 upgrade_list，不重发通知。"
+      }
+    ],
+    "violations": []
+  }
+}

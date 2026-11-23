@@ -1,0 +1,54 @@
+seat,object,dimension,score
+cao,a,制度闭环度,22.0
+cao,b,制度闭环度,25.0
+cao,a,留痕可审性,50.0
+cao,b,留痕可审性,47.0
+cao,a,评审机制完整性,26.0
+cao,b,评审机制完整性,31.0
+cao,a,效力边界诚实度,44.0
+cao,b,效力边界诚实度,51.0
+cfo,a,成本读数可分解性,32.0
+cfo,b,成本读数可分解性,48.0
+cfo,a,预算护栏在位率,30.0
+cfo,b,预算护栏在位率,50.0
+cfo,b,单位经济可算性,35.0
+cfo,a,两轴分立合规,95.0
+cho,a,岗位责任归属清晰度,39.0
+cho,b,岗位责任归属清晰度,52.0
+cho,a,交接与留痕链完整性,42.0
+cho,b,交接与留痕链完整性,55.0
+cho,a,评审闭环与意见消化率,30.0
+cho,b,评审闭环与意见消化率,47.0
+cho,a,授权与批权合规,41.0
+cho,b,授权与批权合规,60.0
+cho,a,岗位覆盖与负载合理性,33.0
+cho,b,岗位覆盖与负载合理性,50.0
+coo,a,节奏保真度,47.0
+coo,a,门禁卫生,33.0
+coo,a,恢复闭环率,16.0
+coo,b,迁移停机窗,34.0
+coo,a,经营记录完整性,45.0
+coo,b,经营记录完整性,52.0
+cos,a,flow integrity,30.0
+cos,b,flow integrity,42.0
+cos,a,ledger sync,26.0
+cos,b,ledger sync,38.0
+cos,a,review discipline,38.0
+cos,b,review discipline,46.0
+cos,a,gate & escalation compliance,26.0
+cos,b,gate & escalation compliance,36.0
+cpo,a,需求-实现对齐度,42.0
+cpo,b,需求-实现对齐度,39.0
+cpo,b,需求承载完整性,39.0
+cpo,a,评审形有效性,29.0
+cpo,a,产品语义可判性,38.0
+cpo,b,产品语义可判性,42.0
+cto,a,架构约束与实现一致性,42.0
+cto,b,架构约束与实现一致性,45.0
+cto,a,交付路径与门禁完整性,27.0
+cto,b,交付路径与门禁完整性,43.0
+cto,a,质量门与可追溯性,28.0
+cto,b,质量门与可追溯性,42.0
+cto,a,技术风险与可回滚性,30.0
+cto,b,技术风险与可回滚性,46.0
+cto,b,双形/切换行为等值,36.0

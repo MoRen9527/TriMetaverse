@@ -1,0 +1,87 @@
+{
+  "schema_version": "2.0.0",
+  "seat": "cao",
+  "face": {
+    "dimensions": [
+      {
+        "object": "a",
+        "dimension": "制度闭环度",
+        "score": 22.0,
+        "dimension_id": "cao-1"
+      },
+      {
+        "object": "b",
+        "dimension": "制度闭环度",
+        "score": 25.0,
+        "dimension_id": "cao-1"
+      },
+      {
+        "object": "a",
+        "dimension": "留痕可审性",
+        "score": 50.0,
+        "dimension_id": "cao-2"
+      },
+      {
+        "object": "b",
+        "dimension": "留痕可审性",
+        "score": 47.0,
+        "dimension_id": "cao-2"
+      },
+      {
+        "object": "a",
+        "dimension": "评审机制完整性",
+        "score": 26.0,
+        "dimension_id": "cao-3"
+      },
+      {
+        "object": "b",
+        "dimension": "评审机制完整性",
+        "score": 31.0,
+        "dimension_id": "cao-3"
+      },
+      {
+        "object": "a",
+        "dimension": "效力边界诚实度",
+        "score": 44.0,
+        "dimension_id": "cao-4"
+      },
+      {
+        "object": "b",
+        "dimension": "效力边界诚实度",
+        "score": 51.0,
+        "dimension_id": "cao-4"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "意见→条款→入册→生效闭环入 close 生成器（缺条款即 fail-closed）",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/close_skill_spawn.py",
+        "change": "扩展 _CLOSE_PROMPT_HEAD 的 close.json schema：新增 charter_ref、clauses[]（clause_id/title/register_commit/effective_at/source_opinion_ids）与 opinion_dispositions[].clause_id/register_commit/effective_at/state；state 只允许 adopted|rejected（rejected 必带 reason），deferred 不得作为终态；_build_close_fields 校验每条 opinion 与每个 upgrade_list 项均已挂 clause_id 且 register_commit 为真实 git commit、effective_at 非空，缺任一即 rc=2 不产 close.json。",
+        "verify": "单测：注入 cos-1/coo-1 两条意见但无 clauses → rc=2 且 close.json 不落；补 clauses 后 rc=0；python3 断言每个 opinion 与每个 upgrade_list 项均有 clause_id；git cat-file -e 每个 register_commit 成功；state 全为 adopted/rejected。",
+        "rollback": "改前 git rev-parse HEAD 并 cp close_skill_spawn.py close_skill_spawn.py.pre-clause；单测红即 git checkout 该文件并恢复 close.json 旧卷，保持 deferred，不重跑评分/不投递。"
+      },
+      {
+        "title": "留痕可复算：close_cli 强制 evidence[] sha256_16 + run_id 全段一致",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/close_cli.py",
+        "change": "assert_close_contract 把 evidence_hash_algo 从『有则检』改为『必填』：close.evidence[] 至少覆盖 plan/score/score-skill/dce/verify/close/opinions/tree-facts/exam 九件，每项 {stage_artifact, hash:'sha256_16:<16hex>'}，缺件或裸 hash 即 ok=false；新增 run_id_consistency 检查（12 个段产物 run_id 必须同串，verify/preflight/qualify/exam/tree-facts 缺 run_id 即红）；manifest.close_contract.ok=false 时不得落 run_state=ok。",
+        "verify": "python3 断言 close.evidence 覆盖 9 件且 hash 全带 sha256_16: 前缀；sha256sum 实算与 evidence 对比一致；12/12 段产物 run_id 同串；注入 verify.run_id='' → close_contract.ok=false 且 manifest.run_state!=ok。",
+        "rollback": "改前 cp close_cli.py close_cli.py.pre-evidence 并记 sha256；单测红即恢复该文件，不重跑评分、不投递。"
+      },
+      {
+        "title": "回填守恒与分歧档实装：joint-review 生成器加 refill_matrix/divergence",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/loop_joint_review_spawn.py",
+        "change": "run() 聚合段新增：①按 prev_run（preflight.ceo_ruling.prev_run_dir 或参数）读上一轮 opinions.json/charter，生成 refill_matrix[] 逐条对表 opinion_id→state∈{adopted,covered,deferred,rejected}+owner_seat+reason+evidence_ref；条数必须等于上轮 N，否则 verdict='fail: refill count mismatch' 且 rc=2（不落 joint-review.json/不派任务书）；②joint-review.json 增 divergence 段：按席 A/B 均分排序，列出档差≥2档的席对、差值、归因，显式写『不抹平』；③opinions.json 的 scores 改 list 形保留每席 A/B 同名维度双列（现 dict 会覆盖）。",
+        "verify": "单测：上轮 N=7、本轮 7 行→rc=0 且 len(refill_matrix)==7；删 1 行→rc=2 且 verdict 含 fail；两席 A/B 均分差≥10→divergence 段非空并列出档差；joint-review.faces keys==7 且每席 dimensions 同时含 object A/B；opinions.json 每席 A/B 维度数==表内 scope 数。",
+        "rollback": "改前 git rev-parse HEAD 并 cp loop_joint_review_spawn.py loop_joint_review_spawn.py.pre-refill；单测红即恢复，不重跑联审、不覆盖本轮 joint-review.json。"
+      },
+      {
+        "title": "成功面去虚标：联审触发读 close.run_state，partial/dry_run 不得判 ok",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/joint_review_trigger.py",
+        "change": "run_trigger 的准入从 manifest.run_state=='ok' 改为 close.json#/run_state=='succeeded' 且 close_contract.ok==true；manifest.run_state 与 notify_done.run_state 以 close.run_state 为单源（partial→partial，dce dry_run_not_executed→blocked），notify subject/route 去『成功面』，to/cc 为空时 status=not_delivered；score.json 外层 verdict 必须等于内层 score.verdict（fail/pending），verify strict=false/reasons=[] 时 verdict!=pass。",
+        "verify": "单测/断言：close.run_state=partial 时 trigger 产 skip 且 reason 引 partial；manifest.run_state==close.run_state==notify_done.run_state；notify subject 不含『成功面』且 to/cc 空⇒status!=sent；score.verdict==score.score.verdict；dce.verdict!=pass⇒plan.verdict!=pass。",
+        "rollback": "改前 cp joint_review_trigger.py joint_review_trigger.py.pre-state 并记 sha256；断言红即恢复，不重发通知、不改本轮已发 notify。"
+      }
+    ],
+    "violations": []
+  }
+}

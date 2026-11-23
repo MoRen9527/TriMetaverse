@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "seat": "cto",
+  "face": {
+    "dimensions": [
+      {
+        "object": "a",
+        "dimension": "架构约束与实现一致性",
+        "score": 42.0,
+        "dimension_id": "cto-1"
+      },
+      {
+        "object": "b",
+        "dimension": "架构约束与实现一致性",
+        "score": 45.0,
+        "dimension_id": "cto-1"
+      },
+      {
+        "object": "a",
+        "dimension": "交付路径与门禁完整性",
+        "score": 27.0,
+        "dimension_id": "cto-2"
+      },
+      {
+        "object": "b",
+        "dimension": "交付路径与门禁完整性",
+        "score": 43.0,
+        "dimension_id": "cto-2"
+      },
+      {
+        "object": "a",
+        "dimension": "质量门与可追溯性",
+        "score": 28.0,
+        "dimension_id": "cto-3"
+      },
+      {
+        "object": "b",
+        "dimension": "质量门与可追溯性",
+        "score": 42.0,
+        "dimension_id": "cto-3"
+      },
+      {
+        "object": "a",
+        "dimension": "技术风险与可回滚性",
+        "score": 30.0,
+        "dimension_id": "cto-4"
+      },
+      {
+        "object": "b",
+        "dimension": "技术风险与可回滚性",
+        "score": 46.0,
+        "dimension_id": "cto-4"
+      },
+      {
+        "object": "b",
+        "dimension": "双形/切换行为等值",
+        "score": 36.0,
+        "dimension_id": "cto-5"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "A 面迁移账与落点校正：bod-tick dest 实体化、keep/carry 拆账",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+        "change": "migrate[0].dest 改为实存的 2026-W48/trees/bod-tick（或显式建 indexes 文件并让 dest 存在）；counts 拆 tree_keep_inplace=20/tree_carry=5，keep[] 只留 20 棵 sealed，carry[] 5 棵逐件补 dest（对应 w48_backfill_ids）/owner/first_review/exit_criteria；top_level 8 件补 observed{path,file_count,total_bytes,sha256_16,mtime} 与结构化 dest；staffing.raci 33→34 键与 agent_readings 对齐；重写后重跑 verify。",
+        "verify": "python3 断言：os.path.exists(dest)；counts.keep==25 且 tree_keep_inplace==20 且 tree_carry==5 且 carry_over==2；len(carry)==5 且 dest/owner/first_review/exit_criteria 全非空；8/8 top_level observed 四元组非空；set(raci)==set(agent_readings.item_id) 且 len==34；verify.run_id 非空且 strict_mode==true。",
+        "rollback": "改前 cp plan.json plan.pre-cto12-fix.json 并记 sha256；任一断言失败即 cp 回退，保留原 plan 与 dce/verify 读数，不重跑评分、不投递。"
+      },
+      {
+        "title": "十段链单源化：TS/Python 段表对表 + dce/verify 真值门",
+        "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+        "change": "以一份 stage 表为唯一源（TS 与 runtime/cognition/chain_runner.py 同源生成或交叉断言）；TS 段 4 argv 补 --execute --start-date --operating-root，段 5 补 --run-id/--strict；每段后读产物 verdict，dce∈{dry_run_not_executed,blocked,fail} 即 ok=false 并停在 dce，禁入 verify/score/close/notify；补 score_rubric、七席 score spawn 与 notify 目标非空门。",
+        "verify": "node --import tsx --test test/fade001/chain_runner.test.ts；新增 case：stub dce verdict=dry_run_not_executed → ok=false 且 stagesRun 止于 dce；断言 TS/Python STAGES 名称/产物/dce argv 集合相等；实跑 dce.mode=='execute'、verify.run_id 非空且 strict_mode==true、notify_result.to 非空。",
+        "rollback": "改前记录 chain_runner.ts/chain_runner.py 的 git SHA 并复制 dce.json/verify.json；失败即 git checkout 两脚本并恢复副本，manifest 标 failed，禁发 notify_done。"
+      },
+      {
+        "title": "close/manifest/notify 单源 fail-closed",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/close_cli.py",
+        "change": "derive_run_state 改白名单：七段 verdict 全 pass 且 close_contract.ok==true 才 ok；dry_run_not_executed/unknown/partial/blocked 任一即 failed/partial 并写 failed_stages；close_contract.ok==false 时 manifest.run_state=failed；notify_done 仅 run_state=='ok' 且 contract.ok 且 to 非空才发送。",
+        "verify": "pytest runtime/cognition/test_close_cli.py -q；构造 dce.verdict=dry_run_not_executed、close.run_state_source=null 的 run_dir → manifest.run_state=='failed'、close_contract.ok==false、notify status!='sent'；本轮 resume12 重放断言不得再出现 ok/sent。",
+        "rollback": "改前复制 close_cli.py/manifest.json/notify_done.json 并记 sha256；断言失败即恢复三件并标 unscored，不重发通知。"
+      },
+      {
+        "title": "spawn-vs-CLI 契约/门等值 golden 对表",
+        "target": "/srv/fleet/TriCompany/runtime/cognition/test_close_skill_spawn.py",
+        "change": "close_skill_spawn 落卷前复用 close_skill._structure_gate 与 close_cli.assert_close_contract；新增 golden：同一 fixture 分别走 close_skill.py 与 close_skill_spawn.py（以及 plan_scope.py 与 plan_skill_spawn.py），归一化 run_id/check_time 后断言字段集与值域相等；补 score_skill 七席默认与 65/35 单源断言。",
+        "verify": "pytest runtime/cognition/test_close_skill_spawn.py runtime/cognition/test_plan_skill_spawn.py runtime/cognition/test_loop_joint_review_spawn.py -q；golden 归一化 dict 相等；故意删 spawn 侧 run_state_source/hash 时 golden 红；score_skill SEATS 默认 7 且 score weight_face==65/35。",
+        "rollback": "改前复制 close_skill_spawn.py/plan_skill_spawn.py/score_skill_spawn.py/score_engine.py 并记 sha256；失败即 git checkout 四脚本，保留 CLI 形现役，不投递。"
+      }
+    ],
+    "violations": []
+  }
+}

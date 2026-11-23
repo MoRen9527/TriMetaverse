@@ -1,0 +1,82 @@
+{
+  "schema_version": "2.0.0",
+  "seat": "cpo",
+  "face": {
+    "dimensions": [
+      {
+        "object": "a",
+        "dimension": "需求-实现对齐度",
+        "score": 42.0,
+        "dimension_id": "cpo-1"
+      },
+      {
+        "object": "b",
+        "dimension": "需求-实现对齐度",
+        "score": 39.0,
+        "dimension_id": "cpo-1"
+      },
+      {
+        "object": "b",
+        "dimension": "需求承载完整性",
+        "score": 39.0,
+        "dimension_id": "cpo-2"
+      },
+      {
+        "object": "a",
+        "dimension": "评审形有效性",
+        "score": 29.0,
+        "dimension_id": "cpo-3"
+      },
+      {
+        "object": "a",
+        "dimension": "产品语义可判性",
+        "score": 38.0,
+        "dimension_id": "cpo-4"
+      },
+      {
+        "object": "b",
+        "dimension": "产品语义可判性",
+        "score": 42.0,
+        "dimension_id": "cpo-4"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "补 W48 需求承载两行与逐族需求去向台账",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+        "change": "在 families/D 与 index_assertions.w48_loose_files 补 OP-202611-W48-001.json、OP-202611-W48-001.unresolved-items.md（7→9）；新增 requirement_trace，逐族点名 company-demand-pool（DEM-005~017 逐行）、OP-202611-W48-001.unresolved-items（现役区逐 ID）、task-inventory-20261123（逐行）、todo-list-20261123，逐项写 disposition∈{adopted,deferred,rejected,missing}+dest/owner/reason/evidence_ref；5 棵 carry 树逐棵补 dest/owner/first_review/exit_criteria；staffing.raci 删 3 个 W48-only 键、补 4 个 W47 键，键集对齐 34 条 agent_readings。",
+        "verify": "python3 断言：len(w48_loose_files)==9 且两 OP 件在列；requirement_trace 覆盖 DEM-005~017 十三行、未决现役区 19 单、task-inventory 8 行、todo-list 行；每项 disposition 与 reason 非空；5/5 carry 树 dest/owner/first_review/exit_criteria 非空；len(raci)==34 且 set(raci)=={r['item_id'] for r in agent_readings}。",
+        "rollback": "改前复制 plan.json 为 plan.pre-cpo-r12.json 并记 sha256；任一断言失败即恢复该副本，保留原 counts/families/readings，不重跑评分、不投递。"
+      },
+      {
+        "title": "七席意见编号化并落 R12 应答矩阵",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/opinions.json",
+        "change": "为 cos/coo/cao/cpo/cto/cho/cfo 各落至少一条 opinion_id=R12-<SEAT>-NN（五字段齐，target 指 run_dir 内件）；新增 response_matrix 覆盖 R10/R11/R12 全部去重意见，状态∈{adopted,rejected,deferred} 并写 reason/evidence_ref/owner_seat/due；close.opinion_dispositions 与矩阵同源，禁用『五字段缺口』回退已具五字段意见；七席分立不合并。",
+        "verify": "python3 断言：len(opinions)==7；每条 opinion_id 匹配 ^R12-(COS|COO|CPO|CTO|CHO|CFO|CAO)-[0-9]{2}$ 且 title/target/change/verify/rollback 非空；response_matrix 覆盖 R10/R11/R12 至少 14 条；每条 state∈{adopted,rejected,deferred} 且 reason/evidence_ref 非空；close 中 deferred 理由不得为『五字段缺口』。",
+        "rollback": "改前复制 opinions.json 与 close.json 为 *.pre-cpo-r12 并记 sha256；任一断言失败即恢复，保留原两席意见与 close 原 deferred 面，不重跑评审、不投递。"
+      },
+      {
+        "title": "score.json 单一 100 制 65/35 并消内外双 verdict",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/score.json",
+        "change": "以 score-skill.json#/weight_face 为唯一口径：machine_domain_weight=65、subjective_domain_weight=35、I 族 weight=35（I1/I2/I3=14/11/10），三域和=100；删除 59/31/10 与 I 族旧锚 I1=4/I2=3/I3=3；外层 verdict 由内层 score.verdict 实算，禁外层 pass 覆盖内层 fail；未判时 verdict=pending。",
+        "verify": "python3 断言：machine_domain_weight==65、subjective_domain_weight==35、三域和==100；I.weight==35；I.reasons 不含 I1=4/I2=3/I3=3；d['verdict']==s['verdict']；若 final 未判则 verdict=='pending'。",
+        "rollback": "改前复制 score.json 为 score.pre-cpo-r12.json 并记 sha256；任一断言失败即恢复原 59/31/10 与旧锚，标 pending，不重算机判、不投递。"
+      },
+      {
+        "title": "考卷机械化：65/35、34 案标签与族点名清单",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/exam.json",
+        "change": "objective 权重和改 65、subjective 改 35；新增 case_labels 覆盖 plan.agent_readings 34 条（item_id+记录/活标签+一句 rationale+evidence_ref）；新增 family_checklist 逐族点名 demand_pool/unresolved/task_inventory/todo_list/top_level/OP/cfo-quota/daily-progress/convene；score-skill 消费该卷并落逐案标签率。",
+        "verify": "python3 断言：sum(objective.weight)==65、sum(subjective.weight)==35；len(case_labels)==34 且 item_id 集==agent_readings 集；每条 label∈{记录,活} 且 rationale 非空；len(family_checklist)>=7 且逐族有 owner/disposition/evidence_ref。",
+        "rollback": "改前复制 exam.json 为 exam.pre-cpo-r12.json 并记 sha256；任一断言失败即恢复原题面与 40/60 权重，不重跑评分、不投递。"
+      },
+      {
+        "title": "未兑现项显式 blocked/deferred，禁 dry_run 与 pass 混同",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/dce.json",
+        "change": "若保持 dry_run，verdict=blocked 并写 blocked_reason；plan.families 中依赖 dce 的项 status=deferred/blocked 并写 owner/due/anchor；若实跑，migrate 补 --start-date 2026-11-23 与非空 --operating-root，四步 rc 写整数，3/3 overflow_checks checked；仅四步 rc=0 且 3/3 检毕 verdict=pass；同步 verify.strict_mode=true、run_id 回填、逐项 reasons 非空。",
+        "verify": "python3 断言：dce.mode=='dry_run' 时 verdict=='blocked' 且 blocked_reason 非空；plan 中依赖 dce 的 A/F 项 status∈{deferred,blocked} 且有 reason；verify.run_id==run_id 且 strict_mode is True 且 all(len(c['reasons'])>0)；实跑时四步 rc 为 int、migrate 命令含 --start-date 2026-11-23 与非空 --operating-root。",
+        "rollback": "改前复制 dce.json、verify.json、plan.json 为 *.pre-cpo-r12 并记 sha256；任一断言失败即恢复三副本，G 族维持 fail 读数，不执行 pull/migrate/commit/push。"
+      }
+    ],
+    "violations": []
+  }
+}

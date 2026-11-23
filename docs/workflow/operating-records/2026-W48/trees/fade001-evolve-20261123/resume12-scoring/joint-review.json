@@ -1,0 +1,633 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "shift-W48-resume12-20261123T151900Z",
+  "objects": {
+    "a": "周工作平面迁移质量",
+    "b": "fade-001 本身工作质量"
+  },
+  "dims_count": {
+    "a": 27,
+    "b": 26
+  },
+  "faces": {
+    "cos": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "flow integrity",
+          "score": 30.0,
+          "dimension_id": "cos-flow-integrity"
+        },
+        {
+          "object": "b",
+          "dimension": "flow integrity",
+          "score": 42.0,
+          "dimension_id": "cos-flow-integrity"
+        },
+        {
+          "object": "a",
+          "dimension": "ledger sync",
+          "score": 26.0,
+          "dimension_id": "cos-ledger-sync"
+        },
+        {
+          "object": "b",
+          "dimension": "ledger sync",
+          "score": 38.0,
+          "dimension_id": "cos-ledger-sync"
+        },
+        {
+          "object": "a",
+          "dimension": "review discipline",
+          "score": 38.0,
+          "dimension_id": "cos-review-discipline"
+        },
+        {
+          "object": "b",
+          "dimension": "review discipline",
+          "score": 46.0,
+          "dimension_id": "cos-review-discipline"
+        },
+        {
+          "object": "a",
+          "dimension": "gate & escalation compliance",
+          "score": 26.0,
+          "dimension_id": "cos-gate-compliance"
+        },
+        {
+          "object": "b",
+          "dimension": "gate & escalation compliance",
+          "score": 36.0,
+          "dimension_id": "cos-gate-compliance"
+        }
+      ],
+      "violations": [],
+      "improvements": [
+        {
+          "title": "dce 执行面收口：dry_run 不得进 verify/score/close",
+          "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+          "change": "段 4 argv 补 --start-date 2026-11-23 与非空 --operating-root；以 FADE_DCE_EXECUTE=1 显式 --execute，四步 rc 写整数；run() 在段 4 后读 dce.json，verdict != pass（含 dry_run_not_executed/blocked）即 ok=false 并止于 dce，禁入 verify/score/close/notify；overflow_checks 3/3 checked。",
+          "verify": "node --import tsx --test test/fade001/chain_runner.test.ts；stub dce verdict=dry_run_not_executed → out.ok=false 且 stagesRun 止于 dce；实跑 dce.mode=='execute'、steps[].rc 全整数、migrate.cmd 无空参、3/3 checked。",
+          "rollback": "改前保存 chain_runner.ts git SHA 与 dce.json 副本；断言失败即 git checkout 并恢复 dce.json，manifest 标 blocked，禁发 notify_done。"
+        },
+        {
+          "title": "verify 门禁回填 run_id/strict 并 fail-closed",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/verify.json",
+          "change": "回填 run_id=shift-W48-resume12-20261123T151900Z、strict_mode=true；5 项 checks 逐项写非空 reasons 与实测值；新增 run_id_consistency（plan/dce/verify/score 同串）与 check_time_order（plan<=dce<=verify<=score）；任一失败不得 verdict=pass。",
+          "verify": "python3 断言 run_id 同串且 strict_mode is True；all(len(c.reasons)>0)；含 run_id_consistency/check_time_order 且 ok；故意置一条 ok=false 时 verdict!=pass。",
+          "rollback": "改前复制 verify.json 为 verify.pre-strict.json 并记 sha256；失败即恢复，不重跑评分、不投递。"
+        },
+        {
+          "title": "close 四账重同步并补 verification anchor/六项回呈",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/close.json",
+          "change": "按当前 plan.json 重生成 upgrade_list 并逐条带 source 锚；补 charter_ref（指已批 charter）、dispatch_ref（DP 号）、receipt_ref、verification_anchor；补 gate_compliance.six_items 六项 hit/no-hit；opinion_dispositions 覆盖全部 7 条意见并写 adopted/rejected/deferred 理由；令 close.run_state=manifest.run_state=notify_done.run_state。",
+          "verify": "python3 断言 upgrade_list 每条 source 可在 run_dir 解析且不与 plan 现状相抵；charter_ref 非空且 charter.status=approved；len(six_items)==6；opinions 覆盖 charter 7 条；三处 run_state 同值。",
+          "rollback": "改前复制 close.json 为 close.pre-resync.json 并记 sha256；失败即恢复，保留原 plan/opinions，不重跑、不投递。"
+        },
+        {
+          "title": "plan 拆 keep/carry 两本账并对齐 34 键 RACI",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+          "change": "counts 增 tree_keep_inplace=20/tree_carry=5；新增 carry_trees[] 5 棵并逐棵补 dest/dest_state_ref/owner/first_review/exit_criteria；keep[] 仅留 20 棵 sealed；staffing.raci 对齐 34 条 agent_readings 键集并分列 accountable/responsible/due；16 项空 owner 按族补齐，acceptance 逐项机判。",
+          "verify": "python3 断言 counts.keep==25 且 tree_keep_inplace==20 且 tree_carry==5；len(keep)==20、len(carry_trees)==5 且无交集；5/5 dest/owner/first_review/exit_criteria 非空；len(raci)==34 且 set 等于 readings item_id 集；families owner 全非空。",
+          "rollback": "改前复制 plan.json 为 plan.pre-ledgerfix.json 并记 sha256；任一断言失败即恢复该副本，不重跑评分、不投递。"
+        },
+        {
+          "title": "charter 批准前置与 DP-回执-close 逐号串链",
+          "target": "/srv/fleet/TriRMC/src/fade001/round_runner.ts",
+          "change": "round_runner 在点火前断言 pending_charter_ref 对应 charter.status=approved（CEO/COS 批）；未批则 state=blocked、不派工；COS 台账为每轮分配 DP-YYYYMMDD-NNN 并写 receipt（run_id/DP/回执时点/验收锚），close.charter_ref/dispatch_ref/receipt_ref 指真实件。",
+          "verify": "python3 断言运行轮 charter_ref 非空且 status=approved；dispatch-ledger 有该 run_id 的 DP 行；receipt 文件含 run_id 与 DP 号；pending 状态下链不进入 dce。",
+          "rollback": "改前保存 round_runner.ts 与 dispatch-ledger 副本；失败即 git checkout 并把本轮 DP 行标 void，回 pending，不点火。"
+        },
+        {
+          "title": "七席双对象联审全跑与意见守恒",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/loop_joint_review_spawn.py",
+          "change": "loop_joint_review_spawn 对 SEATS 七席全跑并在 joint-review.json 写 faces 七席、A/B 两对象分立 seat_means（禁相加）；opinions.json 保留每席全部 improvements；close 的 opinion_dispositions 由 charter 7 条逐条 adopted/rejected/deferred 并写理由与 evidence_ref；joint-review 增 divergence 字段显式列各席档差。",
+          "verify": "python3 断言 len(faces)==7；cos 8 条（A/B 各 4）；joint-review 有 A/B 两个独立均值且未求和；len(opinion_dispositions)==len(charter.items)==7；每条 state∈{adopted,rejected,deferred} 且 reason/evidence_ref 非空；divergence 非空。",
+          "rollback": "改前复制 loop_joint_review_spawn.py 与 run_dir opinions/joint-review 为 *.pre-7seat；失败即恢复，保留单席原始 JSON，不投递。"
+        }
+      ]
+    },
+    "coo": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "节奏保真度",
+          "score": 47.0,
+          "dimension_id": "coo-a1"
+        },
+        {
+          "object": "a",
+          "dimension": "门禁卫生",
+          "score": 33.0,
+          "dimension_id": "coo-a2"
+        },
+        {
+          "object": "a",
+          "dimension": "恢复闭环率",
+          "score": 16.0,
+          "dimension_id": "coo-a3"
+        },
+        {
+          "object": "b",
+          "dimension": "迁移停机窗",
+          "score": 34.0,
+          "dimension_id": "coo-b1"
+        },
+        {
+          "object": "a",
+          "dimension": "经营记录完整性",
+          "score": 45.0,
+          "dimension_id": "coo-b2"
+        },
+        {
+          "object": "b",
+          "dimension": "经营记录完整性",
+          "score": 52.0,
+          "dimension_id": "coo-b2"
+        }
+      ],
+      "violations": [],
+      "improvements": [
+        {
+          "title": "dce 段红即停：dry_run/非 pass 不得穿门进 verify/score/close",
+          "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+          "change": "段 4 后读取 dce.json：verdict!='pass' 时立即返回 ok=false 并停链，禁止进入 verify/score/score_skill/close/notify；生产窗 argv 显式追加 --execute，非生产窗在 dce.json 落 blocked_reason 且 G 族标 blocked；禁止把 dce 非 pass 与 plan/verify/score 的 pass 并置。",
+          "verify": "node --import tsx --test test/fade001/chain_runner.test.ts；stub 案：dce.json.verdict='dry_run_not_executed' 时 stagesRun 止于 dce 且 out.ok=false；实跑断言 dce.steps 四步 rc 全为整数、migrate cmd 无空参、overflow_checks 3/3 checked=true。",
+          "rollback": "改前记录 git rev-parse HEAD 并复制 dce.json 为 dce.pre-failclosed.json；断言红即 git restore 该源码并恢复 dce.json，manifest 标 blocked，不重跑评分、不发 notify_done。"
+        },
+        {
+          "title": "batch_timetable 扩为全段独立计划/实际时点并落硬时钟",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+          "change": "batch_timetable 由 plan 一段扩为 preflight/plan/dce/verify/score/score_skill/close/notify 8 段：planned_at 以 run_id=15:19:00Z 或轮起跑 15:58:17Z 为基线，actual_at 取各卷 check_time，threshold_s=480；hard_clock.chain_time 改取真实迁移拍 dce.check_time；run_id→首落卷 2396.7s 漂移须在 window_conflicts.conflicts 显式记段名+差秒或重铸 run_id。",
+          "verify": "python3 断言 len(batch_timetable)>=8 且每段 planned_at/actual_at/threshold_s 非空、actual>=planned；任一段 actual-planned>threshold 时 window_conflicts.conflicts 非空且含该段；hard_clock.chain_time==dce.check_time。",
+          "rollback": "改前复制 plan.json 为 plan.pre-timetable8.json 并记 sha256；任一断言失败恢复副本，保留原 counts/keep/readings，不重跑评分、不投递。"
+        },
+        {
+          "title": "意见逐条落 adopted/rejected/deferred 并令 close/notify 同源",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/close.json",
+          "change": "opinions.json 的 cos-1/coo-1 逐条写 disposition：adopted/rejected/deferred，adopted/rejected 带 clause_id/effective_at/owner_seat；charter_ref 指实际 charter 或显式 null+blocked_reason；items_consumed/digest_rate 由表实算；close.run_state=partial 时 notify_done.run_state 不得写 ok/status=sent。",
+          "verify": "python3 断言 len(opinion_dispositions)==len(opinions.opinions) 且每条 state/owner_seat/reason/evidence_ref 非空；items_consumed==sum(state=='adopted')；digest_rate==items_consumed/opinions_in；notify_done.run_state==close.run_state。",
+          "rollback": "改前复制 close.json、notify_done.json 为 *.pre-closure.json 并记 sha256；断言失败恢复两副本，保持 deferred，不重跑评分、不投递。"
+        },
+        {
+          "title": "8 个 top_level reading 补 dest+observed 并与 w48_loose_files 对表",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+          "change": "8 条 domain=top_level 的 agent_readings 逐条补 dest 与 observed{path,file_count,total_bytes,sha256_16,mtime}：3 迁件落 2026-W48 对应路径并进 w48_loose_files，1 封件写 W47 原地 dead_letter，4 留件写 W47 原路径且不进 W48 清单；counts 拆 top_level_migrate/dead_letter/keep 三分项。",
+          "verify": "python3 断言 8/8 顶层 reading 的 dest 与 observed 五字段非空；3 迁件在 w48_loose_files，4 留件不在；counts.top_level==8 且三个分项和==8。",
+          "rollback": "改前复制 plan.json 为 plan.pre-toplevel8.json 并记 sha256；断言失败恢复副本，不动 tree-facts.json 与 W47 树体。"
+        },
+        {
+          "title": "verify 回填 run_id/strict/非空理由并接 dce_execution 门",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/verify.json",
+          "change": "回填 run_id=shift-W48-resume12-20261123T151900Z、strict_mode=true；5 项 checks 逐项写实测值/理由，新增 run_id_consistency/check_time_order/dce_execution；dce.verdict!='pass' 时 dce_execution=false 且 verdict=blocked，仅全 ok 且 strict 才 pass。",
+          "verify": "python3 断言 verify.run_id 与 plan/dce/score 同串；strict_mode is true；all(len(c['reasons'])>0)；checks 含三项新门；置 dce.verdict='dry_run_not_executed' 时 verify.verdict!='pass'。",
+          "rollback": "改前复制 verify.json 为 verify.pre-failclosed.json 并记 sha256；断言失败恢复原卷，不改 checks 原值，不重跑评分、不投递。"
+        }
+      ]
+    },
+    "cao": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "制度闭环度",
+          "score": 22.0,
+          "dimension_id": "cao-1"
+        },
+        {
+          "object": "b",
+          "dimension": "制度闭环度",
+          "score": 25.0,
+          "dimension_id": "cao-1"
+        },
+        {
+          "object": "a",
+          "dimension": "留痕可审性",
+          "score": 50.0,
+          "dimension_id": "cao-2"
+        },
+        {
+          "object": "b",
+          "dimension": "留痕可审性",
+          "score": 47.0,
+          "dimension_id": "cao-2"
+        },
+        {
+          "object": "a",
+          "dimension": "评审机制完整性",
+          "score": 26.0,
+          "dimension_id": "cao-3"
+        },
+        {
+          "object": "b",
+          "dimension": "评审机制完整性",
+          "score": 31.0,
+          "dimension_id": "cao-3"
+        },
+        {
+          "object": "a",
+          "dimension": "效力边界诚实度",
+          "score": 44.0,
+          "dimension_id": "cao-4"
+        },
+        {
+          "object": "b",
+          "dimension": "效力边界诚实度",
+          "score": 51.0,
+          "dimension_id": "cao-4"
+        }
+      ],
+      "violations": [],
+      "improvements": [
+        {
+          "title": "意见→条款→入册→生效闭环入 close 生成器（缺条款即 fail-closed）",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/close_skill_spawn.py",
+          "change": "扩展 _CLOSE_PROMPT_HEAD 的 close.json schema：新增 charter_ref、clauses[]（clause_id/title/register_commit/effective_at/source_opinion_ids）与 opinion_dispositions[].clause_id/register_commit/effective_at/state；state 只允许 adopted|rejected（rejected 必带 reason），deferred 不得作为终态；_build_close_fields 校验每条 opinion 与每个 upgrade_list 项均已挂 clause_id 且 register_commit 为真实 git commit、effective_at 非空，缺任一即 rc=2 不产 close.json。",
+          "verify": "单测：注入 cos-1/coo-1 两条意见但无 clauses → rc=2 且 close.json 不落；补 clauses 后 rc=0；python3 断言每个 opinion 与每个 upgrade_list 项均有 clause_id；git cat-file -e 每个 register_commit 成功；state 全为 adopted/rejected。",
+          "rollback": "改前 git rev-parse HEAD 并 cp close_skill_spawn.py close_skill_spawn.py.pre-clause；单测红即 git checkout 该文件并恢复 close.json 旧卷，保持 deferred，不重跑评分/不投递。"
+        },
+        {
+          "title": "留痕可复算：close_cli 强制 evidence[] sha256_16 + run_id 全段一致",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/close_cli.py",
+          "change": "assert_close_contract 把 evidence_hash_algo 从『有则检』改为『必填』：close.evidence[] 至少覆盖 plan/score/score-skill/dce/verify/close/opinions/tree-facts/exam 九件，每项 {stage_artifact, hash:'sha256_16:<16hex>'}，缺件或裸 hash 即 ok=false；新增 run_id_consistency 检查（12 个段产物 run_id 必须同串，verify/preflight/qualify/exam/tree-facts 缺 run_id 即红）；manifest.close_contract.ok=false 时不得落 run_state=ok。",
+          "verify": "python3 断言 close.evidence 覆盖 9 件且 hash 全带 sha256_16: 前缀；sha256sum 实算与 evidence 对比一致；12/12 段产物 run_id 同串；注入 verify.run_id='' → close_contract.ok=false 且 manifest.run_state!=ok。",
+          "rollback": "改前 cp close_cli.py close_cli.py.pre-evidence 并记 sha256；单测红即恢复该文件，不重跑评分、不投递。"
+        },
+        {
+          "title": "回填守恒与分歧档实装：joint-review 生成器加 refill_matrix/divergence",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/loop_joint_review_spawn.py",
+          "change": "run() 聚合段新增：①按 prev_run（preflight.ceo_ruling.prev_run_dir 或参数）读上一轮 opinions.json/charter，生成 refill_matrix[] 逐条对表 opinion_id→state∈{adopted,covered,deferred,rejected}+owner_seat+reason+evidence_ref；条数必须等于上轮 N，否则 verdict='fail: refill count mismatch' 且 rc=2（不落 joint-review.json/不派任务书）；②joint-review.json 增 divergence 段：按席 A/B 均分排序，列出档差≥2档的席对、差值、归因，显式写『不抹平』；③opinions.json 的 scores 改 list 形保留每席 A/B 同名维度双列（现 dict 会覆盖）。",
+          "verify": "单测：上轮 N=7、本轮 7 行→rc=0 且 len(refill_matrix)==7；删 1 行→rc=2 且 verdict 含 fail；两席 A/B 均分差≥10→divergence 段非空并列出档差；joint-review.faces keys==7 且每席 dimensions 同时含 object A/B；opinions.json 每席 A/B 维度数==表内 scope 数。",
+          "rollback": "改前 git rev-parse HEAD 并 cp loop_joint_review_spawn.py loop_joint_review_spawn.py.pre-refill；单测红即恢复，不重跑联审、不覆盖本轮 joint-review.json。"
+        },
+        {
+          "title": "成功面去虚标：联审触发读 close.run_state，partial/dry_run 不得判 ok",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/joint_review_trigger.py",
+          "change": "run_trigger 的准入从 manifest.run_state=='ok' 改为 close.json#/run_state=='succeeded' 且 close_contract.ok==true；manifest.run_state 与 notify_done.run_state 以 close.run_state 为单源（partial→partial，dce dry_run_not_executed→blocked），notify subject/route 去『成功面』，to/cc 为空时 status=not_delivered；score.json 外层 verdict 必须等于内层 score.verdict（fail/pending），verify strict=false/reasons=[] 时 verdict!=pass。",
+          "verify": "单测/断言：close.run_state=partial 时 trigger 产 skip 且 reason 引 partial；manifest.run_state==close.run_state==notify_done.run_state；notify subject 不含『成功面』且 to/cc 空⇒status!=sent；score.verdict==score.score.verdict；dce.verdict!=pass⇒plan.verdict!=pass。",
+          "rollback": "改前 cp joint_review_trigger.py joint_review_trigger.py.pre-state 并记 sha256；断言红即恢复，不重发通知、不改本轮已发 notify。"
+        }
+      ]
+    },
+    "cpo": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "需求-实现对齐度",
+          "score": 42.0,
+          "dimension_id": "cpo-1"
+        },
+        {
+          "object": "b",
+          "dimension": "需求-实现对齐度",
+          "score": 39.0,
+          "dimension_id": "cpo-1"
+        },
+        {
+          "object": "b",
+          "dimension": "需求承载完整性",
+          "score": 39.0,
+          "dimension_id": "cpo-2"
+        },
+        {
+          "object": "a",
+          "dimension": "评审形有效性",
+          "score": 29.0,
+          "dimension_id": "cpo-3"
+        },
+        {
+          "object": "a",
+          "dimension": "产品语义可判性",
+          "score": 38.0,
+          "dimension_id": "cpo-4"
+        },
+        {
+          "object": "b",
+          "dimension": "产品语义可判性",
+          "score": 42.0,
+          "dimension_id": "cpo-4"
+        }
+      ],
+      "violations": [],
+      "improvements": [
+        {
+          "title": "补 W48 需求承载两行与逐族需求去向台账",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+          "change": "在 families/D 与 index_assertions.w48_loose_files 补 OP-202611-W48-001.json、OP-202611-W48-001.unresolved-items.md（7→9）；新增 requirement_trace，逐族点名 company-demand-pool（DEM-005~017 逐行）、OP-202611-W48-001.unresolved-items（现役区逐 ID）、task-inventory-20261123（逐行）、todo-list-20261123，逐项写 disposition∈{adopted,deferred,rejected,missing}+dest/owner/reason/evidence_ref；5 棵 carry 树逐棵补 dest/owner/first_review/exit_criteria；staffing.raci 删 3 个 W48-only 键、补 4 个 W47 键，键集对齐 34 条 agent_readings。",
+          "verify": "python3 断言：len(w48_loose_files)==9 且两 OP 件在列；requirement_trace 覆盖 DEM-005~017 十三行、未决现役区 19 单、task-inventory 8 行、todo-list 行；每项 disposition 与 reason 非空；5/5 carry 树 dest/owner/first_review/exit_criteria 非空；len(raci)==34 且 set(raci)=={r['item_id'] for r in agent_readings}。",
+          "rollback": "改前复制 plan.json 为 plan.pre-cpo-r12.json 并记 sha256；任一断言失败即恢复该副本，保留原 counts/families/readings，不重跑评分、不投递。"
+        },
+        {
+          "title": "七席意见编号化并落 R12 应答矩阵",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/opinions.json",
+          "change": "为 cos/coo/cao/cpo/cto/cho/cfo 各落至少一条 opinion_id=R12-<SEAT>-NN（五字段齐，target 指 run_dir 内件）；新增 response_matrix 覆盖 R10/R11/R12 全部去重意见，状态∈{adopted,rejected,deferred} 并写 reason/evidence_ref/owner_seat/due；close.opinion_dispositions 与矩阵同源，禁用『五字段缺口』回退已具五字段意见；七席分立不合并。",
+          "verify": "python3 断言：len(opinions)==7；每条 opinion_id 匹配 ^R12-(COS|COO|CPO|CTO|CHO|CFO|CAO)-[0-9]{2}$ 且 title/target/change/verify/rollback 非空；response_matrix 覆盖 R10/R11/R12 至少 14 条；每条 state∈{adopted,rejected,deferred} 且 reason/evidence_ref 非空；close 中 deferred 理由不得为『五字段缺口』。",
+          "rollback": "改前复制 opinions.json 与 close.json 为 *.pre-cpo-r12 并记 sha256；任一断言失败即恢复，保留原两席意见与 close 原 deferred 面，不重跑评审、不投递。"
+        },
+        {
+          "title": "score.json 单一 100 制 65/35 并消内外双 verdict",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/score.json",
+          "change": "以 score-skill.json#/weight_face 为唯一口径：machine_domain_weight=65、subjective_domain_weight=35、I 族 weight=35（I1/I2/I3=14/11/10），三域和=100；删除 59/31/10 与 I 族旧锚 I1=4/I2=3/I3=3；外层 verdict 由内层 score.verdict 实算，禁外层 pass 覆盖内层 fail；未判时 verdict=pending。",
+          "verify": "python3 断言：machine_domain_weight==65、subjective_domain_weight==35、三域和==100；I.weight==35；I.reasons 不含 I1=4/I2=3/I3=3；d['verdict']==s['verdict']；若 final 未判则 verdict=='pending'。",
+          "rollback": "改前复制 score.json 为 score.pre-cpo-r12.json 并记 sha256；任一断言失败即恢复原 59/31/10 与旧锚，标 pending，不重算机判、不投递。"
+        },
+        {
+          "title": "考卷机械化：65/35、34 案标签与族点名清单",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/exam.json",
+          "change": "objective 权重和改 65、subjective 改 35；新增 case_labels 覆盖 plan.agent_readings 34 条（item_id+记录/活标签+一句 rationale+evidence_ref）；新增 family_checklist 逐族点名 demand_pool/unresolved/task_inventory/todo_list/top_level/OP/cfo-quota/daily-progress/convene；score-skill 消费该卷并落逐案标签率。",
+          "verify": "python3 断言：sum(objective.weight)==65、sum(subjective.weight)==35；len(case_labels)==34 且 item_id 集==agent_readings 集；每条 label∈{记录,活} 且 rationale 非空；len(family_checklist)>=7 且逐族有 owner/disposition/evidence_ref。",
+          "rollback": "改前复制 exam.json 为 exam.pre-cpo-r12.json 并记 sha256；任一断言失败即恢复原题面与 40/60 权重，不重跑评分、不投递。"
+        },
+        {
+          "title": "未兑现项显式 blocked/deferred，禁 dry_run 与 pass 混同",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/dce.json",
+          "change": "若保持 dry_run，verdict=blocked 并写 blocked_reason；plan.families 中依赖 dce 的项 status=deferred/blocked 并写 owner/due/anchor；若实跑，migrate 补 --start-date 2026-11-23 与非空 --operating-root，四步 rc 写整数，3/3 overflow_checks checked；仅四步 rc=0 且 3/3 检毕 verdict=pass；同步 verify.strict_mode=true、run_id 回填、逐项 reasons 非空。",
+          "verify": "python3 断言：dce.mode=='dry_run' 时 verdict=='blocked' 且 blocked_reason 非空；plan 中依赖 dce 的 A/F 项 status∈{deferred,blocked} 且有 reason；verify.run_id==run_id 且 strict_mode is True 且 all(len(c['reasons'])>0)；实跑时四步 rc 为 int、migrate 命令含 --start-date 2026-11-23 与非空 --operating-root。",
+          "rollback": "改前复制 dce.json、verify.json、plan.json 为 *.pre-cpo-r12 并记 sha256；任一断言失败即恢复三副本，G 族维持 fail 读数，不执行 pull/migrate/commit/push。"
+        }
+      ]
+    },
+    "cto": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "架构约束与实现一致性",
+          "score": 42.0,
+          "dimension_id": "cto-1"
+        },
+        {
+          "object": "b",
+          "dimension": "架构约束与实现一致性",
+          "score": 45.0,
+          "dimension_id": "cto-1"
+        },
+        {
+          "object": "a",
+          "dimension": "交付路径与门禁完整性",
+          "score": 27.0,
+          "dimension_id": "cto-2"
+        },
+        {
+          "object": "b",
+          "dimension": "交付路径与门禁完整性",
+          "score": 43.0,
+          "dimension_id": "cto-2"
+        },
+        {
+          "object": "a",
+          "dimension": "质量门与可追溯性",
+          "score": 28.0,
+          "dimension_id": "cto-3"
+        },
+        {
+          "object": "b",
+          "dimension": "质量门与可追溯性",
+          "score": 42.0,
+          "dimension_id": "cto-3"
+        },
+        {
+          "object": "a",
+          "dimension": "技术风险与可回滚性",
+          "score": 30.0,
+          "dimension_id": "cto-4"
+        },
+        {
+          "object": "b",
+          "dimension": "技术风险与可回滚性",
+          "score": 46.0,
+          "dimension_id": "cto-4"
+        },
+        {
+          "object": "b",
+          "dimension": "双形/切换行为等值",
+          "score": 36.0,
+          "dimension_id": "cto-5"
+        }
+      ],
+      "violations": [],
+      "improvements": [
+        {
+          "title": "A 面迁移账与落点校正：bod-tick dest 实体化、keep/carry 拆账",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+          "change": "migrate[0].dest 改为实存的 2026-W48/trees/bod-tick（或显式建 indexes 文件并让 dest 存在）；counts 拆 tree_keep_inplace=20/tree_carry=5，keep[] 只留 20 棵 sealed，carry[] 5 棵逐件补 dest（对应 w48_backfill_ids）/owner/first_review/exit_criteria；top_level 8 件补 observed{path,file_count,total_bytes,sha256_16,mtime} 与结构化 dest；staffing.raci 33→34 键与 agent_readings 对齐；重写后重跑 verify。",
+          "verify": "python3 断言：os.path.exists(dest)；counts.keep==25 且 tree_keep_inplace==20 且 tree_carry==5 且 carry_over==2；len(carry)==5 且 dest/owner/first_review/exit_criteria 全非空；8/8 top_level observed 四元组非空；set(raci)==set(agent_readings.item_id) 且 len==34；verify.run_id 非空且 strict_mode==true。",
+          "rollback": "改前 cp plan.json plan.pre-cto12-fix.json 并记 sha256；任一断言失败即 cp 回退，保留原 plan 与 dce/verify 读数，不重跑评分、不投递。"
+        },
+        {
+          "title": "十段链单源化：TS/Python 段表对表 + dce/verify 真值门",
+          "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+          "change": "以一份 stage 表为唯一源（TS 与 runtime/cognition/chain_runner.py 同源生成或交叉断言）；TS 段 4 argv 补 --execute --start-date --operating-root，段 5 补 --run-id/--strict；每段后读产物 verdict，dce∈{dry_run_not_executed,blocked,fail} 即 ok=false 并停在 dce，禁入 verify/score/close/notify；补 score_rubric、七席 score spawn 与 notify 目标非空门。",
+          "verify": "node --import tsx --test test/fade001/chain_runner.test.ts；新增 case：stub dce verdict=dry_run_not_executed → ok=false 且 stagesRun 止于 dce；断言 TS/Python STAGES 名称/产物/dce argv 集合相等；实跑 dce.mode=='execute'、verify.run_id 非空且 strict_mode==true、notify_result.to 非空。",
+          "rollback": "改前记录 chain_runner.ts/chain_runner.py 的 git SHA 并复制 dce.json/verify.json；失败即 git checkout 两脚本并恢复副本，manifest 标 failed，禁发 notify_done。"
+        },
+        {
+          "title": "close/manifest/notify 单源 fail-closed",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/close_cli.py",
+          "change": "derive_run_state 改白名单：七段 verdict 全 pass 且 close_contract.ok==true 才 ok；dry_run_not_executed/unknown/partial/blocked 任一即 failed/partial 并写 failed_stages；close_contract.ok==false 时 manifest.run_state=failed；notify_done 仅 run_state=='ok' 且 contract.ok 且 to 非空才发送。",
+          "verify": "pytest runtime/cognition/test_close_cli.py -q；构造 dce.verdict=dry_run_not_executed、close.run_state_source=null 的 run_dir → manifest.run_state=='failed'、close_contract.ok==false、notify status!='sent'；本轮 resume12 重放断言不得再出现 ok/sent。",
+          "rollback": "改前复制 close_cli.py/manifest.json/notify_done.json 并记 sha256；断言失败即恢复三件并标 unscored，不重发通知。"
+        },
+        {
+          "title": "spawn-vs-CLI 契约/门等值 golden 对表",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/test_close_skill_spawn.py",
+          "change": "close_skill_spawn 落卷前复用 close_skill._structure_gate 与 close_cli.assert_close_contract；新增 golden：同一 fixture 分别走 close_skill.py 与 close_skill_spawn.py（以及 plan_scope.py 与 plan_skill_spawn.py），归一化 run_id/check_time 后断言字段集与值域相等；补 score_skill 七席默认与 65/35 单源断言。",
+          "verify": "pytest runtime/cognition/test_close_skill_spawn.py runtime/cognition/test_plan_skill_spawn.py runtime/cognition/test_loop_joint_review_spawn.py -q；golden 归一化 dict 相等；故意删 spawn 侧 run_state_source/hash 时 golden 红；score_skill SEATS 默认 7 且 score weight_face==65/35。",
+          "rollback": "改前复制 close_skill_spawn.py/plan_skill_spawn.py/score_skill_spawn.py/score_engine.py 并记 sha256；失败即 git checkout 四脚本，保留 CLI 形现役，不投递。"
+        }
+      ]
+    },
+    "cho": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "岗位责任归属清晰度",
+          "score": 39.0,
+          "dimension_id": "cho-1"
+        },
+        {
+          "object": "b",
+          "dimension": "岗位责任归属清晰度",
+          "score": 52.0,
+          "dimension_id": "cho-1"
+        },
+        {
+          "object": "a",
+          "dimension": "交接与留痕链完整性",
+          "score": 42.0,
+          "dimension_id": "cho-2"
+        },
+        {
+          "object": "b",
+          "dimension": "交接与留痕链完整性",
+          "score": 55.0,
+          "dimension_id": "cho-2"
+        },
+        {
+          "object": "a",
+          "dimension": "评审闭环与意见消化率",
+          "score": 30.0,
+          "dimension_id": "cho-3"
+        },
+        {
+          "object": "b",
+          "dimension": "评审闭环与意见消化率",
+          "score": 47.0,
+          "dimension_id": "cho-3"
+        },
+        {
+          "object": "a",
+          "dimension": "授权与批权合规",
+          "score": 41.0,
+          "dimension_id": "cho-4"
+        },
+        {
+          "object": "b",
+          "dimension": "授权与批权合规",
+          "score": 60.0,
+          "dimension_id": "cho-4"
+        },
+        {
+          "object": "a",
+          "dimension": "岗位覆盖与负载合理性",
+          "score": 33.0,
+          "dimension_id": "cho-5"
+        },
+        {
+          "object": "b",
+          "dimension": "岗位覆盖与负载合理性",
+          "score": 50.0,
+          "dimension_id": "cho-5"
+        }
+      ],
+      "violations": [],
+      "improvements": [
+        {
+          "title": "close.upgrade_list 11 条缺陷逐条落主责席与责任面",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/close.json",
+          "change": "为 upgrade_list 每条增 owner_seat（恰一席，按域 COS/COO/CPO/CAO/CTO/CFO）、responsibility_face（文件/字段/流程面）、due、state(open/fixed/deferred)、evidence_ref；upgrade_list_state 由 extracted 改 owned；11/11 不得缺 owner_seat。",
+          "verify": "python3 断言 len(upgrade_list)==11；11/11 owner_seat 属七席且 responsibility_face/due/state/evidence_ref 非空；owner_seat 去重>=3；无 owner_seat=null。",
+          "rollback": "改前 cp close.json close.pre-owner-cho.json 并记 sha256；任一断言失败恢复副本，保留原 upgrade_list 文本，不重跑评分、不投递。"
+        },
+        {
+          "title": "RACI 34 件与 readings 全等并解除单席并载",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+          "change": "staffing.raci 键集改为与 34 条 agent_readings.item_id 全等（删 cfo-quota-daily-w48.md/task-inventory-20261123.md/todo-list-20261123.md，补 OP-202611-W47-001.json/OP-202611-W47-001.unresolved-items.md/task-inventory-20261117.md/cfo-quota-daily-w47.md）；38/38 families owner 非空；accountable 按域分列 COS/COO/CPO/CAO，responsible 显式；单席 accountable 占比<=50%。",
+          "verify": "python3 断言 len(raci)==34 且 set(raci)==set(readings.item_id)；38/38 owner 非空；Counter(accountable) 去重>=3 且最大单席<=17/34；raci 中 accountable==responsible=='COS' 的件数<=17。",
+          "rollback": "改前 cp plan.json plan.pre-raci-cho.json 并记 sha256；失败恢复副本，保留原 33 键与 16 空 owner，不重跑评分、不投递。"
+        },
+        {
+          "title": "意见回填 7->N 条数守恒并纠正五字段缺口误判",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/close.json",
+          "change": "opinion_dispositions 覆盖 shift-W48-resume11-20261123T142455Z/opinions.json 的 7 个 opinion_id 及本轮已落意见，逐条 state=consumed|rejected|deferred、owner_seat、reason、evidence_ref、due；cos-1/coo-1 五字段已齐，禁以『五字段缺口』为由 deferred；items_consumed/digest_rate 由表实算，新增 refill{prior_n,carried_n,consumed_n}。",
+          "verify": "python3 断言 set(dispositions) 覆盖上轮 7 个 opinion_id；每条 owner_seat/state/reason/evidence_ref/due 非空；digest_rate==items_consumed/prior_n；cos-1/coo-1 不得同时 state=deferred 且 reason 含『五字段缺口』；refill.carried_n==len(dispositions)。",
+          "rollback": "改前 cp close.json close.pre-digest-cho.json 并记 sha256；失败恢复副本，保持 deferred 原状，不改 opinions.json、不重发通知。"
+        },
+        {
+          "title": "close/manifest/notify/verify 单一 run_state 与 fail-closed",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/close.json",
+          "change": "回填 verify.run_id=shift-W48-resume12-20261123T151900Z、strict_mode=true，5 项 checks 逐项写非空 reasons/实测值，新增 run_id_consistency/check_time_order/dce_execution；close.run_state=partial 时 manifest.stages['close.json']=blocked、manifest.run_state 与 notify_done.run_state 同源 close.json#/run_state，notify 不得 status=sent；score.json 外层 verdict 与内层 score.verdict 一致，未判时 pending。",
+          "verify": "python3 断言 verify.run_id==run_id 且 strict_mode is True 且 all(len(c['reasons'])>0)；close.run_state=='partial' 时 manifest.run_state=='partial' 且 notify_result.status!='sent' 且 manifest.stages['close.json']=='blocked'；score.json.verdict==score.score.verdict。",
+          "rollback": "改前 cp verify.json close.json manifest.json notify_done.json score.json 为 *.pre-failclosed-cho 并记 sha256；任一断言失败恢复五副本，保留原 pass/ok/sent 读数，不重跑评分、不重发通知。"
+        },
+        {
+          "title": "keep 拆 20 封存 + 5 carry 两本账并补顶层 8 件 dest/observed",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+          "change": "counts 增 tree_keep_inplace=20/tree_carry=5；keep[] 只留 20 棵 sealed，另设 carry_trees[] 5 棵，逐件补 dest/owner/first_review/exit_criteria/record_or_live=live；8 条 top_level readings 补 dest 与 observed{path,file_count,total_bytes,sha256_16,mtime}，迁/留/封逐件对 w48_loose_files。",
+          "verify": "python3 断言 counts.tree_keep_inplace==20 且 counts.tree_carry==5 且 len(keep)==20 且 len(carry_trees)==5 且无交集；5/5 carry 的 dest/owner/first_review/exit_criteria 非空；8/8 top_level dest 与 observed 四要素非空；agent_readings action=carry 恰 5 条且与 carry_trees 集合相等。",
+          "rollback": "改前 cp plan.json plan.pre-carry-toplevel-cho.json 并记 sha256；失败恢复副本，保留原 keep=25/counts/readings，不重跑评分、不投递。"
+        }
+      ]
+    },
+    "cfo": {
+      "dimensions": [
+        {
+          "object": "a",
+          "dimension": "成本读数可分解性",
+          "score": 32.0,
+          "dimension_id": "cfo-cost-decomposability"
+        },
+        {
+          "object": "b",
+          "dimension": "成本读数可分解性",
+          "score": 48.0,
+          "dimension_id": "cfo-cost-decomposability"
+        },
+        {
+          "object": "a",
+          "dimension": "预算护栏在位率",
+          "score": 30.0,
+          "dimension_id": "cfo-guardrail-presence"
+        },
+        {
+          "object": "b",
+          "dimension": "预算护栏在位率",
+          "score": 50.0,
+          "dimension_id": "cfo-guardrail-presence"
+        },
+        {
+          "object": "b",
+          "dimension": "单位经济可算性",
+          "score": 35.0,
+          "dimension_id": "cfo-unit-econ-computability"
+        },
+        {
+          "object": "a",
+          "dimension": "两轴分立合规",
+          "score": 95.0,
+          "dimension_id": "cfo-two-axis-separation"
+        }
+      ],
+      "violations": [],
+      "improvements": [
+        {
+          "title": "护栏触发语义分立并拆 guard_hits 四键",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/close_skill_spawn.py",
+          "change": "在 close/plan/score/loop_joint_review 四个 spawn 脚本中统一接入 FADE_TRIGGER：b0 不可得且 trigger=auto 时返回 rc=3 暂停（fail-safe），manual 保持 rc=0，仅写 cost_guard_warning_balance；_total_spent_cny 遇到 delta null 时不再按 0 求和，改为返回 None 并触发 d_null_escalation；把 guard_hits 由 a/b/c 拆为 a_round_over/b_total_cap/c_balance_floor/d_null_escalation，每个键与 pause reason 一一映射。",
+          "verify": "四案单测：b0=None 连续 3 轮时，auto rc=3、manual rc=0 且带 warning；b0=10 两种模式 rc=3；spent=10 两种模式 rc=3；b0=100/spent=0 rc=0。断言 close.cost_settlement.guard_hits 四个键都存在且可独立置 1，pause reason 含对应键名。",
+          "rollback": "改动前将四个脚本复制为 *.pre-guardfix-r12 并记录 sha256；任一单测失败即恢复四个副本与旧 a/b/c 三键，不重跑生产链。"
+        },
+        {
+          "title": "score 段读数行补 stage 并实采会话面、识别订阅面",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/score_skill_spawn.py",
+          "change": "score_skill_spawn 的 _write_cost_line 调用增加 stage=\"score_skill\"，使 cost-log 全行 stage 非空；close_skill_spawn 将 cost_settlement.transcript_readout 由 deferred 改为实际运行 cfo-token-meter.py --from/--to --runid 后回填 usage_events/tokens_in/tokens_out 与 status∈{collected,unavailable}；cost_settlement 增加 faces 三行（spawn/session/subscription），subscription 给 identified:false/owner/next_review。",
+          "verify": "用 jq 断言：cost-log 3 行 stage 全非空；transcript_readout.status∈{collected,unavailable}，且 collected 时 usage_events>0；cost_settlement.faces 含 spawn/session/subscription 三行且各有 status，subscription 有 owner/next_review。",
+          "rollback": "改动前复制 score/close 两个脚本为 *.pre-costface-r12，并保留 close.json 原 deferred 块；断言失败即恢复，不伪造 usage 数。"
+        },
+        {
+          "title": "余额探针密钥注入或整轮 blocked，禁 null 冒 0",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/chain_runner.py",
+          "change": "chain_runner 在每段 spawn 前从受控 env/密钥文件解析 DEEPSEEK_API_KEY 并注入子进程；缺失时整轮标 blocked，不进入 spawn；spawn 前后余额探读回填 balance_before_cny/balance_after_cny/delta_cny，delta 不可得写 probe_error 并保留不可得原因，禁止以 null 冒充 0 或宣称成本已核算。",
+          "verify": "在临时 run_dir 实际跑一段：cost-log 行 balance_before/after/delta 非 null，且 delta≈before-after；unset key 时 chain_runner rc!=0、close.verdict=blocked、unavailable_reason 非空。",
+          "rollback": "保留 chain_runner.py pre-cashreadout-r12 副本与当前 cost-log/close 原卷 sha256；失败即恢复，保留 unavailable 声明，禁用 0/估值补空。"
+        },
+        {
+          "title": "迁移四步接入预算门并落阶段成本行",
+          "target": "/srv/fleet/TriCompany/runtime/cognition/dce_steps.py",
+          "change": "pull/migrate/commit/push 每步前都复用余额门（<20 暂停）与累计门（≥10 暂停），命中时 rc=3 且不写 git；四步各写 cost-log stage=dce_pull/dce_migrate/dce_commit/dce_push 与 started/finished/seat_count/delta；dry_run 时 cost_settlement 对 dce 四段显式 status=not_executed，不由空值冒充。",
+          "verify": "dry_run 案断言 cost_settlement.stages 含 dce_* 四行且 status=not_executed；execute 案 4 行 delta 非空；b0<20 时 pull 前 rc=3，且 git 零写操作。",
+          "rollback": "保留 dce_steps.py pre-dceguard-r12 副本；失败即恢复，dce 保持 dry_run 骨架，不执行 pull/migrate/commit/push。"
+        },
+        {
+          "title": "消 close 成本陈注并纳 7 席联审读数",
+          "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/close.json",
+          "change": "把 close.json#/upgrade_list 成本条『cost-log.jsonl 仅 2 行』改为按实际行数动态生成（当前 3 行，联审后 4 行）；cost_settlement.stages 增 loop_joint_review 段（7 席/started/finished/duration/delta 或 unavailable_reason）；在 settled_at 后增 reconcile 记录，说明 close 时点与联审时点差异，禁陈注覆盖新行。",
+          "verify": "python3 断言 close.upgrade_list 成本条引用的行数 == wc -l cost-log.jsonl；cost_settlement.stages 含 loop_joint_review 且 seats 长度==7；reconcile 记录非空，且 settled_at 不早于 cost-log 末行 ts。",
+          "rollback": "改动前复制 close.json 为 close.pre-costnote-r12 并记录 sha256；断言失败即恢复，保留原 cost_settlement 与 upgrade_list，不重发通知。"
+        }
+      ]
+    }
+  },
+  "dimension_table_version": "v1.2",
+  "seat_means": {
+    "a": 36.88,
+    "b": 43.08,
+    "seats_a": 7,
+    "seats_b": 7
+  },
+  "comparability": {
+    "prev_run": "shift-W48-resume11-20261123T142455Z",
+    "jaccard_a": 1.0,
+    "jaccard_b": 1.0,
+    "dimension_table_version": "v1.2",
+    "note": "same dimension-table version => comparability 1.0 by construction"
+  }
+}

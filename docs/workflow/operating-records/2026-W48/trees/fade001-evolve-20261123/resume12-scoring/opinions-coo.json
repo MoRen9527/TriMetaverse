@@ -1,0 +1,82 @@
+{
+  "schema_version": "2.0.0",
+  "seat": "coo",
+  "face": {
+    "dimensions": [
+      {
+        "object": "a",
+        "dimension": "节奏保真度",
+        "score": 47.0,
+        "dimension_id": "coo-a1"
+      },
+      {
+        "object": "a",
+        "dimension": "门禁卫生",
+        "score": 33.0,
+        "dimension_id": "coo-a2"
+      },
+      {
+        "object": "a",
+        "dimension": "恢复闭环率",
+        "score": 16.0,
+        "dimension_id": "coo-a3"
+      },
+      {
+        "object": "b",
+        "dimension": "迁移停机窗",
+        "score": 34.0,
+        "dimension_id": "coo-b1"
+      },
+      {
+        "object": "a",
+        "dimension": "经营记录完整性",
+        "score": 45.0,
+        "dimension_id": "coo-b2"
+      },
+      {
+        "object": "b",
+        "dimension": "经营记录完整性",
+        "score": 52.0,
+        "dimension_id": "coo-b2"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "dce 段红即停：dry_run/非 pass 不得穿门进 verify/score/close",
+        "target": "/srv/fleet/TriRMC/src/fade001/chain_runner.ts",
+        "change": "段 4 后读取 dce.json：verdict!='pass' 时立即返回 ok=false 并停链，禁止进入 verify/score/score_skill/close/notify；生产窗 argv 显式追加 --execute，非生产窗在 dce.json 落 blocked_reason 且 G 族标 blocked；禁止把 dce 非 pass 与 plan/verify/score 的 pass 并置。",
+        "verify": "node --import tsx --test test/fade001/chain_runner.test.ts；stub 案：dce.json.verdict='dry_run_not_executed' 时 stagesRun 止于 dce 且 out.ok=false；实跑断言 dce.steps 四步 rc 全为整数、migrate cmd 无空参、overflow_checks 3/3 checked=true。",
+        "rollback": "改前记录 git rev-parse HEAD 并复制 dce.json 为 dce.pre-failclosed.json；断言红即 git restore 该源码并恢复 dce.json，manifest 标 blocked，不重跑评分、不发 notify_done。"
+      },
+      {
+        "title": "batch_timetable 扩为全段独立计划/实际时点并落硬时钟",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+        "change": "batch_timetable 由 plan 一段扩为 preflight/plan/dce/verify/score/score_skill/close/notify 8 段：planned_at 以 run_id=15:19:00Z 或轮起跑 15:58:17Z 为基线，actual_at 取各卷 check_time，threshold_s=480；hard_clock.chain_time 改取真实迁移拍 dce.check_time；run_id→首落卷 2396.7s 漂移须在 window_conflicts.conflicts 显式记段名+差秒或重铸 run_id。",
+        "verify": "python3 断言 len(batch_timetable)>=8 且每段 planned_at/actual_at/threshold_s 非空、actual>=planned；任一段 actual-planned>threshold 时 window_conflicts.conflicts 非空且含该段；hard_clock.chain_time==dce.check_time。",
+        "rollback": "改前复制 plan.json 为 plan.pre-timetable8.json 并记 sha256；任一断言失败恢复副本，保留原 counts/keep/readings，不重跑评分、不投递。"
+      },
+      {
+        "title": "意见逐条落 adopted/rejected/deferred 并令 close/notify 同源",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/close.json",
+        "change": "opinions.json 的 cos-1/coo-1 逐条写 disposition：adopted/rejected/deferred，adopted/rejected 带 clause_id/effective_at/owner_seat；charter_ref 指实际 charter 或显式 null+blocked_reason；items_consumed/digest_rate 由表实算；close.run_state=partial 时 notify_done.run_state 不得写 ok/status=sent。",
+        "verify": "python3 断言 len(opinion_dispositions)==len(opinions.opinions) 且每条 state/owner_seat/reason/evidence_ref 非空；items_consumed==sum(state=='adopted')；digest_rate==items_consumed/opinions_in；notify_done.run_state==close.run_state。",
+        "rollback": "改前复制 close.json、notify_done.json 为 *.pre-closure.json 并记 sha256；断言失败恢复两副本，保持 deferred，不重跑评分、不投递。"
+      },
+      {
+        "title": "8 个 top_level reading 补 dest+observed 并与 w48_loose_files 对表",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/plan.json",
+        "change": "8 条 domain=top_level 的 agent_readings 逐条补 dest 与 observed{path,file_count,total_bytes,sha256_16,mtime}：3 迁件落 2026-W48 对应路径并进 w48_loose_files，1 封件写 W47 原地 dead_letter，4 留件写 W47 原路径且不进 W48 清单；counts 拆 top_level_migrate/dead_letter/keep 三分项。",
+        "verify": "python3 断言 8/8 顶层 reading 的 dest 与 observed 五字段非空；3 迁件在 w48_loose_files，4 留件不在；counts.top_level==8 且三个分项和==8。",
+        "rollback": "改前复制 plan.json 为 plan.pre-toplevel8.json 并记 sha256；断言失败恢复副本，不动 tree-facts.json 与 W47 树体。"
+      },
+      {
+        "title": "verify 回填 run_id/strict/非空理由并接 dce_execution 门",
+        "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/verify.json",
+        "change": "回填 run_id=shift-W48-resume12-20261123T151900Z、strict_mode=true；5 项 checks 逐项写实测值/理由，新增 run_id_consistency/check_time_order/dce_execution；dce.verdict!='pass' 时 dce_execution=false 且 verdict=blocked，仅全 ok 且 strict 才 pass。",
+        "verify": "python3 断言 verify.run_id 与 plan/dce/score 同串；strict_mode is true；all(len(c['reasons'])>0)；checks 含三项新门；置 dce.verdict='dry_run_not_executed' 时 verify.verdict!='pass'。",
+        "rollback": "改前复制 verify.json 为 verify.pre-failclosed.json 并记 sha256；断言失败恢复原卷，不改 checks 原值，不重跑评分、不投递。"
+      }
+    ],
+    "violations": []
+  }
+}
