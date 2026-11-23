@@ -11957,3 +11957,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **批链三卷齐**：框架 v1.2（636e1db2a）+自报汇总（83368cd65）+D-90 增款（22edd7f）——候 CEO 批。
 
 ——BOD·2026-11-23T21:45:38+0800（date 现查原值·D-47 正形）
+
+### ㊿+1630 · **CEO 裁 D 达成：轮2 止·轮3 停在门（rc=4 awaiting·零残留）+轮2 A/B 37.51/47.61 稳定+charter 生成恢复**
+
+- ①**止链达成**：rounds_run=2·**零残留**·轮3 preflight 21:44:38 **rc=4 awaiting 停**（「轮2 毕即止」兑现）。
+- ②**止因**：R2 残拍修复新码被跑中 pull 带入→prev=残拍（pf 非空无 close）→awaiting fail-closed（terminate 件未被消费·仍在）。
+- ③**轮2 A/B=37.51/47.61**（CAO absent·对轮1 37.86/47.46 Δ**−0.35/+0.15=稳定**·**comparability 1.0 ✓**）。
+- ④**charter 已生成**（21:44:32·**6 条五字段全**·pending_approval CEO）——**3a4e592 五字段修复生效实证**。
+
+——BOD·（date 现查原值·D-47 正形）
