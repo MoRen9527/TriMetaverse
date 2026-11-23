@@ -94,7 +94,7 @@
 **DP-027 取号**（20:14·P4 补件批·DP-026 ⓐⓑ 施工）：round_runner 同批两件——ⓐnextFlagEdge 双信号入参{avgA,avgB}（全 edge 双对象·单 side 废止·aggregate.average 降展示面）+ⓑM9 FUSE 按态收窄（test && round_count>=FUSE·debug 审批步节流·prod 不入 loop）——CTO 裁形（3e1125011 卷）+FSD 落码·**已毕销账**（commit 5ade74f·TriRMC sg bare+R-HY pull 验·grep 4·**round 48/48**〔五锚含 M9 三态案〕——销账锚=5ade74f）。
 
 
-**DP-028 取号**（20:44·联审并行化·CEO 质询响应）：五件（各席独立产物 opinions-<seat>.json 写面隔离/聚合器唯一写 joint-review.json/run_dir 只读约定/并发 4+3 分批/env FADE_JOINT_PARALLEL=0 回退串行）·执行体 FSD·验收=7 席全落+31 维照验/27.5min→~10min 实测/429 降并发/串行回退可切·**设计卷=trees/fade001-evolve-20261123/cto-dp028-parallel-joint-review-design-20261123.md（73964d6cd）**·**状态=挂起候融**（CEO 20:4x 裁「不着急，等任务书出来融合一起改」——暂缓落码·设计留卷·候下份 charter items 并入呈批；号 DP-028 已发不销）。**素材补（CTO 20:57·并行收益实测）**：resume10 联审 **39.4min**（超 27.5min 基线）·席 compaction 8/6/0/5/13/2/8·长席 **11.4min**——**席负载不均=并行池收益直接证据**（并行后长尾由最长节点 ~11min vs 串行累加 39min）——随 DP-028 设计卷素材记（CEO 融合下份批时=数据支撑）。
+**DP-028 取号**（20:44·联审并行化·CEO 质询响应）：五件（各席独立产物 opinions-<seat>.json 写面隔离/聚合器唯一写 joint-review.json/run_dir 只读约定/并发 4+3 分批/env FADE_JOINT_PARALLEL=0 回退串行）·执行体 FSD·验收=7 席全落+31 维照验/27.5min→~10min 实测/429 降并发/串行回退可切·**设计卷=trees/fade001-evolve-20261123/cto-dp028-parallel-joint-review-design-20261123.md（73964d6cd）**·**状态=已并入 DP-036 施工**（CEO 23:17:50 批「DP-028 并入」——8 items 施工批含本项·设计卷 73964d6cd·执行体 FSD·CTO 监核；号 DP-028 保留不销·执行面归 DP-036）。**素材补（CTO 20:57·并行收益实测）**：resume10 联审 **39.4min**（超 27.5min 基线）·席 compaction 8/6/0/5/13/2/8·长席 **11.4min**——**席负载不均=并行池收益直接证据**（并行后长尾由最长节点 ~11min vs 串行累加 39min）——随 DP-028 设计卷素材记（CEO 融合下份批时=数据支撑）。
 
 
 **DP-029 取号**（21:16·dsh overlay 试 1M·CEO 裁 B）：patch 层隔离试验（dsh --patch repeatable·不动主 overlay）→contextWindow 1048576 双 entry→headless 短 prompt 验→成功改主 overlay/失败 524288 再测→再败删零动·执行体 SDE·状态=取号候确认。
@@ -113,6 +113,8 @@
 **DP-034 取号**（22:47·DP-030 键名 drift 修·先发后补认领）：awaitCeoRuling 改读 `decision ?? ruling`（decision 主·ruling 兼容）·round 53/53·commit **ed1e59a**·FSD 已毕（drift 随 DP-033-01 同窗发现主动修·号补挂）·状态=已毕销账（销账锚=ed1e59a）。
 
 **DP-035 取号**（23:14·owner_seat improvement 级补·R10-CHO-01 缺口闭合·FSD）：loop_joint_review_spawn.py **improvements 五字段扩六字段**（title/target/change/verify/rollback + **owner_seat**）·与 cho-1 同族（opinion 级已落〔:394〕·improvement 级缺）·验收=improvements 项 owner_seat 非空枚举七席/卷面可读/既有测试绿·状态=取号候发令。
+
+**DP-036 取号**（23:20·charter-150927Z 施工批 **8 items**·CEO 批 23:17:50「批，DP-028 并入」）：7 items 逐席（cos-1/COS·coo-1/COO·cao-1/CAO·cpo-1/CPO·cto-1/CTO·cho-1/CHO·cfo-1/CFO）+**DP-028 并入**（并行联审五项：独立产物 opinions-<seat>.json/聚合器单写 joint-review.json/run_dir 只读/并发 3-4/FADE_JOINT_PARALLEL=0 回退·执行体 FSD·CTO 监核·设计卷 73964d6cd）·施工完+自测绿→点火跑一轮·状态=派发→在途。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 

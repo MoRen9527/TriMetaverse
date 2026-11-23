@@ -15,7 +15,7 @@
     ]
   },
   "approver_pending": "CEO",
-  "status": "pending_approval",
+  "status": "approved",
   "items": [
     {
       "opinion_id": "cos-1",
@@ -80,5 +80,16 @@
       "rollback": "改动前将四脚本复制为 *.pre-guardfix-r11 并记 sha256；任一单测红即恢复四副本与旧 a/b/c 三键，不重跑生产链。",
       "owner_seat": "cfo"
     }
-  ]
+  ],
+  "approval_time": "2026-11-23T23:17:50+0800",
+  "approval_comment": "CEO 批（BOD 转达·DP-028 并入）",
+  "auto_dispatch": true,
+  "dispatch_ref": "DP-20261123-036",
+  "dp028_merged": {
+    "dp": "DP-20261123-028",
+    "design_ref": "cto-dp028-parallel-joint-review-design-20261123.md（73964d6cd）",
+    "scope": "并行联审五项（独立产物 opinions-<seat>.json/聚合器单写/run_dir 只读/并发 3-4/FADE_JOINT_PARALLEL=0 回退）",
+    "executor": "FSD",
+    "supervisor": "CTO"
+  }
 }
