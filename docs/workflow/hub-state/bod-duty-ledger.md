@@ -11704,3 +11704,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 已转 CTO/SDE 六步：①bak 先行 ②**两处同改**（llm 与 llm-deepseek 的 contextWindow 131072→**1048576**·maxTokens 暂不动）③yaml 校验 ④改后下一次请求即生效（无需重启）⑤**最小 dsh headless 请求实测接受度**（成功=1M 生效；报错记错误码→回落 512K 再测→再败回 128K）⑥读数回 BOD（改前后/校验/实测/回退档位）。COS 按 D-88 取号。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1599 · DP-029 1M 试读数：试验层通（session 读到 1048576·rc0）·**弱证**（未触 >128K·provider 超限未证）
+
+- SDE：①备份 .bak-pre1m-20261123T131550Z ②**试验层 1048576 双 entry**（maxTokens 未动）③yaml OK ④**最小请求 rc0·回复正常·会话 config contextWindow=1048576·零错误码** ⑤**弱证如实**：短 prompt 未触 >128K·**provider 超限接受度未证** ⑥主 overlay 零动（零影响）。
+- 候 CTO 裁下一步：**改主 idle 窗**（正式切换）vs **先大 context 探边**（构造 >128K 输入一次定谳）。
+
+——BOD·（date 现查原值·D-47 正形）
