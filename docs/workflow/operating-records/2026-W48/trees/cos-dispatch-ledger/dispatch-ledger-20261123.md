@@ -85,7 +85,7 @@
 **DP-024 取号**（19:52·R10 施工批·CEO 批讫 19:51:38）：9 items 分派——①先契约后施工→CTO ②exam 接线→CPO+FSD ③todo-list 族→CPO+FSD ④链稳定+failure_class→COO+FSD ⑤owner_seat 六字段→CHO+FSD ⑥消化率读数→CHO+FSD ⑦close 双字段→COS 自办 ⑧ceo_ruling 补→CFO/值席（11-29 前）⑨95 路线图→COO——**施工完+自测绿→直接点火**（CEO 令不需再呈报）·点火前四件照例·ETA 2-3h 各席并行。**FSD 回执（19:55:50）**：码面四件毕（todo-list 族 CPO-02/failure_class COO-01/owner_seat+消化率 CHO-01·02/close 双字段 COS-01）·三仓 commit TC 8e6d067+TriRMC 0411c05+TMV 87a56cc63·四套件 72 passed+charter TS 11 passed·CFO-01 经勘=值席流程非码面（转 COO SOP 执行面）。**待三非码面件**：CTO-01 契约卷/CPO-01 exam 接线/COO-02 95 路线图——候 COO 点火令（施工完点火·CEO 已批）。
 
 
-**DP-025 补号**（19:59·D-88·BOD 直转补登记）：DP-20261123-025=fade-001 教程更新（CEO 直令 BOD 转 RDT）——新增「触发」章（段 1 触发面+DP-022 段号错位如实注）+「loop」章（M1-M9+DP-016/019/020/021 实现对齐）·执行体 RDT·号已抄 RDT（9da1345b）。
+**DP-025 补号**（19:59·D-88·BOD 直转补登记）：DP-20261123-025=fade-001 教程更新（CEO 直令 BOD 转 RDT）——新增「触发」章（段 1 触发面+DP-022 段号错位如实注）+「loop」章（M1-M9+DP-016/019/020/021 实现对齐）·执行体 RDT·**已毕销账**（TC **526fbc0**〔6 files +714/−6·sg 顶验真〕+TMV 施工卷 c63ff6a09〔76 行·sg 顶〕——07-trigger-and-ignition.md 280 行+08-loop-evolution.md 415 行+README v2.2.0——销账锚=526fbc0+c63ff6a09·三如实注转 CTO 对表·GitHub 两笔候网通窗）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
