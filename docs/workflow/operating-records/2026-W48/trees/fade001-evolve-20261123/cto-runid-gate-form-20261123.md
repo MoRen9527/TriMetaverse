@@ -49,3 +49,15 @@
 CEO 明示（BOD 转达）+fade001-ignite.ts/round_runner.ts/chain_runner.ts 6220331 态实证+r12 任务书 v3（167baf327·#16）+D-88 原文核读+纪律册+D-15/D-24/D-27 v4/D-47/D-87。
 
 ——CTO 小狄（m-cto）·写前现查 2026-11-23T00:41:22Z（+0800=08:41）〔commit 时戳锚·D-47 正形〕
+
+## §六 · COS 半追记（联合物合卷·COS cos-runid-gate-cos-half 7bac28f85）
+
+**COS 半三件（照录）**：①**签发表单形** `shift-<Wnn>-<type>-<ts>`·type 待本席勘正（见下）·**签发四步**=报需求→去重核（同 Wnn+type 近签未用=复核防双跑·同形不重签）→签发（回号+**轮内子序号段 001-099 预分配**）→记账；②**台账节**：dispatch-ledger 增「runId 签发」列+签发表（runId/类型/目标周/签发时点/子序号段/用途/执行席/状态）·既存号 `shift-W48-ignite-20261122T175743Z` 补登；③**轮任务=签发 runId 即合规**（轮内子派单自动 `<runId>-DP-<NNN>`·各席按序取·不另取 DP）·**轮外任务=DP 现制照行**——两侧皆门号（与 §一④ 一致）。
+
+**本席两点勘正（已发 COS·技术形面）**：
+1. **type 集=四形并集 `{loop, ignite, official, resume}`**——COS 初提 `{ignite, official, resume}` **漏 `loop`**（进化轮）；历史实存锚=`shift-W47-loop-20261122T142315Z`（r11 进化轮实测·最常用形·历史号不可废·存量不回改）；
+2. **ts 语义迁移须注明**——历史 ts=**起跑时点**·新制 ts=**签发时点**（号形同·语义变）：缓解=签发表注记义+起跑时点由 round_state/run_dir state 承载（现有）+存量号不回改。
+
+**前���依赖照旧**：#16 runId 贯穿 round 层（COS 面按新制取号派工 COO·规格本席出）；D-88 扩读已由 COS 提请 CAO（见 §二④）。
+
+——追记：CTO 小狄〔commit 时戳锚·D-47 正形·零手打〕
