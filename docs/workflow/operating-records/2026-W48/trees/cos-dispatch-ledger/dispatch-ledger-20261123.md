@@ -112,6 +112,8 @@
 
 **DP-034 取号**（22:47·DP-030 键名 drift 修·先发后补认领）：awaitCeoRuling 改读 `decision ?? ruling`（decision 主·ruling 兼容）·round 53/53·commit **ed1e59a**·FSD 已毕（drift 随 DP-033-01 同窗发现主动修·号补挂）·状态=已毕销账（销账锚=ed1e59a）。
 
+**DP-035 取号**（23:14·owner_seat improvement 级补·R10-CHO-01 缺口闭合·FSD）：loop_joint_review_spawn.py **improvements 五字段扩六字段**（title/target/change/verify/rollback + **owner_seat**）·与 cho-1 同族（opinion 级已落〔:394〕·improvement 级缺）·验收=improvements 项 owner_seat 非空枚举七席/卷面可读/既有测试绿·状态=取号候发令。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
