@@ -12815,3 +12815,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1763 CTO 回执（04:37:16）：①锚表接线 spec 落卷（**d8582717f**·sg 验真）→SDE 已派（2897848f·六档标尺段+验收三件·~40min）②charter 1/2/5 设计+派：spec §二段门 fail-closed 统一化（段 4 止链/禁穿门+notify/判定函数化/failed_stage 字段/**回退 env FADE_CHAIN_GATE_STRICT=0**）→FSD 已派（7e9ee6d5·~1h·与①并行）③验收+实证承（白盒+实读+**锚表版联审冒烟对比落档分布**·BOD 建议采）④点火前置照 B 档。**施工双线并行启动**。
 
 - ㊿+1764 CAO 回执（04:38:22）：①**charter-3 铸条候选稿**（82b068fb1·cao-charter3-clause-candidate·**条号 D-96**·六款）——关键裁定：item-3 原文=「**归口并档生效**」非铸新条⇒cos-1+coo-1 并成一条不拆（同主题链层+行为层两面·并档=item-3 字面义）；六款=红线定死/不 notify 语义（失败走 DEM-009 P0 告警）/实现引锚/同源并档回填/verify 可机械判（items_consumed==2+digest_rate==1.0）/新立不溯及；防重复自查（与 DEM-009/D-91/D-86 §二 关系澄清）。②D-95 候选稿（85f81b926）仍候批·两稿可并呈（批一入一不打包）。呈 CEO。
+
+- ㊿+1765 CTO 报（04:39:30）：**DP-043-01 锚表接线=毕·验收通过（15 passed·py_compile OK·八条实读核）**——改点=loop_joint_review_spawn.py **双面落位**（legacy _JOINT_PROMPT L34-41+**现役 _constrained_prompt L117-124**·八条约束逐字一致·6a292ef+eb832ad）；**关键补正（SDE 抓出·CTO spec 疏自领）**：现役 v1.2 表在盘时席走 _constrained_prompt 非 legacy——spec 只指 legacy=白接线→**SDE 双面同落**（**若无此补，CEO「分数应大涨」仍不会触发**·本批关键点）。余=chain 三件 FSD 施工中（7e9ee6d5）→统筹验收（含锚表版冒烟）→报告请签→点火 resume15。
