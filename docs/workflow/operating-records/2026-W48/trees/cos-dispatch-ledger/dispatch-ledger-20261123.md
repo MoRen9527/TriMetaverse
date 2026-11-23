@@ -110,6 +110,8 @@
 
 **DP-033 取号**（22:30·charter v2 施工批·CEO 批 22:21:43）：6 items 逐席分派（**cos-1/COS**·coo-1/COO·cpo-1/CPO·cto-1/CTO·cho-1/CHO·cfo-1/CFO）·逐条验收形照 items verify 列·D-88 三步·施工完+自测绿→点火跑一轮（前置：新轮专属 continue 件三绑〔run_id/round_count〕·清场双零·门态·号·480s）·状态=派发→在途。
 
+**DP-034 取号**（22:47·DP-030 键名 drift 修·先发后补认领）：awaitCeoRuling 改读 `decision ?? ruling`（decision 主·ruling 兼容）·round 53/53·commit **ed1e59a**·FSD 已毕（drift 随 DP-033-01 同窗发现主动修·号补挂）·状态=已毕销账（销账锚=ed1e59a）。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
