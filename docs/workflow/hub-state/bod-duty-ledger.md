@@ -12819,3 +12819,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1765 CTO 报（04:39:30）：**DP-043-01 锚表接线=毕·验收通过（15 passed·py_compile OK·八条实读核）**——改点=loop_joint_review_spawn.py **双面落位**（legacy _JOINT_PROMPT L34-41+**现役 _constrained_prompt L117-124**·八条约束逐字一致·6a292ef+eb832ad）；**关键补正（SDE 抓出·CTO spec 疏自领）**：现役 v1.2 表在盘时席走 _constrained_prompt 非 legacy——spec 只指 legacy=白接线→**SDE 双面同落**（**若无此补，CEO「分数应大涨」仍不会触发**·本批关键点）。余=chain 三件 FSD 施工中（7e9ee6d5）→统筹验收（含锚表版冒烟）→报告请签→点火 resume15。
 
 - ㊿+1766 CTO 报（04:41:18）：**DP-043 两件全毕·统筹验收通过**——①锚表接线 6a292ef+eb832ad（双面落位·15 passed）②**chain 三件 448c31d（8 files/276+）**：gateStageResult L48-62（verdict 键存在则仅 pass 放行/无产物 skip/不可解析 skip）+循环统一门判 L277-289（非 pass→return failed_stage+err「门拒·不 notify」）+FADE_CHAIN_GATE_STRICT=0 回退动态读 ✓·FSD 报 **chain 22/22+round 58/58+charter 14/14 全绿**；判定函数化+四态拦停（dry_run_not_executed/fail/halt_pending_ruling/blocked·rc0 亦拦）照 spec。④下一步：**锚表版联审冒烟**（同 run-dir 验落档分布）→毕报→请签→点火 resume15。⑤如实：冒烟前「分数应大涨」=预期非实证。
+
+- ㊿+1767 拍读 04:42：三仓落定（TMV fbb4f9835 COS 1054 销账+**b2827af9 三细节并入双面八条**·TCO 6a292ef/eb832ad·TMC 448c31d）·零进程——段X=**锚表版联审冒烟（CTO 即排）**·ETA=冒烟毕即呈报告请签。DP-043-03（D-96/D-95 并呈候批）/04（台账 COS/COO 在办）。
