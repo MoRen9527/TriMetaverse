@@ -11393,3 +11393,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - COS 按 D-88 补取号。
 
 ——BOD·2026-11-23T20:25:36+0800（date 现查原值·D-47 正形）
+
+### ㊿+1559 · RDT v2.3.0 交付（②③④闭环更新·①DP-022 核证为负未改）+BOD 误判自领
+
+- **v2.3.0 交付**（TC 7ba6c63·5 files +23/−16·sgbare 顶验真；TMV 闭环卷 b78c93c30·52 行）：**②08 §2.2** 六边表 E1/E2/E5 改双对象判据（avgA/avgB）+「闭环注（DP-027）」（锚 TriRMC 5ade74f+48 passed+CTO 对表卷 §一·aggregate.average 降展示面·CAO 冻结 §一.3）｜**③08 §2.3** FUSE 改「已按态收窄」（`flagVol.flag==='test' && round_count>=FUSE_MAX_ROUNDS`·5ade74f 实证）｜**④08 §4.4** 「口径统一形」（A=周迁移质量/B=协议遵循·CEO 18:02 口径·mean-of-seat-means 唯一·历史卷翻标义务）+「分歧登记」（CHO_B80.6 vs CAO_B60·归因两项·并列不平均·锚 CAO 冻结 7d8a37c8f+CHO 会签 75998626e）。
+- **①DP-022 未改·对象断言核为负**：四向核（树 grep/COS 台账 927 排期/BOD 台账/无本地滞后）→**对表卷全域未检出**；本轮实勘「对表卷」=`cto-dp026-parity-table-20261123.md`=DP-026 非段号对表；「48/48」=DP-027 测试。07 §六维持「在办·如实注」+闭环核注（四向核证写明）。
+- **BOD 自领**：先前把 DP-026/027 闭环误当 DP-022 达面转述 RDT（对象断言缺失·RDT 拒改=正形）；已催 CTO+CAO 即出 DP-022 对表卷。
+
+——BOD·（date 现查原值·D-47 正形）
