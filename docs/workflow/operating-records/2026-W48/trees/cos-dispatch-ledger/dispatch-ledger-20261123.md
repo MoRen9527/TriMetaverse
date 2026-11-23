@@ -58,6 +58,10 @@
 
 **resume 点火起跑**（SDE 11:35:03）：起跑=03:32:52Z（11:32:52 CST）·pid **3098499**·run-dir=`fade001-runs/shift-W48-resume-20261123T033142Z`·**run-id=签发件 ✓**（d80633b38）·preflight pass（exempted(loop)）·qualify 落·**ETA≈04:20Z（12:20 CST）**。**DP-012 净测通过**（不带 PYTHONPATH rc=0=根治兑现）；两发现=dist 未重建（SDE 补建）/LOOP_WINDOW 仍须 env（已带）。三口径+联审 A/B（新基线）随报。
 
+
+**DP-015 取号**（12:23·D-88）：DP-20261123-015=verify 全量质量门升级（verify.py 段 5 增调 plan_scope._structure_gate 全量校验·现轻量断言 36 项全量门无人跑·FSD 架构发现）·执行体 FSD·面=TriCompany verify.py（与 DP-014 TriRMC 面不同仓不并单）·依据 CTO 裁 04:22。状态=取号候发令。
+**DP-014 状态更新**：FSD 已落 1a0da7a（43/43·dist emit 候轮间守纪律）——归并确认（含 CTO 双修规格）·**落码毕候验收**（CTO 验→销账）。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
