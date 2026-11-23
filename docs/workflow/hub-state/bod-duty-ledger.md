@@ -10257,3 +10257,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume2 在跑（12:13:12 起）·**A/B 首读 ETA 12:55-13:10**·判：在途（连续 3 拍在途·按规则报段位/ETA）。
 
 ——BOD·2026-11-23T12:30:18+0800（date 现查原值·D-47 正形）
+
+### ㊿+1409 · 6min 拍⑬（12:36）：DP-015 毕销账（verify 全量门·两形等值 33+195 passed·CTO 四锚 65 passed）（现查 2026-11-23T12:36:18+0800）
+
+- **DP-015 毕**（TriCompany d7c2c08）：verify 段5 调全量 plan_scope._structure_gate——**两形等值 33+195 passed**·**CTO 验收四锚 65 passed 全核**·COS 887/888 落账销账。
+- resume2 在跑（12:13 起·第 23 分钟）·A/B ETA 12:55-13:10。
+
+——BOD·2026-11-23T12:36:18+0800（date 现查原值·D-47 正形）
