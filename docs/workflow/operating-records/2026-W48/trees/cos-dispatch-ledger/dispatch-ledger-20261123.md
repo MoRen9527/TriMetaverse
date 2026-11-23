@@ -72,6 +72,12 @@
 
 **DP-020 毕销账**（16:20:10·FSD 抄送）：段 3 截断治理两件落——①拆分生成（plan-only/exam-only 两次 spawn·各半预算·exam 失败=空卷兜底非致命·回滚锚 FADE_PLAN_EXAM_SPLIT=0）②输出精简（两 prompt 注·单 JSON 直出禁长推理）·commit **7410866**（TC·双机同步）·plan 套 12 passed·族 203 passed**状态勘正（16:40 CTO）**：**实现通过（a+b 对 plan 面实证）·关键实证（段 3 绿）未达·追补中**——resume7 实测：spawn1 plan-only=**57.5s ✓（拆分大胜）**·spawn2 exam 挂死>240s→300s 帽杀（exam 席工具探索 63 calls/读源码·非截断·**exam 面新因**）。**追补两件（DP-020 内不新号·FSD 已接）**：a) exam prompt 限定读取面（≤5件禁源码禁跑码限次）b) **结构缺陷修=子超时>父超时（exam spawn 900>stage 帽 300→改 min(spawn, stage_remaining)）**。
 
+
+**DP-021/022/023 取号**（17:05·CEO 追问三件·BOD 核查三件均未修）：
+- **DP-20261123-021**=判级/charter 顺序修正（round_runner.ts 实证：await runJointReviewHook 在 verdict==='loop_exit' 判级**之前**→双达标仍生成无用 charter；改法=钩子拆两步：联审先行产 A/B→判级→仅未达标才生成/挂 charter）·**机制本体项**（回呈 CEO 已由本问触发·COO 督办·CTO 定形+FSD 落码）
+- **DP-20261123-022**=段编号对齐勘正（协议段1=触发 vs 链实现 preflight=段1→CTO/CAO 出对表卷：协议段号↔实现段号映射+改注释/文档/规范·**不动行为只正名**）
+- **DP-20261123-023**=R1/R2/R3 定名（源码 verify.py 无此命名·疑 reasons 编号→CTO 给定名入卷·防口头编号无定义）
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
