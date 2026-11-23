@@ -55,6 +55,18 @@ debug 态**新轮启动前**核「本轮专属 ruling 件」：`vol.run_id === p
 
 **④两件历史 continue 并存**：resume4 件（83B·signed 07:32:37Z）仍驻留——修形后历史件应标 consumed/归档（防误读）。
 
+## §七 · 勘正二次（SDE 自我勘正两笔假读数·根因修正版·2026-11-23 21:33）
+
+**⚠️ §六 A/B 两新发现=撤回**（SDE 自我勘正）：①「自指解析缺陷」**不存在**（其用错根（fade001-runs）复算得 self·**正确根复算**=正常解析 ignite 轮）；②「ignite 目录消失」**不成立**（目录**在** `/var/lib/trirmc/cron/runs/shift-W48-ignite-20261122T175743Z`·该轮=cron 面跑出·runs root 不同）。**本席自领**：消费 SDE 读数直接入卷未核源（「读数须核源」缺步·与「路径基准未先核默认值」同族）。
+
+**根因修正版（定谳·以本条为准）**：
+1. **preflight `--prev-runs-root` 默认=`/var/lib/trirmc/cron/runs`**（源码 L537·env `TRICO_PREV_RUNS_ROOT` 可覆·**非 fade001-runs**）；
+2. 每轮 preflight 从该根解析**最新完整轮=ignite 轮** → 其 ceo-ruling（`{continue, 6202b5aa6, signed 2026-11-22T18:23:27Z}`）常驻 → **每轮 continue 放行·一纸多轮成立（机制确认）**；
+3. resume4 份 continue（fade001-runs）=**沉睡不被任何 preflight 读取**（归档即可·非修形对象）；
+4. **修形对象件=cron/runs 根的 ignite ceo-ruling**（DP-030 三绑/消费标记指向此件）。
+
+**🔴派生紧急（CEO 裁面）**：continue 常驻 ⇒ **轮 3+ 会继续自动起直至 FUSE 8 轮**——CEO「放过轮 2」≠「只跑 2 轮」——**若仅需本轮毕=须 terminate 裁决（落 terminate 件于 cron/runs 根）或停进程（SIGTERM）·已紧急报 BOD 候 CEO 速裁**。
+
 ## §五 · 使用依据
 
 CEO 明示（21:27 BOD 转）+BOD 初疑+round_runner bba27a0 实读+SDE 报（resume5「prev=ignite·continue 件常驻=多次有效」实证）+D-15/D-24/D-27 v4/D-46/D-47。
