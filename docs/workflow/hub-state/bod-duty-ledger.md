@@ -10243,3 +10243,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume2 轮在跑（12:13:12 起）·A/B 首读 ETA 12:55-13:10·判：在途。
 
 ——BOD·2026-11-23T12:18:16+0800（date 现查原值·D-47 正形）
+
+### ㊿+1407 · 6min 拍⑪（12:24）：DP-015 取号（verify 全量门）+DP-014 落码（现查 2026-11-23T12:24:17+0800）
+
+- COS：**DP-015 取号**（verify 全量质量门·FSD·TriCompany 仓·不同不并发）+**DP-014 落码**（hook spawn env/cwd 根修）（1742f0518/1c6216818）。
+- 三仓：TriCompany 2959db2 无新。resume2 在跑·A/B ETA 12:55-13:10。
+
+——BOD·2026-11-23T12:24:17+0800（date 现查原值·D-47 正形）
