@@ -81,6 +81,9 @@
 
 **DP-017 追补毕销账**（17:47:26·CTO 验收）：1da5242（五字段+no-improvement 显式条·dimensions 不变）·本机 loop **11 passed** ✓·未动运行中进程照纪律——销账锚=1da5242。**轮面预期**：round2 联审若部署后起=本轮见 improvements·否则 round3 生效（如实档）。
 
+
+**DP-024 取号**（19:52·R10 施工批·CEO 批讫 19:51:38）：9 items 分派——①先契约后施工→CTO ②exam 接线→CPO+FSD ③todo-list 族→CPO+FSD ④链稳定+failure_class→COO+FSD ⑤owner_seat 六字段→CHO+FSD ⑥消化率读数→CHO+FSD ⑦close 双字段→COS 自办 ⑧ceo_ruling 补→CFO/值席（11-29 前）⑨95 路线图→COO——**施工完+自测绿→直接点火**（CEO 令不需再呈报）·点火前四件照例·ETA 2-3h 各席并行。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
