@@ -12110,3 +12110,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 余 cos-1（15min 面）+收口→点火。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1648 · 点火前置齐：门件三绑落毕（round_count=8）+state fresh 零态·候链令即点火
+
+- 值席回执：**SDE state 重置执行毕**——fresh 缺省零态实锚（{flag:debug·test:0/prod:0·fuse:false·resume:null·retry:0}）+移档留勘二（bak-fuse-legacy2 零删）+两面并立如实注（裁决件 round_count=8=审计绑 vs runner fresh test=0=运行面世代计·零混挂 notice-230 ④分域形）。
+- 链面现势：resume10 门件毕+state fresh 零态+runner 重点火（resume10 run_dir 对表）=候链令面（S 链参数化/直跑）。
+- COO：DP-033-01 验收绿（coo-1+cto-1 双绿·scratch 实跑零生产触·verdict=halt_pending_ruling 设计内·overflow 3/3）·余 cos-1 在办。
+- **候链令即点火**（COO 点火令→SDE 执行·单轮）。
+
+——BOD·（date 现查原值·D-47 正形）
