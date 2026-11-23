@@ -12625,3 +12625,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1726 COS 备批据件形（03:46）：落位=resume12 run_dir/ceo-charter-approval.json·模板七字段（charter_ref+charter_commit 056086364+approved_by:CEO+approved_at+order_ref+quote+signature_slot）·校验四件（approved_by==CEO/approved_at 非空非模糊/charter_ref+commit 非空/signature_slot 非空=批据可用）·**三角分立：COS 备形·BOD 凭 CEO 明示落件·CEO 本体签署**——三件其二齐（continue+runId）·差批据一件。BOD 呈 CEO 请求签署令。
+
+### ㊿+1727 · **resume13 点火已起跑（03:45:32·preflight 全绿）+时序冲突 BOD 判 GO**
+
+- **活体读数（03:48:31）**：fade001-ignite pid 3198957·run-id=shift-W48-resume13-20261123T191109Z·起跑 ~03:45:33·preflight.json 03:45:41 **全绿**：ceo_ruling ok=continue（ruling_ref=DP-040-instruction-20261124T031100Z·signed_at=03:45:16·BOD 落件被消费）·**flag_gate ok=true·mode=strict·flag=debug（DP-038 生效实证）**·model_supply green·qualify pass；段 1-6 已过（plan/exam/dce/verify/score 03:47）·score_skill 在跑（2 dsh 席）。
+- **SDE 呈时序冲突（03:48:45）**：19:43:02Z 点火令到→拒（件缺/号未签/CEO 批未证）；19:43:27Z COS 回执（CEO 批§六 指针 commit 056086364+runId）；SDE 独立实读核证 §六 ✓+BOD continue 件信载 CEO 批令依据；19:45:17Z continue 件落→19:45:32Z 点火（consumed 生成·fuse_marker 按 CTO 裁清 false）；19:46Z BOD 信「亲签件未落应先拒」=两读并存。候 BOD 决 GO/STOP。
+- **BOD 判 GO（msg a12f64d0·四依据）**：①CEO 批令真实（本会话明示）②SDE 放行依据链完整（COS §六 指针+实读核证+continue 三绑=三层证据·非误放行）③STOP 代价不可逆（consumed 生成+验证跑掐断）④批据件形式缺口=事后补签归档。
+- **事后三件**：①补落 ceo-charter-approval.json 归档（CEO 签署令仍请）②时序冲突全录入卷③DP-041 修形（挂载/点火前核「批据件 or §六 指针+实读」机械判据防两读并存）。
+- GO 判同步呈 CEO（可推翻）。
+
+——BOD·（date 现查原值·D-47 正形）
