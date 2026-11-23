@@ -11678,3 +11678,22 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓无新（TriCompany 3a4e592）·无在跑链·候 CEO：是否先做 dsh contextWindow 前置两件（外网核官方真值+provider 接受度实测）。
 
 ——BOD·2026-11-23T21:12:19+0800（date 现查原值·D-47 正形）
+
+### ㊿+1597 · **官方文档实证：dsh 用 modelOverrides 改 contextWindow（示例 524288=512K·非 1M）**
+
+- 源：https://deepseek-harness.github.io/deepseek-harness/guide/providers（《配置模型 | DeepSeek Harness》·curl 取回 125KB 实读）。
+- **官方形**：DeepSeek 账号类模型列表来自账号服务→要调整单个模型，在 `$DSH_HOME/profiles/<profile>/cordis.patch.yml` 用 modelOverrides（字段同 models 条目·未设字段沿用 catalog）：
+```yaml
+- id: llm-deepseek-account
+  config:
+    modelOverrides:
+      deepseek-flash:
+        contextWindow: 524288
+        maxTokens: 131072
+```
+- **文档示例值=contextWindow 524288（512K）·maxTokens 131072**——**文档未出现 1M/1048576**；「需要更新版 Harness 的模型会以 CLIENT_UPGRADE_REQUIRED 失败」。
+- **生效**：适配器下一次请求重新读取·**无需重启**。
+- **对照现값**：我们 131072（128K）→ 文档示例 512K=4 倍。528K 阈值 0.8×512K≈410K，压缩频率大降。
+- 待裁：①调 512K（文档已知值·低风险）②试 1M（1048576·须 provider 接受度实测·可能 CLIENT_UPGRADE_REQUIRED/拒绝）。
+
+——BOD·（date 现查原值·D-47 正形）
