@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "R9-task-20261123",
+  "title": "resume9 联审低分维改进批（反推草案·候 CEO 批）",
+  "source": {
+    "run_id": "shift-W48-resume9-20261123T085137Z",
+    "joint_review": "joint-review-resume9-20261123T0939Z.json（795e8b1e1）",
+    "form": "reverse-inference（本轮联审无 improvements 字段·由低分维反推·待 CEO 裁是否采用）",
+    "A": 41.04,
+    "B": 50.25,
+    "low_dims_total": 47
+  },
+  "status": "draft_submission",
+  "approver_pending": "CEO",
+  "approval_comment": "______",
+  "approval_time": "______",
+  "items": [
+    {
+      "opinion_id": "R9-REV-01",
+      "title": "coo·门禁卫生改进（反推·当前20.0分）",
+      "target": "fade-001 运行面（coo 域·object a）",
+      "change": "针对 coo-a2（门禁卫生）低分项治理：提升至 60+ 阈值（当前 20.0）",
+      "verify": "下一轮联审 coo-a2 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    },
+    {
+      "opinion_id": "R9-REV-02",
+      "title": "coo·恢复闭环率改进（反推·当前22.0分）",
+      "target": "fade-001 运行面（coo 域·object a）",
+      "change": "针对 coo-a3（恢复闭环率）低分项治理：提升至 60+ 阈值（当前 22.0）",
+      "verify": "下一轮联审 coo-a3 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    },
+    {
+      "opinion_id": "R9-REV-03",
+      "title": "cao·评审机制完整性改进（反推·当前26.0分）",
+      "target": "fade-001 运行面（cao 域·object a）",
+      "change": "针对 cao-3（评审机制完整性）低分项治理：提升至 60+ 阈值（当前 26.0）",
+      "verify": "下一轮联审 cao-3 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    },
+    {
+      "opinion_id": "R9-REV-04",
+      "title": "cao·制度闭环度改进（反推·当前30.0分）",
+      "target": "fade-001 运行面（cao 域·object a）",
+      "change": "针对 cao-1（制度闭环度）低分项治理：提升至 60+ 阈值（当前 30.0）",
+      "verify": "下一轮联审 cao-1 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    },
+    {
+      "opinion_id": "R9-REV-05",
+      "title": "cfo·成本读数可分解性改进（反推·当前30.0分）",
+      "target": "fade-001 运行面（cfo 域·object a）",
+      "change": "针对 cfo-cost-decomposability（成本读数可分解性）低分项治理：提升至 60+ 阈值（当前 30.0）",
+      "verify": "下一轮联审 cfo-cost-decomposability 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    },
+    {
+      "opinion_id": "R9-REV-06",
+      "title": "cfo·预算护栏在位率改进（反推·当前30.0分）",
+      "target": "fade-001 运行面（cfo 域·object a）",
+      "change": "针对 cfo-guardrail-presence（预算护栏在位率）低分项治理：提升至 60+ 阈值（当前 30.0）",
+      "verify": "下一轮联审 cfo-guardrail-presence 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    },
+    {
+      "opinion_id": "R9-REV-07",
+      "title": "cao·评审机制完整性改进（反推·当前33.0分）",
+      "target": "fade-001 运行面（cao 域·object b）",
+      "change": "针对 cao-3（评审机制完整性）低分项治理：提升至 60+ 阈值（当前 33.0）",
+      "verify": "下一轮联审 cao-3 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    },
+    {
+      "opinion_id": "R9-REV-08",
+      "title": "cpo·评审形有效性改进（反推·当前33.0分）",
+      "target": "fade-001 运行面（cpo 域·object a）",
+      "change": "针对 cpo-3（评审形有效性）低分项治理：提升至 60+ 阈值（当前 33.0）",
+      "verify": "下一轮联审 cpo-3 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    },
+    {
+      "opinion_id": "R9-REV-09",
+      "title": "cto·交付路径与门禁完整性改进（反推·当前34.0分）",
+      "target": "fade-001 运行面（cto 域·object a）",
+      "change": "针对 cto-2（交付路径与门禁完整性）低分项治理：提升至 60+ 阈值（当前 34.0）",
+      "verify": "下一轮联审 cto-2 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    },
+    {
+      "opinion_id": "R9-REV-10",
+      "title": "coo·节奏保真度改进（反推·当前35.0分）",
+      "target": "fade-001 运行面（coo 域·object a）",
+      "change": "针对 coo-a1（节奏保真度）低分项治理：提升至 60+ 阈值（当前 35.0）",
+      "verify": "下一轮联审 coo-a1 得分 ≥60 或不降",
+      "rollback": "面级 revert（无代码面改时=评分口径回退）"
+    }
+  ]
+}
