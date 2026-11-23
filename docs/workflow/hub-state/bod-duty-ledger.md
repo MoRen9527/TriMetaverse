@@ -12317,3 +12317,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - coo-1 验收=部分绿（plan 主面绿·families 38 口径缺口）·COO 不擅改口径如实报。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1675 · **CEO 裁：等 C 跑完即点火（不再请示·并行启用）**
+
+- **CEO 明示**：「**等C跑完，点火**」。
+- COO 四件：①Phase C 毕（ETA 00:02）→**立即点火**（不需再呈·点火令直发 SDE）②点火形=**并行保持启用**（Phase B 已实测 5min·C 仅验回退形）+前置四件照例 ③**families 38 口径不符不阻点火**（归因/补件候 CTO 或入下份 charter）④起跑读数即报。
+
+——BOD·（date 现查原值·D-47 正形）
