@@ -11503,3 +11503,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume10 联审收尾中·A/B 未出·候。
 
 ——BOD·2026-11-23T20:45:12+0800（date 现查原值·D-47 正形）
+
+### ㊿+1574 · CEO 问「CTO 并行联审设计在哪里」·答+请 CTO 出正式设计卷
+
+- **BOD 核查**：**无独立设计卷**——设计仅存①CTO 20:43 消息（五件+护栏）②COS 派工台账 line 97 DP-028 条目（摘要五件：独立产物/聚合器单写/run_dir 只读/并发 4+3/FADE_JOINT_PARALLEL=0 回退）。
+- **处置**：请 CTO 出**正式设计卷**（cto-dp028-parallel-joint-review-design-20261123.md）——文件形/代码改点/只读约定落法/回退锚语义/验收判据（7 席全落·31 维照验·27.5→~10min 实测·429 零上升）/风险观察项——供下份 charter 作**可施工 item**（照 R10 具体可施工原则·拒"摘要式"item）。
+
+——BOD·（date 现查原值·D-47 正形）
