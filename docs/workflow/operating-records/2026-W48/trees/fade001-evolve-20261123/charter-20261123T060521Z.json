@@ -15,7 +15,7 @@
     ]
   },
   "approver_pending": "CEO",
-  "status": "pending_approval",
+  "status": "approved",
   "items": [
     {
       "opinion_id": "cos-1",
@@ -73,5 +73,9 @@
       "verify": "下一轮 close.json#/cost_settlement 存在且 total_duration_s 与三段 stages.duration_s 之和误差≤0.2s；3/3 cost-log 行有非空 unavailable_reason 或数值 delta_cny；guard_hits 与 _ROUND_CAP_CNY/_TOTAL_CAP_CNY/_BALANCE_FLOOR_CNY 三项判定逐项对应。",
       "rollback": "回滚 close_skill_spawn.py 至本拍字节（保留 .bak-pre-cfo-cost），删除 close.json#/cost_settlement 与 cost-log 新增字段，不改原三行。"
     }
-  ]
+  ],
+  "approval_time": "2026-11-23T15:59:11+0800",
+  "approval_comment": "CEO 批（BOD 转达·施工后点火）",
+  "auto_dispatch": true,
+  "approved_by": "CEO"
 }
