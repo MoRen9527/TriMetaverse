@@ -11576,3 +11576,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 联审已毕（39.4min·非卡席）——BOD 请 COO/SDE 报：**逐席耗时/compaction/最长席名**+是否有单席超 spawn_timeout（900s）。
 
 ——BOD·2026-11-23T20:58:19+0800（date 现查原值·D-47 正形）
+
+### ㊿+1584 · 逐席明细候 SDE（最长席 dda6b8 11min/comp13·席名未映射）（现查 2026-11-23T20:58:38+0800）
+
+- COO 面数据不足（席名映射未给）·已催 SDE（abe8501a）报最长席名+耗时+compaction/超 900s 有无/opinions mtime 序。
+- 已知：39.4min 全毕·7/7 席·**无红无 absent**（单席超 900s 若有过必报红·至今无红=大概率无超时）·最长 dda6b8 11min/comp13。
+
+——BOD·2026-11-23T20:58:38+0800（date 现查原值·D-47 正形）
