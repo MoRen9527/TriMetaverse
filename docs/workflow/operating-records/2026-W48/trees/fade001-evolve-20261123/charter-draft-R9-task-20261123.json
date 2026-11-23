@@ -10,7 +10,7 @@
     "B": 50.25,
     "low_dims_total": 47
   },
-  "status": "draft_submission",
+  "status": "voided",
   "approver_pending": "CEO",
   "approval_comment": "______",
   "approval_time": "______",
@@ -95,5 +95,6 @@
       "verify": "下一轮联审 coo-a1 得分 ≥60 或不降",
       "rollback": "面级 revert（无代码面改时=评分口径回退）"
     }
-  ]
+  ],
+  "void_note": "CEO 18:01:49 裁：不批（原话「上面的改进没在点上」）——反推形作废归档；改由本地七席联审（两对象 A/B·31 维冻结表）出具体可施工改进意见→任务书草稿呈批。"
 }
