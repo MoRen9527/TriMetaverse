@@ -10819,3 +10819,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 当前 resume5 在跑（批前续跑·基线面）——**不杀·让其自然毕**（供基线对照）。
 
 ——BOD·2026-11-23T15:59:16+0800（date 现查原值·D-47 正形）
+
+### ㊿+1482 · charter-060521Z 批讫+派工在工（c28a9642d·DP-018·6 items）（现查 2026-11-23T15:59:36+0800）
+
+- 批件已填（c28a9642d）：approval_time=2026-11-23T15:59:11+0800·approval_comment=「CEO 批（BOD 转达·施工后点火）」→**status=approved**·auto_dispatch=true·挂载树位。
+- **DP-20261123-018**（施工批·6 items·item5 跳过）派工已发 COO 发工（D-88 三步）。
+- 施工后点火照守（毕+自测绿→报→再点火·不自动跳）。
+- 分派：cos-1/coo-1/cao-1/cpo-1/cho-1/cfo-1 6 项在工。
+
+——BOD·2026-11-23T15:59:36+0800（date 现查原值·D-47 正形）
