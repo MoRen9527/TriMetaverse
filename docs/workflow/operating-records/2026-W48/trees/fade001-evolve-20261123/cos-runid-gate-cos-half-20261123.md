@@ -12,8 +12,8 @@
 
 `shift-<Wnn>-<type>-<ts>`
 - `<Wnn>`=目标周（如 W48）；
-- `<type>`∈**{ignite, official, resume}** 三形分野**保留**（ignite=提前/点火轮·official=正式拍·resume=补跑续）；
-- `<ts>`=UTC `YYYYMMDDThhmmssZ`（签发时点·非起跑时点——预分配签发形）。
+- `<type>`∈**{loop, ignite, official, resume}** **四形并集**（CTO 勘正①：loop=进化迭代轮〔实测最常用·历史锚 shift-W47-loop-20261122T142315Z〕/official=正式拍/ignite=点火形/resume=补跑——历史号不可废·四形覆盖实际轮类型）；
+- `<ts>`=UTC `YYYYMMDDThhmmssZ`——**新制语义=签发时点**（CTO 勘正②：历史号 ts=起跑时点·新制签发≠起跑）；**存量号不回改**；起跑时点由 round_state/run_dir state 承载（现有）。签发表「ts 语义」注记=固定列头义。
 
 ### 1.2 签发流程四步
 
@@ -25,6 +25,7 @@
 ### 1.3 已签号核（今日已用形）
 
 - `shift-W48-ignite-20261122T175743Z`（SDE 补跑·既有形合规 ✓）；
+- `shift-W47-loop-20261122T142315Z`（r11 进化轮·历史实锚·ts=起跑时点语义·存量不回改）；
 - 本流程生效后新签一律走 §1.2（今日既存号补登签发表）。
 
 ## §二 · 签发表台账节（COS 半 b）
