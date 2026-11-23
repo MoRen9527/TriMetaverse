@@ -12215,3 +12215,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume11 A/B 未出（联审 ETA 23:08-23:10·候）。
 
 ——BOD·2026-11-23T23:09:10+0800（date 现查原值·D-47 正形）
+
+### ㊿+1662 · **🎯resume11 终报：单轮语义闭环（45min）+marker 链毕删+1M 提速 36%+A/B 35.81/43.65 双降（表 v1.2 首读·跨表因素）**
+
+- **①单轮验证达成 ✓✓**：rounds_run=1·轮2 preflight **rc=4 awaiting**（消费戳生效·check_time 15:09:41Z）→链自停——**「一纸一轮」实证闭环（22:24 发现→22:32 治理→23:09 实证=45min）**。
+- **②零残留+marker 链毕删 ✓**（refs/runtime/chain-running 已删·ls-remote 空）。
+- **③1M 三实证（提速 36%）**：联审**全 7 席 compaction=0**（前轮 8-13）·联审**25.0min**（前轮 39.4·−14.4）·段7 两席 **6.1min**（前轮 11.1）。
+- **④A/B=35.81／43.65**（dims 27/26·**table=v1.2 首读**·vs resume10 轮2 37.51/47.61→A −1.70/B −3.96）——**跨表因素**（v1→v1.2 维度构成变化）·comparability=**0.8519/0.8462**（<1.0 符合表升级预期·同表 1.0 已由 resume10 两轮实证）——双降归因候 CTO。
+- **⑤三口径**：score pass／exam **6/6**／trend cos 65.71/coo 57.14；failure_class=[]✓·runid_origin=resume11✓·charter_ref=None·digest_rate=0·**owner_seat 仍无（R10 缺口候 FSD）**。
+- **⑥charter 新生成**（23:09·**7 items**·pending_approval）——生成器连续两轮稳。
+
+——BOD·（date 现查原值·D-47 正形）
