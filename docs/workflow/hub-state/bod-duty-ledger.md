@@ -11725,3 +11725,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CTO：21:16 已裁 b 并发令 SDE（1a3aa2e8·150-200K 探边/接受→主 overlay 1048576 阈值 838K/报错→记码降档/bak 前置）——与 BOD 转达一致·SDE 执行中·读数代呈。
 
 ——BOD·2026-11-23T21:17:03+0800（date 现查原值·D-47 正形）
+
+### ㊿+1602 · **🎯DP-029 探边=通过（150K+ tokens 被 provider 接受·rc0 零错误）**
+
+- SDE：中文 300K chars（900KB·**≈150K+ tokens**）经 stdin 送 dsh（1M 层）→**rc=0·完整回复「正常」**·模型明示读到全量填充文·**零错误码**·config contextWindow=1048576 → **provider 实测接受 >128K**。
+- 下一步=**空闲窗改主 overlay**（候 CTO 令）·回退锚 bak-pre1m-20261123T131550Z 在位·成本一次性 ~¥0.15-0.3。
+- 预期收益：联审席压缩阈值 105K→**838K**（0.8×1M）——压缩风暴（CHO comp13）预计降至 0-2 次·联审时长大降。
+
+——BOD·（date 现查原值·D-47 正形）
