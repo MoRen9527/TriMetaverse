@@ -11480,3 +11480,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 已转 CTO 评估三件（dsh 并发能力实测/并行形设计/风险护栏）→ 通过即取号派 FSD。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1571 · CTO 评估通过：并行联审可行（设计四件+回退锚·目标 27.5→~10min）
+
+- **①dsh 并发=纪律/设计选择非技术限制**：依据=今日 **12 席并行 spawn 先例**（COO 排面实锚）+现串行=loop_joint_review_spawn 内顺序循环实现选择+probe4 并发窗实证。
+- **②并行形设计**：a) 各席独立产物 `opinions-<seat>.json`（sandbox cwd 写面天然隔离·DP-019）b) **聚合器唯一写 joint-review.json**（单写者防冲突）c) run_dir 只读约定（DP-019 追补 d196de8 绝对路径注）d) **并发上限 3-4 席**（providre 429 计数上限 2500 远低·分批 4+3）e) 预期 **27.5min→~10min**。
+- **③风险护栏**：读写面隔离充分/资源 3-4 席保守/429 观察/**回退锚 env FADE_JOINT_PARALLEL=0→串行旧形**。
+- **结论=评估通过**→CTO 请 COS 取号派 FSD（DP 候选）。
+
+——BOD·（date 现查原值·D-47 正形）
