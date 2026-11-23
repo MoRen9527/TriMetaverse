@@ -26,7 +26,7 @@
 | 3 | cao-1 plan_skill_spawn readings 字段 | **覆盖** | DP-013（plan prompt 契约镜像·readings 34 非空探针验） |
 | 4 | cpo-1 plan 契约职责/证据锚 | **覆盖** | DP-013（同族 prompt 契约面·八条生效首轮即合规） |
 | 5 | cto-1 TC spawn 环境修复 | **覆盖** | DP-012（chain_runner env/cwd·净测 rc=0）+DP-014（hook L220 同族延伸） |
-| 6 | cho-1 17 families owner/due/acceptance signoff | **转后续任务书** | 轮 3 联审再产或并入下轮 charter（families signoff=管理面·非本批施工面） |
+| 6 | cho-1 17 families owner/due/acceptance signoff | **转后续任务书** | **后续轮次联审**再产或并入下轮 charter（CTO 建议采纳：按 run 内 round_count+runId 表述·弃「轮 3」跨 run 编号） |
 | 7 | cfo-1 dce 实参真跑（dry_run 空跑 pass） | **转后续任务书** | 下轮 charter（dce 实参形=迁移器面·候 COO 窗排） |
 
 **结论**：5 覆盖+2 转后续+**0 drop**——每条有着落（「不丢改进」底线守住）。CTO 面可复核。
