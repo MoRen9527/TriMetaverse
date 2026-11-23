@@ -10168,3 +10168,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume 轮：段7（03:36 起）+rubric/close/联审·**ETA 12:20**·判：在途。
 
 ——BOD·2026-11-23T11:54:16+0800（date 现查原值·D-47 正形）
+
+### ㊿+1397 · **resume 轮1 十段全过（两席 68.57/68.57 双升）+联审缺产根因=幂等守卫**（现查 2026-11-23T11:58:26+0800）
+
+- **resume 轮1 十段全过**：score verdict=pass·exam_objective **6/6 pass**·段5 verify 过（不再 rc=2）·readings 34 条 domain 全非空+disposition 全枚举（DP-013 实效✓）·close/notify_done（11:54）·**主观两席 cos 68.57／coo 68.57（较轮1 62.86/57.14 双升）**——**已自动进轮2**（round_count=2·plan_skill_spawn 在跑）。
+- **联审缺产根因（代码实锚）**：round_runner.js L211「if (st.pending_charter_ref) return」——**runner-state 残留旧 charter ref（024923Z·河源侧仍记 approver=CEO pending）→联审七席钩子被幂等短路由**（非失败）→本轮无 7 席 opinions/joint-review/charter（opinions 仅 2 席=score-skill 自带）·**A/B 本轮无**。
+- **处置（BOD 裁=M4 授权内）**：COS 按 M4 处理河源侧 charter 副本代批+清 pending（与 CTO 对表写面安全）+修幂等守卫语义（校验 charter 状态而非死挡）+hook spawn 无 env/cwd 新 DP 候选（L220）取号派工。
+- 附：COO 提「①候 CEO 批旧 charter」——**不必**（M4 已授权 COS 代批·CEO 昨已明示）。
+
+——BOD·2026-11-23T11:58:26+0800（date 现查原值·D-47 正形）
