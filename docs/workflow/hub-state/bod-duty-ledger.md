@@ -12540,3 +12540,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 待：COO 汇总→COS 重构任务书 v2→BOD 呈 CEO 批。零点火零施工照执。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1709 · **任务书 v2 重构出稿（cddc0e251·7 件主体+20 条 R+三项 D3/D4/D6 候 CEO 裁）·BOD 已通读呈 CEO**
+
+- 卷=cos-taskcharter-v2-refactor-20261124.md（3925B·03:06·七席 opinions+COO 汇总卷输入）：§一 T1 v1.3 三件改型／T2 标尺锚点表独立件（CAO 六档骨架+CHO 三件式·禁自校准自审计·版本化漂移告警）／T3 charter 7 items 保留／T4 DP-038 先修（缺省改 debug+初始化断言+遗留 state 迁移+preflight flag 门）／T5 DP-037 单列／T6 cpo-1 三对齐／T7 锚维独立面板（聚合不动 DP-026ⓒ）。§二 R1-R20 全带落点（CFO R1-R3/CAO R4·R17·R20/CHO R5·R18/CTO R6·R7/CPO R8-R10·R19/COS R11-R13/COO R14-R16）。§三 D3/D4/D6 候裁。§四 执行序：DP-038 先修→T1/T2→T3/T5→全毕自测绿→点火。
+- COO 汇总卷（台账 1205·aggregate-coo 七席全齐·8 共性 C1-C8+6 分歧 D1-D6+20 修复 R1-R20）；CHO opinions 移位正落（a02d600af）。
+- BOD 已通读全卷·呈 CEO 批（含 D3/D4/D6 三项裁定）·禁点火零施工照执。
+
+——BOD·（date 现查原值·D-47 正形）
