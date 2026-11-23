@@ -99,6 +99,9 @@
 
 **DP-029 取号**（21:16·dsh overlay 试 1M·CEO 裁 B）：patch 层隔离试验（dsh --patch repeatable·不动主 overlay）→contextWindow 1048576 双 entry→headless 短 prompt 验→成功改主 overlay/失败 524288 再测→再败删零动·执行体 SDE·状态=取号候确认。
 
+
+**DP-030 取号**（21:32·ceo-ruling 一纸多轮急修·CEO 裁 21:31）：**裁面勘正**=实际消费面主因=preflight check_ceo_ruling（非 awaitCeoRuling·SDE 两查实读）→两处同修+七件（三绑/消费标记/absent fail-closed/防浪费护栏/向后兼容/测试六案/bak 锚）+prev 自指同修（轮 3 exit 4 面）·执行体 FSD·急修形轮 3 前须达·状态=取号候发令。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
