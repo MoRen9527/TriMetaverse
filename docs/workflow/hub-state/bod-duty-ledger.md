@@ -12040,3 +12040,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **charter-134432Z 已交付 COS**（dbcc8b56f）→**重审可即刻推进**。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1640 · **charter-134432Z 重审毕→v2 呈 CEO 批（d543442e7·6 items 全过无改删增）**
+
+- 重审结论：按 v1.2 框架逐条对表——**6 items 全过**（五字段全·跨 6 席〔cos/coo/cpo/cto/cho/cfo〕≥4 席✓·治理四维恒查=检查项非 items·无改/删/增）→**charter v2**（charter-20261123T134432Z-v2.json·d543442e7·status=pending·批时点位空）·原稿 dbcc8b56f 留档。
+- **生成器恢复实证**：该 charter=resume10 轮2 末钩**自动产**（3a4e592 生效·DP-021 观察点兑现）——「charter 拒」根因全消。
+- v2 items 六条：①cos-1 补 DP号—charter—dispatch—receipt 闭环（close.json 增 charter_ref/dispatch_ref/receipt_ref）②coo-1 dce 实跑回填整数 rc·禁 dry_run 空参判 pass ③cpo-1 W48 活件全集入 OP 索引与 plan 断言对齐 ④cto-1 dce 段 fail-closed（dry_run/空参/未检 overflow 不得 pass）⑤cho-1 补 7→2 意见逐条处置表（opinion_dispositions[]·堵 FUSE 静默丢弃）⑥cfo-1 cost-log 逐行补 run_id/trigger/task_id+会话面 transcript 通道。
+- DP-032：硬闸已装 sg bare（6d92b4c7 七案过）·**机位勘正=R-HY 无 /srv/git·真位=sg**（CTO 自领·转 CAO 勘正 D-91）·**集成缺口 1=FSD marker 路径同错位·修 A 在派**（env TRI_CHAIN_MARKER 覆写）——**缺口修复前不得读作「跑中更新已受控」**（D-91 款6 效力边界）。
+- **呈 CEO 批 charter v2**。
+
+——BOD·（date 现查原值·D-47 正形）
