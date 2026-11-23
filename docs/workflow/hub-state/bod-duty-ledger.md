@@ -11363,3 +11363,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **DP-20261123-026 取号**（三如实注对表）：ⓐM3-v2 门槛×flag 边 aggregate average→CTO｜ⓑM9 FUSE 按态分支→CTO｜ⓒA/B 两套口径→CAO/CHO 冻结窗统一（与 D-89 对照窗同窗办·与今日字母反差同源）。
 
 ——BOD·2026-11-23T20:08:11+0800（date 现查原值·D-47 正形）
+
+### ㊿+1555 · CEO 令「按最新代码再检查更新」·BOD 代码核验 + 更新版流程图/门禁表
+
+- 核验实证（TriCompany/TriRMC 源码）：**failure_class** 落 verify.py L279-289 ✓｜**runid_origin/charter_ref/opinions_in/items_consumed/digest_rate** 落 close_skill_spawn.py L209-261 ✓｜**owner_seat** 落 loop_joint_review_spawn.py L391 ✓｜**todo-list 族** 落 weekly_plane_shift 活件族表+测试 ✓｜**DP-021 两阶段** 落 round_runner.ts（computeJointGrade→bothPass 则写 charter-skip.json 跳过·未达标才 tryCharterHook）✓｜**DP-016 run_id 四形** 落 score_engine L72 ✓。
+- **仍存缺口（RDT 三如实注坐实）**：ⓐ round_runner 外层仍「hook→verdict」顺序（判级在 charter 判定之后·但 hook 内部已条件化·无害但文档须对表）｜ⓑ FUSE round_count>=8 代码未按 flag 分支（M9 文档形待对表 DP-026）｜ⓒ A/B 口径两套（DP-026 ⓒ）。
+- 更新版流程图+门禁表已呈 CEO（正文）。
+
+——BOD·（date 现查原值·D-47 正形）
