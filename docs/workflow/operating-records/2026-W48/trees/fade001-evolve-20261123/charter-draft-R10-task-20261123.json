@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "R10-task-20261123",
+  "title": "W48 七席联审改进批（本地联审·两对象·主线五要素映射·克制形）",
+  "source": {
+    "review": "本地七席联审 7/7（COS62/58·CTO72/72·COO60/55·CFO76.75/79.75·CHO69/80.6·CAO63/60·CPO53.33/50）",
+    "direction": "CEO 2026-11-23T18:01:49 方向定调照录（程序严谨固定工作/ skill 智能主观工作/三不原则/智能应对变化/自动进化≥95/不要过度设计）",
+    "object_note": "⚠对象字母反差：召集 A=迁移/B=协议 vs 标尺卷 A=实现/B=迁移（两相反·本稿按名称口径+召集字母映射·防聚合错位）"
+  },
+  "status": "draft_submission",
+  "approver_pending": "CEO",
+  "approval_comment": "______",
+  "approval_time": "______",
+  "items": [
+    {
+      "opinion_id": "R10-CTO-01",
+      "title": "先契约后施工纪律（skill 面变更契约先行）",
+      "target": "评审召集模板+各 skill prompt/schema",
+      "change": "任何 skill 产出/消费面变更（prompt/schema/枚举/必填）先出契约对表卷再落码；契约卷载输入/输出/枚举/必填四段；落码前冒烟对表",
+      "verify": "下一轮 skill 面变更均有契约卷在链；零「边跑边修」缺口类（对照今日 8 轮 resume 教训）",
+      "rollback": "条款撤回（无代码面）"
+    },
+    {
+      "opinion_id": "R10-CPO-01",
+      "title": "exam 出题面接线完整（未解一）",
+      "target": "plan_skill_spawn exam 段+score_cli 消费",
+      "change": "exam 出题面接通完整链：plan_skill_spawn 产 exam.json（obj+sub 双段）→段 6 score_cli 自动判 obj→段 7 两席判 sub",
+      "verify": "exam.json obj/sub 双段非空；段 6 自动判读数在 score.json",
+      "rollback": "出题面回退（现形）"
+    },
+    {
+      "opinion_id": "R10-CPO-02",
+      "title": "族点名入迁移器+todo-list 族（未解三+CEO 例）",
+      "target": "migration-must-migrate-families.md+迁移器判据",
+      "change": "must_migrate 清单增 todo-list 族（CEO 举例·随大表派生）；族点名表入迁移器判据（whitelist 逐族对表）",
+      "verify": "族清单含 todo-list；下一轮 verify 逐族读数",
+      "rollback": "族清单回退"
+    },
+    {
+      "opinion_id": "R10-COO-01",
+      "title": "迁移链稳定第一优先+failure_class 归族（COS 合并）",
+      "target": "verify.py+轮编排纪律",
+      "change": "①每轮失败自动归族（截断/工具探索/argv/超时）→verify.json 增 failure_class 字段；②一次修复一次验证纪律入召集模板（禁多缺口并发试错）",
+      "verify": "下一轮任一红含 failure_class；修复验证轮次≤2",
+      "rollback": "字段回退"
+    },
+    {
+      "opinion_id": "R10-CHO-01",
+      "title": "owner_seat 六字段（improvements 契约扩）",
+      "target": "improvements schema+generator",
+      "change": "improvements 五字段→六字段（增 owner_seat 枚举席名）；generator 校验含六字段",
+      "verify": "下一轮 opinions 六字段齐；generator 接受",
+      "rollback": "schema 回退"
+    },
+    {
+      "opinion_id": "R10-CHO-02",
+      "title": "意见消化率机械读数",
+      "target": "close_cli.py",
+      "change": "close.json 增 opinions_in→items_consumed 两字段；<1 时未消化须带责任席说明",
+      "verify": "close.json 含两字段；消化率可算",
+      "rollback": "字段回退"
+    },
+    {
+      "opinion_id": "R10-COS-01",
+      "title": "close 增 runid_origin+charter_ref",
+      "target": "close_cli.py",
+      "change": "close.json 增 runid_origin+charter_ref 二字段（门号链贯穿）",
+      "verify": "close.json 含二字段+对表签发表",
+      "rollback": "字段回退"
+    },
+    {
+      "opinion_id": "R10-CFO-01",
+      "title": "ceo_ruling 幂等阻塞点补（11-29 拍前）",
+      "target": "值席落件流程（M5 SOP 执行项）",
+      "change": "11-29 正式拍前值席落 resume 系最新轮 ceo-ruling（continue）；拍前复核",
+      "verify": "11-29 preflight 门绿（不 exit 4）",
+      "rollback": "无（执行项）"
+    },
+    {
+      "opinion_id": "R10-COO-02",
+      "title": "95 路线图分阶段门（文档化非新机制）",
+      "target": "loop 规范补节",
+      "change": "出「距 95 路线图」：阶段门清单（当前 A60-77/B50-81·阶段门≥80/≥90/≥95 各门判据+预算）",
+      "verify": "路线图卷在链；各阶段门判据可机判",
+      "rollback": "卷归档"
+    }
+  ],
+  "constraints": {
+    "max_items_total": 30,
+    "max_per_seat": 5,
+    "mainline_mapping": "逐条映射主线五要素",
+    "no_new_mechanism": "零新机制设计（照 CAO/CEO 克制令）"
+  }
+}
