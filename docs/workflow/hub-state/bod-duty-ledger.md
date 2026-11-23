@@ -10878,3 +10878,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 下步：修形后在跑（CTO/COS 在办）。
 
 ——BOD·2026-11-23T16:18:19+0800（date 现查原值·D-47 正形）
+
+### ㊿+1489 · **resume6 真因改判= max-tokens 截断（16384）·DP-020 落码修·B 说撤回**（现查 2026-11-23T16:24:19+0800）
+
+- **真因定谳说 A（COS 921/COO 1111）**：**max-tokens 截断（16384）**——席位输出被截→空输出；**B 说（DP-019 sandbox cwd 实现 bug）CTO 自领撤回**。
+- **DP-020 已落码**（7410866）：split plan/exam generation + concise-output prompts（fix 16384 max-tokens）。
+- **DP-018 进度**：**item7 毕**（0eb13f1·cost_settlement block in close.json）+余 5 项施工中（tree-facts 供料）。
+- 下步：DP-020 修形验证（再点火）。
+
+——BOD·2026-11-23T16:24:19+0800（date 现查原值·D-47 正形）
