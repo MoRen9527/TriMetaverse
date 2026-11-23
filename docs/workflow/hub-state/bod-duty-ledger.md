@@ -12359,3 +12359,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候段进度/A-B（并行联审 5min 预期·整轮 15-20min）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1681 · **🔥resume12 点火（23:58:46 CST·preflight pass·一纸一轮消费戳✓·并行首生效轮）**
+
+- **件落核三绑齐**：`{decision:continue, ruling_ref:shift-W48-resume12-20261123T151900Z, signed_at:15:58:17Z, run_id:resume11 ✓, round_count:0 ✓}`——**值席落件+COO 秒催值=5min 全链闭合**（23:56 令→23:58 点火）。
+- **点火**：15:58:46Z（23:58:46 CST）·pid 3181699（COO 读数·SDE 报 3181789 疑 wrapper/子进程两读数）·run_dir=resume12·preflight=pass·**消费戳已生成（resume11/.ceo-ruling-consumed.json ✓）**。
+- 前置齐：双零/480s/**并行保持启用（FADE_JOINT_PARALLEL 未置 0）**/TRI_CHAIN_MARKER env 带（D-91 面）。
+- 进度：qualify 落·**段3 起跑中**——本轮=**DP-028 并行首生效轮**+四实证点照核·A/B ETA ~00:20。
+
+——BOD·（date 现查原值·D-47 正形）
