@@ -10729,3 +10729,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 已流转值席（tmux capture=1·含落件内容模板+落点待 SDE 对齐+回 sha256/路径/读回）。
 
 ——BOD·2026-11-23T15:31:03+0800（date 现查原值·D-47 正形）
+
+### ㊿+1471 · **charter-060521Z 呈批件出稿（M4-v2 出稿形首用·deab63171·items=7）·呈 CEO**（现查 2026-11-23T15:32:36+0800）
+
+- **呈批件**：trees/fade001-evolve-20261123/cos-batch-submission-charter-060521Z-20261123.md（deab63171·卷面+items+批时点位待填）。
+- **items 7**：cos-1（26 件 observed 证据链）/coo-1（plan id 分散收口）/cao-1（families 14 补 owner·due·acceptance）/cpo-1（实例 9 件 id 锚定）/cto-1（T1-1 run_id 正则 resume 分形）/cho-1（RACI+families 字段）/cfo-1（迁移成本可结算）。
+- 出稿注记：**item 5 已由 DP-016 修复（a7e40af·62 passed）**——批后对表引用不重复；items=v4 轮意见不回溯。
+- **COS 只出稿不代批（M4-v2 照守）**——BOD 呈 CEO 批；批前续跑照行（resume5 在途候值席落件）。
+- 另：值席落件路径已定谳并流转（**resume4 runDir**·capture=1）；**DP-016 条件触发**（resume4 轮3 段3 再超时·候 CTO 确认）。
+
+——BOD·2026-11-23T15:32:36+0800（date 现查原值·D-47 正形）
