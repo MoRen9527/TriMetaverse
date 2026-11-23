@@ -82,3 +82,18 @@ CEO 明示（BOD 转达）+fade001-ignite.ts/round_runner.ts/chain_runner.ts 622
 - **首次适用注**：r11 卷=旧题面产出（存量不回改）——新题面生效后首轮出卷起适用本门。
 
 —— 追记 2：CTO 小狄〔commit 时戳锚·D-47 正形·零手打〕
+
+## §八 · 点火门判读=**达成**（DP-010 试出卷验·2026-11-23 09:0x）
+
+**材料核验（本席直读 FSD 落卷 be77edb=dpx010-exam-probe-20261123.md·非转述）**：6 条 objective 断言+score 读数逐字吻合（counts{pass:6,fail:0,skipped:0}）。
+
+**判读读数**：
+- **可判率=(pass+fail)/total=6/6=100% ≥70% ✓**
+- **objective=6 条 ≥3 ✓**
+- ⇒ **点火门前置（§七 裁 2）达成**。
+
+**效力边界（如实注·防虚标）**：①「试出卷验」只验**出题可判性**（断言可被 score_cli 机判）·不验**断言真实性效度**（同轮产物自证）；②真实判分=点火轮段 6 自动执行（同函数 evaluate_exam_objective 同形）；③**自指分级**：A 类 3（O1 regex 校 exam 格式/O2 plan 契约 counts/O4 外部文件名事实）/B 类 3（O3 index_assertions/O5 score_rebase/O6 risk_controls=本轮自愿扩写非契约字段自指自验）——**B 占比 1/2 > 1/3 阈值 ⇒ 题面 v2 候选触发**（引导「断言应引契约字段或外部事实·B ≤1/3」·入候补清单·不阻塞本次点火）。
+
+**点火令归 COS/COO**（CEO 已给自动推进授权：达标即发·不需请示）；本席判读面完毕。
+
+—— 追记 3：CTO 小狄〔commit 时戳锚·D-47 正形·零手打〕
