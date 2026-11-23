@@ -16,3 +16,17 @@
 
 ---
 —— **COS 代批**（m-cos·M4 授权形）·写前现查 2026-11-23T10:57:00+0800（D-47 原值）
+
+## §七 · 7 items 覆盖映射表（CTO 要求·「不丢改进」逐条对表·2026-11-23T12:00+0800）
+
+| # | item（源席意见） | 处置 | 落点锚 |
+|---|---|---|---|
+| 1 | cos-1 agent_readings 身份补铸/证据面 | **覆盖** | DP-013（probe3 readings 34 非空+evidence_ref 验） |
+| 2 | coo-1 top_level_moves+dest 扩展 | **覆盖** | COO 根因修卷（top_level 8 逐项清单+must_migrate 族·migration-must-migrate-families.md） |
+| 3 | cao-1 plan_skill_spawn readings 字段 | **覆盖** | DP-013（plan prompt 契约镜像·readings 34 非空探针验） |
+| 4 | cpo-1 plan 契约职责/证据锚 | **覆盖** | DP-013（同族 prompt 契约面·八条生效首轮即合规） |
+| 5 | cto-1 TC spawn 环境修复 | **覆盖** | DP-012（chain_runner env/cwd·净测 rc=0）+DP-014（hook L220 同族延伸） |
+| 6 | cho-1 17 families owner/due/acceptance signoff | **转后续任务书** | 轮 3 联审再产或并入下轮 charter（families signoff=管理面·非本批施工面） |
+| 7 | cfo-1 dce 实参真跑（dry_run 空跑 pass） | **转后续任务书** | 下轮 charter（dce 实参形=迁移器面·候 COO 窗排） |
+
+**结论**：5 覆盖+2 转后续+**0 drop**——每条有着落（「不丢改进」底线守住）。CTO 面可复核。
