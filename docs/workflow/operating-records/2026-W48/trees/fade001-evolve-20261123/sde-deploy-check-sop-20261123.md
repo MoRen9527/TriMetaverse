@@ -15,6 +15,12 @@
 > **②TriCompany python 面 = 逐段/逐钩新进程载**（chain 每段 spawnSync python3·联审钩每轮新 python）→ **改 python 在跑链的后续段/后续钩即刻生效**——若改动有 bug 即在跑链后续段即崩（无隔离）。
 > ⇒ **改码面链空闲窗 = 双面硬要求**（TriCompany 改动同样适用）；链跑中改 python 须改后即时冒烟（防未验改动被在跑链吃到）。实证：resume10 轮 2 钩吃到 3a4e592（pull 带入）。
 
+## 点火放行判据 v2（DP-041·CEO 2026-11-24 裁 B 定档）
+
+> **五件齐方可点火**：a) CTO 点火令（枢纽约）｜b) **CEO 批 = `ceo-charter-approval.json` 亲签件在位**（校验四件：`approved_by=="CEO"`／`approved_at` 非空非模糊／`charter_ref`+`commit` 非空／`signature_slot` 非空）——**§六 指针+实读降为辅助证据**（裁 B 前曾以「§六 指针+git show 实读」放行 resume13·不回溯）｜c) continue 三绑件落 prev 正身·未消费｜d) runId 经 COS 签发表｜e) 清场双零/480s/flag 门绿。
+> **批件核证正形**：`git show <commit>:<path>` 一步见目标节号内容（工作树实读+另一相关 commit=伪锚·2026-11-23 自领）。
+> **D-47**：落款时刻一律 date 现查原值粘贴·禁手写（2026-11-23 手写超前时点自领例）。
+
 ## 点火模板·D-91 marker 面（DP-032 A 案·CTO 裁 2026-11-23）
 
 > **点火命令必须带 env `TRI_CHAIN_MARKER=/srv/fleet/TriRMC/chain-running.marker`**（R-HY fleet 可写实位；缺省路径 `/srv/git/TriCompany.git/chain-running.marker` 在 R-HY=ENOENT 写失败→pre-receive 闸盲）。sg pre-receive 已探该位（T8 实测：fresh 拒/stale 放+warn）。缺省 env 时链跑=闸端不可见——**不得读作「跑中更新已受控」**。
