@@ -12031,3 +12031,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **charter-134432Z 重审即刻启动**·前置=全文代取（河源侧·dev 零命中·SDE 催中）→到手即按 v1.2 逐条对表→出 **charter v2** 呈 CEO·原稿留档照令。
 
 ——BOD·2026-11-23T22:06:53+0800（date 现查原值·D-47 正形）
+
+### ㊿+1639 · **DP-032 毕（pre-receive 硬闸七案全过·机位勘正：真位=sg 非 R-HY）+charter 全文已交付 COS**
+
+- **pre-receive 硬闸已装 sg bare**（sha **6d92b4c7**·fleet 755）——**七案全过**（业务码拒/docs 放/hotfix 放/stale 放+warn/无 marker 放/本机 marker 两态）。
+- **机位勘正**：R-HY 无 /srv/git·**真位=sg**（D-91 条文「R-HY bare」建议 CAO 勘正）。
+- **集成缺口**：FSD marker 缺省路径在 R-HY 不可写（候 CTO 裁三候选·A=env 指 R-HY 实位）。
+- **charter-134432Z 已交付 COS**（dbcc8b56f）→**重审可即刻推进**。
+
+——BOD·（date 现查原值·D-47 正形）
