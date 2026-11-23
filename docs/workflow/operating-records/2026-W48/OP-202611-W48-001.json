@@ -36,7 +36,20 @@
         "TriMC"
     ],
     "updatedAt": "2026-11-22T18:05:51.327624+00:00",
-    "activeTrees": [],
+    "activeTrees": [
+        "bod-fade001-sprint-plan-20261120",
+        "bod-tick",
+        "cao-w48-review-20261123",
+        "cos-dispatch-ledger",
+        "cos-patrol-timer",
+        "fade001-evolve-20261123",
+        "fade011-ew-runs",
+        "shot64-dem009-20261123",
+        "w48-gate-semantics-review-20261123",
+        "w48-migration-joint-review-20261123",
+        "w48-migration-quality-review-20261123",
+        "w48-seven-seat-review-20261123"
+    ],
     "doneTreesFromPreviousWeek": [
         {
             "treeId": "w33-weekly-migration-ade",
@@ -641,14 +654,22 @@
         "**CEO 裁决：发布产物指纹封印（2026-08-24 20:29 北京，OP 1.5.0，补 ARCH 双写入方三个口子中的口子①「绕过管线手改」）**——多宿主渲染产物（.claude/agents/*.md + .github/agents/*.agent.md）frontmatter 加 publishMeta{sourceKit, sourceCommit, renderSha256, renderedAt}，发布时盖封；下次发布前置检查重算比对：不匹配=手改实锤（连改后已 commit 也逃不掉，git diff 干净但封印碎）。**恢复口径修正（编排层补充、方向不变）**：hash 负责「发现被改」，恢复默认走管线从当前源重渲（旧版本可能过时，git 回退仅作取证）；同款哲学先例=i4-2 五维同步 contentHash。实现要点：封印字段不参与自身哈希（占位符模板先算后回填）、双宿主统一。改动面=TriCompany 发布链增量（employee_host_publish 前置验证），走研发环单票同 D-ESC-1 流程，待排票"
     ],
     "topLevelSupplement": {
-        "supplementedAt": "2026-11-23T03:05:00+08:00",
-        "authority": "COS 紧急处置令 2026-11-23T03:02:43+0800（W48 迁移四类活件零去向·CPO 池管理权面补铸）",
+        "supplementedAt": "2026-11-23T22:26:00+08:00",
+        "authority": "COS 紧急处置令 2026-11-23T03:02:43+0800（补铸）＋DP-20261123-033 charter v2 cpo-1（全员活件入索引·COS 派工 22:22+0800）",
         "items": [
+            ".shift-ade.json",
+            "OP-202611-W48-001.json",
+            "OP-202611-W48-001.unresolved-items.md",
+            "cfo-quota-daily-w48.md",
             "company-demand-pool.md",
             "daily-progress.md",
-            "cfo-quota-daily-w48.md",
-            "convene/"
+            "task-inventory-20261123.md",
+            "todo-list-20261123.md"
         ],
-        "note": "承接 W47 末态·非迁移器产物·补铸笔见同日 docs(cpo) commit"
+        "conveneDir": "convene/",
+        "missing_declared": [
+            ".shift-ade.prev.json"
+        ],
+        "note": "items=W48 根实盘文件集（自动生成·实盘为准）；charter v2 原写「9 文件」含 .shift-ade.prev.json——该件 W48 未落盘（W47 有）→列为 missing_declared 不造；convene/ 单列 conveneDir。activeTrees 同步为 trees/ 实盘 12 目录（charter 原写 10——起草后新增 2 目录，以实盘为准），对齐 plan-index-assertions-w48.json。"
     }
 }

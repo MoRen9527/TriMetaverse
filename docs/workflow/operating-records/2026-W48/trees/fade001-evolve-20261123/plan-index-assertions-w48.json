@@ -1,0 +1,49 @@
+{
+  "assertion_version": "1.0.0",
+  "source": "DP-20261123-033 cpo-1（charter v2·COS 派工 22:22+0800）",
+  "generated_at": "2026-11-23T22:26:00+08:00",
+  "op_ref": "../../OP-202611-W48-001.json",
+  "index_assertions": {
+    "w48_tree_ids": [
+      "bod-fade001-sprint-plan-20261120",
+      "bod-tick",
+      "cao-w48-review-20261123",
+      "cos-dispatch-ledger",
+      "cos-patrol-timer",
+      "fade001-evolve-20261123",
+      "fade011-ew-runs",
+      "shot64-dem009-20261123",
+      "w48-gate-semantics-review-20261123",
+      "w48-migration-joint-review-20261123",
+      "w48-migration-quality-review-20261123",
+      "w48-seven-seat-review-20261123"
+    ],
+    "w48_top_level_files": [
+      ".shift-ade.json",
+      "OP-202611-W48-001.json",
+      "OP-202611-W48-001.unresolved-items.md",
+      "cfo-quota-daily-w48.md",
+      "company-demand-pool.md",
+      "daily-progress.md",
+      "task-inventory-20261123.md",
+      "todo-list-20261123.md"
+    ],
+    "w48_loose_files": [
+      ".shift-ade.json",
+      "OP-202611-W48-001.json",
+      "OP-202611-W48-001.unresolved-items.md",
+      "cfo-quota-daily-w48.md",
+      "company-demand-pool.md",
+      "daily-progress.md",
+      "task-inventory-20261123.md",
+      "todo-list-20261123.md"
+    ],
+    "w48_root_dirs_extra": [
+      "convene"
+    ],
+    "w48_missing_declared": [
+      ".shift-ade.prev.json"
+    ],
+    "compare_rule": "set(OP.activeTrees)==set(w48_tree_ids) and set(OP.topLevelSupplement.items)==set(w48_top_level_files) and len(w48_loose_files)==len(tops)"
+  }
+}
