@@ -10944,3 +10944,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 四实证点照盯（段3 绿/token 16384/compaction 5/判分完成率/comparability）。
 
 ——BOD·2026-11-23T16:54:22+0800（date 现查原值·D-47 正形）
+
+### ㊿+1497 · CEO 问「11/13/14 修了么」·答=三件均未修·即取号派工（现查 2026-11-23T16:58:31+0800）
+
+- **答（核查实证）**：①**#11 判级/charter 顺序＝未修**——round_runner.ts 实读： 在  **之前**（联审+生成器→charter pending 写·然后才判级）→双达标仍会生成无用 charter。②**#13 段编号对齐＝未修**（链实现 preflight=段1 vs 协议段1=触发·无勘正卷）。③**#14 R1/R2/R3 定名＝未定**（verify.py 无此命名）。
+- **处置**：CEO 本问=触发机制本体项派工——BOD 已转 COS 取号三件：DP-A 判级/charter 顺序（钩子拆两步·CTO 定形/FSD 落码）｜DP-B 段编号对齐（CTO/CAO 对表卷+正名·不动行为）｜DP-C R1/R2/R3 定名入卷。
+
+——BOD·2026-11-23T16:58:31+0800（date 现查原值·D-47 正形）
