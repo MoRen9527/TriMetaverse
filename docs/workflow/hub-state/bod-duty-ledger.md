@@ -12058,3 +12058,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候 CEO：**charter v2 批**（d543442e7·上问）。
 
 ——BOD·${TS}（date 现查原值·D-47 正形）
+
+### ㊿+1642 · **CEO 批 charter v2（22:21:43）·施工完点火跑一轮**
+
+- **CEO 明示**：「**批，施工完点火跑一轮**」。
+- COS 四件：①批件填（approval_time 22:21:43·status=approved·挂载 auto_dispatch）②**取号 DP-033 施工批**（6 items 分派 COS/COO/CPO/CTO/CHO/CFO·逐条验收照 verify 列·D-88 三步）③**施工完+自测绿→点火跑一轮**——点火前置：**terminate 件仍在**→须为新轮落**本轮专属 continue 件**（新 schema 含 run_id/round_count·三绑）+清场双零+门态+号+480s ④回执含批件路径/分派表/施工 ETA。
+
+——BOD·（date 现查原值·D-47 正形）
