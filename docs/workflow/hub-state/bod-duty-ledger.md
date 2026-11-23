@@ -12416,3 +12416,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 转值席只读探链**（capture=1）：pid 3181699/loop_joint 3186051/dsh 3186536 活否→run_dir 最新落卷→joint-review.json/opinions 七席→终态件→挂死则报卡点建议。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1689 · **resume12 终报：链 00:19:03 正常完成（非挂·「零落卷」误判双自领）·并行首生效成功·comparability v1.2 首个 1.0·A/B 36.88/43.08·exit=fuse**
+
+- **①「1h48m 零落卷」=误判澄清（CTO 自领·BOD 同自领）**：链已于 **00:19:03 正常完成+退出**（cost-log loop_joint duration_s=485.7·batch1 00:11:06→00:14:24／batch2 00:15:32→00:19:03）——无落卷=链已毕后无新件（正确态）·非 hang——教训「**无落卷≠hang**」入册。
+- **②并行生产首生效=成功**：batch1 四席 1.8min／batch2 三席 3.5min·无 hang 无缺超时——**DP-028/036 成立**（联审总 485.7s≈8.1min vs 串行 25min）。
+- **③关键达成**：**comparability=1.0/1.0（v1.2 同表首个 1.0）** ✓·**A/B=36.88/43.08**（对 resume11 稳 +1.07/−0.57）·charter 7 items pending·opinions 7 齐。
+- **④链终态**：**exit=fuse**（round_count=8>=8·跨点火累计·M6 照役）·零残留。
+- **⑤两观察**：a) exit rounds_run=0 疑上报 bug（DP 候选）b) exam 5/5 题量浮动（可判率才是判据）。
+
+——BOD·（date 现查原值·D-47 正形）
