@@ -12258,3 +12258,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 批时点位空·COS 只出稿不代批（M4-v2）·**呈 CEO 批**。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1667 · **CEO 批 charter-150927Z（23:17:50）+DP-028 并入（DP-036 施工批 8 items·完即点火）**
+
+- **CEO 明示**：「**批，DP-028 并入**」。
+- COS 四件：①批件填（approval_time 23:17:50·comment「CEO 批（BOD 转达·DP-028 并入）」·approved·挂载）②**取号 DP-036**：7 items 分派+**DP-028 并行联审并入**（设计卷 73964d6cd·独立产物/聚合器单写/run_dir 只读/并发 3-4/回退锚 FADE_JOINT_PARALLEL=0·FSD 执行·CTO 监核）③**施工完+自测绿→点火跑一轮**（continue 件三绑+清场双零+门态+号+480s）④回执含批件路径+8 items 分派表+ETA。
+
+——BOD·（date 现查原值·D-47 正形）
