@@ -12352,3 +12352,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 现状：值席已发 SDE 请核 round_count（ad6b6a2d）·值到即落件——BOD 转 COO 保 SDE 秒回该值→件落→点火（不再请示）。
 
 ——BOD·2026-11-23T23:58:01+0800（date 现查原值·D-47 正形）
+
+### ㊿+1680 · **🔥点火已起（SDE 毕报·pid 3181789·fresh 零态起跑·ruling continue 在·件族全档）**
+
+- 值席窗实测：SDE 毕报「resume11 点火毕（pid **3181789**·fresh 零态起跑）·run_dir 面 ruling continue 在·件族全档」——**落件→点火链跑通**。
+- 候段进度/A-B（并行联审 5min 预期·整轮 15-20min）。
+
+——BOD·（date 现查原值·D-47 正形）
