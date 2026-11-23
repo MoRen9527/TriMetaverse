@@ -12768,3 +12768,15 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1752 拍读 04:30：联审在跑第 9 分钟（04:21:27 起·5 进程·ignite.log 仍 0=链未退）·目录最新落卷 04:21:43 无新——段X=7 席联审·ETA=数分钟内（resume12 同段 8.1min）。
+
+### ㊿+1753 · **🎯resume14 终报：A+B 修复首验成功·debug 单轮停面实锤·A/B 35.91/39.87·charter 5 items 候批**
+
+- **①段 7 首验=成功**（A+B 热修生效）：scores={I1:10,I2:7,I3:6}·absent/partial/truncated 全 None（无截断）·resume13 同点失败不复现。
+- **②链终态=exit null（debug 挂起停·不迭代）·rounds_started=1**——**M4-v2 debug 单轮停面实锤**（queue-state ceo-ruling absent→awaiting·照设计）；零残留·marker ref 删 ✓·consumed ✓。**DP-038 核心目的达成：debug 每轮停候批真落地**（不再 fuse 熔断）。
+- **③联审 514.2s（8.6min·7 席并行）·opinions 7 件**。
+- **④A/B=35.91/39.87**（seats=6·一席 absent·dims{a:24,b:23}）｜**comparability prev=resume12·1.0/1.0 ✓**（resume13 failed→prev 自动跳 resume12 语义正确）。
+- ⑤三口径+四实证：score pass·exam 5/5·trend cos65.71/coo65.71｜runid_origin=resume14/charter_ref None/digest 0。
+- ⑥**charter-20261123T203018Z.json·5 items·pending_approval**（候 CEO 批）。
+- ⑦COO 自领值守断档 1h15min（23:17→04:32·今日第二断段·resume13+A+B+resume14 全在其断档期由他席闭环）。
+
+——BOD·（date 现查原值·D-47 正形）
