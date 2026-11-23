@@ -12445,3 +12445,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 已正文补报 CEO「呈批件已在候批面」。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1692 · 拍读巡检（02:12）——三仓全覆盖·活体实证 charter pending·零进程·唯一候点=CEO 批
+
+- ① TriMetaverse：eaea647d3（BOD 1691·02:11）+f1994f1d1（COS 1012）——新落卷正常（≈1min 前）。
+- ② TriCompany：最新 0d27602（23:26 DP-036 测试件）——2h48min 无新=链收敛后无施工面（正确态）。
+- ③ TriRMC：最新 2fdb29c（22:14 DP-032-r）——同上正确态。
+- ④ **活体探面（R-HY 经 -J sg 直探）**：resume12 run 目录=/srv/fleet/TriRMC/fade001-runs/shift-W48-resume12-20261123T151900Z/·最后落卷 **00:19:03**（ignite.log/charter/jr/opinions 同刻）·时序 exam-verify-dce 00:01:39→score→score-skill 00:07:59→close 00:10:56→**joint-review+opinions 7 件+charter 00:19:03**·**charter items=7 status=pending_approval（实证）**·opinions 7 件（cos/coo/cao/cpo/cto/cho/cfo）全齐·**pgrep 零进程**·NO_MARKER。
+- ⑤ 推进判据：无在跑进程+1h55min 无新落卷=**候 CEO 批的预期停点·非断点**·不催办。
+- ⑥ **探面勘正入档**：本机 ssh 别名无「sg-server」（Name or service not known）——正身别名=M-SG-47.245.122.61（sg）/R-HY-8.155.54.79（河源·直连限 IP 走 -J M-SG 跳板）；TriRMC 服务域=runs 主位 /var/lib/trirmc/cron/runs（cron ignite 史）+fade001-runs 独立点火目录。
+
+——BOD·（date 现查原值·D-47 正形）
