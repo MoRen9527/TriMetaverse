@@ -12757,3 +12757,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1749 SDE 回执（04:13:46）：**resume14 点火·四前置核全绿**——①**亲签件四校验全过 ✓（B 档首次适用轮·sha 87e25c16 一致）**②continue 三绑 ✓（sha 1e414363 一致·consumed absent→已生成）③B 件实读 ✓（a03750a salvage+truncated_output 面）④双零 ✓·flag=debug（init:default-debug·T4）·480s ✓·fuse_marker=false ✓；pid 3202690·preflight=pass·TRI_CHAIN_MARKER env 带。观察点=段 7 A+B 首验·debug 单轮停候批照 M4-v2。
 
 - ㊿+1750 拍读 04:18：**resume14 前 6 段已过**（score/verify/dce/exam/plan 04:13:55 全落）·**段 7 score_skill 在跑**（5 进程·04:14 起约 4min·上次此段 6min 即 fail）——关键窗口·等读数。TCO 无新（施工已毕）·TMV a5647e386=自家 1749。
+
+### ㊿+1751 · **🎯段 7 过了！resume14 十段全完（04:21:43）——A+B 修复有效·7 席联审在跑**
+
+- **段 7 score_skill=成功**（04:13:56→04:20:00·364.3s=6min·上次同段 rc=2 失败）——**A+B 修复首验通过**；score-skill.json 5805B（vs 失败轮 15KB·限幅生效）·judge_faces.initial 无 absent 键（形态异于失败轮 absent=true rc=1）·entries=0（新 schema 面候 SDE/CTO 细读）。
+- **十段全部完成**：close.json 10608B/notify_done/manifest 04:21:43；close_skill 102.5s（cos 席）；**structure-export-debt.json：structural_count=0·cap=6·cap_ok=true·escalate=false**——T1③ 结构出口债务表机制生效实证。
+- **7 席联审（loop_joint）在跑**（pid 3203716·04:21:27 起·etime 2:44）——等联审终判+charter。
+- 呈 CEO 快报（段 7 突破·上次死点已过）。
+
+——BOD·（date 现查原值·D-47 正形）
