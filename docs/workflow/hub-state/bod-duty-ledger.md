@@ -12458,3 +12458,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1693 拍读 02:18：三仓无新（TMV 32182d905=自家 1692·TCO 0d27602 23:26·TMC 2fdb29c 22:14）·零进程·候 CEO 批 charter（预期停点）——无变化。
+
+### ㊿+1694 · **CEO 质询「debug 态不该有 FUSE」——转 CTO 四问核查+COS 备真源/DP-038 候选**
+
+- CEO 原文（02:2x）：「链终态 exit=fuse（round_count=8>=8·M6 跨点火累计：本次点火收敛非进化终止·可再点火续跑）——原来不就定过这个事么？**debug态，CEO批，每轮都停，理论无限轮。只有test态才需要FUSE。**」
+- BOD 认知对照：flag 四态机纪律含「**FUSE 仅 test（M9）**」条——debug 态=每轮停候 CEO 批、无轮数上限；本次 resume12（debug）报 exit=fuse 与纪律不符候选（M6 跨点火累计是否本应仅 test/prod 生效=核查点）。
+- 已发 CTO 四问核查（msg 72fe4197）：①M6/M9 原文出处及关系 ②round_runner fuse 判定是否读 flag/debug 短路（引行号）③本轮 round_count=8 累计来源 ④判+修法+DP-038 候选取号；另报本轮实际行为影响（应无·链本应停）。
+- 已知会 COS（msg 12c61b2c）：备真源原文定位+DP-038 候选挂账预备；charter-161903Z 呈批不阻塞（可附注此质询）。
+- 待 CTO 回报后：呈 CEO 判（若实现跑偏→修后点火；若纪律歧义→CEO 定谳）。
+
+——BOD·（date 现查原值·D-47 正形）
