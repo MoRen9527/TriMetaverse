@@ -11842,3 +11842,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候 CEO：①**根因修形=急修 A / 并入下份任务书 B** ②轮2 读数。
 
 ——BOD·2026-11-23T21:30:21+0800（date 现查原值·D-47 正形）
+
+### ㊿+1616 · **CEO 裁：急修（一纸多轮根修·即办勿候任务书）**
+
+- **CEO 明示**（21:31:27）：「**急修**」。
+- BOD 已转 CTO/FSD：①awaitCeoRuling **三绑**（run_id 匹配+round_count+signed_at·件 schema 增 run_id/round_count）②**消费标记** state `ruling_consumed_ref`（一纸一轮）③任一不满足或已消费=**absent fail-closed 挂起**④**防浪费护栏**（debug 新轮启动前核本轮专属件·缺失即停留痕）⑤**向后兼容**：旧件无 run_id/round_count→按 absent（旧 continue 作废需重签）⑥**测试**（新件认/旧件拒/二次消费拒/跨 run 拒）⑦bak 先行。
+- 轮2 在跑不影响（tsx 下轮载新码）·COS 按 D-88 取号。
+
+——BOD·（date 现查原值·D-47 正形）
