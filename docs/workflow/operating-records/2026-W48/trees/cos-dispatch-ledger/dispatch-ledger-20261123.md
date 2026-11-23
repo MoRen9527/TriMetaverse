@@ -116,6 +116,8 @@
 
 **DP-036 取号**（23:20·charter-150927Z 施工批 **8 items**·CEO 批 23:17:50「批，DP-028 并入」）：7 items 逐席（cos-1/COS·coo-1/COO·cao-1/CAO·cpo-1/CPO·cto-1/CTO·cho-1/CHO·cfo-1/CFO）+**DP-028 并入**（并行联审五项：独立产物 opinions-<seat>.json/聚合器单写 joint-review.json/run_dir 只读/并发 3-4/FADE_JOINT_PARALLEL=0 回退·执行体 FSD·CTO 监核·设计卷 73964d6cd）·施工完+自测绿→点火跑一轮·状态=派发→在途。
 
+**DP-037 取号**（02:14·rounds_run=0 上报小 bug·非急·BOD 请入台账）：观=resume12 链 run 读数 rounds_run=0（实际跑 8 轮）——疑上报面 bug（非链行为）·BOD 判「非急·不阻塞点火」·状态=取号候派（FSD 闲窗修·与 D-91/DP-035 同链面）。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
