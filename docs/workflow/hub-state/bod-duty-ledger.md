@@ -10098,3 +10098,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 本轮=修复轮（disposition 枚举+自纠门+零 null 门入 prompt）·读数随报。
 
 ——BOD·2026-11-23T11:35:20+0800（date 现查原值·D-47 正形）
+
+### ㊿+1388 · 6min 拍③（11:36）：resume 在跑·无新读数（现查 2026-11-23T11:36:16+0800）
+
+- 三仓：TMV 顶 e8b041abf（COS 879 落账 resume 起跑）｜TriCompany 551df42（R3 错误串就地注）｜TriRMC 无新——**resume 轮在跑**（起 11:32:52·ETA 12:20）·无 A/B 新读数。
+- 判：在途。
+
+——BOD·2026-11-23T11:36:16+0800（date 现查原值·D-47 正形）
