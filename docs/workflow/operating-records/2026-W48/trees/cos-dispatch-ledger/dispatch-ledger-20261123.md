@@ -91,10 +91,10 @@
 **DP-026 取号**（20:09·三如实注对表·DP-025 派生）：ⓐM3-v2 双对象门槛×代码 flag 边 aggregate average 未对齐→**CTO**｜ⓑM9 FUSE 仅 test 按态分支→**CTO**｜ⓒA/B 对象语义两套口径并存→**CAO/CHO 冻结窗统一**——CTO 主责 ⓐⓑ·CAO/CHO 协 ⓒ·状态=取号候各席对表卷。
 
 
-**DP-027 取号**（20:14·P4 补件批·DP-026 ⓐⓑ 施工）：round_runner 同批两件——ⓐnextFlagEdge 双信号入参{avgA,avgB}（全 edge 双对象·单 side 废止·aggregate.average 降展示面）+ⓑM9 FUSE 按态收窄（test && round_count>=FUSE·debug 审批步节流·prod 不入 loop）——CTO 裁形（3e1125011 卷）+FSD 落码·**状态=挂起候融**（CEO 20:4x 裁「不着急，等任务书出来融合一起改」——暂缓落码·设计留卷·候下份 charter items 并入呈批；号 DP-028 已发不销）。
+**DP-027 取号**（20:14·P4 补件批·DP-026 ⓐⓑ 施工）：round_runner 同批两件——ⓐnextFlagEdge 双信号入参{avgA,avgB}（全 edge 双对象·单 side 废止·aggregate.average 降展示面）+ⓑM9 FUSE 按态收窄（test && round_count>=FUSE·debug 审批步节流·prod 不入 loop）——CTO 裁形（3e1125011 卷）+FSD 落码·**设计卷=trees/fade001-evolve-20261123/cto-dp028-parallel-joint-review-design-20261123.md（73964d6cd）**·**状态=挂起候融**（CEO 20:4x 裁「不着急，等任务书出来融合一起改」——暂缓落码·设计留卷·候下份 charter items 并入呈批；号 DP-028 已发不销）。
 
 
-**DP-028 取号**（20:44·联审并行化·CEO 质询响应）：五件（各席独立产物 opinions-<seat>.json 写面隔离/聚合器唯一写 joint-review.json/run_dir 只读约定/并发 4+3 分批/env FADE_JOINT_PARALLEL=0 回退串行）·执行体 FSD·验收=7 席全落+31 维照验/27.5min→~10min 实测/429 降并发/串行回退可切·**状态=挂起候融**（CEO 20:4x 裁「不着急，等任务书出来融合一起改」——暂缓落码·设计留卷·候下份 charter items 并入呈批；号 DP-028 已发不销）。
+**DP-028 取号**（20:44·联审并行化·CEO 质询响应）：五件（各席独立产物 opinions-<seat>.json 写面隔离/聚合器唯一写 joint-review.json/run_dir 只读约定/并发 4+3 分批/env FADE_JOINT_PARALLEL=0 回退串行）·执行体 FSD·验收=7 席全落+31 维照验/27.5min→~10min 实测/429 降并发/串行回退可切·**设计卷=trees/fade001-evolve-20261123/cto-dp028-parallel-joint-review-design-20261123.md（73964d6cd）**·**状态=挂起候融**（CEO 20:4x 裁「不着急，等任务书出来融合一起改」——暂缓落码·设计留卷·候下份 charter items 并入呈批；号 DP-028 已发不销）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
