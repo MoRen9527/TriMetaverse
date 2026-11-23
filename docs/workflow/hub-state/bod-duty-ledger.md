@@ -11882,3 +11882,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 轮2 联审进行中（ETA 21:45-21:55）·停链双保险在办（terminate 件+SIGTERM 窗口）。
 
 ——BOD·2026-11-23T21:36:18+0800（date 现查原值·D-47 正形）
+
+### ㊿+1621 · **双保险①生效：terminate 件已落（轮3 preflight fail-closed 直停·复算 terminated/ok=false）**
+
+- ①备份先行：ceo-ruling.json.bak-continue-20261123T133616Z（151B·回滚锚）。
+- ②**terminate 件已落**（原子写·`/var/lib/trirmc/cron/runs/shift-W48-ignite-20261122T175743Z/ceo-ruling.json`）：`{decision:terminate, ruling_ref:"CEO-2026-11-23T13:33:40Z-D-round2-stop", signed_at:"2026-11-23T13:33:40Z", authority:"CEO 明示D 轮2 跑完即止经 COO 转达·机械落卷·非代签", supersedes_continue:"6202b5aa6"}`——留痕形完整。
+- ③**复算验证=state=terminated·ok=false ✓**（exit 5 语）→**轮3 preflight fail-closed 直接停·双保险①生效**。
+- ④轮2 不动（联审毕收 A/B）·②之保险=轮3 spawn 前窗 SIGTERM（若 terminate 先停则零残留核验即可）·⑤DP-030 指向照录。
+
+——BOD·（date 现查原值·D-47 正形）
