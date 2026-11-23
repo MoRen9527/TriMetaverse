@@ -11105,3 +11105,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候 CEO：R9 反推稿批/不批；round2 在跑（~18:30-18:45 A/B+同表 comparability）。
 
 ——BOD·2026-11-23T17:54:17+0800（date 现查原值·D-47 正形）
+
+### ㊿+1518 · CEO 问 R9 草稿 10 条大白话（BOD 实读）
+
+- 实读 charter-draft-R9-task-20261123.json：10 items（反推形·9 个唯一维度·cao-3 双对象出现两次）。
+- 逐条见正文（大白话）。**关键观察**：change 字段全是「提升至 60+ 阈值」——**无具体改法**；verify=下一轮同维≥60 或不降；rollback=面级 revert。**此稿=目标清单非施工清单**（若批需再落具体改法）。
+
+——BOD·（date 现查原值·D-47 正形）
