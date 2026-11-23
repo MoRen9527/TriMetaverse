@@ -12128,3 +12128,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 已发点火令 GO**（COO→SDE·resume11 debug 单轮）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1650 · **🎯三里程碑：resume11 起跑 + 一纸一轮消费生效 + D-91 硬闸首次活体实拒**
+
+- **①resume11 起跑**：**22:32:30 CST**（pid **3170386**）·run_dir shift-W48-resume11·前置四件全绿·**preflight=pass**（ceo_ruling=continue·prev=resume10·ref=DP-033-instruction）。
+- **②一纸一轮消费生效 ✓**：`resume10/.ceo-ruling-consumed.json` 已生成（229B·22:32）——轮2 preflight 将 awaiting 停=**单轮语义实锚**——「一纸多轮」今日根因治理生效。
+- **③D-91 硬闸首次活体实拒（里程碑）**：链在跑中·sg ref `refs/runtime/chain-running`=12c8824（22:32:31 链自动推）——**活体闸测：业务码+dev 推→拒 rc=1**（「活跃 marker ref…age=205s」）·**docs+dev→放 rc=0 ✓✓**——**机械闸全程在役**（无 ssh 依赖·零延迟·原子标记形）。
+- **④轮1 进度**：段3-6 已过（22:35）·段7 score_skill 在跑→联审 ~22:45+。
+
+——BOD·（date 现查原值·D-47 正形）
