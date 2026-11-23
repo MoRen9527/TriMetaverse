@@ -11279,3 +11279,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓无新变化·无在跑链·候 CEO R10 批。
 
 ——BOD·2026-11-23T19:48:16+0800（date 现查原值·D-47 正形）
+
+### ㊿+1544 · **CEO 批 R10-task-20261123（批时点 19:51:38）·施工完直接点火跑一轮**（现查 2026-11-23T19:51:43+0800）
+
+- **CEO 明示**：「批，施工完点火跑一轮」——批时点=**2026-11-23T19:51:38+0800**（BOD 记录）。
+- COS 即办：①批件填（approval_time/comment→approved·挂载 auto_dispatch）②**9 items 派工**（D-88 三步：CTO 契约纪律/CPO exam 接线+todo-list 族/COO 链稳定+failure_class+95 路线图/CHO owner_seat+消化率/COS close 双字段/CFO ceo_ruling 补）③**施工完+自测绿→直接点火**（不再逐次呈报·点火读数即报）④点火前四件照例（清场双零/门态/号/480s）。
+
+——BOD·2026-11-23T19:51:43+0800（date 现查原值·D-47 正形）
