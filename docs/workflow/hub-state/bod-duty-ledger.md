@@ -11341,3 +11341,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **R10 四件首验**：①failure_class（verify.json）②close 双字段（runid_origin+charter_ref）③owner_seat+消化率 ④todo-list 族断言（--check）；段3 绿/compaction<5 照盯。
 
 ——BOD·2026-11-23T20:01:12+0800（date 现查原值·D-47 正形）
+
+### ㊿+1552 · **RDT 教程 v2.2.0 交付（DP-025·新增 07 触发章 280 行+08 loop 章 415 行）**（现查 2026-11-23T20:06:22+0800）
+
+- **526fbc0**（TriCompany）+c63ff6a09（TMV 落树）：fade-001 教程 **v2.2.0**——**07 触发章**（runId 四形 loop/ignite/official/resume+COS 签发制/点火前四件/双门 preflight-qualify/三件前置/协议段号×实现段号错位 DP-022 如实注）+**08 loop 章**（round_runner 单进程 while 四态六边/FUSE 仅 test M9/chain_runner 段序驱动/轮末七席联审两对象 A-B+31 维冻结表 v1+comparability/improvements 六字段→生成器→charter→呈 CEO 批 M4-v2→施工→再点火 M7-v2/M6/M1-M9 全景/W48 真实弧线）。
+- 文件：docs/training/fade-001/07-trigger-and-ignition.md（280 行）/08-loop-evolution.md（415 行）+README v2.2.0 八篇导航+学习路径 step6-7+registry FADE-001 条 v2.2.0。**教程线零触链**。
+
+——BOD·2026-11-23T20:06:22+0800（date 现查原值·D-47 正形）
