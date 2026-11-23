@@ -11664,3 +11664,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ⇒ 供下份任务书候选：overlay contextWindow 上调试验（含 provider 接受度实测+成本对照）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1595 · CTO dsh 三件齐（自领 head -4 截断漏一文件）
+
+- ①dsh=v1.0.0 本地包装（底层 @deepseek-ai/dsh 0.2.0-rc.2·非 CC 谱系 ✓ 术语勘正彻底）②无 CLI/docs context 旋钮⇒1M 无现成开关·能力上限=provider 真值（须外网核）③**唯一可调=overlay model def contextWindow/maxTokens（现 131072/16384·llm 与 llm-deepseek 双处同改）**·`dsh --patch` repeatable 可叠调参层（不改主 overlay）④**引用面=5 文件（CTO 自领：本机 grep head -4 截断致漏=「截断伪影」族再一例）**。
+- 风险：改大→单请求 token↑（成本/延迟）·provider 若拒=报错（**须实测接受度·前置**）。
+- ⇒ 下份任务书素材：overlay 双 entry contextWindow 调参（前置=外网核官方真值+provider 接受度实测）。
+
+——BOD·（date 现查原值·D-47 正形）
