@@ -28,7 +28,7 @@
 | 族 | 成员（通配） | 迁移语义 | 必迁？ |
 |---|---|---|---|
 | **记录族** | `OP-2026xx-Wnn-001.json`／`*.unresolved-items.md`／`task-inventory-*.md`／`todo-list-*.md` | 随周封存（新周新建·旧周原留） | **是（新建形）** |
-| **活件族** | `daily-progress.md`／`cfo-quota-daily-w*.md`／`company-demand-pool.md`／`convene/` | **活随人带走**（新周承接续写） | **是（承接形·本轮缺位根因）** |
+| **活件族** | `daily-progress.md`／`cfo-quota-daily-w*.md`／`company-demand-pool.md`／`convene/`／**`todo-list-*.md`**（R10-CPO-02 增·CEO 明示逐个补族） | **活随人带走**（新周承接续写） | **是（承接形·本轮缺位根因）** |
 | **树族** | `trees/**` | keep（记录封存·留旧周）／carry_over（跨周活任务树带走）／top_level（新树根） | **按判据分流** |
 | **元数据** | `.shift-ade.json`（+`.prev`） | 滚动（新周新建·prev 留旧） | 是（机关面自动） |
 
