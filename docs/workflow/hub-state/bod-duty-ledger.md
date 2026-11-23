@@ -12795,3 +12795,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO：resume14 终报+锚表接线件候批+charter 5 items 候批。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1758 COS 呈批 charter-203018Z（728b45767+原文 9cf8a4abc·5 items）：**5 items 主题集中=全围绕「dce 非 pass 停链/不进下游/不 notify」**（cos-1/coo-1/cao-1/cpo-1/cto-1·resume13 failed 直接遗留：dce 失败面未拦→下游空转）。已回执勘正一处（e2736f73）：**resume14 亲签件=点火前在位（04:09:59·四校验过后 04:10:48 点火）·B 档首轮完整闭环·非事后补签**（「照 GO 判先例」指 resume13）——勿写混。
