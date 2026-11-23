@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "rN-task-20261123-v2",
+  "source": {
+    "run_id": "shift-W48-resume10-20261123T115623Z",
+    "round": null,
+    "opinion_ids": [
+      "cos-1",
+      "coo-1",
+      "cpo-1",
+      "cto-1",
+      "cho-1",
+      "cfo-1"
+    ]
+  },
+  "approver_pending": "CEO",
+  "status": "pending_approval",
+  "items": [
+    {
+      "opinion_id": "cos-1",
+      "title": "补 DP 号—charter—dispatch—receipt 闭环链并落 charter_ref",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume10-20261123T115623Z/close.json",
+      "change": "由 BOD 下发本轮 DP 号，在 close.json 增 charter_ref=<DP-no>、dispatch_ref=<dispatch ledger id>、receipt_ref=<receipt id>；同步 manifest.json#/stages/close.json=succeeded、close_contract.run_state_source=close.json#/run_state，close_contract.ok 由实检计算而非留 false/null。",
+      "verify": "jq -e '.charter_ref != null and (.charter_ref|test(\"^DP-\"))' close.json；jq -e '.stages[\"close.json\"]==\"succeeded\" and .close_contract.ok==true and .close_contract.run_state_source!=null' manifest.json；close.json 与 manifest 的 run_state 同串；dispatch_ref/receipt_ref 可在 run_dir 找到同名件。",
+      "rollback": "以改动前 close.json/manifest.json 及 sha256 原卷恢复；charter_ref/dispatch_ref/receipt_ref 清空，不重跑评分、不投递。",
+      "owner_seat": "cos"
+    },
+    {
+      "opinion_id": "coo-1",
+      "title": "dce 改实跑并回填整数 rc，禁止 dry_run 空参判 pass",
+      "target": "dce.json",
+      "change": "migrate 的 --start-date 填 2026-11-23、--operating-root 填 /srv/fleet/TriMetaverse/docs/workflow/operating-records；pull/migrate/commit/push 四步实跑并回填整数 rc；3 项 overflow_checks 逐项 checked=true（落读数）或 blocked=true（写阻塞依据）；任一 rc≠0 或 overflow 未过时 verdict 必须为 blocked，禁止 rc=null/checked=false 与 verdict=pass 并存。",
+      "verify": "python3 -c \"import json; d=json.load(open('dce.json')); assert all(isinstance(s.get('rc'), int) for s in d['steps']); assert all(c.get('checked') for c in d['overflow_checks']) or d['verdict']=='blocked'; assert d['verdict']!='pass' or all(c.get('checked') for c in d['overflow_checks'])\"",
+      "rollback": "改前复制 dce.json 为 dce.pre-a2fix.json 并记录 sha256；rc 非整数或断言失败即恢复该副本，保留现卷，不执行 git 写操作，零投递。",
+      "owner_seat": "coo"
+    },
+    {
+      "opinion_id": "cpo-1",
+      "title": "把 W48 活件全集写进 OP 索引并与 plan 索引断言对齐",
+      "target": "/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W48/OP-202611-W48-001.json",
+      "change": "OP.activeTrees 填 W48/trees/ 下 10 个树 id（与 plan.index_assertions.w48_backfill_ids 等集）；topLevelSupplement.items 填根下 9 个文件（补 task-inventory-20261123.md、todo-list-20261123.md、OP-202611-W48-001.json、OP-202611-W48-001.unresolved-items.md、.shift-ade.json、.shift-ade.prev.json，保留 cfo-quota-daily-w48.md/company-demand-pool.md/daily-progress.md，convene/ 单列）；下一轮 plan.index_assertions 增 w48_tree_ids/w48_top_level_files 两数组，w48_loose_files 与根文件集相等。",
+      "verify": "断言 set(OP.activeTrees)==W48/trees 下 10 个目录名；set(OP.topLevelSupplement.items)==W48 根下 9 个文件名；plan.index_assertions.w48_tree_ids 与 w48_top_level_files 同集；len(w48_loose_files)==9。",
+      "rollback": "改前保存 OP JSON 与 plan.json 的 sha256 副本；失败执行 git -C /srv/fleet/TriMetaverse checkout -- docs/workflow/operating-records/2026-W48/OP-202611-W48-001.json 并恢复 plan 快照；不重跑评分、不投递。",
+      "owner_seat": "cpo"
+    },
+    {
+      "opinion_id": "cto-1",
+      "title": "dce 段 fail-closed：dry_run、空参与未检 overflow 不得 pass",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/dce_steps.py",
+      "change": "落卷前加硬断言：mode==dry_run 或 4 步任一 rc 非整数 或 overflow_checks 任一 checked!=true 时 verdict 必为 blocked 并写 blocked_reason；migrate 的 --start-date 必须匹配 YYYY-MM-DD、--operating-root 必非空，缺即 blocked；仅 4 步 rc=0 且 3/3 checked 才 verdict=pass。",
+      "verify": "pytest runtime/cognition/test_dce_steps.py -q；新一轮 dce.json 断言 .verdict != 'pass' 或 (.mode == 'real_run' 且 4 步 rc 均为整数 且 3/3 overflow_checks.checked == true)；migrate 命令无空串参数。",
+      "rollback": "保留改前 dce_steps.py 的 git SHA 与 dce.json 副本；断言失败即 git checkout 该文件并恢复 dce.json，manifest.stages.dce.json 标 blocked 后再跑。",
+      "owner_seat": "cto"
+    },
+    {
+      "opinion_id": "cho-1",
+      "title": "补 7→2 意见逐条处置表，堵 FUSE 静默丢弃",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume10-20261123T115623Z/close.json",
+      "change": "在 close.json 增 opinion_dispositions[]：逐条列 round1-snap-20261123/opinions.json 的 7 席 opinion_id/seat/state(consumed|rejected|deferred)/owner_seat/reason/evidence_ref；5 条因五字段缺失被 charter-hook 退回的意见标 rejected，填责任席（CTO 定形接线/COS 流程面）与补件时限；items_consumed/digest_rate 改由该表计算，禁只报 opinions_in=2。",
+      "verify": "python3 断言：len(opinion_dispositions)==7；set(opinion_id)==round1-snap 7 条；每条 owner_seat/state/reason 非空；digest_rate==items_consumed/7；close.json 中不再出现未列处置的 opinion。",
+      "rollback": "以改前 close.json（sha256 ff8ce9537b193b7d100e5258e271cee7d4eb950d474f2b2c8ae67f366be8edee）原卷回退；不重跑评分、不投递。",
+      "owner_seat": "cho"
+    },
+    {
+      "opinion_id": "cfo-1",
+      "title": "cost-log 逐行补 run_id/trigger/task_id 并补会话面 transcript 通道",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/plan_skill_spawn.py",
+      "change": "将 _write_cost_line 调用改为传入 run_id/trigger/task_id，并在 plan/score/close/loop_joint_review 四个 spawn 脚本统一逐行落 run_id、trigger(auto|manual)、task_id、seat_count；spawn 前若 DEEPSEEK_API_KEY 缺失，写 cost_channel=unavailable，并在 close.cost_settlement 挂 /srv/fleet/TriMetaverse/scripts/cfo-token-meter.py --from/--to 的 transcript_readout（标注本机可采非账户全量）；订阅/其他面在 cost_settlement 增加 identified=false 的 face 行与 owner/next_review。",
+      "verify": "临时 run_dir 跑一次后 jq 断言：cost-log 每行 .run_id 非空、.trigger∈{auto,manual}、.task_id 非空、.seat_count>=1、.started/.finished 非空；缺 key 时 .cost_channel==unavailable 且 close.cost_settlement.transcript_readout 非空；cost_settlement.faces 含 spawn/session/subscription 三行。",
+      "rollback": "改动前复制 plan_skill_spawn.py/score_skill_spawn.py/close_skill_spawn.py/loop_joint_review_spawn.py 为 *.pre-costattr；任一断言失败恢复四副本并保持原 cost-log schema，不重跑生产链。",
+      "owner_seat": "cfo"
+    }
+  ],
+  "revision": "v2（2026-11-23T22:12+0800·维度定版后重审·原稿 charter-20261123T134432Z 留档）",
+  "review_basis": {
+    "framework": "fade-instance-joint-review-framework-v12（636e1db2a·CEO 批 22:02:24）",
+    "table": "fade001-dimensions-v1.json v1.2（ffce016）",
+    "instance": "resume10 轮 2 实例（shift-W48-resume10-20261123T115623Z·round_count=7）",
+    "object_A": "本条 fade 实例的业务质量（W48 迁移链稳定性与产物质量）",
+    "object_B": "fade-001 协议遵循与实现度",
+    "selection": "选维三步：①业务目标=本轮改进落实 ②相关席维=cos(gate/ledger)/coo(编排)/cpo(产品面)/cto(技术面)/cho(岗位)/cfo(成本)——6 席 ≥4 席✓ ③治理四维恒查（门禁/审批/成本/重复消费=检查项·非 items）",
+    "result": "6 items 逐条对表全过（五字段全·跨 6 席·无改/删/增）——原 6 条全保留"
+  },
+  "approval_comment": "______",
+  "approval_time": "______"
+}
