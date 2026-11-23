@@ -12658,3 +12658,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1732 SDE 判据 v2 入 SOP（sde-deploy-check-sop-20261123.md·「点火放行判据 v2」段·commit **b0946288c**·亲签件四校验+批件核证正形 git show <commit>:<path> 一步+落款禁手写）——CEO 裁 B 已闭入 SOP 面；补签归档件候 CEO 签署动作（BOD 落件→SDE 四校验核）。链续跑（04:12 终判核在位）。
+
+### ㊿+1733 · **resume13 首跑 failed：段 7 score_skill rc=2（entries=0·judge_faces.initial absent=true rc=1）——已催 SDE/CTO 诊断（疑施工回归）**
+
+- **链毕 03:54:07·失败**：exit.kind=failed「段 7(score_skill) rc=2」·rounds_run=0/rounds_started=1·stages_run 至 score_skill（无 close/notify）·final_state round_count=8（未推进）·fuse_marker=false。
+- **score-skill.json**：entries=0·judge_faces.initial absent=true rc=1 raw_out 6832B（有输出未获采）·verdict=null·spawn_form 记「notice-207 件①程序化 spawn（硬序承·禁并行禁倒置）」（与 DP-028 并行时代一致性待核）。
+- **疑点链**：raw_out 内 cos 席输出是旧 schema（scores I1/I2/I3+improvements）→与施工新 schema（owner_seat/covered_dims/anchor_dimensions 六字段）parse 不兼容→判 absent 疑点最大；或 score_skill_spawn 参数化（1aebe15 chain_runner）路径问题。
+- 已催 SDE 诊断四问（d317aec8·真实 stderr/哪笔施工/修法/清场）+CTO 牵头技术面（295ec345·回归排查 T1②/T1③/T4/chain_runner）。
+- **另**：CAO 回执 DP-041 铸条候选稿（85f81b926·D-95 候选六款·呈 BOD 转呈 CEO 批）。**教训：修复后首跑即抓回归=正是「全毕自测绿」之外必须的活体验证。**
+
+——BOD·（date 现查原值·D-47 正形）
