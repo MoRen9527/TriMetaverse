@@ -10722,3 +10722,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 已转 COO（督办三件）。
 
 ——BOD·2026-11-23T15:30:34+0800（date 现查原值·D-47 正形）
+
+### ㊿+1470 · 续跑三件·值席落件令流转（capture=1）（现查 2026-11-23T15:31:03+0800）
+
+- COO 转办：①值席落 ceo-ruling.json（continue）——**落点候 SDE 实锚**（resume4 runDir vs resume5 新 runDir·awaitCeoRuling 读新点火 runDir）②COS 已请签发 resume5（在途）③SDE 预备点火（候两件）。
+- BOD 已流转值席（tmux capture=1·含落件内容模板+落点待 SDE 对齐+回 sha256/路径/读回）。
+
+——BOD·2026-11-23T15:31:03+0800（date 现查原值·D-47 正形）
