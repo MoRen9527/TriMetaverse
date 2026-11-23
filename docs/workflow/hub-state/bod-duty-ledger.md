@@ -12587,3 +12587,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO 进度一句·等 FSD 毕报。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1719 CTO 施工更新（03:31:50）：**FSD 五笔已落+自测全绿·七笔合计 116 案过**（T4 round56/chain19/preflight64·T1①T7 loop15·T1② charter14·T5 round58+2·DP-030 drift）·CTO 验收采信。**剩余三差**：a) T1③ 结构出口未落→CTO 裁落点 b（复用 close.upgrade_list+结构标注值·零新机制·~40min）b) T2 锚点表候 CAO/CHO 卷面（~1h）c) T3/T6 他席面不占 FSD ETA。点火 ETA 三差项如实。呈 CEO。
