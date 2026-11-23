@@ -40,3 +40,7 @@
 
 ---
 —— COS 小贾（m-cos·出稿不代批·M4-v2）·写前现查 2026-11-24T02:11+0800（D-47 原值）
+
+## §五 · 附注（CEO 质询·2026-11-24T02:2x）
+
+**CEO 质询「debug 态不该有 FUSE」**（BOD 转）：resume12（debug）报 exit=fuse（round_count=8）与 **M9「FUSE 仅 test 态生效」** 不符候选——CTO 四问核查中（纪律真源 M6/M9 原文及关系／round_runner fuse 判定是否读 flag／round_count 累计来源／判+修法+DP 取号）。**COS 初判**：M9 后铸收窄 M6 适用域→debug exit=fuse=**跑偏候选**（实现面候 CTO 查）。**本批件不受阻**；若 CEO 批，**续跑形待修法明确后再定**（候选修法=COS 判出后 DP-038 取号修 fuse flag 短路）。
