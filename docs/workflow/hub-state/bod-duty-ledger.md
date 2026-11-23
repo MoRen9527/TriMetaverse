@@ -11633,3 +11633,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **可调项**：若官方 deepseek-flash 真值>128K→可上调 overlay contextWindow（须实测 provider 接受度·候外网核）；治本仍=**材料精简包+降单 turn 负载**。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1591 · **CEO 勘正：dsh=deepseek harness 不 spawn CC·术语错须正（BOD 自领）**
+
+- **CEO 指出**：dsh 全称 deepseek harness，怎么会去 spawn CC 的会话——设计实现又跑偏？
+- **BOD 实读实证（自领勘正）**：loop_joint_review_spawn.py L233-241 → `cmd=[dsh_bin, "--profile","headless","--patch",overlay,prompt]`——**联审席=dsh headless run·不是 CC 会话**（dsh_bin=/srv/fleet/dsh/node_modules/.bin/dsh·overlay=/home/fleet/.dsh/patches/headless-agentpresets-overlay.yml）——**前报「CC auto-compact」=术语错**（实为 dsh headless 自身上下文管理）。
+- 已转 CTO/SDE：①术语勘正（统一「dsh headless 上下文阈值」·禁称 CC auto-compact）②核实 contextWindow=131072 与 0.8 阈值属 dsh 哪层配置+该版本 dsh 支持更大窗口否 ③dsh 版本与官方 context 能力（能否 1M·provider 接受度）④可调清单（`--max-context`/overlay 键）供下份任务书。
+
+——BOD·（date 现查原值·D-47 正形）
