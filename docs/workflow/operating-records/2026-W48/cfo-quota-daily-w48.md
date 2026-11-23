@@ -16,3 +16,15 @@
 
 〔落款 2026-11-23 10:00:33 +0800 现查〕
 - 〔自警注·D-47 近失第七笔〕本笔落款初填 10:00:35 系**推测值非现查**（同链 date 只在 10:00:08 跑过一次·推算补填）——重跑 date 得真值 10:00:33 勘正。**形态=「看起来合理的具体时刻」比显式占位更隐蔽**——正形重申：每笔落款必伴随同刻 date 调用·整串粘贴·禁任何推算补填。
+
+## 2026-11-23（周一）14:23 交件（DP-017 维度征集·CFO 席 4 维已填表）
+- **令源**：COO 征集（14:22:05·DP-20261123-017·CEO 裁「维度冻结已收」·CTO 取号·规格卷 1b51e7eca）；表正身=`TriCompany/runtime/cognition/fade001-dimensions-v1.json`（v1.0.0·schema=id/name/definition/object_scope∈{A|B|both}·每席 3-5 维）。
+- **CFO 席 4 维（按成本/预算/护栏/单位经济职能自定·load→改→dump 纪律写表·json.load 断言过）**：
+  1. `cfo-cost-decomposability` 成本读数可分解性（both）——消费面三面（spawn 有账/会话 transcript 可采/订阅其他可识别）中可归属项 ≥2 且残差有升级路径；
+  2. `cfo-guardrail-presence` 预算护栏在位率（both）——护栏四件在位+触发语义正确（无人值守 fail-safe/人工 fail-open/取不到余额 3 次升级）；
+  3. `cfo-unit-econ-computability` 单位经济可算性（B）——轮级成本读数至少一通道可得（余额差分∨cost-log delta）；
+  4. `cfo-two-axis-separation` 两轴分立合规（A）——成本不入质量分（D-86）·breakdown 无成本折算项。
+- **入链验证**：TriCompany HEAD `9e441b4`（「cos 4维+coo 5维 填表·全七席齐」）已含本席 4 维（show HEAD 逐席核过：cfo 4 维在位 ✓）——本席内容随并行席 commit 卷入·零丢失。
+- **回执**：达 COO+抄 COS（维度内容+表位状态：七席齐=cfo4/cao4/cpo4/cto5/cho5/cos4/coo5）。
+
+〔落款 2026-11-23 14:23:55 +0800 现查〕
