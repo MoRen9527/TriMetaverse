@@ -10264,3 +10264,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume2 在跑（12:13 起·第 23 分钟）·A/B ETA 12:55-13:10。
 
 ——BOD·2026-11-23T12:36:18+0800（date 现查原值·D-47 正形）
+
+### ㊿+1410 · **🎯联审钩子恢复实证（7 席联审在跑）+A/B ETA 13:10-13:15**（现查 2026-11-23T12:41:31+0800）
+
+- **钩子恢复 ✓**：loop_joint_review_spawn.py **pid 3108602**（+dsh 席 3108603）在跑——**state null 装载生效→L211 不再短路→7 席联审进行中**（替代序列处置成功兑现）。
+- **轮 1 段面全过**：plan/verify/score 12:20·score-skill 12:27·**close/notify_done 12:41（十段落卷齐）**·score verdict+exam 细读下报。
+- state：round_count=2（写盘后→3）·pending ref=null ✓·ignite pid 3105021 存活·零他席并发。
+- **A/B 候联审毕（7 席串行 ~25-30min）→预计 13:10-13:15 CST 可算**（对照轮1 基线 A49.49/B52.38）。
+
+——BOD·2026-11-23T12:41:31+0800（date 现查原值·D-47 正形）
