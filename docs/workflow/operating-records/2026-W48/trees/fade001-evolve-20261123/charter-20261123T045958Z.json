@@ -15,7 +15,7 @@
     ]
   },
   "approver_pending": "CEO",
-  "status": "pending_approval",
+  "status": "voided",
   "items": [
     {
       "opinion_id": "cos-1",
@@ -73,5 +73,6 @@
       "verify": "jq -c 校验全行含 run_id/stage/cost_kind，且 delta_cny 为数值或 null_reason 非空；三阶段 duration_s 合计=1660.2；全部 run_id=shift-W48-resume2-20261123T035946Z。",
       "rollback": "以改动前 cost-log.jsonl 快照覆盖；不触碰 close.json 与 score.json。"
     }
-  ]
+  ],
+  "delivery_note": "作废归档（CTO 裁 2026-11-23T13:07+0800·非 M4 代批·勿双轨）：本 charter=resume2 轮末联审产出（轮 2 起进程内污染再临·该轮被停（05:09:50Z 停双零）清 ref 后重燃）——作废原因=轮被停/污染面清除（非意见无效）；7 items 逐项对表：cos-1（top_level_keep/counts r2 对齐）→转后续轮次联审重产／coo-1（边界族回分类 S1/B2）→转后续／cao-1（dce 参数 rc/overflow）→转后续／cpo-1（W48 plan 链 activeTrees）→转后续／cto-1（resume run_id 链 T1-1）→**覆盖 DP-014/015 同族（run_id 链+全量门在修）**／cho-1（9/16 家族 owner/timebox）→转后续／cfo-1（cost-log 聚合字段）→转后续——**1 覆盖+6 转后续+0 drop**（不丢改进底线守）。新 charter 候新轮产出（重燃后）。"
 }
