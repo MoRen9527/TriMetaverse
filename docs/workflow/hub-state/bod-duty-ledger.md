@@ -10320,3 +10320,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三仓无新施工·联审在跑（12:54 时 2/7）·BOD 问 COO 当前 x/7+卡席+ETA。
 
 ——BOD·2026-11-23T13:06:17+0800（date 现查原值·D-47 正形）
+
+### ㊿+1418 · **🎯联审 7/7 恢复（钩子修实证）+A/B 43.25/47.56 双降+新 charter 污染再临**（现查 2026-11-23T13:07:27+0800）
+
+- **联审恢复=7/7 全席 ✓**（opinions 7 席·joint-review.json 93782B·dims a35/b35·12:59 落）——**state null 装载→L211 短路解除·替代序列闭环实证**。
+- **A/B 正式（mean-of-seat-means·7 席）**：**A=43.25｜B=47.56**（原始维均 43.23/47.83·n=35/35）——**对基线（A49.49/B52.38）双降 −6.24/−4.82**·暂判双不达·**归因线索=维度数变化（35/35 vs 前 37/38·CTO 三面归因之一）**。
+- 三口径：score verdict=pass·**exam_objective 7/7**·趋势两席 cos 68.57/coo 62.86（coo −5.71）。
+- **⚠新 charter 污染再临**：charter-20261123T045958Z（pending_approval·items=7）→state 记 pending_charter_ref→**下轮钩子将再被幂等拦**（第三次）——**DP-014 根修价值实证·须加速**。
+- 轮2 在跑（round_count=3·13:00 起）·进程健康·快照 11 件存。
+- BOD 双转：COS（新 charter 按 M4 代批+防污染）·CTO（DP-014 加速+本轮过桥形）。
+
+——BOD·2026-11-23T13:07:27+0800（date 现查原值·D-47 正形）
