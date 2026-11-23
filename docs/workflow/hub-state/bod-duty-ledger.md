@@ -12707,3 +12707,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1738 SDE 补证（03:59:08）：**C 项（调 maxTokens）非必需**——provider 输出上限直测 infeasible（模型不配合压满）+数学面单步 16384 预算足以解释→root cause 维持客户端预算+截断；**层 3 prompt spec 五条已交 CTO**（先 reasoning 定稿再一次成文/rationale≤30 字·change/verify/rollback≤120 字/只输出单 JSON 首{末}禁尾注/improvements≤3 条/近限保 scores——限幅后 ≤~3K chars≈2K tokens 余量足）；层 2=CTO/FSD（fail-loud truncated_output+salvage partial 标记·尾部配平不可行已证）。修法面收窄=**A+B 两件热修**（C 免·D 缓）——与已呈 CEO 的批请一致。零施工照执。
 
 - ㊿+1739 CTO 修法终稿（03:59:33）：**A·prompt spec 五条（SDE 稿）**+**B·parse 加固（fail-loud truncated_output+salvage partial+尾部配平能配则配）**=两件·总 ~40min；分工=SDE 落 prompt spec·FSD 改 parse+测试·CTO 验收；C 项非必需留档（根源=客户端单步预算 16384·CTO 自领「疑 provider」错）；探针弃件已清。**零施工照执·CEO 批到即动**。
+
+- ㊿+1740 拍读 04:00：三仓无新（TMV 698e3a8b0=自家 1739·TCO 5892df5 03:32·TMC 2fdb29c 22:14）·零进程·候 CEO 批 A+B 修法（预期停点·零施工照执）。
