@@ -10371,3 +10371,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 全势见呈 CEO 正文（今日轮次/A-B 趋势/制度面/下一跳）。
 
 ——BOD·2026-11-23T13:14:34+0800（date 现查原值·D-47 正形）
+
+### ㊿+1424 · **🔥e 步重燃成功（resume3 13:13:29·pid 3113094）·A/B ETA 13:55-14:10**（现查 2026-11-23T13:16:15+0800）
+
+- 重燃：**13:13:29 CST**·pid **3113094**·run-dir shift-W48-resume3-20261123T050813Z·**零并发核过（ig/py/dsh=0）**·preflight pass·qualify 落·**state=null（round_count=3·FUSE 余 5 轮）**。
+- **FSD 路径澄清（重要）**：resume3 经 **tsx 直跑 scripts/fade001-ignite.ts（TS 源）**→**运行面直接载 bba27a0 源码全量**（env/cwd+守卫双修）·dist=四证验证产物（daemon/打包消费面）——**双面皆达·双修本次运行必然在役**。
+- 预期：段3 新 prompt 出卷→段5 新全量门→十段→**联审新守卫（跨 run 不挡/approved 放行=f 步验证点）**→**A/B 首读 13:55-14:10 CST**。
+
+——BOD·2026-11-23T13:16:15+0800（date 现查原值·D-47 正形）
