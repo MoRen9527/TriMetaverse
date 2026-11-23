@@ -10481,3 +10481,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 指纹三方分离：外部产线 fleet:fleet／FSD root:root／COO jedih→指向 fleet 用户会话。
 
 ——BOD·2026-11-23T13:35:30+0800（date 现查原值·D-47 正形）
+
+### ㊿+1438 · 6min 拍㉓（13:36）：resume4 在跑·候段3 验证点（~13:47）（现查 2026-11-23T13:36:16+0800）
+
+- 三仓：TMV 顶 72820bb61（BOD）｜TriCompany d7c2c08——无新施工。
+- resume4 在跑（13:32:19 起）·段3 超时窗 ~13:47=因果验证点·在途。
+
+——BOD·2026-11-23T13:36:16+0800（date 现查原值·D-47 正形）
