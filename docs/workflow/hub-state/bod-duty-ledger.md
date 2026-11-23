@@ -12603,3 +12603,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 差项余：逐维要件清单=内容面并行补件（不阻塞）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1724 · **CTO 终验收通过 + 点火令已下发 SDE（resume13 起跑在即）**
+
+- ①终验收=T2 机制面通过（anchor-table-v1.md 127 行实读：§5.1 六档 L1-L6 区间表 L1 0-29 零要件/L6 95-100 全要件·L1/L2 不得合并补签①落实 ✓；§5.2-5.5 四禁令/防漂移/KPI/分权 ✓；§5.6 降级规则 ✓）——逐维要件=内容面不阻塞。
+- ②T1 三件全毕验收（5892df5 双机械形+cap1/2+债务表·close 20 passed 绿）+T4/T5/T7/drift 全过。
+- ③**点火令已下发 SDE（52231cba·四前置核清单：a continue 三绑件〔候 COS 投〕b 清场双零 c 号 191109Z 一致 d 480s·D-91 照役）**——点火形=resume13·起跑后 SDE 报 run_dir/pid/preflight 读数·CTO 链面盯段 3/首验。
+- ④注意项：flag 修复已落——**本轮起 debug 态·每轮停候批照 M4-v2**·preflight flag 门 fail 即时回 CTO。
+- BOD 呈 CEO 快报：点火在即。
+
+——BOD·（date 现查原值·D-47 正形）
