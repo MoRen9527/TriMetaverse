@@ -15,6 +15,10 @@
 > **②TriCompany python 面 = 逐段/逐钩新进程载**（chain 每段 spawnSync python3·联审钩每轮新 python）→ **改 python 在跑链的后续段/后续钩即刻生效**——若改动有 bug 即在跑链后续段即崩（无隔离）。
 > ⇒ **改码面链空闲窗 = 双面硬要求**（TriCompany 改动同样适用）；链跑中改 python 须改后即时冒烟（防未验改动被在跑链吃到）。实证：resume10 轮 2 钩吃到 3a4e592（pull 带入）。
 
+## 点火模板·D-91 marker 面（DP-032 A 案·CTO 裁 2026-11-23）
+
+> **点火命令必须带 env `TRI_CHAIN_MARKER=/srv/fleet/TriRMC/chain-running.marker`**（R-HY fleet 可写实位；缺省路径 `/srv/git/TriCompany.git/chain-running.marker` 在 R-HY=ENOENT 写失败→pre-receive 闸盲）。sg pre-receive 已探该位（T8 实测：fresh 拒/stale 放+warn）。缺省 env 时链跑=闸端不可见——**不得读作「跑中更新已受控」**。
+
 ## 读数基准纪律（2026-11-23 自领两笔假读数教训·CTO 同族自领）
 
 > **断言「目录/文件不存在」「解析异常」前，必先核工具默认参数真源**（代码 argparse default/env 可覆面）——实锚：误以 fade001-runs 为 preflight prev-runs-root（真默认=`/var/lib/trirmc/cron/runs`·L537），产出「ignite 目录消失」「自指解析缺陷」两笔假读数。**同族（CTO 自领）：消费他人读数须核源**——转引读数前独立验源，非直录。
