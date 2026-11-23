@@ -11624,3 +11624,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 自领**：我此前向 CEO 表述"应 1M"系据客户端标记推定，实测配置=128K——勘正。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1590 · CEO 问「压缩为何跟 CC 有关·不是 dsh 决定」·答
+
+- **答**：**联审席=dsh 起的 Claude Code 会话**——dsh 只决定「启动参数」（provider/model/maxTokens/contextWindow overlay·128K），**压缩是 CC 会话自身运行行为**（按其 contextWindow×0.8 阈值触发）——dsh 不实现压缩器。
+- CTO 四件实测确认：model 走 overlay（deepseek-official/deepseek-flash·maxTokens 16384·**零 [1M] 标记**）｜contextWindow=**128K（overlay L25/L35）**｜阈值 **0.8×128K≈105K**（CC 默认·env 无收紧键）｜CHO 13 次/10.25min≈47s 次=**重循环触顶型**（每轮工具输出+长回复快速顶 105K）。
+- **CTO 自领**：「[1M] 错配」假说证据不足（本系统用 overlay 配置面·env 语义不适用）；判读修正=**128K 自限+0.8 阈值+重循环触顶**=压缩风暴主因。
+- **可调项**：若官方 deepseek-flash 真值>128K→可上调 overlay contextWindow（须实测 provider 接受度·候外网核）；治本仍=**材料精简包+降单 turn 负载**。
+
+——BOD·（date 现查原值·D-47 正形）
