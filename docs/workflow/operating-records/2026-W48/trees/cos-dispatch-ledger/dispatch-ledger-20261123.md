@@ -67,7 +67,7 @@
 **DP-016 正式取号**（14:16）：rubric 正则扩四形（score_engine L72·CPO 会签 2ceae9804·四形全纳 `^shift-W\d+(-loop|-ignite|-official|-resume\d*)?-\d{8}T\d{6}Z$`·四附条件照办·正例 5+负例双 W）·执行体 FSD·**已毕销账**（commit a7e40af·消费面四处全清单入 msg·测试 62 passed·CPO 四附条件全办——销账锚=a7e40af）；**原「段 3 超时面评估」候选另取号**（一单一号·候轮复现）。
 
 
-**DP-019 取号**（16:00·最高优先）：seat 工具面治理（DP-016 定谳根治件）——根因链=**席自造产物→上下文爆涨→compaction 风暴(13-17次)→900s 截杀**（resume3/4/5 段3超时三实证）；规格三件（①产物只由 stage 写·席禁写 run_dir ②压缩上限>5 提前中断 ③spawn 超时预算评估）·执行体 FSD/SDE·状态=取号候发令。
+**DP-019 取号**（16:00·最高优先）：seat 工具面治理（DP-016 定谳根治件）——根因链=**席自造产物→上下文爆涨→compaction 风暴(13-17次)→900s 截杀**（resume3/4/5 段3超时三实证）；规格三件（①产物只由 stage 写·席禁写 run_dir ②压缩上限>5 提前中断 ③spawn 超时预算评估）·执行体 FSD/SDE·**已毕销账**（TriCompany 16aeb93+TriRMC 5271eb5·sandbox cwd+prompt 四注禁写+**段3超时 900→300s**·②压缩上限 dsh 面无参改以①③防线·测试+5案18passed·chain18/18——销账锚=16aeb93+5271eb5·关键实证候=下次 resume 段3应2.5min级+compaction<5）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
