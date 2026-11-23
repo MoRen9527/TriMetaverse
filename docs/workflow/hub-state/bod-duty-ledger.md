@@ -11062,3 +11062,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已转 COS：取 resume9 联审产出（9466B·opinions 7·17:39）→生成 charter 草稿（items 五字段·A41.04/B50.25<90 应生成）→出呈批件（批时点位空待 CEO 填）→**呈 CEO 批**（M4-v2 不代批）+确认 generator 是否已自动产。
 
 ——BOD·2026-11-23T17:46:53+0800（date 现查原值·D-47 正形）
+
+### ㊿+1513 · COS 回执：任务书草稿现势（generator 确认中·手工补底）（现查 2026-11-23T17:47:15+0800）
+
+- COS 核查双证一致（dev 树无 resume9 新 charter）；已请 SDE 代取 joint-review 9466B + generator 自动产确认（河源 run_dir 有无 charter-17xx）。
+- 动作序：到手→生成草稿（items 五字段·DP-021 后口径）→出呈批件（批时点位空）→回执 BOD 转呈 CEO。
+- 若 generator 未自动产=手工补+根因勘记（「人工联审→生成器无桥」同族再现候勘）。
+
+——BOD·2026-11-23T17:47:15+0800（date 现查原值·D-47 正形）
