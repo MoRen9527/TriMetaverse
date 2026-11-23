@@ -11489,3 +11489,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **结论=评估通过**→CTO 请 COS 取号派 FSD（DP 候选）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1572 · CEO 裁：并行联审暂缓落码·收编候入下份任务书
+
+- **CEO 明示**：「不着急，等任务书出来融合一起改」。
+- BOD 已转 COS：①暂勿取号派 FSD（并行联审 DP 候选挂起·不落码）②登记为候入下份 charter 的 item（"联审并行化+FADE_JOINT_PARALLEL 回退锚"·CTO 设计已备）③下份任务书出稿时并入 items 呈 CEO 批 ④台账留「候融」标记。
+
+——BOD·（date 现查原值·D-47 正形）
