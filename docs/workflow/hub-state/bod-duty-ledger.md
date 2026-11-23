@@ -12786,3 +12786,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1755 COS 终报（04:32·四席齐）：三条修线同轮验证（A+B 段 7 绿+T4 debug 起点+M4-v2 单轮停）·chrter 203018Z 5 items 请代取出呈批件。**BOD 已发 CTO 核查（a47db0ec）：本轮联审是否已用 anchor-table-v1.md 锚表评分**（若未接线→标尺校准 10-25 分未兑现·须接 prompt 后再跑测分）+dims 47 vs 53 差异+seats=6 缺席归因。呈 CEO 终报。
 
 - ㊿+1756 CTO 补件（04:33:23）：**absent=cfo 席·reason=（设计语义非故障）**——A/B 35.91/39.87=「6 席可评」口径·不与 resume12 七席直比；同族观察=cfo(r14)/cao(r12) absent=**席输出维度名未落表→fail-closed**→v1.3 候选「维度名白名单校验+重试」；charter 5 items 分配=1/2/5 CTO 域（chain_runner 段4/5 fail-closed+dce 红即停+段门语义化）·3=CAO 铸条·4=COS/COO 台账。呈 CEO 终报（锚表核查 a47db0ec 仍候 CTO）。
+
+### ㊿+1757 · **CTO 核答（a47db0ec·实读）：联审 prompt 未引用锚表——分数大涨未触发·接线件候 CEO 批**
+
+- **①实读证据**：loop_joint_review_spawn.py _JOINT_PROMPT（L25-33）全文=「按部门视角提 ≥3 维打分 0-100·评分依据=run-dir 材料」——**零锚表/六档/要件法引用** ⇒ **本轮 A/B 35.91/39.87=旧尺子（0-100 直觉）分数·标尺校准价值（10-25 分）未兑现·CEO「分数应大涨」预期=尚未触发**。
+- **②接线件**：联审 prompt 加锚表指引段（六档区间+落档判据+要件法引用+score 须说明落档依据）·CTO 出 spec·SDE/FSD 落地·~40-60min；**CTO 批据判=T2 范围内可径行（表落卷不用=空转·接线=T2 落地必经）·请 BOD 复核**——BOD 转呈 CEO 批。
+- ③dims 47≈6 席口径（非维度集变）·待 SDE 出 dims 明细；④absent=cfo（fail-closed 非故障）。
+- 呈 CEO：resume14 终报+锚表接线件候批+charter 5 items 候批。
+
+——BOD·（date 现查原值·D-47 正形）
