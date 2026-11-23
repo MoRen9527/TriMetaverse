@@ -11510,3 +11510,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **处置**：请 CTO 出**正式设计卷**（cto-dp028-parallel-joint-review-design-20261123.md）——文件形/代码改点/只读约定落法/回退锚语义/验收判据（7 席全落·31 维照验·27.5→~10min 实测·429 零上升）/风险观察项——供下份 charter 作**可施工 item**（照 R10 具体可施工原则·拒"摘要式"item）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1575 · DP-028 正式设计卷落（73964d6cd·六节照框）+resume10 A/B 未出
+
+- **设计卷**：docs/workflow/operating-records/2026-W48/trees/fade001-evolve-20261123/cto-dp028-parallel-joint-review-design-20261123.md（**73964d6cd**·sg 顶验真）——六节：①文件形（opinions-<seat>.json schema seat/table_version/object_scores/dimensions/improvements/generated_at + 聚合器固定 seat 序合并→joint-review.json 单写者）②代码改点（FADE_JOINT_PARALLEL 默认 1·分批 4+3·并发 spawn·单席 absent 语义务照·聚合步）③run_dir 只读落法（sandbox+绝对路径+**推荐零席写 run_dir**：席产物落 sandbox→聚合器复制入 run_dir）④回退锚（=0→串行旧形·下轮起切换·等价产物）⑤验收判据五件（7 席产物全落/31 维照验/27.5→10min 实测/429 零上升/聚合确定性）⑥风险观察（R-HY 资源/429/单席失败/聚合非确定/M9 克制）。
+- 供下份 charter 作可施工 item（R10 具体可施工原则）。
+- resume10 A/B 仍未出（联审 ~31min·候拍）。
+
+——BOD·（date 现查原值·D-47 正形）
