@@ -11768,3 +11768,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已请 SDE 最小验证（改后极短 dsh 请求→读 session config contextWindow 应=1048576）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1607 · **1M 生效验证过=无需重启（新 session 实读 1048576）**
+
+- SDE 最小验证（仿席形·非点火）：改后主 overlay 单跑极短 dsh headless → **rc=0·回复 ok·新 session config 实读 `contextWindow:1048576`** ✓。
+- **结论**：**不需要重启**——dsh 每席=独立新进程·启动读当前 overlay·无服务常驻配置缓存→**下一 spawn 即载 1M**。
+- 证据链：改前 131072×2 → 改后 1048576×2（原子替换·yaml OK）→ 新 session 实读 1048576·回退锚在位。
+
+——BOD·（date 现查原值·D-47 正形）
