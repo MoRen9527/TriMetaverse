@@ -12102,3 +12102,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 教训并入：「**闸存在≠闸工作**」家族（D-47 根因同款）——**验门要验判据本身**。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1647 · 6min 拍（22:30）：DP-033 四件落码（dce 实检+verdict 三前提/cost-log 四字段/cho 处置表）（现查）
+
+- TriCompany：**c926646**（dce_steps real checks + verdict 三前提·coo-1+cto-1 合面）｜**1356d45**（cost-log 关联字段补齐 cfo-1·35 passed）｜**9757890**（意见处置表单测 cho-1）。
+- CFO 卷带认领（今日第七例）：close+105 vs 预期 44 实证·漏检=未跑 diff --cached --stat。
+- 余 cos-1（15min 面）+收口→点火。
+
+——BOD·（date 现查原值·D-47 正形）
