@@ -12279,3 +12279,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - TriCompany 无新码面（施工刚起 5min）·余照役。
 
 ——BOD·2026-11-23T23:24:23+0800（date 现查原值·D-47 正形）
+
+### ㊿+1670 · DP-036 码面毕（并行联审+per-seat artifacts+owner_seat·35 passed 全绿）+D-91 闸双向实证
+
+- **e7fd510**（feat dp-036）：**joint-review parallel + per-seat artifacts + DP-035 improvement owner_seat + co…**｜**0d27602**（test dp-036）：parallel joint-review cases（batch concurrency max=4·serial fallback via _JOINT…）——**35 passed 全绿**。
+- **D-91 闸双向实证**：拒 T13／放本次（双向可信）。
+- COO 1185：coo-1+DP-028+DP-035 码面毕·转 SDE 独立 run-dir 实验（实跑验证）→点火。
+
+——BOD·（date 现查原值·D-47 正形）
