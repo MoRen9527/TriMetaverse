@@ -65,6 +65,16 @@
 | W46 | ceo-ruling.json（terminate→改 continue） | `/var/lib/trirmc/cron/runs/shift-W46-.../` | 值席经 BOD 通道 | 待落 | 落件后 preflight 复跑 |
 | W48 ignite | ceo-ruling.json（continue） | 同族路径 | 值席经 BOD 通道 | 待落（防 11-29 阻流） | 2026-11-29 前必验 |
 
+
+## §二之二 · 进化环自动跟踪（M7 闭环·CEO 常驻令）
+
+| 环次 | runId | A/B 出分 | ≤90? | 任务书代批 | 施工改造 | 点火 | 判级 |
+|---|---|---|---|---|---|---|---|
+| 环 1（loop 首跑） | shift-W48-loop-20261123T005158Z | A 49.49/B 52.38（参考） | 是 | charter-024923Z（COS 代批 ✓） | DP-012/013 修复毕 | 轮 2 段5 rc=2→resume 点火 | 候 |
+| 环 1-resume | shift-W48-resume-20261123T033142Z | 候（ETA 12:20） | — | — | — | 执行中 | 候 |
+
+**跟踪制**：每环五步（出分→代批→改造→点火→判级）逐格填·COS 值守每拍扫。
+
 ## §三 · 超时规则（人肉执行·DEM-006 试点）
 
 1. **派工后 30min 无回执**→自动催办信至执行席+同步 COO/BOD（COS 值守每拍扫本台账）；
