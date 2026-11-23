@@ -126,7 +126,7 @@
 
 **DP-042 取号**（04:04·A+B 热修·CEO 批「批 A+B 热修」）：A=prompt spec 热修（SDE 落·CTO 统筹）·B=parse 加固施工（FSD）·验收=CTO·呈批=BOD 呈 CEO 报告+请签→点火 resume14·状态=派发→在途。
 
-**DP-043 取号**（04:40·锚表接线+charter-203018Z 5 items·CEO 批「批锚表接线，charter 也批」）：**子号表**——DP-043-01 锚表接线（CTO spec+SDE/FSD 落地·~40-60min）｜DP-043-02 charter item1/2/5（CTO 域：chain_runner 段4/5 fail-closed+dce 红即停+段门语义化）｜DP-043-03 charter item3（CAO 铸条）｜DP-043-04 charter item4（COS/COO 台账）·验收=CTO·呈批=BOD 呈 CEO 报告+请签（B 档亲签件）→点火 resume15·状态=派发→在途。
+**DP-043 取号**（04:40·锚表接线+charter-203018Z 5 items·CEO 批「批锚表接线，charter 也批」）：**子号表**——DP-043-01 锚表接线（CTO spec+SDE/FSD 落地·~40-60min）｜DP-043-02 charter item1/2/5（CTO 域：chain_runner 段4/5 fail-closed+dce 红即停+段门语义化）｜DP-043-03 charter item3（CAO 铸条）｜DP-043-04 charter item4（COS/COO 台账）·验收=CTO·呈批=BOD 呈 CEO 报告+请签（B 档亲签件）→点火 resume15·**DP-043-01/02 已毕销账**（01 锚表接线 6a292ef+eb832ad 双面落位〔本机 15 passed〕/02 charter 1/2/5 448c31d〔gateStageResult 单点+循环门判+failed_stage+回退 env·chain 22/22+round 58/58+charter 14/14〕·三细节已并入双面八条〔b2827af9〕——销账锚=6a292ef+eb832ad+448c31d·03 候选稿 82b068fb1 候 CEO 批·04 台账面在办）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
