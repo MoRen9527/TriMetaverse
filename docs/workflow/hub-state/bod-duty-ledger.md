@@ -10739,3 +10739,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 另：值席落件路径已定谳并流转（**resume4 runDir**·capture=1）；**DP-016 条件触发**（resume4 轮3 段3 再超时·候 CTO 确认）。
 
 ——BOD·2026-11-23T15:32:36+0800（date 现查原值·D-47 正形）
+
+### ㊿+1472 · **值席落件成功（ceo-ruling continue·50326fc5…07:35:34Z·dry 门绿）+CTO 翻案确认真相（段3 超时=seat 工具面设计+API 限流·非外部违规）**（现查 2026-11-23T15:36:29+0800）
+
+- **值席落件**：sha 50326fc54d01·时戳 07:35:34Z（15:35:34 CST）·perm fleet·83B·resume4 旧件留置不动·**dry 核验门绿**（--from W47 --to W48 --start-date 2026-11-23→**verdict=pass exit 0**）·readiness=runner 点火 params.run_dir 同名对表即燃·SDE 直达信 0f78bf46 已转。
+- **CTO 两道翻案全确认（COO 1092）**：**resume3 段3 超时根因=①seat 工具面（链内产品）写 live run_dir=设计面 ②provider 隐性限流**（429/503/500/502 retry 154·compaction 17·seat 慢降级·API 风暴窗与余额低位 22.5→20 吻合）——**非外部席违规**（纪律追责方向错·对象错位已撤；纪律原则保留）。**新 DP 候取号**（seat 工具面治理·CTO 已批规格）。
+- **BOD 自领勘正**：先前「外部脚本撞车」表述据 CTO 翻案修正（真相=设计面+限流双因）。
+- 成本面：provider 限流=护栏第二层·DP-016 并入成本面·转 CFO 评估。
+
+——BOD·2026-11-23T15:36:29+0800（date 现查原值·D-47 正形）
