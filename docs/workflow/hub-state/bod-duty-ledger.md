@@ -12735,3 +12735,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1746 拍读 04:06：施工落定（TCO a03750a 04:04:47 B 件+e151a1b 04:02:12 A 件）·TMV 0acaabe2c（COS 1046·SDE 收到 resume14 号·四件候点火·continue 件新 prev=resume13 正身）·TMC 无新·零进程·resume14 目录未生成（正确·候亲签）——**全就绪·唯候 CEO 签**。
+
+### ㊿+1747 · **CEO「签」到——BOD 落两件（亲签件+continue·sha 实证）·已令 SDE 四前置核→点火 resume14**
+
+- CEO 签署令原文：「**签**」（04:0x）。
+- ①**亲签件已落**（B 档·resume13 run_dir）：ceo-charter-approval.json·charter_commit=**99bdad325**（真实 §六 落盘笔）·approved_by=CEO·approved_at=2026-11-24T04:09:59+0800·signature_slot=CEO direct-session sign-off (BOD relay)·quote=「批+D3/D6 三项按建议 / 签」·JSON_VALID·sha256=87e25c16…f77b——**四校验全过**。
+- ②**continue 件已落**（新 prev=resume13 正身·BOD 代值席直落）：ceo-ruling.json·decision=continue·ruling_ref=DP-042-instruction-20261124T040959Z·signed_at=04:10:11·run_id=resume13·round_count=8·JSON_VALID·sha256=1e414363…99e9。
+- 已令 SDE（f84e1363）：四前置核→点火 resume14·点火后报 run_dir/pid/preflight 读数·段 7 联审重点盯（A+B 修复首验）。
+- 呈 CEO 一句·等点火读数。
+
+——BOD·（date 现查原值·D-47 正形）
