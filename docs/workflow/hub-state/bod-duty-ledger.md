@@ -10402,3 +10402,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 下轮任务书呈批形：resume3 轮末产出→COS 出稿（卷面+items+批时点位）→notify-mailbox 或直呈 BOD 转 CEO。
 
 ——BOD·2026-11-23T13:18:48+0800（date 现查原值·D-47 正形）
+
+### ㊿+1428 · CEO 问「resume3 属于 r12 轮么」·作答（现查 2026-11-23T13:20:23+0800）
+
+- **答：是**——r12=任务书世代名（charter r12-task·items 17·**queue-root=round-queue-r12**·新世代 fresh state 从 round_count=0 起）；其队列内已跑 **round_count 1（首轮点火）→2（resume2）→3（resume3 现跑）**——**resume3=r12 世代下的第 3 个 round**（FUSE 余 5）。
+- 更早的 r10'/r11=上一代（不同 queue·不同任务书）；**点火/resume/resume2/resume3 都是同一 r12 队列的不同轮**，中途停/重燃不换世代、不换任务书世代。
+
+——BOD·2026-11-23T13:20:23+0800（date 现查原值·D-47 正形）
