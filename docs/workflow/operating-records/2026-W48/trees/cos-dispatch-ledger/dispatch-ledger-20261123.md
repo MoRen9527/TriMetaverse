@@ -64,7 +64,7 @@
 
 
 **resume3 红停记**（CTO 13:30:17）：resume3 轮 1 红停=**段 3 900s ETIMEDOUT**（rounds_run=0·FUSE 未消耗）——根因候选①**外部验证并发干扰**（铁证在案·未清）；**点火前置硬条件=清场确认**（dsh/py/ignite 三零+瞬态 3115950 身份白·FSD 自证加急中）。**resume4 已签发**（shift-W48-resume4-20261123T053031Z·9377f25a4）候清场绿+COO 点火令。
-**DP-016 候选入账**：段 3 spawn 900s 超时面评估（若下轮复现=升正式 DP·CTO 提请）。
+**DP-016 正式取号**（14:16）：rubric 正则扩四形（score_engine L72·CPO 会签 2ceae9804·四形全纳 `^shift-W\d+(-loop|-ignite|-official|-resume\d*)?-\d{8}T\d{6}Z$`·四附条件照办·正例 5+负例双 W）·执行体 FSD·状态=取号候发令；**原「段 3 超时面评估」候选另取号**（一单一号·候轮复现）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
