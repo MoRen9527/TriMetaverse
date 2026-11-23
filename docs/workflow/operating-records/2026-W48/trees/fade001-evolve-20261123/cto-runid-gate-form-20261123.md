@@ -61,3 +61,24 @@ CEO 明示（BOD 转达）+fade001-ignite.ts/round_runner.ts/chain_runner.ts 622
 **前���依赖照旧**：#16 runId 贯穿 round 层（COS 面按新制取号派工 COO·规格本席出）；D-88 扩读已由 COS 提请 CAO（见 §二④）。
 
 ——追记：CTO 小狄〔commit 时戳锚·D-47 正形·零手打〕
+
+## §七 · 点火门插判：obj 可判率（2026-11-23 08:44 裁·FSD 预检+COO 急报双源）
+
+**实锚**：r11 现卷 objective 6 条 → **skipped 6/6（可判率 0%）**——O1-O6 全为自由文本断言（如「plan.json 为 JSON 对象…」）·零条命中受限三式前缀。根因=出题 prompt 的 exam schema 只给 `assertion: "<机器可判断言>"` 自由文本槽·LLM 不知判分器只认三式前缀。**「obj/sub 齐」=形式齐·obj 可判率 0%=实质未齐**——若现在点火=objective 全 skip→客观分面崩→双达标判级失真。
+
+**裁 1·题面形态（a 案·轻形）**：plan_skill_spawn 出题 prompt 的 exam 段补丁：
+- `assertion` **必须以三式前缀之一开头**：`path_exists:<路径>` / `json_field:<file>::<dotted.path>::<op>:<v>`（op=eq/ne/exists/contains）/ `regex:<file>::<pat>`；
+- 加**正例 2-3 条 + 反例 1 条**（自由文本→skipped·判分器不判·白出题）；
+- **职责分野注入**：无法机判的检查项→放 subjective（不许塞 objective 自由文本）；
+- **出题自检**（低成本）：出题毕自检 objective 三式前缀命中率，零命中=stderr warn 留痕（不改行为；重试一次候评估）。
+- **明确拒绝**「判分前 NLP→结构化预处理」救法：不可靠转换+引入判分非确定性+违「程序判可判断言」原则——治本在出题源头。
+
+**裁 2·点火门=「试出卷验」形（不用「点火后验」）**：点火前无新卷可判→以**段 3 单独试出卷**验：
+1. 题面补丁施工（FSD·DP 挂账照 D-88）；
+2. **试出卷**：plan_skill_spawn 单独跑一次（独立 run_dir·产 exam.json·段 3 独立脚本可行=现成接口）；
+3. 本席判 **可判率 =（pass+fail）/objective 总数 ≥ 70%**（skipped ≤30%）且 objective 条数 ≥3；
+4. 达标→点火；未达→题面再强化（few-shot）→再试（循环）。
+- 理由：避免白跑全链（一轮 77min 级成本）·单席试出卷成本低·判据可机械算（用 score_cli 的 evaluate_exam_objective 直接读数）。
+- **首次适用注**：r11 卷=旧题面产出（存量不回改）——新题面生效后首轮出卷起适用本门。
+
+—— 追记 2：CTO 小狄〔commit 时戳锚·D-47 正形·零手打〕
