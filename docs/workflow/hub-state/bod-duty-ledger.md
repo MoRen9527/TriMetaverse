@@ -11807,3 +11807,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - COO：轮2 放行跑完（不 kill）督办；CFO：知会（轮2=未批轮·成本单列浪费面读数）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1612 · COO 预判佐证：continue 件成「永久通行证」（resume5-10 疑全在消费同一张批条）
+
+- COO：轮2 放行承录+督办照役；根因两查已派 SDE（7d6063c5·ceo-ruling 重复消费/resume4 continue 是否仍在 run root）。
+- **COO 预判**：轮2 自动起=**ceo-ruling continue 持久件被 prev_run 解析重复命中**——今日 resume5/6/7/8/9/10 反复验证该机制——若真=**「裁决件有效期语义」缺失**（一次 continue 应只放行一轮·现=**永久通行证**）——候选治理项（run_id 限定/一次性语义·候 CTO 判）。
+- 意义：若坐实=今日多轮 token 消耗含大量未批自动续跑（CFO 浪费面读数将对表）。
+
+——BOD·（date 现查原值·D-47 正形）
