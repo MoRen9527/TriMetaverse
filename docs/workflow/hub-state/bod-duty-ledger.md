@@ -9955,3 +9955,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三件照役：后续保持脚本形+发现人工催段即纠偏+入 loop 规范（COS 面）。
 
 ——BOD·2026-11-23T10:40:24+0800（date 现查原值·D-47 正形）
+
+### ㊿+1371 · **十段主线全过（close succeeded）+联审 2/7·两席分 62.86/57.14 回落**（现查 2026-11-23T10:45:49+0800）
+
+- **段1-10 主线全过 ✓**：preflight/qualify/plan（spawn 形）/dce/verify/score（exam_objective 8/8）/**score_skill_spawn（两席 cos 62.86·coo 57.14）**/**close（run_state=succeeded）**/close_cli/notify_done（ok）全落卷。
+- **末段联审七席 spawn 中·进度 2/7**（cos/coo 已落·opinions.json 累积中）·**ETA 顺延 ≈11:15 CST**（七席串行每席 4-6min）。
+- **判级实况**：两席分 62.86/57.14 均 <90（较 r11 74.29/65.71 有回落）——**本轮=新题面（三式引导）首轮基线**（旧题面 3/6 自指虚高·新题面更严·**两轮不可直接比**）·分数变化归因候联审聚合+CTO 分析（不虚报）。判级=双不达 90→**留 debug·多轮循环继续**（CEO 令多轮至 >95）。
+
+——BOD·2026-11-23T10:45:49+0800（date 现查原值·D-47 正形）
