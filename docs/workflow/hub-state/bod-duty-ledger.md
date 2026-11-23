@@ -11815,3 +11815,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 意义：若坐实=今日多轮 token 消耗含大量未批自动续跑（CFO 浪费面读数将对表）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1613 · **根因卷出（994a2983c）：一纸多轮坐实（无 run 绑定/无消费标记/无 run_id 校验）**
+
+- CTO 根因卷：trees/fade001-evolve-20261123/cto-ruling-reconsume-rootcause-20261123.md（**994a2983c**·sg 验真）。
+- **根因（代码实证·BOD 假说①成立）**：awaitCeoRuling（bba27a0）**单一固定路径 queueRoot/state/ceo-ruling.json·无 run/round 绑定·读后无消费标记·无 run_id 校验**——三缺陷⇒**一纸多轮**：resume4 落件（ref 6202b5aa6）常驻→resume5-10 各轮均读 continue→**debug 态轮轮自动放行**（M4-v2 每轮候批语义被绕过）。
+- **修形设计**：①run_id 绑（跨 run 不认）②消费标记（state ruling_consumed_ref·一纸一轮）③round 绑（可选）④三绑任一不满足=absent=挂起；件 schema 增 run_id/round_count。**防浪费护栏**：debug 新轮启动前核本轮专属 ruling 件（run_id 匹配+未消费）·缺失即停。
+- **落点候 CEO 定**：急修 or 候任务书（修形=round_runner 小改·与 DP-021 同文件可并入下批）。
+- CFO 知会：浪费面=resume9 轮2/3+resume10 轮2 等未批轮（卷内记·成本单列）。
+
+——BOD·（date 现查原值·D-47 正形）
