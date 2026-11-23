@@ -11867,3 +11867,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 自领**：我也没抓到——auto-advance 在台账面看起来正常，**我未对「每轮是否真有新批条」做独立核**。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1619 · **CEO 裁 D：轮2 跑完即止（轮3 不得起）·双保险执行**
+
+- **CEO 明示**：D（轮2 跑完即止）。
+- BOD 转 COO/SDE 五件：①轮2 不动（A/B 照收）②**轮2 毕即刻止**（联审毕→轮3 spawn 前窗口 SIGTERM 全链·ig/py/dsh=0 零残留；来不及=宁可少数据即刻 SIGTERM）③**双保险（建议先做）**：向 prev 解析命中的 run 目录落 **terminate 件**（cron/runs 根 ignite 轮 ceo-ruling→decision=terminate·轮3 preflight fail-closed 直接停）④**DP-030 指向同步**：三绑对象件=cron/runs 根 ignite 件（非 resume4 沉睡件）⑤读数即报。
+- 根因定谳（修正版）：preflight 默认 prev-runs-root=`/var/lib/trirmc/cron/runs`→每轮重读 ignite 轮 continue（signed 11-22 18:23:27Z）→一纸多轮成立。
+
+——BOD·（date 现查原值·D-47 正形）
