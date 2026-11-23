@@ -12678,3 +12678,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 SDE（b1cc028d·取 dsh stderr/rc=2 退出行/T4 相关性）+CTO（1fed4d9d·双面归因+修法候批）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1735 · **BOD 实锤：raw_out=JSON 中途截断（非 banner 污染）——CTO 假说修正·截断源候查**
+
+- R-HY 直接复现 parse：len=6832·loads FAIL「Invalid control character at char 6831（末尾裸 \n）」·fallback FAIL「Expecting ',' at char 4575」·first_brace=0·**last_brace=4574（最后 } 之后仍有 2258 字符·JSON 字符串内硬截断）**·HEAD40 即 JSON（无 banner）·TAIL40「…run_id=''、strict\n」。
+- **判读**：CTO「banner 污染 fallback」假说不成立；真因=**dsh stdout 中途截断**（JSON 未闭合）→sheet=None→absent→rc=1；dsh rc=1 与截断疑同源。
+- 已发 SDE（80bb62cb·三向查截断源：采集方式/pipe·SIGPIPE·max-output/6832 常量）+CTO（bad86e93·修法方向=首选堵截断源+parse 加固 fail-loud「truncated」错类+可能 spawn 参数调）。修法稿候报呈 CEO 批。
+
+——BOD·（date 现查原值·D-47 正形）
