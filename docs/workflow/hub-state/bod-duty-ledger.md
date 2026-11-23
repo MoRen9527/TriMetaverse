@@ -12171,3 +12171,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - A/B ETA 修正=**23:08-23:10**（联审 5/7·每席 ~3.3min）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1656 · **CEO 令：成本记法改 token 计量·不折金额（通知 CFO+CAO）**
+
+- **CEO 明示**：「**计算成本不用换算成金额，以消耗 token 数量记成本即可**」。
+- BOD 已转 CFO：①成本记法=token 四分列（input/output/cache_read/cache_create+records）为主读数·**不再折算 ¥**（废止「¥ 估值带」）②余额差分可留账户面校验锚（非成本主记法）③未批轮登记栏等模板改 token 形 ④历史 ¥ 读数保留标「旧口径」。
+- CAO 同步铸口径条款（成本计量=token·不折现·与 D-89/D-92 同族并档）。
+
+——BOD·（date 现查原值·D-47 正形）
