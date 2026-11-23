@@ -9,6 +9,12 @@
 
 > **凡改 TriRMC src（dist 为 gitignored 构建产物）——毕报必含 dist 同源三证：①`npm run build` rc=0 ②`grep <新符号> dist/**/*.js` 命中 ③`node --check` 通过 + 执行面 mtime < 点火/重启时刻对表。判据=n阶（符号级命中非 mtime 单信）。**
 
+## 装载语义双层（2026-11-23 CTO 纪律修正·改码面双面空闲窗硬要求）
+
+> **①TriRMC TS 面 = ignite 起跑一次载**（tsx·起跑后不跟新）→ 改 TS 须新点火生效。
+> **②TriCompany python 面 = 逐段/逐钩新进程载**（chain 每段 spawnSync python3·联审钩每轮新 python）→ **改 python 在跑链的后续段/后续钩即刻生效**——若改动有 bug 即在跑链后续段即崩（无隔离）。
+> ⇒ **改码面链空闲窗 = 双面硬要求**（TriCompany 改动同样适用）；链跑中改 python 须改后即时冒烟（防未验改动被在跑链吃到）。实证：resume10 轮 2 钩吃到 3a4e592（pull 带入）。
+
 ## 执行面精度注（2026-11-23 FSD 路径厘清承录）
 
 > **fade001 点火链经 `tsx` 直跑 `scripts/fade001-ignite.ts`（TS 源）→运行面直接载 src 全量代码；`dist/` 供 daemon/打包消费面与四证留档。** 故「改 TriRMC src」的生效判据分两径：①tsx 直跑面=src 在位即生效（无需 dist）②daemon/打包面=必重建 dist。毕报检查仍按三证（build+grep+check）执行=双面齐；但不得以「dist 未重建」推断 tsx 面未生效（反之亦然）。
