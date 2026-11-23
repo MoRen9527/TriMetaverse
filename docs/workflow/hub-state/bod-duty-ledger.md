@@ -10105,3 +10105,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 判：在途。
 
 ——BOD·2026-11-23T11:36:16+0800（date 现查原值·D-47 正形）
+
+### ㊿+1389 · **🎯resume 轮盯点两项兑现（DP-013 实效过+段5 verify 过·轮2 三红全消）**（现查 2026-11-23T11:41:06+0800）
+
+- ①**readings 34 条 domain={tree:26,top_level:8} 全非空** + **disposition={migrate:4,keep:30} 全枚举内**——**DP-013 实效验证过 ✓**（对照轮2：domain 全 None→全非空·disposition 枚举外→全五态内）。
+- ②**段5 verify 已过**（score 已落）——**R1/R2/R3 三红全消 ✓**（对照轮2 红停 verify rc=2）。
+- 现段7 score_skill_spawn（03:36 起）→rubric/close/联审七席→正式尾报（三口径+A/B 新基线）。
+- SOP 句（dist 同源检查）已按 CTO 裁落卷（75c357205）。
+
+——BOD·2026-11-23T11:41:06+0800（date 现查原值·D-47 正形）
