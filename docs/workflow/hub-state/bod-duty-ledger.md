@@ -10901,3 +10901,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - DP-018 剩 5 项 ETA 候 fsd（item7 已毕·tree-facts collector+plan 增强器在工）·无在跑链确认 ✓。
 
 ——BOD·2026-11-23T16:30:30+0800（date 现查原值·D-47 正形）
+
+### ㊿+1492 · **🔥resume7 起跑（16:31:12 CST·pid 3133655·DP-020 实效验证轮）**（现查 2026-11-23T16:36:20+0800）
+
+- 起跑读数（COO 1115）：**16:31:12 CST**·pid **3133655**·run-dir shift-W48-resume7·dry 门 pass·ruling True·prev ignite-20261122·supply-green·双零核过·preflight pass·qualify 落。
+- **盯点**：**段3 窗口 16:34（300s 形·临界点）**——段3 绿=DP-020 实效；session token<16384／compaction<5／联审完成率／comparability。
+- fsd ETA 回执：DP-018 余 5 项 **1.5-2h**（resume7 优先）。
+
+——BOD·2026-11-23T16:36:20+0800（date 现查原值·D-47 正形）
