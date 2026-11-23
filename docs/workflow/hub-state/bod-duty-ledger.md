@@ -11652,7 +11652,7 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ### ㊿+1593 · CTO 术语勘正承+已核两件（0.8=dsh-compaction-basic 层·overlay 四文件引用）（现查 2026-11-23T21:07:11+0800）
 
 - **①术语勘正承**（CTO 自领）：dsh=deepseek harness·席=dsh headless run（非 CC）——统一「dsh headless 上下文阈值」·禁称 CC auto-compact。
-- **②已核两件**：a) overlay 引用面=**4 文件**（close_skill_spawn/loop_autoreview/loop_joint_review_spawn/plan_skill_spawn）b) **0.8 阈值=dsh 层**（ 源码 =dsh compaction 模块）·overlay 两处 contextWindow=131072（overlay 本体在 R-HY）。
+- **②已核两件**：a) overlay 引用面=**4 文件**（close_skill_spawn/loop_autoreview/loop_joint_review_spawn/plan_skill_spawn）b) **0.8 阈值=dsh 层**（「dsh-compaction-basic」源码 DEFAULT_THRESHOLD_RATIO=0.8·dsh compaction 模块）·overlay 两处 contextWindow=131072（overlay 本体在 R-HY）。
 - **③候 SDE 补三件**（R-HY 面）：dsh 版本（/srv/fleet/dsh/package.json）/官方 context 能力（能否 1M·provider 接受度）/可调清单（--max-context 类 or overlay 键）→CTO 整合供下份任务书。
 
 ——BOD·2026-11-23T21:07:11+0800（date 现查原值·D-47 正形）
