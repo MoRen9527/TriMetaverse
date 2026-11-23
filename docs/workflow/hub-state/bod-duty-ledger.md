@@ -9733,3 +9733,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **如实注**：超时催办=人肉版（COS 每拍扫）——**DEM-006 定时器化仍待建**（机器化候下周）。
 
 ——BOD·2026-11-23T08:32:38+0800（date 现查原值·D-47 正形）
+
+### ㊿+1344 · **施工在动·08:31-08:33 三仓落卷（批1/批3/批4+#6#12 已毕）·BOD 巡检面勘正**（现查 2026-11-23T08:34:09+0800）
+
+- **落卷（08:31-08:33）**：TMV 7bd5f1d=COS 批3 门件制度卷（轮间门件 SOP+召集三要素模板+轮末 catch 断言 fail-closed+负例锚）｜TriCompany 4e495a1=**FSD 批1 四件**（#1/#2/#3/#7·活件族 carry+validate+shift-ade 扩展）｜TriCompany 799184e=FSD 联审 spawn 执行器（v7④·七席×双对象·opinions schema 2.0.0）｜TriRMC 3bf4fd8=**SDE #5 安全毕**（token 进程内读零 argv·ps 命中=0）。
+- **BOD 巡检面勘正（自领）**：前「3.5h 零施工」判读仅据 TMV 顶+TriRMC bare 两面——**TriCompany 仓=fade001 段脚本施工主面**（runtime/cognition 产线 /srv/fleet/TriCompany）未纳入巡检面=巡检面缺。真实停摆原因=**COO 施工令 08:27:37 才达执行席**（非执行体怠工）。
+- **#6/#12 已毕（CTO 实勘）**：plan_skill_spawn.py 出题 prompt 段在（objective/subjective schema·各≥3 题·出卷≠改卷轮内锁卷）+exam.json 独立落卷 L197-210（v7 职责分离·零派生兜底）→**齐套=点火条件可达**（点火归 CEO/COS 令·链无自动调度已核）。
+- **余**：批5 CFO（#8/#9/#14/#16）+自测→点火首验（exam.json 由受控点火链跑产出）。
+
+——BOD·2026-11-23T08:34:09+0800（date 现查原值·D-47 正形）
