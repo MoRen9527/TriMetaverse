@@ -10958,3 +10958,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - "先回答不要改动"承录：三件此前只记待改·现 CEO 令下启动转施工态。
 
 ——BOD·2026-11-23T16:59:03+0800（date 现查原值·D-47 正形）
+
+### ㊿+1499 · **🟢resume9 段3 绿（4.5min<480s）+compaction max3<5·DP-020 终销条件达成**（现查 2026-11-23T17:00:10+0800）
+
+- **段3 实锚**：起跑 16:52:30→**16:57 六件齐落**（plan/exam/tree-facts/dce/verify/score）——**≈4.5min（<480s ✓）**——对照 900s 三例/300s 一次/**第三调 480s+parser 双修=生效**。
+- **compaction**：三席 session max=**3（<5 ✓）**·无风暴。
+- **四实证点已 2/4**：①段3 绿 ✓ ②compaction<5 ✓ ③token<16384（候读）④判分完成率+comparability（候联审）。
+- **DP-020 终销**（COO 定：段3 绿=终销）——治理链兑现（DP-016 seat 行为面→DP-019 300s 过紧→DP-020 拆分+追补→480s+parser=稳定绿）。
+- 当前段7→close/notify→联审七席→终态（A/B+comparability）随报。
+
+——BOD·2026-11-23T17:00:10+0800（date 现查原值·D-47 正形）
