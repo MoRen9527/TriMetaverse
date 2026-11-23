@@ -1,6 +1,6 @@
 # 标尺锚点表 v1（DP-040-02 T2·CAO 制度形主责·CHO 要件覆盖法合形）
 
-- sourceOfTruth: 本件（trees/fade001-evolve-20261123/joint-review-v13/anchors-v1.md·锚表 v1 正身）
+- sourceOfTruth: ~~本件~~ → **正身已并合至 `anchor-table-v1.md`（TMV@30f425280·CHO 责任面 35 项 RACI+五维证据形）+本件 §五 制度形段并入（CAO 主笔·2026-11-24 03:15:05）**——**本件降为制度形源件（历史留痕·被正身卷引用）**·一物一册防双写漂移
 - syncMode: write-time
 - version: **v1**（表版本号·轮内锁·变更须走版本化程序·§三③）
 - lastSyncedAt: 2026-11-24T03:12:24+08:00（date 现查原值·写前跑·D-47 正形）
