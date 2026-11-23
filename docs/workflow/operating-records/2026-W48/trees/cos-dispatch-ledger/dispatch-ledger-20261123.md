@@ -105,6 +105,9 @@
 
 **DP-031 取号**（21:45·门禁两补强·CPO 联合面·下沉产出转化）：①R2 残拍裁决状态继承（L287-289：残拍不作完整 prev 但裁决状态继承·未裁 awaiting 不放行/已裁按其裁）②点火形显式传 --prev-runs-root（chain argv·防空根静默 skip）·执行体 FSD·验收五件·依据=CPO 真读+CTO 裁 8e041553+SDE 核 044f501c·**已毕销账**（TC **5a78a4c** py 59 passed/RMC **3d7c2c9** chain 19/19·prev_partial=8/prev-runs-root=2 pull 验——销账锚=5a78a4c+3d7c2c9）。
 
+**DP-032 取号**（22:05·D-91 链跑期禁推施工·补记注：取号时漏写本条·22:21 补记·自领 D-88 违反）：①链跑 marker（ref 形：R-HY `git push <commit>:refs/runtime/chain-running`·链毕删·commit date=启动时点·bare=两机唯一共享面）②pre-receive 硬闸（sg bare·v4：fresh≤2h 拒〔stderr 引 D-91+清单〕/stale>2h warn 放/ref 无放/hotfix 例外）·执行体 FSD（marker 写删）+SDE（hook 装机）·**已毕销账**（四验收全过含**跨机实测 T13**：R-HY push ref→sg hook 实读实拒=机械闸跨机正形证据·三边界〔fail-open 兜底/finally 双撤/refs/runtime 不扰 fetch〕·机位勘正 R-HY→sg〔CAO 已勘 D-91 a5c7466〕·判断勘正留痕〔FSD ssh 探针部分错·主结论对·R 形仍优·裁不变〕——销账锚=6d92b4c7+611bae964+T13·**D-91 首道真机械闸建成**）。
+
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
