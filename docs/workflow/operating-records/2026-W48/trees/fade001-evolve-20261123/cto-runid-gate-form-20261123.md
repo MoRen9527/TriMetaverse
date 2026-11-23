@@ -97,3 +97,24 @@ CEO 明示（BOD 转达）+fade001-ignite.ts/round_runner.ts/chain_runner.ts 622
 **点火令归 COS/COO**（CEO 已给自动推进授权：达标即发·不需请示）；本席判读面完毕。
 
 —— 追记 3：CTO 小狄〔commit 时戳锚·D-47 正形·零手打〕
+
+## §九 · #11 flip 首验判读=**达成·四判据全齐**（点火轮 10:05:37 起·2026-11-23 10:32 判）
+
+**读数（来源如实注：COO 台账 1018 转 SDE 观测·本席无 R-HY 直连面·未独立直验）**：
+- 落卷序：preflight→qualify→**plan（段 3 实走 plan_skill_spawn spawn 形）**→dce→verify→**score（02:11:27Z）**→exam.json ✓
+- **段 3 exam.json=objective 8 + subjective 7（两段非空 ✓）**·exam_objective **8/8 pass·fail 0**（可判率 100%·新题面生效）
+- score verdict=pass·machine 59/59
+- 段 7 在跑（pid 3084882·ETA 10:50·毕后 rubric+close+notify+联审 10-15min）
+
+**#11 四判据收口**（对照本卷 §六/§八）：
+| 判据 | 状态 |
+|---|---|
+| ①提交判据 | 成立（6220331 追认裁） |
+| ②同源判据 | 成立（mtime 链 47s·dist↔src 对表） |
+| ③运行面判据 | 成立（dist 含新形→本链启动实载·段 3 实走 spawn 形=行为面实证·**终局证据**） |
+| ④首验判据 | **达成**（exam.json obj 8/subj 7 两段非空+exam_objective 8/8 pass） |
+⇒ **#11 flip=施工完成·首验通过·四判据全齐收口**。
+
+**待续**：①A/B 双达标读数候段 7 毕（score-skill 两席·联审面）②本席本轮无直连面——后续同类首验宜建「消费面读数直达」（SDE 观测转述=单点·与「硬门签认必落卷直达」精神对表待改进）。
+
+—— 追记 4：CTO 小狄〔commit 时戳锚·D-47 正形·零手打〕
