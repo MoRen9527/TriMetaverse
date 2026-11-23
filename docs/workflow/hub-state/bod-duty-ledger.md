@@ -11560,3 +11560,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - COS：①**DP-028 条目补设计卷路径**（73964d6cd·摘要+卷路径+挂起态=一键一跳达）②**规则卷 §七 证据卷指针惯例**（每单必载卷路径+commit·一跳达链四步=取号→台账→卷路径→正文·回填义务·禁长期空指针·与 D-88 同族）③resume10 卡席核已启动（SDE 报段位/席位/异常）。
 
 ——BOD·2026-11-23T20:57:25+0800（date 现查原值·D-47 正形）
+
+### ㊿+1582 · **resume10 终报：comparability=1.0 首验达成 + A/B 37.86/47.46 双降 + charter 五字段缺口（新）**
+
+- **🎯comparability=1.0 首验达成**（prev_run=resume9·jaccard 1.0/1.0·table v1）——**DP-017 验收锚兑现·跨轮可比地基成立**（维度冻结 CEO 令最终兑现）。
+- **A/B=37.86／47.46**（dims 27/26·7 席）——**同尺对 resume9（41.04/50.25）双降 −3.18/−2.79**·双不达（debug 停留）。
+- 联审 **39.4min 超长**（resume9 27.5）——成因=**席用时普遍长**（compaction 逐席 8/6/0/5/**13**/2/8·长席 11min）=席负载+压缩压力族·**非卡席非空输出**。
+- **④charter=未生成（异常）**：generator rejected「7 条意见缺五字段（target/verify/rollback）」——**DP-017 追补未达 opinions**（新缺口·候 CTO/FSD 勘）。
+- 三口径：score pass／exam **6/6**／trend cos 62.86/coo 42.86。
+
+——BOD·（date 现查原值·D-47 正形）
