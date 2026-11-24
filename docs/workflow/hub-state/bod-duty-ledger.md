@@ -13660,3 +13660,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+2010 拍读 21:06：TMV 84dd64130 自家+917b52aae（COS 1088 落账·A/F/H 细则+呈批件 v3）·TCO/TMC 无新·零进程·候 CEO（A/F/H 细则审+v3 8 items 批）。心跳已更。
+
+### ㊿+2011 · **CEO 勘正（重要）：A/F/H「机判」前提=skill 件是智能产物非 CLI——机判必须程序复算复核（声明≠结论）**
+
+- CEO 原话：「**你这个机器可判的前提是他是智能处理过的结果，因为是 skill 可不是 cli，要注意**」——plan-freeze/close-acceptance 是 COS 席（LLM）产出的**声明**，md5/计数/verdict 是模型写的，不能当机判输入（幻觉/编造风险）。
+- **修正要求（已发 COS·63f60096）**：机判正形=**程序复算复核**——A：程序逐树重算 md5/size 对表（不一致=fail）·counts 重数；F：程序读告警日志复算 total/latency 对表；H：程序读 patrol log 重数拍频对表；**verdict=程序按复算判·不采信模型写的**；缺席 fail-closed 照旧。判据句=「**skill 件=声明候选·机判=复算+对表·不一致=fail**」（DCA L3 同族）。
+- 细则 §五 改写（机判栏→复算判据栏）→并入 v4 呈 CEO。
+- 呈 CEO（勘正已办·细则改写中）。
+
+——BOD·（date 现查原值·D-47 正形）
