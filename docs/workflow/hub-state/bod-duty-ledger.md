@@ -12950,3 +12950,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1823 拍读 10:30：三仓无新（TMV ee3bab81f 自家·TCO eb832ad）·零进程·候 CEO 决。**CEO 追问「resume 与 rounds_run 为何两套·只用一个不够？」——BOD 已答**（不同维度：run=执行实例/round=链跑轮次·test 态一次点火可多轮分叉+DP-030 三绑防一纸多轮需两维+唯一标识需要·若裁简化转 CTO 评估）。
 
 - ㊿+1824 拍读 10:36：三仓无新（TMV 3031573f9 自家·TCO eb832ad）·零进程·候 CEO 决。
+
+### ㊿+1825 · **CEO 追问两计数语义+BOD 实读代码勘正（自领）：round_count 停 8=设计行为非 bug · rounds_run=0 或非 bug 候 SDE/CTO 复判**
+
+- CEO 追问：「resume 等于点火次数·每次一个 run_id·rounds_run 与 round_count 相等·等于跨点火跑的轮次总和？」——需精确答+勘正。
+- **实读 round_runner.ts L288-350**：for 循环内 roundsStarted+=1（每轮尝试即计）→跑链→联审 hook→loop_exit/FUSE/first_round_pending 检查→**debug 态 awaitCeoRuling：absent→return exit:null（挂起·L339·不执行后续）**/continue→tryCharterMount→**L348 st.round_count+=1·writeRunnerState·rounds+=1（仅迭代路径）**→nextRoundParams。
+- **⇒ 勘正（BOD 自领）**：①**round_count 停 8=设计行为**（debug 挂起 absent 分支不 +1·resume12 test 态跑到 8 的遗产）——此前「疑 DP-037 同族 bug」判断错·自领；②**rounds_run=0 亦或为口径**（rounds_started=1 尝试/rounds_run=0 未完成迭代）——DP-037 的「bug」定性候 SDE/CTO 复判；③CEO 理解勘正：rounds_run≠round_count（局部/累计）。
+- 已发 SDE/CTO 复判（详见下条）；呈 CEO 勘正说明。
+
+——BOD·（date 现查原值·D-47 正形）
