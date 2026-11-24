@@ -14619,3 +14619,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2258 **CTO 承位+FSD 三路径同修派工（05:18·~20min）**：H 位承（patrol-source TMV 根·持续在长）·SDE 自领「find/清点范围须全（多根）」。**三路径 env 化**：A→TRIRMC_JOBS(/srv/fleet/TriRMC/data/cron/jobs.json)／F→TRIRMC_LOGS(/var/lib/trirmc/cron/logs/*.log)／H→PATROL_SOURCE(<tmv_root>/docs/.../trees/bod-tick/)。修后预期 A/F na→pass·H manual→机判→collection 15→24→**91→100**。「范围不全」族记入（find 漏根/清点漏项/机位隔离=消费前须全列）。
 
 - ㊀+2259 拍读 05:19：TriCompany **5f01060**（05:19:05=三路径修面）·零进程——候 CTO 验收→重跑（91→100）。patrol 行已追加。心跳已更。
+
+### ㊿+2260 · **A=pass/H=fail 实判（判据抓真冲突正面例）——须裁：patrol 节律 6m（CEO 令·BOD 拍读）vs plan 声明 15m（值席设计）=两对象**
+
+- **A=pass ✓**（FADE_JOBS_JSON env 生效·md5=42d417e3·jobs=7·无需码改）。
+- **H=engine 实判 fail**（三态机判生效 ✓·rationale=patrol-source 中位 6.0min vs plan 声明 15m 不一致）——**判据有效抓真问题**。
+- **BOD 判（对象分立）**：patrol-source 的 seat=**bod**（我写·**6m=CEO「6 分钟一读」令**）／plan.patrol_plan 的 15m=**值席守拍设计**（COS 面）——**两个主体两节律**·H 判据混比=对象错位——修法两选：a) plan 声明注明两节律（BOD 6m/值席 15m）b) 或统一 6m——**候 CEO 一句话定**（拍频基准是他定的）。
+- na 计分语义已定（na→weight 同 pass·F9 记满）；env 三件固化准；F 候 FSD glob 修。score 现 91（41+15+35·H0）。
