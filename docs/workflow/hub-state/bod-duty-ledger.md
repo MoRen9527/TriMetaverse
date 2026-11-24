@@ -12960,4 +12960,6 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 ——BOD·（date 现查原值·D-47 正形）
 
-- ㊿+1826 **CTO 复判定谳（10:40·实读 L333-350）**：·——**round_count 停 8=设计·rounds_run=0=设计（未完成迭代数）·rounds_started=1=口径补全（attempted vs completed 分离）⇒ 无 bug**；**DP-037 撤销「bug 修复」定性→降级「口径注记」**（t5 rounds_started 字段保留）；BOD+CTO 双自领同源误判（「推演未核实况」族）；点火决策无碍。已发 COS 台账勘正（f93c47b3）·呈 CEO。
+- ㊿+1826 **CTO 复判定谳（10:40·实读 L333-350）**：「absent→L340-342 return exit:null（挂起不迭代）」·「L348-350 +=1 在循环末尾（仅迭代路径）」——**round_count 停 8=设计·rounds_run=0=设计（未完成迭代数）·rounds_started=1=口径补全（attempted vs completed 分离）⇒ 无 bug**；**DP-037 撤销「bug 修复」定性→降级「口径注记」**（t5 rounds_started 字段保留）；BOD+CTO 双自领同源误判（「推演未核实况」族）；点火决策无碍。已发 COS 台账勘正（f93c47b3）·呈 CEO。
+
+- ㊿+1827 **SDE 复判同判（口径注记文本）+CTO 终稿落卷（f59325085）+COS 第 16 笔自领**：①**rounds_run=完成「迭代推进」次数**（L348·fuse/awaiting/failed 增量前退出=0·**即使整轮跑完**——resume12 铁锚「0≠没跑轮」）②**rounds_started=轮首尝试数**③**两者之差=未完成推进轮数**④round_count=跨点火累计已完成迭代数（debug 挂起不增）。⇒ **rounds_run=0 ≠「没跑轮」·不能读作轮次计数**。CTO 终稿=cto-rounds-counting-note-20261124.md（f59325085·sg 验真·三轮实证表）；COS 第 16 笔自领（bug 定性他先给的）+教训「**定性词一经落账即成他人基线——读数异常先分『实现缺陷 vs 设计口径』两分支再定性**」；该族今日五席同族。BOD 双笔自领照录。
