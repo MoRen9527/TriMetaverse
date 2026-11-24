@@ -12959,3 +12959,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 SDE/CTO 复判（详见下条）；呈 CEO 勘正说明。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1826 **CTO 复判定谳（10:40·实读 L333-350）**：·——**round_count 停 8=设计·rounds_run=0=设计（未完成迭代数）·rounds_started=1=口径补全（attempted vs completed 分离）⇒ 无 bug**；**DP-037 撤销「bug 修复」定性→降级「口径注记」**（t5 rounds_started 字段保留）；BOD+CTO 双自领同源误判（「推演未核实况」族）；点火决策无碍。已发 COS 台账勘正（f93c47b3）·呈 CEO。
