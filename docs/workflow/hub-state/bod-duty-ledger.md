@@ -12973,3 +12973,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1831 拍读 10:54：三仓无新（TMV c62348551 自家·TCO eb832ad）·零进程·候 CEO 决。
 
 - ㊿+1832 拍读 11:00：三仓无新（TMV 607e3656a 自家·TCO eb832ad）·零进程·候 CEO 决。
+
+- ㊿+1833 **CEO 六问（run/round 体系深挖）·BOD 已答能确定部分+四件转查证**（CTO da32e6f7：round_count 分域实现/test 上限/点火重置/loop-ignite 史实；COS c243457c：loop/ignite 卷面史实+flag 对应+official）。要点：①续跑=carry_over 承接·号人定可跳号·loop/ignite 无正式态定义（命名体制非行为定义·史实查证中）②Q3 纠正推想：round_count 设计原意=**同根缺陷连续计数**（FUSE 域·test/prod 两计数不混·异根重置）非「一年总轮次」——分域实现状态在核③Q4 澄清：round_count+1 与 rounds+1 同处相邻两行（L348/349）·同一动作·差别=持久/本 run④**Q5/Q6 如实答：debug 态点火成功不涨（挂起 absent 不 +1）·永久不增**——只有 continue 在位内部迭代才 +1 ⇒ **debug 态 round_count 几乎永不推进**（每轮人工批=连续链断开）——CEO 质疑成立候选·若裁重定义转 CTO 评估。
