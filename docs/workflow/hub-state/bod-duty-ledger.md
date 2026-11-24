@@ -13197,3 +13197,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（score_cli 假象澄清+真问题 c3+历史分数口径）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1902 · **🎯CTO 定谳 c3 成立：段门读顶层 verdict（L56）放行 fail 轮——历史分数全部无效候选（重大如实）**
+
+- **c3 实读定谳**：chain_runner.ts `gateStageResult` **L56 `const v = String(doc.verdict)` 读 score.json【顶层】verdict（"pass"=CLI 执行态）**——评分结论在 `score.verdict`="fail"——**⇒ dry_run 的 score 顶层 pass→段门放行→链继续→分数被当有效**=CEO 质询「为什么没判出」的真相（评分层判了·消费层读错字段）。
+- **三否归一**：c1 ✗/c2 ✗/c3 ✓——评分层正确·消费层误 pass。
+- **修法（双修·候 CEO 批）**：A（主）score_cli 顶层 verdict 语义改=评分结论（fail）·CLI 执行态移 engine_state（单一真源）；B（辅/兼容）gateStageResult 改读 `doc.score?.verdict ?? doc.verdict`（过渡期兼容旧件）。
+- **🔴影响面（重大）**：**resume11-14 均顶层 pass+inner fail→穿门→分数无效候选**；≤resume10=旧码 dce 假 pass→更早亦无效——**历史分数全部无效候选**（非小改·CEO 需知）——**印证 CEO「效果改进不大」直觉：一直在看无效分数**。
+- 呈 CEO（真相+影响面+双修候批）。
+
+——BOD·（date 现查原值·D-47 正形）
