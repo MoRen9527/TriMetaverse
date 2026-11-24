@@ -13936,3 +13936,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ④各席 5 件账：item14 ✓（CTO 审过）/item7 ✓（00d7dc8）/item3 ✓（回填销项）/**item6（COS·待）/item13（CPO·待）**。
 - ⑤回滚面：全件 env 开关（FADE_PLAN_FREEZE/CLOSE_ACCEPTANCE/PATROL_CHECK/CLOSE_SEVEN_SEATS）+bak 全在。
 - 已双催（da339f91 COS/c504e194 CPO·报到哪步/ETA/blocker）——**全毕即请签→点火 resume19**。呈 CEO。
+
+- ㊿+2088 **COS 报 item6 已毕（非在途·00:07）**：绑定表出卷（cos-item6-upgradelist-owner-binding-20261124.md·**0c9755aaa**）——upgrade_list 实读 **11 条（非 12·BOD 源差 1 如实）**·11 条全 owner=None 缺口→逐条绑主责（CTO 4/CPO 2/COO 3/CHO 1/CFO 1）+COO 台账侧验收通过（23:04:30·接 #4/6/9+两补〔#4+#6 合并修/#9 与 CPO 模板衔接〕已入卷 cc3a4f658·grep=1）。**⇒ 全毕条件只剩 item13（CPO）一件**。呈 CEO。
