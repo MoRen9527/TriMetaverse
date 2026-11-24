@@ -13306,3 +13306,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1925 CAO 心跳设计形定（§五A 入稿 21abd32c6）+BOD 手写兜底起步：路径 `.fade/heartbeats/<seat>.ts`（单行 ISO·daemon stat 直读·gitignore 内本地态）；写时机三层（hook PostToolUse 自动为主〔断档=无工具调用=无心跳=正确信号〕+席手写兜底+节流）；失活>30min=断档候选仍过三层判据（**数据源与判决分离**）。**BOD 已建 `.fade/heartbeats/bod.ts` 首拍**（17:26:21）·此后拍读/落账顺手更新（b50f41fb 回执）。两件技术面（daemon 引用行+hook 自动写）归 CTO。
 
 - ㊿+1926 CAO 心跳起步（cao.ts 17:26:31·与 bod.ts 并列）+**首次验证读数**：两文件 mtime 与内容时戳同秒级一致（写时现查直写·无中间层变形）⇒ **daemon stat mtime 即可·零解析成本**（简化阶段二实现）。过渡期双记照行（交叉验证期·mtime 与心跳不一致=数据源问题信号）。更新时机=落卷/发信后顺手（不每动作刷·节流精神）。
+
+- ㊿+1927 拍读 17:30（心跳已更新 17:30:12）：TMV 4675da95d（CAO 不铸账 003·组件性质决定失效方向不入 D 系）+4c1bc8f12（CAO tick 稿补 CTO 技术形：节流 stat 60s 窗/按席分文件/hook 极轻/fail-open+**fail-open vs fail-loud 辨析**「信号采集器 fail-open 正确·拦截器 fail-loud 必须」）·TCO/TMC 无新·零进程·候 CEO 批 dce 开关+授权窗。
