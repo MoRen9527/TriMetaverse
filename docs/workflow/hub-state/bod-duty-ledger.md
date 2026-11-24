@@ -13438,3 +13438,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1954 CTO 双里程碑确认（18:21:45·与 SDE 一致）：①**真迁移首次成功**（FADE-001 进化环首次·此前全 dry_run 假面）②**第一份有效分数=59.0**（G 族真判 execute 面非 dry_run 骨架；projection 100.0=机判域全过归一；对比 resume14 顶层 pass 穿门假 pass=本质区别·四层修复总兑现）③exam 4 pass/1 fail 定性命中（请 SDE 给败题明细）④联审将起（并行+八条标尺首验轮）。呈 CEO。
+
+- ㊿+1955 CTO plan 面异常定性初判（18:23:01·b 类·DP 候选·**不回溯双里程碑**）：①**plan 总覆盖 旧 36（1+25+2+8）→新 8（2+3+1+2）=缩 22**——W47 trees=26 未变却不算入（SDE 否「树面真变」）⇒**plan 的 W47 读取/scope 逻辑变了**（候：710 提交后路径不匹配/plan seat 分类变动/scope 定义）→DP 候选取号候深勘②O2 题面=独立缺陷（期望 top_level=8 绑旧态过期→改动态期望·题面 DP）③**不回溯**：G 族 pass（dce execute 面真判）+59 分仍有效（plan 异常=段 3 面·不回溯段 4-6）·A/B 挂「plan 面 b 类待深勘」注（D-89）④联审在跑·A/B 读到即报。呈 CEO。
