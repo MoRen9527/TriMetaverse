@@ -13536,3 +13536,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **候 CEO 批**：①maxTokens 上调（16384→32768/65536·overlay 四处同改）②或维持 16384+DP-048 限幅+retry 结构解（治本）。呈 CEO（问题已答·候决定）。
 
 - ㊿+1983 **CEO 批 maxTokens 16384→65536**（「调，调到 65536」）——已下达 CTO（e70c1c9b·四处同改+备份+语法验+**冒烟验证 provider 真实上限**〔拒则回滚〕）；resume18 在跑用旧 overlay 不受影响·新值下一轮生效。呈 CEO 确认。
+
+- ㊿+1984 CTO 回执（19:53）：overlay 施工面=R-HY·CTO 面不能改（本机无该路径）——**已派 SDE（20b63bc8）**：备份/四处改/grep 四确认（4×65536/0×16384）/yaml parse/**冒烟验=成败判据**（DS 拒 65536→回滚+报）；CTO 面规格+验收后转 BOD。resume18 不受影响·新值下一轮生效。
