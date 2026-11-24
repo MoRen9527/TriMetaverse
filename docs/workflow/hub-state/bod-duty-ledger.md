@@ -14085,3 +14085,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **本日全链叙事**：dry_run 穿门→v8 14 items 施工（4 层门：dce/七席/时序/席值信任）→resume19/20 两挂→三件修复（e0a2f32/4552d1b/478ca1c+979da51）→**100/100+链通**。
 
 - ㊿+2126 拍读 01:42+resume21 score 读数：**run_state=partial·breakdown={machine 59.0, collection 0.0, subjective 0.0}**·families A/F/H=manual null（**缺 collection-score.json 单文件·resume20 那份 run_id 不匹配→manual**）·I=partial。已发 SDE（ee8349de·合成 resume21 版 collection-score.json〔run_id=resume21〕+I 族 run_id 对齐+score_cli 重跑+A/B 报）。TMV ab929cbc1（COS 1122·CTO 采正形「逐字段核运行时语义=今日最佳教训句」）。
+
+### ㊿+2127 · 🏆**resume21 也 100/100（补合成+重跑达成）——双百：resume20 补判 100 + resume21 全链 100（close succeeded+notify_done 发）**
+
+- ①collection-score.json 合成（resume21·run_id=**shift-W48-resume21-20261124T172717Z**·entries A/F/H×3）②subjective-score.json 对齐（COS v3 判语复用·run_id→resume21·judge_note 注 SDE 代抄 BOD 令·I1=4/I2=3/I3=3）③**score_cli rc=0→total=100.0·pending=0·projection=100·inner pass**·breakdown={59,31,10}——**九族全满**。
+- ④联审现态：joint-review 未落（1 席 dsh 在跑·batch 尾）→A/B 待落卷随报（含 DP-043 rationale/L 透传计数观察点）。
+- **双百对照**：resume20（补判形）/resume21（全链形·close succeeded+notify_done 01:36 已发）——两轮均 100/100。
