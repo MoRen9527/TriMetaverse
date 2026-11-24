@@ -14558,3 +14558,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 - ㊀+2243 **CAO D-97 候选稿（04:51·9468eaff4）+判据精化（重要）**：COS 原形「mtime>链启动→告警」**会误伤**（mtime 晚=运行期正常并行·非旧版）——**真信号=启动时本地落后远端**（git fetch 后 HEAD 对比·mtime 辅助）+处置分级（**关键件阻断/非关键告警**·「静默用旧件是事后才发现的错」）——**候选稿候 CEO 批（strict 形待定）**。COS 1136/1137 落账（采纳精化+第 30 笔自领「误报面检查=自动判据必修课」）。
 - ㊿+2244 拍读 04:54：**resume29 已点**（shift-W48-resume29-20261124T205317Z·04:53:17·PROC=3 在跑）——a 修（97febbb）+b 复验后首跑·段 3-10 观察中。patrol 行已追加。心跳已更。
+
+### ㊿+2245 · **🔥resume29 点火成功·b 面真因定谳=「R-HY 检出落后」（非名差非映射缺）——版本时差的真身**
+
+- **根因**：`_load_r12_owner_map` 找 `<tmv>/docs/.../cos-dispatch-ledger/r12-item3-6-data-*.json`——**R-HY TMV 停 b7d635918·数据件不在盘**（dev/sg 已 249e8f018 提交·R-HY 未同步）⇒owner_map 空→prompt 注入空+fill=0（resume28 log r12_owner_filled 零印证）。
+- **修复（SDE 运维面）**：**R-HY TMV pull --ff-only→52defb89e ✓**·R12 件到位（families_items_14·trimodel-dual→CTO 命中）。
+- **点火 20:53:17Z·pid 3323454·preflight=pass**（prev=resume28·97febbb 在盘）·段 3 首验→六观察点。
+- **⇒「版本时差」真身=执行面检出落后**（dev 改了≠R-HY 有）——**D-97 判据（HEAD 落后远端）抓的正是这个**（今日三坑皆此根）。
