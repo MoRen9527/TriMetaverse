@@ -13504,3 +13504,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1976 拍读 19:54：三仓无新（TMV 9cc955c82 自家·TCO 7bd43fa·TMC 177b56f）·零进程·候 CEO 授权 resume18（候授权自 18:29 起约 85min）。心跳已更。
 
 - ㊿+1977 拍读 20:00：三仓无新（TMV 262e25dd3 自家·TCO 7bd43fa·TMC 177b56f）·零进程·候 CEO 授权 resume18。心跳已更。
+
+### ㊿+1978 · **CEO 授权「修完传播好就点火」（round5）——resume18 两件已落·令 COS 签发+催 SDE 点火**
+
+- CEO 令原文（20:0x）：「**修完传播好就点火**」（DP-048 已修好+传播好）。
+- ①**亲签件**（resume17 正身目录）：approved_at=2026-11-24T20:01:17+0800·charter_commit=7bd43fa·quote 照录·**sha256=dd6386827cef6fe40f59653113090563b28b4e696df98784b4ecb1f2db0f0596**。
+- ②**continue 件**：ruling_ref=DP-048-instruction-20261124T200000Z·signed_at=20:01:17·run_id=resume17·round_count=8·**sha256=cd214b056a74cd231a1c34fe987bbcd903ec6d9d25e0094ad0eeb00be4347683**。
+- ③已发 COS（9c2a693d·签发 resume18 号+签发表+台账）+SDE（a405b2af·四前置核+DCE_EXECUTE=1 点火·号候 COS）。
+- 观察点：dce 四步再真跑（pull 快进/无变化）/段 7 两席不再 cap（DP-048 效果）。
+- 呈 CEO（点火在即）。
+
+——BOD·（date 现查原值·D-47 正形）
