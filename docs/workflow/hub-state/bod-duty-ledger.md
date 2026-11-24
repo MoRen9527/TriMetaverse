@@ -14076,3 +14076,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2123 **终版=90（I=0·schema 锁）·CTO 裁 a（COS 重出契约形）**：终版重跑 total=90.0/pending=0/projection=90·breakdown={59,31,subjective 0}——I 族 score=0（文件被消费但 entries 无 criterion/score→判 0 非 pending）。根因：COS I 卷形 entries[{entry_id,label,rationale}]·engine 要 [{criterion,score,rationale,evidence_ref}]——判语有（I1=4/I2=3/I3=3）只形不对。CTO 裁 a（COS 重出形·b 补映射无从拆）——已发 COS（4ad0a8d6·重出 criterion/score 形→SDE 重跑→100）。
 
 - ㊿+2124 拍读 01:36：**COS 已重出 I 卷契约形**（d602989e4·entries criterion/score/rationale/evidence_ref·验 OK·total10·第 25 笔自领「产件未对消费契约」）+1120（第 25 笔同根定位）——SDE 重跑候（R20 score 当前仍 subjective 0）。**resume21 在跑**（14 json·段进度）。三仓 478ca1c/58340d3。心跳已更。
+
+### ㊿+2125 · 🏆🏆**双里程碑：①「修复后完整百分」100/100 终版（resume20）②resume21 段 8=succeeded（链首通·notify_done 已发）**
+
+- **①100/100（resume20 补判终局·SDE 报 01:39）**：**total=100.0·pending=0·projection=100·inner pass**｜**九族全满：A9/B9/C13/D9/E9/F13/G19/H9/I10**——修法链=collection 合成→I 卷 schema 两修（契约形→evidence_ref 删）→重跑·三次迭代到位。
+- **②resume21 段 8=run_state succeeded ✓✓**（三件修复首验）：seven_seats ok+degraded（source=resume20）+**478ca1c 权威化生效**+**notify_done 已发（01:36）**——**席自判 partial bug 三层封死实证·链首次真正跑通**。
+- **③resume21 现态**：段 1-9 全过（dce 四步再全绿·段 7 **I1:12/I2:7/I3:6**）·**联审已起（review-mode full·batch1 跑）**→A/B 与链终态随报。
+- **本日全链叙事**：dry_run 穿门→v8 14 items 施工（4 层门：dce/七席/时序/席值信任）→resume19/20 两挂→三件修复（e0a2f32/4552d1b/478ca1c+979da51）→**100/100+链通**。
