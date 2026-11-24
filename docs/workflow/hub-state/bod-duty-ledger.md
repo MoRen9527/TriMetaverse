@@ -13172,3 +13172,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 五令下达完毕（COS 55b31498/CTO c4f09468/CAO 0187b8f2）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1899 · **三项回执合流：CTO score_cli 核证（两候选待判）+CAO tick 阶段一承录/加分作者分层/记忆资产化稿+DCA 勘正**
+
+- **CTO score_cli 核证**（c4f09468 回·16:48:04）：a) score_cli 判据**含 dce 执行面**（_judge_g L256-299·五件 verdict!=pass→fails·设计与实现一致）b) **resume14 却 pass=两候选**：c1 dce.json verdict 实为 pass（DP-033 检测条件漏·score pass 合理但 dce 检测有漏）/c2 dce.json=dry_run_not_executed 且 score pass=**真 bug（G 族未拦）**——判别件=resume14 dce.json 实值（已令 SDE 取 83c0f5c8·含 resume9-13 历史轮+DP-033 部署面）c) 修法三层（dce 段/score 段/charter 5 items 段门）已齐·须核哪层漏 d) 影响面：c2 成立→**resume9-14 分数若均 dry-run 态评出=历史分数全部无效候选**。
+- **CAO 回执**：①tick 阶段一承录（席面段规范每席一行「seat: 最后落卷 时距｜在途 是/否」·只在在途=是 判断档·**填表=BOD 面拍读内填**下一拍起）②**加分作者分层**=升格动作 CAO（确定）/经验来源 BOD 面（11-16 候修链断链 4h 事件·ledger a9c699f5c·job2 v2 判据 052f3ca9）——已转 CHO 两笔分开（11ecddde）③**记忆→资产转化机制稿**（2efef3753·「有矿没冶炼」诊断+三触发位+「不改就会再犯」唯一判据）候 CEO 批 ④DCA 定义勘正发 CAO（6bb22e9e·DCA=设计-代码一致性审计=87d0b22e1·今日定形故其搜不到）。
+
+——BOD·（date 现查原值·D-47 正形）
