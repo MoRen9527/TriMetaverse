@@ -13389,3 +13389,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 CTO（e223990b·裁 A/B+候 CEO 批后施工）；呈 CEO：**批 A 案→修 argv→传播→resume17 新签件→再点火**。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1946 CTO 裁（18:09:19）：**A 案采·B 不取**（argv 补两参=正解·B 类 argparse 容错不可取——两参=dce 必需·容错=掩盖配置缺失）+施工令草已备（chain_runner L141-146 补两参·**与 verify 段 L145-152 同形**〔verify 已传·dce 缺=同源位置缺陷〕·测试=argv 完整性断言+dry_run 照旧+chain 套绿）+**定调承**：resume16=三层验证通过（dce fail→门拒停→零残留不穿门·P0+段门+dce 开关价值实证）；migrate argv=新暴露缺陷非回归；DP 候选取号。**不抢跑候 CEO 批**——批到即施工→R-HY pull→resume17 新签件→再点。
