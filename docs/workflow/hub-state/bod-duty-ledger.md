@@ -13682,3 +13682,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+2015 COS 呈批·任务书 **v4**（**018af6716**·**11 items**=原 5〔1-5〕+捞回 2〔6-7〕+判卷面 fail-closed〔8〕+A/F/H 三件〔9-11·复算判据〕·§七 细则全文附录 d9dac4943）——**一次批一次施工**（11 items+DP-049 留验+DP-046 验收）。呈 CEO 批（今晚最终呈批件）。
