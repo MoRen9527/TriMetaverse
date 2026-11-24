@@ -114,7 +114,7 @@
 
 **DP-035 取号**（23:14·owner_seat improvement 级补·R10-CHO-01 缺口闭合·FSD）：loop_joint_review_spawn.py **improvements 五字段扩六字段**（title/target/change/verify/rollback + **owner_seat**）·与 cho-1 同族（opinion 级已落〔:394〕·improvement 级缺）·验收=improvements 项 owner_seat 非空枚举七席/卷面可读/既有测试绿·状态=取号候发令。
 
-**DP-036 取号**（23:20·charter-150927Z 施工批 **8 items**·CEO 批 23:17:50「批，DP-028 并入」）：7 items 逐席（cos-1/COS·coo-1/COO·cao-1/CAO·cpo-1/CPO·cto-1/CTO·cho-1/CHO·cfo-1/CFO）+**DP-028 并入**（并行联审五项：独立产物 opinions-<seat>.json/聚合器单写 joint-review.json/run_dir 只读/并发 3-4/FADE_JOINT_PARALLEL=0 回退·执行体 FSD·CTO 监核·设计卷 73964d6cd）·施工完+自测绿→点火跑一轮·状态=派发→在途。
+**DP-036 取号**（23:20·charter-150927Z 施工批 **8 items**·CEO 批 23:17:50「批，DP-028 并入」）：7 items 逐席（cos-1/COS·coo-1/COO·cao-1/CAO·cpo-1/CPO·cto-1/CTO·cho-1/CHO·cfo-1/CFO）+**DP-028 并入**（并行联审五项：独立产物 opinions-<seat>.json/聚合器单写 joint-review.json/run_dir 只读/并发 3-4/FADE_JOINT_PARALLEL=0 回退·执行体 FSD·CTO 监核·设计卷 73964d6cd）·施工完+自测绿→点火跑一轮·**已毕销账**（**177b56f** 实读·**26/26+19** 绿·**R-HY grep=6**·传播毕）·状态=已毕（候 BOD 落 resume17 件→SDE 点火）。
 
 **DP-037 取号**（02:14·**已勘正 10:41**：原写「rounds_run=0 上报小 bug」——CTO 复判实读 L333-350 定谳：**非 bug·是设计口径**）：`rounds`=完成迭代数（L348 迭代路径才 +1·debug 挂起不执行）／`rounds_started`=尝试数（DP-037-t5 补字段·attempted vs completed 分离=**正确且有用**）；`round_count` 停 8 同理=设计（debug 挂起不迭代·resume12 test 态遗产）。**处置：撤销「bug 修复」定性→降级「口径注记」**（两字段语义文档化）·t5 rounds_started 字段保留（可观测性增强有效）·状态=口径注记（非修复项）。
 
@@ -134,7 +134,7 @@
 
 **DP-046 取号**（17:54·**dce 开关施工**·CEO 批「批，dce 开关和授权窗都开」）：CTO 施工 chain_runner dce argv env 条件（**DCE_EXECUTE=1 才传 --execute·默认 dry_run 保安全**）+**真跑前置清单**（目标树清洁/冲突预检/回滚锚/两面一致性·CTO 出·COS 台账记录）+自测·验收=CTO 报 BOD 附读数·**真跑=真迁移不可逆**·状态=派发→在途。
 
-**DP-047 取号**（18:13·**migrate argv 完整性修复**·CEO 批「批，修完传播好就点火」）：**resume16 真跑（DCE_EXECUTE=1）时 migrate argv 失败**（`--start-date`/`--operating-root` 空参形·COS 1061 落账已观察该空参形）——修=dce argv **补两参**（CTO 施工）→自测→验收→传播（R-HY pull）→BOD 落签件+continue→SDE 四前置核+DCE_EXECUTE=1 点火 **resume17**·状态=派发→在途。
+**DP-047 取号**（18:13·**migrate argv 完整性修复**·CEO 批「批，修完传播好就点火」）：**resume16 真跑（DCE_EXECUTE=1）时 migrate argv 失败**（`--start-date`/`--operating-root` 空参形·COS 1061 落账已观察该空参形）——修=dce argv **补两参**（CTO 施工）→自测→验收→传播（R-HY pull）→BOD 落签件+continue→SDE 四前置核+DCE_EXECUTE=1 点火 **resume17**·**已毕销账**（施工 **177b56f**·**26/26+19 绿**·**R-HY grep=6**·传播毕·CTO 验收放行——销账锚=177b56f）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
