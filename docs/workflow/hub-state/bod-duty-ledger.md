@@ -14553,3 +14553,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **版本时差今日三咬**（resume26/28/27）——preflight 检查该落。
 
 - ㊿+2241 **CTO 实测：b 映射=有（SDE 判错）**：by_target 17 对**含** trimodel-dual→CTO/trirmc-bridge→SDE（by_family 也含）——**真因候选=名差或 fill 未命中**（97febbb 只修 a·445b052 的 fill 未动）。已发 SDE（给 resume28 plan 的 item_id 实读+fill 跑没跑·CTO 对表名差）→齐即点火 resume29。
+
+- ㊿+2242 **COS 回：两件已在件（13 段线号实证）+D 系建议已出（e71995025）**：trimodel→CTO（L36/L180）/bridge→SDE（L45/L181）——**resume28 owner=''=by_target 读旧版**（非数据缺）·请 pull 复验。**D 系建议**（版本时差 preflight·今日三坑实证·人查有漏机械查才是闸）——**已转 CAO 铸条候选**（strict 形候 CEO 定）。
