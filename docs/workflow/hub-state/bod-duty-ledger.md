@@ -13927,3 +13927,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（只剩尾巴·~40min 量级→全毕→请签→点火）。
 
 - ㊿+2086 拍读 00:06：**TriCompany d0522be（00:05:46）新提交**（详见下）+CFO 检查拍幂等记录（fa9a3c42d·item7 已先完成·无重复施工）。零进程。心跳已更。
+
+### ㊿+2087 · **CTO 终验：v8 技术面 9 件全毕（00:06）——全毕条件只剩 item6（COS）+item13（CPO）·已双催**
+
+- ①最后终验：item10+11 close 侧（d0522be·close_skill +122/test +65）=19 passed ✓（close-acceptance 复算门+patrol-plan 对表·CTO 字段底线照行·fail-closed）。
+- ②**技术 9 件全毕**（全本机复核）：item12/8/1/2/4/5/9/10+11close/11-计划侧。
+- ③**复算判据=实证形**（样例两侧值 CTO 校准）：item10 声明{total:3,A:2,B:1,max_latency:5.0}↔复算同值=过·篡改 total=9→拒（reason 载双侧）／item11 cadence=15m↔patrol log 中位 15.0min=过／item9 size=9 vs 实测 8→拒。
+- ④各席 5 件账：item14 ✓（CTO 审过）/item7 ✓（00d7dc8）/item3 ✓（回填销项）/**item6（COS·待）/item13（CPO·待）**。
+- ⑤回滚面：全件 env 开关（FADE_PLAN_FREEZE/CLOSE_ACCEPTANCE/PATROL_CHECK/CLOSE_SEVEN_SEATS）+bak 全在。
+- 已双催（da339f91 COS/c504e194 CPO·报到哪步/ETA/blocker）——**全毕即请签→点火 resume19**。呈 CEO。
