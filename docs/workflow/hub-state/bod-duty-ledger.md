@@ -13999,3 +13999,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 - SDE 三查（00:58）：①ignite env 未带 DEEPSEEK_API_KEY（真）·但 **dsh 凭证走 `~/.dsh/.credentials.yaml` 不经 env**——**铁证=resume14/17/18 同点火形七席全成功**→**auth 假说证伪**；缺 key 只影响 CFO balance guard（fail-open·investigate 告警非失败主因）。②**真因=段8 rc=2 双因**：a) **item4 七席检查时序错位**（close_skill 时本轮联审未发生→恒缺 5 席→partial→fail·**item4 自身新 bug**）b) patrol-log 缺（CTO 已裁降级·4552d1b 毕）。③**正面**：dce 四步第三轮全绿 ✓／**段 7 过（I1:10/I2:8/I3:6）**。
 - 已发 CTO（143f2581·重裁+派 FSD 修 item4 时序+教训「报根因前核同形成功先例」）。
+
+- ㊿+2106 **CTO 根因修正+双自领（00:58·470a88ee）**：①真因=**item4 接线时序错位**（close 段 8<联审段 10 后⇒close 时联审从未发生⇒恒判七席缺席）——**「七席只起 2 席」=CTO 误读**（实际联审根本没跑）②**item4 修已派 FSD（b32bf49d）**：规格=**改读 prev run 联审**（不改链序）·prev 七席齐→过／prev 缺→WARN 降级（形同 patrol）·保留回滚 env③教训入 CTO 面册：**「报根因前先核同形成功先例」**（反证法·本日第二次被证伪·「假说未证先裁」=其今日主族）④正面：dce 第三轮全绿+段 7 有分。**resume20 前置=a（b32bf49d 施工中）+b（4552d1b 已毕）**——毕→CTO 验→BOD 呈 CEO 知情→点火。
