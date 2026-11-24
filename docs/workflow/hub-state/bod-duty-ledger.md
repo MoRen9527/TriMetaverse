@@ -13794,3 +13794,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2045 拍读 22:00：TMC 123719b（item12）+TCO 537cffc（item8）已见·TMV 78ef2b4d8 自家·零进程——**v8 施工在途（8 件 FSD+5 席自办）**·候各件毕报。心跳已更。
 
 - ㊿+2046 拍读 22:06：三仓落卷无新（TCO 537cffc 21:58/TMC 123719b 21:56 已见·TMV 自家）·零进程——v8 8 件+5 席自办在途。心跳已更。
+
+- ㊿+2047 **v8 三件毕**：item1（verify 强制 runId/strict·TriCompany **41d7ca4**+TriRMC **750ae8d**：--run-id 必填+run_id_match+--strict 必填+chain argv 原子【防 resume8 型回归】+-retry1 剥离·40 passed+chain 26/26 ✓）+item12+item8——**技术 10 件 3 毕·7 在途**（item2/4/5/9/10/11+item5 续·字段名 retry_seq/retry_of/run_id 去后缀已确认）。呈 CEO 一句。
