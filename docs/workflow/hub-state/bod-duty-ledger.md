@@ -13266,3 +13266,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1918 拍读 17:12：**resume15 已点火**（17:11:42 起·qualify pass·preflight 全绿）——ceo_ruling ok=true state=continue（prev=resume14·BOD continue 件被消费 ✓）+loop-window ok（sunday_gate exempted(loop)）+identity/diverge=delta 0/healthz ok。3 进程在跑·**P0 修复后首跑**（关键看 dce 真执行 vs 门拒）。呈 CEO 一句。
+
+### ㊿+1919 · **resume15 实测：P0 修复生效实证（dce dry_run 被门拒停）——暴露下一层=dce 为何一直 dry_run**
+
+- 链毕 17:14:22：**stages_run 止于 dce**（preflight→qualify→plan_scope→dce 四段后停）·零进程·rounds_run=0/rounds_started=1·round_count=8。
+- **dce.json：verdict=dry_run_not_executed·mode=dry_run·四步 rc 全 None**。
+- **①P0 修复+段门 fail-closed 生效实证 ✓**：dce dry_run→顶层 fail→gate 拒→链停（对比 resume14 穿门跑完）——正是预期行为。
+- **②下一层真问题**：**dce 一直 dry_run（迁移从未真执行）**——这是「评分评 dry-run 产出」的根因之根——已发 CTO 核（200b6b0a·dce 真执行条件/ignite exit 确认/修法）。
+- 呈 CEO（修复生效+下一层暴露）。
+
+——BOD·（date 现查原值·D-47 正形）
