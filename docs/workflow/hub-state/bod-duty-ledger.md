@@ -13369,3 +13369,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（点火在即）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1944 · **resume16 真跑实证：dce mode=execute·pull rc=0 ✓→migrate rc=2 ✗（真迁移首挂 migrate 步·门拒停）**
+
+- **真跑发生**（P0 后首次真实执行）：dce **mode=execute**·**pull rc=0 ✓**（真 pull 成功）→**migrate rc=2 ✗**·failed_step=migrate·verdict=fail——链按设计停段 4（门拒）。
+- ignite.log 线索：「checked: true·ok: true·detail: pre-commit 面不可判·close 面承接（如实注）」+「verdict: fail·failed_step: migrate」·10:04:07Z 毕。
+- **修复机制全链工作正常**（真跑→失败→门拒停→不穿门）——migrate 失败=真迁移遇到的第一个真实问题。
+- 已发 SDE/CTO 查四件（588e0121：migrate rc=2 完整 stderr/失败时点树态半态/tag 回滚粒度适用性/修复后重跑形）。
+- 呈 CEO（真跑实证+首个真实问题）。
+
+——BOD·（date 现查原值·D-47 正形）
