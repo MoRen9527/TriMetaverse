@@ -14613,3 +14613,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **三缺口**：a) A/F 件 verdict=na——**engine 探测路径错**（A 探 run_dir/jobs.json·真实 TriRMC/data/cron/jobs.json／F→/var/lib/trirmc/cron/logs）→DP 候选；b) **H=manual——SDE 报「patrol-source R-HY 零命中」=判错**（**BOD 实核 R-HY：文件在·1457B·19 行·04:56**）——真因=探测路径（`_collect_h` 应指 tmv_root/docs/.../trees/bod-tick/）；c) covered_dims=v1.3 未落。
 - opinions 形=正常 dict×7（SDE 误读自领）·DP-043 55/55。
 - 已发 SDE（三条探测路径统一对真实位·修完重跑→100）。
+
+- ㊿+2257 **patrol-source 位给齐（CTO find 范围漏 TMV 根）**：实际位=`/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W48/trees/bod-tick/patrol-source.jsonl`（1457B·19 行）——**CTO 的 find 范围=TriRMC+trirmc 两目录·漏了 /srv/fleet/TriMetaverse/**——「全盘零命中」=范围不全（**「找的位置不对」族·CTO 面第 N 例**）。已回 CTO（三探测路径统一：A→TriRMC/data/cron/jobs.json／F→/var/lib/trirmc/cron/logs/／H→tmv_root/docs/.../trees/bod-tick/patrol-source.jsonl）→重跑 91→100。
