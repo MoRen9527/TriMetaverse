@@ -14290,3 +14290,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 工时 ~12 分钟（%cI 直引）·历史冻结（旧 100 不动）·**可进新一轮验证**（resume22 起用新形：引擎采/na 三态/axis/权重 65+35/v2.1.0）。
 
 - ㊀+2180 拍读 03:18：三仓无新（TriCompany bb97cb8 03:12=6min）·零进程——**a 案四件已毕·候 CEO 裁点火 resume22**（新形首跑：全自动采+权重 65+35+两轴+协议 v2.1.0）。patrol-source 拍读行已追加。心跳已更。
+
+### ㊿+2181 · **CEO 批「点火 resume22」——round9 件已落 resume21 正身（新形首跑：v2.1.0+65+35+a案）**
+
+- CEO 03:2x：「**批，点火 resume22**」。
+- **round9 两件已落**（resume21 正身·fleet:fleet·JSON 双 OK）：ceo-ruling（run_id=shift-W48-resume21·round_count=8·DP-050-resume22-instruction）+ceo-charter-approval（round9·charter_commit=bb97cb8·quote=「批，点火 resume22」）。
+- 已发 SDE（四前置核·**先复算 prev**·件按 resume21 落·不符即报重落）。
+- **新形首跑观察点**：①A/F/H 全自动采（producer=engine）②na 三态 ③axis 字段 ④权重 65+35（rubric v2.2.0）⑤两轴标记⑥patrol-source 源（每拍在长）。
