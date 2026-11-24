@@ -14490,3 +14490,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **真层=due 未实现**（L474 只填 owner）·**resume26 残余 2 因**：sunday-shot=数据版本时差（COS 249e8f018 改于 04:30>resume26 启动 04:2x）+task-inventory=due 未实现。
 - 修法缩 b（due）→修毕报→点火 resume27（段 3 应全过）。
 - **BOD 建议**：跑前对「数据件最新 commit 时间 vs 链路启动时间」（版本时差 preflight 检查·今日第 N 例）。
+
+### ㊿+2227 · **due 修验收通过（04:33·445b052·39 passed）——resume26 残拍已裁·点火 resume27 令发**
+
+- a 兜底（by_family 14/by_target 17·COS 14 项有 family_id→冗余无害）+**b due 填充**（`by_target_meta` 14 实测·sample release-rules→{owner:CTO,due:W47 落时点}）·39 passed·EXIT=0。
+- resume26 残拍已裁→**点火 resume27 令已发**（纯数字形·前置复算·段 3 预期全过）。
+- **「数据版本时差 preflight 检查」= 采为 DP 候选**（数据 mtime>链启动→告警·防「核旧版」第 N 例）。
