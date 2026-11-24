@@ -14052,3 +14052,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **I 族定责（COS 考卷原文实证）**：①初判=**值席（值班位席）**自判+落卷（rationale+evidence_ref+时点戳）②联审=**可选**（仅 fail/边界/分歧三触发）③**终判卷=COS**（分差≥2 强制复核）·时点=评分汇总后·产 subjective-score.json·三判据 I1=4/I2=3/I3=3·锚文 36bf14a1d L44（记录随周封存·活随人带走·radionale 必含）。
 - **已发**：COS（229b4654·判卷即刻·一人两角留痕可行）/CTO（44531fe9·定+执行 score 补判机制·报读数）。
 - **百分拼图**：机判 59（B/C/D/E/G ✓）+A/F/H 31（✓ 采集齐）+I 10（COS 判卷中）=100。
+
+### ㊿+2118 · **补判机制定（engine 读单文件 collection-score.json·L317）——合成执行中；H 件已补 engine 字段**
+
+- **机制（CTO a975b080 实读）**：`_judge_collection` **L317 fp=rd/"collection-score.json"**——**engine 读单文件**（形 {score_version,run_id,entries:[{family_id,verdict,rationale,evidence_ref}],check_time}）·**非三分离**——L321-323 缺→manual·L329-333 遍历 entries（pass→weight/fail→0·**rationale 空=不消费**）·run_id 不匹配→manual。
+- **执行=SDE 代执（ef036d1b·合成 collection-A/F/H→collection-score.json→score_cli 重跑）**·CTO 风险注（三分离 schema 或需映射）。
+- **BOD 面**：collection-H.json 已补字段（**verdict=pass**〔H verdict_rule=loop-window 轮值守窗 N/A 自证·patrol 在/dive 缺位=预期态 defer 判读〕+rationale+evidence_ref+judge_face=BOD）——H_OK 验过。
+- **两路**：resume20 补判（先行版 90/100·I 齐则百）/resume21 新链全跑（三件修复后）。
