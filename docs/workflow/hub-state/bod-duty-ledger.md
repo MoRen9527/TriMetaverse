@@ -13585,3 +13585,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1994 CTO 报 DP-049（rationale 聚合透传）核证完毕+已派 FSD（04b4993b·候号补挂 D-88·**先施工候号=快速迭代**）：①核证（_validate_seat_scores L128-153）：append 原条目 e→ok_entries 已含 rationale ✓——只需 norm/anchor_norm 加透传（1-2 行·`_extra(e)`）②施工：norm/anchor_norm 加透传+2 测试（有/无 rationale 双态）+既有 loop 套绿③验证点（下轮联审）：joint-review dims rationale 在+L 标记 53/53 或席面值④如实：DP-043 两层面——席面生效（3/3 抽样）+聚合面待修（本件）·两齐才算全落⑤进度账：DP-042~049 八单在途/已毕。呈 CEO（DP-049 先施工候号·若不批可回滚）。
 
 - ㊿+1995 CTO 报·DP-049 验收通过（3a265f1·两处同修 _rat/_extra 透传·17 passed·R-HY 就位）+**核证反转自领**（「append 原条目 rationale 保留」=错——实际构造新 dict·rationale 校验面即丢·根因=只读前 25 行未读 append 构造行=「读一半代码下结论」·FSD 实测首测红纠正）+DCA 又例（今日第三例·L2 层）。验证点=下轮联审 joint-review dims rationale+L 标记 53/53·DP-043 全落待此验。
+
+### ㊿+1996 · **CEO 令：charter-122210Z 大白话呈报（已办）+DP-049 批追认+合并施工纪律（等任务书批一起走修）**
+
+- CEO 令（20:3x）：①charter-122210Z（5 items）大白话+原文件呈 ②「DP 取号修 normalizer 那 1 行，批，**等任务书批了一起走修**」。
+- **charter-122210Z 原文已读**（resume18 run_dir 下·5393B·5 items）——大白话：**①验收硬门**（cos-1·verify 强制 runId/strict·retry 编号隔离主键）**②时间表记真账**（coo-1·planned/actual 双录·不许树时间戳冒充·超 480s 入 window_conflicts）**③意见转正式条款**（cao-1·铸号入册+commit+effective_at）**④七席联审列结尾且一席不能少**（cpo-1·缺一席=partial 不发 notify_done）**⑤轮次编号统一**（cto-1·-retry1 挪 retry 账本·verify.run_id 补正名）。**dropped 2 条如实**（close.upgrade_list 12 条缺陷绑主责·无人值守余额 fail-safe——要不要捞回候 CEO 定）。
+- 已发 COS（f1d874e9·DP-049 批追认+**合并为同一施工批**：charter 5 items+DP-049 呈批件三件并出→候批→统一施工·CTO 不抢跑）。
+- 呈 CEO（大白话如上·原文位置已给）。
+
+——BOD·（date 现查原值·D-47 正形）
