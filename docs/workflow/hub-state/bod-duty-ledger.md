@@ -13978,3 +13978,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **段 1 preflight 起跑**——盯段 1-10+第一份分数（A/B）+五断言第 5 条 tokens 对照。
 
 - ㊿+2100 **SDE 首笔报（00:33）·点火六项全绿**：①签件复核=**四校验 ALL True**（approval sha 79c781c0…·approved_by CEO/approved_at 00:29:34+0800/charter_ref/charter_commit 574b2d940/signature_slot）+**三绑 ALL**（ruling sha 80c9d9af…·continue/run_id=shift-W48-resume18-…/round_count=8 int/signed_at）——BOD 落件核对一致 ✓（属主 fleet ✓）②五绿复核全 ✓ ③**点火读数：16:30:16Z·pid 3288185·preflight=pass·consumed 生成 ✓** ④盯链：段 1-10·关键断点=dce 四步真跑（mode=execute）→段 7 两席→联审（八条标尺+65536/393216）。关键断点读数随报。
+
+### ㊿+2101 · **resume19 链毕（00:55 拍读·PROC=0）：段 1-8 跑·段 8 close_skill 失败（两新门正确拦）——dce 真跑 pass 但 A/B 仍未出**
+
+- exit=failed·detail=「段 8(close_skill) rc=2」·verdict=「**fail: v8 close gate（值守计划对表拒：patrol log 缺·fail-closed·v8 item11）**」·stages_run=1-8（close/notify 未跑）。
+- ✅ **dce=execute·pass**（今日最大修复生效·不再 dry_run 穿门）
+- ✅ **item4 七席门生效**：close WARN「七席未齐（缺席 cao,cpo,cto,cho,cfo）→partial·不发 notify_done」=正确拦
+- ✅ **item11 值守对表门生效**：patrol-log.jsonl 缺→fail-closed=正确拦
+- ⚠️ COO WARN：「balance unavailable ≥3 consecutive rounds·fail-open persisted (investigate DEEPSEEK_API_KEY/env in spawn face)」
+- ❌ A/B 未出（score run_state=partial·A 族=manual〔值席采集域〕score=null）
+- **已发 CTO（e71225ef）定根因两条**：①七席只起 2 席（spawn 面 env?/lite 判据误?）②patrol-log 产出源（门要求的东西谁产？）→修法二选一（补 env/补产出→resume20·或按判据调门）。
