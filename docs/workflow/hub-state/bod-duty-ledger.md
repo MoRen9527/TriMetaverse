@@ -13188,3 +13188,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - source-agents 更新（SDE 归 COO）COS 在办。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1901 · **SDE 判别回：c1/c2 双否——score_cli 其实拦了（假象）+真问题=c3 双 verdict 字段｜CAO DCA 补引毕**
+
+- **SDE 四件（16:48:47）**：①resume14 dce.json=**dry_run_not_executed**·mode=dry_run·steps rc 全 None②resume9-13 实值：**9/10=pass（旧码）·11/12/13=dry_run_not_executed（新码）**·2/4/resume(033142)=pass（旧码）·3/5/6/7/8=dce 缺失⇒**历史分数有效性：≤resume10 的 dce 执行面维度=旧口径无效候选**（新口径自 resume11 起）③DP-033 部署已证（resume14 产出新 verdict）④**判别：c1 ✗/c2 ✗——_judge_g 已拦**（families.G=state fail·score 0·weight 19·reasons 明引 dce verdict·inner score.verdict=**fail**·total 40.0/投影 81.0·redline「任一族 fail→fail」生效）——**「score 没判出」=假象·评分层判出 fail**。
+- **真问题=c3 双 verdict 字段**：顶层 verdict="pass"（CLI 执行态）vs score.verdict="fail"（评分结论）并存——**下游若读顶层=误 pass**（chain 段闸/verify/close 读取面须核）→修法候选（消费面统一读 score.verdict/顶层改名 exec_verdict）候 CTO 核下游读法后定。
+- **CAO DCA 补引勘正毕**（c167cce7f·核真后引非照转·原文「全仓搜未找到·不编造」保留留痕）+咬合说明「本机制管记忆→资产·DCA 管资产→实现（漂移）」+方法论自注「待确认不是空白·是诚实占位」。
+- 呈 CEO（score_cli 假象澄清+真问题 c3+历史分数口径）。
+
+——BOD·（date 现查原值·D-47 正形）
