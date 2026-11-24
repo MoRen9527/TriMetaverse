@@ -13956,3 +13956,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **各席 5 件全毕**：14 已审/7 已落/3 销项/6 已毕（11 条全绑）/13 稿毕+链侧——**14/14 全齐**。
 - 回滚面：全件 env 开关（LOOP_JOINT_REVIEW_LITE/FADE_PLAN_FREEZE/CLOSE_ACCEPTANCE/PATROL_CHECK/CLOSE_SEVEN_SEATS）+bak 全在。
 - **⇒ 呈 CEO 请签 resume19**（B 档亲签件·run_id=shift-W48-resume19-20261124T135559Z·quote=「批，两件都批，施工完点火」）→签后 SDE 四前置+DCE_EXECUTE=1 点火。
+
+- ㊿+2095 **拍读 00:24+请签前核读发现卷实差异**：TriCompany 0723255 在 dev ✓；**TriRMC 58340d3 commit 存在但只在 dp009 分支·不在 dev·ls-remote origin 无此 hash（未推）**——点火链=R-HY pull dev·hook 传态缺则 prod=>lite 失效。**已发 CTO 勘（fb6640da·合 dev 或说明）**——**请签前必须账实相符**（BOD 不签有卷差的账）。
