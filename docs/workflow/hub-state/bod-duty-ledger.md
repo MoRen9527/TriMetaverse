@@ -14480,3 +14480,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ③**数据面自打架**：w47-sunday-shot raci 段=COO vs families 段=SDE——**BOD 判统一 SDE**（COO 第 5 例定）。
 - ④**target 名差**（...wn-20261117 截断·须 plan 实读）。
 - **修法四件批**（CTO 派 FSD a/b/d+COS c/family_id 补）→验→点火 resume27（CEO 授权在）。
+
+- ㊿+2225 **BOD 复核（COS 指「你核旧版」）**：本地现文 grep 实锚——**family_id count=14**（14 项全有）·**w47-sunday-shot-preflight-20261121:SDE**（raci 段已 SDE）——**数据面现文全对**（COS 249e8f018 后）·**CTO 核的是 69a3c7007 前版**。已发 CTO（pull 249e8f018 重核 by_family 读取逻辑〔若数据有 family_id 而 by_family 空=读取 bug〕+due 填充仍真保持）——**又一次「核旧版」**（今日第 N 例·核读版本锚纪律再证）。
