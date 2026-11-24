@@ -14407,3 +14407,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **SDE 自领**：前报「竞态」=误判。
 - **BOD 落裁**（R2 语义·残拍已裁按其裁）：`shift-W48-resume22c-20261124T194410Z/ceo-ruling.json`（207B·run_id=resume22c·round_count=8）——已回执 SDE 重取号点火。
 - **设计裁请**（已发 CTO c79c7ee5）：a 残拍落裁〔本轮走〕/b 裁清残拍目录（引擎侧）/c 混合（自动标已裁/未裁）——**R2 新逻辑第一个连锁陷阱**（任一失败轮锁死下一轮）。
+
+### ㊿+2211 · **CTO 裁 R2 残拍长期形=c（三态混合）——BOD 准：关键轮锁/长尾自动跳过（FADE_STALE_RULING_MIN=30）**
+
+- **c 方案（CTO 裁·BOD 准）**：preflight prev 候选过滤三态——a) 有 ruling→按其裁／b) 无 ruling 且 mtime≤N→awaiting 锁（R2 裁决语义保留）／c) 无 ruling 且 mtime>N→**跳过失败轮·prev 续最后成功轮**（自动恢复非静默放行）。参数 FADE_STALE_RULING_MIN 默认 30。
+- **优势**：关键轮锁（人工裁·R2 本意）+长尾自动跳（防连锁锁死）——不丢 R2 价值不压 BOD 操作。
+- 已派 FSD（~30-40min·三态测试）·本轮照 a（22c 已裁·SDE 重点中）·c 次失败起用。
+- **时序类主题**（今晚第三例：席自判/竞态窗/残拍锁）——报时/状态机时序陷阱为今日主题。
