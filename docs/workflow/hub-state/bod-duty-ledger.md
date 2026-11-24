@@ -13640,3 +13640,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2006 拍读 20:54：三仓无新（TMV da80c8c2c 自家·TCO 3a265f1·TMC 177b56f）·零进程·候 CEO 批（v2 7 items）。心跳已更。
 
 - ㊿+2007 拍读 21:00：三仓无新（TMV 36ed5d094 自家·TCO 3a265f1·TMC 177b56f）·零进程·候 CEO 批（v2 7 items）。心跳已更。
+
+### ㊿+2008 · **CEO 两令：①A/F/H 改「规划-验收」两段式（方案呈 CEO 审→并入 v3）②判卷面落卷 fail-closed（已批·直接并入 v3）**
+
+- **CEO 澄清 A/F/H 初衷**：「A 放 plan_skill 由 COS 搞／F 放 close_skill 由 COS 收口／H 拆到 plan+close——**不是 close 时去采集数据·是有规划有验收**」。
+- **BOD 框架方案（呈 CEO 审）**：A→plan_skill 产「拍前冻结件」（plan-freeze.json·md5/值面/基线声明）；F→close_skill 收口「告警汇总件」（close-acceptance.json·过程数据验收非重采）；H→拆分（plan 登记值守计划+close 验收对表）；**三族 manual→pass/fail（机判读附件·缺席=fail-closed）**。
+- **判卷面 fail-closed**（CEO 批「要」）：subjective-score.json 缺席→partial（不发 notify_done·与 cpo-1 同形）——直接并入 v3。
+- 已发 COS/CTO（e814ff38·细则稿+并入 v3·v3=7 items+判卷面 fail-closed+A/F/H 方案待审并入）。
+- 呈 CEO（框架方案如上）。
+
+——BOD·（date 现查原值·D-47 正形）
