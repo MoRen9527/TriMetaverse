@@ -134,6 +134,8 @@
 
 **DP-046 取号**（17:54·**dce 开关施工**·CEO 批「批，dce 开关和授权窗都开」）：CTO 施工 chain_runner dce argv env 条件（**DCE_EXECUTE=1 才传 --execute·默认 dry_run 保安全**）+**真跑前置清单**（目标树清洁/冲突预检/回滚锚/两面一致性·CTO 出·COS 台账记录）+自测·验收=CTO 报 BOD 附读数·**真跑=真迁移不可逆**·状态=派发→在途。
 
+**DP-047 取号**（18:13·**migrate argv 完整性修复**·CEO 批「批，修完传播好就点火」）：**resume16 真跑（DCE_EXECUTE=1）时 migrate argv 失败**（`--start-date`/`--operating-root` 空参形·COS 1061 落账已观察该空参形）——修=dce argv **补两参**（CTO 施工）→自测→验收→传播（R-HY pull）→BOD 落签件+continue→SDE 四前置核+DCE_EXECUTE=1 点火 **resume17**·状态=派发→在途。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
