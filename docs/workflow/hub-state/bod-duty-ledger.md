@@ -14518,3 +14518,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **裁（原则级）**：**断言只判稳定面（族枚举 4/件名格式 regex/A-R 必填）·不判动态面（具体 target 名/固定 items 数）**——a 改结构合法性（target∈族枚举+件名 regex）·RACI 改覆盖率一致性（≥plan items 总+每 item 有对应键）。
 - **~40min**（FSD·两断言逻辑+测试）·修完 resume28（CEO 授权在）。
 - **今晚第四条原则级教训**：build≠runtime（fake 机理）／数据≠生成器／时序=状态机未显式／**判稳定面不判动态面**。
+
+### ㊿+2234 · **6 断言修验收通过（04:44·60d7fc5·41 passed·4 分钟）——resume27 残拍裁·点火 resume28**
+
+- a=结构合法性（`_legal_target`·CARRY regex+item_id 形 `^[A-H]\d{0,3}$`+件名形·**静态 allowed 退役**）+RACI=覆盖率（`len(raci)≥items 总`+每 item 有键·**==36 删**）——items 34+raci 34→pass 实证。
+- **CTO 二自领**：「family enum A/B/C/D 固定」裁窄→FSD 扩 A-H（**族枚举=现役全集·families_n=4 是实例非上界**）。
+- resume27 残拍已裁→**点火 resume28 令发**（段 3 预期过·若过=新形第一次冲完整十段）。
