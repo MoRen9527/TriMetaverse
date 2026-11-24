@@ -14066,3 +14066,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **I 族判卷毕（COS·10/10）**：I1=4/4（三域划界/分布稳定/双向一致）·I2=3/3（fast_path 活体 DCE_EXECUTE=1 真跑）·I3=3/3（close evidence 三族齐+close.json）——entries 3 案锚文判读（**迁移链=活/v8施工批=活/台账卷=记录**·36bf14a1d L44·rationale 全含）·一人两角留痕·无分歧免联审——subjective-score.json 已落 resume20。
 - **已发 CTO（95562683）重跑 score_cli→终版 100**。
 - **round8 两件已落 resume20**（run_id=resume20·round_count=8·charter_commit=478ca1c）→**已发 SDE（c0c046f4）四核点火 resume21**（两路并行）。
+
+- ㊿+2120 CTO 回执（01:26）：I 卷收讫形齐·**终版重跑=SDE 代执**（48e8d9b3·CTO 定形/验收·SDE 执行·本机无 run dir）·过表注意（subjective entry 形不符→CTO 补映射）→终版读数（期望 100/pending=0/subjective=10）报 BOD。候。
