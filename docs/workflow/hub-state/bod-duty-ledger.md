@@ -13894,3 +13894,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CPO 审卷（cpo-duty-mechanism-dedup-review-20261124.md·在 HEAD）：①**盯办席列=并入**（D-88 L162 已有件级盯办+30min 无回执自动催办·COS 每拍扫→仅加列）②**30-60min 巡拍=取消重复**（E1 件级 30min 催办/E2 BOD tick 30min 席级三层判据/E5 silent-detect 900s）③**idle=并入**（仅三态自定性统一→r 回执+心跳字段）。四类清单：复用=E1/E2/E5 读数直取｜并入=①③｜**取消=②**｜保留新增=无独立新机制。**机制稿作废**。
 - 已发 COS（f8540856·作废+巡拍取消+两处小改随 v9+铸条判据「既有资产对表三问」供 CAO）。
 - 呈 CEO（批评→产品审→处置全链闭环）。
+
+- ㊿+2075 拍读 23:36：TMV cf5c52fea（COO 台账 1236·FSD 回还 **3min 修一处断言非代码缺陷**·item4 实现测试已绿·主体 commit push·**stash 时点调至 23:33 达 SDE**·有 commit 预备作废）——TCO 仍无新（e9c8bfb 23:07=29min·FSD 主体 commit 待见）。零进程。心跳已更。
