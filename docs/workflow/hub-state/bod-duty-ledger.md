@@ -14309,3 +14309,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2184 **CTO 修法派工 d1b564be**（代码 1 行+registry 双检+dist 重建+daemon 8710 重启照纪律+**验收=check_model_supply 探针 loop_end=ok+journal 无 404**）——修毕 CTO 验→BOD→SDE 重取号重点。**CTO 注**：别名失效=上游改名（v4-flash→flash）·registry 未随更新=「**配置-上游漂移**」类（DCA 族今日第 N 例）——**建议加「上游 /models 对表探针」防再漂**（BOD 采·候 cto 立件）。
 
 - ㊀+2185 拍读 03:25：三仓无新（TriCompany bb97cb8 03:12=13min）·零进程·**8710 healthz=ok**（服务活·FLASH_MODEL_FALLBACK 修待提交）——修法施工中。patrol 行已追加。心跳已更。
+
+- ㊀+2186 拍读 03:30+核修法：**R-HY default-model.ts 已改并提交**（**ef8d3ac** fix(model-alias): deepseek-v4-flash→deepseek-flash）·L26 实读「上游实名·CTO 令 2026-11-25」✓——**dist 重建/daemon 重启状态待 SDE/CTO 报**（dist js 未见/进程名未匹配·候其回执）。零进程。patrol 行已追加。心跳已更。
