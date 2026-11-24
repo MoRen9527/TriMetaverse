@@ -13538,3 +13538,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1983 **CEO 批 maxTokens 16384→65536**（「调，调到 65536」）——已下达 CTO（e70c1c9b·四处同改+备份+语法验+**冒烟验证 provider 真实上限**〔拒则回滚〕）；resume18 在跑用旧 overlay 不受影响·新值下一轮生效。呈 CEO 确认。
 
 - ㊿+1984 CTO 回执（19:53）：overlay 施工面=R-HY·CTO 面不能改（本机无该路径）——**已派 SDE（20b63bc8）**：备份/四处改/grep 四确认（4×65536/0×16384）/yaml parse/**冒烟验=成败判据**（DS 拒 65536→回滚+报）；CTO 面规格+验收后转 BOD。resume18 不受影响·新值下一轮生效。
+
+### ㊿+1985 · **🎯resume18 双观察点=全过（dce 连续第二轮真迁移✓+段 7 cap 消失✓）+maxTokens 65536 落地（provider 实测接受）**
+
+- ①**dce 四步再真跑=全绿**（mode=execute·rc 全 0·verdict=pass）——**真迁移连续第二轮成功**。
+- ②**段 7=cap 消失 ✓✓**：scores={I1:11,I2:8,I3:6}·absent/partial/truncated **全无**——**DP-048 prompt 修生效实证**（resume17 两席 max-tokens 不复现）。
+- ③链已进段 8（close_skill 20:09 在跑）→**联审将起（并行+八条标尺+65536 新预算首轮）**。
+- ④**maxTokens 65536 已落地**：试验层冒烟先行·**provider 实测接受**·主 overlay 4×65536 在盘·备份在位——resume18 后续席即受益。
+- 呈 CEO（联审 A/B 随报）。
+
+——BOD·（date 现查原值·D-47 正形）
