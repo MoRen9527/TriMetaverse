@@ -14504,3 +14504,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2230 **CTO 键形实锚（04:34）**：plan items schema={**item_id**,desc,status,owner,**timebox**,acceptance,depends_on}——**plan 用 item_id 非 target·due 键不存在（timebox 代替）**⇒「due=None」=计划层无 due 键（非值缺）·**due 填充=填了 plan 不拥有的键（无效）**——CTO 面核 plan schema。**resume27 段 3=最终判据**（445b052+249e8f018 版在跑）·若全过=无需 d·若残=落 d（item_id 键优先+去 .md 归一）。
 
 - ㊿+2231 **CTO plan schema 核毕（04:39）**：L36 prompt schema=items:[{item_id,desc,status}]（无 timebox/due/acceptance/depends_on 内建）·L343 必填=item_id/owner/accountable/evidence_ref——**due 填充=无害冗余**（items 无 due→新增键·判据不查·将来要用 due 须先入 schema）+owner 匹配 OK（L329 it.target or it.item_id）。**resume27 段 3=最终判据**（过=OK·残=落 d〔item_id 去 .md 归一〕）。
+
+### ㊿+2232 · **resume27 段 3 挂因变了（owner 已消·根本矛盾暴露）：静态断言 vs 动态产出**
+
+- **进展**：owner 空问题消失（by_target 双保险工作）。
+- **新挂因**：①**a) 族点名越界 8 项**（OP-202611-W47-001.unresolved-items.md 等新 target 不在 allowed）②**item6 RACI 键数 34≠36**（缺/多=fail）。
+- **BOD 根因判断（根本矛盾）**：**plan=LLM 每次扫树动态生成**——target 集/RACI 键数每跑可变（36→34）——**静态白名单+固定计数断言必然追不上**——**「静态断言 vs 动态产出」设计矛盾**（今晚第四个结构类根本问题）。
+- 已发 CTO/COS 裁方案：a 白名单动态生成／b 断言改结构合法性／c RACI 改 ≥ 或与 plan items 一致／d 其他——**6 断言自身设计缺陷（CTO 自领面）**·修完 resume28。
