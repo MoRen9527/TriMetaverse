@@ -14555,3 +14555,6 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2241 **CTO 实测：b 映射=有（SDE 判错）**：by_target 17 对**含** trimodel-dual→CTO/trirmc-bridge→SDE（by_family 也含）——**真因候选=名差或 fill 未命中**（97febbb 只修 a·445b052 的 fill 未动）。已发 SDE（给 resume28 plan 的 item_id 实读+fill 跑没跑·CTO 对表名差）→齐即点火 resume29。
 
 - ㊿+2242 **COS 回：两件已在件（13 段线号实证）+D 系建议已出（e71995025）**：trimodel→CTO（L36/L180）/bridge→SDE（L45/L181）——**resume28 owner=''=by_target 读旧版**（非数据缺）·请 pull 复验。**D 系建议**（版本时差 preflight·今日三坑实证·人查有漏机械查才是闸）——**已转 CAO 铸条候选**（strict 形候 CEO 定）。
+
+- ㊀+2243 **CAO D-97 候选稿（04:51·9468eaff4）+判据精化（重要）**：COS 原形「mtime>链启动→告警」**会误伤**（mtime 晚=运行期正常并行·非旧版）——**真信号=启动时本地落后远端**（git fetch 后 HEAD 对比·mtime 辅助）+处置分级（**关键件阻断/非关键告警**·「静默用旧件是事后才发现的错」）——**候选稿候 CEO 批（strict 形待定）**。COS 1136/1137 落账（采纳精化+第 30 笔自领「误报面检查=自动判据必修课」）。
+- ㊿+2244 拍读 04:54：**resume29 已点**（shift-W48-resume29-20261124T205317Z·04:53:17·PROC=3 在跑）——a 修（97febbb）+b 复验后首跑·段 3-10 观察中。patrol 行已追加。心跳已更。
