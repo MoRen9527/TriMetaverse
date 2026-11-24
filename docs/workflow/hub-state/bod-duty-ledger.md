@@ -14015,3 +14015,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2109 **resume20 preflight rc=4（SDE HOLD 判错自领）→两件重落 resume19 正身（01:03）**：根因=**prev 滚动**（「pf+close 齐全的最新 run」=**resume19**（close 00:38 落）非 resume18）——SDE 自领「件落位应以当前最新完整轮为准·HOLD 时应先复算 prev」。BOD 重落两件到 `resume19-20261124T135559Z/`（ceo-ruling.json 209B·run_id=**shift-W48-resume19**·round_count=8 + ceo-charter-approval.json 591B round7）——fleet:fleet·JSON 双 OK·resume18 旧件留存。已回执 SDE（48fb1332·重取号四核点火·预期 close 读 prev=resume19〔opinions 2 席→按 e0a2f32 缺→WARN 降级→不挡〕）。
 
 - ㊿+2110 拍读 01:06：**resume20 已点火在跑**（run_id=**shift-W48-resume20-20261124T170359Z**·pid 3291525·etime 02:06=01:04 启动·首次 170151Z preflight rc4 弃）——链 2 分钟在跑。三仓：TriCompany e0a2f32/4552d1b（v8 修复面）·TriRMC 58340d3。心跳已更。候跑毕读结果（close prev=e0a2f32 降级逻辑→预期通）。
+
+- ㊿+2111 SDE 首笔（01:07）：**件核四校验 ALL True**（approval sha 690d8c1e…round7/charter_commit e0a2f32）+**ruling 三绑**（sha ba9a5fff…run_id=shift-W48-resume19/round_count=8）+consumed absent ✓｜**四核全绿**｜号=shift-W48-resume20-20261124T170359Z｜**点火 17:04:14Z·pid 3291525·preflight=pass**（ceo_ruling=continue·prev=resume19·ref 照读）·consumed 生成 ✓。盯链：dce→段7→段8（prev 2 席→e0a2f32 降级预期不挡）→段9/10→A/B。
