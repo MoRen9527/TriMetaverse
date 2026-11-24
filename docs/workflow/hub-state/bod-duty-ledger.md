@@ -14340,3 +14340,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 引擎采（段 6 score 前置）未到（链早停）。
 
 - ㊀+2193 拍读 03:54：三仓无新·零进程——**resume22c 停段 3（plan 缺陷待修）**——已发 COS（plan skill 修 26 项空 owner+1 越界·给方案+ETA→CTO 验→重跑 resume22d）。patrol 行已追加。心跳已更。
+
+### ㊿+2194 · **COS 挖到底：14 项空 owner=R12 charter item3/6 旧账（批了未施工）——新断言把旧账照出来·短期 30min 补+长期 R12 施工**
+
+- **COS 实证**（R-HY resume22c 现查）：families 4 组·36 items·**无 owner=14 项**（样本：release-rules/rhy-survey/sg-root-authz/trimodel 两件/trirmc-bridge/trirmc-orchestration 等·owner 键缺失·断言 L278-280 命中）+CARRY-20260728-004 越界（L275-277）。
+- **根因（重要）**：=**R12 charter item3（cao-1 families 14 件补 owner/due/acceptance）+item6（cho-1 RACI 责任矩阵）**——charter 已批（M4-v2）**但未施工**——**resume22c 新断言把该缺口暴露**（断言正确工作·非新缺陷）。
+- **方案**：短期（30min·COS）plan prompt 硬规格补「每项 owner 非空」+extra_hint target→owner 映射（COS 初判候各席确认）+CARRY 入 allowed；长期=R12 item3/6 正式施工（候 CTO/FSD 排）。
+- **口径差（又例）**：断言 detail 文案「等 26 项」vs COS 实测 14 项——读数口径分立·**待核**（BOD 报数照断言原文·如实）。
