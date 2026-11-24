@@ -14423,3 +14423,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **前置双面复算**：check_ceo_ruling 生产根=**state=continue·prev=22c ✓**（R2 语义实锚）+五绿。
 - **点火 20:13:55Z·preflight=pass**·run_id=**shift-W48-resume24-20261124T201355Z**（纯数字形）。
 - 段 3（历史挂点）预期过→六观察点照盯。
+
+### ㊿+2214 · **resume24 段 3 再挂（75 项空 owner+1 越界）——根因=plan skill 生成不消费 R12 数据（数据文件≠生成器）**
+
+- exit fail：b) 兜底标签 release-rules owner='' **等 75 项**（数量 26→14→75——plan 每跑必增生）+a) 'company-demand-pool.md' 不在枚举。
+- **BOD 根因判断**：**R12 数据面（owner 映射）改了≠plan 会用**——plan skill 生成时不读 r12-item3-6-data.json——**缺「plan 生成消费 R12 数据」这一步**（=之前被裁的短期 prompt 接入·长期方案本应含）。
+- 已发 CTO/COS（补 plan 生成接入+company-demand-pool 入枚举·方案+ETA）。
+- aae552d（三态过滤·04:17）已落·与本挂无关。
