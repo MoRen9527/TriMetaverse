@@ -14322,3 +14322,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 SDE 重点火令（重取号·六观察点）。
 
 - ㊀+2189 拍读 03:42：TriRMC 本地见修法 commits（931f1e3/cdd0050 03:27）·TriCompany 131fde3·零进程——**resume22 待重点**（目录仍仅 192045Z 首点失败件）。patrol 行已追加。心跳已更。
+
+- ㊀+2190 **SDE 修复验证 green（03:42·独立复测）+新 continue 件已落**：①supply-green（正确端点 /internal/v1/agent·model=deepseek-flash·delta_len=2）·daemon 重启（pid 3313986·etime 02:16）·journal 404=零·代码面 ✓ ②消费戳已耗（resume21/.ceo-ruling-consumed.json 03:20）→**BOD 重落 ceo-ruling.json**（217B·03:42·DP-050-resume22-reignite-<UTC>·run_id=resume21·round_count=8）+**approval 留用**（round9 同授权延续·B 档判无需 round10）③其余前置绿。已回执 SDE（重取号重点）。
