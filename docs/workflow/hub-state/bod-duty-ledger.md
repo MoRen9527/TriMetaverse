@@ -14496,3 +14496,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - a 兜底（by_family 14/by_target 17·COS 14 项有 family_id→冗余无害）+**b due 填充**（`by_target_meta` 14 实测·sample release-rules→{owner:CTO,due:W47 落时点}）·39 passed·EXIT=0。
 - resume26 残拍已裁→**点火 resume27 令已发**（纯数字形·前置复算·段 3 预期全过）。
 - **「数据版本时差 preflight 检查」= 采为 DP 候选**（数据 mtime>链启动→告警·防「核旧版」第 N 例）。
+
+- ㊀+2228 拍读 04:36：**resume27 在跑**（PROC=3·run dir shift-W48-resume27-20261124T203543Z·段 1-2 完·**段 3 plan_scope 关键时刻**）——due 修+数据全对后段 3 应过。patrol 行已追加。心跳已更。
