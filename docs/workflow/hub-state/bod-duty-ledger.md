@@ -14640,3 +14640,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **假读数家族+1**（ARG_MAX 炸→glob 0→「缺件」误判）。
 
 - ㊿+2264 **CTO 勘正（重要）**：**F 修≠collection 分数**——breakdown 15=**A6+F9na+H0**——F9 已 na 记满（a 案件③ na→weight）——**collection 缺的唯一格=H0**——**F 修=面真（非分）·H 修=分数关键**。**100 路径=H 修**（FSD f1bdbc1e 同 seat 比对+COS cadence_layers 两节律→H pass 9→collection 24（6+9+9）→total=100（41+24+35））。21.8k 老日志清理=另件候选。
+
+### ㊿+2265 · **H 最简解（SDE）：env 一行 `FADE_PATROL_CADENCE=6m`（plan_enricher L231 默认 15m 可覆）——零码改·批 a 法**
+
+- SDE 挖到：声明源=plan_enricher L231 FADE_PATROL_CADENCE 默认 15m（env 可覆）·实测 patrol=6m ⇒ **点火 env 加 `FADE_PATROL_CADENCE=6m`**→plan 声明=实际→**H pass 9→collection 24→total 100**。
+- **批 a 法**：两 env 固化点火模板（FADE_JOBS_JSON A＋FADE_PATROL_CADENCE=6m H）——**env 一行胜过改码**（与「收归 cli」同思路）。FSD f1bdbc1e 保留（平行更稳层·不阻本轮）·COS cadence_layers=长形。
+- 即刻：SDE 验证+固化→重跑→报 100。
