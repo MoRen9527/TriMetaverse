@@ -14303,3 +14303,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **挂因（SDE 报）**：8710 agent 走 TriRMC fallback 别名 `deepseek-v4-flash`——DeepSeek /models 现只有 `['deepseek-flash','deepseek-v4-pro']`→404·fallback 链未救；dsh 席不受影响·余额 20.34 正常。**修法=FLASH_MODEL_FALLBACK 改 'deepseek-flash'+dist 重建+daemon 重启**——已发 CTO 批修（配置 1 行·重启照纪律）。
 - **resume21 双喜**：**A/B=42.6/43.51**（7 席·dims 28/27）｜**comparability=1.0**（prev=resume18·19/20 无联审跳=语义正确）｜**DP-043 八条标尺透传=55/55**（rationale+L 全在·DP-049 修生效·resume18 曾 0/53）。
 - resume22 原号 192045Z 已废（零残留）·修毕重取号重点。
+
+- ㊿+2183 **CTO 双报（03:15）**：①resume21 双喜确认（A/B 42.6/43.51·comparability 1.0/1.0·**DP-043 八条标尺透传 55/55**〔dims 55/rationale 55/L[1-6] 55·DP-049 修生效·resume18 曾 0/53〕）②resume22 修法裁：`TriRMC/src/config-sync/default-model.ts` L25-26 FLASH_MODEL_FALLBACK='deepseek-v4-flash'（旧别名 496613b）→改 **'deepseek-flash'**+**registry 别名双检**→dist 重建+daemon 8710 重启（D-03/D-21）→重取号重点。派工=FSD（代码+registry）/SDE（重建重启+重取号）。
