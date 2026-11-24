@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "charter_id": "rN-task-20261124",
+  "source": {
+    "run_id": "shift-W48-resume18-20261124T120128Z",
+    "round": null,
+    "opinion_ids": [
+      "cos-1",
+      "coo-1",
+      "cao-1",
+      "cpo-1",
+      "cto-1"
+    ]
+  },
+  "approver_pending": "CEO",
+  "status": "pending_approval",
+  "items": [
+    {
+      "opinion_id": "cos-1",
+      "title": "verify 强制 runId/strict fail-closed 并隔离 retry 派生",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/verify.py",
+      "change": "run_verify 增 --run-id/--strict 必填；run_id != plan.run_id、strict_mode != true、checks[].ok != true 或 reasons 为空即 verdict=fail；plan 生成侧将 retry_seq/retry_of 与 run_id 分离，hard_clock.run_id/resume_dedup.key 使用规范 run_id，禁止 ...-retry1 混入主键。",
+      "verify": "python3 -m pytest runtime/cognition/test_verify.py -q；负例 plan.run_id=...-retry1 且 verify.run_id='' → verdict=fail；负例 strict=false 或 reasons=[] → fail；正例同串/strict=true/reasons 非空 → pass。",
+      "rollback": "改前复制 verify.py 与 /srv/fleet/TriRMC/src/fade001/chain_runner.ts 为 .pre-runid 并记 sha256；断言红即 restore 两件，保留原 verify.json/plan.json 不重跑评分。",
+      "owner_seat": "cos"
+    },
+    {
+      "opinion_id": "coo-1",
+      "title": "plan 时标改为先行窗口+实测落点并对表",
+      "target": "/srv/fleet/TriCompany/runtime/cognition/plan_enricher.py",
+      "change": "batch_timetable 不再以 tree-facts.generated_at 回填 planned_at：plan 入口先写 planned_at=run_start+段预算 480s，各段完成后从 dce/verify/score/close 的 check_time 或 cost-log finished 回填 actual_at；hard_clock.chain_time 取 dce 实跑 check_time（或 .shift-ade check_time）；keep[].actual_landed_at 用 W48 落点/索引行时间，不用 W47 源树 mtime；score-skill.check_time 空即 fail；超 480s 写 window_conflicts。",
+      "verify": "python3 -m pytest runtime/cognition/test_plan_enricher.py -q；断言 batch_timetable>=8 段、planned_at<actual_at 且非自证、hard_clock.chain_time==dce.check_time、超阈段 window_conflicts 非空；抽 3 棵 actual_landed_at 在 W48 索引/树落点可核。",
+      "rollback": "改前 cp plan_enricher.py plan_enricher.py.pre-timing 并记 sha256；断言失败恢复该文件与 plan.json 快照，不改 run_dir 产物、不重跑评分。",
+      "owner_seat": "coo"
+    },
+    {
+      "opinion_id": "cao-1",
+      "title": "意见转条款入册并补生效时点",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume18-20261124T120128Z/opinions.json",
+      "change": "将 cos-1/coo-1 两条意见各铸条款号（D-9x 或 charter item ID），在 TriCompany 纪律册/charter 入册并记录入册 commit sha 与 effective_at；opinions.json 增 clause_id/commit/effective_at 三字段，状态由 deferred 改为 adopted；close.json#/opinion_dispositions 同步。",
+      "verify": "opinions.json 两条均含 clause_id+commit(7/40 位 sha)+effective_at；git show <commit> 可见对应条款正文；close.json 两处置状态非 deferred，items_consumed=2、digest_rate=1.0。",
+      "rollback": "还原 opinions.json 与 close.json 至本轮快照；条款 commit 以 revert 回退，不影响既有条款。",
+      "owner_seat": "cao"
+    },
+    {
+      "opinion_id": "cpo-1",
+      "title": "七席尾段联审落卷并fail-closed",
+      "target": "/srv/fleet/TriRMC/fade001-runs/shift-W48-resume18-20261124T120128Z/close.json",
+      "change": "在close_skill前强制跑loop_joint_review_spawn七席（A/B双列），写joint-review.json与opinions-<seat>.json；close.opinions_in必须=7且items_consumed与charter对齐，run_state仅在全七席到卷且close_contract.ok=true时置succeeded；2席score-skill只作I族输入。",
+      "verify": "jq断言joint-review.faces|length==7、objects.a/b均非空、seat_means.seats_a/seats_b==7；close.opinions_in==7且close_contract.ok==true；缺一席时run_state=partial且不发notify_done。",
+      "rollback": "改前cp close.json/joint-review.json/opinions.json为*.pre-7seat并记sha256；断言失败即恢复副本，run_state置partial，不重跑评分不投递。",
+      "owner_seat": "cpo"
+    },
+    {
+      "opinion_id": "cto-1",
+      "title": "统一 run_id 与 retry 账本并回填 verify.run_id",
+      "target": "plan.json#/run_id",
+      "change": "将 plan.json 的 run_id、hard_clock.run_id、resume_dedup.key 三处 -retry1 改为正名 shift-W48-resume18-20261124T120128Z；另设 retry_seq=1、retry_of=shift-W48-resume18-20261124T120128Z 保存重试账本；verify.json#/run_id 回填正名；close/manifest 不另立轮号。",
+      "verify": "grep 全 run_dir，-retry1 仅出现在 retry_of/retry_seq 说明位；python3 断言 plan.run_id==preflight.run_id==dce.run_id==verify.run_id==close.run_id；重跑 verify 后 run_id 非空且 strict_mode 为真值。",
+      "rollback": "改前复制 plan.json 与 verify.json 并记 sha256；任一断言失败即恢复两件，保留原 close 读数且不重发通知。",
+      "owner_seat": "cto"
+    }
+  ],
+  "aggregation": {
+    "items_before": 7,
+    "items_included": 5,
+    "dropped": [
+      "close.upgrade_list 12 条缺陷逐条绑定主责席与责任面",
+      "补无人值守余额不可得 fail-safe"
+    ]
+  }
+}
