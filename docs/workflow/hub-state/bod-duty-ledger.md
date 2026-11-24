@@ -13818,3 +13818,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2055 CTO schema 裁闭环（ac077e8b·已回 FSD）：「最小可复算」形采（不另给 schema 不阻塞）+**字段底线**（item9 {tree_id,md5,size,counts}／item10 {total,by_family,max_latency}／item11 {who,cadence,window}——否则程序无法复算）+样例两侧值必附（校准判一致）。工期承·点火时点候 CEO。
 
 - ㊿+2056 **v8 五件毕**：item2（plan 时标双录·TriCompany **ea29578**：batch_timetable cost-log 实测 actual_at=finished·未跑 null 不冒充·window_conflicts>480s 入〔score_skill 720s 入/plan_skill 180s 不入〕·enricher 7 passed+plan 22 passed ✓）+FSD 自抓两笔修复（duration 时基错位/`_json` 别名未导入被 except 静默吞→补 import·DCA 类再现自捕——好形）。五件=item12/8/1/5/2·余 5 件（item4/9/10/11+并行）+各席自办 5 件待稿。呈 CEO 一句。
+
+### ㊿+2057 · **CEO 两裁：①施工面三层定义定谳（仓面/机面/席位面·认可）②点火时点=全毕再点火（14 items+5 席自办全毕+CTO 验收后·勿分步）**
+
+- ①「施工面 = 任务落地的三层坐标：仓面（改哪里）＋机面（在哪改/在哪跑）＋席位面（谁干谁验）」——CEO 认可·此后汇报按三层说（CAO 术语入册候选）。
+- ②点火时点=**全毕再点火**（14 items+5 席自办全毕+CTO 逐件验收后→请签→点火 resume19·施工中途不点火）。
+- 已发 COS（f7653eef·知会+台账口径）。
