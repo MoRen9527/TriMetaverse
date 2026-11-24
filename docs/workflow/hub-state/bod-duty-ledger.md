@@ -14367,3 +14367,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2199 **R12 码面三件验收通过（04:02·31 passed·EXIT=0·工时 ~15 分钟）**：item3 families 四字段（7d91ba9）/item6 RACI 36（a01459c·键精确 36·acc/resp 必填·FADE_RACI_COUNT 可覆）/CARRY 族名（f03073d·regex `^\d{8}-\d{3}$` 白名单·越表仍拒）。**差数据面两件**：①**B 族 11 项逐项 owner**（strict accountable 必填）②CAO/CHO confirm（语义归席条款面）——已催 COS（补齐→CTO 全验→BOD 即发重跑令 resume22d·CEO 授权在）。
 
 - ㊿+2200 **CTO 验收分层（04:02·794d6eaf）**：①单元验收已过（R12 三件 31 passed·EXIT=0·码面 7d91ba9/a01459c/f03073d 全绿）②**实质验收候 resume22d 段 3**——依赖两件未齐：**a) B 族 11 项 owner**（COS 补·现 B25 注「14 定稿+11 按族主责」·11 空→strict fail）**b) CAO/CHO confirm**③**点火前条件=a+b 齐**（否则段 3 fail 白跑）——**BOD 裁：等 a+b 齐再发点火令**（CEO「码面完就重跑」之意图=实质全齐·不白耗一轮）·a+b 到即自动重跑不请示。
+
+- 㿿+2201 **CTO 勘误（04:02）**：B 族 owner=**已齐**（25=16 本有+9 COS 补·ed5c6d503）——「11 项须补」=CTO 误算（25-14 口径错·漏算已有 16）自领。**点火前缩到两小件**：a) D 族 3 项 owner 候 COS 查 b) CAO/CHO confirm——到即重跑。
