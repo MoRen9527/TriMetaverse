@@ -24,10 +24,11 @@
     {
       "family_id": "B",
       "target": "sg-root-authz-review-20261120",
-      "owner": "CAO",
+      "owner": "CHO",
       "due": "W47 封存时点（已封存）",
       "acceptance": "W47 记录树原地保留可读可溯",
-      "depends_on": []
+      "depends_on": [],
+      "owner_basis": "卷主笔席（cho-authz-opinion-20261120.md 头部自载 CHO 授权治理面意见正身·令链 BOD 转呈支2=CHO）"
     },
     {
       "family_id": "B",
@@ -56,10 +57,11 @@
     {
       "family_id": "B",
       "target": "w47-d47gate-hook-sync-20261122",
-      "owner": "CAO",
+      "owner": "SDE",
       "due": "W47 封存时点（已封存）",
       "acceptance": "W47 记录树原地保留可读可溯",
-      "depends_on": []
+      "depends_on": [],
+      "owner_basis": "卷主笔席（sde-d47gate-hook-worktree-sync-20261122.md 头部自载执行席 SDE·施工回执）"
     },
     {
       "family_id": "B",
@@ -139,7 +141,7 @@
       },
       "B": {
         "count": 25,
-        "owner": "16 项已有 owner（COS2/COO3/CPO3/CAO8）+9 项填件定稿（CTO2/CPO1/CAO2/SDE2/COO2）",
+        "owner": "16 项已有+9 项填件（CTO2/CPO1/CHO1/SDE3/COO2）",
         "A": "各条 owner（25 项全列·无空缺）",
         "R": "各条 owner",
         "C": [
@@ -169,15 +171,16 @@
         "items_9_filled": [
           "release-rules-20261118:CTO",
           "rhy-trimodel-consumer-survey-20261121:CPO",
-          "sg-root-authz-review-20261120:CAO",
+          "sg-root-authz-review-20261120:CHO",
           "trimodel-dual-model-supply-20261118:CTO",
           "trirmc-bridge-dsh-20261116:SDE",
           "trirmc-orchestration-fact-20261119:COO",
-          "w47-d47gate-hook-sync-20261122:CAO",
+          "w47-d47gate-hook-sync-20261122:SDE",
           "w47-dem009-p0-deploy-20261122:SDE",
           "w47-sunday-shot-preflight-20261121:COO"
         ],
-        "correction_note": "勘误（2026-11-25T04:10）：原写「其余 11 项按族主责」=误算——实=16 项本有 owner+9 项填件已定·25 项全列无空缺·无 11 项待补"
+        "correction_note": "勘误（2026-11-25T04:10）：原写「其余 11 项按族主责」=误算——实=16 项本有 owner+9 项填件已定·25 项全列无空缺·无 11 项待补",
+        "correction_note_v2": "CAO 异议采纳（2026-11-25T04:26）：owner=卷主笔席原则（非标题词义）——sg-root-authz→CHO（原误填 CAO）／d47gate-hook→SDE（原误填 CAO·域 owner≠树 owner）"
       },
       "C": {
         "count": 2,
@@ -210,5 +213,7 @@
   "confirm_needed": [
     "CAO",
     "CHO"
-  ]
+  ],
+  "owner_principle": "families owner 按「卷主笔席」定（封存责任归主笔）·域 owner 另设字段或不设（CAO 2026-11-25 语义建议·采纳）",
+  "self_check_request": "五席项按「卷主笔席」自查（CPO: rhy-survey/trimodel 系·SDE: trirmc-bridge·COO: orchestration/sunday-shot·CTO: release-rules/trimodel-dual·COS: OP 三件）"
 }
