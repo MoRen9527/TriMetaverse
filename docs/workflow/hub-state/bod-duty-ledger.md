@@ -14037,3 +14037,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **注**：若成立=「席智能判断污染机判数据流」又一例（CEO「skill 不是 cli」教训+1）。
 
 - ㊿+2115 **定谳闭环（01:21·三值+SDE 铁证）：partial 真源=COS 席自输出（close 席 session-68b4 run_state:"partial" 5634 chars）——seven_seats={ok:true,degraded:true,missing:[cao,cpo,cto,cho,cfo],source:resume19}=e0a2f32 正确降级 ✓**。CTO 修法三件已派 FSD（**b5d55c60**）：①TC 权威覆盖（if _ss.ok→succeeded·degraded 亦 ok）②prompt 删席自判（防任意 failed/partial）③链面辅防（L294 加 seven_seats.ok 条件）。**resume21 前置=此三件**（毕→CTO 验→BOD 呈 CEO 知情→点火→预计首份完整分）。A/F/H 采集三席并行（SDE-A/COS-F/BOD-H）。
+
+### ㊿+2116 · **A/F/H 采集进展：A ✓（SDE·resume20 目录）·H ✓（BOD·resume20 目录）·F 毕但落 resume19 需移位——I 族三段链路已明（初判值席/联审/终判 COS）**
+
+- **A 族毕**（SDE·collection-A.json 1311B·resume20）：jobs.json md5=ed55ea97a76b21cf…·size=10421B·活体 API 7 件全 enabled·逐件 next 值面（值面非仅存在性 ✓）。
+- **H 族毕**（BOD·collection-H.json 823B·resume20）：patrol 拍频 21 拍（22:00-01:12·6min 节律·断档 00:24-00:57=33min 故障查证窗如实）+dive 预检卷 absent（NO_DIVE_FILE 实查）。
+- **F 族毕但落位错**（COS·collection-F.json 500B·**落 resume19**）：alarm log=/var/lib/trirmc/cron/logs（healthz logPath 投影实证·TriRMC app.ts L152）·15 日志零触发=满分（F2_ZERO_TRIGGER_FULL_SCORE）——**已令重落 resume20**。
+- **I 族三段链路（COS L397 原文）**：**①初判值席 ②联审 ③终判卷 COS**——engine `_judge_subjective` 消费·卷缺席=pending（item8）。已令 COS 定三段责任+终判时点。
+- A/F/H 齐后→score 补判→百分（59+31+10）。
