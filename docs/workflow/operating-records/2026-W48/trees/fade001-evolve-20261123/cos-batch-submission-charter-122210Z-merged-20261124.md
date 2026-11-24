@@ -26,9 +26,11 @@
 
 ## §三 · dropped 2 条说明（CEO 可能捞回·照 BOD 转）
 
-charter aggregation：items_before=**7**·items_included=**5**·dropped=**2**：
-- **drop-1**：`close.upgrade_list 12 条缺陷逐条绑主责席`（生成器主体判断为不满足五字段/超限）
-- **drop-2**：`补无人值守余额不可得 fail-safe`（同上）
+charter aggregation（**原文直引·SDE 交付 e435482ec 附**）：`{"items_before":7, "items_included":5, "dropped":["close.upgrade_list 12 条缺陷逐条绑定主责席与责任面","补无人值守余额不可得 fail-safe"]}`：
+- **drop-1**：`close.upgrade_list 12 条缺陷逐条绑定主责席与责任面`
+- **drop-2**：`补无人值守余额不可得 fail-safe`
+
+**⚠️另附注（SDE 发现·候 CEO 判）**：charter source **`opinion_ids=[cos-1,coo-1,cao-1,cpo-1,cto-1]`——7 席中 `cho`/`cfo` 意见未入**——三种可能：①其意见无改进项（通过）②生成器 filtrate 掉 ③其意见未生成——**候核**（cpo-1 的「七席尾段 fail-closed·opinions_in==7」item 正指此缺口——**本 charter 自身即该缺口的实例**）。
 **COS 注**：两条均为 resume18 轮末生成器 filtrate 结果——**如 CEO 要捞回，可在批时句「捞回 drop-1/2」**（我面据批语入施工批）。
 
 ## §四 · DP-049（合并批·已毕先施工）
