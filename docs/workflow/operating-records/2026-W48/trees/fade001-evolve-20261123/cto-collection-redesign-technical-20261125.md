@@ -8,7 +8,7 @@
 
 ## §一 · 方案裁=a（engine 直读三分离）
 
-`_judge_collection`（score_engine.py L307-333）改：**读 collection-A.json/collection-F.json/collection-H.json 三件→逐件 run_id 校验→合并 entries**——**消除中间件合成步骤**（人手步骤=今日两坑之根）。三席各写自己的件（无并发冲突）。
+`_judge_collection`（score_engine.py L307-333）改：**读 collection-A.json/collection-F.json/collection-H.json 三件→逐件 run_id 校验→合并 entries**——**消除中间件合成步骤**（人手步骤=今日两坑之根）。**值席按 collection_cmd 采集落卷**·责任席（A=SDE/F=COS/H=BOD·临时执行分工·可改）各写自己的件（无并发冲突）。
 
 ## §二 · 采集件 schema（产品形 CPO 定·技术面确认）
 
@@ -21,7 +21,8 @@ engine **先找三件→缺则回退单文件 collection-score.json**（旧 resu
 
 ## §四 · auto fallback（逐件兜底·不连坐）
 
-T+10min 采集窗过、某席未写→**auto 按 run_dir 段产物生成该席件**（producer=auto 归因；**evidence_ref 指 run_dir 内真实段产物路径**·engine `exists()` 校验——堵 auto 代采假锚）。缺件=仅该族 manual（归因到席·**不连坐**）。
+**采集主体=v8 原文「值席采集域」**（score_engine L37·值席=值班机制）——**值席按 collection_cmd 采集落卷**；**责任席（A=SDE/F=COS/H=BOD）为执行分工（CTO 01:19 临时裁·可改·非制度形·制度形归 CAO/CGR）**——本卷不把临时分工当制度默认成立。
+T+10min 采集窗过、某族件未写→**auto 按 run_dir 段产物生成该族件**（producer=auto 归因；**evidence_ref 指 run_dir 内真实段产物路径**·engine `exists()` 校验——堵 auto 代采假锚）。缺件=仅该族 manual（归因到席·**不连坐**）。
 
 ## §五 · 验收四判据（技术面逐条·CPO 同意）
 
@@ -29,7 +30,7 @@ T+10min 采集窗过、某席未写→**auto 按 run_dir 段产物生成该席�
 
 ## §六 · 工时与施工面
 
-engine `_judge_collection` 改（读三+na 分支+auto 适配·~1h）+采集 prompt 三席（~30min）+测试（~30min）= **~2h**。施工面：score_engine.py/prompt 常量/测试；**风险=engine 核心评分面**（测试须覆盖三件缺/单件缺/na/双读四态）。
+engine `_judge_collection` 改（读三+na 分支+auto 适配·~1h）+采集 prompt（值席采集落卷形·~30min）+测试（~30min）= **~2h**。施工面：score_engine.py/prompt 常量/测试；**风险=engine 核心评分面**（测试须覆盖三件缺/单件缺/na/双读四态）。
 
 ## §七 · 使用依据
 
