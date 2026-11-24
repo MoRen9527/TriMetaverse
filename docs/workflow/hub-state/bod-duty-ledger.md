@@ -14311,3 +14311,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2185 拍读 03:25：三仓无新（TriCompany bb97cb8 03:12=13min）·零进程·**8710 healthz=ok**（服务活·FLASH_MODEL_FALLBACK 修待提交）——修法施工中。patrol 行已追加。心跳已更。
 
 - ㊀+2186 拍读 03:30+核修法：**R-HY default-model.ts 已改并提交**（**ef8d3ac** fix(model-alias): deepseek-v4-flash→deepseek-flash）·L26 实读「上游实名·CTO 令 2026-11-25」✓——**dist 重建/daemon 重启状态待 SDE/CTO 报**（dist js 未见/进程名未匹配·候其回执）。零进程。patrol 行已追加。心跳已更。
+
+- ㊀+2187 拍读 03:36：**修法双仓落**（TriRMC ef8d3ac〔03:27 default-model〕+**TriCompany 131fde3 03:32:58**〔agent-core FALLBACK_MAP 用上游实名 deepseek-flash+final safety net〕）——**dist 重建+daemon 重启+重取号重点待 SDE 报**（resume22 目录仍只有首点失败件 192045Z）。零进程。patrol 行已追加。心跳已更。
