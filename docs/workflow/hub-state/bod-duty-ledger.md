@@ -14369,3 +14369,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2200 **CTO 验收分层（04:02·794d6eaf）**：①单元验收已过（R12 三件 31 passed·EXIT=0·码面 7d91ba9/a01459c/f03073d 全绿）②**实质验收候 resume22d 段 3**——依赖两件未齐：**a) B 族 11 项 owner**（COS 补·现 B25 注「14 定稿+11 按族主责」·11 空→strict fail）**b) CAO/CHO confirm**③**点火前条件=a+b 齐**（否则段 3 fail 白跑）——**BOD 裁：等 a+b 齐再发点火令**（CEO「码面完就重跑」之意图=实质全齐·不白耗一轮）·a+b 到即自动重跑不请示。
 
 - 㿿+2201 **CTO 勘误（04:02）**：B 族 owner=**已齐**（25=16 本有+9 COS 补·ed5c6d503）——「11 项须补」=CTO 误算（25-14 口径错·漏算已有 16）自领。**点火前缩到两小件**：a) D 族 3 项 owner 候 COS 查 b) CAO/CHO confirm——到即重跑。
+
+### ㊿+2202 · 🎯**R12 数据面 36 全齐（CTO 验·04:04）——点火条件齐·resume22d 点火令已发**
+
+- COS 填充件验过（r12-item3-6-data-20261125.json）：families_items 14 四字段齐+**raci_36=A1/B25（16 有+9 补全带 owner）/C2/D8（5 填+3 已有）=36 无空缺**。
+- CTO 两次误算自领（B11/D3=「只看缺的漏算已有」）·COS 两勘正对。
+- **点火条件=齐**（码面 31 passed+数据 36 齐）·CAO/CHO confirm=语义面非 blocker。
+- **BOD 发点火令**（照 CEO「码面完就重跑」授权）：新 continue 件已落（DP-050-resume22d-reignite·resume21 正身）·**run_id 请规范形**（上轮 resume22c 含字母不符规则）·四核即点·段 3 预期过。
