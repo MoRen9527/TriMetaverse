@@ -1,4 +1,4 @@
-# 任务书呈批件 **v7**·charter-20261124T122210Z（**12 items=11+charter全纳重写**）＋DP-049 合并施工批
+# 任务书呈批件 **v8**·charter-20261124T122210Z（**14 items=12+CPO方案+CFO方案**）＋DP-049 合并施工批
 
 - sourceOfTruth: 本卷+`/srv/fleet/TriRMC/fade001-runs/shift-W48-resume18-20261124T120128Z/charter-20261124T122210Z.json`（5393B·schema 1.0.0·BOD 20:33 转全文）
 - 令源: CEO 20:3x「**等任务书批了一起走修**」（BOD 20:32）+「DP 取号修 normalizer 那 1 行，批」
@@ -11,7 +11,7 @@
 | charter_id | rN-task-20261124（source.run_id=**resume18**·5 items） |
 | status | pending_approval（**候 CEO 批**） |
 | items | **5 条**（cos/coo/cao/cpo/cto 各 1） |
-| aggregation | items_before=7·items_included=**12**（5 原+2 捞回+1 判卷面+3 A/F/H+1 charter 全纳·CEO 令） |
+| aggregation | items_before=7·items_included=**14**（5 原+2 捞回+1 判卷面+3 A/F/H+1 charter 全纳+1 CPO 方案+1 CFO 方案·CEO 令） |
 | 批复时点位 | `approval_comment: ______` ／ `approval_time: ______` |
 
 ## §二 · items 清单（5 条）
@@ -29,6 +29,8 @@
 | **9** | **A→plan-freeze**（CEO 审过并入） | **拍前冻结件** `plan-freeze.json`（COS 席规划期产·plan 有机产物）——**复算判据**：程序逐树重算 md5/size/counts 对表模型声明·不一致=fail·缺席 fail-closed | plan_skill |
 | **10** | **F→close-acceptance**（CEO 审过并入） | **告警汇总件** `close-acceptance.json`（COS 席收口·**对过程数据验收非重采**）——**复算判据**：程序读告警日志复算 total/by_family/max_latency·verdict 程序判 | close_skill |
 | **11** | **H→拆分**（CEO 审过并入） | plan 登记值守计划（谁/拍频/窗）+close 验收对表——**复算判据**：程序读 patrol log 重数拍频对表·缺对表 fail-closed | plan+close |
+| **13** | **CPO 态分档审-用配对**（CEO 21:4x·四条失守+四方案） | **四条失守**（产出-消费比盲区/三态当实现语义/成本外包/默认形不审视）+**方案**（debug/test 全量审全量用·prod 轻量直提条数不限·consumption_ratio 入 cpo-3·prod 直提与 DCA 合流） | 框架§八+评分链 |
+| **14** | **CFO 产出侧三件**（CEO 21:4x·三失职+三方案） | **三失职**（维度无产出侧/DP-039 漏审出口/自有产出被丢未自检）+**方案**（**cfo-output-utilization 维度**／**截断配对律**〔任何 slice/cap 必配丢弃清单+处置台账·无台账=告警〕／自有产出自查入联审回执） | 评分维+纪律面 |
 | **12** | **charter 全纳重写**（CEO 21:2x 裁正·**取代 v5 收敛形**） | **①只收 7 席联审 opinions**（段 7 score-skill 的 improvements 排除·**核证：现生成器 L9/L37/L42 已只读 opinions.json·未混段 7 ✓**·加断言防未来混入）／**②debug/test 态=联审意见全纳**（**取消 L134-135 slice(0,5)**·无截断无 drop·a 自动满足·**b/c/d 全部取消**）／**③prod 态（>95 后）=每席直提一条**（不需 7 席全量联审·省 token·**记设计·prod 前落**） | charter_generator |
 
 ## §三 · dropped 2 条已捞回（CEO 20:4x 令「dropped 两条捞回来，并进任务书等批」）
