@@ -13958,3 +13958,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **⇒ 呈 CEO 请签 resume19**（B 档亲签件·run_id=shift-W48-resume19-20261124T135559Z·quote=「批，两件都批，施工完点火」）→签后 SDE 四前置+DCE_EXECUTE=1 点火。
 
 - ㊿+2095 **拍读 00:24+请签前核读发现卷实差异**：TriCompany 0723255 在 dev ✓；**TriRMC 58340d3 commit 存在但只在 dp009 分支·不在 dev·ls-remote origin 无此 hash（未推）**——点火链=R-HY pull dev·hook 传态缺则 prod=>lite 失效。**已发 CTO 勘（fb6640da·合 dev 或说明）**——**请签前必须账实相符**（BOD 不签有卷差的账）。
+
+- ㊿+2096 **互勘闭环·BOD 自领核错对象**：CTO 反勘（sg bare dev 顶=58340d3）→**BOD 自核双证**：`git ls-remote ssh://fleet@47.245.122.61/srv/git/TriRMC.git refs/heads/dev`=**58340d323806…** ✓+本机 TriRMC dev 顶=**58340d3** ✓——**无卷差**。**BOD 自领**：我 00:24 核的是 `origin`=github（MoRen9527/TriRMC）·**非 R-HY pull 源（sg bare）**=核错对象（「跨仓/跨 remote hash 混读」+对象断言教训再现·我犯）——CTO 反勘正确。CTO 亦自领其 00:0x 报 TriRMC 时只 fetch TriCompany 仓（验证锚缺已补 ls-remote 级）。**⇒ 账实相符·可签**。
