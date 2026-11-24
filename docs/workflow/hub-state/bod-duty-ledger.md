@@ -13816,3 +13816,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CEO 裁点**：点火 resume19 时点——①全 14 items 毕再点火（约 3-3.5h 后≈次日 1:40-2:10）②还是先跑部分（如 item2/4 毕即点火·A/F/H 跟进）——呈 CEO 定。
 
 - ㊿+2055 CTO schema 裁闭环（ac077e8b·已回 FSD）：「最小可复算」形采（不另给 schema 不阻塞）+**字段底线**（item9 {tree_id,md5,size,counts}／item10 {total,by_family,max_latency}／item11 {who,cadence,window}——否则程序无法复算）+样例两侧值必附（校准判一致）。工期承·点火时点候 CEO。
+
+- ㊿+2056 **v8 五件毕**：item2（plan 时标双录·TriCompany **ea29578**：batch_timetable cost-log 实测 actual_at=finished·未跑 null 不冒充·window_conflicts>480s 入〔score_skill 720s 入/plan_skill 180s 不入〕·enricher 7 passed+plan 22 passed ✓）+FSD 自抓两笔修复（duration 时基错位/`_json` 别名未导入被 except 静默吞→补 import·DCA 类再现自捕——好形）。五件=item12/8/1/5/2·余 5 件（item4/9/10/11+并行）+各席自办 5 件待稿。呈 CEO 一句。
