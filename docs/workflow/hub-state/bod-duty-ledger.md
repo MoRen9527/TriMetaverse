@@ -13734,3 +13734,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2025 CPO 自省+设计改毕（2650f4aa9·不辩解）：①四条失守如实（评审框无产出-消费比/三态当实现语义没当策略变量/成本外包给 CFO/只优化局部不审视默认形——v1.2 起全量联审=默认形从未按态收缩）②设计改=**态分档审-用配对**（debug/test 全量审全量用 vs prod 轻量直提每席≤1 条·charter 直取）+consumption_ratio 入 cpo-3 证据形+tokens/consumed_item 同源 CFO+prod 直提与 DCA 合流+降频候 CEO ③落点=框架 v1.4 §八/维度表 v1.1 候选/prod 直提与 DCA 同窗（FSD）。呈 CEO 一句。
 
 - ㊿+2026 COS 通知·v1.4 换版（0698299a9→**2650f4aa9**·CPO 增 §八 态分档审-用配对·原候批件顺延 §九）——**两件分别候批**：①**框架 v1.4（2650f4aa9）**②**任务书 v6（c23286ce4·12 items）**——§八 与 v6 item12③ 同源同向（CEO 裁令的框架层/任务书层两落点·一致无冲突）。呈 CEO。
+
+- ㊿+2027 **CEO 勘正：prod 态「每席直提一条」=笔误**——改为「**每席直提改进意见·条数不限**」（省 token 点在「不做全量 7 席联审」不在限条数）——已发 COS（199fff8e·v6 item12③→v7 勘）+CPO（bc7b8e41·§八 勘「≤1 条」作废）·consumption_ratio 口径照推。勘毕呈 CEO（两件分别批）。
