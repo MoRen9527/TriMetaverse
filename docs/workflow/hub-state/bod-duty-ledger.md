@@ -14606,3 +14606,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 COS（落判卷卷）。
 
 - ㊿+2255 **递归核定谳（CTO·两疑点全清+一新异形）**：①**collection=在**（run_dir/collection/collection-{A,F,H}.json 三件齐·**axis="acceptance" ✓ 件④生效实锚**·SDE 平铺误核自领）②F 面件在（entries 形）③**covered_dims=v1.3 未落**（improvements 五字段无·DP 候选）④**新异形**：opinions.json 的 opinions 元素=list 非 dict（正常 dict×7·须核聚合器 DP-036 异形）⑤**真缺口仅 I 卷**（COS v3 已落）→重跑即 I 35 入账。**终分预期：machine 41+collection 24+I 35=100**（候重跑报）。
+
+### ㊿+2256 · **resume29 终分 91/100（I 35 入账）·三缺口定读——H 的「零命中」=SDE 判错（patrol-source 实在 R-HY）**
+
+- **终分**：total=91.0·pending=9·proj=100｜breakdown={machine 41·collection 15·**subjective 35 ✓**}｜A6/F9/H=None(9 pending)/I35。
+- **三缺口**：a) A/F 件 verdict=na——**engine 探测路径错**（A 探 run_dir/jobs.json·真实 TriRMC/data/cron/jobs.json／F→/var/lib/trirmc/cron/logs）→DP 候选；b) **H=manual——SDE 报「patrol-source R-HY 零命中」=判错**（**BOD 实核 R-HY：文件在·1457B·19 行·04:56**）——真因=探测路径（`_collect_h` 应指 tmv_root/docs/.../trees/bod-tick/）；c) covered_dims=v1.3 未落。
+- opinions 形=正常 dict×7（SDE 误读自领）·DP-043 55/55。
+- 已发 SDE（三条探测路径统一对真实位·修完重跑→100）。
