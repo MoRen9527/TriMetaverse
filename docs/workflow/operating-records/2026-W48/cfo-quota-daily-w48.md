@@ -239,3 +239,15 @@
 - **⑥⑦**：落卷+commit+push·**正常免报**（无触线·无急件级触发）。
 
 〔落款 2026-11-24 18:30:14 +0800 现查〕
+
+## 2026-11-24（周二）23:11 v8 我面双项施工（item14 三件全毕·item7 设计草案候解锁）
+- **item14（产出侧三件）=全毕**：①维度 `cfo-output-utilization` 入表 **v1.0.0→v1.1.0**（TriCompany `e9c8bfb`·版本升级留痕·cfo 5 维）②截断配对律检测器 `scripts/charter-truncation-guard.py`（本仓 `bdb9a7bc7`·**selftest 4/4 PASS**·三重判据 dropped 处置配对/意见链入率/计数一致）③自有产出自查三句入 `cfo-cost-accounting.md` §六（实例教训=v8 我意见缺失 CEO 捞回·机械闸化）。
+- **item7（无人值守余额不可得 fail-safe）=受阻待解锁**：实现须改 `close_skill_spawn.py`·该文件有他人（SDE·v8 item4 七席强制）未提交在途改动→**禁改区**（三步法边界：防 index 并行防不了工作区并行）。COO 已协调·**推荐形=SDE commit 后本席即接（ETA 23:25-23:30）**。
+- **【item7 实现设计草案·解锁即做】**：
+  1. 触发点=`_deepseek_balance_cny()` 返回 None（无 key）时·现行为=fail-open 继续；
+  2. **场景分流**（复用 `_write_cost_line` 同款 trigger 判定）：**auto→fail-safe**（读 cost-log 统计本轮 `trigger=auto` 已跑行数·**≥1 则 paused+return 3**·reason 标 `v8 item7 fail-safe: balance unavailable + auto trigger`）；**manual→fail-open 保留**（人在场可判断·API 402 兜底）；
+  3. 新辅助 `_count_trigger_runs(run_dir, trigger)`（读 cost-log·计 trigger 匹配行）；
+  4. 测试：①auto+无 key+已跑1轮→paused/rc3 ②auto+无 key+首轮→放行 ③manual+无 key→放行（fail-open 不变）④有 key→两场景都不受影响；
+  5. guard_hits 归口：该 fail-safe 触发计入 **`c`（余额门族）**——因语义属「余额不可得」分支（读数面降级致停车）。
+
+〔落款 2026-11-24 23:11:22 +0800 现查〕
