@@ -136,6 +136,8 @@
 
 **DP-047 取号**（18:13·**migrate argv 完整性修复**·CEO 批「批，修完传播好就点火」）：**resume16 真跑（DCE_EXECUTE=1）时 migrate argv 失败**（`--start-date`/`--operating-root` 空参形·COS 1061 落账已观察该空参形）——修=dce argv **补两参**（CTO 施工）→自测→验收→传播（R-HY pull）→BOD 落签件+continue→SDE 四前置核+DCE_EXECUTE=1 点火 **resume17**·**已毕销账**（施工 **177b56f**·**26/26+19 绿**·**R-HY grep=6**·传播毕·CTO 验收放行——销账锚=177b56f）。
 
+**DP-049 取号**（20:34·**normalizer 1 行修·CEO 追认「批」**）：CTO 已先施工验收（**3a265f1**）·保留·**与 charter-122210Z 5 items 合并同一施工批**（CEO「等任务书批了一起走修」）——批后统一施工·DP-049 批后留验·状态=已毕（候批留验）。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
