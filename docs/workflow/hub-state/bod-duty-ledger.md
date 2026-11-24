@@ -13534,3 +13534,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **源头**：overlay（/home/fleet/.dsh/patches/headless-agentpresets-overlay.yml）注释两处「**修 D-2 输出预算配对/适配器行预算覆盖（GLM max_tokens 上限 131072·dsh 默认超限 INVALID_REQUEST 1210 勘正）**」+「2026-11-19 CTO」——**结论：不是 CFO·是 CTO 11-19 为修 GLM 报错设的 16384**（=GLM 上限 131072 的 1/8·过度保守）。
 - **问题本质**：R 面 provider 已切 DS，**GLM 时代的 16384 保守值被带过来未重定**；且 reasoning 与正文共享该预算（deepseek-flash 推理-heavy→易撞顶）。
 - **候 CEO 批**：①maxTokens 上调（16384→32768/65536·overlay 四处同改）②或维持 16384+DP-048 限幅+retry 结构解（治本）。呈 CEO（问题已答·候决定）。
+
+- ㊿+1983 **CEO 批 maxTokens 16384→65536**（「调，调到 65536」）——已下达 CTO（e70c1c9b·四处同改+备份+语法验+**冒烟验证 provider 真实上限**〔拒则回滚〕）；resume18 在跑用旧 overlay 不受影响·新值下一轮生效。呈 CEO 确认。
