@@ -14604,3 +14604,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ②**collection 疑子目录**：件①（1ab3a3c）产物位=`run_dir/collection/collection-<F>.json`（**子目录**·SDE 平铺 ls 看不到≠未产）——请递归核（若真无→engine 生产者查）。
 - ③**covered_dims 属 improvements 面**（v1.3 对齐门非 dims）——候核 improvements 有无 covered_dims。
 - 已发 COS（落判卷卷）。
+
+- ㊿+2255 **递归核定谳（CTO·两疑点全清+一新异形）**：①**collection=在**（run_dir/collection/collection-{A,F,H}.json 三件齐·**axis="acceptance" ✓ 件④生效实锚**·SDE 平铺误核自领）②F 面件在（entries 形）③**covered_dims=v1.3 未落**（improvements 五字段无·DP 候选）④**新异形**：opinions.json 的 opinions 元素=list 非 dict（正常 dict×7·须核聚合器 DP-036 异形）⑤**真缺口仅 I 卷**（COS v3 已落）→重跑即 I 35 入账。**终分预期：machine 41+collection 24+I 35=100**（候重跑报）。
