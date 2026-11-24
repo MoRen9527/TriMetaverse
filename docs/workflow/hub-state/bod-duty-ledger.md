@@ -13459,3 +13459,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 链终态：fail 停段 7·零残留·**dce 真跑成果入史（ffe47dee7）+G 19/19+59 分有效（不回溯）**——呈 CEO 请裁修法方向。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1960 · **CTO 定谳段 7 真因（max-tokens 再现·A 条①反作用自领）+修法已派（FSD a2c4662d）——请 CEO 新授权 resume18**
+
+- ①compass 假说全否（SDE 予证）——「R-HY 此前没有」=不实勘正（BOD 转述 CTO 初判有误·照录）。
+- ②**真因=同 resume13 族**：两席 turn/end=max-tokens（step11/12）·raw_out="\n" 零输出（推理吃满单步 16384·JSON 未及输出）。
+- ③**A 条①反作用=CTO spec 缺陷自领**：resume14（A 修前）同段成功 vs resume17（A 修后）两席皆 cap·时序吻合——条①「先 reasoning 内完成全部推演再一次性成文」=**鼓励推理深挖→预算耗尽**（意图减末步实际反之）。
+- ④修法已派 FSD（a2c4662d·急）：a+b 双改——条①改「直接输出 JSON·reasoning ≤10 行·禁长篇推演」+「超 10 步未定稿→以现有结论输出」；d（retry 纯 JSON 二次 spawn）后续；c（maxTokens↑）不阻塞。
+- ⑤**须新授权**：修后 resume18（「修完传播好就点火」已用一次）——**呈 CEO 请新令**。
+- ⑥双里程碑站住。
+
+——BOD·（date 现查原值·D-47 正形）
