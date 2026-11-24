@@ -14068,3 +14068,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **round8 两件已落 resume20**（run_id=resume20·round_count=8·charter_commit=478ca1c）→**已发 SDE（c0c046f4）四核点火 resume21**（两路并行）。
 
 - ㊿+2120 CTO 回执（01:26）：I 卷收讫形齐·**终版重跑=SDE 代执**（48e8d9b3·CTO 定形/验收·SDE 执行·本机无 run dir）·过表注意（subjective entry 形不符→CTO 补映射）→终版读数（期望 100/pending=0/subjective=10）报 BOD。候。
+
+- ㊿+2121 拍读 01:30：**resume21 已点火在跑**（run dir shift-W48-resume21-20261124T172717Z·01:27 建·PROC=3）·resume20 补判 score 当前 breakdown={machine 59.0/collection 31.0/subjective 0.0}（**I 卷 engine 消费待确认**·终版重算中）。TriCompany 478ca1c/TriRMC 58340d3。心跳已更。
