@@ -14387,3 +14387,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **处置**：已发 SDE（17c6af69·暂缓点火）+COS（6c5f8305·改两处+全员各核自项）——COS 改→CTO 重验→BOD 新点火令。
 
 - ㊿+2205 **SDE 暂缓承·如实报（04:07）**：暂缓令前已点 **shift-W48-resume23-20261124T200610Z**（纯数字规范形）——**rc=4 awaiting·链未起·零残留（等同未点）**；初查=清戳/签发**竞态窗口**（20:06:10-19）·非数据缺（复算面全绿：ruling 207B 在·marker absent·prev=resume21 ✓）。不再点·候新令（新号+前置复算 marker+ruling 双面）。CAO 两处错位·SDE 面只涉后者（其卷）——候 COS 改+CTO 重验+新令三方齐。
+
+- 㿿+2206 **R12 两处错位已改验过（04:07·CTO）**：sg-root-authz→CHO ✓/w47-d47gate→SDE ✓（JSON 实读）·owner_principle 入卷。①CHO confirm=有条件过（一缺口已改·另一「D 族 3 空」=CHO 读旧版〔现件=5 填+3 已有〕·两席对表中）②C/I 码面已支持（_validate_raci：A/R 必填·C/I 存在则 list·不强制 36×5——CHO「勿全逐项」已满足）③**点火前余件=CHO 复核 D 族**（齐→全齐→点火）。
