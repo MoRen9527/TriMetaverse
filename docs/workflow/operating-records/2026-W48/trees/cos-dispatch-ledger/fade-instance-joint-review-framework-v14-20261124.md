@@ -63,7 +63,14 @@
 → charter（COS 出稿·呈 CEO 批 M4-v2）→ 施工（DP 三步）→ 再跑 → 下轮联审（comparability=1.0）→ 循环至 A/B 双达标
 ```
 
-## §八 · 候批件与留位
+## §八 · 态分档的审-用配对（CEO 21:2x 批评响应·本批并入·候批）
+
+- **问题（CEO 批）**：prod 态（A/B>95）「7 席全量审→取一条」=产出远大于消费；应「每席直提一条」——省 token。
+- **配对表**：debug/test=全量联审·charter 全量映射（进化冲刺·价值优先）｜**prod=轻量直提每席 ≤1 条**·charter 直取（维持·成本优先）。
+- **配套**：①`consumption_ratio=charter_items/opinions_total` 入 cpo-3 证据形（prod 目标≈1:1）+tokens/consumed_item（CFO 读数）；②prod 直提形与 DCA 合流（直提一条=DCA 差距形·方法现成）；③prod 连续 2 轮零高危差距→可放宽评审间隔（候 CEO 批）。
+- 详卷：`../fade001-evolve-20261123/cpo-prod-lightweight-review-selfreflection-20261124.md`（自省四条+设计改）。
+
+## §九 · 候批件与留位
 
 - 本框架 v1.4 全卷候 CEO 批（批后成正式框架·表升 v1.4）。
 - 留位：§五.6 CTO 技术承诺审计小节（候 CTO 供文本）。
