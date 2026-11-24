@@ -13117,3 +13117,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - Q10 两稿（99d8c1343/87d0b22e1）候 CEO 答后再批——照候。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1883 · **COS 核实回（15:30）：「缓存迁移成果」之疑机制面不成立（四证据）+真问题浮出=dry_run_not_executed**
+
+- **核心答**：每轮 plan 从 W47 实时扫描全量重算·非缓存——①tree-facts=W47 实时扫描（plan_enricher L4/L85「from 周 trees 实况六字段」）②plan 生成不读 prev_run（plan_skill_spawn grep 零命中）③dce migrate 实参（resume14 dce.json：--from W47 --to W48 --start-date 空 --operating-root 空 --sync=**全量重放不跳过**）④W47 保留完整（26 树·复制源不动）·W48 已迁 11。
+- **carry_over=2 项**（CARRY-20260728-004 等·status_to:frozen·dest W48 OP 件·语义=上轮「未完成」承接·CEO 亦认合理）；「10 件材料/9 项 state」=**运行材料承接**（plan/state 工作件）≠ W47 内容成果——**CEO 疑点疑为两概念读混**→建议术语分离+carry_over 语义书面明示（只承未完成不承已完成）。
+- **验证公平性=成立**（W47 完整·每轮全量算·W48 已迁 11 不构成跳过）。
+- **⚠️真问题**：resume14 dce=**verdict:"dry_run_not_executed"**（T4 修后正确行为=dry_run 不执行不假 pass）——**「效果改进不大」真因候选=①L2 要件不齐（CTO 判）②dry_run 态未真跑（dce 面·评测对象本身是 dry-run 产出）——不是缓存**。
+- 呈 CEO（CLI 卷锚：plan_enricher L4/L85/L215-228·plan_skill_spawn prev_run 零命中·resume14 dce.json 实参·26/11 树）。
+
+——BOD·（date 现查原值·D-47 正形）
