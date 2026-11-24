@@ -1,4 +1,4 @@
-# 任务书呈批件 **v3**·charter-20261124T122210Z（**8 items=5+捞回2+判卷面1**）＋DP-049 合并施工批＋A/F/H 细则（待审并入）
+# 任务书呈批件 **v4**·charter-20261124T122210Z（**11 items=8+A/F/H 三件**）＋DP-049 合并施工批
 
 - sourceOfTruth: 本卷+`/srv/fleet/TriRMC/fade001-runs/shift-W48-resume18-20261124T120128Z/charter-20261124T122210Z.json`（5393B·schema 1.0.0·BOD 20:33 转全文）
 - 令源: CEO 20:3x「**等任务书批了一起走修**」（BOD 20:32）+「DP 取号修 normalizer 那 1 行，批」
@@ -11,7 +11,7 @@
 | charter_id | rN-task-20261124（source.run_id=**resume18**·5 items） |
 | status | pending_approval（**候 CEO 批**） |
 | items | **5 条**（cos/coo/cao/cpo/cto 各 1） |
-| aggregation | items_before=7·items_included=**8**（5 原+2 捞回+1 判卷面·CEO 令） |
+| aggregation | items_before=7·items_included=**11**（5 原+2 捞回+1 判卷面+3 A/F/H·CEO 令） |
 | 批复时点位 | `approval_comment: ______` ／ `approval_time: ______` |
 
 ## §二 · items 清单（5 条）
@@ -26,6 +26,9 @@
 | **6** | **RESTORED-1**（原 drop-1·**CEO 捞回**） | **`close.upgrade_list 12 条缺陷逐条绑定主责席与责任面`**（原文照录·施工细则候批） | close 链 |
 | **7** | **RESTORED-2**（原 drop-2·**CEO 捞回**） | **`补无人值守余额不可得 fail-safe`**（原文照录·施工细则候批） | cost 面 |
 | **8** | **score-fail-closed**（CEO 已批「要」） | **判卷面落卷 fail-closed**：`subjective-score.json` 缺席→**不再 pending 改 partial**（不发 notify_done·与 cpo-1 同形） | score 链 |
+| **9** | **A→plan-freeze**（CEO 审过并入） | **拍前冻结件** `plan-freeze.json`（COS 席规划期产·plan 有机产物）——**复算判据**：程序逐树重算 md5/size/counts 对表模型声明·不一致=fail·缺席 fail-closed | plan_skill |
+| **10** | **F→close-acceptance**（CEO 审过并入） | **告警汇总件** `close-acceptance.json`（COS 席收口·**对过程数据验收非重采**）——**复算判据**：程序读告警日志复算 total/by_family/max_latency·verdict 程序判 | close_skill |
+| **11** | **H→拆分**（CEO 审过并入） | plan 登记值守计划（谁/拍频/窗）+close 验收对表——**复算判据**：程序读 patrol log 重数拍频对表·缺对表 fail-closed | plan+close |
 
 ## §三 · dropped 2 条已捞回（CEO 20:4x 令「dropped 两条捞回来，并进任务书等批」）
 
@@ -61,7 +64,7 @@ charter aggregation（**原文直引·SDE 交付 e435482ec 附**）：`{"items_b
 ---
 —— COS 小贾（m-cos·出稿不代批·M4-v2）·写前现查 2026-11-24T20:36+0800（D-47 原值）
 
-## §七 · A/F/H 改造细则（CEO 21:0x 初衷澄清·**待审后并入**）
+## §七 · A/F/H 改造细则（**CEO 21:1x 审过「合理，并入任务书一并等批」**·全文附录）
 
 **细则稿**：`cos-afh-refactor-detail-20261124.md`（**8ef38a699**·COS 面出行细则）。
 **要点**：
@@ -69,7 +72,7 @@ charter aggregation（**原文直引·SDE 交付 e435482ec 附**）：`{"items_b
 - **F→close_skill 告警汇总件**（close-acceptance.json：过程告警计数/时延·**对过程数据验收非重采**）
 - **H→拆分**（plan 登记值守计划+close 验收对表）
 - **三族 manual→pass/fail**（机判附件·**缺席=fail-closed**·与判卷面同形=四件同规则）
-**本 §七 候 CEO 审**——批后并入 v4（v3 先含 item 8 判卷面 fail-closed）。
+**§七 已审过并入 v4**（items 9/10/11+四件同规则）——**skill 件=声明候选·机判=程序复算对表·不一致=fail**（CEO 勘正）。
 
 ---
 —— COS 小贾·v3 附 写前现查 2026-11-24T21:06+0800
