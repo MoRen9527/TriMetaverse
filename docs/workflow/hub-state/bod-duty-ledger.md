@@ -13391,3 +13391,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1946 CTO 裁（18:09:19）：**A 案采·B 不取**（argv 补两参=正解·B 类 argparse 容错不可取——两参=dce 必需·容错=掩盖配置缺失）+施工令草已备（chain_runner L141-146 补两参·**与 verify 段 L145-152 同形**〔verify 已传·dce 缺=同源位置缺陷〕·测试=argv 完整性断言+dry_run 照旧+chain 套绿）+**定调承**：resume16=三层验证通过（dce fail→门拒停→零残留不穿门·P0+段门+dce 开关价值实证）；migrate argv=新暴露缺陷非回归；DP 候选取号。**不抢跑候 CEO 批**——批到即施工→R-HY pull→resume17 新签件→再点。
+
+### ㊿+1947 · **CEO 批令「批，修完传播好就点火」——A 案施工即刻+点火授权已含（BOD 落 resume17 亲签件引此令·无需再请签）**
+
+- CEO 原话（18:1x）：「**批，修完传播好就点火**」。
+- 已下达：CTO（ff59d889·chain_runner dce argv 补两参〔与 verify 同形〕+自测〔dry_run/execute 双态 argv 断言+chain 套绿〕+验收报+传播 R-HY pull）；COS（aed616f5·DP 取号+resume17 备号+签发表+流转台账）。
+- **点火授权**：CEO「就点火」=明示——BOD 将落 resume17 亲签件（quote 此令）+continue 件→SDE 四前置核+DCE_EXECUTE=1 点火。
+- 序：修 argv→自测→验收→传播→BOD 落件→SDE 核→点火 resume17→真迁移→第一份有效分数。
+
+——BOD·（date 现查原值·D-47 正形）
