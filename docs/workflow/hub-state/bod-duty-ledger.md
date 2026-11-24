@@ -14630,3 +14630,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2261 **三路径修验收通过（05:19·5f01060·39 passed）**+BOD 两裁：①**H 节律=BOD 裁（对象分立）**：patrol-source=bod seat=6m（CEO 6 分钟令）vs plan 15m（值席设计）——**修 plan 声明标两节律**（bod:6m/duty:15m）·H 按同 seat 判·不请示 CEO。②**F 真缺口**：/var/lib/trirmc/cron/logs/ glob **0 个 .log**——已令 SDE/CFO 核日志实际位（healthz logPath 投影别处?）→修 TRIRMC_LOGS env。修后 collection 24→100。
 
 - ㊿+2262 **H 裁承+两件派（05:20）**：①裁承（对象分立=原则级·「**比较前须核对象**」=今日第五教训候选·与机位隔离/稳定面同族）②FSD（f44f6432·同 seat 比对 `_collect_h/_judge_h`·读 plan.bod_patrol·~30min）+COS（91b94596·plan patrol_plan 注两节律 {bod_patrol:6m,duty_patrol:15m}）③两件齐→H 判 pass→collection 24（A6+F9na+H9）→**总分 100 预期**（41+24+35）。F 日志位 SDE/CFO 核。
+
+### ㊿+2263 · **F 日志翻案（SDE 活体核）：实体在（432 件近 24h）·FSD「glob 0」=ARG_MAX 炸（21.8k 文件）——假读数家族再+1**
+
+- healthz logPath=/var/lib/trirmc/cron/logs ✓·**目录 21,828 文件**（Aug 起堆积）——**`ls *.log`=0=glob 爆 ARG_MAX（2MB 上限）·非缺件**。
+- **日志实体 ✓**：find -newermt '-24h'=**432 件**（内容=job/startedAt/cwd/command 文本行·非 JSON）。
+- **F 修法**（已发 CTO/FSD）：①禁全量 glob→有界扫描（find -newermt/mtime 窗）②**格式修**（按行匹配 RUN_ID/trigger·非 JSON parse——现设计会判 0）③验收=432 件窗内读取+计数。
+- 附：log 21.8k 老件堆积=清理候选（另件·勿混）。
+- **假读数家族+1**（ARG_MAX 炸→glob 0→「缺件」误判）。
