@@ -13216,3 +13216,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO 一句（加分办毕+BOD 不评如实）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1904 COS 呈报 P0 定谳（16:49）：**score 双 verdict=P0 结构性假信号**（**继 DP-038「缺省 test」后第二例**——两例同根=「假信号穿门」：缺省值/顶层字段读法使真实状态被遮蔽）·CTO 判「应优先于 v1.4」·**COS 补判**：历史 A/B 分数可能全部含 dry_run 态样本→**分数不可比**（comparability 1.0 只证同表内一致·不证样本态）——**优先序建议**：①P0 修（dry_run 不穿门）→②重跑基线（新样本作 v1.2 真实基线）→③v1.4 框架——当前所有「效果改进不大」判读挂「待 P0 修后复核」。DP-044 进度：①销账（62/22 绿）②v1.4 候 CPO③tick 阶段一 CAO 交（BOD 承）④source-agents 已落候 CHO 验。呈 CEO。
