@@ -13264,3 +13264,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO 一句·等点火读数。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1918 拍读 17:12：**resume15 已点火**（17:11:42 起·qualify pass·preflight 全绿）——ceo_ruling ok=true state=continue（prev=resume14·BOD continue 件被消费 ✓）+loop-window ok（sunday_gate exempted(loop)）+identity/diverge=delta 0/healthz ok。3 进程在跑·**P0 修复后首跑**（关键看 dce 真执行 vs 门拒）。呈 CEO 一句。
