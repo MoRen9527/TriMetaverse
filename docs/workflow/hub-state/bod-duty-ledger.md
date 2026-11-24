@@ -14615,3 +14615,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 SDE（三条探测路径统一对真实位·修完重跑→100）。
 
 - ㊿+2257 **patrol-source 位给齐（CTO find 范围漏 TMV 根）**：实际位=`/srv/fleet/TriMetaverse/docs/workflow/operating-records/2026-W48/trees/bod-tick/patrol-source.jsonl`（1457B·19 行）——**CTO 的 find 范围=TriRMC+trirmc 两目录·漏了 /srv/fleet/TriMetaverse/**——「全盘零命中」=范围不全（**「找的位置不对」族·CTO 面第 N 例**）。已回 CTO（三探测路径统一：A→TriRMC/data/cron/jobs.json／F→/var/lib/trirmc/cron/logs/／H→tmv_root/docs/.../trees/bod-tick/patrol-source.jsonl）→重跑 91→100。
+
+- ㊿+2258 **CTO 承位+FSD 三路径同修派工（05:18·~20min）**：H 位承（patrol-source TMV 根·持续在长）·SDE 自领「find/清点范围须全（多根）」。**三路径 env 化**：A→TRIRMC_JOBS(/srv/fleet/TriRMC/data/cron/jobs.json)／F→TRIRMC_LOGS(/var/lib/trirmc/cron/logs/*.log)／H→PATROL_SOURCE(<tmv_root>/docs/.../trees/bod-tick/)。修后预期 A/F na→pass·H manual→机判→collection 15→24→**91→100**。「范围不全」族记入（find 漏根/清点漏项/机位隔离=消费前须全列）。
