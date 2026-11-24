@@ -14167,3 +14167,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CEO 原话（逐字）：「**score skill 是处理语义等主观问题，你的采集都走机器，就让 cos 和 coo 评个分，那直接走 score cli 不就完了么？score skill 设计的意义在哪呢？问 cpo 和 cto，说说你们对 score cli 和 score skill 设计的初衷和他们应该在周迁移工作发挥什么作用，我看看你们的理解**」。
 - 已发 CPO（3d1ae280·产品面五问）/CTO（1e29db85·技术面五问）——重点第⑤问：若采集全机器化（a 案）后 score_skill 的价值主张=正面答。
 - **CEO 的洞察链**：采集（值席人工）与 score_skill（席语义判）若都机器化→两个设计重叠→score_cli 一个就够——**这是在问「整个 score 体系的分工是否成立」**（不只是 a 案·是设计根问题）。
+
+### ㊿+2146 · **件2（联审改）验收通过（eb3d19a·25 passed·真样本 low=21/opinions=21/uncovered=0）+CTO 五答（核心句：「机器能采≠机器能判」）**
+
+- **件2 验收（TriCompany eb3d19a）**：prompt「dimension_id 指向·一维一条·逐维对应·条数不限」+`_low_dim_coverage{low_dim_count/opinion_count/mapped/uncovered}`·**真样本=七席×3 低维→21/21/21/0（非纸面）**·eb3d19a=件2 only（score_engine 零·停令遵守）。
+- **CTO 五答（技术事实）**：①cli=判**事实面**（B/C/D/E/G 59 分·rubric 驱动·判不了语义）②skill=**语义判**（I 族 10 分 3 案+联审七席·机器不能判：上下文/意图/部门视角不可穷举）③**三层不重叠**：cli=事实对不对／skill=价值好不好／联审=改进怎么更好·采集=数据从哪来（非判）④周迁移配合序=**事实→价值→改进**⑤**「机器能采≠机器能判」**——A/F/H 采集=事实收集（机采更准）／score_skill=判断载体——两者正交·「直接走 score_cli」不行（cli 判不了 I/联审）·「让 cos/coo 评个分」正是 skill 价值。
+- **候 CPO 产品面五答**（并呈）。
