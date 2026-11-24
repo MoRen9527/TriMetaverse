@@ -13784,3 +13784,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（施工全开·DP-050·resume19 备·候施工完请签点火）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+2042 CTO 波 2 已派（item8·2018aef1·_judge_subjective L344 pending→partial+run_state 联动+2 测试）+**BOD 已供 item1-5/9-11 原文**（5b354e29·规格齐全：verify 硬门/plan 时标/条款入册/七席 fail-closed/run_id 统一+plan-freeze/close-acceptance/值守拆分）。CTO 判 item14 截断配对律与 item12 全纳=同问题两面（精准）。
