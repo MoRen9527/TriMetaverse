@@ -14074,3 +14074,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2122 **resume21 首笔（01:30:45·SDE）**：两件核四校验 ALL True（sha 07326229·round8·charter_commit 478ca1c）+ruling 三绑 ALL（sha 0a5b92c8·run_id=resume20·round_count=8）｜四核全绿｜号=**shift-W48-resume21-20261124T172717Z**｜**点火 17:27:36Z·pid 3296170·preflight=pass**（prev=resume20）｜**采集件已复制 resume21**（A/F/H 三件）｜close 段预期 succeeded。**附：resume20 I 卷终版重跑=schema 不符（entry_id/label vs engine criterion/score）→I=0·total 仍 90/pending 0**——已发 CTO（8227dcbb·补映射 or 重判·终版 100 最后一步）。
 
 - ㊿+2123 **终版=90（I=0·schema 锁）·CTO 裁 a（COS 重出契约形）**：终版重跑 total=90.0/pending=0/projection=90·breakdown={59,31,subjective 0}——I 族 score=0（文件被消费但 entries 无 criterion/score→判 0 非 pending）。根因：COS I 卷形 entries[{entry_id,label,rationale}]·engine 要 [{criterion,score,rationale,evidence_ref}]——判语有（I1=4/I2=3/I3=3）只形不对。CTO 裁 a（COS 重出形·b 补映射无从拆）——已发 COS（4ad0a8d6·重出 criterion/score 形→SDE 重跑→100）。
+
+- ㊿+2124 拍读 01:36：**COS 已重出 I 卷契约形**（d602989e4·entries criterion/score/rationale/evidence_ref·验 OK·total10·第 25 笔自领「产件未对消费契约」）+1120（第 25 笔同根定位）——SDE 重跑候（R20 score 当前仍 subjective 0）。**resume21 在跑**（14 json·段进度）。三仓 478ca1c/58340d3。心跳已更。
