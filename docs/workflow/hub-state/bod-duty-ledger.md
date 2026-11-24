@@ -14446,3 +14446,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ignite.log 实读：`TypeError: _spawn_seat() got an unexpected keyword argument 'owner_map'`——**dd8d255 调用面传 owner_map·函数签名未加**——接口不匹配（34 passed 未覆盖该调用路径·**build green≠runtime green 又一例**）。
 - 已发 CTO（急修：加 owner_map 参数或改调用面+补测试+spawn 实跑路径重验→点火 resume26）。
 - resume25 残拍待裁（修完落件）。
+
+### ㊿+2220 · **接口不匹配定谳（CTO 深挖·两处）+修法四点准+「fake 掩盖真签名」自领——resume25 残拍已裁**
+
+- **CTO 定谳**（比 BOD 报深一层）：a) `_spawn_seat` 定义 L483-484 缺 owner_map·**L563 重试面传了**→TypeError b) **L548 首次 spawn 也没传 owner_map**（FSD 只改重试面）——**两点齐修**。
+- **修法四点**（准）：签名加 owner_map=None／prompt 用 `_owner_map_prompt_block(owner_map)`／L548 首次补传／**mock 用真签名+首次传递断言（关键）**。
+- **CTO 自领（机理级）**：**「FSD 的 fakes 随签 owner_map kw=测试 fake 有·真函数没有」=fake 掩盖真签名缺参**——「build green≠runtime green」的机理级解释。**教训入册**。
+- resume25 残拍已裁（件落·R2 语义）→修毕 CTO 验→BOD 点火 resume26。
