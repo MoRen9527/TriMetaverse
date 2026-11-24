@@ -14282,3 +14282,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2177 **件③ 抽取规格落定（CTO 03:09）+BOD 照改**：①裁=结构化独立源（不抽 md·防格式脆弱）——`docs/workflow/operating-records/2026-W48/trees/bod-tick/patrol-source.jsonl`（每拍一行 {ts,seat,cadence_min,note}）②engine `_collect_h` 直读该文件（非派生非抽 md·md tick-log 照旧人读不动）③COO 巡拍已取消·H 源=BOD 单席（恢复则 seat:"coo"）。**BOD 已落首行**（19:10:07Z·commit 50366ad5d）+**追加机制并入拍读流程**（每拍一行）。
 
 - ㊿+2178 拍读 03:12：**a 案件②④已落**（TriCompany：584839d 03:11:29=件④ axis=acceptance／7a8c5aa 03:11:38=件② na 规则〔F zero-trigger/H three-state〕／**bb97cb8 03:12:00=件②修复**〔NaRuleTextTest missing import·**pipe-masked red slipped=管道掩码吞红家族再现·自抓自修**〕）——件①（引擎采）/件③（H 源）待。零进程。patrol-source 拍读行已追加。心跳已更。
+
+### ㊿+2179 · 🎯**a 案四件全毕·验收通过（03:12·64 passed·EXIT=0 显式·工时 ~12 分钟）**
+
+- 四件：①引擎采（**1ab3a3c**·三函数+三分离件+run_id 校验+auto fallback）／③H 源 patrol-source（**fffb449**·**三态**：源在机判/源缺 manual/plan 无声明 na）／④axis（584839d）／②na 规则（7a8c5aa）——修正笔 bb97cb8（NaRuleTest 导入·自领）。
+- **纪律自省（重要）**：FSD「`| tail` 掩 EXIT」自领→CTO 同族自省（今日也多次 | tail -2）→**验收改 EXIT=$? 显式**——**验证链禁管道掩 EXIT**（静默失败家族再捕一例）。
+- 工时 ~12 分钟（%cI 直引）·历史冻结（旧 100 不动）·**可进新一轮验证**（resume22 起用新形：引擎采/na 三态/axis/权重 65+35/v2.1.0）。
