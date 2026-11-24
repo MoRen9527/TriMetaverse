@@ -14638,3 +14638,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **F 修法**（已发 CTO/FSD）：①禁全量 glob→有界扫描（find -newermt/mtime 窗）②**格式修**（按行匹配 RUN_ID/trigger·非 JSON parse——现设计会判 0）③验收=432 件窗内读取+计数。
 - 附：log 21.8k 老件堆积=清理候选（另件·勿混）。
 - **假读数家族+1**（ARG_MAX 炸→glob 0→「缺件」误判）。
+
+- ㊿+2264 **CTO 勘正（重要）**：**F 修≠collection 分数**——breakdown 15=**A6+F9na+H0**——F9 已 na 记满（a 案件③ na→weight）——**collection 缺的唯一格=H0**——**F 修=面真（非分）·H 修=分数关键**。**100 路径=H 修**（FSD f1bdbc1e 同 seat 比对+COS cadence_layers 两节律→H pass 9→collection 24（6+9+9）→total=100（41+24+35））。21.8k 老日志清理=另件候选。
