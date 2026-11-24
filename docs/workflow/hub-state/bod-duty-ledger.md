@@ -13276,3 +13276,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（修复生效+下一层暴露）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1920 · **SDE resume15 终态：P0 修复验证=达成 ✓✓（段 4 门拒 dce dry_run·比预期更早更严）+dce 真执行需 --execute 授权**
+
+- ①四前置全绿（亲签件四校验 ALL=True·sha ab65dc9a 一致｜continue sha 0957152c 一致·consumed｜号 resume15 签发表核 ✓｜双零/flag=debug/480s｜P0 双修在盘 423987c+57393fa+FUSE c55c317/5b10a67）。
+- ②点火 17:11:42·pid 3250632·preflight=pass。
+- ③**终态（~6min 后自停·零残留）：exit=failed·「段 4(dce) 门拒（非 pass 止链·不 notify）：verdict=dry_run_not_executed」**·score.json 未生成——**比预期更早更严：c3-a 使 dce 顶层 fail→段 4 门直接拒（非等到 score G 拦）**⇒ **P0「dry_run 不穿门」实证 ✓✓**（此前 4 轮穿门不复现）。
+- ④**关键线索**：dce 仍 dry_run=「**部署树 --execute 未授权**」——dce 真执行需 `--execute` 授权开关（默认 dry-run）→**这就是所有轮 dry_run 之因**——候 CTO 完整核（真执行条件/授权形/**是否需 CEO 批**——真迁移有实际副作用）。
+- 呈 CEO（验证达成+授权问题）。
+
+——BOD·（date 现查原值·D-47 正形）
