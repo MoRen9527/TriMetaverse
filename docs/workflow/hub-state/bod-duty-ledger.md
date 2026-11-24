@@ -14059,3 +14059,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **执行=SDE 代执（ef036d1b·合成 collection-A/F/H→collection-score.json→score_cli 重跑）**·CTO 风险注（三分离 schema 或需映射）。
 - **BOD 面**：collection-H.json 已补字段（**verdict=pass**〔H verdict_rule=loop-window 轮值守窗 N/A 自证·patrol 在/dive 缺位=预期态 defer 判读〕+rationale+evidence_ref+judge_face=BOD）——H_OK 验过。
 - **两路**：resume20 补判（先行版 90/100·I 齐则百）/resume21 新链全跑（三件修复后）。
+
+### ㊿+2119 · 🎯**「修复后完整百分」先行版=90.0/100（补判完成）·I 族判卷毕 10/10·终版 100 重算中**
+
+- **补判完成（SDE 执行/CTO 定形）**：A/F/H→collection-score.json 合成→score_cli 重跑 rc=0——**total=90.0/100**｜pending=10（I 族）｜**projection=100.0**｜domain_breakdown={**machine:59.0·collection:31.0**·subjective:0}——A=9/9·F=13/13·H=9/9 三族全满·五族机判 59 全在。
+- **I 族判卷毕（COS·10/10）**：I1=4/4（三域划界/分布稳定/双向一致）·I2=3/3（fast_path 活体 DCE_EXECUTE=1 真跑）·I3=3/3（close evidence 三族齐+close.json）——entries 3 案锚文判读（**迁移链=活/v8施工批=活/台账卷=记录**·36bf14a1d L44·rationale 全含）·一人两角留痕·无分歧免联审——subjective-score.json 已落 resume20。
+- **已发 CTO（95562683）重跑 score_cli→终版 100**。
+- **round8 两件已落 resume20**（run_id=resume20·round_count=8·charter_commit=478ca1c）→**已发 SDE（c0c046f4）四核点火 resume21**（两路并行）。
