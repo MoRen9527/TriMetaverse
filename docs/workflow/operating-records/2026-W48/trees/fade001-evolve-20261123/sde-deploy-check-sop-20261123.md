@@ -21,6 +21,10 @@
 > **批件核证正形**：`git show <commit>:<path>` 一步见目标节号内容（工作树实读+另一相关 commit=伪锚·2026-11-23 自领）。
 > **D-47**：落款时刻一律 date 现查原值粘贴·禁手写（2026-11-23 手写超前时点自领例）。
 
+## 点火模板·采集/节律 env 四件（CTO 裁 2026-11-25·score 100 面）
+
+> 点火形 env 固化四件（r12/v2 采集域）：`FADE_JOBS_JSON=/srv/fleet/TriRMC/data/cron/jobs.json`｜`FADE_OPERATING_ROOT=/srv/fleet/TriMetaverse/docs/workflow/operating-records`｜`FADE_WEEK=<2026-Wxx>`｜`FADE_PATROL_CADENCE=6m`（实际 patrol 拍频=6min·plan_enricher 默认 15m 待 c 治本）。缺任一=A/F/H 采集 na/fail（resume29 实证）。H 判「na→weight」亦记满，但**真判 pass 须 c（默认 6m→6 vs 6）或 f1bdbc1e 落**后验。
+
 ## 点火模板·D-91 marker 面（DP-032 A 案·CTO 裁 2026-11-23）
 
 > **点火命令必须带 env `TRI_CHAIN_MARKER=/srv/fleet/TriRMC/chain-running.marker`**（R-HY fleet 可写实位；缺省路径 `/srv/git/TriCompany.git/chain-running.marker` 在 R-HY=ENOENT 写失败→pre-receive 闸盲）。sg pre-receive 已探该位（T8 实测：fresh 拒/stale 放+warn）。缺省 env 时链跑=闸端不可见——**不得读作「跑中更新已受控」**。
