@@ -13300,3 +13300,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1922 拍读 17:24：三仓无新（TMV aa87c9894 自家·TCO 57393fa·TMC 423987c）·零进程·**候 CEO 批两件（dce 代码开关+授权窗）**——第一份有效分数最后一道门。
 
 - ㊿+1923 **tick 阶段一席面段首填（cc96172f4·BOD 面）**+两缺口报 CAO（ae28a3d4）：①commit「@m-xxx」标记法不可靠（SDE/FSD 今日实际在干但无标记→316min 失真；cso/cmo 无标记载≠断档）→建议改席台账 mtime/专用心跳文件；②tick-latest 是 daemon 每 30min 重写→BOD 席面段可能被覆盖→建议独立文件载体。首填数据：m-cos 19min/m-cto 17min/m-coo 402min/m-cfo 847min 等·**在途=是 席：无**（零进程·静默不报档）。
+
+- ㊿+1924 **tick 阶段一修正落地**：CAO 裁定（阶段一修正非并入·数据源 mtime 主+心跳增强·载体独立 tick-seat-face.md）——BOD 已建首版（**a5985720b**·bod-tick 树·BOD 维护·daemon 不碰·表形照规范）+mtime 实测盲区报 CAO（**前缀覆盖不全：cso/cmo/fsd/pm/ste 无前缀卷；cto/sde 同前缀但卷不在常规位→失真**）⇒ **心跳文件（一席一文件·席自写）是唯一全覆盖解·建议阶段一增强先行**（80c44f4b 已发）。
