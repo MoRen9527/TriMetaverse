@@ -13331,3 +13331,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1934 CTO 报·**dce 开关两件验收通过**（321d8be L141-145 argv 条件实读 ✓／802deff 头注勘正实读 ✓「--execute=真跑·DCE_EXECUTE=1 授权启用」·测试 chain 26/26+dce 19 passed 零破·真迁移面零触）⇒ **开关闭环**（缺省 dry_run 安全形+env 到位才真跑）。**前置六项核已请 SDE**（六项全达=CTO 验收→报 BOD 呈 CEO 请签 resume16）·点火形态照卷（DCE_EXECUTE=1 env 前缀）·真迁移不可逆六项任一不达不放行。呈 CEO 一句。
 
 - ㊿+1935 拍读 17:54：三仓无新（TMV 56b8f31b9 自家·TCO 802deff·TMC 321d8be）·零进程——**前置六项核在走**（SDE 面·六项全达→CTO 验收→请签）·心跳已更新。
+
+### ㊿+1936 · **六项核结果（3✓/2✗）：①树清洁✗（迁移夜残留5件）④两面一致✗（R-HY 落后 710 commits）——CTO 三裁=先清后跑+接受快进·请 COS/COO 清件**
+
+- **SDE 六项核**：③回滚锚 ✓（tag pre-dce-resume16·TMV 435f88a39/TC 802deff）／⑤权限 ✓／⑥链空闲 ✓／②冲突预检 ✓（carry2 对齐）／**①目标树清洁=✗**（TMV 3M+2??：.shift-ade 中间件+convene 目录+OP 二件·迁移夜残留）／**④两面一致=✗**（R-HY TMV 落后 sg 710 commits·dce pull 将快进）。
+- **CTO 三裁**：**①=先清后跑**（中间件/未完成面不该入主库·接受裹带=永久污染·排除名单=触真跑面）→请 COS/COO 清 5 件·清毕复验①再跑；**④=接受快进**（ff-only 无冲突·树面大变=预期·**pull 后立即复验树态**）；②③⑤⑥ 承 ✓。
+- **5 件清件清单**（归属判据 COS/COO）：`W48/.shift-ade.prev.json`/`W48/.shift-ade.json`（中间件）/`W48/convene/tri-check/`（未完成面）/`W47/OP-202611-W47-001.json`+`W48/OP-202611-W48-001.json`（OP 二件·是否入库请判）。
+- 已发 COS（bf19c9e7·主）+COO（a611c451·协助+快进评估）。序：清件→CTO 复验①→六项全✓→BOD 呈 CEO 请签（resume16）→点火 DCE_EXECUTE=1（tag 已在）。呈 CEO 一句。
+
+——BOD·（date 现查原值·D-47 正形）
