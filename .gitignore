@@ -28,3 +28,5 @@ __pycache__/
 
 # 打包产物输出区（2026-10-23 CTO release 管理面裁：产物不进 git·历史 blob 留 git 史·磁盘面候确认）
 output/
+docs/workflow/operating-records/*/.shift-ade.json
+docs/workflow/operating-records/*/.shift-ade.prev.json
