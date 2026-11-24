@@ -14440,3 +14440,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume24 残拍已裁（R2 语义 a·件落 `shift-W48-resume24-.../ceo-ruling.json`）→**点火 resume25 令已发**（纯数字形·前置复算）。
 
 - ㊿+2218 **resume25 点火成功（04:22:26·pid 3318945·纯数字形·残拍链照走）**：resume24 终态=段 3 rc=2（owner='' 两件+company-demand-pool 越界）→残拍已裁；前置双面复算 state=continue·prev=resume24 ✓；preflight=pass。**段 3 首验点**（dd8d255 双保险+6e0ef08 入枚举·预期过）→六观察点。
+
+### ㊿+2219 · **resume25 段 3 挂（rc=1·TypeError `_spawn_seat() unexpected keyword 'owner_map'`）——dd8d255 接口不匹配·急修令出**
+
+- ignite.log 实读：`TypeError: _spawn_seat() got an unexpected keyword argument 'owner_map'`——**dd8d255 调用面传 owner_map·函数签名未加**——接口不匹配（34 passed 未覆盖该调用路径·**build green≠runtime green 又一例**）。
+- 已发 CTO（急修：加 owner_map 参数或改调用面+补测试+spawn 实跑路径重验→点火 resume26）。
+- resume25 残拍待裁（修完落件）。
