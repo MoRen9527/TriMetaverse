@@ -1,4 +1,4 @@
-# 任务书呈批件 v2·charter-20261124T122210Z（**7 items=5+捞回2**）＋DP-049 合并施工批
+# 任务书呈批件 **v3**·charter-20261124T122210Z（**8 items=5+捞回2+判卷面1**）＋DP-049 合并施工批＋A/F/H 细则（待审并入）
 
 - sourceOfTruth: 本卷+`/srv/fleet/TriRMC/fade001-runs/shift-W48-resume18-20261124T120128Z/charter-20261124T122210Z.json`（5393B·schema 1.0.0·BOD 20:33 转全文）
 - 令源: CEO 20:3x「**等任务书批了一起走修**」（BOD 20:32）+「DP 取号修 normalizer 那 1 行，批」
@@ -11,7 +11,7 @@
 | charter_id | rN-task-20261124（source.run_id=**resume18**·5 items） |
 | status | pending_approval（**候 CEO 批**） |
 | items | **5 条**（cos/coo/cao/cpo/cto 各 1） |
-| aggregation | items_before=7·items_included=**7**（**5 原+2 捞回**·CEO 令） |
+| aggregation | items_before=7·items_included=**8**（5 原+2 捞回+1 判卷面·CEO 令） |
 | 批复时点位 | `approval_comment: ______` ／ `approval_time: ______` |
 
 ## §二 · items 清单（5 条）
@@ -25,6 +25,7 @@
 | 5 | cto-1 | **统一 run_id 与 retry 账本**（`-retry1` 挪 retry_seq/retry_of·verify.run_id 补正名） | runtime |
 | **6** | **RESTORED-1**（原 drop-1·**CEO 捞回**） | **`close.upgrade_list 12 条缺陷逐条绑定主责席与责任面`**（原文照录·施工细则候批） | close 链 |
 | **7** | **RESTORED-2**（原 drop-2·**CEO 捞回**） | **`补无人值守余额不可得 fail-safe`**（原文照录·施工细则候批） | cost 面 |
+| **8** | **score-fail-closed**（CEO 已批「要」） | **判卷面落卷 fail-closed**：`subjective-score.json` 缺席→**不再 pending 改 partial**（不发 notify_done·与 cpo-1 同形） | score 链 |
 
 ## §三 · dropped 2 条已捞回（CEO 20:4x 令「dropped 两条捞回来，并进任务书等批」）
 
@@ -59,3 +60,16 @@ charter aggregation（**原文直引·SDE 交付 e435482ec 附**）：`{"items_b
 
 ---
 —— COS 小贾（m-cos·出稿不代批·M4-v2）·写前现查 2026-11-24T20:36+0800（D-47 原值）
+
+## §七 · A/F/H 改造细则（CEO 21:0x 初衷澄清·**待审后并入**）
+
+**细则稿**：`cos-afh-refactor-detail-20261124.md`（**8ef38a699**·COS 面出行细则）。
+**要点**：
+- **A→plan_skill 拍前冻结件**（plan-freeze.json：md5/值面/基线声明·COS 席规划期产·**plan 有机产物**）
+- **F→close_skill 告警汇总件**（close-acceptance.json：过程告警计数/时延·**对过程数据验收非重采**）
+- **H→拆分**（plan 登记值守计划+close 验收对表）
+- **三族 manual→pass/fail**（机判附件·**缺席=fail-closed**·与判卷面同形=四件同规则）
+**本 §七 候 CEO 审**——批后并入 v4（v3 先含 item 8 判卷面 fail-closed）。
+
+---
+—— COS 小贾·v3 附 写前现查 2026-11-24T21:06+0800
