@@ -13693,3 +13693,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+2017 **CEO 令：即刻核生成器 drop 逻辑**——已发 CTO（466bb28d·四问：生成器文件定位/aggregation 筛选规则〔items_before7/included5/dropped2·为何恰第 6/7 席〕/dropped 缺来源标注/修法候选）。核毕报·v4 批不受阻。
