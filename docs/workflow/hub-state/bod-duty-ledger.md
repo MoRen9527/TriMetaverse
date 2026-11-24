@@ -14146,3 +14146,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
   - **员工**：COS=值席（异常排查+看护）·CTO=规格+验收·SDE=部署推 R-HY·CAO=条款（制度形）·**BOD 不参与**（定位）
   - **机制**：引擎 score 前置自动三采→落三件→逐件 run_id 校验→合成 entries（无人手合成·中间件废）
 - 联审改：低分维（<阈值）必产意见·一维一条·取消每席 1-3 条上限·意见与分数绑定——施工令待发 CTO。
+
+- ㊿+2140 **两裁施工令已下 CTO（d020b0a8）**：件1=采集 a 案（engine `_collect_a/f/h` 三函数·score 前置自动·producer=engine·三分离·逐件 run_id·na 三值·H na 判据·auto fallback 保留·历史双读冻结）／件2=联审改（低分维<阈值强制产 improvements·一维一条·取消每席 1-3 条上限·aggregation 记「低分维数 vs 意见数」对表）——验收判据三条（auto 采零人手/造 3 低分维→≥3 条逐维对应/旧轮回读不变）。拍读 02:12：三仓无新·零进程。心跳已更。
