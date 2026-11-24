@@ -14324,3 +14324,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2189 拍读 03:42：TriRMC 本地见修法 commits（931f1e3/cdd0050 03:27）·TriCompany 131fde3·零进程——**resume22 待重点**（目录仍仅 192045Z 首点失败件）。patrol 行已追加。心跳已更。
 
 - ㊀+2190 **SDE 修复验证 green（03:42·独立复测）+新 continue 件已落**：①supply-green（正确端点 /internal/v1/agent·model=deepseek-flash·delta_len=2）·daemon 重启（pid 3313986·etime 02:16）·journal 404=零·代码面 ✓ ②消费戳已耗（resume21/.ceo-ruling-consumed.json 03:20）→**BOD 重落 ceo-ruling.json**（217B·03:42·DP-050-resume22-reignite-<UTC>·run_id=resume21·round_count=8）+**approval 留用**（round9 同授权延续·B 档判无需 round10）③其余前置绿。已回执 SDE（重取号重点）。
+
+### ㊿+2191 · 🔥**resume22c 最终点火成功（第三发·19:44:10Z·pid 3314892·preflight pass·supply-green）**
+
+- **三发时序（SDE 如实+自领）**：a) resume22-192045Z=preflight 供给红（404 别名·已修）→废／b) resume22b-194315Z=preflight **rc=4 awaiting**——**首点残留消费戳未清（SDE 清戳步骤漏做·自领）**／c) **resume22c-194410Z**=清戳（归档 .bak-resume22first-*）→**preflight=pass** ✓。
+- **终发读数**：**19:44:10Z·pid 3314892**·run_id=**shift-W48-resume22c-20261124T194410Z**·supply-green（delta_len=2 探针实证）·consumed 生成 ✓·双零/树/flag/480s/DCE 全绿。
+- **新形六观察点**照盯（引擎采/na 三态/axis/65+35/两轴/patrol-source）·round10 不需（round9 覆盖·双方采认）。
+- **BOD 风险注**：run_id 形=resume22c（含字母 c·**不符 run_id 四形规则 `resume\d*`**）——链内已跑·但命名规范宜勘（将来解析/枚举可能漏·记观察）。
