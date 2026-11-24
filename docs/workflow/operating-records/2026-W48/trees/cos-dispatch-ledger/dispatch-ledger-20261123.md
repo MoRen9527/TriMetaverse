@@ -128,7 +128,7 @@
 
 **DP-043 取号**（04:40·锚表接线+charter-203018Z 5 items·CEO 批「批锚表接线，charter 也批」）：**子号表**——DP-043-01 锚表接线（CTO spec+SDE/FSD 落地·~40-60min）｜DP-043-02 charter item1/2/5（CTO 域：chain_runner 段4/5 fail-closed+dce 红即停+段门语义化）｜DP-043-03 charter item3（CAO 铸条）｜DP-043-04 charter item4（COS/COO 台账）·验收=CTO·呈批=BOD 呈 CEO 报告+请签（B 档亲签件）→点火 resume15·**DP-043-01/02 已毕销账**（01 锚表接线 6a292ef+eb832ad 双面落位〔本机 15 passed〕/02 charter 1/2/5 448c31d〔gateStageResult 单点+循环门判+failed_stage+回退 env·chain 22/22+round 58/58+charter 14/14〕·三细节已并入双面八条〔b2827af9〕——销账锚=6a292ef+eb832ad+448c31d·03 候选稿 82b068fb1 候 CEO 批·04 台账面在办）。
 
-**DP-044 取号**（16:48·CEO 五令批面三件+公式·BOD 16:45 转）：①**DCA 两稿落地**（99d8c1343+87d0b22e1·语义重定施工+DCA 进框架 v1.4·CTO 执行）②**tick 设计稿阶段一先行**（201cd6b4b·CAO·结构位人工先行/判据位候 CTO 评估）③**COO 运维职责获批·COS 协助 source-agents 更新**（SDE 归 COO 管）④**round_count 公式获批**（CTO 口径注记卷 f59325085 承）·状态=派发→在途。
+**DP-044 取号**（16:48·CEO 五令批面三件+公式·BOD 16:45 转）：①**DCA 两稿落地**（99d8c1343+87d0b22e1·语义重定施工+DCA 进框架 v1.4·CTO 执行）②**tick 设计稿阶段一先行**（201cd6b4b·CAO·结构位人工先行/判据位候 CTO 评估）③**COO 运维职责获批·COS 协助 source-agents 更新**（SDE 归 COO 管）④**round_count 公式获批**（CTO 口径注记卷 f59325085 承）·**①语义重定施工已毕销账**（TriRMC **c55c317+5b10a67**·FUSE=test_consecutive_rounds 判据 L320+三清点〔setFlag L214/点火 L288/EXIT L321〕+E2 真路径测试〔seed prod+旧7→setFlag test→即读0→满8新轮熔〕·C 项并入 5b10a67·**round 62/62+chain 22/22 绿**）·②DCA v1.4 候 CPO 主笔（CTO 联署·87d0b22e1 已联署）·③tick 阶段一 CAO 已交（BOD 承下一拍起加）·④COO 运维职责 source-agents 已落（ba1382c·候 CHO 验收）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
