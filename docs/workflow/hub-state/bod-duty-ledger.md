@@ -14297,3 +14297,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **round9 两件已落**（resume21 正身·fleet:fleet·JSON 双 OK）：ceo-ruling（run_id=shift-W48-resume21·round_count=8·DP-050-resume22-instruction）+ceo-charter-approval（round9·charter_commit=bb97cb8·quote=「批，点火 resume22」）。
 - 已发 SDE（四前置核·**先复算 prev**·件按 resume21 落·不符即报重落）。
 - **新形首跑观察点**：①A/F/H 全自动采（producer=engine）②na 三态 ③axis 字段 ④权重 65+35（rubric v2.2.0）⑤两轴标记⑥patrol-source 源（每拍在长）。
+
+### ㊿+2182 · **resume22 首点挂（段 1 preflight rc=2·模型别名 404）+resume21 双喜（A/B 42.6/43.51·comparability 1.0·DP-043 透传 55/55）**
+
+- **挂因（SDE 报）**：8710 agent 走 TriRMC fallback 别名 `deepseek-v4-flash`——DeepSeek /models 现只有 `['deepseek-flash','deepseek-v4-pro']`→404·fallback 链未救；dsh 席不受影响·余额 20.34 正常。**修法=FLASH_MODEL_FALLBACK 改 'deepseek-flash'+dist 重建+daemon 重启**——已发 CTO 批修（配置 1 行·重启照纪律）。
+- **resume21 双喜**：**A/B=42.6/43.51**（7 席·dims 28/27）｜**comparability=1.0**（prev=resume18·19/20 无联审跳=语义正确）｜**DP-043 八条标尺透传=55/55**（rationale+L 全在·DP-049 修生效·resume18 曾 0/53）。
+- resume22 原号 192045Z 已废（零残留）·修毕重取号重点。
