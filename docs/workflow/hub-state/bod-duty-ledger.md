@@ -14161,3 +14161,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2143 **停令闭环+双人自领（CTO a9e20289）**：①停令已传 FSD（件1 停+动手回退/未动报告·件2 继续）②**CTO 面亦自领**：派件1 时效=照 BOD 转述·**他读原文「讲出详细过程」时也误判「a=准」**——漏「讲出过程≠批」——**转述方+派工方双人假批准**（对象断言族）③**正形入册**：BOD 转述「裁」须含「CEO 原话+解读依据」·接令方须核原文口径·**「准/批/同意」字样才=批准·「讲出/说明」=解释请求**④件2 真批准（原文「准，这才是根因」有「准」字）继续。
 
 - ㊿+2144 **件1 停态验收（CTO 02:14）**：①已落码至测试中途·**未提交（无 commit）**②**回退零残留**（`git checkout --` score_engine.py/test_score_engine.py·status 无 M·HEAD=537cffc item8 版无损·grep `_engine_collect_entry`=0·**engine 套 29 passed 复原绿**）③留 bak（score_engine.py.bak-pre-collect-auto·回退证据+批后复用）④件1 冷存（恢复条件=CEO 明确批）⑤**件2（联审改）即刻续**。呈 CEO 知情。
+
+### ㊿+2145 · **CEO 设计之问（原样转 CPO+CTO）：score_skill vs score_cli 的初衷/分工/在周迁移的作用——「采集全机器化后 score_skill 的意义在哪」**
+
+- CEO 原话（逐字）：「**score skill 是处理语义等主观问题，你的采集都走机器，就让 cos 和 coo 评个分，那直接走 score cli 不就完了么？score skill 设计的意义在哪呢？问 cpo 和 cto，说说你们对 score cli 和 score skill 设计的初衷和他们应该在周迁移工作发挥什么作用，我看看你们的理解**」。
+- 已发 CPO（3d1ae280·产品面五问）/CTO（1e29db85·技术面五问）——重点第⑤问：若采集全机器化（a 案）后 score_skill 的价值主张=正面答。
+- **CEO 的洞察链**：采集（值席人工）与 score_skill（席语义判）若都机器化→两个设计重叠→score_cli 一个就够——**这是在问「整个 score 体系的分工是否成立」**（不只是 a 案·是设计根问题）。
