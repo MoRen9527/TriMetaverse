@@ -14472,3 +14472,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume26（04:28:09 点·pid 3320391·preflight pass）段 3 rc=2：**verdict=fail 6 断言拒·但 detail 从「75 项空 owner」缩到「2 项四字段缺/占位」**：`w47-sunday-shot-preflight-20261121` owner=None/due=None + `...20261117` due=None——**双保险（prompt 注入+后处理）主体生效**。
 - 已发 CTO（查两 target 在 R12 by_target 17 对里的键匹配/补映射〔owner=SDE·COO 第 5 例定〕/后处理键比对勘）。
 - 修毕→BOD 点火 resume27（CEO 授权在）。
+
+### ㊿+2224 · **CTO 四层核证（残余 2 项）：family_id 缺→by_family 全空／due 填充未实现／数据自打架／名差——修法四件批**
+
+- ①**by_family_target=失效（结构性）**：`_load_r12_owner_map` L428 需 ent.family_id——COS families_items 14 项无此字段→by_family 全空·**by_target（raci 17 对）独撑=97% 来源**。
+- ②**due=None=正常（未实现）**：`_fill_owner_from_r12` L474 只填 owner·无 due 逻辑。
+- ③**数据面自打架**：w47-sunday-shot raci 段=COO vs families 段=SDE——**BOD 判统一 SDE**（COO 第 5 例定）。
+- ④**target 名差**（...wn-20261117 截断·须 plan 实读）。
+- **修法四件批**（CTO 派 FSD a/b/d+COS c/family_id 补）→验→点火 resume27（CEO 授权在）。
