@@ -132,6 +132,8 @@
 
 **DP-045 取号**（17:18·**c3 双修 P0**·CEO 批「c3 双修（P0）…都批」·CTO 已收施工令）：**A 主**=score_cli 顶层 verdict 纳入 engine verdict（L170·CLI 级 reasons 判→engine fail 传染顶层 fail·单一真源修正）/ **B 辅**=gateStageResult 改读 `doc.score?.verdict ?? doc.verdict`（inner 优先·旧件兼容）——**勘正注（17:22·CTO 实读为准）**：原写「gate 改读 dce verdict+engine_state」=COS 描述偏离（未实读 score_cli L170·凭 L56 单点推全链·自领第 18 笔）·P0 最优先·验收=CTO（独立 run-dir 实证 dry_run 不穿门）·**已毕销账**（A=score_cli **57393fa**〔本机 14 passed·engine fail 传染顶层+rc2+reasons 注·根因注释在〕/B=gateStageResult **423987c**〔inner 优先 L51-64·旧件回落·detail 标 (inner)〕·**chain 24/24 绿**·**P0 闭环实证**：dry_run 不穿门〔dce verdict=dry_run_not_executed→engine fail→顶层 fail→gate 拒〕——销账锚=57393fa+423987c）。
 
+**DP-046 取号**（17:54·**dce 开关施工**·CEO 批「批，dce 开关和授权窗都开」）：CTO 施工 chain_runner dce argv env 条件（**DCE_EXECUTE=1 才传 --execute·默认 dry_run 保安全**）+**真跑前置清单**（目标树清洁/冲突预检/回滚锚/两面一致性·CTO 出·COS 台账记录）+自测·验收=CTO 报 BOD 附读数·**真跑=真迁移不可逆**·状态=派发→在途。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
