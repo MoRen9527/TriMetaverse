@@ -14533,3 +14533,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **裁（a 最后一块）=树面实扫（动态白名单）**：`_legal_target(t)=结构形 OR t ∈ 树面实扫`——树面=operating-records/*/trees/ 目录名——**plan families=LLM 扫树→树名必在树面·编造名→fail·动态有检测力**（用产出源验证产出=自洽闭环）。
 - **b（RACI）=60d7fc5 已修**（≥items+每 item 键·resume27 早于 60d7fc5）——resume28 的 b 应过。
 - FSD 即刻落（~30min）→**resume29**（resume28 不点·防必挂）。
+
+- ㊿+2237 **CTO 实跑对表 0/10→裁=最简判据（BOD 判法采纳）**：10 例对 60d7fc5 `_legal_target`=PASS 0/10（件名 regex 过苛：日期在尾/点起点排除/无日期排除）——**CTO 自认 regex 过苛+「形+树面实扫」过度设计**。**最终裁=BOD 判法**：a 断言改 `family_id ∈ 族枚举（A-H）+ target 非空非占位`——**不判 target 形**（树名 LLM 自由生成·形无定式）——**最简判据·无动态之病**。FSD 改 ~20min→**resume29**（resume28 不点·BOD「点火前对表」拦住白跑第九轮）。
