@@ -14027,3 +14027,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 修复面在盘（TC HEAD=e0a2f32 四核确认）·**但降级未触发**（仍 partial）。
 - 已发 CTO（97d998b5·查两处：①e0a2f32 降级条件为何未走到 ②chain 侧 eaf2837 `run_state=partial=>stop` 谁置 partial）+A/F/H 采集责任席/时点定。
 - **判**：仍差一步（partial 停链），但机判分首次可见（五族）。
+
+### ㊿+2114 · **partial 真源候选（CTO 深查）：COS 席自判 run_state=partial 经 L221 sheet 流入→chain 停（两 BOD 假说+CTO 未pull假说皆不立）**
+
+- 排除过程：①close_skill_spawn.py 全文件 run_state 置点仅 L273 一处（非多置点）②close 不读 score.run_state（L326 仅锚证据清单）③R-HY HEAD=e0a2f32（BOD 活体核）·CTO「未 pull」假说错·自领（本日第二次假说未证先报）。
+- **真源候选**：**L221 `sheet=_extract_json(r["out"])`——sheet.run_state 来自 COS 席输出 JSON**——L273 只在七席缺时覆盖·否则**保留席自判值**——⇒ COS 席自己判 partial（按 prompt 语义）→cdoc.run_state=partial→chain L294 触发（detail「七席未齐」=chain 固定 err 串非真因）。
+- **修法候选**：TC 加「`_ss.degraded=True`→强制 `sheet["run_state"]="succeeded"`」（降级覆盖席值·形同 patrol）or run_state 不信任席值（TC 统一判）。
+- 已发 SDE（b6382d17）取 close-skill.json 三值（run_state/seven_seats 段/seven_seats_partial）定谳。
+- **注**：若成立=「席智能判断污染机判数据流」又一例（CEO「skill 不是 cli」教训+1）。
