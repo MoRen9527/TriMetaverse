@@ -14567,3 +14567,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **⇒「版本时差」真身=执行面检出落后**（dev 改了≠R-HY 有）——**D-97 判据（HEAD 落后远端）抓的正是这个**（今日三坑皆此根）。
 
 - ㊿+2246 **CTO 自领（机位隔离族）**：「SDE 判错」=CTO 错——**他在 dev 机看 by_target 有·SDE 在 R-HY 看缺（TMV 落后无 R12 件）**——**两机文件系统隔离·本机有≠R-HY 有**（「机位×文件系统隔离」族·今日多笔）。真因定谳=R-HY 缺件 →已 pull 52defb89e 补。resume29 段 3 首验=最终判据（a 修+件到位）。
+
+### ㊿+2247 · 🎯**resume29 段 3 破关（历史挂点第一次过）——段 1-7 全过·PROC=3 在跑（close/skill 段）**
+
+- run dir 实读：preflight/qualify/**plan.json/plan-freeze.json**/tree-facts/dce/verify/**score.json/score-skill.json**/exam/opinions/collection/cost-log/trend——**段 1-7 全过**（含段 3 plan_scope！）
+- **历史挂点破**：a 修正（97febbb 最简判据）+R12 件到位（52defb89e）+b fill 工作——**新形第一次过段 3**。
+- PROC=3 在跑（段 8 close_skill/联审）——候完整终态（close succeeded+notify_done+A/B）。
