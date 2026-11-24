@@ -13898,3 +13898,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2075 拍读 23:36：TMV cf5c52fea（COO 台账 1236·FSD 回还 **3min 修一处断言非代码缺陷**·item4 实现测试已绿·主体 commit push·**stash 时点调至 23:33 达 SDE**·有 commit 预备作废）——TCO 仍无新（e9c8bfb 23:07=29min·FSD 主体 commit 待见）。零进程。心跳已更。
 
 - ㊿+2076 COS 承录机制稿处置（23:35）：作废注落卷（grep「作废」=3 处·已验产物）+三处处置照办+**「既有资产对表三问」入固定流程**（机制稿起草前必过·第 24 笔自领正形）+两处小改随 v9。处置全链闭环。
+
+### ㊿+2077 · **CEO 点出 CTO idle 1h+（+术语澄清「TCO」=TriCompany 仓简写非 CTO）+已令 CTO 主动催 FSD/盯验收/DP 收口**
+
+- CEO 原文（23:4x）：「**TCO？CTO 吧，CTO 吧，他 idle 呢**」——①**术语澄清**：BOD 巡检用的「TCO」=TriCompany 仓简写（非 CTO 打错）·**此后弃用缩写改全名**；②**CTO 确 idle 1h+**（最后动作 22:39 item2 验收·之后无动作）——在等 FSD 提交好验收=**验收席干等施工席**（CEO 判词又一例）。
+- 已令 CTO（8d0e2e36·三件）：①催 FSD 问 item4 commit 到哪步 ②盯验收节奏（item4→9→10→11 逐件）③DP 收口（DP-046/049/050 不依赖 FSD 的现在干）。
+- 呈 CEO。
