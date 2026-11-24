@@ -13519,3 +13519,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1979 COS 回执（20:01）：①**resume18 签发=shift-W48-resume18-20261124T120128Z**（UTC 12:01:28Z/北京 20:01:28·签发表已录）②两件承录（sha dd6386827/cd214b05）③已通知 SDE（四前置核+DCE_EXECUTE=1 点火）④重跑形三态台账（resume16=argv 空参/resume17=prompt cap/resume18=修后·异窗不混判）⑤**COS 断档自报**：18:18→20:01 1h43min 零落账（期间 resume17 点火+prompt cap 失败+DP-048 修复+传播+BOD 落件全由他席闭环·COS 未参与·原因未知不推定）——值守断档族今日第五断·照录。
 
 - ㊿+1980 **resume18 已点火**（SDE 20:04:54 报）：12:01:55Z（20:01:55 CST）·pid 3265593·preflight=pass·consumed ✓·亲签件 sha dd6386827 四校验全过·continue sha cd214b05 三绑 ✓·DP-048 修复在盘（条①=直接输出 JSON·reasoning≤10 行·超 10 步直出）·双零/flag/480s ✓。观察点照令（dce 四步再真跑/段 7 cap 是否消失）。读数随报。呈 CEO 一句。
+
+### ㊿+1981 · **resume18：dce 第二次真跑成功（3ea7c5491）+plan 面恢复（58KB vs 10.9KB）+评分席在跑（DP-048 检验点）**
+
+- **dce：mode=execute·verdict=pass·四步 rc 全 0**（第二次真迁移·TMV **3ea7c5491** 入仓）。
+- **plan 面恢复**：plan.json **58274B**（resume17=10917B）+tree-facts **8687B**（resume17=96B）——**W47 26 树算回来了**（上轮缩水不复现·疑与上轮 pull 未竟有关·本轮回填）。
+- score top pass+inner pass·**score_skill 在跑（5 进程）——DP-048 检验点（两席 cap 是否消失）**。
+- 呈 CEO（等段 7 读数）。
+
+——BOD·（date 现查原值·D-47 正形）
