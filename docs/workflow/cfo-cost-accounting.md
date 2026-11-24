@@ -66,6 +66,25 @@ python scripts/cfo-token-meter.py --day 2026-11-23 --json --turns # 日窗+机�
 
 **接口约定**：FSD 侧 cost-log 每行含 `run_id`/`trigger`/`task_id`/`seats`/`start`/`end`；CFO 侧以 `--from/--to` 对齐·不要求 transcript 内容含 runId（辅助 `--runid` 参数保留但标注大文件较慢）。
 
+## §六 · 产出侧审计形（v8 item14·CEO 2026-11-24 21:2x 令「成本才不白花」）
+
+**背景**：7 席联审大成本产出经 `charter_generator` 截断（L155-156）只纳 5 条·2 条留痕在 `aggregation.dropped` 但无处置→实质浪费。本席自省后补产出侧审计（原 4 维全在输入侧=半截审计）。
+
+**三件（item14 全件）**：
+1. **维度 `cfo-output-utilization` 成本产出利用率**（维度表 v1.1.0·both）——消费率须=100% 或丢弃项有 who/how/when 处置·留痕≠被使用。
+2. **截断配对律检测器**：`scripts/charter-truncation-guard.py`——扫 charter：`aggregation.dropped` 非空须配 drops dispositions（who/how/when 三要素齐）／`source.opinion_ids` 条数须=合格意见数（意见链入率 100%）／`items_included` 须=items 实际数。`--selftest` 4/4 机械锚。
+3. **自有产出自查（联审回执模板固定项·本席即改）**——每轮联审回执必自问三句：
+   - 我提了几条意见？→ 条数记下
+   - 我的意见在产物（charter/评分件/判卷件）里吗？→ 逐条核 ID
+   - 不在的话谁处置的？→ 无处置=当场升级报面，不候他人捞回
+   > 实例教训（2026-11-24）：本席意见在 v8 charter `source.opinion_ids` 中缺失（7 席缺 cho/cfo）·本席未自查·CEO 人工比对才捞回——**自查三句即为此缺口的机械闸**。
+
+**用法**（接生成器或独立跑）：
+```bash
+python scripts/charter-truncation-guard.py <charter-draft.json> --opinions <opinions.json>
+# exit 0=PASS / 1=有告警项（逐条打印 rule/detail）
+```
+
 ## §五 · 使用依据
 COO 施工令（2026-11-23T00:28:42Z·批 5）；token 实测协议（memory·四分列不折现金）；M3-v2（COS 3fd7892d9）；CAO 标尺卷（cao-review-yardsick-20261122）；D-46（零值出机）/D-47（落款现查）；2026-11-22 30× 异常勘实链（fsd cost-log c639832a+COO 洞察+本席余额双读实证）。
 
