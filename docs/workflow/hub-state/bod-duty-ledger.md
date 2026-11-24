@@ -14482,3 +14482,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **修法四件批**（CTO 派 FSD a/b/d+COS c/family_id 补）→验→点火 resume27（CEO 授权在）。
 
 - ㊿+2225 **BOD 复核（COS 指「你核旧版」）**：本地现文 grep 实锚——**family_id count=14**（14 项全有）·**w47-sunday-shot-preflight-20261121:SDE**（raci 段已 SDE）——**数据面现文全对**（COS 249e8f018 后）·**CTO 核的是 69a3c7007 前版**。已发 CTO（pull 249e8f018 重核 by_family 读取逻辑〔若数据有 family_id 而 by_family 空=读取 bug〕+due 填充仍真保持）——**又一次「核旧版」**（今日第 N 例·核读版本锚纪律再证）。
+
+### ㊿+2226 · **CTO 定谳（实测 D:/ 正确路径）：数据/代码全对·真层只剩 due 未实现——三次自领·修法缩 b 一件**
+
+- **实测**（`_load_r12_owner_map('D:/Code/ai/TriMetaverse')`）：source=r12-item3-6-data-20261125.json·**by_family_target=14·by_target=17**（sample B:release-rules→CTO）——**代码读取逻辑对**。
+- **CTO 三次自领**：a)「无 family_id」=推测（脚本没 print 就断言）b)「raci=COO」=旧记忆（没读 raci）c)「by_family 全空」=错前提+**测试路径 /d/（Windows 应 D:/）掩盖实况**——**三层错叠加**。
+- **真层=due 未实现**（L474 只填 owner）·**resume26 残余 2 因**：sunday-shot=数据版本时差（COS 249e8f018 改于 04:30>resume26 启动 04:2x）+task-inventory=due 未实现。
+- 修法缩 b（due）→修毕报→点火 resume27（段 3 应全过）。
+- **BOD 建议**：跑前对「数据件最新 commit 时间 vs 链路启动时间」（版本时差 preflight 检查·今日第 N 例）。
