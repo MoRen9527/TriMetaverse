@@ -116,7 +116,7 @@
 
 **DP-036 取号**（23:20·charter-150927Z 施工批 **8 items**·CEO 批 23:17:50「批，DP-028 并入」）：7 items 逐席（cos-1/COS·coo-1/COO·cao-1/CAO·cpo-1/CPO·cto-1/CTO·cho-1/CHO·cfo-1/CFO）+**DP-028 并入**（并行联审五项：独立产物 opinions-<seat>.json/聚合器单写 joint-review.json/run_dir 只读/并发 3-4/FADE_JOINT_PARALLEL=0 回退·执行体 FSD·CTO 监核·设计卷 73964d6cd）·施工完+自测绿→点火跑一轮·状态=派发→在途。
 
-**DP-037 取号**（02:14·rounds_run=0 上报小 bug·非急·BOD 请入台账）：观=resume12 链 run 读数 rounds_run=0（实际跑 8 轮）——疑上报面 bug（非链行为）·BOD 判「非急·不阻塞点火」·状态=取号候派（FSD 闲窗修·与 D-91/DP-035 同链面）。
+**DP-037 取号**（02:14·**已勘正 10:41**：原写「rounds_run=0 上报小 bug」——CTO 复判实读 L333-350 定谳：**非 bug·是设计口径**）：`rounds`=完成迭代数（L348 迭代路径才 +1·debug 挂起不执行）／`rounds_started`=尝试数（DP-037-t5 补字段·attempted vs completed 分离=**正确且有用**）；`round_count` 停 8 同理=设计（debug 挂起不迭代·resume12 test 态遗产）。**处置：撤销「bug 修复」定性→降级「口径注记」**（两字段语义文档化）·t5 rounds_started 字段保留（可观测性增强有效）·状态=口径注记（非修复项）。
 
 **DP-039 取号**（02:52·本地七席联审三件·CEO 令 02:4x·不经链本地域讨论形）：对象=a) v1.3 三件（CTO aa6722ea4：共维锚≥2 共评/扣分→改进对齐门/结构缺陷显式出口）b) 标尺校准方案（COO 判读三分 10-25 分最大单点/CAO+CHO 铸分档锚点表）c) 任务书草案 c1919c88a；每席「找问题+修复意见」专业下沉（D-90 义务·引本席维度证据+具体问题+可施工修复意见）·各席意见落卷→COO 汇总→COS 重构任务书 v2→BOD 呈 CEO 批·限 03:20·状态=派发→在途。
 
