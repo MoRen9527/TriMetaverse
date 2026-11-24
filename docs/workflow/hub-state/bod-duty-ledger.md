@@ -14526,3 +14526,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume27 残拍已裁→**点火 resume28 令发**（段 3 预期过·若过=新形第一次冲完整十段）。
 
 - ㊿+2235 **点火前对表（SDE 10 例挂名·真实树面）**：点起点（.shift-ade.json/.prev）／日期非尾（OP-202611-W47-001.json/.unresolved-items.md）／无 8 位日期（bod-tick/fade001-loop-joint-review/-W2/-W3/daily-progress.md/cfo-quota-daily-w47.md）——**须验 60d7fc5 的 _legal_target 能否过这 10 例**（特别点起点/日期中段/无日期三类形）——已发 CTO 实跑对表·不覆盖即扩 regex/改判据→报覆盖读数再点火（**防白跑第九轮**）。SDE 报基于 60d7fc5 前版但名单=真实树面必须对。
+
+### ㊿+2236 · **a 断言最后一块=树面实扫（CTO 采纳 BOD 动态白名单方案）·~30min·resume29**
+
+- **实测**（CTO·L330-353）：SDE 10 例**全不匹配** `_NAME_RE`（要求日期在尾+点起点排除）——真实树名五花八门（点起点/日期中段/无日期/W2/W3）——resume28 的 a 必挂。
+- **裁（a 最后一块）=树面实扫（动态白名单）**：`_legal_target(t)=结构形 OR t ∈ 树面实扫`——树面=operating-records/*/trees/ 目录名——**plan families=LLM 扫树→树名必在树面·编造名→fail·动态有检测力**（用产出源验证产出=自洽闭环）。
+- **b（RACI）=60d7fc5 已修**（≥items+每 item 键·resume27 早于 60d7fc5）——resume28 的 b 应过。
+- FSD 即刻落（~30min）→**resume29**（resume28 不点·防必挂）。
