@@ -13697,3 +13697,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2017 **CEO 令：即刻核生成器 drop 逻辑**——已发 CTO（466bb28d·四问：生成器文件定位/aggregation 筛选规则〔items_before7/included5/dropped2·为何恰第 6/7 席〕/dropped 缺来源标注/修法候选）。核毕报·v4 批不受阻。
 
 - ㊿+2018 拍读 21:18：三仓无新（TMV 06b3d18ab 自家·TCO 3a265f1·TMC 177b56f）·零进程·CTO 核生成器在办·候 CEO 批 v4（11 items）。心跳已更。
+
+### ㊿+2019 · **CTO 核证生成器 drop 逻辑（四答实读）：charter_generator.ts L134-135 纯位置硬截断 slice(0,5)——与席无关·位置决定**
+
+- ①生成器=TriRMC/src/fade001/charter_generator.ts（generateCharter·items L101-124→aggregation L125-135→组装 L170-186）。
+- ②**根因=纯位置硬截断**：L125 itemsBefore=7／L128-133 去重／**L134 dropped=slice(5).map(title)｜L135 capped=slice(0,5)**——**体量守=5 条（硬编码）·不按质量/优先级/席**·items 序=doc.opinions 数组序（L101）→**cho/cfo 恰在数组末尾被切**（与席无关）。
+- ③dropped 只记 title 无 opinion_id/席名（捞回无从追溯·本次靠原文比对）。
+- ④修法候选（候 CEO 批·DP）：a 体量 5→7 或「每席保底 1 条」公平截断 b dropped 补标 `opinion_id|title` c 公平序（轮转）d 捞回形标准化。BOD 建议：b+d 必做（溯源）·a/c 选「每席保底 1 条」。
+- 呈 CEO（v4 批不受阻）。
+
+——BOD·（date 现查原值·D-47 正形）
