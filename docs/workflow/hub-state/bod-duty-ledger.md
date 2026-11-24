@@ -14106,3 +14106,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **判（如实·两轴分立）**：**过程分 100/100（链自证质量=v8 修的）vs 联审分 42.6/43.51（七席对工作质量的主观评估=CEO 目标 A>90/B>90 的那个轴）**——**两轴不同·离目标仍差 ~47 分**（修复后联审微调：早 41.78/43.84→今 42.6/43.51）。
 - **CPO 产品审毕（399b9a6e4·与 CTO 同向 a 案）**：推荐 engine 直读三分离件·**核心理由=归因粒度**（单件缺/坏→A/F/H 三族连坐 manual 无法定位；直读=缺哪件判哪席）——CEO「会出问题」实质。四件联议已复 CTO（verdict 三值含 na/producer_seat/rationale/evidence_ref 必填/双读兼容/采集协同 T+10min 窗+fallback）。
 - **候**：CTO 合稿→BOD 呈 CEO 裁（a 案+四件细节）。
+
+### ㊿+2131 · **collection 重设计合稿（CPO+CTO 双同向 a 案·四件+两注·2h）呈 CEO 批；A/B 联审如实（42.6/43.51·离目标 ~47 分）**
+
+- **合稿（CTO 01:48）**：a（engine 直读三分离）双同向。四件全采：①schema（verdict 三值 pass/fail/**na**·rationale 非空·evidence_ref 必填·run_id 逐件·producer_seat 归因）②采集 prompt（三席各写三件套·不采=na+理由·禁部分分）③双读兼容（先三件→缺→回单文件·旧 100 冻结）④**auto fallback 逐件兜底**（窗过某席未写→auto 按段产物生成·producer=auto·**防单席漏致全族 manual·不连坐**）。
+- **技术注两点**：enge `_judge_collection` 加 na 分支（na→weight·+5 行）；auto 件 evidence_ref 须指 run_dir 真实段产物（exists() 校验）。
+- **验收判据**：①任一族件缺只该族 manual（不连坐）②run_id 逐件校验 ③双消费方（engine+joint_review_trigger）读数一致 ④历史轮回读不变。**工时 ~2h**。
+- **⇒ 呈 CEO 批**（批后施工·新轮 resume22+ 起用新形）。
+- **A/B 联审如实**：**A=42.6/B=43.51**（七席齐·full·consumption_ratio=1）——**目标轴离 A>90/B>90 仍差 ~47 分**——过程分 100/100（链自证）≠联审分（工作内容质量）·两轴分立。
