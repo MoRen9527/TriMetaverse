@@ -13127,3 +13127,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（CLI 卷锚：plan_enricher L4/L85/L215-228·plan_skill_spawn prev_run 零命中·resume14 dce.json 实参·26/11 树）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1884 · **两卷交卷：CAO tick 设计稿（201cd6b4b·核心诊断「tick 测机器不测席位」）+COO round_count 语义审+运维职责草案（呈 CEO 审）**
+
+- **CAO tick 自检设计稿**（201cd6b4b·六节）：**核心诊断=现役 tick 是「系统面 tick」非「席面 tick」**（tick-latest 全机器读数·零行「某席多久没落卷」·COS 断档 5h49 期间 daemon 仍报「候令」=断档在系统面读数绿）——**断档根因不是没 tick·是 tick 测的是机器不是席位**。①机制形=daemon(8713) 主+schtasks 兜底·探测=席面落卷时距·四时点 30min 节律②断档判据三层（有在途→>30min→无监督报文·三中才报·静默期不报）③通知链=COS+BOD 双收·互备 COS 补位·CEO 最后兜底·升级 30/60/120min④与 D-52 三层分工（上线面/正常面/异常面）⑤两阶段（阶段一零代码先行·两阶段齐才算解决）。呈 CEO 批。
+- **COO 两卷**：①round_count 语义审=**满足 CEO 语义**（debug/test/prod 全算含 resume 永不重置）+补明执行点（每轮启动同点计·失败轮/abort 轮也计）+**精确公式：test_consecutive_rounds = round_count − round_count@进 test 快照**——**直答「包括 test 8 轮」=包括**（test 段内每轮 round_count+1·test_consecutive 恰好数这 8 轮至 FUSE）+建议 `test_entry_rc_snapshot` 快照字段对账②**COO 运维职责草案**（coo-ops-duty-draft-20261124.md）：运维四段（服务/链/部署/值守面）+SDE 归 COO 直管（管理≠代裁·readiness 仍 CTO）+「派出去的活的运行态也归我盯」+五不握/不入账/不宣布边界——**呈 CEO 审**（批后 COS 协助 source-agents 更新）。
+- BOD 呈 CEO（三件：tick 稿批/round_count 公式确认/COO 运维草案审）。
+
+——BOD·（date 现查原值·D-47 正形）
