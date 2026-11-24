@@ -13912,3 +13912,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2080 拍读 23:48：**TriCompany 1eca5de（23:47:40）新提交**（详见下）·TriRMC eaf2837（item4 chain 侧）·零进程。心跳已更。
 
 - ㊿+2081 拍读 23:54：**TriCompany 00d7dc8（23:52:31）新提交**（详见下）·TriRMC eaf2837·零进程。心跳已更。
+
+- ㊿+2082 CTO 报·v8 六件毕账（23:52:54）：**item9 验收通过**（1eca5de·实读 L66-89 `_tree_md5_counts` 复算基元+`write_plan_freeze` 每树字段底线照裁+`_verify_plan_freeze` 复算门缺席/不一致=fail-closed·**26 passed**）——六件=12/8/1/5/2/9 全本机复核+**主动巡检照行**（1eca5de 是他 fetch 自查发现非 FSD 报·「验收席的活也是活」）。余四件（4 半/10/11）。呈 CEO。
