@@ -14009,3 +14009,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **resume20 前置**：a ✓ b（patrol 4552d1b）✓ c env 可选。
 - **已发 SDE 点火令（b62cf028）**：run_id 自取 resume20 号·四前置照 DP-046 六项·**授权依据=CEO「批，两件都批，施工完点火」延续**（resume19 挂因=v8 自引 bug·非施工未毕·已修）。
 - **预期**：close 读 prev=resume18 联审七席齐→过→段 9/10→A/B。
+
+- ㊿+2108 **round7 两件落定（BOD 凭 CEO 授权延续·01:01）**：SDE 前置核四绿两红（①旧 continue 已被 resume19 消费〔.ceo-ruling-consumed.json 00:30〕须新件 ②B 档每轮一签→需 round7 亲签）。BOD 落：`ceo-ruling.json`（新·ruling_ref=DP-050-resume20-instruction-20261124T170120Z·signed_at 现查·round_count=8）+`ceo-charter-approval.json`（round7·charter_commit=**e0a2f32**·quote=「签，点火（施工完点火授权延续）」·signature_slot=BOD relay round7 resume19 fail->fix->resume20）——R-HY fleet:fleet·JSON 双 OK。已回执 SDE（c2e312f7·取号+四核+点火）。
