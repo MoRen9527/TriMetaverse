@@ -14320,3 +14320,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **双层根因（FSD 全谱）**：a) **卡面 rmc base_url 指 anthropic 路径而 daemon 走 openai 路径**（/anthropic/chat/completions=404）=**真主因** b) 初刀 PUT 错面（mmc 卡）→查 face 表后 PUT /v1/config/cards/rmc 修正。**「配置-上游/卡面漂移」=DCA 族新例（双层）**。
 - **立件候批**：①「上游 /models 对表探针」〔SDE 面〕②「provider 路径类型 vs base_url 一致性探针」〔FSD 建议·更全·两层覆盖〕。
 - 已发 SDE 重点火令（重取号·六观察点）。
+
+- ㊀+2189 拍读 03:42：TriRMC 本地见修法 commits（931f1e3/cdd0050 03:27）·TriCompany 131fde3·零进程——**resume22 待重点**（目录仍仅 192045Z 首点失败件）。patrol 行已追加。心跳已更。
