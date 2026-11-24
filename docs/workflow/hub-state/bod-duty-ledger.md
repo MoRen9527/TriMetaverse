@@ -14573,3 +14573,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - run dir 实读：preflight/qualify/**plan.json/plan-freeze.json**/tree-facts/dce/verify/**score.json/score-skill.json**/exam/opinions/collection/cost-log/trend——**段 1-7 全过**（含段 3 plan_scope！）
 - **历史挂点破**：a 修正（97febbb 最简判据）+R12 件到位（52defb89e）+b fill 工作——**新形第一次过段 3**。
 - PROC=3 在跑（段 8 close_skill/联审）——候完整终态（close succeeded+notify_done+A/B）。
+
+- ㊿+2248 **段 3 首验=过 ✓✓（SDE 核心读数·05:01）**：**plan verdict=pass·counts={migrate:1,keep:25,carry_over:2,top_level:8}（完整八件面恢复）·families_items=36·owner_gap=0**（R12 双保险全填·含此前两件 None）。**段 4-6=04:57 落·段 7=05:00 落·段 8 close 在跑**（3 ignite 进程）——根因链闭环（R-HY 缺件→pull 52defb89e→fill 生效→gap 0）。候 close succeeded+联审 A/B+六观察点。
