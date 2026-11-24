@@ -14438,3 +14438,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **dd8d255**（`_load_r12_owner_map` L407·by_family_target 14 对+by_target 17 对·真件装载·`_owner_map_prompt_block` L446 prompt 注入·`_fill_owner_from_r12` L458 **后处理兜底不依赖 LLM**）+**6e0ef08**（company-demand-pool 入 allowed）·34 passed·**~3 分钟**（%cI）。
 - **接入环完整**（数据→prompt→LLM→后处理→plan 产物）。
 - resume24 残拍已裁（R2 语义 a·件落 `shift-W48-resume24-.../ceo-ruling.json`）→**点火 resume25 令已发**（纯数字形·前置复算）。
+
+- ㊿+2218 **resume25 点火成功（04:22:26·pid 3318945·纯数字形·残拍链照走）**：resume24 终态=段 3 rc=2（owner='' 两件+company-demand-pool 越界）→残拍已裁；前置双面复算 state=continue·prev=resume24 ✓；preflight=pass。**段 3 首验点**（dd8d255 双保险+6e0ef08 入枚举·预期过）→六观察点。
