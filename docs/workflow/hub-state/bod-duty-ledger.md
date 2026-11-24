@@ -14432,3 +14432,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - aae552d（三态过滤·04:17）已落·与本挂无关。
 
 - ㊿+2216 **plan 接入 R12 方案（04:18·CTO 派 FSD 8fcd8aea·~1h）**：①根因承（BOD 判对：数据面≠生成器·plan families=LLM 扫树生成不读 R12→owner 无源→空·75 项随树面变）②**两段方案**：a) prompt 注入（owner 映射表段→LLM 按表填）b) **后处理兜底**（plan 生成后程序读 R12 填空/占位·**不依赖 LLM 执行力**）c) company-demand-pool.md 入 allowed③分工=CTO 码面（FSD）+COS prompt 表述·**总 ~1h**④注：此件=长期形的接入面非应急。修后 resume25 起。
+
+### ㊿+2217 · **plan 接入 R12 验收通过（04:21·34 passed·~3 分钟）——resume24 残拍已裁·点火 resume25 令发**
+
+- **dd8d255**（`_load_r12_owner_map` L407·by_family_target 14 对+by_target 17 对·真件装载·`_owner_map_prompt_block` L446 prompt 注入·`_fill_owner_from_r12` L458 **后处理兜底不依赖 LLM**）+**6e0ef08**（company-demand-pool 入 allowed）·34 passed·**~3 分钟**（%cI）。
+- **接入环完整**（数据→prompt→LLM→后处理→plan 产物）。
+- resume24 残拍已裁（R2 语义 a·件落 `shift-W48-resume24-.../ceo-ruling.json`）→**点火 resume25 令已发**（纯数字形·前置复算）。
