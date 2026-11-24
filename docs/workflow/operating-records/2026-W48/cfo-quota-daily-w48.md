@@ -251,3 +251,12 @@
   5. guard_hits 归口：该 fail-safe 触发计入 **`c`（余额门族）**——因语义属「余额不可得」分支（读数面降级致停车）。
 
 〔落款 2026-11-24 23:11:22 +0800 现查〕
+
+## 2026-11-24（周二）23:58 item7 落地（无人值守 fail-safe·v8 我面双项全毕）
+- **解锁链**：SDE stash 23:34:17（两文件基线态）→ 本席施工 → **commit `00d7dc8`（2 files +36）·已入 sg 裸仓链 ✓（ancestry 验过）** → 已回落地信号（FSD 可 pop·hunk 零冲突预期·三件排队解除）。
+- **实现**：①`close_skill_spawn.py` +26——**auto fail-safe 分支**（`b0 is None` 且 trigger=auto 且 `_count_trigger_runs(run_dir,"auto")>=1` → paused/rc3·guard=c·reason 标 v8 item7）②**`_count_trigger_runs()` 辅助**（count-based）③manual 保持 fail-open 不变；④`test_close_skill_spawn.py` +10（`test_item7_count_trigger_runs`）。
+- **验证**：`-k item7` **1 passed in 1.33s RC=0** ✓；`-k "not item7"` 7 dots RC=0 ✓；**全量组合跑收尾挂（8 dots 全过但进程不退出）如实报**——分组各自 RC=0·本改动无跨测试状态·初判无关·候技术面排查。
+- **push 输出坑实录**：首次 push 输出含 `/dev/tty: No such device` 告警但**实推成功**——**验真必以 ancestry/ls-remote 为准·禁信 push 输出尾行**（同族「截断伪影/假读数」教训再现）。
+- **v8 我面双项全毕**：item14 三件（e9c8bfb/bdb9a7bc7/d598f2a58）+ **item7（00d7dc8）**。
+
+〔落款 2026-11-24 23:58:19 +0800 现查〕
