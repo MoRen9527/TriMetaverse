@@ -14331,3 +14331,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **终发读数**：**19:44:10Z·pid 3314892**·run_id=**shift-W48-resume22c-20261124T194410Z**·supply-green（delta_len=2 探针实证）·consumed 生成 ✓·双零/树/flag/480s/DCE 全绿。
 - **新形六观察点**照盯（引擎采/na 三态/axis/65+35/两轴/patrol-source）·round10 不需（round9 覆盖·双方采认）。
 - **BOD 风险注**：run_id 形=resume22c（含字母 c·**不符 run_id 四形规则 `resume\d*`**）——链内已跑·但命名规范宜勘（将来解析/枚举可能漏·记观察）。
+
+### ㊿+2192 · **resume22c 首跑结果（03:48）：段 1-3·plan 6 断言生效拦真问题（26 项空 owner+1 族点名越界）·链停段 3——新门干活实证**
+
+- stages_run=preflight/qualify/plan_scope｜**verdict=fail: 规划 6 断言（a-e）拒**——detail：**b) 兜底标签：release-rules-20261118 owner='' 等 26 项** + a) 族点名越界 'CARRY-20260728-004' 不在表枚举。
+- **正面**：①**plan-freeze.json 已产出**（件 A plan 侧新件）②**6 断言 strict fail-closed 生效**——plan 缺陷在段 3 就被拦（以前会混到评分/迁移）。
+- **按验收轴语义**：plan 没做好→**retry**（非进化·非分数问题）——下一步=修 plan（26 owner+1 越界）→重跑。
+- 引擎采（段 6 score 前置）未到（链早停）。
