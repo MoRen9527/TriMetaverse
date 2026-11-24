@@ -51,10 +51,12 @@
     {
       "family_id": "B",
       "target": "trirmc-orchestration-fact-20261119",
-      "owner": "COO",
+      "owner": "BOD",
       "due": "W47 封存时点（已封存）",
       "acceptance": "W47 记录树原地保留可读可溯",
-      "depends_on": []
+      "depends_on": [],
+      "owner_basis": "卷主笔（bod-agentcore-orchestration-fact-check-20261119.md 头部「BOD 集散·零判断零代裁」）——机构卷：BOD=集散机构不具员工能力·owner 字段按实锚填 BOD 供 strict 放行·语义面标机构卷（COO 异议 2026-11-25T04:10 采纳）",
+      "owner_type": "机构卷（BOD·非员工席）"
     },
     {
       "family_id": "B",
@@ -76,10 +78,11 @@
     {
       "family_id": "B",
       "target": "w47-sunday-shot-preflight-20261121",
-      "owner": "COO",
+      "owner": "SDE",
       "due": "W47 封存时点（已封存）",
       "acceptance": "W47 记录树原地保留可读可溯",
-      "depends_on": []
+      "depends_on": [],
+      "owner_basis": "卷主笔（sde-sunday-shot-preflight-readings-20261121.md·sde- 前缀执行席）——COO 异议采纳（原误填 COO·preflight→编排联想）"
     },
     {
       "family_id": "D",
@@ -143,7 +146,7 @@
       },
       "B": {
         "count": 25,
-        "owner": "16 项已有+9 项填件（CTO2/SDE3/CHO1/COO2/CPO0）",
+        "owner": "16 项已有+9 项填件（CTO2/SDE4/CHO1/BOD1/COO0/CPO0）",
         "A": "各条 owner（25 项全列·无空缺）",
         "R": "各条 owner",
         "C": [
@@ -176,14 +179,15 @@
           "sg-root-authz-review-20261120:CHO",
           "trimodel-dual-model-supply-20261118:CTO",
           "trirmc-bridge-dsh-20261116:SDE",
-          "trirmc-orchestration-fact-20261119:COO",
+          "trirmc-orchestration-fact-20261119:BOD",
           "w47-d47gate-hook-sync-20261122:SDE",
           "w47-dem009-p0-deploy-20261122:SDE",
-          "w47-sunday-shot-preflight-20261121:COO"
+          "w47-sunday-shot-preflight-20261121:SDE"
         ],
         "correction_note": "勘误（2026-11-25T04:10）：原写「其余 11 项按族主责」=误算——实=16 项本有 owner+9 项填件已定·25 项全列无空缺·无 11 项待补",
         "correction_note_v2": "CAO 异议采纳（2026-11-25T04:26）：owner=卷主笔席原则（非标题词义）——sg-root-authz→CHO（原误填 CAO）／d47gate-hook→SDE（原误填 CAO·域 owner≠树 owner）",
-        "correction_note_v3": "CPO 异议采纳（04:07）：rhy-trimodel-consumer-survey CPO→SDE（卷主笔 SDE·CPO 零主笔卷）"
+        "correction_note_v3": "CPO 异议采纳（04:07）：rhy-trimodel-consumer-survey CPO→SDE（卷主笔 SDE·CPO 零主笔卷）",
+        "correction_note_v4": "COO 异议采纳（04:10）：orchestration-fact COO→BOD（机构卷）／sunday-shot COO→SDE（第 4/5 例标题词义误判·卷主笔原则）"
       },
       "C": {
         "count": 2,
@@ -230,5 +234,6 @@
   "owner_principle": "families owner 按「卷主笔席」定（封存责任归主笔）·域 owner 另设字段或不设（CAO 2026-11-25 语义建议·采纳）",
   "self_check_request": "五席项按「卷主笔席」自查（CPO: rhy-survey/trimodel 系·SDE: trirmc-bridge·COO: orchestration/sunday-shot·CTO: release-rules/trimodel-dual·COS: OP 三件）",
   "raci_note_cho": "A/R/owner 逐项必填（36/36）；C/I 族级默认+item 级覆盖优先（CHO 2026-11-25 语义确认·防歧义）",
-  "owner_granularity_note": "树粒度为主+卷粒度可选字段（CPO 建议·采·多席卷树如 trimodel-dual-model 按树主卷主笔）"
+  "owner_granularity_note": "树粒度为主+卷粒度可选字段（CPO 建议·采·多席卷树如 trimodel-dual-model 按树主卷主笔）",
+  "org_volume_note": "机构卷（BOD 集散）owner 按实锚填 BOD 供 strict 非空校验·owner_type 标「机构卷（非员工席）」·语义面不占七席枚举（COO 建议②变通：BOD 作 owner 值但标机构卷）"
 }
