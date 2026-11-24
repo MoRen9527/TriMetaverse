@@ -14524,3 +14524,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - a=结构合法性（`_legal_target`·CARRY regex+item_id 形 `^[A-H]\d{0,3}$`+件名形·**静态 allowed 退役**）+RACI=覆盖率（`len(raci)≥items 总`+每 item 有键·**==36 删**）——items 34+raci 34→pass 实证。
 - **CTO 二自领**：「family enum A/B/C/D 固定」裁窄→FSD 扩 A-H（**族枚举=现役全集·families_n=4 是实例非上界**）。
 - resume27 残拍已裁→**点火 resume28 令发**（段 3 预期过·若过=新形第一次冲完整十段）。
+
+- ㊿+2235 **点火前对表（SDE 10 例挂名·真实树面）**：点起点（.shift-ade.json/.prev）／日期非尾（OP-202611-W47-001.json/.unresolved-items.md）／无 8 位日期（bod-tick/fade001-loop-joint-review/-W2/-W3/daily-progress.md/cfo-quota-daily-w47.md）——**须验 60d7fc5 的 _legal_target 能否过这 10 例**（特别点起点/日期中段/无日期三类形）——已发 CTO 实跑对表·不覆盖即扩 regex/改判据→报覆盖读数再点火（**防白跑第九轮**）。SDE 报基于 60d7fc5 前版但名单=真实树面必须对。
