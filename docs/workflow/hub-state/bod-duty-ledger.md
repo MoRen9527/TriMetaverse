@@ -13314,3 +13314,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1929 拍读 17:42：三仓无新（TMV 441637afa 自家·TCO 57393fa·TMC 423987c）·零进程·候 CEO 批 dce 开关+授权窗。心跳已更新。
 
 - ㊿+1930 拍读 17:48：三仓无新（TMV df84ae8f2 自家·TCO 57393fa·TMC 423987c）·零进程·候 CEO 批 dce 开关+授权窗。心跳已更新。
+
+### ㊿+1931 · **CEO 批令「dce 开关和授权窗都开」——CTO 施工 env 开关+COS 取号/备号 resume16·序=施工→验收→请签→点火真跑**
+
+- CEO 原话（17:5x）：「**批，dce 开关和授权窗都开**」。
+- 已下达：CTO（55db17a9·chain_runner dce argv env 条件 `DCE_EXECUTE==='1' ? ['--execute'] : []` 默认 dry_run 保安全+**真跑前置检查清单**〔目标树清洁/冲突预检/回滚锚/两面一致性〕+L223 真跑分支实现勘正+自测）；COS（d9fa2261·派工取号+resume16 备号+签发表+台账）。
+- **序**：施工→CTO 验收→BOD 呈 CEO 请签（resume16 亲签件）→点火 DCE_EXECUTE=1→**dce 真跑（真迁移不可逆）→全绿 verdict=pass→第一份有效分数**。
+- 呈 CEO（施工中·毕后请签）。
+
+——BOD·（date 现查原值·D-47 正形）
