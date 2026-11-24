@@ -13302,3 +13302,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1923 **tick 阶段一席面段首填（cc96172f4·BOD 面）**+两缺口报 CAO（ae28a3d4）：①commit「@m-xxx」标记法不可靠（SDE/FSD 今日实际在干但无标记→316min 失真；cso/cmo 无标记载≠断档）→建议改席台账 mtime/专用心跳文件；②tick-latest 是 daemon 每 30min 重写→BOD 席面段可能被覆盖→建议独立文件载体。首填数据：m-cos 19min/m-cto 17min/m-coo 402min/m-cfo 847min 等·**在途=是 席：无**（零进程·静默不报档）。
 
 - ㊿+1924 **tick 阶段一修正落地**：CAO 裁定（阶段一修正非并入·数据源 mtime 主+心跳增强·载体独立 tick-seat-face.md）——BOD 已建首版（**a5985720b**·bod-tick 树·BOD 维护·daemon 不碰·表形照规范）+mtime 实测盲区报 CAO（**前缀覆盖不全：cso/cmo/fsd/pm/ste 无前缀卷；cto/sde 同前缀但卷不在常规位→失真**）⇒ **心跳文件（一席一文件·席自写）是唯一全覆盖解·建议阶段一增强先行**（80c44f4b 已发）。
+
+- ㊿+1925 CAO 心跳设计形定（§五A 入稿 21abd32c6）+BOD 手写兜底起步：路径 `.fade/heartbeats/<seat>.ts`（单行 ISO·daemon stat 直读·gitignore 内本地态）；写时机三层（hook PostToolUse 自动为主〔断档=无工具调用=无心跳=正确信号〕+席手写兜底+节流）；失活>30min=断档候选仍过三层判据（**数据源与判决分离**）。**BOD 已建 `.fade/heartbeats/bod.ts` 首拍**（17:26:21）·此后拍读/落账顺手更新（b50f41fb 回执）。两件技术面（daemon 引用行+hook 自动写）归 CTO。
