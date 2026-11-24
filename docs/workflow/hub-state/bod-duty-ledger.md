@@ -14500,3 +14500,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2228 拍读 04:36：**resume27 在跑**（PROC=3·run dir shift-W48-resume27-20261124T203543Z·段 1-2 完·**段 3 plan_scope 关键时刻**）——due 修+数据全对后段 3 应过。patrol 行已追加。心跳已更。
 
 - ㊿+2229 **resume27 点火首笔（04:35:43·pid 3321203·preflight pass·prev=resume26）**：修复面在盘（445b052 fallback+aeb076e 签名）。**SDE 附 CTO 数据注**：resume26 plan items 用 **item_id 键**（无 target 键）·两项 owner None·**due 键 plan 层不存在（timebox 代替）**——**键形不匹配=残余 2 项真正机理**·CTO 定 d 件（item_id+去 .md 归一候选）。段 3 首验随报。
+
+- ㊿+2230 **CTO 键形实锚（04:34）**：plan items schema={**item_id**,desc,status,owner,**timebox**,acceptance,depends_on}——**plan 用 item_id 非 target·due 键不存在（timebox 代替）**⇒「due=None」=计划层无 due 键（非值缺）·**due 填充=填了 plan 不拥有的键（无效）**——CTO 面核 plan schema。**resume27 段 3=最终判据**（445b052+249e8f018 版在跑）·若全过=无需 d·若残=落 d（item_id 键优先+去 .md 归一）。
