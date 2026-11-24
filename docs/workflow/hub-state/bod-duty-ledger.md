@@ -14313,3 +14313,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2186 拍读 03:30+核修法：**R-HY default-model.ts 已改并提交**（**ef8d3ac** fix(model-alias): deepseek-v4-flash→deepseek-flash）·L26 实读「上游实名·CTO 令 2026-11-25」✓——**dist 重建/daemon 重启状态待 SDE/CTO 报**（dist js 未见/进程名未匹配·候其回执）。零进程。patrol 行已追加。心跳已更。
 
 - ㊀+2187 拍读 03:36：**修法双仓落**（TriRMC ef8d3ac〔03:27 default-model〕+**TriCompany 131fde3 03:32:58**〔agent-core FALLBACK_MAP 用上游实名 deepseek-flash+final safety net〕）——**dist 重建+daemon 重启+重取号重点待 SDE 报**（resume22 目录仍只有首点失败件 192045Z）。零进程。patrol 行已追加。心跳已更。
+
+### ㊿+2188 · **模型别名修·验收通过（03:40·supply-green·404 零）——双层根因揭（base_url 面 anthropic vs openai 路径=真主因·别名表因）——resume22 重点令下**
+
+- **验收**：TriRMC L26='deepseek-flash'（实名·注释含实读）+agent-core FALLBACK_MAP 修（131fde3）·dist 重建零 TS 错（顺手清 5 处既有 TS 债·26e9c98/cdd0050/931f1e3·round 63/63）·**重启链全绿**（stop→PORT_FREE→start→active→healthz 200→pid 对表）·**探针 {ok:True, supply-green, model:'deepseek-flash', delta_len:2}**·**journal 404 止于 03:38:49 修后零**。
+- **双层根因（FSD 全谱）**：a) **卡面 rmc base_url 指 anthropic 路径而 daemon 走 openai 路径**（/anthropic/chat/completions=404）=**真主因** b) 初刀 PUT 错面（mmc 卡）→查 face 表后 PUT /v1/config/cards/rmc 修正。**「配置-上游/卡面漂移」=DCA 族新例（双层）**。
+- **立件候批**：①「上游 /models 对表探针」〔SDE 面〕②「provider 路径类型 vs base_url 一致性探针」〔FSD 建议·更全·两层覆盖〕。
+- 已发 SDE 重点火令（重取号·六观察点）。
