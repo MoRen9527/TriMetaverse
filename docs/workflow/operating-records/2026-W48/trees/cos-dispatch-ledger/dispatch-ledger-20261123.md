@@ -138,6 +138,8 @@
 
 **DP-049 取号**（20:34·**normalizer 1 行修·CEO 追认「批」**）：CTO 已先施工验收（**3a265f1**）·保留·**与 charter-122210Z 5 items 合并同一施工批**（CEO「等任务书批了一起走修」）——批后统一施工·DP-049 批后留验·状态=已毕（候批留验）。
 
+**DP-050 取号**（21:58·**v8 14 items 施工批**·CEO 批「批，两件都批，施工完点火」）：①1-5 原 items（verify 硬门/plan 时标/条款入册/七席 fail-closed/run_id 统一）②6-7 捞回（upgrade_list 绑主责/余额 fail-safe）③8 判卷面 fail-closed ④**9-11 A/F/H**（plan-freeze/close-acceptance/值守拆分·**复算判据**）⑤**12 charter 全纳重写**（取消 slice(0,5)）⑥**13 CPO 态分档**（consumption_ratio 入 cpo-3+prod 直提设计）⑦**14 CFO 产出侧三件**（cfo-output-utilization/截断配对律/自有产出自查）——CTO 统筹·各席分件·验收=CTO·点火=resume19（B 档亲签）·状态=派发→在途。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
