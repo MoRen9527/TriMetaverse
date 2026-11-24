@@ -13684,3 +13684,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+2015 COS 呈批·任务书 **v4**（**018af6716**·**11 items**=原 5〔1-5〕+捞回 2〔6-7〕+判卷面 fail-closed〔8〕+A/F/H 三件〔9-11·复算判据〕·§七 细则全文附录 d9dac4943）——**一次批一次施工**（11 items+DP-049 留验+DP-046 验收）。呈 CEO 批（今晚最终呈批件）。
+
+### ㊿+2016 · **cho/cfo 缺口查清：两席全跑了且都提了改进项——生成器 aggregation 接到 7 条只纳 5 条（cho-1/cfo-1 被 drop）=CEO 捞回的正是这两条**
+
+- **实读 resume18**：opinions-cho.json（6886B·face.improvements 有·首条=upgrade_list 12 条绑主责「cho-1」）／opinions-cfo.json（5012B·首条=余额不可得 fail-safe「cfo-1」）——**两席全跑全提**（BOD 先前「improvements:0」系读错层·顶层无·在 face 内）。
+- **charter aggregation 真相**：items_before=**7**（7 席各 1 条全读到）·items_included=5（前 5 席）·**dropped 2=cho-1/cfo-1 两条**——**CEO v4 捞回的 items 6-7 正是这两条原文** ⇒ **缺口已被 CEO 捞回动作补上**。
+- **余一候选**：生成器为何 drop 后两席（体量/优先级逻辑）——候 CTO 核生成器逻辑（小缺口·记候选）。
+- 呈 CEO。
+
+——BOD·（date 现查原值·D-47 正形）
