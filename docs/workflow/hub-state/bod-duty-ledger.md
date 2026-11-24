@@ -14135,3 +14135,14 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CEO 问②原文**：「联审就出了 7 条意见，那么多审的维度都白审了？**分打那么低，就 7 条意见？那应该是高分才对啊，自己能解释通么**？」——**解释不通·矛盾成立**：42.6/100=57% 失分 vs 意见 7 条（每席 1 条）——**低分维未转改进意见**（ignite.log 已有 WARN「低分维未覆盖 lenient 留痕: flow integrity/ledger sync/…」=机制已知未治）——**正形=低分维必产意见（一维一条·不再每席限条）·意见与分数绑定**。
 
 - ㊿+2138 拍读 02:06：三仓无新·零进程——**候 CEO 裁两件**（①采集 a 引擎自动/b 值席 COS/c 混合 ②联审低分维一维一条·取消每席上限）。心跳已更。
+
+### ㊿+2139 · **CEO 裁：①采集=a（引擎自动·须讲详细过程+参与角色）②联审改=准（低分维一维一条·取消每席上限·「这才是根因」）**
+
+- CEO 原文①：「采集，a 这个给我讲出详细的采集过程和参与角色（员工和程序名）」②「**准，这才是根因，都大了低分，还找不到改进，就是丢了关键问题**」。
+- BOD 拟呈 a 案过程表（族/对象/动作/程序/落卷/员工角色）：
+  - **A**：jobs.json（/srv/fleet/TriRMC/data/cron/jobs.json）→活体探读+md5sum+json 值面→**score_engine.py 新 `_collect_a()`**（score 前置自动跑）→collection-A.json（producer=engine）
+  - **F**：alarm log（/var/lib/trirmc/cron/logs·healthz logPath）→触发行计数+RUN_ID grep+时戳差→同上 `_collect_f()`→collection-F.json
+  - **H**：patrol 记录（run_dir/patrol-log.jsonl）+dive 卷→存在性探测→有则读数/无→**na（loop-window N/A 自证·H verdict_rule 原文承）**→`_collect_h()`→collection-H.json
+  - **员工**：COS=值席（异常排查+看护）·CTO=规格+验收·SDE=部署推 R-HY·CAO=条款（制度形）·**BOD 不参与**（定位）
+  - **机制**：引擎 score 前置自动三采→落三件→逐件 run_id 校验→合成 entries（无人手合成·中间件废）
+- 联审改：低分维（<阈值）必产意见·一维一条·取消每席 1-3 条上限·意见与分数绑定——施工令待发 CTO。
