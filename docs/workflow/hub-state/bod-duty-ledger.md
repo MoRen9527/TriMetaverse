@@ -14453,3 +14453,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **修法四点**（准）：签名加 owner_map=None／prompt 用 `_owner_map_prompt_block(owner_map)`／L548 首次补传／**mock 用真签名+首次传递断言（关键）**。
 - **CTO 自领（机理级）**：**「FSD 的 fakes 随签 owner_map kw=测试 fake 有·真函数没有」=fake 掩盖真签名缺参**——「build green≠runtime green」的机理级解释。**教训入册**。
 - resume25 残拍已裁（件落·R2 语义）→修毕 CTO 验→BOD 点火 resume26。
+
+### ㊿+2221 · **CEO 令「修完就点火 resume26」=点火授权落定（不再请示）**
+
+- CEO 04:2x：「**修完就点火 resume26**」。
+- **授权链**：CTO 四点修毕+重验（含 spawn 实跑·mock 真签名）→报 BOD→**BOD 直发 SDE 点火 resume26**（不请示）·resume25 残拍已裁·round9 授权延续。
+- 已发 CTO 承。
