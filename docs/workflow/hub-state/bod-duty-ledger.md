@@ -13673,3 +13673,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2012 COS 勘正承录+第 21 笔自领（智能件当机判输入=设计根本缺陷）+**细则已改（d9dac4943）**：§零 前提修正（CEO 原话+性质+判据句）/§二 A 程序逐树重算 md5/size/counts 对表（不采声明为真）/§三 F 程序读告警日志复算+verdict 程序判/§四 H 程序读 patrol log 重数/§五 表头改「复算判据」+DCA L3 同族识别（DCA 第二应用面）。正形入 COS 设计工具箱：**任何模型产出件=声明候选·机判必程序复算对表**。呈 CEO 审后并入 v4。
 
 - ㊿+2013 拍读 21:12：TMV 47f88d8f3/d9dac4943（COS 细则勘正落卷·已报）·TCO/TMC 无新·零进程·候 CEO（A/F/H 细则审+v3 批）。心跳已更。
+
+### ㊿+2014 · **CEO 审过 A/F/H 细则（并入任务书 v4）+spawn 时序核查（resume18 cost-log 四段实证）**
+
+- **A/F/H 细则审过**（「合理，并入任务书一并等批」）——已发 COS 出 v4（v3 8 items+A/F/H 细则并入·skill 件=声明候选+机判复算·一并呈批）（2f97e2a4）。
+- **spawn 时序核查（resume18 cost-log 实读·四段全在）**：①**plan_skill spawn cos**·204.1s（12:02:05-12:05:29）✓②**score_skill spawn cos+coo**·207.9s（12:06:17-12:09:44）✓③**close_skill spawn cos**·146.8s（12:09:45-12:12:11）✓④**loop_joint_review 7 席 spawn**（cos/coo/cao/cpo/cto/cho/cfo）·597.0s（12:12:13-12:22:10）✓——**时序全对无倒置**（点火→plan→score→close→联审）。
+- **「主观题没判分」澄清**：段 7 两席评分**有**（cos I1:11/I2:8/I3:6·coo I1:10/I2:8/I3:6）；缺的是**最终判卷面**（subjective-score.json·值席三段落卷）→I 族 pending=「没人判卷」非「没评分」。另联审 7 席全 spawn（含 cho/cfo）——但 cho/cfo 意见未进 charter aggregation（SDE 缺口候核）。
+- 呈 CEO。
+
+——BOD·（date 现查原值·D-47 正形）
