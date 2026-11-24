@@ -13400,3 +13400,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 序：修 argv→自测→验收→传播→BOD 落件→SDE 核→点火 resume17→真迁移→第一份有效分数。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1948 CTO 开工回执（18:09:31）：A 案已派 FSD（845fd36d·即刻·chain L141-146 补两参+argv 断言两案+dry_run/execute 双态）；链=FSD 落码→CTO 验收→传播核（28f17eb4d 形）→报 BOD→BOD 落 resume17 亲签件+continue→SDE 四前置核+DCE_EXECUTE=1 点火；点火授权承（不需再请签）；如实=点火前仍核「dce argv 两参在盘+tag 锚在」（1 命令级）。
