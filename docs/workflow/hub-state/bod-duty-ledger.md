@@ -14357,3 +14357,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2196 **CTO 认领 R12 item3/6（分工+ETA）**：①CTO 主施工（plan_scope/plan skill 码面断言·FSD fab83c1e）+COS（plan 数据/owner 映射〔families 14 项四字段+RACI 36 五面〕·BOD 已发 5097f31a）+CAO/CHO（条款确认·语义归席）②ETA **~2h**（码面+数据面并行·如实不报虚数）③验收=resume22d 段 3 全过+RACI 36 键齐+owner 空=0④CARRY 入枚举（FSD）。拍读 04:00 三仓无新·零进程。随时报。
 
 - ㊿+2197 **R12 供数到位（04:01·CTO）**：①**COS owner 14 项定稿**（W47 树 9〔release-rules→CTO/rhy→CPO/sg→CAO/trimodel→CTO/bridge→SDE/orchestration→COO/d47gate→CAO/dem009→SDE/sunday→COO〕+W48 顶层 5〔OP×2+task→COS/.shift×2→SDE〕）——语义归席采②**36 items 分布 A1/B25/C2/D8**（RACI 供数）③CARRY 裁②（allowed 加 carry_over item_id·非 families 枚举）④数据面到位·**码面施工中**（FSD fab83c1e·families 四字段+RACI 36+CARRY 枚举）→CTO 验→resume22d 段 3 验·⑤码面 ETA ~2h 内。
+
+### ㊿+2198 · **CEO 令「继续盯·R12 码面完就重跑」=重跑授权落定（不再请示）**
+
+- CEO 04:0x：「**继续盯，R12 码面完就重跑**」。
+- **授权链**：CTO 码面毕→CTO 验（resume22d 段 3 判据）→报 BOD→**BOD 直发 SDE 重取号点火 resume22d**（不再请示 CEO·此令为据）·round9 授权延续（新 continue 件按需重落）。
+- BOD 拍读照旧·码面提交即报。
