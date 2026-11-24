@@ -14212,3 +14212,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 设计稿=cto-fade-spec-twotrack-and-rules-design-20261125.md（**923e5d09b**·sg 验真·呈批件形）：§一协议 **v2.0.6→v2.1.0**（§2.6 两轴分立：验收轴 80/retry/无进化 vs 进化轴 90-95/改 fade-001·禁混用三条+§7.5 按题审视 cli/skill 按题收回·**适用域=段 7 评分面不含联审**）／§二功能一「计划执行规矩」（规划 6 条可机判：族点名/标签/carry/考卷/双向断言/plan-freeze+dce 执行不偏 diff 三型）／§三功能二（**四格判据**：①执行不偏 cli ②结构 cli ③语义 skill ④真空 cli 初筛+skill 复核·**闭环提示「只有①②=形式化应付」**）／§四风险工时。
 - CPO 联署候（备料已注入）——联署完即呈 CEO 批。
 - **立法程序注**：协议类修订须 CPO/CTO/COS 三方联审（v2.0.x 先例=CEO 直批免窗）——呈 CEO 时附此选点。
+
+- ㊿+2157 **设计稿=双署齐（02:40·23a5764bf·CTO 主笔+CPO 正式联署）**：CPO 验卷实锚（§四④权重注全文+§一/§三产品面逐条一致）——联署通过。请呈 CEO 批。**立法程序注**：协议类须 CPO/CTO/COS 三方联审（CPO/CTO 已署·COS 席位=BOD 代办知会）·可照 v2.0.6 先例 CEO 直批免窗——已发 COS 知会（备审读意见候 CEO 选程序）。批后施工 ~2-3h（engine/plan_skill/dce 三处分件）。
