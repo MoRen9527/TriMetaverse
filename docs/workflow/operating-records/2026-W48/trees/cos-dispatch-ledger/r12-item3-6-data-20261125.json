@@ -1,0 +1,34 @@
+{
+  "sourceOfTruth": "R12 item3/6 数据面填充件（COS 供数·CTO 码面断言校验用）",
+  "run_ref": "shift-W48-resume22c-20261124T194410Z",
+  "prepared_at": "2026-11-25T04:18+0800",
+  "prepared_by": "COS",
+  "note": "owner 初判候 CAO/CHO 确认；due/acceptance/depends_on 按语义定；strict 缺即 fail 的字段均已非空",
+  "families_items_4fields": [
+    {"family_id": "B", "target": "release-rules-20261118", "owner": "CTO", "due": "W47 封存时点（已封存）", "acceptance": "W47 记录树原地保留可读可溯", "depends_on": []},
+    {"family_id": "B", "target": "rhy-trimodel-consumer-survey-20261121", "owner": "CPO", "due": "W47 封存时点（已封存）", "acceptance": "W47 记录树原地保留可读可溯", "depends_on": []},
+    {"family_id": "B", "target": "sg-root-authz-review-20261120", "owner": "CAO", "due": "W47 封存时点（已封存）", "acceptance": "W47 记录树原地保留可读可溯", "depends_on": []},
+    {"family_id": "B", "target": "trimodel-dual-model-supply-20261118", "owner": "CTO", "due": "W47 封存时点（已封存）", "acceptance": "W47 记录树原地保留可读可溯", "depends_on": []},
+    {"family_id": "B", "target": "trirmc-bridge-dsh-20261116", "owner": "SDE", "due": "W47 封存时点（已封存）", "acceptance": "W47 记录树原地保留可读可溯", "depends_on": []},
+    {"family_id": "B", "target": "trirmc-orchestration-fact-20261119", "owner": "COO", "due": "W47 封存时点（已封存）", "acceptance": "W47 记录树原地保留可读可溯", "depends_on": []},
+    {"family_id": "B", "target": "w47-d47gate-hook-sync-20261122", "owner": "CAO", "due": "W47 封存时点（已封存）", "acceptance": "W47 记录树原地保留可读可溯", "depends_on": []},
+    {"family_id": "B", "target": "w47-dem009-p0-deploy-20261122", "owner": "SDE", "due": "W47 封存时点（已封存）", "acceptance": "W47 记录树原地保留可读可溯", "depends_on": []},
+    {"family_id": "B", "target": "w47-sunday-shot-preflight-20261121", "owner": "COO", "due": "W47 封存时点（已封存）", "acceptance": "W47 记录树原地保留可读可溯", "depends_on": []},
+    {"family_id": "D", "target": "OP-202611-W47-001.unresolved-items.md", "owner": "COS", "due": "W48 顶层件裁定窗", "acceptance": "裁定结论落卷+OP 索引回填", "depends_on": ["OP-202611-W47-001.json"]},
+    {"family_id": "D", "target": "task-inventory-20261117.md", "owner": "COS", "due": "W48 顶层件裁定窗", "acceptance": "清单与树实况对表零差（族点名表形）", "depends_on": []},
+    {"family_id": "D", "target": "OP-202611-W47-001.json", "owner": "COS", "due": "W48 顶层件裁定窗", "acceptance": "JSON 合法+blockedItems/nextActions 回填", "depends_on": []},
+    {"family_id": "D", "target": ".shift-ade.json", "owner": "SDE", "due": "迁移窗（已 ignore）", "acceptance": "gitignore 在位+不入主库", "depends_on": []},
+    {"family_id": "D", "target": ".shift-ade.prev.json", "owner": "SDE", "due": "迁移窗（已 ignore）", "acceptance": "gitignore 在位+不入主库", "depends_on": [".shift-ade.json"]}
+  ],
+  "raci_36": {
+    "note": "36 items 分布 A=1/B=25/C=2/D=8；五面=A(accountable)/R(responsible)/C(consulted)/I(informed)/owner(统一主责席)",
+    "by_family": {
+      "A": {"count": 1, "owner": "COS", "A": "COS", "R": "COS", "C": ["CTO"], "I": ["BOD"]},
+      "B": {"count": 25, "owner": "按上表 14 项定稿+其余 11 项按族主责（记录树封存域）", "A": "各条 owner", "R": "各条 owner", "C": ["COS"], "I": ["BOD"]},
+      "C": {"count": 2, "owner": "CTO", "A": "CTO", "R": "FSD", "C": ["CPO"], "I": ["BOD"]},
+      "D": {"count": 8, "owner": "按上表 5 项定稿+其余 3 项按裁定域", "A": "各条 owner", "R": "各条 owner", "C": ["CTO"], "I": ["BOD"]}
+    }
+  },
+  "carry_family_note": "CARRY-20260728-004 族点名=CTO 码面入 allowed 枚举（我面配合已报）",
+  "confirm_needed": ["CAO", "CHO"]
+}
