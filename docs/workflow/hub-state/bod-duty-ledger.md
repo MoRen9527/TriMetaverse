@@ -14498,3 +14498,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **「数据版本时差 preflight 检查」= 采为 DP 候选**（数据 mtime>链启动→告警·防「核旧版」第 N 例）。
 
 - ㊀+2228 拍读 04:36：**resume27 在跑**（PROC=3·run dir shift-W48-resume27-20261124T203543Z·段 1-2 完·**段 3 plan_scope 关键时刻**）——due 修+数据全对后段 3 应过。patrol 行已追加。心跳已更。
+
+- ㊿+2229 **resume27 点火首笔（04:35:43·pid 3321203·preflight pass·prev=resume26）**：修复面在盘（445b052 fallback+aeb076e 签名）。**SDE 附 CTO 数据注**：resume26 plan items 用 **item_id 键**（无 target 键）·两项 owner None·**due 键 plan 层不存在（timebox 代替）**——**键形不匹配=残余 2 项真正机理**·CTO 定 d 件（item_id+去 .md 归一候选）。段 3 首验随报。
