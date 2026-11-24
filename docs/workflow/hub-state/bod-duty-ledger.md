@@ -14459,3 +14459,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CEO 04:2x：「**修完就点火 resume26**」。
 - **授权链**：CTO 四点修毕+重验（含 spawn 实跑·mock 真签名）→报 BOD→**BOD 直发 SDE 点火 resume26**（不请示）·resume25 残拍已裁·round9 授权延续。
 - 已发 CTO 承。
+
+### ㊿+2222 · **接口修验收通过（04:27·aeb076e·37 passed·真签名守卫）——点火 resume26 令发**
+
+- **验收**：双签名实读（_build_plan_prompt L483-485 owner_map 单一源／_spawn_seat L493-497 签名含 owner_map=None）+首 spawn L550-553 已传+重试同传。
+- **真面守卫（防同类）**：`inspect.signature` 含 owner_map+MagicMock 捕 run() 两次均 owner_map 非 None（+3 测试）——**fake 掩盖真签名=机理级修复**。
+- **FSD 自领**：CRLF 文件盲 replace 静默不匹配（assert 才现）→改 Edit 直改——**正形：CRLF 面禁盲 replace·assert 先行**（同族今日多例）。
+- **点火令 resume26 已发**（件已就位·prev=resume25 已裁·段 3 观察=owner 应填双保险）。
