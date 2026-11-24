@@ -14083,3 +14083,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **②resume21 段 8=run_state succeeded ✓✓**（三件修复首验）：seven_seats ok+degraded（source=resume20）+**478ca1c 权威化生效**+**notify_done 已发（01:36）**——**席自判 partial bug 三层封死实证·链首次真正跑通**。
 - **③resume21 现态**：段 1-9 全过（dce 四步再全绿·段 7 **I1:12/I2:7/I3:6**）·**联审已起（review-mode full·batch1 跑）**→A/B 与链终态随报。
 - **本日全链叙事**：dry_run 穿门→v8 14 items 施工（4 层门：dce/七席/时序/席值信任）→resume19/20 两挂→三件修复（e0a2f32/4552d1b/478ca1c+979da51）→**100/100+链通**。
+
+- ㊿+2126 拍读 01:42+resume21 score 读数：**run_state=partial·breakdown={machine 59.0, collection 0.0, subjective 0.0}**·families A/F/H=manual null（**缺 collection-score.json 单文件·resume20 那份 run_id 不匹配→manual**）·I=partial。已发 SDE（ee8349de·合成 resume21 版 collection-score.json〔run_id=resume21〕+I 族 run_id 对齐+score_cli 重跑+A/B 报）。TMV ab929cbc1（COS 1122·CTO 采正形「逐字段核运行时语义=今日最佳教训句」）。
