@@ -1,4 +1,4 @@
-# 任务书呈批件 **v5**·charter-20261124T122210Z（**12 items=11+生成器drop收敛**）＋DP-049 合并施工批
+# 任务书呈批件 **v6**·charter-20261124T122210Z（**12 items=11+charter全纳重写**）＋DP-049 合并施工批
 
 - sourceOfTruth: 本卷+`/srv/fleet/TriRMC/fade001-runs/shift-W48-resume18-20261124T120128Z/charter-20261124T122210Z.json`（5393B·schema 1.0.0·BOD 20:33 转全文）
 - 令源: CEO 20:3x「**等任务书批了一起走修**」（BOD 20:32）+「DP 取号修 normalizer 那 1 行，批」
@@ -11,7 +11,7 @@
 | charter_id | rN-task-20261124（source.run_id=**resume18**·5 items） |
 | status | pending_approval（**候 CEO 批**） |
 | items | **5 条**（cos/coo/cao/cpo/cto 各 1） |
-| aggregation | items_before=7·items_included=**12**（5 原+2 捞回+1 判卷面+3 A/F/H+1 生成器收敛·CEO 令） |
+| aggregation | items_before=7·items_included=**12**（5 原+2 捞回+1 判卷面+3 A/F/H+1 charter 全纳·CEO 令） |
 | 批复时点位 | `approval_comment: ______` ／ `approval_time: ______` |
 
 ## §二 · items 清单（5 条）
@@ -29,7 +29,7 @@
 | **9** | **A→plan-freeze**（CEO 审过并入） | **拍前冻结件** `plan-freeze.json`（COS 席规划期产·plan 有机产物）——**复算判据**：程序逐树重算 md5/size/counts 对表模型声明·不一致=fail·缺席 fail-closed | plan_skill |
 | **10** | **F→close-acceptance**（CEO 审过并入） | **告警汇总件** `close-acceptance.json`（COS 席收口·**对过程数据验收非重采**）——**复算判据**：程序读告警日志复算 total/by_family/max_latency·verdict 程序判 | close_skill |
 | **11** | **H→拆分**（CEO 审过并入） | plan 登记值守计划（谁/拍频/窗）+close 验收对表——**复算判据**：程序读 patrol log 重数拍频对表·缺对表 fail-closed | plan+close |
-| **12** | **生成器 drop 收敛**（CEO 批「收敛形」） | **a=每席保底 1 条+总上限保留（建议 10）**／**b/d 保留**（dropped 标 `opinion_id｜title` 源头+捞回溯源）／**c 取消**（保底即公平）——落点 **charter_generator L134-135**（现 `slice(0,5)` 全局硬截断→保底+上限逻辑） | charter_generator |
+| **12** | **charter 全纳重写**（CEO 21:2x 裁正·**取代 v5 收敛形**） | **①只收 7 席联审 opinions**（段 7 score-skill 的 improvements 排除·**核证：现生成器 L9/L37/L42 已只读 opinions.json·未混段 7 ✓**·加断言防未来混入）／**②debug/test 态=联审意见全纳**（**取消 L134-135 slice(0,5)**·无截断无 drop·a 自动满足·**b/c/d 全部取消**）／**③prod 态（>95 后）=每席直提一条**（不需 7 席全量联审·省 token·**记设计·prod 前落**） | charter_generator |
 
 ## §三 · dropped 2 条已捞回（CEO 20:4x 令「dropped 两条捞回来，并进任务书等批」）
 
@@ -85,7 +85,7 @@ charter aggregation（**原文直引·SDE 交付 e435482ec 附**）：`{"items_b
 | **7 席联审层** | `loop_joint_review_spawn` **L113-115** | **每席 ≥1 条**（可写「本席无改进」no-improvement 占位）·**无每席上限** |
 | **段 7 评分层** | `score_skill_spawn` **L42/L49** | **每席 ≤3 条**（可选·缺=合规范本） |
 | **charter 层（问题所在）** | `charter_generator` **L134-135** | **全局前 5 条硬截断**（`slice(0,5)`）——**不是每席一条** |
-| **收敛后（item 12）** | 同上改 | **每席保底 1 条+总上限 10**（超限 drop 带来源标 `opinion_id｜title`+捞回溯源） |
+| **收敛后（item 12·v6 重写）** | 同上改 | **debug/test=全纳无截断**（取消 slice(0,5)）／**prod=每席直提一条**（未来形态）——**v5 收敛形（保底1+总限10）已作废**（CEO 21:2x 裁正） |
 
 **诊断**：三层上限各自合理（联审保下限/评分限上限/charter 错在全局截断）——**item 12 修 charter 层**（保底+总限）·联审/评分两层不动。
 
