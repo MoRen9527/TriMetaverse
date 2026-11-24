@@ -13415,3 +13415,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（点火在即·A 案链全速）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1952 · **🎯🎯dce 真跑成功：migrate/commit/push 全 rc=0·verdict=pass（mode=execute）——第一份有效分数跑在路上**
+
+- **dce 四步实测（resume17）**：pull rc=0 ／**migrate rc=0（真迁移成功）**／**commit rc=0（TMV ffe47dee7「ops: weekly plane shift W47->W48 run=shift-W48-resume17」进仓）**／**push rc=0（真推送）**——**verdict=pass·mode=execute** ✓✓✓
+- **score：顶层 pass+inner pass 双通过**（P0 修复后正确形态——顶层不再与 inner 相悖）。
+- 现跑 score_skill（cos+coo 评分·dsh 席 1:39）——之后 7 席联审→**第一份有效分数**。
+- 链进度：preflight→qualify→plan→**dce(真跑✓)**→verify→score(pass)→score_skill(跑中)→close→joint-review。
+- 呈 CEO 快报（今日决定性节点）。
+
+——BOD·（date 现查原值·D-47 正形）
