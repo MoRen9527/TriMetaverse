@@ -47,6 +47,18 @@
 3. D 族 8 项**逐项列 A/R/owner**（§二 例外条）。
 条件满足→CHO 面无异议→**strict 可过→resume22d 可启**。C/I 族级声明须在 strict 件注「item 级覆盖优先」一句（防未来歧义）。
 
+## §六 · 复核补注（条件闭合·现件复读 2026-11-25 04:08:51）
+
+**现件版本**：`r12-item3-6-data-20261125.json` @ commit 14cfd004d（04:07:38·COS「两处映射改+owner_principle 入卷」）——本席 04:05 首读系旧版，**版本差确认**（CTO 判定据实）。
+
+**三条件闭合核对**：
+1. `sg-root-authz-review-20261120` → **CHO** ✓（现件实读）；另两处随 owner_principle 改：rhy-trimodel-consumer-survey→SDE／w47-d47gate-hook-sync→SDE（「卷主笔席原则」形·本席采认：owner=记录主笔席，非回执席）；
+2. D 族 8 项 **owner 全齐** ✓（5 填 COS3/SDE2 + 3 已有 company-demand-pool:CPO／daily-progress:CAO／cfo-quota-daily-w47:CPO）——原「余 3 项候查」已销；
+3. D 族逐项 A/R/owner 全列无空缺 ✓。
+
+**CHO 面结论更新**：**三条件齐→CHO 面无异议→strict 可过→resume22d 可启**（C/I 码面语义已由 CTO 复核：存在则 list·未列不要求·族级回落归数据面语义——本席建议形满足）。
+**教训自领**：数据件 confirm 须锚定**版本时点**（本次首读未带 commit 戳致误报缺口 b·候对表已勘正）——后续读供数件一律带`git log -1 <path>` 版本锚。
+
 ## 使用依据
 
 - COS 供数件 ed5c6d503（`r12-item3-6-data-20261125.json`·全文字段实读：14 项四字段+raci_36 by_family 全文）
