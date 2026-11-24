@@ -14626,3 +14626,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **H=engine 实判 fail**（三态机判生效 ✓·rationale=patrol-source 中位 6.0min vs plan 声明 15m 不一致）——**判据有效抓真问题**。
 - **BOD 判（对象分立）**：patrol-source 的 seat=**bod**（我写·**6m=CEO「6 分钟一读」令**）／plan.patrol_plan 的 15m=**值席守拍设计**（COS 面）——**两个主体两节律**·H 判据混比=对象错位——修法两选：a) plan 声明注明两节律（BOD 6m/值席 15m）b) 或统一 6m——**候 CEO 一句话定**（拍频基准是他定的）。
 - na 计分语义已定（na→weight 同 pass·F9 记满）；env 三件固化准；F 候 FSD glob 修。score 现 91（41+15+35·H0）。
+
+- ㊿+2261 **三路径修验收通过（05:19·5f01060·39 passed）**+BOD 两裁：①**H 节律=BOD 裁（对象分立）**：patrol-source=bod seat=6m（CEO 6 分钟令）vs plan 15m（值席设计）——**修 plan 声明标两节律**（bod:6m/duty:15m）·H 按同 seat 判·不请示 CEO。②**F 真缺口**：/var/lib/trirmc/cron/logs/ glob **0 个 .log**——已令 SDE/CFO 核日志实际位（healthz logPath 投影别处?）→修 TRIRMC_LOGS env。修后 collection 24→100。
