@@ -65,9 +65,10 @@
 
 ## §八 · 态分档的审-用配对（CEO 21:2x 批评响应·本批并入·候批）
 
-- **问题（CEO 批）**：prod 态（A/B>95）「7 席全量审→取一条」=产出远大于消费；应「每席直提一条」——省 token。
-- **配对表**：debug/test=全量联审·charter 全量映射（进化冲刺·价值优先）｜**prod=轻量直提每席 ≤1 条**·charter 直取（维持·成本优先）。
-- **配套**：①`consumption_ratio=charter_items/opinions_total` 入 cpo-3 证据形（prod 目标≈1:1）+tokens/consumed_item（CFO 读数）；②prod 直提形与 DCA 合流（直提一条=DCA 差距形·方法现成）；③prod 连续 2 轮零高危差距→可放宽评审间隔（候 CEO 批）。
+- **问题（CEO 批）**：prod 态（A/B>95）「7 席全量审→取一条」=产出远大于消费；应「每席直提改进意见」——省 token（**省点在不做全量七席联审·不在限条数**）。
+- **配对表**：debug/test=全量联审·charter 全量映射（进化冲刺·价值优先）｜**prod=轻量直提·每席直提改进意见（条数不限）**·charter 直取（维持·成本优先）。
+- **配套**：①`consumption_ratio=charter_items/opinions_total` 入 cpo-3 证据形（prod 目标≈1:1·直提即用）+tokens/consumed_item（CFO 读数）；②prod 直提形与 DCA 合流（每条直提=承诺-实现差距形·方法现成）；③prod 连续 2 轮零高危差距→可放宽评审间隔（候 CEO 批）。
+- **勘正注（CEO 21:3x·BOD 转达）**：原稿「每席 ≤1 条」系 CEO 笔误指正之对象——**「≤1 条」限制作废**，prod 态条数不限。
 - 详卷：`../fade001-evolve-20261123/cpo-prod-lightweight-review-selfreflection-20261124.md`（自省四条+设计改）。
 
 ## §九 · 候批件与留位
