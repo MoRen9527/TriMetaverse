@@ -14099,3 +14099,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 CPO（e8574ff5·产品面审：契约归属〔消费方定义〕+废/改三案+推荐）CTO（0e405cba·技术面审：直读三件/自动装配/前置合成三案+改动面+工时+兼容注）——联议报 BOD 呈 CEO。
 
 - ㊿+2129 **CTO 技术面审（01:40·与 CPO 联议中）**：三方案 a 直读三分离/b 采集方写合并形（并发冲突难）/c 保留中间件+前置自动合成——**推荐=a**（CEO 方向·最干净）：理由=中间件=人手步骤（今两坑实锚）·三席各写自己件无并发冲突·逐件 run_id 校验防错位。改动面=`_judge_collection` L307-333 改读三文件（~1h 含测试）+采集 prompt 三席 schema 统一（~30min）·风险=核心评分面（三分离缺一件→该族 manual 逐件降级）·**工时~1.5h**·**兼容双读**（新轮 resume22 起用新形·旧 run 保留·resume20 的 100 不受影响）。CPO 意见候（策略/采集协同面）。
+
+### ㊿+2130 · **resume21 联审 A/B 出分（A=42.6/B=43.51·七席齐·full·consumption_ratio=1）+CPO 产品审毕（a 案·与 CTO 同向）**
+
+- **联审读数（joint-review.json）**：seat_means={**a:42.6, b:43.51**, seats_a:7, seats_b:7}·objects={a:周工作平面迁移质量·b:fade-001 本身工作质量}·opinions_total=7（七席齐：cos/coo/cao/cpo/cto/cho/cfo）·review_mode=full·**consumption_ratio=1**（item13 字段生效·100% 消费）·dims a=28/b=27。
+- **判（如实·两轴分立）**：**过程分 100/100（链自证质量=v8 修的）vs 联审分 42.6/43.51（七席对工作质量的主观评估=CEO 目标 A>90/B>90 的那个轴）**——**两轴不同·离目标仍差 ~47 分**（修复后联审微调：早 41.78/43.84→今 42.6/43.51）。
+- **CPO 产品审毕（399b9a6e4·与 CTO 同向 a 案）**：推荐 engine 直读三分离件·**核心理由=归因粒度**（单件缺/坏→A/F/H 三族连坐 manual 无法定位；直读=缺哪件判哪席）——CEO「会出问题」实质。四件联议已复 CTO（verdict 三值含 na/producer_seat/rationale/evidence_ref 必填/双读兼容/采集协同 T+10min 窗+fallback）。
+- **候**：CTO 合稿→BOD 呈 CEO 裁（a 案+四件细节）。
