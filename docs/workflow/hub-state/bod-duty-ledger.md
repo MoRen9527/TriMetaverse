@@ -13598,3 +13598,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1997 拍读 20:30：TMV e47928f4b（COS **DP-049 取号**·normalizer 1 行·CEO 追认+与 charter-122210Z 合并批·批后留验）·TCO 3a265f1（DP-049 施工·已毕）·零进程——候 COS 出合并呈批件（5 items+DP-049+进度账）。心跳已更。
 
 - ㊿+1998 COS 回执（20:32）+BOD 直接转 charter 全文（8ad46ef3·免 SDE 代取）：①DP-049 取号（正式追认·3a265f1 保留·与 charter 合并批·批后留验）②呈批件三件并（charter 5 items+dropped 2 说明/DP-049/DP-042~049 进度账）③CTO 停点照令已转。BOD 把 charter-122210Z 全文要点直传 COS（5 items 速览+aggregation dropped 2 条·呈批件须含说明）。
+
+### ㊿+1999 · **COS 呈批：charter-122210Z+DP-049 合并呈批件（a7b3d0df0·含 SDE 附注：cho/cfo 意见未入 charter=缺口实例）**
+
+- 呈批件=cos-batch-submission-charter-122210Z-merged-20261124.md（**a7b3d0df0**）+原文（e435482ec·5393B）：§二 5 items／§三 dropped 2 直引（CEO 要捞回则批时句「捞回」）／§四 DP-049 已毕先施工批后留验／§五 DP-042~049 进度账／§六 批后统一施工。
+- **⚠️SDE 附注（重要）**：charter source opinion_ids=[cos/coo/cao/cpo/cto-1]——**7 席中 cho/cfo 意见未入**（三可能：无改进项通过／生成器 filtrate／未生成·候核）——**cpo-1 的「七席 fail-closed·opinions_in==7」正指此缺口——本 charter 自身即该缺口实例**。
+- 呈 CEO 批（三决策点：批 5 items 施工／dropped 2 是否捞回／cho-cfo 意见缺失怎么处理）。
+
+——BOD·（date 现查原值·D-47 正形）
