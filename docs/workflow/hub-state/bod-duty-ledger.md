@@ -13359,3 +13359,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1942 拍读 18:00：三仓无新（TMV 13881fe55 自家·TCO 802deff·TMC 321d8be）·零进程·**六项全✓定谳放行·候 CEO 签（resume16）**。心跳已更新。
+
+### ㊿+1943 · **CEO「签，复验过了就点火」——亲签件+continue 已落·令 SDE DCE_EXECUTE=1 点火 resume16（真跑）**
+
+- CEO 令原文（18:0x）：「**签，复验过了就点火**」（六项前置 CTO 定谳全✓=复验过）。
+- ①**亲签件已落**（resume15 正身目录）：charter_ref=charter-203018Z（5 items+**DCE_EXECUTE=1 重跑授权 round3**）·charter_commit=9cf8a4abc·approved_by=CEO·approved_at=2026-11-24T18:01:34+0800·signature_slot=round3·JSON_VALID·**sha256=0c7e4709…46f7**——四校验全过。
+- ②**continue 件**（同目录）：decision=continue·ruling_ref=DP-046-instruction-20261124T180000Z·signed_at=18:01:34·run_id=resume15·round_count=8·**sha256=e3373639…4524**。
+- 已令 SDE（5b8b9829）：四前置核→**DCE_EXECUTE=1 前缀点火 resume16**——预期 dce mode=execute·pull/migrate/commit/push 真跑（~1-2min）→四步 rc 全 0→verdict=pass→**第一份有效分数**；失败=门拒停+tag 回滚锚在。
+- 呈 CEO（点火在即）。
+
+——BOD·（date 现查原值·D-47 正形）
