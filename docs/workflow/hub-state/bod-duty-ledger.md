@@ -13904,3 +13904,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CEO 原文（23:4x）：「**TCO？CTO 吧，CTO 吧，他 idle 呢**」——①**术语澄清**：BOD 巡检用的「TCO」=TriCompany 仓简写（非 CTO 打错）·**此后弃用缩写改全名**；②**CTO 确 idle 1h+**（最后动作 22:39 item2 验收·之后无动作）——在等 FSD 提交好验收=**验收席干等施工席**（CEO 判词又一例）。
 - 已令 CTO（8d0e2e36·三件）：①催 FSD 问 item4 commit 到哪步 ②盯验收节奏（item4→9→10→11 逐件）③DP 收口（DP-046/049/050 不依赖 FSD 的现在干）。
 - 呈 CEO。
+
+- ㊿+2078 拍读 23:42：**item4 chain 侧已落**（TriRMC **eaf2837** 23:36:56·feat(v8-item4-chain): close_skill run_state=partial => stop chain, no notify_done (seven-seat gate, cpo-1 parity)）——**时序竞态实录**：SDE 23:34:17 照令执 stash（解 CFO item7 同文件冲突）·FSD **23:36:56 提交**（差 2 分钟·COO 已如实记风险「3min 差之毫厘」）；**CFO item7 已解锁**（15min 落地中）。TriCompany 侧 item4 断言待确认。零进程。呈 CEO。
