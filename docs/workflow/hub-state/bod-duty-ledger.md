@@ -13968,3 +13968,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发：**COS（4d2f46ad）**落签件+点火链启动+D-91 跑中盯；**SDE（584e477a）**四前置核（清场双零/continue prev=resume18/签件位/树清洁/flag debug/**DCE_EXECUTE=1**）+点火+首笔报。
 - 判据：四前置全绿才点火·任一红=停。
 - 观察目标：第一份修复后分数（A/B）+五断言第 5 条 tokens 对照。
+
+- ㊿+2098 **签件落定（BOD 凭 CEO 明示·三角分立照 1039）**：`shift-W48-resume18-20261124T120128Z/` 落 **ceo-charter-approval.json**（445B 七字段·charter_ref=DP-050 v8 14 items 施工批+resume19 点火授权·charter_commit=574b2d940·approved_by=CEO·approved_at=2026-11-25T00:29:34+0800·quote=「签，点火」·signature_slot=CEO direct-session sign-off round6）+**ceo-ruling.json**（200B 五字段·decision=continue·ruling_ref=DP-050-instruction-20261124T162934Z·run_id=shift-W48-resume18-20261124T120128Z·round_count=8〔resume18 final_state 实证〕）——R-HY 直落（fleet 面）·**JSON 双校验 OK**·**属主 root→chown fleet:fleet 归还**（防 root 残留雷）。已回执 COS（7881c7e6 验四校验）+SDE（fe621a56 复核五绿+DCE_EXECUTE=1 点火）。SDE 前置 ②红解。
