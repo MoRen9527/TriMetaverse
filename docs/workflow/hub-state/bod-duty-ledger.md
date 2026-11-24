@@ -13650,3 +13650,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（框架方案如上）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+2009 · **COS 呈：A/F/H 改造细则（8ef38a699·按 CEO 初衷）+呈批件 v3（e02bf0c79·8 items）候 CEO 审/批**
+
+- **A/F/H 细则**（cos-afh-refactor-detail-20261124.md·8ef38a699）：§一 总则=规划期冻结+验收期核验两段式·COS 两侧都在·每件必有机判（缺席 fail-closed）／§二 A→plan_skill plan-freeze.json（targets tree_id/path/md5/size/baseline_declared/source+counts·机判缺席 fail-closed/md5 漂移告警/counts 对不上 fail）／§三 F→close_skill close-acceptance.json（warning_summary+acceptance_inputs 过程引用非重采+verdict·verdict=fail 不发 notify_done）／§四 H→拆分（plan 登记值守计划+close 对表·plan 有登记 close 无对表=fail-closed）／§五 A/F/H+判卷面=四件同规则。
+- **呈批件 v3**（e02bf0c79·8 items=原 5+RESTORED-1/2+item8 判卷面 fail-closed〔CEO 已批直接并入〕）+§七 A/F/H 细则待审后并入 v4。
+- 呈 CEO（细则审+批 v3）。
+
+——BOD·（date 现查原值·D-47 正形）
