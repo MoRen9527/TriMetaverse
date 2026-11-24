@@ -13450,3 +13450,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1957 CTO compass 核证（18:25:47·四答）：①**机制=既有非 710 新造**（transpile-dsh-personas.py L201/L251+index.mjs 插件本体·`.claude/compass/*.session.md` 13 席手册=11-xx 已有内容）——**710 提交=R-HY 首次拉入这些内容**（插件本体此前 R-HY 没有）②**兼容性悬点**：R-HY overlay 若含 tricompass-context 挂载行→headless 席加载插件→rc=1 空输出（与 score_skill 症状吻合）③须 SDE 取三件（overlay 全文/dsh 完整 stderr/index.mjs headless 面）④**修法候选**：a=overlay 去挂载（v1 兼容形·最速可现场验证·改 overlay→单席冒烟→过=实锤）/b=插件修 headless ⑤不回溯承。已催 SDE 取三件（4ab38345）。呈 CEO。
 
 - ㊿+1958 CTO 补核·修法修正（18:25:58）：①**tricompass-context=设计 fail-open 插件**（头注：每 assembly 活读 compass·缺失降级空文本+stderr warn——**插件不阻断**·「context registered」=正常注册日志非错误）②**rc=1 因不在插件挂载**（「去挂载」候选撤回）——真因候 SDE 完整 stderr（a58a8352 取件中）③CTO 推测候验：a) **context 内容过大→token 超限**（session.md 全文注入 systemPrompt·13 席手册可能大）b) dsh headless PromptContext assembly 异常（0.2.0-rc.2 契约）c) 其他④修法候真因（a→裁剪摘要形/b→插件兼容修/c→dsh 侧）⑤双里程碑站住。
+
+### ㊿+1959 · **段 7 真因定谳（SDE 三件）：又是 max-tokens（同 resume13 族）·疑 A 条①「reasoning-first」反作用**
+
+- a) overlay=无 tricompass 挂载（1468B·grep 零命中）——「overlay 含挂载」假说=否；b) 席 stderr=纯 compass 注册 4 行（resume14 工作轮同样有=常态）；c) index.mjs=Oct 16 老件（885ab4c97·tag 前已在·非 710 新引入）。
+- **⇒ 真因=两席 turn/end=max-tokens（session 实证）·raw_out="\n" 零输出（推理吃满单步预算）——同 resume13 族**；**时序疑 A 条①「reasoning-first」反作用**（resume14 旧 prompt 成功→resume17 新 prompt 两席皆 cap）。
+- 修法候选已报 CTO（撤/改 A①·步数上限·maxTokens↑·retry）。
+- 链终态：fail 停段 7·零残留·**dce 真跑成果入史（ffe47dee7）+G 19/19+59 分有效（不回溯）**——呈 CEO 请裁修法方向。
+
+——BOD·（date 现查原值·D-47 正形）
