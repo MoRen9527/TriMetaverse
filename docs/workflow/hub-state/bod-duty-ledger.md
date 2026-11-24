@@ -14276,3 +14276,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 四件：①引擎自动采（`_collect_a/f/h`+直读三件+逐件 run_id·bak 可复用）②na 规则化（CPO 补·明文档规则表）③H 产出机制（patrol-log 定设计·CTO 补）④采集件轴归属字段（COS 补①延伸）。
 - 要求：分件提交逐件验·工时 %cI 直引不报虚数·历史轮双读冻结（旧 100 不动）。
 - 候 CTO 报：分工+ETA+落点。
+
+- ㊿+2176 **CTO 施工派工（03:00·5c06365a）+件③定形（engine 派生）+BOD 核 tick-log 源**：件③=engine 从 **tick-log** 派生 patrol-log.jsonl（ts/seat/cadence 归一·非值席手写·非循环·source 链明示）——**BOD 核**：tick-log 在位（tick-log-2026-11-25.md 7.1KB 03:07/tick-latest.md/heartbeats bod.ts）**但格式=md**——已发 CTO（787093a8·抽取规则或改格式规格·BOD 照改）+核 COO 侧产出面。ETA ~1.5-2h（05:00 前·%cI 直引）。历史冻结承。
