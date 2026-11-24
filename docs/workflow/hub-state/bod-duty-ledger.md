@@ -13446,3 +13446,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 链毕 18:21:20·零进程·完整终态：**dce 真跑 ✓**（里程碑）+**score pass·59.0 ✓**（有效分数）+**🔴段 7 score_skill 两席失败**（entries=[]·initial+joint 均 absent=true·**err_class=truncated_output**·rc=1·raw_out="\n" 空输出）——**P0 显式错类工作正常**（不再静默 absent）。
 - **新线索**：两席 stderr 均 `[tricompass-context] context registered: compass <- .claude/compass/*.session.md`（多条）——**compass 上下文注入机制**（疑随 710 提交进 R-HY）与 dsh 席兼容问题候选；联审未起（段 7 即挂）。
 - 已发 CTO/SDE 查（1b5936bc·compass 来源/dsh rc=1 完整 stderr/兼容性/修法）·不回溯双里程碑（段 7 面）。呈 CEO。
+
+- ㊿+1957 CTO compass 核证（18:25:47·四答）：①**机制=既有非 710 新造**（transpile-dsh-personas.py L201/L251+index.mjs 插件本体·`.claude/compass/*.session.md` 13 席手册=11-xx 已有内容）——**710 提交=R-HY 首次拉入这些内容**（插件本体此前 R-HY 没有）②**兼容性悬点**：R-HY overlay 若含 tricompass-context 挂载行→headless 席加载插件→rc=1 空输出（与 score_skill 症状吻合）③须 SDE 取三件（overlay 全文/dsh 完整 stderr/index.mjs headless 面）④**修法候选**：a=overlay 去挂载（v1 兼容形·最速可现场验证·改 overlay→单席冒烟→过=实锤）/b=插件修 headless ⑤不回溯承。已催 SDE 取三件（4ab38345）。呈 CEO。
