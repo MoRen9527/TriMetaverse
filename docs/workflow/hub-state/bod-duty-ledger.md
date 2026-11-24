@@ -14544,3 +14544,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **今晚连环收口**：resume22→29（模型别名/残拍链/plan 接入/接口/due/断言）——**快速修-验循环**（实测对表→修→1 分钟验→点）·**四条原则级教训**（build≠runtime/数据≠生成器/时序/稳定面）全落。
 
 - ㊀+2239 拍读 04:48：三仓（TriCompany 97febbb/58bc52c=a 修正面）·零进程——**resume29 待造**（SDE 取号四核中）。patrol 行已追加。心跳已更。
+
+### ㊿+2240 · **resume28 也挂了（20:45 跑·段 3 双因：a=旧 regex 批 'bod-tick'／b=两件 owner 空）——件落正确位+补映射令出**
+
+- resume28（04:45 点）段 3 rc=2：a) 'bod-tick' 不符族枚举/件名形（**60d7fc5 旧 regex**·97febbb 已修）b) **两件 owner=''**：trimodel-dual-model-supply-20261118／trirmc-bridge-dsh-20261116（by_target 未覆盖）。
+- **prev 实位=resume28 残拍**（SDE 报·BOD 令「resume27」已过期）→**BOD 重落件到 resume28 正身**（DP-050-resume29-instruction）。
+- 已发 CTO（b 面确认 97febbb 是否只修 a）+COS（补两件映射：trimodel→CTO/bridge→SDE+版本时差 DP 入册建议）。
+- **版本时差今日三咬**（resume26/28/27）——preflight 检查该落。
