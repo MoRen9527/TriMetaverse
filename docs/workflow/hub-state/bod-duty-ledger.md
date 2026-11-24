@@ -14400,3 +14400,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **点火令 resume24 已发**（新 continue 件落·纯数字规范号·前置复算 marker+ruling 双面堵竞态窗）。
 
 - ㊿+2209 拍读 04:12：**COO 自查贡献（台账 1241）**：两处词义误判（trirmc-orchestration 实 **BOD** 主笔〔第 4 例〕/w47-sunday-shot 实 **SDE** 主笔〔第 5 例〕）+建议「**BOD 机构卷不占席 owner**」（BOD 非员工）——**COS 已改（六席齐·数据面全闭·1133）**。**COO 断档今日第四笔 4h9min**（00:00→04:09 如实）。**resume24 目录已建**（20:11:34Z·0 json·PROC=0·待点确认）。patrol 行已追加。心跳已更。
+
+### ㊿+2210 · **rc=4 真根因=R2 残拍连锁（SDE 自领前判误）——BOD 已落裁到 22c 残拍（R2 语义）·设计裁请出**
+
+- **真根因（SDE 复算实跑）**：`state=awaiting-ruling·prior=shift-W48-resume22c·detail="残拍（pf 非空·无 close·未裁不放行）"`——**R2 残拍新逻辑**把「pf 非空+无 close」失败轮纳入 prev 候选（按 pf mtime）——22c（03:46 残拍）>resume21 →awaiting。22b/23/24 **在 pf 前失败未产残拍**（只写 ignite.log）。
+- **SDE 自领**：前报「竞态」=误判。
+- **BOD 落裁**（R2 语义·残拍已裁按其裁）：`shift-W48-resume22c-20261124T194410Z/ceo-ruling.json`（207B·run_id=resume22c·round_count=8）——已回执 SDE 重取号点火。
+- **设计裁请**（已发 CTO c79c7ee5）：a 残拍落裁〔本轮走〕/b 裁清残拍目录（引擎侧）/c 混合（自动标已裁/未裁）——**R2 新逻辑第一个连锁陷阱**（任一失败轮锁死下一轮）。
