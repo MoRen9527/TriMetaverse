@@ -12944,3 +12944,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - BOD 呈 CEO 一句（GLM 耗尽边缘+DS 充值待确认+COO 第三断）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+- ㊿+1822 拍读 10:24：TMV 新落卷 375e5b819（BOD 1821）+e6107aa7f（CFO COO 承录收编·充值推定态维持+断档如实档）·TCO 无新·零进程。**CEO 追问三轮次概念（resume14 round_count=8/resume 序号 vs 轮计数/debug 无限轮每轮停候批）——BOD 已答**：均对+补关键（round_count=跨点火累计·resume14 内部只跑 1 轮）+**新疑点：round_count 自 resume12 起连续 8 未推进·疑与 DP-037 同族待核**。
