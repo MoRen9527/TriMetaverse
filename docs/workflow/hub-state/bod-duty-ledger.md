@@ -13548,3 +13548,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（联审 A/B 随报）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1986 · **65536 执行毕（provider 实测接受）+SDE 试验层先行方法论采（BOD 自领「已加载不受影响」假设错）**
+
+- ①**maxTokens 65536=毕**（SDE 执行·CTO 验收）：备份在位（.bak-pre-65536-20261124T121043Z·1468B 原值）·**grep 0×16384·4×65536 ✓**·YAML-OK·**冒烟 rc=0（provider 实测接受·零 INVALID_REQUEST）**·试验件已清。
+- ②**SDE 方法优化=采**（试验层先行·同目录 copy 冒烟过才动主 overlay）——**BOD 自领**：「resume18 用旧 overlay 不受影响」假设**错**——在跑链的后续 spawn **即时读主 overlay**（spawn 时读）→若 provider 拒→联审席当场挂——**试验层零风险=好方法**（记一笔）。
+- ③resume18 双观察点全过（dce 二连真迁/cap 消失·DP-048 实锚）。
+- ④链续：段 8 close_skill→**联审将起（DP-043 八条标尺首生产轮+65536 首轮·观察=rationale 三要件/L1-L6 档位）**·A/B 随报。
+- 呈 CEO。
+
+——BOD·（date 现查原值·D-47 正形）
