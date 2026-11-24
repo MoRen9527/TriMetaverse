@@ -13254,3 +13254,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 ——BOD·（date 现查原值·D-47 正形）
 
 - ㊿+1916 COS 请签配套（17:06）：resume15 点火前置 B 档亲签件（**第二次完整适用**·照 resume14 形七字段+校验四件·点火前在位）——**本件批据=CEO 17:0x 五件全批（含 c3 双修 P0）+优先序（P0→重跑基线）·亲签件落件须引此令**。COS 模板/落位/校验已备·BOD 落件→COS 验件→SDE 四前置→点火。**候 CEO 签**（BOD 已呈）。
+
+### ㊿+1917 · **CEO「签」到（第二次）——亲签件+continue 件已落（sha 实证）·令 SDE 四前置核→点火 resume15**
+
+- CEO 签署令「**签**」（17:0x）。
+- ①**亲签件已落**（resume14 正身目录）：`charter_ref`=charter-20261123T203018Z（5 items·CEO 16:3x 批+17:0x 五件批+签重跑）·`charter_commit`=9cf8a4abc·`approved_by`=CEO·`approved_at`=2026-11-24T17:11:00+0800·`signature_slot`=CEO direct-session sign-off (BOD relay round2)·JSON_VALID·**sha256=ab65dc9a…1661**——四校验全过。
+- ②**continue 件已落**（prev=resume14 正身）：decision=continue·ruling_ref=DP-045-instruction-20261124T171000Z·signed_at=17:11:00·run_id=resume14·round_count=8·JSON_VALID·**sha256=0957152c…f132**。
+- 已令 SDE（4e7d91c6）：四前置核→点火 resume15——**本轮=P0 修复后首跑·dce dry_run 形态应被顶层 fail+gate 拒（若 dce 仍 dry_run 链会停）=修复生效验证点**。
+- 呈 CEO 一句·等点火读数。
+
+——BOD·（date 现查原值·D-47 正形）
