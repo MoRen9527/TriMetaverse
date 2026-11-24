@@ -14118,3 +14118,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2132 **合稿正身落卷（CTO 01:50·46df1834b）**：技术形七节（cto-collection-redesign-technical-20261125.md·sg 验真）·产品形正身=CPO 399b9a6e4+5280173e6（被引不复制）——a 案 engine 直读三件+逐件 run_id／na→weight（rubric special_clause 承）／双读兼容（历史冻结·旧 100 不动）／auto fallback 逐件兜底（evidence_ref 真路径堵假锚）／验收四判据／~2h（engine/probe/prompt/测试四态）。双同向+两技术注全采（CPO 确认）。**⇒ 呈 CEO 批**（批后施工·resume22+ 起新形·旧 run 回读不变）。
 
 - ㊿+2133 拍读 01:54：三仓无新（TMV 合同正身 46df1834b/53e7d8446 已见）·PROC=3（dsh 类残留非链跑）。**候 CEO 批 collection 重设计合稿**（批后施工 ~2h·resume22+ 起新形）。心跳已更。
+
+### ㊿+2134 · **CEO 两问：①「三席」哪来（勘：v8 原文=值席采集域·无三席之形·CTO 临时分工冒充制度）②联审意见→有实质意见（七席七条·含 CPO 实锤 collection-A hash 不符）**
+
+- **CEO 问①原文**：「采集 prompt：三席各写自己的件、不采=na+理由、禁部分分——**哪来的三席**？」——勘：**v8 原文=「值席采集域」（score_engine L37·值席=值班机制）·无「三席各写」制度句**——「三席=SDE/COS/BOD」=CTO 01:19 临时裁的采集责任分工·**冒充制度形**。已发 CTO 勘正（51be5f3e·合稿改「值席按 collection_cmd 采集·责任席=执行分工（临时可改）」or 新分工替代值席机制=设计变更单独呈批）。
+- **CEO 问②原文**：「联审每次都是不及 50 分，这次有什么建设性改进意见么？没有就滚回去重新提出能实质改进的意见。」——**有实质意见**（resume21 joint-review 七席 improvements 全为具体件）：**CPO=collection-A.json 的 md5 ed55ea97…/10421B 与现盘 6c1e44a6…/10420B 不符（采集件 hash 实锤不实！）**／CFO=护栏累计门 delta null 不得按 0 求和／CAO=upgrade_list 18 条逐条 clause_id/register_commit/effective_at/owner／CTO=close_contract 反控 run_state+ceo-ruling 三绑／COO=close/manifest false 时 fail-closed+六项／COS=裁决件三绑入卷+D-88 回执／CHO=owner 五面统一+顶层处置。
