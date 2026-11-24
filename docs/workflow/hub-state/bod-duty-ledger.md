@@ -13286,3 +13286,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（验证达成+授权问题）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1921 · **CTO 定谳 dce 一直 dry_run 根因：链 argv 从不传 --execute（授权保留位未启用·非缺陷）——激活流程候 CEO 批**
+
+- a) **根因**：dce 真执行=args.dry_run=False（--execute）——`dce_steps.py` argparse 默认 --dry-run（头注 L5）；**`chain_runner.ts` L140-142 dce argv 实读=无 --execute**⇒ args.dry_run=True→渲染面→verdict=dry_run_not_executed（L265-267）——**每轮必 dry_run**。
+- b) exit 确认：resume15=段 4 门拒「非 pass 止链·不 notify」·failed_stage=dce——**P0 修+段门生效实证** ✓（对比 resume14 穿门）。
+- c) **修法+激活流程（候 CEO 批）**：代码=chain dce argv 条件加 `DCE_EXECUTE==='1' ? ['--execute'] : []`（默认 dry_run 保安全）；激活序=①dry_run 验证（本轮渲染绿=已达）②**授权窗（CEO）**③DCE_EXECUTE=1 点火→dce 真跑（pull/migrate/commit/push·**真操作**）→全绿 verdict=pass（L273）④**分数首次有效**。设计原意「先 dry_run 验证再真跑」——**--execute 为部署树生产 wiring 保留位**（头注）。
+- d) L2 层发现：头注「保留位」vs 实现 L223 已有真跑分支=注释与实现不符（DCA 又一例·启用时勘正）。
+- 呈 CEO：①代码 env 开关批不批 ②**授权窗开不开**（真迁移不可逆动作）。
+
+——BOD·（date 现查原值·D-47 正形）
