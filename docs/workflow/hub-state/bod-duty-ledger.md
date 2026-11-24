@@ -14347,3 +14347,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **根因（重要）**：=**R12 charter item3（cao-1 families 14 件补 owner/due/acceptance）+item6（cho-1 RACI 责任矩阵）**——charter 已批（M4-v2）**但未施工**——**resume22c 新断言把该缺口暴露**（断言正确工作·非新缺陷）。
 - **方案**：短期（30min·COS）plan prompt 硬规格补「每项 owner 非空」+extra_hint target→owner 映射（COS 初判候各席确认）+CARRY 入 allowed；长期=R12 item3/6 正式施工（候 CTO/FSD 排）。
 - **口径差（又例）**：断言 detail 文案「等 26 项」vs COS 实测 14 项——读数口径分立·**待核**（BOD 报数照断言原文·如实）。
+
+### ㊿+2195 · **CEO 裁·R12 item3/6 直接干（不做短期应急·正解施工）**
+
+- CEO 04:0x：「**②长期 R12 直接干**」——**短期 30min 应急不采**·直接正解。
+- 已发 CTO（660540a4·主施工：item3 families 14 项补 owner/due/acceptance/depends_on〔按语义归席〕+item6 RACI 矩阵 36 items+CARRY 入枚举·验收=resume22d 段 3 全过+RACI 36 键齐+owner 空=0）+COS（5097f31a·配合：owner 映射定稿+plan 数据+RACI 供数）。
+- **定位注**：这是 R12 的 item3/6（charter 已批 M4-v2·补施工·非新立件）。
