@@ -14597,3 +14597,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **引擎自动采在跑**（collection 15 分）。
 - **三观察点待核（SDE 报）**：**na 三态/axis 字段/两轴标记在 plan items 与联审 dims 均零命中**（36 items 无 axis/na/covered_dims·联审 dims 无 axis/na）——候 CTO 指认「设计面应落哪层」。
 - patrol-source 源在长。
+
+### ㊿+2254 · **CTO 三件判面（两疑点定谳）**：I=partial 空（卷落即 35 分）／collection 疑子目录／covered_dims 属 improvements
+
+- ①**I 族=partial 空值（非判 0）**：state=partial·score=null·weight=**35**·reason「卷缺席」——**卷落=35 分入账**（COS 面落 subjective-score.json·v3 形）→CTO 重跑 score。（score-skill.json=席位分≠判卷卷·SDE 澄清对）
+- ②**collection 疑子目录**：件①（1ab3a3c）产物位=`run_dir/collection/collection-<F>.json`（**子目录**·SDE 平铺 ls 看不到≠未产）——请递归核（若真无→engine 生产者查）。
+- ③**covered_dims 属 improvements 面**（v1.3 对齐门非 dims）——候核 improvements 有无 covered_dims。
+- 已发 COS（落判卷卷）。
