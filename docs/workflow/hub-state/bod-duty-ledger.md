@@ -14588,3 +14588,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **今日五级里程碑**：真迁移→有效分数→完整分数→完整百分(100/100)→**十段全过**。
 
 - ㊀+2252 拍读 05:12：三仓无新·PROC=4（联审七席在跑）·joint-review.json 未现——候 A/B+六观察点。patrol 行已追加。心跳已更。
+
+### ㊿+2253 · 🏆**resume29 终报：十段全过+A/B=43.7/50.24（B 首过 50·升 6.7）+权重 65+35 实证——六观察点 3 项待核**
+
+- **链终态**：exit=null（debug 停）·run_state=succeeded·零残留·charter-20261124T211235Z 已生成·联审 7 席毕。
+- **A/B=43.7 / 50.24**（7 席·dims 28/27·v1.2）——**B 首次过 50**（前 42.6/43.51→今 43.7/50.24）｜comparability 1.0｜**DP-043 透传 55/55**。
+- **权重 65+35（v2.2.0）=✓ 实证**：machine_domain_weight=41·manual=24·subjective=35（41+24=65+35）·breakdown={machine 41, collection 15, subjective 0}。
+- **引擎自动采在跑**（collection 15 分）。
+- **三观察点待核（SDE 报）**：**na 三态/axis 字段/两轴标记在 plan items 与联审 dims 均零命中**（36 items 无 axis/na/covered_dims·联审 dims 无 axis/na）——候 CTO 指认「设计面应落哪层」。
+- patrol-source 源在长。
