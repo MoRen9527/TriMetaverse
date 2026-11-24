@@ -130,7 +130,7 @@
 
 **DP-044 取号**（16:48·CEO 五令批面三件+公式·BOD 16:45 转）：①**DCA 两稿落地**（99d8c1343+87d0b22e1·语义重定施工+DCA 进框架 v1.4·CTO 执行）②**tick 设计稿阶段一先行**（201cd6b4b·CAO·结构位人工先行/判据位候 CTO 评估）③**COO 运维职责获批·COS 协助 source-agents 更新**（SDE 归 COO 管）④**round_count 公式获批**（CTO 口径注记卷 f59325085 承）·**①语义重定施工已毕销账**（TriRMC **c55c317+5b10a67**·FUSE=test_consecutive_rounds 判据 L320+三清点〔setFlag L214/点火 L288/EXIT L321〕+E2 真路径测试〔seed prod+旧7→setFlag test→即读0→满8新轮熔〕·C 项并入 5b10a67·**round 62/62+chain 22/22 绿**）·②DCA v1.4 候 CPO 主笔（CTO 联署·87d0b22e1 已联署）·③tick 阶段一 CAO 已交（BOD 承下一拍起加）·④COO 运维职责 source-agents 已落（ba1382c·候 CHO 验收）。
 
-**DP-045 取号**（17:18·**c3 双修 P0**·CEO 批「c3 双修（P0）…都批」·CTO 已收施工令）：**A 主**=score_cli 顶层 verdict 纳入 engine verdict（L170·CLI 级 reasons 判→engine fail 传染顶层 fail·单一真源修正）/ **B 辅**=gateStageResult 改读 `doc.score?.verdict ?? doc.verdict`（inner 优先·旧件兼容）——**勘正注（17:22·CTO 实读为准）**：原写「gate 改读 dce verdict+engine_state」=COS 描述偏离（未实读 score_cli L170·凭 L56 单点推全链·自领第 18 笔）·P0 最优先·验收=CTO（独立 run-dir 实证 dry_run 不穿门）·销账锚候报·状态=派发→在途。
+**DP-045 取号**（17:18·**c3 双修 P0**·CEO 批「c3 双修（P0）…都批」·CTO 已收施工令）：**A 主**=score_cli 顶层 verdict 纳入 engine verdict（L170·CLI 级 reasons 判→engine fail 传染顶层 fail·单一真源修正）/ **B 辅**=gateStageResult 改读 `doc.score?.verdict ?? doc.verdict`（inner 优先·旧件兼容）——**勘正注（17:22·CTO 实读为准）**：原写「gate 改读 dce verdict+engine_state」=COS 描述偏离（未实读 score_cli L170·凭 L56 单点推全链·自领第 18 笔）·P0 最优先·验收=CTO（独立 run-dir 实证 dry_run 不穿门）·**已毕销账**（A=score_cli **57393fa**〔本机 14 passed·engine fail 传染顶层+rc2+reasons 注·根因注释在〕/B=gateStageResult **423987c**〔inner 优先 L51-64·旧件回落·detail 标 (inner)〕·**chain 24/24 绿**·**P0 闭环实证**：dry_run 不穿门〔dce verdict=dry_run_not_executed→engine fail→顶层 fail→gate 拒〕——销账锚=57393fa+423987c）。
 
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
