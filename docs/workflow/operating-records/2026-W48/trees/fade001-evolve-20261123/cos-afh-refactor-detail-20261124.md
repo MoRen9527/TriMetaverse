@@ -4,6 +4,20 @@
 - 令源: CEO 21:0x 原话「**A 的设计初衷是放在 plan skill 里，由 COS 来搞的；F 可以放在 close skill，有 COS 收口；H 可以拆分到 plan skill 和 close skill 里。并不是在 close 时去采集数据。是有规划有验收**」（BOD 转框架）
 - 时点: 写前现查 2026-11-24T21:05+0800（D-47 原值）
 
+
+## §零 · 前提修正（CEO 勘正 2026-11-24T21:0x·**并入前必须遵守**）
+
+**CEO 原话**：「**你这个机器可判的前提是他是智能处理过的结果，因为是 skill 可不是 cli，要注意**」。
+
+**性质**：`plan-freeze.json`/`close-acceptance.json` 是 **COS 席（LLM/skill）产出的智能件**——其中的 md5/大小/计数/verdict **是模型写的「声明」，不是程序算的结果**——**不能把声明当机判输入**（模型可能编造/幻觉 md5/写虚 verdict）。
+
+**判据句（三件套）**：
+> **skill 件=「声明候选」·机判=「程序复算+对表」·声明与复算不一致=fail**
+
+**与 DCA L3 同族**（卷面声称 vs 实现）——**此处是 skill 声称 vs 程序复算**。
+
+---
+
 ## §一 · 设计总则（CEO 初衷三条）
 
 1. **不是 close 时采集数据**——是**规划期冻结+验收期核验**（两段式）。
@@ -28,10 +42,11 @@
   "counts": {"trees": 26, "keep": 25, "carry_over": 2}
 }
 ```
-**机判规则**：
+**复算判据**（程序面·不采信模型声明）：
 - 缺席=fail-closed（plan 面无 freeze 件→plan 不合格）
-- md5 与执行期实际不一致→**漂移告警**（非直接 fail·记 drift）
-- counts 与 plan.json 对不上→fail
+- **程序逐树重算 md5/size** 对表模型声明——**不一致=fail**（不采模型声明为真）
+- **程序重数 counts** 对表——不一致=fail
+- 执行期实际 vs 冻结 md5 差异→**漂移告警**（非 fail·记 drift）
 
 ## §三 · F→close_skill：告警汇总件（close-acceptance.json）
 
@@ -51,10 +66,12 @@
   "verdict": "pass|fail"
 }
 ```
-**机判规则**：
+**复算判据**（程序面·不采信模型声明）：
 - 缺席=fail-closed（close 面无 acceptance 件→close 不合格）
+- **程序读告警日志复算** total/by_family/max_latency——**与模型声明不一致=fail**
+- **verdict=程序按复算结果判**（不采信模型写的 verdict）
 - **对过程数据验收（读 plan 期/运行期已产数据）·非重采**（CEO 初衷明确）
-- verdict=fail 时→不发 notify_done（与 cpo-1 同形）
+- 复算 verdict=fail 时→不发 notify_done（与 cpo-1 同形）
 
 ## §四 · H→拆分：plan 登记 + close 验收对表
 
@@ -66,15 +83,15 @@
 ```json
 {"watch_acceptance": [{"seat": "COS", "planned_cadence": "<>", "actual_count": <n>, "missed": <n>, "verdict": "pass|fail"}]}
 ```
-**机判规则**：plan 有登记而 close 无对表=fail-closed；missed>阈值→fail（阈值候 CEO 定）
+**复算判据**（程序面·不采信模型声明）：**程序读值守记录（patrol log）重数实际拍频**对表模型声明——**不一致=fail**；plan 有登记而 close 无对表=fail-closed；missed>阈值→fail（阈值候 CEO 定）
 
 ## §五 · 三族 manual→pass/fail（机判总则）
 
-| 族 | 机判读 | 缺席处置 |
+| 族 | **复算判据**（程序复算+对表·不采模型声明） | 缺席处置 |
 |---|---|---|
-| A（plan-freeze） | plan 期附件 verifier | **fail-closed** |
-| F（close-acceptance） | close 期附件 verifier | **fail-closed** |
-| H（watch 对表） | plan 登记×close 对表 | **fail-closed** |
+| A（plan-freeze） | **程序逐树重算 md5/size/counts** 对表 | **fail-closed** |
+| F（close-acceptance） | **程序读告警日志复算** total/by_family/max_latency | **fail-closed** |
+| H（watch 对表） | **程序读 patrol log 重数拍频** 对表 | **fail-closed** |
 
 **与判卷面同形**（subjective-score.json 缺席→partial·不发 notify_done）——**四件同规则**。
 
