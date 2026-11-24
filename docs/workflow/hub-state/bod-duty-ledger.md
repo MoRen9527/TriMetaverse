@@ -14511,3 +14511,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **新挂因**：①**a) 族点名越界 8 项**（OP-202611-W47-001.unresolved-items.md 等新 target 不在 allowed）②**item6 RACI 键数 34≠36**（缺/多=fail）。
 - **BOD 根因判断（根本矛盾）**：**plan=LLM 每次扫树动态生成**——target 集/RACI 键数每跑可变（36→34）——**静态白名单+固定计数断言必然追不上**——**「静态断言 vs 动态产出」设计矛盾**（今晚第四个结构类根本问题）。
 - 已发 CTO/COS 裁方案：a 白名单动态生成／b 断言改结构合法性／c RACI 改 ≥ 或与 plan items 一致／d 其他——**6 断言自身设计缺陷（CTO 自领面）**·修完 resume28。
+
+### ㊿+2233 · **CTO 裁（自领 6 断言设计缺陷）：稳定面 vs 动态面分离——a 改结构合法性/RACI 改覆盖率·~40min·resume28**
+
+- **CTO 自领**：6 断言=其 spec·a（静态 allowed 枚举）+RACI 36（固定计数）=**静态断言追不上动态产出**（LLM 每跑扫树·target/RACI 变）——设计缺陷。
+- **裁（原则级）**：**断言只判稳定面（族枚举 4/件名格式 regex/A-R 必填）·不判动态面（具体 target 名/固定 items 数）**——a 改结构合法性（target∈族枚举+件名 regex）·RACI 改覆盖率一致性（≥plan items 总+每 item 有对应键）。
+- **~40min**（FSD·两断言逻辑+测试）·修完 resume28（CEO 授权在）。
+- **今晚第四条原则级教训**：build≠runtime（fake 机理）／数据≠生成器／时序=状态机未显式／**判稳定面不判动态面**。
