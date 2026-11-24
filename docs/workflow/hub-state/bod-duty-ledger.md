@@ -13379,3 +13379,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO（真跑实证+首个真实问题）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1945 · **migrate 根因定谳（SDE 18:08:59·铁证）=chain_runner dce argv 缺两参（历史隐藏）——修法 A 候 CEO 批**
+
+- **根因**：dce.json steps.migrate cmd 原文=`--start-date （空）--operating-root （空）`→stderr「error: argument --start-date: expected one argument」·rc=2——**chain_runner dce 段 argv 缺两参**（历史隐藏：dce 一直 dry_run·cmd 从未执行·DCE_EXECUTE=1 首次真跑即暴露）——非迁移逻辑/冲突/权限问题。
+- **树态=无半态**（argparse 即败·零写入）·status=0·HEAD 5295cdc32（pull 真跑成功带入=正常）·**不需回滚**（tag 仍远期锚）。
+- **修法 A（最小·推荐）**：chain_runner dce argv 补 `--start-date`+`--operating-root`（dce_steps argparse 已有·仅链面未传）；B（dce_steps 缺省推导）不如 A。
+- **定调**：修复机制全链正常（真跑→fail→门拒停=**P0 后首次真实执行验证通过**）；migrate argv=新暴露真实缺陷（DP 候选）。
+- 已发 CTO（e223990b·裁 A/B+候 CEO 批后施工）；呈 CEO：**批 A 案→修 argv→传播→resume17 新签件→再点火**。
+
+——BOD·（date 现查原值·D-47 正形）
