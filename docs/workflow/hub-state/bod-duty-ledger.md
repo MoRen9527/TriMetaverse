@@ -13617,3 +13617,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2001 拍读 20:36：三仓无新（TMV f648c6b9a 自家·TCO 3a265f1·TMC 177b56f）·零进程·候 CEO 批（合并呈批件 a7b3d0df0·三决策点）。心跳已更。
 
 - ㊿+2002 拍读 20:42：三仓无新（TMV 131166ce2 自家·TCO 3a265f1·TMC 177b56f）·零进程·候 CEO 批（合并呈批件 a7b3d0df0）。心跳已更。
+
+### ㊿+2003 · **CEO 三问实读作答：A/F/H 定义+I1/I2/I3 定义+段7 retry 标准（无主观分 retry）+dropped 2 捞回 v2 已出**
+
+- **dropped 2 捞回**：COS v2 呈批件（**3356223aa**·7 items=5 原+2 捞回 RESTORED-1/2·aggregation items_included=7）候 CEO 批。
+- **A/F/H（值席采集域·31 分）实读**：A=拍前冻结（9 分·采集锚=活体探读+md5sum+值面值读）／F=告警面（13 分·alarm log 触发行计数+RUN_ID grep+时延；F2 免评分母零触发=满分）／H=值守窗（9 分·dive 预检读数卷+值席 patrol 拍频）。**采集主体=值席活体操作**（run_dir 无此数据·机判不冒充）——这轮值席未采集（COS 断档期）→manual 态。**不 retry 原因=设计现状**：manual 族不判 fail→score 仍 pass·retry 只对 fail 触发——**候选缺口**（A/F/H 未采集是否应 fail-closed partial 不 notify·待 CEO 裁）。
+- **I1/I2/I3（主观题族·段 7 两席评分）实读**（score_skill_spawn L32-33/L170-181）：**I1=搬移清单判断正确性（满分 14）／I2=规划合理度（满分 11）／I3=判断留痕质量（满分 10）**·35 分制→100 制映射；**扣分方=段 7 的 cos（initial）+coo（joint）两席**（非 7 席联审）；改进意见两套=段 7 两席 improvements（扣分理由）+7 席联审 opinions（charter 来源）；**段 7 无「主观分不过就 retry」标准**（fail 判据=席 absent/rc≠0·分低只进联审/进化判定）。
+- 呈 CEO（三问全答+v2 候批）。
+
+——BOD·（date 现查原值·D-47 正形）
