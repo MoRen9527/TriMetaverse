@@ -13994,3 +13994,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2103 拍读 00:57：三仓无新（TriCompany 0723255/TriRMC 58340d3）·零进程。**CTO 回执裁承**：①patrol 门降级已派 FSD（a481e25c·带留痕 WARN+reason·有则照对表·2 测试双态）②env 核已派 SDE（c9cbd24d·ignite env+5 席 stderr+启动面）——**两件并行**·毕→CTO 验→BOD 呈 CEO 知情→resume20 点火。CTO 承 a/b 附带全。心跳已更。
 
 - ㊿+2104 **patrol 门降级=验收通过（00:58·TriCompany 4552d1b）**：缺→{ok:True,degraded:True,reason:「patrol-log 无产出机制（设计缺口）·门降级留痕（WARN·非施工失败）」}+stderr WARN+sheet.patrol_check 落卷+不涉 run_state·**20 passed** ✓。**两级区分（FSD 实现好）**：供料缺失→降级 WARN／声明契约缺失（plan.patrol_plan 缺/不齐）→仍 fail／log 在但拍频不符→仍 fail——**门不取消·只对「没人产的东西」降级**。resume20 前置再候 SDE env 核（c9cbd24d）。
+
+### ㊿+2105 · **SDE 证伪 env 假说→真因勘正：item4 七席检查时序错位（v8 自身新 bug）+patrol 缺——段 7 有分（I1:10/I2:8/I3:6）**
+
+- SDE 三查（00:58）：①ignite env 未带 DEEPSEEK_API_KEY（真）·但 **dsh 凭证走 `~/.dsh/.credentials.yaml` 不经 env**——**铁证=resume14/17/18 同点火形七席全成功**→**auth 假说证伪**；缺 key 只影响 CFO balance guard（fail-open·investigate 告警非失败主因）。②**真因=段8 rc=2 双因**：a) **item4 七席检查时序错位**（close_skill 时本轮联审未发生→恒缺 5 席→partial→fail·**item4 自身新 bug**）b) patrol-log 缺（CTO 已裁降级·4552d1b 毕）。③**正面**：dce 四步第三轮全绿 ✓／**段 7 过（I1:10/I2:8/I3:6）**。
+- 已发 CTO（143f2581·重裁+派 FSD 修 item4 时序+教训「报根因前核同形成功先例」）。
