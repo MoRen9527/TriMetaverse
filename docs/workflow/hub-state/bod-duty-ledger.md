@@ -13606,3 +13606,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 呈 CEO 批（三决策点：批 5 items 施工／dropped 2 是否捞回／cho-cfo 意见缺失怎么处理）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+2000 · **CEO 问：dropped 2 条大白话+resume18 主客观分/扣分理由（BOD 实读 score/score-skill 全文作答）**
+
+- **dropped 2 条大白话**：①close.upgrade_list 12 条缺陷逐条绑主责席=结算清单里 12 条缺陷**每条写明「谁负责修·在哪修」**（防列了没人认领）②无人值守余额不可得 fail-safe=**自动跑时查不到模型余额要有安全兜底**（暂停而非盲跑烧钱）。
+- **resume18 分数实读**：**机判域（客观）=59/59 满分**（B 拍点形态 9/9·C run id 13/13·D preflight 9/9·E qualify 9/9·G 迁移链 19/19——**五族全 pass 零扣分**）；**A/F/H 值席采集域（31 分·manual）=待值席活体采集·未判非扣分**；**I 主观题族（10 分）**：两席原料=cos I1:11/14·I2:8/11·I3:6/10（扣 3+3+4）／coo I1:10/14·I2:8/11·I3:6/10（扣 4+3+4）——**最终判卷待值席面 subjective-score.json（缺席=pending）**；总盘 100=机判 59+A/F/H 31+I 10。
+- 联审 A/B=41.78/43.84=另一口径（7 席质量评估）·勿与 100 分制混。
+- 扣分理由（主观席 improvements）：run_id 统一与 retry 隔离/密封判定 mtime 复核/逐件留痕去模板化等。
