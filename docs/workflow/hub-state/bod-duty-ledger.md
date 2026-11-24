@@ -14035,3 +14035,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **修法候选**：TC 加「`_ss.degraded=True`→强制 `sheet["run_state"]="succeeded"`」（降级覆盖席值·形同 patrol）or run_state 不信任席值（TC 统一判）。
 - 已发 SDE（b6382d17）取 close-skill.json 三值（run_state/seven_seats 段/seven_seats_partial）定谳。
 - **注**：若成立=「席智能判断污染机判数据流」又一例（CEO「skill 不是 cli」教训+1）。
+
+- ㊿+2115 **定谳闭环（01:21·三值+SDE 铁证）：partial 真源=COS 席自输出（close 席 session-68b4 run_state:"partial" 5634 chars）——seven_seats={ok:true,degraded:true,missing:[cao,cpo,cto,cho,cfo],source:resume19}=e0a2f32 正确降级 ✓**。CTO 修法三件已派 FSD（**b5d55c60**）：①TC 权威覆盖（if _ss.ok→succeeded·degraded 亦 ok）②prompt 删席自判（防任意 failed/partial）③链面辅防（L294 加 seven_seats.ok 条件）。**resume21 前置=此三件**（毕→CTO 验→BOD 呈 CEO 知情→点火→预计首份完整分）。A/F/H 采集三席并行（SDE-A/COS-F/BOD-H）。
