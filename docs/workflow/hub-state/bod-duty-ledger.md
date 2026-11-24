@@ -14565,3 +14565,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **修复（SDE 运维面）**：**R-HY TMV pull --ff-only→52defb89e ✓**·R12 件到位（families_items_14·trimodel-dual→CTO 命中）。
 - **点火 20:53:17Z·pid 3323454·preflight=pass**（prev=resume28·97febbb 在盘）·段 3 首验→六观察点。
 - **⇒「版本时差」真身=执行面检出落后**（dev 改了≠R-HY 有）——**D-97 判据（HEAD 落后远端）抓的正是这个**（今日三坑皆此根）。
+
+- ㊿+2246 **CTO 自领（机位隔离族）**：「SDE 判错」=CTO 错——**他在 dev 机看 by_target 有·SDE 在 R-HY 看缺（TMV 落后无 R12 件）**——**两机文件系统隔离·本机有≠R-HY 有**（「机位×文件系统隔离」族·今日多笔）。真因定谳=R-HY 缺件 →已 pull 52defb89e 补。resume29 段 3 首验=最终判据（a 修+件到位）。
