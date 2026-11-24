@@ -13970,3 +13970,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 观察目标：第一份修复后分数（A/B）+五断言第 5 条 tokens 对照。
 
 - ㊿+2098 **签件落定（BOD 凭 CEO 明示·三角分立照 1039）**：`shift-W48-resume18-20261124T120128Z/` 落 **ceo-charter-approval.json**（445B 七字段·charter_ref=DP-050 v8 14 items 施工批+resume19 点火授权·charter_commit=574b2d940·approved_by=CEO·approved_at=2026-11-25T00:29:34+0800·quote=「签，点火」·signature_slot=CEO direct-session sign-off round6）+**ceo-ruling.json**（200B 五字段·decision=continue·ruling_ref=DP-050-instruction-20261124T162934Z·run_id=shift-W48-resume18-20261124T120128Z·round_count=8〔resume18 final_state 实证〕）——R-HY 直落（fleet 面）·**JSON 双校验 OK**·**属主 root→chown fleet:fleet 归还**（防 root 残留雷）。已回执 COS（7881c7e6 验四校验）+SDE（fe621a56 复核五绿+DCE_EXECUTE=1 点火）。SDE 前置 ②红解。
+
+### ㊿+2099 · 🚀**resume19 已点火在跑（00:30 拍读：pid 3288185+3288197·run-dir=shift-W48-resume19-20261124T135559Z·23 秒前启动）**
+
+- PROC 实证：`bash -c cd /srv/fleet/TriCompany && nohup tsx /srv/fleet/TriRMC/scripts/fade001-ignite.ts --run-dir .../shift-W48-resume19-20261124T135559Z --run-id shift-W48-resume19-20261124T135559Z --from-week W47 --to-week W48 --start-date 2026-11-23 --tmv-root ... --checks-json {A1-A4 true}` → pid **3288185**（node tsx）+**3288197**（preflight）·**etime 00:23=23 秒前启动** ✓。
+- 三仓：TriCompany 0723255/TriRMC 58340d3（v8 末件）+TMV 自家。
+- **段 1 preflight 起跑**——盯段 1-10+第一份分数（A/B）+五断言第 5 条 tokens 对照。
