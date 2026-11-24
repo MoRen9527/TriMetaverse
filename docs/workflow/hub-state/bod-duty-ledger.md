@@ -13008,3 +13008,15 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 CTO（1561230a·A 施工+三项语义重定设计稿候批）+CPO（2b1d04e9·审计维度出稿）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1846 · **CTO 设计稿已出（99d8c1343·呈 CEO 批）：A 已定形派工·两字段分离·B 建议撤销·E2 已有**
+
+- ①**A 定形（已派 FSD b9bd8a6e）**：**非重置 round_count** 而=**FUSE 判据字段切换新字段 `test_consecutive_rounds`**（点火/退出 test/回 test 清 0）——解死锁且与两域分离一体。
+- ②**FUSE 判据=`test_consecutive_rounds>=8`**（test 连续进化 8 轮不论根因）——「同根缺陷连续计数」废止（异根重置作废·仅注释）。
+- ③**两字段分离**：`round_count`=累计运行轮次（永不重置·统计域·含 debug/resume）／`test_consecutive_rounds`=FUSE 判据域。
+- ④**B（分域）建议撤销**（新语义下已被③覆盖·候 CEO 裁）。
+- ⑤**态关系**：现盘已有 **E2**（DP-027·prod 双≤95→auto fallback test）=prod→test 自动回进 ✓·无 prod→debug 自动支路（符合「手动=兜底」）✓——设计=E2 保持+test 自动进化回 prod；E2 施工核时 test_consecutive 清 0（已入 A）。
+- ⑥**Q1 承接清单**：carry_over 材料 10 件/resume_stage/state 字段 9 项/**runId 每次点火新建**（承接材料不含 runId）。
+- BOD 呈 CEO 批设计稿+B 撤销请裁。
+
+——BOD·（date 现查原值·D-47 正形）
