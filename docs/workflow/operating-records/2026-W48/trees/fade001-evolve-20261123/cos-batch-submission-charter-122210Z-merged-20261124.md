@@ -1,4 +1,4 @@
-# 任务书呈批件 **v6**·charter-20261124T122210Z（**12 items=11+charter全纳重写**）＋DP-049 合并施工批
+# 任务书呈批件 **v7**·charter-20261124T122210Z（**12 items=11+charter全纳重写**）＋DP-049 合并施工批
 
 - sourceOfTruth: 本卷+`/srv/fleet/TriRMC/fade001-runs/shift-W48-resume18-20261124T120128Z/charter-20261124T122210Z.json`（5393B·schema 1.0.0·BOD 20:33 转全文）
 - 令源: CEO 20:3x「**等任务书批了一起走修**」（BOD 20:32）+「DP 取号修 normalizer 那 1 行，批」
