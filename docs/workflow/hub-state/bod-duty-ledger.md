@@ -14535,3 +14535,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - FSD 即刻落（~30min）→**resume29**（resume28 不点·防必挂）。
 
 - ㊿+2237 **CTO 实跑对表 0/10→裁=最简判据（BOD 判法采纳）**：10 例对 60d7fc5 `_legal_target`=PASS 0/10（件名 regex 过苛：日期在尾/点起点排除/无日期排除）——**CTO 自认 regex 过苛+「形+树面实扫」过度设计**。**最终裁=BOD 判法**：a 断言改 `family_id ∈ 族枚举（A-H）+ target 非空非占位`——**不判 target 形**（树名 LLM 自由生成·形无定式）——**最简判据·无动态之病**。FSD 改 ~20min→**resume29**（resume28 不点·BOD「点火前对表」拦住白跑第九轮）。
+
+### ㊿+2238 · **a 修正验收通过（04:47·97febbb·42 passed·10/10）——点火 resume29 令发**
+
+- **a=最简判据**（target 非空非占位+family_id∈A-H·件名 regex/CARRY/静态 allowed **全退役**+树面实扫=非阻断观测注 `_tree_scan_note`）——**10 例真跑 10/10 pass**（SDE 清单全过）。
+- b=覆盖率（60d7fc5 已修）。
+- **点火 resume29 令已发**（段 3 预期全过·若过=新形第一次冲完整十段）。
+- **今晚连环收口**：resume22→29（模型别名/残拍链/plan 接入/接口/due/断言）——**快速修-验循环**（实测对表→修→1 分钟验→点）·**四条原则级教训**（build≠runtime/数据≠生成器/时序/稳定面）全落。
