@@ -14466,3 +14466,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **真面守卫（防同类）**：`inspect.signature` 含 owner_map+MagicMock 捕 run() 两次均 owner_map 非 None（+3 测试）——**fake 掩盖真签名=机理级修复**。
 - **FSD 自领**：CRLF 文件盲 replace 静默不匹配（assert 才现）→改 Edit 直改——**正形：CRLF 面禁盲 replace·assert 先行**（同族今日多例）。
 - **点火令 resume26 已发**（件已就位·prev=resume25 已裁·段 3 观察=owner 应填双保险）。
+
+### ㊿+2223 · **resume26 段 3 残余仅 2 项（75→2·双保险生效 97%）——映射键匹配查中**
+
+- resume26（04:28:09 点·pid 3320391·preflight pass）段 3 rc=2：**verdict=fail 6 断言拒·但 detail 从「75 项空 owner」缩到「2 项四字段缺/占位」**：`w47-sunday-shot-preflight-20261121` owner=None/due=None + `...20261117` due=None——**双保险（prompt 注入+后处理）主体生效**。
+- 已发 CTO（查两 target 在 R12 by_target 17 对里的键匹配/补映射〔owner=SDE·COO 第 5 例定〕/后处理键比对勘）。
+- 修毕→BOD 点火 resume27（CEO 授权在）。
