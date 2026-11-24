@@ -13244,3 +13244,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+1913 CAO 回执（17:05:23·三件全落）：①**D-95 入册**（TC@35f11a3·六款·候选 TMV@85f81b926·批准锚=本令）②**D-96 入册**（TC@35f11a3 同笔·候选 TMV@82b068fb1·批准锚=本令+charter-203018Z item-3·两件独立批一入一未打包）③**记忆资产化机制落地**（TMV@bf1f5f11b·首次登记五条全 T1：monitoring-green→tick 条款已转化／topology-assertion→D-92 款1／org-memory→设计源／truncation-artifact→D-89／object-assertion→待转化观察·无 T2·T3 次月起）④**CAO 自领一处历史失误**：D-92/D-93 批准记录错位（前日插条锚点选错遗留·已归位同笔提交）⑤待办注销（CHO 63b95c5+复渲 e2e86cab1→registry 补锚 TC@cf367fb）。优先序不抢跑。呈 CEO。
 
 - ㊿+1914 拍读 17:06：**c3-A 已落（TCO 57393fa 17:06:02 fix(c3-a): engine verdict propagates to score_cli top-level·fail=>fail+rc=2）**——engine fail 传染顶层+非零退出码双保险；等 B 辅+验收。三仓其余无新·零进程。
+
+### ㊿+1915 · **🎯P0（DP-045·c3 双修）两件验收通过·P0 闭环——候 CEO 签→点火 resume15（第一份有效分数）**
+
+- ①A（主·score_cli·TC **57393fa**）=**14 passed**·实读 L168-182：`_engine_fail=(score.score.verdict=='fail')`→`if reasons or _engine_fail:`→顶层 fail+**rc2**+reasons 注「engine verdict=fail（c3 传染面）」②B（辅·gateStageResult·TriRMC **423987c**）=实读 L48-70：`inner=doc.score.verdict`→`v=String(inner ?? doc.verdict)`·旧件回落·detail 标 (inner)③测试=score_cli 14 passed+chain **24/24**（+4 新案：engine fail→fail/rc2、gate inner fail+顶层 pass→拒）。
+- ④**⇒ P0 闭环**：dry_run 不再穿门（dce verdict=dry_run_not_executed→engine fail→**顶层 fail→gate 拒**）。
+- ⑤下一=**重跑基线 resume15（第一份有效分数）**——点火前置 B 档（**亲签件**）——**呈 CEO 请签**；签后 SDE 四前置核+点火。⑥v1.4 施工排 resume15 后。
+
+——BOD·（date 现查原值·D-47 正形）
