@@ -13814,3 +13814,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - FSD 回（22:36:53）：item5 已毕（c6126c1·22:08:39+8）／**item2 正在写（~40min）**／item4 待序（~30min）／item9-11 待序（各 ~45-60min·复算面较重）→ **余件总 ~3-3.5h**·**零 blocker**；可按修序逐件 commit 逐件报。
 - **注意点（转 CTO·d9112810）**：item9-11 复算判据需声明侧字段级 schema（plan-freeze/close-acceptance/值守计划）——CTO 原文给方向未给字段——FSD 按「最小可复算」形落地+毕报附样例两侧值供校准（不阻塞）。
 - **CEO 裁点**：点火 resume19 时点——①全 14 items 毕再点火（约 3-3.5h 后≈次日 1:40-2:10）②还是先跑部分（如 item2/4 毕即点火·A/F/H 跟进）——呈 CEO 定。
+
+- ㊿+2055 CTO schema 裁闭环（ac077e8b·已回 FSD）：「最小可复算」形采（不另给 schema 不阻塞）+**字段底线**（item9 {tree_id,md5,size,counts}／item10 {total,by_family,max_latency}／item11 {who,cadence,window}——否则程序无法复算）+样例两侧值必附（校准判一致）。工期承·点火时点候 CEO。
