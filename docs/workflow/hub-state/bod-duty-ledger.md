@@ -14045,3 +14045,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **F 族毕但落位错**（COS·collection-F.json 500B·**落 resume19**）：alarm log=/var/lib/trirmc/cron/logs（healthz logPath 投影实证·TriRMC app.ts L152）·15 日志零触发=满分（F2_ZERO_TRIGGER_FULL_SCORE）——**已令重落 resume20**。
 - **I 族三段链路（COS L397 原文）**：**①初判值席 ②联审 ③终判卷 COS**——engine `_judge_subjective` 消费·卷缺席=pending（item8）。已令 COS 定三段责任+终判时点。
 - A/F/H 齐后→score 补判→百分（59+31+10）。
+
+### ㊿+2117 · **A/F/H 三族齐（resume20 目录）+I 族三段定责闭环——已令 COS 判卷/CTO 补判**
+
+- **三族齐**：collection-A.json（SDE 1311B）/collection-F.json（COS 500B·重落毕）/collection-H.json（BOD 823B）——均在 resume20 run_dir·fleet:fleet——**A/F/H 31 分可算**。
+- **I 族定责（COS 考卷原文实证）**：①初判=**值席（值班位席）**自判+落卷（rationale+evidence_ref+时点戳）②联审=**可选**（仅 fail/边界/分歧三触发）③**终判卷=COS**（分差≥2 强制复核）·时点=评分汇总后·产 subjective-score.json·三判据 I1=4/I2=3/I3=3·锚文 36bf14a1d L44（记录随周封存·活随人带走·radionale 必含）。
+- **已发**：COS（229b4654·判卷即刻·一人两角留痕可行）/CTO（44531fe9·定+执行 score 补判机制·报读数）。
+- **百分拼图**：机判 59（B/C/D/E/G ✓）+A/F/H 31（✓ 采集齐）+I 10（COS 判卷中）=100。
