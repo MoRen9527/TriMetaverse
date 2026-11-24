@@ -14378,3 +14378,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 发点火令**（照 CEO「码面完就重跑」授权）：新 continue 件已落（DP-050-resume22d-reignite·resume21 正身）·**run_id 请规范形**（上轮 resume22c 含字母不符规则）·四核即点·段 3 预期过。
 
 - ㊀+2203 拍读 04:06：三仓（TriCompany f03073d/a01459c=码面三件·TriRMC 931f1e3）·零进程——**resume22d 待造**（目录仅 22b/22c·SDE 取号四核中）。patrol 行已追加。心跳已更。
+
+### ㊿+2204 · **CAO 抓两处归席错位·点火暂缓（04:05）——owner 语义定死「卷主笔席」**
+
+- **两处错（CAO 实勘）**：①`sg-root-authz-review-20261120` COS 映射 CAO→**实 CHO**（卷内唯一件=cho-authz-opinion）②`w47-d47gate-hook-sync-20261122` COS 映射 CAO→**实 SDE**（sde-d47gate-hook）。
+- **语义定死=「owner 指卷主笔席」**（CAO 建议·「域属谁」≠「树属谁」·混填=错因）。
+- **码面诚实澄清**：strict 只查非空/格式**不查语义**——错值会带合法席名过段 3·**责任记错席**（语义责任在数据面）。
+- **处置**：已发 SDE（17c6af69·暂缓点火）+COS（6c5f8305·改两处+全员各核自项）——COS 改→CTO 重验→BOD 新点火令。
