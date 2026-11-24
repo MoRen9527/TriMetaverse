@@ -14305,3 +14305,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume22 原号 192045Z 已废（零残留）·修毕重取号重点。
 
 - ㊿+2183 **CTO 双报（03:15）**：①resume21 双喜确认（A/B 42.6/43.51·comparability 1.0/1.0·**DP-043 八条标尺透传 55/55**〔dims 55/rationale 55/L[1-6] 55·DP-049 修生效·resume18 曾 0/53〕）②resume22 修法裁：`TriRMC/src/config-sync/default-model.ts` L25-26 FLASH_MODEL_FALLBACK='deepseek-v4-flash'（旧别名 496613b）→改 **'deepseek-flash'**+**registry 别名双检**→dist 重建+daemon 8710 重启（D-03/D-21）→重取号重点。派工=FSD（代码+registry）/SDE（重建重启+重取号）。
+
+- ㊿+2184 **CTO 修法派工 d1b564be**（代码 1 行+registry 双检+dist 重建+daemon 8710 重启照纪律+**验收=check_model_supply 探针 loop_end=ok+journal 无 404**）——修毕 CTO 验→BOD→SDE 重取号重点。**CTO 注**：别名失效=上游改名（v4-flash→flash）·registry 未随更新=「**配置-上游漂移**」类（DCA 族今日第 N 例）——**建议加「上游 /models 对表探针」防再漂**（BOD 采·候 cto 立件）。
