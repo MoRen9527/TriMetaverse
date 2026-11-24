@@ -14280,3 +14280,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2176 **CTO 施工派工（03:00·5c06365a）+件③定形（engine 派生）+BOD 核 tick-log 源**：件③=engine 从 **tick-log** 派生 patrol-log.jsonl（ts/seat/cadence 归一·非值席手写·非循环·source 链明示）——**BOD 核**：tick-log 在位（tick-log-2026-11-25.md 7.1KB 03:07/tick-latest.md/heartbeats bod.ts）**但格式=md**——已发 CTO（787093a8·抽取规则或改格式规格·BOD 照改）+核 COO 侧产出面。ETA ~1.5-2h（05:00 前·%cI 直引）。历史冻结承。
 
 - ㊿+2177 **件③ 抽取规格落定（CTO 03:09）+BOD 照改**：①裁=结构化独立源（不抽 md·防格式脆弱）——`docs/workflow/operating-records/2026-W48/trees/bod-tick/patrol-source.jsonl`（每拍一行 {ts,seat,cadence_min,note}）②engine `_collect_h` 直读该文件（非派生非抽 md·md tick-log 照旧人读不动）③COO 巡拍已取消·H 源=BOD 单席（恢复则 seat:"coo"）。**BOD 已落首行**（19:10:07Z·commit 50366ad5d）+**追加机制并入拍读流程**（每拍一行）。
+
+- ㊿+2178 拍读 03:12：**a 案件②④已落**（TriCompany：584839d 03:11:29=件④ axis=acceptance／7a8c5aa 03:11:38=件② na 规则〔F zero-trigger/H three-state〕／**bb97cb8 03:12:00=件②修复**〔NaRuleTextTest missing import·**pipe-masked red slipped=管道掩码吞红家族再现·自抓自修**〕）——件①（引擎采）/件③（H 源）待。零进程。patrol-source 拍读行已追加。心跳已更。
