@@ -14091,3 +14091,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ①collection-score.json 合成（resume21·run_id=**shift-W48-resume21-20261124T172717Z**·entries A/F/H×3）②subjective-score.json 对齐（COS v3 判语复用·run_id→resume21·judge_note 注 SDE 代抄 BOD 令·I1=4/I2=3/I3=3）③**score_cli rc=0→total=100.0·pending=0·projection=100·inner pass**·breakdown={59,31,10}——**九族全满**。
 - ④联审现态：joint-review 未落（1 席 dsh 在跑·batch 尾）→A/B 待落卷随报（含 DP-043 rationale/L 透传计数观察点）。
 - **双百对照**：resume20（补判形）/resume21（全链形·close succeeded+notify_done 01:36 已发）——两轮均 100/100。
+
+### ㊿+2128 · **CEO 令·collection-score.json 中间件废/重设计（A/F/H 已三分离 vs engine 单文件·今日两次踩坑实锚）——CPO+CTO 联议**
+
+- CEO 原文（01:4x）：「**AFH 都三件分离了，这个 collection-score.json 就该废掉不用，重新设计了吧，还这么勉强用，会出问题吧，问 cpo 和 cto**」。
+- **实锚**：①resume21 缺合成件（人手漏做）→collection=0 判 manual ②resume20 合成件 run_id 不匹配→manual——**中间件=人手合成步骤·每轮易漏易错**。
+- 已发 CPO（e8574ff5·产品面审：契约归属〔消费方定义〕+废/改三案+推荐）CTO（0e405cba·技术面审：直读三件/自动装配/前置合成三案+改动面+工时+兼容注）——联议报 BOD 呈 CEO。
