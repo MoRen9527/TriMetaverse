@@ -38,6 +38,7 @@
 - **采集件 schema（本席产品语义定·供 CTO 落码）**：`{schema_version, family_id(A|F|H), run_id, producer_seat, entries:[{item_id, verdict(pass|fail|na), rationale(非空), evidence_ref(必填)}], check_time}`——**verdict 三值**：pass→weight／fail→0／**na=设计内不适用**（如 F 族零触发→按免评分母规则满分类·须 rubric 显式·防 N/A 计分母）；rationale 非空/evidence_ref 必填（DCA 精神·禁裸判）/run_id 逐件校验/producer_seat 必填（归因）。
 - **风险三条**：①**契约对表未做**（三件现物形态未知→契约可能拍脑袋，须 CTO 先给现物清单）②历史轮兼容（旧轮单件读法保留一版回滚）③两消费方改造不同步=中间态（须同窗+开关回滚）。
 - **验收判据（产品面）**：新形下①任一族件缺=仅该族 manual（不连坐）②run_id 逐件校验③两消费方读数一致（禁两套）④历史轮回读不变。
+- **CTO 两技术注（联议全采·已入产品形）**：①**engine 须加 na 分支**——na→weight（同 pass·**由 rubric special_clause 语义承**·改动 +5 行）；②**auto fallback 件 evidence_ref 须指 run_dir 内真实段产物路径**（engine 校验 `exists()`·producer=auto 标归因）。合稿分工：CTO 出技术形正身（并呈 BOD），本卷=产品形正身被引。
 
 ## 使用依据
 
