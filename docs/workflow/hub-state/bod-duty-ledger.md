@@ -14159,3 +14159,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **件1 恢复条件**：CEO 看过 BOD 呈的过程表后**明确批**——之前 a 案=未批·不开工。
 
 - ㊿+2143 **停令闭环+双人自领（CTO a9e20289）**：①停令已传 FSD（件1 停+动手回退/未动报告·件2 继续）②**CTO 面亦自领**：派件1 时效=照 BOD 转述·**他读原文「讲出详细过程」时也误判「a=准」**——漏「讲出过程≠批」——**转述方+派工方双人假批准**（对象断言族）③**正形入册**：BOD 转述「裁」须含「CEO 原话+解读依据」·接令方须核原文口径·**「准/批/同意」字样才=批准·「讲出/说明」=解释请求**④件2 真批准（原文「准，这才是根因」有「准」字）继续。
+
+- ㊿+2144 **件1 停态验收（CTO 02:14）**：①已落码至测试中途·**未提交（无 commit）**②**回退零残留**（`git checkout --` score_engine.py/test_score_engine.py·status 无 M·HEAD=537cffc item8 版无损·grep `_engine_collect_entry`=0·**engine 套 29 passed 复原绿**）③留 bak（score_engine.py.bak-pre-collect-auto·回退证据+批后复用）④件1 冷存（恢复条件=CEO 明确批）⑤**件2（联审改）即刻续**。呈 CEO 知情。
