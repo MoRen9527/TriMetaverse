@@ -13826,3 +13826,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 COS（f7653eef·知会+台账口径）。
 
 - ㊿+2058 拍读 22:42+COS 两裁照办回执：全毕再点火承录（点火动作押后·resume19 号备不催签）+三层坐标入台账（DP-050 各件汇报带三层）·进度五毕余五。TCO ea29578 22:39 见·零进程。心跳已更。
+
+### ㊿+2059 · **CEO 问询「COO 在候 SDE 但 SDE 无动作」——已发 COS 核+直问 SDE·BOD 落卷佐证：COO 438min 无落卷/SDE 工作卷 1131min 无落卷**
+
+- 已发 COS（d32c9bfc·三问：COO 在哪候/ SDE 在做什么/判串行 or 断点）+直问 SDE（1069262c·当前动作/COO 候什么/idle 如实）。
+- BOD 落卷佐证：**m-coo 最近落卷 438min 前（7.3h）**（coo-ops-duty-draft）／**m-sde 最近工作卷 1131min 前（18.9h）**（sde-deploy-check-sop）——两人工作卷都久未动；SDE 今日动作全在会话面（点火/取读数/冒烟）不落工作卷——**两席互等候选**（COO 候 SDE·SDE 或 idle）——待两席回执定性。
