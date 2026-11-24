@@ -13179,3 +13179,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CAO 回执**：①tick 阶段一承录（席面段规范每席一行「seat: 最后落卷 时距｜在途 是/否」·只在在途=是 判断档·**填表=BOD 面拍读内填**下一拍起）②**加分作者分层**=升格动作 CAO（确定）/经验来源 BOD 面（11-16 候修链断链 4h 事件·ledger a9c699f5c·job2 v2 判据 052f3ca9）——已转 CHO 两笔分开（11ecddde）③**记忆→资产转化机制稿**（2efef3753·「有矿没冶炼」诊断+三触发位+「不改就会再犯」唯一判据）候 CEO 批 ④DCA 定义勘正发 CAO（6bb22e9e·DCA=设计-代码一致性审计=87d0b22e1·今日定形故其搜不到）。
 
 ——BOD·（date 现查原值·D-47 正形）
+
+### ㊿+1900 · **四 COS 互备现状实证（方案落卷 0fcb84232）+BOD 自领勘正（值席一直在跑·我面视野局限）**
+
+- **四席现状（COS 现查实证）**：m-cos（M 面本地域/本机）✓ 在跑｜**m-duty-cos（M 面服务域/sg）✓ 在跑**（`claude --resume m-duty-cos --agent CEOChiefOfStaff`·Nov 20 起·tmux m-duty-cos）｜r-duty-cos（R 面/河源）✓ 在跑（Nov 04 起）｜**TriRLC cos ✗ 未就位**（agents 定义在·无运行实例）——**CEO 判验证 ✓**（记账形：候启动后并入·不预建空实例防假绿）。
+- **方案落卷**：cos-four-way-mutual-backup-20261124.md（0fcb84232）·互备三件（台账双写/交叉验证/故障接管）+通道现状（本机↔sg ✓/本机↔河源 ✓/sg↔河源 -J ✓）——**唯一缺口=跨机互备消息通道**（同机 SendMessage 不可跨机）→notify 信箱/tmux 直投/台账互读三选·候 CTO/SDE 评估。待办：跨机通道→首轮跨机演练→TriRLC 并入。
+- **🔴BOD 自领勘正**：**m-duty-cos 一直在 sg 面 tmux 运行**——此前 ㊿+1725「值席不可达」判据=**本机 ListAgents 视野局限**（跨机会话不在本机 session 列表）→勘正：**值席可用·缺口=BOD 跨机通道未建**（不是值席缺席）——此判决在「BOD 直落 continue 件」时的判断理由有误（当时落件仍正确·但理由须勘）。
+- source-agents 更新（SDE 归 COO）COS 在办。
+
+——BOD·（date 现查原值·D-47 正形）
