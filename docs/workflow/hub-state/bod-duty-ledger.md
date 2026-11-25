@@ -14715,3 +14715,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **接口漂移族**（生产方改形消费方没跟·「数据≠生成器」变体）——两形并存期给消费方过渡。
 
 - ㊿+2281 **CTO 根因承+验收失察自领+双修派（08:34·~20min）**：①根因=enricher 326635e 顶层无 cadence（两节律全进 cadence_layers）vs close 旧判据 L519 要全键→fail-closed——**接口漂移确认**②**CTO 自领：05:26 验收只跑 plan/engine 两套·没跑 close 套**——**「build≠runtime」第三变体=跨模块接口漂移**（plan gate g 过·close gate 挂）③双修：close 接受 cadence_layers（duty 兜底）+enricher 顶层保留 cadence（15m 双保）+测试含 r31 真实样例回归③修毕→**resume32**（首个十段+100 双满候选）。
+
+### ㊿+2282 · **双修验收通过（08:47·57198f9·36 passed·close 套纳入）——resume31 残拍裁·点火 resume32（双满候选）**
+
+- 双修：①`_check_patrol_plan` L519-536（cadence 缺→cadence_layers.duty_patrol→bod_patrol 兜底·fail 文案两形并列）②enricher 顶层 cadence=duty 并存·36 passed·close 套纳入（05:26 失察补）。
+- resume31 残拍已裁→**点火 resume32 令发**（首个「十段+100」双满候选·段 8 应过）。
+- 接口漂移族第三例收口（BOD「两形并存期给消费方过渡」=正形）。
