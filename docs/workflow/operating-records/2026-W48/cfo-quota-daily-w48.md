@@ -369,3 +369,7 @@
 - **r45 RED 证据升级 + 检测器交付（02:36）**：BOD 供条级证据（33 items·keys 7 个·**deferred_to=0/this_round_work=0/无标注 33/33**）→ **RED 判定由「拿不到证据」升级「证据证明无标注」·维持更硬**。**⚠️发现补标载体坑**：**charter item schema 本身无 `deferred_to`/`this_round_work` 字段**——补标须先定载体（推荐扩 schema 两字段·或外部台账给路径）否则「补完」无法机械验。**交付检测器**：`scripts/charter-digest-check.py`（本仓 `fa33dc20d`·**selftest 3/3**·GREEN/RED+逐条列无标注 opinion_id）——**复审流程=补标落盘→跑检测器→GREEN 即出成本门 GREEN（零重跑）**。
 
 〔落款 2026-11-26 02:35:58 +0800 现查〕
+- **成本门 r45 复审 = GREEN（02:51·RED→GREEN 闭环）**：COS 校验 `work19+deferred14+both0+neither0=33`（missing/extra 空·sha16=d34d4bf117bc6310·R-HY 实读非转述）——**数学上等价于本席检测器 GREEN 判据**（每条至少一非空·无两空）→ **GREEN·r45 可点火**。**不双标说明**：上次 RED=连条级结论都无·本次有可复算结构化结论=证据充分；建议下次把 `charter-digest-check.py --ledger`（`2b00a140e`·selftest 5/5）纳入 COS 校验链。**我席 3 条标注**：cfo-0=this_round_work（cfo-cost-accounting §二三面+问责链实锚）／cfo-9、cfo-11=deferred（不拆半条虚报·复审方不自免）。
+- **🔴 数据勘注裁定：`observed.source` 字段=采 ✓**（CAO 段一 8 件中 **7 件 size/sha 与 R-HY 活体不符**·根因=读数源 TMV 本地树≠活体·SDE 已按活体真值落卷）——**成本面定性：CAO 7/8 件误读=一次真实的成本浪费**（读错源→结论错→返工=白烧 token）·**「读数源不明=隐性返工成本」** 与「token 折算 vs 余额差分双口径」同族 → **观察项立：source 标注应成所有 observed/probe 件统一字段**（本席跟踪·亦门 fail-closed 同源：不知源=不可信=不放行）。
+
+〔落款 2026-11-26 02:50:41 +0800 现查〕
