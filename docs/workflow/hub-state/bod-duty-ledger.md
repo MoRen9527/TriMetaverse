@@ -15551,3 +15551,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2533 **CTO 自领 A1 接线缺陷+修派 FSD**：根因=BOD 推断（表在 TMV 树·读取端只找 run 目录）；**深层=「build green≠runtime green」同族**（A1 fixture=run dir 假表·真件 TMV 树）；**修=读取端增 TMV 树路径**（env FADE_ACCEPTANCE_LEDGER_PATHS 或 tmv-root 相对 glob·表不挪治理位）·FSD ~30min·**含「TMV 树真件」fixture**。**承「r42 白跑·2 倍成本」**——修后 r43 重跑=意见账下降真验证。
 
 - ㊀+2534 拍读 22:24：**A1 读取端修复 FSD 在途**（TriCompany 无新·commit 未落）·零进程·ETA ~30min。心跳已更。
+
+- ㊀+2535 拍读 22:30：A1 修在途（6min·无 commit）·零进程。心跳已更。
