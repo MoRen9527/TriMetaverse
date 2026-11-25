@@ -14958,3 +14958,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ③66→64 的 -2=**跨席去重（生成器 merge L722）·mergedReport 未在 joint 侧落卷=无痕**——须造痕（dropped 明细）。
 - 附：manifest 无 artifacts 字段（T3b 疑·核嵌套位）·review_mode=full。
 - FSD 即派（时序 a+manifest 核+去重落痕）·SDE 核 CTO 席 spawn。
+
+- ㊀+2349 拍读 12:42：三仓无新（12:13 后）·零进程——修法施工中（时序 a/manifest 核/去重落痕）+SDE 核 CTO 席 spawn。心跳已更。
