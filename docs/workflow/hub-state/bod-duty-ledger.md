@@ -14749,3 +14749,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2291 **resume33 段 8=过 ✓✓（双满关键格）**：close run_state=succeeded（09:06）·patrol_check={ok:true,degraded:true,reason「patrol-log 无产出机制·门降级留痕」}——**cadence_layers 双修生效**·notify_done 已发（09:06）——**段 1-10 全过**。联审将起→score 100 面（I 卷候 COS）→**首个「十段+100」双满候选**。
 
 - ㊀+2292 拍读 09:12：resume33=16 json（close/close-acceptance/manifest/notify_done/charter 在）·PROC=4（联审进行中·joint-review 未落）——候联审 A/B+score 100。patrol 行已追加。心跳已更。
+
+### ㊿+2293 · **CEO 点出设计缺口：I 卷应在段 7/8 段内出·不该等链外手工落——修令出**
+
+- CEO 原话：「**I 卷应该在 fade-001 的段 8 就该出评分，怎么都结束了还没出分**」——**点对**。
+- **现况**：段 7 score_skill 产物=score-skill.json（席位分）·**subjective-score.json（I 族判卷卷）=COS 链外手工落**——**链缺「段内产 I 卷」**——**后果=每轮 I35 必 pending**（resume29/30/31/33 全中）。
+- 已发 CTO/COS：修「I 族判卷卷产出接链内」（方案 a score_skill prompt 加产卷／b 独立段／c 段 8 前置检查缺→spawn 判·CTO 裁）·验收=resume34 subjective 35 在非 pending。
+- **「链完整性」真缺口**（CEO 抓）。
