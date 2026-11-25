@@ -14919,3 +14919,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2335 拍读 12:06：三仓（TriCompany 7355cf4=12:00:51 T1a 面）·零进程——**T1b 施工中**（接力序第二件）。心跳已更。
 
 - ㊿+2336 **T1b 验收通过（12:06·da4705f·11 passed）**：_check_ab_columns（L216/L646）·A/B 两列必齐+重复/共用 rationale=violation+prompt 条款+ab_columns 读数·strict=1 默认（LOOP_JOINT_AB_STRICT=0 兼容）。→**T1c 起**（回填守恒·与 T6 合并）。批一进度 2/7（T1a✓/T1b✓）·5 件余 ~2.5h。
+
+- ㊿+2337 **🎯T1 三件全完（12:09·37 passed）**：T1a 7355cf4（66 条不合订）/T1b da4705f（A/B 双列）/T1c 16e7d77（refill.items 逐条结账〔settle=prev_opinion_id+status done/deferred/dropped+reason·未结→carried+missing·items_ok=false〕+总数表+prompt）。→**T2a 起**（三绑）。批一 3/7·4 件余 ~2h（约 14:10 前完）。
