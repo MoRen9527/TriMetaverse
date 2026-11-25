@@ -15888,3 +15888,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **三问**：①improvements 拆分 ✓（new_discoveries 3+/inherited_pending 分列）②能力项 ✓ **44%**（31/71≥30%）③**improvement_rate=null ❌**④**dual_track 未现 ❌**。
 - **已请 CTO 查**：③④疑同源（R-HY 是否 pull d8ab656·r46 04:31 点 vs S2 04:25 提交）+②missing 语义（refill_spawn 侧）。
 - 读数法按 SOP（close==charter mtime 04:55:13 ✓）。
+
+- ㊿+2636 **CTO 十点判（8/10）+两缺口诊断+FSD 派（~40min）**：**✓拆分（§四生效）✓能力项 44%（§三配比门生效）**；两缺口=①refill missing（S4-1 carried→inherited 与 refill items_ok 判据口径不同步）②improvement_rate/dual_track（**run 面**·单测过但 run 时 prev 缺或维度分路径·score_engine L755）。**score 89.5（与 r45 同·auto 保守）**。FSD 修两缺口→r47 验证。
