@@ -15705,3 +15705,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 条级证据**（r44 charter 33 条）：**有 deferred_to: 0／有 this_round_work: 0／无任何去向标注: 33（全部）**（item keys 无去向字段）——**CFO 的 RED 正确**（非拿不到证据·是证据显示 33/33 无标注）。
 - **已报 CFO**（RED 维持·我面完全接受·补完复审）+**已发 COS 统筹补标**（33 条逐条 `deferred_to=<轮号>` 或 `this_round_work=<证据>`·各席标自己条·只补标注不改内容）。
 - **CFO 三查三次全拦问题**（查一/查二/查三各一次）——**门形有效实证**。
+
+### ㊿+2585 · **补标载体协调（COS 定独立表+COS 催收+CFO 检测器加 --ledger）**
+
+- **COS 统筹方案**（好）：实证 33 条·owner 分布 cos5/coo5/cao5/cpo5/**cto7**/cho3/cfo3；**标注载体=独立表 `pending-disposition.json`**（run_dir 内·`{opinion_id,deferred_to,this_round_work,disposed_by,disposed_at}`）——**守「只补标注不改 items 内容」边界**（扩 schema=改本体·不取）；七席各标自己条·COO 统筹督办；ETA ~10min。
+- **CFO 检测器已备**（`scripts/charter-digest-check.py`·fa33dc20d·selftest 3/3）——**已请加 `--ledger` 参数**（读独立表·与 charter 对表 33 条全须 non-null）。
+- **流程**：七席落标→COS 汇总（33/33 齐）→检测器 GREEN→CFO 成本门 GREEN→r45。
