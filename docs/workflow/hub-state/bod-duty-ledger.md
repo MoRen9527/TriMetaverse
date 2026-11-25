@@ -14984,3 +14984,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2356 **SDE 段 3 挂名单补（12:54）**：item6 覆盖缺口 6 项=C 族 CARRY-004/006+D 族 OP-202611-W47-001.json/.unresolved-items.md/task-inventory-20261117.md/cfo-quota-daily-w47.md·plan raci_n=17（items 23）——**CTO 已裁两态**（carry-no-raci 注·12:45）·数据面补映射=后续可选。修毕 resume36。
 
 - ㊿+2357 **CTO 裁 item6 范围扩（12:54·自领）**：SDE 6 项含非 CARRY 4 项（OP/task-inventory/cfo-quota）——CTO「CARRY 件 no-RACI」令范围不够。**裁 b（同 item3 显式态）**：item6 覆盖断言改「**R12 覆盖子集内须有键**」——R12 外的件（6 项）→记 `no-raci-mapping` 注（非 fail）·R12 内 17 件仍须键。a（COS 补 6 键）=后续不阻塞。FSD 令已扩（7326077a 范围=R12 外全部）→resume36。
+
+### ㊿+2358 · **两扩验收通过（12:56·b96ae48·53 passed）——resume36 点火令发（全形齐候选）**
+
+- 两扩：①**四字段全两态**（缺省集扩 todo/多席/all 占位面·有值无效→fail）②**item6**（_r12_target_set L318/L863·R12 集内须键/R12 外→no_raci_mapping 注）。
+- **折中=准（CTO 裁）**：豁免形（CARRY-*/OP-*/task-inventory-*/cfo-quota-daily-*/.md 散件）→注——**RACI 责任矩阵对象=树件（migrate/keep）·散件/CARRY 非树件不入 RACI 合理**——真样六件 bad=[] notes=6。
+- **resume36 点火令发**（continue 件落 resume35 正身）：判据=段 3 过→七席 7/7→subjective 35 自动→manifest 可查·**跑完即停**。
+- 「显式态」原则今日三扩（owner→四字段→RACI 范围）。
