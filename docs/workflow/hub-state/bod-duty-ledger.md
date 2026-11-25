@@ -15169,3 +15169,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 批三-1（S7）已派。
 
 - ㊿+2426 **CFO 口径承录（18:07·dd88bc761）**：每批毕=条级对表+成本账记录（记数不判门·报增量）／成本门=一次审（75 条账清齐→一次 GREEN/RED→验证轮一次）——**CFO 提炼入册**：「**施工多批省 spawn 钱·验证一批省点火钱**」（施工分批与验证分批是两件事·合起来=完整成本纪律）。
+
+- ㊿+2427 **批三-1=S7 验收通过（18:07·dca6202·2 passed EXIT=0·engine 53）**：S7a 三面归因（_cost_attribution L614·machine/manual/subjective {in,out}·stage→face 10 段映射）/S7b stage 分列/S7c auto fail-safe（零有效条目→("manual", None) 非静默 0·**r36 类风险堵口**）+null 不进和（null_skipped L621）✓→**批三-2=S8 已派（最后一批）**·进度 **4/5 完**·S8 毕=全修完→全量账清核→CFO 成本门一次→验证轮一次。
