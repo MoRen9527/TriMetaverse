@@ -15602,3 +15602,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2552 拍读 01:06：三仓无新·零进程——静。心跳已更。
 
 - ㊀+2553 拍读 01:12：三仓无新·零进程——静。心跳已更。
+
+### ㊿+2554 · 🔴**CEO 四问深挖：COS 低分不是自打脸·是诚实暴露接口缺口——r43 close.seven_seats 借 prev（prev-degraded）·close≠joint 不同源·refill 在 close 面不可见**
+
+- **CEO 四问**：①COS 自己管流程却打低分？②COO 参与多为何低？③CPO 评审干了啥？④联审有进步么？提的改进能涨分么？
+- **数据答案**：**r37→r43 同维度 55 项：涨 30/平 5/跌 20**——**CTO 大涨**（架构 44→76 +32·技术风险 36→64 +28·交付 +10·质量门 +8）=**修了真涨分**；**COS 全线上涨**（36→44 等·**不是自打脸**）；**跌的**：**CAO 评审机制 34→24/33→21（-12·评审机制自身问题）**／COO 迁移停机窗 63→58·节奏 -3·记录 -4（**真跌**）／CHO 交接链 -10／CFO 预算护栏 -6。
+- **COS rationale 属实**：**close.seven_seats=借 prev resume42（prev-degraded）**（joint-review 有 7 席但 close 读不到）／无 refill 表（close 面 items_consumed=0）／A/B 未分列／divergence 无明细——**评分席看的 close 面 ≠ 联审实际产出=接口缺口**。
+- **已发 CTO 三查**（①close.seven_seats 读 joint 同源禁借 prev ②close 面补 refill/divergence ③A/B 双列）+**CEO 新令**（新任务书只含待办·已修不含·**上轮未结账禁止进入下一轮**·落 charter_generator）。
