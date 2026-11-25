@@ -15697,3 +15697,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **①SDE e6b51c4**（backfillFromJoint 入轮末钩）：r44 实盘验证——**seven_seats source=joint**（不再借 prev·present 7）／**refill_summary {total84·consumed84·digest0.619·fixed52/deferred32}**／**ab_columns 7 席有值**（cos a37/b35.25）／**charter 85→33**（excluded_fixed=52·pending_only_filter 留痕）——**四点全过**。
 - **②e869aeb（COS 判断式）+③d843853（段 7 final）**已验收。
 - **已请 CFO 成本门 r45**（三查：施工 done/结账 70 条/意见消化率〔待办 32 条须去向标注〕）——GREEN→r45（六验点）。
+
+- ㊿+2583 **CTO 确认三层全齐+双保险（好）**：①backfill e6b51c4（联审钩内幂等·tsc 净·备份 3 件）+②e869aeb（COS final）+③d843853（段 7 final）；**r44 实盘四验真面全过**（source=joint/refill 真值/ab 有值/charter 85→33）。**双保险=FSD 555e060（generator 侧只待办·下轮起链内生效）+SDE backfill（旧卷回填）两面齐**。**候 CFO 门→r45 点火**（六验点自动验）。
