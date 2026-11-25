@@ -15191,3 +15191,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 - ①**ceo-ruling 三绑**：初版缺 run_id/round_count→rc=4（已补全 run_id=r36 name/round_count=9/signed_at·sha 68fde8bb·BOD 落卷·CEO 四令为源）。②**week_math loop 门**：TRICO_LOOP_MARKER_DIR+loop-window.marker→week_math=True。③**段 2 qualify rc=2**：identity（running as root, expected fleet）+alert_credentials（NOTIFY_SMTP env 缺）——**r3（root）=preflight PASS→qualify 挂身份·r4（sudo fleet）=rc=4（疑 env 被清）**。
 - **已报 CTO**（f00ebea7·请标准点火配方或代点·GREEN 已下点火授权在 CEO 四令④）·零代码改（zero touch）·log 四份在档。
+
+### ㊿+2432 · 🎉**r37 点火成功（第 10 次·环境面五缺口全部理清）——preflight+qualify 过·链在跑**
+
+- **五缺口**（root ssh 点火 vs COO/SDE 在役 shell 的差）：①**ruling 三绑**（run_id+round_count+signed_at·缺=three-bind-missing rc=4）②**一纸一轮消费戳**（每次尝试消费 ruling·`.ceo-ruling-consumed.json` 残留=后续全拒·重试须「新 ruling vN+清戳」）③**week_math loop 门**（TRICO_LOOP_MARKER_DIR+loop-window.marker·marker 会被消费·每次重写）④**identity**（root=qualify identity mismatch·须**fleet**）⑤**run dir 属主**（root 建=preflight.json EACCES·须 **chown fleet:fleet**）。
+- **成功配方**（r10）：`sudo -u fleet -H bash -lc` + `export TRICO_LOOP_MARKER_DIR=<mk> FADE_PATROL_CADENCE=6m` + ruling v4（round_count=11）+ 清消费戳 + marker 重写 + run dir chown fleet + checks 文件法。
+- **读数**：PID 3391164（fleet·node tsx 存活）·**preflight pass（verdict 0）+qualify.json 已落（段 2 过）**·chain-journal ✓·段 3 起。
