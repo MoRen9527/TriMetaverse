@@ -15389,3 +15389,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 账目 DS 142.19 @21:21（4.8 CNY/h）。
 
 - ㊀+2495 拍读 21:24：**r40 段 1-2 过**（PID 3405010 活 1:42·preflight/qualify stage_ok）·C+B 85cab1b 已见·CFO 门落卷（2df49d77e·止损条款入卷）——**段 3+ 在途**。心跳已更。
+
+### ㊿+2496 · ⚠️**r40 段 6 又 fail（第三次）——C 生效一半·2 项人机判不一致·CFO 止损条款触发**
+
+- **C 生效**：dem009/sunday-shot（family=B）→「wrong_order 注」放行 ✓；
+- **仍 fail**：**release-rules/orchestration-fact 判「非封存类」→strict→未裁定**·**B 指纹继承未覆盖**；
+- **核心分歧**：COS 人工判「4 项全封存」vs 机器判据（family=="B"）只认 2 项——**release-rules/orchestration-fact 实际性质待核**（真施工面=strict 正确需人裁／判据漏=补判据）；B 继承未匹配原因待查（件变/键不同）。
+- **CFO 止损条款触发**（三轮未达）→**建议停机制分析不再盲跑**·已派 CTO 诊断+COS 复核性质→报 BOD 呈 CEO。
