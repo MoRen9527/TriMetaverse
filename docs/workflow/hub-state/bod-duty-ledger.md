@@ -15914,3 +15914,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **a 修**：链后钩子 spawn score_cli 重算（两路径·幂等零炸）——**r46 补算实测 checked=true·per_dim 曲线全在**（段序第 5 面修复 ✓）。
 - **三问 4 件全齐**：拆分✓/能力项✓/改进率（a 修+min_rate）/双轨（a 修+k）——**两值给即全活**·r47 起链内自动。
 - **候 CEO 两值**（门槛 min_rate·双轨 k）→CFO 门 r47→点火（SDE ~1min）。
+
+- ㊿+2643 **CTO 确认 a 修施工毕+实测通过（f399d12·段序族第 5 面修复实证）**：recomputeScoreFromJoint（链后钩子·两路径·幂等零炸·tsc 0·R-HY 已 pull）——r46 补算实测 improvement_block checked=true·**per_dim 逐维曲线全在**（cao-1 38→56 rate .4737／cao-3 20.5→35 rate .7073／cfo-34 37→34 rate -.0811）·score 89.5 不变（仅 block 增）。**🎯今日架构级成果：段序族五面全修**（I 卷 8f9803f／close e869aeb／refill e869aeb／ab e869aeb／**improvement f399d12**）——**统一解=链后重算/回填**。**候 CEO min_rate/k→r47 三问 4/4**。
