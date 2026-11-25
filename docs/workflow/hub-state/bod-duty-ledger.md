@@ -14794,3 +14794,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **缺陷**：昨晚修的「低分维必产意见（eb3d19a·25 passed）」在 resume33 实跑**没产出**——查三处（prompt/解析/normalizer 滤/断言没拦）。
 - **CEO 令承**：**自动点火已停**（不点 resume34）·候任务书批后再令。
 - 本轮 0 条无法成任务书·如实呈 CEO+查修中。
+
+### ㊿+2300 · **improvements=0 三处查毕（CTO）：真因=c 断言只记录不拦截（_low_dim_coverage 无 fail 分支）——修法已派**
+
+- a）prompt：有「低分维必产（L114）+≥1 条（L116）」——但 **L118「可如实写本席无改进（no-improvement）」=逃生门**（LLM 可逃·本轮连这都没写=[]）。
+- b）解析/normalizer：无丢（L648-649 透传·DP-049 无回归）。
+- **c）断言=真因**：`_low_dim_coverage`（L171-198）只返回 {low_dim_count, opinion_count, uncovered}·**L513/L669 两调用只落卷无 fail 分支**——**「该拦却没拦」**（CTO 自领·验收只验落卷未验拦截）。
+- 修法（派 FSD）：c 主修=**uncovered 非空→gate fail**+a 辅修=prompt 收紧（no-improvement 仅限无低分维）。
+- 修毕 resume34 真产→任务书呈 CEO 批·不自动点火承。
