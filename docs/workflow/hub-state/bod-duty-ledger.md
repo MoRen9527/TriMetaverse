@@ -14995,3 +14995,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2359 拍读 13:00：**resume36 已点在跑**（shift-W48-resume36-20261125T045706Z·12:57:06 点·2 json·PROC=3·段 3 中）——两扩后段 3 应过·全形齐候选。TriCompany b96ae48。心跳已更。
 
 - ㊿+2360 **resume36 点火首笔（12:57:06·pid 3365459·preflight pass·b96ae48 在盘·chain-journal 生）**——判据候（段 3→7 席 7/7→subjective 35→manifest）。终态随报。
+
+- ㊀+2361 拍读 13:06：**resume36 段 3-7 全过**（12 json·PROC=3·段 8/联审中）——两扩生效。候终态（七席 7/7+subjective 35）。心跳已更。
