@@ -15199,3 +15199,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **读数**：PID 3391164（fleet·node tsx 存活）·**preflight pass（verdict 0）+qualify.json 已落（段 2 过）**·chain-journal ✓·段 3 起。
 
 - ㊀+2433 拍读 18:31：**r37 段 3 中**（PID 3391163 bash 存活 1:47·cost-log.jsonl 已落）·CFO 18:30 锚（95686186b·新 job 首触发 ✓·GLM 99% 六拍·DS 152.27）。心跳已更。
+
+- ㊿+2434 **r37 段 4 dce 门拒（dry_run·r10 止链）→ 修 DCE_EXECUTE=1 重试 r11**（18:4x·r36 实证 dce mode=execute 四步 rc=0·r37 缺 env=第 6 缺口）·r11 在跑（PID 3391897）。
