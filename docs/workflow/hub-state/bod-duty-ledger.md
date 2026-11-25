@@ -14685,3 +14685,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 各席报中断点+续做+ETA。
 
 - ㊿+2273 **CTO 断档如实（05:26→08:32≈3h·宿睡+余额·与 BOD 同窗）**+BOD 补事实：**resume30 已跑过**（05:30:58 点火·CTO 断档期错过）——段 8 挂（spawn absent+balance unavailable）·collection 24 首满·subjective 0。CTO 续做=判 spawn absent 真因（R-HY 直读 close/skill 面）→修→重点火。
+
+### ㊿+2274 · **CTO 判 spawn absent=balance（stderr 明证·非码 bug）+COS 落 resume30 I 卷（满分档）——点火 resume31 令发**
+
+- **CTO 判**：`balance unavailable ≥3 rounds`+`spawn absent`=**一体同因**（余额耗尽→dsh spawn 失败→close 挂→upgrade_list invalid）——**修=人民币（已充 100·余额 99.97·supply-green）·无码改**。collection 24 首满收。R-HY 直读取证限制如实（D-24）。
+- **COS 办讫**：中断点 05:28→08:33（3h5·余额外部因·其面今日第 2 笔断档）·**resume30 I 卷已落**（v3 形·I1=4/I2=3/I3=3 满分档·run_id=resume30）→CTO 重跑→**resume30 分数面=65+35=100**。
+- **点火 resume31 令发**（continue 件落 resume30 正身·prev=resume30·env 四件 SOP）。
