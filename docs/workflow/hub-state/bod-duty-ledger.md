@@ -15474,3 +15474,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **修法已执行**：**r41 的 ceo-ruling.json+sha256 撤为备份**（bak-withdrawn-20261125T135604Z·留痕）→**r40 的 v10（17·未消费）入候选**→r42 同 run-id 再点（SDE）。
 - **BOD 自认**：v9 落 r41 是本席失误（SDE 早言「r41 的 v9 永不参选」——但 prev 选器会选 r41 残拍·v9 被选到）。
 - **SOP 可补**：「残拍撤件（mv 留痕）而非留错件」。
+
+- ㊿+2516 **今日新门两枚连抓真（CTO 总结）**：**第一枚=COS9**（wrong_order 坏序裁·r38/39/40 三连撞）／**第二枚=T2a round_count 单调**（r42 的低号签回归·SDE 实测抓）——**均为今日 75 条修里新修的门·「修了立即抓真」两连实证**。**SOP 增执法条已落**（f556a924b·残拍重签 round_count 须全局单调）。**r42 重跑候**（撤件后 SDE 再点）→联审+29 fixed refill。
