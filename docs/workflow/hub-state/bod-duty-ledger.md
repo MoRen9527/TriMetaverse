@@ -14925,3 +14925,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2338 **T2a 验收通过（12:10·a626569·4 passed）**：three-bind-missing（L444）/consumed-runid-mismatch（L467）/round-count-regression（L496）三 refusal 实读·三态过滤（aae552d）不动·preflight 71 passed。→**T2b 起**（D-88/D-91·chain_runner.ts 换面）。批一 4/7·3 件余 ~1.5h。
 
 - ㊿+2339 **T2b 验收通过（12:12·ab1f9c0·chain 30/30）**：appendChainJournal（L230-234）/chain_start·d91_marker（L255）/stage_ok（L288）/approval_chain（L294）——**审批链动作落卷 chain-journal.jsonl+D-91 卷面痕+零阻断** ✓。→**T3a 起**（hash 全覆盖·plan_skill_spawn.py）。批一 5/7·2 件余 ~1h。
+
+- ㊿+2340 **T3a 验收通过（12:13·4970a61·5 passed）**：families_trees 逐件 hash（plan_enricher L120）/artifacts plan/exam sha16（L121）/前后对表（plan_skill L471-472·篡改 fail）✓·技术债如实登记（复算面待 source_path 扩展·下批补·不隐）。→**T3b 起**（最后一件·~30min）。批一 6/7·**批一毕=resume34 可跑**。
