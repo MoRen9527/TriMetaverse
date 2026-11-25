@@ -15561,3 +15561,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2538 **A1 v2 验收通过（ce1c434·6 passed·merged 58={fixed54,equiv2,dropped2}）·勘正 70→并集 58**：①合并字典序错误修（应用序低→高·新胜旧·env 最高）②**「70 fixed」应为「并集 58·54 fixed」**（29+41 含 12 重叠 opinion_id）——**r43 refill 应见 54 fixed**（防高估）。候 r43 点火。
 
 - ㊀+2539 拍读 22:42：**r43 已在跑**（shift-W48-resume43-20261125T143940Z·22:39:40 点火·SDE 按 SOP·**ignite.log 已落 ✓**）·段 1-2 过·A1 v2 ce1c434 落卷。候联审 54 fixed。心跳已更。
+
+- ㊿+2540 **r43 起跑确认（SDE·v12 一次过门·PID 3414373）**：preflight pass·consumed(42·v12) ✓·qualify 出·链在跑·A1 log 已建（终态非空判）·A2/A3 ✓。**验证点=联审 refill 见 54-57 fixed**（CTO 勘 54·SDE 记 57·均指大体量）。候终报。
