@@ -15908,3 +15908,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **关键勘正**：**params 给值须配 a 修才活**（单给值仍 false）——**修正我上条「只差两值」的说法**。已派 CTO/修 a 与修 b 同批收口→r47（三问 4/4）。
 
 - ㊿+2641 **b 修验收过（65c57f7·8 passed）·a 修已派 SDE（~20min）**：b=carried_no_ref trace（L926）+items_ok 只 fixed/deferred 缺 ref 才记（L932·与 S4-1 口径对齐）✓；a=链后 spawn score_cli 重算（段序族第 5 面·同 8e262092 族）。**呈 CEO**（段序第 5 面+a 修·min_rate/k 给值后 a 修即真值→r47 三问 4/4）。
+
+### ㊿+2642 · ✅**a 修毕（f399d12）·improvement_block 已活（r46 补算实测：checked=true·per_dim 全在·cao-1 38→56 rate .4737）——三问 4 件全齐·只候 CEO 两值**
+
+- **a 修**：链后钩子 spawn score_cli 重算（两路径·幂等零炸）——**r46 补算实测 checked=true·per_dim 曲线全在**（段序第 5 面修复 ✓）。
+- **三问 4 件全齐**：拆分✓/能力项✓/改进率（a 修+min_rate）/双轨（a 修+k）——**两值给即全活**·r47 起链内自动。
+- **候 CEO 两值**（门槛 min_rate·双轨 k）→CFO 门 r47→点火（SDE ~1min）。
