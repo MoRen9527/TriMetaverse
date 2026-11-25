@@ -14725,3 +14725,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2283 拍读 08:48：**resume32 已点在跑**（shift-W48-resume32-20261125T004838Z·08:48:38 点·2 json·PROC=3·段 3）——双满判定候终态。TriCompany 57198f9。patrol 行已追加。心跳已更。
 
 - ㊿+2284 **resume32 点火首笔（08:48:38·pid 3341367·preflight pass·双修在盘·env 四件）**——双满候选（段 8=首验→十段→联审→score 100?）·断点随报。
+
+### ㊿+2285 · **resume32 段 3 挂（新件 cao-review-yardsick 四字段缺）——BOD 裁 b 案（未映射件显式 unassigned+台账·不阻塞链）**
+
+- 挂因：item3 四字段断言（owner/due/acceptance/depends_on）——**plan 每跑扫出新树件·R12 按名映射追不上**（今日第 N 次）。
+- **根本矛盾**：LLM 动态产出 vs 按名映射——**任何「按名映射」必然覆盖不全**。
+- **BOD 裁 b 案**（技术面合议）：**未映射件显式 owner='unassigned'+落清单（不阻塞链·责任留痕）**——显式未分配>静默 None；**把 item3 也拉进「判稳定面不判动态面」原则**。
+- 已发 CTO（裁+派 FSD→resume33）。
