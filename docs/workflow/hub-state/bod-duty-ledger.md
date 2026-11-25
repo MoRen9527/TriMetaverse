@@ -15869,3 +15869,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CFO 复审 GREEN**：查一 6 件验收／查二 70 条／查三 **36/36**（33 基线+3 补标明细=数学等价检测器）；**一笔要求**：下次直接跑检测器给 rc 值（不自双标·机械优于人工）。
 - **CFO 落结构性修复自己域**：检测器加 `--charter-prev` 差集模式（旧+新 charter→差集→无标注即 RED）——**不依赖他人改码·自己域闭环**（好思路）。
 - **r46 前置已备**（ruling v15 落 r45·round 22·清戳+marker）·SDE 点火·**三问方案首跑验证**（improvements 拆分/能力项/改进率/双轨）。
+
+- ㊿+2629 **CFO 差集模式交付（cbf1920fb·+33/-11）**：`--charter-prev` 自动算新旧 charter 差集→新增项未标注即 RED（即使 ledger 不含该 key 也点名）·selftest 5/5+双路径实测。**检测器侧改=自域闭环不依赖他人排期**·**双保险**（将来生成器加 unannotated_new_items 可并存·两道闸不冲突）。
