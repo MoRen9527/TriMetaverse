@@ -14812,3 +14812,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **任务书框架（10 主题组·66 条）**：①七席独立落卷+A/B 双列+回填守恒（**七席全提**）②裁决件三绑+D-88/D-91 审批链（六席）③全量 hash+runId+manifest（**七席全提**）④close fail-closed/红面即停 ⑤upgrade_list 逐条处置 ⑥回填守恒 ⑦口径统一（100 制/双账）⑧成本面（三面归因/null 不归零）⑨requirement_trace ⑩证据去模板化/同源对表。
 - CTO 修两形兼容（doc.opinions or face.improvements 兜底·FSD）→r34 起生成器能读→charter 全纳 66 条。
 - **任务书呈 CEO 批**（待整理成正式卷）。
+
+### ㊿+2302 · **任务书卷已写（66 条·10 组·e0dfa6481）+CTO 三件实读勘正——但「66→聚合7 条」的压差 59 条待查（聚合器压缩面）**
+
+- **任务书卷已落**：`bod-taskcharter-resume33-improvements-20261125.md`（66 条明细+10 组框架+批次建议·呈 CEO 批）。
+- **CTO/COS 三件实读**：per-seat **66 条**／聚合 opinions.json **7 条**（归一化五字段）／charter **7 items**（pending_approval·aggregation 7/7 零丢）。
+- **误读链收口**：三方（BOD/FSD/CTO）都按「顶层 improvements」读→0·真数据在 face.improvements——**计数用 len() 不用肉眼截断**（COS 第 31 笔自领）。
+- **⚠ 新疑点**：**聚合 66→7（每席 1 条）·59 条被归一化吃掉**——「7/7 零丢」指聚合器视角·**per-seat 全量 66 与聚合 7 的压差=聚合器压缩面**（又一个「丢」候选·待查）。
+- FSD 两形兼容（c516ad50）照行·c（_low_dim_coverage 不拦）照修（635ca64e）。
