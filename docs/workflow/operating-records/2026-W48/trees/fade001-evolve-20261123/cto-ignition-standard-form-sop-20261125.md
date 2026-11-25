@@ -26,7 +26,7 @@ sudo -H -u fleet env TRICO_LOOP_MARKER_DIR=... NOTIFY_SMTP_HOST=... ... DCE_EXEC
 
 ## §三 · 点火后三断言
 
-1. **`<run_dir>/ignite.log` 存在且非空**（标准形锚）
+1. **`<run_dir>/ignite.log` 终态非空**（标准形锚）——**注：跑期可能 0 字节（realtime 链终一次性写 JSON·SDE r42 实测特性）·以「终态非空」为判据非「跑期有内容」**
 2. **wrapper 退出即收**（`pgrep -af fade001` 链终点后零残留·瞬态 wrapper 自然退）
 3. **preflight=pass** + prev/continue 语义（残拍继承照 R2 c）
 
