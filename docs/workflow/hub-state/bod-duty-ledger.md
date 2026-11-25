@@ -15621,3 +15621,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2559 拍读 01:30：**r44 快跑**（shift-W48-resume44-20261125T172650Z·01:26:50 点·**4 分钟段 1-6 已过**·迁移 ops e52b86f5c）·段 7/8 中·四件 2e774d9 已落。**验证四点候段 8-10**（close 同源/refill 真值/ab_columns/charter 只待办）。心跳已更。
 
 - ㊿+2560 **r44 起跑确认（SDE·v13 一次过门·01:26:50）**：preflight pass·consumed(43) ✓·链在跑·三断言正常。四验点终报候（seven_seats source=joint/refill consumed>0/ab_columns/charter 只待办）。
+
+### ㊿+2561 · 🔴**r44 三验点未通——根因=时序倒挂（close 段 8 先于联审段 10·永远读不到本轮 joint）**
+
+- r44 十段全过（8.5min·快）·但四验点：①**seven_seats 仍 prev-borrow**（reason：close 段 8 早于联审段 10 轮末钩）②**refill 0**③**ab None**——**代码修对·时序不可能**。
+- **架构级时序倒挂**（正合 CEO「时序=状态机未显式」判断）：**close（段 8）与联审（段 10）依赖倒挂**。
+- **三选已请 CTO 裁定**：A 联审提前（段 7 后·可能循环）／B close 延后（改段序）／**C 两段式 close（初版段 8·联审后回填终版·BOD 倾向·改动小语义对）**。
