@@ -15151,3 +15151,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 拍读 18:00：三仓无新·零进程（刚动码）·BOD 拍读盯每批 commit。
 
 - ㊿+2421 **批二-1=S4 已派（18:00·3379ed7c）**：三子件 S4a→S4b→S4c（文件锁 3 串行）·接力序 S4→S5→S6→S7→S8·批间不停·每批毕报账清核+commit sha→CFO GREEN 即点·FSD 先读 df3e2d419 §二 S4 条再落（批一经验）。
+
+### ㊿+2422 · 🎯**批二-1=S4 验收通过（18:03·4fccf51/8559134·6 passed EXIT=0）——r36「run_state 掩盖面」实证已堵**
+
+- S4a 红面即停（rc2→止 close_skill·notify 不触）/S4b 空证 fail（_judge_g verify 空证+G fail）/S4c 同源（contract 绿→succeeded/红→failed·contract_sync 双面 L315-316）✓。
+- **关键实锚**：**r36 manifest close_contract ok:false 而 close.json run_state=succeeded——S4c 缺口实证**·此修后同卷必 rc2 failed（fixture 即此形）——**「89.5 succeeded」的掩盖面已堵**。
+- 条级对表：S4 6 条六面（coo-2/cho-8/cao-4 等）。批二-2（S5 余）已派·批二 3 批~2 批余。
