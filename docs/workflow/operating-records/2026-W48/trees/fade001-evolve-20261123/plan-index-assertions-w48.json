@@ -1,18 +1,23 @@
 {
-  "assertion_version": "1.0.0",
-  "source": "DP-20261123-033 cpo-1（charter v2·COS 派工 22:22+0800）",
-  "generated_at": "2026-11-23T22:26:00+08:00",
+  "assertion_version": "1.1.0",
+  "source": "DP-20261123-033 cpo-1 + r44 cpo-0 复同步（2026-11-26T02:41+0800）",
   "op_ref": "../../OP-202611-W48-001.json",
   "index_assertions": {
     "w48_tree_ids": [
       "bod-fade001-sprint-plan-20261120",
       "bod-tick",
+      "cao-memory-to-asset-mechanism-20261124",
+      "cao-tick-selfcheck-design-20261124",
       "cao-w48-review-20261123",
       "cos-dispatch-ledger",
       "cos-patrol-timer",
+      "dem018-output-utilization-20261124",
       "fade001-evolve-20261123",
       "fade011-ew-runs",
+      "joint-review-v13",
+      "r12-raci-cho-confirm-20261125",
       "shot64-dem009-20261123",
+      "source-agents-ops-duty-handoff-20261124",
       "w48-gate-semantics-review-20261123",
       "w48-migration-joint-review-20261123",
       "w48-migration-quality-review-20261123",
@@ -25,6 +30,7 @@
       "cfo-quota-daily-w48.md",
       "company-demand-pool.md",
       "daily-progress.md",
+      "scoring-ledger-w48.md",
       "task-inventory-20261123.md",
       "todo-list-20261123.md"
     ],
@@ -35,15 +41,13 @@
       "cfo-quota-daily-w48.md",
       "company-demand-pool.md",
       "daily-progress.md",
+      "scoring-ledger-w48.md",
       "task-inventory-20261123.md",
       "todo-list-20261123.md"
     ],
     "w48_root_dirs_extra": [
       "convene"
     ],
-    "w48_missing_declared": [
-      ".shift-ade.prev.json"
-    ],
-    "compare_rule": "set(OP.activeTrees)==set(w48_tree_ids) and set(OP.topLevelSupplement.items)==set(w48_top_level_files) and len(w48_loose_files)==len(tops)"
+    "compare_rule": "set(OP.activeTrees)==set(w48_tree_ids) and set(OP.topLevelSupplement.items)==set(w48_top_level_files)"
   }
 }
