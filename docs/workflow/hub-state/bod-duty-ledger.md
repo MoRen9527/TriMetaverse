@@ -15001,3 +15001,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2362 拍读 13:12：resume36=**17 json 段全齐**（含 close/notify）·PROC=4（联审中）——候联审 A/B+七席 7/7+subjective 35 终判。心跳已更。
 
 - ㊀+2363 拍读 13:18：三仓无新·PROC=4（联审 7 席 spawn 中·joint-review 未现）——resume36 已跑 21min·候联审终判。心跳已更。
+
+### ㊿+2364 · **resume36 终报（全形首验）：七席 7/7 归队+subjective 链内自动 24.5（非 pending）+manifest ✓——两遗留：auto 判分口径/merged 落痕**
+
+- **①七席 7/7 ✓✓**（absent=[]·CTO 席 a4/b5 归队·大小写归一）②**subjective=链内自动 24.5**（backfill·I1=3/I2=2/I3=2·auto judge）——**但 auto 判保守于人工（35→24.5）⇒ total=89.5**（breakdown={41,24,24.5}·pending 0）③artifacts_manifest 顶层 ✓④**mergedReport 落痕未见**（joint/close/charter 无 merge/dedupe/drop 键·-2 可溯未达·如实）⑤十段全过·charter 生成·per-seat 7/ab 7 席/chain-journal 全 ✓。
+- **两遗留候 CTO**：a）**auto 判分口径**（auto 24.5 vs 人工 35·满分靠 auto 与否）b）merged 落痕（FSD 落位）。
