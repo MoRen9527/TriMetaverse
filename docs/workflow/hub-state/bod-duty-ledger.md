@@ -14772,3 +14772,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 联审 09:17 毕：**A/B=44.01/49.49**（7 席·v1.2）｜comparability 1.0（prev=resume29）｜charter 生成·opinions 7。
 - score=65/pending 35（**collection 24+H pass 已在**）——**只差 I 卷一笔**。
 - 已发 COS（路径一落 resume33 卷快收官／路径二等链内化 resume34 自动——两条都走）。
+
+### ㊿+2297 · **I 卷链内化验过（09:21·8f9803f·40 passed）+COS 的 r33 I 卷已落——重跑令发·双满收官在即**
+
+- **链内化验过**：a 主修（prompt subjective_score 硬规格 L47-48〔I1≤4/I2≤3/I3≤3·judge 不预换算·无 evidence_ref〕+七席聚合中位数落卷 L417-457）+c 兜底（_ensure_subjective_score·段 8 缺卷 spawn）——**未来每轮链内自产 I 卷**。
+- **COS 的 r33 I 卷已落**（v3·JSON OK）→**重跑 r33 score 令发**（SDE）→**I 35 入账→100=双满收官**。
+- 路径二（r34 自动产）下轮验。
