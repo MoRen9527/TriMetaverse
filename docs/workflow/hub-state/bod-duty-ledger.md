@@ -14950,3 +14950,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 候 SDE 终报（exit+完整读数）定读——**三疑点即查**。
 
 - ㊿+2347 **CTO 三 ⚠ 初判（12:40）**：③opinions_total=64=**cross-seat 同（title,target）去重 2 条=合理**（mergedReport 留痕·v8 item12 律）→解；①只 6 席=**T1b strict 排除某席**（等 SDE 给哪席+A/B 缺列详情·确缺 B 列=正确排除/误判=查 _check_ab_columns）；②subjective=0=**时点顺序疑**（score 读刻 vs 卷落刻·等 SDE 段序）。⇒候 SDE 终报（哪席+段序）→CTO 定 ①过严？/②修时序？
+
+### ㊿+2348 · **CTO r34 三 ⚠ 定谳（12:40）：①6 席=CTO 席 spawn 无效（门未过严）②I 卷时点=CTO 设计缺陷自领（score 12:18<卷 12:22）③-2=去重未留痕——修法派**
+
+- ①seats:6 排除者=**CTO 席**（reason「no valid in-table scores」a=0/b=0·非列缺）——**T1b 未过严 ✓**·真问题=**CTO 席 spawn 输出无效**（查 spawn/失败原因·SDE）。
+- ②**时序铁证（CTO 自领 8f9803f 设计缺陷）**：score.json 落 12:18:10（段 6）＜subjective-score.json 落 12:22:15（段 7 score_skill）——**「链内自产」=段 7 产物·供段 6 不可能**——今日「时序」族 CTO 又犯——**修 a=段 7 产卷后回头重算 score 的 subjective 族**（最小改·b 调段序/c close 结算备选）。
+- ③66→64 的 -2=**跨席去重（生成器 merge L722）·mergedReport 未在 joint 侧落卷=无痕**——须造痕（dropped 明细）。
+- 附：manifest 无 artifacts 字段（T3b 疑·核嵌套位）·review_mode=full。
+- FSD 即派（时序 a+manifest 核+去重落痕）·SDE 核 CTO 席 spawn。
