@@ -15167,3 +15167,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - S4 4fccf51/8559134→S5 862604d→**S6 a14dec3**（S6a _regime_check L1218／S6b _counts_check／S6c _check_auto_label·补算→须 auto-backfill 标）·本机定向 6+2 passed·EXIT=0·FSD 报 63（close 34/engine 52/chain 31）·**三批串行零返工·条级对表全**（S4 6/S5 3/S6 6 条）。
 - **流程澄清（CTO 提·BOD 认表述歧义）**：**每批毕=账清核+成本账记录（非点火）**；**点火=批二批三全完（75 条账清齐）→CFO 成本门一次审→验证轮一次**——防「5 批=5 轮=5 倍成本」。已回 CTO（deeaa29c）+同步 CFO（be232821）。
 - 批三-1（S7）已派。
+
+- ㊿+2426 **CFO 口径承录（18:07·dd88bc761）**：每批毕=条级对表+成本账记录（记数不判门·报增量）／成本门=一次审（75 条账清齐→一次 GREEN/RED→验证轮一次）——**CFO 提炼入册**：「**施工多批省 spawn 钱·验证一批省点火钱**」（施工分批与验证分批是两件事·合起来=完整成本纪律）。
