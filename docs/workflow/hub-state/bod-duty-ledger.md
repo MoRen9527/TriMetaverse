@@ -15446,3 +15446,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2507 拍读 21:48：**A+C 施工中**（TriCompany 无新·commit 未落）·B 件 SOP 已见（22e0486e2）·PROC 自匹配=零真实进程（今后用 `pgrep -af "fade001-ign[o]ne"` 括号技巧避自匹配）。心跳已更。
 
 - ㊿+2508 **🎯设计批三件全完（A+C=ecd328b·110 passed·~9min／B=22e0486e2 SOP）**：A 六项全落（notes-only gate L704「判要不要紧=段 7 语义判·本门不阻断」／分族门删／B 降级为段 7 上下文注入 _wrong_order_context L221/L250／指纹删／**段 7 prompt 增 wrong_order 判读 L49**／**段 8 close 引用 L305 wrong_order_verdict_ref**）·C 键名双形 ✓·COS9 strict 随架构令改注形 ✓。**已发 SDE**（合并令：按新 SOP 点 r41 一次·三断言即实测判据·省一次点火）——**BOD 落 ruling 前置**（三绑 round_count=15+清戳）·CFO 门点火后补判。
+
+### ㊿+2509 · **r41 标准形实测=三断言全过 ✓·但抓出 SOP 一坑（HOME=/root·sudo -E 副作用）——已修前置重跑**
+
+- **三断言**（SDE 21:50:47 点火·shift-W48-resume41-20261125T135047Z）：A1 ignite.log 875B 非空 ✓（r39/r40 漂移未复现）／A2 wrapper 退即收 ✓（零残留）／A3 preflight pass+continue ✓。
+- **坑**：SOP §一 `sudo -E` 保 HOME=/root → qualify 读 /root/.trimetaverse/notify.json PermissionError → 段 2 rc=1——**SOP 第 9 项=HOME=/home/fleet**（或 sudo -H）·已发 CTO 补 SOP（BOD 直点用 -H 故未撞·SOP 的 -E 与 -H 之别=坑）。
+- **重跑前置已备**：ruling v9（round_count=16·清戳）+marker·SDE 按修正形重跑 r41 同 run-id。
