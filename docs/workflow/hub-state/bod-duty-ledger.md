@@ -15609,3 +15609,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **数据答案**：**r37→r43 同维度 55 项：涨 30/平 5/跌 20**——**CTO 大涨**（架构 44→76 +32·技术风险 36→64 +28·交付 +10·质量门 +8）=**修了真涨分**；**COS 全线上涨**（36→44 等·**不是自打脸**）；**跌的**：**CAO 评审机制 34→24/33→21（-12·评审机制自身问题）**／COO 迁移停机窗 63→58·节奏 -3·记录 -4（**真跌**）／CHO 交接链 -10／CFO 预算护栏 -6。
 - **COS rationale 属实**：**close.seven_seats=借 prev resume42（prev-degraded）**（joint-review 有 7 席但 close 读不到）／无 refill 表（close 面 items_consumed=0）／A/B 未分列／divergence 无明细——**评分席看的 close 面 ≠ 联审实际产出=接口缺口**。
 - **已发 CTO 三查**（①close.seven_seats 读 joint 同源禁借 prev ②close 面补 refill/divergence ③A/B 双列）+**CEO 新令**（新任务书只含待办·已修不含·**上轮未结账禁止进入下一轮**·落 charter_generator）。
+
+- ㊿+2555 **CTO 四件已派 FSD（~1.5h）**：①close.seven_seats 读源改 joint（同源禁借 prev）②close 补 refill/divergence 消费③A/B 双列④**CEO 新令**（任务书只含待办·已修不含·未结账禁入下轮·charter_generator 侧）。**「接口漂移族第 N+1 例（close↔joint 不同源）」定性承**。四件毕→验收→重跑验证（COS 的评分依据=真面）。
