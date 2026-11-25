@@ -15547,3 +15547,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **根因（接口漂移第 N 次）**：**结账表在 TMV 树**（fade001-evolve-20261123/）·**`_load_acceptance_ledger`（1990a80·L260）只找 run_dir glob→env→兄弟兜底**→**读不到**。
 - **已请 CTO 修**（①读取端适配 TMV 树路径〔建议〕②或表转移 run dir〔破坏治理位·不取〕）——修好后 refill 应见 70 fixed。
 - **注**：A1 的 fixture 测试「6 passed」为何没抓到这个？——测试 fixture 可能把表放 run dir（假环境）——**真实路径没覆盖**（同「build≠runtime」族）。
+
+- ㊿+2533 **CTO 自领 A1 接线缺陷+修派 FSD**：根因=BOD 推断（表在 TMV 树·读取端只找 run 目录）；**深层=「build green≠runtime green」同族**（A1 fixture=run dir 假表·真件 TMV 树）；**修=读取端增 TMV 树路径**（env FADE_ACCEPTANCE_LEDGER_PATHS 或 tmv-root 相对 glob·表不挪治理位）·FSD ~30min·**含「TMV 树真件」fixture**。**承「r42 白跑·2 倍成本」**——修后 r43 重跑=意见账下降真验证。
