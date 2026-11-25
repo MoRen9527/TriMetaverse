@@ -15493,3 +15493,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **解门链**：v11（r41·round_count=18>17 单调✓）→直点→**preflight pass·consumed(41·v11) ✓**→qualify 已出·**链在跑**（段 2 中）。
 - **三断言跑中期读数**：A1 ignite.log 跑期 0 字节（realtime tee 只收终态·**非空断言须终态验**——SDE 新观察：形断言跑中不适用）／A2 wrapper 活=链中正常／A3 preflight pass ✓。
 - fail_streak 归零面候终态（前 7 系空点累积）。**候十段+联审**（29 fixed refill 面）。
+
+- ㊀+2521 拍读补 22:07：**r42 已过段 4（dce 迁移真跑·ops 1643b1045）**——链在段 5+。**push 插曲**（远端被并行 commit 1643b1045 抢先·fetch+rebase 后推 9d0529601 ✓·双 pushurl 拓扑照验 ls-remote 真值）。心跳已更。
