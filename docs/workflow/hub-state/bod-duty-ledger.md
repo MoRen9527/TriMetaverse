@@ -14972,3 +14972,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2352 拍读 12:48：**resume35 已点在跑**（shift-W48-resume35-20261125T044613Z·12:46:13 点·PROC=3）——四修后首验轮（七席归队+subjective 自动计判据）。TriCompany e5eb41d。心跳已更。
 
 - ㊿+2353 **resume35 点火首笔（12:46:13·pid 3364013·preflight pass·e5eb41d 四修在盘·chain-journal 生）**——判据四件候（CTO 席归队 7/7／subjective 35 自动／manifest 可查／-2 可溯）。终态随报。
+
+### ㊿+2354 · **resume35 段 3 挂（12:54）：item3 四字段缺 7 项 CARRY 件（due=None 等）+item6 RACI 覆盖 6 项——b 案只 owner 归一·须扩**
+
+- 挂因：item3 CARRY-20260728-004 等 7 项四字段缺/占位（due=None）+item6 覆盖缺口 6 项无 RACI 键。
+- **判**：**b 案（unassigned 两态）只对 owner·due/acceptance/depends_on 空缺仍拒**——**四字段只归一了一个·不完整**。
+- 已发 CTO（扩：四字段全走两态〔有值→有效/显式缺省→pass〕+item6 覆盖缺口同样）→resume36。
