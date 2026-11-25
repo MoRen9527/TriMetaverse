@@ -15313,3 +15313,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2474 拍读 20:48：B3 在途 9min（4 条·含剔重核施工中）·三仓无新——在途第 2 拍·ETA 21:0x。心跳已更。
 
 - ㊿+2475 **B3=验收通过（f2fabd6·98 passed·首跑 mtime 抖动复跑稳）·档二 13/13 全清**：CHO3/CHO10 ✓·重叠核剔出 cpo-10/cao-6 ✓。**CTO 自领结账表微瑕两处**（cpo-10 evidence 锚偏移 4fccf51→真身 e0a2f32／cao-6 部分·**结论 fixed 不变·锚补勘注**）——诚实勘正。**B 余=档三 21→B4(10)+B5(11)**·B4 已派。
+
+- ㊿+2476 **B4=验收通过（f294ead·136 passed·11min）**：全修 7（CAO1/CFO2/CFO4/CFO6+CHO2/CFO10/CHO7/CHO9）+剔 2（CAO5/CHO1）+部分 1 ✓。**B 余 ~9-10→B5（最后一批）已派**——**B5 毕=B 全完→D 闭环（账清核+三件机制→CFO 成本门→GREEN 即点 r38）**。
