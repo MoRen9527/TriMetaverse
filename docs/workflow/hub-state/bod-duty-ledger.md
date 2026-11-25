@@ -14873,3 +14873,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **跑一轮→各席意见汇总任务书→呈批→不自动进下轮**（跑完停候批）。
 - 已发 CTO（12:00 施工准备令·批一拆解）。
 - **BOD 机制**：12:00 拍读时发实际施工启动令+盯施工进度。
+
+### ㊿+2321 · **CTO 批一拆解 7 件（12:00 可动手）+文件锁+T1 串行——工时 4h 承（不压）**
+
+- 拆解：T1a（七席独立落卷·loop_joint_review_spawn.py+charter_generator.ts·~1h）／T1b（A/B 双列·prompt+解析·30min）／T1c（回填守恒·与 T6 合并·30min）／T2a（三绑·preflight.py·30min）／T2b（D-88/D-91·chain_runner.ts·30min）／T3a（tree hash·plan_skill_spawn.py·30min）／T3b（runId+manifest·score_engine.py·30min）。
+- 文件锁 4 面（T1a/b/c 同文件=串行·T1 先行）·FSD 落件 CTO 派工验收。
+- **工时 ~4h 承（BOD 2-3h 偏紧·CTO 估准·不压后置项）**：12:00→16:00 前批一完。
+- **12:00 双令齐**（CTO 派工令+ BOD 施工启动令）=施工窗开。
