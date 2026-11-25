@@ -15333,3 +15333,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **40 秒内段 1-2 过**（preflight+qualify.json 落）·链在跑。
 
 - ㊀+2481 拍读 21:00：**r38 段 1-6 已过（3min·快于 r37）**——plan/dce(=execute·**迁移真跑 bb16f9035**)/verify/score/collection 落卷·段 7/8（score_skill）中。心跳已更。
+
+- ㊀+2482 拍读 21:06：**r38 段 7（score_skill 2 席评分）进行中**（两 spawn 进程刚起 00:00）·json 仍段 1-6（score-skill 未落）。心跳已更。
