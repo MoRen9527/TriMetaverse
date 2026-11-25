@@ -14942,3 +14942,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2344 拍读 12:24：**resume34 段全齐（17 json·含 `subjective-score.json`=I 卷链内自产生效实证！）**·PROC=3（联审中）——**全形七观察点**：①per-seat 7 文件 ②A-B 双列 ③回填 ④三绑 ⑤journal ✓ ⑥hash+manifest ⑦**I 卷链内✓（subjective-score.json 在）**——候联审 A/B+score 终判。心跳已更。
 
 - ㊀+2345 拍读 12:30：三仓无新（12:13 后）·PROC=4（联审 7 席 spawn 中·joint-review 未现）——resume34 已跑 16min·候联审 A/B+score 终判。心跳已更。
+
+### ㊿+2346 · **resume34 联审落（12:36·初读）：七观察点 3 ✓+3 ⚠（A/B 只 6 席·subjective=0·opinions 64）——候 SDE 终报定读**
+
+- **✓**：per-seat 7 文件全在（T1a）／chain-journal.jsonl 在（T2b）／**subjective-score.json 在**（I 卷链内自产）。
+- **⚠**：①**seat_means={a:43.24,b:45.72, seats:6}**——**只 6 席**（7 文件中 1 席 A/B 不齐被 T1b strict 排除？）②**subjective=0**（卷在但 score 未计=时点顺序疑）③opinions_total=64（66-2）。
+- 候 SDE 终报（exit+完整读数）定读——**三疑点即查**。
