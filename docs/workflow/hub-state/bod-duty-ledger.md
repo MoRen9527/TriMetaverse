@@ -15157,3 +15157,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - S4a 红面即停（rc2→止 close_skill·notify 不触）/S4b 空证 fail（_judge_g verify 空证+G fail）/S4c 同源（contract 绿→succeeded/红→failed·contract_sync 双面 L315-316）✓。
 - **关键实锚**：**r36 manifest close_contract ok:false 而 close.json run_state=succeeded——S4c 缺口实证**·此修后同卷必 rc2 failed（fixture 即此形）——**「89.5 succeeded」的掩盖面已堵**。
 - 条级对表：S4 6 条六面（coo-2/cho-8/cao-4 等）。批二-2（S5 余）已派·批二 3 批~2 批余。
+
+- ㊿+2423 **批二-2=S5 验收通过（18:05·862604d·2 passed EXIT=0·close 34）**：交接清单（_build_handoff L286/598·handoff_items 四字段·charter 优先/opinions 兜底/unassigned 候认领）+FUSE 三态逐轮（_build_fuse_trace L292·d91_marker cur/prev/changed）✓·条级对表 S5 三面（交接/FUSE/回填=T1c）→**批二-3=S6 已派**（批二最后一批）·进度 S4✓→S5✓→S6→批三 S7/S8。
