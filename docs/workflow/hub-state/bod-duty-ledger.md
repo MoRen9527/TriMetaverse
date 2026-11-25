@@ -14745,3 +14745,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2289 **resume33 点火首笔（08:56:48·pid 3342752·preflight pass·34165df 两态在盘）**+SDE 诊断备档：**resume32 段 3 的 22 项 due 缺**（R12 仅 14 entries 覆盖子集·新件不在）——unassigned 两态=阻塞解·**真 due 覆盖需 COS 扩表 22 项**（候判·非本轮阻）。双满判定候终态。
 
 - ㊀+2290 拍读 09:06：resume33 在跑（11 json·段 1-7 过·PROC=3·段 8/联审中·08:56 点已 10min）——联审 spawn 慢·候终态。patrol 行已追加。心跳已更。
+
+- ㊿+2291 **resume33 段 8=过 ✓✓（双满关键格）**：close run_state=succeeded（09:06）·patrol_check={ok:true,degraded:true,reason「patrol-log 无产出机制·门降级留痕」}——**cadence_layers 双修生效**·notify_done 已发（09:06）——**段 1-10 全过**。联审将起→score 100 面（I 卷候 COS）→**首个「十段+100」双满候选**。
