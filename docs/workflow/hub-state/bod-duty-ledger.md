@@ -14747,3 +14747,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2290 拍读 09:06：resume33 在跑（11 json·段 1-7 过·PROC=3·段 8/联审中·08:56 点已 10min）——联审 spawn 慢·候终态。patrol 行已追加。心跳已更。
 
 - ㊿+2291 **resume33 段 8=过 ✓✓（双满关键格）**：close run_state=succeeded（09:06）·patrol_check={ok:true,degraded:true,reason「patrol-log 无产出机制·门降级留痕」}——**cadence_layers 双修生效**·notify_done 已发（09:06）——**段 1-10 全过**。联审将起→score 100 面（I 卷候 COS）→**首个「十段+100」双满候选**。
+
+- ㊀+2292 拍读 09:12：resume33=16 json（close/close-acceptance/manifest/notify_done/charter 在）·PROC=4（联审进行中·joint-review 未落）——候联审 A/B+score 100。patrol 行已追加。心跳已更。
