@@ -366,3 +366,6 @@
 - **成本门 r45 = RED（首张 RED·02:34·fail-closed）**：`ⓐ三查:查一✓(三层齐)/查二✓(结账表70条有状态)/查三✗(33条去向标注无条级证据)`——**本机无法读 sg run 目录** → **不凭描述判 GREEN**。**门纪律=拿不到证据不放行（fail-closed·非拿不到就默认放行）**。即刻复审通道：提供 charter 33 条条级字段（title+deferred_to/this_round_work）→ 有标注即 GREEN·无标注则 RED 维持并请补标。**成本比较**：补标注几分钟 << r45 白跑一轮。
 
 〔落款 2026-11-26 02:34:50 +0800 现查〕
+- **r45 RED 证据升级 + 检测器交付（02:36）**：BOD 供条级证据（33 items·keys 7 个·**deferred_to=0/this_round_work=0/无标注 33/33**）→ **RED 判定由「拿不到证据」升级「证据证明无标注」·维持更硬**。**⚠️发现补标载体坑**：**charter item schema 本身无 `deferred_to`/`this_round_work` 字段**——补标须先定载体（推荐扩 schema 两字段·或外部台账给路径）否则「补完」无法机械验。**交付检测器**：`scripts/charter-digest-check.py`（本仓 `fa33dc20d`·**selftest 3/3**·GREEN/RED+逐条列无标注 opinion_id）——**复审流程=补标落盘→跑检测器→GREEN 即出成本门 GREEN（零重跑）**。
+
+〔落款 2026-11-26 02:35:58 +0800 现查〕
