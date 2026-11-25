@@ -15859,3 +15859,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **建议二选一**：①**charter 生成时自检**（backfill 时对比新旧 opinion_id·差集→`unannotated_new_items` 告警·检测器直读零人工）②**ledger 继承+新项显式 null**（新 charter 自动继承前版 ledger+新增项写 null→检测器天然判 RED 点名）。
 - **成本理由**：**人工查差集（半小时多席）>机械自检（几行代码）**——「能机械拦的不要靠人盯」（D-98 延伸）。
 - **补标后复审**：r45 卷 ledger 须含 **36 条**（33+3）→检测器 36/36→CFO GREEN。
+
+- ㊿+2626 **补标完成（r45 卷 ledger 36 条已落=33+3）**：cho-14/15 deferred_to=r46／cto-14 this_round_work（三面证据）——**已请 CFO 复审**（检测器 36/36→GREEN→r46）。**CHO 结构性建议照录**（deferred_to:null→检测器点名责任席）。COS 1160/1159 落账见。
