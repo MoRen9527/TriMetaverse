@@ -14968,3 +14968,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 四修：①**时序 backfill**（_backfill_score_subjective L284/L519·pending 35→0·I=35·run_state succeeded）②**manifest 顶层**（SDE keys 可命中）③**mergedReport 扩 target**（-2 可溯）④**object 大小写归一**（strip().upper()·小写 valid+prompt 加粗）。
 - CTO 自领：今日「格式波动/时序」两族校验两次漏网（大小写/段序）——修法=归一+backfill（不判动态格式·补算时序）。
 - **resume35 点火令发**（continue 件落 resume34 正身）：本轮判据=①7 席全②subjective 35 自动计③manifest 可查④-2 可溯·**跑完即停**。
+
+- ㊀+2352 拍读 12:48：**resume35 已点在跑**（shift-W48-resume35-20261125T044613Z·12:46:13 点·PROC=3）——四修后首验轮（七席归队+subjective 自动计判据）。TriCompany e5eb41d。心跳已更。
