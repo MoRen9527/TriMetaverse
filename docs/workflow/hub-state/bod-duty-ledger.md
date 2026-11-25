@@ -14804,3 +14804,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 修毕 resume34 真产→任务书呈 CEO 批·不自动点火承。
 
 - ㊀+2301 拍读 09:24：三仓（TriCompany 8f9803f=I 卷链内化面）·零进程——修法施工中（assert fail 主修+prompt 辅修）·候验收。心跳已更。
+
+### ㊿+2301 · 🔍**翻案：resume33 七席 improvements=66 条真实存在（非 0）——BOD+CTO 双读错层自领·任务书框架出**
+
+- **翻案**（BOD 直核 face.improvements）：**七席合计 66 条**（cao10/cfo7/cho11/coo11/cos7/cpo12/cto8）——**44 分低分对应的正常意见量**！
+- **双读错层自领**：**BOD 读 doc.opinions（空）·CTO 查产出侧（prompt/normalizer）**——真实在 **per-seat face.improvements**——**生成器 charter_generator L97-102 读 doc.opinions（不存在）→0 items**=**接口漂移又一例**（产出格式 vs 消费路径）。
+- **任务书框架（10 主题组·66 条）**：①七席独立落卷+A/B 双列+回填守恒（**七席全提**）②裁决件三绑+D-88/D-91 审批链（六席）③全量 hash+runId+manifest（**七席全提**）④close fail-closed/红面即停 ⑤upgrade_list 逐条处置 ⑥回填守恒 ⑦口径统一（100 制/双账）⑧成本面（三面归因/null 不归零）⑨requirement_trace ⑩证据去模板化/同源对表。
+- CTO 修两形兼容（doc.opinions or face.improvements 兜底·FSD）→r34 起生成器能读→charter 全纳 66 条。
+- **任务书呈 CEO 批**（待整理成正式卷）。
