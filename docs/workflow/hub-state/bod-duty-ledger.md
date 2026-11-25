@@ -15627,3 +15627,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - r44 十段全过（8.5min·快）·但四验点：①**seven_seats 仍 prev-borrow**（reason：close 段 8 早于联审段 10 轮末钩）②**refill 0**③**ab None**——**代码修对·时序不可能**。
 - **架构级时序倒挂**（正合 CEO「时序=状态机未显式」判断）：**close（段 8）与联审（段 10）依赖倒挂**。
 - **三选已请 CTO 裁定**：A 联审提前（段 7 后·可能循环）／B close 延后（改段序）／**C 两段式 close（初版段 8·联审后回填终版·BOD 倾向·改动小语义对）**。
+
+- ㊿+2562 **CTO 裁 C（两段式 close·~1.5h）**：段 8 close 初版记 pending（prev-borrow/degraded 显式·refill 0·ab None 如实）→**段 10 联审后回填 close.json#/final**（7 席/refill/AB/divergence·双形并存）——**与 §七 state 两段/A1-B1 初版+补同族（今日「两段式」架构模式第三例）**。**须核（CTO）**：**COS 评分（段 7）在 close（段 8）前——COS 的 21-24 读的 close 面=上轮！**（段序核中·若属实=评分席一直读旧数据）。呈 CEO。
