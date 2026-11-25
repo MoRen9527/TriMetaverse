@@ -15353,3 +15353,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **读数**：verdict=fail·total=51·run_state=partial·FAILFAM=**G**（「dce wrong_order 未逐条裁定：4 项 vs rulings 0」）·counts ✓·regime ✓（100 制）。
 - **性质**：**B5 修的 COS9（wrong_order 逐条裁定 L314-318）新门第一次见真数据即抓到缺口**——r38 dce 产 4 项 wrong_order·rulings=0（无人裁）→ G fail → 段门拒止链。**新门正确行为**（以前这 4 项会被 100 分放过）。
 - **已派 CTO 联 COS**（裁定 4 项逐条·认/驳/延+理由落卷→报 BOD→成本门（残拍重跑低成本）→重跑）·本次不修代码只补裁定件。
+
+- ㊿+2487 **CTO 分工齐（B5 新门实证认定）**：COS 逐条裁定 4 项（认/驳/延+理由+裁定件落卷·已请）＋SDE 取 dce 4 项详情（已请）＋裁定落卷→CTO 验收→成本门（残拍重跑低成本）→重跑 r38/r39。**「新门首验抓真缺口」=今日 75 条修的最大即时回报**（COS9 gate 在 r38 首验即起作用·以前 4 项会被放过）。
