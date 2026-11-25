@@ -15442,3 +15442,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2505 **三件开工确认**：A（归段 7/8）+C（键名）=已派 FSD／**B=CTO 亲手写 SOP 卷**（`cto-ignition-standard-form-sop-20261125.md`·单一真源：7 项 env+ruling 三绑+清戳+marker+chown+**ignite.log 落 run dir**+wrapper 退出即收）。**完工序**：A+C 毕→测试→**SDE 新 SOP 标准形实测一次**→账清核→成本门（止损下重判）→GREEN 即 r41。
 
 - ㊿+2506 **B 件=毕（点火标准形 SOP 卷出·22e0486e2）**：五节——§一 点火前六备（fleet+sudo -E／**env 八项**〔BOD 报 7 项=数错·实际 8：TRICO1+NOTIFY2+FADE4+DCE1〕／ruling 三绑+清戳／marker／chown／**ignite.log 落 run dir**〔r39/r40 缺=漂移实证〕）§二 命令形（tee ignite.log）§三 **点火后三断言**（log 非空／wrapper 退出即收／preflight pass+continue）§四 执法面（非 SOP=违例·log 缺=铁证·D 系候选）§五 依据。**A+C FSD 施工中**（~1h）·完工序承。
+
+- ㊀+2507 拍读 21:48：**A+C 施工中**（TriCompany 无新·commit 未落）·B 件 SOP 已见（22e0486e2）·PROC 自匹配=零真实进程（今后用 `pgrep -af "fade001-ign[o]ne"` 括号技巧避自匹配）。心跳已更。
