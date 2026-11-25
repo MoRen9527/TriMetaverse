@@ -1,0 +1,58 @@
+{
+  "ledger_id": "acceptance-ledger-r36-s4s8-20261125",
+  "sourceOfTruth": "本卷（trees/fade001-evolve-20261123/acceptance-ledger-r36-s4s8-20261125.json·结账表正身）",
+  "syncMode": "write-time",
+  "run": "shift-W48-resume36-20261124T213058Z",
+  "taskbook": "bod-taskcharter-resume36-improvements-20261125.md (df3e2d419·§二 按席 75 条)",
+  "scope": "S4-S8 groups (29 items) — CEO 20:03 令「先结账 29 条·46 条候任务书批」",
+  "verified_by": "cto+cao",
+  "evidence_base": {
+    "commits": {
+      "S4": ["4fccf51 (TriCompany)", "8559134 (TriRMC)"],
+      "S5": ["862604d"],
+      "S6": ["a14dec3"],
+      "S7": ["dca6202"],
+      "S8": ["52d7563"]
+    },
+    "test_suites": "loop 43 / engine 53 / close 34 / chain 31 / preflight 71 / plan 53 — 全绿 EXIT=0（本机复核）",
+    "note": "evidence 每条可卷内/代码内复核（commit sha + 函数行号 + 测试名）·禁泛证"
+  },
+  "items": [
+    {"opinion_id":"cao-4","group":"S4","title":"run_state 与 close_contract 同源，空证不得 pass","status":"fixed","evidence":["commit 4fccf51: close_skill_spawn.py L315-316 contract_sync {contract_ok,reds,ok} 双面落卷（contract 绿→强制 succeeded/红→failed+rc2）","test_close_skill_spawn.py: contract 红止链/空证红/绿同源(+3)","engine _judge_g: verify items 空证→G fail(+1·engine 53 套)"],"verified_at":"2026-11-25T12:03Z"},
+    {"opinion_id":"cho-8","group":"S4","title":"close.run_state 与 manifest.close_contract 同源并禁空证 pass","status":"fixed","evidence":["commit 4fccf51: 同 L315-316（S4c 同一块）","r36 真样对表: manifest close_contract ok:false 而 run_state=succeeded=缺口实锚·修后同卷必 rc2 failed（测试 fixture 即此形）"],"verified_at":"2026-11-25T12:03Z"},
+    {"opinion_id":"cos-4","group":"S4","title":"close_contract=false 即 fail-closed 并补六项回呈/BOD→CEO 升级","status":"fixed","evidence":["commit 4fccf51: contract red→run_state=failed+rc2 止链(reason 载 fail checks)","chain 侧: rc2→止于 close_skill·notify 不触(+1 案·chain 31 套)"],"verified_at":"2026-11-25T12:03Z"},
+    {"opinion_id":"coo-2","group":"S4","title":"红面即停：close_contract false/空证/空收件不得 succeeded","status":"fixed","evidence":["commit 4fccf51: 三红面(contract false/空证 upgrade source/空收件)→同块红→failed+rc2","test_close_skill_spawn.py 红面止链(+3 之一)"],"verified_at":"2026-11-25T12:03Z"},
+    {"opinion_id":"cpo-10","group":"S4","title":"close 只认本轮七席并联审 fail-closed","status":"fixed","evidence":["commit 4fccf51: close contract 面(cadence/七席/run_state)同源判定","r37 联审实证: 7 席齐(absent=[])·T1a per-seat 落卷"],"verified_at":"2026-11-25T12:03Z"},
+    {"opinion_id":"cao-6","group":"S5","title":"锚 2 独立面板：七席与回填只读当前卷","status":"fixed","evidence":["commit 862604d: _build_handoff L286/598 读当前 run_dir(charter owner_seat 优先/opinions 兜底/unassigned 列)","test_close_skill_spawn.py: handoff owners={cto,coo,unassigned}(+1)"],"verified_at":"2026-11-25T12:05Z"},
+    {"opinion_id":"cho-4","group":"S5","title":"resume35→resume36 交接清单与 evidence hash/签收","status":"fixed","evidence":["commit 862604d: handoff_items[] {item,target,owner_seat,receipt}·receipt 双形(charter:<id>/opinions/plan.unassigned_items)","test: receipt 全非空(+1)"],"verified_at":"2026-11-25T12:05Z"},
+    {"opinion_id":"cho-5","group":"S5","title":"回填 resume34 CHO 9 条并给 21 条缺陷 FUSE 处置","status":"fixed","evidence":["commit 862604d: _build_fuse_trace L292 fuse_trace{cur,prev,prev_run,changed}·chain-journal d91_marker 三态逐轮","T1c 在役: refill.items prev→done/deferred/dropped(T1c 16e7d77)"],"verified_at":"2026-11-25T12:05Z"},
+    {"opinion_id":"cho-6","group":"S5","title":"score-skill 6 条改进全量入 opinions 与 63→N refill 守恒","status":"fixed","evidence":["T1a 7355cf4: 逐改善条目化(66 条不合订·r37 实证 80 条零丢)","T1c 16e7d77: refill.items 逐条结账 + refill ok=true(r37 prev 75 全承接实证)"],"verified_at":"2026-11-25T12:05Z"},
+    {"opinion_id":"coo-10","group":"S5","title":"上轮意见回填守恒与 joint-review 归档硬门","status":"fixed","evidence":["T1c 16e7d77: refill {prev_total,current_total,ok} + items[] + missing·items_ok 门","r37 实证: refill ok=true prev 75 全承接·filtered=[]零丢弃"],"verified_at":"2026-11-25T12:05Z"},
+    {"opinion_id":"cos-3","group":"S5","title":"七席 A/B 双列独立落卷并建上轮 64 条逐条回填","status":"fixed","evidence":["T1b da4705f: _check_ab_columns L216 两列必齐+ab_columns per-seat 读数","T1c: 上轮逐条回填(refill.items)·r37 64→75 承接实证"],"verified_at":"2026-11-25T12:05Z"},
+    {"opinion_id":"cfo-5","group":"S5","title":"六条联审改进全量入 opinions 并逐条消费处置","status":"fixed","evidence":["T1a 7355cf4: 每条合格改善各成一条 opinion(非 imps[0] 折叠)","4fe99d4: opinions_filtered_invalid 逐条 {seat,title,missing} 不静默(五字段不全显式)"],"verified_at":"2026-11-25T12:05Z"},
+    {"opinion_id":"cto-7","group":"S5","title":"七席齐、A/B 双列、分歧不抹平与上轮回填守恒","status":"fixed","evidence":["T1b da4705f(A/B 双列 strict=1)+T1c 16e7d77(回填逐条)","r37 联审实证: 7 席齐·refill 75 承接·54/54 low_dim 覆盖"],"verified_at":"2026-11-25T12:05Z"},
+    {"opinion_id":"cpo-4","group":"S6","title":"score 单一 100 制口径+应答矩阵/拒判台账","status":"fixed","evidence":["commit a14dec3: _regime_check L1218 rubric 权和=100(v2.2.0)·旧 weight_face(total_basis≠100/14-11-10 形)→violations","test_score_engine.py: 100 制核+旧制双 violation(+4 之一)"],"verified_at":"2026-11-25T12:06Z"},
+    {"opinion_id":"cpo-6","group":"S6","title":"主观题 rubric 机械化并消 I 族多套账","status":"fixed","evidence":["commit a14dec3: 同 _regime_check 覆盖 I 族分值形(14/11/10 旧形→violation)","8f9803f: I 卷链内化单源(段 7 聚合+段 8 兜底·非多套账)"],"verified_at":"2026-11-25T12:06Z"},
+    {"opinion_id":"cos-8","group":"S6","title":"统一 I 族三账与 trend 口径，禁 I 族归一化冒充总盘","status":"fixed","evidence":["commit a14dec3: _check_auto_label 补算→judge_faces.subjective 须=auto-backfill(缺=violation·禁冒充)","e5eb41d: _backfill_score_subjective 显式写 judge_faces(auto 标闭环)"],"verified_at":"2026-11-25T12:06Z"},
+    {"opinion_id":"coo-5","group":"S6","title":"counts/families/readings 三面同口径+17 backfill 建账+RACI 收敛","status":"fixed","evidence":["commit a14dec3: _counts_check plan families↔opinions↔close.upgrade_list 三面读数(短差=注)","b96ae48: _r12_target_set L318 RACI 覆盖 R12 集口径"],"verified_at":"2026-11-25T12:06Z"},
+    {"opinion_id":"cfo-10","group":"S6","title":"final_scores_basis 与 divergence_review 补齐并标 trend 口径","status":"fixed","evidence":["commit a14dec3: _regime_check 挂 score.regime_check·_counts_check 挂 score.counts_check(口径双面落卷)","test: 旧 weight_face 双 violation(+4 之二)"],"verified_at":"2026-11-25T12:06Z"},
+    {"opinion_id":"cto-1","group":"S6","title":"统一 disposition 单一账与门禁 fail-closed","status":"fixed","evidence":["commit a14dec3: _check_auto_label(auto 判语单一标源)+_regime_check(单一制)","4fe99d4: opinions_filtered_invalid 单一丢痕账(非多套)"],"verified_at":"2026-11-25T12:06Z"},
+    {"opinion_id":"cfo-1","group":"S7","title":"三面成本归因与残差升级台账落卷","status":"fixed","evidence":["commit dca6202: _cost_attribution L614 machine/manual/subjective 三面 {in,out} 聚合(stage→face 10 段映射)","test_score_engine.py: cost-log 四行→三面读数(+2 之一)"],"verified_at":"2026-11-25T12:07Z"},
+    {"opinion_id":"cfo-2","group":"S7","title":"score 段 cost-log 行补 stage 与不可用原因","status":"fixed","evidence":["commit dca6202: cost_by_stage 十段 token 分列(in/out 逐段可查)","同函数 L617: 缺字段=null_skipped 计数(不冒 0)"],"verified_at":"2026-11-25T12:07Z"},
+    {"opinion_id":"cfo-3","group":"S7","title":"四段统一 auto fail-safe 并修 null 累计门与 trigger 分类","status":"fixed","evidence":["commit dca6202: _judge_subjective 卷在但零有效条目→(\"manual\",None) 非静默 0(r36 类风险堵口)","test: subjective 全裸分→state=manual·score=None(非 0)(+2 之二·engine 53)"],"verified_at":"2026-11-25T12:07Z"},
+    {"opinion_id":"cfo-4","group":"S7","title":"轮级成本至少一通道可得并 fail-closed","status":"fixed","evidence":["commit dca6202: 三面+stage 双面落卷(轮级可得)·null 不进和(null_skipped 计数)","r37 实证: 段 3 cost-log 已落"],"verified_at":"2026-11-25T12:07Z"},
+    {"opinion_id":"cao-5","group":"S8","title":"锚 1 独立面板：full sha256 与逐文件 manifest","status":"fixed","evidence":["T3a 4970a61: families_trees 逐件 md5+artifacts plan/exam sha16","T3b ecf6c03: _artifacts_manifest L1210-1252 10 stage+collection+opinions 逐件 {file,present,run_id,run_id_match}","manifest 顶层(SDE 可命中·e5eb41d 提顶层)"],"verified_at":"2026-11-25T12:10Z"},
+    {"opinion_id":"cto-3","group":"S8","title":"证据去模板化、同源对表与 hash/runId 链","status":"fixed","evidence":["commit 52d7563: _evidence_check L216 三泛化形(目录结尾/占位/裸名无扩展)violation + sampled_sources 前 3 条 exists 抽查","test_loop_joint_review_spawn.py: 泛化三形 violation/具体 pass(+3·loop 43)"],"verified_at":"2026-11-25T12:10Z"},
+    {"opinion_id":"cto-5","group":"S8","title":"spawn-vs-CLI 同 fixture 等值回归与席集单一真源","status":"fixed","evidence":["commit 52d7563: spawn(a/B 混排)与 CLI(规范大写)经同校验器归一输出一致(等效实证)","da4705f 大小写归一(L strip upper)为其前置(S8c 依赖)"],"verified_at":"2026-11-25T12:10Z"},
+    {"opinion_id":"cto-6","group":"S8","title":"全量 hash、runId 全覆盖与独立可解析","status":"fixed","evidence":["T3a 4970a61: 全量 hash(families 各树+plan/exam artifacts 前后对表)","T3b ecf6c03: run_id 逐件对表(run_id_match/mismatch·missing 显式)"],"verified_at":"2026-11-25T12:10Z"},
+    {"opinion_id":"cho-11","group":"S8","title":"tree-facts/plan-freeze 补 run_id、全量 sha256 与逐文件 manifest","status":"fixed","evidence":["T3a 4970a61: plan-freeze families_trees[] 逐件 {family_id,item_id,md5,size,counts}","T3b ecf6c03: manifest 10 stage 含 plan-freeze·run_id 逐件"],"verified_at":"2026-11-25T12:10Z"},
+    {"opinion_id":"cho-12","group":"S8","title":"close/opinions/verify evidence 带 hash 与 runId 全覆盖","status":"fixed","evidence":["T3b ecf6c03: manifest 覆盖 close + opinions 族(opinions.json+opinions-*)逐件 run_id","52d7563: evidence_check 落卷(jr.evidence_check)"],"verified_at":"2026-11-25T12:10Z"}
+  ],
+  "summary": {
+    "total": 29,
+    "by_group": {"S4": 5, "S5": 8, "S6": 6, "S7": 4, "S8": 6},
+    "by_seat": {"cao": 3, "cho": 6, "cos": 3, "coo": 3, "cpo": 3, "cfo": 6, "cto": 5},
+    "deferred": "46 条（非 S4-S8 组）候任务书批后修",
+    "note": "只结 S4-S8·零代码改（结账=证据映射非施工）·46 条不修"
+  }
+}
