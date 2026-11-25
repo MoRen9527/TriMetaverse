@@ -15161,3 +15161,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2423 **批二-2=S5 验收通过（18:05·862604d·2 passed EXIT=0·close 34）**：交接清单（_build_handoff L286/598·handoff_items 四字段·charter 优先/opinions 兜底/unassigned 候认领）+FUSE 三态逐轮（_build_fuse_trace L292·d91_marker cur/prev/changed）✓·条级对表 S5 三面（交接/FUSE/回填=T1c）→**批二-3=S6 已派**（批二最后一批）·进度 S4✓→S5✓→S6→批三 S7/S8。
 
 - ㊀+2424 拍读 18:06：**TriCompany 施工推进中**（4fccf51 S4→862604d S5→**a14dec3 18:05:58**=S6 增量）·TriRMC ab1f9c0（8559134 待核推面）·零链进程。心跳已更。
+
+### ㊿+2425 · 🎯**批二全完（S4/S5/S6·63 passed）·流程澄清（点火一次非五次·已回 CTO/CFO）·批三-1 已派**
+
+- S4 4fccf51/8559134→S5 862604d→**S6 a14dec3**（S6a _regime_check L1218／S6b _counts_check／S6c _check_auto_label·补算→须 auto-backfill 标）·本机定向 6+2 passed·EXIT=0·FSD 报 63（close 34/engine 52/chain 31）·**三批串行零返工·条级对表全**（S4 6/S5 3/S6 6 条）。
+- **流程澄清（CTO 提·BOD 认表述歧义）**：**每批毕=账清核+成本账记录（非点火）**；**点火=批二批三全完（75 条账清齐）→CFO 成本门一次审→验证轮一次**——防「5 批=5 轮=5 倍成本」。已回 CTO（deeaa29c）+同步 CFO（be232821）。
+- 批三-1（S7）已派。
