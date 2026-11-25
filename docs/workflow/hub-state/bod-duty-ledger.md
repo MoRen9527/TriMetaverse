@@ -15506,3 +15506,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 - CEO 原话：「**不止 29 条 fixed 吧，后面修那 46 条呢**」——**确实漏了**：结账表 827cc67ec 只覆盖 S4-S8 的 29 条；**B 批修 46 条（真修 33+剔 5+等价注）施工完+验收 110 passed·但没走结账表**→r42 联审 refill 只能看到 29 fixed·其余仍 deferred。
 - **已令 CTO**：补 B 批结账表（`acceptance-ledger-r36-b-batch-20261125.json`·同形：fixed/dropped/equivalent_note+evidence+cto+cao 联署+BOD 对表）→**联审 refill 可望见 64 条 fixed**（29+35）。
+
+- ㊿+2524 **🎯r42 十段全过（chain_end ok=true·22:06:37·failed_stage=null）**：89.5 分·pass·**run_state=succeeded（真·G 面首次全过）**·notify_done+manifest+close 全落。**联审候**（轮末钩·joint-review 未落）。**时序注**：r42 联审若先于 B 批结账表跑→refill 只见 29 fixed；B 批表补完后 **r43 联审见 64**（两份表齐）。
