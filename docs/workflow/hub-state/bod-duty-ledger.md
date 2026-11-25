@@ -15649,3 +15649,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **三查**：查一施工完成度／查二结账覆盖率／**查三意见消化率**（每条待办须 `deferred_to=<轮号>` 或 `this_round_work=<证据>`·**无标注=RED**）。
 - **铁律三条（入册候选）**：**「提了没改」可以·「改了没说」不行·「没改也没说」=放行新轮=烧下一轮的钱覆盖已知缺口**。
 - **评分输入面观察项已立**（结账了评分看不见=与 item14 产出利用率同族·归属 COS 评分面改造）。
+
+### ㊿+2568 · **r44 终报（十段全过·score=93.0·四验点 0 全达 3 未达 1 半达·根因=段序）**
+
+- **链态**：段 1-10 全过·close succeeded·notify·**score=93.0**（breakdown {41,24,**28 auto**}·**I 族 28/35 比 r43 的 24.5 涨 3.5**）·七席 7/7·**A/B=43.29/41.42**（基本持平）·charter 85637B。
+- **四验点**：①seven_seats 仍 prev-borrow ❌②refill_summary 0 ❌③ab_columns 键在值 null ⚠️④**charter items=85 含 fixed 51 ❌**（与「只待办」令相反）。
+- **共同根因=段序**（close 段 8/score-skill 段 7/charter 早于段 10 联审）——**四件代码修了但未做 backfill/段序调整**——**C 裁（COS 汇总=链后一步）+段 7 final 补（CTO 2.5h 在途）才是正解**。SDE 修向建议=like 8e262092 的 backfill（join 后回填 close+charter 重生成）。
