@@ -14908,3 +14908,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 施工启动令发**（窗开）·12:00 起拍读盯 commit 增量。
 
 - ㊀+2333 拍读 12:00（**施工窗开首拍**）：三仓无新（63d2ed3=2.5h 前·T1a 才起）·零进程——T1a（FSD 525039da）在干·首批 commit 候。心跳已更。
+
+### ㊿+2334 · 🎯**T1a 验收通过·首批 commit（12:01·7355cf4/2fe9b97）——「66→7」根因修复（原聚合每席仅取 imps[0]）**
+
+- T1a=通过（TriCompany 7355cf4·6 passed；TriRMC 2fe9b97·charter 17/17 信 R-HY）：charter items 各带 owner_seat 溯源／7 席卷不合订／回填 N 进 M 出。
+- **实质修复**：**原聚合=「每席仅 imps[0] 合成 1 条」→7 条·T1a 后=每条合格改善各成一 opinion→66 条 full**——**「7 vs 66」根因拔除**（COS 核的 7 条=原 imps[0] 折叠）。
+- T1b 已派（接力序第二件·A/B 双列）。
+- 首批 commit 可报 CEO（7355cf4/2fe9b97）。
