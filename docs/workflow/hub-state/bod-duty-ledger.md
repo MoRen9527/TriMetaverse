@@ -15444,3 +15444,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2506 **B 件=毕（点火标准形 SOP 卷出·22e0486e2）**：五节——§一 点火前六备（fleet+sudo -E／**env 八项**〔BOD 报 7 项=数错·实际 8：TRICO1+NOTIFY2+FADE4+DCE1〕／ruling 三绑+清戳／marker／chown／**ignite.log 落 run dir**〔r39/r40 缺=漂移实证〕）§二 命令形（tee ignite.log）§三 **点火后三断言**（log 非空／wrapper 退出即收／preflight pass+continue）§四 执法面（非 SOP=违例·log 缺=铁证·D 系候选）§五 依据。**A+C FSD 施工中**（~1h）·完工序承。
 
 - ㊀+2507 拍读 21:48：**A+C 施工中**（TriCompany 无新·commit 未落）·B 件 SOP 已见（22e0486e2）·PROC 自匹配=零真实进程（今后用 `pgrep -af "fade001-ign[o]ne"` 括号技巧避自匹配）。心跳已更。
+
+- ㊿+2508 **🎯设计批三件全完（A+C=ecd328b·110 passed·~9min／B=22e0486e2 SOP）**：A 六项全落（notes-only gate L704「判要不要紧=段 7 语义判·本门不阻断」／分族门删／B 降级为段 7 上下文注入 _wrong_order_context L221/L250／指纹删／**段 7 prompt 增 wrong_order 判读 L49**／**段 8 close 引用 L305 wrong_order_verdict_ref**）·C 键名双形 ✓·COS9 strict 随架构令改注形 ✓。**已发 SDE**（合并令：按新 SOP 点 r41 一次·三断言即实测判据·省一次点火）——**BOD 落 ruling 前置**（三绑 round_count=15+清戳）·CFO 门点火后补判。
