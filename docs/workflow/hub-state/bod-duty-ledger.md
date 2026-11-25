@@ -15719,3 +15719,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2588 拍读 02:42：**补标进度 23/33**（COO 台账 1250-1252·COS5+SDE20+CHO3 已供·COS 1156 分发 17/33 时点差）·**唯余 CAO5/CPO5**·pending-disposition.json 未落（候 COS 汇总）。心跳已更。
 
 - ㊀+2589 拍读 02:48：**CAO 段一交付推进**（COO 台账 1260·cao-7 完整表 8 件实测+**cao-0 判「不可执行真待办」**：23 条只有编号无内容·全工作区搜零命中·不含假 sha·deferred resume46——**诚实不造假好例**）+1259 段一供料转 SDE 段二。pending-disposition 未落。心跳已更。
+
+### ㊿+2590 · ✅**补标校验毕·33/33 全绿（COS 独立复算三对齐）——已转 CFO 复审·附数据勘注（CAO 读数源≠活体·7 件不符）**
+
+- **COS 校验**（R-HY 实读）：pending-disposition **sha16=d34d4bf117bc6310**（对表 COO 报 d34d4bf1 ✓）／**items 33（missing=[] extra=[]）**／**二选一断言 work19/deferred14/both0/neither0**／plan 段二 observed sha16=e25eef72 ✓——**三对齐零漂移**。
+- **🔴数据勘注（照 SDE 如实报）**：**CAO 段一表 8 件中 7 件 size/sha 与 R-HY 活体不符**（例 16228/6e97c47e vs 实测 16157/afca442f·.prev 无实体）——**根因=CAO 读数源（TMV 本地树）≠活体（R-HY）**——SDE 按活体真值落卷（note 标「R-HY 活体实测」）→**建议 observed 带 `source` 字段**（"R-HY-live"/"TMV-local-tree"）候 CFO/CTO 判——**「机位隔离」族又一例**（本机有≠R-HY 有）。
+- **已转 CFO 复审**（检测器跑）→GREEN→成本门 GREEN→r45。
