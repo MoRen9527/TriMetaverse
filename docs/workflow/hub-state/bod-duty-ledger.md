@@ -15108,3 +15108,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CEO 又充值 ¥100**（16:4x·已告 CFO 正账再记）。
 - 已发 CFO（6b6078a5·三件：正账/开工预估/成本门回执备）+CTO（249da955·四令承+批二拆解预备+修完报账清核→CFO GREEN 即点）。
 - **BOD 面**：18:00 发施工启动令+拍读盯。
+
+- ㊿+2404 **CTO 四令全承+批二拆解（16:42·18:00 动码预备）**：7 子件——S4a close 红面即停（chain_runner.ts）/S4b 空证不得 pass（score_engine.py/close_skill_spawn.py）/S4c run_state 与 contract 同源（close_skill_spawn.py）/S5 余 交接清单+FUSE（close_skill_spawn.py）/S6a 单一 100 制/S6b 三面 counts 同口径（三文件）/S6c 禁归一化冒充（score_engine.py）——文件锁三件·18:00 整发派工令（S4a→b→c→S5→S6a→b→c）·修完报账清核→CFO GREEN 即点。
