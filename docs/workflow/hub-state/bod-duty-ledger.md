@@ -15427,3 +15427,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CTO 定性：CEO 令=**纠正判据层级错位**（dce 机判不该判「要不要紧」·语义题归 skill·与两轴分立 §7.5 一致）。
 - **留/废表**：**留**=dce wrong_order 记录（原样不阻断·_wrong_order_gate fail 分支废只留 notes）+键名规范化（1 行）；**废**=C（dce 分族门）/指纹；**降级**=B（上轮判读→段 7 上下文输入）·族属漂移（评分段 LLM 面·给清晰族信息+D 系可撤/降）；**新**=段 7 score prompt 增「wrong_order→判要不要紧」（输入=清单+族信息+文件落位·输出=G 族评分依据）·段 8 close 引用判读。
 - **工时 ~1h**·残拍进程已请 SDE 核·**停承候 CEO 批**。
+
+- ㊿+2502 **残留核清（瞬态 wrapper 自退·零残留·SDE 21:39:53 实测）+SDE 新观察（r39/r40 缺 run dir 内 ignite.log=点火形非标准）**：治本建议**「点火必须标准形（含 log 落 run dir）+wrapper 退出即收」**入设计批——**BOD 自认：我直点形 log 写 fade001-runs/ 根目录非 run dir 内·与 SDE/COO 标准形有差**（可能与 dce 重跑等行为扰动相关·须核）。**设计批三项候 CEO**：①wrong_order 归段 7/8 ②点火标准形执法 ③键名规范化（1 行）。
