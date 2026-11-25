@@ -15824,3 +15824,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **施工序**：§四（最简）→§三→§二四件·CTO 主笔+COS 联署+CFO 数据+BOD 对表。**候 CEO 批**。
 
 - ㊀+2616 拍读 04:12：三仓无新·零进程——**三问方案任务书（22955ac3c）候 CEO 批**。心跳已更。
+
+### ㊿+2617 · 🎯**CEO 批「三问方案施工」——开工令发 CTO（§四→§三→§二四件）**
+
+- 卷 `bod-taskcharter-evolution-tria-20261126.md`（22955ac3c）已批。
+- **施工序**：**§四 improvements 拆分**（未修从 refill 继承·improvements 只新发现·输出增 new_discoveries/inherited_pending）→**§三 plan 能力导向**（能力项通道·≥30%·可量化目标）→**§二 四件**（暴露清单/改进率/门槛数据/双轨）。
+- **分工**：CTO 主笔+COS 联署+CFO 数据+BOD 对表。**完工序**：账清核→成本门→**r46 验证**。
