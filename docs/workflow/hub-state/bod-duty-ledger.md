@@ -15745,3 +15745,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **修法**：final 输出加 `raw:{cos:{score:24,max:35},coo:{score:25,max:35}}`+量纲标注（「I 族子分·×权重 35 进总分」）。
 
 - ㊀+2596 拍读 03:06：**r45 联审在跑**（JR_PENDING·6min 已过·r44 参照 13min）·三仓无新。六验点候联审+backfill（~03:13-15）。心跳已更。
+
+### ㊿+2597 · 🔴**r45 六验点：1 过 5 未达——backfill/COS-final 链内钩都没生效（手动过≠链上通）**
+
+- **实读**：①seven **prev-borrow** ❌②refill **0** ❌③ab **2 席 null** ⚠️④**charter 88 全量（无 pending_only_filter）** ❌⑤**COS final-summary NONE** ❌⑥段 7 final ✓（唯一过·68.57/71.43）。
+- **定性**：**e6b51c4 backfillFromJoint + e869aeb COS final spawn 的链内钩都没触发**——**r44 是手动跑的（验证过）·r45 自动钩没跑**——**「手动过≠链上通」族又一例**。
+- **已派 SDE 查**（①R-HY 是否真 pull e6b51c4 ②backfill 钩调用点 ③COS final 钩为何也没跑——两钩同失效可能同处接线）。
