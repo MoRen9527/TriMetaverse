@@ -15227,3 +15227,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2441 拍读 19:18：三仓无新·零进程——候 CEO 三裁。心跳已更。
 
 - ㊀+2442 拍读 19:24：三仓无新·零进程——候 CEO 三裁。心跳已更。
+
+- ㊿+2443 **任务书卷被 FUZZY-TS 闸误拦（修毕入库）**：pattern「字母x+空格+占位」误匹配「pre-timingfi**x 旧占位字样**」（fix 尾字母）→改「旧值」后 commit 成功（卷 524 行·ebe4a19bb）。**闸 pattern 误报可报 CPO/CAO 勘**。2442 台账同步入库。
