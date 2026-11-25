@@ -34,24 +34,41 @@ def _ledger_map(ledger):
     return m
 
 
-def check(charter, ledger=None):
+def check(charter, ledger=None, charter_prev=None):
     """检查待办项去向标注。
 
     ledger=None：读 charter item 内嵌的 deferred_to/this_round_work（载体①）
     ledger=dict：读独立表 pending-disposition.json 按 opinion_id 对表（载体②·COS 定案）
+    charter_prev=dict：**差集模式**（CEO 批结构性修复·本席域闭环）——先算新旧 charter 的
+        opinion_id 差集（新增项），差集项同样须有标注；并对「ledger 覆盖旧版但缺新版项」
+        显式点名（防「新增项根本不在 ledger 里」的隐性漏判）。
     """
     items = charter.get("items") or []
     lmap = _ledger_map(ledger) if ledger is not None else None
     missing = []
+
+    # 差集模式：先算新增项（旧版无·新版有）
+    new_items = []
+    if charter_prev is not None:
+        prev_ids = {str(it.get("opinion_id") or "") for it in (charter_prev.get("items") or [])
+                    if isinstance(it, dict)}
+        for it in items:
+            if isinstance(it, dict):
+                oid0 = str(it.get("opinion_id") or "")
+                if oid0 and oid0 not in prev_ids:
+                    new_items.append(oid0)
+
     for it in items:
         if not isinstance(it, dict):
             missing.append("<non-dict item>")
             continue
         oid = str(it.get("opinion_id") or "")
         src = lmap.get(oid, {}) if lmap is not None else it
-        if not any(str(src.get(f) or "").strip() for f in FIELDS):
+        unannotated = not any(str(src.get(f) or "").strip() for f in FIELDS)
+        if unannotated:
             missing.append(oid or str(it.get("title") or "<no-id>"))
-    return (len(missing) == 0), missing, len(items)
+    # 差集项若同时未被 ledger 覆盖（lmap 有 key 但无标注已被上面捕获；无 key 也被上面捕获）
+    return (len(missing) == 0), missing, len(items), new_items
 
 
 def selftest():
@@ -59,26 +76,26 @@ def selftest():
     # A 全标注 -> GREEN
     c = {"items": [{"opinion_id": "a", "deferred_to": "r46"},
                    {"opinion_id": "b", "this_round_work": "abc123"}]}
-    g, m, n = check(c)
+    g, m, n, _ni = check(c)
     ok += 1 if (g and n == 2) else 0
     # B 部分无 -> RED
     c = {"items": [{"opinion_id": "a", "deferred_to": "r46"}, {"opinion_id": "b"}]}
-    g, m, n = check(c)
+    g, m, n, _ni = check(c)
     ok += 1 if (not g and m == ["b"]) else 0
     # C 全无 -> RED
     c = {"items": [{"opinion_id": "a"}, {"opinion_id": "b"}]}
-    g, m, n = check(c)
+    g, m, n, _ni = check(c)
     ok += 1 if (not g and len(m) == 2) else 0
     # D ledger 载体②：全标注 -> GREEN
     c = {"items": [{"opinion_id": "a"}, {"opinion_id": "b"}]}
     led = {"items": [{"opinion_id": "a", "deferred_to": "shift-W48-resume9"},
                      {"opinion_id": "b", "this_round_work": "deadbeef"}]}
-    g, m, n = check(c, ledger=led)
+    g, m, n, _ni = check(c, ledger=led)
     ok += 1 if (g and n == 2) else 0
     # E ledger 载体②：一条缺（含 null 值视同缺） -> RED
     led = {"items": [{"opinion_id": "a", "deferred_to": None},
                      {"opinion_id": "b", "this_round_work": "deadbeef"}]}
-    g, m, n = check(c, ledger=led)
+    g, m, n, _ni = check(c, ledger=led)
     ok += 1 if (not g and m == ["a"]) else 0
     print(f"SELFTEST {'PASS' if ok == 5 else 'FAIL'} ({ok}/5)", file=sys.stderr)
     return 0 if ok == 5 else 1
@@ -87,6 +104,7 @@ def selftest():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("charter", nargs="?", help="charter json 路径（items 数组）")
+    ap.add_argument("--charter-prev", dest="charter_prev", help="旧版 charter（差集模式：算新增 opinion_id）")
     ap.add_argument("--ledger", help="独立表 pending-disposition.json（COS 定案载体②·按 opinion_id 对表）")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--selftest", action="store_true")
@@ -97,18 +115,22 @@ def main():
         ap.error("缺少 charter json 路径（或 --selftest）")
     with open(a.charter, encoding="utf-8") as f:
         charter = json.load(f)
+    charter_prev = None
+    if a.charter_prev:
+        with open(a.charter_prev, encoding="utf-8") as f:
+            charter_prev = json.load(f)
     ledger = None
     if a.ledger:
         with open(a.ledger, encoding="utf-8") as f:
             ledger = json.load(f)
-    green, missing, total = check(charter, ledger=ledger)
+    green, missing, total, new_items = check(charter, ledger=ledger, charter_prev=charter_prev)
     if a.json:
-        print(json.dumps({"green": green, "total": total,
+        print(json.dumps({"green": green, "total": total, "new_items": new_items,
                           "unannotated_count": len(missing),
                           "unannotated": missing}, ensure_ascii=False, indent=2))
     else:
         if green:
-            print(f"GREEN: {total}/{total} 条待办均有去向标注")
+            print(f"GREEN: {total}/{total} 条待办均有去向标注" + (f" (新增 {len(new_items)} 条均已标注)" if new_items else ""))
         else:
             print(f"RED: {len(missing)}/{total} 条无去向标注（须补 deferred_to 或 this_round_work）")
             for x in missing:
