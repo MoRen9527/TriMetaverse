@@ -15898,3 +15898,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **SDE 实读 block 内**：`{"checked":false,"params":{"min_rate":null,"k":null}}`——**非「查询位置」**（CTO 判的挂点对·但 block 内值未产出）。
 - **双因**：①**params 双 null=CEO 未定值**（代码已参数化·零改码·CEO 给值即活）②**prev 面取法**（r45 无 score.json 引用链→rate 无从算·SDE 建议取 prev joint dim means·FSD 修 ~15min）。
 - **已发 CTO**（②派 FSD 与修 b 同批）·**①候 CEO 两参数**（门槛/k）。
+
+- ㊿+2639 **CTO 勘正（②prev 面已实现·零码）·唯一缺口=①params 双 null（等 CEO）**：_improvement_block L745-757 **已读 prev joint**（_dim_means_from_jr L708-722）——SDE 建议=已在实现·**②撤**。**③④ 唯一缺口=min_rate/k 两值**（CEO·代码已参数化给值即活）——**修 b 已派 d0664ed4**（carried refs null·~15min）。**CEO 给值→r47 验证三问 4/4**。
