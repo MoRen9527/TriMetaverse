@@ -15890,3 +15890,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 读数法按 SOP（close==charter mtime 04:55:13 ✓）。
 
 - ㊿+2636 **CTO 十点判（8/10）+两缺口诊断+FSD 派（~40min）**：**✓拆分（§四生效）✓能力项 44%（§三配比门生效）**；两缺口=①refill missing（S4-1 carried→inherited 与 refill items_ok 判据口径不同步）②improvement_rate/dual_track（**run 面**·单测过但 run 时 prev 缺或维度分路径·score_engine L755）。**score 89.5（与 r45 同·auto 保守）**。FSD 修两缺口→r47 验证。
+
+- ㊿+2637 **CTO 两查（③④=查询位置／②=口径）→已批 b 修**：①improvement_block 挂点在 `score.improvement_block` 内（SDE 查顶层=无·已让查 block 内）②refill missing=S4-1 inherited_pending 的 carried 33 项无 prev_opinion_id（正常·**items_ok 判据未同步**）——**修 b 已批**（carried refs null 不记 missing·~15min）。若 ③④ 真在 block 内→两缺口只剩口径·修完即 r47。
