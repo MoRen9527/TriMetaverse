@@ -15691,3 +15691,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2580 **✅三层②③验收通过（e869aeb/d843853·4 passed·round 65/65）**：②**COS final-summary**（新件 cos_final_summary_spawn.py·**「judgement not copy·rationale 必填·只读零写入」**·缺 rationale=拒·挂轮末钩·FADE_COS_FINAL=0 回滚——**CEO 的「COS 判断式收口」落地**）／③**段 7 final 补做**（judge_faces.final=2 席·scores_100/average/basis）／**术语全线改「链后联审」零「段 10」**。**候 ①SDE backfill**——三层齐→验收→r45。
 
 - ㊿+2581 **CEO 令「三层齐了跑 r45」**：②③已验收·①（SDE backfill）最后一件——已催 SDE（报进度/ETA）→完成后账清核→CFO 成本门→GREEN 即 r45。**r45 验证六点**（四件真面+COS 终版+段 7 final）。
+
+### ㊿+2582 · ✅**三层全齐+① BOD 验收通过（r44 实盘四点全对）——请 CFO 成本门 r45**
+
+- **①SDE e6b51c4**（backfillFromJoint 入轮末钩）：r44 实盘验证——**seven_seats source=joint**（不再借 prev·present 7）／**refill_summary {total84·consumed84·digest0.619·fixed52/deferred32}**／**ab_columns 7 席有值**（cos a37/b35.25）／**charter 85→33**（excluded_fixed=52·pending_only_filter 留痕）——**四点全过**。
+- **②e869aeb（COS 判断式）+③d843853（段 7 final）**已验收。
+- **已请 CFO 成本门 r45**（三查：施工 done/结账 70 条/意见消化率〔待办 32 条须去向标注〕）——GREEN→r45（六验点）。
