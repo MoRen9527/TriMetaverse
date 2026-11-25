@@ -15751,3 +15751,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **实读**：①seven **prev-borrow** ❌②refill **0** ❌③ab **2 席 null** ⚠️④**charter 88 全量（无 pending_only_filter）** ❌⑤**COS final-summary NONE** ❌⑥段 7 final ✓（唯一过·68.57/71.43）。
 - **定性**：**e6b51c4 backfillFromJoint + e869aeb COS final spawn 的链内钩都没触发**——**r44 是手动跑的（验证过）·r45 自动钩没跑**——**「手动过≠链上通」族又一例**。
 - **已派 SDE 查**（①R-HY 是否真 pull e6b51c4 ②backfill 钩调用点 ③COS final 钩为何也没跑——两钩同失效可能同处接线）。
+
+### ㊿+2598 · 🎯**r45 六验点全过（更正：我 19:12-13 读的是钩子慢段旧面——BOD 自认读数时机错）——三层合流链内全自动生效**
+
+- **SDE 终读数（19:14:36 钩子全完）**：①seven_seats **source=joint**·7 席·degraded=false ✓②refill_summary {85·{deferred33,fixed52}·consumed85·digest0.612} ✓③ab_columns **7 席有值**（cos 36.75/34.25·cto 59.5/53.2）✓④**charter 88→36**（excluded_fixed=52·∩fixed=0）✓⑤**close.final 五键在**（conclusion/diff/divergences/rationale/seven_seat_points）✓⑥**judge_faces.final 三面齐** ✓。
+- **根因（SDE 如实）**：**钩子慢段**=cos_final_summary spawn（LLM 终版面 ~3.5min）——charter 19:11:02→final spawn→**close 写 19:14:36**——**BOD 19:12-13 的读=慢段中旧面**（我的误判·自认）。
+- **教训（SOP 建议）**：**六验点读法须等钩子终**——判据=**close.json mtime > charter-*.json mtime**·慢段预算 ~4min——**「读数时机」族又一例**（截断伪影的变体）。
+- **两钩子（e6b51c4+e869aeb）=链内自动生效实证 ✓**（r45 全自动无手动）——**今天全天最大的成果**。
