@@ -14940,3 +14940,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2343 **resume34 点火首笔（12:14:32·pid 3358553·preflight pass·prev=resume33·env 四件）**：**chain-journal.jsonl 已现**（T2b 生效实证=批一第一个新形件）·七观察点终判面候（per-seat 7/A-B 双列/回填/三绑/journal/hash+manifest/I 卷链内）·**跑完即停**。
 
 - ㊀+2344 拍读 12:24：**resume34 段全齐（17 json·含 `subjective-score.json`=I 卷链内自产生效实证！）**·PROC=3（联审中）——**全形七观察点**：①per-seat 7 文件 ②A-B 双列 ③回填 ④三绑 ⑤journal ✓ ⑥hash+manifest ⑦**I 卷链内✓（subjective-score.json 在）**——候联审 A/B+score 终判。心跳已更。
+
+- ㊀+2345 拍读 12:30：三仓无新（12:13 后）·PROC=4（联审 7 席 spawn 中·joint-review 未现）——resume34 已跑 16min·候联审 A/B+score 终判。心跳已更。
