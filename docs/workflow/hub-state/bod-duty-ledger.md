@@ -15467,3 +15467,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 三断言（重跑面仍过）：log 835B/wrapper 收/段内 pass（仅链 rc=4）。
 
 - ㊿+2514 **CTO 报对齐（SOP 增条 facd96f3e 已见·戳已清·v10 落 r40·SDE 已 r42 重跑·CFO 门 GREEN 2512）**——**闭环链**：DP-030 坑（SDE 实测抓）→SOP 增条（CTO 落）→修法 a 执行（BOD 落 v10+清戳）→r42 重跑（SDE）→候果。
+
+### ㊿+2515 · **r42 rc=4 二次定位=T2a 单调门（非自排除）——v9 已撤备份·r40 的 v10（17）入候选·r42 再点**
+
+- **SDE 二次定位（L474-492 实读）**：round_count 单调门（T2a）——**r41 的 v9(16) < r40 的 v10(17)=regression→rc=4**（prev 选到 r41 残拍读到 v9）。
+- **修法已执行**：**r41 的 ceo-ruling.json+sha256 撤为备份**（bak-withdrawn-20261125T135604Z·留痕）→**r40 的 v10（17·未消费）入候选**→r42 同 run-id 再点（SDE）。
+- **BOD 自认**：v9 落 r41 是本席失误（SDE 早言「r41 的 v9 永不参选」——但 prev 选器会选 r41 残拍·v9 被选到）。
+- **SOP 可补**：「残拍撤件（mv 留痕）而非留错件」。
