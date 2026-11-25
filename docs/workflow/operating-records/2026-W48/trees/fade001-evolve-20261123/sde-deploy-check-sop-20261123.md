@@ -24,6 +24,7 @@
 ## 点火模板·采集/节律 env 四件（CTO 裁 2026-11-25·score 100 面）
 
 > 点火形 env 固化四件（r12/v2 采集域）：`FADE_JOBS_JSON=/srv/fleet/TriRMC/data/cron/jobs.json`｜`FADE_OPERATING_ROOT=/srv/fleet/TriMetaverse/docs/workflow/operating-records`｜`FADE_WEEK=<2026-Wxx>`｜`FADE_PATROL_CADENCE=6m`（实际 patrol 拍频=6min·plan_enricher 默认 15m 待 c 治本）。缺任一=A/F/H 采集 na/fail（resume29 实证）。H 判「na→weight」亦记满，但**真判 pass 须 c（默认 6m→6 vs 6）或 f1bdbc1e 落**后验。
+> **标准形补件（2026-11-25 r41 实测抓出·CTO SOP 22e0486e2 §一 增补候）**：『`sudo -E -u fleet` 保留 HOME=/root → 段 2 qualify 读 `/root/.trimetaverse/notify.json` → PermissionError』——**env 须补 `HOME=/home/fleet`**（或 `sudo -H`）。另 SMTP 二件=环境无源（find 零命中·历史链均无·notify file-fallback 正常）。
 
 ## 点火模板·D-91 marker 面（DP-032 A 案·CTO 裁 2026-11-23）
 
