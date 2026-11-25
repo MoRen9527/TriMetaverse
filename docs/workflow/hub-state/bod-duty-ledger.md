@@ -14962,3 +14962,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2349 拍读 12:42：三仓无新（12:13 后）·零进程——修法施工中（时序 a/manifest 核/去重落痕）+SDE 核 CTO 席 spawn。心跳已更。
 
 - ㊿+2350 **CTO 席失败因=object 大小写（12:41·CTO 自领）**：spawn 正常（session-f583 completed）·violations 全「object='a'/'b' invalid」⇒**CTO 席输出小写·校验期望大写→全条目 invalid→absent**（其余 6 席大写 valid）。**校验大小写严格=CTO 缺陷**（格式波动=动态面·应归一非 fail——「判稳定面不判动态面」又一漏网）。修法双保险：a) 校验侧 `.upper()` 归一 b) prompt 加粗大写要求。**四修齐**（时序 a+manifest+去重落痕+大小写）→**resume35**（r34 其余 3✓ 已在·修完 6 席变 7 席）。
+
+### ㊿+2351 · 🎯**r34 四修验收通过（12:45·e5eb41d·112 passed 全套）——resume35 点火令发（CTO 席归队+subjective 自动计）**
+
+- 四修：①**时序 backfill**（_backfill_score_subjective L284/L519·pending 35→0·I=35·run_state succeeded）②**manifest 顶层**（SDE keys 可命中）③**mergedReport 扩 target**（-2 可溯）④**object 大小写归一**（strip().upper()·小写 valid+prompt 加粗）。
+- CTO 自领：今日「格式波动/时序」两族校验两次漏网（大小写/段序）——修法=归一+backfill（不判动态格式·补算时序）。
+- **resume35 点火令发**（continue 件落 resume34 正身）：本轮判据=①7 席全②subjective 35 自动计③manifest 可查④-2 可溯·**跑完即停**。
