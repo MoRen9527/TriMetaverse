@@ -15378,3 +15378,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CTO 采附荐**（+10min）·三答定准：**C 后 4 项裁定保留 acknowledge 形+C 门不阻断（双形并存·审计与门规则不同层不互代·不转注形）**。
 - **C+B 已派 FSD**（C=`_judge_g` 按 family_id=="B" 分族；B=指纹继承复用 A1 模式）→修毕→成本门→**重跑 r40**。
 - **呈 CEO 确认**（如不认可此裁即停修）。
+
+- ㊿+2493 **✅C+B 验收通过（85cab1b·13 passed·engine 60·~2min）**：C（`_wrong_order_gate` L691·item→family_id 映射·**family="B"→注非 fail**／非 B→strict）+B（指纹继承 {item,sha256_16} 同则复用·件变/新项才裁）✓·COS 4 项 acknowledge 保留（审计形未转注）✓·FSD 首测即捕「pass 路径覆盖注」bug→修（如实）→**已请 CFO 成本门（r40 残拍重跑）**→GREEN 即点 r40（**呈 CEO 确认中·叫停即停**）。
