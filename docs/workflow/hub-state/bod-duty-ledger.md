@@ -15122,3 +15122,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 卷：`docs/workflow/operating-records/2026-W48/company-demand-pool.md`（commit 4fd16d66f·DEM-019·16 行追加）——五件：①COO 派工过 CFO 闸（放行才可干）②COS 监督任务执行③COS×CFO 双账交叉验证收口（任务账×成本账）④CFO 任务×成本报表⑤CFO+CHO+COO 评人效比。
 - 承接候选：CFO 主笔（闸+报表）+COS/CHO/COO 联署+CTO 技术形·**待审**（照池审流程）。
 - 定位：**成本门的上一环**（派工面成本闸·把成本压缩到派工前 vs 点火后）。
+
+- ㊿+2409 **DEM-019 补注 CEO 意图（17:0x·commit 28379699d）**：「**核心收益=双人盯任务防断链·每任务顺利收口·防 COS 单席盯不住；交叉验证=附带收益**」——施工主轴=双账各自独立记（COS 任务账/CFO 成本账）→断链即两账均暴露→收口以两账对齐为准。
