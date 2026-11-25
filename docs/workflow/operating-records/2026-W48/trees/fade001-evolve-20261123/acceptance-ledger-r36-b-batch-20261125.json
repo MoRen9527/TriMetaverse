@@ -9,7 +9,7 @@
   "verified_by": "cto+cao",
   "evidence_base": {
     "commits": {"B1": "50d3b55 (T3c manifest sha256_16)", "B2": "e44eeb8 (九条)", "B3": "f2fabd6 (档二余4)", "B4": "f294ead (十条)", "B5": "8b124f8 (末批九条)"},
-    "test_suites": "engine 60 / close 34 / enricher 20 / loop 48 / plan 53 — 全绿 EXIT=0",
+    "test_suites": "engine 60 / close 34 / enricher 20 / loop 48 / plan 53 — 全绿 EXIT=0（**执行=CTO 本机核（2026-11-25 各轮）·非 CAO 背书**——CAO 联署范围=**证据可复核性**（commit/行号/测试名存在）·**不含测试执行结果**·测试实跑面=CTO/STE）",
     "accounting": "账清核 75/75 成立（差 2=层间双计根因·真修 37/已落 34/剔 2/等价注 2）"
   },
   "items": [
