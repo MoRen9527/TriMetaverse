@@ -15452,3 +15452,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **三断言**（SDE 21:50:47 点火·shift-W48-resume41-20261125T135047Z）：A1 ignite.log 875B 非空 ✓（r39/r40 漂移未复现）／A2 wrapper 退即收 ✓（零残留）／A3 preflight pass+continue ✓。
 - **坑**：SOP §一 `sudo -E` 保 HOME=/root → qualify 读 /root/.trimetaverse/notify.json PermissionError → 段 2 rc=1——**SOP 第 9 项=HOME=/home/fleet**（或 sudo -H）·已发 CTO 补 SOP（BOD 直点用 -H 故未撞·SOP 的 -E 与 -H 之别=坑）。
 - **重跑前置已备**：ruling v9（round_count=16·清戳）+marker·SDE 按修正形重跑 r41 同 run-id。
+
+- ㊿+2510 **SOP 增补已落（2463cad8c·九项 env）+已回 CTO（r41 前置已备·SDE 重跑中）**：fail_streak=4 注记（非 FUSE）·SMTP 二件=环境无源（F 族 alert 长期缺口·不阻塞·记观察）·**门序征 CTO 意见**（先补判三件 vs 重跑有果后门）。
