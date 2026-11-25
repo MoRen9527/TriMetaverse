@@ -15171,3 +15171,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2426 **CFO 口径承录（18:07·dd88bc761）**：每批毕=条级对表+成本账记录（记数不判门·报增量）／成本门=一次审（75 条账清齐→一次 GREEN/RED→验证轮一次）——**CFO 提炼入册**：「**施工多批省 spawn 钱·验证一批省点火钱**」（施工分批与验证分批是两件事·合起来=完整成本纪律）。
 
 - ㊿+2427 **批三-1=S7 验收通过（18:07·dca6202·2 passed EXIT=0·engine 53）**：S7a 三面归因（_cost_attribution L614·machine/manual/subjective {in,out}·stage→face 10 段映射）/S7b stage 分列/S7c auto fail-safe（零有效条目→("manual", None) 非静默 0·**r36 类风险堵口**）+null 不进和（null_skipped L621）✓→**批三-2=S8 已派（最后一批）**·进度 **4/5 完**·S8 毕=全修完→全量账清核→CFO 成本门一次→验证轮一次。
+
+### ㊿+2428 · 🎯**五批全完（S8 终验过·15 件全绿）·75 条全覆盖零挂账·已请 CFO 成本门（GREEN 即点 r37）**
+
+- S8 终验（TriCompany 52d7563·3 passed EXIT=0·loop 43）：S8a 证据去模板化（_evidence_check L216·三泛化形 violation）/S8b 同源抽查/S8c spawn-vs-CLI 归一一致 ✓。
+- **五批 15 件·6 套全绿**：批一 S1/S2/S3+四修+两扩（7355cf4/da4705f/16e7d77/a626569/ab1f9c0/4970a61/ecf6c03·loop37→43）/批二 S4/S5/S6（4fccf51+8559134/862604d/a14dec3·close34/engine53）/批三 S7/S8（dca6202/52d7563·chain31/preflight71/plan53）。
+- **全量账清核**：75 条全覆盖零挂账（S1-S3~36/S4-6/S5-3+回填/S6-6/S7-6/S8-8）·BOD 复核条级对表齐。
+- **已请 CFO 成本门**（三判定：账清 75/75+分批预估+验证增量=75 条首次全形不重复）——**GREEN 即点火 r37（不请示）**。
