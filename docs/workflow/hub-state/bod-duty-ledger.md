@@ -14960,3 +14960,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - FSD 即派（时序 a+manifest 核+去重落痕）·SDE 核 CTO 席 spawn。
 
 - ㊀+2349 拍读 12:42：三仓无新（12:13 后）·零进程——修法施工中（时序 a/manifest 核/去重落痕）+SDE 核 CTO 席 spawn。心跳已更。
+
+- ㊿+2350 **CTO 席失败因=object 大小写（12:41·CTO 自领）**：spawn 正常（session-f583 completed）·violations 全「object='a'/'b' invalid」⇒**CTO 席输出小写·校验期望大写→全条目 invalid→absent**（其余 6 席大写 valid）。**校验大小写严格=CTO 缺陷**（格式波动=动态面·应归一非 fail——「判稳定面不判动态面」又一漏网）。修法双保险：a) 校验侧 `.upper()` 归一 b) prompt 加粗大写要求。**四修齐**（时序 a+manifest+去重落痕+大小写）→**resume35**（r34 其余 3✓ 已在·修完 6 席变 7 席）。
