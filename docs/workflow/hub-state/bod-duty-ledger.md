@@ -15615,3 +15615,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2556 拍读 01:18：三仓无新·零进程——**fetch 一次瞬态失败（「repository exists」提示）·重试 RC=0 恢复**（网络面偶发·如实记）。心跳已更。
 
 - ㊀+2557 拍读 01:24：三仓无新·零进程——**CTO 四件 FSD 在途**（~1.5h·ETA 02:5x）。心跳已更。
+
+- ㊿+2558 **🎯四件验收通过（2e774d9/555e060+06f4ffa·4 passed·close 55/charter 18）**：①close 读源改 joint（L437·本轮 7/7→ok(source="joint")·不借 prev·joint 缺才降级显式区分）②close refill/divergence 消费（L311 真值+L327 |Δ|≥2）③score-skill A/B 分列（ab_columns）④**CEO 新令 charter 只含待办**（fixed 不收/carried 禁入/excluded_status 留痕）——**「COS 的评分依据=真面」修复**。FSD 自领区间编辑吞助手第五例（bak 恢复+grep 邻 def 正形）。**r44 前置已备**（ruling v13 落 r43·round 20·清戳+marker）·SDE 点火中（验证四点）。
