@@ -15396,3 +15396,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **仍 fail**：**release-rules/orchestration-fact 判「非封存类」→strict→未裁定**·**B 指纹继承未覆盖**；
 - **核心分歧**：COS 人工判「4 项全封存」vs 机器判据（family=="B"）只认 2 项——**release-rules/orchestration-fact 实际性质待核**（真施工面=strict 正确需人裁／判据漏=补判据）；B 继承未匹配原因待查（件变/键不同）。
 - **CFO 止损条款触发**（三轮未达）→**建议停机制分析不再盲跑**·已派 CTO 诊断+COS 复核性质→报 BOD 呈 CEO。
+
+### ㊿+2497 · 🔴**r40 机制诊断（CTO 三层·键名断层=直接因·接口漂移同族）**
+
+- **a 键名断层（直接因）**：L715 `ruled_items={x.get("item")}`——**COS 裁件键=wrong_order_item（非 item）**→读 None→空；+r40 新卷无 rulings（裁在 r38 卷）→2 项 strict fail。**「COS 裁件形 vs 机器读形」接口漂移=今日同族第 N 例**（与晨「读错层」同根）。
+- **b 指纹断层（B 失效因）**：L735-744 读 rulings `{item,fingerprint}`——**COS 裁件无 fingerprint 字段**→`_pf=""`→继承空。
+- **c 2 项 family 待核**：release-rules-20261118/orchestration-fact-20261119 机器判 fam≠B（真施工面 or 判据漏·COS 复核+SDE 取 plan 面）。
+- **修法（~20min·候 CEO 批）**：①键名兼容（读 wrong_order_item or item·1 行）②**指纹改从两轮 plan 的 observed.sha256_16 算**（不依赖裁件字段·更稳）③COS 定性。
+- **止损承**：不再点火·修完+定性后呈 CEO。
