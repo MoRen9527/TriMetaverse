@@ -15881,3 +15881,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2633 拍读 04:48：r46 联审在跑（JR_PENDING·8min·正常）·三仓无新——六+四点候（~04:52-55）。心跳已更。
 
 - ㊀+2634 拍读 04:54：**r46 联审完（JR_OK·charter 重生成 04:52:32）·但 close 回填未完成**（**close mtime=04:40:40 < charter mtime=04:52:32**·按 SDE 判据=仍旧面）——**钩子慢段中**·BOD 按新判据等（05:00 再读·不重复慢段误读）。心跳已更。
+
+### ㊿+2635 · **r46 终报（六点 5✓1⚠+三问 2✓2❌）——③improvement_rate④dual_track 待查（疑 R-HY 未 pull d8ab656）**
+
+- **六点**：①seven=**joint**✓②refill {88·carried33/fixed52/deferred3·consumed88·digest.591}⚠️（**items_ok=false·missing 名单非空**·语义待判）③ab 7 席✓④charter **71 条**（excluded_fixed=39）✓⑤close.final 五键✓⑥judge_faces 三面✓。
+- **三问**：①improvements 拆分 ✓（new_discoveries 3+/inherited_pending 分列）②能力项 ✓ **44%**（31/71≥30%）③**improvement_rate=null ❌**④**dual_track 未现 ❌**。
+- **已请 CTO 查**：③④疑同源（R-HY 是否 pull d8ab656·r46 04:31 点 vs S2 04:25 提交）+②missing 语义（refill_spawn 侧）。
+- 读数法按 SOP（close==charter mtime 04:55:13 ✓）。
