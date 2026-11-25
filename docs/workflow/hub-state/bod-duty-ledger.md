@@ -14739,3 +14739,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 - 两态（unassigned 大小写不敏感→跳过 pass／有值→须齐·L250-275）+清单落卷（_collect_unassigned L266·plan.json 顶层 unassigned_items）——真样 cao-review-yardsick→pass·unassigned_items=1。
 - resume32 残拍已裁→**点火 resume33 令发**（双满候选：段 3 两态→段 8 双修→十段→联审→100）。
+
+- ㊀+2288 拍读 09:00：**resume33 已点在跑**（shift-W48-resume33-20261125T005648Z·9 json=段 1-7 全过·PROC=4·段 8 中）——双满判定候终态。TriCompany 34165df。patrol 行已追加。心跳已更。
