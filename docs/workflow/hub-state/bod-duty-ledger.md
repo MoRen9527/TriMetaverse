@@ -15429,3 +15429,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **工时 ~1h**·残拍进程已请 SDE 核·**停承候 CEO 批**。
 
 - ㊿+2502 **残留核清（瞬态 wrapper 自退·零残留·SDE 21:39:53 实测）+SDE 新观察（r39/r40 缺 run dir 内 ignite.log=点火形非标准）**：治本建议**「点火必须标准形（含 log 落 run dir）+wrapper 退出即收」**入设计批——**BOD 自认：我直点形 log 写 fade001-runs/ 根目录非 run dir 内·与 SDE/COO 标准形有差**（可能与 dce 重跑等行为扰动相关·须核）。**设计批三项候 CEO**：①wrong_order 归段 7/8 ②点火标准形执法 ③键名规范化（1 行）。
+
+- ㊀+2503 拍读 21:42：三仓无新·**PROC=1 为 pgrep -fc 自匹配假阳性**（命令行含关键词被计入·SDE 的 `pgrep -af fade001`=空为准）——**真实零进程**·设计批三件候 CEO。心跳已更。
