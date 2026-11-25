@@ -15305,3 +15305,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2470 **B1=T3c 验收通过（50d3b55·4 passed·FSD 工时 ~1min）**：_artifacts_manifest 每件扩 sha256_16（L593）+size+parse_ok（L600 不可解析=false 显式）——**9 条家族一条机制覆盖** ✓ →**已落 41（32+9）·B 余 34（档二 13+档三 21）**·**B2（9 条）已派**·序 B1✓→B2（9）→B3（4）→B4/B5（21）。
 
 - ㊀+2471 拍读 20:36：A1/A2/A3/B1 落卷全见（50d3b55=20:33 最新）·**B2 在途**（9 条·ETA 20:5x）。心跳已更。
+
+- ㊿+2472 **B2=验收通过（e44eeb8/5c571ba·152 passed·6min）**：九条全落（CAO8/CFO1/CFO8/COS4/COS9/CPO12/CTO2/CTO4/CTO5）。**B 余 25**（档二残留 4+档三 21）→**B3 已派（4 条·含注重复核：CPO10/CAO6 与结账表 827cc67ec 重叠性先核·已覆盖则剔）**——CTO 防重工审法好。
