@@ -15830,3 +15830,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 卷 `bod-taskcharter-evolution-tria-20261126.md`（22955ac3c）已批。
 - **施工序**：**§四 improvements 拆分**（未修从 refill 继承·improvements 只新发现·输出增 new_discoveries/inherited_pending）→**§三 plan 能力导向**（能力项通道·≥30%·可量化目标）→**§二 四件**（暴露清单/改进率/门槛数据/双轨）。
 - **分工**：CTO 主笔+COS 联署+CFO 数据+BOD 对表。**完工序**：账清核→成本门→**r46 验证**。
+
+- ㊿+2618 **CTO 六件拆分承（~3.75h·S4-1 已派 FSD）**：S4-1 improvements 拆分（~30min）→S3-1 能力项通道（~1h）→S2-1 暴露清单（~45min）→S2-2 改进率（~30min）→S2-3 门槛数据（~30min）→S2-4 双轨分（~30min）。分工/完工序承。ETA ~08:00。
