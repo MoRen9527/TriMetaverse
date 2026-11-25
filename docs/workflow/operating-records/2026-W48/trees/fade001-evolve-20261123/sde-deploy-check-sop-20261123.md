@@ -27,6 +27,10 @@
 > **标准形补件（2026-11-25 r41 实测抓出·CTO SOP 22e0486e2 §一 增补候）**：『`sudo -E -u fleet` 保留 HOME=/root → 段 2 qualify 读 `/root/.trimetaverse/notify.json` → PermissionError』——**env 须补 `HOME=/home/fleet`**（或 `sudo -H`）。另 SMTP 二件=环境无源（find 零命中·历史链均无·notify file-fallback 正常）。
 > **重跑两坑（2026-11-25 r41/r42 实测·CTO facd96f3e §四 同向）**：①**重跑一律新 run-id**——`check_ceo_ruling` **自排除 current run_dir**（DP-030·L312）⇒ 同 run-id 重跑时自身不入候选→prev 落更早完整轮→其 ruling 已消费→**awaiting rc=4**。②**残拍重签 round_count 须全局单调**——**T2a 单调门（L474-492）**：本件 round_count 须 ≥ 更早轮已签件 max ⇒ r41 v9=16 < r40 v10=17=**round-count-regression→rc=4**（修=撤旧件留痕备份·候件落最后成功轮正身）。
 
+## 链后六验点读法（CTO 裁 7391fac29·SDE 实测 r45 自领 2026-11-26）
+
+> **六验点（seven=joint/refill 真值/ab 列/charter 只待办/final-summary/段 7 final）须等钩子终再读**——判据=**`close.json` mtime > `charter-*.json` mtime**（否则读的是段 8 旧面）。**慢段=cos_final_summary spawn（LLM 终版面 ~3.5min）**——r45 实锚：charter 19:11:02→close 写 19:14:36→backfill 尾随；19:12-19:13 读=慢段中误报「钩子没生效」（自领·同「批量 vs 单条」族）。慢段=必要成本（可接受），纪律=**等**.
+
 ## 点火模板·D-91 marker 面（DP-032 A 案·CTO 裁 2026-11-23）
 
 > **点火命令必须带 env `TRI_CHAIN_MARKER=/srv/fleet/TriRMC/chain-running.marker`**（R-HY fleet 可写实位；缺省路径 `/srv/git/TriCompany.git/chain-running.marker` 在 R-HY=ENOENT 写失败→pre-receive 闸盲）。sg pre-receive 已探该位（T8 实测：fresh 拒/stale 放+warn）。缺省 env 时链跑=闸端不可见——**不得读作「跑中更新已受控」**。
