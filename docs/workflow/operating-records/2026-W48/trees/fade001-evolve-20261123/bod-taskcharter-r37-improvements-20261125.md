@@ -589,3 +589,8 @@
 ### 7.4 state 现状勘注
 
 - 当前 fade-001 flag/state=**debug**（preflight flag_gate=debug 实测）——**93 分不改变 state**——**state 变更仅经 §7.2 程序判读**。
+
+### 7.5 CTO 技术方案草（af3575af5·已融入）
+
+- **卷锚**：`cto-s7-state-autoevolution-design-20261125.md`（TMV af3575af5）——六节：①判据源=进化轴（A/B 联审分·93 不催态）②**三态机迁移表**：debug→test（A>90&&B>90）／test→prod（A>95&&B>95）／**prod→test 降级**（A<95||B<95·E2 已有扩单侧）／**test→debug**（连续 N fail·N 建议 3·以纪律册为准）／禁人工无卷改 state（flag 卷断言）③落点=round_runner 轮末（score 后置钩·state_transition 入 chain-journal）④降级同理 ⑤施工件+验收五案+工时 ~1.5h ⑥依据。
+- **CTO 自领**：state 生命周期=跨轮机制·此前无人审无机制·CTO 面审实现正确性未覆盖 state 机（CEO 批评成立）。
