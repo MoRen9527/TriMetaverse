@@ -15465,3 +15465,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **修法 a 已执行**：**v10 落 r40 正身**（round_count=17·三绑·sha·fleet）+r40 消费戳清+r41 的 v9 戳清+marker 重写——**SDE 用新 run-id r42 重跑**。
 - **SOP 补注采纳**：**「重跑一律新 run-id」**（DP-030 自排除副作用·SDE 面补进 SOP）。
 - 三断言（重跑面仍过）：log 835B/wrapper 收/段内 pass（仅链 rc=4）。
+
+- ㊿+2514 **CTO 报对齐（SOP 增条 facd96f3e 已见·戳已清·v10 落 r40·SDE 已 r42 重跑·CFO 门 GREEN 2512）**——**闭环链**：DP-030 坑（SDE 实测抓）→SOP 增条（CTO 落）→修法 a 执行（BOD 落 v10+清戳）→r42 重跑（SDE）→候果。
