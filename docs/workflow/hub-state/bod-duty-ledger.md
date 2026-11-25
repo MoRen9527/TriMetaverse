@@ -14999,3 +14999,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2361 拍读 13:06：**resume36 段 3-7 全过**（12 json·PROC=3·段 8/联审中）——两扩生效。候终态（七席 7/7+subjective 35）。心跳已更。
 
 - ㊀+2362 拍读 13:12：resume36=**17 json 段全齐**（含 close/notify）·PROC=4（联审中）——候联审 A/B+七席 7/7+subjective 35 终判。心跳已更。
+
+- ㊀+2363 拍读 13:18：三仓无新·PROC=4（联审 7 席 spawn 中·joint-review 未现）——resume36 已跑 21min·候联审终判。心跳已更。
