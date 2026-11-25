@@ -15555,3 +15555,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2535 拍读 22:30：A1 修在途（6min·无 commit）·零进程。心跳已更。
 
 - ㊀+2536 拍读 22:36：A1 修在途 12min（无 commit·FSD 编码+测试中·ETA 22:5x）·零进程。心跳已更。
+
+- ㊿+2537 **✅A1 修验收通过（c254672·5 passed·真件 merged 58/fixed 57 可读）**：读取端五源序（env PATHS→env 单件→TMV 树 glob→run_dir→兄弟）+合并按 opinion_id 后源覆盖——**r42 类 fixed=0 根因堵上**·TMV 树形 fixture（漏真件教训内化）。**细节待核（低优）**：merged dropped1/equiv0 vs 两表 dropped2/equiv2（合并不一致·不影响 fixed 57）。**r43 前置已备**（ruling v12 落 r42·round 19·清戳+marker）·SDE 按 SOP 点火 r43（验证 57 fixed refill 可见）。
