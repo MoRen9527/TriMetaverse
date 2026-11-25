@@ -15733,3 +15733,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **r45 前置已备**（ruling v14 落 r44·round 21·清戳+marker）·SDE 按 SOP 点火·**六验点终报**（四件真面+COS final+段 7 final）。
 
 - ㊀+2592 拍读 02:54：**r45 已点火快跑**（shift-W48-resume45-20261125T185131Z·02:51:31 点·**3 分钟已过段 4**〔迁移 ops e7eac556a〕）·段 5-6 中。六验点候链后联审+backfill。心跳已更。
+
+- ㊿+2593 **r45 起跑确认（SDE·v14 一次过门·CFO 门后首轮·02:51:31）**：preflight pass·consumed(44) ✓·三断言正常·检测器入校验链承（下轮起）。六验点终报候。
