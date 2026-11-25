@@ -15431,3 +15431,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2502 **残留核清（瞬态 wrapper 自退·零残留·SDE 21:39:53 实测）+SDE 新观察（r39/r40 缺 run dir 内 ignite.log=点火形非标准）**：治本建议**「点火必须标准形（含 log 落 run dir）+wrapper 退出即收」**入设计批——**BOD 自认：我直点形 log 写 fade001-runs/ 根目录非 run dir 内·与 SDE/COO 标准形有差**（可能与 dce 重跑等行为扰动相关·须核）。**设计批三项候 CEO**：①wrong_order 归段 7/8 ②点火标准形执法 ③键名规范化（1 行）。
 
 - ㊀+2503 拍读 21:42：三仓无新·**PROC=1 为 pgrep -fc 自匹配假阳性**（命令行含关键词被计入·SDE 的 `pgrep -af fade001`=空为准）——**真实零进程**·设计批三件候 CEO。心跳已更。
+
+### ㊿+2504 · 🎯**CEO 批「设计批三件都批」——开工令发 CTO（A wrong_order 归段 7/8+B 点火标准形+C 键名）**
+
+- **A**（~1h·简化方案表）：dce fail 分支废（只留 notes）/C 废/B 降级/指纹废/段 7 prompt 增「wrong_order→判要不要紧」/段 8 close 引用判读；
+- **B**：**log 落 run dir 内 ignite.log**+wrapper 退出即收——**并入点火 SOP**（BOD 7 项 env+ruling 三绑+清戳+marker+chown 单一真源）；
+- **C**：键名 1 行兼容（wrong_order_item or item）。
+- **完工**：验收（测试+**标准形点火实测一次**）→账清核→**CFO 成本门（止损条款下重判）**→GREEN 即重跑 r41。
