@@ -15438,3 +15438,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **B**：**log 落 run dir 内 ignite.log**+wrapper 退出即收——**并入点火 SOP**（BOD 7 项 env+ruling 三绑+清戳+marker+chown 单一真源）；
 - **C**：键名 1 行兼容（wrong_order_item or item）。
 - **完工**：验收（测试+**标准形点火实测一次**）→账清核→**CFO 成本门（止损条款下重判）**→GREEN 即重跑 r41。
+
+- ㊿+2505 **三件开工确认**：A（归段 7/8）+C（键名）=已派 FSD／**B=CTO 亲手写 SOP 卷**（`cto-ignition-standard-form-sop-20261125.md`·单一真源：7 项 env+ruling 三绑+清戳+marker+chown+**ignite.log 落 run dir**+wrapper 退出即收）。**完工序**：A+C 毕→测试→**SDE 新 SOP 标准形实测一次**→账清核→成本门（止损下重判）→GREEN 即 r41。
