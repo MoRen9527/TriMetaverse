@@ -15580,3 +15580,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2545 **两账差对表定性（BOD 面补·回应 CTO ⑤）**：refill items 的**fixed=51**（我面实读 {deferred30,fixed51}）vs A1 真件 merged **fixed=54**——**差 3 定性**：refill 只对 **prev(r42) 的 81 项**做对表（结账表中**不在 prev 项内**的 fixed 不计入）→ **51=「prev 项∩fixed」·54=「结账表并集 fixed」**——**非缺陷·两账口径差**（项账 vs 真件账）。**r42/r43 连续两轮十段全过**=今日里程碑。
 
 - ㊿+2546 **r43 三账对表结论（CTO）**：**refill 51 < merged 54 < union 57**——①57→54 的 3=**合并覆盖**（cao-5/cho-1/cpo-10 两表状态不一·后源覆盖）②54→51 的 3=**不在 r42 的 81 opinions 集**（SDE 定位中）——**定性：余差=账轴差（条 vs 项·覆盖序）非缺陷**·**51=refill 真消费实证**。deferred 30=真未修如实。
+
+### ㊿+2547 · ✅**refill 差集 6 定位收口（两段各 3·非缺陷）——r43 闭环·今日收官**
+
+- **差集精确（57−51=6）**：段 A 3（cao-5/cao-6/cpo-10·r42 81 集内·merged 覆盖为 dropped/equiv→refill 读 merged 判 deferred·合理）／段 B 3（cos-9/cpo-12/cfo-12·r42 opinions 无此号·81 集越界→下轮含·非缺陷）。
+- **可逆验证**：51 ⊂ union 57·57−51=6 恰为上述·missing=[] ✓。
+- **定性**：**51=fixed 真消费实证（A1 c254672 生效）·6 差=账轴差非缺陷·收口**。
+- **今日收官画面**：**连续两轮十段全过（r42/r43）**·refill 可读（51 fixed）·A/B 43.58/42.17·charter 87788B 史大·89.5 auto 保守如实。
