@@ -15906,3 +15906,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **真根**：block 仅 2 键（无 note）→只有 L744 `cur_doc=loads(rd/joint-review.json)` early-return 才产生⇒**score 段跑时 joint-review 不存在（链后钩子才产）→cur 空→checked 永 false**——**段序族第 5 面**（今日第 5 次同族：I 卷/close/refill/ab/score）。
 - **修 a（SDE 可施工 ~20min）**：链后钩子（final spawn 后）spawn score_cli 重算（同 8e262092 族）。
 - **关键勘正**：**params 给值须配 a 修才活**（单给值仍 false）——**修正我上条「只差两值」的说法**。已派 CTO/修 a 与修 b 同批收口→r47（三问 4/4）。
+
+- ㊿+2641 **b 修验收过（65c57f7·8 passed）·a 修已派 SDE（~20min）**：b=carried_no_ref trace（L926）+items_ok 只 fixed/deferred 缺 ref 才记（L932·与 S4-1 口径对齐）✓；a=链后 spawn score_cli 重算（段序族第 5 面·同 8e262092 族）。**呈 CEO**（段序第 5 面+a 修·min_rate/k 给值后 a 修即真值→r47 三问 4/4）。
