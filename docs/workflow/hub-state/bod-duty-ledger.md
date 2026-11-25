@@ -15197,3 +15197,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **五缺口**（root ssh 点火 vs COO/SDE 在役 shell 的差）：①**ruling 三绑**（run_id+round_count+signed_at·缺=three-bind-missing rc=4）②**一纸一轮消费戳**（每次尝试消费 ruling·`.ceo-ruling-consumed.json` 残留=后续全拒·重试须「新 ruling vN+清戳」）③**week_math loop 门**（TRICO_LOOP_MARKER_DIR+loop-window.marker·marker 会被消费·每次重写）④**identity**（root=qualify identity mismatch·须**fleet**）⑤**run dir 属主**（root 建=preflight.json EACCES·须 **chown fleet:fleet**）。
 - **成功配方**（r10）：`sudo -u fleet -H bash -lc` + `export TRICO_LOOP_MARKER_DIR=<mk> FADE_PATROL_CADENCE=6m` + ruling v4（round_count=11）+ 清消费戳 + marker 重写 + run dir chown fleet + checks 文件法。
 - **读数**：PID 3391164（fleet·node tsx 存活）·**preflight pass（verdict 0）+qualify.json 已落（段 2 过）**·chain-journal ✓·段 3 起。
+
+- ㊀+2433 拍读 18:31：**r37 段 3 中**（PID 3391163 bash 存活 1:47·cost-log.jsonl 已落）·CFO 18:30 锚（95686186b·新 job 首触发 ✓·GLM 99% 六拍·DS 152.27）。心跳已更。
