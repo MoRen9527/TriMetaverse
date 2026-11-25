@@ -14991,3 +14991,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **折中=准（CTO 裁）**：豁免形（CARRY-*/OP-*/task-inventory-*/cfo-quota-daily-*/.md 散件）→注——**RACI 责任矩阵对象=树件（migrate/keep）·散件/CARRY 非树件不入 RACI 合理**——真样六件 bad=[] notes=6。
 - **resume36 点火令发**（continue 件落 resume35 正身）：判据=段 3 过→七席 7/7→subjective 35 自动→manifest 可查·**跑完即停**。
 - 「显式态」原则今日三扩（owner→四字段→RACI 范围）。
+
+- ㊀+2359 拍读 13:00：**resume36 已点在跑**（shift-W48-resume36-20261125T045706Z·12:57:06 点·2 json·PROC=3·段 3 中）——两扩后段 3 应过·全形齐候选。TriCompany b96ae48。心跳已更。
