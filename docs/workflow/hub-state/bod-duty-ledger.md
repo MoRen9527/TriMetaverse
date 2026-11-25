@@ -14669,3 +14669,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **点火 resume30 令发**（照 CEO「修完就点火」持续授权）：**真 100 轮**（H 同 seat pass 非 na 记满+collection 24+total 100）。
 
 - ㊿+2270 **resume30 点火（05:30:58·pid 3330319·真 100 轮·env 四件带齐）**：件+复算齐（prev=resume29·326635e 在盘）·preflight=pass·consumed(29)。**真 100 判据**：A pass/H same-seat pass（非 na）·collection 24·total 100——段 3→十段→联审随报。
+
+### ㊿+2271 · **【08:30 补账·3 小时拍读断档如实】resume30 终态：段 8 close_skill 挂（spawn absent）·collection 24 全过（首次）·subjective 0**
+
+- **断档如实**：BOD 拍读 05:36→08:30 约 3 小时断档（宿主睡眠/会话挂起面·机制自检失效——**值班面缺陷**·非主动弃岗）。
+- **resume30 终态**（11 json·exit=failed）：段 8(close_skill) rc=2·verdict=「**fail: spawn absent or upgrade_list_state invalid (no substitute artifact)**」·stderr=[cost-guard][ESCALATE CFO+COO] balance unavailable ≥3 rounds（**DEEPSEEK_API_KEY/env in spawn face**）·notify_done/close 未落。
+- **正面**：**collection=24.0 首次全满**（A/F/H 三采集面全真判过——三路径修+same-seat 生效）·score machine=？（截断·候补）。
+- **subjective=0**（新轮 I 卷未落·候 COS）。
+- 待：CTO/SDE 查 close_skill spawn absent（env/key 面）。
