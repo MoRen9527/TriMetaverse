@@ -15852,3 +15852,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **差集（BOD 实读）**：`r45 charter 36 = r44 ledger 33 + 3 新增（cho-14/cho-15/cto-14）`·**r44-ledger 有而 r45 无=0**——**CFO 第一种可能成立**（r45 联审新增 3 条·被 backfill 纳入 charter·未标注）。
 - **RED 维持正确**（若点 r46=重演「未消化放行」）·**补标令已发**（CHO 标 cho-14/15·CTO 标 cto-14→写入 r45 卷 pending-disposition→CFO 复审→GREEN）。
 - **查三三次全拦**（结账 33/33 首次／标注缺失第二次／新增 3 条第三次）——**CFO 的「同一错误一天两次·门就废」原则立住了**。
+
+### ㊿+2625 · **CFO 结构性建议（防周期复发）：ledger 与 charter 版本不绑定=根因——二选一（几行代码）候 CEO 批**
+
+- **CFO 归纳（关键）**：**根因不是「3 条忘标」·是「ledger 与 charter 版本不绑定」**——pending-disposition 是 r44 版·charter 是 r45 重生成版——**任何 charter 重生成+新增意见=自动产生无标注项·且不会自己报错**——**会周期性复发**（每次联审新增意见→同问题）。
+- **建议二选一**：①**charter 生成时自检**（backfill 时对比新旧 opinion_id·差集→`unannotated_new_items` 告警·检测器直读零人工）②**ledger 继承+新项显式 null**（新 charter 自动继承前版 ledger+新增项写 null→检测器天然判 RED 点名）。
+- **成本理由**：**人工查差集（半小时多席）>机械自检（几行代码）**——「能机械拦的不要靠人盯」（D-98 延伸）。
+- **补标后复审**：r45 卷 ledger 须含 **36 条**（33+3）→检测器 36/36→CFO GREEN。
