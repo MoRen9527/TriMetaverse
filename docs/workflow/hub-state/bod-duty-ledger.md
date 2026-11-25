@@ -15412,3 +15412,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **两条修线（候 CEO 裁）**：**(b) 主·快**：C 换稳判据（按 target 日期/目录〔W47 件集=文件落位〕·非 LLM 分组）／**(a) 根治·D 系**：families 稳定化（分组规则可复现·不 LLM 自产）。
 - **待裁**：指纹不可得（4 项 observed.sha256_16=None）→继承降级「item 键匹配」（无指纹·风险=旧裁套新件）。
 - **r40 裁件已落**（4/4·族分双形 2 note(B)+2 acknowledge(A)）·键名双写兼容 ✓。**停承（止损）·呈 CEO**。
+
+- ㊀+2499 拍读 21:36：**两席诊断齐**（COS 1153 落账·4aa793214·族属漂移升级+COS 双条件被采+停承）·TriCompany 85cab1b·**PROC=1（疑 r40 wrapper 残留·下拍查）**——**候 CEO 定两修线（b 换稳判据/a families 稳定化）**。心跳已更。
