@@ -15846,3 +15846,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **S2 四件验收**（d8ab656+3e606bc·2 passed·charter 21/21）：S2-1 暴露清单（<40 席级→任务书·exposure 36%→60）／S2-2 改进率（improvement_block·per_dim+total_rate·12/90 实锚）／S2-3 门槛表（by_seat+below_threshold·IMPROVE_MIN_RATE 参数化）／S2-4 双轨（k 参数化·占位 null 如实）。
 - **6 件全齐**（S4-1 3min/S3-1 5min/S2 4min）——**今日第四次「估 3.75h 实 12min」效率**。过程如实（TriRMC 首提交 email 错→amend 未推前）。
 - **已请 CFO 成本门 r46**（三查齐备）→GREEN→r46 验证三问方案效果。
+
+### ㊿+2624 · 🔴**CFO 判 r46 RED（36≠33 差 3 条）→ BOD 查实=cho-14/cho-15/cto-14 三条新增未标注·RED 维持·补标令已发**
+
+- **差集（BOD 实读）**：`r45 charter 36 = r44 ledger 33 + 3 新增（cho-14/cho-15/cto-14）`·**r44-ledger 有而 r45 无=0**——**CFO 第一种可能成立**（r45 联审新增 3 条·被 backfill 纳入 charter·未标注）。
+- **RED 维持正确**（若点 r46=重演「未消化放行」）·**补标令已发**（CHO 标 cho-14/15·CTO 标 cto-14→写入 r45 卷 pending-disposition→CFO 复审→GREEN）。
+- **查三三次全拦**（结账 33/33 首次／标注缺失第二次／新增 3 条第三次）——**CFO 的「同一错误一天两次·门就废」原则立住了**。
