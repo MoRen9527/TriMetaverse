@@ -15363,3 +15363,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CFO 门 r39=GREEN**：`G面4/4(rulings4≥4)·残拍重跑≈首跑60-70%(plan/dce复用省段1-6)·增量=G闭环+29 fixed refill首次可见+state机|GREEN`——**CFO 专业注**：保留「plan/dce 复用」机械证据（若重生成=残拍预估失效·下轮核算如实报）。
 - **r39 点火**：run-id **shift-W48-resume39-20261125T131420Z**·ruling v7（round_count=13·绑 r38）+marker+清戳+chown+7 env——45 秒内段 1-2 过（preflight+qualify 落）。
 - **COS 补报**（21:13）：裁定件落卷确认+**执行差异实证 checked=true·planned 9/actual 9·extra[]·missing[]·wrong_order 4**（计划=实际·仅顺序偏差 4 项·非缺漏非多余）。
+
+### ㊿+2490 · ⚠️**r39 段 6 又 G fail（同因 rulings 0）——真设计缺口：dce 每轮重新生成→裁定不继承→循环卡死**
+
+- r39 dce 真跑（迁移 ops=978151ade）→**新卷 dce.json·rulings=0**（COS 4 项裁定在 r38 卷·未继承）→G fail（4 vs 0）。
+- **CFO 的「残拍复用省段 1-6」假设不成立**（dce 未复用·重跑）——**BOD 自认**采信假设未验证（下次点火前先验 prev 卷复用面）。
+- **已请 CTO+COS 定解**：A 每轮人工裁定／**B 裁定跨轮继承（指纹匹配·新项才裁）**／**C 门判据修正（封存类不阻断·COS9 strict 或过严）**——报 BOD 呈 CEO。**若 B=意见结账机制镜像**（同源可共用）。
