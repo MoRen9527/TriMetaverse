@@ -15834,3 +15834,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2618 **CTO 六件拆分承（~3.75h·S4-1 已派 FSD）**：S4-1 improvements 拆分（~30min）→S3-1 能力项通道（~1h）→S2-1 暴露清单（~45min）→S2-2 改进率（~30min）→S2-3 门槛数据（~30min）→S2-4 双轨分（~30min）。分工/完工序承。ETA ~08:00。
 
 - ㊀+2619 拍读 04:18：三仓无新·零进程——**三问六件施工中**（S4-1 FSD）·ETA ~08:00。心跳已更。
+
+- ㊿+2620 **✅S4-1 验收通过（e9b06f9·2 passed·3min）**：new_discoveries（L941）+inherited_pending（L943）+prompt「禁重报」条款（L109）——双案绿（无新=空/inherited 齐）·**口径订宽**（inherited=deferred∥carried·合理注明）。**衔接闭环齐**（A1→refill→S4-1 新/旧账分离→charter 只待办）。→**S3-1 已派**（能力项通道·~1h）。6 件 4 余。
