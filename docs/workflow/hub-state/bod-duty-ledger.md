@@ -14948,3 +14948,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **✓**：per-seat 7 文件全在（T1a）／chain-journal.jsonl 在（T2b）／**subjective-score.json 在**（I 卷链内自产）。
 - **⚠**：①**seat_means={a:43.24,b:45.72, seats:6}**——**只 6 席**（7 文件中 1 席 A/B 不齐被 T1b strict 排除？）②**subjective=0**（卷在但 score 未计=时点顺序疑）③opinions_total=64（66-2）。
 - 候 SDE 终报（exit+完整读数）定读——**三疑点即查**。
+
+- ㊿+2347 **CTO 三 ⚠ 初判（12:40）**：③opinions_total=64=**cross-seat 同（title,target）去重 2 条=合理**（mergedReport 留痕·v8 item12 律）→解；①只 6 席=**T1b strict 排除某席**（等 SDE 给哪席+A/B 缺列详情·确缺 B 列=正确排除/误判=查 _check_ab_columns）；②subjective=0=**时点顺序疑**（score 读刻 vs 卷落刻·等 SDE 段序）。⇒候 SDE 终报（哪席+段序）→CTO 定 ①过严？/②修时序？
