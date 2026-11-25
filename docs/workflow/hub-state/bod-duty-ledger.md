@@ -14978,3 +14978,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 挂因：item3 CARRY-20260728-004 等 7 项四字段缺/占位（due=None）+item6 覆盖缺口 6 项无 RACI 键。
 - **判**：**b 案（unassigned 两态）只对 owner·due/acceptance/depends_on 空缺仍拒**——**四字段只归一了一个·不完整**。
 - 已发 CTO（扩：四字段全走两态〔有值→有效/显式缺省→pass〕+item6 覆盖缺口同样）→resume36。
+
+- ㊿+2355 **CTO 自领 b 案不完整+扩法派（12:45）**：①自领「only owner 归一」=裁时漏（只想到 owner）②**扩法**：item3 **四字段全两态**（每字段显式缺省标记集合 `{None,"","unassigned","TBD","待定"}` 宽集→pass·有值须有效）+**item6 CARRY 件（CARRY-*/OP-*）未入 RACI=记 `carry-no-raci` 注非 fail**（非 CARRY 仍须键）③修毕 resume36。**「显式态」原则扩展到全字段**（同断言 a 非空非占位·只做 owner 一处=漏）。
