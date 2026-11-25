@@ -33,6 +33,7 @@ sudo -H -u fleet env TRICO_LOOP_MARKER_DIR=... NOTIFY_SMTP_HOST=... ... DCE_EXEC
 ## §四 · 执法面
 
 - **统一入口**：非本 SOP 形的点火=违例（留痕：ignite.log 缺=非标准形铁证）
+- **重跑一律新 run-id**（DP-030 自排除坑·SDE 21:54 实测抓出）：`check_ceo_ruling` 自排除 current run_dir→同 run-id 重跑时 prev 落旧完整轮（其 ruling 已消费）→awaiting rc=4——**每次重跑用新 run-id**（或新 ruling 落 prev 正身+清戳·两择一取新 run-id 为推荐）
 - **并入 D 系候选**（执法面条款·候 CAO/CGR）
 
 ## §五 · 使用依据
