@@ -15892,3 +15892,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2636 **CTO 十点判（8/10）+两缺口诊断+FSD 派（~40min）**：**✓拆分（§四生效）✓能力项 44%（§三配比门生效）**；两缺口=①refill missing（S4-1 carried→inherited 与 refill items_ok 判据口径不同步）②improvement_rate/dual_track（**run 面**·单测过但 run 时 prev 缺或维度分路径·score_engine L755）。**score 89.5（与 r45 同·auto 保守）**。FSD 修两缺口→r47 验证。
 
 - ㊿+2637 **CTO 两查（③④=查询位置／②=口径）→已批 b 修**：①improvement_block 挂点在 `score.improvement_block` 内（SDE 查顶层=无·已让查 block 内）②refill missing=S4-1 inherited_pending 的 carried 33 项无 prev_opinion_id（正常·**items_ok 判据未同步**）——**修 b 已批**（carried refs null 不记 missing·~15min）。若 ③④ 真在 block 内→两缺口只剩口径·修完即 r47。
+
+### ㊿+2638 · **③④根因双因：params.min_rate/k 双 null（等 CEO 定值·checked=false 直接因）+prev 面取法（SDE 建议取 prev joint·FSD 修）**
+
+- **SDE 实读 block 内**：`{"checked":false,"params":{"min_rate":null,"k":null}}`——**非「查询位置」**（CTO 判的挂点对·但 block 内值未产出）。
+- **双因**：①**params 双 null=CEO 未定值**（代码已参数化·零改码·CEO 给值即活）②**prev 面取法**（r45 无 score.json 引用链→rate 无从算·SDE 建议取 prev joint dim means·FSD 修 ~15min）。
+- **已发 CTO**（②派 FSD 与修 b 同批）·**①候 CEO 两参数**（门槛/k）。
