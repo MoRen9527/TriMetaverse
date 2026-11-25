@@ -15900,3 +15900,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **已发 CTO**（②派 FSD 与修 b 同批）·**①候 CEO 两参数**（门槛/k）。
 
 - ㊿+2639 **CTO 勘正（②prev 面已实现·零码）·唯一缺口=①params 双 null（等 CEO）**：_improvement_block L745-757 **已读 prev joint**（_dim_means_from_jr L708-722）——SDE 建议=已在实现·**②撤**。**③④ 唯一缺口=min_rate/k 两值**（CEO·代码已参数化给值即活）——**修 b 已派 d0664ed4**（carried refs null·~15min）。**CEO 给值→r47 验证三问 4/4**。
+
+### ㊿+2640 · 🔴**SDE 二次定谳（③④真根=段序族第 5 面·非 params 单因）——派修 a（链后重算 score·~20min）**
+
+- **真根**：block 仅 2 键（无 note）→只有 L744 `cur_doc=loads(rd/joint-review.json)` early-return 才产生⇒**score 段跑时 joint-review 不存在（链后钩子才产）→cur 空→checked 永 false**——**段序族第 5 面**（今日第 5 次同族：I 卷/close/refill/ab/score）。
+- **修 a（SDE 可施工 ~20min）**：链后钩子（final spawn 后）spawn score_cli 重算（同 8e262092 族）。
+- **关键勘正**：**params 给值须配 a 修才活**（单给值仍 false）——**修正我上条「只差两值」的说法**。已派 CTO/修 a 与修 b 同批收口→r47（三问 4/4）。
