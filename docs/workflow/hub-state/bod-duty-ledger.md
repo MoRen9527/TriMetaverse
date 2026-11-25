@@ -14741,3 +14741,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - resume32 残拍已裁→**点火 resume33 令发**（双满候选：段 3 两态→段 8 双修→十段→联审→100）。
 
 - ㊀+2288 拍读 09:00：**resume33 已点在跑**（shift-W48-resume33-20261125T005648Z·9 json=段 1-7 全过·PROC=4·段 8 中）——双满判定候终态。TriCompany 34165df。patrol 行已追加。心跳已更。
+
+- ㊀+2289 **resume33 点火首笔（08:56:48·pid 3342752·preflight pass·34165df 两态在盘）**+SDE 诊断备档：**resume32 段 3 的 22 项 due 缺**（R12 仅 14 entries 覆盖子集·新件不在）——unassigned 两态=阻塞解·**真 due 覆盖需 COS 扩表 22 项**（候判·非本轮阻）。双满判定候终态。
