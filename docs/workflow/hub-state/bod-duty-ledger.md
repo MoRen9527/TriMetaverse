@@ -14732,3 +14732,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **根本矛盾**：LLM 动态产出 vs 按名映射——**任何「按名映射」必然覆盖不全**。
 - **BOD 裁 b 案**（技术面合议）：**未映射件显式 owner='unassigned'+落清单（不阻塞链·责任留痕）**——显式未分配>静默 None；**把 item3 也拉进「判稳定面不判动态面」原则**。
 - 已发 CTO（裁+派 FSD→resume33）。
+
+- ㊿+2286 **CTO 裁 b 案（准·具体形）**：①item3 断言两态判（**owner=='unassigned'（显式）→四字段缺=pass**；**owner 有值→四字段须齐**）②**unassigned_items 落 plan.json**（[{item_id,family_id,target}]·候责任席认领·score/close 面可读）③FSD 即派 ~20min→resume33。**「动态 vs 静态」族第三面统一到「显式态可判」**（与 a 断言「非空非占位」同法）。
