@@ -15357,3 +15357,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2487 **CTO 分工齐（B5 新门实证认定）**：COS 逐条裁定 4 项（认/驳/延+理由+裁定件落卷·已请）＋SDE 取 dce 4 项详情（已请）＋裁定落卷→CTO 验收→成本门（残拍重跑低成本）→重跑 r38/r39。**「新门首验抓真缺口」=今日 75 条修的最大即时回报**（COS9 gate 在 r38 首验即起作用·以前 4 项会被放过）。
 
 - ㊿+2488 **✅COS 裁定件验收通过（4/4 acknowledge·等量断言 True）**：逐条理由齐（dem009 P0 部署=施工面晚置设计内/sunday-shot preflight 依赖前置/release-rules 随部署收口/orchestration-fact 核查依赖主体）·形照 COS9 ✓·CTO 判 4 项均 W47 封存类（顺序不敏感）→**已请 CFO 成本门（残拍重跑·GREEN→点火 r39 新轮·r38 保留 partial）**。**闭环形=新门首抓→COS 裁定→成本门→重跑**（新门「抓→裁→过」完整周期）。
+
+### ㊿+2489 · 🚀**r39 点火（21:14:20·CFO GREEN 残拍重跑）·COS 补报裁定实证**
+
+- **CFO 门 r39=GREEN**：`G面4/4(rulings4≥4)·残拍重跑≈首跑60-70%(plan/dce复用省段1-6)·增量=G闭环+29 fixed refill首次可见+state机|GREEN`——**CFO 专业注**：保留「plan/dce 复用」机械证据（若重生成=残拍预估失效·下轮核算如实报）。
+- **r39 点火**：run-id **shift-W48-resume39-20261125T131420Z**·ruling v7（round_count=13·绑 r38）+marker+清戳+chown+7 env——45 秒内段 1-2 过（preflight+qualify 落）。
+- **COS 补报**（21:13）：裁定件落卷确认+**执行差异实证 checked=true·planned 9/actual 9·extra[]·missing[]·wrong_order 4**（计划=实际·仅顺序偏差 4 项·非缺漏非多余）。
