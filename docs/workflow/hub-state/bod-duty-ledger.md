@@ -15764,3 +15764,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CTO 收官报**：六验终态全过（SDE 实读）·**两钩子（e6b51c4 backfill+e869aeb final-summary）链内全自动生效实证（零手动）**·SOP 增条 7391fac29（「六验时点判据=close mtime > charter mtime」·防慢段误读）。
 - **今日完整闭环**：施工（批一二三+设计批）→结账（29+41 三方闭环）→消费（A1 读取端修）→refill 51 fixed→三层合流（backfill+COS 终版+段 7 final）→**r45 六验全过·charter 36 零已修入**。
 - **今日 SOP 五增条**：HOME 第 9 项／重跑新 run-id／T2a 单调／残拍锁窗／六验时点判据——**点火 SOP 从无到全**。
+
+- ㊀+2600 拍读 03:18：**SDE SOP 增条已见（6b0eb95ff·六验读法）**·三仓无新·零进程——r45 收官后静。心跳已更。
