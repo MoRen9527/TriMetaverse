@@ -14734,3 +14734,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 CTO（裁+派 FSD→resume33）。
 
 - ㊿+2286 **CTO 裁 b 案（准·具体形）**：①item3 断言两态判（**owner=='unassigned'（显式）→四字段缺=pass**；**owner 有值→四字段须齐**）②**unassigned_items 落 plan.json**（[{item_id,family_id,target}]·候责任席认领·score/close 面可读）③FSD 即派 ~20min→resume33。**「动态 vs 静态」族第三面统一到「显式态可判」**（与 a 断言「非空非占位」同法）。
+
+### ㊿+2287 · **item3 改验收通过（08:55·34165df·49 passed·真样 pass）——resume32 残拍裁·点火 resume33（双满候选）**
+
+- 两态（unassigned 大小写不敏感→跳过 pass／有值→须齐·L250-275）+清单落卷（_collect_unassigned L266·plan.json 顶层 unassigned_items）——真样 cao-review-yardsick→pass·unassigned_items=1。
+- resume32 残拍已裁→**点火 resume33 令发**（双满候选：段 3 两态→段 8 双修→十段→联审→100）。
