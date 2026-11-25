@@ -15631,3 +15631,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2562 **CTO 裁 C（两段式 close·~1.5h）**：段 8 close 初版记 pending（prev-borrow/degraded 显式·refill 0·ab None 如实）→**段 10 联审后回填 close.json#/final**（7 席/refill/AB/divergence·双形并存）——**与 §七 state 两段/A1-B1 初版+补同族（今日「两段式」架构模式第三例）**。**须核（CTO）**：**COS 评分（段 7）在 close（段 8）前——COS 的 21-24 读的 close 面=上轮！**（段序核中·若属实=评分席一直读旧数据）。呈 CEO。
 
 - ㊿+2563 **段序定谳（CTO stages 实读）+COS 21-24 的最终解释**：chain 内 6 段=verify→score→score_skill→close_skill→close→notify_done·**joint=round_runner 轮末钩（chain 后）**——**close 永远在 joint 前（铁证）**；**COS 评分（段 7 score_skill）输入=段 1-6 产物**·**refill/七席/AB=轮末才产**→**COS 的「无 refill」=真实时序·非读不到**——**他的 21-24=基于段 1-6 的真面·诚实彻底暴露时序**。**C 裁确认**（两段式·段 8 初版+轮末回填终版·~1.5h）。呈 CEO。
+
+- ㊀+2564 拍读 01:42：**r44 联审在跑**（dsh 进程·joint 未落）·C 裁（两段式·~1.5h）施工中·TriCompany 无新。心跳已更。
