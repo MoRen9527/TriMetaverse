@@ -15291,3 +15291,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2463 **CTO 拆分计划承+开工（A1 已派）**：**A 三件**（A1 refill 读结账表 ~30min／A2 §七 state 机 ~1.5h／A3 联审归一化 ~30min）+**B 5 批**（46 条·~30min/批）——**总 ~5h·A 先行（r38 前置）**·每批报 sha·D 闭环承（全毕→账清→成本门→GREEN 即点 r38）。
 
 - ㊀+2464 拍读 20:24：TriCompany 无新（A1 FSD 施工中·commit 未落）·TMV 静——在途 A1（~30min·ETA 20:4x）。心跳已更。
+
+- ㊿+2465 **A1=验收通过（1990a80·6 passed EXIT=0·loop 46）**：`_load_acceptance_ledger` L260（run_dir glob→env→兄弟兜底·坏表 graceful）+L873（**fixed 优先·不挂 deferred/carried**·三字段透传）✓——**r38 的 refill 将消费结账表**。→**A2（§七 state 机 ~1.5h）已派**·A 进度 A1✓→A2→A3。
