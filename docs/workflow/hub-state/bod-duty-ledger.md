@@ -15476,3 +15476,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **SOP 可补**：「残拍撤件（mv 留痕）而非留错件」。
 
 - ㊿+2516 **今日新门两枚连抓真（CTO 总结）**：**第一枚=COS9**（wrong_order 坏序裁·r38/39/40 三连撞）／**第二枚=T2a round_count 单调**（r42 的低号签回归·SDE 实测抓）——**均为今日 75 条修里新修的门·「修了立即抓真」两连实证**。**SOP 增执法条已落**（f556a924b·残拍重签 round_count 须全局单调）。**r42 重跑候**（撤件后 SDE 再点）→联审+29 fixed refill。
+
+### ㊿+2517 · **r42 三试仍 rc=4·第三道门=残拍锁窗（FADE_STALE_RULING_MIN=30）——v11 钉 r41（round_count=18）解门**
+
+- **SDE 三定位（L360-380）**：残拍（pf 非空+close 缺）≤30min 且未裁=锁——r41 残拍（age≈6min·已撤 v9 无裁件）被选→awaiting；v10（r40）排后不级联。
+- **三选修法**：a 即刻（v11 钉 r41·round_count=18>17 单调✓）／b 等 23min 自动跳过／c 改 FADE_STALE_RULING_MIN=5（门行为变更不取）。
+- **执行 a**：**v11 已落 r41**（三绑·sha·fleet）——**SDE 解门后一次点火**（fail_streak=7 教训·勿空点）。
+- **点火坑第三道门**：残拍锁窗（R2 机制的 30min 锁·防失败轮滚雪球）。
