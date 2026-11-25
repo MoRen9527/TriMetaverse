@@ -30,6 +30,10 @@ sudo -H -u fleet env TRICO_LOOP_MARKER_DIR=... NOTIFY_SMTP_HOST=... ... DCE_EXEC
 2. **wrapper 退出即收**（`pgrep -af fade001` 链终点后零残留·瞬态 wrapper 自然退）
 3. **preflight=pass** + prev/continue 语义（残拍继承照 R2 c）
 
+## §三·补 · 六验点的时点判据（SDE 03:15 实测·慢段误读教训）
+
+**六验点（seven_seats/refill_summary/ab_columns/charter/close.final/judge_faces.final）的读数须等 `close.json` 的 mtime > `charter-*.json` 的 mtime**——因 **cos_final_summary spawn（LLM 终版面）~3.5min 慢段**，charter 先写→close 后写→backfill 尾随；**慢段中读=旧面**（SDE 前报「钩子没生效」即此）。
+
 ## §四 · 执法面
 
 - **统一入口**：非本 SOP 形的点火=违例（留痕：ignite.log 缺=非标准形铁证）
