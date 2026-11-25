@@ -14706,3 +14706,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2278 **resume31 点火首笔（08:34:56·pid 3339971·preflight pass·prev=resume30·env 四件）**——双满候选轮（段 8 应过余额复·若成=今日全链双满收官）·断点随报。
 
 - ㊀+2279 拍读 08:42：**resume31 段 1-7 全过**（11 json·plan/plan-freeze/dce/verify/score/score-skill/exam/opinions 齐）·PROC=3（段 8/联审中）——双满候选推进。patrol 行已追加。心跳已更。
+
+### ㊿+2280 · **resume31 段 8 挂因=接口漂移（enricher cadence_layers 新形 vs close 门旧判据 cadence）——批修（close 兼容）+重点火 resume32**
+
+- 真因（SDE）：enricher（326635e）产 `cadence_layers`（无顶层 cadence）·**close 门旧判据 L519 仍要 {who,cadence,window} 全键**→fail-closed→段 8 rc=2。
+- 余额面正常（close succeeded·七席 WARN·collection 24 在）·score 65/pending 35（I 候卷）。
+- 批修：**close 侧兼容 cadence_layers**（推荐·消费方适应新形）+旧 cadence fallback——FSD 1 commit→重点火 resume32。
+- **接口漂移族**（生产方改形消费方没跟·「数据≠生成器」变体）——两形并存期给消费方过渡。
