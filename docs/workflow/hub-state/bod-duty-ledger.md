@@ -14691,3 +14691,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CTO 判**：`balance unavailable ≥3 rounds`+`spawn absent`=**一体同因**（余额耗尽→dsh spawn 失败→close 挂→upgrade_list invalid）——**修=人民币（已充 100·余额 99.97·supply-green）·无码改**。collection 24 首满收。R-HY 直读取证限制如实（D-24）。
 - **COS 办讫**：中断点 05:28→08:33（3h5·余额外部因·其面今日第 2 笔断档）·**resume30 I 卷已落**（v3 形·I1=4/I2=3/I3=3 满分档·run_id=resume30）→CTO 重跑→**resume30 分数面=65+35=100**。
 - **点火 resume31 令发**（continue 件落 resume30 正身·prev=resume30·env 四件 SOP）。
+
+- ㊿+2275 **两 100 路径都走（CTO 报+我裁）**：a=resume30 重跑 score（I 卷已落·补分→100·几分出）/b=resume31 点火（跨段 8·十段+100·令已发）——**并行**（a=分数补齐·b=链验证）。②**H 真判 pass 里程碑**（同 seat 6.0min vs 6m·20 tick 一致·collection 24 全满 A6/F9/H9）。
