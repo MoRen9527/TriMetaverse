@@ -15563,3 +15563,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2539 拍读 22:42：**r43 已在跑**（shift-W48-resume43-20261125T143940Z·22:39:40 点火·SDE 按 SOP·**ignite.log 已落 ✓**）·段 1-2 过·A1 v2 ce1c434 落卷。候联审 54 fixed。心跳已更。
 
 - ㊿+2540 **r43 起跑确认（SDE·v12 一次过门·PID 3414373）**：preflight pass·consumed(42·v12) ✓·qualify 出·链在跑·A1 log 已建（终态非空判）·A2/A3 ✓。**验证点=联审 refill 见 54-57 fixed**（CTO 勘 54·SDE 记 57·均指大体量）。候终报。
+
+- ㊀+2541 拍读 22:48：**r43 十段全过**（chain_end ok·22:48:23·迁移 ops b81c6f108）·**score=89.5 pass·succeeded·I1=3.0/I2=2.0/I3=2.0**——**联审候**（轮末钩·refill 54 fixed 验证点）。心跳已更。
