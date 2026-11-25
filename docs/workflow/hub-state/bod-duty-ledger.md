@@ -15873,3 +15873,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2629 **CFO 差集模式交付（cbf1920fb·+33/-11）**：`--charter-prev` 自动算新旧 charter 差集→新增项未标注即 RED（即使 ledger 不含该 key 也点名）·selftest 5/5+双路径实测。**检测器侧改=自域闭环不依赖他人排期**·**双保险**（将来生成器加 unannotated_new_items 可并存·两道闸不冲突）。
 
 - ㊿+2630 **r46 起跑（SDE·v15 一次过门·三问方案首跑·04:31:42）**：preflight pass·consumed(45) ✓·三断言正常。验证点=六点+四点三问（improvements 拆分/能力项≥30%/improvement_rate/dual_track）。CFO rc 要求承。ETA 终报 ~04:45（含钩子慢段 ~4min）。
+
+- ㊀+2631 拍读 04:36：**r46 段 6 过**（score stage_ok·04:35:03·迁移 ops 590b520e9）·段 7/8 中·联审候。心跳已更。
