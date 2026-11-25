@@ -15578,3 +15578,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2544 **r43 终报（SDE·十段全过·v12 一次过门零空点）**：七席 7/7·comp 1.0（prev=r42）·**A/B=43.58/42.17**·charter 87788B（再创史大）·score 89.5·三断言终态全 ✓。**口径注（SDE 指·重要）**：**两账不同轴**——A1 merged 58/fixed 54（**源覆盖**·结账表并集）vs refill 81→84 项（**轮间对表**·prev→current）——**候 CTO/BOD 对表定性**（我读的 {deferred30,fixed51}=refill items 统计·与 A1 真件 54 差待核）。
 
 - ㊿+2545 **两账差对表定性（BOD 面补·回应 CTO ⑤）**：refill items 的**fixed=51**（我面实读 {deferred30,fixed51}）vs A1 真件 merged **fixed=54**——**差 3 定性**：refill 只对 **prev(r42) 的 81 项**做对表（结账表中**不在 prev 项内**的 fixed 不计入）→ **51=「prev 项∩fixed」·54=「结账表并集 fixed」**——**非缺陷·两账口径差**（项账 vs 真件账）。**r42/r43 连续两轮十段全过**=今日里程碑。
+
+- ㊿+2546 **r43 三账对表结论（CTO）**：**refill 51 < merged 54 < union 57**——①57→54 的 3=**合并覆盖**（cao-5/cho-1/cpo-10 两表状态不一·后源覆盖）②54→51 的 3=**不在 r42 的 81 opinions 集**（SDE 定位中）——**定性：余差=账轴差（条 vs 项·覆盖序）非缺陷**·**51=refill 真消费实证**。deferred 30=真未修如实。
