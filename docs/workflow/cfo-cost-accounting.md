@@ -85,6 +85,23 @@ python scripts/charter-truncation-guard.py <charter-draft.json> --opinions <opin
 # exit 0=PASS / 1=有告警项（逐条打印 rule/detail）
 ```
 
+## §七 · 成本门（Cost Gate·CEO 2026-11-25 16:3x 令·候批施工）
+
+**口径（CEO 原话）**：「成本=设计约束不是事后账」——「一轮值不值」= 账清了没 + 预估成本 + 验证收益 三件齐才点火。
+
+**形（点火链前置 join·非事后核算）**：
+- **ⓐ 账清核**：当轮 charter items 逐条 status=done/verified（机械判·未清=不点火·缺 N 条列明）
+- **ⓑ 预估成本**：本轮 token 四分列带（十段+2 席评分+7 席联审）——锚今日批实测（597s×7 席 spawn）作基数推算；**不折现**（CEO 11-23 令口径）
+- **ⓒ 验证增量**：本轮能验证的新信息点；与上轮验证点重复即「不值」
+- **判定**：三件齐=**GREEN**·任一缺=**RED**（点火令不执行·报 CEO 不候）
+
+**回执形（固定一行·机械可判）**：
+```
+成本门|<轮号>|ⓐ账清=清|未清(缺N条)|ⓑ预估=in X/out Y/cacheR Z/cacheC 0 tokens|ⓒ增量=<一句>|判定=GREEN|RED
+```
+
+**违规通报权（CEO 授予·不经 BOD 转）**：发现「未清账就点火」或「修挂点式假修」→ **直报 CEO**。
+
 ## §五 · 使用依据
 COO 施工令（2026-11-23T00:28:42Z·批 5）；token 实测协议（memory·四分列不折现金）；M3-v2（COS 3fd7892d9）；CAO 标尺卷（cao-review-yardsick-20261122）；D-46（零值出机）/D-47（落款现查）；2026-11-22 30× 异常勘实链（fsd cost-log c639832a+COO 洞察+本席余额双读实证）。
 
