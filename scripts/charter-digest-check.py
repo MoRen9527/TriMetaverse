@@ -25,15 +25,32 @@ import sys
 FIELDS = ("deferred_to", "this_round_work")
 
 
-def check(charter):
+def _ledger_map(ledger):
+    """pending-disposition.json → {opinion_id: item}"""
+    m = {}
+    for it in (ledger.get("items") or []):
+        if isinstance(it, dict) and it.get("opinion_id"):
+            m[str(it["opinion_id"])] = it
+    return m
+
+
+def check(charter, ledger=None):
+    """检查待办项去向标注。
+
+    ledger=None：读 charter item 内嵌的 deferred_to/this_round_work（载体①）
+    ledger=dict：读独立表 pending-disposition.json 按 opinion_id 对表（载体②·COS 定案）
+    """
     items = charter.get("items") or []
+    lmap = _ledger_map(ledger) if ledger is not None else None
     missing = []
     for it in items:
         if not isinstance(it, dict):
             missing.append("<non-dict item>")
             continue
-        if not any(str(it.get(f) or "").strip() for f in FIELDS):
-            missing.append(str(it.get("opinion_id") or it.get("title") or "<no-id>"))
+        oid = str(it.get("opinion_id") or "")
+        src = lmap.get(oid, {}) if lmap is not None else it
+        if not any(str(src.get(f) or "").strip() for f in FIELDS):
+            missing.append(oid or str(it.get("title") or "<no-id>"))
     return (len(missing) == 0), missing, len(items)
 
 
@@ -52,13 +69,25 @@ def selftest():
     c = {"items": [{"opinion_id": "a"}, {"opinion_id": "b"}]}
     g, m, n = check(c)
     ok += 1 if (not g and len(m) == 2) else 0
-    print(f"SELFTEST {'PASS' if ok == 3 else 'FAIL'} ({ok}/3)", file=sys.stderr)
-    return 0 if ok == 3 else 1
+    # D ledger 载体②：全标注 -> GREEN
+    c = {"items": [{"opinion_id": "a"}, {"opinion_id": "b"}]}
+    led = {"items": [{"opinion_id": "a", "deferred_to": "shift-W48-resume9"},
+                     {"opinion_id": "b", "this_round_work": "deadbeef"}]}
+    g, m, n = check(c, ledger=led)
+    ok += 1 if (g and n == 2) else 0
+    # E ledger 载体②：一条缺（含 null 值视同缺） -> RED
+    led = {"items": [{"opinion_id": "a", "deferred_to": None},
+                     {"opinion_id": "b", "this_round_work": "deadbeef"}]}
+    g, m, n = check(c, ledger=led)
+    ok += 1 if (not g and m == ["a"]) else 0
+    print(f"SELFTEST {'PASS' if ok == 5 else 'FAIL'} ({ok}/5)", file=sys.stderr)
+    return 0 if ok == 5 else 1
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("charter", nargs="?", help="charter json 路径（items 数组）")
+    ap.add_argument("--ledger", help="独立表 pending-disposition.json（COS 定案载体②·按 opinion_id 对表）")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--selftest", action="store_true")
     a = ap.parse_args()
@@ -68,7 +97,11 @@ def main():
         ap.error("缺少 charter json 路径（或 --selftest）")
     with open(a.charter, encoding="utf-8") as f:
         charter = json.load(f)
-    green, missing, total = check(charter)
+    ledger = None
+    if a.ledger:
+        with open(a.ledger, encoding="utf-8") as f:
+            ledger = json.load(f)
+    green, missing, total = check(charter, ledger=ledger)
     if a.json:
         print(json.dumps({"green": green, "total": total,
                           "unannotated_count": len(missing),
