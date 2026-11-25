@@ -15501,3 +15501,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **SCORE verdict=pass·total=89.5·run_state=succeeded**——**G 面（wrong_order）首次全过**（C+B 改+A 归位后）。
 - **SUB：I1=3.0/I2=2.0/I3=2.0（24.5）**——**I1 从 r37 的 4.0 掉回 3.0**（-3.5 总分）——**待查**（A 修把 wrong_order 判读进 prompt·评分席可能更严=新门咬人第四枚候选·或评分席判断差异）。
 - opinions=list 2（链内 2 席）·**joint-review 未跑**（段 8-10 后）——**29 fixed 的 refill 面候联审**。
+
+### ㊿+2523 · **CEO 追问「不止 29 条 fixed」——B 批（46 条）结账表未做=漏项·已令 CTO 补**
+
+- CEO 原话：「**不止 29 条 fixed 吧，后面修那 46 条呢**」——**确实漏了**：结账表 827cc67ec 只覆盖 S4-S8 的 29 条；**B 批修 46 条（真修 33+剔 5+等价注）施工完+验收 110 passed·但没走结账表**→r42 联审 refill 只能看到 29 fixed·其余仍 deferred。
+- **已令 CTO**：补 B 批结账表（`acceptance-ledger-r36-b-batch-20261125.json`·同形：fixed/dropped/equivalent_note+evidence+cto+cao 联署+BOD 对表）→**联审 refill 可望见 64 条 fixed**（29+35）。
