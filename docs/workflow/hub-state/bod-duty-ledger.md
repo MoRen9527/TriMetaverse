@@ -15540,3 +15540,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **score=89.5**（{41,24,24.5 auto}）——**auto 保守=b 档已准**（非缺陷·如实）。
 - **两遗留候后续**：a）mergedReport 落痕（-2 可溯·候 FSD）b）ignite.log 跑期 0 字节=特性（SOP 注 9f94a8a2e·判据=终态非空）。
 - **今日总账**：批一 7 件+批二 3 批+批三 2 批+设计批 3 件+两份结账表（29+41）+点火 SOP（六备九项三断言+三序解门）——**全完成**·r42=第一个解门后干净跑完的轮。
+
+### ㊿+2532 · 🔴**重大发现：r42 联审 refill fixed=0（80 全 deferred/carried）——A1 接线路径没对上·29+41 两份结账表全没被读到**
+
+- **CEO 两问的答案**：①**「2 倍成本」=对**（r42 跑了·结账表没被消费·补完还得再跑联审）②**「43.97 是不是没审 46 条」=对**——refill 里 **fixed=0**（deferred 68+carried 12）·联审席看到的是「全部未结账」。
+- **根因（接口漂移第 N 次）**：**结账表在 TMV 树**（fade001-evolve-20261123/）·**`_load_acceptance_ledger`（1990a80·L260）只找 run_dir glob→env→兄弟兜底**→**读不到**。
+- **已请 CTO 修**（①读取端适配 TMV 树路径〔建议〕②或表转移 run dir〔破坏治理位·不取〕）——修好后 refill 应见 70 fixed。
+- **注**：A1 的 fixture 测试「6 passed」为何没抓到这个？——测试 fixture 可能把表放 run dir（假环境）——**真实路径没覆盖**（同「build≠runtime」族）。
