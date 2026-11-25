@@ -14917,3 +14917,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 首批 commit 可报 CEO（7355cf4/2fe9b97）。
 
 - ㊀+2335 拍读 12:06：三仓（TriCompany 7355cf4=12:00:51 T1a 面）·零进程——**T1b 施工中**（接力序第二件）。心跳已更。
+
+- ㊿+2336 **T1b 验收通过（12:06·da4705f·11 passed）**：_check_ab_columns（L216/L646）·A/B 两列必齐+重复/共用 rationale=violation+prompt 条款+ab_columns 读数·strict=1 默认（LOOP_JOINT_AB_STRICT=0 兼容）。→**T1c 起**（回填守恒·与 T6 合并）。批一进度 2/7（T1a✓/T1b✓）·5 件余 ~2.5h。
