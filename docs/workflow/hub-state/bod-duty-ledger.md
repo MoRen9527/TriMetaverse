@@ -15861,3 +15861,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **补标后复审**：r45 卷 ledger 须含 **36 条**（33+3）→检测器 36/36→CFO GREEN。
 
 - ㊿+2626 **补标完成（r45 卷 ledger 36 条已落=33+3）**：cho-14/15 deferred_to=r46／cto-14 this_round_work（三面证据）——**已请 CFO 复审**（检测器 36/36→GREEN→r46）。**CHO 结构性建议照录**（deferred_to:null→检测器点名责任席）。COS 1160/1159 落账见。
+
+- ㊿+2627 **COS 校验 r45 卷 36/36 全绿（sha16 9a9273d0·三对齐零漂移）**：33 继承+3 新增（cho-14/15 deferred→r46·cto-14 this_round 三锚）·符合「只补标注不改内容」边界 ✓。**已转 CFO 复审**（前条已发）。CHO 结构建议（新增项显式 null）=下轮检测器行为面候判。
