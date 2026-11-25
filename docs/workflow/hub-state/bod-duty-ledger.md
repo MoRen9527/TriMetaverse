@@ -15495,3 +15495,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - fail_streak 归零面候终态（前 7 系空点累积）。**候十段+联审**（29 fixed refill 面）。
 
 - ㊀+2521 拍读补 22:07：**r42 已过段 4（dce 迁移真跑·ops 1643b1045）**——链在段 5+。**push 插曲**（远端被并行 commit 1643b1045 抢先·fetch+rebase 后推 9d0529601 ✓·双 pushurl 拓扑照验 ls-remote 真值）。心跳已更。
+
+### ㊿+2522 · **r42 段 6-7 过（G 面 PASS！）·total=89.5·run_state=succeeded（真）·段 8-10 中**
+
+- **SCORE verdict=pass·total=89.5·run_state=succeeded**——**G 面（wrong_order）首次全过**（C+B 改+A 归位后）。
+- **SUB：I1=3.0/I2=2.0/I3=2.0（24.5）**——**I1 从 r37 的 4.0 掉回 3.0**（-3.5 总分）——**待查**（A 修把 wrong_order 判读进 prompt·评分席可能更严=新门咬人第四枚候选·或评分席判断差异）。
+- opinions=list 2（链内 2 席）·**joint-review 未跑**（段 8-10 后）——**29 fixed 的 refill 面候联审**。
