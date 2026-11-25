@@ -15567,3 +15567,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2541 拍读 22:48：**r43 十段全过**（chain_end ok·22:48:23·迁移 ops b81c6f108）·**score=89.5 pass·succeeded·I1=3.0/I2=2.0/I3=2.0**——**联审候**（轮末钩·refill 54 fixed 验证点）。心跳已更。
 
 - ㊀+2542 拍读 22:54：**r43 联审进行中**（dsh 进程在跑·joint-review 未落）·TriCompany 无新。心跳已更。
+
+### ㊿+2543 · 🎯**r43 验证点达成：refill fixed=51（r42=0）·deferred 68→30——结账机制首次真实消费·意见账大幅下降**
+
+- **r43 refill：{deferred:30, fixed:51}·total 81**——**fixed 从 0→51**（reason=「结账表 status=fixed（acceptance-ledger）」+evidence 带 commit·**A1 读取端修复生效**）；deferred 68→30。
+- **A/B=43.58/42.17**（vs r42 43.97/42.80·**基本持平略降 0.4/0.6**）——**工程量（51 fixed）≠质量分**：评分席对「质量本身」的判断没变——**诚实的进化水位**（不是修完就涨分）。
+- **CTO 勘正 54 vs 实读 51**（差 3·低优待核）。**今晚完整闭环**：施工→结账（29+41）→结账表消费（A1 修）→refill 见 51 fixed。
+- **A/B 43.58/42.17 距 test 线 90 仍远**——**进化质量提升是下一步的真课题**（非工程量）。
