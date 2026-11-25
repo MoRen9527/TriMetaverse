@@ -15559,3 +15559,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2537 **✅A1 修验收通过（c254672·5 passed·真件 merged 58/fixed 57 可读）**：读取端五源序（env PATHS→env 单件→TMV 树 glob→run_dir→兄弟）+合并按 opinion_id 后源覆盖——**r42 类 fixed=0 根因堵上**·TMV 树形 fixture（漏真件教训内化）。**细节待核（低优）**：merged dropped1/equiv0 vs 两表 dropped2/equiv2（合并不一致·不影响 fixed 57）。**r43 前置已备**（ruling v12 落 r42·round 19·清戳+marker）·SDE 按 SOP 点火 r43（验证 57 fixed refill 可见）。
 
 - ㊿+2538 **A1 v2 验收通过（ce1c434·6 passed·merged 58={fixed54,equiv2,dropped2}）·勘正 70→并集 58**：①合并字典序错误修（应用序低→高·新胜旧·env 最高）②**「70 fixed」应为「并集 58·54 fixed」**（29+41 含 12 重叠 opinion_id）——**r43 refill 应见 54 fixed**（防高估）。候 r43 点火。
+
+- ㊀+2539 拍读 22:42：**r43 已在跑**（shift-W48-resume43-20261125T143940Z·22:39:40 点火·SDE 按 SOP·**ignite.log 已落 ✓**）·段 1-2 过·A1 v2 ce1c434 落卷。候联审 54 fixed。心跳已更。
