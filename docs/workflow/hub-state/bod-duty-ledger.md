@@ -14982,3 +14982,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2355 **CTO 自领 b 案不完整+扩法派（12:45）**：①自领「only owner 归一」=裁时漏（只想到 owner）②**扩法**：item3 **四字段全两态**（每字段显式缺省标记集合 `{None,"","unassigned","TBD","待定"}` 宽集→pass·有值须有效）+**item6 CARRY 件（CARRY-*/OP-*）未入 RACI=记 `carry-no-raci` 注非 fail**（非 CARRY 仍须键）③修毕 resume36。**「显式态」原则扩展到全字段**（同断言 a 非空非占位·只做 owner 一处=漏）。
 
 - ㊿+2356 **SDE 段 3 挂名单补（12:54）**：item6 覆盖缺口 6 项=C 族 CARRY-004/006+D 族 OP-202611-W47-001.json/.unresolved-items.md/task-inventory-20261117.md/cfo-quota-daily-w47.md·plan raci_n=17（items 23）——**CTO 已裁两态**（carry-no-raci 注·12:45）·数据面补映射=后续可选。修毕 resume36。
+
+- ㊿+2357 **CTO 裁 item6 范围扩（12:54·自领）**：SDE 6 项含非 CARRY 4 项（OP/task-inventory/cfo-quota）——CTO「CARRY 件 no-RACI」令范围不够。**裁 b（同 item3 显式态）**：item6 覆盖断言改「**R12 覆盖子集内须有键**」——R12 外的件（6 项）→记 `no-raci-mapping` 注（非 fail）·R12 内 17 件仍须键。a（COS 补 6 键）=后续不阻塞。FSD 令已扩（7326077a 范围=R12 外全部）→resume36。
