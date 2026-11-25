@@ -15287,3 +15287,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 - 已发 CTO（开工令）：**A. 机制三件**（①refill 读结账表接线 ②§七 state 机〔af3575af5·~1.5h〕③联审归一化 a_score_100/b_score_100）→**B. 46 条修**（分批 ≤10 条/批）→**C. 验收**（机制件测试+逐批对表）→**D. 完工→账清核→CFO 成本门→GREEN 即点火 r38**（不请示）。
 - 候 CTO 拆分计划+批 commit。
+
+- ㊿+2463 **CTO 拆分计划承+开工（A1 已派）**：**A 三件**（A1 refill 读结账表 ~30min／A2 §七 state 机 ~1.5h／A3 联审归一化 ~30min）+**B 5 批**（46 条·~30min/批）——**总 ~5h·A 先行（r38 前置）**·每批报 sha·D 闭环承（全毕→账清→成本门→GREEN 即点 r38）。
