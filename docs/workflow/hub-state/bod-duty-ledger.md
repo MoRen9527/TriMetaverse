@@ -15008,3 +15008,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **两遗留候 CTO**：a）**auto 判分口径**（auto 24.5 vs 人工 35·满分靠 auto 与否）b）merged 落痕（FSD 落位）。
 
 - ㊀+2365 拍读 13:24：TriCompany **4fe99d4**（13:24:08 新提交=merged 落痕修面?）·零进程——**候 CEO 裁 a/b**（auto 判分口径）+merged 修验。心跳已更。
+
+### ㊿+2366 · **r36 汇总任务书已出（13:30·df3e2d419·75 条·8 组）呈 CEO 批——三裁候（汇总/批二三时点/auto a-b）**
+
+- 卷：`bod-taskcharter-resume36-improvements-20261125.md`（75 条=cao8/cfo12/cho14/coo12/cos9/cpo12/cto8·8 组 S1-S8 按共识度）。
+- 与 r34（66 条）关系：共性延续·新增细化 ~9 条（RACI 23→19/交接清单/单席并载拆分/verify 8 项等）·批一已完 7 件与多数同源已落地·新增面进批二批三。
+- CTO 勘正承：r36=75/75 零丢·「-2」实为 r34 的 72→64 五字段不全过滤（8 条·已补落痕 jr.opinions_filtered_invalid）。
+- **候 CEO 三裁**：①汇总收悉 ②批二/批三时点 ③auto 判分口径 a/b（CTO 建议 b·89.5 保守）。
