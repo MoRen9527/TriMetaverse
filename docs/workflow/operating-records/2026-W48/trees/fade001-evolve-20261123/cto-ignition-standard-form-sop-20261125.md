@@ -35,6 +35,8 @@ sudo -H -u fleet env TRICO_LOOP_MARKER_DIR=... NOTIFY_SMTP_HOST=... ... DCE_EXEC
 - **统一入口**：非本 SOP 形的点火=违例（留痕：ignite.log 缺=非标准形铁证）
 - **重跑一律新 run-id**（DP-030 自排除坑·SDE 21:54 实测抓出）：`check_ceo_ruling` 自排除 current run_dir→同 run-id 重跑时 prev 落旧完整轮（其 ruling 已消费）→awaiting rc=4——**每次重跑用新 run-id**（或新 ruling 落 prev 正身+清戳·两择一取新 run-id 为推荐）
 - **残拍重签的 round_count 须全局单调**（T2a 单调门·SDE 21:55 实测抓出第二枚）：`check_ceo_ruling` L474-492 要求 round_count ≥ 更早轮已签件 max——**重签件的 round_count 必须 > 全部更早轮 max**（否则 regression→awaiting rc=4）；撤旧低号签件（留痕备份）可解
+- **残拍锁窗**（R2 c 三态过滤·aae552d·SDE 21:57 实测抓出第三枚）：残拍 pf 后 ≤`FADE_STALE_RULING_MIN`（缺省 30min）未裁=锁（chosen 落残拍→ruling absent→awaiting rc=4）——解：v-round 落残拍（round_count 单调递增）/ 等窗过 / env 调小窗（门行为变更候批）
+- **解门顺序（裁决门三道=同一族·SDE 归纳）**：①撤错件（非当前候选的低号签件）→②验单调（新签件 round_count>全部更早轮 max）→③解残拍锁（v-round 落残拍 或等窗）——**三道门=裁决门三态×重跑操作序**，按此序一次过
 - **并入 D 系候选**（执法面条款·候 CAO/CGR）
 
 ## §五 · 使用依据
