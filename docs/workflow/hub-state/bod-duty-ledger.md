@@ -14756,3 +14756,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **现况**：段 7 score_skill 产物=score-skill.json（席位分）·**subjective-score.json（I 族判卷卷）=COS 链外手工落**——**链缺「段内产 I 卷」**——**后果=每轮 I35 必 pending**（resume29/30/31/33 全中）。
 - 已发 CTO/COS：修「I 族判卷卷产出接链内」（方案 a score_skill prompt 加产卷／b 独立段／c 段 8 前置检查缺→spawn 判·CTO 裁）·验收=resume34 subjective 35 在非 pending。
 - **「链完整性」真缺口**（CEO 抓）。
+
+- ㊿+2294 **CTO 裁 I 卷链内化（a 主修+c 兜底）**：a=score_skill（段 7）spawn prompt 加「同时产 subjective-score.json（v3 形·I1/I2/I3+rationale 无 evidence_ref）」——一份 spawn 两件产物／c=段 8 前置检查缺→spawn 判卷（链内兜底·同 resume20 补判但链内）——验收=**resume34 subjective 35 在非 pending**。FSD 派+COS 形面供。
