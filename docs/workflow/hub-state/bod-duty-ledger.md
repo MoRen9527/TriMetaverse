@@ -16101,3 +16101,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2717 **CTO 确认自证风险+准 kind_by+派 FSD（~20min）**：CFO 的「审计分离缺失（自证/他证）」=与今日「签名范围」同族·「无审计分离=纸糊」——kind_by 字段+score 判据（缺=无效）+CFO 抽查三项照落。**r48 前置**（kind_by 修~20min+全部机制）→CFO 门→r48。
 
 - ㊿+2718 **kind_by 实现=对（L801/805/821）+CTO 验收捕 1 FAILED（FSD「双案绿」漏 legacy）**：`_should_fix`「有效豁免=defer_kind ∈ 三白名单**且 kind_by 非空**」——**审计分离堵洞**；旧案（defer_kind=external 无 kind_by·期望 2→新判据 3=**无效豁免实锚**）未随改——已回 FSD 补（~5min）。**「改判据须全测试更新」**（验收捕漏=他测胜过自测的又一实证）。补绿→r48 点火。
+
+### ㊿+2719 · ✅**kind_by 全绿（2a8b58f·67 passed）·r48 前置全齐·已请 CFO 门**
+
+- **kind_by 验收**（2a8b58f·engine 67 passed·EXIT=0）：旧案随改（without_kind_by→should_fix 3/rate 2/3 RED + valid 变体→1.0 过·双态齐）；**FSD 自领**（「双案绿」=只跑新类未重跑全量→改口径「改判据必跑模块全量」）。
+- **今日制度面双教训收齐**：**签名范围**（CAO·联署=可复核性）+**审计分离**（CFO·kind_by 堵自证）。
+- **r48 前置全齐**：kind_by+修复率 100%+三问 4 件+段序族五面——**已请 CFO 门（四查）**→GREEN 即 r48（最终验证轮）。ruling v17 已备（r47·round 24）。
