@@ -16099,3 +16099,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **采纳 CFO ①**（kind_by=<seat> 记填写者·**缺失视同无效→计入 should_fix→RED**·CFO 抽查 1-2 条）——已发 CTO（与 r48 前置同批 ~20min）。
 
 - ㊿+2717 **CTO 确认自证风险+准 kind_by+派 FSD（~20min）**：CFO 的「审计分离缺失（自证/他证）」=与今日「签名范围」同族·「无审计分离=纸糊」——kind_by 字段+score 判据（缺=无效）+CFO 抽查三项照落。**r48 前置**（kind_by 修~20min+全部机制）→CFO 门→r48。
+
+- ㊿+2718 **kind_by 实现=对（L801/805/821）+CTO 验收捕 1 FAILED（FSD「双案绿」漏 legacy）**：`_should_fix`「有效豁免=defer_kind ∈ 三白名单**且 kind_by 非空**」——**审计分离堵洞**；旧案（defer_kind=external 无 kind_by·期望 2→新判据 3=**无效豁免实锚**）未随改——已回 FSD 补（~5min）。**「改判据须全测试更新」**（验收捕漏=他测胜过自测的又一实证）。补绿→r48 点火。
