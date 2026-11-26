@@ -16512,3 +16512,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **「B-H 逐个过」放弃**（CEO 22:49「不再跟踪」）：任务书 §六 T2/T3 已划除标注「CEO 令放弃」——**families 讨论终止**（A 族已修正完成·其余族不再逐个过）。
 
 - ㈢+2873 拍读 22:54：**TC 见 7a94656（22:54·CAO 收归疑已落——候其回执）**·零进程。心跳已更。
+
+- ㊿+2874 **✅模板 v1.0.0 收归全毕（CAO·7a94656+e43e571·sg 顶验真）**：①建 `TriCompany/docs/standard-templates/`（与 docs 七子域并列）②落位 `taskcharter-template-v1.0.0.md`（去 draft·160 行·三条改进核真）③件头「⚠️变更须 CAO 批（CEO 22:44 令）」+收归位/起草源两行 ④**registry 新增「标准资产目录」节**（定位：模板被复制使用≠制度被引用·分目录／落位规则 `<type>-<name>-<ver>.md`／变更规则须 CAO 批／目录初表首行=taskcharter-template-v1.0.0）。**补笔 e43e571=批准栏「待收归」回填 7a94656**——**不留待填是收归的一部分**（模板示范批准怎么记·不能自己留待填位）。**目录初表**：taskcharter-template-v1.0.0.md | 1.0.0 | 任务书两形态+schema 校验铁律。
