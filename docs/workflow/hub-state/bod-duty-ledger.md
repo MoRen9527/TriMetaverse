@@ -16442,3 +16442,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **正解（v2.3.1）**：**A 族对象=被迁源件**——快照=W47 白名单源件（sha256）／对照=①源件未被改 ②W48 目标件==源件／**目标周增件=正常不判 violation**／白名单外突变归 plan_scope 五分类。
 - **修法**：实现修正先落（~40min·修 BUG 非改口径）·rubric 文本微调（scope 明写源件集）=v2.3.1 补丁**呈 CEO**。
 - **CEO 原意在这里更清楚**：「保证迁移过程中**对象**没被篡改」——**对象=被迁的件**（不是周目录）。
+
+- ㊿+2847 **✅`_collect_a` 语义修正验收（a8cc5f1·96 passed·2min）**：快照面=plan.from_week 校验→源周 glob→读白名单 entries→源件集 {pattern/src_path/dest_rel/sha256_16/size}（幂等）／对照面双向=**源未篡改 ∧ 搬运无损**（三明细 source_tampered/dest_missing/dest_hash_mismatch L432-434）／**目标周增件=正常不判 violation**（原逻辑删）／白名单实读 5 entries（company-demand-pool/daily-progress/task-inventory-*.md…）／测试+3 改。**BUG 闭·迁移成功不再被判 fail**。余一件=**rubric 文本 v2.3.1 补丁（scope 明写源件集·~10min·呈 CEO 批·不阻塞实现）**。
