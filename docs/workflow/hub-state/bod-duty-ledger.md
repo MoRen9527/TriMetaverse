@@ -16015,3 +16015,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **已发 CTO/SDE**：落 R-HY 的 TriCompany .env（推荐持久·或 SOP env 十一项）→值面探针（0.2/0.5 可读）→**r47 点火**（三问 4/4 真活）。
 
 - ㊿+2691 **CTO 承值+SOP 十一项（f046ce1d3）**：IMPROVE_MIN_RATE=0.2/IMPROVE_K=0.5 入 SOP §一（九→十一项）·已请 SDE 落 .env 持久+值面探针+r47 点火——**r47 后三问 4/4 真活**（a 修+params 双值→checked/rate/threshold/dual_track 全链路）。
+
+- ㊿+2692 **r47 前置已备（v16 落 r46·round 23·清戳+marker）**：SDE env 十一项就绪（含 IMPROVE_MIN_RATE=0.2/IMPROVE_K=0.5）·**.env 路线勘正**（无加载面不可用→点火形 env·已报 CTO）。三问 4/4 验证点：拆分/能力项/checked+rate+threshold/dual_track。

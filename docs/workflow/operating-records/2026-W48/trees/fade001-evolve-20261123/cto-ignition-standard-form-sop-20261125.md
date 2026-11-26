@@ -6,6 +6,8 @@
 
 ## §一 · 点火前六备（BOD 7 项 env 配方 + 三绑）
 
+> **注（SDE 09:43 勘）**：**`.env` 路线不可用**——`/srv/fleet/TriCompany/.env` 不存在·ignite/token-run.sh 均无 dotenv loader（零命中）→**写 .env 不会被读取=假持久化**——**唯一正形=点火 env 直带（本节 env 十一项进点火命令）**；值面探针=点火后读 chain 进程 `/proc/<pid>/environ` 断言（值非密可打印）。
+
 | # | 项 | 值/条件 |
 |---|---|---|
 | 1 | **用户** | `fleet`（**`sudo -H -u fleet`（-H 设 HOME=/home/fleet·必带）** + **env 显式列注入**）——**-E 保 env 但 HOME 留 /root→qualify 读 ~/.trimetaverse/notify.json PermissionError（SDE 21:52 实测抓坑·-H 与 -E 之别即此坑）** |
