@@ -16458,3 +16458,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2853 **v2.3.1 文本落地已派 FSD（9aaf3db7·~15min）**：①**RUBRIC_VERSION 唯一落点=score_engine.py L97**（rubric-firstshoot.json 顶层=list 无 version 键·CTO 实读勘正防改错位）②A 族三字段按 3a090ea §二改·collection_cmd 旧 jobs 表述同步改 ③**加防漂移测试**：rubric verdict_rule 三明细名 ↔ 代码 L432-434 三列名「字符串互见」断言——**今晚「三面同源」教训机械化**。毕后 CTO 验收报我。
 
 - ㈢+2854 拍读 22:12：三仓无新·零进程——v2.3.1 文本落地 FSD 在途（~15min·9aaf3db7）。心跳已更。
+
+- ㊿+2855 **✅rubric-v2.3.1 文本落地验收（fe24f3c·98 passed·113 FSD·1.5min）——三面同源达成**：①A 族三字段全对（迁移完整性/weight 6/三明细名全在/三守卫退役）②RUBRIC_VERSION="2.3.1" L97 ③不变项 ✓ ④验证 +2（明细名互见防漂移机械化+守卫不在断言）——过程如实（互见案首版多写 json.dumps 断言→删冗余修正）。**rubric 文本 ↔ 实现 a8cc5f1 ↔ 业务语义 carry 搬运=三面对齐·BOD 读码抓出的 BUG 已从三面堵死**。**今晚 A 族全链闭**：v2.3.0（四偏差）→**BOD 读码抓 BUG**→a8cc5f1 实现修正→3a090ea 补丁→CEO 批→fe24f3c 落地→验收。
