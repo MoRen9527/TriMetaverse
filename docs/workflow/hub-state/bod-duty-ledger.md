@@ -16092,3 +16092,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **建议（与 CEO 100% 口径一致）**：**plan 的 items 生成规则改「全口径登记」**——**每条意见必有一个去向**（进 items=fixed 目标／defer_kind=豁免／dropped=不该修）——**禁「没进 items 也没标」**。
 
 - ㊿+2715 **✅修复率 100% 机制验收（d042515·3 passed·engine 64·4min）+SOP env 1.0（fe633f86d）**：should_fix（prev deferred∥carried·defer_kind 三白名单外=该修·null/缺=该修·dropped/equiv 移出）·repair_rate=fixed/should_fix·<1.0→RED·min_rate 缺省 1.0——**测试三案全过**（含白名单移出分母实锚）。**已请 CFO 复审**（口径第二次变更）→r48 验证。
+
+### ㊿+2716 · 🔴**CFO 复审 GREEN+发现「自证风险」（defer_kind 谁填未约束=自我豁免漏洞）——采纳 kind_by 判据**
+
+- **CFO 结论**：机制 GREEN（d042515 实现正确）+门形采纳（查四修复率）+**自证风险**：「**defer_kind 三白名单=豁免通道·但谁填未约束——修复方自填 external_dependency=自我豁免→repair_rate 永远 1.0→100% 纸糊**」——**「既当运动员又当裁判」**（与「门只看正向」同族：判据可被被考核方操纵）。
+- **采纳 CFO ①**（kind_by=<seat> 记填写者·**缺失视同无效→计入 should_fix→RED**·CFO 抽查 1-2 条）——已发 CTO（与 r48 前置同批 ~20min）。
