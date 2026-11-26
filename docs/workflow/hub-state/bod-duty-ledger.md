@@ -16420,3 +16420,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㈢+2839 拍读 21:31（**积压 10 条拍读令合并执行·20:24~21:31 期间无新读数**）：三仓无新（TC 最新 eecee48 20:05·TMV 己面推进）·零进程——**候 CEO 批 v2.3.0**（唯一在途·已 1.5h）。心跳已更。
 
 - ㈢+2840 拍读 21:36：三仓无新·零进程——候 CEO 批 v2.3.0（已 1.5h+）。心跳已更。
+
+### ㊿+2841 · **CEO 批 rubric-v2.3.0（「批 v2.3.0」）——CTO 施工令已发·附答 CEO 问**
+
+- **答 CEO 问「eecee48 是改完了？」=否·是提案稿**：eecee48=`rubric-v2.3.0-proposal` 提案文档；**真正执行的 rubric-firstshoot.json 仍是 v2.2.0 旧判**（CTO 批前零改码照守）——**批了才改·改完才是「迁移前后对照」实现**。
+- **施工令发 CTO**：①rubric.json A 族三段重写（迁移完整性·sha256 快照对照·vB 退役·scope 不含 jobs）②三守卫退役 ③版本号 v2.3.0 ④改判据跑 engine 全量+A 族新夹具（同件 pass/改件 violation/缺件 violation）⑤**过渡期 rubric_defect 标注**（r48 及以前不洗白不扣席）。
+- **r49 点火另批**（与 rubric 批分开·铁律照役）。
