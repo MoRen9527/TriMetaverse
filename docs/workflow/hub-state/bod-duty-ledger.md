@@ -16090,3 +16090,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **现状（plan_skill_spawn.py 实读）**：plan 产 `items:[{item_id,desc,status:planned}]`（families 每族 items）——**COS 的 LLM 从材料自选·「修哪些」=裁量·「没进 items 的」无显式记录**（**无声消失**）。
 - **与 100% 口径的冲突**：**plan 的「不选」=事实不修但没标**——**这正是「deferred 无豁免理由」的上游来源**。
 - **建议（与 CEO 100% 口径一致）**：**plan 的 items 生成规则改「全口径登记」**——**每条意见必有一个去向**（进 items=fixed 目标／defer_kind=豁免／dropped=不该修）——**禁「没进 items 也没标」**。
+
+- ㊿+2715 **✅修复率 100% 机制验收（d042515·3 passed·engine 64·4min）+SOP env 1.0（fe633f86d）**：should_fix（prev deferred∥carried·defer_kind 三白名单外=该修·null/缺=该修·dropped/equiv 移出）·repair_rate=fixed/should_fix·<1.0→RED·min_rate 缺省 1.0——**测试三案全过**（含白名单移出分母实锚）。**已请 CFO 复审**（口径第二次变更）→r48 验证。
