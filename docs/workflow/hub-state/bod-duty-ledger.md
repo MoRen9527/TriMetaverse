@@ -16514,3 +16514,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㈢+2873 拍读 22:54：**TC 见 7a94656（22:54·CAO 收归疑已落——候其回执）**·零进程。心跳已更。
 
 - ㊿+2874 **✅模板 v1.0.0 收归全毕（CAO·7a94656+e43e571·sg 顶验真）**：①建 `TriCompany/docs/standard-templates/`（与 docs 七子域并列）②落位 `taskcharter-template-v1.0.0.md`（去 draft·160 行·三条改进核真）③件头「⚠️变更须 CAO 批（CEO 22:44 令）」+收归位/起草源两行 ④**registry 新增「标准资产目录」节**（定位：模板被复制使用≠制度被引用·分目录／落位规则 `<type>-<name>-<ver>.md`／变更规则须 CAO 批／目录初表首行=taskcharter-template-v1.0.0）。**补笔 e43e571=批准栏「待收归」回填 7a94656**——**不留待填是收归的一部分**（模板示范批准怎么记·不能自己留待填位）。**目录初表**：taskcharter-template-v1.0.0.md | 1.0.0 | 任务书两形态+schema 校验铁律。
+
+### ㊿+2875 · **CEO 令：挂任务书须 CAO 批标志位（机器可检·无=不让挂）——已发 CAO+CTO 双线**
+
+- **CEO 令**（22:57）：挂任务书必须有 `CAO 批=true` 类似标志位·**机器可检**·**没有不让挂**·CAO 检查范围=**命名规范+任务书格式符合要求**等 CAO 职责域。
+- **已发 CAO**：模板 v1.0.0→**v1.0.1 改动稿**（`cao_approval{approved/approver/approved_at/commit/checks[naming,format,required_blocks]/naming_checked/format_checked}`）+**请出「任务书检查规范」**（检查什么·判据·机器可跑形）·**模板改须 CAO 批**（22:44 令照守）。
+- **已发 CTO**：**挂载面机器门**（charter 生成器/树挂载/executor 拾取·判据 `approved==true ∧ approver==CAO ∧ commit 锚`·**缺任一=拒挂 fail-closed**·三案夹具·改判据跑全量）。
+- **两件并行**：CAO 批模板+出规范／CTO 改门·合流后互验。
