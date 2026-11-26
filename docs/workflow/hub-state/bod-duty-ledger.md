@@ -16531,3 +16531,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2879 **COS 实查回（第三处）+判据对齐三项→一项**：①实查：**`cao_approval` 全仓零命中**（标志位未实现·三处均须新增）／**「任务书挂载/拾取」无专用代码**（tree_op.py 仅 create/validate·无 pickup/approval）／树面仅 joint_review_trigger L166-174+recycle L257-259 非挂载器 ②落点建议：**新增 `tree_mount_gate.py`**（独立校器·挂载/拾取前显式校验·职责单一）优于扩 tree_op.py ③**判据对齐**：COS 写三项（approved+approver+commit）→**BOD 统一定一项**（只读 `approved===true`·与 CTO 裁/CAO 接口同源·approver/commit 归 CAO 批时自保）·已发 COS 按一项实现。④COS 已对接 CTO 等契约。
 
 - ㈢+2880 拍读 23:00：TC 见 b7565d5/0c70846（22:59·CTO 两处施工疑已落桩）·零进程——候 CTO 验收报。心跳已更。
+
+- ㊿+2881 **✅COS 第三处实现毕（b7565d5·7 passed·一项判据）**：`tree_mount_gate.py`（66 行·`check_cao_approval` 同源签名+`gate_or_raise`+CLI）+`test_tree_mount_gate.py`（45 行·7 案）——**唯一判据=`approved is True`**（approver/commit/checks 不解析·`"true"` 字符串→拒·布尔严格）／**checks 全 false 但 approved True→过**（CAS 案实证）／报错行三处统一（无块/未批=「CAO 批缺失·拒挂任务书」·「批后内容变更·须重签」常量留未来）／fail-closed 全。已报 CTO 请三处一致性抽验·待 CAO 规范对表。**三处进度：CAO 规范✓／COS 第三处✓／CTO 两处候验收**。
