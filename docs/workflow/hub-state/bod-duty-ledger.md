@@ -16082,3 +16082,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CEO 原话**：「**按 100% 要求，分母算该修的**」。
 - **机制**：①**分母=上轮 deferred+carried 中无豁免理由的**（dropped/equiv 移出·**deferred 须附豁免理由**：external_dependency/pending_approval/out_of_scope·白名单）②**repair_rate=fixed/该修总数·要求 100%**（<100% 且余项非全豁免=RED）③**min_rate 0.2→1.0**·defer_kind 字段入 refill（COS 填）。
 - 已发 CTO·改毕→CFO 复审→**r48 验证（修复率 100% 面）**。
+
+- ㊿+2713 **CTO 改法承（~1h·已派 FSD）**：**defer_kind 形**=`"external_dependency"|"pending_approval"|"out_of_scope"|null`（null=无豁免=该修·COS 填·联审消费）·repair_rate 分母改「该修总数」（fixed/该修·<100%→RED）·min_rate 缺省 0.2→**1.0**·SOP env 值改。**defer_kind 三值=CTO 裁**（可增补候 CEO 定）。改毕→CFO 复审→r48 验证（修复率 100% 面）。
