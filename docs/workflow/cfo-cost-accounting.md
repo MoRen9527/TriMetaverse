@@ -91,6 +91,11 @@ python scripts/charter-truncation-guard.py <charter-draft.json> --opinions <opin
 
 **形（点火链前置 join·非事后核算）**：
 
+> **ⓠ 查零·授权面（CEO 2026-11-26 11:2x 令补·「没有我批任务书·禁止瞎点火」·一票否决·最先执行）**
+> - **判据**：本轮点火须有 **CEO 批态的件**——①task-charter 的 `status` ∈ {`approved`, 或 CEO 明示令在卷}；**若 `status=pending_approval` 或无批态件=RED**。
+> - **一票否决语义**：**查零 RED → 不再执行查一至查四**（不看机制齐不齐·直接不放行）。
+> - **教训（本席自领·2026-11-26）**：r48 我判 GREEN 时**四查全过而任务书未批**——**门只看机制齐不齐·不看该不该跑**。根因=**我的门一直「向下看」（看执行产出）·从未「向上看」（看授权来源）**。门的第一职能是守授权边界·第二才是保执行质量。
+
 > **ⓐ 账清核 = 两查（CEO 2026-11-25 22:1x 批评补·「大量修复没结账却走联审·成本白烧大半」）**
 > - **查一·施工完成度**：当轮 charter items 逐条 status=done/verified（原形·机械判·缺 N 条列明）
 > - **查二·结账覆盖率**（**新增·缺此项=RED**）：**每条修复须有 acceptance-ledger 条目**（三态之一：`fixed`/`dropped`/`equivalent_note`）——**未结账=RED**。
