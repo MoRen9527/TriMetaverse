@@ -16084,3 +16084,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - 已发 CTO·改毕→CFO 复审→**r48 验证（修复率 100% 面）**。
 
 - ㊿+2713 **CTO 改法承（~1h·已派 FSD）**：**defer_kind 形**=`"external_dependency"|"pending_approval"|"out_of_scope"|null`（null=无豁免=该修·COS 填·联审消费）·repair_rate 分母改「该修总数」（fixed/该修·<100%→RED）·min_rate 缺省 0.2→**1.0**·SOP env 值改。**defer_kind 三值=CTO 裁**（可增补候 CEO 定）。改毕→CFO 复审→r48 验证（修复率 100% 面）。
+
+### ㊿+2714 · **CEO 问「plan skill 里谁定修哪些不修」——答：现状=COS(LLM)自选·「没选」无声消失=意见账最后漏点**
+
+- **现状（plan_skill_spawn.py 实读）**：plan 产 `items:[{item_id,desc,status:planned}]`（families 每族 items）——**COS 的 LLM 从材料自选·「修哪些」=裁量·「没进 items 的」无显式记录**（**无声消失**）。
+- **与 100% 口径的冲突**：**plan 的「不选」=事实不修但没标**——**这正是「deferred 无豁免理由」的上游来源**。
+- **建议（与 CEO 100% 口径一致）**：**plan 的 items 生成规则改「全口径登记」**——**每条意见必有一个去向**（进 items=fixed 目标／defer_kind=豁免／dropped=不该修）——**禁「没进 items 也没标」**。
