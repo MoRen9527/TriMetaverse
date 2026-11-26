@@ -16221,3 +16221,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2747 **✅E4 验收（64dca6c·engine 74·1.5min）**：threshold {min_rate/below/below_count/note}（L853-859 独立字段·default 1.0）·测试+2（2/3→below true／3/3→false）·**UnboundLocalError 测试即捕→重排修复**（自证测试门有效）·FSD 75 vs 本机 74 差异如实。**E5 主（末件）已派**（~1h·ETA ~13:20）。进度 4/5。
 
 - ㊀+2748 拍读 12:18：**E5 commit 见（3d65b4a 12:18）**·E4 64dca6c/E3 4b75864/E2 2acaa2a/E1 e5a98bb 全落卷——**候 E5 验收（末件）→账清核→CFO 门**。零进程。心跳已更。
+
+### ㊿+2749 · 🎯**进化施工 E1-E5 全完（5/5·40min vs 估 4.5h）——架构正形落地**
+
+- **E5 验收**（3d65b4a·engine 76·文档草案 b6bd30cec）：两卷字段对照表（score=A 迁移质量／joint=B 进化·边界三规则）+**字段级交叉断言**（key_overlap=(score∩jr)−白名单·非空=violation·含撞键检出测试）。
+- **五件全绿**：E1 125/E2 72+7/E3 charter22+round65/E4 74/E5 76——**总工时 ~40min**。
+- **架构级成果**：**fade-001 只做工作（score=迁移质量）·进化=joint 面+COS 树协议外部**——CEO 的正形在代码+数据+流程全分离。
+- **已请 CFO 门（查零至查四）**（查零=r49 任务书 CEO 批态·无批=RED）→CEO 批→r49。
