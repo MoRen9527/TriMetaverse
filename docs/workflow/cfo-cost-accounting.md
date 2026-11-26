@@ -100,6 +100,9 @@ python scripts/charter-truncation-guard.py <charter-draft.json> --opinions <opin
 >   - 阈值口径（本席定·比「待办>0 即 RED」更严更细）：**待办项 >0 本身不是问题**（结转是正常形）·**问题是无标注的待办**（不知等到何时）→ **逐条标注才可机械判**。
 >   - 铁律：**「提了没改」可以·「改了没说」不行·「没改也没说」= 放行新轮 = 烧下一轮的钱去覆盖已知缺口**。
 >   - 三查视图完整性：查一看「做了什么」／查二看「做了的有没有用」／**查三看「没做的是什么去向」**——**只看正向不看负向=视图不完整**（本席 11-24/11-25 两次门漏判的共同根因）。
+> - **查四·修复率（CTO 2026-11-26 d042515 机制·本席采纳）**：`repair_rate = fixed / should_fix`·**<1.0 = RED**（除非余项全有合法 `defer_kind`）。
+>   - `should_fix` = prev deferred∥carried 且 `defer_kind ∉ {external_dependency, pending_approval, out_of_scope}`（null/缺=该修·dropped/equiv 天然移出）；`min_rate` 缺省 1.0。
+>   - **⚠️ 自证风险条款（本席提·候采纳）**：`defer_kind` 若由修复方自填而无追溯 → **自我豁免 → repair_rate 永远 1.0 = 纸糊**。**建议 `kind_by=<seat>` 记录 + CFO 门抽查**；**检测器判据**：`kind_by` 缺失的 defer_kind **视同无效** → 计入 should_fix → 拉低 repair_rate → RED。
 - **ⓑ 预估成本**：本轮 token 四分列带（十段+2 席评分+7 席联审）——锚今日批实测（597s×7 席 spawn）作基数推算；**不折现**（CEO 11-23 令口径）
 - **ⓒ 验证增量**：本轮能验证的新信息点；与上轮验证点重复即「不值」
 - **判定**：三件齐=**GREEN**·任一缺=**RED**（点火令不执行·报 CEO 不候）
