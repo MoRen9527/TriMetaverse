@@ -16402,3 +16402,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **三处偏差（BOD 判读）**：①对象=jobs.json（/srv/fleet/TriRMC/data/cron/·现 md5 bb07f8f9）**非「要迁的目标周文件夹」** ②基准=形态固定值（可换形更新）**非「本次迁移前快照」** ③目的=配置漂移检测 **非迁移动作完整性**。
 - **已发 CPO+CTO**：问迁移对象清单/A 族是否重定义/三守卫定义·rubric 修订须 CEO 批。
 - **CEO 四问事实答**：md5 基准=调度配置指纹对照值；nextRunAtMs=下一触发毫秒戳（1794757800000→11-15 23:50）；qualify/trap/RCguard=job 三守卫（现文未见于 jobs 列表·候 CTO）；manual=**值席（COS/COO）人工采·非 plan skill**。
+
+- ㊿+2832 **CTO A 族三问裁定（实读锚·全对）**：①**迁移对象=operating-records 周平面**（W47→W48 目录树+各卷）·jobs.json=被 PATCH 对象**非迁移对象** ②**A 族改「迁移前快照→迁移后对照」**·复用 E1 `artifacts_manifest`（sha256_16+size+parse_ok）·新基准=迁移前实时快照·**vB `4f990e911c3f` 退役**·口径「同对象同集同 hash」·scope=目标周全卷 ③**三守卫退役**：qualify=错引 E 族·**trap/RCguard 全仓零实现**（grep=0）。④**rubric-v2.3.0 提案**：CTO 出稿+CPO 会签+**呈 CEO 批**（BOD 已确认开写）。CTO 注：**此偏差不修=迁移事故不可发现**。
