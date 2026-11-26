@@ -16523,3 +16523,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **两件并行**：CAO 批模板+出规范／CTO 改门·合流后互验。
 
 - ㊿+2876 **CTO 机器门落点勘定（实读）+已派 FSD·第三处转 COS**：①生成侧=`charter_generator.ts`（charter 产出点）②消费侧=`round_runner.ts` L617/668/674（charter 唯一读取点）——**CTO 面实做两处（生成拒发+消费拒读双保险）** ③**第三处=COS 树协议挂载/拾取面**（不在 TriRMC 仓）——**已发 COS 加同判据**（CTO 提供校验函数/契约）。判据：`approved==true ∧ approver=="CAO" ∧ commit 非空`·缺任一拒·**CTO 只强校验三项（approved_at/checks 记而不卡·防过度耦合）**。
+
+- ㊿+2877 **✅CAO 定稿 v1.0.1+检查规范（TC@d810416）**：①**v1.0.1 模板**（`cao_approval` 块·**CAO 改两处**：A=`naming{ok,actual}` 布尔+实际值（原稿写格式模板会被当实际值=**D-92 老坑**好抓）／B=`required_blocks{ok,missing[]}`（拒时要知缺哪块））②**检查规范 v1.0**（独立件·C1 命名 `^TC-\d{8}-\d{3}$`/C2 形态自洽/C3 必填四块（cao_approval/authorization/tri_source_assertion/verify）/C4 schema 枚举/C5 引用可验（**只验存在不验正确**）·附 bash+jq 脚本骨架 EXIT≠0=拒挂）③**两条硬边界**：CAO 只查「**形**」不查「实」（产品/技术/成本/责任/排程不在域）·**「C1-C5 全过」≠「好任务书」只等于「形合格可挂」** ④**拒的形**：不写 approved:true→fail-closed 拒挂·拒因须书面回执·**批后内容改→须重签（旧锚失效·防偷改）**。**给 CTO 接口=approved==true 唯一挂载条件（其余供核不供判）**·已转 CTO。
