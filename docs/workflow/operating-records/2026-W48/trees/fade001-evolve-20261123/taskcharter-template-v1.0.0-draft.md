@@ -12,6 +12,7 @@
 1. **先判形态**：CPO+CTO 联判复杂度 → 命中任一判据=**index 形**（另出 PRD/techplan）·全不中=**inline 形**（方案自含）；
 2. **两种形态同一命名**：`charter-<ISOts>.json`（或 .md）·**靠 `form` 字段区分**·不靠文件名猜；
 3. **前三块必填**：`authorization`（授权地基）+ `tri_source_assertion`（三面同源）+ verify（机器可跑）——**缺任一块=任务书不合格**。
+4. **形态与复杂度必须同向**：`complexity=simple ↔ form=inline`·`complexity=complex ↔ form=index`——**矛盾=校验失败**（CAO 补①·v1.0.0）。
 
 ---
 
@@ -19,7 +20,7 @@
 
 ```yaml
 # ═══ 任务书（inline 形）═══
-task_id: <唯一标识·含日期>
+task_id: TC-YYYYMMDD-NNN          # 定形·与 DP 号形同族（CAO 补②·v1.0.0）
 title: <一句话任务名>
 form: "inline"
 complexity: "simple"
@@ -154,6 +155,6 @@ cost_gate: { ...同 A... }
 
 | 版本 | 日期 | 变更 | 批准 |
 |---|---|---|---|
-| 1.0.0 | 2026-11-26 | 首版·七席合议格式提案落地 | 候 CAO 批 |
+| 1.0.0 | 2026-11-26 | 首版·七席合议格式提案落地+CAO 三条改进（form↔complexity 映射/task_id 定形/批准栏示范） | CAO 批（commit 锚=<待收归 commit>） |
 
 ——BOD 起草（2026-11-26 22:45·候 CAO 批后收归标准资产）
