@@ -16472,3 +16472,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CEO 原则**：①**任务不复杂→任务书内定完整 schema**（产品方案+技术实现都在任务书里）②**任务复杂→任务书=索引+摘要·另出完整 PRD 和技术方案**（含技术架构+实施方案）。
 - **已发 7 席**（COS=收口+树协议／COO=执行编排／CPO=PRD 边界／CTO=verify 强度+三面同源／CFO=查零+成本门（今天查零首战 RED 教训）／CHO=岗位边界／CAO=制度纪律+命名+机械校验）。
 - **时限今晚**·卷落 fade001-evolve-20261123 树·BOD 汇总呈 CEO。
+
+- ㊿+2860 **CPO 回（1/7·81a1e4775·≤1 页）**：①**一条公式**：PRD=「用户会感受到什么不同」／任务书=「我们怎么把它做出来」·互不越界（任务书只引 prd_ref 锚）②**「要出 PRD」三问**：用户可感知变化？/新能力新场景？/价值交换变化（定价打包额度）？——三问全否→不要 PRD·判不出=保守要 PRD·**PRD 须有消费面（防摆设件）**③**任务书产品面五字段**：product_intent/observable_acceptance/prd_ref/product_change(none|minor|major)/pricing_impact ④**简单型=product_change:none+理由**·**反形警示：不写=默认有产品变更**（防悄悄改用户面·间接可感知面日志文案也须写）。附注：commit 同卷带入 COS 提案（共享 index·正常）。
