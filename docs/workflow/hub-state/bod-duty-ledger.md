@@ -16426,3 +16426,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **答 CEO 问「eecee48 是改完了？」=否·是提案稿**：eecee48=`rubric-v2.3.0-proposal` 提案文档；**真正执行的 rubric-firstshoot.json 仍是 v2.2.0 旧判**（CTO 批前零改码照守）——**批了才改·改完才是「迁移前后对照」实现**。
 - **施工令发 CTO**：①rubric.json A 族三段重写（迁移完整性·sha256 快照对照·vB 退役·scope 不含 jobs）②三守卫退役 ③版本号 v2.3.0 ④改判据跑 engine 全量+A 族新夹具（同件 pass/改件 violation/缺件 violation）⑤**过渡期 rubric_defect 标注**（r48 及以前不洗白不扣席）。
 - **r49 点火另批**（与 rubric 批分开·铁律照役）。
+
+- ㊿+2842 **CTO 施工已派（~1.5h·含 BOD 清单未列的深件）**：①json 三段重写+version ②**`_collect_a` 实现改造（深件·BOD 清单漏列·CTO 补正）**——现读 jobs.json（L333-360）必同步改读目标周目录树做 manifest 快照/对照，否则 rubric 写「周平面」代码仍读 jobs.json=**新判据自指虚空**（正是刚批掉那个毛病）③测试+3 ④rubric_defect 标注。**此补充=实读价值**（改描述不改采集代码=新悬空）。FSD 毕→CTO 验收→报我。
