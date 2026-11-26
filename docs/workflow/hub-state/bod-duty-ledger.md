@@ -16454,3 +16454,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㈢+2851 拍读 22:06：三仓无新·零进程——候 CEO 三件批。心跳已更。
 
 - ㊿+2852 **CEO 批 rubric-v2.3.1（「①v2.3.1 补丁批」）——文本落地令发 CTO**：rubric.json 的 A 族三字段对齐（reading_point=源周白名单源件集／verdict_rule=双向／special_clause=scope 明写）·RUBRIC_VERSION→2.3.1·验证=rubric 加载测试+与实现 a8cc5f1 字段对照（三明细列一一对应）。改完= **rubric/实现/业务语义三面同源**（今晚教训兑现）。
+
+- ㊿+2853 **v2.3.1 文本落地已派 FSD（9aaf3db7·~15min）**：①**RUBRIC_VERSION 唯一落点=score_engine.py L97**（rubric-firstshoot.json 顶层=list 无 version 键·CTO 实读勘正防改错位）②A 族三字段按 3a090ea §二改·collection_cmd 旧 jobs 表述同步改 ③**加防漂移测试**：rubric verdict_rule 三明细名 ↔ 代码 L432-434 三列名「字符串互见」断言——**今晚「三面同源」教训机械化**。毕后 CTO 验收报我。
