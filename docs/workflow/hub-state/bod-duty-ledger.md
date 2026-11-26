@@ -16432,3 +16432,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2843 **✅rubric-v2.3.0 全链闭（d5ac089·四件验收·96+111 passed·2min 完工）**：①A 族=**迁移完整性**（weight 6·sha256 快照对照·vB 退役·不含 jobs·三守卫退役·RUBRIC_VERSION="2.3.0" L97）②**`_collect_a` 深件同步改造**（L336+ 读 plan.to_week→周树 rglob→migration-pre-snapshot.json 幂等→同集对照·旧 jobs.json 面退役）——**rubric 与代码同源·无新悬空** ③测试 +5（同件 pass/改件 fail/缺件 fail/legacy/新轮）④rubric_defect 过渡形（L1270/1275+L1285-1295 legacy 追加·不洗白不扣席）。**CEO 批→施工→验收全闭**。r49 点火仍候 CEO 另批。
 
 - ㈢+2844 拍读 21:42：TC 见 d5ac089（v2.3.0·21:39）·零进程——**v2.3.0 全链闭·候 r49 批+B 族续**。心跳已更。
+
+- ㊿+2845 **A 族新实现实读（答 CEO 时序问）发现潜在语义矛盾·已发 CTO 释疑**：代码=快照面（migration-pre-snapshot.json 不存在→扫 week_dir 落快照返 pass「首拍」）／对照面（快照存在→pre vs cur 扫·缺件/增件/hash 差/parse_ok 失败→violation）。**矛盾**：若「迁移」=内容搬进目标周·目标周必「增件」·但代码把增件判 violation——**「迁移成功」本身会 fail？** 已发 CTO 三解读（A 变换非搬运／B 实现错应比文件内容集／C 其他）＋三问（迁移动作对目标周做什么/件集预期变不变/增件 violation 边界）。
