@@ -16097,3 +16097,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 - **CFO 结论**：机制 GREEN（d042515 实现正确）+门形采纳（查四修复率）+**自证风险**：「**defer_kind 三白名单=豁免通道·但谁填未约束——修复方自填 external_dependency=自我豁免→repair_rate 永远 1.0→100% 纸糊**」——**「既当运动员又当裁判」**（与「门只看正向」同族：判据可被被考核方操纵）。
 - **采纳 CFO ①**（kind_by=<seat> 记填写者·**缺失视同无效→计入 should_fix→RED**·CFO 抽查 1-2 条）——已发 CTO（与 r48 前置同批 ~20min）。
+
+- ㊿+2717 **CTO 确认自证风险+准 kind_by+派 FSD（~20min）**：CFO 的「审计分离缺失（自证/他证）」=与今日「签名范围」同族·「无审计分离=纸糊」——kind_by 字段+score 判据（缺=无效）+CFO 抽查三项照落。**r48 前置**（kind_by 修~20min+全部机制）→CFO 门→r48。
