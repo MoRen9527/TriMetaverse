@@ -16217,3 +16217,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2745 **✅E2 验收（2acaa2a·engine 72+loop 7·5min）——架构级分离落地**：score 移除三块（improvement_block_ref 指针桩 L1144·顶层无进化指标）／**迁 joint 面**（_attach_improvement_block L309/L1046→jr.improvement_block {repair/improvement_rate/by_seat/params/below_threshold}）——**进化指标归属=joint（闭环 B）**／E5 衔接（score 只剩 families）。**E3 主已派**（~1h·E3 断言红形应转绿）。进度 E1✓E2✓→E3主→E4余→E5主（~2.5h）。
 
 - ㊿+2746 **✅E3 验收（4b75864·5min·E3 断言红→绿实证）**：**capability 移出 charter.items**（L259「charter.items 恒不含 capability」L283 capped 不含）／**独立 evolution 件**（L314-323 `evolution {charter_id:"eco-<date>", approver_pending:"COS", items=capabilityItems, capability_ratio:1.0}`）／落件（round_runner L726 `evolution-charter-<stamp>.json`）／配比门退役（记进化卷）——**进化计划独立成卷落地**。**E4 余已派**（threshold·~30min）。进度 3/5·2 件余 ~1.5h（ETA ~13:45）。
+
+- ㊿+2747 **✅E4 验收（64dca6c·engine 74·1.5min）**：threshold {min_rate/below/below_count/note}（L853-859 独立字段·default 1.0）·测试+2（2/3→below true／3/3→false）·**UnboundLocalError 测试即捕→重排修复**（自证测试门有效）·FSD 75 vs 本机 74 差异如实。**E5 主（末件）已派**（~1h·ETA ~13:20）。进度 4/5。
