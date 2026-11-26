@@ -16495,3 +16495,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **已通知各席**（格式生效+首件完成）。
 
 - ㈢+2868 拍读 22:42：TMV 见 4fbfb8abf（COS 落账 1164·格式提案生效知悉）·零进程——**候 CEO（r49 批/B 族续）**。心跳已更。
+
+### ㊿+2869 · **CEO 令：任务书模板 v1.0.0（CAO 收归标准资产·改须 CAO 批）——草稿已交 CAO**
+
+- **CEO 令**（22:44）：做模板·号 1.0.0·**CAO 收归公司标准文档资产**（单独文件夹·以后所有文档模板放此）·**每次改模板须 CAO 批**。
+- **BOD 已起草**（依格式提案 a1c53dd96）：`taskcharter-template-v1.0.0-draft.md`（159 行）——使用说明三句／模板 A inline 六区块全字段／模板 B index（+summary/index/prd_ref/techplan_ref/acceptance·CTO 架构+实现方案职责）／复杂度判据四表+判定链／校验铁律六条／变更记录。
+- **已交 CAO**：审制度面+定标准资产位（建议 `TriCompany/docs/standard-templates/`）+批后收归+「改须 CAO 批」条款。
