@@ -16474,3 +16474,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **时限今晚**·卷落 fade001-evolve-20261123 树·BOD 汇总呈 CEO。
 
 - ㊿+2860 **CPO 回（1/7·81a1e4775·≤1 页）**：①**一条公式**：PRD=「用户会感受到什么不同」／任务书=「我们怎么把它做出来」·互不越界（任务书只引 prd_ref 锚）②**「要出 PRD」三问**：用户可感知变化？/新能力新场景？/价值交换变化（定价打包额度）？——三问全否→不要 PRD·判不出=保守要 PRD·**PRD 须有消费面（防摆设件）**③**任务书产品面五字段**：product_intent/observable_acceptance/prd_ref/product_change(none|minor|major)/pricing_impact ④**简单型=product_change:none+理由**·**反形警示：不写=默认有产品变更**（防悄悄改用户面·间接可感知面日志文案也须写）。附注：commit 同卷带入 COS 提案（共享 index·正常）。
+
+- ㊿+2861 **CHO+COS 回（2-3/7）**：**CHO（efc4b74c0）**——①责任席最小集（owner_seat 唯一+backup_seat（代行者不得对 owner 自维行使 A）+responsibility_face+depends_on·五件套只指针不内嵌）②岗位变更类四硬要求（令源锚+变更面+六环验收链 source→support→binding→live→manifest→governance+生效条件+**强制双签 CHO×CAO**）③复杂度三判据（跨席≥3/岗位编制授权变更/不可逆点火门禁=D-39 三类）④交接 checklist 分形（简单=三问 3 字段·复杂=十项+状态机）。**COS**——①两套 schema（简单=plan 3-5 步+单层 verify+单文件 rollback；复杂=summary≤200 字+artifacts{prd,tech_plan,arch}+index 定位+分层 verify+树级 rollback）②判定双轨（三问任一复杂：跨仓>1/新机制/多席>2·机械预判+人工确认）③树位=trees/<id>/{taskcharter,prd,tech-plan}.md+manifest 增 artifacts[] 列（face 管域·artifacts 管件）④收口分形（简单单层/复杂分层三件）。**共同铁律：验收锚批时写定+verify 须机器可跑**。
