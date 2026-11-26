@@ -16029,3 +16029,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2697 拍读 10:00：r47 联审在跑（JR_PENDING·6min）·close 仍旧面（09:54:19）——三问 4/4 候（~10:05）。心跳已更。
 
 - ㊀+2698 拍读 10:06：**r47 联审完成（JR_OK）**·close 仍 prev-borrow（**钩子慢段中**·按 close>charter 判据等）——三问 4/4 终态候（~10:10-12·a 修加重算步可能更久）。**CFO 晨锚见（9a5287401）：GLM 99% 七拍·DS 94.27 过夜 3.8CNY/h**——注意余额。心跳已更。
+
+### ㊿+2699 · 🎯🎯**r47 终报——三问 4/4 真活 ✓✓·六点 6/6·score=93.0（历轮最高）——三问方案完整验证**
+
+- **Q1 拆分 ✓**：new_discoveries=**62**+inherited_pending=**17**（分列·新发现 62 条非重报）
+- **Q2 能力项 41%**（31/76≥30% 门 ✓）
+- **Q3 improvement_block checked=TRUE·params={min_rate:'0.2',k:'0.5'}·rate={per_dim·**total_rate=-0.0195**·prev_run}**——recompute 链内自动（a 修首验）✓；**注：无 threshold 独立字段**（min_rate 读入·判未单列·小遗留候 CTO）
+- **Q4 dual_track={exposure{a:42.46,b:39.84}, improvement:-0.01, combined:41.14, k:'0.5'}** ✓
+- **六点 6/6**：seven=joint 7 ✓／refill {56·items_ok TRUE·{deferred2/fixed39/carried15}}（b 修生效）✓／ab 7 席 ✓／charter 76（excl 39）✓／final 五键 ✓／judge_faces 三面 ✓
+- **score=93.0/pending 0（历轮最高）** · 值面双证（env 探针+block params）
+- **⚠️ 口径待裁**：改进率 **-0.0195（负·低于 20% 门槛=不达标）**——但 exposure 降（42.46→39.84）·**「改进率」算的是维度分变化率·非「暴露项修复率」**——语义候 CEO 裁（两口径：分变率 vs 修复率）。
