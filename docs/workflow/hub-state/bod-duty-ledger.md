@@ -16189,3 +16189,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **主观 28/35**（I1=4.0/I2=2.0/I3=2.0）／**客观 65/65**（41+24）／**total 93.0**
 - **7 席联审：A/B=40.86/40.49**／opinions 65／refill {carried17, fixed42, deferred3}
 - **🐛 repair_rate=2.4706（247% 不可能）**：分子 fixed_count=42（本轮全部 fixed 含新发现）÷ prev_pending=17（上轮待修）——**分子分母不同口径**——**正形=分子「prev 待修中修了的」≤17·rate≤1.0**·全量 fixed 另作参考字段——已报 CTO 修（~15min）。
+
+- ㊿+2735 **CTO 承 repair_rate bug+修法（交集）派 FSD ~15min**：分子=「prev 待修 ∩ 本轮 fixed 交集计数」（≤17·rate≤1.0）·全量 fixed 作 fixed_this_round_total 参考——**S2-2 实现漏（spec 没强调交集·自领）**。r49 前验证。
