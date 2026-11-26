@@ -16394,3 +16394,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㈢+2829 拍读 19:54：三仓无新·零进程——候 CEO（A 族讨论中）。心跳已更。
 
 - ㈢+2830 拍读 20:00：三仓无新·零进程——候 CEO（A 族讨论中）。心跳已更。
+
+### ㊿+2831 · **CEO 指出 A 族实质偏差（迁移前快照 vs 配置漂移检测）——已发 CPO+CTO 定**
+
+- **CEO 原意**：迁移前把 md5 等不可变做快照→迁移后对照=**保证迁移过程对象未被篡改**（迁移动作完整性）。
+- **A 族现行**（rubric）：reading_point=jobs.json 值面（md5/nextRunAtMs/qualify/trap/RCguard）·verdict=与**基准 md5** 对表·special_clause=vB 基准 4f990e911c3f「有效至 PATCH 落」+十阶段形新基准。
+- **三处偏差（BOD 判读）**：①对象=jobs.json（/srv/fleet/TriRMC/data/cron/·现 md5 bb07f8f9）**非「要迁的目标周文件夹」** ②基准=形态固定值（可换形更新）**非「本次迁移前快照」** ③目的=配置漂移检测 **非迁移动作完整性**。
+- **已发 CPO+CTO**：问迁移对象清单/A 族是否重定义/三守卫定义·rubric 修订须 CEO 批。
+- **CEO 四问事实答**：md5 基准=调度配置指纹对照值；nextRunAtMs=下一触发毫秒戳（1794757800000→11-15 23:50）；qualify/trap/RCguard=job 三守卫（现文未见于 jobs 列表·候 CTO）；manual=**值席（COS/COO）人工采·非 plan skill**。
