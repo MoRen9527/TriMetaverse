@@ -16165,3 +16165,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2729 拍读 11:30：**r48 仍在跑联审**（3474648 sudo/3474649 tee 壳活·JR_PENDING）——**候 CEO 定 a（自然收·建议）/b（杀）**。心跳已更。
 
 - ㊀+2730 拍读 11:36：**r48 联审 23min**（3474648/3474649 活·JR_PENDING）——**比正常 ~10min 慢**（疑 DS 网络/慢调用）——**候 CEO a/b**（若 10min 内不出·建议转 b 或查联审卡点）。心跳已更。
+
+### ㊿+2731 · 🎯**CEO 架构正形任务书出（两套闭环）·COS 代批+12:00 施工**
+
+- **CEO 完整架构**：「**plan skill 是 fade-001 的计划·对应评分=cli/skill（cos+coo）+close skill 收口（cos）；任务书是 fade-001 进化的计划·对应评分=7 席联审·收口=cos 保障**——有计划有评分·不可能改不好」。
+- **两套闭环**：**A** plan skill（只迁移计划）→score（cos+coo·只评迁移质量与完整度）→close（cos）／**B** 任务书（进化计划·CEO 批）→7 席联审（进化评分）→COS 收口。
+- **卷**：`bod-taskcharter-evolution-arch-20261126.md`（E1 plan 确认/E2 **score 移出进化指标→联审面**/E3 charter 改进项→独立进化任务书/E4 琐碎/E5 字段边界文档化）。
+- **COS 代批三原则**（CEO）：①促进进化 ②能落实 ③可检验——不满足打回。**12:00 进化施工**。
