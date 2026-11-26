@@ -16107,3 +16107,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **kind_by 验收**（2a8b58f·engine 67 passed·EXIT=0）：旧案随改（without_kind_by→should_fix 3/rate 2/3 RED + valid 变体→1.0 过·双态齐）；**FSD 自领**（「双案绿」=只跑新类未重跑全量→改口径「改判据必跑模块全量」）。
 - **今日制度面双教训收齐**：**签名范围**（CAO·联署=可复核性）+**审计分离**（CFO·kind_by 堵自证）。
 - **r48 前置全齐**：kind_by+修复率 100%+三问 4 件+段序族五面——**已请 CFO 门（四查）**→GREEN 即 r48（最终验证轮）。ruling v17 已备（r47·round 24）。
+
+### ㊿+2720 · 🚀**CFO 门 r48=GREEN（四查·查四=N/A 首验）·r48 点火令已发**
+
+- **CFO 两处口径精确化**：①**62 条归属**=「下轮输入」认定对（r48 charter 段 3 生成为准·r48 后补查）②**查四首验=N/A 不是 PASS**（「首验被写成通过是门失效起点」——入册候选）·r48 输出=查四首基线。
+- **r48 点火令已发 SDE**（v17 落 r47·round 24·SOP 十一项含 IMPROVE_MIN_RATE=1.0）——终报附 **repair_rate+kind_by 首基线**。
