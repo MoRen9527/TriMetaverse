@@ -16487,3 +16487,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2865 **七席合议汇总提案已落卷（bod-taskcharter-format-proposal-consolidated-20261126.md·92 行·呈 CEO 批）**：§一 CEO 两原则总纲／§二 两形态（inline/index·form 字段区分不靠文件名）／§三 复杂度判定四段链（CPO+CTO 联判→COS 复核→CEO 终裁·四判据 OR 集·默认 simple·complex 无 PRD 拒收·判错不对称）／§四 schema 合议（authorization 地基含 scope 枚举／tri_source_assertion 三面同源+three_face／责任席/产品面/执行面/成本面）／**§五 CTO 职责=CEO 22:41 补充（有 PRD 时选技术架构+做技术实现方案·测试计划/回滚方案/风险面）**／§六 验证铁律（机器可跑+锚批时写定+引用可验 fail-closed+语义归人）／§七 收口分形／§八 七席卷索引。
 
 - ㈢+2866 拍读 22:36：三仓无新·零进程——**七席合议提案已呈（a1c53dd96）·候 CEO 批**。心跳已更。
+
+### ㊿+2867 · **CEO 批任务书格式提案（22:37）+ 令编撰 FADE-001 进化总任务书（新格式·最全最新最权威）**
+
+- **格式提案已批**（a1c53dd96）——两形态 inline/index·四段判链·authorization 地基（scope 枚举）·tri_source_assertion·three_face·成本门·verify 铁律·CCAO 判错不对称。
+- **新任务书已编撰**：`fade001-evolution-charter-20261126.md`（**127 行·index 形**）：frontmatter（authorization CEO 原话/scope=construction·tri_source_assertion·cost_gate·verify/rollback）／§一 摘要／§二 索引／§三 两套闭环／§四 历史 7 份任务书／§五 当前架构状态（12 件全锚）／§六 待办 5 项（T1 r49 候批·T2 B-H 族·T3 families 续·T4 新格式重写·T5 62 归属）／§七 证据锚表（11 锚可 git show）。
+- **已通知各席**（格式生效+首件完成）。
