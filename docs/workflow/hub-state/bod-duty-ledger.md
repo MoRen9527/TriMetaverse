@@ -16068,3 +16068,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2708 **CTO 承修复率口径+改法（~40min·已派 FSD）**：`_improvement_block` 增 `repair_rate`（fixed/prev 待修）·**min_rate 判据对象改 repair_rate**·total_rate 留参考——**CTO 认「修复率比维度分涨跌直接（噪声小·本质）」**·r47 例 fixed39/48≈81%。**任务书衔接=确认**（charter 76=本轮面·62 新发现=下轮 plan 输入·与 S4-1 设计一致）。**改毕→r48 验证修复率面**。
 
 - ㊿+2709 **✅修复率改验收通过（9e05025·3 passed·1min）**：`repair {fixed_count,prev_pending,repair_rate,source}`（L789-805·分母 0→null）+**min_rate 判对象改 repair_rate**（below_threshold 新面·逐维改名作参考）——**测试双案：39/48=0.8125 过／5/48=0.104 记**——**r47 修复率 81% 实证**（与 CEO「暴露→有效改」一致）。**候 r48（修复率面验证轮）**。
+
+### ㊿+2710 · **CEO 质疑「为何修复率不按 100% 要求」——答：20% 是底线非目标·100% 的正确机制（分母口径）待定**
+
+- **答**：20% 是**「至少修 1/5」的底线**（防完全不修）·非及格目标。
+- **CEO 的 100% 是对的**：**「真该修的」应该 100% 修完**——r47 修复率 81%（39/48）里**余 9 条=「该修没修」**（若真不能修·应 dropped/equiv 移出分母·留在分母=该修未修）。
+- **建议机制（候 CEO 裁）**：①**分母=`本轮该修的`**（dropped/equiv 移出·**deferred 须附理由**〔外部依赖/待批/超范围〕否则计入未修）②**repair_rate 要求 100%**（该修的全修完）③**或分两指标**：repair_rate（100% 要求）+ defer_reasoned（有理由暂缓的比例）。
