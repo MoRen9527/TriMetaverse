@@ -9,7 +9,7 @@
 | # | 项 | 值/条件 |
 |---|---|---|
 | 1 | **用户** | `fleet`（**`sudo -H -u fleet`（-H 设 HOME=/home/fleet·必带）** + **env 显式列注入**）——**-E 保 env 但 HOME 留 /root→qualify 读 ~/.trimetaverse/notify.json PermissionError（SDE 21:52 实测抓坑·-H 与 -E 之别即此坑）** |
-| 2 | **env 九项** | `TRICO_LOOP_MARKER_DIR=<dir>/loop-window.marker`｜`NOTIFY_SMTP_HOST`｜`NOTIFY_SMTP_PASS`（alert_credentials 源·值面零回显 D-46）｜`FADE_JOBS_JSON=/srv/fleet/TriRMC/data/cron/jobs.json`｜`FADE_OPERATING_ROOT=/srv/fleet/TriMetaverse/docs/workflow/operating-records`｜`FADE_WEEK=<2026-Wxx>`｜`FADE_PATROL_CADENCE=6m`｜`DCE_EXECUTE=1`｜**`HOME=/home/fleet`**（sudo -E 保留 HOME=/root 的副作用→段 2 qualify 读 `~/.trimetaverse/notify.json` PermissionError·SDE 21:52 实测抓出） |
+| 2 | **env 十一项** | `TRICO_LOOP_MARKER_DIR=<dir>/loop-window.marker`｜`NOTIFY_SMTP_HOST`｜`NOTIFY_SMTP_PASS`（alert_credentials 源·值面零回显 D-46）｜`FADE_JOBS_JSON=/srv/fleet/TriRMC/data/cron/jobs.json`｜`FADE_OPERATING_ROOT=/srv/fleet/TriMetaverse/docs/workflow/operating-records`｜`FADE_WEEK=<2026-Wxx>`｜`FADE_PATROL_CADENCE=6m`｜`DCE_EXECUTE=1`｜**`HOME=/home/fleet`**（sudo -E 保留 HOME=/root 的副作用→段 2 qualify 读 `~/.trimetaverse/notify.json` PermissionError·SDE 21:52 实测抓出）｜**`IMPROVE_MIN_RATE=0.2`**（改进率门槛·CEO 2026-11-26 定）｜**`IMPROVE_K=0.5`**（双轨系数·CEO 2026-11-26 定） |
 | 3 | **ruling 三绑** | `ceo-ruling.json` 含 run_id/round_count/signed_at（+ruling_ref）·**消费戳 `.ceo-ruling-consumed.json` 清/重落** |
 | 4 | **marker 重写** | loop-window.marker 重写（防陈旧） |
 | 5 | **chown** | run dir 属主=fleet:fleet |
