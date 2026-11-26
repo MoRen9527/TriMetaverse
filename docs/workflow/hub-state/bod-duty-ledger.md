@@ -16008,3 +16008,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊀+2688 拍读 09:30：三仓无新·零进程——候 CEO 两值。心跳已更。
 
 - ㊀+2689 拍读 09:36：三仓无新·零进程——候 CEO 两值。心跳已更。
+
+### ㊿+2690 · **CEO 定值：改进率门槛=20%（IMPROVE_MIN_RATE=0.2）·k=0.5（IMPROVE_K=0.5）——落配置→r47**
+
+- **参数名活体确认**（score_engine L735-736）：`IMPROVE_MIN_RATE`（门槛）／`IMPROVE_K`（k）。
+- **已发 CTO/SDE**：落 R-HY 的 TriCompany .env（推荐持久·或 SOP env 十一项）→值面探针（0.2/0.5 可读）→**r47 点火**（三问 4/4 真活）。
