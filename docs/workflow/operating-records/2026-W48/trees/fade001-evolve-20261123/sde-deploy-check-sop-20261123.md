@@ -26,6 +26,7 @@
 > 点火形 env 固化四件（r12/v2 采集域）：`FADE_JOBS_JSON=/srv/fleet/TriRMC/data/cron/jobs.json`｜`FADE_OPERATING_ROOT=/srv/fleet/TriMetaverse/docs/workflow/operating-records`｜`FADE_WEEK=<2026-Wxx>`｜`FADE_PATROL_CADENCE=6m`（实际 patrol 拍频=6min·plan_enricher 默认 15m 待 c 治本）。缺任一=A/F/H 采集 na/fail（resume29 实证）。H 判「na→weight」亦记满，但**真判 pass 须 c（默认 6m→6 vs 6）或 f1bdbc1e 落**后验。
 > **标准形补件（2026-11-25 r41 实测抓出·CTO SOP 22e0486e2 §一 增补候）**：『`sudo -E -u fleet` 保留 HOME=/root → 段 2 qualify 读 `/root/.trimetaverse/notify.json` → PermissionError』——**env 须补 `HOME=/home/fleet`**（或 `sudo -H`）。另 SMTP 二件=环境无源（find 零命中·历史链均无·notify file-fallback 正常）。
 > **重跑两坑（2026-11-25 r41/r42 实测·CTO facd96f3e §四 同向）**：①**重跑一律新 run-id**——`check_ceo_ruling` **自排除 current run_dir**（DP-030·L312）⇒ 同 run-id 重跑时自身不入候选→prev 落更早完整轮→其 ruling 已消费→**awaiting rc=4**。②**残拍重签 round_count 须全局单调**——**T2a 单调门（L474-492）**：本件 round_count 须 ≥ 更早轮已签件 max ⇒ r41 v9=16 < r40 v10=17=**round-count-regression→rc=4**（修=撤旧件留痕备份·候件落最后成功轮正身）。
+> **env 十一项（CEO 2026-11-26 值面·CTO SOP f046ce1d3）**：九项+**`IMPROVE_MIN_RATE=0.2`/`IMPROVE_K=0.5`**（score_engine L735-736 消费·improvement_block params 双值）。**`.env` 路线不可用**（/srv/fleet/TriCompany/.env 不存在且 ignite/token-run.sh 无 dotenv 加载面=假持久化·2026-11-26 实勘）——**一律走点火 env**；值面探针=读 chain 进程 /proc/<pid>/environ 断言两项+improvement_block.params 复核（0.2/0.5 非密可打印）。
 
 ## 链后六验点读法（CTO 裁 7391fac29·SDE 实测 r45 自领 2026-11-26）
 
