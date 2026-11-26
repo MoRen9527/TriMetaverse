@@ -16076,3 +16076,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **建议机制（候 CEO 裁）**：①**分母=`本轮该修的`**（dropped/equiv 移出·**deferred 须附理由**〔外部依赖/待批/超范围〕否则计入未修）②**repair_rate 要求 100%**（该修的全修完）③**或分两指标**：repair_rate（100% 要求）+ defer_reasoned（有理由暂缓的比例）。
 
 - ㊀+2711 拍读 11:06：修复率改 9e05025 落卷见·三仓无新·零进程——**候 CEO 裁 100% 机制（分母口径）**。心跳已更。
+
+### ㊿+2712 · **CEO 裁「修复率 100%·分母算该修的」——机制落地中（分母=该修项·豁免理由白名单·min_rate→1.0）**
+
+- **CEO 原话**：「**按 100% 要求，分母算该修的**」。
+- **机制**：①**分母=上轮 deferred+carried 中无豁免理由的**（dropped/equiv 移出·**deferred 须附豁免理由**：external_dependency/pending_approval/out_of_scope·白名单）②**repair_rate=fixed/该修总数·要求 100%**（<100% 且余项非全豁免=RED）③**min_rate 0.2→1.0**·defer_kind 字段入 refill（COS 填）。
+- 已发 CTO·改毕→CFO 复审→**r48 验证（修复率 100% 面）**。
