@@ -16521,3 +16521,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **已发 CAO**：模板 v1.0.0→**v1.0.1 改动稿**（`cao_approval{approved/approver/approved_at/commit/checks[naming,format,required_blocks]/naming_checked/format_checked}`）+**请出「任务书检查规范」**（检查什么·判据·机器可跑形）·**模板改须 CAO 批**（22:44 令照守）。
 - **已发 CTO**：**挂载面机器门**（charter 生成器/树挂载/executor 拾取·判据 `approved==true ∧ approver==CAO ∧ commit 锚`·**缺任一=拒挂 fail-closed**·三案夹具·改判据跑全量）。
 - **两件并行**：CAO 批模板+出规范／CTO 改门·合流后互验。
+
+- ㊿+2876 **CTO 机器门落点勘定（实读）+已派 FSD·第三处转 COS**：①生成侧=`charter_generator.ts`（charter 产出点）②消费侧=`round_runner.ts` L617/668/674（charter 唯一读取点）——**CTO 面实做两处（生成拒发+消费拒读双保险）** ③**第三处=COS 树协议挂载/拾取面**（不在 TriRMC 仓）——**已发 COS 加同判据**（CTO 提供校验函数/契约）。判据：`approved==true ∧ approver=="CAO" ∧ commit 非空`·缺任一拒·**CTO 只强校验三项（approved_at/checks 记而不卡·防过度耦合）**。
