@@ -16219,3 +16219,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2746 **✅E3 验收（4b75864·5min·E3 断言红→绿实证）**：**capability 移出 charter.items**（L259「charter.items 恒不含 capability」L283 capped 不含）／**独立 evolution 件**（L314-323 `evolution {charter_id:"eco-<date>", approver_pending:"COS", items=capabilityItems, capability_ratio:1.0}`）／落件（round_runner L726 `evolution-charter-<stamp>.json`）／配比门退役（记进化卷）——**进化计划独立成卷落地**。**E4 余已派**（threshold·~30min）。进度 3/5·2 件余 ~1.5h（ETA ~13:45）。
 
 - ㊿+2747 **✅E4 验收（64dca6c·engine 74·1.5min）**：threshold {min_rate/below/below_count/note}（L853-859 独立字段·default 1.0）·测试+2（2/3→below true／3/3→false）·**UnboundLocalError 测试即捕→重排修复**（自证测试门有效）·FSD 75 vs 本机 74 差异如实。**E5 主（末件）已派**（~1h·ETA ~13:20）。进度 4/5。
+
+- ㊀+2748 拍读 12:18：**E5 commit 见（3d65b4a 12:18）**·E4 64dca6c/E3 4b75864/E2 2acaa2a/E1 e5a98bb 全落卷——**候 E5 验收（末件）→账清核→CFO 门**。零进程。心跳已更。
