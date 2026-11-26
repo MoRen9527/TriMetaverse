@@ -16064,3 +16064,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **①口径裁**：**改进率=修复率**（fixed/上轮待修·非维度分涨跌）——已发 CTO（`repair_rate` 字段·fixed/prev_pending·min_rate 判修复率·分变率留参考）——**r47 实算示例：fixed 39/(r46 待修 33+15=48)≈81%**（按修复率=r47 达标！与分变率 -2% 判若两物）。
 - **②主观/客观**：**主观 28/35**（I1=4.0/I2=2.0/I3=2.0·×3.5）／**客观 65/65**（machine 41+collection 24）→**总 93.0**。
 - **③任务书**：**已出**（charter-20261126T020538Z·76 条·31 能力项 41%）——**62 条 new_discoveries=下轮 plan 输入**（已请 CTO 确认衔接）。
+
+- ㊿+2708 **CTO 承修复率口径+改法（~40min·已派 FSD）**：`_improvement_block` 增 `repair_rate`（fixed/prev 待修）·**min_rate 判据对象改 repair_rate**·total_rate 留参考——**CTO 认「修复率比维度分涨跌直接（噪声小·本质）」**·r47 例 fixed39/48≈81%。**任务书衔接=确认**（charter 76=本轮面·62 新发现=下轮 plan 输入·与 S4-1 设计一致）。**改毕→r48 验证修复率面**。
