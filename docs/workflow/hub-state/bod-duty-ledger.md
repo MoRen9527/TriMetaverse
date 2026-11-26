@@ -16505,3 +16505,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2870 **CAO 审模板=APPROVE（三条改进·非阻塞）**：①`form↔complexity` 映射须写明（矛盾=校验失败）②`task_id` 定形（TC-YYYYMMDD-NNN·与 DP 同族）③变更记录批准栏示范（「CAO 批（commit 锚）」）／**标准资产位裁定=认 `TriCompany/docs/standard-templates/`**（新建·理由：docs/ 七子域并列+模板与制度性质不同）／收归四步（建目录/落位去 draft/加「变更须 CAO 批」声明/制度入 registry 标准资产目录节）。**三条已补进模板**（Edit 三处·验证见 grep）。
 
 - ㈢+2871 拍读 22:48：三仓无新·零进程——**候 CEO 一句「准收归」**（CAO 收归四步候令）。心跳已更。
+
+### ㊿+2872 · **CEO 令二件：①准收归（CAO 执行四步）②「B-H 逐个过」放弃·不再跟踪**
+
+- **准收归**：已发 CAO 执行四步（建 `TriCompany/docs/standard-templates/`／落位去 draft／加「变更须 CAO 批」声明／制度入 registry 标准资产目录节）。
+- **「B-H 逐个过」放弃**（CEO 22:49「不再跟踪」）：任务书 §六 T2/T3 已划除标注「CEO 令放弃」——**families 讨论终止**（A 族已修正完成·其余族不再逐个过）。
