@@ -16446,3 +16446,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2847 **✅`_collect_a` 语义修正验收（a8cc5f1·96 passed·2min）**：快照面=plan.from_week 校验→源周 glob→读白名单 entries→源件集 {pattern/src_path/dest_rel/sha256_16/size}（幂等）／对照面双向=**源未篡改 ∧ 搬运无损**（三明细 source_tampered/dest_missing/dest_hash_mismatch L432-434）／**目标周增件=正常不判 violation**（原逻辑删）／白名单实读 5 entries（company-demand-pool/daily-progress/task-inventory-*.md…）／测试+3 改。**BUG 闭·迁移成功不再被判 fail**。余一件=**rubric 文本 v2.3.1 补丁（scope 明写源件集·~10min·呈 CEO 批·不阻塞实现）**。
 
 - ㊿+2848 **✅v2.3.1 补丁稿已出（TriCompany 3a090ea·ls-remote 验真）·呈 CEO 批**：`docs/engineering/rubric-v2.3.1-patch-20261126.md`——§二 A 族三字段补丁（reading_point→**源周 carry 白名单源件集**／verdict_rule→**双向（源未篡改∧搬运无损）**／special_clause→**scope 明写：增件不判 violation·白名单外突变归 plan_scope**）／§三 分工（实现 a8cc5f1 已落·本补丁=文本候批）／§四 实读锚四条。不变项：family_name/weight 6/三守卫退役/version→v2.3.1。**批前文本仍 v2.3.0·实现已按正解运行**（a8cc5f1 不以文本为条件）。
+
+- ㈢+2849 拍读 21:54：TC 见 3a090ea（v2.3.1 补丁·21:48）+a8cc5f1（实现修正）·零进程——**候 CEO 三件批（v2.3.1/r49/B 族）**。心跳已更。
