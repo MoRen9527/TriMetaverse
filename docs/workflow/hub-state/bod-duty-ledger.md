@@ -16428,3 +16428,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **r49 点火另批**（与 rubric 批分开·铁律照役）。
 
 - ㊿+2842 **CTO 施工已派（~1.5h·含 BOD 清单未列的深件）**：①json 三段重写+version ②**`_collect_a` 实现改造（深件·BOD 清单漏列·CTO 补正）**——现读 jobs.json（L333-360）必同步改读目标周目录树做 manifest 快照/对照，否则 rubric 写「周平面」代码仍读 jobs.json=**新判据自指虚空**（正是刚批掉那个毛病）③测试+3 ④rubric_defect 标注。**此补充=实读价值**（改描述不改采集代码=新悬空）。FSD 毕→CTO 验收→报我。
+
+- ㊿+2843 **✅rubric-v2.3.0 全链闭（d5ac089·四件验收·96+111 passed·2min 完工）**：①A 族=**迁移完整性**（weight 6·sha256 快照对照·vB 退役·不含 jobs·三守卫退役·RUBRIC_VERSION="2.3.0" L97）②**`_collect_a` 深件同步改造**（L336+ 读 plan.to_week→周树 rglob→migration-pre-snapshot.json 幂等→同集对照·旧 jobs.json 面退役）——**rubric 与代码同源·无新悬空** ③测试 +5（同件 pass/改件 fail/缺件 fail/legacy/新轮）④rubric_defect 过渡形（L1270/1275+L1285-1295 legacy 追加·不洗白不扣席）。**CEO 批→施工→验收全闭**。r49 点火仍候 CEO 另批。
