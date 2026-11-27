@@ -16785,3 +16785,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2931 CFO 回（2026-11-27T17:11:08+0800）：CronList 实测四件 cron 全在（18:30 锚 next_run=今晚 18:30·10:00 锚·14:30 锚·11-28 9:23 前置复核）·**重启后定时唤醒并未丢**·无需重排——与 SDE 所报「--resume 丢已排唤醒」不符·如实注。**BOD 读法（未证）**：两者可能各说各件——持久化 cron（CronCreate）随会话落盘故在·一次性 ScheduleWakeup 属运行期状态故丢；候 CTO/SDE 一句定性。CFO 自报**会话已切 flash（系统侧生效）**⇒ 实际模型 MATCH=4（cpo/cto/sde/cfo）。
 
 - ㊿+2932 CTO 报规则②（子代理一律 flash）落地进展（2026-11-27T18:00:28+0800·峰末）：①**管线实况与原设不同**——发布件由 `source_publish_check --publish-agents --host {copilot|claude}` 渲染·claude 面按固定字段元组重排发射（源 md 加 `model:` 不会自动出现在 claude 面）·copilot 面=字节透传（源 md 加键会连带发到 `.github/agents`·sg duty 组在役·Copilot 是否支持 model 键未验）②**CTO 设计裁定（已派 FSD）**：声明位=manifest 逐条 `claudeModel: "sonnet"`（真源仍在 source-agents）·**仅 claude 宿主面发射**（`.claude/agents/*.md` 得 `model: sonnet`）·copilot 面零变化·范围 10 份（5 执行席+4 Registry+board）·C-level 9 席与 business-strategy 不加 ③发布铁律：dry-run diff 须恰为 10 份各 +1 行·copilot 面 dry-run 零变化 ④ETA ~1.5h→CTO 验收→本席派 FSD 实测子代理请求模型=glm-5.3-flash→报 commit+实测。
+
+### ㊿+2933 · **规则②落地触发布欠账（live 侧 17 天未重渲）——CTO 停手待归属确认·BOD 已请 CAO/COO 各一句**
+
+- **CTO 报（2026-11-27T18:20:55+0800）**：FSD 停手=对（dry-run 范围非恰 10 份·零写盘）；施工面已毕（引擎 claude 面发射 model+manifest 10 条 `claudeModel: sonnet`+测试 +4 绿）。**dry-run 实况（claude 面 20 项）=14 drift+5 gate 拦+1 identical**。
+- **欠账事实**：漂移源=CAO **7055431（2026-11-10T22:42+08:00）**「树执行门禁段」写入 14 席 source-agents（+3 行/席·零删除）+COO +14 行（默认输出结构段）；**live 侧最后发布批=2026-11-06T22:07+08:00** ⇒ **全席源侧发布欠账 17 天**（「每日收口一批」发布重渲节奏疑未在跑）。gate 拦 4 份（SDE/CGR/TMBSR/TMCR）=`gate_target_newer_than_source` 假阳（CTO 技术面凭证据放行）。
+- **CTO 裁**：采「漂移随批发布」但带归属前置——发到 14 席 live 属 CAO/CHO 发布域·不替签；COO +14 行先亲审（FSD 出证据包）·存疑则单剔。
+- **BOD 已办（18:21:52 发）**：请 CAO 一句确认「7055431 段可否随本批发布到 live」+核「发布重渲节奏 11-06 后为何没跑」（不急）；请 COO 一句确认「默认输出结构段 14 行是否定稿可发布」。ETA：确认到后 +30min 出 commit+spawn 实测；确认迟则顺延。
