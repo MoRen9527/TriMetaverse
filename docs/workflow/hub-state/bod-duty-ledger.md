@@ -16706,3 +16706,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **手写树挂载的机器门落点**：真实路径=写任务书件+commit+push 到 TMV 树（挂载=commit）；主门=sg-server bare 仓 pre-receive（服务端·--no-verify 绕不过）；二层=拾取时门（tree_mount_gate 现无人调用）；**动共享 bare 仓 hook=基础设施变更·须 SDE 施工+CEO 批**。
 - **⇒ r49 点火新增前置=签批通路落地**（未落则 round_runner 消费侧必拒生成件）。
 - **bod(3) 转信**：CTO 两条信因「bod」前缀歧义落到 bod(3) 窗·其只读转来（值守归本席）——**歧义仍在耗转信成本**。
+
+### ㊿+2917 · **撤回「r49 前置=签批通路」（BOD 自领·未读码即下断言）+ CTO 节已落对照卷**
+
+- **CTO 回（15:57）**：①根因承 ②**CTO 节已落对照卷**（TMV **6d6b80652**·ls-remote 顶验真·§三②-CTO=技术面认领+如实注「门全落·链未通」+P0 前置+M1-M5 表+切换程序·**候 CEO 批**）③notice-238 不入账 ④**r49 前置=不构成技术硬前置·属 CEO 取舍**。
+- **BOD 读码核实（TriRMC round_runner.ts@d270239·现读）**：未达标分支=`await tryCharterHook`→L786-792 `caoApprovalGate` 不过=**console.error+return 软返回**（无异常·无 state 变更）→续跑 cos_final_summary→`_patchConsumption()`→正常返回——**十段链不破**；生成器调用未传 caoApproval（L777）=每轮必拒；**后果两如**：①本轮零 charter 产出（r50 输入可由 jr 重生成）②`joint-review.json.consumption_ratio` 回填为 **0**（pending_charter_ref 缺·chItems=0）。另 L830 以原 res.charter 复写 charterPath（覆 L817 弱绑定标记·CTO 所报第二 bug 在位）。
+- **⇒ 撤回 ㊿+2916「r49 点火新增前置=签批通路落地」**：该断言系 BOD 未读码即下（已向 CEO 报「不宜点火」·现更正）。**正形=两条并陈候 CEO**：(a) 批 r49 任务书即点·任务书明写「本轮 charter hook 预期拒·不计 M1 门致事故」（代价=零 charter 产出+consumption_ratio=0）／(b) 若要 r49 轮末即产出可挂 charter→通路为前置。
