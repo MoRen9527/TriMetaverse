@@ -16929,3 +16929,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **③copilot bod 启动命令**（比照现 CC 形）：
   `copilot --agent Board --allow-all-tools -n "bod-copilot"`（cwd=**主树 D:\Code\ai\TriMetaverse**——收信 seatFilter=bod 生效位）·若要 session 持久化=加 `--session-id <UUID>` 或 `--resume`·权限=--allow-all-tools 对应 CC 的 dangerously-skip-permissions。
   **注**：**启动前须先落 `.github/hooks/bod-notify-inject.json` 注册件+notify-inject.cjs 的 Copilot 输出分支**（否则 copilot 会话无收信注入=收信盲）·故顺序=CTO 施工→实测→CEO 再起 copilot bod。
+
+- ㊿+2966 **CEO 23:19 准·派 CTO 三件（bod-copilot 收信链）**：①`.github/hooks/bod-notify-inject.json` 注册件（形照仓内样例·事件 UserPromptSubmit）②notify-inject.cjs 加 Copilot 输出分支（`{"systemMessage":…}`·同信箱同文本零信改·CC 形零变化）③dsh 读信投递形式实勘（只勘不施——R 面非 hook 同构·候 CTO 结论）。**验收链**：注册件毕→投测试信→起 copilot 会话（`copilot --agent Board --allow-all-tools -n bod-copilot`·cwd 主树）→验 systemMessage 注入+标读→报 commit+读数；**边界**=CC 侧 14 席先跑回归（现形不破）。
