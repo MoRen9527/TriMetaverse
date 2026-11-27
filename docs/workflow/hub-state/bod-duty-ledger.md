@@ -16855,3 +16855,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **根因三条记档**（候随 D-99 程序化入册）：①交接命令须绝对路径（CTO）②派工单「dry-run」措辞歧义（CTO）③执行侧跑写入类命令先 dry 或先解析目标路径（CAO/FSD）。
 - **CAO 销账回（21:38:06）**：两面板门禁段各 16/20（差 4 席=4 Registry 工具面只读·本不该有）·7055431 自 11-10 积压两面板清零；**今晚形状如实**：17 天发布积压是被钉 flash 试跑碰出来的·非巡检非例行批（例行批本就没在跑）——明日连洞一起报。
 - FSD 席恢复状态=候 CTO 下报（本席读数器路径误置 bod(3) 作业目录·已自领·下拍修正）。
+
+### ㊿+2947 · **CEO 21:40 令：bod 换 copilot 宿主+通信改 COS 代发代收——三席调研已派（CPO 产品面/CTO 技术面+实测/CFO token 建模）**
+
+- **CEO 设想**：bod 会话从 CC 启动改 **Copilot 启动**（宿主=VS Code Copilot·加载 `.github/agents/board.agent.md`）⇒ bod 失去 SendMessage/ListAgents（CC 宿主功能）·只能给 COS 写信箱+在 COS 输入框提醒读·各域员工（如 CTO）往来全由 COS 代发代收。**附带测试提议**：先在本窗（CC）直接开 CAO 窗输入「准删」测 CC→CC 窗间操作·稍后关本窗开 copilot 的 bod 测全功能。
+- **BOD 先核基础事实（21:40:51-21:41:14）**：①本席=CC bg（pid 16516·entrypoint=cli）②收信注入=TriMLC `notify-inject.cjs`（UserPromptSubmit hook·CC 侧）：**主树 cwd→seatFilter='bod'**——bod 若在主树·CC 侧 hook 仍会给 bod 注入信件；③seats.json 15 席全有 opsName（board=m-…全在册）⇒ **信箱面=全员都有**（非只有 COS）——CEO 问「写信箱只有 cos？」的答案=**不是**：mailbox 的 target_seat 可指任意席位正名·全员可收·只是**写入权**（谁往邮箱投信）与**提醒机制**（谁去读）决定了实际拓扑——copilot 侧 bod 无 hook 注入的话收信提醒缺失（候 CTO 答四问）；④copilot 宿主先例=sg duty 组。
+- **已派**：CPO（代收代发链产品面三问：格式/责任席/SLA/兜底·回信通道·取舍建议）／CTO（技术面四问：copilot 有无 hook 等价·有无 SendMessage 等价·写信箱工具面·回信通道闭环判+CAO 窗「准删」实测）／CFO（token 建模三笔账：bod 省多少（今日 transcript 逐条 usage）·COS 增多少（5.4 席单价）·净额与建议）——三卷落同树·合流后汇总呈 CEO。
