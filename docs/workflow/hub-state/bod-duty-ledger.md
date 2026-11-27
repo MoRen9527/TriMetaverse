@@ -17008,3 +17008,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **🔴须 CEO 亲自点头**：钩子挂进项目 `.claude/settings.json`=权限/配置变更·**席间转达不作数**（CTO 护栏）——配置增量 diff 到时呈 CEO 本窗亲批。
 
 - ㊿+2983 **BOD 准：金丝雀窗口顺延至 01:20**（CTO 第三轮复核又拦两处真问题——调未声明方法=每席 rc=3／判据时间窗锚错位=每席假红·多花 13 分钟换不在真席位发生=账对）·照 CTO 节奏：核完→同步部署位→报 BOD→跑 m-sde 金丝雀（-Force）→3-4min 出结果→过则全量滚·不过则按预案分两轮（令牌重建半先过+旧窗 CEO 手清注明）。
+
+- ㊿+2984 **✅m-sde 金丝雀=四判读行全过（00:53-00:56·BOD 代跑·两次执行第二次 GBK 判读）**：①**旧 tab OpenConsole 14→13（exitCode=0）**——CEO 关窗令机制验证核心读数 ✓ ②argvModel=sonnet==期望档 ✓ expectSource=table（查表命中非基线回落）✓ ③env-sync match=true（标读恢复面）✓ ④新 pid 17592 活体/旧 pid 21356 零残留 ✓。**待补**=m-sde 尚未发话故信箱 mtime 未动（预期·待其首拍 CTO 交叉读数）。两不通均未现 ⇒ **候 CTO 确认即全量滚动**（逐席关 tab+档位+env 三合一）。
