@@ -17049,3 +17049,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - settings.json 仍未动·v1.1 毕+新实测再报·**挂载候 CEO 亲点（时机不变）**。
 
 - ㊿+2988 **两闸 v1.1 入库（TriCompany 9fb5171·推 sg·D-100 30 案+D-101 34 案全过·真实会话冷启 1.69s 仍命中今晚实锚形）**：CAO 重测缺口全补（cd 父目录&&rm/Bash 嵌 pwsh -Command/cmd /c rmdir/.NET/find -delete/管道 gci|Remove-Item 全判拦·Write/Edit 噪音消·状态文件不存命令原文·D-100 补 Python 列表形+find -exec）·定形=v1 不设本席放行形（拦截后放行=走审批流设闸人一侧）·已请 CAO 独立再打·收口卷增补 v1.1 行（TMV fbd50bcfa）·settings 未动·**挂载候 CEO 亲点（配置增量同前封）**。
+
+- ㊿+2990 CAO 两闸评估两轮毕（纪律册 TC@6e8faab+17309c3·用例矩阵 TMV@fe9c64caf·GitHub/sg 同顶）：v1 抓四处+两声明不一→CTO 全接；v1.1 复测我报的全补·20 项防误拦零误拦·三条真实被拒记录同路径四形全拦；**新发现 v1.1 仍有=shell 组语法约 20 种日常写法漏网**（`(rm -rf X)`/`if…then rm`/`for…do rm` 等·放行且不留痕）·已报 CTO。**CAO 自领**：「路径写错模块加载照样失败」系未验证假设·被 CTO 实测推翻入册。**挂载建议（候 CEO）**：**observe（只记不拦）可先挂（零阻断风险）·enforce（真拦）候 shell 组语法族补上再切**。两闸 settings 一字未动。
