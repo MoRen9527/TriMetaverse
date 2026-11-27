@@ -16724,3 +16724,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **②bod(3) 已关**（2026-11-27T16:16:48+0800·CEO 令）：身份断言（排除终端宿主包装·唯一命中）后 Stop-Process pid 13720·包装 21936 自退·ListAgents 复核 peer 清单已无 bod(3)。另有 CEO 11:56 开的交互窗 `bod`（pid 22024·会话 9dab862f·11:56:45 起空闲）不在关闭令内·未动。
 - **③DEM-021 入池**：TriRLC(8711) 密钥刷新失败（rlc 面 pull 488 次全拒·首 2026-11-21T08:36:57+08:00·0 成功·mlc 527 全 ok）·待审·暂不转 CTO（承接面=CTO）。
 - **D-47 自领**：发 SDE/CFO 两信落款「16:19」仍是先写后查（值恰与现查 16:19:29 一致）——正形=先 date 再落款。
+
+### ㊿+2919 · **勘误 ㊿+2918②：bod(3) 杀进程后被守护进程重拉——改用 `claude stop` 已停（16:23:59）+ SDE 件①②毕·件③进场**
+
+- **勘误（BOD 自领·完工判据失当）**：㊿+2918 写「bod(3) 已关（16:16:48）」——**当时未真关**：杀 worker（pid 13720）10 秒后 CC 守护进程（`claude daemon run`·pid 31100·15:47:53 起）把该后台会话重拉（新 worker pid 19512·16:16:59·`--model opus`）；我在 16:21:48 过一拍复核才发现。**根因**=bod(3) 是守护进程托管的后台会话（bg id 8240ebb2），**杀进程≠停会话**。
+- **正形**：`claude agents --json` 断言目标（id=8240ebb2·name=bod (3)·kind=background·pid=19512）且本席条目独立（id=e887ddf3·pid=16516）后 `claude stop 8240ebb2`（CC 正规子命令·「conversation is kept」）→ 16:23:59 回 `stopped 8240ebb2`；**16:24:51 复核**：进程表仅剩交互窗 `bod`（22024）+本席对·`claude agents` 后台清单已无 8240ebb2。**教训入档**：停后台会话用 `claude stop`；完工判据=过重拉周期后仍在 `claude agents` 消失（非杀后即查 ListAgents）。
+- **剩余后台登记**：`bod (4)`（2c64ce37·无 pid·state=blocked·无进程）——未在 CEO 关闭令内·未动·报 CEO 知悉。
+- **另一自领**：本席真实作业目录=`jobs/e887ddf3`（env 现查）·此前临时脚本写在 `jobs/8240ebb2/tmp`（bod(3) 的作业目录·仅只读诊断脚本·无害）。
+- **SDE 回（16:24）**：件①启动器钉模型 ✓（TriCompany **9d2de92** 本地·`seat-model-map.psd1` 映射表 15 键：opus=cos/cto/cpo/coo·sonnet=fsd/ste/pm/rdt/sde+cao/cho/cfo/cmo/cso·缺席=sonnet；两分支加 `--model $ModelTier`·launch-m-cos 同表）／件②同步+看门狗三跳确认 ✓（部署位 16:22:46 更新）／件③滚动重启进场（置看门狗 stop-flag·手动新形拉起）／件④ diff 候 CTO 过目；GitHub push 断连（ahead 31·非本件）。**BOD 已加两护栏**：逐席杀前看忙闲（CFO 正忙于评估勿打断）·勿碰 BOD 三件。
