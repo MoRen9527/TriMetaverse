@@ -16761,3 +16761,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CAO 铸条毕**：**D-99 模型档位与峰谷节律制**（TC@a3f3a19·sg 顶验真·六款：席位档位表／峰谷节律（周一至五 14:00–18:00 峰时系数翻倍·重活排峰外）／子代理一律 flash／与 D-98 同向（人工版先行·候程序化）／例外须报 CFO 知情·CEO 明示／**效力边界如实注：纪律层人肉版·程序化前不得读作「峰谷已受控」**）。
 - **CPO/COO/CAO 回执**：三条规则承录照办（峰时轻量·子代理 sonnet·档位）。五个 5.4 席回执 4/5（CTO 16:35 亦承·见下）。
 - **CTO 回**：三规则承；**发布件禁手编**（渲染器 `scripts/sync-agents-to-claude.mjs`·源座席元数据 `employee_source_kit.py`·正形=改源侧→过渲染器→发布同步）；施工排 18:00 后：FSD/STE/PM/RDT/SDE+4 Registry 加 `model: sonnet`·**BOD 确认 board.md 入列**（CEO「bod 和执行席用 flash」）·C-level 定义不动（BOD 确认）·**PreToolUse 强改钩子暂不做**（双真源+爆炸半径·BOD 同意·硬闸候 CEO 当面批不凭转述）·验证=18:00 后派一次 FSD 核子代理请求模型。
+
+- ㊿+2926 CFO 勘正承录（2026-11-27T16:37:08+0800）：自领「把 env 读数当会话模型」（只验变量未验生效面）·本会话仍在 glm-5.4·重启前不起重活、不做评估类工作。无需 BOD 再处置。
