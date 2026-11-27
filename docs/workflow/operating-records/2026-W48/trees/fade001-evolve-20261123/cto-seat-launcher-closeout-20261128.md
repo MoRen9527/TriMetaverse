@@ -45,6 +45,8 @@
 - 模式：首轮 observe（闸内常量·切换走受审提交）。代价：Bash 调用 +0.31s（两 wrapper 实测 161+150ms）。
 - **挂载（项目 settings hooks）须 CEO 直接确认**——已报 BOD（msg 4f8d19e6）与 CAO。
 - **v1.1（CAO 独立重测 01:51 抓出缺口后全补·TriCompany 9fb5171·挂载用此版）**：命令内 cd 跟踪；Bash 内嵌 pwsh|powershell -Command/-EncodedCommand、cmd /c、bash -c、eval、解释器 -c 内串递归判定；`[System.IO.*]::Delete`；`find -delete`/`-exec rm`；管道上游 `gci|Remove-Item`；状态件不落命令原文与续行缓存；Write/Edit 只走 L1（消噪音）；D-100 补 Python 列表形与 `find -exec powershell`。自测 D-100 30 案·D-101 34 案全过。**v1 不设本席放行形**（transcript 内用户亲手输入与席间注入消息难以可靠区分）——放行=走审批流后由设闸人一侧执行。
+- **v1.2（TriCompany ccd3502·CAO 复测二抓出 shell 组语法零留痕族）**：`( ) { } $( )` 反引号、then/do/else/!/time/function 关键字、`env -i`、`cmd //c`、管道喂 xargs 取上游、命令内字面变量绑定、PS `& { }`/`if { }`/`foreach`/`ForEach-Object` 回溯、Python 原始串与 pathlib、拒文兜底恢复。
+- **v1.3（TriCompany 2a141cb·CAO 复测三余项）=挂载候选版**：Write/Edit 仅精确同目标才拦（被拒目录=工作目录时不咬子树内新建/改动）；PS 简化语法 `gci X | ForEach-Object Remove-Item`；`export`/`Set-Variable` 绑定；`trap '…'`；单引号内反引号=字面。自测 D-101 73 案全过。CAO 三轮独立复测：主矩阵 76/76·残余 40/40·防误拦 45 项零误拦·CAO 本席真实会话记录同向。明示未覆盖：经脚本文件、环境变量与变量拼接/通配、heredoc 顶格被拒删除行（保守拦）、`git -c alias` 偏门形。
 
 ## §五 · 技术债（候排）
 
