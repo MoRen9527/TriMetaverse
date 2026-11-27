@@ -16533,3 +16533,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㈢+2880 拍读 23:00：TC 见 b7565d5/0c70846（22:59·CTO 两处施工疑已落桩）·零进程——候 CTO 验收报。心跳已更。
 
 - ㊿+2881 **✅COS 第三处实现毕（b7565d5·7 passed·一项判据）**：`tree_mount_gate.py`（66 行·`check_cao_approval` 同源签名+`gate_or_raise`+CLI）+`test_tree_mount_gate.py`（45 行·7 案）——**唯一判据=`approved is True`**（approver/commit/checks 不解析·`"true"` 字符串→拒·布尔严格）／**checks 全 false 但 approved True→过**（CAS 案实证）／报错行三处统一（无块/未批=「CAO 批缺失·拒挂任务书」·「批后内容变更·须重签」常量留未来）／fail-closed 全。已报 CTO 请三处一致性抽验·待 CAO 规范对表。**三处进度：CAO 规范✓／COS 第三处✓／CTO 两处候验收**。
+
+### ㊿+2882 · **夜间补记（23:02→今 10:27·会话挂起一夜）——CAO 批门四方全落**
+
+- **时段说明**：本席会话自 2026-11-26 23:02 挂起·今 2026-11-27 10:27 恢复（**期间各席继续施工**·夜间落卷如下）。
+- **夜间落卷**：①**CTO 两处**（ec83231 23:00／99fe323 23:02·生成侧拒发+消费侧拒读）②**COS 第三处**（b7565d5·tree_mount_gate·7 passed·一项判据）③**可选层 d404335**（**content_sha256_16 锚核·「批后内容变更须重签」实现**·10 passed）④COS 1166/1167 落账（一源三处同构+CTO 第三处验收过）。
+- **CAO 批门全链四方全落**：CAO 规范+模板 v1.0.1 ✓／CTO 两处 ✓／COS 第三处 ✓／可选层锚核 ✓。
+- **剩**：**合流抽验**（三处一致性·COS 报「候」）。
