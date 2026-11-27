@@ -16898,3 +16898,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **投递成功**（剪贴板粘贴配方·v3 SendWait）：22:11:29 CAO transcript user 行=`准删` ✓（AppActivate v1 失败→v2 SetForegroundWindow+双发 ENTER·零脚本名遗漏）。
 - **CAO 行为（全程合规·如实）**：对象六断言复核全过（还是那个目录 20 件）→重跑同一 rm→**仍被拒**——CAO 判定正确：**deny 规则按命令字面匹配·不读对话·「话进了对话·闸没开」**；拒绝换 PowerShell 绕（前两轮拒绝理由不因有句话而变）·**呈 CEO 三选项**：①CEO 自删（`Remove-Item -Recurse -Force`·亲手·不经 CAO 不碰规则·最快）②**CEO 明示一句「可以用 PowerShell 删」**（授权换路·CAO 即执行并核验）③去掉 settings.json 的 deny 规则（CAO 不建议·为目录动全局规则不值）。
 - **BOD 判读**：公司线批件（1ec0e1b84）+用户线「准删」均已到·**闸是机械的字面匹配·两线话语都开不了它**——只剩三个物理形：CEO 自删／明示换工具／改规则。**候 CEO 择一**。
+
+### ㊿+2960 · **✅误写目录删除销账（CEO 22:17 明示「用 powershell 删」·BOD 代执行·回执三断言全过）**
+
+- **执行**：CEO 22:17:46 选 CAO 选项②并明示「用 powershell 删」——**BOD 代执行**（Remove-Item -Recurse -Force·2026-11-27T22:17:52+0800·回 DELETED）。三面（CAO/CTO/BOD）rm 均无权限·PowerShell 形=CEO 明示授权（CAO 选项②原义）·BOD 代执=CEO 令本窗席位执行。
+- **回执三断言（BOD 22:18 核）**：①路径不存在 ✓ ②`git status --porcelain -- TriMetaverse`=空 ✓ ③TC HEAD 不变=c148afd·历史提交数 0 ✓。
+- **销账通知已发** CAO/CTO/COS（CAO 广面 add 禁令可撤·CTO 申请件闭环·COS 核件链留档）。
+- **全链留痕总结**：误写（CTO 相对路径）→发现（CAO）→审批流（CTO 发起 ff40eaee7→COS 核判据精化 1ec0e1b84→BOD 呈批→CEO 22:09 批）→用户线（剪贴板投递「准删」22:11:29）→**机械闸物理闭合**（deny 字面匹配不读对话→CEO 明示换工具→BOD 代执）——**重大不可逆审批流实锚案例**（含「公司线批件+用户线开闸+机械闸需物理解」三层教训·候 CAO 铸条参考）。
