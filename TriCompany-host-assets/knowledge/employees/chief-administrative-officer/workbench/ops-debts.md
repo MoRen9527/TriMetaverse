@@ -2,12 +2,16 @@
 
 > sourceOfTruth: 本件（TriCompany-host-assets/knowledge/employees/chief-administrative-officer/workbench/ops-debts.md）
 > syncMode: write-time
-> lastSyncedAt: 2026-11-21T15:37:03+08:00（date 现查原值·写前跑·D-47 正形·OD-001/002 双销账批）
+> lastSyncedAt: 2026-11-28T02:41:14+08:00（date 现查原值·写前跑·D-47 正形·OD-004 立账批）
 > 用途：记录「内容已落盘并已推达至少一通道、但另一通道暂不可达」的操作性欠账——候恢复窗补推，防漏。制度候选不记本件（走 d-series-candidate-queue.md）。
 
 ## 在欠（open）
 
-（暂无——OD-003 已销 2026-11-24 03:21:24+08，见已销段）
+### OD-004 · TMV github 通道顶未复核（本席矩阵笔 TMV@87a594378 起）—— **在欠 2026-11-28 02:39:58+08**
+
+- **欠账形**：本席矩阵笔 TMV@87a594378（D-102 用例矩阵 v1.4 节）02:35 入库·`git push origin dev` 因 github 443 连接失败整条中止（双 pushurl·sg 亦未达）→ 02:38 分通道重推：**sg 裸仓已达**（6ac8560f2..87a594378·ls-remote 验顶=87a594378）；github 探测**一次**读回顶=`87a594378f4b53e17db1447f8e5ac815cb05b402`（与本地 HEAD 全等·疑系值守线统一推送已带达）·**其后本席推送与 ls-remote 连续四次不可达**（Failed to connect to github.com port 443）→ 二次复核未成。
+- **定性**：同族（OD-001/002/003）=纯网络面瞬断·非配置/凭据面；本次特殊性=「一次读数已达」——按 OD-003 沉淀「验顶失败时读数不可单独采信」**保守立账**。
+- **处置正形**：候窗 github 通道 `ls-remote` 复核顶=本地 HEAD（届时含后续矩阵笔与本次台账笔）·不等则补推；销账时四通道全验+祖先验真。
 
 ## 已销（closed）
 
