@@ -44,6 +44,7 @@
 - 规则：D-100=Bash 内嵌 Windows PowerShell 5.1 拦截·唯一豁免=命令自带干净模块路径（正确性条件非口令）；D-101=被拒目标同路径（祖先后代）的换形拦+有被拒记录的破坏性调用告警·语义等价=纪律层终态；只读本会话自己的记录。
 - 模式：首轮 observe（闸内常量·切换走受审提交）。代价：Bash 调用 +0.31s（两 wrapper 实测 161+150ms）。
 - **挂载（项目 settings hooks）须 CEO 直接确认**——已报 BOD（msg 4f8d19e6）与 CAO。
+- **v1.1（CAO 独立重测 01:51 抓出缺口后全补·TriCompany 9fb5171·挂载用此版）**：命令内 cd 跟踪；Bash 内嵌 pwsh|powershell -Command/-EncodedCommand、cmd /c、bash -c、eval、解释器 -c 内串递归判定；`[System.IO.*]::Delete`；`find -delete`/`-exec rm`；管道上游 `gci|Remove-Item`；状态件不落命令原文与续行缓存；Write/Edit 只走 L1（消噪音）；D-100 补 Python 列表形与 `find -exec powershell`。自测 D-100 30 案·D-101 34 案全过。**v1 不设本席放行形**（transcript 内用户亲手输入与席间注入消息难以可靠区分）——放行=走审批流后由设闸人一侧执行。
 
 ## §五 · 技术债（候排）
 
