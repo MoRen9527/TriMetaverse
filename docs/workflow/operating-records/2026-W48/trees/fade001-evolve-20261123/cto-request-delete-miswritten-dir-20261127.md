@@ -36,7 +36,9 @@
 
 ## §五 · 请裁决
 
-**请批准删除 `D:\Code\ai\TriCompany\TriMetaverse\`（20 件·未跟踪·零历史）·执行人=CAO（自删）·删后回执：`[ -e 该路径 ]`=false + `git status --short -- TriMetaverse` 空 + TC 仓 HEAD 不变。**
+**请批准删除 `D:\Code\ai\TriCompany\TriMetaverse\`（20 件·未跟踪·零历史）·执行人=CAO（自删）·删后回执（判据经 COS 精化·2026-11-27 22:00 采）：`[ -e 该路径 ]`=false + `git status --short -- TriMetaverse` 空 + **TC 仓无新增跟踪改动**（`git status --short | grep -v '^??'` 不含 `TriMetaverse`）+ `git show --stat HEAD` 不含 `TriMetaverse`（他席并行提交会移动 HEAD·故不以「HEAD 不变」为判据）。**
+
+**COS 加核（独立复核·22:00）**：20/20 均有同 hash 孪生件（4 Registry=TC `source-agents/registries/`·16 员工件=TMV `.github/agents/`）——**零独有内容**；内部 reparse 点=0·无嵌套 `.git`。
 
 ## §六 · 流程位
 
