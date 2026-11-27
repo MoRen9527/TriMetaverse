@@ -17055,3 +17055,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2991 **两闸 v1.2 入库（TriCompany ccd3502·推 sg·65 案全过·真实会话仍命中实锚形）**：CAO 第二轮探出的「零留痕族」（shell 组语法 `(rm -rf X)`/`if…then`/`for…do` 最自然写法原先连告警都无）全补·残留未覆盖面明示（经脚本文件/env/git -c alias 偏门形）·**挂载建议=v1.2·先 observe（两轮重测同结论：只记不拦无阻断风险还攒真实数据）·enforce 候 CAO 第三轮复测过再切**·settings 未动·CEO 点头即落。「你睡醒前这条线不再有动作（除非 CEO 点头或 CAO 复测打出新缺口）」。
 
 - ㊿+2992 **两闸 v1.3 入库=挂载版（TriCompany 2a141cb·推 sg·CTO 收口意见）**：CAO 第三轮独立复测通过（主矩阵 76/76·残余切分 40/40·防误拦 45 项零误拦·CAO 真实会话上也成立·**明示「无保留·可作 enforce 候选」**）·三测余四处窄形+两保守面 v1.3 全处置（含设计后果修正：被拒目录=工作目录时原版咬住子树所有写文件→收窄为精确同目标覆写才拦）。**CTO/CAO 共同意见=v1.3 挂载版·先 observe（零阻断·攒数据）·enforce 候 observe 一轮看误伤面再定**·挂载只差 CEO 本席亲点（配置增量同前·settings 未动）·未覆盖面入册（脚本文件/env 变量拼接/通配/偏门形）。CEO 睡醒前线静。
+
+### ㊿+2993 · **✅CEO 02:21 准挂载 observe——D-102 两闸已挂项目 settings.json（observe 形·只记不拦）**
+
+- **挂载**（BOD 代执·CEO 本窗「准按建议先挂observe」02:21:30）：`.claude/settings.json` hooks.PreToolUse 追加两项——Bash→d100-gate-hook.mjs／Bash|PowerShell|Write|Edit→d101-gate-hook.mjs（timeout 15/20·与 CTO 报的增量逐字一致·D-47 项不动）。
+- **验证**：JSON 有效性 ✓／PreToolUse 3 条目（D-47 原项+两新）✓／wrapper 两件在位（4769/4935 字节）✓／**observe 形零阻断实测**（测试命令照常执行）✓——留痕面 `.fade/gate-d100.log`/`gate-d101.log` 候真实调用累积。
+- **形态**：observe=只记不拦（闸内常量控制·切 enforce 走受审提交候 observe 一轮看误伤面+shell 组语法族补齐）·失效姿态=故障放行+留痕。
+- **D-102 全链**：D-99 候首例／D-100+D-101 机械层 observe 已挂（enforce 候批）／纪律层终态项已明示（语义等价识别）——CEO 00:35 令「逃逸→拦截联动」全链落地。
