@@ -16931,3 +16931,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
   **注**：**启动前须先落 `.github/hooks/bod-notify-inject.json` 注册件+notify-inject.cjs 的 Copilot 输出分支**（否则 copilot 会话无收信注入=收信盲）·故顺序=CTO 施工→实测→CEO 再起 copilot bod。
 
 - ㊿+2966 **CEO 23:19 准·派 CTO 三件（bod-copilot 收信链）**：①`.github/hooks/bod-notify-inject.json` 注册件（形照仓内样例·事件 UserPromptSubmit）②notify-inject.cjs 加 Copilot 输出分支（`{"systemMessage":…}`·同信箱同文本零信改·CC 形零变化）③dsh 读信投递形式实勘（只勘不施——R 面非 hook 同构·候 CTO 结论）。**验收链**：注册件毕→投测试信→起 copilot 会话（`copilot --agent Board --allow-all-tools -n bod-copilot`·cwd 主树）→验 systemMessage 注入+标读→报 commit+读数；**边界**=CC 侧 14 席先跑回归（现形不破）。
+
+- ㊿+2967 CTO 承派（2026-11-27T23:20:01+0800·转 SDE ~1.5h）+**硬判据加严（CTO 加·好）**：件①注册件（形照 COS 样例）／件②Copilot 分支=**显式 env `NOTIFY_HOOK_OUTPUT=copilot`**→systemMessage JSON·缺省=cc·14 席零变化·改前改后各跑 CC 回归留读数／件③dsh 一句+锚。**加严判据**：实测「发话」须 agent **复述所收信件首行标题**——systemMessage 可能只是 UI 提示而非模型上下文·**能复述=真进上下文·仅见 UI 显示=链未闭（送达≠读到）**。验收三读数=送达/标读/复述。
