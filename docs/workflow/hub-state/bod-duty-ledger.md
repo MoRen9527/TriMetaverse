@@ -16572,3 +16572,18 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㈢+2891 拍读 11:12（积压 2 条合并·10:54→11:12 无新）：三仓静·零进程——候 CTO 两处验收报（d270239 已 35min 未报）。心跳已更。
 
 - ㈢+2892 拍读 11:18：三仓静·零进程——**d270239 验收报 41min 未到（超 30min 判据）→ 已催 CTO**（三问：归属/读数/若非何属）。心跳已更。
+
+### ㊿+2891 · **CEO 令二查（11:00-11:20）：①TriRMC/TriMMC 任务书挂载·拾取·拆树机制 ②glm-5.4 的 403**（现查落款见段尾）
+
+- **拍读**：10:54→11:00 积压合并·三仓无新·零进程。
+- **①机制对照（本机仓+两机部署位实测）**：
+  - 同源分叉：两仓 src 骨架同构·TriMMC 部署位 HEAD=7eb5a4b（11-21）·TriRMC= d270239（11-27）。
+  - **挂载=仅 TriRMC**（「src/fade001/round_runner.ts」tryCharterMount·CEO 裁决 continue 后把 charter 复制进周树目录）。
+  - **拾取=仅 TriRMC**（「scripts/rmc_tick.py」evaluate_backlog 扫周平面 tree-op.json·只取 face=r-face·TriRMC cron 7 条中 1 条跑它）。该脚本注释写着「缺省 face 视为 m-face 由 TriMMC 承接」——**但 TriMMC 部署位与本机仓零相关代码**（src+scripts 命中 0）。
+  - **拆树=两 MC 均无代码**（本席 grep 实读）；树文件工具仅在 TriCompany「runtime/cognition/tree_op.py」（COS 11-26 实查=只有 create/validate）。
+  - ⇒ **「两个 MC 共用一套代码」不是现状**：任务书/树机制只长在 TriRMC 分叉里·TriMMC 没有。
+- **②CAO 门读码发现（已请 CTO 核实·未施工）**：tryCharterHook 调生成器未传 caoApproval·门查的是刚生成的 charter·而 cao_approval 只能来自 opts 或输入的 opinions.json ⇒ **自动链上无签批通路·疑永久拒挂**；tryCharterMount 本体无校验；**手写树挂载任务书不经过该代码路径**（机器门不在真实挂载路径上）。
+- **③glm-5.4 403 [1220]（实测）**：本机走 open.bigmodel.cn/api/anthropic 直连·Claude Code 用的 key（指纹 659e9c13）对 glm-5.4 **36/36 全 200**（末次 date 现查 11:18:55）·对 glm-5.3-flash 36/36 全 200 ⇒ **不是 key 无权·不是登录问题**；403 时点 11:06:10=本会话首次提交（hook 11:06:09）·11:08:58 重提即通 ⇒ **一次性·未复现**（服务端原因本席无法查证）。旁证：GLM_API_KEY（aad3c934）对该端点两模型均 401（未测它自己的 paas/v4 端点·与本案无关）。
+- **自领更正**：11-26 我报「jobs.json jobs 列表为空」=**错读**（脚本只处理 list 形·实为 dict）·实值=**7 条**；三守卫结论不受影响（依据是 CTO 的全仓 grep·非我那次读数）。
+- **工具自记**：本机 Git Bash 的 python3 是空壳（退出码 49）·须用 python（C:\Python312）——此前一次补丁脚本因此静默未生效。
+- 落款现查：2026-11-27T11:20:21+0800
