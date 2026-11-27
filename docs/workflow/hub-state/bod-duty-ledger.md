@@ -16672,3 +16672,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **对照卷**：`trees/fade001-evolve-20261123/bod-pickup-two-generations-comparison-20261127.md`——§一 两代对照表（MC 组织机制 D-27 值席拾取·无代码／fade001 代码机制·charter_generator+round_runner+CAO 批门三处）／§二 FADE-011 勘正定性（十段 driver=记忆/文档同步管线·MLC 8713 现役·MMC/MLC 同 md5 双副本）／§三 并行期规则（并行互不替代/成熟判据 CTO 提案 CEO 批/切换=显性程序周日评审）／§四 实读锚六条。
 - **需求池 DEM-020**：MC 面拾取机制升级（并行期暂组织机制·切换候周日评审四态裁）——索引行+详情节（三必填齐）。
 - **双线报**：CTO（入档+成熟判据提案）/CAO（入档+双轨纪律注记·并行期 MC 纪律门/TRIRMC 代码门）。
+
+### ㊿+2912 · **✅GLM-5.4/5.3-flash 搭配落地（CEO 令 14:45·依 bigmodel 官方「模型搭配使用指南」）**
+
+- **指南要点**（docs.bigmodel.cn flash-and-glm-5-4·md 直拉）：GLM-5.4=规划/审查/主线（定方案/跨模块取舍/提交前审查）·GLM-5.3-flash=日常编码/执行/子代理；三种用法（opusplan 模式切换／flash-worker 子代理并行调查／提交前 glm-5.4 审查 diff）；**11-24~12-24 GLM-5.3-flash 限时双倍用量**。
+- **CEO 令**：本地 TriMLC 用 glm-5.4·TriMMC 保持 glm-5.3-flash。
+- **已改（本机 `~/.claude/settings.json`·tmv-ml-face）**：ANTHROPIC_MODEL=**glm-5.4**／OPUS=**glm-5.4**／FABLE=**glm-5.4**／SONNET=glm-5.3-flash（执行档留）／HAIKU=glm-5.3-flash——**JSON 有效性断言过·key 值未打印**（⚠️自查：中途 grep 误印 key 一次·D-46 违例自领·后续已脱敏）。
+- **sg 侧确认不动**（/home/fleet/.claude/settings.json 现值=GLM-5.3-Flash 三档·保持）。
+- **TriMLC src 硬编码兜底常量**：glm 零命中（key-cache 族无此坑·本机面）。
+- **生效形**：新会话生效（settings.json 由 CC 进程启动时读·daemon 无需重启）；本会话已实测 glm-5.4 端点通（现役运行中即证）。
+- **部署点位图真源待更**（tmv-ml-face 档位 glm-5.3[1M]→glm-5.4·随下批同步 CTO 面）。
