@@ -16734,3 +16734,16 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **SDE 回（16:24）**：件①启动器钉模型 ✓（TriCompany **9d2de92** 本地·`seat-model-map.psd1` 映射表 15 键：opus=cos/cto/cpo/coo·sonnet=fsd/ste/pm/rdt/sde+cao/cho/cfo/cmo/cso·缺席=sonnet；两分支加 `--model $ModelTier`·launch-m-cos 同表）／件②同步+看门狗三跳确认 ✓（部署位 16:22:46 更新）／件③滚动重启进场（置看门狗 stop-flag·手动新形拉起）／件④ diff 候 CTO 过目；GitHub push 断连（ahead 31·非本件）。**BOD 已加两护栏**：逐席杀前看忙闲（CFO 正忙于评估勿打断）·勿碰 BOD 三件。
 
 - ㊿+2920 **CFO 模型分档评估毕（9bd95edb6·建议呈 CEO 定）**：卷 `trees/fade001-evolve-20261123/cfo-model-tier-assessment-20261127.md`。**最紧迫**：评估 6 分钟内 GLM 周窗 18%→23%·5h 窗 48%→75%（越 70 线）·运行中席仍在 5.4（约 20pt/h）⇒ 钉档+重启最急（SDE 件③在途）。**五席建议**：CAO 用 5.4（纯审查型·产出全公司引用）／CHO、CFO、CMO、CSO 用 flash+关键件按件升 5.4（CFO 自评亦 flash：本周门五次漏洞皆「清单缺项」非「推理不足」）。**成本依据**（官方现查）：积分系数 5.4=4.6/1.1/16·flash（11-24~12-24 限时 50%）=1.15/0.28/4·按缓存命中 96.4% 加权=**同工作量 5.4≈flash 的 3.94 倍**。**撑不到 12-03**：纯 flash 席面历史单窗 3.3~5 天·加 4 席 5.4≈**3~4 天（11-30~12-01 量级·±1 天）**·五席怎么分不改结论。**降级序建议**：⓪错峰（周一至五 14:00-18:00 系数翻倍·5.4 重任务排峰外·零损失）⓪b 子代理一律 flash → ①CHO 升级面收窄 ②CAO 改「flash 起草+5.4 复核」③COO 降 flash（需 CEO 裁）·**不建议降 COS**。评估期五席按 flash（现映射表=sonnet）；**若 CEO 采 CAO=5.4·SDE 只改映射表一行**。
+
+### ㊿+2921 · **CEO 16:30 三裁执行（五席档位按 CFO 建议／两条节额规则即立／COO 不降）**
+
+- **CEO 裁**（hook 时戳 16:30:25）：①按 CFO 建议=CAO 用 5.4·CHO/CFO/CMO/CSO 用 flash（关键件按件升）②错峰+子代理一律 flash **现在就立**③COO 不降（保持 5.4）。
+- **席位档位终表**：5.4=COS/CTO/CPO/COO/CAO（五席）；flash=BOD+FSD/STE/PM/RDT/SDE+CHO/CFO/CMO/CSO。
+- **已办（16:32:06 发信·date 现查后落款）**：
+  - **SDE**：映射表 m-cao 改 opus（其余不动·若已按 sonnet 重启则空闲时再重启）。
+  - **两条规则向五个 5.4 席立规生效**（COS/CTO/CPO/COO/CAO 各一信）：①**错峰**=5.4 重任务排周一至五 14:00–18:00 之外（峰时系数翻倍·CFO 卷 §五.3）②**子代理一律 flash**（派 Agent 指定 `model: sonnet`）③flash 席关键件走「flash 起草+5.4 席复核」。
+  - **CAO**：请其铸条（错峰／子代理 flash／席位档位表）·回条号。
+  - **CTO**：「子代理一律 flash」机械化——现 `.claude/agents` 20 份定义**无一钉 model**（BOD 16:31 实读）⇒ 执行席/registry 类 frontmatter 加 `model: sonnet`（真源 source-agents+发布拷贝·CHO 知会）+评估 PreToolUse 钩子强制+spawn 验证；令其排 18:00 后做（峰时）。
+  - **CFO**：回执已采·监控照其卷 §五（周窗>70% 即报·12-01 前触发按降级序）。
+- **未了**：本席 bod(5) 仍 glm-5.4（候 CEO `/model glm-5.3-flash`）；SDE 件③滚动重启在途。
+- **自领（信面笔误）**：发 COO 信内「14:00 彳前」多一字（应为「14:00 前」）·语义无歧义·不另发更正。
