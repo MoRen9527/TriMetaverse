@@ -30,10 +30,11 @@ function locateGate() {
   return null;
 }
 
-function runGate(command, cwd, noLog) {
+function runGate(command, cwd, noLog, sessionId) {
   const gatePath = locateGate();
   if (!gatePath) return { missing: true };
   const args = [gatePath, '--cwd', cwd || ''];
+  if (sessionId) args.push('--session', String(sessionId)); // 留痕可归到会话（v1.4）
   if (noLog) args.push('--no-log'); // 自测不污染生产闸日志；真实挂载运行=留痕
   const r = spawnSync(process.execPath, args, { input: command, encoding: 'utf8', timeout: 10000 });
   if (r.error) return { missing: true, error: r.error.message };
@@ -77,15 +78,16 @@ try { envelope = readFileSync(0, 'utf8'); } catch { /* stdin 空 */ }
 
 let command = null;
 let cwd = '';
+let sessionId = '';
 try {
   const obj = JSON.parse(envelope);
   const ti = obj && obj.tool_input;
-  if (obj && obj.tool_name === 'Bash' && ti && typeof ti.command === 'string') { command = ti.command; cwd = obj.cwd || ''; }
+  if (obj && obj.tool_name === 'Bash' && ti && typeof ti.command === 'string') { command = ti.command; cwd = obj.cwd || ''; sessionId = obj.session_id || ''; }
 } catch { /* 非 JSON=envelope 异常 */ }
 
 if (command === null) process.exit(0); // 只对 Bash 命令面负责
 
-const r = runGate(command, cwd);
+const r = runGate(command, cwd, false, sessionId);
 if (r.missing) {
   console.error(`[d100-gate] 闸正身不可达（TriCompany gate 缺失${r.error ? '·' + r.error : ''}）——放行+留痕·请报 CTO 修复`);
   process.exit(1);
