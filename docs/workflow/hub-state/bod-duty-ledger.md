@@ -16963,3 +16963,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **m-sde 代执行记录（00:00:39-00:01:57）**：置旗→DryRun（旧 pid 40300）→实跑 rc=0（新 pid 19084·argvModel=sonnet）→撤旗——**但同撞父链继承题**（新进程 token 仍旧值·CTO 发现解释）。**旁发现**：restart 件 PS5.1 侧读 psd1 失败（Import-PowerShellDataFile 不可用）→fail-safe 缺省 sonnet 起效（结果碰巧对但非查表命中）——已嘱 SDE/CTO 核 restart/launch-seat 的 PS5.1 读表兼容层。
 
 - ㊿+2973 **CEO 00:07 令：重启规程加「关旧窗口」条款**——每席重启=杀 claude 进程+**关其所属终端窗口/tab**（wt 多 tab 复用须关 tab 禁杀主窗〔连坐他席〕·独立 pwsh 窗直接 Stop·关前核宿主下无其他在跑席位）——不许留旧窗口给 CEO 手动关。已发 CTO 并入 restart 件规程（修完启动器后今晚这轮照办）·diff 照旧过 CTO。
+
+### ㊿+2974 · **CTO 复：读表失败根因=PSModulePath 入口污染（复现·非 5.1 不兼容）+关 tab 三实测事实+分工口径**
+
+- **读表失败根因（活体复现）**：**入口相关 PSModulePath 污染族**——Bash 入口→powershell.exe 5.1 的 PSModulePath 前三位=PS7 目录→Import-PowerShellDataFile 认不出→共享件回落基线（BOD 实跑那行复现）；pwsh7 入口→干净→查表正常。**影响面**=仅 restart 件「期望档」侧落了基线（启动器在 pwsh7 tab 跑=查表正常·argv 14/14 带档即证）；**基线回落≠查表命中·一旦分叉即静默错判**——改法入 SDE 单（用法行改 pwsh＋期望档侧 fail-closed 来源≠table=红＋完工行印 expectSource=table）。
+- **关旧 tab 三实测事实**：①14 席全在 WT 单主进程 pid 16620（15:21 起）下：每席 claude→独立 pwsh 壳→WT·**禁杀主进程（连坐 14 席）** ②OpenConsole 现 14=14 tab 无残留（上轮旧 tab 已被 CEO 手动清——与体感一致）③WT 无 closeOnExit 键（默认 automatic）：强杀壳=非零退出码·tab 去留未验→**SDE 先拿 m-sde 金丝雀验机制**（壳正态退出才必关·判据=OpenConsole N→N−1）。
+- **分工口径**：SDE 施工→diff 过 CTO→**BOD 代执再滚**（含 m-sde）·CTO 验收三读数（逐席启动器日志 match/信箱 mtime/未读数 bod 95·CTO 75）·CEO 若要 CTO 亲自执行明示即可。
+- **四件真源 vs 部署位 hash 级对表**：只差 sync 横幅一行（正文一致）·restart 件与看门狗消费部署副本·SDE 改完同步+diff 验真。**CTO 金丝雀 00:10 复测**：sha8 仍 5064a67f≠b6f72424（未修·待根修后重启再测）。
