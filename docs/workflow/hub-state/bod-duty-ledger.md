@@ -16812,3 +16812,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **发布现状（BOD 21:02:22 主检出实读）**：`.claude/agents` 带 `model: sonnet`=**10 份**（board/CGR/fsd/pm/rdt/sde/ste/TMBSR/TMCR/TMVPR）·含「树执行门禁」=**15/20**·发布提交 **91cc00684（18:30:19·claude 面 18 件重渲）**；**未完**=COO 份并入·business-strategy 第 11 份·spawn 实测·CTO 四数回报（18:35 起被限流卡住·21:03:13 已催）。
 - **实际模型读数累计（重启后请求实证）**：**MATCH=6**——5.4：cpo/cto/cao/coo；flash：sde/cfo；**PENDING=8**=cos/cho/cmo/cso/fsd/pm/rdt/ste（重启后尚无请求）；MISMATCH=0。
 - **本席**：bod(5) 仍 glm-5.4——15:29 起已 154 次请求·**现为全机唯一且最大的 5.4 消费方**（候 CEO `/model glm-5.3-flash`）。
+
+### ㊿+2939 · **✅D-99 款 3「子代理一律 flash」机械化收官（CTO 2026-11-27T21:07:37+0800 报·BOD 独立对表通过）**
+
+- **发布完成**：`model: sonnet`=**11 份**（5 执行席+4 Registry+board+business-strategy·BOD 21:08:35 主检出独立实数=11 ✓·含 bs/coo 两件核过）；门禁段=**15/20** ✓；`.github/agents` 零触 ✓。**两仓 commit**：TriMetaverse=91cc00684（18 件·FSD）+**f268f85a5**（COO +14 行恢复+bs model 行·CTO 收尾·21:06:43）；TriCompany=4599534a（引擎+manifest+测试）+**81a19cb**（bs 第 11 条·21:06:51）——sg/origin 双顶验真。
+- **spawn 实测**：CTO 席 Agent 工具派 FSD（显式 `model: sonnet`·最小任务）→子代理 transcript 原始行 `message.model=glm-5.3-flash` ✓（回 ok·38696 tokens·3.4s）。
+- **如实三注（CTO）**：(a) **FSD 席自 18:34:15 停摆**（5h 窗撞顶殃及·读数器 MISMATCH）——COO 单件 FSD 已发未 commit·机械收尾 CTO 代做（无实现面代执）；(b) **定义钉档对运行中会话是否即时生效=未验**（14 席重启早于 18:30 发布）——保守口径：下次席重启后生效·过渡期靠 Agent 调用显式 `model: sonnet`（D-99 款 3 本要求显式）；(c) 全量 dry-run：20 条目=19 derived_identical+1 updated·errors=0。
+- **本席已切 flash**（CEO 21:0x `/model glm-5.3-flash`·BOD 系统侧模型声明=glm-5.3-flash·本账即由 flash 记）——**全机 5.4 消费方=五个 5.4 席·BOD 归位**。
+- **D-99 全链现状**：席位档位（SDE 14/14 ✓·MATCH 6+PENDING 8）／错峰（五 5.4 席承录）／子代理 flash（**本件=机械化落地**·定义钉档+显式调用双保险）／程序化候 CTO/SDE。
