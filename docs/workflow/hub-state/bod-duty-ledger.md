@@ -16712,3 +16712,15 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CTO 回（15:57）**：①根因承 ②**CTO 节已落对照卷**（TMV **6d6b80652**·ls-remote 顶验真·§三②-CTO=技术面认领+如实注「门全落·链未通」+P0 前置+M1-M5 表+切换程序·**候 CEO 批**）③notice-238 不入账 ④**r49 前置=不构成技术硬前置·属 CEO 取舍**。
 - **BOD 读码核实（TriRMC round_runner.ts@d270239·现读）**：未达标分支=`await tryCharterHook`→L786-792 `caoApprovalGate` 不过=**console.error+return 软返回**（无异常·无 state 变更）→续跑 cos_final_summary→`_patchConsumption()`→正常返回——**十段链不破**；生成器调用未传 caoApproval（L777）=每轮必拒；**后果两如**：①本轮零 charter 产出（r50 输入可由 jr 重生成）②`joint-review.json.consumption_ratio` 回填为 **0**（pending_charter_ref 缺·chItems=0）。另 L830 以原 res.charter 复写 charterPath（覆 L817 弱绑定标记·CTO 所报第二 bug 在位）。
 - **⇒ 撤回 ㊿+2916「r49 点火新增前置=签批通路落地」**：该断言系 BOD 未读码即下（已向 CEO 报「不宜点火」·现更正）。**正形=两条并陈候 CEO**：(a) 批 r49 任务书即点·任务书明写「本轮 charter hook 预期拒·不计 M1 门致事故」（代价=零 charter 产出+consumption_ratio=0）／(b) 若要 r49 轮末即产出可挂 charter→通路为前置。
+
+### ㊿+2918 · **CEO 16:11 三裁定执行：①模型分工 ②关 bod(3) ③rlc 密钥刷新入池**
+
+- **CEO 补充事实（与证据全合）**：10:42–11:21 CEO 用 cc switch 从 deepseek-flash 切 glm-5.4（失败·4 次 403[1220]）再切回 glm-5.3-flash——cc switch 重写共享 settings.json=端点切到 bigmodel·而三席会话模型停 deepseek-flash（1211 根因·此前「何时被谁改」的未证项由此闭合）；15:21 CEO 手动关 14 席→看门狗 15:22 重拉。**一处时序更正**：CEO 记忆是「重拉之后」才见 1211——会话记录显示 1211 全在重拉之前（11:21–14:41·旧进程）；重拉后三席零报错（15:49 探针实测 glm-5.4 可用）。
+- **①模型分工**（cos/cto/cpo/coo=5.4·bod+执行席=flash·其余 C-level 候 CFO 评估）：
+  - BOD 即办：`settings.json` 的 `ANTHROPIC_MODEL` glm-5.4→**glm-5.3-flash**（默认=flash·load→改→dump·3s 复读一致·2026-11-27T16:17:14+0800）；别名不动（OPUS/FABLE=glm-5.4·SONNET/HAIKU=flash）；**值面探针**（无持久化·禁钩子的 headless 新会话）modelUsage=glm-5.3-flash ⇒ 新会话默认实测 flash。
+  - **已派 SDE**：启动器按席钉 `--model` 别名（真源 `launch-seat.windows.ps1`+席→档映射表·禁用 cc switch/手改共享文件实现分工）+同步部署位+滚动重启 14 席（完工判据=每席下次请求模型对档）+CTO 过目 diff。
+  - **已请 CFO 评估**其余五席（CAO/CHO/CFO/CMO/CSO）档位+周窗成本测算+降级顺序；评估前按 flash。
+  - **未了**：运行中 14 席仍在 glm-5.4（会话级·待 SDE 重启才换档）；**本席 bod(5) 仍在 glm-5.4**（CEO 15:14 手动切·BOD 无工具自切·候 CEO 在本窗 `/model glm-5.3-flash`）。
+- **②bod(3) 已关**（2026-11-27T16:16:48+0800·CEO 令）：身份断言（排除终端宿主包装·唯一命中）后 Stop-Process pid 13720·包装 21936 自退·ListAgents 复核 peer 清单已无 bod(3)。另有 CEO 11:56 开的交互窗 `bod`（pid 22024·会话 9dab862f·11:56:45 起空闲）不在关闭令内·未动。
+- **③DEM-021 入池**：TriRLC(8711) 密钥刷新失败（rlc 面 pull 488 次全拒·首 2026-11-21T08:36:57+08:00·0 成功·mlc 527 全 ok）·待审·暂不转 CTO（承接面=CTO）。
+- **D-47 自领**：发 SDE/CFO 两信落款「16:19」仍是先写后查（值恰与现查 16:19:29 一致）——正形=先 date 再落款。
