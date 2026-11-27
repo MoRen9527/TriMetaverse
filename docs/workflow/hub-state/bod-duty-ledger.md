@@ -17031,3 +17031,12 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **技术线今晚收口清单**：标读恢复 14/14／席位钉档 14/14／关旧窗机制 14/14／读表入口 fail-closed／CAO 批门 v1.1／rubric v2.3.1／发布 gate 根修+欠账两面清——**全闭**。
 - **仍挂**：copilot provider key（候 CEO）／签批通路两段式+成熟判据+r49 解锁（候 CEO）／GitHub 推送候网窗／D-102 两钩子规格与可测版（CTO 下一窗·挂载候 CEO 点头）。
 - **两条技术债入收口报告**：启动器起席扫历史会话 47.9s（各席起席 40-80s 主因）／主树全席 hook 共读 bod 信箱（席位专属信箱另议）。
+
+### ㊿+2986 · **D-102 两机械闸可测版入库（未挂载·挂载候 CEO 亲点）——CTO 01:35 报**
+
+- **入库**：闸正身=TriCompany **911b729**（d100-tool-entry-gate.mjs／d101-denied-retry-gate.mjs）·挂载 wrapper=TMV **4f0390c4f**（.claude/hooks/ 两件）——**未动 settings.json·现零运行时效果**。
+- **D-100**（Bash 嵌 PS5.1）=调用 powershell 系即拦·**唯一豁免=显式干净模块路径**（正确性条件非口令·CAO 保留一撤回的后门已按其精神撤）·实测 23 案+端到端 4 案全过。
+- **D-101**（被拒后换形）=增量扫本会话记录记被拒破坏性目标·24h 内同目标（或祖先后代）破坏性调用→拦·其他破坏性→告警放行·任意语义等价=纪律层终态。**真实数据验证**：CTO 自己 455MB 会话记录冷启 753ms——「rm -rf 误写目录→Remove-Item 同路径/Bash 同路径/Write 落子树」**三换形全命中拦截**✓（自测 17 案）。
+- **挂载增量**（候 CEO 亲点）：`.claude/settings.json` hooks.PreToolUse 追加两项（Bash→d100·Bash|PowerShell|Write|Edit→d101·timeout 15/20s）·首轮**只记不拦**（enforce 走受审提交）·留痕=.fade/gate-*.log（命令只记哈希）·代价=Bash +0.31s/Write+0.15s·覆盖 CC 全会话·失效姿态=故障放行+留痕（纪律闸非权限闸）。
+- **如实两件**：CTO 自己撞一次 D-101（清临时目录 rm 被拒·未绕·改新目录名=闸第一条真实被拒样本）；自测残留曾误写 .fade 生产位已移走未删。
+- **挂载执行**：CEO 点头（本窗一句或 CAO 窗亲批）→CTO 落 settings 两行+挂载后首验；或 CEO 指定执行方。
