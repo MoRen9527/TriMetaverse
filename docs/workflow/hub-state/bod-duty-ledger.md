@@ -16783,3 +16783,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **仍未换档**：本席 bod(5)（glm-5.4·候 CEO `/model glm-5.3-flash`）。
 
 - ㊿+2931 CFO 回（2026-11-27T17:11:08+0800）：CronList 实测四件 cron 全在（18:30 锚 next_run=今晚 18:30·10:00 锚·14:30 锚·11-28 9:23 前置复核）·**重启后定时唤醒并未丢**·无需重排——与 SDE 所报「--resume 丢已排唤醒」不符·如实注。**BOD 读法（未证）**：两者可能各说各件——持久化 cron（CronCreate）随会话落盘故在·一次性 ScheduleWakeup 属运行期状态故丢；候 CTO/SDE 一句定性。CFO 自报**会话已切 flash（系统侧生效）**⇒ 实际模型 MATCH=4（cpo/cto/sde/cfo）。
+
+- ㊿+2932 CTO 报规则②（子代理一律 flash）落地进展（2026-11-27T18:00:28+0800·峰末）：①**管线实况与原设不同**——发布件由 `source_publish_check --publish-agents --host {copilot|claude}` 渲染·claude 面按固定字段元组重排发射（源 md 加 `model:` 不会自动出现在 claude 面）·copilot 面=字节透传（源 md 加键会连带发到 `.github/agents`·sg duty 组在役·Copilot 是否支持 model 键未验）②**CTO 设计裁定（已派 FSD）**：声明位=manifest 逐条 `claudeModel: "sonnet"`（真源仍在 source-agents）·**仅 claude 宿主面发射**（`.claude/agents/*.md` 得 `model: sonnet`）·copilot 面零变化·范围 10 份（5 执行席+4 Registry+board）·C-level 9 席与 business-strategy 不加 ③发布铁律：dry-run diff 须恰为 10 份各 +1 行·copilot 面 dry-run 零变化 ④ETA ~1.5h→CTO 验收→本席派 FSD 实测子代理请求模型=glm-5.3-flash→报 commit+实测。
