@@ -16921,3 +16921,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 
 - ㊿+2964 **bod(4) 已停（CEO 22:50 令）——进程零残留·登记条目滞留=与 bod(3) 案不同形**：`claude stop 2c64ce37`（22:50:10·断言 name/kind 后执行·rc=0）→ 22:50:35 起四拍复核至 22:55:23（5 分钟·远超 bod(3) 的 1-2 分钟消失时点）：**关联 claude 进程=zero（真停）**·**agents 登记=仍显示 bod (4) state=working pid=None**——**僵尸登记条目**（与 FleetView 僵尸任务清理正形记忆同族：jobs/ 残留旧记录·活体看 daemon roster=进程零残留即真停）。**处置**：不杀不存在的东西；登记条目或随后台清理周期消失或按 fleet-stale-job-cleanup-recipe 处理（备份后 rm 按 id）·候下拍观察；若 CEO 见列表残留勿视为活席。
 - **本席 bod(5)=唯一活 BOD**（后台与进程双证）。bod(3) 昨 22:23 已停（登记消失）·bod(4) 进程已停（登记滞留）·交互窗 `bod`（22024）=CEO 自开未动。
+
+### ㊿+2965 · **CEO 23:14 三令实勘：注入脚本 Copilot 分支+dsh 面+copilot bod 启动命令**
+
+- **①注入分支（Copilot 形）**：本机 `@github/copilot` 1.0.75 app.js 实证——hook 枚举含 `UserPromptSubmit`（vsCodeCompat）·**仓内先例 `.github/hooks/ceo-chief-of-staff-workflow-sync.json` 形=CC 同形**（`hooks.PostToolUse[].command`）⇒ **Copilot hook JSON 直接按 CC 形写**（`hooks.UserPromptSubmit[].command` 指 notify-inject.cjs）·**读信侧零改造**（信=纯文本通用·CEO 判断正确）·唯注入脚本最后一步输出形（stdout vs systemMessage JSON）候实测定·dispatch=CTO 施工（几行·含 `.github/hooks/bod-notify-inject.json` 注册件）。
+- **②dsh 面（TriRMC/TriRLC）读信投递实勘**：TriRLC scripts **无 notify-inject 副本**（CC hook 单点在 TriMLC·R 面本地域无此注入面）；TriRMC executor 的 notifyResult=**任务回执非信箱投递**；TriRMC 的读信走 8711 daemon 内部通道——**dsh 侧读信投递形式与 CC/Copilot 的 hook 文本注入不同构**·本轮只做 Copilot 分支·**dsh 分支候 CTO 实勘后补**（CEO「同时考虑 dsh」记为 CTO 任务项）。
+- **③copilot bod 启动命令**（比照现 CC 形）：
+  `copilot --agent Board --allow-all-tools -n "bod-copilot"`（cwd=**主树 D:\Code\ai\TriMetaverse**——收信 seatFilter=bod 生效位）·若要 session 持久化=加 `--session-id <UUID>` 或 `--resume`·权限=--allow-all-tools 对应 CC 的 dangerously-skip-permissions。
+  **注**：**启动前须先落 `.github/hooks/bod-notify-inject.json` 注册件+notify-inject.cjs 的 Copilot 输出分支**（否则 copilot 会话无收信注入=收信盲）·故顺序=CTO 施工→实测→CEO 再起 copilot bod。
