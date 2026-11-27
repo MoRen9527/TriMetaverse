@@ -16970,3 +16970,8 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **关旧 tab 三实测事实**：①14 席全在 WT 单主进程 pid 16620（15:21 起）下：每席 claude→独立 pwsh 壳→WT·**禁杀主进程（连坐 14 席）** ②OpenConsole 现 14=14 tab 无残留（上轮旧 tab 已被 CEO 手动清——与体感一致）③WT 无 closeOnExit 键（默认 automatic）：强杀壳=非零退出码·tab 去留未验→**SDE 先拿 m-sde 金丝雀验机制**（壳正态退出才必关·判据=OpenConsole N→N−1）。
 - **分工口径**：SDE 施工→diff 过 CTO→**BOD 代执再滚**（含 m-sde）·CTO 验收三读数（逐席启动器日志 match/信箱 mtime/未读数 bod 95·CTO 75）·CEO 若要 CTO 亲自执行明示即可。
 - **四件真源 vs 部署位 hash 级对表**：只差 sync 横幅一行（正文一致）·restart 件与看门狗消费部署副本·SDE 改完同步+diff 验真。**CTO 金丝雀 00:10 复测**：sha8 仍 5064a67f≠b6f72424（未修·待根修后重启再测）。
+
+### ㊿+2975 · **CEO 00:26 令：Windows 入口坑落正式纪律条——铸条申请交 CAO**
+
+- **CEO 问「不是有设置能解决么」→ BOD 复核**：`CLAUDE_CODE_USE_POWERSHELL_TOOL=1` **本机一直开着**（pwsh7 原生 PowerShell 工具在位·实测读表 OK）——设置管「提供哪个工具」·管不住「模型每次选哪个」。今晚 22:17/00:00 两役 BOD 均选了 Bash 内嵌转调 powershell.exe（惯例走剪贴板/窗口调用）——**工具在位而选择漂移·模型行为会漂·机械防线（CTO 单：入口改 pwsh+fail-closed）才是硬的**。
+- **铸条申请已发 CAO**（00:26:50）：Windows 环境跑 .ps1/读 .psd1/Windows 专有操作（剪贴板/窗口/计划任务/CIM）一律走原生 PowerShell 工具·禁 Bash 内嵌转调；Why=三实证（Bash 继承 PSModulePath 污染致 5.1 cmdlet 失明·CTO 双入口对照+本席复现／换工具绕权限闸风险／原生工具在位未用）；例外=纯 POSIX 任务仍走 Bash；**建议条号 D-100**；实锚=今晚两役+CTO 对照实验；机械防线并行（CTO 单 fail-closed）——**纪律层管人·机械层管漂移·双层**。
