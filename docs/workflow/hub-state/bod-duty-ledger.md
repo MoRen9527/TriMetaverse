@@ -16955,3 +16955,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **今晚技术线全闭清单（CTO 主笔/验收）**：rubric v2.3.1→E1-E5 进化施工→CAO 批门三处（三迭代·**commit 锚自指矛盾被 CAO 实测抓出→CTO 快自领→指纹=唯一绑定·四拒因码·(a)/(b)+binding_weak 退役**）→SDE 席位钉档→D-99 规则②（11 份 flash·spawn 实测）→发布 gate 根修（时戳→内容制）+欠账两面清→bod-copilot 收信链→env 同步+滚动重启（在途）。
 - **在途**：SDE 滚动重启（完工=各席下拍未读数下降）／GitHub TriRMC/TriMLC 欠账候网窗／copilot 复述判据候 provider key。
 - **CTO 七错全自领**（含转述期望码有损·COS/CAO 各自独立抓出）——每条已转纪律。**BOD 注**：CAO 抓出 commit 锚自指矛盾+CTO 快自领=「验收抓真错·不当面子」的好形·与今晚 BOD 读码抓 `_collect_a` 语义 BUG 同族——**交叉抓错文化今晚三起（BOD/CAO/COS 各有产出）**。
+
+### ㊿+2972 · **env 同步二次发现：新进程 env 继承父链旧 token（CTO 金丝雀抓出）——准今夜续修启动器+再滚·m-sde 已代重启（撞同题）**
+
+- **CTO 金丝雀不通过（00:01）**：本席新进程 token sha8=5064a67f ≠ 注册表新值 sha8=b6f72424——**新进程 env 继承自父链（SDE 工具进程=旧 env）·不从注册表读**⇒ 13 席重启换了档位但标读 token 仍旧值（信箱 mtime 停 23:32:48 实证）。「生效面=新进程」少一层「新进程 env 来自父链」（继承面盲区·与 16:44 resume 不带排程态同族）。
+- **BOD 裁（00:01 后发）**：①**今夜续修准**（启动器显式从注册表/600 文件重建该键·与 NOTIFY_SMTP_PASS 源同形·~20min）②修订完按新完工锚**再滚一轮**（含 m-sde·BOD 再代执）③完工锚=三齐（新进程 env sha8 对表+信箱 mtime 更新+未读下降）·三读数报 BOD。
+- **m-sde 代执行记录（00:00:39-00:01:57）**：置旗→DryRun（旧 pid 40300）→实跑 rc=0（新 pid 19084·argvModel=sonnet）→撤旗——**但同撞父链继承题**（新进程 token 仍旧值·CTO 发现解释）。**旁发现**：restart 件 PS5.1 侧读 psd1 失败（Import-PowerShellDataFile 不可用）→fail-safe 缺省 sonnet 起效（结果碰巧对但非查表命中）——已嘱 SDE/CTO 核 restart/launch-seat 的 PS5.1 读表兼容层。
