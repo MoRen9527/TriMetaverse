@@ -16775,3 +16775,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **仍未换档**：本席 bod(5)（glm-5.4·候 CEO `/model glm-5.3-flash`）。
 
 - ㊿+2929 SDE 件③④收官（2026-11-27T16:59:50+0800）：14/14 带档在位（m-sde=BOD 16:50 代执行·SDE 归因「看门狗/BOD 侧」实为 BOD）；**CTO 过目改动全落 fa08494**（两必改=读数器对表面独立·必用席基线回落断／三应改=argv fail-closed·时距线索·头注）·已推 sg；**完工判据读数**：MATCH=3（cpo/cto=glm-5.4·sde=glm-5.3-flash·跨双档实证）·PENDING=11（各席下次发话才出读数）·MISMATCH=0；看门狗复归；commit 链 9d2de92+5cc82f5+005cedb+fa08494。
+
+### ㊿+2930 · **席位模型分工落地=收官（SDE·2026-11-27T17:09:56+0800·CTO 终核通过）**
+
+- **四件全毕**：①启动器按席钉模型（`seat-model-map.psd1` 独立映射表+共享件 `seat-model-tier.ps1`·别名非字面名·未碰 settings.json/cc switch）②同步+看门狗三跳链（vbs→watchdog→launch-seat 带档·幂等）③14 席滚动重启（argv 14/14 带档·完工判据=transcript 实读：**MATCH=3**（cpo/cto=glm-5.4·sde=glm-5.3-flash）·**PENDING=11**·CFO 评估轮空保护·BOD 三件零触）④CTO 过目（两必改+回归三案+nit 二）。**commit 链 9d2de92→5cc82f5→005cedb→fa08494→79cfa1b→626893b 全推 sg bare（dev 顶=626893b）**。
+- **风险如实注（SDE）**：①11 席首请求读数随各席下次发话产生 ②GitHub push 断连（TriCompany ahead 33·sg bare 为现行权威推进位）③**`--resume` 丢已排唤醒**（他席 wakeup 候自查重排·CTO 已自排）——**BOD 已提醒 CFO 重排 18:30 锚与监控线**（17:10:14 发）。
+- **仍未换档**：本席 bod(5)（glm-5.4·候 CEO `/model glm-5.3-flash`）。
