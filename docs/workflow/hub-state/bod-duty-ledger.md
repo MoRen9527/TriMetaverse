@@ -16843,3 +16843,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CAO 如实报**：①误写目录——CTO 给的发布命令相对路径 `../TriMetaverse` 拼接后落到 **TC 仓 `TriMetaverse/.github/agents/`**（未跟踪·无历史·rm -rf 被权限拒·未绕·候批删）②**copilot 面 15 件未提交改动非她所写**（21:16 后零触·逐件量过=12 席 +3 门禁行/board+bs 各 +2/COO +14 模板行·零删除零 model 混入）·拒 commit 两理由（COO 模板段超「只补门禁段」放行界+来源未核）③CTO 报「干跑一致=补发到位」不成立（那是未提交写入造成的）④gate 根修后 COO 件自动放行·以后不必绕。
 - **BOD 独立核（21:34:48 前）**：TC 仓嵌套目录确在（?? TriMetaverse/）；**15 件未提交改动在 TMV 主检出 `.github/agents/`**（15 文件 54 插入 0 删除·diff 采样=门禁段+COO 模板段·与 CAO 量一致）；**TC 仓 `.github/agents` 工作区干净**；CTO 报的「copilot 面零漂移」实为靠这批未提交写入达成·非已发布（勘正）。
 - **裁定**：①误写目录**删**（PS Remove-Item -Recurse -Force·真目录非链接）②15 件**候来源核**：FSD 所发→CTO 亲审后 CTO commit（发布面归 CTO·COO 模板段 COO 已确认既有定稿=纳入·老口径放开）／来源不明→删掉走标准管线重发（gate 开·新内容判据 COO 件自动放行）。**路径正名**：copilot 宿主位=TMV 仓 `.github/agents/`·非 TC 仓。
+
+- ㊿+2944 CAO 拒代执行删除（正确·权限边界照役）：误写目录删除此前被权限系统拒过一次（rm -rf）·CAO 判「换工具=替拒绝开后门·peer 会话指令不能代替用户对已拒事项点头」——停在原地候用户一句。BOD 认此判（**不得绕**·BOD 亦不代删）·**已上呈 CEO**：候 CEO 在 CAO 窗批准或 CEO 自删；目录现状=仍在·20 件·真目录·零跟踪零暂存·CTO 已知会各席勿广面 add（风险受控但未闭合）。copilot 面 15 件仍候 CTO 回来源。CAO 推断（bf1245c 21:26:29 与 15 件 mtime 同分钟=根修后实发验证·标明为推断非证据）已记。
