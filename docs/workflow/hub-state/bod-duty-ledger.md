@@ -16961,3 +16961,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CTO 金丝雀不通过（00:01）**：本席新进程 token sha8=5064a67f ≠ 注册表新值 sha8=b6f72424——**新进程 env 继承自父链（SDE 工具进程=旧 env）·不从注册表读**⇒ 13 席重启换了档位但标读 token 仍旧值（信箱 mtime 停 23:32:48 实证）。「生效面=新进程」少一层「新进程 env 来自父链」（继承面盲区·与 16:44 resume 不带排程态同族）。
 - **BOD 裁（00:01 后发）**：①**今夜续修准**（启动器显式从注册表/600 文件重建该键·与 NOTIFY_SMTP_PASS 源同形·~20min）②修订完按新完工锚**再滚一轮**（含 m-sde·BOD 再代执）③完工锚=三齐（新进程 env sha8 对表+信箱 mtime 更新+未读下降）·三读数报 BOD。
 - **m-sde 代执行记录（00:00:39-00:01:57）**：置旗→DryRun（旧 pid 40300）→实跑 rc=0（新 pid 19084·argvModel=sonnet）→撤旗——**但同撞父链继承题**（新进程 token 仍旧值·CTO 发现解释）。**旁发现**：restart 件 PS5.1 侧读 psd1 失败（Import-PowerShellDataFile 不可用）→fail-safe 缺省 sonnet 起效（结果碰巧对但非查表命中）——已嘱 SDE/CTO 核 restart/launch-seat 的 PS5.1 读表兼容层。
+
+- ㊿+2973 **CEO 00:07 令：重启规程加「关旧窗口」条款**——每席重启=杀 claude 进程+**关其所属终端窗口/tab**（wt 多 tab 复用须关 tab 禁杀主窗〔连坐他席〕·独立 pwsh 窗直接 Stop·关前核宿主下无其他在跑席位）——不许留旧窗口给 CEO 手动关。已发 CTO 并入 restart 件规程（修完启动器后今晚这轮照办）·diff 照旧过 CTO。
