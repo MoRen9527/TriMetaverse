@@ -16773,3 +16773,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 独立复核（16:50:34·进程启动参数）**：**14/14 带档**——opus×5=cpo/cao/coo/cos/cto；sonnet×9=cho/cmo/cso/pm/rdt/ste/cfo/fsd/sde；stop-flag 无。
 - **完工判据现状（如实）**：**实际请求模型只验了 m-cpo 一席**（重启后首请求 16:33:57→glm-5.4=MATCH）；**其余 13 席=PENDING**（重启后尚无新请求·须各席下次发话才出读数）——「argv 已钉」≠「已验」。
 - **仍未换档**：本席 bod(5)（glm-5.4·候 CEO `/model glm-5.3-flash`）。
+
+- ㊿+2929 SDE 件③④收官（2026-11-27T16:59:50+0800）：14/14 带档在位（m-sde=BOD 16:50 代执行·SDE 归因「看门狗/BOD 侧」实为 BOD）；**CTO 过目改动全落 fa08494**（两必改=读数器对表面独立·必用席基线回落断／三应改=argv fail-closed·时距线索·头注）·已推 sg；**完工判据读数**：MATCH=3（cpo/cto=glm-5.4·sde=glm-5.3-flash·跨双档实证）·PENDING=11（各席下次发话才出读数）·MISMATCH=0；看门狗复归；commit 链 9d2de92+5cc82f5+005cedb+fa08494。
