@@ -16696,3 +16696,13 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2914 **CTO 探针回执+对照卷回执（15:53）**：①探针=CTO glm-5.4 + bigmodel 直连 ⇒ **三席（CTO/CAO/CFO）全部实测可用 glm-5.4**。②对照卷技术面入档=认领；**成熟判据提案候 CEO 批**（P0 前置=签批通路落地／M1 连续 5 轮零门致事故（误拒=0·漏拒=0）／M2 每轮三处一致性 7 反例全过／M3 并行期人工 vs 代码一致率 100%／M4 CAO 每轮抽验 1-2 条／M5 生成件三面同源齐 → 周日评审 → CEO 批 → MC 切代码机制）；已令 CTO 追加 CTO 节。③**CTO 如实注：第二代现链上不可达——自动链无签批通路·修前=零挂载**（签批通路 CTO 已领）⇒ **r49 点火新增前置=签批通路落地**（已与 CTO 对齐·候 CEO）。④notice-238（sg 线旧通知）=非 BOD 派单·不入 BOD 账。
 
 - ㊿+2915 **D-47 自领（时点手写）**：㊿+2914 发 CTO 的回信落款写了「15:56」——系凭印象手写·未先跑 date；**现查原值=2026-11-27T15:55:38+0800（发信在前·同分钟内）**·以本行勘正为准（不再另发更正信惊动在途 CTO）。
+
+### ㊿+2916 · **勘误 ㊿+2882（自领假读数）+ CTO d270239 验收结论（实现过·设计缺口·不放行自动链）+ r49 新增前置**
+
+- **勘误（BOD 自领）**：㊿+2882 写「夜间落卷：CTO 两处（ec83231 23:00／99fe323 23:02·生成侧拒发+消费侧拒读）✓」「CAO 批门四方全落」——**错**。现核 git：ec83231／99fe323／49c1096 三笔**全是 CAO 的规范补笔（docs(cao)）**；**CTO 两处=TriRMC d270239（2026-11-27T10:37:42+08:00·charter_generator+63／round_runner+102·两测试 +55）**——系 BOD 断档恢复后按提交时刻推断归属、未核 commit 主题即报 CEO「✓ 落」。**正确表述：截至 10:27 CTO 两处尚未落**（CTO 10:32 自报「疑未落」为实）。
+- **CTO d270239 验收（15:53·迟报 41min 自注）**：charter+round **89 passed（23+66）0 fail**·源实读 L81/L359、L480/L524/L786·三 code/binding_weak/mount_form 在位——**结论=实现与测试过·设计有缺口·不放行自动链**。
+- **设计缺口（CTO 读码·自领）**：自动链 tryCharterHook L777 调生成器未传 caoApproval·唯一源=opinions.json→L786-792 门必拒→不写 pending_charter_ref→L845 挂载早退 ⇒ **自动链每轮「生成→被拒」永远挂不上**（缺口在派工单：只定义门怎么判·没定义批从哪来）；第二处 L830 用原 res.charter 覆写 L817 的 binding_weak/mount_form（现因必拒不显·潜在 bug）。
+- **CTO 两段式签批通路方案（候 CEO 定·未施工）**：段一轮末落 pending 到 staging（不进拾取扫描面）／段二 CAO 席读件→跑 C1-C6→写 cao_approval（approved+content_sha256_16+commit 锚）→commit/push／段三下一拍有批过门。**三待定**：①staging 落点与 commit/push 责任人 ②hash 投影定义 ③拾取面是否接 COS tree_mount_gate 作二层。
+- **手写树挂载的机器门落点**：真实路径=写任务书件+commit+push 到 TMV 树（挂载=commit）；主门=sg-server bare 仓 pre-receive（服务端·--no-verify 绕不过）；二层=拾取时门（tree_mount_gate 现无人调用）；**动共享 bare 仓 hook=基础设施变更·须 SDE 施工+CEO 批**。
+- **⇒ r49 点火新增前置=签批通路落地**（未落则 round_runner 消费侧必拒生成件）。
+- **bod(3) 转信**：CTO 两条信因「bod」前缀歧义落到 bod(3) 窗·其只读转来（值守归本席）——**歧义仍在耗转信成本**。
