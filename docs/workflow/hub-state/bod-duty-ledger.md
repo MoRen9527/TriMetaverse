@@ -16804,3 +16804,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2936 COO 确认（2026-11-27T18:28:48+0800）：其 +14 行=既有「默认输出结构」段（运营判断／运营计划与节奏／风险与升级／使用依据）·沿用至今无修改意愿·**是定稿可发到 live**；源侧声明=TriCompany **501e0fb**（2026-08-20·manifest extraSections）·**丢失点=TriMetaverse 6170c7e17（2026-11-13·COO 单席定向渲染两面）——该提交把此段从两宿主面发布拷贝各删 14 行（diff 实证）**·会话面 compass 拷贝仍带（19f607d50·2026-09-15 起）；如实注：未跑发布检查脚本复现 CTO 读数（避撞状态文件）·6170c7e17 执行席判不出（git 作者=共享用户）；COO 面其他增量已对表无未发布项。**已转 CTO**（18:29:29 发）：COO 份归属前置已满足·并入或单发由 CTO 定；发后回报两数（含 `model: sonnet`=10 份／含门禁段=15/20）。
 
 - ㊿+2937 CTO 回（2026-11-27T18:30:27+0800）：COO 并入（令已补发 FSD·未 execute 则全量 20·已 execute 则 COO 单件小批追加 commit 禁 amend）；发后回报=`model: sonnet` 份数（列名）／门禁段 15/20／`.github/agents` 零触／两仓 sha／spawn 实测。**CTO 留一问**：business-strategy（spawn 型·无 tools 行）是否也入 flash 定义列（否则 5.4 席 spawn 它=走 5.4·与 D-99 款 3 有隙）。**BOD 答（2026-11-27T18:31:12+0800 发）=入列**：系 BOD 列 10 份时漏掉的一类（非 C-level 席位定义·非执行席/registry）·按 CEO「子代理一律 flash」原令即应钉 flash·非新决定不另候 CEO ⇒ **总数 11 份**（5 执行席+4 Registry+board+business-strategy）。
+
+### ㊿+2938 · **21:02 现势核读：5 小时窗 18:34 撞顶（全 GLM 席含 flash 被限流 2h14m·20:48:23 复位）+ 发布现状 + CEO 确认 business-strategy 入 flash**
+
+- **CEO 确认**（hook 时戳 21:01:44）：business-strategy 入 flash 定义列——与 BOD 18:31 转 CTO 的答复一致（已补告 CTO）。
+- **5h 窗撞顶实证（会话记录）**：`429 [1308][已达到 5 小时的使用上限。您的限额将在 2026-11-27 20:48:23 重置。]`——CTO 18:35:12／18:50:10／19:13:55 三拒（末次成功 18:31:57）·**CFO（已在 flash）18:34:35 亦被拒**·bod(5) 18:34:37 一拒 ⇒ **5h 窗为套餐级·flash 同受限**；全 GLM 席 18:34–20:48 实际停摆 2h14m。**BOD 此前「撞顶期间五席临时降 flash」之问由此失去意义（降档不解限流）——撤回该问**。
+- **发布现状（BOD 21:02:22 主检出实读）**：`.claude/agents` 带 `model: sonnet`=**10 份**（board/CGR/fsd/pm/rdt/sde/ste/TMBSR/TMCR/TMVPR）·含「树执行门禁」=**15/20**·发布提交 **91cc00684（18:30:19·claude 面 18 件重渲）**；**未完**=COO 份并入·business-strategy 第 11 份·spawn 实测·CTO 四数回报（18:35 起被限流卡住·21:03:13 已催）。
+- **实际模型读数累计（重启后请求实证）**：**MATCH=6**——5.4：cpo/cto/cao/coo；flash：sde/cfo；**PENDING=8**=cos/cho/cmo/cso/fsd/pm/rdt/ste（重启后尚无请求）；MISMATCH=0。
+- **本席**：bod(5) 仍 glm-5.4——15:29 起已 154 次请求·**现为全机唯一且最大的 5.4 消费方**（候 CEO `/model glm-5.3-flash`）。
