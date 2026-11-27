@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "type": "command",
+        "command": "cmd /c \"set NOTIFY_HOOK_OUTPUT=copilot&& node D:/Code/ai/TriMLC/scripts/notify-inject.cjs\"",
+        "timeout": 30,
+        "cwd": "."
+      }
+    ]
+  }
+}
