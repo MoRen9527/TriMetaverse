@@ -16837,3 +16837,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 备案（21:15:34 发·候 CEO 侧知悉）**：**准**。毕后 FSD commit+两面 dry-run 读数报 BOD。
 
 - ㊿+2943 **✅发布 gate 根修=CTO 验收通过（TriCompany bf1245c·sg bare 顶验真·+370/−29 窄域）**：判据=内容制三段（A live==render→allow／B live 无渲染外内容→allow／C live 含渲染外内容→block·时戳仅作诊断）+保留段照旧（缺 allow/dirty block/无 git block）。**独立复跑**：claude 面 20/20 derived_identical·copilot 面 14+6（已零漂移=CAO 已补发）·**两面 gate_blocked=0·errors=0**·Gate 测试 18/18。**真实历史探针**（纯读 git 历史）：今日被时戳制拦的 STE 件 A=True→allow（证假阳）✓／今晚拦的 COO copilot 件 A=False·B=True→allow ✓／反例手改行 B=False→BLOCK ✓。**如实两注**：(a) 现仓两面已零漂移→gate 当前未触发·「blocked=0」属平凡真（实证面=单测 18+历史探针+FSD dry-run 17A+3B）(b) 残留 `render_text=None` 面（employee README 链/sync 复制链）仍走时戳判据（向后兼容·非今日病·记低优候窗）+nit 一（docstring 文档漂移·不挡）。**GitHub 侧 pushurl 本机→github 443 三败=网络面欠账候网窗补推**（sg bare 已最新）。**根修闭：时戳制两假阳+一假阴=修·CEO 裁③要件③意图一字未改（BOD 已备案）**。
+
+### ㊿+2943A · **copilot 面实况澄清（BOD 独立核）+ 两件裁定（BOD 2026-11-27T21:34:48+0800 发 CAO/CTO）**
+
+- **CAO 如实报**：①误写目录——CTO 给的发布命令相对路径 `../TriMetaverse` 拼接后落到 **TC 仓 `TriMetaverse/.github/agents/`**（未跟踪·无历史·rm -rf 被权限拒·未绕·候批删）②**copilot 面 15 件未提交改动非她所写**（21:16 后零触·逐件量过=12 席 +3 门禁行/board+bs 各 +2/COO +14 模板行·零删除零 model 混入）·拒 commit 两理由（COO 模板段超「只补门禁段」放行界+来源未核）③CTO 报「干跑一致=补发到位」不成立（那是未提交写入造成的）④gate 根修后 COO 件自动放行·以后不必绕。
+- **BOD 独立核（21:34:48 前）**：TC 仓嵌套目录确在（?? TriMetaverse/）；**15 件未提交改动在 TMV 主检出 `.github/agents/`**（15 文件 54 插入 0 删除·diff 采样=门禁段+COO 模板段·与 CAO 量一致）；**TC 仓 `.github/agents` 工作区干净**；CTO 报的「copilot 面零漂移」实为靠这批未提交写入达成·非已发布（勘正）。
+- **裁定**：①误写目录**删**（PS Remove-Item -Recurse -Force·真目录非链接）②15 件**候来源核**：FSD 所发→CTO 亲审后 CTO commit（发布面归 CTO·COO 模板段 COO 已确认既有定稿=纳入·老口径放开）／来源不明→删掉走标准管线重发（gate 开·新内容判据 COO 件自动放行）。**路径正名**：copilot 宿主位=TMV 仓 `.github/agents/`·非 TC 仓。
