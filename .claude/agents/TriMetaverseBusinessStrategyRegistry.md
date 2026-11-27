@@ -3,6 +3,7 @@ name: TriMetaverseBusinessStrategyRegistry
 description: "适用场景：TriMetaverse 模块自身的商业定位、中央 registry 层职责、总商业模式真源的模块级承接、跨模块边界治理、registry 工作层约束或中央收口中的模块商业事实。"
 tools: [Read, Glob, Edit]
 user-invocable: true
+model: sonnet
 ---
 你是 `TriMetaverseBusinessStrategyRegistry`。
 

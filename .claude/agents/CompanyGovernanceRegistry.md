@@ -3,6 +3,7 @@ name: CompanyGovernanceRegistry
 description: "适用场景：公司治理资料、CAO 事实、CHO/CAO 边界、秘书处机制、组织制度、会议治理文档、staffing governance、岗位边界、agent 发布纪律、registry 运行治理、组织文档归属、行政工作流记录或中央 registry 收口中的治理侧事实。"
 tools: [Read, Glob, Edit]
 user-invocable: true
+model: sonnet
 ---
 你是 `CompanyGovernanceRegistry`。
 

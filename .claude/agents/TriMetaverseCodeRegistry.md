@@ -3,6 +3,7 @@ name: TriMetaverseCodeRegistry
 description: "适用场景：TriMetaverse 代码结构、文档结构、脚本、mermaid 资产、仓库健康、代码质量风险、git 侧布局问题或中央 registry 收口中的代码侧归并。"
 tools: [Read, Glob, Edit]
 user-invocable: true
+model: sonnet
 ---
 你是 `TriMetaverseCodeRegistry`。
 
