@@ -16781,3 +16781,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **四件全毕**：①启动器按席钉模型（`seat-model-map.psd1` 独立映射表+共享件 `seat-model-tier.ps1`·别名非字面名·未碰 settings.json/cc switch）②同步+看门狗三跳链（vbs→watchdog→launch-seat 带档·幂等）③14 席滚动重启（argv 14/14 带档·完工判据=transcript 实读：**MATCH=3**（cpo/cto=glm-5.4·sde=glm-5.3-flash）·**PENDING=11**·CFO 评估轮空保护·BOD 三件零触）④CTO 过目（两必改+回归三案+nit 二）。**commit 链 9d2de92→5cc82f5→005cedb→fa08494→79cfa1b→626893b 全推 sg bare（dev 顶=626893b）**。
 - **风险如实注（SDE）**：①11 席首请求读数随各席下次发话产生 ②GitHub push 断连（TriCompany ahead 33·sg bare 为现行权威推进位）③**`--resume` 丢已排唤醒**（他席 wakeup 候自查重排·CTO 已自排）——**BOD 已提醒 CFO 重排 18:30 锚与监控线**（17:10:14 发）。
 - **仍未换档**：本席 bod(5)（glm-5.4·候 CEO `/model glm-5.3-flash`）。
+
+- ㊿+2931 CFO 回（2026-11-27T17:11:08+0800）：CronList 实测四件 cron 全在（18:30 锚 next_run=今晚 18:30·10:00 锚·14:30 锚·11-28 9:23 前置复核）·**重启后定时唤醒并未丢**·无需重排——与 SDE 所报「--resume 丢已排唤醒」不符·如实注。**BOD 读法（未证）**：两者可能各说各件——持久化 cron（CronCreate）随会话落盘故在·一次性 ScheduleWakeup 属运行期状态故丢；候 CTO/SDE 一句定性。CFO 自报**会话已切 flash（系统侧生效）**⇒ 实际模型 MATCH=4（cpo/cto/sde/cfo）。
