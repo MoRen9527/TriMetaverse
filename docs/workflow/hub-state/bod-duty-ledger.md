@@ -17047,3 +17047,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **v1 定形**：**不设「本席放行形」**（transcript 里用户亲手输入与席间注入难可靠区分·能被信面文字触发的放行=权限面风险）——**拦截后放行=走审批流由设闸人一侧执行**·CAO 入册。
 - **TEMP 残留**：`cto-` 前缀 5 目录+12 文件（~1.25MB·无害）·其中 `cto-d101-real`=CTO 被拒那次 rm 的目标——**没换工具没换形没再试删**·按款 4 留设闸人一侧处置。
 - settings.json 仍未动·v1.1 毕+新实测再报·**挂载候 CEO 亲点（时机不变）**。
+
+- ㊿+2988 **两闸 v1.1 入库（TriCompany 9fb5171·推 sg·D-100 30 案+D-101 34 案全过·真实会话冷启 1.69s 仍命中今晚实锚形）**：CAO 重测缺口全补（cd 父目录&&rm/Bash 嵌 pwsh -Command/cmd /c rmdir/.NET/find -delete/管道 gci|Remove-Item 全判拦·Write/Edit 噪音消·状态文件不存命令原文·D-100 补 Python 列表形+find -exec）·定形=v1 不设本席放行形（拦截后放行=走审批流设闸人一侧）·已请 CAO 独立再打·收口卷增补 v1.1 行（TMV fbd50bcfa）·settings 未动·**挂载候 CEO 亲点（配置增量同前封）**。
