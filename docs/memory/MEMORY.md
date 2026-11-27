@@ -115,3 +115,4 @@
 - [pwsh 零宽窗崩溃+席启动通道正形](pwsh-zero-width-window-crash-seat-launch.md) — Minimized 零宽窗起 pwsh=更新通知 PadRight(-17) FailFast 宿主死；正形=真宽窗+父环境 POWERSHELL_UPDATECHECK=Off（启动器内设太晚）；宿主崩后 claude detached 幸存须杀旧再起；--resume 零命中先盘勘 jsonl——空会话零内容=零写盘，零历史正形=-n 注册形禁 --resume
 - [fade011 手动运行=CEO 通道](fade011-manual-run-ceo-channel-only.md) — CEO 11-05 13:19 裁：8713 fade011 保自动（job 现役修复态不动）·**手动运行=CEO/人工通道·席位勿代办**（除 CEO 明示外席位不手动跑 fade011·POST /run 亦属手动面）；共享脚本机位区隔教训=.local 副本+改前双机消费面三查（fade-sweep-8713-enoent-ruling·案②止损形）
 - [D-47 闸·信内机械未来时戳误判倒挂](d47-gate-mechanical-future-ts-in-body.md) — 闸扫信面全文：授权类信内嵌机械未来值（expiry=+72h 字串）被判倒挂拦信（fade001 签发首犯·指纹不稳定）；正形=信面指值面原件不嵌字串·落款照常现查粘贴
+- [sudoers 参数白名单三族特殊字符](sudoers-command-args-special-chars.md) — Cmnd_Alias 参数面 `,`/`+`/`%` 全语法保留（列表分隔/netgroup/组引用）visudo 必红；正形=零参数脚本路径白名单+逻辑封 root 落地 0755 脚本（防篡改闭环）+visudo -cf 粘贴毕必跑（WO-RW2 v1 实锚 2026-11-20）
