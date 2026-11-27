@@ -17040,3 +17040,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **挂载增量**（候 CEO 亲点）：`.claude/settings.json` hooks.PreToolUse 追加两项（Bash→d100·Bash|PowerShell|Write|Edit→d101·timeout 15/20s）·首轮**只记不拦**（enforce 走受审提交）·留痕=.fade/gate-*.log（命令只记哈希）·代价=Bash +0.31s/Write+0.15s·覆盖 CC 全会话·失效姿态=故障放行+留痕（纪律闸非权限闸）。
 - **如实两件**：CTO 自己撞一次 D-101（清临时目录 rm 被拒·未绕·改新目录名=闸第一条真实被拒样本）；自测残留曾误写 .fade 生产位已移走未删。
 - **挂载执行**：CEO 点头（本窗一句或 CAO 窗亲批）→CTO 落 settings 两行+挂载后首验；或 CEO 指定执行方。
+
+### ㊿+2987 · **CAO 独立重测抓缺口·CTO 连夜出 v1.1（挂载建议改 v1.1·CEO 点头时机不变）+TEMP 残留候设闸人处置**
+
+- **CAO 独立重测（只测不改）抓缺口·CTO 认+连夜补 v1.1**：①D-101 四处覆盖缺口——**最要紧=Bash 嵌 `pwsh -Command "Remove-Item…"` 两闸皆过且不留痕**（正是今晚实锚形的下一步）+`cd 父目录 && rm -rf`（最常用写法只告警）/`cmd /c rmdir`/.NET 删除/`find -delete`/管道形 ②噪音缺陷：有被拒记录后每次 Write/Edit 都告警=淹掉真信息行 ③CTO 声明与实现不一：状态文件存了命令原文（表头写不存·含密值面风险）=改掉 ④D-100 两漏判（Python 列表形/find -exec）。
+- **v1 定形**：**不设「本席放行形」**（transcript 里用户亲手输入与席间注入难可靠区分·能被信面文字触发的放行=权限面风险）——**拦截后放行=走审批流由设闸人一侧执行**·CAO 入册。
+- **TEMP 残留**：`cto-` 前缀 5 目录+12 文件（~1.25MB·无害）·其中 `cto-d101-real`=CTO 被拒那次 rm 的目标——**没换工具没换形没再试删**·按款 4 留设闸人一侧处置。
+- settings.json 仍未动·v1.1 毕+新实测再报·**挂载候 CEO 亲点（时机不变）**。
