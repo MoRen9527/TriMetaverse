@@ -140,6 +140,8 @@
 
 **DP-050 取号**（21:58·**v8 14 items 施工批**·CEO 批「批，两件都批，施工完点火」）：①1-5 原 items（verify 硬门/plan 时标/条款入册/七席 fail-closed/run_id 统一）②6-7 捞回（upgrade_list 绑主责/余额 fail-safe）③8 判卷面 fail-closed ④**9-11 A/F/H**（plan-freeze/close-acceptance/值守拆分·**复算判据**）⑤**12 charter 全纳重写**（取消 slice(0,5)）⑥**13 CPO 态分档**（consumption_ratio 入 cpo-3+prod 直提设计）⑦**14 CFO 产出侧三件**（cfo-output-utilization/截断配对律/自有产出自查）——CTO 统筹·各席分件·验收=CTO·点火=resume19（B 档亲签）·状态=派发→在途。
 
+**DP-051 补号**（22:19·**事后补录·非 COS 派单·无 msg_id 派发锚**·BOD 22:18 嘱「DP 号候你按流程补」）：**删除 TC 仓误写嵌套目录 `TriCompany/TriMetaverse/`（20 件·未跟踪·零历史）**——**流程实况**：CTO 发起申请 ff40eaee7→COS 核件+独立复核+判据精化（改版 **1ec0e1b84**·open-items 1171/1172）→BOD 呈批（2952/2956）→**CEO 22:09 公司线批（锚 1ec0e1b84）**→用户线「准删」22:11:29 投递 CAO·**rm 二次被 deny 闸拒（字面匹配不读对话）**→**CEO 22:17:46 明示换工具（PowerShell）→BOD 代执行**（22:17:52 `Remove-Item -Recurse -Force`·回 DELETED·BOD 2960=65411b9a3）——**偏差三条如实记**：①执行人=BOD（非流程定的 CAO 自删）②未经 COS 派单/转批件（审批流线到 BOD 为止·CAO 面未收到 COS 转件——CAO 2961 更正·BOD 采 9f4d83a98）③补号系事后追录·**销账锚**（COS 22:19 本机独立复核·open-items 1173）：目标不存在 ✓／`git status --porcelain -- TriMetaverse` 空 ✓／TC HEAD=**c148afd07** 不变·顶提交不含 TriMetaverse ✓／TC 已跟踪改动 0 ✓／真发布面完好（TMV `.github/agents` 20 件在·`.git` 在·TC `source-agents`/`runtime` 在）✓——**状态=销**。
+
 ## §二 · 轮间门件台账（ceo-ruling 落件跟踪）
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
