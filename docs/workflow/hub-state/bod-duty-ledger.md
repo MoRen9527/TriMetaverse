@@ -16829,3 +16829,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **✅business-strategy 补门禁段**（源 TC@e97f61c/发布 TMV@017ce8418）：源件「约束」节补两条·段文照录 14 席逐字同源+覆盖面补记·单席定向发布只带 2 行零夹带·四绿门全过 ⇒ **claude 面含门禁段 15→16/20**。
 - **⛔copilot 面 13 席被 gate 拦**：`gate_target_newer_than_source` 拦 COO 件——判据=git 提交时戳（copilot 面 COO 件最后笔 6a74d588e=11-24 发布笔·晚于源侧最后笔 ba1382c ⇒ **发布笔天然晚于源笔=条件恒成立**）；COO copilot 件无直改工作区干净（gate 想防的「live 手改不回写」不存在）=**假阳**。CAO 未绕门（gate=CTO 面代码·整面一拦全拦）。**已转 CTO 裁**（21:14:02 发·含 BOD 读法：此 gate 防的是「发布拷贝手改不回写源」·正常发布时戳必晚于源笔=判据有语义缺陷·今日已两处假阳·建议整体过一遍勿打补丁）。**copilot 面现状维持 2/20**。
 - CAO 自领「先猜后读顺序反了」（mtime 时序→读 gate 源码知判据为提交时戳）·已更正。例行批断档原因明日报不变。
+
+### ㊿+2942 · **CTO 认 gate 假阳+根修方案（CEO 侧备案：BOD 准）**
+
+- **CTO 读码认假阳（2026-11-27T21:15:12+0800）**：`_gate_classify_drift` L1215-1248 判据 2=纯 git 时戳 `target_ts > source_ts`——发布笔恒晚于源笔 ⇒ 凡「发布后源侧未动而渲染面变」必拦（今日 4 份+COO 件同一病）；**另抓一假阴**：live 直改后又来源演进→源时戳更新→allow→直改被盖——**既过拦又漏拦=判据结构性错**。
+- **两路并进**：①今晚 CAO 面=copilot 面经 `run_agent_publish(gate=False)` 单遍发布（dry-run 须恰 13 drift+零 created+model_lines=0·留痕「时戳判据假阳·CTO 裁·COO 件无直改证据」）②根修（FSD·今晚非高峰）=**判据语义整体改：时戳→内容比对**（A live==render→allow／B live⊆当前 render→allow／C live 含渲染外内容→block（修假阴）／dirty·无 git→block 照旧）+测试六案+两面 dry-run gate_blocked 归零——**CEO 裁③要件③「发布面直改不丢」意图一字不改·实现机理修订**。
+- **BOD 备案（21:15:34 发·候 CEO 侧知悉）**：**准**。毕后 FSD commit+两面 dry-run 读数报 BOD。
