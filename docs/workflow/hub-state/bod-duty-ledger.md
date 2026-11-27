@@ -16941,3 +16941,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **施工验收**：件①注册件（TMV 5b96134e3·UserPromptSubmit→带开关调注入器）／件②双分支（TriMLC f46905f·`NOTIFY_HOOK_OUTPUT=copilot`→systemMessage JSON·缺省 cc 零变化·本机双实跑）·**CC 形活体实证**=CTO 本拍 hook 注入【COPILOT-REG】验收信（主树 cwd→bod 过滤·注入层真通）。**返修一处**：注册件裸 `node`（Copilot spawn 面 PATH 无 node=静默失败·SDE 自测抓）→改绝对路径（BOD 加注：hook JSON=仓文件 push 后 sg 面也加载·绝对路径+平台早退两事一起收口）。
 - **🔴现役发现（SDE 活体实锚·CTO 佐证）**：daemon token 22:5x 轮换后**用户 env 未同步**→标读 POST 401→**CC 侧 14 席标读静默失效**——注入照通（降级设计原义）但**未读只增不清·同批信每拍重注入**（CTO 面 95→96 件历史未读·23:11/23:20 两拍同批）⇒ **上下文污染+token 浪费（疑与今晚 5h 窗撞顶有份）**。
 - **BOD 授权（23:30:09 发）**：**env 同步准**（SDE 按 D-46 轮换纪律：零回显/读消费对象/载入位清点/全键清点·完工读数=标读 POST 200+未读下降）·**加一条=同步清单报我**（轮换漏清点载入位的根因要留单·下次照单执行）。③copilot provider 401（COPILOT_PROVIDER_API_KEY 失效）转 CEO·复述判据挂起非失败 ④件③归档：**R 面读信=拉取式无 hook**（8711 `/internal/v1/notifications`·席间=localbus 进程内 Map·app.ts L4459/L4479）——入对照卷通道 D 栏 ⑤repo 级 hook 平台早退=准。
+
+### ㊿+2970 · **三线收官报（CTO 23:34:07）**
+
+- **①CAO 批门三处合流抽验=通过**：规范 v1.1 终版（TC 66fbd4f·28 案+10 向量）——COS 7622296（51 passed）／FSD TriRMC d5a7250（CTO 独立 122/122·含 BOM 10/10）／CAO ref=oracle——**四实现同输入同判定**。推面：GitHub 断／sg bare 拓扑分叉（sg=d270239 真谱系 vs dp009 换基变体）→CTO 裁 merge（禁 force·合前核回退）·FSD 执行中。
+- **②env 同步完工（授权两件）**：注册件绝对路径（TMV 115778d24）+win32 早退（TriMLC 5391d84）｜**同步清单已落**（键/消费对象/载入位三处清点·标读 POST 200·验收信 read=true）——**下次轮换照单**（BOD 硬要求兑现）。
+- **③滚动重启=CTO 令（带护栏）**：env 只对新进程生效→今夜滚动一轮（~15min）·护栏=空闲≥10min 才重启／m-cto 末位+消息唤醒重排／档位核 14/14／**完工判据=各席下拍未读数下降+无同批重注入**。
+- **挂起**：copilot provider 401 候 CEO key（复述判据挂起非失败）。
