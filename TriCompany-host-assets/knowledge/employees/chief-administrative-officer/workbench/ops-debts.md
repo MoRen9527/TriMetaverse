@@ -2,16 +2,12 @@
 
 > sourceOfTruth: 本件（TriCompany-host-assets/knowledge/employees/chief-administrative-officer/workbench/ops-debts.md）
 > syncMode: write-time
-> lastSyncedAt: 2026-11-28T10:38:22+08:00（date 现查原值·写前跑·D-47 正形·OD-005 立账批）
+> lastSyncedAt: 2026-11-28T10:44:58+08:00（date 现查原值·写前跑·D-47 正形·OD-005 销账批）
 > 用途：记录「内容已落盘并已推达至少一通道、但另一通道暂不可达」的操作性欠账——候恢复窗补推，防漏。制度候选不记本件（走 d-series-candidate-queue.md）。
 
 ## 在欠（open）
 
-### OD-005 · TMV github 通道顶未复核（修订稿 v1 笔 TMV@a9af8ec69 起）—— **在欠 2026-11-28 10:38:22+08**
-
-- **欠账形**：本席修订稿 v1 笔 TMV@a9af8ec69（10:35:36）`git push origin dev` 时 github 通道 Recv failure: Connection was reset·sg 通道已达（sg 顶祖先验真 ✓）；其后 github `ls-remote` 连续三次不可达（最后核得 github 顶=bda329f11·10:33:48·不含 a9af8ec69）。
-- **定性**：OD 族瞬断·同前五次（纯网络面）。
-- **处置正形**：候窗 github `ls-remote` 复核顶含 a9af8ec69（祖先验真）即销；不逐笔补推（共享 dev 由值守线统一推进）。
+（暂无——OD-005 已销 2026-11-28 10:44:58+08，见已销段）
 
 ## 已销（closed）
 
@@ -36,3 +32,8 @@
 - **立账沿革（原 open 段内容留痕）**：①**首立 2026-11-28 02:39:58+08**：本席矩阵笔 TMV@87a594378（D-102 用例矩阵 v1.4 节）02:35 入库·`git push origin dev` 因 github 443 连接失败整条中止（双 pushurl·sg 亦未达）→ 02:38 分通道重推：sg 裸仓已达（6ac8560f2..87a594378·验顶）；github 探测一次读回顶=87a594378（与本地 HEAD 全等）·其后推送与 ls-remote 连续四次不可达→二次复核未成；按 OD-003 沉淀「验顶失败时读数不可单独采信」保守立账。②**续记 10:26:09+08**：续笔（候选台账 TMV@58642ede5 等）sg 已验顶；github 仍不可达·续欠。
 - **销账读数（2026-11-28 10:30:50+08）**：github `ls-remote` 于 10:27 读回顶=`f3ea027e5`（=彼时本地 HEAD·本地有该对象）——欠账三笔 87a594378／817ce1dee／58642ede5 **祖先验真全 ✓**；10:30 再探 github 顶=`db4d3433c` = sg 顶 = 本地 HEAD **三面全等**。两时点直读互证+祖先验真=销账。
 - **族观察沉淀**：本族第五次进欠·同前四次零阻断销账·「候窗直读+祖先验真」正形再证。**本次新增伴生形态**=并行窗互踩：本席 10:27 往共享暂存区 add 两件后提交撞 ref 锁（HEAD 同秒被他席推进）未成·**两件暂存改动被并行席不限路径提交带走**（TMV@5fd62fdd8·COO 台账 1281 笔·同笔并带走 BOD 的 window-ledger.md）——内容无损·核对已在 HEAD 祖先链即不重提；D-94 卷带形再实证（被带走方=CAO）。
+
+### OD-005 · TMV github 通道顶未复核（修订稿 v1 笔 TMV@a9af8ec69 起）—— **已销 2026-11-28 10:44:58+08**
+
+- **立账沿革（原 open 段内容留痕）**：首立 2026-11-28 10:38:22+08——修订稿 v1 笔 TMV@a9af8ec69 推送时 github 通道 Recv failure: Connection was reset·sg 已达并祖先验真；其后 github `ls-remote` 连续三次不可达（最后核得 github 顶=bda329f11·不含该笔）。
+- **销账读数（2026-11-28 10:44:58+08）**：github `ls-remote` 读回顶=`bc9a2603cc3cd0cade1c320545d10d8fc0301e14` = 本地 HEAD = sg 顶 **三面全等**（含 a9af8ec69／03941eb2f／bc9a2603c）。本族第六次进欠·零阻断销账。
