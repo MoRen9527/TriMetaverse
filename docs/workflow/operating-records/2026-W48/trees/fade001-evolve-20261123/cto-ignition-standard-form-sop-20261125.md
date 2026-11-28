@@ -43,6 +43,8 @@ sudo -H -u fleet env TRICO_LOOP_MARKER_DIR=... NOTIFY_SMTP_HOST=... ... DCE_EXEC
 - **残拍重签的 round_count 须全局单调**（T2a 单调门·SDE 21:55 实测抓出第二枚）：`check_ceo_ruling` L474-492 要求 round_count ≥ 更早轮已签件 max——**重签件的 round_count 必须 > 全部更早轮 max**（否则 regression→awaiting rc=4）；撤旧低号签件（留痕备份）可解
 - **残拍锁窗**（R2 c 三态过滤·aae552d·SDE 21:57 实测抓出第三枚）：残拍 pf 后 ≤`FADE_STALE_RULING_MIN`（缺省 30min）未裁=锁（chosen 落残拍→ruling absent→awaiting rc=4）——解：v-round 落残拍（round_count 单调递增）/ 等窗过 / env 调小窗（门行为变更候批）
 - **解门顺序（裁决门三道=同一族·SDE 归纳）**：①撤错件（非当前候选的低号签件）→②验单调（新签件 round_count>全部更早轮 max）→③解残拍锁（v-round 落残拍 或等窗）——**三道门=裁决门三态×重跑操作序**，按此序一次过
+- **正式拍（纯 python cron 链）裁决件填写规约**（CTO 定形 2026-11-28·COS 模板依据·合成副本实测）：轮间门=`preflight.check_ceo_ruling` 唯一一道（`awaitCeoRuling`/DP-038 flag 在 round_runner loop 面·cron 链不触）；件落 **runs_root 下上轮目录内**原地顶替（`<runs_root>/<prev>/ceo-ruling.json`·旧件改名留存）；**`run_id`=上轮目录名**（填下一轮的必被「跨 run 件拒」）；`round_count`=max(更早已签件, 上轮真实累计轮次) 之整数；`signed_at`=落件时 date -u 现查原值；UTF-8 **无 BOM**（带 BOM=unparsable）；上轮目录不得已有 `.ceo-ruling-consumed.json`
+- **⚠ 复算禁区**（CTO 实测 2026-11-28）：`check_ceo_ruling` 名为 check、**判到 continue 即写消费戳**（第二次调用=refusal consumed）——**禁对真 runs_root「试跑」校验**（试跑一次=烧掉这一纸裁决·正式拍被拒）；复算正形=静态五项核（可解析且无 BOM／run_id==上轮目录名／round_count 整数且 ≥ 已签 max／decision=="continue"／无消费戳）或拷贝上轮目录到副本再调
 - **并入 D 系候选**（执法面条款·候 CAO/CGR）
 
 ## §五 · 使用依据
