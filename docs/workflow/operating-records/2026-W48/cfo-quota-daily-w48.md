@@ -428,6 +428,15 @@
 
 〔落款 2026-11-26 18:30:23 +0800 现查〕
 
+## 2026-11-28（周六）09:23 **R10-CFO-01 前置复核拍（一次性·e43556f3 触发·明日 11-29 正式拍）**
+- **复核结果=RED 侧（ceo-ruling 未落件）**：①COS 派工台账 §二（dispatch-ledger L150）最新状态仍「**待落（防 11-29 阻流）·11-29 前必验**」②全 W48 树 grep 无「已落」确认卷（仅 SOP/规格/改善项定义）③本机 fade001-runs 不可达（sg/R-HY 面）→ **fail-closed：无落件确认=视为未落**。
+- **判据**：ignite 轮无 ceo-ruling.json → preflight `ceo_ruling: absent` → **明日正式拍 exit 4 阻流**（W48 ignite 卷 §四 负例双因实测在卷）。
+- **双信已发**（m-coo + m-cos·载 schema 新规=新件必带 run_id·照 cto-ruling-reconsume-rootcause 卷）：请即刻派值席落 `ceo-ruling.json`（ruling=continue·run_id=shift-W48-ignite-20261122T175743Z）→ 落 resume 系最新轮 run dir → 回一行销项。
+- **其他前置同核**：Sunday 门 enforced=正常（正式拍不走 LOOP_WINDOW 豁免形）——**唯一阻塞=ceo-ruling 落件**。
+- 落卷 commit 后 push（三步正形）。
+
+〔落款 2026-11-28 09:24:13 +0800 现查〕
+
 ## 2026-11-27（周五）10:30 晨锚（**迟拍 30min 如实注**·GLM 新窗 16h 零消耗·DS 过夜低耗）
 - **①②**：date 现查 `2026-11-27T10:30:31+08:00`（**迟拍 30min·如实注**）；电源门 CIM 双源 PASS——Est=**40%**（较昨 100% 显著下降·如实注·非门禁异常）·BatStatus=2·PowerOnline=True。
 - **③ 读数（GLM）**：**周窗 0%·reset 12-03 16:47:23 未变**——**新窗 16h 零消耗**（昨 18:30 的 0% → 今 10:30 仍 0%）→ **GLM 面完全未被使用**（R 面全走 DS·MMC/MLC 留轨疑无活动·如实注不推断）；5h 窗 0%·TIME 1%。
