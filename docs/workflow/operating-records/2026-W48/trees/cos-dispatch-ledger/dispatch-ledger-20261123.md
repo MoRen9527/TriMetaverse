@@ -153,6 +153,8 @@
 
 〔11-28 09:3x 勘正·COS 自领〕上行 W48「待落」五日未随 BOD ㊿+1621 同步=**台账失真**（CFO R10-CFO-01 前置复核据本行误判「未落」——实=已落 terminate）——自领·已正。11-29 正式拍若需 continue 裁决件：①须 CEO 明示（经 BOD）②件形须合三绑（run_id=该拍 run_id+round_count+signed_at+ref·照 resume22c/r36 先例）③落位与 preflight 读法候 CTO/SDE 定——COS 不代签。
 
+**〔11-28 10:48 销账〕W48 ignite 门件=销**：CEO 10:42:38 裁「准 continue·BOD 落件」→BOD 10:43 落件（旧 terminate 件改名 `.bak-terminate-20261123` 留存·新件 283B·无 BOM·`sha256_16=702c594b22854f07`·decision=continue／run_id=shift-W48-ignite-20261122T175743Z／round_count=8／signed_at=2026-11-28T02:43:36Z／ruling_ref 引 CEO 10:42:38+BOD ㊿+3014）→SDE 拷副本复验七项静态全过+同参全形复跑 exit 0→**本级独立静态核五项全过**（10:47 ssh 只读+本地解析·未调门函数·无消费戳）——**销账锚=open-items 1196**｜注：新件属主 root:root 644（目录 fleet 可写·fleet 可读=功能够）·建议 chown fleet:fleet（不改内容）·候 BOD/SDE。
+
 
 ## §二之二 · 进化环自动跟踪（M7 闭环·CEO 常驻令）
 
