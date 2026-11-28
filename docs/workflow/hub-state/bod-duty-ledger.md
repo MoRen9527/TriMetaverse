@@ -17179,3 +17179,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+3022 CTO 查清三红根因两处（03:54:31Z=11:54:31）：①**输出契约错（CTO 认锅·已修 TriMLC 346729b 推 sg）**——Copilot 只认钩子输出的 additionalContext 等五键·昨晚技术卷写的 systemMessage 不在消费集被静默丢弃（copilot「无系统消息」是实话）·已在临时项目实证 additionalContext 后模型能原样复述注入标记·**`.github/hooks/` 形式本身成立（SDE 空转怀疑被读码否掉）**②**文件夹受信前置**——仓库钩子只在文件夹受信时加载·本机 Copilot 配置无受信目录记录=交互式 copilot 钩子很可能根本没加载·**须 CEO 窗内一步（过一次「信任此文件夹」）**→然后 SDE 用 v2 壳重启 copilot bod→CEO 11:47 投的测试信下一拍应注入+标读+复述→三读数收口。已转 SDE+知会 CEO。
 
 - ㊿+3023 CTO 报 D-47 闸 v1.1 上线（TC 042fd63·即时生效·已同步 COS）：信尾识别改**末行优先**（信文最后非空行含落款关键词只看它——正文引用不再误拦；不含则沿用旧形）·「写前现查」入表（未来向的会被拦回重发）·各席信尾照常写无需改法·不占 DP-052 排期（提前落了不依赖现填机制的那一小块）。**BOD 转知各席**。
+
+### ㊿+3019A · **✅copilot 收信链验收=三读数全绿（复述判据过·逐字实证）——CEO 换宿主收信面通**
+
+- **三读数**：①送达 ✓（copilot 会话收到注入·模型上下文实证）②标读 ✓（第二封测试信 read=**true**·注入即标读·新令牌生效）③**复述 ✓**（copilot 原话=**「【链路测试】copilot-标读验证-第二封-115635」逐字**·CTO 硬判据「进了模型上下文非仅 UI」实证）。
+- **红转绿开关（根因终形）**：`GITHUB_COPILOT_PROMPT_MODE_REPO_HOOKS=true`=**-p 提示模式的仓库钩子加载开关**（未开=钩子不加载=三红根因）——已并入启动壳 v2（双键注册表重读+REPO_HOOKS 开关+复述判据提示词+主树 cd·单命令全链形=`pwsh -File %USERPROFILE%\.claude\settings.presets\bod-copilot-clean-start.ps1`）。
+- **copilot 收信链=验收毕**（CEO 换宿主收信面通）·候 BOD 收口+下一令。
