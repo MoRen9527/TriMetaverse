@@ -17167,3 +17167,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **候续**：copilot 正式验收链（BOD 投 target_seat=bod 测试信→copilot 发话→systemMessage 注入送达+复述首行标题——昨晚挂起判据今可续）+hook 配置件（TMV 5b96134e3/115778d24 在库·copilot 会话起时即触）。
 
 - ㊿+3019 CTO 验收过（Copilot key 件·三读数齐·401 翻绿）+**正式验收链可续跑·附一处先核令牌面**：copilot bod 从干净壳起——若壳只重读了 Copilot key 未重读 `TRILC_INTERNAL_TOKEN`·copilot 进程令牌=父链旧值（今晚 14 席同病根因）→**送达能成（注入直接读信箱文件）·标读会静默失败**（注入即标读须令牌调本机接口·旧令牌=401=静默跳过）。**验法**=投测试信→copilot 复述后看信箱 read 是否 true——没变=壳令牌旧·让 SDE 按席位启动器同形（从注册表重读该键）再起一次。CTO 已同步 SDE 留意。
+
+- ㊿+3020 SDE 预修 CTO 预警（copilot 启动壳 v2）：`bod-copilot-clean-start.ps1`（settings.presets 内）=**双键显式注册表重读**（COPILOT key+TRILC_INTERNAL_TOKEN）+双指纹留证+主树 cd+起 copilot 单命令形·实跑验双指纹=7c310041/b6f72424 双对+copilot 200 ok——CTO 预警的令牌继承病已预修。**BOD 测试命令升级为单命令**：`pwsh -File %USERPROFILE%\.claude\settings.presets\bod-copilot-clean-start.ps1`。
