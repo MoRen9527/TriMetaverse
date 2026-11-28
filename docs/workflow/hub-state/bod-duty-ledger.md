@@ -17124,3 +17124,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **新件内容**：decision=continue／run_id=shift-W48-ignite-20261122T175743Z／round_count=8（SDE 终核·队列 state 真实累计）／signed_at=2026-11-28T02:43:36Z（现查）／ruling_ref=CEO-20261128 本窗 10:42:38「准continue，BOD落件」。
 - **SDE 拷贝副本复验五项全过**（decision/run_id/round_count int/signed_at/ruling_ref）·零真目录触碰（复算禁区照守）。
 - **⇒ 11-29 正式拍轮间门解锁**：明晚 23:50 W48→W49 周迁移将正常执行（preflight 读 continue→过→qualify 已预验过→迁移执行）。
+
+- ㊿+3017 **✅SDE 终验回执：七项静态全过+同 argv 全形复跑 pass/exit 0——明晚正式拍链全通判定成立**：静态七项（无 BOM/JSON/run_id 逐字/round_count=8≥8/decision=continue/无消费戳/signed_at+ruling_ref 形齐/旧件留存 ✓）·**同 argv 全形复跑（拷贝目录 --prev-runs-root 指副本·真根零触）=preflight_rc=0 verdict=pass exit_code=0·ceo_ruling state=continue**（detail「本轮照跑 carry_over 承接」）·⇒ 明晚 23:50 正式拍预期终态=exit 0 全链走起（preflight 绿→qualify 绿→DCE 必执行·qualify 隔离预验已 PASS 在先）。
