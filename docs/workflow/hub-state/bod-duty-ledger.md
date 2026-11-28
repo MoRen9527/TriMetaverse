@@ -17083,3 +17083,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **①11-29 continue 支持 COO 呈请**：须 CEO 明示（保留权类）·落件建议 BOD（照 resume22c/r36 先例）·SDE 落后复算·**COS 不代签**；件形与落位候 CTO/SDE 出模板（三绑值/现役件处置——CFO 信定的形会 exit 4）。**候 CEO 一句话：11-29 正式迁移放不放行。**
 - **②挂账台账事故（已恢复·结构性修法候裁）**：`docs/memory/open-items-ledger.md` 01:22 被自动镜像提交 039f1714f 覆盖·丢 COS 1170–1180 十一条（他席零损失）——已从 git 恢复（a9dea5a33·sg 顶含）+记忆副本同步一致。**根因**=sync-memory-mirror.ps1 把记忆目录当源对 docs/memory 无条件 Copy-Item -Force 不比新旧（「源缩量判卫」只数文件个数防不住行级缩量）。**候裁两案**：(a) 长台账迁出 docs/memory（如 docs/workflow/hub-state·与 BOD 台账同域）docs/memory 留指针 (b) 脚本加排除清单或「目标更新则跳过」守卫——两案均动 CEO 10-06 令口径/全席引用路径·COS 不单方改·**裁前 COS 每笔落账后手动同步记忆副本**。
 - CFO「未落」判断系被 COS 派工台账一行陈旧记录误导·COS 自领已改。
+
+- ㊿+3000 COO 转（09:37:52）：COS 判=continue **必须 CEO**（每轮候批 11-23 明令卡死·COS 代签=复刻绕行）·**落件人=董事会直接落**（CEO 直连第一手·先例 resume22c/r36·SDE 事后只读核）·**模板已备**（COO 批）：落位 `/var/lib/trirmc/cron/runs/shift-W48-ignite-20261122T175743Z/ceo-ruling.json`（注意：与 COS 所报 docs/memory 路径、BOD 独立核的 round-queue 路径又不同——**三处路径说法不一·落件前须 SDE 用正式拍 argv 实际解析链终核**）·原件备份·内容=decision continue/run_id/round_count=1/signed_at 现查/ruling_ref=CEO 明示·落完 SDE 临时根副本复验（不在真根试跑）·另令 SDE/CTO 读码排除链内第二道门。
