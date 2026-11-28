@@ -17169,3 +17169,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+3019 CTO 验收过（Copilot key 件·三读数齐·401 翻绿）+**正式验收链可续跑·附一处先核令牌面**：copilot bod 从干净壳起——若壳只重读了 Copilot key 未重读 `TRILC_INTERNAL_TOKEN`·copilot 进程令牌=父链旧值（今晚 14 席同病根因）→**送达能成（注入直接读信箱文件）·标读会静默失败**（注入即标读须令牌调本机接口·旧令牌=401=静默跳过）。**验法**=投测试信→copilot 复述后看信箱 read 是否 true——没变=壳令牌旧·让 SDE 按席位启动器同形（从注册表重读该键）再起一次。CTO 已同步 SDE 留意。
 
 - ㊿+3020 SDE 预修 CTO 预警（copilot 启动壳 v2）：`bod-copilot-clean-start.ps1`（settings.presets 内）=**双键显式注册表重读**（COPILOT key+TRILC_INTERNAL_TOKEN）+双指纹留证+主树 cd+起 copilot 单命令形·实跑验双指纹=7c310041/b6f72424 双对+copilot 200 ok——CTO 预警的令牌继承病已预修。**BOD 测试命令升级为单命令**：`pwsh -File %USERPROFILE%\.claude\settings.presets\bod-copilot-clean-start.ps1`。
+
+### ㊿+3021 · **验收链三红（copilot 侧）——根因升级：.github/hooks/ 注册形疑=双侧空转挂名形**
+
+- **实测三红**：①送达红（copilot 答「无系统消息」·systemMessage 未出现）②标读红（read=false·copilot 的 UserPromptSubmit hook 疑未触发）③复述红（无从复述）——**CC 侧注入活体通**（SDE 席本拍 hook 注入了同一封信=CC 契约面正常·红在 copilot 面）。
+- **根因升级（SDE 实测+CTO 卷对照）**：`.github/hooks/bod-notify-inject.json` 的假设=「copilot CLI 会读 .github/hooks/*.json」——**此假设未实证**：CTO 技术卷实证的是「copilot app.js 事件枚举含 UserPromptSubmit」（内部能力·vsCodeCompat）·**配置发现路径（外部 json 注册）从未实证**；且刚核 board.agent.md 无 hooks 段+参照件 ceo-chief-of-staff-workflow-sync.json **全仓零消费方**（CC 侧也不读它）⇒ **.github/hooks/ 形疑=双侧空转的挂名形**。
+- **SDE 建议三路（候裁）**：①CTO 深挖 copilot app.js 的 hook 注册 API 真形 ②改走 MCP 注入路线（copilot 支持 MCP·notify-inject 包 MCP server 形）③降级=人工投喂形（BOD 把信文粘给 copilot 窗·非自动化但立即可用）。
