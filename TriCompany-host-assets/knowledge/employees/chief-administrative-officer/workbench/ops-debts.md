@@ -2,17 +2,12 @@
 
 > sourceOfTruth: 本件（TriCompany-host-assets/knowledge/employees/chief-administrative-officer/workbench/ops-debts.md）
 > syncMode: write-time
-> lastSyncedAt: 2026-11-28T11:51:01+08:00（date 现查原值·写前跑·D-47 正形·OD-006 立滚动条批）
+> lastSyncedAt: 2026-11-28T11:57:59+08:00（date 现查原值·写前跑·D-47 正形·OD-006 销账批）
 > 用途：记录「内容已落盘并已推达至少一通道、但另一通道暂不可达」的操作性欠账——候恢复窗补推，防漏。制度候选不记本件（走 d-series-candidate-queue.md）。
 
 ## 在欠（open）
 
-### OD-006 · TMV github 通道间歇瞬断——**滚动欠账条**（立 2026-11-28 11:51:01+08·再欠续记同条·不另立号）
-
-- **立账形**：修订稿补缺口⑥笔 TMV@c9e1b3bb3（11:49:12）推 sg 已达·github `ls-remote` 两次不可达（Connection was reset／Couldn't connect）。**当前未核区间**=`3be6c5801..c9e1b3bb3`（最后核得 github 顶=3be6c5801·10:45:37 三面全等）。
-- **定性**：OD 族瞬断（今晨第三次进欠：OD-004→005→006）·纯网络面。
-- **滚动规则**：候窗 github `ls-remote` 复核顶含区间末笔即清（区间归零）；清前再有新笔=续记「未核区间」末笔·不另立号。
-- **处置正形**：不逐笔补推（共享 dev 由值守线统一推进）。
+（暂无——OD-006 已销 2026-11-28 11:57:59+08，见已销段·滚动条可重启）
 
 ## 已销（closed）
 
@@ -42,3 +37,8 @@
 
 - **立账沿革（原 open 段内容留痕）**：首立 2026-11-28 10:38:22+08——修订稿 v1 笔 TMV@a9af8ec69 推送时 github 通道 Recv failure: Connection was reset·sg 已达并祖先验真；其后 github `ls-remote` 连续三次不可达（最后核得 github 顶=bda329f11·不含该笔）。
 - **销账读数（2026-11-28 10:44:58+08）**：github `ls-remote` 读回顶=`bc9a2603cc3cd0cade1c320545d10d8fc0301e14` = 本地 HEAD = sg 顶 **三面全等**（含 a9af8ec69／03941eb2f／bc9a2603c）。本族第六次进欠·零阻断销账。
+
+### OD-006 · TMV github 通道间歇瞬断——**滚动欠账条** —— **已销 2026-11-28 11:57:59+08**（滚动条归零·留作同族复用模板·再欠=重启本条·续记不另立号）
+
+- **立账沿革（原 open 段内容留痕）**：首立 2026-11-28 11:51:01+08——修订稿补缺口⑥笔 TMV@c9e1b3bb3（11:49:12）推 sg 已达·github `ls-remote` 两次不可达（Connection was reset／Couldn't connect）；未核区间=`3be6c5801..c9e1b3bb3`（最后核得 github 顶=3be6c5801·10:45:37 三面全等）。定性=OD 族瞬断·纯网络面（今晨第三次进欠：OD-004→005→006）。滚动规则=候窗复核顶含区间末笔即清·清前再有新笔续记末笔不另立号；处置=不逐笔补推（共享 dev 由值守线统一推进）。
+- **销账读数（2026-11-28 11:57:59+08）**：github `ls-remote` 11:57:43 读回顶=`fdcbdf266`（含未核区间末笔 c9e1b3bb3 与后续台账笔 be59bb557·祖先验真全 ✓）；11:57:59 三面全等=`46785a232`（sg=github=本地·含修订稿标注笔 3a8cf0450·值守线已统一推进·本席 push 报 up-to-date）。本族第七次进欠·零阻断销账。
