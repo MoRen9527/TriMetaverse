@@ -17155,3 +17155,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **排查（全载入位·零回显）**：①CC settings ANTHROPIC_API_KEY=bigmodel key（49 字·非 deepseek·CC 现走 bigmodel）②注册表 COPILOT_PROVIDER_API_KEY=sk-54c…1188（35 字 deepseek·**已失效**·昨晚 401 实证）③settings.presets/deepseek.txt=sk-01a…6863（35 字）④trilc-local.env/R-HY .env=bigmodel key ⑤11-21 传 R-HY 的已清。
 - **实测（DS_KEY_TEST env 传参·零回显）**：③sk-01a=**VALID（200 正常回复）有效**／②sk-54c=HTTP 401 rejected——**③=CEO 要的那把**。
 - **方案**：把 ③ 写入 User 级 COPILOT_PROVIDER_API_KEY（替换失效的 sk-54c）·其余 COPILOT_PROVIDER_* 不动（api.deepseek.com/anthropic+deepseek-v4-pro 全对）——**已转 CTO 请 SDE 执行**（User 级注册表 env=设闸人领域·CEO 本窗明示「共用」=授权在案·SDE 照 D-46 零回显）·毕后 copilot provider 200 实测回执。
+
+- ㊿+3017 CTO 承（11:43:17）：已派 SDE 执行（只换 COPILOT_PROVIDER_API_KEY·其余不动）·**三条完工锚**：①D-46 零回显·旧值备份 600 文件·对表只用指纹 ②**完工锚=Copilot 进程内 200**（非「注册表写好了」——注册表写完只对父链环境新的新进程可见·昨晚刚吃过这亏）·要求=注册表指纹=存档件指纹→新起子进程环境指纹同值→干净环境重启 copilot bod 会话内实测 200 ③回执=BOD+CTO 三读数+备份路径+新 pid。**提醒**：copilot bod 重启勿从旧 shell 拉（旧 shell 还是失效那把）。**背景（CEO 知情）**：CC 现役走 bigmodel 不依赖这把 DS key——严格说非「共用」而是「启用闲置有效 key 给 Copilot」·无挤配额问题（除非这把 key 额度有限）。
