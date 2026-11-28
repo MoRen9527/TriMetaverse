@@ -146,8 +146,10 @@
 
 | 轮 | 门件 | 目标位 | 落件执行 | 探针状态 | 复评时点 |
 |---|---|---|---|---|---|
-| W46 | ceo-ruling.json（terminate→改 continue） | `/var/lib/trirmc/cron/runs/shift-W46-.../` | 值席经 BOD 通道 | 待落 | 落件后 preflight 复跑 |
-| W48 ignite | ceo-ruling.json（continue） | 同族路径 | 值席经 BOD 通道 | 待落（防 11-29 阻流） | 2026-11-29 前必验 |
+| W46 | ceo-ruling.json（terminate→改 continue） | `/var/lib/trirmc/cron/runs/shift-W46-.../` | 值席经 BOD 通道 | **历史行（11-28 勘）**：周已翻两轮（W46→W47→W48）·原门件已过适用期·建议作废 | — |
+| W48 ignite | ceo-ruling.json（continue） | `/var/lib/trirmc/cron/runs/shift-W48-ignite-20261122T175743Z/` | 值席经 BOD 通道 | **陈旧勘正（11-28）**：本行「待落」自 11-23 21:33 起失真——该目录现有件=**terminate**（BOD ㊿+1621·CEO 明示「D 轮 2 跑完即止」·supersedes continue 6202b5aa6·11-28 09:27 本机 ssh 实读）·continue 旧件备份 `.bak-continue-20261123T133616Z`·**原定义（落 continue）与现行裁决冲突·落 continue=CEO 保留权（M4-v2 每轮候 CEO 批）·候 CEO 明示** | 11-29 正式拍前 |
+
+〔11-28 09:3x 勘正·COS 自领〕上行 W48「待落」五日未随 BOD ㊿+1621 同步=**台账失真**（CFO R10-CFO-01 前置复核据本行误判「未落」——实=已落 terminate）——自领·已正。11-29 正式拍若需 continue 裁决件：①须 CEO 明示（经 BOD）②件形须合三绑（run_id=该拍 run_id+round_count+signed_at+ref·照 resume22c/r36 先例）③落位与 preflight 读法候 CTO/SDE 定——COS 不代签。
 
 
 ## §二之二 · 进化环自动跟踪（M7 闭环·CEO 常驻令）
