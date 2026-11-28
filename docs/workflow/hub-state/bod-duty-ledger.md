@@ -17091,3 +17091,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+3002 **CTO 定裁决件落法（BOD=落件人·候 CEO 一句话）**：①**落位=上轮目录原地顶替** `<runs_root>/shift-W48-ignite-20261122T175743Z/ceo-ruling.json`（runs_root 以 SDE 读 cron 实际值为准——三处说法以 SDE 终核为准）·旧 terminate 件**改名留存**再写新件·UTF-8 无 BOM ②件内容=decision continue/run_id=**上轮目录名**（非明晚轮）/round_count=SDE 给的整数/signed_at=落件时 date -u 现查/ruling_ref=授权件锚（模板 COS 给）③**⚠复算禁区**：落件后**不得拿真目录「试跑」校验函数**——判到 continue 会当场写「已消费」戳=把裁决用掉·明晚正式拍被拒（校验只静态核或在拷贝目录做·已单独叮嘱 SDE）④交底：这纸只管 11-29 这一轮·跑完下一轮再候裁决（一纸一轮·COO 补的结构问题另议）。
 
 - ㊿+3003 COO 补报：第二道门已排除（正式拍链=纯 python 序列·不经 awaitCeoRuling·不受 debug 态 flag 门）·**preflight 后只剩 qualify 一道段间门·过则周迁移必跑**——已请 SDE 只读预验现过不过·结果即报。**候 CEO 裁 continue 事项不变**。
+
+- ㊿+3004 COS 落件模板两版差一处·**请用 CTO 09:39 版**（round_count 留占位·落件前 SDE 读 runs_root 已签件最大值填·单调门·CTO 版读门码并合成副本实测过）·复算禁区重申（真目录试跑=消费戳=作废·静态核五项或临时副本）·**COS 自领**：前判「run_id 填旧 ignite 号不成立」系未读门码凭三绑语义推·判错已更正（门要求 run_id=上轮目录名·即此号）·其余三项判断仍成立·落账 1184。
