@@ -17068,3 +17068,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - ㊿+2995 CTO 根修首条误伤（**v1.4=TC 12502f1·即时生效**——闸文件即消费面）：`2>/dev/null` 重定向记号被当操作数→假目标→同目录不相干 rm 互判换形重试（observe 记错一行/enforce 硬拦且触发面宽）——**抽操作数前先剥重定向**·CAO 复现用例组自测全部转告警 ✓。**日志归席**：席位字段改启动器注入名优先（两行已派 SDE·各席下次重启才带）+每行加会话指纹（观察窗至少可分席）。**enforce 建议=observe 跑过一个白天班（14 席真实命令面）再看误伤占比**（夜里样本不够）·切否/何时切归 CEO。CAO 第四轮全量（76/76·40/40·27/27 零不符）——版本谱至 v1.4。
 
 - ㊿+2996 CAO 收口 checkpoint（2026-11-28T02:43:06+0800）：D-102 两闸线今晚收口——observe 在役（v1.5：CTO 根修 2>/dev/null 误判 8min 内·CAO 对真实会话复验=只告警 ✓·四轮独立验共约 500 项判定零不符·Write/Edit 收窄为 CAO 提议 CTO 采）·**enforce 口径=observe 过一个白天班+CAO 出误伤评估→候 CEO 裁**·今夜 CEO 零动作。候件：写类等价=v2 候选（现役 deny 唯 rm -rf·真实被拒写案例零·不急）／CTO TEMP 残留 1.3MB 等设闸人处置。**入册锚**：纪律册 TC 六笔（6e8faab→134d0ca·sg 同顶）·用例矩阵 TMV@817ce1dee（六版并列·sg 同顶·**GitHub 通道今夜不稳=OD-004 操作欠账候窗复核**）。
+
+### ㊿+2997 · **🔴COO 升级：11-29 正式拍轮间门阻流（W48→W49 周迁移）——需裁 continue·BOD 独立核+呈 CEO**
+
+- **COO 升级（2026-11-28T09:27+0800·更正 09:31）**：CFO 前置复核判轮间门件未落→明晚 23:50 正式拍（W48→W49 周迁移）会被阻流。**SDE 只读核实（COO 更正版）**：正式拍 job（weekly-plane-shift）现役参数不带 --prev-runs-root→prev 解析到 11-23 那份 ruling 件（terminate 形）→**三绑校验（run_id/round_count 两键 None）不认→awaiting-ruling→exit 4（上拍 consecutiveErrors=8）**——**零停用面**（job 保持 enabled·读不到 terminate 分支）·明晚不动同样 exit 4·**W48→W49 不会跑**。
+- **BOD 独立核（09:29）**：①`cron/runs` 路径不存在（COO 原路径名有误·实为 round-queue/runs 等但 175743Z 目录**全盘未找到**）②fade001-runs 各 resume 份 ruling=**全部 continue 形**·**无 terminate 形 ruling**——COO「terminate 件」具体位置与 COO 更正口径有出入·**以 COO/SDE 只读核为准**（他们手上有正式拍 argv 的实际解析链）。
+- **解锁正路（COO 提·BOD 认）**：按 CEO 令在该目录落新形三绑 ruling（run_id=shift-W48-ignite-20261122T175743Z＋round_count＋signed_at·decision=continue）·原件备份→SDE 用正式拍同 argv 复跑 preflight 验 continue→回执。另一选项=裁「不跑/改道」（CEO 的事）。
+- **⇒ 呈 CEO 裁（时限今天内·距正式拍 ~38h）**：①**裁 continue**→BOD 拿令 ref 转 COO 派值席落件→SDE 复跑验证→明晚正式拍跑 W48→W49 ②或裁不跑/改道。**BOD 附注**：r49 尚未点火（候批）·若正式拍跑的是 W48→W49 且 r49 属 W49 轮·顺序上正式拍先于 r49 不冲突——但轮间门裁决与 r49 点火裁决是两件事·分别候批。
