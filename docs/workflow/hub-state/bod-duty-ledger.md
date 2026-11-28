@@ -17085,3 +17085,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - CFO「未落」判断系被 COS 派工台账一行陈旧记录误导·COS 自领已改。
 
 - ㊿+3000 COO 转（09:37:52）：COS 判=continue **必须 CEO**（每轮候批 11-23 明令卡死·COS 代签=复刻绕行）·**落件人=董事会直接落**（CEO 直连第一手·先例 resume22c/r36·SDE 事后只读核）·**模板已备**（COO 批）：落位 `/var/lib/trirmc/cron/runs/shift-W48-ignite-20261122T175743Z/ceo-ruling.json`（注意：与 COS 所报 docs/memory 路径、BOD 独立核的 round-queue 路径又不同——**三处路径说法不一·落件前须 SDE 用正式拍 argv 实际解析链终核**）·原件备份·内容=decision continue/run_id/round_count=1/signed_at 现查/ruling_ref=CEO 明示·落完 SDE 临时根副本复验（不在真根试跑）·另令 SDE/CTO 读码排除链内第二道门。
+
+- ㊿+3001 **CFO 侧新事实（主检出两笔新提交 867625d07/657151199）**：**件已落=terminate 形（11-23·CEO 现役裁决）**——即那份 prev 解析到的 ruling 是 CEO 11-23「D 轮2 跑完即止」裁决的产物（非无人认领的孤儿）。**此事实改变裁决语义**：翻 terminate→continue 不是「补缺失件」而是**推翻 CEO 11-23 现役裁决**——更须 CEO 亲裁无疑·且 CEO 须知道「你现在要翻的是自己 11-23 的决定」。三处路径说法（COS=docs/memory 系误/COO=/var/lib/trirmc/BOD 独立核=round-queue）+此新事实一并候 CEO 终核。另：主检出有他席新提交涌入（867625d07 CFO 台账 1183 等）·我 ㊿+3000 的 push 与之并发被拒·待 rebase 后补推。
