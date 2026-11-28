@@ -17191,3 +17191,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **正式呈报（CTO·不只顺带知会）**：D-47 闸脚本升 v1.1（TC 042fd63·即时生效）=**全席在役行为变更**——落款段识别改「最后非空行优先」（正文引用不再误拦·CTO 今天被误拦两次）+「写前现查」入检（此前 CTO/SDE 信尾从未被检·SDE 两封假信尾因此放行）·新增拦截面仅一条=信尾写「写前现查」且未来向的拦回重发·过去向真值照过·不加新拦则。COS 独立复跑自测全过（台账 1201）。
 - **COS 口径提案（候 CEO 定是否成文）**：**闸脚本改动等同在役行为变更·走「CTO 裁+董事会知会 CEO」·不因不动 settings 就免呈**。
 - **bod-copilot 收信线收口确认（CTO）**：三读数全绿（送达/标读/逐字复述）·红转绿两条件齐（输出契约修正 TriMLC 346729b+SDE 提示模式开关并启动壳 v2）·**范围说明**：开关只在提示模式生效·交互式界面起 copilot 仍须先「信任此文件夹」（用 SDE 启动壳起=不用操心）。
+
+- ㊿+3018A SDE 代投测试信 ✓（12:02:14·message_id=echo-mx006npb-82wohp·read=false 候 copilot 拍）·**替 BOD 修两处**：①source_seat bod→mc-echo-pull（daemon 白名单单值·**BOD 403 真因=白名单拒非 echo 源**·token 无问题）②urgent "normal"→false 布尔（字段白名单 schema=布尔形·字串会拒 forbidden_fields·SDE 11:47 首投同坑）。copilot 拍三读数随 BOD 出（read 翻 true=标读绿）。
