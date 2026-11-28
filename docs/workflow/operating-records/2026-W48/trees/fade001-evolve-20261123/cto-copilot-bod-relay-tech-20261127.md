@@ -37,5 +37,20 @@
 - **代价**：失 SendMessage（COS 代发代收=信量翻倍+时延）·失 ListAgents（路由须静态化）。
 - **建议**：先实测两件再裁；**实测闭环前 CC 留为 bod 主位**。
 
+## §五 · 勘正与实证（2026-11-28·CTO·bod-copilot 验收三红后读包+活体实测）
+
+本卷 §一#4／§四 当时把输出契约写成 `systemMessage`（据仓内参照件形）——**勘正**：读 `@github/copilot` 1.0.51 `app.js` 并在临时项目实测，事实如下：
+
+| # | 事实 | 依据 |
+|---|---|---|
+| 1 | 仓库钩子加载路径＝git 根下 `.github/hooks/**/*.json`（glob·逐个校验 `{version?, disableAllHooks?, hooks:{…}}`）；用户级钩子目录＝`~/.copilot/hooks/` | app.js `d$e`/`ILs`/`createSession`/`loadAllHooks` |
+| 2 | 事件名 PascalCase（`UserPromptSubmit` 等）被归一化到 camelCase（`userPromptSubmitted`）并带 `_vsCodeCompat` 语义 | `u$e`/`HVr` |
+| 3 | 命令字段 `command` 归一到 bash/powershell 两键；**Windows 下由 PowerShell 执行**（`-nop -nol -c`）；`timeout`→`timeoutSec`；hook 输入 JSON 写入子进程 stdin | `Noe`/`a$e` |
+| 4 | **输出契约**：stdout 先 `JSON.parse`；`userPromptSubmitted` 只消费 `additionalContext`／`modifiedPrompt`／`suppressOutput`／`handled`／`responseContent`——`{"systemMessage":…}` 不在消费集＝静默丢弃（三红实锚） | `GR`/`HLs`/结果映射 |
+| 5 | **文件夹受信前置**：仓库钩子仅在文件夹受信（`trustedFolders`·用户 settings.json）时加载；提示模式另可开关 `GITHUB_COPILOT_PROMPT_MODE_REPO_HOOKS=true` | 提示模式分支 `x7`/`rH.isFolderTrusted` |
+| 6 | 实测（临时项目·`copilot -p`）：钩子输出 `{"additionalContext":"MARKER-ZQ7…"}`＋开关开 → 模型答 `ZQ7` ✓；开关关 → `NONE`（未加载） | `%TEMP%\cto-copilot-hook-proto` |
+
+处置：注入器 copilot 分支改输出 `{"additionalContext": …}`（TriMLC `346729b`）；受信＝CEO/BOD 窗内一步；受信后重启 copilot bod 再验三读数。
+
 ---
 —— CTO 小狄（m-cto）·写前现查 2026-11-27T13:42:32Z（+0800=21:42）
