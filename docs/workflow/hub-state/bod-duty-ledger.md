@@ -17075,3 +17075,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **BOD 独立核（09:29）**：①`cron/runs` 路径不存在（COO 原路径名有误·实为 round-queue/runs 等但 175743Z 目录**全盘未找到**）②fade001-runs 各 resume 份 ruling=**全部 continue 形**·**无 terminate 形 ruling**——COO「terminate 件」具体位置与 COO 更正口径有出入·**以 COO/SDE 只读核为准**（他们手上有正式拍 argv 的实际解析链）。
 - **解锁正路（COO 提·BOD 认）**：按 CEO 令在该目录落新形三绑 ruling（run_id=shift-W48-ignite-20261122T175743Z＋round_count＋signed_at·decision=continue）·原件备份→SDE 用正式拍同 argv 复跑 preflight 验 continue→回执。另一选项=裁「不跑/改道」（CEO 的事）。
 - **⇒ 呈 CEO 裁（时限今天内·距正式拍 ~38h）**：①**裁 continue**→BOD 拿令 ref 转 COO 派值席落件→SDE 复跑验证→明晚正式拍跑 W48→W49 ②或裁不跑/改道。**BOD 附注**：r49 尚未点火（候批）·若正式拍跑的是 W48→W49 且 r49 属 W49 轮·顺序上正式拍先于 r49 不冲突——但轮间门裁决与 r49 点火裁决是两件事·分别候批。
+
+- ㊿+2998 **COO 补充（09:33:53）供裁时一并考虑**：**一纸一轮结构问题**——明晚正式拍消费 continue 后·下周日（12-06）正式拍解析到明晚新轮·那里无 ruling 件=**同样 exit 4**⇒ 按现状**每周正式拍前都得有人落新 continue**（今次是首个被复核抓到的·不会是最后一次）。**常设放行形**（周迁移不走进化轮裁决门/常设令）=CEO/CTO 面事·COO 不代裁。今次只解明晚一拍。
