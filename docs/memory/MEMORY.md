@@ -84,6 +84,8 @@
 - [幻觉时点·compaction/挂起窗 后首回合高发](cto-phantom-timestamp-compaction-resume.md) — 家族谱现势=**35 案（正谱权威=主题文件·引用案号先查主题文件）**；33 案=信面正文时点推算嵌值（载体面首例·产出=D-47 正文增补款）；34 案=落款模糊段手写同窗重犯（知行差·发毕闸自获）；35 案=COO 案正文「次源叙述时值直引」新机理形（增补款生效首适用自领案·产出=勘引款次源直验）；正形三载体=落款（date 原值/hook 现戳+写前跑+发毕对表）/卷面（%cI 代引禁手写·值晚于 commit=违例铁证）/正文（禁推算·锚引用/现查粘贴/相对序三选一·次源叙述时值非锚）；铁证形=凭印象/耗时推算/虚标现查/模糊段/粘环预估/整分手写·机械闸才有效
 - [重启窗完工判据=进程内生效验证](restart-window-completion-criteria.md) — healthz 绿≠配置生效；完工锚必含目标变更值面探针；env 遗传族正解=冷起整树+父链断言
 - [席位启动器/重启件教训族](seat-launcher-restart-pitfalls.md) — 新进程 env 继承父链不读注册表（启动器须显式重建+进程内指纹对表）；WT 关旧 tab=TerminateProcess(h,0) 非注入 exit；try 内 Write-Error 被自吞；杀旧与拉起之间代码须真执行过；日志时间锚取拉起时刻；.fade 部署位对真源为复核标准
+- [PreToolUse 钩子可改写入参·占位符现填](pretooluse-updatedinput-placeholder-fill.md) — updatedInput 可改写 SendMessage 入参且不必带 allow（CC 2.1.332 实测）；语义化占位符 `{{NOW}}` 会被模型自填→须非语义记号+缺即拒；发端记录留原始入参·审计面转钩子日志；裁决门 check_ceo_ruling 判 continue 即写消费戳=禁对真目录试跑
+- [Copilot CLI 仓库钩子事实](copilot-cli-hooks-facts.md) — `.github/hooks/**/*.json` 可用（PascalCase 事件名被归一化）；Windows 下 command 由 PowerShell 执行；**stdout 先 JSON.parse·只认 additionalContext 五键**（systemMessage=静默丢弃·三红实锚）；仓库钩子须文件夹受信（trustedFolders）或提示模式开关；实测法=临时项目+开关开/关对照
 - [TriMMC 与 TriMLC cron addJob 行为分野](trimc-mlc-addjob-divergence.md) — 四 daemon cron 行为分野勿互套（F-3 家族性三查=201+next_run 值面+enabled=1）；造件 payload 形/ALLOWLIST/河源通道=ssh -J sg R-HY·repo git 操作必 sudo -u fleet；判读=源码先读后定性；术语精度注（11-04）见主题文件
 - [TriMLC 勘修窗 2026-10-11](trimlc-repair-window-20261011.md) — 三件独立 commit+重启链实操序（watchdog Disable→/shutdown→port FREE→schtasks 冷启→pid/CIM 对表→Enable）+Git Bash schtasks 路径转换坑
 - [值面字段禁进打印路径](value-face-never-print-path.md) — 含密值面禁进打印路径·正形=脱敏前置取段层+token 变量读入+先 split 后掩码值不进管道文本+掩码兜底「值段全替」宁过掩不放过；摸底/注释行/宽匹配不豁免；回显即自曝三态实锚候定性；族计数权威=D-46 在册版（全谱见主题文件）
