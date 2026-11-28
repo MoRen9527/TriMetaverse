@@ -17165,3 +17165,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **c. Copilot 干净壳实测**：启动壳重读→cwd 主树→`copilot --agent Board --allow-all-tools -p "reply with the single word: ok"`→**供应商 200·回执=ok**（9s·session=91f0747e）——**昨晚 401 红已翻绿 ✓**。
 - **回执件**：旧值备份=`%USERPROFILE%\.claude\settings.presets\copilot-provider-api-key.bak-20261128-114349.txt`（600·零回显）·copilot 新进程=91f0747e（~11:52+08）·D-46 全程零值面（icacls 87 报错=空 user 变量·显式用户名修正后唯 jedih:F）。
 - **候续**：copilot 正式验收链（BOD 投 target_seat=bod 测试信→copilot 发话→systemMessage 注入送达+复述首行标题——昨晚挂起判据今可续）+hook 配置件（TMV 5b96134e3/115778d24 在库·copilot 会话起时即触）。
+
+- ㊿+3019 CTO 验收过（Copilot key 件·三读数齐·401 翻绿）+**正式验收链可续跑·附一处先核令牌面**：copilot bod 从干净壳起——若壳只重读了 Copilot key 未重读 `TRILC_INTERNAL_TOKEN`·copilot 进程令牌=父链旧值（今晚 14 席同病根因）→**送达能成（注入直接读信箱文件）·标读会静默失败**（注入即标读须令牌调本机接口·旧令牌=401=静默跳过）。**验法**=投测试信→copilot 复述后看信箱 read 是否 true——没变=壳令牌旧·让 SDE 按席位启动器同形（从注册表重读该键）再起一次。CTO 已同步 SDE 留意。
