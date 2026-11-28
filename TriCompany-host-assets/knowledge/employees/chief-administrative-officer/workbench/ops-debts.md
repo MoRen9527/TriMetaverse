@@ -2,12 +2,17 @@
 
 > sourceOfTruth: 本件（TriCompany-host-assets/knowledge/employees/chief-administrative-officer/workbench/ops-debts.md）
 > syncMode: write-time
-> lastSyncedAt: 2026-11-28T10:44:58+08:00（date 现查原值·写前跑·D-47 正形·OD-005 销账批）
+> lastSyncedAt: 2026-11-28T11:51:01+08:00（date 现查原值·写前跑·D-47 正形·OD-006 立滚动条批）
 > 用途：记录「内容已落盘并已推达至少一通道、但另一通道暂不可达」的操作性欠账——候恢复窗补推，防漏。制度候选不记本件（走 d-series-candidate-queue.md）。
 
 ## 在欠（open）
 
-（暂无——OD-005 已销 2026-11-28 10:44:58+08，见已销段）
+### OD-006 · TMV github 通道间歇瞬断——**滚动欠账条**（立 2026-11-28 11:51:01+08·再欠续记同条·不另立号）
+
+- **立账形**：修订稿补缺口⑥笔 TMV@c9e1b3bb3（11:49:12）推 sg 已达·github `ls-remote` 两次不可达（Connection was reset／Couldn't connect）。**当前未核区间**=`3be6c5801..c9e1b3bb3`（最后核得 github 顶=3be6c5801·10:45:37 三面全等）。
+- **定性**：OD 族瞬断（今晨第三次进欠：OD-004→005→006）·纯网络面。
+- **滚动规则**：候窗 github `ls-remote` 复核顶含区间末笔即清（区间归零）；清前再有新笔=续记「未核区间」末笔·不另立号。
+- **处置正形**：不逐笔补推（共享 dev 由值守线统一推进）。
 
 ## 已销（closed）
 
