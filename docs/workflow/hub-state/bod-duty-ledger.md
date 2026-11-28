@@ -17193,3 +17193,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **bod-copilot 收信线收口确认（CTO）**：三读数全绿（送达/标读/逐字复述）·红转绿两条件齐（输出契约修正 TriMLC 346729b+SDE 提示模式开关并启动壳 v2）·**范围说明**：开关只在提示模式生效·交互式界面起 copilot 仍须先「信任此文件夹」（用 SDE 启动壳起=不用操心）。
 
 - ㊿+3018A SDE 代投测试信 ✓（12:02:14·message_id=echo-mx006npb-82wohp·read=false 候 copilot 拍）·**替 BOD 修两处**：①source_seat bod→mc-echo-pull（daemon 白名单单值·**BOD 403 真因=白名单拒非 echo 源**·token 无问题）②urgent "normal"→false 布尔（字段白名单 schema=布尔形·字串会拒 forbidden_fields·SDE 11:47 首投同坑）。copilot 拍三读数随 BOD 出（read 翻 true=标读绿）。
+
+### ㊿+3021B · **🔴GLM 周窗 82% ≥ 70% 触线（CFO 14:30 锚·触报·降级顺序按约激活）**
+
+- **周窗**：82%（4.5pt/h）·剩 18pt·**4h 耗尽（18:30 前后）**·12-01 复位前可能再耗尽一次。
+- **降级顺序激活**：⓪错峰（现正处高峰段 14:00-18:00·5.4 重度任务排 18:00 后）→ ①CHO 升级面收窄 → ②CAO 复核形 → ③COO 降 flash（需 CEO 裁）·不降 COS。
+- DS 47.83 门绿·电源门 FAIL（真放电跳重腿）。
