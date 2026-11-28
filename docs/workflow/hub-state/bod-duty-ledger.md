@@ -17126,3 +17126,5 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **⇒ 11-29 正式拍轮间门解锁**：明晚 23:50 W48→W49 周迁移将正常执行（preflight 读 continue→过→qualify 已预验过→迁移执行）。
 
 - ㊿+3017 **✅SDE 终验回执：七项静态全过+同 argv 全形复跑 pass/exit 0——明晚正式拍链全通判定成立**：静态七项（无 BOM/JSON/run_id 逐字/round_count=8≥8/decision=continue/无消费戳/signed_at+ruling_ref 形齐/旧件留存 ✓）·**同 argv 全形复跑（拷贝目录 --prev-runs-root 指副本·真根零触）=preflight_rc=0 verdict=pass exit_code=0·ceo_ruling state=continue**（detail「本轮照跑 carry_over 承接」）·⇒ 明晚 23:50 正式拍预期终态=exit 0 全链走起（preflight 绿→qualify 绿→DCE 必执行·qualify 隔离预验已 PASS 在先）。
+
+- ㊿+3018 COS 本级复核毕（10:49:12·落账 1196·386c36251）：新件五项全过（无 BOM/run_id=上轮目录名/round_count=8/decision=continue/无消费戳·sha256 前 16=702c594b22854f07）·未在真目录调检查函数 ✓。**两条附注**：①**属主=root:root 644**（BOD 经 root 路径写入的）——fleet 可读目录可写今晚能跑·**建议改回 fleet:fleet**（免后续 fleet 身份改写/归档被挡）·**BOD 即办**②下周日同拍还会缺件（COO 已设下周六提醒）·**常设放行形候 CEO 定**（预呈留余裕）。
