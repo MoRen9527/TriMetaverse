@@ -53,6 +53,7 @@
 1. 启动器 `Invoke-ResumeDisambig` 每次起席全库扫会话记录（实测 47.9s／2692MB·随记录增长）——各席起席 40–80s 的主因；可改扫首尾段或建索引。
 2. 主树 cwd 的全部席位 hook 共读同一份 bod 信箱（席位专属信箱不在注入面）——信箱路由设计待评估。
 3. 两闸 wrapper 合并（Bash 面省一次进程）与 Copilot 宿主面的等价拦截。
+4. **loop-window marker 消费无来源留痕**（2026-11-28 实锚·SDE 副本复验 10:44 pass vs 10:50 rc=2 翻转）：`preflight.py` L596-608 的 loop-window 判定三源（CLI 旗标／env `LOOP_WINDOW=1`／固定路径 `<TRICO_LOOP_MARKER_DIR|/var/lib/trimc>/loop-window.marker` 读即删）——marker 被消费时读数只落 `mode` 未落 `loop_source` 与 marker 属主/时刻，致「来源不可考」；且在真机上跑 preflight（哪怕 runs_root 指副本）也会消费真 marker=验证并非零写入。改法=week_math 读数补 `loop_source`+marker stat。**11-29 正式拍之后才动（拍前不改链代码）**；正式拍前只读前置检查=marker 不在、cron 环境无 `LOOP_WINDOW=1`。
 
 ## §六 · 教训谱增补（已落记忆主题件 seat-launcher-restart-pitfalls）
 
