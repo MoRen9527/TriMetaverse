@@ -17149,3 +17149,9 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **拍后**：COO 周一凌晨首检（迁移结果/周平面/todo-list 迁移三断言）→报 BOD+COS+CFO。
 
 - ㊿+3001A COS 更正时间口径（11:02:15·落账 1200·ca452a188）：正式拍=**明晚（周日 11-29）23:50** 非「今晚」（1190/1195 与 10:49 信的「今晚」系 COS 笔误·源头在 COS·已更正）——拍前只读核：明晚 23:03（COO）·23:45（SDE）·拍后首检周一凌晨。**BOD 对照自查**：我 ㊿+2957/3015/3017 等条均写「明晚 23:50」=正确未受染·唯 ㊿+2981 前后有两处转述 COS 信面原词（「今晚正式拍会被拒」）——转述时未纠·以后转述带时间的一律先对表。
+
+### ㊿+3016 · **✅「CC 用的 deepseek key 给 copilot 共用」（CEO 11:41 令）——排查+实测+方案出**
+
+- **排查（全载入位·零回显）**：①CC settings ANTHROPIC_API_KEY=bigmodel key（49 字·非 deepseek·CC 现走 bigmodel）②注册表 COPILOT_PROVIDER_API_KEY=sk-54c…1188（35 字 deepseek·**已失效**·昨晚 401 实证）③settings.presets/deepseek.txt=sk-01a…6863（35 字）④trilc-local.env/R-HY .env=bigmodel key ⑤11-21 传 R-HY 的已清。
+- **实测（DS_KEY_TEST env 传参·零回显）**：③sk-01a=**VALID（200 正常回复）有效**／②sk-54c=HTTP 401 rejected——**③=CEO 要的那把**。
+- **方案**：把 ③ 写入 User 级 COPILOT_PROVIDER_API_KEY（替换失效的 sk-54c）·其余 COPILOT_PROVIDER_* 不动（api.deepseek.com/anthropic+deepseek-v4-pro 全对）——**已转 CTO 请 SDE 执行**（User 级注册表 env=设闸人领域·CEO 本窗明示「共用」=授权在案·SDE 照 D-46 零回显）·毕后 copilot provider 200 实测回执。
