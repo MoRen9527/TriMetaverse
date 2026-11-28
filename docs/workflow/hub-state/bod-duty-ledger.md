@@ -17117,3 +17117,10 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **CEO 原话**：「准continue，BOD落件」（10:42:38·本窗）。
 - **流程**：SDE 终核落位路径+round_count（候回）→ BOD 落件（旧 terminate 改名留存→新 continue 件 UTF-8 无 BOM·decision=continue/run_id=shift-W48-ignite-20261122T175743Z/round_count=8（SDE 终核）/signed_at=落件时现查/ruling_ref=CEO 10:42 本窗明示）→ SDE 拷贝副本复验 → 回执 CEO+CFO+COO+COS。
 - 已知会 COS。**时限**：今天下午内闭（COO 时限提醒·GLM 触线前）。
+
+### ㊿+3015 · **✅continue 件已落（CEO 10:42:38 裁·BOD 落件 10:43:44·SDE 拷贝副本复验五项全过）——11-29 正式拍解锁**
+
+- **落件实况**（经 sg→R-HY·2026-11-28T02:43:44Z=10:43:44+08:00）：①路径终核可达 `/var/lib/trirmc/cron/runs/shift-W48-ignite-20261122T175743Z/` ✓（SDE 读码+活体双证：preflight.py L709-713 default·30 轮扫描最新完整轮逐字 ✓）②**旧 terminate 件改名留存**=`ceo-ruling.json.bak-terminate-20261123`（原件含 CEO 11-23T13:33:40Z「D 轮2 跑完即止」授权原文·留痕）③新 continue 件写入 UTF-8 无 BOM ✓·JSON 可解析 ✓。
+- **新件内容**：decision=continue／run_id=shift-W48-ignite-20261122T175743Z／round_count=8（SDE 终核·队列 state 真实累计）／signed_at=2026-11-28T02:43:36Z（现查）／ruling_ref=CEO-20261128 本窗 10:42:38「准continue，BOD落件」。
+- **SDE 拷贝副本复验五项全过**（decision/run_id/round_count int/signed_at/ruling_ref）·零真目录触碰（复算禁区照守）。
+- **⇒ 11-29 正式拍轮间门解锁**：明晚 23:50 W48→W49 周迁移将正常执行（preflight 读 continue→过→qualify 已预验过→迁移执行）。
