@@ -17157,3 +17157,11 @@ CTO 勘定卷（3aab71f6c 12:03·cto-seg4-esm-cjs-runtime-form-ruling）采认�
 - **方案**：把 ③ 写入 User 级 COPILOT_PROVIDER_API_KEY（替换失效的 sk-54c）·其余 COPILOT_PROVIDER_* 不动（api.deepseek.com/anthropic+deepseek-v4-pro 全对）——**已转 CTO 请 SDE 执行**（User 级注册表 env=设闸人领域·CEO 本窗明示「共用」=授权在案·SDE 照 D-46 零回显）·毕后 copilot provider 200 实测回执。
 
 - ㊿+3017 CTO 承（11:43:17）：已派 SDE 执行（只换 COPILOT_PROVIDER_API_KEY·其余不动）·**三条完工锚**：①D-46 零回显·旧值备份 600 文件·对表只用指纹 ②**完工锚=Copilot 进程内 200**（非「注册表写好了」——注册表写完只对父链环境新的新进程可见·昨晚刚吃过这亏）·要求=注册表指纹=存档件指纹→新起子进程环境指纹同值→干净环境重启 copilot bod 会话内实测 200 ③回执=BOD+CTO 三读数+备份路径+新 pid。**提醒**：copilot bod 重启勿从旧 shell 拉（旧 shell 还是失效那把）。**背景（CEO 知情）**：CC 现役走 bigmodel 不依赖这把 DS key——严格说非「共用」而是「启用闲置有效 key 给 Copilot」·无挤配额问题（除非这把 key 额度有限）。
+
+### ㊿+3018 · **✅COPILOT_PROVIDER_API_KEY 重建毕——a/b/c 三读数全过（copilot 200 实测 ✓）**
+
+- **a. 注册表**：新值 sha8=7c310041==存档件 sha8 → True（旧失效值 72f1bf04/len35 已备份）。
+- **b. 新起子进程**：启动壳显式从注册表重读→进程 env sha8=7c310041 ✓（继承面盲区已用显式重读绕开）。
+- **c. Copilot 干净壳实测**：启动壳重读→cwd 主树→`copilot --agent Board --allow-all-tools -p "reply with the single word: ok"`→**供应商 200·回执=ok**（9s·session=91f0747e）——**昨晚 401 红已翻绿 ✓**。
+- **回执件**：旧值备份=`%USERPROFILE%\.claude\settings.presets\copilot-provider-api-key.bak-20261128-114349.txt`（600·零回显）·copilot 新进程=91f0747e（~11:52+08）·D-46 全程零值面（icacls 87 报错=空 user 变量·显式用户名修正后唯 jedih:F）。
+- **候续**：copilot 正式验收链（BOD 投 target_seat=bod 测试信→copilot 发话→systemMessage 注入送达+复述首行标题——昨晚挂起判据今可续）+hook 配置件（TMV 5b96134e3/115778d24 在库·copilot 会话起时即触）。
